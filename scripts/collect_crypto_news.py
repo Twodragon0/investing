@@ -1,0 +1,340 @@
+#!/usr/bin/env python3
+"""Collect cryptocurrency news from multiple sources and generate Jekyll posts.
+
+Sources:
+- CryptoPanic API (hot news)
+- NewsAPI (crypto keywords)
+- Google News RSS (Korean/English crypto)
+- Exchange announcements (OKX, Binance, Bybit public APIs)
+- Rekt News (security incidents -> security-alerts category)
+"""
+
+import sys
+import os
+import time
+import logging
+import requests
+import certifi
+from datetime import datetime, timezone
+from typing import List, Dict, Any, Optional
+from bs4 import BeautifulSoup
+
+# Add scripts directory to path
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from common.config import get_env, setup_logging
+from common.dedup import DedupEngine
+from common.post_generator import PostGenerator
+from common.utils import sanitize_string, validate_url, parse_date, detect_language, truncate_text
+
+logger = setup_logging("collect_crypto_news")
+
+VERIFY_SSL = certifi.where()
+REQUEST_TIMEOUT = 15
+USER_AGENT = "Mozilla/5.0 (compatible; InvestingDragon/1.0)"
+
+
+def fetch_cryptopanic(api_key: str, limit: int = 20) -> List[Dict[str, Any]]:
+    """Fetch hot news from CryptoPanic API."""
+    if not api_key:
+        logger.info("CryptoPanic API key not set, skipping")
+        return []
+
+    url = "https://cryptopanic.com/api/v1/posts/"
+    params = {"auth_token": api_key, "public": "true", "filter": "hot", "kind": "news"}
+
+    try:
+        resp = requests.get(url, params=params, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
+        resp.raise_for_status()
+        data = resp.json()
+        results = data.get("results", [])
+        if not isinstance(results, list):
+            return []
+
+        items = []
+        for r in results[:limit]:
+            items.append({
+                "title": sanitize_string(r.get("title", ""), 300),
+                "description": sanitize_string(r.get("title", ""), 500),
+                "link": r.get("url", ""),
+                "published": r.get("published_at", ""),
+                "source": "CryptoPanic",
+                "tags": ["crypto", "hot-news"],
+            })
+        logger.info("CryptoPanic: fetched %d items", len(items))
+        return items
+    except requests.exceptions.RequestException as e:
+        logger.warning("CryptoPanic fetch failed: %s", e)
+        return []
+
+
+def fetch_newsapi(api_key: str, limit: int = 20) -> List[Dict[str, Any]]:
+    """Fetch crypto news from NewsAPI."""
+    if not api_key:
+        logger.info("NewsAPI key not set, skipping")
+        return []
+
+    url = "https://newsapi.org/v2/everything"
+    params = {
+        "q": "cryptocurrency OR bitcoin OR ethereum",
+        "language": "en",
+        "sortBy": "publishedAt",
+        "pageSize": limit,
+        "apiKey": api_key,
+    }
+
+    try:
+        resp = requests.get(url, params=params, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
+        resp.raise_for_status()
+        data = resp.json()
+        articles = data.get("articles", [])
+
+        items = []
+        for a in articles:
+            title = sanitize_string(a.get("title", ""), 300)
+            if not title or title == "[Removed]":
+                continue
+            items.append({
+                "title": title,
+                "description": sanitize_string(a.get("description", ""), 500),
+                "link": a.get("url", ""),
+                "published": a.get("publishedAt", ""),
+                "source": "NewsAPI",
+                "tags": ["crypto", "news"],
+            })
+        logger.info("NewsAPI: fetched %d items", len(items))
+        return items
+    except requests.exceptions.RequestException as e:
+        logger.warning("NewsAPI fetch failed: %s", e)
+        return []
+
+
+def fetch_rss_feed(url: str, source_name: str, tags: List[str], limit: int = 15) -> List[Dict[str, Any]]:
+    """Fetch news from an RSS feed."""
+    try:
+        resp = requests.get(
+            url, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL,
+            headers={"User-Agent": USER_AGENT},
+        )
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "xml")
+
+        items = []
+        for item in soup.find_all("item")[:limit]:
+            title_el = item.find("title")
+            desc_el = item.find("description")
+            link_el = item.find("link")
+            date_el = item.find("pubDate")
+
+            title = sanitize_string(title_el.get_text(strip=True), 300) if title_el else ""
+            if not title:
+                continue
+
+            description = ""
+            if desc_el:
+                raw_desc = desc_el.get_text(strip=True)
+                description = sanitize_string(
+                    BeautifulSoup(raw_desc, "html.parser").get_text(" ", strip=True), 500
+                )
+
+            link = link_el.get_text(strip=True) if link_el else ""
+            published = date_el.get_text(strip=True) if date_el else ""
+
+            items.append({
+                "title": title,
+                "description": description,
+                "link": link,
+                "published": published,
+                "source": source_name,
+                "tags": tags,
+            })
+        logger.info("RSS %s: fetched %d items", source_name, len(items))
+        return items
+    except requests.exceptions.RequestException as e:
+        logger.warning("RSS %s fetch failed: %s", source_name, e)
+        return []
+
+
+def fetch_google_news_crypto() -> List[Dict[str, Any]]:
+    """Fetch crypto news from Google News RSS (English + Korean)."""
+    feeds = [
+        ("https://news.google.com/rss/search?q=cryptocurrency&hl=en-US&gl=US&ceid=US:en", "Google News EN", ["crypto", "english"]),
+        ("https://news.google.com/rss/search?q=암호화폐+비트코인&hl=ko&gl=KR&ceid=KR:ko", "Google News KR", ["crypto", "korean", "비트코인"]),
+    ]
+    all_items = []
+    for url, name, tags in feeds:
+        all_items.extend(fetch_rss_feed(url, name, tags))
+        time.sleep(1)
+    return all_items
+
+
+def fetch_exchange_announcements() -> List[Dict[str, Any]]:
+    """Fetch announcements from major exchanges (public APIs only)."""
+    items = []
+
+    # Binance announcements
+    try:
+        url = "https://www.binance.com/bapi/composite/v1/public/cms/article/list/query"
+        params = {"type": 1, "pageNo": 1, "pageSize": 10}
+        resp = requests.get(url, params=params, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL,
+                           headers={"User-Agent": USER_AGENT})
+        resp.raise_for_status()
+        data = resp.json()
+        catalogs = data.get("data", {}).get("catalogs", [])
+        for catalog in catalogs:
+            for article in catalog.get("articles", [])[:5]:
+                title = sanitize_string(article.get("title", ""), 300)
+                if title:
+                    release_date = article.get("releaseDate")
+                    date_str = ""
+                    if release_date:
+                        try:
+                            date_str = datetime.fromtimestamp(release_date / 1000, tz=timezone.utc).isoformat()
+                        except (ValueError, OSError):
+                            pass
+                    items.append({
+                        "title": title,
+                        "description": title,
+                        "link": f"https://www.binance.com/en/support/announcement",
+                        "published": date_str,
+                        "source": "Binance",
+                        "tags": ["crypto", "exchange", "binance"],
+                    })
+        logger.info("Binance: fetched %d announcements", len(items))
+    except requests.exceptions.RequestException as e:
+        logger.warning("Binance announcements fetch failed: %s", e)
+
+    return items
+
+
+def fetch_rekt_news(limit: int = 10) -> List[Dict[str, Any]]:
+    """Fetch security incidents from Rekt News."""
+    try:
+        url = "https://rekt.news/api/incidents"
+        resp = requests.get(
+            url, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL,
+            headers={"User-Agent": USER_AGENT},
+        )
+        resp.raise_for_status()
+        data = resp.json()
+        if not isinstance(data, list):
+            return []
+
+        data_sorted = sorted(data, key=lambda x: x.get("date", ""), reverse=True)
+        items = []
+        for incident in data_sorted[:limit]:
+            title = sanitize_string(incident.get("title", incident.get("project_name", "")), 300)
+            if not title:
+                continue
+
+            funds_lost = incident.get("funds_lost", "")
+            description = f"Project: {title}"
+            if funds_lost:
+                description += f" | Funds Lost: ${funds_lost}"
+            technique = incident.get("technique", "")
+            if technique:
+                description += f" | Technique: {technique}"
+
+            items.append({
+                "title": f"[Security] {title}",
+                "description": sanitize_string(description, 500),
+                "link": incident.get("url", ""),
+                "published": incident.get("date", ""),
+                "source": "Rekt News",
+                "tags": ["security", "hack", "rekt"],
+                "category_override": "security-alerts",
+            })
+        logger.info("Rekt News: fetched %d incidents", len(items))
+        return items
+    except requests.exceptions.RequestException as e:
+        logger.warning("Rekt News fetch failed: %s", e)
+        return []
+
+
+def main():
+    """Main collection routine."""
+    logger.info("=== Starting crypto news collection ===")
+
+    cryptopanic_key = get_env("CRYPTOPANIC_API_KEY")
+    newsapi_key = get_env("NEWSAPI_API_KEY")
+
+    # Initialize dedup engines
+    dedup_crypto = DedupEngine("crypto_news_seen.json")
+    dedup_security = DedupEngine("crypto_news_seen.json")  # shared state
+
+    # Initialize post generators
+    crypto_gen = PostGenerator("crypto-news")
+    security_gen = PostGenerator("security-alerts")
+
+    all_items = []
+
+    # Collect from all sources
+    all_items.extend(fetch_cryptopanic(cryptopanic_key))
+    all_items.extend(fetch_newsapi(newsapi_key))
+    all_items.extend(fetch_google_news_crypto())
+    all_items.extend(fetch_exchange_announcements())
+
+    # Rekt News -> security-alerts category
+    rekt_items = fetch_rekt_news()
+
+    created_count = 0
+
+    # Process crypto news
+    for item in all_items:
+        title = item["title"]
+        source = item.get("source", "unknown")
+        published = item.get("published", "")
+        date = parse_date(published) if published else datetime.now(timezone.utc)
+
+        if dedup_crypto.is_duplicate(title, source, published or datetime.now(timezone.utc).strftime("%Y-%m-%d")):
+            continue
+
+        lang = detect_language(title)
+        description = item.get("description", "")
+        content = description if description else title
+        link = item.get("link", "")
+
+        filepath = crypto_gen.create_post(
+            title=title,
+            content=content,
+            date=date,
+            tags=item.get("tags", ["crypto"]),
+            source=source,
+            source_url=link if validate_url(link) else "",
+            lang=lang,
+        )
+        if filepath:
+            dedup_crypto.mark_seen(title, source, published or datetime.now(timezone.utc).strftime("%Y-%m-%d"))
+            created_count += 1
+
+    # Process security alerts
+    for item in rekt_items:
+        title = item["title"]
+        source = item.get("source", "unknown")
+        published = item.get("published", "")
+        date = parse_date(published) if published else datetime.now(timezone.utc)
+
+        if dedup_security.is_duplicate(title, source, published or datetime.now(timezone.utc).strftime("%Y-%m-%d")):
+            continue
+
+        filepath = security_gen.create_post(
+            title=title,
+            content=item.get("description", title),
+            date=date,
+            tags=item.get("tags", ["security"]),
+            source=source,
+            source_url=item.get("link", ""),
+            lang="en",
+        )
+        if filepath:
+            dedup_security.mark_seen(title, source, published or datetime.now(timezone.utc).strftime("%Y-%m-%d"))
+            created_count += 1
+
+    # Save dedup state
+    dedup_crypto.save()
+
+    logger.info("=== Crypto news collection complete: %d posts created ===", created_count)
+
+
+if __name__ == "__main__":
+    main()

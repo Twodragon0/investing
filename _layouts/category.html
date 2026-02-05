@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<section class="category-archive">
+  <h1>{{ page.title }}</h1>
+  <p>{{ page.description }}</p>
+
+  <div class="posts-list">
+    {% assign cat_posts = site.posts | where_exp: "post", "post.categories contains page.category" %}
+    {% for post in cat_posts %}
+      {% include post-card.html post=post %}
+    {% endfor %}
+    {% if cat_posts.size == 0 %}
+    <p class="empty-state">아직 포스트가 없습니다. 곧 자동으로 수집됩니다.</p>
+    {% endif %}
+  </div>
+</section>

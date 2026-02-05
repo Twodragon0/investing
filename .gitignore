@@ -1,0 +1,15 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/
+node_modules/
+.env
+*.swp
+*.swo
+*~
+.DS_Store
+__pycache__/
+*.pyc
+.omc/

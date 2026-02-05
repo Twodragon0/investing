@@ -1,0 +1,16 @@
+<article class="post-card">
+  <div class="post-card-meta">
+    <span class="post-category cat-{{ post.categories | first | slugify }}">{{ post.categories | first }}</span>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+    {% if post.source %}<span class="post-source">{{ post.source }}</span>{% endif %}
+  </div>
+  <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+  {% if post.excerpt %}<p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>{% endif %}
+  {% if post.tags.size > 0 %}
+  <div class="post-tags">
+    {% for tag in post.tags limit:3 %}
+    <span class="tag">{{ tag }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+</article>

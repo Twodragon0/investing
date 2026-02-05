@@ -1,0 +1,153 @@
+@import "variables";
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: $bg-primary;
+  color: $text-primary;
+  line-height: 1.6;
+}
+
+a { color: $accent-blue; text-decoration: none; &:hover { text-decoration: underline; } }
+
+.container { max-width: $container-width; margin: 0 auto; padding: 0 $spacing; }
+
+// Header
+.site-header {
+  background: $bg-secondary;
+  border-bottom: 1px solid $border-color;
+  padding: 0.75rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  .container { display: flex; align-items: center; gap: 1.5rem; }
+  .site-logo { color: $text-primary; font-weight: 700; font-size: 1.2rem; white-space: nowrap; &:hover { text-decoration: none; } }
+  .site-nav {
+    display: flex; gap: 0.5rem; flex-wrap: wrap;
+    a {
+      color: $text-secondary; padding: 0.25rem 0.5rem; border-radius: $radius; font-size: 0.85rem;
+      &:hover, &.active { color: $text-primary; background: $bg-card; text-decoration: none; }
+    }
+  }
+  .nav-toggle { display: none; background: none; border: none; color: $text-primary; font-size: 1.5rem; cursor: pointer; }
+}
+
+// Hero
+.hero {
+  text-align: center; padding: 3rem 1rem; margin-bottom: 2rem;
+  h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+  p { color: $text-secondary; font-size: 1.1rem; }
+}
+
+// Category Grid
+.categories-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem; margin-bottom: 2rem;
+}
+.category-card {
+  background: $bg-card; border: 1px solid $border-color; border-radius: $radius;
+  padding: 1.5rem; transition: transform 0.2s, border-color 0.2s;
+  &:hover { transform: translateY(-2px); text-decoration: none; border-color: $accent-blue; }
+  h3 { color: $text-primary; margin-bottom: 0.5rem; }
+  p { color: $text-secondary; font-size: 0.9rem; }
+  &.crypto { border-left: 3px solid $cat-crypto; }
+  &.stock { border-left: 3px solid $cat-stock; }
+  &.journal { border-left: 3px solid $cat-journal; }
+  &.security { border-left: 3px solid $cat-security; }
+  &.analysis { border-left: 3px solid $cat-analysis; }
+}
+
+// Posts
+.recent-posts { margin-bottom: 2rem; h2 { margin-bottom: 1rem; } }
+.posts-list { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.post-card {
+  background: $bg-card; border: 1px solid $border-color; border-radius: $radius;
+  padding: 1rem 1.25rem; transition: border-color 0.2s;
+  &:hover { border-color: $accent-blue; }
+  .post-card-meta { display: flex; gap: 0.75rem; align-items: center; margin-bottom: 0.5rem; font-size: 0.8rem; }
+  h3 { font-size: 1rem; margin-bottom: 0.25rem; a { color: $text-primary; &:hover { color: $accent-blue; } } }
+  .post-excerpt { color: $text-secondary; font-size: 0.85rem; }
+}
+
+.post-category {
+  padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;
+  background: rgba($accent-blue, 0.15); color: $accent-blue;
+  &.cat-crypto-news { background: rgba($cat-crypto, 0.15); color: $cat-crypto; }
+  &.cat-stock-news { background: rgba($cat-stock, 0.15); color: $cat-stock; }
+  &.cat-crypto-trading-journal, &.cat-stock-trading-journal { background: rgba($cat-journal, 0.15); color: $cat-journal; }
+  &.cat-security-alerts { background: rgba($cat-security, 0.15); color: $cat-security; }
+  &.cat-market-analysis { background: rgba($cat-analysis, 0.15); color: $cat-analysis; }
+}
+
+.post-source { color: $text-secondary; }
+.post-lang { color: $accent-orange; font-size: 0.75rem; font-weight: 600; }
+
+.post-tags { display: flex; gap: 0.25rem; flex-wrap: wrap; margin-top: 0.5rem; }
+.tag {
+  background: rgba($accent-purple, 0.1); color: $accent-purple;
+  padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.75rem;
+}
+
+// Post Detail
+.post-detail {
+  max-width: 800px; margin: 2rem auto;
+  .post-header { margin-bottom: 2rem; h1 { font-size: 1.8rem; margin-top: 0.5rem; } }
+  .post-content { line-height: 1.8; margin-bottom: 2rem;
+    h2, h3 { margin-top: 1.5rem; margin-bottom: 0.5rem; }
+    p { margin-bottom: 1rem; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0;
+      th, td { border: 1px solid $border-color; padding: 0.5rem; text-align: left; }
+      th { background: $bg-secondary; }
+    }
+    code { background: $bg-secondary; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
+    pre { background: $bg-secondary; padding: 1rem; border-radius: $radius; overflow-x: auto; margin: 1rem 0; }
+  }
+  .post-source-link { margin-bottom: 2rem; a { color: $accent-blue; font-weight: 600; } }
+  .post-nav { display: flex; justify-content: space-between; border-top: 1px solid $border-color; padding-top: 1rem; }
+}
+
+// Category Archive
+.category-archive { margin: 2rem 0; h1 { margin-bottom: 0.5rem; } p { color: $text-secondary; margin-bottom: 1.5rem; } }
+.empty-state { color: $text-secondary; text-align: center; padding: 3rem; background: $bg-card; border-radius: $radius; }
+
+// Sidebar
+.sidebar {
+  .sidebar-section { margin-bottom: 1.5rem; h4 { margin-bottom: 0.5rem; color: $text-secondary; text-transform: uppercase; font-size: 0.8rem; } }
+  ul { list-style: none; li { margin-bottom: 0.25rem; } a { color: $text-secondary; &:hover { color: $text-primary; } } }
+  .tag-cloud { display: flex; flex-wrap: wrap; gap: 0.25rem; }
+}
+
+// Footer
+.site-footer {
+  background: $bg-secondary; border-top: 1px solid $border-color;
+  padding: 1.5rem 0; margin-top: 3rem; text-align: center;
+  color: $text-secondary; font-size: 0.85rem;
+  a { color: $text-secondary; &:hover { color: $text-primary; } }
+  p + p { margin-top: 0.5rem; }
+}
+
+// Search
+.search-container { margin-bottom: 2rem;
+  input { width: 100%; padding: 0.75rem 1rem; background: $bg-card; border: 1px solid $border-color;
+    border-radius: $radius; color: $text-primary; font-size: 1rem;
+    &:focus { outline: none; border-color: $accent-blue; }
+    &::placeholder { color: $text-secondary; }
+  }
+}
+.search-results { .search-result-item { padding: 0.75rem; border-bottom: 1px solid $border-color; } }
+
+// Responsive
+@media (max-width: 768px) {
+  .site-header {
+    .site-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: $bg-secondary;
+      flex-direction: column; padding: 1rem; border-bottom: 1px solid $border-color;
+      &.active { display: flex; }
+    }
+    .nav-toggle { display: block; }
+  }
+  .hero h1 { font-size: 1.8rem; }
+  .categories-grid { grid-template-columns: 1fr; }
+}

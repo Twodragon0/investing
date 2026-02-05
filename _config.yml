@@ -1,0 +1,45 @@
+title: "Investing Dragon"
+description: "Crypto & Stock News Aggregation and Trading Journal"
+url: "https://twodragon0.github.io"
+baseurl: "/investing-dragon"
+lang: ko
+timezone: Asia/Seoul
+
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+paginate: 10
+paginate_path: "/page:num/"
+
+permalink: /:categories/:year/:month/:day/:title/
+
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      lang: "ko"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+exclude:
+  - scripts/
+  - _state/
+  - .env
+  - .env.example
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - README.md

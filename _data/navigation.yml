@@ -1,0 +1,17 @@
+main:
+  - title: "홈"
+    url: /
+  - title: "암호화폐 뉴스"
+    url: /crypto-news/
+  - title: "주식 뉴스"
+    url: /stock-news/
+  - title: "크립토 트레이딩 일지"
+    url: /crypto-journal/
+  - title: "주식 트레이딩 일지"
+    url: /stock-journal/
+  - title: "보안 알림"
+    url: /security-alerts/
+  - title: "시장 분석"
+    url: /market-analysis/
+  - title: "About"
+    url: /about/
