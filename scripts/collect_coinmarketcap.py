@@ -1,0 +1,513 @@
+#!/usr/bin/env python3
+"""Collect top cryptocurrency data from CoinMarketCap and CoinGecko.
+
+Sources:
+- CoinMarketCap API (top coins, trending, gainers/losers)
+- CoinGecko API (free fallback - top coins, trending, market data)
+- Global market cap data
+
+Generates high-quality Korean summary posts with market analysis.
+"""
+
+import sys
+import os
+import time
+import logging
+import requests
+import certifi
+from datetime import datetime, timezone
+from typing import List, Dict, Any, Optional, Tuple
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from common.config import get_env, setup_logging
+from common.dedup import DedupEngine
+from common.post_generator import PostGenerator
+from common.utils import sanitize_string
+
+logger = setup_logging("collect_coinmarketcap")
+
+VERIFY_SSL = certifi.where()
+REQUEST_TIMEOUT = 20
+USER_AGENT = "Mozilla/5.0 (compatible; InvestingDragon/1.0)"
+
+
+# ──────────────────────────────────────────────
+# CoinGecko (Free, no API key required)
+# ──────────────────────────────────────────────
+
+def fetch_coingecko_top_coins(limit: int = 30) -> List[Dict[str, Any]]:
+    """Fetch top coins by market cap from CoinGecko."""
+    try:
+        url = "https://api.coingecko.com/api/v3/coins/markets"
+        params = {
+            "vs_currency": "usd",
+            "order": "market_cap_desc",
+            "per_page": limit,
+            "page": 1,
+            "sparkline": "false",
+            "price_change_percentage": "1h,24h,7d",
+        }
+        resp = requests.get(url, params=params, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL,
+                           headers={"User-Agent": USER_AGENT})
+        resp.raise_for_status()
+        data = resp.json()
+        logger.info("CoinGecko: fetched %d top coins", len(data))
+        return data
+    except requests.exceptions.RequestException as e:
+        logger.warning("CoinGecko top coins fetch failed: %s", e)
+        return []
+
+
+def fetch_coingecko_trending() -> List[Dict[str, Any]]:
+    """Fetch trending coins from CoinGecko."""
+    try:
+        url = "https://api.coingecko.com/api/v3/search/trending"
+        resp = requests.get(url, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL,
+                           headers={"User-Agent": USER_AGENT})
+        resp.raise_for_status()
+        data = resp.json()
+        coins = data.get("coins", [])
+        logger.info("CoinGecko: fetched %d trending coins", len(coins))
+        return coins
+    except requests.exceptions.RequestException as e:
+        logger.warning("CoinGecko trending fetch failed: %s", e)
+        return []
+
+
+def fetch_coingecko_global() -> Dict[str, Any]:
+    """Fetch global crypto market data."""
+    try:
+        url = "https://api.coingecko.com/api/v3/global"
+        resp = requests.get(url, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL,
+                           headers={"User-Agent": USER_AGENT})
+        resp.raise_for_status()
+        data = resp.json().get("data", {})
+        logger.info("CoinGecko: fetched global market data")
+        return data
+    except requests.exceptions.RequestException as e:
+        logger.warning("CoinGecko global fetch failed: %s", e)
+        return {}
+
+
+# ──────────────────────────────────────────────
+# CoinMarketCap (API key optional, enhanced data)
+# ──────────────────────────────────────────────
+
+def fetch_cmc_top_coins(api_key: str, limit: int = 30) -> List[Dict[str, Any]]:
+    """Fetch top coins from CoinMarketCap API."""
+    if not api_key:
+        return []
+
+    try:
+        url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
+        headers = {"X-CMC_PRO_API_KEY": api_key, "Accept": "application/json"}
+        params = {"start": "1", "limit": str(limit), "convert": "USD", "sort": "market_cap"}
+        resp = requests.get(url, headers=headers, params=params, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
+        resp.raise_for_status()
+        data = resp.json()
+        coins = data.get("data", [])
+        logger.info("CMC: fetched %d top coins", len(coins))
+        return coins
+    except requests.exceptions.RequestException as e:
+        logger.warning("CMC top coins fetch failed: %s", e)
+        return []
+
+
+def fetch_cmc_trending(api_key: str) -> List[Dict[str, Any]]:
+    """Fetch trending coins from CoinMarketCap."""
+    if not api_key:
+        return []
+
+    try:
+        url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/trending/latest"
+        headers = {"X-CMC_PRO_API_KEY": api_key, "Accept": "application/json"}
+        params = {"limit": "10", "convert": "USD"}
+        resp = requests.get(url, headers=headers, params=params, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
+        resp.raise_for_status()
+        data = resp.json()
+        coins = data.get("data", [])
+        logger.info("CMC: fetched %d trending coins", len(coins))
+        return coins
+    except requests.exceptions.RequestException as e:
+        logger.warning("CMC trending fetch failed: %s", e)
+        return []
+
+
+def fetch_cmc_gainers_losers(api_key: str) -> Tuple[List[Dict], List[Dict]]:
+    """Fetch biggest gainers and losers from CoinMarketCap."""
+    if not api_key:
+        return [], []
+
+    try:
+        url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/trending/gainers-losers"
+        headers = {"X-CMC_PRO_API_KEY": api_key, "Accept": "application/json"}
+        params = {"limit": "10", "convert": "USD", "time_period": "24h"}
+        resp = requests.get(url, headers=headers, params=params, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
+        resp.raise_for_status()
+        data = resp.json().get("data", {})
+        gainers = data.get("gainers", [])
+        losers = data.get("losers", [])
+        logger.info("CMC: fetched %d gainers, %d losers", len(gainers), len(losers))
+        return gainers, losers
+    except requests.exceptions.RequestException as e:
+        logger.warning("CMC gainers/losers fetch failed: %s", e)
+        return [], []
+
+
+# ──────────────────────────────────────────────
+# Formatting functions (High Quality Korean)
+# ──────────────────────────────────────────────
+
+def _fmt_num(n, prefix="$", decimals=2) -> str:
+    """Format a number with commas and prefix."""
+    if n is None:
+        return "N/A"
+    if abs(n) >= 1_000_000_000_000:
+        return f"{prefix}{n/1_000_000_000_000:,.2f}T"
+    if abs(n) >= 1_000_000_000:
+        return f"{prefix}{n/1_000_000_000:,.2f}B"
+    if abs(n) >= 1_000_000:
+        return f"{prefix}{n/1_000_000:,.2f}M"
+    return f"{prefix}{n:,.{decimals}f}"
+
+
+def _fmt_pct(n) -> str:
+    """Format percentage with color indicator."""
+    if n is None:
+        return "N/A"
+    arrow = "🟢" if n >= 0 else "🔴"
+    return f"{arrow} {n:+.2f}%"
+
+
+def format_global_market(data: Dict[str, Any]) -> str:
+    """Format global market overview."""
+    if not data:
+        return "*글로벌 시장 데이터를 가져올 수 없습니다.*"
+
+    total_mcap = data.get("total_market_cap", {}).get("usd", 0)
+    total_vol = data.get("total_volume", {}).get("usd", 0)
+    btc_dom = data.get("market_cap_percentage", {}).get("btc", 0)
+    eth_dom = data.get("market_cap_percentage", {}).get("eth", 0)
+    mcap_change = data.get("market_cap_change_percentage_24h_usd", 0)
+    active_coins = data.get("active_cryptocurrencies", 0)
+
+    lines = [
+        f"**총 시가총액**: {_fmt_num(total_mcap)} ({_fmt_pct(mcap_change)})",
+        f"**24시간 거래량**: {_fmt_num(total_vol)}",
+        f"**BTC 도미넌스**: {btc_dom:.1f}% | **ETH 도미넌스**: {eth_dom:.1f}%",
+        f"**활성 코인 수**: {active_coins:,}개",
+    ]
+    return "\n\n".join(lines)
+
+
+def format_top_coins_table(coins: List[Dict], source: str = "coingecko") -> str:
+    """Format top coins as a markdown table."""
+    if not coins:
+        return "*데이터를 가져올 수 없습니다.*"
+
+    lines = [
+        "| # | 코인 | 가격 (USD) | 24h 변동 | 7d 변동 | 시가총액 |",
+        "|---|------|-----------|---------|--------|---------|",
+    ]
+
+    for i, coin in enumerate(coins[:20], 1):
+        if source == "coingecko":
+            name = coin.get("name", "")
+            symbol = coin.get("symbol", "").upper()
+            price = coin.get("current_price", 0)
+            change_24h = coin.get("price_change_percentage_24h", 0)
+            change_7d = coin.get("price_change_percentage_7d_in_currency", 0)
+            mcap = coin.get("market_cap", 0)
+        else:  # CMC
+            name = coin.get("name", "")
+            symbol = coin.get("symbol", "")
+            quote = coin.get("quote", {}).get("USD", {})
+            price = quote.get("price", 0)
+            change_24h = quote.get("percent_change_24h", 0)
+            change_7d = quote.get("percent_change_7d", 0)
+            mcap = quote.get("market_cap", 0)
+
+        price_str = f"${price:,.2f}" if price and price >= 1 else f"${price:,.6f}" if price else "N/A"
+        lines.append(
+            f"| {i} | **{name}** ({symbol}) | {price_str} | {_fmt_pct(change_24h)} | {_fmt_pct(change_7d)} | {_fmt_num(mcap)} |"
+        )
+
+    return "\n".join(lines)
+
+
+def format_trending_coins(coins: List[Dict], source: str = "coingecko") -> str:
+    """Format trending coins."""
+    if not coins:
+        return "*트렌딩 데이터를 가져올 수 없습니다.*"
+
+    lines = ["**현재 가장 주목받는 코인들:**\n"]
+
+    for i, coin_data in enumerate(coins[:10], 1):
+        if source == "coingecko":
+            item = coin_data.get("item", {})
+            name = item.get("name", "")
+            symbol = item.get("symbol", "")
+            rank = item.get("market_cap_rank", "N/A")
+            score = item.get("score", 0)
+            lines.append(f"{i}. **{name}** ({symbol}) — 시가총액 순위 #{rank}")
+        else:  # CMC
+            name = coin_data.get("name", "")
+            symbol = coin_data.get("symbol", "")
+            quote = coin_data.get("quote", {}).get("USD", {})
+            change = quote.get("percent_change_24h", 0)
+            lines.append(f"{i}. **{name}** ({symbol}) — 24h: {_fmt_pct(change)}")
+
+    return "\n".join(lines)
+
+
+def format_gainers_losers(gainers: List[Dict], losers: List[Dict]) -> str:
+    """Format biggest gainers and losers."""
+    lines = []
+
+    if gainers:
+        lines.append("### 🚀 24시간 최대 상승\n")
+        lines.append("| 코인 | 가격 | 24h 변동 |")
+        lines.append("|------|------|---------|")
+        for coin in gainers[:5]:
+            name = coin.get("name", "")
+            symbol = coin.get("symbol", "")
+            quote = coin.get("quote", {}).get("USD", {})
+            price = quote.get("price", 0)
+            change = quote.get("percent_change_24h", 0)
+            lines.append(f"| **{name}** ({symbol}) | ${price:,.4f} | {_fmt_pct(change)} |")
+
+    if losers:
+        lines.append("\n### 📉 24시간 최대 하락\n")
+        lines.append("| 코인 | 가격 | 24h 변동 |")
+        lines.append("|------|------|---------|")
+        for coin in losers[:5]:
+            name = coin.get("name", "")
+            symbol = coin.get("symbol", "")
+            quote = coin.get("quote", {}).get("USD", {})
+            price = quote.get("price", 0)
+            change = quote.get("percent_change_24h", 0)
+            lines.append(f"| **{name}** ({symbol}) | ${price:,.4f} | {_fmt_pct(change)} |")
+
+    return "\n".join(lines) if lines else "*급등/급락 데이터를 가져올 수 없습니다.*"
+
+
+def derive_gainers_losers_from_top(coins: List[Dict]) -> Tuple[str, str]:
+    """Derive gainers and losers from top coins list (CoinGecko fallback)."""
+    if not coins:
+        return "*데이터 없음*", "*데이터 없음*"
+
+    sorted_by_change = sorted(coins, key=lambda c: c.get("price_change_percentage_24h") or 0, reverse=True)
+
+    # Top 5 gainers
+    g_lines = ["| 코인 | 가격 | 24h 변동 |", "|------|------|---------|"]
+    for coin in sorted_by_change[:5]:
+        name = coin.get("name", "")
+        symbol = coin.get("symbol", "").upper()
+        price = coin.get("current_price", 0)
+        change = coin.get("price_change_percentage_24h", 0)
+        price_str = f"${price:,.2f}" if price and price >= 1 else f"${price:,.6f}" if price else "N/A"
+        g_lines.append(f"| **{name}** ({symbol}) | {price_str} | {_fmt_pct(change)} |")
+
+    # Top 5 losers
+    l_lines = ["| 코인 | 가격 | 24h 변동 |", "|------|------|---------|"]
+    for coin in sorted_by_change[-5:]:
+        name = coin.get("name", "")
+        symbol = coin.get("symbol", "").upper()
+        price = coin.get("current_price", 0)
+        change = coin.get("price_change_percentage_24h", 0)
+        price_str = f"${price:,.2f}" if price and price >= 1 else f"${price:,.6f}" if price else "N/A"
+        l_lines.append(f"| **{name}** ({symbol}) | {price_str} | {_fmt_pct(change)} |")
+
+    return "\n".join(g_lines), "\n".join(l_lines)
+
+
+def generate_market_insight(global_data: Dict, top_coins: List[Dict], fear_greed: Dict) -> str:
+    """Generate Korean market insight summary."""
+    if not global_data and not top_coins:
+        return ""
+
+    mcap_change = global_data.get("market_cap_change_percentage_24h_usd", 0) if global_data else 0
+    btc_dom = global_data.get("market_cap_percentage", {}).get("btc", 0) if global_data else 0
+    fg_value = fear_greed.get("value", 50) if fear_greed else 50
+    fg_class = fear_greed.get("classification", "Neutral") if fear_greed else "Neutral"
+
+    # Determine market sentiment
+    if mcap_change > 3:
+        market_mood = "강세장이 이어지고 있습니다. 시장 전체 시가총액이 큰 폭으로 상승했습니다."
+    elif mcap_change > 0:
+        market_mood = "소폭 상승세를 보이고 있습니다. 시장은 안정적인 흐름을 유지하고 있습니다."
+    elif mcap_change > -3:
+        market_mood = "소폭 하락세를 보이고 있습니다. 단기 조정 구간으로 판단됩니다."
+    else:
+        market_mood = "큰 하락세를 보이고 있습니다. 리스크 관리에 주의가 필요합니다."
+
+    # BTC dominance insight
+    if btc_dom > 55:
+        btc_insight = f"BTC 도미넌스가 {btc_dom:.1f}%로 높은 수준이며, 비트코인 중심의 시장 흐름이 지속되고 있습니다."
+    elif btc_dom > 45:
+        btc_insight = f"BTC 도미넌스 {btc_dom:.1f}%로 알트코인과 비트코인이 균형을 이루고 있습니다."
+    else:
+        btc_insight = f"BTC 도미넌스가 {btc_dom:.1f}%로 낮아 알트코인 시즌이 진행 중일 수 있습니다."
+
+    # Fear & Greed insight
+    fg_map = {
+        "Extreme Fear": "극도의 공포 상태로, 역발상 매수 기회가 될 수 있습니다.",
+        "Fear": "공포 상태이며, 보수적인 투자 접근이 권장됩니다.",
+        "Neutral": "중립적 상태로, 시장 방향성을 주시해야 합니다.",
+        "Greed": "탐욕 상태이며, 차익 실현을 고려해 볼 시점입니다.",
+        "Extreme Greed": "극도의 탐욕 상태로, 과열 주의가 필요합니다.",
+    }
+    fg_insight = fg_map.get(fg_class, "시장 심리를 확인할 수 없습니다.")
+
+    lines = [
+        "**오늘의 시장 인사이트:**\n",
+        f"암호화폐 시장은 현재 {market_mood}",
+        "",
+        f"{btc_insight}",
+        "",
+        f"공포/탐욕 지수는 **{fg_value}** ({fg_class})으로, {fg_insight}",
+        "",
+        "> *본 분석은 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*",
+    ]
+    return "\n".join(lines)
+
+
+# ──────────────────────────────────────────────
+# Main
+# ──────────────────────────────────────────────
+
+def main():
+    """Main collection routine."""
+    logger.info("=== Starting CoinMarketCap/CoinGecko collection ===")
+
+    cmc_key = get_env("CMC_API_KEY")
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    now = datetime.now(timezone.utc)
+
+    dedup = DedupEngine("crypto_news_seen.json")
+    gen_analysis = PostGenerator("market-analysis")
+    gen_news = PostGenerator("crypto-news")
+
+    # ── Fetch data ──
+    time.sleep(1)
+    global_data = fetch_coingecko_global()
+    time.sleep(2)
+
+    # Try CMC first, fallback to CoinGecko
+    if cmc_key:
+        top_coins = fetch_cmc_top_coins(cmc_key, 30)
+        source_name = "CoinMarketCap"
+        cmc_source = "cmc"
+        time.sleep(1)
+        trending = fetch_cmc_trending(cmc_key)
+        time.sleep(1)
+        gainers, losers = fetch_cmc_gainers_losers(cmc_key)
+    else:
+        top_coins = fetch_coingecko_top_coins(30)
+        source_name = "CoinGecko"
+        cmc_source = "coingecko"
+        time.sleep(2)
+        trending = fetch_coingecko_trending()
+        gainers, losers = [], []
+
+    # Fear & Greed
+    time.sleep(1)
+    fear_greed = {}
+    try:
+        url = "https://api.alternative.me/fng/?limit=1&format=json"
+        resp = requests.get(url, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
+        resp.raise_for_status()
+        fg_data = resp.json()
+        if "data" in fg_data and fg_data["data"]:
+            entry = fg_data["data"][0]
+            fear_greed = {
+                "value": int(entry.get("value", 0)),
+                "classification": entry.get("value_classification", "N/A"),
+            }
+    except requests.exceptions.RequestException:
+        pass
+
+    # ── Generate high-quality summary post ──
+    title = f"암호화폐 시장 종합 리포트 - {today}"
+
+    if not dedup.is_duplicate(title, source_name, today):
+        sections = {}
+
+        # 1. Market Insight (Korean analysis)
+        insight = generate_market_insight(global_data, top_coins, fear_greed)
+        if insight:
+            sections["시장 인사이트"] = insight
+
+        # 2. Global market overview
+        sections["글로벌 암호화폐 시장 현황"] = format_global_market(global_data)
+
+        # 3. Fear & Greed
+        if fear_greed:
+            value = fear_greed.get("value", 0)
+            classification = fear_greed.get("classification", "N/A")
+            bar = "█" * (value // 5) + "░" * (20 - value // 5)
+            sections["공포/탐욕 지수"] = f"**{value}/100** — {classification}\n\n`[{bar}]`"
+
+        # 4. Top 20 coins
+        sections["시가총액 Top 20"] = format_top_coins_table(top_coins, cmc_source)
+
+        # 5. Trending coins
+        sections["트렌딩 코인"] = format_trending_coins(trending, cmc_source)
+
+        # 6. Gainers/Losers
+        if gainers or losers:
+            sections["급등/급락 코인"] = format_gainers_losers(gainers, losers)
+        elif top_coins and cmc_source == "coingecko":
+            g_table, l_table = derive_gainers_losers_from_top(top_coins)
+            sections["24시간 최대 상승 (Top 20 기준)"] = g_table
+            sections["24시간 최대 하락 (Top 20 기준)"] = l_table
+
+        filepath = gen_analysis.create_post(
+            title=title,
+            content="\n\n".join(f"## {k}\n\n{v}" for k, v in sections.items()),
+            date=now,
+            tags=["market-report", "crypto", "top-coins", "trending", "daily"],
+            source=source_name,
+            source_url="https://www.coingecko.com/" if cmc_source == "coingecko" else "https://coinmarketcap.com/",
+            lang="ko",
+        )
+        if filepath:
+            dedup.mark_seen(title, source_name, today)
+            logger.info("Created market report: %s", filepath)
+
+    # ── Individual trending coin posts ──
+    if trending and cmc_source == "coingecko":
+        for coin_data in trending[:5]:
+            item = coin_data.get("item", {})
+            name = item.get("name", "")
+            symbol = item.get("symbol", "")
+            rank = item.get("market_cap_rank", "N/A")
+            post_title = f"트렌딩: {name} ({symbol}) - 시가총액 순위 #{rank}"
+
+            if dedup.is_duplicate(post_title, "CoinGecko Trending", today):
+                continue
+
+            content = f"**{name}** ({symbol})이(가) 현재 CoinGecko 트렌딩에 올랐습니다.\n\n"
+            content += f"- 시가총액 순위: #{rank}\n"
+            content += f"- 데이터 출처: CoinGecko Trending\n"
+            content += f"\n> 트렌딩에 오른 것은 관심도가 높다는 의미이며, 투자 권유가 아닙니다."
+
+            filepath = gen_news.create_post(
+                title=post_title,
+                content=content,
+                date=now,
+                tags=["trending", "crypto", symbol.lower() if symbol else ""],
+                source="CoinGecko Trending",
+                source_url=f"https://www.coingecko.com/en/coins/{item.get('id', '')}",
+                lang="ko",
+            )
+            if filepath:
+                dedup.mark_seen(post_title, "CoinGecko Trending", today)
+
+    dedup.save()
+    logger.info("=== CoinMarketCap/CoinGecko collection complete ===")
+
+
+if __name__ == "__main__":
+    main()
