@@ -4,9 +4,9 @@ title: "About"
 permalink: /about/
 ---
 
-# About Investing Dragon
+# About Investing
 
-Investing Dragon은 암호화폐 및 주식 시장의 뉴스를 자동으로 수집하고 분석하는 사이트입니다.
+Investing은 암호화폐 및 주식 시장의 뉴스를 자동으로 수집하고 분석하는 사이트입니다.
 
 ## 기능
 
@@ -37,4 +37,4 @@ Investing Dragon은 암호화폐 및 주식 시장의 뉴스를 자동으로 수
 
 ---
 
-[GitHub Repository](https://github.com/Twodragon0/investing-dragon)
+[GitHub Repository](https://github.com/Twodragon0/investing)

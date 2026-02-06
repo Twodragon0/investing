@@ -1,8 +1,8 @@
-# Investing Dragon
+# Investing
 
 Crypto & Stock 뉴스 자동 수집 및 트레이딩 일지 사이트
 
-**Live Site**: [twodragon0.github.io/investing-dragon](https://twodragon0.github.io/investing-dragon)
+**Live Site**: [twodragon0.github.io/investing](https://twodragon0.github.io/investing)
 
 ## Features
 
@@ -46,8 +46,8 @@ Jekyll (GitHub Pages) + Python Collectors + GitHub Actions (Cron)
 ### 1. Clone & Local Dev
 
 ```bash
-git clone https://github.com/Twodragon0/investing-dragon.git
-cd investing-dragon
+git clone https://github.com/Twodragon0/investing.git
+cd investing
 bundle install
 bundle exec jekyll serve
 ```
@@ -111,7 +111,7 @@ Posts are deduplicated using:
 ## Project Structure
 
 ```
-investing-dragon/
+investing/
 ├── _config.yml              # Jekyll config
 ├── _layouts/                # HTML layouts
 ├── _includes/               # Reusable components
