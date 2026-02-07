@@ -66,9 +66,10 @@ class PostGenerator:
             return None
 
         # Build frontmatter
+        escaped_title = title.replace('"', '\\"')
         frontmatter_lines = [
             "---",
-            f"title: \"{title.replace('\"', '\\\"')}\"",
+            f'title: "{escaped_title}"',
             f"date: {date.strftime('%Y-%m-%d %H:%M:%S %z').strip()}",
             f"categories: [{self.category}]",
         ]
