@@ -1,0 +1,14 @@
+---
+title: "‘Crypto winter’: Why is Bitcoin crashing despite Trump’s support? - Al Jazeera"
+date: 2026-02-06 13:56:44 +0000
+categories: [crypto-news]
+tags: [crypto, english]
+source: "Google News EN"
+source_url: "https://news.google.com/rss/articles/CBMiogFBVV95cUxNT01paVlkZ1JWc1FIUWNoTEFsN2VhdWxVczNSSWpybWJoNHFNMHozcThjQS03aFZDZHowbkZPYmNXZTVlcXhmQksybi1FQmxRb2NvZjd5ejA3bm5yRjFPWjJFSHo4RTNZWjg2dEdwRzN6LVU3ZVFWc2g3YkZjQ1FvX2M1VHppQW1tNUFNSEZaNGF0R0dLb3JIaExHbnFtZjVUZVHSAacBQVVfeXFMTVNhQVlNeFlvWV9rd2ZTd1dQYWVxX3EwcW1WRGJXWmM4YkhsaTl3ZVF4d3JQODZMUHNJbmVmTUZ1UXlZVm9pRnU4alhDd0ZENEdLdkJiUVZmanpaa2tjY2dRVmNCWmRvYzV0YjBIOUVCal9iVGtCeGpDb3phYUsyc3AwaVg4cDhCQUJJcTlZMHROaG5kajZ5UFhKVlFtd3daME9jcEd0MUk?oc=5"
+lang: "en"
+---
+
+‘Crypto winter’: Why is Bitcoin crashing despite Trump’s support? Al Jazeera
+
+---
+*출처: [Google News EN](https://news.google.com/rss/articles/CBMiogFBVV95cUxNT01paVlkZ1JWc1FIUWNoTEFsN2VhdWxVczNSSWpybWJoNHFNMHozcThjQS03aFZDZHowbkZPYmNXZTVlcXhmQksybi1FQmxRb2NvZjd5ejA3bm5yRjFPWjJFSHo4RTNZWjg2dEdwRzN6LVU3ZVFWc2g3YkZjQ1FvX2M1VHppQW1tNUFNSEZaNGF0R0dLb3JIaExHbnFtZjVUZVHSAacBQVVfeXFMTVNhQVlNeFlvWV9rd2ZTd1dQYWVxX3EwcW1WRGJXWmM4YkhsaTl3ZVF4d3JQODZMUHNJbmVmTUZ1UXlZVm9pRnU4alhDd0ZENEdLdkJiUVZmanpaa2tjY2dRVmNCWmRvYzV0YjBIOUVCal9iVGtCeGpDb3phYUsyc3AwaVg4cDhCQUJJcTlZMHROaG5kajZ5UFhKVlFtd3daME9jcEd0MUk?oc=5)*
