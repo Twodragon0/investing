@@ -3,7 +3,21 @@
     <a href="{{ '/' | relative_url }}" class="site-logo">🐉 {{ site.title }}</a>
     <nav class="site-nav">
       {% for item in site.data.navigation.main %}
-        <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}class="active"{% endif %}>{{ item.title }}</a>
+        {% if item.children %}
+          <div class="nav-dropdown">
+            <button class="nav-dropdown-btn" type="button">
+              {{ item.title }}
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><path d="M2 4l3 3 3-3"/></svg>
+            </button>
+            <div class="nav-dropdown-menu">
+              {% for child in item.children %}
+                <a href="{{ child.url | relative_url }}" {% if page.url == child.url %}class="active"{% endif %}>{{ child.title }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        {% else %}
+          <a href="{{ item.url | relative_url }}" class="nav-link" {% if page.url == item.url %}class="active"{% endif %}>{{ item.title }}</a>
+        {% endif %}
       {% endfor %}
     </nav>
     <div class="nav-actions">
@@ -29,3 +43,28 @@
     <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
   </div>
 </header>
+
+<script>
+// Mobile nav toggle
+document.querySelector('.nav-toggle').addEventListener('click', function() {
+  document.querySelector('.site-nav').classList.toggle('active');
+});
+
+// Mobile dropdown toggles
+document.querySelectorAll('.nav-dropdown-btn').forEach(function(btn) {
+  btn.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      e.stopPropagation();
+      this.closest('.nav-dropdown').classList.toggle('open');
+    }
+  });
+});
+
+// Close dropdowns on outside click
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.nav-dropdown')) {
+    document.querySelectorAll('.nav-dropdown.open').forEach(function(d) { d.classList.remove('open'); });
+  }
+});
+</script>
