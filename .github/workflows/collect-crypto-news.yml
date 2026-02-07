@@ -42,5 +42,6 @@ jobs:
             echo "No new posts to commit"
           else
             git commit -m "chore: collect crypto news $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-            git push
+            git pull --rebase origin main
+            git push || (sleep 5 && git pull --rebase origin main && git push)
           fi
