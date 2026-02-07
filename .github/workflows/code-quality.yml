@@ -1,0 +1,51 @@
+name: Code Quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly on Sunday at 00:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: code-quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: scripts/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt ruff
+
+      - name: Run ruff linter
+        run: ruff check scripts/ --output-format=github
+
+      - name: Run Python syntax check
+        run: |
+          find scripts/ -name "*.py" -type f -print0 | xargs -0 python -m py_compile
+
+      - name: Run import check
+        run: |
+          cd scripts
+          python -c "import common.config; print('✓ common.config')"
+          python -c "import common.utils; print('✓ common.utils')"
+          python -c "import common.dedup; print('✓ common.dedup')"
+          python -c "import common.post_generator; print('✓ common.post_generator')"
+          python -c "import common.image_generator; print('✓ common.image_generator')"

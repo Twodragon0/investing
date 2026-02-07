@@ -1,0 +1,104 @@
+name: Site Health Check
+
+on:
+  schedule:
+    - cron: '0 16 * * *'  # Daily 16:00 UTC (01:00 KST)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: health-check
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check site availability
+        id: site_check
+        run: |
+          SITE_URL="https://twodragon0.github.io/investing/"
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$SITE_URL" --max-time 30 || echo "000")
+          echo "http_code=$HTTP_CODE" >> "$GITHUB_OUTPUT"
+          if [ "$HTTP_CODE" -eq 200 ]; then
+            echo "✅ Site is up (HTTP $HTTP_CODE)"
+          else
+            echo "❌ Site returned HTTP $HTTP_CODE"
+          fi
+
+      - name: Check recent posts exist
+        id: posts_check
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          YESTERDAY=$(date -u -d "yesterday" +%Y-%m-%d 2>/dev/null || date -u -v-1d +%Y-%m-%d)
+
+          RECENT_COUNT=0
+          for f in _posts/*.md; do
+            FILE_DATE=$(basename "$f" | grep -oE '^\d{4}-\d{2}-\d{2}' || echo "")
+            if [ "$FILE_DATE" = "$TODAY" ] || [ "$FILE_DATE" = "$YESTERDAY" ]; then
+              RECENT_COUNT=$((RECENT_COUNT + 1))
+            fi
+          done
+
+          echo "recent_count=$RECENT_COUNT" >> "$GITHUB_OUTPUT"
+          TOTAL_COUNT=$(ls _posts/*.md 2>/dev/null | wc -l | tr -d ' ')
+          echo "total_count=$TOTAL_COUNT" >> "$GITHUB_OUTPUT"
+
+          echo "📊 Total posts: $TOTAL_COUNT"
+          echo "📅 Recent posts (today/yesterday): $RECENT_COUNT"
+
+          if [ "$RECENT_COUNT" -eq 0 ]; then
+            echo "⚠️ No recent posts found - collection may have failed"
+          fi
+
+      - name: Check state files
+        run: |
+          echo "📁 State file sizes:"
+          for f in _state/*.json; do
+            if [ -f "$f" ]; then
+              SIZE=$(wc -c < "$f" | tr -d ' ')
+              echo "  $(basename $f): ${SIZE} bytes"
+            fi
+          done
+
+      - name: Create issue on failure
+        if: steps.site_check.outputs.http_code != '200'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = `🚨 Site Health Check Failed - HTTP ${process.env.HTTP_CODE}`;
+            const body = `## Site Health Check Report\n\n` +
+              `- **HTTP Status**: ${process.env.HTTP_CODE}\n` +
+              `- **Recent Posts**: ${process.env.RECENT_COUNT}\n` +
+              `- **Total Posts**: ${process.env.TOTAL_COUNT}\n` +
+              `- **Time**: ${new Date().toISOString()}\n\n` +
+              `Please investigate the GitHub Pages deployment.`;
+
+            // Check if similar issue already exists
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'health-check'
+            });
+
+            if (issues.data.length === 0) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+                labels: ['health-check', 'automated']
+              });
+            }
+        env:
+          HTTP_CODE: ${{ steps.site_check.outputs.http_code }}
+          RECENT_COUNT: ${{ steps.posts_check.outputs.recent_count }}
+          TOTAL_COUNT: ${{ steps.posts_check.outputs.total_count }}
