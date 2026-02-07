@@ -482,7 +482,10 @@ def main():
     if image_refs:
         img_lines = []
         for label, path in image_refs:
-            img_lines.append(f"![{label}]({path})")
+            # Convert absolute path to site-relative URL with baseurl
+            filename = os.path.basename(path)
+            web_path = "{{ '/assets/images/generated/" + filename + "' | relative_url }}"
+            img_lines.append(f"![{label}]({web_path})")
         sections["시장 시각화"] = "\n\n".join(img_lines)
 
     # Market insight
