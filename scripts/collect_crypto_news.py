@@ -12,11 +12,10 @@ Sources:
 import sys
 import os
 import time
-import logging
 import requests
 import certifi
 from datetime import datetime, timezone
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any
 from bs4 import BeautifulSoup
 
 # Add scripts directory to path
@@ -25,7 +24,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common.config import get_env, setup_logging
 from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
-from common.utils import sanitize_string, validate_url, parse_date, detect_language, truncate_text
+from common.utils import sanitize_string
 
 logger = setup_logging("collect_crypto_news")
 
@@ -195,7 +194,7 @@ def fetch_exchange_announcements() -> List[Dict[str, Any]]:
                     items.append({
                         "title": title,
                         "description": title,
-                        "link": f"https://www.binance.com/en/support/announcement",
+                        "link": "https://www.binance.com/en/support/announcement",
                         "published": date_str,
                         "source": "Binance",
                         "tags": ["crypto", "exchange", "binance"],

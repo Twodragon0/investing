@@ -14,18 +14,16 @@ Enhanced version with:
 import sys
 import os
 import time
-import logging
 import requests
 import certifi
 from datetime import datetime, timezone, timedelta
-from typing import Dict, Any, Optional, List
+from typing import Dict, Any, List
 from collections import OrderedDict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.config import get_env, setup_logging
 from common.post_generator import PostGenerator
-from common.utils import sanitize_string
 
 logger = setup_logging("generate_market_summary")
 
@@ -217,15 +215,20 @@ def fetch_fred_indicators(api_key: str) -> Dict[str, Dict[str, Any]]:
 # ══════════════════════════════════════════════
 
 def _fmt(n, prefix="$", decimals=2) -> str:
-    if n is None: return "N/A"
-    if abs(n) >= 1e12: return f"{prefix}{n/1e12:,.2f}T"
-    if abs(n) >= 1e9: return f"{prefix}{n/1e9:,.2f}B"
-    if abs(n) >= 1e6: return f"{prefix}{n/1e6:,.1f}M"
+    if n is None:
+        return "N/A"
+    if abs(n) >= 1e12:
+        return f"{prefix}{n/1e12:,.2f}T"
+    if abs(n) >= 1e9:
+        return f"{prefix}{n/1e9:,.2f}B"
+    if abs(n) >= 1e6:
+        return f"{prefix}{n/1e6:,.1f}M"
     return f"{prefix}{n:,.{decimals}f}"
 
 
 def _pct(n) -> str:
-    if n is None: return "N/A"
+    if n is None:
+        return "N/A"
     icon = "🟢" if n >= 0 else "🔴"
     return f"{icon} {n:+.2f}%"
 
@@ -242,8 +245,8 @@ def format_global_overview(global_data: Dict, fear_greed: Dict) -> str:
         mcap_change = global_data.get("market_cap_change_percentage_24h_usd", 0)
         active = global_data.get("active_cryptocurrencies", 0)
 
-        parts.append(f"| 지표 | 값 |")
-        parts.append(f"|------|------|")
+        parts.append("| 지표 | 값 |")
+        parts.append("|------|------|")
         parts.append(f"| 총 시가총액 | {_fmt(total_mcap)} ({_pct(mcap_change)}) |")
         parts.append(f"| 24시간 거래량 | {_fmt(total_vol)} |")
         parts.append(f"| BTC 도미넌스 | {btc_dom:.1f}% |")
@@ -331,7 +334,10 @@ def format_gainers_losers(coins: List[Dict]) -> str:
 def format_us_market(data: Dict) -> str:
     if not data:
         return "*데이터를 가져올 수 없습니다.*"
-    lines = ["| 종목 | 가격 | 변동 | 변동률 | 거래량 |", "|------|------|------|--------|--------|"]
+    lines = [
+        "| 종목 | 가격 | 변동 | 변동률 | 거래량 |",
+        "|------|------|------|--------|--------|"
+    ]
     for sym, info in data.items():
         lines.append(f"| {info['name']} ({sym}) | ${info['price']} | {info['change']} | {info['change_pct']} | {info.get('volume', 'N/A')} |")
     return "\n".join(lines)
@@ -340,7 +346,10 @@ def format_us_market(data: Dict) -> str:
 def format_korean_market(data: Dict) -> str:
     if not data:
         return "*데이터를 가져올 수 없습니다.*"
-    lines = ["| 지수 | 가격 | 변동 | 변동률 |", "|------|------|------|--------|"]
+    lines = [
+        "| 지수 | 가격 | 변동 | 변동률 |",
+        "|------|------|------|--------|"
+    ]
     for name, info in data.items():
         lines.append(f"| {name} | {info['price']} | {info['change']} | {info['change_pct']} |")
     return "\n".join(lines)
@@ -349,7 +358,10 @@ def format_korean_market(data: Dict) -> str:
 def format_macro(data: Dict) -> str:
     if not data:
         return "*데이터를 가져올 수 없습니다.*"
-    lines = ["| 지표 | 현재 값 | 변동 |", "|------|---------|------|"]
+    lines = [
+        "| 지표 | 현재 값 | 변동 |",
+        "|------|---------|------|"
+    ]
     for key, d in data.items():
         val = f"{d['value']:.2f}"
         ch = f"{d['change']:+.2f}" if d.get("change") is not None else "N/A"

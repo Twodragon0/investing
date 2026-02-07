@@ -11,11 +11,10 @@ Sources:
 import sys
 import os
 import time
-import logging
 import requests
 import certifi
 from datetime import datetime, timezone
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any
 from bs4 import BeautifulSoup
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -23,7 +22,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common.config import get_env, setup_logging
 from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
-from common.utils import sanitize_string, validate_url, parse_date, detect_language, truncate_text
+from common.utils import sanitize_string, detect_language
 
 logger = setup_logging("collect_stock_news")
 

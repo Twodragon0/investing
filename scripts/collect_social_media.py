@@ -10,7 +10,6 @@ Sources:
 import sys
 import os
 import time
-import logging
 import requests
 import certifi
 from datetime import datetime, timezone
@@ -22,7 +21,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common.config import get_env, setup_logging
 from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
-from common.utils import sanitize_string, validate_url, parse_date, detect_language, truncate_text
+from common.utils import sanitize_string, truncate_text
 
 logger = setup_logging("collect_social_media")
 
@@ -214,8 +213,6 @@ def main():
             time.sleep(1)
 
     social_items.extend(fetch_google_news_social())
-
-    all_items = telegram_items + social_items
 
     # ── Consolidated social media post ──
     post_title = f"소셜 미디어 동향 - {today}"

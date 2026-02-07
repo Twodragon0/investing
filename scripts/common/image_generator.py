@@ -6,8 +6,7 @@ Images are saved to assets/images/generated/ for use in Jekyll posts.
 
 import os
 import logging
-from datetime import datetime, timezone
-from typing import Dict, List, Any, Optional, Tuple
+from typing import Dict, List, Any, Optional
 
 logger = logging.getLogger(__name__)
 
@@ -82,7 +81,7 @@ def generate_top_coins_card(
     ax.axis("off")
 
     # Title
-    ax.text(5, fig_height - 0.5, f"Top 10 Cryptocurrencies by Market Cap",
+    ax.text(5, fig_height - 0.5, "Top 10 Cryptocurrencies by Market Cap",
             ha="center", va="center", fontsize=18, fontweight="bold",
             color=COLORS["text"], fontfamily="monospace")
     ax.text(5, fig_height - 1.0, f"{date_str} | Source: {source}",
@@ -205,7 +204,7 @@ def generate_fear_greed_gauge(
         matplotlib.use("Agg")
         import matplotlib.pyplot as plt
         import matplotlib.patches as mpatches
-        import numpy as np
+        import numpy as np  # noqa: F401
     except ImportError:
         logger.warning("matplotlib not available, skipping gauge generation")
         return None
@@ -227,7 +226,7 @@ def generate_fear_greed_gauge(
             fontsize=10, color=COLORS["text_secondary"], fontfamily="monospace")
 
     # Draw gauge arc (semicircle)
-    theta = np.linspace(np.pi, 0, 100)
+    _theta = np.linspace(np.pi, 0, 100)
     r = 1.0
 
     # Color gradient segments
@@ -304,7 +303,7 @@ def generate_market_heatmap(
         matplotlib.use("Agg")
         import matplotlib.pyplot as plt
         import matplotlib.patches as mpatches
-        import numpy as np
+        import numpy as np  # noqa: F401
     except ImportError:
         logger.warning("matplotlib not available, skipping heatmap generation")
         return None
@@ -345,13 +344,13 @@ def generate_market_heatmap(
             symbol = coin.get("symbol", "").upper()
             price = coin.get("current_price", 0) or 0
             change = coin.get("price_change_percentage_24h", 0) or 0
-            mcap = coin.get("market_cap", 0) or 0
+            _mcap = coin.get("market_cap", 0) or 0
         else:
             symbol = coin.get("symbol", "")
             quote = coin.get("quote", {}).get("USD", {})
             price = quote.get("price", 0) or 0
             change = quote.get("percent_change_24h", 0) or 0
-            mcap = quote.get("market_cap", 0) or 0
+            _mcap = quote.get("market_cap", 0) or 0
 
         # Color based on change intensity
         if change >= 5:

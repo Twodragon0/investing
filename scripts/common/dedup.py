@@ -12,7 +12,7 @@ import re
 import logging
 from datetime import datetime, timedelta, timezone
 from difflib import SequenceMatcher
-from typing import Dict, List, Optional
+from typing import Dict, List
 
 logger = logging.getLogger(__name__)
 

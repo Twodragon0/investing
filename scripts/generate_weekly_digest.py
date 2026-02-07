@@ -4,7 +4,6 @@
 import sys
 import os
 import re
-import logging
 from datetime import datetime, timedelta, timezone
 from typing import List, Dict
 
@@ -113,8 +112,8 @@ def generate_digest(posts: List[Dict]) -> str:
     for cat, cat_posts in categories.items():
         display_name = cat_names.get(cat, cat)
         content_parts.append(f"## {display_name}\n")
-        content_parts.append(f"| 날짜 | 제목 |")
-        content_parts.append(f"|------|------|")
+        content_parts.append("| 날짜 | 제목 |")
+        content_parts.append("|------|------|")
         for p in sorted(cat_posts, key=lambda x: x.get("file_date", ""), reverse=True):
             title = p.get("title", "제목 없음")
             date = p.get("file_date", "")
