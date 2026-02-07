@@ -1,4 +1,4 @@
-<article class="post-card">
+<article class="post-card cat-border-{{ post.categories | first | slugify }}">
   <div class="post-card-meta">
     <span class="post-category cat-{{ post.categories | first | slugify }}">{{ post.categories | first }}</span>
     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>

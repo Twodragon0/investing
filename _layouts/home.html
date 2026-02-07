@@ -1,43 +1,212 @@
 ---
 layout: default
 ---
-<section class="hero">
-  <h1>🐉 {{ site.title }}</h1>
-  <p>{{ site.description }}</p>
+
+<!-- Dashboard Header -->
+<section class="dashboard-header">
+  <div class="dashboard-title-row">
+    <div class="dashboard-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+      </svg>
+    </div>
+    <div class="dashboard-info">
+      <h1>{{ site.title }}</h1>
+      <p>실시간 암호화폐·주식 뉴스, 시장 분석, 트레이딩 일지</p>
+    </div>
+  </div>
+  <div class="dashboard-date">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <rect x="3" y="4" width="18" height="18" rx="2"/>
+      <line x1="16" y1="2" x2="16" y2="6"/>
+      <line x1="8" y1="2" x2="8" y2="6"/>
+      <line x1="3" y1="10" x2="21" y2="10"/>
+    </svg>
+    <span id="current-date"></span>
+  </div>
 </section>
 
-<section class="categories-grid">
-  <a href="{{ '/crypto-news/' | relative_url }}" class="category-card crypto">
-    <h3>암호화폐 뉴스</h3>
-    <p>실시간 크립토 뉴스</p>
+<!-- Category Grid v2 -->
+<section class="category-grid-v2">
+  {% assign crypto_news_count = site.categories['crypto-news'] | size %}
+  {% assign stock_news_count = site.categories['stock-news'] | size %}
+  {% assign crypto_journal_count = site.categories['crypto-journal'] | size %}
+  {% assign stock_journal_count = site.categories['stock-journal'] | size %}
+  {% assign security_alerts_count = site.categories['security-alerts'] | size %}
+  {% assign market_analysis_count = site.categories['market-analysis'] | size %}
+
+  <a href="{{ '/crypto-news/' | relative_url }}" class="cat-card cat-crypto">
+    <div class="cat-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M12 6v12M9 9h5a2 2 0 1 1 0 4h-5"/>
+      </svg>
+    </div>
+    <div class="cat-content">
+      <h3>암호화폐 뉴스</h3>
+      <p>비트코인, 이더리움 등 실시간 시세 및 글로벌 뉴스</p>
+      <span class="cat-badge">{{ crypto_news_count }} 포스트</span>
+    </div>
   </a>
-  <a href="{{ '/stock-news/' | relative_url }}" class="category-card stock">
-    <h3>주식 뉴스</h3>
-    <p>글로벌 주식 시장 소식</p>
+
+  <a href="{{ '/stock-news/' | relative_url }}" class="cat-card cat-stock">
+    <div class="cat-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+        <polyline points="17 6 23 6 23 12"/>
+      </svg>
+    </div>
+    <div class="cat-content">
+      <h3>주식 뉴스</h3>
+      <p>미국·한국 주식 시장 동향 및 종목 분석</p>
+      <span class="cat-badge">{{ stock_news_count }} 포스트</span>
+    </div>
   </a>
-  <a href="{{ '/crypto-journal/' | relative_url }}" class="category-card journal">
-    <h3>크립토 트레이딩 일지</h3>
-    <p>일일 거래 기록</p>
+
+  <a href="{{ '/crypto-journal/' | relative_url }}" class="cat-card cat-journal-crypto">
+    <div class="cat-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="16" y1="13" x2="8" y2="13"/>
+        <line x1="16" y1="17" x2="8" y2="17"/>
+      </svg>
+    </div>
+    <div class="cat-content">
+      <h3>크립토 트레이딩 일지</h3>
+      <p>일일 암호화폐 매매 기록 및 전략 분석</p>
+      <span class="cat-badge">{{ crypto_journal_count }} 포스트</span>
+    </div>
   </a>
-  <a href="{{ '/stock-journal/' | relative_url }}" class="category-card journal">
-    <h3>주식 트레이딩 일지</h3>
-    <p>주식 거래 기록</p>
+
+  <a href="{{ '/stock-journal/' | relative_url }}" class="cat-card cat-journal-stock">
+    <div class="cat-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <path d="M9 15h6M12 12v6"/>
+      </svg>
+    </div>
+    <div class="cat-content">
+      <h3>주식 트레이딩 일지</h3>
+      <p>일일 주식 매매 기록 및 포트폴리오 리뷰</p>
+      <span class="cat-badge">{{ stock_journal_count }} 포스트</span>
+    </div>
   </a>
-  <a href="{{ '/security-alerts/' | relative_url }}" class="category-card security">
-    <h3>보안 알림</h3>
-    <p>해킹 및 보안 사고</p>
+
+  <a href="{{ '/security-alerts/' | relative_url }}" class="cat-card cat-security">
+    <div class="cat-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <path d="M12 8v4M12 16h.01"/>
+      </svg>
+    </div>
+    <div class="cat-content">
+      <h3>보안 알림</h3>
+      <p>블록체인 해킹, 스캠, DeFi 보안 사고 속보</p>
+      <span class="cat-badge">{{ security_alerts_count }} 포스트</span>
+    </div>
   </a>
-  <a href="{{ '/market-analysis/' | relative_url }}" class="category-card analysis">
-    <h3>시장 분석</h3>
-    <p>일일/주간 시장 요약</p>
+
+  <a href="{{ '/market-analysis/' | relative_url }}" class="cat-card cat-analysis">
+    <div class="cat-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="12" y1="20" x2="12" y2="10"/>
+        <line x1="18" y1="20" x2="18" y2="4"/>
+        <line x1="6" y1="20" x2="6" y2="16"/>
+      </svg>
+    </div>
+    <div class="cat-content">
+      <h3>시장 분석</h3>
+      <p>일일·주간 시장 종합 리포트 및 매크로 분석</p>
+      <span class="cat-badge">{{ market_analysis_count }} 포스트</span>
+    </div>
   </a>
 </section>
 
-<section class="recent-posts">
+<!-- Today's Summary -->
+{% assign latest_analysis = site.categories['market-analysis'] | first %}
+{% if latest_analysis %}
+<section class="today-summary">
+  <div class="summary-header">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="10"/>
+      <polyline points="12 6 12 12 16 14"/>
+    </svg>
+    <h2>오늘의 요약</h2>
+  </div>
+  <div class="summary-content">
+    <h3><a href="{{ latest_analysis.url | relative_url }}">{{ latest_analysis.title }}</a></h3>
+    <p class="summary-excerpt">{{ latest_analysis.excerpt | strip_html | truncate: 200 }}</p>
+    <a href="{{ latest_analysis.url | relative_url }}" class="summary-link">
+      전체 분석 보기
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </a>
+  </div>
+</section>
+{% endif %}
+
+<!-- Recent Posts with Tabs -->
+<section class="recent-posts-tabbed">
   <h2>최근 포스트</h2>
-  {% for post in site.posts limit:10 %}
-    {% include post-card.html post=post %}
-  {% endfor %}
+
+  <div class="posts-tabs">
+    <button class="posts-tab active" data-category="all">전체</button>
+    <button class="posts-tab" data-category="crypto">암호화폐</button>
+    <button class="posts-tab" data-category="stock">주식</button>
+    <button class="posts-tab" data-category="analysis">분석</button>
+  </div>
+
+  <div class="posts-tab-content">
+    {% for post in site.posts limit:15 %}
+      {% assign first_cat = post.categories | first %}
+      {% assign cat_type = "other" %}
+      {% if first_cat contains "crypto" %}
+        {% assign cat_type = "crypto" %}
+      {% elsif first_cat contains "stock" %}
+        {% assign cat_type = "stock" %}
+      {% elsif first_cat contains "analysis" %}
+        {% assign cat_type = "analysis" %}
+      {% endif %}
+      <div class="post-item" data-cat-type="{{ cat_type }}">
+        {% include post-card.html post=post %}
+      </div>
+    {% endfor %}
+  </div>
 </section>
+
+<script>
+  // Set current date
+  const dateEl = document.getElementById('current-date');
+  const now = new Date();
+  const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
+  dateEl.textContent = now.toLocaleDateString('ko-KR', options);
+
+  // Tab switching
+  const tabs = document.querySelectorAll('.posts-tab');
+  const postItems = document.querySelectorAll('.post-item');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const category = tab.dataset.category;
+
+      // Update active tab
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      // Filter posts
+      postItems.forEach(item => {
+        if (category === 'all') {
+          item.style.display = 'block';
+        } else {
+          item.style.display = item.dataset.catType === category ? 'block' : 'none';
+        }
+      });
+    });
+  });
+</script>
 
 {{ content }}

@@ -15,45 +15,5 @@
     {{ content }}
   </main>
   {% include footer.html %}
-  <div id="google_translate_element" style="display:none;"></div>
-  <script>
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'ko',
-        includedLanguages: 'en,ko,ja,zh-CN',
-        autoDisplay: false
-      }, 'google_translate_element');
-    }
-    function toggleTranslate() {
-      var btn = document.getElementById('translateBtn');
-      var frame = document.querySelector('.goog-te-menu-frame');
-      var combo = document.querySelector('.goog-te-combo');
-      if (combo) {
-        if (combo.value === 'en') {
-          combo.value = 'ko';
-          combo.dispatchEvent(new Event('change'));
-          btn.textContent = '🌐 English';
-        } else {
-          combo.value = 'en';
-          combo.dispatchEvent(new Event('change'));
-          btn.textContent = '🌐 한국어';
-        }
-      } else {
-        // First click - trigger translate to English
-        var gtEl = document.getElementById('google_translate_element');
-        if (gtEl) {
-          setTimeout(function() {
-            var combo2 = document.querySelector('.goog-te-combo');
-            if (combo2) {
-              combo2.value = 'en';
-              combo2.dispatchEvent(new Event('change'));
-              btn.textContent = '🌐 한국어';
-            }
-          }, 1000);
-        }
-      }
-    }
-  </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
