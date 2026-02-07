@@ -16,10 +16,10 @@ POSTS_DIR = os.path.join(REPO_ROOT, "_posts")
 
 
 def _slugify(text: str, max_length: int = 80) -> str:
-    """Convert text to URL-safe slug."""
+    """Convert text to URL-safe slug (English-only)."""
     text = text.lower().strip()
-    # Keep Korean characters, alphanumeric, spaces
-    text = re.sub(r"[^\w\s가-힣-]", "", text)
+    # Keep only English alphanumeric, spaces, and hyphens
+    text = re.sub(r"[^a-z0-9\s-]", "", text)
     text = re.sub(r"\s+", "-", text)
     text = re.sub(r"-+", "-", text)
     text = text.strip("-")
@@ -43,6 +43,7 @@ class PostGenerator:
         source_url: str = "",
         lang: str = "ko",
         extra_frontmatter: Optional[Dict[str, str]] = None,
+        slug: Optional[str] = None,
     ) -> Optional[str]:
         """Create a Jekyll markdown post file.
 
@@ -54,7 +55,8 @@ class PostGenerator:
         if date is None:
             date = datetime.now(timezone.utc)
 
-        slug = _slugify(title)
+        if slug is None:
+            slug = _slugify(title)
         if not slug:
             slug = f"post-{date.strftime('%H%M%S')}"
 
@@ -110,6 +112,7 @@ class PostGenerator:
         sections: Dict[str, str],
         date: Optional[datetime] = None,
         tags: Optional[List[str]] = None,
+        slug: Optional[str] = None,
     ) -> Optional[str]:
         """Create a summary post with multiple sections (e.g., market summary)."""
         content_parts = []
@@ -123,4 +126,5 @@ class PostGenerator:
             date=date,
             tags=tags,
             source="auto-generated",
+            slug=slug,
         )

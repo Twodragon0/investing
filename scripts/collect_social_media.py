@@ -187,7 +187,7 @@ def fetch_google_news_social() -> List[Dict[str, Any]]:
 
 
 def main():
-    """Main social media collection routine."""
+    """Main social media collection routine - consolidated post."""
     logger.info("=== Starting social media collection ===")
 
     twitter_token = get_env("TWITTER_BEARER_TOKEN")
@@ -195,54 +195,82 @@ def main():
     dedup = DedupEngine("social_media_seen.json")
     gen = PostGenerator("crypto-news")  # Social posts go to crypto-news
 
-    all_items = []
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    now = datetime.now(timezone.utc)
 
-    # Telegram public channels
+    # Collect Telegram messages
+    telegram_items = []
     channels = ["cryptonews", "crypto", "CoinDesk"]
     for ch in channels:
-        all_items.extend(fetch_telegram_channel(ch))
+        telegram_items.extend(fetch_telegram_channel(ch))
         time.sleep(2)
 
-    # Twitter search
+    # Collect Twitter/X and Google News social items
+    social_items = []
     if twitter_token:
         queries = ["bitcoin OR ethereum min_faves:100", "crypto market lang:en min_faves:50"]
         for q in queries:
-            all_items.extend(fetch_twitter_search(twitter_token, q))
+            social_items.extend(fetch_twitter_search(twitter_token, q))
             time.sleep(1)
 
-    # Google News RSS fallback
-    all_items.extend(fetch_google_news_social())
+    social_items.extend(fetch_google_news_social())
 
-    created_count = 0
+    all_items = telegram_items + social_items
 
-    for item in all_items:
-        title = item["title"]
-        source = item.get("source", "unknown")
-        published = item.get("published", "")
-        date = parse_date(published) if published else datetime.now(timezone.utc)
+    # ── Consolidated social media post ──
+    post_title = f"소셜 미디어 동향 - {today}"
 
-        if dedup.is_duplicate(title, source, published or datetime.now(timezone.utc).strftime("%Y-%m-%d")):
-            continue
+    if dedup.is_duplicate(post_title, "consolidated", today):
+        logger.info("Consolidated social media post already exists, skipping")
+        dedup.save()
+        return
 
-        lang = detect_language(title)
-        content = item.get("description", title)
-        link = item.get("link", "")
+    content_parts = ["암호화폐 커뮤니티의 주요 소셜 미디어 동향을 정리합니다.\n"]
 
-        filepath = gen.create_post(
-            title=title,
-            content=content,
-            date=date,
-            tags=item.get("tags", ["social-media"]),
-            source=source,
-            source_url=link if validate_url(link) else "",
-            lang=lang,
-        )
-        if filepath:
-            dedup.mark_seen(title, source, published or datetime.now(timezone.utc).strftime("%Y-%m-%d"))
-            created_count += 1
+    # Telegram section
+    content_parts.append("## 텔레그램 주요 소식\n")
+    if telegram_items:
+        content_parts.append("| # | 내용 | 채널 |")
+        content_parts.append("|---|------|------|")
+        for i, item in enumerate(telegram_items, 1):
+            title = item["title"].replace("[Telegram] ", "")
+            source = item.get("source", "unknown")
+            content_parts.append(f"| {i} | **{title}** | {source} |")
+    else:
+        content_parts.append("*수집된 텔레그램 소식이 없습니다.*")
+
+    # Social media trends section (Twitter + Google News social)
+    content_parts.append("\n## 주요 소셜 미디어 트렌드\n")
+    if social_items:
+        content_parts.append("| # | 제목 | 출처 |")
+        content_parts.append("|---|------|------|")
+        for i, item in enumerate(social_items, 1):
+            title = item["title"]
+            # Strip prefix tags for cleaner display
+            for prefix in ("[X/Twitter] ", "[Twitter] "):
+                title = title.replace(prefix, "")
+            source = item.get("source", "unknown")
+            content_parts.append(f"| {i} | **{title}** | {source} |")
+    else:
+        content_parts.append("*수집된 소셜 미디어 트렌드가 없습니다.*")
+
+    content = "\n".join(content_parts)
+
+    filepath = gen.create_post(
+        title=post_title,
+        content=content,
+        date=now,
+        tags=["social-media", "telegram", "twitter", "daily-digest"],
+        source="consolidated",
+        lang="ko",
+        slug="daily-social-media-digest",
+    )
+    if filepath:
+        dedup.mark_seen(post_title, "consolidated", today)
+        logger.info("Created consolidated social media post: %s", filepath)
 
     dedup.save()
-    logger.info("=== Social media collection complete: %d posts created ===", created_count)
+    logger.info("=== Social media collection complete ===")
 
 
 if __name__ == "__main__":

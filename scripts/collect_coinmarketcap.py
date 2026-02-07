@@ -387,7 +387,6 @@ def main():
 
     dedup = DedupEngine("crypto_news_seen.json")
     gen_analysis = PostGenerator("market-analysis")
-    gen_news = PostGenerator("crypto-news")
 
     # ── Fetch data ──
     time.sleep(1)
@@ -471,39 +470,11 @@ def main():
             source=source_name,
             source_url="https://www.coingecko.com/" if cmc_source == "coingecko" else "https://coinmarketcap.com/",
             lang="ko",
+            slug="daily-crypto-market-report",
         )
         if filepath:
             dedup.mark_seen(title, source_name, today)
             logger.info("Created market report: %s", filepath)
-
-    # ── Individual trending coin posts ──
-    if trending and cmc_source == "coingecko":
-        for coin_data in trending[:5]:
-            item = coin_data.get("item", {})
-            name = item.get("name", "")
-            symbol = item.get("symbol", "")
-            rank = item.get("market_cap_rank", "N/A")
-            post_title = f"트렌딩: {name} ({symbol}) - 시가총액 순위 #{rank}"
-
-            if dedup.is_duplicate(post_title, "CoinGecko Trending", today):
-                continue
-
-            content = f"**{name}** ({symbol})이(가) 현재 CoinGecko 트렌딩에 올랐습니다.\n\n"
-            content += f"- 시가총액 순위: #{rank}\n"
-            content += f"- 데이터 출처: CoinGecko Trending\n"
-            content += f"\n> 트렌딩에 오른 것은 관심도가 높다는 의미이며, 투자 권유가 아닙니다."
-
-            filepath = gen_news.create_post(
-                title=post_title,
-                content=content,
-                date=now,
-                tags=["trending", "crypto", symbol.lower() if symbol else ""],
-                source="CoinGecko Trending",
-                source_url=f"https://www.coingecko.com/en/coins/{item.get('id', '')}",
-                lang="ko",
-            )
-            if filepath:
-                dedup.mark_seen(post_title, "CoinGecko Trending", today)
 
     dedup.save()
     logger.info("=== CoinMarketCap/CoinGecko collection complete ===")

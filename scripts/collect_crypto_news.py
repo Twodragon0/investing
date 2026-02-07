@@ -252,19 +252,18 @@ def fetch_rekt_news(limit: int = 10) -> List[Dict[str, Any]]:
 
 
 def main():
-    """Main collection routine."""
+    """Main collection routine - consolidated posts."""
     logger.info("=== Starting crypto news collection ===")
 
     cryptopanic_key = get_env("CRYPTOPANIC_API_KEY")
     newsapi_key = get_env("NEWSAPI_API_KEY")
 
-    # Initialize dedup engines
-    dedup_crypto = DedupEngine("crypto_news_seen.json")
-    dedup_security = DedupEngine("crypto_news_seen.json")  # shared state
-
-    # Initialize post generators
+    dedup = DedupEngine("crypto_news_seen.json")
     crypto_gen = PostGenerator("crypto-news")
     security_gen = PostGenerator("security-alerts")
+
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    now = datetime.now(timezone.utc)
 
     all_items = []
 
@@ -272,66 +271,124 @@ def main():
     all_items.extend(fetch_cryptopanic(cryptopanic_key))
     all_items.extend(fetch_newsapi(newsapi_key))
     all_items.extend(fetch_google_news_crypto())
-    all_items.extend(fetch_exchange_announcements())
+
+    # Exchange announcements collected separately for their own section
+    exchange_items = fetch_exchange_announcements()
+    all_items.extend(exchange_items)
 
     # Rekt News -> security-alerts category
     rekt_items = fetch_rekt_news()
 
     created_count = 0
 
-    # Process crypto news
-    for item in all_items:
-        title = item["title"]
-        source = item.get("source", "unknown")
-        published = item.get("published", "")
-        date = parse_date(published) if published else datetime.now(timezone.utc)
+    # ── Post A: consolidated crypto news briefing ──
+    post_a_title = f"암호화폐 뉴스 브리핑 - {today}"
 
-        if dedup_crypto.is_duplicate(title, source, published or datetime.now(timezone.utc).strftime("%Y-%m-%d")):
-            continue
+    if not dedup.is_duplicate(post_a_title, "consolidated", today):
+        # Separate news items from exchange announcements
+        news_rows = []
+        exchange_rows = []
+        sources_seen = set()
 
-        lang = detect_language(title)
-        description = item.get("description", "")
-        content = description if description else title
-        link = item.get("link", "")
+        for item in all_items:
+            title = item["title"]
+            source = item.get("source", "unknown")
+            sources_seen.add(source)
+
+            if source in ("Binance", "OKX", "Bybit"):
+                exchange_rows.append(f"| {len(exchange_rows) + 1} | **{title}** | {source} |")
+            else:
+                news_rows.append(f"| {len(news_rows) + 1} | **{title}** | {source} |")
+
+        content_parts = ["오늘의 주요 암호화폐 뉴스를 한눈에 정리합니다.\n"]
+
+        # Main news table
+        content_parts.append("## 주요 뉴스\n")
+        if news_rows:
+            content_parts.append("| # | 제목 | 출처 |")
+            content_parts.append("|---|------|------|")
+            content_parts.extend(news_rows)
+        else:
+            content_parts.append("*수집된 뉴스가 없습니다.*")
+
+        # Exchange announcements table
+        content_parts.append("\n## 거래소 공지사항\n")
+        if exchange_rows:
+            content_parts.append("| # | 제목 | 거래소 |")
+            content_parts.append("|---|------|--------|")
+            content_parts.extend(exchange_rows)
+        else:
+            content_parts.append("*수집된 거래소 공지사항이 없습니다.*")
+
+        # Summary
+        content_parts.append("\n## 뉴스 요약")
+        content_parts.append(f"- 총 수집된 뉴스: {len(all_items)}건")
+        content_parts.append(f"- 주요 출처: {', '.join(sorted(sources_seen))}")
+
+        content = "\n".join(content_parts)
 
         filepath = crypto_gen.create_post(
-            title=title,
+            title=post_a_title,
             content=content,
-            date=date,
-            tags=item.get("tags", ["crypto"]),
-            source=source,
-            source_url=link if validate_url(link) else "",
-            lang=lang,
+            date=now,
+            tags=["crypto", "news", "daily-digest"],
+            source="consolidated",
+            lang="ko",
+            slug="daily-crypto-news-digest",
         )
         if filepath:
-            dedup_crypto.mark_seen(title, source, published or datetime.now(timezone.utc).strftime("%Y-%m-%d"))
+            dedup.mark_seen(post_a_title, "consolidated", today)
             created_count += 1
+            logger.info("Created consolidated crypto news post: %s", filepath)
 
-    # Process security alerts
-    for item in rekt_items:
-        title = item["title"]
-        source = item.get("source", "unknown")
-        published = item.get("published", "")
-        date = parse_date(published) if published else datetime.now(timezone.utc)
+    # ── Post B: security report (only if rekt_items exist) ──
+    if rekt_items:
+        post_b_title = f"블록체인 보안 리포트 - {today}"
 
-        if dedup_security.is_duplicate(title, source, published or datetime.now(timezone.utc).strftime("%Y-%m-%d")):
-            continue
+        if not dedup.is_duplicate(post_b_title, "consolidated", today):
+            content_parts = ["최근 블록체인 보안 사고를 정리합니다.\n"]
+            content_parts.append("## 보안 사고 현황\n")
+            content_parts.append("| 프로젝트 | 피해 규모 | 공격 유형 |")
+            content_parts.append("|----------|----------|----------|")
 
-        filepath = security_gen.create_post(
-            title=title,
-            content=item.get("description", title),
-            date=date,
-            tags=item.get("tags", ["security"]),
-            source=source,
-            source_url=item.get("link", ""),
-            lang="en",
-        )
-        if filepath:
-            dedup_security.mark_seen(title, source, published or datetime.now(timezone.utc).strftime("%Y-%m-%d"))
-            created_count += 1
+            for item in rekt_items:
+                # Parse description for structured data
+                desc = item.get("description", "")
+                project = item["title"].replace("[Security] ", "")
+                funds_lost = "N/A"
+                technique = "N/A"
+
+                if "Funds Lost:" in desc:
+                    try:
+                        funds_lost = desc.split("Funds Lost:")[1].split("|")[0].strip()
+                    except IndexError:
+                        pass
+                if "Technique:" in desc:
+                    try:
+                        technique = desc.split("Technique:")[1].strip()
+                    except IndexError:
+                        pass
+
+                content_parts.append(f"| {project} | {funds_lost} | {technique} |")
+
+            content = "\n".join(content_parts)
+
+            filepath = security_gen.create_post(
+                title=post_b_title,
+                content=content,
+                date=now,
+                tags=["security", "hack", "rekt", "daily-digest"],
+                source="Rekt News",
+                lang="ko",
+                slug="daily-security-report",
+            )
+            if filepath:
+                dedup.mark_seen(post_b_title, "consolidated", today)
+                created_count += 1
+                logger.info("Created security report post: %s", filepath)
 
     # Save dedup state
-    dedup_crypto.save()
+    dedup.save()
 
     logger.info("=== Crypto news collection complete: %d posts created ===", created_count)
 

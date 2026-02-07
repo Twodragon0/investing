@@ -192,7 +192,7 @@ def fetch_alpha_vantage_snapshot(api_key: str) -> List[Dict[str, Any]]:
 
 
 def main():
-    """Main collection routine."""
+    """Main collection routine - consolidated post."""
     logger.info("=== Starting stock news collection ===")
 
     newsapi_key = get_env("NEWSAPI_API_KEY")
@@ -201,43 +201,95 @@ def main():
     dedup = DedupEngine("stock_news_seen.json")
     gen = PostGenerator("stock-news")
 
-    all_items = []
-    all_items.extend(fetch_newsapi_stocks(newsapi_key))
-    all_items.extend(fetch_google_news_stocks())
-    all_items.extend(fetch_yahoo_finance_rss())
-    all_items.extend(fetch_alpha_vantage_snapshot(alpha_vantage_key))
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    now = datetime.now(timezone.utc)
 
-    created_count = 0
+    # Collect from all sources
+    newsapi_items = fetch_newsapi_stocks(newsapi_key)
+    google_items = fetch_google_news_stocks()
+    yahoo_items = fetch_yahoo_finance_rss()
+    alpha_items = fetch_alpha_vantage_snapshot(alpha_vantage_key)
+
+    all_items = newsapi_items + google_items + yahoo_items + alpha_items
+
+    # ── Consolidated stock news post ──
+    post_title = f"주식 시장 뉴스 종합 - {today}"
+
+    if dedup.is_duplicate(post_title, "consolidated", today):
+        logger.info("Consolidated stock post already exists, skipping")
+        dedup.save()
+        return
+
+    # Separate global vs Korean news using detect_language
+    global_rows = []
+    korean_rows = []
+    alpha_vantage_rows = []
 
     for item in all_items:
         title = item["title"]
         source = item.get("source", "unknown")
-        published = item.get("published", "")
-        date = parse_date(published) if published else datetime.now(timezone.utc)
 
-        if dedup.is_duplicate(title, source, published or datetime.now(timezone.utc).strftime("%Y-%m-%d")):
+        if source == "Alpha Vantage":
+            alpha_vantage_rows.append(item)
             continue
 
         lang = detect_language(title)
-        description = item.get("description", "")
-        content = description if description else title
-        link = item.get("link", "")
+        if lang == "ko":
+            korean_rows.append(f"| {len(korean_rows) + 1} | **{title}** | {source} |")
+        else:
+            global_rows.append(f"| {len(global_rows) + 1} | **{title}** | {source} |")
 
-        filepath = gen.create_post(
-            title=title,
-            content=content,
-            date=date,
-            tags=item.get("tags", ["stock"]),
-            source=source,
-            source_url=link if validate_url(link) else "",
-            lang=lang,
-        )
-        if filepath:
-            dedup.mark_seen(title, source, published or datetime.now(timezone.utc).strftime("%Y-%m-%d"))
-            created_count += 1
+    content_parts = ["오늘의 주식 시장 뉴스를 종합 정리합니다.\n"]
+
+    # Global stock news
+    content_parts.append("## 글로벌 주식 뉴스\n")
+    if global_rows:
+        content_parts.append("| # | 제목 | 출처 |")
+        content_parts.append("|---|------|------|")
+        content_parts.extend(global_rows)
+    else:
+        content_parts.append("*수집된 글로벌 뉴스가 없습니다.*")
+
+    # Korean stock news
+    content_parts.append("\n## 한국 주식 뉴스\n")
+    if korean_rows:
+        content_parts.append("| # | 제목 | 출처 |")
+        content_parts.append("|---|------|------|")
+        content_parts.extend(korean_rows)
+    else:
+        content_parts.append("*수집된 한국 주식 뉴스가 없습니다.*")
+
+    # Market data snapshot
+    content_parts.append("\n## 시장 데이터 스냅샷\n")
+    if alpha_vantage_rows:
+        content_parts.append("| 지수/ETF | 가격 | 변동 |")
+        content_parts.append("|----------|------|------|")
+        for item in alpha_vantage_rows:
+            content_parts.append(f"| **{item['title']}** | {item.get('description', '')} | - |")
+    else:
+        content_parts.append("*Alpha Vantage 데이터를 가져올 수 없습니다.*")
+
+    # Summary
+    content_parts.append("\n## 뉴스 요약")
+    content_parts.append(f"- 총 수집 뉴스: {len(all_items)}건")
+
+    content = "\n".join(content_parts)
+
+    filepath = gen.create_post(
+        title=post_title,
+        content=content,
+        date=now,
+        tags=["stock", "market", "daily-digest"],
+        source="consolidated",
+        lang="ko",
+        slug="daily-stock-news-digest",
+    )
+    if filepath:
+        dedup.mark_seen(post_title, "consolidated", today)
+        logger.info("Created consolidated stock news post: %s", filepath)
 
     dedup.save()
-    logger.info("=== Stock news collection complete: %d posts created ===", created_count)
+    logger.info("=== Stock news collection complete ===")
 
 
 if __name__ == "__main__":
