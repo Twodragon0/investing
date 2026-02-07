@@ -1,0 +1,14 @@
+---
+title: "Stock Market News, Feb 6, 2026: Dow Closes Above 50000 as Stocks Rebound From Tech Selloff - The Wall Street Journal"
+date: 2026-02-07 01:23:00 +0000
+categories: [stock-news]
+tags: [stock, market, english]
+source: "Google News Stocks EN"
+source_url: "https://news.google.com/rss/articles/CBMijANBVV95cUxNQzBGVnV4NUJZLXgtakRHMXlrcXJwSDdsZmdlWTdDOVBpZUJldVlhblRuV2RaOENhZHJEdFY5LUl0LW82bm1SeUUxRGFHakRmMDlsMXJUcjRDRVowUjhwUmxvYk9PNzF0SHpxNlJGbDI2cURsNk56VXhmSDMteWdsYnBoNlMyZUNQUXdQdjVnaVlBYTVNZVZXUzJRT3lzVVVfa1ZpYWU0SjBMMnJ2c2NFOTlvX09GelV5aHVIQkFWbjVyUXVoMnlDQ09yeld3N3Z2RXoxcWRBTjBtS0F2VDJ6OGJzQldnaHM3T3BxZkNmeFotcHdubzl1dXFuV1NjVUlXLWdXX1RtQkFhSng1RGpETDZfc3BfLTVTZWo3VXhrZVdCdWg3MU5LQnpJYnE2MDc0M212cFZTeUlOazVaSmpNTy1WU1ZMMGlBbi1kMUNDVF9XckRpSEh3RkJXQ09maEd0UXBpdkFhOW02NkRVTXFtYTk4NnN4VEhjYXd3WC1wU2FBQzVUVVJkZjBmZTc?oc=5"
+lang: "en"
+---
+
+Stock Market News, Feb 6, 2026: Dow Closes Above 50000 as Stocks Rebound From Tech Selloff The Wall Street Journal
+
+---
+*출처: [Google News Stocks EN](https://news.google.com/rss/articles/CBMijANBVV95cUxNQzBGVnV4NUJZLXgtakRHMXlrcXJwSDdsZmdlWTdDOVBpZUJldVlhblRuV2RaOENhZHJEdFY5LUl0LW82bm1SeUUxRGFHakRmMDlsMXJUcjRDRVowUjhwUmxvYk9PNzF0SHpxNlJGbDI2cURsNk56VXhmSDMteWdsYnBoNlMyZUNQUXdQdjVnaVlBYTVNZVZXUzJRT3lzVVVfa1ZpYWU0SjBMMnJ2c2NFOTlvX09GelV5aHVIQkFWbjVyUXVoMnlDQ09yeld3N3Z2RXoxcWRBTjBtS0F2VDJ6OGJzQldnaHM3T3BxZkNmeFotcHdubzl1dXFuV1NjVUlXLWdXX1RtQkFhSng1RGpETDZfc3BfLTVTZWo3VXhrZVdCdWg3MU5LQnpJYnE2MDc0M212cFZTeUlOazVaSmpNTy1WU1ZMMGlBbi1kMUNDVF9XckRpSEh3RkJXQ09maEd0UXBpdkFhOW02NkRVTXFtYTk4NnN4VEhjYXd3WC1wU2FBQzVUVVJkZjBmZTc?oc=5)*
