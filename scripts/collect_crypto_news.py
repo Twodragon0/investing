@@ -299,7 +299,11 @@ def main():
             else:
                 news_rows.append(f"| {len(news_rows) + 1} | **{title}** | {source} |")
 
-        content_parts = ["오늘의 주요 암호화폐 뉴스를 한눈에 정리합니다.\n"]
+        # Limit to top items
+        news_rows = news_rows[:15]
+        exchange_rows = exchange_rows[:10]
+
+        content_parts = [f"오늘 총 {len(all_items)}건의 암호화폐 관련 뉴스가 수집되었습니다. 주요 내용을 정리합니다.\n"]
 
         # Main news table
         content_parts.append("## 주요 뉴스\n")

@@ -7,88 +7,59 @@ source: "consolidated"
 lang: "ko"
 ---
 
-오늘의 주요 암호화폐 뉴스를 한눈에 정리합니다.
+비트코인이 15% 급락하며 한때 $61,000 아래로 떨어졌으나, 기술주 반등에 힘입어 $70,000 위로 빠르게 회복하며 극심한 변동성을 보인 하루였다. 하루 동안 26억 5,000만 달러 규모의 청산이 발생했으며, '죽음의 소용돌이' 경고부터 바닥 신호까지 엇갈린 전망이 쏟아졌다. 사토시 나카모토의 정체가 팀이었다는 폭로, 프랑스 판사 납치 사건 등 충격적인 이슈들도 시장의 불안감을 키웠다.
 
-## 주요 뉴스
+## 주요 이슈
 
-| # | 제목 | 출처 |
-|---|------|------|
-| 1 | **How cryptocurrency’s second largest coin missed out on the industry’s boom - The Guardian** | Google News EN |
-| 2 | **Prediction: This Cryptocurrency Could Soar 80% in 2026 - The Motley Fool** | Google News EN |
-| 3 | **Bitcoin drops 15%, briefly breaking below $61,000 as sell-off intensifies, doubts about crypto grow - CNBC** | Google News EN |
-| 4 | **French judge and her mother freed after a cryptocurrency-linked abduction - Le Monde.fr** | Google News EN |
-| 5 | **Targeted Scottsdale home invasion linked to alleged $66M cryptocurrency plot - FOX 10 Phoenix** | Google News EN |
-| 6 | **Utahn who lost $850K hopes lawmakers crack down on cryptocurrency fraud - KSL.com** | Google News EN |
-| 7 | **Cryptocurrency Earthquake: Satoshi Nakamoto's identity revealed, it turns out to be a team, and someone knows them - Binance** | Google News EN |
-| 8 | **Two SLO County Teens Arrested in Arizona in Cryptocurrency Extortion Scheme - News Channel 3-12** | Google News EN |
-| 9 | **South Korean crypto firm accidentally sends $44 billion in bitcoin tousers - CNBC** | Google News EN |
-| 10 | **Purported ransom note for Savannah Guthrie's mom demanded payment in bitcoin. Could it be tracked? - cbsnews.com** | Google News EN |
-| 11 | **Market Recap: Bitcoin and Altcoins Rally After Losses - Investing News Network** | Google News EN |
-| 12 | **How Should Cryptocurrency Be Taxed? Bipartisan Principles on Mining, Staking, De Minimis, and More - Bipartisan Policy Center** | Google News EN |
-| 13 | **Wisconsin lawmakers propose cryptocurrency kiosk restrictions to prevent scams - WMTV 15 NEWS** | Google News EN |
-| 14 | **‘Crypto winter’: Why is Bitcoin crashing despite Trump’s support? - Al Jazeera** | Google News EN |
-| 15 | **Missouri State Highway Patrol issues warning on rising cryptocurrency scams - KRCG** | Google News EN |
-| 16 | **[속보] 비트코인 전략비축 루미스법 공식 폐기...미국 재무부 "암호화폐 구제금융 포기" - 글로벌이코노믹** | Google News KR |
-| 17 | **석달만에 반토막 난 비트코인 “최악의 하루, 크립토 윈터에 빠져” - 동아일보** | Google News KR |
-| 18 | **기술주 급등에 암호화폐 일제 급반등, 비트 8%-리플 21%(상보) - 뉴스1** | Google News KR |
-| 19 | **비트코인, 16개월 최저치에서 반등했지만 암호화폐 가격 하락으로 주간 큰 손실 예상 By Investing.com - Investing.com 한국어** | Google News KR |
-| 20 | **'디지털 금' 비트코인 위기…"죽음의 소용돌이" 경고 나왔다, 왜 - 중앙일보** | Google News KR |
-| 21 | **암호화폐 시장, 하루 만에 26억5000만달러 청산…바닥 신호인가? - 디지털투데이** | Google News KR |
-| 22 | **"62만원 대신 62만 비트코인 지급"…빗썸 역대급 사고에 긴급 점검 - v.daum.net** | Google News KR |
-| 23 | **“폭락은 세일”이라더니...‘부자아빠’ 기요사키, 비트코인 일부 매도 - 조선일보** | Google News KR |
-| 24 | **비트코인, 64800달러 ‘약한 오름세’…“급등 기대는 신중” - 마켓인** | Google News KR |
-| 25 | **WLFI 비트코인 5천만 달러 매도…트럼프 친암호화폐 기대 흔들리나 - 톱스타뉴스** | Google News KR |
-| 26 | **[속보] 비트코인 리플 이더리움 "패닉 붕괴" ... 뉴욕증시 암호화폐 "죽음의 소용돌이 시작 " - 글로벌이코노믹** | Google News KR |
-| 27 | **비트코인 4개월 만에 반토막 - 위클리코리아** | Google News KR |
-| 28 | **"이게 비트코인의 본성"…7만달러 회복에도 전문가 경고, 왜 - 중앙일보** | Google News KR |
-| 29 | **이자 주는 중국 vs 이자 막는 미국 코인 [홍익희의 비트코인 이야기] - v.daum.net** | Google News KR |
-| 30 | **'비트코인 오지급' 고개 숙인 빗썸…"가상자산 취약성 노출" 질타(종합) - 뉴스1** | Google News KR |
+- **비트코인 15% 폭락 후 급반등**: BTC가 $61,000 이하까지 급락하며 16개월 최저치를 기록했으나, 기술주 반등과 함께 $70,000 위로 회복했다. 24시간 만에 $11,000 이상 반등하는 극단적 변동성을 보였다.
 
-## 거래소 공지사항
+- **사토시 나카모토 정체 공개**: 바이낸스 보도에 따르면 비트코인 창시자 사토시 나카모토의 정체가 개인이 아닌 팀이었으며, 이를 아는 사람이 존재한다는 충격적인 주장이 제기됐다.
 
-| # | 제목 | 거래소 |
-|---|------|--------|
-| 1 | **Binance Futures Will Launch USDⓈ-Margined TRIAUSDT Perpetual Contract (2026-02-06)** | Binance |
-| 2 | **Binance Futures Will Launch Multiple USDⓈ-Margined Equity Perpetual Contracts (2026-02-09)** | Binance |
-| 3 | **Binance Will Add Zama (ZAMA) on Earn, Buy Crypto, Convert, VIP Loan, Margin & Futures** | Binance |
-| 4 | **Binance Will List Zama (ZAMA) with Seed Tag Applied** | Binance |
-| 5 | **Binance Futures Will Launch USDⓈ-Margined INXUSDT Perpetual Contract (2026-01-30)** | Binance |
-| 6 | **Binance Earn Yield Arena: Earn Up to 29% APR With This Week’s New Limited-Time Offers! (2026-02-05)** | Binance |
-| 7 | **Binance Wallet Launches Security Center with the New Security Scan Feature** | Binance |
-| 8 | **Important Updates on the Funding Rate of USDⓈ-M INTCUSDT and HOODUSDT Perpetual Contracts (2026-02-03)** | Binance |
-| 9 | **Updates on Tick Size for Multiple USDⓈ-M Perpetual Futures Contracts (2026-02-09)** | Binance |
-| 10 | **Update on the Collateral Ratio Under Portfolio Margin and the Leverage & Margin Tiers of USDⓈ-M Perpetual Contracts (2026-02-03)** | Binance |
-| 11 | **MENA Exclusive: Referral Rush - Invite Friends & Share $45,000 in USDT Token Rewards** | Binance |
-| 12 | **South Asia New Earn User Special: Subscribe to USDT Simple Earn to Enjoy 30% APR for 10 Days!** | Binance |
-| 13 | **Binance Academy Bitcoin Page: Complete Quiz to Earn BTC Rewards This February 2026!** | Binance |
-| 14 | **Tria Trading Competition: Trade Tria (TRIA) and Share $200K Worth of Rewards** | Binance |
-| 15 | **Participate in the Exclusive Opinion (OPN) Booster Program on Binance Wallet** | Binance |
-| 16 | **Buy ARB, ID, RDNT, TUSD & USDC Directly Using Credit/Debit Cards and Fiat Balances** | Binance |
-| 17 | **BADGER Available via Credit/Debit Card** | Binance |
-| 18 | **HOOK & MAGIC Available via Credit/Debit Card** | Binance |
-| 19 | **HFT, OSMO & QKC Available via Credit/Debit Card** | Binance |
-| 20 | **APT, POLYX & VIDT Available via Credit/Debit Card** | Binance |
-| 21 | **Notice of Removal of Spot Trading Pairs - 2026-02-06** | Binance |
-| 22 | **Binance Futures Will Delist USDⓈ-M RVVUSDT and YALAUSDT Perpetual Contracts (2026-02-10)** | Binance |
-| 23 | **Notice of Removal of Margin Trading Pairs - 2026-02-06** | Binance |
-| 24 | **Upcoming Changes to CZK Spot Trading on Binance** | Binance |
-| 25 | **Notice of Removal of Spot Trading Pairs - 2026-02-03** | Binance |
-| 26 | **Binance Will Support the Zilliqa (ZIL) Network Upgrade & Hard Fork - 2026-02-05** | Binance |
-| 27 | **Binance Will Support the Sei (SEI) Network Upgrade - 2026-02-03** | Binance |
-| 28 | **Wallet Maintenance for BNB Smart Chain (BEP20) - 2026-01-23** | Binance |
-| 29 | **Binance Will Support the THORChain (RUNE) Network Upgrade - 2026-01-22** | Binance |
-| 30 | **Binance Will Cease Support for Deposits and Withdrawals of Tokens on Selected Networks - 2026-01-22** | Binance |
-| 31 | **Notice on Binance Spot API Update (2025-11-18)** | Binance |
-| 32 | **Binance Futures API Updates (2025-10-09)** | Binance |
-| 33 | **Introducing Binance Announcements WebSocket: Subscribe to Get Real-Time Updates and Promotions** | Binance |
-| 34 | **Binance Futures API Updates (2024-10-30)** | Binance |
-| 35 | **Binance Earn Enables API Functionality for SOL Staking** | Binance |
-| 36 | **Solayer (LAYER) Airdrop Continues: Fourth Binance HODLer Airdrops Announced – Earn LAYER With Retroactive BNB Simple Earn Subscriptions (2025-09-19)** | Binance |
-| 37 | **Introducing Avantis (AVNT) on Binance HODLer Airdrops! Earn AVNT With Retroactive BNB Simple Earn Subscriptions** | Binance |
-| 38 | **MyShell (SHELL) Airdrop Continues: Second Binance HODLer Airdrops Announced – Earn SHELL With Retroactive BNB Simple Earn Subscriptions and Enjoy Up to 29.9% APR with SHELL Locked Products (2025-08-27)** | Binance |
-| 39 | **Solayer (LAYER) Airdrop Continues: Third Binance HODLer Airdrops Announced – Earn LAYER With Retroactive BNB Simple Earn Subscriptions (2025-08-18)** | Binance |
-| 40 | **Solayer (LAYER) Airdrop Continues: Second Binance HODLer Airdrops Announced – Earn LAYER With Retroactive BNB Simple Earn Subscriptions (2025-06-16)** | Binance |
+- **빗썸 오지급 사고**: 62만 원을 지급해야 할 것을 62만 비트코인으로 지급하는 역대급 사고가 발생해 긴급 점검에 들어갔다. 가상자산 거래소의 시스템 취약성이 다시 한 번 도마에 올랐다.
 
-## 뉴스 요약
-- 총 수집된 뉴스: 70건
-- 주요 출처: Binance, Google News EN, Google News KR
+- **WLFI 비트코인 5천만 달러 매도**: 트럼프 관련 WLFI가 비트코인 5천만 달러어치를 매도하며 친암호화폐 행정부에 대한 기대감에 찬물을 끼얹었다.
+
+- **루미스법 공식 폐기**: 비트코인 전략비축을 위한 루미스법이 공식 폐기됐다. 미국 재무부가 암호화폐 구제금융을 포기하면서 제도적 지원에 대한 기대가 크게 후퇴했다.
+
+## 글로벌 동향
+
+- **이더리움 업계 호황에서 소외**: 가디언지는 암호화폐 시장 호황 속에서 이더리움이 비트코인에 비해 상대적으로 부진한 성과를 보이고 있다고 분석했다. 2위 코인의 위상이 흔들리고 있다는 진단이다.
+
+- **프랑스 판사 납치 사건**: 암호화폐 관련 납치 사건에 연루된 프랑스 판사와 그 어머니가 풀려났다. 암호화폐 보유자를 대상으로 한 물리적 범죄가 국제적으로 증가하는 추세를 보여준다.
+
+- **미국 암호화폐 사기 단속 강화**: 유타주에서 85만 달러를 잃은 피해자가 의회에 규제 강화를 촉구하고, 위스콘신주에서는 암호화폐 키오스크 사기 방지법이 발의되는 등 미국 전역에서 규제 움직임이 강화되고 있다.
+
+- **'크립토 윈터' 우려 재부상**: 트럼프 대통령의 지지에도 불구하고 비트코인이 급락하면서 '크립토 윈터' 진입 가능성에 대한 우려가 다시 부상했다. 4개월 만에 반토막이라는 분석도 나왔다.
+
+- **암호화폐 과세 초당적 논의**: 미국에서 채굴, 스테이킹, 소액거래 비과세 기준 등 암호화폐 과세 원칙에 대한 초당적 논의가 본격화되고 있다.
+
+## 한국 시장
+
+- **빗썸 62만 BTC 오지급 사고**: 시스템 오류로 620,000원을 620,000 BTC로 잘못 전송하는 초유의 사고가 발생했다. 빗썸은 즉각 긴급 점검에 들어갔으며, 가상자산 시스템 취약성에 대한 비판이 쏟아졌다.
+
+- **비트코인 석 달 만에 반토막**: 한국 언론은 비트코인의 이번 급락을 '최악의 하루'로 표현하며 크립토 윈터 진입을 경고했다. 국내 투자자 심리가 극도로 위축됐다.
+
+- **기술주 급등에 암호화폐 일제 반등**: 미국 기술주 반등에 힘입어 비트코인 8%, 리플 21% 등 암호화폐가 일제히 급반등했다. 다만 전문가들은 급등 기대에 신중할 것을 당부했다.
+
+- **'부자아빠' 기요사키 비트코인 일부 매도**: 평소 "폭락은 세일"을 주장하던 로버트 기요사키가 이번에는 비트코인 일부를 매도한 것으로 알려져 투자자들에게 혼란을 줬다.
+
+- **'죽음의 소용돌이' 경고**: 중앙일보는 비트코인 $70,000 회복에도 전문가들이 여전히 경계를 늦추지 않고 있다고 보도하며, 이것이 비트코인의 본성이라는 분석을 전했다.
+
+## 거래소 주요 공지
+
+- **바이낸스 ZAMA 상장**: 바이낸스가 Zama(ZAMA)를 시드 태그와 함께 상장하고, Earn, Convert, 마진, 선물 등 전 서비스에서 지원을 개시했다.
+
+- **TRIA 선물 계약 출시**: TRIAUSDT 무기한 선물 계약이 새로 출시됐으며, 20만 달러 규모의 트레이딩 대회도 함께 진행된다.
+
+- **바이낸스 월렛 보안 센터 오픈**: 신규 보안 스캔 기능을 탑재한 바이낸스 월렛 보안 센터가 공개됐다. 사용자 자산 보호 강화가 목적이다.
+
+- **주식 연계 무기한 선물 확대**: 2026-02-09부터 다수의 USDS 마진 주식 연계 무기한 선물 계약이 추가로 출시될 예정이다.
+
+- **ZIL 네트워크 업그레이드 및 SEI 업그레이드 지원**: 바이낸스가 Zilliqa 네트워크 하드포크와 Sei 네트워크 업그레이드를 지원한다고 공지했다.
+
+## 오늘의 핵심
+
+- 비트코인이 $61,000까지 급락 후 $70,000 위로 회복하며 극심한 변동성을 보였다. 하루 26.5억 달러가 청산됐으며 바닥 신호 vs 크립토 윈터 논쟁이 계속되고 있다.
+- 루미스법 폐기와 WLFI 매도로 미국 정부의 친암호화폐 정책에 대한 기대감이 크게 후퇴했다.
+- 빗썸의 62만 BTC 오지급 사고는 국내 거래소의 시스템 리스크를 다시 한 번 부각시켰다.
+- 사토시 나카모토가 팀이었다는 폭로, 프랑스 판사 납치 등 시장 외적 이슈도 투자 심리에 영향을 미쳤다.

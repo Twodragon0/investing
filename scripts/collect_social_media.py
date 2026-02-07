@@ -222,26 +222,26 @@ def main():
         dedup.save()
         return
 
-    content_parts = ["암호화폐 커뮤니티의 주요 소셜 미디어 동향을 정리합니다.\n"]
+    content_parts = [f"오늘의 암호화폐 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 {len(telegram_items)}건, 소셜 미디어 {len(social_items)}건이 수집되었습니다.\n"]
 
-    # Telegram section
+    # Telegram section (limit to top 10)
     content_parts.append("## 텔레그램 주요 소식\n")
     if telegram_items:
         content_parts.append("| # | 내용 | 채널 |")
         content_parts.append("|---|------|------|")
-        for i, item in enumerate(telegram_items, 1):
+        for i, item in enumerate(telegram_items[:10], 1):
             title = item["title"].replace("[Telegram] ", "")
             source = item.get("source", "unknown")
             content_parts.append(f"| {i} | **{title}** | {source} |")
     else:
         content_parts.append("*수집된 텔레그램 소식이 없습니다.*")
 
-    # Social media trends section (Twitter + Google News social)
+    # Social media trends section (Twitter + Google News social, limit to top 10)
     content_parts.append("\n## 주요 소셜 미디어 트렌드\n")
     if social_items:
         content_parts.append("| # | 제목 | 출처 |")
         content_parts.append("|---|------|------|")
-        for i, item in enumerate(social_items, 1):
+        for i, item in enumerate(social_items[:10], 1):
             title = item["title"]
             # Strip prefix tags for cleaner display
             for prefix in ("[X/Twitter] ", "[Twitter] "):

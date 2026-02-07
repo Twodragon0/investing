@@ -7,66 +7,47 @@ source: "consolidated"
 lang: "ko"
 ---
 
-오늘의 주식 시장 뉴스를 종합 정리합니다.
+다우지수가 1,200포인트 폭등하며 사상 최초로 50,000선을 돌파 마감했다. 3일간의 기술주 폭락에서 극적으로 반등한 장세로, 엔비디아가 AI 하드웨어 반등을 이끌며 시장 회복에 앞장섰다. S&P 500이 한때 2026년 들어 마이너스로 전환될 정도로 변동성이 극심했지만, 주 후반 강력한 매수세로 주요 지수 모두 급등 마감했다.
 
-## 글로벌 주식 뉴스
+## 미국 시장 하이라이트
 
-| # | 제목 | 출처 |
-|---|------|------|
-| 1 | **Dow surges 1,200 points for first close above 50,000 in sharp rebound from tech rout: Live updates - CNBC** | Google News Stocks EN |
-| 2 | **Stock market today: Dow leads S&P 500, Nasdaq higher as Wall Street rebounds from AI tech rout - Yahoo Finance** | Google News Stocks EN |
-| 3 | **Stock Market on Feb. 6, 2026: Dow claims 1,200-point gain to end above 50,000 for first time; S&P 500, Nasdaq surge, but still book a losing week - MarketWatch** | Google News Stocks EN |
-| 4 | **Markets News, Feb. 6, 2026: Dow Ends Above 50K for First Time as Indexes Soar After 3-Day Sell-Off; Bitcoin Bounces Back Above $70K - Investopedia** | Google News Stocks EN |
-| 5 | **Stocks Rebound After Volatile Week as Dow Hits Record High - The New York Times** | Google News Stocks EN |
-| 6 | **Stocks rebound after a dramatic week sparked by ongoing AI uncertainty - NBC News** | Google News Stocks EN |
-| 7 | **Stock Market Today, Feb. 6: Nvidia Leads Rally After AI Hardware Rebounds - The Motley Fool** | Google News Stocks EN |
-| 8 | **The Forgotten Sectors Quietly Beating the S&P 500 - money.com** | Google News Stocks EN |
-| 9 | **Stock market today: Dow closes above 50,000 for the first time as stocks soar to cap volatile week - Yahoo Finance** | Google News Stocks EN |
-| 10 | **Dow soars by 1,200 points to top 50,000 for the first time as chips and airlines lead ferocious stock market rebound - Fortune** | Google News Stocks EN |
-| 11 | **Stock market today: Dow crosses 50,000 mark, leading S&P 500, Nasdaq higher as Wall Street rebounds from rout - Yahoo Finance** | Google News Stocks EN |
-| 12 | **Stock Market News From Feb. 6, 2026: Dow Crosses 50,000 Level - Barron's** | Google News Stocks EN |
-| 13 | **Stock Market News, Feb 6, 2026: Dow Closes Above 50000 as Stocks Rebound From Tech Selloff - The Wall Street Journal** | Google News Stocks EN |
-| 14 | **Dow tumbles nearly 600 points, S&P 500 goes negative for 2026 in tech sector rout: Live updates - CNBC** | Google News Stocks EN |
-| 15 | **The Stock Market Just Got Shaky. Where to Find Solid Ground. - The Wall Street Journal** | Google News Stocks EN |
-| 16 | **Jennifer Garner-backed kids' food brand Once Upon a Farm rises 16% in Wall Street debut** | Yahoo Finance |
-| 17 | **Have $2,000? These 2 Stocks Could Be Bargain Buys for 2026 and Beyond.** | Yahoo Finance |
-| 18 | **Dow Jones Tops 50,000 As Apple, Boeing, These AI Stocks Flash Buy Signals, But Market Still Divided** | Yahoo Finance |
-| 19 | **Argus Research Downgrades Badger Meter, Inc. (BMI) as Seaport Research Trims Price Target** | Yahoo Finance |
-| 20 | **Larry Fink says Americans must retire later to dodge ‘retirement crisis.’ Do this now if you really don’t have a choice** | Yahoo Finance |
-| 21 | **Apple, GE Aerospace Lead Five Stocks Flashing Buy Signals** | Yahoo Finance |
-| 22 | **Ethereum Co-Founder Vitalik Buterin Made $70K From Prediction Markets Last Year. His Edge? 'Crazy Things Won't Happen'** | Yahoo Finance |
-| 23 | **Evercore ISI Raises Fifth Third Bancorp (FITB) Price Target After Q4 Earnings Review** | Yahoo Finance |
-| 24 | **BofA Maintains Neutral Stance on KB Home (KBH) Amid 2026 Industry Pressures** | Yahoo Finance |
-| 25 | **Citizens Sees Improving Visibility for LGI Homes, Inc. (LGIH) Ahead of Q4 Results** | Yahoo Finance |
-| 26 | **RBC Capital Turns More Cautious on Tri Pointe Homes, Inc. (TPH) Amid Challenging Housing Backdrop** | Yahoo Finance |
-| 27 | **Here Are 5 Tax Credits You Didn’t Know You Qualified For** | Yahoo Finance |
-| 28 | **Citizens Initiates M/I Homes, Inc. (MHO) With Outperform, Citing Affordability Advantage** | Yahoo Finance |
-| 29 | **BofA Downgrades Taylor Morrison Home Corporation (TMHC) to Neutral, Flags EPS and Delivery Risks Despite Valuation Appeal** | Yahoo Finance |
-| 30 | **Keefe Bruyette Stays Market Perform on Meritage Homes Corporation (MTH), Citing Near-Term Pressures** | Yahoo Finance |
+- **다우지수 50,000 첫 돌파**: 다우존스 산업평균지수가 1,200포인트 이상 급등하며 역사상 처음으로 50,000선 위에서 장을 마감했다. 반도체와 항공 섹터가 강력한 반등을 주도했다.
 
-## 한국 주식 뉴스
+- **엔비디아 주도 기술주 랠리**: AI 하드웨어 매도세가 진정되며 엔비디아가 랠리를 선도했다. AI에 대한 불확실성이 지속되는 가운데서도 투자자들의 저가 매수세가 유입됐다.
 
-| # | 제목 | 출처 |
-|---|------|------|
-| 1 | **코스피·코스닥, 내년 ’24시간 거래’ 열린다 By MoneyS - Investing.com 한국어** | Google News Stocks KR |
-| 2 | **“늦었나 했는데, 오늘 들어가?”…코스피, 2%대 하락 출발, 코스닥도 내려 - 매일경제** | Google News Stocks KR |
-| 3 | **‘워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까 - v.daum.net** | Google News Stocks KR |
-| 4 | **승승장구하던 코스피·코스닥 '와르르'...주식시장 '파란불' - 동양일보** | Google News Stocks KR |
-| 5 | **질주하는 코스피·코스닥·금값…언제까지 달릴까? [뉴스in뉴스] - KBS 뉴스** | Google News Stocks KR |
-| 6 | **코스피·코스닥, 내림세로 장 마감 - 한강타임즈** | Google News Stocks KR |
-| 7 | **코스피 5000 시대 활짝…코스닥도 1000선 회복 - 농민신문** | Google News Stocks KR |
-| 8 | **코스피·코스닥 ‘검은 목요일’...외인·기관 동반 매도에 3%대 급락 - 프리진경제** | Google News Stocks KR |
-| 9 | **[개장시황] 외국인·기관 매도세…코스피·코스닥 동반 하락 - 중앙이코노미뉴스** | Google News Stocks KR |
-| 10 | **[개장시황] 코스피·코스닥 보합…개인 5000억대 순매수 - newspim.com** | Google News Stocks KR |
-| 11 | **코스피·코스닥 ETF 총보수, 삼성자산운용 '최고'…한투신탁운용·하나자산운용 '저렴' - 소비자가 만드는 신문** | Google News Stocks KR |
-| 12 | **코스피·코스닥 동반 급락…은값 폭락에 외국인 매도 쏟아져 - 산경투데이** | Google News Stocks KR |
-| 13 | **[주식] 코스피·코스닥 약세 속 '코오롱티슈진'·'인벤티지랩' 급등 - 히트뉴스** | Google News Stocks KR |
-| 14 | **거래대금 폭증에 계좌도 ‘1억 시대’…달아오른 증시 - 마켓인** | Google News Stocks KR |
-| 15 | **코스피, 세계 최고 상승률 찍지만… 내린 종목이 더 많다 - 조선일보** | Google News Stocks KR |
+- **S&P 500 연초 대비 마이너스 전환 후 회복**: 기술주 폭락으로 S&P 500이 2026년 들어 처음으로 마이너스 수익률을 기록했으나, 주 후반 급반등하며 원상 회복했다. 시장의 극심한 양방향 변동성을 보여주는 사례다.
 
-## 시장 데이터 스냅샷
+- **애플, 보잉 등 매수 신호 점등**: 다우 50,000 돌파와 함께 애플, 보잉, GE 에어로스페이스 등 대형주 5종목에서 기술적 매수 신호가 나타났다. 다만 시장은 여전히 업종 간 온도차가 뚜렷하다.
 
-*Alpha Vantage 데이터를 가져올 수 없습니다.*
+- **래리 핑크 은퇴 위기 경고**: 블랙록 CEO 래리 핑크가 미국인들이 은퇴 위기를 피하려면 더 늦게 은퇴해야 한다고 경고했다. 인구구조 변화에 대한 월가의 장기 우려가 반영된 발언이다.
 
-## 뉴스 요약
-- 총 수집 뉴스: 45건
+## 한국 시장 동향
+
+- **코스피 5,000시대 개막**: 코스피가 5,000선을 돌파하며 새로운 이정표를 세웠다. 코스닥도 1,000선을 회복하며 한국 증시 전반에 활기가 돌았다.
+
+- **'검은 목요일' 급락**: 외국인과 기관의 동반 매도에 코스피와 코스닥이 3%대 급락을 겪었다. 글로벌 기술주 폭락의 여파가 국내 시장에도 직격탄을 날렸다.
+
+- **워시 쇼크 여파**: 미국발 충격으로 금, 은, 비트코인이 동반 폭락한 가운데, 국내 증시도 하락 출발하며 2%대 하락으로 거래를 시작했다.
+
+- **개인 투자자 5,000억 순매수**: 외인과 기관의 매도세 속에서도 개인 투자자들이 5,000억 원대 순매수를 기록하며 저가 매수에 적극 나섰다. 코스피와 코스닥은 보합 수준에서 등락을 반복했다.
+
+- **24시간 거래 시대 예고**: 코스피와 코스닥이 내년부터 '24시간 거래'를 개시할 예정이라는 보도가 나왔다. 글로벌 증시와의 시간차를 해소하기 위한 제도적 변화다.
+
+## 주요 종목 움직임
+
+- **Once Upon a Farm (IPO)**: 배우 제니퍼 가너가 후원한 아동 식품 브랜드가 월가 데뷔 첫날 16% 상승하며 시장의 주목을 받았다.
+
+- **Galaxy Digital**: 2억 달러 규모 자사주 매입 승인 발표 후 주가 18% 급등. 전날 급락에 대한 반작용과 경영진의 자신감 표시로 해석됐다.
+
+- **주택 건설주 엇갈린 전망**: BofA가 KB Home에 중립 유지, Taylor Morrison을 중립으로 하향하는 등 2026년 주택 시장 압박 전망이 반영됐다. 반면 LGI Homes, M/I Homes에 대해서는 긍정적 의견이 제시됐다.
+
+- **한국 코오롱티슈진, 인벤티지랩 급등**: 코스피, 코스닥 전반적 약세 속에서도 바이오 관련주 코오롱티슈진과 인벤티지랩이 급등세를 보였다.
+
+- **S&P 500을 조용히 이기는 섹터**: 기술주에 가려져 있지만 에너지, 유틸리티 등 전통 섹터가 S&P 500 대비 초과 수익을 내고 있다는 분석이 주목받았다.
+
+## 오늘의 핵심
+
+- 다우지수가 사상 첫 50,000 돌파에 성공하며 AI 기술주 폭락으로 인한 공포 심리를 일소했다. 그러나 한 주간으로 보면 여전히 손실 마감이다.
+- 한국 코스피는 5,000시대를 열었지만 외국인, 기관의 동반 매도로 '검은 목요일'도 경험하며, 글로벌 변동성에 취약한 모습을 보였다.
+- 시장이 기술주 중심에서 전통 섹터로 순환하는 조짐이 보이며, 포트폴리오 다각화의 중요성이 부각되고 있다.
+- 개인 투자자의 적극적인 저가 매수세는 국내 증시의 버팀목 역할을 하고 있으나, 외국인 수급 변화에 주의가 필요하다.

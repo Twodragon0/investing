@@ -238,7 +238,11 @@ def main():
         else:
             global_rows.append(f"| {len(global_rows) + 1} | **{title}** | {source} |")
 
-    content_parts = ["오늘의 주식 시장 뉴스를 종합 정리합니다.\n"]
+    # Limit to top items
+    global_rows = global_rows[:15]
+    korean_rows = korean_rows[:10]
+
+    content_parts = [f"오늘 총 {len(all_items)}건의 주식 시장 뉴스가 수집되었습니다. 주요 내용을 정리합니다.\n"]
 
     # Global stock news
     content_parts.append("## 글로벌 주식 뉴스\n")

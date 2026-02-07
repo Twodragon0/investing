@@ -675,3 +675,34 @@ html {
   background: rgba($accent-blue, 0.3);
   color: $text-primary;
 }
+
+// Translation button
+.translate-btn-wrap {
+  margin: 1rem 0;
+  text-align: right;
+}
+
+.translate-btn {
+  background: rgba(88, 166, 255, 0.15);
+  color: #58a6ff;
+  border: 1px solid rgba(88, 166, 255, 0.3);
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+
+  &:hover {
+    background: rgba(88, 166, 255, 0.25);
+    border-color: #58a6ff;
+  }
+}
+
+// Hide Google Translate bar
+.goog-te-banner-frame,
+.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0 !important;
+}
