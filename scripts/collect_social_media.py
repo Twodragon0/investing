@@ -185,6 +185,31 @@ def fetch_google_news_social() -> List[Dict[str, Any]]:
     return all_items
 
 
+def fetch_political_economy_news() -> List[Dict[str, Any]]:
+    """Fetch Trump and 이재명 related economy/crypto news from Google News RSS."""
+    feeds = [
+        # Trump crypto/economy policy
+        ("https://news.google.com/rss/search?q=Trump+crypto+policy&hl=en-US&gl=US&ceid=US:en",
+         "Trump Crypto Policy", ["politics", "trump", "crypto"]),
+        ("https://news.google.com/rss/search?q=Trump+tariff+economy+stock&hl=en-US&gl=US&ceid=US:en",
+         "Trump Economy", ["politics", "trump", "economy"]),
+        ("https://news.google.com/rss/search?q=트럼프+암호화폐+경제&hl=ko&gl=KR&ceid=KR:ko",
+         "트럼프 경제정책 KR", ["politics", "trump", "korean"]),
+        # 이재명 economy/stock policy
+        ("https://news.google.com/rss/search?q=이재명+경제+정책&hl=ko&gl=KR&ceid=KR:ko",
+         "이재명 경제정책", ["politics", "이재명", "economy"]),
+        ("https://news.google.com/rss/search?q=이재명+주식+암호화폐+코인&hl=ko&gl=KR&ceid=KR:ko",
+         "이재명 암호화폐정책", ["politics", "이재명", "crypto"]),
+        ("https://news.google.com/rss/search?q=이재명+부동산+금리&hl=ko&gl=KR&ceid=KR:ko",
+         "이재명 부동산·금리", ["politics", "이재명", "real-estate"]),
+    ]
+    all_items = []
+    for url, name, tags in feeds:
+        all_items.extend(fetch_rss_feed(url, name, tags))
+        time.sleep(1)
+    return all_items
+
+
 def main():
     """Main social media collection routine - consolidated post."""
     logger.info("=== Starting social media collection ===")
@@ -199,7 +224,7 @@ def main():
 
     # Collect Telegram messages
     telegram_items = []
-    channels = ["cryptonews", "crypto", "CoinDesk"]
+    channels = ["cryptonews", "crypto", "CoinDesk", "BitcoinMagazine", "WuBlockchain", "coinlounge"]
     for ch in channels:
         telegram_items.extend(fetch_telegram_channel(ch))
         time.sleep(2)
@@ -207,12 +232,20 @@ def main():
     # Collect Twitter/X and Google News social items
     social_items = []
     if twitter_token:
-        queries = ["bitcoin OR ethereum min_faves:100", "crypto market lang:en min_faves:50"]
+        queries = [
+            "bitcoin OR ethereum min_faves:100",
+            "crypto market lang:en min_faves:50",
+            "Trump crypto OR bitcoin min_faves:50",
+            "이재명 경제 OR 주식 OR 암호화폐 lang:ko min_faves:20",
+        ]
         for q in queries:
             social_items.extend(fetch_twitter_search(twitter_token, q))
             time.sleep(1)
 
     social_items.extend(fetch_google_news_social())
+
+    # Collect political/economy news (Trump, 이재명)
+    political_items = fetch_political_economy_news()
 
     # ── Consolidated social media post ──
     post_title = f"소셜 미디어 동향 - {today}"
@@ -222,7 +255,10 @@ def main():
         dedup.save()
         return
 
-    content_parts = [f"오늘의 암호화폐 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 {len(telegram_items)}건, 소셜 미디어 {len(social_items)}건이 수집되었습니다.\n"]
+    content_parts = [f"오늘의 암호화폐 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 {len(telegram_items)}건, 소셜 미디어 {len(social_items)}건, 정치·경제 {len(political_items)}건이 수집되었습니다.\n"]
+
+    # Collect all source links
+    source_links = []
 
     # Telegram section (limit to top 10)
     content_parts.append("## 텔레그램 주요 소식\n")
@@ -232,7 +268,14 @@ def main():
         for i, item in enumerate(telegram_items[:10], 1):
             title = item["title"].replace("[Telegram] ", "")
             source = item.get("source", "unknown")
-            content_parts.append(f"| {i} | **{title}** | {source} |")
+            link = item.get("link", "")
+
+            # Collect links for references
+            if link:
+                source_links.append({"title": item["title"], "link": link, "source": source})
+                content_parts.append(f"| {i} | [**{title}**]({link}) | {source} |")
+            else:
+                content_parts.append(f"| {i} | **{title}** | {source} |")
     else:
         content_parts.append("*수집된 텔레그램 소식이 없습니다.*")
 
@@ -247,9 +290,46 @@ def main():
             for prefix in ("[X/Twitter] ", "[Twitter] "):
                 title = title.replace(prefix, "")
             source = item.get("source", "unknown")
-            content_parts.append(f"| {i} | **{title}** | {source} |")
+            link = item.get("link", "")
+
+            # Collect links for references
+            if link:
+                source_links.append({"title": item["title"], "link": link, "source": source})
+                content_parts.append(f"| {i} | [**{title}**]({link}) | {source} |")
+            else:
+                content_parts.append(f"| {i} | **{title}** | {source} |")
     else:
         content_parts.append("*수집된 소셜 미디어 트렌드가 없습니다.*")
+
+    # Political/Economy trends section
+    content_parts.append("\n## 정치·경제 동향\n")
+    if political_items:
+        content_parts.append("| # | 제목 | 출처 |")
+        content_parts.append("|---|------|------|")
+        for i, item in enumerate(political_items[:15], 1):
+            title = item["title"]
+            source = item.get("source", "unknown")
+            link = item.get("link", "")
+
+            # Collect links for references
+            if link:
+                source_links.append({"title": title, "link": link, "source": source})
+                content_parts.append(f"| {i} | [**{title}**]({link}) | {source} |")
+            else:
+                content_parts.append(f"| {i} | **{title}** | {source} |")
+    else:
+        content_parts.append("*수집된 정치·경제 동향이 없습니다.*")
+
+    # References section
+    if source_links:
+        content_parts.append("\n## 참고 링크\n")
+        seen_links = set()
+        ref_count = 1
+        for ref in source_links[:20]:
+            if ref["link"] not in seen_links:
+                seen_links.add(ref["link"])
+                content_parts.append(f"{ref_count}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}")
+                ref_count += 1
 
     content = "\n".join(content_parts)
 
@@ -257,7 +337,7 @@ def main():
         title=post_title,
         content=content,
         date=now,
-        tags=["social-media", "telegram", "twitter", "daily-digest"],
+        tags=["social-media", "telegram", "twitter", "politics", "trump", "이재명", "daily-digest"],
         source="consolidated",
         lang="ko",
         slug="daily-social-media-digest",

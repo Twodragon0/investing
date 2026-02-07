@@ -223,20 +223,32 @@ def main():
     global_rows = []
     korean_rows = []
     alpha_vantage_rows = []
+    source_links = []
 
     for item in all_items:
         title = item["title"]
         source = item.get("source", "unknown")
+        link = item.get("link", "")
 
         if source == "Alpha Vantage":
             alpha_vantage_rows.append(item)
             continue
 
+        # Collect links for references section
+        if link:
+            source_links.append({"title": title, "link": link, "source": source})
+
         lang = detect_language(title)
         if lang == "ko":
-            korean_rows.append(f"| {len(korean_rows) + 1} | **{title}** | {source} |")
+            if link:
+                korean_rows.append(f"| {len(korean_rows) + 1} | [**{title}**]({link}) | {source} |")
+            else:
+                korean_rows.append(f"| {len(korean_rows) + 1} | **{title}** | {source} |")
         else:
-            global_rows.append(f"| {len(global_rows) + 1} | **{title}** | {source} |")
+            if link:
+                global_rows.append(f"| {len(global_rows) + 1} | [**{title}**]({link}) | {source} |")
+            else:
+                global_rows.append(f"| {len(global_rows) + 1} | **{title}** | {source} |")
 
     # Limit to top items
     global_rows = global_rows[:15]
@@ -268,13 +280,29 @@ def main():
         content_parts.append("| 지수/ETF | 가격 | 변동 |")
         content_parts.append("|----------|------|------|")
         for item in alpha_vantage_rows:
-            content_parts.append(f"| **{item['title']}** | {item.get('description', '')} | - |")
+            link = item.get("link", "")
+            if link:
+                content_parts.append(f"| [**{item['title']}**]({link}) | {item.get('description', '')} | - |")
+                source_links.append({"title": item["title"], "link": link, "source": item.get("source", "")})
+            else:
+                content_parts.append(f"| **{item['title']}** | {item.get('description', '')} | - |")
     else:
         content_parts.append("*Alpha Vantage 데이터를 가져올 수 없습니다.*")
 
     # Summary
     content_parts.append("\n## 뉴스 요약")
     content_parts.append(f"- 총 수집 뉴스: {len(all_items)}건")
+
+    # References section
+    if source_links:
+        content_parts.append("\n## 참고 링크\n")
+        seen_links = set()
+        ref_count = 1
+        for ref in source_links[:20]:
+            if ref["link"] not in seen_links:
+                seen_links.add(ref["link"])
+                content_parts.append(f"{ref_count}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}")
+                ref_count += 1
 
     content = "\n".join(content_parts)
 

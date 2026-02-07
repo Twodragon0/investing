@@ -288,16 +288,28 @@ def main():
         news_rows = []
         exchange_rows = []
         sources_seen = set()
+        source_links = []
 
         for item in all_items:
             title = item["title"]
             source = item.get("source", "unknown")
+            link = item.get("link", "")
             sources_seen.add(source)
 
+            # Collect links for references section
+            if link:
+                source_links.append({"title": title, "link": link, "source": source})
+
             if source in ("Binance", "OKX", "Bybit"):
-                exchange_rows.append(f"| {len(exchange_rows) + 1} | **{title}** | {source} |")
+                if link:
+                    exchange_rows.append(f"| {len(exchange_rows) + 1} | [**{title}**]({link}) | {source} |")
+                else:
+                    exchange_rows.append(f"| {len(exchange_rows) + 1} | **{title}** | {source} |")
             else:
-                news_rows.append(f"| {len(news_rows) + 1} | **{title}** | {source} |")
+                if link:
+                    news_rows.append(f"| {len(news_rows) + 1} | [**{title}**]({link}) | {source} |")
+                else:
+                    news_rows.append(f"| {len(news_rows) + 1} | **{title}** | {source} |")
 
         # Limit to top items
         news_rows = news_rows[:15]
@@ -328,6 +340,17 @@ def main():
         content_parts.append(f"- 총 수집된 뉴스: {len(all_items)}건")
         content_parts.append(f"- 주요 출처: {', '.join(sorted(sources_seen))}")
 
+        # References section
+        if source_links:
+            content_parts.append("\n## 참고 링크\n")
+            seen_links = set()
+            ref_count = 1
+            for ref in source_links[:20]:
+                if ref["link"] not in seen_links:
+                    seen_links.add(ref["link"])
+                    content_parts.append(f"{ref_count}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}")
+                    ref_count += 1
+
         content = "\n".join(content_parts)
 
         filepath = crypto_gen.create_post(
@@ -354,10 +377,13 @@ def main():
             content_parts.append("| 프로젝트 | 피해 규모 | 공격 유형 |")
             content_parts.append("|----------|----------|----------|")
 
+            security_links = []
+
             for item in rekt_items:
                 # Parse description for structured data
                 desc = item.get("description", "")
                 project = item["title"].replace("[Security] ", "")
+                link = item.get("link", "")
                 funds_lost = "N/A"
                 technique = "N/A"
 
@@ -372,7 +398,17 @@ def main():
                     except IndexError:
                         pass
 
-                content_parts.append(f"| {project} | {funds_lost} | {technique} |")
+                if link:
+                    content_parts.append(f"| [{project}]({link}) | {funds_lost} | {technique} |")
+                    security_links.append({"title": item["title"], "link": link, "source": item.get("source", "")})
+                else:
+                    content_parts.append(f"| {project} | {funds_lost} | {technique} |")
+
+            # References section for security report
+            if security_links:
+                content_parts.append("\n## 참고 링크\n")
+                for i, ref in enumerate(security_links[:20], 1):
+                    content_parts.append(f"{i}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}")
 
             content = "\n".join(content_parts)
 
