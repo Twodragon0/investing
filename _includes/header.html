@@ -21,6 +21,13 @@
       {% endfor %}
     </nav>
     <div class="nav-actions">
+      <div class="search-toggle-wrapper">
+        <button class="search-toggle" aria-label="검색" type="button">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+        </button>
+      </div>
       <div class="lang-toggle-wrapper notranslate" translate="no">
         <button class="lang-toggle" id="lang-toggle" aria-label="언어 변경" aria-expanded="false" aria-controls="lang-dropdown" type="button">
           <svg class="globe-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -43,6 +50,21 @@
     <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
   </div>
 </header>
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="search-overlay">
+  <div class="search-overlay-content">
+    <div class="search-overlay-header">
+      <input type="text" id="search-input" class="search-overlay-input" placeholder="검색어를 입력하세요..." autocomplete="off" data-baseurl="{{ site.baseurl }}">
+      <button class="search-overlay-close" aria-label="닫기">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div id="search-results" class="search-results"></div>
+  </div>
+</div>
 
 <script>
 // Mobile nav toggle
@@ -67,4 +89,39 @@ document.addEventListener('click', function(e) {
     document.querySelectorAll('.nav-dropdown.open').forEach(function(d) { d.classList.remove('open'); });
   }
 });
+
+// Search overlay toggle
+var searchToggle = document.querySelector('.search-toggle');
+var searchOverlay = document.getElementById('search-overlay');
+var searchClose = document.querySelector('.search-overlay-close');
+var searchInput = document.getElementById('search-input');
+
+if (searchToggle && searchOverlay) {
+  searchToggle.addEventListener('click', function() {
+    searchOverlay.classList.add('active');
+    setTimeout(function() { searchInput.focus(); }, 100);
+  });
+
+  searchClose.addEventListener('click', function() {
+    searchOverlay.classList.remove('active');
+    searchInput.value = '';
+    document.getElementById('search-results').innerHTML = '';
+  });
+
+  searchOverlay.addEventListener('click', function(e) {
+    if (e.target === searchOverlay) {
+      searchOverlay.classList.remove('active');
+      searchInput.value = '';
+      document.getElementById('search-results').innerHTML = '';
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && searchOverlay.classList.contains('active')) {
+      searchOverlay.classList.remove('active');
+      searchInput.value = '';
+      document.getElementById('search-results').innerHTML = '';
+    }
+  });
+}
 </script>

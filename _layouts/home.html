@@ -2,27 +2,94 @@
 layout: default
 ---
 
-<!-- Dashboard Header -->
+<!-- Dashboard Header with Gradient -->
 <section class="dashboard-header">
-  <div class="dashboard-title-row">
-    <div class="dashboard-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-      </svg>
+  <div class="dashboard-gradient-bg"></div>
+  <div class="dashboard-content-wrapper">
+    <div class="dashboard-title-row">
+      <div class="dashboard-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+        </svg>
+      </div>
+      <div class="dashboard-info">
+        <h1>{{ site.title }}</h1>
+        <p>실시간 암호화폐·주식 뉴스, 시장 분석, 트레이딩 일지</p>
+      </div>
     </div>
-    <div class="dashboard-info">
-      <h1>{{ site.title }}</h1>
-      <p>실시간 암호화폐·주식 뉴스, 시장 분석, 트레이딩 일지</p>
+    <div class="dashboard-status">
+      <div class="dashboard-date">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="4" width="18" height="18" rx="2"/>
+          <line x1="16" y1="2" x2="16" y2="6"/>
+          <line x1="8" y1="2" x2="8" y2="6"/>
+          <line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+        <span id="current-date"></span>
+      </div>
+      <div class="market-pulse">
+        <span class="pulse-dot"></span>
+        <span class="pulse-text">LIVE</span>
+      </div>
     </div>
   </div>
-  <div class="dashboard-date">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <rect x="3" y="4" width="18" height="18" rx="2"/>
-      <line x1="16" y1="2" x2="16" y2="6"/>
-      <line x1="8" y1="2" x2="8" y2="6"/>
-      <line x1="3" y1="10" x2="21" y2="10"/>
-    </svg>
-    <span id="current-date"></span>
+</section>
+
+<!-- Market Quick Stats Bar -->
+<section class="market-stats-bar">
+  <div class="stats-scroll-wrapper">
+    <div class="stat-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+      </svg>
+      <div class="stat-content">
+        <span class="stat-label">총 포스트</span>
+        <span class="stat-value">{{ site.posts | size }}</span>
+      </div>
+    </div>
+    <div class="stat-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="3" width="7" height="7"/>
+        <rect x="14" y="3" width="7" height="7"/>
+        <rect x="14" y="14" width="7" height="7"/>
+        <rect x="3" y="14" width="7" height="7"/>
+      </svg>
+      <div class="stat-content">
+        <span class="stat-label">카테고리</span>
+        <span class="stat-value">6</span>
+      </div>
+    </div>
+    <div class="stat-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M12 6v12M9 9h5a2 2 0 1 1 0 4h-5"/>
+      </svg>
+      <div class="stat-content">
+        <span class="stat-label">암호화폐</span>
+        <span class="stat-value">{{ site.categories['crypto-news'] | size }}</span>
+      </div>
+    </div>
+    <div class="stat-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+        <polyline points="17 6 23 6 23 12"/>
+      </svg>
+      <div class="stat-content">
+        <span class="stat-label">주식</span>
+        <span class="stat-value">{{ site.categories['stock-news'] | size }}</span>
+      </div>
+    </div>
+    <div class="stat-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <polyline points="12 6 12 12 16 14"/>
+      </svg>
+      <div class="stat-content">
+        <span class="stat-label">최근 업데이트</span>
+        <span class="stat-value" id="stat-last-update">--:--</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -36,90 +103,138 @@ layout: default
   {% assign market_analysis_count = site.categories['market-analysis'] | size %}
 
   <a href="{{ '/crypto-news/' | relative_url }}" class="cat-card cat-crypto">
-    <div class="cat-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <circle cx="12" cy="12" r="10"/>
-        <path d="M12 6v12M9 9h5a2 2 0 1 1 0 4h-5"/>
-      </svg>
+    <div class="cat-icon-wrapper">
+      <div class="cat-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 6v12M9 9h5a2 2 0 1 1 0 4h-5"/>
+        </svg>
+      </div>
     </div>
     <div class="cat-content">
       <h3>암호화폐 뉴스</h3>
       <p>비트코인, 이더리움 등 실시간 시세 및 글로벌 뉴스</p>
       <span class="cat-badge">{{ crypto_news_count }} 포스트</span>
     </div>
+    <div class="cat-arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </div>
   </a>
 
   <a href="{{ '/stock-news/' | relative_url }}" class="cat-card cat-stock">
-    <div class="cat-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
-        <polyline points="17 6 23 6 23 12"/>
-      </svg>
+    <div class="cat-icon-wrapper">
+      <div class="cat-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+          <polyline points="17 6 23 6 23 12"/>
+        </svg>
+      </div>
     </div>
     <div class="cat-content">
       <h3>주식 뉴스</h3>
       <p>미국·한국 주식 시장 동향 및 종목 분석</p>
       <span class="cat-badge">{{ stock_news_count }} 포스트</span>
     </div>
+    <div class="cat-arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </div>
   </a>
 
   <a href="{{ '/crypto-journal/' | relative_url }}" class="cat-card cat-journal-crypto">
-    <div class="cat-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-        <polyline points="14 2 14 8 20 8"/>
-        <line x1="16" y1="13" x2="8" y2="13"/>
-        <line x1="16" y1="17" x2="8" y2="17"/>
-      </svg>
+    <div class="cat-icon-wrapper">
+      <div class="cat-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+        </svg>
+      </div>
     </div>
     <div class="cat-content">
       <h3>크립토 트레이딩 일지</h3>
       <p>일일 암호화폐 매매 기록 및 전략 분석</p>
       <span class="cat-badge">{{ crypto_journal_count }} 포스트</span>
     </div>
+    <div class="cat-arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </div>
   </a>
 
   <a href="{{ '/stock-journal/' | relative_url }}" class="cat-card cat-journal-stock">
-    <div class="cat-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-        <polyline points="14 2 14 8 20 8"/>
-        <path d="M9 15h6M12 12v6"/>
-      </svg>
+    <div class="cat-icon-wrapper">
+      <div class="cat-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <path d="M9 15h6M12 12v6"/>
+        </svg>
+      </div>
     </div>
     <div class="cat-content">
       <h3>주식 트레이딩 일지</h3>
       <p>일일 주식 매매 기록 및 포트폴리오 리뷰</p>
       <span class="cat-badge">{{ stock_journal_count }} 포스트</span>
     </div>
+    <div class="cat-arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </div>
   </a>
 
   <a href="{{ '/security-alerts/' | relative_url }}" class="cat-card cat-security">
-    <div class="cat-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-        <path d="M12 8v4M12 16h.01"/>
-      </svg>
+    <div class="cat-icon-wrapper">
+      <div class="cat-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="M12 8v4M12 16h.01"/>
+        </svg>
+      </div>
     </div>
     <div class="cat-content">
       <h3>보안 알림</h3>
       <p>블록체인 해킹, 스캠, DeFi 보안 사고 속보</p>
       <span class="cat-badge">{{ security_alerts_count }} 포스트</span>
     </div>
+    <div class="cat-arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </div>
   </a>
 
   <a href="{{ '/market-analysis/' | relative_url }}" class="cat-card cat-analysis">
-    <div class="cat-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="12" y1="20" x2="12" y2="10"/>
-        <line x1="18" y1="20" x2="18" y2="4"/>
-        <line x1="6" y1="20" x2="6" y2="16"/>
-      </svg>
+    <div class="cat-icon-wrapper">
+      <div class="cat-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="12" y1="20" x2="12" y2="10"/>
+          <line x1="18" y1="20" x2="18" y2="4"/>
+          <line x1="6" y1="20" x2="6" y2="16"/>
+        </svg>
+      </div>
     </div>
     <div class="cat-content">
       <h3>시장 분석</h3>
       <p>일일·주간 시장 종합 리포트 및 매크로 분석</p>
       <span class="cat-badge">{{ market_analysis_count }} 포스트</span>
+    </div>
+    <div class="cat-arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+      </svg>
     </div>
   </a>
 </section>
@@ -135,29 +250,69 @@ layout: default
     </svg>
     <h2>오늘의 요약</h2>
   </div>
-  <div class="summary-content">
-    <h3><a href="{{ latest_analysis.url | relative_url }}">{{ latest_analysis.title }}</a></h3>
-    <p class="summary-excerpt">{{ latest_analysis.excerpt | strip_html | truncate: 200 }}</p>
-    <a href="{{ latest_analysis.url | relative_url }}" class="summary-link">
-      전체 분석 보기
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="5" y1="12" x2="19" y2="12"/>
-        <polyline points="12 5 19 12 12 19"/>
-      </svg>
-    </a>
+  <div class="summary-body">
+    {% assign today_date = site.time | date: "%Y-%m-%d" %}
+    {% assign heatmap_path = "/assets/images/generated/market-heatmap-" | append: today_date | append: ".png" %}
+    <div class="summary-image-wrapper">
+      <img src="{{ heatmap_path | relative_url }}" alt="시장 히트맵" class="summary-market-image" onerror="this.parentElement.style.display='none'">
+    </div>
+    <div class="summary-content">
+      <h3><a href="{{ latest_analysis.url | relative_url }}">{{ latest_analysis.title }}</a></h3>
+      <div class="summary-meta">
+        <span class="summary-date">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+          {{ latest_analysis.date | date: "%Y-%m-%d" }}
+        </span>
+      </div>
+      <p class="summary-excerpt">{{ latest_analysis.excerpt | strip_html | truncate: 250 }}</p>
+      <a href="{{ latest_analysis.url | relative_url }}" class="summary-link">
+        전체 분석 보기
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </div>
   </div>
 </section>
 {% endif %}
 
 <!-- Recent Posts with Tabs -->
 <section class="recent-posts-tabbed">
-  <h2>최근 포스트</h2>
+  <div class="section-header">
+    <h2>최근 포스트</h2>
+    <a href="{{ '/archive/' | relative_url }}" class="view-all-link">
+      전체보기
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </a>
+  </div>
 
   <div class="posts-tabs">
-    <button class="posts-tab active" data-category="all">전체</button>
-    <button class="posts-tab" data-category="crypto">암호화폐</button>
-    <button class="posts-tab" data-category="stock">주식</button>
-    <button class="posts-tab" data-category="analysis">분석</button>
+    <button class="posts-tab active" data-category="all">
+      전체
+      <span class="tab-count">{{ site.posts | size }}</span>
+    </button>
+    {% assign crypto_posts = site.posts | where_exp: "post", "post.categories[0] contains 'crypto'" %}
+    <button class="posts-tab" data-category="crypto">
+      암호화폐
+      <span class="tab-count">{{ crypto_posts | size }}</span>
+    </button>
+    {% assign stock_posts = site.posts | where_exp: "post", "post.categories[0] contains 'stock'" %}
+    <button class="posts-tab" data-category="stock">
+      주식
+      <span class="tab-count">{{ stock_posts | size }}</span>
+    </button>
+    {% assign analysis_posts = site.posts | where_exp: "post", "post.categories[0] contains 'analysis'" %}
+    <button class="posts-tab" data-category="analysis">
+      분석
+      <span class="tab-count">{{ analysis_posts | size }}</span>
+    </button>
   </div>
 
   <div class="posts-tab-content">
@@ -178,6 +333,38 @@ layout: default
   </div>
 </section>
 
+<!-- Footer CTA -->
+<section class="footer-cta">
+  <div class="cta-content">
+    <div class="cta-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 11a9 9 0 0 1 9 9"/>
+        <path d="M4 4a16 16 0 0 1 16 16"/>
+        <circle cx="5" cy="19" r="1"/>
+      </svg>
+    </div>
+    <div class="cta-text">
+      <h3>RSS 피드 구독</h3>
+      <p>최신 투자 뉴스와 분석을 받아보세요</p>
+    </div>
+    <a href="{{ '/feed.xml' | relative_url }}" class="cta-button">
+      구독하기
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- Scroll to Top Button -->
+<button id="scroll-to-top" class="scroll-to-top" aria-label="맨 위로">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <line x1="12" y1="19" x2="12" y2="5"/>
+    <polyline points="5 12 12 5 19 12"/>
+  </svg>
+</button>
+
 <script>
   // Set current date
   const dateEl = document.getElementById('current-date');
@@ -185,7 +372,20 @@ layout: default
   const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
   dateEl.textContent = now.toLocaleDateString('ko-KR', options);
 
-  // Tab switching
+  // Update last update time
+  const lastUpdateEl = document.getElementById('stat-last-update');
+  if (lastUpdateEl) {
+    const updateTime = () => {
+      const now = new Date();
+      const hours = now.getHours().toString().padStart(2, '0');
+      const minutes = now.getMinutes().toString().padStart(2, '0');
+      lastUpdateEl.textContent = `${hours}:${minutes}`;
+    };
+    updateTime();
+    setInterval(updateTime, 60000);
+  }
+
+  // Tab switching with animation
   const tabs = document.querySelectorAll('.posts-tab');
   const postItems = document.querySelectorAll('.post-item');
 
@@ -205,6 +405,24 @@ layout: default
           item.style.display = item.dataset.catType === category ? 'block' : 'none';
         }
       });
+    });
+  });
+
+  // Scroll to top button
+  const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      scrollToTopBtn.classList.add('visible');
+    } else {
+      scrollToTopBtn.classList.remove('visible');
+    }
+  });
+
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
     });
   });
 </script>

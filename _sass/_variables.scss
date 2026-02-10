@@ -22,3 +22,20 @@ $cat-analysis: #bc8cff;
 $container-width: 1100px;
 $spacing: 1rem;
 $radius: 8px;
+
+// Transitions
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// Shadows
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+$shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
+$shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
+$shadow-glow-blue: 0 0 20px rgba(88, 166, 255, 0.3);
+$shadow-glow-purple: 0 0 20px rgba(188, 140, 255, 0.3);
+
+// Glassmorphism
+$glass-bg: rgba(22, 27, 34, 0.8);
+$glass-border: rgba(48, 54, 61, 0.6);
+$glass-hover: rgba(28, 33, 40, 0.9);

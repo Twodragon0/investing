@@ -1,16 +1,32 @@
+{% assign reading_time = post.content | number_of_words | divided_by: 200 %}
+{% if reading_time == 0 %}{% assign reading_time = 1 %}{% endif %}
+
 <article class="post-card cat-border-{{ post.categories | first | slugify }}">
   <div class="post-card-meta">
     <span class="post-category cat-{{ post.categories | first | slugify }}">{{ post.categories | first }}</span>
     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
     {% if post.source %}<span class="post-source">{{ post.source }}</span>{% endif %}
+    <span class="post-reading-time">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+      </svg>
+      {{ reading_time }}분
+    </span>
   </div>
   <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
   {% if post.excerpt %}<p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>{% endif %}
-  {% if post.tags.size > 0 %}
-  <div class="post-tags">
-    {% for tag in post.tags limit:3 %}
-    <span class="tag">{{ tag }}</span>
-    {% endfor %}
+  <div class="post-card-footer">
+    {% if post.tags.size > 0 %}
+    <div class="post-tags">
+      {% for tag in post.tags limit:3 %}
+      <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <span class="post-card-arrow">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </span>
   </div>
-  {% endif %}
 </article>

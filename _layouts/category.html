@@ -1,17 +1,86 @@
 ---
 layout: default
 ---
-<section class="category-archive">
-  <h1>{{ page.title }}</h1>
-  <p>{{ page.description }}</p>
+{% assign cat_posts = site.posts | where_exp: "post", "post.categories contains page.category" %}
 
-  <div class="posts-list">
-    {% assign cat_posts = site.posts | where_exp: "post", "post.categories contains page.category" %}
+<section class="category-archive">
+  <div class="category-header">
+    <div class="category-title-wrapper">
+      <h1>{{ page.title }}</h1>
+      <span class="post-count-badge">{{ cat_posts.size }}개 포스트</span>
+    </div>
+    <p class="category-description">{{ page.description }}</p>
+  </div>
+
+  {% if cat_posts.size > 0 %}
+  <div class="category-controls">
+    <div class="category-search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input type="text" id="category-filter" placeholder="이 카테고리 내에서 검색..." />
+    </div>
+    <div class="category-sort">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"/><polyline points="8 6 3 12 8 18"/>
+      </svg>
+      <span>최신순</span>
+    </div>
+  </div>
+
+  <div class="posts-list" id="posts-list">
     {% for post in cat_posts %}
       {% include post-card.html post=post %}
     {% endfor %}
-    {% if cat_posts.size == 0 %}
-    <p class="empty-state">아직 포스트가 없습니다. 곧 자동으로 수집됩니다.</p>
-    {% endif %}
   </div>
+  {% else %}
+  <div class="empty-state">
+    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
+    </svg>
+    <h3>아직 포스트가 없습니다</h3>
+    <p>곧 자동으로 수집됩니다.</p>
+  </div>
+  {% endif %}
 </section>
+
+{% if cat_posts.size > 0 %}
+<script>
+var filterInput = document.getElementById('category-filter');
+var postsList = document.getElementById('posts-list');
+var posts = postsList.querySelectorAll('.post-card');
+
+filterInput.addEventListener('input', function() {
+  var query = this.value.toLowerCase().trim();
+  var visibleCount = 0;
+
+  posts.forEach(function(post) {
+    var title = post.querySelector('h3 a').textContent.toLowerCase();
+    var excerpt = post.querySelector('.post-excerpt');
+    var excerptText = excerpt ? excerpt.textContent.toLowerCase() : '';
+    var tags = post.querySelectorAll('.tag');
+    var tagText = Array.from(tags).map(function(t) { return t.textContent.toLowerCase(); }).join(' ');
+
+    if (title.indexOf(query) !== -1 || excerptText.indexOf(query) !== -1 || tagText.indexOf(query) !== -1) {
+      post.style.display = '';
+      visibleCount++;
+    } else {
+      post.style.display = 'none';
+    }
+  });
+
+  if (visibleCount === 0 && query.length > 0) {
+    if (!document.getElementById('no-results')) {
+      var noResults = document.createElement('div');
+      noResults.id = 'no-results';
+      noResults.className = 'empty-state';
+      noResults.innerHTML = '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><h3>검색 결과가 없습니다</h3><p>"' + query + '"에 대한 포스트를 찾을 수 없습니다.</p>';
+      postsList.appendChild(noResults);
+    }
+  } else {
+    var noResults = document.getElementById('no-results');
+    if (noResults) noResults.remove();
+  }
+});
+</script>
+{% endif %}

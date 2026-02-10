@@ -1,15 +1,46 @@
 ---
 layout: default
 ---
+{% assign reading_time = content | number_of_words | divided_by: 200 %}
+{% if reading_time == 0 %}{% assign reading_time = 1 %}{% endif %}
+
 <article class="post-detail">
+  <div class="post-breadcrumb">
+    <a href="{{ '/' | relative_url }}">홈</a>
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M4 2l4 4-4 4"/></svg>
+    <a href="{{ page.categories | first | prepend: '/' | append: '/' | relative_url }}">{{ page.categories | first }}</a>
+  </div>
+
   <header class="post-header">
-    <div class="post-meta">
-      <span class="post-category">{{ page.categories | first }}</span>
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d %H:%M" }}</time>
-      {% if page.source %}<span class="post-source">{{ page.source }}</span>{% endif %}
-      {% if page.lang %}<span class="post-lang">{{ page.lang | upcase }}</span>{% endif %}
-    </div>
     <h1>{{ page.title }}</h1>
+    <div class="post-meta-enhanced">
+      <span class="post-meta-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y년 %m월 %d일" }}</time>
+      </span>
+      <span class="post-meta-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <span>{{ reading_time }}분 읽기</span>
+      </span>
+      <span class="post-meta-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/>
+        </svg>
+        <span class="post-category cat-{{ page.categories | first | slugify }}">{{ page.categories | first }}</span>
+      </span>
+      {% if page.source %}
+      <span class="post-meta-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span class="post-source">{{ page.source }}</span>
+      </span>
+      {% endif %}
+    </div>
     {% if page.tags.size > 0 %}
     <div class="post-tags">
       {% for tag in page.tags %}
@@ -25,16 +56,78 @@ layout: default
 
   {% if page.source_url %}
   <div class="post-source-link">
-    <a href="{{ page.source_url }}" target="_blank" rel="noopener noreferrer">원문 보기 →</a>
+    <a href="{{ page.source_url }}" target="_blank" rel="noopener noreferrer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+      </svg>
+      원문 보기
+    </a>
   </div>
+  {% endif %}
+
+  <div class="post-share">
+    <span class="share-label">공유하기</span>
+    <button class="share-btn share-twitter" onclick="shareTwitter()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+      </svg>
+      트위터
+    </button>
+    <button class="share-btn share-copy" onclick="copyLink()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+      </svg>
+      링크 복사
+    </button>
+  </div>
+
+  {% assign category = page.categories | first %}
+  {% assign related = site.posts | where_exp: "post", "post.categories contains category" | where_exp: "post", "post.url != page.url" | limit: 3 %}
+  {% if related.size > 0 %}
+  <section class="related-posts">
+    <h3>관련 포스트</h3>
+    <div class="related-posts-grid">
+      {% for post in related %}
+      <a href="{{ post.url | relative_url }}" class="related-post-card">
+        <span class="related-post-category cat-{{ post.categories | first | slugify }}">{{ post.categories | first }}</span>
+        <h4>{{ post.title | truncate: 60 }}</h4>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
   {% endif %}
 
   <nav class="post-nav">
     {% if page.previous %}
-    <a href="{{ page.previous.url | relative_url }}" class="prev">← {{ page.previous.title | truncate: 40 }}</a>
+    <a href="{{ page.previous.url | relative_url }}" class="post-nav-link prev">
+      <span class="post-nav-label">이전 포스트</span>
+      <span class="post-nav-title">{{ page.previous.title | truncate: 50 }}</span>
+    </a>
     {% endif %}
     {% if page.next %}
-    <a href="{{ page.next.url | relative_url }}" class="next">{{ page.next.title | truncate: 40 }} →</a>
+    <a href="{{ page.next.url | relative_url }}" class="post-nav-link next">
+      <span class="post-nav-label">다음 포스트</span>
+      <span class="post-nav-title">{{ page.next.title | truncate: 50 }}</span>
+    </a>
     {% endif %}
   </nav>
 </article>
+
+<script>
+function shareTwitter() {
+  var text = "{{ page.title | escape }}";
+  var url = window.location.href;
+  window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url), '_blank', 'width=550,height=450');
+}
+
+function copyLink() {
+  var url = window.location.href;
+  navigator.clipboard.writeText(url).then(function() {
+    var btn = document.querySelector('.share-copy');
+    var originalText = btn.innerHTML;
+    btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 복사됨!';
+    setTimeout(function() { btn.innerHTML = originalText; }, 2000);
+  });
+}
+</script>
