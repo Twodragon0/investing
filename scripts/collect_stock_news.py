@@ -226,7 +226,7 @@ def main():
     # ── Consolidated stock news post ──
     post_title = f"주식 시장 뉴스 종합 - {today}"
 
-    if dedup.is_duplicate(post_title, "consolidated", today):
+    if dedup.is_duplicate_exact(post_title, "consolidated", today):
         logger.info("Consolidated stock post already exists, skipping")
         dedup.save()
         return

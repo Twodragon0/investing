@@ -307,7 +307,7 @@ def main():
     # ── Consolidated social media post ──
     post_title = f"소셜 미디어 동향 - {today}"
 
-    if dedup.is_duplicate(post_title, "consolidated", today):
+    if dedup.is_duplicate_exact(post_title, "consolidated", today):
         logger.info("Consolidated social media post already exists, skipping")
         dedup.save()
         return

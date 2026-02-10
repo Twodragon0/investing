@@ -98,6 +98,18 @@ class DedupEngine:
 
         return False
 
+    def is_duplicate_exact(self, title: str, source: str, date_str: str) -> bool:
+        """Check if a news item is a duplicate using exact hash match only.
+
+        Use this for consolidated/daily digest posts where the title contains
+        a date and fuzzy matching would incorrectly flag different days as duplicates.
+        """
+        if not title or not title.strip():
+            return True
+
+        h = _make_hash(title, source, date_str)
+        return h in self.seen
+
     def mark_seen(self, title: str, source: str, date_str: str) -> None:
         """Mark a news item as seen."""
         h = _make_hash(title, source, date_str)

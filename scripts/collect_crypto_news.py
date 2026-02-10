@@ -283,7 +283,7 @@ def main():
     # ── Post A: consolidated crypto news briefing ──
     post_a_title = f"암호화폐 뉴스 브리핑 - {today}"
 
-    if not dedup.is_duplicate(post_a_title, "consolidated", today):
+    if not dedup.is_duplicate_exact(post_a_title, "consolidated", today):
         # Separate news items from exchange announcements
         news_rows = []
         exchange_rows = []
@@ -371,7 +371,7 @@ def main():
     if rekt_items:
         post_b_title = f"블록체인 보안 리포트 - {today}"
 
-        if not dedup.is_duplicate(post_b_title, "consolidated", today):
+        if not dedup.is_duplicate_exact(post_b_title, "consolidated", today):
             content_parts = ["최근 블록체인 보안 사고를 정리합니다.\n"]
             content_parts.append("## 보안 사고 현황\n")
             content_parts.append("| 프로젝트 | 피해 규모 | 공격 유형 |")
