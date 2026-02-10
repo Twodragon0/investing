@@ -355,7 +355,25 @@ layout: default
   </div>
 
   <div class="posts-tab-content">
-    {% for post in site.posts limit:20 %}
+    {% assign pinned_posts = site.posts | where: "pin", true %}
+    {% assign unpinned_posts = site.posts | where_exp: "post", "post.pin != true" %}
+    {% for post in pinned_posts %}
+      {% assign first_cat = post.categories | first %}
+      {% assign cat_type = "other" %}
+      {% if first_cat contains "crypto" %}
+        {% assign cat_type = "crypto" %}
+      {% elsif first_cat contains "stock" %}
+        {% assign cat_type = "stock" %}
+      {% elsif first_cat contains "analysis" %}
+        {% assign cat_type = "analysis" %}
+      {% elsif first_cat contains "security" %}
+        {% assign cat_type = "security" %}
+      {% endif %}
+      <div class="post-item pinned-post" data-cat-type="{{ cat_type }}">
+        {% include post-card.html post=post %}
+      </div>
+    {% endfor %}
+    {% for post in unpinned_posts limit:20 %}
       {% assign first_cat = post.categories | first %}
       {% assign cat_type = "other" %}
       {% if first_cat contains "crypto" %}
@@ -425,12 +443,14 @@ layout: default
       tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
 
-      // Filter posts
+      // Filter posts (pinned posts always visible in 'all' tab, filtered by category in others)
       postItems.forEach(item => {
+        const isPinned = item.classList.contains('pinned-post');
         if (category === 'all') {
           item.style.display = 'block';
         } else {
-          item.style.display = item.dataset.catType === category ? 'block' : 'none';
+          const match = item.dataset.catType === category;
+          item.style.display = match ? 'block' : 'none';
         }
       });
     });

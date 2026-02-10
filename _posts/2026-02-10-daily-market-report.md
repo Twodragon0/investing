@@ -5,6 +5,7 @@ categories: [market-analysis]
 tags: [market-summary, daily, crypto, stock, macro, top-coins]
 source: "auto-generated"
 lang: "ko"
+pin: true
 ---
 
 ## 한줄 요약

@@ -3631,3 +3631,36 @@ main {
     border: 1px solid rgba($border-color, 0.3);
   }
 }
+
+// ─── Pinned Post Styles ───
+.pinned-post {
+  order: -1;
+}
+
+.post-card.pinned {
+  border-left: 3px solid $accent-orange;
+  background: linear-gradient(135deg, rgba($accent-orange, 0.06) 0%, rgba($bg-card, 1) 40%);
+
+  &:hover {
+    border-left-color: $accent-orange;
+    box-shadow: $shadow-md, 0 0 12px rgba($accent-orange, 0.15);
+  }
+}
+
+.pin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 8px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: $accent-orange;
+  background: rgba($accent-orange, 0.12);
+  border: 1px solid rgba($accent-orange, 0.25);
+  border-radius: 4px;
+
+  svg {
+    flex-shrink: 0;
+  }
+}
