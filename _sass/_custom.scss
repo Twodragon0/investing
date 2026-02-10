@@ -483,17 +483,65 @@ a {
       width: 100%;
       border-collapse: collapse;
       margin: 1.5rem 0;
+      display: block;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
 
       th,
       td {
         border: 1px solid $border-color;
-        padding: 0.75rem;
+        padding: 0.6rem 0.75rem;
         text-align: left;
+        white-space: nowrap;
+        font-size: 0.92rem;
       }
 
       th {
         background: $bg-secondary;
         font-weight: 600;
+        position: sticky;
+        top: 0;
+      }
+
+      tr:hover td {
+        background: rgba($bg-card, 0.5);
+      }
+
+      // Color coding for market data
+      td:nth-child(n) {
+        font-variant-numeric: tabular-nums;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 1rem 0;
+      border: 1px solid rgba($border-color, 0.3);
+    }
+
+    blockquote {
+      border-left: 3px solid $accent-purple;
+      margin: 1.5rem 0;
+      padding: 1rem 1.25rem;
+      background: rgba($bg-secondary, 0.5);
+      border-radius: 0 8px 8px 0;
+      color: $text-secondary;
+      font-style: italic;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    ul, ol {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+
+      li {
+        margin-bottom: 0.5rem;
+        line-height: 1.7;
       }
     }
 
@@ -550,9 +598,8 @@ a {
   background: rgba($bg-secondary, 0.8);
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba($border-color, 0.5);
-  padding: 2rem 0;
+  padding: 3rem 0 2rem;
   margin-top: 4rem;
-  text-align: center;
   color: $text-secondary;
   font-size: 0.9rem;
 
@@ -565,8 +612,62 @@ a {
     }
   }
 
-  p + p {
-    margin-top: 0.75rem;
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
+  .footer-column {
+    h4 {
+      color: $text-primary;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 0.4rem;
+      }
+
+      a {
+        font-size: 0.85rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+
+        &:hover {
+          color: $accent-blue;
+        }
+      }
+    }
+
+    p {
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba($border-color, 0.3);
+
+    p + p {
+      margin-top: 0.5rem;
+    }
+  }
+
+  .footer-credits {
+    font-size: 0.8rem;
+    opacity: 0.7;
   }
 }
 
@@ -3376,5 +3477,157 @@ main {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* ================================
+   LATEST NEWS SECTION
+   ================================ */
+.latest-news-section {
+  margin: 2rem 0 3rem;
+
+  .section-header {
+    margin-bottom: 1.25rem;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $text-primary;
+    }
+  }
+}
+
+.latest-news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+.latest-news-card {
+  background: rgba($bg-card, 0.6);
+  border: 1px solid rgba($border-color, 0.5);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all $transition-normal;
+  display: block;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+  }
+
+  &.crypto::before {
+    background: $cat-crypto;
+  }
+
+  &.stock::before {
+    background: $cat-stock;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba($accent-blue, 0.5);
+    box-shadow: $shadow-md;
+    text-decoration: none;
+  }
+
+  .latest-news-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+  }
+
+  &.crypto .latest-news-badge {
+    background: rgba($cat-crypto, 0.2);
+    color: $cat-crypto;
+  }
+
+  &.stock .latest-news-badge {
+    background: rgba($cat-stock, 0.2);
+    color: $cat-stock;
+  }
+
+  h3 {
+    color: $text-primary;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+
+  p {
+    color: $text-secondary;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+
+  time {
+    color: $text-secondary;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .latest-news-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================================
+   CATEGORY PAGE ENHANCEMENTS
+   ================================ */
+.back-to-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: $text-secondary;
+  font-size: 0.85rem;
+  margin-top: 0.75rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  transition: all $transition-fast;
+
+  &:hover {
+    color: $text-primary;
+    background: rgba($bg-card, 0.8);
+    text-decoration: none;
+  }
+}
+
+.date-divider {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0 0.75rem;
+  gap: 1rem;
+
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba($border-color, 0.5);
+  }
+
+  .date-label {
+    color: $text-secondary;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+    padding: 0.25rem 0.75rem;
+    background: rgba($bg-card, 0.6);
+    border-radius: 6px;
+    border: 1px solid rgba($border-color, 0.3);
   }
 }

@@ -106,11 +106,8 @@ def fetch_fear_greed_index() -> Dict[str, Any]:
 
 
 def fetch_us_market_data(api_key: str) -> Dict[str, Dict[str, str]]:
-    """Fetch US market data from Alpha Vantage."""
-    if not api_key:
-        return {}
-
-    symbols = {
+    """Fetch US market data from Alpha Vantage, with yfinance fallback."""
+    symbols_av = {
         "SPY": "S&P 500 ETF",
         "QQQ": "NASDAQ 100 ETF",
         "DIA": "다우존스 ETF",
@@ -120,34 +117,74 @@ def fetch_us_market_data(api_key: str) -> Dict[str, Dict[str, str]]:
     }
     results = {}
 
-    for symbol, name in symbols.items():
+    # Try Alpha Vantage first
+    if api_key:
+        for symbol, name in symbols_av.items():
+            try:
+                url = "https://www.alphavantage.co/query"
+                params = {"function": "GLOBAL_QUOTE", "symbol": symbol, "apikey": api_key}
+                resp = requests.get(url, params=params, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
+                resp.raise_for_status()
+                quote = resp.json().get("Global Quote", {})
+                if quote and quote.get("05. price"):
+                    results[symbol] = {
+                        "name": name,
+                        "price": quote.get("05. price", "N/A"),
+                        "change": quote.get("09. change", "N/A"),
+                        "change_pct": quote.get("10. change percent", "N/A"),
+                        "volume": quote.get("06. volume", "N/A"),
+                    }
+                time.sleep(1)
+            except requests.exceptions.RequestException as e:
+                logger.warning("Alpha Vantage %s: %s", symbol, e)
+
+    # yfinance fallback for missing symbols
+    if len(results) < 3:
+        logger.info("Alpha Vantage incomplete (%d/%d), trying yfinance fallback", len(results), len(symbols_av))
         try:
-            url = "https://www.alphavantage.co/query"
-            params = {"function": "GLOBAL_QUOTE", "symbol": symbol, "apikey": api_key}
-            resp = requests.get(url, params=params, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
-            resp.raise_for_status()
-            quote = resp.json().get("Global Quote", {})
-            if quote:
-                results[symbol] = {
-                    "name": name,
-                    "price": quote.get("05. price", "N/A"),
-                    "change": quote.get("09. change", "N/A"),
-                    "change_pct": quote.get("10. change percent", "N/A"),
-                    "volume": quote.get("06. volume", "N/A"),
-                }
-            time.sleep(1)
-        except requests.exceptions.RequestException as e:
-            logger.warning("Alpha Vantage %s: %s", symbol, e)
+            import yfinance as yf
+            yf_symbols = {
+                "^GSPC": ("SPY", "S&P 500"),
+                "^IXIC": ("QQQ", "NASDAQ"),
+                "^DJI": ("DIA", "다우존스"),
+                "^VIX": ("VIX", "VIX 변동성"),
+            }
+            for yf_sym, (key, name) in yf_symbols.items():
+                if key in results:
+                    continue
+                try:
+                    info = yf.Ticker(yf_sym).fast_info
+                    price = getattr(info, "last_price", None)
+                    prev = getattr(info, "previous_close", None)
+                    if price and prev:
+                        change = price - prev
+                        change_pct = (change / prev) * 100
+                        results[key] = {
+                            "name": name,
+                            "price": f"{price:,.2f}",
+                            "change": f"{change:+,.2f}",
+                            "change_pct": f"{change_pct:+.2f}%",
+                            "volume": "N/A",
+                        }
+                except Exception as e:
+                    logger.warning("yfinance US %s: %s", yf_sym, e)
+        except ImportError:
+            logger.warning("yfinance not installed for US market fallback")
 
     return results
 
 
 def fetch_korean_market() -> Dict[str, Dict[str, str]]:
-    """Fetch Korean market data using yfinance."""
+    """Fetch Korean market data using yfinance (expanded)."""
     results = {}
     try:
         import yfinance as yf
-        for symbol, name in {"^KS11": "KOSPI", "^KQ11": "KOSDAQ"}.items():
+        symbols = {
+            "^KS11": "KOSPI",
+            "^KQ11": "KOSDAQ",
+            "KRW=X": "USD/KRW 환율",
+        }
+        for symbol, name in symbols.items():
             try:
                 info = yf.Ticker(symbol).fast_info
                 price = getattr(info, "last_price", None)
@@ -333,7 +370,14 @@ def format_gainers_losers(coins: List[Dict]) -> str:
 
 def format_us_market(data: Dict) -> str:
     if not data:
-        return "*데이터를 가져올 수 없습니다.*"
+        return (
+            "> 미국 주식 시장 데이터를 일시적으로 가져올 수 없습니다. "
+            "API 제한 또는 휴장일일 수 있습니다.\n\n"
+            "**참고 링크:**\n"
+            "- [Yahoo Finance - S&P 500](https://finance.yahoo.com/quote/%5EGSPC/)\n"
+            "- [Yahoo Finance - NASDAQ](https://finance.yahoo.com/quote/%5EIXIC/)\n"
+            "- [Yahoo Finance - Dow Jones](https://finance.yahoo.com/quote/%5EDJI/)"
+        )
     lines = [
         "| 종목 | 가격 | 변동 | 변동률 | 거래량 |",
         "|------|------|------|--------|--------|"
@@ -345,19 +389,39 @@ def format_us_market(data: Dict) -> str:
 
 def format_korean_market(data: Dict) -> str:
     if not data:
-        return "*데이터를 가져올 수 없습니다.*"
+        return (
+            "> 한국 주식 시장 데이터를 일시적으로 가져올 수 없습니다. "
+            "휴장일이거나 데이터 소스 문제일 수 있습니다.\n\n"
+            "**참고 링크:**\n"
+            "- [네이버 금융 - KOSPI](https://finance.naver.com/sise/sise_index.naver?code=KOSPI)\n"
+            "- [네이버 금융 - KOSDAQ](https://finance.naver.com/sise/sise_index.naver?code=KOSDAQ)"
+        )
     lines = [
         "| 지수 | 가격 | 변동 | 변동률 |",
         "|------|------|------|--------|"
     ]
     for name, info in data.items():
-        lines.append(f"| {name} | {info['price']} | {info['change']} | {info['change_pct']} |")
+        # Add emoji for direction
+        try:
+            pct = float(info['change_pct'].replace('%', '').replace('+', ''))
+            icon = "🟢" if pct >= 0 else "🔴"
+        except (ValueError, KeyError):
+            icon = ""
+        lines.append(f"| {name} | {info['price']} | {info['change']} | {icon} {info['change_pct']} |")
     return "\n".join(lines)
 
 
 def format_macro(data: Dict) -> str:
     if not data:
-        return "*데이터를 가져올 수 없습니다.*"
+        return (
+            "> 매크로 경제 지표를 일시적으로 가져올 수 없습니다. "
+            "FRED API 제한 또는 데이터 업데이트 지연일 수 있습니다.\n\n"
+            "**참고 링크:**\n"
+            "- [FRED - Federal Funds Rate](https://fred.stlouisfed.org/series/FEDFUNDS)\n"
+            "- [FRED - 10-Year Treasury](https://fred.stlouisfed.org/series/DGS10)\n"
+            "- [FRED - Consumer Price Index](https://fred.stlouisfed.org/series/CPIAUCSL)\n"
+            "- [FRED - VIX](https://fred.stlouisfed.org/series/VIXCLS)"
+        )
     lines = [
         "| 지표 | 현재 값 | 변동 |",
         "|------|---------|------|"
@@ -367,6 +431,60 @@ def format_macro(data: Dict) -> str:
         ch = f"{d['change']:+.2f}" if d.get("change") is not None else "N/A"
         lines.append(f"| {d['label']} | {val} | {ch} |")
     return "\n".join(lines)
+
+
+def generate_key_highlights(global_data: Dict, top_coins: List, fear_greed: Dict, kr_market: Dict) -> str:
+    """Generate concise bullet-point key highlights."""
+    bullets = []
+
+    # Fear & Greed
+    if fear_greed:
+        fg = fear_greed["value"]
+        fg_cls = fear_greed["classification"]
+        if fg_cls == "Extreme Fear":
+            bullets.append(f"- **극도의 공포 장세**: 공포/탐욕 지수 {fg}으로 {fg_cls} 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다.")
+        elif fg_cls == "Fear":
+            bullets.append(f"- **공포 장세 지속**: 공포/탐욕 지수 {fg}으로 공포 구간. 보수적인 포지션 운영이 권장됩니다.")
+        elif fg_cls == "Greed" or fg_cls == "Extreme Greed":
+            bullets.append(f"- **탐욕 장세 주의**: 공포/탐욕 지수 {fg}으로 과열 구간. 차익 실현과 리스크 관리가 필요합니다.")
+
+    # BTC price and market cap
+    if top_coins:
+        btc = next((c for c in top_coins if c.get("symbol", "").lower() == "btc"), None)
+        if btc:
+            price = btc.get("current_price", 0)
+            ch24 = btc.get("price_change_percentage_24h", 0) or 0
+            ch7d = btc.get("price_change_percentage_7d_in_currency", 0) or 0
+            direction = "상승" if ch24 >= 0 else "하락"
+            bullets.append(f"- **비트코인 ${price:,.0f} {direction}**: 24h 기준 {ch24:+.2f}% 변동, 주간 {ch7d:+.2f}% {'상승' if ch7d >= 0 else '하락'}.")
+
+    # Global market cap
+    if global_data:
+        total_mcap = global_data.get("total_market_cap", {}).get("usd", 0)
+        mcap_change = global_data.get("market_cap_change_percentage_24h_usd", 0)
+        btc_dom = global_data.get("market_cap_percentage", {}).get("btc", 0)
+        direction = "회복" if mcap_change >= 0 else "하락"
+        bullets.append(f"- **시가총액 {_fmt(total_mcap)}으로 {direction}**: 전일 대비 {mcap_change:+.2f}%. BTC 도미넌스 {btc_dom:.1f}%로 비트코인 중심 자금 흐름 {'지속' if btc_dom > 50 else '약화'}.")
+
+    # Korean market
+    if kr_market:
+        for name, info in kr_market.items():
+            pct = info.get("change_pct", "")
+            bullets.append(f"- **{name}**: {info['price']} ({info['change']}, {pct})")
+
+    # Top movers
+    if top_coins:
+        sorted_coins = sorted(top_coins[:20], key=lambda c: c.get("price_change_percentage_24h") or 0, reverse=True)
+        gainers = [c for c in sorted_coins if (c.get("price_change_percentage_24h") or 0) > 0]
+        losers = [c for c in sorted_coins if (c.get("price_change_percentage_24h") or 0) < 0]
+        if gainers and losers:
+            best = gainers[0]
+            worst = losers[-1]
+            best_ch = best.get("price_change_percentage_24h", 0) or 0
+            worst_ch = worst.get("price_change_percentage_24h", 0) or 0
+            bullets.append(f"- **주목할 코인**: {best.get('name','')} {best_ch:+.2f}% 급등, {worst.get('name','')} {worst_ch:+.2f}% 하락.")
+
+    return "\n".join(bullets) if bullets else ""
 
 
 def generate_insight(global_data: Dict, top_coins: List, fear_greed: Dict, us_market: Dict, kr_market: Dict) -> str:
@@ -414,6 +532,29 @@ def generate_insight(global_data: Dict, top_coins: List, fear_greed: Dict, us_ma
         best_ch = best.get("price_change_percentage_24h", 0) or 0
         worst_ch = worst.get("price_change_percentage_24h", 0) or 0
         parts.append(f"\nTop 20 중 가장 큰 상승은 **{best.get('name', '')}** ({best_ch:+.2f}%), 가장 큰 하락은 **{worst.get('name', '')}** ({worst_ch:+.2f}%)입니다.")
+
+    # US market insight
+    if us_market:
+        spy = us_market.get("SPY") or us_market.get("^GSPC")
+        if spy:
+            pct_str = spy.get("change_pct", "N/A")
+            parts.append(f"\n미국 시장에서 S&P 500은 **{pct_str}** 변동을 보였습니다.")
+            # Check for significant moves
+            try:
+                pct_val = float(pct_str.replace("%", "").replace("+", ""))
+                if abs(pct_val) > 2:
+                    parts.append("미국 증시의 대폭 변동은 글로벌 위험자산 심리에 직접적 영향을 미칩니다.")
+            except (ValueError, AttributeError):
+                pass
+
+    # Korean market insight
+    if kr_market:
+        kospi = kr_market.get("KOSPI")
+        usdkrw = kr_market.get("USD/KRW 환율")
+        if kospi:
+            parts.append(f"\n한국 증시는 KOSPI **{kospi['price']}** ({kospi['change_pct']})으로 마감했습니다.")
+        if usdkrw:
+            parts.append(f"원달러 환율은 **{usdkrw['price']}**원으로, 환율 변동이 외국인 투자 심리에 영향을 줄 수 있습니다.")
 
     parts.append("\n> *본 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*")
 
@@ -488,6 +629,11 @@ def main():
             img_lines.append(f"![{label}]({web_path})")
         sections["시장 시각화"] = "\n\n".join(img_lines)
 
+    # Key highlights bullet points at the very top
+    highlights = generate_key_highlights(global_data, top_coins, fear_greed, kr_market)
+    if highlights:
+        sections["오늘의 핵심"] = highlights
+
     # Market insight
     insight = generate_insight(global_data, top_coins, fear_greed, us_market, kr_market)
     if insight:
@@ -513,6 +659,16 @@ def main():
 
     # Macro
     sections["매크로 경제 지표"] = format_macro(fred_data)
+
+    # References
+    sections["참고 자료"] = (
+        "- [CoinGecko - 암호화폐 시가총액](https://www.coingecko.com/) - 글로벌 암호화폐 데이터\n"
+        "- [Alternative.me - 공포/탐욕 지수](https://alternative.me/crypto/fear-and-greed-index/) - 시장 심리 지표\n"
+        "- [Investing.com - KOSPI](https://kr.investing.com/indices/kospi) - 한국 주식 시장 데이터\n"
+        "- [Yahoo Finance - 미국 시장](https://finance.yahoo.com/) - 미국 주식 시장 데이터\n"
+        "- [FRED - 경제 지표](https://fred.stlouisfed.org/) - 미국 연방준비은행 경제 데이터\n\n"
+        "> *본 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
+    )
 
     # Generate post
     gen = PostGenerator("market-analysis")

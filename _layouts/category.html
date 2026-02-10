@@ -10,6 +10,12 @@ layout: default
       <span class="post-count-badge">{{ cat_posts.size }}개 포스트</span>
     </div>
     <p class="category-description">{{ page.description }}</p>
+    <a href="{{ '/' | relative_url }}" class="back-to-home">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+      </svg>
+      홈으로
+    </a>
   </div>
 
   {% if cat_posts.size > 0 %}
@@ -29,7 +35,15 @@ layout: default
   </div>
 
   <div class="posts-list" id="posts-list">
+    {% assign prev_date = "" %}
     {% for post in cat_posts %}
+      {% assign post_date = post.date | date: "%Y년 %m월 %d일" %}
+      {% if post_date != prev_date %}
+        <div class="date-divider">
+          <span class="date-label">{{ post_date }}</span>
+        </div>
+        {% assign prev_date = post_date %}
+      {% endif %}
       {% include post-card.html post=post %}
     {% endfor %}
   </div>
@@ -49,10 +63,16 @@ layout: default
 var filterInput = document.getElementById('category-filter');
 var postsList = document.getElementById('posts-list');
 var posts = postsList.querySelectorAll('.post-card');
+var dateDividers = postsList.querySelectorAll('.date-divider');
 
 filterInput.addEventListener('input', function() {
   var query = this.value.toLowerCase().trim();
   var visibleCount = 0;
+
+  // Hide all date dividers during search
+  dateDividers.forEach(function(d) {
+    d.style.display = query.length > 0 ? 'none' : '';
+  });
 
   posts.forEach(function(post) {
     var title = post.querySelector('h3 a').textContent.toLowerCase();
@@ -61,7 +81,7 @@ filterInput.addEventListener('input', function() {
     var tags = post.querySelectorAll('.tag');
     var tagText = Array.from(tags).map(function(t) { return t.textContent.toLowerCase(); }).join(' ');
 
-    if (title.indexOf(query) !== -1 || excerptText.indexOf(query) !== -1 || tagText.indexOf(query) !== -1) {
+    if (query.length === 0 || title.indexOf(query) !== -1 || excerptText.indexOf(query) !== -1 || tagText.indexOf(query) !== -1) {
       post.style.display = '';
       visibleCount++;
     } else {

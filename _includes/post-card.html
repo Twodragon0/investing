@@ -1,9 +1,19 @@
 {% assign reading_time = post.content | number_of_words | divided_by: 200 %}
 {% if reading_time == 0 %}{% assign reading_time = 1 %}{% endif %}
 
-<article class="post-card cat-border-{{ post.categories | first | slugify }}">
+{% assign pc_cat = post.categories | first %}
+{% if pc_cat == "crypto-news" %}{% assign pc_cat_name = "암호화폐 뉴스" %}
+{% elsif pc_cat == "stock-news" %}{% assign pc_cat_name = "주식 뉴스" %}
+{% elsif pc_cat == "crypto-journal" or pc_cat == "crypto-trading-journal" %}{% assign pc_cat_name = "크립토 일지" %}
+{% elsif pc_cat == "stock-journal" or pc_cat == "stock-trading-journal" %}{% assign pc_cat_name = "주식 일지" %}
+{% elsif pc_cat == "security-alerts" %}{% assign pc_cat_name = "보안 알림" %}
+{% elsif pc_cat == "market-analysis" %}{% assign pc_cat_name = "시장 분석" %}
+{% else %}{% assign pc_cat_name = pc_cat %}
+{% endif %}
+
+<article class="post-card cat-border-{{ pc_cat | slugify }}">
   <div class="post-card-meta">
-    <span class="post-category cat-{{ post.categories | first | slugify }}">{{ post.categories | first }}</span>
+    <span class="post-category cat-{{ pc_cat | slugify }}">{{ pc_cat_name }}</span>
     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
     {% if post.source %}<span class="post-source">{{ post.source }}</span>{% endif %}
     <span class="post-reading-time">

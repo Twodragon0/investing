@@ -170,6 +170,50 @@ def fetch_rss_feed(url: str, source_name: str, tags: List[str], limit: int = 10)
         return []
 
 
+def fetch_reddit_crypto(limit: int = 10) -> List[Dict[str, Any]]:
+    """Fetch top posts from crypto-related Reddit subreddits via RSS."""
+    subreddits = [
+        ("cryptocurrency", "r/CryptoCurrency"),
+        ("bitcoin", "r/Bitcoin"),
+        ("ethtrader", "r/EthTrader"),
+    ]
+    all_items = []
+    for sub, display_name in subreddits:
+        url = f"https://www.reddit.com/r/{sub}/hot.json?limit={limit}"
+        try:
+            resp = requests.get(
+                url, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL,
+                headers={"User-Agent": USER_AGENT},
+            )
+            resp.raise_for_status()
+            data = resp.json()
+            for post in data.get("data", {}).get("children", [])[:limit]:
+                pd = post.get("data", {})
+                title = sanitize_string(pd.get("title", ""), 300)
+                if not title or pd.get("stickied"):
+                    continue
+                score = pd.get("score", 0)
+                if score < 50:
+                    continue
+                all_items.append({
+                    "title": f"[Reddit] {title}",
+                    "description": truncate_text(pd.get("selftext", title), 300),
+                    "link": f"https://reddit.com{pd.get('permalink', '')}",
+                    "published": "",
+                    "source": display_name,
+                    "tags": ["social-media", "reddit", sub],
+                    "score": score,
+                })
+            logger.info("Reddit %s: fetched %d posts", display_name, len(all_items))
+        except requests.exceptions.RequestException as e:
+            logger.warning("Reddit %s fetch failed: %s", display_name, e)
+        time.sleep(1)
+
+    # Sort by score
+    all_items.sort(key=lambda x: x.get("score", 0), reverse=True)
+    return all_items[:limit]
+
+
 def fetch_google_news_social() -> List[Dict[str, Any]]:
     """Google News RSS fallback for social/crypto influencer content."""
     feeds = [
@@ -177,6 +221,8 @@ def fetch_google_news_social() -> List[Dict[str, Any]]:
          "Google News Social EN", ["social-media", "sentiment"]),
         ("https://news.google.com/rss/search?q=암호화폐+커뮤니티+SNS&hl=ko&gl=KR&ceid=KR:ko",
          "Google News Social KR", ["social-media", "korean"]),
+        ("https://news.google.com/rss/search?q=crypto+whale+alert+on-chain&hl=en-US&gl=US&ceid=US:en",
+         "Whale & On-chain", ["social-media", "whale", "on-chain"]),
     ]
     all_items = []
     for url, name, tags in feeds:
@@ -202,6 +248,14 @@ def fetch_political_economy_news() -> List[Dict[str, Any]]:
          "이재명 암호화폐정책", ["politics", "이재명", "crypto"]),
         ("https://news.google.com/rss/search?q=이재명+부동산+금리&hl=ko&gl=KR&ceid=KR:ko",
          "이재명 부동산·금리", ["politics", "이재명", "real-estate"]),
+        # US Fed / macro
+        ("https://news.google.com/rss/search?q=Federal+Reserve+interest+rate+decision&hl=en-US&gl=US&ceid=US:en",
+         "Fed Policy", ["politics", "fed", "macro"]),
+        # Korea economy/policy
+        ("https://news.google.com/rss/search?q=한국은행+금리+경제&hl=ko&gl=KR&ceid=KR:ko",
+         "한국은행 금리정책", ["politics", "한국은행", "macro"]),
+        ("https://news.google.com/rss/search?q=코스피+외국인+기관+수급&hl=ko&gl=KR&ceid=KR:ko",
+         "한국증시 수급", ["stock", "korean", "수급"]),
     ]
     all_items = []
     for url, name, tags in feeds:
@@ -244,7 +298,10 @@ def main():
 
     social_items.extend(fetch_google_news_social())
 
-    # Collect political/economy news (Trump, 이재명)
+    # Collect Reddit posts
+    reddit_items = fetch_reddit_crypto()
+
+    # Collect political/economy news (Trump, 이재명, Fed, 한국은행)
     political_items = fetch_political_economy_news()
 
     # ── Consolidated social media post ──
@@ -255,7 +312,8 @@ def main():
         dedup.save()
         return
 
-    content_parts = [f"오늘의 암호화폐 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 {len(telegram_items)}건, 소셜 미디어 {len(social_items)}건, 정치·경제 {len(political_items)}건이 수집되었습니다.\n"]
+    total_count = len(telegram_items) + len(social_items) + len(reddit_items) + len(political_items)
+    content_parts = [f"오늘의 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 {len(telegram_items)}건, 소셜 미디어 {len(social_items)}건, Reddit {len(reddit_items)}건, 정치·경제 {len(political_items)}건 총 {total_count}건이 수집되었습니다.\n"]
 
     # Collect all source links
     source_links = []
@@ -301,6 +359,25 @@ def main():
     else:
         content_parts.append("*수집된 소셜 미디어 트렌드가 없습니다.*")
 
+    # Reddit section
+    content_parts.append("\n## Reddit 커뮤니티 인기 글\n")
+    if reddit_items:
+        content_parts.append("| # | 제목 | 커뮤니티 |")
+        content_parts.append("|---|------|----------|")
+        for i, item in enumerate(reddit_items[:10], 1):
+            title = item["title"].replace("[Reddit] ", "")
+            source = item.get("source", "unknown")
+            link = item.get("link", "")
+            score = item.get("score", 0)
+
+            if link:
+                source_links.append({"title": item["title"], "link": link, "source": source})
+                content_parts.append(f"| {i} | [**{title}**]({link}) | {source} (↑{score}) |")
+            else:
+                content_parts.append(f"| {i} | **{title}** | {source} (↑{score}) |")
+    else:
+        content_parts.append("*수집된 Reddit 글이 없습니다.*")
+
     # Political/Economy trends section
     content_parts.append("\n## 정치·경제 동향\n")
     if political_items:
@@ -337,7 +414,7 @@ def main():
         title=post_title,
         content=content,
         date=now,
-        tags=["social-media", "telegram", "twitter", "politics", "trump", "이재명", "daily-digest"],
+        tags=["social-media", "telegram", "twitter", "reddit", "politics", "trump", "이재명", "daily-digest"],
         source="consolidated",
         lang="ko",
         slug="daily-social-media-digest",

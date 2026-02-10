@@ -4,11 +4,21 @@ layout: default
 {% assign reading_time = content | number_of_words | divided_by: 200 %}
 {% if reading_time == 0 %}{% assign reading_time = 1 %}{% endif %}
 
+{% assign first_cat = page.categories | first %}
+{% if first_cat == "crypto-news" %}{% assign cat_name = "암호화폐 뉴스" %}
+{% elsif first_cat == "stock-news" %}{% assign cat_name = "주식 뉴스" %}
+{% elsif first_cat == "crypto-journal" or first_cat == "crypto-trading-journal" %}{% assign cat_name = "크립토 트레이딩 일지" %}
+{% elsif first_cat == "stock-journal" or first_cat == "stock-trading-journal" %}{% assign cat_name = "주식 트레이딩 일지" %}
+{% elsif first_cat == "security-alerts" %}{% assign cat_name = "보안 알림" %}
+{% elsif first_cat == "market-analysis" %}{% assign cat_name = "시장 분석" %}
+{% else %}{% assign cat_name = first_cat %}
+{% endif %}
+
 <article class="post-detail">
   <div class="post-breadcrumb">
     <a href="{{ '/' | relative_url }}">홈</a>
     <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M4 2l4 4-4 4"/></svg>
-    <a href="{{ page.categories | first | prepend: '/' | append: '/' | relative_url }}">{{ page.categories | first }}</a>
+    <a href="{{ first_cat | prepend: '/' | append: '/' | relative_url }}">{{ cat_name }}</a>
   </div>
 
   <header class="post-header">
@@ -30,7 +40,7 @@ layout: default
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/>
         </svg>
-        <span class="post-category cat-{{ page.categories | first | slugify }}">{{ page.categories | first }}</span>
+        <span class="post-category cat-{{ first_cat | slugify }}">{{ cat_name }}</span>
       </span>
       {% if page.source %}
       <span class="post-meta-item">
@@ -82,14 +92,21 @@ layout: default
   </div>
 
   {% assign category = page.categories | first %}
-  {% assign related = site.posts | where_exp: "post", "post.categories contains category" | where_exp: "post", "post.url != page.url" | limit: 3 %}
-  {% if related.size > 0 %}
+  {% assign related_all = site.posts | where_exp: "post", "post.categories contains category" | where_exp: "post", "post.url != page.url" %}
+  {% if related_all.size > 0 %}
   <section class="related-posts">
     <h3>관련 포스트</h3>
     <div class="related-posts-grid">
-      {% for post in related %}
+      {% for post in related_all limit:3 %}
+      {% assign rel_cat = post.categories | first %}
+      {% if rel_cat == "crypto-news" %}{% assign rel_cat_name = "암호화폐 뉴스" %}
+      {% elsif rel_cat == "stock-news" %}{% assign rel_cat_name = "주식 뉴스" %}
+      {% elsif rel_cat == "security-alerts" %}{% assign rel_cat_name = "보안 알림" %}
+      {% elsif rel_cat == "market-analysis" %}{% assign rel_cat_name = "시장 분석" %}
+      {% else %}{% assign rel_cat_name = rel_cat %}
+      {% endif %}
       <a href="{{ post.url | relative_url }}" class="related-post-card">
-        <span class="related-post-category cat-{{ post.categories | first | slugify }}">{{ post.categories | first }}</span>
+        <span class="related-post-category cat-{{ rel_cat | slugify }}">{{ rel_cat_name }}</span>
         <h4>{{ post.title | truncate: 60 }}</h4>
         <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
       </a>

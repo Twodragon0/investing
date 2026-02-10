@@ -248,11 +248,11 @@ layout: default
       <circle cx="12" cy="12" r="10"/>
       <polyline points="12 6 12 12 16 14"/>
     </svg>
-    <h2>오늘의 요약</h2>
+    <h2>최신 시장 분석</h2>
   </div>
   <div class="summary-body">
-    {% assign today_date = site.time | date: "%Y-%m-%d" %}
-    {% assign heatmap_path = "/assets/images/generated/market-heatmap-" | append: today_date | append: ".png" %}
+    {% assign analysis_date = latest_analysis.date | date: "%Y-%m-%d" %}
+    {% assign heatmap_path = "/assets/images/generated/market-heatmap-" | append: analysis_date | append: ".png" %}
     <div class="summary-image-wrapper">
       <img src="{{ heatmap_path | relative_url }}" alt="시장 히트맵" class="summary-market-image" onerror="this.parentElement.style.display='none'">
     </div>
@@ -280,17 +280,51 @@ layout: default
 </section>
 {% endif %}
 
+<!-- Latest News Quick View -->
+{% assign latest_crypto = site.categories['crypto-news'] | first %}
+{% assign latest_stock = site.categories['stock-news'] | first %}
+{% if latest_crypto or latest_stock %}
+<section class="latest-news-section">
+  <div class="section-header">
+    <h2>최신 뉴스</h2>
+  </div>
+  <div class="latest-news-grid">
+    {% if latest_crypto %}
+    <a href="{{ latest_crypto.url | relative_url }}" class="latest-news-card crypto">
+      <div class="latest-news-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 6v12M9 9h5a2 2 0 1 1 0 4h-5"/>
+        </svg>
+        암호화폐 뉴스
+      </div>
+      <h3>{{ latest_crypto.title }}</h3>
+      <p>{{ latest_crypto.excerpt | strip_html | truncate: 120 }}</p>
+      <time>{{ latest_crypto.date | date: "%Y-%m-%d" }}</time>
+    </a>
+    {% endif %}
+    {% if latest_stock %}
+    <a href="{{ latest_stock.url | relative_url }}" class="latest-news-card stock">
+      <div class="latest-news-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+          <polyline points="17 6 23 6 23 12"/>
+        </svg>
+        주식 뉴스
+      </div>
+      <h3>{{ latest_stock.title }}</h3>
+      <p>{{ latest_stock.excerpt | strip_html | truncate: 120 }}</p>
+      <time>{{ latest_stock.date | date: "%Y-%m-%d" }}</time>
+    </a>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
 <!-- Recent Posts with Tabs -->
 <section class="recent-posts-tabbed">
   <div class="section-header">
     <h2>최근 포스트</h2>
-    <a href="{{ '/archive/' | relative_url }}" class="view-all-link">
-      전체보기
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="5" y1="12" x2="19" y2="12"/>
-        <polyline points="12 5 19 12 12 19"/>
-      </svg>
-    </a>
   </div>
 
   <div class="posts-tabs">
@@ -313,10 +347,15 @@ layout: default
       분석
       <span class="tab-count">{{ analysis_posts | size }}</span>
     </button>
+    {% assign security_posts = site.posts | where_exp: "post", "post.categories[0] contains 'security'" %}
+    <button class="posts-tab" data-category="security">
+      보안
+      <span class="tab-count">{{ security_posts | size }}</span>
+    </button>
   </div>
 
   <div class="posts-tab-content">
-    {% for post in site.posts limit:15 %}
+    {% for post in site.posts limit:20 %}
       {% assign first_cat = post.categories | first %}
       {% assign cat_type = "other" %}
       {% if first_cat contains "crypto" %}
@@ -325,6 +364,8 @@ layout: default
         {% assign cat_type = "stock" %}
       {% elsif first_cat contains "analysis" %}
         {% assign cat_type = "analysis" %}
+      {% elsif first_cat contains "security" %}
+        {% assign cat_type = "security" %}
       {% endif %}
       <div class="post-item" data-cat-type="{{ cat_type }}">
         {% include post-card.html post=post %}

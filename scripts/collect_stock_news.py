@@ -122,12 +122,24 @@ def fetch_rss_feed(url: str, source_name: str, tags: List[str], limit: int = 15)
 
 
 def fetch_google_news_stocks() -> List[Dict[str, Any]]:
-    """Fetch stock news from Google News RSS."""
+    """Fetch stock news from Google News RSS (expanded sources)."""
     feeds = [
+        # US market
         ("https://news.google.com/rss/search?q=stock+market+S%26P+500&hl=en-US&gl=US&ceid=US:en",
          "Google News Stocks EN", ["stock", "market", "english"]),
+        ("https://news.google.com/rss/search?q=NASDAQ+tech+stocks+AI&hl=en-US&gl=US&ceid=US:en",
+         "NASDAQ/Tech", ["stock", "nasdaq", "tech"]),
+        ("https://news.google.com/rss/search?q=Fed+interest+rate+bond+yield&hl=en-US&gl=US&ceid=US:en",
+         "Fed/Bond", ["stock", "fed", "bond"]),
+        # Korea market
         ("https://news.google.com/rss/search?q=주식+코스피+코스닥&hl=ko&gl=KR&ceid=KR:ko",
          "Google News Stocks KR", ["stock", "kospi", "korean"]),
+        ("https://news.google.com/rss/search?q=삼성전자+SK하이닉스+반도체+주가&hl=ko&gl=KR&ceid=KR:ko",
+         "한국 반도체", ["stock", "semiconductor", "korean"]),
+        ("https://news.google.com/rss/search?q=외국인+기관+순매수+순매도&hl=ko&gl=KR&ceid=KR:ko",
+         "한국 수급동향", ["stock", "flow", "korean"]),
+        ("https://news.google.com/rss/search?q=한국은행+금리+환율+원달러&hl=ko&gl=KR&ceid=KR:ko",
+         "한국 금리/환율", ["stock", "rate", "korean"]),
     ]
     all_items = []
     for url, name, tags in feeds:
