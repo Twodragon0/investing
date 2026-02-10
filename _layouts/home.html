@@ -355,39 +355,47 @@ layout: default
   </div>
 
   <div class="posts-tab-content">
-    {% assign pinned_posts = site.posts | where: "pin", true %}
-    {% assign unpinned_posts = site.posts | where_exp: "post", "post.pin != true" %}
-    {% for post in pinned_posts %}
-      {% assign first_cat = post.categories | first %}
-      {% assign cat_type = "other" %}
-      {% if first_cat contains "crypto" %}
-        {% assign cat_type = "crypto" %}
-      {% elsif first_cat contains "stock" %}
-        {% assign cat_type = "stock" %}
-      {% elsif first_cat contains "analysis" %}
-        {% assign cat_type = "analysis" %}
-      {% elsif first_cat contains "security" %}
-        {% assign cat_type = "security" %}
+    {% comment %} 1단계: 고정(pin) 포스트 먼저 출력 {% endcomment %}
+    {% for post in site.posts %}
+      {% if post.pin %}
+        {% assign first_cat = post.categories | first %}
+        {% assign cat_type = "other" %}
+        {% if first_cat contains "crypto" %}
+          {% assign cat_type = "crypto" %}
+        {% elsif first_cat contains "stock" %}
+          {% assign cat_type = "stock" %}
+        {% elsif first_cat contains "analysis" %}
+          {% assign cat_type = "analysis" %}
+        {% elsif first_cat contains "security" %}
+          {% assign cat_type = "security" %}
+        {% endif %}
+        <div class="post-item pinned-post" data-cat-type="{{ cat_type }}">
+          {% include post-card.html post=post %}
+        </div>
       {% endif %}
-      <div class="post-item pinned-post" data-cat-type="{{ cat_type }}">
-        {% include post-card.html post=post %}
-      </div>
     {% endfor %}
-    {% for post in unpinned_posts limit:20 %}
-      {% assign first_cat = post.categories | first %}
-      {% assign cat_type = "other" %}
-      {% if first_cat contains "crypto" %}
-        {% assign cat_type = "crypto" %}
-      {% elsif first_cat contains "stock" %}
-        {% assign cat_type = "stock" %}
-      {% elsif first_cat contains "analysis" %}
-        {% assign cat_type = "analysis" %}
-      {% elsif first_cat contains "security" %}
-        {% assign cat_type = "security" %}
-      {% endif %}
-      <div class="post-item" data-cat-type="{{ cat_type }}">
-        {% include post-card.html post=post %}
-      </div>
+    {% comment %} 2단계: 일반 포스트 출력 {% endcomment %}
+    {% assign unpinned_count = 0 %}
+    {% for post in site.posts %}
+      {% unless post.pin %}
+        {% if unpinned_count < 20 %}
+          {% assign first_cat = post.categories | first %}
+          {% assign cat_type = "other" %}
+          {% if first_cat contains "crypto" %}
+            {% assign cat_type = "crypto" %}
+          {% elsif first_cat contains "stock" %}
+            {% assign cat_type = "stock" %}
+          {% elsif first_cat contains "analysis" %}
+            {% assign cat_type = "analysis" %}
+          {% elsif first_cat contains "security" %}
+            {% assign cat_type = "security" %}
+          {% endif %}
+          <div class="post-item" data-cat-type="{{ cat_type }}">
+            {% include post-card.html post=post %}
+          </div>
+          {% assign unpinned_count = unpinned_count | plus: 1 %}
+        {% endif %}
+      {% endunless %}
     {% endfor %}
   </div>
 </section>
