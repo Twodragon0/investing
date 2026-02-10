@@ -1,7 +1,6 @@
 """Environment variable configuration loader."""
 
 import os
-import ssl
 import logging
 
 logger = logging.getLogger(__name__)
