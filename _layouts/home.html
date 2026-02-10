@@ -87,7 +87,7 @@ layout: default
       </svg>
       <div class="stat-content">
         <span class="stat-label">최근 업데이트</span>
-        <span class="stat-value" id="stat-last-update">--:--</span>
+        <span class="stat-value">{{ site.posts.first.date | date: "%m/%d %H:%M" }}</span>
       </div>
     </div>
   </div>
@@ -97,8 +97,8 @@ layout: default
 <section class="category-grid-v2">
   {% assign crypto_news_count = site.categories['crypto-news'] | size %}
   {% assign stock_news_count = site.categories['stock-news'] | size %}
-  {% assign crypto_journal_count = site.categories['crypto-journal'] | size %}
-  {% assign stock_journal_count = site.categories['stock-journal'] | size %}
+  {% assign crypto_journal_count = site.categories['crypto-trading-journal'] | size %}
+  {% assign stock_journal_count = site.categories['stock-trading-journal'] | size %}
   {% assign security_alerts_count = site.categories['security-alerts'] | size %}
   {% assign market_analysis_count = site.categories['market-analysis'] | size %}
 
@@ -412,19 +412,6 @@ layout: default
   const now = new Date();
   const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
   dateEl.textContent = now.toLocaleDateString('ko-KR', options);
-
-  // Update last update time
-  const lastUpdateEl = document.getElementById('stat-last-update');
-  if (lastUpdateEl) {
-    const updateTime = () => {
-      const now = new Date();
-      const hours = now.getHours().toString().padStart(2, '0');
-      const minutes = now.getMinutes().toString().padStart(2, '0');
-      lastUpdateEl.textContent = `${hours}:${minutes}`;
-    };
-    updateTime();
-    setInterval(updateTime, 60000);
-  }
 
   // Tab switching with animation
   const tabs = document.querySelectorAll('.posts-tab');

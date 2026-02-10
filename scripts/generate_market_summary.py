@@ -15,19 +15,18 @@ import sys
 import os
 import time
 import requests
-import certifi
 from datetime import datetime, timezone, timedelta
 from typing import Dict, Any, List
 from collections import OrderedDict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common.config import get_env, setup_logging
+from common.config import get_env, setup_logging, get_ssl_verify
 from common.post_generator import PostGenerator
 
 logger = setup_logging("generate_market_summary")
 
-VERIFY_SSL = certifi.where()
+VERIFY_SSL = get_ssl_verify()
 REQUEST_TIMEOUT = 15
 
 
@@ -681,6 +680,7 @@ def main():
         tags=["market-summary", "daily", "crypto", "stock", "macro", "top-coins"],
         source="auto-generated",
         lang="ko",
+        slug="daily-market-report",
     )
 
     if filepath:

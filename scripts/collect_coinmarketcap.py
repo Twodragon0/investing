@@ -13,19 +13,18 @@ import sys
 import os
 import time
 import requests
-import certifi
 from datetime import datetime, timezone
 from typing import List, Dict, Any, Tuple
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common.config import get_env, setup_logging
+from common.config import get_env, setup_logging, get_ssl_verify
 from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
 
 logger = setup_logging("collect_coinmarketcap")
 
-VERIFY_SSL = certifi.where()
+VERIFY_SSL = get_ssl_verify()
 REQUEST_TIMEOUT = 20
 USER_AGENT = "Mozilla/5.0 (compatible; InvestingDragon/1.0)"
 

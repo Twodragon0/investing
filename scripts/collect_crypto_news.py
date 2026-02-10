@@ -13,7 +13,6 @@ import sys
 import os
 import time
 import requests
-import certifi
 from datetime import datetime, timezone
 from typing import List, Dict, Any
 from bs4 import BeautifulSoup
@@ -21,14 +20,14 @@ from bs4 import BeautifulSoup
 # Add scripts directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common.config import get_env, setup_logging
+from common.config import get_env, setup_logging, get_ssl_verify
 from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
 from common.utils import sanitize_string
 
 logger = setup_logging("collect_crypto_news")
 
-VERIFY_SSL = certifi.where()
+VERIFY_SSL = get_ssl_verify()
 REQUEST_TIMEOUT = 15
 USER_AGENT = "Mozilla/5.0 (compatible; InvestingDragon/1.0)"
 
@@ -167,6 +166,26 @@ def fetch_google_news_crypto() -> List[Dict[str, Any]]:
     return all_items
 
 
+def fetch_google_news_security() -> List[Dict[str, Any]]:
+    """Fetch blockchain security news from Google News RSS."""
+    feeds = [
+        ("https://news.google.com/rss/search?q=blockchain+hack+exploit+security&hl=en-US&gl=US&ceid=US:en",
+         "Blockchain Security EN", ["security", "hack", "english"]),
+        ("https://news.google.com/rss/search?q=crypto+hack+DeFi+exploit&hl=en-US&gl=US&ceid=US:en",
+         "DeFi Security EN", ["security", "defi", "exploit"]),
+        ("https://news.google.com/rss/search?q=블록체인+해킹+보안+취약점&hl=ko&gl=KR&ceid=KR:ko",
+         "블록체인 보안 KR", ["security", "hack", "korean"]),
+    ]
+    all_items = []
+    for url, name, tags in feeds:
+        items = fetch_rss_feed(url, name, tags)
+        for item in items:
+            item["category_override"] = "security-alerts"
+        all_items.extend(items)
+        time.sleep(1)
+    return all_items
+
+
 def fetch_exchange_announcements() -> List[Dict[str, Any]]:
     """Fetch announcements from major exchanges (public APIs only)."""
     items = []
@@ -275,8 +294,9 @@ def main():
     exchange_items = fetch_exchange_announcements()
     all_items.extend(exchange_items)
 
-    # Rekt News -> security-alerts category
+    # Security news from multiple sources -> security-alerts category
     rekt_items = fetch_rekt_news()
+    google_security_items = fetch_google_news_security()
 
     created_count = 0
 
@@ -367,48 +387,70 @@ def main():
             created_count += 1
             logger.info("Created consolidated crypto news post: %s", filepath)
 
-    # ── Post B: security report (only if rekt_items exist) ──
-    if rekt_items:
+    # ── Post B: security report (Rekt News + Google Security News) ──
+    all_security_items = rekt_items + google_security_items
+    if all_security_items:
         post_b_title = f"블록체인 보안 리포트 - {today}"
 
         if not dedup.is_duplicate_exact(post_b_title, "consolidated", today):
-            content_parts = ["최근 블록체인 보안 사고를 정리합니다.\n"]
-            content_parts.append("## 보안 사고 현황\n")
-            content_parts.append("| 프로젝트 | 피해 규모 | 공격 유형 |")
-            content_parts.append("|----------|----------|----------|")
-
+            content_parts = [f"블록체인 보안 관련 뉴스 {len(all_security_items)}건을 정리합니다.\n"]
             security_links = []
 
-            for item in rekt_items:
-                # Parse description for structured data
-                desc = item.get("description", "")
-                project = item["title"].replace("[Security] ", "")
-                link = item.get("link", "")
-                funds_lost = "N/A"
-                technique = "N/A"
+            # Rekt News section (structured incidents)
+            if rekt_items:
+                content_parts.append("## 보안 사고 현황\n")
+                content_parts.append("| 프로젝트 | 피해 규모 | 공격 유형 |")
+                content_parts.append("|----------|----------|----------|")
 
-                if "Funds Lost:" in desc:
-                    try:
-                        funds_lost = desc.split("Funds Lost:")[1].split("|")[0].strip()
-                    except IndexError:
-                        pass
-                if "Technique:" in desc:
-                    try:
-                        technique = desc.split("Technique:")[1].strip()
-                    except IndexError:
-                        pass
+                for item in rekt_items:
+                    desc = item.get("description", "")
+                    project = item["title"].replace("[Security] ", "")
+                    link = item.get("link", "")
+                    funds_lost = "N/A"
+                    technique = "N/A"
 
-                if link:
-                    content_parts.append(f"| [{project}]({link}) | {funds_lost} | {technique} |")
-                    security_links.append({"title": item["title"], "link": link, "source": item.get("source", "")})
-                else:
-                    content_parts.append(f"| {project} | {funds_lost} | {technique} |")
+                    if "Funds Lost:" in desc:
+                        try:
+                            funds_lost = desc.split("Funds Lost:")[1].split("|")[0].strip()
+                        except IndexError:
+                            pass
+                    if "Technique:" in desc:
+                        try:
+                            technique = desc.split("Technique:")[1].strip()
+                        except IndexError:
+                            pass
 
-            # References section for security report
+                    if link:
+                        content_parts.append(f"| [{project}]({link}) | {funds_lost} | {technique} |")
+                        security_links.append({"title": item["title"], "link": link, "source": item.get("source", "")})
+                    else:
+                        content_parts.append(f"| {project} | {funds_lost} | {technique} |")
+
+            # Google Security News section
+            if google_security_items:
+                content_parts.append("\n## 보안 관련 뉴스\n")
+                content_parts.append("| # | 제목 | 출처 |")
+                content_parts.append("|---|------|------|")
+                for i, item in enumerate(google_security_items[:15], 1):
+                    title = item["title"]
+                    link = item.get("link", "")
+                    source = item.get("source", "")
+                    if link:
+                        content_parts.append(f"| {i} | [**{title}**]({link}) | {source} |")
+                        security_links.append({"title": title, "link": link, "source": source})
+                    else:
+                        content_parts.append(f"| {i} | **{title}** | {source} |")
+
+            # References
             if security_links:
                 content_parts.append("\n## 참고 링크\n")
-                for i, ref in enumerate(security_links[:20], 1):
-                    content_parts.append(f"{i}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}")
+                seen_links = set()
+                ref_count = 1
+                for ref in security_links[:20]:
+                    if ref["link"] not in seen_links:
+                        seen_links.add(ref["link"])
+                        content_parts.append(f"{ref_count}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}")
+                        ref_count += 1
 
             content = "\n".join(content_parts)
 
@@ -416,8 +458,8 @@ def main():
                 title=post_b_title,
                 content=content,
                 date=now,
-                tags=["security", "hack", "rekt", "daily-digest"],
-                source="Rekt News",
+                tags=["security", "hack", "blockchain", "daily-digest"],
+                source="consolidated",
                 lang="ko",
                 slug="daily-security-report",
             )
