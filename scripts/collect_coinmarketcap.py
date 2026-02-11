@@ -427,7 +427,7 @@ def main():
     # ── Generate high-quality summary post ──
     title = f"암호화폐 시장 종합 리포트 - {today}"
 
-    if not dedup.is_duplicate(title, source_name, today):
+    if not dedup.is_duplicate_exact(title, source_name, today):
         sections = {}
 
         # 1. Market Insight (Korean analysis)
