@@ -41,11 +41,31 @@ runs:
           echo "No new posts to commit"
         else
           git commit -m "${{ inputs.commit-message }} $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          for i in 1 2 3; do
-            git pull --rebase origin main && break || {
-              git rebase --abort 2>/dev/null || true
-              git pull --no-rebase -X ours origin main || true
-            }
+          MAX_RETRIES=5
+          for i in $(seq 1 $MAX_RETRIES); do
+            echo "=== Push attempt $i/$MAX_RETRIES ==="
+            if git push origin main 2>&1; then
+              echo "Push succeeded"
+              exit 0
+            fi
+            echo "Push failed, syncing with remote..."
+            DELAY=$((i * 3 + RANDOM % 5))
+            echo "Waiting ${DELAY}s before retry..."
+            sleep $DELAY
+            # Try rebase first (cleaner history)
+            if git pull --rebase origin main 2>&1; then
+              echo "Rebase succeeded, retrying push..."
+              continue
+            fi
+            # Rebase failed (conflict), fall back to merge
+            echo "Rebase failed, falling back to merge strategy..."
+            git rebase --abort 2>/dev/null || true
+            if git pull --no-rebase -X ours origin main 2>&1; then
+              echo "Merge succeeded, retrying push..."
+              continue
+            fi
+            echo "Merge also failed on attempt $i"
           done
-          git push || (sleep $((RANDOM % 10 + 5)) && git pull --rebase origin main && git push)
+          echo "::error::All $MAX_RETRIES push attempts failed"
+          exit 1
         fi

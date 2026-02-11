@@ -2,14 +2,14 @@ name: Collect Stock News
 
 on:
   schedule:
-    - cron: '30 */6 * * *'
+    - cron: '24 */6 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: collect-stock-news
+  group: collect-data
   cancel-in-progress: false
 
 jobs:

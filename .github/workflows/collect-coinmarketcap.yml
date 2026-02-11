@@ -2,14 +2,14 @@ name: Collect CoinMarketCap Data
 
 on:
   schedule:
-    - cron: '15 */6 * * *'
+    - cron: '12 */6 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: collect-coinmarketcap
+  group: collect-data
   cancel-in-progress: false
 
 jobs:

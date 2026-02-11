@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: generate-market-summary
+  group: collect-data
   cancel-in-progress: false
 
 jobs:

@@ -2,14 +2,14 @@ name: Collect Regulatory News
 
 on:
   schedule:
-    - cron: '45 */12 * * *'
+    - cron: '48 */12 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: collect-regulatory
+  group: collect-data
   cancel-in-progress: false
 
 jobs:

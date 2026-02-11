@@ -228,10 +228,11 @@ def generate_digest(posts: List[Dict]) -> str:
         "security-alerts": "보안 알림",
         "market-analysis": "시장 분석",
         "social-media": "소셜 미디어",
+        "regulatory-news": "규제 동향",
     }
 
     # Priority order for categories
-    cat_order = ["market-analysis", "crypto-news", "stock-news", "security-alerts"]
+    cat_order = ["market-analysis", "crypto-news", "stock-news", "regulatory-news", "security-alerts"]
 
     for cat in cat_order:
         if cat not in categories:

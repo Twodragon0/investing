@@ -2,14 +2,14 @@ name: Collect Social Media
 
 on:
   schedule:
-    - cron: '0 */12 * * *'
+    - cron: '36 */12 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: collect-social-media
+  group: collect-data
   cancel-in-progress: false
 
 jobs:
