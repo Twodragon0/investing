@@ -10,6 +10,18 @@ from typing import Dict, List, Any, Optional
 
 logger = logging.getLogger(__name__)
 
+# Import matplotlib once at module level
+_MPL_AVAILABLE = False
+try:
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    import matplotlib.patches as mpatches
+    import numpy as np
+    _MPL_AVAILABLE = True
+except ImportError:
+    logger.warning("matplotlib/numpy not available, image generation disabled")
+
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 IMAGES_DIR = os.path.join(REPO_ROOT, "assets", "images", "generated")
 
@@ -56,13 +68,7 @@ def generate_top_coins_card(
 
     Returns relative path for Jekyll or None on failure.
     """
-    try:
-        import matplotlib
-        matplotlib.use("Agg")
-        import matplotlib.pyplot as plt
-        import matplotlib.patches as mpatches
-    except ImportError:
-        logger.warning("matplotlib not available, skipping image generation")
+    if not _MPL_AVAILABLE:
         return None
 
     _ensure_dir()
@@ -199,14 +205,7 @@ def generate_fear_greed_gauge(
     filename: Optional[str] = None,
 ) -> Optional[str]:
     """Generate a Fear & Greed gauge image."""
-    try:
-        import matplotlib
-        matplotlib.use("Agg")
-        import matplotlib.pyplot as plt
-        import matplotlib.patches as mpatches
-        import numpy as np  # noqa: F401
-    except ImportError:
-        logger.warning("matplotlib not available, skipping gauge generation")
+    if not _MPL_AVAILABLE:
         return None
 
     _ensure_dir()
@@ -298,14 +297,7 @@ def generate_market_heatmap(
     filename: Optional[str] = None,
 ) -> Optional[str]:
     """Generate a market heatmap showing top coins by market cap with color-coded changes."""
-    try:
-        import matplotlib
-        matplotlib.use("Agg")
-        import matplotlib.pyplot as plt
-        import matplotlib.patches as mpatches
-        import numpy as np  # noqa: F401
-    except ImportError:
-        logger.warning("matplotlib not available, skipping heatmap generation")
+    if not _MPL_AVAILABLE:
         return None
 
     _ensure_dir()

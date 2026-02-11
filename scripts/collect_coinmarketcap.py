@@ -21,70 +21,19 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common.config import get_env, setup_logging, get_ssl_verify
 from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
+from common.crypto_api import (
+    fetch_coingecko_top_coins,
+    fetch_coingecko_trending,
+    fetch_coingecko_global,
+    fetch_fear_greed_index,
+)
+from common.formatters import fmt_number as _fmt_num, fmt_percent as _fmt_pct
 
 logger = setup_logging("collect_coinmarketcap")
 
 VERIFY_SSL = get_ssl_verify()
 REQUEST_TIMEOUT = 20
 USER_AGENT = "Mozilla/5.0 (compatible; InvestingDragon/1.0)"
-
-
-# ──────────────────────────────────────────────
-# CoinGecko (Free, no API key required)
-# ──────────────────────────────────────────────
-
-def fetch_coingecko_top_coins(limit: int = 30) -> List[Dict[str, Any]]:
-    """Fetch top coins by market cap from CoinGecko."""
-    try:
-        url = "https://api.coingecko.com/api/v3/coins/markets"
-        params = {
-            "vs_currency": "usd",
-            "order": "market_cap_desc",
-            "per_page": limit,
-            "page": 1,
-            "sparkline": "false",
-            "price_change_percentage": "1h,24h,7d",
-        }
-        resp = requests.get(url, params=params, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL,
-                           headers={"User-Agent": USER_AGENT})
-        resp.raise_for_status()
-        data = resp.json()
-        logger.info("CoinGecko: fetched %d top coins", len(data))
-        return data
-    except requests.exceptions.RequestException as e:
-        logger.warning("CoinGecko top coins fetch failed: %s", e)
-        return []
-
-
-def fetch_coingecko_trending() -> List[Dict[str, Any]]:
-    """Fetch trending coins from CoinGecko."""
-    try:
-        url = "https://api.coingecko.com/api/v3/search/trending"
-        resp = requests.get(url, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL,
-                           headers={"User-Agent": USER_AGENT})
-        resp.raise_for_status()
-        data = resp.json()
-        coins = data.get("coins", [])
-        logger.info("CoinGecko: fetched %d trending coins", len(coins))
-        return coins
-    except requests.exceptions.RequestException as e:
-        logger.warning("CoinGecko trending fetch failed: %s", e)
-        return []
-
-
-def fetch_coingecko_global() -> Dict[str, Any]:
-    """Fetch global crypto market data."""
-    try:
-        url = "https://api.coingecko.com/api/v3/global"
-        resp = requests.get(url, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL,
-                           headers={"User-Agent": USER_AGENT})
-        resp.raise_for_status()
-        data = resp.json().get("data", {})
-        logger.info("CoinGecko: fetched global market data")
-        return data
-    except requests.exceptions.RequestException as e:
-        logger.warning("CoinGecko global fetch failed: %s", e)
-        return {}
 
 
 # ──────────────────────────────────────────────
@@ -150,31 +99,6 @@ def fetch_cmc_gainers_losers(api_key: str) -> Tuple[List[Dict], List[Dict]]:
     except requests.exceptions.RequestException as e:
         logger.warning("CMC gainers/losers fetch failed: %s", e)
         return [], []
-
-
-# ──────────────────────────────────────────────
-# Formatting functions (High Quality Korean)
-# ──────────────────────────────────────────────
-
-def _fmt_num(n, prefix="$", decimals=2) -> str:
-    """Format a number with commas and prefix."""
-    if n is None:
-        return "N/A"
-    if abs(n) >= 1_000_000_000_000:
-        return f"{prefix}{n/1_000_000_000_000:,.2f}T"
-    if abs(n) >= 1_000_000_000:
-        return f"{prefix}{n/1_000_000_000:,.2f}B"
-    if abs(n) >= 1_000_000:
-        return f"{prefix}{n/1_000_000:,.2f}M"
-    return f"{prefix}{n:,.{decimals}f}"
-
-
-def _fmt_pct(n) -> str:
-    """Format percentage with color indicator."""
-    if n is None:
-        return "N/A"
-    arrow = "🟢" if n >= 0 else "🔴"
-    return f"{arrow} {n:+.2f}%"
 
 
 def format_global_market(data: Dict[str, Any]) -> str:
@@ -409,20 +333,7 @@ def main():
 
     # Fear & Greed
     time.sleep(1)
-    fear_greed = {}
-    try:
-        url = "https://api.alternative.me/fng/?limit=1&format=json"
-        resp = requests.get(url, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
-        resp.raise_for_status()
-        fg_data = resp.json()
-        if "data" in fg_data and fg_data["data"]:
-            entry = fg_data["data"][0]
-            fear_greed = {
-                "value": int(entry.get("value", 0)),
-                "classification": entry.get("value_classification", "N/A"),
-            }
-    except requests.exceptions.RequestException:
-        pass
+    fear_greed = fetch_fear_greed_index(history_days=1)
 
     # ── Generate high-quality summary post ──
     title = f"암호화폐 시장 종합 리포트 - {today}"

@@ -15,7 +15,6 @@ import time
 import requests
 from datetime import datetime, timezone
 from typing import List, Dict, Any
-from bs4 import BeautifulSoup
 
 # Add scripts directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -24,6 +23,7 @@ from common.config import get_env, setup_logging, get_ssl_verify
 from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
 from common.utils import sanitize_string
+from common.rss_fetcher import fetch_rss_feed
 
 logger = setup_logging("collect_crypto_news")
 
@@ -53,7 +53,7 @@ def fetch_cryptopanic(api_key: str, limit: int = 20) -> List[Dict[str, Any]]:
         for r in results[:limit]:
             items.append({
                 "title": sanitize_string(r.get("title", ""), 300),
-                "description": sanitize_string(r.get("title", ""), 500),
+                "description": sanitize_string(r.get("metadata", {}).get("description", r.get("title", "")), 500),
                 "link": r.get("url", ""),
                 "published": r.get("published_at", ""),
                 "source": "CryptoPanic",
@@ -104,52 +104,6 @@ def fetch_newsapi(api_key: str, limit: int = 20) -> List[Dict[str, Any]]:
         return items
     except requests.exceptions.RequestException as e:
         logger.warning("NewsAPI fetch failed: %s", e)
-        return []
-
-
-def fetch_rss_feed(url: str, source_name: str, tags: List[str], limit: int = 15) -> List[Dict[str, Any]]:
-    """Fetch news from an RSS feed."""
-    try:
-        resp = requests.get(
-            url, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL,
-            headers={"User-Agent": USER_AGENT},
-        )
-        resp.raise_for_status()
-        soup = BeautifulSoup(resp.text, "xml")
-
-        items = []
-        for item in soup.find_all("item")[:limit]:
-            title_el = item.find("title")
-            desc_el = item.find("description")
-            link_el = item.find("link")
-            date_el = item.find("pubDate")
-
-            title = sanitize_string(title_el.get_text(strip=True), 300) if title_el else ""
-            if not title:
-                continue
-
-            description = ""
-            if desc_el:
-                raw_desc = desc_el.get_text(strip=True)
-                description = sanitize_string(
-                    BeautifulSoup(raw_desc, "html.parser").get_text(" ", strip=True), 500
-                )
-
-            link = link_el.get_text(strip=True) if link_el else ""
-            published = date_el.get_text(strip=True) if date_el else ""
-
-            items.append({
-                "title": title,
-                "description": description,
-                "link": link,
-                "published": published,
-                "source": source_name,
-                "tags": tags,
-            })
-        logger.info("RSS %s: fetched %d items", source_name, len(items))
-        return items
-    except requests.exceptions.RequestException as e:
-        logger.warning("RSS %s fetch failed: %s", source_name, e)
         return []
 
 

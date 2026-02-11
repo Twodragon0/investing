@@ -23,85 +23,18 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.config import get_env, setup_logging, get_ssl_verify
 from common.post_generator import PostGenerator
+from common.crypto_api import (
+    fetch_coingecko_top_coins,
+    fetch_coingecko_trending,
+    fetch_coingecko_global,
+    fetch_fear_greed_index,
+)
+from common.formatters import fmt_number as _fmt, fmt_percent as _pct
 
 logger = setup_logging("generate_market_summary")
 
 VERIFY_SSL = get_ssl_verify()
 REQUEST_TIMEOUT = 15
-
-
-# ══════════════════════════════════════════════
-# Data Fetchers
-# ══════════════════════════════════════════════
-
-def fetch_coingecko_top_coins(limit: int = 30) -> List[Dict[str, Any]]:
-    """Fetch top coins by market cap from CoinGecko."""
-    try:
-        url = "https://api.coingecko.com/api/v3/coins/markets"
-        params = {
-            "vs_currency": "usd",
-            "order": "market_cap_desc",
-            "per_page": limit,
-            "page": 1,
-            "sparkline": "false",
-            "price_change_percentage": "1h,24h,7d",
-        }
-        resp = requests.get(url, params=params, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL,
-                           headers={"User-Agent": "InvestingDragon/1.0"})
-        resp.raise_for_status()
-        data = resp.json()
-        logger.info("CoinGecko: fetched %d top coins", len(data))
-        return data
-    except requests.exceptions.RequestException as e:
-        logger.warning("CoinGecko top coins fetch failed: %s", e)
-        return []
-
-
-def fetch_coingecko_global() -> Dict[str, Any]:
-    """Fetch global crypto market data."""
-    try:
-        url = "https://api.coingecko.com/api/v3/global"
-        resp = requests.get(url, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
-        resp.raise_for_status()
-        return resp.json().get("data", {})
-    except requests.exceptions.RequestException as e:
-        logger.warning("CoinGecko global fetch failed: %s", e)
-        return {}
-
-
-def fetch_coingecko_trending() -> List[Dict[str, Any]]:
-    """Fetch trending coins."""
-    try:
-        url = "https://api.coingecko.com/api/v3/search/trending"
-        resp = requests.get(url, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
-        resp.raise_for_status()
-        return resp.json().get("coins", [])
-    except requests.exceptions.RequestException as e:
-        logger.warning("CoinGecko trending fetch failed: %s", e)
-        return []
-
-
-def fetch_fear_greed_index() -> Dict[str, Any]:
-    """Fetch Crypto Fear & Greed Index."""
-    try:
-        url = "https://api.alternative.me/fng/?limit=7&format=json"
-        resp = requests.get(url, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
-        resp.raise_for_status()
-        data = resp.json()
-        entries = data.get("data", [])
-        if entries:
-            current = entries[0]
-            prev = entries[1] if len(entries) > 1 else {}
-            return {
-                "value": int(current.get("value", 0)),
-                "classification": current.get("value_classification", "N/A"),
-                "prev_value": int(prev.get("value", 0)) if prev else None,
-                "prev_classification": prev.get("value_classification", "") if prev else "",
-            }
-        return {}
-    except requests.exceptions.RequestException as e:
-        logger.warning("Fear & Greed index fetch failed: %s", e)
-        return {}
 
 
 def fetch_us_market_data(api_key: str) -> Dict[str, Dict[str, str]]:
@@ -244,29 +177,6 @@ def fetch_fred_indicators(api_key: str) -> Dict[str, Dict[str, Any]]:
             logger.warning("FRED %s: %s", key, e)
 
     return results
-
-
-# ══════════════════════════════════════════════
-# Formatting (High Quality Korean)
-# ══════════════════════════════════════════════
-
-def _fmt(n, prefix="$", decimals=2) -> str:
-    if n is None:
-        return "N/A"
-    if abs(n) >= 1e12:
-        return f"{prefix}{n/1e12:,.2f}T"
-    if abs(n) >= 1e9:
-        return f"{prefix}{n/1e9:,.2f}B"
-    if abs(n) >= 1e6:
-        return f"{prefix}{n/1e6:,.1f}M"
-    return f"{prefix}{n:,.{decimals}f}"
-
-
-def _pct(n) -> str:
-    if n is None:
-        return "N/A"
-    icon = "🟢" if n >= 0 else "🔴"
-    return f"{icon} {n:+.2f}%"
 
 
 def format_global_overview(global_data: Dict, fear_greed: Dict) -> str:
@@ -580,7 +490,7 @@ def main():
     time.sleep(2)
     trending = fetch_coingecko_trending()
     time.sleep(1)
-    fear_greed = fetch_fear_greed_index()
+    fear_greed = fetch_fear_greed_index(history_days=7)
     us_market = fetch_us_market_data(alpha_vantage_key)
     kr_market = fetch_korean_market()
     fred_data = fetch_fred_indicators(fred_key)

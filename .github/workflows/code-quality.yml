@@ -49,3 +49,6 @@ jobs:
           python -c "import common.dedup; print('✓ common.dedup')"
           python -c "import common.post_generator; print('✓ common.post_generator')"
           python -c "import common.image_generator; print('✓ common.image_generator')"
+          python -c "import common.rss_fetcher; print('✓ common.rss_fetcher')"
+          python -c "import common.crypto_api; print('✓ common.crypto_api')"
+          python -c "import common.formatters; print('✓ common.formatters')"

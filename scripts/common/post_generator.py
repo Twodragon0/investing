@@ -16,7 +16,11 @@ POSTS_DIR = os.path.join(REPO_ROOT, "_posts")
 
 
 def _slugify(text: str, max_length: int = 80) -> str:
-    """Convert text to URL-safe slug (English-only)."""
+    """Convert text to URL-safe slug (English-only, strips Korean characters).
+
+    Intentionally different from utils.slugify which preserves Korean (가-힣).
+    This version is used for Jekyll filenames where ASCII-only slugs are needed.
+    """
     text = text.lower().strip()
     # Keep only English alphanumeric, spaces, and hyphens
     text = re.sub(r"[^a-z0-9\s-]", "", text)
