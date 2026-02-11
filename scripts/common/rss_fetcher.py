@@ -36,11 +36,25 @@ def fetch_rss_feed(
         soup = BeautifulSoup(resp.text, "xml")
 
         items = []
-        for item in soup.find_all("item")[:limit]:
-            title_el = item.find("title")
-            desc_el = item.find("description")
-            link_el = item.find("link")
-            date_el = item.find("pubDate")
+        entries = soup.find_all("item")[:limit]
+        is_atom = False
+        if not entries:
+            entries = soup.find_all("entry")[:limit]
+            is_atom = True
+
+        for entry in entries:
+            title_el = entry.find("title")
+
+            if is_atom:
+                link_el = entry.find("link")
+                link_val = link_el.get("href", "") if link_el else ""
+                date_el = entry.find("updated") or entry.find("published")
+                desc_el = entry.find("summary") or entry.find("content")
+            else:
+                link_el = entry.find("link")
+                link_val = link_el.get_text(strip=True) if link_el else ""
+                date_el = entry.find("pubDate")
+                desc_el = entry.find("description")
 
             title = sanitize_string(title_el.get_text(strip=True), 300) if title_el else ""
             if not title:
@@ -56,7 +70,7 @@ def fetch_rss_feed(
             items.append({
                 "title": title,
                 "description": description,
-                "link": link_el.get_text(strip=True) if link_el else "",
+                "link": link_val,
                 "published": date_el.get_text(strip=True) if date_el else "",
                 "source": source_name,
                 "tags": tags,

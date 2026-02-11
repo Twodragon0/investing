@@ -30,3 +30,4 @@ jobs:
         with:
           script: scripts/collect_stock_news.py
           commit-message: 'chore: collect stock news'
+          git-add-paths: '_posts/ _state/ assets/images/'

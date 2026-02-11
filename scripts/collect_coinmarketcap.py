@@ -14,6 +14,7 @@ import os
 import time
 import requests
 from datetime import datetime, timezone
+from collections import OrderedDict
 from typing import List, Dict, Any, Tuple
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -339,30 +340,87 @@ def main():
     title = f"암호화폐 시장 종합 리포트 - {today}"
 
     if not dedup.is_duplicate_exact(title, source_name, today):
-        sections = {}
+        sections = OrderedDict()
 
-        # 1. Market Insight (Korean analysis)
+        # 0. Generate images
+        image_refs = []
+        try:
+            from common.image_generator import generate_top_coins_card, generate_market_heatmap
+
+            img = generate_top_coins_card(
+                top_coins, today, source=cmc_source,
+                filename=f"top-coins-cmc-{today}.png",
+            )
+            if img:
+                image_refs.append(("top-coins-cmc", img))
+
+            img = generate_market_heatmap(
+                top_coins, today, source=cmc_source,
+                filename=f"market-heatmap-cmc-{today}.png",
+            )
+            if img:
+                image_refs.append(("market-heatmap-cmc", img))
+
+            logger.info("Generated %d images for CMC post", len(image_refs))
+        except ImportError:
+            logger.warning("Image generator not available")
+        except Exception as e:
+            logger.warning("Image generation failed: %s", e)
+
+        if image_refs:
+            img_lines = []
+            for label, path in image_refs:
+                fn = os.path.basename(path)
+                web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
+                img_lines.append(f"![{label}]({web_path})")
+            sections["시장 시각화"] = "\n\n".join(img_lines)
+
+        # 1. Key summary bullet points
+        key_bullets = []
+        if top_coins:
+            btc = next((c for c in top_coins if (c.get("symbol") or "").lower() in ("btc", "BTC")), None)
+            if btc:
+                if cmc_source == "coingecko":
+                    price = btc.get("current_price", 0)
+                    ch24 = btc.get("price_change_percentage_24h", 0) or 0
+                else:
+                    quote = btc.get("quote", {}).get("USD", {})
+                    price = quote.get("price", 0) or 0
+                    ch24 = quote.get("percent_change_24h", 0) or 0
+                direction = "상승" if ch24 >= 0 else "하락"
+                key_bullets.append(f"- **비트코인**: ${price:,.0f} (24h {ch24:+.2f}% {direction})")
+        if fear_greed:
+            fg_val = fear_greed.get("value", 0)
+            fg_cls = fear_greed.get("classification", "N/A")
+            key_bullets.append(f"- **공포/탐욕 지수**: {fg_val}/100 ({fg_cls})")
+        if global_data:
+            total_mcap = global_data.get("total_market_cap", {}).get("usd", 0)
+            key_bullets.append(f"- **총 시가총액**: {_fmt_num(total_mcap)}")
+        if key_bullets:
+            sections["핵심 요약"] = "\n".join(key_bullets)
+
+        # 2. Market Insight (Korean analysis)
         insight = generate_market_insight(global_data, top_coins, fear_greed)
         if insight:
             sections["시장 인사이트"] = insight
 
-        # 2. Global market overview
+        # 3. Global market overview
         sections["글로벌 암호화폐 시장 현황"] = format_global_market(global_data)
 
-        # 3. Fear & Greed
+        # 4. Fear & Greed
         if fear_greed:
             value = fear_greed.get("value", 0)
             classification = fear_greed.get("classification", "N/A")
             bar = "█" * (value // 5) + "░" * (20 - value // 5)
             sections["공포/탐욕 지수"] = f"**{value}/100** — {classification}\n\n`[{bar}]`"
 
-        # 4. Top 20 coins
+        # 5. Top 20 coins
         sections["시가총액 Top 20"] = format_top_coins_table(top_coins, cmc_source)
 
-        # 5. Trending coins
+        # 6. Trending coins
         sections["트렌딩 코인"] = format_trending_coins(trending, cmc_source)
 
-        # 6. Gainers/Losers
+        # 7. Gainers/Losers
         if gainers or losers:
             sections["급등/급락 코인"] = format_gainers_losers(gainers, losers)
         elif top_coins and cmc_source == "coingecko":

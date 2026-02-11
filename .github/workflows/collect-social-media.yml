@@ -29,3 +29,4 @@ jobs:
         with:
           script: scripts/collect_social_media.py
           commit-message: 'chore: collect social media'
+          git-add-paths: '_posts/ _state/ assets/images/'

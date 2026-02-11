@@ -22,6 +22,7 @@ from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
 from common.utils import sanitize_string, detect_language
 from common.rss_fetcher import fetch_rss_feed
+from common.summarizer import ThemeSummarizer
 
 logger = setup_logging("collect_stock_news")
 
@@ -74,6 +75,27 @@ def fetch_newsapi_stocks(api_key: str, limit: int = 20) -> List[Dict[str, Any]]:
             logger.warning("NewsAPI stocks fetch failed for '%s': %s", query, e)
 
     logger.info("NewsAPI stocks: fetched %d items", len(all_items))
+    return all_items
+
+
+def fetch_financial_rss_feeds() -> List[Dict[str, Any]]:
+    """Fetch news from major financial media RSS feeds."""
+    feeds = [
+        ("https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114",
+         "CNBC Top News", ["stock", "cnbc"]),
+        ("https://feeds.marketwatch.com/marketwatch/topstories/",
+         "MarketWatch", ["stock", "marketwatch"]),
+        ("https://www.hankyung.com/feed/all-news",
+         "한국경제", ["stock", "korean", "한경"]),
+        ("http://file.mk.co.kr/news/rss/rss_30000001.xml",
+         "매일경제", ["stock", "korean", "매경"]),
+        ("http://biz.chosun.com/site/data/rss/rss.xml",
+         "조선비즈", ["stock", "korean", "조선비즈"]),
+    ]
+    all_items = []
+    for url, name, tags in feeds:
+        all_items.extend(fetch_rss_feed(url, name, tags))
+        time.sleep(1)
     return all_items
 
 
@@ -158,6 +180,36 @@ def fetch_alpha_vantage_snapshot(api_key: str) -> List[Dict[str, Any]]:
     return items
 
 
+def fetch_korean_market_data() -> dict:
+    """Fetch Korean market data (KOSPI, KOSDAQ, USD/KRW) via yfinance."""
+    results = {}
+    try:
+        import yfinance as yf
+        symbols = {
+            "^KS11": "KOSPI",
+            "^KQ11": "KOSDAQ",
+            "KRW=X": "USD/KRW",
+        }
+        for symbol, name in symbols.items():
+            try:
+                info = yf.Ticker(symbol).fast_info
+                price = getattr(info, "last_price", None)
+                prev = getattr(info, "previous_close", None)
+                if price and prev:
+                    change = price - prev
+                    change_pct = (change / prev) * 100
+                    results[name] = {
+                        "price": f"{price:,.2f}",
+                        "change": f"{change:+,.2f}",
+                        "change_pct": f"{change_pct:+.2f}%",
+                    }
+            except Exception as e:
+                logger.warning("yfinance %s: %s", symbol, e)
+    except ImportError:
+        logger.warning("yfinance not installed, skipping Korean market data")
+    return results
+
+
 def main():
     """Main collection routine - consolidated post."""
     logger.info("=== Starting stock news collection ===")
@@ -177,7 +229,11 @@ def main():
     yahoo_items = fetch_yahoo_finance_rss()
     alpha_items = fetch_alpha_vantage_snapshot(alpha_vantage_key)
 
-    all_items = newsapi_items + google_items + yahoo_items + alpha_items
+    financial_rss_items = fetch_financial_rss_feeds()
+    all_items = newsapi_items + google_items + yahoo_items + alpha_items + financial_rss_items
+
+    # Fetch Korean market data
+    kr_market = fetch_korean_market_data()
 
     # ── Consolidated stock news post ──
     post_title = f"주식 시장 뉴스 종합 - {today}"
@@ -224,6 +280,71 @@ def main():
 
     content_parts = [f"오늘 총 {len(all_items)}건의 주식 시장 뉴스가 수집되었습니다. 주요 내용을 정리합니다.\n"]
 
+    # Create summarizer
+    summarizer = ThemeSummarizer(all_items)
+
+    # Key summary
+    content_parts.append("## 핵심 요약\n")
+    content_parts.append(f"- **총 뉴스 건수**: {len(all_items)}건")
+    for name, info in kr_market.items():
+        icon = "🟢" if not info["change_pct"].startswith("-") else "🔴"
+        content_parts.append(f"- **{name}**: {info['price']} ({icon} {info['change_pct']})")
+
+    # Theme distribution chart
+    chart = summarizer.generate_distribution_chart()
+    if chart:
+        content_parts.append("\n" + chart)
+
+    # Image — market snapshot card
+    snapshot_items = []
+    # US data from Alpha Vantage
+    for item in alpha_vantage_rows:
+        desc = item.get("description", "")
+        # Parse "Name (SYM) - Price: $X, Change: Y (Z%)"
+        try:
+            price_part = desc.split("Price:")[1].split(",")[0].strip() if "Price:" in desc else "N/A"
+            change_part = ""
+            if "(" in desc and desc.endswith(")"):
+                change_part = desc.rsplit("(", 1)[1].rstrip(")")
+        except (IndexError, ValueError):
+            price_part = "N/A"
+            change_part = "N/A"
+        snapshot_items.append({
+            "name": item["title"].split(":")[0].strip() if ":" in item["title"] else item["title"],
+            "price": price_part,
+            "change_pct": change_part or "N/A",
+            "section": "US Market",
+        })
+    # Korean data
+    for name, info in kr_market.items():
+        snapshot_items.append({
+            "name": name,
+            "price": info["price"],
+            "change_pct": info["change_pct"],
+            "section": "Korean Market",
+        })
+
+    try:
+        from common.image_generator import generate_market_snapshot_card
+        if snapshot_items:
+            img = generate_market_snapshot_card(snapshot_items, today)
+            if img:
+                fn = os.path.basename(img)
+                web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
+                content_parts.append(f"\n![market-snapshot]({web_path})\n")
+                logger.info("Generated market snapshot image")
+    except ImportError:
+        pass
+    except Exception as e:
+        logger.warning("Market snapshot image failed: %s", e)
+
+    # Themed news sections
+    content_parts.append("\n---\n")
+    themed = summarizer.generate_themed_news_sections()
+    if themed:
+        content_parts.append(themed)
+        content_parts.append("\n---\n")
+
     # Global stock news
     content_parts.append("## 글로벌 주식 뉴스\n")
     if global_rows:
@@ -242,24 +363,65 @@ def main():
     else:
         content_parts.append("*수집된 한국 주식 뉴스가 없습니다.*")
 
-    # Market data snapshot
+    # Market data snapshot table (improved with emoji direction + Korean data)
     content_parts.append("\n## 시장 데이터 스냅샷\n")
-    if alpha_vantage_rows:
-        content_parts.append("| 지수/ETF | 가격 | 변동 |")
-        content_parts.append("|----------|------|------|")
+    has_market_data = alpha_vantage_rows or kr_market
+    if has_market_data:
+        content_parts.append("| 지수/ETF | 가격 | 변동률 |")
+        content_parts.append("|----------|------|--------|")
         for item in alpha_vantage_rows:
+            title_short = item["title"].split(":")[0].strip() if ":" in item["title"] else item["title"]
+            desc = item.get("description", "")
+            # Extract change_pct
+            change_pct = "N/A"
+            if "(" in desc and desc.endswith(")"):
+                change_pct = desc.rsplit("(", 1)[1].rstrip(")")
+            try:
+                pval = float(change_pct.replace("%", "").replace("+", ""))
+                icon = "🟢" if pval >= 0 else "🔴"
+                change_display = f"{icon} {change_pct}"
+            except (ValueError, AttributeError):
+                change_display = change_pct
+            price_str = "N/A"
+            if "Price:" in desc:
+                try:
+                    price_str = desc.split("Price:")[1].split(",")[0].strip()
+                except IndexError:
+                    pass
             link = item.get("link", "")
             if link:
-                content_parts.append(f"| [**{item['title']}**]({link}) | {item.get('description', '')} | - |")
+                content_parts.append(f"| [**{title_short}**]({link}) | {price_str} | {change_display} |")
                 source_links.append({"title": item["title"], "link": link, "source": item.get("source", "")})
             else:
-                content_parts.append(f"| **{item['title']}** | {item.get('description', '')} | - |")
+                content_parts.append(f"| **{title_short}** | {price_str} | {change_display} |")
+        for name, info in kr_market.items():
+            try:
+                pval = float(info["change_pct"].replace("%", "").replace("+", ""))
+                icon = "🟢" if pval >= 0 else "🔴"
+            except (ValueError, AttributeError):
+                icon = ""
+            content_parts.append(f"| **{name}** | {info['price']} | {icon} {info['change_pct']} |")
     else:
-        content_parts.append("*Alpha Vantage 데이터를 가져올 수 없습니다.*")
+        content_parts.append("*시장 데이터를 가져올 수 없습니다.*")
 
-    # Summary
-    content_parts.append("\n## 뉴스 요약")
-    content_parts.append(f"- 총 수집 뉴스: {len(all_items)}건")
+    # Market insight
+    content_parts.append("\n## 시장 인사이트\n")
+    insight_lines = []
+    kospi = kr_market.get("KOSPI")
+    usdkrw = kr_market.get("USD/KRW")
+    if kospi:
+        insight_lines.append(f"한국 증시는 KOSPI **{kospi['price']}** ({kospi['change_pct']})으로 마감했습니다.")
+    if usdkrw:
+        insight_lines.append(f"원달러 환율은 **{usdkrw['price']}**원으로, 환율 변동이 외국인 투자 심리에 영향을 줄 수 있습니다.")
+    if alpha_vantage_rows:
+        insight_lines.append(f"미국 시장에서 주요 ETF {len(alpha_vantage_rows)}종의 데이터가 수집되었습니다.")
+    if not insight_lines:
+        insight_lines.append("현재 시장 데이터를 충분히 수집하지 못했습니다. API 제한 또는 휴장일일 수 있습니다.")
+    insight_lines.append("")
+    insight_lines.append("> *본 시장 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*")
+    content_parts.extend(insight_lines)
+
+    content_parts.append("\n---\n")
 
     # References section
     if source_links:
@@ -271,6 +433,9 @@ def main():
                 seen_links.add(ref["link"])
                 content_parts.append(f"{ref_count}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}")
                 ref_count += 1
+
+    # Data collection footer
+    content_parts.append(f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC")
 
     content = "\n".join(content_parts)
 

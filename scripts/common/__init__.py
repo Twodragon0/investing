@@ -5,6 +5,7 @@ from .dedup import DedupEngine
 from .post_generator import PostGenerator
 from .utils import sanitize_string, validate_url, slugify
 from .rss_fetcher import fetch_rss_feed
+from .summarizer import ThemeSummarizer
 from .crypto_api import (
     fetch_coingecko_top_coins,
     fetch_coingecko_trending,
@@ -22,6 +23,7 @@ __all__ = [
     "validate_url",
     "slugify",
     "fetch_rss_feed",
+    "ThemeSummarizer",
     "fetch_coingecko_top_coins",
     "fetch_coingecko_trending",
     "fetch_coingecko_global",

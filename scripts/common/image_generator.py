@@ -402,3 +402,278 @@ def generate_market_heatmap(
 
     logger.info("Generated market heatmap: %s", filename)
     return f"/assets/images/generated/{filename}"
+
+
+def generate_news_summary_card(
+    categories: List[Dict[str, Any]],
+    date_str: str,
+    filename: Optional[str] = None,
+) -> Optional[str]:
+    """Generate a horizontal bar chart showing news source distribution.
+
+    Args:
+        categories: List of {"name": "CryptoPanic", "count": 15} dicts.
+        date_str: Date string for the title.
+        filename: Optional output filename.
+
+    Returns relative path for Jekyll or None on failure.
+    """
+    if not _MPL_AVAILABLE:
+        return None
+
+    _ensure_dir()
+
+    if not categories:
+        return None
+
+    bar_colors = [
+        COLORS["blue"], COLORS["green"], COLORS["orange"],
+        COLORS["purple"], COLORS["red"], COLORS["gold"],
+        COLORS["silver"], COLORS["text_secondary"],
+    ]
+
+    names = [c["name"] for c in categories]
+    counts = [c["count"] for c in categories]
+    colors = [bar_colors[i % len(bar_colors)] for i in range(len(names))]
+
+    fig, ax = plt.subplots(figsize=(10, 5))
+    fig.patch.set_facecolor(COLORS["bg"])
+    ax.set_facecolor(COLORS["bg"])
+
+    y_pos = np.arange(len(names))
+    bars = ax.barh(y_pos, counts, color=colors, height=0.6, edgecolor="none")
+
+    ax.set_yticks(y_pos)
+    ax.set_yticklabels(names, fontsize=11, color=COLORS["text"], fontfamily="monospace")
+    ax.invert_yaxis()
+
+    ax.set_xlabel("Articles", fontsize=10, color=COLORS["text_secondary"], fontfamily="monospace")
+    ax.tick_params(axis="x", colors=COLORS["text_secondary"])
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+    ax.spines["bottom"].set_color(COLORS["border"])
+    ax.spines["left"].set_color(COLORS["border"])
+
+    # Value labels on bars
+    for bar, count in zip(bars, counts):
+        ax.text(bar.get_width() + 0.3, bar.get_y() + bar.get_height() / 2,
+                str(count), va="center", fontsize=10, color=COLORS["text"],
+                fontfamily="monospace", fontweight="bold")
+
+    ax.set_title(f"News Source Distribution — {date_str}",
+                 fontsize=14, fontweight="bold", color=COLORS["text"],
+                 fontfamily="monospace", pad=15)
+
+    # Footer
+    fig.text(0.5, 0.01, "Investing Dragon | Auto-generated",
+             ha="center", fontsize=8, color=COLORS["text_secondary"],
+             fontfamily="monospace", style="italic")
+
+    if not filename:
+        filename = f"news-summary-{date_str}.png"
+    filepath = os.path.join(IMAGES_DIR, filename)
+
+    plt.tight_layout(pad=1.0)
+    plt.savefig(filepath, dpi=150, facecolor=COLORS["bg"],
+                edgecolor="none", bbox_inches="tight")
+    plt.close(fig)
+
+    logger.info("Generated news summary card: %s", filename)
+    return f"/assets/images/generated/{filename}"
+
+
+def generate_market_snapshot_card(
+    market_data: List[Dict[str, Any]],
+    date_str: str,
+    filename: Optional[str] = None,
+) -> Optional[str]:
+    """Generate a card-style table showing key index/ETF prices and changes.
+
+    Args:
+        market_data: List of {"name": "S&P 500", "price": "$5,964",
+                     "change_pct": "+0.47%", "section": "US"} dicts.
+        date_str: Date string for the title.
+        filename: Optional output filename.
+
+    Returns relative path for Jekyll or None on failure.
+    """
+    if not _MPL_AVAILABLE:
+        return None
+
+    _ensure_dir()
+
+    if not market_data:
+        return None
+
+    row_count = len(market_data)
+    fig_height = 2.5 + row_count * 0.55
+    fig, ax = plt.subplots(figsize=(12, fig_height))
+    fig.patch.set_facecolor(COLORS["bg"])
+    ax.set_facecolor(COLORS["bg"])
+    ax.set_xlim(0, 10)
+    ax.set_ylim(0, fig_height)
+    ax.axis("off")
+
+    # Title
+    ax.text(5, fig_height - 0.5, "Market Snapshot",
+            ha="center", va="center", fontsize=18, fontweight="bold",
+            color=COLORS["text"], fontfamily="monospace")
+    ax.text(5, fig_height - 1.0, f"{date_str} | US & Korean Markets",
+            ha="center", va="center", fontsize=10, color=COLORS["text_secondary"],
+            fontfamily="monospace")
+
+    # Column headers
+    y_start = fig_height - 1.5
+    ax.text(0.5, y_start, "Index / ETF", fontsize=9, fontweight="bold",
+            color=COLORS["text_secondary"], fontfamily="monospace")
+    ax.text(5.0, y_start, "Price", fontsize=9, fontweight="bold",
+            color=COLORS["text_secondary"], fontfamily="monospace", ha="center")
+    ax.text(8.0, y_start, "Change", fontsize=9, fontweight="bold",
+            color=COLORS["text_secondary"], fontfamily="monospace", ha="center")
+
+    ax.plot([0.3, 9.7], [y_start - 0.2, y_start - 0.2],
+            color=COLORS["border"], linewidth=0.5)
+
+    current_section = None
+    y = y_start - 0.5
+
+    for i, item in enumerate(market_data):
+        section = item.get("section", "")
+        if section and section != current_section:
+            current_section = section
+            ax.text(0.5, y, section, fontsize=10, fontweight="bold",
+                    color=COLORS["blue"], fontfamily="monospace")
+            y -= 0.45
+
+        # Row background
+        if i % 2 == 0:
+            rect = mpatches.FancyBboxPatch((0.3, y - 0.18), 9.4, 0.5,
+                                           boxstyle="round,pad=0.05",
+                                           facecolor=COLORS["bg_inner"],
+                                           edgecolor="none", alpha=0.5)
+            ax.add_patch(rect)
+
+        name = item.get("name", "")
+        price = item.get("price", "N/A")
+        change_pct = item.get("change_pct", "N/A")
+
+        # Determine color from change_pct
+        try:
+            pct_val = float(change_pct.replace("%", "").replace("+", ""))
+            color = _get_change_color(pct_val)
+            arrow = "▲" if pct_val >= 0 else "▼"
+            change_display = f"{arrow} {change_pct}"
+        except (ValueError, AttributeError):
+            color = COLORS["text_secondary"]
+            change_display = change_pct
+
+        ax.text(0.5, y, name, fontsize=11, color=COLORS["text"], fontfamily="monospace")
+        ax.text(5.0, y, price, fontsize=11, color=COLORS["text"],
+                fontfamily="monospace", ha="center")
+        ax.text(8.0, y, change_display, fontsize=11, color=color,
+                fontfamily="monospace", ha="center", fontweight="bold")
+
+        y -= 0.55
+
+    # Footer
+    ax.text(5, 0.15, "Investing Dragon | Auto-generated Market Snapshot",
+            ha="center", fontsize=8, color=COLORS["text_secondary"],
+            fontfamily="monospace", style="italic")
+
+    if not filename:
+        filename = f"market-snapshot-{date_str}.png"
+    filepath = os.path.join(IMAGES_DIR, filename)
+
+    plt.tight_layout(pad=0.5)
+    plt.savefig(filepath, dpi=150, facecolor=COLORS["bg"],
+                edgecolor="none", bbox_inches="tight")
+    plt.close(fig)
+
+    logger.info("Generated market snapshot card: %s", filename)
+    return f"/assets/images/generated/{filename}"
+
+
+def generate_source_distribution_card(
+    sources: List[Dict[str, Any]],
+    date_str: str,
+    filename: Optional[str] = None,
+) -> Optional[str]:
+    """Generate a donut chart showing social media source distribution.
+
+    Args:
+        sources: List of {"name": "Telegram", "count": 10} dicts.
+        date_str: Date string for the title.
+        filename: Optional output filename.
+
+    Returns relative path for Jekyll or None on failure.
+    """
+    if not _MPL_AVAILABLE:
+        return None
+
+    _ensure_dir()
+
+    if not sources:
+        return None
+
+    donut_colors = [
+        COLORS["blue"], COLORS["green"], COLORS["orange"],
+        COLORS["purple"], COLORS["red"], COLORS["gold"],
+        COLORS["silver"], COLORS["text_secondary"],
+    ]
+
+    names = [s["name"] for s in sources]
+    counts = [s["count"] for s in sources]
+    total = sum(counts)
+    colors = [donut_colors[i % len(donut_colors)] for i in range(len(names))]
+
+    fig, ax = plt.subplots(figsize=(8, 8))
+    fig.patch.set_facecolor(COLORS["bg"])
+    ax.set_facecolor(COLORS["bg"])
+
+    wedges, _texts, autotexts = ax.pie(
+        counts, labels=None, colors=colors, autopct="%1.1f%%",
+        startangle=90, pctdistance=0.78,
+        wedgeprops=dict(width=0.4, edgecolor=COLORS["bg"], linewidth=2),
+    )
+
+    for at in autotexts:
+        at.set_color(COLORS["text"])
+        at.set_fontsize(9)
+        at.set_fontfamily("monospace")
+
+    # Center text — total count
+    ax.text(0, 0.05, str(total), ha="center", va="center",
+            fontsize=36, fontweight="bold", color=COLORS["text"], fontfamily="monospace")
+    ax.text(0, -0.12, "total", ha="center", va="center",
+            fontsize=12, color=COLORS["text_secondary"], fontfamily="monospace")
+
+    # Title
+    ax.set_title(f"Source Distribution — {date_str}",
+                 fontsize=14, fontweight="bold", color=COLORS["text"],
+                 fontfamily="monospace", pad=20)
+
+    # Legend
+    legend = ax.legend(wedges, [f"{n} ({c})" for n, c in zip(names, counts)],
+                       loc="lower center", bbox_to_anchor=(0.5, -0.08),
+                       ncol=min(len(names), 4), fontsize=9,
+                       frameon=False)
+    for text in legend.get_texts():
+        text.set_color(COLORS["text"])
+        text.set_fontfamily("monospace")
+
+    # Footer
+    fig.text(0.5, 0.01, "Investing Dragon | Auto-generated",
+             ha="center", fontsize=8, color=COLORS["text_secondary"],
+             fontfamily="monospace", style="italic")
+
+    if not filename:
+        filename = f"source-distribution-{date_str}.png"
+    filepath = os.path.join(IMAGES_DIR, filename)
+
+    plt.tight_layout(pad=1.0)
+    plt.savefig(filepath, dpi=150, facecolor=COLORS["bg"],
+                edgecolor="none", bbox_inches="tight")
+    plt.close(fig)
+
+    logger.info("Generated source distribution card: %s", filename)
+    return f"/assets/images/generated/{filename}"

@@ -9,8 +9,10 @@ Sources:
 
 import sys
 import os
+import re
 import time
 import requests
+from collections import Counter
 from datetime import datetime, timezone
 from typing import List, Dict, Any
 from bs4 import BeautifulSoup
@@ -22,6 +24,7 @@ from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
 from common.utils import sanitize_string, truncate_text
 from common.rss_fetcher import fetch_rss_feed
+from common.summarizer import ThemeSummarizer
 
 logger = setup_logging("collect_social_media")
 
@@ -127,15 +130,19 @@ def fetch_twitter_search(bearer_token: str, query: str, limit: int = 10) -> List
         return []
 
 
-def fetch_reddit_crypto(limit: int = 10) -> List[Dict[str, Any]]:
-    """Fetch top posts from crypto-related Reddit subreddits via RSS."""
+def fetch_reddit_posts(limit: int = 10) -> List[Dict[str, Any]]:
+    """Fetch top posts from crypto/stock-related Reddit subreddits via JSON API."""
     subreddits = [
-        ("cryptocurrency", "r/CryptoCurrency"),
-        ("bitcoin", "r/Bitcoin"),
-        ("ethtrader", "r/EthTrader"),
+        ("cryptocurrency", "r/CryptoCurrency", 50),
+        ("bitcoin", "r/Bitcoin", 50),
+        ("ethtrader", "r/EthTrader", 50),
+        ("wallstreetbets", "r/WallStreetBets", 100),
+        ("stocks", "r/Stocks", 50),
+        ("investing", "r/Investing", 50),
+        ("defi", "r/DeFi", 20),
     ]
     all_items = []
-    for sub, display_name in subreddits:
+    for sub, display_name, min_score in subreddits:
         url = f"https://www.reddit.com/r/{sub}/hot.json?limit={limit}"
         try:
             resp = requests.get(
@@ -144,13 +151,14 @@ def fetch_reddit_crypto(limit: int = 10) -> List[Dict[str, Any]]:
             )
             resp.raise_for_status()
             data = resp.json()
+            sub_count = 0
             for post in data.get("data", {}).get("children", [])[:limit]:
                 pd = post.get("data", {})
                 title = sanitize_string(pd.get("title", ""), 300)
                 if not title or pd.get("stickied"):
                     continue
                 score = pd.get("score", 0)
-                if score < 50:
+                if score < min_score:
                     continue
                 all_items.append({
                     "title": f"[Reddit] {title}",
@@ -161,14 +169,15 @@ def fetch_reddit_crypto(limit: int = 10) -> List[Dict[str, Any]]:
                     "tags": ["social-media", "reddit", sub],
                     "score": score,
                 })
-            logger.info("Reddit %s: fetched %d posts", display_name, len(all_items))
+                sub_count += 1
+            logger.info("Reddit %s: fetched %d posts", display_name, sub_count)
         except requests.exceptions.RequestException as e:
             logger.warning("Reddit %s fetch failed: %s", display_name, e)
         time.sleep(1)
 
     # Sort by score
     all_items.sort(key=lambda x: x.get("score", 0), reverse=True)
-    return all_items[:limit]
+    return all_items[:limit * 2]
 
 
 def fetch_google_news_social() -> List[Dict[str, Any]]:
@@ -235,7 +244,10 @@ def main():
 
     # Collect Telegram messages
     telegram_items = []
-    channels = ["cryptonews", "crypto", "CoinDesk", "BitcoinMagazine", "WuBlockchain", "coinlounge"]
+    channels = [
+        "cryptonews", "crypto", "CoinDesk", "BitcoinMagazine", "WuBlockchain", "coinlounge",
+        "whale_alert", "DefiLlama", "OKX_Announcements", "BybitOfficial", "BTCKorea", "upbitofficial",
+    ]
     for ch in channels:
         telegram_items.extend(fetch_telegram_channel(ch))
         time.sleep(2)
@@ -248,6 +260,8 @@ def main():
             "crypto market lang:en min_faves:50",
             "Trump crypto OR bitcoin min_faves:50",
             "이재명 경제 OR 주식 OR 암호화폐 lang:ko min_faves:20",
+            "코스피 OR 코스닥 주식 lang:ko min_faves:20",
+            "비트코인 OR 이더리움 lang:ko min_faves:30",
         ]
         for q in queries:
             social_items.extend(fetch_twitter_search(twitter_token, q))
@@ -256,7 +270,7 @@ def main():
     social_items.extend(fetch_google_news_social())
 
     # Collect Reddit posts
-    reddit_items = fetch_reddit_crypto()
+    reddit_items = fetch_reddit_posts()
 
     # Collect political/economy news (Trump, 이재명, Fed, 한국은행)
     political_items = fetch_political_economy_news()
@@ -269,11 +283,73 @@ def main():
         dedup.save()
         return
 
+    # Combine all items for theme analysis
+    all_theme_items = telegram_items + social_items + reddit_items + political_items
+
+    # Create theme summarizer
+    summarizer = ThemeSummarizer(all_theme_items)
+
     total_count = len(telegram_items) + len(social_items) + len(reddit_items) + len(political_items)
     content_parts = [f"오늘의 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 {len(telegram_items)}건, 소셜 미디어 {len(social_items)}건, Reddit {len(reddit_items)}건, 정치·경제 {len(political_items)}건 총 {total_count}건이 수집되었습니다.\n"]
 
     # Collect all source links
     source_links = []
+
+    # Key summary
+    content_parts.append("## 핵심 요약\n")
+    content_parts.append(f"- **총 수집 건수**: {total_count}건")
+    content_parts.append(f"- **텔레그램**: {len(telegram_items)}건")
+    content_parts.append(f"- **소셜 미디어/뉴스**: {len(social_items)}건")
+    content_parts.append(f"- **Reddit**: {len(reddit_items)}건")
+    content_parts.append(f"- **정치·경제**: {len(political_items)}건")
+
+    # Keyword analysis across all items
+    all_texts = " ".join(
+        item.get("title", "") + " " + item.get("description", "")
+        for item in telegram_items + social_items + reddit_items + political_items
+    ).lower()
+    keyword_targets = ["bitcoin", "ethereum", "trump", "이재명", "kospi", "fed", "regulation", "ai"]
+    keyword_hits = {kw: len(re.findall(re.escape(kw), all_texts, re.IGNORECASE))
+                    for kw in keyword_targets}
+    top_keywords = [(kw, cnt) for kw, cnt in sorted(keyword_hits.items(), key=lambda x: -x[1]) if cnt > 0]
+    if top_keywords:
+        kw_str = ", ".join(f"{kw}({cnt})" for kw, cnt in top_keywords[:5])
+        content_parts.append(f"- **주요 키워드**: {kw_str}")
+
+    # Theme distribution chart
+    dist = summarizer.generate_distribution_chart()
+    if dist:
+        content_parts.append("\n" + dist)
+
+    content_parts.append("\n---\n")
+
+    # Source distribution image
+    source_dist = []
+    if telegram_items:
+        source_dist.append({"name": "Telegram", "count": len(telegram_items)})
+    if social_items:
+        # Break down social items by source
+        social_counter = Counter(item.get("source", "Other") for item in social_items)
+        for src, cnt in social_counter.most_common():
+            source_dist.append({"name": src, "count": cnt})
+    if reddit_items:
+        source_dist.append({"name": "Reddit", "count": len(reddit_items)})
+    if political_items:
+        source_dist.append({"name": "Politics/Economy", "count": len(political_items)})
+
+    try:
+        from common.image_generator import generate_source_distribution_card
+        if source_dist:
+            img = generate_source_distribution_card(source_dist, today)
+            if img:
+                fn = os.path.basename(img)
+                web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
+                content_parts.append(f"\n![source-distribution]({web_path})\n")
+                logger.info("Generated source distribution image")
+    except ImportError:
+        pass
+    except Exception as e:
+        logger.warning("Source distribution image failed: %s", e)
 
     # Telegram section (limit to top 10)
     content_parts.append("## 텔레그램 주요 소식\n")
@@ -293,6 +369,8 @@ def main():
                 content_parts.append(f"| {i} | **{title}** | {source} |")
     else:
         content_parts.append("*수집된 텔레그램 소식이 없습니다.*")
+
+    content_parts.append("\n---\n")
 
     # Social media trends section (Twitter + Google News social, limit to top 10)
     content_parts.append("\n## 주요 소셜 미디어 트렌드\n")
@@ -316,6 +394,8 @@ def main():
     else:
         content_parts.append("*수집된 소셜 미디어 트렌드가 없습니다.*")
 
+    content_parts.append("\n---\n")
+
     # Reddit section
     content_parts.append("\n## Reddit 커뮤니티 인기 글\n")
     if reddit_items:
@@ -334,6 +414,8 @@ def main():
                 content_parts.append(f"| {i} | **{title}** | {source} (↑{score}) |")
     else:
         content_parts.append("*수집된 Reddit 글이 없습니다.*")
+
+    content_parts.append("\n---\n")
 
     # Political/Economy trends section
     content_parts.append("\n## 정치·경제 동향\n")
@@ -354,6 +436,35 @@ def main():
     else:
         content_parts.append("*수집된 정치·경제 동향이 없습니다.*")
 
+    content_parts.append("\n---\n")
+
+    # Theme summary
+    theme_summary = summarizer.generate_summary_section()
+    if theme_summary:
+        content_parts.append(theme_summary)
+
+    content_parts.append("\n---\n")
+
+    # Social trend analysis
+    content_parts.append("\n## 소셜 동향 분석\n")
+    trend_lines = []
+    if telegram_items:
+        # Channel activity analysis
+        tg_channels = Counter(item.get("source", "") for item in telegram_items)
+        top_channels = tg_channels.most_common(3)
+        ch_str = ", ".join(f"{ch}({cnt}건)" for ch, cnt in top_channels)
+        trend_lines.append(f"텔레그램에서 가장 활발한 채널은 {ch_str}입니다.")
+    if political_items:
+        pol_ratio = len(political_items) / max(total_count, 1) * 100
+        trend_lines.append(f"정치·경제 관련 뉴스가 전체의 **{pol_ratio:.0f}%**를 차지하고 있어, 정치적 이슈가 시장에 미치는 영향이 큰 상황입니다.")
+    if reddit_items:
+        trend_lines.append(f"Reddit에서 {len(reddit_items)}건의 인기 글이 수집되었으며, 커뮤니티 관심이 활발합니다.")
+    if not trend_lines:
+        trend_lines.append("현재 수집된 소셜 데이터가 제한적입니다.")
+    trend_lines.append("")
+    trend_lines.append("> *본 소셜 동향 분석은 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*")
+    content_parts.extend(trend_lines)
+
     # References section
     if source_links:
         content_parts.append("\n## 참고 링크\n")
@@ -364,6 +475,9 @@ def main():
                 seen_links.add(ref["link"])
                 content_parts.append(f"{ref_count}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}")
                 ref_count += 1
+
+    # Data collection timestamp footer
+    content_parts.append(f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC")
 
     content = "\n".join(content_parts)
 
