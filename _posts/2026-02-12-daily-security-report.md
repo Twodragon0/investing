@@ -1,0 +1,59 @@
+---
+title: "블록체인 보안 리포트 - 2026-02-12"
+date: 2026-02-12 03:13:37 +0000
+categories: [security-alerts]
+tags: [security, hack, blockchain, daily-digest]
+source: "consolidated"
+lang: "ko"
+---
+
+블록체인 보안 관련 뉴스 45건을 정리합니다.
+
+## 핵심 요약
+
+- **보안 사고/뉴스**: 총 45건
+- **보안 관련 뉴스**: 45건
+
+## 보안 관련 뉴스
+
+| # | 제목 | 출처 |
+|---|------|------|
+| 1 | [**A16z Crypto wants DeFi to ditch ‘code is law’ for ‘spec is law’ to combat $649m exploit problem - dlnews.com**](https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSUwwMmJMdEY2cGdfa1FyaHBXOEk4OHVNODZWZldLLVFvdkgzRVd3MU5XTmt3c19wUXF5YzRaSmJkUVY3R3RtZ3hXU2ltVXo0R1oyN2s5VFl3UmZzbVFESEpkeF9UbXcxYUlfcFd0ZEludGhnTjlSVkY5OEZxVUx4QTlhLXIwOXhSbkFUQ3VqZFNvY2lmenkwSW1SSDFIVnhLUkphQ0k4c0NUeHc?oc=5) | Blockchain Security EN |
+| 2 | [**More than $100 million stolen in exploit of Balancer DeFi protocol - The Record from Recorded Future News**](https://news.google.com/rss/articles/CBMiY0FVX3lxTE5kQkZ2d2xkR3FGYkpJWklrcFFVdVlsdlZ4cHRfc0VoSF9VQjRPc3JDa0syVjJBSXJ4b1lVWjFwZy0zY1BYQ190Q3k3TEs4S1VINVBkbjg1amcwbFh6Yi15VkRPVQ?oc=5) | Blockchain Security EN |
+| 3 | [**From Bybit to GMX: The 10 biggest crypto hacks of 2025 - The Block**](https://news.google.com/rss/articles/CBMibkFVX3lxTE9TWWxIRXpwU3ZmVXgwUkdORk9XWkl0TGJocU4weEhFN21RWGJSbnVPc2NTdVIxNUJpTGd0d2J6eUhkTzZzdV9BUTg4cE94WFFsVmx2eWV2QUdBNmRvU0tUQXRDU2F3YXpySFJOZ1F3?oc=5) | Blockchain Security EN |
+| 4 | [**Crypto Protocol Balancer Hit by $128 Million Hack - PYMNTS.com**](https://news.google.com/rss/articles/CBMinAFBVV95cUxPTTIzQ292a0h4SnFGTEl3QXlkRkczSmt3M3BTX2x1QkRhYXZFM29wYllobWNUajZWejRSVmVTSkVWbTM4NmV4Z2NUYm12NDZMVEpvc3lvSjFseWlYTUo2OHpYQmhNeEVObno5azk1dnp5bTRKNFRDN183SGVPem9nT0Q4WTdvRlBoSnlQZl9oY1F6S29LNzBLQmhpaVo?oc=5) | Blockchain Security EN |
+| 5 | [**Crypto hacks hit $17 billion in 2025, but the real threat was people, not code - CoinDesk**](https://news.google.com/rss/articles/CBMiygFBVV95cUxNRmEzYkt4OWlxeUFTc05CTmxUR21JN29qcmRzbHJ0T19hLUZoVXJKTFFHMmlfS29xWHV6aV9VNlZZQWtFUnpUYlZKQllGNUpQakRwajZ3dDNSaFhUdXppbmZROEtxam9jcVd2MjZydWtwUGIxR0M0Y2FUVUFYZ3BUY1BnZmxwcG5oWFZzZkR1UVF1OS1aOFBhc2Zna0JCaW1iOUhhVnk3ekRpa3J4VXN1b1RQWmJTMzV2MFZ0bVptWmMwZ0RjNEg5SldR?oc=5) | Blockchain Security EN |
+| 6 | [**Balancer Hit by $128.6 Million Exploit in Latest DeFi Security Breach - Yahoo Finance**](https://news.google.com/rss/articles/CBMie0FVX3lxTE9CSHVNRWNrdlFaX1RNMzFSTTZKRTNsT3d1TEtudVdmM3dTaTdWM040YlVWc2lEVWhFNG1IMDhKRk1WOXM1cm9BeGZEZi05TkRXZVJnWExwSXBVVUpaTjh3ZFJPc0ZIZFRjdmtocE1vTFJIRnZHdDdzQnNtWQ?oc=5) | Blockchain Security EN |
+| 7 | [**Truebit Hack Wipes Out TRU in First Major Exploit of 2026 - thedefiant.io**](https://news.google.com/rss/articles/CBMihwFBVV95cUxQdW1OUkxITWxmUzVKaURId2x0RC11Q0ZxNFNTcDBHQktwMnNFbjJVM1ExblNQUGJaMjgzcEpWVnlWTk5qVERtWFcyUkJYcjZTbzJ2Q1lnbDhVMGxudDVCUnJPTDNHNDBPWEVDRnhrZmFEY2xsSHNfenRMb29QSUdFdkQ2aW9uejg?oc=5) | Blockchain Security EN |
+| 8 | [**$120 Million Crypto Hack Blamed on Office Space -Style Exploit - Gizmodo**](https://news.google.com/rss/articles/CBMilgFBVV95cUxQdUh5VGJsZUlDRm91X1dmZEJja2NwV0NEQW9yT2tBcFZCN3R2dWN2TWFTVDY1SW5xUlBFZDZvSHJYWl9aTm1BVHdGYi03eFFwd00zTGsyVmpGeU8yU1oyUUF5Ni1IUEd5dkpNVW9KeTNyMDN4TjZXbFFfTFNKRklNb29VZHBPOG9FTUNtRWZRQjYwV2w3aGc?oc=5) | Blockchain Security EN |
+| 9 | [**Illusory Systems settles with FTC over 2022 cryptocurrency hack - CyberScoop**](https://news.google.com/rss/articles/CBMijgFBVV95cUxQSXROS2cyaWhXSGU5NUlvNU14UHlFaGJXNnpPQkpjb1ZjNFFQUC1fUWVxWnY1Y0Qwazc2VGN3bnhnS1gxMlpNZ0xjT3pXcmxwemZzUF83YnZqenNpN2ZaZFZJRlpaVlJzTTVWbmI0NnFkTC1BUDNWMEJNLVg2bkxmc1kzQTg3MDBXYlBURlZ3?oc=5) | Blockchain Security EN |
+| 10 | [**The Largest Cryptocurrency Hacks So Far - Investopedia**](https://news.google.com/rss/articles/CBMigAFBVV95cUxNZEZmYU5rUGNMSVFIMHNvV3M0STg1X3pPTTVUYTZGQ3hxazZuZ2E0blRBRWE4b2lVUm8tS3ZqLXpjZ1ROM3dScnRDQVdrbWd4VVpZSUl1MXhING9IUHN5UVZLLWwxYnEzWHFxRHdJT3UxUVgzVGJrRFV6U196WnZVSw?oc=5) | Blockchain Security EN |
+| 11 | [**Hackers Exploit Apache HTTP Server Flaw to Deploy Linuxsys Cryptocurrency Miner - The Hacker News**](https://news.google.com/rss/articles/CBMihAFBVV95cUxNLWQ1a0V3RGoxUm41dHpjZFVMdGVLRWc5OU1KRVc1eXpMTW1qTXFJT2tiNXNDMDdhTnpvTzdrTzRCSnV1MXhfX2prS0Q0a0FJMmRHR3VZdERaYVp0SjhNTFVqOVdXekhGZDdZR3REbXhWNkhjVkg3RHUwYl9EWG55ekU2aFc?oc=5) | Blockchain Security EN |
+| 12 | [**Crypto’s ‘decentralised finance’ sector at risk of attack, warns Chainalysis - Financial Times**](https://news.google.com/rss/articles/CBMicEFVX3lxTE12VllERk5pWmJIbkg4d2dKWW1vZVZZQ3ZuVnNPbWRIamptcmFPNWJaS0ZYMzc3LXZMTWItZEdTemN2NndENXZxRUxsNnR4c2pzNUJQZTA1bGxfSk5wMnlaTldkcnhQU25jYUdLMF9rTXM?oc=5) | Blockchain Security EN |
+| 13 | [**Crypto Hacks 2025: Full List of Scams, Exchange Exploits & DeFi Vulnerabilities [Updated October] - CCN.com**](https://news.google.com/rss/articles/CBMilgFBVV95cUxObkV0YjVISHczRXctVmhZZ3R5cERQWmdSV1haR2NMYXRGTFEwUGNSN2dzUGpKM0I4ck5HT3BvZkNHSFM1R0Ftck8tTUFOSHI5YkVvMUQ5dGpwVmVLbXFJR2tvSEItVUFpbjNNc0VkeFFKVjdaeFdHVlBvZDNud29lREloWGpDdUtoaU5YQ1RFRkRjbTFPRHc?oc=5) | Blockchain Security EN |
+| 14 | [**Crypto hacks soar in 2025 as security gaps widen - Digital Watch Observatory**](https://news.google.com/rss/articles/CBMif0FVX3lxTE9RbHZuNklzQ1RtUVhUZGNfeDRfUFJzYzJHTFNZeHdGMFJZX0xwNzZnWUg1QmFtVTBkaHl4ZGEwR1dhbVNJWkdrS19senFDYVZlUWRFT0NOaDJydVloZXF1YkJMc0FSZFRVT0NjbktKU1hhSzNRanhZZGpOeTBXYUU?oc=5) | Blockchain Security EN |
+| 15 | [**Ledger CTO warns of shocking NPM attacks by crypto hackers - thestreet.com**](https://news.google.com/rss/articles/CBMioAFBVV95cUxNVnNwZkRWc3dOMjNWdHRtOXg1V3RMcjc1MW5kdGZfdHExLU5wQ0VkUUNERlZMRXI0Z0swRWVaUEtuejNhSkpCUmpIcVRHWThlSmFlWjJQX2JHN2xuTDFiM2MtQk5ZQk92TTVzeG56WlNwMXQwQ3l3VWJTbXVnbjBmUHV0RWt3LXhFbWN1MnNjZ0tfTy1fU1lHdmF3bjFGR3N0?oc=5) | Blockchain Security EN |
+
+## 보안 인사이트
+
+블록체인 보안 관련 뉴스 45건이 수집되어 업계 보안 이슈에 대한 관심이 높은 상태입니다.
+
+> *본 보안 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*
+
+## 참고 링크
+
+1. [A16z Crypto wants DeFi to ditch ‘code is law’ for ‘spec is law’ to combat $649m ](https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSUwwMmJMdEY2cGdfa1FyaHBXOEk4OHVNODZWZldLLVFvdkgzRVd3MU5XTmt3c19wUXF5YzRaSmJkUVY3R3RtZ3hXU2ltVXo0R1oyN2s5VFl3UmZzbVFESEpkeF9UbXcxYUlfcFd0ZEludGhnTjlSVkY5OEZxVUx4QTlhLXIwOXhSbkFUQ3VqZFNvY2lmenkwSW1SSDFIVnhLUkphQ0k4c0NUeHc?oc=5) - Blockchain Security EN
+2. [More than $100 million stolen in exploit of Balancer DeFi protocol - The Record ](https://news.google.com/rss/articles/CBMiY0FVX3lxTE5kQkZ2d2xkR3FGYkpJWklrcFFVdVlsdlZ4cHRfc0VoSF9VQjRPc3JDa0syVjJBSXJ4b1lVWjFwZy0zY1BYQ190Q3k3TEs4S1VINVBkbjg1amcwbFh6Yi15VkRPVQ?oc=5) - Blockchain Security EN
+3. [From Bybit to GMX: The 10 biggest crypto hacks of 2025 - The Block](https://news.google.com/rss/articles/CBMibkFVX3lxTE9TWWxIRXpwU3ZmVXgwUkdORk9XWkl0TGJocU4weEhFN21RWGJSbnVPc2NTdVIxNUJpTGd0d2J6eUhkTzZzdV9BUTg4cE94WFFsVmx2eWV2QUdBNmRvU0tUQXRDU2F3YXpySFJOZ1F3?oc=5) - Blockchain Security EN
+4. [Crypto Protocol Balancer Hit by $128 Million Hack - PYMNTS.com](https://news.google.com/rss/articles/CBMinAFBVV95cUxPTTIzQ292a0h4SnFGTEl3QXlkRkczSmt3M3BTX2x1QkRhYXZFM29wYllobWNUajZWejRSVmVTSkVWbTM4NmV4Z2NUYm12NDZMVEpvc3lvSjFseWlYTUo2OHpYQmhNeEVObno5azk1dnp5bTRKNFRDN183SGVPem9nT0Q4WTdvRlBoSnlQZl9oY1F6S29LNzBLQmhpaVo?oc=5) - Blockchain Security EN
+5. [Crypto hacks hit $17 billion in 2025, but the real threat was people, not code -](https://news.google.com/rss/articles/CBMiygFBVV95cUxNRmEzYkt4OWlxeUFTc05CTmxUR21JN29qcmRzbHJ0T19hLUZoVXJKTFFHMmlfS29xWHV6aV9VNlZZQWtFUnpUYlZKQllGNUpQakRwajZ3dDNSaFhUdXppbmZROEtxam9jcVd2MjZydWtwUGIxR0M0Y2FUVUFYZ3BUY1BnZmxwcG5oWFZzZkR1UVF1OS1aOFBhc2Zna0JCaW1iOUhhVnk3ekRpa3J4VXN1b1RQWmJTMzV2MFZ0bVptWmMwZ0RjNEg5SldR?oc=5) - Blockchain Security EN
+6. [Balancer Hit by $128.6 Million Exploit in Latest DeFi Security Breach - Yahoo Fi](https://news.google.com/rss/articles/CBMie0FVX3lxTE9CSHVNRWNrdlFaX1RNMzFSTTZKRTNsT3d1TEtudVdmM3dTaTdWM040YlVWc2lEVWhFNG1IMDhKRk1WOXM1cm9BeGZEZi05TkRXZVJnWExwSXBVVUpaTjh3ZFJPc0ZIZFRjdmtocE1vTFJIRnZHdDdzQnNtWQ?oc=5) - Blockchain Security EN
+7. [Truebit Hack Wipes Out TRU in First Major Exploit of 2026 - thedefiant.io](https://news.google.com/rss/articles/CBMihwFBVV95cUxQdW1OUkxITWxmUzVKaURId2x0RC11Q0ZxNFNTcDBHQktwMnNFbjJVM1ExblNQUGJaMjgzcEpWVnlWTk5qVERtWFcyUkJYcjZTbzJ2Q1lnbDhVMGxudDVCUnJPTDNHNDBPWEVDRnhrZmFEY2xsSHNfenRMb29QSUdFdkQ2aW9uejg?oc=5) - Blockchain Security EN
+8. [$120 Million Crypto Hack Blamed on Office Space -Style Exploit - Gizmodo](https://news.google.com/rss/articles/CBMilgFBVV95cUxQdUh5VGJsZUlDRm91X1dmZEJja2NwV0NEQW9yT2tBcFZCN3R2dWN2TWFTVDY1SW5xUlBFZDZvSHJYWl9aTm1BVHdGYi03eFFwd00zTGsyVmpGeU8yU1oyUUF5Ni1IUEd5dkpNVW9KeTNyMDN4TjZXbFFfTFNKRklNb29VZHBPOG9FTUNtRWZRQjYwV2w3aGc?oc=5) - Blockchain Security EN
+9. [Illusory Systems settles with FTC over 2022 cryptocurrency hack - CyberScoop](https://news.google.com/rss/articles/CBMijgFBVV95cUxQSXROS2cyaWhXSGU5NUlvNU14UHlFaGJXNnpPQkpjb1ZjNFFQUC1fUWVxWnY1Y0Qwazc2VGN3bnhnS1gxMlpNZ0xjT3pXcmxwemZzUF83YnZqenNpN2ZaZFZJRlpaVlJzTTVWbmI0NnFkTC1BUDNWMEJNLVg2bkxmc1kzQTg3MDBXYlBURlZ3?oc=5) - Blockchain Security EN
+10. [The Largest Cryptocurrency Hacks So Far - Investopedia](https://news.google.com/rss/articles/CBMigAFBVV95cUxNZEZmYU5rUGNMSVFIMHNvV3M0STg1X3pPTTVUYTZGQ3hxazZuZ2E0blRBRWE4b2lVUm8tS3ZqLXpjZ1ROM3dScnRDQVdrbWd4VVpZSUl1MXhING9IUHN5UVZLLWwxYnEzWHFxRHdJT3UxUVgzVGJrRFV6U196WnZVSw?oc=5) - Blockchain Security EN
+11. [Hackers Exploit Apache HTTP Server Flaw to Deploy Linuxsys Cryptocurrency Miner ](https://news.google.com/rss/articles/CBMihAFBVV95cUxNLWQ1a0V3RGoxUm41dHpjZFVMdGVLRWc5OU1KRVc1eXpMTW1qTXFJT2tiNXNDMDdhTnpvTzdrTzRCSnV1MXhfX2prS0Q0a0FJMmRHR3VZdERaYVp0SjhNTFVqOVdXekhGZDdZR3REbXhWNkhjVkg3RHUwYl9EWG55ekU2aFc?oc=5) - Blockchain Security EN
+12. [Crypto’s ‘decentralised finance’ sector at risk of attack, warns Chainalysis - F](https://news.google.com/rss/articles/CBMicEFVX3lxTE12VllERk5pWmJIbkg4d2dKWW1vZVZZQ3ZuVnNPbWRIamptcmFPNWJaS0ZYMzc3LXZMTWItZEdTemN2NndENXZxRUxsNnR4c2pzNUJQZTA1bGxfSk5wMnlaTldkcnhQU25jYUdLMF9rTXM?oc=5) - Blockchain Security EN
+13. [Crypto Hacks 2025: Full List of Scams, Exchange Exploits & DeFi Vulnerabilities ](https://news.google.com/rss/articles/CBMilgFBVV95cUxObkV0YjVISHczRXctVmhZZ3R5cERQWmdSV1haR2NMYXRGTFEwUGNSN2dzUGpKM0I4ck5HT3BvZkNHSFM1R0Ftck8tTUFOSHI5YkVvMUQ5dGpwVmVLbXFJR2tvSEItVUFpbjNNc0VkeFFKVjdaeFdHVlBvZDNud29lREloWGpDdUtoaU5YQ1RFRkRjbTFPRHc?oc=5) - Blockchain Security EN
+14. [Crypto hacks soar in 2025 as security gaps widen - Digital Watch Observatory](https://news.google.com/rss/articles/CBMif0FVX3lxTE9RbHZuNklzQ1RtUVhUZGNfeDRfUFJzYzJHTFNZeHdGMFJZX0xwNzZnWUg1QmFtVTBkaHl4ZGEwR1dhbVNJWkdrS19senFDYVZlUWRFT0NOaDJydVloZXF1YkJMc0FSZFRVT0NjbktKU1hhSzNRanhZZGpOeTBXYUU?oc=5) - Blockchain Security EN
+15. [Ledger CTO warns of shocking NPM attacks by crypto hackers - thestreet.com](https://news.google.com/rss/articles/CBMioAFBVV95cUxNVnNwZkRWc3dOMjNWdHRtOXg1V3RMcjc1MW5kdGZfdHExLU5wQ0VkUUNERlZMRXI0Z0swRWVaUEtuejNhSkpCUmpIcVRHWThlSmFlWjJQX2JHN2xuTDFiM2MtQk5ZQk92TTVzeG56WlNwMXQwQ3l3VWJTbXVnbjBmUHV0RWt3LXhFbWN1MnNjZ0tfTy1fU1lHdmF3bjFGR3N0?oc=5) - Blockchain Security EN
