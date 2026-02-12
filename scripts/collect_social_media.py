@@ -246,7 +246,6 @@ def fetch_google_news_social() -> List[Dict[str, Any]]:
     all_items = []
     for url, name, tags in feeds:
         all_items.extend(fetch_rss_feed(url, name, tags))
-        time.sleep(1)
     return all_items
 
 
@@ -279,7 +278,6 @@ def fetch_political_economy_news() -> List[Dict[str, Any]]:
     all_items = []
     for url, name, tags in feeds:
         all_items.extend(fetch_rss_feed(url, name, tags))
-        time.sleep(1)
     return all_items
 
 
@@ -355,6 +353,11 @@ def main():
     summarizer = ThemeSummarizer(all_theme_items)
 
     total_count = len(telegram_items) + len(social_items) + len(reddit_items) + len(political_items)
+
+    if total_count == 0:
+        logger.warning("No social media items collected, skipping post")
+        dedup.save()
+        return
 
     # Data-driven opening (only mention sources with data)
     source_parts = []

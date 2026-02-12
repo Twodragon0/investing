@@ -50,3 +50,13 @@ def setup_logging(name: str = "collector") -> logging.Logger:
         datefmt="%Y-%m-%d %H:%M:%S",
     )
     return logging.getLogger(name)
+
+
+# ── Shared constants ──
+REQUEST_TIMEOUT = 15
+USER_AGENT = "Mozilla/5.0 (compatible; InvestingDragon/1.0)"
+BROWSER_USER_AGENT = (
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/124.0.0.0 Safari/537.36"
+)

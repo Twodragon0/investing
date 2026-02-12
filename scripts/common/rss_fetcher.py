@@ -14,6 +14,14 @@ VERIFY_SSL = get_ssl_verify()
 REQUEST_TIMEOUT = 15
 USER_AGENT = "Mozilla/5.0 (compatible; InvestingDragon/1.0)"
 
+# Feed health tracking: {url: {"ok": int, "fail": int, "last_error": str}}
+_feed_health: Dict[str, Dict[str, Any]] = {}
+
+
+def get_feed_health() -> Dict[str, Dict[str, Any]]:
+    """Return a copy of the feed health stats."""
+    return dict(_feed_health)
+
 
 def fetch_rss_feed(
     url: str,
@@ -88,7 +96,12 @@ def fetch_rss_feed(
                 "tags": tags,
             })
         logger.info("RSS %s: fetched %d items", source_name, len(items))
+        _feed_health.setdefault(url, {"ok": 0, "fail": 0, "last_error": ""})
+        _feed_health[url]["ok"] += 1
         return items
     except requests.exceptions.RequestException as e:
         logger.warning("RSS %s fetch failed: %s", source_name, e)
+        _feed_health.setdefault(url, {"ok": 0, "fail": 0, "last_error": ""})
+        _feed_health[url]["fail"] += 1
+        _feed_health[url]["last_error"] = str(e)
         return []

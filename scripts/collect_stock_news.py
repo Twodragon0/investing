@@ -32,54 +32,16 @@ except ImportError:
     def is_playwright_available() -> bool:  # type: ignore[misc]
         return False
 
+try:
+    from common.browser import extract_google_news_links
+except ImportError:
+    extract_google_news_links = None
+
 logger = setup_logging("collect_stock_news")
 
 VERIFY_SSL = get_ssl_verify()
 REQUEST_TIMEOUT = 15
 USER_AGENT = "Mozilla/5.0 (compatible; InvestingDragon/1.0)"
-
-
-def _extract_google_news_links(session, limit: int, tags: List[str]) -> List[Dict[str, Any]]:
-    """Extract news items from a Google News page already navigated to.
-
-    Google News uses ``c-wiz`` web components instead of ``<article>`` tags.
-    We select ``main a`` and filter for links containing ``./read/``.
-    """
-    items: List[Dict[str, Any]] = []
-    seen_titles: set = set()
-
-    links = session.extract_elements("main a")
-    for link_el in links:
-        if len(items) >= limit:
-            break
-        try:
-            href = link_el.get_attribute("href") or ""
-            if "./read/" not in href and "./articles/" not in href:
-                continue
-
-            title = sanitize_string(link_el.inner_text().strip(), 300)
-            if not title or len(title) < 10:
-                continue
-
-            if title in seen_titles:
-                continue
-            seen_titles.add(title)
-
-            if href.startswith("./"):
-                href = "https://news.google.com" + href[1:]
-
-            items.append({
-                "title": title,
-                "description": sanitize_string(title, 500),
-                "link": href,
-                "published": "",
-                "source": "Google News",
-                "tags": tags,
-            })
-        except Exception:
-            continue
-
-    return items
 
 
 def fetch_google_news_browser_stocks(limit: int = 20) -> List[Dict[str, Any]]:
@@ -89,6 +51,10 @@ def fetch_google_news_browser_stocks(limit: int = 20) -> List[Dict[str, Any]]:
     """
     if not is_playwright_available():
         logger.info("Playwright not available, skipping Google News browser scraping for stocks")
+        return []
+
+    if extract_google_news_links is None:
+        logger.info("extract_google_news_links not available, skipping")
         return []
 
     search_configs = [
@@ -104,7 +70,7 @@ def fetch_google_news_browser_stocks(limit: int = 20) -> List[Dict[str, Any]]:
             for search_url, tags in search_configs:
                 try:
                     session.navigate(search_url, wait_until="domcontentloaded", wait_ms=3000)
-                    all_items.extend(_extract_google_news_links(session, limit, tags))
+                    all_items.extend(extract_google_news_links(session, limit, tags))
                 except Exception as e:
                     logger.warning("Google News browser scraping failed for %s: %s", tags, e)
 
@@ -124,15 +90,14 @@ def fetch_financial_rss_feeds() -> List[Dict[str, Any]]:
          "MarketWatch", ["stock", "marketwatch"]),
         ("https://www.hankyung.com/feed/all-news",
          "한국경제", ["stock", "korean", "한경"]),
-        ("http://file.mk.co.kr/news/rss/rss_30000001.xml",
+        ("https://file.mk.co.kr/news/rss/rss_30000001.xml",
          "매일경제", ["stock", "korean", "매경"]),
-        ("http://biz.chosun.com/site/data/rss/rss.xml",
+        ("https://biz.chosun.com/site/data/rss/rss.xml",
          "조선비즈", ["stock", "korean", "조선비즈"]),
     ]
     all_items = []
     for url, name, tags in feeds:
         all_items.extend(fetch_rss_feed(url, name, tags))
-        time.sleep(1)
     return all_items
 
 
@@ -159,7 +124,6 @@ def fetch_google_news_stocks() -> List[Dict[str, Any]]:
     all_items = []
     for url, name, tags in feeds:
         all_items.extend(fetch_rss_feed(url, name, tags))
-        time.sleep(1)
     return all_items
 
 
@@ -269,6 +233,11 @@ def main():
 
     # Fetch Korean market data
     kr_market = fetch_korean_market_data()
+
+    if not all_items:
+        logger.warning("No news items collected, skipping stock news post")
+        dedup.save()
+        return
 
     # ── Consolidated stock news post ──
     post_title = f"주식 시장 뉴스 종합 - {today}"

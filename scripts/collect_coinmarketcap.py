@@ -29,6 +29,7 @@ from common.crypto_api import (
     fetch_fear_greed_index,
 )
 from common.formatters import fmt_number as _fmt_num, fmt_percent as _fmt_pct
+from common.utils import request_with_retry
 
 try:
     from common.browser import BrowserSession, is_playwright_available
@@ -58,13 +59,13 @@ def fetch_cmc_top_coins(api_key: str, limit: int = 30) -> List[Dict[str, Any]]:
         url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
         headers = {"X-CMC_PRO_API_KEY": api_key, "Accept": "application/json"}
         params = {"start": "1", "limit": str(limit), "convert": "USD", "sort": "market_cap"}
-        resp = requests.get(url, headers=headers, params=params, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
-        resp.raise_for_status()
+        resp = request_with_retry(url, params=params, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL,
+                                  headers={**headers})
         data = resp.json()
         coins = data.get("data", [])
         logger.info("CMC: fetched %d top coins", len(coins))
         return coins
-    except requests.exceptions.RequestException as e:
+    except Exception as e:
         logger.warning("CMC top coins fetch failed: %s", e)
         return []
 
@@ -78,13 +79,13 @@ def fetch_cmc_trending(api_key: str) -> List[Dict[str, Any]]:
         url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/trending/latest"
         headers = {"X-CMC_PRO_API_KEY": api_key, "Accept": "application/json"}
         params = {"limit": "10", "convert": "USD"}
-        resp = requests.get(url, headers=headers, params=params, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
-        resp.raise_for_status()
+        resp = request_with_retry(url, params=params, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL,
+                                  headers={**headers})
         data = resp.json()
         coins = data.get("data", [])
         logger.info("CMC: fetched %d trending coins", len(coins))
         return coins
-    except requests.exceptions.RequestException as e:
+    except Exception as e:
         logger.warning("CMC trending fetch failed: %s", e)
         return []
 
@@ -98,14 +99,14 @@ def fetch_cmc_gainers_losers(api_key: str) -> Tuple[List[Dict], List[Dict]]:
         url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/trending/gainers-losers"
         headers = {"X-CMC_PRO_API_KEY": api_key, "Accept": "application/json"}
         params = {"limit": "10", "convert": "USD", "time_period": "24h"}
-        resp = requests.get(url, headers=headers, params=params, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
-        resp.raise_for_status()
+        resp = request_with_retry(url, params=params, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL,
+                                  headers={**headers})
         data = resp.json().get("data", {})
         gainers = data.get("gainers", [])
         losers = data.get("losers", [])
         logger.info("CMC: fetched %d gainers, %d losers", len(gainers), len(losers))
         return gainers, losers
-    except requests.exceptions.RequestException as e:
+    except Exception as e:
         logger.warning("CMC gainers/losers fetch failed: %s", e)
         return [], []
 
@@ -400,7 +401,6 @@ def main():
     gen_analysis = PostGenerator("market-analysis")
 
     # ── Fetch data ──
-    time.sleep(1)
     global_data = fetch_coingecko_global()
     time.sleep(2)
 

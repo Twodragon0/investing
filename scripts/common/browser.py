@@ -167,6 +167,57 @@ class BrowserSession:
 # -- module-level convenience --------------------------------------------------
 
 
+def extract_google_news_links(
+    session: "BrowserSession",
+    limit: int,
+    tags: list,
+) -> list:
+    """Extract news items from a Google News page already navigated to.
+
+    Google News uses ``c-wiz`` web components instead of ``<article>`` tags.
+    We select ``main a`` and filter for links containing ``./read/``.
+
+    *session* must already be navigated to a Google News search page.
+    """
+    from .utils import sanitize_string
+
+    items: list = []
+    seen_titles: set = set()
+
+    links = session.extract_elements("main a")
+    for link_el in links:
+        if len(items) >= limit:
+            break
+        try:
+            href = link_el.get_attribute("href") or ""
+            if "./read/" not in href and "./articles/" not in href:
+                continue
+
+            title = sanitize_string(link_el.inner_text().strip(), 300)
+            if not title or len(title) < 10:
+                continue
+
+            if title in seen_titles:
+                continue
+            seen_titles.add(title)
+
+            if href.startswith("./"):
+                href = "https://news.google.com" + href[1:]
+
+            items.append({
+                "title": title,
+                "description": sanitize_string(title, 500),
+                "link": href,
+                "published": "",
+                "source": "Google News",
+                "tags": tags,
+            })
+        except Exception:
+            continue
+
+    return items
+
+
 def scrape_page(
     url: str,
     selectors: Dict[str, str],

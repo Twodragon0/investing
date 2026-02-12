@@ -18,6 +18,7 @@ def sanitize_string(text: str, max_length: int = 1000) -> str:
     if not isinstance(text, str):
         return ""
     sanitized = re.sub(r"[\x00-\x1f\x7f-\x9f]", "", text)
+    sanitized = sanitized.replace("|", "&#124;")
     return sanitized[:max_length].strip()
 
 

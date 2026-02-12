@@ -36,6 +36,11 @@ except ImportError:
     def is_playwright_available() -> bool:  # type: ignore[misc]
         return False
 
+try:
+    from common.browser import extract_google_news_links
+except ImportError:
+    extract_google_news_links = None
+
 logger = setup_logging("collect_crypto_news")
 
 VERIFY_SSL = get_ssl_verify()
@@ -77,55 +82,14 @@ def fetch_cryptopanic(api_key: str, limit: int = 20) -> List[Dict[str, Any]]:
         return []
 
 
-def _extract_google_news_links(session, limit: int, tags: List[str]) -> List[Dict[str, Any]]:
-    """Extract news items from a Google News page already navigated to.
-
-    Google News uses ``c-wiz`` web components instead of ``<article>`` tags.
-    We select ``main a`` and filter for links containing ``./read/``.
-    """
-    items: List[Dict[str, Any]] = []
-    seen_titles: set = set()
-
-    links = session.extract_elements("main a")
-    for link_el in links:
-        if len(items) >= limit:
-            break
-        try:
-            href = link_el.get_attribute("href") or ""
-            if "./read/" not in href and "./articles/" not in href:
-                continue
-
-            title = sanitize_string(link_el.inner_text().strip(), 300)
-            if not title or len(title) < 10:
-                continue
-
-            # Deduplicate within the same scrape
-            if title in seen_titles:
-                continue
-            seen_titles.add(title)
-
-            if href.startswith("./"):
-                href = "https://news.google.com" + href[1:]
-
-            items.append({
-                "title": title,
-                "description": sanitize_string(title, 500),
-                "link": href,
-                "published": "",
-                "source": "Google News",
-                "tags": tags,
-            })
-        except Exception:
-            continue
-
-    return items
-
-
 def fetch_google_news_browser(limit: int = 20) -> List[Dict[str, Any]]:
     """Fetch crypto news via Google News browser scraping (replaces NewsAPI).
 
     Falls back to empty list if Playwright is unavailable.
     """
+    if extract_google_news_links is None:
+        logger.info("extract_google_news_links not available, skipping")
+        return []
     if not is_playwright_available():
         logger.info("Playwright not available, skipping Google News browser scraping")
         return []
@@ -136,7 +100,7 @@ def fetch_google_news_browser(limit: int = 20) -> List[Dict[str, Any]]:
     try:
         with BrowserSession(timeout=30_000) as session:
             session.navigate(search_url, wait_until="domcontentloaded", wait_ms=3000)
-            items = _extract_google_news_links(session, limit, ["crypto", "news"])
+            items = extract_google_news_links(session, limit, ["crypto", "news"])
 
         logger.info("Google News Browser: fetched %d items", len(items))
     except Exception as e:
@@ -156,7 +120,6 @@ def fetch_crypto_rss_feeds() -> List[Dict[str, Any]]:
     all_items = []
     for url, name, tags in feeds:
         all_items.extend(fetch_rss_feed(url, name, tags))
-        time.sleep(1)
     # The Block — may block requests, wrap with extra try/except
     try:
         all_items.extend(fetch_rss_feed(
@@ -176,7 +139,6 @@ def fetch_google_news_crypto() -> List[Dict[str, Any]]:
     all_items = []
     for url, name, tags in feeds:
         all_items.extend(fetch_rss_feed(url, name, tags))
-        time.sleep(1)
     return all_items
 
 
@@ -196,7 +158,6 @@ def fetch_google_news_security() -> List[Dict[str, Any]]:
         for item in items:
             item["category_override"] = "security-alerts"
         all_items.extend(items)
-        time.sleep(1)
     return all_items
 
 
@@ -296,14 +257,9 @@ def fetch_exchange_announcements() -> List[Dict[str, Any]]:
 
 
 def fetch_rekt_news(limit: int = 10) -> List[Dict[str, Any]]:
-    """Fetch security incidents from Rekt News via RSS feed.
-
-    The old /api/incidents endpoint returns 404 as of 2026-02.
-    Falls back to RSS feed at rekt.news.
-    """
+    """Fetch security incidents from Rekt News via RSS feed."""
     items: List[Dict[str, Any]] = []
 
-    # Try RSS feed (primary)
     try:
         rss_items = fetch_rss_feed(
             "https://rekt.news/rss/feed.xml", "Rekt News",
@@ -313,52 +269,71 @@ def fetch_rekt_news(limit: int = 10) -> List[Dict[str, Any]]:
             item["title"] = f"[Security] {item['title']}"
             item["category_override"] = "security-alerts"
             items.append(item)
-        if items:
-            logger.info("Rekt News RSS: fetched %d incidents", len(items))
-            return items
+        logger.info("Rekt News RSS: fetched %d incidents", len(items))
     except Exception as e:
         logger.warning("Rekt News RSS failed: %s", e)
 
-    # Fallback: API (may return 404)
-    try:
-        url = "https://rekt.news/api/incidents"
-        resp = requests.get(
-            url, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL,
-            headers={"User-Agent": USER_AGENT},
-        )
-        resp.raise_for_status()
-        data = resp.json()
-        if not isinstance(data, list):
-            return []
-
-        data_sorted = sorted(data, key=lambda x: x.get("date", ""), reverse=True)
-        for incident in data_sorted[:limit]:
-            title = sanitize_string(incident.get("title", incident.get("project_name", "")), 300)
-            if not title:
-                continue
-
-            funds_lost = incident.get("funds_lost", "")
-            description = f"Project: {title}"
-            if funds_lost:
-                description += f" | Funds Lost: ${funds_lost}"
-            technique = incident.get("technique", "")
-            if technique:
-                description += f" | Technique: {technique}"
-
-            items.append({
-                "title": f"[Security] {title}",
-                "description": sanitize_string(description, 500),
-                "link": incident.get("url", ""),
-                "published": incident.get("date", ""),
-                "source": "Rekt News",
-                "tags": ["security", "hack", "rekt"],
-                "category_override": "security-alerts",
-            })
-        logger.info("Rekt News API: fetched %d incidents", len(items))
-    except requests.exceptions.RequestException as e:
-        logger.warning("Rekt News API failed: %s", e)
-
     return items
+
+
+def _fetch_browser_sources() -> tuple:
+    """Fetch Google News and Binance in a single browser session."""
+    google_items: List[Dict[str, Any]] = []
+    binance_items: List[Dict[str, Any]] = []
+
+    if not is_playwright_available():
+        return google_items, binance_items
+    if extract_google_news_links is None:
+        return google_items, binance_items
+
+    try:
+        with BrowserSession(timeout=30_000) as session:
+            # Google News
+            try:
+                session.navigate(
+                    "https://news.google.com/search?q=cryptocurrency+bitcoin&hl=en-US&gl=US&ceid=US:en",
+                    wait_until="domcontentloaded", wait_ms=3000,
+                )
+                google_items = extract_google_news_links(session, 20, ["crypto", "news"])
+                logger.info("Google News Browser: fetched %d items", len(google_items))
+            except Exception as e:
+                logger.warning("Google News browser scraping failed: %s", e)
+
+            # Binance announcements
+            try:
+                session.navigate(
+                    "https://www.binance.com/en/support/announcement",
+                    wait_until="domcontentloaded", wait_ms=5000,
+                )
+                seen_titles: set = set()
+                links = session.extract_elements("a[href*='/support/announcement/']")
+                for link_el in links:
+                    if len(binance_items) >= 15:
+                        break
+                    try:
+                        title = sanitize_string(link_el.inner_text().strip(), 300)
+                        href = link_el.get_attribute("href") or ""
+                        if not title or len(title) < 5 or title in seen_titles:
+                            continue
+                        seen_titles.add(title)
+                        if href and not href.startswith("http"):
+                            href = "https://www.binance.com" + href
+                        if "/detail/" not in href and "/list/" not in href:
+                            continue
+                        binance_items.append({
+                            "title": title, "description": title, "link": href,
+                            "published": "", "source": "Binance",
+                            "tags": ["crypto", "exchange", "binance"],
+                        })
+                    except Exception:
+                        continue
+                logger.info("Binance Browser: fetched %d announcements", len(binance_items))
+            except Exception as e:
+                logger.warning("Binance browser scraping failed: %s", e)
+    except Exception as e:
+        logger.warning("Browser session failed: %s", e)
+
+    return google_items, binance_items
 
 
 def main():
@@ -378,12 +353,16 @@ def main():
 
     # Collect from all sources
     all_items.extend(fetch_cryptopanic(cryptopanic_key))
-    all_items.extend(fetch_google_news_browser())
+
+    # Use combined browser session for Google News and Binance
+    browser_google, browser_binance = _fetch_browser_sources()
+    all_items.extend(browser_google)
+
     all_items.extend(fetch_google_news_crypto())
     all_items.extend(fetch_crypto_rss_feeds())
 
-    # Exchange announcements collected separately for their own section
-    exchange_items = fetch_exchange_announcements()
+    # Exchange: browser items first, BAPI fallback
+    exchange_items = browser_binance if browser_binance else _fetch_binance_bapi()
     all_items.extend(exchange_items)
 
     # Security news from multiple sources -> security-alerts category
@@ -395,7 +374,9 @@ def main():
     # ── Post A: consolidated crypto news briefing ──
     post_a_title = f"암호화폐 뉴스 브리핑 - {today}"
 
-    if not dedup.is_duplicate_exact(post_a_title, "consolidated", today):
+    if not all_items:
+        logger.warning("No news items collected, skipping crypto news post")
+    if all_items and not dedup.is_duplicate_exact(post_a_title, "consolidated", today):
         # Separate news items from exchange announcements
         news_rows = []
         exchange_rows = []

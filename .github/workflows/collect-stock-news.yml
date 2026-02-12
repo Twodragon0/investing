@@ -17,7 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
-      NEWSAPI_API_KEY: ${{ secrets.NEWSAPI_API_KEY }}
       ALPHA_VANTAGE_API_KEY: ${{ secrets.ALPHA_VANTAGE_API_KEY }}
     steps:
       - name: Checkout

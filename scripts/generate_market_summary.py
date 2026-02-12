@@ -24,6 +24,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common.config import get_env, setup_logging, get_ssl_verify
 from common.utils import request_with_retry
 from common.post_generator import PostGenerator
+from common.dedup import DedupEngine
 from common.crypto_api import (
     fetch_coingecko_top_coins,
     fetch_coingecko_trending,
@@ -583,6 +584,8 @@ def main():
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     now = datetime.now(timezone.utc)
 
+    dedup = DedupEngine("market_summary_seen.json")
+
     # Fetch all data with rate limiting
     top_coins = fetch_coingecko_top_coins(30)
     time.sleep(2)
@@ -685,10 +688,17 @@ def main():
 
     # Generate post
     gen = PostGenerator("market-analysis")
+    title = f"일일 시장 종합 리포트 - {today}"
+
+    if dedup.is_duplicate_exact(title, "auto-generated", today):
+        logger.info("Market summary already exists for today, skipping")
+        dedup.save()
+        return
+
     content = "\n\n".join(f"## {k}\n\n{v}" for k, v in sections.items())
 
     filepath = gen.create_post(
-        title=f"일일 시장 종합 리포트 - {today}",
+        title=title,
         content=content,
         date=now,
         tags=["market-summary", "daily", "crypto", "stock", "macro", "top-coins"],
@@ -698,9 +708,12 @@ def main():
     )
 
     if filepath:
+        dedup.mark_seen(title, "auto-generated", today)
         logger.info("Created enhanced market summary: %s", filepath)
     else:
         logger.warning("Failed to create market summary")
+
+    dedup.save()
 
     logger.info("=== Enhanced market summary generation complete ===")
 

@@ -13,7 +13,14 @@ from .crypto_api import (
     fetch_fear_greed_index,
 )
 from .formatters import fmt_number, fmt_percent
-from .browser import BrowserSession, scrape_page, is_playwright_available
+try:
+    from .browser import BrowserSession, scrape_page, is_playwright_available, extract_google_news_links
+except ImportError:
+    BrowserSession = None
+    scrape_page = None
+    extract_google_news_links = None
+    def is_playwright_available():
+        return False
 
 __all__ = [
     "get_env",
@@ -36,4 +43,5 @@ __all__ = [
     "BrowserSession",
     "scrape_page",
     "is_playwright_available",
+    "extract_google_news_links",
 ]
