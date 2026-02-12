@@ -77,6 +77,50 @@ def fetch_cryptopanic(api_key: str, limit: int = 20) -> List[Dict[str, Any]]:
         return []
 
 
+def _extract_google_news_links(session, limit: int, tags: List[str]) -> List[Dict[str, Any]]:
+    """Extract news items from a Google News page already navigated to.
+
+    Google News uses ``c-wiz`` web components instead of ``<article>`` tags.
+    We select ``main a`` and filter for links containing ``./read/``.
+    """
+    items: List[Dict[str, Any]] = []
+    seen_titles: set = set()
+
+    links = session.extract_elements("main a")
+    for link_el in links:
+        if len(items) >= limit:
+            break
+        try:
+            href = link_el.get_attribute("href") or ""
+            if "./read/" not in href and "./articles/" not in href:
+                continue
+
+            title = sanitize_string(link_el.inner_text().strip(), 300)
+            if not title or len(title) < 10:
+                continue
+
+            # Deduplicate within the same scrape
+            if title in seen_titles:
+                continue
+            seen_titles.add(title)
+
+            if href.startswith("./"):
+                href = "https://news.google.com" + href[1:]
+
+            items.append({
+                "title": title,
+                "description": sanitize_string(title, 500),
+                "link": href,
+                "published": "",
+                "source": "Google News",
+                "tags": tags,
+            })
+        except Exception:
+            continue
+
+    return items
+
+
 def fetch_google_news_browser(limit: int = 20) -> List[Dict[str, Any]]:
     """Fetch crypto news via Google News browser scraping (replaces NewsAPI).
 
@@ -91,40 +135,8 @@ def fetch_google_news_browser(limit: int = 20) -> List[Dict[str, Any]]:
 
     try:
         with BrowserSession(timeout=30_000) as session:
-            session.navigate(search_url, wait_until="networkidle")
-            articles = session.extract_elements("article")
-
-            for article in articles[:limit]:
-                try:
-                    link_el = article.query_selector("a")
-                    if not link_el:
-                        continue
-                    title = sanitize_string(link_el.inner_text().strip(), 300)
-                    href = link_el.get_attribute("href") or ""
-                    if href.startswith("./"):
-                        href = "https://news.google.com" + href[1:]
-
-                    if not title or len(title) < 5:
-                        continue
-
-                    # Try to get source name
-                    source_el = article.query_selector("div[data-n-tid]")
-                    source_name = source_el.inner_text().strip() if source_el else "Google News"
-
-                    # Try to get date
-                    time_el = article.query_selector("time")
-                    date_str = time_el.get_attribute("datetime") if time_el else ""
-
-                    items.append({
-                        "title": title,
-                        "description": sanitize_string(title, 500),
-                        "link": href,
-                        "published": date_str or "",
-                        "source": source_name,
-                        "tags": ["crypto", "news"],
-                    })
-                except Exception:
-                    continue
+            session.navigate(search_url, wait_until="domcontentloaded", wait_ms=3000)
+            items = _extract_google_news_links(session, limit, ["crypto", "news"])
 
         logger.info("Google News Browser: fetched %d items", len(items))
     except Exception as e:
@@ -194,21 +206,32 @@ def _fetch_binance_browser() -> List[Dict[str, Any]]:
         return []
 
     items: List[Dict[str, Any]] = []
+    seen_titles: set = set()
     try:
         with BrowserSession(timeout=30_000) as session:
             session.navigate(
                 "https://www.binance.com/en/support/announcement",
-                wait_until="networkidle",
+                wait_until="domcontentloaded",
+                wait_ms=5000,
             )
-            links = session.extract_elements("a.css-1ej4hfo, a[href*='/support/announcement/']")
-            for link_el in links[:10]:
+            links = session.extract_elements("a[href*='/support/announcement/']")
+            for link_el in links:
+                if len(items) >= 15:
+                    break
                 try:
                     title = sanitize_string(link_el.inner_text().strip(), 300)
                     href = link_el.get_attribute("href") or ""
                     if not title or len(title) < 5:
                         continue
+                    # Skip navigation/category links (short generic text)
+                    if title in seen_titles:
+                        continue
+                    seen_titles.add(title)
                     if href and not href.startswith("http"):
                         href = "https://www.binance.com" + href
+                    # Only include detail pages, not list pages
+                    if "/detail/" not in href and "/list/" not in href:
+                        continue
                     items.append({
                         "title": title,
                         "description": title,
@@ -273,11 +296,34 @@ def fetch_exchange_announcements() -> List[Dict[str, Any]]:
 
 
 def fetch_rekt_news(limit: int = 10) -> List[Dict[str, Any]]:
-    """Fetch security incidents from Rekt News."""
+    """Fetch security incidents from Rekt News via RSS feed.
+
+    The old /api/incidents endpoint returns 404 as of 2026-02.
+    Falls back to RSS feed at rekt.news.
+    """
+    items: List[Dict[str, Any]] = []
+
+    # Try RSS feed (primary)
+    try:
+        rss_items = fetch_rss_feed(
+            "https://rekt.news/rss/feed.xml", "Rekt News",
+            ["security", "hack", "rekt"],
+        )
+        for item in rss_items[:limit]:
+            item["title"] = f"[Security] {item['title']}"
+            item["category_override"] = "security-alerts"
+            items.append(item)
+        if items:
+            logger.info("Rekt News RSS: fetched %d incidents", len(items))
+            return items
+    except Exception as e:
+        logger.warning("Rekt News RSS failed: %s", e)
+
+    # Fallback: API (may return 404)
     try:
         url = "https://rekt.news/api/incidents"
-        resp = request_with_retry(
-            url, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL,
+        resp = requests.get(
+            url, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL,
             headers={"User-Agent": USER_AGENT},
         )
         resp.raise_for_status()
@@ -286,7 +332,6 @@ def fetch_rekt_news(limit: int = 10) -> List[Dict[str, Any]]:
             return []
 
         data_sorted = sorted(data, key=lambda x: x.get("date", ""), reverse=True)
-        items = []
         for incident in data_sorted[:limit]:
             title = sanitize_string(incident.get("title", incident.get("project_name", "")), 300)
             if not title:
@@ -309,11 +354,11 @@ def fetch_rekt_news(limit: int = 10) -> List[Dict[str, Any]]:
                 "tags": ["security", "hack", "rekt"],
                 "category_override": "security-alerts",
             })
-        logger.info("Rekt News: fetched %d incidents", len(items))
-        return items
+        logger.info("Rekt News API: fetched %d incidents", len(items))
     except requests.exceptions.RequestException as e:
-        logger.warning("Rekt News fetch failed: %s", e)
-        return []
+        logger.warning("Rekt News API failed: %s", e)
+
+    return items
 
 
 def main():

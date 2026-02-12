@@ -98,7 +98,16 @@ def _fetch_telegram_browser(channels: List[str], limit: int = 10) -> Dict[str, L
         with BrowserSession(timeout=30_000) as session:
             for channel in channels:
                 try:
-                    session.navigate(f"https://t.me/s/{channel}", wait_until="networkidle")
+                    session.navigate(
+                        f"https://t.me/s/{channel}",
+                        wait_until="domcontentloaded",
+                        wait_ms=2000,
+                    )
+                    # Wait for message elements to render
+                    try:
+                        session.wait_for(".tgme_widget_message_wrap", timeout=5000)
+                    except Exception:
+                        pass  # Some channels may be empty or have no messages
                     messages = session.extract_elements(".tgme_widget_message_wrap")
                     items = _parse_telegram_items(channel, messages, limit)
                     results[channel] = items

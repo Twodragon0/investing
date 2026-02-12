@@ -39,6 +39,49 @@ REQUEST_TIMEOUT = 15
 USER_AGENT = "Mozilla/5.0 (compatible; InvestingDragon/1.0)"
 
 
+def _extract_google_news_links(session, limit: int, tags: List[str]) -> List[Dict[str, Any]]:
+    """Extract news items from a Google News page already navigated to.
+
+    Google News uses ``c-wiz`` web components instead of ``<article>`` tags.
+    We select ``main a`` and filter for links containing ``./read/``.
+    """
+    items: List[Dict[str, Any]] = []
+    seen_titles: set = set()
+
+    links = session.extract_elements("main a")
+    for link_el in links:
+        if len(items) >= limit:
+            break
+        try:
+            href = link_el.get_attribute("href") or ""
+            if "./read/" not in href and "./articles/" not in href:
+                continue
+
+            title = sanitize_string(link_el.inner_text().strip(), 300)
+            if not title or len(title) < 10:
+                continue
+
+            if title in seen_titles:
+                continue
+            seen_titles.add(title)
+
+            if href.startswith("./"):
+                href = "https://news.google.com" + href[1:]
+
+            items.append({
+                "title": title,
+                "description": sanitize_string(title, 500),
+                "link": href,
+                "published": "",
+                "source": "Google News",
+                "tags": tags,
+            })
+        except Exception:
+            continue
+
+    return items
+
+
 def fetch_google_news_browser_stocks(limit: int = 20) -> List[Dict[str, Any]]:
     """Fetch stock news via Google News browser scraping (replaces NewsAPI).
 
@@ -49,49 +92,21 @@ def fetch_google_news_browser_stocks(limit: int = 20) -> List[Dict[str, Any]]:
         return []
 
     search_configs = [
-        ("https://news.google.com/search?q=stock+market+S%26P+500&hl=en-US&gl=US&ceid=US:en", "en"),
-        ("https://news.google.com/search?q=%EC%A3%BC%EC%8B%9D+%EC%BD%94%EC%8A%A4%ED%94%BC+%EC%BD%94%EC%8A%A4%EB%8B%A5&hl=ko&gl=KR&ceid=KR:ko", "ko"),
+        ("https://news.google.com/search?q=stock+market+S%26P+500&hl=en-US&gl=US&ceid=US:en",
+         ["stock", "market", "en"]),
+        ("https://news.google.com/search?q=%EC%A3%BC%EC%8B%9D+%EC%BD%94%EC%8A%A4%ED%94%BC+%EC%BD%94%EC%8A%A4%EB%8B%A5&hl=ko&gl=KR&ceid=KR:ko",
+         ["stock", "market", "ko"]),
     ]
     all_items: List[Dict[str, Any]] = []
 
     try:
         with BrowserSession(timeout=30_000) as session:
-            for search_url, lang in search_configs:
+            for search_url, tags in search_configs:
                 try:
-                    session.navigate(search_url, wait_until="networkidle")
-                    articles = session.extract_elements("article")
-
-                    for article in articles[:limit]:
-                        try:
-                            link_el = article.query_selector("a")
-                            if not link_el:
-                                continue
-                            title = sanitize_string(link_el.inner_text().strip(), 300)
-                            href = link_el.get_attribute("href") or ""
-                            if href.startswith("./"):
-                                href = "https://news.google.com" + href[1:]
-
-                            if not title or len(title) < 5:
-                                continue
-
-                            source_el = article.query_selector("div[data-n-tid]")
-                            source_name = source_el.inner_text().strip() if source_el else "Google News"
-
-                            time_el = article.query_selector("time")
-                            date_str = time_el.get_attribute("datetime") if time_el else ""
-
-                            all_items.append({
-                                "title": title,
-                                "description": sanitize_string(title, 500),
-                                "link": href,
-                                "published": date_str or "",
-                                "source": source_name,
-                                "tags": ["stock", "market", lang],
-                            })
-                        except Exception:
-                            continue
+                    session.navigate(search_url, wait_until="domcontentloaded", wait_ms=3000)
+                    all_items.extend(_extract_google_news_links(session, limit, tags))
                 except Exception as e:
-                    logger.warning("Google News browser scraping failed for lang=%s: %s", lang, e)
+                    logger.warning("Google News browser scraping failed for %s: %s", tags, e)
 
         logger.info("Google News Browser stocks: fetched %d items", len(all_items))
     except Exception as e:

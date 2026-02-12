@@ -315,26 +315,30 @@ def fetch_cmc_browser_fallback(limit: int = 20) -> List[Dict[str, Any]]:
     items: List[Dict[str, Any]] = []
     try:
         with BrowserSession(timeout=30_000) as session:
-            session.navigate("https://coinmarketcap.com/", wait_until="networkidle")
+            session.navigate("https://coinmarketcap.com/", wait_until="domcontentloaded", wait_ms=5000)
             rows = session.extract_elements("table tbody tr")
 
             for row in rows[:limit]:
                 try:
                     cells = row.query_selector_all("td")
-                    if len(cells) < 7:
+                    if len(cells) < 8:
                         continue
 
-                    # Cell 2: name+symbol, Cell 3: price, Cell 4: 24h%, Cell 5: 7d%, Cell 6: market cap
+                    # CMC table: 0=star, 1=#, 2=name+symbol, 3=price, 4=1h%, 5=24h%, 6=7d%, 7+=mcap...
                     name_cell = cells[2].inner_text().strip()
-                    # name_cell may be "Bitcoin BTC" or "Bitcoin\nBTC"
+                    # Skip index products (e.g. "CoinMarketCap 20 Index DTF")
+                    if "Index" in name_cell or "DTF" in name_cell:
+                        continue
+                    # name_cell may be "Bitcoin\nBTC" or "Bitcoin BTC"
                     parts = name_cell.replace("\n", " ").split()
                     symbol = parts[-1] if parts else ""
                     name = " ".join(parts[:-1]) if len(parts) > 1 else parts[0] if parts else ""
 
                     price_text = cells[3].inner_text().strip().replace("$", "").replace(",", "")
-                    change_24h_text = cells[4].inner_text().strip().replace("%", "").replace(",", "")
-                    change_7d_text = cells[5].inner_text().strip().replace("%", "").replace(",", "")
-                    mcap_text = cells[6].inner_text().strip().replace("$", "").replace(",", "")
+                    change_24h_text = cells[5].inner_text().strip().replace("%", "").replace(",", "")
+                    change_7d_text = cells[6].inner_text().strip().replace("%", "").replace(",", "")
+                    # Market cap is typically at cell 7 or later
+                    mcap_text = cells[7].inner_text().strip().replace("$", "").replace(",", "") if len(cells) > 7 else "0"
 
                     def _parse_num(s: str) -> float:
                         s = s.strip()

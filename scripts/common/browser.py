@@ -44,11 +44,22 @@ class BrowserSession:
         from playwright.sync_api import sync_playwright
 
         self._pw = sync_playwright().start()
-        self._browser = self._pw.chromium.launch(headless=self._headless)
+        self._browser = self._pw.chromium.launch(
+            headless=self._headless,
+            args=[
+                "--disable-blink-features=AutomationControlled",
+                "--no-sandbox",
+            ],
+        )
         self._context = self._browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
                        "AppleWebKit/537.36 (KHTML, like Gecko) "
                        "Chrome/124.0.0.0 Safari/537.36",
+            viewport={"width": 1920, "height": 1080},
+        )
+        # Hide webdriver flag from detection scripts
+        self._context.add_init_script(
+            "Object.defineProperty(navigator, 'webdriver', {get: () => false});"
         )
         self._context.set_default_timeout(self._timeout)
         self._page = self._context.new_page()
@@ -72,10 +83,24 @@ class BrowserSession:
 
     # -- navigation --------------------------------------------------------
 
-    def navigate(self, url: str, wait_until: str = "domcontentloaded") -> Any:
-        """Navigate to *url* and return the Page object."""
+    def navigate(self, url: str, wait_until: str = "domcontentloaded",
+                 wait_ms: int = 0) -> Any:
+        """Navigate to *url* and return the Page object.
+
+        *wait_ms* — additional milliseconds to wait after the page event
+        (useful for JS-rendered content).
+        """
         self._page.goto(url, wait_until=wait_until)
+        if wait_ms > 0:
+            self._page.wait_for_timeout(wait_ms)
         return self._page
+
+    def wait_for(self, selector: str, timeout: int = 0) -> Any:
+        """Wait for *selector* to appear in the DOM and return the element."""
+        kwargs: Dict[str, Any] = {"state": "attached"}
+        if timeout > 0:
+            kwargs["timeout"] = timeout
+        return self._page.wait_for_selector(selector, **kwargs)
 
     # -- extraction helpers ------------------------------------------------
 
