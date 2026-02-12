@@ -60,6 +60,14 @@ layout: default
     {% endif %}
   </header>
 
+  <nav class="post-toc" id="post-toc">
+    <div class="toc-header" onclick="toggleToc()">
+      <span class="toc-title">목차</span>
+      <svg class="toc-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <ol class="toc-list" id="toc-list"></ol>
+  </nav>
+
   <div class="post-content">
     {{ content }}
   </div>
@@ -136,6 +144,47 @@ function shareTwitter() {
   var text = "{{ page.title | escape }}";
   var url = window.location.href;
   window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url), '_blank', 'width=550,height=450');
+}
+
+// TOC generation
+(function() {
+  var headings = document.querySelectorAll('.post-content h2');
+  var toc = document.getElementById('post-toc');
+  var tocList = document.getElementById('toc-list');
+  if (!toc || !tocList || headings.length < 3) {
+    if (toc) toc.style.display = 'none';
+    return;
+  }
+  headings.forEach(function(h, i) {
+    var id = 'section-' + i;
+    h.setAttribute('id', id);
+    var li = document.createElement('li');
+    var a = document.createElement('a');
+    a.href = '#' + id;
+    a.textContent = h.textContent;
+    a.setAttribute('data-index', i);
+    li.appendChild(a);
+    tocList.appendChild(li);
+  });
+  // IntersectionObserver for current section highlight
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var id = entry.target.getAttribute('id');
+          tocList.querySelectorAll('a').forEach(function(a) { a.classList.remove('active'); });
+          var active = tocList.querySelector('a[href="#' + id + '"]');
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+    headings.forEach(function(h) { observer.observe(h); });
+  }
+})();
+
+function toggleToc() {
+  var toc = document.getElementById('post-toc');
+  if (toc) toc.classList.toggle('collapsed');
 }
 
 function copyLink() {

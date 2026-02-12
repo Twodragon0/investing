@@ -22,9 +22,17 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common.config import get_env, setup_logging, get_ssl_verify
 from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
-from common.utils import sanitize_string, truncate_text
+from common.utils import sanitize_string, truncate_text, request_with_retry
 from common.rss_fetcher import fetch_rss_feed
 from common.summarizer import ThemeSummarizer
+
+try:
+    from common.browser import BrowserSession, is_playwright_available
+except ImportError:
+    BrowserSession = None  # type: ignore[assignment,misc]
+
+    def is_playwright_available() -> bool:  # type: ignore[misc]
+        return False
 
 logger = setup_logging("collect_social_media")
 
@@ -33,8 +41,78 @@ REQUEST_TIMEOUT = 15
 USER_AGENT = "Mozilla/5.0 (compatible; InvestingDragon/1.0)"
 
 
+def _parse_telegram_items(channel: str, messages, limit: int) -> List[Dict[str, Any]]:
+    """Parse Telegram message elements (shared between Playwright and BS4 paths)."""
+    items: List[Dict[str, Any]] = []
+    for msg in messages[-limit:]:
+        try:
+            # Works for both BS4 Tag and Playwright ElementHandle
+            if hasattr(msg, "query_selector"):
+                # Playwright ElementHandle
+                text_div = msg.query_selector(".tgme_widget_message_text")
+                if not text_div:
+                    continue
+                text = sanitize_string(text_div.inner_text(), 500)
+                date_el = msg.query_selector("time")
+                date_str = date_el.get_attribute("datetime") if date_el else ""
+                link_el = msg.query_selector("a.tgme_widget_message_date")
+                link = link_el.get_attribute("href") if link_el else ""
+            else:
+                # BS4 Tag
+                text_div = msg.find("div", class_="tgme_widget_message_text")
+                if not text_div:
+                    continue
+                text = sanitize_string(text_div.get_text(" ", strip=True), 500)
+                date_el = msg.find("time")
+                date_str = date_el.get("datetime", "") if date_el else ""
+                link_el = msg.find("a", class_="tgme_widget_message_date")
+                link = link_el.get("href", "") if link_el else ""
+
+            if not text or len(text) < 20:
+                continue
+
+            title = text.split("\n")[0][:100]
+            if len(title) < 10:
+                title = truncate_text(text, 100)
+
+            items.append({
+                "title": f"[Telegram] {title}",
+                "description": text,
+                "link": link or "",
+                "published": date_str or "",
+                "source": f"Telegram @{channel}",
+                "tags": ["social-media", "telegram", channel],
+            })
+        except Exception:
+            continue
+    return items
+
+
+def _fetch_telegram_browser(channels: List[str], limit: int = 10) -> Dict[str, List[Dict[str, Any]]]:
+    """Fetch multiple Telegram channels in a single browser session."""
+    results: Dict[str, List[Dict[str, Any]]] = {}
+    if not is_playwright_available():
+        return results
+
+    try:
+        with BrowserSession(timeout=30_000) as session:
+            for channel in channels:
+                try:
+                    session.navigate(f"https://t.me/s/{channel}", wait_until="networkidle")
+                    messages = session.extract_elements(".tgme_widget_message_wrap")
+                    items = _parse_telegram_items(channel, messages, limit)
+                    results[channel] = items
+                    logger.info("Telegram Browser @%s: fetched %d messages", channel, len(items))
+                except Exception as e:
+                    logger.warning("Telegram Browser @%s failed: %s", channel, e)
+                    results[channel] = []
+    except Exception as e:
+        logger.warning("Telegram browser session failed: %s", e)
+    return results
+
+
 def fetch_telegram_channel(channel: str, limit: int = 10) -> List[Dict[str, Any]]:
-    """Scrape public Telegram channel messages via t.me/s/ preview."""
+    """Scrape public Telegram channel messages via t.me/s/ preview (requests fallback)."""
     url = f"https://t.me/s/{channel}"
     try:
         resp = requests.get(
@@ -43,41 +121,8 @@ def fetch_telegram_channel(channel: str, limit: int = 10) -> List[Dict[str, Any]
         )
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, "html.parser")
-
-        items = []
         messages = soup.find_all("div", class_="tgme_widget_message_wrap")
-
-        for msg in messages[-limit:]:
-            text_div = msg.find("div", class_="tgme_widget_message_text")
-            if not text_div:
-                continue
-
-            text = sanitize_string(text_div.get_text(" ", strip=True), 500)
-            if not text or len(text) < 20:
-                continue
-
-            # Get message date
-            date_el = msg.find("time")
-            date_str = date_el.get("datetime", "") if date_el else ""
-
-            # Get message link
-            link_el = msg.find("a", class_="tgme_widget_message_date")
-            link = link_el.get("href", "") if link_el else ""
-
-            # Use first line or first 80 chars as title
-            title = text.split("\n")[0][:100]
-            if len(title) < 10:
-                title = truncate_text(text, 100)
-
-            items.append({
-                "title": f"[Telegram] {title}",
-                "description": text,
-                "link": link,
-                "published": date_str,
-                "source": f"Telegram @{channel}",
-                "tags": ["social-media", "telegram", channel],
-            })
-
+        items = _parse_telegram_items(channel, messages, limit)
         logger.info("Telegram @%s: fetched %d messages", channel, len(items))
         return items
     except requests.exceptions.RequestException as e:
@@ -145,11 +190,10 @@ def fetch_reddit_posts(limit: int = 10) -> List[Dict[str, Any]]:
     for sub, display_name, min_score in subreddits:
         url = f"https://www.reddit.com/r/{sub}/hot.json?limit={limit}"
         try:
-            resp = requests.get(
-                url, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL,
+            resp = request_with_retry(
+                url, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL,
                 headers={"User-Agent": USER_AGENT},
             )
-            resp.raise_for_status()
             data = resp.json()
             sub_count = 0
             for post in data.get("data", {}).get("children", [])[:limit]:
@@ -248,9 +292,21 @@ def main():
         "cryptonews", "crypto", "CoinDesk", "BitcoinMagazine", "WuBlockchain", "coinlounge",
         "whale_alert", "DefiLlama", "OKX_Announcements", "BybitOfficial", "BTCKorea", "upbitofficial",
     ]
-    for ch in channels:
-        telegram_items.extend(fetch_telegram_channel(ch))
-        time.sleep(2)
+
+    # Try browser session for all channels (single session, reuse connection)
+    if is_playwright_available():
+        browser_results = _fetch_telegram_browser(channels)
+        for ch in channels:
+            telegram_items.extend(browser_results.get(ch, []))
+        # Fallback: fetch remaining channels that failed via requests
+        failed_channels = [ch for ch in channels if ch not in browser_results or not browser_results[ch]]
+        for ch in failed_channels:
+            telegram_items.extend(fetch_telegram_channel(ch))
+            time.sleep(2)
+    else:
+        for ch in channels:
+            telegram_items.extend(fetch_telegram_channel(ch))
+            time.sleep(2)
 
     # Collect Twitter/X and Google News social items
     social_items = []
@@ -290,7 +346,19 @@ def main():
     summarizer = ThemeSummarizer(all_theme_items)
 
     total_count = len(telegram_items) + len(social_items) + len(reddit_items) + len(political_items)
-    content_parts = [f"오늘의 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 {len(telegram_items)}건, 소셜 미디어 {len(social_items)}건, Reddit {len(reddit_items)}건, 정치·경제 {len(political_items)}건 총 {total_count}건이 수집되었습니다.\n"]
+
+    # Data-driven opening (only mention sources with data)
+    source_parts = []
+    if telegram_items:
+        source_parts.append(f"텔레그램 {len(telegram_items)}건")
+    if social_items:
+        source_parts.append(f"소셜 미디어 {len(social_items)}건")
+    if reddit_items:
+        source_parts.append(f"Reddit {len(reddit_items)}건")
+    if political_items:
+        source_parts.append(f"정치·경제 {len(political_items)}건")
+    sources_str = ", ".join(source_parts) if source_parts else "데이터 없음"
+    content_parts = [f"**{today}** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. {sources_str}, 총 {total_count}건이 수집되었습니다.\n"]
 
     # Collect all source links
     source_links = []
@@ -315,6 +383,28 @@ def main():
     if top_keywords:
         kw_str = ", ".join(f"{kw}({cnt})" for kw, cnt in top_keywords[:5])
         content_parts.append(f"- **주요 키워드**: {kw_str}")
+
+    # 오늘의 핵심 bullet points
+    content_parts.append("\n## 오늘의 핵심\n")
+    highlights = []
+    if top_keywords:
+        highlights.append(f"- 가장 많이 언급된 키워드는 **{top_keywords[0][0]}**({top_keywords[0][1]}회)입니다.")
+    active_sources = []
+    if telegram_items:
+        active_sources.append(f"텔레그램({len(telegram_items)}건)")
+    if reddit_items:
+        active_sources.append(f"Reddit({len(reddit_items)}건)")
+    if social_items:
+        active_sources.append(f"소셜 미디어({len(social_items)}건)")
+    if political_items:
+        active_sources.append(f"정치·경제({len(political_items)}건)")
+    if active_sources:
+        highlights.append(f"- 가장 활발한 채널: {', '.join(active_sources[:3])}")
+    if total_count >= 30:
+        highlights.append(f"- 총 {total_count}건의 소셜 데이터가 수집되어 커뮤니티 관심이 높은 상황입니다.")
+    if not highlights:
+        highlights.append(f"- 총 {total_count}건의 소셜 데이터가 수집되었습니다.")
+    content_parts.extend(highlights)
 
     # Theme distribution chart
     dist = summarizer.generate_distribution_chart()
@@ -351,9 +441,9 @@ def main():
     except Exception as e:
         logger.warning("Source distribution image failed: %s", e)
 
-    # Telegram section (limit to top 10)
-    content_parts.append("## 텔레그램 주요 소식\n")
+    # Telegram section (only show if data exists)
     if telegram_items:
+        content_parts.append("## 텔레그램 주요 소식\n")
         content_parts.append("| # | 내용 | 채널 |")
         content_parts.append("|---|------|------|")
         for i, item in enumerate(telegram_items[:10], 1):
@@ -367,38 +457,32 @@ def main():
                 content_parts.append(f"| {i} | [**{title}**]({link}) | {source} |")
             else:
                 content_parts.append(f"| {i} | **{title}** | {source} |")
-    else:
-        content_parts.append("*수집된 텔레그램 소식이 없습니다.*")
 
-    content_parts.append("\n---\n")
+        content_parts.append("\n---\n")
 
-    # Social media trends section (Twitter + Google News social, limit to top 10)
-    content_parts.append("\n## 주요 소셜 미디어 트렌드\n")
+    # Social media trends section (only show if data exists)
     if social_items:
+        content_parts.append("\n## 주요 소셜 미디어 트렌드\n")
         content_parts.append("| # | 제목 | 출처 |")
         content_parts.append("|---|------|------|")
         for i, item in enumerate(social_items[:10], 1):
             title = item["title"]
-            # Strip prefix tags for cleaner display
             for prefix in ("[X/Twitter] ", "[Twitter] "):
                 title = title.replace(prefix, "")
             source = item.get("source", "unknown")
             link = item.get("link", "")
 
-            # Collect links for references
             if link:
                 source_links.append({"title": item["title"], "link": link, "source": source})
                 content_parts.append(f"| {i} | [**{title}**]({link}) | {source} |")
             else:
                 content_parts.append(f"| {i} | **{title}** | {source} |")
-    else:
-        content_parts.append("*수집된 소셜 미디어 트렌드가 없습니다.*")
 
-    content_parts.append("\n---\n")
+        content_parts.append("\n---\n")
 
-    # Reddit section
-    content_parts.append("\n## Reddit 커뮤니티 인기 글\n")
+    # Reddit section (only show if data exists)
     if reddit_items:
+        content_parts.append("\n## Reddit 커뮤니티 인기 글\n")
         content_parts.append("| # | 제목 | 커뮤니티 |")
         content_parts.append("|---|------|----------|")
         for i, item in enumerate(reddit_items[:10], 1):
@@ -412,14 +496,12 @@ def main():
                 content_parts.append(f"| {i} | [**{title}**]({link}) | {source} (↑{score}) |")
             else:
                 content_parts.append(f"| {i} | **{title}** | {source} (↑{score}) |")
-    else:
-        content_parts.append("*수집된 Reddit 글이 없습니다.*")
 
-    content_parts.append("\n---\n")
+        content_parts.append("\n---\n")
 
-    # Political/Economy trends section
-    content_parts.append("\n## 정치·경제 동향\n")
+    # Political/Economy trends section (only show if data exists)
     if political_items:
+        content_parts.append("\n## 정치·경제 동향\n")
         content_parts.append("| # | 제목 | 출처 |")
         content_parts.append("|---|------|------|")
         for i, item in enumerate(political_items[:15], 1):
@@ -427,16 +509,13 @@ def main():
             source = item.get("source", "unknown")
             link = item.get("link", "")
 
-            # Collect links for references
             if link:
                 source_links.append({"title": title, "link": link, "source": source})
                 content_parts.append(f"| {i} | [**{title}**]({link}) | {source} |")
             else:
                 content_parts.append(f"| {i} | **{title}** | {source} |")
-    else:
-        content_parts.append("*수집된 정치·경제 동향이 없습니다.*")
 
-    content_parts.append("\n---\n")
+        content_parts.append("\n---\n")
 
     # Theme summary
     theme_summary = summarizer.generate_summary_section()

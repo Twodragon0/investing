@@ -2,10 +2,11 @@
 
 import logging
 import requests
+from datetime import datetime, timezone, timedelta
 from typing import List, Dict, Any
 from bs4 import BeautifulSoup
 from .config import get_ssl_verify
-from .utils import sanitize_string
+from .utils import sanitize_string, parse_date
 
 logger = logging.getLogger(__name__)
 
@@ -19,6 +20,7 @@ def fetch_rss_feed(
     source_name: str,
     tags: List[str],
     limit: int = 15,
+    max_age_hours: int = 48,
 ) -> List[Dict[str, Any]]:
     """Fetch news items from an RSS feed.
 
@@ -67,11 +69,21 @@ def fetch_rss_feed(
                     BeautifulSoup(raw_desc, "html.parser").get_text(" ", strip=True), 500
                 )
 
+            published_str = date_el.get_text(strip=True) if date_el else ""
+
+            # Freshness filter: skip items older than max_age_hours
+            if max_age_hours and published_str:
+                pub_dt = parse_date(published_str)
+                if pub_dt:
+                    cutoff = datetime.now(timezone.utc) - timedelta(hours=max_age_hours)
+                    if pub_dt < cutoff:
+                        continue
+
             items.append({
                 "title": title,
                 "description": description,
                 "link": link_val,
-                "published": date_el.get_text(strip=True) if date_el else "",
+                "published": published_str,
                 "source": source_name,
                 "tags": tags,
             })

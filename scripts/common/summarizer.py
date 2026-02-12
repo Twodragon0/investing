@@ -21,46 +21,61 @@ THEMES = [
     ("규제/정책", "regulation", "🔵", [
         "sec", "cftc", "fca", "regulation", "regulatory", "compliance",
         "규제", "금융위", "금감원", "mica", "esma", "mas", "법안", "bill",
+        "enforcement", "lawsuit", "소송", "제재",
     ]),
     ("DeFi", "defi", "🟣", [
         "defi", "dex", "yield", "lending", "tvl", "liquidity",
         "aave", "uniswap", "compound", "staking",
+        "restaking", "bridge", "swap", "pool", "vault",
     ]),
     ("비트코인", "bitcoin", "🟠", [
         "bitcoin", "btc", "mining", "halving", "비트코인", "채굴",
         "satoshi", "lightning network",
+        "ordinals", "runes", "etf",
     ]),
     ("이더리움", "ethereum", "🔷", [
         "ethereum", "eth", "layer2", "rollup", "이더리움",
         "solidity", "evm", "l2",
+        "blob", "dencun", "arbitrum", "optimism", "base", "zksync",
     ]),
     ("AI/기술", "ai_tech", "🤖", [
         "ai", "artificial intelligence", "gpu", "인공지능",
         "machine learning", "chatgpt", "nvidia", "반도체",
+        "엔비디아", "테슬라", "애플", "마이크로소프트", "구글",
+        "openai", "anthropic", "semiconductor", "tsmc",
     ]),
     ("매크로/금리", "macro", "📊", [
         "fed", "interest rate", "inflation", "금리", "한국은행",
         "gdp", "cpi", "fomc", "rate cut", "rate hike", "환율",
+        "물가", "실업률", "고용", "소비자물가", "pce",
+        "기준금리", "양적완화", "양적긴축", "treasury", "채권",
     ]),
     ("거래소", "exchange", "🏦", [
         "binance", "coinbase", "exchange", "listing", "거래소",
         "upbit", "bithumb", "bybit", "okx",
+        "kraken", "상장", "상장폐지", "delisting",
     ]),
     ("보안/해킹", "security", "🔴", [
         "hack", "exploit", "vulnerability", "security", "해킹",
         "breach", "phishing", "scam", "rug pull",
+        "drain", "flash loan", "oracle", "재진입",
     ]),
     ("정치/정책", "politics", "🏛️", [
         "trump", "이재명", "election", "policy", "정책",
         "tariff", "sanction", "congress", "의회", "관세",
+        "백악관", "대통령", "executive order", "행정명령",
     ]),
     ("NFT/Web3", "nft_web3", "🎨", [
         "nft", "metaverse", "web3", "opensea", "메타버스",
         "digital collectible",
+        "gamefi", "socialfi", "creator",
     ]),
     ("가격/시장", "price_market", "📈", [
         "price", "rally", "crash", "surge", "plunge", "시세",
         "상승", "하락", "급등", "급락", "폭락", "반등",
+        "bull", "bear", "bullish", "bearish", "강세", "약세",
+        "조정", "correction", "코스피", "코스닥", "나스닥",
+        "다우존스", "금", "원유", "달러",
     ]),
 ]
 

@@ -3,7 +3,7 @@
 from .config import get_env, get_env_bool
 from .dedup import DedupEngine
 from .post_generator import PostGenerator
-from .utils import sanitize_string, validate_url, slugify
+from .utils import sanitize_string, validate_url, slugify, parse_date, request_with_retry
 from .rss_fetcher import fetch_rss_feed
 from .summarizer import ThemeSummarizer
 from .crypto_api import (
@@ -13,6 +13,7 @@ from .crypto_api import (
     fetch_fear_greed_index,
 )
 from .formatters import fmt_number, fmt_percent
+from .browser import BrowserSession, scrape_page, is_playwright_available
 
 __all__ = [
     "get_env",
@@ -22,6 +23,8 @@ __all__ = [
     "sanitize_string",
     "validate_url",
     "slugify",
+    "parse_date",
+    "request_with_retry",
     "fetch_rss_feed",
     "ThemeSummarizer",
     "fetch_coingecko_top_coins",
@@ -30,4 +33,7 @@ __all__ = [
     "fetch_fear_greed_index",
     "fmt_number",
     "fmt_percent",
+    "BrowserSession",
+    "scrape_page",
+    "is_playwright_available",
 ]

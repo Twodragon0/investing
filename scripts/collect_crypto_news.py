@@ -24,9 +24,17 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common.config import get_env, setup_logging, get_ssl_verify
 from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
-from common.utils import sanitize_string
+from common.utils import sanitize_string, request_with_retry
 from common.rss_fetcher import fetch_rss_feed
 from common.summarizer import ThemeSummarizer
+
+try:
+    from common.browser import BrowserSession, is_playwright_available
+except ImportError:
+    BrowserSession = None  # type: ignore[assignment,misc]
+
+    def is_playwright_available() -> bool:  # type: ignore[misc]
+        return False
 
 logger = setup_logging("collect_crypto_news")
 
@@ -69,45 +77,60 @@ def fetch_cryptopanic(api_key: str, limit: int = 20) -> List[Dict[str, Any]]:
         return []
 
 
-def fetch_newsapi(api_key: str, limit: int = 20) -> List[Dict[str, Any]]:
-    """Fetch crypto news from NewsAPI."""
-    if not api_key:
-        logger.info("NewsAPI key not set, skipping")
+def fetch_google_news_browser(limit: int = 20) -> List[Dict[str, Any]]:
+    """Fetch crypto news via Google News browser scraping (replaces NewsAPI).
+
+    Falls back to empty list if Playwright is unavailable.
+    """
+    if not is_playwright_available():
+        logger.info("Playwright not available, skipping Google News browser scraping")
         return []
 
-    url = "https://newsapi.org/v2/everything"
-    params = {
-        "q": "cryptocurrency OR bitcoin OR ethereum",
-        "language": "en",
-        "sortBy": "publishedAt",
-        "pageSize": limit,
-        "apiKey": api_key,
-    }
+    search_url = "https://news.google.com/search?q=cryptocurrency+bitcoin&hl=en-US&gl=US&ceid=US:en"
+    items: List[Dict[str, Any]] = []
 
     try:
-        resp = requests.get(url, params=params, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
-        resp.raise_for_status()
-        data = resp.json()
-        articles = data.get("articles", [])
+        with BrowserSession(timeout=30_000) as session:
+            session.navigate(search_url, wait_until="networkidle")
+            articles = session.extract_elements("article")
 
-        items = []
-        for a in articles:
-            title = sanitize_string(a.get("title", ""), 300)
-            if not title or title == "[Removed]":
-                continue
-            items.append({
-                "title": title,
-                "description": sanitize_string(a.get("description", ""), 500),
-                "link": a.get("url", ""),
-                "published": a.get("publishedAt", ""),
-                "source": "NewsAPI",
-                "tags": ["crypto", "news"],
-            })
-        logger.info("NewsAPI: fetched %d items", len(items))
-        return items
-    except requests.exceptions.RequestException as e:
-        logger.warning("NewsAPI fetch failed: %s", e)
-        return []
+            for article in articles[:limit]:
+                try:
+                    link_el = article.query_selector("a")
+                    if not link_el:
+                        continue
+                    title = sanitize_string(link_el.inner_text().strip(), 300)
+                    href = link_el.get_attribute("href") or ""
+                    if href.startswith("./"):
+                        href = "https://news.google.com" + href[1:]
+
+                    if not title or len(title) < 5:
+                        continue
+
+                    # Try to get source name
+                    source_el = article.query_selector("div[data-n-tid]")
+                    source_name = source_el.inner_text().strip() if source_el else "Google News"
+
+                    # Try to get date
+                    time_el = article.query_selector("time")
+                    date_str = time_el.get_attribute("datetime") if time_el else ""
+
+                    items.append({
+                        "title": title,
+                        "description": sanitize_string(title, 500),
+                        "link": href,
+                        "published": date_str or "",
+                        "source": source_name,
+                        "tags": ["crypto", "news"],
+                    })
+                except Exception:
+                    continue
+
+        logger.info("Google News Browser: fetched %d items", len(items))
+    except Exception as e:
+        logger.warning("Google News browser scraping failed: %s", e)
+
+    return items
 
 
 def fetch_crypto_rss_feeds() -> List[Dict[str, Any]]:
@@ -165,11 +188,46 @@ def fetch_google_news_security() -> List[Dict[str, Any]]:
     return all_items
 
 
-def fetch_exchange_announcements() -> List[Dict[str, Any]]:
-    """Fetch announcements from major exchanges (public APIs only)."""
-    items = []
+def _fetch_binance_browser() -> List[Dict[str, Any]]:
+    """Scrape Binance announcements page with Playwright."""
+    if not is_playwright_available():
+        return []
 
-    # Binance announcements
+    items: List[Dict[str, Any]] = []
+    try:
+        with BrowserSession(timeout=30_000) as session:
+            session.navigate(
+                "https://www.binance.com/en/support/announcement",
+                wait_until="networkidle",
+            )
+            links = session.extract_elements("a.css-1ej4hfo, a[href*='/support/announcement/']")
+            for link_el in links[:10]:
+                try:
+                    title = sanitize_string(link_el.inner_text().strip(), 300)
+                    href = link_el.get_attribute("href") or ""
+                    if not title or len(title) < 5:
+                        continue
+                    if href and not href.startswith("http"):
+                        href = "https://www.binance.com" + href
+                    items.append({
+                        "title": title,
+                        "description": title,
+                        "link": href,
+                        "published": "",
+                        "source": "Binance",
+                        "tags": ["crypto", "exchange", "binance"],
+                    })
+                except Exception:
+                    continue
+        logger.info("Binance Browser: fetched %d announcements", len(items))
+    except Exception as e:
+        logger.warning("Binance browser scraping failed: %s", e)
+    return items
+
+
+def _fetch_binance_bapi() -> List[Dict[str, Any]]:
+    """Fetch Binance announcements via BAPI (legacy fallback)."""
+    items: List[Dict[str, Any]] = []
     try:
         url = "https://www.binance.com/bapi/composite/v1/public/cms/article/list/query"
         params = {"type": 1, "pageNo": 1, "pageSize": 10}
@@ -197,10 +255,20 @@ def fetch_exchange_announcements() -> List[Dict[str, Any]]:
                         "source": "Binance",
                         "tags": ["crypto", "exchange", "binance"],
                     })
-        logger.info("Binance: fetched %d announcements", len(items))
+        logger.info("Binance BAPI: fetched %d announcements", len(items))
     except requests.exceptions.RequestException as e:
-        logger.warning("Binance announcements fetch failed: %s", e)
+        logger.warning("Binance BAPI fetch failed: %s", e)
+    return items
 
+
+def fetch_exchange_announcements() -> List[Dict[str, Any]]:
+    """Fetch announcements from major exchanges.
+
+    Tries Playwright browser scraping first, falls back to BAPI.
+    """
+    items = _fetch_binance_browser()
+    if not items:
+        items = _fetch_binance_bapi()
     return items
 
 
@@ -208,8 +276,8 @@ def fetch_rekt_news(limit: int = 10) -> List[Dict[str, Any]]:
     """Fetch security incidents from Rekt News."""
     try:
         url = "https://rekt.news/api/incidents"
-        resp = requests.get(
-            url, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL,
+        resp = request_with_retry(
+            url, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL,
             headers={"User-Agent": USER_AGENT},
         )
         resp.raise_for_status()
@@ -253,7 +321,6 @@ def main():
     logger.info("=== Starting crypto news collection ===")
 
     cryptopanic_key = get_env("CRYPTOPANIC_API_KEY")
-    newsapi_key = get_env("NEWSAPI_API_KEY")
 
     dedup = DedupEngine("crypto_news_seen.json")
     crypto_gen = PostGenerator("crypto-news")
@@ -266,7 +333,7 @@ def main():
 
     # Collect from all sources
     all_items.extend(fetch_cryptopanic(cryptopanic_key))
-    all_items.extend(fetch_newsapi(newsapi_key))
+    all_items.extend(fetch_google_news_browser())
     all_items.extend(fetch_google_news_crypto())
     all_items.extend(fetch_crypto_rss_feeds())
 
@@ -322,10 +389,17 @@ def main():
                         for kw in keyword_targets}
         top_keywords = [(kw, cnt) for kw, cnt in sorted(keyword_hits.items(), key=lambda x: -x[1]) if cnt > 0]
 
-        content_parts = [f"오늘 총 {len(all_items)}건의 암호화폐 관련 뉴스가 수집되었습니다. 주요 내용을 정리합니다.\n"]
-
-        # Create theme summarizer for reuse
+        # Create theme summarizer for reuse (before opening)
         summarizer = ThemeSummarizer(all_items)
+
+        # Get top themes for opening
+        top_themes = summarizer.get_top_themes()
+        theme_names = [t[0] for t in top_themes] if top_themes else []
+        if theme_names:
+            themes_str = ", ".join(theme_names[:3])
+            content_parts = [f"**{today}** 암호화폐 시장에서 {len(all_items)}건의 뉴스를 분석했습니다. 오늘은 **{themes_str}** 관련 소식이 주목됩니다.\n"]
+        else:
+            content_parts = [f"**{today}** 암호화폐 시장에서 {len(all_items)}건의 뉴스를 분석했습니다.\n"]
 
         # Distribution chart
         dist_chart = summarizer.generate_distribution_chart()
@@ -344,6 +418,25 @@ def main():
         if top_keywords:
             kw_str = ", ".join(f"{kw}({cnt})" for kw, cnt in top_keywords[:5])
             content_parts.append(f"- **주요 키워드**: {kw_str}")
+
+        # 오늘의 핵심 bullet points
+        content_parts.append("\n## 오늘의 핵심\n")
+        highlights = []
+        if top_keywords:
+            highlights.append(f"- 가장 많이 언급된 키워드는 **{top_keywords[0][0]}**({top_keywords[0][1]}회)으로, 시장의 핵심 관심사입니다.")
+        if top_source:
+            highlights.append(f"- **{top_source[0][0]}**에서 가장 많은 뉴스({top_source[0][1]}건)가 수집되었습니다.")
+        if len(all_items) >= 15:
+            highlights.append(f"- 총 {len(all_items)}건의 뉴스가 수집되어 시장 관심이 높은 상황입니다.")
+        elif len(all_items) < 5:
+            highlights.append(f"- 총 {len(all_items)}건으로 뉴스 수집량이 적어, 시장이 비교적 조용한 상태입니다.")
+        if theme_names:
+            for theme in theme_names[:2]:
+                highlights.append(f"- **{theme}** 관련 뉴스에 주목할 필요가 있습니다.")
+        if highlights:
+            content_parts.extend(highlights)
+        else:
+            content_parts.append("- 오늘의 특이 사항이 없습니다.")
 
         # Image — news source distribution bar chart
         try:
@@ -374,26 +467,38 @@ def main():
             else:
                 content_parts.append("*수집된 뉴스가 없습니다.*")
 
-        # Exchange announcements table
-        content_parts.append("\n## 거래소 공지사항\n")
+        # Exchange announcements table (only show if data exists)
         if exchange_rows:
+            content_parts.append("\n## 거래소 공지사항\n")
             content_parts.append("| # | 제목 | 거래소 |")
             content_parts.append("|---|------|--------|")
             content_parts.extend(exchange_rows)
-        else:
-            content_parts.append("*수집된 거래소 공지사항이 없습니다.*")
 
-        # Insight section
+        # Insight section - theme-based analysis
         content_parts.append("\n## 오늘의 인사이트\n")
         insight_lines = []
-        if len(all_items) >= 10:
-            insight_lines.append(f"오늘 총 {len(all_items)}건의 뉴스가 {len(source_counter)}개 출처에서 수집되었습니다.")
+
+        # Top 2 themes cross-analysis
+        if top_themes and len(top_themes) >= 2:
+            t1, t2 = top_themes[0][0], top_themes[1][0]
+            insight_lines.append(f"오늘 가장 주목할 테마는 **{t1}**와 **{t2}**입니다. 두 테마의 동시 부각은 시장의 방향성을 가늠하는 데 중요한 신호가 될 수 있습니다.")
+        elif top_themes:
+            insight_lines.append(f"오늘 가장 주목할 테마는 **{top_themes[0][0]}**입니다.")
         else:
-            insight_lines.append(f"오늘 뉴스 수집량이 {len(all_items)}건으로 비교적 적은 편입니다.")
+            if len(all_items) >= 10:
+                insight_lines.append(f"오늘 총 {len(all_items)}건의 뉴스가 {len(source_counter)}개 출처에서 수집되었습니다.")
+            else:
+                insight_lines.append(f"오늘 뉴스 수집량이 {len(all_items)}건으로 비교적 적은 편입니다.")
+
+        # Keyword monitoring suggestion
         if top_keywords:
-            insight_lines.append(f"가장 많이 언급된 키워드는 **{top_keywords[0][0]}**({top_keywords[0][1]}회)입니다.")
+            monitoring_kws = ", ".join(f"**{kw}**" for kw, _ in top_keywords[:3])
+            insight_lines.append(f"\n향후 모니터링이 필요한 키워드: {monitoring_kws}")
+
+        # Exchange activity connection
         if exchange_rows:
-            insight_lines.append(f"거래소 공지사항 {len(exchange_rows)}건이 수집되어, 거래소 동향 확인이 필요합니다.")
+            insight_lines.append(f"\n거래소 공지사항 {len(exchange_rows)}건이 수집되었습니다. 새로운 상장, 이벤트, 정책 변경 등 거래소 동향이 시장 가격에 직접적 영향을 미칠 수 있어 주의가 필요합니다.")
+
         insight_lines.append("")
         insight_lines.append("> *본 뉴스 브리핑은 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*")
         content_parts.extend(insight_lines)

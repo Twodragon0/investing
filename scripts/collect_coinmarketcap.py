@@ -30,6 +30,14 @@ from common.crypto_api import (
 )
 from common.formatters import fmt_number as _fmt_num, fmt_percent as _fmt_pct
 
+try:
+    from common.browser import BrowserSession, is_playwright_available
+except ImportError:
+    BrowserSession = None  # type: ignore[assignment,misc]
+
+    def is_playwright_available() -> bool:  # type: ignore[misc]
+        return False
+
 logger = setup_logging("collect_coinmarketcap")
 
 VERIFY_SSL = get_ssl_verify()
@@ -295,6 +303,77 @@ def generate_market_insight(global_data: Dict, top_coins: List[Dict], fear_greed
     return "\n".join(lines)
 
 
+def fetch_cmc_browser_fallback(limit: int = 20) -> List[Dict[str, Any]]:
+    """Scrape CoinMarketCap homepage table as fallback when APIs fail.
+
+    Returns a list of dicts compatible with CoinGecko format for reuse in
+    ``format_top_coins_table(coins, source="coingecko")``.
+    """
+    if not is_playwright_available():
+        return []
+
+    items: List[Dict[str, Any]] = []
+    try:
+        with BrowserSession(timeout=30_000) as session:
+            session.navigate("https://coinmarketcap.com/", wait_until="networkidle")
+            rows = session.extract_elements("table tbody tr")
+
+            for row in rows[:limit]:
+                try:
+                    cells = row.query_selector_all("td")
+                    if len(cells) < 7:
+                        continue
+
+                    # Cell 2: name+symbol, Cell 3: price, Cell 4: 24h%, Cell 5: 7d%, Cell 6: market cap
+                    name_cell = cells[2].inner_text().strip()
+                    # name_cell may be "Bitcoin BTC" or "Bitcoin\nBTC"
+                    parts = name_cell.replace("\n", " ").split()
+                    symbol = parts[-1] if parts else ""
+                    name = " ".join(parts[:-1]) if len(parts) > 1 else parts[0] if parts else ""
+
+                    price_text = cells[3].inner_text().strip().replace("$", "").replace(",", "")
+                    change_24h_text = cells[4].inner_text().strip().replace("%", "").replace(",", "")
+                    change_7d_text = cells[5].inner_text().strip().replace("%", "").replace(",", "")
+                    mcap_text = cells[6].inner_text().strip().replace("$", "").replace(",", "")
+
+                    def _parse_num(s: str) -> float:
+                        s = s.strip()
+                        if not s or s == "N/A":
+                            return 0.0
+                        # Handle B/M/K suffixes
+                        multiplier = 1
+                        if s.endswith("B"):
+                            multiplier = 1_000_000_000
+                            s = s[:-1]
+                        elif s.endswith("M"):
+                            multiplier = 1_000_000
+                            s = s[:-1]
+                        elif s.endswith("K"):
+                            multiplier = 1_000
+                            s = s[:-1]
+                        try:
+                            return float(s) * multiplier
+                        except ValueError:
+                            return 0.0
+
+                    items.append({
+                        "name": name,
+                        "symbol": symbol.lower(),
+                        "current_price": _parse_num(price_text),
+                        "price_change_percentage_24h": _parse_num(change_24h_text),
+                        "price_change_percentage_7d_in_currency": _parse_num(change_7d_text),
+                        "market_cap": _parse_num(mcap_text),
+                    })
+                except Exception:
+                    continue
+
+        logger.info("CMC Browser: fetched %d coins", len(items))
+    except Exception as e:
+        logger.warning("CMC browser scraping failed: %s", e)
+
+    return items
+
+
 # ──────────────────────────────────────────────
 # Main
 # ──────────────────────────────────────────────
@@ -304,6 +383,12 @@ def main():
     logger.info("=== Starting CoinMarketCap/CoinGecko collection ===")
 
     cmc_key = get_env("CMC_API_KEY")
+
+    # Skip entirely if no CMC key — CoinGecko fallback duplicates generate_market_summary.py
+    if not cmc_key:
+        logger.info("CMC API key not set, skipping to avoid duplicate CoinGecko report")
+        return
+
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     now = datetime.now(timezone.utc)
 
@@ -315,7 +400,7 @@ def main():
     global_data = fetch_coingecko_global()
     time.sleep(2)
 
-    # Try CMC first, fallback to CoinGecko
+    # Try CMC first, fallback to CoinGecko, then browser scraping
     if cmc_key:
         top_coins = fetch_cmc_top_coins(cmc_key, 30)
         source_name = "CoinMarketCap"
@@ -331,6 +416,14 @@ def main():
         time.sleep(2)
         trending = fetch_coingecko_trending()
         gainers, losers = [], []
+
+    # Browser fallback: if API fetch returned no coins, try scraping CMC page
+    if not top_coins:
+        logger.info("API fetch returned no coins, trying CMC browser fallback")
+        top_coins = fetch_cmc_browser_fallback(30)
+        if top_coins:
+            source_name = "CoinMarketCap (Browser)"
+            cmc_source = "coingecko"  # same dict format
 
     # Fear & Greed
     time.sleep(1)

@@ -22,6 +22,7 @@ from collections import OrderedDict
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.config import get_env, setup_logging, get_ssl_verify
+from common.utils import request_with_retry
 from common.post_generator import PostGenerator
 from common.crypto_api import (
     fetch_coingecko_top_coins,
@@ -38,18 +39,22 @@ REQUEST_TIMEOUT = 15
 
 
 def fetch_us_market_data(api_key: str) -> Dict[str, Dict[str, str]]:
-    """Fetch US market data from Alpha Vantage, with yfinance fallback."""
+    """Fetch US market data from Alpha Vantage + yfinance."""
+    # Alpha Vantage: major indices only (3 calls to conserve daily quota)
     symbols_av = {
         "SPY": "S&P 500 ETF",
         "QQQ": "NASDAQ 100 ETF",
         "DIA": "다우존스 ETF",
+    }
+    # yfinance: crypto-related stocks (no API quota cost)
+    symbols_yf = {
         "COIN": "Coinbase",
         "MSTR": "MicroStrategy",
         "IBIT": "BlackRock Bitcoin ETF",
     }
     results = {}
 
-    # Try Alpha Vantage first
+    # Alpha Vantage for major indices
     if api_key:
         for symbol, name in symbols_av.items():
             try:
@@ -70,18 +75,18 @@ def fetch_us_market_data(api_key: str) -> Dict[str, Dict[str, str]]:
             except requests.exceptions.RequestException as e:
                 logger.warning("Alpha Vantage %s: %s", symbol, e)
 
-    # yfinance fallback for missing symbols
-    if len(results) < 3:
+    # yfinance fallback for AV symbols only
+    if len(results) < len(symbols_av):
         logger.info("Alpha Vantage incomplete (%d/%d), trying yfinance fallback", len(results), len(symbols_av))
         try:
             import yfinance as yf
-            yf_symbols = {
+            yf_fallback = {
                 "^GSPC": ("SPY", "S&P 500"),
                 "^IXIC": ("QQQ", "NASDAQ"),
                 "^DJI": ("DIA", "다우존스"),
                 "^VIX": ("VIX", "VIX 변동성"),
             }
-            for yf_sym, (key, name) in yf_symbols.items():
+            for yf_sym, (key, name) in yf_fallback.items():
                 if key in results:
                     continue
                 try:
@@ -102,6 +107,29 @@ def fetch_us_market_data(api_key: str) -> Dict[str, Dict[str, str]]:
                     logger.warning("yfinance US %s: %s", yf_sym, e)
         except ImportError:
             logger.warning("yfinance not installed for US market fallback")
+
+    # yfinance for crypto-related stocks (always)
+    try:
+        import yfinance as yf
+        for symbol, name in symbols_yf.items():
+            try:
+                info = yf.Ticker(symbol).fast_info
+                price = getattr(info, "last_price", None)
+                prev = getattr(info, "previous_close", None)
+                if price and prev:
+                    change = price - prev
+                    change_pct = (change / prev) * 100
+                    results[symbol] = {
+                        "name": name,
+                        "price": f"{price:,.2f}",
+                        "change": f"{change:+,.2f}",
+                        "change_pct": f"{change_pct:+.2f}%",
+                        "volume": "N/A",
+                    }
+            except Exception as e:
+                logger.warning("yfinance %s: %s", symbol, e)
+    except ImportError:
+        logger.warning("yfinance not installed for crypto stocks")
 
     return results
 
@@ -135,6 +163,60 @@ def fetch_korean_market() -> Dict[str, Dict[str, str]]:
     return results
 
 
+def fetch_commodity_data() -> Dict[str, Dict[str, str]]:
+    """Fetch commodity and dollar index data using yfinance."""
+    results = {}
+    symbols = {
+        "GC=F": "금 (Gold)",
+        "CL=F": "원유 (WTI)",
+        "NG=F": "천연가스",
+        "DX-Y.NYB": "달러 인덱스 (DXY)",
+    }
+    try:
+        import yfinance as yf
+        for symbol, name in symbols.items():
+            try:
+                info = yf.Ticker(symbol).fast_info
+                price = getattr(info, "last_price", None)
+                prev = getattr(info, "previous_close", None)
+                if price and prev:
+                    change = price - prev
+                    change_pct = (change / prev) * 100
+                    results[name] = {
+                        "price": f"{price:,.2f}",
+                        "change": f"{change:+,.2f}",
+                        "change_pct": f"{change_pct:+.2f}%",
+                    }
+            except Exception as e:
+                logger.warning("yfinance commodity %s: %s", symbol, e)
+    except ImportError:
+        logger.warning("yfinance not installed for commodity data")
+    return results
+
+
+def format_commodity_data(data: Dict) -> str:
+    """Format commodity/dollar index data as a markdown table."""
+    if not data:
+        return (
+            "> 원자재/환율 데이터를 일시적으로 가져올 수 없습니다.\n\n"
+            "**참고 링크:**\n"
+            "- [Investing.com - 원자재](https://kr.investing.com/commodities/)\n"
+            "- [Investing.com - 달러 인덱스](https://kr.investing.com/indices/usdollar)"
+        )
+    lines = [
+        "| 원자재/지수 | 가격 | 변동 | 변동률 |",
+        "|-------------|------|------|--------|",
+    ]
+    for name, info in data.items():
+        try:
+            pct = float(info["change_pct"].replace("%", "").replace("+", ""))
+            icon = "🟢" if pct >= 0 else "🔴"
+        except (ValueError, KeyError):
+            icon = ""
+        lines.append(f"| {name} | {info['price']} | {info['change']} | {icon} {info['change_pct']} |")
+    return "\n".join(lines)
+
+
 def fetch_fred_indicators(api_key: str) -> Dict[str, Dict[str, Any]]:
     """Fetch key macro indicators from FRED."""
     if not api_key:
@@ -160,9 +242,8 @@ def fetch_fred_indicators(api_key: str) -> Dict[str, Dict[str, Any]]:
                 "sort_order": "desc",
                 "limit": "2",
             }
-            resp = requests.get("https://api.stlouisfed.org/fred/series/observations",
-                               params=params, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
-            resp.raise_for_status()
+            resp = request_with_retry("https://api.stlouisfed.org/fred/series/observations",
+                                     params=params, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL)
             obs = resp.json().get("observations", [])
             if obs and obs[0].get("value", ".") != ".":
                 current = float(obs[0]["value"])
@@ -208,13 +289,23 @@ def format_global_overview(global_data: Dict, fear_greed: Dict) -> str:
         parts.append(f"\n**공포/탐욕 지수: {val}/100** — {cls}{prev_str}")
         parts.append(f"`[{bar}]`")
 
-    return "\n".join(parts) if parts else "*데이터를 가져올 수 없습니다.*"
+    return "\n".join(parts) if parts else (
+        "> 글로벌 암호화폐 시장 데이터를 일시적으로 가져올 수 없습니다.\n\n"
+        "**참고 링크:**\n"
+        "- [CoinGecko - 글로벌 시장](https://www.coingecko.com/)\n"
+        "- [CoinMarketCap - 시장 현황](https://coinmarketcap.com/)"
+    )
 
 
 def format_top_coins(coins: List[Dict]) -> str:
     """Format top coins table."""
     if not coins:
-        return "*데이터를 가져올 수 없습니다.*"
+        return (
+            "> 코인 데이터를 일시적으로 가져올 수 없습니다.\n\n"
+            "**참고 링크:**\n"
+            "- [CoinGecko - Top 100](https://www.coingecko.com/)\n"
+            "- [CoinMarketCap - Rankings](https://coinmarketcap.com/)"
+        )
 
     lines = [
         "| # | 코인 | 가격 (USD) | 24h | 7d | 시가총액 |",
@@ -342,7 +433,7 @@ def format_macro(data: Dict) -> str:
     return "\n".join(lines)
 
 
-def generate_key_highlights(global_data: Dict, top_coins: List, fear_greed: Dict, kr_market: Dict) -> str:
+def generate_key_highlights(global_data: Dict, top_coins: List, fear_greed: Dict, kr_market: Dict, commodity_data: Dict = None) -> str:
     """Generate concise bullet-point key highlights."""
     bullets = []
 
@@ -380,6 +471,15 @@ def generate_key_highlights(global_data: Dict, top_coins: List, fear_greed: Dict
         for name, info in kr_market.items():
             pct = info.get("change_pct", "")
             bullets.append(f"- **{name}**: {info['price']} ({info['change']}, {pct})")
+
+    # Commodities (gold, oil)
+    if commodity_data:
+        gold = commodity_data.get("금 (Gold)")
+        oil = commodity_data.get("원유 (WTI)")
+        if gold:
+            bullets.append(f"- **금**: ${gold['price']} ({gold['change']}, {gold['change_pct']})")
+        if oil:
+            bullets.append(f"- **원유(WTI)**: ${oil['price']} ({oil['change']}, {oil['change_pct']})")
 
     # Top movers
     if top_coins:
@@ -493,6 +593,7 @@ def main():
     fear_greed = fetch_fear_greed_index(history_days=7)
     us_market = fetch_us_market_data(alpha_vantage_key)
     kr_market = fetch_korean_market()
+    commodity_data = fetch_commodity_data()
     fred_data = fetch_fred_indicators(fred_key)
 
     # ── Generate images ──
@@ -539,7 +640,7 @@ def main():
         sections["시장 시각화"] = "\n\n".join(img_lines)
 
     # Key highlights bullet points at the very top
-    highlights = generate_key_highlights(global_data, top_coins, fear_greed, kr_market)
+    highlights = generate_key_highlights(global_data, top_coins, fear_greed, kr_market, commodity_data)
     if highlights:
         sections["오늘의 핵심"] = highlights
 
@@ -565,6 +666,9 @@ def main():
 
     # Korean Market
     sections["한국 주식 시장"] = format_korean_market(kr_market)
+
+    # Commodities / Dollar Index
+    sections["원자재/환율"] = format_commodity_data(commodity_data)
 
     # Macro
     sections["매크로 경제 지표"] = format_macro(fred_data)

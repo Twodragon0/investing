@@ -27,6 +27,10 @@ runs:
       shell: bash
       run: pip install -r scripts/requirements.txt
 
+    - name: Install Playwright browsers
+      shell: bash
+      run: python -m playwright install chromium --with-deps
+
     - name: Run script
       shell: bash
       run: python ${{ inputs.script }}

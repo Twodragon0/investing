@@ -11,9 +11,23 @@
 </head>
 <body>
   {% include header.html %}
+  <div class="reading-progress" id="reading-progress"></div>
   <main class="container">
     {{ content }}
   </main>
   {% include footer.html %}
+  <script>
+  (function() {
+    var bar = document.getElementById('reading-progress');
+    if (!bar || !document.querySelector('.post-detail')) {
+      if (bar) bar.style.display = 'none';
+      return;
+    }
+    window.addEventListener('scroll', function() {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
+    }, { passive: true });
+  })();
+  </script>
 </body>
 </html>

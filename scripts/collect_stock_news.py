@@ -20,9 +20,17 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common.config import get_env, setup_logging, get_ssl_verify
 from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
-from common.utils import sanitize_string, detect_language
+from common.utils import sanitize_string, detect_language, request_with_retry
 from common.rss_fetcher import fetch_rss_feed
 from common.summarizer import ThemeSummarizer
+
+try:
+    from common.browser import BrowserSession, is_playwright_available
+except ImportError:
+    BrowserSession = None  # type: ignore[assignment,misc]
+
+    def is_playwright_available() -> bool:  # type: ignore[misc]
+        return False
 
 logger = setup_logging("collect_stock_news")
 
@@ -31,50 +39,64 @@ REQUEST_TIMEOUT = 15
 USER_AGENT = "Mozilla/5.0 (compatible; InvestingDragon/1.0)"
 
 
-def fetch_newsapi_stocks(api_key: str, limit: int = 20) -> List[Dict[str, Any]]:
-    """Fetch stock news from NewsAPI."""
-    if not api_key:
-        logger.info("NewsAPI key not set, skipping")
+def fetch_google_news_browser_stocks(limit: int = 20) -> List[Dict[str, Any]]:
+    """Fetch stock news via Google News browser scraping (replaces NewsAPI).
+
+    Falls back to empty list if Playwright is unavailable.
+    """
+    if not is_playwright_available():
+        logger.info("Playwright not available, skipping Google News browser scraping for stocks")
         return []
 
-    queries = [
-        ("stock market OR S&P 500 OR NASDAQ", "en"),
-        ("KOSPI OR KOSDAQ OR 주식시장", "ko"),
+    search_configs = [
+        ("https://news.google.com/search?q=stock+market+S%26P+500&hl=en-US&gl=US&ceid=US:en", "en"),
+        ("https://news.google.com/search?q=%EC%A3%BC%EC%8B%9D+%EC%BD%94%EC%8A%A4%ED%94%BC+%EC%BD%94%EC%8A%A4%EB%8B%A5&hl=ko&gl=KR&ceid=KR:ko", "ko"),
     ]
-    all_items = []
+    all_items: List[Dict[str, Any]] = []
 
-    for query, lang in queries:
-        params = {
-            "q": query,
-            "language": lang if lang == "en" else "ko",
-            "sortBy": "publishedAt",
-            "pageSize": limit,
-            "apiKey": api_key,
-        }
-        try:
-            resp = requests.get(
-                "https://newsapi.org/v2/everything",
-                params=params, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL,
-            )
-            resp.raise_for_status()
-            data = resp.json()
-            for a in data.get("articles", []):
-                title = sanitize_string(a.get("title", ""), 300)
-                if not title or title == "[Removed]":
-                    continue
-                all_items.append({
-                    "title": title,
-                    "description": sanitize_string(a.get("description", ""), 500),
-                    "link": a.get("url", ""),
-                    "published": a.get("publishedAt", ""),
-                    "source": "NewsAPI",
-                    "tags": ["stock", "market", lang],
-                })
-            time.sleep(0.5)
-        except requests.exceptions.RequestException as e:
-            logger.warning("NewsAPI stocks fetch failed for '%s': %s", query, e)
+    try:
+        with BrowserSession(timeout=30_000) as session:
+            for search_url, lang in search_configs:
+                try:
+                    session.navigate(search_url, wait_until="networkidle")
+                    articles = session.extract_elements("article")
 
-    logger.info("NewsAPI stocks: fetched %d items", len(all_items))
+                    for article in articles[:limit]:
+                        try:
+                            link_el = article.query_selector("a")
+                            if not link_el:
+                                continue
+                            title = sanitize_string(link_el.inner_text().strip(), 300)
+                            href = link_el.get_attribute("href") or ""
+                            if href.startswith("./"):
+                                href = "https://news.google.com" + href[1:]
+
+                            if not title or len(title) < 5:
+                                continue
+
+                            source_el = article.query_selector("div[data-n-tid]")
+                            source_name = source_el.inner_text().strip() if source_el else "Google News"
+
+                            time_el = article.query_selector("time")
+                            date_str = time_el.get_attribute("datetime") if time_el else ""
+
+                            all_items.append({
+                                "title": title,
+                                "description": sanitize_string(title, 500),
+                                "link": href,
+                                "published": date_str or "",
+                                "source": source_name,
+                                "tags": ["stock", "market", lang],
+                            })
+                        except Exception:
+                            continue
+                except Exception as e:
+                    logger.warning("Google News browser scraping failed for lang=%s: %s", lang, e)
+
+        logger.info("Google News Browser stocks: fetched %d items", len(all_items))
+    except Exception as e:
+        logger.warning("Google News browser session failed: %s", e)
+
     return all_items
 
 
@@ -154,8 +176,7 @@ def fetch_alpha_vantage_snapshot(api_key: str) -> List[Dict[str, Any]]:
                 "symbol": symbol,
                 "apikey": api_key,
             }
-            resp = requests.get(url, params=params, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
-            resp.raise_for_status()
+            resp = request_with_retry(url, params=params, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL)
             data = resp.json()
             quote = data.get("Global Quote", {})
 
@@ -214,7 +235,6 @@ def main():
     """Main collection routine - consolidated post."""
     logger.info("=== Starting stock news collection ===")
 
-    newsapi_key = get_env("NEWSAPI_API_KEY")
     alpha_vantage_key = get_env("ALPHA_VANTAGE_API_KEY")
 
     dedup = DedupEngine("stock_news_seen.json")
@@ -224,13 +244,13 @@ def main():
     now = datetime.now(timezone.utc)
 
     # Collect from all sources
-    newsapi_items = fetch_newsapi_stocks(newsapi_key)
+    browser_items = fetch_google_news_browser_stocks()
     google_items = fetch_google_news_stocks()
     yahoo_items = fetch_yahoo_finance_rss()
     alpha_items = fetch_alpha_vantage_snapshot(alpha_vantage_key)
 
     financial_rss_items = fetch_financial_rss_feeds()
-    all_items = newsapi_items + google_items + yahoo_items + alpha_items + financial_rss_items
+    all_items = browser_items + google_items + yahoo_items + alpha_items + financial_rss_items
 
     # Fetch Korean market data
     kr_market = fetch_korean_market_data()
@@ -278,7 +298,14 @@ def main():
     global_rows = global_rows[:15]
     korean_rows = korean_rows[:10]
 
-    content_parts = [f"오늘 총 {len(all_items)}건의 주식 시장 뉴스가 수집되었습니다. 주요 내용을 정리합니다.\n"]
+    # Data-driven opening with Korean market summary
+    opening_parts = [f"**{today}** 주식 시장에서 {len(all_items)}건의 뉴스를 분석했습니다."]
+    kr_summary_parts = []
+    for name, info in kr_market.items():
+        kr_summary_parts.append(f"{name} {info['price']}({info['change_pct']})")
+    if kr_summary_parts:
+        opening_parts.append(f"한국 시장: {', '.join(kr_summary_parts)}.")
+    content_parts = [" ".join(opening_parts) + "\n"]
 
     # Create summarizer
     summarizer = ThemeSummarizer(all_items)
@@ -289,6 +316,25 @@ def main():
     for name, info in kr_market.items():
         icon = "🟢" if not info["change_pct"].startswith("-") else "🔴"
         content_parts.append(f"- **{name}**: {info['price']} ({icon} {info['change_pct']})")
+
+    # 오늘의 핵심 bullet points
+    content_parts.append("\n## 오늘의 핵심\n")
+    highlights = []
+    for name, info in kr_market.items():
+        try:
+            pval = float(info["change_pct"].replace("%", "").replace("+", ""))
+            direction = "상승" if pval >= 0 else "하락"
+            highlights.append(f"- **{name}** {info['price']}으로 전일 대비 {info['change_pct']} {direction}")
+        except (ValueError, KeyError):
+            pass
+    # Add theme-based highlights
+    top_themes = summarizer.get_top_themes()
+    if top_themes:
+        for name, key, emoji, count in top_themes[:3]:
+            highlights.append(f"- **{name}** 관련 뉴스에 주목할 필요가 있습니다.")
+    if not highlights:
+        highlights.append(f"- 총 {len(all_items)}건의 뉴스가 수집되었습니다.")
+    content_parts.extend(highlights)
 
     # Theme distribution chart
     chart = summarizer.generate_distribution_chart()
@@ -345,23 +391,19 @@ def main():
         content_parts.append(themed)
         content_parts.append("\n---\n")
 
-    # Global stock news
-    content_parts.append("## 글로벌 주식 뉴스\n")
+    # Global stock news (only show if data exists)
     if global_rows:
+        content_parts.append("## 글로벌 주식 뉴스\n")
         content_parts.append("| # | 제목 | 출처 |")
         content_parts.append("|---|------|------|")
         content_parts.extend(global_rows)
-    else:
-        content_parts.append("*수집된 글로벌 뉴스가 없습니다.*")
 
-    # Korean stock news
-    content_parts.append("\n## 한국 주식 뉴스\n")
+    # Korean stock news (only show if data exists)
     if korean_rows:
+        content_parts.append("\n## 한국 주식 뉴스\n")
         content_parts.append("| # | 제목 | 출처 |")
         content_parts.append("|---|------|------|")
         content_parts.extend(korean_rows)
-    else:
-        content_parts.append("*수집된 한국 주식 뉴스가 없습니다.*")
 
     # Market data snapshot table (improved with emoji direction + Korean data)
     content_parts.append("\n## 시장 데이터 스냅샷\n")
@@ -402,7 +444,9 @@ def main():
                 icon = ""
             content_parts.append(f"| **{name}** | {info['price']} | {icon} {info['change_pct']} |")
     else:
-        content_parts.append("*시장 데이터를 가져올 수 없습니다.*")
+        content_parts.append("> 시장 데이터를 일시적으로 가져올 수 없습니다. 아래 링크에서 직접 확인하세요.\n")
+        content_parts.append("- [Yahoo Finance - S&P 500](https://finance.yahoo.com/quote/%5EGSPC/)")
+        content_parts.append("- [네이버 금융 - KOSPI](https://finance.naver.com/sise/sise_index.naver?code=KOSPI)")
 
     # Market insight
     content_parts.append("\n## 시장 인사이트\n")

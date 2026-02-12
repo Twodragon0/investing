@@ -4,6 +4,7 @@ import logging
 import requests
 from typing import Dict, Any, List
 from .config import get_ssl_verify
+from .utils import request_with_retry
 
 logger = logging.getLogger(__name__)
 
@@ -24,11 +25,10 @@ def fetch_coingecko_top_coins(limit: int = 30) -> List[Dict[str, Any]]:
             "sparkline": "false",
             "price_change_percentage": "1h,24h,7d",
         }
-        resp = requests.get(
-            url, params=params, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL,
+        resp = request_with_retry(
+            url, params=params, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL,
             headers={"User-Agent": USER_AGENT},
         )
-        resp.raise_for_status()
         data = resp.json()
         logger.info("CoinGecko: fetched %d top coins", len(data))
         return data
@@ -41,11 +41,10 @@ def fetch_coingecko_trending() -> List[Dict[str, Any]]:
     """Fetch trending coins from CoinGecko."""
     try:
         url = "https://api.coingecko.com/api/v3/search/trending"
-        resp = requests.get(
-            url, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL,
+        resp = request_with_retry(
+            url, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL,
             headers={"User-Agent": USER_AGENT},
         )
-        resp.raise_for_status()
         coins = resp.json().get("coins", [])
         logger.info("CoinGecko: fetched %d trending coins", len(coins))
         return coins
@@ -58,11 +57,10 @@ def fetch_coingecko_global() -> Dict[str, Any]:
     """Fetch global crypto market data."""
     try:
         url = "https://api.coingecko.com/api/v3/global"
-        resp = requests.get(
-            url, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL,
+        resp = request_with_retry(
+            url, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL,
             headers={"User-Agent": USER_AGENT},
         )
-        resp.raise_for_status()
         data = resp.json().get("data", {})
         logger.info("CoinGecko: fetched global market data")
         return data
@@ -80,8 +78,7 @@ def fetch_fear_greed_index(history_days: int = 1) -> Dict[str, Any]:
     """
     try:
         url = f"https://api.alternative.me/fng/?limit={history_days}&format=json"
-        resp = requests.get(url, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
-        resp.raise_for_status()
+        resp = request_with_retry(url, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL)
         data = resp.json()
         entries = data.get("data", [])
         if entries:
