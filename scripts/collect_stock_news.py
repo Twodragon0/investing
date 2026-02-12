@@ -90,9 +90,9 @@ def fetch_financial_rss_feeds() -> List[Dict[str, Any]]:
          "MarketWatch", ["stock", "marketwatch"]),
         ("https://www.hankyung.com/feed/all-news",
          "한국경제", ["stock", "korean", "한경"]),
-        ("https://file.mk.co.kr/news/rss/rss_30000001.xml",
+        ("http://file.mk.co.kr/news/rss/rss_30000001.xml",
          "매일경제", ["stock", "korean", "매경"]),
-        ("https://biz.chosun.com/site/data/rss/rss.xml",
+        ("https://news.google.com/rss/search?q=site:biz.chosun.com+%EC%A3%BC%EC%8B%9D&hl=ko&gl=KR&ceid=KR:ko",
          "조선비즈", ["stock", "korean", "조선비즈"]),
     ]
     all_items = []
