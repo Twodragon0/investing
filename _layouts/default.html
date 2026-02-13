@@ -36,14 +36,17 @@
 
   <!-- Canonical -->
   <link rel="canonical" href="{{ og_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
   {% seo %}
 </head>
 <body>
+  <a href="#main-content" class="skip-to-content">본문으로 건너뛰기</a>
   {% include header.html %}
   <div class="reading-progress" id="reading-progress"></div>
-  <main class="container">
+  <main class="container" id="main-content">
     {{ content }}
   </main>
   {% include footer.html %}
