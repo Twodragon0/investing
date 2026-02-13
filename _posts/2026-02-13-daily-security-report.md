@@ -1,6 +1,6 @@
 ---
 title: "블록체인 보안 리포트 - 2026-02-13"
-date: 2026-02-13 03:14:56 +0000
+date: 2026-02-13 00:46:51 +0000
 categories: [security-alerts]
 tags: [security, hack, blockchain, daily-digest]
 source: "consolidated"

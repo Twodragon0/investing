@@ -24,7 +24,7 @@ jobs:
       - name: Check site availability
         id: site_check
         run: |
-          SITE_URL="https://twodragon0.github.io/investing/"
+          SITE_URL="https://investing.2twodragon.com/"
           HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$SITE_URL" --max-time 30 || echo "000")
           echo "http_code=$HTTP_CODE" >> "$GITHUB_OUTPUT"
           if [ "$HTTP_CODE" -eq 200 ]; then

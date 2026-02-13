@@ -1,7 +1,7 @@
 title: "Investing Dragon"
 description: "Crypto & Stock News Aggregation and Trading Journal"
-url: "https://twodragon0.github.io"
-baseurl: "/investing"
+url: "https://investing.2twodragon.com"
+baseurl: ""
 lang: ko
 timezone: Asia/Seoul
 
@@ -43,3 +43,4 @@ exclude:
   - node_modules/
   - vendor/
   - README.md
+  - _config_ghpages.yml
