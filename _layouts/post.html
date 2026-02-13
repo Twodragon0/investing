@@ -151,7 +151,7 @@ function shareTwitter() {
   var headings = document.querySelectorAll('.post-content h2');
   var toc = document.getElementById('post-toc');
   var tocList = document.getElementById('toc-list');
-  if (!toc || !tocList || headings.length < 3) {
+  if (!toc || !tocList || headings.length < 2) {
     if (toc) toc.style.display = 'none';
     return;
   }

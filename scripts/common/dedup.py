@@ -54,7 +54,7 @@ class DedupEngine:
                 self.seen = data.get("seen", {})
                 self.titles = data.get("titles", [])
                 self._prune()
-            except (json.JSONDecodeError, KeyError):
+            except (json.JSONDecodeError, KeyError, IOError, OSError):
                 logger.warning("Corrupt state file %s, resetting", self.state_path)
                 self.seen = {}
                 self.titles = []
@@ -70,10 +70,20 @@ class DedupEngine:
         self.titles = self.titles[-(5000):]
 
     def save(self) -> None:
-        """Persist state to JSON file."""
+        """Persist state to JSON file (atomic write via temp file)."""
         os.makedirs(os.path.dirname(self.state_path), exist_ok=True)
-        with open(self.state_path, "w", encoding="utf-8") as f:
-            json.dump({"seen": self.seen, "titles": self.titles}, f, ensure_ascii=False, indent=2)
+        tmp_path = self.state_path + ".tmp"
+        try:
+            with open(tmp_path, "w", encoding="utf-8") as f:
+                json.dump({"seen": self.seen, "titles": self.titles}, f, ensure_ascii=False, indent=2)
+            os.replace(tmp_path, self.state_path)
+        except OSError as e:
+            logger.warning("Failed to save dedup state: %s", e)
+            # Clean up temp file if it exists
+            try:
+                os.remove(tmp_path)
+            except OSError:
+                pass
 
     def is_duplicate(self, title: str, source: str, date_str: str) -> bool:
         """Check if a news item is a duplicate.

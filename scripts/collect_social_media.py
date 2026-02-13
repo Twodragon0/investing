@@ -23,7 +23,7 @@ from common.config import get_env, setup_logging, get_ssl_verify
 from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
 from common.utils import sanitize_string, truncate_text, request_with_retry
-from common.rss_fetcher import fetch_rss_feed
+from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
 
 try:
@@ -234,7 +234,7 @@ def fetch_reddit_posts(limit: int = 10) -> List[Dict[str, Any]]:
 
 
 def fetch_google_news_social() -> List[Dict[str, Any]]:
-    """Google News RSS fallback for social/crypto influencer content."""
+    """Google News RSS fallback for social/crypto influencer content (concurrent)."""
     feeds = [
         ("https://news.google.com/rss/search?q=crypto+twitter+sentiment&hl=en-US&gl=US&ceid=US:en",
          "Google News Social EN", ["social-media", "sentiment"]),
@@ -243,42 +243,32 @@ def fetch_google_news_social() -> List[Dict[str, Any]]:
         ("https://news.google.com/rss/search?q=crypto+whale+alert+on-chain&hl=en-US&gl=US&ceid=US:en",
          "Whale & On-chain", ["social-media", "whale", "on-chain"]),
     ]
-    all_items = []
-    for url, name, tags in feeds:
-        all_items.extend(fetch_rss_feed(url, name, tags))
-    return all_items
+    return fetch_rss_feeds_concurrent(feeds)
 
 
 def fetch_political_economy_news() -> List[Dict[str, Any]]:
-    """Fetch Trump and 이재명 related economy/crypto news from Google News RSS."""
+    """Fetch Trump and 이재명 related economy/crypto news (concurrent)."""
     feeds = [
-        # Trump crypto/economy policy
         ("https://news.google.com/rss/search?q=Trump+crypto+policy&hl=en-US&gl=US&ceid=US:en",
          "Trump Crypto Policy", ["politics", "trump", "crypto"]),
         ("https://news.google.com/rss/search?q=Trump+tariff+economy+stock&hl=en-US&gl=US&ceid=US:en",
          "Trump Economy", ["politics", "trump", "economy"]),
         ("https://news.google.com/rss/search?q=트럼프+암호화폐+경제&hl=ko&gl=KR&ceid=KR:ko",
          "트럼프 경제정책 KR", ["politics", "trump", "korean"]),
-        # 이재명 economy/stock policy
         ("https://news.google.com/rss/search?q=이재명+경제+정책&hl=ko&gl=KR&ceid=KR:ko",
          "이재명 경제정책", ["politics", "이재명", "economy"]),
         ("https://news.google.com/rss/search?q=이재명+주식+암호화폐+코인&hl=ko&gl=KR&ceid=KR:ko",
          "이재명 암호화폐정책", ["politics", "이재명", "crypto"]),
         ("https://news.google.com/rss/search?q=이재명+부동산+금리&hl=ko&gl=KR&ceid=KR:ko",
          "이재명 부동산·금리", ["politics", "이재명", "real-estate"]),
-        # US Fed / macro
         ("https://news.google.com/rss/search?q=Federal+Reserve+interest+rate+decision&hl=en-US&gl=US&ceid=US:en",
          "Fed Policy", ["politics", "fed", "macro"]),
-        # Korea economy/policy
         ("https://news.google.com/rss/search?q=한국은행+금리+경제&hl=ko&gl=KR&ceid=KR:ko",
          "한국은행 금리정책", ["politics", "한국은행", "macro"]),
         ("https://news.google.com/rss/search?q=코스피+외국인+기관+수급&hl=ko&gl=KR&ceid=KR:ko",
          "한국증시 수급", ["stock", "korean", "수급"]),
     ]
-    all_items = []
-    for url, name, tags in feeds:
-        all_items.extend(fetch_rss_feed(url, name, tags))
-    return all_items
+    return fetch_rss_feeds_concurrent(feeds)
 
 
 def main():

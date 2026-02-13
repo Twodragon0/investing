@@ -105,3 +105,45 @@ def fetch_rss_feed(
         _feed_health[url]["fail"] += 1
         _feed_health[url]["last_error"] = str(e)
         return []
+
+
+def fetch_rss_feeds_concurrent(
+    feeds: list,
+    max_workers: int = 5,
+) -> list:
+    """Fetch multiple RSS feeds concurrently.
+
+    Parameters
+    ----------
+    feeds : list of tuples
+        Each tuple is ``(url, source_name, tags)`` and optionally
+        ``(url, source_name, tags, limit, max_age_hours)``.
+    max_workers : int
+        Maximum number of parallel threads (default 5).
+
+    Returns
+    -------
+    list
+        Combined list of news items from all feeds.
+    """
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    all_items: List[Dict[str, Any]] = []
+
+    def _fetch_one(feed_tuple):
+        url, name, tags = feed_tuple[0], feed_tuple[1], feed_tuple[2]
+        limit = feed_tuple[3] if len(feed_tuple) > 3 else 15
+        max_age = feed_tuple[4] if len(feed_tuple) > 4 else 48
+        return fetch_rss_feed(url, name, tags, limit=limit, max_age_hours=max_age)
+
+    with ThreadPoolExecutor(max_workers=max_workers) as pool:
+        futures = {pool.submit(_fetch_one, f): f for f in feeds}
+        for future in as_completed(futures):
+            try:
+                items = future.result()
+                all_items.extend(items)
+            except Exception as e:
+                feed = futures[future]
+                logger.warning("Concurrent RSS fetch failed for %s: %s", feed[1], e)
+
+    return all_items

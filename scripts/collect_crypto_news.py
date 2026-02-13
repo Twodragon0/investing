@@ -25,7 +25,7 @@ from common.config import get_env, setup_logging, get_ssl_verify
 from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
 from common.utils import sanitize_string, request_with_retry
-from common.rss_fetcher import fetch_rss_feed
+from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
 
 try:
@@ -110,16 +110,14 @@ def fetch_google_news_browser(limit: int = 20) -> List[Dict[str, Any]]:
 
 
 def fetch_crypto_rss_feeds() -> List[Dict[str, Any]]:
-    """Fetch news from major crypto media RSS feeds."""
+    """Fetch news from major crypto media RSS feeds (concurrent)."""
     feeds = [
         ("https://www.coindesk.com/arc/outboundfeeds/rss", "CoinDesk", ["crypto", "coindesk"]),
         ("https://cointelegraph.com/rss", "Cointelegraph", ["crypto", "cointelegraph"]),
         ("https://decrypt.co/feed", "Decrypt", ["crypto", "decrypt"]),
         ("https://bitcoinmagazine.com/.rss/full/", "Bitcoin Magazine", ["crypto", "bitcoin"]),
     ]
-    all_items = []
-    for url, name, tags in feeds:
-        all_items.extend(fetch_rss_feed(url, name, tags))
+    all_items = fetch_rss_feeds_concurrent(feeds)
     # The Block — may block requests, wrap with extra try/except
     try:
         all_items.extend(fetch_rss_feed(
@@ -131,19 +129,16 @@ def fetch_crypto_rss_feeds() -> List[Dict[str, Any]]:
 
 
 def fetch_google_news_crypto() -> List[Dict[str, Any]]:
-    """Fetch crypto news from Google News RSS (English + Korean)."""
+    """Fetch crypto news from Google News RSS (English + Korean, concurrent)."""
     feeds = [
         ("https://news.google.com/rss/search?q=cryptocurrency&hl=en-US&gl=US&ceid=US:en", "Google News EN", ["crypto", "english"]),
         ("https://news.google.com/rss/search?q=암호화폐+비트코인&hl=ko&gl=KR&ceid=KR:ko", "Google News KR", ["crypto", "korean", "비트코인"]),
     ]
-    all_items = []
-    for url, name, tags in feeds:
-        all_items.extend(fetch_rss_feed(url, name, tags))
-    return all_items
+    return fetch_rss_feeds_concurrent(feeds)
 
 
 def fetch_google_news_security() -> List[Dict[str, Any]]:
-    """Fetch blockchain security news from Google News RSS."""
+    """Fetch blockchain security news from Google News RSS (concurrent)."""
     feeds = [
         ("https://news.google.com/rss/search?q=blockchain+hack+exploit+security&hl=en-US&gl=US&ceid=US:en",
          "Blockchain Security EN", ["security", "hack", "english"]),
@@ -152,12 +147,9 @@ def fetch_google_news_security() -> List[Dict[str, Any]]:
         ("https://news.google.com/rss/search?q=블록체인+해킹+보안+취약점&hl=ko&gl=KR&ceid=KR:ko",
          "블록체인 보안 KR", ["security", "hack", "korean"]),
     ]
-    all_items = []
-    for url, name, tags in feeds:
-        items = fetch_rss_feed(url, name, tags)
-        for item in items:
-            item["category_override"] = "security-alerts"
-        all_items.extend(items)
+    all_items = fetch_rss_feeds_concurrent(feeds)
+    for item in all_items:
+        item["category_override"] = "security-alerts"
     return all_items
 
 

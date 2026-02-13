@@ -21,7 +21,7 @@ from common.config import get_env, setup_logging, get_ssl_verify
 from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
 from common.utils import sanitize_string, detect_language, request_with_retry
-from common.rss_fetcher import fetch_rss_feed
+from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
 
 try:
@@ -82,7 +82,7 @@ def fetch_google_news_browser_stocks(limit: int = 20) -> List[Dict[str, Any]]:
 
 
 def fetch_financial_rss_feeds() -> List[Dict[str, Any]]:
-    """Fetch news from major financial media RSS feeds."""
+    """Fetch news from major financial media RSS feeds (concurrent)."""
     feeds = [
         ("https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114",
          "CNBC Top News", ["stock", "cnbc"]),
@@ -95,23 +95,18 @@ def fetch_financial_rss_feeds() -> List[Dict[str, Any]]:
         ("https://news.google.com/rss/search?q=site:biz.chosun.com+%EC%A3%BC%EC%8B%9D&hl=ko&gl=KR&ceid=KR:ko",
          "조선비즈", ["stock", "korean", "조선비즈"]),
     ]
-    all_items = []
-    for url, name, tags in feeds:
-        all_items.extend(fetch_rss_feed(url, name, tags))
-    return all_items
+    return fetch_rss_feeds_concurrent(feeds)
 
 
 def fetch_google_news_stocks() -> List[Dict[str, Any]]:
-    """Fetch stock news from Google News RSS (expanded sources)."""
+    """Fetch stock news from Google News RSS (concurrent)."""
     feeds = [
-        # US market
         ("https://news.google.com/rss/search?q=stock+market+S%26P+500&hl=en-US&gl=US&ceid=US:en",
          "Google News Stocks EN", ["stock", "market", "english"]),
         ("https://news.google.com/rss/search?q=NASDAQ+tech+stocks+AI&hl=en-US&gl=US&ceid=US:en",
          "NASDAQ/Tech", ["stock", "nasdaq", "tech"]),
         ("https://news.google.com/rss/search?q=Fed+interest+rate+bond+yield&hl=en-US&gl=US&ceid=US:en",
          "Fed/Bond", ["stock", "fed", "bond"]),
-        # Korea market
         ("https://news.google.com/rss/search?q=주식+코스피+코스닥&hl=ko&gl=KR&ceid=KR:ko",
          "Google News Stocks KR", ["stock", "kospi", "korean"]),
         ("https://news.google.com/rss/search?q=삼성전자+SK하이닉스+반도체+주가&hl=ko&gl=KR&ceid=KR:ko",
@@ -121,10 +116,7 @@ def fetch_google_news_stocks() -> List[Dict[str, Any]]:
         ("https://news.google.com/rss/search?q=한국은행+금리+환율+원달러&hl=ko&gl=KR&ceid=KR:ko",
          "한국 금리/환율", ["stock", "rate", "korean"]),
     ]
-    all_items = []
-    for url, name, tags in feeds:
-        all_items.extend(fetch_rss_feed(url, name, tags))
-    return all_items
+    return fetch_rss_feeds_concurrent(feeds)
 
 
 def fetch_yahoo_finance_rss() -> List[Dict[str, Any]]:

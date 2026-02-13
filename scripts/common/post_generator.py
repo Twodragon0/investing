@@ -76,7 +76,7 @@ class PostGenerator:
         frontmatter_lines = [
             "---",
             f'title: "{escaped_title}"',
-            f"date: {date.strftime('%Y-%m-%d %H:%M:%S %z').strip()}",
+            f"date: {date.strftime('%Y-%m-%d %H:%M:%S %z')}",
             f"categories: [{self.category}]",
         ]
 
@@ -99,6 +99,11 @@ class PostGenerator:
 
         # Build content
         post_content = "\n".join(frontmatter_lines) + "\n\n" + content.strip()
+
+        # Validate frontmatter
+        if post_content.count("---") < 2:
+            logger.warning("Invalid frontmatter in post: %s", filename)
+            return None
 
         # Add source attribution
         if source_url:
