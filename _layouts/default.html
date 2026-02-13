@@ -53,6 +53,16 @@
       if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
     }, { passive: true });
   })();
+  // External links → new tab
+  (function() {
+    var host = location.hostname;
+    document.querySelectorAll('main a[href^="http"]').forEach(function(a) {
+      if (a.hostname !== host) {
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+      }
+    });
+  })();
   </script>
 </body>
 </html>
