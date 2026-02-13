@@ -137,6 +137,34 @@ layout: default
     </a>
     {% endif %}
   </nav>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ page.title | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Investing Dragon"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Investing Dragon",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ '/assets/images/og-default.png' | absolute_url }}"
+    }
+  },
+  "description": {{ page.excerpt | strip_html | truncate: 160 | jsonify }},
+  {% if page.image %}"image": "{{ page.image | absolute_url }}",{% endif %}
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  }
+}
+  </script>
 </article>
 
 <script>
