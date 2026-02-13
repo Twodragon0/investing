@@ -730,6 +730,7 @@ def main():
         tags=["market-summary", "daily", "crypto", "stock", "macro", "top-coins"],
         source="auto-generated",
         lang="ko",
+        image=f"/assets/images/generated/market-heatmap-{today}.png",
         slug="daily-market-report",
     )
 

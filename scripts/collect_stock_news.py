@@ -474,6 +474,7 @@ def main():
         tags=["stock", "market", "daily-digest"],
         source="consolidated",
         lang="ko",
+        image=f"/assets/images/generated/market-snapshot-{today}.png",
         slug="daily-stock-news-digest",
     )
     if filepath:

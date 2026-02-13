@@ -46,6 +46,7 @@ class PostGenerator:
         source: str = "",
         source_url: str = "",
         lang: str = "ko",
+        image: str = "",
         extra_frontmatter: Optional[Dict[str, str]] = None,
         slug: Optional[str] = None,
     ) -> Optional[str]:
@@ -90,6 +91,8 @@ class PostGenerator:
             frontmatter_lines.append(f"source_url: \"{source_url}\"")
         if lang:
             frontmatter_lines.append(f"lang: \"{lang}\"")
+        if image:
+            frontmatter_lines.append(f"image: \"{image}\"")
 
         if extra_frontmatter:
             for key, value in extra_frontmatter.items():
@@ -121,6 +124,7 @@ class PostGenerator:
         sections: Dict[str, str],
         date: Optional[datetime] = None,
         tags: Optional[List[str]] = None,
+        image: str = "",
         slug: Optional[str] = None,
     ) -> Optional[str]:
         """Create a summary post with multiple sections (e.g., market summary)."""
@@ -135,5 +139,6 @@ class PostGenerator:
             date=date,
             tags=tags,
             source="auto-generated",
+            image=image,
             slug=slug,
         )

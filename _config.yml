@@ -5,6 +5,14 @@ baseurl: ""
 lang: ko
 timezone: Asia/Seoul
 
+# Social sharing / SEO
+og_image: /assets/images/og-default.png
+logo: /assets/images/og-default.png
+social:
+  name: Investing Dragon
+twitter:
+  card: summary_large_image
+
 theme: minima
 plugins:
   - jekyll-feed

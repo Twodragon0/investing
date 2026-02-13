@@ -577,6 +577,7 @@ def main():
         tags=["social-media", "telegram", "twitter", "reddit", "politics", "trump", "이재명", "daily-digest"],
         source="consolidated",
         lang="ko",
+        image=f"/assets/images/generated/source-distribution-{today}.png",
         slug="daily-social-media-digest",
     )
     if filepath:

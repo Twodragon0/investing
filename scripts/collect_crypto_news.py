@@ -556,6 +556,7 @@ def main():
             tags=["crypto", "news", "daily-digest"],
             source="consolidated",
             lang="ko",
+            image=f"/assets/images/generated/news-summary-{today}.png",
             slug="daily-crypto-news-digest",
         )
         if filepath:

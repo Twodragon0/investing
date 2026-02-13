@@ -6,6 +6,7 @@ tags: [일일요약, 암호화폐, 주식, 규제, 소셜미디어, 보안]
 source: "consolidated"
 lang: "ko"
 pin: true
+image: "/assets/images/generated/news-summary-2026-02-13.png"
 ---
 
 > 암호화폐 111건, 주식 158건, 보안 1건, 규제 30건, 소셜 미디어 39건의 뉴스를 종합 분석한 일일 요약입니다.

@@ -248,6 +248,7 @@ def main():
         tags=["regulation", "sec", "cftc", "fsc", "daily-digest"],
         source="consolidated",
         lang="ko",
+        image=f"/assets/images/generated/regulatory-summary-{today}.png",
         slug="daily-regulatory-report",
     )
     if filepath:
