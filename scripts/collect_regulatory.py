@@ -156,6 +156,14 @@ def main():
         f"총 {len(all_items)}건의 규제 관련 뉴스가 수집되었습니다.\n",
     ]
 
+    # Executive summary (한눈에 보기)
+    exec_summary = summarizer.generate_executive_summary(
+        category_type="regulatory",
+        extra_data={"region_counts": region_counts},
+    )
+    if exec_summary:
+        content_parts.append(exec_summary)
+
     # Key summary
     content_parts.append("## 핵심 요약\n")
     content_parts.append(f"- **총 수집 건수**: {len(all_items)}건")

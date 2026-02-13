@@ -426,6 +426,14 @@ def main():
             content_parts.append(dist_chart)
             content_parts.append("\n---\n")
 
+        # Executive summary (한눈에 보기)
+        exec_summary = summarizer.generate_executive_summary(
+            category_type="crypto",
+            extra_data={"top_keywords": top_keywords},
+        )
+        if exec_summary:
+            content_parts.append(exec_summary)
+
         # Key summary
         content_parts.append("## 핵심 요약\n")
         content_parts.append(f"- **총 뉴스 건수**: {len(all_items)}건")

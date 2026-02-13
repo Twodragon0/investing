@@ -408,6 +408,14 @@ def main():
         highlights.append(f"- 총 {total_count}건의 소셜 데이터가 수집되었습니다.")
     content_parts.extend(highlights)
 
+    # Executive summary (한눈에 보기)
+    exec_summary = summarizer.generate_executive_summary(
+        category_type="social",
+        extra_data={"top_keywords": top_keywords},
+    )
+    if exec_summary:
+        content_parts.append(exec_summary)
+
     # Theme distribution chart
     dist = summarizer.generate_distribution_chart()
     if dist:

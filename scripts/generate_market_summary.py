@@ -647,6 +647,32 @@ def main():
     if highlights:
         sections["오늘의 핵심"] = highlights
 
+    # Executive summary (한눈에 보기)
+    exec_parts = []
+    if fear_greed:
+        fg_val = fear_greed.get("value", "N/A")
+        fg_class = fear_greed.get("value_classification", "N/A")
+        exec_parts.append(f"- **공포/탐욕 지수**: {fg_val} ({fg_class})")
+    if global_data:
+        mcap = global_data.get("total_market_cap_usd")
+        if mcap:
+            exec_parts.append(f"- **글로벌 암호화폐 시총**: ${mcap/1e12:.2f}T")
+        btc_dom = global_data.get("btc_dominance")
+        if btc_dom:
+            exec_parts.append(f"- **BTC 도미넌스**: {btc_dom:.1f}%")
+    if top_coins:
+        btc = next((c for c in top_coins if c.get("symbol", "").upper() == "BTC"), None)
+        eth = next((c for c in top_coins if c.get("symbol", "").upper() == "ETH"), None)
+        if btc:
+            exec_parts.append(f"- **BTC**: ${btc.get('current_price', 0):,.0f} ({btc.get('price_change_percentage_24h', 0):+.2f}%)")
+        if eth:
+            exec_parts.append(f"- **ETH**: ${eth.get('current_price', 0):,.0f} ({eth.get('price_change_percentage_24h', 0):+.2f}%)")
+    if kr_market:
+        for name, info in kr_market.items():
+            exec_parts.append(f"- **{name}**: {info['price']} ({info['change_pct']})")
+    if exec_parts:
+        sections["한눈에 보기"] = "\n".join(exec_parts)
+
     # Market insight
     insight = generate_insight(global_data, top_coins, fear_greed, us_market, kr_market)
     if insight:

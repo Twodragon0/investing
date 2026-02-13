@@ -255,3 +255,74 @@ class ThemeSummarizer:
             lines.append("")
 
         return "\n".join(lines)
+
+    def generate_executive_summary(self, category_type: str = "general",
+                                    extra_data: Dict[str, Any] | None = None) -> str:
+        """Generate a TL;DR executive summary section for the top of blog posts.
+
+        Args:
+            category_type: One of "crypto", "stock", "regulatory", "social", "market", "security"
+            extra_data: Optional dict with market data, region counts, etc.
+
+        Returns:
+            Markdown string with blockquote summary + key points table.
+        """
+        if len(self.items) < 3:
+            return ""
+
+        top_themes = self.get_top_themes()
+        extra = extra_data or {}
+        total = len(self.items)
+
+        # Build narrative summary
+        theme_names = [t[0] for t in top_themes[:3]] if top_themes else []
+        themes_str = ", ".join(theme_names[:2]) if theme_names else "다양한 이슈"
+
+        # Category-specific opening
+        openers = {
+            "crypto": f"오늘 암호화폐 시장은 **{themes_str}** 중심으로 {total}건의 뉴스가 수집되었습니다.",
+            "stock": f"오늘 주식 시장은 **{themes_str}** 이슈가 부각되며 {total}건의 뉴스가 분석되었습니다.",
+            "regulatory": f"글로벌 규제 동향에서 **{themes_str}** 관련 {total}건의 소식이 수집되었습니다.",
+            "social": f"소셜 미디어에서 **{themes_str}** 관련 {total}건의 트렌드가 포착되었습니다.",
+            "security": f"블록체인 보안 분야에서 {total}건의 사건이 보고되었습니다.",
+            "market": f"시장 전반에 걸쳐 **{themes_str}** 이슈가 주도하고 있습니다.",
+        }
+        opener = openers.get(category_type, f"총 {total}건의 뉴스가 수집되었습니다. **{themes_str}** 관련 이슈가 주목됩니다.")
+
+        lines = ["\n## 한눈에 보기\n"]
+        lines.append(f"> {opener}\n")
+
+        # Key points table
+        lines.append("| 구분 | 내용 |")
+        lines.append("|------|------|")
+        lines.append(f"| 수집 건수 | {total}건 |")
+
+        if theme_names:
+            lines.append(f"| 주요 테마 | {', '.join(theme_names)} |")
+
+        # Add theme article counts
+        if top_themes:
+            top_theme = top_themes[0]
+            lines.append(f"| 최다 이슈 | {top_theme[2]} {top_theme[0]} ({top_theme[3]}건) |")
+
+        # Category-specific extra rows
+        if category_type == "stock" and extra.get("kr_market"):
+            kr = extra["kr_market"]
+            for name, info in kr.items():
+                lines.append(f"| {name} | {info['price']} ({info['change_pct']}) |")
+
+        if category_type == "regulatory" and extra.get("region_counts"):
+            regions = extra["region_counts"]
+            region_str = ", ".join(f"{r} {c}건" for r, c in regions.most_common())
+            lines.append(f"| 지역별 | {region_str} |")
+
+        if category_type == "social" and extra.get("top_keywords"):
+            kw_str = ", ".join(f"{kw}({cnt})" for kw, cnt in extra["top_keywords"][:5])
+            lines.append(f"| 핫 키워드 | {kw_str} |")
+
+        if category_type == "crypto" and extra.get("top_keywords"):
+            kw_str = ", ".join(f"{kw}({cnt})" for kw, cnt in extra["top_keywords"][:5])
+            lines.append(f"| 핫 키워드 | {kw_str} |")
+
+        lines.append("")
+        return "\n".join(lines)

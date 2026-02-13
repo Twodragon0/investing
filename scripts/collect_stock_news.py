@@ -286,6 +286,14 @@ def main():
     # Create summarizer
     summarizer = ThemeSummarizer(all_items)
 
+    # Executive summary (한눈에 보기)
+    exec_summary = summarizer.generate_executive_summary(
+        category_type="stock",
+        extra_data={"kr_market": kr_market},
+    )
+    if exec_summary:
+        content_parts.append(exec_summary)
+
     # Key summary
     content_parts.append("## 핵심 요약\n")
     content_parts.append(f"- **총 뉴스 건수**: {len(all_items)}건")
