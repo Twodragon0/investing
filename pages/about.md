@@ -48,12 +48,12 @@ Investing Dragon은 암호화폐 및 주식 시장의 뉴스를 **자동으로 �
 
 ## 기술 스택
 
-- **사이트**: Jekyll + GitHub Pages
+- **사이트**: Jekyll + Vercel (Primary) / GitHub Pages
 - **수집**: Python 3 스크립트
 - **자동화**: GitHub Actions (CI/CD)
 - **데이터**: yfinance, CoinGecko API, Google News RSS
 - **시각화**: matplotlib, Pillow (히트맵, 차트)
-- **배포**: 자동 (push 시 GitHub Pages 빌드)
+- **배포**: Vercel 자동 배포 + GitHub Pages
 
 ## 면책 조항
 

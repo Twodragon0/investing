@@ -3790,3 +3790,61 @@ main {
     height: 2px;
   }
 }
+
+/* 404 Error Page */
+.error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+}
+.error-content {
+  max-width: 500px;
+  padding: 2rem;
+}
+.error-code {
+  font-size: 6rem;
+  font-weight: 800;
+  color: #58a6ff;
+  line-height: 1;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+.error-page h1 {
+  font-size: 1.5rem;
+  color: #e6edf3;
+  margin-bottom: 0.5rem;
+}
+.error-page p {
+  color: #8b949e;
+  margin-bottom: 2rem;
+}
+.error-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.error-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.error-btn.primary {
+  background: #58a6ff;
+  color: #0d1117;
+  font-weight: 600;
+}
+.error-btn.primary:hover { background: #79b8ff; }
+.error-btn.secondary {
+  background: #21262d;
+  color: #e6edf3;
+  border: 1px solid #30363d;
+}
+.error-btn.secondary:hover { background: #30363d; }

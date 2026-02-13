@@ -254,7 +254,7 @@ layout: default
     {% assign analysis_date = latest_analysis.date | date: "%Y-%m-%d" %}
     {% assign heatmap_path = "/assets/images/generated/market-heatmap-" | append: analysis_date | append: ".png" %}
     <div class="summary-image-wrapper">
-      <img src="{{ heatmap_path | relative_url }}" alt="시장 히트맵" class="summary-market-image" onerror="this.parentElement.style.display='none'">
+      <img src="{{ heatmap_path | relative_url }}" alt="시장 히트맵" class="summary-market-image" loading="lazy" onerror="this.parentElement.style.display='none'">
     </div>
     <div class="summary-content">
       <h3><a href="{{ latest_analysis.url | relative_url }}">{{ latest_analysis.title }}</a></h3>
