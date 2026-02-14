@@ -294,6 +294,26 @@ class ThemeSummarizer:
 
         return "\n".join(lines)
 
+    # Stop words to exclude from theme briefing keywords
+    _STOP_WORDS = {
+        # English
+        "stock", "market", "today", "will", "this", "that", "with", "from",
+        "have", "been", "were", "what", "when", "where", "which", "while",
+        "more", "than", "also", "just", "into", "over", "some", "most",
+        "here", "they", "their", "them", "there", "these", "those",
+        "about", "after", "before", "could", "would", "should", "other",
+        "news", "says", "said", "like", "amid", "near", "latest", "first",
+        "last", "next", "week", "year", "days", "time", "back", "still",
+        "even", "very", "much", "many", "each", "every", "make", "made",
+        "does", "know", "take", "come", "look", "show", "close", "closes",
+        "gains", "little", "changed", "under", "posts", "surprise",
+        "better", "despite", "price", "update", "updates", "live",
+        "report", "check", "according", "report", "following", "based",
+        # Korean common
+        "관련", "이슈", "뉴스", "시장", "오늘", "최근", "현재",
+        "전일", "대비", "분야", "주요", "방안부터", "전망까지", "주요뉴스",
+    }
+
     def _generate_single_theme_briefing(self, theme_key: str,
                                          articles: List[Dict[str, Any]]) -> str:
         """Generate a 1-sentence briefing for a single theme from descriptions."""
@@ -309,8 +329,9 @@ class ThemeSummarizer:
             text = desc if desc and desc != title else title
             if not top_desc and text:
                 top_desc = text[:80]
-            # Extract meaningful words (4+ chars)
+            # Extract meaningful words (4+ chars), skip stop words
             words = re.findall(r"[a-zA-Z가-힣]{4,}", text)
+            words = [w for w in words if w.lower() not in self._STOP_WORDS]
             keywords.extend(words[:3])
 
         if not keywords:
@@ -318,7 +339,7 @@ class ThemeSummarizer:
 
         # Get top 3 unique keywords
         kw_counts = Counter(keywords)
-        top_kws = [kw for kw, _ in kw_counts.most_common(5)][:3]
+        top_kws = [kw for kw, _ in kw_counts.most_common(8)][:3]
         if not top_kws:
             return ""
 

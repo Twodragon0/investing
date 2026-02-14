@@ -6,46 +6,24 @@ tags: [일일요약, 암호화폐, 주식, 규제, 소셜미디어, 보안, 정�
 source: "consolidated"
 lang: "ko"
 pin: true
-excerpt: "암호화폐 73건, 주식 99건, 보안 1건, 규제 9건, 소셜 미디어 19건, 정치인 거래 12건의 뉴스를 종합 분석한 일일 요약"
+excerpt: "암호화폐 70건, 주식 91건, 소셜 미디어 9건의 뉴스를 종합 분석한 일일 요약"
 ---
 
-> 암호화폐 73건, 주식 99건, 보안 1건, 규제 9건, 소셜 미디어 19건, 정치인 거래 12건의 뉴스를 종합 분석한 일일 요약입니다.
+> 암호화폐 70건, 주식 91건, 소셜 미디어 9건의 뉴스를 종합 분석한 일일 요약입니다.
 
 ## 핵심 브리핑
 
-> - 가장 많이 언급된 키워드는 **bitcoin**(20회)으로, 시장의 핵심 관심사입니다.
+> - 가장 많이 언급된 키워드는 **bitcoin**(17회)으로, 시장의 핵심 관심사입니다.
 > - **KOSPI** 5,507.01으로 전일 대비 -0.28% 하락
-> - 가장 많이 언급된 키워드는 **trump**(8회)입니다.
+> - 가장 많이 언급된 키워드는 **bitcoin**(6회)입니다.
 
 ## 긴급 알림
 
 > 즉시 확인이 필요한 긴급 뉴스입니다.
 
-- **Lending protocols are becoming the target of DeFi exploits - Cryptopolitan**
-- **Bitcoin Price Crash Rattles Trump's Crypto Progress. Here's The Upshot For Investors. - Investor's Business Daily**
-- **[Bitcoin Price Crash Rattles Trump's Crypto Progress. Here's The Upshot For Investors. - Investor's Business Daily](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPVUtQQWJPdi1qQVRDcEpCSjcwZVhrM0RoYk5YYmtIN3BnNVVXUFozY0lMb3JFazZyc1YyWWZXckhXUDJxMlpjWGdXYnlaY0IwcS1fbnQ4OTlRUW9FQWlKT2Q5SzV2ell4b3VyS0tOS2tYNU9vVENvNXBNMTdiMnhwNWI1Sk9ON2NN?oc=5) — Trump Crypto Policy**
-- **[Bitcoin Price Crash Rattles Trump's Crypto Progress. Here's The Upshot For Investors. - Investor's Business Daily](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPVUtQQWJPdi1qQVRDcEpCSjcwZVhrM0RoYk5YYmtIN3BnNVVXUFozY0lMb3JFazZyc1YyWWZXckhXUDJxMlpjWGdXYnlaY0IwcS1fbnQ4OTlRUW9FQWlKT2Q5SzV2ell4b3VyS0tOS2tYNU9vVENvNXBNMTdiMnhwNWI1Sk9ON2NN?oc=5) — Trump Crypto Policy**
-- ****트럼프 행정명령/정책**: 6건**
-
-## 시장 개요
-
-- **KOSPI**: 5,507.01 (-15.26, -0.28%)
-- **KOSDAQ**: 1,106.08 (-19.91, -1.77%)
-- **USD/KRW 환율**: 1,440.90 (-0.61, -0.04%)
-- **금**: $5,063.80 (+69.80, +1.40%)
-- **원유(WTI)**: $62.81 (+0.03, +0.05%)
-
----
-
-## 정치인 워치
-
-- **총 수집 건수**: 12건
-- **미국 의회 거래**: 1건
-- **SEC 내부자 거래**: 5건
-- **트럼프 행정명령/정책**: 6건
-- **주요 키워드**: sec(10), trump(8), tariff(6), congress(4), 행정명령(2)
-
-[상세 보기](/political-trades/2026/02/14/daily-political-trades-report/)
+- **[Bitcoin Price Crash Rattles Trump's Crypto Progress. Here's The Upshot For Investors.](https://news.google.com/read/CBMiiAFBVV95cUxPVUtQQWJPdi1qQVRDcEpCSjcwZVhrM0RoYk5YYmtIN3BnNVVXUFozY0lMb3JFazZyc1YyWWZXckhXUDJxMlpjWGdXYnlaY0IwcS1fbnQ4OTlRUW9FQWlKT2Q5SzV2ell4b3VyS0tOS2tYNU9vVENvNXBNMTdiMnhwNWI1Sk9ON2NN?hl=en-US&gl=US&ceid=US%3Aen)**
+- **[Gold, silver, S&P 500, crypto crash again amid extreme fear](https://news.google.com/read/CBMihAFBVV95cUxQaUMzbk9YY0xLS1lyNGs1VHB2c2FiY2RMb0NjTzdISWpicFJDWU91RXBrS1FZYUkwY0kzek1mQ1dwRmhJVkhoX1lSdTN4b0NhOHhyZGtDTkpzRVlGNkdVYTFIckFVZ19MOHF6NkhXTTktREhxa3RsXzJPTk40aXNOcEh2aEE?hl=en-US&gl=US&ceid=US%3Aen)**
+- **[‘워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까](https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako)**
 
 ---
 
@@ -53,59 +31,39 @@ excerpt: "암호화폐 73건, 주식 99건, 보안 1건, 규제 9건, 소셜 미
 
 > 규제, ETF, 실적 등 주요 뉴스입니다.
 
-- **주요 키워드**: bitcoin(20), ethereum(1), regulation(1), defi(1)
-- New Cryptocurrency ListingCheck out the latest coin listings and pairs on Launchpad, Launchpool, Spot, Margin, and Futures markets.
-- New Fiat ListingsSee which new fiat-to-crypto trading pairs are available on Binance.
-- DelistingGet information on coins or trading pairs to be removed.
-- [DeFi Education Fund calls on UK FCA to narrow definition of control in crypto regulation - CoinDesk](https://news.google.com/rss/articles/CBMiygFBVV95cUxPMW1KbkRPMjNwLThZRFgtZkdVOWM3TWptY3dqRWtOUnJIQzNDNVFkWDB0MDZ1Q3JubzNnWlQ0ZWZLWEZFS0ZtcmdlWG1oZnBXd3NYRjAybXNvYnZ5Q1g3NFFRUEdaQ0JXNklVY2NsQlgyNWJPWVpXekhvaUVYRG9HUW52czJxT1JqXzEyemRMNWxHRmczTS1HXzh6SUFRWHhvUS1ZVUpyT0MzWlE4WDlIUUR6VWZpR2w2aVlPcjk2MjhEOGNVU0hQNzhB?oc=5) — UK FCA
-- House votes to slap back Trump’s tariffs on Canada in rare bipartisan rebuke - Oregon Public Broadcasting - OPB
-- Trump Tariffs Job Growth All In Home Care - - Random Lengths News
+- [New Cryptocurrency ListingCheck out the latest coin listings and pairs on Launchpad, Launchpool, Spot, Margin, and Futures markets.](https://www.binance.com/en/support/announcement/list/48)
+- [Trump-linked Truth Social seeks SEC approval for two crypto ETFs](https://news.google.com/read/CBMirAFBVV95cUxQVmJ1bmNyMG1wZl9BLVFSMXZ2UklUMmRmM1pTVkJ4blBDbDdUOFAyUlV5TmFacU9PZXI1MlY4MlBSS1BiVVp2N29qTHBROTlDSEJPNTNaMjFaR1FHZzFOcWlIOWVnZjQtdEZxRjU2S05uRTFlSXJuTUdfYng3cE9wbkp3SjVCZzdkTTM0NVJGYXpXbDAyVWlkektjbFpOb0hUMExRMnl0UVJjZ1Az?hl=en-US&gl=US&ceid=US%3Aen)
 
 ---
 
 ## 카테고리별 요약
 
-### 암호화폐 뉴스 (73건)
+### 암호화폐 뉴스 (70건)
 
-주요 테마: **비트코인**(33건), **가격/시장**(23건), **거래소**(10건), **정치/정책**(7건)
+주요 테마: **비트코인**(31건), **가격/시장**(20건), **거래소**(8건), **정치/정책**(6건)
 
-- 가장 많이 언급된 키워드는 **bitcoin**(20회)으로, 시장의 핵심 관심사입니다.
+- 가장 많이 언급된 키워드는 **bitcoin**(17회)으로, 시장의 핵심 관심사입니다.
 - **Google News**에서 가장 많은 뉴스(20건)가 수집되었습니다.
-- 총 73건의 뉴스가 수집되어 시장 관심이 높은 상황입니다.
+- 총 70건의 뉴스가 수집되어 시장 관심이 높은 상황입니다.
 - **비트코인** 관련 뉴스에 주목할 필요가 있습니다.
 
 [상세 보기](/crypto-news/2026/02/14/daily-crypto-news-digest/)
 
-### 주식 시장 뉴스 (99건)
+### 주식 시장 뉴스 (91건)
 
-- **2026-02-14** 주식 시장에서 99건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,507.01(-0.28%), KOSDAQ 1,106.08(-1.77%), USD/KRW 1,440.90(-0.04%).
+- **2026-02-14** 주식 시장에서 91건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,507.01(-0.28%), KOSDAQ 1,106.08(-1.77%), USD/KRW 1,443.30(+0.12%).
 
 - **KOSPI** 5,507.01으로 전일 대비 -0.28% 하락
 - **KOSDAQ** 1,106.08으로 전일 대비 -1.77% 하락
-- **USD/KRW** 1,440.90으로 전일 대비 -0.04% 하락
+- **USD/KRW** 1,443.30으로 전일 대비 +0.12% 상승
 - **가격/시장** 관련 뉴스에 주목할 필요가 있습니다.
 
 [상세 보기](/stock-news/2026/02/14/daily-stock-news-digest/)
 
-### 규제 동향 (9건)
+### 소셜 미디어 동향 (9건)
 
-- **총 수집 건수**: 9건
-- **미국**: 3건
-- **한국**: 3건
-
-[상세 보기](/regulatory-news/2026/02/14/daily-regulatory-report/)
-
-### 보안 리포트 (1건)
-
-- **보안 사고/뉴스**: 총 1건
-- **보안 관련 뉴스**: 1건
-
-[상세 보기](/security-alerts/2026/02/14/daily-security-report/)
-
-### 소셜 미디어 동향 (19건)
-
-- 가장 많이 언급된 키워드는 **trump**(8회)입니다.
-- 가장 활발한 채널: 소셜 미디어(1건), 정치·경제(18건)
+- 가장 많이 언급된 키워드는 **bitcoin**(6회)입니다.
+- 가장 활발한 채널: 소셜 미디어(1건), 정치·경제(8건)
 
 [상세 보기](/crypto-news/2026/02/14/daily-social-media-digest/)
 
@@ -113,11 +71,9 @@ excerpt: "암호화폐 73건, 주식 99건, 보안 1건, 규제 9건, 소셜 미
 
 ## 주목할 소식
 
-- API UpdatesLearn latest news on API updates.
-- Maintenance UpdatesStay updated on maintenance of various networks and tokens.
-- Crypto AirdropCheck the latest crypto airdrops Binance supports.
-- S&P 500 closes little changed after soft inflation report, index notches losing week: Live updates
-- Dow slides 600 points, S&P 500 falls for a third day as AI disruption fears rattle markets: Live updates
+- [S&P 500 closes little changed after soft inflation report, index notches losing week: Live updates](https://news.google.com/read/CBMid0FVX3lxTE1rMzAwSXVIelF1VVJ2WU1YbzFiLWtfa0xMRDFVLTZpVE1WcGlrM3hPZnJScFV1b1A2WTNXX3JQeHFEcWRaTU5HdDlYMF83czJndGZqZUY0Y3piUTkzME5LaWFoVlFQQ0xCSXAyaGtlNUlMMU1JMTBJ0gF8QVVfeXFMUG1WcWJDeUpjZVd1ZDdzSWxFaEQ1VUlWX0NnWnFBZTQ1dFBmVlF1dWY1TzRjS2hUbjItWGxzWjFjczZ4QnU4RWVsQ2thWFMyZ0I4T2lfM0p0U3VaUFc4S0t5RXZVTTUyQS1sMzBQYWhOWlhWZ0lncmpnczY1Mw?hl=en-US&gl=US&ceid=US%3Aen)
+- [Stock Market on Feb. 13, 2026: Dow, S&P 500 close with slight gains after inflation report; stocks book a losing week as tech remains under pressure; Treasury yields decline](https://news.google.com/read/CBMiuwNBVV95cUxPd1pNTzV0MEkzT1dQeHpaUUc2c0FuNzRoX2p3X1NKaFQ4bmtCbHlvdFpzR0FuM3dxZTJ6NThXLWhNVm1rcHMzb3ZyNXhsbkxrUjBpbDUteldFbjU0ek9BWFUwcDIxcjcwOFVWZFBxTU1OUWJJRUkzUlRZbjhhUUNpTFBIVnFocTYxZEZRY1I5U0w4d2lLdlVraEZmdzNKX2M0RlhVYzRMVmNDNjc3cEQyM3ZsUW9Sak0ycHNhXzNpbXFwTXZBM280eGlIb2xaZk1JUnNRRk9kZTFaMmtoTjlVZFBsdWdkVVRRcGpnclNrYloxLUxBT3cyRE1MZ0ZmbFFOSVhtZEZEVVRZQlNoTmlYdU9BSkVzaUJWdEhWMHh1QVEyalFqTG9jWmtaRGpOQk1wRVVNWE5qaFg2NUc5TzBtcFgtejd0clBidnFOY3RPc0QtcTlPNDFGX0ExOURnZXI5NGg1TDVXdU1oaTlvMDJKbTQ0TTBxVGFQRlZOVmpHR1lPYnU1aG80cF9JdlctUHIzWG9yZl9QakRMbElXWHQyR1RqZzFRSTF4M3QydlZKdEx0bUN2V2t6cUIzNA?hl=en-US&gl=US&ceid=US%3Aen)
+- [Dow slides 600 points, S&P 500 falls for a third day as AI disruption fears rattle markets: Live updates](https://news.google.com/read/CBMid0FVX3lxTE9FN2VlMkQwUUxVWHdDU0E4SU41bmdRTXliZFdLc2RTZVJGeU93RVd0WVJtcmJQcWFuUXZIcXJCU2RyaEFmOUJvTGF4ck5IXzJEMTBqMWdNSGZybDAzdnQyZlpIZVRoVVJIVXB4ZkdvTjVGX3VLYnM00gF8QVVfeXFMTUJFYjdqZHI4dXI5WUdRVWpOWVlYcUc0WWRQVUF3RVlBWVBKS3ZYZjJpMktKbE9pZWV4X3BLT180ZFBsanpaWF9vTTI2QV9xcTk5VC1fR0dpb3hXbVdoNWJkZXNQT1ZnZ0hnN3pBaHdwQTVnazFXZjJWY1BkSQ?hl=en-US&gl=US&ceid=US%3Aen)
 
 ---
 
@@ -125,13 +81,9 @@ excerpt: "암호화폐 73건, 주식 99건, 보안 1건, 규제 9건, 소셜 미
 
 | 리포트 | 수집 건수 | 링크 |
 |:---|:---:|:---|
-| 암호화폐 뉴스 | 73건 | [바로가기](/crypto-news/2026/02/14/daily-crypto-news-digest/) |
-| 시장 종합 리포트 | - | [바로가기](/market-analysis/2026/02/14/daily-market-report/) |
-| 정치인 거래 | 12건 | [바로가기](/political-trades/2026/02/14/daily-political-trades-report/) |
-| 규제 동향 | 9건 | [바로가기](/regulatory-news/2026/02/14/daily-regulatory-report/) |
-| 보안 리포트 | 1건 | [바로가기](/security-alerts/2026/02/14/daily-security-report/) |
-| 소셜 미디어 | 19건 | [바로가기](/crypto-news/2026/02/14/daily-social-media-digest/) |
-| 주식 시장 뉴스 | 99건 | [바로가기](/stock-news/2026/02/14/daily-stock-news-digest/) |
+| 암호화폐 뉴스 | 70건 | [바로가기](/crypto-news/2026/02/14/daily-crypto-news-digest/) |
+| 소셜 미디어 | 9건 | [바로가기](/crypto-news/2026/02/14/daily-social-media-digest/) |
+| 주식 시장 뉴스 | 91건 | [바로가기](/stock-news/2026/02/14/daily-stock-news-digest/) |
 
 ---
 

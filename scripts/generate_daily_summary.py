@@ -268,28 +268,40 @@ def get_post_url(filepath: str, today: str, category: str = "") -> str:
 def _collect_all_news_items(summaries: List[Optional[Dict]]) -> List[Dict[str, Any]]:
     """Collect all news item titles+descriptions from post contents for priority classification."""
     items = []
+    seen_titles = set()
     for s in summaries:
         if not s or not s.get("content"):
             continue
         content = s["content"]
-        # Extract titles from markdown table rows and bullet points
+        in_card_section = False
         for line in content.split("\n"):
             line = line.strip()
-            if line.startswith("| ") and "**" in line:
-                # Table row with bold title
-                match = re.search(r"\*\*(.+?)\*\*", line)
+            # Detect card section headers (### 🟠 비트코인, etc.)
+            if line.startswith("### ") and "건)" in line:
+                in_card_section = True
+                continue
+            # Extract from card format: **1. [Title](link)**
+            if in_card_section and line.startswith("**") and "[" in line:
+                match = re.search(r"\[([^\]]+)\]\(([^)]+)\)", line)
                 if match:
-                    items.append({
-                        "title": match.group(1),
-                        "description": line,
-                        "source": s.get("type", ""),
-                    })
-            elif line.startswith("- ") and len(line) > 10:
-                items.append({
-                    "title": line[2:],
-                    "description": line,
-                    "source": s.get("type", ""),
-                })
+                    title = match.group(1)
+                    link = match.group(2)
+                    # Deduplicate by normalized title
+                    norm = re.sub(r"[^a-z가-힣0-9]", "", title.lower())
+                    if norm not in seen_titles:
+                        seen_titles.add(norm)
+                        items.append({
+                            "title": f"[{title}]({link})",
+                            "description": title,
+                            "source": s.get("type", ""),
+                        })
+            # Also extract description lines right after card items
+            if in_card_section and not line.startswith("**") and not line.startswith(">") and not line.startswith("`") and not line.startswith("#") and not line.startswith("|") and line and not line.startswith("---"):
+                # This might be a description line, skip it for item collection
+                pass
+            # Stop card parsing at next major section
+            if line.startswith("## ") and in_card_section:
+                in_card_section = False
     return items
 
 
@@ -416,8 +428,13 @@ def main():
     if priority_items.get("P0"):
         content_parts.append("## 긴급 알림\n")
         content_parts.append("> 즉시 확인이 필요한 긴급 뉴스입니다.\n")
+        seen_p0 = set()
         for item in priority_items["P0"][:5]:
             title = item.get("title", "")
+            norm = re.sub(r"[^a-z가-힣0-9]", "", item.get("description", title).lower())
+            if norm in seen_p0:
+                continue
+            seen_p0.add(norm)
             content_parts.append(f"- **{title}**")
         content_parts.append("")
 
@@ -486,8 +503,13 @@ def main():
         content_parts.append("---\n")
         content_parts.append("## 중요 뉴스\n")
         content_parts.append("> 규제, ETF, 실적 등 주요 뉴스입니다.\n")
+        seen_p1 = set()
         for item in priority_items["P1"][:7]:
             title = item.get("title", "")
+            norm = re.sub(r"[^a-z가-힣0-9]", "", item.get("description", title).lower())
+            if norm in seen_p1:
+                continue
+            seen_p1.add(norm)
             content_parts.append(f"- {title}")
         content_parts.append("")
 
@@ -564,8 +586,13 @@ def main():
     if priority_items.get("P2"):
         content_parts.append("---\n")
         content_parts.append("## 주목할 소식\n")
+        seen_p2 = set()
         for item in priority_items["P2"][:5]:
             title = item.get("title", "")
+            norm = re.sub(r"[^a-z가-힣0-9]", "", item.get("description", title).lower())
+            if norm in seen_p2:
+                continue
+            seen_p2.add(norm)
             content_parts.append(f"- {title}")
         content_parts.append("")
 
