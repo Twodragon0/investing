@@ -1,0 +1,115 @@
+name: Push Folder Info To Slack
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  push-folder-info:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout investing
+        uses: actions/checkout@v4
+        with:
+          repository: Twodragon0/investing
+          path: investing
+          fetch-depth: 1
+
+      - name: Checkout openclaw
+        id: checkout-openclaw
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: Twodragon0/openclaw
+          path: openclaw
+          fetch-depth: 1
+
+      - name: Checkout crypto
+        id: checkout-crypto
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: Twodragon0/crypto
+          path: crypto
+          fetch-depth: 1
+
+      - name: Build folder summary
+        id: summary
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          build_line() {
+            local repo_name="$1"
+            local repo_path="$2"
+
+            if [ ! -d "$repo_path/.git" ]; then
+              printf "- %s: not available\n" "$repo_name"
+              return
+            fi
+
+            local commit_hash
+            local commit_date
+            local tracked_files
+            local top_dirs
+
+            commit_hash=$(git -C "$repo_path" rev-parse --short HEAD)
+            commit_date=$(git -C "$repo_path" log -1 --date=iso-strict --pretty=format:"%ad")
+            tracked_files=$(git -C "$repo_path" ls-files | wc -l | tr -d ' ')
+            top_dirs=$(git -C "$repo_path" ls-tree --name-only HEAD | tr '\n' ', ' | sed 's/, $//')
+
+            printf "- %s\n" "$repo_name"
+            printf "  - commit: %s\n" "$commit_hash"
+            printf "  - updated: %s\n" "$commit_date"
+            printf "  - tracked files: %s\n" "$tracked_files"
+            printf "  - top-level: %s\n" "${top_dirs:-none}"
+          }
+
+          report_file="${RUNNER_TEMP}/folder_report.txt"
+          {
+            printf "*Hourly folder report*\n"
+            printf "- time (UTC): %s\n" "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+            build_line "openclaw" "openclaw"
+            build_line "investing" "investing"
+            build_line "crypto" "crypto"
+          } > "$report_file"
+
+          {
+            echo "message<<EOF"
+            cat "$report_file"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Validate Slack config
+        id: slack-config
+        shell: bash
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+        run: |
+          set -euo pipefail
+          can_post=true
+          if [ -z "${SLACK_BOT_TOKEN:-}" ]; then
+            echo "SLACK_BOT_TOKEN is empty; skip Slack post"
+            can_post=false
+          fi
+          if [ -z "${SLACK_CHANNEL_ID:-}" ]; then
+            echo "SLACK_CHANNEL_ID is empty; skip Slack post"
+            can_post=false
+          fi
+          echo "can_post=$can_post" >> "$GITHUB_OUTPUT"
+
+      - name: Post to Slack investing channel
+        if: steps.slack-config.outputs.can_post == 'true'
+        uses: slackapi/slack-github-action@v2.1.1
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.SLACK_BOT_TOKEN }}
+          payload: |
+            channel: "${{ secrets.SLACK_CHANNEL_ID }}"
+            text: "${{ steps.summary.outputs.message }}"
