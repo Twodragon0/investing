@@ -49,12 +49,12 @@ jobs:
             local repo_path="$2"
 
             if ! git -C "$repo_path" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
-              printf "- %s: not available\n" "$repo_name"
+              printf -- "- %s: not available\n" "$repo_name"
               return
             fi
 
             if ! git -C "$repo_path" rev-parse --verify HEAD >/dev/null 2>&1; then
-              printf "- %s: not available\n" "$repo_name"
+              printf -- "- %s: not available\n" "$repo_name"
               return
             fi
 
@@ -68,7 +68,7 @@ jobs:
             tracked_files=$(git -C "$repo_path" ls-files | wc -l | tr -d ' ')
             top_dirs=$(git -C "$repo_path" ls-tree --name-only HEAD | tr '\n' ',' | sed 's/,$//' | sed 's/,/, /g')
 
-            printf "- %s\n" "$repo_name"
+            printf -- "- %s\n" "$repo_name"
             printf "  - commit: %s\n" "$commit_hash"
             printf "  - updated: %s\n" "$commit_date"
             printf "  - tracked files: %s\n" "$tracked_files"
@@ -78,7 +78,7 @@ jobs:
           report_file="${RUNNER_TEMP}/folder_report.txt"
           {
             printf "*Hourly folder report*\n"
-            printf "- time (UTC): %s\n" "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+            printf -- "- time (UTC): %s\n" "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
             build_line "openclaw" "openclaw"
             build_line "investing" "investing"
             build_line "crypto" "crypto"
