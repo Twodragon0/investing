@@ -677,3 +677,264 @@ def generate_source_distribution_card(
 
     logger.info("Generated source distribution card: %s", filename)
     return f"/assets/images/generated/{filename}"
+
+
+def generate_sector_heatmap(
+    sector_data: Dict[str, Dict[str, Any]],
+    date_str: str,
+    filename: Optional[str] = None,
+) -> Optional[str]:
+    """Generate a sector performance heatmap showing S&P 500 sector ETFs.
+
+    Args:
+        sector_data: Dict of {symbol: {"name": str, "price": str, "change_pct": float}}.
+        date_str: Date string for the title.
+        filename: Optional output filename.
+
+    Returns relative path for Jekyll or None on failure.
+    """
+    if not _MPL_AVAILABLE:
+        return None
+
+    _ensure_dir()
+
+    if not sector_data:
+        return None
+
+    # Sort sectors by change for visual grouping
+    sorted_sectors = sorted(sector_data.items(), key=lambda x: x[1].get("change_pct", 0), reverse=True)
+    count = len(sorted_sectors)
+
+    # Grid layout: adaptive columns
+    cols = 4
+    rows = (count + cols - 1) // cols
+
+    fig, ax = plt.subplots(figsize=(14, 3.5 + rows * 1.8))
+    fig.patch.set_facecolor(COLORS["bg"])
+    ax.set_facecolor(COLORS["bg"])
+    ax.axis("off")
+
+    # Title
+    ax.text(0.5, 0.97, "S&P 500 Sector Performance",
+            ha="center", va="top", transform=ax.transAxes,
+            fontsize=18, fontweight="bold", color=COLORS["text"], fontfamily="monospace")
+    ax.text(0.5, 0.93, f"{date_str} | Daily Change",
+            ha="center", va="top", transform=ax.transAxes,
+            fontsize=10, color=COLORS["text_secondary"], fontfamily="monospace")
+
+    margin = 0.03
+    cell_w = (1.0 - margin * (cols + 1)) / cols
+    cell_h = (0.88 - margin * (rows + 1)) / rows
+
+    for i, (symbol, info) in enumerate(sorted_sectors):
+        row = i // cols
+        col = i % cols
+
+        x = margin + col * (cell_w + margin)
+        y = 0.88 - margin - (row + 1) * (cell_h + margin) + margin
+
+        change = info.get("change_pct", 0)
+
+        # Color based on change intensity
+        if change >= 2:
+            bg_color = "#1a4d2e"
+        elif change >= 0.5:
+            bg_color = "#1a3d25"
+        elif change >= 0:
+            bg_color = "#162d1e"
+        elif change >= -0.5:
+            bg_color = "#2d1a1a"
+        elif change >= -2:
+            bg_color = "#3d1a1a"
+        else:
+            bg_color = "#4d1a1a"
+
+        rect = mpatches.FancyBboxPatch(
+            (x, y), cell_w, cell_h,
+            boxstyle="round,pad=0.008",
+            facecolor=bg_color, edgecolor=COLORS["border"], linewidth=0.5,
+            transform=ax.transAxes,
+        )
+        ax.add_patch(rect)
+
+        # ETF Symbol
+        ax.text(x + cell_w / 2, y + cell_h * 0.78, symbol,
+                ha="center", va="center", transform=ax.transAxes,
+                fontsize=13, fontweight="bold", color=COLORS["text"], fontfamily="monospace")
+
+        # Sector name (truncated)
+        name_short = info["name"].split("(")[0].strip()[:12]
+        ax.text(x + cell_w / 2, y + cell_h * 0.55, name_short,
+                ha="center", va="center", transform=ax.transAxes,
+                fontsize=8, color=COLORS["text_secondary"], fontfamily="monospace")
+
+        # Price
+        ax.text(x + cell_w / 2, y + cell_h * 0.35, f"${info['price']}",
+                ha="center", va="center", transform=ax.transAxes,
+                fontsize=9, color=COLORS["text_secondary"], fontfamily="monospace")
+
+        # Change
+        change_color = _get_change_color(change)
+        arrow = "▲" if change >= 0 else "▼"
+        ax.text(x + cell_w / 2, y + cell_h * 0.15, f"{arrow} {abs(change):.2f}%",
+                ha="center", va="center", transform=ax.transAxes,
+                fontsize=11, fontweight="bold", color=change_color, fontfamily="monospace")
+
+    # Footer
+    ax.text(0.5, 0.01, "Investing Dragon | Auto-generated Sector Heatmap",
+            ha="center", va="bottom", transform=ax.transAxes,
+            fontsize=8, color=COLORS["text_secondary"], fontfamily="monospace", style="italic")
+
+    if not filename:
+        filename = f"sector-heatmap-{date_str}.png"
+    filepath = os.path.join(IMAGES_DIR, filename)
+
+    plt.savefig(filepath, dpi=150, facecolor=COLORS["bg"],
+                edgecolor="none", bbox_inches="tight")
+    plt.close(fig)
+
+    logger.info("Generated sector heatmap: %s", filename)
+    return f"/assets/images/generated/{filename}"
+
+
+def generate_indicator_dashboard(
+    indicators: Dict[str, Any],
+    date_str: str,
+    filename: Optional[str] = None,
+) -> Optional[str]:
+    """Generate a key indicators dashboard card.
+
+    Args:
+        indicators: Dict with optional keys:
+            - fear_greed: {"value": int, "classification": str}
+            - yield_spread: {"spread": float, "inverted": bool}
+            - vix: {"label": str, "value": float}
+            - dxy: {"price": str, "change_pct": str}
+            - btc_dominance: float
+        date_str: Date string for the title.
+        filename: Optional output filename.
+
+    Returns relative path for Jekyll or None on failure.
+    """
+    if not _MPL_AVAILABLE:
+        return None
+
+    _ensure_dir()
+
+    if not indicators:
+        return None
+
+    # Build indicator cards
+    cards = []
+    if "fear_greed" in indicators:
+        fg = indicators["fear_greed"]
+        val = fg.get("value", 0)
+        cls = fg.get("classification", "N/A")
+        if val <= 25:
+            color = COLORS["red"]
+        elif val <= 50:
+            color = COLORS["orange"]
+        elif val <= 75:
+            color = COLORS["blue"]
+        else:
+            color = COLORS["green"]
+        cards.append(("공포/탐욕", str(val), cls, color))
+
+    if "vix" in indicators:
+        vix = indicators["vix"]
+        val = vix.get("value", 0)
+        color = COLORS["red"] if val > 30 else (COLORS["orange"] if val > 20 else COLORS["green"])
+        cards.append(("VIX", f"{val:.1f}", "변동성 지수", color))
+
+    if "yield_spread" in indicators:
+        ys = indicators["yield_spread"]
+        spread = ys.get("spread", 0)
+        inverted = ys.get("inverted", False)
+        color = COLORS["red"] if inverted else COLORS["green"]
+        status = "역전" if inverted else "정상"
+        cards.append(("2Y-10Y 스프레드", f"{spread:+.2f}%", status, color))
+
+    if "dxy" in indicators:
+        dxy = indicators["dxy"]
+        cards.append(("달러 인덱스", dxy.get("price", "N/A"), "DXY", COLORS["blue"]))
+
+    if "btc_dominance" in indicators:
+        dom = indicators["btc_dominance"]
+        color = COLORS["orange"] if dom > 55 else COLORS["blue"]
+        cards.append(("BTC 도미넌스", f"{dom:.1f}%", "비트코인 점유율", color))
+
+    if not cards:
+        return None
+
+    # Layout
+    cols = min(len(cards), 5)
+    fig_width = max(cols * 3.0, 10)
+    fig, ax = plt.subplots(figsize=(fig_width, 3.5))
+    fig.patch.set_facecolor(COLORS["bg"])
+    ax.set_facecolor(COLORS["bg"])
+    ax.axis("off")
+
+    # Title
+    ax.text(0.5, 0.95, "Key Indicators Dashboard",
+            ha="center", va="top", transform=ax.transAxes,
+            fontsize=16, fontweight="bold", color=COLORS["text"], fontfamily="monospace")
+    ax.text(0.5, 0.85, date_str,
+            ha="center", va="top", transform=ax.transAxes,
+            fontsize=9, color=COLORS["text_secondary"], fontfamily="monospace")
+
+    margin = 0.03
+    card_w = (1.0 - margin * (cols + 1)) / cols
+
+    for i, (label, value, subtitle, color) in enumerate(cards):
+        x = margin + i * (card_w + margin)
+        y = 0.1
+
+        # Card background
+        rect = mpatches.FancyBboxPatch(
+            (x, y), card_w, 0.65,
+            boxstyle="round,pad=0.015",
+            facecolor=COLORS["bg_card"], edgecolor=color, linewidth=1.5,
+            transform=ax.transAxes,
+        )
+        ax.add_patch(rect)
+
+        # Color accent bar at top
+        bar = mpatches.FancyBboxPatch(
+            (x, y + 0.60), card_w, 0.05,
+            boxstyle="round,pad=0.008",
+            facecolor=color, edgecolor="none",
+            transform=ax.transAxes,
+        )
+        ax.add_patch(bar)
+
+        # Label
+        ax.text(x + card_w / 2, y + 0.52, label,
+                ha="center", va="center", transform=ax.transAxes,
+                fontsize=9, color=COLORS["text_secondary"], fontfamily="monospace")
+
+        # Value (large)
+        ax.text(x + card_w / 2, y + 0.35, value,
+                ha="center", va="center", transform=ax.transAxes,
+                fontsize=20, fontweight="bold", color=color, fontfamily="monospace")
+
+        # Subtitle
+        ax.text(x + card_w / 2, y + 0.15, subtitle,
+                ha="center", va="center", transform=ax.transAxes,
+                fontsize=8, color=COLORS["text_secondary"], fontfamily="monospace")
+
+    # Footer
+    ax.text(0.5, 0.02, "Investing Dragon | Auto-generated Indicators",
+            ha="center", va="bottom", transform=ax.transAxes,
+            fontsize=7, color=COLORS["text_secondary"], fontfamily="monospace", style="italic")
+
+    if not filename:
+        filename = f"indicator-dashboard-{date_str}.png"
+    filepath = os.path.join(IMAGES_DIR, filename)
+
+    plt.tight_layout(pad=0.3)
+    plt.savefig(filepath, dpi=150, facecolor=COLORS["bg"],
+                edgecolor="none", bbox_inches="tight")
+    plt.close(fig)
+
+    logger.info("Generated indicator dashboard: %s", filename)
+    return f"/assets/images/generated/{filename}"

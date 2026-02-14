@@ -433,6 +433,12 @@ a {
     border-color: rgba($cat-analysis, 0.25);
     box-shadow: 0 2px 8px rgba($cat-analysis, 0.15);
   }
+  &.cat-political-trades {
+    background: rgba($cat-political, 0.15);
+    color: $cat-political;
+    border-color: rgba($cat-political, 0.25);
+    box-shadow: 0 2px 8px rgba($cat-political, 0.15);
+  }
 }
 
 .post-source {
@@ -4048,6 +4054,7 @@ main {
   &.security::before { background: $cat-security; }
   &.regulatory::before { background: $accent-purple; }
   &.social::before { background: $accent-green; }
+  &.political::before { background: $cat-political; }
 
   &:hover {
     transform: translateY(-4px);
@@ -4099,6 +4106,10 @@ main {
   &.social .overview-card-icon {
     background: rgba($accent-green, 0.15);
     color: $accent-green;
+  }
+  &.political .overview-card-icon {
+    background: rgba($cat-political, 0.15);
+    color: $cat-political;
   }
 
   .overview-card-title {

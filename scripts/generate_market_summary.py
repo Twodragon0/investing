@@ -261,6 +261,230 @@ def fetch_fred_indicators(api_key: str) -> Dict[str, Dict[str, Any]]:
     return results
 
 
+def calculate_yield_spread(fred_data: Dict) -> Dict[str, Any]:
+    """Calculate 2Y-10Y yield spread from FRED data.
+
+    Returns dict with spread value and inversion status.
+    """
+    result = {}
+    y10 = fred_data.get("10Y_YIELD", {})
+    y2 = fred_data.get("2Y_YIELD", {})
+    if y10.get("value") is not None and y2.get("value") is not None:
+        spread = y10["value"] - y2["value"]
+        result = {
+            "spread": spread,
+            "y10": y10["value"],
+            "y2": y2["value"],
+            "inverted": spread < 0,
+            "date": y10.get("date", ""),
+        }
+    return result
+
+
+def fetch_sector_performance() -> Dict[str, Dict[str, Any]]:
+    """Fetch S&P 500 sector ETF performance via yfinance."""
+    sectors = {
+        "XLK": "기술 (Technology)",
+        "XLF": "금융 (Financials)",
+        "XLE": "에너지 (Energy)",
+        "XLV": "헬스케어 (Healthcare)",
+        "XLI": "산업재 (Industrials)",
+        "XLC": "통신 (Communication)",
+        "XLP": "필수소비재 (Staples)",
+        "XLY": "임의소비재 (Discretionary)",
+        "XLU": "유틸리티 (Utilities)",
+        "XLRE": "부동산 (Real Estate)",
+        "XLB": "소재 (Materials)",
+    }
+    results = {}
+    try:
+        import yfinance as yf
+        for symbol, name in sectors.items():
+            try:
+                info = yf.Ticker(symbol).fast_info
+                price = getattr(info, "last_price", None)
+                prev = getattr(info, "previous_close", None)
+                if price and prev:
+                    change = price - prev
+                    change_pct = (change / prev) * 100
+                    results[symbol] = {
+                        "name": name,
+                        "price": f"{price:,.2f}",
+                        "change": f"{change:+,.2f}",
+                        "change_pct": change_pct,
+                    }
+            except Exception as e:
+                logger.warning("yfinance sector %s: %s", symbol, e)
+    except ImportError:
+        logger.warning("yfinance not installed for sector data")
+    return results
+
+
+def fetch_btc_etf_data() -> Dict[str, Any]:
+    """Fetch Bitcoin ETF data (IBIT, FBTC, GBTC) + Google News."""
+    etf_data = {}
+
+    # Price data via yfinance
+    etfs = {
+        "IBIT": "BlackRock iShares Bitcoin Trust",
+        "FBTC": "Fidelity Wise Origin Bitcoin Fund",
+        "GBTC": "Grayscale Bitcoin Trust",
+    }
+    try:
+        import yfinance as yf
+        for symbol, name in etfs.items():
+            try:
+                info = yf.Ticker(symbol).fast_info
+                price = getattr(info, "last_price", None)
+                prev = getattr(info, "previous_close", None)
+                if price and prev:
+                    change = price - prev
+                    change_pct = (change / prev) * 100
+                    etf_data[symbol] = {
+                        "name": name,
+                        "price": f"{price:,.2f}",
+                        "change": f"{change:+,.2f}",
+                        "change_pct": f"{change_pct:+.2f}%",
+                    }
+            except Exception as e:
+                logger.warning("yfinance BTC ETF %s: %s", symbol, e)
+    except ImportError:
+        logger.warning("yfinance not installed for BTC ETF data")
+
+    # News via Google News RSS
+    from common.rss_fetcher import fetch_rss_feeds_concurrent
+    feeds = [
+        ("https://news.google.com/rss/search?q=bitcoin+ETF+IBIT+FBTC+inflow+outflow&hl=en-US&gl=US&ceid=US:en",
+         "BTC ETF News", ["btc-etf"], 5),
+        ("https://news.google.com/rss/search?q=비트코인+ETF+자금+유입+유출&hl=ko&gl=KR&ceid=KR:ko",
+         "비트코인 ETF KR", ["btc-etf", "korean"], 5),
+    ]
+    news_items = fetch_rss_feeds_concurrent(feeds)
+
+    return {"etfs": etf_data, "news": news_items}
+
+
+def fetch_whale_trades() -> list:
+    """Fetch whale/large transfer news via Google News RSS."""
+    from common.rss_fetcher import fetch_rss_feeds_concurrent
+    feeds = [
+        ("https://news.google.com/rss/search?q=whale+alert+bitcoin+transfer+large&hl=en-US&gl=US&ceid=US:en",
+         "Whale Alert EN", ["whale", "bitcoin"], 10),
+        ("https://news.google.com/rss/search?q=비트코인+고래+대량+이체&hl=ko&gl=KR&ceid=KR:ko",
+         "고래 이체 KR", ["whale", "korean"], 5),
+        ("https://news.google.com/rss/search?q=crypto+whale+large+transaction&hl=en-US&gl=US&ceid=US:en",
+         "Crypto Whale", ["whale", "crypto"], 5),
+    ]
+    return fetch_rss_feeds_concurrent(feeds)
+
+
+def format_yield_spread(spread_data: Dict) -> str:
+    """Format yield spread section."""
+    if not spread_data:
+        return "> 국채 수익률 스프레드 데이터를 가져올 수 없습니다."
+
+    spread = spread_data["spread"]
+    y10 = spread_data["y10"]
+    y2 = spread_data["y2"]
+    inverted = spread_data["inverted"]
+
+    warning = ""
+    if inverted:
+        warning = "\n\n> **경고**: 수익률 곡선이 역전되었습니다. 역사적으로 이는 경기 침체의 선행 지표로 해석됩니다."
+
+    return (
+        f"| 지표 | 값 |\n"
+        f"|------|------|\n"
+        f"| 10년 국채 수익률 | {y10:.2f}% |\n"
+        f"| 2년 국채 수익률 | {y2:.2f}% |\n"
+        f"| **스프레드 (10Y-2Y)** | **{spread:+.2f}%** {'🔴 역전' if inverted else '🟢 정상'} |"
+        f"{warning}"
+    )
+
+
+def format_sector_performance(data: Dict) -> str:
+    """Format sector performance as a table sorted by change."""
+    if not data:
+        return (
+            "> 섹터 퍼포먼스 데이터를 일시적으로 가져올 수 없습니다.\n\n"
+            "**참고 링크:**\n"
+            "- [Finviz - S&P 500 Sectors](https://finviz.com/groups.ashx)"
+        )
+
+    sorted_sectors = sorted(data.items(), key=lambda x: x[1].get("change_pct", 0), reverse=True)
+
+    lines = [
+        "| 섹터 | ETF | 가격 | 변동 | 변동률 |",
+        "|------|-----|------|------|--------|",
+    ]
+    for symbol, info in sorted_sectors:
+        pct = info.get("change_pct", 0)
+        icon = "🟢" if pct >= 0 else "🔴"
+        lines.append(f"| {info['name']} | {symbol} | ${info['price']} | {info['change']} | {icon} {pct:+.2f}% |")
+
+    return "\n".join(lines)
+
+
+def format_btc_etf(data: Dict) -> str:
+    """Format Bitcoin ETF section."""
+    etfs = data.get("etfs", {})
+    news = data.get("news", [])
+
+    parts = []
+    if etfs:
+        lines = [
+            "| ETF | 가격 | 변동 | 변동률 |",
+            "|-----|------|------|--------|",
+        ]
+        for symbol, info in etfs.items():
+            try:
+                pct = float(info["change_pct"].replace("%", "").replace("+", ""))
+                icon = "🟢" if pct >= 0 else "🔴"
+            except (ValueError, KeyError):
+                icon = ""
+            lines.append(f"| **{info['name']}** ({symbol}) | ${info['price']} | {info['change']} | {icon} {info['change_pct']} |")
+        parts.append("\n".join(lines))
+    else:
+        parts.append("> 비트코인 ETF 데이터를 가져올 수 없습니다.")
+
+    if news:
+        parts.append("\n**주요 ETF 뉴스:**\n")
+        for i, item in enumerate(news[:5], 1):
+            title = item.get("title", "")
+            link = item.get("link", "")
+            if link:
+                parts.append(f"{i}. [{title}]({link})")
+            else:
+                parts.append(f"{i}. {title}")
+
+    return "\n".join(parts) if parts else "> 비트코인 ETF 데이터를 가져올 수 없습니다."
+
+
+def format_whale_trades(items: list) -> str:
+    """Format whale trades news section."""
+    if not items:
+        return (
+            "> 고래 거래 데이터를 가져올 수 없습니다.\n\n"
+            "**참고 링크:**\n"
+            "- [Whale Alert](https://whale-alert.io/)"
+        )
+
+    lines = [
+        "| # | 제목 | 출처 |",
+        "|---|------|------|",
+    ]
+    for i, item in enumerate(items[:10], 1):
+        title = item.get("title", "")
+        source = item.get("source", "unknown")
+        link = item.get("link", "")
+        if link:
+            lines.append(f"| {i} | [{title}]({link}) | {source} |")
+        else:
+            lines.append(f"| {i} | {title} | {source} |")
+
+    return "\n".join(lines)
+
+
 def format_global_overview(global_data: Dict, fear_greed: Dict) -> str:
     """Format global market overview section."""
     parts = []
@@ -598,6 +822,10 @@ def main():
     kr_market = fetch_korean_market()
     commodity_data = fetch_commodity_data()
     fred_data = fetch_fred_indicators(fred_key)
+    sector_data = fetch_sector_performance()
+    btc_etf_data = fetch_btc_etf_data()
+    whale_items = fetch_whale_trades()
+    yield_spread = calculate_yield_spread(fred_data)
 
     # ── Generate images ──
     image_refs = []
@@ -606,6 +834,8 @@ def main():
             generate_top_coins_card,
             generate_fear_greed_gauge,
             generate_market_heatmap,
+            generate_sector_heatmap,
+            generate_indicator_dashboard,
         )
 
         img = generate_market_heatmap(top_coins, today)
@@ -622,6 +852,28 @@ def main():
             )
             if img:
                 image_refs.append(("fear-greed", img))
+
+        if sector_data:
+            img = generate_sector_heatmap(sector_data, today)
+            if img:
+                image_refs.append(("sector-heatmap", img))
+
+        # Indicator dashboard
+        indicators = {}
+        if fear_greed:
+            indicators["fear_greed"] = fear_greed
+        if yield_spread:
+            indicators["yield_spread"] = yield_spread
+        if fred_data.get("VIX"):
+            indicators["vix"] = fred_data["VIX"]
+        if commodity_data.get("달러 인덱스 (DXY)"):
+            indicators["dxy"] = commodity_data["달러 인덱스 (DXY)"]
+        if global_data:
+            indicators["btc_dominance"] = global_data.get("market_cap_percentage", {}).get("btc", 0)
+        if indicators:
+            img = generate_indicator_dashboard(indicators, today)
+            if img:
+                image_refs.append(("indicator-dashboard", img))
 
         logger.info("Generated %d images", len(image_refs))
     except ImportError:
@@ -699,8 +951,21 @@ def main():
     # Commodities / Dollar Index
     sections["원자재/환율"] = format_commodity_data(commodity_data)
 
+    # Sector Performance
+    sections["S&P 500 섹터 퍼포먼스"] = format_sector_performance(sector_data)
+
+    # Bitcoin ETF
+    sections["비트코인 ETF"] = format_btc_etf(btc_etf_data)
+
+    # Whale Trades
+    sections["고래 거래 동향"] = format_whale_trades(whale_items)
+
     # Macro
     sections["매크로 경제 지표"] = format_macro(fred_data)
+
+    # Yield Spread
+    if yield_spread:
+        sections["국채 수익률 스프레드 (2Y-10Y)"] = format_yield_spread(yield_spread)
 
     # References
     sections["참고 자료"] = (

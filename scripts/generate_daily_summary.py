@@ -2,10 +2,15 @@
 """Generate a daily news summary post by reading today's collected posts.
 
 Reads all posts generated for the current date and creates a comprehensive
-summary post (pinned, market-analysis category) with:
-- Key highlights from each category
-- Market data overview
-- Links to individual reports
+summary post (pinned, market-analysis category) with priority-based structure:
+1. Urgent alerts (P0) - crashes, hacks, executive orders
+2. Market overview
+3. Indicator dashboard
+4. Political watch - politician trades/policy highlights
+5. Important news (P1) - regulation, ETF, earnings
+6. Category summaries
+7. Notable news (P2)
+8. Report links
 """
 
 import sys
@@ -20,6 +25,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.config import setup_logging
 from common.post_generator import PostGenerator, POSTS_DIR
+from common.summarizer import ThemeSummarizer
 
 logger = setup_logging("generate_daily_summary")
 
@@ -96,7 +102,6 @@ def extract_table_rows(content: str, heading: str, max_rows: int = 10) -> List[s
 
 def count_news_items(content: str) -> int:
     """Try to extract total news count from content."""
-    # Look for patterns like "111건의 뉴스" or "총 뉴스 건수**: 111건"
     patterns = [
         r"(\d+)건의 뉴스",
         r"총 뉴스 건수\*?\*?:\s*(\d+)건",
@@ -119,7 +124,6 @@ def summarize_crypto_post(post: Dict[str, Any]) -> Dict[str, Any]:
     highlights = extract_bullet_points(content, "오늘의 핵심")
     key_summary = extract_bullet_points(content, "핵심 요약")
 
-    # Extract top themes from distribution chart
     themes = []
     dist_section = extract_section(content, "이슈 분포 현황")
     if dist_section:
@@ -135,6 +139,7 @@ def summarize_crypto_post(post: Dict[str, Any]) -> Dict[str, Any]:
         "highlights": highlights,
         "key_summary": key_summary,
         "themes": themes,
+        "content": content,
     }
 
 
@@ -146,7 +151,6 @@ def summarize_stock_post(post: Dict[str, Any]) -> Dict[str, Any]:
     highlights = extract_bullet_points(content, "오늘의 핵심")
     key_summary = extract_bullet_points(content, "핵심 요약")
 
-    # Extract market data from first paragraph
     market_data = []
     for line in content.split("\n")[:5]:
         if "KOSPI" in line or "KOSDAQ" in line or "USD/KRW" in line:
@@ -159,6 +163,7 @@ def summarize_stock_post(post: Dict[str, Any]) -> Dict[str, Any]:
         "highlights": highlights,
         "key_summary": key_summary,
         "market_data": market_data,
+        "content": content,
     }
 
 
@@ -166,10 +171,7 @@ def summarize_security_post(post: Dict[str, Any]) -> Dict[str, Any]:
     """Extract key info from security post."""
     content = post["content"]
     count = count_news_items(content)
-
     key_summary = extract_bullet_points(content, "핵심 요약")
-
-    # Extract incident table
     incidents = extract_table_rows(content, "보안 사고 현황", 5)
 
     return {
@@ -178,6 +180,7 @@ def summarize_security_post(post: Dict[str, Any]) -> Dict[str, Any]:
         "count": count,
         "key_summary": key_summary,
         "incidents": incidents,
+        "content": content,
     }
 
 
@@ -185,7 +188,6 @@ def summarize_regulatory_post(post: Dict[str, Any]) -> Dict[str, Any]:
     """Extract key info from regulatory post."""
     content = post["content"]
     count = count_news_items(content)
-
     key_summary = extract_bullet_points(content, "핵심 요약")
 
     return {
@@ -193,6 +195,7 @@ def summarize_regulatory_post(post: Dict[str, Any]) -> Dict[str, Any]:
         "title": post["frontmatter"].get("title", ""),
         "count": count,
         "key_summary": key_summary,
+        "content": content,
     }
 
 
@@ -200,7 +203,6 @@ def summarize_social_post(post: Dict[str, Any]) -> Dict[str, Any]:
     """Extract key info from social media post."""
     content = post["content"]
     count = count_news_items(content)
-
     highlights = extract_bullet_points(content, "오늘의 핵심")
     key_summary = extract_bullet_points(content, "핵심 요약")
 
@@ -210,31 +212,53 @@ def summarize_social_post(post: Dict[str, Any]) -> Dict[str, Any]:
         "count": count,
         "highlights": highlights,
         "key_summary": key_summary,
+        "content": content,
     }
 
 
 def summarize_market_post(post: Dict[str, Any]) -> Dict[str, Any]:
     """Extract key info from market summary post."""
     content = post["content"]
-
     highlights = extract_bullet_points(content, "오늘의 핵심")
     exec_summary = extract_bullet_points(content, "한눈에 보기")
+
+    # Extract indicator data
+    indicator_rows = extract_table_rows(content, "매크로 경제 지표", 10)
+    yield_section = extract_section(content, "국채 수익률 스프레드 (2Y-10Y)")
+    sector_section = extract_section(content, "S&P 500 섹터 퍼포먼스")
 
     return {
         "type": "market",
         "title": post["frontmatter"].get("title", ""),
         "highlights": highlights,
         "exec_summary": exec_summary,
+        "indicator_rows": indicator_rows,
+        "yield_section": yield_section,
+        "sector_section": sector_section,
+        "content": content,
+    }
+
+
+def summarize_political_post(post: Dict[str, Any]) -> Dict[str, Any]:
+    """Extract key info from political trades post."""
+    content = post["content"]
+    count = count_news_items(content)
+    key_summary = extract_bullet_points(content, "핵심 요약")
+    highlights = extract_bullet_points(content, "정책 영향 분석", 3)
+
+    return {
+        "type": "political",
+        "title": post["frontmatter"].get("title", ""),
+        "count": count,
+        "key_summary": key_summary,
+        "highlights": highlights,
+        "content": content,
     }
 
 
 def get_post_url(filepath: str, today: str, category: str = "") -> str:
-    """Generate relative URL for a post following Jekyll permalink structure.
-
-    Permalink pattern: /:categories/:year/:month/:day/:title/
-    """
+    """Generate relative URL for a post following Jekyll permalink structure."""
     filename = os.path.basename(filepath)
-    # Remove date prefix and .md extension
     slug = filename.replace(f"{today}-", "").replace(".md", "")
     date_path = today.replace("-", "/")
     if category:
@@ -242,8 +266,36 @@ def get_post_url(filepath: str, today: str, category: str = "") -> str:
     return f"/{date_path}/{slug}/"
 
 
+def _collect_all_news_items(summaries: List[Optional[Dict]]) -> List[Dict[str, Any]]:
+    """Collect all news item titles+descriptions from post contents for priority classification."""
+    items = []
+    for s in summaries:
+        if not s or not s.get("content"):
+            continue
+        content = s["content"]
+        # Extract titles from markdown table rows and bullet points
+        for line in content.split("\n"):
+            line = line.strip()
+            if line.startswith("| ") and "**" in line:
+                # Table row with bold title
+                match = re.search(r"\*\*(.+?)\*\*", line)
+                if match:
+                    items.append({
+                        "title": match.group(1),
+                        "description": line,
+                        "source": s.get("type", ""),
+                    })
+            elif line.startswith("- ") and len(line) > 10:
+                items.append({
+                    "title": line[2:],
+                    "description": line,
+                    "source": s.get("type", ""),
+                })
+    return items
+
+
 def main():
-    """Generate daily news summary."""
+    """Generate daily news summary with priority-based structure."""
     logger.info("=== Generating daily news summary ===")
 
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -266,17 +318,16 @@ def main():
     regulatory_summary = None
     social_summary = None
     market_summary = None
+    political_summary = None
 
     post_links = []
 
     for filepath in today_posts:
         filename = os.path.basename(filepath)
-        # Skip the summary post itself and test posts
         if "daily-news-summary" in filename or "test-post" in filename:
             continue
 
         post = read_post_content(filepath)
-        category = post["frontmatter"].get("categories", "")
         slug = filename.replace(f"{today}-", "").replace(".md", "")
 
         if "crypto-news-digest" in slug:
@@ -299,17 +350,29 @@ def main():
             social_summary = summarize_social_post(post)
             social_summary["url"] = get_post_url(filepath, today, "crypto-news")
             post_links.append(("소셜 미디어", social_summary["count"], social_summary["url"]))
+        elif "political-trades-report" in slug:
+            political_summary = summarize_political_post(post)
+            political_summary["url"] = get_post_url(filepath, today, "political-trades")
+            post_links.append(("정치인 거래", political_summary["count"], political_summary["url"]))
         elif "market-report" in slug:
             market_summary = summarize_market_post(post)
             market_summary["url"] = get_post_url(filepath, today, "market-analysis")
             post_links.append(("시장 종합 리포트", 0, market_summary["url"]))
 
     # Calculate total count
+    all_summaries = [crypto_summary, stock_summary, security_summary,
+                     regulatory_summary, social_summary, political_summary]
     total_count = sum(
-        s["count"] for s in [crypto_summary, stock_summary, security_summary,
-                              regulatory_summary, social_summary]
+        s["count"] for s in all_summaries
         if s and s.get("count")
     )
+
+    # Priority classification
+    all_news_items = _collect_all_news_items(all_summaries)
+    priority_items = {"P0": [], "P1": [], "P2": []}
+    if all_news_items:
+        summarizer = ThemeSummarizer(all_news_items)
+        priority_items = summarizer.classify_priority()
 
     # Build summary content
     content_parts = []
@@ -326,11 +389,26 @@ def main():
         count_parts.append(f"규제 {regulatory_summary['count']}건")
     if social_summary and social_summary["count"]:
         count_parts.append(f"소셜 미디어 {social_summary['count']}건")
+    if political_summary and political_summary["count"]:
+        count_parts.append(f"정치인 거래 {political_summary['count']}건")
 
     counts_str = ", ".join(count_parts) if count_parts else "뉴스"
     content_parts.append(f"> {counts_str}의 뉴스를 종합 분석한 일일 요약입니다.\n")
 
-    # === Market Overview (from market report) ===
+    # ═══════════════════════════════════════
+    # 1. URGENT ALERTS (P0)
+    # ═══════════════════════════════════════
+    if priority_items.get("P0"):
+        content_parts.append("## 긴급 알림\n")
+        content_parts.append("> 즉시 확인이 필요한 긴급 뉴스입니다.\n")
+        for item in priority_items["P0"][:5]:
+            title = item.get("title", "")
+            content_parts.append(f"- **{title}**")
+        content_parts.append("")
+
+    # ═══════════════════════════════════════
+    # 2. MARKET OVERVIEW
+    # ═══════════════════════════════════════
     if market_summary:
         content_parts.append("## 시장 개요\n")
         if market_summary.get("highlights"):
@@ -341,7 +419,66 @@ def main():
                 content_parts.append(h)
         content_parts.append("")
 
-    # === Summary Dashboard ===
+    # ═══════════════════════════════════════
+    # 3. INDICATOR DASHBOARD
+    # ═══════════════════════════════════════
+    indicator_parts = []
+
+    # Macro indicators from market report
+    if market_summary and market_summary.get("indicator_rows"):
+        indicator_parts.append("| 지표 | 현재 값 | 변동 |")
+        indicator_parts.append("|------|---------|------|")
+        for row in market_summary["indicator_rows"]:
+            indicator_parts.append(row)
+
+    # Yield spread
+    if market_summary and market_summary.get("yield_section"):
+        if indicator_parts:
+            indicator_parts.append("")
+        indicator_parts.append("**국채 수익률 스프레드:**")
+        # Extract just the key info
+        for line in market_summary["yield_section"].split("\n"):
+            line = line.strip()
+            if line.startswith("|") and "스프레드" in line:
+                indicator_parts.append(line)
+            elif line.startswith(">"):
+                indicator_parts.append(line)
+
+    if indicator_parts:
+        content_parts.append("## 지표 대시보드\n")
+        content_parts.extend(indicator_parts)
+        content_parts.append("")
+
+    # ═══════════════════════════════════════
+    # 4. POLITICAL WATCH
+    # ═══════════════════════════════════════
+    if political_summary:
+        content_parts.append("---\n")
+        content_parts.append("## 정치인 워치\n")
+        if political_summary.get("key_summary"):
+            for h in political_summary["key_summary"][:5]:
+                content_parts.append(h)
+        if political_summary.get("highlights"):
+            content_parts.append("")
+            for h in political_summary["highlights"][:3]:
+                content_parts.append(h)
+        content_parts.append(f"\n[상세 보기]({political_summary.get('url', '#')})\n")
+
+    # ═══════════════════════════════════════
+    # 5. IMPORTANT NEWS (P1)
+    # ═══════════════════════════════════════
+    if priority_items.get("P1"):
+        content_parts.append("---\n")
+        content_parts.append("## 중요 뉴스\n")
+        content_parts.append("> 규제, ETF, 실적 등 주요 뉴스입니다.\n")
+        for item in priority_items["P1"][:7]:
+            title = item.get("title", "")
+            content_parts.append(f"- {title}")
+        content_parts.append("")
+
+    # ═══════════════════════════════════════
+    # 6. CATEGORY SUMMARIES
+    # ═══════════════════════════════════════
     content_parts.append("---\n")
     content_parts.append("## 카테고리별 요약\n")
 
@@ -402,7 +539,20 @@ def main():
                 content_parts.append(h)
         content_parts.append(f"\n[상세 보기]({social_summary.get('url', '#')})\n")
 
-    # === Report Links ===
+    # ═══════════════════════════════════════
+    # 7. NOTABLE NEWS (P2)
+    # ═══════════════════════════════════════
+    if priority_items.get("P2"):
+        content_parts.append("---\n")
+        content_parts.append("## 주목할 소식\n")
+        for item in priority_items["P2"][:5]:
+            title = item.get("title", "")
+            content_parts.append(f"- {title}")
+        content_parts.append("")
+
+    # ═══════════════════════════════════════
+    # 8. REPORT LINKS
+    # ═══════════════════════════════════════
     content_parts.append("---\n")
     content_parts.append("## 상세 리포트 링크\n")
     content_parts.append("| 리포트 | 수집 건수 | 링크 |")
@@ -412,21 +562,17 @@ def main():
         content_parts.append(f"| {name} | {count_str} | [바로가기]({url}) |")
 
     content_parts.append("\n---\n")
-    content_parts.append(f"*본 요약은 자동 수집된 뉴스 데이터를 기반으로 작성되었으며, 투자 조언이 아닙니다.*")
+    content_parts.append("*본 요약은 자동 수집된 뉴스 데이터를 기반으로 작성되었으며, 투자 조언이 아닙니다.*")
 
     content = "\n".join(content_parts)
 
     # Create post with pin: true
-    gen = PostGenerator("market-analysis")
     title = f"일일 뉴스 종합 요약 - {today}"
-
-    # Build post manually to add pin: true
     slug = "daily-news-summary"
     filename = f"{today}-{slug}.md"
     filepath = os.path.join(POSTS_DIR, filename)
 
-    # Overwrite if exists (summary should be regenerated)
-    tags = ["일일요약", "암호화폐", "주식", "규제", "소셜미디어", "보안"]
+    tags = ["일일요약", "암호화폐", "주식", "규제", "소셜미디어", "보안", "정치인거래"]
     escaped_title = title.replace('"', '\\"')
 
     frontmatter = f"""---

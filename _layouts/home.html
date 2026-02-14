@@ -286,6 +286,7 @@ layout: default
 {% assign latest_security = site.categories['security-alerts'] | first %}
 {% assign latest_regulatory = site.posts | where_exp: "post", "post.slug contains 'regulatory'" | first %}
 {% assign latest_social = site.posts | where_exp: "post", "post.slug contains 'social-media'" | first %}
+{% assign latest_political = site.posts | where_exp: "post", "post.slug contains 'political-trades'" | first %}
 
 {% if latest_crypto or latest_stock %}
 <section class="news-overview-section">
@@ -389,6 +390,24 @@ layout: default
         </div>
       </div>
       <p class="overview-card-excerpt">{{ latest_social.excerpt | strip_html | truncate: 160 }}</p>
+      <span class="overview-card-link">상세 보기 &rarr;</span>
+    </a>
+    {% endif %}
+
+    {% if latest_political %}
+    <a href="{{ latest_political.url | relative_url }}" class="news-overview-card political">
+      <div class="overview-card-header">
+        <div class="overview-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/>
+          </svg>
+        </div>
+        <div class="overview-card-title">
+          <h3>정치인 거래</h3>
+          <time>{{ latest_political.date | date: "%Y-%m-%d" }}</time>
+        </div>
+      </div>
+      <p class="overview-card-excerpt">{{ latest_political.excerpt | strip_html | truncate: 160 }}</p>
       <span class="overview-card-link">상세 보기 &rarr;</span>
     </a>
     {% endif %}

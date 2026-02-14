@@ -83,6 +83,25 @@ TOP_THEMES_COUNT = 5
 ARTICLES_PER_THEME = 5
 BAR_WIDTH = 18
 
+# Priority classification keywords
+PRIORITY_KEYWORDS: Dict[str, List[str]] = {
+    "P0": [
+        "crash", "폭락", "hack", "해킹", "executive order", "행정명령",
+        "rate decision", "금리 결정", "파산", "bankruptcy", "emergency",
+        "긴급", "bank run", "뱅크런", "exploit", "rug pull",
+    ],
+    "P1": [
+        "regulation", "규제", "etf", "approval", "fomc", "tariff", "관세",
+        "earnings", "실적", "sanctions", "제재", "indictment", "기소",
+        "sec filing", "listing", "상장", "delisting", "상장폐지",
+    ],
+    "P2": [
+        "partnership", "upgrade", "launch", "airdrop", "report",
+        "update", "integration", "collaboration", "제휴", "출시",
+        "업그레이드", "에어드롭", "리포트",
+    ],
+}
+
 
 class ThemeSummarizer:
     """Classify news items into themes and generate markdown summary sections."""
@@ -144,6 +163,28 @@ class ThemeSummarizer:
                 result.append((name, key, emoji, count))
             if len(result) >= TOP_THEMES_COUNT:
                 break
+        return result
+
+    def classify_priority(self) -> Dict[str, List[Dict[str, Any]]]:
+        """Classify items into priority buckets (P0, P1, P2).
+
+        Returns dict with keys "P0", "P1", "P2" mapping to lists of items.
+        Items are matched by keyword presence in title + description.
+        Each item is assigned to only its highest priority bucket.
+        """
+        result: Dict[str, List[Dict[str, Any]]] = {"P0": [], "P1": [], "P2": []}
+        assigned: set = set()
+
+        for priority in ["P0", "P1", "P2"]:
+            keywords = PRIORITY_KEYWORDS[priority]
+            for idx, item in enumerate(self.items):
+                if idx in assigned:
+                    continue
+                text = (item.get("title", "") + " " + item.get("description", "")).lower()
+                if any(kw in text for kw in keywords):
+                    result[priority].append(item)
+                    assigned.add(idx)
+
         return result
 
     def generate_distribution_chart(self) -> str:
