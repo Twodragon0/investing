@@ -1,0 +1,29 @@
+name: Respond OpenClaw Mentions
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  respond-mentions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout investing
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Respond to OpenClaw mentions
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          OPENCLAW_SLACK_BOT_TOKEN: ${{ secrets.OPENCLAW_SLACK_BOT_TOKEN }}
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          OPENCLAW_SLACK_CHANNEL_ID: ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID }}
+          SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
+        run: python3 scripts/respond_openclaw_mentions.py
