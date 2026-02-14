@@ -393,6 +393,23 @@ def main():
     counts_str = ", ".join(count_parts) if count_parts else "뉴스"
     content_parts.append(f"> {counts_str}의 뉴스를 종합 분석한 일일 요약입니다.\n")
 
+    # Executive briefing: 3-5 line summary from each category
+    briefing_lines = []
+    for s in all_summaries:
+        if not s or not s.get("highlights"):
+            continue
+        # Pick the most informative highlight
+        for h in s["highlights"][:1]:
+            line = h.strip()
+            if line.startswith("- "):
+                line = line[2:]
+            if len(line) > 15:
+                briefing_lines.append(f"> - {line}")
+    if briefing_lines:
+        content_parts.append("## 핵심 브리핑\n")
+        content_parts.extend(briefing_lines)
+        content_parts.append("")
+
     # ═══════════════════════════════════════
     # 1. URGENT ALERTS (P0)
     # ═══════════════════════════════════════
@@ -480,28 +497,32 @@ def main():
     content_parts.append("---\n")
     content_parts.append("## 카테고리별 요약\n")
 
-    # Crypto section
+    # Crypto section with description highlights
     if crypto_summary:
         content_parts.append(f"### 암호화폐 뉴스 ({crypto_summary['count']}건)\n")
         if crypto_summary.get("themes"):
             themes_str = ", ".join(f"**{t[0]}**({t[1]}건)" for t in crypto_summary["themes"][:4])
             content_parts.append(f"주요 테마: {themes_str}\n")
         if crypto_summary.get("highlights"):
-            for h in crypto_summary["highlights"][:3]:
+            for h in crypto_summary["highlights"][:4]:
                 content_parts.append(h)
         elif crypto_summary.get("key_summary"):
-            for h in crypto_summary["key_summary"][:3]:
+            for h in crypto_summary["key_summary"][:4]:
                 content_parts.append(h)
         content_parts.append(f"\n[상세 보기]({crypto_summary.get('url', '#')})\n")
 
-    # Stock section
+    # Stock section with description highlights
     if stock_summary:
         content_parts.append(f"### 주식 시장 뉴스 ({stock_summary['count']}건)\n")
+        if stock_summary.get("market_data"):
+            for md in stock_summary["market_data"][:3]:
+                content_parts.append(f"- {md}")
+            content_parts.append("")
         if stock_summary.get("highlights"):
-            for h in stock_summary["highlights"][:3]:
+            for h in stock_summary["highlights"][:4]:
                 content_parts.append(h)
         elif stock_summary.get("key_summary"):
-            for h in stock_summary["key_summary"][:3]:
+            for h in stock_summary["key_summary"][:4]:
                 content_parts.append(h)
         content_parts.append(f"\n[상세 보기]({stock_summary.get('url', '#')})\n")
 

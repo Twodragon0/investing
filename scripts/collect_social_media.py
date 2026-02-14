@@ -451,42 +451,57 @@ def main():
     except Exception as e:
         logger.warning("Source distribution image failed: %s", e)
 
-    # Telegram section (only show if data exists)
+    # Theme briefing section
+    theme_briefing = summarizer.generate_theme_briefing()
+    if theme_briefing:
+        content_parts.append(theme_briefing)
+
+    # Telegram section with descriptions (only show if data exists)
     if telegram_items:
         content_parts.append("## 텔레그램 주요 소식\n")
-        content_parts.append("| # | 내용 | 채널 |")
-        content_parts.append("|---|------|------|")
-        for i, item in enumerate(telegram_items[:10], 1):
+        for i, item in enumerate(telegram_items[:8], 1):
             title = item["title"].replace("[Telegram] ", "")
             source = item.get("source", "unknown")
             link = item.get("link", "")
+            description = item.get("description", "").strip()
 
             # Collect links for references
             if link:
                 source_links.append({"title": item["title"], "link": link, "source": source})
-                content_parts.append(f"| {i} | [**{title}**]({link}) | {source} |")
+                content_parts.append(f"**{i}. [{title}]({link})**")
             else:
-                content_parts.append(f"| {i} | **{title}** | {source} |")
+                content_parts.append(f"**{i}. {title}**")
+            if description and description != title and i <= 5:
+                desc_text = description[:150]
+                if len(description) > 150:
+                    desc_text += "..."
+                content_parts.append(f"{desc_text}")
+            content_parts.append(f"`채널: {source}`\n")
 
         content_parts.append("\n---\n")
 
-    # Social media trends section (only show if data exists)
+    # Social media trends section with descriptions (only show if data exists)
     if social_items:
         content_parts.append("\n## 주요 소셜 미디어 트렌드\n")
-        content_parts.append("| # | 제목 | 출처 |")
-        content_parts.append("|---|------|------|")
-        for i, item in enumerate(social_items[:10], 1):
+        for i, item in enumerate(social_items[:8], 1):
             title = item["title"]
             for prefix in ("[X/Twitter] ", "[Twitter] "):
                 title = title.replace(prefix, "")
             source = item.get("source", "unknown")
             link = item.get("link", "")
+            description = item.get("description", "").strip()
 
             if link:
                 source_links.append({"title": item["title"], "link": link, "source": source})
-                content_parts.append(f"| {i} | [**{title}**]({link}) | {source} |")
+                content_parts.append(f"**{i}. [{title}]({link})**")
             else:
-                content_parts.append(f"| {i} | **{title}** | {source} |")
+                content_parts.append(f"**{i}. {title}**")
+            if description and description != title and i <= 5:
+                desc_text = description[:150]
+                if len(description) > 150:
+                    desc_text += "..."
+                content_parts.append(f"{desc_text}")
+            content_parts.append(f"`출처: {source}`\n")
 
         content_parts.append("\n---\n")
 
@@ -509,21 +524,26 @@ def main():
 
         content_parts.append("\n---\n")
 
-    # Political/Economy trends section (only show if data exists)
+    # Political/Economy trends section with descriptions (only show if data exists)
     if political_items:
         content_parts.append("\n## 정치·경제 동향\n")
-        content_parts.append("| # | 제목 | 출처 |")
-        content_parts.append("|---|------|------|")
-        for i, item in enumerate(political_items[:15], 1):
+        for i, item in enumerate(political_items[:10], 1):
             title = item["title"]
             source = item.get("source", "unknown")
             link = item.get("link", "")
+            description = item.get("description", "").strip()
 
             if link:
                 source_links.append({"title": title, "link": link, "source": source})
-                content_parts.append(f"| {i} | [**{title}**]({link}) | {source} |")
+                content_parts.append(f"**{i}. [{title}]({link})**")
             else:
-                content_parts.append(f"| {i} | **{title}** | {source} |")
+                content_parts.append(f"**{i}. {title}**")
+            if description and description != title and i <= 5:
+                desc_text = description[:150]
+                if len(description) > 150:
+                    desc_text += "..."
+                content_parts.append(f"{desc_text}")
+            content_parts.append(f"`출처: {source}`\n")
 
         content_parts.append("\n---\n")
 
@@ -554,12 +574,12 @@ def main():
     trend_lines.append("> *본 소셜 동향 분석은 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*")
     content_parts.extend(trend_lines)
 
-    # References section
+    # References section (top 10 only)
     if source_links:
         content_parts.append("\n## 참고 링크\n")
         seen_links = set()
         ref_count = 1
-        for ref in source_links[:20]:
+        for ref in source_links[:10]:
             if ref["link"] not in seen_links:
                 seen_links.add(ref["link"])
                 content_parts.append(f"{ref_count}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}")

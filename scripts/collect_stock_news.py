@@ -368,26 +368,65 @@ def main():
     except Exception as e:
         logger.warning("Market snapshot image failed: %s", e)
 
-    # Themed news sections
+    # Theme briefing section
+    theme_briefing = summarizer.generate_theme_briefing()
+    if theme_briefing:
+        content_parts.append("\n" + theme_briefing)
+
+    # Themed news sections with description cards
     content_parts.append("\n---\n")
     themed = summarizer.generate_themed_news_sections()
     if themed:
         content_parts.append(themed)
         content_parts.append("\n---\n")
 
-    # Global stock news (only show if data exists)
-    if global_rows:
+    # Global stock news with descriptions (top 5 featured)
+    global_news_items = [item for item in all_items
+                         if item.get("source") != "Alpha Vantage"
+                         and detect_language(item.get("title", "")) != "ko"]
+    if global_news_items:
         content_parts.append("## 글로벌 주식 뉴스\n")
-        content_parts.append("| # | 제목 | 출처 |")
-        content_parts.append("|---|------|------|")
-        content_parts.extend(global_rows)
+        shown = 0
+        for item in global_news_items[:5]:
+            title = item["title"]
+            link = item.get("link", "")
+            source = item.get("source", "")
+            description = item.get("description", "").strip()
+            if link:
+                content_parts.append(f"**{shown + 1}. [{title}]({link})**")
+            else:
+                content_parts.append(f"**{shown + 1}. {title}**")
+            if description and description != title:
+                desc_text = description[:150]
+                if len(description) > 150:
+                    desc_text += "..."
+                content_parts.append(f"{desc_text}")
+            content_parts.append(f"`출처: {source}`\n")
+            shown += 1
 
-    # Korean stock news (only show if data exists)
-    if korean_rows:
+    # Korean stock news with descriptions (top 5 featured)
+    korean_news_items = [item for item in all_items
+                         if item.get("source") != "Alpha Vantage"
+                         and detect_language(item.get("title", "")) == "ko"]
+    if korean_news_items:
         content_parts.append("\n## 한국 주식 뉴스\n")
-        content_parts.append("| # | 제목 | 출처 |")
-        content_parts.append("|---|------|------|")
-        content_parts.extend(korean_rows)
+        shown = 0
+        for item in korean_news_items[:5]:
+            title = item["title"]
+            link = item.get("link", "")
+            source = item.get("source", "")
+            description = item.get("description", "").strip()
+            if link:
+                content_parts.append(f"**{shown + 1}. [{title}]({link})**")
+            else:
+                content_parts.append(f"**{shown + 1}. {title}**")
+            if description and description != title:
+                desc_text = description[:150]
+                if len(description) > 150:
+                    desc_text += "..."
+                content_parts.append(f"{desc_text}")
+            content_parts.append(f"`출처: {source}`\n")
+            shown += 1
 
     # Market data snapshot table (improved with emoji direction + Korean data)
     content_parts.append("\n## 시장 데이터 스냅샷\n")
@@ -451,12 +490,12 @@ def main():
 
     content_parts.append("\n---\n")
 
-    # References section
+    # References section (top 10 only)
     if source_links:
         content_parts.append("\n## 참고 링크\n")
         seen_links = set()
         ref_count = 1
-        for ref in source_links[:20]:
+        for ref in source_links[:10]:
             if ref["link"] not in seen_links:
                 seen_links.add(ref["link"])
                 content_parts.append(f"{ref_count}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}")

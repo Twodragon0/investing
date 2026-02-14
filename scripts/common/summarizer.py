@@ -216,11 +216,17 @@ class ThemeSummarizer:
         lines.append(f"\n*총 {len(self.items)}건의 뉴스 수집 완료*")
         return "\n".join(lines)
 
-    def generate_themed_news_sections(self, max_articles: int = ARTICLES_PER_THEME) -> str:
-        """Generate theme-based news sections with tables.
+    def generate_themed_news_sections(self, max_articles: int = ARTICLES_PER_THEME,
+                                      featured_count: int = 3) -> str:
+        """Generate theme-based news sections with description cards.
 
-        Each theme gets its own subsection with a news table.
+        Top articles per theme include description summaries in card format.
+        Remaining articles are shown in a collapsed list.
         Returns empty string if fewer than 5 items.
+
+        Args:
+            max_articles: Maximum total articles to show per theme.
+            featured_count: Number of articles to show with full description.
         """
         if len(self.items) < 5:
             return ""
@@ -233,12 +239,15 @@ class ThemeSummarizer:
 
         for name, key, emoji, count in top_themes:
             articles = self._theme_articles.get(key, [])
+            # Theme briefing
+            briefing = self._generate_single_theme_briefing(key, articles)
             lines.append(f"### {emoji} {name} ({count}건)\n")
-            lines.append("| 제목 | 출처 |")
-            lines.append("|------|------|")
+            if briefing:
+                lines.append(f"> {briefing}\n")
 
             shown = 0
             seen_titles: set = set()
+            remaining = []
             for article in articles:
                 title = article.get("title", "")
                 if not title or title in seen_titles:
@@ -246,16 +255,106 @@ class ThemeSummarizer:
                 seen_titles.add(title)
                 link = article.get("link", "")
                 source = article.get("source", "")
-                if link:
-                    lines.append(f"| [{title}]({link}) | {source} |")
+                description = article.get("description", "").strip()
+
+                if shown < featured_count:
+                    # Featured card with description
+                    if link:
+                        lines.append(f"**{shown + 1}. [{title}]({link})**")
+                    else:
+                        lines.append(f"**{shown + 1}. {title}**")
+                    if description and description != title:
+                        # Truncate description to 150 chars
+                        desc_text = description[:150]
+                        if len(description) > 150:
+                            desc_text += "..."
+                        lines.append(f"{desc_text}")
+                    lines.append(f"`출처: {source}`\n")
                 else:
-                    lines.append(f"| {title} | {source} |")
+                    # Remaining items collected for collapsed list
+                    if link:
+                        remaining.append(f"[{title}]({link})")
+                    else:
+                        remaining.append(title)
+
                 shown += 1
                 if shown >= max_articles:
                     break
 
+            # Show remaining as collapsed list
+            overflow = len([a for a in articles if a.get("title") and a["title"] not in seen_titles])
+            remaining_count = len(remaining) + overflow
+            if remaining:
+                remaining_str = ", ".join(remaining[:7])
+                if remaining_count > 7:
+                    remaining_str += f" 외 {remaining_count - 7}건"
+                lines.append(f"> 그 외 {remaining_count}건: {remaining_str}\n")
+
             lines.append("")
 
+        return "\n".join(lines)
+
+    def _generate_single_theme_briefing(self, theme_key: str,
+                                         articles: List[Dict[str, Any]]) -> str:
+        """Generate a 1-sentence briefing for a single theme from descriptions."""
+        if not articles:
+            return ""
+
+        # Collect keywords from top article descriptions
+        keywords: List[str] = []
+        top_desc = ""
+        for article in articles[:5]:
+            desc = article.get("description", "").strip()
+            title = article.get("title", "")
+            text = desc if desc and desc != title else title
+            if not top_desc and text:
+                top_desc = text[:80]
+            # Extract meaningful words (4+ chars)
+            words = re.findall(r"[a-zA-Z가-힣]{4,}", text)
+            keywords.extend(words[:3])
+
+        if not keywords:
+            return ""
+
+        # Get top 3 unique keywords
+        kw_counts = Counter(keywords)
+        top_kws = [kw for kw, _ in kw_counts.most_common(5)][:3]
+        if not top_kws:
+            return ""
+
+        theme_lookup = {key: name for name, key, _, _ in THEMES}
+        theme_name = theme_lookup.get(theme_key, theme_key)
+        kw_str = ", ".join(top_kws)
+
+        return f"{theme_name} 분야에서 {kw_str} 관련 이슈가 부각되고 있습니다."
+
+    def generate_theme_briefing(self) -> str:
+        """Generate combined theme briefings for all top themes.
+
+        Returns a section with 1-2 sentence briefings per theme,
+        based on article descriptions.
+        """
+        if len(self.items) < 5:
+            return ""
+
+        top_themes = self.get_top_themes()
+        if not top_themes:
+            return ""
+
+        lines = ["## 테마별 브리핑\n"]
+        has_content = False
+
+        for name, key, emoji, count in top_themes:
+            articles = self._theme_articles.get(key, [])
+            briefing = self._generate_single_theme_briefing(key, articles)
+            if briefing:
+                lines.append(f"- {emoji} **{name}**: {briefing}")
+                has_content = True
+
+        if not has_content:
+            return ""
+
+        lines.append("")
         return "\n".join(lines)
 
     def generate_summary_section(self) -> str:
@@ -299,14 +398,17 @@ class ThemeSummarizer:
 
     def generate_executive_summary(self, category_type: str = "general",
                                     extra_data: Dict[str, Any] | None = None) -> str:
-        """Generate a TL;DR executive summary section for the top of blog posts.
+        """Generate an enhanced TL;DR executive summary section.
+
+        Includes 3-5 line briefing (one per theme), key points table,
+        P0 urgent alerts, and market data integration.
 
         Args:
             category_type: One of "crypto", "stock", "regulatory", "social", "market", "security"
             extra_data: Optional dict with market data, region counts, etc.
 
         Returns:
-            Markdown string with blockquote summary + key points table.
+            Markdown string with blockquote briefing + key points table.
         """
         if len(self.items) < 3:
             return ""
@@ -332,6 +434,39 @@ class ThemeSummarizer:
 
         lines = ["\n## 한눈에 보기\n"]
         lines.append(f"> {opener}\n")
+
+        # Multi-line briefing: one line per top theme
+        briefing_lines = []
+        for name, key, emoji, count in top_themes[:4]:
+            articles = self._theme_articles.get(key, [])
+            if not articles:
+                continue
+            # Pick the top article description
+            top_desc = ""
+            for art in articles[:3]:
+                desc = art.get("description", "").strip()
+                title = art.get("title", "")
+                if desc and desc != title and len(desc) > 20:
+                    top_desc = desc[:100]
+                    if len(desc) > 100:
+                        top_desc += "..."
+                    break
+            if top_desc:
+                briefing_lines.append(f"> - {emoji} **{name}** ({count}건): {top_desc}")
+            else:
+                briefing_lines.append(f"> - {emoji} **{name}**: {count}건의 관련 뉴스가 수집되었습니다.")
+
+        if briefing_lines:
+            lines.extend(briefing_lines)
+            lines.append("")
+
+        # P0 urgent alerts inline
+        priority_items = self.classify_priority()
+        if priority_items.get("P0"):
+            p0_titles = [item.get("title", "") for item in priority_items["P0"][:3]]
+            if p0_titles:
+                lines.append(f"> **긴급**: {', '.join(p0_titles[:2])}")
+                lines.append("")
 
         # Key points table
         lines.append("| 구분 | 내용 |")

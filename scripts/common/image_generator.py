@@ -938,3 +938,155 @@ def generate_indicator_dashboard(
 
     logger.info("Generated indicator dashboard: %s", filename)
     return f"/assets/images/generated/{filename}"
+
+
+def generate_news_briefing_card(
+    themes: List[Dict[str, Any]],
+    date_str: str,
+    category: str = "Daily Briefing",
+    total_count: int = 0,
+    urgent_alerts: Optional[List[str]] = None,
+    filename: Optional[str] = None,
+) -> Optional[str]:
+    """Generate a high-quality news briefing card image.
+
+    Replaces generate_news_summary_card with a richer layout:
+    - Top: date + category + total count
+    - Middle: theme icons + counts + top keywords (3-4 themes)
+    - Bottom: P0 urgent alert (if present, highlighted)
+
+    Args:
+        themes: List of {"name": str, "emoji": str, "count": int,
+                "keywords": list[str]} dicts.
+        date_str: Date string for the header.
+        category: Category label (e.g. "Crypto News", "Stock Market").
+        total_count: Total news items collected.
+        urgent_alerts: Optional list of P0 alert titles.
+        filename: Optional output filename.
+
+    Returns relative path for Jekyll or None on failure.
+    """
+    if not _MPL_AVAILABLE:
+        return None
+
+    _ensure_dir()
+
+    if not themes:
+        return None
+
+    display_themes = themes[:5]
+    has_urgent = urgent_alerts and len(urgent_alerts) > 0
+    urgent_height = 0.8 if has_urgent else 0
+    fig_height = 3.5 + len(display_themes) * 0.7 + urgent_height
+
+    fig, ax = plt.subplots(figsize=(12, fig_height))
+    fig.patch.set_facecolor(COLORS["bg"])
+    ax.set_facecolor(COLORS["bg"])
+    ax.set_xlim(0, 10)
+    ax.set_ylim(0, fig_height)
+    ax.axis("off")
+
+    # Header background with gradient effect
+    header_rect = mpatches.FancyBboxPatch(
+        (0.2, fig_height - 1.6), 9.6, 1.4,
+        boxstyle="round,pad=0.08",
+        facecolor="#1a2332", edgecolor=COLORS["blue"], linewidth=1.5,
+    )
+    ax.add_patch(header_rect)
+
+    # Title
+    ax.text(5, fig_height - 0.5, category,
+            ha="center", va="center", fontsize=20, fontweight="bold",
+            color=COLORS["text"], fontfamily="monospace")
+    ax.text(5, fig_height - 1.0, f"{date_str}  |  {total_count} articles collected",
+            ha="center", va="center", fontsize=11, color=COLORS["text_secondary"],
+            fontfamily="monospace")
+
+    # Theme rows
+    y_start = fig_height - 2.2
+
+    theme_colors = [
+        COLORS["orange"], COLORS["blue"], COLORS["purple"],
+        COLORS["green"], COLORS["red"],
+    ]
+
+    for i, theme in enumerate(display_themes):
+        y = y_start - i * 0.7
+        t_color = theme_colors[i % len(theme_colors)]
+
+        # Row background
+        row_rect = mpatches.FancyBboxPatch(
+            (0.3, y - 0.22), 9.4, 0.6,
+            boxstyle="round,pad=0.05",
+            facecolor=COLORS["bg_card"], edgecolor=t_color,
+            linewidth=1.0, alpha=0.9,
+        )
+        ax.add_patch(row_rect)
+
+        # Color accent bar
+        accent = mpatches.FancyBboxPatch(
+            (0.3, y - 0.22), 0.15, 0.6,
+            boxstyle="round,pad=0.02",
+            facecolor=t_color, edgecolor="none",
+        )
+        ax.add_patch(accent)
+
+        # Theme emoji + name
+        emoji = theme.get("emoji", "")
+        name = theme.get("name", "")
+        count = theme.get("count", 0)
+        keywords = theme.get("keywords", [])
+
+        ax.text(0.8, y + 0.05, f"{emoji} {name}",
+                fontsize=13, fontweight="bold", color=COLORS["text"],
+                fontfamily="monospace", va="center")
+
+        # Count badge
+        ax.text(4.5, y + 0.05, f"{count}건",
+                fontsize=12, fontweight="bold", color=t_color,
+                fontfamily="monospace", va="center", ha="center")
+
+        # Keywords
+        if keywords:
+            kw_str = " · ".join(keywords[:4])
+            ax.text(5.5, y + 0.05, kw_str,
+                    fontsize=9, color=COLORS["text_secondary"],
+                    fontfamily="monospace", va="center")
+
+    # Urgent alerts section
+    if has_urgent:
+        y_urgent = y_start - len(display_themes) * 0.7 - 0.3
+        urgent_rect = mpatches.FancyBboxPatch(
+            (0.3, y_urgent - 0.3), 9.4, 0.7,
+            boxstyle="round,pad=0.05",
+            facecolor="#2d1a1a", edgecolor=COLORS["red"], linewidth=1.5,
+        )
+        ax.add_patch(urgent_rect)
+
+        ax.text(0.8, y_urgent + 0.05, "URGENT",
+                fontsize=12, fontweight="bold", color=COLORS["red"],
+                fontfamily="monospace", va="center")
+
+        alert_text = urgent_alerts[0][:60] if urgent_alerts else ""
+        if len(urgent_alerts[0]) > 60:
+            alert_text += "..."
+        ax.text(2.8, y_urgent + 0.05, alert_text,
+                fontsize=10, color=COLORS["text"],
+                fontfamily="monospace", va="center")
+
+    # Footer
+    ax.text(5, 0.2, "Investing Dragon | Auto-generated News Briefing",
+            ha="center", fontsize=8, color=COLORS["text_secondary"],
+            fontfamily="monospace", style="italic")
+
+    if not filename:
+        filename = f"news-briefing-{date_str}.png"
+    filepath = os.path.join(IMAGES_DIR, filename)
+
+    plt.tight_layout(pad=0.5)
+    plt.savefig(filepath, dpi=150, facecolor=COLORS["bg"],
+                edgecolor="none", bbox_inches="tight")
+    plt.close(fig)
+
+    logger.info("Generated news briefing card: %s", filename)
+    return f"/assets/images/generated/{filename}"

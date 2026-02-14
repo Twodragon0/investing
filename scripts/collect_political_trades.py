@@ -253,22 +253,33 @@ def main():
     # Collect source links
     source_links = []
 
-    def _render_news_table(items: List[Dict], section_title: str, max_items: int = 15):
-        """Add a news table section to content_parts."""
+    # Theme briefing
+    theme_briefing = summarizer.generate_theme_briefing()
+    if theme_briefing:
+        content_parts.append(theme_briefing)
+
+    def _render_news_cards(items: List[Dict], section_title: str,
+                           max_items: int = 10, featured: int = 5):
+        """Add a news card section with descriptions to content_parts."""
         if not items:
             return
         content_parts.append(f"\n## {section_title}\n")
-        content_parts.append("| # | 제목 | 출처 |")
-        content_parts.append("|---|------|------|")
         for i, item in enumerate(items[:max_items], 1):
             title = item.get("title", "")
             source = item.get("source", "unknown")
             link = item.get("link", "")
+            description = item.get("description", "").strip()
             if link:
                 source_links.append({"title": title, "link": link, "source": source})
-                content_parts.append(f"| {i} | [**{title}**]({link}) | {source} |")
+                content_parts.append(f"**{i}. [{title}]({link})**")
             else:
-                content_parts.append(f"| {i} | **{title}** | {source} |")
+                content_parts.append(f"**{i}. {title}**")
+            if description and description != title and i <= featured:
+                desc_text = description[:150]
+                if len(description) > 150:
+                    desc_text += "..."
+                content_parts.append(f"{desc_text}")
+            content_parts.append(f"`출처: {source}`\n")
         content_parts.append("")
 
     # Filter unique items by category for sections
@@ -278,37 +289,48 @@ def main():
     korea_filtered = [i for i in unique_items if "korea" in i.get("tags", [])]
     cb_filtered = [i for i in unique_items if "central-bank" in i.get("tags", [])]
 
-    _render_news_table(congress_filtered, "미국 의회 거래 동향")
-    _render_news_table(trump_filtered, "트럼프 행정명령/정책")
-    _render_news_table(sec_filtered, "SEC 내부자 거래 (Form 4)")
-    _render_news_table(korea_filtered, "한국 정치인 재산/거래")
-    _render_news_table(cb_filtered, "중앙은행 정책 동향")
+    _render_news_cards(congress_filtered, "미국 의회 거래 동향")
+    _render_news_cards(trump_filtered, "트럼프 행정명령/정책")
+    _render_news_cards(sec_filtered, "SEC 내부자 거래 (Form 4)")
+    _render_news_cards(korea_filtered, "한국 정치인 재산/거래")
+    _render_news_cards(cb_filtered, "중앙은행 정책 동향")
 
     content_parts.append("---\n")
 
-    # Policy impact analysis
+    # Policy impact analysis (enhanced with description-based insights)
     content_parts.append("\n## 정책 영향 분석\n")
     analysis_lines = []
     if trump_count:
         analysis_lines.append(f"트럼프 관련 {trump_count}건의 정책 뉴스가 수집되었습니다. 행정명령 및 관세 정책은 글로벌 시장에 직접적인 영향을 미치고 있습니다.")
+        # Add top description from trump items
+        for item in trump_filtered[:1]:
+            desc = item.get("description", "").strip()
+            title = item.get("title", "")
+            if desc and desc != title and len(desc) > 20:
+                analysis_lines.append(f"> 주요 내용: {desc[:200]}")
     if congress_count:
-        analysis_lines.append(f"미국 의회 거래 {congress_count}건이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향을 예측하는 참고 자료가 될 수 있습니다.")
+        analysis_lines.append(f"\n미국 의회 거래 {congress_count}건이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향을 예측하는 참고 자료가 될 수 있습니다.")
     if korea_count:
-        analysis_lines.append(f"한국 정치인 관련 {korea_count}건의 재산/거래 소식이 수집되었습니다.")
+        analysis_lines.append(f"\n한국 정치인 관련 {korea_count}건의 재산/거래 소식이 수집되었습니다.")
     if cb_count:
-        analysis_lines.append(f"중앙은행 정책 관련 {cb_count}건의 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 영향을 줍니다.")
+        analysis_lines.append(f"\n중앙은행 정책 관련 {cb_count}건의 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 영향을 줍니다.")
+        for item in cb_filtered[:1]:
+            desc = item.get("description", "").strip()
+            title = item.get("title", "")
+            if desc and desc != title and len(desc) > 20:
+                analysis_lines.append(f"> 주요 내용: {desc[:200]}")
     if not analysis_lines:
         analysis_lines.append("현재 수집된 정치인 거래/정책 데이터가 제한적입니다.")
     analysis_lines.append("")
     analysis_lines.append("> *본 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*")
     content_parts.extend(analysis_lines)
 
-    # References
+    # References (top 10 only)
     if source_links:
         content_parts.append("\n## 참고 링크\n")
         seen_links = set()
         ref_count = 1
-        for ref in source_links[:20]:
+        for ref in source_links[:10]:
             if ref["link"] not in seen_links:
                 seen_links.add(ref["link"])
                 content_parts.append(f"{ref_count}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}")

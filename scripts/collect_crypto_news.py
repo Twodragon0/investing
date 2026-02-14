@@ -463,22 +463,56 @@ def main():
         else:
             content_parts.append("- 오늘의 특이 사항이 없습니다.")
 
-        # Image — news source distribution bar chart
+        # Image — news briefing card (replaces simple bar chart)
         try:
-            from common.image_generator import generate_news_summary_card
-            categories = [{"name": name, "count": count} for name, count in source_counter.most_common(8)]
-            img = generate_news_summary_card(categories, today)
+            from common.image_generator import generate_news_briefing_card
+            # Build theme data for the card
+            card_themes = []
+            for t_name, t_key, t_emoji, t_count in top_themes[:5]:
+                # Extract keywords from theme articles
+                t_articles = summarizer._theme_articles.get(t_key, [])
+                t_keywords = []
+                for art in t_articles[:5]:
+                    words = re.findall(r"[a-zA-Z가-힣]{4,}", art.get("title", ""))
+                    t_keywords.extend(words[:2])
+                # Deduplicate
+                seen_kw = set()
+                unique_kw = []
+                for kw in t_keywords:
+                    if kw.lower() not in seen_kw:
+                        seen_kw.add(kw.lower())
+                        unique_kw.append(kw)
+                card_themes.append({
+                    "name": t_name, "emoji": t_emoji,
+                    "count": t_count, "keywords": unique_kw[:4],
+                })
+
+            # Check for P0 alerts
+            priority_items = summarizer.classify_priority()
+            p0_alerts = [item.get("title", "") for item in priority_items.get("P0", [])[:2]]
+
+            img = generate_news_briefing_card(
+                card_themes, today,
+                category="Crypto News Briefing",
+                total_count=len(all_items),
+                urgent_alerts=p0_alerts if p0_alerts else None,
+            )
             if img:
                 fn = os.path.basename(img)
                 web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
-                content_parts.append(f"\n![news-summary]({web_path})\n")
-                logger.info("Generated news summary image")
+                content_parts.append(f"\n![news-briefing]({web_path})\n")
+                logger.info("Generated news briefing card")
         except ImportError:
             pass
         except Exception as e:
-            logger.warning("News summary image failed: %s", e)
+            logger.warning("News briefing card failed: %s", e)
 
-        # Main news - theme-based sections
+        # Theme briefing section
+        theme_briefing = summarizer.generate_theme_briefing()
+        if theme_briefing:
+            content_parts.append(theme_briefing)
+
+        # Main news - theme-based sections with description cards
         themed_sections = summarizer.generate_themed_news_sections()
         if themed_sections:
             content_parts.append(themed_sections)
@@ -492,12 +526,31 @@ def main():
             else:
                 content_parts.append("*수집된 뉴스가 없습니다.*")
 
-        # Exchange announcements table (only show if data exists)
+        # Exchange announcements with descriptions
         if exchange_rows:
             content_parts.append("\n## 거래소 공지사항\n")
-            content_parts.append("| # | 제목 | 거래소 |")
-            content_parts.append("|---|------|--------|")
-            content_parts.extend(exchange_rows)
+            shown_exchange = 0
+            for item in all_items:
+                if item.get("source") not in ("Binance", "OKX", "Bybit"):
+                    continue
+                title = item["title"]
+                link = item.get("link", "")
+                source = item.get("source", "")
+                description = item.get("description", "").strip()
+                if shown_exchange < 5:
+                    if link:
+                        content_parts.append(f"**{shown_exchange + 1}. [{title}]({link})**")
+                    else:
+                        content_parts.append(f"**{shown_exchange + 1}. {title}**")
+                    if description and description != title:
+                        desc_text = description[:120]
+                        if len(description) > 120:
+                            desc_text += "..."
+                        content_parts.append(f"{desc_text}")
+                    content_parts.append(f"`거래소: {source}`\n")
+                shown_exchange += 1
+                if shown_exchange >= 10:
+                    break
 
         # Insight section - theme-based analysis
         content_parts.append("\n## 오늘의 인사이트\n")
@@ -528,13 +581,13 @@ def main():
         insight_lines.append("> *본 뉴스 브리핑은 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*")
         content_parts.extend(insight_lines)
 
-        # References section
+        # References section (top 10 only)
         if source_links:
             content_parts.append("\n---\n")
             content_parts.append("## 참고 링크\n")
             seen_links = set()
             ref_count = 1
-            for ref in source_links[:20]:
+            for ref in source_links[:10]:
                 if ref["link"] not in seen_links:
                     seen_links.add(ref["link"])
                     content_parts.append(f"{ref_count}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}")
@@ -627,20 +680,25 @@ def main():
                     else:
                         content_parts.append(f"| {project} | {funds_lost} | {technique} |")
 
-            # Google Security News section
+            # Google Security News section with descriptions
             if google_security_items:
                 content_parts.append("\n## 보안 관련 뉴스\n")
-                content_parts.append("| # | 제목 | 출처 |")
-                content_parts.append("|---|------|------|")
-                for i, item in enumerate(google_security_items[:15], 1):
+                for i, item in enumerate(google_security_items[:10], 1):
                     title = item["title"]
                     link = item.get("link", "")
                     source = item.get("source", "")
+                    description = item.get("description", "").strip()
                     if link:
-                        content_parts.append(f"| {i} | [**{title}**]({link}) | {source} |")
+                        content_parts.append(f"**{i}. [{title}]({link})**")
                         security_links.append({"title": title, "link": link, "source": source})
                     else:
-                        content_parts.append(f"| {i} | **{title}** | {source} |")
+                        content_parts.append(f"**{i}. {title}**")
+                    if description and description != title and i <= 5:
+                        desc_text = description[:150]
+                        if len(description) > 150:
+                            desc_text += "..."
+                        content_parts.append(f"{desc_text}")
+                    content_parts.append(f"`출처: {source}`\n")
 
             # Security insight
             content_parts.append("\n## 보안 인사이트\n")
