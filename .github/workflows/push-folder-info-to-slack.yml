@@ -20,24 +20,6 @@ jobs:
           path: investing
           fetch-depth: 1
 
-      - name: Checkout openclaw
-        id: checkout-openclaw
-        continue-on-error: true
-        uses: actions/checkout@v4
-        with:
-          repository: Twodragon0/openclaw
-          path: openclaw
-          fetch-depth: 1
-
-      - name: Checkout crypto
-        id: checkout-crypto
-        continue-on-error: true
-        uses: actions/checkout@v4
-        with:
-          repository: Twodragon0/crypto
-          path: crypto
-          fetch-depth: 1
-
       - name: Build folder summary
         id: summary
         shell: bash
@@ -75,10 +57,55 @@ jobs:
             printf "  - top-level: %s\n" "${top_dirs:-none}"
           }
 
+          build_investing_digest() {
+            local posts_dir="investing/_posts"
+            if [ ! -d "$posts_dir" ]; then
+              printf -- "- latest digest: unavailable\n"
+              return
+            fi
+
+            local latest_file
+            latest_file=$(ls -1 "$posts_dir"/*daily-news-summary*.md 2>/dev/null | tail -n 1 || true)
+            if [ -z "$latest_file" ]; then
+              printf -- "- latest digest: unavailable\n"
+              return
+            fi
+
+            local digest_title
+            local digest_excerpt
+            local digest_url
+            local slug
+            local y
+            local m
+            local d
+            local rest
+
+            digest_title=$(grep -m1 '^title:' "$latest_file" | sed 's/^title:[[:space:]]*//; s/^"//; s/"$//')
+            digest_excerpt=$(grep -m1 '^excerpt:' "$latest_file" | sed 's/^excerpt:[[:space:]]*//; s/^"//; s/"$//')
+            digest_excerpt=$(printf "%s" "$digest_excerpt" | cut -c1-160)
+            slug=$(basename "$latest_file" .md)
+            y=$(printf "%s" "$slug" | cut -d'-' -f1)
+            m=$(printf "%s" "$slug" | cut -d'-' -f2)
+            d=$(printf "%s" "$slug" | cut -d'-' -f3)
+            rest=$(printf "%s" "$slug" | cut -d'-' -f4-)
+            if [ -n "$y" ] && [ -n "$m" ] && [ -n "$d" ] && [ -n "$rest" ]; then
+              digest_url="https://investing.2twodragon.com/market-analysis/$y/$m/$d/$rest/"
+            else
+              digest_url="https://investing.2twodragon.com/"
+            fi
+
+            printf -- "- latest digest: %s\n" "$digest_title"
+            if [ -n "$digest_excerpt" ]; then
+              printf "  - summary: %s\n" "$digest_excerpt"
+            fi
+            printf "  - link: %s\n" "$digest_url"
+          }
+
           report_file="${RUNNER_TEMP}/folder_report.txt"
           {
             printf "*Hourly folder report*\n"
             printf -- "- time (UTC): %s\n" "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+            build_investing_digest
             build_line "openclaw" "openclaw"
             build_line "investing" "investing"
             build_line "crypto" "crypto"
@@ -95,26 +122,48 @@ jobs:
         shell: bash
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          OPENCLAW_SLACK_BOT_TOKEN: ${{ secrets.OPENCLAW_SLACK_BOT_TOKEN }}
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
           SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          OPENCLAW_SLACK_CHANNEL_ID: ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID }}
+          SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
         run: |
           set -euo pipefail
           can_post=true
-          if [ -z "${SLACK_BOT_TOKEN:-}" ]; then
-            echo "SLACK_BOT_TOKEN is empty; skip Slack post"
+          bot_token="${SLACK_BOT_TOKEN:-}"
+          if [ -z "$bot_token" ]; then
+            bot_token="${OPENCLAW_SLACK_BOT_TOKEN:-}"
+          fi
+          if [ -z "$bot_token" ]; then
+            bot_token="${SLACK_TOKEN:-}"
+          fi
+
+          channel_id="${SLACK_CHANNEL_ID:-}"
+          if [ -z "$channel_id" ]; then
+            channel_id="${OPENCLAW_SLACK_CHANNEL_ID:-}"
+          fi
+          if [ -z "$channel_id" ]; then
+            channel_id="${SLACK_CHANNEL:-}"
+          fi
+
+          if [ -z "$bot_token" ]; then
+            echo "No Slack bot token secret found; skip Slack post"
             can_post=false
           fi
-          if [ -z "${SLACK_CHANNEL_ID:-}" ]; then
-            echo "SLACK_CHANNEL_ID is empty; skip Slack post"
+          if [ -z "$channel_id" ]; then
+            echo "No Slack channel secret found; skip Slack post"
             can_post=false
           fi
           echo "can_post=$can_post" >> "$GITHUB_OUTPUT"
+          echo "bot_token=$bot_token" >> "$GITHUB_OUTPUT"
+          echo "channel_id=$channel_id" >> "$GITHUB_OUTPUT"
 
       - name: Post to Slack investing channel
         if: steps.slack-config.outputs.can_post == 'true'
         uses: slackapi/slack-github-action@v2.1.1
         with:
           method: chat.postMessage
-          token: ${{ secrets.SLACK_BOT_TOKEN }}
+          token: ${{ steps.slack-config.outputs.bot_token }}
           payload: |
-            channel: "${{ secrets.SLACK_CHANNEL_ID }}"
+            channel: "${{ steps.slack-config.outputs.channel_id }}"
             text: "${{ steps.summary.outputs.message }}"
