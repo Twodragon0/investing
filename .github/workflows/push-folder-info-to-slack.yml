@@ -66,7 +66,7 @@ jobs:
             commit_hash=$(git -C "$repo_path" rev-parse --short HEAD)
             commit_date=$(git -C "$repo_path" log -1 --date=iso-strict --pretty=format:"%ad")
             tracked_files=$(git -C "$repo_path" ls-files | wc -l | tr -d ' ')
-            top_dirs=$(git -C "$repo_path" ls-tree --name-only HEAD | tr '\n' ', ' | sed 's/, $//')
+            top_dirs=$(git -C "$repo_path" ls-tree --name-only HEAD | tr '\n' ',' | sed 's/,$//' | sed 's/,/, /g')
 
             printf "- %s\n" "$repo_name"
             printf "  - commit: %s\n" "$commit_hash"
