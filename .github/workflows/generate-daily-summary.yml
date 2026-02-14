@@ -1,0 +1,30 @@
+name: Generate Daily Summary
+
+on:
+  schedule:
+    - cron: '30 14 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect-data
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate daily summary
+        uses: ./.github/actions/python-collect
+        with:
+          script: scripts/generate_daily_summary.py
+          commit-message: 'chore: generate daily news summary'
+          git-add-paths: '_posts/'

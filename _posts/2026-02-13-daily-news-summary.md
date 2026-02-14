@@ -5,7 +5,7 @@ categories: [market-analysis]
 tags: [일일요약, 암호화폐, 주식, 규제, 소셜미디어, 보안]
 source: "consolidated"
 lang: "ko"
-pin: true
+pin: false
 image: "/assets/images/generated/news-summary-2026-02-13.png"
 ---
 
