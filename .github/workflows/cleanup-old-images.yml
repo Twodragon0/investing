@@ -1,0 +1,45 @@
+name: Cleanup Old Generated Images
+
+on:
+  schedule:
+    - cron: '0 3 * * 0'  # Every Sunday at 03:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Remove images older than 30 days
+        run: |
+          cd assets/images/generated
+          count=0
+          for f in *.png; do
+            [ -f "$f" ] || continue
+            age=$(( ($(date +%s) - $(date -r "$f" +%s 2>/dev/null || stat -c %Y "$f" 2>/dev/null || echo 0)) / 86400 ))
+            if [ "$age" -gt 30 ]; then
+              rm "$f"
+              count=$((count + 1))
+            fi
+          done
+          echo "Removed $count old images"
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A assets/images/generated/
+          if git diff --cached --quiet; then
+            echo "No old images to clean up"
+          else
+            git commit -m "chore: cleanup generated images older than 30 days"
+            git push
+          fi

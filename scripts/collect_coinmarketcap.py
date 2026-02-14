@@ -471,6 +471,56 @@ def main():
                 img_lines.append(f"![{label}]({web_path})")
             sections["시장 시각화"] = "\n\n".join(img_lines)
 
+        # 0-b. News briefing card image
+        try:
+            from common.image_generator import generate_news_briefing_card
+            card_themes = []
+            # Build themes from top coin movers
+            gainers_for_card = sorted(
+                top_coins[:20],
+                key=lambda c: abs(c.get("price_change_percentage_24h") or c.get("quote", {}).get("USD", {}).get("percent_change_24h", 0) or 0),
+                reverse=True,
+            )[:3]
+            for coin in gainers_for_card:
+                if cmc_source == "coingecko":
+                    name = coin.get("name", "")
+                    symbol = coin.get("symbol", "").upper()
+                    change = coin.get("price_change_percentage_24h", 0) or 0
+                else:
+                    name = coin.get("name", "")
+                    symbol = coin.get("symbol", "")
+                    change = coin.get("quote", {}).get("USD", {}).get("percent_change_24h", 0) or 0
+                emoji = "🟢" if change >= 0 else "🔴"
+                card_themes.append({
+                    "name": f"{name} ({symbol})",
+                    "emoji": emoji,
+                    "count": 1,
+                    "keywords": [f"{change:+.2f}%"],
+                })
+            # Add market overview themes
+            if global_data:
+                btc_dom = global_data.get("market_cap_percentage", {}).get("btc", 0)
+                card_themes.append({"name": "BTC 도미넌스", "emoji": "🟠", "count": 1, "keywords": [f"{btc_dom:.1f}%"]})
+            if fear_greed:
+                fg_val = fear_greed.get("value", 0)
+                fg_cls = fear_greed.get("classification", "N/A")
+                card_themes.append({"name": "공포/탐욕", "emoji": "📊", "count": 1, "keywords": [f"{fg_val} ({fg_cls})"]})
+
+            briefing_img = generate_news_briefing_card(
+                card_themes, today,
+                category="Crypto Market Report",
+                total_count=len(top_coins),
+                filename=f"news-briefing-cmc-{today}.png",
+            )
+            if briefing_img:
+                fn = os.path.basename(briefing_img)
+                web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
+                sections["오늘의 브리핑"] = f"![market-briefing]({web_path})"
+        except ImportError:
+            pass
+        except Exception as e:
+            logger.warning("Briefing card generation failed: %s", e)
+
         # 1. Key summary bullet points
         key_bullets = []
         if top_coins:
@@ -510,13 +560,44 @@ def main():
             bar = "█" * (value // 5) + "░" * (20 - value // 5)
             sections["공포/탐욕 지수"] = f"**{value}/100** — {classification}\n\n`[{bar}]`"
 
-        # 5. Top 20 coins
+        # 5. Top movers briefing (description card style for top 5)
+        if top_coins:
+            mover_lines = []
+            sorted_movers = sorted(
+                top_coins[:20],
+                key=lambda c: abs(c.get("price_change_percentage_24h") or c.get("quote", {}).get("USD", {}).get("percent_change_24h", 0) or 0),
+                reverse=True,
+            )
+            for i, coin in enumerate(sorted_movers[:5], 1):
+                if cmc_source == "coingecko":
+                    name = coin.get("name", "")
+                    symbol = coin.get("symbol", "").upper()
+                    price = coin.get("current_price", 0)
+                    ch24 = coin.get("price_change_percentage_24h", 0) or 0
+                    ch7d = coin.get("price_change_percentage_7d_in_currency", 0) or 0
+                    mcap = coin.get("market_cap", 0) or 0
+                else:
+                    name = coin.get("name", "")
+                    symbol = coin.get("symbol", "")
+                    quote = coin.get("quote", {}).get("USD", {})
+                    price = quote.get("price", 0) or 0
+                    ch24 = quote.get("percent_change_24h", 0) or 0
+                    ch7d = quote.get("percent_change_7d", 0) or 0
+                    mcap = quote.get("market_cap", 0) or 0
+                direction = "상승" if ch24 >= 0 else "하락"
+                price_str = f"${price:,.2f}" if price >= 1 else f"${price:,.6f}"
+                mover_lines.append(f"**{i}. {name} ({symbol})**")
+                mover_lines.append(f"현재가 {price_str}, 24시간 {ch24:+.2f}% {direction}, 7일 {ch7d:+.2f}%. 시가총액 {_fmt_num(mcap)}")
+                mover_lines.append(f"`24h 변동률 기준 Top {i}`\n")
+            sections["주요 변동 코인"] = "\n".join(mover_lines)
+
+        # 6. Top 20 coins table
         sections["시가총액 Top 20"] = format_top_coins_table(top_coins, cmc_source)
 
-        # 6. Trending coins
+        # 7. Trending coins
         sections["트렌딩 코인"] = format_trending_coins(trending, cmc_source)
 
-        # 7. Gainers/Losers
+        # 8. Gainers/Losers
         if gainers or losers:
             sections["급등/급락 코인"] = format_gainers_losers(gainers, losers)
         elif top_coins and cmc_source == "coingecko":
