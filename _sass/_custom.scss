@@ -343,6 +343,7 @@ a {
     );
     opacity: 0;
     transition: opacity 0.4s ease;
+    pointer-events: none;
   }
 
   &:hover {
@@ -365,35 +366,27 @@ a {
     flex-wrap: wrap;
   }
 
+  display: block;
   cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
 
   h3 {
     font-size: 1.15rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
     line-height: 1.5;
-
-    a {
-      color: $text-primary;
-      transition: all 0.3s ease;
-
-      &::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        z-index: 1;
-      }
-
-      &:hover {
-        color: $accent-blue;
-        text-decoration: none;
-      }
-    }
+    color: $text-primary;
+    transition: color 0.3s ease;
   }
 
-  .post-tags {
-    position: relative;
-    z-index: 2;
+  &:hover h3 {
+    color: $accent-blue;
   }
 
   .post-excerpt {

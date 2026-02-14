@@ -13,7 +13,7 @@
 {% else %}{% assign pc_cat_name = pc_cat %}
 {% endif %}
 
-<article class="post-card cat-border-{{ pc_cat | slugify }}{% if post.pin %} pinned{% endif %}">
+<a href="{{ post.url | relative_url }}" class="post-card cat-border-{{ pc_cat | slugify }}{% if post.pin %} pinned{% endif %}">
   <div class="post-card-meta">
     {% if post.pin %}<span class="pin-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M16 12V4h1V2H7v2h1v8l-2 2v2h5.2v6h1.6v-6H18v-2l-2-2z"/></svg> TOP</span>{% endif %}
     <span class="post-category cat-{{ pc_cat | slugify }}">{{ pc_cat_name }}</span>
@@ -26,7 +26,7 @@
       {{ reading_time }}분
     </span>
   </div>
-  <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+  <h3>{{ post.title }}</h3>
   {% if post.excerpt %}<p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>{% endif %}
   <div class="post-card-footer">
     {% if post.tags.size > 0 %}
@@ -42,4 +42,4 @@
       </svg>
     </span>
   </div>
-</article>
+</a>

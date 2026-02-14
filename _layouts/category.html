@@ -75,7 +75,7 @@ filterInput.addEventListener('input', function() {
   });
 
   posts.forEach(function(post) {
-    var title = post.querySelector('h3 a').textContent.toLowerCase();
+    var title = post.querySelector('h3').textContent.toLowerCase();
     var excerpt = post.querySelector('.post-excerpt');
     var excerptText = excerpt ? excerpt.textContent.toLowerCase() : '';
     var tags = post.querySelectorAll('.tag');
