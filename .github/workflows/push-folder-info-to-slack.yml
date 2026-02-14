@@ -53,6 +53,11 @@ jobs:
               return
             fi
 
+            if ! git -C "$repo_path" rev-parse --verify HEAD >/dev/null 2>&1; then
+              printf "- %s: not available\n" "$repo_name"
+              return
+            fi
+
             local commit_hash
             local commit_date
             local tracked_files
