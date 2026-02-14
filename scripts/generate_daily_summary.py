@@ -18,13 +18,12 @@ import os
 import re
 import glob
 from datetime import datetime, timezone
-from collections import OrderedDict
 from typing import Dict, List, Any, Optional
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.config import setup_logging
-from common.post_generator import PostGenerator, POSTS_DIR
+from common.post_generator import POSTS_DIR
 from common.summarizer import ThemeSummarizer
 
 logger = setup_logging("generate_daily_summary")
@@ -299,7 +298,6 @@ def main():
     logger.info("=== Generating daily news summary ===")
 
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    now = datetime.now(timezone.utc)
 
     # Find all posts for today
     pattern = os.path.join(POSTS_DIR, f"{today}-*.md")

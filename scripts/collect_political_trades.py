@@ -13,16 +13,14 @@ import sys
 import os
 import re
 import requests
-from collections import Counter
 from datetime import datetime, timezone
 from typing import List, Dict, Any
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common.config import get_env, setup_logging, get_ssl_verify
+from common.config import setup_logging, get_ssl_verify
 from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
-from common.utils import sanitize_string, truncate_text
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
 
@@ -82,7 +80,6 @@ def fetch_sec_insider_trades() -> List[Dict[str, Any]]:
                 entity = source.get("entity_name", "Unknown")
                 form_type = source.get("form_type", "4")
                 filed = source.get("file_date", "")
-                file_num = source.get("file_num", "")
                 items.append({
                     "title": f"[SEC Form {form_type}] {entity}",
                     "description": f"SEC Form {form_type} filing by {entity} on {filed}",

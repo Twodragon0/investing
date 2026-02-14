@@ -12,7 +12,6 @@ Generates high-quality Korean summary posts with market analysis.
 import sys
 import os
 import time
-import requests
 from datetime import datetime, timezone
 from collections import OrderedDict
 from typing import List, Dict, Any, Tuple

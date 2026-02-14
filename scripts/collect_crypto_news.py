@@ -12,7 +12,6 @@ Sources:
 import sys
 import os
 import re
-import time
 import requests
 from collections import Counter
 from datetime import datetime, timezone
@@ -24,7 +23,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common.config import get_env, setup_logging, get_ssl_verify
 from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
-from common.utils import sanitize_string, request_with_retry
+from common.utils import sanitize_string
 from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
 
