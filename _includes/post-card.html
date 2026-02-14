@@ -8,6 +8,8 @@
 {% elsif pc_cat == "stock-journal" or pc_cat == "stock-trading-journal" %}{% assign pc_cat_name = "주식 일지" %}
 {% elsif pc_cat == "security-alerts" %}{% assign pc_cat_name = "보안 알림" %}
 {% elsif pc_cat == "market-analysis" %}{% assign pc_cat_name = "시장 분석" %}
+{% elsif pc_cat == "political-trades" %}{% assign pc_cat_name = "정치인 거래" %}
+{% elsif pc_cat == "regulatory-news" %}{% assign pc_cat_name = "규제 동향" %}
 {% else %}{% assign pc_cat_name = pc_cat %}
 {% endif %}
 

@@ -7,6 +7,8 @@ main:
         url: /stock-news/
       - title: "보안 알림"
         url: /security-alerts/
+      - title: "규제 동향"
+        url: /regulatory-news/
       - title: "정치인 거래"
         url: /political-trades/
   - title: "트레이딩"

@@ -57,7 +57,7 @@ layout: default
       </svg>
       <div class="stat-content">
         <span class="stat-label">카테고리</span>
-        <span class="stat-value">6</span>
+        <span class="stat-value">8</span>
       </div>
     </div>
     <div class="stat-item">
@@ -101,6 +101,8 @@ layout: default
   {% assign stock_journal_count = site.categories['stock-trading-journal'] | size %}
   {% assign security_alerts_count = site.categories['security-alerts'] | size %}
   {% assign market_analysis_count = site.categories['market-analysis'] | size %}
+  {% assign regulatory_news_count = site.categories['regulatory-news'] | size %}
+  {% assign political_trades_count = site.categories['political-trades'] | size %}
 
   <a href="{{ '/crypto-news/' | relative_url }}" class="cat-card cat-crypto">
     <div class="cat-icon-wrapper">
@@ -229,6 +231,49 @@ layout: default
       <h3>시장 분석</h3>
       <p>일일·주간 시장 종합 리포트 및 매크로 분석</p>
       <span class="cat-badge">{{ market_analysis_count }} 포스트</span>
+    </div>
+    <div class="cat-arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </div>
+  </a>
+
+  <a href="{{ '/regulatory-news/' | relative_url }}" class="cat-card cat-regulatory">
+    <div class="cat-icon-wrapper">
+      <div class="cat-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+          <line x1="4" y1="22" x2="4" y2="15"/>
+        </svg>
+      </div>
+    </div>
+    <div class="cat-content">
+      <h3>규제 동향</h3>
+      <p>글로벌 암호화폐·금융 규제 및 정책 변화</p>
+      <span class="cat-badge">{{ regulatory_news_count }} 포스트</span>
+    </div>
+    <div class="cat-arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </div>
+  </a>
+
+  <a href="{{ '/political-trades/' | relative_url }}" class="cat-card cat-political">
+    <div class="cat-icon-wrapper">
+      <div class="cat-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/>
+        </svg>
+      </div>
+    </div>
+    <div class="cat-content">
+      <h3>정치인 거래</h3>
+      <p>미국 의회·SEC 내부자 거래, 정책 동향 추적</p>
+      <span class="cat-badge">{{ political_trades_count }} 포스트</span>
     </div>
     <div class="cat-arrow">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

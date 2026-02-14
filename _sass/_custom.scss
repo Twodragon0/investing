@@ -365,6 +365,8 @@ a {
     flex-wrap: wrap;
   }
 
+  cursor: pointer;
+
   h3 {
     font-size: 1.15rem;
     font-weight: 600;
@@ -375,11 +377,23 @@ a {
       color: $text-primary;
       transition: all 0.3s ease;
 
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+      }
+
       &:hover {
         color: $accent-blue;
         text-decoration: none;
       }
     }
+  }
+
+  .post-tags {
+    position: relative;
+    z-index: 2;
   }
 
   .post-excerpt {
@@ -432,6 +446,12 @@ a {
     color: $cat-analysis;
     border-color: rgba($cat-analysis, 0.25);
     box-shadow: 0 2px 8px rgba($cat-analysis, 0.15);
+  }
+  &.cat-regulatory-news {
+    background: rgba($cat-regulatory, 0.15);
+    color: $cat-regulatory;
+    border-color: rgba($cat-regulatory, 0.25);
+    box-shadow: 0 2px 8px rgba($cat-regulatory, 0.15);
   }
   &.cat-political-trades {
     background: rgba($cat-political, 0.15);
@@ -1671,6 +1691,32 @@ body {
     &:hover {
       border-color: $cat-analysis;
       .cat-badge { background: rgba($cat-analysis, 0.15); color: $cat-analysis; }
+    }
+  }
+
+  &.cat-regulatory {
+    color: $cat-regulatory;
+    &::before { background: $cat-regulatory; }
+    .cat-icon {
+      background: rgba($cat-regulatory, 0.15);
+      color: $cat-regulatory;
+    }
+    &:hover {
+      border-color: $cat-regulatory;
+      .cat-badge { background: rgba($cat-regulatory, 0.15); color: $cat-regulatory; }
+    }
+  }
+
+  &.cat-political {
+    color: $cat-political;
+    &::before { background: $cat-political; }
+    .cat-icon {
+      background: rgba($cat-political, 0.15);
+      color: $cat-political;
+    }
+    &:hover {
+      border-color: $cat-political;
+      .cat-badge { background: rgba($cat-political, 0.15); color: $cat-political; }
     }
   }
 }
@@ -4052,7 +4098,7 @@ main {
   &.crypto::before { background: $cat-crypto; }
   &.stock::before { background: $cat-stock; }
   &.security::before { background: $cat-security; }
-  &.regulatory::before { background: $accent-purple; }
+  &.regulatory::before { background: $cat-regulatory; }
   &.social::before { background: $accent-green; }
   &.political::before { background: $cat-political; }
 
@@ -4100,8 +4146,8 @@ main {
     color: $cat-security;
   }
   &.regulatory .overview-card-icon {
-    background: rgba($accent-purple, 0.15);
-    color: $accent-purple;
+    background: rgba($cat-regulatory, 0.15);
+    color: $cat-regulatory;
   }
   &.social .overview-card-icon {
     background: rgba($accent-green, 0.15);
