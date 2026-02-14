@@ -48,7 +48,7 @@ jobs:
             local repo_name="$1"
             local repo_path="$2"
 
-            if [ ! -d "$repo_path/.git" ]; then
+            if ! git -C "$repo_path" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
               printf "- %s: not available\n" "$repo_name"
               return
             fi
