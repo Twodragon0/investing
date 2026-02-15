@@ -18,7 +18,7 @@ import os
 import re
 import glob
 from datetime import datetime, timezone
-from typing import Dict, List, Any, Optional
+from typing import Dict, List, Any, Optional, Tuple
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -131,7 +131,9 @@ def _extract_highlights(content: str) -> List[str]:
             highlights.extend(bullets)
             break
     # Try alert-info content
-    match = re.search(r'class="alert-box alert-info"[^>]*>.*?<strong>(.*?)</strong>', content)
+    match = re.search(
+        r'class="alert-box alert-info"[^>]*>.*?<strong>(.*?)</strong>', content
+    )
     if match and not highlights:
         highlights.append(f"- {match.group(1)}")
     return highlights
@@ -145,7 +147,9 @@ def summarize_crypto_post(post: Dict[str, Any]) -> Dict[str, Any]:
 
     # Extract themes from HTML progress bars or ASCII chart
     themes = []
-    for match in re.finditer(r'class="theme-label">.\s*(\S+)</span>.*?(\d+)건', content):
+    for match in re.finditer(
+        r'class="theme-label">.\s*(\S+)</span>.*?(\d+)건', content
+    ):
         themes.append((match.group(1), int(match.group(2))))
     if not themes:
         dist_section = extract_section(content, "이슈 분포 현황")
@@ -311,19 +315,129 @@ def _collect_all_news_items(summaries: List[Optional[Dict]]) -> List[Dict[str, A
                     norm = re.sub(r"[^a-z가-힣0-9]", "", title.lower())
                     if norm not in seen_titles:
                         seen_titles.add(norm)
-                        items.append({
-                            "title": f"[{title}]({link})",
-                            "description": title,
-                            "source": s.get("type", ""),
-                        })
+                        items.append(
+                            {
+                                "title": f"[{title}]({link})",
+                                "description": title,
+                                "source": s.get("type", ""),
+                            }
+                        )
             # Also extract description lines right after card items
-            if in_card_section and not line.startswith("**") and not line.startswith(">") and not line.startswith("`") and not line.startswith("#") and not line.startswith("|") and line and not line.startswith("---"):
+            if (
+                in_card_section
+                and not line.startswith("**")
+                and not line.startswith(">")
+                and not line.startswith("`")
+                and not line.startswith("#")
+                and not line.startswith("|")
+                and line
+                and not line.startswith("---")
+            ):
                 # This might be a description line, skip it for item collection
                 pass
             # Stop card parsing at next major section
             if line.startswith("## ") and in_card_section:
                 in_card_section = False
     return items
+
+
+def _cross_asset_topics() -> Dict[str, List[str]]:
+    return {
+        "금리/유동성": ["금리", "연준", "fed", "fomc", "유동성", "국채", "yield"],
+        "환율/달러": ["환율", "usd/krw", "달러", "dxy"],
+        "정책/규제": [
+            "규제",
+            "sec",
+            "etf",
+            "법안",
+            "정책",
+            "행정명령",
+            "tariff",
+            "관세",
+        ],
+        "리스크 이벤트": ["해킹", "exploit", "파산", "청산", "liquidation", "보안사고"],
+        "수급/심리": ["고래", "whale", "수급", "공포", "탐욕", "sentiment", "social"],
+        "실적/지표": ["실적", "cpi", "pce", "고용", "매출", "earnings"],
+    }
+
+
+def _topic_hits(summary: Optional[Dict[str, Any]]) -> Dict[str, int]:
+    if not summary:
+        return {}
+    text = "\n".join(
+        [
+            summary.get("title", ""),
+            summary.get("content", ""),
+            " ".join(summary.get("highlights", []) or []),
+            " ".join(summary.get("key_summary", []) or []),
+        ]
+    ).lower()
+    hits: Dict[str, int] = {}
+    for topic, keywords in _cross_asset_topics().items():
+        score = 0
+        for kw in keywords:
+            score += text.count(kw.lower())
+        hits[topic] = score
+    return hits
+
+
+def _relation_rows(
+    summaries: Dict[str, Optional[Dict[str, Any]]],
+) -> List[Tuple[str, str, int, str]]:
+    rows: List[Tuple[str, str, int, str]] = []
+    pairs = [
+        ("암호화폐", "주식", "crypto", "stock"),
+        ("암호화폐", "정치인 거래", "crypto", "political"),
+        ("주식", "정치인 거래", "stock", "political"),
+        ("암호화폐", "규제", "crypto", "regulatory"),
+        ("주식", "규제", "stock", "regulatory"),
+        ("암호화폐", "소셜", "crypto", "social"),
+    ]
+    topic_keys = list(_cross_asset_topics().keys())
+    hit_maps = {k: _topic_hits(v) for k, v in summaries.items()}
+
+    for left_name, right_name, left_key, right_key in pairs:
+        left = hit_maps.get(left_key, {})
+        right = hit_maps.get(right_key, {})
+        if not left or not right:
+            continue
+        shared_topics: List[Tuple[str, int]] = []
+        for t in topic_keys:
+            if left.get(t, 0) > 0 and right.get(t, 0) > 0:
+                shared_topics.append((t, min(left[t], right[t])))
+        shared_topics.sort(key=lambda x: x[1], reverse=True)
+        if not shared_topics:
+            rows.append((left_name, right_name, 0, "낮음"))
+            continue
+        score = sum(v for _, v in shared_topics[:3])
+        top_topics = ", ".join(t for t, _ in shared_topics[:2])
+        if score >= 8:
+            level = "높음"
+        elif score >= 4:
+            level = "중간"
+        else:
+            level = "낮음"
+        rows.append((left_name, right_name, score, f"{level} ({top_topics})"))
+    return rows
+
+
+def _coverage_warnings(summaries: Dict[str, Optional[Dict[str, Any]]]) -> List[str]:
+    warnings = []
+    if not summaries.get("crypto"):
+        warnings.append(
+            "- 암호화폐 일일 리포트가 없어 코인-주식 연계 분석 정밀도가 낮습니다."
+        )
+    if not summaries.get("stock"):
+        warnings.append("- 주식 일일 리포트가 없어 교차자산 수급 비교가 제한됩니다.")
+    if not summaries.get("market"):
+        warnings.append(
+            "- 시장 종합 리포트가 없어 매크로(금리/환율) 연결 해석이 제한됩니다."
+        )
+    if not summaries.get("political") and not summaries.get("regulatory"):
+        warnings.append(
+            "- 정책/규제 데이터가 부족해 이벤트 기반 리스크 점검이 약합니다."
+        )
+    return warnings
 
 
 def main():
@@ -364,39 +478,54 @@ def main():
         if "crypto-news-digest" in slug:
             crypto_summary = summarize_crypto_post(post)
             crypto_summary["url"] = get_post_url(filepath, today, "crypto-news")
-            post_links.append(("암호화폐 뉴스", crypto_summary["count"], crypto_summary["url"]))
+            post_links.append(
+                ("암호화폐 뉴스", crypto_summary["count"], crypto_summary["url"])
+            )
         elif "stock-news-digest" in slug:
             stock_summary = summarize_stock_post(post)
             stock_summary["url"] = get_post_url(filepath, today, "stock-news")
-            post_links.append(("주식 시장 뉴스", stock_summary["count"], stock_summary["url"]))
+            post_links.append(
+                ("주식 시장 뉴스", stock_summary["count"], stock_summary["url"])
+            )
         elif "security-report" in slug:
             security_summary = summarize_security_post(post)
             security_summary["url"] = get_post_url(filepath, today, "security-alerts")
-            post_links.append(("보안 리포트", security_summary["count"], security_summary["url"]))
+            post_links.append(
+                ("보안 리포트", security_summary["count"], security_summary["url"])
+            )
         elif "regulatory-report" in slug:
             regulatory_summary = summarize_regulatory_post(post)
             regulatory_summary["url"] = get_post_url(filepath, today, "regulatory-news")
-            post_links.append(("규제 동향", regulatory_summary["count"], regulatory_summary["url"]))
+            post_links.append(
+                ("규제 동향", regulatory_summary["count"], regulatory_summary["url"])
+            )
         elif "social-media-digest" in slug:
             social_summary = summarize_social_post(post)
             social_summary["url"] = get_post_url(filepath, today, "crypto-news")
-            post_links.append(("소셜 미디어", social_summary["count"], social_summary["url"]))
+            post_links.append(
+                ("소셜 미디어", social_summary["count"], social_summary["url"])
+            )
         elif "political-trades-report" in slug:
             political_summary = summarize_political_post(post)
             political_summary["url"] = get_post_url(filepath, today, "political-trades")
-            post_links.append(("정치인 거래", political_summary["count"], political_summary["url"]))
+            post_links.append(
+                ("정치인 거래", political_summary["count"], political_summary["url"])
+            )
         elif "market-report" in slug:
             market_summary = summarize_market_post(post)
             market_summary["url"] = get_post_url(filepath, today, "market-analysis")
             post_links.append(("시장 종합 리포트", 0, market_summary["url"]))
 
     # Calculate total count
-    all_summaries = [crypto_summary, stock_summary, security_summary,
-                     regulatory_summary, social_summary, political_summary]
-    total_count = sum(
-        s["count"] for s in all_summaries
-        if s and s.get("count")
-    )
+    all_summaries = [
+        crypto_summary,
+        stock_summary,
+        security_summary,
+        regulatory_summary,
+        social_summary,
+        political_summary,
+    ]
+    total_count = sum(s["count"] for s in all_summaries if s and s.get("count"))
 
     # Priority classification
     all_news_items = _collect_all_news_items(all_summaries)
@@ -502,6 +631,47 @@ def main():
         content_parts.extend(indicator_parts)
         content_parts.append("")
 
+    summary_map = {
+        "crypto": crypto_summary,
+        "stock": stock_summary,
+        "market": market_summary,
+        "regulatory": regulatory_summary,
+        "social": social_summary,
+        "political": political_summary,
+    }
+    relation_rows = _relation_rows(summary_map)
+    coverage_notes = _coverage_warnings(summary_map)
+
+    if relation_rows or coverage_notes:
+        content_parts.append("## 교차자산 연관성 체크\n")
+        content_parts.append(
+            "> 뉴스, 주식, 코인, 정치/규제 이벤트를 연결해 당일 리스크/기회 신호를 점검합니다.\n"
+        )
+
+        if relation_rows:
+            content_parts.append("| 비교 구간 | 연관 점수 | 진단 |")
+            content_parts.append("|-----------|-----------:|------|")
+            for left, right, score, note in relation_rows:
+                content_parts.append(f"| {left} ↔ {right} | {score} | {note} |")
+            content_parts.append("")
+
+        if coverage_notes:
+            content_parts.append("**데이터 커버리지 경고**")
+            content_parts.extend(coverage_notes)
+            content_parts.append("")
+
+        content_parts.append("**운영 체크리스트**")
+        content_parts.append(
+            "- 연관 점수 '높음' 구간은 장중 변동성 확대 가능성으로 우선 모니터링"
+        )
+        content_parts.append(
+            "- 정책/규제 + 정치인 거래가 동시 급증하면 포지션 규모와 레버리지 보수적으로 조정"
+        )
+        content_parts.append(
+            "- 코인/주식 모두 수급·심리 키워드가 증가하면 단기 과열/과매도 반전 가능성 점검"
+        )
+        content_parts.append("")
+
     # ═══════════════════════════════════════
     # 4. POLITICAL WATCH
     # ═══════════════════════════════════════
@@ -544,7 +714,9 @@ def main():
     if crypto_summary:
         content_parts.append(f"### 암호화폐 뉴스 ({crypto_summary['count']}건)\n")
         if crypto_summary.get("themes"):
-            themes_str = ", ".join(f"**{t[0]}**({t[1]}건)" for t in crypto_summary["themes"][:4])
+            themes_str = ", ".join(
+                f"**{t[0]}**({t[1]}건)" for t in crypto_summary["themes"][:4]
+            )
             content_parts.append(f"주요 테마: {themes_str}\n")
         if crypto_summary.get("highlights"):
             for h in crypto_summary["highlights"][:4]:
@@ -629,7 +801,9 @@ def main():
         content_parts.append(f"| {name} | {count_str} | [바로가기]({url}) |")
 
     content_parts.append("\n---\n")
-    content_parts.append("*본 요약은 자동 수집된 뉴스 데이터를 기반으로 작성되었으며, 투자 조언이 아닙니다.*")
+    content_parts.append(
+        "*본 요약은 자동 수집된 뉴스 데이터를 기반으로 작성되었으며, 투자 조언이 아닙니다.*"
+    )
 
     content = "\n".join(content_parts)
 
@@ -646,7 +820,7 @@ def main():
 title: "{escaped_title}"
 date: {today} 12:00:00 +0900
 categories: [market-analysis]
-tags: [{', '.join(tags)}]
+tags: [{", ".join(tags)}]
 source: "consolidated"
 lang: "ko"
 pin: true
@@ -658,7 +832,9 @@ excerpt: "{counts_str}의 뉴스를 종합 분석한 일일 요약"
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(post_content)
 
-    logger.info("Created daily summary: %s (total %d news items)", filepath, total_count)
+    logger.info(
+        "Created daily summary: %s (total %d news items)", filepath, total_count
+    )
     logger.info("=== Daily summary generation complete ===")
 
 
