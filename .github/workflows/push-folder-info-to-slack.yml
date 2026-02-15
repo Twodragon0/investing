@@ -10,6 +10,10 @@ permissions:
 
 jobs:
   push-folder-info:
+    strategy:
+      fail-fast: false
+      matrix:
+        channel_alias: [ops, dev, openclaw, investing]
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -121,15 +125,30 @@ jobs:
         id: slack-config
         shell: bash
         env:
+          TARGET_CHANNEL_ALIAS: ${{ matrix.channel_alias }}
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
           OPENCLAW_SLACK_BOT_TOKEN: ${{ secrets.OPENCLAW_SLACK_BOT_TOKEN }}
           SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
           SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
           OPENCLAW_SLACK_CHANNEL_ID: ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID }}
           SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
+          SLACK_CHANNEL_ID_OPS: ${{ secrets.SLACK_CHANNEL_ID_OPS }}
+          SLACK_CHANNEL_ID_DEV: ${{ secrets.SLACK_CHANNEL_ID_DEV }}
+          SLACK_CHANNEL_ID_OPENCLAW: ${{ secrets.SLACK_CHANNEL_ID_OPENCLAW }}
+          SLACK_CHANNEL_ID_INVESTING: ${{ secrets.SLACK_CHANNEL_ID_INVESTING }}
+          OPENCLAW_SLACK_CHANNEL_ID_OPS: ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_OPS }}
+          OPENCLAW_SLACK_CHANNEL_ID_DEV: ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_DEV }}
+          OPENCLAW_SLACK_CHANNEL_ID_OPENCLAW: ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_OPENCLAW }}
+          OPENCLAW_SLACK_CHANNEL_ID_INVESTING: ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_INVESTING }}
+          SLACK_CHANNEL_OPS: ${{ secrets.SLACK_CHANNEL_OPS }}
+          SLACK_CHANNEL_DEV: ${{ secrets.SLACK_CHANNEL_DEV }}
+          SLACK_CHANNEL_OPENCLAW: ${{ secrets.SLACK_CHANNEL_OPENCLAW }}
+          SLACK_CHANNEL_INVESTING: ${{ secrets.SLACK_CHANNEL_INVESTING }}
         run: |
           set -euo pipefail
           can_post=true
+          alias="${TARGET_CHANNEL_ALIAS:-investing}"
+
           bot_token="${SLACK_BOT_TOKEN:-}"
           if [ -z "$bot_token" ]; then
             bot_token="${OPENCLAW_SLACK_BOT_TOKEN:-}"
@@ -138,13 +157,20 @@ jobs:
             bot_token="${SLACK_TOKEN:-}"
           fi
 
-          channel_id="${SLACK_CHANNEL_ID:-}"
-          if [ -z "$channel_id" ]; then
-            channel_id="${OPENCLAW_SLACK_CHANNEL_ID:-}"
-          fi
-          if [ -z "$channel_id" ]; then
-            channel_id="${SLACK_CHANNEL:-}"
-          fi
+          case "$alias" in
+            ops)
+              channel_id="${SLACK_CHANNEL_ID_OPS:-${OPENCLAW_SLACK_CHANNEL_ID_OPS:-${SLACK_CHANNEL_OPS:-}}}"
+              ;;
+            dev)
+              channel_id="${SLACK_CHANNEL_ID_DEV:-${OPENCLAW_SLACK_CHANNEL_ID_DEV:-${SLACK_CHANNEL_DEV:-}}}"
+              ;;
+            openclaw)
+              channel_id="${SLACK_CHANNEL_ID_OPENCLAW:-${OPENCLAW_SLACK_CHANNEL_ID_OPENCLAW:-${SLACK_CHANNEL_OPENCLAW:-}}}"
+              ;;
+            investing|*)
+              channel_id="${SLACK_CHANNEL_ID_INVESTING:-${OPENCLAW_SLACK_CHANNEL_ID_INVESTING:-${SLACK_CHANNEL_INVESTING:-${SLACK_CHANNEL_ID:-${OPENCLAW_SLACK_CHANNEL_ID:-${SLACK_CHANNEL:-}}}}}}"
+              ;;
+          esac
 
           if [ -z "$bot_token" ]; then
             echo "No Slack bot token secret found; skip Slack post"
@@ -154,9 +180,24 @@ jobs:
             echo "No Slack channel secret found; skip Slack post"
             can_post=false
           fi
+          case "$alias" in
+            ops)
+              profile_label="ops-agent"
+              ;;
+            dev)
+              profile_label="dev-agent"
+              ;;
+            openclaw)
+              profile_label="openclaw-agent"
+              ;;
+            investing|*)
+              profile_label="investing-agent"
+              ;;
+          esac
           echo "can_post=$can_post" >> "$GITHUB_OUTPUT"
           echo "bot_token=$bot_token" >> "$GITHUB_OUTPUT"
           echo "channel_id=$channel_id" >> "$GITHUB_OUTPUT"
+          echo "profile_label=$profile_label" >> "$GITHUB_OUTPUT"
 
       - name: Post to Slack investing channel
         if: steps.slack-config.outputs.can_post == 'true'
@@ -166,4 +207,4 @@ jobs:
           token: ${{ steps.slack-config.outputs.bot_token }}
           payload: |
             channel: "${{ steps.slack-config.outputs.channel_id }}"
-            text: "${{ steps.summary.outputs.message }}"
+            text: "[${{ steps.slack-config.outputs.profile_label }}]\n${{ steps.summary.outputs.message }}"

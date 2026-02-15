@@ -3,6 +3,7 @@
 import json
 import os
 import re
+import subprocess
 import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta, timezone
@@ -14,6 +15,7 @@ from typing import Any, Dict, List, Optional
 ROOT = Path(__file__).resolve().parents[1]
 POSTS_DIR = ROOT / "_posts"
 SLACK_API_BASE = "https://slack.com/api"
+CHANNEL_ALIASES = ("ops", "dev", "openclaw", "investing")
 
 
 def env_first(*keys: str) -> str:
@@ -96,6 +98,78 @@ def build_summary_text() -> str:
     return "\n".join(lines)
 
 
+def build_dev_status_text() -> str:
+    try:
+        commit = subprocess.check_output(
+            ["git", "log", "-1", "--pretty=%h %s"], cwd=ROOT, text=True
+        ).strip()
+    except Exception:
+        commit = "unknown"
+
+    try:
+        branch = subprocess.check_output(
+            ["git", "branch", "--show-current"], cwd=ROOT, text=True
+        ).strip()
+    except Exception:
+        branch = "main"
+
+    return "\n".join(
+        [
+            "개발 채널 기준 상태입니다.",
+            f"- branch: {branch}",
+            f"- latest commit: {commit}",
+            "- CI/배포 상태는 GitHub Actions 탭에서 확인해 주세요.",
+        ]
+    )
+
+
+def build_ops_status_text() -> str:
+    daily_summary = latest_post("*daily-news-summary*.md")
+    latest = daily_summary.name if daily_summary else "none"
+    return "\n".join(
+        [
+            "운영 채널 기준 상태입니다.",
+            f"- latest summary file: {latest}",
+            "- site: https://investing.2twodragon.com/",
+            "- 배포/헬스체크 이슈는 Actions run 로그를 우선 확인해 주세요.",
+        ]
+    )
+
+
+def channel_id_for_alias(alias: str) -> str:
+    upper = alias.upper()
+    if alias == "investing":
+        return env_first(
+            "SLACK_CHANNEL_ID_INVESTING",
+            "OPENCLAW_SLACK_CHANNEL_ID_INVESTING",
+            "SLACK_CHANNEL_INVESTING",
+            "SLACK_CHANNEL_ID",
+            "OPENCLAW_SLACK_CHANNEL_ID",
+            "SLACK_CHANNEL",
+        )
+    return env_first(
+        f"SLACK_CHANNEL_ID_{upper}",
+        f"OPENCLAW_SLACK_CHANNEL_ID_{upper}",
+        f"SLACK_CHANNEL_{upper}",
+    )
+
+
+def intent_keywords(alias: str) -> List[str]:
+    if alias == "ops":
+        return ["ops", "운영", "상태", "배포", "헬스", "장애", "status"]
+    if alias == "dev":
+        return ["dev", "개발", "빌드", "ci", "배포", "commit", "릴리즈"]
+    return ["투자", "요약", "소식", "summary", "market", "news", "브리핑"]
+
+
+def build_reply_text(alias: str) -> str:
+    if alias == "ops":
+        return build_ops_status_text()
+    if alias == "dev":
+        return build_dev_status_text()
+    return build_summary_text()
+
+
 def has_bot_reply(
     token: str, channel_id: str, thread_ts: str, bot_user_id: str
 ) -> bool:
@@ -117,22 +191,22 @@ def has_bot_reply(
     return False
 
 
-def should_reply(text: str, bot_user_id: str) -> bool:
+def should_reply(text: str, bot_user_id: str, alias: str) -> bool:
     lowered = text.lower()
     mention_token = f"<@{bot_user_id}>".lower()
     has_mention = mention_token in lowered or "openclaw" in lowered
-    has_intent = any(
-        key in lowered
-        for key in ["투자", "요약", "소식", "summary", "market", "news", "브리핑"]
-    )
+    has_intent = any(key in lowered for key in intent_keywords(alias))
     return has_mention and has_intent
 
 
 def main() -> int:
+    alias = os.getenv("TARGET_CHANNEL_ALIAS", "investing").strip().lower()
+    if alias not in CHANNEL_ALIASES:
+        print(f"Unsupported alias: {alias}")
+        return 1
+
     token = env_first("SLACK_BOT_TOKEN", "OPENCLAW_SLACK_BOT_TOKEN", "SLACK_TOKEN")
-    channel_id = env_first(
-        "SLACK_CHANNEL_ID", "OPENCLAW_SLACK_CHANNEL_ID", "SLACK_CHANNEL"
-    )
+    channel_id = channel_id_for_alias(alias)
 
     if not token or not channel_id:
         print("Missing Slack token or channel. Skipping mention responder.")
@@ -165,7 +239,7 @@ def main() -> int:
 
     messages = history.get("messages", [])
     messages_sorted = sorted(messages, key=lambda x: float(x.get("ts", "0")))
-    summary_text = build_summary_text()
+    reply_text = build_reply_text(alias)
 
     reply_count = 0
     for message in messages_sorted:
@@ -175,7 +249,7 @@ def main() -> int:
         thread_ts = message.get("thread_ts") or message.get("ts")
         if not text or not thread_ts:
             continue
-        if not should_reply(text, bot_user_id):
+        if not should_reply(text, bot_user_id, alias):
             continue
         if has_bot_reply(token, channel_id, thread_ts, bot_user_id):
             continue
@@ -186,7 +260,7 @@ def main() -> int:
             {
                 "channel": channel_id,
                 "thread_ts": thread_ts,
-                "text": summary_text,
+                "text": reply_text,
             },
         )
         if post.get("ok"):
@@ -194,7 +268,7 @@ def main() -> int:
         else:
             print(f"chat.postMessage failed: {post}")
 
-    print(f"mention responder completed. replies={reply_count}")
+    print(f"mention responder completed. alias={alias} replies={reply_count}")
     return 0
 
 
