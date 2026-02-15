@@ -1,17 +1,14 @@
 name: Push Folder Info To Slack
 
 on:
-  workflow_run:
-    workflows: ["Generate Daily Summary"]
-    types: [completed]
-  workflow_dispatch:
+  schedule:
+    - cron: '0 1 * * *'
 
 permissions:
   contents: read
 
 jobs:
   push-folder-info:
-    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     strategy:
       fail-fast: false
       matrix:
