@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        channel_alias: [ops, dev, openclaw, investing]
+        channel_alias: [ops, dev, security, openclaw, investing]
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -35,21 +35,25 @@ jobs:
           SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
           SLACK_CHANNEL_ID_OPS: ${{ secrets.SLACK_CHANNEL_ID_OPS }}
           SLACK_CHANNEL_ID_DEV: ${{ secrets.SLACK_CHANNEL_ID_DEV }}
+          SLACK_CHANNEL_ID_SECURITY: ${{ secrets.SLACK_CHANNEL_ID_SECURITY }}
           SLACK_CHANNEL_ID_OPENCLAW: ${{ secrets.SLACK_CHANNEL_ID_OPENCLAW }}
           SLACK_CHANNEL_ID_AI: ${{ secrets.SLACK_CHANNEL_ID_AI }}
           SLACK_CHANNEL_ID_INVESTING: ${{ secrets.SLACK_CHANNEL_ID_INVESTING }}
           OPENCLAW_SLACK_CHANNEL_ID_OPS: ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_OPS }}
           OPENCLAW_SLACK_CHANNEL_ID_DEV: ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_DEV }}
+          OPENCLAW_SLACK_CHANNEL_ID_SECURITY: ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_SECURITY }}
           OPENCLAW_SLACK_CHANNEL_ID_OPENCLAW: ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_OPENCLAW }}
           OPENCLAW_SLACK_CHANNEL_ID_AI: ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_AI }}
           OPENCLAW_SLACK_CHANNEL_ID_INVESTING: ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_INVESTING }}
           AI_SLACK_CHANNEL_ID_OPS: ${{ secrets.AI_SLACK_CHANNEL_ID_OPS }}
           AI_SLACK_CHANNEL_ID_DEV: ${{ secrets.AI_SLACK_CHANNEL_ID_DEV }}
+          AI_SLACK_CHANNEL_ID_SECURITY: ${{ secrets.AI_SLACK_CHANNEL_ID_SECURITY }}
           AI_SLACK_CHANNEL_ID_OPENCLAW: ${{ secrets.AI_SLACK_CHANNEL_ID_OPENCLAW }}
           AI_SLACK_CHANNEL_ID_AI: ${{ secrets.AI_SLACK_CHANNEL_ID_AI }}
           AI_SLACK_CHANNEL_ID_INVESTING: ${{ secrets.AI_SLACK_CHANNEL_ID_INVESTING }}
           SLACK_CHANNEL_OPS: ${{ secrets.SLACK_CHANNEL_OPS }}
           SLACK_CHANNEL_DEV: ${{ secrets.SLACK_CHANNEL_DEV }}
+          SLACK_CHANNEL_SECURITY: ${{ secrets.SLACK_CHANNEL_SECURITY }}
           SLACK_CHANNEL_OPENCLAW: ${{ secrets.SLACK_CHANNEL_OPENCLAW }}
           SLACK_CHANNEL_AI: ${{ secrets.SLACK_CHANNEL_AI }}
           SLACK_CHANNEL_INVESTING: ${{ secrets.SLACK_CHANNEL_INVESTING }}

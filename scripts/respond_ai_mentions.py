@@ -14,7 +14,7 @@ from typing import Any, Dict, List, Optional
 ROOT = Path(__file__).resolve().parents[1]
 POSTS_DIR = ROOT / "_posts"
 SLACK_API_BASE = "https://slack.com/api"
-CHANNEL_ALIASES = ("ops", "dev", "openclaw", "investing")
+CHANNEL_ALIASES = ("ops", "dev", "security", "openclaw", "investing")
 
 
 def env_first(*keys: str) -> str:
@@ -135,6 +135,19 @@ def build_ops_status_text() -> str:
     )
 
 
+def build_security_status_text() -> str:
+    security_report = latest_post("*security-report*.md")
+    latest = security_report.name if security_report else "none"
+    return "\n".join(
+        [
+            "보안 채널 기준 상태입니다.",
+            f"- latest security report file: {latest}",
+            "- security posts: https://investing.2twodragon.com/security-alerts/",
+            "- 주요 키워드(해킹/익스플로잇/사기/취약점) 중심으로 우선 모니터링하세요.",
+        ]
+    )
+
+
 def channel_id_for_alias(alias: str) -> str:
     upper = alias.upper()
     if alias == "openclaw":
@@ -180,6 +193,19 @@ def intent_keywords(alias: str) -> List[str]:
         return ["ops", "운영", "상태", "배포", "헬스", "장애", "status"]
     if alias == "dev":
         return ["dev", "개발", "빌드", "ci", "배포", "commit", "릴리즈"]
+    if alias == "security":
+        return [
+            "security",
+            "보안",
+            "해킹",
+            "취약점",
+            "exploit",
+            "incident",
+            "phishing",
+            "scam",
+            "위험",
+            "risk",
+        ]
     return [
         "투자",
         "요약",
@@ -242,6 +268,8 @@ def build_reply_text(alias: str, text: str) -> str:
         return build_ops_status_text()
     if alias == "dev":
         return build_dev_status_text()
+    if alias == "security":
+        return build_security_status_text()
     if wants_coin_monitoring(text):
         return build_coin_monitoring_text()
     return build_summary_text()
@@ -280,6 +308,8 @@ def fallback_help_text(alias: str) -> str:
         return "예: '@OpenClaw 실시간 코인 모니터링 해줘', '@OpenClaw 오늘 투자 소식 요약해줘'"
     if alias == "ops":
         return "예: '@OpenClaw 운영 상태 확인해줘', '@OpenClaw 배포 상태 알려줘'"
+    if alias == "security":
+        return "예: '@OpenClaw 보안 이슈 요약해줘', '@OpenClaw 해킹 리스크 점검해줘'"
     return "예: '@OpenClaw dev 상태 알려줘', '@OpenClaw 최신 커밋 요약해줘'"
 
 
