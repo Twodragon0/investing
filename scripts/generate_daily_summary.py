@@ -440,6 +440,91 @@ def _coverage_warnings(summaries: Dict[str, Optional[Dict[str, Any]]]) -> List[s
     return warnings
 
 
+def _strip_markdown_link(text: str) -> str:
+    text = re.sub(r"\[([^\]]+)\]\([^\)]+\)", r"\1", text)
+    text = text.replace("**", "")
+    return text.strip()
+
+
+def _to_theme_payload(
+    summaries: Dict[str, Optional[Dict[str, Any]]],
+) -> List[Dict[str, Any]]:
+    payload = []
+    topic_def = _cross_asset_topics()
+    hit_totals = {k: 0 for k in topic_def.keys()}
+    for summary in summaries.values():
+        hits = _topic_hits(summary)
+        for k, v in hits.items():
+            hit_totals[k] += v
+
+    emojis = {
+        "금리/유동성": "🏦",
+        "환율/달러": "💵",
+        "정책/규제": "📜",
+        "리스크 이벤트": "🚨",
+        "수급/심리": "🧭",
+        "실적/지표": "📊",
+    }
+
+    for topic, score in sorted(hit_totals.items(), key=lambda x: x[1], reverse=True):
+        if score <= 0:
+            continue
+        payload.append(
+            {
+                "name": topic,
+                "emoji": emojis.get(topic, "•"),
+                "count": score,
+                "keywords": topic_def.get(topic, [])[:4],
+            }
+        )
+    return payload[:5]
+
+
+def _render_generated_image(filename: str, alt: str) -> Optional[str]:
+    image_path = os.path.join(
+        POSTS_DIR, "..", "assets", "images", "generated", filename
+    )
+    if not os.path.exists(image_path):
+        return None
+    return f"![{alt}]({{{{ '/assets/images/generated/{filename}' | relative_url }}}})"
+
+
+def _build_snapshot_table(
+    crypto_summary: Optional[Dict[str, Any]],
+    stock_summary: Optional[Dict[str, Any]],
+    regulatory_summary: Optional[Dict[str, Any]],
+    social_summary: Optional[Dict[str, Any]],
+    political_summary: Optional[Dict[str, Any]],
+) -> List[str]:
+    rows = [
+        "| 영역 | 수집 건수 | 핵심 신호 |",
+        "|------|---------:|-----------|",
+    ]
+
+    def top_signal(summary: Optional[Dict[str, Any]]) -> str:
+        if not summary:
+            return "데이터 없음"
+        if summary.get("themes"):
+            name, cnt = summary["themes"][0]
+            return f"{name} {cnt}건"
+        hl = summary.get("highlights") or summary.get("key_summary") or []
+        if hl:
+            return _strip_markdown_link(hl[0])[:80]
+        return "신호 추출 실패"
+
+    dataset = [
+        ("암호화폐", crypto_summary),
+        ("주식", stock_summary),
+        ("규제", regulatory_summary),
+        ("소셜", social_summary),
+        ("정치인 거래", political_summary),
+    ]
+    for name, summary in dataset:
+        count = summary.get("count", 0) if summary else 0
+        rows.append(f"| {name} | {count} | {top_signal(summary)} |")
+    return rows
+
+
 def main():
     """Generate daily news summary with priority-based structure."""
     logger.info("=== Generating daily news summary ===")
@@ -534,6 +619,35 @@ def main():
         summarizer = ThemeSummarizer(all_news_items)
         priority_items = summarizer.classify_priority()
 
+    summary_map = {
+        "crypto": crypto_summary,
+        "stock": stock_summary,
+        "market": market_summary,
+        "regulatory": regulatory_summary,
+        "social": social_summary,
+        "political": political_summary,
+    }
+
+    theme_payload = _to_theme_payload(summary_map)
+    urgent_alerts = [
+        _strip_markdown_link(x.get("title", "")) for x in priority_items.get("P0", [])
+    ]
+
+    briefing_image = None
+    try:
+        from common.image_generator import generate_news_briefing_card
+
+        briefing_image = generate_news_briefing_card(
+            themes=theme_payload,
+            date_str=today,
+            category="Multi-Asset Daily Briefing",
+            total_count=total_count,
+            urgent_alerts=[x for x in urgent_alerts if x],
+            filename=f"news-briefing-daily-{today}.png",
+        )
+    except Exception as e:
+        logger.warning("Failed to generate daily briefing image: %s", e)
+
     # Build summary content
     content_parts = []
 
@@ -554,6 +668,50 @@ def main():
 
     counts_str = ", ".join(count_parts) if count_parts else "뉴스"
     content_parts.append(f"> {counts_str}의 뉴스를 종합 분석한 일일 요약입니다.\n")
+
+    content_parts.append(
+        '<div class="alert-box alert-info"><strong>한눈에 보는 시장 상황</strong><ul>'
+    )
+    content_parts.append(f"<li>총 수집: <strong>{total_count}건</strong></li>")
+    content_parts.append(
+        f"<li>긴급 알림(P0): <strong>{len(priority_items.get('P0', []))}건</strong></li>"
+    )
+    content_parts.append(
+        f"<li>중요 뉴스(P1): <strong>{len(priority_items.get('P1', []))}건</strong></li>"
+    )
+    content_parts.append("</ul></div>\n")
+
+    content_parts.append("## 종합 대시보드\n")
+    content_parts.extend(
+        _build_snapshot_table(
+            crypto_summary,
+            stock_summary,
+            regulatory_summary,
+            social_summary,
+            political_summary,
+        )
+    )
+    content_parts.append("")
+
+    if briefing_image:
+        content_parts.append(f"![multi-asset-briefing]({briefing_image})\n")
+    fallback_briefing = _render_generated_image(
+        f"news-briefing-daily-{today}.png", "multi-asset-briefing"
+    )
+    if not briefing_image and fallback_briefing:
+        content_parts.append(fallback_briefing + "\n")
+
+    indicator_img = _render_generated_image(
+        f"indicator-dashboard-{today}.png", "indicator-dashboard"
+    )
+    if indicator_img:
+        content_parts.append(indicator_img + "\n")
+
+    heatmap_img = _render_generated_image(
+        f"market-heatmap-{today}.png", "market-heatmap"
+    )
+    if heatmap_img:
+        content_parts.append(heatmap_img + "\n")
 
     # Executive briefing: 3-5 line summary from each category
     briefing_lines = []
@@ -631,14 +789,6 @@ def main():
         content_parts.extend(indicator_parts)
         content_parts.append("")
 
-    summary_map = {
-        "crypto": crypto_summary,
-        "stock": stock_summary,
-        "market": market_summary,
-        "regulatory": regulatory_summary,
-        "social": social_summary,
-        "political": political_summary,
-    }
     relation_rows = _relation_rows(summary_map)
     coverage_notes = _coverage_warnings(summary_map)
 
