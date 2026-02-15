@@ -115,28 +115,52 @@ def count_news_items(content: str) -> int:
     return 0
 
 
+def _extract_highlights(content: str) -> List[str]:
+    """Extract highlight info from post opening and alert-info HTML."""
+    highlights = []
+    # Try opening paragraph (first non-empty line after frontmatter)
+    for line in content.split("\n")[:5]:
+        line = line.strip()
+        if line.startswith("**") and "건" in line:
+            highlights.append(f"- {line}")
+            break
+    # Try old-style sections as fallback
+    for section in ["오늘의 핵심", "핵심 요약"]:
+        bullets = extract_bullet_points(content, section)
+        if bullets:
+            highlights.extend(bullets)
+            break
+    # Try alert-info content
+    match = re.search(r'class="alert-box alert-info"[^>]*>.*?<strong>(.*?)</strong>', content)
+    if match and not highlights:
+        highlights.append(f"- {match.group(1)}")
+    return highlights
+
+
 def summarize_crypto_post(post: Dict[str, Any]) -> Dict[str, Any]:
     """Extract key info from crypto news post."""
     content = post["content"]
     count = count_news_items(content)
+    highlights = _extract_highlights(content)
 
-    highlights = extract_bullet_points(content, "오늘의 핵심")
-    key_summary = extract_bullet_points(content, "핵심 요약")
-
+    # Extract themes from HTML progress bars or ASCII chart
     themes = []
-    dist_section = extract_section(content, "이슈 분포 현황")
-    if dist_section:
-        for line in dist_section.split("\n"):
-            match = re.match(r"(\S+)\s+[█░]+\s+\d+%\s+\((\d+)건\)", line.strip())
-            if match:
-                themes.append((match.group(1), int(match.group(2))))
+    for match in re.finditer(r'class="theme-label">.\s*(\S+)</span>.*?(\d+)건', content):
+        themes.append((match.group(1), int(match.group(2))))
+    if not themes:
+        dist_section = extract_section(content, "이슈 분포 현황")
+        if dist_section:
+            for line in dist_section.split("\n"):
+                m = re.match(r"(\S+)\s+[█░]+\s+\d+%\s+\((\d+)건\)", line.strip())
+                if m:
+                    themes.append((m.group(1), int(m.group(2))))
 
     return {
         "type": "crypto",
         "title": post["frontmatter"].get("title", ""),
         "count": count,
         "highlights": highlights,
-        "key_summary": key_summary,
+        "key_summary": highlights,
         "themes": themes,
         "content": content,
     }
@@ -146,9 +170,7 @@ def summarize_stock_post(post: Dict[str, Any]) -> Dict[str, Any]:
     """Extract key info from stock news post."""
     content = post["content"]
     count = count_news_items(content)
-
-    highlights = extract_bullet_points(content, "오늘의 핵심")
-    key_summary = extract_bullet_points(content, "핵심 요약")
+    highlights = _extract_highlights(content)
 
     market_data = []
     for line in content.split("\n")[:5]:
@@ -160,7 +182,7 @@ def summarize_stock_post(post: Dict[str, Any]) -> Dict[str, Any]:
         "title": post["frontmatter"].get("title", ""),
         "count": count,
         "highlights": highlights,
-        "key_summary": key_summary,
+        "key_summary": highlights,
         "market_data": market_data,
         "content": content,
     }
@@ -170,7 +192,7 @@ def summarize_security_post(post: Dict[str, Any]) -> Dict[str, Any]:
     """Extract key info from security post."""
     content = post["content"]
     count = count_news_items(content)
-    key_summary = extract_bullet_points(content, "핵심 요약")
+    key_summary = _extract_highlights(content)
     incidents = extract_table_rows(content, "보안 사고 현황", 5)
 
     return {
@@ -187,7 +209,7 @@ def summarize_regulatory_post(post: Dict[str, Any]) -> Dict[str, Any]:
     """Extract key info from regulatory post."""
     content = post["content"]
     count = count_news_items(content)
-    key_summary = extract_bullet_points(content, "핵심 요약")
+    key_summary = _extract_highlights(content)
 
     return {
         "type": "regulatory",
@@ -202,15 +224,14 @@ def summarize_social_post(post: Dict[str, Any]) -> Dict[str, Any]:
     """Extract key info from social media post."""
     content = post["content"]
     count = count_news_items(content)
-    highlights = extract_bullet_points(content, "오늘의 핵심")
-    key_summary = extract_bullet_points(content, "핵심 요약")
+    highlights = _extract_highlights(content)
 
     return {
         "type": "social",
         "title": post["frontmatter"].get("title", ""),
         "count": count,
         "highlights": highlights,
-        "key_summary": key_summary,
+        "key_summary": highlights,
         "content": content,
     }
 

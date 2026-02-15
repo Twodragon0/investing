@@ -187,8 +187,14 @@ class ThemeSummarizer:
 
         return result
 
+    # Color classes for theme distribution bars
+    _BAR_COLORS = [
+        "bar-fill-orange", "bar-fill-blue", "bar-fill-purple",
+        "bar-fill-green", "bar-fill-red",
+    ]
+
     def generate_distribution_chart(self) -> str:
-        """Generate an ASCII bar chart showing issue distribution.
+        """Generate HTML progress bars for issue distribution.
 
         Returns empty string if fewer than 5 items.
         """
@@ -199,21 +205,23 @@ class ThemeSummarizer:
         if not top_themes:
             return ""
 
-        total = sum(count for _, _, _, count in top_themes)
-        if total == 0:
-            return ""
+        total_items = max(len(self.items), 1)
 
-        lines = ["## 이슈 분포 현황\n", "```"]
-        max_name_len = max(len(name) for name, _, _, _ in top_themes)
-
-        for name, _key, _emoji, count in top_themes:
-            pct = count / max(len(self.items), 1) * 100
-            filled = int(pct / 100 * BAR_WIDTH)
-            bar = "█" * filled + "░" * (BAR_WIDTH - filled)
-            lines.append(f"{name:<{max_name_len}}  {bar}  {pct:4.0f}%  ({count}건)")
-
-        lines.append("```")
-        lines.append(f"\n*총 {len(self.items)}건의 뉴스 수집 완료*")
+        lines = ['<div class="theme-distribution">']
+        for i, (name, _key, emoji, count) in enumerate(top_themes):
+            pct = count / total_items * 100
+            color = self._BAR_COLORS[i % len(self._BAR_COLORS)]
+            lines.append(
+                f'<div class="theme-row">'
+                f'<span class="theme-label">{emoji} {name}</span>'
+                f'<div class="bar-track">'
+                f'<div class="{color} bar-fill" style="width:{pct:.0f}%"></div>'
+                f'</div>'
+                f'<span class="theme-count">{count}건 ({pct:.0f}%)</span>'
+                f'</div>'
+            )
+        lines.append('</div>')
+        lines.append(f"\n*총 {len(self.items)}건 수집*\n")
         return "\n".join(lines)
 
     def generate_themed_news_sections(self, max_articles: int = ARTICLES_PER_THEME,
@@ -221,7 +229,7 @@ class ThemeSummarizer:
         """Generate theme-based news sections with description cards.
 
         Top articles per theme include description summaries in card format.
-        Remaining articles are shown in a collapsed list.
+        Remaining articles are shown in a collapsible <details> block.
         Returns empty string if fewer than 5 items.
 
         Args:
@@ -235,19 +243,18 @@ class ThemeSummarizer:
         if not top_themes:
             return ""
 
-        lines = ["## 카테고리별 주요 뉴스\n"]
+        lines = ["## 테마별 주요 뉴스\n"]
 
         for name, key, emoji, count in top_themes:
             articles = self._theme_articles.get(key, [])
-            # Theme briefing
             briefing = self._generate_single_theme_briefing(key, articles)
             lines.append(f"### {emoji} {name} ({count}건)\n")
             if briefing:
-                lines.append(f"> {briefing}\n")
+                lines.append(f"*{briefing}*\n")
 
             shown = 0
             seen_titles: set = set()
-            remaining = []
+            remaining_links = []
             for article in articles:
                 title = article.get("title", "")
                 if not title or title in seen_titles:
@@ -258,37 +265,46 @@ class ThemeSummarizer:
                 description = article.get("description", "").strip()
 
                 if shown < featured_count:
-                    # Featured card with description
                     if link:
                         lines.append(f"**{shown + 1}. [{title}]({link})**")
                     else:
                         lines.append(f"**{shown + 1}. {title}**")
                     if description and description != title:
-                        # Truncate description to 150 chars
                         desc_text = description[:150]
                         if len(description) > 150:
                             desc_text += "..."
-                        lines.append(f"{desc_text}")
-                    lines.append(f"`출처: {source}`\n")
-                else:
-                    # Remaining items collected for collapsed list
-                    if link:
-                        remaining.append(f"[{title}]({link})")
+                        lines.append(desc_text)
+                    if source:
+                        lines.append(
+                            f'<span class="source-tag">{source}</span>\n'
+                        )
                     else:
-                        remaining.append(title)
+                        lines.append("")
+                else:
+                    if link:
+                        remaining_links.append(f'<a href="{link}">{title}</a>')
+                    else:
+                        remaining_links.append(title)
 
                 shown += 1
                 if shown >= max_articles:
                     break
 
-            # Show remaining as collapsed list
-            overflow = len([a for a in articles if a.get("title") and a["title"] not in seen_titles])
-            remaining_count = len(remaining) + overflow
-            if remaining:
-                remaining_str = ", ".join(remaining[:7])
-                if remaining_count > 7:
-                    remaining_str += f" 외 {remaining_count - 7}건"
-                lines.append(f"> 그 외 {remaining_count}건: {remaining_str}\n")
+            overflow = len([
+                a for a in articles
+                if a.get("title") and a["title"] not in seen_titles
+            ])
+            remaining_count = len(remaining_links) + overflow
+            if remaining_links:
+                lines.append(
+                    f'<details><summary>그 외 {remaining_count}건 보기</summary>'
+                    f'<div class="details-content">'
+                )
+                for link_html in remaining_links[:15]:
+                    lines.append(link_html)
+                if remaining_count > 15:
+                    lines.append(f"<em>...외 {remaining_count - 15}건</em>")
+                lines.append('</div></details>\n')
 
             lines.append("")
 
@@ -419,17 +435,17 @@ class ThemeSummarizer:
 
     def generate_executive_summary(self, category_type: str = "general",
                                     extra_data: Dict[str, Any] | None = None) -> str:
-        """Generate an enhanced TL;DR executive summary section.
+        """Generate an enhanced TL;DR executive summary with HTML components.
 
-        Includes 3-5 line briefing (one per theme), key points table,
-        P0 urgent alerts, and market data integration.
+        Uses stat grid, theme briefings, and styled P0 alerts.
 
         Args:
-            category_type: One of "crypto", "stock", "regulatory", "social", "market", "security"
+            category_type: One of "crypto", "stock", "regulatory", "social",
+                           "market", "security"
             extra_data: Optional dict with market data, region counts, etc.
 
         Returns:
-            Markdown string with blockquote briefing + key points table.
+            Markdown/HTML string with stat grid, briefings, and alerts.
         """
         if len(self.items) < 3:
             return ""
@@ -438,31 +454,73 @@ class ThemeSummarizer:
         extra = extra_data or {}
         total = len(self.items)
 
-        # Build narrative summary
         theme_names = [t[0] for t in top_themes[:3]] if top_themes else []
         themes_str = ", ".join(theme_names[:2]) if theme_names else "다양한 이슈"
 
-        # Category-specific opening
         openers = {
-            "crypto": f"오늘 암호화폐 시장은 **{themes_str}** 중심으로 {total}건의 뉴스가 수집되었습니다.",
-            "stock": f"오늘 주식 시장은 **{themes_str}** 이슈가 부각되며 {total}건의 뉴스가 분석되었습니다.",
-            "regulatory": f"글로벌 규제 동향에서 **{themes_str}** 관련 {total}건의 소식이 수집되었습니다.",
-            "social": f"소셜 미디어에서 **{themes_str}** 관련 {total}건의 트렌드가 포착되었습니다.",
-            "security": f"블록체인 보안 분야에서 {total}건의 사건이 보고되었습니다.",
-            "market": f"시장 전반에 걸쳐 **{themes_str}** 이슈가 주도하고 있습니다.",
+            "crypto": f"암호화폐 시장 **{themes_str}** 중심 {total}건 분석",
+            "stock": f"주식 시장 **{themes_str}** 부각 {total}건 분석",
+            "regulatory": f"글로벌 규제 **{themes_str}** 관련 {total}건 수집",
+            "social": f"소셜 미디어 **{themes_str}** 관련 {total}건 포착",
+            "security": f"보안 분야 {total}건 보고",
+            "market": f"시장 전반 **{themes_str}** 주도",
         }
-        opener = openers.get(category_type, f"총 {total}건의 뉴스가 수집되었습니다. **{themes_str}** 관련 이슈가 주목됩니다.")
+        opener = openers.get(
+            category_type,
+            f"**{themes_str}** 관련 {total}건 수집",
+        )
 
         lines = ["\n## 한눈에 보기\n"]
-        lines.append(f"> {opener}\n")
 
-        # Multi-line briefing: one line per top theme
-        briefing_lines = []
+        # Stat grid
+        stat_items = []
+        stat_items.append(
+            f'<div class="stat-item">'
+            f'<div class="stat-value">{total}</div>'
+            f'<div class="stat-label">수집 건수</div></div>'
+        )
+        if top_themes:
+            t = top_themes[0]
+            stat_items.append(
+                f'<div class="stat-item">'
+                f'<div class="stat-value">{t[2]} {t[3]}</div>'
+                f'<div class="stat-label">{t[0]}</div></div>'
+            )
+        # Category-specific stats
+        if category_type == "stock" and extra.get("kr_market"):
+            kr = extra["kr_market"]
+            for mkt_name, info in list(kr.items())[:2]:
+                pct = info.get("change_pct", "")
+                stat_items.append(
+                    f'<div class="stat-item">'
+                    f'<div class="stat-value">{info["price"]}</div>'
+                    f'<div class="stat-label">{mkt_name} {pct}</div></div>'
+                )
+        if extra.get("top_keywords"):
+            top_kw = extra["top_keywords"][0]
+            stat_items.append(
+                f'<div class="stat-item">'
+                f'<div class="stat-value">{top_kw[0]}</div>'
+                f'<div class="stat-label">핫 키워드 ({top_kw[1]}회)</div></div>'
+            )
+        if category_type == "regulatory" and extra.get("region_counts"):
+            regions = extra["region_counts"]
+            top_r = regions.most_common(1)[0] if regions else None
+            if top_r:
+                stat_items.append(
+                    f'<div class="stat-item">'
+                    f'<div class="stat-value">{top_r[1]}</div>'
+                    f'<div class="stat-label">{top_r[0]}</div></div>'
+                )
+
+        lines.append(f'<div class="stat-grid">{"".join(stat_items)}</div>\n')
+
+        # Theme briefings as info callout
+        briefing_items = []
         for name, key, emoji, count in top_themes[:4]:
             articles = self._theme_articles.get(key, [])
             if not articles:
                 continue
-            # Pick the top article description
             top_desc = ""
             for art in articles[:3]:
                 desc = art.get("description", "").strip()
@@ -473,53 +531,39 @@ class ThemeSummarizer:
                         top_desc += "..."
                     break
             if top_desc:
-                briefing_lines.append(f"> - {emoji} **{name}** ({count}건): {top_desc}")
+                briefing_items.append(
+                    f"<li>{emoji} <strong>{name}</strong> ({count}건): {top_desc}</li>"
+                )
             else:
-                briefing_lines.append(f"> - {emoji} **{name}**: {count}건의 관련 뉴스가 수집되었습니다.")
+                briefing_items.append(
+                    f"<li>{emoji} <strong>{name}</strong>: {count}건 수집</li>"
+                )
 
-        if briefing_lines:
-            lines.extend(briefing_lines)
-            lines.append("")
+        if briefing_items:
+            lines.append(
+                f'<div class="alert-box alert-info">'
+                f'<strong>{opener}</strong>'
+                f'<ul>{"".join(briefing_items)}</ul>'
+                f'</div>\n'
+            )
 
-        # P0 urgent alerts inline
+        # P0 urgent alerts as red callout
         priority_items = self.classify_priority()
         if priority_items.get("P0"):
-            p0_titles = [item.get("title", "") for item in priority_items["P0"][:3]]
-            if p0_titles:
-                lines.append(f"> **긴급**: {', '.join(p0_titles[:2])}")
-                lines.append("")
+            p0_items = []
+            for item in priority_items["P0"][:3]:
+                title = item.get("title", "")
+                link = item.get("link", "")
+                if link:
+                    p0_items.append(f'<li><a href="{link}">{title}</a></li>')
+                else:
+                    p0_items.append(f"<li>{title}</li>")
+            if p0_items:
+                lines.append(
+                    f'<div class="alert-box alert-urgent">'
+                    f'<strong>긴급 알림</strong>'
+                    f'<ul>{"".join(p0_items)}</ul>'
+                    f'</div>\n'
+                )
 
-        # Key points table
-        lines.append("| 구분 | 내용 |")
-        lines.append("|------|------|")
-        lines.append(f"| 수집 건수 | {total}건 |")
-
-        if theme_names:
-            lines.append(f"| 주요 테마 | {', '.join(theme_names)} |")
-
-        # Add theme article counts
-        if top_themes:
-            top_theme = top_themes[0]
-            lines.append(f"| 최다 이슈 | {top_theme[2]} {top_theme[0]} ({top_theme[3]}건) |")
-
-        # Category-specific extra rows
-        if category_type == "stock" and extra.get("kr_market"):
-            kr = extra["kr_market"]
-            for name, info in kr.items():
-                lines.append(f"| {name} | {info['price']} ({info['change_pct']}) |")
-
-        if category_type == "regulatory" and extra.get("region_counts"):
-            regions = extra["region_counts"]
-            region_str = ", ".join(f"{r} {c}건" for r, c in regions.most_common())
-            lines.append(f"| 지역별 | {region_str} |")
-
-        if category_type == "social" and extra.get("top_keywords"):
-            kw_str = ", ".join(f"{kw}({cnt})" for kw, cnt in extra["top_keywords"][:5])
-            lines.append(f"| 핫 키워드 | {kw_str} |")
-
-        if category_type == "crypto" and extra.get("top_keywords"):
-            kw_str = ", ".join(f"{kw}({cnt})" for kw, cnt in extra["top_keywords"][:5])
-            lines.append(f"| 핫 키워드 | {kw_str} |")
-
-        lines.append("")
         return "\n".join(lines)

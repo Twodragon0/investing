@@ -294,32 +294,6 @@ def main():
     if exec_summary:
         content_parts.append(exec_summary)
 
-    # Key summary
-    content_parts.append("## 핵심 요약\n")
-    content_parts.append(f"- **총 뉴스 건수**: {len(all_items)}건")
-    for name, info in kr_market.items():
-        icon = "🟢" if not info["change_pct"].startswith("-") else "🔴"
-        content_parts.append(f"- **{name}**: {info['price']} ({icon} {info['change_pct']})")
-
-    # 오늘의 핵심 bullet points
-    content_parts.append("\n## 오늘의 핵심\n")
-    highlights = []
-    for name, info in kr_market.items():
-        try:
-            pval = float(info["change_pct"].replace("%", "").replace("+", ""))
-            direction = "상승" if pval >= 0 else "하락"
-            highlights.append(f"- **{name}** {info['price']}으로 전일 대비 {info['change_pct']} {direction}")
-        except (ValueError, KeyError):
-            pass
-    # Add theme-based highlights
-    top_themes = summarizer.get_top_themes()
-    if top_themes:
-        for name, key, emoji, count in top_themes[:3]:
-            highlights.append(f"- **{name}** 관련 뉴스에 주목할 필요가 있습니다.")
-    if not highlights:
-        highlights.append(f"- 총 {len(all_items)}건의 뉴스가 수집되었습니다.")
-    content_parts.extend(highlights)
-
     # Theme distribution chart
     chart = summarizer.generate_distribution_chart()
     if chart:
@@ -368,11 +342,6 @@ def main():
     except Exception as e:
         logger.warning("Market snapshot image failed: %s", e)
 
-    # Theme briefing section
-    theme_briefing = summarizer.generate_theme_briefing()
-    if theme_briefing:
-        content_parts.append("\n" + theme_briefing)
-
     # Themed news sections with description cards
     content_parts.append("\n---\n")
     themed = summarizer.generate_themed_news_sections()
@@ -401,7 +370,7 @@ def main():
                 if len(description) > 150:
                     desc_text += "..."
                 content_parts.append(f"{desc_text}")
-            content_parts.append(f"`출처: {source}`\n")
+            content_parts.append(f'<span class="source-tag">{source}</span>\n')
             shown += 1
 
     # Korean stock news with descriptions (top 5 featured)
@@ -425,7 +394,7 @@ def main():
                 if len(description) > 150:
                     desc_text += "..."
                 content_parts.append(f"{desc_text}")
-            content_parts.append(f"`출처: {source}`\n")
+            content_parts.append(f'<span class="source-tag">{source}</span>\n')
             shown += 1
 
     # Market data snapshot table (improved with emoji direction + Korean data)
@@ -490,16 +459,22 @@ def main():
 
     content_parts.append("\n---\n")
 
-    # References section (top 10 only)
+    # References section (collapsible)
     if source_links:
-        content_parts.append("\n## 참고 링크\n")
+        # Deduplicate links
         seen_links = set()
-        ref_count = 1
-        for ref in source_links[:10]:
+        unique_refs = []
+        for ref in source_links[:15]:
             if ref["link"] not in seen_links:
                 seen_links.add(ref["link"])
-                content_parts.append(f"{ref_count}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}")
-                ref_count += 1
+                unique_refs.append(ref)
+
+        ref_count = len(unique_refs)
+        content_parts.append(f'\n<details><summary>참고 링크 ({ref_count}건)</summary>')
+        content_parts.append('<div class="details-content">\n')
+        for i, ref in enumerate(unique_refs, 1):
+            content_parts.append(f"{i}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}")
+        content_parts.append('\n</div></details>\n')
 
     # Data collection footer
     content_parts.append(f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC")

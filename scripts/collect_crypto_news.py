@@ -433,36 +433,6 @@ def main():
         if exec_summary:
             content_parts.append(exec_summary)
 
-        # Key summary
-        content_parts.append("## 핵심 요약\n")
-        content_parts.append(f"- **총 뉴스 건수**: {len(all_items)}건")
-        top_source = source_counter.most_common(1)
-        if top_source:
-            content_parts.append(f"- **주요 출처**: {top_source[0][0]} ({top_source[0][1]}건)")
-        content_parts.append(f"- **수집 출처 수**: {len(source_counter)}개")
-        if top_keywords:
-            kw_str = ", ".join(f"{kw}({cnt})" for kw, cnt in top_keywords[:5])
-            content_parts.append(f"- **주요 키워드**: {kw_str}")
-
-        # 오늘의 핵심 bullet points
-        content_parts.append("\n## 오늘의 핵심\n")
-        highlights = []
-        if top_keywords:
-            highlights.append(f"- 가장 많이 언급된 키워드는 **{top_keywords[0][0]}**({top_keywords[0][1]}회)으로, 시장의 핵심 관심사입니다.")
-        if top_source:
-            highlights.append(f"- **{top_source[0][0]}**에서 가장 많은 뉴스({top_source[0][1]}건)가 수집되었습니다.")
-        if len(all_items) >= 15:
-            highlights.append(f"- 총 {len(all_items)}건의 뉴스가 수집되어 시장 관심이 높은 상황입니다.")
-        elif len(all_items) < 5:
-            highlights.append(f"- 총 {len(all_items)}건으로 뉴스 수집량이 적어, 시장이 비교적 조용한 상태입니다.")
-        if theme_names:
-            for theme in theme_names[:2]:
-                highlights.append(f"- **{theme}** 관련 뉴스에 주목할 필요가 있습니다.")
-        if highlights:
-            content_parts.extend(highlights)
-        else:
-            content_parts.append("- 오늘의 특이 사항이 없습니다.")
-
         # Image — news briefing card (replaces simple bar chart)
         try:
             from common.image_generator import generate_news_briefing_card
@@ -506,11 +476,6 @@ def main():
             pass
         except Exception as e:
             logger.warning("News briefing card failed: %s", e)
-
-        # Theme briefing section
-        theme_briefing = summarizer.generate_theme_briefing()
-        if theme_briefing:
-            content_parts.append(theme_briefing)
 
         # Main news - theme-based sections with description cards
         themed_sections = summarizer.generate_themed_news_sections()
@@ -581,17 +546,23 @@ def main():
         insight_lines.append("> *본 뉴스 브리핑은 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*")
         content_parts.extend(insight_lines)
 
-        # References section (top 10 only)
+        # References section (top 10 only) - collapsible
         if source_links:
             content_parts.append("\n---\n")
-            content_parts.append("## 참고 링크\n")
+            # Count unique links
             seen_links = set()
-            ref_count = 1
+            unique_refs = []
             for ref in source_links[:10]:
                 if ref["link"] not in seen_links:
                     seen_links.add(ref["link"])
-                    content_parts.append(f"{ref_count}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}")
-                    ref_count += 1
+                    unique_refs.append(ref)
+
+            content_parts.append(f'<details><summary>참고 링크 ({len(unique_refs)}건)</summary><div class="details-content">\n')
+            ref_count = 1
+            for ref in unique_refs:
+                content_parts.append(f"{ref_count}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}")
+                ref_count += 1
+            content_parts.append("\n</div></details>")
 
         # Data collection footer
         content_parts.append("\n---\n")
@@ -698,7 +669,7 @@ def main():
                         if len(description) > 150:
                             desc_text += "..."
                         content_parts.append(f"{desc_text}")
-                    content_parts.append(f"`출처: {source}`\n")
+                    content_parts.append(f'<span class="source-tag">{source}</span>\n')
 
             # Security insight
             content_parts.append("\n## 보안 인사이트\n")

@@ -207,21 +207,7 @@ def main():
 
     content_parts.append(f"**{today}** 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. {sources_str}, 총 {total_count}건이 수집되었습니다.\n")
 
-    # Key summary
-    content_parts.append("## 핵심 요약\n")
-    content_parts.append(f"- **총 수집 건수**: {total_count}건")
-    if congress_count:
-        content_parts.append(f"- **미국 의회 거래**: {congress_count}건")
-    if sec_count:
-        content_parts.append(f"- **SEC 내부자 거래**: {sec_count}건")
-    if trump_count:
-        content_parts.append(f"- **트럼프 행정명령/정책**: {trump_count}건")
-    if korea_count:
-        content_parts.append(f"- **한국 정치인 재산/거래**: {korea_count}건")
-    if cb_count:
-        content_parts.append(f"- **중앙은행 정책**: {cb_count}건")
-
-    # Keyword analysis
+    # Keyword analysis for executive summary
     all_texts = " ".join(
         item.get("title", "") + " " + item.get("description", "")
         for item in unique_items
@@ -231,9 +217,6 @@ def main():
     keyword_hits = {kw: len(re.findall(re.escape(kw), all_texts, re.IGNORECASE))
                     for kw in keyword_targets}
     top_keywords = [(kw, cnt) for kw, cnt in sorted(keyword_hits.items(), key=lambda x: -x[1]) if cnt > 0]
-    if top_keywords:
-        kw_str = ", ".join(f"{kw}({cnt})" for kw, cnt in top_keywords[:5])
-        content_parts.append(f"- **주요 키워드**: {kw_str}")
 
     # Executive summary
     exec_summary = summarizer.generate_executive_summary(
@@ -252,11 +235,6 @@ def main():
 
     # Collect source links
     source_links = []
-
-    # Theme briefing
-    theme_briefing = summarizer.generate_theme_briefing()
-    if theme_briefing:
-        content_parts.append(theme_briefing)
 
     def _render_news_cards(items: List[Dict], section_title: str,
                            max_items: int = 10, featured: int = 5):
@@ -279,7 +257,7 @@ def main():
                 if len(description) > 150:
                     desc_text += "..."
                 content_parts.append(f"{desc_text}")
-            content_parts.append(f"`출처: {source}`\n")
+            content_parts.append(f'<span class="source-tag">{source}</span>\n')
         content_parts.append("")
 
     # Filter unique items by category for sections
@@ -325,16 +303,20 @@ def main():
     analysis_lines.append("> *본 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*")
     content_parts.extend(analysis_lines)
 
-    # References (top 10 only)
+    # References (top 10 only) - collapsible
     if source_links:
-        content_parts.append("\n## 참고 링크\n")
+        unique_links = []
         seen_links = set()
-        ref_count = 1
         for ref in source_links[:10]:
             if ref["link"] not in seen_links:
                 seen_links.add(ref["link"])
-                content_parts.append(f"{ref_count}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}")
-                ref_count += 1
+                unique_links.append(ref)
+
+        ref_count = len(unique_links)
+        content_parts.append(f"\n<details><summary>참고 링크 ({ref_count}건)</summary><div class=\"details-content\">\n")
+        for idx, ref in enumerate(unique_links, 1):
+            content_parts.append(f"{idx}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}")
+        content_parts.append("\n</div></details>")
 
     content_parts.append(f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC")
 

@@ -739,6 +739,203 @@ a {
         font-weight: normal;
       }
     }
+
+    // ================================
+    // Custom Post Components
+    // ================================
+
+    // Alert callout boxes
+    .alert-box {
+      margin: 1.5rem 0;
+      padding: 1rem 1.25rem;
+      border-radius: 10px;
+      border-left: 4px solid;
+      font-style: normal;
+
+      p { margin-bottom: 0.5rem; }
+      ul { margin: 0.5rem 0; padding-left: 1.25rem; }
+      li { margin-bottom: 0.35rem; font-style: normal; }
+      a { font-weight: 600; }
+
+      &.alert-urgent {
+        border-color: $accent-red;
+        background: rgba($accent-red, 0.06);
+        strong, .alert-title { color: $accent-red; }
+      }
+
+      &.alert-info {
+        border-color: $accent-blue;
+        background: rgba($accent-blue, 0.06);
+        strong, .alert-title { color: $accent-blue; }
+      }
+
+      &.alert-warning {
+        border-color: $accent-orange;
+        background: rgba($accent-orange, 0.06);
+        strong, .alert-title { color: $accent-orange; }
+      }
+    }
+
+    // Theme distribution bars
+    .theme-distribution {
+      margin: 1.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .theme-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.92rem;
+    }
+
+    .theme-label {
+      min-width: 110px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .bar-track {
+      flex: 1;
+      height: 8px;
+      background: rgba($border-color, 0.15);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.5s ease;
+    }
+
+    .bar-fill-blue { background: linear-gradient(90deg, $accent-blue, lighten($accent-blue, 10%)); }
+    .bar-fill-orange { background: linear-gradient(90deg, #f7931a, #ffb347); }
+    .bar-fill-purple { background: linear-gradient(90deg, $accent-purple, lighten($accent-purple, 10%)); }
+    .bar-fill-green { background: linear-gradient(90deg, $accent-green, lighten($accent-green, 10%)); }
+    .bar-fill-red { background: linear-gradient(90deg, $accent-red, lighten($accent-red, 10%)); }
+
+    .theme-count {
+      min-width: 80px;
+      text-align: right;
+      color: $text-secondary;
+      font-size: 0.82rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    // Stat grid
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 0.75rem;
+      margin: 1.5rem 0;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 0.85rem 0.5rem;
+      background: rgba($bg-secondary, 0.5);
+      border-radius: 10px;
+      border: 1px solid rgba($border-color, 0.2);
+
+      .stat-value {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $accent-blue;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .stat-label {
+        font-size: 0.75rem;
+        color: $text-secondary;
+        margin-top: 0.2rem;
+      }
+    }
+
+    // Source tags
+    .source-tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      color: $text-secondary;
+      padding: 0.1rem 0.45rem;
+      border-radius: 4px;
+      background: rgba($bg-secondary, 0.6);
+      border: 1px solid rgba($border-color, 0.15);
+      font-style: normal;
+      font-family: inherit;
+    }
+
+    // Collapsible details
+    details {
+      margin: 1rem 0;
+      border: 1px solid rgba($border-color, 0.25);
+      border-radius: 10px;
+      background: rgba($bg-secondary, 0.2);
+
+      summary {
+        padding: 0.7rem 1rem;
+        cursor: pointer;
+        font-weight: 600;
+        color: $text-secondary;
+        font-size: 0.88rem;
+        transition: color 0.2s ease, background 0.2s ease;
+        border-radius: 10px;
+
+        &:hover {
+          color: $accent-blue;
+          background: rgba($accent-blue, 0.04);
+        }
+
+        &::marker {
+          color: $accent-blue;
+        }
+      }
+
+      &[open] summary {
+        border-bottom: 1px solid rgba($border-color, 0.15);
+        border-radius: 10px 10px 0 0;
+      }
+
+      .details-content {
+        padding: 0.5rem 1rem 1rem;
+        font-size: 0.9rem;
+        line-height: 1.7;
+
+        a {
+          display: block;
+          padding: 0.3rem 0;
+          color: rgba($text-primary, 0.85);
+          border-bottom: 1px solid rgba($border-color, 0.1);
+
+          &:hover { color: $accent-blue; }
+          &:last-child { border-bottom: none; }
+        }
+      }
+    }
+
+    // News card items
+    .news-card-item {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba($border-color, 0.12);
+
+      &:last-child { border-bottom: none; }
+
+      .news-title {
+        font-weight: 600;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 0.25rem;
+      }
+
+      .news-desc {
+        font-size: 0.88rem;
+        color: rgba($text-primary, 0.75);
+        line-height: 1.6;
+        margin-bottom: 0.25rem;
+      }
+    }
   }
 
   .post-source-link {

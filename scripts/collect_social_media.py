@@ -9,7 +9,6 @@ Sources:
 
 import sys
 import os
-import re
 import time
 import requests
 from collections import Counter
@@ -365,53 +364,10 @@ def main():
     # Collect all source links
     source_links = []
 
-    # Key summary
-    content_parts.append("## 핵심 요약\n")
-    content_parts.append(f"- **총 수집 건수**: {total_count}건")
-    content_parts.append(f"- **텔레그램**: {len(telegram_items)}건")
-    content_parts.append(f"- **소셜 미디어/뉴스**: {len(social_items)}건")
-    content_parts.append(f"- **Reddit**: {len(reddit_items)}건")
-    content_parts.append(f"- **정치·경제**: {len(political_items)}건")
-
-    # Keyword analysis across all items
-    all_texts = " ".join(
-        item.get("title", "") + " " + item.get("description", "")
-        for item in telegram_items + social_items + reddit_items + political_items
-    ).lower()
-    keyword_targets = ["bitcoin", "ethereum", "trump", "이재명", "kospi", "fed", "regulation", "ai"]
-    keyword_hits = {kw: len(re.findall(re.escape(kw), all_texts, re.IGNORECASE))
-                    for kw in keyword_targets}
-    top_keywords = [(kw, cnt) for kw, cnt in sorted(keyword_hits.items(), key=lambda x: -x[1]) if cnt > 0]
-    if top_keywords:
-        kw_str = ", ".join(f"{kw}({cnt})" for kw, cnt in top_keywords[:5])
-        content_parts.append(f"- **주요 키워드**: {kw_str}")
-
-    # 오늘의 핵심 bullet points
-    content_parts.append("\n## 오늘의 핵심\n")
-    highlights = []
-    if top_keywords:
-        highlights.append(f"- 가장 많이 언급된 키워드는 **{top_keywords[0][0]}**({top_keywords[0][1]}회)입니다.")
-    active_sources = []
-    if telegram_items:
-        active_sources.append(f"텔레그램({len(telegram_items)}건)")
-    if reddit_items:
-        active_sources.append(f"Reddit({len(reddit_items)}건)")
-    if social_items:
-        active_sources.append(f"소셜 미디어({len(social_items)}건)")
-    if political_items:
-        active_sources.append(f"정치·경제({len(political_items)}건)")
-    if active_sources:
-        highlights.append(f"- 가장 활발한 채널: {', '.join(active_sources[:3])}")
-    if total_count >= 30:
-        highlights.append(f"- 총 {total_count}건의 소셜 데이터가 수집되어 커뮤니티 관심이 높은 상황입니다.")
-    if not highlights:
-        highlights.append(f"- 총 {total_count}건의 소셜 데이터가 수집되었습니다.")
-    content_parts.extend(highlights)
-
     # Executive summary (한눈에 보기)
     exec_summary = summarizer.generate_executive_summary(
         category_type="social",
-        extra_data={"top_keywords": top_keywords},
+        extra_data={"top_keywords": []},
     )
     if exec_summary:
         content_parts.append(exec_summary)
@@ -451,11 +407,6 @@ def main():
     except Exception as e:
         logger.warning("Source distribution image failed: %s", e)
 
-    # Theme briefing section
-    theme_briefing = summarizer.generate_theme_briefing()
-    if theme_briefing:
-        content_parts.append(theme_briefing)
-
     # Telegram section with descriptions (only show if data exists)
     if telegram_items:
         content_parts.append("## 텔레그램 주요 소식\n")
@@ -476,7 +427,7 @@ def main():
                 if len(description) > 150:
                     desc_text += "..."
                 content_parts.append(f"{desc_text}")
-            content_parts.append(f"`채널: {source}`\n")
+            content_parts.append(f'<span class="source-tag">{source}</span>\n')
 
         content_parts.append("\n---\n")
 
@@ -501,7 +452,7 @@ def main():
                 if len(description) > 150:
                     desc_text += "..."
                 content_parts.append(f"{desc_text}")
-            content_parts.append(f"`출처: {source}`\n")
+            content_parts.append(f'<span class="source-tag">{source}</span>\n')
 
         content_parts.append("\n---\n")
 
@@ -543,7 +494,7 @@ def main():
                 if len(description) > 150:
                     desc_text += "..."
                 content_parts.append(f"{desc_text}")
-            content_parts.append(f"`출처: {source}`\n")
+            content_parts.append(f'<span class="source-tag">{source}</span>\n')
 
         content_parts.append("\n---\n")
 
@@ -574,16 +525,21 @@ def main():
     trend_lines.append("> *본 소셜 동향 분석은 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*")
     content_parts.extend(trend_lines)
 
-    # References section (top 10 only)
+    # References section (top 10 only) - collapsible
     if source_links:
-        content_parts.append("\n## 참고 링크\n")
         seen_links = set()
-        ref_count = 1
+        unique_links = []
         for ref in source_links[:10]:
             if ref["link"] not in seen_links:
                 seen_links.add(ref["link"])
-                content_parts.append(f"{ref_count}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}")
-                ref_count += 1
+                unique_links.append(ref)
+
+        if unique_links:
+            content_parts.append(f"\n<details><summary>참고 링크 ({len(unique_links)}건)</summary>")
+            content_parts.append('<div class="details-content">\n')
+            for idx, ref in enumerate(unique_links, 1):
+                content_parts.append(f"{idx}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}")
+            content_parts.append("\n</div></details>")
 
     # Data collection timestamp footer
     content_parts.append(f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC")
