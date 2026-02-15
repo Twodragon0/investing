@@ -9,7 +9,7 @@ lang: "ko"
 
 ## 한줄 요약
 
-암호화폐 감정분석 연구와 OpenClaw 주목 속에 트럼프 정부의 크립토 정책이 양당 갈등과 비트코인 하락을 촉발하며, 관세 정책까지 시장 불안을 증폭시키고 있음
+암호화폐 감정분석 연구와 AI 주목 속에 트럼프 정부의 크립토 정책이 양당 갈등과 비트코인 하락을 촉발하며, 관세 정책까지 시장 불안을 증폭시키고 있음
 
 ---
 
@@ -47,7 +47,7 @@ lang: "ko"
 | 거래전략 | [**Develop a Crypto Trading Strategy Based on Sentiment Analysis**](https://news.google.com/rss/articles/CBMif0FVX3lxTE8ycmRsV2ZReXY4dG9hV3h3WlV2aE5NQVRCUmhETlhIVFZvX2RIanc5eWdRcnlPWEZtWVJDTDM2cDI0ZDJvSUU5S0xHc1RiLVBMVFJITE8wWkhZLUttY1d4U2Y0Qm1kNVFVd0x5T2JOR2NJQ1AzQ1FhNDRLM3lEWTg?oc=5) | CoinGecko | 단기: 중립 |
 | 분석도구 | [**Cryptocurrency Sentiment Analysis: Statistics & How It Works**](https://news.google.com/rss/articles/CBMidEFVX3lxTE1xWm5XMjNsWi1IejFOemZmVVgxdk8tVEJjVHh6eW51YXdPMjFLSnlQWXlzTW0wX3NwRUJqREZrY0o3OFlvZkZfcExVcmJmSk9DOG1ueG1OaW1FZWw1OGRteVRXX2txTGVhTWhQSnM2OWdwcmZm?oc=5) | AIMultiple | 단기: 중립 |
 | 학술연구 | [**Community Impact on a Cryptocurrency: Twitter Comparison (Dogecoin vs Litecoin)**](https://news.google.com/rss/articles/CBMikAFBVV95cUxQelZPNGtCNUpreWg1V2UxWEFZUWRsV2pwVHp6R0pFSmZaYk5OSlNuY0tiaUxlakJKYU04TTk5dG1TdktGTWkxalZQaEJtbFNFcUlFSVhjTHFIdVA2WmtDMkxYX0d0bFU2Q0NGR20tY2hYeDkzdG5VZHh6OElYaHp0S0tMSXVHeWhWejRsYmItOUI?oc=5) | Frontiers | 장기: 긍정 |
-| 신규 프로젝트 | [**Why OpenClaw Is Drawing Crypto Twitter's Attention**](https://news.google.com/rss/articles/CBMicEFVX3lxTE85OTVPTXBOalllUWJFakZzQW9zYVMwa1dTTTRLSmpaNHNDUnRnTFVZTjBQdkpxak1EcE82Z0J0bWZNbDVUR2ptbGtQeVNYQlJaTy1lSkh3SzdudGVrWkxsekNOMm1GYkY0N0NxMTRiSGs?oc=5) | BeInCrypto | 단기: 주목 |
+| 신규 프로젝트 | [**Why AI Is Drawing Crypto Twitter's Attention**](https://news.google.com/rss/articles/CBMicEFVX3lxTE85OTVPTXBOalllUWJFakZzQW9zYVMwa1dTTTRLSmpaNHNDUnRnTFVZTjBQdkpxak1EcE82Z0J0bWZNbDVUR2ptbGtQeVNYQlJaTy1lSkh3SzdudGVrWkxsekNOMm1GYkY0N0NxMTRiSGs?oc=5) | BeInCrypto | 단기: 주목 |
 | 플랫폼 장애 | [**X (Twitter) restores service after global outage**](https://news.google.com/rss/articles/CBMikgFBVV95cUxPeVdiTWlCT2dMR1h5QklyZllRcDlMdE9vdmVtQndjMUExc3paTGhKQnlNNzk3aGtBU29LeHk4OV94UU5iSXZseVFSb2RTRmxHWTZ3NVZlRi1XT1UyVHR6QmtGU1pJLUsxSW9YQlhEOEtLakxaTm1IQTV5dW9sU3o3NFJWbWdjTkozMzNTWXo0ZjJjQQ?oc=5) | thestreet.com | 단기: 부정 |
 | 시장전망 | [**Is Crypto 'Boring' Now? Bitwise CEO Says The Market Is Changing**](https://news.google.com/rss/articles/CBMiugFBVV95cUxOSmRIV3BlNXJHR0stcjBvekhCT0dnYVJHRnFjd3NIaWhwTkx6WkxHQ2phVGVfTU80d3AzZ0xNcDM4Wm5YWjIwVkh6SG1tSnIxY1pHcWRKWWxvYkgtNGdXb1dNdTNIS0lYU0RxS09TTldwOVV3RjlOVUdVSGNSc0xCeWpuaHkzRVhraUZ1dkxLRm1lYlhyUDhKYUllVWpYVjhaci1lRnZFaHRnT1p1aHJwM1pkOTlBVUZYVEE?oc=5) | TradingView | 단기: 중립 |
 | 기업뉴스 | [**How Arkham Insights is redefining onchain alpha for serious crypto traders**](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9tS0NlUlQyeGhLckFFYW1nTDVWR0I5TGMwUE9SZmFqVFVTeTMyLVE1elJGc3pVVWZfWnpTT3JGSDl6b2U4Y1hNU1BnajQ0dThTd0hib0hsczNHMjJ1YjMtZ0FHNmJRbzQ?oc=5) | Blockworks | 단기: 긍정 |
@@ -154,7 +154,7 @@ lang: "ko"
 **소셜 트렌드**
 1. [Attention-augmented hybrid CNN-LSTM model for social media sentiment analysis](https://news.google.com/rss/articles/CBMiX0FVX3lxTE5pOHdJbW1CblVmZWdHYTY0UGkzRGNJMmhMTlp2Sm9VbXA5YjgyNkU4QXNTaDEyWW5hRUJ3SkM1WjJHWmhtYW9pbkxIcVk0VXRBQnhudmZBNkRwVm9Sd2dj?oc=5)
 2. [Develop a Crypto Trading Strategy Based on Sentiment Analysis - CoinGecko](https://news.google.com/rss/articles/CBMif0FVX3lxTE8ycmRsV2ZReXY4dG9hV3h3WlV2aE5NQVRCUmhETlhIVFZvX2RIanc5eWdRcnlPWEZtWVJDTDM2cDI0ZDJvSUU5S0xHc1RiLVBMVFJITE8wWkhZLUttY1d4U2Y0Qm1kNVFVd0x5T2JOR2NJQ1AzQ1FhNDRLM3lEWTg?oc=5)
-3. [Why OpenClaw Is Drawing Crypto Twitter's Attention - BeInCrypto](https://news.google.com/rss/articles/CBMicEFVX3lxTE85OTVPTXBOalllUWJFakZzQW9zYVMwa1dTTTRLSmpaNHNDUnRnTFVZTjBQdkpxak1EcE82Z0J0bWZNbDVUR2ptbGtQeVNYQlJaTy1lSkh3SzdudGVrWkxsekNOMm1GYkY0N0NxMTRiSGs?oc=5)
+3. [Why AI Is Drawing Crypto Twitter's Attention - BeInCrypto](https://news.google.com/rss/articles/CBMicEFVX3lxTE85OTVPTXBOalllUWJFakZzQW9zYVMwa1dTTTRLSmpaNHNDUnRnTFVZTjBQdkpxak1EcE82Z0J0bWZNbDVUR2ptbGtQeVNYQlJaTy1lSkh3SzdudGVrWkxsekNOMm1GYkY0N0NxMTRiSGs?oc=5)
 4. [X (Twitter) restores service after global outage - thestreet.com](https://news.google.com/rss/articles/CBMikgFBVV95cUxPeVdiTWlCT2dMR1h5QklyZllRcDlMdE9vdmVtQndjMUExc3paTGhKQnlNNzk3aGtBU29LeHk4OV94UU5iSXZseVFSb2RTRmxHWTZ3NVZlRi1XT1UyVHR6QmtGU1pJLUsxSW9YQlhEOEtLakxaTm1IQTV5dW9sU3o3NFJWbWdjTkozMzNTWXo0ZjJjQQ?oc=5)
 5. [Is Crypto 'Boring' Now? Bitwise CEO Says The Market Is Changing - TradingView](https://news.google.com/rss/articles/CBMiugFBVV95cUxOSmRIV3BlNXJHR0stcjBvekhCT0dnYVJHRnFjd3NIaWhwTkx6WkxHQ2phVGVfTU80d3AzZ0xNcDM4Wm5YWjIwVkh6SG1tSnIxY1pHcWRKWWxvYkgtNGdXb1dNdTNIS0lYU0RxS09TTldwOVV3RjlOVUdVSGNSc0xCeWpuaHkzRVhraUZ1dkxLRm1lYlhyUDhKYUllVWpYVjhaci1lRnZFaHRnT1p1aHJwM1pkOTlBVUZYVEE?oc=5)
 6. [How Arkham Insights is redefining onchain alpha for serious crypto traders - Blockworks](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9tS0NlUlQyeGhLckFFYW1nTDVWR0I5TGMwUE9SZmFqVFVTeTMyLVE1elJGc3pVVWZfWnpTT3JGSDl6b2U4Y1hNU1BnajQ0dThTd0hib0hsczNHMjJ1YjMtZ0FHNmJRbzQ?oc=5)

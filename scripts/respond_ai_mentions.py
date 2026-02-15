@@ -14,7 +14,7 @@ from typing import Any, Dict, List, Optional
 ROOT = Path(__file__).resolve().parents[1]
 POSTS_DIR = ROOT / "_posts"
 SLACK_API_BASE = "https://slack.com/api"
-CHANNEL_ALIASES = ("ops", "dev", "openclaw", "investing")
+CHANNEL_ALIASES = ("ops", "dev", "ai", "investing")
 
 
 def env_first(*keys: str) -> str:
@@ -140,18 +140,18 @@ def channel_id_for_alias(alias: str) -> str:
     if alias == "investing":
         return env_first(
             "SLACK_CHANNEL_ID_INVESTING",
-            "OPENCLAW_SLACK_CHANNEL_ID_INVESTING",
+            "AI_SLACK_CHANNEL_ID_INVESTING",
             "SLACK_CHANNEL_INVESTING",
             "SLACK_CHANNEL_ID",
-            "OPENCLAW_SLACK_CHANNEL_ID",
+            "AI_SLACK_CHANNEL_ID",
             "SLACK_CHANNEL",
         )
     return env_first(
         f"SLACK_CHANNEL_ID_{upper}",
-        f"OPENCLAW_SLACK_CHANNEL_ID_{upper}",
+        f"AI_SLACK_CHANNEL_ID_{upper}",
         f"SLACK_CHANNEL_{upper}",
         "SLACK_CHANNEL_ID",
-        "OPENCLAW_SLACK_CHANNEL_ID",
+        "AI_SLACK_CHANNEL_ID",
         "SLACK_CHANNEL",
     )
 
@@ -252,16 +252,16 @@ def has_bot_reply(
 def should_reply(text: str, bot_user_id: str, alias: str) -> bool:
     lowered = text.lower()
     mention_token = f"<@{bot_user_id}>".lower()
-    has_mention = mention_token in lowered or "openclaw" in lowered
+    has_mention = mention_token in lowered or "ai" in lowered
     return has_mention
 
 
 def fallback_help_text(alias: str) -> str:
-    if alias in ("openclaw", "investing"):
-        return "예: '@OpenClaw 실시간 코인 모니터링 해줘', '@OpenClaw 오늘 투자 소식 요약해줘'"
+    if alias in ("ai", "investing"):
+        return "예: '@AI 실시간 코인 모니터링 해줘', '@AI 오늘 투자 소식 요약해줘'"
     if alias == "ops":
-        return "예: '@OpenClaw 운영 상태 확인해줘', '@OpenClaw 배포 상태 알려줘'"
-    return "예: '@OpenClaw dev 상태 알려줘', '@OpenClaw 최신 커밋 요약해줘'"
+        return "예: '@AI 운영 상태 확인해줘', '@AI 배포 상태 알려줘'"
+    return "예: '@AI dev 상태 알려줘', '@AI 최신 커밋 요약해줘'"
 
 
 def main() -> int:
@@ -270,7 +270,7 @@ def main() -> int:
         print(f"Unsupported alias: {alias}")
         return 1
 
-    token = env_first("SLACK_BOT_TOKEN", "OPENCLAW_SLACK_BOT_TOKEN", "SLACK_TOKEN")
+    token = env_first("SLACK_BOT_TOKEN", "AI_SLACK_BOT_TOKEN", "SLACK_TOKEN")
     channel_id = channel_id_for_alias(alias)
 
     if not token or not channel_id:
