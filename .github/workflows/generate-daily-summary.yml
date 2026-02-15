@@ -2,7 +2,7 @@ name: Generate Daily Summary
 
 on:
   schedule:
-    - cron: '30 14 * * *'
+    - cron: '0 1 * * *'
   workflow_dispatch:
 
 permissions:

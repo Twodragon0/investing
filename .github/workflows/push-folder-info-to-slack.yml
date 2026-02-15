@@ -1,8 +1,9 @@
 name: Push Folder Info To Slack
 
 on:
-  schedule:
-    - cron: "0 * * * *"
+  workflow_run:
+    workflows: ["Generate Daily Summary"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -10,6 +11,7 @@ permissions:
 
 jobs:
   push-folder-info:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     strategy:
       fail-fast: false
       matrix:
@@ -107,7 +109,7 @@ jobs:
 
           report_file="${RUNNER_TEMP}/folder_report.txt"
           {
-            printf "*Hourly folder report*\n"
+            printf "*Daily folder report*\n"
             printf -- "- time (UTC): %s\n" "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
             build_investing_digest
             build_line "ai" "ai"

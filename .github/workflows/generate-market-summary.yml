@@ -2,7 +2,7 @@ name: Generate Market Summary
 
 on:
   schedule:
-    - cron: '0 14 * * *'
+    - cron: '30 0 * * *'
   workflow_dispatch:
 
 permissions:
