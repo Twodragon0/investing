@@ -150,6 +150,9 @@ def channel_id_for_alias(alias: str) -> str:
         f"SLACK_CHANNEL_ID_{upper}",
         f"OPENCLAW_SLACK_CHANNEL_ID_{upper}",
         f"SLACK_CHANNEL_{upper}",
+        "SLACK_CHANNEL_ID",
+        "OPENCLAW_SLACK_CHANNEL_ID",
+        "SLACK_CHANNEL",
     )
 
 
@@ -158,14 +161,70 @@ def intent_keywords(alias: str) -> List[str]:
         return ["ops", "운영", "상태", "배포", "헬스", "장애", "status"]
     if alias == "dev":
         return ["dev", "개발", "빌드", "ci", "배포", "commit", "릴리즈"]
-    return ["투자", "요약", "소식", "summary", "market", "news", "브리핑"]
+    return [
+        "투자",
+        "요약",
+        "소식",
+        "summary",
+        "market",
+        "news",
+        "브리핑",
+        "코인",
+        "crypto",
+        "실시간",
+        "realtime",
+        "monitor",
+        "모니터링",
+        "price",
+    ]
 
 
-def build_reply_text(alias: str) -> str:
+def wants_coin_monitoring(text: str) -> bool:
+    lowered = text.lower()
+    return any(
+        key in lowered
+        for key in [
+            "실시간",
+            "realtime",
+            "monitor",
+            "모니터링",
+            "코인",
+            "crypto",
+            "price",
+        ]
+    )
+
+
+def build_coin_monitoring_text() -> str:
+    market_report = latest_post("*daily-market-report*.md")
+    if market_report:
+        slug = market_report.stem
+        parts = slug.split("-", 3)
+        if len(parts) == 4:
+            report_link = f"https://investing.2twodragon.com/market-analysis/{parts[0]}/{parts[1]}/{parts[2]}/{parts[3]}/"
+        else:
+            report_link = "https://investing.2twodragon.com/"
+    else:
+        report_link = "https://investing.2twodragon.com/"
+
+    return "\n".join(
+        [
+            "실시간 코인 모니터링 요청 확인했습니다.",
+            "- 최신 시장 리포트: " + report_link,
+            "- CoinGecko: https://www.coingecko.com/",
+            "- CoinMarketCap: https://coinmarketcap.com/",
+            "- 5분 주기로 멘션을 확인해 후속 요청에 답변합니다.",
+        ]
+    )
+
+
+def build_reply_text(alias: str, text: str) -> str:
     if alias == "ops":
         return build_ops_status_text()
     if alias == "dev":
         return build_dev_status_text()
+    if wants_coin_monitoring(text):
+        return build_coin_monitoring_text()
     return build_summary_text()
 
 
@@ -194,8 +253,15 @@ def should_reply(text: str, bot_user_id: str, alias: str) -> bool:
     lowered = text.lower()
     mention_token = f"<@{bot_user_id}>".lower()
     has_mention = mention_token in lowered or "openclaw" in lowered
-    has_intent = any(key in lowered for key in intent_keywords(alias))
-    return has_mention and has_intent
+    return has_mention
+
+
+def fallback_help_text(alias: str) -> str:
+    if alias in ("openclaw", "investing"):
+        return "예: '@OpenClaw 실시간 코인 모니터링 해줘', '@OpenClaw 오늘 투자 소식 요약해줘'"
+    if alias == "ops":
+        return "예: '@OpenClaw 운영 상태 확인해줘', '@OpenClaw 배포 상태 알려줘'"
+    return "예: '@OpenClaw dev 상태 알려줘', '@OpenClaw 최신 커밋 요약해줘'"
 
 
 def main() -> int:
@@ -238,7 +304,7 @@ def main() -> int:
 
     messages = history.get("messages", [])
     messages_sorted = sorted(messages, key=lambda x: float(x.get("ts", "0")))
-    reply_text = build_reply_text(alias)
+    reply_text_default = build_reply_text(alias, "")
 
     reply_count = 0
     for message in messages_sorted:
@@ -253,13 +319,18 @@ def main() -> int:
         if has_bot_reply(token, channel_id, thread_ts, bot_user_id):
             continue
 
+        has_intent = any(key in text.lower() for key in intent_keywords(alias))
+        reply_text = (
+            build_reply_text(alias, text) if has_intent else fallback_help_text(alias)
+        )
+
         post = slack_api(
             "chat.postMessage",
             token,
             {
                 "channel": channel_id,
                 "thread_ts": thread_ts,
-                "text": reply_text,
+                "text": reply_text or reply_text_default,
             },
         )
         if post.get("ok"):
