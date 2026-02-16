@@ -17,10 +17,32 @@ try:
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
     import matplotlib.patches as mpatches
+    import matplotlib.font_manager as fm
     import numpy as np
     _MPL_AVAILABLE = True
+
+    # Configure Korean/CJK font support
+    _FONT_FAMILY = "monospace"
+    _korean_font_candidates = [
+        "/System/Library/Fonts/AppleSDGothicNeo.ttc",
+        "/Library/Fonts/Arial Unicode.ttf",
+        "/System/Library/Fonts/Supplemental/AppleGothic.ttf",
+    ]
+    for _fp in _korean_font_candidates:
+        if os.path.exists(_fp):
+            fm.fontManager.addfont(_fp)
+            _prop = fm.FontProperties(fname=_fp)
+            _FONT_FAMILY = _prop.get_name()
+            matplotlib.rcParams["font.family"] = _FONT_FAMILY
+            logger.info("Using font '%s' for CJK support", _FONT_FAMILY)
+            break
+    else:
+        logger.warning("No CJK font found, Korean text may not render correctly")
 except ImportError:
     logger.warning("matplotlib/numpy not available, image generation disabled")
+
+# Shorthand for font kwarg used throughout
+_FK = {"fontfamily": _FONT_FAMILY} if _MPL_AVAILABLE else {}
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 IMAGES_DIR = os.path.join(REPO_ROOT, "assets", "images", "generated")
@@ -89,19 +111,19 @@ def generate_top_coins_card(
     # Title
     ax.text(5, fig_height - 0.5, "Top 10 Cryptocurrencies by Market Cap",
             ha="center", va="center", fontsize=18, fontweight="bold",
-            color=COLORS["text"], fontfamily="monospace")
+            color=COLORS["text"], fontfamily=_FONT_FAMILY)
     ax.text(5, fig_height - 1.0, f"{date_str} | Source: {source}",
             ha="center", va="center", fontsize=10, color=COLORS["text_secondary"],
-            fontfamily="monospace")
+            fontfamily=_FONT_FAMILY)
 
     # Column headers
     y_start = fig_height - 1.6
-    ax.text(0.3, y_start, "#", fontsize=9, fontweight="bold", color=COLORS["text_secondary"], fontfamily="monospace")
-    ax.text(1.0, y_start, "Coin", fontsize=9, fontweight="bold", color=COLORS["text_secondary"], fontfamily="monospace")
-    ax.text(4.5, y_start, "Price (USD)", fontsize=9, fontweight="bold", color=COLORS["text_secondary"], fontfamily="monospace", ha="right")
-    ax.text(6.0, y_start, "24h Change", fontsize=9, fontweight="bold", color=COLORS["text_secondary"], fontfamily="monospace", ha="center")
-    ax.text(7.8, y_start, "7d Change", fontsize=9, fontweight="bold", color=COLORS["text_secondary"], fontfamily="monospace", ha="center")
-    ax.text(9.7, y_start, "Market Cap", fontsize=9, fontweight="bold", color=COLORS["text_secondary"], fontfamily="monospace", ha="right")
+    ax.text(0.3, y_start, "#", fontsize=9, fontweight="bold", color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
+    ax.text(1.0, y_start, "Coin", fontsize=9, fontweight="bold", color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
+    ax.text(4.5, y_start, "Price (USD)", fontsize=9, fontweight="bold", color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY, ha="right")
+    ax.text(6.0, y_start, "24h Change", fontsize=9, fontweight="bold", color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY, ha="center")
+    ax.text(7.8, y_start, "7d Change", fontsize=9, fontweight="bold", color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY, ha="center")
+    ax.text(9.7, y_start, "Market Cap", fontsize=9, fontweight="bold", color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY, ha="right")
 
     # Divider
     ax.plot([0.2, 9.8], [y_start - 0.2, y_start - 0.2], color=COLORS["border"], linewidth=0.5)
@@ -138,13 +160,13 @@ def generate_top_coins_card(
         rank_color = rank_colors.get(i, COLORS["text_secondary"])
 
         ax.text(0.4, y, str(i + 1), fontsize=11, fontweight="bold",
-                color=rank_color, ha="center", fontfamily="monospace")
+                color=rank_color, ha="center", fontfamily=_FONT_FAMILY)
 
         # Coin name
         ax.text(1.0, y + 0.05, name, fontsize=11, fontweight="bold",
-                color=COLORS["text"], fontfamily="monospace")
+                color=COLORS["text"], fontfamily=_FONT_FAMILY)
         ax.text(1.0, y - 0.18, full_name[:18], fontsize=7,
-                color=COLORS["text_secondary"], fontfamily="monospace")
+                color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
 
         # Price
         if price >= 1:
@@ -154,19 +176,19 @@ def generate_top_coins_card(
         else:
             price_str = f"${price:,.6f}"
         ax.text(4.5, y, price_str, fontsize=10, color=COLORS["text"],
-                ha="right", fontfamily="monospace")
+                ha="right", fontfamily=_FONT_FAMILY)
 
         # 24h change
         color_24h = _get_change_color(change_24h)
         arrow_24h = "▲" if change_24h >= 0 else "▼"
         ax.text(6.0, y, f"{arrow_24h} {abs(change_24h):.2f}%", fontsize=10,
-                color=color_24h, ha="center", fontfamily="monospace", fontweight="bold")
+                color=color_24h, ha="center", fontfamily=_FONT_FAMILY, fontweight="bold")
 
         # 7d change
         color_7d = _get_change_color(change_7d)
         arrow_7d = "▲" if change_7d >= 0 else "▼"
         ax.text(7.8, y, f"{arrow_7d} {abs(change_7d):.2f}%", fontsize=10,
-                color=color_7d, ha="center", fontfamily="monospace")
+                color=color_7d, ha="center", fontfamily=_FONT_FAMILY)
 
         # Market cap
         if mcap >= 1_000_000_000_000:
@@ -178,12 +200,12 @@ def generate_top_coins_card(
         else:
             mcap_str = f"${mcap:,.0f}"
         ax.text(9.7, y, mcap_str, fontsize=10, color=COLORS["text"],
-                ha="right", fontfamily="monospace")
+                ha="right", fontfamily=_FONT_FAMILY)
 
     # Footer
     ax.text(5, 0.2, "Investing Dragon | Auto-generated Market Report",
             ha="center", fontsize=8, color=COLORS["text_secondary"],
-            fontfamily="monospace", style="italic")
+            fontfamily=_FONT_FAMILY, style="italic")
 
     if not filename:
         filename = f"top-coins-{date_str}.png"
@@ -220,9 +242,9 @@ def generate_fear_greed_gauge(
 
     # Title
     ax.text(0, 1.45, "Crypto Fear & Greed Index", ha="center", va="center",
-            fontsize=16, fontweight="bold", color=COLORS["text"], fontfamily="monospace")
+            fontsize=16, fontweight="bold", color=COLORS["text"], fontfamily=_FONT_FAMILY)
     ax.text(0, 1.25, date_str, ha="center", va="center",
-            fontsize=10, color=COLORS["text_secondary"], fontfamily="monospace")
+            fontsize=10, color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
 
     # Draw gauge arc (semicircle)
     _theta = np.linspace(np.pi, 0, 100)
@@ -261,21 +283,21 @@ def generate_fear_greed_gauge(
 
     # Value display
     ax.text(0, 0.25, str(value), ha="center", va="center",
-            fontsize=36, fontweight="bold", color=COLORS["text"], fontfamily="monospace")
+            fontsize=36, fontweight="bold", color=COLORS["text"], fontfamily=_FONT_FAMILY)
     ax.text(0, -0.05, classification, ha="center", va="center",
-            fontsize=14, color=COLORS["text_secondary"], fontfamily="monospace")
+            fontsize=14, color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
 
     # Scale labels
-    ax.text(-1.15, -0.15, "0", fontsize=9, color=COLORS["red"], ha="center", fontfamily="monospace")
-    ax.text(-0.85, 0.75, "25", fontsize=9, color=COLORS["orange"], ha="center", fontfamily="monospace")
-    ax.text(0, 1.05, "50", fontsize=9, color=COLORS["text_secondary"], ha="center", fontfamily="monospace")
-    ax.text(0.85, 0.75, "75", fontsize=9, color=COLORS["blue"], ha="center", fontfamily="monospace")
-    ax.text(1.15, -0.15, "100", fontsize=9, color=COLORS["green"], ha="center", fontfamily="monospace")
+    ax.text(-1.15, -0.15, "0", fontsize=9, color=COLORS["red"], ha="center", fontfamily=_FONT_FAMILY)
+    ax.text(-0.85, 0.75, "25", fontsize=9, color=COLORS["orange"], ha="center", fontfamily=_FONT_FAMILY)
+    ax.text(0, 1.05, "50", fontsize=9, color=COLORS["text_secondary"], ha="center", fontfamily=_FONT_FAMILY)
+    ax.text(0.85, 0.75, "75", fontsize=9, color=COLORS["blue"], ha="center", fontfamily=_FONT_FAMILY)
+    ax.text(1.15, -0.15, "100", fontsize=9, color=COLORS["green"], ha="center", fontfamily=_FONT_FAMILY)
 
     # Footer
     ax.text(0, -0.45, "Investing Dragon | alternative.me",
             ha="center", fontsize=8, color=COLORS["text_secondary"],
-            fontfamily="monospace", style="italic")
+            fontfamily=_FONT_FAMILY, style="italic")
 
     if not filename:
         filename = f"fear-greed-{date_str}.png"
@@ -314,10 +336,10 @@ def generate_market_heatmap(
     # Title
     ax.text(0.5, 0.97, "Crypto Market Heatmap - Top 20",
             ha="center", va="top", transform=ax.transAxes,
-            fontsize=18, fontweight="bold", color=COLORS["text"], fontfamily="monospace")
+            fontsize=18, fontweight="bold", color=COLORS["text"], fontfamily=_FONT_FAMILY)
     ax.text(0.5, 0.93, f"{date_str} | 24h Price Change",
             ha="center", va="top", transform=ax.transAxes,
-            fontsize=10, color=COLORS["text_secondary"], fontfamily="monospace")
+            fontsize=10, color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
 
     # Grid layout (5 cols x 4 rows)
     cols, rows = 5, 4
@@ -369,7 +391,7 @@ def generate_market_heatmap(
         # Symbol
         ax.text(x + cell_w / 2, y + cell_h * 0.72, symbol,
                 ha="center", va="center", transform=ax.transAxes,
-                fontsize=14, fontweight="bold", color=COLORS["text"], fontfamily="monospace")
+                fontsize=14, fontweight="bold", color=COLORS["text"], fontfamily=_FONT_FAMILY)
 
         # Price
         if price >= 1:
@@ -378,19 +400,19 @@ def generate_market_heatmap(
             price_str = f"${price:,.4f}"
         ax.text(x + cell_w / 2, y + cell_h * 0.42, price_str,
                 ha="center", va="center", transform=ax.transAxes,
-                fontsize=9, color=COLORS["text_secondary"], fontfamily="monospace")
+                fontsize=9, color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
 
         # Change
         change_color = _get_change_color(change)
         arrow = "▲" if change >= 0 else "▼"
         ax.text(x + cell_w / 2, y + cell_h * 0.18, f"{arrow} {abs(change):.2f}%",
                 ha="center", va="center", transform=ax.transAxes,
-                fontsize=11, fontweight="bold", color=change_color, fontfamily="monospace")
+                fontsize=11, fontweight="bold", color=change_color, fontfamily=_FONT_FAMILY)
 
     # Footer
     ax.text(0.5, 0.01, "Investing Dragon | Auto-generated Market Heatmap",
             ha="center", va="bottom", transform=ax.transAxes,
-            fontsize=8, color=COLORS["text_secondary"], fontfamily="monospace", style="italic")
+            fontsize=8, color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY, style="italic")
 
     if not filename:
         filename = f"market-heatmap-{date_str}.png"
@@ -444,10 +466,10 @@ def generate_news_summary_card(
     bars = ax.barh(y_pos, counts, color=colors, height=0.6, edgecolor="none")
 
     ax.set_yticks(y_pos)
-    ax.set_yticklabels(names, fontsize=11, color=COLORS["text"], fontfamily="monospace")
+    ax.set_yticklabels(names, fontsize=11, color=COLORS["text"], fontfamily=_FONT_FAMILY)
     ax.invert_yaxis()
 
-    ax.set_xlabel("Articles", fontsize=10, color=COLORS["text_secondary"], fontfamily="monospace")
+    ax.set_xlabel("Articles", fontsize=10, color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
     ax.tick_params(axis="x", colors=COLORS["text_secondary"])
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
@@ -458,16 +480,16 @@ def generate_news_summary_card(
     for bar, count in zip(bars, counts):
         ax.text(bar.get_width() + 0.3, bar.get_y() + bar.get_height() / 2,
                 str(count), va="center", fontsize=10, color=COLORS["text"],
-                fontfamily="monospace", fontweight="bold")
+                fontfamily=_FONT_FAMILY, fontweight="bold")
 
     ax.set_title(f"News Source Distribution — {date_str}",
                  fontsize=14, fontweight="bold", color=COLORS["text"],
-                 fontfamily="monospace", pad=15)
+                 fontfamily=_FONT_FAMILY, pad=15)
 
     # Footer
     fig.text(0.5, 0.01, "Investing Dragon | Auto-generated",
              ha="center", fontsize=8, color=COLORS["text_secondary"],
-             fontfamily="monospace", style="italic")
+             fontfamily=_FONT_FAMILY, style="italic")
 
     if not filename:
         filename = f"news-summary-{date_str}.png"
@@ -517,19 +539,19 @@ def generate_market_snapshot_card(
     # Title
     ax.text(5, fig_height - 0.5, "Market Snapshot",
             ha="center", va="center", fontsize=18, fontweight="bold",
-            color=COLORS["text"], fontfamily="monospace")
+            color=COLORS["text"], fontfamily=_FONT_FAMILY)
     ax.text(5, fig_height - 1.0, f"{date_str} | US & Korean Markets",
             ha="center", va="center", fontsize=10, color=COLORS["text_secondary"],
-            fontfamily="monospace")
+            fontfamily=_FONT_FAMILY)
 
     # Column headers
     y_start = fig_height - 1.5
     ax.text(0.5, y_start, "Index / ETF", fontsize=9, fontweight="bold",
-            color=COLORS["text_secondary"], fontfamily="monospace")
+            color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
     ax.text(5.0, y_start, "Price", fontsize=9, fontweight="bold",
-            color=COLORS["text_secondary"], fontfamily="monospace", ha="center")
+            color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY, ha="center")
     ax.text(8.0, y_start, "Change", fontsize=9, fontweight="bold",
-            color=COLORS["text_secondary"], fontfamily="monospace", ha="center")
+            color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY, ha="center")
 
     ax.plot([0.3, 9.7], [y_start - 0.2, y_start - 0.2],
             color=COLORS["border"], linewidth=0.5)
@@ -542,7 +564,7 @@ def generate_market_snapshot_card(
         if section and section != current_section:
             current_section = section
             ax.text(0.5, y, section, fontsize=10, fontweight="bold",
-                    color=COLORS["blue"], fontfamily="monospace")
+                    color=COLORS["blue"], fontfamily=_FONT_FAMILY)
             y -= 0.45
 
         # Row background
@@ -567,18 +589,18 @@ def generate_market_snapshot_card(
             color = COLORS["text_secondary"]
             change_display = change_pct
 
-        ax.text(0.5, y, name, fontsize=11, color=COLORS["text"], fontfamily="monospace")
+        ax.text(0.5, y, name, fontsize=11, color=COLORS["text"], fontfamily=_FONT_FAMILY)
         ax.text(5.0, y, price, fontsize=11, color=COLORS["text"],
-                fontfamily="monospace", ha="center")
+                fontfamily=_FONT_FAMILY, ha="center")
         ax.text(8.0, y, change_display, fontsize=11, color=color,
-                fontfamily="monospace", ha="center", fontweight="bold")
+                fontfamily=_FONT_FAMILY, ha="center", fontweight="bold")
 
         y -= 0.55
 
     # Footer
     ax.text(5, 0.15, "Investing Dragon | Auto-generated Market Snapshot",
             ha="center", fontsize=8, color=COLORS["text_secondary"],
-            fontfamily="monospace", style="italic")
+            fontfamily=_FONT_FAMILY, style="italic")
 
     if not filename:
         filename = f"market-snapshot-{date_str}.png"
@@ -643,14 +665,14 @@ def generate_source_distribution_card(
 
     # Center text — total count
     ax.text(0, 0.05, str(total), ha="center", va="center",
-            fontsize=36, fontweight="bold", color=COLORS["text"], fontfamily="monospace")
+            fontsize=36, fontweight="bold", color=COLORS["text"], fontfamily=_FONT_FAMILY)
     ax.text(0, -0.12, "total", ha="center", va="center",
-            fontsize=12, color=COLORS["text_secondary"], fontfamily="monospace")
+            fontsize=12, color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
 
     # Title
     ax.set_title(f"Source Distribution — {date_str}",
                  fontsize=14, fontweight="bold", color=COLORS["text"],
-                 fontfamily="monospace", pad=20)
+                 fontfamily=_FONT_FAMILY, pad=20)
 
     # Legend
     legend = ax.legend(wedges, [f"{n} ({c})" for n, c in zip(names, counts)],
@@ -664,7 +686,7 @@ def generate_source_distribution_card(
     # Footer
     fig.text(0.5, 0.01, "Investing Dragon | Auto-generated",
              ha="center", fontsize=8, color=COLORS["text_secondary"],
-             fontfamily="monospace", style="italic")
+             fontfamily=_FONT_FAMILY, style="italic")
 
     if not filename:
         filename = f"source-distribution-{date_str}.png"
@@ -717,10 +739,10 @@ def generate_sector_heatmap(
     # Title
     ax.text(0.5, 0.97, "S&P 500 Sector Performance",
             ha="center", va="top", transform=ax.transAxes,
-            fontsize=18, fontweight="bold", color=COLORS["text"], fontfamily="monospace")
+            fontsize=18, fontweight="bold", color=COLORS["text"], fontfamily=_FONT_FAMILY)
     ax.text(0.5, 0.93, f"{date_str} | Daily Change",
             ha="center", va="top", transform=ax.transAxes,
-            fontsize=10, color=COLORS["text_secondary"], fontfamily="monospace")
+            fontsize=10, color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
 
     margin = 0.03
     cell_w = (1.0 - margin * (cols + 1)) / cols
@@ -760,30 +782,30 @@ def generate_sector_heatmap(
         # ETF Symbol
         ax.text(x + cell_w / 2, y + cell_h * 0.78, symbol,
                 ha="center", va="center", transform=ax.transAxes,
-                fontsize=13, fontweight="bold", color=COLORS["text"], fontfamily="monospace")
+                fontsize=13, fontweight="bold", color=COLORS["text"], fontfamily=_FONT_FAMILY)
 
         # Sector name (truncated)
         name_short = info["name"].split("(")[0].strip()[:12]
         ax.text(x + cell_w / 2, y + cell_h * 0.55, name_short,
                 ha="center", va="center", transform=ax.transAxes,
-                fontsize=8, color=COLORS["text_secondary"], fontfamily="monospace")
+                fontsize=8, color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
 
         # Price
         ax.text(x + cell_w / 2, y + cell_h * 0.35, f"${info['price']}",
                 ha="center", va="center", transform=ax.transAxes,
-                fontsize=9, color=COLORS["text_secondary"], fontfamily="monospace")
+                fontsize=9, color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
 
         # Change
         change_color = _get_change_color(change)
         arrow = "▲" if change >= 0 else "▼"
         ax.text(x + cell_w / 2, y + cell_h * 0.15, f"{arrow} {abs(change):.2f}%",
                 ha="center", va="center", transform=ax.transAxes,
-                fontsize=11, fontweight="bold", color=change_color, fontfamily="monospace")
+                fontsize=11, fontweight="bold", color=change_color, fontfamily=_FONT_FAMILY)
 
     # Footer
     ax.text(0.5, 0.01, "Investing Dragon | Auto-generated Sector Heatmap",
             ha="center", va="bottom", transform=ax.transAxes,
-            fontsize=8, color=COLORS["text_secondary"], fontfamily="monospace", style="italic")
+            fontsize=8, color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY, style="italic")
 
     if not filename:
         filename = f"sector-heatmap-{date_str}.png"
@@ -877,10 +899,10 @@ def generate_indicator_dashboard(
     # Title
     ax.text(0.5, 0.95, "Key Indicators Dashboard",
             ha="center", va="top", transform=ax.transAxes,
-            fontsize=16, fontweight="bold", color=COLORS["text"], fontfamily="monospace")
+            fontsize=16, fontweight="bold", color=COLORS["text"], fontfamily=_FONT_FAMILY)
     ax.text(0.5, 0.85, date_str,
             ha="center", va="top", transform=ax.transAxes,
-            fontsize=9, color=COLORS["text_secondary"], fontfamily="monospace")
+            fontsize=9, color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
 
     margin = 0.03
     card_w = (1.0 - margin * (cols + 1)) / cols
@@ -910,22 +932,22 @@ def generate_indicator_dashboard(
         # Label
         ax.text(x + card_w / 2, y + 0.52, label,
                 ha="center", va="center", transform=ax.transAxes,
-                fontsize=9, color=COLORS["text_secondary"], fontfamily="monospace")
+                fontsize=9, color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
 
         # Value (large)
         ax.text(x + card_w / 2, y + 0.35, value,
                 ha="center", va="center", transform=ax.transAxes,
-                fontsize=20, fontweight="bold", color=color, fontfamily="monospace")
+                fontsize=20, fontweight="bold", color=color, fontfamily=_FONT_FAMILY)
 
         # Subtitle
         ax.text(x + card_w / 2, y + 0.15, subtitle,
                 ha="center", va="center", transform=ax.transAxes,
-                fontsize=8, color=COLORS["text_secondary"], fontfamily="monospace")
+                fontsize=8, color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
 
     # Footer
     ax.text(0.5, 0.02, "Investing Dragon | Auto-generated Indicators",
             ha="center", va="bottom", transform=ax.transAxes,
-            fontsize=7, color=COLORS["text_secondary"], fontfamily="monospace", style="italic")
+            fontsize=7, color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY, style="italic")
 
     if not filename:
         filename = f"indicator-dashboard-{date_str}.png"
@@ -997,10 +1019,10 @@ def generate_news_briefing_card(
     # Title
     ax.text(5, fig_height - 0.5, category,
             ha="center", va="center", fontsize=20, fontweight="bold",
-            color=COLORS["text"], fontfamily="monospace")
+            color=COLORS["text"], fontfamily=_FONT_FAMILY)
     ax.text(5, fig_height - 1.0, f"{date_str}  |  {total_count} articles collected",
             ha="center", va="center", fontsize=11, color=COLORS["text_secondary"],
-            fontfamily="monospace")
+            fontfamily=_FONT_FAMILY)
 
     # Theme rows
     y_start = fig_height - 2.2
@@ -1039,19 +1061,19 @@ def generate_news_briefing_card(
 
         ax.text(0.8, y + 0.05, f"{emoji} {name}",
                 fontsize=13, fontweight="bold", color=COLORS["text"],
-                fontfamily="monospace", va="center")
+                fontfamily=_FONT_FAMILY, va="center")
 
         # Count badge
         ax.text(4.5, y + 0.05, f"{count}건",
                 fontsize=12, fontweight="bold", color=t_color,
-                fontfamily="monospace", va="center", ha="center")
+                fontfamily=_FONT_FAMILY, va="center", ha="center")
 
         # Keywords
         if keywords:
             kw_str = " · ".join(keywords[:4])
             ax.text(5.5, y + 0.05, kw_str,
                     fontsize=9, color=COLORS["text_secondary"],
-                    fontfamily="monospace", va="center")
+                    fontfamily=_FONT_FAMILY, va="center")
 
     # Urgent alerts section
     if has_urgent:
@@ -1065,19 +1087,19 @@ def generate_news_briefing_card(
 
         ax.text(0.8, y_urgent + 0.05, "URGENT",
                 fontsize=12, fontweight="bold", color=COLORS["red"],
-                fontfamily="monospace", va="center")
+                fontfamily=_FONT_FAMILY, va="center")
 
         alert_text = urgent_alerts[0][:60] if urgent_alerts else ""
         if len(urgent_alerts[0]) > 60:
             alert_text += "..."
         ax.text(2.8, y_urgent + 0.05, alert_text,
                 fontsize=10, color=COLORS["text"],
-                fontfamily="monospace", va="center")
+                fontfamily=_FONT_FAMILY, va="center")
 
     # Footer
     ax.text(5, 0.2, "Investing Dragon | Auto-generated News Briefing",
             ha="center", fontsize=8, color=COLORS["text_secondary"],
-            fontfamily="monospace", style="italic")
+            fontfamily=_FONT_FAMILY, style="italic")
 
     if not filename:
         filename = f"news-briefing-{date_str}.png"
