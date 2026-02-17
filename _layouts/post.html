@@ -15,6 +15,7 @@ layout: default
 {% endif %}
 
 <article class="post-detail">
+  <div class="reading-progress" id="reading-progress"></div>
   <div class="post-breadcrumb">
     <a href="{{ '/' | relative_url }}">홈</a>
     <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M4 2l4 4-4 4"/></svg>
@@ -68,36 +69,38 @@ layout: default
     <ol class="toc-list" id="toc-list"></ol>
   </nav>
 
-  <div class="post-content">
+  <div class="post-content prose-content">
     {{ content }}
   </div>
 
-  {% if page.source_url %}
-  <div class="post-source-link">
-    <a href="{{ page.source_url }}" target="_blank" rel="noopener noreferrer">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
-      </svg>
-      원문 보기
-    </a>
-  </div>
-  {% endif %}
+  <section class="post-engagement">
+    {% if page.source_url %}
+    <div class="post-source-link">
+      <a href="{{ page.source_url }}" target="_blank" rel="noopener noreferrer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+        원문 보기
+      </a>
+    </div>
+    {% endif %}
 
-  <div class="post-share">
-    <span class="share-label">공유하기</span>
-    <button class="share-btn share-twitter" onclick="shareTwitter()">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-      </svg>
-      트위터
-    </button>
-    <button class="share-btn share-copy" onclick="copyLink()">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-      </svg>
-      링크 복사
-    </button>
-  </div>
+    <div class="post-share">
+      <span class="share-label">공유하기</span>
+      <button class="share-btn share-twitter" onclick="shareTwitter()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+        트위터
+      </button>
+      <button class="share-btn share-copy" onclick="copyLink()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+        </svg>
+        링크 복사
+      </button>
+    </div>
+  </section>
 
   {% assign category = page.categories | first %}
   {% assign page_tags = page.tags | default: empty %}
@@ -358,6 +361,33 @@ function shareTwitter() {
   }
 })();
 
+(function() {
+  var progressBar = document.getElementById('reading-progress');
+  var article = document.querySelector('.post-detail');
+  if (!progressBar || !article) return;
+
+  function updateProgress() {
+    var articleTop = article.offsetTop;
+    var articleHeight = article.offsetHeight - window.innerHeight;
+    if (articleHeight <= 0) {
+      progressBar.style.width = '0%';
+      return;
+    }
+    var scrolled = window.scrollY - articleTop;
+    var progress = Math.min(100, Math.max(0, (scrolled / articleHeight) * 100));
+    progressBar.style.width = progress + '%';
+  }
+
+  var firstParagraph = document.querySelector('.post-content.prose-content > p');
+  if (firstParagraph && firstParagraph.textContent.trim().length > 80) {
+    firstParagraph.classList.add('post-lead');
+  }
+
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+})();
+
 function toggleToc() {
   var toc = document.getElementById('post-toc');
   if (toc) toc.classList.toggle('collapsed');
@@ -367,9 +397,12 @@ function copyLink() {
   var url = window.location.href;
   navigator.clipboard.writeText(url).then(function() {
     var btn = document.querySelector('.share-copy');
+    if (!btn) return;
     var originalText = btn.innerHTML;
     btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 복사됨!';
     setTimeout(function() { btn.innerHTML = originalText; }, 2000);
+  }).catch(function() {
+    window.prompt('링크를 복사하세요:', url);
   });
 }
 
