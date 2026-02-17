@@ -221,6 +221,11 @@ def intent_keywords(alias: str) -> List[str]:
         "monitor",
         "모니터링",
         "price",
+        "worldmonitor",
+        "지정학",
+        "geopolitics",
+        "global risk",
+        "에너지",
     ]
 
 
@@ -263,6 +268,28 @@ def build_coin_monitoring_text() -> str:
     )
 
 
+def build_worldmonitor_text() -> str:
+    worldmonitor_post = latest_post("*daily-worldmonitor-briefing*.md")
+    if worldmonitor_post:
+        slug = worldmonitor_post.stem
+        parts = slug.split("-", 3)
+        if len(parts) == 4:
+            post_link = f"https://investing.2twodragon.com/market-analysis/{parts[0]}/{parts[1]}/{parts[2]}/{parts[3]}/"
+        else:
+            post_link = "https://investing.2twodragon.com/"
+    else:
+        post_link = "https://investing.2twodragon.com/"
+
+    return "\n".join(
+        [
+            "WorldMonitor 연계 브리핑 요청 확인했습니다.",
+            f"- 최신 브리핑: {post_link}",
+            "- 연계 소스: https://worldmonitor.app/api/rss-proxy",
+            "- 요청 키워드 예시: worldmonitor, 지정학, 글로벌 리스크, 에너지 이슈",
+        ]
+    )
+
+
 def build_reply_text(alias: str, text: str) -> str:
     if alias == "ops":
         return build_ops_status_text()
@@ -270,6 +297,9 @@ def build_reply_text(alias: str, text: str) -> str:
         return build_dev_status_text()
     if alias == "security":
         return build_security_status_text()
+    lowered = text.lower()
+    if "worldmonitor" in lowered or "지정학" in text or "global risk" in lowered:
+        return build_worldmonitor_text()
     if wants_coin_monitoring(text):
         return build_coin_monitoring_text()
     return build_summary_text()
