@@ -476,6 +476,13 @@ def _strip_markdown_link(text: str) -> str:
     return text.strip()
 
 
+def _clean_bullet_text(text: str) -> str:
+    text = _strip_markdown_link(text)
+    if text.startswith("- "):
+        text = text[2:]
+    return text.strip()
+
+
 def _to_theme_payload(
     summaries: Dict[str, Optional[Dict[str, Any]]],
 ) -> List[Dict[str, Any]]:
@@ -538,9 +545,11 @@ def _build_snapshot_table(
         if summary.get("themes"):
             name, cnt = summary["themes"][0]
             return f"{name} {cnt}건"
+        if summary.get("market_data"):
+            return _clean_bullet_text(summary["market_data"][0])[:80]
         hl = summary.get("highlights") or summary.get("key_summary") or []
         if hl:
-            return _strip_markdown_link(hl[0])[:80]
+            return _clean_bullet_text(hl[0])[:80]
         return "신호 추출 실패"
 
     dataset = [
@@ -710,6 +719,8 @@ def main():
         count_parts.append(f"규제 {regulatory_summary['count']}건")
     if social_summary and social_summary["count"]:
         count_parts.append(f"소셜 미디어 {social_summary['count']}건")
+    if worldmonitor_summary and worldmonitor_summary["count"]:
+        count_parts.append(f"월드모니터 {worldmonitor_summary['count']}건")
     if political_summary and political_summary["count"]:
         count_parts.append(f"정치인 거래 {political_summary['count']}건")
 
@@ -777,6 +788,40 @@ def main():
         content_parts.append("## 핵심 브리핑\n")
         content_parts.extend(briefing_lines)
         content_parts.append("")
+
+    content_parts.append("## 뉴스 내용 기반 핵심 요약\n")
+    if crypto_summary:
+        crypto_themes = ", ".join(
+            f"{name}({cnt})" for name, cnt in (crypto_summary.get("themes") or [])[:3]
+        )
+        if crypto_themes:
+            content_parts.append(
+                f"- **암호화폐:** {crypto_summary.get('count', 0)}건. 핵심 테마는 {crypto_themes}이며 변동성 확대 헤드라인이 우세합니다."
+            )
+    if stock_summary:
+        stock_line = ""
+        if stock_summary.get("market_data"):
+            stock_line = _clean_bullet_text(stock_summary["market_data"][0])
+        content_parts.append(
+            f"- **주식:** {stock_summary.get('count', 0)}건. {stock_line if stock_line else '글로벌/국내 혼조 신호가 공존합니다.'}"
+        )
+    if regulatory_summary:
+        content_parts.append(
+            f"- **규제:** {regulatory_summary.get('count', 0)}건. 정책 공시/감독 이슈 비중이 높아 업권별 이벤트 리스크 관리가 필요합니다."
+        )
+    if social_summary:
+        content_parts.append(
+            f"- **소셜:** {social_summary.get('count', 0)}건. 텔레그램·정치/거시 키워드 확산이 단기 심리 변동을 키우고 있습니다."
+        )
+    if worldmonitor_summary:
+        content_parts.append(
+            f"- **월드모니터:** {worldmonitor_summary.get('count', 0)}건. 지정학/안보 이슈가 에너지·안전자산 민감도를 높이고 있습니다."
+        )
+    if priority_items.get("P0") or priority_items.get("P1"):
+        content_parts.append(
+            f"- **우선순위:** P0 {len(priority_items.get('P0', []))}건, P1 {len(priority_items.get('P1', []))}건 중심으로 장중 대응 우선순위를 조정합니다."
+        )
+    content_parts.append("")
 
     # ═══════════════════════════════════════
     # 1. URGENT ALERTS (P0)
@@ -927,16 +972,26 @@ def main():
     # Stock section with description highlights
     if stock_summary:
         content_parts.append(f"### 주식 시장 뉴스 ({stock_summary['count']}건)\n")
+        seen_stock = set()
         if stock_summary.get("market_data"):
             for md in stock_summary["market_data"][:3]:
-                content_parts.append(f"- {md}")
+                cleaned = _clean_bullet_text(md)
+                if cleaned and cleaned not in seen_stock:
+                    content_parts.append(f"- {cleaned}")
+                    seen_stock.add(cleaned)
             content_parts.append("")
         if stock_summary.get("highlights"):
             for h in stock_summary["highlights"][:4]:
-                content_parts.append(h)
+                cleaned = _clean_bullet_text(h)
+                if cleaned and cleaned not in seen_stock:
+                    content_parts.append(f"- {cleaned}")
+                    seen_stock.add(cleaned)
         elif stock_summary.get("key_summary"):
             for h in stock_summary["key_summary"][:4]:
-                content_parts.append(h)
+                cleaned = _clean_bullet_text(h)
+                if cleaned and cleaned not in seen_stock:
+                    content_parts.append(f"- {cleaned}")
+                    seen_stock.add(cleaned)
         content_parts.append(f"\n[상세 보기]({stock_summary.get('url', '#')})\n")
 
     # Regulatory section
@@ -959,7 +1014,9 @@ def main():
             content_parts.append("|------|------|")
             for row in worldmonitor_summary["issues"][:3]:
                 parts = [p.strip() for p in row.split("|") if p.strip()]
-                if len(parts) >= 3:
+                if len(parts) >= 5:
+                    content_parts.append(f"| {parts[1]} | {parts[4]} |")
+                elif len(parts) >= 3:
                     content_parts.append(f"| {parts[1]} | {parts[2]} |")
         content_parts.append(f"\n[상세 보기]({worldmonitor_summary.get('url', '#')})\n")
 
