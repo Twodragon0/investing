@@ -20,9 +20,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
 
-paginate: 10
-paginate_path: "/page:num/"
-
 permalink: /:categories/:year/:month/:day/:title/
 
 collections:

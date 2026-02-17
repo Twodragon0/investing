@@ -1,6 +1,6 @@
 ---
 title: "암호화폐 뉴스 브리핑 - 2026-02-14"
-date: 2026-02-14 23:40:27 +0000
+date: 2026-02-14 23:40:27 +0900
 categories: [crypto-news]
 tags: [crypto, news, daily-digest]
 source: "consolidated"

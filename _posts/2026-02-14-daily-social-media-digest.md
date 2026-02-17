@@ -1,6 +1,6 @@
 ---
 title: "소셜 미디어 동향 - 2026-02-14"
-date: 2026-02-14 23:40:59 +0000
+date: 2026-02-14 23:40:59 +0900
 categories: [crypto-news]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
