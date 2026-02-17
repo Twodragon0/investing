@@ -65,9 +65,9 @@ def build_summary_text() -> str:
     market_report = latest_post("*daily-market-report*.md")
 
     if not daily_summary and not market_report:
-        return "오늘 투자 요약 데이터를 찾지 못했습니다."
+        return "📌 오늘 투자 요약 데이터를 찾지 못했습니다."
 
-    lines: List[str] = ["오늘 투자 소식 요약입니다."]
+    lines: List[str] = ["📌 오늘 투자 소식 요약입니다."]
 
     if daily_summary:
         title = read_frontmatter_value(daily_summary, "title") or "일일 뉴스 요약"
@@ -78,10 +78,10 @@ def build_summary_text() -> str:
             link = f"https://investing.2twodragon.com/market-analysis/{parts[0]}/{parts[1]}/{parts[2]}/{parts[3]}/"
         else:
             link = "https://investing.2twodragon.com/"
-        lines.append(f"- 요약: {title}")
+        lines.append(f"- 뉴스 요약: {title}")
         if excerpt:
             lines.append(f"- 핵심: {excerpt[:180]}")
-        lines.append(f"- 링크: {link}")
+        lines.append(f"- 요약 링크: {link}")
 
     if market_report:
         title = read_frontmatter_value(market_report, "title") or "일일 시장 리포트"
@@ -91,8 +91,8 @@ def build_summary_text() -> str:
             link = f"https://investing.2twodragon.com/market-analysis/{parts[0]}/{parts[1]}/{parts[2]}/{parts[3]}/"
         else:
             link = "https://investing.2twodragon.com/"
-        lines.append(f"- 시장: {title}")
-        lines.append(f"- 링크: {link}")
+        lines.append(f"- 시장 리포트: {title}")
+        lines.append(f"- 리포트 링크: {link}")
 
     return "\n".join(lines)
 
@@ -114,10 +114,10 @@ def build_dev_status_text() -> str:
 
     return "\n".join(
         [
-            "개발 채널 기준 상태입니다.",
+            "🛠️ 개발 채널 상태입니다.",
             f"- branch: {branch}",
             f"- latest commit: {commit}",
-            "- CI/배포 상태는 GitHub Actions 탭에서 확인해 주세요.",
+            "- CI/배포 상태는 GitHub Actions에서 확인하세요.",
         ]
     )
 
@@ -127,10 +127,10 @@ def build_ops_status_text() -> str:
     latest = daily_summary.name if daily_summary else "none"
     return "\n".join(
         [
-            "운영 채널 기준 상태입니다.",
+            "📟 운영 채널 상태입니다.",
             f"- latest summary file: {latest}",
             "- site: https://investing.2twodragon.com/",
-            "- 배포/헬스체크 이슈는 Actions run 로그를 우선 확인해 주세요.",
+            "- 배포/헬스체크 이슈는 Actions run 로그를 확인하세요.",
         ]
     )
 
@@ -140,10 +140,10 @@ def build_security_status_text() -> str:
     latest = security_report.name if security_report else "none"
     return "\n".join(
         [
-            "보안 채널 기준 상태입니다.",
+            "🛡️ 보안 채널 상태입니다.",
             f"- latest security report file: {latest}",
             "- security posts: https://investing.2twodragon.com/security-alerts/",
-            "- 주요 키워드(해킹/익스플로잇/사기/취약점) 중심으로 우선 모니터링하세요.",
+            "- 주요 키워드(해킹/익스플로잇/사기/취약점) 중심으로 모니터링하세요.",
         ]
     )
 
@@ -222,6 +222,8 @@ def intent_keywords(alias: str) -> List[str]:
         "모니터링",
         "price",
         "worldmonitor",
+        "world monitor",
+        "worldmonitor.app",
         "지정학",
         "geopolitics",
         "global risk",
@@ -259,11 +261,11 @@ def build_coin_monitoring_text() -> str:
 
     return "\n".join(
         [
-            "실시간 코인 모니터링 요청 확인했습니다.",
+            "📈 실시간 코인 모니터링 요청 확인했습니다.",
             "- 최신 시장 리포트: " + report_link,
             "- CoinGecko: https://www.coingecko.com/",
             "- CoinMarketCap: https://coinmarketcap.com/",
-            "- 5분 주기로 멘션을 확인해 후속 요청에 답변합니다.",
+            "- 멘션 요청에 따라 주요 코인 변동/리스크를 요약합니다.",
         ]
     )
 
@@ -282,10 +284,10 @@ def build_worldmonitor_text() -> str:
 
     return "\n".join(
         [
-            "WorldMonitor 연계 브리핑 요청 확인했습니다.",
+            "🌍 WorldMonitor 연계 브리핑 요청 확인했습니다.",
             f"- 최신 브리핑: {post_link}",
             "- 연계 소스: https://worldmonitor.app/api/rss-proxy",
-            "- 요청 키워드 예시: worldmonitor, 지정학, 글로벌 리스크, 에너지 이슈",
+            "- 키워드: worldmonitor, 지정학, 글로벌 리스크, 에너지 이슈",
         ]
     )
 
@@ -298,7 +300,13 @@ def build_reply_text(alias: str, text: str) -> str:
     if alias == "security":
         return build_security_status_text()
     lowered = text.lower()
-    if "worldmonitor" in lowered or "지정학" in text or "global risk" in lowered:
+    if (
+        "worldmonitor" in lowered
+        or "world monitor" in lowered
+        or "worldmonitor.app" in lowered
+        or "지정학" in text
+        or "global risk" in lowered
+    ):
         return build_worldmonitor_text()
     if wants_coin_monitoring(text):
         return build_coin_monitoring_text()

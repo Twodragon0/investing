@@ -103,6 +103,7 @@ def count_news_items(content: str) -> int:
     """Try to extract total news count from content."""
     patterns = [
         r"(\d+)건의 뉴스",
+        r"뉴스\s*(\d+)건",
         r"총 뉴스 건수\*?\*?:\s*(\d+)건",
         r"총 수집 건수\*?\*?:\s*(\d+)건",
         r"총 (\d+)건",
@@ -263,6 +264,29 @@ def summarize_market_post(post: Dict[str, Any]) -> Dict[str, Any]:
     }
 
 
+def summarize_worldmonitor_post(post: Dict[str, Any]) -> Dict[str, Any]:
+    content = post["content"]
+    count = count_news_items(content)
+    key_summary = extract_bullet_points(content, "핵심 요약", 4)
+    issues = extract_table_rows(content, "주요 이슈", 6)
+
+    if not count:
+        for line in content.split("\n"):
+            m = re.search(r"수집 건수:\s*\*\*(\d+)건\*\*", line)
+            if m:
+                count = int(m.group(1))
+                break
+
+    return {
+        "type": "worldmonitor",
+        "title": post["frontmatter"].get("title", ""),
+        "count": count,
+        "key_summary": key_summary,
+        "issues": issues,
+        "content": content,
+    }
+
+
 def summarize_political_post(post: Dict[str, Any]) -> Dict[str, Any]:
     """Extract key info from political trades post."""
     content = post["content"]
@@ -392,6 +416,8 @@ def _relation_rows(
         ("암호화폐", "규제", "crypto", "regulatory"),
         ("주식", "규제", "stock", "regulatory"),
         ("암호화폐", "소셜", "crypto", "social"),
+        ("월드모니터", "암호화폐", "worldmonitor", "crypto"),
+        ("월드모니터", "주식", "worldmonitor", "stock"),
     ]
     topic_keys = list(_cross_asset_topics().keys())
     hit_maps = {k: _topic_hits(v) for k, v in summaries.items()}
@@ -432,6 +458,10 @@ def _coverage_warnings(summaries: Dict[str, Optional[Dict[str, Any]]]) -> List[s
     if not summaries.get("market"):
         warnings.append(
             "- 시장 종합 리포트가 없어 매크로(금리/환율) 연결 해석이 제한됩니다."
+        )
+    if not summaries.get("worldmonitor"):
+        warnings.append(
+            "- 월드모니터 브리핑이 없어 글로벌 지정학/에너지 리스크 연결 분석이 제한됩니다."
         )
     if not summaries.get("political") and not summaries.get("regulatory"):
         warnings.append(
@@ -492,6 +522,7 @@ def _render_generated_image(filename: str, alt: str) -> Optional[str]:
 def _build_snapshot_table(
     crypto_summary: Optional[Dict[str, Any]],
     stock_summary: Optional[Dict[str, Any]],
+    worldmonitor_summary: Optional[Dict[str, Any]],
     regulatory_summary: Optional[Dict[str, Any]],
     social_summary: Optional[Dict[str, Any]],
     political_summary: Optional[Dict[str, Any]],
@@ -515,6 +546,7 @@ def _build_snapshot_table(
     dataset = [
         ("암호화폐", crypto_summary),
         ("주식", stock_summary),
+        ("월드모니터", worldmonitor_summary),
         ("규제", regulatory_summary),
         ("소셜", social_summary),
         ("정치인 거래", political_summary),
@@ -548,6 +580,7 @@ def main():
     regulatory_summary = None
     social_summary = None
     market_summary = None
+    worldmonitor_summary = None
     political_summary = None
 
     post_links = []
@@ -600,6 +633,18 @@ def main():
             market_summary = summarize_market_post(post)
             market_summary["url"] = get_post_url(filepath, today, "market-analysis")
             post_links.append(("시장 종합 리포트", 0, market_summary["url"]))
+        elif "worldmonitor-briefing" in slug:
+            worldmonitor_summary = summarize_worldmonitor_post(post)
+            worldmonitor_summary["url"] = get_post_url(
+                filepath, today, "market-analysis"
+            )
+            post_links.append(
+                (
+                    "월드모니터 브리핑",
+                    worldmonitor_summary["count"],
+                    worldmonitor_summary["url"],
+                )
+            )
 
     # Calculate total count
     all_summaries = [
@@ -608,6 +653,7 @@ def main():
         security_summary,
         regulatory_summary,
         social_summary,
+        worldmonitor_summary,
         political_summary,
     ]
     total_count = sum(s["count"] for s in all_summaries if s and s.get("count"))
@@ -625,6 +671,7 @@ def main():
         "market": market_summary,
         "regulatory": regulatory_summary,
         "social": social_summary,
+        "worldmonitor": worldmonitor_summary,
         "political": political_summary,
     }
 
@@ -686,6 +733,7 @@ def main():
         _build_snapshot_table(
             crypto_summary,
             stock_summary,
+            worldmonitor_summary,
             regulatory_summary,
             social_summary,
             political_summary,
@@ -899,6 +947,22 @@ def main():
                 content_parts.append(h)
         content_parts.append(f"\n[상세 보기]({regulatory_summary.get('url', '#')})\n")
 
+    if worldmonitor_summary:
+        content_parts.append(
+            f"### 월드모니터 브리핑 ({worldmonitor_summary['count']}건)\n"
+        )
+        if worldmonitor_summary.get("key_summary"):
+            for h in worldmonitor_summary["key_summary"][:3]:
+                content_parts.append(h)
+        if worldmonitor_summary.get("issues"):
+            content_parts.append("\n| 제목 | 출처 |")
+            content_parts.append("|------|------|")
+            for row in worldmonitor_summary["issues"][:3]:
+                parts = [p.strip() for p in row.split("|") if p.strip()]
+                if len(parts) >= 3:
+                    content_parts.append(f"| {parts[1]} | {parts[2]} |")
+        content_parts.append(f"\n[상세 보기]({worldmonitor_summary.get('url', '#')})\n")
+
     # Security section
     if security_summary:
         content_parts.append(f"### 보안 리포트 ({security_summary['count']}건)\n")
@@ -963,7 +1027,16 @@ def main():
     filename = f"{today}-{slug}.md"
     filepath = os.path.join(POSTS_DIR, filename)
 
-    tags = ["일일요약", "암호화폐", "주식", "규제", "소셜미디어", "보안", "정치인거래"]
+    tags = [
+        "일일요약",
+        "암호화폐",
+        "주식",
+        "규제",
+        "소셜미디어",
+        "보안",
+        "정치인거래",
+        "월드모니터",
+    ]
     escaped_title = title.replace('"', '\\"')
 
     frontmatter = f"""---

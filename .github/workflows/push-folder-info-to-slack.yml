@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        channel_alias: [ops, dev, security, ai, investing]
+        channel_alias: [ops, dev, security, openclaw, investing]
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -102,12 +102,36 @@ jobs:
               printf "  - summary: %s\n" "$digest_excerpt"
             fi
             printf "  - link: %s\n" "$digest_url"
+
+            local wm_file
+            local wm_title
+            local wm_url
+            local wm_slug
+            wm_file=$(ls -1 "$posts_dir"/*daily-worldmonitor-briefing*.md 2>/dev/null | tail -n 1 || true)
+            if [ -n "$wm_file" ]; then
+              wm_title=$(grep -m1 '^title:' "$wm_file" | sed 's/^title:[[:space:]]*//; s/^"//; s/"$//')
+              wm_slug=$(basename "$wm_file" .md)
+              y=$(printf "%s" "$wm_slug" | cut -d'-' -f1)
+              m=$(printf "%s" "$wm_slug" | cut -d'-' -f2)
+              d=$(printf "%s" "$wm_slug" | cut -d'-' -f3)
+              rest=$(printf "%s" "$wm_slug" | cut -d'-' -f4-)
+              if [ -n "$y" ] && [ -n "$m" ] && [ -n "$d" ] && [ -n "$rest" ]; then
+                wm_url="https://investing.2twodragon.com/market-analysis/$y/$m/$d/$rest/"
+              else
+                wm_url="https://investing.2twodragon.com/"
+              fi
+              printf -- "- latest worldmonitor: %s\n" "$wm_title"
+              printf "  - link: %s\n" "$wm_url"
+            else
+              printf -- "- latest worldmonitor: unavailable\n"
+            fi
           }
 
           report_file="${RUNNER_TEMP}/folder_report.txt"
           {
             printf "*Daily folder report*\n"
             printf -- "- time (UTC): %s\n" "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+            printf -- "- channels: #ops #dev #security #openclaw #investing\n"
             build_investing_digest
             build_line "ai" "ai"
             build_line "investing" "investing"
@@ -169,8 +193,8 @@ jobs:
             security)
               channel_id="${SLACK_CHANNEL_ID_SECURITY:-${AI_SLACK_CHANNEL_ID_SECURITY:-${SLACK_CHANNEL_SECURITY:-}}}"
               ;;
-            ai)
-              channel_id="${SLACK_CHANNEL_ID_AI:-${AI_SLACK_CHANNEL_ID_AI:-${SLACK_CHANNEL_AI:-}}}"
+            openclaw)
+              channel_id="${SLACK_CHANNEL_ID_OPENCLAW:-${OPENCLAW_SLACK_CHANNEL_ID_OPENCLAW:-${AI_SLACK_CHANNEL_ID_OPENCLAW:-${SLACK_CHANNEL_OPENCLAW:-}}}}"
               ;;
             investing|*)
               channel_id="${SLACK_CHANNEL_ID_INVESTING:-${AI_SLACK_CHANNEL_ID_INVESTING:-${SLACK_CHANNEL_INVESTING:-${SLACK_CHANNEL_ID:-${AI_SLACK_CHANNEL_ID:-${SLACK_CHANNEL:-}}}}}}"
@@ -195,8 +219,8 @@ jobs:
             security)
               profile_label="security-agent"
               ;;
-            ai)
-              profile_label="ai-agent"
+            openclaw)
+              profile_label="openclaw-agent"
               ;;
             investing|*)
               profile_label="investing-agent"
