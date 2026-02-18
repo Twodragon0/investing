@@ -388,6 +388,44 @@ function shareTwitter() {
   updateProgress();
 })();
 
+(function() {
+  var images = document.querySelectorAll('.post-content.prose-content img');
+  if (!images.length) return;
+
+  function fallbackSrc(src) {
+    var dailyPattern = /news-briefing-daily-(\d{4}-\d{2}-\d{2})\.png/;
+    var matched = src.match(dailyPattern);
+    if (matched) {
+      return src.replace('news-briefing-daily-' + matched[1] + '.png', 'news-briefing-' + matched[1] + '.png');
+    }
+    return '';
+  }
+
+  function attachFallback(img) {
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    img.addEventListener('error', function() {
+      if (img.dataset.fallbackTried !== '1') {
+        var nextSrc = fallbackSrc(img.currentSrc || img.src || '');
+        if (nextSrc) {
+          img.dataset.fallbackTried = '1';
+          img.src = nextSrc;
+          return;
+        }
+      }
+      img.classList.add('broken-image');
+      if (!img.nextElementSibling || !img.nextElementSibling.classList.contains('post-image-placeholder')) {
+        var holder = document.createElement('div');
+        holder.className = 'post-image-placeholder';
+        holder.textContent = '이미지를 불러오지 못했습니다.';
+        img.insertAdjacentElement('afterend', holder);
+      }
+    }, { once: true });
+  }
+
+  images.forEach(attachFallback);
+})();
+
 function toggleToc() {
   var toc = document.getElementById('post-toc');
   if (toc) toc.classList.toggle('collapsed');

@@ -23,6 +23,7 @@ from typing import Dict, List, Any, Optional, Tuple
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.config import setup_logging
+from common.markdown_utils import markdown_table
 from common.post_generator import POSTS_DIR
 from common.summarizer import ThemeSummarizer
 
@@ -534,10 +535,7 @@ def _build_snapshot_table(
     social_summary: Optional[Dict[str, Any]],
     political_summary: Optional[Dict[str, Any]],
 ) -> List[str]:
-    rows = [
-        "| 영역 | 수집 건수 | 핵심 신호 |",
-        "|------|---------:|-----------|",
-    ]
+    rows = []
 
     def top_signal(summary: Optional[Dict[str, Any]]) -> str:
         if not summary:
@@ -562,8 +560,14 @@ def _build_snapshot_table(
     ]
     for name, summary in dataset:
         count = summary.get("count", 0) if summary else 0
-        rows.append(f"| {name} | {count} | {top_signal(summary)} |")
-    return rows
+        rows.append([name, count, top_signal(summary)])
+    return [
+        markdown_table(
+            ["영역", "수집 건수", "핵심 신호"],
+            rows,
+            aligns=["left", "right", "left"],
+        )
+    ]
 
 
 def main():
@@ -757,8 +761,13 @@ def main():
     fallback_briefing = _render_generated_image(
         f"news-briefing-daily-{today}.png", "multi-asset-briefing"
     )
+    legacy_briefing = _render_generated_image(
+        f"news-briefing-{today}.png", "multi-asset-briefing"
+    )
     if not briefing_image and fallback_briefing:
         content_parts.append(fallback_briefing + "\n")
+    elif not briefing_image and legacy_briefing:
+        content_parts.append(legacy_briefing + "\n")
 
     indicator_img = _render_generated_image(
         f"indicator-dashboard-{today}.png", "indicator-dashboard"
@@ -856,13 +865,19 @@ def main():
     # 3. INDICATOR DASHBOARD
     # ═══════════════════════════════════════
     indicator_parts = []
+    indicator_rows: List[List[str]] = []
 
     # Macro indicators from market report
     if market_summary and market_summary.get("indicator_rows"):
-        indicator_parts.append("| 지표 | 현재 값 | 변동 |")
-        indicator_parts.append("|------|---------|------|")
         for row in market_summary["indicator_rows"]:
-            indicator_parts.append(row)
+            parts = [p.strip() for p in row.split("|") if p.strip()]
+            if len(parts) >= 3:
+                indicator_rows.append(parts[:3])
+
+    if indicator_rows:
+        indicator_parts.append(
+            markdown_table(["지표", "현재 값", "변동"], indicator_rows)
+        )
 
     # Yield spread
     if market_summary and market_summary.get("yield_section"):
@@ -892,10 +907,16 @@ def main():
         )
 
         if relation_rows:
-            content_parts.append("| 비교 구간 | 연관 점수 | 진단 |")
-            content_parts.append("|-----------|-----------:|------|")
+            corr_rows = []
             for left, right, score, note in relation_rows:
-                content_parts.append(f"| {left} ↔ {right} | {score} | {note} |")
+                corr_rows.append([f"{left} ↔ {right}", score, note])
+            content_parts.append(
+                markdown_table(
+                    ["비교 구간", "연관 점수", "진단"],
+                    corr_rows,
+                    aligns=["left", "right", "left"],
+                )
+            )
             content_parts.append("")
 
         if coverage_notes:
@@ -1010,14 +1031,16 @@ def main():
             for h in worldmonitor_summary["key_summary"][:3]:
                 content_parts.append(h)
         if worldmonitor_summary.get("issues"):
-            content_parts.append("\n| 제목 | 출처 |")
-            content_parts.append("|------|------|")
+            world_rows = []
             for row in worldmonitor_summary["issues"][:3]:
                 parts = [p.strip() for p in row.split("|") if p.strip()]
                 if len(parts) >= 5:
-                    content_parts.append(f"| {parts[1]} | {parts[4]} |")
+                    world_rows.append([parts[1], parts[4]])
                 elif len(parts) >= 3:
-                    content_parts.append(f"| {parts[1]} | {parts[2]} |")
+                    world_rows.append([parts[1], parts[2]])
+            if world_rows:
+                content_parts.append("")
+                content_parts.append(markdown_table(["제목", "출처"], world_rows))
         content_parts.append(f"\n[상세 보기]({worldmonitor_summary.get('url', '#')})\n")
 
     # Security section
@@ -1027,10 +1050,18 @@ def main():
             for h in security_summary["key_summary"][:3]:
                 content_parts.append(h)
         if security_summary.get("incidents"):
-            content_parts.append("\n| 프로젝트 | 피해 규모 | 공격 유형 |")
-            content_parts.append("|----------|----------|----------|")
+            incident_rows = []
             for row in security_summary["incidents"][:3]:
-                content_parts.append(row)
+                parts = [p.strip() for p in row.split("|") if p.strip()]
+                if len(parts) >= 3:
+                    incident_rows.append(parts[:3])
+            if incident_rows:
+                content_parts.append("")
+                content_parts.append(
+                    markdown_table(
+                        ["프로젝트", "피해 규모", "공격 유형"], incident_rows
+                    )
+                )
         content_parts.append(f"\n[상세 보기]({security_summary.get('url', '#')})\n")
 
     # Social section
@@ -1065,11 +1096,18 @@ def main():
     # ═══════════════════════════════════════
     content_parts.append("---\n")
     content_parts.append("## 상세 리포트 링크\n")
-    content_parts.append("| 리포트 | 수집 건수 | 링크 |")
-    content_parts.append("|:---|:---:|:---|")
+    report_rows = []
     for name, count, url in post_links:
         count_str = f"{count}건" if count else "-"
-        content_parts.append(f"| {name} | {count_str} | [바로가기]({url}) |")
+        report_rows.append([name, count_str, f"[바로가기]({url})"])
+    if report_rows:
+        content_parts.append(
+            markdown_table(
+                ["리포트", "수집 건수", "링크"],
+                report_rows,
+                aligns=["left", "center", "left"],
+            )
+        )
 
     content_parts.append("\n---\n")
     content_parts.append(

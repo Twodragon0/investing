@@ -868,6 +868,33 @@ a {
       font-family: inherit;
     }
 
+    .wm-reference-summary {
+      margin: 0.8rem 0 0.6rem;
+      padding: 0.8rem 1rem;
+      border-radius: 10px;
+      border: 1px solid rgba($border-color, 0.25);
+      background: rgba($bg-secondary, 0.35);
+
+      strong {
+        color: $text-primary;
+        font-size: 0.92rem;
+      }
+
+      p {
+        margin: 0.35rem 0 0;
+        color: rgba($text-primary, 0.78);
+        font-size: 0.88rem;
+        line-height: 1.6;
+      }
+    }
+
+    .wm-reference-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 0.75rem;
+    }
+
     // Collapsible details
     details {
       margin: 1rem 0;
@@ -912,6 +939,58 @@ a {
 
           &:hover { color: $accent-blue; }
           &:last-child { border-bottom: none; }
+        }
+      }
+
+      &.wm-reference-details {
+        .details-content {
+          padding-top: 0.65rem;
+        }
+
+        .wm-reference-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          counter-reset: wm-ref;
+
+          li {
+            counter-increment: wm-ref;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 0.65rem;
+            align-items: start;
+            padding: 0.45rem 0;
+            border-bottom: 1px solid rgba($border-color, 0.12);
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            &::before {
+              content: counter(wm-ref) ".";
+              color: rgba($text-secondary, 0.75);
+              font-size: 0.78rem;
+              font-weight: 700;
+              margin-right: 0.35rem;
+              display: inline-block;
+              min-width: 1.2rem;
+            }
+          }
+
+          a {
+            display: inline;
+            border-bottom: none;
+            padding: 0;
+            color: rgba($text-primary, 0.92);
+            font-size: 0.9rem;
+            line-height: 1.55;
+            text-underline-offset: 0.18em;
+          }
+
+          .source-tag {
+            margin-top: 0.1rem;
+            white-space: nowrap;
+          }
         }
       }
     }
@@ -1337,6 +1416,15 @@ a {
         th, td {
           padding: 0.6rem 0.8rem;
         }
+      }
+
+      details.wm-reference-details .wm-reference-list li {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+      }
+
+      details.wm-reference-details .wm-reference-list .source-tag {
+        justify-self: start;
       }
     }
 
@@ -4738,6 +4826,28 @@ main {
     img {
       margin: 1.6rem auto;
       display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid rgba($border-color, 0.45);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+      background: rgba($bg-secondary, 0.6);
+
+      &.broken-image {
+        display: none;
+      }
+    }
+
+    .post-image-placeholder {
+      margin: 1rem auto 1.6rem;
+      padding: 0.75rem 1rem;
+      max-width: 460px;
+      border-radius: 10px;
+      border: 1px dashed rgba($accent-red, 0.65);
+      color: rgba($text-secondary, 0.92);
+      text-align: center;
+      font-size: 0.9rem;
+      background: rgba($accent-red, 0.08);
     }
   }
 

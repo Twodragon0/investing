@@ -22,6 +22,7 @@ from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feed
 from common.summarizer import ThemeSummarizer
+from common.markdown_utils import markdown_link, markdown_table, html_details_list
 
 logger = setup_logging("collect_regulatory")
 
@@ -30,62 +31,74 @@ logger = setup_logging("collect_regulatory")
 US_FEEDS: List[Tuple[str, str, List[str]]] = [
     (
         "https://news.google.com/rss/search?q=site:sec.gov+crypto+OR+digital+asset&hl=en-US&gl=US&ceid=US:en",
-        "SEC (Google News)", ["regulation", "sec", "us"],
+        "SEC (Google News)",
+        ["regulation", "sec", "us"],
     ),
     (
         "https://www.cftc.gov/RSS/RSSGP/rssgp.xml",
-        "CFTC Press Releases", ["regulation", "cftc", "us"],
+        "CFTC Press Releases",
+        ["regulation", "cftc", "us"],
     ),
     (
         "https://www.cftc.gov/RSS/RSSENF/rssenf.xml",
-        "CFTC Enforcement", ["regulation", "cftc", "enforcement", "us"],
+        "CFTC Enforcement",
+        ["regulation", "cftc", "enforcement", "us"],
     ),
     (
         "https://www.federalreserve.gov/feeds/press_all.xml",
-        "Federal Reserve", ["regulation", "fed", "us"],
+        "Federal Reserve",
+        ["regulation", "fed", "us"],
     ),
 ]
 
 KOREA_FEEDS: List[Tuple[str, str, List[str]]] = [
     (
         "http://www.fsc.go.kr/about/fsc_bbs_rss/?fid=0111",
-        "금융위원회 보도자료", ["regulation", "fsc", "korea"],
+        "금융위원회 보도자료",
+        ["regulation", "fsc", "korea"],
     ),
     (
         "http://www.fsc.go.kr/about/fsc_bbs_rss/?fid=0112",
-        "금융위원회 보도참고", ["regulation", "fsc", "korea"],
+        "금융위원회 보도참고",
+        ["regulation", "fsc", "korea"],
     ),
     (
         "https://news.google.com/rss/search?q=금융위원회+가상자산+규제&hl=ko&gl=KR&ceid=KR:ko",
-        "한국 금융규제 뉴스", ["regulation", "korea", "가상자산"],
+        "한국 금융규제 뉴스",
+        ["regulation", "korea", "가상자산"],
     ),
 ]
 
 ASIA_FEEDS: List[Tuple[str, str, List[str]]] = [
     (
         "https://www.fsa.go.jp/fsaEnNewsList_rss2.xml",
-        "Japan FSA", ["regulation", "japan", "fsa"],
+        "Japan FSA",
+        ["regulation", "japan", "fsa"],
     ),
     (
         "https://news.google.com/rss/search?q=MAS+Singapore+crypto+regulation&hl=en-US&gl=US&ceid=US:en",
-        "MAS Singapore", ["regulation", "singapore", "mas"],
+        "MAS Singapore",
+        ["regulation", "singapore", "mas"],
     ),
 ]
 
 EUROPE_FEEDS: List[Tuple[str, str, List[str]]] = [
     (
         "https://news.google.com/rss/search?q=ESMA+crypto+MiCA+regulation&hl=en-US&gl=US&ceid=US:en",
-        "EU ESMA", ["regulation", "eu", "esma", "mica"],
+        "EU ESMA",
+        ["regulation", "eu", "esma", "mica"],
     ),
     (
         "https://news.google.com/rss/search?q=FCA+UK+crypto+regulation&hl=en-US&gl=US&ceid=US:en",
-        "UK FCA", ["regulation", "uk", "fca"],
+        "UK FCA",
+        ["regulation", "uk", "fca"],
     ),
 ]
 
 
 def fetch_region_feeds(
-    feeds: List[Tuple[str, str, List[str]]], region: str,
+    feeds: List[Tuple[str, str, List[str]]],
+    region: str,
 ) -> List[Dict[str, Any]]:
     """Fetch all feeds for a given region, tagging items with the region."""
     items = []
@@ -99,7 +112,9 @@ def fetch_region_feeds(
 
 
 def build_region_section(
-    items: List[Dict[str, Any]], region_title: str, source_links: list,
+    items: List[Dict[str, Any]],
+    region_title: str,
+    source_links: list,
 ) -> List[str]:
     """Build a markdown table section for a region."""
     lines = [f"\n## {region_title}\n"]
@@ -107,17 +122,19 @@ def build_region_section(
         lines.append("*수집된 항목이 없습니다.*")
         return lines
 
-    lines.append("| # | 제목 | 출처 |")
-    lines.append("|---|------|------|")
+    rows = []
     for i, item in enumerate(items[:15], 1):
         title = item["title"]
         link = item.get("link", "")
         source = item.get("source", "")
         if link:
-            lines.append(f"| {i} | [{title}]({link}) | {source} |")
+            title_cell = markdown_link(title, link)
             source_links.append({"title": title, "link": link, "source": source})
         else:
-            lines.append(f"| {i} | {title} | {source} |")
+            title_cell = title
+        rows.append((i, title_cell, source))
+
+    lines.append(markdown_table(["#", "제목", "출처"], rows))
     return lines
 
 
@@ -178,9 +195,15 @@ def main():
     # Image — region distribution bar chart
     try:
         from common.image_generator import generate_news_summary_card
-        categories = [{"name": region, "count": count} for region, count in region_counts.most_common()]
+
+        categories = [
+            {"name": region, "count": count}
+            for region, count in region_counts.most_common()
+        ]
         if categories:
-            img = generate_news_summary_card(categories, today, filename=f"regulatory-summary-{today}.png")
+            img = generate_news_summary_card(
+                categories, today, filename=f"regulatory-summary-{today}.png"
+            )
             if img:
                 fn = os.path.basename(img)
                 web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
@@ -195,11 +218,17 @@ def main():
     content_parts.append("\n---")
     content_parts.extend(build_region_section(us_items, "미국 규제 동향", source_links))
     content_parts.append("\n---")
-    content_parts.extend(build_region_section(korea_items, "한국 규제 동향", source_links))
+    content_parts.extend(
+        build_region_section(korea_items, "한국 규제 동향", source_links)
+    )
     content_parts.append("\n---")
-    content_parts.extend(build_region_section(asia_items, "아시아 규제 동향", source_links))
+    content_parts.extend(
+        build_region_section(asia_items, "아시아 규제 동향", source_links)
+    )
     content_parts.append("\n---")
-    content_parts.extend(build_region_section(europe_items, "유럽 규제 동향", source_links))
+    content_parts.extend(
+        build_region_section(europe_items, "유럽 규제 동향", source_links)
+    )
 
     # Theme summary
     content_parts.append("\n---")
@@ -212,32 +241,52 @@ def main():
     content_parts.append("\n## 규제 인사이트\n")
     insight_lines = []
     if us_items:
-        insight_lines.append(f"미국에서 {len(us_items)}건의 규제 관련 뉴스가 수집되었습니다. SEC, CFTC, Fed 동향을 주시해야 합니다.")
+        insight_lines.append(
+            f"미국에서 {len(us_items)}건의 규제 관련 뉴스가 수집되었습니다. SEC, CFTC, Fed 동향을 주시해야 합니다."
+        )
     if korea_items:
-        insight_lines.append(f"한국 금융위원회 관련 {len(korea_items)}건의 소식이 있습니다.")
+        insight_lines.append(
+            f"한국 금융위원회 관련 {len(korea_items)}건의 소식이 있습니다."
+        )
     if asia_items:
-        insight_lines.append(f"아시아 지역(일본 FSA, 싱가포르 MAS)에서 {len(asia_items)}건이 수집되었습니다.")
+        insight_lines.append(
+            f"아시아 지역(일본 FSA, 싱가포르 MAS)에서 {len(asia_items)}건이 수집되었습니다."
+        )
     if europe_items:
-        insight_lines.append(f"유럽(ESMA, FCA)에서 {len(europe_items)}건의 규제 뉴스가 확인되었습니다. MiCA 규제 시행에 따른 변화를 모니터링하세요.")
+        insight_lines.append(
+            f"유럽(ESMA, FCA)에서 {len(europe_items)}건의 규제 뉴스가 확인되었습니다. MiCA 규제 시행에 따른 변화를 모니터링하세요."
+        )
     if not insight_lines:
         insight_lines.append("현재 수집된 규제 뉴스가 제한적입니다.")
     insight_lines.append("")
-    insight_lines.append("> *본 규제 동향 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 법률 자문이 아닙니다. 규제 관련 의사결정은 전문가와 상담하시기 바랍니다.*")
+    insight_lines.append(
+        "> *본 규제 동향 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 법률 자문이 아닙니다. 규제 관련 의사결정은 전문가와 상담하시기 바랍니다.*"
+    )
     content_parts.extend(insight_lines)
 
     # References
     if source_links:
-        content_parts.append("\n## 참고 링크\n")
         seen_links: set = set()
-        ref_count = 1
+        unique_refs = []
         for ref in source_links[:20]:
             if ref["link"] not in seen_links:
                 seen_links.add(ref["link"])
-                content_parts.append(f"{ref_count}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}")
-                ref_count += 1
+                unique_refs.append(ref)
+
+        if unique_refs:
+            content_parts.append("\n## 참고 링크\n")
+            ref_items = [
+                f"{markdown_link(ref['title'][:80], ref['link'])} - {ref['source']}"
+                for ref in unique_refs
+            ]
+            content_parts.append(
+                html_details_list(f"참고 링크 ({len(unique_refs)}건)", ref_items)
+            )
 
     # Data collection timestamp
-    content_parts.append(f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC")
+    content_parts.append(
+        f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC"
+    )
 
     content = "\n".join(content_parts)
 

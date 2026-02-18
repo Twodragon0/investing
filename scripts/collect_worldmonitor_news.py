@@ -3,7 +3,6 @@
 
 import os
 import sys
-from html import escape
 from collections import Counter
 from datetime import datetime, timezone
 from typing import Any, Dict, List
@@ -13,6 +12,12 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.config import setup_logging
 from common.dedup import DedupEngine
+from common.markdown_utils import (
+    escape_table_cell,
+    html_text,
+    markdown_link,
+    markdown_table,
+)
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 
@@ -85,15 +90,6 @@ def wm_url(source_url: str) -> str:
     return WM_PROXY + quote(source_url, safe="")
 
 
-def _md_table_cell(value: str) -> str:
-    text = (value or "").replace("\n", " ").strip()
-    return text.replace("|", "\\|")
-
-
-def _html_text(value: str) -> str:
-    return escape((value or "").replace("|", "&#124;").strip(), quote=True)
-
-
 def fetch_worldmonitor_feeds() -> List[Dict[str, Any]]:
     feeds = [
         (
@@ -117,11 +113,27 @@ def fetch_worldmonitor_feeds() -> List[Dict[str, Any]]:
             ),
             "WorldMonitor/CNBC",
             ["worldmonitor", "markets"],
+            15,
+            48,
+            {
+                "fallback_urls": [
+                    "https://www.cnbc.com/id/100003114/device/rss/rss.html",
+                    "https://news.google.com/rss/search?q=site:cnbc.com+markets+when:2d&hl=en-US&gl=US&ceid=US:en",
+                ]
+            },
         ),
         (
             wm_url("https://feeds.marketwatch.com/marketwatch/topstories/"),
             "WorldMonitor/MarketWatch",
             ["worldmonitor", "markets"],
+            15,
+            48,
+            {
+                "fallback_urls": [
+                    "https://feeds.marketwatch.com/marketwatch/topstories/",
+                    "https://news.google.com/rss/search?q=site:marketwatch.com+markets+when:2d&hl=en-US&gl=US&ceid=US:en",
+                ]
+            },
         ),
         (
             wm_url("https://www.ft.com/rss/home"),
@@ -162,8 +174,8 @@ def main() -> None:
 
     source_counter: Counter = Counter()
     theme_counter: Counter = Counter()
-    rows: List[str] = []
-    source_rows: List[str] = []
+    rows: List[List[object]] = []
+    source_rows: List[List[object]] = []
     ref_items: List[Dict[str, str]] = []
 
     for item in items:
@@ -183,22 +195,24 @@ def main() -> None:
 
         if link:
             rows.append(
-                "| "
-                f"{len(rows) + 1} | "
-                f"[{_md_table_cell(f'**{title}**')}]({link}) | "
-                f"{_md_table_cell(theme)} | "
-                f"{_md_table_cell(impact)} | "
-                f"{_md_table_cell(source)} |"
+                [
+                    len(rows) + 1,
+                    markdown_link(f"**{title}**", link),
+                    theme,
+                    impact,
+                    source,
+                ]
             )
             ref_items.append({"title": title, "link": link, "source": source})
         else:
             rows.append(
-                "| "
-                f"{len(rows) + 1} | "
-                f"**{_md_table_cell(title)}** | "
-                f"{_md_table_cell(theme)} | "
-                f"{_md_table_cell(impact)} | "
-                f"{_md_table_cell(source)} |"
+                [
+                    len(rows) + 1,
+                    f"**{escape_table_cell(title)}**",
+                    theme,
+                    impact,
+                    source,
+                ]
             )
 
     total_items = len(rows)
@@ -208,9 +222,7 @@ def main() -> None:
 
     for name, count in source_counter.most_common(6):
         ratio = (count / max(total_items, 1)) * 100
-        source_rows.append(
-            f"| {_md_table_cell(name)} | {_md_table_cell(f'{count}건')} | {_md_table_cell(f'{ratio:.0f}%')} |"
-        )
+        source_rows.append([name, f"{count}건", f"{ratio:.0f}%"])
 
     theme_rows = []
     for theme, count in theme_counter.most_common(5):
@@ -257,45 +269,73 @@ def main() -> None:
             "",
             "## 주요 이슈",
             "",
-            "| # | 이슈 | 테마 | 시장 영향 | 출처 |",
-            "|---|------|------|-----------|------|",
+            markdown_table(
+                ["#", "이슈", "테마", "시장 영향", "출처"],
+                rows,
+                aligns=["center", "left", "center", "center", "left"],
+            ),
         ]
     )
-    content_parts.extend(rows)
 
     content_parts.extend(
         [
             "",
             "## 출처 커버리지",
             "",
-            "| 출처 | 건수 | 비중 |",
-            "|------|------|------|",
+            markdown_table(
+                ["출처", "건수", "비중"],
+                source_rows,
+                aligns=["left", "right", "right"],
+            ),
         ]
     )
-    content_parts.extend(source_rows)
 
     if ref_items:
-        content_parts.extend(
-            [
-                "",
-                "## 원문 링크 묶음",
-                '<details><summary>상위 이슈 원문 펼치기</summary><div class="details-content">',
-                "<ol>",
-            ]
-        )
+        content_parts.extend(["", "## 원문 링크 묶음"])
         seen = set()
-        rank = 1
+        unique_refs = []
         for ref in ref_items[:20]:
             link = ref["link"]
             if link in seen:
                 continue
             seen.add(link)
-            content_parts.append(
-                f'<li><a href="{escape(link, quote=True)}">{_html_text(ref["title"][:90])}</a> '
-                f'<span class="source-tag">{_html_text(ref["source"])}</span></li>'
+            unique_refs.append(ref)
+
+        content_parts.append(
+            '<div class="wm-reference-summary">'
+            "<strong>원문 링크 탐색 가이드</strong>"
+            "<p>시장 영향이 높은 이슈를 우선 확인할 수 있도록 출처별 커버리지를 함께 제공합니다.</p>"
+            "</div>"
+        )
+
+        source_pills = []
+        for source, count in Counter(ref["source"] for ref in unique_refs).most_common(
+            6
+        ):
+            source_pills.append(
+                f'<span class="source-tag">{html_text(source)} · {count}건</span>'
             )
-            rank += 1
-        content_parts.extend(["</ol>", "</div></details>"])
+        if source_pills:
+            content_parts.append(
+                '<div class="wm-reference-pills">' + " ".join(source_pills) + "</div>"
+            )
+
+        detail_lines = [
+            f'<details class="wm-reference-details"><summary>전체 원문 {len(unique_refs)}건 펼치기</summary><div class="details-content">',
+            '<ol class="wm-reference-list">',
+        ]
+        for ref in unique_refs:
+            link = html_text(ref["link"])
+            title = html_text(ref["title"][:110])
+            source = html_text(ref["source"])
+            detail_lines.append(
+                "<li>"
+                f'<a href="{link}" target="_blank" rel="noopener noreferrer">{title}</a>'
+                f'<span class="source-tag">{source}</span>'
+                "</li>"
+            )
+        detail_lines.extend(["</ol>", "</div></details>"])
+        content_parts.append("\n".join(detail_lines))
 
     content_parts.extend(
         [

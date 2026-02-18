@@ -32,7 +32,11 @@ jobs:
           cache-dependency-path: scripts/requirements.txt
 
       - name: Install dependencies
-        run: pip install -r scripts/requirements.txt ruff
+        run: |
+          pip install -r scripts/requirements.txt ruff yamllint
+          curl -sSL "https://github.com/rhysd/actionlint/releases/download/v1.7.7/actionlint_1.7.7_linux_amd64.tar.gz" -o /tmp/actionlint.tgz
+          tar -xzf /tmp/actionlint.tgz -C /tmp
+          install /tmp/actionlint /usr/local/bin/actionlint
 
       - name: Run ruff linter
         run: ruff check scripts/ --output-format=github
@@ -53,3 +57,13 @@ jobs:
           python -c "import common.summarizer; print('✓ common.summarizer')"
           python -c "import common.crypto_api; print('✓ common.crypto_api')"
           python -c "import common.formatters; print('✓ common.formatters')"
+
+      - name: Run rendered fixture smoke check
+        run: python scripts/verify_rendered_fixtures.py
+
+      - name: Run GitHub Actions workflow lint
+        run: actionlint -color
+
+      - name: Run YAML lint for workflows
+        run: |
+          yamllint -d "{extends: default, rules: {line-length: disable, truthy: disable}}" .github/workflows

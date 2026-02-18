@@ -31,10 +31,16 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
 
+      - name: Resolve Vercel scope context
+        run: bash scripts/vercel_scope.sh context
+
       - name: Build with Jekyll
         run: bundle exec jekyll build --config _config.yml,_config_ghpages.yml --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+
+      - name: Rendered markdown smoke test
+        run: python3 scripts/verify_rendered_posts.py
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

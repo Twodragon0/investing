@@ -1,0 +1,177 @@
+name: Classify Workflow Failures
+
+on:
+  workflow_run:
+    workflows:
+      - Collect Crypto News
+      - Collect Stock News
+      - Collect Social Media
+      - Collect Regulatory News
+      - Collect Political Trades
+      - Collect CoinMarketCap Data
+      - Collect WorldMonitor News
+      - Generate Daily Summary
+      - Generate Market Summary
+      - Weekly Digest
+      - Deploy Jekyll to GitHub Pages
+      - Code Quality
+    types: [completed]
+
+permissions:
+  actions: write
+  contents: read
+  issues: write
+
+jobs:
+  classify:
+    if: github.event.workflow_run.conclusion == 'failure'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Classify failure type
+        id: classify
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh run view "$RUN_ID" --log-failed > failed.log 2>&1 || gh run view "$RUN_ID" > failed.log 2>&1 || true
+
+          network_pattern='(timed out|timeout|couldn.t connect|connection reset|connection refused|temporary failure|name resolution|502 bad gateway|503 service unavailable|504 gateway timeout|429 too many requests|failed to connect|tls handshake timeout|ssl connect error)'
+
+          if grep -Eqi "$network_pattern" failed.log; then
+            classification="network"
+          else
+            classification="code"
+          fi
+
+          echo "classification=$classification" >> "$GITHUB_OUTPUT"
+
+      - name: Finalize classification with escalation
+        id: classify_final
+        shell: bash
+        env:
+          RAW_CLASSIFICATION: ${{ steps.classify.outputs.classification }}
+          RUN_ATTEMPT: ${{ github.event.workflow_run.run_attempt }}
+        run: |
+          set -euo pipefail
+          final_classification="$RAW_CLASSIFICATION"
+          escalated="false"
+
+          if [ "$RAW_CLASSIFICATION" = "network" ] && [ "$RUN_ATTEMPT" -ge 2 ]; then
+            final_classification="code"
+            escalated="true"
+          fi
+
+          echo "final_classification=$final_classification" >> "$GITHUB_OUTPUT"
+          echo "escalated=$escalated" >> "$GITHUB_OUTPUT"
+
+      - name: Retry transient failure once
+        id: rerun
+        if: steps.classify.outputs.classification == 'network' && github.event.workflow_run.run_attempt < 2
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh run rerun "$RUN_ID"
+          echo "rerun=true" >> "$GITHUB_OUTPUT"
+
+      - name: Mark no rerun
+        if: steps.rerun.outputs.rerun != 'true'
+        shell: bash
+        run: echo "rerun=false" >> "$GITHUB_OUTPUT"
+
+      - name: Create issue for code failures
+        if: steps.classify_final.outputs.final_classification == 'code' && steps.rerun.outputs.rerun != 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const run = context.payload.workflow_run;
+            const headSha = (run.head_sha || '').slice(0, 12);
+            const dedupeKey = `workflow=${run.name}|run=${run.run_number}|sha=${headSha}`;
+            const title = `CI code failure: ${run.name} #${run.run_number} (${headSha || 'no-sha'})`;
+            const body = [
+              '## Automated failure classification',
+              '',
+              `- Workflow: ${run.name}`,
+              `- Run: ${run.html_url}`,
+              `- Attempt: ${run.run_attempt}`,
+              `- Head SHA: ${run.head_sha || 'N/A'}`,
+              `- Dedupe Key: ${dedupeKey}`,
+              `- Conclusion: ${run.conclusion}`,
+              `- Classification (raw): ${{ steps.classify.outputs.classification }}`,
+              `- Classification (final): ${{ steps.classify_final.outputs.final_classification }}`,
+              `- Escalated from network: ${{ steps.classify_final.outputs.escalated }}`,
+              '',
+              'Action: investigate code or configuration changes in this run.'
+            ].join('\n');
+
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'ci-failure'
+            });
+
+            const exists = issues.some(
+              issue => issue.title === title || (issue.body || '').includes(`Dedupe Key: ${dedupeKey}`)
+            );
+            if (!exists) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+                labels: ['ci-failure', 'automated', 'code-failure']
+              });
+            }
+
+      - name: Resolve Slack config
+        id: slack
+        shell: bash
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          AI_SLACK_BOT_TOKEN: ${{ secrets.AI_SLACK_BOT_TOKEN }}
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+          SLACK_CHANNEL_ID_INVESTING: ${{ secrets.SLACK_CHANNEL_ID_INVESTING }}
+          AI_SLACK_CHANNEL_ID_INVESTING: ${{ secrets.AI_SLACK_CHANNEL_ID_INVESTING }}
+          SLACK_CHANNEL_INVESTING: ${{ secrets.SLACK_CHANNEL_INVESTING }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          AI_SLACK_CHANNEL_ID: ${{ secrets.AI_SLACK_CHANNEL_ID }}
+          SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
+        run: |
+          set -euo pipefail
+          token="${SLACK_BOT_TOKEN:-}"
+          if [ -z "$token" ]; then token="${AI_SLACK_BOT_TOKEN:-}"; fi
+          if [ -z "$token" ]; then token="${SLACK_TOKEN:-}"; fi
+
+          channel="${SLACK_CHANNEL_ID_INVESTING:-${AI_SLACK_CHANNEL_ID_INVESTING:-${SLACK_CHANNEL_INVESTING:-${SLACK_CHANNEL_ID:-${AI_SLACK_CHANNEL_ID:-${SLACK_CHANNEL:-}}}}}}"
+
+          can_post=true
+          if [ -z "$token" ] || [ -z "$channel" ]; then
+            can_post=false
+          fi
+
+          echo "can_post=$can_post" >> "$GITHUB_OUTPUT"
+          echo "token=$token" >> "$GITHUB_OUTPUT"
+          echo "channel=$channel" >> "$GITHUB_OUTPUT"
+
+      - name: Post classified failure to Slack
+        if: steps.slack.outputs.can_post == 'true'
+        uses: slackapi/slack-github-action@v2.1.1
+        with:
+          method: chat.postMessage
+          token: ${{ steps.slack.outputs.token }}
+          payload: |
+            channel: "${{ steps.slack.outputs.channel }}"
+            text: |
+              [workflow-failure-router]
+              workflow=${{ github.event.workflow_run.name }}
+              run=${{ github.event.workflow_run.html_url }}
+              classification_raw=${{ steps.classify.outputs.classification }}
+              classification_final=${{ steps.classify_final.outputs.final_classification }}
+              escalated=${{ steps.classify_final.outputs.escalated }}
+              rerun=${{ steps.rerun.outputs.rerun || 'false' }}

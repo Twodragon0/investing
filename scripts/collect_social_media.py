@@ -24,6 +24,7 @@ from common.post_generator import PostGenerator
 from common.utils import sanitize_string, truncate_text, request_with_retry
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
+from common.markdown_utils import markdown_link, markdown_table, html_details_list
 
 try:
     from common.browser import BrowserSession, is_playwright_available
@@ -32,6 +33,7 @@ except ImportError:
 
     def is_playwright_available() -> bool:  # type: ignore[misc]
         return False
+
 
 logger = setup_logging("collect_social_media")
 
@@ -74,20 +76,24 @@ def _parse_telegram_items(channel: str, messages, limit: int) -> List[Dict[str, 
             if len(title) < 10:
                 title = truncate_text(text, 100)
 
-            items.append({
-                "title": f"[Telegram] {title}",
-                "description": text,
-                "link": link or "",
-                "published": date_str or "",
-                "source": f"Telegram @{channel}",
-                "tags": ["social-media", "telegram", channel],
-            })
+            items.append(
+                {
+                    "title": f"[Telegram] {title}",
+                    "description": text,
+                    "link": link or "",
+                    "published": date_str or "",
+                    "source": f"Telegram @{channel}",
+                    "tags": ["social-media", "telegram", channel],
+                }
+            )
         except Exception:
             continue
     return items
 
 
-def _fetch_telegram_browser(channels: List[str], limit: int = 10) -> Dict[str, List[Dict[str, Any]]]:
+def _fetch_telegram_browser(
+    channels: List[str], limit: int = 10
+) -> Dict[str, List[Dict[str, Any]]]:
     """Fetch multiple Telegram channels in a single browser session."""
     results: Dict[str, List[Dict[str, Any]]] = {}
     if not is_playwright_available():
@@ -110,7 +116,9 @@ def _fetch_telegram_browser(channels: List[str], limit: int = 10) -> Dict[str, L
                     messages = session.extract_elements(".tgme_widget_message_wrap")
                     items = _parse_telegram_items(channel, messages, limit)
                     results[channel] = items
-                    logger.info("Telegram Browser @%s: fetched %d messages", channel, len(items))
+                    logger.info(
+                        "Telegram Browser @%s: fetched %d messages", channel, len(items)
+                    )
                 except Exception as e:
                     logger.warning("Telegram Browser @%s failed: %s", channel, e)
                     results[channel] = []
@@ -124,7 +132,9 @@ def fetch_telegram_channel(channel: str, limit: int = 10) -> List[Dict[str, Any]
     url = f"https://t.me/s/{channel}"
     try:
         resp = requests.get(
-            url, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL,
+            url,
+            timeout=REQUEST_TIMEOUT,
+            verify=VERIFY_SSL,
             headers={"User-Agent": USER_AGENT},
         )
         resp.raise_for_status()
@@ -138,7 +148,9 @@ def fetch_telegram_channel(channel: str, limit: int = 10) -> List[Dict[str, Any]
         return []
 
 
-def fetch_twitter_search(bearer_token: str, query: str, limit: int = 10) -> List[Dict[str, Any]]:
+def fetch_twitter_search(
+    bearer_token: str, query: str, limit: int = 10
+) -> List[Dict[str, Any]]:
     """Search Twitter/X using API v2."""
     if not bearer_token:
         logger.info("Twitter Bearer Token not set, skipping")
@@ -153,8 +165,13 @@ def fetch_twitter_search(bearer_token: str, query: str, limit: int = 10) -> List
     }
 
     try:
-        resp = requests.get(url, headers=headers, params=params,
-                           timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
+        resp = requests.get(
+            url,
+            headers=headers,
+            params=params,
+            timeout=REQUEST_TIMEOUT,
+            verify=VERIFY_SSL,
+        )
         resp.raise_for_status()
         data = resp.json()
 
@@ -167,14 +184,18 @@ def fetch_twitter_search(bearer_token: str, query: str, limit: int = 10) -> List
             tweet_id = tweet.get("id", "")
             title = truncate_text(text, 100)
 
-            items.append({
-                "title": f"[X/Twitter] {title}",
-                "description": text,
-                "link": f"https://twitter.com/i/web/status/{tweet_id}" if tweet_id else "",
-                "published": tweet.get("created_at", ""),
-                "source": "Twitter/X",
-                "tags": ["social-media", "twitter"],
-            })
+            items.append(
+                {
+                    "title": f"[X/Twitter] {title}",
+                    "description": text,
+                    "link": f"https://twitter.com/i/web/status/{tweet_id}"
+                    if tweet_id
+                    else "",
+                    "published": tweet.get("created_at", ""),
+                    "source": "Twitter/X",
+                    "tags": ["social-media", "twitter"],
+                }
+            )
 
         logger.info("Twitter search '%s': fetched %d tweets", query[:30], len(items))
         return items
@@ -199,7 +220,9 @@ def fetch_reddit_posts(limit: int = 10) -> List[Dict[str, Any]]:
         url = f"https://www.reddit.com/r/{sub}/hot.json?limit={limit}"
         try:
             resp = request_with_retry(
-                url, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL,
+                url,
+                timeout=REQUEST_TIMEOUT,
+                verify_ssl=VERIFY_SSL,
                 headers={"User-Agent": USER_AGENT},
             )
             data = resp.json()
@@ -212,15 +235,17 @@ def fetch_reddit_posts(limit: int = 10) -> List[Dict[str, Any]]:
                 score = pd.get("score", 0)
                 if score < min_score:
                     continue
-                all_items.append({
-                    "title": f"[Reddit] {title}",
-                    "description": truncate_text(pd.get("selftext", title), 300),
-                    "link": f"https://reddit.com{pd.get('permalink', '')}",
-                    "published": "",
-                    "source": display_name,
-                    "tags": ["social-media", "reddit", sub],
-                    "score": score,
-                })
+                all_items.append(
+                    {
+                        "title": f"[Reddit] {title}",
+                        "description": truncate_text(pd.get("selftext", title), 300),
+                        "link": f"https://reddit.com{pd.get('permalink', '')}",
+                        "published": "",
+                        "source": display_name,
+                        "tags": ["social-media", "reddit", sub],
+                        "score": score,
+                    }
+                )
                 sub_count += 1
             logger.info("Reddit %s: fetched %d posts", display_name, sub_count)
         except requests.exceptions.RequestException as e:
@@ -229,18 +254,27 @@ def fetch_reddit_posts(limit: int = 10) -> List[Dict[str, Any]]:
 
     # Sort by score
     all_items.sort(key=lambda x: x.get("score", 0), reverse=True)
-    return all_items[:limit * 2]
+    return all_items[: limit * 2]
 
 
 def fetch_google_news_social() -> List[Dict[str, Any]]:
     """Google News RSS fallback for social/crypto influencer content (concurrent)."""
     feeds = [
-        ("https://news.google.com/rss/search?q=crypto+twitter+sentiment&hl=en-US&gl=US&ceid=US:en",
-         "Google News Social EN", ["social-media", "sentiment"]),
-        ("https://news.google.com/rss/search?q=암호화폐+커뮤니티+SNS&hl=ko&gl=KR&ceid=KR:ko",
-         "Google News Social KR", ["social-media", "korean"]),
-        ("https://news.google.com/rss/search?q=crypto+whale+alert+on-chain&hl=en-US&gl=US&ceid=US:en",
-         "Whale & On-chain", ["social-media", "whale", "on-chain"]),
+        (
+            "https://news.google.com/rss/search?q=crypto+twitter+sentiment&hl=en-US&gl=US&ceid=US:en",
+            "Google News Social EN",
+            ["social-media", "sentiment"],
+        ),
+        (
+            "https://news.google.com/rss/search?q=암호화폐+커뮤니티+SNS&hl=ko&gl=KR&ceid=KR:ko",
+            "Google News Social KR",
+            ["social-media", "korean"],
+        ),
+        (
+            "https://news.google.com/rss/search?q=crypto+whale+alert+on-chain&hl=en-US&gl=US&ceid=US:en",
+            "Whale & On-chain",
+            ["social-media", "whale", "on-chain"],
+        ),
     ]
     return fetch_rss_feeds_concurrent(feeds)
 
@@ -248,24 +282,51 @@ def fetch_google_news_social() -> List[Dict[str, Any]]:
 def fetch_political_economy_news() -> List[Dict[str, Any]]:
     """Fetch Trump and 이재명 related economy/crypto news (concurrent)."""
     feeds = [
-        ("https://news.google.com/rss/search?q=Trump+crypto+policy&hl=en-US&gl=US&ceid=US:en",
-         "Trump Crypto Policy", ["politics", "trump", "crypto"]),
-        ("https://news.google.com/rss/search?q=Trump+tariff+economy+stock&hl=en-US&gl=US&ceid=US:en",
-         "Trump Economy", ["politics", "trump", "economy"]),
-        ("https://news.google.com/rss/search?q=트럼프+암호화폐+경제&hl=ko&gl=KR&ceid=KR:ko",
-         "트럼프 경제정책 KR", ["politics", "trump", "korean"]),
-        ("https://news.google.com/rss/search?q=이재명+경제+정책&hl=ko&gl=KR&ceid=KR:ko",
-         "이재명 경제정책", ["politics", "이재명", "economy"]),
-        ("https://news.google.com/rss/search?q=이재명+주식+암호화폐+코인&hl=ko&gl=KR&ceid=KR:ko",
-         "이재명 암호화폐정책", ["politics", "이재명", "crypto"]),
-        ("https://news.google.com/rss/search?q=이재명+부동산+금리&hl=ko&gl=KR&ceid=KR:ko",
-         "이재명 부동산·금리", ["politics", "이재명", "real-estate"]),
-        ("https://news.google.com/rss/search?q=Federal+Reserve+interest+rate+decision&hl=en-US&gl=US&ceid=US:en",
-         "Fed Policy", ["politics", "fed", "macro"]),
-        ("https://news.google.com/rss/search?q=한국은행+금리+경제&hl=ko&gl=KR&ceid=KR:ko",
-         "한국은행 금리정책", ["politics", "한국은행", "macro"]),
-        ("https://news.google.com/rss/search?q=코스피+외국인+기관+수급&hl=ko&gl=KR&ceid=KR:ko",
-         "한국증시 수급", ["stock", "korean", "수급"]),
+        (
+            "https://news.google.com/rss/search?q=Trump+crypto+policy&hl=en-US&gl=US&ceid=US:en",
+            "Trump Crypto Policy",
+            ["politics", "trump", "crypto"],
+        ),
+        (
+            "https://news.google.com/rss/search?q=Trump+tariff+economy+stock&hl=en-US&gl=US&ceid=US:en",
+            "Trump Economy",
+            ["politics", "trump", "economy"],
+        ),
+        (
+            "https://news.google.com/rss/search?q=트럼프+암호화폐+경제&hl=ko&gl=KR&ceid=KR:ko",
+            "트럼프 경제정책 KR",
+            ["politics", "trump", "korean"],
+        ),
+        (
+            "https://news.google.com/rss/search?q=이재명+경제+정책&hl=ko&gl=KR&ceid=KR:ko",
+            "이재명 경제정책",
+            ["politics", "이재명", "economy"],
+        ),
+        (
+            "https://news.google.com/rss/search?q=이재명+주식+암호화폐+코인&hl=ko&gl=KR&ceid=KR:ko",
+            "이재명 암호화폐정책",
+            ["politics", "이재명", "crypto"],
+        ),
+        (
+            "https://news.google.com/rss/search?q=이재명+부동산+금리&hl=ko&gl=KR&ceid=KR:ko",
+            "이재명 부동산·금리",
+            ["politics", "이재명", "real-estate"],
+        ),
+        (
+            "https://news.google.com/rss/search?q=Federal+Reserve+interest+rate+decision&hl=en-US&gl=US&ceid=US:en",
+            "Fed Policy",
+            ["politics", "fed", "macro"],
+        ),
+        (
+            "https://news.google.com/rss/search?q=한국은행+금리+경제&hl=ko&gl=KR&ceid=KR:ko",
+            "한국은행 금리정책",
+            ["politics", "한국은행", "macro"],
+        ),
+        (
+            "https://news.google.com/rss/search?q=코스피+외국인+기관+수급&hl=ko&gl=KR&ceid=KR:ko",
+            "한국증시 수급",
+            ["stock", "korean", "수급"],
+        ),
     ]
     return fetch_rss_feeds_concurrent(feeds)
 
@@ -285,8 +346,18 @@ def main():
     # Collect Telegram messages
     telegram_items = []
     channels = [
-        "cryptonews", "crypto", "CoinDesk", "BitcoinMagazine", "WuBlockchain", "coinlounge",
-        "whale_alert", "DefiLlama", "OKX_Announcements", "BybitOfficial", "BTCKorea", "upbitofficial",
+        "cryptonews",
+        "crypto",
+        "CoinDesk",
+        "BitcoinMagazine",
+        "WuBlockchain",
+        "coinlounge",
+        "whale_alert",
+        "DefiLlama",
+        "OKX_Announcements",
+        "BybitOfficial",
+        "BTCKorea",
+        "upbitofficial",
     ]
 
     # Try browser session for all channels (single session, reuse connection)
@@ -295,7 +366,11 @@ def main():
         for ch in channels:
             telegram_items.extend(browser_results.get(ch, []))
         # Fallback: fetch remaining channels that failed via requests
-        failed_channels = [ch for ch in channels if ch not in browser_results or not browser_results[ch]]
+        failed_channels = [
+            ch
+            for ch in channels
+            if ch not in browser_results or not browser_results[ch]
+        ]
         for ch in failed_channels:
             telegram_items.extend(fetch_telegram_channel(ch))
             time.sleep(2)
@@ -341,7 +416,12 @@ def main():
     # Create theme summarizer
     summarizer = ThemeSummarizer(all_theme_items)
 
-    total_count = len(telegram_items) + len(social_items) + len(reddit_items) + len(political_items)
+    total_count = (
+        len(telegram_items)
+        + len(social_items)
+        + len(reddit_items)
+        + len(political_items)
+    )
 
     if total_count == 0:
         logger.warning("No social media items collected, skipping post")
@@ -359,7 +439,9 @@ def main():
     if political_items:
         source_parts.append(f"정치·경제 {len(political_items)}건")
     sources_str = ", ".join(source_parts) if source_parts else "데이터 없음"
-    content_parts = [f"**{today}** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. {sources_str}, 총 {total_count}건이 수집되었습니다.\n"]
+    content_parts = [
+        f"**{today}** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. {sources_str}, 총 {total_count}건이 수집되었습니다.\n"
+    ]
 
     # Collect all source links
     source_links = []
@@ -395,6 +477,7 @@ def main():
 
     try:
         from common.image_generator import generate_source_distribution_card
+
         if source_dist:
             img = generate_source_distribution_card(source_dist, today)
             if img:
@@ -418,7 +501,9 @@ def main():
 
             # Collect links for references
             if link:
-                source_links.append({"title": item["title"], "link": link, "source": source})
+                source_links.append(
+                    {"title": item["title"], "link": link, "source": source}
+                )
                 content_parts.append(f"**{i}. [{title}]({link})**")
             else:
                 content_parts.append(f"**{i}. {title}**")
@@ -443,7 +528,9 @@ def main():
             description = item.get("description", "").strip()
 
             if link:
-                source_links.append({"title": item["title"], "link": link, "source": source})
+                source_links.append(
+                    {"title": item["title"], "link": link, "source": source}
+                )
                 content_parts.append(f"**{i}. [{title}]({link})**")
             else:
                 content_parts.append(f"**{i}. {title}**")
@@ -459,8 +546,7 @@ def main():
     # Reddit section (only show if data exists)
     if reddit_items:
         content_parts.append("\n## Reddit 커뮤니티 인기 글\n")
-        content_parts.append("| # | 제목 | 커뮤니티 |")
-        content_parts.append("|---|------|----------|")
+        reddit_rows = []
         for i, item in enumerate(reddit_items[:10], 1):
             title = item["title"].replace("[Reddit] ", "")
             source = item.get("source", "unknown")
@@ -468,10 +554,16 @@ def main():
             score = item.get("score", 0)
 
             if link:
-                source_links.append({"title": item["title"], "link": link, "source": source})
-                content_parts.append(f"| {i} | [**{title}**]({link}) | {source} (↑{score}) |")
+                source_links.append(
+                    {"title": item["title"], "link": link, "source": source}
+                )
+                title_cell = markdown_link(f"**{title}**", link)
             else:
-                content_parts.append(f"| {i} | **{title}** | {source} (↑{score}) |")
+                title_cell = f"**{title}**"
+            reddit_rows.append((i, title_cell, f"{source} (↑{score})"))
+
+        if reddit_rows:
+            content_parts.append(markdown_table(["#", "제목", "커뮤니티"], reddit_rows))
 
         content_parts.append("\n---\n")
 
@@ -516,13 +608,19 @@ def main():
         trend_lines.append(f"텔레그램에서 가장 활발한 채널은 {ch_str}입니다.")
     if political_items:
         pol_ratio = len(political_items) / max(total_count, 1) * 100
-        trend_lines.append(f"정치·경제 관련 뉴스가 전체의 **{pol_ratio:.0f}%**를 차지하고 있어, 정치적 이슈가 시장에 미치는 영향이 큰 상황입니다.")
+        trend_lines.append(
+            f"정치·경제 관련 뉴스가 전체의 **{pol_ratio:.0f}%**를 차지하고 있어, 정치적 이슈가 시장에 미치는 영향이 큰 상황입니다."
+        )
     if reddit_items:
-        trend_lines.append(f"Reddit에서 {len(reddit_items)}건의 인기 글이 수집되었으며, 커뮤니티 관심이 활발합니다.")
+        trend_lines.append(
+            f"Reddit에서 {len(reddit_items)}건의 인기 글이 수집되었으며, 커뮤니티 관심이 활발합니다."
+        )
     if not trend_lines:
         trend_lines.append("현재 수집된 소셜 데이터가 제한적입니다.")
     trend_lines.append("")
-    trend_lines.append("> *본 소셜 동향 분석은 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*")
+    trend_lines.append(
+        "> *본 소셜 동향 분석은 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
+    )
     content_parts.extend(trend_lines)
 
     # References section (top 10 only) - collapsible
@@ -535,14 +633,18 @@ def main():
                 unique_links.append(ref)
 
         if unique_links:
-            content_parts.append(f"\n<details><summary>참고 링크 ({len(unique_links)}건)</summary>")
-            content_parts.append('<div class="details-content">\n')
-            for idx, ref in enumerate(unique_links, 1):
-                content_parts.append(f"{idx}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}")
-            content_parts.append("\n</div></details>")
+            ref_items = [
+                f"{markdown_link(ref['title'][:80], ref['link'])} - {ref['source']}"
+                for ref in unique_links
+            ]
+            content_parts.append(
+                html_details_list(f"참고 링크 ({len(unique_links)}건)", ref_items)
+            )
 
     # Data collection timestamp footer
-    content_parts.append(f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC")
+    content_parts.append(
+        f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC"
+    )
 
     content = "\n".join(content_parts)
 
@@ -550,7 +652,16 @@ def main():
         title=post_title,
         content=content,
         date=now,
-        tags=["social-media", "telegram", "twitter", "reddit", "politics", "trump", "이재명", "daily-digest"],
+        tags=[
+            "social-media",
+            "telegram",
+            "twitter",
+            "reddit",
+            "politics",
+            "trump",
+            "이재명",
+            "daily-digest",
+        ],
         source="consolidated",
         lang="ko",
         image=f"/assets/images/generated/source-distribution-{today}.png",

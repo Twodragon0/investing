@@ -21,6 +21,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Resolve Vercel scope context
+        run: bash scripts/vercel_scope.sh context
+
       - name: Check site availability
         id: site_check
         run: |
