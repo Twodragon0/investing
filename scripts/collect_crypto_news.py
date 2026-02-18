@@ -12,6 +12,7 @@ Sources:
 import sys
 import os
 import re
+import time
 import requests
 from collections import Counter
 from datetime import datetime, timezone
@@ -26,6 +27,7 @@ from common.post_generator import PostGenerator
 from common.utils import sanitize_string
 from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
+from common.collector_metrics import log_collection_summary
 from common.markdown_utils import (
     markdown_link,
     markdown_table,
@@ -396,6 +398,7 @@ def _fetch_browser_sources() -> tuple:
 def main():
     """Main collection routine - consolidated posts."""
     logger.info("=== Starting crypto news collection ===")
+    started_at = time.monotonic()
 
     cryptopanic_key = get_env("CRYPTOPANIC_API_KEY")
 
@@ -862,6 +865,25 @@ def main():
 
     logger.info(
         "=== Crypto news collection complete: %d posts created ===", created_count
+    )
+    all_collected_items = all_items + all_security_items
+    unique_items = len(
+        {
+            f"{item.get('title', '')}|{item.get('source', '')}|{item.get('link', '')}"
+            for item in all_collected_items
+            if item.get("title")
+        }
+    )
+    source_count = len(
+        {item.get("source", "") for item in all_collected_items if item.get("source")}
+    )
+    log_collection_summary(
+        logger,
+        collector="collect_crypto_news",
+        source_count=source_count,
+        unique_items=unique_items,
+        post_created=created_count,
+        started_at=started_at,
     )
 
 

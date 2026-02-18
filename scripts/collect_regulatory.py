@@ -23,6 +23,7 @@ from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feed
 from common.summarizer import ThemeSummarizer
 from common.markdown_utils import markdown_link, markdown_table, html_reference_details
+from common.collector_metrics import log_collection_summary
 
 logger = setup_logging("collect_regulatory")
 
@@ -141,6 +142,7 @@ def build_region_section(
 def main():
     """Main regulatory news collection routine."""
     logger.info("=== Starting regulatory news collection ===")
+    started_at = time.monotonic()
 
     dedup = DedupEngine("regulatory_news_seen.json")
     gen = PostGenerator("regulatory-news")
@@ -161,6 +163,24 @@ def main():
 
     if dedup.is_duplicate_exact(post_title, "consolidated", today):
         logger.info("Regulatory post already exists, skipping")
+        unique_count = len(
+            {
+                f"{item.get('title', '')}|{item.get('source', '')}|{item.get('link', '')}"
+                for item in all_items
+                if item.get("title")
+            }
+        )
+        source_count = len(
+            {item.get("source", "") for item in all_items if item.get("source")}
+        )
+        log_collection_summary(
+            logger,
+            collector="collect_regulatory",
+            source_count=source_count,
+            unique_items=unique_count,
+            post_created=0,
+            started_at=started_at,
+        )
         dedup.save()
         return
 
@@ -307,6 +327,24 @@ def main():
 
     dedup.save()
     logger.info("=== Regulatory news collection complete ===")
+    unique_count = len(
+        {
+            f"{item.get('title', '')}|{item.get('source', '')}|{item.get('link', '')}"
+            for item in all_items
+            if item.get("title")
+        }
+    )
+    source_count = len(
+        {item.get("source", "") for item in all_items if item.get("source")}
+    )
+    log_collection_summary(
+        logger,
+        collector="collect_regulatory",
+        source_count=source_count,
+        unique_items=unique_count,
+        post_created=1 if filepath else 0,
+        started_at=started_at,
+    )
 
 
 if __name__ == "__main__":

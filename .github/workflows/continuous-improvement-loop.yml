@@ -1,0 +1,72 @@
+name: Continuous Improvement Loop
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  loop-cycle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run ultraworker-sisyphus loop cycle
+        run: |
+          python3 scripts/continuous_improvement_loop.py \
+            --report-path _state/continuous-improvement-loop.md \
+            --slack-path _state/continuous-improvement-loop-slack.txt
+
+      - name: Publish loop report to job summary
+        run: cat _state/continuous-improvement-loop.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Read Slack message
+        id: loop_message
+        shell: bash
+        run: |
+          {
+            echo "message<<EOF"
+            cat _state/continuous-improvement-loop-slack.txt
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Resolve Slack config
+        id: slack
+        uses: ./.github/actions/resolve-slack-config
+        with:
+          target_channel_alias: investing
+          token_candidates: |
+            ${{ secrets.SLACK_BOT_TOKEN }}
+            ${{ secrets.OPENCLAW_SLACK_BOT_TOKEN }}
+            ${{ secrets.AI_SLACK_BOT_TOKEN }}
+            ${{ secrets.SLACK_TOKEN }}
+          channel_candidates_investing: |
+            ${{ secrets.SLACK_CHANNEL_ID_INVESTING }}
+            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_INVESTING }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID_INVESTING }}
+            ${{ secrets.SLACK_CHANNEL_INVESTING }}
+            ${{ secrets.SLACK_CHANNEL_ID }}
+            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID }}
+            ${{ secrets.SLACK_CHANNEL }}
+
+      - name: Post loop priorities to Slack
+        if: steps.slack.outputs.can_post == 'true'
+        uses: slackapi/slack-github-action@v2.1.1
+        with:
+          method: chat.postMessage
+          token: ${{ steps.slack.outputs.token }}
+          payload: |
+            channel: "${{ steps.slack.outputs.channel }}"
+            text: |
+              ${{ steps.loop_message.outputs.message }}

@@ -30,6 +30,7 @@ from common.markdown_utils import (
     html_reference_details,
     html_source_tag,
 )
+from common.collector_metrics import log_collection_summary
 
 try:
     from common.browser import BrowserSession, is_playwright_available
@@ -339,6 +340,7 @@ def fetch_political_economy_news() -> List[Dict[str, Any]]:
 def main():
     """Main social media collection routine - consolidated post."""
     logger.info("=== Starting social media collection ===")
+    started_at = time.monotonic()
 
     twitter_token = get_env("TWITTER_BEARER_TOKEN")
 
@@ -412,6 +414,25 @@ def main():
 
     if dedup.is_duplicate_exact(post_title, "consolidated", today):
         logger.info("Consolidated social media post already exists, skipping")
+        combined_items = telegram_items + social_items + reddit_items + political_items
+        unique_count = len(
+            {
+                f"{item.get('title', '')}|{item.get('source', '')}|{item.get('link', '')}"
+                for item in combined_items
+                if item.get("title")
+            }
+        )
+        source_count = len(
+            {item.get("source", "") for item in combined_items if item.get("source")}
+        )
+        log_collection_summary(
+            logger,
+            collector="collect_social_media",
+            source_count=source_count,
+            unique_items=unique_count,
+            post_created=0,
+            started_at=started_at,
+        )
         dedup.save()
         return
 
@@ -430,6 +451,14 @@ def main():
 
     if total_count == 0:
         logger.warning("No social media items collected, skipping post")
+        log_collection_summary(
+            logger,
+            collector="collect_social_media",
+            source_count=0,
+            unique_items=0,
+            post_created=0,
+            started_at=started_at,
+        )
         dedup.save()
         return
 
@@ -671,6 +700,25 @@ def main():
 
     dedup.save()
     logger.info("=== Social media collection complete ===")
+    combined_items = telegram_items + social_items + reddit_items + political_items
+    unique_count = len(
+        {
+            f"{item.get('title', '')}|{item.get('source', '')}|{item.get('link', '')}"
+            for item in combined_items
+            if item.get("title")
+        }
+    )
+    source_count = len(
+        {item.get("source", "") for item in combined_items if item.get("source")}
+    )
+    log_collection_summary(
+        logger,
+        collector="collect_social_media",
+        source_count=source_count,
+        unique_items=unique_count,
+        post_created=1 if filepath else 0,
+        started_at=started_at,
+    )
 
 
 if __name__ == "__main__":

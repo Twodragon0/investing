@@ -24,6 +24,7 @@ from common.utils import detect_language, request_with_retry
 from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
 from common.markdown_utils import html_reference_details, html_source_tag, markdown_link
+from common.collector_metrics import log_collection_summary
 
 try:
     from common.browser import BrowserSession, is_playwright_available
@@ -262,6 +263,7 @@ def fetch_korean_market_data() -> dict:
 def main():
     """Main collection routine - consolidated post."""
     logger.info("=== Starting stock news collection ===")
+    started_at = time.monotonic()
 
     alpha_vantage_key = get_env("ALPHA_VANTAGE_API_KEY")
 
@@ -287,6 +289,14 @@ def main():
 
     if not all_items:
         logger.warning("No news items collected, skipping stock news post")
+        log_collection_summary(
+            logger,
+            collector="collect_stock_news",
+            source_count=0,
+            unique_items=0,
+            post_created=0,
+            started_at=started_at,
+        )
         dedup.save()
         return
 
@@ -295,6 +305,24 @@ def main():
 
     if dedup.is_duplicate_exact(post_title, "consolidated", today):
         logger.info("Consolidated stock post already exists, skipping")
+        unique_count = len(
+            {
+                f"{item.get('title', '')}|{item.get('source', '')}|{item.get('link', '')}"
+                for item in all_items
+                if item.get("title")
+            }
+        )
+        source_count = len(
+            {item.get("source", "") for item in all_items if item.get("source")}
+        )
+        log_collection_summary(
+            logger,
+            collector="collect_stock_news",
+            source_count=source_count,
+            unique_items=unique_count,
+            post_created=0,
+            started_at=started_at,
+        )
         dedup.save()
         return
 
@@ -619,6 +647,24 @@ def main():
 
     dedup.save()
     logger.info("=== Stock news collection complete ===")
+    unique_count = len(
+        {
+            f"{item.get('title', '')}|{item.get('source', '')}|{item.get('link', '')}"
+            for item in all_items
+            if item.get("title")
+        }
+    )
+    source_count = len(
+        {item.get("source", "") for item in all_items if item.get("source")}
+    )
+    log_collection_summary(
+        logger,
+        collector="collect_stock_news",
+        source_count=source_count,
+        unique_items=unique_count,
+        post_created=1 if filepath else 0,
+        started_at=started_at,
+    )
 
 
 if __name__ == "__main__":

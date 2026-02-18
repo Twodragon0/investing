@@ -48,6 +48,38 @@ jobs:
 
           echo "classification=$classification" >> "$GITHUB_OUTPUT"
 
+          evidence_snippet=$(python3 - <<'PY'
+          import re
+          from pathlib import Path
+
+          log_path = Path("failed.log")
+          if not log_path.exists():
+              print("failed.log not found")
+              raise SystemExit(0)
+
+          lines = log_path.read_text(encoding="utf-8", errors="replace").splitlines()
+          pattern = re.compile(
+              r"(timed out|timeout|couldn.t connect|connection reset|connection refused|temporary failure|name resolution|502 bad gateway|503 service unavailable|504 gateway timeout|429 too many requests|failed to connect|tls handshake timeout|ssl connect error|traceback|error:|exception)",
+              re.IGNORECASE,
+          )
+
+          matches = [line.strip() for line in lines if pattern.search(line)]
+          selected = matches[:12] if matches else [line.strip() for line in lines[:12]]
+          selected = [line for line in selected if line]
+
+          if not selected:
+              print("no relevant log lines captured")
+          else:
+              print("\n".join(selected))
+          PY
+          )
+
+          {
+            echo "evidence_snippet<<EOF"
+            printf '%s\n' "$evidence_snippet"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
       - name: Finalize classification with escalation
         id: classify_final
         shell: bash
@@ -105,6 +137,11 @@ jobs:
               `- Classification (raw): ${{ steps.classify.outputs.classification }}`,
               `- Classification (final): ${{ steps.classify_final.outputs.final_classification }}`,
               `- Escalated from network: ${{ steps.classify_final.outputs.escalated }}`,
+              '',
+              '### Classifier evidence',
+              '```text',
+              `${{ steps.classify.outputs.evidence_snippet }}`,
+              '```',
               '',
               'Action: investigate code or configuration changes in this run.'
             ].join('\n');

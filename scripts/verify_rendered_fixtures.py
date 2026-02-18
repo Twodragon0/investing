@@ -26,6 +26,31 @@ TARGETS = [
         "must_details": False,
         "forbid": [],
     },
+    {
+        "file": "reference_long_link_sample.html",
+        "must_table": True,
+        "must_details": True,
+        "forbid": [],
+        "required_patterns": [r"utm_source=very_long_tracking_parameter_value_"],
+    },
+    {
+        "file": "reference_empty_sample.html",
+        "must_table": True,
+        "must_details": False,
+        "forbid": [r"<details"],
+        "required_patterns": [r"참고 링크 없음"],
+    },
+    {
+        "file": "reference_mixed_source_sample.html",
+        "must_table": True,
+        "must_details": True,
+        "forbid": [],
+        "required_patterns": [
+            r"source-tag\">WorldMonitor/BBC World",
+            r"source-tag\">WorldMonitor/Al Jazeera",
+            r"source-tag\">WorldMonitor/CNBC",
+        ],
+    },
 ]
 
 NEGATIVE_TARGETS = [
@@ -58,6 +83,10 @@ def _validate_target(target: dict, fixture_path: str, html: str) -> list[str]:
     for pattern in target["forbid"]:
         if re.search(pattern, html):
             failures.append(f"forbidden-pattern:{pattern}:{fixture_path}")
+
+    for pattern in target.get("required_patterns", []):
+        if not re.search(pattern, html):
+            failures.append(f"missing-required-pattern:{pattern}:{fixture_path}")
 
     return failures
 

@@ -3,6 +3,7 @@
 
 import os
 import sys
+import time
 from collections import Counter
 from datetime import datetime, timezone
 from typing import Any, Dict, List
@@ -20,6 +21,7 @@ from common.markdown_utils import (
 )
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feeds_concurrent
+from common.collector_metrics import log_collection_summary
 
 
 logger = setup_logging("collect_worldmonitor_news")
@@ -153,6 +155,7 @@ def fetch_worldmonitor_feeds() -> List[Dict[str, Any]]:
 
 def main() -> None:
     logger.info("=== Starting worldmonitor feed collection ===")
+    started_at = time.monotonic()
 
     dedup = DedupEngine("worldmonitor_news_seen.json")
     generator = PostGenerator("market-analysis")
@@ -163,12 +166,30 @@ def main() -> None:
 
     if dedup.is_duplicate_exact(post_title, "worldmonitor", today):
         logger.info("WorldMonitor post already exists, skipping")
+        log_collection_summary(
+            logger,
+            collector="collect_worldmonitor_news",
+            source_count=0,
+            unique_items=0,
+            post_created=0,
+            started_at=started_at,
+            extras={"status": "duplicate"},
+        )
         dedup.save()
         return
 
     items = fetch_worldmonitor_feeds()
     if not items:
         logger.warning("No worldmonitor items collected, skipping post")
+        log_collection_summary(
+            logger,
+            collector="collect_worldmonitor_news",
+            source_count=0,
+            unique_items=0,
+            post_created=0,
+            started_at=started_at,
+            extras={"status": "empty"},
+        )
         dedup.save()
         return
 
@@ -372,6 +393,21 @@ def main() -> None:
 
     dedup.save()
     logger.info("=== Worldmonitor feed collection complete ===")
+    unique_count = len(
+        {
+            f"{item.get('title', '')}|{item.get('source', '')}|{item.get('link', '')}"
+            for item in items
+            if item.get("title")
+        }
+    )
+    log_collection_summary(
+        logger,
+        collector="collect_worldmonitor_news",
+        source_count=len(source_counter),
+        unique_items=unique_count,
+        post_created=1 if filepath else 0,
+        started_at=started_at,
+    )
 
 
 if __name__ == "__main__":
