@@ -38,6 +38,7 @@ lang: "ko"
 </div>
 
 ## 주요 이슈
+
 | # | 이슈 | 테마 | 시장 영향 | 출처 |
 |---|------|------|-----------|------|
 | 1 | [**US build-up of warships and fighter jets tracked near Iran**](https://www.bbc.com/news/articles/c1d64p3q2d0o?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
@@ -52,6 +53,7 @@ lang: "ko"
 | 10 | [**Kenya strike delays flights at international hub airport**](https://www.bbc.com/news/articles/c363096kd5po?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
 
 ## 출처 커버리지
+
 | 출처 | 건수 | 비중 |
 |------|------|------|
 | WorldMonitor/BBC World | 15건 | 75% |

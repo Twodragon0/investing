@@ -3,6 +3,7 @@
 
 import os
 import sys
+from html import escape
 from collections import Counter
 from datetime import datetime, timezone
 from typing import Any, Dict, List
@@ -84,6 +85,15 @@ def wm_url(source_url: str) -> str:
     return WM_PROXY + quote(source_url, safe="")
 
 
+def _md_table_cell(value: str) -> str:
+    text = (value or "").replace("\n", " ").strip()
+    return text.replace("|", "\\|")
+
+
+def _html_text(value: str) -> str:
+    return escape((value or "").replace("|", "&#124;").strip(), quote=True)
+
+
 def fetch_worldmonitor_feeds() -> List[Dict[str, Any]]:
     feeds = [
         (
@@ -157,6 +167,9 @@ def main() -> None:
     ref_items: List[Dict[str, str]] = []
 
     for item in items:
+        if len(rows) >= 20:
+            break
+
         title = item.get("title", "").strip()
         link = item.get("link", "").strip()
         source = item.get("source", "unknown").strip()
@@ -170,15 +183,24 @@ def main() -> None:
 
         if link:
             rows.append(
-                f"| {len(rows) + 1} | [**{title}**]({link}) | {theme} | {impact} | {source} |"
+                "| "
+                f"{len(rows) + 1} | "
+                f"[{_md_table_cell(f'**{title}**')}]({link}) | "
+                f"{_md_table_cell(theme)} | "
+                f"{_md_table_cell(impact)} | "
+                f"{_md_table_cell(source)} |"
             )
             ref_items.append({"title": title, "link": link, "source": source})
         else:
             rows.append(
-                f"| {len(rows) + 1} | **{title}** | {theme} | {impact} | {source} |"
+                "| "
+                f"{len(rows) + 1} | "
+                f"**{_md_table_cell(title)}** | "
+                f"{_md_table_cell(theme)} | "
+                f"{_md_table_cell(impact)} | "
+                f"{_md_table_cell(source)} |"
             )
 
-    rows = rows[:20]
     total_items = len(rows)
     top_sources = ", ".join(
         f"{name} ({count}건)" for name, count in source_counter.most_common(5)
@@ -186,7 +208,9 @@ def main() -> None:
 
     for name, count in source_counter.most_common(6):
         ratio = (count / max(total_items, 1)) * 100
-        source_rows.append(f"| {name} | {count}건 | {ratio:.0f}% |")
+        source_rows.append(
+            f"| {_md_table_cell(name)} | {_md_table_cell(f'{count}건')} | {_md_table_cell(f'{ratio:.0f}%')} |"
+        )
 
     theme_rows = []
     for theme, count in theme_counter.most_common(5):
@@ -232,6 +256,7 @@ def main() -> None:
             "</div>",
             "",
             "## 주요 이슈",
+            "",
             "| # | 이슈 | 테마 | 시장 영향 | 출처 |",
             "|---|------|------|-----------|------|",
         ]
@@ -242,6 +267,7 @@ def main() -> None:
         [
             "",
             "## 출처 커버리지",
+            "",
             "| 출처 | 건수 | 비중 |",
             "|------|------|------|",
         ]
@@ -254,6 +280,7 @@ def main() -> None:
                 "",
                 "## 원문 링크 묶음",
                 '<details><summary>상위 이슈 원문 펼치기</summary><div class="details-content">',
+                "<ol>",
             ]
         )
         seen = set()
@@ -264,10 +291,11 @@ def main() -> None:
                 continue
             seen.add(link)
             content_parts.append(
-                f'{rank}. [{ref["title"][:90]}]({link}) <span class="source-tag">{ref["source"]}</span>'
+                f'<li><a href="{escape(link, quote=True)}">{_html_text(ref["title"][:90])}</a> '
+                f'<span class="source-tag">{_html_text(ref["source"])}</span></li>'
             )
             rank += 1
-        content_parts.extend(["</div></details>"])
+        content_parts.extend(["</ol>", "</div></details>"])
 
     content_parts.extend(
         [
