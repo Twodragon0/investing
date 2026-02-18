@@ -12,71 +12,261 @@ No LLM or external dependencies required.
 import re
 import logging
 from collections import Counter
-from typing import List, Dict, Any, Tuple
+from typing import List, Dict, Any, Optional, Tuple
 
 logger = logging.getLogger(__name__)
 
 # Theme definitions: (theme_name_ko, theme_key, emoji, keywords)
 THEMES = [
-    ("규제/정책", "regulation", "🔵", [
-        "sec", "cftc", "fca", "regulation", "regulatory", "compliance",
-        "규제", "금융위", "금감원", "mica", "esma", "mas", "법안", "bill",
-        "enforcement", "lawsuit", "소송", "제재",
-    ]),
-    ("DeFi", "defi", "🟣", [
-        "defi", "dex", "yield", "lending", "tvl", "liquidity",
-        "aave", "uniswap", "compound", "staking",
-        "restaking", "bridge", "swap", "pool", "vault",
-    ]),
-    ("비트코인", "bitcoin", "🟠", [
-        "bitcoin", "btc", "mining", "halving", "비트코인", "채굴",
-        "satoshi", "lightning network",
-        "ordinals", "runes", "etf",
-    ]),
-    ("이더리움", "ethereum", "🔷", [
-        "ethereum", "eth", "layer2", "rollup", "이더리움",
-        "solidity", "evm", "l2",
-        "blob", "dencun", "arbitrum", "optimism", "base", "zksync",
-    ]),
-    ("AI/기술", "ai_tech", "🤖", [
-        "ai", "artificial intelligence", "gpu", "인공지능",
-        "machine learning", "chatgpt", "nvidia", "반도체",
-        "엔비디아", "테슬라", "애플", "마이크로소프트", "구글",
-        "openai", "anthropic", "semiconductor", "tsmc",
-    ]),
-    ("매크로/금리", "macro", "📊", [
-        "fed", "interest rate", "inflation", "금리", "한국은행",
-        "gdp", "cpi", "fomc", "rate cut", "rate hike", "환율",
-        "물가", "실업률", "고용", "소비자물가", "pce",
-        "기준금리", "양적완화", "양적긴축", "treasury", "채권",
-    ]),
-    ("거래소", "exchange", "🏦", [
-        "binance", "coinbase", "exchange", "listing", "거래소",
-        "upbit", "bithumb", "bybit", "okx",
-        "kraken", "상장", "상장폐지", "delisting",
-    ]),
-    ("보안/해킹", "security", "🔴", [
-        "hack", "exploit", "vulnerability", "security", "해킹",
-        "breach", "phishing", "scam", "rug pull",
-        "drain", "flash loan", "oracle", "재진입",
-    ]),
-    ("정치/정책", "politics", "🏛️", [
-        "trump", "이재명", "election", "policy", "정책",
-        "tariff", "sanction", "congress", "의회", "관세",
-        "백악관", "대통령", "executive order", "행정명령",
-    ]),
-    ("NFT/Web3", "nft_web3", "🎨", [
-        "nft", "metaverse", "web3", "opensea", "메타버스",
-        "digital collectible",
-        "gamefi", "socialfi", "creator",
-    ]),
-    ("가격/시장", "price_market", "📈", [
-        "price", "rally", "crash", "surge", "plunge", "시세",
-        "상승", "하락", "급등", "급락", "폭락", "반등",
-        "bull", "bear", "bullish", "bearish", "강세", "약세",
-        "조정", "correction", "코스피", "코스닥", "나스닥",
-        "다우존스", "금", "원유", "달러",
-    ]),
+    (
+        "규제/정책",
+        "regulation",
+        "🔵",
+        [
+            "sec",
+            "cftc",
+            "fca",
+            "regulation",
+            "regulatory",
+            "compliance",
+            "규제",
+            "금융위",
+            "금감원",
+            "mica",
+            "esma",
+            "mas",
+            "법안",
+            "bill",
+            "enforcement",
+            "lawsuit",
+            "소송",
+            "제재",
+        ],
+    ),
+    (
+        "DeFi",
+        "defi",
+        "🟣",
+        [
+            "defi",
+            "dex",
+            "yield",
+            "lending",
+            "tvl",
+            "liquidity",
+            "aave",
+            "uniswap",
+            "compound",
+            "staking",
+            "restaking",
+            "bridge",
+            "swap",
+            "pool",
+            "vault",
+        ],
+    ),
+    (
+        "비트코인",
+        "bitcoin",
+        "🟠",
+        [
+            "bitcoin",
+            "btc",
+            "mining",
+            "halving",
+            "비트코인",
+            "채굴",
+            "satoshi",
+            "lightning network",
+            "ordinals",
+            "runes",
+            "etf",
+        ],
+    ),
+    (
+        "이더리움",
+        "ethereum",
+        "🔷",
+        [
+            "ethereum",
+            "eth",
+            "layer2",
+            "rollup",
+            "이더리움",
+            "solidity",
+            "evm",
+            "l2",
+            "blob",
+            "dencun",
+            "arbitrum",
+            "optimism",
+            "base",
+            "zksync",
+        ],
+    ),
+    (
+        "AI/기술",
+        "ai_tech",
+        "🤖",
+        [
+            "ai",
+            "artificial intelligence",
+            "gpu",
+            "인공지능",
+            "machine learning",
+            "chatgpt",
+            "nvidia",
+            "반도체",
+            "엔비디아",
+            "테슬라",
+            "애플",
+            "마이크로소프트",
+            "구글",
+            "openai",
+            "anthropic",
+            "semiconductor",
+            "tsmc",
+        ],
+    ),
+    (
+        "매크로/금리",
+        "macro",
+        "📊",
+        [
+            "fed",
+            "interest rate",
+            "inflation",
+            "금리",
+            "한국은행",
+            "gdp",
+            "cpi",
+            "fomc",
+            "rate cut",
+            "rate hike",
+            "환율",
+            "물가",
+            "실업률",
+            "고용",
+            "소비자물가",
+            "pce",
+            "기준금리",
+            "양적완화",
+            "양적긴축",
+            "treasury",
+            "채권",
+        ],
+    ),
+    (
+        "거래소",
+        "exchange",
+        "🏦",
+        [
+            "binance",
+            "coinbase",
+            "exchange",
+            "listing",
+            "거래소",
+            "upbit",
+            "bithumb",
+            "bybit",
+            "okx",
+            "kraken",
+            "상장",
+            "상장폐지",
+            "delisting",
+        ],
+    ),
+    (
+        "보안/해킹",
+        "security",
+        "🔴",
+        [
+            "hack",
+            "exploit",
+            "vulnerability",
+            "security",
+            "해킹",
+            "breach",
+            "phishing",
+            "scam",
+            "rug pull",
+            "drain",
+            "flash loan",
+            "oracle",
+            "재진입",
+        ],
+    ),
+    (
+        "정치/정책",
+        "politics",
+        "🏛️",
+        [
+            "trump",
+            "이재명",
+            "election",
+            "policy",
+            "정책",
+            "tariff",
+            "sanction",
+            "congress",
+            "의회",
+            "관세",
+            "백악관",
+            "대통령",
+            "executive order",
+            "행정명령",
+        ],
+    ),
+    (
+        "NFT/Web3",
+        "nft_web3",
+        "🎨",
+        [
+            "nft",
+            "metaverse",
+            "web3",
+            "opensea",
+            "메타버스",
+            "digital collectible",
+            "gamefi",
+            "socialfi",
+            "creator",
+        ],
+    ),
+    (
+        "가격/시장",
+        "price_market",
+        "📈",
+        [
+            "price",
+            "rally",
+            "crash",
+            "surge",
+            "plunge",
+            "시세",
+            "상승",
+            "하락",
+            "급등",
+            "급락",
+            "폭락",
+            "반등",
+            "bull",
+            "bear",
+            "bullish",
+            "bearish",
+            "강세",
+            "약세",
+            "조정",
+            "correction",
+            "코스피",
+            "코스닥",
+            "나스닥",
+            "다우존스",
+            "금",
+            "원유",
+            "달러",
+        ],
+    ),
 ]
 
 TOP_THEMES_COUNT = 5
@@ -86,19 +276,57 @@ BAR_WIDTH = 18
 # Priority classification keywords
 PRIORITY_KEYWORDS: Dict[str, List[str]] = {
     "P0": [
-        "crash", "폭락", "hack", "해킹", "executive order", "행정명령",
-        "rate decision", "금리 결정", "파산", "bankruptcy", "emergency",
-        "긴급", "bank run", "뱅크런", "exploit", "rug pull",
+        "crash",
+        "폭락",
+        "hack",
+        "해킹",
+        "executive order",
+        "행정명령",
+        "rate decision",
+        "금리 결정",
+        "파산",
+        "bankruptcy",
+        "emergency",
+        "긴급",
+        "bank run",
+        "뱅크런",
+        "exploit",
+        "rug pull",
     ],
     "P1": [
-        "regulation", "규제", "etf", "approval", "fomc", "tariff", "관세",
-        "earnings", "실적", "sanctions", "제재", "indictment", "기소",
-        "sec filing", "listing", "상장", "delisting", "상장폐지",
+        "regulation",
+        "규제",
+        "etf",
+        "approval",
+        "fomc",
+        "tariff",
+        "관세",
+        "earnings",
+        "실적",
+        "sanctions",
+        "제재",
+        "indictment",
+        "기소",
+        "sec filing",
+        "listing",
+        "상장",
+        "delisting",
+        "상장폐지",
     ],
     "P2": [
-        "partnership", "upgrade", "launch", "airdrop", "report",
-        "update", "integration", "collaboration", "제휴", "출시",
-        "업그레이드", "에어드롭", "리포트",
+        "partnership",
+        "upgrade",
+        "launch",
+        "airdrop",
+        "report",
+        "update",
+        "integration",
+        "collaboration",
+        "제휴",
+        "출시",
+        "업그레이드",
+        "에어드롭",
+        "리포트",
     ],
 }
 
@@ -141,7 +369,9 @@ class ThemeSummarizer:
             matched = []
             kw_set = set(keywords)
             for idx, item in enumerate(self.items):
-                item_text = (item.get("title", "") + " " + item.get("description", "")).lower()
+                item_text = (
+                    item.get("title", "") + " " + item.get("description", "")
+                ).lower()
                 if any(kw in item_text for kw in kw_set):
                     matched.append(item)
                     if idx not in article_assigned:
@@ -180,7 +410,9 @@ class ThemeSummarizer:
             for idx, item in enumerate(self.items):
                 if idx in assigned:
                     continue
-                text = (item.get("title", "") + " " + item.get("description", "")).lower()
+                text = (
+                    item.get("title", "") + " " + item.get("description", "")
+                ).lower()
                 if any(kw in text for kw in keywords):
                     result[priority].append(item)
                     assigned.add(idx)
@@ -189,8 +421,11 @@ class ThemeSummarizer:
 
     # Color classes for theme distribution bars
     _BAR_COLORS = [
-        "bar-fill-orange", "bar-fill-blue", "bar-fill-purple",
-        "bar-fill-green", "bar-fill-red",
+        "bar-fill-orange",
+        "bar-fill-blue",
+        "bar-fill-purple",
+        "bar-fill-green",
+        "bar-fill-red",
     ]
 
     def generate_distribution_chart(self) -> str:
@@ -216,16 +451,17 @@ class ThemeSummarizer:
                 f'<span class="theme-label">{emoji} {name}</span>'
                 f'<div class="bar-track">'
                 f'<div class="{color} bar-fill" style="width:{pct:.0f}%"></div>'
-                f'</div>'
+                f"</div>"
                 f'<span class="theme-count">{count}건 ({pct:.0f}%)</span>'
-                f'</div>'
+                f"</div>"
             )
-        lines.append('</div>')
+        lines.append("</div>")
         lines.append(f"\n*총 {len(self.items)}건 수집*\n")
         return "\n".join(lines)
 
-    def generate_themed_news_sections(self, max_articles: int = ARTICLES_PER_THEME,
-                                      featured_count: int = 3) -> str:
+    def generate_themed_news_sections(
+        self, max_articles: int = ARTICLES_PER_THEME, featured_count: int = 3
+    ) -> str:
         """Generate theme-based news sections with description cards.
 
         Top articles per theme include description summaries in card format.
@@ -275,9 +511,7 @@ class ThemeSummarizer:
                             desc_text += "..."
                         lines.append(desc_text)
                     if source:
-                        lines.append(
-                            f'<span class="source-tag">{source}</span>\n'
-                        )
+                        lines.append(f'<span class="source-tag">{source}</span>\n')
                     else:
                         lines.append("")
                 else:
@@ -290,21 +524,24 @@ class ThemeSummarizer:
                 if shown >= max_articles:
                     break
 
-            overflow = len([
-                a for a in articles
-                if a.get("title") and a["title"] not in seen_titles
-            ])
+            overflow = len(
+                [
+                    a
+                    for a in articles
+                    if a.get("title") and a["title"] not in seen_titles
+                ]
+            )
             remaining_count = len(remaining_links) + overflow
             if remaining_links:
                 lines.append(
-                    f'<details><summary>그 외 {remaining_count}건 보기</summary>'
+                    f"<details><summary>그 외 {remaining_count}건 보기</summary>"
                     f'<div class="details-content">'
                 )
                 for link_html in remaining_links[:15]:
                     lines.append(link_html)
                 if remaining_count > 15:
                     lines.append(f"<em>...외 {remaining_count - 15}건</em>")
-                lines.append('</div></details>\n')
+                lines.append("</div></details>\n")
 
             lines.append("")
 
@@ -313,25 +550,114 @@ class ThemeSummarizer:
     # Stop words to exclude from theme briefing keywords
     _STOP_WORDS = {
         # English
-        "stock", "market", "today", "will", "this", "that", "with", "from",
-        "have", "been", "were", "what", "when", "where", "which", "while",
-        "more", "than", "also", "just", "into", "over", "some", "most",
-        "here", "they", "their", "them", "there", "these", "those",
-        "about", "after", "before", "could", "would", "should", "other",
-        "news", "says", "said", "like", "amid", "near", "latest", "first",
-        "last", "next", "week", "year", "days", "time", "back", "still",
-        "even", "very", "much", "many", "each", "every", "make", "made",
-        "does", "know", "take", "come", "look", "show", "close", "closes",
-        "gains", "little", "changed", "under", "posts", "surprise",
-        "better", "despite", "price", "update", "updates", "live",
-        "report", "check", "according", "report", "following", "based",
+        "stock",
+        "market",
+        "today",
+        "will",
+        "this",
+        "that",
+        "with",
+        "from",
+        "have",
+        "been",
+        "were",
+        "what",
+        "when",
+        "where",
+        "which",
+        "while",
+        "more",
+        "than",
+        "also",
+        "just",
+        "into",
+        "over",
+        "some",
+        "most",
+        "here",
+        "they",
+        "their",
+        "them",
+        "there",
+        "these",
+        "those",
+        "about",
+        "after",
+        "before",
+        "could",
+        "would",
+        "should",
+        "other",
+        "news",
+        "says",
+        "said",
+        "like",
+        "amid",
+        "near",
+        "latest",
+        "first",
+        "last",
+        "next",
+        "week",
+        "year",
+        "days",
+        "time",
+        "back",
+        "still",
+        "even",
+        "very",
+        "much",
+        "many",
+        "each",
+        "every",
+        "make",
+        "made",
+        "does",
+        "know",
+        "take",
+        "come",
+        "look",
+        "show",
+        "close",
+        "closes",
+        "gains",
+        "little",
+        "changed",
+        "under",
+        "posts",
+        "surprise",
+        "better",
+        "despite",
+        "price",
+        "update",
+        "updates",
+        "live",
+        "report",
+        "check",
+        "according",
+        "report",
+        "following",
+        "based",
         # Korean common
-        "관련", "이슈", "뉴스", "시장", "오늘", "최근", "현재",
-        "전일", "대비", "분야", "주요", "방안부터", "전망까지", "주요뉴스",
+        "관련",
+        "이슈",
+        "뉴스",
+        "시장",
+        "오늘",
+        "최근",
+        "현재",
+        "전일",
+        "대비",
+        "분야",
+        "주요",
+        "방안부터",
+        "전망까지",
+        "주요뉴스",
     }
 
-    def _generate_single_theme_briefing(self, theme_key: str,
-                                         articles: List[Dict[str, Any]]) -> str:
+    def _generate_single_theme_briefing(
+        self, theme_key: str, articles: List[Dict[str, Any]]
+    ) -> str:
         """Generate a 1-sentence briefing for a single theme from descriptions."""
         if not articles:
             return ""
@@ -433,8 +759,11 @@ class ThemeSummarizer:
 
         return "\n".join(lines)
 
-    def generate_executive_summary(self, category_type: str = "general",
-                                    extra_data: Dict[str, Any] | None = None) -> str:
+    def generate_executive_summary(
+        self,
+        category_type: str = "general",
+        extra_data: Optional[Dict[str, Any]] = None,
+    ) -> str:
         """Generate an enhanced TL;DR executive summary with HTML components.
 
         Uses stat grid, theme briefings, and styled P0 alerts.
@@ -542,9 +871,9 @@ class ThemeSummarizer:
         if briefing_items:
             lines.append(
                 f'<div class="alert-box alert-info">'
-                f'<strong>{opener}</strong>'
-                f'<ul>{"".join(briefing_items)}</ul>'
-                f'</div>\n'
+                f"<strong>{opener}</strong>"
+                f"<ul>{''.join(briefing_items)}</ul>"
+                f"</div>\n"
             )
 
         # P0 urgent alerts as red callout
@@ -561,9 +890,9 @@ class ThemeSummarizer:
             if p0_items:
                 lines.append(
                     f'<div class="alert-box alert-urgent">'
-                    f'<strong>긴급 알림</strong>'
-                    f'<ul>{"".join(p0_items)}</ul>'
-                    f'</div>\n'
+                    f"<strong>긴급 알림</strong>"
+                    f"<ul>{''.join(p0_items)}</ul>"
+                    f"</div>\n"
                 )
 
         return "\n".join(lines)

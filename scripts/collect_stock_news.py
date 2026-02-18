@@ -23,6 +23,7 @@ from common.post_generator import PostGenerator
 from common.utils import detect_language, request_with_retry
 from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
+from common.markdown_utils import html_details_list, markdown_link
 
 try:
     from common.browser import BrowserSession, is_playwright_available
@@ -31,6 +32,7 @@ except ImportError:
 
     def is_playwright_available() -> bool:  # type: ignore[misc]
         return False
+
 
 try:
     from common.browser import extract_google_news_links
@@ -50,7 +52,9 @@ def fetch_google_news_browser_stocks(limit: int = 20) -> List[Dict[str, Any]]:
     Falls back to empty list if Playwright is unavailable.
     """
     if not is_playwright_available():
-        logger.info("Playwright not available, skipping Google News browser scraping for stocks")
+        logger.info(
+            "Playwright not available, skipping Google News browser scraping for stocks"
+        )
         return []
 
     if extract_google_news_links is None:
@@ -58,10 +62,14 @@ def fetch_google_news_browser_stocks(limit: int = 20) -> List[Dict[str, Any]]:
         return []
 
     search_configs = [
-        ("https://news.google.com/search?q=stock+market+S%26P+500&hl=en-US&gl=US&ceid=US:en",
-         ["stock", "market", "en"]),
-        ("https://news.google.com/search?q=%EC%A3%BC%EC%8B%9D+%EC%BD%94%EC%8A%A4%ED%94%BC+%EC%BD%94%EC%8A%A4%EB%8B%A5&hl=ko&gl=KR&ceid=KR:ko",
-         ["stock", "market", "ko"]),
+        (
+            "https://news.google.com/search?q=stock+market+S%26P+500&hl=en-US&gl=US&ceid=US:en",
+            ["stock", "market", "en"],
+        ),
+        (
+            "https://news.google.com/search?q=%EC%A3%BC%EC%8B%9D+%EC%BD%94%EC%8A%A4%ED%94%BC+%EC%BD%94%EC%8A%A4%EB%8B%A5&hl=ko&gl=KR&ceid=KR:ko",
+            ["stock", "market", "ko"],
+        ),
     ]
     all_items: List[Dict[str, Any]] = []
 
@@ -69,10 +77,14 @@ def fetch_google_news_browser_stocks(limit: int = 20) -> List[Dict[str, Any]]:
         with BrowserSession(timeout=30_000) as session:
             for search_url, tags in search_configs:
                 try:
-                    session.navigate(search_url, wait_until="domcontentloaded", wait_ms=3000)
+                    session.navigate(
+                        search_url, wait_until="domcontentloaded", wait_ms=3000
+                    )
                     all_items.extend(extract_google_news_links(session, limit, tags))
                 except Exception as e:
-                    logger.warning("Google News browser scraping failed for %s: %s", tags, e)
+                    logger.warning(
+                        "Google News browser scraping failed for %s: %s", tags, e
+                    )
 
         logger.info("Google News Browser stocks: fetched %d items", len(all_items))
     except Exception as e:
@@ -84,16 +96,31 @@ def fetch_google_news_browser_stocks(limit: int = 20) -> List[Dict[str, Any]]:
 def fetch_financial_rss_feeds() -> List[Dict[str, Any]]:
     """Fetch news from major financial media RSS feeds (concurrent)."""
     feeds = [
-        ("https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114",
-         "CNBC Top News", ["stock", "cnbc"]),
-        ("https://feeds.marketwatch.com/marketwatch/topstories/",
-         "MarketWatch", ["stock", "marketwatch"]),
-        ("https://www.hankyung.com/feed/all-news",
-         "한국경제", ["stock", "korean", "한경"]),
-        ("http://file.mk.co.kr/news/rss/rss_30000001.xml",
-         "매일경제", ["stock", "korean", "매경"]),
-        ("https://news.google.com/rss/search?q=site:biz.chosun.com+%EC%A3%BC%EC%8B%9D&hl=ko&gl=KR&ceid=KR:ko",
-         "조선비즈", ["stock", "korean", "조선비즈"]),
+        (
+            "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114",
+            "CNBC Top News",
+            ["stock", "cnbc"],
+        ),
+        (
+            "https://feeds.marketwatch.com/marketwatch/topstories/",
+            "MarketWatch",
+            ["stock", "marketwatch"],
+        ),
+        (
+            "https://www.hankyung.com/feed/all-news",
+            "한국경제",
+            ["stock", "korean", "한경"],
+        ),
+        (
+            "http://file.mk.co.kr/news/rss/rss_30000001.xml",
+            "매일경제",
+            ["stock", "korean", "매경"],
+        ),
+        (
+            "https://news.google.com/rss/search?q=site:biz.chosun.com+%EC%A3%BC%EC%8B%9D&hl=ko&gl=KR&ceid=KR:ko",
+            "조선비즈",
+            ["stock", "korean", "조선비즈"],
+        ),
     ]
     return fetch_rss_feeds_concurrent(feeds)
 
@@ -101,20 +128,41 @@ def fetch_financial_rss_feeds() -> List[Dict[str, Any]]:
 def fetch_google_news_stocks() -> List[Dict[str, Any]]:
     """Fetch stock news from Google News RSS (concurrent)."""
     feeds = [
-        ("https://news.google.com/rss/search?q=stock+market+S%26P+500&hl=en-US&gl=US&ceid=US:en",
-         "Google News Stocks EN", ["stock", "market", "english"]),
-        ("https://news.google.com/rss/search?q=NASDAQ+tech+stocks+AI&hl=en-US&gl=US&ceid=US:en",
-         "NASDAQ/Tech", ["stock", "nasdaq", "tech"]),
-        ("https://news.google.com/rss/search?q=Fed+interest+rate+bond+yield&hl=en-US&gl=US&ceid=US:en",
-         "Fed/Bond", ["stock", "fed", "bond"]),
-        ("https://news.google.com/rss/search?q=주식+코스피+코스닥&hl=ko&gl=KR&ceid=KR:ko",
-         "Google News Stocks KR", ["stock", "kospi", "korean"]),
-        ("https://news.google.com/rss/search?q=삼성전자+SK하이닉스+반도체+주가&hl=ko&gl=KR&ceid=KR:ko",
-         "한국 반도체", ["stock", "semiconductor", "korean"]),
-        ("https://news.google.com/rss/search?q=외국인+기관+순매수+순매도&hl=ko&gl=KR&ceid=KR:ko",
-         "한국 수급동향", ["stock", "flow", "korean"]),
-        ("https://news.google.com/rss/search?q=한국은행+금리+환율+원달러&hl=ko&gl=KR&ceid=KR:ko",
-         "한국 금리/환율", ["stock", "rate", "korean"]),
+        (
+            "https://news.google.com/rss/search?q=stock+market+S%26P+500&hl=en-US&gl=US&ceid=US:en",
+            "Google News Stocks EN",
+            ["stock", "market", "english"],
+        ),
+        (
+            "https://news.google.com/rss/search?q=NASDAQ+tech+stocks+AI&hl=en-US&gl=US&ceid=US:en",
+            "NASDAQ/Tech",
+            ["stock", "nasdaq", "tech"],
+        ),
+        (
+            "https://news.google.com/rss/search?q=Fed+interest+rate+bond+yield&hl=en-US&gl=US&ceid=US:en",
+            "Fed/Bond",
+            ["stock", "fed", "bond"],
+        ),
+        (
+            "https://news.google.com/rss/search?q=주식+코스피+코스닥&hl=ko&gl=KR&ceid=KR:ko",
+            "Google News Stocks KR",
+            ["stock", "kospi", "korean"],
+        ),
+        (
+            "https://news.google.com/rss/search?q=삼성전자+SK하이닉스+반도체+주가&hl=ko&gl=KR&ceid=KR:ko",
+            "한국 반도체",
+            ["stock", "semiconductor", "korean"],
+        ),
+        (
+            "https://news.google.com/rss/search?q=외국인+기관+순매수+순매도&hl=ko&gl=KR&ceid=KR:ko",
+            "한국 수급동향",
+            ["stock", "flow", "korean"],
+        ),
+        (
+            "https://news.google.com/rss/search?q=한국은행+금리+환율+원달러&hl=ko&gl=KR&ceid=KR:ko",
+            "한국 금리/환율",
+            ["stock", "rate", "korean"],
+        ),
     ]
     return fetch_rss_feeds_concurrent(feeds)
 
@@ -122,7 +170,11 @@ def fetch_google_news_stocks() -> List[Dict[str, Any]]:
 def fetch_yahoo_finance_rss() -> List[Dict[str, Any]]:
     """Fetch from Yahoo Finance RSS feeds."""
     feeds = [
-        ("https://finance.yahoo.com/news/rssindex", "Yahoo Finance", ["stock", "finance"]),
+        (
+            "https://finance.yahoo.com/news/rssindex",
+            "Yahoo Finance",
+            ["stock", "finance"],
+        ),
     ]
     all_items = []
     for url, name, tags in feeds:
@@ -147,7 +199,9 @@ def fetch_alpha_vantage_snapshot(api_key: str) -> List[Dict[str, Any]]:
                 "symbol": symbol,
                 "apikey": api_key,
             }
-            resp = request_with_retry(url, params=params, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL)
+            resp = request_with_retry(
+                url, params=params, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL
+            )
             data = resp.json()
             quote = data.get("Global Quote", {})
 
@@ -156,14 +210,16 @@ def fetch_alpha_vantage_snapshot(api_key: str) -> List[Dict[str, Any]]:
                 change = quote.get("09. change", "N/A")
                 change_pct = quote.get("10. change percent", "N/A")
 
-                items.append({
-                    "title": f"{name} ({symbol}): ${price} ({change_pct})",
-                    "description": f"{name} ({symbol}) - Price: ${price}, Change: {change} ({change_pct})",
-                    "link": f"https://finance.yahoo.com/quote/{symbol}",
-                    "published": datetime.now(timezone.utc).isoformat(),
-                    "source": "Alpha Vantage",
-                    "tags": ["stock", "market-data", symbol.lower()],
-                })
+                items.append(
+                    {
+                        "title": f"{name} ({symbol}): ${price} ({change_pct})",
+                        "description": f"{name} ({symbol}) - Price: ${price}, Change: {change} ({change_pct})",
+                        "link": f"https://finance.yahoo.com/quote/{symbol}",
+                        "published": datetime.now(timezone.utc).isoformat(),
+                        "source": "Alpha Vantage",
+                        "tags": ["stock", "market-data", symbol.lower()],
+                    }
+                )
             time.sleep(1)  # Rate limit
         except requests.exceptions.RequestException as e:
             logger.warning("Alpha Vantage fetch failed for %s: %s", symbol, e)
@@ -177,6 +233,7 @@ def fetch_korean_market_data() -> dict:
     results = {}
     try:
         import yfinance as yf
+
         symbols = {
             "^KS11": "KOSPI",
             "^KQ11": "KOSDAQ",
@@ -221,7 +278,9 @@ def main():
     alpha_items = fetch_alpha_vantage_snapshot(alpha_vantage_key)
 
     financial_rss_items = fetch_financial_rss_feeds()
-    all_items = browser_items + google_items + yahoo_items + alpha_items + financial_rss_items
+    all_items = (
+        browser_items + google_items + yahoo_items + alpha_items + financial_rss_items
+    )
 
     # Fetch Korean market data
     kr_market = fetch_korean_market_data()
@@ -261,21 +320,31 @@ def main():
         lang = detect_language(title)
         if lang == "ko":
             if link:
-                korean_rows.append(f"| {len(korean_rows) + 1} | [**{title}**]({link}) | {source} |")
+                korean_rows.append(
+                    f"| {len(korean_rows) + 1} | [**{title}**]({link}) | {source} |"
+                )
             else:
-                korean_rows.append(f"| {len(korean_rows) + 1} | **{title}** | {source} |")
+                korean_rows.append(
+                    f"| {len(korean_rows) + 1} | **{title}** | {source} |"
+                )
         else:
             if link:
-                global_rows.append(f"| {len(global_rows) + 1} | [**{title}**]({link}) | {source} |")
+                global_rows.append(
+                    f"| {len(global_rows) + 1} | [**{title}**]({link}) | {source} |"
+                )
             else:
-                global_rows.append(f"| {len(global_rows) + 1} | **{title}** | {source} |")
+                global_rows.append(
+                    f"| {len(global_rows) + 1} | **{title}** | {source} |"
+                )
 
     # Limit to top items
     global_rows = global_rows[:15]
     korean_rows = korean_rows[:10]
 
     # Data-driven opening with Korean market summary
-    opening_parts = [f"**{today}** 주식 시장에서 {len(all_items)}건의 뉴스를 분석했습니다."]
+    opening_parts = [
+        f"**{today}** 주식 시장에서 {len(all_items)}건의 뉴스를 분석했습니다."
+    ]
     kr_summary_parts = []
     for name, info in kr_market.items():
         kr_summary_parts.append(f"{name} {info['price']}({info['change_pct']})")
@@ -306,30 +375,41 @@ def main():
         desc = item.get("description", "")
         # Parse "Name (SYM) - Price: $X, Change: Y (Z%)"
         try:
-            price_part = desc.split("Price:")[1].split(",")[0].strip() if "Price:" in desc else "N/A"
+            price_part = (
+                desc.split("Price:")[1].split(",")[0].strip()
+                if "Price:" in desc
+                else "N/A"
+            )
             change_part = ""
             if "(" in desc and desc.endswith(")"):
                 change_part = desc.rsplit("(", 1)[1].rstrip(")")
         except (IndexError, ValueError):
             price_part = "N/A"
             change_part = "N/A"
-        snapshot_items.append({
-            "name": item["title"].split(":")[0].strip() if ":" in item["title"] else item["title"],
-            "price": price_part,
-            "change_pct": change_part or "N/A",
-            "section": "US Market",
-        })
+        snapshot_items.append(
+            {
+                "name": item["title"].split(":")[0].strip()
+                if ":" in item["title"]
+                else item["title"],
+                "price": price_part,
+                "change_pct": change_part or "N/A",
+                "section": "US Market",
+            }
+        )
     # Korean data
     for name, info in kr_market.items():
-        snapshot_items.append({
-            "name": name,
-            "price": info["price"],
-            "change_pct": info["change_pct"],
-            "section": "Korean Market",
-        })
+        snapshot_items.append(
+            {
+                "name": name,
+                "price": info["price"],
+                "change_pct": info["change_pct"],
+                "section": "Korean Market",
+            }
+        )
 
     try:
         from common.image_generator import generate_market_snapshot_card
+
         if snapshot_items:
             img = generate_market_snapshot_card(snapshot_items, today)
             if img:
@@ -350,9 +430,12 @@ def main():
         content_parts.append("\n---\n")
 
     # Global stock news with descriptions (top 5 featured)
-    global_news_items = [item for item in all_items
-                         if item.get("source") != "Alpha Vantage"
-                         and detect_language(item.get("title", "")) != "ko"]
+    global_news_items = [
+        item
+        for item in all_items
+        if item.get("source") != "Alpha Vantage"
+        and detect_language(item.get("title", "")) != "ko"
+    ]
     if global_news_items:
         content_parts.append("## 글로벌 주식 뉴스\n")
         shown = 0
@@ -374,9 +457,12 @@ def main():
             shown += 1
 
     # Korean stock news with descriptions (top 5 featured)
-    korean_news_items = [item for item in all_items
-                         if item.get("source") != "Alpha Vantage"
-                         and detect_language(item.get("title", "")) == "ko"]
+    korean_news_items = [
+        item
+        for item in all_items
+        if item.get("source") != "Alpha Vantage"
+        and detect_language(item.get("title", "")) == "ko"
+    ]
     if korean_news_items:
         content_parts.append("\n## 한국 주식 뉴스\n")
         shown = 0
@@ -404,7 +490,11 @@ def main():
         content_parts.append("| 지수/ETF | 가격 | 변동률 |")
         content_parts.append("|----------|------|--------|")
         for item in alpha_vantage_rows:
-            title_short = item["title"].split(":")[0].strip() if ":" in item["title"] else item["title"]
+            title_short = (
+                item["title"].split(":")[0].strip()
+                if ":" in item["title"]
+                else item["title"]
+            )
             desc = item.get("description", "")
             # Extract change_pct
             change_pct = "N/A"
@@ -424,21 +514,39 @@ def main():
                     pass
             link = item.get("link", "")
             if link:
-                content_parts.append(f"| [**{title_short}**]({link}) | {price_str} | {change_display} |")
-                source_links.append({"title": item["title"], "link": link, "source": item.get("source", "")})
+                content_parts.append(
+                    f"| [**{title_short}**]({link}) | {price_str} | {change_display} |"
+                )
+                source_links.append(
+                    {
+                        "title": item["title"],
+                        "link": link,
+                        "source": item.get("source", ""),
+                    }
+                )
             else:
-                content_parts.append(f"| **{title_short}** | {price_str} | {change_display} |")
+                content_parts.append(
+                    f"| **{title_short}** | {price_str} | {change_display} |"
+                )
         for name, info in kr_market.items():
             try:
                 pval = float(info["change_pct"].replace("%", "").replace("+", ""))
                 icon = "🟢" if pval >= 0 else "🔴"
             except (ValueError, AttributeError):
                 icon = ""
-            content_parts.append(f"| **{name}** | {info['price']} | {icon} {info['change_pct']} |")
+            content_parts.append(
+                f"| **{name}** | {info['price']} | {icon} {info['change_pct']} |"
+            )
     else:
-        content_parts.append("> 시장 데이터를 일시적으로 가져올 수 없습니다. 아래 링크에서 직접 확인하세요.\n")
-        content_parts.append("- [Yahoo Finance - S&P 500](https://finance.yahoo.com/quote/%5EGSPC/)")
-        content_parts.append("- [네이버 금융 - KOSPI](https://finance.naver.com/sise/sise_index.naver?code=KOSPI)")
+        content_parts.append(
+            "> 시장 데이터를 일시적으로 가져올 수 없습니다. 아래 링크에서 직접 확인하세요.\n"
+        )
+        content_parts.append(
+            "- [Yahoo Finance - S&P 500](https://finance.yahoo.com/quote/%5EGSPC/)"
+        )
+        content_parts.append(
+            "- [네이버 금융 - KOSPI](https://finance.naver.com/sise/sise_index.naver?code=KOSPI)"
+        )
 
     # Market insight
     content_parts.append("\n## 시장 인사이트\n")
@@ -446,15 +554,25 @@ def main():
     kospi = kr_market.get("KOSPI")
     usdkrw = kr_market.get("USD/KRW")
     if kospi:
-        insight_lines.append(f"한국 증시는 KOSPI **{kospi['price']}** ({kospi['change_pct']})으로 마감했습니다.")
+        insight_lines.append(
+            f"한국 증시는 KOSPI **{kospi['price']}** ({kospi['change_pct']})으로 마감했습니다."
+        )
     if usdkrw:
-        insight_lines.append(f"원달러 환율은 **{usdkrw['price']}**원으로, 환율 변동이 외국인 투자 심리에 영향을 줄 수 있습니다.")
+        insight_lines.append(
+            f"원달러 환율은 **{usdkrw['price']}**원으로, 환율 변동이 외국인 투자 심리에 영향을 줄 수 있습니다."
+        )
     if alpha_vantage_rows:
-        insight_lines.append(f"미국 시장에서 주요 ETF {len(alpha_vantage_rows)}종의 데이터가 수집되었습니다.")
+        insight_lines.append(
+            f"미국 시장에서 주요 ETF {len(alpha_vantage_rows)}종의 데이터가 수집되었습니다."
+        )
     if not insight_lines:
-        insight_lines.append("현재 시장 데이터를 충분히 수집하지 못했습니다. API 제한 또는 휴장일일 수 있습니다.")
+        insight_lines.append(
+            "현재 시장 데이터를 충분히 수집하지 못했습니다. API 제한 또는 휴장일일 수 있습니다."
+        )
     insight_lines.append("")
-    insight_lines.append("> *본 시장 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*")
+    insight_lines.append(
+        "> *본 시장 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
+    )
     content_parts.extend(insight_lines)
 
     content_parts.append("\n---\n")
@@ -470,14 +588,16 @@ def main():
                 unique_refs.append(ref)
 
         ref_count = len(unique_refs)
-        content_parts.append(f'\n<details><summary>참고 링크 ({ref_count}건)</summary>')
-        content_parts.append('<div class="details-content">\n')
-        for i, ref in enumerate(unique_refs, 1):
-            content_parts.append(f"{i}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}")
-        content_parts.append('\n</div></details>\n')
+        ref_items = [
+            f"{markdown_link(ref['title'][:80], ref['link'])} - {ref['source']}"
+            for ref in unique_refs
+        ]
+        content_parts.append(html_details_list(f"참고 링크 ({ref_count}건)", ref_items))
 
     # Data collection footer
-    content_parts.append(f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC")
+    content_parts.append(
+        f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC"
+    )
 
     content = "\n".join(content_parts)
 
