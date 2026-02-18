@@ -131,33 +131,20 @@ jobs:
 
       - name: Resolve Slack config
         id: slack
-        shell: bash
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-          AI_SLACK_BOT_TOKEN: ${{ secrets.AI_SLACK_BOT_TOKEN }}
-          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
-          SLACK_CHANNEL_ID_INVESTING: ${{ secrets.SLACK_CHANNEL_ID_INVESTING }}
-          AI_SLACK_CHANNEL_ID_INVESTING: ${{ secrets.AI_SLACK_CHANNEL_ID_INVESTING }}
-          SLACK_CHANNEL_INVESTING: ${{ secrets.SLACK_CHANNEL_INVESTING }}
-          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
-          AI_SLACK_CHANNEL_ID: ${{ secrets.AI_SLACK_CHANNEL_ID }}
-          SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
-        run: |
-          set -euo pipefail
-          token="${SLACK_BOT_TOKEN:-}"
-          if [ -z "$token" ]; then token="${AI_SLACK_BOT_TOKEN:-}"; fi
-          if [ -z "$token" ]; then token="${SLACK_TOKEN:-}"; fi
-
-          channel="${SLACK_CHANNEL_ID_INVESTING:-${AI_SLACK_CHANNEL_ID_INVESTING:-${SLACK_CHANNEL_INVESTING:-${SLACK_CHANNEL_ID:-${AI_SLACK_CHANNEL_ID:-${SLACK_CHANNEL:-}}}}}}"
-
-          can_post=true
-          if [ -z "$token" ] || [ -z "$channel" ]; then
-            can_post=false
-          fi
-
-          echo "can_post=$can_post" >> "$GITHUB_OUTPUT"
-          echo "token=$token" >> "$GITHUB_OUTPUT"
-          echo "channel=$channel" >> "$GITHUB_OUTPUT"
+        uses: ./.github/actions/resolve-slack-config
+        with:
+          target_channel_alias: investing
+          token_candidates: |
+            ${{ secrets.SLACK_BOT_TOKEN }}
+            ${{ secrets.AI_SLACK_BOT_TOKEN }}
+            ${{ secrets.SLACK_TOKEN }}
+          channel_candidates_investing: |
+            ${{ secrets.SLACK_CHANNEL_ID_INVESTING }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID_INVESTING }}
+            ${{ secrets.SLACK_CHANNEL_INVESTING }}
+            ${{ secrets.SLACK_CHANNEL_ID }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID }}
+            ${{ secrets.SLACK_CHANNEL }}
 
       - name: Post classified failure to Slack
         if: steps.slack.outputs.can_post == 'true'

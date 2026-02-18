@@ -147,97 +147,51 @@ jobs:
 
       - name: Validate Slack config
         id: slack-config
-        shell: bash
-        env:
-          TARGET_CHANNEL_ALIAS: ${{ matrix.channel_alias }}
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-          AI_SLACK_BOT_TOKEN: ${{ secrets.AI_SLACK_BOT_TOKEN }}
-          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
-          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
-          AI_SLACK_CHANNEL_ID: ${{ secrets.AI_SLACK_CHANNEL_ID }}
-          SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
-          SLACK_CHANNEL_ID_OPS: ${{ secrets.SLACK_CHANNEL_ID_OPS }}
-          SLACK_CHANNEL_ID_DEV: ${{ secrets.SLACK_CHANNEL_ID_DEV }}
-          SLACK_CHANNEL_ID_SECURITY: ${{ secrets.SLACK_CHANNEL_ID_SECURITY }}
-          SLACK_CHANNEL_ID_AI: ${{ secrets.SLACK_CHANNEL_ID_AI }}
-          SLACK_CHANNEL_ID_INVESTING: ${{ secrets.SLACK_CHANNEL_ID_INVESTING }}
-          AI_SLACK_CHANNEL_ID_OPS: ${{ secrets.AI_SLACK_CHANNEL_ID_OPS }}
-          AI_SLACK_CHANNEL_ID_DEV: ${{ secrets.AI_SLACK_CHANNEL_ID_DEV }}
-          AI_SLACK_CHANNEL_ID_SECURITY: ${{ secrets.AI_SLACK_CHANNEL_ID_SECURITY }}
-          AI_SLACK_CHANNEL_ID_AI: ${{ secrets.AI_SLACK_CHANNEL_ID_AI }}
-          AI_SLACK_CHANNEL_ID_INVESTING: ${{ secrets.AI_SLACK_CHANNEL_ID_INVESTING }}
-          SLACK_CHANNEL_OPS: ${{ secrets.SLACK_CHANNEL_OPS }}
-          SLACK_CHANNEL_DEV: ${{ secrets.SLACK_CHANNEL_DEV }}
-          SLACK_CHANNEL_SECURITY: ${{ secrets.SLACK_CHANNEL_SECURITY }}
-          SLACK_CHANNEL_AI: ${{ secrets.SLACK_CHANNEL_AI }}
-          SLACK_CHANNEL_INVESTING: ${{ secrets.SLACK_CHANNEL_INVESTING }}
-        run: |
-          set -euo pipefail
-          can_post=true
-          alias="${TARGET_CHANNEL_ALIAS:-investing}"
-
-          bot_token="${SLACK_BOT_TOKEN:-}"
-          if [ -z "$bot_token" ]; then
-            bot_token="${AI_SLACK_BOT_TOKEN:-}"
-          fi
-          if [ -z "$bot_token" ]; then
-            bot_token="${SLACK_TOKEN:-}"
-          fi
-
-          case "$alias" in
-            ops)
-              channel_id="${SLACK_CHANNEL_ID_OPS:-${AI_SLACK_CHANNEL_ID_OPS:-${SLACK_CHANNEL_OPS:-}}}"
-              ;;
-            dev)
-              channel_id="${SLACK_CHANNEL_ID_DEV:-${AI_SLACK_CHANNEL_ID_DEV:-${SLACK_CHANNEL_DEV:-}}}"
-              ;;
-            security)
-              channel_id="${SLACK_CHANNEL_ID_SECURITY:-${AI_SLACK_CHANNEL_ID_SECURITY:-${SLACK_CHANNEL_SECURITY:-}}}"
-              ;;
-            openclaw)
-              channel_id="${SLACK_CHANNEL_ID_OPENCLAW:-${OPENCLAW_SLACK_CHANNEL_ID_OPENCLAW:-${AI_SLACK_CHANNEL_ID_OPENCLAW:-${SLACK_CHANNEL_OPENCLAW:-}}}}"
-              ;;
-            investing|*)
-              channel_id="${SLACK_CHANNEL_ID_INVESTING:-${AI_SLACK_CHANNEL_ID_INVESTING:-${SLACK_CHANNEL_INVESTING:-${SLACK_CHANNEL_ID:-${AI_SLACK_CHANNEL_ID:-${SLACK_CHANNEL:-}}}}}}"
-              ;;
-          esac
-
-          if [ -z "$bot_token" ]; then
-            echo "No Slack bot token secret found; skip Slack post"
-            can_post=false
-          fi
-          if [ -z "$channel_id" ]; then
-            echo "No Slack channel secret found; skip Slack post"
-            can_post=false
-          fi
-          case "$alias" in
-            ops)
-              profile_label="ops-agent"
-              ;;
-            dev)
-              profile_label="dev-agent"
-              ;;
-            security)
-              profile_label="security-agent"
-              ;;
-            openclaw)
-              profile_label="openclaw-agent"
-              ;;
-            investing|*)
-              profile_label="investing-agent"
-              ;;
-          esac
-          echo "can_post=$can_post" >> "$GITHUB_OUTPUT"
-          echo "bot_token=$bot_token" >> "$GITHUB_OUTPUT"
-          echo "channel_id=$channel_id" >> "$GITHUB_OUTPUT"
-          echo "profile_label=$profile_label" >> "$GITHUB_OUTPUT"
+        uses: ./.github/actions/resolve-slack-config
+        with:
+          target_channel_alias: ${{ matrix.channel_alias }}
+          token_candidates: |
+            ${{ secrets.SLACK_BOT_TOKEN }}
+            ${{ secrets.AI_SLACK_BOT_TOKEN }}
+            ${{ secrets.SLACK_TOKEN }}
+          channel_candidates_default: |
+            ${{ secrets.SLACK_CHANNEL_ID }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID }}
+            ${{ secrets.SLACK_CHANNEL }}
+          channel_candidates_ops: |
+            ${{ secrets.SLACK_CHANNEL_ID_OPS }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID_OPS }}
+            ${{ secrets.SLACK_CHANNEL_OPS }}
+          channel_candidates_dev: |
+            ${{ secrets.SLACK_CHANNEL_ID_DEV }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID_DEV }}
+            ${{ secrets.SLACK_CHANNEL_DEV }}
+          channel_candidates_security: |
+            ${{ secrets.SLACK_CHANNEL_ID_SECURITY }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID_SECURITY }}
+            ${{ secrets.SLACK_CHANNEL_SECURITY }}
+          channel_candidates_openclaw: |
+            ${{ secrets.SLACK_CHANNEL_ID_OPENCLAW }}
+            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_OPENCLAW }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID_OPENCLAW }}
+            ${{ secrets.SLACK_CHANNEL_OPENCLAW }}
+            ${{ secrets.SLACK_CHANNEL_ID_AI }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID_AI }}
+            ${{ secrets.SLACK_CHANNEL_AI }}
+          channel_candidates_investing: |
+            ${{ secrets.SLACK_CHANNEL_ID_INVESTING }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID_INVESTING }}
+            ${{ secrets.SLACK_CHANNEL_INVESTING }}
+            ${{ secrets.SLACK_CHANNEL_ID }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID }}
+            ${{ secrets.SLACK_CHANNEL }}
 
       - name: Post to Slack investing channel
         if: steps.slack-config.outputs.can_post == 'true'
         uses: slackapi/slack-github-action@v2.1.1
         with:
           method: chat.postMessage
-          token: ${{ steps.slack-config.outputs.bot_token }}
+          token: ${{ steps.slack-config.outputs.token }}
           payload: |
-            channel: "${{ steps.slack-config.outputs.channel_id }}"
+            channel: "${{ steps.slack-config.outputs.channel }}"
             text: "[${{ steps.slack-config.outputs.profile_label }}]\n${{ steps.summary.outputs.message }}"

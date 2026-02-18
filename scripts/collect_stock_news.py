@@ -23,7 +23,7 @@ from common.post_generator import PostGenerator
 from common.utils import detect_language, request_with_retry
 from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
-from common.markdown_utils import html_details_list, markdown_link
+from common.markdown_utils import html_reference_details, markdown_link
 
 try:
     from common.browser import BrowserSession, is_playwright_available
@@ -587,12 +587,14 @@ def main():
                 seen_links.add(ref["link"])
                 unique_refs.append(ref)
 
-        ref_count = len(unique_refs)
-        ref_items = [
-            f"{markdown_link(ref['title'][:80], ref['link'])} - {ref['source']}"
-            for ref in unique_refs
-        ]
-        content_parts.append(html_details_list(f"참고 링크 ({ref_count}건)", ref_items))
+        content_parts.append(
+            html_reference_details(
+                "참고 링크",
+                unique_refs,
+                limit=15,
+                title_max_len=80,
+            )
+        )
 
     # Data collection footer
     content_parts.append(

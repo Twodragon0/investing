@@ -1,5 +1,5 @@
 from html import escape
-from typing import Iterable, List, Optional, Sequence
+from typing import Dict, Iterable, List, Optional, Sequence
 
 
 def escape_table_cell(value: object) -> str:
@@ -50,3 +50,49 @@ def html_details_list(
         f"<details><summary>{html_text(summary)}</summary>"
         f'<div class="{css_class}"><ol>{li}</ol></div></details>'
     )
+
+
+def html_source_tag(source: str) -> str:
+    return f'<span class="source-tag">{html_text(source)}</span>'
+
+
+def dedupe_references(
+    references: Iterable[Dict[str, str]], limit: Optional[int] = None
+) -> List[Dict[str, str]]:
+    deduped: List[Dict[str, str]] = []
+    seen_links = set()
+
+    for ref in references:
+        link = str(ref.get("link", "")).strip()
+        if not link or link in seen_links:
+            continue
+        seen_links.add(link)
+        deduped.append(
+            {
+                "title": str(ref.get("title", "")).strip(),
+                "link": link,
+                "source": str(ref.get("source", "")).strip(),
+            }
+        )
+        if limit is not None and len(deduped) >= limit:
+            break
+
+    return deduped
+
+
+def html_reference_details(
+    summary: str,
+    references: Iterable[Dict[str, str]],
+    limit: int = 20,
+    title_max_len: int = 90,
+    css_class: str = "details-content",
+    open_in_new_tab: bool = False,
+) -> str:
+    attrs = ' target="_blank" rel="noopener noreferrer"' if open_in_new_tab else ""
+    items = []
+    for ref in dedupe_references(references, limit=limit):
+        title = html_text(ref["title"][:title_max_len])
+        link = html_text(ref["link"])
+        source = html_source_tag(ref["source"])
+        items.append(f'<a href="{link}"{attrs}>{title}</a> {source}')
+    return html_details_list(summary, items, css_class=css_class)

@@ -26,7 +26,7 @@ from common.post_generator import PostGenerator
 from common.utils import sanitize_string
 from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
-from common.markdown_utils import markdown_link, markdown_table, html_details_list
+from common.markdown_utils import markdown_link, markdown_table, html_reference_details
 
 try:
     from common.browser import BrowserSession, is_playwright_available
@@ -656,12 +656,13 @@ def main():
                     seen_links.add(ref["link"])
                     unique_refs.append(ref)
 
-            ref_items = [
-                f"{markdown_link(ref['title'][:80], ref['link'])} - {ref['source']}"
-                for ref in unique_refs
-            ]
             content_parts.append(
-                html_details_list(f"참고 링크 ({len(unique_refs)}건)", ref_items)
+                html_reference_details(
+                    "참고 링크",
+                    unique_refs,
+                    limit=10,
+                    title_max_len=80,
+                )
             )
 
         # Data collection footer
@@ -826,15 +827,14 @@ def main():
             # References
             if security_links:
                 content_parts.append("\n## 참고 링크\n")
-                seen_links = set()
-                ref_count = 1
-                for ref in security_links[:20]:
-                    if ref["link"] not in seen_links:
-                        seen_links.add(ref["link"])
-                        content_parts.append(
-                            f"{ref_count}. [{ref['title'][:80]}]({ref['link']}) - {ref['source']}"
-                        )
-                        ref_count += 1
+                content_parts.append(
+                    html_reference_details(
+                        "참고 링크",
+                        security_links,
+                        limit=20,
+                        title_max_len=80,
+                    )
+                )
 
             content = "\n".join(content_parts)
 

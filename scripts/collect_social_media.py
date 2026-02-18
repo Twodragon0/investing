@@ -24,7 +24,7 @@ from common.post_generator import PostGenerator
 from common.utils import sanitize_string, truncate_text, request_with_retry
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
-from common.markdown_utils import markdown_link, markdown_table, html_details_list
+from common.markdown_utils import markdown_link, markdown_table, html_reference_details
 
 try:
     from common.browser import BrowserSession, is_playwright_available
@@ -625,21 +625,14 @@ def main():
 
     # References section (top 10 only) - collapsible
     if source_links:
-        seen_links = set()
-        unique_links = []
-        for ref in source_links[:10]:
-            if ref["link"] not in seen_links:
-                seen_links.add(ref["link"])
-                unique_links.append(ref)
-
-        if unique_links:
-            ref_items = [
-                f"{markdown_link(ref['title'][:80], ref['link'])} - {ref['source']}"
-                for ref in unique_links
-            ]
-            content_parts.append(
-                html_details_list(f"참고 링크 ({len(unique_links)}건)", ref_items)
+        content_parts.append(
+            html_reference_details(
+                "참고 링크",
+                source_links,
+                limit=10,
+                title_max_len=80,
             )
+        )
 
     # Data collection timestamp footer
     content_parts.append(

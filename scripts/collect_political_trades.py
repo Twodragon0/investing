@@ -23,7 +23,7 @@ from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
-from common.markdown_utils import html_details_list, markdown_link
+from common.markdown_utils import html_reference_details, markdown_link
 
 logger = setup_logging("collect_political_trades")
 
@@ -413,12 +413,14 @@ def main():
                 seen_links.add(ref["link"])
                 unique_links.append(ref)
 
-        ref_count = len(unique_links)
-        ref_items = [
-            f"{markdown_link(ref['title'][:80], ref['link'])} - {ref['source']}"
-            for ref in unique_links
-        ]
-        content_parts.append(html_details_list(f"참고 링크 ({ref_count}건)", ref_items))
+        content_parts.append(
+            html_reference_details(
+                "참고 링크",
+                unique_links,
+                limit=10,
+                title_max_len=80,
+            )
+        )
 
     content_parts.append(
         f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC"

@@ -1,0 +1,132 @@
+name: Resolve Slack Config
+description: Resolve Slack bot token and channel from candidate secrets
+
+inputs:
+  target_channel_alias:
+    description: Channel alias (ops/dev/security/openclaw/investing)
+    required: false
+    default: investing
+  token_candidates:
+    description: Newline-separated token candidates in priority order
+    required: false
+    default: ""
+  channel_candidates_default:
+    description: Newline-separated default channel candidates
+    required: false
+    default: ""
+  channel_candidates_ops:
+    description: Newline-separated ops channel candidates
+    required: false
+    default: ""
+  channel_candidates_dev:
+    description: Newline-separated dev channel candidates
+    required: false
+    default: ""
+  channel_candidates_security:
+    description: Newline-separated security channel candidates
+    required: false
+    default: ""
+  channel_candidates_openclaw:
+    description: Newline-separated openclaw channel candidates
+    required: false
+    default: ""
+  channel_candidates_investing:
+    description: Newline-separated investing channel candidates
+    required: false
+    default: ""
+
+outputs:
+  can_post:
+    description: True when token and channel are both resolved
+    value: ${{ steps.resolve.outputs.can_post }}
+  token:
+    description: Resolved Slack bot token
+    value: ${{ steps.resolve.outputs.token }}
+  channel:
+    description: Resolved Slack channel ID/name
+    value: ${{ steps.resolve.outputs.channel }}
+  alias:
+    description: Normalized target alias
+    value: ${{ steps.resolve.outputs.alias }}
+  profile_label:
+    description: Derived profile label for message prefix
+    value: ${{ steps.resolve.outputs.profile_label }}
+
+runs:
+  using: composite
+  steps:
+    - name: Resolve Slack token and channel
+      id: resolve
+      shell: bash
+      env:
+        INPUT_TARGET_ALIAS: ${{ inputs.target_channel_alias }}
+        INPUT_TOKEN_CANDIDATES: ${{ inputs.token_candidates }}
+        INPUT_CHANNEL_DEFAULT: ${{ inputs.channel_candidates_default }}
+        INPUT_CHANNEL_OPS: ${{ inputs.channel_candidates_ops }}
+        INPUT_CHANNEL_DEV: ${{ inputs.channel_candidates_dev }}
+        INPUT_CHANNEL_SECURITY: ${{ inputs.channel_candidates_security }}
+        INPUT_CHANNEL_OPENCLAW: ${{ inputs.channel_candidates_openclaw }}
+        INPUT_CHANNEL_INVESTING: ${{ inputs.channel_candidates_investing }}
+      run: |
+        set -euo pipefail
+
+        first_non_empty() {
+          while IFS= read -r line; do
+            trimmed="$(printf '%s' "$line" | xargs)"
+            if [ -n "$trimmed" ]; then
+              printf '%s' "$trimmed"
+              return 0
+            fi
+          done
+          return 1
+        }
+
+        alias="$(printf '%s' "${INPUT_TARGET_ALIAS:-investing}" | tr '[:upper:]' '[:lower:]')"
+        case "$alias" in
+          ops|dev|security|openclaw|investing) ;;
+          *) alias="investing" ;;
+        esac
+
+        token=""
+        if token_candidate="$(printf '%s\n' "${INPUT_TOKEN_CANDIDATES:-}" | first_non_empty 2>/dev/null)"; then
+          token="$token_candidate"
+        fi
+
+        channel_candidates="${INPUT_CHANNEL_DEFAULT:-}"
+        case "$alias" in
+          ops)
+            if [ -n "${INPUT_CHANNEL_OPS:-}" ]; then channel_candidates="${INPUT_CHANNEL_OPS}"; fi
+            ;;
+          dev)
+            if [ -n "${INPUT_CHANNEL_DEV:-}" ]; then channel_candidates="${INPUT_CHANNEL_DEV}"; fi
+            ;;
+          security)
+            if [ -n "${INPUT_CHANNEL_SECURITY:-}" ]; then channel_candidates="${INPUT_CHANNEL_SECURITY}"; fi
+            ;;
+          openclaw)
+            if [ -n "${INPUT_CHANNEL_OPENCLAW:-}" ]; then channel_candidates="${INPUT_CHANNEL_OPENCLAW}"; fi
+            ;;
+          investing)
+            if [ -n "${INPUT_CHANNEL_INVESTING:-}" ]; then channel_candidates="${INPUT_CHANNEL_INVESTING}"; fi
+            ;;
+        esac
+
+        channel=""
+        if channel_candidate="$(printf '%s\n' "${channel_candidates:-}" | first_non_empty 2>/dev/null)"; then
+          channel="$channel_candidate"
+        fi
+
+        can_post="true"
+        if [ -z "$token" ] || [ -z "$channel" ]; then
+          can_post="false"
+        fi
+
+        profile_label="${alias}-agent"
+
+        {
+          echo "can_post=$can_post"
+          echo "token=$token"
+          echo "channel=$channel"
+          echo "alias=$alias"
+          echo "profile_label=$profile_label"
+        } >> "$GITHUB_OUTPUT"
