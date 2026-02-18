@@ -22,7 +22,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Resolve Vercel scope context
-        run: bash scripts/vercel_scope.sh context
+        run: |
+          if command -v vercel >/dev/null 2>&1; then
+            bash scripts/vercel_scope.sh context
+          else
+            echo "vercel CLI not installed in this job; skipping scope context check"
+          fi
 
       - name: Check site availability
         id: site_check

@@ -32,7 +32,12 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Resolve Vercel scope context
-        run: bash scripts/vercel_scope.sh context
+        run: |
+          if command -v vercel >/dev/null 2>&1; then
+            bash scripts/vercel_scope.sh context
+          else
+            echo "vercel CLI not installed in this job; skipping scope context check"
+          fi
 
       - name: Build with Jekyll
         run: bundle exec jekyll build --config _config.yml,_config_ghpages.yml --baseurl "${{ steps.pages.outputs.base_path }}"
