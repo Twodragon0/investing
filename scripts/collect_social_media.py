@@ -24,7 +24,12 @@ from common.post_generator import PostGenerator
 from common.utils import sanitize_string, truncate_text, request_with_retry
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
-from common.markdown_utils import markdown_link, markdown_table, html_reference_details
+from common.markdown_utils import (
+    markdown_link,
+    markdown_table,
+    html_reference_details,
+    html_source_tag,
+)
 
 try:
     from common.browser import BrowserSession, is_playwright_available
@@ -512,7 +517,7 @@ def main():
                 if len(description) > 150:
                     desc_text += "..."
                 content_parts.append(f"{desc_text}")
-            content_parts.append(f'<span class="source-tag">{source}</span>\n')
+            content_parts.append(f"{html_source_tag(source)}\n")
 
         content_parts.append("\n---\n")
 
@@ -539,7 +544,7 @@ def main():
                 if len(description) > 150:
                     desc_text += "..."
                 content_parts.append(f"{desc_text}")
-            content_parts.append(f'<span class="source-tag">{source}</span>\n')
+            content_parts.append(f"{html_source_tag(source)}\n")
 
         content_parts.append("\n---\n")
 
@@ -586,7 +591,7 @@ def main():
                 if len(description) > 150:
                     desc_text += "..."
                 content_parts.append(f"{desc_text}")
-            content_parts.append(f'<span class="source-tag">{source}</span>\n')
+            content_parts.append(f"{html_source_tag(source)}\n")
 
         content_parts.append("\n---\n")
 

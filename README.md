@@ -101,6 +101,35 @@ python collect_social_media.py
 
 Manual trigger: `gh workflow run <workflow-name>.yml`
 
+## OpenCode Analyze/Search Mode Timeout Recovery
+
+When running parallel `explore`/`librarian` tasks, use this recovery pattern to avoid losing results on long-running sessions.
+
+1. **Launch async only**
+   - Start research agents with `run_in_background=true`.
+   - Capture both `task_id` and `session_id` from each launch response.
+
+2. **Collect with non-blocking polls first**
+   - Poll with short intervals instead of waiting one long blocking call.
+   - Prefer repeated `background_output(task_id=..., block=false)` checks.
+
+3. **Fallback to session continuation when task_id becomes stale**
+   - If `Task not found` or repeated timeout occurs, continue with:
+   - `task(session_id="...", prompt="Return current findings only")`
+   - Keep `run_in_background=true` for continuation and collect again.
+
+4. **Use idempotent prompts for recovery**
+   - Recovery prompt should request "current findings summary" instead of re-running full scan.
+   - This prevents duplicated long scans and reduces timeout risk.
+
+5. **Cancel disposable jobs after collection**
+   - Cancel only disposable `explore`/`librarian` tasks by specific `taskId`.
+   - Do not use blanket cancellation across all background tasks.
+
+6. **Record evidence in final report**
+   - Include which findings came from direct tools vs. recovered agent sessions.
+   - Note any timed-out session IDs for follow-up runs.
+
 ## Deduplication
 
 Posts are deduplicated using:

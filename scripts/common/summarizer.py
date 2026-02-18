@@ -14,6 +14,8 @@ import logging
 from collections import Counter
 from typing import List, Dict, Any, Optional, Tuple
 
+from .markdown_utils import html_source_tag
+
 logger = logging.getLogger(__name__)
 
 # Theme definitions: (theme_name_ko, theme_key, emoji, keywords)
@@ -511,7 +513,7 @@ class ThemeSummarizer:
                             desc_text += "..."
                         lines.append(desc_text)
                     if source:
-                        lines.append(f'<span class="source-tag">{source}</span>\n')
+                        lines.append(f"{html_source_tag(source)}\n")
                     else:
                         lines.append("")
                 else:

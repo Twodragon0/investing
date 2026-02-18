@@ -23,7 +23,7 @@ from common.post_generator import PostGenerator
 from common.utils import detect_language, request_with_retry
 from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
-from common.markdown_utils import html_reference_details, markdown_link
+from common.markdown_utils import html_reference_details, html_source_tag, markdown_link
 
 try:
     from common.browser import BrowserSession, is_playwright_available
@@ -453,7 +453,7 @@ def main():
                 if len(description) > 150:
                     desc_text += "..."
                 content_parts.append(f"{desc_text}")
-            content_parts.append(f'<span class="source-tag">{source}</span>\n')
+                content_parts.append(f"{html_source_tag(source)}\n")
             shown += 1
 
     # Korean stock news with descriptions (top 5 featured)
@@ -480,7 +480,7 @@ def main():
                 if len(description) > 150:
                     desc_text += "..."
                 content_parts.append(f"{desc_text}")
-            content_parts.append(f'<span class="source-tag">{source}</span>\n')
+                content_parts.append(f"{html_source_tag(source)}\n")
             shown += 1
 
     # Market data snapshot table (improved with emoji direction + Korean data)

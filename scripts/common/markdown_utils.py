@@ -87,12 +87,22 @@ def html_reference_details(
     title_max_len: int = 90,
     css_class: str = "details-content",
     open_in_new_tab: bool = False,
+    include_count: bool = True,
 ) -> str:
+    deduped_refs = dedupe_references(references, limit=limit)
+    if not deduped_refs:
+        return ""
+
     attrs = ' target="_blank" rel="noopener noreferrer"' if open_in_new_tab else ""
     items = []
-    for ref in dedupe_references(references, limit=limit):
+    for ref in deduped_refs:
         title = html_text(ref["title"][:title_max_len])
         link = html_text(ref["link"])
         source = html_source_tag(ref["source"])
         items.append(f'<a href="{link}"{attrs}>{title}</a> {source}')
-    return html_details_list(summary, items, css_class=css_class)
+
+    summary_text = summary
+    if include_count:
+        summary_text = f"{summary} ({len(deduped_refs)}건)"
+
+    return html_details_list(summary_text, items, css_class=css_class)
