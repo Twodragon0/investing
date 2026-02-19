@@ -72,7 +72,7 @@ jobs:
           for f in _state/*.json; do
             if [ -f "$f" ]; then
               SIZE=$(wc -c < "$f" | tr -d ' ')
-              echo "  $(basename $f): ${SIZE} bytes"
+              echo "  $(basename "$f"): ${SIZE} bytes"
             fi
           done
 
