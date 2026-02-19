@@ -62,6 +62,9 @@ jobs:
       - name: Run rendered fixture smoke check
         run: python scripts/verify_rendered_fixtures.py
 
+      - name: Validate collector summary log contract
+        run: python scripts/validate_collector_summary_contract.py
+
       - name: Run GitHub Actions workflow lint
         id: actionlint
         shell: bash

@@ -30,16 +30,6 @@ jobs:
       - name: Publish loop report to job summary
         run: cat _state/continuous-improvement-loop.md >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Read Slack message
-        id: loop_message
-        shell: bash
-        run: |
-          {
-            echo "message<<EOF"
-            cat _state/continuous-improvement-loop-slack.txt
-            echo "EOF"
-          } >> "$GITHUB_OUTPUT"
-
       - name: Resolve Slack config
         id: slack
         uses: ./.github/actions/resolve-slack-config
@@ -60,13 +50,11 @@ jobs:
             ${{ secrets.AI_SLACK_CHANNEL_ID }}
             ${{ secrets.SLACK_CHANNEL }}
 
-      - name: Post loop priorities to Slack
+      - name: Post loop priorities to Slack thread
         if: steps.slack.outputs.can_post == 'true'
-        uses: slackapi/slack-github-action@v2.1.1
-        with:
-          method: chat.postMessage
-          token: ${{ steps.slack.outputs.token }}
-          payload: |
-            channel: "${{ steps.slack.outputs.channel }}"
-            text: |
-              ${{ steps.loop_message.outputs.message }}
+        run: |
+          python3 scripts/post_loop_to_slack.py \
+            --token "${{ steps.slack.outputs.token }}" \
+            --channel "${{ steps.slack.outputs.channel }}" \
+            --message-path _state/continuous-improvement-loop-slack.txt \
+            --marker "[ultrawork-loop]"

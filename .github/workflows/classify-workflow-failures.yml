@@ -63,9 +63,9 @@ jobs:
               re.IGNORECASE,
           )
 
-          matches = [line.strip() for line in lines if pattern.search(line)]
-          selected = matches[:12] if matches else [line.strip() for line in lines[:12]]
-          selected = [line for line in selected if line]
+          indexed = [(idx + 1, line.strip()) for idx, line in enumerate(lines)]
+          matches = [f"L{idx}: {line}" for idx, line in indexed if line and pattern.search(line)]
+          selected = matches[:12] if matches else [f"L{idx}: {line}" for idx, line in indexed[:12] if line]
 
           if not selected:
               print("no relevant log lines captured")
