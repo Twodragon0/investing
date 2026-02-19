@@ -88,8 +88,11 @@ jobs:
                   raw = raw.strip()
                   if not raw:
                       continue
-                  obj = json.loads(raw)
-                  issues.append(obj)
+                  parsed = json.loads(raw)
+                  if isinstance(parsed, list):
+                      issues.extend(parsed)
+                  else:
+                      issues.append(parsed)
 
           lines = ["<!-- actionlint-report -->", "## actionlint report", ""]
           if issues:
@@ -122,8 +125,8 @@ jobs:
           if report.exists():
               for raw in report.read_text(encoding="utf-8").splitlines():
                   if raw.strip():
-                      json.loads(raw)
-                      count += 1
+                      parsed = json.loads(raw)
+                      count += len(parsed) if isinstance(parsed, list) else 1
           print(count)
           PY
           )
