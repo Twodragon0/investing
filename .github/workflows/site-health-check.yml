@@ -56,7 +56,7 @@ jobs:
           done
 
           echo "recent_count=$RECENT_COUNT" >> "$GITHUB_OUTPUT"
-          TOTAL_COUNT=$(ls _posts/*.md 2>/dev/null | wc -l | tr -d ' ')
+          TOTAL_COUNT=$(find _posts -maxdepth 1 -name '*.md' 2>/dev/null | wc -l | tr -d ' ')
           echo "total_count=$TOTAL_COUNT" >> "$GITHUB_OUTPUT"
 
           echo "📊 Total posts: $TOTAL_COUNT"

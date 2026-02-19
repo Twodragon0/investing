@@ -69,7 +69,7 @@ jobs:
             fi
 
             local latest_file
-            latest_file=$(ls -1 "$posts_dir"/*daily-news-summary*.md 2>/dev/null | tail -n 1 || true)
+            latest_file=$(find "$posts_dir" -maxdepth 1 -name '*daily-news-summary*.md' 2>/dev/null | sort | tail -n 1 || true)
             if [ -z "$latest_file" ]; then
               printf -- "- latest digest: unavailable\n"
               return
@@ -108,7 +108,7 @@ jobs:
             local wm_title
             local wm_url
             local wm_slug
-            wm_file=$(ls -1 "$posts_dir"/*daily-worldmonitor-briefing*.md 2>/dev/null | tail -n 1 || true)
+            wm_file=$(find "$posts_dir" -maxdepth 1 -name '*daily-worldmonitor-briefing*.md' 2>/dev/null | sort | tail -n 1 || true)
             if [ -n "$wm_file" ]; then
               wm_title=$(grep -m1 '^title:' "$wm_file" | sed 's/^title:[[:space:]]*//; s/^"//; s/"$//')
               wm_slug=$(basename "$wm_file" .md)
