@@ -28,7 +28,6 @@ from common.collector_metrics import log_collection_summary
 from common.markdown_utils import (
     html_reference_details,
     html_source_tag,
-    markdown_link,
 )
 
 logger = setup_logging("collect_political_trades")
