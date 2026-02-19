@@ -48,4 +48,5 @@ exclude:
   - node_modules/
   - vendor/
   - README.md
+  - docs/
   - _config_ghpages.yml

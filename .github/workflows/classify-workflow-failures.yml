@@ -4,6 +4,7 @@ on:
   workflow_run:
     workflows:
       - Collect Crypto News
+      - Collect DeFi Llama Data
       - Collect Stock News
       - Collect Social Media
       - Collect Regulatory News

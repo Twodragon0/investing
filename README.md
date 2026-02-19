@@ -1,45 +1,71 @@
-# Investing
+# Investing Dragon
 
 Crypto & Stock 뉴스 자동 수집 및 트레이딩 일지 사이트
 
-**Live Site**: [twodragon0.github.io/investing](https://twodragon0.github.io/investing)
+**Live Site**: [investing.2twodragon.com](https://investing.2twodragon.com)
 
 ## Features
 
-- **암호화폐 뉴스**: CryptoPanic, NewsAPI, Google News RSS 등 다중 소스 자동 수집
-- **주식 뉴스**: NewsAPI, Yahoo Finance, KRX 뉴스 자동 수집
-- **크립토 트레이딩 일지**: 일일 거래 기록 및 손익 분석
-- **주식 트레이딩 일지**: 주식 거래 기록
+- **암호화폐 뉴스**: CryptoPanic, NewsAPI, Google News RSS, 거래소 공지 등 다중 소스 자동 수집
+- **주식 뉴스**: NewsAPI, Yahoo Finance, KRX, Alpha Vantage 자동 수집
+- **규제 동향**: SEC, CFTC, FSC, FSA, ESMA, FCA 등 글로벌 규제 뉴스
+- **정치인 거래**: 미국 의회 주식거래, SEC 내부자거래, 한국 정치인 자산공개
+- **DeFi TVL**: DeFi Llama 기반 프로토콜/체인별 TVL 추적
+- **World Monitor**: 지정학, 에너지, 글로벌 뉴스 브리핑
+- **CoinMarketCap/CoinGecko**: 시가총액 순위, 트렌딩, 상승/하락 코인
+- **소셜 미디어**: Telegram 채널, Twitter/X 크립토 동향
 - **보안 알림**: 해킹, 취약점, Rekt News 자동 수집
-- **시장 분석**: 일일 시장 요약, 매크로 지표 (FRED), 공포/탐욕 지수
+- **시장 분석**: 일일/주간 요약, 매크로 지표 (FRED), 공포/탐욕 지수
+- **트레이딩 일지**: 암호화폐/주식 거래 기록 및 손익 분석
 
 ## Architecture
 
 ```
-Jekyll (GitHub Pages) + Python Collectors + GitHub Actions (Cron)
+┌──────────────┐     ┌──────────────┐     ┌──────────────┐
+│  Collection  │ ──▶ │  Processing  │ ──▶ │ Presentation │
+│   (Python)   │     │   (Python)   │     │   (Jekyll)   │
+└──────────────┘     └──────────────┘     └──────────────┘
+  8 Collectors         3 Generators        GitHub Pages
+  20+ Data Sources     Image Generator     Dark Finance Theme
+  GitHub Actions       Dedup Engine        9 Category Pages
 ```
 
-- **Jekyll**: 정적 사이트 생성 (dark finance theme)
-- **Python Scripts**: 뉴스 수집, 중복 제거, 마크다운 포스트 생성
-- **GitHub Actions**: 스케줄 기반 자동 수집 및 배포
+- **Jekyll**: 정적 사이트 생성 (dark finance theme, minima 기반)
+- **Python Scripts**: 뉴스 수집, 중복 제거, 요약 생성, 이미지 생성
+- **GitHub Actions**: 20개 워크플로우 (스케줄 기반 자동 수집, 배포, 모니터링)
+
+> 상세 아키텍처: [docs/architecture.md](docs/architecture.md)
 
 ## Data Sources
 
-| Source | Type | Schedule |
-|--------|------|----------|
-| CryptoPanic API | Crypto news | Every 6h |
-| NewsAPI | News (crypto + stock) | Every 6h |
-| Google News RSS | News (KR/EN) | Every 6h |
-| Binance Announcements | Exchange news | Every 6h |
-| Rekt News | Security incidents | Every 6h |
-| Yahoo Finance RSS | Stock news | Every 6h |
-| Alpha Vantage | US market data | Every 6h / Daily |
-| yfinance | KR market data | Daily |
-| FRED | Macro indicators | Daily |
-| CoinGecko | Crypto prices | Daily |
-| Fear & Greed Index | Market sentiment | Daily |
-| Telegram Channels | Social media | Every 12h |
-| Twitter/X API | Social media | Every 12h |
+### 수집기별 데이터 소스 요약
+
+| 수집기 | 주기 | 주요 소스 |
+|:-------|:----:|:---------|
+| `collect_crypto_news` | 6h | CryptoPanic, NewsAPI, Google News, 거래소 공지(OKX/Binance/Bybit), Rekt News |
+| `collect_stock_news` | 6h | NewsAPI, Yahoo Finance, yfinance, KRX, Alpha Vantage |
+| `collect_coinmarketcap` | 6h | CoinMarketCap API, CoinGecko API (fallback) |
+| `collect_defi_llama` | 6h | DeFi Llama API (프로토콜/체인 TVL) |
+| `collect_social_media` | 12h | Telegram 공개 채널, Twitter/X API v2 |
+| `collect_regulatory` | 12h | SEC, CFTC, Fed, FSC, FSA, MAS, ESMA, FCA (RSS) |
+| `collect_political_trades` | 일간 | 미국 의회 거래공시, SEC EDGAR, 한국 정치인 자산 |
+| `collect_worldmonitor_news` | 일간 | WorldMonitor RSS (지정학, 에너지) |
+
+### API 키 (모두 선택 사항)
+
+| 환경변수 | 서비스 | 용도 |
+|:---------|:-------|:-----|
+| `CRYPTOPANIC_API_KEY` | [CryptoPanic](https://cryptopanic.com/developers/api/) | 암호화폐 뉴스 핫 피드 |
+| `NEWSAPI_API_KEY` | [NewsAPI](https://newsapi.org/) | 키워드 기반 뉴스 검색 |
+| `ALPHA_VANTAGE_API_KEY` | [Alpha Vantage](https://www.alphavantage.co/support/) | 미국 시장 데이터 |
+| `FRED_API_KEY` | [FRED](https://fred.stlouisfed.org/docs/api/api_key.html) | 매크로 경제 지표 |
+| `TWITTER_BEARER_TOKEN` | [Twitter API v2](https://developer.twitter.com/) | 암호화폐 트윗 검색 |
+| `COINGECKO_API_KEY` | [CoinGecko](https://www.coingecko.com/en/api) | 코인 가격/트렌딩 |
+| `CMC_API_KEY` | [CoinMarketCap](https://coinmarketcap.com/api/) | 시가총액 순위 데이터 |
+
+키가 없으면 해당 소스를 건너뛰고 나머지로 수집합니다 (Graceful degradation).
+
+> 전체 소스 카탈로그: [docs/data-sources.md](docs/data-sources.md)
 
 ## Setup
 
@@ -54,111 +80,140 @@ bundle exec jekyll serve
 
 ### 2. GitHub Secrets
 
-Add these secrets in **Settings > Secrets and variables > Actions**:
+**Settings > Secrets and variables > Actions**에서 위 API 키를 Secret으로 등록합니다.
 
-| Secret | Required | Description |
-|--------|----------|-------------|
-| `CRYPTOPANIC_API_KEY` | Optional | [CryptoPanic](https://cryptopanic.com/developers/api/) |
-| `NEWSAPI_API_KEY` | Optional | [NewsAPI](https://newsapi.org/) |
-| `ALPHA_VANTAGE_API_KEY` | Optional | [Alpha Vantage](https://www.alphavantage.co/support/) |
-| `FRED_API_KEY` | Optional | [FRED](https://fred.stlouisfed.org/docs/api/api_key.html) |
-| `TWITTER_BEARER_TOKEN` | Optional | [Twitter API v2](https://developer.twitter.com/) |
-| `COINGECKO_API_KEY` | Optional | [CoinGecko](https://www.coingecko.com/en/api) |
+추가 Slack 연동 (선택):
 
-All API keys are optional. Scripts gracefully skip sources without keys.
+| 환경변수 | 용도 |
+|:---------|:-----|
+| `SLACK_BOT_TOKEN` | 수집 결과 알림 |
+| `SLACK_AI_BOT_TOKEN` | AI 멘션 자동 응답 |
+| `SLACK_CHANNEL_*` | 채널 ID (ops/dev/security/investing) |
 
 ### 3. Enable GitHub Pages
 
-1. Go to **Settings > Pages**
-2. Source: **GitHub Actions**
-3. The `deploy-pages.yml` workflow handles deployment automatically
+1. **Settings > Pages** 이동
+2. Source: **GitHub Actions** 선택
+3. `deploy-pages.yml` 워크플로우가 자동 배포 처리
 
 ### 4. Test Collectors Locally
 
 ```bash
-cd scripts
-pip install -r requirements.txt
+pip install -r scripts/requirements.txt
 
-# Set API keys (optional)
+# API 키 설정 (선택)
 export NEWSAPI_API_KEY=your_key_here
 
-# Run collectors
-python collect_crypto_news.py
-python collect_stock_news.py
-python generate_market_summary.py
-python collect_social_media.py
+# 수집기 실행
+python scripts/collect_crypto_news.py
+python scripts/collect_stock_news.py
+python scripts/collect_coinmarketcap.py
+python scripts/collect_regulatory.py
+python scripts/collect_political_trades.py
+python scripts/collect_social_media.py
+python scripts/collect_worldmonitor_news.py
+python scripts/collect_defi_llama.py
+
+# 생성기 실행
+python scripts/generate_market_summary.py
+python scripts/generate_daily_summary.py
+python scripts/generate_weekly_digest.py
 ```
 
 ## GitHub Actions Workflows
 
-| Workflow | Schedule | Description |
-|----------|----------|-------------|
-| `deploy-pages.yml` | On push to main | Build & deploy Jekyll site |
-| `collect-crypto-news.yml` | `0 */6 * * *` | Collect crypto news |
-| `collect-stock-news.yml` | `30 */6 * * *` | Collect stock news |
-| `collect-social-media.yml` | `0 */12 * * *` | Collect social media posts |
-| `generate-market-summary.yml` | `0 14 * * *` | Generate daily market summary |
+### 데이터 수집 (8개)
 
-Manual trigger: `gh workflow run <workflow-name>.yml`
+| 워크플로우 | 스케줄 (UTC) | 설명 |
+|:-----------|:------------|:-----|
+| `collect-crypto-news` | 매 6h `:00` | 암호화폐 뉴스 수집 (CryptoPanic, NewsAPI, RSS, 거래소) |
+| `collect-coinmarketcap` | 매 6h `:12` | CoinMarketCap/CoinGecko 시가총액 데이터 |
+| `collect-stock-news` | 매 6h `:24` | 주식 뉴스 수집 (NewsAPI, Yahoo, Alpha Vantage) |
+| `collect-defi-llama` | 매 6h `:36` | DeFi TVL 데이터 (프로토콜/체인) |
+| `collect-social-media` | 매 12h `:36` | 소셜 미디어 (Telegram, Twitter/X) |
+| `collect-regulatory` | 매 12h `:48` | 글로벌 규제 뉴스 (SEC, FSC 등 9개 기관) |
+| `collect-political-trades` | 매일 `13:00` | 정치인 거래 (의회 공시, SEC EDGAR) |
+| `collect-worldmonitor-news` | 매일 `01:00` | WorldMonitor 글로벌 뉴스 브리핑 |
 
-## OpenCode Analyze/Search Mode Timeout Recovery
+### 콘텐츠 생성 (3개)
 
-When running parallel `explore`/`librarian` tasks, use this recovery pattern to avoid losing results on long-running sessions.
+| 워크플로우 | 스케줄 (UTC) | 설명 |
+|:-----------|:------------|:-----|
+| `generate-market-summary` | 매일 `00:30` | 시장 분석 요약 + 시각화 이미지 생성 |
+| `generate-daily-summary` | 매일 `01:00` | 당일 수집 뉴스 종합 요약 (우선순위별) |
+| `weekly-digest` | 일요일 `23:00` | 주간 다이제스트 (카테고리별 분석) |
 
-1. **Launch async only**
-   - Start research agents with `run_in_background=true`.
-   - Capture both `task_id` and `session_id` from each launch response.
+### 배포 & 운영 (9개)
 
-2. **Collect with non-blocking polls first**
-   - Poll with short intervals instead of waiting one long blocking call.
-   - Prefer repeated `background_output(task_id=..., block=false)` checks.
+| 워크플로우 | 트리거 | 설명 |
+|:-----------|:------|:-----|
+| `deploy-pages` | Push to main | Jekyll 빌드, GitHub Pages 배포 |
+| `code-quality` | Push, PR, 주간 | ruff 린팅, actionlint, import 검사 |
+| `dependency-check` | 매주 월요일 | pip-audit 보안 의존성 검사 |
+| `site-health-check` | 매일 `16:00` | 사이트 가용성, 최신 포스트 확인 |
+| `cleanup-old-images` | 매주 일요일 | 30일 이상 된 생성 이미지 정리 |
+| `respond-ai-mentions` | 5분마다 | Slack AI 봇 멘션 자동 응답 |
+| `push-folder-info-to-slack` | 매일 `01:00` | 일일 레포지토리 상태 Slack 알림 |
+| `classify-workflow-failures` | 워크플로우 실패 시 | CI 실패 자동 분류 (네트워크 vs 코드) |
+| `continuous-improvement-loop` | 매시간 | 지속적 개선 자동화 루프 |
 
-3. **Fallback to session continuation when task_id becomes stale**
-   - If `Task not found` or repeated timeout occurs, continue with:
-   - `task(session_id="...", prompt="Return current findings only")`
-   - Keep `run_in_background=true` for continuation and collect again.
-
-4. **Use idempotent prompts for recovery**
-   - Recovery prompt should request "current findings summary" instead of re-running full scan.
-   - This prevents duplicated long scans and reduces timeout risk.
-
-5. **Cancel disposable jobs after collection**
-   - Cancel only disposable `explore`/`librarian` tasks by specific `taskId`.
-   - Do not use blanket cancellation across all background tasks.
-
-6. **Record evidence in final report**
-   - Include which findings came from direct tools vs. recovered agent sessions.
-   - Note any timed-out session IDs for follow-up runs.
+수동 실행: `gh workflow run <workflow-name>.yml`
 
 ## Deduplication
 
-Posts are deduplicated using:
-1. **SHA256 hash** of `normalize(title) + source + date[:10]`
-2. **Fuzzy matching** via `difflib.SequenceMatcher` (>80% similarity threshold)
-3. State persisted in `_state/*.json` files (30-day retention)
+포스트 중복 방지 3단계:
+
+1. **SHA256 해시**: `normalize(title) + source + date[:10]` 해싱
+2. **Fuzzy 매칭**: `difflib.SequenceMatcher` 유사도 80% 초과 시 중복 판정
+3. **상태 파일**: `_state/*.json`에 해시 저장 (30일 보관)
 
 ## Project Structure
 
 ```
 investing/
-├── _config.yml              # Jekyll config
-├── _layouts/                # HTML layouts
-├── _includes/               # Reusable components
-├── _sass/                   # SCSS styles (dark theme)
-├── _posts/                  # Auto-generated posts
-├── _state/                  # Dedup state files
-├── assets/                  # CSS, JS
-├── pages/                   # Category pages
-├── scripts/                 # Python collectors
-│   ├── common/              # Shared modules
-│   ├── collect_crypto_news.py
-│   ├── collect_stock_news.py
-│   ├── collect_social_media.py
-│   └── generate_market_summary.py
-├── .github/workflows/       # CI/CD
-├── Gemfile                  # Ruby deps
+├── _config.yml                 # Jekyll 설정
+├── _layouts/                   # HTML 레이아웃
+├── _includes/                  # 재사용 컴포넌트
+├── _sass/                      # SCSS 스타일 (다크 테마)
+├── _data/                      # Jekyll 데이터 파일
+├── _posts/                     # 자동 생성 포스트
+├── _state/                     # 중복 방지 상태 파일
+├── assets/images/generated/    # 자동 생성 이미지 (30일 보관)
+├── pages/                      # 카테고리 페이지 (9개)
+├── scripts/
+│   ├── common/                 # 공통 모듈 (13개)
+│   │   ├── config.py           # 환경변수, 로깅 설정
+│   │   ├── dedup.py            # 중복 방지 (SHA256 + fuzzy)
+│   │   ├── utils.py            # sanitize, retry, date parse
+│   │   ├── post_generator.py   # Jekyll 포스트 생성
+│   │   ├── image_generator.py  # 시장 시각화 (matplotlib/Pillow)
+│   │   ├── crypto_api.py       # CoinGecko, Fear&Greed API
+│   │   ├── rss_fetcher.py      # RSS 병렬 수집
+│   │   ├── summarizer.py       # 키워드 기반 테마 요약
+│   │   ├── formatters.py       # 숫자 포맷 (K/M/B/T)
+│   │   ├── browser.py          # Playwright 브라우저
+│   │   ├── collector_metrics.py # 수집 메트릭 로깅
+│   │   └── markdown_utils.py   # 마크다운 헬퍼
+│   ├── collect_*.py            # 수집기 8개
+│   ├── generate_*.py           # 생성기 3개
+│   └── respond_ai_mentions.py  # Slack AI 멘션 응답
+├── .github/
+│   ├── workflows/              # 워크플로우 20개
+│   └── actions/                # 재사용 액션
+│       ├── python-collect/     # Python 수집 & 커밋
+│       └── resolve-slack-config/ # Slack 설정 해석
+├── docs/                       # 프로젝트 문서
+├── Gemfile                     # Ruby 의존성
 └── README.md
 ```
+
+## Documentation
+
+| 문서 | 내용 |
+|:-----|:-----|
+| [Architecture](docs/architecture.md) | 시스템 아키텍처, 데이터 흐름, 컴포넌트 상세 |
+| [Data Sources](docs/data-sources.md) | 전체 데이터 소스 카탈로그, API 키 설정 가이드 |
+| [Improvement Priority](docs/continuous-improvement-priority.md) | 지속적 개선 우선순위 (P0/P1/P2) |
 
 ## License
 
