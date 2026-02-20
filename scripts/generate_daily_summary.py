@@ -17,12 +17,12 @@ import sys
 import os
 import re
 import glob
-from datetime import datetime, timezone
+from datetime import datetime
 from typing import Dict, List, Any, Optional, Tuple
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common.config import setup_logging
+from common.config import get_kst_timezone, setup_logging
 from common.markdown_utils import markdown_table
 from common.post_generator import POSTS_DIR
 from common.summarizer import ThemeSummarizer
@@ -574,7 +574,7 @@ def main():
     """Generate daily news summary with priority-based structure."""
     logger.info("=== Generating daily news summary ===")
 
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    today = datetime.now(get_kst_timezone()).strftime("%Y-%m-%d")
 
     # Find all posts for today
     pattern = os.path.join(POSTS_DIR, f"{today}-*.md")
@@ -831,6 +831,35 @@ def main():
             f"- **우선순위:** P0 {len(priority_items.get('P0', []))}건, P1 {len(priority_items.get('P1', []))}건 중심으로 장중 대응 우선순위를 조정합니다."
         )
     content_parts.append("")
+
+    if theme_payload:
+        content_parts.append("## 테마 스냅샷\n")
+        theme_rows = []
+        for item in theme_payload:
+            keywords = ", ".join(item.get("keywords", []))
+            theme_rows.append(
+                [
+                    f"{item.get('emoji', '•')} {item.get('name', '')}",
+                    item.get("count", 0),
+                    keywords if keywords else "-",
+                ]
+            )
+        content_parts.append(
+            markdown_table(
+                ["테마", "신호 강도", "대표 키워드"],
+                theme_rows,
+                aligns=["left", "right", "left"],
+            )
+        )
+        content_parts.append("")
+        content_parts.append("**리스크/기회 메모**")
+        content_parts.append(
+            "- 상위 테마에 집중되는 구간에서는 헤드라인 변동성이 확대될 수 있습니다."
+        )
+        content_parts.append(
+            "- 테마별 키워드가 규제/정책과 겹치면 이벤트 드리븐 리스크 점검이 우선입니다."
+        )
+        content_parts.append("")
 
     # ═══════════════════════════════════════
     # 1. URGENT ALERTS (P0)
