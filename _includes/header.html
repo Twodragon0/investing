@@ -16,7 +16,7 @@
             </div>
           </div>
         {% else %}
-          <a href="{{ item.url | relative_url }}" class="nav-link" {% if page.url == item.url %}class="active"{% endif %}>{{ item.title }}</a>
+          <a href="{{ item.url | relative_url }}" class="nav-link{% if page.url == item.url %} active{% endif %}">{{ item.title }}</a>
         {% endif %}
       {% endfor %}
     </nav>
