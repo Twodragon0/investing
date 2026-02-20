@@ -11,12 +11,12 @@ Enhanced version with:
 import sys
 import os
 import re
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta
 from typing import List, Dict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common.config import setup_logging
+from common.config import get_kst_timezone, setup_logging
 from common.post_generator import PostGenerator
 
 logger = setup_logging("generate_weekly_digest")
@@ -57,7 +57,7 @@ def parse_post_frontmatter(filepath: str) -> Dict:
 
 def collect_weekly_posts(days: int = 7) -> List[Dict]:
     """Collect all posts from the past N days."""
-    now = datetime.now(timezone.utc)
+    now = datetime.now(get_kst_timezone())
     cutoff = now - timedelta(days=days)
     cutoff_str = cutoff.strftime("%Y-%m-%d")
 
@@ -113,7 +113,11 @@ def extract_key_bullets(body: str, max_bullets: int = 3) -> List[str]:
         return bullets
 
     # Fallback: extract first paragraph as summary
-    paragraphs = [p.strip() for p in body.split("\n\n") if p.strip() and not p.strip().startswith(("#", "|", "!", "---", ">", "```"))]
+    paragraphs = [
+        p.strip()
+        for p in body.split("\n\n")
+        if p.strip() and not p.strip().startswith(("#", "|", "!", "---", ">", "```"))
+    ]
     if paragraphs:
         first = paragraphs[0]
         # Remove markdown
@@ -161,7 +165,9 @@ def extract_market_data(posts: List[Dict]) -> Dict:
         mcap_match = re.search(r"총 시가총액\s*\|\s*\$([0-9.]+)T", body)
         if mcap_match:
             try:
-                data["total_mcap"].append({"date": date, "value": float(mcap_match.group(1))})
+                data["total_mcap"].append(
+                    {"date": date, "value": float(mcap_match.group(1))}
+                )
             except ValueError:
                 pass
 
@@ -170,7 +176,7 @@ def extract_market_data(posts: List[Dict]) -> Dict:
 
 def generate_digest(posts: List[Dict]) -> str:
     """Generate comprehensive weekly digest content in Korean."""
-    now = datetime.now(timezone.utc)
+    now = datetime.now(get_kst_timezone())
     week_start = (now - timedelta(days=7)).strftime("%m월 %d일")
     week_end = now.strftime("%m월 %d일")
 
@@ -197,18 +203,24 @@ def generate_digest(posts: List[Dict]) -> str:
     # BTC price range
     if market_data["btc_prices"]:
         prices = [d["price"] for d in market_data["btc_prices"]]
-        overview_lines.append(f"| BTC 가격 범위 | ${min(prices):,.0f} ~ ${max(prices):,.0f} |")
+        overview_lines.append(
+            f"| BTC 가격 범위 | ${min(prices):,.0f} ~ ${max(prices):,.0f} |"
+        )
         if len(prices) >= 2:
             weekly_change = ((prices[-1] - prices[0]) / prices[0]) * 100
             direction = "🟢" if weekly_change >= 0 else "🔴"
-            overview_lines.append(f"| BTC 주간 변동 | {direction} {weekly_change:+.1f}% |")
+            overview_lines.append(
+                f"| BTC 주간 변동 | {direction} {weekly_change:+.1f}% |"
+            )
 
     # Fear & Greed trend
     if market_data["fear_greed"]:
         fg_values = [d["value"] for d in market_data["fear_greed"]]
         fg_start = market_data["fear_greed"][0]["value"]
         fg_end = market_data["fear_greed"][-1]["value"]
-        overview_lines.append(f"| 공포/탐욕 지수 | {fg_start} → {fg_end} (범위: {min(fg_values)}~{max(fg_values)}) |")
+        overview_lines.append(
+            f"| 공포/탐욕 지수 | {fg_start} → {fg_end} (범위: {min(fg_values)}~{max(fg_values)}) |"
+        )
 
     # Total market cap
     if market_data["total_mcap"]:
@@ -232,7 +244,13 @@ def generate_digest(posts: List[Dict]) -> str:
     }
 
     # Priority order for categories
-    cat_order = ["market-analysis", "crypto-news", "stock-news", "regulatory-news", "security-alerts"]
+    cat_order = [
+        "market-analysis",
+        "crypto-news",
+        "stock-news",
+        "regulatory-news",
+        "security-alerts",
+    ]
 
     for cat in cat_order:
         if cat not in categories:
@@ -288,12 +306,16 @@ def generate_digest(posts: List[Dict]) -> str:
     # Post count by category
     content_parts.append("\n| 카테고리 | 포스트 수 |")
     content_parts.append("|----------|----------|")
-    for cat, cat_posts in sorted(categories.items(), key=lambda x: len(x[1]), reverse=True):
+    for cat, cat_posts in sorted(
+        categories.items(), key=lambda x: len(x[1]), reverse=True
+    ):
         display_name = cat_names.get(cat, cat)
         content_parts.append(f"| {display_name} | {len(cat_posts)}건 |")
 
     content_parts.append("")
-    content_parts.append("> *본 다이제스트는 한 주간 수집된 데이터를 기반으로 자동 생성되었으며, 투자 조언이 아닙니다.*")
+    content_parts.append(
+        "> *본 다이제스트는 한 주간 수집된 데이터를 기반으로 자동 생성되었으며, 투자 조언이 아닙니다.*"
+    )
 
     return "\n".join(content_parts)
 
@@ -302,7 +324,7 @@ def main():
     """Main weekly digest generation routine."""
     logger.info("=== Starting weekly digest generation ===")
 
-    now = datetime.now(timezone.utc)
+    now = datetime.now(get_kst_timezone())
     gen = PostGenerator("market-analysis")
 
     posts = collect_weekly_posts(days=7)

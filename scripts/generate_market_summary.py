@@ -15,13 +15,13 @@ import sys
 import os
 import time
 import requests
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timedelta
 from typing import Dict, Any, List, Optional
 from collections import OrderedDict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common.config import get_env, setup_logging, get_ssl_verify
+from common.config import get_env, get_kst_timezone, setup_logging, get_ssl_verify
 from common.markdown_utils import markdown_link, markdown_table
 from common.utils import request_with_retry
 from common.post_generator import PostGenerator
@@ -249,15 +249,15 @@ def fetch_fred_indicators(api_key: str) -> Dict[str, Dict[str, Any]]:
     }
     results = {}
 
+    now = datetime.now(get_kst_timezone())
+
     for key, (series_id, label) in indicators.items():
         try:
             params = {
                 "series_id": series_id,
                 "api_key": api_key,
-                "observation_start": (
-                    datetime.now(timezone.utc) - timedelta(days=60)
-                ).strftime("%Y-%m-%d"),
-                "observation_end": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+                "observation_start": (now - timedelta(days=60)).strftime("%Y-%m-%d"),
+                "observation_end": now.strftime("%Y-%m-%d"),
                 "file_type": "json",
                 "sort_order": "desc",
                 "limit": "2",
@@ -725,7 +725,7 @@ def format_macro(data: Dict) -> str:
             "- [FRED - VIX](https://fred.stlouisfed.org/series/VIXCLS)"
         )
     rows = []
-    for key, d in data.items():
+    for d in data.values():
         val = f"{d['value']:.2f}"
         ch = f"{d['change']:+.2f}" if d.get("change") is not None else "N/A"
         rows.append([d["label"], val, ch])
@@ -996,8 +996,9 @@ def main():
 
     alpha_vantage_key = get_env("ALPHA_VANTAGE_API_KEY")
     fred_key = get_env("FRED_API_KEY")
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    now = datetime.now(timezone.utc)
+    kst = get_kst_timezone()
+    now = datetime.now(kst)
+    today = now.strftime("%Y-%m-%d")
 
     dedup = DedupEngine("market_summary_seen.json")
 

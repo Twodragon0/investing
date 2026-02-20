@@ -2,6 +2,12 @@
 
 import os
 import logging
+from datetime import timezone, timedelta
+
+try:
+    from zoneinfo import ZoneInfo
+except ImportError:
+    ZoneInfo = None
 
 logger = logging.getLogger(__name__)
 
@@ -20,6 +26,7 @@ def get_ssl_verify():
 
     try:
         import certifi
+
         ca_bundle = certifi.where()
         if not os.path.exists(ca_bundle):
             return True
@@ -96,6 +103,15 @@ def setup_logging(name: str = "collector") -> logging.Logger:
         datefmt="%Y-%m-%d %H:%M:%S",
     )
     return logging.getLogger(name)
+
+
+def get_kst_timezone():
+    if ZoneInfo:
+        try:
+            return ZoneInfo("Asia/Seoul")
+        except Exception:
+            pass
+    return timezone(timedelta(hours=9))
 
 
 # ── Shared constants ──
