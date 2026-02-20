@@ -25,7 +25,8 @@ jobs:
         run: |
           python3 scripts/continuous_improvement_loop.py \
             --report-path _state/continuous-improvement-loop.md \
-            --slack-path _state/continuous-improvement-loop-slack.txt
+            --slack-path _state/continuous-improvement-loop-slack.txt \
+            --role-slack-dir _state/continuous-improvement-roles
 
       - name: Publish loop report to job summary
         run: cat _state/continuous-improvement-loop.md >> "$GITHUB_STEP_SUMMARY"
@@ -58,3 +59,87 @@ jobs:
             --channel "${{ steps.slack.outputs.channel }}" \
             --message-path _state/continuous-improvement-loop-slack.txt \
             --marker "[ultrawork-loop]"
+
+      - name: Resolve Slack config (ops)
+        id: slack_ops
+        uses: ./.github/actions/resolve-slack-config
+        with:
+          target_channel_alias: ops
+          token_candidates: |
+            ${{ secrets.SLACK_BOT_TOKEN }}
+            ${{ secrets.OPENCLAW_SLACK_BOT_TOKEN }}
+            ${{ secrets.AI_SLACK_BOT_TOKEN }}
+            ${{ secrets.SLACK_TOKEN }}
+          channel_candidates_ops: |
+            ${{ secrets.SLACK_CHANNEL_ID_OPS }}
+            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_OPS }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID_OPS }}
+            ${{ secrets.SLACK_CHANNEL_OPS }}
+          channel_candidates_default: |
+            ${{ secrets.SLACK_CHANNEL_ID }}
+            ${{ secrets.SLACK_CHANNEL }}
+
+      - name: Post ops forum to Slack thread
+        if: steps.slack_ops.outputs.can_post == 'true'
+        run: |
+          python3 scripts/post_loop_to_slack.py \
+            --token "${{ steps.slack_ops.outputs.token }}" \
+            --channel "${{ steps.slack_ops.outputs.channel }}" \
+            --message-path _state/continuous-improvement-roles/continuous-improvement-loop-ops.txt \
+            --marker "[multi-agent-forum]"
+
+      - name: Resolve Slack config (security)
+        id: slack_security
+        uses: ./.github/actions/resolve-slack-config
+        with:
+          target_channel_alias: security
+          token_candidates: |
+            ${{ secrets.SLACK_BOT_TOKEN }}
+            ${{ secrets.OPENCLAW_SLACK_BOT_TOKEN }}
+            ${{ secrets.AI_SLACK_BOT_TOKEN }}
+            ${{ secrets.SLACK_TOKEN }}
+          channel_candidates_security: |
+            ${{ secrets.SLACK_CHANNEL_ID_SECURITY }}
+            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_SECURITY }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID_SECURITY }}
+            ${{ secrets.SLACK_CHANNEL_SECURITY }}
+          channel_candidates_default: |
+            ${{ secrets.SLACK_CHANNEL_ID }}
+            ${{ secrets.SLACK_CHANNEL }}
+
+      - name: Post security forum to Slack thread
+        if: steps.slack_security.outputs.can_post == 'true'
+        run: |
+          python3 scripts/post_loop_to_slack.py \
+            --token "${{ steps.slack_security.outputs.token }}" \
+            --channel "${{ steps.slack_security.outputs.channel }}" \
+            --message-path _state/continuous-improvement-roles/continuous-improvement-loop-security.txt \
+            --marker "[multi-agent-forum]"
+
+      - name: Resolve Slack config (dev)
+        id: slack_dev
+        uses: ./.github/actions/resolve-slack-config
+        with:
+          target_channel_alias: dev
+          token_candidates: |
+            ${{ secrets.SLACK_BOT_TOKEN }}
+            ${{ secrets.OPENCLAW_SLACK_BOT_TOKEN }}
+            ${{ secrets.AI_SLACK_BOT_TOKEN }}
+            ${{ secrets.SLACK_TOKEN }}
+          channel_candidates_dev: |
+            ${{ secrets.SLACK_CHANNEL_ID_DEV }}
+            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_DEV }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID_DEV }}
+            ${{ secrets.SLACK_CHANNEL_DEV }}
+          channel_candidates_default: |
+            ${{ secrets.SLACK_CHANNEL_ID }}
+            ${{ secrets.SLACK_CHANNEL }}
+
+      - name: Post UI/UX forum to Slack thread
+        if: steps.slack_dev.outputs.can_post == 'true'
+        run: |
+          python3 scripts/post_loop_to_slack.py \
+            --token "${{ steps.slack_dev.outputs.token }}" \
+            --channel "${{ steps.slack_dev.outputs.channel }}" \
+            --message-path _state/continuous-improvement-roles/continuous-improvement-loop-uiux.txt \
+            --marker "[multi-agent-forum]"

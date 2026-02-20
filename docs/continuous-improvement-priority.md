@@ -15,6 +15,10 @@
    - `scripts/common/markdown_utils.py` 헬퍼로 소스 태그/참조 생성
    - 수집기에서 직접 인라인 `<span class="source-tag">...` 사용 금지
 
+4. **GitHub App 연동 가시성 강화**
+   - Vercel/Sentry GitHub App 설치 및 연결 상태 확인
+   - 배포/알림 흐름에서 웹훅 누락 또는 권한 이슈 점검
+
 ## P1 - 관측성 (다음)
 
 1. **수집기 완료 로그 표준화**
@@ -43,3 +47,4 @@
 - 유틸리티/함수 재사용 우선, 스크립트별 인라인 HTML 조립 금지
 - 푸시 전 `py_compile + fixture smoke + jekyll build` 검증
 - 커밋은 작고 목적에 집중 (롤백 용이)
+- 운영/보안/UI/UX는 루프 리포트의 멀티 에이전트 포럼 항목에서 병렬 검토

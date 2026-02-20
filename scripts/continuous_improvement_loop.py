@@ -4,7 +4,7 @@ import argparse
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import List
+from typing import Dict, List
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,6 +18,13 @@ class PriorityItem:
     priority: str
     title: str
     detail: str
+
+
+@dataclass
+class RolePrompt:
+    role: str
+    focus: str
+    prompts: List[str]
 
 
 def count_recent_posts(days: int = 2) -> int:
@@ -34,10 +41,7 @@ def count_workflows() -> int:
     return len(list(WORKFLOWS_DIR.glob("*.yml")))
 
 
-def build_priorities() -> List[PriorityItem]:
-    recent_posts = count_recent_posts()
-    workflow_count = count_workflows()
-
+def build_priorities(recent_posts: int, workflow_count: int) -> List[PriorityItem]:
     return [
         PriorityItem(
             stage="ULTRAWORKER_SCAN",
@@ -72,7 +76,39 @@ def build_priorities() -> List[PriorityItem]:
     ]
 
 
-def render_report(items: List[PriorityItem]) -> str:
+def build_role_prompts(recent_posts: int, workflow_count: int) -> List[RolePrompt]:
+    return [
+        RolePrompt(
+            role="ops",
+            focus="CI/CD health, Vercel/Sentry GitHub App integration, GitHub Actions status",
+            prompts=[
+                "Verify GitHub App integrations (Vercel/Sentry) are installed and connected to this repo.",
+                "Confirm deploy-pages and site-health-check are green for the last 24h.",
+                "Review workflow retry/escalation behavior for recent failures.",
+            ],
+        ),
+        RolePrompt(
+            role="security",
+            focus="Dependencies, secrets hygiene, Sentry GitHub App alerts",
+            prompts=[
+                "Review dependency-check findings and track remediation issues.",
+                "Triage Sentry GitHub App alerts/unresolved issues and map them to owners.",
+                "Validate GitHub App permissions and webhook activity for integrations.",
+            ],
+        ),
+        RolePrompt(
+            role="uiux",
+            focus="Content rendering, layout drift, mobile experience",
+            prompts=[
+                "Review recent posts for long-link rendering and source-tag layout regressions.",
+                "Sample category pages on mobile for typography and spacing issues.",
+                f"Check content freshness: recent_posts_48h={recent_posts}, workflows={workflow_count}.",
+            ],
+        ),
+    ]
+
+
+def render_report(items: List[PriorityItem], roles: List[RolePrompt]) -> str:
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     lines = [
         "# Continuous Improvement Loop Report",
@@ -80,12 +116,25 @@ def render_report(items: List[PriorityItem]) -> str:
         f"- generated_at: {now}",
         "- model_flow: ultraworker -> sisyphus -> loop_verify",
         "- coordination_targets: opencode, openclaw, slack",
+        "- multi_agent_forum: ops, security, uiux",
         "",
         "## Priorities",
     ]
 
     for item in items:
         lines.append(f"- [{item.priority}] {item.stage} | {item.title} - {item.detail}")
+
+    lines.extend(
+        [
+            "",
+            "## Multi-Agent Forum",
+        ]
+    )
+
+    for role in roles:
+        lines.append(f"- role={role.role} focus={role.focus}")
+        for prompt in role.prompts:
+            lines.append(f"  - {prompt}")
 
     lines.extend(
         [
@@ -99,13 +148,43 @@ def render_report(items: List[PriorityItem]) -> str:
     return "\n".join(lines) + "\n"
 
 
-def render_slack_message(items: List[PriorityItem]) -> str:
+def render_slack_message(items: List[PriorityItem], roles: List[RolePrompt]) -> str:
     head = "[ultrawork-loop] OpenCode/OpenClaw continuous improvement cycle"
     body = []
     for item in items[:4]:
         body.append(f"- {item.priority} {item.title}")
+    if roles:
+        role_list = ", ".join(role.role for role in roles)
+        body.append(f"- role_threads: {role_list}")
     body.append("- next_step: execute highest P0 in current run and report evidence")
     return "\n".join([head, *body])
+
+
+def render_role_slack_messages(
+    roles: List[RolePrompt],
+    recent_posts: int,
+    workflow_count: int,
+) -> Dict[str, str]:
+    messages: Dict[str, str] = {}
+    for role in roles:
+        header = f"[multi-agent-forum] {role.role.upper()} forum"
+        lines = [
+            header,
+            f"- focus: {role.focus}",
+            f"- signals: recent_posts_48h={recent_posts}, workflows={workflow_count}",
+            "- prompts:",
+        ]
+        lines.extend([f"- {prompt}" for prompt in role.prompts])
+        lines.append("- reply_with: findings + concrete next actions")
+        messages[role.role] = "\n".join(lines)
+    return messages
+
+
+def write_role_messages(directory: Path, messages: Dict[str, str]) -> None:
+    directory.mkdir(parents=True, exist_ok=True)
+    for role, message in messages.items():
+        path = directory / f"continuous-improvement-loop-{role}.txt"
+        path.write_text(message, encoding="utf-8")
 
 
 def main() -> int:
@@ -118,11 +197,19 @@ def main() -> int:
         "--slack-path",
         default=str(ROOT / "_state" / "continuous-improvement-loop-slack.txt"),
     )
+    parser.add_argument(
+        "--role-slack-dir",
+        default="",
+        help="Optional directory to emit role-specific Slack messages.",
+    )
     args = parser.parse_args()
 
-    items = build_priorities()
-    report = render_report(items)
-    slack = render_slack_message(items)
+    recent_posts = count_recent_posts()
+    workflow_count = count_workflows()
+    items = build_priorities(recent_posts, workflow_count)
+    roles = build_role_prompts(recent_posts, workflow_count)
+    report = render_report(items, roles)
+    slack = render_slack_message(items, roles)
 
     report_path = Path(args.report_path)
     report_path.parent.mkdir(parents=True, exist_ok=True)
@@ -131,6 +218,11 @@ def main() -> int:
     slack_path = Path(args.slack_path)
     slack_path.parent.mkdir(parents=True, exist_ok=True)
     slack_path.write_text(slack, encoding="utf-8")
+
+    if args.role_slack_dir:
+        role_dir = Path(args.role_slack_dir)
+        role_messages = render_role_slack_messages(roles, recent_posts, workflow_count)
+        write_role_messages(role_dir, role_messages)
 
     print(f"Wrote loop report: {report_path}")
     print(f"Wrote slack summary: {slack_path}")
