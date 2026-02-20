@@ -15,6 +15,7 @@ from common.config import setup_logging
 from common.dedup import DedupEngine
 from common.markdown_utils import (
     escape_table_cell,
+    html_source_tag,
     html_text,
     markdown_link,
     markdown_table,
@@ -333,9 +334,7 @@ def main() -> None:
         for source, count in Counter(ref["source"] for ref in unique_refs).most_common(
             6
         ):
-            source_pills.append(
-                f'<span class="source-tag">{html_text(source)} · {count}건</span>'
-            )
+            source_pills.append(html_source_tag(f"{source} · {count}건"))
         if source_pills:
             content_parts.append(
                 '<div class="wm-reference-pills">' + " ".join(source_pills) + "</div>"
@@ -352,7 +351,7 @@ def main() -> None:
             detail_lines.append(
                 "<li>"
                 f'<a href="{link}" target="_blank" rel="noopener noreferrer">{title}</a>'
-                f'<span class="source-tag">{source}</span>'
+                f"{html_source_tag(source)}"
                 "</li>"
             )
         detail_lines.extend(["</ol>", "</div></details>"])
