@@ -40,7 +40,7 @@ python scripts/collect_crypto_news.py
 python scripts/generate_daily_summary.py
 
 # 코드 품질 검사
-ruff check scripts/
+python3 -m ruff check scripts/
 
 # 의존성 설치
 pip install -r scripts/requirements.txt
@@ -135,5 +135,5 @@ Create an agent team to investigate the bug:
 1. **파일 충돌 방지**: 각 팀원은 담당 디렉토리만 수정
 2. **Plan approval**: 구조 변경 시 리드에게 계획 승인 요청
 3. **한국어 우선**: 커밋 메시지와 주석은 한국어 사용
-4. **테스트**: 스크립트 변경 시 `ruff check scripts/`로 린팅 확인
+4. **테스트**: 스크립트 변경 시 `python3 -m ruff check scripts/`로 린팅 확인
 5. **상태 파일 보호**: `_state/*.json` 직접 수정 금지
