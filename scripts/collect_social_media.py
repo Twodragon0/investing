@@ -104,6 +104,8 @@ def _fetch_telegram_browser(
     results: Dict[str, List[Dict[str, Any]]] = {}
     if not is_playwright_available():
         return results
+    if BrowserSession is None:
+        return results
 
     try:
         with BrowserSession(timeout=30_000) as session:

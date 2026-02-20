@@ -108,6 +108,8 @@ def fetch_google_news_browser(limit: int = 20) -> List[Dict[str, Any]]:
     if not is_playwright_available():
         logger.info("Playwright not available, skipping Google News browser scraping")
         return []
+    if BrowserSession is None:
+        return []
 
     search_url = "https://news.google.com/search?q=cryptocurrency+bitcoin&hl=en-US&gl=US&ceid=US:en"
     items: List[Dict[str, Any]] = []
@@ -200,6 +202,8 @@ def fetch_google_news_security() -> List[Dict[str, Any]]:
 def _fetch_binance_browser() -> List[Dict[str, Any]]:
     """Scrape Binance announcements page with Playwright."""
     if not is_playwright_available():
+        return []
+    if BrowserSession is None:
         return []
 
     items: List[Dict[str, Any]] = []
@@ -332,6 +336,8 @@ def _fetch_browser_sources() -> tuple:
     if not is_playwright_available():
         return google_items, binance_items
     if extract_google_news_links is None:
+        return google_items, binance_items
+    if BrowserSession is None:
         return google_items, binance_items
 
     try:
@@ -738,12 +744,12 @@ def main():
                     f"- **보안 관련 뉴스**: {len(google_security_items)}건"
                 )
 
+            technique_counter = Counter()
+
             # Rekt News section (structured incidents)
             if rekt_items:
                 content_parts.append("\n## 보안 사고 현황\n")
                 incident_rows = []
-
-                technique_counter = Counter()
                 for item in rekt_items:
                     desc = item.get("description", "")
                     project = item["title"].replace("[Security] ", "")

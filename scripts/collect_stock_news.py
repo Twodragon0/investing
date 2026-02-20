@@ -61,6 +61,8 @@ def fetch_google_news_browser_stocks(limit: int = 20) -> List[Dict[str, Any]]:
     if extract_google_news_links is None:
         logger.info("extract_google_news_links not available, skipping")
         return []
+    if BrowserSession is None:
+        return []
 
     search_configs = [
         (

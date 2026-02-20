@@ -368,6 +368,8 @@ def fetch_cmc_browser_fallback(limit: int = 20) -> List[Dict[str, Any]]:
     """
     if not is_playwright_available():
         return []
+    if BrowserSession is None:
+        return []
 
     items: List[Dict[str, Any]] = []
     try:
