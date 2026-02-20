@@ -9,9 +9,10 @@ logger = logging.getLogger(__name__)
 def get_ssl_verify():
     """Get SSL verification setting.
 
-    On macOS, certifi may not have the system certificates registered.
-    This function tries certifi first, falls back to True (system default),
-    and allows disabling via DISABLE_SSL_VERIFY=true for local dev.
+    Tries certifi bundle first.  On macOS with corporate proxies (e.g.
+    Zscaler), the proxy root CA is not in certifi's bundle, so we detect
+    it in the system keychain and build a combined CA bundle.
+    Allows disabling via DISABLE_SSL_VERIFY=true for local dev.
     """
     if os.environ.get("DISABLE_SSL_VERIFY", "").lower() in ("true", "1"):
         logger.warning("SSL verification disabled via DISABLE_SSL_VERIFY")
@@ -20,13 +21,58 @@ def get_ssl_verify():
     try:
         import certifi
         ca_bundle = certifi.where()
-        if os.path.exists(ca_bundle):
-            return ca_bundle
+        if not os.path.exists(ca_bundle):
+            return True
     except ImportError:
-        pass
+        return True
 
-    # Fall back to system SSL
-    return True
+    # On macOS, check for corporate proxy CAs (e.g. Zscaler) in system keychain
+    import sys
+    if sys.platform == "darwin":
+        combined = _get_combined_ca_bundle(ca_bundle)
+        if combined:
+            return combined
+
+    return ca_bundle
+
+
+def _get_combined_ca_bundle(certifi_bundle: str) -> str | None:
+    """Build a combined CA bundle with corporate proxy certs from macOS keychain.
+
+    Returns path to combined bundle, or None if not needed.
+    """
+    import subprocess
+    import shutil
+
+    combined_path = os.path.join(os.path.dirname(certifi_bundle), "combined_ca.pem")
+
+    # Return cached combined bundle if it exists and is recent (< 1 day)
+    if os.path.exists(combined_path):
+        age = os.time() - os.path.getmtime(combined_path) if hasattr(os, "time") else 0
+        import time
+        age = time.time() - os.path.getmtime(combined_path)
+        if age < 86400:
+            return combined_path
+
+    try:
+        result = subprocess.run(
+            ["security", "find-certificate", "-a", "-c", "Zscaler",
+             "-p", "/Library/Keychains/System.keychain"],
+            capture_output=True, text=True, timeout=5,
+        )
+        if result.returncode != 0 or "BEGIN CERTIFICATE" not in result.stdout:
+            return None
+
+        shutil.copy(certifi_bundle, combined_path)
+        with open(combined_path, "a") as f:
+            f.write("\n# Zscaler proxy CA from macOS system keychain\n")
+            f.write(result.stdout)
+
+        logger.info("Created combined CA bundle with Zscaler proxy cert")
+        return combined_path
+    except Exception as e:
+        logger.debug("Failed to build combined CA bundle: %s", e)
+        return None
 
 
 def get_env(key: str, default: str = "") -> str:

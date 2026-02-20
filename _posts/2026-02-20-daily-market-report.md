@@ -10,9 +10,13 @@ image: "/assets/images/generated/market-heatmap-2026-02-20.png"
 
 ## 시장 시각화
 
+![market-heatmap]({{ '/assets/images/generated/market-heatmap-2026-02-20.png' | relative_url }})
+
 ![sector-heatmap]({{ '/assets/images/generated/sector-heatmap-2026-02-20.png' | relative_url }})
 
 ![indicator-dashboard]({{ '/assets/images/generated/indicator-dashboard-2026-02-20.png' | relative_url }})
+
+![fear-greed]({{ '/assets/images/generated/fear-greed-2026-02-20.png' | relative_url }})
 
 ## 오늘의 핵심
 
@@ -47,6 +51,41 @@ BTC는 $67,000 부근에서 횡보 중이며, Fed 의사록의 매파 기조 확
 - BTC ETF 5주 연속 순유출 위기, $1.33억 유출 기록
 
 **참고:** [CoinGecko](https://www.coingecko.com/) | [CoinMarketCap](https://coinmarketcap.com/)
+
+## 시가총액 Top 20
+
+| # | 코인 | 가격 | 24h 변동 | 시가총액 |
+| ---: | --- | ---: | ---: | ---: |
+| 1 | BTC | $67,262.00 | 🟢 +0.7% | $1,345.5B |
+| 2 | ETH | $1,955.04 | 🔴 -0.5% | $236.2B |
+| 3 | USDT | $1.00 | — | $183.7B |
+| 4 | XRP | $1.42 | — | $86.8B |
+| 5 | BNB | $607.38 | 🟢 +0.3% | $82.9B |
+| 6 | USDC | $1.00 | — | $73.8B |
+| 7 | SOL | $82.93 | 🟢 +1.4% | $47.1B |
+| 8 | TRX | $0.28 | 🟢 +1.7% | $26.9B |
+| 9 | DOGE | $0.10 | 🟢 +0.5% | $16.7B |
+| 10 | BCH | $560.92 | 🟢 +0.2% | $11.2B |
+| 11 | WBT | $50.63 | — | $10.8B |
+| 12 | ADA | $0.27 | 🔴 -0.2% | $10.1B |
+| 13 | LEO | $8.76 | 🟢 +2.1% | $8.1B |
+| 14 | HYPE | $29.49 | 🟢 +3.5% | $7.0B |
+| 15 | XMR | $337.16 | 🟢 +2.4% | $6.2B |
+| 16 | LINK | $8.62 | 🔴 -0.4% | $6.1B |
+
+![top-coins]({{ '/assets/images/generated/top-coins-2026-02-20.png' | relative_url }})
+
+## 트렌딩 코인
+
+| # | 코인 | 순위 |
+| ---: | --- | ---: |
+| 1 | PUNCH (パンチ) | #565 |
+| 2 | BTC (Bitcoin) | #1 |
+| 3 | OP (Optimism) | #136 |
+| 4 | HYPE (Hyperliquid) | #16 |
+| 5 | PENGU (Pudgy Penguins) | #107 |
+| 6 | JUP (Jupiter) | #96 |
+| 7 | SOL (Solana) | #7 |
 
 ## 미국 주식 시장
 
