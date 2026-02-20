@@ -86,17 +86,17 @@ class PostGenerator:
             frontmatter_lines.append(f"tags: [{', '.join(safe_tags)}]")
 
         if source:
-            frontmatter_lines.append(f"source: \"{source}\"")
+            frontmatter_lines.append(f'source: "{source}"')
         if source_url:
-            frontmatter_lines.append(f"source_url: \"{source_url}\"")
+            frontmatter_lines.append(f'source_url: "{source_url}"')
         if lang:
-            frontmatter_lines.append(f"lang: \"{lang}\"")
+            frontmatter_lines.append(f'lang: "{lang}"')
         if image:
-            frontmatter_lines.append(f"image: \"{image}\"")
+            frontmatter_lines.append(f'image: "{image}"')
 
         if extra_frontmatter:
             for key, value in extra_frontmatter.items():
-                frontmatter_lines.append(f"{key}: \"{value}\"")
+                frontmatter_lines.append(f'{key}: "{value}"')
 
         frontmatter_lines.append("---")
 

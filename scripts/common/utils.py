@@ -6,7 +6,7 @@ import time
 import email.utils
 from urllib.parse import urlparse
 from datetime import datetime, timezone
-from typing import Optional
+from typing import Optional, Union
 
 import requests
 
@@ -104,7 +104,7 @@ def request_with_retry(
     max_retries: int = 2,
     base_delay: float = 2.0,
     timeout: int = 20,
-    verify_ssl: bool = True,
+    verify_ssl: Union[bool, str] = True,
     headers=None,
 ) -> requests.Response:
     """HTTP GET with exponential backoff retry.
@@ -128,10 +128,21 @@ def request_with_retry(
         except requests.exceptions.RequestException as e:
             last_exc = e
             if attempt < max_retries:
-                delay = base_delay * (2 ** attempt)
-                logger.warning("Request to %s failed (attempt %d/%d): %s — retrying in %.1fs",
-                               url, attempt + 1, max_retries + 1, e, delay)
+                delay = base_delay * (2**attempt)
+                logger.warning(
+                    "Request to %s failed (attempt %d/%d): %s — retrying in %.1fs",
+                    url,
+                    attempt + 1,
+                    max_retries + 1,
+                    e,
+                    delay,
+                )
                 time.sleep(delay)
             else:
-                logger.warning("Request to %s failed after %d attempts: %s", url, max_retries + 1, e)
+                logger.warning(
+                    "Request to %s failed after %d attempts: %s",
+                    url,
+                    max_retries + 1,
+                    e,
+                )
     raise last_exc  # type: ignore[misc]

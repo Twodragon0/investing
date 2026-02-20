@@ -61,10 +61,14 @@ class DedupEngine:
 
     def _prune(self) -> None:
         """Remove entries older than max_age_days."""
-        cutoff = (datetime.now(timezone.utc) - timedelta(days=self.max_age_days)).isoformat()
+        cutoff = (
+            datetime.now(timezone.utc) - timedelta(days=self.max_age_days)
+        ).isoformat()
         pruned = {k: v for k, v in self.seen.items() if v >= cutoff}
         if len(pruned) < len(self.seen):
-            logger.info("Pruned %d old entries from dedup state", len(self.seen) - len(pruned))
+            logger.info(
+                "Pruned %d old entries from dedup state", len(self.seen) - len(pruned)
+            )
         self.seen = pruned
         # Keep titles list manageable
         self.titles = self.titles[-(5000):]
@@ -75,7 +79,12 @@ class DedupEngine:
         tmp_path = self.state_path + ".tmp"
         try:
             with open(tmp_path, "w", encoding="utf-8") as f:
-                json.dump({"seen": self.seen, "titles": self.titles}, f, ensure_ascii=False, indent=2)
+                json.dump(
+                    {"seen": self.seen, "titles": self.titles},
+                    f,
+                    ensure_ascii=False,
+                    indent=2,
+                )
             os.replace(tmp_path, self.state_path)
         except OSError as e:
             logger.warning("Failed to save dedup state: %s", e)
@@ -103,7 +112,12 @@ class DedupEngine:
         for existing_title in self.titles[-500:]:
             ratio = SequenceMatcher(None, normalized_title, existing_title).ratio()
             if ratio > 0.80:
-                logger.debug("Fuzzy duplicate: %.2f '%s' ~ '%s'", ratio, title[:50], existing_title[:50])
+                logger.debug(
+                    "Fuzzy duplicate: %.2f '%s' ~ '%s'",
+                    ratio,
+                    title[:50],
+                    existing_title[:50],
+                )
                 return True
 
         return False

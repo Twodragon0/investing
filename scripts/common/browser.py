@@ -15,6 +15,7 @@ def is_playwright_available() -> bool:
     """Return True if Playwright sync API is importable."""
     try:
         from playwright.sync_api import sync_playwright  # noqa: F401
+
         return True
     except ImportError:
         return False
@@ -53,8 +54,8 @@ class BrowserSession:
         )
         self._context = self._browser.new_context(
             user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-                       "AppleWebKit/537.36 (KHTML, like Gecko) "
-                       "Chrome/124.0.0.0 Safari/537.36",
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/124.0.0.0 Safari/537.36",
             viewport={"width": 1920, "height": 1080},
         )
         # Hide webdriver flag from detection scripts
@@ -83,8 +84,9 @@ class BrowserSession:
 
     # -- navigation --------------------------------------------------------
 
-    def navigate(self, url: str, wait_until: str = "domcontentloaded",
-                 wait_ms: int = 0) -> Any:
+    def navigate(
+        self, url: str, wait_until: str = "domcontentloaded", wait_ms: int = 0
+    ) -> Any:
         """Navigate to *url* and return the Page object.
 
         *wait_ms* — additional milliseconds to wait after the page event
@@ -148,7 +150,9 @@ class BrowserSession:
             cells = tr.query_selector_all("td")
             if not cells or len(cells) != len(headers):
                 continue
-            row = {headers[i]: cells[i].inner_text().strip() for i in range(len(headers))}
+            row = {
+                headers[i]: cells[i].inner_text().strip() for i in range(len(headers))
+            }
             rows.append(row)
 
         return rows
@@ -204,14 +208,16 @@ def extract_google_news_links(
             if href.startswith("./"):
                 href = "https://news.google.com" + href[1:]
 
-            items.append({
-                "title": title,
-                "description": sanitize_string(title, 500),
-                "link": href,
-                "published": "",
-                "source": "Google News",
-                "tags": tags,
-            })
+            items.append(
+                {
+                    "title": title,
+                    "description": sanitize_string(title, 500),
+                    "link": href,
+                    "published": "",
+                    "source": "Google News",
+                    "tags": tags,
+                }
+            )
         except Exception:
             continue
 

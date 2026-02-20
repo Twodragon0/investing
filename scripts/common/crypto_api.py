@@ -26,7 +26,10 @@ def fetch_coingecko_top_coins(limit: int = 30) -> List[Dict[str, Any]]:
             "price_change_percentage": "1h,24h,7d",
         }
         resp = request_with_retry(
-            url, params=params, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL,
+            url,
+            params=params,
+            timeout=REQUEST_TIMEOUT,
+            verify_ssl=VERIFY_SSL,
             headers={"User-Agent": USER_AGENT},
         )
         data = resp.json()
@@ -42,7 +45,9 @@ def fetch_coingecko_trending() -> List[Dict[str, Any]]:
     try:
         url = "https://api.coingecko.com/api/v3/search/trending"
         resp = request_with_retry(
-            url, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL,
+            url,
+            timeout=REQUEST_TIMEOUT,
+            verify_ssl=VERIFY_SSL,
             headers={"User-Agent": USER_AGENT},
         )
         coins = resp.json().get("coins", [])
@@ -58,7 +63,9 @@ def fetch_coingecko_global() -> Dict[str, Any]:
     try:
         url = "https://api.coingecko.com/api/v3/global"
         resp = request_with_retry(
-            url, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL,
+            url,
+            timeout=REQUEST_TIMEOUT,
+            verify_ssl=VERIFY_SSL,
             headers={"User-Agent": USER_AGENT},
         )
         data = resp.json().get("data", {})
