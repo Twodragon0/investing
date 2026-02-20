@@ -34,13 +34,19 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r scripts/requirements.txt ruff yamllint
+          pip install -r scripts/requirements.txt ruff yamllint basedpyright
           curl -sSL "https://github.com/rhysd/actionlint/releases/download/v1.7.7/actionlint_1.7.7_linux_amd64.tar.gz" -o /tmp/actionlint.tgz
           tar -xzf /tmp/actionlint.tgz -C /tmp
           install /tmp/actionlint /usr/local/bin/actionlint
 
       - name: Run ruff linter
-        run: ruff check scripts/ --output-format=github
+        run: python3 -m ruff check scripts/ --output-format=github
+
+      - name: Run ruff format check
+        run: python3 -m ruff format --check scripts/
+
+      - name: Run basedpyright type check
+        run: python -m basedpyright
 
       - name: Run Python syntax check
         run: |

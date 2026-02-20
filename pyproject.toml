@@ -1,0 +1,11 @@
+[tool.basedpyright]
+include = ["scripts"]
+exclude = ["vendor", ".venv", "_site", "node_modules", "dist", "build"]
+typeCheckingMode = "basic"
+reportImplicitRelativeImport = "none"
+reportMissingTypeArgument = "none"
+reportPossiblyUnboundVariable = "none"
+reportAssignmentType = "none"
+reportArgumentType = "none"
+reportConstantRedefinition = "none"
+reportGeneralTypeIssues = "none"
