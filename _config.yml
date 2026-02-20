@@ -22,6 +22,8 @@ plugins:
 
 permalink: /:categories/:year/:month/:day/:title/
 
+future: true
+
 collections:
   posts:
     output: true

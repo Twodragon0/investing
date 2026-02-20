@@ -147,7 +147,7 @@ jobs:
 
       - name: Validate Slack config
         id: slack-config
-        uses: ./.github/actions/resolve-slack-config
+        uses: ./investing/.github/actions/resolve-slack-config
         with:
           target_channel_alias: ${{ matrix.channel_alias }}
           token_candidates: |

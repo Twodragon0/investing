@@ -40,7 +40,29 @@ def _latest_post(pattern: str) -> str:
 def _site_path_for_post(post_path: str) -> str:
     base = os.path.basename(post_path).replace(".md", "")
     y, m, d, slug = base.split("-", 3)
-    return os.path.join(SITE_DIR, "market-analysis", y, m, d, slug, "index.html")
+
+    # Read category from front matter instead of hardcoding
+    category = "market-analysis"
+    try:
+        with open(post_path, "r", encoding="utf-8") as f:
+            in_front = False
+            for line in f:
+                if line.strip() == "---":
+                    if in_front:
+                        break
+                    in_front = True
+                    continue
+                if in_front:
+                    cat_match = re.match(
+                        r"categories:\s*\[([^\]]+)\]", line
+                    )
+                    if cat_match:
+                        category = cat_match.group(1).split(",")[0].strip()
+                        break
+    except Exception:
+        pass
+
+    return os.path.join(SITE_DIR, category, y, m, d, slug, "index.html")
 
 
 def main() -> int:
