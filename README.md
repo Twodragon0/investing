@@ -90,6 +90,17 @@ bundle exec jekyll serve
 | `SLACK_AI_BOT_TOKEN` | AI 멘션 자동 응답 |
 | `SLACK_CHANNEL_*` | 채널 ID (ops/dev/security/investing) |
 
+추가 Vercel/Sentry 연동 (GitHub App 권장):
+
+- **Vercel GitHub App** 설치 후 해당 저장소를 Vercel 프로젝트에 연결
+- **Sentry GitHub App** 설치 후 저장소와 프로젝트 연결 (이슈/알림 연동)
+- CI에서는 별도 토큰 없이 GitHub App 기반 연동을 사용
+
+추가 Vercel Analytics/Speed Insights (선택):
+
+- Vercel 대시보드에서 **Analytics** 및 **Speed Insights**를 활성화
+- HTML 스니펫은 `_layouts/default.html`에 포함되어 있어 별도 패키지 설치 없이 동작
+
 ### 3. Enable GitHub Pages
 
 1. **Settings > Pages** 이동
