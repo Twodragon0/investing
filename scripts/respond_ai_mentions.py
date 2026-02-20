@@ -338,7 +338,9 @@ def should_reply(text: str, bot_user_id: str, alias: str) -> bool:
     lowered = text.lower()
     mention_token = f"<@{bot_user_id}>".lower()
     has_mention = mention_token in lowered or "ai" in lowered or "openclaw" in lowered
-    return has_mention
+    if not has_mention:
+        return False
+    return any(keyword in lowered for keyword in intent_keywords(alias))
 
 
 def fallback_help_text(alias: str) -> str:
@@ -402,6 +404,8 @@ def main() -> int:
     for message in messages_sorted:
         if message.get("subtype"):
             continue
+        if message.get("user") == bot_user_id:
+            continue
         text = message.get("text", "")
         thread_ts = message.get("thread_ts") or message.get("ts")
         if not text or not thread_ts:
@@ -411,10 +415,7 @@ def main() -> int:
         if has_bot_reply(token, channel_id, thread_ts, bot_user_id):
             continue
 
-        has_intent = any(key in text.lower() for key in intent_keywords(alias))
-        reply_text = (
-            build_reply_text(alias, text) if has_intent else fallback_help_text(alias)
-        )
+        reply_text = build_reply_text(alias, text)
 
         post = slack_api(
             "chat.postMessage",

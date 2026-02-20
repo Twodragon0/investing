@@ -12,6 +12,7 @@ jobs:
   respond-mentions:
     strategy:
       fail-fast: false
+      max-parallel: 1
       matrix:
         channel_alias: [ops, dev, security, openclaw, investing]
     runs-on: ubuntu-latest
