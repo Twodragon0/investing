@@ -426,6 +426,34 @@ function shareTwitter() {
   images.forEach(attachFallback);
 })();
 
+// 테이블 래핑 + 스크롤 힌트
+(function() {
+  var tables = document.querySelectorAll('.post-content table');
+  tables.forEach(function(table) {
+    var wrapper = document.createElement('div');
+    wrapper.className = 'table-wrapper';
+    table.parentNode.insertBefore(wrapper, table);
+    wrapper.appendChild(table);
+
+    function checkScroll() {
+      if (wrapper.scrollWidth > wrapper.clientWidth + 2) {
+        wrapper.classList.add('is-scrollable');
+        if (wrapper.scrollLeft + wrapper.clientWidth >= wrapper.scrollWidth - 2) {
+          wrapper.classList.add('scrolled-end');
+        } else {
+          wrapper.classList.remove('scrolled-end');
+        }
+      } else {
+        wrapper.classList.remove('is-scrollable', 'scrolled-end');
+      }
+    }
+
+    wrapper.addEventListener('scroll', checkScroll, { passive: true });
+    window.addEventListener('resize', checkScroll);
+    checkScroll();
+  });
+})();
+
 function toggleToc() {
   var toc = document.getElementById('post-toc');
   if (toc) toc.classList.toggle('collapsed');

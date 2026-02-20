@@ -7,26 +7,26 @@ source: "consolidated"
 lang: "ko"
 ---
 
-블록체인 보안 관련 뉴스 1건을 정리합니다.
+블록체인 보안 뉴스 1건을 요약합니다.
+
+---
 
 ## 핵심 요약
 
-- **보안 사고/뉴스**: 총 1건
-- **보안 관련 뉴스**: 1건
+### AI 에이전트와 암호화폐 보안
 
-## 보안 관련 뉴스
+암호화폐 해킹 피해 규모가 **$34억**에 달하는 가운데, AI 에이전트를 활용한 보안 대응이 시험대에 올랐습니다 (Cryptopolitan).
 
-**1. [AI agents put to the test as crypto hacks hit $3.4 billion - Cryptopolitan](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9ibHk4Q0Q4aElHY1dpWmxwVjZhRFNDWGVGWGUzWlZkNGNQbkpVU2NiZzRYRklzZFhSa1JqTF9ObnhIdGQ0dG0yNlVReEF2aENzRW82T1l5ZVJtT0RyTzVKYVl0OTU5bWM?oc=5)**
-AI agents put to the test as crypto hacks hit $3.4 billion Cryptopolitan
-<span class="source-tag">Blockchain Security EN</span>
+AI 기반 보안 에이전트는 스마트 컨트랙트 취약점 탐지, 이상 거래 패턴 감지, 실시간 위협 대응 등에 활용되고 있으며, 해킹 피해 규모가 지속적으로 증가함에 따라 그 중요성이 부각되고 있습니다.
 
+---
 
-## 보안 인사이트
+## 인사이트
 
-블록체인 보안 관련 뉴스 1건이 수집되어 업계 보안 이슈에 대한 관심이 높은 상태입니다.
+> 2026년 암호화폐 해킹 피해가 $34억을 기록하면서 보안 투자의 중요성이 재확인되었습니다. AI 기반 보안 솔루션은 실시간 대응 능력에서 기존 방식 대비 우위를 보이고 있으나, 아직 초기 단계입니다.
 
-> *본 보안 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*
+> *본 보안 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다.*
 
-## 참고 링크
+---
 
-<details><summary>참고 링크 (1건)</summary><div class="details-content"><ol><li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9ibHk4Q0Q4aElHY1dpWmxwVjZhRFNDWGVGWGUzWlZkNGNQbkpVU2NiZzRYRklzZFhSa1JqTF9ObnhIdGQ0dG0yNlVReEF2aENzRW82T1l5ZVJtT0RyTzVKYVl0OTU5bWM?oc=5">AI agents put to the test as crypto hacks hit $3.4 billion - Cryptopolitan</a> <span class="source-tag">Blockchain Security EN</span></li></ol></div></details>
+**데이터 수집 시각**: 2026-02-20 01:35 UTC
