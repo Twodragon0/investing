@@ -137,6 +137,7 @@ def generate_tvl_chart_image(
             return None
 
         import matplotlib
+
         matplotlib.use("Agg")
         import matplotlib.pyplot as plt
         import matplotlib.patches as mpatches
@@ -159,55 +160,136 @@ def generate_tvl_chart_image(
         ax.axis("off")
 
         # Title
-        ax.text(7, fig_height - 0.5, "DeFi TVL Dashboard",
-                ha="center", va="center", fontsize=20, fontweight="bold",
-                color=COLORS["text"], fontfamily=_FONT_FAMILY)
-        ax.text(7, fig_height - 1.05, f"{date_str}  |  Source: DeFi Llama",
-                ha="center", va="center", fontsize=10, color=COLORS["text_secondary"],
-                fontfamily=_FONT_FAMILY)
+        ax.text(
+            7,
+            fig_height - 0.5,
+            "DeFi TVL Dashboard",
+            ha="center",
+            va="center",
+            fontsize=20,
+            fontweight="bold",
+            color=COLORS["text"],
+            fontfamily=_FONT_FAMILY,
+        )
+        ax.text(
+            7,
+            fig_height - 1.05,
+            f"{date_str}  |  Source: DeFi Llama",
+            ha="center",
+            va="center",
+            fontsize=10,
+            color=COLORS["text_secondary"],
+            fontfamily=_FONT_FAMILY,
+        )
 
         # Total TVL summary badges
         total_tvl = sum(p.get("tvl", 0) or 0 for p in protocols)
         total_chain_tvl = sum(c.get("tvl", 0) or 0 for c in chains)
 
         # Left badge
-        badge_l = mpatches.FancyBboxPatch((0.3, fig_height - 2.0), 5.8, 0.6,
-                                          boxstyle="round,pad=0.05",
-                                          facecolor="#1a2332", edgecolor=COLORS["blue"],
-                                          linewidth=1.2)
+        badge_l = mpatches.FancyBboxPatch(
+            (0.3, fig_height - 2.0),
+            5.8,
+            0.6,
+            boxstyle="round,pad=0.05",
+            facecolor="#1a2332",
+            edgecolor=COLORS["blue"],
+            linewidth=1.2,
+        )
         ax.add_patch(badge_l)
-        ax.text(3.2, fig_height - 1.65, f"Protocol TVL: {_format_tvl(total_tvl)}",
-                ha="center", va="center", fontsize=12, fontweight="bold",
-                color=COLORS["blue"], fontfamily=_FONT_FAMILY)
+        ax.text(
+            3.2,
+            fig_height - 1.65,
+            f"Protocol TVL: {_format_tvl(total_tvl)}",
+            ha="center",
+            va="center",
+            fontsize=12,
+            fontweight="bold",
+            color=COLORS["blue"],
+            fontfamily=_FONT_FAMILY,
+        )
 
         # Right badge
-        badge_r = mpatches.FancyBboxPatch((7.9, fig_height - 2.0), 5.8, 0.6,
-                                          boxstyle="round,pad=0.05",
-                                          facecolor="#1a2510", edgecolor=COLORS["orange"],
-                                          linewidth=1.2)
+        badge_r = mpatches.FancyBboxPatch(
+            (7.9, fig_height - 2.0),
+            5.8,
+            0.6,
+            boxstyle="round,pad=0.05",
+            facecolor="#1a2510",
+            edgecolor=COLORS["orange"],
+            linewidth=1.2,
+        )
         ax.add_patch(badge_r)
-        ax.text(10.8, fig_height - 1.65, f"Chain TVL: {_format_tvl(total_chain_tvl)}",
-                ha="center", va="center", fontsize=12, fontweight="bold",
-                color=COLORS["orange"], fontfamily=_FONT_FAMILY)
+        ax.text(
+            10.8,
+            fig_height - 1.65,
+            f"Chain TVL: {_format_tvl(total_chain_tvl)}",
+            ha="center",
+            va="center",
+            fontsize=12,
+            fontweight="bold",
+            color=COLORS["orange"],
+            fontfamily=_FONT_FAMILY,
+        )
 
         y_start = fig_height - 2.7
 
         # ── Left panel: Top 10 Protocols ──
-        ax.text(0.3, y_start, "Top 10 Protocols by TVL",
-                fontsize=12, fontweight="bold", color=COLORS["blue"],
-                fontfamily=_FONT_FAMILY)
+        ax.text(
+            0.3,
+            y_start,
+            "Top 10 Protocols by TVL",
+            fontsize=12,
+            fontweight="bold",
+            color=COLORS["blue"],
+            fontfamily=_FONT_FAMILY,
+        )
 
         y_header = y_start - 0.38
-        ax.text(0.5, y_header, "#", fontsize=8, fontweight="bold",
-                color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY, ha="center")
-        ax.text(0.85, y_header, "Protocol", fontsize=8, fontweight="bold",
-                color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
-        ax.text(3.5, y_header, "TVL", fontsize=8, fontweight="bold",
-                color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY, ha="right")
-        ax.text(4.5, y_header, "Category", fontsize=8, fontweight="bold",
-                color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
-        ax.plot([0.3, 6.4], [y_header - 0.14, y_header - 0.14],
-                color=COLORS["border"], linewidth=0.5)
+        ax.text(
+            0.5,
+            y_header,
+            "#",
+            fontsize=8,
+            fontweight="bold",
+            color=COLORS["text_secondary"],
+            fontfamily=_FONT_FAMILY,
+            ha="center",
+        )
+        ax.text(
+            0.85,
+            y_header,
+            "Protocol",
+            fontsize=8,
+            fontweight="bold",
+            color=COLORS["text_secondary"],
+            fontfamily=_FONT_FAMILY,
+        )
+        ax.text(
+            3.5,
+            y_header,
+            "TVL",
+            fontsize=8,
+            fontweight="bold",
+            color=COLORS["text_secondary"],
+            fontfamily=_FONT_FAMILY,
+            ha="right",
+        )
+        ax.text(
+            4.5,
+            y_header,
+            "Category",
+            fontsize=8,
+            fontweight="bold",
+            color=COLORS["text_secondary"],
+            fontfamily=_FONT_FAMILY,
+        )
+        ax.plot(
+            [0.3, 6.4],
+            [y_header - 0.14, y_header - 0.14],
+            color=COLORS["border"],
+            linewidth=0.5,
+        )
 
         for i, protocol in enumerate(top_protocols):
             y = y_header - 0.35 - i * 0.45
@@ -217,41 +299,118 @@ def generate_tvl_chart_image(
             category = (protocol.get("category") or "")[:14]
 
             if i % 2 == 0:
-                rect = mpatches.FancyBboxPatch((0.25, y - 0.15), 6.15, 0.38,
-                                               boxstyle="round,pad=0.03",
-                                               facecolor=COLORS["bg_inner"],
-                                               edgecolor="none", alpha=0.5)
+                rect = mpatches.FancyBboxPatch(
+                    (0.25, y - 0.15),
+                    6.15,
+                    0.38,
+                    boxstyle="round,pad=0.03",
+                    facecolor=COLORS["bg_inner"],
+                    edgecolor="none",
+                    alpha=0.5,
+                )
                 ax.add_patch(rect)
 
             rank_colors = {0: COLORS["gold"], 1: COLORS["silver"], 2: COLORS["bronze"]}
             rank_color = rank_colors.get(i, COLORS["text_secondary"])
-            ax.text(0.5, y, str(i + 1), fontsize=9, fontweight="bold",
-                    color=rank_color, ha="center", fontfamily=_FONT_FAMILY)
-            ax.text(0.85, y, name, fontsize=9, color=COLORS["text"],
-                    fontfamily=_FONT_FAMILY)
-            ax.text(3.5, y, _format_tvl(tvl), fontsize=9, color=COLORS["text"],
-                    ha="right", fontfamily=_FONT_FAMILY, fontweight="bold")
-            ax.text(4.5, y, category, fontsize=8, color=COLORS["text_secondary"],
-                    fontfamily=_FONT_FAMILY)
+            ax.text(
+                0.5,
+                y,
+                str(i + 1),
+                fontsize=9,
+                fontweight="bold",
+                color=rank_color,
+                ha="center",
+                fontfamily=_FONT_FAMILY,
+            )
+            ax.text(
+                0.85, y, name, fontsize=9, color=COLORS["text"], fontfamily=_FONT_FAMILY
+            )
+            ax.text(
+                3.5,
+                y,
+                _format_tvl(tvl),
+                fontsize=9,
+                color=COLORS["text"],
+                ha="right",
+                fontfamily=_FONT_FAMILY,
+                fontweight="bold",
+            )
+            ax.text(
+                4.5,
+                y,
+                category,
+                fontsize=8,
+                color=COLORS["text_secondary"],
+                fontfamily=_FONT_FAMILY,
+            )
 
         # ── Right panel: Top 10 Chains ──
-        ax.text(7.5, y_start, "Top 10 Chains by TVL",
-                fontsize=12, fontweight="bold", color=COLORS["orange"],
-                fontfamily=_FONT_FAMILY)
+        ax.text(
+            7.5,
+            y_start,
+            "Top 10 Chains by TVL",
+            fontsize=12,
+            fontweight="bold",
+            color=COLORS["orange"],
+            fontfamily=_FONT_FAMILY,
+        )
 
         y_header2 = y_start - 0.38
-        ax.text(7.7, y_header2, "#", fontsize=8, fontweight="bold",
-                color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY, ha="center")
-        ax.text(8.05, y_header2, "Chain", fontsize=8, fontweight="bold",
-                color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
-        ax.text(10.8, y_header2, "TVL", fontsize=8, fontweight="bold",
-                color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY, ha="right")
-        ax.text(11.5, y_header2, "Share", fontsize=8, fontweight="bold",
-                color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY, ha="center")
-        ax.text(12.6, y_header2, "Token", fontsize=8, fontweight="bold",
-                color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY, ha="center")
-        ax.plot([7.4, 13.7], [y_header2 - 0.14, y_header2 - 0.14],
-                color=COLORS["border"], linewidth=0.5)
+        ax.text(
+            7.7,
+            y_header2,
+            "#",
+            fontsize=8,
+            fontweight="bold",
+            color=COLORS["text_secondary"],
+            fontfamily=_FONT_FAMILY,
+            ha="center",
+        )
+        ax.text(
+            8.05,
+            y_header2,
+            "Chain",
+            fontsize=8,
+            fontweight="bold",
+            color=COLORS["text_secondary"],
+            fontfamily=_FONT_FAMILY,
+        )
+        ax.text(
+            10.8,
+            y_header2,
+            "TVL",
+            fontsize=8,
+            fontweight="bold",
+            color=COLORS["text_secondary"],
+            fontfamily=_FONT_FAMILY,
+            ha="right",
+        )
+        ax.text(
+            11.5,
+            y_header2,
+            "Share",
+            fontsize=8,
+            fontweight="bold",
+            color=COLORS["text_secondary"],
+            fontfamily=_FONT_FAMILY,
+            ha="center",
+        )
+        ax.text(
+            12.6,
+            y_header2,
+            "Token",
+            fontsize=8,
+            fontweight="bold",
+            color=COLORS["text_secondary"],
+            fontfamily=_FONT_FAMILY,
+            ha="center",
+        )
+        ax.plot(
+            [7.4, 13.7],
+            [y_header2 - 0.14, y_header2 - 0.14],
+            color=COLORS["border"],
+            linewidth=0.5,
+        )
 
         for i, chain in enumerate(top_chains):
             y = y_header2 - 0.35 - i * 0.45
@@ -262,37 +421,84 @@ def generate_tvl_chart_image(
             share = (tvl / total_chain_tvl * 100) if total_chain_tvl > 0 else 0
 
             if i % 2 == 0:
-                rect = mpatches.FancyBboxPatch((7.4, y - 0.15), 6.3, 0.38,
-                                               boxstyle="round,pad=0.03",
-                                               facecolor=COLORS["bg_inner"],
-                                               edgecolor="none", alpha=0.5)
+                rect = mpatches.FancyBboxPatch(
+                    (7.4, y - 0.15),
+                    6.3,
+                    0.38,
+                    boxstyle="round,pad=0.03",
+                    facecolor=COLORS["bg_inner"],
+                    edgecolor="none",
+                    alpha=0.5,
+                )
                 ax.add_patch(rect)
 
             rank_colors = {0: COLORS["gold"], 1: COLORS["silver"], 2: COLORS["bronze"]}
             rank_color = rank_colors.get(i, COLORS["text_secondary"])
-            ax.text(7.7, y, str(i + 1), fontsize=9, fontweight="bold",
-                    color=rank_color, ha="center", fontfamily=_FONT_FAMILY)
-            ax.text(8.05, y, name, fontsize=9, color=COLORS["text"],
-                    fontfamily=_FONT_FAMILY)
-            ax.text(10.8, y, _format_tvl(tvl), fontsize=9, color=COLORS["text"],
-                    ha="right", fontfamily=_FONT_FAMILY, fontweight="bold")
-            ax.text(11.5, y, f"{share:.1f}%", fontsize=8,
-                    color=COLORS["text_secondary"], ha="center",
-                    fontfamily=_FONT_FAMILY)
-            ax.text(12.6, y, token, fontsize=8, color=COLORS["text_secondary"],
-                    ha="center", fontfamily=_FONT_FAMILY)
+            ax.text(
+                7.7,
+                y,
+                str(i + 1),
+                fontsize=9,
+                fontweight="bold",
+                color=rank_color,
+                ha="center",
+                fontfamily=_FONT_FAMILY,
+            )
+            ax.text(
+                8.05, y, name, fontsize=9, color=COLORS["text"], fontfamily=_FONT_FAMILY
+            )
+            ax.text(
+                10.8,
+                y,
+                _format_tvl(tvl),
+                fontsize=9,
+                color=COLORS["text"],
+                ha="right",
+                fontfamily=_FONT_FAMILY,
+                fontweight="bold",
+            )
+            ax.text(
+                11.5,
+                y,
+                f"{share:.1f}%",
+                fontsize=8,
+                color=COLORS["text_secondary"],
+                ha="center",
+                fontfamily=_FONT_FAMILY,
+            )
+            ax.text(
+                12.6,
+                y,
+                token,
+                fontsize=8,
+                color=COLORS["text_secondary"],
+                ha="center",
+                fontfamily=_FONT_FAMILY,
+            )
 
         # Footer
-        ax.text(7, 0.2, "Investing Dragon | DeFi Llama Data | Auto-generated",
-                ha="center", fontsize=8, color=COLORS["text_secondary"],
-                fontfamily=_FONT_FAMILY, style="italic")
+        ax.text(
+            7,
+            0.2,
+            "Investing Dragon | DeFi Llama Data | Auto-generated",
+            ha="center",
+            fontsize=8,
+            color=COLORS["text_secondary"],
+            fontfamily=_FONT_FAMILY,
+            style="italic",
+        )
 
         filename = f"defi-tvl-dashboard-{date_str}.png"
         filepath = os.path.join(IMAGES_DIR, filename)
 
         plt.tight_layout(pad=0.5)
-        plt.savefig(filepath, dpi=150, facecolor=COLORS["bg"],
-                    edgecolor="none", bbox_inches="tight")
+        plt.savefig(
+            filepath,
+            dpi=150,
+            facecolor=COLORS["bg"],
+            edgecolor="none",
+            bbox_inches="tight",
+        )
         plt.close(fig)
 
         logger.info("Generated DeFi TVL dashboard: %s", filename)
@@ -398,7 +604,13 @@ def build_post_content(
 
         sorted_cats = sorted(category_tvl.items(), key=lambda x: x[1], reverse=True)
         cat_rows = [
-            (cat, _format_tvl(tvl), f"{(tvl / total_protocol_tvl * 100):.1f}%" if total_protocol_tvl > 0 else "N/A")
+            (
+                cat,
+                _format_tvl(tvl),
+                f"{(tvl / total_protocol_tvl * 100):.1f}%"
+                if total_protocol_tvl > 0
+                else "N/A",
+            )
             for cat, tvl in sorted_cats
         ]
         content_parts.append(
@@ -419,7 +631,9 @@ def build_post_content(
         top_p = protocols[0]
         top_p_name = top_p.get("name") or "Unknown"
         top_p_tvl = top_p.get("tvl") or 0
-        share_of_total = (top_p_tvl / total_protocol_tvl * 100) if total_protocol_tvl > 0 else 0
+        share_of_total = (
+            (top_p_tvl / total_protocol_tvl * 100) if total_protocol_tvl > 0 else 0
+        )
         insight_lines.append(
             f"현재 DeFi 생태계에서 가장 큰 프로토콜은 **{top_p_name}**으로, "
             f"TVL **{_format_tvl(top_p_tvl)}** ({share_of_total:.1f}%)를 차지합니다."
