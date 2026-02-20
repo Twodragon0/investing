@@ -61,6 +61,13 @@ layout: default
     {% endif %}
   </header>
 
+  {% if page.excerpt %}
+  <section class="post-summary">
+    <div class="summary-label">요약</div>
+    <p>{{ page.excerpt | strip_html }}</p>
+  </section>
+  {% endif %}
+
   <nav class="post-toc" id="post-toc">
     <div class="toc-header" onclick="toggleToc()">
       <span class="toc-title">목차</span>
@@ -392,6 +399,24 @@ function shareTwitter() {
   var images = document.querySelectorAll('.post-content.prose-content img');
   if (!images.length) return;
 
+  function toCaption(text) {
+    return String(text || '').replace(/[-_]+/g, ' ').replace(/\s+/g, ' ').trim();
+  }
+
+  function wrapImage(img) {
+    if (img.closest('figure')) return;
+    var figure = document.createElement('figure');
+    figure.className = 'post-figure';
+    img.parentNode.insertBefore(figure, img);
+    figure.appendChild(img);
+    var alt = toCaption(img.getAttribute('alt'));
+    if (alt) {
+      var caption = document.createElement('figcaption');
+      caption.textContent = alt;
+      figure.appendChild(caption);
+    }
+  }
+
   function fallbackSrc(src) {
     var dailyPattern = /news-briefing-daily-(\d{4}-\d{2}-\d{2})\.png/;
     var matched = src.match(dailyPattern);
@@ -423,7 +448,32 @@ function shareTwitter() {
     }, { once: true });
   }
 
-  images.forEach(attachFallback);
+  images.forEach(function(img) {
+    wrapImage(img);
+    attachFallback(img);
+  });
+})();
+
+(function() {
+  var tables = document.querySelectorAll('.post-content.prose-content table');
+  if (!tables.length) return;
+
+  tables.forEach(function(table) {
+    var parent = table.parentElement;
+    if (parent && parent.classList.contains('table-wrap')) return;
+    var wrap = document.createElement('div');
+    wrap.className = 'table-wrap';
+    table.parentNode.insertBefore(wrap, table);
+    wrap.appendChild(table);
+
+    function update() {
+      var scrollable = table.scrollWidth > wrap.clientWidth + 4;
+      wrap.classList.toggle('is-scrollable', scrollable);
+    }
+
+    update();
+    window.addEventListener('resize', update, { passive: true });
+  });
 })();
 
 // 테이블 래핑 + 스크롤 힌트
