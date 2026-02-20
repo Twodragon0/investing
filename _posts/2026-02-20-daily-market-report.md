@@ -32,11 +32,12 @@ image: "/assets/images/generated/market-heatmap-2026-02-20.png"
 
 ## 오늘의 시장 인사이트
 
-- **암호화폐**: BTC $67K 부근 횡보. Fed 의사록 매파 기조에 한때 $66K 붕괴 후 반등. BTC ETF 5주 연속 유출 위기 속에서도 ETF 가격은 소폭 상승.
-- **한국 증시**: KOSPI **5,744.47** (+1.18%) 강세 마감. KOSDAQ은 -0.43% 소폭 조정.
-- **미국 증시**: S&P 500 **-0.28%**, 다우 **-0.54%** 하락. 유틸리티·에너지 섹터만 상승, 기술·금융 약세.
-- **원자재**: 금 **$5,017** (+0.29%) 사상 최고 부근 유지. 원유 WTI **$66.56** (+2.13%) 반등.
-- **환율**: 원/달러 **1,448.98**원 보합. DXY **97.94** (+0.21%) 소폭 강세.
+- **암호화폐**: BTC $67K 부근 횡보 지속. Fed 의사록의 예상보다 강한 매파 기조 확인 후 한때 $66K를 붕괴했으나 빠르게 반등. BTC ETF는 5주 연속 순유출 위기이며, 이더리움·XRP ETF도 동반 유출 중. 반면 SOL ETF는 유일하게 유입세를 유지해 알트코인 내 차별화가 뚜렷해지고 있음.
+- **기관 자금 흐름**: 비트코인 고래가 3,107 BTC($2.06억)를 Coinbase Institutional로 이동. OTC 매도 또는 기관 청산 가능성이 제기되며 단기 하방 압력으로 작용할 수 있음. 이더리움 현물 ETF는 $4,250만 순유출로 기관 수요 둔화를 시사.
+- **한국 증시**: KOSPI **5,744.47** (+1.18%) 강세 마감. 외국인·기관 매수 유입으로 반도체·2차전지 주도. KOSDAQ은 -0.43% 소폭 조정.
+- **미국 증시**: S&P 500 **-0.28%**, 다우 **-0.54%** 하락. VIX +3.11% 상승(20.23)으로 불확실성 소폭 확대. 유틸리티·에너지만 상승하며 방어주 선호 심리 감지.
+- **원자재**: 금 **$5,017** (+0.29%) 사상 최고 수준 유지 — 매파 Fed에도 안전자산 수요 건재. 원유 WTI **$66.56** (+2.13%) 중동 긴장 고조 반영.
+- **환율**: 원/달러 **1,448.98**원 보합. DXY **97.94** (+0.21%) 소폭 강세 — 달러 강세는 신흥국·암호화폐 자산에 단기 역풍.
 
 > *본 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다.*
 
@@ -52,7 +53,7 @@ BTC는 $67,000 부근에서 횡보 중이며, Fed 의사록의 매파 기조 확
 
 **참고:** [CoinGecko](https://www.coingecko.com/) | [CoinMarketCap](https://coinmarketcap.com/)
 
-## 시가총액 Top 20
+## 시가총액 Top 10
 
 | # | 코인 | 가격 | 24h 변동 | 시가총액 |
 | ---: | --- | ---: | ---: | ---: |
@@ -66,12 +67,8 @@ BTC는 $67,000 부근에서 횡보 중이며, Fed 의사록의 매파 기조 확
 | 8 | TRX | $0.28 | 🟢 +1.7% | $26.9B |
 | 9 | DOGE | $0.10 | 🟢 +0.5% | $16.7B |
 | 10 | BCH | $560.92 | 🟢 +0.2% | $11.2B |
-| 11 | WBT | $50.63 | — | $10.8B |
-| 12 | ADA | $0.27 | 🔴 -0.2% | $10.1B |
-| 13 | LEO | $8.76 | 🟢 +2.1% | $8.1B |
-| 14 | HYPE | $29.49 | 🟢 +3.5% | $7.0B |
-| 15 | XMR | $337.16 | 🟢 +2.4% | $6.2B |
-| 16 | LINK | $8.62 | 🔴 -0.4% | $6.1B |
+
+> 11~16위: WBT $50.63 · ADA $0.27(-0.2%) · LEO $8.76(+2.1%) · HYPE $29.49(+3.5%) · XMR $337.16(+2.4%) · LINK $8.62(-0.4%)
 
 ![top-coins]({{ '/assets/images/generated/top-coins-2026-02-20.png' | relative_url }})
 
@@ -140,18 +137,17 @@ BTC는 $67,000 부근에서 횡보 중이며, Fed 의사록의 매파 기조 확
 | **Fidelity Wise Origin Bitcoin Fund** (FBTC) | $58.46 | +0.59 | 🟢 +1.02% |
 | **Grayscale Bitcoin Trust** (GBTC) | $52.32 | +0.52 | 🟢 +1.00% |
 
-**주요 ETF 뉴스:**
+**주요 ETF 뉴스 요약:**
 
-1. [비트코인 ETF 5주 연속 유출 위기…리플 XRP도 자금 이탈 - 톱스타뉴스](https://news.google.com/rss/articles/CBMickFVX3lxTE5OM3NKOGU1dzkwMDJkWmRWcFpQdmotWFNUVV84Ulk5bVdUYmFQSV80eVRzZGF3ZTJ6bmZfVXZnOHZNZFAxa01MX09yd05iZHJrTkx1YjZiVmRtbXlneDdNcnJLb3dFbmM3WHVqUEg5LXJ3UQ?oc=5)
-2. [비트코인 ETF, 유출 확대 속에 1억 3,300만 달러 유출 - Bitcoin.com News](https://news.google.com/rss/articles/CBMikwFBVV95cUxQNHY5bElXbm5NbDVpempWcUpEdjM5WnVPQnNRamlocHdQYkFON0V0REd3NktHblRMYlZVZDVZQ0JJWEZReGhQWEVWUEdXRHBxNTZ2UjdCeDQ2TXc4QkVYX2lSMHZQQU5kaXplUXdzbWxwOVRua2dHRWpXYUtxN3FrMjd4SGwtaVRtQUU3a21FeVl5TUU?oc=5)
-3. [비트코인, 이더, XRP ETF는 자금 유출을 겪는 반면 솔라나는 유출 추세를 거스르다 - CoinDesk](https://news.google.com/rss/articles/CBMirAFBVV95cUxOU2toUnRZN1JETlZ0bUFhTERUdEduckdKcGFFbXp5OWxYUTR5eTRHWGc2ejJDMU1RX0diWkpUd1JySGU4RzdMczdfUklEaExBaTU2cVJPVDctV3lsSnhQU0ZpeUtreVliT3B0ZG9IT1M0WXlsUDRITWhkN0MzbjFOd3ZPOUx3N2gxVEZYOVRBTkFINXJBbVpwVlBYdXhzUXpJSS13bTlLTkt1ZWxZ?oc=5)
-4. [美 이더리움 현물 ETF 4250만달러 순유출…기관 자금 흐름 둔화 - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE5UU1M5ZmZoMWg3ZzhKN0s0dHBCYVFoN1RXWDlrbWxJc2psSHNtQ3paLUM3cWRsZkFQcmZTMnJsMjNOZWJYbEJTOFduVnYyOThf?oc=5)
+- **BTC ETF 5주 연속 유출 위기 — $1.33억 유출** (톱스타뉴스·Bitcoin.com): 비트코인 현물 ETF에서 5주째 순유출이 이어지며 $1억 3,300만 달러가 빠져나갔습니다. XRP 관련 ETF도 같은 흐름으로 자금이 이탈하고 있어 기관 수요 약화 우려가 커지고 있습니다.
+- **SOL ETF만 유입 — BTC·ETH·XRP와 차별화** (CoinDesk): BTC, 이더리움, XRP ETF가 나란히 순유출을 기록하는 반면, 솔라나 ETF는 홀로 자금 유입을 유지하며 기관들의 SOL 선호도 상승을 반영하고 있습니다.
+- **이더리움 현물 ETF $4,250만 순유출 — 기관 자금 흐름 둔화** (블루밍비트): 미국 이더리움 현물 ETF에서 하루 만에 $4,250만이 순유출됐습니다. 출시 초반과 달리 기관 매수세가 크게 약해졌음을 보여주며, ETH 단기 가격 모멘텀에 하방 요인으로 작용할 수 있습니다.
 
 ## 고래 거래 동향
 
-| # | 제목 | 출처 |
-| --- | --- | --- |
-| 1 | [Bitcoin Whale Transfer Stuns Market: 3,107 BTC Moves to Coinbase Institutional in $206 Million Pivot - CryptoRank](https://news.google.com/rss/articles/CBMijgFBVV95cUxOZUtWSE1CRjNJZTJjMVBEbXZEdkFlVWl3UFVRbk55SXpkSEN5T3oxOGtCZDNiVXdHem85c3dPbl96UTNtcnJkZEhCcTRXSjIzaDNicVdHOFl4R1dNYzFyVDg0SVV0R1BtLUF6UklMWDRkd1ZXSXdtMEx6MzNOMURwcGVQV1ZkeUNHY1pDZWxn?oc=5) | Whale Alert EN |
+**비트코인 고래, $2.06억 규모 이동 — 기관 OTC 거래 가능성** (CryptoRank·Whale Alert):
+
+Bitcoin 고래가 **3,107 BTC($2억 600만)**를 Coinbase Institutional 지갑으로 이동했습니다. Coinbase Institutional은 기관 고객 전용 OTC 거래 창구로 활용되는 만큼, 이번 이동은 대형 기관의 장외 매도 또는 포트폴리오 재배치 가능성을 시사합니다. 단기적으로는 시장 매도 압력으로 작용할 수 있으나, OTC 거래는 현물 시장에 직접적인 가격 충격을 주지 않는 경우도 많습니다. ETF 유출 흐름과 맞물려 기관의 차익 실현 여부를 주시할 필요가 있습니다.
 
 ## 매크로 경제 지표
 
