@@ -1,0 +1,93 @@
+name: Ops 10AM Digest
+
+on:
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ops-10am-digest
+  cancel-in-progress: false
+
+jobs:
+  post-ops-digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Restore digest state cache
+        uses: actions/cache/restore@v4
+        with:
+          path: _state/ops-10am-digest-state.json
+          key: ops-10am-digest-state-${{ github.run_id }}
+          restore-keys: |
+            ops-10am-digest-state-
+
+      - name: Validate Slack config (ops)
+        id: slack
+        uses: ./.github/actions/resolve-slack-config
+        with:
+          target_channel_alias: ops
+          token_candidates: |
+            ${{ secrets.SLACK_BOT_TOKEN }}
+            ${{ secrets.OPENCLAW_SLACK_BOT_TOKEN }}
+            ${{ secrets.AI_SLACK_BOT_TOKEN }}
+            ${{ secrets.SLACK_TOKEN }}
+          channel_candidates_ops: |
+            ${{ secrets.SLACK_CHANNEL_ID_OPS }}
+            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_OPS }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID_OPS }}
+            ${{ secrets.SLACK_CHANNEL_OPS }}
+          channel_candidates_default: |
+            ${{ secrets.SLACK_CHANNEL_ID }}
+            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID }}
+            ${{ secrets.SLACK_CHANNEL }}
+
+      - name: Generate 10AM digest message
+        id: digest
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          SLACK_BOT_TOKEN: ${{ steps.slack.outputs.token }}
+          SLACK_CHANNEL_ID: ${{ steps.slack.outputs.channel }}
+        run: |
+          python3 scripts/generate_ops_10am_digest.py \
+            --repo "${{ github.repository }}" \
+            --state-file "_state/ops-10am-digest-state.json"
+
+      - name: Post digest to Slack
+        if: steps.slack.outputs.can_post == 'true' && steps.digest.outputs.should_post == 'true'
+        uses: slackapi/slack-github-action@v2.1.1
+        with:
+          method: chat.postMessage
+          token: ${{ steps.slack.outputs.token }}
+          payload: |
+            channel: "${{ steps.slack.outputs.channel }}"
+            text: "${{ steps.digest.outputs.message }}"
+
+      - name: Write summary
+        run: |
+          {
+            echo "## Ops 10AM Digest"
+            echo "- should_post: ${{ steps.digest.outputs.should_post }}"
+            echo "- slack_health: ${{ steps.digest.outputs.slack_health }}"
+            echo "- marker: ${{ steps.digest.outputs.marker }}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Save digest state cache
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: _state/ops-10am-digest-state.json
+          key: ops-10am-digest-state-${{ github.run_id }}
