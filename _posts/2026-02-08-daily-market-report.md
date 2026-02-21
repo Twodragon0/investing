@@ -9,11 +9,11 @@ lang: "ko"
 
 ## 시장 시각화
 
-![market-heatmap]({{ '/assets/images/generated/market-heatmap-2026-02-08.png' | relative_url }})
+## 전체 뉴스 요약
 
-![top-coins]({{ '/assets/images/generated/top-coins-2026-02-08.png' | relative_url }})
+- 암호화폐 시장이 소폭 상승세를 이어가고 있습니다. 안정적인 흐름 속에서 점진적 회복이 진행 중입니다.
+- BTC 도미넌스가 57.1%로 높은 수준입니다. 비트코인 중심의 자금 흐름이 지속되고 있어, 알트코인 투자 시 주의가 필요합니다.
 
-![fear-greed]({{ '/assets/images/generated/fear-greed-2026-02-08.png' | relative_url }})
 
 ## 오늘의 시장 인사이트
 
