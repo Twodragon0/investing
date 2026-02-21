@@ -14,6 +14,17 @@ lang: "ko"
 - **보안 사고/뉴스**: 총 1건
 - **보안 관련 뉴스**: 1건
 
+
+
+
+
+## 전체 뉴스 요약
+
+- 총 **1건** 수집
+- 보안 관련 뉴스: 1건
+- 블록체인 보안 관련 뉴스 1건을 정리합니다.
+- - 보안 사고/뉴스: 총 1건 - 보안 관련 뉴스: 1건
+
 ## 보안 관련 뉴스
 
 **1. [AI agents put to the test as crypto hacks hit $3.4 billion - Cryptopolitan](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9ibHk4Q0Q4aElHY1dpWmxwVjZhRFNDWGVGWGUzWlZkNGNQbkpVU2NiZzRYRklzZFhSa1JqTF9ObnhIdGQ0dG0yNlVReEF2aENzRW82T1l5ZVJtT0RyTzVKYVl0OTU5bWM?oc=5)**
