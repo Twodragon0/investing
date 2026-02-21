@@ -9,11 +9,13 @@ lang: "ko"
 
 ## 시장 시각화
 
-![market-heatmap]({{ '/assets/images/generated/market-heatmap-2026-02-07.png' | relative_url }})
+## 전체 뉴스 요약
 
-![top-coins]({{ '/assets/images/generated/top-coins-2026-02-07.png' | relative_url }})
+- 극도의 공포 장세: 공포/탐욕 지수 6으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다.
+- 비트코인 $69K 회복: 24h 기준 +3.49% 상승하며 $69,000선을 회복했으나, 주간으로는 -16.52% 하락. 단기 반등의 지속성에 주의가 필요합니다.
+- 시가총액 $2.43T로 소폭 회복: 전일 대비 +1.01% 상승하며 바닥 다지기 신호. BTC 도미넌스 56.7%로 비트코인 중심 자금 흐름 지속.
+- 암호화폐 시장이 소폭 상승세를 이어가고 있습니다. 안정적인 흐름 속에서 점진적 회복이 진행 중입니다.
 
-![fear-greed]({{ '/assets/images/generated/fear-greed-2026-02-07.png' | relative_url }})
 
 ## 오늘의 핵심
 
