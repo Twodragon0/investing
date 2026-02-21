@@ -9,11 +9,13 @@ lang: "ko"
 
 ## 시장 시각화
 
-![market-heatmap]({{ '/assets/images/generated/market-heatmap-2026-02-11.png' | relative_url }})
+## 전체 뉴스 요약
 
-![top-coins]({{ '/assets/images/generated/top-coins-2026-02-11.png' | relative_url }})
+- 극도의 공포 장세: 공포/탐욕 지수 11으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다.
+- 비트코인 $66,899 하락: 24h 기준 -1.99% 변동, 주간 -10.51% 하락.
+- 시가총액 $2.36T으로 하락: 전일 대비 -1.96%. BTC 도미넌스 56.7%로 비트코인 중심 자금 흐름 지속.
+- 암호화폐 시장이 하락세를 보이고 있습니다. 단기 조정 가능성을 염두에 두고 리스크 관리가 필요합니다.
 
-![fear-greed]({{ '/assets/images/generated/fear-greed-2026-02-11.png' | relative_url }})
 
 ## 오늘의 핵심
 
