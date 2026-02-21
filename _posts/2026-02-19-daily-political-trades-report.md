@@ -30,6 +30,16 @@ lang: "ko"
 ---
 
 
+
+
+
+
+## 전체 뉴스 요약
+
+- 총 **17건** 수집
+- 주요 테마: 📊 매크로/금리, 📈 가격/시장, 🤖 AI/기술
+- 미국 의회 거래 1건이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향을 예측하는 참고 자료가 될 수 있습니다.
+
 ## 미국 의회 거래 동향
 
 **1. [Maine Gov. Janet Mills discloses more than $170,000 in stocks - The Portland Press Herald](https://news.google.com/rss/articles/CBMinwFBVV95cUxNeDRYeTFfcW5MUDVVYTRzaVpoTHRqUFlUSUx4b2Q3OVdPa2hvdGFTelFqRjZlamktLUp5LWd0QlJQalR2QWNKc21xQjN1c2xZS2pQZ2NDWDdUN3h4TE5Wa0xZeUJVZGk5SFQzZVNKZEdfVkZzbFBRLUVlcHZHU0drWlczZWhWVHRyX2FtM1FfeExCeDdNTGRMdFNBVV9XSUk?oc=5)**
