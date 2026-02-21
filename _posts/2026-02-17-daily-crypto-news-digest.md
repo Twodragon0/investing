@@ -37,6 +37,16 @@ image: "/assets/images/generated/news-summary-2026-02-17.png"
 
 ![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-17.png' | relative_url }})
 
+
+
+
+
+## 전체 뉴스 요약
+
+- 총 **109건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔷 이더리움
+- 2026-02-17 암호화폐 시장에서 109건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 이더리움 관련 소식이 주목됩니다.
+
 ## 테마별 주요 뉴스
 
 ### 🟠 비트코인 (51건)
