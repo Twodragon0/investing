@@ -30,6 +30,16 @@ lang: "ko"
 ---
 
 
+
+
+
+
+## 전체 뉴스 요약
+
+- 총 **5건** 수집
+- 주요 테마: 🔵 규제/정책, 🏛️ 정치/정책
+- 트럼프 관련 3건의 정책 뉴스가 수집되었습니다. 행정명령 및 관세 정책은 글로벌 시장에 직접적인 영향을 미치고 있습니다.
+
 ## 트럼프 행정명령/정책
 
 **1. [트럼프 "유권자 신분증 의무화, 행정 명령으로 추진" - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE82VGxlZmVsTjhwLW92bm8xaENlZ1Ztak5XWUpWNUZ6WFNXckdXcG95RnU4SV95cGZtNkNUOXJVb3pxZVZmQzhtTGEwTlRETWM?oc=5)**

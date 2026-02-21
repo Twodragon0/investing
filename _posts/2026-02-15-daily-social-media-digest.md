@@ -37,6 +37,16 @@ image: "/assets/images/generated/source-distribution-2026-02-15.png"
 ![source-distribution]({{ '/assets/images/generated/source-distribution-2026-02-15.png' | relative_url }})
 
 
+
+
+
+
+## 전체 뉴스 요약
+
+- 총 **7건** 수집
+- 주요 테마: 🏛️ 정치/정책, 🟠 비트코인, 📊 매크로/금리
+- 정치·경제 관련 뉴스가 전체의 86%를 차지하고 있어, 정치적 이슈가 시장에 미치는 영향이 큰 상황입니다.
+
 ## 주요 소셜 미디어 트렌드
 
 **1. [Bitcoin Whale Alert – Massive $559M BTC Inflow to Binance Sparks Market Volatility Concerns - BlockchainReporter](https://news.google.com/rss/articles/CBMivAFBVV95cUxPUkdrVzNJN2dNeUV5cE10U3JjUDJzeVROd0FMQWc0clVVajRLWFNGRDVEcTlZWjg2cWw4WXE5NnpEQnM5V2x5MXhSTDhZd1hWQTdId2VrMUtFeW8ybEV5ZmI2Q1JhX09tSkdDalBJeHczeGFTYUVkenNzMzFTYkxnblVoSHBnYzNrdDJsVmtkUEFhS1dYVjJ3XzYyVkcxVkFsUU1jYUZBVmVWdzQwQ2pkdXZqNVRoVFNsNlBpVQ?oc=5)**
