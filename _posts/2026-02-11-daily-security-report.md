@@ -9,6 +9,12 @@ lang: "ko"
 
 블록체인 보안 관련 뉴스 45건을 정리합니다.
 
+## 전체 뉴스 요약
+
+- 총 **45건** 수집
+- 블록체인 보안 관련 뉴스 45건을 정리합니다.
+- 1. Hacker swipes $13.5m from Matcha Meta users as protocol reports security ‘incide - Blockchain Security EN 2. More than $100 million stolen in exploit of B...
+
 
 ## 보안 관련 뉴스
 
