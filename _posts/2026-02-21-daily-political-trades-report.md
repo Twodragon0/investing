@@ -31,6 +31,16 @@ lang: "ko"
 ---
 
 
+
+
+
+
+## 전체 뉴스 요약
+
+- 총 **53건** 수집
+- 주요 테마: 🏛️ 정치/정책, 📊 매크로/금리, 📈 가격/시장
+- 트럼프 관련 32건의 정책 뉴스가 수집되었습니다. 행정명령 및 관세 정책은 글로벌 시장에 직접적인 영향을 미치고 있습니다.
+
 ## 미국 의회 거래 동향
 
 **1. [10 Reasons Why the Congressional Stock Trading Ban Will Never Pass - Independent Voter News](https://news.google.com/rss/articles/CBMihwFBVV95cUxOVW5Rbk55Zk5aXy0zR2duUE5tdnYyanlheF9PY3YwSkd3b0NHSktYZUNINGczdFdJN3dNV3Fxd1NuOW52SklncHhUS2xTNFR1WG03R0FkLTZ3bnpFV3VMbjM5MDhBM3VEM25ja3h6V1BhRXBkam9Sc2xxcWhTd18wNW1JSUtzSVk?oc=5)**
