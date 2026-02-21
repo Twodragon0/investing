@@ -21,7 +21,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: Twodragon0/investing
-          path: investing
           fetch-depth: 1
 
       - name: Build folder summary
@@ -62,7 +61,7 @@ jobs:
           }
 
           build_investing_digest() {
-            local posts_dir="investing/_posts"
+            local posts_dir="_posts"
             if [ ! -d "$posts_dir" ]; then
               printf -- "- latest digest: unavailable\n"
               return
@@ -135,7 +134,7 @@ jobs:
             printf -- "- channels: #ops #dev #security #openclaw #investing\n"
             build_investing_digest
             build_line "ai" "ai"
-            build_line "investing" "investing"
+            build_line "investing" "."
             build_line "crypto" "crypto"
           } > "$report_file"
 
@@ -147,7 +146,7 @@ jobs:
 
       - name: Validate Slack config
         id: slack-config
-        uses: ./investing/.github/actions/resolve-slack-config
+        uses: ./.github/actions/resolve-slack-config
         with:
           target_channel_alias: ${{ matrix.channel_alias }}
           token_candidates: |
