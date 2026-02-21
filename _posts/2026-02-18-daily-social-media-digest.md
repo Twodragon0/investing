@@ -34,6 +34,17 @@ image: "/assets/images/generated/source-distribution-2026-02-18.png"
 
 ![source-distribution]({{ '/assets/images/generated/source-distribution-2026-02-18.png' | relative_url }})
 
+
+
+
+
+## 전체 뉴스 요약
+
+- 총 **36건** 수집
+- 주요 테마: 🏛️ 정치/정책, 📊 매크로/금리, 🟠 비트코인
+- 텔레그램에서 가장 활발한 채널은 Telegram @crypto(10건), Telegram @whale_alert(10건)입니다.
+- 정치·경제 관련 뉴스가 전체의 44%를 차지하고 있어, 정치적 이슈가 시장에 미치는 영향이 큰 상황입니다.
+
 ## 텔레그램 주요 소식
 
 **1. [Polymarket rolls out an “Up or Down” Bitcoin marketA new BTC prediction market has gone live, settli](https://t.me/crypto/3500)**
