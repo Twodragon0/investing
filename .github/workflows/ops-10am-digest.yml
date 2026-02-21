@@ -25,6 +25,9 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install Python dependencies
+        run: pip install -r scripts/requirements.txt
+
       - name: Restore digest state cache
         uses: actions/cache/restore@v4
         with:
