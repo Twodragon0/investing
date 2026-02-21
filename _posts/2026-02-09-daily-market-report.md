@@ -9,11 +9,11 @@ lang: "ko"
 
 ## 시장 시각화
 
-![market-heatmap]({{ '/assets/images/generated/market-heatmap-2026-02-09.png' | relative_url }})
+## 전체 뉴스 요약
 
-![top-coins]({{ '/assets/images/generated/top-coins-2026-02-09.png' | relative_url }})
+- 암호화폐 시장이 하락세를 보이고 있습니다. 단기 조정 가능성을 염두에 두고 리스크 관리가 필요합니다.
+- BTC 도미넌스가 56.9%로 높은 수준입니다. 비트코인 중심의 자금 흐름이 지속되고 있어, 알트코인 투자 시 주의가 필요합니다.
 
-![fear-greed]({{ '/assets/images/generated/fear-greed-2026-02-09.png' | relative_url }})
 
 ## 오늘의 시장 인사이트
 
