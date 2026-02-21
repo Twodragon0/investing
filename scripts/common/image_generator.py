@@ -18,6 +18,7 @@ fm: Any = None
 np: Any = None
 _FONT_FAMILY = "monospace"
 _FONT_STACK = [_FONT_FAMILY]
+_HAS_EMOJI_FONT = False
 try:
     import matplotlib
 
@@ -72,8 +73,10 @@ try:
 
     _FONT_STACK = [_FONT_FAMILY] + _emoji_fonts if _emoji_fonts else [_FONT_FAMILY]
     matplotlib.rcParams["font.family"] = _FONT_STACK
+    _FONT_FAMILY = _FONT_STACK
     if _emoji_fonts:
         logger.info("Using emoji fallback fonts: %s", ", ".join(_emoji_fonts))
+        _HAS_EMOJI_FONT = True
 except ImportError:
     logger.warning("matplotlib/numpy not available, image generation disabled")
 
@@ -1606,6 +1609,7 @@ def generate_news_briefing_card(
         return None
 
     display_themes = themes[:5]
+    use_emoji = _HAS_EMOJI_FONT
     has_urgent = urgent_alerts and len(urgent_alerts) > 0
     urgent_height = 0.8 if has_urgent else 0
     fig_height = 3.5 + len(display_themes) * 0.7 + urgent_height
@@ -1693,6 +1697,8 @@ def generate_news_briefing_card(
 
         # Theme emoji + name
         emoji = theme.get("emoji", "")
+        if not use_emoji:
+            emoji = ""
         name = theme.get("name", "")
         count = theme.get("count", 0)
         keywords = theme.get("keywords", [])
