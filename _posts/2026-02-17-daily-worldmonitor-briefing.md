@@ -21,6 +21,17 @@ lang: "ko"
 - 범위: 글로벌 지정학, 금융시장, 에너지 이슈
 - 주요 출처: WorldMonitor/BBC World (15건), WorldMonitor/Al Jazeera (5건)
 
+
+
+
+
+## 전체 뉴스 요약
+
+- 총 **20건** 수집
+- 주요 테마: 지정학/안보, 정책/법률, 사회/기타
+- 범위: 글로벌 지정학, 금융시장, 에너지 이슈
+- 주요 출처: WorldMonitor/BBC World (15건), WorldMonitor/Al Jazeera (5건)
+
 ## 시각 요약
 
 <div class="stat-grid">
