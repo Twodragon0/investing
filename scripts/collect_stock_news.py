@@ -367,6 +367,9 @@ def main():
                     f"| {len(global_rows) + 1} | **{title}** | {source} |"
                 )
 
+    global_count = len(global_rows)
+    korean_count = len(korean_rows)
+
     # Limit to top items
     global_rows = global_rows[:15]
     korean_rows = korean_rows[:10]
@@ -392,6 +395,19 @@ def main():
     )
     if exec_summary:
         content_parts.append(exec_summary)
+
+    summary_points = []
+    if korean_count or global_count:
+        summary_points.append(
+            f"한국 기사 {korean_count}건, 글로벌 기사 {global_count}건 수집"
+        )
+    if kr_summary_parts:
+        summary_points.append(f"한국 지수: {', '.join(kr_summary_parts)}")
+    overall_summary = summarizer.generate_overall_summary_section(
+        extra_data={"summary_points": summary_points}
+    )
+    if overall_summary:
+        content_parts.append(overall_summary)
 
     # Theme distribution chart
     chart = summarizer.generate_distribution_chart()

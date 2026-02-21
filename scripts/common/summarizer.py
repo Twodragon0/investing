@@ -358,7 +358,7 @@ class ThemeSummarizer:
 
         token_freq = Counter(re.findall(r"[a-z가-힣]+", all_text))
 
-        for theme_name, theme_key, _emoji, keywords in THEMES:
+        for _theme_name, theme_key, _emoji, keywords in THEMES:
             score = sum(token_freq.get(kw, 0) for kw in keywords)
             for kw in keywords:
                 if " " in kw:
@@ -367,7 +367,7 @@ class ThemeSummarizer:
 
         # Match articles to themes (each article to its best-matching theme)
         article_assigned: Dict[int, str] = {}
-        for theme_name, theme_key, _emoji, keywords in THEMES:
+        for _theme_name, theme_key, _emoji, keywords in THEMES:
             matched = []
             kw_set = set(keywords)
             for idx, item in enumerate(self.items):
@@ -709,7 +709,7 @@ class ThemeSummarizer:
         lines = ["## 테마별 브리핑\n"]
         has_content = False
 
-        for name, key, emoji, count in top_themes:
+        for name, key, emoji, _count in top_themes:
             articles = self._theme_articles.get(key, [])
             briefing = self._generate_single_theme_briefing(key, articles)
             if briefing:
@@ -759,6 +759,64 @@ class ThemeSummarizer:
 
             lines.append("")
 
+        return "\n".join(lines)
+
+    def generate_overall_summary_section(
+        self,
+        extra_data: Optional[Dict[str, Any]] = None,
+        title: str = "전체 뉴스 요약",
+    ) -> str:
+        if len(self.items) < 3:
+            return ""
+
+        extra = extra_data or {}
+        total = len(self.items)
+        top_themes = self.get_top_themes()
+        theme_names = [t[0] for t in top_themes[:3]] if top_themes else []
+
+        lines = [f"\n## {title}\n"]
+        if theme_names:
+            lines.append(
+                f"- 총 **{total}건** 가운데 **{', '.join(theme_names)}** 테마 비중이 높았습니다."
+            )
+        else:
+            lines.append(
+                f"- 총 **{total}건**이 수집되었으며, 테마 분류 데이터는 제한적입니다."
+            )
+
+        priority_items = self.classify_priority()
+        p0_count = len(priority_items.get("P0", []))
+        p1_count = len(priority_items.get("P1", []))
+        if p0_count or p1_count:
+            lines.append(f"- **우선순위 이슈**: P0 {p0_count}건, P1 {p1_count}건")
+
+        top_keywords = extra.get("top_keywords") or []
+        if top_keywords:
+            keywords_str = ", ".join(kw for kw, _ in top_keywords[:3])
+            if keywords_str:
+                lines.append(f"- **핵심 키워드**: {keywords_str}")
+
+        region_counts = extra.get("region_counts")
+        if region_counts:
+            regions_str = ", ".join(
+                f"{name} {count}건" for name, count in region_counts.most_common(2)
+            )
+            if regions_str:
+                lines.append(f"- **주요 지역**: {regions_str}")
+
+        source_counter = extra.get("source_counter")
+        if source_counter:
+            top_source = source_counter.most_common(1)
+            if top_source:
+                name, count = top_source[0]
+                lines.append(f"- **주요 출처**: {name} ({count}건)")
+
+        summary_points = extra.get("summary_points") or []
+        for point in summary_points[:2]:
+            if point:
+                lines.append(f"- {point}")
+
+        lines.append("")
         return "\n".join(lines)
 
     def generate_executive_summary(

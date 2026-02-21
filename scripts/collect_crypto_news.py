@@ -520,6 +520,19 @@ def main():
         if exec_summary:
             content_parts.append(exec_summary)
 
+        summary_points = []
+        if exchange_rows:
+            summary_points.append(f"거래소 공지 {len(exchange_rows)}건 포함")
+        overall_summary = summarizer.generate_overall_summary_section(
+            extra_data={
+                "top_keywords": top_keywords,
+                "source_counter": source_counter,
+                "summary_points": summary_points,
+            }
+        )
+        if overall_summary:
+            content_parts.append(overall_summary)
+
         # Image — news briefing card (replaces simple bar chart)
         briefing_image = None
         try:
@@ -740,6 +753,18 @@ def main():
                 f"블록체인 보안 관련 뉴스 {len(all_security_items)}건을 정리합니다.\n"
             ]
             security_links = []
+
+            security_summarizer = ThemeSummarizer(all_security_items)
+            summary_points = []
+            if rekt_items or google_security_items:
+                summary_points.append(
+                    f"Rekt News {len(rekt_items)}건, 보안 뉴스 {len(google_security_items)}건"
+                )
+            overall_summary = security_summarizer.generate_overall_summary_section(
+                extra_data={"summary_points": summary_points}
+            )
+            if overall_summary:
+                content_parts.append(overall_summary)
 
             # Key summary for security
             content_parts.append("## 핵심 요약\n")
