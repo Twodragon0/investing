@@ -1097,6 +1097,39 @@ def main():
     if highlights:
         sections["오늘의 핵심"] = highlights
 
+    summary_lines = []
+    if global_data:
+        mcap = global_data.get("total_market_cap_usd")
+        if mcap:
+            summary_lines.append(f"- 글로벌 암호화폐 시총 ${mcap / 1e12:.2f}T")
+        btc_dom = global_data.get("btc_dominance")
+        if btc_dom:
+            summary_lines.append(f"- BTC 도미넌스 {btc_dom:.1f}%")
+    if fear_greed:
+        fg_val = fear_greed.get("value", "N/A")
+        fg_class = fear_greed.get("value_classification", "N/A")
+        summary_lines.append(f"- 공포/탐욕 지수 {fg_val} ({fg_class})")
+    if top_coins:
+        btc = next((c for c in top_coins if c.get("symbol", "").upper() == "BTC"), None)
+        eth = next((c for c in top_coins if c.get("symbol", "").upper() == "ETH"), None)
+        if btc:
+            summary_lines.append(
+                f"- BTC ${btc.get('current_price', 0):,.0f} ({btc.get('price_change_percentage_24h', 0):+.2f}%)"
+            )
+        if eth:
+            summary_lines.append(
+                f"- ETH ${eth.get('current_price', 0):,.0f} ({eth.get('price_change_percentage_24h', 0):+.2f}%)"
+            )
+    if kr_market:
+        kr_parts = [
+            f"{name} {info['price']}({info['change_pct']})"
+            for name, info in kr_market.items()
+        ]
+        if kr_parts:
+            summary_lines.append(f"- 한국 지수: {', '.join(kr_parts)}")
+    if summary_lines:
+        sections["전체 뉴스 요약"] = "\n".join(summary_lines)
+
     # Executive summary (한눈에 보기)
     exec_parts = []
     if fear_greed:

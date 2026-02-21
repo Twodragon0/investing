@@ -762,6 +762,18 @@ def main():
     )
     content_parts.append("</ul></div>\n")
 
+    summary_lines = [
+        f"- 총 **{total_count}건** 수집, 범위: {counts_str}",
+        f"- **우선순위 이슈**: P0 {len(priority_items.get('P0', []))}건, P1 {len(priority_items.get('P1', []))}건",
+    ]
+    if theme_payload:
+        theme_names = ", ".join(item.get("name", "") for item in theme_payload[:3])
+        if theme_names:
+            summary_lines.append(f"- **주요 테마**: {theme_names}")
+    content_parts.append("## 전체 뉴스 요약\n")
+    content_parts.extend(summary_lines)
+    content_parts.append("")
+
     content_parts.append("## 종합 대시보드\n")
     content_parts.extend(
         _build_snapshot_table(

@@ -192,6 +192,17 @@ def generate_digest(posts: List[Dict]) -> str:
             categories[cat] = []
         categories[cat].append(post)
 
+    category_lines = []
+    for name, items in sorted(
+        categories.items(), key=lambda x: len(x[1]), reverse=True
+    ):
+        category_lines.append(f"{name} {len(items)}건")
+    if category_lines:
+        content_parts.append("## 전체 뉴스 요약\n")
+        content_parts.append(f"- 총 **{len(posts)}건**의 포스트를 분석했습니다.")
+        content_parts.append(f"- 카테고리 분포: {', '.join(category_lines[:5])}")
+        content_parts.append("")
+
     # Extract market data for overview
     market_data = extract_market_data(posts)
 
