@@ -5,14 +5,15 @@ categories: [market-analysis]
 tags: [일일요약, 암호화폐, 주식, 규제, 소셜미디어, 보안, 정치인거래, 월드모니터]
 source: "consolidated"
 lang: "ko"
+image: "/assets/images/generated/news-briefing-daily-2026-02-21.png"
 pin: true
-excerpt: "암호화폐 110건, 주식 139건, 보안 1건, 규제 31건, 소셜 미디어 62건의 뉴스를 종합 분석한 일일 요약"
+excerpt: "암호화폐 110건, 주식 139건, 보안 1건, 규제 31건, 소셜 미디어 62건, 월드모니터 20건, 정치인 거래 9건의 뉴스를 종합 분석한 일일 요약"
 ---
 
-> 암호화폐 110건, 주식 139건, 보안 1건, 규제 31건, 소셜 미디어 62건의 뉴스를 종합 분석한 일일 요약입니다.
+> 암호화폐 110건, 주식 139건, 보안 1건, 규제 31건, 소셜 미디어 62건, 월드모니터 20건, 정치인 거래 9건의 뉴스를 종합 분석한 일일 요약입니다.
 
 <div class="alert-box alert-info"><strong>한눈에 보는 시장 상황</strong><ul>
-<li>총 수집: <strong>343건</strong></li>
+<li>총 수집: <strong>372건</strong></li>
 <li>긴급 알림(P0): <strong>3건</strong></li>
 <li>중요 뉴스(P1): <strong>6건</strong></li>
 </ul></div>
@@ -23,10 +24,10 @@ excerpt: "암호화폐 110건, 주식 139건, 보안 1건, 규제 31건, 소셜 
 | --- | ---: | --- |
 | 암호화폐 | 110 | 비트코인 53건 |
 | 주식 | 139 | 2026-02-21 주식 시장에서 139건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,808.53(+2.31%), KOSDAQ 1,154 |
-| 월드모니터 |  | 데이터 없음 |
+| 월드모니터 | 20 | 수집 건수: 20건 |
 | 규제 | 31 | 총 수집 건수: 31건 |
 | 소셜 | 62 | 2026-02-21 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 소셜 미디어 1건, 정치·경제 41건, 총 62건이 |
-| 정치인 거래 |  | 데이터 없음 |
+| 정치인 거래 | 9 | 신호 추출 실패 |
 
 ![multi-asset-briefing](/assets/images/generated/news-briefing-daily-2026-02-21.png)
 
@@ -46,17 +47,18 @@ excerpt: "암호화폐 110건, 주식 139건, 보안 1건, 규제 31건, 소셜 
 - **주식:** 139건. 2026-02-21 주식 시장에서 139건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,808.53(+2.31%), KOSDAQ 1,154.00(-0.58%), USD/KRW 1,447.75(-0.05%).
 - **규제:** 31건. 정책 공시/감독 이슈 비중이 높아 업권별 이벤트 리스크 관리가 필요합니다.
 - **소셜:** 62건. 텔레그램·정치/거시 키워드 확산이 단기 심리 변동을 키우고 있습니다.
+- **월드모니터:** 20건. 지정학/안보 이슈가 에너지·안전자산 민감도를 높이고 있습니다.
 - **우선순위:** P0 3건, P1 6건 중심으로 장중 대응 우선순위를 조정합니다.
 
 ## 테마 스냅샷
 
 | 테마 | 신호 강도 | 대표 키워드 |
 | --- | ---: | --- |
-| 📜 정책/규제 | 122 | 규제, sec, etf, 법안 |
+| 📜 정책/규제 | 251 | 규제, sec, etf, 법안 |
+| 🏦 금리/유동성 | 64 | 금리, 연준, fed, fomc |
 | 🧭 수급/심리 | 48 | 고래, whale, 수급, 공포 |
-| 🏦 금리/유동성 | 37 | 금리, 연준, fed, fomc |
-| 💵 환율/달러 | 24 | 환율, usd/krw, 달러, dxy |
-| 📊 실적/지표 | 7 | 실적, cpi, pce, 고용 |
+| 💵 환율/달러 | 25 | 환율, usd/krw, 달러, dxy |
+| 📊 실적/지표 | 9 | 실적, cpi, pce, 고용 |
 
 **리스크/기회 메모**
 - 상위 테마에 집중되는 구간에서는 헤드라인 변동성이 확대될 수 있습니다.
@@ -85,17 +87,25 @@ excerpt: "암호화폐 110건, 주식 139건, 보안 1건, 규제 31건, 소셜 
 | 비교 구간 | 연관 점수 | 진단 |
 | --- | ---: | --- |
 | 암호화폐 ↔ 주식 | 26 | 높음 (정책/규제, 금리/유동성) |
+| 암호화폐 ↔ 정치인 거래 | 26 | 높음 (정책/규제, 금리/유동성) |
+| 주식 ↔ 정치인 거래 | 38 | 높음 (정책/규제, 금리/유동성) |
 | 암호화폐 ↔ 규제 | 19 | 높음 (정책/규제, 금리/유동성) |
 | 주식 ↔ 규제 | 31 | 높음 (정책/규제, 금리/유동성) |
 | 암호화폐 ↔ 소셜 | 26 | 높음 (정책/규제, 금리/유동성) |
-
-**데이터 커버리지 경고**
-- 월드모니터 브리핑이 없어 글로벌 지정학/에너지 리스크 연결 분석이 제한됩니다.
+| 월드모니터 ↔ 암호화폐 | 16 | 높음 (정책/규제) |
+| 월드모니터 ↔ 주식 | 17 | 높음 (정책/규제) |
 
 **운영 체크리스트**
 - 연관 점수 '높음' 구간은 장중 변동성 확대 가능성으로 우선 모니터링
 - 정책/규제 + 정치인 거래가 동시 급증하면 포지션 규모와 레버리지 보수적으로 조정
 - 코인/주식 모두 수급·심리 키워드가 증가하면 단기 과열/과매도 반전 가능성 점검
+
+---
+
+## 정치인 워치
+
+
+[상세 보기](/political-trades/2026/02/21/daily-political-trades-report/)
 
 ---
 
@@ -137,6 +147,20 @@ excerpt: "암호화폐 110건, 주식 139건, 보안 1건, 규제 31건, 소셜 
 
 [상세 보기](/regulatory-news/2026/02/21/daily-regulatory-report/)
 
+### 월드모니터 브리핑 (20건)
+
+- 수집 건수: **20건**
+- 범위: 글로벌 지정학, 금융시장, 에너지 이슈
+- 주요 출처: WorldMonitor/BBC World (15건), WorldMonitor/Al Jazeera (5건)
+
+| 제목 | 출처 |
+| --- | --- |
+| [**Trump brings in new 10% tariff as Supreme Court rejects his global import taxes**](https://www.bbc.com/news/articles/cn8146l0n55o?at_medium=RSS&at_campaign=rss) | WorldMonitor/BBC World |
+| [**Trump lashes out at Supreme Court justices over tariffs ruling**](https://www.bbc.com/news/articles/cd9g0e7zd8wo?at_medium=RSS&at_campaign=rss) | WorldMonitor/BBC World |
+| [**Trump says he is considering limited military strike on Iran**](https://www.bbc.com/news/articles/cdxzk4gvzp0o?at_medium=RSS&at_campaign=rss) | WorldMonitor/BBC World |
+
+[상세 보기](/market-analysis/2026/02/21/daily-worldmonitor-briefing/)
+
 ### 보안 리포트 (1건)
 
 - **보안 사고/뉴스**: 총 1건
@@ -158,10 +182,12 @@ excerpt: "암호화폐 110건, 주식 139건, 보안 1건, 규제 31건, 소셜 
 | --- | :---: | --- |
 | 암호화폐 뉴스 | 110건 | [바로가기](/crypto-news/2026/02/21/daily-crypto-news-digest/) |
 | 시장 종합 리포트 | - | [바로가기](/market-analysis/2026/02/21/daily-market-report/) |
+| 정치인 거래 | 9건 | [바로가기](/political-trades/2026/02/21/daily-political-trades-report/) |
 | 규제 동향 | 31건 | [바로가기](/regulatory-news/2026/02/21/daily-regulatory-report/) |
 | 보안 리포트 | 1건 | [바로가기](/security-alerts/2026/02/21/daily-security-report/) |
 | 소셜 미디어 | 62건 | [바로가기](/crypto-news/2026/02/21/daily-social-media-digest/) |
 | 주식 시장 뉴스 | 139건 | [바로가기](/stock-news/2026/02/21/daily-stock-news-digest/) |
+| 월드모니터 브리핑 | 20건 | [바로가기](/market-analysis/2026/02/21/daily-worldmonitor-briefing/) |
 
 ---
 

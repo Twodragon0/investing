@@ -527,6 +527,25 @@ def _render_generated_image(filename: str, alt: str) -> Optional[str]:
     return f"![{alt}]({{{{ '/assets/images/generated/{filename}' | relative_url }}}})"
 
 
+def _resolve_frontmatter_image(today: str, briefing_image: Optional[str]) -> str:
+    if briefing_image:
+        return briefing_image
+
+    candidates = [
+        f"news-briefing-daily-{today}.png",
+        f"news-briefing-{today}.png",
+        f"indicator-dashboard-{today}.png",
+        f"market-heatmap-{today}.png",
+    ]
+    for filename in candidates:
+        image_path = os.path.join(
+            POSTS_DIR, "..", "assets", "images", "generated", filename
+        )
+        if os.path.exists(image_path):
+            return f"/assets/images/generated/{filename}"
+    return ""
+
+
 def _build_snapshot_table(
     crypto_summary: Optional[Dict[str, Any]],
     stock_summary: Optional[Dict[str, Any]],
@@ -1163,13 +1182,16 @@ def main():
     ]
     escaped_title = title.replace('"', '\\"')
 
+    frontmatter_image = _resolve_frontmatter_image(today, briefing_image)
+    image_line = f'\nimage: "{frontmatter_image}"' if frontmatter_image else ""
+
     frontmatter = f"""---
 title: "{escaped_title}"
 date: {today} 12:00:00 +0900
 categories: [market-analysis]
 tags: [{", ".join(tags)}]
 source: "consolidated"
-lang: "ko"
+lang: "ko"{image_line}
 pin: true
 excerpt: "{counts_str}의 뉴스를 종합 분석한 일일 요약"
 ---"""
