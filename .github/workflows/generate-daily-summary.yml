@@ -28,4 +28,4 @@ jobs:
         with:
           script: scripts/generate_daily_summary.py
           commit-message: 'chore: generate daily news summary'
-          git-add-paths: '_posts/'
+          git-add-paths: '_posts/ assets/images/'
