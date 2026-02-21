@@ -36,6 +36,17 @@ image: "/assets/images/generated/source-distribution-2026-02-19.png"
 
 ![source-distribution]({{ '/assets/images/generated/source-distribution-2026-02-19.png' | relative_url }})
 
+
+
+
+
+## 전체 뉴스 요약
+
+- 총 **38건** 수집
+- 주요 테마: 📊 매크로/금리, 🏛️ 정치/정책, 📈 가격/시장
+- 텔레그램에서 가장 활발한 채널은 Telegram @crypto(10건), Telegram @whale_alert(10건)입니다.
+- 정치·경제 관련 뉴스가 전체의 47%를 차지하고 있어, 정치적 이슈가 시장에 미치는 영향이 큰 상황입니다.
+
 ## 텔레그램 주요 소식
 
 **1. [President Trump suggested "we might pay off the US $35 trillion debt using cryptocurrency."Sponsored](https://t.me/crypto/3502)**
