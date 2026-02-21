@@ -356,6 +356,13 @@ def main() -> None:
             )
         detail_lines.extend(["</ol>", "</div></details>"])
         content_parts.append("\n".join(detail_lines))
+    else:
+        content_parts.extend(["", "## 원문 링크 묶음"])
+        content_parts.append(
+            '<details class="wm-reference-details"><summary>전체 원문 0건</summary>'
+            '<div class="details-content"><p>수집된 원문 링크가 없습니다.</p></div>'
+            "</details>"
+        )
 
     content_parts.extend(
         [
