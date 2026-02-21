@@ -201,6 +201,12 @@ def main():
     if exec_summary:
         content_parts.append(exec_summary)
 
+    overall_summary = summarizer.generate_overall_summary_section(
+        extra_data={"region_counts": region_counts}
+    )
+    if overall_summary:
+        content_parts.append(overall_summary)
+
     # Key summary
     content_parts.append("## 핵심 요약\n")
     content_parts.append(f"- **총 수집 건수**: {len(all_items)}건")

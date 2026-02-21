@@ -490,6 +490,25 @@ def main():
     if exec_summary:
         content_parts.append(exec_summary)
 
+    summary_points = []
+    if telegram_items or social_items or reddit_items or political_items:
+        points = []
+        if telegram_items:
+            points.append(f"텔레그램 {len(telegram_items)}건")
+        if social_items:
+            points.append(f"소셜 {len(social_items)}건")
+        if reddit_items:
+            points.append(f"Reddit {len(reddit_items)}건")
+        if political_items:
+            points.append(f"정치·경제 {len(political_items)}건")
+        if points:
+            summary_points.append(", ".join(points))
+    overall_summary = summarizer.generate_overall_summary_section(
+        extra_data={"summary_points": summary_points}
+    )
+    if overall_summary:
+        content_parts.append(overall_summary)
+
     # Theme distribution chart
     dist = summarizer.generate_distribution_chart()
     if dist:

@@ -347,6 +347,15 @@ def main():
     if exec_summary:
         content_parts.append(exec_summary)
 
+    summary_points = []
+    if source_parts:
+        summary_points.append(f"출처 구성: {sources_str}")
+    overall_summary = summarizer.generate_overall_summary_section(
+        extra_data={"top_keywords": top_keywords, "summary_points": summary_points}
+    )
+    if overall_summary:
+        content_parts.append(overall_summary)
+
     # Theme distribution
     dist = summarizer.generate_distribution_chart()
     if dist:
