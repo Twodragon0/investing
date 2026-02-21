@@ -1,0 +1,31 @@
+name: Backfill Post Summaries
+
+on:
+  schedule:
+    - cron: '20 1 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect-data
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Backfill post summaries
+        uses: ./.github/actions/python-collect
+        with:
+          script: scripts/backfill_post_summaries.py
+          commit-message: 'chore: backfill post summaries'
+          git-add-paths: '_posts/'
