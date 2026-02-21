@@ -34,6 +34,16 @@ DeFi   █░░░░░░░░░░░░░░░░░     7%  (9건)
 
 ![news-summary]({{ '/assets/images/generated/news-summary-2026-02-12.png' | relative_url }})
 
+
+
+
+
+## 전체 뉴스 요약
+
+- 총 **125건** 수집
+- 주요 출처: Binance (40건)
+- 수집 출처 수: 7개
+
 ## 카테고리별 주요 뉴스
 
 ### 🟠 비트코인 (44건)
