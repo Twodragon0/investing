@@ -43,6 +43,17 @@ image: "/assets/images/generated/source-distribution-2026-02-14.png"
 | 핫 키워드 | bitcoin(6), trump(4), 이재명(4), ai(4), fed(2) |
 
 
+
+
+
+
+## 전체 뉴스 요약
+
+- 총 **9건** 수집
+- 텔레그램: 0건
+- 소셜 미디어/뉴스: 1건
+- 가장 많이 언급된 키워드는 bitcoin(6회)입니다.
+
 ## 이슈 분포 현황
 
 ```
