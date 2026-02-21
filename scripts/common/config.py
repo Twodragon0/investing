@@ -3,6 +3,7 @@
 import os
 import logging
 from datetime import timezone, timedelta
+from typing import Optional
 
 try:
     from zoneinfo import ZoneInfo
@@ -35,6 +36,7 @@ def get_ssl_verify():
 
     # On macOS, check for corporate proxy CAs (e.g. Zscaler) in system keychain
     import sys
+
     if sys.platform == "darwin":
         combined = _get_combined_ca_bundle(ca_bundle)
         if combined:
@@ -43,7 +45,7 @@ def get_ssl_verify():
     return ca_bundle
 
 
-def _get_combined_ca_bundle(certifi_bundle: str) -> str | None:
+def _get_combined_ca_bundle(certifi_bundle: str) -> Optional[str]:
     """Build a combined CA bundle with corporate proxy certs from macOS keychain.
 
     Returns path to combined bundle, or None if not needed.
@@ -54,18 +56,27 @@ def _get_combined_ca_bundle(certifi_bundle: str) -> str | None:
     combined_path = os.path.join(os.path.dirname(certifi_bundle), "combined_ca.pem")
 
     # Return cached combined bundle if it exists and is recent (< 1 day)
+    import time
+
     if os.path.exists(combined_path):
-        age = os.time() - os.path.getmtime(combined_path) if hasattr(os, "time") else 0
-        import time
         age = time.time() - os.path.getmtime(combined_path)
         if age < 86400:
             return combined_path
 
     try:
         result = subprocess.run(
-            ["security", "find-certificate", "-a", "-c", "Zscaler",
-             "-p", "/Library/Keychains/System.keychain"],
-            capture_output=True, text=True, timeout=5,
+            [
+                "security",
+                "find-certificate",
+                "-a",
+                "-c",
+                "Zscaler",
+                "-p",
+                "/Library/Keychains/System.keychain",
+            ],
+            capture_output=True,
+            text=True,
+            timeout=5,
         )
         if result.returncode != 0 or "BEGIN CERTIFICATE" not in result.stdout:
             return None

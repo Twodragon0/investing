@@ -53,9 +53,7 @@ def _site_path_for_post(post_path: str) -> str:
                     in_front = True
                     continue
                 if in_front:
-                    cat_match = re.match(
-                        r"categories:\s*\[([^\]]+)\]", line
-                    )
+                    cat_match = re.match(r"categories:\s*\[([^\]]+)\]", line)
                     if cat_match:
                         category = cat_match.group(1).split(",")[0].strip()
                         break
