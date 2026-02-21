@@ -11,6 +11,13 @@ excerpt: "암호화폐 70건, 주식 91건, 소셜 미디어 9건의 뉴스를 �
 
 > 암호화폐 70건, 주식 91건, 소셜 미디어 9건의 뉴스를 종합 분석한 일일 요약입니다.
 
+## 전체 뉴스 요약
+
+- 총 **70건** 수집
+- - Bitcoin Price Crash Rattles Trump's Crypto Progress. Here's The Upshot For Investors. - Gold, silver, S&P 500, crypto crash again amid extreme fear - ‘워시 쇼...
+- - New Cryptocurrency ListingCheck out the latest coin listings and pairs on Launchpad, Launchpool, Spot, Margin, and Futures markets. - Trump-linked Truth So...
+
+
 ## 핵심 브리핑
 
 > - 가장 많이 언급된 키워드는 **bitcoin**(17회)으로, 시장의 핵심 관심사입니다.
