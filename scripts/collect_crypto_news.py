@@ -521,6 +521,7 @@ def main():
             content_parts.append(exec_summary)
 
         # Image — news briefing card (replaces simple bar chart)
+        briefing_image = None
         try:
             from common.image_generator import generate_news_briefing_card
 
@@ -563,6 +564,7 @@ def main():
                 urgent_alerts=p0_alerts if p0_alerts else None,
             )
             if img:
+                briefing_image = img
                 fn = os.path.basename(img)
                 web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
                 content_parts.append(f"\n![news-briefing]({web_path})\n")
@@ -571,6 +573,28 @@ def main():
             pass
         except Exception as e:
             logger.warning("News briefing card failed: %s", e)
+
+        if not briefing_image:
+            try:
+                from common.image_generator import generate_news_summary_card
+
+                source_rows = [
+                    {"name": name, "count": count}
+                    for name, count in source_counter.most_common(8)
+                ]
+                summary_img = generate_news_summary_card(source_rows, today)
+                if summary_img:
+                    briefing_image = summary_img
+                    fn = os.path.basename(summary_img)
+                    web_path = (
+                        "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
+                    )
+                    content_parts.append(f"\n![news-summary]({web_path})\n")
+                    logger.info("Generated news summary card")
+            except ImportError:
+                pass
+            except Exception as e:
+                logger.warning("News summary card failed: %s", e)
 
         # Main news - theme-based sections with description cards
         themed_sections = summarizer.generate_themed_news_sections()
@@ -698,7 +722,7 @@ def main():
             tags=["crypto", "news", "daily-digest"],
             source="consolidated",
             lang="ko",
-            image=f"/assets/images/generated/news-summary-{today}.png",
+            image=briefing_image or "",
             slug="daily-crypto-news-digest",
         )
         if filepath:
