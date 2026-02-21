@@ -12,7 +12,7 @@ import os
 import time
 import requests
 from datetime import datetime, timezone
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Tuple
 
 # Add scripts directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -521,6 +521,7 @@ def build_post_content(
 ) -> str:
     """Build the Jekyll post markdown content."""
     content_parts = []
+    sorted_cats: List[Tuple[str, float]] = []
 
     total_protocol_tvl = sum(p.get("tvl", 0) or 0 for p in protocols)
     total_chain_tvl = sum(c.get("tvl", 0) or 0 for c in chains)
@@ -531,6 +532,26 @@ def build_post_content(
         f"상위 {len(protocols)}개 프로토콜의 총 TVL은 **{_format_tvl(total_protocol_tvl)}**이며, "
         f"상위 {len(chains)}개 체인의 총 TVL은 **{_format_tvl(total_chain_tvl)}**입니다.\n"
     )
+
+    content_parts.append("## 전체 뉴스 요약\n")
+    content_parts.append(
+        f"- 총 **{len(protocols)}개 프로토콜**, **{len(chains)}개 체인** 데이터를 분석했습니다."
+    )
+    if protocols:
+        top_p = protocols[0]
+        top_p_name = top_p.get("name") or "Unknown"
+        top_p_tvl = top_p.get("tvl") or 0
+        content_parts.append(
+            f"- **최상위 프로토콜**: {top_p_name} (TVL {_format_tvl(top_p_tvl)})"
+        )
+    if chains:
+        top_c = chains[0]
+        top_c_name = top_c.get("name") or "Unknown"
+        top_c_tvl = top_c.get("tvl") or 0
+        content_parts.append(
+            f"- **최상위 체인**: {top_c_name} (TVL {_format_tvl(top_c_tvl)})"
+        )
+    content_parts.append("")
 
     # Chart image
     if chart_path:

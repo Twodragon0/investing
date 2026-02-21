@@ -651,6 +651,41 @@ def main():
             logger.warning("Briefing card generation failed: %s", e)
 
         # 1. Key summary bullet points
+        summary_lines = []
+        if top_coins:
+            summary_lines.append(
+                f"- 시가총액 상위 {len(top_coins)}개 코인을 기준으로 시장을 집계했습니다."
+            )
+            btc = next(
+                (
+                    c
+                    for c in top_coins
+                    if (c.get("symbol") or "").lower() in ("btc", "BTC")
+                ),
+                None,
+            )
+            if btc:
+                if cmc_source == "coingecko":
+                    price = btc.get("current_price", 0)
+                    ch24 = btc.get("price_change_percentage_24h", 0) or 0
+                else:
+                    quote = btc.get("quote", {}).get("USD", {})
+                    price = quote.get("price", 0) or 0
+                    ch24 = quote.get("percent_change_24h", 0) or 0
+                summary_lines.append(
+                    f"- 비트코인 ${price:,.0f}, 24시간 {ch24:+.2f}% 변동"
+                )
+        if fear_greed:
+            fg_val = fear_greed.get("value", 0)
+            fg_cls = fear_greed.get("classification", "N/A")
+            summary_lines.append(f"- 공포/탐욕 지수 {fg_val}/100 ({fg_cls})")
+        if global_data:
+            total_mcap = global_data.get("total_market_cap", {}).get("usd", 0)
+            if total_mcap:
+                summary_lines.append(f"- 총 시가총액 {_fmt_num(total_mcap)}")
+        if summary_lines:
+            sections["전체 뉴스 요약"] = "\n".join(summary_lines)
+
         key_bullets = []
         if top_coins:
             btc = next(
