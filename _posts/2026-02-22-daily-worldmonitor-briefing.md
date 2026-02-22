@@ -16,13 +16,16 @@ lang: "ko"
 <li>집중 출처: <strong>WorldMonitor/CNBC</strong></li>
 </ul></div>
 
-## 전체 뉴스 요약
-- 총 **20건** 수집, 핵심 테마는 **사회/기타, 금융시장, 지정학/안보** 중심입니다.
-- **주요 출처**: WorldMonitor/CNBC (14건), WorldMonitor/BBC World (6건)
-- **안보 이슈**: 3건
-
 ## 핵심 요약
 - 수집 건수: **20건**
+- 범위: 글로벌 지정학, 금융시장, 에너지 이슈
+- 주요 출처: WorldMonitor/CNBC (14건), WorldMonitor/BBC World (6건)
+
+
+## 전체 뉴스 요약
+
+- 총 **20건** 수집
+- 주요 테마: 사회/기타, 금융시장, 지정학/안보
 - 범위: 글로벌 지정학, 금융시장, 에너지 이슈
 - 주요 출처: WorldMonitor/CNBC (14건), WorldMonitor/BBC World (6건)
 

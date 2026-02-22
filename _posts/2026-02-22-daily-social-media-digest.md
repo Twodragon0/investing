@@ -20,28 +20,12 @@ image: "/assets/images/generated/source-distribution-2026-02-22.png"
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE40amcwWEF5RFZmaDVNRVZtZ2NsdXNfR0VidEJ0TkhzVmEtb293ODVvLWJmd0JJYmotNE5oQlRfcUZ2ZE91Y2ZXUVpQWWlEUzg?oc=5">[이번주 경제]한은 기준금리 동결 유력…작년 합계출산율 주목 - v.daum.net</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
-- 총 **57건** 가운데 **정치/정책, 매크로/금리, 비트코인** 테마 비중이 높았습니다.
-- **우선순위 이슈**: P0 1건, P1 20건
-- 텔레그램 20건, 소셜 2건, 정치·경제 35건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:39%"></div></div><span class="theme-count">22건 (39%)</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:19%"></div></div><span class="theme-count">11건 (19%)</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:12%"></div></div><span class="theme-count">7건 (12%)</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:16%"></div></div><span class="theme-count">9건 (16%)</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:35%"></div></div><span class="theme-count">20건 (35%)</span></div>
-</div>
-
-*총 57건 수집*
-
-
----
-
-
-![source-distribution]({{ '/assets/images/generated/source-distribution-2026-02-22.png' | relative_url }})
+- 총 **57건** 수집
+- 텔레그램에서 가장 활발한 채널은 Telegram @crypto(10건), Telegram @whale_alert(10건)입니다.
+- 정치·경제 관련 뉴스가 전체의 61%를 차지하고 있어, 정치적 이슈가 시장에 미치는 영향이 큰 상황입니다.
 
 ## 텔레그램 주요 소식
 

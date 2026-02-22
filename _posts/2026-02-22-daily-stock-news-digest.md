@@ -20,29 +20,13 @@ image: "/assets/images/generated/market-snapshot-2026-02-22.png"
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?hl=en-US&gl=US&ceid=US%3Aen">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates</a></li><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a></li><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?oc=5">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates - CNBC</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
-- 총 **131건** 가운데 **가격/시장, 매크로/금리, 정치/정책** 테마 비중이 높았습니다.
-- **우선순위 이슈**: P0 3건, P1 13건
-- 한국 기사 52건, 글로벌 기사 79건 수집
-- 한국 지수: KOSPI 5,808.53(+2.31%), KOSDAQ 1,154.00(-0.58%), USD/KRW 1,447.75(-0.05%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:33%"></div></div><span class="theme-count">43건 (33%)</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:11%"></div></div><span class="theme-count">15건 (11%)</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:12%"></div></div><span class="theme-count">16건 (12%)</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:24%"></div></div><span class="theme-count">31건 (24%)</span></div>
-<div class="theme-row"><span class="theme-label">🔴 보안/해킹</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:2%"></div></div><span class="theme-count">2건 (2%)</span></div>
-</div>
-
-*총 131건 수집*
-
-
-![market-snapshot]({{ '/assets/images/generated/market-snapshot-2026-02-22.png' | relative_url }})
-
-
----
+- 한국 증시는 KOSPI 5,808.53 (+2.31%)으로 마감했습니다.
+- 원달러 환율은 1,447.75원으로, 환율 변동이 외국인 투자 심리에 영향을 줄 수 있습니다.
+- 2026-02-22 주식 시장에서 131건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,808.53(+2.31%), KOSDAQ 1,154.00(-0.58%), USD/KRW 1,447.75(-0.05%).
+- *가격/시장 분야에서 Nasdaq, Correction, slip 관련 이슈가 부각되고 있습니다.*
 
 ## 테마별 주요 뉴스
 

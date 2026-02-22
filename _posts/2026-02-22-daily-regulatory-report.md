@@ -20,11 +20,13 @@ image: "/assets/images/generated/regulatory-summary-2026-02-22.png"
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://www.fsc.go.kr/no010101/86297">다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
-- 총 **23건** 가운데 **규제/정책, 거래소, 가격/시장** 테마 비중이 높았습니다.
-- **우선순위 이슈**: P0 1건, P1 6건
-- **주요 지역**: 한국 21건, 유럽 2건
+- 총 **23건** 수집
+- 주요 테마: 🔵 규제/정책, 🏦 거래소, 📈 가격/시장
+- 한국: 21건
+- 유럽: 2건
 
 ## 핵심 요약
 
