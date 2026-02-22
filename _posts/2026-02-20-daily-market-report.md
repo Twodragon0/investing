@@ -17,6 +17,24 @@ image: "/assets/images/generated/market-heatmap-2026-02-20.png"
 - 한국 증시: KOSPI 5,744.47 (+1.18%) 강세 마감. 외국인·기관 매수 유입으로 반도체·2차전지 주도. KOSDAQ은 -0.43% 소폭 조정.
 
 
+
+## 내용 분석
+
+- 핵심 이슈를 중심으로 요약과 링크를 정리했습니다.
+
+
+## URL 요약
+
+- [CoinGecko](https://www.coingecko.com/) — CoinGecko 관련 소식입니다.
+- [CoinMarketCap](https://coinmarketcap.com/) — CoinMarketCap 관련 소식입니다.
+- [FRED](https://fred.stlouisfed.org/series/FEDFUNDS) — FRED 관련 소식입니다.
+- [10Y Treasury](https://fred.stlouisfed.org/series/DGS10) — 기관 매수·매도 동향입니다.
+- [CPI](https://fred.stlouisfed.org/series/CPIAUCSL) — 거시 지표 관련 소식입니다.
+- [Fear & Greed Index](https://alternative.me/crypto/fear-and-greed-index/) — 시장 심리·불안 이슈입니다.
+- [Investing.com KOSPI](https://kr.investing.com/indices/kospi) — Investing.com KOSPI 관련 소식입니다.
+- [Yahoo Finance](https://finance.yahoo.com/) — Yahoo Finance 관련 소식입니다.
+- [FRED](https://fred.stlouisfed.org/) — > *본 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다.*입니다.
+
 ## 오늘의 핵심
 
 | 지표 | 값 | 변동 | 방향 |

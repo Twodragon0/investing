@@ -14,11 +14,45 @@ excerpt: "암호화폐 110건, 주식 139건, 보안 1건, 규제 31건, 소셜 
 
 ## 전체 뉴스 요약
 
-- 총 **62건** 수집
-- 주요 테마: 📜 정책/규제, 🏦 금리/유동성, 🧭 수급/심리
-- 암호화폐: 110건. 핵심 테마는 비트코인(53), 거래소(13), 매크로/금리(7)이며 변동성 확대 헤드라인이 우세합니다.
-- 주식: 139건. 2026-02-21 주식 시장에서 139건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,808.53(+2.31%), KOSDAQ 1,154.00(-0.58%), USD/KRW 1,447.75(-0.05%).
+오늘 수집된 총 62건 중 텔레그램 20건, 소셜 62건, 정치·경제 41건으로 정치/정책과 매크로/금리 이슈가 집중되었고 비트코인·거래소 관련 발언과 온체인 이동이 단기 변동성 요인으로 부각되었습니다.
 
+온체인 측면에서는 스테이블코인 이동 및 고래 거래소 이동 신호가 동시 포착되어 유동성 재배치 가능성이 있습니다.
+
+**핵심 신호 정리**
+- 정책/규제: 정치/정책·매크로 중심 헤드라인이 리스크 프라이싱에 직접 반영될 가능성.
+- 매크로/유동성: 금리/유동성 발언과 스테이블코인 이동이 단기 수급 변동성 확대 구간.
+- 온체인/수급: 거래소 유입·대형 지갑 이동이 매도 압력 또는 재배치 신호로 해석 가능.
+- 시장 기대감: 장기 가격 전망·매수 뉴스 확산으로 심리 변동폭 확대.
+
+**오늘의 체크리스트**
+- 정책/관세 헤드라인과 암호화폐·미국주 동조 반응 확인
+- 거래소 유입 증가 여부(단기 급락/반등 신호) 모니터링
+- 스테이블코인 발행·이동 속도 변화(유동성 진입 신호) 추적
+- 긴급 알림 1건에 대한 선별 모니터링
+
+
+
+## 내용 분석
+
+- 총 62건 규모로 이슈를 정리했습니다.
+- 상위 테마는 📜 정책/규제, 🏦 금리/유동성, 🧭 수급/심리로 집중도가 높습니다.
+- 긴급 알림이 포함되어 우선순위 대응이 필요합니다.
+
+
+## URL 요약
+
+- [비트코인 대규모 구제금융 "백악관 전략 비축 시나리오" 암호화폐 폭락 저지](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcEhVTjRnRlo0ZTgtU3RFWmM0UWxieG9rUVNsSGJHbl9Rc3EyWGVoREJ6SWVOZWc1UXRMaHRaaUxxTzRxVDRkbzMtUGZkWWpidDZoMjBxM1dDSXdZYjdJNWZoRlVjS0dTbEJRWklYUE1TVHpmZlRnMlFaMHZBc0JLamthRFFpNG5z?oc=5) — 비트코인 하락 흐름을 다룬 소식입니다.
+- [S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates](https://news.google.com/read/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?hl=en-US&gl=US&ceid=US%3Aen) — S&P 500 상승 흐름을 다룬 소식입니다.
+- [‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까](https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako) — 비트코인 하락 흐름을 다룬 소식입니다.
+- [관세 위법, 암호화폐 일제↑ 비트 6.8만달러 회복-리플 1%](https://news.google.com/rss/articles/CBMiWEFVX3lxTE1CTVZocW83alM0NnhOMWI0RTV3bE9rY3EwQTdaRXR1cHNrSmEybEVnN3ZXaWY3ZDJaZWFtSmFRSU5RV1B5VXJEcFZNM3VfSDlJZnh4MmRod1Y?oc=5) — 무역·관세 이슈입니다.
+- [After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued?](https://news.google.com/rss/articles/CBMimwFBVV95cUxNRW5lMUlzTkxlZEVaYjlTUkVKbTR0Qm9tZzVRN3BGVUtBcVBJSFBTS0FGTVJIc18tUU1wZXV4bk9EZ3J0LXFoZTlfWjFYMTgyU0VnQVdBWmhKTm1rak1Kb3NldkVOQllmaTd3U2JLQVloc2JXUk82TUVtMU5xR1I3cXRraDdOY1Rvd3VFYjhOc01GWG4xWGl1bk1sbw?oc=5) — 거래소 매수·매도 동향입니다.
+- [US Stock Market Today: Dow Jones Jumps 130 Points, S&P 500 and Nasdaq Surge After Supreme Court Strikes Down Trump's Global Tariffs](https://news.google.com/read/CBMihgJBVV95cUxOS1hVa0ZPOGFtR1dVWFJfY3JlT05ySDlrNjJCdUhyUUp2cjdvRDJBNzVpUWhPWFhsWUJiTzRURUVzaWRheVQxYzB6VkJiTk1lS0MxeTREZkpYOTc0OWZMX2JjUGZyaEx1VkJ4c1V2V0dVdU1TakZadldhcUlQUzk2bHp1eDJGZjd0MUE0VUNzanFMX0x5QlV4eXhMTmpwV3dxRGdndkt5MTdlWU5QZTZIRW9nTDJ0TlBBSjZ3OGlDczcwT0VKVnJYOGdTdGx5VEk2Wmptb0VBY2JxdzZ0Q0EwQ2dFckt2STg1dUstTkpfbzBwS28welFmTEZUNkdvQjVMZXdGNEJR?hl=en-US&gl=US&ceid=US%3Aen) — 나스닥 상승 흐름을 다룬 소식입니다.
+- [Stock market today: Dow, S&P 500, Nasdaq jump to post weekly gains as Supreme Court strikes down Trump tariffs](https://news.google.com/read/CBMi0wFBVV95cUxNdU9vLWxvY0cycGJKRURpTUJ2WXpqbDBmVzUwYlJsR3J2UkFOZGQ3c29vSzZkWTRFemxFb0J1d3JMRHphT3NpdlJmOEFfaXN5VWpMZjY3RmlmNXJCckVQWmZtaGpSaG9sbmp6cm9oNHIyZGxnRlctZjMwLUhuT1B2STJZNF9vdThLal94cHR2Sk9sa29xSnJKckxJWXM4YWtQbS1LcDhicVY0T3hqeE1QS3B6cTY2R3p3UG11SkZiNXpEa21mZjdJWTY3MlBpV0t3VjJV?hl=en-US&gl=US&ceid=US%3Aen) — 나스닥 상승 흐름을 다룬 소식입니다.
+- [Stock Market News From Feb. 20, 2026: Dow Rises After Supreme Court Strikes Down Trump's Tariffs](https://news.google.com/read/CBMi-wJBVV95cUxQN3FMQ3BoUlUyM0V3NUtfZVNNXzh2RGR5eVJTQnpqVnZlNUkyMC1lRWtobi1VYjZTQ2JwVW1UaWgzaWlvc0s0S21RWnpraXNmT0lQNjNkVkQzWUwtcy1EbHpyWGJEdTV0TEduOXBvWGxpdnZQNXdBOG1LSmc0UGYyYTlsUElOOUpwOE53MlptbVljQXM1UlNxRkItdDVHLW5LUWVrdFl3bElhMmNhTkN0bENuRmNMUVZmMkxRUmNOWVpPZzEzZEJEUVBCd1RCSF9EdUcxNm5hUFUyaGJRTHFGLUhIVTI4V3I5NEZhSDgxWHZPSlNQaDRreEhrZWI0TXZFb3VOd3ZLV0FnN3Q3clRyeTZaV2pSSzBlWHNwYWFiLTExbWhCLTF1bEZIbGRuVEMtU0taS2ZWNTJGdlNxamVOQWMybjNwT2RWVm5GeC1RdDlsN2E3TFpzNC1QakRfel94akJFMENDSHhRODFrRWt6cVZnM1piU1p1Q3Nj?hl=en-US&gl=US&ceid=US%3Aen) — 시장 상승 흐름을 다룬 소식입니다.
+- [KB자산운용, '삼전닉스' 채권혼합 ETF 출격상승 탄력·안정성 동시 겨냥](https://news.google.com/rss/articles/CBMib0FVX3lxTFB6RngweHNNM0JpZmFqNVhYVi1PbUZMUVQ1ZDNrVkdmaTNheUpTNE5WNTRsZXpHSGVHSFJNQy1uYWwtakRkd1VsdUhWYnhqc253ZF9QMXF6UWxaNm5fUWNSUG9yVllVdlJuSUd1ZkFTZw?oc=5) — ETF 상승 흐름을 다룬 소식입니다.
+- [Trump brings in new 10% tariff as Supreme Court rejects his global import taxes](https://www.bbc.com/news/articles/cn8146l0n55o?at_medium=RSS&at_campaign=rss) — 시장 상승 흐름을 다룬 소식입니다.
+- [Trump lashes out at Supreme Court justices over tariffs ruling](https://www.bbc.com/news/articles/cd9g0e7zd8wo?at_medium=RSS&at_campaign=rss) — 시장 상승 흐름을 다룬 소식입니다.
+- [Trump says he is considering limited military strike on Iran](https://www.bbc.com/news/articles/cdxzk4gvzp0o?at_medium=RSS&at_campaign=rss) — 상세 보기입니다.
 
 ## 종합 대시보드
 
@@ -32,8 +66,6 @@ excerpt: "암호화폐 110건, 주식 139건, 보안 1건, 규제 31건, 소셜 
 | 정치인 거래 | 9 | 신호 추출 실패 |
 
 ![multi-asset-briefing](/assets/images/generated/news-briefing-daily-2026-02-21.png)
-
-![indicator-dashboard]({{ '/assets/images/generated/indicator-dashboard-2026-02-21.png' | relative_url }})
 
 ![market-heatmap]({{ '/assets/images/generated/market-heatmap-2026-02-21.png' | relative_url }})
 
@@ -70,9 +102,9 @@ excerpt: "암호화폐 110건, 주식 139건, 보안 1건, 규제 31건, 소셜 
 
 > 즉시 확인이 필요한 긴급 뉴스입니다.
 
-- **[비트코인 대규모 구제금융 "백악관 전략 비축 시나리오"... 암호화폐 폭락 저지 - 글로벌이코노믹](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcEhVTjRnRlo0ZTgtU3RFWmM0UWxieG9rUVNsSGJHbl9Rc3EyWGVoREJ6SWVOZWc1UXRMaHRaaUxxTzRxVDRkbzMtUGZkWWpidDZoMjBxM1dDSXdZYjdJNWZoRlVjS0dTbEJRWklYUE1TVHpmZlRnMlFaMHZBc0JLamthRFFpNG5z?oc=5)**
+- **[비트코인 대규모 구제금융 "백악관 전략 비축 시나리오" 암호화폐 폭락 저지 - 글로벌이코노믹](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcEhVTjRnRlo0ZTgtU3RFWmM0UWxieG9rUVNsSGJHbl9Rc3EyWGVoREJ6SWVOZWc1UXRMaHRaaUxxTzRxVDRkbzMtUGZkWWpidDZoMjBxM1dDSXdZYjdJNWZoRlVjS0dTbEJRWklYUE1TVHpmZlRnMlFaMHZBc0JLamthRFFpNG5z?oc=5)**
 - **[S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates](https://news.google.com/read/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?hl=en-US&gl=US&ceid=US%3Aen)**
-- **[‘워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까](https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako)**
+- **[‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까](https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako)**
 
 ## 시장 개요
 
@@ -120,7 +152,7 @@ excerpt: "암호화폐 110건, 주식 139건, 보안 1건, 규제 31건, 소셜 
 - [US Stock Market Today: Dow Jones Jumps 130 Points, S&P 500 and Nasdaq Surge After Supreme Court Strikes Down Trump's Global Tariffs](https://news.google.com/read/CBMihgJBVV95cUxOS1hVa0ZPOGFtR1dVWFJfY3JlT05ySDlrNjJCdUhyUUp2cjdvRDJBNzVpUWhPWFhsWUJiTzRURUVzaWRheVQxYzB6VkJiTk1lS0MxeTREZkpYOTc0OWZMX2JjUGZyaEx1VkJ4c1V2V0dVdU1TakZadldhcUlQUzk2bHp1eDJGZjd0MUE0VUNzanFMX0x5QlV4eXhMTmpwV3dxRGdndkt5MTdlWU5QZTZIRW9nTDJ0TlBBSjZ3OGlDczcwT0VKVnJYOGdTdGx5VEk2Wmptb0VBY2JxdzZ0Q0EwQ2dFckt2STg1dUstTkpfbzBwS28welFmTEZUNkdvQjVMZXdGNEJR?hl=en-US&gl=US&ceid=US%3Aen)
 - [Stock market today: Dow, S&P 500, Nasdaq jump to post weekly gains as Supreme Court strikes down Trump tariffs](https://news.google.com/read/CBMi0wFBVV95cUxNdU9vLWxvY0cycGJKRURpTUJ2WXpqbDBmVzUwYlJsR3J2UkFOZGQ3c29vSzZkWTRFemxFb0J1d3JMRHphT3NpdlJmOEFfaXN5VWpMZjY3RmlmNXJCckVQWmZtaGpSaG9sbmp6cm9oNHIyZGxnRlctZjMwLUhuT1B2STJZNF9vdThLal94cHR2Sk9sa29xSnJKckxJWXM4YWtQbS1LcDhicVY0T3hqeE1QS3B6cTY2R3p3UG11SkZiNXpEa21mZjdJWTY3MlBpV0t3VjJV?hl=en-US&gl=US&ceid=US%3Aen)
 - [Stock Market News From Feb. 20, 2026: Dow Rises After Supreme Court Strikes Down Trump's Tariffs](https://news.google.com/read/CBMi-wJBVV95cUxQN3FMQ3BoUlUyM0V3NUtfZVNNXzh2RGR5eVJTQnpqVnZlNUkyMC1lRWtobi1VYjZTQ2JwVW1UaWgzaWlvc0s0S21RWnpraXNmT0lQNjNkVkQzWUwtcy1EbHpyWGJEdTV0TEduOXBvWGxpdnZQNXdBOG1LSmc0UGYyYTlsUElOOUpwOE53MlptbVljQXM1UlNxRkItdDVHLW5LUWVrdFl3bElhMmNhTkN0bENuRmNMUVZmMkxRUmNOWVpPZzEzZEJEUVBCd1RCSF9EdUcxNm5hUFUyaGJRTHFGLUhIVTI4V3I5NEZhSDgxWHZPSlNQaDRreEhrZWI0TXZFb3VOd3ZLV0FnN3Q3clRyeTZaV2pSSzBlWHNwYWFiLTExbWhCLTF1bEZIbGRuVEMtU0taS2ZWNTJGdlNxamVOQWMybjNwT2RWVm5GeC1RdDlsN2E3TFpzNC1QakRfel94akJFMENDSHhRODFrRWt6cVZnM1piU1p1Q3Nj?hl=en-US&gl=US&ceid=US%3Aen)
-- [KB자산운용, '삼전닉스' 채권혼합 ETF 출격…상승 탄력·안정성 동시 겨냥 - 위키리크스한국](https://news.google.com/rss/articles/CBMib0FVX3lxTFB6RngweHNNM0JpZmFqNVhYVi1PbUZMUVQ1ZDNrVkdmaTNheUpTNE5WNTRsZXpHSGVHSFJNQy1uYWwtakRkd1VsdUhWYnhqc253ZF9QMXF6UWxaNm5fUWNSUG9yVllVdlJuSUd1ZkFTZw?oc=5)
+- [KB자산운용, '삼전닉스' 채권혼합 ETF 출격상승 탄력·안정성 동시 겨냥 - 위키리크스한국](https://news.google.com/rss/articles/CBMib0FVX3lxTFB6RngweHNNM0JpZmFqNVhYVi1PbUZMUVQ1ZDNrVkdmaTNheUpTNE5WNTRsZXpHSGVHSFJNQy1uYWwtakRkd1VsdUhWYnhqc253ZF9QMXF6UWxaNm5fUWNSUG9yVllVdlJuSUd1ZkFTZw?oc=5)
 
 ---
 

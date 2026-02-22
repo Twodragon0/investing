@@ -30,12 +30,27 @@ image: "/assets/images/generated/news-summary-2026-02-19.png"
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">111</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 52</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (34회)</div></div></div>
 
-<div class="alert-box alert-info"><strong>암호화폐 시장 **비트코인, 가격/시장** 중심 111건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 52건 수집</li><li>📈 <strong>가격/시장</strong>: 21건 수집</li><li>🏦 <strong>거래소</strong> (20건): BitGW.com Takes a Global-First Approach in the Cryptocurrency Exchange Industry USA Today</li><li>🔷 <strong>이더리움</strong> (22건): [가상화폐 시세] 비트코인 1억원선 밑으로 하락…엑스알피 2100원선, 이더리움 280만원선 거래 이코노뉴스</li></ul></div>
+<div class="alert-box alert-info"><strong>암호화폐 시장 **비트코인, 가격/시장** 중심 111건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 52건 수집</li><li>📈 <strong>가격/시장</strong>: 21건 수집</li><li>🏦 <strong>거래소</strong> (20건): BitGW.com Takes a Global-First Approach in the Cryptocurrency Exchange Industry USA Today</li><li>🔷 <strong>이더리움</strong> (22건): [가상화폐 시세] 비트코인 1억원선 밑으로 하락엑스알피 2100원선, 이더리움 280만원선 거래 이코노뉴스</li></ul></div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMitwFBVV95cUxPNU9uNnQ5ZXk3WDJUaUVXUzdzR1o5ajZUdTFhb3pVdDB4Q3ZOZVdtT2VBTXJkWnhCTmxidy1wcmZzNjF1SHlQWkNGWlBmR1BxRWZoVW1hcGtHc3ZTNXJWYmg4bV9zRjlqOXh4TkJ6UDlwSmx4R05RZXR2cWxiR2ZxOXh2bUk2d3dfNUxWQkZwU3pBYk9JdXBaSDRxUXpLYjRJaGJxRVI1N1lkVTVPUTExQlVoOGdCVlk?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin's Crash Is Putting Crypto Treasury Stocks To The Test</a></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMkJqRVlOMzViU2xQVWV4cW9DaTZzbHdENlFkSnkxeGNqS3kyRWtQU3gtVlZXcld6TmJIQWtYTmlCWlE2UUhpTHlXbzJMY0hsTmZoMVI4VlpmUmVKajk0bGJJcFpiS0FabUVQQkFsZER4aHhtak02RTBCWjM1MHV6NUZReXpjdjlV?oc=5">비트코인 " 곧 10분의 1 토막 추락" ... 블룸버그 긴급보고서 - 글로벌이코노믹</a></li><li><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE4xelltbFhCY2lhUjBwU0VXZENrZG8wY21PRndscU9DZTJPSkJPREhfVVM4b3hRVC1PeDNXSzcyVmVFeVZjSlRDUGRnRmRVOFdQSV9LcnRKYnZFbWRSUmZjM2d5dEQ2Qmloei0yWG5Hb3BEVnBtTnfSAWZBVV95cUxNRjl1Z1dZM0NCcWEzQ0Z4QmhuNW1nblZrOTctZ1R0OHVPN3JCSG83NHRaQ3RvS2ZOUWk2VGVxRWRTeUVOTmRTYXExMzJFSkVWRWpDWTRudHp5NlhGMFAzT1JOQTZDY1E?oc=5">‘폭락’ 비트코인 들어갈까 말까?…붕괴 vs 반등 엇갈린 전망 - 동아일보</a></li></ul></div>
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMitwFBVV95cUxPNU9uNnQ5ZXk3WDJUaUVXUzdzR1o5ajZUdTFhb3pVdDB4Q3ZOZVdtT2VBTXJkWnhCTmxidy1wcmZzNjF1SHlQWkNGWlBmR1BxRWZoVW1hcGtHc3ZTNXJWYmg4bV9zRjlqOXh4TkJ6UDlwSmx4R05RZXR2cWxiR2ZxOXh2bUk2d3dfNUxWQkZwU3pBYk9JdXBaSDRxUXpLYjRJaGJxRVI1N1lkVTVPUTExQlVoOGdCVlk?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin's Crash Is Putting Crypto Treasury Stocks To The Test</a></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMkJqRVlOMzViU2xQVWV4cW9DaTZzbHdENlFkSnkxeGNqS3kyRWtQU3gtVlZXcld6TmJIQWtYTmlCWlE2UUhpTHlXbzJMY0hsTmZoMVI4VlpmUmVKajk0bGJJcFpiS0FabUVQQkFsZER4aHhtak02RTBCWjM1MHV6NUZReXpjdjlV?oc=5">비트코인 " 곧 10분의 1 토막 추락"  블룸버그 긴급보고서 - 글로벌이코노믹</a></li><li><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE4xelltbFhCY2lhUjBwU0VXZENrZG8wY21PRndscU9DZTJPSkJPREhfVVM4b3hRVC1PeDNXSzcyVmVFeVZjSlRDUGRnRmRVOFdQSV9LcnRKYnZFbWRSUmZjM2d5dEQ2Qmloei0yWG5Hb3BEVnBtTnfSAWZBVV95cUxNRjl1Z1dZM0NCcWEzQ0Z4QmhuNW1nblZrOTctZ1R0OHVPN3JCSG83NHRaQ3RvS2ZOUWk2VGVxRWRTeUVOTmRTYXExMzJFSkVWRWpDWTRudHp5NlhGMFAzT1JOQTZDY1E?oc=5">‘폭락’ 비트코인 들어갈까 말까?붕괴 vs 반등 엇갈린 전망 - 동아일보</a></li></ul></div>
 
 
 ![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-19.png' | relative_url }})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -47,6 +62,54 @@ image: "/assets/images/generated/news-summary-2026-02-19.png"
 - 총 **111건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
 - 2026-02-19 암호화폐 시장에서 111건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 거래소 관련 소식이 주목됩니다.
+
+
+## 내용 분석
+
+- 총 111건 규모로 이슈를 정리했습니다.
+- 상위 테마는 🟠 비트코인, 📈 가격/시장, 🏦 거래소로 집중도가 높습니다.
+- 긴급 알림이 포함되어 우선순위 대응이 필요합니다.
+
+
+## URL 요약
+
+- [Bitcoin's Crash Is Putting Crypto Treasury Stocks To The Test](https://news.google.com/read/CBMitwFBVV95cUxPNU9uNnQ5ZXk3WDJUaUVXUzdzR1o5ajZUdTFhb3pVdDB4Q3ZOZVdtT2VBTXJkWnhCTmxidy1wcmZzNjF1SHlQWkNGWlBmR1BxRWZoVW1hcGtHc3ZTNXJWYmg4bV9zRjlqOXh4TkJ6UDlwSmx4R05RZXR2cWxiR2ZxOXh2bUk2d3dfNUxWQkZwU3pBYk9JdXBaSDRxUXpLYjRJaGJxRVI1N1lkVTVPUTExQlVoOGdCVlk?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 하락 흐름을 다룬 소식입니다.
+- [비트코인 " 곧 10분의 1 토막 추락" 블룸버그 긴급보고서](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMkJqRVlOMzViU2xQVWV4cW9DaTZzbHdENlFkSnkxeGNqS3kyRWtQU3gtVlZXcld6TmJIQWtYTmlCWlE2UUhpTHlXbzJMY0hsTmZoMVI4VlpmUmVKajk0bGJJcFpiS0FabUVQQkFsZER4aHhtak02RTBCWjM1MHV6NUZReXpjdjlV?oc=5) — 비트코인 보고서 내용입니다.
+- [‘폭락’ 비트코인 들어갈까 말까?붕괴 vs 반등 엇갈린 전망](https://news.google.com/rss/articles/CBMidkFVX3lxTE4xelltbFhCY2lhUjBwU0VXZENrZG8wY21PRndscU9DZTJPSkJPREhfVVM4b3hRVC1PeDNXSzcyVmVFeVZjSlRDUGRnRmRVOFdQSV9LcnRKYnZFbWRSUmZjM2d5dEQ2Qmloei0yWG5Hb3BEVnBtTnfSAWZBVV95cUxNRjl1Z1dZM0NCcWEzQ0Z4QmhuNW1nblZrOTctZ1R0OHVPN3JCSG83NHRaQ3RvS2ZOUWk2VGVxRWRTeUVOTmRTYXExMzJFSkVWRWpDWTRudHp5NlhGMFAzT1JOQTZDY1E?oc=5) — 비트코인 상승 흐름을 다룬 소식입니다.
+- [Harvard shakes up its crypto strategy by selling Bitcoin and purchasing Ethereum](https://news.google.com/read/CBMieEFVX3lxTFBBVl95eWVGa3JabENHSnNReURWc2ZCREZURTZBV2p6SnZ1akpEdTNvNmNSU2dzNUs1eFExR0hzczZkNnU0RS13elYxbXZfTDhIWDZxRGh2cW56YXVXbTBaN0cwajBYYzBaMF83Q2FrSGpqVVA0aDR2UA?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 상승 흐름을 다룬 소식입니다.
+- [Abu Dhabi Funds Add to Bitcoin Bets Despite Crypto Rout](https://news.google.com/read/CBMiqgFBVV95cUxNYjZmUmNsYU1YNXhQMTRYMng5b1ZjR1RIVnh6c0libGY3OUpoRXlpejF6T181VFpTeFAxQ3dwbVpUNm4yYTlXd2ZwV3hCWW5TS3p3MlJENXhhMTRlTldNRGpaY2ZzVnp4SjBCT2o1ZFRNM18wQWdqNzAtOVBQU3UxRW1Na0J2SFE3MjQ4MnpxeDh6OTRQcVFIVUJ3SDU5XzdrbFd6VFlJQWVxUQ?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 관련 소식입니다.
+- [Brevan Howard’s crypto fund slumped 30% in 2025 amid bitcoin rout](https://news.google.com/read/CBMicEFVX3lxTE91U3hzeUxadUN2Ym8wRjNXZEpHY01kdDZvblpTNjM2RmFGU3E1ZnJDQUpPdjNPSm5Pa1l1Uk9SM2VWT1ZRYTRFbmZ2VzJJQVdveXFUWUNOenJPcVVqZnUxcEhsZkpGbzR5MHNVYVJhRTU?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 하락 흐름을 다룬 소식입니다.
+- ['Dr. Doom' Nouriel Roubini blasts bitcoin as 'bogus' and a risk to the financial system](https://news.google.com/read/CBMiqAFBVV95cUxPOUtLODdLNGxpa0l0Slg3MWpSOU53dV9rZ25kVWFOcVVGNVV5ZDRtMGI2NW45LTZXVGZTTVFDNnVSeTJGeXRGNnkwUzlLWS1kWEpnLWo0UGJseXMyZzJZVmFNTDVyR3BXdnBsNDdHNXI1V0IzbFpyZGFHdHZiWE51MDA0elVQQ29qdU02d3JoUGRMYVM3TkxqR3hkZ0VHVDNqU0FrNTNsQko?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 관련 소식입니다.
+- [Bitcoin Price Falls. Why the Crypto Is Struggling to Break Back Above $70,000.](https://news.google.com/read/CBMihgNBVV95cUxPdjRqMVJpSGZ5NUZ6Zmtabm5uTDFRdDNwSTd0WHF6ZlhHVjFGNzRmSzZRcC1lMm5hTGxsUVNBb3hvMVp3SkhxeDVyUFJKZ3RPcjlMV0NoTjRGZDh6X25rWWpzRlBHWHJReERiYl9WYXpTSm8xRV9XTWFETkFocGozdnRxNFUzbHZCbG5OS19HUXBKX0FFS1hEX3ZlbnhaNFNjMFRTc1JxOHR0M3E0UU9QMjdJeWdNVGZWa1B5OXk4bXV5bzRVSm9MM3N1dEFwMFAtNW84Nnd1LTNnV3NkYXpXSGRNbWNnZU44YTZGMlp2MjVYUEFmVEZsNjQyOXJ6WmZRYnJNTURmWDE5bGVXQXVQRnY2VEliRWRhVjNqWGEzWFB6aWVadExlNGZxc293bWhjUkU1TmJGWFNLa2Vsekp4QW1LWEl4Y1lhM2ZwR2k4Q0laOGtMRlhDMEZNQ0tJbk1LZjBVTGJBNXYzX3NNVDNmMEI5VXpkdGN4UlhyVXZBMDdrMUFXSHc?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 하락 흐름을 다룬 소식입니다.
+- [Despite Bitcoin’s Plunge, These Crypto IPOs Are Seen on Deck for 2026](https://news.google.com/read/CBMipwFBVV95cUxPT2ZFaXhVRjZiSUhnaFdBbkxnVGhVdXlIQUNBT0FadjNxNXIzRWlGNVNLX3NxbncwVGN2UzlYaGNDTWZlTGh4WXN5RWxXbVphMGpmSVQzcXRkRURPX25JM3FDOHhEbmlQQ0NITlY0TExzaXZKcVVzZVdnenczTnNXeFp5STF6YkdWZ1dvQWM5czZpUXlrZGFKUXJMUEVHdTNpbE9BeXpWRQ?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 관련 소식입니다.
+- [비트코인, 6만7000달러대까지 후퇴"위험 증폭 가짜 자산"](https://news.google.com/rss/articles/CBMiVkFVX3lxTFBWam1RaUFLYjY5bnlxN0xSYXdnVkJ6VjFGYjU5WmNiOG1mNTZpbkxVakIzVEVsVkk1YmhFZjlIVFVjenh0cElHbFVXcjNKd0NwRkNNLS1n?oc=5) — 비트코인 관련 소식입니다.
+- [BitGW.com Takes a Global-First Approach in the Cryptocurrency Exchange Industry](https://news.google.com/rss/articles/CBMi9AFBVV95cUxPOFRvS1g5Nkw4NnVFcjB0Z19JdjlzcmdNM0xPS1Q5VE9POWluQ3llNTV3aUdkWDJYZFRyc3pBajEyd21PY0xtVXNraV9FR0hRVXVJbWFkV091LUo0OEZkRmhwSEVjMUduUGllSl9xS0QxWHl5NlJhUS1LcW1lVmFDb2prVi1wQWVxOU9laG9WZlJOVzgwdW5sd1pjYlVsRE9INlk4Q1h1aWxoREdGRFJXelhzTl90cndiYW1aTTdEQ0hMSGF1SFlfeFE2QjVSWjZVMUhwTVUxUFlSMkVhd0VsSG42c21vY2FvOElzbUJGZUVST3l6?oc=5) — 거래소 관련 소식입니다.
+- [As crypto industry expands, U.S. slashes office examining dirty money safeguards of cryptocurrency exchanges - International Consortium of Investigative Journalists](https://news.google.com/rss/articles/CBMi7AFBVV95cUxQN0hSbFlxbnFHWlozNEFPNkZPZFRGWTJFdG5EVU1wOFFfeTVXa3VMUU9BSzFIMk9lcEJZNHBJYUM5X2NMUU5sZTBxdHNkS1lwbmVfWUxHUE1FUG9LUUVDYUc3V2FvODJVTEo4OUtoeHZCaU5TcGUzVXhTWTdZc3FGakhoM2dxRm5fcV93VjdURUY1ZE94Z2tURVVHMVhLTklGd2ZDaEZoSUd5OWRJYTRYVTg4S2hKYlpDeWZlZzlXN2xkUlp5TEtDanVGd1pLNzZROXExcHljb2JfZi1NN2JQWkV2UlFGU05mbWNXZA?oc=5) — 거래소 관련 소식입니다.
+- [Coinbase’s Crypto-Backed Lending Product Expands to XRP and DOGE](https://decrypt.co/358480/coinbases-crypto-backed-lending-product-xrp-doge) — 거래소 관련 소식입니다.
+- [Coinbase-Backed Ethereum Network Base to Dump Optimism Tech as Potential Token Looms](https://decrypt.co/358469/coinbase-ethereum-network-base-dump-optimism-tech-potential-token) — 이더리움 관련 소식입니다.
+- [Goldman Sachs CEO Owns 'Very Little' Bitcoin, Backs Bessent on Clarity Act](https://decrypt.co/358449/goldman-sachs-ceo-owns-very-little-bitcoin-backs-bessent-clarity-act) — 비트코인 관련 소식입니다.
+- [Crypto market drowns in red as bitcoin falls to $68,000, XRP, ETH slide over 5%](https://news.google.com/read/CBMiowFBVV95cUxPMjVkbktCT3VlTElxSWQyU3hHbHYwQ2R4R0pjS0dQU3JvM1I4WFlpS2ZPQmdtVFhyYy1LdWdBWUx3NGh0ckJKU1pncEJhcmNYX1dCYXJRWV9YbkxTOGlhZGtYWDFmYkxWeDhLaE1sTnUya3RtVjNvcVpIZUFKS1d0U0EyVHgxb1o4TU5DZ0kwZU0zSFljaktvSjdfVEF2MHo3dlQ0?hl=en-US&gl=US&ceid=US%3Aen) — 3. [가상화폐 시세] 비트코인 1억원선 밑으로 하락엑스알피 2100원선, 이더리움 280만원선 거래 - 이코노뉴스입니다.
+- [ETH Denver 2026 Opens With Builder Energy Despite Crypto Slump](https://decrypt.co/358483/eth-denver-2026-builder-energy-despite-crypto-slump) — 이더리움 하락 흐름을 다룬 소식입니다.
+- [Bitcoin Declines Amid Risk-Off Mood With AI Concerns to The Fore](https://news.google.com/read/CBMiswFBVV95cUxOSXp0Z2V6bHc3TUFicHBDeWlqOUpHNTRrSUhwUGM0RDhkSTBMV2w1WVFsSXgxdElZNVFqQktYMHR5NDdoU2hydFY3cTJTTnUtdXJuWVpLWUlNZEpuZ3lpV0xOUjBpc0RlaUpfTzBKNmIxLUc3SC02b1RldXR0WDU0UU1lQjcwRGJ4ME4wNXFrT2NqWTNPRnlVeGhvSTlLS0cyWDNpYWlXMC10emdKSHZZRGdiQQ?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 관련 소식입니다.
+- [Sen. Warren tells Fed and Treasury: No bailout for crypto billionaires](https://news.google.com/read/CBMilAFBVV95cUxPcXlGSm9wc3diOV83bzlYaGpTY3QwclJkQl9yb3RaamZwTUg5b3pRVDJmbVY2ZDZsWG1lRDlJYm5fYWpMSWRKSWFLdmpDb1FvMmlQbXZMeEMtM3BpU2hWTXVSNVFOVy04UzR1S3I4bmNIcTBLeG4tX2xJdVJIR3JNZ1g0bW9iUU9ROGZyVTR0VUhFVnZz0gGaAUFVX3lxTE10bHg4R2VJaTNYYklERkZuN1VvWW1sQ2FpV1NXUWJWTEpPbkY2anFGbDVWaFRXTjlpWVdTTkFpR0N6S2FoMWxRQ1NMTGdIbXQ3em9tbHRxX01lU2FiNUlxelpVZnMxUmF6NmlTNzlkSDRaQkFaUV8xUmt6S0t5bm9acFE0SjJPVmc1eEVLVVg5TWh3X01BZjBJM3c?hl=en-US&gl=US&ceid=US%3Aen) — 미 연준 매수·매도 동향입니다.
+- [Cryptocurrencies: Bitcoin Remains Below $70,000](https://news.google.com/read/CBMiqwFBVV95cUxQRUh0XzFJcmJqbnQ0c3V1QXhqeUVxbGs1QlNrX0hYcS1Zc1JGVTVWMEVwRnoyeWtzSEhmOVFmX3hwRUNqcS1xVlFuT2FVdEtnQ0wwUTY0OGFpWXdJSFpKZktwdi1qTENhZFE3N0M5dzFFUkpuYzZsTklDS2xGWm5nRTk3NS00RFhndTVZQUM2aG11RGpvT1F1XzlRODhTbVpNd3JyWEx0d0FuQUE?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 관련 소식입니다.
+- [Novig Raises at $500M Valuation With Help of Crypto’s Pivot](https://news.google.com/read/CBMiqgFBVV95cUxOaW5HbFBlRklDZnVuS0pXdEM2em5MQmNXUTF4YjhmM3JUNmtibERIeWtvakRzRTJkenR3TW9UdGRNQlBVcFNMUFpnQTlua3QyNGp5anh6S1Q0Z1ZBRk5BaTJIcUdmc2QxeWpoalZqOXk1WlA2QVYzY2lBQ0hkYVJrcXd4T2VlTkphVUNaVEwzWW5oa3JoNnRwVFQyd2M4aVdrZnBPeGpFVUdTZw?hl=en-US&gl=US&ceid=US%3Aen) — 암호화폐 관련 소식입니다.
+- [Sen. Warren tells Fed and Treasury: No bailout for crypto billionaires](https://news.google.com/rss/articles/CBMilAFBVV95cUxPcXlGSm9wc3diOV83bzlYaGpTY3QwclJkQl9yb3RaamZwTUg5b3pRVDJmbVY2ZDZsWG1lRDlJYm5fYWpMSWRKSWFLdmpDb1FvMmlQbXZMeEMtM3BpU2hWTXVSNVFOVy04UzR1S3I4bmNIcTBLeG4tX2xJdVJIR3JNZ1g0bW9iUU9ROGZyVTR0VUhFVnZz0gGaAUFVX3lxTE10bHg4R2VJaTNYYklERkZuN1VvWW1sQ2FpV1NXUWJWTEpPbkY2anFGbDVWaFRXTjlpWVdTTkFpR0N6S2FoMWxRQ1NMTGdIbXQ3em9tbHRxX01lU2FiNUlxelpVZnMxUmF6NmlTNzlkSDRaQkFaUV8xUmt6S0t5bm9acFE0SjJPVmc1eEVLVVg5TWh3X01BZjBJM3c?oc=5) — 미 연준 매수·매도 동향입니다.
+- [New Cryptocurrency ListingCheck out the latest coin listings and pairs on Launchpad, Launchpool, Spot, Margin, and Futures markets.](https://www.binance.com/en/support/announcement/list/48) — 거래소: Binance입니다.
+- [Latest Binance NewsStay on top of what's new in Binance.](https://www.binance.com/en/support/announcement/list/49) — 거래소: Binance입니다.
+- [Latest ActivitiesFind promotions that interest you.](https://www.binance.com/en/support/announcement/list/93) — 거래소: Binance입니다.
+- [New Fiat ListingsSee which new fiat-to-crypto trading pairs are available on Binance.](https://www.binance.com/en/support/announcement/list/50) — 거래소: Binance입니다.
+- [API UpdatesLearn latest news on API updates.](https://www.binance.com/en/support/announcement/list/51) — 거래소: Binance입니다.
+- [Harvard shakes up its crypto strategy by selling Bitcoin and purchasing Ethereum](https://news.google.com/read/CBMieEFVX3lxTFBBVl95eWVGa3JabENHSnNReURWc2ZCREZURTZBV2p6SnZ1akpEdTNvNmNSU2dzNUs1eFExR0hzczZkNnU0RS13elYxbXZfTDhIWDZxRGh2cW56YXVXbTBaN0cwajBYYzBaMF83Q2FrSGpqVVA0aDR2UA?hl=en-US&amp;gl=US&amp;ceid=US%3Aen) — 비트코인 상승 흐름을 다룬 소식입니다.
+- [Abu Dhabi Funds Add to Bitcoin Bets Despite Crypto Rout](https://news.google.com/read/CBMiqgFBVV95cUxNYjZmUmNsYU1YNXhQMTRYMng5b1ZjR1RIVnh6c0libGY3OUpoRXlpejF6T181VFpTeFAxQ3dwbVpUNm4yYTlXd2ZwV3hCWW5TS3p3MlJENXhhMTRlTldNRGpaY2ZzVnp4SjBCT2o1ZFRNM18wQWdqNzAtOVBQU3UxRW1Na0J2SFE3MjQ4MnpxeDh6OTRQcVFIVUJ3SDU5XzdrbFd6VFlJQWVxUQ?hl=en-US&amp;gl=US&amp;ceid=US%3Aen) — 비트코인 관련 소식입니다.
+- [Crypto leaders and lawmakers meet at Trump family&#x27;s World Liberty Forum: CNBC Cr](https://news.google.com/read/CBMiywFBVV95cUxNN3I1TjdOSzFQQnkteE9USlY0V0ZNU1g3TUwyanVvb1AtdjAyYUpycWwwck1Fd3NCU04zWkgwRG9hd0dKSGdVUEVQajJ2SlhNZWVvVEJfSmpGeERXbC05eEVyRDNHcWRmX1ZFY2IxRm1Ba21ZR3FQNjVKYjl2eGlpZjZvYVR3eU1NVUpHMEtLLXRWR0lBMEM3amdfeTA4REFuMUtwT3NQY0R1UlRRZnBub0RDTXVqcHE3T2hIaHl0WjRuZ1dabzA2cTczOA?hl=en-US&amp;gl=US&amp;ceid=US%3Aen) — 암호화폐 관련 소식입니다.
+- [Brevan Howard’s crypto fund slumped 30% in 2025 amid bitcoin rout](https://news.google.com/read/CBMicEFVX3lxTE91U3hzeUxadUN2Ym8wRjNXZEpHY01kdDZvblpTNjM2RmFGU3E1ZnJDQUpPdjNPSm5Pa1l1Uk9SM2VWT1ZRYTRFbmZ2VzJJQVdveXFUWUNOenJPcVVqZnUxcEhsZkpGbzR5MHNVYVJhRTU?hl=en-US&amp;gl=US&amp;ceid=US%3Aen) — 비트코인 하락 흐름을 다룬 소식입니다.
+- [Crypto Is a Victim of Its Own Success](https://news.google.com/read/CBMiggFBVV95cUxQSXRNd2I4OC1OeFFoOVVwNDcteFhCTFFEWjJhblJaLXJpX1k1Wl9ob19QejlzTUVpbDFPY21rbldZTmJDZm9PaE9XTmxTQzdyYmt1ejB1YUJTY0hNWnNjZTZHVVQwSUZoWVRwQURlYWlOLUU3a1lyazRMMUVDbDdTUGdB?hl=en-US&amp;gl=US&amp;ceid=US%3Aen) — 암호화폐 관련 소식입니다.
+- [&#x27;Dr. Doom&#x27; Nouriel Roubini blasts bitcoin as &#x27;bogus&#x27; and a risk to the financial](https://news.google.com/read/CBMiqAFBVV95cUxPOUtLODdLNGxpa0l0Slg3MWpSOU53dV9rZ25kVWFOcVVGNVV5ZDRtMGI2NW45LTZXVGZTTVFDNnVSeTJGeXRGNnkwUzlLWS1kWEpnLWo0UGJseXMyZzJZVmFNTDVyR3BXdnBsNDdHNXI1V0IzbFpyZGFHdHZiWE51MDA0elVQQ29qdU02d3JoUGRMYVM3TkxqR3hkZ0VHVDNqU0FrNTNsQko?hl=en-US&amp;gl=US&amp;ceid=US%3Aen) — 비트코인 관련 소식입니다.
+- [Bitcoin&#x27;s Crash Is Putting Crypto Treasury Stocks To The Test](https://news.google.com/read/CBMitwFBVV95cUxPNU9uNnQ5ZXk3WDJUaUVXUzdzR1o5ajZUdTFhb3pVdDB4Q3ZOZVdtT2VBTXJkWnhCTmxidy1wcmZzNjF1SHlQWkNGWlBmR1BxRWZoVW1hcGtHc3ZTNXJWYmg4bV9zRjlqOXh4TkJ6UDlwSmx4R05RZXR2cWxiR2ZxOXh2bUk2d3dfNUxWQkZwU3pBYk9JdXBaSDRxUXpLYjRJaGJxRVI1N1lkVTVPUTExQlVoOGdCVlk?hl=en-US&amp;gl=US&amp;ceid=US%3Aen) — 비트코인 하락 흐름을 다룬 소식입니다.
+- [Bitcoin Price Falls. Why the Crypto Is Struggling to Break Back Above $70,000.](https://news.google.com/read/CBMihgNBVV95cUxPdjRqMVJpSGZ5NUZ6Zmtabm5uTDFRdDNwSTd0WHF6ZlhHVjFGNzRmSzZRcC1lMm5hTGxsUVNBb3hvMVp3SkhxeDVyUFJKZ3RPcjlMV0NoTjRGZDh6X25rWWpzRlBHWHJReERiYl9WYXpTSm8xRV9XTWFETkFocGozdnRxNFUzbHZCbG5OS19HUXBKX0FFS1hEX3ZlbnhaNFNjMFRTc1JxOHR0M3E0UU9QMjdJeWdNVGZWa1B5OXk4bXV5bzRVSm9MM3N1dEFwMFAtNW84Nnd1LTNnV3NkYXpXSGRNbWNnZU44YTZGMlp2MjVYUEFmVEZsNjQyOXJ6WmZRYnJNTURmWDE5bGVXQXVQRnY2VEliRWRhVjNqWGEzWFB6aWVadExlNGZxc293bWhjUkU1TmJGWFNLa2Vsekp4QW1LWEl4Y1lhM2ZwR2k4Q0laOGtMRlhDMEZNQ0tJbk1LZjBVTGJBNXYzX3NNVDNmMEI5VXpkdGN4UlhyVXZBMDdrMUFXSHc?hl=en-US&amp;gl=US&amp;ceid=US%3Aen) — 비트코인 하락 흐름을 다룬 소식입니다.
+- [Bitcoin Declines Amid Risk-Off Mood With AI Concerns to The Fore](https://news.google.com/read/CBMiswFBVV95cUxOSXp0Z2V6bHc3TUFicHBDeWlqOUpHNTRrSUhwUGM0RDhkSTBMV2w1WVFsSXgxdElZNVFqQktYMHR5NDdoU2hydFY3cTJTTnUtdXJuWVpLWUlNZEpuZ3lpV0xOUjBpc0RlaUpfTzBKNmIxLUc3SC02b1RldXR0WDU0UU1lQjcwRGJ4ME4wNXFrT2NqWTNPRnlVeGhvSTlLS0cyWDNpYWlXMC10emdKSHZZRGdiQQ?hl=en-US&amp;gl=US&amp;ceid=US%3Aen) — 비트코인 관련 소식입니다.
+- [Crypto market drowns in red as bitcoin falls to $68,000, XRP, ETH slide over 5%](https://news.google.com/read/CBMiowFBVV95cUxPMjVkbktCT3VlTElxSWQyU3hHbHYwQ2R4R0pjS0dQU3JvM1I4WFlpS2ZPQmdtVFhyYy1LdWdBWUx3NGh0ckJKU1pncEJhcmNYX1dCYXJRWV9YbkxTOGlhZGtYWDFmYkxWeDhLaE1sTnUya3RtVjNvcVpIZUFKS1d0U0EyVHgxb1o4TU5DZ0kwZU0zSFljaktvSjdfVEF2MHo3dlQ0?hl=en-US&amp;gl=US&amp;ceid=US%3Aen) — 비트코인 하락 흐름을 다룬 소식입니다.
 
 ## 테마별 주요 뉴스
 
@@ -66,7 +129,7 @@ image: "/assets/images/generated/news-summary-2026-02-19.png"
 <details><summary>그 외 49건 보기</summary><div class="details-content">
 <a href="https://news.google.com/read/CBMiqAFBVV95cUxPOUtLODdLNGxpa0l0Slg3MWpSOU53dV9rZ25kVWFOcVVGNVV5ZDRtMGI2NW45LTZXVGZTTVFDNnVSeTJGeXRGNnkwUzlLWS1kWEpnLWo0UGJseXMyZzJZVmFNTDVyR3BXdnBsNDdHNXI1V0IzbFpyZGFHdHZiWE51MDA0elVQQ29qdU02d3JoUGRMYVM3TkxqR3hkZ0VHVDNqU0FrNTNsQko?hl=en-US&gl=US&ceid=US%3Aen">'Dr. Doom' Nouriel Roubini blasts bitcoin as 'bogus' and a risk to the financial system</a>
 <a href="https://news.google.com/read/CBMitwFBVV95cUxPNU9uNnQ5ZXk3WDJUaUVXUzdzR1o5ajZUdTFhb3pVdDB4Q3ZOZVdtT2VBTXJkWnhCTmxidy1wcmZzNjF1SHlQWkNGWlBmR1BxRWZoVW1hcGtHc3ZTNXJWYmg4bV9zRjlqOXh4TkJ6UDlwSmx4R05RZXR2cWxiR2ZxOXh2bUk2d3dfNUxWQkZwU3pBYk9JdXBaSDRxUXpLYjRJaGJxRVI1N1lkVTVPUTExQlVoOGdCVlk?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin's Crash Is Putting Crypto Treasury Stocks To The Test</a>
-<em>...외 34건</em>
+<em>외 34건</em>
 </div></details>
 
 
@@ -84,9 +147,9 @@ image: "/assets/images/generated/news-summary-2026-02-19.png"
 <span class="source-tag">Google News</span>
 
 <details><summary>그 외 18건 보기</summary><div class="details-content">
-<a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE4xelltbFhCY2lhUjBwU0VXZENrZG8wY21PRndscU9DZTJPSkJPREhfVVM4b3hRVC1PeDNXSzcyVmVFeVZjSlRDUGRnRmRVOFdQSV9LcnRKYnZFbWRSUmZjM2d5dEQ2Qmloei0yWG5Hb3BEVnBtTnfSAWZBVV95cUxNRjl1Z1dZM0NCcWEzQ0Z4QmhuNW1nblZrOTctZ1R0OHVPN3JCSG83NHRaQ3RvS2ZOUWk2VGVxRWRTeUVOTmRTYXExMzJFSkVWRWpDWTRudHp5NlhGMFAzT1JOQTZDY1E?oc=5">‘폭락’ 비트코인 들어갈까 말까?…붕괴 vs 반등 엇갈린 전망 - 동아일보</a>
-<a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFBWam1RaUFLYjY5bnlxN0xSYXdnVkJ6VjFGYjU5WmNiOG1mNTZpbkxVakIzVEVsVkk1YmhFZjlIVFVjenh0cElHbFVXcjNKd0NwRkNNLS1n?oc=5">비트코인, 6만7000달러대까지 후퇴…"위험 증폭 가짜 자산" - 지디넷코리아</a>
-<em>...외 3건</em>
+<a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE4xelltbFhCY2lhUjBwU0VXZENrZG8wY21PRndscU9DZTJPSkJPREhfVVM4b3hRVC1PeDNXSzcyVmVFeVZjSlRDUGRnRmRVOFdQSV9LcnRKYnZFbWRSUmZjM2d5dEQ2Qmloei0yWG5Hb3BEVnBtTnfSAWZBVV95cUxNRjl1Z1dZM0NCcWEzQ0Z4QmhuNW1nblZrOTctZ1R0OHVPN3JCSG83NHRaQ3RvS2ZOUWk2VGVxRWRTeUVOTmRTYXExMzJFSkVWRWpDWTRudHp5NlhGMFAzT1JOQTZDY1E?oc=5">‘폭락’ 비트코인 들어갈까 말까?붕괴 vs 반등 엇갈린 전망 - 동아일보</a>
+<a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFBWam1RaUFLYjY5bnlxN0xSYXdnVkJ6VjFGYjU5WmNiOG1mNTZpbkxVakIzVEVsVkk1YmhFZjlIVFVjenh0cElHbFVXcjNKd0NwRkNNLS1n?oc=5">비트코인, 6만7000달러대까지 후퇴"위험 증폭 가짜 자산" - 지디넷코리아</a>
+<em>외 3건</em>
 </div></details>
 
 
@@ -99,7 +162,7 @@ BitGW.com Takes a Global-First Approach in the Cryptocurrency Exchange Industry 
 <span class="source-tag">Google News EN</span>
 
 **2. [As crypto industry expands, U.S. slashes office examining dirty money safeguards of cryptocurrency exchanges - International Consortium of Investigative Journalists - ICIJ](https://news.google.com/rss/articles/CBMi7AFBVV95cUxQN0hSbFlxbnFHWlozNEFPNkZPZFRGWTJFdG5EVU1wOFFfeTVXa3VMUU9BSzFIMk9lcEJZNHBJYUM5X2NMUU5sZTBxdHNkS1lwbmVfWUxHUE1FUG9LUUVDYUc3V2FvODJVTEo4OUtoeHZCaU5TcGUzVXhTWTdZc3FGakhoM2dxRm5fcV93VjdURUY1ZE94Z2tURVVHMVhLTklGd2ZDaEZoSUd5OWRJYTRYVTg4S2hKYlpDeWZlZzlXN2xkUlp5TEtDanVGd1pLNzZROXExcHljb2JfZi1NN2JQWkV2UlFGU05mbWNXZA?oc=5)**
-As crypto industry expands, U.S. slashes office examining dirty money safeguards of cryptocurrency exchanges International Consortium of Investigative...
+As crypto industry expands, U.S. slashes office examining dirty money safeguards of cryptocurrency exchanges International Consortium of Investigative
 <span class="source-tag">Google News EN</span>
 
 **3. [Coinbase’s Crypto-Backed Lending Product Expands to XRP and DOGE](https://decrypt.co/358480/coinbases-crypto-backed-lending-product-xrp-doge)**
@@ -109,7 +172,7 @@ Coinbase signaled its crypto-backed lending product is expanding in the U.S., un
 <details><summary>그 외 17건 보기</summary><div class="details-content">
 <a href="https://decrypt.co/358469/coinbase-ethereum-network-base-dump-optimism-tech-potential-token">Coinbase-Backed Ethereum Network Base to Dump Optimism Tech as Potential Token Looms</a>
 <a href="https://decrypt.co/358449/goldman-sachs-ceo-owns-very-little-bitcoin-backs-bessent-clarity-act">Goldman Sachs CEO Owns 'Very Little' Bitcoin, Backs Bessent on Clarity Act</a>
-<em>...외 2건</em>
+<em>외 2건</em>
 </div></details>
 
 
@@ -123,14 +186,14 @@ Coinbase signaled its crypto-backed lending product is expanding in the U.S., un
 **2. [Crypto market drowns in red as bitcoin falls to $68,000, XRP, ETH slide over 5%](https://news.google.com/read/CBMiowFBVV95cUxPMjVkbktCT3VlTElxSWQyU3hHbHYwQ2R4R0pjS0dQU3JvM1I4WFlpS2ZPQmdtVFhyYy1LdWdBWUx3NGh0ckJKU1pncEJhcmNYX1dCYXJRWV9YbkxTOGlhZGtYWDFmYkxWeDhLaE1sTnUya3RtVjNvcVpIZUFKS1d0U0EyVHgxb1o4TU5DZ0kwZU0zSFljaktvSjdfVEF2MHo3dlQ0?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
-**3. [[가상화폐 시세] 비트코인 1억원선 밑으로 하락…엑스알피 2100원선, 이더리움 280만원선 거래 - 이코노뉴스](https://news.google.com/rss/articles/CBMib0FVX3lxTFBHRjYwNWhsYktnU3BiMmF0Smd1UUFBd3B3bTVYZkFTa2ZIRzdYYjVrTkFBU3g4bzNJMmp4VG5icm9OU3ptc3ZGVXk2ZTlVVWo4ZHB6Zm9TZ21pclJ6ZjRZRWlTRXE1QUN5dnJsa0RTaw?oc=5)**
-[가상화폐 시세] 비트코인 1억원선 밑으로 하락…엑스알피 2100원선, 이더리움 280만원선 거래 이코노뉴스
+**3. [[가상화폐 시세] 비트코인 1억원선 밑으로 하락엑스알피 2100원선, 이더리움 280만원선 거래 - 이코노뉴스](https://news.google.com/rss/articles/CBMib0FVX3lxTFBHRjYwNWhsYktnU3BiMmF0Smd1UUFBd3B3bTVYZkFTa2ZIRzdYYjVrTkFBU3g4bzNJMmp4VG5icm9OU3ptc3ZGVXk2ZTlVVWo4ZHB6Zm9TZ21pclJ6ZjRZRWlTRXE1QUN5dnJsa0RTaw?oc=5)**
+[가상화폐 시세] 비트코인 1억원선 밑으로 하락엑스알피 2100원선, 이더리움 280만원선 거래 이코노뉴스
 <span class="source-tag">Google News KR</span>
 
 <details><summary>그 외 19건 보기</summary><div class="details-content">
 <a href="https://decrypt.co/358483/eth-denver-2026-builder-energy-despite-crypto-slump">ETH Denver 2026 Opens With Builder Energy Despite Crypto Slump</a>
 <a href="https://decrypt.co/358480/coinbases-crypto-backed-lending-product-xrp-doge">Coinbase’s Crypto-Backed Lending Product Expands to XRP and DOGE</a>
-<em>...외 4건</em>
+<em>외 4건</em>
 </div></details>
 
 
@@ -150,7 +213,7 @@ Coinbase signaled its crypto-backed lending product is expanding in the U.S., un
 <details><summary>그 외 39건 보기</summary><div class="details-content">
 <a href="https://news.google.com/read/CBMiqgFBVV95cUxOaW5HbFBlRklDZnVuS0pXdEM2em5MQmNXUTF4YjhmM3JUNmtibERIeWtvakRzRTJkenR3TW9UdGRNQlBVcFNMUFpnQTlua3QyNGp5anh6S1Q0Z1ZBRk5BaTJIcUdmc2QxeWpoalZqOXk1WlA2QVYzY2lBQ0hkYVJrcXd4T2VlTkphVUNaVEwzWW5oa3JoNnRwVFQyd2M4aVdrZnBPeGpFVUdTZw?hl=en-US&gl=US&ceid=US%3Aen">Novig Raises at $500M Valuation With Help of Crypto’s Pivot</a>
 <a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxPcXlGSm9wc3diOV83bzlYaGpTY3QwclJkQl9yb3RaamZwTUg5b3pRVDJmbVY2ZDZsWG1lRDlJYm5fYWpMSWRKSWFLdmpDb1FvMmlQbXZMeEMtM3BpU2hWTXVSNVFOVy04UzR1S3I4bmNIcTBLeG4tX2xJdVJIR3JNZ1g0bW9iUU9ROGZyVTR0VUhFVnZz0gGaAUFVX3lxTE10bHg4R2VJaTNYYklERkZuN1VvWW1sQ2FpV1NXUWJWTEpPbkY2anFGbDVWaFRXTjlpWVdTTkFpR0N6S2FoMWxRQ1NMTGdIbXQ3em9tbHRxX01lU2FiNUlxelpVZnMxUmF6NmlTNzlkSDRaQkFaUV8xUmt6S0t5bm9acFE0SjJPVmc1eEVLVVg5TWh3X01BZjBJM3c?oc=5">Sen. Warren tells Fed and Treasury: No bailout for crypto billionaires - CNBC</a>
-<em>...외 24건</em>
+<em>외 24건</em>
 </div></details>
 
 

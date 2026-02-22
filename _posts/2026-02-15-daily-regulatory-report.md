@@ -45,6 +45,10 @@ image: "/assets/images/generated/regulatory-summary-2026-02-15.png"
 
 
 
+
+
+
+
 ## 전체 뉴스 요약
 
 - 총 **25건** 수집
@@ -60,24 +64,24 @@ image: "/assets/images/generated/regulatory-summary-2026-02-15.png"
 
 ## URL 요약
 
-- [asst-20260213](https://news.google.com/rss/articles/CBMijAFBVV95cUxNWDd5VDV6alBYT3BIZkstSGVSNmFmejZ2eGI4SUVjUWFxdkFpRlBWaHQ1QW92Z2tESlV6MHBFSm1JYlVwcUhISU9fZmlpSkRJZVc5b2NaYTcwdnp2UlBRXy01ZFpQRmpBb1ZmWFhkRWdTSVdEM0VYTW5STEc3c3VXTG1SeFhITmVuQm53VQ?oc=5) — asst-20260213 내용을 정리했다.
-- [금융위원회 인사 보도(팀장급)](https://www.fsc.go.kr/no010101/86298) — 금융위원회 인사 보도(팀장급) 내용을 정리했다.
-- [다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최](https://www.fsc.go.kr/no010101/86297) — ▴ 민관 합동 TF를 구성하여 旣 취급된 다주택자 대출 취급 현황 및 만기 연장 절차 등을 파악한 후 개선방안을 마련할 계획.
-- [이억원 금융위원장, 설 맞이 전통시장 방문](https://www.fsc.go.kr/no010101/86296) — ▪ 연체 전 자영업자는 은행권 4대 금융지원 방안으로 종합 지원.
-- [수익증권 장외거래중개업(조각투자* 장외거래소)예비인가금융위원회 정례회의(‘26.2.13.) 의결 * 시장에서는 신탁수익증권 투자와 투자계약증권 투자를 조각투자로 인식,금번 인가는 신탁수익증권 장외거래중개업만을 의미](https://www.fsc.go.kr/no010101/86295) — -해당 샌드박스 사업자가 발행한조각투자 증권으로 제한.
-- [“한 번의 실패는 결코 끝이 아닙니다.” - 이억원 금융위원장, 「전국민 신용회복지원 수기 공모전」 수상자 면담 -](https://www.fsc.go.kr/no010101/86287) — □ (일시) ’26.2.13일(금), 09:30.
-- [본격 가동하는 국민성장펀드, 지역 현장에서 지역‧산업계와 소통합니다 (2일차 : 충북‧충남 지역 방문) - 2.11~2.12일, 국민성장펀드‧지방우대금융 지역간담회 개최 -](https://www.fsc.go.kr/no010101/86275) — ▪ 일시/장소 : ‘26. 2.11일(수) ~ ’26. 2.12일(목).
-- [2026년 상반기 영세·중소가맹점 선정결과 및 2025년 하반기 신규가맹점에 대한 카드수수료 환급 안내 등](https://www.fsc.go.kr/no010101/86274) — □ (환급액) = ’25.7.1.∼’26.2.13. 기간 동안 카드매출액 ×.
-- [부실기업 신속·엄정 퇴출을 위한 상장폐지 개혁 방안](https://www.fsc.go.kr/no010101/86273) — - 또한, 상장폐지 가처분 소송의 신속 처리를 위해 법원 등과 협의 추진.
-- [빗썸 오지급 보상 안내의 URL링크는 사기입니다. - 빗썸 오지급 사고 관련 스미싱 소비자경보 발령 -](https://www.fsc.go.kr/no010101/86271) — □최근 빗썸의 오지급 사고 관련 보상금 지급 발표로 국민들의 관심이 높아지면서 스미싱* 피해 우려도 커지는 상황.
-- [全 금융업권 참여로 예금보험기금 저축은행 특별계정 1년 연장을 추진합니다.](https://www.fsc.go.kr/no010101/86263) — ▪ (일시/장소) ‘26.2.11.(수) 16:00~17:00 / 정부서울청사.
-- [단일종목 레버리지 ETF의 세부방안은 검토중입니다.](https://www.fsc.go.kr/no010102/86267) — □ 2.12일(인터넷판) 서울경제 「‘2배 ETF’ 삼전‧하닉‧현대차만 나온다」 제하의 기사에서,.
-- [“신용사면시 고신용자의 점수 상승폭이 컸다는 보도는 사실이 아닙니다.”](https://www.fsc.go.kr/no010102/86256) — □ 2.9일자 머니투데이는 「신용사면 직후 또 연체 "도덕적 해이 부추겨, 궁극적 해결책 안돼"」제하의 기사에서,.
-- [026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기”등 기사 관련](https://www.fsc.go.kr/no010102/86234) — 026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기 ”등 기사 관련.
-- [“금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”](https://www.fsc.go.kr/no010102/86213) — □ 문화일보는 2.5일 「사외이사 임기 ‘3년’ 제한··‘금융 이너서클 교체｣ 제하의 기사에서,.
-- [정부는 대산 1호 프로젝트 사업재편 관련 절차를 차질없이 진행하고 있습니다.](https://www.fsc.go.kr/no010102/86210) — □ 대산의 HD현대케미칼·롯데케미칼간 1호 프로젝트에 대한 공정위 기업결합심사 및 금융권 금융지원방안 검토 절차가 지연되면서 사업재편 추진동력이 약화되고 있음.
-- [Crypto Advocates Urge UK’s FCA to Narrow Regulatory Scope](https://news.google.com/rss/articles/CBMirgFBVV95cUxNZUl4eUVrVW5Eb0NfSEZTa3ROWVc5ZXplX1dJNzlGM2VPZEIzcGN4VTdfcVR1TXNCdWV6WHVramJIMWdqZGRYUmhfUlRwU2IxYVltTk84cUZ3ZG5FNHR3aFdITzZ3X2pUYjV2WEhWdTdRUDd6bkkxVnBDZjk5NDA4bDZQMVZYWHE5LVp3MV9iR0s1bVFIMTlveENvY0twT2RPalFaeURUWlA3MGNVLXc?oc=5) — Crypto Advocates Urge UK’s FCA to Narrow Regulatory Scope 내용을 정리했다.
-- [DeFi Education Fund calls on UK FCA to narrow definition of control in crypto regulation](https://news.google.com/rss/articles/CBMiygFBVV95cUxPMW1KbkRPMjNwLThZRFgtZkdVOWM3TWptY3dqRWtOUnJIQzNDNVFkWDB0MDZ1Q3JubzNnWlQ0ZWZLWEZFS0ZtcmdlWG1oZnBXd3NYRjAybXNvYnZ5Q1g3NFFRUEdaQ0JXNklVY2NsQlgyNWJPWVpXekhvaUVYRG9HUW52czJxT1JqXzEyemRMNWxHRmczTS1HXzh6SUFRWHhvUS1ZVUpyT0MzWlE4WDlIUUR6VWZpR2w2aVlPcjk2MjhEOGNVU0hQNzhB?oc=5) — DeFi Education Fund calls on UK FCA to narrow definition of control in crypto regulation 내용을 정리했다.
+- [asst-20260213](https://news.google.com/rss/articles/CBMijAFBVV95cUxNWDd5VDV6alBYT3BIZkstSGVSNmFmejZ2eGI4SUVjUWFxdkFpRlBWaHQ1QW92Z2tESlV6MHBFSm1JYlVwcUhISU9fZmlpSkRJZVc5b2NaYTcwdnp2UlBRXy01ZFpQRmpBb1ZmWFhkRWdTSVdEM0VYTW5STEc3c3VXTG1SeFhITmVuQm53VQ?oc=5) — asst-20260213 관련 소식입니다.
+- [금융위원회 인사 보도(팀장급)](https://www.fsc.go.kr/no010101/86298) — 규제 당국 관련 소식입니다.
+- [다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최](https://www.fsc.go.kr/no010101/86297) — 다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최 관련 소식입니다.
+- [이억원 금융위원장, 설 맞이 전통시장 방문](https://www.fsc.go.kr/no010101/86296) — 이억원 금융위원장, 설 맞이 전통시장 방문 관련 소식입니다.
+- [수익증권 장외거래중개업(조각투자* 장외거래소)예비인가금융위원회 정례회의(‘26.2.13.) 의결 * 시장에서는 신탁수익증권 투자와 투자계약증권 투자를 조각투자로 인식,금번 인가는 신탁수익증권 장외거래중개업만을 의미](https://www.fsc.go.kr/no010101/86295) — 규제 당국 관련 소식입니다.
+- [“한 번의 실패는 결코 끝이 아닙니다.” - 이억원 금융위원장, 「전국민 신용회복지원 수기 공모전」 수상자 면담 -](https://www.fsc.go.kr/no010101/86287) — “한 번의 실패는 결코 끝이 아닙니다.” - 이억원 금융위원장, 「전국민 신용회복지원 수기 공모전」 수상자 면담 - 관련 소식입니다.
+- [본격 가동하는 국민성장펀드, 지역 현장에서 지역‧산업계와 소통합니다 (2일차 : 충북‧충남 지역 방문) - 2.11~2.12일, 국민성장펀드‧지방우대금융 지역간담회 개최 -](https://www.fsc.go.kr/no010101/86275) — 본격 가동하는 국민성장펀드, 지역 현장에서 지역‧산업계와 소통합니다 (2일차 : 충북‧충남 지역 방문) - 2.11~2.12일, 국민성장펀드‧지방우대금융 지역간담회 개최 - 관련 소식입니다.
+- [2026년 상반기 영세·중소가맹점 선정결과 및 2025년 하반기 신규가맹점에 대한 카드수수료 환급 안내 등](https://www.fsc.go.kr/no010101/86274) — 2026년 상반기 영세·중소가맹점 선정결과 및 2025년 하반기 신규가맹점에 대한 카드수수료 환급 안내 등 관련 소식입니다.
+- [부실기업 신속·엄정 퇴출을 위한 상장폐지 개혁 방안](https://www.fsc.go.kr/no010101/86273) — 상장·상폐 관련 업데이트입니다.
+- [빗썸 오지급 보상 안내의 URL링크는 사기입니다. - 빗썸 오지급 사고 관련 스미싱 소비자경보 발령 -](https://www.fsc.go.kr/no010101/86271) — 빗썸 오지급 보상 안내의 URL링크는 사기입니다.
+- [全 금융업권 참여로 예금보험기금 저축은행 특별계정 1년 연장을 추진합니다.](https://www.fsc.go.kr/no010101/86263) — 全 금융업권 참여로 예금보험기금 저축은행 특별계정 1년 연장을 추진합니다.
+- [단일종목 레버리지 ETF의 세부방안은 검토중입니다.](https://www.fsc.go.kr/no010102/86267) — ETF 관련 소식입니다.
+- [“신용사면시 고신용자의 점수 상승폭이 컸다는 보도는 사실이 아닙니다.”](https://www.fsc.go.kr/no010102/86256) — 시장 상승 흐름을 다룬 소식입니다.
+- [026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기”등 기사 관련](https://www.fsc.go.kr/no010102/86234) — 026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기”등 기사 관련 관련 소식입니다.
+- [“금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”](https://www.fsc.go.kr/no010102/86213) — “금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.” 관련 소식입니다.
+- [정부는 대산 1호 프로젝트 사업재편 관련 절차를 차질없이 진행하고 있습니다.](https://www.fsc.go.kr/no010102/86210) — 정부는 대산 1호 프로젝트 사업재편 관련 절차를 차질없이 진행하고 있습니다.
+- [Crypto Advocates Urge UK’s FCA to Narrow Regulatory Scope](https://news.google.com/rss/articles/CBMirgFBVV95cUxNZUl4eUVrVW5Eb0NfSEZTa3ROWVc5ZXplX1dJNzlGM2VPZEIzcGN4VTdfcVR1TXNCdWV6WHVramJIMWdqZGRYUmhfUlRwU2IxYVltTk84cUZ3ZG5FNHR3aFdITzZ3X2pUYjV2WEhWdTdRUDd6bkkxVnBDZjk5NDA4bDZQMVZYWHE5LVp3MV9iR0s1bVFIMTlveENvY0twT2RPalFaeURUWlA3MGNVLXc?oc=5) — 암호화폐 관련 정책·규제 동향입니다.
+- [DeFi Education Fund calls on UK FCA to narrow definition of control in crypto regulation](https://news.google.com/rss/articles/CBMiygFBVV95cUxPMW1KbkRPMjNwLThZRFgtZkdVOWM3TWptY3dqRWtOUnJIQzNDNVFkWDB0MDZ1Q3JubzNnWlQ0ZWZLWEZFS0ZtcmdlWG1oZnBXd3NYRjAybXNvYnZ5Q1g3NFFRUEdaQ0JXNklVY2NsQlgyNWJPWVpXekhvaUVYRG9HUW52czJxT1JqXzEyemRMNWxHRmczTS1HXzh6SUFRWHhvUS1ZVUpyT0MzWlE4WDlIUUR6VWZpR2w2aVlPcjk2MjhEOGNVU0hQNzhB?oc=5) — 암호화폐 관련 정책·규제 동향입니다.
 
 ## 핵심 요약
 

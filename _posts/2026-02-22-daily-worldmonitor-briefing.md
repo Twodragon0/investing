@@ -22,12 +22,53 @@ lang: "ko"
 - 주요 출처: WorldMonitor/CNBC (14건), WorldMonitor/BBC World (6건)
 
 
+
+
+
+
 ## 전체 뉴스 요약
 
 - 총 **20건** 수집
 - 주요 테마: 사회/기타, 금융시장, 지정학/안보
 - 범위: 글로벌 지정학, 금융시장, 에너지 이슈
 - 주요 출처: WorldMonitor/CNBC (14건), WorldMonitor/BBC World (6건)
+
+
+## 내용 분석
+
+- 총 20건 규모로 이슈를 정리했습니다.
+- 상위 테마는 사회/기타, 금융시장, 지정학/안보로 집중도가 높습니다.
+
+
+## URL 요약
+
+- [Trump says he's considering limited military strike against Iran](https://www.cnbc.com/2026/02/20/trump-says-hes-considering-limited-military-strike-against-iran.html) — 시장 상승 흐름을 다룬 소식입니다.
+- [Iran students stage first large anti-government protests since deadly crackdown](https://www.bbc.com/news/articles/c5yj2kzkrj0o?at_medium=RSS&at_campaign=rss) — 시장 하락 흐름을 다룬 소식입니다.
+- [Palestinian Authority in dire straits as Israel's hold on West Bank deepens](https://www.bbc.com/news/articles/c9wn8lw0kgjo?at_medium=RSS&at_campaign=rss) — Palestinian Authority in dire straits as Israel's hold on West Bank deepens 관련 소식입니다.
+- [Market volatility trap? Why this income-first strategy may 'leave a lot on the table'](https://www.cnbc.com/2026/02/21/market-volatility-trap-this-investment-strategy-may-hurt-investors-.html) — Market volatility trap?
+- [Berkshire was a net seller of stocks in Buffett's final quarter as CEO](https://www.cnbc.com/2026/02/21/berkshire-was-a-net-seller-of-stocks-in-buffetts-final-quarter-as-ceo.html) — 기관 매수·매도 동향입니다.
+- [Fourth-quarter U.S. GDP up just 1.4%, badly missing estimate; inflation firms at 3%](https://www.cnbc.com/2026/02/20/pce-inflation-december-2025.html) — 거시 지표 상승 흐름을 다룬 소식입니다.
+- [Here are 3 forces that drove the stock market during Wall Street’s comeback week](https://www.cnbc.com/2026/02/21/3-forces-that-drove-the-stock-market-during-wall-streets-comeback-week.html) — Here are 3 forces that drove the stock market during Wall Street’s comeback week 관련 소식입니다.
+- [Supreme Court Trump tariff decision impact: What to expect as fight for billions in refunds begins](https://www.cnbc.com/2026/02/20/supreme-court-trump-tariff-decision-illegal-refunds.html) — 시장 상승 흐름을 다룬 소식입니다.
+- [Killing of nationalist student leaves French far left in deep trouble as elections loom](https://www.bbc.com/news/articles/cnv61zv534eo?at_medium=RSS&at_campaign=rss) — Killing of nationalist student leaves French far left in deep trouble as elections loom 관련 소식입니다.
+- [Trump to hike global tariffs to 15% from 10%, 'effective immediately'](https://www.cnbc.com/2026/02/21/trump-tariffs.html) — 무역·관세 이슈입니다.
+- [Airlines start canceling flights ahead of another monster winter storm on the East Coast](https://www.cnbc.com/2026/02/21/blizzard-prompts-airlines-waive-flight-change-fees.html) — Airlines start canceling flights ahead of another monster winter storm on the East Coast 관련 소식입니다.
+- [Chaos, confusion and $200 billion dreams: What I saw at India’s AI summit](https://www.cnbc.com/2026/02/21/ai-summit-india-tech.html) — Chaos, confusion and $200 billion dreams: What I saw at India’s AI summit 관련 소식입니다.
+- [Trump previewed weak GDP on Truth Social ahead of official data release](https://www.cnbc.com/2026/02/20/trump-gdp-weak-powell-fed-interest-rates.html) — Trump previewed weak GDP on Truth Social ahead of official data release 관련 소식입니다.
+- [The 18 highest-paying college majors 5 years after graduation](https://www.cnbc.com/2026/02/21/highest-paying-college-majors.html) — The 18 highest-paying college majors 5 years after graduation 관련 소식입니다.
+- [Under mounting toy pressures, Hasbro has a secret sauce that Mattel hasn't matched](https://www.cnbc.com/2026/02/21/hasbro-vs-mattel-toy-industry-pressures-make-digital-the-star.html) — 규제 당국 관련 소식입니다.
+- [Trump accounts have 'more unanswered questions than answered,' expert says. What's still unknown](https://www.cnbc.com/2026/02/21/trump-accounts.html) — Trump accounts have 'more unanswered questions than answered,' expert says.
+- [From 'vanlords' to safe parking sites: How RVs became Silicon Valley's housing safety net](https://www.cnbc.com/2026/02/20/how-rvs-became-silicon-valleys-housing-safety-net.html) — From 'vanlords' to safe parking sites: How RVs became Silicon Valley's housing safety net 관련 소식입니다.
+- [Nasa astronauts' moon mission delayed due to rocket issue](https://www.bbc.com/news/articles/c626v265zqlo?at_medium=RSS&at_campaign=rss) — Nasa astronauts' moon mission delayed due to rocket issue 관련 소식입니다.
+- [Divers recover bodies of seven Chinese tourists from bottom of Lake Baikal](https://www.bbc.com/news/articles/czd8y96mldyo?at_medium=RSS&at_campaign=rss) — Divers recover bodies of seven Chinese tourists from bottom of Lake Baikal 관련 소식입니다.
+- [Willie Colón, trombonist who pioneered salsa music, dies aged 75](https://www.bbc.com/news/articles/c98qjed249do?at_medium=RSS&at_campaign=rss) — Willie Colón, trombonist who pioneered salsa music, dies aged 75 관련 소식입니다.
+- [Iran students stage first large anti-government protests since deadly crackdown](https://www.bbc.com/news/articles/c5yj2kzkrj0o?at_medium=RSS&amp;at_campaign=rss) — 시장 하락 흐름을 다룬 소식입니다.
+- [Killing of nationalist student leaves French far left in deep trouble as elections loom](https://www.bbc.com/news/articles/cnv61zv534eo?at_medium=RSS&amp;at_campaign=rss) — Killing of nationalist student leaves French far left in deep trouble as elections loom 관련 소식입니다.
+- [Nasa astronauts&#x27; moon mission delayed due to rocket issue](https://www.bbc.com/news/articles/c626v265zqlo?at_medium=RSS&amp;at_campaign=rss) — Nasa astronauts&#x27; moon mission delayed due to rocket issue 관련 소식입니다.
+- [Divers recover bodies of seven Chinese tourists from bottom of Lake Baikal](https://www.bbc.com/news/articles/czd8y96mldyo?at_medium=RSS&amp;at_campaign=rss) — Divers recover bodies of seven Chinese tourists from bottom of Lake Baikal 관련 소식입니다.
+- [Willie Colón, trombonist who pioneered salsa music, dies aged 75](https://www.bbc.com/news/articles/c98qjed249do?at_medium=RSS&amp;at_campaign=rss) — Willie Colón, trombonist who pioneered salsa music, dies aged 75 관련 소식입니다.
+- [Palestinian Authority in dire straits as Israel&#x27;s hold on West Bank deepens](https://www.bbc.com/news/articles/c9wn8lw0kgjo?at_medium=RSS&amp;at_campaign=rss) — Palestinian Authority in dire straits as Israel&#x27;s hold on West Bank deepens 관련 소식입니다.
+- [worldmonitor](https://worldmonitor.app) — worldmonitor 관련 소식입니다.
 
 ## 이슈 분포
 <div class="stat-grid">
@@ -48,26 +89,26 @@ lang: "ko"
 
 | # | 이슈 | 테마 | 시장 영향 | 출처 |
 | :---: | --- | :---: | :---: | --- |
-| 1 | [**Trump to hike global tariffs to 15% from 10%, 'effective immediately'**](https://www.cnbc.com/2026/02/21/trump-tariffs.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
-| 2 | [**Airlines start canceling flights ahead of another monster winter storm on the East Coast**](https://www.cnbc.com/2026/02/21/blizzard-prompts-airlines-waive-flight-change-fees.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
-| 3 | [**Chaos, confusion and $200 billion dreams: What I saw at India’s AI summit**](https://www.cnbc.com/2026/02/21/ai-summit-india-tech.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
-| 4 | [**Trump says he's considering limited military strike against Iran**](https://www.cnbc.com/2026/02/20/trump-says-hes-considering-limited-military-strike-against-iran.html) | 지정학/안보 | 높음 | WorldMonitor/CNBC |
-| 5 | [**Market volatility trap? Why this income-first strategy may 'leave a lot on the table'**](https://www.cnbc.com/2026/02/21/market-volatility-trap-this-investment-strategy-may-hurt-investors-.html) | 금융시장 | 중간~높음 | WorldMonitor/CNBC |
-| 6 | [**Berkshire was a net seller of stocks in Buffett's final quarter as CEO**](https://www.cnbc.com/2026/02/21/berkshire-was-a-net-seller-of-stocks-in-buffetts-final-quarter-as-ceo.html) | 금융시장 | 중간~높음 | WorldMonitor/CNBC |
-| 7 | [**Fourth-quarter U.S. GDP up just 1.4%, badly missing estimate; inflation firms at 3%**](https://www.cnbc.com/2026/02/20/pce-inflation-december-2025.html) | 금융시장 | 중간~높음 | WorldMonitor/CNBC |
-| 8 | [**Trump previewed weak GDP on Truth Social ahead of official data release**](https://www.cnbc.com/2026/02/20/trump-gdp-weak-powell-fed-interest-rates.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
-| 9 | [**The 18 highest-paying college majors 5 years after graduation**](https://www.cnbc.com/2026/02/21/highest-paying-college-majors.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
-| 10 | [**Under mounting toy pressures, Hasbro has a secret sauce that Mattel hasn't matched**](https://www.cnbc.com/2026/02/21/hasbro-vs-mattel-toy-industry-pressures-make-digital-the-star.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
-| 11 | [**Trump accounts have 'more unanswered questions than answered,' expert says. What's still unknown**](https://www.cnbc.com/2026/02/21/trump-accounts.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
-| 12 | [**From 'vanlords' to safe parking sites: How RVs became Silicon Valley's housing safety net**](https://www.cnbc.com/2026/02/20/how-rvs-became-silicon-valleys-housing-safety-net.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
-| 13 | [**Supreme Court Trump tariff decision impact: What to expect as fight for billions in refunds begins**](https://www.cnbc.com/2026/02/20/supreme-court-trump-tariff-decision-illegal-refunds.html) | 정책/법률 | 중간 | WorldMonitor/CNBC |
-| 14 | [**Here are 3 forces that drove the stock market during Wall Street’s comeback week**](https://www.cnbc.com/2026/02/21/3-forces-that-drove-the-stock-market-during-wall-streets-comeback-week.html) | 금융시장 | 중간~높음 | WorldMonitor/CNBC |
-| 15 | [**Iran students stage first large anti-government protests since deadly crackdown**](https://www.bbc.com/news/articles/c5yj2kzkrj0o?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
-| 16 | [**Killing of nationalist student leaves French far left in deep trouble as elections loom**](https://www.bbc.com/news/articles/cnv61zv534eo?at_medium=RSS&at_campaign=rss) | 정책/법률 | 중간 | WorldMonitor/BBC World |
-| 17 | [**Nasa astronauts' moon mission delayed due to rocket issue**](https://www.bbc.com/news/articles/c626v265zqlo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 18 | [**Divers recover bodies of seven Chinese tourists from bottom of Lake Baikal**](https://www.bbc.com/news/articles/czd8y96mldyo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 19 | [**Willie Colón, trombonist who pioneered salsa music, dies aged 75**](https://www.bbc.com/news/articles/c98qjed249do?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 20 | [**Palestinian Authority in dire straits as Israel's hold on West Bank deepens**](https://www.bbc.com/news/articles/c9wn8lw0kgjo?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
+| 1 | [**Trump says he's considering limited military strike against Iran**](https://www.cnbc.com/2026/02/20/trump-says-hes-considering-limited-military-strike-against-iran.html) | 지정학/안보 | 높음 | WorldMonitor/CNBC |
+| 2 | [**Iran students stage first large anti-government protests since deadly crackdown**](https://www.bbc.com/news/articles/c5yj2kzkrj0o?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
+| 3 | [**Palestinian Authority in dire straits as Israel's hold on West Bank deepens**](https://www.bbc.com/news/articles/c9wn8lw0kgjo?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
+| 4 | [**Market volatility trap? Why this income-first strategy may 'leave a lot on the table'**](https://www.cnbc.com/2026/02/21/market-volatility-trap-this-investment-strategy-may-hurt-investors-.html) | 금융시장 | 중간~높음 | WorldMonitor/CNBC |
+| 5 | [**Berkshire was a net seller of stocks in Buffett's final quarter as CEO**](https://www.cnbc.com/2026/02/21/berkshire-was-a-net-seller-of-stocks-in-buffetts-final-quarter-as-ceo.html) | 금융시장 | 중간~높음 | WorldMonitor/CNBC |
+| 6 | [**Fourth-quarter U.S. GDP up just 1.4%, badly missing estimate; inflation firms at 3%**](https://www.cnbc.com/2026/02/20/pce-inflation-december-2025.html) | 금융시장 | 중간~높음 | WorldMonitor/CNBC |
+| 7 | [**Here are 3 forces that drove the stock market during Wall Street’s comeback week**](https://www.cnbc.com/2026/02/21/3-forces-that-drove-the-stock-market-during-wall-streets-comeback-week.html) | 금융시장 | 중간~높음 | WorldMonitor/CNBC |
+| 8 | [**Supreme Court Trump tariff decision impact: What to expect as fight for billions in refunds begins**](https://www.cnbc.com/2026/02/20/supreme-court-trump-tariff-decision-illegal-refunds.html) | 정책/법률 | 중간 | WorldMonitor/CNBC |
+| 9 | [**Killing of nationalist student leaves French far left in deep trouble as elections loom**](https://www.bbc.com/news/articles/cnv61zv534eo?at_medium=RSS&at_campaign=rss) | 정책/법률 | 중간 | WorldMonitor/BBC World |
+| 10 | [**Trump to hike global tariffs to 15% from 10%, 'effective immediately'**](https://www.cnbc.com/2026/02/21/trump-tariffs.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
+| 11 | [**Airlines start canceling flights ahead of another monster winter storm on the East Coast**](https://www.cnbc.com/2026/02/21/blizzard-prompts-airlines-waive-flight-change-fees.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
+| 12 | [**Chaos, confusion and $200 billion dreams: What I saw at India’s AI summit**](https://www.cnbc.com/2026/02/21/ai-summit-india-tech.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
+| 13 | [**Trump previewed weak GDP on Truth Social ahead of official data release**](https://www.cnbc.com/2026/02/20/trump-gdp-weak-powell-fed-interest-rates.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
+| 14 | [**The 18 highest-paying college majors 5 years after graduation**](https://www.cnbc.com/2026/02/21/highest-paying-college-majors.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
+| 15 | [**Under mounting toy pressures, Hasbro has a secret sauce that Mattel hasn't matched**](https://www.cnbc.com/2026/02/21/hasbro-vs-mattel-toy-industry-pressures-make-digital-the-star.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
+| 16 | [**Trump accounts have 'more unanswered questions than answered,' expert says. What's still unknown**](https://www.cnbc.com/2026/02/21/trump-accounts.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
+| 17 | [**From 'vanlords' to safe parking sites: How RVs became Silicon Valley's housing safety net**](https://www.cnbc.com/2026/02/20/how-rvs-became-silicon-valleys-housing-safety-net.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
+| 18 | [**Nasa astronauts' moon mission delayed due to rocket issue**](https://www.bbc.com/news/articles/c626v265zqlo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
+| 19 | [**Divers recover bodies of seven Chinese tourists from bottom of Lake Baikal**](https://www.bbc.com/news/articles/czd8y96mldyo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
+| 20 | [**Willie Colón, trombonist who pioneered salsa music, dies aged 75**](https://www.bbc.com/news/articles/c98qjed249do?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
 
 ## 출처 커버리지
 

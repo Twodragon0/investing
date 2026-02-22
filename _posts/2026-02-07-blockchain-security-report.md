@@ -17,6 +17,16 @@ source: "Crypto Monitoring System"
 - 총 수집된 보안 사고: 10건
 
 
+
+## 내용 분석
+
+- 총 10건 규모로 이슈를 정리했습니다.
+
+
+## URL 요약
+
+- [Revoke.cash](https://revoke.cash) — 2. 하드웨어 월렛 사용 권장 - Private Key 유출 방지를 위해 콜드 월렛을 사용하세요.
+
 ## 주요 보안 사고
 
 | 프로젝트 | 피해 규모 | 공격 유형 | 출처 |

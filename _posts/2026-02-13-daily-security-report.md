@@ -19,12 +19,37 @@ lang: "ko"
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 전체 뉴스 요약
 
 - 총 **1건** 수집
 - 보안 관련 뉴스: 1건
 - 블록체인 보안 관련 뉴스 1건을 정리합니다.
 - - 보안 사고/뉴스: 총 1건 - 보안 관련 뉴스: 1건
+
+
+## 내용 분석
+
+- 총 1건 규모로 이슈를 정리했습니다.
+
+
+## URL 요약
+
+- [Lending protocols are becoming the target of DeFi exploits](https://news.google.com/rss/articles/CBMikwFBVV95cUxNVHBMS1hIQV9lS19Ta0tDeEgzMDFtdFk3WVhvVldhSllIbmhnOWktZTFMOXBMMGlzWmJYeUxTSmd2aVMxRG1mQlE2MUdNUHlhLVljZzRYZy1ES25KZzd2WUJydFo0aGNHRFBtR1hrU2t0NjlmYS1WWkdkY3FBaTFjVl9YOHZETnpvMm43bGx4ODZHM0k?oc=5) — 보안 사고·취약점 이슈입니다.
 
 ## 보안 관련 뉴스
 

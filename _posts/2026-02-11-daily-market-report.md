@@ -17,6 +17,24 @@ lang: "ko"
 - 암호화폐 시장이 하락세를 보이고 있습니다. 단기 조정 가능성을 염두에 두고 리스크 관리가 필요합니다.
 
 
+
+## 내용 분석
+
+- 핵심 이슈를 중심으로 요약과 링크를 정리했습니다.
+
+
+## URL 요약
+
+- [FRED](https://fred.stlouisfed.org/series/FEDFUNDS) — FRED 관련 소식입니다.
+- [FRED - 10-Year Treasury](https://fred.stlouisfed.org/series/DGS10) — 기관 매수·매도 동향입니다.
+- [FRED](https://fred.stlouisfed.org/series/CPIAUCSL) — FRED 관련 소식입니다.
+- [FRED](https://fred.stlouisfed.org/series/VIXCLS) — FRED 관련 소식입니다.
+- [CoinGecko](https://www.coingecko.com/) — CoinGecko 관련 소식입니다.
+- [Alternative.me](https://alternative.me/crypto/fear-and-greed-index/) — Alternative.me 관련 소식입니다.
+- [Investing.com](https://kr.investing.com/indices/kospi) — Investing.com 관련 소식입니다.
+- [Yahoo Finance](https://finance.yahoo.com/) — Yahoo Finance 관련 소식입니다.
+- [FRED](https://fred.stlouisfed.org/) — > *본 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다.
+
 ## 오늘의 핵심
 
 - **극도의 공포 장세**: 공포/탐욕 지수 11으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다.

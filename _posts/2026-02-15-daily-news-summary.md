@@ -18,6 +18,26 @@ excerpt: "암호화폐 67건, 주식 82건, 규제 25건, 소셜 미디어 7건,
 - 비트코인 $70,309 상승: 24h 기준 +2.22% 변동, 주간 +1.52% 상승.
 
 
+
+## 내용 분석
+
+- 총 7건 규모로 이슈를 정리했습니다.
+- 긴급 알림이 포함되어 우선순위 대응이 필요합니다.
+
+
+## URL 요약
+
+- [Bitcoin Price Crash Rattles Trump's Crypto Progress. Here's The Upshot For Investors.](https://news.google.com/read/CBMiiAFBVV95cUxPVUtQQWJPdi1qQVRDcEpCSjcwZVhrM0RoYk5YYmtIN3BnNVVXUFozY0lMb3JFazZyc1YyWWZXckhXUDJxMlpjWGdXYnlaY0IwcS1fbnQ4OTlRUW9FQWlKT2Q5SzV2ell4b3VyS0tOS2tYNU9vVENvNXBNMTdiMnhwNWI1Sk9ON2NN?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 상승 흐름을 다룬 소식입니다.
+- [Gold, silver, S&P 500, crypto crash again amid extreme fear](https://news.google.com/read/CBMihAFBVV95cUxQaUMzbk9YY0xLS1lyNGs1VHB2c2FiY2RMb0NjTzdISWpicFJDWU91RXBrS1FZYUkwY0kzek1mQ1dwRmhJVkhoX1lSdTN4b0NhOHhyZGtDTkpzRVlGNkdVYTFIckFVZ19MOHF6NkhXTTktREhxa3RsXzJPTk40aXNOcEh2aEE?hl=en-US&gl=US&ceid=US%3Aen) — S&P 500 하락 흐름을 다룬 소식입니다.
+- [‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까](https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako) — 비트코인 하락 흐름을 다룬 소식입니다.
+- [Trump Media Files to Launch Truth Social-Branded Bitcoin, Ethereum, Cronos ETFs](https://news.google.com/read/CBMiggFBVV95cUxPQVdUUVdnMVNJWEVrTmZ5YU9EbzZoM3VVbVVzN280Z21obWg0VXBOYzRERURIckswVXV4enZFRHZ3azU5YlI5RTY0NEJNUzNfSG1xNVBiOXd4YUk3R0tIemJBelROZnhSdml3YUtLQkUwMU5XSDV3QWZMMkloVUxRQkJn?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 출시·공시 소식입니다.
+- [Interested in Bitcoin or Ethereum? These ETFs Offer Exposure to Digital Tokens](https://news.google.com/read/CBMipgFBVV95cUxPVmNlUndHM2ExT2hOZVJMS3AyeUZiVTl6NVN4UjBhbUJmalpqNm01cS10SjJHUnRBRG9ZcGZhc213S3lVaHM5aXoyTkdfR2dlZEVGVVlVYVpHenhGLUpGX2FIYkNka3pDMFlVTGh0dllNSFpzeDA2S2tnM0hQVUNRUEZpR0d3VklFTkhzMjAtYlBPNnBEVzhnWmhmYjlqQ0w3WTdPTEVn?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 관련 소식입니다.
+- [New Cryptocurrency ListingCheck out the latest coin listings and pairs on Launchpad, Launchpool, Spot, Margin, and Futures markets.](https://www.binance.com/en/support/announcement/list/48) — 상장·상폐 관련 업데이트입니다.
+- [Trump-linked Truth Social seeks SEC approval for two crypto ETFs](https://news.google.com/read/CBMirAFBVV95cUxQVmJ1bmNyMG1wZl9BLVFSMXZ2UklUMmRmM1pTVkJ4blBDbDdUOFAyUlV5TmFacU9PZXI1MlY4MlBSS1BiVVp2N29qTHBROTlDSEJPNTNaMjFaR1FHZzFOcWlIOWVnZjQtdEZxRjU2S05uRTFlSXJuTUdfYng3cE9wbkp3SjVCZzdkTTM0NVJGYXpXbDAyVWlkektjbFpOb0hUMExRMnl0UVJjZ1Az?hl=en-US&gl=US&ceid=US%3Aen) — 규제 당국 출시·공시 소식입니다.
+- [Trump Could Reduce Steel And Aluminum Tariffs And These Stocks Are Responding](https://www.investors.com/news/trump-steel-aluminum-tariffs-steel-stocks-respond/?src=A00220&yptr=yahoo) — 무역·관세 이슈입니다.
+- [S&P 500 closes little changed after soft inflation report, index notches losing week: Live updates](https://news.google.com/read/CBMid0FVX3lxTE1rMzAwSXVIelF1VVJ2WU1YbzFiLWtfa0xMRDFVLTZpVE1WcGlrM3hPZnJScFV1b1A2WTNXX3JQeHFEcWRaTU5HdDlYMF83czJndGZqZUY0Y3piUTkzME5LaWFoVlFQQ0xCSXAyaGtlNUlMMU1JMTBJ0gF8QVVfeXFMUG1WcWJDeUpjZVd1ZDdzSWxFaEQ1VUlWX0NnWnFBZTQ1dFBmVlF1dWY1TzRjS2hUbjItWGxzWjFjczZ4QnU4RWVsQ2thWFMyZ0I4T2lfM0p0U3VaUFc4S0t5RXZVTTUyQS1sMzBQYWhOWlhWZ0lncmpnczY1Mw?hl=en-US&gl=US&ceid=US%3Aen) — S&P 500 상승 흐름을 다룬 소식입니다.
+- [Stock Market on Feb. 13, 2026: Dow, S&P 500 close with slight gains after inflation report; stocks book a losing week as tech remains under pressure; Treasury yields decline](https://news.google.com/read/CBMiuwNBVV95cUxPMVJxQmlFZjBQYjROV3BCZnZUeXJ4TzBYbTRFeWpFOV9oN3ZkdU9jVndSSDBYaERLOWx6dURIQ0xGWWN2cjEyaTZiZV9Tak0xLTQ5cWZ0SGdCbFBOUGw4MmtZaTlxXzlkRjZmMXVpdzlsaXNMaXlMYlE2Mk1fU3hTZm9lOHBLNFhaZXZDaTJtMDNZUW1hb2hmVF82U0FMMEhmOTFmNGI1MWpOMDhJUzdIOWRxbU5DTlk2ZVk4ZVBEbFhJejV5ZWVhbDVJMWxUeWYzOFpKUEhzUkt6WjFGVlBHcmJCUnBGcXFveDFPNi1ObUpuTks5MkRKc2pOaW50eHRrV2hvVktWbXRaU2hraUJkNWswTG1SSGdMWENhWEkyZm4zbW5Oa0syWXhHY2dpNkU3MXhRRmk2Qk51a1BuZWMzNktfQWFSc1NkaW9hd2pJUm4ybVYtXzBiZndCa1RrUFdCeGxaZjJxeGoxTU9KOU01c0NkSHFvV0VHdG05TVNhTTA3dWpOdHRvM2x0Tkw1ckVxbFFRV25RamlfbHFaUFFSUjMybWNQS1RjU3VKQ2g0LUpvM3BydjU1Ym9DNA?hl=en-US&gl=US&ceid=US%3Aen) — S&P 500 상승 흐름을 다룬 소식입니다.
+
 ## 종합 대시보드
 
 | 영역 | 수집 건수 | 핵심 신호 |
@@ -46,7 +66,7 @@ excerpt: "암호화폐 67건, 주식 82건, 규제 25건, 소셜 미디어 7건,
 
 - **[Bitcoin Price Crash Rattles Trump's Crypto Progress. Here's The Upshot For Investors.](https://news.google.com/read/CBMiiAFBVV95cUxPVUtQQWJPdi1qQVRDcEpCSjcwZVhrM0RoYk5YYmtIN3BnNVVXUFozY0lMb3JFazZyc1YyWWZXckhXUDJxMlpjWGdXYnlaY0IwcS1fbnQ4OTlRUW9FQWlKT2Q5SzV2ell4b3VyS0tOS2tYNU9vVENvNXBNMTdiMnhwNWI1Sk9ON2NN?hl=en-US&gl=US&ceid=US%3Aen)**
 - **[Gold, silver, S&P 500, crypto crash again amid extreme fear](https://news.google.com/read/CBMihAFBVV95cUxQaUMzbk9YY0xLS1lyNGs1VHB2c2FiY2RMb0NjTzdISWpicFJDWU91RXBrS1FZYUkwY0kzek1mQ1dwRmhJVkhoX1lSdTN4b0NhOHhyZGtDTkpzRVlGNkdVYTFIckFVZ19MOHF6NkhXTTktREhxa3RsXzJPTk40aXNOcEh2aEE?hl=en-US&gl=US&ceid=US%3Aen)**
-- **[‘워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까](https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako)**
+- **[‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까](https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako)**
 
 ## 시장 개요
 

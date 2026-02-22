@@ -33,6 +33,10 @@ lang: "ko"
 
 
 
+
+
+
+
 ## 전체 뉴스 요약
 
 - 총 **30건** 수집
@@ -48,29 +52,29 @@ lang: "ko"
 
 ## URL 요약
 
-- [Testimony Before the U.S. House Financial Services Committee](https://news.google.com/rss/articles/CBMigwFBVV95cUxOZ3ZRUW1JVHZiTXVFRC1CN3oxcUl2azNjdzZPSzU4NFp6VjM1dHUzTEktZU8teFhGUEstOVdybWpkMkhSYTZ0T2xYeFpJMDAwc0VxTGlaNGkwaUh5UDcwc3pqU2ItdGszVjMtRm5VM1pqR3lxU0RyUmhXbndiY1FVZVh0VQ?oc=5) — Testimony Before the U.S. House Financial Services Committee 내용을 정리했다.
-- [CFTC Announces Innovation Advisory Committee Members](https://www.cftc.gov/PressRoom/PressReleases/9182-26) — CFTC Announces Innovation Advisory Committee Members 내용을 정리했다.
-- [“한 번의 실패는 결코 끝이 아닙니다.” - 이억원 금융위원장, 「전국민 신용회복지원 수기 공모전」 수상자 면담 -](https://www.fsc.go.kr/no010101/86287) — □ (일시) ’26.2.13일(금), 09:30.
-- [본격 가동하는 국민성장펀드, 지역 현장에서 지역‧산업계와 소통합니다 (2일차 : 충북‧충남 지역 방문) - 2.11~2.12일, 국민성장펀드‧지방우대금융 지역간담회 개최 -](https://www.fsc.go.kr/no010101/86275) — ▪ 일시/장소 : ‘26. 2.11일(수) ~ ’26. 2.12일(목).
-- [2026년 상반기 영세·중소가맹점 선정결과 및 2025년 하반기 신규가맹점에 대한 카드수수료 환급 안내 등](https://www.fsc.go.kr/no010101/86274) — □ (환급액) = ’25.7.1.∼’26.2.13. 기간 동안 카드매출액 ×.
-- [부실기업 신속·엄정 퇴출을 위한 상장폐지 개혁 방안](https://www.fsc.go.kr/no010101/86273) — - 또한, 상장폐지 가처분 소송의 신속 처리를 위해 법원 등과 협의 추진.
-- [빗썸 오지급 보상 안내의 URL링크는 사기입니다. - 빗썸 오지급 사고 관련 스미싱 소비자경보 발령 -](https://www.fsc.go.kr/no010101/86271) — □최근 빗썸의 오지급 사고 관련 보상금 지급 발표로 국민들의 관심이 높아지면서 스미싱* 피해 우려도 커지는 상황.
-- [全 금융업권 참여로 예금보험기금 저축은행 특별계정 1년 연장을 추진합니다.](https://www.fsc.go.kr/no010101/86263) — ▪ (일시/장소) ‘26.2.11.(수) 16:00~17:00 / 정부서울청사.
-- [금융정보분석원, 카지노 업권 대상 자금세탁방지 간담회 개최](https://www.fsc.go.kr/no010101/86262) — ▪ (일시/장소) ‘26.2.11.(수) 14:30 / 카지노협회 회의실.
-- [본격 가동하는 국민성장펀드, 지역 현장에서 지역‧산업계와 소통합니다 (1일차 : 광주‧전남 지역)](https://www.fsc.go.kr/no010101/86261) — ▪ 일시/장소 : ‘26. 2.11일(수) ~ ’26. 2.12일(목).
-- [2026년 1월 가계대출 동향(잠정)](https://www.fsc.go.kr/no010101/86259) — ▴ ’26.1월 全금융권 가계대출은 +1.4조원 증가하여 전월(△1.2조원) 및 전년 동월(△0.9조원) 대비 증가 전환.
-- [숨은 금융자산 “1.6조원”을 금융소비자에게 돌려드렸습니다.](https://www.fsc.go.kr/no010101/86258) — - ’25년 「숨은 금융자산 찾아주기 캠페인」 실적 -.
-- [단일종목 레버리지 ETF의 세부방안은 검토중입니다.](https://www.fsc.go.kr/no010102/86267) — □ 2.12일(인터넷판) 서울경제 「‘2배 ETF’ 삼전‧하닉‧현대차만 나온다」 제하의 기사에서,.
-- [“신용사면시 고신용자의 점수 상승폭이 컸다는 보도는 사실이 아닙니다.”](https://www.fsc.go.kr/no010102/86256) — □ 2.9일자 머니투데이는 「신용사면 직후 또 연체 "도덕적 해이 부추겨, 궁극적 해결책 안돼"」제하의 기사에서,.
-- [026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기”등 기사 관련](https://www.fsc.go.kr/no010102/86234) — 026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기 ”등 기사 관련.
-- [“금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”](https://www.fsc.go.kr/no010102/86213) — □ 문화일보는 2.5일 「사외이사 임기 ‘3년’ 제한··‘금융 이너서클 교체｣ 제하의 기사에서,.
-- [정부는 대산 1호 프로젝트 사업재편 관련 절차를 차질없이 진행하고 있습니다.](https://www.fsc.go.kr/no010102/86210) — □ 대산의 HD현대케미칼·롯데케미칼간 1호 프로젝트에 대한 공정위 기업결합심사 및 금융권 금융지원방안 검토 절차가 지연되면서 사업재편 추진동력이 약화되고 있음.
-- [UK Crypto Regulation Moves Forward: Admissions & Disclosures and Market Abuse for Cryptoassets – Key Takeaways from FCA CP25/41](https://news.google.com/rss/articles/CBMi-gFBVV95cUxQVEo5WHVVbDl5eERkd01OOW5MRElNaDdnQXNjamliUllJeENXMjZPV01fUnRfWHFfWjhjRGpOc005N3lPaXQxMnN6YldTNngyeWtlb2wxNy1lTFFYMXoxazl4Y3ZvTDZqb1g3Rk1vSGtOZ094QnhQRXFTY0JTOXE0S1oxcnFFX2JvNy1EWk91WTR2YS1ycFlNMzJnc2VIUUhhOUJmRXIycmlLRFpnU2J1dklNaHJBYzR0RFFkcGM4NWZGQkNFV28xLWljUzZWNUkzemZwZWRSYVlsMFNydThpYkxzcDBvTGY2NmpqeFNQT3VWU0lvTzdmdWFR?oc=5) — UK Crypto Regulation Moves Forward: Admissions & Disclosures and Market Abuse for Cryptoassets – Key Takeaways from FCA CP25/41 내용을 정리했다.
-- [Agant registers with U.K. FCA ahead of British pound stablecoin debut](https://news.google.com/rss/articles/CBMisAFBVV95cUxOVElXR0RpM3VZMS1PeVdBN1hKTE1YeGg2ZnJyVFdvQ2NwSzlpQlp4b1dVSkxBVkNRUEowUmhiTExpYmhGb0l6T09Tc0lBLUNGdVVNMUZqODA3QUxvc1J1WUl4aW9kelEwYURRMDVlWlA3VHkyZ0ZIbFRxMEZaNTI5NEdJXzZGVFRXSmcwRldfME5Ea0VMZEZXNF9QYzlQY2Y0SUF2eHdsbHpqMmlna2JzeA?oc=5) — Agant registers with U.K. FCA ahead of British pound stablecoin debut 내용을 정리했다.
-- [UK FCA seeks to block Justin Sun-linked HTX after alleged breaches of crypto marketing rules](https://news.google.com/rss/articles/CBMixwFBVV95cUxNSktaX01KbGQzR3dON1RHS1VmWmdlc0JfcFVGOXJ4Y3g0RThsNTN0b2NEVnQ1Y3dsVEZ6QjJmSTd0aV9DTXBHVldFM3VoU0xueTZ3NHpwaTBiUWlnbXhuNG9KNHptRWZtRTUyUy1WWUtpd3NUQVdQbFVJUURlWWtUdFBqOWpUd2twTmFWYkN6clctVldkVmlPbldRZXhkc2VVWmtkc3ZqRDk3WjY0TG9pSi1JNHc3UnZqb2RSNG8xUk04YnM0XzJF?oc=5) — UK FCA seeks to block Justin Sun-linked HTX after alleged breaches of crypto marketing rules 내용을 정리했다.
-- [“디지털자산거래소 ‘공동 기금’ 및 수수료 체계 개편 등은 논의된 바 없습니다.”](https://www.fsc.go.kr/no010102/86162) — □ 헤럴드경제는 1.28일 ｢[단독] 당국, 디지털자산거래소 ‘공동 기금’ 마련 논의 지배구조·독과점 체제 개편 시동｣ 제하의 기사에서,.
-- [국민성장펀드의 지원대상인 개별사업의민간 참여규모 등은 전혀 확정된바 없습니다.](https://www.fsc.go.kr/no010102/86163) — □ 서울경제는 1.28일자(인터넷판) ｢5대은행, 삼성전자 P5에 5,000억원 저리대출｣ 제하의 기사에서 “5대 시중은행이 삼성전자 P5 건설자금으로 5,000억원을 대출해주기로 했다.”, “대출자금은 각 은행이 5년간 10조원씩 출자하기로 한 국민성장펀드에서 마련된다”등의 내용을 보도하였습니다.
-- [“55조원은 삭제된 채무가 아니라 성실하게 전액 상환된 채무의 금액입니다.”](https://www.fsc.go.kr/no010102/86141) — □ 1.26일자 매일경제는 「늘어난 신용사면 55조원 연체 삭제」제하의 기사에서,.
+- [Testimony Before the U.S. House Financial Services Committee](https://news.google.com/rss/articles/CBMigwFBVV95cUxOZ3ZRUW1JVHZiTXVFRC1CN3oxcUl2azNjdzZPSzU4NFp6VjM1dHUzTEktZU8teFhGUEstOVdybWpkMkhSYTZ0T2xYeFpJMDAwc0VxTGlaNGkwaUh5UDcwc3pqU2ItdGszVjMtRm5VM1pqR3lxU0RyUmhXbndiY1FVZVh0VQ?oc=5) — Testimony Before the U.S.
+- [CFTC Announces Innovation Advisory Committee Members](https://www.cftc.gov/PressRoom/PressReleases/9182-26) — 규제 당국 관련 소식입니다.
+- [“한 번의 실패는 결코 끝이 아닙니다.” - 이억원 금융위원장, 「전국민 신용회복지원 수기 공모전」 수상자 면담 -](https://www.fsc.go.kr/no010101/86287) — “한 번의 실패는 결코 끝이 아닙니다.” - 이억원 금융위원장, 「전국민 신용회복지원 수기 공모전」 수상자 면담 - 관련 소식입니다.
+- [본격 가동하는 국민성장펀드, 지역 현장에서 지역‧산업계와 소통합니다 (2일차 : 충북‧충남 지역 방문) - 2.11~2.12일, 국민성장펀드‧지방우대금융 지역간담회 개최 -](https://www.fsc.go.kr/no010101/86275) — 본격 가동하는 국민성장펀드, 지역 현장에서 지역‧산업계와 소통합니다 (2일차 : 충북‧충남 지역 방문) - 2.11~2.12일, 국민성장펀드‧지방우대금융 지역간담회 개최 - 관련 소식입니다.
+- [2026년 상반기 영세·중소가맹점 선정결과 및 2025년 하반기 신규가맹점에 대한 카드수수료 환급 안내 등](https://www.fsc.go.kr/no010101/86274) — 2026년 상반기 영세·중소가맹점 선정결과 및 2025년 하반기 신규가맹점에 대한 카드수수료 환급 안내 등 관련 소식입니다.
+- [부실기업 신속·엄정 퇴출을 위한 상장폐지 개혁 방안](https://www.fsc.go.kr/no010101/86273) — 상장·상폐 관련 업데이트입니다.
+- [빗썸 오지급 보상 안내의 URL링크는 사기입니다. - 빗썸 오지급 사고 관련 스미싱 소비자경보 발령 -](https://www.fsc.go.kr/no010101/86271) — 빗썸 오지급 보상 안내의 URL링크는 사기입니다.
+- [全 금융업권 참여로 예금보험기금 저축은행 특별계정 1년 연장을 추진합니다.](https://www.fsc.go.kr/no010101/86263) — 全 금융업권 참여로 예금보험기금 저축은행 특별계정 1년 연장을 추진합니다.
+- [금융정보분석원, 카지노 업권 대상 자금세탁방지 간담회 개최](https://www.fsc.go.kr/no010101/86262) — 금융정보분석원, 카지노 업권 대상 자금세탁방지 간담회 개최 관련 소식입니다.
+- [본격 가동하는 국민성장펀드, 지역 현장에서 지역‧산업계와 소통합니다 (1일차 : 광주‧전남 지역)](https://www.fsc.go.kr/no010101/86261) — 본격 가동하는 국민성장펀드, 지역 현장에서 지역‧산업계와 소통합니다 (1일차 : 광주‧전남 지역) 관련 소식입니다.
+- [2026년 1월 가계대출 동향(잠정)](https://www.fsc.go.kr/no010101/86259) — 2026년 1월 가계대출 동향(잠정) 관련 소식입니다.
+- [숨은 금융자산 “1.6조원”을 금융소비자에게 돌려드렸습니다.](https://www.fsc.go.kr/no010101/86258) — 숨은 금융자산 “1.6조원”을 금융소비자에게 돌려드렸습니다.
+- [단일종목 레버리지 ETF의 세부방안은 검토중입니다.](https://www.fsc.go.kr/no010102/86267) — ETF 관련 소식입니다.
+- [“신용사면시 고신용자의 점수 상승폭이 컸다는 보도는 사실이 아닙니다.”](https://www.fsc.go.kr/no010102/86256) — 시장 상승 흐름을 다룬 소식입니다.
+- [026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기”등 기사 관련](https://www.fsc.go.kr/no010102/86234) — 026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기”등 기사 관련 관련 소식입니다.
+- [“금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”](https://www.fsc.go.kr/no010102/86213) — “금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.” 관련 소식입니다.
+- [정부는 대산 1호 프로젝트 사업재편 관련 절차를 차질없이 진행하고 있습니다.](https://www.fsc.go.kr/no010102/86210) — 정부는 대산 1호 프로젝트 사업재편 관련 절차를 차질없이 진행하고 있습니다.
+- [UK Crypto Regulation Moves Forward: Admissions & Disclosures and Market Abuse for Cryptoassets – Key Takeaways from FCA CP25/41](https://news.google.com/rss/articles/CBMi-gFBVV95cUxQVEo5WHVVbDl5eERkd01OOW5MRElNaDdnQXNjamliUllJeENXMjZPV01fUnRfWHFfWjhjRGpOc005N3lPaXQxMnN6YldTNngyeWtlb2wxNy1lTFFYMXoxazl4Y3ZvTDZqb1g3Rk1vSGtOZ094QnhQRXFTY0JTOXE0S1oxcnFFX2JvNy1EWk91WTR2YS1ycFlNMzJnc2VIUUhhOUJmRXIycmlLRFpnU2J1dklNaHJBYzR0RFFkcGM4NWZGQkNFV28xLWljUzZWNUkzemZwZWRSYVlsMFNydThpYkxzcDBvTGY2NmpqeFNQT3VWU0lvTzdmdWFR?oc=5) — 암호화폐 관련 정책·규제 동향입니다.
+- [Agant registers with U.K. FCA ahead of British pound stablecoin debut](https://news.google.com/rss/articles/CBMisAFBVV95cUxOVElXR0RpM3VZMS1PeVdBN1hKTE1YeGg2ZnJyVFdvQ2NwSzlpQlp4b1dVSkxBVkNRUEowUmhiTExpYmhGb0l6T09Tc0lBLUNGdVVNMUZqODA3QUxvc1J1WUl4aW9kelEwYURRMDVlWlA3VHkyZ0ZIbFRxMEZaNTI5NEdJXzZGVFRXSmcwRldfME5Ea0VMZEZXNF9QYzlQY2Y0SUF2eHdsbHpqMmlna2JzeA?oc=5) — Agant registers with U.K.
+- [UK FCA seeks to block Justin Sun-linked HTX after alleged breaches of crypto marketing rules](https://news.google.com/rss/articles/CBMixwFBVV95cUxNSktaX01KbGQzR3dON1RHS1VmWmdlc0JfcFVGOXJ4Y3g0RThsNTN0b2NEVnQ1Y3dsVEZ6QjJmSTd0aV9DTXBHVldFM3VoU0xueTZ3NHpwaTBiUWlnbXhuNG9KNHptRWZtRTUyUy1WWUtpd3NUQVdQbFVJUURlWWtUdFBqOWpUd2twTmFWYkN6clctVldkVmlPbldRZXhkc2VVWmtkc3ZqRDk3WjY0TG9pSi1JNHc3UnZqb2RSNG8xUk04YnM0XzJF?oc=5) — 보안 사고·취약점 이슈입니다.
+- [“디지털자산거래소 ‘공동 기금’ 및 수수료 체계 개편 등은 논의된 바 없습니다.”](https://www.fsc.go.kr/no010102/86162) — 거래소 관련 소식입니다.
+- [국민성장펀드의 지원대상인 개별사업의민간 참여규모 등은 전혀 확정된바 없습니다.](https://www.fsc.go.kr/no010102/86163) — 국민성장펀드의 지원대상인 개별사업의민간 참여규모 등은 전혀 확정된바 없습니다.
+- [“55조원은 삭제된 채무가 아니라 성실하게 전액 상환된 채무의 금액입니다.”](https://www.fsc.go.kr/no010102/86141) — “55조원은 삭제된 채무가 아니라 성실하게 전액 상환된 채무의 금액입니다.” 관련 소식입니다.
 
 ## 이슈 분포 현황
 

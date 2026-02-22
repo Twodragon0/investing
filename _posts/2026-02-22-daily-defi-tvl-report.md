@@ -17,6 +17,38 @@ image: "/assets/images/generated/defi-tvl-dashboard-2026-02-22.png"
 - 2026-02-22 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked, 총 예치 자산) 현황을 정리합니다. 상위 20개 프로토콜의 총 TVL은 $247.99B이며, 상위 15개 체인의 총 TVL은 $90.71B입니다.
 
 
+
+## 내용 분석
+
+- 핵심 이슈를 중심으로 요약과 링크를 정리했습니다.
+
+
+## URL 요약
+
+- [Lido](https://defillama.com/protocol/lido) — Lido 관련 소식입니다.
+- [AAVE](https://defillama.com/protocol/aave) — AAVE 관련 소식입니다.
+- [AAVE V3](https://defillama.com/protocol/aave-v3) — AAVE V3 관련 소식입니다.
+- [EigenLayer](https://defillama.com/protocol/eigenlayer) — EigenLayer 관련 소식입니다.
+- [WBTC](https://defillama.com/protocol/wbtc) — 비트코인 관련 소식입니다.
+- [ether.fi](https://defillama.com/protocol/ether.fi) — 이더리움 관련 소식입니다.
+- [Binance staked ETH](https://defillama.com/protocol/binance-staked-eth) — 이더리움 매수·매도 동향입니다.
+- [ether.fi Stake](https://defillama.com/protocol/ether.fi-stake) — 이더리움 매수·매도 동향입니다.
+- [Spark](https://defillama.com/protocol/spark) — Spark 관련 소식입니다.
+- [Ethena](https://defillama.com/protocol/ethena) — 이더리움 관련 소식입니다.
+- [Binance Bitcoin](https://defillama.com/protocol/binance-bitcoin) — 비트코인 관련 소식입니다.
+- [Ethena USDe](https://defillama.com/protocol/ethena-usde) — 이더리움 관련 소식입니다.
+- [Pendle](https://defillama.com/protocol/pendle) — Pendle 관련 소식입니다.
+- [Coinbase Bridge](https://defillama.com/protocol/coinbase-bridge) — 거래소 관련 소식입니다.
+- [Morpho](https://defillama.com/protocol/morpho) — Morpho 관련 소식입니다.
+- [Sky](https://defillama.com/protocol/sky) — Sky 관련 소식입니다.
+- [Morpho Blue](https://defillama.com/protocol/morpho-blue) — Morpho Blue 관련 소식입니다.
+- [Sky Lending](https://defillama.com/protocol/sky-lending) — Sky Lending 관련 소식입니다.
+- [Uniswap](https://defillama.com/protocol/uniswap) — Uniswap 관련 소식입니다.
+- [Arbitrum Bridge](https://defillama.com/protocol/arbitrum-bridge) — Arbitrum Bridge 관련 소식입니다.
+- [DeFi Llama](https://defillama.com) — DeFi Llama 관련 소식입니다.
+- [DeFi Llama API Documentation](https://defillama.com/docs/api) — DeFi Llama API Documentation 관련 소식입니다.
+- [DeFi Llama](https://defillama.com/chains) — DeFi Llama 관련 소식입니다.
+
 ## 상위 20개 프로토콜 TVL 순위
 
 | # | 프로토콜 | 심볼 | TVL | 카테고리 | 시가총액 |

@@ -26,12 +26,63 @@ lang: "ko"
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 전체 뉴스 요약
 
 - 총 **20건** 수집
 - 주요 테마: 사회/기타, 지정학/안보, 정책/법률
 - 범위: 글로벌 지정학, 금융시장, 에너지 이슈
 - 주요 출처: WorldMonitor/Al Jazeera (15건), WorldMonitor/BBC World (5건)
+
+
+## 내용 분석
+
+- 총 20건 규모로 이슈를 정리했습니다.
+- 상위 테마는 사회/기타, 지정학/안보, 정책/법률로 집중도가 높습니다.
+
+
+## URL 요약
+
+- [Russia-Ukraine war: List of key events, day 1,455](https://www.aljazeera.com/news/2026/2/18/russia-ukraine-war-list-of-key-events-day-1455?traffic_source=rss) — Russia-Ukraine war: List of key events, day 1,455 관련 소식입니다.
+- [Hamas: Trump’s ‘Board of Peace’ must stop Israel’s killing in Gaza](https://www.aljazeera.com/news/2026/2/17/hamas-trumps-board-of-peace-must-stop-israels-killing-in-gaza?traffic_source=rss) — Hamas: Trump’s ‘Board of Peace’ must stop Israel’s killing in Gaza 관련 소식입니다.
+- [Warner Bros rejects latest Paramount bid but open to ‘best and final’ offer](https://www.aljazeera.com/economy/2026/2/17/warner-bros-rejects-latest-paramount-bid-but-open-to-best-and-final-offer?traffic_source=rss) — Warner Bros rejects latest Paramount bid but open to ‘best and final’ offer 관련 소식입니다.
+- [US and Iran reach ‘guiding principles’ in Geneva nuclear talks](https://www.aljazeera.com/video/newsfeed/2026/2/17/us-and-iran-reach-guiding-principles-in-geneva-nuclear-talks?traffic_source=rss) — US and Iran reach ‘guiding principles’ in Geneva nuclear talks 관련 소식입니다.
+- [Thousands in Kosovo rally against war crimes trial of ex-KLA commanders](https://www.aljazeera.com/news/2026/2/17/thousands-in-kosovo-rally-against-war-crimes-trial-of-ex-kla-commanders?traffic_source=rss) — 시장 상승 흐름을 다룬 소식입니다.
+- [I would scream in my sleep: Women from Syria's Alawite minority tell of kidnap and rape](https://www.bbc.com/news/articles/cn5g751pl7lo?at_medium=RSS&at_campaign=rss) — I would scream in my sleep: Women from Syria's Alawite minority tell of kidnap and rape 관련 소식입니다.
+- [US immigration judge rejects Trump bid to deport Columbia student Mahdawi](https://www.aljazeera.com/news/2026/2/17/us-immigration-judge-rejects-trump-bid-to-deport-columbia-student-mahdawi?traffic_source=rss) — US immigration judge rejects Trump bid to deport Columbia student Mahdawi 관련 소식입니다.
+- [Stephen Colbert says CBS barred interview with Texas Democratic candidate](https://www.aljazeera.com/news/2026/2/18/stephen-colbert-says-cbs-barred-his-interview-with-texas-senate-candidate?traffic_source=rss) — Stephen Colbert says CBS barred interview with Texas Democratic candidate 관련 소식입니다.
+- [France arrests nine over killing of far-right activist Quentin Deranque](https://www.aljazeera.com/news/2026/2/18/france-arrests-nine-over-killing-of-far-right-activist-quentin-deranque?traffic_source=rss) — France arrests nine over killing of far-right activist Quentin Deranque 관련 소식입니다.
+- [How Jesse Jackson helped empower US Arabs and lift up the Palestinian cause](https://www.aljazeera.com/news/2026/2/18/jesse-jackson-helped-empower-us-arabs-and-raise-palestinian-cause?traffic_source=rss) — 시장 상승 흐름을 다룬 소식입니다.
+- [Vinicius earns Real Madrid 1-0 win at Benfica in match marred by racism row](https://www.aljazeera.com/sports/2026/2/17/vinicius-earns-real-madrid-1-0-win-at-benfica-in-match-marred-by-racism-row?traffic_source=rss) — Vinicius earns Real Madrid 1-0 win at Benfica in match marred by racism row 관련 소식입니다.
+- [Humanoid robots perform advanced martial arts at Chinese New Year gala](https://www.aljazeera.com/news/2026/2/17/humanoid-robots-perform-advanced-martial-arts-at-chinese-new-year-gala?traffic_source=rss) — Humanoid robots perform advanced martial arts at Chinese New Year gala 관련 소식입니다.
+- [Tributes pour in after US civil rights icon Jesse Jackson dies at 84](https://www.aljazeera.com/news/2026/2/17/tributes-pour-in-after-us-civil-rights-icon-jesse-jackson-dies-at-84?traffic_source=rss) — Tributes pour in after US civil rights icon Jesse Jackson dies at 84 관련 소식입니다.
+- [Colombia to resume peace talks with ECG after temporary suspension](https://www.aljazeera.com/news/2026/2/17/colombia-to-resume-peace-talks-with-ecg-after-temporary-suspension?traffic_source=rss) — Colombia to resume peace talks with ECG after temporary suspension 관련 소식입니다.
+- [Yemeni Americans feel ‘betrayed’ as Trump revokes immigration protections](https://www.aljazeera.com/news/2026/2/17/yemeni-americans-feel-betrayed-as-trump-revokes-immigration-protections?traffic_source=rss) — Yemeni Americans feel ‘betrayed’ as Trump revokes immigration protections 관련 소식입니다.
+- [‘Journey of hell’: Migrants in Libya endure torture, rape, forced labour](https://www.aljazeera.com/news/2026/2/17/journey-of-hell-migrants-in-libya-endure-torture-rape-forced-labour?traffic_source=rss) — ‘Journey of hell’: Migrants in Libya endure torture, rape, forced labour 관련 소식입니다.
+- [US civil rights leader Jesse Jackson dies aged 84](https://www.bbc.com/news/articles/cp81l0e1eg5o?at_medium=RSS&at_campaign=rss) — US civil rights leader Jesse Jackson dies aged 84 관련 소식입니다.
+- [Stephen Colbert says CBS spiked interview with Democrat over FCC fears](https://www.bbc.com/news/articles/cze0dk3yd5eo?at_medium=RSS&at_campaign=rss) — 시장 심리·불안 이슈입니다.
+- [Under pressure from Trump, Venezuela's new president has aces up her sleeve](https://www.bbc.com/news/articles/cn87rv0jdy1o?at_medium=RSS&at_campaign=rss) — 시장 상승 흐름을 다룬 소식입니다.
+- [Climber on trial for leaving girlfriend to die on Austria's highest mountain](https://www.bbc.com/news/articles/c5yv9plyjgpo?at_medium=RSS&at_campaign=rss) — 시장 상승 흐름을 다룬 소식입니다.
+- [US civil rights leader Jesse Jackson dies aged 84](https://www.bbc.com/news/articles/cp81l0e1eg5o?at_medium=RSS&amp;at_campaign=rss) — US civil rights leader Jesse Jackson dies aged 84 관련 소식입니다.
+- [Stephen Colbert says CBS spiked interview with Democrat over FCC fears](https://www.bbc.com/news/articles/cze0dk3yd5eo?at_medium=RSS&amp;at_campaign=rss) — 시장 심리·불안 이슈입니다.
+- [I would scream in my sleep: Women from Syria's Alawite minority tell of kidnap and rape](https://www.bbc.com/news/articles/cn5g751pl7lo?at_medium=RSS&amp;at_campaign=rss) — I would scream in my sleep: Women from Syria's Alawite minority tell of kidnap and rape 관련 소식입니다.
+- [Under pressure from Trump, Venezuela's new president has aces up her sleeve](https://www.bbc.com/news/articles/cn87rv0jdy1o?at_medium=RSS&amp;at_campaign=rss) — 시장 상승 흐름을 다룬 소식입니다.
+- [Climber on trial for leaving girlfriend to die on Austria's highest mountain](https://www.bbc.com/news/articles/c5yv9plyjgpo?at_medium=RSS&amp;at_campaign=rss) — 시장 상승 흐름을 다룬 소식입니다.
+- [worldmonitor](https://worldmonitor.app) — worldmonitor 관련 소식입니다.
 
 ## 이슈 분포
 <div class="stat-grid">
@@ -50,25 +101,25 @@ lang: "ko"
 ## 주요 이슈
 
 | # | 이슈 | 테마 | 시장 영향 | 출처 |
-|---|------|------|-----------|------|
-| 1 | [**Stephen Colbert says CBS barred interview with Texas Democratic candidate**](https://www.aljazeera.com/news/2026/2/18/stephen-colbert-says-cbs-barred-his-interview-with-texas-senate-candidate?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
-| 2 | [**France arrests nine over killing of far-right activist Quentin Deranque**](https://www.aljazeera.com/news/2026/2/18/france-arrests-nine-over-killing-of-far-right-activist-quentin-deranque?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
-| 3 | [**How Jesse Jackson helped empower US Arabs and lift up the Palestinian cause**](https://www.aljazeera.com/news/2026/2/18/jesse-jackson-helped-empower-us-arabs-and-raise-palestinian-cause?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
-| 4 | [**Russia-Ukraine war: List of key events, day 1,455**](https://www.aljazeera.com/news/2026/2/18/russia-ukraine-war-list-of-key-events-day-1455?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 5 | [**US immigration judge rejects Trump bid to deport Columbia student Mahdawi**](https://www.aljazeera.com/news/2026/2/17/us-immigration-judge-rejects-trump-bid-to-deport-columbia-student-mahdawi?traffic_source=rss) | 정책/법률 | 중간 | WorldMonitor/Al Jazeera |
-| 6 | [**Hamas: Trump’s ‘Board of Peace’ must stop Israel’s killing in Gaza**](https://www.aljazeera.com/news/2026/2/17/hamas-trumps-board-of-peace-must-stop-israels-killing-in-gaza?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 7 | [**Vinicius earns Real Madrid 1-0 win at Benfica in match marred by racism row**](https://www.aljazeera.com/sports/2026/2/17/vinicius-earns-real-madrid-1-0-win-at-benfica-in-match-marred-by-racism-row?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
-| 8 | [**Humanoid robots perform advanced martial arts at Chinese New Year gala**](https://www.aljazeera.com/news/2026/2/17/humanoid-robots-perform-advanced-martial-arts-at-chinese-new-year-gala?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
-| 9 | [**Tributes pour in after US civil rights icon Jesse Jackson dies at 84**](https://www.aljazeera.com/news/2026/2/17/tributes-pour-in-after-us-civil-rights-icon-jesse-jackson-dies-at-84?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
-| 10 | [**Colombia to resume peace talks with ECG after temporary suspension**](https://www.aljazeera.com/news/2026/2/17/colombia-to-resume-peace-talks-with-ecg-after-temporary-suspension?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
-| 11 | [**Warner Bros rejects latest Paramount bid but open to ‘best and final’ offer**](https://www.aljazeera.com/economy/2026/2/17/warner-bros-rejects-latest-paramount-bid-but-open-to-best-and-final-offer?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 12 | [**US and Iran reach ‘guiding principles’ in Geneva nuclear talks**](https://www.aljazeera.com/video/newsfeed/2026/2/17/us-and-iran-reach-guiding-principles-in-geneva-nuclear-talks?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 13 | [**Yemeni Americans feel ‘betrayed’ as Trump revokes immigration protections**](https://www.aljazeera.com/news/2026/2/17/yemeni-americans-feel-betrayed-as-trump-revokes-immigration-protections?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
-| 14 | [**‘Journey of hell’: Migrants in Libya endure torture, rape, forced labour**](https://www.aljazeera.com/news/2026/2/17/journey-of-hell-migrants-in-libya-endure-torture-rape-forced-labour?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
-| 15 | [**Thousands in Kosovo rally against war crimes trial of ex-KLA commanders**](https://www.aljazeera.com/news/2026/2/17/thousands-in-kosovo-rally-against-war-crimes-trial-of-ex-kla-commanders?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 16 | [**US civil rights leader Jesse Jackson dies aged 84**](https://www.bbc.com/news/articles/cp81l0e1eg5o?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 17 | [**Stephen Colbert says CBS spiked interview with Democrat over FCC fears**](https://www.bbc.com/news/articles/cze0dk3yd5eo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 18 | [**I would scream in my sleep: Women from Syria's Alawite minority tell of kidnap and rape**](https://www.bbc.com/news/articles/cn5g751pl7lo?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
+| :---: | --- | :---: | :---: | --- |
+| 1 | [**Russia-Ukraine war: List of key events, day 1,455**](https://www.aljazeera.com/news/2026/2/18/russia-ukraine-war-list-of-key-events-day-1455?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
+| 2 | [**Hamas: Trump’s ‘Board of Peace’ must stop Israel’s killing in Gaza**](https://www.aljazeera.com/news/2026/2/17/hamas-trumps-board-of-peace-must-stop-israels-killing-in-gaza?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
+| 3 | [**Warner Bros rejects latest Paramount bid but open to ‘best and final’ offer**](https://www.aljazeera.com/economy/2026/2/17/warner-bros-rejects-latest-paramount-bid-but-open-to-best-and-final-offer?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
+| 4 | [**US and Iran reach ‘guiding principles’ in Geneva nuclear talks**](https://www.aljazeera.com/video/newsfeed/2026/2/17/us-and-iran-reach-guiding-principles-in-geneva-nuclear-talks?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
+| 5 | [**Thousands in Kosovo rally against war crimes trial of ex-KLA commanders**](https://www.aljazeera.com/news/2026/2/17/thousands-in-kosovo-rally-against-war-crimes-trial-of-ex-kla-commanders?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
+| 6 | [**I would scream in my sleep: Women from Syria's Alawite minority tell of kidnap and rape**](https://www.bbc.com/news/articles/cn5g751pl7lo?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
+| 7 | [**US immigration judge rejects Trump bid to deport Columbia student Mahdawi**](https://www.aljazeera.com/news/2026/2/17/us-immigration-judge-rejects-trump-bid-to-deport-columbia-student-mahdawi?traffic_source=rss) | 정책/법률 | 중간 | WorldMonitor/Al Jazeera |
+| 8 | [**Stephen Colbert says CBS barred interview with Texas Democratic candidate**](https://www.aljazeera.com/news/2026/2/18/stephen-colbert-says-cbs-barred-his-interview-with-texas-senate-candidate?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
+| 9 | [**France arrests nine over killing of far-right activist Quentin Deranque**](https://www.aljazeera.com/news/2026/2/18/france-arrests-nine-over-killing-of-far-right-activist-quentin-deranque?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
+| 10 | [**How Jesse Jackson helped empower US Arabs and lift up the Palestinian cause**](https://www.aljazeera.com/news/2026/2/18/jesse-jackson-helped-empower-us-arabs-and-raise-palestinian-cause?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
+| 11 | [**Vinicius earns Real Madrid 1-0 win at Benfica in match marred by racism row**](https://www.aljazeera.com/sports/2026/2/17/vinicius-earns-real-madrid-1-0-win-at-benfica-in-match-marred-by-racism-row?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
+| 12 | [**Humanoid robots perform advanced martial arts at Chinese New Year gala**](https://www.aljazeera.com/news/2026/2/17/humanoid-robots-perform-advanced-martial-arts-at-chinese-new-year-gala?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
+| 13 | [**Tributes pour in after US civil rights icon Jesse Jackson dies at 84**](https://www.aljazeera.com/news/2026/2/17/tributes-pour-in-after-us-civil-rights-icon-jesse-jackson-dies-at-84?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
+| 14 | [**Colombia to resume peace talks with ECG after temporary suspension**](https://www.aljazeera.com/news/2026/2/17/colombia-to-resume-peace-talks-with-ecg-after-temporary-suspension?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
+| 15 | [**Yemeni Americans feel ‘betrayed’ as Trump revokes immigration protections**](https://www.aljazeera.com/news/2026/2/17/yemeni-americans-feel-betrayed-as-trump-revokes-immigration-protections?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
+| 16 | [**‘Journey of hell’: Migrants in Libya endure torture, rape, forced labour**](https://www.aljazeera.com/news/2026/2/17/journey-of-hell-migrants-in-libya-endure-torture-rape-forced-labour?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
+| 17 | [**US civil rights leader Jesse Jackson dies aged 84**](https://www.bbc.com/news/articles/cp81l0e1eg5o?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
+| 18 | [**Stephen Colbert says CBS spiked interview with Democrat over FCC fears**](https://www.bbc.com/news/articles/cze0dk3yd5eo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
 | 19 | [**Under pressure from Trump, Venezuela's new president has aces up her sleeve**](https://www.bbc.com/news/articles/cn87rv0jdy1o?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
 | 20 | [**Climber on trial for leaving girlfriend to die on Austria's highest mountain**](https://www.bbc.com/news/articles/c5yv9plyjgpo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
 

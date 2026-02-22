@@ -32,11 +32,37 @@ lang: "ko"
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 전체 뉴스 요약
 
 - 총 **11건** 수집
 - 주요 테마: 🔵 규제/정책
 - 미국 의회 거래 1건이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향을 예측하는 참고 자료가 될 수 있습니다.
+
+
+## 내용 분석
+
+- 총 11건 규모로 이슈를 정리했습니다.
+- 상위 테마는 🔵 규제/정책로 집중도가 높습니다.
+
+
+## URL 요약
+
+- [Nancy Pelosi Sold Apple and Bought This 1 Stock Instead. Here’s Why](https://news.google.com/rss/articles/CBMirgFBVV95cUxPZ0FXcGk1YUpiZGY0RGlzMkZWeEx1bmR0c0Qzdlh3Qm1FX1dnNmNqN1ZlSVRrS0ZuQ0t1NzhIcWhOODNmQXdTLUxWVV90Mm04SVhVeHhnODMzcGlSckZZVXduMzdIVkpDLUdSM1RyX2JwSnJSOFhKc2NoUnBzQjZvUUZxd2lWZjVPRDJ6UFVKTVA4TG8xTGNjTlVyY3dxTzQ4WkREUldLSjlSRkpzM1E?oc=5) — 기관 매수·매도 동향입니다.
 
 ## 미국 의회 거래 동향
 

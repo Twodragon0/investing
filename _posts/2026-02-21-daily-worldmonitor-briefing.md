@@ -26,12 +26,73 @@ lang: "ko"
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 전체 뉴스 요약
 
 - 총 **20건** 수집
 - 주요 테마: 사회/기타, 정책/법률, 지정학/안보
 - 범위: 글로벌 지정학, 금융시장, 에너지 이슈
 - 주요 출처: WorldMonitor/BBC World (15건), WorldMonitor/Al Jazeera (5건)
+
+
+## 내용 분석
+
+- 총 20건 규모로 이슈를 정리했습니다.
+- 상위 테마는 사회/기타, 정책/법률, 지정학/안보로 집중도가 높습니다.
+
+
+## URL 요약
+
+- [Trump says he is considering limited military strike on Iran](https://www.bbc.com/news/articles/cdxzk4gvzp0o?at_medium=RSS&at_campaign=rss) — Trump says he is considering limited military strike on Iran 관련 소식입니다.
+- [At least 10 killed in Israeli strikes on Lebanon](https://www.bbc.com/news/articles/cvg8914dkl0o?at_medium=RSS&at_campaign=rss) — At least 10 killed in Israeli strikes on Lebanon 관련 소식입니다.
+- [Russia-Ukraine war: List of key events, day 1,458](https://www.aljazeera.com/news/2026/2/21/russia-ukraine-war-list-of-key-events-day-1458?traffic_source=rss) — Russia-Ukraine war: List of key events, day 1,458 관련 소식입니다.
+- [US military says it attacked vessel in Pacific Ocean, killing three people](https://www.aljazeera.com/news/2026/2/21/us-military-says-it-attacked-vessel-in-pacific-ocean-killing-three-people?traffic_source=rss) — US military says it attacked vessel in Pacific Ocean, killing three people 관련 소식입니다.
+- [US envoy suggests it would be ‘fine’ if Israel expands across Middle East](https://www.aljazeera.com/news/2026/2/20/us-envoy-suggests-it-would-be-fine-if-israel-expands-across-middle-east?traffic_source=rss) — US envoy suggests it would be ‘fine’ if Israel expands across Middle East 관련 소식입니다.
+- [Trump brings in new 10% tariff as Supreme Court rejects his global import taxes](https://www.bbc.com/news/articles/cn8146l0n55o?at_medium=RSS&at_campaign=rss) — 시장 상승 흐름을 다룬 소식입니다.
+- [Trump lashes out at Supreme Court justices over tariffs ruling](https://www.bbc.com/news/articles/cd9g0e7zd8wo?at_medium=RSS&at_campaign=rss) — 시장 상승 흐름을 다룬 소식입니다.
+- [Killing of nationalist student leaves French far left in deep trouble as elections loom](https://www.bbc.com/news/articles/cnv61zv534eo?at_medium=RSS&at_campaign=rss) — Killing of nationalist student leaves French far left in deep trouble as elections loom 관련 소식입니다.
+- [Venezuelan opposition politician released after amnesty law passed](https://www.bbc.com/news/articles/cy57en3590no?at_medium=RSS&at_campaign=rss) — Venezuelan opposition politician released after amnesty law passed 관련 소식입니다.
+- [Trump, JD Vance vilify ‘lawless’ Supreme Court justices over tariff ruling](https://www.aljazeera.com/news/2026/2/21/trump-jd-vance-vilify-lawless-supreme-court-justices-over-tariff-ruling?traffic_source=rss) — 시장 상승 흐름을 다룬 소식입니다.
+- [Nasa targets early March to send humans back around the Moon](https://www.bbc.com/news/articles/c86y1g6wde3o?at_medium=RSS&at_campaign=rss) — Nasa targets early March to send humans back around the Moon 관련 소식입니다.
+- [Anna Murdoch-Mann, mother of News Corp heir, dies aged 81](https://www.bbc.com/news/articles/cp8150xj36wo?at_medium=RSS&at_campaign=rss) — Anna Murdoch-Mann, mother of News Corp heir, dies aged 81 관련 소식입니다.
+- [Austrian climber found guilty after girlfriend froze to death on mountain](https://www.bbc.com/news/articles/c0k1xkllknmo?at_medium=RSS&at_campaign=rss) — 시장 상승 흐름을 다룬 소식입니다.
+- [Rare prison sentences handed to Cameroon soldiers after killing of 21 civilians](https://www.bbc.com/news/articles/cev74dywd7eo?at_medium=RSS&at_campaign=rss) — Rare prison sentences handed to Cameroon soldiers after killing of 21 civilians 관련 소식입니다.
+- [French soldier dies after being shot in head during 'game' with other soldiers](https://www.bbc.com/news/articles/cj4z25gl24eo?at_medium=RSS&at_campaign=rss) — French soldier dies after being shot in head during 'game' with other soldiers 관련 소식입니다.
+- [Dog trained to illegally dump rubbish, Italian authorities say](https://www.bbc.com/news/articles/cy57erz57xyo?at_medium=RSS&at_campaign=rss) — Dog trained to illegally dump rubbish, Italian authorities say 관련 소식입니다.
+- [Asos co-founder dies after Thailand apartment block fall](https://www.bbc.com/news/articles/ce8w0n061ryo?at_medium=RSS&at_campaign=rss) — 시장 하락 흐름을 다룬 소식입니다.
+- [Mother and infant burnt to death in Indian state over witchcraft allegations](https://www.bbc.com/news/articles/c98q93gdy3do?at_medium=RSS&at_campaign=rss) — Mother and infant burnt to death in Indian state over witchcraft allegations 관련 소식입니다.
+- [Hamas holds vote to choose new interim leader, source tells BBC](https://www.bbc.com/news/articles/c23z0kdypm3o?at_medium=RSS&at_campaign=rss) — Hamas holds vote to choose new interim leader, source tells BBC 관련 소식입니다.
+- [Twelve Palestine Action activists granted bail](https://www.aljazeera.com/news/2026/2/20/heads-held-high-12-palestine-action-action-prisoners-granted-bail?traffic_source=rss) — Twelve Palestine Action activists granted bail 관련 소식입니다.
+- [Trump brings in new 10% tariff as Supreme Court rejects his global import taxes](https://www.bbc.com/news/articles/cn8146l0n55o?at_medium=RSS&amp;at_campaign=rss) — 시장 상승 흐름을 다룬 소식입니다.
+- [Trump lashes out at Supreme Court justices over tariffs ruling](https://www.bbc.com/news/articles/cd9g0e7zd8wo?at_medium=RSS&amp;at_campaign=rss) — 시장 상승 흐름을 다룬 소식입니다.
+- [Trump says he is considering limited military strike on Iran](https://www.bbc.com/news/articles/cdxzk4gvzp0o?at_medium=RSS&amp;at_campaign=rss) — Trump says he is considering limited military strike on Iran 관련 소식입니다.
+- [Killing of nationalist student leaves French far left in deep trouble as elections loom](https://www.bbc.com/news/articles/cnv61zv534eo?at_medium=RSS&amp;at_campaign=rss) — Killing of nationalist student leaves French far left in deep trouble as elections loom 관련 소식입니다.
+- [Nasa targets early March to send humans back around the Moon](https://www.bbc.com/news/articles/c86y1g6wde3o?at_medium=RSS&amp;at_campaign=rss) — Nasa targets early March to send humans back around the Moon 관련 소식입니다.
+- [At least 10 killed in Israeli strikes on Lebanon](https://www.bbc.com/news/articles/cvg8914dkl0o?at_medium=RSS&amp;at_campaign=rss) — At least 10 killed in Israeli strikes on Lebanon 관련 소식입니다.
+- [Anna Murdoch-Mann, mother of News Corp heir, dies aged 81](https://www.bbc.com/news/articles/cp8150xj36wo?at_medium=RSS&amp;at_campaign=rss) — Anna Murdoch-Mann, mother of News Corp heir, dies aged 81 관련 소식입니다.
+- [Austrian climber found guilty after girlfriend froze to death on mountain](https://www.bbc.com/news/articles/c0k1xkllknmo?at_medium=RSS&amp;at_campaign=rss) — 시장 상승 흐름을 다룬 소식입니다.
+- [Venezuelan opposition politician released after amnesty law passed](https://www.bbc.com/news/articles/cy57en3590no?at_medium=RSS&amp;at_campaign=rss) — Venezuelan opposition politician released after amnesty law passed 관련 소식입니다.
+- [Rare prison sentences handed to Cameroon soldiers after killing of 21 civilians](https://www.bbc.com/news/articles/cev74dywd7eo?at_medium=RSS&amp;at_campaign=rss) — Rare prison sentences handed to Cameroon soldiers after killing of 21 civilians 관련 소식입니다.
+- [French soldier dies after being shot in head during &#x27;game&#x27; with other soldiers](https://www.bbc.com/news/articles/cj4z25gl24eo?at_medium=RSS&amp;at_campaign=rss) — French soldier dies after being shot in head during &#x27;game&#x27; with other soldiers 관련 소식입니다.
+- [Dog trained to illegally dump rubbish, Italian authorities say](https://www.bbc.com/news/articles/cy57erz57xyo?at_medium=RSS&amp;at_campaign=rss) — Dog trained to illegally dump rubbish, Italian authorities say 관련 소식입니다.
+- [Asos co-founder dies after Thailand apartment block fall](https://www.bbc.com/news/articles/ce8w0n061ryo?at_medium=RSS&amp;at_campaign=rss) — 시장 하락 흐름을 다룬 소식입니다.
+- [Mother and infant burnt to death in Indian state over witchcraft allegations](https://www.bbc.com/news/articles/c98q93gdy3do?at_medium=RSS&amp;at_campaign=rss) — Mother and infant burnt to death in Indian state over witchcraft allegations 관련 소식입니다.
+- [Hamas holds vote to choose new interim leader, source tells BBC](https://www.bbc.com/news/articles/c23z0kdypm3o?at_medium=RSS&amp;at_campaign=rss) — Hamas holds vote to choose new interim leader, source tells BBC 관련 소식입니다.
+- [worldmonitor](https://worldmonitor.app) — worldmonitor 관련 소식입니다.
 
 ## 이슈 분포
 <div class="stat-grid">
@@ -51,25 +112,25 @@ lang: "ko"
 
 | # | 이슈 | 테마 | 시장 영향 | 출처 |
 | :---: | --- | :---: | :---: | --- |
-| 1 | [**Trump brings in new 10% tariff as Supreme Court rejects his global import taxes**](https://www.bbc.com/news/articles/cn8146l0n55o?at_medium=RSS&at_campaign=rss) | 정책/법률 | 중간 | WorldMonitor/BBC World |
-| 2 | [**Trump lashes out at Supreme Court justices over tariffs ruling**](https://www.bbc.com/news/articles/cd9g0e7zd8wo?at_medium=RSS&at_campaign=rss) | 정책/법률 | 중간 | WorldMonitor/BBC World |
-| 3 | [**Trump says he is considering limited military strike on Iran**](https://www.bbc.com/news/articles/cdxzk4gvzp0o?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
-| 4 | [**Killing of nationalist student leaves French far left in deep trouble as elections loom**](https://www.bbc.com/news/articles/cnv61zv534eo?at_medium=RSS&at_campaign=rss) | 정책/법률 | 중간 | WorldMonitor/BBC World |
-| 5 | [**Nasa targets early March to send humans back around the Moon**](https://www.bbc.com/news/articles/c86y1g6wde3o?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 6 | [**At least 10 killed in Israeli strikes on Lebanon - state media**](https://www.bbc.com/news/articles/cvg8914dkl0o?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
-| 7 | [**Anna Murdoch-Mann, mother of News Corp heir, dies aged 81**](https://www.bbc.com/news/articles/cp8150xj36wo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 8 | [**Austrian climber found guilty after girlfriend froze to death on mountain**](https://www.bbc.com/news/articles/c0k1xkllknmo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
+| 1 | [**Trump says he is considering limited military strike on Iran**](https://www.bbc.com/news/articles/cdxzk4gvzp0o?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
+| 2 | [**At least 10 killed in Israeli strikes on Lebanon - state media**](https://www.bbc.com/news/articles/cvg8914dkl0o?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
+| 3 | [**Russia-Ukraine war: List of key events, day 1,458**](https://www.aljazeera.com/news/2026/2/21/russia-ukraine-war-list-of-key-events-day-1458?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
+| 4 | [**US military says it attacked vessel in Pacific Ocean, killing three people**](https://www.aljazeera.com/news/2026/2/21/us-military-says-it-attacked-vessel-in-pacific-ocean-killing-three-people?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
+| 5 | [**US envoy suggests it would be ‘fine’ if Israel expands across Middle East**](https://www.aljazeera.com/news/2026/2/20/us-envoy-suggests-it-would-be-fine-if-israel-expands-across-middle-east?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
+| 6 | [**Trump brings in new 10% tariff as Supreme Court rejects his global import taxes**](https://www.bbc.com/news/articles/cn8146l0n55o?at_medium=RSS&at_campaign=rss) | 정책/법률 | 중간 | WorldMonitor/BBC World |
+| 7 | [**Trump lashes out at Supreme Court justices over tariffs ruling**](https://www.bbc.com/news/articles/cd9g0e7zd8wo?at_medium=RSS&at_campaign=rss) | 정책/법률 | 중간 | WorldMonitor/BBC World |
+| 8 | [**Killing of nationalist student leaves French far left in deep trouble as elections loom**](https://www.bbc.com/news/articles/cnv61zv534eo?at_medium=RSS&at_campaign=rss) | 정책/법률 | 중간 | WorldMonitor/BBC World |
 | 9 | [**Venezuelan opposition politician released after amnesty law passed**](https://www.bbc.com/news/articles/cy57en3590no?at_medium=RSS&at_campaign=rss) | 정책/법률 | 중간 | WorldMonitor/BBC World |
-| 10 | [**Rare prison sentences handed to Cameroon soldiers after killing of 21 civilians**](https://www.bbc.com/news/articles/cev74dywd7eo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 11 | [**French soldier dies after being shot in head during 'game' with other soldiers**](https://www.bbc.com/news/articles/cj4z25gl24eo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 12 | [**Dog trained to illegally dump rubbish, Italian authorities say**](https://www.bbc.com/news/articles/cy57erz57xyo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 13 | [**Asos co-founder dies after Thailand apartment block fall**](https://www.bbc.com/news/articles/ce8w0n061ryo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 14 | [**Mother and infant burnt to death in Indian state over witchcraft allegations**](https://www.bbc.com/news/articles/c98q93gdy3do?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 15 | [**Hamas holds vote to choose new interim leader, source tells BBC**](https://www.bbc.com/news/articles/c23z0kdypm3o?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 16 | [**Trump, JD Vance vilify ‘lawless’ Supreme Court justices over tariff ruling**](https://www.aljazeera.com/news/2026/2/21/trump-jd-vance-vilify-lawless-supreme-court-justices-over-tariff-ruling?traffic_source=rss) | 정책/법률 | 중간 | WorldMonitor/Al Jazeera |
-| 17 | [**Russia-Ukraine war: List of key events, day 1,458**](https://www.aljazeera.com/news/2026/2/21/russia-ukraine-war-list-of-key-events-day-1458?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 18 | [**US military says it attacked vessel in Pacific Ocean, killing three people**](https://www.aljazeera.com/news/2026/2/21/us-military-says-it-attacked-vessel-in-pacific-ocean-killing-three-people?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 19 | [**US envoy suggests it would be ‘fine’ if Israel expands across Middle East**](https://www.aljazeera.com/news/2026/2/20/us-envoy-suggests-it-would-be-fine-if-israel-expands-across-middle-east?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
+| 10 | [**Trump, JD Vance vilify ‘lawless’ Supreme Court justices over tariff ruling**](https://www.aljazeera.com/news/2026/2/21/trump-jd-vance-vilify-lawless-supreme-court-justices-over-tariff-ruling?traffic_source=rss) | 정책/법률 | 중간 | WorldMonitor/Al Jazeera |
+| 11 | [**Nasa targets early March to send humans back around the Moon**](https://www.bbc.com/news/articles/c86y1g6wde3o?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
+| 12 | [**Anna Murdoch-Mann, mother of News Corp heir, dies aged 81**](https://www.bbc.com/news/articles/cp8150xj36wo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
+| 13 | [**Austrian climber found guilty after girlfriend froze to death on mountain**](https://www.bbc.com/news/articles/c0k1xkllknmo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
+| 14 | [**Rare prison sentences handed to Cameroon soldiers after killing of 21 civilians**](https://www.bbc.com/news/articles/cev74dywd7eo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
+| 15 | [**French soldier dies after being shot in head during 'game' with other soldiers**](https://www.bbc.com/news/articles/cj4z25gl24eo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
+| 16 | [**Dog trained to illegally dump rubbish, Italian authorities say**](https://www.bbc.com/news/articles/cy57erz57xyo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
+| 17 | [**Asos co-founder dies after Thailand apartment block fall**](https://www.bbc.com/news/articles/ce8w0n061ryo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
+| 18 | [**Mother and infant burnt to death in Indian state over witchcraft allegations**](https://www.bbc.com/news/articles/c98q93gdy3do?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
+| 19 | [**Hamas holds vote to choose new interim leader, source tells BBC**](https://www.bbc.com/news/articles/c23z0kdypm3o?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
 | 20 | [**Twelve Palestine Action activists granted bail**](https://www.aljazeera.com/news/2026/2/20/heads-held-high-12-palestine-action-action-prisoners-granted-bail?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
 
 ## 출처 커버리지

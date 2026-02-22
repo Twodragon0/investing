@@ -46,12 +46,50 @@ image: "/assets/images/generated/market-heatmap-2026-02-15.png"
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 전체 뉴스 요약
 
 - 극도의 공포 장세: 공포/탐욕 지수 8으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다.
 - 비트코인 $70,309 상승: 24h 기준 +2.22% 변동, 주간 +1.52% 상승.
 - 시가총액 $2.49T으로 회복: 전일 대비 +2.57%. BTC 도미넌스 56.4%로 비트코인 중심 자금 흐름 지속.
 - 암호화폐 시장이 소폭 상승세를 이어가고 있습니다. 안정적인 흐름 속에서 점진적 회복이 진행 중입니다.
+
+
+## 내용 분석
+
+- 핵심 이슈를 중심으로 요약과 링크를 정리했습니다.
+
+
+## URL 요약
+
+- [비트코인, 심상찮은 ETF 자금 이탈에 '하락장 초입' 전망](https://news.google.com/rss/articles/CBMidEFVX3lxTFB0V2ZfcWN6MVFkd3Y4NE5LVUllUXcxWkM1OTJkckRVMTNPTFl1NzlMZmcwb04zMVptWmVGV29ZVUoydE9sdWVZWmtpSDZRalNaRERKNjBBX25WX0VGQ0dyeVNXLUtWUEY1Um5YOFUwSWxuWVFl?oc=5) — 비트코인 하락 흐름을 다룬 소식입니다.
+- [“1년치만 보고 ’비트코인= 디지털 금‘ 아니다? 터무니 없다”](https://news.google.com/rss/articles/CBMic0FVX3lxTFAyRUh0azVYQmpKalppeHc1aWQ0SE1sb2RXLUdtZDdjOGJwN2ZXeHVIYnUzdmlTUDVIWlRIVmszeUU3ajhCbmZ1cm5ldVd5bGxXem13T3RNQV9kR3ZELWlYUVJycGZtaFNjVENQcUtub0h1SWc?oc=5) — 비트코인 보고서 내용입니다.
+- [미국 비트코인 ETF, 5935억원 순유출7일 만에 최대치](https://news.google.com/rss/articles/CBMickFVX3lxTE5oRExrS1Q0eHl5Vkt6SEJDTzlkV3c2bUhwRGltcmpHemNORUh1bDYzOTJfbUtnMUI2ZF9KWURVdERNczZZUFhRT2Eta3VLeF9tNGtVRXdjdU1SNGdneV85U1Vlb3A1MGkwb2VFUmdSbkE3d9IBdkFVX3lxTFA2NTNSMUJ6Zzk0WDBweXJyWlhrbDFUUXFDQU02SFJYVTJOVFZhMk40Z1BVNXA1bFJxZ0NqUHp3N3hXNnIxVjB6b1M4Z3h3dGtRSGEyR3JrVmtFMUtZR19iVThTNXBiWFpCVHVVS1pZX2NnM0dxUXc?oc=5) — 비트코인 관련 소식입니다.
+- [Bitcoin ETFs Bleed $410M as IBIT ETF by BlackRock Suffers the Largest Loss](https://news.google.com/rss/articles/CBMingFBVV95cUxPNG9IUWY1RDQxbWo3M1VEbVdDSEdvOTZJX0VXZm40UVhNYjItOEQyX2RBbnBBeDdXMTh1bGM3eTdEdXpGcFJCUmZtdDdTRDg2SkxPT0JPczBIOFdBTEtHaFZPU1BmdmlaZFFydW5sbXhNX3dTQ1JtdEJGREpoNVE5N0NBUlFmc0kwSlloV0ZZc2JMZkxLZndoZGUyOXFUUQ?oc=5) — 비트코인 관련 소식입니다.
+- [Bitcoin Whale Alert – Massive $559M BTC Inflow to Binance Sparks Market Volatility Concerns](https://news.google.com/rss/articles/CBMivAFBVV95cUxPUkdrVzNJN2dNeUV5cE10U3JjUDJzeVROd0FMQWc0clVVajRLWFNGRDVEcTlZWjg2cWw4WXE5NnpEQnM5V2x5MXhSTDhZd1hWQTdId2VrMUtFeW8ybEV5ZmI2Q1JhX09tSkdDalBJeHczeGFTYUVkenNzMzFTYkxnblVoSHBnYzNrdDJsVmtkUEFhS1dYVjJ3XzYyVkcxVkFsUU1jYUZBVmVWdzQwQ2pkdXZqNVRoVFNsNlBpVQ?oc=5) — 고래·온체인 이동 이슈입니다.
+- [FRED](https://fred.stlouisfed.org/series/FEDFUNDS) — FRED 관련 소식입니다.
+- [FRED - 10-Year Treasury](https://fred.stlouisfed.org/series/DGS10) — 기관 매수·매도 동향입니다.
+- [FRED](https://fred.stlouisfed.org/series/CPIAUCSL) — FRED 관련 소식입니다.
+- [FRED](https://fred.stlouisfed.org/series/VIXCLS) — FRED 관련 소식입니다.
+- [CoinGecko](https://www.coingecko.com/) — CoinGecko 관련 소식입니다.
+- [Alternative.me](https://alternative.me/crypto/fear-and-greed-index/) — Alternative.me 관련 소식입니다.
+- [Investing.com](https://kr.investing.com/indices/kospi) — Investing.com 관련 소식입니다.
+- [Yahoo Finance](https://finance.yahoo.com/) — Yahoo Finance 관련 소식입니다.
+- [FRED](https://fred.stlouisfed.org/) — > *본 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다.
 
 ## 오늘의 시장 인사이트
 
@@ -199,7 +237,7 @@ Top 20 중 가장 큰 상승은 **Dogecoin** (+19.90%), 가장 큰 하락은 **L
 
 1. [비트코인, 심상찮은 ETF 자금 이탈에 '하락장 초입' 전망 - Joseilbo.com](https://news.google.com/rss/articles/CBMidEFVX3lxTFB0V2ZfcWN6MVFkd3Y4NE5LVUllUXcxWkM1OTJkckRVMTNPTFl1NzlMZmcwb04zMVptWmVGV29ZVUoydE9sdWVZWmtpSDZRalNaRERKNjBBX25WX0VGQ0dyeVNXLUtWUEY1Um5YOFUwSWxuWVFl?oc=5)
 2. [“1년치만 보고 ’비트코인= 디지털 금‘ 아니다? 터무니 없다” - 마켓인](https://news.google.com/rss/articles/CBMic0FVX3lxTFAyRUh0azVYQmpKalppeHc1aWQ0SE1sb2RXLUdtZDdjOGJwN2ZXeHVIYnUzdmlTUDVIWlRIVmszeUU3ajhCbmZ1cm5ldVd5bGxXem13T3RNQV9kR3ZELWlYUVJycGZtaFNjVENQcUtub0h1SWc?oc=5)
-3. [미국 비트코인 ETF, 5935억원 순유출…7일 만에 최대치 - 디지털애셋](https://news.google.com/rss/articles/CBMickFVX3lxTE5oRExrS1Q0eHl5Vkt6SEJDTzlkV3c2bUhwRGltcmpHemNORUh1bDYzOTJfbUtnMUI2ZF9KWURVdERNczZZUFhRT2Eta3VLeF9tNGtVRXdjdU1SNGdneV85U1Vlb3A1MGkwb2VFUmdSbkE3d9IBdkFVX3lxTFA2NTNSMUJ6Zzk0WDBweXJyWlhrbDFUUXFDQU02SFJYVTJOVFZhMk40Z1BVNXA1bFJxZ0NqUHp3N3hXNnIxVjB6b1M4Z3h3dGtRSGEyR3JrVmtFMUtZR19iVThTNXBiWFpCVHVVS1pZX2NnM0dxUXc?oc=5)
+3. [미국 비트코인 ETF, 5935억원 순유출7일 만에 최대치 - 디지털애셋](https://news.google.com/rss/articles/CBMickFVX3lxTE5oRExrS1Q0eHl5Vkt6SEJDTzlkV3c2bUhwRGltcmpHemNORUh1bDYzOTJfbUtnMUI2ZF9KWURVdERNczZZUFhRT2Eta3VLeF9tNGtVRXdjdU1SNGdneV85U1Vlb3A1MGkwb2VFUmdSbkE3d9IBdkFVX3lxTFA2NTNSMUJ6Zzk0WDBweXJyWlhrbDFUUXFDQU02SFJYVTJOVFZhMk40Z1BVNXA1bFJxZ0NqUHp3N3hXNnIxVjB6b1M4Z3h3dGtRSGEyR3JrVmtFMUtZR19iVThTNXBiWFpCVHVVS1pZX2NnM0dxUXc?oc=5)
 4. [Bitcoin ETFs Bleed $410M as IBIT ETF by BlackRock Suffers the Largest Loss - Blockonomi](https://news.google.com/rss/articles/CBMingFBVV95cUxPNG9IUWY1RDQxbWo3M1VEbVdDSEdvOTZJX0VXZm40UVhNYjItOEQyX2RBbnBBeDdXMTh1bGM3eTdEdXpGcFJCUmZtdDdTRDg2SkxPT0JPczBIOFdBTEtHaFZPU1BmdmlaZFFydW5sbXhNX3dTQ1JtdEJGREpoNVE5N0NBUlFmc0kwSlloV0ZZc2JMZkxLZndoZGUyOXFUUQ?oc=5)
 
 ## 고래 거래 동향

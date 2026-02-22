@@ -26,12 +26,65 @@ lang: "ko"
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 전체 뉴스 요약
 
 - 총 **20건** 수집
 - 주요 테마: 지정학/안보, 정책/법률, 사회/기타
 - 범위: 글로벌 지정학, 금융시장, 에너지 이슈
 - 주요 출처: WorldMonitor/BBC World (15건), WorldMonitor/Al Jazeera (5건)
+
+
+## 내용 분석
+
+- 총 20건 규모로 이슈를 정리했습니다.
+- 상위 테마는 지정학/안보, 정책/법률, 사회/기타로 집중도가 높습니다.
+
+
+## URL 요약
+
+- [US build-up of warships and fighter jets tracked near Iran](https://www.bbc.com/news/articles/c1d64p3q2d0o?at_medium=RSS&at_campaign=rss) — 시장 상승 흐름을 다룬 소식입니다.
+- [Trump's new world order has become real and Europe is having to adjust fast](https://www.bbc.com/news/articles/cddn002g6qzo?at_medium=RSS&at_campaign=rss) — Trump's new world order has become real and Europe is having to adjust fast 관련 소식입니다.
+- [US-Iran talks live: Second round to begin at Oman’s embassy in Geneva](https://www.aljazeera.com/news/liveblog/2026/2/17/us-iran-talks-set-to-begin-at-omans-embassy-in-switzerland?traffic_source=rss) — 규제 당국 관련 소식입니다.
+- [Trump says he will be involved ‘indirectly’ in Iran nuclear talks](https://www.aljazeera.com/news/2026/2/17/trump-says-he-will-be-involved-indirectly-in-iran-nuclear-talks?traffic_source=rss) — Trump says he will be involved ‘indirectly’ in Iran nuclear talks 관련 소식입니다.
+- [Ukraine's ex-energy minister detained while attempting to leave country](https://www.bbc.com/news/articles/c4g5380xwqjo?at_medium=RSS&at_campaign=rss) — Ukraine's ex-energy minister detained while attempting to leave country 관련 소식입니다.
+- [Judge orders Trump administration to restore Philadelphia slavery exhibit](https://www.aljazeera.com/news/2026/2/17/judge-orders-trump-administration-to-restore-philadelphia-slavery-exhibit?traffic_source=rss) — Judge orders Trump administration to restore Philadelphia slavery exhibit 관련 소식입니다.
+- [US attorney general criticised after saying all Epstein files have been released](https://www.bbc.com/news/articles/cz7genjx9njo?at_medium=RSS&at_campaign=rss) — US attorney general criticised after saying all Epstein files have been released 관련 소식입니다.
+- [Pressure grows for release of remaining Venezuelan political prisoners](https://www.bbc.com/news/articles/c62d6pzpw6yo?at_medium=RSS&at_campaign=rss) — Pressure grows for release of remaining Venezuelan political prisoners 관련 소식입니다.
+- [Navalny's mother says she always knew he was murdered after poison finding](https://www.bbc.com/news/articles/cq6qg6l31l3o?at_medium=RSS&at_campaign=rss) — Navalny's mother says she always knew he was murdered after poison finding 관련 소식입니다.
+- [Kenya strike delays flights at international hub airport](https://www.bbc.com/news/articles/c363096kd5po?at_medium=RSS&at_campaign=rss) — Kenya strike delays flights at international hub airport 관련 소식입니다.
+- [US build-up of warships and fighter jets tracked near Iran](https://www.bbc.com/news/articles/c1d64p3q2d0o?at_medium=RSS&amp;at_campaign=rss) — 시장 상승 흐름을 다룬 소식입니다.
+- [How Robert Duvall became a Hollywood great](https://www.bbc.com/news/articles/cv2grggdzweo?at_medium=RSS&amp;at_campaign=rss) — How Robert Duvall became a Hollywood great 관련 소식입니다.
+- [How dark web agent spotted bedroom wall clue to rescue girl from years of harm](https://www.bbc.com/news/articles/cx2gn239exlo?at_medium=RSS&amp;at_campaign=rss) — How dark web agent spotted bedroom wall clue to rescue girl from years of harm 관련 소식입니다.
+- [Australian IS families in Syria camp turned back after leaving for home](https://www.bbc.com/news/articles/cvg5ed05pplo?at_medium=RSS&amp;at_campaign=rss) — Australian IS families in Syria camp turned back after leaving for home 관련 소식입니다.
+- [Navalny's mother says she always knew he was murdered after poison finding](https://www.bbc.com/news/articles/cq6qg6l31l3o?at_medium=RSS&amp;at_campaign=rss) — Navalny's mother says she always knew he was murdered after poison finding 관련 소식입니다.
+- [Ancient bone may prove legendary war elephant crossing of Alps](https://www.bbc.com/news/articles/cdr2xl1e41eo?at_medium=RSS&amp;at_campaign=rss) — Ancient bone may prove legendary war elephant crossing of Alps 관련 소식입니다.
+- [Trump's new world order has become real and Europe is having to adjust fast](https://www.bbc.com/news/articles/cddn002g6qzo?at_medium=RSS&amp;at_campaign=rss) — Trump's new world order has become real and Europe is having to adjust fast 관련 소식입니다.
+- [Bondi Beach shooting accused faces court for the first time](https://www.bbc.com/news/articles/c3rzwe7lr4jo?at_medium=RSS&amp;at_campaign=rss) — 법적 분쟁·혐의 이슈입니다.
+- [Pressure grows for release of remaining Venezuelan political prisoners](https://www.bbc.com/news/articles/c62d6pzpw6yo?at_medium=RSS&amp;at_campaign=rss) — Pressure grows for release of remaining Venezuelan political prisoners 관련 소식입니다.
+- [Savannah Guthrie's new plea for mother's release as FBI analyses glove](https://www.bbc.com/news/articles/c5yrv2g16e2o?at_medium=RSS&amp;at_campaign=rss) — Savannah Guthrie's new plea for mother's release as FBI analyses glove 관련 소식입니다.
+- [Kenya strike delays flights at international hub airport](https://www.bbc.com/news/articles/c363096kd5po?at_medium=RSS&amp;at_campaign=rss) — Kenya strike delays flights at international hub airport 관련 소식입니다.
+- [US attorney general criticised after saying all Epstein files have been released](https://www.bbc.com/news/articles/cz7genjx9njo?at_medium=RSS&amp;at_campaign=rss) — US attorney general criticised after saying all Epstein files have been released 관련 소식입니다.
+- [Female Israeli soldiers rescued after being chased by ultra-Orthodox men](https://www.bbc.com/news/articles/clyzen2lgw9o?at_medium=RSS&amp;at_campaign=rss) — Female Israeli soldiers rescued after being chased by ultra-Orthodox men 관련 소식입니다.
+- [Ukraine's ex-energy minister detained while attempting to leave country](https://www.bbc.com/news/articles/c4g5380xwqjo?at_medium=RSS&amp;at_campaign=rss) — Ukraine's ex-energy minister detained while attempting to leave country 관련 소식입니다.
+- [Sydney police plead for return of man, 85, kidnapped by mistake](https://www.bbc.com/news/articles/c0ljzye1zgno?at_medium=RSS&amp;at_campaign=rss) — 기관 매수·매도 동향입니다.
+- [Train derails in Switzerland, injuring five amid avalanches in the Alps](https://www.aljazeera.com/news/2026/2/17/train-derails-in-switzerland-injuring-five-amid-avalanches-in-the-alps?traffic_source=rss) — Train derails in Switzerland, injuring five amid avalanches in the Alps 관련 소식입니다.
+- [Australian PM Albanese says no help for ISIL relatives held in Syria camp](https://www.aljazeera.com/news/2026/2/17/australian-pm-albanese-says-no-help-for-isil-relatives-held-in-syria-camp?traffic_source=rss) — Australian PM Albanese says no help for ISIL relatives held in Syria camp 관련 소식입니다.
+- [worldmonitor](https://worldmonitor.app) — worldmonitor 관련 소식입니다.
 
 ## 시각 요약
 
@@ -52,7 +105,7 @@ lang: "ko"
 ## 주요 이슈
 
 | # | 이슈 | 테마 | 시장 영향 | 출처 |
-|---|------|------|-----------|------|
+| :---: | --- | :---: | :---: | --- |
 | 1 | [**US build-up of warships and fighter jets tracked near Iran**](https://www.bbc.com/news/articles/c1d64p3q2d0o?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
 | 2 | [**Trump's new world order has become real and Europe is having to adjust fast**](https://www.bbc.com/news/articles/cddn002g6qzo?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
 | 3 | [**US-Iran talks live: Second round to begin at Oman’s embassy in Geneva**](https://www.aljazeera.com/news/liveblog/2026/2/17/us-iran-talks-set-to-begin-at-omans-embassy-in-switzerland?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |

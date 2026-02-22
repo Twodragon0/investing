@@ -18,6 +18,11 @@ source: "Crypto Monitoring System"
 - - BTCUSDT: +5.7% - ETHUSDT: +7.6% - XRPUSDT: +9.7% - SOLUSDT: +7.4% - BNBUSDT: +2.9%
 
 
+
+## 내용 분석
+
+- 핵심 이슈를 중심으로 요약과 링크를 정리했습니다.
+
 ## 주요 암호화폐 실시간 시세 (Upbit KRW 기준)
 
 | 순위 | 종목 | 현재가 (KRW) | 24시간 변동률 | 24시간 거래량 |

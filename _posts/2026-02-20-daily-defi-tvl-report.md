@@ -17,6 +17,29 @@ image: "/assets/images/generated/defi-tvl-dashboard-2026-02-20.png"
 - 2026-02-20 기준 DeFi 전체 TVL은 $247.99B 규모입니다. Liquid Staking과 Lending이 전체의 34%를 차지하며 시장을 주도하고, Ethereum이 60.1% 점유율로 압도적 1위를 유지하는 가운데 Hyperliquid L1 같은 신흥 체인이 상위...
 
 
+
+## 내용 분석
+
+- 핵심 이슈를 중심으로 요약과 링크를 정리했습니다.
+
+
+## URL 요약
+
+- [Lido](https://defillama.com/protocol/lido) — Lido 관련 소식입니다.
+- [AAVE](https://defillama.com/protocol/aave) — AAVE 관련 소식입니다.
+- [EigenLayer](https://defillama.com/protocol/eigenlayer) — EigenLayer 관련 소식입니다.
+- [WBTC](https://defillama.com/protocol/wbtc) — 비트코인 관련 소식입니다.
+- [ether.fi](https://defillama.com/protocol/ether.fi) — 이더리움 관련 소식입니다.
+- [Binance staked ETH](https://defillama.com/protocol/binance-staked-eth) — 이더리움 매수·매도 동향입니다.
+- [Spark](https://defillama.com/protocol/spark) — Spark 관련 소식입니다.
+- [Ethena](https://defillama.com/protocol/ethena) — 이더리움 관련 소식입니다.
+- [Hyperliquid L1](https://defillama.com/protocol/hyperliquid) — Hyperliquid L1 관련 소식입니다.
+- [Pendle](https://defillama.com/protocol/pendle) — Pendle 관련 소식입니다.
+- [DeFi Llama](https://defillama.com) — DeFi Llama 관련 소식입니다.
+- [DeFi Llama API Documentation](https://defillama.com/docs/api) — DeFi Llama API Documentation 관련 소식입니다.
+- [DeFi Llama](https://defillama.com/chains) — DeFi Llama 관련 소식입니다.
+- [AAVE V3](https://defillama.com/protocol/aave-v3) — AAVE V3 관련 소식입니다.
+
 ## 상위 10개 프로토콜 TVL 순위
 
 | # | 프로토콜 | 심볼 | TVL | 카테고리 | 시가총액 |

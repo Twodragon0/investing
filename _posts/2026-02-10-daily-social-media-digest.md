@@ -11,10 +11,57 @@ lang: "ko"
 
 ## 전체 뉴스 요약
 
-- 총 **120건** 수집
-- ` 수집 데이터 분포 (총 120건) ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-- 소셜 트렌드       [██████████] 10건 (8.3%) 트럼프 크립토     [████████████████████] 10건 (8.3%) 트럼프 경제/관세  [██████████] 5건 (4.2%) 기타 정치/경제    [███████████████████████████...
+오늘 수집된 총 120건 중 텔레그램 -건, 소셜 -건, 정치·경제 -건으로 정치/정책과 매크로/금리 이슈가 집중되었고 비트코인·거래소 관련 발언과 온체인 이동이 단기 변동성 요인으로 부각되었습니다.
 
+온체인 측면에서는 스테이블코인 이동 및 대형 지갑 이동 신호가 동시 포착되어 유동성 재배치 가능성이 있습니다.
+
+**핵심 신호 정리**
+- 정책/규제: 정치/정책·매크로 중심 헤드라인이 리스크 프라이싱에 직접 반영될 가능성.
+- 매크로/유동성: 금리/유동성 발언과 스테이블코인 이동이 단기 수급 변동성 확대 구간.
+- 온체인/수급: 거래소 유입·대형 지갑 이동이 매도 압력 또는 재배치 신호로 해석 가능.
+- 시장 기대감: 장기 가격 전망·매수 뉴스 확산으로 심리 변동폭 확대.
+
+**오늘의 체크리스트**
+- 정책/관세 헤드라인과 암호화폐·미국주 동조 반응 확인
+- 거래소 유입 증가 여부(단기 급락/반등 신호) 모니터링
+- 스테이블코인 발행·이동 속도 변화(유동성 진입 신호) 추적
+- 긴급 알림 없음에 대한 선별 모니터링
+
+
+
+## 내용 분석
+
+- 총 120건 규모로 이슈를 정리했습니다.
+
+
+## URL 요약
+
+- [Attention-augmented hybrid CNN-LSTM model for social media sentiment analysis](https://news.google.com/rss/articles/CBMiX0FVX3lxTE5pOHdJbW1CblVmZWdHYTY0UGkzRGNJMmhMTlp2Sm9VbXA5YjgyNkU4QXNTaDEyWW5hRUJ3SkM1WjJHWmhtYW9pbkxIcVk0VXRBQnhudmZBNkRwVm9Sd2dj?oc=5) — Attention-augmented hybrid CNN-LSTM model for social media sentiment analysis 관련 소식입니다.
+- [Data from Twitter Can Predict a Crypto Coin's Ascent](https://news.google.com/rss/articles/CBMikgFBVV95cUxPc3hXMVdVSlAzNVdOQnpYdEVDN0xSVVlKUGpBd3hQVHdyVENrSmFkMGdHazJHVHRTSHRnMEtCZmJHb2R1Smo1U2dSU24xdHA0eHdCZnVCMkpMOXVabktDcUNUVnVzY0VEOGtYRmdZc1lIcHlIYzRLNjAyUnk3TnVpUl9EQ3hCZnpXSERpNjNqc0xXUQ?oc=5) — 암호화폐 관련 소식입니다.
+- [Develop a Crypto Trading Strategy Based on Sentiment Analysis](https://news.google.com/rss/articles/CBMif0FVX3lxTE8ycmRsV2ZReXY4dG9hV3h3WlV2aE5NQVRCUmhETlhIVFZvX2RIanc5eWdRcnlPWEZtWVJDTDM2cDI0ZDJvSUU5S0xHc1RiLVBMVFJITE8wWkhZLUttY1d4U2Y0Qm1kNVFVd0x5T2JOR2NJQ1AzQ1FhNDRLM3lEWTg?oc=5) — 암호화폐 관련 소식입니다.
+- [Cryptocurrency Sentiment Analysis: Statistics & How It Works](https://news.google.com/rss/articles/CBMidEFVX3lxTE1xWm5XMjNsWi1IejFOemZmVVgxdk8tVEJjVHh6eW51YXdPMjFLSnlQWXlzTW0wX3NwRUJqREZrY0o3OFlvZkZfcExVcmJmSk9DOG1ueG1OaW1FZWw1OGRteVRXX2txTGVhTWhQSnM2OWdwcmZm?oc=5) — 암호화폐 관련 소식입니다.
+- [Community Impact on a Cryptocurrency: Twitter Comparison (Dogecoin vs Litecoin)](https://news.google.com/rss/articles/CBMikAFBVV95cUxQelZPNGtCNUpreWg1V2UxWEFZUWRsV2pwVHp6R0pFSmZaYk5OSlNuY0tiaUxlakJKYU04TTk5dG1TdktGTWkxalZQaEJtbFNFcUlFSVhjTHFIdVA2WmtDMkxYX0d0bFU2Q0NGR20tY2hYeDkzdG5VZHh6OElYaHp0S0tMSXVHeWhWejRsYmItOUI?oc=5) — 암호화폐 관련 소식입니다.
+- [Why AI Is Drawing Crypto Twitter's Attention](https://news.google.com/rss/articles/CBMicEFVX3lxTE85OTVPTXBOalllUWJFakZzQW9zYVMwa1dTTTRLSmpaNHNDUnRnTFVZTjBQdkpxak1EcE82Z0J0bWZNbDVUR2ptbGtQeVNYQlJaTy1lSkh3SzdudGVrWkxsekNOMm1GYkY0N0NxMTRiSGs?oc=5) — 암호화폐 관련 소식입니다.
+- [X (Twitter) restores service after global outage](https://news.google.com/rss/articles/CBMikgFBVV95cUxPeVdiTWlCT2dMR1h5QklyZllRcDlMdE9vdmVtQndjMUExc3paTGhKQnlNNzk3aGtBU29LeHk4OV94UU5iSXZseVFSb2RTRmxHWTZ3NVZlRi1XT1UyVHR6QmtGU1pJLUsxSW9YQlhEOEtLakxaTm1IQTV5dW9sU3o3NFJWbWdjTkozMzNTWXo0ZjJjQQ?oc=5) — X (Twitter) restores service after global outage 관련 소식입니다.
+- [Is Crypto 'Boring' Now? Bitwise CEO Says The Market Is Changing](https://news.google.com/rss/articles/CBMiugFBVV95cUxOSmRIV3BlNXJHR0stcjBvekhCT0dnYVJHRnFjd3NIaWhwTkx6WkxHQ2phVGVfTU80d3AzZ0xNcDM4Wm5YWjIwVkh6SG1tSnIxY1pHcWRKWWxvYkgtNGdXb1dNdTNIS0lYU0RxS09TTldwOVV3RjlOVUdVSGNSc0xCeWpuaHkzRVhraUZ1dkxLRm1lYlhyUDhKYUllVWpYVjhaci1lRnZFaHRnT1p1aHJwM1pkOTlBVUZYVEE?oc=5) — 암호화폐 관련 소식입니다.
+- [How Arkham Insights is redefining onchain alpha for serious crypto traders](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9tS0NlUlQyeGhLckFFYW1nTDVWR0I5TGMwUE9SZmFqVFVTeTMyLVE1elJGc3pVVWZfWnpTT3JGSDl6b2U4Y1hNU1BnajQ0dThTd0hib0hsczNHMjJ1YjMtZ0FHNmJRbzQ?oc=5) — 암호화폐 관련 소식입니다.
+- [Amber International Launches $100M Crypto Reserve to Attract Institutional Investors](https://news.google.com/rss/articles/CBMiY0FVX3lxTE8tZ1ZrUGkxZlhzTDk1dGZwLVBmRVgzZGluczAwZVhTVUk0MWd6VjhlWkZ0cER3ZW9HSldmdUp0WExvZ25JNmNzdDlJbXhjeXBBRElJSG81UmhnRW5Hd2JQbmxNTQ?oc=5) — 암호화폐 출시·공시 소식입니다.
+- [Crypto revolt exposes fragility of Trump's coalition](https://news.google.com/rss/articles/CBMib0FVX3lxTE4ycGhvQ3BaYXVwUGF0ZVBSNFM3Qkgzb3NTUVctd2ljdEhmNkNsTjZ5YVQ1TVVyaDBPb0hiZHpEUUlNT3IzR2JtVkhlVVhYcEJGT1FJTzlSOGs1RGJ3eU1hOW5SbUlGd1RpTm1RMjNQVQ?oc=5) — 암호화폐 관련 소식입니다.
+- [Binance Gives Trump Family's Crypto Firm a Leg Up](https://news.google.com/rss/articles/CBMieEFVX3lxTE0yOUg3X2h5T05zemFLR2lkWGZrMmJvNHd6Vm92YkNpcEM2dXFmb0xTUDNDc1FWY3ZMRGlMOHVOZk82MnJSTjFWbnowUFZXeHVaai00bE1GVHB2ZlNzV0l0VU5iSjJ5b29PMGliUTM4X3ZINnMzV3RpZQ?oc=5) — 거래소 상승 흐름을 다룬 소식입니다.
+- [Trump promised a crypto revolution. So why is bitcoin crashing?](https://news.google.com/rss/articles/CBMingFBVV95cUxQU3JaMkNSSTAzS2plS09RaWN4UnJlVUdIanBkbW9taGxJOWNWWFl0NkktYjc4aFViazViUWRtQmxvakswZ3NqNS1OSXQ0eXBaQkRnQ1dkWTNHb0ZTVXFTNFNFanFvQi05VUs1TjVNTEQtc08xaFIxaWRacXRUSDJObFhha3JXdDVFY1lTVXR4Vlk2SUxrRHVhVEpkNEZsUQ?oc=5) — 비트코인 하락 흐름을 다룬 소식입니다.
+- ['Spy Sheikh' Bought Secret Stake in Trump Company](https://news.google.com/rss/articles/CBMimANBVV95cUxPdndXVk8tMHVBR0w5TWd3ZGY1QlFmLXlmSV9uaTh6YXJQUXlndXNvenYteHVZZVVtTGVMUExURHNPODZFcTltQjdtMXh0ZU9uNW5OVWlKZDBYa2puVzRWN1hlNWRrWHB6MFVHM2FlaC1sbXFMeEYwaHBRV2RSWWYwYkJFR1d3ZkwzSFR2ejRZUXZKTEx1MnBUOU5zNXNNX21fWWZmZkgtSmRzMzc1R3J6NVUwVGFmdlVPMUhPUXNJN08yeDVfWmd1XzNQZlZ3U29iZlNLUjNGLTMwUW5mbGN5QlE5TmJ2dHlNUUoybWVtbjNpMWdFTVlWd0hwNF9YRU1KZTFISWdEOGhzWk9UVks3aVprdmNib1VXSlB0WUtPc0M0eERnWUVWRnBiTTd5QkVRTHlaUzh3RE5adWw4QjdtR2RnOFpDaFMtSzYyS0pQOUlqQlZkNkxERGxjTTVZZ3g1eTFsYmJUNWE3WUdqSGJBb2dFMjlFSlB3LWRnaEJqMmpKS28xNmV3V19BMC1oS3hzYk42Nk9SWEM?oc=5) — 규제 당국 매수·매도 동향입니다.
+- [Trump's crypto ties pose growing obstacle on Capitol Hill](https://news.google.com/rss/articles/CBMivAFBVV95cUxQaUNVTldrV2tqVXBVcUZfQmtPeXhUdkE3N3IzYTdwcXBCQXlaRVhiVmVzeVlFRllfU3hiSGlSSXJXbTF5YnZtaUVRX1IzR3dNekdKdGJGVHE3em9lWUFBa1dQd3NWR1VqMFNDOFBWd3dwN3VhekNQeTdXZ3h3a1JzQTdQNndsTWtJT182cGtkVVg1R1NDMmxPd0dSZnRFSWxzSW9FSlNFWE9UdzUxd1dZeE5nR1J4MmZDSTZVRw?oc=5) — 암호화폐 관련 소식입니다.
+- [White House unveils crypto policy 'roadmap' meant to usher in 'golden age'](https://news.google.com/rss/articles/CBMinwFBVV95cUxNUW41WFZic2FDMU9TMkloQ3NYSmx4by11SWVlM2JQN2tqRG9OM1NZOHV2LVU1U0F0eUJSQzNaVEs5RmZLWjVWUldzekl2R1hEWG00NXdKb3VXYkdVRkhNQ0ozUm5yYi1JalB2eC1GaE1JWmQ2SE9ZMEZ0Z2I2enp6ckgzTFhnUlp3djQ3bUJkbXVxLWlGNVVvUUJTSl9Ba2fSAaQBQVVfeXFMTnZQb1FkcEc5QkgxUWQwNnN3Tk93MlkxRmh5eVFlTEZlOEhwNjNobFZnNFBUajRfSjhwb0FQbXJ1cVRlMWxoOEYtcEkzSmY4RW5fajlFaG1hTjJ6TzFOQjhxeDlpak5KX1BYSDVWalZIS3BlN2gzWDhvbEpseFhqUXh4M0VVNF9BeWxpZmVNMlN3RzBjQXc4NWp4emNmYWtwNjRHYzQ?oc=5) — 암호화폐 관련 소식입니다.
+- [I'm a Crypto Expert: 5 Trump Policy Impacts Likely To Hit Your 2026 Holdings](https://news.google.com/rss/articles/CBMilwFBVV95cUxNMWIzTDdJR2FESDZteFI1Nm50bFpzUm56REd4dUlOc0JtTzlXdlRGdXFGV0ZmX2dOTWN4RUNwZkx3cEJKT0VRSlp1d3ZtWlBSRGdDMFFOdGFiX1BYcTgtWG9wV2k4VnhaWWgwNXZXNE1hLThCajdNTmYwX1g4UGNqdmJLdkx3eU41NTV2OVBDbFhwY1AzcERB?oc=5) — 암호화폐 매수·매도 동향입니다.
+- [Opinion: Trump's misguided crypto policies threaten America's banks](https://news.google.com/rss/articles/CBMipgNBVV95cUxOLVJ2SWZ0UUxENVl5cGh0YkxwOF83WXNEaThJZmFvNlluNHFXRkdMQllmWXYwR3ItM0MyZEJRdnF3WGJNU1BJWnpJbTFPVVE2Z1pRblE4Uk5hcFFZWlgySFpQakxLV1VmcnpmcWFnd003Y0FiV0lldDBjVG5PcHpQbFQtUWJDQkVjY21OVk9PQjRKX3hYU2hBMXg4dFUxQzVGdEdQM1QxNndyVkRYTHVSUUJkaG5GYnlyRGUyN0tiWC1VdGlRRFRXZFdhRmNmMzhwb1E5RlRjY1IzSndHYWwxeE1WTmcyZnFDbm5Zcl9lV29ELWw0cm5TbkR4NWFlT1ZIMkEtRzRZSzFuLVRVYm1VQ2JQTlZEb21vNDZqODBxU3JtUURqampLR1VwTF9LaWVULVZsR1MxMnhZU3ROaW1JZFktUV9odGwtOWpyaU1YM3dpNlZqSlFObVE1Y1ZZYTF4aDBlUG5OUU12OEpMaWVNdjJpMG92MDQ3QUw0M0JyVWtHY0N2eWplZjVQMjI4Q0RFX2dDcE9HXzl2YWhHLUNLNVQ1RWdoZw?oc=5) — 암호화폐 관련 소식입니다.
+- [Trump's Comeback: Stocks & Crypto Set for a Wild 2026 Ride!](https://news.google.com/rss/articles/CBMiaEFVX3lxTE5RcTN1dElTMmUwR3lWZlV4NlJxdFRKYjVqbGFPc01yYlc5cS1wX0tmMmtMLTU3ZHZINU4wc3FWSkdvWnFWaTdZVDFhSlprVG1WbzQwb1F1OEtsUkJXZXY2MHF4UGlUblJw?oc=5) — 암호화폐 관련 소식입니다.
+- [The Bitcoin bloodbath has entirely erased crypto's Trump rally](https://news.google.com/rss/articles/CBMiW0FVX3lxTE1XMFdYZ2UyWl9GcFpTdTJMbnJjUGZ6RjlxNlFPT3g5b0xSRW00Zi16S2p1Y2VpZEJQaXNXUzB1OXBLc01LM3pZMTJ1dUp6UC03bjB4V1ZUZWo0dE0?oc=5) — 비트코인 관련 소식입니다.
+- [FACT FOCUS: Trump says tariffs have created an economic miracle. The facts tell a different story](https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNFB2SjFJU2RLRnRxYWxKMTVscDFYbm0zcTBCa0ViOU1iVVBFNFJlUXlqczlXMmpyaUFSRDZHSFpMYkR4VkxQeWVpNjdqREFndXdLSFprd205MlRmYk1fN0p0YnNwdjYwLUhSMDB4eTgyRFBGLTlEelB0Qi16S1J3X1N5b2I4M1hUeG9KNlViMkw2MjZkdHUzQ3VOWE5JY1ZrZVBjWEIzRjI0bGvSAbABQVVfeXFMTWZsZkl6T2hqZTdHcUp0bnJydUJIdFhvU29iMFR5aUtHaXo1MTdXeWtadkg1MkNobmozb2JfZ3lxaFhlWFNsMXgxNUpxWmV3VWdYbWloUUtCWU96YU1QWVM0RjFZdzNOcnJVanY4UDJmaktkenZEelF5WDdnWmVwQ2tlR1BqdlhRWG9odVp1M29XQVo0ekpyRGV0MzhxOENPWE1HVGxmM1Q5dDhCYU1qZVg?oc=5) — 무역·관세 이슈입니다.
+- [The Stock Market Sounds an Alarm as Wall Street Gets Bad News About President Trump's Tariffs](https://news.google.com/rss/articles/CBMiggFBVV95cUxNVERoYlJGUm5UREtidXhUYWVFZ2FudjJfa19ZUHppZFdJLXhhU1dTdmlKc01jOXoxLVB1d3lrU3RhWlc3UF9relowYWZBVVhJckFnQS1UcXdRQnlkV2IwWENFMkxsb29fdHBRaGlDZS1YN3cybmlsX2hONkw5X2JCeVBR?oc=5) — 무역·관세 이슈입니다.
+- [Why Trump's Tariffs Are Like Termites](https://news.google.com/rss/articles/CBMipgFBVV95cUxOQURwTndQalV6THdYMjVleHBHdFBUc1NWaldWLV8ySlBzU1NvODE4akt4YXlRUUF0dTRIdk1ZNE9hX1VQSkZub2ZubXdwS1g3QzNYVUFtR2VqdnBMbEJ1cTg3WlNoV2ctMkdPWjU2a2RMdHpuNEF1aVBlZkx1S2tocHRWS0tYcG9NeFplM3VPZWtrV1lZTk1MX01aQmFaSTE1MmdlLVBR?oc=5) — 무역·관세 이슈입니다.
+- [Trump's tariff threats spark new fears of 'Sell America' trade](https://news.google.com/rss/articles/CBMirgFBVV95cUxQbExaNTVZdXJFOWpjRk1FQkxIUzZyWEdyeUlZV01fVVc4NU9fWnBmckRPc3FzVm4tc0FrNkFZak9UNGRTN2hXT0YxMFRvYzdHT2h5SXNUMW1WcVF6TU9BWllWVTdEU1cwb2Qtb2xQNVBoeUNhWXVQbklZclRCUTdNdGhyaTR4VGpHVWZMNjByV0RzZThENGllTGN2QjUyUXVCdG13OU5fbDUzLXpLWmc?oc=5) — 무역·관세 이슈입니다.
+- ['Stay calm' and 'this is the new normal': What banking CEOs are saying about the global market sell-off](https://news.google.com/rss/articles/CBMirwFBVV95cUxQQjYxZmFyRE9ycGV5V0E0V29Dc3l6S0VWdFZVNkFRZTFNZzBZX1hRVUdEOTAwUkZNbjBFSDV5N1Q1Q2NfUDNYOThqODVWcGlRTWpxM0xiTXJGbVRTQm1kMURGYTlwUmlPdXo0Y3o2c2JRazJ3MnZGc0dxYkFvQVRFT1JabG53NUtZeXgydHRPOVpmRGNmLXZvMnIxSDBfNGVtNVlCUXdPU19OVFBobVN30gG0AUFVX3lxTE5xSXdLRXdYSjN1OWFCaTFGaVVSbUZOTXJYX1ZpXzd2ZXFMSXhYeHpNV0VPUmZQVEhTM2JIenRNSUhvSGJBbmVWWDlVQ3NRdG5oZGhWeDZrS0xpczRRVkN2eEFaV1lwRGdZZ2JUeHNST2ZaVDU1TG9HaFVUVXQweGdoVk1fYU1HV2lHamdfR1BpaWZOa2tXOTdkUjcteS1ia1R0S3RTM1M3dk9tT0JkaGtHS2diNw?oc=5) — 시장 하락 흐름을 다룬 소식입니다.
+- [Binance Gives Trump Family's Crypto Firm a Leg Up](https://news.google.com/rss/articles/CBMieEFVX3lxTE0yOUg3X2h5T05zemFLR2lkWGZrMmJvNHd6Vm92YkNicEM2dXFmb0xTUDNDc1FWY3ZMRGlMOHVOZk82MnJSTjFWbnowUFZXeHVaai00bE1GVHB2ZlNzV0l0VU5iSjJ5b29PMGliUTM4X3ZINnMzV3RpZQ?oc=5) — 거래소 상승 흐름을 다룬 소식입니다.
 
 ## 뉴스 수집 현황
 
