@@ -25,6 +25,7 @@ from common.markdown_utils import (
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.collector_metrics import log_collection_summary
+from common.worldmonitor_utils import worldmonitor_sort_key
 
 
 logger = setup_logging("collect_worldmonitor_news")
@@ -96,22 +97,6 @@ def impact_label(theme: str) -> str:
     if theme == "정책/법률":
         return "중간"
     return "낮음~중간"
-
-
-IMPACT_RANK = {
-    "높음": 0,
-    "중간~높음": 1,
-    "중간": 2,
-    "낮음~중간": 3,
-}
-
-THEME_RANK = {
-    "지정학/안보": 0,
-    "에너지": 1,
-    "금융시장": 1,
-    "정책/법률": 2,
-    "사회/기타": 3,
-}
 
 
 def wm_url(source_url: str) -> str:
@@ -496,9 +481,9 @@ def main() -> None:
             ref_items.append({"title": title, "link": link, "source": source})
 
     def _sort_key(entry: Dict[str, str]) -> tuple:
-        return (
-            IMPACT_RANK.get(entry.get("impact", ""), 9),
-            THEME_RANK.get(entry.get("theme", ""), 9),
+        return worldmonitor_sort_key(
+            entry.get("impact", ""),
+            entry.get("theme", ""),
         )
 
     for idx, entry in enumerate(sorted(issue_items, key=_sort_key), 1):

@@ -7,6 +7,7 @@ from typing import Dict, List, Optional, Tuple
 
 from common.config import setup_logging
 from common.markdown_utils import markdown_table
+from common.worldmonitor_utils import worldmonitor_sort_key
 
 
 logger = setup_logging("backfill_post_summaries")
@@ -34,20 +35,9 @@ SECTION_PRIORITY = [
     "한눈에 보기",
 ]
 
-IMPACT_RANK = {
-    "높음": 0,
-    "중간~높음": 1,
-    "중간": 2,
-    "낮음~중간": 3,
-}
-
-THEME_RANK = {
-    "지정학/안보": 0,
-    "에너지": 1,
-    "금융시장": 1,
-    "정책/법률": 2,
-    "사회/기타": 3,
-}
+IMAGE_MARKDOWN_RE = re.compile(r"!\[[^\]]*\]\(([^)]+)\)")
+IMAGE_HTML_RE = re.compile(r"<img[^>]+src=[\"']([^\"']+)[\"']")
+LIQUID_PATH_RE = re.compile(r"\{\{\s*['\"]([^'\"]+)['\"]\s*\|\s*relative_url\s*\}\}")
 
 
 def _get_front_list(front: Dict[str, object], key: str) -> List[str]:
@@ -741,6 +731,52 @@ def insert_social_summary(lines: List[str], summary_lines: List[str]) -> List[st
     return lines[:end] + [""] + summary_block + lines[end:]
 
 
+def _extract_local_image_path(raw: str) -> str:
+    text = raw.strip()
+    if text.startswith("http://") or text.startswith("https://"):
+        return ""
+    if text.startswith("data:"):
+        return ""
+
+    liquid_match = LIQUID_PATH_RE.search(text)
+    if liquid_match:
+        return liquid_match.group(1).strip()
+
+    return text
+
+
+def remove_missing_local_images(lines: List[str]) -> List[str]:
+    cleaned: List[str] = []
+    for line in lines:
+        markdown_match = IMAGE_MARKDOWN_RE.search(line)
+        html_match = IMAGE_HTML_RE.search(line)
+        if not markdown_match and not html_match:
+            cleaned.append(line)
+            continue
+
+        raw_path = ""
+        if markdown_match:
+            raw_path = markdown_match.group(1)
+        elif html_match:
+            raw_path = html_match.group(1)
+        image_path = _extract_local_image_path(raw_path)
+        if not image_path:
+            cleaned.append(line)
+            continue
+
+        normalized = image_path.lstrip("./")
+        if normalized.startswith("/"):
+            normalized = normalized.lstrip("/")
+        if normalized.startswith("assets/"):
+            file_path = os.path.join(REPO_ROOT, normalized)
+        else:
+            file_path = os.path.join(REPO_ROOT, normalized)
+
+        if os.path.exists(file_path):
+            cleaned.append(line)
+    return cleaned
+
+
 def remove_existing_summary(lines: List[str]) -> Tuple[List[str], bool]:
     idx = find_heading_index(lines, SUMMARY_TITLE)
     if idx == -1:
@@ -879,7 +915,7 @@ def reorder_worldmonitor_table(
     def _rank_cell(cells: List[str]) -> Tuple[int, int]:
         impact = clean_text(cells[3]) if len(cells) > 3 else ""
         theme = clean_text(cells[2]) if len(cells) > 2 else ""
-        return (IMPACT_RANK.get(impact, 9), THEME_RANK.get(theme, 9))
+        return worldmonitor_sort_key(impact, theme)
 
     sorted_rows = sorted(rows, key=_rank_cell)
 
@@ -932,6 +968,7 @@ def process_post(
     updated_lines = reorder_worldmonitor_table(
         updated_lines, front_data, wm_from, wm_to
     )
+    updated_lines = remove_missing_local_images(updated_lines)
 
     if updated_lines == lines:
         return False
