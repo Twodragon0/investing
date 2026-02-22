@@ -15,3 +15,5 @@ __pycache__/
 .omc/
 Gemfile.lock
 .vercel
+worldmonitor_requests.txt
+worldmonitor_snapshot.md
