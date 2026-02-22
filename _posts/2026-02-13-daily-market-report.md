@@ -41,6 +41,7 @@ image: "/assets/images/generated/market-heatmap-2026-02-13.png"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 극도의 공포 장세: 공포/탐욕 지수 9으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다.
