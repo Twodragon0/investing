@@ -1113,13 +1113,13 @@ def main():
     exec_parts = []
     if fear_greed:
         fg_val = fear_greed.get("value", "N/A")
-        fg_class = fear_greed.get("value_classification", "N/A")
+        fg_class = fear_greed.get("classification", "N/A")
         exec_parts.append(f"- **공포/탐욕 지수**: {fg_val} ({fg_class})")
     if global_data:
-        mcap = global_data.get("total_market_cap_usd")
+        mcap = global_data.get("total_market_cap", {}).get("usd")
         if mcap:
             exec_parts.append(f"- **글로벌 암호화폐 시총**: ${mcap / 1e12:.2f}T")
-        btc_dom = global_data.get("btc_dominance")
+        btc_dom = global_data.get("market_cap_percentage", {}).get("btc")
         if btc_dom:
             exec_parts.append(f"- **BTC 도미넌스**: {btc_dom:.1f}%")
     if top_coins:
