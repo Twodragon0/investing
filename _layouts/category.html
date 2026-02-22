@@ -60,92 +60,163 @@ layout: default
 
 {% if cat_posts.size > 0 %}
 <script>
-var filterInput = document.getElementById('category-filter');
-var postsList = document.getElementById('posts-list');
-var posts = postsList.querySelectorAll('.post-card');
-var dateDividers = postsList.querySelectorAll('.date-divider');
-
-filterInput.addEventListener('input', function() {
-  var query = this.value.toLowerCase().trim();
-  var visibleCount = 0;
-
-  // Hide all date dividers during search
-  dateDividers.forEach(function(d) {
-    d.style.display = query.length > 0 ? 'none' : '';
-  });
-
-  posts.forEach(function(post) {
-    var title = post.querySelector('h3').textContent.toLowerCase();
-    var excerpt = post.querySelector('.post-excerpt');
-    var excerptText = excerpt ? excerpt.textContent.toLowerCase() : '';
-    var tags = post.querySelectorAll('.tag');
-    var tagText = Array.from(tags).map(function(t) { return t.textContent.toLowerCase(); }).join(' ');
-
-    if (query.length === 0 || title.indexOf(query) !== -1 || excerptText.indexOf(query) !== -1 || tagText.indexOf(query) !== -1) {
-      post.style.display = '';
-      visibleCount++;
-    } else {
-      post.style.display = 'none';
-    }
-  });
-
-  if (visibleCount === 0 && query.length > 0) {
-    if (!document.getElementById('no-results')) {
-      var noResults = document.createElement('div');
-      noResults.id = 'no-results';
-      noResults.className = 'empty-state';
-      noResults.innerHTML = '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><h3>검색 결과가 없습니다</h3><p>"' + query + '"에 대한 포스트를 찾을 수 없습니다.</p>';
-      postsList.appendChild(noResults);
-    }
-  } else {
-    var noResults = document.getElementById('no-results');
-    if (noResults) noResults.remove();
-  }
-});
-
-// Progressive loading - show first 20 posts
-(function() {
-  var posts = document.querySelectorAll('#posts-list .post-card');
+  var filterInput = document.getElementById('category-filter');
+  var postsList = document.getElementById('posts-list');
+  var posts = postsList.querySelectorAll('.post-card');
+  var dateDividers = postsList.querySelectorAll('.date-divider');
+  var loadMoreBtn = null;
   var limit = 20;
-  var shown = limit;
+  var shown = 0;
 
-  if (posts.length <= limit) return;
+  function updateDateDividers() {
+    var children = postsList.children;
+    var i = 0;
+    var child = null;
+    var currentDivider = null;
+    var hasVisible = false;
 
-  // Hide posts beyond limit
-  for (var i = limit; i < posts.length; i++) {
-    posts[i].style.display = 'none';
-    posts[i].dataset.hidden = 'true';
-  }
-
-  // Also hide date dividers for hidden posts
-  var dividers = document.querySelectorAll('#posts-list .date-divider');
-
-  // Create "load more" button
-  var btn = document.createElement('button');
-  btn.className = 'load-more-btn';
-  btn.innerHTML = '\uB354 \uBCF4\uAE30 <span class="load-more-count">(' + (posts.length - shown) + '\uAC1C \uB0A8\uC74C)</span>';
-  document.getElementById('posts-list').after(btn);
-
-  btn.addEventListener('click', function() {
-    var count = 0;
-    for (var i = 0; i < posts.length && count < 20; i++) {
-      if (posts[i].dataset.hidden === 'true') {
-        posts[i].style.display = '';
-        posts[i].dataset.hidden = 'false';
-        count++;
-        shown++;
+    for (i = 0; i < children.length; i++) {
+      child = children[i];
+      if (child.classList.contains('date-divider')) {
+        if (currentDivider) {
+          currentDivider.style.display = hasVisible ? '' : 'none';
+        }
+        currentDivider = child;
+        hasVisible = false;
+        continue;
+      }
+      if (child.classList.contains('post-card')) {
+        if (child.style.display !== 'none') {
+          hasVisible = true;
+        }
       }
     }
-    // Show date dividers for newly visible posts
-    dividers.forEach(function(d) { d.style.display = ''; });
 
-    var remaining = posts.length - shown;
-    if (remaining <= 0) {
-      btn.remove();
+    if (currentDivider) {
+      currentDivider.style.display = hasVisible ? '' : 'none';
+    }
+  }
+
+  function applyProgressiveLimit() {
+    posts.forEach(function(post) {
+      if (post.dataset.hidden === 'true') {
+        post.style.display = 'none';
+      } else {
+        post.style.display = '';
+      }
+    });
+  }
+
+  filterInput.addEventListener('input', function() {
+    var query = this.value.toLowerCase().trim();
+    var visibleCount = 0;
+    var remaining = 0;
+    var countEl = null;
+    var noResults = null;
+    var cleared = null;
+
+    if (query.length > 0) {
+      dateDividers.forEach(function(d) {
+        d.style.display = 'none';
+      });
+      if (loadMoreBtn) {
+        loadMoreBtn.style.display = 'none';
+      }
+    }
+
+    posts.forEach(function(post) {
+      var title = post.querySelector('h3').textContent.toLowerCase();
+      var excerpt = post.querySelector('.post-excerpt');
+      var excerptText = excerpt ? excerpt.textContent.toLowerCase() : '';
+      var tags = post.querySelectorAll('.tag');
+      var tagText = Array.from(tags).map(function(t) { return t.textContent.toLowerCase(); }).join(' ');
+
+      if (query.length === 0 || title.indexOf(query) !== -1 || excerptText.indexOf(query) !== -1 || tagText.indexOf(query) !== -1) {
+        post.style.display = '';
+        visibleCount++;
+      } else {
+        post.style.display = 'none';
+      }
+    });
+
+    if (query.length === 0) {
+      applyProgressiveLimit();
+      updateDateDividers();
+      if (loadMoreBtn) {
+        remaining = posts.length - shown;
+        loadMoreBtn.style.display = remaining > 0 ? '' : 'none';
+        countEl = loadMoreBtn.querySelector('.load-more-count');
+        if (countEl) {
+          countEl.textContent = '(' + remaining + '개 남음)';
+        }
+      }
+      cleared = document.getElementById('no-results');
+      if (cleared) cleared.remove();
+      return;
+    }
+
+    if (visibleCount === 0) {
+      if (!document.getElementById('no-results')) {
+        noResults = document.createElement('div');
+        noResults.id = 'no-results';
+        noResults.className = 'empty-state';
+        noResults.innerHTML = '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><h3>검색 결과가 없습니다</h3><p>"' + query + '"에 대한 포스트를 찾을 수 없습니다.</p>';
+        postsList.appendChild(noResults);
+      }
     } else {
-      btn.querySelector('.load-more-count').textContent = '(' + remaining + '\uAC1C \uB0A8\uC74C)';
+      noResults = document.getElementById('no-results');
+      if (noResults) noResults.remove();
     }
   });
-})();
+
+// Progressive loading - show first 20 posts
+  (function() {
+    var posts = document.querySelectorAll('#posts-list .post-card');
+    var i = 0;
+    shown = Math.min(limit, posts.length);
+
+    if (posts.length <= limit) {
+      updateDateDividers();
+      return;
+    }
+
+    // Hide posts beyond limit
+    for (i = limit; i < posts.length; i++) {
+      posts[i].style.display = 'none';
+      posts[i].dataset.hidden = 'true';
+    }
+
+    updateDateDividers();
+
+    // Create "load more" button
+    var btn = document.createElement('button');
+    btn.className = 'load-more-btn';
+    btn.innerHTML = '\uB354 \uBCF4\uAE30 <span class="load-more-count">(' + (posts.length - shown) + '\uAC1C \uB0A8\uC74C)</span>';
+    document.getElementById('posts-list').after(btn);
+    loadMoreBtn = btn;
+
+    btn.addEventListener('click', function() {
+      var count = 0;
+      var remaining = 0;
+      var i = 0;
+      for (i = 0; i < posts.length && count < 20; i++) {
+        if (posts[i].dataset.hidden === 'true') {
+          posts[i].style.display = '';
+          posts[i].dataset.hidden = 'false';
+          count++;
+          shown++;
+        }
+      }
+
+      updateDateDividers();
+
+      remaining = posts.length - shown;
+      if (remaining <= 0) {
+        btn.remove();
+      } else {
+        btn.querySelector('.load-more-count').textContent = '(' + remaining + '\uAC1C \uB0A8\uC74C)';
+      }
+    });
+  })();
 </script>
 {% endif %}
