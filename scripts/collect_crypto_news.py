@@ -745,7 +745,9 @@ def main():
 
     # ── Post B: security report (Rekt News + Google Security News) ──
     all_security_items = rekt_items + google_security_items
-    if all_security_items:
+    if len(all_security_items) < 2:
+        logger.info("보안 뉴스가 %d건으로 최소 기준(2건) 미달, 포스트 생성 스킵", len(all_security_items))
+    else:
         post_b_title = f"블록체인 보안 리포트 - {today}"
 
         if not dedup.is_duplicate_exact(post_b_title, "consolidated", today):

@@ -102,5 +102,50 @@ filterInput.addEventListener('input', function() {
     if (noResults) noResults.remove();
   }
 });
+
+// Progressive loading - show first 20 posts
+(function() {
+  var posts = document.querySelectorAll('#posts-list .post-card');
+  var limit = 20;
+  var shown = limit;
+
+  if (posts.length <= limit) return;
+
+  // Hide posts beyond limit
+  for (var i = limit; i < posts.length; i++) {
+    posts[i].style.display = 'none';
+    posts[i].dataset.hidden = 'true';
+  }
+
+  // Also hide date dividers for hidden posts
+  var dividers = document.querySelectorAll('#posts-list .date-divider');
+
+  // Create "load more" button
+  var btn = document.createElement('button');
+  btn.className = 'load-more-btn';
+  btn.innerHTML = '\uB354 \uBCF4\uAE30 <span class="load-more-count">(' + (posts.length - shown) + '\uAC1C \uB0A8\uC74C)</span>';
+  document.getElementById('posts-list').after(btn);
+
+  btn.addEventListener('click', function() {
+    var count = 0;
+    for (var i = 0; i < posts.length && count < 20; i++) {
+      if (posts[i].dataset.hidden === 'true') {
+        posts[i].style.display = '';
+        posts[i].dataset.hidden = 'false';
+        count++;
+        shown++;
+      }
+    }
+    // Show date dividers for newly visible posts
+    dividers.forEach(function(d) { d.style.display = ''; });
+
+    var remaining = posts.length - shown;
+    if (remaining <= 0) {
+      btn.remove();
+    } else {
+      btn.querySelector('.load-more-count').textContent = '(' + remaining + '\uAC1C \uB0A8\uC74C)';
+    }
+  });
+})();
 </script>
 {% endif %}

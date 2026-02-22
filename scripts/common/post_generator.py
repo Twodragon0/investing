@@ -98,6 +98,32 @@ class PostGenerator:
             for key, value in extra_frontmatter.items():
                 frontmatter_lines.append(f'{key}: "{value}"')
 
+        # description 자동 생성 (SEO용, 160자 이내)
+        if not (extra_frontmatter and "description" in extra_frontmatter):
+            desc_text = ""
+            for line in content.strip().split("\n"):
+                stripped = line.strip()
+                if (
+                    stripped
+                    and not stripped.startswith("#")
+                    and not stripped.startswith("|")
+                    and not stripped.startswith(">")
+                    and not stripped.startswith("![")
+                    and not stripped.startswith("---")
+                    and not stripped.startswith("-")
+                ):
+                    desc_text = stripped
+                    break
+            if desc_text:
+                desc_text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", desc_text)
+                desc_text = re.sub(r"[*_`~]", "", desc_text)
+                desc_text = re.sub(r"\s+", " ", desc_text).strip()
+                if len(desc_text) > 160:
+                    desc_text = desc_text[:157] + "..."
+                if desc_text:
+                    safe_desc = desc_text.replace('"', "'")
+                    frontmatter_lines.append(f'description: "{safe_desc}"')
+
         frontmatter_lines.append("---")
 
         # Build content

@@ -5,17 +5,10 @@ layout: default
 {% if reading_time == 0 %}{% assign reading_time = 1 %}{% endif %}
 
 {% assign first_cat = page.categories | first %}
-{% if first_cat == "crypto-news" %}{% assign cat_name = "암호화폐 뉴스" %}
-{% elsif first_cat == "stock-news" %}{% assign cat_name = "주식 뉴스" %}
-{% elsif first_cat == "crypto-journal" or first_cat == "crypto-trading-journal" %}{% assign cat_name = "크립토 트레이딩 일지" %}
-{% elsif first_cat == "stock-journal" or first_cat == "stock-trading-journal" %}{% assign cat_name = "주식 트레이딩 일지" %}
-{% elsif first_cat == "security-alerts" %}{% assign cat_name = "보안 알림" %}
-{% elsif first_cat == "market-analysis" %}{% assign cat_name = "시장 분석" %}
-{% else %}{% assign cat_name = first_cat %}
-{% endif %}
+{% assign cat_data = site.data.categories[first_cat] %}
+{% assign cat_name = cat_data.name | default: first_cat %}
 
 <article class="post-detail">
-  <div class="reading-progress" id="reading-progress"></div>
   <div class="post-breadcrumb">
     <a href="{{ '/' | relative_url }}">홈</a>
     <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M4 2l4 4-4 4"/></svg>
@@ -143,12 +136,8 @@ layout: default
       {% if shown_urls contains post_marker %}{% continue %}{% endif %}
       {% capture shown_urls %}{{ shown_urls }}{{ post.url }}|{% endcapture %}
       {% assign rel_cat = post.categories | first %}
-      {% if rel_cat == "crypto-news" %}{% assign rel_cat_name = "암호화폐 뉴스" %}
-      {% elsif rel_cat == "stock-news" %}{% assign rel_cat_name = "주식 뉴스" %}
-      {% elsif rel_cat == "security-alerts" %}{% assign rel_cat_name = "보안 알림" %}
-      {% elsif rel_cat == "market-analysis" %}{% assign rel_cat_name = "시장 분석" %}
-      {% else %}{% assign rel_cat_name = rel_cat %}
-      {% endif %}
+      {% assign rel_cat_data = site.data.categories[rel_cat] %}
+      {% assign rel_cat_name = rel_cat_data.name | default: rel_cat %}
       <a href="{{ post.url | relative_url }}" class="related-post-card">
         <span class="related-post-category cat-{{ rel_cat | slugify }}">{{ rel_cat_name }}</span>
         <h4>{{ post.title | truncate: 60 }}</h4>
@@ -177,12 +166,8 @@ layout: default
       {% if shown_urls contains post_marker %}{% continue %}{% endif %}
       {% capture shown_urls %}{{ shown_urls }}{{ post.url }}|{% endcapture %}
       {% assign rel_cat = post.categories | first %}
-      {% if rel_cat == "crypto-news" %}{% assign rel_cat_name = "암호화폐 뉴스" %}
-      {% elsif rel_cat == "stock-news" %}{% assign rel_cat_name = "주식 뉴스" %}
-      {% elsif rel_cat == "security-alerts" %}{% assign rel_cat_name = "보안 알림" %}
-      {% elsif rel_cat == "market-analysis" %}{% assign rel_cat_name = "시장 분석" %}
-      {% else %}{% assign rel_cat_name = rel_cat %}
-      {% endif %}
+      {% assign rel_cat_data = site.data.categories[rel_cat] %}
+      {% assign rel_cat_name = rel_cat_data.name | default: rel_cat %}
       <a href="{{ post.url | relative_url }}" class="related-post-card">
         <span class="related-post-category cat-{{ rel_cat | slugify }}">{{ rel_cat_name }}</span>
         <h4>{{ post.title | truncate: 60 }}</h4>
@@ -204,12 +189,8 @@ layout: default
       {% if shown_urls contains post_marker %}{% continue %}{% endif %}
       {% capture shown_urls %}{{ shown_urls }}{{ post.url }}|{% endcapture %}
       {% assign rel_cat = post.categories | first %}
-      {% if rel_cat == "crypto-news" %}{% assign rel_cat_name = "암호화폐 뉴스" %}
-      {% elsif rel_cat == "stock-news" %}{% assign rel_cat_name = "주식 뉴스" %}
-      {% elsif rel_cat == "security-alerts" %}{% assign rel_cat_name = "보안 알림" %}
-      {% elsif rel_cat == "market-analysis" %}{% assign rel_cat_name = "시장 분석" %}
-      {% else %}{% assign rel_cat_name = rel_cat %}
-      {% endif %}
+      {% assign rel_cat_data = site.data.categories[rel_cat] %}
+      {% assign rel_cat_name = rel_cat_data.name | default: rel_cat %}
       <a href="{{ post.url | relative_url }}" class="related-post-card">
         <span class="related-post-category cat-{{ rel_cat | slugify }}">{{ rel_cat_name }}</span>
         <h4>{{ post.title | truncate: 60 }}</h4>
@@ -238,12 +219,8 @@ layout: default
       {% if shown_urls contains post_marker %}{% continue %}{% endif %}
       {% capture shown_urls %}{{ shown_urls }}{{ post.url }}|{% endcapture %}
       {% assign rel_cat = post.categories | first %}
-      {% if rel_cat == "crypto-news" %}{% assign rel_cat_name = "암호화폐 뉴스" %}
-      {% elsif rel_cat == "stock-news" %}{% assign rel_cat_name = "주식 뉴스" %}
-      {% elsif rel_cat == "security-alerts" %}{% assign rel_cat_name = "보안 알림" %}
-      {% elsif rel_cat == "market-analysis" %}{% assign rel_cat_name = "시장 분석" %}
-      {% else %}{% assign rel_cat_name = rel_cat %}
-      {% endif %}
+      {% assign rel_cat_data = site.data.categories[rel_cat] %}
+      {% assign rel_cat_name = rel_cat_data.name | default: rel_cat %}
       <a href="{{ post.url | relative_url }}" class="related-post-card">
         <span class="related-post-category cat-{{ rel_cat | slugify }}">{{ rel_cat_name }}</span>
         <h4>{{ post.title | truncate: 60 }}</h4>
@@ -264,12 +241,8 @@ layout: default
       {% if shown_urls contains post_marker %}{% continue %}{% endif %}
       {% capture shown_urls %}{{ shown_urls }}{{ post.url }}|{% endcapture %}
       {% assign rel_cat = post.categories | first %}
-      {% if rel_cat == "crypto-news" %}{% assign rel_cat_name = "암호화폐 뉴스" %}
-      {% elsif rel_cat == "stock-news" %}{% assign rel_cat_name = "주식 뉴스" %}
-      {% elsif rel_cat == "security-alerts" %}{% assign rel_cat_name = "보안 알림" %}
-      {% elsif rel_cat == "market-analysis" %}{% assign rel_cat_name = "시장 분석" %}
-      {% else %}{% assign rel_cat_name = rel_cat %}
-      {% endif %}
+      {% assign rel_cat_data = site.data.categories[rel_cat] %}
+      {% assign rel_cat_name = rel_cat_data.name | default: rel_cat %}
       <a href="{{ post.url | relative_url }}" class="related-post-card">
         <span class="related-post-category cat-{{ rel_cat | slugify }}">{{ rel_cat_name }}</span>
         <h4>{{ post.title | truncate: 60 }}</h4>
@@ -454,6 +427,40 @@ function shareTwitter() {
   });
 })();
 
+// Image lightbox
+(function() {
+  var overlay = document.createElement('div');
+  overlay.className = 'lightbox-overlay';
+  overlay.innerHTML = '<img class="lightbox-img" /><button class="lightbox-close" aria-label="\uB2EB\uAE30">&times;</button>';
+  document.body.appendChild(overlay);
+  var lbImg = overlay.querySelector('.lightbox-img');
+  var lbClose = overlay.querySelector('.lightbox-close');
+
+  document.querySelectorAll('.post-content.prose-content img').forEach(function(img) {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', function(e) {
+      e.preventDefault();
+      lbImg.src = img.src;
+      lbImg.alt = img.alt || '';
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeLightbox() {
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  lbClose.addEventListener('click', closeLightbox);
+  overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) closeLightbox();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+})();
+
 (function() {
   var tables = document.querySelectorAll('.post-content.prose-content table');
   if (!tables.length) return;
@@ -469,38 +476,25 @@ function shareTwitter() {
     function update() {
       var scrollable = table.scrollWidth > wrap.clientWidth + 4;
       wrap.classList.toggle('is-scrollable', scrollable);
-    }
-
-    update();
-    window.addEventListener('resize', update, { passive: true });
-  });
-})();
-
-// 테이블 래핑 + 스크롤 힌트
-(function() {
-  var tables = document.querySelectorAll('.post-content table');
-  tables.forEach(function(table) {
-    var wrapper = document.createElement('div');
-    wrapper.className = 'table-wrapper';
-    table.parentNode.insertBefore(wrapper, table);
-    wrapper.appendChild(table);
-
-    function checkScroll() {
-      if (wrapper.scrollWidth > wrapper.clientWidth + 2) {
-        wrapper.classList.add('is-scrollable');
-        if (wrapper.scrollLeft + wrapper.clientWidth >= wrapper.scrollWidth - 2) {
-          wrapper.classList.add('scrolled-end');
-        } else {
-          wrapper.classList.remove('scrolled-end');
+      if (scrollable) {
+        var atEnd = wrap.scrollLeft + wrap.clientWidth >= wrap.scrollWidth - 2;
+        wrap.classList.toggle('scrolled-end', atEnd);
+        if (!wrap.querySelector('.scroll-hint')) {
+          var hint = document.createElement('span');
+          hint.className = 'scroll-hint';
+          hint.textContent = '\u2190 \uC2A4\uD06C\uB864 \u2192';
+          wrap.appendChild(hint);
         }
       } else {
-        wrapper.classList.remove('is-scrollable', 'scrolled-end');
+        wrap.classList.remove('scrolled-end');
+        var existingHint = wrap.querySelector('.scroll-hint');
+        if (existingHint) existingHint.remove();
       }
     }
 
-    wrapper.addEventListener('scroll', checkScroll, { passive: true });
-    window.addEventListener('resize', checkScroll);
-    checkScroll();
+    wrap.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update, { passive: true });
+    update();
   });
 })();
 
