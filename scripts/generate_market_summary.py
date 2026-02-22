@@ -1206,7 +1206,7 @@ def main():
 
     content = "\n\n".join(f"## {k}\n\n{v}" for k, v in sections.items())
     # 연속 빈줄을 최대 2줄로 정리
-    content = re.sub(r'\n{3,}', '\n\n', content)
+    content = re.sub(r"\n{3,}", "\n\n", content)
 
     filepath = gen.create_post(
         title=title,
