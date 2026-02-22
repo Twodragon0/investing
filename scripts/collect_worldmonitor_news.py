@@ -5,13 +5,15 @@ import os
 import sys
 import time
 from collections import Counter
-from datetime import datetime, timezone
-from typing import Any, Dict, List
+from datetime import datetime, timedelta, timezone
+from typing import Any, Dict, List, Optional
 from urllib.parse import quote
+
+import requests
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common.config import setup_logging
+from common.config import REQUEST_TIMEOUT, USER_AGENT, get_ssl_verify, setup_logging
 from common.dedup import DedupEngine
 from common.markdown_utils import (
     escape_table_cell,
@@ -28,6 +30,13 @@ from common.collector_metrics import log_collection_summary
 logger = setup_logging("collect_worldmonitor_news")
 
 WM_PROXY = "https://worldmonitor.app/api/rss-proxy?url="
+WM_FINANCE_BASE = "https://finance.worldmonitor.app"
+WM_MAP_VIEW_URL = (
+    "https://finance.worldmonitor.app/?lat=20.0000&lon=0.0000&zoom=1.00&"
+    "view=global&timeRange=7d&layers=conflicts%2Cbases%2Chotspots%2C"
+    "nuclear%2Csanctions%2Cweather%2Ceconomic%2Cwaterways%2Coutages%2C"
+    "military%2Cnatural"
+)
 
 
 def classify_theme(title: str) -> str:
@@ -89,8 +98,261 @@ def impact_label(theme: str) -> str:
     return "낮음~중간"
 
 
+IMPACT_RANK = {
+    "높음": 0,
+    "중간~높음": 1,
+    "중간": 2,
+    "낮음~중간": 3,
+}
+
+THEME_RANK = {
+    "지정학/안보": 0,
+    "에너지": 1,
+    "금융시장": 1,
+    "정책/법률": 2,
+    "사회/기타": 3,
+}
+
+
 def wm_url(source_url: str) -> str:
     return WM_PROXY + quote(source_url, safe="")
+
+
+def _post_worldmonitor(
+    path: str, payload: Optional[Dict[str, Any]] = None
+) -> Dict[str, Any]:
+    url = f"{WM_FINANCE_BASE}{path}"
+    try:
+        resp = requests.post(
+            url,
+            json=payload or {},
+            timeout=REQUEST_TIMEOUT,
+            verify=get_ssl_verify(),
+            headers={"User-Agent": USER_AGENT},
+        )
+        resp.raise_for_status()
+        return resp.json()
+    except Exception as e:
+        logger.warning("WorldMonitor API failed (%s): %s", path, e)
+        return {}
+
+
+def _paginate_worldmonitor(
+    path: str,
+    payload: Dict[str, Any],
+    list_key: str,
+    limit: int = 200,
+) -> List[Dict[str, Any]]:
+    items: List[Dict[str, Any]] = []
+    cursor = ""
+    while len(items) < limit:
+        page_size = min(100, limit - len(items))
+        payload["pagination"] = {"pageSize": page_size, "cursor": cursor}
+        data = _post_worldmonitor(path, payload)
+        batch = data.get(list_key, []) or []
+        if not isinstance(batch, list):
+            break
+        items.extend(batch)
+        cursor = (data.get("pagination") or {}).get("nextCursor", "")
+        if not cursor:
+            break
+    return items
+
+
+def _top_counts(items: List[Dict[str, Any]], key: str, limit: int = 3) -> str:
+    counter = Counter(
+        item.get(key) for item in items if isinstance(item, dict) and item.get(key)
+    )
+    if not counter:
+        return "N/A"
+    return ", ".join(f"{name} {count}건" for name, count in counter.most_common(limit))
+
+
+def _format_float(value: Optional[float], digits: int = 1) -> str:
+    if value is None:
+        return "N/A"
+    try:
+        return f"{value:.{digits}f}"
+    except (TypeError, ValueError):
+        return "N/A"
+
+
+def fetch_worldmonitor_map_snapshot(days: int = 7) -> Dict[str, Any]:
+    now = datetime.now(timezone.utc)
+    start = now - timedelta(days=days)
+    time_range = {
+        "start": int(start.timestamp() * 1000),
+        "end": int(now.timestamp() * 1000),
+    }
+
+    conflicts_acled = _paginate_worldmonitor(
+        "/api/conflict/v1/list-acled-events",
+        {"timeRange": time_range},
+        "events",
+        limit=200,
+    )
+    conflicts_ucdp = _paginate_worldmonitor(
+        "/api/conflict/v1/list-ucdp-events",
+        {"timeRange": time_range},
+        "events",
+        limit=200,
+    )
+
+    outages = _paginate_worldmonitor(
+        "/api/infrastructure/v1/list-internet-outages",
+        {"timeRange": time_range},
+        "outages",
+        limit=200,
+    )
+
+    earthquakes = _paginate_worldmonitor(
+        "/api/seismology/v1/list-earthquakes",
+        {"timeRange": time_range, "minMagnitude": 4.5},
+        "earthquakes",
+        limit=200,
+    )
+
+    climate = _paginate_worldmonitor(
+        "/api/climate/v1/list-climate-anomalies",
+        {"minSeverity": "ANOMALY_SEVERITY_MODERATE"},
+        "anomalies",
+        limit=200,
+    )
+
+    nav_warnings = _paginate_worldmonitor(
+        "/api/maritime/v1/list-navigational-warnings",
+        {},
+        "warnings",
+        limit=200,
+    )
+
+    vessel_snapshot = _post_worldmonitor("/api/maritime/v1/get-vessel-snapshot")
+    snapshot = (
+        vessel_snapshot.get("snapshot", {}) if isinstance(vessel_snapshot, dict) else {}
+    )
+    disruptions = snapshot.get("disruptions", []) if isinstance(snapshot, dict) else []
+    density_zones = (
+        snapshot.get("densityZones", []) if isinstance(snapshot, dict) else []
+    )
+
+    military = _post_worldmonitor(
+        "/api/military/v1/list-military-flights",
+        {"pagination": {"pageSize": 100, "cursor": ""}},
+    )
+    flights = military.get("flights", []) if isinstance(military, dict) else []
+    clusters = military.get("clusters", []) if isinstance(military, dict) else []
+
+    macro = _post_worldmonitor("/api/economic/v1/get-macro-signals")
+    energy = _post_worldmonitor("/api/economic/v1/get-energy-prices")
+
+    return {
+        "time_range": time_range,
+        "conflicts": {
+            "acled": conflicts_acled,
+            "ucdp": conflicts_ucdp,
+        },
+        "outages": outages,
+        "earthquakes": earthquakes,
+        "climate": climate,
+        "nav_warnings": nav_warnings,
+        "disruptions": disruptions,
+        "density_zones": density_zones,
+        "military_flights": flights,
+        "military_clusters": clusters,
+        "macro": macro,
+        "energy": energy,
+        "generated_at": now,
+    }
+
+
+def build_map_snapshot_section(snapshot: Dict[str, Any]) -> List[str]:
+    if not snapshot:
+        return []
+
+    conflicts = snapshot.get("conflicts", {}) or {}
+    acled = conflicts.get("acled", []) or []
+    ucdp = conflicts.get("ucdp", []) or []
+    outages = snapshot.get("outages", []) or []
+    earthquakes = snapshot.get("earthquakes", []) or []
+    climate = snapshot.get("climate", []) or []
+    nav_warnings = snapshot.get("nav_warnings", []) or []
+    disruptions = snapshot.get("disruptions", []) or []
+    density_zones = snapshot.get("density_zones", []) or []
+    flights = snapshot.get("military_flights", []) or []
+    clusters = snapshot.get("military_clusters", []) or []
+
+    macro = snapshot.get("macro", {}) or {}
+    energy = snapshot.get("energy", {}) or {}
+
+    top_conflict_countries = _top_counts(acled + ucdp, "country")
+    top_outage_countries = _top_counts(outages, "country")
+    top_climate_zones = _top_counts(climate, "zone")
+    top_nav_areas = _top_counts(nav_warnings, "area")
+    top_disruption_regions = _top_counts(disruptions, "region")
+    top_density_zones = _top_counts(density_zones, "name")
+    top_operators = _top_counts(flights, "operator")
+
+    max_quake: Optional[Dict[str, Any]] = None
+    if earthquakes:
+        max_quake = max(
+            earthquakes,
+            key=lambda q: q.get("magnitude") or 0,
+        )
+
+    verdict = macro.get("verdict") if isinstance(macro, dict) else None
+    bullish = macro.get("bullishCount") if isinstance(macro, dict) else None
+    total = macro.get("totalCount") if isinstance(macro, dict) else None
+
+    energy_prices = energy.get("prices", []) if isinstance(energy, dict) else []
+    preferred = {"WTI", "Brent", "Henry Hub"}
+    selected_prices = [
+        p for p in energy_prices if any(key in p.get("name", "") for key in preferred)
+    ]
+    if not selected_prices:
+        selected_prices = energy_prices[:3]
+
+    energy_summary = []
+    for price in selected_prices:
+        name = price.get("name") or price.get("commodity", "Energy")
+        value = _format_float(price.get("price"))
+        change = price.get("change")
+        change_str = _format_float(change, 2)
+        unit = price.get("unit", "")
+        unit_suffix = f" {unit}" if unit else ""
+        energy_summary.append(f"{name} {value}{unit_suffix} ({change_str}%)")
+
+    lines = [
+        "## 지도 인텔리전스 스냅샷",
+        "",
+        f"- 충돌 이벤트: ACLED {len(acled)}건 / UCDP {len(ucdp)}건 (상위 국가: {top_conflict_countries})",
+        f"- 군용 항공기 활동: {len(flights)}대, 클러스터 {len(clusters)}개 (주요 운영자: {top_operators})",
+        f"- 인터넷 장애: {len(outages)}건 (상위 국가: {top_outage_countries})",
+        f"- 기후 이상: {len(climate)}건 (주요 지역: {top_climate_zones})",
+        f"- 지진(M4.5+): {len(earthquakes)}건"
+        + (
+            f" (최대 {_format_float(max_quake.get('magnitude'))} {max_quake.get('place', '')})"
+            if max_quake
+            else ""
+        ),
+        f"- 해상 경보: {len(nav_warnings)}건 (주요 해역: {top_nav_areas})",
+        f"- 해상/AIS 이상: {len(disruptions)}건 (지역: {top_disruption_regions})",
+        f"- 선박 혼잡: {len(density_zones)}개 구역 (상위: {top_density_zones})",
+        f"- 매크로 신호: {verdict or 'UNKNOWN'} (Bullish {bullish or 0}/{total or 0})",
+    ]
+
+    if energy_summary:
+        lines.append(f"- 에너지 가격: {', '.join(energy_summary)}")
+
+    lines.extend(
+        [
+            "",
+            "## 지도 레이어 참고",
+            "- 정적 레이어(핫스팟/기지/핵시설/제재국가/경제 중심지)는 WorldMonitor 기준 데이터셋 기반입니다.",
+            f"- 상세 지도: {WM_MAP_VIEW_URL}",
+        ]
+    )
+
+    return lines
 
 
 def fetch_worldmonitor_feeds() -> List[Dict[str, Any]]:
@@ -197,11 +459,12 @@ def main() -> None:
     source_counter: Counter = Counter()
     theme_counter: Counter = Counter()
     rows: List[List[object]] = []
+    issue_items: List[Dict[str, str]] = []
     source_rows: List[List[object]] = []
     ref_items: List[Dict[str, str]] = []
 
     for item in items:
-        if len(rows) >= 20:
+        if len(issue_items) >= 20:
             break
 
         title = item.get("title", "").strip()
@@ -215,27 +478,39 @@ def main() -> None:
         theme_counter[theme] += 1
         impact = impact_label(theme)
 
+        display_title = (
+            markdown_link(f"**{title}**", link)
+            if link
+            else f"**{escape_table_cell(title)}**"
+        )
+        issue_items.append(
+            {
+                "title": display_title,
+                "theme": theme,
+                "impact": impact,
+                "source": source,
+                "link": link,
+            }
+        )
         if link:
-            rows.append(
-                [
-                    len(rows) + 1,
-                    markdown_link(f"**{title}**", link),
-                    theme,
-                    impact,
-                    source,
-                ]
-            )
             ref_items.append({"title": title, "link": link, "source": source})
-        else:
-            rows.append(
-                [
-                    len(rows) + 1,
-                    f"**{escape_table_cell(title)}**",
-                    theme,
-                    impact,
-                    source,
-                ]
-            )
+
+    def _sort_key(entry: Dict[str, str]) -> tuple:
+        return (
+            IMPACT_RANK.get(entry.get("impact", ""), 9),
+            THEME_RANK.get(entry.get("theme", ""), 9),
+        )
+
+    for idx, entry in enumerate(sorted(issue_items, key=_sort_key), 1):
+        rows.append(
+            [
+                idx,
+                entry["title"],
+                entry["theme"],
+                entry["impact"],
+                entry["source"],
+            ]
+        )
 
     total_items = len(rows)
     top_sources = ", ".join(
@@ -269,26 +544,34 @@ def main() -> None:
         f"<li>집중 출처: <strong>{source_counter.most_common(1)[0][0] if source_counter else 'N/A'}</strong></li>",
         "</ul></div>",
         "",
-        "## 전체 뉴스 요약",
-        f"- 총 **{total_items}건** 수집, 핵심 테마는 **{', '.join(t for t, _ in theme_counter.most_common(3))}** 중심입니다.",
-        f"- **주요 출처**: {top_sources}",
-        f"- **안보 이슈**: {theme_counter.get('지정학/안보', 0)}건",
-        "",
         "## 핵심 요약",
         f"- 수집 건수: **{total_items}건**",
         "- 범위: 글로벌 지정학, 금융시장, 에너지 이슈",
         f"- 주요 출처: {top_sources}",
         "",
-        "## 이슈 분포",
-        '<div class="stat-grid">',
-        f'<div class="stat-item"><div class="stat-value">{total_items}</div><div class="stat-label">총 이슈</div></div>',
-        f'<div class="stat-item"><div class="stat-value">{len(theme_counter)}</div><div class="stat-label">테마 수</div></div>',
-        f'<div class="stat-item"><div class="stat-value">{len(source_counter)}</div><div class="stat-label">출처 수</div></div>',
-        f'<div class="stat-item"><div class="stat-value">{theme_counter.get("지정학/안보", 0)}</div><div class="stat-label">안보 이슈</div></div>',
-        "</div>",
-        "",
-        '<div class="theme-distribution">',
     ]
+
+    map_snapshot = fetch_worldmonitor_map_snapshot(days=7)
+    content_parts.extend(build_map_snapshot_section(map_snapshot))
+    content_parts.extend(
+        [
+            "",
+            "## 전체 뉴스 요약",
+            f"- 총 **{total_items}건** 수집, 핵심 테마는 **{', '.join(t for t, _ in theme_counter.most_common(3))}** 중심입니다.",
+            f"- **주요 출처**: {top_sources}",
+            f"- **안보 이슈**: {theme_counter.get('지정학/안보', 0)}건",
+            "",
+            "## 이슈 분포",
+            '<div class="stat-grid">',
+            f'<div class="stat-item"><div class="stat-value">{total_items}</div><div class="stat-label">총 이슈</div></div>',
+            f'<div class="stat-item"><div class="stat-value">{len(theme_counter)}</div><div class="stat-label">테마 수</div></div>',
+            f'<div class="stat-item"><div class="stat-value">{len(source_counter)}</div><div class="stat-label">출처 수</div></div>',
+            f'<div class="stat-item"><div class="stat-value">{theme_counter.get("지정학/안보", 0)}</div><div class="stat-label">안보 이슈</div></div>',
+            "</div>",
+            "",
+            '<div class="theme-distribution">',
+        ]
+    )
     content_parts.extend(theme_rows)
     content_parts.extend(
         [
@@ -381,7 +664,8 @@ def main() -> None:
             "",
             "---",
             f"**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC",
-            "**연계 소스**: worldmonitor.app/api/rss-proxy",
+            "**연계 소스**: worldmonitor.app/api/rss-proxy, finance.worldmonitor.app API",
+            f"**지도 뷰**: {WM_MAP_VIEW_URL}",
         ]
     )
 

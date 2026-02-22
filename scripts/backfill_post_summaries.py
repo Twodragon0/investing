@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 
+import argparse
 import os
 import re
-from typing import List, Tuple
+from typing import Dict, List, Optional, Tuple
 
 from common.config import setup_logging
+from common.markdown_utils import markdown_table
 
 
 logger = setup_logging("backfill_post_summaries")
@@ -12,10 +14,13 @@ logger = setup_logging("backfill_post_summaries")
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 POSTS_DIR = os.path.join(REPO_ROOT, "_posts")
 SUMMARY_TITLE = "전체 뉴스 요약"
+ANALYSIS_TITLE = "내용 분석"
+URL_SUMMARY_TITLE = "URL 요약"
 
 SECTION_PRIORITY = [
     "핵심 요약",
     "오늘의 핵심",
+    "전체 뉴스 요약",
     "뉴스 내용 기반 핵심 요약",
     "시장 인사이트",
     "오늘의 시장 인사이트",
@@ -23,9 +28,42 @@ SECTION_PRIORITY = [
     "규제 인사이트",
     "정책 영향 분석",
     "소셜 동향 분석",
+    "주요 소셜 미디어 트렌드",
+    "정치·경제 동향",
     "DeFi 시장 인사이트",
     "한눈에 보기",
 ]
+
+IMPACT_RANK = {
+    "높음": 0,
+    "중간~높음": 1,
+    "중간": 2,
+    "낮음~중간": 3,
+}
+
+THEME_RANK = {
+    "지정학/안보": 0,
+    "에너지": 1,
+    "금융시장": 1,
+    "정책/법률": 2,
+    "사회/기타": 3,
+}
+
+
+def _get_front_list(front: Dict[str, object], key: str) -> List[str]:
+    value = front.get(key, [])
+    if isinstance(value, list):
+        return [str(v) for v in value]
+    if isinstance(value, str) and value:
+        return [value]
+    return []
+
+
+def _get_front_date(front: Dict[str, object]) -> str:
+    date_val = front.get("date", "")
+    if not isinstance(date_val, str):
+        return ""
+    return date_val[:10]
 
 
 def split_frontmatter(content: str) -> Tuple[str, str]:
@@ -39,11 +77,38 @@ def split_frontmatter(content: str) -> Tuple[str, str]:
     return front, body
 
 
+def parse_frontmatter(frontmatter: str) -> Dict[str, object]:
+    data: Dict[str, object] = {}
+    if not frontmatter:
+        return data
+    for raw in frontmatter.splitlines():
+        line = raw.strip()
+        if not line or line == "---" or ":" not in line:
+            continue
+        key, value = line.split(":", 1)
+        key = key.strip()
+        value = value.strip().strip('"')
+        if value.startswith("[") and value.endswith("]"):
+            inner = value[1:-1].strip()
+            items = []
+            if inner:
+                for part in inner.split(","):
+                    item = part.strip().strip('"')
+                    if item:
+                        items.append(item)
+            data[key] = items
+        else:
+            data[key] = value
+    return data
+
+
 def clean_text(text: str) -> str:
     text = re.sub(r"\*\*(.+?)\*\*", r"\1", text)
     text = re.sub(r"`(.+?)`", r"\1", text)
     text = re.sub(r"\[(.+?)\]\([^\)]+\)", r"\1", text)
     text = re.sub(r"<[^>]+>", "", text)
+    text = re.sub(r"Sponsored by[^.]*", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bSponsored\b.*", "", text, flags=re.IGNORECASE)
     return text.strip()
 
 
@@ -55,9 +120,275 @@ def is_noise_text(text: str) -> bool:
         return True
     if re.match(r"^\*?총\s*\d+건\s*수집\*?$", stripped):
         return True
+    if stripped.startswith("![") or stripped.startswith("##"):
+        return True
+    if any(
+        key in stripped.lower()
+        for key in ["news-briefing", "source-distribution", "market-heatmap"]
+    ):
+        return True
     if stripped.startswith("데이터 수집"):
         return True
     return False
+
+
+def normalize_title(title: str) -> str:
+    title = clean_text(title)
+    title = title.replace("...", " ").replace("…", " ")
+    title = re.sub(r"\s+-\s+[^-]+$", "", title)
+    title = re.sub(r"\s*\((?:상보|종합|라이브|Live.*?|Updated.*?)\)\s*", " ", title)
+    title = re.sub(r"\s*\[(?:상보|종합|속보|단독|포토)\]\s*", " ", title)
+    title = re.sub(r"\s+", " ", title)
+    return title.strip()
+
+
+def normalize_summary(text: str) -> str:
+    text = clean_text(text)
+    text = text.replace("...", " ").replace("…", " ")
+    text = re.sub(r"\s+", " ", text).strip()
+    if not text:
+        return ""
+    sentences = re.split(r"(?<=[.!?])\s+|(?<=다\.)\s+|(?<=니다\.)\s+", text)
+    sentence = sentences[0].strip() if sentences else text
+    if len(sentence) < 20 and len(sentences) > 1:
+        sentence = (sentence + " " + sentences[1]).strip()
+    if not sentence:
+        return ""
+    if not re.search(r"[.!?]$", sentence) and not sentence.endswith("다"):
+        if re.search(r"[가-힣]", sentence):
+            sentence += "입니다."
+        else:
+            sentence += "."
+    return sentence
+
+
+def summarize_from_title(title: str) -> str:
+    title = normalize_title(title)
+    low = title.lower()
+    subject = ""
+
+    if any(k in low for k in ["bitcoin", "btc", "비트코인"]):
+        subject = "비트코인"
+    elif any(k in low for k in ["ethereum", "eth", "이더리움"]):
+        subject = "이더리움"
+    elif any(k in low for k in ["nasdaq", "나스닥"]):
+        subject = "나스닥"
+    elif any(k in low for k in ["s&p", "s&p 500", "sp500", "s&p500"]):
+        subject = "S&P 500"
+    elif any(k in low for k in ["fed", "fomc", "연준"]):
+        subject = "미 연준"
+    elif any(k in low for k in ["sec", "cftc", "fsa", "fsc", "금융위원회", "금감원"]):
+        subject = "규제 당국"
+    elif any(k in low for k in ["etf", "상장지수펀드"]):
+        subject = "ETF"
+    elif any(
+        k in low
+        for k in [
+            "binance",
+            "coinbase",
+            "kraken",
+            "upbit",
+            "bithumb",
+            "bybit",
+            "okx",
+            "exchange",
+            "거래소",
+        ]
+    ):
+        subject = "거래소"
+    elif any(k in low for k in ["환율", "dxy", "달러", "usd/krw"]):
+        subject = "환율"
+    elif any(k in low for k in ["crypto", "cryptocurrency", "암호화폐"]):
+        subject = "암호화폐"
+    elif any(k in low for k in ["금리", "cpi", "pce", "inflation", "yield"]):
+        subject = "거시 지표"
+    elif any(k in low for k in ["hack", "exploit", "breach", "ransom", "해킹", "취약"]):
+        subject = "보안 사고"
+
+    price_up = any(
+        k in low
+        for k in [
+            "rises",
+            "rise",
+            "gains",
+            "surge",
+            "surges",
+            "jump",
+            "jumps",
+            "climb",
+            "climbs",
+            "rebound",
+            "up",
+            "상승",
+            "급등",
+            "반등",
+        ]
+    )
+    price_down = any(
+        k in low
+        for k in [
+            "falls",
+            "fall",
+            "drops",
+            "drop",
+            "slump",
+            "slides",
+            "slide",
+            "tumbles",
+            "tumble",
+            "crash",
+            "sell-off",
+            "down",
+            "하락",
+            "급락",
+            "폭락",
+        ]
+    )
+
+    if price_up:
+        return normalize_summary(f"{subject or '시장'} 상승 흐름을 다룬 소식")
+    if price_down:
+        return normalize_summary(f"{subject or '시장'} 하락 흐름을 다룬 소식")
+    if any(k in low for k in ["tariff", "관세", "trade war", "무역"]):
+        return normalize_summary("무역·관세 이슈")
+    if any(k in low for k in ["crisis", "fear", "panic", "불안", "공포"]):
+        return normalize_summary("시장 심리·불안 이슈")
+    if any(k in low for k in ["hack", "exploit", "breach", "ransom", "해킹", "취약"]):
+        return normalize_summary("보안 사고·취약점 이슈")
+    if any(
+        k in low for k in ["lawsuit", "court", "판결", "소송", "charged", "accused"]
+    ):
+        return normalize_summary("법적 분쟁·혐의 이슈")
+    if any(k in low for k in ["listing", "listed", "상장", "상장폐지", "delist"]):
+        return normalize_summary("상장·상폐 관련 업데이트")
+    if any(
+        k in low
+        for k in [
+            "approval",
+            "approve",
+            "launch",
+            "introduce",
+            "발표",
+            "공시",
+            "announcement",
+        ]
+    ):
+        return normalize_summary(f"{subject or '기관'} 출시·공시 소식")
+    if any(
+        k in low
+        for k in [
+            "buy",
+            "bought",
+            "sell",
+            "selling",
+            "acquire",
+            "stake",
+            "holdings",
+            "treasury",
+            "매수",
+            "매도",
+        ]
+    ):
+        return normalize_summary(f"{subject or '기관'} 매수·매도 동향")
+    if any(
+        k in low
+        for k in ["whale", "wallet", "transfer", "inflow", "outflow", "고래", "이체"]
+    ):
+        return normalize_summary("고래·온체인 이동 이슈")
+    if any(k in low for k in ["regulation", "regulatory", "법안", "규제", "정책"]):
+        return normalize_summary(f"{subject or '규제'} 관련 정책·규제 동향")
+    if any(k in low for k in ["report", "guidance", "briefing", "리포트", "보고"]):
+        return normalize_summary(f"{subject or '기관'} 보고서 내용")
+    if subject:
+        return normalize_summary(f"{subject} 관련 소식")
+    return normalize_summary(f"{title} 관련 소식")
+
+
+def extract_links(lines: List[str]) -> List[Tuple[str, str, str, str]]:
+    link_re = re.compile(r"\[([^\]]+)\]\((https?://[^)]+)\)")
+    html_re = re.compile(r"<a href=\"(https?://[^\"]+)\"[^>]*>([^<]+)</a>")
+    source_re = re.compile(r"source-tag\">([^<]+)")
+    results: List[Tuple[str, str, str, str]] = []
+
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        matches = list(link_re.finditer(line))
+        html_matches = list(html_re.finditer(line))
+        if not matches and not html_matches:
+            i += 1
+            continue
+
+        link_items = []
+        for m in matches:
+            link_items.append((m.group(1), m.group(2)))
+        for m in html_matches:
+            link_items.append((m.group(2), m.group(1)))
+
+        for title, url in link_items:
+            desc = ""
+            source = ""
+            for look_ahead in range(1, 5):
+                if i + look_ahead >= len(lines):
+                    break
+                nxt = lines[i + look_ahead].strip()
+                if not nxt:
+                    if desc:
+                        break
+                    continue
+                if nxt.startswith("## ") or nxt.startswith("### "):
+                    break
+                if "![" in nxt:
+                    continue
+                if link_re.search(nxt) or html_re.search(nxt):
+                    break
+                src_match = source_re.search(nxt)
+                if src_match:
+                    source = clean_text(src_match.group(1))
+                    continue
+                if nxt.startswith("<"):
+                    continue
+                if not desc:
+                    desc = nxt
+            results.append((title, url, desc, source))
+        i += 1
+
+    seen = set()
+    deduped = []
+    for title, url, desc, source in results:
+        if url in seen:
+            continue
+        seen.add(url)
+        deduped.append((title, url, desc, source))
+    return deduped
+
+
+def build_url_summary(lines: List[str]) -> List[str]:
+    items = extract_links(lines)
+    summaries = []
+    for title, url, desc, _source in items:
+        summary = ""
+        if desc and not is_noise_text(desc):
+            summary = normalize_summary(desc)
+        if summary:
+            norm_summary = normalize_title(summary)
+            norm_title = normalize_title(title)
+            if norm_summary == norm_title:
+                summary = ""
+            elif (
+                norm_title
+                and norm_title in norm_summary
+                and len(norm_summary) <= len(norm_title) + 20
+            ):
+                summary = ""
+        if not summary:
+            summary = summarize_from_title(title)
+        if summary and not re.search(r"[가-힣]", summary):
+            summary = summarize_from_title(title)
+        if not summary:
+            continue
+        summaries.append(f"- [{normalize_title(title)}]({url}) — {summary}")
+    return summaries
 
 
 def find_heading_index(lines: List[str], title: str) -> int:
@@ -169,6 +500,25 @@ def extract_total_count(body: str) -> str:
     return ""
 
 
+def has_urgent_alert(body: str) -> bool:
+    return "긴급 알림" in body or "alert-urgent" in body
+
+
+def build_content_analysis(lines: List[str], body: str) -> List[str]:
+    analysis = []
+    total = extract_total_count(body)
+    if total:
+        analysis.append(f"총 {total}건 규모로 이슈를 정리했습니다.")
+    themes = extract_theme_names(lines)
+    if themes:
+        analysis.append(f"상위 테마는 {', '.join(themes)}로 집중도가 높습니다.")
+    if has_urgent_alert(body):
+        analysis.append("긴급 알림이 포함되어 우선순위 대응이 필요합니다.")
+    if not analysis:
+        analysis.append("핵심 이슈를 중심으로 요약과 링크를 정리했습니다.")
+    return analysis
+
+
 def extract_intro_bullets(lines: List[str], limit: int = 2) -> List[str]:
     paragraphs: List[str] = []
     buffer: List[str] = []
@@ -197,6 +547,110 @@ def extract_intro_bullets(lines: List[str], limit: int = 2) -> List[str]:
         if len(bullets) >= limit:
             break
     return bullets
+
+
+def is_social_media_post(front: Dict[str, object], body: str) -> bool:
+    title = str(front.get("title", ""))
+    tags = _get_front_list(front, "tags")
+    if "social-media" in tags:
+        return True
+    if "소셜 미디어 동향" in title:
+        return True
+    return "소셜 미디어" in body and "텔레그램" in body
+
+
+def _extract_social_counts(body: str) -> Dict[str, str]:
+    counts = {}
+    patterns = {
+        "total": r"총\s*(\d{1,5})\s*건",
+        "telegram": r"텔레그램\s*(\d{1,5})\s*건",
+        "social": r"소셜\s*미디어\s*(\d{1,5})\s*건",
+        "political": r"정치·경제\s*(\d{1,5})\s*건",
+    }
+    for key, pattern in patterns.items():
+        match = re.search(pattern, body)
+        if match:
+            counts[key] = match.group(1)
+    return counts
+
+
+def _extract_social_themes(body: str, limit: int = 3) -> List[str]:
+    themes = []
+    for match in re.finditer(r"<strong>([^<]+)</strong>\s*\(\d+건\)", body):
+        theme = clean_text(match.group(1))
+        if theme and theme not in themes:
+            themes.append(theme)
+        if len(themes) >= limit:
+            break
+    return themes
+
+
+def _extract_urgent_count(body: str) -> int:
+    if "긴급 알림" not in body:
+        return 0
+    block = re.search(r"긴급 알림.*?(</ul>|\n\n)", body, flags=re.DOTALL)
+    if not block:
+        return 1
+    return len(re.findall(r"<li>", block.group(0))) or 1
+
+
+def _trim_sentence(text: str, limit: int = 110) -> str:
+    text = normalize_summary(text)
+    if len(text) <= limit:
+        return text
+    return text[: limit - 3].rstrip() + "..."
+
+
+def build_social_summary(body: str) -> List[str]:
+    counts = _extract_social_counts(body)
+    total = counts.get("total", "-")
+    telegram = counts.get("telegram", "-")
+    social = counts.get("social", "-")
+    political = counts.get("political", "-")
+    themes = _extract_social_themes(body)
+    urgent = _extract_urgent_count(body)
+
+    theme_text = ", ".join(themes) if themes else "정치/정책·매크로 중심"
+    urgent_text = f"긴급 알림 {urgent}건" if urgent else "긴급 알림 없음"
+    has_usdt = "USDT" in body
+    has_whale = "whale" in body.lower() or "고래" in body
+
+    lines = [
+        _trim_sentence(
+            "오늘 수집된 총 {total}건 중 텔레그램 {telegram}건, 소셜 {social}건, 정치·경제 {political}건으로 "
+            "정치/정책과 매크로/금리 이슈가 집중되었고 비트코인·거래소 관련 발언과 온체인 이동이 "
+            "단기 변동성 요인으로 부각되었습니다.".format(
+                total=total,
+                telegram=telegram,
+                social=social,
+                political=political,
+            ),
+            160,
+        ),
+        "",
+        _trim_sentence(
+            "온체인 측면에서는 {usdt} {whale} 신호가 동시 포착되어 유동성 재배치 가능성이 있습니다. "
+            "커뮤니티 내 규제 법안·정책 발언과 대형 매수/가격 전망이 혼재된 심리 구간입니다.".format(
+                usdt="대규모 USDT 이동" if has_usdt else "스테이블코인 이동",
+                whale="및 고래 거래소 이동" if has_whale else "및 대형 지갑 이동",
+            ),
+            150,
+        ),
+        "",
+        "**핵심 신호 정리**",
+        f"- 정책/규제: {theme_text} 헤드라인이 리스크 프라이싱에 직접 반영될 가능성.",
+        "- 매크로/유동성: 금리/유동성 발언과 스테이블코인 이동이 단기 수급 변동성 확대 구간.",
+        "- 온체인/수급: 거래소 유입·대형 지갑 이동이 매도 압력 또는 재배치 신호로 해석 가능.",
+        "- 시장 기대감: 장기 가격 전망·매수 뉴스 확산으로 심리 변동폭 확대.",
+        "",
+        "**오늘의 체크리스트**",
+        "- 정책/관세 헤드라인과 암호화폐·미국주 동조 반응 확인",
+        "- 거래소 유입 증가 여부(단기 급락/반등 신호) 모니터링",
+        "- 스테이블코인 발행·이동 속도 변화(유동성 진입 신호) 추적",
+        f"- {urgent_text}에 대한 선별 모니터링",
+    ]
+
+    return lines
 
 
 def build_summary(lines: List[str], body: str) -> List[str]:
@@ -264,6 +718,29 @@ def insert_summary(lines: List[str], summary_lines: List[str]) -> List[str]:
     return lines[:end] + [""] + summary_block + lines[end:]
 
 
+def insert_social_summary(lines: List[str], summary_lines: List[str]) -> List[str]:
+    if not summary_lines:
+        return lines
+
+    summary_block = [f"## {SUMMARY_TITLE}", ""]
+    summary_block.extend(summary_lines)
+    summary_block.append("")
+
+    for title in ("한눈에 보기", "핵심 요약"):
+        idx = find_heading_index(lines, title)
+        if idx != -1:
+            end = find_section_end(lines, idx)
+            return lines[:end] + [""] + summary_block + lines[end:]
+
+    start = 0
+    while start < len(lines) and not lines[start].strip():
+        start += 1
+    end = start
+    while end < len(lines) and lines[end].strip():
+        end += 1
+    return lines[:end] + [""] + summary_block + lines[end:]
+
+
 def remove_existing_summary(lines: List[str]) -> Tuple[List[str], bool]:
     idx = find_heading_index(lines, SUMMARY_TITLE)
     if idx == -1:
@@ -272,7 +749,162 @@ def remove_existing_summary(lines: List[str]) -> Tuple[List[str], bool]:
     return lines[:idx] + lines[end:], True
 
 
-def process_post(filepath: str) -> bool:
+def remove_existing_url_summary(lines: List[str]) -> Tuple[List[str], bool]:
+    idx = find_heading_index(lines, URL_SUMMARY_TITLE)
+    if idx == -1:
+        return lines, False
+    end = find_section_end(lines, idx)
+    return lines[:idx] + lines[end:], True
+
+
+def remove_existing_analysis(lines: List[str]) -> Tuple[List[str], bool]:
+    idx = find_heading_index(lines, ANALYSIS_TITLE)
+    if idx == -1:
+        return lines, False
+    end = find_section_end(lines, idx)
+    return lines[:idx] + lines[end:], True
+
+
+def insert_analysis(lines: List[str], analysis_lines: List[str]) -> List[str]:
+    if not analysis_lines:
+        return lines
+    block = [f"## {ANALYSIS_TITLE}", ""]
+    block.extend([f"- {line}" for line in analysis_lines])
+    block.append("")
+    idx = find_heading_index(lines, SUMMARY_TITLE)
+    if idx != -1:
+        end = find_section_end(lines, idx)
+        return lines[:end] + [""] + block + lines[end:]
+    return lines + [""] + block
+
+
+def insert_url_summary(lines: List[str], summary_lines: List[str]) -> List[str]:
+    if not summary_lines:
+        return lines
+
+    block = [f"## {URL_SUMMARY_TITLE}", ""]
+    block.extend(summary_lines)
+    block.append("")
+
+    idx = find_heading_index(lines, ANALYSIS_TITLE)
+    if idx != -1:
+        end = find_section_end(lines, idx)
+        return lines[:end] + [""] + block + lines[end:]
+    idx = find_heading_index(lines, SUMMARY_TITLE)
+    if idx != -1:
+        end = find_section_end(lines, idx)
+        return lines[:end] + [""] + block + lines[end:]
+
+    start = 0
+    while start < len(lines) and not lines[start].strip():
+        start += 1
+    end = start
+    while end < len(lines) and lines[end].strip():
+        end += 1
+    return lines[:end] + [""] + block + lines[end:]
+
+
+def _parse_table(lines: List[str], start_idx: int) -> Tuple[int, List[List[str]]]:
+    rows: List[List[str]] = []
+    idx = start_idx
+    if idx >= len(lines):
+        return start_idx, rows
+
+    header = lines[idx].strip()
+    if not (header.startswith("|") and header.endswith("|")):
+        return start_idx, rows
+
+    idx += 1
+    if idx >= len(lines):
+        return start_idx, rows
+
+    sep = lines[idx].strip()
+    if "---" not in sep:
+        return start_idx, rows
+
+    idx += 1
+    while idx < len(lines):
+        line = lines[idx].strip()
+        if not line or not (line.startswith("|") and line.endswith("|")):
+            break
+        cells = [c.strip() for c in line.strip("|").split("|")]
+        rows.append(cells)
+        idx += 1
+
+    return idx, rows
+
+
+def reorder_worldmonitor_table(
+    lines: List[str],
+    front: Dict[str, object],
+    wm_from: Optional[str] = None,
+    wm_to: Optional[str] = None,
+) -> List[str]:
+    idx = find_heading_index(lines, "주요 이슈")
+    if idx == -1:
+        return lines
+
+    title = str(front.get("title", ""))
+    tags = _get_front_list(front, "tags")
+    if (
+        "worldmonitor" not in tags
+        and "WorldMonitor" not in title
+        and "월드모니터" not in title
+    ):
+        return lines
+
+    post_date = _get_front_date(front)
+    if wm_from and post_date and post_date < wm_from:
+        return lines
+    if wm_to and post_date and post_date > wm_to:
+        return lines
+
+    table_start = idx + 1
+    while table_start < len(lines) and not lines[table_start].strip().startswith("|"):
+        if lines[table_start].strip().startswith("## "):
+            return lines
+        table_start += 1
+
+    if table_start >= len(lines):
+        return lines
+
+    header = lines[table_start].strip()
+    if "시장 영향" not in header or "테마" not in header or "이슈" not in header:
+        return lines
+
+    table_end, rows = _parse_table(lines, table_start)
+    if not rows:
+        return lines
+
+    def _rank_cell(cells: List[str]) -> Tuple[int, int]:
+        impact = clean_text(cells[3]) if len(cells) > 3 else ""
+        theme = clean_text(cells[2]) if len(cells) > 2 else ""
+        return (IMPACT_RANK.get(impact, 9), THEME_RANK.get(theme, 9))
+
+    sorted_rows = sorted(rows, key=_rank_cell)
+
+    rebuilt = []
+    for i, cells in enumerate(sorted_rows, 1):
+        if cells:
+            cells[0] = str(i)
+        rebuilt.append(cells)
+
+    table_text = markdown_table(
+        ["#", "이슈", "테마", "시장 영향", "출처"],
+        rebuilt,
+        aligns=["center", "left", "center", "center", "left"],
+    )
+    new_lines = lines[:table_start]
+    new_lines.extend(table_text.splitlines())
+    new_lines.extend(lines[table_end:])
+    return new_lines
+
+
+def process_post(
+    filepath: str,
+    wm_from: Optional[str] = None,
+    wm_to: Optional[str] = None,
+) -> bool:
     with open(filepath, "r", encoding="utf-8") as f:
         content = f.read()
 
@@ -280,11 +912,26 @@ def process_post(filepath: str) -> bool:
     if not body:
         return False
 
+    front_data = parse_frontmatter(front)
+
     lines = body.splitlines()
     stripped_lines, _ = remove_existing_summary(lines)
+    stripped_lines, _ = remove_existing_analysis(stripped_lines)
+    stripped_lines, _ = remove_existing_url_summary(stripped_lines)
     rebuilt_body = "\n".join(stripped_lines)
-    summary_lines = build_summary(stripped_lines, rebuilt_body)
-    updated_lines = insert_summary(stripped_lines, summary_lines)
+    if is_social_media_post(front_data, rebuilt_body):
+        summary_lines = build_social_summary(rebuilt_body)
+        updated_lines = insert_social_summary(stripped_lines, summary_lines)
+    else:
+        summary_lines = build_summary(stripped_lines, rebuilt_body)
+        updated_lines = insert_summary(stripped_lines, summary_lines)
+    analysis_lines = build_content_analysis(updated_lines, rebuilt_body)
+    updated_lines = insert_analysis(updated_lines, analysis_lines)
+    url_summary_lines = build_url_summary(updated_lines)
+    updated_lines = insert_url_summary(updated_lines, url_summary_lines)
+    updated_lines = reorder_worldmonitor_table(
+        updated_lines, front_data, wm_from, wm_to
+    )
 
     if updated_lines == lines:
         return False
@@ -296,6 +943,21 @@ def process_post(filepath: str) -> bool:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="Backfill post summaries and reorder WorldMonitor tables."
+    )
+    parser.add_argument(
+        "--wm-from",
+        dest="wm_from",
+        help="Reorder WorldMonitor tables from date (YYYY-MM-DD).",
+    )
+    parser.add_argument(
+        "--wm-to",
+        dest="wm_to",
+        help="Reorder WorldMonitor tables up to date (YYYY-MM-DD).",
+    )
+    args = parser.parse_args()
+
     if not os.path.isdir(POSTS_DIR):
         logger.warning("Posts directory not found: %s", POSTS_DIR)
         return
@@ -307,7 +969,7 @@ def main() -> None:
             continue
         total += 1
         filepath = os.path.join(POSTS_DIR, filename)
-        if process_post(filepath):
+        if process_post(filepath, wm_from=args.wm_from, wm_to=args.wm_to):
             updated += 1
 
     logger.info("Checked %d posts, updated %d", total, updated)
