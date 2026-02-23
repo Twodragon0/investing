@@ -43,6 +43,7 @@ image: "/assets/images/generated/market-heatmap-2026-02-14.png"
 
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI: 5,507.01 (-15.26, -0.28%)

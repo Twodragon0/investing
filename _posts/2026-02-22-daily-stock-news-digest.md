@@ -26,6 +26,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-22.png"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 한국 증시는 KOSPI 5,808.53 (+2.31%)으로 마감했습니다.
