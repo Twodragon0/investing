@@ -849,6 +849,24 @@ def remove_missing_local_images(lines: List[str]) -> List[str]:
     return cleaned
 
 
+def list_zero_byte_images() -> List[str]:
+    assets_dir = os.path.join(REPO_ROOT, "assets", "images", "generated")
+    zero_files: List[str] = []
+    if not os.path.isdir(assets_dir):
+        return zero_files
+
+    for root, _dirs, files in os.walk(assets_dir):
+        for filename in files:
+            path = os.path.join(root, filename)
+            try:
+                if os.path.getsize(path) == 0:
+                    zero_files.append(os.path.relpath(path, REPO_ROOT))
+            except OSError:
+                continue
+
+    return sorted(zero_files)
+
+
 def remove_existing_summary(lines: List[str]) -> Tuple[List[str], bool]:
     idx = find_heading_index(lines, SUMMARY_TITLE)
     if idx == -1:
@@ -1012,6 +1030,7 @@ def process_post(
     filepath: str,
     wm_from: Optional[str] = None,
     wm_to: Optional[str] = None,
+    clean_images_only: bool = False,
 ) -> bool:
     with open(filepath, "r", encoding="utf-8") as f:
         content = f.read()
@@ -1023,6 +1042,15 @@ def process_post(
     front_data = parse_frontmatter(front)
 
     lines = body.splitlines()
+    if clean_images_only:
+        updated_lines = remove_missing_local_images(lines)
+        if updated_lines == lines:
+            return False
+        updated_content = front + "\n".join(updated_lines).rstrip() + "\n"
+        with open(filepath, "w", encoding="utf-8") as f:
+            f.write(updated_content)
+        return True
+
     stripped_lines, _ = remove_existing_summary(lines)
     stripped_lines, _ = remove_existing_analysis(stripped_lines)
     stripped_lines, _ = remove_existing_url_summary(stripped_lines)
@@ -1065,7 +1093,30 @@ def main() -> None:
         dest="wm_to",
         help="Reorder WorldMonitor tables up to date (YYYY-MM-DD).",
     )
+    parser.add_argument(
+        "--clean-images-only",
+        action="store_true",
+        help="Remove missing or zero-byte local images only.",
+    )
+    parser.add_argument(
+        "--zero-image-report",
+        dest="zero_image_report",
+        help="Write a report of zero-byte images to the given path.",
+    )
     args = parser.parse_args()
+
+    if args.zero_image_report:
+        report_path = args.zero_image_report
+        os.makedirs(os.path.dirname(report_path), exist_ok=True)
+        zero_files = list_zero_byte_images()
+        with open(report_path, "w", encoding="utf-8") as f:
+            f.write("Zero-byte images\n")
+            f.write("=================\n")
+            if not zero_files:
+                f.write("None\n")
+            else:
+                for rel_path in zero_files:
+                    f.write(f"- {rel_path}\n")
 
     if not os.path.isdir(POSTS_DIR):
         logger.warning("Posts directory not found: %s", POSTS_DIR)
@@ -1078,7 +1129,12 @@ def main() -> None:
             continue
         total += 1
         filepath = os.path.join(POSTS_DIR, filename)
-        if process_post(filepath, wm_from=args.wm_from, wm_to=args.wm_to):
+        if process_post(
+            filepath,
+            wm_from=args.wm_from,
+            wm_to=args.wm_to,
+            clean_images_only=args.clean_images_only,
+        ):
             updated += 1
 
     logger.info("Checked %d posts, updated %d", total, updated)

@@ -1,0 +1,3 @@
+Zero-byte images
+=================
+- assets/images/generated/.gitkeep
