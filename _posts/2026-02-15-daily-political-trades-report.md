@@ -55,6 +55,7 @@ lang: "ko"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **5건** 수집
@@ -66,16 +67,16 @@ lang: "ko"
 
 - 총 5건의 뉴스 중 🔵 규제/정책, 🏛️ 정치/정책 테마가 가장 많은 비중을 차지합니다.
 - 긴급 이슈 2건이 감지되어 우선 확인이 필요합니다.
-- 주요 테마: 🔵 규제/정책, 🏛️ 정치/정책
+- 본문은 전체 뉴스 요약, 정책 영향 분석, 한눈에 보기 등 3개 섹션으로 구성되어 있습니다.
 
 
 ## URL 요약
 
 - [트럼프 “유권자 신분증 의무화, 행정명령으로 추진”](https://news.google.com/rss/articles/CBMieEFVX3lxTFA3bGU1S21MVkNDV0paalVVSlh5TndpRlIxZllXQzN6VkhnNk45b2Z5b0MzU3ZtRHMzSURwZ213bkdDWUVXbGZCVWh5VjloVXhGWFRnVFVQVHBYTUt0MWVCSjM1eDdvVXN0TTV3QWxvNjRRT2lNRDFrQg?oc=5) — 트럼프 “유권자 신분증 의무화, 행정명령으로 추진”입니다.
-- [Congress’s Rejection of Trump’s Canada “Emergency” Is a Welcome—but Woefully Insufficient—Move](https://news.google.com/rss/articles/CBMipgFBVV95cUxQbjNUb2MxTFlWZDM0RVc1SzVlSkVhNmJVcHRNMDBWU21DZHJSTy12QW93Ny0xTW9tejVjQjAyMko3bnd3WFNBMlVGcVpGLTBQMTF4SmJKWDlmMkNEemJGSXVxZWdFcUh4Z3hpcHlaNGs0RUR3ejA0V2YtS2lzM1FtT1duQUpqQVpzckk5THlNUzVmUnNjdG5hVGdEdU5ZeWdiTnUwN19R?oc=5) — 트럼프 — Congress’s Rejection of Trump’s Canada “Emergency” Is a입니다.
+- [Congress’s Rejection of Trump’s Canada “Emergency” Is a Welcome—but Woefully Insufficient—Move](https://news.google.com/rss/articles/CBMipgFBVV95cUxQbjNUb2MxTFlWZDM0RVc1SzVlSkVhNmJVcHRNMDBWU21DZHJSTy12QW93Ny0xTW9tejVjQjAyMko3bnd3WFNBMlVGcVpGLTBQMTF4SmJKWDlmMkNEemJGSXVxZWdFcUh4Z3hpcHlaNGs0RUR3ejA0V2YtS2lzM1FtT1duQUpqQVpzckk5THlNUzVmUnNjdG5hVGdEdU5ZeWdiTnUwN19R?oc=5) — 트럼프 — Congress’s Rejection of Trump’s Canada “Emergency”.
 - [트럼프 "유권자 신분증 의무화, 행정 명령으로 추진"](https://news.google.com/rss/articles/CBMiT0FVX3lxTE82VGxlZmVsTjhwLW92bm8xaENlZ1Ztak5XWUpWNUZ6WFNXckdXcG95RnU4SV95cGZtNkNUOXJVb3pxZVZmQzhtTGEwTlRETWM?oc=5) — 트럼프 "유권자 신분증 의무화, 행정 명령으로 추진"입니다.
 - [SEC, 암호화폐 자산 ‘비증권’ 분류 추진시장 변화 예고](https://news.google.com/rss/articles/CBMic0FVX3lxTE55NzRqWkItSjBzcUthcjN1S1cwQXlfM2h4WklzTWZWa0hkdU5rOWFGUElUZ2J1OHhXZENPZ3lHLVRINW15ZGFCNkh2clF0TDFDT3JaNWxOQ2pqVV9PclFYY1dkUllpS2NnNU9rM0s1YkJ6SnM?oc=5) — SEC, 암호화폐 자산 ‘비증권’ 분류 추진시장 변화 예고입니다.
-- [TTEK SEC Filings - Tetra Tech 10-K, 10-Q, 8-K Forms](https://news.google.com/rss/articles/CBMiZkFVX3lxTE5QekJJVWVSb3UyY2MwcS1VTndjRDl3ZVlGRFd1Yk14TmszVFdsRFdKS2Z3d3h1b1FvTUlJQ0ZRejlkOGdHa0l0ZGIySk9USHNUZnVLa1RzWTF1WVNsV05rLXl5QjhuQQ?oc=5) — 규제 당국 — TTEK SEC Filings - Tetra Tech 10-K, 10-Q, 8-K Forms입니다.
+- [TTEK SEC Filings - Tetra Tech 10-K, 10-Q, 8-K Forms](https://news.google.com/rss/articles/CBMiZkFVX3lxTE5QekJJVWVSb3UyY2MwcS1VTndjRDl3ZVlGRFd1Yk14TmszVFdsRFdKS2Z3d3h1b1FvTUlJQ0ZRejlkOGdHa0l0ZGIySk9USHNUZnVLa1RzWTF1WVNsV05rLXl5QjhuQQ?oc=5) — 규제 당국 — TTEK SEC Filings - Tetra Tech 10-K, 10-Q, 8-K Forms.
 
 ## 트럼프 행정명령/정책
 

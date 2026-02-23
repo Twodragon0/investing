@@ -53,6 +53,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-20.png"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 주요 테마: 📈 가격/시장, 🤖 AI/기술, 📊 매크로/금리
@@ -62,7 +63,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-20.png"
 
 ## 내용 분석
 
-- 주요 테마: 📈 가격/시장, 🤖 AI/기술, 📊 매크로/금리
+- 본문은 전체 뉴스 요약, 한눈에 보기 등 2개 섹션으로 구성되어 있습니다.
 
 ## 시장 데이터
 

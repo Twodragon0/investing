@@ -20,24 +20,25 @@ image: "/assets/images/generated/defi-tvl-dashboard-2026-02-20.png"
 
 ## 내용 분석
 
-- Liquid Staking이 시장의 핵심 인프라로 자리잡음: Lido($33.92B)와 Binance staked ETH($11.15B)를 합산하면 Liquid Staking 카테고리가 전체 TVL의 18.2%($45.07B)를 차지, 단일 카테고리 최대 규모입니다. ETH 스테이...
+- 본문은 전체 뉴스 요약, DeFi 시장 인사이트 등 2개 섹션으로 구성되어 있습니다.
+- 총 11개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.
 
 
 ## URL 요약
 
 - [Lido](https://defillama.com/protocol/lido) — Lido.
 - [AAVE](https://defillama.com/protocol/aave) — AAVE.
-- [EigenLayer](https://defillama.com/protocol/eigenlayer) — EigenLayer.
-- [WBTC](https://defillama.com/protocol/wbtc) — 비트코인 — WBTC입니다.
-- [ether.fi](https://defillama.com/protocol/ether.fi) — 이더리움 — ether.fi입니다.
-- [Binance staked ETH](https://defillama.com/protocol/binance-staked-eth) — 이더리움 매수·매도 — Binance staked ETH입니다.
+- [EigenLayer](https://defillama.com/protocol/eigenlayer) — Eigen.
+- [WBTC](https://defillama.com/protocol/wbtc) — 비트코인 — WBTC.
+- [ether.fi](https://defillama.com/protocol/ether.fi) — 이더리움 — ether.fi.
+- [Binance staked ETH](https://defillama.com/protocol/binance-staked-eth) — 이더리움 매수·매도 — Binance staked ETH.
 - [Spark](https://defillama.com/protocol/spark) — Spark.
-- [Ethena](https://defillama.com/protocol/ethena) — 이더리움 — Ethena입니다.
+- [Ethena](https://defillama.com/protocol/ethena) — 이더리움 — Ethena.
 - [Hyperliquid L1](https://defillama.com/protocol/hyperliquid) — Hyperliquid L1.
 - [Pendle](https://defillama.com/protocol/pendle) — Pendle.
-- [DeFi Llama](https://defillama.com) — DeFi Llama.
-- [DeFi Llama API Documentation](https://defillama.com/docs/api) — DeFi Llama API Documentation.
-- [DeFi Llama](https://defillama.com/chains) — DeFi Llama.
+- [DeFi Llama](https://defillama.com) — De.
+- [DeFi Llama API Documentation](https://defillama.com/docs/api) — De.
+- [DeFi Llama](https://defillama.com/chains) — De.
 - [AAVE V3](https://defillama.com/protocol/aave-v3) — AAVE V3.
 
 ## 상위 10개 프로토콜 TVL 순위

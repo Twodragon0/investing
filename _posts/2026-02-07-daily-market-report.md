@@ -20,12 +20,12 @@ lang: "ko"
 
 ## 내용 분석
 
-- 극도의 공포 장세: 공포/탐욕 지수 6으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다.
+- 본문은 오늘의 핵심, 전체 뉴스 요약, 오늘의 시장 인사이트 등 3개 섹션으로 구성되어 있습니다.
 
 
 ## URL 요약
 
-- [CoinGecko](https://www.coingecko.com/) — CoinGecko.
+- [CoinGecko](https://www.coingecko.com/) — Coin.
 - [Alternative.me](https://alternative.me/crypto/fear-and-greed-index/) — Alternative.me.
 - [Investing.com](https://kr.investing.com/indices/kospi) — Investing.com.
 - [Yahoo Finance](https://finance.yahoo.com/) — Yahoo Finance.

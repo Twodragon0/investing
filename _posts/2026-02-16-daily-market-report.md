@@ -64,6 +64,7 @@ image: "/assets/images/generated/market-heatmap-2026-02-16.png"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 극도의 공포 장세: 공포/탐욕 지수 12으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다.
@@ -74,18 +75,19 @@ image: "/assets/images/generated/market-heatmap-2026-02-16.png"
 
 ## 내용 분석
 
-- 극도의 공포 장세: 공포/탐욕 지수 12으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다.
+- 본문은 오늘의 핵심, 전체 뉴스 요약, 오늘의 시장 인사이트 등 4개 섹션으로 구성되어 있습니다.
+- 총 11개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.
 
 
 ## URL 요약
 
-- [Spot Bitcoin ETF sees net outflow of $360 million this week, marking four consecutive weeks of net outflows](https://news.google.com/rss/articles/CBMiXkFVX3lxTFBlMnNVSHN4Tk1SMG1JR1RGbGEtSWVrOTU5aDRLUHU4M1hsRG5rUGJ2ZlFuY1hYNGh5RUM3R3RXUmVfNU90UGdpV0Nsa3gyR2FraE1lSkQxQmRyNlk5MWfSAWNBVV95cUxQcXJjdk5FM2J1S281RkpaMkJ0TnVETXhPNGxhMVRqWFRFdm9lUVNDNktTeWM4QlVoWk42ZXU5dm1vb0p3WjVYYm1UV1c3VUpXb3BaNWlmNEd0UnBrOGFsZjRGazg?oc=5) — 온체인 이동 — Spot Bitcoin ETF sees net outflow of $360 million this입니다.
-- [Whale Alert](https://whale-alert.io/) — 온체인 이동 — Whale Alert입니다.
+- [Spot Bitcoin ETF sees net outflow of $360 million this week, marking four consecutive weeks of net outflows](https://news.google.com/rss/articles/CBMiXkFVX3lxTFBlMnNVSHN4Tk1SMG1JR1RGbGEtSWVrOTU5aDRLUHU4M1hsRG5rUGJ2ZlFuY1hYNGh5RUM3R3RXUmVfNU90UGdpV0Nsa3gyR2FraE1lSkQxQmRyNlk5MWfSAWNBVV95cUxQcXJjdk5FM2J1S281RkpaMkJ0TnVETXhPNGxhMVRqWFRFdm9lUVNDNktTeWM4QlVoWk42ZXU5dm1vb0p3WjVYYm1UV1c3VUpXb3BaNWlmNEd0UnBrOGFsZjRGazg?oc=5) — 온체인 이동 — Spot Bitcoin ETF sees net outflow of $360 million.
+- [Whale Alert](https://whale-alert.io/) — 온체인 이동 — Whale Alert.
 - [FRED](https://fred.stlouisfed.org/series/FEDFUNDS) — FRED.
-- [FRED - 10-Year Treasury](https://fred.stlouisfed.org/series/DGS10) — 기관 매수·매도 — FRED - 10-Year Treasury입니다.
+- [FRED - 10-Year Treasury](https://fred.stlouisfed.org/series/DGS10) — 기관 매수·매도 — FRED - 10-Year Treasury.
 - [FRED](https://fred.stlouisfed.org/series/CPIAUCSL) — FRED.
 - [FRED](https://fred.stlouisfed.org/series/VIXCLS) — FRED.
-- [CoinGecko](https://www.coingecko.com/) — CoinGecko.
+- [CoinGecko](https://www.coingecko.com/) — Coin.
 - [Alternative.me](https://alternative.me/crypto/fear-and-greed-index/) — Alternative.me.
 - [Investing.com](https://kr.investing.com/indices/kospi) — Investing.com.
 - [Yahoo Finance](https://finance.yahoo.com/) — Yahoo Finance.

@@ -47,6 +47,7 @@ image: "/assets/images/generated/market-heatmap-2026-02-14.png"
 
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI: 5,507.01 (-15.26, -0.28%)
@@ -57,15 +58,16 @@ image: "/assets/images/generated/market-heatmap-2026-02-14.png"
 
 ## 내용 분석
 
-- KOSPI: 5,507.01 (-15.26, -0.28%)
+- 본문은 오늘의 핵심, 전체 뉴스 요약, 오늘의 시장 인사이트 등 4개 섹션으로 구성되어 있습니다.
+- 총 13개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.
 
 
 ## URL 요약
 
-- [CoinGecko](https://www.coingecko.com/) — CoinGecko.
-- [CoinMarketCap](https://coinmarketcap.com/) — CoinMarketCap.
+- [CoinGecko](https://www.coingecko.com/) — Coin.
+- [CoinMarketCap](https://coinmarketcap.com/) — Coin.
 - [FRED](https://fred.stlouisfed.org/series/FEDFUNDS) — FRED.
-- [FRED - 10-Year Treasury](https://fred.stlouisfed.org/series/DGS10) — 기관 매수·매도 — FRED - 10-Year Treasury입니다.
+- [FRED - 10-Year Treasury](https://fred.stlouisfed.org/series/DGS10) — 기관 매수·매도 — FRED - 10-Year Treasury.
 - [FRED](https://fred.stlouisfed.org/series/CPIAUCSL) — FRED.
 - [FRED](https://fred.stlouisfed.org/series/VIXCLS) — FRED.
 - [Alternative.me](https://alternative.me/crypto/fear-and-greed-index/) — Alternative.me.

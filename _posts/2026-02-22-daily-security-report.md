@@ -24,6 +24,7 @@ lang: "ko"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **1건** 수집
@@ -35,11 +36,12 @@ lang: "ko"
 ## 내용 분석
 
 - 총 1건의 뉴스를 수집하여 주요 이슈를 정리했습니다.
+- 본문은 핵심 요약, 전체 뉴스 요약 등 2개 섹션으로 구성되어 있습니다.
 
 
 ## URL 요약
 
-- [IoTeX Bridge Hacked In Private Key Exploit - Attacker Bridges Stolen Funds to Bitcoin Via THORChain](https://news.google.com/rss/articles/CBMivgFBVV95cUxQZFFpZUwtRHNqOVRXR3pIMU00NXd3RUlmT05xZmhQLVVmTENfNEE2SXRNZGVGQVNDanpMT1Q3SU90YW5UQ2RValhuSEJpMWZtYk9Lc3NwRDhiMkQ2ZDNpQVVDOGs2dE9JS0xEQlQteWtfaFBUNmhaT1czUzlTMXh0Xy00THA5a1lhZWxCcExQR3VBNXhha0d5MUpwOHN6RWI5SXlVMGtXcXFNaXhOWlJMcE9xSDNEYlQxNTBlbFFR?oc=5) — 보안 이슈 — IoTeX Bridge Hacked In Private Key Exploit입니다.
+- [IoTeX Bridge Hacked In Private Key Exploit - Attacker Bridges Stolen Funds to Bitcoin Via THORChain](https://news.google.com/rss/articles/CBMivgFBVV95cUxQZFFpZUwtRHNqOVRXR3pIMU00NXd3RUlmT05xZmhQLVVmTENfNEE2SXRNZGVGQVNDanpMT1Q3SU90YW5UQ2RValhuSEJpMWZtYk9Lc3NwRDhiMkQ2ZDNpQVVDOGs2dE9JS0xEQlQteWtfaFBUNmhaT1czUzlTMXh0Xy00THA5a1lhZWxCcExQR3VBNXhha0d5MUpwOHN6RWI5SXlVMGtXcXFNaXhOWlJMcE9xSDNEYlQxNTBlbFFR?oc=5) — Io.
 
 ## 보안 관련 뉴스
 

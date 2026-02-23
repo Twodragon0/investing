@@ -39,6 +39,7 @@ lang: "ko"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **1건** 수집
@@ -50,11 +51,12 @@ lang: "ko"
 ## 내용 분석
 
 - 총 1건의 뉴스를 수집하여 주요 이슈를 정리했습니다.
+- 본문은 핵심 요약, 전체 뉴스 요약 등 2개 섹션으로 구성되어 있습니다.
 
 
 ## URL 요약
 
-- [AI agents put to the test as crypto hacks hit $3.4 billion](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9ibHk4Q0Q4aElHY1dpWmxwVjZhRFNDWGVGWGUzWlZkNGNQbkpVU2NiZzRYRklzZFhSa1JqTF9ObnhIdGQ0dG0yNlVReEF2aENzRW82T1l5ZVJtT0RyTzVKYVl0OTU5bWM?oc=5) — 보안 이슈 — AI agents put to the test as crypto hacks hit $3.4 billion입니다.
+- [AI agents put to the test as crypto hacks hit $3.4 billion](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9ibHk4Q0Q4aElHY1dpWmxwVjZhRFNDWGVGWGUzWlZkNGNQbkpVU2NiZzRYRklzZFhSa1JqTF9ObnhIdGQ0dG0yNlVReEF2aENzRW82T1l5ZVJtT0RyTzVKYVl0OTU5bWM?oc=5) — 보안 이슈 — AI agents put to the test as crypto hacks hit $3.4 billion.
 
 ## 보안 관련 뉴스
 

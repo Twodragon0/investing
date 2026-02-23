@@ -111,7 +111,6 @@ THEMES = [
         "ai_tech",
         "🤖",
         [
-            "ai",
             "artificial intelligence",
             "gpu",
             "인공지능",
@@ -120,14 +119,13 @@ THEMES = [
             "nvidia",
             "반도체",
             "엔비디아",
-            "테슬라",
-            "애플",
-            "마이크로소프트",
-            "구글",
             "openai",
             "anthropic",
             "semiconductor",
             "tsmc",
+            "ai agent",
+            "ai model",
+            "생성형 ai",
         ],
     ),
     (
@@ -369,12 +367,23 @@ class ThemeSummarizer:
         article_assigned: Dict[int, str] = {}
         for _theme_name, theme_key, _emoji, keywords in THEMES:
             matched = []
-            kw_set = set(keywords)
+            # Build regex patterns for word-boundary matching on short keywords
+            kw_patterns = []
+            plain_kw = []
+            for kw in keywords:
+                if " " in kw or len(kw) >= 4 or re.search(r"[가-힣]", kw):
+                    plain_kw.append(kw)
+                else:
+                    kw_patterns.append(re.compile(r"\b" + re.escape(kw) + r"\b", re.IGNORECASE))
             for idx, item in enumerate(self.items):
                 item_text = (
                     item.get("title", "") + " " + item.get("description", "")
                 ).lower()
-                if any(kw in item_text for kw in kw_set):
+                hit = any(kw in item_text for kw in plain_kw)
+                if not hit:
+                    item_text_raw = item.get("title", "") + " " + item.get("description", "")
+                    hit = any(p.search(item_text_raw) for p in kw_patterns)
+                if hit:
                     matched.append(item)
                     if idx not in article_assigned:
                         article_assigned[idx] = theme_key

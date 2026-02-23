@@ -44,6 +44,7 @@ image: "/assets/images/generated/regulatory-summary-2026-02-16.png"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **21건** 수집
@@ -56,7 +57,7 @@ image: "/assets/images/generated/regulatory-summary-2026-02-16.png"
 
 - 총 21건의 뉴스 중 🏦 거래소, 📈 가격/시장 테마가 가장 많은 비중을 차지합니다.
 - 긴급 이슈 1건이 감지되어 우선 확인이 필요합니다.
-- 주요 테마: 🏦 거래소, 📈 가격/시장, 🟠 비트코인
+- 본문은 핵심 요약, 전체 뉴스 요약, 규제 인사이트 등 4개 섹션으로 구성되어 있습니다.
 
 
 ## URL 요약

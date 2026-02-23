@@ -59,6 +59,7 @@ image: "/assets/images/generated/source-distribution-2026-02-16.png"
 
 
 
+
 ## 전체 뉴스 요약
 
 오늘 수집된 총 29건 중 텔레그램 20건, 소셜 -건, 정치·경제 9건으로 정치/정책과 매크로/금리 이슈가 집중되었고 비트코인·거래소 관련 발언과 온체인 이동이 단기 변동성 요인으로 부각되었습니다.
@@ -81,20 +82,21 @@ image: "/assets/images/generated/source-distribution-2026-02-16.png"
 ## 내용 분석
 
 - 총 29건의 뉴스 중 📊 매크로/금리, 🟠 비트코인 테마가 가장 많은 비중을 차지합니다.
-- 정책/규제: 매크로/금리, 비트코인, 거래소 헤드라인이 리스크 프라이싱에 직접 반영될 가능성.
+- 본문은 전체 뉴스 요약, 소셜 동향 분석, 정치·경제 동향 등 4개 섹션으로 구성되어 있습니다.
+- 총 40개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.
 
 
 ## URL 요약
 
 - [This is all we want](https://t.me/crypto/3496) — This is all we want.
-- [Kalshi traders are now betting that Bitcoin could plummet to as low as $48,000 this year.](https://t.me/crypto/3497) — 비트코인 — Kalshi traders are now betting that Bitcoin could plummet입니다.
-- [How it feels to buy the dip](https://t.me/crypto/3498) — 기관 매수·매도 — How it feels to buy the dip입니다.
-- [Binance has purchased another 4,545 Bitcoins valued at $305 million for its “SAFU” fund.](https://t.me/crypto/3499) — 비트코인 — Binance has purchased another 4,545 Bitcoins valued at $305입니다.
-- [Polymarket rolls out an “Up or Down” Bitcoin marketA new BTC prediction market has gone live, settli](https://t.me/crypto/3500) — 비트코인 상승 — Polymarket rolls out an “Up or Down” Bitcoin marketA new입니다.
-- ["why didn’t you buy bitcoin in 2010”me in 2010:](https://t.me/crypto/3501) — 비트코인 매수·매도 — "why didn’t you buy bitcoin in 2010”me in 2010:입니다.
-- [President Trump suggested "we might pay off the US $35 trillion debt using cryptocurrency."](https://t.me/crypto/3502) — 암호화폐 — President Trump suggested "we might pay off the US $35입니다.
-- [How it feels buying alts right now:](https://t.me/crypto/3503) — 기관 매수·매도 — How it feels buying alts right now:입니다.
-- [Trump Affiliates Bannon and Epshteyn Named in ‘Let’s Go Brandon’ Crypto Coin Lawsuit](https://news.google.com/rss/articles/CBMisgFBVV95cUxNVHUzMnljV1k1dU9JRlBtOVVfSFN5Ri1CdThSdlJqZVZldHZZNHFZNng3ODR4WDZXd3pLT0JwbFFCVVFrWEU4ekJCMUpVYUtyYjlWV2NKZ3JvbXpjZ1pUUXgxSk9hOGM0XzhlMENrdEd1RWk1dmJfWFFDdXltcEYzOGxCOFFjRVhFY2pCODRkbk9pZG94U0xtYXNXSjJnMmk1ZFRGQXNYdUE5WWJRVEdBTVl3?oc=5) — 법적 분쟁 — Trump Affiliates Bannon and Epshteyn Named in ‘Let’s Go입니다.
+- [Kalshi traders are now betting that Bitcoin could plummet to as low as $48,000 this year.](https://t.me/crypto/3497) — 비트코인 — Kalshi traders are now betting that Bitcoin could plummet.
+- [How it feels to buy the dip](https://t.me/crypto/3498) — 기관 매수·매도 — How it feels to buy the dip.
+- [Binance has purchased another 4,545 Bitcoins valued at $305 million for its “SAFU” fund.](https://t.me/crypto/3499) — 비트코인 — Binance has purchased another 4,545 Bitcoins valued at $305.
+- [Polymarket rolls out an “Up or Down” Bitcoin marketA new BTC prediction market has gone live, settli](https://t.me/crypto/3500) — 비트코인 상승 — Polymarket rolls out an “Up or Down” Bitcoin market.
+- ["why didn’t you buy bitcoin in 2010”me in 2010:](https://t.me/crypto/3501) — 비트코인 매수·매도 — "why didn’t you buy bitcoin in 2010”me in 2010:.
+- [President Trump suggested "we might pay off the US $35 trillion debt using cryptocurrency."](https://t.me/crypto/3502) — 암호화폐 — President Trump suggested "we might pay off the US $35.
+- [How it feels buying alts right now:](https://t.me/crypto/3503) — 기관 매수·매도 — How it feels buying alts right now:.
+- [Trump Affiliates Bannon and Epshteyn Named in ‘Let’s Go Brandon’ Crypto Coin Lawsuit](https://news.google.com/rss/articles/CBMisgFBVV95cUxNVHUzMnljV1k1dU9JRlBtOVVfSFN5Ri1CdThSdlJqZVZldHZZNHFZNng3ODR4WDZXd3pLT0JwbFFCVVFrWEU4ekJCMUpVYUtyYjlWV2NKZ3JvbXpjZ1pUUXgxSk9hOGM0XzhlMENrdEd1RWk1dmJfWFFDdXltcEYzOGxCOFFjRVhFY2pCODRkbk9pZG94U0xtYXNXSjJnMmk1ZFRGQXNYdUE5WWJRVEdBTVl3?oc=5) — 법적 분쟁 — Trump Affiliates Bannon and Epshteyn Named in ‘Let’s Go.
 - [李 대통령 "돈 벌기 위해 집 사 모으는 바람에 온갖 사회문제 야기"](https://news.google.com/rss/articles/CBMic0FVX3lxTE9VY2h2Zm90SnBqV3BlQWlyOWlZMHVsRmZwX3hQc1pPVzh2MWd1ODN5WUh5OTNSZzJDYmlNVnQzOE1qY0ZUbUJpS0NjYXZLc0xVd2FHQzVZbW5STkpsSGZLWExJWi1GR0s5bkVxcjdKZFBlaEU?oc=5) — 李 대통령 "돈 벌기 위해 집 사 모으는 바람에 온갖 사회문제 야기"입니다.
 - [모건스탠리 “한은, 반도체 호조에 성장률 상향금리 2.5% 동결 전망”](https://news.google.com/rss/articles/CBMiTkFVX3lxTE9MNmhPQlZqNHJHZWNJYjRvcU9GUERpNTU4bFFBTExJc0FIUlpWUzJiNWhaMGhuVFhSS3lIcWNVcjZhdk5oTUxHeF9INEVwUQ?oc=5) — 모건스탠리 “한은, 반도체 호조에 성장률 상향금리 2.5% 동결 전망”입니다.
 - [모건스탠리 “한은, 이달 기준금리 2.5% 동결 전망”](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9ndVBDbEctZGVic1pJb0NDTVFubWRSX2p4ZWVhQjVWWFBPSU1MMkI1QkRsbFU3S2xWamxHZzdVamVOZFdzdFlxR3FpT21jc0U?oc=5) — 모건스탠리 “한은, 이달 기준금리 2.5% 동결 전망”입니다.

@@ -46,6 +46,7 @@ lang: "ko"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **20건** 수집
@@ -57,7 +58,8 @@ lang: "ko"
 ## 내용 분석
 
 - 총 20건의 뉴스 중 사회/기타, 지정학/안보 테마가 가장 많은 비중을 차지합니다.
-- 주요 테마: 사회/기타, 지정학/안보, 정책/법률
+- 본문은 핵심 요약, 전체 뉴스 요약 등 2개 섹션으로 구성되어 있습니다.
+- 총 21개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.
 
 
 ## URL 요약
@@ -65,16 +67,16 @@ lang: "ko"
 - [Hamas is reasserting control in Gaza despite its heavy losses fighting Israel](https://www.bbc.com/news/articles/c98g1klxnpxo?at_medium=RSS&at_campaign=rss) — Hamas is reasserting control in Gaza despite its heavy losses fighting Israel.
 - [US to withdraw troops from Syria as tensions mount with Iran](https://www.bbc.com/news/articles/c875pey8vy2o?at_medium=RSS&at_campaign=rss) — US to withdraw troops from Syria as tensions mount with Iran.
 - ['Difficult' Russia-Ukraine peace talks end without breakthrough](https://www.bbc.com/news/articles/c0k1xj0d708o?at_medium=RSS&at_campaign=rss) — 'Difficult' Russia-Ukraine peace talks end without breakthrough.
-- [Iran security official appears to fire on crowd at cemetery](https://www.bbc.com/news/articles/cly8q62qe71o?at_medium=RSS&at_campaign=rss) — 규제 당국 — Iran security official appears to fire on crowd at cemetery입니다.
+- [Iran security official appears to fire on crowd at cemetery](https://www.bbc.com/news/articles/cly8q62qe71o?at_medium=RSS&at_campaign=rss) — 규제 당국 — Iran security official appears to fire on crowd at cemetery.
 - [Turkey's president rejects Israel's recognition of Somaliland](https://www.bbc.com/news/articles/c0lj0plkg09o?at_medium=RSS&at_campaign=rss) — Turkey's president rejects Israel's recognition of Somaliland.
 - [Russia-Ukraine war: List of key events, day 1,456](https://www.aljazeera.com/news/2026/2/19/russia-ukraine-war-list-of-key-events-day-1456?traffic_source=rss) — Russia-Ukraine war: List of key events, day 1,456.
 - [US renews threat of military action as Iran, Russia announce naval drills](https://www.aljazeera.com/news/2026/2/18/white-house-says-iran-would-be-wise-to-take-deal-amid-military-buildup?traffic_source=rss) — US renews threat of military action as Iran, Russia announce naval drills.
 - [Desperate hunt for breakthrough in Nancy Guthrie case turns to Mexico](https://www.bbc.com/news/articles/c4gq2k8220go?at_medium=RSS&at_campaign=rss) — Desperate hunt for breakthrough in Nancy Guthrie case turns to Mexico.
 - [Martial law, protests and a president tried for insurrection: How did South Korea get here?](https://www.bbc.com/news/videos/c70kw0nrxreo?at_medium=RSS&at_campaign=rss) — Martial law, protests and a president tried for insurrection: How did South Korea get.
 - [Billionaire Les Wexner tells US lawmakers he was 'naive' and 'conned' by Epstein](https://www.bbc.com/news/articles/cy57rrrpvg7o?at_medium=RSS&at_campaign=rss) — Billionaire Les Wexner tells US lawmakers he was 'naive' and 'conned' by Epstein.
-- [Advocacy groups sue Trump administration over endangerment finding’s repeal](https://www.aljazeera.com/news/2026/2/19/advocacy-groups-sue-trump-administration-over-endangerment-findings-repeal?traffic_source=rss) — 트럼프 상승 — Advocacy groups sue Trump administration over endangerment입니다.
+- [Advocacy groups sue Trump administration over endangerment finding’s repeal](https://www.aljazeera.com/news/2026/2/19/advocacy-groups-sue-trump-administration-over-endangerment-findings-repeal?traffic_source=rss) — 트럼프 — Advocacy groups sue Trump administration over endangerment.
 - [Eight skiers found dead after California avalanche](https://www.bbc.com/news/articles/cvg19dp4vxgo?at_medium=RSS&at_campaign=rss) — Eight skiers found dead after California avalanche.
-- [Do not give away Diego Garcia, Trump tells UK in fresh attack on Chagos deal](https://www.bbc.com/news/articles/c309qqyer8yo?at_medium=RSS&at_campaign=rss) — 트럼프 — Do not give away Diego Garcia, Trump tells UK in fresh입니다.
+- [Do not give away Diego Garcia, Trump tells UK in fresh attack on Chagos deal](https://www.bbc.com/news/articles/c309qqyer8yo?at_medium=RSS&at_campaign=rss) — 트럼프 — Do not give away Diego Garcia, Trump tells UK in fresh.
 - [Suspected carbon-monoxide leak kills at least 30 miners in Nigeria, witnesses say](https://www.bbc.com/news/articles/cwyk6nr80kxo?at_medium=RSS&at_campaign=rss) — Suspected carbon-monoxide leak kills at least 30 miners in Nigeria, witnesses say.
 - [You're never too old, says dancer, 71, cast in Taylor Swift video](https://www.bbc.com/news/articles/cly23mrv68ro?at_medium=RSS&at_campaign=rss) — You're never too old, says dancer, 71, cast in Taylor Swift video.
 - [Zuckerberg defends Meta in landmark social media addiction trial](https://www.bbc.com/news/articles/c5y42znjnjvo?at_medium=RSS&at_campaign=rss) — Zuckerberg defends Meta in landmark social media addiction trial.

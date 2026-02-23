@@ -54,6 +54,7 @@ image: "/assets/images/generated/regulatory-summary-2026-02-15.png"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **25건** 수집
@@ -65,6 +66,8 @@ image: "/assets/images/generated/regulatory-summary-2026-02-15.png"
 ## 내용 분석
 
 - 총 25건의 뉴스를 수집하여 주요 이슈를 정리했습니다.
+- 본문은 핵심 요약, 전체 뉴스 요약, 규제 인사이트 등 4개 섹션으로 구성되어 있습니다.
+- 총 47개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.
 
 
 ## URL 요약
@@ -85,8 +88,8 @@ image: "/assets/images/generated/regulatory-summary-2026-02-15.png"
 - [026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기”등 기사 관련](https://www.fsc.go.kr/no010102/86234) — 026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기”등 기사 관련입니다.
 - [“금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”](https://www.fsc.go.kr/no010102/86213) — “금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”입니다.
 - [정부는 대산 1호 프로젝트 사업재편 관련 절차를 차질없이 진행하고 있습니다.](https://www.fsc.go.kr/no010102/86210) — 정부는 대산 1호 프로젝트 사업재편 관련 절차를 차질없이 진행하고 있습니다.
-- [Crypto Advocates Urge UK’s FCA to Narrow Regulatory Scope](https://news.google.com/rss/articles/CBMirgFBVV95cUxNZUl4eUVrVW5Eb0NfSEZTa3ROWVc5ZXplX1dJNzlGM2VPZEIzcGN4VTdfcVR1TXNCdWV6WHVramJIMWdqZGRYUmhfUlRwU2IxYVltTk84cUZ3ZG5FNHR3aFdITzZ3X2pUYjV2WEhWdTdRUDd6bkkxVnBDZjk5NDA4bDZQMVZYWHE5LVp3MV9iR0s1bVFIMTlveENvY0twT2RPalFaeURUWlA3MGNVLXc?oc=5) — 규제·정책 — Crypto Advocates Urge UK’s FCA to Narrow Regulatory Scope입니다.
-- [DeFi Education Fund calls on UK FCA to narrow definition of control in crypto regulation](https://news.google.com/rss/articles/CBMiygFBVV95cUxPMW1KbkRPMjNwLThZRFgtZkdVOWM3TWptY3dqRWtOUnJIQzNDNVFkWDB0MDZ1Q3JubzNnWlQ0ZWZLWEZFS0ZtcmdlWG1oZnBXd3NYRjAybXNvYnZ5Q1g3NFFRUEdaQ0JXNklVY2NsQlgyNWJPWVpXekhvaUVYRG9HUW52czJxT1JqXzEyemRMNWxHRmczTS1HXzh6SUFRWHhvUS1ZVUpyT0MzWlE4WDlIUUR6VWZpR2w2aVlPcjk2MjhEOGNVU0hQNzhB?oc=5) — 규제·정책 — DeFi Education Fund calls on UK FCA to narrow definition of입니다.
+- [Crypto Advocates Urge UK’s FCA to Narrow Regulatory Scope](https://news.google.com/rss/articles/CBMirgFBVV95cUxNZUl4eUVrVW5Eb0NfSEZTa3ROWVc5ZXplX1dJNzlGM2VPZEIzcGN4VTdfcVR1TXNCdWV6WHVramJIMWdqZGRYUmhfUlRwU2IxYVltTk84cUZ3ZG5FNHR3aFdITzZ3X2pUYjV2WEhWdTdRUDd6bkkxVnBDZjk5NDA4bDZQMVZYWHE5LVp3MV9iR0s1bVFIMTlveENvY0twT2RPalFaeURUWlA3MGNVLXc?oc=5) — 규제·정책 — Crypto Advocates Urge UK’s FCA to Narrow Regulatory Scope.
+- [DeFi Education Fund calls on UK FCA to narrow definition of control in crypto regulation](https://news.google.com/rss/articles/CBMiygFBVV95cUxPMW1KbkRPMjNwLThZRFgtZkdVOWM3TWptY3dqRWtOUnJIQzNDNVFkWDB0MDZ1Q3JubzNnWlQ0ZWZLWEZFS0ZtcmdlWG1oZnBXd3NYRjAybXNvYnZ5Q1g3NFFRUEdaQ0JXNklVY2NsQlgyNWJPWVpXekhvaUVYRG9HUW52czJxT1JqXzEyemRMNWxHRmczTS1HXzh6SUFRWHhvUS1ZVUpyT0MzWlE4WDlIUUR6VWZpR2w2aVlPcjk2MjhEOGNVU0hQNzhB?oc=5) — De.
 
 ## 핵심 요약
 

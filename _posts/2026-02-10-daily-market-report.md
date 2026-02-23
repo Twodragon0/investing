@@ -20,16 +20,17 @@ pin: true
 
 ## 내용 분석
 
-- 시장 상태: 보합세 - 뚜렷한 방향성 없이 횡보 구간 지속
+- 본문은 전체 뉴스 요약, 오늘의 시장 인사이트 등 2개 섹션으로 구성되어 있습니다.
+- 총 9개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.
 
 
 ## URL 요약
 
 - [FRED](https://fred.stlouisfed.org/series/FEDFUNDS) — FRED.
-- [FRED - 10-Year Treasury](https://fred.stlouisfed.org/series/DGS10) — 기관 매수·매도 — FRED - 10-Year Treasury입니다.
+- [FRED - 10-Year Treasury](https://fred.stlouisfed.org/series/DGS10) — 기관 매수·매도 — FRED - 10-Year Treasury.
 - [FRED](https://fred.stlouisfed.org/series/CPIAUCSL) — FRED.
 - [FRED](https://fred.stlouisfed.org/series/VIXCLS) — FRED.
-- [CoinGecko](https://www.coingecko.com/) — CoinGecko.
+- [CoinGecko](https://www.coingecko.com/) — Coin.
 - [Alternative.me](https://alternative.me/crypto/fear-and-greed-index/) — Alternative.me.
 - [Investing.com](https://kr.investing.com/indices/kospi) — Investing.com.
 - [Yahoo Finance](https://finance.yahoo.com/) — Yahoo Finance.

@@ -44,6 +44,7 @@ image: "/assets/images/generated/regulatory-summary-2026-02-17.png"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **21건** 수집
@@ -56,7 +57,7 @@ image: "/assets/images/generated/regulatory-summary-2026-02-17.png"
 
 - 총 21건의 뉴스 중 🏦 거래소, 📈 가격/시장 테마가 가장 많은 비중을 차지합니다.
 - 긴급 이슈 1건이 감지되어 우선 확인이 필요합니다.
-- 주요 테마: 🏦 거래소, 📈 가격/시장, 🟠 비트코인
+- 본문은 핵심 요약, 전체 뉴스 요약, 규제 인사이트 등 4개 섹션으로 구성되어 있습니다.
 
 
 ## URL 요약
@@ -76,7 +77,7 @@ image: "/assets/images/generated/regulatory-summary-2026-02-17.png"
 - [026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기”등 기사 관련](https://www.fsc.go.kr/no010102/86234) — 026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기”등 기사 관련입니다.
 - [“금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”](https://www.fsc.go.kr/no010102/86213) — “금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”입니다.
 - [정부는 대산 1호 프로젝트 사업재편 관련 절차를 차질없이 진행하고 있습니다.](https://www.fsc.go.kr/no010102/86210) — 정부는 대산 1호 프로젝트 사업재편 관련 절차를 차질없이 진행하고 있습니다.
-- [Councils,Publication of the Report by the Working Group on Crypto-asset Systems of the Financial System Council](https://www.fsa.go.jp/en/refer/councils/singie_kinyu/20260216.html) — 암호화폐 상승 — Councils,Publication of the Report by the Working Group on입니다.
+- [Councils,Publication of the Report by the Working Group on Crypto-asset Systems of the Financial System Council](https://www.fsa.go.jp/en/refer/councils/singie_kinyu/20260216.html) — 암호화폐 — Councils,Publication of the Report by the Working Group.
 - [국민성장펀드의 지원대상인 개별사업의민간 참여규모 등은 전혀 확정된바 없습니다.](https://www.fsc.go.kr/no010102/86163) — 국민성장펀드의 지원대상인 개별사업의민간 참여규모 등은 전혀 확정된바 없습니다.
 
 ## 핵심 요약

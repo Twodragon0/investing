@@ -30,6 +30,7 @@ image: "/assets/images/generated/regulatory-summary-2026-02-22.png"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **23건** 수집
@@ -42,7 +43,7 @@ image: "/assets/images/generated/regulatory-summary-2026-02-22.png"
 
 - 총 23건의 뉴스 중 🔵 규제/정책, 🏦 거래소 테마가 가장 많은 비중을 차지합니다.
 - 긴급 이슈 1건이 감지되어 우선 확인이 필요합니다.
-- 주요 테마: 🔵 규제/정책, 🏦 거래소, 📈 가격/시장
+- 본문은 핵심 요약, 전체 뉴스 요약, 규제 인사이트 등 4개 섹션으로 구성되어 있습니다.
 
 
 ## URL 요약
@@ -62,8 +63,8 @@ image: "/assets/images/generated/regulatory-summary-2026-02-22.png"
 - [026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기 ”등 기사 관련](https://www.fsc.go.kr/no010102/86234) — 026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기 ”등 기사 관련입니다.
 - [“금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”](https://www.fsc.go.kr/no010102/86213) — “금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”입니다.
 - [정부는 대산 1호 프로젝트 사업재편 관련 절차를 차질없이 진행하고 있습니다.](https://www.fsc.go.kr/no010102/86210) — 정부는 대산 1호 프로젝트 사업재편 관련 절차를 차질없이 진행하고 있습니다.
-- [What crypto investors need to know about the UK's sandbox scheme](https://news.google.com/rss/articles/CBMinAFBVV95cUxQNE9JQWJJWWRGWE1RVEwtU2RWOUEyRmdmamNmUFJsSHlyem1PQVFqc2ZpNVE2dDdudnBGTmN5eFh1QmFILTNmbjBrRjl6aE1DUlQ0S1hHbnJtYWxiZDl4dW9FbTZ5MVJCU1pFclNZNlZuUGtVbjFMaWxHZ0Zlcndvdmc5ZU9OVDZXazBrWHFwa3pVX2NhbHJRZmItMkI?oc=5) — 암호화폐 — What crypto investors need to know about the UK's sandbox입니다.
-- [Consumer duty and cryptoassets - FCA guidance consultation](https://news.google.com/rss/articles/CBMi1gFBVV95cUxPSzJuNnBTUDhKSFBRTC02ZENuSkdoMFlzYmRVNG1Jbm5Dc1hQTlJRcEZNX1gxRVhVRVFPZjRjVFF1TXVkbFlpbUxMMkd6cVpDc0o2YWJNMVJ0MjNJTjZ2Q1ZIVlIweU1ORzRmMjlteU1KZ0xIVWVxanNnN0VsSzAtV1pKN0JkaXg0QnB2M21UVkI2eTk4VVFEV2g2RFZwQUsyUUdNbEpKcjFOUlZMVHU1b3A1X2FIeVU0Tnd4dkF0UnZzNFdNX3B0cDZaSjdBcDNPaEpYeXVB?oc=5) — 암호화폐 — Consumer duty and cryptoassets입니다.
+- [What crypto investors need to know about the UK's sandbox scheme](https://news.google.com/rss/articles/CBMinAFBVV95cUxQNE9JQWJJWWRGWE1RVEwtU2RWOUEyRmdmamNmUFJsSHlyem1PQVFqc2ZpNVE2dDdudnBGTmN5eFh1QmFILTNmbjBrRjl6aE1DUlQ0S1hHbnJtYWxiZDl4dW9FbTZ5MVJCU1pFclNZNlZuUGtVbjFMaWxHZ0Zlcndvdmc5ZU9OVDZXazBrWHFwa3pVX2NhbHJRZmItMkI?oc=5) — 암호화폐 — What crypto investors need to know about the UK's sandbox.
+- [Consumer duty and cryptoassets - FCA guidance consultation](https://news.google.com/rss/articles/CBMi1gFBVV95cUxPSzJuNnBTUDhKSFBRTC02ZENuSkdoMFlzYmRVNG1Jbm5Dc1hQTlJRcEZNX1gxRVhVRVFPZjRjVFF1TXVkbFlpbUxMMkd6cVpDc0o2YWJNMVJ0MjNJTjZ2Q1ZIVlIweU1ORzRmMjlteU1KZ0xIVWVxanNnN0VsSzAtV1pKN0JkaXg0QnB2M21UVkI2eTk4VVFEV2g2RFZwQUsyUUdNbEpKcjFOUlZMVHU1b3A1X2FIeVU0Tnd4dkF0UnZzNFdNX3B0cDZaSjdBcDNPaEpYeXVB?oc=5) — 암호화폐 — Consumer duty and cryptoassets.
 - [국민성장펀드의 지원대상인 개별사업의민간 참여규모 등은 전혀 확정된바 없습니다.](https://www.fsc.go.kr/no010102/86163) — 국민성장펀드의 지원대상인 개별사업의민간 참여규모 등은 전혀 확정된바 없습니다.
 
 ## 핵심 요약

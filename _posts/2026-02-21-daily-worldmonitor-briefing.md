@@ -46,6 +46,7 @@ lang: "ko"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **20건** 수집
@@ -57,28 +58,29 @@ lang: "ko"
 ## 내용 분석
 
 - 총 20건의 뉴스 중 사회/기타, 정책/법률 테마가 가장 많은 비중을 차지합니다.
-- 주요 테마: 사회/기타, 정책/법률, 지정학/안보
+- 본문은 핵심 요약, 전체 뉴스 요약 등 2개 섹션으로 구성되어 있습니다.
+- 총 21개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.
 
 
 ## URL 요약
 
-- [Trump says he is considering limited military strike on Iran](https://www.bbc.com/news/articles/cdxzk4gvzp0o?at_medium=RSS&at_campaign=rss) — 트럼프 — Trump says he is considering limited military strike on Iran입니다.
+- [Trump says he is considering limited military strike on Iran](https://www.bbc.com/news/articles/cdxzk4gvzp0o?at_medium=RSS&at_campaign=rss) — 트럼프 — Trump says he is considering limited military strike on Iran.
 - [At least 10 killed in Israeli strikes on Lebanon](https://www.bbc.com/news/articles/cvg8914dkl0o?at_medium=RSS&at_campaign=rss) — At least 10 killed in Israeli strikes on Lebanon.
 - [Russia-Ukraine war: List of key events, day 1,458](https://www.aljazeera.com/news/2026/2/21/russia-ukraine-war-list-of-key-events-day-1458?traffic_source=rss) — Russia-Ukraine war: List of key events, day 1,458.
 - [US military says it attacked vessel in Pacific Ocean, killing three people](https://www.aljazeera.com/news/2026/2/21/us-military-says-it-attacked-vessel-in-pacific-ocean-killing-three-people?traffic_source=rss) — US military says it attacked vessel in Pacific Ocean, killing three people.
 - [US envoy suggests it would be ‘fine’ if Israel expands across Middle East](https://www.aljazeera.com/news/2026/2/20/us-envoy-suggests-it-would-be-fine-if-israel-expands-across-middle-east?traffic_source=rss) — US envoy suggests it would be ‘fine’ if Israel expands across Middle East.
-- [Trump brings in new 10% tariff as Supreme Court rejects his global import taxes](https://www.bbc.com/news/articles/cn8146l0n55o?at_medium=RSS&at_campaign=rss) — 트럼프 상승 — Trump brings in new 10% tariff as Supreme Court rejects his입니다.
-- [Trump lashes out at Supreme Court justices over tariffs ruling](https://www.bbc.com/news/articles/cd9g0e7zd8wo?at_medium=RSS&at_campaign=rss) — 트럼프 상승 — Trump lashes out at Supreme Court justices over tariffs입니다.
+- [Trump brings in new 10% tariff as Supreme Court rejects his global import taxes](https://www.bbc.com/news/articles/cn8146l0n55o?at_medium=RSS&at_campaign=rss) — 무역·관세 — Trump brings in new 10% tariff as Supreme Court rejects his.
+- [Trump lashes out at Supreme Court justices over tariffs ruling](https://www.bbc.com/news/articles/cd9g0e7zd8wo?at_medium=RSS&at_campaign=rss) — 무역·관세 — Trump lashes out at Supreme Court justices over tariffs.
 - [Killing of nationalist student leaves French far left in deep trouble as elections loom](https://www.bbc.com/news/articles/cnv61zv534eo?at_medium=RSS&at_campaign=rss) — Killing of nationalist student leaves French far left in deep trouble as elections loom.
 - [Venezuelan opposition politician released after amnesty law passed](https://www.bbc.com/news/articles/cy57en3590no?at_medium=RSS&at_campaign=rss) — Venezuelan opposition politician released after amnesty law passed.
-- [Trump, JD Vance vilify ‘lawless’ Supreme Court justices over tariff ruling](https://www.aljazeera.com/news/2026/2/21/trump-jd-vance-vilify-lawless-supreme-court-justices-over-tariff-ruling?traffic_source=rss) — 트럼프 상승 — Trump, JD Vance vilify ‘lawless’ Supreme Court justices입니다.
+- [Trump, JD Vance vilify ‘lawless’ Supreme Court justices over tariff ruling](https://www.aljazeera.com/news/2026/2/21/trump-jd-vance-vilify-lawless-supreme-court-justices-over-tariff-ruling?traffic_source=rss) — 무역·관세 — Trump, JD Vance vilify ‘lawless’ Supreme Court justices.
 - [Nasa targets early March to send humans back around the Moon](https://www.bbc.com/news/articles/c86y1g6wde3o?at_medium=RSS&at_campaign=rss) — Nasa targets early March to send humans back around the Moon.
 - [Anna Murdoch-Mann, mother of News Corp heir, dies aged 81](https://www.bbc.com/news/articles/cp8150xj36wo?at_medium=RSS&at_campaign=rss) — Anna Murdoch-Mann, mother of News Corp heir, dies aged 81.
-- [Austrian climber found guilty after girlfriend froze to death on mountain](https://www.bbc.com/news/articles/c0k1xkllknmo?at_medium=RSS&at_campaign=rss) — 시장 상승 — Austrian climber found guilty after girlfriend froze to입니다.
-- [Rare prison sentences handed to Cameroon soldiers after killing of 21 civilians](https://www.bbc.com/news/articles/cev74dywd7eo?at_medium=RSS&at_campaign=rss) — 솔라나 — Rare prison sentences handed to Cameroon soldiers after입니다.
-- [French soldier dies after being shot in head during 'game' with other soldiers](https://www.bbc.com/news/articles/cj4z25gl24eo?at_medium=RSS&at_campaign=rss) — 솔라나 — French soldier dies after being shot in head during 'game'입니다.
+- [Austrian climber found guilty after girlfriend froze to death on mountain](https://www.bbc.com/news/articles/c0k1xkllknmo?at_medium=RSS&at_campaign=rss) — 시장 상승 — Austrian climber found guilty after girlfriend froze.
+- [Rare prison sentences handed to Cameroon soldiers after killing of 21 civilians](https://www.bbc.com/news/articles/cev74dywd7eo?at_medium=RSS&at_campaign=rss) — 솔라나 — Rare prison sentences handed to Cameroon soldiers after.
+- [French soldier dies after being shot in head during 'game' with other soldiers](https://www.bbc.com/news/articles/cj4z25gl24eo?at_medium=RSS&at_campaign=rss) — 솔라나 — French soldier dies after being shot in head during 'game'.
 - [Dog trained to illegally dump rubbish, Italian authorities say](https://www.bbc.com/news/articles/cy57erz57xyo?at_medium=RSS&at_campaign=rss) — Dog trained to illegally dump rubbish, Italian authorities say.
-- [Asos co-founder dies after Thailand apartment block fall](https://www.bbc.com/news/articles/ce8w0n061ryo?at_medium=RSS&at_campaign=rss) — 시장 하락 — Asos co-founder dies after Thailand apartment block fall입니다.
+- [Asos co-founder dies after Thailand apartment block fall](https://www.bbc.com/news/articles/ce8w0n061ryo?at_medium=RSS&at_campaign=rss) — 시장 하락 — Asos co-founder dies after Thailand apartment block fall.
 - [Mother and infant burnt to death in Indian state over witchcraft allegations](https://www.bbc.com/news/articles/c98q93gdy3do?at_medium=RSS&at_campaign=rss) — Mother and infant burnt to death in Indian state over witchcraft allegations.
 - [Hamas holds vote to choose new interim leader, source tells BBC](https://www.bbc.com/news/articles/c23z0kdypm3o?at_medium=RSS&at_campaign=rss) — Hamas holds vote to choose new interim leader, source tells BBC.
 - [Twelve Palestine Action activists granted bail](https://www.aljazeera.com/news/2026/2/20/heads-held-high-12-palestine-action-action-prisoners-granted-bail?traffic_source=rss) — Twelve Palestine Action activists granted bail.

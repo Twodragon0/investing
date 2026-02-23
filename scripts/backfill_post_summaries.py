@@ -146,9 +146,14 @@ def normalize_summary(text: str) -> str:
     if not sentence:
         return ""
     if not re.search(r"[.!?]$", sentence) and not sentence.endswith("다"):
-        if re.search(r"[가-힣]", sentence):
+        # Count Korean vs non-Korean chars to decide ending style
+        korean_chars = len(re.findall(r"[가-힣]", sentence))
+        total_alpha = len(re.findall(r"[a-zA-Z가-힣]", sentence))
+        if total_alpha > 0 and korean_chars / total_alpha > 0.5:
+            # Predominantly Korean text
             sentence += "입니다."
         else:
+            # Predominantly English or mixed — just add period
             sentence += "."
     return sentence
 
@@ -163,11 +168,26 @@ def _shorten_title_for_summary(title: str, limit: int = 80) -> str:
     last_space = truncated.rfind(" ")
     if last_space > limit * 0.6:
         truncated = truncated[:last_space]
+    # Remove trailing articles, prepositions, and conjunctions
+    trailing_words = {
+        "the", "a", "an", "of", "in", "on", "at", "to", "for", "and",
+        "or", "but", "as", "by", "with", "from", "is", "are", "its",
+        "their", "this", "that", "these", "those",
+    }
+    words = truncated.split()
+    while len(words) > 3 and words[-1].lower().rstrip(".,;:- ") in trailing_words:
+        words.pop()
+    truncated = " ".join(words)
     return truncated.rstrip(".,;:- ") + "..."
 
 
 def summarize_from_title(title: str) -> str:
     title = normalize_title(title)
+    # Split concatenated titles (e.g. "New ListingCheck out the latest...")
+    # Detect lowercase→uppercase boundary without space
+    concat_match = re.search(r"[a-z][A-Z]", title)
+    if concat_match:
+        title = title[: concat_match.start() + 1]
     low = title.lower()
     subject = ""
 
@@ -229,47 +249,25 @@ def summarize_from_title(title: str) -> str:
     if re.search(r"[가-힣]", title) and len(title) > 15:
         return normalize_summary(_shorten_title_for_summary(title, 100))
 
-    price_up = any(
-        k in low
-        for k in [
-            "rises",
-            "rise",
-            "gains",
-            "surge",
-            "surges",
-            "jump",
-            "jumps",
-            "climb",
-            "climbs",
-            "rebound",
-            "rallies",
-            "rally",
-            "up",
-            "상승",
-            "급등",
-            "반등",
-        ]
+    # Use word-boundary matching for short keywords to avoid false positives
+    # (e.g. "up" matching inside "pump", "setup"; "down" inside "countdown")
+    _up_words = [
+        "rises", "rise", "gains", "surge", "surges", "jump", "jumps",
+        "climb", "climbs", "rebound", "rallies", "rally",
+        "상승", "급등", "반등",
+    ]
+    _up_boundary = [re.compile(r"\bup\b", re.IGNORECASE)]
+    price_up = any(k in low for k in _up_words) or any(
+        p.search(title) for p in _up_boundary
     )
-    price_down = any(
-        k in low
-        for k in [
-            "falls",
-            "fall",
-            "drops",
-            "drop",
-            "slump",
-            "slides",
-            "slide",
-            "tumbles",
-            "tumble",
-            "crash",
-            "sell-off",
-            "plunge",
-            "down",
-            "하락",
-            "급락",
-            "폭락",
-        ]
+    _down_words = [
+        "falls", "fall", "drops", "drop", "slump", "slides", "slide",
+        "tumbles", "tumble", "crash", "sell-off", "plunge",
+        "하락", "급락", "폭락",
+    ]
+    _down_boundary = [re.compile(r"\bdown\b", re.IGNORECASE)]
+    price_down = any(k in low for k in _down_words) or any(
+        p.search(title) for p in _down_boundary
     )
 
     # Build more specific summaries using title context
@@ -566,15 +564,21 @@ def build_content_analysis(lines: List[str], body: str) -> List[str]:
             f"긴급 이슈 {urgent_count}건이 감지되어 우선 확인이 필요합니다."
         )
 
-    # Try to extract key insight from existing summary sections
-    for section in SECTION_PRIORITY[:4]:
-        bullets = extract_section_bullets(lines, section, limit=1)
-        for bullet in bullets:
-            if bullet not in analysis and len(bullet) > 20:
-                analysis.append(bullet)
-                break
-        if len(analysis) >= 3:
-            break
+    # Count how many distinct content sections exist in the post
+    found_sections = []
+    for section in SECTION_PRIORITY:
+        if find_heading_index(lines, section) != -1:
+            found_sections.append(section)
+
+    if found_sections and len(analysis) < 3:
+        analysis.append(
+            f"본문은 {', '.join(found_sections[:3])} 등 {len(found_sections)}개 섹션으로 구성되어 있습니다."
+        )
+
+    # Count links to indicate reference density
+    link_count = sum(1 for line in lines if re.search(r"\[.*?\]\(https?://", line))
+    if link_count > 5 and len(analysis) < 3:
+        analysis.append(f"총 {link_count}개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.")
 
     if not analysis:
         analysis.append("핵심 이슈를 중심으로 요약과 링크를 정리했습니다.")

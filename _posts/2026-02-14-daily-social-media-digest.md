@@ -68,6 +68,7 @@ image: "/assets/images/generated/source-distribution-2026-02-14.png"
 
 
 
+
 ## 전체 뉴스 요약
 
 오늘 수집된 총 9건 중 텔레그램 -건, 소셜 1건, 정치·경제 8건으로 정치/정책과 매크로/금리 이슈가 집중되었고 비트코인·거래소 관련 발언과 온체인 이동이 단기 변동성 요인으로 부각되었습니다.
@@ -90,19 +91,19 @@ image: "/assets/images/generated/source-distribution-2026-02-14.png"
 ## 내용 분석
 
 - 총 9건의 뉴스를 수집하여 주요 이슈를 정리했습니다.
-- 가장 많이 언급된 키워드는 bitcoin(6회)입니다.
-- 정책/규제: 정치/정책·매크로 중심 헤드라인이 리스크 프라이싱에 직접 반영될 가능성.
+- 본문은 핵심 요약, 오늘의 핵심, 전체 뉴스 요약 등 7개 섹션으로 구성되어 있습니다.
+- 총 31개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.
 
 
 ## URL 요약
 
-- [Bitcoin Whale Alert – Massive $559M BTC Inflow to Binance Sparks Market Volatility Concerns](https://news.google.com/rss/articles/CBMivAFBVV95cUxPUkdrVzNJN2dNeUV5cE10U3JjUDJzeVROd0FMQWc0clVVajRLWFNGRDVEcTlZWjg2cWw4WXE5NnpEQnM5V2x5MXhSTDhZd1hWQTdId2VrMUtFeW8ybEV5ZmI2Q1JhX09tSkdDalBJeHczeGFTYUVkenNzMzFTYkxnblVoSHBnYzNrdDJsVmtkUEFhS1dYVjJ3XzYyVkcxVkFsUU1jYUZBVmVWdzQwQ2pkdXZqNVRoVFNsNlBpVQ?oc=5) — 온체인 이동 — Bitcoin Whale Alert – Massive $559M BTC Inflow to Binance입니다.
+- [Bitcoin Whale Alert – Massive $559M BTC Inflow to Binance Sparks Market Volatility Concerns](https://news.google.com/rss/articles/CBMivAFBVV95cUxPUkdrVzNJN2dNeUV5cE10U3JjUDJzeVROd0FMQWc0clVVajRLWFNGRDVEcTlZWjg2cWw4WXE5NnpEQnM5V2x5MXhSTDhZd1hWQTdId2VrMUtFeW8ybEV5ZmI2Q1JhX09tSkdDalBJeHczeGFTYUVkenNzMzFTYkxnblVoSHBnYzNrdDJsVmtkUEFhS1dYVjJ3XzYyVkcxVkFsUU1jYUZBVmVWdzQwQ2pkdXZqNVRoVFNsNlBpVQ?oc=5) — 온체인 이동 — Bitcoin Whale Alert – Massive $559M BTC Inflow to Binance.
 - [국회 경제 대정부질문 이재명 정부 부동산 정책 설전 격화](https://news.google.com/rss/articles/CBMiaEFVX3lxTE9LV3gyYjV0LU53RWdTMjM4NUh3b09IWjh4cnJSR1VHUmRvOVd4bldJNHBRTjZKbUZhaTFfTTQ4bnFWczFJNElaYWFjQWtaVjlNak56ME1SeDQ4bmtGbVZwalBnMV9FTEY1?oc=5) — 국회 경제 대정부질문 이재명 정부 부동산 정책 설전 격화입니다.
 - [李 대통령 "부동산 시장 정상화 추구할 뿐 집 팔라고 강요하지 않아"](https://news.google.com/rss/articles/CBMic0FVX3lxTE5NeVNaM2JVUmIwY1RUNHdZcE9RdGlhdEpwV2p3UUd6dHpHbnZIU1lBaloxc0MwZ0d4bEpPWVllcnB4TmN3anI1ZTVna1pMS05uaUNoVWdRUWVWR1Q0ZEt3RHNrWjVNOGQ4aDZJNE1ERnFwQTA?oc=5) — 李 대통령 "부동산 시장 정상화 추구할 뿐 집 팔라고 강요하지 않아"입니다.
-- [Bitcoin Price Crash Rattles Trump's Crypto Progress. Here's The Upshot For Investors.](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPVUtQQWJPdi1qQVRDcEpCSjcwZVhrM0RoYk5YYmtIN3BnNVVXUFozY0lMb3JFazZyc1YyWWZXckhXUDJxMlpjWGdXYnlaY0IwcS1fbnQ4OTlRUW9FQWlKT2Q5SzV2ell4b3VyS0tOS2tYNU9vVENvNXBNMTdiMnhwNWI1Sk9ON2NN?oc=5) — 비트코인 상승 — Bitcoin Price Crash Rattles Trump's Crypto Progress.
-- [Trump Affiliates Bannon and Epshteyn Named in ‘Let’s Go Brandon’ Crypto Coin Lawsuit](https://news.google.com/rss/articles/CBMisgFBVV95cUxNVHUzMnljV1k1dU9JRlBtOVVfSFN5Ri1CdThSdlJqZVZldHZZNHFZNng3ODR4WDZXd3pLT0JwbFFCVVFrWEU4ekJCMUpVYUtyYjlWV2NKZ3JvbXpjZ1pUUXgxSk9hOGM0XzhlMENrdEd1RWk1dmJfWFFDdXltcEYzOGxCOFFjRVhFY2pCODRkbk9pZG94U0xtYXNXSjJnMmk1ZFRGQXNYdUE5WWJRVEdBTVl3?oc=5) — 법적 분쟁 — Trump Affiliates Bannon and Epshteyn Named in ‘Let’s Go입니다.
+- [Bitcoin Price Crash Rattles Trump's Crypto Progress. Here's The Upshot For Investors.](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPVUtQQWJPdi1qQVRDcEpCSjcwZVhrM0RoYk5YYmtIN3BnNVVXUFozY0lMb3JFazZyc1YyWWZXckhXUDJxMlpjWGdXYnlaY0IwcS1fbnQ4OTlRUW9FQWlKT2Q5SzV2ell4b3VyS0tOS2tYNU9vVENvNXBNMTdiMnhwNWI1Sk9ON2NN?oc=5) — 비트코인 하락 — Bitcoin Price Crash Rattles Trump's Crypto Progress.
+- [Trump Affiliates Bannon and Epshteyn Named in ‘Let’s Go Brandon’ Crypto Coin Lawsuit](https://news.google.com/rss/articles/CBMisgFBVV95cUxNVHUzMnljV1k1dU9JRlBtOVVfSFN5Ri1CdThSdlJqZVZldHZZNHFZNng3ODR4WDZXd3pLT0JwbFFCVVFrWEU4ekJCMUpVYUtyYjlWV2NKZ3JvbXpjZ1pUUXgxSk9hOGM0XzhlMENrdEd1RWk1dmJfWFFDdXltcEYzOGxCOFFjRVhFY2pCODRkbk9pZG94U0xtYXNXSjJnMmk1ZFRGQXNYdUE5WWJRVEdBTVl3?oc=5) — 법적 분쟁 — Trump Affiliates Bannon and Epshteyn Named in ‘Let’s Go.
 - [이재명 대통령 부동산 특혜 회수 방안부터 엔화 순매도 감소, 미국 금리 전망까지 이시각 주요뉴스](https://news.google.com/rss/articles/CBMicEFVX3lxTE9Ra0dRZzROSEphN2d5MmRyRU55TGFDVXo2WHVFaktVRW5MRWQzaE8wTXlIeTFpVTlRZUI1MkhvSFhtR2VpeTRPckRfTlF5b1FuUlIwVFpHUUhYdmxhS1o0emt0U2Itcmg3VlNkaDd2cE7SAXRBVV95cUxQOTQ5VlZPSDE0U19HSnJQZThITUVDM1I3U1ozRWo4aUNpUWRJNGdwbktmc0ZPVWRRa1lBWVIybW5QUlZzU2VMMXRxeWpCSnZZSGE2RmE2V0xIRURRSHVQTmxlNkVGdGJnc1NLZnZZeGhDVTZqbA?oc=5) — 출처: 이재명 부동산·금리입니다.
-- [Federal Reserve's Critical Decision: Goolsbee Signals Hopeful Rate Cuts Pending Services Inflation Progress](https://news.google.com/rss/articles/CBMic0FVX3lxTFBMUTN3LXZQc18wZ3N6eklXSHZUX0h5VmlRT09jRXBZb0NmdVhUMTUzcUloOHhiclRPcHA4Ym9pM1lHa1ptMlFmTXFIMFRmdF9pcTNqOEcyU0JsOWtfT0R6d0VkVG5VSmdLVHBzRmFFSUlndjg?oc=5) — 출처: Fed Policy입니다.
+- [Federal Reserve's Critical Decision: Goolsbee Signals Hopeful Rate Cuts Pending Services Inflation Progress](https://news.google.com/rss/articles/CBMic0FVX3lxTFBMUTN3LXZQc18wZ3N6eklXSHZUX0h5VmlRT09jRXBZb0NmdVhUMTUzcUloOHhiclRPcHA4Ym9pM1lHa1ptMlFmTXFIMFRmdF9pcTNqOEcyU0JsOWtfT0R6d0VkVG5VSmdLVHBzRmFFSUlndjg?oc=5) — 출처: Fed Policy.
 - [설 연휴 이후 채권시장은“약보합 흐름 이어질 것”](https://news.google.com/rss/articles/CBMiUkFVX3lxTFA5WFJNRk5nYjk2eVdtQ3FKeHFiMEtqOVZvdU9PTGstckZjS3pUYUdGTW1jeTJmV2lHSmlLT0FsQTQxTTBNRzZXeWhRODd0dDNzNUE?oc=5) — 출처: 한국은행 금리정책입니다.
 
 ## 이슈 분포 현황

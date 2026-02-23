@@ -65,6 +65,7 @@ image: "/assets/images/generated/market-heatmap-2026-02-18.png"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 극도의 공포 장세: 공포/탐욕 지수 8으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다.
@@ -75,18 +76,19 @@ image: "/assets/images/generated/market-heatmap-2026-02-18.png"
 
 ## 내용 분석
 
-- 극도의 공포 장세: 공포/탐욕 지수 8으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다.
+- 본문은 오늘의 핵심, 전체 뉴스 요약, 오늘의 시장 인사이트 등 4개 섹션으로 구성되어 있습니다.
+- 총 11개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.
 
 
 ## URL 요약
 
-- [Bitcoin Whale Transfer: Decoding the $205 Million Mystery Move from Coinbase Institutional](https://news.google.com/rss/articles/CBMihwFBVV95cUxQNlByTUpwSHREcldsdWdIYi1FTGVjc3F0bkl6aHMxV053dkkxUlFXRFkxX3gyZEtVaVBNN3Z6QnJUVXd0dl85YlExS0t2SVRfRFZkNWtLa3dieVUxcUpoUnkzRVN6NGlaODIyNXpJaDV1UWJJbDFNR2VlblFPLTRBU295ZGk4Zjg?oc=5) — 온체인 이동 — Bitcoin Whale Transfer: Decoding the $205 Million Mystery입니다.
-- [Bitcoin Whale’s Strategic $5.86M Pivot to Ethereum via Thorchain Signals Major Cross-Chain Confidence](https://news.google.com/rss/articles/CBMiXkFVX3lxTE1DWHFFRy1nT2NRUHZnQTQ5ajdxTlFiOEtCTE5qbVRta0tIUWItOEJHQURja0tJYlo3OWVPVVhQQkFXRDBpSi1yZlVSVC00bWhfRG9PcXo4dC05MDI0V2fSAWNBVV95cUxOUDNpTnpSZk9oQk1KdzFPUGFrWTJuWTJlQTUtN2tXbTVnakU2MlBLUzRYaDVoelVnWVppaWZMZElmYWtfNnVaWGRsUG5pd2pNWmQxRzRVeG1WLWFVb3lRSWZKWjg?oc=5) — 온체인 이동 — Bitcoin Whale’s Strategic $5.86M Pivot to Ethereum via입니다.
+- [Bitcoin Whale Transfer: Decoding the $205 Million Mystery Move from Coinbase Institutional](https://news.google.com/rss/articles/CBMihwFBVV95cUxQNlByTUpwSHREcldsdWdIYi1FTGVjc3F0bkl6aHMxV053dkkxUlFXRFkxX3gyZEtVaVBNN3Z6QnJUVXd0dl85YlExS0t2SVRfRFZkNWtLa3dieVUxcUpoUnkzRVN6NGlaODIyNXpJaDV1UWJJbDFNR2VlblFPLTRBU295ZGk4Zjg?oc=5) — 온체인 이동 — Bitcoin Whale Transfer: Decoding the $205 Million Mystery.
+- [Bitcoin Whale’s Strategic $5.86M Pivot to Ethereum via Thorchain Signals Major Cross-Chain Confidence](https://news.google.com/rss/articles/CBMiXkFVX3lxTE1DWHFFRy1nT2NRUHZnQTQ5ajdxTlFiOEtCTE5qbVRta0tIUWItOEJHQURja0tJYlo3OWVPVVhQQkFXRDBpSi1yZlVSVC00bWhfRG9PcXo4dC05MDI0V2fSAWNBVV95cUxOUDNpTnpSZk9oQk1KdzFPUGFrWTJuWTJlQTUtN2tXbTVnakU2MlBLUzRYaDVoelVnWVppaWZMZElmYWtfNnVaWGRsUG5pd2pNWmQxRzRVeG1WLWFVb3lRSWZKWjg?oc=5) — 온체인 이동 — Bitcoin Whale’s Strategic $5.86M Pivot to Ethereum via.
 - [FRED](https://fred.stlouisfed.org/series/FEDFUNDS) — FRED.
-- [FRED - 10-Year Treasury](https://fred.stlouisfed.org/series/DGS10) — 기관 매수·매도 — FRED - 10-Year Treasury입니다.
+- [FRED - 10-Year Treasury](https://fred.stlouisfed.org/series/DGS10) — 기관 매수·매도 — FRED - 10-Year Treasury.
 - [FRED](https://fred.stlouisfed.org/series/CPIAUCSL) — FRED.
 - [FRED](https://fred.stlouisfed.org/series/VIXCLS) — FRED.
-- [CoinGecko](https://www.coingecko.com/) — CoinGecko.
+- [CoinGecko](https://www.coingecko.com/) — Coin.
 - [Alternative.me](https://alternative.me/crypto/fear-and-greed-index/) — Alternative.me.
 - [Investing.com](https://kr.investing.com/indices/kospi) — Investing.com.
 - [Yahoo Finance](https://finance.yahoo.com/) — Yahoo Finance.
