@@ -48,7 +48,7 @@ jobs:
         run: python3 scripts/verify_rendered_posts.py
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
 
   deploy:
     environment:
