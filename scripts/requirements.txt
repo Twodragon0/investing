@@ -2,7 +2,7 @@ requests==2.32.4
 certifi==2024.8.30
 beautifulsoup4==4.12.3
 lxml==5.1.0
-pytz==2024.1
+pytz==2025.2
 yfinance>=0.2.36
 matplotlib>=3.8.0
 Pillow>=10.2.0
