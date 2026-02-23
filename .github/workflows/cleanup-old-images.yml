@@ -20,6 +20,7 @@ jobs:
 
       - name: Remove images older than 30 days
         run: |
+          set -euo pipefail
           cd assets/images/generated
           count=0
           for f in *.png; do

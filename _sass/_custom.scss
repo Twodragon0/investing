@@ -1365,7 +1365,7 @@ a {
     font-size: 1.05rem;
     transition: all 0.3s ease;
 
-    &:focus {
+    &:focus-visible {
       outline: none;
       border-color: $accent-blue;
       box-shadow: 0 0 0 3px rgba($accent-blue, 0.1);
@@ -2591,7 +2591,7 @@ body {
   font-weight: 500;
   transition: all 0.3s ease;
 
-  &:focus {
+  &:focus-visible {
     outline: none;
     border-color: $accent-blue;
     box-shadow: 0 0 0 4px rgba($accent-blue, 0.15);
@@ -2737,7 +2737,7 @@ body {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
-    &:focus {
+    &:focus-visible {
       outline: none;
       border-color: $accent-blue;
       box-shadow: 0 0 0 4px rgba($accent-blue, 0.15), 0 8px 24px rgba(0, 0, 0, 0.15);
@@ -3160,7 +3160,7 @@ body {
     font-size: 1.1rem;
     transition: all 0.3s ease;
 
-    &:focus {
+    &:focus-visible {
       outline: none;
       border-color: $accent-blue;
       box-shadow: 0 0 0 4px rgba($accent-blue, 0.15);
@@ -4114,7 +4114,7 @@ body {
     font-size: 0.95rem;
     transition: all 0.3s ease;
 
-    &:focus {
+    &:focus-visible {
       outline: none;
       border-color: $accent-blue;
       box-shadow: 0 0 0 3px rgba($accent-blue, 0.15);

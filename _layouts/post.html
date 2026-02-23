@@ -508,9 +508,17 @@ function copyLink() {
   navigator.clipboard.writeText(url).then(function() {
     var btn = document.querySelector('.share-copy');
     if (!btn) return;
-    var originalText = btn.innerHTML;
-    btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 복사됨!';
-    setTimeout(function() { btn.innerHTML = originalText; }, 2000);
+    var originalHTML = btn.innerHTML;
+    btn.textContent = '';
+    var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('width', '16'); svg.setAttribute('height', '16');
+    svg.setAttribute('viewBox', '0 0 24 24'); svg.setAttribute('fill', 'none');
+    svg.setAttribute('stroke', 'currentColor'); svg.setAttribute('stroke-width', '2');
+    var poly = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+    poly.setAttribute('points', '20 6 9 17 4 12');
+    svg.appendChild(poly); btn.appendChild(svg);
+    btn.appendChild(document.createTextNode(' 복사됨!'));
+    setTimeout(function() { btn.innerHTML = originalHTML; }, 2000);
   }).catch(function() {
     window.prompt('링크를 복사하세요:', url);
   });
