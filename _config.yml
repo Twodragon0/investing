@@ -41,6 +41,8 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
+strict_front_matter: true
+
 exclude:
   - scripts/
   - _state/

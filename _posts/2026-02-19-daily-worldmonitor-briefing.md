@@ -45,6 +45,7 @@ lang: "ko"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **20건** 수집
@@ -81,21 +82,6 @@ lang: "ko"
 - [Wave of arrests over killing of French nationalist piles pressure on far left](https://www.bbc.com/news/articles/c62dzgy0q37o?at_medium=RSS&at_campaign=rss) — Wave of arrests over killing of French nationalist piles pressure on far left.
 - [Peru appoints Jose Maria Balcazar as president after Jose Jeri’s removal](https://www.aljazeera.com/news/2026/2/19/peru-appoints-new-president-after-jose-jeris-removal?traffic_source=rss) — Peru appoints Jose Maria Balcazar as president after Jose Jeri’s removal.
 - [Venezuela’s Rodriguez, Colombia’s Petro say they will meet ‘soon’](https://www.aljazeera.com/news/2026/2/19/venezuelas-rodriguez-colombias-petro-say-they-will-meet-soon?traffic_source=rss) — Venezuela’s Rodriguez, Colombia’s Petro say they will meet ‘soon’.
-- [Eight skiers found dead after California avalanche](https://www.bbc.com/news/articles/cvg19dp4vxgo?at_medium=RSS&amp;at_campaign=rss) — Eight skiers found dead after California avalanche.
-- [Do not give away Diego Garcia, Trump tells UK in fresh attack on Chagos deal](https://www.bbc.com/news/articles/c309qqyer8yo?at_medium=RSS&amp;at_campaign=rss) — 트럼프 — Do not give away Diego Garcia, Trump tells UK in fresh입니다.
-- [Hamas is reasserting control in Gaza despite its heavy losses fighting Israel](https://www.bbc.com/news/articles/c98g1klxnpxo?at_medium=RSS&amp;at_campaign=rss) — Hamas is reasserting control in Gaza despite its heavy losses fighting Israel.
-- [Martial law, protests and a president tried for insurrection: How did South Korea get here?](https://www.bbc.com/news/videos/c70kw0nrxreo?at_medium=RSS&amp;at_campaign=rss) — Martial law, protests and a president tried for insurrection: How did South Korea get.
-- [Desperate hunt for breakthrough in Nancy Guthrie case turns to Mexico](https://www.bbc.com/news/articles/c4gq2k8220go?at_medium=RSS&amp;at_campaign=rss) — Desperate hunt for breakthrough in Nancy Guthrie case turns to Mexico.
-- [US to withdraw troops from Syria as tensions mount with Iran](https://www.bbc.com/news/articles/c875pey8vy2o?at_medium=RSS&amp;at_campaign=rss) — US to withdraw troops from Syria as tensions mount with Iran.
-- [&#x27;Difficult&#x27; Russia-Ukraine peace talks end without breakthrough](https://www.bbc.com/news/articles/c0k1xj0d708o?at_medium=RSS&amp;at_campaign=rss) — &#x27;Difficult&#x27; Russia-Ukraine peace talks end without breakthrough.
-- [Iran security official appears to fire on crowd at cemetery](https://www.bbc.com/news/articles/cly8q62qe71o?at_medium=RSS&amp;at_campaign=rss) — 규제 당국 — Iran security official appears to fire on crowd at cemetery입니다.
-- [Suspected carbon-monoxide leak kills at least 30 miners in Nigeria, witnesses say](https://www.bbc.com/news/articles/cwyk6nr80kxo?at_medium=RSS&amp;at_campaign=rss) — Suspected carbon-monoxide leak kills at least 30 miners in Nigeria, witnesses say.
-- [Billionaire Les Wexner tells US lawmakers he was &#x27;naive&#x27; and &#x27;conned&#x27; by Epstein](https://www.bbc.com/news/articles/cy57rrrpvg7o?at_medium=RSS&amp;at_campaign=rss) — Billionaire Les Wexner tells US lawmakers he was &#x27;naive&#x27; and &#x27;conned&#x27.
-- [You&#x27;re never too old, says dancer, 71, cast in Taylor Swift video](https://www.bbc.com/news/articles/cly23mrv68ro?at_medium=RSS&amp;at_campaign=rss) — You&#x27;re never too old, says dancer, 71, cast in Taylor Swift video.
-- [Zuckerberg defends Meta in landmark social media addiction trial](https://www.bbc.com/news/articles/c5y42znjnjvo?at_medium=RSS&amp;at_campaign=rss) — Zuckerberg defends Meta in landmark social media addiction trial.
-- [Air Force One set for makeover paint job with new colours](https://www.bbc.com/news/articles/cpd8zx4qdz6o?at_medium=RSS&amp;at_campaign=rss) — Air Force One set for makeover paint job with new colours.
-- [Turkey&#x27;s president rejects Israel&#x27;s recognition of Somaliland](https://www.bbc.com/news/articles/c0lj0plkg09o?at_medium=RSS&amp;at_campaign=rss) — Turkey&#x27;s president rejects Israel&#x27;s recognition of Somaliland.
-- [Wave of arrests over killing of French nationalist piles pressure on far left](https://www.bbc.com/news/articles/c62dzgy0q37o?at_medium=RSS&amp;at_campaign=rss) — Wave of arrests over killing of French nationalist piles pressure on far left.
 - [worldmonitor](https://worldmonitor.app) — worldmonitor.
 
 ## 이슈 분포

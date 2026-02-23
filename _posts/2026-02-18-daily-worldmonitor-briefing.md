@@ -45,6 +45,7 @@ lang: "ko"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **20건** 수집
@@ -81,11 +82,6 @@ lang: "ko"
 - [Stephen Colbert says CBS spiked interview with Democrat over FCC fears](https://www.bbc.com/news/articles/cze0dk3yd5eo?at_medium=RSS&at_campaign=rss) — 시장 심리 — Stephen Colbert says CBS spiked interview with Democrat입니다.
 - [Under pressure from Trump, Venezuela's new president has aces up her sleeve](https://www.bbc.com/news/articles/cn87rv0jdy1o?at_medium=RSS&at_campaign=rss) — 트럼프 상승 — Under pressure from Trump, Venezuela's new president has입니다.
 - [Climber on trial for leaving girlfriend to die on Austria's highest mountain](https://www.bbc.com/news/articles/c5yv9plyjgpo?at_medium=RSS&at_campaign=rss) — 시장 상승 — Climber on trial for leaving girlfriend to die on Austria's입니다.
-- [US civil rights leader Jesse Jackson dies aged 84](https://www.bbc.com/news/articles/cp81l0e1eg5o?at_medium=RSS&amp;at_campaign=rss) — US civil rights leader Jesse Jackson dies aged 84.
-- [Stephen Colbert says CBS spiked interview with Democrat over FCC fears](https://www.bbc.com/news/articles/cze0dk3yd5eo?at_medium=RSS&amp;at_campaign=rss) — 시장 심리 — Stephen Colbert says CBS spiked interview with Democrat입니다.
-- [I would scream in my sleep: Women from Syria's Alawite minority tell of kidnap and rape](https://www.bbc.com/news/articles/cn5g751pl7lo?at_medium=RSS&amp;at_campaign=rss) — I would scream in my sleep: Women from Syria's Alawite minority tell of kidnap and rape.
-- [Under pressure from Trump, Venezuela's new president has aces up her sleeve](https://www.bbc.com/news/articles/cn87rv0jdy1o?at_medium=RSS&amp;at_campaign=rss) — 트럼프 상승 — Under pressure from Trump, Venezuela's new president has입니다.
-- [Climber on trial for leaving girlfriend to die on Austria's highest mountain](https://www.bbc.com/news/articles/c5yv9plyjgpo?at_medium=RSS&amp;at_campaign=rss) — 시장 상승 — Climber on trial for leaving girlfriend to die on Austria's입니다.
 - [worldmonitor](https://worldmonitor.app) — worldmonitor.
 
 ## 이슈 분포

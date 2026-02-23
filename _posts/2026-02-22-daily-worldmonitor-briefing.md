@@ -30,6 +30,7 @@ lang: "ko"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **20건** 수집
@@ -66,12 +67,6 @@ lang: "ko"
 - [Nasa astronauts' moon mission delayed due to rocket issue](https://www.bbc.com/news/articles/c626v265zqlo?at_medium=RSS&at_campaign=rss) — Nasa astronauts' moon mission delayed due to rocket issue.
 - [Divers recover bodies of seven Chinese tourists from bottom of Lake Baikal](https://www.bbc.com/news/articles/czd8y96mldyo?at_medium=RSS&at_campaign=rss) — Divers recover bodies of seven Chinese tourists from bottom of Lake Baikal.
 - [Willie Colón, trombonist who pioneered salsa music, dies aged 75](https://www.bbc.com/news/articles/c98qjed249do?at_medium=RSS&at_campaign=rss) — Willie Colón, trombonist who pioneered salsa music, dies aged 75.
-- [Iran students stage first large anti-government protests since deadly crackdown](https://www.bbc.com/news/articles/c5yj2kzkrj0o?at_medium=RSS&amp;at_campaign=rss) — 다우존스 하락 — Iran students stage first large anti-government protests입니다.
-- [Killing of nationalist student leaves French far left in deep trouble as elections loom](https://www.bbc.com/news/articles/cnv61zv534eo?at_medium=RSS&amp;at_campaign=rss) — Killing of nationalist student leaves French far left in deep trouble as elections loom.
-- [Nasa astronauts&#x27; moon mission delayed due to rocket issue](https://www.bbc.com/news/articles/c626v265zqlo?at_medium=RSS&amp;at_campaign=rss) — Nasa astronauts&#x27; moon mission delayed due to rocket issue.
-- [Divers recover bodies of seven Chinese tourists from bottom of Lake Baikal](https://www.bbc.com/news/articles/czd8y96mldyo?at_medium=RSS&amp;at_campaign=rss) — Divers recover bodies of seven Chinese tourists from bottom of Lake Baikal.
-- [Willie Colón, trombonist who pioneered salsa music, dies aged 75](https://www.bbc.com/news/articles/c98qjed249do?at_medium=RSS&amp;at_campaign=rss) — Willie Colón, trombonist who pioneered salsa music, dies aged 75.
-- [Palestinian Authority in dire straits as Israel&#x27;s hold on West Bank deepens](https://www.bbc.com/news/articles/c9wn8lw0kgjo?at_medium=RSS&amp;at_campaign=rss) — Palestinian Authority in dire straits as Israel&#x27;s hold on West Bank deepens.
 - [worldmonitor](https://worldmonitor.app) — worldmonitor.
 
 ## 이슈 분포

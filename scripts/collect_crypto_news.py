@@ -243,7 +243,8 @@ def _fetch_binance_browser() -> List[Dict[str, Any]]:
                             "tags": ["crypto", "exchange", "binance"],
                         }
                     )
-                except Exception:
+                except Exception as e:
+                    logger.debug("Binance link parse error: %s", e)
                     continue
         logger.info("Binance Browser: fetched %d announcements", len(items))
     except Exception as e:
@@ -388,7 +389,8 @@ def _fetch_browser_sources() -> tuple:
                                 "tags": ["crypto", "exchange", "binance"],
                             }
                         )
-                    except Exception:
+                    except Exception as e:
+                        logger.debug("Binance link parse error: %s", e)
                         continue
                 logger.info(
                     "Binance Browser: fetched %d announcements", len(binance_items)

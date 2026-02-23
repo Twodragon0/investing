@@ -55,6 +55,7 @@ lang: "ko"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **53건** 수집
@@ -95,7 +96,7 @@ lang: "ko"
 - ['금통위 D-5' 금리 동결 우세"성장률 0.1~0.2%p 상향 가능성"](https://news.google.com/rss/articles/CBMiVkFVX3lxTE9jUk9FNklFam9tNl9VN3Nab1ZsZkFrUURzaEw5R3VDQ2ROMnhOaHFzdExuaUY0a3NQN3dtMG80NkI3YjRwRFlSM0RiQ1NjTk5ScUhZbFlB0gH6AUFVX3lxTE9scUdkaTJleUhvTzhPU0VSTng5NHZQN2NueC1hbHNSTzE1SmNrM1hhSWVmX19MX05Lb3RxTGQtSXUwSF9nX3kyTkV4cUplcDNnWHA5NWEtS0Q5S1V2TWQxUV83RHBhc0NWOFZ6dXpvQXVLSmJlRU5FUEZpZ3pvUVV6Sm1pZXVQTlc2c1JhVDZSQjFKNC1Id0g1UlV0VDZ4azd3SzdUR2ZiNXhDRVpJckIxRnRlVEZEdWxrdjdNclZabzNsekhhVDZSTHFQVVAzUDU4TkhXVUxod01IaERGSDl0SVFUTDU5TVdBTE9Vc24yaDdwOE4yS2g5T0E?oc=5) — '금통위 D-5' 금리 동결 우세"성장률 0.1~0.2%p 상향 가능성"입니다.
 - ['6천 포인트 눈앞' 코스피, 美관세 변수 넘어설까금통위 금리결정도 '주목'](https://news.google.com/rss/articles/CBMibEFVX3lxTE05ZFRmTnNGcUFYdmRfQlp2eXdnTjFUN1lVQnNVYWFORlpVUVpaVVNtNzlQaGFWejZWZnZ0a2xXVlAxclRIYmUxSWg5Mm5UdTI2TTFEaEMzMTVfTVRkdEFoMlVnQmlEWkRfenVqWA?oc=5) — '6천 포인트 눈앞' 코스피, 美관세 변수 넘어설까금통위 금리결정도 '주목'입니다.
 - [다음주 한국은행 금통위 개최기준금리 6연속 동결 '유력'](https://news.google.com/rss/articles/CBMib0FVX3lxTFBRc3lwX3RKa2FmclE2M1ppQktXRU82Z2hDUGFnSmoyY0RsYjB5Uy01WndMTkptRmFfMUV1TXUzUXlwWHFiVUdqNVp5Vi12VkdYUVgwd0JmRmtDbVRoNWxSRWZMd1VhVkp2RkRYNkZmMNIBc0FVX3lxTFB6MWV5YnFlOGZIUDZXaTEtbnp4RDdiX2ZFX2dDWWlLTmR0UHVraGhlcVlNd0dGdy1LY3FMdVFVallRdDlsYkNlUER5X01LNnVQZ0pkVl9fc2RJd1UyVzl3YlAxSmRiMUVXWm1yT1d5Yi1RM3M?oc=5) — 9. [박수진의 머니워치] 증권·보험주 상승세기준금리 동결 전망 - 뉴스워치입니다.
-- [트럼프 대통령 &quot;모든 나라에 대한 10% 관세 행정명령 방금 서명&quot;](https://news.google.com/rss/articles/CBMia0FVX3lxTE9qa2tQY016S3Z6S3kyd0F2QU9RbWNkeWV1VkxKMjRlXzYzaWMzaUhvSEhVdDV2cTN6N0ZadTMxU0Z5d0xzX1UxNzBIdnRKZWhDUGxCUll6Z0t1YmRzYTVrbjFBd2NUaU9EdHR3?oc=5) — 트럼프 대통령 &quot;모든 나라에 대한 10% 관세 행정명령 방금 서명&quot;입니다.
+- [트럼프 대통령 "모든 나라에 대한 10% 관세 행정명령 방금 서명"](https://news.google.com/rss/articles/CBMia0FVX3lxTE9qa2tQY016S3Z6S3kyd0F2QU9RbWNkeWV1VkxKMjRlXzYzaWMzaUhvSEhVdDV2cTN6N0ZadTMxU0Z5d0xzX1UxNzBIdnRKZWhDUGxCUll6Z0t1YmRzYTVrbjFBd2NUaU9EdHR3?oc=5) — 트럼프 대통령 "모든 나라에 대한 10% 관세 행정명령 방금 서명"입니다.
 
 ## 미국 의회 거래 동향
 

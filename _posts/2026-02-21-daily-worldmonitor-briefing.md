@@ -45,6 +45,7 @@ lang: "ko"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **20건** 수집
@@ -81,21 +82,6 @@ lang: "ko"
 - [Mother and infant burnt to death in Indian state over witchcraft allegations](https://www.bbc.com/news/articles/c98q93gdy3do?at_medium=RSS&at_campaign=rss) — Mother and infant burnt to death in Indian state over witchcraft allegations.
 - [Hamas holds vote to choose new interim leader, source tells BBC](https://www.bbc.com/news/articles/c23z0kdypm3o?at_medium=RSS&at_campaign=rss) — Hamas holds vote to choose new interim leader, source tells BBC.
 - [Twelve Palestine Action activists granted bail](https://www.aljazeera.com/news/2026/2/20/heads-held-high-12-palestine-action-action-prisoners-granted-bail?traffic_source=rss) — Twelve Palestine Action activists granted bail.
-- [Trump brings in new 10% tariff as Supreme Court rejects his global import taxes](https://www.bbc.com/news/articles/cn8146l0n55o?at_medium=RSS&amp;at_campaign=rss) — 트럼프 상승 — Trump brings in new 10% tariff as Supreme Court rejects his입니다.
-- [Trump lashes out at Supreme Court justices over tariffs ruling](https://www.bbc.com/news/articles/cd9g0e7zd8wo?at_medium=RSS&amp;at_campaign=rss) — 트럼프 상승 — Trump lashes out at Supreme Court justices over tariffs입니다.
-- [Trump says he is considering limited military strike on Iran](https://www.bbc.com/news/articles/cdxzk4gvzp0o?at_medium=RSS&amp;at_campaign=rss) — 트럼프 — Trump says he is considering limited military strike on Iran입니다.
-- [Killing of nationalist student leaves French far left in deep trouble as elections loom](https://www.bbc.com/news/articles/cnv61zv534eo?at_medium=RSS&amp;at_campaign=rss) — Killing of nationalist student leaves French far left in deep trouble as elections loom.
-- [Nasa targets early March to send humans back around the Moon](https://www.bbc.com/news/articles/c86y1g6wde3o?at_medium=RSS&amp;at_campaign=rss) — Nasa targets early March to send humans back around the Moon.
-- [At least 10 killed in Israeli strikes on Lebanon](https://www.bbc.com/news/articles/cvg8914dkl0o?at_medium=RSS&amp;at_campaign=rss) — At least 10 killed in Israeli strikes on Lebanon.
-- [Anna Murdoch-Mann, mother of News Corp heir, dies aged 81](https://www.bbc.com/news/articles/cp8150xj36wo?at_medium=RSS&amp;at_campaign=rss) — Anna Murdoch-Mann, mother of News Corp heir, dies aged 81.
-- [Austrian climber found guilty after girlfriend froze to death on mountain](https://www.bbc.com/news/articles/c0k1xkllknmo?at_medium=RSS&amp;at_campaign=rss) — 시장 상승 — Austrian climber found guilty after girlfriend froze to입니다.
-- [Venezuelan opposition politician released after amnesty law passed](https://www.bbc.com/news/articles/cy57en3590no?at_medium=RSS&amp;at_campaign=rss) — Venezuelan opposition politician released after amnesty law passed.
-- [Rare prison sentences handed to Cameroon soldiers after killing of 21 civilians](https://www.bbc.com/news/articles/cev74dywd7eo?at_medium=RSS&amp;at_campaign=rss) — 솔라나 — Rare prison sentences handed to Cameroon soldiers after입니다.
-- [French soldier dies after being shot in head during &#x27;game&#x27; with other soldiers](https://www.bbc.com/news/articles/cj4z25gl24eo?at_medium=RSS&amp;at_campaign=rss) — 솔라나 — French soldier dies after being shot in head during입니다.
-- [Dog trained to illegally dump rubbish, Italian authorities say](https://www.bbc.com/news/articles/cy57erz57xyo?at_medium=RSS&amp;at_campaign=rss) — Dog trained to illegally dump rubbish, Italian authorities say.
-- [Asos co-founder dies after Thailand apartment block fall](https://www.bbc.com/news/articles/ce8w0n061ryo?at_medium=RSS&amp;at_campaign=rss) — 시장 하락 — Asos co-founder dies after Thailand apartment block fall입니다.
-- [Mother and infant burnt to death in Indian state over witchcraft allegations](https://www.bbc.com/news/articles/c98q93gdy3do?at_medium=RSS&amp;at_campaign=rss) — Mother and infant burnt to death in Indian state over witchcraft allegations.
-- [Hamas holds vote to choose new interim leader, source tells BBC](https://www.bbc.com/news/articles/c23z0kdypm3o?at_medium=RSS&amp;at_campaign=rss) — Hamas holds vote to choose new interim leader, source tells BBC.
 - [worldmonitor](https://worldmonitor.app) — worldmonitor.
 
 ## 이슈 분포

@@ -54,6 +54,7 @@ lang: "ko"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **17건** 수집
@@ -81,7 +82,7 @@ lang: "ko"
 - [Federal Reserve officials discussed interest rate hike scenarios at their last meeting](https://news.google.com/rss/articles/CBMijAFBVV95cUxQY2pYLXcxUFpnOHB0Sm90aTg2V3pMQ0RlY2JqRWdKclRIUm1jcVZCdUFxU1ZLX2VfYmpxTlJYQUtaWmt1SnNLel9XckN4dk1HaHMtQk5Pek0tOWpZaVFXZXFPNkk1Q2JsTUNSQmtNcUZ2eE8wZ1QxN1pBNTZmZEJfUFc3UWtSME9EXzNEZw?oc=5) — 미 연준 — Federal Reserve officials discussed interest rate hike입니다.
 - [Fed Minutes Show No Rush to Restart Rate Cuts, and Even Possibility of Hikes](https://news.google.com/rss/articles/CBMimAFBVV95cUxOUk1ubE12d09aaHhYRC1Qa3luNDFqTjFDeDViWkhXX0RmakdTWi1QOHNjX183R2x2dElfVGtkZ1hkVkFoOWczUXF2OUhUZVI2Tnh5Njg0YzNRZE8ySTVPU0NXMmdzei03anl4MWZTcWJKaEdRR21zOFB4aTZWcGpmWS1NZEZ5QnN6Y0tBay1aTkdxSGluTGVTVA?oc=5) — 미 연준 — Fed Minutes Show No Rush to Restart Rate Cuts, and Even입니다.
 - [[경제인사이드] 불확실성에 발목 잡힌 한은, 다음주 ‘6연속 동결’ 전망](https://news.google.com/rss/articles/CBMiakFVX3lxTE9BbmJjYnowYm5xaFdLR3U4SVhpdC1lZjB3M1hHcGk5RXZwYlpvNVFjaUYtcnlyelVCWW1KQ1RuMlJQU1NTMFZpWUEzVE9rWmNWTk9TSndGWGZMbmNHVUpoeDgzQXlMTk0teFE?oc=5) — [경제인사이드] 불확실성에 발목 잡힌 한은, 다음주 ‘6연속 동결’ 전망입니다.
-- [전문가 10명 중 9명 &quot;2월도 기준금리 동결 예상연말까지 변동 없을 것&quot; [금통위폴]](https://news.google.com/rss/articles/CBMibkFVX3lxTE5UY2tIdWdpRjRZcFZTaHo0Tkc0NXQ0cDlsa0xOUkI3cy1ORWw1RTFxRjZObEtHZElULU1KWUtVMFoyNW1Na3JZNkktWDlaWlIySUVHRVZHcXRNQmprLWdDWVpkUEFnYzJMbzVoV2JR?oc=5) — 전문가 10명 중 9명 &quot;2월도 기준금리 동결 예상연말까지 변동 없을 것&quot; [금통위폴]입니다.
+- [전문가 10명 중 9명 "2월도 기준금리 동결 예상연말까지 변동 없을 것" [금통위폴]](https://news.google.com/rss/articles/CBMibkFVX3lxTE5UY2tIdWdpRjRZcFZTaHo0Tkc0NXQ0cDlsa0xOUkI3cy1ORWw1RTFxRjZObEtHZElULU1KWUtVMFoyNW1Na3JZNkktWDlaWlIySUVHRVZHcXRNQmprLWdDWVpkUEFnYzJMbzVoV2JR?oc=5) — 전문가 10명 중 9명 "2월도 기준금리 동결 예상연말까지 변동 없을 것" [금통위폴]입니다.
 
 ## 미국 의회 거래 동향
 

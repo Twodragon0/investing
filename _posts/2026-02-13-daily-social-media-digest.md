@@ -42,6 +42,7 @@ lang: "ko"
 
 
 
+
 ## 전체 뉴스 요약
 
 오늘 수집된 총 39건 중 텔레그램 20건, 소셜 -건, 정치·경제 19건으로 정치/정책과 매크로/금리 이슈가 집중되었고 비트코인·거래소 관련 발언과 온체인 이동이 단기 변동성 요인으로 부각되었습니다.
@@ -81,7 +82,7 @@ lang: "ko"
 - [Binance has purchased another 4,545 Bitcoins valued at $305 million for its “SAFU” fund.](https://t.me/crypto/3499) — 비트코인 — Binance has purchased another 4,545 Bitcoins valued at $305입니다.
 - [Polymarket rolls out an “Up or Down” Bitcoin marketA new BTC prediction market has gone live, settli](https://t.me/crypto/3500) — 비트코인 상승 — Polymarket rolls out an “Up or Down” Bitcoin marketA new입니다.
 - ['Clock is ticking': crypto bill's 2026 fate hinges on Trump and stablecoin yields](https://news.google.com/rss/articles/CBMirgFBVV95cUxQOGx4RWF3MGdfYWp0cEttYUJxTDJOckpWM29RNFJaWEpGSmNRellLbTdDY2RjQ29wcktvTEZOSl9pZHVfb2JGOWJHaTBwLTA1eWZyYlN4WHhUUWhMb3BtUC1nT090YWJhdjFUNmNESkJDUGZ3SU8wVkxKYXFTU1VmdEZsSXlwWjgwOHlOejBjaXYxbTZxem9ubXQ1M2VPbE9qNk0tRUJaX0t4TEdtOVE?oc=5) — 암호화폐 — 'Clock is ticking': crypto bill's 2026 fate hinges on Trump입니다.
-- [Explained: The growing personal ties between crypto and Trump &#124; TRENDING](https://news.google.com/rss/articles/CBMiqAFBVV95cUxOR0x3NmZzbUxESDVBQ3pvejZ2X3VMUEhBM2VmaEpOTWJtT0xMYVNvaDJ0VDN2eUFhMjVuRmpNcy1rSGNpbHhJTHdIMGxKSXA2Und4SWpqTlBNdVpFOExMVzFPa3Y5djJQRWNTMnpwX29UWFIzeWJiTERzdzl0ajBTUkVmUG9OaXZ2c0FuajY4Um5IcVVBTXNsRjZmWVNkdHNwclExWXZlb2w?oc=5) — 암호화폐 — Explained: The growing personal ties between crypto and입니다.
+- [Explained: The growing personal ties between crypto and Trump | TRENDING](https://news.google.com/rss/articles/CBMiqAFBVV95cUxOR0x3NmZzbUxESDVBQ3pvejZ2X3VMUEhBM2VmaEpOTWJtT0xMYVNvaDJ0VDN2eUFhMjVuRmpNcy1rSGNpbHhJTHdIMGxKSXA2Und4SWpqTlBNdVpFOExMVzFPa3Y5djJQRWNTMnpwX29UWFIzeWJiTERzdzl0ajBTUkVmUG9OaXZ2c0FuajY4Um5IcVVBTXNsRjZmWVNkdHNwclExWXZlb2w?oc=5) — 암호화폐 — Explained: The growing personal ties between crypto and입니다.
 - [국회 경제 대정부질문 이재명 정부 부동산 정책 설전 격화](https://news.google.com/rss/articles/CBMiaEFVX3lxTE9LV3gyYjV0LU53RWdTMjM4NUh3b09IWjh4cnJSR1VHUmRvOVd4bldJNHBRTjZKbUZhaTFfTTQ4bnFWczFJNElaYWFjQWtaVjlNak56ME1SeDQ4bmtGbVZwalBnMV9FTEY1?oc=5) — 국회 경제 대정부질문 이재명 정부 부동산 정책 설전 격화입니다.
 - [야당 의원 우재준, 金 총리에 “박근혜표 창조경제, 이재명 정부가 살려야”](https://news.google.com/rss/articles/CBMia0FVX3lxTFBLcUU1WTBJb1YzRXFuWERuTV9TWnBGckVVaUtqUlJBVG5hVWRjbmxYemRxZTFuRFhtN05iS2pPY2hHQ0ZMMGJheHJtU1BMU245MTV3cXhwMlVrWGozenpDdFJiSVg5V1ZsV1Bj?oc=5) — 야당 의원 우재준, 金 총리에 “박근혜표 창조경제, 이재명 정부가 살려야”입니다.
 - [증시 활성화는 A+물가 안정·부동산 세금정책은 '숙제'](https://news.google.com/rss/articles/CBMiU0FVX3lxTE9tang5WWJyN2R5TGtheHNoSzhlV1BhYXNGQ1NXREtuYnVWT2hvNUVHWmduSlQ1WXMwTWJsZ0hJblVyc1NHdzFTdTJsTFVQZGNYbzVJ?oc=5) — 증시 활성화는 A+물가 안정·부동산 세금정책은 '숙제'입니다.

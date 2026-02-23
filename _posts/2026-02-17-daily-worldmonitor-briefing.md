@@ -45,6 +45,7 @@ lang: "ko"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **20건** 수집
@@ -71,21 +72,14 @@ lang: "ko"
 - [Pressure grows for release of remaining Venezuelan political prisoners](https://www.bbc.com/news/articles/c62d6pzpw6yo?at_medium=RSS&at_campaign=rss) — Pressure grows for release of remaining Venezuelan political prisoners.
 - [Navalny's mother says she always knew he was murdered after poison finding](https://www.bbc.com/news/articles/cq6qg6l31l3o?at_medium=RSS&at_campaign=rss) — Navalny's mother says she always knew he was murdered after poison finding.
 - [Kenya strike delays flights at international hub airport](https://www.bbc.com/news/articles/c363096kd5po?at_medium=RSS&at_campaign=rss) — Kenya strike delays flights at international hub airport.
-- [US build-up of warships and fighter jets tracked near Iran](https://www.bbc.com/news/articles/c1d64p3q2d0o?at_medium=RSS&amp;at_campaign=rss) — 시장 상승 — US build-up of warships and fighter jets tracked near Iran입니다.
-- [How Robert Duvall became a Hollywood great](https://www.bbc.com/news/articles/cv2grggdzweo?at_medium=RSS&amp;at_campaign=rss) — How Robert Duvall became a Hollywood great.
-- [How dark web agent spotted bedroom wall clue to rescue girl from years of harm](https://www.bbc.com/news/articles/cx2gn239exlo?at_medium=RSS&amp;at_campaign=rss) — How dark web agent spotted bedroom wall clue to rescue girl from years of harm.
-- [Australian IS families in Syria camp turned back after leaving for home](https://www.bbc.com/news/articles/cvg5ed05pplo?at_medium=RSS&amp;at_campaign=rss) — Australian IS families in Syria camp turned back after leaving for home.
-- [Navalny's mother says she always knew he was murdered after poison finding](https://www.bbc.com/news/articles/cq6qg6l31l3o?at_medium=RSS&amp;at_campaign=rss) — Navalny's mother says she always knew he was murdered after poison finding.
-- [Ancient bone may prove legendary war elephant crossing of Alps](https://www.bbc.com/news/articles/cdr2xl1e41eo?at_medium=RSS&amp;at_campaign=rss) — Ancient bone may prove legendary war elephant crossing of Alps.
-- [Trump's new world order has become real and Europe is having to adjust fast](https://www.bbc.com/news/articles/cddn002g6qzo?at_medium=RSS&amp;at_campaign=rss) — 트럼프 — Trump's new world order has become real and Europe is입니다.
-- [Bondi Beach shooting accused faces court for the first time](https://www.bbc.com/news/articles/c3rzwe7lr4jo?at_medium=RSS&amp;at_campaign=rss) — 법적 분쟁 — Bondi Beach shooting accused faces court for the first time입니다.
-- [Pressure grows for release of remaining Venezuelan political prisoners](https://www.bbc.com/news/articles/c62d6pzpw6yo?at_medium=RSS&amp;at_campaign=rss) — Pressure grows for release of remaining Venezuelan political prisoners.
-- [Savannah Guthrie's new plea for mother's release as FBI analyses glove](https://www.bbc.com/news/articles/c5yrv2g16e2o?at_medium=RSS&amp;at_campaign=rss) — Savannah Guthrie's new plea for mother's release as FBI analyses glove.
-- [Kenya strike delays flights at international hub airport](https://www.bbc.com/news/articles/c363096kd5po?at_medium=RSS&amp;at_campaign=rss) — Kenya strike delays flights at international hub airport.
-- [US attorney general criticised after saying all Epstein files have been released](https://www.bbc.com/news/articles/cz7genjx9njo?at_medium=RSS&amp;at_campaign=rss) — US attorney general criticised after saying all Epstein files have been released.
-- [Female Israeli soldiers rescued after being chased by ultra-Orthodox men](https://www.bbc.com/news/articles/clyzen2lgw9o?at_medium=RSS&amp;at_campaign=rss) — 솔라나 — Female Israeli soldiers rescued after being chased by입니다.
-- [Ukraine's ex-energy minister detained while attempting to leave country](https://www.bbc.com/news/articles/c4g5380xwqjo?at_medium=RSS&amp;at_campaign=rss) — Ukraine's ex-energy minister detained while attempting to leave country.
-- [Sydney police plead for return of man, 85, kidnapped by mistake](https://www.bbc.com/news/articles/c0ljzye1zgno?at_medium=RSS&amp;at_campaign=rss) — 기관 매수·매도 — Sydney police plead for return of man, 85, kidnapped by입니다.
+- [How Robert Duvall became a Hollywood great](https://www.bbc.com/news/articles/cv2grggdzweo?at_medium=RSS&at_campaign=rss) — How Robert Duvall became a Hollywood great.
+- [How dark web agent spotted bedroom wall clue to rescue girl from years of harm](https://www.bbc.com/news/articles/cx2gn239exlo?at_medium=RSS&at_campaign=rss) — How dark web agent spotted bedroom wall clue to rescue girl from years of harm.
+- [Australian IS families in Syria camp turned back after leaving for home](https://www.bbc.com/news/articles/cvg5ed05pplo?at_medium=RSS&at_campaign=rss) — Australian IS families in Syria camp turned back after leaving for home.
+- [Ancient bone may prove legendary war elephant crossing of Alps](https://www.bbc.com/news/articles/cdr2xl1e41eo?at_medium=RSS&at_campaign=rss) — Ancient bone may prove legendary war elephant crossing of Alps.
+- [Bondi Beach shooting accused faces court for the first time](https://www.bbc.com/news/articles/c3rzwe7lr4jo?at_medium=RSS&at_campaign=rss) — 법적 분쟁 — Bondi Beach shooting accused faces court for the first time입니다.
+- [Savannah Guthrie's new plea for mother's release as FBI analyses glove](https://www.bbc.com/news/articles/c5yrv2g16e2o?at_medium=RSS&at_campaign=rss) — Savannah Guthrie's new plea for mother's release as FBI analyses glove.
+- [Female Israeli soldiers rescued after being chased by ultra-Orthodox men](https://www.bbc.com/news/articles/clyzen2lgw9o?at_medium=RSS&at_campaign=rss) — 솔라나 — Female Israeli soldiers rescued after being chased by입니다.
+- [Sydney police plead for return of man, 85, kidnapped by mistake](https://www.bbc.com/news/articles/c0ljzye1zgno?at_medium=RSS&at_campaign=rss) — 기관 매수·매도 — Sydney police plead for return of man, 85, kidnapped by입니다.
 - [Train derails in Switzerland, injuring five amid avalanches in the Alps](https://www.aljazeera.com/news/2026/2/17/train-derails-in-switzerland-injuring-five-amid-avalanches-in-the-alps?traffic_source=rss) — Train derails in Switzerland, injuring five amid avalanches in the Alps.
 - [Australian PM Albanese says no help for ISIL relatives held in Syria camp](https://www.aljazeera.com/news/2026/2/17/australian-pm-albanese-says-no-help-for-isil-relatives-held-in-syria-camp?traffic_source=rss) — Australian PM Albanese says no help for ISIL relatives held in Syria camp.
 - [worldmonitor](https://worldmonitor.app) — worldmonitor.

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import json
+import logging
 import os
 import subprocess
 import urllib.parse
@@ -10,6 +11,11 @@ from glob import glob
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
+
+logger = logging.getLogger("respond_ai_mentions")
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s [%(name)s] %(levelname)s: %(message)s"
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 POSTS_DIR = ROOT / "_posts"
@@ -356,7 +362,7 @@ def fallback_help_text(alias: str) -> str:
 def main() -> int:
     alias = os.getenv("TARGET_CHANNEL_ALIAS", "investing").strip().lower()
     if alias not in CHANNEL_ALIASES:
-        print(f"Unsupported alias: {alias}")
+        logger.warning("Unsupported alias: %s", alias)
         return 1
 
     token = env_first(
@@ -368,17 +374,17 @@ def main() -> int:
     channel_id = channel_id_for_alias(alias)
 
     if not token or not channel_id:
-        print("Missing Slack token or channel. Skipping mention responder.")
+        logger.info("Missing Slack token or channel. Skipping mention responder.")
         return 0
 
     auth = slack_api("auth.test", token, {})
     if not auth.get("ok"):
-        print(f"auth.test failed: {auth}")
+        logger.error("auth.test failed: %s", auth)
         return 1
 
     bot_user_id = auth.get("user_id", "")
     if not bot_user_id:
-        print("auth.test returned no user_id")
+        logger.error("auth.test returned no user_id")
         return 1
 
     now = datetime.now(timezone.utc)
@@ -393,7 +399,7 @@ def main() -> int:
         },
     )
     if not history.get("ok"):
-        print(f"conversations.history failed: {history}")
+        logger.error("conversations.history failed: %s", history)
         return 1
 
     messages = history.get("messages", [])
@@ -429,9 +435,9 @@ def main() -> int:
         if post.get("ok"):
             reply_count += 1
         else:
-            print(f"chat.postMessage failed: {post}")
+            logger.warning("chat.postMessage failed: %s", post)
 
-    print(f"mention responder completed. alias={alias} replies={reply_count}")
+    logger.info("mention responder completed. alias=%s replies=%d", alias, reply_count)
     return 0
 
 

@@ -3,6 +3,7 @@
 import argparse
 import os
 import re
+from html import unescape as html_unescape
 from typing import Dict, List, Optional, Tuple
 
 from common.config import setup_logging
@@ -365,7 +366,9 @@ def extract_links(lines: List[str]) -> List[Tuple[str, str, str, str]]:
         for m in html_matches:
             link_items.append((m.group(2), m.group(1)))
 
-        for title, url in link_items:
+        for raw_title, raw_url in link_items:
+            title = html_unescape(raw_title)
+            url = html_unescape(raw_url)
             desc = ""
             source = ""
             for look_ahead in range(1, 5):

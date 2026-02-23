@@ -60,6 +60,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-17.png"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **119건** 수집
@@ -93,7 +94,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-17.png"
 - [S&P 500 ends up slightly as tech dips, inflation cools](https://news.google.com/read/CBMilwFBVV95cUxPcUJDLUFCOHFOZGU2eXdhLWhacWJqMktka1ltMDBpbUs3RkFySGZiUFNzZXpKNy1pUUxJLU9lV0NVc2NrME1JRWVlSUdLTDg3dkhVcUdCeWZocWQwYUlJcVZpMnNJUEkybEdWLVVHcTB6cWo2VG91V2d1d0x2cnV2amk2V0wteHN1Um0ybml6NjFVN1NmdTVz?hl=en-US&gl=US&ceid=US%3Aen) — S&P 500 상승 — S&P 500 ends up slightly as tech dips, inflation cools입니다.
 - [US Stock Market Today: S&P 500 Futures Rise As Inflation Worries Ease](https://news.google.com/read/CBMieEFVX3lxTFBGd3Z6M1J4UGVpRzdjNVNLWXhwZHlTWlExb0dYaWc3LV9XOUY5ZWQ3Sk1hd0lyNi0tWTdwRV9PTzhFM0JWWDNqTTM3NTA4SUM2Z2x2MFJpQXI5cXl6dzFPRV9GTW1MX0dYSFh6WldfZm1xeEFUZWlYWA?hl=en-US&gl=US&ceid=US%3Aen) — S&P 500 상승 — US Stock Market Today: S&P 500 Futures Rise As Inflation입니다.
 - [Here’s the Surprising ETF Trouncing the S&P 500 in 2026](https://news.google.com/read/CBMingFBVV95cUxPSnkyaUNiNVZSOEVURFFQN2FLeTcyQW1LR3VicVc5RE9VUXpsSGxpNWFUTGp1c28xek40alpaejg0N0Ftc3pxLU4wcDczOGs2c0RxQ1BNVkN0X0daXzh6Y2MxZFFfTUpKV1BOTUgzcXlBbnpNT1ZmalA0azdDN2h2Q1hWQWxhMmNzTG1hQkx0d1FYMzJ5c3NkT3VXclZkZw?hl=en-US&gl=US&ceid=US%3Aen) — S&P 500 — Here’s the Surprising ETF Trouncing the S&P 500 in 2026.
-- [The New York Stock Exchange &#124; NYSE](https://news.google.com/read/CBMiP0FVX3lxTE93UWVlU3g1TVNpdTNEcjI2Yk9kSHU2Tnh5Y0stVFBGRWVkLW9wbU1EbHhQaHdIOE56d2V5NXVhSQ?hl=en-US&gl=US&ceid=US%3Aen) — 거래소 — The New York Stock Exchange &#124; NYSE입니다.
+- [The New York Stock Exchange | NYSE](https://news.google.com/read/CBMiP0FVX3lxTE93UWVlU3g1TVNpdTNEcjI2Yk9kSHU2Tnh5Y0stVFBGRWVkLW9wbU1EbHhQaHdIOE56d2V5NXVhSQ?hl=en-US&gl=US&ceid=US%3Aen) — 거래소 — The New York Stock Exchange | NYSE입니다.
 - [Stock Market Today: Dow Dives As S&P 500 Turns Negative For 2026; Cisco, AppLovin Crater](https://news.google.com/read/CBMisAFBVV95cUxNd0NsRFI2VWljUTdwaGhiaXA1QzdkMVFqd1dWNWp4YUZuZEFtdDF0VGZOV2ZZeWxVQ2VaNjZCSFkyb2k3NW1ELU55WGNPb0Y5WURCMzBLUTBUVkp6VHhMVmNhM193TE1lNHE3QndXVTh5U2tBY1lhbjBQYlladGVpT0hMdnVDWmRuNFJYai03dnRPRHlMSEtIZkotV2VaazNTYklKdW9fV3ROcktKUEx2aQ?hl=en-US&gl=US&ceid=US%3Aen) — S&P 500 — Stock Market Today: Dow Dives As S&P 500 Turns Negative For.
 - [Asian Stocks Set for Muted Start in Holiday Trade: Markets Wrap](https://news.google.com/read/CBMiswFBVV95cUxNNGNMd19mVHpma1pEcHRyeUw3VTdQcktsaG04RGRfSFVNUHdTV3FsajNEMUlhbHQ1VXhqOXJBNTdiOG9uS0xlS0lEYlBwZko5QXVoc1h5TDZBdXV0UnlXMXBUWXdYaXY5dDV5TWpzcVpEazZVSm5tdjBjcVNnWVFCeUNxajlGT2EyamFwd2c4bm53NHhyMV91dS1JUFRjMFdRT3BTMlNudmFFa0lRSW9NbFBoVQ?hl=en-US&gl=US&ceid=US%3Aen) — Asian Stocks Set for Muted Start in Holiday Trade: Markets Wrap.
 - [Buy 2 Vanguard Index Funds to Beat the S&P 500 in the Next Decade, According to Wall Street Analysts](https://news.google.com/read/CBMimAFBVV95cUxNdVF3MGdpeGpPcWxuWG1hd09LRDNoVDFIWW5HRHQ2azdZUmRZVS1BNExiMFVIYjB4YmZfRGJWWi1HQ0NtdEQzYW9POTU4MTRKRDdqbDhCaTV0SjRyNm52VnZzRUFnQjdpSFV5U0UxMVU1TlJqTGM5Z01yUVA2ckZ0MWxKUUw2eUdPX3VkcG9JUzhVM3ZlVm1TYw?hl=en-US&gl=US&ceid=US%3Aen) — S&P 500 매수·매도 — Buy 2 Vanguard Index Funds to Beat the S&P 500 in the Next입니다.
