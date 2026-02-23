@@ -18,7 +18,6 @@ image: "/assets/images/generated/market-heatmap-2026-02-17.png"
 
 ![sector-heatmap]({{ '/assets/images/generated/sector-heatmap-2026-02-17.png' | relative_url }})
 
-![indicator-dashboard]({{ '/assets/images/generated/indicator-dashboard-2026-02-17.png' | relative_url }})
 
 ## 오늘의 핵심
 
@@ -63,6 +62,8 @@ image: "/assets/images/generated/market-heatmap-2026-02-17.png"
 
 
 
+
+
 ## 전체 뉴스 요약
 
 - 극도의 공포 장세: 공포/탐욕 지수 10으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다.
@@ -73,20 +74,20 @@ image: "/assets/images/generated/market-heatmap-2026-02-17.png"
 
 ## 내용 분석
 
-- 핵심 이슈를 중심으로 요약과 링크를 정리했습니다.
+- 극도의 공포 장세: 공포/탐욕 지수 10으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다.
 
 
 ## URL 요약
 
-- [Whale Alert](https://whale-alert.io/) — 고래·온체인 이동 이슈입니다.
-- [FRED](https://fred.stlouisfed.org/series/FEDFUNDS) — FRED 관련 소식입니다.
-- [FRED - 10-Year Treasury](https://fred.stlouisfed.org/series/DGS10) — 기관 매수·매도 동향입니다.
-- [FRED](https://fred.stlouisfed.org/series/CPIAUCSL) — FRED 관련 소식입니다.
-- [FRED](https://fred.stlouisfed.org/series/VIXCLS) — FRED 관련 소식입니다.
-- [CoinGecko](https://www.coingecko.com/) — CoinGecko 관련 소식입니다.
-- [Alternative.me](https://alternative.me/crypto/fear-and-greed-index/) — Alternative.me 관련 소식입니다.
-- [Investing.com](https://kr.investing.com/indices/kospi) — Investing.com 관련 소식입니다.
-- [Yahoo Finance](https://finance.yahoo.com/) — Yahoo Finance 관련 소식입니다.
+- [Whale Alert](https://whale-alert.io/) — 온체인 이동 — Whale Alert입니다.
+- [FRED](https://fred.stlouisfed.org/series/FEDFUNDS) — FRED.
+- [FRED - 10-Year Treasury](https://fred.stlouisfed.org/series/DGS10) — 기관 매수·매도 — FRED - 10-Year Treasury입니다.
+- [FRED](https://fred.stlouisfed.org/series/CPIAUCSL) — FRED.
+- [FRED](https://fred.stlouisfed.org/series/VIXCLS) — FRED.
+- [CoinGecko](https://www.coingecko.com/) — CoinGecko.
+- [Alternative.me](https://alternative.me/crypto/fear-and-greed-index/) — Alternative.me.
+- [Investing.com](https://kr.investing.com/indices/kospi) — Investing.com.
+- [Yahoo Finance](https://finance.yahoo.com/) — Yahoo Finance.
 - [FRED](https://fred.stlouisfed.org/) — > *본 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다.
 
 ## 오늘의 시장 인사이트

@@ -43,6 +43,8 @@ lang: "ko"
 
 
 
+
+
 ## 전체 뉴스 요약
 
 - 총 **20건** 수집
@@ -53,48 +55,48 @@ lang: "ko"
 
 ## 내용 분석
 
-- 총 20건 규모로 이슈를 정리했습니다.
-- 상위 테마는 사회/기타, 지정학/안보, 정책/법률로 집중도가 높습니다.
+- 총 20건의 뉴스 중 사회/기타, 지정학/안보 테마가 가장 많은 비중을 차지합니다.
+- 주요 테마: 사회/기타, 지정학/안보, 정책/법률
 
 
 ## URL 요약
 
-- [Hamas is reasserting control in Gaza despite its heavy losses fighting Israel](https://www.bbc.com/news/articles/c98g1klxnpxo?at_medium=RSS&at_campaign=rss) — Hamas is reasserting control in Gaza despite its heavy losses fighting Israel 관련 소식입니다.
-- [US to withdraw troops from Syria as tensions mount with Iran](https://www.bbc.com/news/articles/c875pey8vy2o?at_medium=RSS&at_campaign=rss) — US to withdraw troops from Syria as tensions mount with Iran 관련 소식입니다.
-- ['Difficult' Russia-Ukraine peace talks end without breakthrough](https://www.bbc.com/news/articles/c0k1xj0d708o?at_medium=RSS&at_campaign=rss) — 'Difficult' Russia-Ukraine peace talks end without breakthrough 관련 소식입니다.
-- [Iran security official appears to fire on crowd at cemetery](https://www.bbc.com/news/articles/cly8q62qe71o?at_medium=RSS&at_campaign=rss) — 규제 당국 관련 소식입니다.
-- [Turkey's president rejects Israel's recognition of Somaliland](https://www.bbc.com/news/articles/c0lj0plkg09o?at_medium=RSS&at_campaign=rss) — Turkey's president rejects Israel's recognition of Somaliland 관련 소식입니다.
-- [Russia-Ukraine war: List of key events, day 1,456](https://www.aljazeera.com/news/2026/2/19/russia-ukraine-war-list-of-key-events-day-1456?traffic_source=rss) — Russia-Ukraine war: List of key events, day 1,456 관련 소식입니다.
-- [US renews threat of military action as Iran, Russia announce naval drills](https://www.aljazeera.com/news/2026/2/18/white-house-says-iran-would-be-wise-to-take-deal-amid-military-buildup?traffic_source=rss) — US renews threat of military action as Iran, Russia announce naval drills 관련 소식입니다.
-- [Desperate hunt for breakthrough in Nancy Guthrie case turns to Mexico](https://www.bbc.com/news/articles/c4gq2k8220go?at_medium=RSS&at_campaign=rss) — Desperate hunt for breakthrough in Nancy Guthrie case turns to Mexico 관련 소식입니다.
-- [Martial law, protests and a president tried for insurrection: How did South Korea get here?](https://www.bbc.com/news/videos/c70kw0nrxreo?at_medium=RSS&at_campaign=rss) — Martial law, protests and a president tried for insurrection: How did South Korea get here?
-- [Billionaire Les Wexner tells US lawmakers he was 'naive' and 'conned' by Epstein](https://www.bbc.com/news/articles/cy57rrrpvg7o?at_medium=RSS&at_campaign=rss) — Billionaire Les Wexner tells US lawmakers he was 'naive' and 'conned' by Epstein 관련 소식입니다.
-- [Advocacy groups sue Trump administration over endangerment finding’s repeal](https://www.aljazeera.com/news/2026/2/19/advocacy-groups-sue-trump-administration-over-endangerment-findings-repeal?traffic_source=rss) — 시장 상승 흐름을 다룬 소식입니다.
-- [Eight skiers found dead after California avalanche](https://www.bbc.com/news/articles/cvg19dp4vxgo?at_medium=RSS&at_campaign=rss) — Eight skiers found dead after California avalanche 관련 소식입니다.
-- [Do not give away Diego Garcia, Trump tells UK in fresh attack on Chagos deal](https://www.bbc.com/news/articles/c309qqyer8yo?at_medium=RSS&at_campaign=rss) — Do not give away Diego Garcia, Trump tells UK in fresh attack on Chagos deal 관련 소식입니다.
-- [Suspected carbon-monoxide leak kills at least 30 miners in Nigeria, witnesses say](https://www.bbc.com/news/articles/cwyk6nr80kxo?at_medium=RSS&at_campaign=rss) — Suspected carbon-monoxide leak kills at least 30 miners in Nigeria, witnesses say 관련 소식입니다.
-- [You're never too old, says dancer, 71, cast in Taylor Swift video](https://www.bbc.com/news/articles/cly23mrv68ro?at_medium=RSS&at_campaign=rss) — You're never too old, says dancer, 71, cast in Taylor Swift video 관련 소식입니다.
-- [Zuckerberg defends Meta in landmark social media addiction trial](https://www.bbc.com/news/articles/c5y42znjnjvo?at_medium=RSS&at_campaign=rss) — Zuckerberg defends Meta in landmark social media addiction trial 관련 소식입니다.
-- [Air Force One set for makeover paint job with new colours](https://www.bbc.com/news/articles/cpd8zx4qdz6o?at_medium=RSS&at_campaign=rss) — Air Force One set for makeover paint job with new colours 관련 소식입니다.
-- [Wave of arrests over killing of French nationalist piles pressure on far left](https://www.bbc.com/news/articles/c62dzgy0q37o?at_medium=RSS&at_campaign=rss) — Wave of arrests over killing of French nationalist piles pressure on far left 관련 소식입니다.
-- [Peru appoints Jose Maria Balcazar as president after Jose Jeri’s removal](https://www.aljazeera.com/news/2026/2/19/peru-appoints-new-president-after-jose-jeris-removal?traffic_source=rss) — Peru appoints Jose Maria Balcazar as president after Jose Jeri’s removal 관련 소식입니다.
-- [Venezuela’s Rodriguez, Colombia’s Petro say they will meet ‘soon’](https://www.aljazeera.com/news/2026/2/19/venezuelas-rodriguez-colombias-petro-say-they-will-meet-soon?traffic_source=rss) — Venezuela’s Rodriguez, Colombia’s Petro say they will meet ‘soon’ 관련 소식입니다.
-- [Eight skiers found dead after California avalanche](https://www.bbc.com/news/articles/cvg19dp4vxgo?at_medium=RSS&amp;at_campaign=rss) — Eight skiers found dead after California avalanche 관련 소식입니다.
-- [Do not give away Diego Garcia, Trump tells UK in fresh attack on Chagos deal](https://www.bbc.com/news/articles/c309qqyer8yo?at_medium=RSS&amp;at_campaign=rss) — Do not give away Diego Garcia, Trump tells UK in fresh attack on Chagos deal 관련 소식입니다.
-- [Hamas is reasserting control in Gaza despite its heavy losses fighting Israel](https://www.bbc.com/news/articles/c98g1klxnpxo?at_medium=RSS&amp;at_campaign=rss) — Hamas is reasserting control in Gaza despite its heavy losses fighting Israel 관련 소식입니다.
-- [Martial law, protests and a president tried for insurrection: How did South Korea get here?](https://www.bbc.com/news/videos/c70kw0nrxreo?at_medium=RSS&amp;at_campaign=rss) — Martial law, protests and a president tried for insurrection: How did South Korea get here?
-- [Desperate hunt for breakthrough in Nancy Guthrie case turns to Mexico](https://www.bbc.com/news/articles/c4gq2k8220go?at_medium=RSS&amp;at_campaign=rss) — Desperate hunt for breakthrough in Nancy Guthrie case turns to Mexico 관련 소식입니다.
-- [US to withdraw troops from Syria as tensions mount with Iran](https://www.bbc.com/news/articles/c875pey8vy2o?at_medium=RSS&amp;at_campaign=rss) — US to withdraw troops from Syria as tensions mount with Iran 관련 소식입니다.
-- [&#x27;Difficult&#x27; Russia-Ukraine peace talks end without breakthrough](https://www.bbc.com/news/articles/c0k1xj0d708o?at_medium=RSS&amp;at_campaign=rss) — &#x27;Difficult&#x27; Russia-Ukraine peace talks end without breakthrough 관련 소식입니다.
-- [Iran security official appears to fire on crowd at cemetery](https://www.bbc.com/news/articles/cly8q62qe71o?at_medium=RSS&amp;at_campaign=rss) — 규제 당국 관련 소식입니다.
-- [Suspected carbon-monoxide leak kills at least 30 miners in Nigeria, witnesses say](https://www.bbc.com/news/articles/cwyk6nr80kxo?at_medium=RSS&amp;at_campaign=rss) — Suspected carbon-monoxide leak kills at least 30 miners in Nigeria, witnesses say 관련 소식입니다.
-- [Billionaire Les Wexner tells US lawmakers he was &#x27;naive&#x27; and &#x27;conned&#x27; by Epstein](https://www.bbc.com/news/articles/cy57rrrpvg7o?at_medium=RSS&amp;at_campaign=rss) — Billionaire Les Wexner tells US lawmakers he was &#x27;naive&#x27; and &#x27;conned&#x27; by Epstein 관련 소식입니다.
-- [You&#x27;re never too old, says dancer, 71, cast in Taylor Swift video](https://www.bbc.com/news/articles/cly23mrv68ro?at_medium=RSS&amp;at_campaign=rss) — You&#x27;re never too old, says dancer, 71, cast in Taylor Swift video 관련 소식입니다.
-- [Zuckerberg defends Meta in landmark social media addiction trial](https://www.bbc.com/news/articles/c5y42znjnjvo?at_medium=RSS&amp;at_campaign=rss) — Zuckerberg defends Meta in landmark social media addiction trial 관련 소식입니다.
-- [Air Force One set for makeover paint job with new colours](https://www.bbc.com/news/articles/cpd8zx4qdz6o?at_medium=RSS&amp;at_campaign=rss) — Air Force One set for makeover paint job with new colours 관련 소식입니다.
-- [Turkey&#x27;s president rejects Israel&#x27;s recognition of Somaliland](https://www.bbc.com/news/articles/c0lj0plkg09o?at_medium=RSS&amp;at_campaign=rss) — Turkey&#x27;s president rejects Israel&#x27;s recognition of Somaliland 관련 소식입니다.
-- [Wave of arrests over killing of French nationalist piles pressure on far left](https://www.bbc.com/news/articles/c62dzgy0q37o?at_medium=RSS&amp;at_campaign=rss) — Wave of arrests over killing of French nationalist piles pressure on far left 관련 소식입니다.
-- [worldmonitor](https://worldmonitor.app) — worldmonitor 관련 소식입니다.
+- [Hamas is reasserting control in Gaza despite its heavy losses fighting Israel](https://www.bbc.com/news/articles/c98g1klxnpxo?at_medium=RSS&at_campaign=rss) — Hamas is reasserting control in Gaza despite its heavy losses fighting Israel.
+- [US to withdraw troops from Syria as tensions mount with Iran](https://www.bbc.com/news/articles/c875pey8vy2o?at_medium=RSS&at_campaign=rss) — US to withdraw troops from Syria as tensions mount with Iran.
+- ['Difficult' Russia-Ukraine peace talks end without breakthrough](https://www.bbc.com/news/articles/c0k1xj0d708o?at_medium=RSS&at_campaign=rss) — 'Difficult' Russia-Ukraine peace talks end without breakthrough.
+- [Iran security official appears to fire on crowd at cemetery](https://www.bbc.com/news/articles/cly8q62qe71o?at_medium=RSS&at_campaign=rss) — 규제 당국 — Iran security official appears to fire on crowd at cemetery입니다.
+- [Turkey's president rejects Israel's recognition of Somaliland](https://www.bbc.com/news/articles/c0lj0plkg09o?at_medium=RSS&at_campaign=rss) — Turkey's president rejects Israel's recognition of Somaliland.
+- [Russia-Ukraine war: List of key events, day 1,456](https://www.aljazeera.com/news/2026/2/19/russia-ukraine-war-list-of-key-events-day-1456?traffic_source=rss) — Russia-Ukraine war: List of key events, day 1,456.
+- [US renews threat of military action as Iran, Russia announce naval drills](https://www.aljazeera.com/news/2026/2/18/white-house-says-iran-would-be-wise-to-take-deal-amid-military-buildup?traffic_source=rss) — US renews threat of military action as Iran, Russia announce naval drills.
+- [Desperate hunt for breakthrough in Nancy Guthrie case turns to Mexico](https://www.bbc.com/news/articles/c4gq2k8220go?at_medium=RSS&at_campaign=rss) — Desperate hunt for breakthrough in Nancy Guthrie case turns to Mexico.
+- [Martial law, protests and a president tried for insurrection: How did South Korea get here?](https://www.bbc.com/news/videos/c70kw0nrxreo?at_medium=RSS&at_campaign=rss) — Martial law, protests and a president tried for insurrection: How did South Korea get.
+- [Billionaire Les Wexner tells US lawmakers he was 'naive' and 'conned' by Epstein](https://www.bbc.com/news/articles/cy57rrrpvg7o?at_medium=RSS&at_campaign=rss) — Billionaire Les Wexner tells US lawmakers he was 'naive' and 'conned' by Epstein.
+- [Advocacy groups sue Trump administration over endangerment finding’s repeal](https://www.aljazeera.com/news/2026/2/19/advocacy-groups-sue-trump-administration-over-endangerment-findings-repeal?traffic_source=rss) — 트럼프 상승 — Advocacy groups sue Trump administration over endangerment입니다.
+- [Eight skiers found dead after California avalanche](https://www.bbc.com/news/articles/cvg19dp4vxgo?at_medium=RSS&at_campaign=rss) — Eight skiers found dead after California avalanche.
+- [Do not give away Diego Garcia, Trump tells UK in fresh attack on Chagos deal](https://www.bbc.com/news/articles/c309qqyer8yo?at_medium=RSS&at_campaign=rss) — 트럼프 — Do not give away Diego Garcia, Trump tells UK in fresh입니다.
+- [Suspected carbon-monoxide leak kills at least 30 miners in Nigeria, witnesses say](https://www.bbc.com/news/articles/cwyk6nr80kxo?at_medium=RSS&at_campaign=rss) — Suspected carbon-monoxide leak kills at least 30 miners in Nigeria, witnesses say.
+- [You're never too old, says dancer, 71, cast in Taylor Swift video](https://www.bbc.com/news/articles/cly23mrv68ro?at_medium=RSS&at_campaign=rss) — You're never too old, says dancer, 71, cast in Taylor Swift video.
+- [Zuckerberg defends Meta in landmark social media addiction trial](https://www.bbc.com/news/articles/c5y42znjnjvo?at_medium=RSS&at_campaign=rss) — Zuckerberg defends Meta in landmark social media addiction trial.
+- [Air Force One set for makeover paint job with new colours](https://www.bbc.com/news/articles/cpd8zx4qdz6o?at_medium=RSS&at_campaign=rss) — Air Force One set for makeover paint job with new colours.
+- [Wave of arrests over killing of French nationalist piles pressure on far left](https://www.bbc.com/news/articles/c62dzgy0q37o?at_medium=RSS&at_campaign=rss) — Wave of arrests over killing of French nationalist piles pressure on far left.
+- [Peru appoints Jose Maria Balcazar as president after Jose Jeri’s removal](https://www.aljazeera.com/news/2026/2/19/peru-appoints-new-president-after-jose-jeris-removal?traffic_source=rss) — Peru appoints Jose Maria Balcazar as president after Jose Jeri’s removal.
+- [Venezuela’s Rodriguez, Colombia’s Petro say they will meet ‘soon’](https://www.aljazeera.com/news/2026/2/19/venezuelas-rodriguez-colombias-petro-say-they-will-meet-soon?traffic_source=rss) — Venezuela’s Rodriguez, Colombia’s Petro say they will meet ‘soon’.
+- [Eight skiers found dead after California avalanche](https://www.bbc.com/news/articles/cvg19dp4vxgo?at_medium=RSS&amp;at_campaign=rss) — Eight skiers found dead after California avalanche.
+- [Do not give away Diego Garcia, Trump tells UK in fresh attack on Chagos deal](https://www.bbc.com/news/articles/c309qqyer8yo?at_medium=RSS&amp;at_campaign=rss) — 트럼프 — Do not give away Diego Garcia, Trump tells UK in fresh입니다.
+- [Hamas is reasserting control in Gaza despite its heavy losses fighting Israel](https://www.bbc.com/news/articles/c98g1klxnpxo?at_medium=RSS&amp;at_campaign=rss) — Hamas is reasserting control in Gaza despite its heavy losses fighting Israel.
+- [Martial law, protests and a president tried for insurrection: How did South Korea get here?](https://www.bbc.com/news/videos/c70kw0nrxreo?at_medium=RSS&amp;at_campaign=rss) — Martial law, protests and a president tried for insurrection: How did South Korea get.
+- [Desperate hunt for breakthrough in Nancy Guthrie case turns to Mexico](https://www.bbc.com/news/articles/c4gq2k8220go?at_medium=RSS&amp;at_campaign=rss) — Desperate hunt for breakthrough in Nancy Guthrie case turns to Mexico.
+- [US to withdraw troops from Syria as tensions mount with Iran](https://www.bbc.com/news/articles/c875pey8vy2o?at_medium=RSS&amp;at_campaign=rss) — US to withdraw troops from Syria as tensions mount with Iran.
+- [&#x27;Difficult&#x27; Russia-Ukraine peace talks end without breakthrough](https://www.bbc.com/news/articles/c0k1xj0d708o?at_medium=RSS&amp;at_campaign=rss) — &#x27;Difficult&#x27; Russia-Ukraine peace talks end without breakthrough.
+- [Iran security official appears to fire on crowd at cemetery](https://www.bbc.com/news/articles/cly8q62qe71o?at_medium=RSS&amp;at_campaign=rss) — 규제 당국 — Iran security official appears to fire on crowd at cemetery입니다.
+- [Suspected carbon-monoxide leak kills at least 30 miners in Nigeria, witnesses say](https://www.bbc.com/news/articles/cwyk6nr80kxo?at_medium=RSS&amp;at_campaign=rss) — Suspected carbon-monoxide leak kills at least 30 miners in Nigeria, witnesses say.
+- [Billionaire Les Wexner tells US lawmakers he was &#x27;naive&#x27; and &#x27;conned&#x27; by Epstein](https://www.bbc.com/news/articles/cy57rrrpvg7o?at_medium=RSS&amp;at_campaign=rss) — Billionaire Les Wexner tells US lawmakers he was &#x27;naive&#x27; and &#x27;conned&#x27.
+- [You&#x27;re never too old, says dancer, 71, cast in Taylor Swift video](https://www.bbc.com/news/articles/cly23mrv68ro?at_medium=RSS&amp;at_campaign=rss) — You&#x27;re never too old, says dancer, 71, cast in Taylor Swift video.
+- [Zuckerberg defends Meta in landmark social media addiction trial](https://www.bbc.com/news/articles/c5y42znjnjvo?at_medium=RSS&amp;at_campaign=rss) — Zuckerberg defends Meta in landmark social media addiction trial.
+- [Air Force One set for makeover paint job with new colours](https://www.bbc.com/news/articles/cpd8zx4qdz6o?at_medium=RSS&amp;at_campaign=rss) — Air Force One set for makeover paint job with new colours.
+- [Turkey&#x27;s president rejects Israel&#x27;s recognition of Somaliland](https://www.bbc.com/news/articles/c0lj0plkg09o?at_medium=RSS&amp;at_campaign=rss) — Turkey&#x27;s president rejects Israel&#x27;s recognition of Somaliland.
+- [Wave of arrests over killing of French nationalist piles pressure on far left](https://www.bbc.com/news/articles/c62dzgy0q37o?at_medium=RSS&amp;at_campaign=rss) — Wave of arrests over killing of French nationalist piles pressure on far left.
+- [worldmonitor](https://worldmonitor.app) — worldmonitor.
 
 ## 이슈 분포
 <div class="stat-grid">

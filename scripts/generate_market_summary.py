@@ -1039,7 +1039,6 @@ def main():
             generate_fear_greed_gauge,
             generate_market_heatmap,
             generate_sector_heatmap,
-            generate_indicator_dashboard,
         )
 
         img = generate_market_heatmap(top_coins, today)
@@ -1061,25 +1060,6 @@ def main():
             img = generate_sector_heatmap(sector_data, today)
             if img:
                 image_refs.append(("sector-heatmap", img))
-
-        # Indicator dashboard
-        indicators = {}
-        if fear_greed:
-            indicators["fear_greed"] = fear_greed
-        if yield_spread:
-            indicators["yield_spread"] = yield_spread
-        if fred_data.get("VIX"):
-            indicators["vix"] = fred_data["VIX"]
-        if commodity_data.get("달러 인덱스 (DXY)"):
-            indicators["dxy"] = commodity_data["달러 인덱스 (DXY)"]
-        if global_data:
-            indicators["btc_dominance"] = global_data.get(
-                "market_cap_percentage", {}
-            ).get("btc", 0)
-        if indicators:
-            img = generate_indicator_dashboard(indicators, today)
-            if img:
-                image_refs.append(("indicator-dashboard", img))
 
         logger.info("Generated %d images", len(image_refs))
     except ImportError:

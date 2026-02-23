@@ -660,38 +660,46 @@ class ThemeSummarizer:
     def _generate_single_theme_briefing(
         self, theme_key: str, articles: List[Dict[str, Any]]
     ) -> str:
-        """Generate a 1-sentence briefing for a single theme from descriptions."""
+        """Generate a 1-sentence briefing for a single theme from descriptions.
+
+        Extracts the most informative snippet from top article descriptions
+        rather than relying on generic keyword templates.
+        """
         if not articles:
             return ""
 
-        # Collect keywords from top article descriptions
-        keywords: List[str] = []
-        top_desc = ""
+        # Try to find the best description snippet from top articles
+        best_desc = ""
         for article in articles[:5]:
             desc = article.get("description", "").strip()
             title = article.get("title", "")
-            text = desc if desc and desc != title else title
-            if not top_desc and text:
-                top_desc = text[:80]
-            # Extract meaningful words (4+ chars), skip stop words
-            words = re.findall(r"[a-zA-Z가-힣]{4,}", text)
-            words = [w for w in words if w.lower() not in self._STOP_WORDS]
-            keywords.extend(words[:3])
+            text = desc if desc and desc != title and len(desc) > 30 else ""
+            if text:
+                # Take first sentence or up to 120 chars
+                sentences = re.split(r"(?<=[.!?。])\s+", text)
+                snippet = sentences[0] if sentences else text
+                if len(snippet) > 120:
+                    snippet = snippet[:117] + "..."
+                if len(snippet) > len(best_desc):
+                    best_desc = snippet
 
-        if not keywords:
-            return ""
+        if best_desc:
+            return best_desc
 
-        # Get top 3 unique keywords
-        kw_counts = Counter(keywords)
-        top_kws = [kw for kw, _ in kw_counts.most_common(8)][:3]
-        if not top_kws:
-            return ""
+        # Fallback: use top article title as briefing
+        top_title = ""
+        for article in articles[:3]:
+            title = article.get("title", "").strip()
+            if title and len(title) > 15:
+                top_title = title
+                break
 
-        theme_lookup = {key: name for name, key, _, _ in THEMES}
-        theme_name = theme_lookup.get(theme_key, theme_key)
-        kw_str = ", ".join(top_kws)
+        if top_title:
+            if len(top_title) > 100:
+                top_title = top_title[:97] + "..."
+            return top_title
 
-        return f"{theme_name} 분야에서 {kw_str} 관련 이슈가 부각되고 있습니다."
+        return ""
 
     def generate_theme_briefing(self) -> str:
         """Generate combined theme briefings for all top themes.
@@ -847,16 +855,16 @@ class ThemeSummarizer:
         themes_str = ", ".join(theme_names[:2]) if theme_names else "다양한 이슈"
 
         openers = {
-            "crypto": f"암호화폐 시장 **{themes_str}** 중심 {total}건 분석",
-            "stock": f"주식 시장 **{themes_str}** 부각 {total}건 분석",
-            "regulatory": f"글로벌 규제 **{themes_str}** 관련 {total}건 수집",
-            "social": f"소셜 미디어 **{themes_str}** 관련 {total}건 포착",
+            "crypto": f"암호화폐 시장 <strong>{themes_str}</strong> 중심 {total}건 분석",
+            "stock": f"주식 시장 <strong>{themes_str}</strong> 부각 {total}건 분석",
+            "regulatory": f"글로벌 규제 <strong>{themes_str}</strong> 관련 {total}건 수집",
+            "social": f"소셜 미디어 <strong>{themes_str}</strong> 관련 {total}건 포착",
             "security": f"보안 분야 {total}건 보고",
-            "market": f"시장 전반 **{themes_str}** 주도",
+            "market": f"시장 전반 <strong>{themes_str}</strong> 주도",
         }
         opener = openers.get(
             category_type,
-            f"**{themes_str}** 관련 {total}건 수집",
+            f"<strong>{themes_str}</strong> 관련 {total}건 수집",
         )
 
         lines = ["\n## 한눈에 보기\n"]
@@ -911,6 +919,7 @@ class ThemeSummarizer:
             if not articles:
                 continue
             top_desc = ""
+            # Try description first
             for art in articles[:3]:
                 desc = art.get("description", "").strip()
                 title = art.get("title", "")
@@ -919,6 +928,15 @@ class ThemeSummarizer:
                     if len(desc) > 100:
                         top_desc += "..."
                     break
+            # Fallback: use the top article title
+            if not top_desc:
+                for art in articles[:2]:
+                    title = art.get("title", "").strip()
+                    if title and len(title) > 10:
+                        top_desc = title[:100]
+                        if len(title) > 100:
+                            top_desc += "..."
+                        break
             if top_desc:
                 briefing_items.append(
                     f"<li>{emoji} <strong>{name}</strong> ({count}건): {top_desc}</li>"

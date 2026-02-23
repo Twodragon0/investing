@@ -22,6 +22,8 @@ description: "2026-02-23 암호화폐·주식 커뮤니티 소셜 미디어 동�
 
 
 
+
+
 ## 전체 뉴스 요약
 
 오늘 수집된 총 41건 중 텔레그램 20건, 소셜 2건, 정치·경제 19건으로 정치/정책과 매크로/금리 이슈가 집중되었고 비트코인·거래소 관련 발언과 온체인 이동이 단기 변동성 요인으로 부각되었습니다.
@@ -43,28 +45,29 @@ description: "2026-02-23 암호화폐·주식 커뮤니티 소셜 미디어 동�
 
 ## 내용 분석
 
-- 총 41건 규모로 이슈를 정리했습니다.
-- 긴급 알림이 포함되어 우선순위 대응이 필요합니다.
+- 총 41건의 뉴스를 수집하여 주요 이슈를 정리했습니다.
+- 긴급 이슈 1건이 감지되어 우선 확인이 필요합니다.
+- 정책/규제: 정치/정책, 매크로/금리, 비트코인 헤드라인이 리스크 프라이싱에 직접 반영될 가능성.
 
 
 ## URL 요약
 
-- [S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates](https://news.google.com/rss/articles/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?oc=5) — S&P 500 상승 흐름을 다룬 소식입니다.
-- [CFTC Chair says they will "future-proof" crypto regulations."We can't allow Gary Gensler 2.0 to come](https://t.me/crypto/3512) — 규제 당국 관련 정책·규제 동향입니다.
-- [This user is back after making some INSANE predictions in the past that all came true.He is now pred](https://t.me/crypto/3513) — This user is back after making some INSANE predictions in the past that all came true.He is now pred 관련 소식입니다.
-- [JUST IN: 🇺🇸 CFTC Chair says crypto market structure bill "is on the cusp" of becoming law.](https://t.me/crypto/3514) — 규제 당국 관련 소식입니다.
-- [JUST IN: Tom Lee's 'BitMine' buys 45,759 $ETH worth $91 million.](https://t.me/crypto/3515) — 이더리움 매수·매도 동향입니다.
-- [ERIC TRUMP: Being de-banked pushed Trump family towards crypto." The banks made the biggest mistake](https://t.me/crypto/3517) — 암호화폐 매수·매도 동향입니다.
-- [Binance founder CZ predicts Bitcoin will reach between $500,000 and $1,000,000 this cycle.](https://t.me/crypto/3518) — 비트코인 관련 소식입니다.
-- [Stefan Thomas has over $600,000,000 worth of #Bitcoin stored on a IronKey USB and only has two attem](https://t.me/crypto/3520) — 비트코인 관련 소식입니다.
-- [Peter Schiff said $126,000 was the final all-time high for #Bitcoin.](https://t.me/crypto/3522) — 비트코인 관련 소식입니다.
-- [Bitcoin News: What's Happening On OSCTwitterSC?](https://news.google.com/rss/articles/CBMiowFBVV95cUxQMXpzSkZzc3lqOUhaQWkzdWJySkVGN2gyYnltbENuLUZ2VmhRWU1xNDUwZUQzZkxWZEkwR0xWSXpwLXdOTUtBX1VabnlHQ3R5YnN3M3JLb1RCNENnYVZ4cDNsQmRaa0FlUEhKZlU1WG1vNlExUW9TbzljZC15LXVXeUdZaW8tMnZkVF9PVV8xT281Szl3UDRLOVBpdEEwMEZXeGdR?oc=5) — 비트코인 관련 소식입니다.
-- [USDT Transfer Stuns Markets: 200 Million Dollar Whale Movement to Binance Signals Major Activity](https://news.google.com/rss/articles/CBMiggFBVV95cUxQTnV3TmF5UkQ3QWdZZTYydjh4eGlwUEFvRWYzeFE1MDRqOXhwQmJwTnZpVUU4LVJGeTFmdG9ZaHhPZUVfdFNvTndNamJJTU0tVEpobGl5eTV3RzhIQjQ4T29EWkU3dUk4UnBVcmExRDZLZ2RFbE16ZkNYYzhyd1lucnVn?oc=5) — 고래·온체인 이동 이슈입니다.
-- [Trump’s Trade Gamble Will Continue, Despite Supreme Court Rebuke](https://news.google.com/rss/articles/CBMihwFBVV95cUxQcGp2c2NyYURDbm5wdDMtdG4zNmd4bmd6dmtBZnQzZHg1bmdna0VaeDdpYzdjOVhuWm9KeVQzdU5kUW9qbVlha1dJajJpbTJNWWNmbjVmeC1XUnJfVnhjRl94YXRzd0Z3YllDTHpBR01idzlDc050aWR3Ym9EOElwLURXY3hVNGs?oc=5) — 시장 상승 흐름을 다룬 소식입니다.
-- [After the Supreme Court's tariff ruling, here's what could be next for stocks (SPY:NYSEARCA)](https://news.google.com/rss/articles/CBMisgFBVV95cUxNNHBvQzlPcXVVeUU4aUZQWXVXT2pvQnBON0lMRE5ma0hQbE1vNGpBcjRfUnJObWFFcGR0UHp2TDJQSWRIWTJraWY0MVlaeEw4UTJ0dTl6MTJNRnZ1Q0hRQkpKWDRucnNIeEpKZW11ZWUwRUxNMHM4SmRHYWNUb0lzTFpPR0hqdktTZE1FV05adHhVWkVqTUxvZE9WUzBVSC1lQk91OHl0UDBSS3ZDSHAweTBB?oc=5) — 시장 상승 흐름을 다룬 소식입니다.
+- [S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates](https://news.google.com/rss/articles/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?oc=5) — S&P 500 상승 — S&P 500 rises, Dow gains 200 points after Supreme Court입니다.
+- [CFTC Chair says they will "future-proof" crypto regulations."We can't allow Gary Gensler 2.0 to come](https://t.me/crypto/3512) — 규제·정책 — CFTC Chair says they will "future-proof" crypto입니다.
+- [This user is back after making some INSANE predictions in the past that all came true.He is now pred](https://t.me/crypto/3513) — This user is back after making some INSANE predictions in the past that all came true.He.
+- [JUST IN: 🇺🇸 CFTC Chair says crypto market structure bill "is on the cusp" of becoming law.](https://t.me/crypto/3514) — 규제 당국 — JUST IN: 🇺🇸 CFTC Chair says crypto market structure bill입니다.
+- [JUST IN: Tom Lee's 'BitMine' buys 45,759 $ETH worth $91 million.](https://t.me/crypto/3515) — 이더리움 매수·매도 — JUST IN: Tom Lee's 'BitMine' buys 45,759 $ETH worth $91입니다.
+- [ERIC TRUMP: Being de-banked pushed Trump family towards crypto." The banks made the biggest mistake](https://t.me/crypto/3517) — 암호화폐 매수·매도 — ERIC TRUMP: Being de-banked pushed Trump family towards입니다.
+- [Binance founder CZ predicts Bitcoin will reach between $500,000 and $1,000,000 this cycle.](https://t.me/crypto/3518) — 비트코인 — Binance founder CZ predicts Bitcoin will reach between입니다.
+- [Stefan Thomas has over $600,000,000 worth of #Bitcoin stored on a IronKey USB and only has two attem](https://t.me/crypto/3520) — 비트코인 — Stefan Thomas has over $600,000,000 worth of #Bitcoin입니다.
+- [Peter Schiff said $126,000 was the final all-time high for #Bitcoin.](https://t.me/crypto/3522) — 비트코인 — Peter Schiff said $126,000 was the final all-time high for입니다.
+- [Bitcoin News: What's Happening On OSCTwitterSC?](https://news.google.com/rss/articles/CBMiowFBVV95cUxQMXpzSkZzc3lqOUhaQWkzdWJySkVGN2gyYnltbENuLUZ2VmhRWU1xNDUwZUQzZkxWZEkwR0xWSXpwLXdOTUtBX1VabnlHQ3R5YnN3M3JLb1RCNENnYVZ4cDNsQmRaa0FlUEhKZlU1WG1vNlExUW9TbzljZC15LXVXeUdZaW8tMnZkVF9PVV8xT281Szl3UDRLOVBpdEEwMEZXeGdR?oc=5) — 비트코인 — Bitcoin News: What's Happening On OSCTwitterSC?
+- [USDT Transfer Stuns Markets: 200 Million Dollar Whale Movement to Binance Signals Major Activity](https://news.google.com/rss/articles/CBMiggFBVV95cUxQTnV3TmF5UkQ3QWdZZTYydjh4eGlwUEFvRWYzeFE1MDRqOXhwQmJwTnZpVUU4LVJGeTFmdG9ZaHhPZUVfdFNvTndNamJJTU0tVEpobGl5eTV3RzhIQjQ4T29EWkU3dUk4UnBVcmExRDZLZ2RFbE16ZkNYYzhyd1lucnVn?oc=5) — 온체인 이동 — USDT Transfer Stuns Markets: 200 Million Dollar Whale입니다.
+- [Trump’s Trade Gamble Will Continue, Despite Supreme Court Rebuke](https://news.google.com/rss/articles/CBMihwFBVV95cUxQcGp2c2NyYURDbm5wdDMtdG4zNmd4bmd6dmtBZnQzZHg1bmdna0VaeDdpYzdjOVhuWm9KeVQzdU5kUW9qbVlha1dJajJpbTJNWWNmbjVmeC1XUnJfVnhjRl94YXRzd0Z3YllDTHpBR01idzlDc050aWR3Ym9EOElwLURXY3hVNGs?oc=5) — 트럼프 상승 — Trump’s Trade Gamble Will Continue, Despite Supreme Court입니다.
+- [After the Supreme Court's tariff ruling, here's what could be next for stocks (SPY:NYSEARCA)](https://news.google.com/rss/articles/CBMisgFBVV95cUxNNHBvQzlPcXVVeUU4aUZQWXVXT2pvQnBON0lMRE5ma0hQbE1vNGpBcjRfUnJObWFFcGR0UHp2TDJQSWRIWTJraWY0MVlaeEw4UTJ0dTl6MTJNRnZ1Q0hRQkpKWDRucnNIeEpKZW11ZWUwRUxNMHM4SmRHYWNUb0lzTFpPR0hqdktTZE1FV05adHhVWkVqTUxvZE9WUzBVSC1lQk91OHl0UDBSS3ZDSHAweTBB?oc=5) — 시장 상승 — After the Supreme Court's tariff ruling, here's what could입니다.
 - [10% becomes 15%: How stock market may react to Trump’s tariff shift on Monday](https://news.google.com/rss/articles/CBMi-wFBVV95cUxPNFJFOGFlMi1oME5wMUd0QWFyMHRqNUxhTVdSbHJ0SW96SEtHdVpUSWM3ZU4wWmNSZExlaUR2ZkJQZXlzR0owbDFQX3pNSlBBZVY3UHBtUExocFNpS1dTS1p6b3BpdFNwcXJUTkRyWHFHcWJKUVQ0NWRRbHRvT2JqZThoZmhEeUhwdWwzRnZIOW00MnFSUFNkcWRxalpqVW1vNXdoV1oyRXNqTnhaYlRYbkYwOFZVSi1DNDIybnVFbmR0X3dhZEdxclZ0Vk5xWmdHTzg3VDJyM0dpNjFSMVVaM0RlT0hEeFV5YUxiTlFWSFFobXlqVHBoWHZZa9IBgAJBVV95cUxPUVhVdXFsQmZNVkowY2w0TU0zS0VNLWp3UHlQOTdzUm1YSy1URjRMbWhleWVOaWhJQmVJZVNFYl9xU2lTRkpzdHgxTmNmcUNxdjBKeURKWGdzV3luMXY3TDZ5bXhENXA3UXF2UVc2aDNKZUJiWThiQTFRNkRIa2ZxNTItWDZOSnBjOWhlU0dLTzlzdDEtN3dUNnlUSDNwZ3VSNjRSclpicGtMcnJfNjh6bTdZT2dzc2NqR2t6ZVBlSDRFZk93ZFhPQ3N6WlVBME5BVUROVXM0TC0xbEFGVUNwNGJzMDJmOXJhYnhLM0dxa2RjelVpMUYzcDJrZGwwXzdw?oc=5) — 8. [기획특집] 이재명 「국민주권정부」 ⑦ 경제정책 라인, 경제정책 - 르몽드 디플로마티크입니다.
-- [이차전지로 향한 외국인·기관 수급 美 상호관세 위법 판결 영향은?](https://news.google.com/rss/articles/CBMiYkFVX3lxTE5STFNnMU5XYklEY3hoTVJDUVkxNm9YdzM0VDIxa3R0bUFqYTNrSjRicXo2RGlOeGtsbHNGN0M3NlNRTHk3Rk1tUDJOazdlNkZqYm5yeFZVckswQ0RhOHgzOUVB?oc=5) — 무역·관세 이슈입니다.
-- [개인사업자 연체액, 2년새 26% ‘쑥’](https://news.google.com/rss/articles/CBMiVkFVX3lxTFBOZFdVRnNPczdiNEo3T1NrbksyenNWY0lrdGluSmRpV2lVTFNCSUlaTS02aXdfYlJ4R2l2Ry1QQVNVZ29FUlE0UnM2cThyMUVFSGNicTV3?oc=5) — 개인사업자 연체액, 2년새 26% ‘쑥’ 관련 소식입니다.
+- [이차전지로 향한 외국인·기관 수급 美 상호관세 위법 판결 영향은?](https://news.google.com/rss/articles/CBMiYkFVX3lxTE5STFNnMU5XYklEY3hoTVJDUVkxNm9YdzM0VDIxa3R0bUFqYTNrSjRicXo2RGlOeGtsbHNGN0M3NlNRTHk3Rk1tUDJOazdlNkZqYm5yeFZVckswQ0RhOHgzOUVB?oc=5) — 이차전지로 향한 외국인·기관 수급 美 상호관세 위법 판결 영향은?
+- [개인사업자 연체액, 2년새 26% ‘쑥’](https://news.google.com/rss/articles/CBMiVkFVX3lxTFBOZFdVRnNPczdiNEo3T1NrbksyenNWY0lrdGluSmRpV2lVTFNCSUlaTS02aXdfYlJ4R2l2Ry1QQVNVZ29FUlE0UnM2cThyMUVFSGNicTV3?oc=5) — 개인사업자 연체액, 2년새 26% ‘쑥’입니다.
 
 ## 텔레그램 주요 소식
 

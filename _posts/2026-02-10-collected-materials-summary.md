@@ -32,13 +32,14 @@ pin: false
 
 ## 내용 분석
 
-- 총 120건 규모로 이슈를 정리했습니다.
+- 총 120건의 뉴스를 수집하여 주요 이슈를 정리했습니다.
+- 정책/규제: 정치/정책·매크로 중심 헤드라인이 리스크 프라이싱에 직접 반영될 가능성.
 
 
 ## URL 요약
 
-- [네이버 금융](https://finance.naver.com/sise/investorDealTrendDay.naver?bizdate=20260210&sosok=) — 네이버 금융 관련 소식입니다.
-- [네이버 금융](https://finance.naver.com/sise/investorDealTrendDay.naver?bizdate=20260210&sosok=02) — 네이버 금융 관련 소식입니다.
+- [네이버 금융](https://finance.naver.com/sise/investorDealTrendDay.naver?bizdate=20260210&sosok=) — 네이버 금융입니다.
+- [네이버 금융](https://finance.naver.com/sise/investorDealTrendDay.naver?bizdate=20260210&sosok=02) — 네이버 금융입니다.
 
 ## 글로벌 시장 대시보드
 

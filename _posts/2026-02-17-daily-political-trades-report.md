@@ -49,6 +49,8 @@ lang: "ko"
 
 
 
+
+
 ## 전체 뉴스 요약
 
 - 총 **11건** 수집
@@ -58,13 +60,12 @@ lang: "ko"
 
 ## 내용 분석
 
-- 총 11건 규모로 이슈를 정리했습니다.
-- 상위 테마는 🔵 규제/정책로 집중도가 높습니다.
+- 총 11건의 뉴스 중 🔵 규제/정책 테마가 가장 많은 비중을 차지합니다.
 
 
 ## URL 요약
 
-- [Nancy Pelosi Sold Apple and Bought This 1 Stock Instead. Here’s Why](https://news.google.com/rss/articles/CBMirgFBVV95cUxPZ0FXcGk1YUpiZGY0RGlzMkZWeEx1bmR0c0Qzdlh3Qm1FX1dnNmNqN1ZlSVRrS0ZuQ0t1NzhIcWhOODNmQXdTLUxWVV90Mm04SVhVeHhnODMzcGlSckZZVXduMzdIVkpDLUdSM1RyX2JwSnJSOFhKc2NoUnBzQjZvUUZxd2lWZjVPRDJ6UFVKTVA4TG8xTGNjTlVyY3dxTzQ4WkREUldLSjlSRkpzM1E?oc=5) — 기관 매수·매도 동향입니다.
+- [Nancy Pelosi Sold Apple and Bought This 1 Stock Instead. Here’s Why](https://news.google.com/rss/articles/CBMirgFBVV95cUxPZ0FXcGk1YUpiZGY0RGlzMkZWeEx1bmR0c0Qzdlh3Qm1FX1dnNmNqN1ZlSVRrS0ZuQ0t1NzhIcWhOODNmQXdTLUxWVV90Mm04SVhVeHhnODMzcGlSckZZVXduMzdIVkpDLUdSM1RyX2JwSnJSOFhKc2NoUnBzQjZvUUZxd2lWZjVPRDJ6UFVKTVA4TG8xTGNjTlVyY3dxTzQ4WkREUldLSjlSRkpzM1E?oc=5) — 솔라나 매수·매도 — Nancy Pelosi Sold Apple and Bought This 1 Stock Instead입니다.
 
 ## 미국 의회 거래 동향
 

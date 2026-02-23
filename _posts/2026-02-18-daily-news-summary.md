@@ -33,19 +33,20 @@ excerpt: "암호화폐 115건, 주식 129건, 규제 27건, 소셜 미디어 36�
 
 ## 내용 분석
 
-- 총 36건 규모로 이슈를 정리했습니다.
-- 긴급 알림이 포함되어 우선순위 대응이 필요합니다.
+- 총 36건의 뉴스를 수집하여 주요 이슈를 정리했습니다.
+- 긴급 이슈 1건이 감지되어 우선 확인이 필요합니다.
+- 정책/규제: 정치/정책·매크로 중심 헤드라인이 리스크 프라이싱에 직접 반영될 가능성.
 
 
 ## URL 요약
 
-- [Bitcoin's Crash Is Putting Crypto Treasury Stocks To The Test](https://news.google.com/read/CBMitwFBVV95cUxPNU9uNnQ5ZXk3WDJUaUVXUzdzR1o5ajZUdTFhb3pVdDB4Q3ZOZVdtT2VBTXJkWnhCTmxidy1wcmZzNjF1SHlQWkNGWlBmR1BxRWZoVW1hcGtHc3ZTNXJWYmg4bV9zRjlqOXh4TkJ6UDlwSmx4R05RZXR2cWxiR2ZxOXh2bUk2d3dfNUxWQkZwU3pBYk9JdXBaSDRxUXpLYjRJaGJxRVI1N1lkVTVPUTExQlVoOGdCVlk?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 하락 흐름을 다룬 소식입니다.
-- [‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까](https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako) — 비트코인 하락 흐름을 다룬 소식입니다.
-- [In bitcoin price plummet, ETF flows are down but aren't signaling 'crypto winter' investor panic](https://news.google.com/read/CBMilAFBVV95cUxOUV92a2tBb3BIUTltdFBuc2NRdkR0dGJVSFNrNDFkYlNVbzNqcURqN3h5RFBHMVVVWWVBMW5oVEJyaWxLRDRVU2VmYmgzMU9NaVpWcm16eTktWmg3S0ozQS1LS3RseUNoZnpxbHRUZGVLMExraWt5TjJCcEpsYllWQ3JJdUhXWW9yblNrMlpIZzd3N0RO0gGaAUFVX3lxTFBOUUx4cTRncklycE92QnNUX1dFckVmVVltTjZuTl9SclVjNE55QmtkNFp5Qnc0WUVSeHJQcDNQNVlRRXVvRDFkY1E1QUtFWlpHZTFEV0dySTctX3NsQ3E0VnVnYW4ybGxFc0ltVW9nQTFvWENzOFl5UXZWdExDUjFwb2tqaVBVcFNNVlhocERiWHpXVGUtVUhLaGc?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 하락 흐름을 다룬 소식입니다.
-- [Should You Buy the Vanguard S&P 500 ETF With the Stock Market Near a Record High? History Offers a Clear Answer](https://news.google.com/read/CBMilgFBVV95cUxPV3l0aVFKbFZmSWV1a2xmUk9HYjY1SGVOb1RycU5UaWkzT2dDSEh6MUFORzd3bXRXYmlJX2RmUkhNMHcyeS1jR0dyc05nVGtSR3BLeDVGVGVCNHFkVVpUY1M0eDg0VDEwQVY0Y3VMaFJDZVczaXBDbzZhVFNpeEt3QlZZRDljNU9PSmtRTzVpRmczMHpGVEE?hl=en-US&gl=US&ceid=US%3Aen) — S&P 500 매수·매도 동향입니다.
-- [Should You Buy the Vanguard S&P 500 ETF With the Stock Market Near a Record High? History Offers a Clear Answer](https://news.google.com/rss/articles/CBMilgFBVV95cUxPV3l0aVFKbFZmSWV1a2xmUk9HYjY1SGVOb1RycU5UaWkzT2dDSEh6MUFORzd3bXRXYmlJX2RmUkhNMHcyeS1jR0dyc05nVGtSR3BLeDVGVGVCNHFkVVpUY1M0eDg0VDEwQVY0Y3VMaFJDZVczaXBDbzZhVFNpeEt3QlZZRDljNU9PSmtRTzVpRmczMHpGVEE?oc=5) — S&P 500 매수·매도 동향입니다.
-- [Stephen Colbert says CBS barred interview with Texas Democratic candidate](https://www.aljazeera.com/news/2026/2/18/stephen-colbert-says-cbs-barred-his-interview-with-texas-senate-candidate?traffic_source=rss) — Stephen Colbert says CBS barred interview with Texas Democratic candidate 관련 소식입니다.
-- [France arrests nine over killing of far-right activist Quentin Deranque](https://www.aljazeera.com/news/2026/2/18/france-arrests-nine-over-killing-of-far-right-activist-quentin-deranque?traffic_source=rss) — France arrests nine over killing of far-right activist Quentin Deranque 관련 소식입니다.
+- [Bitcoin's Crash Is Putting Crypto Treasury Stocks To The Test](https://news.google.com/read/CBMitwFBVV95cUxPNU9uNnQ5ZXk3WDJUaUVXUzdzR1o5ajZUdTFhb3pVdDB4Q3ZOZVdtT2VBTXJkWnhCTmxidy1wcmZzNjF1SHlQWkNGWlBmR1BxRWZoVW1hcGtHc3ZTNXJWYmg4bV9zRjlqOXh4TkJ6UDlwSmx4R05RZXR2cWxiR2ZxOXh2bUk2d3dfNUxWQkZwU3pBYk9JdXBaSDRxUXpLYjRJaGJxRVI1N1lkVTVPUTExQlVoOGdCVlk?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 하락 — Bitcoin's Crash Is Putting Crypto Treasury Stocks To The입니다.
+- [‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까](https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako) — ‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까입니다.
+- [In bitcoin price plummet, ETF flows are down but aren't signaling 'crypto winter' investor panic](https://news.google.com/read/CBMilAFBVV95cUxOUV92a2tBb3BIUTltdFBuc2NRdkR0dGJVSFNrNDFkYlNVbzNqcURqN3h5RFBHMVVVWWVBMW5oVEJyaWxLRDRVU2VmYmgzMU9NaVpWcm16eTktWmg3S0ozQS1LS3RseUNoZnpxbHRUZGVLMExraWt5TjJCcEpsYllWQ3JJdUhXWW9yblNrMlpIZzd3N0RO0gGaAUFVX3lxTFBOUUx4cTRncklycE92QnNUX1dFckVmVVltTjZuTl9SclVjNE55QmtkNFp5Qnc0WUVSeHJQcDNQNVlRRXVvRDFkY1E1QUtFWlpHZTFEV0dySTctX3NsQ3E0VnVnYW4ybGxFc0ltVW9nQTFvWENzOFl5UXZWdExDUjFwb2tqaVBVcFNNVlhocERiWHpXVGUtVUhLaGc?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 하락 — In bitcoin price plummet, ETF flows are down but aren't입니다.
+- [Should You Buy the Vanguard S&P 500 ETF With the Stock Market Near a Record High? History Offers a Clear Answer](https://news.google.com/read/CBMilgFBVV95cUxPV3l0aVFKbFZmSWV1a2xmUk9HYjY1SGVOb1RycU5UaWkzT2dDSEh6MUFORzd3bXRXYmlJX2RmUkhNMHcyeS1jR0dyc05nVGtSR3BLeDVGVGVCNHFkVVpUY1M0eDg0VDEwQVY0Y3VMaFJDZVczaXBDbzZhVFNpeEt3QlZZRDljNU9PSmtRTzVpRmczMHpGVEE?hl=en-US&gl=US&ceid=US%3Aen) — S&P 500 매수·매도 — Should You Buy the Vanguard S&P 500 ETF With the Stock입니다.
+- [Should You Buy the Vanguard S&P 500 ETF With the Stock Market Near a Record High? History Offers a Clear Answer](https://news.google.com/rss/articles/CBMilgFBVV95cUxPV3l0aVFKbFZmSWV1a2xmUk9HYjY1SGVOb1RycU5UaWkzT2dDSEh6MUFORzd3bXRXYmlJX2RmUkhNMHcyeS1jR0dyc05nVGtSR3BLeDVGVGVCNHFkVVpUY1M0eDg0VDEwQVY0Y3VMaFJDZVczaXBDbzZhVFNpeEt3QlZZRDljNU9PSmtRTzVpRmczMHpGVEE?oc=5) — S&P 500 매수·매도 — Should You Buy the Vanguard S&P 500 ETF With the Stock입니다.
+- [Stephen Colbert says CBS barred interview with Texas Democratic candidate](https://www.aljazeera.com/news/2026/2/18/stephen-colbert-says-cbs-barred-his-interview-with-texas-senate-candidate?traffic_source=rss) — Stephen Colbert says CBS barred interview with Texas Democratic candidate.
+- [France arrests nine over killing of far-right activist Quentin Deranque](https://www.aljazeera.com/news/2026/2/18/france-arrests-nine-over-killing-of-far-right-activist-quentin-deranque?traffic_source=rss) — France arrests nine over killing of far-right activist Quentin Deranque.
 - [How Jesse Jackson helped empower US Arabs and lift up the Palestinian cause](https://www.aljazeera.com/news/2026/2/18/jesse-jackson-helped-empower-us-arabs-and-raise-palestinian-cause?traffic_source=rss) — 상세 보기입니다.
 
 ## 종합 대시보드
@@ -60,7 +61,6 @@ excerpt: "암호화폐 115건, 주식 129건, 규제 27건, 소셜 미디어 36�
 | 정치인 거래 | 0 | 데이터 없음 |
 
 
-![indicator-dashboard]({{ '/assets/images/generated/indicator-dashboard-2026-02-18.png' | relative_url }})
 
 ![market-heatmap]({{ '/assets/images/generated/market-heatmap-2026-02-18.png' | relative_url }})
 

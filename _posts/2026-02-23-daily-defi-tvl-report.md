@@ -21,34 +21,34 @@ description: "2026-02-23 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked
 
 ## 내용 분석
 
-- 핵심 이슈를 중심으로 요약과 링크를 정리했습니다.
+- 현재 DeFi 생태계에서 가장 큰 프로토콜은 Lido으로, TVL $33.92B (13.7%)를 차지합니다.
 
 
 ## URL 요약
 
-- [Lido](https://defillama.com/protocol/lido) — Lido 관련 소식입니다.
-- [AAVE](https://defillama.com/protocol/aave) — AAVE 관련 소식입니다.
-- [AAVE V3](https://defillama.com/protocol/aave-v3) — AAVE V3 관련 소식입니다.
-- [EigenLayer](https://defillama.com/protocol/eigenlayer) — EigenLayer 관련 소식입니다.
-- [WBTC](https://defillama.com/protocol/wbtc) — 비트코인 관련 소식입니다.
-- [ether.fi](https://defillama.com/protocol/ether.fi) — 이더리움 관련 소식입니다.
-- [Binance staked ETH](https://defillama.com/protocol/binance-staked-eth) — 이더리움 매수·매도 동향입니다.
-- [ether.fi Stake](https://defillama.com/protocol/ether.fi-stake) — 이더리움 매수·매도 동향입니다.
-- [Spark](https://defillama.com/protocol/spark) — Spark 관련 소식입니다.
-- [Ethena](https://defillama.com/protocol/ethena) — 이더리움 관련 소식입니다.
-- [Binance Bitcoin](https://defillama.com/protocol/binance-bitcoin) — 비트코인 관련 소식입니다.
-- [Ethena USDe](https://defillama.com/protocol/ethena-usde) — 이더리움 관련 소식입니다.
-- [Pendle](https://defillama.com/protocol/pendle) — Pendle 관련 소식입니다.
-- [Coinbase Bridge](https://defillama.com/protocol/coinbase-bridge) — 거래소 관련 소식입니다.
-- [Morpho](https://defillama.com/protocol/morpho) — Morpho 관련 소식입니다.
-- [Sky](https://defillama.com/protocol/sky) — Sky 관련 소식입니다.
-- [Morpho Blue](https://defillama.com/protocol/morpho-blue) — Morpho Blue 관련 소식입니다.
-- [Sky Lending](https://defillama.com/protocol/sky-lending) — Sky Lending 관련 소식입니다.
-- [Uniswap](https://defillama.com/protocol/uniswap) — Uniswap 관련 소식입니다.
-- [Arbitrum Bridge](https://defillama.com/protocol/arbitrum-bridge) — Arbitrum Bridge 관련 소식입니다.
-- [DeFi Llama](https://defillama.com) — DeFi Llama 관련 소식입니다.
-- [DeFi Llama API Documentation](https://defillama.com/docs/api) — DeFi Llama API Documentation 관련 소식입니다.
-- [DeFi Llama](https://defillama.com/chains) — DeFi Llama 관련 소식입니다.
+- [Lido](https://defillama.com/protocol/lido) — Lido.
+- [AAVE](https://defillama.com/protocol/aave) — AAVE.
+- [AAVE V3](https://defillama.com/protocol/aave-v3) — AAVE V3.
+- [EigenLayer](https://defillama.com/protocol/eigenlayer) — EigenLayer.
+- [WBTC](https://defillama.com/protocol/wbtc) — 비트코인 — WBTC입니다.
+- [ether.fi](https://defillama.com/protocol/ether.fi) — 이더리움 — ether.fi입니다.
+- [Binance staked ETH](https://defillama.com/protocol/binance-staked-eth) — 이더리움 매수·매도 — Binance staked ETH입니다.
+- [ether.fi Stake](https://defillama.com/protocol/ether.fi-stake) — 이더리움 매수·매도 — ether.fi Stake입니다.
+- [Spark](https://defillama.com/protocol/spark) — Spark.
+- [Ethena](https://defillama.com/protocol/ethena) — 이더리움 — Ethena입니다.
+- [Binance Bitcoin](https://defillama.com/protocol/binance-bitcoin) — 비트코인 — Binance Bitcoin입니다.
+- [Ethena USDe](https://defillama.com/protocol/ethena-usde) — 이더리움 — Ethena USDe입니다.
+- [Pendle](https://defillama.com/protocol/pendle) — Pendle.
+- [Coinbase Bridge](https://defillama.com/protocol/coinbase-bridge) — 거래소 — Coinbase Bridge입니다.
+- [Morpho](https://defillama.com/protocol/morpho) — Morpho.
+- [Sky](https://defillama.com/protocol/sky) — Sky.
+- [Morpho Blue](https://defillama.com/protocol/morpho-blue) — Morpho Blue.
+- [Sky Lending](https://defillama.com/protocol/sky-lending) — Sky Lending.
+- [Uniswap](https://defillama.com/protocol/uniswap) — Uniswap.
+- [Arbitrum Bridge](https://defillama.com/protocol/arbitrum-bridge) — Arbitrum Bridge.
+- [DeFi Llama](https://defillama.com) — DeFi Llama.
+- [DeFi Llama API Documentation](https://defillama.com/docs/api) — DeFi Llama API Documentation.
+- [DeFi Llama](https://defillama.com/chains) — DeFi Llama.
 
 ## 상위 20개 프로토콜 TVL 순위
 

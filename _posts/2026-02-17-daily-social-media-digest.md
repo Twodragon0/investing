@@ -56,6 +56,8 @@ image: "/assets/images/generated/source-distribution-2026-02-17.png"
 
 
 
+
+
 ## 전체 뉴스 요약
 
 오늘 수집된 총 34건 중 텔레그램 20건, 소셜 -건, 정치·경제 14건으로 정치/정책과 매크로/금리 이슈가 집중되었고 비트코인·거래소 관련 발언과 온체인 이동이 단기 변동성 요인으로 부각되었습니다.
@@ -77,27 +79,27 @@ image: "/assets/images/generated/source-distribution-2026-02-17.png"
 
 ## 내용 분석
 
-- 총 34건 규모로 이슈를 정리했습니다.
-- 상위 테마는 📊 매크로/금리, 🏛️ 정치/정책, 🟠 비트코인로 집중도가 높습니다.
+- 총 34건의 뉴스 중 📊 매크로/금리, 🏛️ 정치/정책 테마가 가장 많은 비중을 차지합니다.
+- 정책/규제: 매크로/금리, 정치/정책, 비트코인 헤드라인이 리스크 프라이싱에 직접 반영될 가능성.
 
 
 ## URL 요약
 
-- [How it feels to buy the dip](https://t.me/crypto/3498) — 기관 매수·매도 동향입니다.
-- [Binance has purchased another 4,545 Bitcoins valued at $305 million for its “SAFU” fund.](https://t.me/crypto/3499) — 비트코인 관련 소식입니다.
-- [Polymarket rolls out an “Up or Down” Bitcoin marketA new BTC prediction market has gone live, settli](https://t.me/crypto/3500) — 비트코인 상승 흐름을 다룬 소식입니다.
-- ["why didn’t you buy bitcoin in 2010”me in 2010:](https://t.me/crypto/3501) — 비트코인 매수·매도 동향입니다.
-- [President Trump suggested "we might pay off the US $35 trillion debt using cryptocurrency."](https://t.me/crypto/3502) — 암호화폐 관련 소식입니다.
-- [How it feels buying alts right now:](https://t.me/crypto/3503) — 기관 매수·매도 동향입니다.
-- [🇰🇷 In Seoul, South Korea, cryptocurrency trading is an E-sport where competitors buy and sell deriva](https://t.me/crypto/3504) — 암호화폐 매수·매도 동향입니다.
+- [How it feels to buy the dip](https://t.me/crypto/3498) — 기관 매수·매도 — How it feels to buy the dip입니다.
+- [Binance has purchased another 4,545 Bitcoins valued at $305 million for its “SAFU” fund.](https://t.me/crypto/3499) — 비트코인 — Binance has purchased another 4,545 Bitcoins valued at $305입니다.
+- [Polymarket rolls out an “Up or Down” Bitcoin marketA new BTC prediction market has gone live, settli](https://t.me/crypto/3500) — 비트코인 상승 — Polymarket rolls out an “Up or Down” Bitcoin marketA new입니다.
+- ["why didn’t you buy bitcoin in 2010”me in 2010:](https://t.me/crypto/3501) — 비트코인 매수·매도 — "why didn’t you buy bitcoin in 2010”me in 2010:입니다.
+- [President Trump suggested "we might pay off the US $35 trillion debt using cryptocurrency."](https://t.me/crypto/3502) — 암호화폐 — President Trump suggested "we might pay off the US $35입니다.
+- [How it feels buying alts right now:](https://t.me/crypto/3503) — 기관 매수·매도 — How it feels buying alts right now:입니다.
+- [🇰🇷 In Seoul, South Korea, cryptocurrency trading is an E-sport where competitors buy and sell deriva](https://t.me/crypto/3504) — 암호화폐 매수·매도 — 🇰🇷 In Seoul, South Korea, cryptocurrency trading is an입니다.
 - [YouTuber Logan Paul purchased this NFT for $635,000 in 2021.Today, it's worth $155.](https://t.me/crypto/3505) — YouTuber Logan Paul purchased this NFT for $635,000 in 2021.Today, it's worth $155.
-- [The Trump Tariffs Are Having a Noticeable Impact on the Stock Market and It's Raising a Big Red Flag Right Now](https://news.google.com/rss/articles/CBMimAFBVV95cUxOcVBzVUEwZ3dkclJodnJ3T1hpdGxGSGRqVGdQU3lobkZHeElTemtsODdMRXVCRE5MY29ETDNmT2U4VjFDSUNURHAzZFVzbEhQb203RllpamtuWFpSM3c5MjlkOUp2SloycXEwVGF4anZ0eUJWX09tVVZma25mVm0xVmlMalpYbFkyT3kzRHFpeXA1MktNc29NcA?oc=5) — 무역·관세 이슈입니다.
-- [Trump Tariffs Backfired, 130,000 Jobs Added In January And More: This Week In Economy](https://news.google.com/rss/articles/CBMi5wFBVV95cUxQYXpxSEpBeElZaEQwQmd1U2t3SmlsdUstaDdNa2MxRTF6TG9aSTN2M0F2OEdfQjdQVW1JZ2pGYnRQbzlLX0lzNWowWVgxNFppa2dXQmY3WjRfSTd1Y1g1Sm1KdE1ZYWxyUFFHMkhTOVR2Z3FZOUlMOGVJQmRBTnVEVmkzdW1FZS1GazFaV2dsdzN0VGVfUEpESmxsQjJNX05nMlQ5UmZFVXpRQVFucVhwQzhMRC10WXRtc1RmQzFncVFZUUVKREtLNE1TdXJMVmpPeTJlN1M0a3l5UGlrcWxJR0VnOVdoZDA?oc=5) — 무역·관세 이슈입니다.
-- [감사원 정책감사 폐지한다는데이재명 정부에선 ‘정치적 감사’ 사라질까](https://news.google.com/rss/articles/CBMiT0FVX3lxTE1jd1FPUnNqa1A3WnlBeGMyQk5ObHFfRWJadUkza01BeFhJLUpOU1MxYVlDY2c1ek05TXl5VkkxOVQ0OUloX0o4cWpReUhZc1k?oc=5) — 규제 관련 정책·규제 동향입니다.
-- [모건스탠리 “한은, 2월 금통위서 기준금리 동결 전망”](https://news.google.com/rss/articles/CBMickFVX3lxTFBSY3N2N1U5b1N6MGVpczB2UDdwSkVEcVhoVVo3X1h6aVBtU0hSeVRER0t2OF9oUFZrdGNBOFlTdUJtR3FCNGdTQkJCTm8zRDg0ZTdFMlhCNnRnby1abXVWNkFWZmVOd0xkSVVRMURNSEJDZw?oc=5) — 거시 지표 관련 소식입니다.
-- [한국은행 '금리 동결' 예상반도체 호경기, 성장률 상향 전망](https://news.google.com/rss/articles/CBMiaEFVX3lxTFBLellLT2RxMVdMWkNiaUFqbklqX2FYTFNEaHNDV29WbVhKeWZCQ0tlWnFvVmhGMzJrTEVHVFJHSzJkNmMtMmNveUZEVU93ZWpsZFdmeTBxdjJVSFE4TkxrVElBRjRPd21l?oc=5) — 거시 지표 관련 소식입니다.
-- [모건스탠리 “한은, 26일 기준금리 2.5% 동결 예상성장률 전망은 상향 조정”](https://news.google.com/rss/articles/CBMiZEFVX3lxTE9jbkdzTVhKckE2TGpmdFFYcXdmVUQ3MXFKcHpIRWN6MDY4SDlhamVLMWpwNjJGZjhSM2JNMnkyZERxTkd3WU5yN1c5THpQMmdiaFY5blpJVG5vckJ6T0FRbUdFdlI?oc=5) — 거시 지표 관련 소식입니다.
-- [모건스탠리 "한은, 2월 금통위서 기준금리 동결 전망올해 성장률은 1.8→2.0% 상향"](https://news.google.com/rss/articles/CBMihAFBVV95cUxQUTd5TktLRjkzUlFQbFVHSlFvcHFIejZueVJsUzlyZmM3VEowdFF3cVhVRzRwaFUyNEJrWHlBQUhXcHB3emdLQmtfeTRramZkRDcyZ3hUbm9fVkVSNUR1QmhHWVZfai14SXJaaWpyLVVpWWhqZWJhR1JlVmt6b2FJS1gtblE?oc=5) — 거시 지표 관련 소식입니다.
+- [The Trump Tariffs Are Having a Noticeable Impact on the Stock Market and It's Raising a Big Red Flag Right Now](https://news.google.com/rss/articles/CBMimAFBVV95cUxOcVBzVUEwZ3dkclJodnJ3T1hpdGxGSGRqVGdQU3lobkZHeElTemtsODdMRXVCRE5MY29ETDNmT2U4VjFDSUNURHAzZFVzbEhQb203RllpamtuWFpSM3c5MjlkOUp2SloycXEwVGF4anZ0eUJWX09tVVZma25mVm0xVmlMalpYbFkyT3kzRHFpeXA1MktNc29NcA?oc=5) — 무역·관세 — The Trump Tariffs Are Having a Noticeable Impact on the입니다.
+- [Trump Tariffs Backfired, 130,000 Jobs Added In January And More: This Week In Economy](https://news.google.com/rss/articles/CBMi5wFBVV95cUxQYXpxSEpBeElZaEQwQmd1U2t3SmlsdUstaDdNa2MxRTF6TG9aSTN2M0F2OEdfQjdQVW1JZ2pGYnRQbzlLX0lzNWowWVgxNFppa2dXQmY3WjRfSTd1Y1g1Sm1KdE1ZYWxyUFFHMkhTOVR2Z3FZOUlMOGVJQmRBTnVEVmkzdW1FZS1GazFaV2dsdzN0VGVfUEpESmxsQjJNX05nMlQ5UmZFVXpRQVFucVhwQzhMRC10WXRtc1RmQzFncVFZUUVKREtLNE1TdXJMVmpPeTJlN1M0a3l5UGlrcWxJR0VnOVdoZDA?oc=5) — 무역·관세 — Trump Tariffs Backfired, 130,000 Jobs Added In January And입니다.
+- [감사원 정책감사 폐지한다는데이재명 정부에선 ‘정치적 감사’ 사라질까](https://news.google.com/rss/articles/CBMiT0FVX3lxTE1jd1FPUnNqa1A3WnlBeGMyQk5ObHFfRWJadUkza01BeFhJLUpOU1MxYVlDY2c1ek05TXl5VkkxOVQ0OUloX0o4cWpReUhZc1k?oc=5) — 감사원 정책감사 폐지한다는데이재명 정부에선 ‘정치적 감사’ 사라질까입니다.
+- [모건스탠리 “한은, 2월 금통위서 기준금리 동결 전망”](https://news.google.com/rss/articles/CBMickFVX3lxTFBSY3N2N1U5b1N6MGVpczB2UDdwSkVEcVhoVVo3X1h6aVBtU0hSeVRER0t2OF9oUFZrdGNBOFlTdUJtR3FCNGdTQkJCTm8zRDg0ZTdFMlhCNnRnby1abXVWNkFWZmVOd0xkSVVRMURNSEJDZw?oc=5) — 모건스탠리 “한은, 2월 금통위서 기준금리 동결 전망”입니다.
+- [한국은행 '금리 동결' 예상반도체 호경기, 성장률 상향 전망](https://news.google.com/rss/articles/CBMiaEFVX3lxTFBLellLT2RxMVdMWkNiaUFqbklqX2FYTFNEaHNDV29WbVhKeWZCQ0tlWnFvVmhGMzJrTEVHVFJHSzJkNmMtMmNveUZEVU93ZWpsZFdmeTBxdjJVSFE4TkxrVElBRjRPd21l?oc=5) — 한국은행 '금리 동결' 예상반도체 호경기, 성장률 상향 전망입니다.
+- [모건스탠리 “한은, 26일 기준금리 2.5% 동결 예상성장률 전망은 상향 조정”](https://news.google.com/rss/articles/CBMiZEFVX3lxTE9jbkdzTVhKckE2TGpmdFFYcXdmVUQ3MXFKcHpIRWN6MDY4SDlhamVLMWpwNjJGZjhSM2JNMnkyZERxTkd3WU5yN1c5THpQMmdiaFY5blpJVG5vckJ6T0FRbUdFdlI?oc=5) — 모건스탠리 “한은, 26일 기준금리 2.5% 동결 예상성장률 전망은 상향 조정”입니다.
+- [모건스탠리 "한은, 2월 금통위서 기준금리 동결 전망올해 성장률은 1.8→2.0% 상향"](https://news.google.com/rss/articles/CBMihAFBVV95cUxQUTd5TktLRjkzUlFQbFVHSlFvcHFIejZueVJsUzlyZmM3VEowdFF3cVhVRzRwaFUyNEJrWHlBQUhXcHB3emdLQmtfeTRramZkRDcyZ3hUbm9fVkVSNUR1QmhHWVZfai14SXJaaWpyLVVpWWhqZWJhR1JlVmt6b2FJS1gtblE?oc=5) — 모건스탠리 "한은, 2월 금통위서 기준금리 동결 전망올해 성장률은 1.8→2.0% 상향"입니다.
 
 ## 텔레그램 주요 소식
 

@@ -18,7 +18,6 @@ image: "/assets/images/generated/market-heatmap-2026-02-22.png"
 
 ![sector-heatmap]({{ '/assets/images/generated/sector-heatmap-2026-02-22.png' | relative_url }})
 
-![indicator-dashboard]({{ '/assets/images/generated/indicator-dashboard-2026-02-22.png' | relative_url }})
 
 ## 오늘의 핵심
 
@@ -62,6 +61,8 @@ image: "/assets/images/generated/market-heatmap-2026-02-22.png"
 
 
 
+
+
 ## 전체 뉴스 요약
 
 - 극도의 공포 장세: 공포/탐욕 지수 8으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다.
@@ -72,29 +73,29 @@ image: "/assets/images/generated/market-heatmap-2026-02-22.png"
 
 ## 내용 분석
 
-- 핵심 이슈를 중심으로 요약과 링크를 정리했습니다.
+- 극도의 공포 장세: 공포/탐욕 지수 8으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다.
 
 
 ## URL 요약
 
-- [비트코인 ETF, 유출 확대 속에 1억 3,300만 달러 유출](https://news.google.com/rss/articles/CBMikwFBVV95cUxQNHY5bElXbm5NbDVpempWcUpEdjM5WnVPQnNRamlocHdQYkFON0V0REd3NktHblRMYlZVZDVZQ0JJWEZReGhQWEVWUEdXRHBxNTZ2UjdCeDQ2TXc4QkVYX2lSMHZQQU5kaXplUXdzbWxwOVRua2dHRWpXYUtxN3FrMjd4SGwtaVRtQUU3a21FeVl5TUU?oc=5) — 비트코인 관련 소식입니다.
-- [비트코인 ETF, 사이클 최저 잔고 속에서 80억 달러 규모 최대 자금 유출 기록](https://news.google.com/rss/articles/CBMiaEFVX3lxTE4xOUh3MUotQU9FcTNSY1I3OVdKSjFSRnc4bGI5aU1KLUd5akM4NFF5UVVVOEY2dTAyV2Z2UVl1SDdTZHN6Qk5xaTE0a3ludUxUbVhXcGhFTVU5QU82bXhPRXQwSktNLUV6?oc=5) — 비트코인 관련 소식입니다.
-- [비트코인 ETF에 자금 유입 증가, 암호화폐 펀드 유입은 기관 투자자들의 선별적 수요를 보여줌](https://news.google.com/rss/articles/CBMitwFBVV95cUxPOVpMN19uWlYwMkU4T0w1bmtqSWZJNUIzdlh6Q3I4eUVBNHUyelZXVzl0d1FFc0NTbFdwWldwYnIwTDBzU1pWNGxDQ2p1MndSTlJvdElna3E0dUFmVEtIZXNUZHhQakZZcW9TRlE5UjFwWnMtMzlmT3hxSjcxMWtUZkJzVUFtZWJncV8xRjE5WWNYU1k3T3dTTUJEYVlLR3haTS1MQWRKbEtQcmN4MEtaR240X1NETWs?oc=5) — 비트코인 관련 소식입니다.
-- [Bitcoin ETFs add $88M, ending three-day outflow streak](https://news.google.com/rss/articles/CBMiekFVX3lxTE05dW5vQWNvbHFrUnl2ZmJyZjJaZkhYMzM1cDRJV0xsMkVONnQzVkN4emNETEF4VnpUby1CUEVOeUI1c1RYTnhvSXBrSXkxSDZzQjNXUWNqc25RUlNvanBwa3FOSlZoSGp4bDRwR1VyT29qX3g1TEJ0ZGdn?oc=5) — 고래·온체인 이동 이슈입니다.
-- ['내부자 고래', 거시경제 지표 발표 직전 거래소로 비트코인 5000개 이체](https://news.google.com/rss/articles/CBMiUEFVX3lxTE8tVUY2bXpFMXZBX0plR0NPNkp5RFVacTVyMGJUS19aejYxWV9CS1ZvRzUwS3NGdTdxd3I1YXI0TVNIakx5QUcwdEloc1FZeFFN?oc=5) — 비트코인 출시·공시 소식입니다.
-- [Bitcoin Whale Awakens: Dormant Giant Deposits 1,000 BTC to Bitfinex, Secures $38.4M Staggering Profit](https://news.google.com/rss/articles/CBMiggFBVV95cUxQVDZyY2JzUjJJaXlCU193cjFrUkd3Q2R1TVBCZnM0Y1NvQkF0M2JONWdicGF4ekRqYUlLRjRIUXlLSlJLcldRYXNLV0k1OGZsNmVmbFUyRGRrOWhJXzhqR2lqcjlZUHFjVFdUc3AtSElpYXRPT3VVWFg2RDBUWHVwbGx3?oc=5) — 고래·온체인 이동 이슈입니다.
-- [Binance Sees Major Investor Sentiment Shift: Biggest Whale Inflows Since 2024](https://news.google.com/rss/articles/CBMizwFBVV95cUxOY1hSZGQ5cDgtZkRvRnR5T3RkVjhSTWJubkxRd0R4bGk1TFdYYlduUjYxQldJb0J6Y0FXZUJ2ZDVwY1NGMUNwblIxUVkwS1hJN2VEcjhEV1VtYWR1aW9SaGVFVGdsREd1cHl3aUVoTDhsRHZacmZtZTJpa2V6Y05YX05jQkhFTVNITFhoak5oRlg5YVRCLThvcHo4enl6RW5mWHcwUWhnckFyLXFmV2VkX29HbkxXa0o2cVhNbjRGejE3ZjFweC1IWWRrZlNrMm8?oc=5) — 고래·온체인 이동 이슈입니다.
-- [6,318 BTC Moved to Binance: Is This Whale Signaling a Major Shift?](https://news.google.com/rss/articles/CBMinAFBVV95cUxQVUxFTGNtanpDUGdaZWdKWmtsWWlpaW1mN2NkQzJSR2NkSTVNb3d0OXl1T19DZkpXdzNNdjR6UkE1cURVX3AzamFlbEViYVJOalJnNk52UUlWbnFTY2tLMDRXWFFQUFlCN2tmdi13T0NRRDgxTVo4cTQ0emg2ZllESXNFUnJiSmdoZksxdWp1SVlSSE5aSXB5M0hXMmM?oc=5) — 고래·온체인 이동 이슈입니다.
-- [Bitcoin Whale Transfer: Stunning $424 Million BTC Movement to Binance Sparks Market Analysis](https://news.google.com/rss/articles/CBMihgFBVV95cUxORVpnWXVUcE5GbzRvVllZdllzN2dUaFpBS3ExbDItSXNvUXQzZFBjekFBZjFzX2l5dUpFVEo2UmluWUVJSVFiSjl0SEI5dlYwY2xUNUtZNXF1QTd2WnV1RGo3cDRReWx3YXNIMDdyZHk0WE02aEVNM29GYnU4ckhoYnRHeFBDZw?oc=5) — 고래·온체인 이동 이슈입니다.
-- [Bitcoin Whale Transfer Stuns Market: 3,107 BTC Moves to Coinbase Institutional in $206 Million Pivot](https://news.google.com/rss/articles/CBMiR0FVX3lxTE43SXB5OW1BR2psU2M1Tk1IbXlsYlNSNWE5ZEJQWHRWSWIwZVpyUGc4bWo3VWhpcmVwbkplOTgxTnZBS25BUENF?oc=5) — 고래·온체인 이동 이슈입니다.
-- [FRED](https://fred.stlouisfed.org/series/FEDFUNDS) — FRED 관련 소식입니다.
-- [FRED - 10-Year Treasury](https://fred.stlouisfed.org/series/DGS10) — 기관 매수·매도 동향입니다.
-- [FRED](https://fred.stlouisfed.org/series/CPIAUCSL) — FRED 관련 소식입니다.
-- [FRED](https://fred.stlouisfed.org/series/VIXCLS) — FRED 관련 소식입니다.
-- [CoinGecko](https://www.coingecko.com/) — CoinGecko 관련 소식입니다.
-- [Alternative.me](https://alternative.me/crypto/fear-and-greed-index/) — Alternative.me 관련 소식입니다.
-- [Investing.com](https://kr.investing.com/indices/kospi) — Investing.com 관련 소식입니다.
-- [Yahoo Finance](https://finance.yahoo.com/) — Yahoo Finance 관련 소식입니다.
+- [비트코인 ETF, 유출 확대 속에 1억 3,300만 달러 유출](https://news.google.com/rss/articles/CBMikwFBVV95cUxQNHY5bElXbm5NbDVpempWcUpEdjM5WnVPQnNRamlocHdQYkFON0V0REd3NktHblRMYlZVZDVZQ0JJWEZReGhQWEVWUEdXRHBxNTZ2UjdCeDQ2TXc4QkVYX2lSMHZQQU5kaXplUXdzbWxwOVRua2dHRWpXYUtxN3FrMjd4SGwtaVRtQUU3a21FeVl5TUU?oc=5) — 비트코인 ETF, 유출 확대 속에 1억 3,300만 달러 유출입니다.
+- [비트코인 ETF, 사이클 최저 잔고 속에서 80억 달러 규모 최대 자금 유출 기록](https://news.google.com/rss/articles/CBMiaEFVX3lxTE4xOUh3MUotQU9FcTNSY1I3OVdKSjFSRnc4bGI5aU1KLUd5akM4NFF5UVVVOEY2dTAyV2Z2UVl1SDdTZHN6Qk5xaTE0a3ludUxUbVhXcGhFTVU5QU82bXhPRXQwSktNLUV6?oc=5) — 비트코인 ETF, 사이클 최저 잔고 속에서 80억 달러 규모 최대 자금 유출 기록입니다.
+- [비트코인 ETF에 자금 유입 증가, 암호화폐 펀드 유입은 기관 투자자들의 선별적 수요를 보여줌](https://news.google.com/rss/articles/CBMitwFBVV95cUxPOVpMN19uWlYwMkU4T0w1bmtqSWZJNUIzdlh6Q3I4eUVBNHUyelZXVzl0d1FFc0NTbFdwWldwYnIwTDBzU1pWNGxDQ2p1MndSTlJvdElna3E0dUFmVEtIZXNUZHhQakZZcW9TRlE5UjFwWnMtMzlmT3hxSjcxMWtUZkJzVUFtZWJncV8xRjE5WWNYU1k3T3dTTUJEYVlLR3haTS1MQWRKbEtQcmN4MEtaR240X1NETWs?oc=5) — 비트코인 ETF에 자금 유입 증가, 암호화폐 펀드 유입은 기관 투자자들의 선별적 수요를 보여줌입니다.
+- [Bitcoin ETFs add $88M, ending three-day outflow streak](https://news.google.com/rss/articles/CBMiekFVX3lxTE05dW5vQWNvbHFrUnl2ZmJyZjJaZkhYMzM1cDRJV0xsMkVONnQzVkN4emNETEF4VnpUby1CUEVOeUI1c1RYTnhvSXBrSXkxSDZzQjNXUWNqc25RUlNvanBwa3FOSlZoSGp4bDRwR1VyT29qX3g1TEJ0ZGdn?oc=5) — 온체인 이동 — Bitcoin ETFs add $88M, ending three-day outflow streak입니다.
+- ['내부자 고래', 거시경제 지표 발표 직전 거래소로 비트코인 5000개 이체](https://news.google.com/rss/articles/CBMiUEFVX3lxTE8tVUY2bXpFMXZBX0plR0NPNkp5RFVacTVyMGJUS19aejYxWV9CS1ZvRzUwS3NGdTdxd3I1YXI0TVNIakx5QUcwdEloc1FZeFFN?oc=5) — '내부자 고래', 거시경제 지표 발표 직전 거래소로 비트코인 5000개 이체입니다.
+- [Bitcoin Whale Awakens: Dormant Giant Deposits 1,000 BTC to Bitfinex, Secures $38.4M Staggering Profit](https://news.google.com/rss/articles/CBMiggFBVV95cUxQVDZyY2JzUjJJaXlCU193cjFrUkd3Q2R1TVBCZnM0Y1NvQkF0M2JONWdicGF4ekRqYUlLRjRIUXlLSlJLcldRYXNLV0k1OGZsNmVmbFUyRGRrOWhJXzhqR2lqcjlZUHFjVFdUc3AtSElpYXRPT3VVWFg2RDBUWHVwbGx3?oc=5) — 온체인 이동 — Bitcoin Whale Awakens: Dormant Giant Deposits 1,000 BTC to입니다.
+- [Binance Sees Major Investor Sentiment Shift: Biggest Whale Inflows Since 2024](https://news.google.com/rss/articles/CBMizwFBVV95cUxOY1hSZGQ5cDgtZkRvRnR5T3RkVjhSTWJubkxRd0R4bGk1TFdYYlduUjYxQldJb0J6Y0FXZUJ2ZDVwY1NGMUNwblIxUVkwS1hJN2VEcjhEV1VtYWR1aW9SaGVFVGdsREd1cHl3aUVoTDhsRHZacmZtZTJpa2V6Y05YX05jQkhFTVNITFhoak5oRlg5YVRCLThvcHo4enl6RW5mWHcwUWhnckFyLXFmV2VkX29HbkxXa0o2cVhNbjRGejE3ZjFweC1IWWRrZlNrMm8?oc=5) — 온체인 이동 — Binance Sees Major Investor Sentiment Shift: Biggest Whale입니다.
+- [6,318 BTC Moved to Binance: Is This Whale Signaling a Major Shift?](https://news.google.com/rss/articles/CBMinAFBVV95cUxQVUxFTGNtanpDUGdaZWdKWmtsWWlpaW1mN2NkQzJSR2NkSTVNb3d0OXl1T19DZkpXdzNNdjR6UkE1cURVX3AzamFlbEViYVJOalJnNk52UUlWbnFTY2tLMDRXWFFQUFlCN2tmdi13T0NRRDgxTVo4cTQ0emg2ZllESXNFUnJiSmdoZksxdWp1SVlSSE5aSXB5M0hXMmM?oc=5) — 온체인 이동 — 6,318 BTC Moved to Binance: Is This Whale Signaling a Major입니다.
+- [Bitcoin Whale Transfer: Stunning $424 Million BTC Movement to Binance Sparks Market Analysis](https://news.google.com/rss/articles/CBMihgFBVV95cUxORVpnWXVUcE5GbzRvVllZdllzN2dUaFpBS3ExbDItSXNvUXQzZFBjekFBZjFzX2l5dUpFVEo2UmluWUVJSVFiSjl0SEI5dlYwY2xUNUtZNXF1QTd2WnV1RGo3cDRReWx3YXNIMDdyZHk0WE02aEVNM29GYnU4ckhoYnRHeFBDZw?oc=5) — 온체인 이동 — Bitcoin Whale Transfer: Stunning $424 Million BTC Movement입니다.
+- [Bitcoin Whale Transfer Stuns Market: 3,107 BTC Moves to Coinbase Institutional in $206 Million Pivot](https://news.google.com/rss/articles/CBMiR0FVX3lxTE43SXB5OW1BR2psU2M1Tk1IbXlsYlNSNWE5ZEJQWHRWSWIwZVpyUGc4bWo3VWhpcmVwbkplOTgxTnZBS25BUENF?oc=5) — 온체인 이동 — Bitcoin Whale Transfer Stuns Market: 3,107 BTC Moves to입니다.
+- [FRED](https://fred.stlouisfed.org/series/FEDFUNDS) — FRED.
+- [FRED - 10-Year Treasury](https://fred.stlouisfed.org/series/DGS10) — 기관 매수·매도 — FRED - 10-Year Treasury입니다.
+- [FRED](https://fred.stlouisfed.org/series/CPIAUCSL) — FRED.
+- [FRED](https://fred.stlouisfed.org/series/VIXCLS) — FRED.
+- [CoinGecko](https://www.coingecko.com/) — CoinGecko.
+- [Alternative.me](https://alternative.me/crypto/fear-and-greed-index/) — Alternative.me.
+- [Investing.com](https://kr.investing.com/indices/kospi) — Investing.com.
+- [Yahoo Finance](https://finance.yahoo.com/) — Yahoo Finance.
 - [FRED](https://fred.stlouisfed.org/) — > *본 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다.
 
 ## 퀀트 시그널 요약

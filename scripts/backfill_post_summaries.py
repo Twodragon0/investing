@@ -152,6 +152,19 @@ def normalize_summary(text: str) -> str:
     return sentence
 
 
+def _shorten_title_for_summary(title: str, limit: int = 80) -> str:
+    """Shorten a title to use as a summary, keeping meaningful content."""
+    title = normalize_title(title)
+    if len(title) <= limit:
+        return title
+    # Try to cut at a word boundary
+    truncated = title[:limit]
+    last_space = truncated.rfind(" ")
+    if last_space > limit * 0.6:
+        truncated = truncated[:last_space]
+    return truncated.rstrip(".,;:- ") + "..."
+
+
 def summarize_from_title(title: str) -> str:
     title = normalize_title(title)
     low = title.lower()
@@ -161,10 +174,20 @@ def summarize_from_title(title: str) -> str:
         subject = "비트코인"
     elif any(k in low for k in ["ethereum", "eth", "이더리움"]):
         subject = "이더리움"
+    elif any(k in low for k in ["xrp", "ripple", "리플"]):
+        subject = "XRP"
+    elif any(k in low for k in ["solana", "sol", "솔라나"]):
+        subject = "솔라나"
     elif any(k in low for k in ["nasdaq", "나스닥"]):
         subject = "나스닥"
     elif any(k in low for k in ["s&p", "s&p 500", "sp500", "s&p500"]):
         subject = "S&P 500"
+    elif any(k in low for k in ["dow", "다우"]):
+        subject = "다우존스"
+    elif any(k in low for k in ["kospi", "코스피"]):
+        subject = "코스피"
+    elif any(k in low for k in ["kosdaq", "코스닥"]):
+        subject = "코스닥"
     elif any(k in low for k in ["fed", "fomc", "연준"]):
         subject = "미 연준"
     elif any(k in low for k in ["sec", "cftc", "fsa", "fsc", "금융위원회", "금감원"]):
@@ -194,6 +217,16 @@ def summarize_from_title(title: str) -> str:
         subject = "거시 지표"
     elif any(k in low for k in ["hack", "exploit", "breach", "ransom", "해킹", "취약"]):
         subject = "보안 사고"
+    elif any(k in low for k in ["trump", "트럼프"]):
+        subject = "트럼프"
+    elif any(k in low for k in ["gold", "금값", "금가격"]):
+        subject = "금"
+    elif any(k in low for k in ["oil", "원유", "wti", "brent"]):
+        subject = "원유"
+
+    # Korean titles are already readable — use them directly
+    if re.search(r"[가-힣]", title) and len(title) > 15:
+        return normalize_summary(_shorten_title_for_summary(title, 100))
 
     price_up = any(
         k in low
@@ -208,6 +241,8 @@ def summarize_from_title(title: str) -> str:
             "climb",
             "climbs",
             "rebound",
+            "rallies",
+            "rally",
             "up",
             "상승",
             "급등",
@@ -228,6 +263,7 @@ def summarize_from_title(title: str) -> str:
             "tumble",
             "crash",
             "sell-off",
+            "plunge",
             "down",
             "하락",
             "급락",
@@ -235,22 +271,27 @@ def summarize_from_title(title: str) -> str:
         ]
     )
 
+    # Build more specific summaries using title context
+    if price_up and subject:
+        return normalize_summary(f"{subject} 상승 — {_shorten_title_for_summary(title, 60)}")
+    if price_down and subject:
+        return normalize_summary(f"{subject} 하락 — {_shorten_title_for_summary(title, 60)}")
     if price_up:
-        return normalize_summary(f"{subject or '시장'} 상승 흐름을 다룬 소식")
+        return normalize_summary(f"시장 상승 — {_shorten_title_for_summary(title, 60)}")
     if price_down:
-        return normalize_summary(f"{subject or '시장'} 하락 흐름을 다룬 소식")
+        return normalize_summary(f"시장 하락 — {_shorten_title_for_summary(title, 60)}")
     if any(k in low for k in ["tariff", "관세", "trade war", "무역"]):
-        return normalize_summary("무역·관세 이슈")
+        return normalize_summary(f"무역·관세 — {_shorten_title_for_summary(title, 60)}")
     if any(k in low for k in ["crisis", "fear", "panic", "불안", "공포"]):
-        return normalize_summary("시장 심리·불안 이슈")
+        return normalize_summary(f"시장 심리 — {_shorten_title_for_summary(title, 60)}")
     if any(k in low for k in ["hack", "exploit", "breach", "ransom", "해킹", "취약"]):
-        return normalize_summary("보안 사고·취약점 이슈")
+        return normalize_summary(f"보안 이슈 — {_shorten_title_for_summary(title, 60)}")
     if any(
         k in low for k in ["lawsuit", "court", "판결", "소송", "charged", "accused"]
     ):
-        return normalize_summary("법적 분쟁·혐의 이슈")
+        return normalize_summary(f"법적 분쟁 — {_shorten_title_for_summary(title, 60)}")
     if any(k in low for k in ["listing", "listed", "상장", "상장폐지", "delist"]):
-        return normalize_summary("상장·상폐 관련 업데이트")
+        return normalize_summary(f"상장·상폐 — {_shorten_title_for_summary(title, 60)}")
     if any(
         k in low
         for k in [
@@ -263,7 +304,7 @@ def summarize_from_title(title: str) -> str:
             "announcement",
         ]
     ):
-        return normalize_summary(f"{subject or '기관'} 출시·공시 소식")
+        return normalize_summary(f"{subject or '신규'} 발표 — {_shorten_title_for_summary(title, 60)}")
     if any(
         k in low
         for k in [
@@ -279,19 +320,18 @@ def summarize_from_title(title: str) -> str:
             "매도",
         ]
     ):
-        return normalize_summary(f"{subject or '기관'} 매수·매도 동향")
+        return normalize_summary(f"{subject or '기관'} 매수·매도 — {_shorten_title_for_summary(title, 60)}")
     if any(
         k in low
         for k in ["whale", "wallet", "transfer", "inflow", "outflow", "고래", "이체"]
     ):
-        return normalize_summary("고래·온체인 이동 이슈")
+        return normalize_summary(f"온체인 이동 — {_shorten_title_for_summary(title, 60)}")
     if any(k in low for k in ["regulation", "regulatory", "법안", "규제", "정책"]):
-        return normalize_summary(f"{subject or '규제'} 관련 정책·규제 동향")
-    if any(k in low for k in ["report", "guidance", "briefing", "리포트", "보고"]):
-        return normalize_summary(f"{subject or '기관'} 보고서 내용")
+        return normalize_summary(f"규제·정책 — {_shorten_title_for_summary(title, 60)}")
     if subject:
-        return normalize_summary(f"{subject} 관련 소식")
-    return normalize_summary(f"{title} 관련 소식")
+        return normalize_summary(f"{subject} — {_shorten_title_for_summary(title, 60)}")
+    # Default: use shortened title directly
+    return normalize_summary(_shorten_title_for_summary(title, 90))
 
 
 def extract_links(lines: List[str]) -> List[Tuple[str, str, str, str]]:
@@ -497,16 +537,33 @@ def has_urgent_alert(body: str) -> bool:
 def build_content_analysis(lines: List[str], body: str) -> List[str]:
     analysis = []
     total = extract_total_count(body)
-    if total:
-        analysis.append(f"총 {total}건 규모로 이슈를 정리했습니다.")
     themes = extract_theme_names(lines)
-    if themes:
-        analysis.append(f"상위 테마는 {', '.join(themes)}로 집중도가 높습니다.")
-    if has_urgent_alert(body):
-        analysis.append("긴급 알림이 포함되어 우선순위 대응이 필요합니다.")
+    urgent_count = _extract_urgent_count(body)
+
+    # Build a more informative analysis
+    if total and themes:
+        analysis.append(
+            f"총 {total}건의 뉴스 중 {', '.join(themes[:2])} 테마가 가장 많은 비중을 차지합니다."
+        )
+    elif total:
+        analysis.append(f"총 {total}건의 뉴스를 수집하여 주요 이슈를 정리했습니다.")
+
+    if urgent_count:
+        analysis.append(f"긴급 이슈 {urgent_count}건이 감지되어 우선 확인이 필요합니다.")
+
+    # Try to extract key insight from existing summary sections
+    for section in SECTION_PRIORITY[:4]:
+        bullets = extract_section_bullets(lines, section, limit=1)
+        for bullet in bullets:
+            if bullet not in analysis and len(bullet) > 20:
+                analysis.append(bullet)
+                break
+        if len(analysis) >= 3:
+            break
+
     if not analysis:
         analysis.append("핵심 이슈를 중심으로 요약과 링크를 정리했습니다.")
-    return analysis
+    return analysis[:3]
 
 
 def extract_intro_bullets(lines: List[str], limit: int = 2) -> List[str]:

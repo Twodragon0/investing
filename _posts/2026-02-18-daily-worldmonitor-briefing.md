@@ -43,6 +43,8 @@ lang: "ko"
 
 
 
+
+
 ## 전체 뉴스 요약
 
 - 총 **20건** 수집
@@ -53,38 +55,38 @@ lang: "ko"
 
 ## 내용 분석
 
-- 총 20건 규모로 이슈를 정리했습니다.
-- 상위 테마는 사회/기타, 지정학/안보, 정책/법률로 집중도가 높습니다.
+- 총 20건의 뉴스 중 사회/기타, 지정학/안보 테마가 가장 많은 비중을 차지합니다.
+- 주요 테마: 사회/기타, 지정학/안보, 정책/법률
 
 
 ## URL 요약
 
-- [Russia-Ukraine war: List of key events, day 1,455](https://www.aljazeera.com/news/2026/2/18/russia-ukraine-war-list-of-key-events-day-1455?traffic_source=rss) — Russia-Ukraine war: List of key events, day 1,455 관련 소식입니다.
-- [Hamas: Trump’s ‘Board of Peace’ must stop Israel’s killing in Gaza](https://www.aljazeera.com/news/2026/2/17/hamas-trumps-board-of-peace-must-stop-israels-killing-in-gaza?traffic_source=rss) — Hamas: Trump’s ‘Board of Peace’ must stop Israel’s killing in Gaza 관련 소식입니다.
-- [Warner Bros rejects latest Paramount bid but open to ‘best and final’ offer](https://www.aljazeera.com/economy/2026/2/17/warner-bros-rejects-latest-paramount-bid-but-open-to-best-and-final-offer?traffic_source=rss) — Warner Bros rejects latest Paramount bid but open to ‘best and final’ offer 관련 소식입니다.
-- [US and Iran reach ‘guiding principles’ in Geneva nuclear talks](https://www.aljazeera.com/video/newsfeed/2026/2/17/us-and-iran-reach-guiding-principles-in-geneva-nuclear-talks?traffic_source=rss) — US and Iran reach ‘guiding principles’ in Geneva nuclear talks 관련 소식입니다.
-- [Thousands in Kosovo rally against war crimes trial of ex-KLA commanders](https://www.aljazeera.com/news/2026/2/17/thousands-in-kosovo-rally-against-war-crimes-trial-of-ex-kla-commanders?traffic_source=rss) — 시장 상승 흐름을 다룬 소식입니다.
-- [I would scream in my sleep: Women from Syria's Alawite minority tell of kidnap and rape](https://www.bbc.com/news/articles/cn5g751pl7lo?at_medium=RSS&at_campaign=rss) — I would scream in my sleep: Women from Syria's Alawite minority tell of kidnap and rape 관련 소식입니다.
-- [US immigration judge rejects Trump bid to deport Columbia student Mahdawi](https://www.aljazeera.com/news/2026/2/17/us-immigration-judge-rejects-trump-bid-to-deport-columbia-student-mahdawi?traffic_source=rss) — US immigration judge rejects Trump bid to deport Columbia student Mahdawi 관련 소식입니다.
-- [Stephen Colbert says CBS barred interview with Texas Democratic candidate](https://www.aljazeera.com/news/2026/2/18/stephen-colbert-says-cbs-barred-his-interview-with-texas-senate-candidate?traffic_source=rss) — Stephen Colbert says CBS barred interview with Texas Democratic candidate 관련 소식입니다.
-- [France arrests nine over killing of far-right activist Quentin Deranque](https://www.aljazeera.com/news/2026/2/18/france-arrests-nine-over-killing-of-far-right-activist-quentin-deranque?traffic_source=rss) — France arrests nine over killing of far-right activist Quentin Deranque 관련 소식입니다.
-- [How Jesse Jackson helped empower US Arabs and lift up the Palestinian cause](https://www.aljazeera.com/news/2026/2/18/jesse-jackson-helped-empower-us-arabs-and-raise-palestinian-cause?traffic_source=rss) — 시장 상승 흐름을 다룬 소식입니다.
-- [Vinicius earns Real Madrid 1-0 win at Benfica in match marred by racism row](https://www.aljazeera.com/sports/2026/2/17/vinicius-earns-real-madrid-1-0-win-at-benfica-in-match-marred-by-racism-row?traffic_source=rss) — Vinicius earns Real Madrid 1-0 win at Benfica in match marred by racism row 관련 소식입니다.
-- [Humanoid robots perform advanced martial arts at Chinese New Year gala](https://www.aljazeera.com/news/2026/2/17/humanoid-robots-perform-advanced-martial-arts-at-chinese-new-year-gala?traffic_source=rss) — Humanoid robots perform advanced martial arts at Chinese New Year gala 관련 소식입니다.
-- [Tributes pour in after US civil rights icon Jesse Jackson dies at 84](https://www.aljazeera.com/news/2026/2/17/tributes-pour-in-after-us-civil-rights-icon-jesse-jackson-dies-at-84?traffic_source=rss) — Tributes pour in after US civil rights icon Jesse Jackson dies at 84 관련 소식입니다.
-- [Colombia to resume peace talks with ECG after temporary suspension](https://www.aljazeera.com/news/2026/2/17/colombia-to-resume-peace-talks-with-ecg-after-temporary-suspension?traffic_source=rss) — Colombia to resume peace talks with ECG after temporary suspension 관련 소식입니다.
-- [Yemeni Americans feel ‘betrayed’ as Trump revokes immigration protections](https://www.aljazeera.com/news/2026/2/17/yemeni-americans-feel-betrayed-as-trump-revokes-immigration-protections?traffic_source=rss) — Yemeni Americans feel ‘betrayed’ as Trump revokes immigration protections 관련 소식입니다.
-- [‘Journey of hell’: Migrants in Libya endure torture, rape, forced labour](https://www.aljazeera.com/news/2026/2/17/journey-of-hell-migrants-in-libya-endure-torture-rape-forced-labour?traffic_source=rss) — ‘Journey of hell’: Migrants in Libya endure torture, rape, forced labour 관련 소식입니다.
-- [US civil rights leader Jesse Jackson dies aged 84](https://www.bbc.com/news/articles/cp81l0e1eg5o?at_medium=RSS&at_campaign=rss) — US civil rights leader Jesse Jackson dies aged 84 관련 소식입니다.
-- [Stephen Colbert says CBS spiked interview with Democrat over FCC fears](https://www.bbc.com/news/articles/cze0dk3yd5eo?at_medium=RSS&at_campaign=rss) — 시장 심리·불안 이슈입니다.
-- [Under pressure from Trump, Venezuela's new president has aces up her sleeve](https://www.bbc.com/news/articles/cn87rv0jdy1o?at_medium=RSS&at_campaign=rss) — 시장 상승 흐름을 다룬 소식입니다.
-- [Climber on trial for leaving girlfriend to die on Austria's highest mountain](https://www.bbc.com/news/articles/c5yv9plyjgpo?at_medium=RSS&at_campaign=rss) — 시장 상승 흐름을 다룬 소식입니다.
-- [US civil rights leader Jesse Jackson dies aged 84](https://www.bbc.com/news/articles/cp81l0e1eg5o?at_medium=RSS&amp;at_campaign=rss) — US civil rights leader Jesse Jackson dies aged 84 관련 소식입니다.
-- [Stephen Colbert says CBS spiked interview with Democrat over FCC fears](https://www.bbc.com/news/articles/cze0dk3yd5eo?at_medium=RSS&amp;at_campaign=rss) — 시장 심리·불안 이슈입니다.
-- [I would scream in my sleep: Women from Syria's Alawite minority tell of kidnap and rape](https://www.bbc.com/news/articles/cn5g751pl7lo?at_medium=RSS&amp;at_campaign=rss) — I would scream in my sleep: Women from Syria's Alawite minority tell of kidnap and rape 관련 소식입니다.
-- [Under pressure from Trump, Venezuela's new president has aces up her sleeve](https://www.bbc.com/news/articles/cn87rv0jdy1o?at_medium=RSS&amp;at_campaign=rss) — 시장 상승 흐름을 다룬 소식입니다.
-- [Climber on trial for leaving girlfriend to die on Austria's highest mountain](https://www.bbc.com/news/articles/c5yv9plyjgpo?at_medium=RSS&amp;at_campaign=rss) — 시장 상승 흐름을 다룬 소식입니다.
-- [worldmonitor](https://worldmonitor.app) — worldmonitor 관련 소식입니다.
+- [Russia-Ukraine war: List of key events, day 1,455](https://www.aljazeera.com/news/2026/2/18/russia-ukraine-war-list-of-key-events-day-1455?traffic_source=rss) — Russia-Ukraine war: List of key events, day 1,455.
+- [Hamas: Trump’s ‘Board of Peace’ must stop Israel’s killing in Gaza](https://www.aljazeera.com/news/2026/2/17/hamas-trumps-board-of-peace-must-stop-israels-killing-in-gaza?traffic_source=rss) — 트럼프 — Hamas: Trump’s ‘Board of Peace’ must stop Israel’s killing입니다.
+- [Warner Bros rejects latest Paramount bid but open to ‘best and final’ offer](https://www.aljazeera.com/economy/2026/2/17/warner-bros-rejects-latest-paramount-bid-but-open-to-best-and-final-offer?traffic_source=rss) — Warner Bros rejects latest Paramount bid but open to ‘best and final’ offer.
+- [US and Iran reach ‘guiding principles’ in Geneva nuclear talks](https://www.aljazeera.com/video/newsfeed/2026/2/17/us-and-iran-reach-guiding-principles-in-geneva-nuclear-talks?traffic_source=rss) — US and Iran reach ‘guiding principles’ in Geneva nuclear talks.
+- [Thousands in Kosovo rally against war crimes trial of ex-KLA commanders](https://www.aljazeera.com/news/2026/2/17/thousands-in-kosovo-rally-against-war-crimes-trial-of-ex-kla-commanders?traffic_source=rss) — 시장 상승 — Thousands in Kosovo rally against war crimes trial of입니다.
+- [I would scream in my sleep: Women from Syria's Alawite minority tell of kidnap and rape](https://www.bbc.com/news/articles/cn5g751pl7lo?at_medium=RSS&at_campaign=rss) — I would scream in my sleep: Women from Syria's Alawite minority tell of kidnap and rape.
+- [US immigration judge rejects Trump bid to deport Columbia student Mahdawi](https://www.aljazeera.com/news/2026/2/17/us-immigration-judge-rejects-trump-bid-to-deport-columbia-student-mahdawi?traffic_source=rss) — 트럼프 — US immigration judge rejects Trump bid to deport Columbia입니다.
+- [Stephen Colbert says CBS barred interview with Texas Democratic candidate](https://www.aljazeera.com/news/2026/2/18/stephen-colbert-says-cbs-barred-his-interview-with-texas-senate-candidate?traffic_source=rss) — Stephen Colbert says CBS barred interview with Texas Democratic candidate.
+- [France arrests nine over killing of far-right activist Quentin Deranque](https://www.aljazeera.com/news/2026/2/18/france-arrests-nine-over-killing-of-far-right-activist-quentin-deranque?traffic_source=rss) — France arrests nine over killing of far-right activist Quentin Deranque.
+- [How Jesse Jackson helped empower US Arabs and lift up the Palestinian cause](https://www.aljazeera.com/news/2026/2/18/jesse-jackson-helped-empower-us-arabs-and-raise-palestinian-cause?traffic_source=rss) — 시장 상승 — How Jesse Jackson helped empower US Arabs and lift up the입니다.
+- [Vinicius earns Real Madrid 1-0 win at Benfica in match marred by racism row](https://www.aljazeera.com/sports/2026/2/17/vinicius-earns-real-madrid-1-0-win-at-benfica-in-match-marred-by-racism-row?traffic_source=rss) — Vinicius earns Real Madrid 1-0 win at Benfica in match marred by racism row.
+- [Humanoid robots perform advanced martial arts at Chinese New Year gala](https://www.aljazeera.com/news/2026/2/17/humanoid-robots-perform-advanced-martial-arts-at-chinese-new-year-gala?traffic_source=rss) — Humanoid robots perform advanced martial arts at Chinese New Year gala.
+- [Tributes pour in after US civil rights icon Jesse Jackson dies at 84](https://www.aljazeera.com/news/2026/2/17/tributes-pour-in-after-us-civil-rights-icon-jesse-jackson-dies-at-84?traffic_source=rss) — Tributes pour in after US civil rights icon Jesse Jackson dies at 84.
+- [Colombia to resume peace talks with ECG after temporary suspension](https://www.aljazeera.com/news/2026/2/17/colombia-to-resume-peace-talks-with-ecg-after-temporary-suspension?traffic_source=rss) — Colombia to resume peace talks with ECG after temporary suspension.
+- [Yemeni Americans feel ‘betrayed’ as Trump revokes immigration protections](https://www.aljazeera.com/news/2026/2/17/yemeni-americans-feel-betrayed-as-trump-revokes-immigration-protections?traffic_source=rss) — 트럼프 — Yemeni Americans feel ‘betrayed’ as Trump revokes입니다.
+- [‘Journey of hell’: Migrants in Libya endure torture, rape, forced labour](https://www.aljazeera.com/news/2026/2/17/journey-of-hell-migrants-in-libya-endure-torture-rape-forced-labour?traffic_source=rss) — ‘Journey of hell’: Migrants in Libya endure torture, rape, forced labour.
+- [US civil rights leader Jesse Jackson dies aged 84](https://www.bbc.com/news/articles/cp81l0e1eg5o?at_medium=RSS&at_campaign=rss) — US civil rights leader Jesse Jackson dies aged 84.
+- [Stephen Colbert says CBS spiked interview with Democrat over FCC fears](https://www.bbc.com/news/articles/cze0dk3yd5eo?at_medium=RSS&at_campaign=rss) — 시장 심리 — Stephen Colbert says CBS spiked interview with Democrat입니다.
+- [Under pressure from Trump, Venezuela's new president has aces up her sleeve](https://www.bbc.com/news/articles/cn87rv0jdy1o?at_medium=RSS&at_campaign=rss) — 트럼프 상승 — Under pressure from Trump, Venezuela's new president has입니다.
+- [Climber on trial for leaving girlfriend to die on Austria's highest mountain](https://www.bbc.com/news/articles/c5yv9plyjgpo?at_medium=RSS&at_campaign=rss) — 시장 상승 — Climber on trial for leaving girlfriend to die on Austria's입니다.
+- [US civil rights leader Jesse Jackson dies aged 84](https://www.bbc.com/news/articles/cp81l0e1eg5o?at_medium=RSS&amp;at_campaign=rss) — US civil rights leader Jesse Jackson dies aged 84.
+- [Stephen Colbert says CBS spiked interview with Democrat over FCC fears](https://www.bbc.com/news/articles/cze0dk3yd5eo?at_medium=RSS&amp;at_campaign=rss) — 시장 심리 — Stephen Colbert says CBS spiked interview with Democrat입니다.
+- [I would scream in my sleep: Women from Syria's Alawite minority tell of kidnap and rape](https://www.bbc.com/news/articles/cn5g751pl7lo?at_medium=RSS&amp;at_campaign=rss) — I would scream in my sleep: Women from Syria's Alawite minority tell of kidnap and rape.
+- [Under pressure from Trump, Venezuela's new president has aces up her sleeve](https://www.bbc.com/news/articles/cn87rv0jdy1o?at_medium=RSS&amp;at_campaign=rss) — 트럼프 상승 — Under pressure from Trump, Venezuela's new president has입니다.
+- [Climber on trial for leaving girlfriend to die on Austria's highest mountain](https://www.bbc.com/news/articles/c5yv9plyjgpo?at_medium=RSS&amp;at_campaign=rss) — 시장 상승 — Climber on trial for leaving girlfriend to die on Austria's입니다.
+- [worldmonitor](https://worldmonitor.app) — worldmonitor.
 
 ## 이슈 분포
 <div class="stat-grid">

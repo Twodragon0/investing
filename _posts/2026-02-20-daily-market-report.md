@@ -20,19 +20,19 @@ image: "/assets/images/generated/market-heatmap-2026-02-20.png"
 
 ## 내용 분석
 
-- 핵심 이슈를 중심으로 요약과 링크를 정리했습니다.
+- 암호화폐: BTC $67K 부근 횡보 지속. Fed 의사록의 예상보다 강한 매파 기조 확인 후 한때 $66K를 붕괴했으나 빠르게 반등. BTC ETF는 5주 연속 순유출 위기이며, 이더리움·XRP ETF도 동반 유출 중. 반면 SOL ETF는 유일하게 유입세를 유지해 알트코인 내 차별화가 뚜렷해지고 있음.
 
 
 ## URL 요약
 
-- [CoinGecko](https://www.coingecko.com/) — CoinGecko 관련 소식입니다.
-- [CoinMarketCap](https://coinmarketcap.com/) — CoinMarketCap 관련 소식입니다.
-- [FRED](https://fred.stlouisfed.org/series/FEDFUNDS) — FRED 관련 소식입니다.
-- [10Y Treasury](https://fred.stlouisfed.org/series/DGS10) — 기관 매수·매도 동향입니다.
-- [CPI](https://fred.stlouisfed.org/series/CPIAUCSL) — 거시 지표 관련 소식입니다.
-- [Fear & Greed Index](https://alternative.me/crypto/fear-and-greed-index/) — 시장 심리·불안 이슈입니다.
-- [Investing.com KOSPI](https://kr.investing.com/indices/kospi) — Investing.com KOSPI 관련 소식입니다.
-- [Yahoo Finance](https://finance.yahoo.com/) — Yahoo Finance 관련 소식입니다.
+- [CoinGecko](https://www.coingecko.com/) — CoinGecko.
+- [CoinMarketCap](https://coinmarketcap.com/) — CoinMarketCap.
+- [FRED](https://fred.stlouisfed.org/series/FEDFUNDS) — FRED.
+- [10Y Treasury](https://fred.stlouisfed.org/series/DGS10) — 기관 매수·매도 — 10Y Treasury입니다.
+- [CPI](https://fred.stlouisfed.org/series/CPIAUCSL) — 거시 지표 — CPI입니다.
+- [Fear & Greed Index](https://alternative.me/crypto/fear-and-greed-index/) — 시장 심리 — Fear & Greed Index입니다.
+- [Investing.com KOSPI](https://kr.investing.com/indices/kospi) — 코스피 — Investing.com KOSPI입니다.
+- [Yahoo Finance](https://finance.yahoo.com/) — Yahoo Finance.
 - [FRED](https://fred.stlouisfed.org/) — > *본 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다.*입니다.
 
 ## 오늘의 핵심

@@ -47,6 +47,8 @@ image: "/assets/images/generated/regulatory-summary-2026-02-20.png"
 
 
 
+
+
 ## 전체 뉴스 요약
 
 - 주요 테마: 🔵 규제/정책, 🏦 거래소
@@ -56,7 +58,7 @@ image: "/assets/images/generated/regulatory-summary-2026-02-20.png"
 
 ## 내용 분석
 
-- 상위 테마는 🔵 규제/정책, 🏦 거래소로 집중도가 높습니다.
+- 주요 테마: 🔵 규제/정책, 🏦 거래소
 
 ## 규제 요약
 

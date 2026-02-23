@@ -534,7 +534,6 @@ def _resolve_frontmatter_image(today: str, briefing_image: Optional[str]) -> str
     candidates = [
         f"news-briefing-daily-{today}.png",
         f"news-briefing-{today}.png",
-        f"indicator-dashboard-{today}.png",
         f"market-heatmap-{today}.png",
     ]
     for filename in candidates:
@@ -799,12 +798,6 @@ def main():
         content_parts.append(fallback_briefing + "\n")
     elif not briefing_image and legacy_briefing:
         content_parts.append(legacy_briefing + "\n")
-
-    indicator_img = _render_generated_image(
-        f"indicator-dashboard-{today}.png", "indicator-dashboard"
-    )
-    if indicator_img:
-        content_parts.append(indicator_img + "\n")
 
     heatmap_img = _render_generated_image(
         f"market-heatmap-{today}.png", "market-heatmap"

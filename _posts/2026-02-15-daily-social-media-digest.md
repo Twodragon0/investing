@@ -59,6 +59,8 @@ image: "/assets/images/generated/source-distribution-2026-02-15.png"
 
 
 
+
+
 ## 전체 뉴스 요약
 
 오늘 수집된 총 7건 중 텔레그램 -건, 소셜 1건, 정치·경제 6건으로 정치/정책과 매크로/금리 이슈가 집중되었고 비트코인·거래소 관련 발언과 온체인 이동이 단기 변동성 요인으로 부각되었습니다.
@@ -80,20 +82,20 @@ image: "/assets/images/generated/source-distribution-2026-02-15.png"
 
 ## 내용 분석
 
-- 총 7건 규모로 이슈를 정리했습니다.
-- 상위 테마는 🏛️ 정치/정책, 🟠 비트코인, 📊 매크로/금리로 집중도가 높습니다.
-- 긴급 알림이 포함되어 우선순위 대응이 필요합니다.
+- 총 7건의 뉴스 중 🏛️ 정치/정책, 🟠 비트코인 테마가 가장 많은 비중을 차지합니다.
+- 긴급 이슈 1건이 감지되어 우선 확인이 필요합니다.
+- 정책/규제: 정치/정책, 비트코인, 매크로/금리 헤드라인이 리스크 프라이싱에 직접 반영될 가능성.
 
 
 ## URL 요약
 
-- [Bitcoin Price Crash Rattles Trump's Crypto Progress. Here's The Upshot For Investors.](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPVUtQQWJPdi1qQVRDcEpCSjcwZVhrM0RoYk5YYmtIN3BnNVVXUFozY0lMb3JFazZyc1YyWWZXckhXUDJxMlpjWGdXYnlaY0IwcS1fbnQ4OTlRUW9FQWlKT2Q5SzV2ell4b3VyS0tOS2tYNU9vVENvNXBNMTdiMnhwNWI1Sk9ON2NN?oc=5) — 비트코인 상승 흐름을 다룬 소식입니다.
-- [Bitcoin Whale Alert – Massive $559M BTC Inflow to Binance Sparks Market Volatility Concerns](https://news.google.com/rss/articles/CBMivAFBVV95cUxPUkdrVzNJN2dNeUV5cE10U3JjUDJzeVROd0FMQWc0clVVajRLWFNGRDVEcTlZWjg2cWw4WXE5NnpEQnM5V2x5MXhSTDhZd1hWQTdId2VrMUtFeW8ybEV5ZmI2Q1JhX09tSkdDalBJeHczeGFTYUVkenNzMzFTYkxnblVoSHBnYzNrdDJsVmtkUEFhS1dYVjJ3XzYyVkcxVkFsUU1jYUZBVmVWdzQwQ2pkdXZqNVRoVFNsNlBpVQ?oc=5) — 고래·온체인 이동 이슈입니다.
-- [이재명 대통령 부동산 특혜 회수 방안부터 엔화 순매도 감소, 미국 금리 전망까지 이시각 주요뉴스](https://news.google.com/rss/articles/CBMidEFVX3lxTFA5NDlWVk9IMTRTX0dKclBlOEhNRUMzUjdTWjNFajhpQ2lRZEk0Z3BuS2ZzRk9VZFFrWUFZUjJtblBSVnNTZUwxdHF5akJKdllIYTZGYTZXTEhFRFFIdVBObGU2RUZ0YmdzU0tmdll4aENVNmps0gF0QVVfeXFMUDk0OVZWT0gxNFNfR0pyUGU4SE1FQzNSN1NaM0VqOGlDaVFkSTRncG5LZnNGT1VkUWtZQVlSMm1uUFJWc1NlTDF0cXlqQkp2WUhhNkZhNldMSEVEUUh1UE5sZTZFRnRiZ3NTS2Z2WXhoQ1U2amw?oc=5) — 거시 지표 매수·매도 동향입니다.
-- [Trump Affiliates Bannon and Epshteyn Named in ‘Let’s Go Brandon’ Crypto Coin Lawsuit](https://news.google.com/rss/articles/CBMisgFBVV95cUxNVHUzMnljV1k1dU9JRlBtOVVfSFN5Ri1CdThSdlJqZVZldHZZNHFZNng3ODR4WDZXd3pLT0JwbFFCVVFrWEU4ekJCMUpVYUtyYjlWV2NKZ3JvbXpjZ1pUUXgxSk9hOGM0XzhlMENrdEd1RWk1dmJfWFFDdXltcEYzOGxCOFFjRVhFY2pCODRkbk9pZG94U0xtYXNXSjJnMmk1ZFRGQXNYdUE5WWJRVEdBTVl3?oc=5) — 법적 분쟁·혐의 이슈입니다.
-- [李대통령, 설 앞두고 최고 성과 발표경제 분야는 '코스피 신기록'](https://news.google.com/rss/articles/CBMiVEFVX3lxTE5QWDZXa1B6OGFENHRKb0d4aFFEWDdEb0JZSVBPUTljZG1ZeVI2YmJuaTFFMW0xOW5rSHBnQTVKY21rWS1uMHhVMFB4YVNBU0dLYlhPdA?oc=5) — 기관 출시·공시 소식입니다.
-- [Federal Reserve's Critical Decision: Goolsbee Signals Hopeful Rate Cuts Pending Services Inflation Progress](https://news.google.com/rss/articles/CBMic0FVX3lxTFBMUTN3LXZQc18wZ3N6eklXSHZUX0h5VmlRT09jRXBZb0NmdVhUMTUzcUloOHhiclRPcHA4Ym9pM1lHa1ptMlFmTXFIMFRmdF9pcTNqOEcyU0JsOWtfT0R6d0VkVG5VSmdLVHBzRmFFSUlndjg?oc=5) — 미 연준 관련 소식입니다.
-- [설 연휴 이후 채권시장은“약보합 흐름 이어질 것”](https://news.google.com/rss/articles/CBMiUkFVX3lxTFA5WFJNRk5nYjk2eVdtQ3FKeHFiMEtqOVZvdU9PTGstckZjS3pUYUdGTW1jeTJmV2lHSmlLT0FsQTQxTTBNRzZXeWhRODd0dDNzNUE?oc=5) — 설 연휴 이후 채권시장은“약보합 흐름 이어질 것” 관련 소식입니다.
+- [Bitcoin Price Crash Rattles Trump's Crypto Progress. Here's The Upshot For Investors.](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPVUtQQWJPdi1qQVRDcEpCSjcwZVhrM0RoYk5YYmtIN3BnNVVXUFozY0lMb3JFazZyc1YyWWZXckhXUDJxMlpjWGdXYnlaY0IwcS1fbnQ4OTlRUW9FQWlKT2Q5SzV2ell4b3VyS0tOS2tYNU9vVENvNXBNMTdiMnhwNWI1Sk9ON2NN?oc=5) — 비트코인 상승 — Bitcoin Price Crash Rattles Trump's Crypto Progress.
+- [Bitcoin Whale Alert – Massive $559M BTC Inflow to Binance Sparks Market Volatility Concerns](https://news.google.com/rss/articles/CBMivAFBVV95cUxPUkdrVzNJN2dNeUV5cE10U3JjUDJzeVROd0FMQWc0clVVajRLWFNGRDVEcTlZWjg2cWw4WXE5NnpEQnM5V2x5MXhSTDhZd1hWQTdId2VrMUtFeW8ybEV5ZmI2Q1JhX09tSkdDalBJeHczeGFTYUVkenNzMzFTYkxnblVoSHBnYzNrdDJsVmtkUEFhS1dYVjJ3XzYyVkcxVkFsUU1jYUZBVmVWdzQwQ2pkdXZqNVRoVFNsNlBpVQ?oc=5) — 온체인 이동 — Bitcoin Whale Alert – Massive $559M BTC Inflow to Binance입니다.
+- [이재명 대통령 부동산 특혜 회수 방안부터 엔화 순매도 감소, 미국 금리 전망까지 이시각 주요뉴스](https://news.google.com/rss/articles/CBMidEFVX3lxTFA5NDlWVk9IMTRTX0dKclBlOEhNRUMzUjdTWjNFajhpQ2lRZEk0Z3BuS2ZzRk9VZFFrWUFZUjJtblBSVnNTZUwxdHF5akJKdllIYTZGYTZXTEhFRFFIdVBObGU2RUZ0YmdzU0tmdll4aENVNmps0gF0QVVfeXFMUDk0OVZWT0gxNFNfR0pyUGU4SE1FQzNSN1NaM0VqOGlDaVFkSTRncG5LZnNGT1VkUWtZQVlSMm1uUFJWc1NlTDF0cXlqQkp2WUhhNkZhNldMSEVEUUh1UE5sZTZFRnRiZ3NTS2Z2WXhoQ1U2amw?oc=5) — 이재명 대통령 부동산 특혜 회수 방안부터 엔화 순매도 감소, 미국 금리 전망까지 이시각 주요뉴스입니다.
+- [Trump Affiliates Bannon and Epshteyn Named in ‘Let’s Go Brandon’ Crypto Coin Lawsuit](https://news.google.com/rss/articles/CBMisgFBVV95cUxNVHUzMnljV1k1dU9JRlBtOVVfSFN5Ri1CdThSdlJqZVZldHZZNHFZNng3ODR4WDZXd3pLT0JwbFFCVVFrWEU4ekJCMUpVYUtyYjlWV2NKZ3JvbXpjZ1pUUXgxSk9hOGM0XzhlMENrdEd1RWk1dmJfWFFDdXltcEYzOGxCOFFjRVhFY2pCODRkbk9pZG94U0xtYXNXSjJnMmk1ZFRGQXNYdUE5WWJRVEdBTVl3?oc=5) — 법적 분쟁 — Trump Affiliates Bannon and Epshteyn Named in ‘Let’s Go입니다.
+- [李대통령, 설 앞두고 최고 성과 발표경제 분야는 '코스피 신기록'](https://news.google.com/rss/articles/CBMiVEFVX3lxTE5QWDZXa1B6OGFENHRKb0d4aFFEWDdEb0JZSVBPUTljZG1ZeVI2YmJuaTFFMW0xOW5rSHBnQTVKY21rWS1uMHhVMFB4YVNBU0dLYlhPdA?oc=5) — 李대통령, 설 앞두고 최고 성과 발표경제 분야는 '코스피 신기록'입니다.
+- [Federal Reserve's Critical Decision: Goolsbee Signals Hopeful Rate Cuts Pending Services Inflation Progress](https://news.google.com/rss/articles/CBMic0FVX3lxTFBMUTN3LXZQc18wZ3N6eklXSHZUX0h5VmlRT09jRXBZb0NmdVhUMTUzcUloOHhiclRPcHA4Ym9pM1lHa1ptMlFmTXFIMFRmdF9pcTNqOEcyU0JsOWtfT0R6d0VkVG5VSmdLVHBzRmFFSUlndjg?oc=5) — 미 연준 — Federal Reserve's Critical Decision: Goolsbee Signals입니다.
+- [설 연휴 이후 채권시장은“약보합 흐름 이어질 것”](https://news.google.com/rss/articles/CBMiUkFVX3lxTFA5WFJNRk5nYjk2eVdtQ3FKeHFiMEtqOVZvdU9PTGstckZjS3pUYUdGTW1jeTJmV2lHSmlLT0FsQTQxTTBNRzZXeWhRODd0dDNzNUE?oc=5) — 설 연휴 이후 채권시장은“약보합 흐름 이어질 것”입니다.
 
 ## 주요 소셜 미디어 트렌드
 

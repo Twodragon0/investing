@@ -20,25 +20,25 @@ image: "/assets/images/generated/defi-tvl-dashboard-2026-02-20.png"
 
 ## 내용 분석
 
-- 핵심 이슈를 중심으로 요약과 링크를 정리했습니다.
+- Liquid Staking이 시장의 핵심 인프라로 자리잡음: Lido($33.92B)와 Binance staked ETH($11.15B)를 합산하면 Liquid Staking 카테고리가 전체 TVL의 18.2%($45.07B)를 차지, 단일 카테고리 최대 규모입니다. ETH 스테이...
 
 
 ## URL 요약
 
-- [Lido](https://defillama.com/protocol/lido) — Lido 관련 소식입니다.
-- [AAVE](https://defillama.com/protocol/aave) — AAVE 관련 소식입니다.
-- [EigenLayer](https://defillama.com/protocol/eigenlayer) — EigenLayer 관련 소식입니다.
-- [WBTC](https://defillama.com/protocol/wbtc) — 비트코인 관련 소식입니다.
-- [ether.fi](https://defillama.com/protocol/ether.fi) — 이더리움 관련 소식입니다.
-- [Binance staked ETH](https://defillama.com/protocol/binance-staked-eth) — 이더리움 매수·매도 동향입니다.
-- [Spark](https://defillama.com/protocol/spark) — Spark 관련 소식입니다.
-- [Ethena](https://defillama.com/protocol/ethena) — 이더리움 관련 소식입니다.
-- [Hyperliquid L1](https://defillama.com/protocol/hyperliquid) — Hyperliquid L1 관련 소식입니다.
-- [Pendle](https://defillama.com/protocol/pendle) — Pendle 관련 소식입니다.
-- [DeFi Llama](https://defillama.com) — DeFi Llama 관련 소식입니다.
-- [DeFi Llama API Documentation](https://defillama.com/docs/api) — DeFi Llama API Documentation 관련 소식입니다.
-- [DeFi Llama](https://defillama.com/chains) — DeFi Llama 관련 소식입니다.
-- [AAVE V3](https://defillama.com/protocol/aave-v3) — AAVE V3 관련 소식입니다.
+- [Lido](https://defillama.com/protocol/lido) — Lido.
+- [AAVE](https://defillama.com/protocol/aave) — AAVE.
+- [EigenLayer](https://defillama.com/protocol/eigenlayer) — EigenLayer.
+- [WBTC](https://defillama.com/protocol/wbtc) — 비트코인 — WBTC입니다.
+- [ether.fi](https://defillama.com/protocol/ether.fi) — 이더리움 — ether.fi입니다.
+- [Binance staked ETH](https://defillama.com/protocol/binance-staked-eth) — 이더리움 매수·매도 — Binance staked ETH입니다.
+- [Spark](https://defillama.com/protocol/spark) — Spark.
+- [Ethena](https://defillama.com/protocol/ethena) — 이더리움 — Ethena입니다.
+- [Hyperliquid L1](https://defillama.com/protocol/hyperliquid) — Hyperliquid L1.
+- [Pendle](https://defillama.com/protocol/pendle) — Pendle.
+- [DeFi Llama](https://defillama.com) — DeFi Llama.
+- [DeFi Llama API Documentation](https://defillama.com/docs/api) — DeFi Llama API Documentation.
+- [DeFi Llama](https://defillama.com/chains) — DeFi Llama.
+- [AAVE V3](https://defillama.com/protocol/aave-v3) — AAVE V3.
 
 ## 상위 10개 프로토콜 TVL 순위
 

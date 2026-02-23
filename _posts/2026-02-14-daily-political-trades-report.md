@@ -50,6 +50,8 @@ lang: "ko"
 
 
 
+
+
 ## 전체 뉴스 요약
 
 - 총 **12건** 수집
@@ -60,23 +62,23 @@ lang: "ko"
 
 ## 내용 분석
 
-- 총 12건 규모로 이슈를 정리했습니다.
+- 총 12건의 뉴스를 수집하여 주요 이슈를 정리했습니다.
 
 
 ## URL 요약
 
 - [Congressman Pulls 9-Day Round-Trip On Microsoft Stock — What Was The Point?](https://news.google.com/rss/articles/CBMioAFBVV95cUxOWDI1N0tuY1psSEJVY0t3UUNBRDlKUFltNkp6QmJic2g5TjJRMnRlSElfcVptNjNXUmw4dlV1em1sWWNRRlFQeE5NcXpxSnAzZk43a0xORjFyLTJTbVo3QmJsOU1wOFBwV1lwQU9PWkZJQWE2REJlTkZOa2VrOHJPd1VjQ0pCRnRpSEQzb0h3dmttdTJSdVJvNHJzdW9WZ2sz?oc=5) — Congressman Pulls 9-Day Round-Trip On Microsoft Stock — What Was The Point?
-- [트럼프 "유권자 신분증 의무화, 행정 명령으로 추진"](https://news.google.com/rss/articles/CBMiT0FVX3lxTE82VGxlZmVsTjhwLW92bm8xaENlZ1Ztak5XWUpWNUZ6WFNXckdXcG95RnU4SV95cGZtNkNUOXJVb3pxZVZmQzhtTGEwTlRETWM?oc=5) — 트럼프 "유권자 신분증 의무화, 행정 명령으로 추진" 관련 소식입니다.
-- [트럼프 "유권자 신분증 의무화, 행정명령으로 추진"](https://news.google.com/rss/articles/CBMiU0FVX3lxTE9pRWtmckNITktpU0NkbmtlQ3JKLTA2eGVsb3NIWHBsZFU0ZGxqTjlyWW9pRW9WU3I4RkJiejN3UUtPMDF4My1VWmtqWXdoT3dqd2U4?oc=5) — 트럼프 "유권자 신분증 의무화, 행정명령으로 추진" 관련 소식입니다.
-- [Congress’s Rejection of Trump’s Canada “Emergency” Is a Welcome—but Woefully Insufficient—Move](https://news.google.com/rss/articles/CBMipgFBVV95cUxQbjNUb2MxTFlWZDM0RVc1SzVlSkVhNmJVcHRNMDBWU21DZHJSTy12QW93Ny0xTW9tejVjQjAyMko3bnd3WFNBMlVGcVpGLTBQMTF4SmJKWDlmMkNEemJGSXVxZWdFcUh4Z3hpcHlaNGs0RUR3ejA0V2YtS2lzM1FtT1duQUpqQVpzckk5THlNUzVmUnNjdG5hVGdEdU5ZeWdiTnUwN19R?oc=5) — Congress’s Rejection of Trump’s Canada “Emergency” Is a Welcome—but Woefully Insufficient—Move 관련 소식입니다.
-- [House votes to slap back Trump’s tariffs on Canada in rare bipartisan rebuke - Oregon Public Broadcasting](https://news.google.com/rss/articles/CBMitwFBVV95cUxPWTJMdzRMY25vSGFvZ1NVRXRqUXNGR0pMSVZYSXlFaTg2eVVQLXprZ3pkNUJ2aUlUTDRJUHhneHFLNFBUV0tKUWllV1VTN21NM2pfNzh5TjJXdWlxXzloaUthYndnQ0hVM0lucFcyMVBaUGx3aGRGNGYteXVJYk9wSmxFQTcwcnlsb1gzU2tVbmdqMkowNXY4NTdWcTR1SzRGdGUtb1UzbGRFa2RleHdLYnc0UTN0VkE?oc=5) — 무역·관세 이슈입니다.
-- [Trump Tariffs Job Growth All In Home Care -](https://news.google.com/rss/articles/CBMihAFBVV95cUxOc3hSczdCZVhkY3cwckFvbDE0MkljRkE3aDI1YURMZ2JfRjJtMlpMUEIxc01PaGJ3V0VDUDlYcmxrM2FneHFqQ0tycHdHLVhCSzdWWVh1MTIwZlhzSnF2RmVNYXlQenh0X041R1JZMk1aNXZkcFFRTllDeWIzSjNkQlhwVEU?oc=5) — 무역·관세 이슈입니다.
-- [Trump to scale back some tariffs on metal and aluminium goods, media reports](https://news.google.com/rss/articles/CBMi4gFBVV95cUxPTm9pMk9uSUN6aDBxWmo5OWJhUl8xN01ISlBLVi10Q2MzRndaMDNUN1VhVGJ1YVN3TDJNRUtoeFJVTjl3MHpCc0FXbnBhczBhRjlqcEYxdzNGMElPUEl5MVhueTJRbmVhdEFTS1ZGUEhKcDd4Qm5UZFk0X1FpQVU5LW9CVjA4NTB0QTBITV84dWJ1VFVNWWhtdHdKbVFUUlg5R0Z3UnpGR2t5eTRxcThMeUxiZ09rdzZxYVJIb3FsMk8xUG5JckZoY0dYelBOWGRSbEtTd2g0eVRzYUJqRHlXX1F3?oc=5) — 무역·관세 이슈입니다.
-- [Texas Instruments (TXN) stock price rises as inflation cools; insider sales hit SEC filings](https://news.google.com/rss/articles/CBMitAFBVV95cUxPaEVMakNHRzcyMlU0WkVyQVMyM1EyTU5kT1RlMlNaejdRZWlwaUFST3JhWjVYX095RUxFWUNQMGdCZ25pMG4zQjhQRVh4LVh0cGFJcUJCNmVJOUZUeThfa28wckl0R2c4dHUyeTJIeW44VnY5d2FxQTJramdtTHktM21JbjIwMUlsOW9PWGFlLWx6ZDRnZmFNUTVubzVMbXVZakc2MU90SXpFcU5NQkRaWGxxTHo?oc=5) — 규제 당국 상승 흐름을 다룬 소식입니다.
-- [SEC, 암호화폐 자산 ‘비증권’ 분류 추진시장 변화 예고](https://news.google.com/rss/articles/CBMic0FVX3lxTE55NzRqWkItSjBzcUthcjN1S1cwQXlfM2h4WklzTWZWa0hkdU5rOWFGUElUZ2J1OHhXZENPZ3lHLVRINW15ZGFCNkh2clF0TDFDT3JaNWxOQ2pqVV9PclFYY1dkUllpS2NnNU9rM0s1YkJ6SnM?oc=5) — 규제 당국 관련 소식입니다.
-- [TTEK SEC Filings - Tetra Tech 10-K, 10-Q, 8-K Forms](https://news.google.com/rss/articles/CBMiZkFVX3lxTE5QekJJVWVSb3UyY2MwcS1VTndjRDl3ZVlGRFd1Yk14TmszVFdsRFdKS2Z3d3h1b1FvTUlJQ0ZRejlkOGdHa0l0ZGIySk9USHNUZnVLa1RzWTF1WVNsV05rLXl5QjhuQQ?oc=5) — 규제 당국 관련 소식입니다.
-- [AENTW SEC Filings - Alliance Entertainment Holding Corporation 10-K, 10-Q, 8-K Forms](https://news.google.com/rss/articles/CBMiWEFVX3lxTE9JeUUwdFlmYU1GNzVHajB5ZXZFNW03WnNUWXZYNkcxRU10QXNrRmJJVjFsT0E1YkFRQ0NVcFhiR2JxdHdtdm9MZWpzTl9vNDRQYTZtcUtBQ3U?oc=5) — 규제 당국 관련 소식입니다.
-- [CORZ SEC Filings - Core Scientific Inc 10-K, 10-Q, 8-K Forms](https://news.google.com/rss/articles/CBMiZkFVX3lxTE9VRGZ0VG1NcGdlbHFCSG1ldDRwYk1QZV9tMmZfbkZOb1VocDlUMTdSbVNQYjFPWWtHUm00N1pXZ2lSaEN0bmFISlBjQlNOYkVYTFpnbTNSODhSNGNDWmpkRHRoMGN1QQ?oc=5) — 규제 당국 관련 소식입니다.
+- [트럼프 "유권자 신분증 의무화, 행정 명령으로 추진"](https://news.google.com/rss/articles/CBMiT0FVX3lxTE82VGxlZmVsTjhwLW92bm8xaENlZ1Ztak5XWUpWNUZ6WFNXckdXcG95RnU4SV95cGZtNkNUOXJVb3pxZVZmQzhtTGEwTlRETWM?oc=5) — 트럼프 "유권자 신분증 의무화, 행정 명령으로 추진"입니다.
+- [트럼프 "유권자 신분증 의무화, 행정명령으로 추진"](https://news.google.com/rss/articles/CBMiU0FVX3lxTE9pRWtmckNITktpU0NkbmtlQ3JKLTA2eGVsb3NIWHBsZFU0ZGxqTjlyWW9pRW9WU3I4RkJiejN3UUtPMDF4My1VWmtqWXdoT3dqd2U4?oc=5) — 트럼프 "유권자 신분증 의무화, 행정명령으로 추진"입니다.
+- [Congress’s Rejection of Trump’s Canada “Emergency” Is a Welcome—but Woefully Insufficient—Move](https://news.google.com/rss/articles/CBMipgFBVV95cUxQbjNUb2MxTFlWZDM0RVc1SzVlSkVhNmJVcHRNMDBWU21DZHJSTy12QW93Ny0xTW9tejVjQjAyMko3bnd3WFNBMlVGcVpGLTBQMTF4SmJKWDlmMkNEemJGSXVxZWdFcUh4Z3hpcHlaNGs0RUR3ejA0V2YtS2lzM1FtT1duQUpqQVpzckk5THlNUzVmUnNjdG5hVGdEdU5ZeWdiTnUwN19R?oc=5) — 트럼프 — Congress’s Rejection of Trump’s Canada “Emergency” Is a입니다.
+- [House votes to slap back Trump’s tariffs on Canada in rare bipartisan rebuke - Oregon Public Broadcasting](https://news.google.com/rss/articles/CBMitwFBVV95cUxPWTJMdzRMY25vSGFvZ1NVRXRqUXNGR0pMSVZYSXlFaTg2eVVQLXprZ3pkNUJ2aUlUTDRJUHhneHFLNFBUV0tKUWllV1VTN21NM2pfNzh5TjJXdWlxXzloaUthYndnQ0hVM0lucFcyMVBaUGx3aGRGNGYteXVJYk9wSmxFQTcwcnlsb1gzU2tVbmdqMkowNXY4NTdWcTR1SzRGdGUtb1UzbGRFa2RleHdLYnc0UTN0VkE?oc=5) — 무역·관세 — House votes to slap back Trump’s tariffs on Canada in rare입니다.
+- [Trump Tariffs Job Growth All In Home Care -](https://news.google.com/rss/articles/CBMihAFBVV95cUxOc3hSczdCZVhkY3cwckFvbDE0MkljRkE3aDI1YURMZ2JfRjJtMlpMUEIxc01PaGJ3V0VDUDlYcmxrM2FneHFqQ0tycHdHLVhCSzdWWVh1MTIwZlhzSnF2RmVNYXlQenh0X041R1JZMk1aNXZkcFFRTllDeWIzSjNkQlhwVEU?oc=5) — 무역·관세 — Trump Tariffs Job Growth All In Home Care -입니다.
+- [Trump to scale back some tariffs on metal and aluminium goods, media reports](https://news.google.com/rss/articles/CBMi4gFBVV95cUxPTm9pMk9uSUN6aDBxWmo5OWJhUl8xN01ISlBLVi10Q2MzRndaMDNUN1VhVGJ1YVN3TDJNRUtoeFJVTjl3MHpCc0FXbnBhczBhRjlqcEYxdzNGMElPUEl5MVhueTJRbmVhdEFTS1ZGUEhKcDd4Qm5UZFk0X1FpQVU5LW9CVjA4NTB0QTBITV84dWJ1VFVNWWhtdHdKbVFUUlg5R0Z3UnpGR2t5eTRxcThMeUxiZ09rdzZxYVJIb3FsMk8xUG5JckZoY0dYelBOWGRSbEtTd2g0eVRzYUJqRHlXX1F3?oc=5) — 무역·관세 — Trump to scale back some tariffs on metal and aluminium입니다.
+- [Texas Instruments (TXN) stock price rises as inflation cools; insider sales hit SEC filings](https://news.google.com/rss/articles/CBMitAFBVV95cUxPaEVMakNHRzcyMlU0WkVyQVMyM1EyTU5kT1RlMlNaejdRZWlwaUFST3JhWjVYX095RUxFWUNQMGdCZ25pMG4zQjhQRVh4LVh0cGFJcUJCNmVJOUZUeThfa28wckl0R2c4dHUyeTJIeW44VnY5d2FxQTJramdtTHktM21JbjIwMUlsOW9PWGFlLWx6ZDRnZmFNUTVubzVMbXVZakc2MU90SXpFcU5NQkRaWGxxTHo?oc=5) — 규제 당국 상승 — Texas Instruments (TXN) stock price rises as inflation입니다.
+- [SEC, 암호화폐 자산 ‘비증권’ 분류 추진시장 변화 예고](https://news.google.com/rss/articles/CBMic0FVX3lxTE55NzRqWkItSjBzcUthcjN1S1cwQXlfM2h4WklzTWZWa0hkdU5rOWFGUElUZ2J1OHhXZENPZ3lHLVRINW15ZGFCNkh2clF0TDFDT3JaNWxOQ2pqVV9PclFYY1dkUllpS2NnNU9rM0s1YkJ6SnM?oc=5) — SEC, 암호화폐 자산 ‘비증권’ 분류 추진시장 변화 예고입니다.
+- [TTEK SEC Filings - Tetra Tech 10-K, 10-Q, 8-K Forms](https://news.google.com/rss/articles/CBMiZkFVX3lxTE5QekJJVWVSb3UyY2MwcS1VTndjRDl3ZVlGRFd1Yk14TmszVFdsRFdKS2Z3d3h1b1FvTUlJQ0ZRejlkOGdHa0l0ZGIySk9USHNUZnVLa1RzWTF1WVNsV05rLXl5QjhuQQ?oc=5) — 규제 당국 — TTEK SEC Filings - Tetra Tech 10-K, 10-Q, 8-K Forms입니다.
+- [AENTW SEC Filings - Alliance Entertainment Holding Corporation 10-K, 10-Q, 8-K Forms](https://news.google.com/rss/articles/CBMiWEFVX3lxTE9JeUUwdFlmYU1GNzVHajB5ZXZFNW03WnNUWXZYNkcxRU10QXNrRmJJVjFsT0E1YkFRQ0NVcFhiR2JxdHdtdm9MZWpzTl9vNDRQYTZtcUtBQ3U?oc=5) — 규제 당국 — AENTW SEC Filings - Alliance Entertainment Holding입니다.
+- [CORZ SEC Filings - Core Scientific Inc 10-K, 10-Q, 8-K Forms](https://news.google.com/rss/articles/CBMiZkFVX3lxTE9VRGZ0VG1NcGdlbHFCSG1ldDRwYk1QZV9tMmZfbkZOb1VocDlUMTdSbVNQYjFPWWtHUm00N1pXZ2lSaEN0bmFISlBjQlNOYkVYTFpnbTNSODhSNGNDWmpkRHRoMGN1QQ?oc=5) — 규제 당국 — CORZ SEC Filings - Core Scientific Inc 10-K, 10-Q, 8-K Forms입니다.
 
 ## 이슈 분포 현황
 

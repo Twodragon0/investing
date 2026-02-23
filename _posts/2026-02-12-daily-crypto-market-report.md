@@ -42,6 +42,8 @@ lang: "ko"
 
 
 
+
+
 ## 전체 뉴스 요약
 
 - 비트코인: $67,356 (24h -1.20% 하락)
@@ -52,12 +54,12 @@ lang: "ko"
 
 ## 내용 분석
 
-- 핵심 이슈를 중심으로 요약과 링크를 정리했습니다.
+- 비트코인: $67,356 (24h -1.20% 하락)
 
 
 ## URL 요약
 
-- [CoinGecko](https://www.coingecko.com/) — CoinGecko 관련 소식입니다.
+- [CoinGecko](https://www.coingecko.com/) — CoinGecko.
 
 ## 시장 인사이트
 
