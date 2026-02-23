@@ -1,5 +1,5 @@
 requests==2.32.4
-certifi==2024.8.30
+certifi==2026.1.4
 beautifulsoup4==4.12.3
 lxml==5.1.0
 pytz==2024.1
