@@ -273,9 +273,13 @@ def summarize_from_title(title: str) -> str:
 
     # Build more specific summaries using title context
     if price_up and subject:
-        return normalize_summary(f"{subject} 상승 — {_shorten_title_for_summary(title, 60)}")
+        return normalize_summary(
+            f"{subject} 상승 — {_shorten_title_for_summary(title, 60)}"
+        )
     if price_down and subject:
-        return normalize_summary(f"{subject} 하락 — {_shorten_title_for_summary(title, 60)}")
+        return normalize_summary(
+            f"{subject} 하락 — {_shorten_title_for_summary(title, 60)}"
+        )
     if price_up:
         return normalize_summary(f"시장 상승 — {_shorten_title_for_summary(title, 60)}")
     if price_down:
@@ -304,7 +308,9 @@ def summarize_from_title(title: str) -> str:
             "announcement",
         ]
     ):
-        return normalize_summary(f"{subject or '신규'} 발표 — {_shorten_title_for_summary(title, 60)}")
+        return normalize_summary(
+            f"{subject or '신규'} 발표 — {_shorten_title_for_summary(title, 60)}"
+        )
     if any(
         k in low
         for k in [
@@ -320,12 +326,16 @@ def summarize_from_title(title: str) -> str:
             "매도",
         ]
     ):
-        return normalize_summary(f"{subject or '기관'} 매수·매도 — {_shorten_title_for_summary(title, 60)}")
+        return normalize_summary(
+            f"{subject or '기관'} 매수·매도 — {_shorten_title_for_summary(title, 60)}"
+        )
     if any(
         k in low
         for k in ["whale", "wallet", "transfer", "inflow", "outflow", "고래", "이체"]
     ):
-        return normalize_summary(f"온체인 이동 — {_shorten_title_for_summary(title, 60)}")
+        return normalize_summary(
+            f"온체인 이동 — {_shorten_title_for_summary(title, 60)}"
+        )
     if any(k in low for k in ["regulation", "regulatory", "법안", "규제", "정책"]):
         return normalize_summary(f"규제·정책 — {_shorten_title_for_summary(title, 60)}")
     if subject:
@@ -549,7 +559,9 @@ def build_content_analysis(lines: List[str], body: str) -> List[str]:
         analysis.append(f"총 {total}건의 뉴스를 수집하여 주요 이슈를 정리했습니다.")
 
     if urgent_count:
-        analysis.append(f"긴급 이슈 {urgent_count}건이 감지되어 우선 확인이 필요합니다.")
+        analysis.append(
+            f"긴급 이슈 {urgent_count}건이 감지되어 우선 확인이 필요합니다."
+        )
 
     # Try to extract key insight from existing summary sections
     for section in SECTION_PRIORITY[:4]:
