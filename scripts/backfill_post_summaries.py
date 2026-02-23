@@ -844,7 +844,7 @@ def remove_missing_local_images(lines: List[str]) -> List[str]:
         else:
             file_path = os.path.join(REPO_ROOT, normalized)
 
-        if os.path.exists(file_path):
+        if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
             cleaned.append(line)
     return cleaned
 
