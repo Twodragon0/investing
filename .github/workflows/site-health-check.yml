@@ -78,7 +78,7 @@ jobs:
 
       - name: Create issue on failure
         if: steps.site_check.outputs.http_code != '200'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const title = `🚨 Site Health Check Failed - HTTP ${process.env.HTTP_CODE}`;

@@ -146,7 +146,7 @@ jobs:
 
       - name: Comment actionlint report on PR
         if: always() && github.event_name == 'pull_request'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         env:
           ACTIONLINT_SUMMARY_PATH: actionlint-summary.md
         with:
