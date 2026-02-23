@@ -57,7 +57,7 @@ jobs:
 
       - name: Create issue on vulnerabilities
         if: steps.audit.outputs.vuln_count != '0'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const fs = require('fs');
