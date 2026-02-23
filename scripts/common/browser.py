@@ -218,7 +218,8 @@ def extract_google_news_links(
                     "tags": tags,
                 }
             )
-        except Exception:
+        except Exception as e:
+            logger.debug("Google News link parse error: %s", e)
             continue
 
     return items
