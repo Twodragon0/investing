@@ -105,14 +105,14 @@ if (searchToggle && searchOverlay) {
   searchClose.addEventListener('click', function() {
     searchOverlay.classList.remove('active');
     searchInput.value = '';
-    document.getElementById('search-results').innerHTML = '';
+    document.getElementById('search-results').textContent = '';
   });
 
   searchOverlay.addEventListener('click', function(e) {
     if (e.target === searchOverlay) {
       searchOverlay.classList.remove('active');
       searchInput.value = '';
-      document.getElementById('search-results').innerHTML = '';
+      document.getElementById('search-results').textContent = '';
     }
   });
 
@@ -120,7 +120,7 @@ if (searchToggle && searchOverlay) {
     if (e.key === 'Escape' && searchOverlay.classList.contains('active')) {
       searchOverlay.classList.remove('active');
       searchInput.value = '';
-      document.getElementById('search-results').innerHTML = '';
+      document.getElementById('search-results').textContent = '';
     }
   });
 }

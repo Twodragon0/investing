@@ -62,7 +62,7 @@ layout: default
   {% endif %}
 
   <nav class="post-toc" id="post-toc">
-    <div class="toc-header" onclick="toggleToc()">
+    <div class="toc-header" id="toc-header">
       <span class="toc-title">목차</span>
       <svg class="toc-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
@@ -87,13 +87,13 @@ layout: default
 
     <div class="post-share">
       <span class="share-label">공유하기</span>
-      <button class="share-btn share-twitter" onclick="shareTwitter()">
+      <button class="share-btn share-twitter" id="share-twitter">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
           <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
         </svg>
         트위터
       </button>
-      <button class="share-btn share-copy" onclick="copyLink()">
+      <button class="share-btn share-copy" id="share-copy">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
         </svg>
@@ -299,12 +299,6 @@ layout: default
 </article>
 
 <script>
-function shareTwitter() {
-  var text = "{{ page.title | escape }}";
-  var url = window.location.href;
-  window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url), '_blank', 'width=550,height=450');
-}
-
 // TOC generation
 (function() {
   var headings = document.querySelectorAll('.post-content h2');
@@ -498,29 +492,44 @@ function shareTwitter() {
   });
 })();
 
-function toggleToc() {
-  var toc = document.getElementById('post-toc');
-  if (toc) toc.classList.toggle('collapsed');
+var tocHeader = document.getElementById('toc-header');
+if (tocHeader) {
+  tocHeader.addEventListener('click', function() {
+    var toc = document.getElementById('post-toc');
+    if (toc) toc.classList.toggle('collapsed');
+  });
 }
 
-function copyLink() {
-  var url = window.location.href;
-  navigator.clipboard.writeText(url).then(function() {
-    var btn = document.querySelector('.share-copy');
-    if (!btn) return;
-    var originalHTML = btn.innerHTML;
-    btn.textContent = '';
-    var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svg.setAttribute('width', '16'); svg.setAttribute('height', '16');
-    svg.setAttribute('viewBox', '0 0 24 24'); svg.setAttribute('fill', 'none');
-    svg.setAttribute('stroke', 'currentColor'); svg.setAttribute('stroke-width', '2');
-    var poly = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
-    poly.setAttribute('points', '20 6 9 17 4 12');
-    svg.appendChild(poly); btn.appendChild(svg);
-    btn.appendChild(document.createTextNode(' 복사됨!'));
-    setTimeout(function() { btn.innerHTML = originalHTML; }, 2000);
-  }).catch(function() {
-    window.prompt('링크를 복사하세요:', url);
+var shareTwitterBtn = document.getElementById('share-twitter');
+if (shareTwitterBtn) {
+  shareTwitterBtn.addEventListener('click', function() {
+    var text = "{{ page.title | escape }}";
+    var url = window.location.href;
+    window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url), '_blank', 'width=550,height=450');
+  });
+}
+
+var shareCopyBtn = document.getElementById('share-copy');
+if (shareCopyBtn) {
+  shareCopyBtn.addEventListener('click', function() {
+    var url = window.location.href;
+    navigator.clipboard.writeText(url).then(function() {
+      var btn = document.querySelector('.share-copy');
+      if (!btn) return;
+      var originalHTML = btn.innerHTML;
+      btn.textContent = '';
+      var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('width', '16'); svg.setAttribute('height', '16');
+      svg.setAttribute('viewBox', '0 0 24 24'); svg.setAttribute('fill', 'none');
+      svg.setAttribute('stroke', 'currentColor'); svg.setAttribute('stroke-width', '2');
+      var poly = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+      poly.setAttribute('points', '20 6 9 17 4 12');
+      svg.appendChild(poly); btn.appendChild(svg);
+      btn.appendChild(document.createTextNode(' 복사됨!'));
+      setTimeout(function() { btn.innerHTML = originalHTML; }, 2000);
+    }).catch(function() {
+      window.prompt('링크를 복사하세요:', url);
+    });
   });
 }
 
