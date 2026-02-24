@@ -197,6 +197,45 @@ def fetch_google_news_security() -> List[Dict[str, Any]]:
     return all_items
 
 
+def _scrape_binance_page(session) -> List[Dict[str, Any]]:
+    """Scrape Binance announcements from an open browser session."""
+    items: List[Dict[str, Any]] = []
+    seen_titles: set = set()
+    session.navigate(
+        "https://www.binance.com/en/support/announcement",
+        wait_until="domcontentloaded",
+        wait_ms=5000,
+    )
+    links = session.extract_elements("a[href*='/support/announcement/']")
+    for link_el in links:
+        if len(items) >= 15:
+            break
+        try:
+            title = sanitize_string(link_el.inner_text().strip(), 300)
+            href = link_el.get_attribute("href") or ""
+            if not title or len(title) < 5 or title in seen_titles:
+                continue
+            seen_titles.add(title)
+            if href and not href.startswith("http"):
+                href = "https://www.binance.com" + href
+            if "/detail/" not in href and "/list/" not in href:
+                continue
+            items.append(
+                {
+                    "title": title,
+                    "description": title,
+                    "link": href,
+                    "published": "",
+                    "source": "Binance",
+                    "tags": ["crypto", "exchange", "binance"],
+                }
+            )
+        except Exception as e:
+            logger.debug("Binance link parse error: %s", e)
+            continue
+    return items
+
+
 def _fetch_binance_browser() -> List[Dict[str, Any]]:
     """Scrape Binance announcements page with Playwright."""
     if not is_playwright_available():
@@ -204,49 +243,13 @@ def _fetch_binance_browser() -> List[Dict[str, Any]]:
     if BrowserSession is None:
         return []
 
-    items: List[Dict[str, Any]] = []
-    seen_titles: set = set()
     try:
         with BrowserSession(timeout=30_000) as session:
-            session.navigate(
-                "https://www.binance.com/en/support/announcement",
-                wait_until="domcontentloaded",
-                wait_ms=5000,
-            )
-            links = session.extract_elements("a[href*='/support/announcement/']")
-            for link_el in links:
-                if len(items) >= 15:
-                    break
-                try:
-                    title = sanitize_string(link_el.inner_text().strip(), 300)
-                    href = link_el.get_attribute("href") or ""
-                    if not title or len(title) < 5:
-                        continue
-                    # Skip navigation/category links (short generic text)
-                    if title in seen_titles:
-                        continue
-                    seen_titles.add(title)
-                    if href and not href.startswith("http"):
-                        href = "https://www.binance.com" + href
-                    # Only include detail pages, not list pages
-                    if "/detail/" not in href and "/list/" not in href:
-                        continue
-                    items.append(
-                        {
-                            "title": title,
-                            "description": title,
-                            "link": href,
-                            "published": "",
-                            "source": "Binance",
-                            "tags": ["crypto", "exchange", "binance"],
-                        }
-                    )
-                except Exception as e:
-                    logger.debug("Binance link parse error: %s", e)
-                    continue
+            items = _scrape_binance_page(session)
         logger.info("Binance Browser: fetched %d announcements", len(items))
     except Exception as e:
         logger.warning("Binance browser scraping failed: %s", e)
+        items = []
     return items
 
 
@@ -355,41 +358,9 @@ def _fetch_browser_sources() -> tuple:
             except Exception as e:
                 logger.warning("Google News browser scraping failed: %s", e)
 
-            # Binance announcements
+            # Binance announcements (공유 세션 재사용)
             try:
-                session.navigate(
-                    "https://www.binance.com/en/support/announcement",
-                    wait_until="domcontentloaded",
-                    wait_ms=5000,
-                )
-                seen_titles: set = set()
-                links = session.extract_elements("a[href*='/support/announcement/']")
-                for link_el in links:
-                    if len(binance_items) >= 15:
-                        break
-                    try:
-                        title = sanitize_string(link_el.inner_text().strip(), 300)
-                        href = link_el.get_attribute("href") or ""
-                        if not title or len(title) < 5 or title in seen_titles:
-                            continue
-                        seen_titles.add(title)
-                        if href and not href.startswith("http"):
-                            href = "https://www.binance.com" + href
-                        if "/detail/" not in href and "/list/" not in href:
-                            continue
-                        binance_items.append(
-                            {
-                                "title": title,
-                                "description": title,
-                                "link": href,
-                                "published": "",
-                                "source": "Binance",
-                                "tags": ["crypto", "exchange", "binance"],
-                            }
-                        )
-                    except Exception as e:
-                        logger.debug("Binance link parse error: %s", e)
-                        continue
+                binance_items = _scrape_binance_page(session)
                 logger.info(
                     "Binance Browser: fetched %d announcements", len(binance_items)
                 )
@@ -699,18 +670,10 @@ def main():
         # References section (top 10 only) - collapsible
         if source_links:
             content_parts.append("\n---\n")
-            # Count unique links
-            seen_links = set()
-            unique_refs = []
-            for ref in source_links[:10]:
-                if ref["link"] not in seen_links:
-                    seen_links.add(ref["link"])
-                    unique_refs.append(ref)
-
             content_parts.append(
                 html_reference_details(
                     "참고 링크",
-                    unique_refs,
+                    source_links,
                     limit=10,
                     title_max_len=80,
                 )

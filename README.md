@@ -168,7 +168,7 @@ python scripts/generate_weekly_digest.py
 | `push-folder-info-to-slack` | 매일 `01:00` | 일일 레포지토리 상태 Slack 알림 |
 | `ops-10am-digest` | 매일 `01:00` | 운영 10AM 다이제스트 Slack 알림 |
 | `classify-workflow-failures` | 워크플로우 실패 시 | CI 실패 자동 분류 (네트워크 vs 코드) |
-| `continuous-improvement-loop` | 매시간 | 지속적 개선 자동화 루프 |
+| `continuous-improvement-loop` | 매 6h | 개선 리포트 생성 및 Slack 다이제스트 |
 
 수동 실행: `gh workflow run <workflow-name>.yml`
 

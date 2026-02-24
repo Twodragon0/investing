@@ -449,17 +449,10 @@ def main():
 
     # References (top 10 only) - collapsible
     if source_links:
-        unique_links = []
-        seen_links = set()
-        for ref in source_links[:10]:
-            if ref["link"] not in seen_links:
-                seen_links.add(ref["link"])
-                unique_links.append(ref)
-
         content_parts.append(
             html_reference_details(
                 "참고 링크",
-                unique_links,
+                source_links,
                 limit=10,
                 title_max_len=80,
             )

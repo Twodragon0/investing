@@ -116,139 +116,72 @@ layout: default
   <section class="related-posts">
     <h3>관련 포스트</h3>
     <div class="related-posts-grid">
+      {% comment %}
+        단일 루프로 우선순위별 관련 포스트 선별:
+        priority 1: 같은 카테고리 + 공유 태그 2개 이상
+        priority 2: 같은 카테고리 + 공유 태그 1개
+        priority 3: 같은 카테고리 (태그 무관)
+        priority 4: 다른 카테고리 + 공유 태그 1개 이상
+        priority 5: 요약 포스트 (daily/weekly digest)
+        각 우선순위별 후보를 수집 후, 높은 우선순위부터 표시
+      {% endcomment %}
+      {% assign p1_urls = "" %}
+      {% assign p2_urls = "" %}
+      {% assign p3_urls = "" %}
+      {% assign p4_urls = "" %}
+      {% assign p5_urls = "" %}
       {% for post in related_all %}
-      {% if related_count >= related_limit %}{% break %}{% endif %}
       {% if post.pin %}{% continue %}{% endif %}
       {% assign post_is_summary = false %}
       {% if post.tags contains "daily-digest" or post.tags contains "weekly-digest" or post.tags contains "summary" or post.tags contains "일일요약" %}
       {% assign post_is_summary = true %}
       {% endif %}
-      {% if page_is_summary != true and post_is_summary %}{% continue %}{% endif %}
-      {% unless post.categories contains category %}{% continue %}{% endunless %}
+      {% if page_is_summary != true and post_is_summary %}
+        {% assign p5_urls = p5_urls | append: post.url | append: "||" %}
+        {% continue %}
+      {% endif %}
+      {% assign same_cat = false %}
+      {% if post.categories contains category %}{% assign same_cat = true %}{% endif %}
       {% assign shared_tags = 0 %}
       {% if page_tags and post.tags %}
       {% for tag in post.tags %}
       {% if page_tags contains tag %}{% assign shared_tags = shared_tags | plus: 1 %}{% endif %}
       {% endfor %}
       {% endif %}
-      {% if shared_tags < 2 %}{% continue %}{% endif %}
-      {% capture post_marker %}|{{ post.url }}|{% endcapture %}
-      {% if shown_urls contains post_marker %}{% continue %}{% endif %}
-      {% capture shown_urls %}{{ shown_urls }}{{ post.url }}|{% endcapture %}
-      {% assign rel_cat = post.categories | first %}
-      {% assign rel_cat_data = site.data.categories[rel_cat] %}
-      {% assign rel_cat_name = rel_cat_data.name | default: rel_cat %}
-      <a href="{{ post.url | relative_url }}" class="related-post-card">
-        <span class="related-post-category cat-{{ rel_cat | slugify }}">{{ rel_cat_name }}</span>
-        <h4>{{ post.title | truncate: 60 }}</h4>
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-      </a>
-      {% assign related_count = related_count | plus: 1 %}
+      {% if same_cat and shared_tags >= 2 %}
+        {% assign p1_urls = p1_urls | append: post.url | append: "||" %}
+      {% elsif same_cat and shared_tags == 1 %}
+        {% assign p2_urls = p2_urls | append: post.url | append: "||" %}
+      {% elsif same_cat %}
+        {% assign p3_urls = p3_urls | append: post.url | append: "||" %}
+      {% elsif shared_tags >= 1 %}
+        {% assign p4_urls = p4_urls | append: post.url | append: "||" %}
+      {% endif %}
       {% endfor %}
 
-      {% for post in related_all %}
+      {% assign priority_urls = p1_urls | append: p2_urls | append: p3_urls | append: p4_urls | append: p5_urls %}
+      {% assign priority_list = priority_urls | split: "||" %}
+      {% for post_url in priority_list %}
       {% if related_count >= related_limit %}{% break %}{% endif %}
-      {% if post.pin %}{% continue %}{% endif %}
-      {% assign post_is_summary = false %}
-      {% if post.tags contains "daily-digest" or post.tags contains "weekly-digest" or post.tags contains "summary" or post.tags contains "일일요약" %}
-      {% assign post_is_summary = true %}
-      {% endif %}
-      {% if page_is_summary != true and post_is_summary %}{% continue %}{% endif %}
-      {% unless post.categories contains category %}{% continue %}{% endunless %}
-      {% assign shared_tags = 0 %}
-      {% if page_tags and post.tags %}
-      {% for tag in post.tags %}
-      {% if page_tags contains tag %}{% assign shared_tags = shared_tags | plus: 1 %}{% endif %}
-      {% endfor %}
-      {% endif %}
-      {% if shared_tags != 1 %}{% continue %}{% endif %}
-      {% capture post_marker %}|{{ post.url }}|{% endcapture %}
+      {% if post_url == "" %}{% continue %}{% endif %}
+      {% capture post_marker %}|{{ post_url }}|{% endcapture %}
       {% if shown_urls contains post_marker %}{% continue %}{% endif %}
-      {% capture shown_urls %}{{ shown_urls }}{{ post.url }}|{% endcapture %}
-      {% assign rel_cat = post.categories | first %}
+      {% capture shown_urls %}{{ shown_urls }}{{ post_url }}|{% endcapture %}
+      {% assign matched_post = nil %}
+      {% for p in related_all %}
+      {% if p.url == post_url %}{% assign matched_post = p %}{% break %}{% endif %}
+      {% endfor %}
+      {% if matched_post %}
+      {% assign rel_cat = matched_post.categories | first %}
       {% assign rel_cat_data = site.data.categories[rel_cat] %}
       {% assign rel_cat_name = rel_cat_data.name | default: rel_cat %}
-      <a href="{{ post.url | relative_url }}" class="related-post-card">
+      <a href="{{ matched_post.url | relative_url }}" class="related-post-card">
         <span class="related-post-category cat-{{ rel_cat | slugify }}">{{ rel_cat_name }}</span>
-        <h4>{{ post.title | truncate: 60 }}</h4>
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+        <h4>{{ matched_post.title | truncate: 60 }}</h4>
+        <time datetime="{{ matched_post.date | date_to_xmlschema }}">{{ matched_post.date | date: "%Y-%m-%d" }}</time>
       </a>
       {% assign related_count = related_count | plus: 1 %}
-      {% endfor %}
-
-      {% for post in related_all %}
-      {% if related_count >= related_limit %}{% break %}{% endif %}
-      {% if post.pin %}{% continue %}{% endif %}
-      {% assign post_is_summary = false %}
-      {% if post.tags contains "daily-digest" or post.tags contains "weekly-digest" or post.tags contains "summary" or post.tags contains "일일요약" %}
-      {% assign post_is_summary = true %}
       {% endif %}
-      {% if page_is_summary != true and post_is_summary %}{% continue %}{% endif %}
-      {% unless post.categories contains category %}{% continue %}{% endunless %}
-      {% capture post_marker %}|{{ post.url }}|{% endcapture %}
-      {% if shown_urls contains post_marker %}{% continue %}{% endif %}
-      {% capture shown_urls %}{{ shown_urls }}{{ post.url }}|{% endcapture %}
-      {% assign rel_cat = post.categories | first %}
-      {% assign rel_cat_data = site.data.categories[rel_cat] %}
-      {% assign rel_cat_name = rel_cat_data.name | default: rel_cat %}
-      <a href="{{ post.url | relative_url }}" class="related-post-card">
-        <span class="related-post-category cat-{{ rel_cat | slugify }}">{{ rel_cat_name }}</span>
-        <h4>{{ post.title | truncate: 60 }}</h4>
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-      </a>
-      {% assign related_count = related_count | plus: 1 %}
-      {% endfor %}
-
-      {% for post in related_all %}
-      {% if related_count >= related_limit %}{% break %}{% endif %}
-      {% if post.pin %}{% continue %}{% endif %}
-      {% assign post_is_summary = false %}
-      {% if post.tags contains "daily-digest" or post.tags contains "weekly-digest" or post.tags contains "summary" or post.tags contains "일일요약" %}
-      {% assign post_is_summary = true %}
-      {% endif %}
-      {% if page_is_summary != true and post_is_summary %}{% continue %}{% endif %}
-      {% if post.categories contains category %}{% continue %}{% endif %}
-      {% assign shared_tags = 0 %}
-      {% if page_tags and post.tags %}
-      {% for tag in post.tags %}
-      {% if page_tags contains tag %}{% assign shared_tags = shared_tags | plus: 1 %}{% endif %}
-      {% endfor %}
-      {% endif %}
-      {% if shared_tags == 0 %}{% continue %}{% endif %}
-      {% capture post_marker %}|{{ post.url }}|{% endcapture %}
-      {% if shown_urls contains post_marker %}{% continue %}{% endif %}
-      {% capture shown_urls %}{{ shown_urls }}{{ post.url }}|{% endcapture %}
-      {% assign rel_cat = post.categories | first %}
-      {% assign rel_cat_data = site.data.categories[rel_cat] %}
-      {% assign rel_cat_name = rel_cat_data.name | default: rel_cat %}
-      <a href="{{ post.url | relative_url }}" class="related-post-card">
-        <span class="related-post-category cat-{{ rel_cat | slugify }}">{{ rel_cat_name }}</span>
-        <h4>{{ post.title | truncate: 60 }}</h4>
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-      </a>
-      {% assign related_count = related_count | plus: 1 %}
-      {% endfor %}
-
-      {% for post in related_all %}
-      {% if related_count >= related_limit %}{% break %}{% endif %}
-      {% if post.pin %}{% continue %}{% endif %}
-      {% assign post_is_summary = false %}
-      {% if post.tags contains "daily-digest" or post.tags contains "weekly-digest" or post.tags contains "summary" or post.tags contains "일일요약" %}
-      {% assign post_is_summary = true %}
-      {% endif %}
-      {% if post_is_summary != true %}{% continue %}{% endif %}
-      {% capture post_marker %}|{{ post.url }}|{% endcapture %}
-      {% if shown_urls contains post_marker %}{% continue %}{% endif %}
-      {% capture shown_urls %}{{ shown_urls }}{{ post.url }}|{% endcapture %}
-      {% assign rel_cat = post.categories | first %}
-      {% assign rel_cat_data = site.data.categories[rel_cat] %}
-      {% assign rel_cat_name = rel_cat_data.name | default: rel_cat %}
-      <a href="{{ post.url | relative_url }}" class="related-post-card">
-        <span class="related-post-category cat-{{ rel_cat | slugify }}">{{ rel_cat_name }}</span>
-        <h4>{{ post.title | truncate: 60 }}</h4>
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-      </a>
-      {% assign related_count = related_count | plus: 1 %}
       {% endfor %}
     </div>
   </section>

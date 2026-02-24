@@ -623,18 +623,10 @@ def main():
 
     # References section (collapsible)
     if source_links:
-        # Deduplicate links
-        seen_links = set()
-        unique_refs = []
-        for ref in source_links[:15]:
-            if ref["link"] not in seen_links:
-                seen_links.add(ref["link"])
-                unique_refs.append(ref)
-
         content_parts.append(
             html_reference_details(
                 "참고 링크",
-                unique_refs,
+                source_links,
                 limit=15,
                 title_max_len=80,
             )

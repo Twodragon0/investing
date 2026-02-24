@@ -1,8 +1,8 @@
-name: Continuous Improvement Loop
+name: Improvement Report & Slack Digest
 
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 concurrency:
