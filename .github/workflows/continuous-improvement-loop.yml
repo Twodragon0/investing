@@ -5,6 +5,10 @@ on:
     - cron: "0 * * * *"
   workflow_dispatch:
 
+concurrency:
+  group: continuous-improvement
+  cancel-in-progress: false
+
 permissions:
   contents: read
 

@@ -5,6 +5,10 @@ on:
     - cron: '0 3 * * 0'  # Every Sunday at 03:00 UTC
   workflow_dispatch:
 
+concurrency:
+  group: cleanup-images
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
