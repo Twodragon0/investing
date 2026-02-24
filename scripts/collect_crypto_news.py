@@ -21,7 +21,7 @@ from typing import List, Dict, Any
 # Add scripts directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common.config import get_env, setup_logging, get_ssl_verify
+from common.config import get_env, setup_logging, get_ssl_verify, REQUEST_TIMEOUT, USER_AGENT
 from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
 from common.utils import sanitize_string
@@ -52,8 +52,6 @@ except ImportError:
 logger = setup_logging("collect_crypto_news")
 
 VERIFY_SSL = get_ssl_verify()
-REQUEST_TIMEOUT = 15
-USER_AGENT = "Mozilla/5.0 (compatible; InvestingDragon/1.0)"
 
 
 def fetch_cryptopanic(api_key: str, limit: int = 20) -> List[Dict[str, Any]]:

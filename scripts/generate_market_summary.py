@@ -22,7 +22,7 @@ from collections import OrderedDict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common.config import get_env, get_kst_timezone, setup_logging, get_ssl_verify
+from common.config import get_env, get_kst_timezone, setup_logging, get_ssl_verify, REQUEST_TIMEOUT
 from common.markdown_utils import markdown_link, markdown_table
 from common.utils import request_with_retry
 from common.post_generator import PostGenerator
@@ -38,7 +38,6 @@ from common.formatters import fmt_number as _fmt, fmt_percent as _pct
 logger = setup_logging("generate_market_summary")
 
 VERIFY_SSL = get_ssl_verify()
-REQUEST_TIMEOUT = 15
 
 
 def fetch_us_market_data(api_key: str) -> Dict[str, Dict[str, str]]:

@@ -43,8 +43,7 @@ except ImportError:
 logger = setup_logging("collect_coinmarketcap")
 
 VERIFY_SSL = get_ssl_verify()
-REQUEST_TIMEOUT = 20
-USER_AGENT = "Mozilla/5.0 (compatible; InvestingDragon/1.0)"
+REQUEST_TIMEOUT = 20  # CMC/CoinGecko API는 응답이 느려 기본값(15)보다 길게 설정
 
 
 # ──────────────────────────────────────────────

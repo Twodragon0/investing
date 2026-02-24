@@ -111,7 +111,7 @@ def is_noise_text(text: str) -> bool:
         return True
     if re.match(r"^\*?총\s*\d+건\s*수집\*?$", stripped):
         return True
-    if stripped.startswith("![") or stripped.startswith("##"):
+    if stripped.startswith(("![", "##")):
         return True
     if any(
         key in stripped.lower()
@@ -416,7 +416,7 @@ def extract_links(lines: List[str]) -> List[Tuple[str, str, str, str]]:
                     if desc:
                         break
                     continue
-                if nxt.startswith("## ") or nxt.startswith("### "):
+                if nxt.startswith(("## ", "### ")):
                     break
                 if "![" in nxt:
                     continue
@@ -494,7 +494,7 @@ def extract_section_bullets(lines: List[str], title: str, limit: int = 3) -> Lis
     bullets: List[str] = []
     for line in lines[idx + 1 : end]:
         raw = line.strip()
-        if raw.startswith("- ") or raw.startswith("* "):
+        if raw.startswith(("- ", "* ")):
             cleaned = clean_text(raw[2:])
             if cleaned and not is_noise_text(cleaned):
                 bullets.append(cleaned)
@@ -519,7 +519,7 @@ def extract_section_sentences(
             continue
         if raw.startswith(("#", "|", "!", "<", ">")):
             continue
-        if raw.startswith("- ") or raw.startswith("* "):
+        if raw.startswith(("- ", "* ")):
             continue
         cleaned = clean_text(raw)
         if cleaned and not is_noise_text(cleaned):

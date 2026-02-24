@@ -288,7 +288,7 @@ layout: default
       "url": "{{ '/assets/images/og-default.png' | absolute_url }}"
     }
   },
-  "description": {{ page.excerpt | strip_html | truncate: 160 | jsonify }},
+  "description": {{ page.description | default: page.excerpt | strip_html | truncate: 160 | jsonify }},
   {% if page.image %}"image": "{{ page.image | absolute_url }}",{% endif %}
   "mainEntityOfPage": {
     "@type": "WebPage",

@@ -32,7 +32,7 @@ Crypto & Stock 뉴스 자동 수집 및 트레이딩 일지 사이트
 
 - **Jekyll**: 정적 사이트 생성 (dark finance theme, minima 기반)
 - **Python Scripts**: 뉴스 수집, 중복 제거, 요약 생성, 이미지 생성
-- **GitHub Actions**: 20개 워크플로우 (스케줄 기반 자동 수집, 배포, 모니터링)
+- **GitHub Actions**: 22개 워크플로우 (스케줄 기반 자동 수집, 배포, 모니터링)
 
 > 상세 아키텍처: [docs/architecture.md](docs/architecture.md)
 
@@ -138,23 +138,24 @@ python scripts/generate_weekly_digest.py
 | 워크플로우 | 스케줄 (UTC) | 설명 |
 |:-----------|:------------|:-----|
 | `collect-crypto-news` | 매 6h `:00` | 암호화폐 뉴스 수집 (CryptoPanic, NewsAPI, RSS, 거래소) |
-| `collect-coinmarketcap` | 매 6h `:12` | CoinMarketCap/CoinGecko 시가총액 데이터 |
-| `collect-stock-news` | 매 6h `:24` | 주식 뉴스 수집 (NewsAPI, Yahoo, Alpha Vantage) |
-| `collect-defi-llama` | 매 6h `:36` | DeFi TVL 데이터 (프로토콜/체인) |
-| `collect-social-media` | 매 12h `:36` | 소셜 미디어 (Telegram, Twitter/X) |
-| `collect-regulatory` | 매 12h `:48` | 글로벌 규제 뉴스 (SEC, FSC 등 9개 기관) |
-| `collect-political-trades` | 매일 `13:00` | 정치인 거래 (의회 공시, SEC EDGAR) |
-| `collect-worldmonitor-news` | 매일 `01:00` | WorldMonitor 글로벌 뉴스 브리핑 |
+| `collect-coinmarketcap` | 매 6h `:15` | CoinMarketCap/CoinGecko 시가총액 데이터 |
+| `collect-stock-news` | 매 6h `:30` | 주식 뉴스 수집 (NewsAPI, Yahoo, Alpha Vantage) |
+| `collect-defi-llama` | 매 6h `:45` | DeFi TVL 데이터 (프로토콜/체인) |
+| `collect-social-media` | 매 12h `01:00/13:00` | 소셜 미디어 (Telegram, Twitter/X) |
+| `collect-regulatory` | 매 12h `01:15/13:15` | 글로벌 규제 뉴스 (SEC, FSC 등 9개 기관) |
+| `collect-political-trades` | 매일 `13:30` | 정치인 거래 (의회 공시, SEC EDGAR) |
+| `collect-worldmonitor-news` | 매일 `01:30` | WorldMonitor 글로벌 뉴스 브리핑 |
 
-### 콘텐츠 생성 (3개)
+### 콘텐츠 생성 (4개)
 
 | 워크플로우 | 스케줄 (UTC) | 설명 |
 |:-----------|:------------|:-----|
-| `generate-market-summary` | 매일 `00:30` | 시장 분석 요약 + 시각화 이미지 생성 |
-| `generate-daily-summary` | 매일 `01:00` | 당일 수집 뉴스 종합 요약 (우선순위별) |
+| `generate-market-summary` | 매일 `01:45` | 시장 분석 요약 + 시각화 이미지 생성 |
+| `generate-daily-summary` | 매일 `02:00` | 당일 수집 뉴스 종합 요약 (우선순위별) |
+| `backfill-post-summaries` | 매일 `02:15` | 포스트 요약/분석 자동 보강 |
 | `weekly-digest` | 일요일 `23:00` | 주간 다이제스트 (카테고리별 분석) |
 
-### 배포 & 운영 (9개)
+### 배포 & 운영 (10개)
 
 | 워크플로우 | 트리거 | 설명 |
 |:-----------|:------|:-----|
@@ -165,6 +166,7 @@ python scripts/generate_weekly_digest.py
 | `cleanup-old-images` | 매주 일요일 | 30일 이상 된 생성 이미지 정리 |
 | `respond-ai-mentions` | 5분마다 | Slack AI 봇 멘션 자동 응답 |
 | `push-folder-info-to-slack` | 매일 `01:00` | 일일 레포지토리 상태 Slack 알림 |
+| `ops-10am-digest` | 매일 `01:00` | 운영 10AM 다이제스트 Slack 알림 |
 | `classify-workflow-failures` | 워크플로우 실패 시 | CI 실패 자동 분류 (네트워크 vs 코드) |
 | `continuous-improvement-loop` | 매시간 | 지속적 개선 자동화 루프 |
 
@@ -209,7 +211,7 @@ investing/
 │   ├── generate_*.py           # 생성기 3개
 │   └── respond_ai_mentions.py  # Slack AI 멘션 응답
 ├── .github/
-│   ├── workflows/              # 워크플로우 20개
+│   ├── workflows/              # 워크플로우 22개
 │   └── actions/                # 재사용 액션
 │       ├── python-collect/     # Python 수집 & 커밋
 │       └── resolve-slack-config/ # Slack 설정 해석

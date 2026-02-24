@@ -17,7 +17,7 @@ from typing import List, Dict, Any, Optional, Tuple
 # Add scripts directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common.config import setup_logging, get_ssl_verify
+from common.config import setup_logging, get_ssl_verify, REQUEST_TIMEOUT
 from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
 from common.collector_metrics import log_collection_summary
@@ -31,7 +31,6 @@ from common.markdown_utils import (
 logger = setup_logging("collect_defi_llama")
 
 VERIFY_SSL = get_ssl_verify()
-REQUEST_TIMEOUT = 15
 BASE_URL = "https://api.llama.fi"
 
 TOP_PROTOCOLS_LIMIT = 20

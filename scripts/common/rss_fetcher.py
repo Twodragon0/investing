@@ -6,14 +6,12 @@ from datetime import datetime, timezone, timedelta
 from typing import List, Dict, Any, Optional
 from urllib.parse import parse_qs, unquote, urlparse
 from bs4 import BeautifulSoup
-from .config import get_ssl_verify
+from .config import get_ssl_verify, REQUEST_TIMEOUT, USER_AGENT
 from .utils import sanitize_string, parse_date
 
 logger = logging.getLogger(__name__)
 
 VERIFY_SSL = get_ssl_verify()
-REQUEST_TIMEOUT = 15
-USER_AGENT = "Mozilla/5.0 (compatible; InvestingDragon/1.0)"
 
 # Feed health tracking: {url: {"ok": int, "fail": int, "last_error": str}}
 _feed_health: Dict[str, Dict[str, Any]] = {}

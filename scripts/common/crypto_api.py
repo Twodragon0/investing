@@ -3,14 +3,13 @@
 import logging
 import requests
 from typing import Dict, Any, List
-from .config import get_ssl_verify
+from .config import get_ssl_verify, USER_AGENT
 from .utils import request_with_retry
 
 logger = logging.getLogger(__name__)
 
 VERIFY_SSL = get_ssl_verify()
-REQUEST_TIMEOUT = 20
-USER_AGENT = "Mozilla/5.0 (compatible; InvestingDragon/1.0)"
+REQUEST_TIMEOUT = 20  # CoinGecko/Fear&Greed API는 응답이 느려 기본값(15)보다 길게 설정
 
 
 def fetch_coingecko_top_coins(limit: int = 30) -> List[Dict[str, Any]]:

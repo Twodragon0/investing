@@ -19,7 +19,7 @@ from typing import List, Dict, Any
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common.config import setup_logging, get_ssl_verify
+from common.config import setup_logging, get_ssl_verify, REQUEST_TIMEOUT
 from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feeds_concurrent
@@ -33,7 +33,6 @@ from common.markdown_utils import (
 logger = setup_logging("collect_political_trades")
 
 VERIFY_SSL = get_ssl_verify()
-REQUEST_TIMEOUT = 15
 
 
 def fetch_congressional_trades() -> List[Dict[str, Any]]:
