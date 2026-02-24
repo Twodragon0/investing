@@ -22,7 +22,13 @@ document.addEventListener('DOMContentLoaded', function() {
   searchInput.addEventListener('input', function() {
     var query = this.value.toLowerCase().trim();
     if (query.length < 2) {
-      searchResults.innerHTML = '<div style="text-align: center; padding: 3rem; color: #8b949e;"><p>검색어를 2자 이상 입력해주세요.</p></div>';
+      searchResults.textContent = '';
+      var hint = document.createElement('div');
+      hint.style.cssText = 'text-align: center; padding: 3rem; color: #8b949e;';
+      var hintP = document.createElement('p');
+      hintP.textContent = '검색어를 2자 이상 입력해주세요.';
+      hint.appendChild(hintP);
+      searchResults.appendChild(hint);
       return;
     }
 
