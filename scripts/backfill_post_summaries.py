@@ -145,15 +145,9 @@ def normalize_summary(text: str) -> str:
         sentence = (sentence + " " + sentences[1]).strip()
     if not sentence:
         return ""
-    if not re.search(r"[.!?]$", sentence) and not sentence.endswith("다"):
-        # Count Korean vs non-Korean chars to decide ending style
-        korean_chars = len(re.findall(r"[가-힣]", sentence))
-        total_alpha = len(re.findall(r"[a-zA-Z가-힣]", sentence))
-        if total_alpha > 0 and korean_chars / total_alpha > 0.5:
-            # Predominantly Korean text
-            sentence += "입니다."
-        else:
-            # Predominantly English or mixed — just add period
+    if not re.search(r"[.!?]$", sentence):
+        # Korean endings: 다/요/까/나/음/임/기/죠/지 — don't append extra suffix
+        if not re.search(r"[다요까나음임기죠지]$", sentence):
             sentence += "."
     return sentence
 
@@ -218,7 +212,7 @@ def summarize_from_title(title: str) -> str:
         subject = "이더리움"
     elif any(k in low for k in ["xrp", "ripple", "리플"]):
         subject = "XRP"
-    elif any(k in low for k in ["solana", "sol", "솔라나"]):
+    elif any(k in low for k in ["solana", "솔라나"]) or re.search(r"\bsol\b", low):
         subject = "솔라나"
     elif any(k in low for k in ["nasdaq", "나스닥"]):
         subject = "나스닥"

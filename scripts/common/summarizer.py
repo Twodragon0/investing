@@ -241,7 +241,6 @@ THEMES = [
             "price",
             "rally",
             "crash",
-            "surge",
             "plunge",
             "시세",
             "상승",
@@ -455,11 +454,13 @@ class ThemeSummarizer:
         if not top_themes:
             return ""
 
-        total_items = max(len(self.items), 1)
+        # Use sum of displayed theme counts as denominator so percentages
+        # add up correctly (articles can match multiple themes).
+        total_theme_count = sum(c for _, _, _, c in top_themes) or 1
 
         lines = ['<div class="theme-distribution">']
         for i, (name, _key, emoji, count) in enumerate(top_themes):
-            pct = count / total_items * 100
+            pct = count / total_theme_count * 100
             color = self._BAR_COLORS[i % len(self._BAR_COLORS)]
             lines.append(
                 f'<div class="theme-row">'
@@ -868,16 +869,16 @@ class ThemeSummarizer:
         themes_str = ", ".join(theme_names[:2]) if theme_names else "다양한 이슈"
 
         openers = {
-            "crypto": f"암호화폐 시장 <strong>{themes_str}</strong> 중심 {total}건 분석",
-            "stock": f"주식 시장 <strong>{themes_str}</strong> 부각 {total}건 분석",
-            "regulatory": f"글로벌 규제 <strong>{themes_str}</strong> 관련 {total}건 수집",
-            "social": f"소셜 미디어 <strong>{themes_str}</strong> 관련 {total}건 포착",
+            "crypto": f"암호화폐 시장 {themes_str} 중심 {total}건 분석",
+            "stock": f"주식 시장 {themes_str} 부각 {total}건 분석",
+            "regulatory": f"글로벌 규제 {themes_str} 관련 {total}건 수집",
+            "social": f"소셜 미디어 {themes_str} 관련 {total}건 포착",
             "security": f"보안 분야 {total}건 보고",
-            "market": f"시장 전반 <strong>{themes_str}</strong> 주도",
+            "market": f"시장 전반 {themes_str} 주도",
         }
         opener = openers.get(
             category_type,
-            f"<strong>{themes_str}</strong> 관련 {total}건 수집",
+            f"{themes_str} 관련 {total}건 수집",
         )
 
         lines = ["\n## 한눈에 보기\n"]
