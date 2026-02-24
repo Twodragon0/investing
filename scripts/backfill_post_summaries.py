@@ -170,9 +170,30 @@ def _shorten_title_for_summary(title: str, limit: int = 80) -> str:
         truncated = truncated[:last_space]
     # Remove trailing articles, prepositions, and conjunctions
     trailing_words = {
-        "the", "a", "an", "of", "in", "on", "at", "to", "for", "and",
-        "or", "but", "as", "by", "with", "from", "is", "are", "its",
-        "their", "this", "that", "these", "those",
+        "the",
+        "a",
+        "an",
+        "of",
+        "in",
+        "on",
+        "at",
+        "to",
+        "for",
+        "and",
+        "or",
+        "but",
+        "as",
+        "by",
+        "with",
+        "from",
+        "is",
+        "are",
+        "its",
+        "their",
+        "this",
+        "that",
+        "these",
+        "those",
     }
     words = truncated.split()
     while len(words) > 3 and words[-1].lower().rstrip(".,;:- ") in trailing_words:
@@ -252,18 +273,42 @@ def summarize_from_title(title: str) -> str:
     # Use word-boundary matching for short keywords to avoid false positives
     # (e.g. "up" matching inside "pump", "setup"; "down" inside "countdown")
     _up_words = [
-        "rises", "rise", "gains", "surge", "surges", "jump", "jumps",
-        "climb", "climbs", "rebound", "rallies", "rally",
-        "상승", "급등", "반등",
+        "rises",
+        "rise",
+        "gains",
+        "surge",
+        "surges",
+        "jump",
+        "jumps",
+        "climb",
+        "climbs",
+        "rebound",
+        "rallies",
+        "rally",
+        "상승",
+        "급등",
+        "반등",
     ]
     _up_boundary = [re.compile(r"\bup\b", re.IGNORECASE)]
     price_up = any(k in low for k in _up_words) or any(
         p.search(title) for p in _up_boundary
     )
     _down_words = [
-        "falls", "fall", "drops", "drop", "slump", "slides", "slide",
-        "tumbles", "tumble", "crash", "sell-off", "plunge",
-        "하락", "급락", "폭락",
+        "falls",
+        "fall",
+        "drops",
+        "drop",
+        "slump",
+        "slides",
+        "slide",
+        "tumbles",
+        "tumble",
+        "crash",
+        "sell-off",
+        "plunge",
+        "하락",
+        "급락",
+        "폭락",
     ]
     _down_boundary = [re.compile(r"\bdown\b", re.IGNORECASE)]
     price_down = any(k in low for k in _down_words) or any(
@@ -578,7 +623,9 @@ def build_content_analysis(lines: List[str], body: str) -> List[str]:
     # Count links to indicate reference density
     link_count = sum(1 for line in lines if re.search(r"\[.*?\]\(https?://", line))
     if link_count > 5 and len(analysis) < 3:
-        analysis.append(f"총 {link_count}개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.")
+        analysis.append(
+            f"총 {link_count}개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다."
+        )
 
     if not analysis:
         analysis.append("핵심 이슈를 중심으로 요약과 링크를 정리했습니다.")

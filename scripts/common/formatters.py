@@ -11,11 +11,11 @@ def fmt_number(n, prefix: str = "$", decimals: int = 2) -> str:
     if n is None:
         return "N/A"
     if abs(n) >= 1_000_000_000_000:
-        return f"{prefix}{n / 1_000_000_000_000:,.2f}T"
+        return f"{prefix}{n / 1_000_000_000_000:,.{decimals}f}T"
     if abs(n) >= 1_000_000_000:
-        return f"{prefix}{n / 1_000_000_000:,.2f}B"
+        return f"{prefix}{n / 1_000_000_000:,.{decimals}f}B"
     if abs(n) >= 1_000_000:
-        return f"{prefix}{n / 1_000_000:,.1f}M"
+        return f"{prefix}{n / 1_000_000:,.{min(decimals, 1)}f}M"
     return f"{prefix}{n:,.{decimals}f}"
 
 

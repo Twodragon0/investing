@@ -374,14 +374,18 @@ class ThemeSummarizer:
                 if " " in kw or len(kw) >= 4 or re.search(r"[가-힣]", kw):
                     plain_kw.append(kw)
                 else:
-                    kw_patterns.append(re.compile(r"\b" + re.escape(kw) + r"\b", re.IGNORECASE))
+                    kw_patterns.append(
+                        re.compile(r"\b" + re.escape(kw) + r"\b", re.IGNORECASE)
+                    )
             for idx, item in enumerate(self.items):
                 item_text = (
                     item.get("title", "") + " " + item.get("description", "")
                 ).lower()
                 hit = any(kw in item_text for kw in plain_kw)
                 if not hit:
-                    item_text_raw = item.get("title", "") + " " + item.get("description", "")
+                    item_text_raw = (
+                        item.get("title", "") + " " + item.get("description", "")
+                    )
                     hit = any(p.search(item_text_raw) for p in kw_patterns)
                 if hit:
                     matched.append(item)
