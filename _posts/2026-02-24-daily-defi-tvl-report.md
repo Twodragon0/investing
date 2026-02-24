@@ -14,13 +14,42 @@ description: "2026-02-24 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked
 
 ## 전체 뉴스 요약
 
-- 총 **20개 프로토콜**, **15개 체인** 데이터를 분석했습니다.
-- **최상위 프로토콜**: Lido (TVL $33.92B)
-- **최상위 체인**: Ethereum (TVL $52.00B)
+- 현재 DeFi 생태계에서 가장 큰 프로토콜은 Lido으로, TVL $33.92B (13.7%)를 차지합니다.
+- 2026-02-24 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked, 총 예치 자산) 현황을 정리합니다. 상위 20개 프로토콜의 총 TVL은 $247.99B이며, 상위 15개 체인의 총 TVL은 $86.38B입니다.
 
 
-![DeFi TVL Dashboard]({{ '/assets/images/generated/defi-tvl-dashboard-2026-02-24.png' | relative_url }})
 
+## 내용 분석
+
+- 본문은 전체 뉴스 요약, DeFi 시장 인사이트 등 2개 섹션으로 구성되어 있습니다.
+- 총 21개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.
+
+
+## URL 요약
+
+- [Lido](https://defillama.com/protocol/lido) — Lido.
+- [AAVE](https://defillama.com/protocol/aave) — AAVE.
+- [AAVE V3](https://defillama.com/protocol/aave-v3) — AAVE V3.
+- [EigenLayer](https://defillama.com/protocol/eigenlayer) — Eigen.
+- [WBTC](https://defillama.com/protocol/wbtc) — 비트코인 — WBTC.
+- [ether.fi](https://defillama.com/protocol/ether.fi) — 이더리움 — ether.fi.
+- [Binance staked ETH](https://defillama.com/protocol/binance-staked-eth) — 이더리움 매수·매도 — Binance staked ETH.
+- [ether.fi Stake](https://defillama.com/protocol/ether.fi-stake) — 이더리움 매수·매도 — ether.fi Stake.
+- [Spark](https://defillama.com/protocol/spark) — Spark.
+- [Ethena](https://defillama.com/protocol/ethena) — 이더리움 — Ethena.
+- [Binance Bitcoin](https://defillama.com/protocol/binance-bitcoin) — 비트코인 — Binance Bitcoin.
+- [Ethena USDe](https://defillama.com/protocol/ethena-usde) — 이더리움 — Ethena USDe.
+- [Pendle](https://defillama.com/protocol/pendle) — Pendle.
+- [Coinbase Bridge](https://defillama.com/protocol/coinbase-bridge) — 거래소 — Coinbase Bridge.
+- [Morpho](https://defillama.com/protocol/morpho) — Morpho.
+- [Sky](https://defillama.com/protocol/sky) — Sky.
+- [Morpho Blue](https://defillama.com/protocol/morpho-blue) — Morpho Blue.
+- [Sky Lending](https://defillama.com/protocol/sky-lending) — Sky Lending.
+- [Uniswap](https://defillama.com/protocol/uniswap) — Uniswap.
+- [Arbitrum Bridge](https://defillama.com/protocol/arbitrum-bridge) — Arbitrum Bridge.
+- [DeFi Llama](https://defillama.com) — De.
+- [DeFi Llama API Documentation](https://defillama.com/docs/api) — De.
+- [DeFi Llama](https://defillama.com/chains) — De.
 
 ## 상위 20개 프로토콜 TVL 순위
 
