@@ -425,10 +425,15 @@ layout: default
 (function() {
   var overlay = document.createElement('div');
   overlay.className = 'lightbox-overlay';
-  overlay.innerHTML = '<img class="lightbox-img" /><button class="lightbox-close" aria-label="\uB2EB\uAE30">&times;</button>';
+  var lbImg = document.createElement('img');
+  lbImg.className = 'lightbox-img';
+  var lbClose = document.createElement('button');
+  lbClose.className = 'lightbox-close';
+  lbClose.setAttribute('aria-label', '닫기');
+  lbClose.textContent = '\u00D7';
+  overlay.appendChild(lbImg);
+  overlay.appendChild(lbClose);
   document.body.appendChild(overlay);
-  var lbImg = overlay.querySelector('.lightbox-img');
-  var lbClose = overlay.querySelector('.lightbox-close');
 
   document.querySelectorAll('.post-content.prose-content img').forEach(function(img) {
     img.style.cursor = 'zoom-in';

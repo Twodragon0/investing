@@ -33,13 +33,29 @@ document.addEventListener('DOMContentLoaded', function() {
     }).slice(0, 10);
 
     if (results.length === 0) {
-      searchResults.innerHTML = '<div style="text-align: center; padding: 3rem; color: #8b949e;"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity: 0.5; margin-bottom: 1rem;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">검색 결과가 없습니다</p><p>"' + query + '"에 대한 포스트를 찾을 수 없습니다.</p></div>';
+      searchResults.textContent = '';
+      var noDiv = document.createElement('div');
+      noDiv.style.cssText = 'text-align: center; padding: 3rem; color: #8b949e;';
+      noDiv.innerHTML = '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity: 0.5; margin-bottom: 1rem;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">검색 결과가 없습니다</p>';
+      var queryP = document.createElement('p');
+      queryP.textContent = '"' + query + '"에 대한 포스트를 찾을 수 없습니다.';
+      noDiv.appendChild(queryP);
+      searchResults.appendChild(noDiv);
       return;
     }
 
-    searchResults.innerHTML = results.map(function(post) {
-      return '<div class="search-result-item"><a href="' + post.url + '">' + post.title + '</a>' +
-             '<small>' + post.date + ' | ' + post.categories + '</small></div>';
-    }).join('');
+    searchResults.textContent = '';
+    results.forEach(function(post) {
+      var item = document.createElement('div');
+      item.className = 'search-result-item';
+      var link = document.createElement('a');
+      link.href = post.url;
+      link.textContent = post.title;
+      var meta = document.createElement('small');
+      meta.textContent = post.date + ' | ' + post.categories;
+      item.appendChild(link);
+      item.appendChild(meta);
+      searchResults.appendChild(item);
+    });
   });
 });
