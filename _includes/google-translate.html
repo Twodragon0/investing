@@ -101,7 +101,7 @@ function googleTranslateElementInit() {
       return;
     }
     var s = document.createElement('script'); s.type = 'text/javascript';
-    s.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
     s.onload = function() {
       var iv = setInterval(function() { if (typeof google !== 'undefined' && google.translate && googleTranslateLoaded) { clearInterval(iv); translateScriptLoaded = true; if (callback) setTimeout(callback, 500); } }, 100);
       setTimeout(function() { clearInterval(iv); if (!translateScriptLoaded && retryCount < maxRetries) setTimeout(function() { loadTranslateScript(callback, retryCount+1); }, 1000*(retryCount+1)); }, 5000);
@@ -190,7 +190,7 @@ function googleTranslateElementInit() {
       var ban = document.querySelector('.goog-te-banner-frame'); if (ban) try { ban.remove(); } catch(e) {}
       if (document.body) { document.body.style.top = '0'; document.body.style.position = ''; }
       safeSet(sessionStorage, 'langChanging', 'false'); safeSet(sessionStorage, 'langApplied', 'true');
-      setTimeout(function() { var u = location.href.replace(/#googtrans\([^)]*\)/g,'').replace(/#$/,''); if (u !== location.href) window.location.href = u; else location.reload(); }, 200);
+      setTimeout(function() { var u = location.href.replace(/#googtrans\([^)]*\)/g,'').replace(/#$/,''); if (u !== location.href && new URL(u).origin === location.origin) window.location.href = u; else location.reload(); }, 200);
       return;
     }
     setCookie('googtrans', '/ko/' + lang, 365);
@@ -198,7 +198,8 @@ function googleTranslateElementInit() {
     var sel = document.querySelector('.goog-te-combo');
     if (sel && translateScriptLoaded) {
       try { sel.value = lang; sel.dispatchEvent(new Event('change', {bubbles:true})); safeSet(sessionStorage,'langChanging','false'); safeSet(sessionStorage,'langApplied','true');
-        setTimeout(function() { if (getCurrentLang() !== lang) location.reload(); }, 500);
+        var reloadCount = parseInt(safeGet(sessionStorage, 'langReloadCount') || '0', 10);
+        setTimeout(function() { if (getCurrentLang() !== lang && reloadCount < 3) { safeSet(sessionStorage, 'langReloadCount', String(reloadCount + 1)); location.reload(); } else { safeRemove(sessionStorage, 'langReloadCount'); } }, 500);
       } catch(e) { setTimeout(function() { location.reload(); }, 150); }
     } else { safeSet(sessionStorage,'langChanging','false'); safeSet(sessionStorage,'langApplied','true'); setTimeout(function() { location.reload(); }, 150); }
   }
