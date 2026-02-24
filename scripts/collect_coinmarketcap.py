@@ -451,7 +451,8 @@ def fetch_cmc_browser_fallback(limit: int = 20) -> List[Dict[str, Any]]:
                             "market_cap": _parse_num(mcap_text),
                         }
                     )
-                except Exception:
+                except Exception as e:
+                    logger.debug("CMC coin parse error: %s", e)
                     continue
 
         logger.info("CMC Browser: fetched %d coins", len(items))

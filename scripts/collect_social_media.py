@@ -92,7 +92,8 @@ def _parse_telegram_items(channel: str, messages, limit: int) -> List[Dict[str, 
                     "tags": ["social-media", "telegram", channel],
                 }
             )
-        except Exception:
+        except Exception as e:
+            logger.debug("Telegram RSS item parse error: %s", e)
             continue
     return items
 
@@ -119,8 +120,8 @@ def _fetch_telegram_browser(
                     # Wait for message elements to render
                     try:
                         session.wait_for(".tgme_widget_message_wrap", timeout=5000)
-                    except Exception:
-                        pass  # Some channels may be empty or have no messages
+                    except Exception as e:
+                        logger.debug("Telegram wait timeout for @%s: %s", channel, e)
                     messages = session.extract_elements(".tgme_widget_message_wrap")
                     items = _parse_telegram_items(channel, messages, limit)
                     results[channel] = items
