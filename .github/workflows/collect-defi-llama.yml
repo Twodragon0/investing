@@ -2,7 +2,7 @@ name: Collect DeFi Llama Data
 
 on:
   schedule:
-    - cron: '36 */6 * * *'
+    - cron: '45 */6 * * *'
   workflow_dispatch:
 
 permissions:

@@ -2,7 +2,7 @@ name: Collect Political Trades
 
 on:
   schedule:
-    - cron: '0 13 * * *'
+    - cron: '30 13 * * *'
   workflow_dispatch:
 
 permissions:

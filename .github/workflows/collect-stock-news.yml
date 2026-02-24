@@ -2,7 +2,7 @@ name: Collect Stock News
 
 on:
   schedule:
-    - cron: '24 */6 * * *'
+    - cron: '30 */6 * * *'
   workflow_dispatch:
 
 permissions:
