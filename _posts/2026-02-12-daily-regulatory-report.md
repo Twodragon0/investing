@@ -45,6 +45,7 @@ lang: "ko"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **100건** 수집
@@ -79,18 +80,18 @@ lang: "ko"
 - [CFTC Staff Issues Interpretation on Legacy Swap Status](https://www.cftc.gov/PressRoom/PressReleases/9176-26) — 규제 당국 — CFTC Staff Issues Interpretation on Legacy Swap Status.
 - [빗썸 오지급 보상 안내의 URL링크는 사기입니다. - 빗썸 오지급 사고 관련 스미싱 소비자경보 발령 -](https://www.fsc.go.kr/no010101/86271) — 빗썸 오지급 보상 안내의 URL링크는 사기입니다.
 - [全 금융업권 참여로 예금보험기금 저축은행 특별계정 1년 연장을 추진합니다.](https://www.fsc.go.kr/no010101/86263) — 全 금융업권 참여로 예금보험기금 저축은행 특별계정 1년 연장을 추진합니다.
-- [금융정보분석원, 카지노 업권 대상 자금세탁방지 간담회 개최](https://www.fsc.go.kr/no010101/86262) — 금융정보분석원, 카지노 업권 대상 자금세탁방지 간담회 개최입니다.
-- [본격 가동하는 국민성장펀드, 지역 현장에서 지역‧산업계와 소통합니다 (1일차 : 광주‧전남 지역)](https://www.fsc.go.kr/no010101/86261) — 본격 가동하는 국민성장펀드, 지역 현장에서 지역‧산업계와 소통합니다 (1일차 : 광주‧전남 지역)입니다.
-- [2026년 1월 가계대출 동향(잠정)](https://www.fsc.go.kr/no010101/86259) — 2026년 1월 가계대출 동향(잠정)입니다.
+- [금융정보분석원, 카지노 업권 대상 자금세탁방지 간담회 개최](https://www.fsc.go.kr/no010101/86262) — 금융정보분석원, 카지노 업권 대상 자금세탁방지 간담회 개최.
+- [본격 가동하는 국민성장펀드, 지역 현장에서 지역‧산업계와 소통합니다 (1일차 : 광주‧전남 지역)](https://www.fsc.go.kr/no010101/86261) — 본격 가동하는 국민성장펀드, 지역 현장에서 지역‧산업계와 소통합니다 (1일차 : 광주‧전남 지역).
+- [2026년 1월 가계대출 동향(잠정)](https://www.fsc.go.kr/no010101/86259) — 2026년 1월 가계대출 동향(잠정).
 - [숨은 금융자산 “1.6조원”을 금융소비자에게 돌려드렸습니다.](https://www.fsc.go.kr/no010101/86258) — 숨은 금융자산 “1.6조원”을 금융소비자에게 돌려드렸습니다.
 - [모든 청년에게 재무상황(소득·자산·부채)에 따라 일대일 맞춤형으로 재무상담을 지원합니다](https://www.fsc.go.kr/no010101/86251) — 모든 청년에게 재무상황(소득·자산·부채)에 따라 일대일 맞춤형으로 재무상담을 지원합니다
 - [온 가족이 모인 설 명절, 보이스피싱 예방 행동수칙을 기억하세요!](https://www.fsc.go.kr/no010101/86250) — 온 가족이 모인 설 명절, 보이스피싱 예방 행동수칙을 기억하세요!
-- [생산적금융 금융 구조 세미나 및 금융발전심의회 연석회의 개최](https://www.fsc.go.kr/no010101/86231) — 생산적금융 금융 구조 세미나 및 금융발전심의회 연석회의 개최입니다.
-- [빗썸 사태 관련 금융위원장 주재 「점검회의」](https://www.fsc.go.kr/no010101/86229) — 빗썸 사태 관련 금융위원장 주재 「점검회의」입니다.
+- [생산적금융 금융 구조 세미나 및 금융발전심의회 연석회의 개최](https://www.fsc.go.kr/no010101/86231) — 생산적금융 금융 구조 세미나 및 금융발전심의회 연석회의 개최.
+- [빗썸 사태 관련 금융위원장 주재 「점검회의」](https://www.fsc.go.kr/no010101/86229) — 빗썸 사태 관련 금융위원장 주재 「점검회의」.
 - [단일종목 레버리지 ETF의 세부방안은 검토중입니다.](https://www.fsc.go.kr/no010102/86267) — 단일종목 레버리지 ETF의 세부방안은 검토중입니다.
-- [“신용사면시 고신용자의 점수 상승폭이 컸다는 보도는 사실이 아닙니다.”](https://www.fsc.go.kr/no010102/86256) — “신용사면시 고신용자의 점수 상승폭이 컸다는 보도는 사실이 아닙니다.”입니다.
-- [026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기”등 기사 관련](https://www.fsc.go.kr/no010102/86234) — 026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기”등 기사 관련입니다.
-- [“금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”](https://www.fsc.go.kr/no010102/86213) — “금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”입니다.
+- [“신용사면시 고신용자의 점수 상승폭이 컸다는 보도는 사실이 아닙니다.”](https://www.fsc.go.kr/no010102/86256) — “신용사면시 고신용자의 점수 상승폭이 컸다는 보도는 사실이 아닙니다.”.
+- [026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기”등 기사 관련](https://www.fsc.go.kr/no010102/86234) — 026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기”등 기사 관련.
+- [“금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”](https://www.fsc.go.kr/no010102/86213) — “금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”.
 - [정부는 대산 1호 프로젝트 사업재편 관련 절차를 차질없이 진행하고 있습니다.](https://www.fsc.go.kr/no010102/86210) — 정부는 대산 1호 프로젝트 사업재편 관련 절차를 차질없이 진행하고 있습니다.
 - [Publication,FSA publishes English translation of monthly magazine, Access FSA No.266](https://www.fsa.go.jp/en/newsletter/accessfsa2025/266.pdf) — 규제 당국 — Publication,FSA publishes English translation of monthly.
 - [Press Conferences,Press Conference by KATAYAMA Satsuki, Minister of State for Financial Services (February 3, 2026)](https://www.fsa.go.jp/en/conference/minister/2026/20260203.html) — Press Conferences,Press Conference by KATAYAMA Satsuki, Minister of State for Financial.
@@ -122,7 +123,7 @@ lang: "ko"
 - [UK Cryptoasset Regime: What to Know About the FCA Consultation Papers](https://news.google.com/rss/articles/CBMioAFBVV95cUxQZVVNM3BhVF84cm5oRVJVbU10T0lVV0R1LXJEOTAwNVM5cG1aOGhIRHc3T1d0ZC1iT3BCNGxyMDRYY0tKRXZxemJvMHJrb3pqX0hoSGZobEVnWV90X1c4REdxUVczeXl4WlBUZUF2d0pmR1F1VGRiWk5JYUhpd0RaNm9tZVNkcVpLbWgtVHRoLWkwWUFzY091NHU0U2NMeWdT?oc=5) — 암호화폐 — UK Cryptoasset Regime: What to Know About the FCA.
 - [Blockchain.com Gets OK From UK Crypto Regulators](https://news.google.com/rss/articles/CBMipgFBVV95cUxOMXpfMFpOMWJ5N2Vxc29DbWJ0bHcxWGdaVEdhZnFQdDQzcXhqbFZXMk5NU1J1R09nT2hKYkJ5WmpCbEVLZVNvMWIxZVQta1hwYWlZVTczRlNBN21yN2pCV01MT0J6OTV4YUMwMWJSY19WN1ZCTnVsekI0bUxua3VnRHR3WVVYek1yeUg1eWxGNnhzaXVMeVFpcmIzMm9XNkRDX1ZlSTJn?oc=5) — 암호화폐 — Blockchain.com Gets OK From UK Crypto Regulators.
 - [Why Is UK FCA Hammering Justin Sun's HTX In Crypto Marketing Showdown](https://news.google.com/rss/articles/CBMilwFBVV95cUxNY1RDcUI5UFhXUklFclE4MEk5Q3V1a3M2T182c1Z3bTNrVV9xVTdzb2dHcGtsQnRGaXFwMUlOeHQzRFR6R2JBWmpWU0t2RWlCTG1DVTFCRmZ0dUtKWEVxeHNVNGUxNFVRTEFiZDgwRlVZQ19vWmRKQ2cwaFplaUlSLVNqcFNpMFZkb0s2M2lTd3g2OF9UTGJ3?oc=5) — 다우존스 — Why Is UK FCA Hammering Justin Sun's HTX In Crypto.
-- [“디지털자산거래소 ‘공동 기금’ 및 수수료 체계 개편 등은 논의된 바 없습니다.”](https://www.fsc.go.kr/no010102/86162) — “디지털자산거래소 ‘공동 기금’ 및 수수료 체계 개편 등은 논의된 바 없습니다.”입니다.
+- [“디지털자산거래소 ‘공동 기금’ 및 수수료 체계 개편 등은 논의된 바 없습니다.”](https://www.fsc.go.kr/no010102/86162) — “디지털자산거래소 ‘공동 기금’ 및 수수료 체계 개편 등은 논의된 바 없습니다.”.
 - [CFTC, 30 State Regulators Obtain Over $51 Million in Sanctions, Restitution for Victims in California Precious Metals Fraud](https://www.cftc.gov/PressRoom/PressReleases/9139-25) — 규제 당국 — CFTC, 30 State Regulators Obtain Over $51 Million.
 - [CFTC Sanctions Trading Firm $212,500 for Wash Sales](https://www.cftc.gov/PressRoom/PressReleases/9125-25) — 규제 당국 — CFTC Sanctions Trading Firm $212,500 for Wash Sales.
 - [CFTC Chairman Selig Announces Alex Titus as Chief Advisor](https://www.cftc.gov/PressRoom/PressReleases/9173-26) — 규제 당국 — CFTC Chairman Selig Announces Alex Titus as Chief Advisor.

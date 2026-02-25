@@ -30,11 +30,11 @@ image: "/assets/images/generated/market-heatmap-2026-02-20.png"
 - [CoinMarketCap](https://coinmarketcap.com/) — Coin.
 - [FRED](https://fred.stlouisfed.org/series/FEDFUNDS) — FRED.
 - [10Y Treasury](https://fred.stlouisfed.org/series/DGS10) — 기관 매수·매도 — 10Y Treasury.
-- [CPI](https://fred.stlouisfed.org/series/CPIAUCSL) — 거시 지표 — CPI입니다.
+- [CPI](https://fred.stlouisfed.org/series/CPIAUCSL) — 거시 지표 — CPI.
 - [Fear & Greed Index](https://alternative.me/crypto/fear-and-greed-index/) — 시장 심리 — Fear & Greed Index.
 - [Investing.com KOSPI](https://kr.investing.com/indices/kospi) — 코스피 — Investing.com KOSPI.
 - [Yahoo Finance](https://finance.yahoo.com/) — Yahoo Finance.
-- [FRED](https://fred.stlouisfed.org/) — > *본 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다.*입니다.
+- [FRED](https://fred.stlouisfed.org/) — > *본 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다.*.
 
 ## 오늘의 핵심
 

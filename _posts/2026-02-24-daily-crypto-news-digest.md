@@ -37,6 +37,7 @@ description: "2026-02-24 암호화폐 시장에서 113건의 뉴스를 분석했
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **113건** 수집
@@ -69,7 +70,7 @@ description: "2026-02-24 암호화폐 시장에서 113건의 뉴스를 분석했
 - [Crypto exchange Binance may have funded Iranian entities, reports say](https://news.google.com/read/CBMigAFBVV95cUxOemROdXcwRHpHcTFTWnpWQzBkaUFGN2txNjI0OHQ1c2lGVm9yaFBhZXA0WXFHeEVGZ3lUcFduRkRjYU9FcXdrdEwzdmRoczE5REFBLXRNYVFhdjlDb0U4TTV6MlNkVlQ5Zi1pbENBNWxPeWNOS0JUNVZVeGprRDdIZQ?hl=en-US&gl=US&ceid=US%3Aen) — 거래소 — Crypto exchange Binance may have funded Iranian entities.
 - [Binance Employees Find $1.7 Billion in Crypto Was Sent to Iranian Entities](https://news.google.com/rss/articles/CBMiiAFBVV95cUxQSnlzQ1lkdW5nTmhtc3JkT3BNWERLQ1p3VW0zc19WTGhESWZxVzY0V01jLWM4UFk2cUpES1lVZkFiVjg1VklJYnRHS3pkWkNFOS1hbXd4YmkybnA2SXhmTFJpdW1QWVRENGdaZHZkcW85Sk1iaWtJN0hfMWFDUmFQTUlUWmE2QU9D?oc=5) — 거래소 — Binance Employees Find $1.7 Billion in Crypto Was Sent.
 - [Crypto exchange Binance may have funded Iranian entities, reports say](https://news.google.com/rss/articles/CBMigAFBVV95cUxOemROdXcwRHpHcTFTWnpWQzBkaUFGN2txNjI0OHQ1c2lGVm9yaFBhZXA0WXFHeEVGZ3lUcFduRkRjYU9FcXdrdEwzdmRoczE5REFBLXRNYVFhdjlDb0U4TTV6MlNkVlQ5Zi1pbENBNWxPeWNOS0JUNVZVeGprRDdIZQ?oc=5) — 거래소 — Crypto exchange Binance may have funded Iranian entities.
-- [바이낸스(Binance)의 비트코인(BTC) 잔고, 2024년 11월 이후 최고치 기록: 그 의미는 무엇인가](https://news.google.com/rss/articles/CBMixgFBVV95cUxPV2drZ0dnd2NXR3BQOFl6SHlkTDhudG5KQ2RPX3ZVWmstMWlNUHA3VEJjMEhHUGNSOEkzMW96SnNrQnhFUzVPLXVWMHRtV3k2aWswbHhQbjl1aElwNWVmZWxWWTY4YTg1bjRXZ215UzZ5UG9UZmtDaTNoRXgxeEY4WWpfS1ZLenl4WGFsQmN4anhRWEFvNzlTZ1kzLUJLUkRvSkllTmh3UTI2cXJuYkhrY2tRX29Wb2wzMTMtRWlTbmd1Z2JjcWc?oc=5) — 바이낸스(Binance)의 비트코인(BTC) 잔고, 2024년 11월 이후 최고치 기록: 그 의미는 무엇인가입니다.
+- [바이낸스(Binance)의 비트코인(BTC) 잔고, 2024년 11월 이후 최고치 기록: 그 의미는 무엇인가](https://news.google.com/rss/articles/CBMixgFBVV95cUxPV2drZ0dnd2NXR3BQOFl6SHlkTDhudG5KQ2RPX3ZVWmstMWlNUHA3VEJjMEhHUGNSOEkzMW96SnNrQnhFUzVPLXVWMHRtV3k2aWswbHhQbjl1aElwNWVmZWxWWTY4YTg1bjRXZ215UzZ5UG9UZmtDaTNoRXgxeEY4WWpfS1ZLenl4WGFsQmN4anhRWEFvNzlTZ1kzLUJLUkRvSkllTmh3UTI2cXJuYkhrY2tRX29Wb2wzMTMtRWlTbmd1Z2JjcWc?oc=5) — 바이낸스(Binance)의 비트코인(BTC) 잔고, 2024년 11월 이후 최고치 기록: 그 의미는 무엇인가.
 - [The rise of Polymarket, the cryptocurrency-based betting site for current events](https://news.google.com/rss/articles/CBMi4gFBVV95cUxPd29SeDlNMHZ6VEREeTRRMDVVdVp3Rk1namMxUVRzSGVJRDlyN3pEd3AyQVJTaHRkS1FHZkVMX2F4dG1yVmNfbW5EMkJscjZwYS1OLTl6N3pTUkc5cExlbjRXTnFkdkMwV2hQekpaUXhzSmE0MmVCTzg3SWtVNV9hcmt1c3p2bno1ZWI1REw5SFVPZllDQmtZMlVyQVpMRHBIbGt3TUdjUXlQV3VPM3lpVmFRVmZadnRzZXg4ZVJNZmlENkw5ako5UWJxQ0VrYWt6Q1pXNVJsakJ0WDVKeFEyNTFB?oc=5) — 암호화폐 상승 — The rise of Polymarket, the cryptocurrency-based betting.
 - [솔라나 5.6%·이더리움 4.6% 하락 비트코인 등 시세는?](https://news.google.com/rss/articles/CBMiVEFVX3lxTE5JYUUyVWk5UjV6TFE1SFFJZWxKNVFoV1NVQlFOQ1FHcVlFZzVBN0xmRDZUR3BPUmIwbC1WY2Jabkg4OVRVbGdFcWxFRzJwZllaV3hNcQ?oc=5) — 솔라나 5.6%·이더리움 4.6% 하락 비트코인 등 시세는?
 - [Ethereum Founder Vitalik Buterin Continues ETH Selling Spree](https://decrypt.co/358839/ethereum-founder-vitalik-buterin-continues-eth-selling-spree) — 이더리움 매수·매도 — Ethereum Founder Vitalik Buterin Continues ETH Selling Spree.

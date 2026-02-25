@@ -65,6 +65,7 @@ excerpt: "BTC 추가 하락 $50K 전망, XRP 강세 속 크래시 대응, Apollo
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **87건** 수집
@@ -102,8 +103,8 @@ excerpt: "BTC 추가 하락 $50K 전망, XRP 강세 속 크래시 대응, Apollo
 - [Here’s what happened in crypto today](https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound) — 암호화폐 — Here’s what happened in crypto today.
 - [Better Cryptocurrency to Buy With $3,000 and Hold for 5 Years: XRP vs. Ethereum](https://news.google.com/rss/articles/CBMimwFBVV95cUxPTFhDN0xxcHdnbkQ2N2FMNm1qUGtXNzdJbDJYSDl6dmh4LW5kdHhONUQtNU4tV0lTei1yUWllWGJ4R3QzTWNzaklHU1p4dEx3RGxxZ1ZhMVQ5dF93RExfWkFlUmtPWG4wV1ktMWVlRjUwNjFTSzAtaDZfOUNQOHNYOWxmU2VnUjZGdFRQWEN4TUJTZDhCZy1mR215MA?oc=5) — 이더리움 매수·매도 — Better Cryptocurrency to Buy With $3,000 and Hold for 5.
 - [암호화폐 도지코인 하루 20% 급등 비트코인·이더리움 압도한 이유는?](https://news.google.com/rss/articles/CBMiVkFVX3lxTE5JZ2VfUGIwRGVFemV4aW5GbTZId1U1bFlZeGpmSzJ1bzVfZE1adEVWN2wyT3NlZzNqWGJWVTRQd2FOU3l2REtaZXlEZGlLbGtJTjRjeUd3?oc=5) — 암호화폐 도지코인 하루 20% 급등 비트코인·이더리움 압도한 이유는?
-- [트럼프 미디어, 비트코인·이더리움·크로노스 기반 2개 암호화폐 ETF 신청](https://news.google.com/rss/articles/CBMic0FVX3lxTE1Ed3NqOVhRcVFkWF9ZOUJiY3ktUTZRSDdrQ19uNFVkMEpKUm5xd2ZXLTgzMUNKT1ZIc3JMUGsxblBuRU9FYWFOQnRqZEFtWUpyVFZGOGxsSDRicWlsX2oxV0pkdDNvVkptT1Jra2NBeUdwaTA?oc=5) — 트럼프 미디어, 비트코인·이더리움·크로노스 기반 2개 암호화폐 ETF 신청입니다.
-- [[가상화폐 시세] 비트코인 1억원선엑스알피 2100원선, 이더리움 290만원선 거래](https://news.google.com/rss/articles/CBMib0FVX3lxTE15ZTZtSmtYMnZpb1NwVlhoWlIxTHhYNklJZk5aQ2lhS3g5QlNlUjdRZ2pmcjJvemRQQVJfd09OVVI0bnM5QmdTZmVReEhBbExpR2dpLUVsWlNpU1VFMlNHc0t3THJaRXdrOU8xemlzQQ?oc=5) — [가상화폐 시세] 비트코인 1억원선엑스알피 2100원선, 이더리움 290만원선 거래입니다.
+- [트럼프 미디어, 비트코인·이더리움·크로노스 기반 2개 암호화폐 ETF 신청](https://news.google.com/rss/articles/CBMic0FVX3lxTE1Ed3NqOVhRcVFkWF9ZOUJiY3ktUTZRSDdrQ19uNFVkMEpKUm5xd2ZXLTgzMUNKT1ZIc3JMUGsxblBuRU9FYWFOQnRqZEFtWUpyVFZGOGxsSDRicWlsX2oxV0pkdDNvVkptT1Jra2NBeUdwaTA?oc=5) — 트럼프 미디어, 비트코인·이더리움·크로노스 기반 2개 암호화폐 ETF 신청.
+- [[가상화폐 시세] 비트코인 1억원선엑스알피 2100원선, 이더리움 290만원선 거래](https://news.google.com/rss/articles/CBMib0FVX3lxTE15ZTZtSmtYMnZpb1NwVlhoWlIxTHhYNklJZk5aQ2lhS3g5QlNlUjdRZ2pmcjJvemRQQVJfd09OVVI0bnM5QmdTZmVReEhBbExpR2dpLUVsWlNpU1VFMlNHc0t3THJaRXdrOU8xemlzQQ?oc=5) — [가상화폐 시세] 비트코인 1억원선엑스알피 2100원선, 이더리움 290만원선 거래.
 - [Latest ActivitiesFind promotions that interest you.](https://www.binance.com/en/support/announcement/list/93) — 거래소: Binance.
 - [New Fiat ListingsSee which new fiat-to-crypto trading pairs are available on Binance.](https://www.binance.com/en/support/announcement/list/50) — 거래소: Binance.
 - [API UpdatesLearn latest news on API updates.](https://www.binance.com/en/support/announcement/list/51) — 거래소: Binance.

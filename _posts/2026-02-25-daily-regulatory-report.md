@@ -21,11 +21,47 @@ description: "전 세계 금융 규제기관의 최신 동향을 정리합니다
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://www.fsc.go.kr/no010101/86297">다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
-- 총 **36건** 가운데 **규제/정책, 거래소, 비트코인** 테마 비중이 높았습니다.
-- **우선순위 이슈**: P0 1건, P1 16건
-- **주요 지역**: 한국 28건, 미국 3건
+- 총 **36건** 수집
+- 주요 테마: 🔵 규제/정책, 🏦 거래소, 🟠 비트코인
+- 한국: 28건
+- 미국: 3건
+
+
+## 내용 분석
+
+- 총 36건의 뉴스 중 🔵 규제/정책, 🏦 거래소 테마가 가장 많은 비중을 차지합니다.
+- 긴급 이슈 1건이 감지되어 우선 확인이 필요합니다.
+- 본문은 핵심 요약, 전체 뉴스 요약, 규제 인사이트 등 4개 섹션으로 구성되어 있습니다.
+
+
+## URL 요약
+
+- [다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최](https://www.fsc.go.kr/no010101/86297) — 다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최.
+- [WisdomTree Digital Trust, et al.](https://news.google.com/rss/articles/CBMiYkFVX3lxTFA4WUtPZVFoQTUtWDFDLWswTm9tZWZHT1FoWDhBSDNuaGhkdFZCSmZkNkFmSFZ4cjhRaE5KSVVpNndyN1htbHFwSHV2RVZWTHFqUWwwd05XeTYzZkN0bERjSG53?oc=5) — Wisdom.
+- [securities and exchange commission - SEC.gov](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWkpVWGdEQWZvaHlZUmdDYVJzbFVfbV8tdHBOSkxmLUR2ME9GOTRkZnZTM1QwRVU1elI3MWg2WGlVTVFScTZBcF9vbUM1d0ljSFE1NnlPVGZGTFJpdkVEckx0clVDalZ1ZVBMTEVOOUdDaTRPcFdmODZ1NTR0WHBrN0NtQ3FrOUN0?oc=5) — 규제 당국 — securities and exchange commission.
+- [CFTC Chairman Selig Announces Senior Staff Appointments](https://www.cftc.gov/PressRoom/PressReleases/9184-26) — 규제 당국 — CFTC Chairman Selig Announces Senior Staff Appointments.
+- [석유화학산업 사업재편 1호 프로젝트 승인, 금융·세제·원가 등 2.1조원 이상 지원패키지 제공](https://www.fsc.go.kr/no010101/86328) — 석유화학산업 사업재편 1호 프로젝트 승인, 금융·세제·원가 등 2.1조원 이상 지원패키지 제공.
+- [금융시장이 기업의 녹색 전환(GX)을 뒷받침하겠습니다. - 이억원 금융위원장, 제4차 생산적금융 대전환 회의 개최 -](https://www.fsc.go.kr/no010101/86326) — 금융시장이 기업의 녹색 전환(GX)을 뒷받침하겠습니다.
+- [배당소득 과세특례 대상기업의 기업가치 제고계획 공시 및 지원방안 안내 - 조세특례제한법 시행령 개정안 국무회의 의결 -](https://www.fsc.go.kr/no010101/86322) — 배당소득 과세특례 대상기업의 기업가치 제고계획 공시 및 지원방안 안내 - 조세특례제한법 시행령 개정안 국무회의 의결 -.
+- [2025년 4분기 공적자금 운용현황](https://www.fsc.go.kr/no010101/86321) — 2025년 4분기 공적자금 운용현황.
+- [- 2026년도 AML/CFT 교육운영방향 발표](https://www.fsc.go.kr/no010101/86319) — - 2026년도 AML/CFT 교육운영방향 발표.
+- [공적자금관리위원회 민간위원 위촉](https://www.fsc.go.kr/no010101/86316) — 공적자금관리위원회 민간위원 위촉.
+- [생산적 금융지원, 영업규제 완화, 건전성 강화를 위한 「저축은행 건전 발전방안」 마련 - 금융위원장, 저축은행 CEO 정책간담회 -](https://www.fsc.go.kr/no010101/86312) — 생산적 금융지원, 영업규제 완화, 건전성 강화를 위한 「저축은행 건전 발전방안」 마련 - 금융위원장, 저축은행 CEO 정책간담회 -.
+- [금융정보분석원, 국제자금세탁방지기구(FATF) 총회 참석](https://www.fsc.go.kr/no010101/86301) — 금융정보분석원, 국제자금세탁방지기구(FATF) 총회 참석.
+- [금융위원회 인사 보도(팀장급)](https://www.fsc.go.kr/no010101/86298) — 금융위원회 인사 보도(팀장급).
+- [“다주택자·임대사업자 대출연장 개선방안은 확정된 바 없습니다”](https://www.fsc.go.kr/no010102/86307) — “다주택자·임대사업자 대출연장 개선방안은 확정된 바 없습니다”.
+- [단일종목 레버리지 ETF의 세부방안은 검토중입니다.](https://www.fsc.go.kr/no010102/86267) — 단일종목 레버리지 ETF의 세부방안은 검토중입니다.
+- [“신용사면시 고신용자의 점수 상승폭이 컸다는 보도는 사실이 아닙니다.”](https://www.fsc.go.kr/no010102/86256) — “신용사면시 고신용자의 점수 상승폭이 컸다는 보도는 사실이 아닙니다.”.
+- [026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기 ”등 기사 관련](https://www.fsc.go.kr/no010102/86234) — 026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기 ”등 기사 관련.
+- [“금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”](https://www.fsc.go.kr/no010102/86213) — “금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”.
+- [Press Conferences,Press Conference by KATAYAMA Satsuki, Minister of State for Financial Services (February 13, 2026)](https://www.fsa.go.jp/en/conference/minister/2026/20260213.html) — Press Conferences,Press Conference by KATAYAMA Satsuki, Minister of State for Financial.
+- [Press Conferences,Press Conference by KATAYAMA Satsuki, Minister of State for Financial Services (February 10, 2026)](https://www.fsa.go.jp/en/conference/minister/2026/20260210.html) — Press Conferences,Press Conference by KATAYAMA Satsuki, Minister of State for Financial.
+- [Publication,FSA Weekly Review No.676 February 24, 2026](https://www.fsa.go.jp/en/newsletter/weekly2026/676.html) — 규제 당국 — Publication,FSA Weekly Review No.676 February 24, 2026.
+- [ESMA warns crypto perpetual derivatives likely fall under CFD rules](https://news.google.com/rss/articles/CBMiywFBVV95cUxNTm1haUJsenpZR2k4Uk5TbDBPelpWeHlrcTZjbTRoRmRneEN3TWZqUGlaSHR0UThZUlJoY0R2MHYxTVo3bkZDQktXaFlWdXdNTDljYVlfVDRuclMtRWl5c1ZTcXZjZTl2dFV2d21nMTBXUl82ODlyNDkxYjRNRTRlSUlsQ0g4Z0w0aTBiU2xDNHFET3BOVzkwZkViTWVfWnA1NEhrWGsweU55SUNHUkpUd0pEUHYwdWFrbktzNV9FblJZX3NjSG9OTXI4OA?oc=5) — 암호화폐 하락 — ESMA warns crypto perpetual derivatives likely fall under.
+- [Crypto Leverage Regulation: ESMA’s Critical Move to Classify Derivatives as CFDs](https://news.google.com/rss/articles/CBMif0FVX3lxTFBraENRZGZwYm1EVS1Mal9EWU9iMTFQTUdERzZZa1JYckE0c29JVU5CT1g0azNBOXdiS01sZHYzMUtWM0RNVW8ySEZyOUR6eFQ2ZGNtblY3MFM3VXMzUkltRGpQdERrV1VqLTFJTzZnMkhiQl9yU1BDS09VWWlCQUE?oc=5) — 규제·정책 — Crypto Leverage Regulation: ESMA’s Critical Move.
 
 ## 핵심 요약
 

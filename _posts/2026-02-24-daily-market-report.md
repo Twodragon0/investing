@@ -42,6 +42,39 @@ description: "암호화폐 시장이 하락세를 보이고 있습니다. 단기
 - **KOSDAQ**: 1,164.78 (+0.98%)
 - **USD/KRW 환율**: 1,444.50 (-0.25%)
 
+
+## 전체 뉴스 요약
+
+- 극도의 공포 장세: 공포/탐욕 지수 8으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다.
+- 비트코인 $62,975 하락: 24h 기준 -3.08% 변동, 주간 -7.96% 하락.
+- 시가총액 $2.25T으로 하락: 전일 대비 -2.41%. BTC 도미넌스 55.8%로 비트코인 중심 자금 흐름 지속.
+- 암호화폐 시장이 하락세를 보이고 있습니다. 단기 조정 가능성을 염두에 두고 리스크 관리가 필요합니다.
+
+
+## 내용 분석
+
+- 본문은 오늘의 핵심, 전체 뉴스 요약, 오늘의 시장 인사이트 등 4개 섹션으로 구성되어 있습니다.
+- 총 15개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.
+
+
+## URL 요약
+
+- [Bitcoin spot ETFs saw a net outflow of $316 million last week, marking five consecutive weeks of net outflows.](https://news.google.com/rss/articles/CBMiXkFVX3lxTE9SeVZSOUlmRjFSU0l0ZmExXzl4a25pSXN4UGltLXNSMGtCdXZQYkZBY0h4RGVCM0xVUWRpeFA2STRocmFxclRHRm9GYzJKZzVvNUxiMUJCZGxyQ1hhRHfSAWNBVV95cUxNSE43dkQ3YnhFdnNVUmJpMnhwVnJqOFEzSjh2OURvOU1ZbEQ1YlZ4RXUzRDZNa1pGaXB2UDJzbFFGdmh6NGM4MXpEODFkN243eUQwOXhtWlZ3STNJZWpBQ1dISTA?oc=5) — 온체인 이동 — Bitcoin spot ETFs saw a net outflow of $316 million last.
+- [비트코인 현물 ETF, 4개월 연속 순유출 전망 금 ETF로 자금 이동](https://news.google.com/rss/articles/CBMiUEFVX3lxTE9Pck8yQXJiSTNmWk1qRkJTclFXMTgxNnNnLUViQ3RSMmNzVE55TWp2Z1dnOEplc216TkxNNVJXdGdkR3lmczhJcXpVME0tOFFl?oc=5) — 비트코인 현물 ETF, 4개월 연속 순유출 전망 금 ETF로 자금 이동.
+- [비트코인 현물 ETF, 연초부터 45억달러 유출 기관투자자 이탈 가속](https://news.google.com/rss/articles/CBMic0FVX3lxTE5EUjd2aGtPejlrQzBhRC1jb1J0TkJJRk5kRDNqZ1pIZ29wR0JWM3ZWVG5Gc242OFRKNmc3b0Jxa0J4MDVmMlpVQWdfaGxUdnBtSEhNdHRmdzdDOTBoeXNBWHQ0SDYwZURpbDZHWUNpVE9NcXc?oc=5) — 비트코인 현물 ETF, 연초부터 45억달러 유출 기관투자자 이탈 가속.
+- [미국 비트코인 현물 ETF 자금 유출세 5주째 지속](https://news.google.com/rss/articles/CBMibEFVX3lxTE1aQVpITjlBcjBOZ1p2VjE0enlNYmtJSzBQWHJLNGFuTVBmYThwakMyQ3hYbm1SdGxXMHNwNlJqRjFQWlMtaGxQX2dyempZYzRRRWZLeXpGd01nbnVwY0IwUjZSaHhGMnY2dG9fRA?oc=5) — 미국 비트코인 현물 ETF 자금 유출세 5주째 지속.
+- [Whale's $760M BTC Influx to Binance Amplifies Exchange Risk](https://news.google.com/rss/articles/CBMizgFBVV95cUxOUk1XRTdrUkMxT29Vc3pwSlpuTXItb2NNLXlNZDBoc05iMlRXczlNZlhRdWZhazMwZ0hPRHJVSnBkWnJ2QWlVSmhXZEM2cEdzSzFJd01KakJkcmFHb0RZWDdWaWlUa1hTM3JyRXlHOXR0VXlXWDUwc0NvcnNXUnVtMTFvU3haUzdpY0ZmRjJacWtRNW5YdXpkZC1RQVMxVGN0cVJhZjNCZFl5MGRMY1AzUWNNVUNDZFlEVjFTbVFQUUFBMlpteFZOVm52cmM2UQ?oc=5) — 온체인 이동 — Whale's $760M BTC Influx to Binance Amplifies Exchange Risk.
+- [Ethereum Whale’s Strategic Exit: $338K Profit Realized in Calculated 3.3K ETH Sell-Off After Two-Year Hold](https://news.google.com/rss/articles/CBMid0FVX3lxTFBXeVdHR25GSEE1d2xvekZ2ZDViZldtYlpIWFRWUWVOaFdmbUFSS2M0TTBvTTJUSHEzNWh6dEtFTDNzVUpiS3pQQzNBQnZ6R09ITGN2QzZPakZPOWlrSGR2T19oRU9vdDhiMjZ4LUJ3TFZ2RnA2cVM4?oc=5) — 이더리움 하락 — Ethereum Whale’s Strategic Exit: $338K Profit Realized.
+- [FRED](https://fred.stlouisfed.org/series/FEDFUNDS) — FRED.
+- [FRED - 10-Year Treasury](https://fred.stlouisfed.org/series/DGS10) — 기관 매수·매도 — FRED - 10-Year Treasury.
+- [FRED](https://fred.stlouisfed.org/series/CPIAUCSL) — FRED.
+- [FRED](https://fred.stlouisfed.org/series/VIXCLS) — FRED.
+- [CoinGecko](https://www.coingecko.com/) — Coin.
+- [Alternative.me](https://alternative.me/crypto/fear-and-greed-index/) — Alternative.me.
+- [Investing.com](https://kr.investing.com/indices/kospi) — Investing.com.
+- [Yahoo Finance](https://finance.yahoo.com/) — Yahoo Finance.
+- [FRED](https://fred.stlouisfed.org/) — > *본 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다.
+
 ## 퀀트 시그널 요약
 
 - BTC 모멘텀: 24h -3.08%, 7d -7.96% (하락 추세)

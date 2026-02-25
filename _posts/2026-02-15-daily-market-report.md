@@ -67,6 +67,7 @@ image: "/assets/images/generated/market-heatmap-2026-02-15.png"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 극도의 공포 장세: 공포/탐욕 지수 8으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다.
@@ -83,9 +84,9 @@ image: "/assets/images/generated/market-heatmap-2026-02-15.png"
 
 ## URL 요약
 
-- [비트코인, 심상찮은 ETF 자금 이탈에 '하락장 초입' 전망](https://news.google.com/rss/articles/CBMidEFVX3lxTFB0V2ZfcWN6MVFkd3Y4NE5LVUllUXcxWkM1OTJkckRVMTNPTFl1NzlMZmcwb04zMVptWmVGV29ZVUoydE9sdWVZWmtpSDZRalNaRERKNjBBX25WX0VGQ0dyeVNXLUtWUEY1Um5YOFUwSWxuWVFl?oc=5) — 비트코인, 심상찮은 ETF 자금 이탈에 '하락장 초입' 전망입니다.
+- [비트코인, 심상찮은 ETF 자금 이탈에 '하락장 초입' 전망](https://news.google.com/rss/articles/CBMidEFVX3lxTFB0V2ZfcWN6MVFkd3Y4NE5LVUllUXcxWkM1OTJkckRVMTNPTFl1NzlMZmcwb04zMVptWmVGV29ZVUoydE9sdWVZWmtpSDZRalNaRERKNjBBX25WX0VGQ0dyeVNXLUtWUEY1Um5YOFUwSWxuWVFl?oc=5) — 비트코인, 심상찮은 ETF 자금 이탈에 '하락장 초입' 전망.
 - [“1년치만 보고 ’비트코인= 디지털 금‘ 아니다? 터무니 없다”](https://news.google.com/rss/articles/CBMic0FVX3lxTFAyRUh0azVYQmpKalppeHc1aWQ0SE1sb2RXLUdtZDdjOGJwN2ZXeHVIYnUzdmlTUDVIWlRIVmszeUU3ajhCbmZ1cm5ldVd5bGxXem13T3RNQV9kR3ZELWlYUVJycGZtaFNjVENQcUtub0h1SWc?oc=5) — “1년치만 보고 ’비트코인= 디지털 금‘ 아니다?
-- [미국 비트코인 ETF, 5935억원 순유출7일 만에 최대치](https://news.google.com/rss/articles/CBMickFVX3lxTE5oRExrS1Q0eHl5Vkt6SEJDTzlkV3c2bUhwRGltcmpHemNORUh1bDYzOTJfbUtnMUI2ZF9KWURVdERNczZZUFhRT2Eta3VLeF9tNGtVRXdjdU1SNGdneV85U1Vlb3A1MGkwb2VFUmdSbkE3d9IBdkFVX3lxTFA2NTNSMUJ6Zzk0WDBweXJyWlhrbDFUUXFDQU02SFJYVTJOVFZhMk40Z1BVNXA1bFJxZ0NqUHp3N3hXNnIxVjB6b1M4Z3h3dGtRSGEyR3JrVmtFMUtZR19iVThTNXBiWFpCVHVVS1pZX2NnM0dxUXc?oc=5) — 미국 비트코인 ETF, 5935억원 순유출7일 만에 최대치입니다.
+- [미국 비트코인 ETF, 5935억원 순유출7일 만에 최대치](https://news.google.com/rss/articles/CBMickFVX3lxTE5oRExrS1Q0eHl5Vkt6SEJDTzlkV3c2bUhwRGltcmpHemNORUh1bDYzOTJfbUtnMUI2ZF9KWURVdERNczZZUFhRT2Eta3VLeF9tNGtVRXdjdU1SNGdneV85U1Vlb3A1MGkwb2VFUmdSbkE3d9IBdkFVX3lxTFA2NTNSMUJ6Zzk0WDBweXJyWlhrbDFUUXFDQU02SFJYVTJOVFZhMk40Z1BVNXA1bFJxZ0NqUHp3N3hXNnIxVjB6b1M4Z3h3dGtRSGEyR3JrVmtFMUtZR19iVThTNXBiWFpCVHVVS1pZX2NnM0dxUXc?oc=5) — 미국 비트코인 ETF, 5935억원 순유출7일 만에 최대치.
 - [Bitcoin ETFs Bleed $410M as IBIT ETF by BlackRock Suffers the Largest Loss](https://news.google.com/rss/articles/CBMingFBVV95cUxPNG9IUWY1RDQxbWo3M1VEbVdDSEdvOTZJX0VXZm40UVhNYjItOEQyX2RBbnBBeDdXMTh1bGM3eTdEdXpGcFJCUmZtdDdTRDg2SkxPT0JPczBIOFdBTEtHaFZPU1BmdmlaZFFydW5sbXhNX3dTQ1JtdEJGREpoNVE5N0NBUlFmc0kwSlloV0ZZc2JMZkxLZndoZGUyOXFUUQ?oc=5) — 비트코인 — Bitcoin ETFs Bleed $410M as IBIT ETF by Black.
 - [Bitcoin Whale Alert – Massive $559M BTC Inflow to Binance Sparks Market Volatility Concerns](https://news.google.com/rss/articles/CBMivAFBVV95cUxPUkdrVzNJN2dNeUV5cE10U3JjUDJzeVROd0FMQWc0clVVajRLWFNGRDVEcTlZWjg2cWw4WXE5NnpEQnM5V2x5MXhSTDhZd1hWQTdId2VrMUtFeW8ybEV5ZmI2Q1JhX09tSkdDalBJeHczeGFTYUVkenNzMzFTYkxnblVoSHBnYzNrdDJsVmtkUEFhS1dYVjJ3XzYyVkcxVkFsUU1jYUZBVmVWdzQwQ2pkdXZqNVRoVFNsNlBpVQ?oc=5) — 온체인 이동 — Bitcoin Whale Alert – Massive $559M BTC Inflow to Binance.
 - [FRED](https://fred.stlouisfed.org/series/FEDFUNDS) — FRED.

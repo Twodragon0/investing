@@ -45,6 +45,7 @@ lang: "ko"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **100건** 수집
@@ -78,20 +79,20 @@ lang: "ko"
 - [CFTC Designates Xchange Alpha LLC as a Contract Market](https://www.cftc.gov/PressRoom/PressReleases/9177-26) — 규제 당국 — CFTC Designates Xchange Alpha LLC as a Contract Market.
 - [CFTC Staff Issues Interpretation on Legacy Swap Status](https://www.cftc.gov/PressRoom/PressReleases/9176-26) — 규제 당국 — CFTC Staff Issues Interpretation on Legacy Swap Status.
 - [全 금융업권 참여로 예금보험기금 저축은행 특별계정 1년 연장을 추진합니다.](https://www.fsc.go.kr/no010101/86263) — 全 금융업권 참여로 예금보험기금 저축은행 특별계정 1년 연장을 추진합니다.
-- [금융정보분석원, 카지노 업권 대상 자금세탁방지 간담회 개최](https://www.fsc.go.kr/no010101/86262) — 금융정보분석원, 카지노 업권 대상 자금세탁방지 간담회 개최입니다.
-- [본격 가동하는 국민성장펀드, 지역 현장에서 지역‧산업계와 소통합니다 (1일차 : 광주‧전남 지역)](https://www.fsc.go.kr/no010101/86261) — 본격 가동하는 국민성장펀드, 지역 현장에서 지역‧산업계와 소통합니다 (1일차 : 광주‧전남 지역)입니다.
-- [2026년 1월 가계대출 동향(잠정)](https://www.fsc.go.kr/no010101/86259) — 2026년 1월 가계대출 동향(잠정)입니다.
+- [금융정보분석원, 카지노 업권 대상 자금세탁방지 간담회 개최](https://www.fsc.go.kr/no010101/86262) — 금융정보분석원, 카지노 업권 대상 자금세탁방지 간담회 개최.
+- [본격 가동하는 국민성장펀드, 지역 현장에서 지역‧산업계와 소통합니다 (1일차 : 광주‧전남 지역)](https://www.fsc.go.kr/no010101/86261) — 본격 가동하는 국민성장펀드, 지역 현장에서 지역‧산업계와 소통합니다 (1일차 : 광주‧전남 지역).
+- [2026년 1월 가계대출 동향(잠정)](https://www.fsc.go.kr/no010101/86259) — 2026년 1월 가계대출 동향(잠정).
 - [숨은 금융자산 “1.6조원”을 금융소비자에게 돌려드렸습니다.](https://www.fsc.go.kr/no010101/86258) — 숨은 금융자산 “1.6조원”을 금융소비자에게 돌려드렸습니다.
 - [모든 청년에게 재무상황(소득·자산·부채)에 따라 일대일 맞춤형으로 재무상담을 지원합니다](https://www.fsc.go.kr/no010101/86251) — 모든 청년에게 재무상황(소득·자산·부채)에 따라 일대일 맞춤형으로 재무상담을 지원합니다
 - [온 가족이 모인 설 명절, 보이스피싱 예방 행동수칙을 기억하세요!](https://www.fsc.go.kr/no010101/86250) — 온 가족이 모인 설 명절, 보이스피싱 예방 행동수칙을 기억하세요!
-- [생산적금융 금융 구조 세미나 및 금융발전심의회 연석회의 개최](https://www.fsc.go.kr/no010101/86231) — 생산적금융 금융 구조 세미나 및 금융발전심의회 연석회의 개최입니다.
-- [빗썸 사태 관련 금융위원장 주재 「점검회의」](https://www.fsc.go.kr/no010101/86229) — 빗썸 사태 관련 금융위원장 주재 「점검회의」입니다.
-- [「빗썸 비트코인 오지급」 관련 「긴급 점검회의」 개최](https://www.fsc.go.kr/no010101/86228) — 「빗썸 비트코인 오지급」 관련 「긴급 점검회의」 개최입니다.
-- [“신용사면시 고신용자의 점수 상승폭이 컸다는 보도는 사실이 아닙니다.”](https://www.fsc.go.kr/no010102/86256) — “신용사면시 고신용자의 점수 상승폭이 컸다는 보도는 사실이 아닙니다.”입니다.
-- [026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기”등 기사 관련](https://www.fsc.go.kr/no010102/86234) — 026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기”등 기사 관련입니다.
-- [“금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”](https://www.fsc.go.kr/no010102/86213) — “금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”입니다.
+- [생산적금융 금융 구조 세미나 및 금융발전심의회 연석회의 개최](https://www.fsc.go.kr/no010101/86231) — 생산적금융 금융 구조 세미나 및 금융발전심의회 연석회의 개최.
+- [빗썸 사태 관련 금융위원장 주재 「점검회의」](https://www.fsc.go.kr/no010101/86229) — 빗썸 사태 관련 금융위원장 주재 「점검회의」.
+- [「빗썸 비트코인 오지급」 관련 「긴급 점검회의」 개최](https://www.fsc.go.kr/no010101/86228) — 「빗썸 비트코인 오지급」 관련 「긴급 점검회의」 개최.
+- [“신용사면시 고신용자의 점수 상승폭이 컸다는 보도는 사실이 아닙니다.”](https://www.fsc.go.kr/no010102/86256) — “신용사면시 고신용자의 점수 상승폭이 컸다는 보도는 사실이 아닙니다.”.
+- [026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기”등 기사 관련](https://www.fsc.go.kr/no010102/86234) — 026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기”등 기사 관련.
+- [“금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”](https://www.fsc.go.kr/no010102/86213) — “금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”.
 - [정부는 대산 1호 프로젝트 사업재편 관련 절차를 차질없이 진행하고 있습니다.](https://www.fsc.go.kr/no010102/86210) — 정부는 대산 1호 프로젝트 사업재편 관련 절차를 차질없이 진행하고 있습니다.
-- [“지배구조 제도개선 방안은 현재 논의중인 사안으로 정해진 바 없습니다.”](https://www.fsc.go.kr/no010102/86192) — “지배구조 제도개선 방안은 현재 논의중인 사안으로 정해진 바 없습니다.”입니다.
+- [“지배구조 제도개선 방안은 현재 논의중인 사안으로 정해진 바 없습니다.”](https://www.fsc.go.kr/no010102/86192) — “지배구조 제도개선 방안은 현재 논의중인 사안으로 정해진 바 없습니다.”.
 - [Publication,FSA publishes English translation of monthly magazine, Access FSA No.266](https://www.fsa.go.jp/en/newsletter/accessfsa2025/266.pdf) — 규제 당국 — Publication,FSA publishes English translation of monthly.
 - [Press Conferences,Press Conference by KATAYAMA Satsuki, Minister of State for Financial Services (February 3, 2026)](https://www.fsa.go.jp/en/conference/minister/2026/20260203.html) — Press Conferences,Press Conference by KATAYAMA Satsuki, Minister of State for Financial.
 - [Publication,FSA Weekly Review No.674 February 9, 2026](https://www.fsa.go.jp/en/newsletter/weekly2026/674.html) — 규제 당국 — Publication,FSA Weekly Review No.674 February 9, 2026.
@@ -122,7 +123,7 @@ lang: "ko"
 - [Britain's financial regulator seeks to block crypto exchange HTX from UK social media](https://news.google.com/rss/articles/CBMi0wFBVV95cUxQVTNObEJXekI0SVRvYTZsdzM0bWVZeFBHdGFhMmJxM0NSMEhfZkdxazhZMVBUVlE2SU4wbHJIcU9fUGpIV3lPUXV0N0RmVkliLThxUnI3dGN2Zm1WaGhIX25vSTc4SENRVmNOS09STlRZMXFSYjhUcmtrd2huVWl2NVJfSENMcU1HcFI5bFBLX1RaT0RJSDk0WWNUa1ZlUkY4cmw0QjJtSWxFMGdqUUNOa2I5dzlzTUxRZ1NkMV9lT2VIN1RDQmE5WFJ6RXRQY1hyUXZj?oc=5) — 거래소 — Britain's financial regulator seeks to block crypto.
 - [Crypto Exchange Blockchain.com Secures FCA Registration in UK](https://news.google.com/rss/articles/CBMiggFBVV95cUxPUkwySjVxTFBTMmZGX2toMFVnTzJ6R1pfR0VuUTBic1VqSnlpM3RUNHV0Z0F3TzZDVFVGMk81azVRZk1VbEd6aEdSS2xKSlB0TW9YLWxfZ2dQVW5sTW1MM3pTd1BvNG1NVGVjYURhTzZreWg2QnJYZHZNSUFiODc2ZE5B0gGKAUFVX3lxTFBCbExUZWNvc2VNNDZFUVd0TE5HQkFsb3lMRUpTZzZPVE1remlvbk5kRHl5NHQ5V2ZHT3VTTnQydDM0bVVleUhuMWJYU1dsMExDWnFzZWhqYmYyOWRxVGFGMVktZHcwbGJKbnc5Qk1HNl9GdzJrdThOMW1HV2dsM1ZnMmJUNVJobkxaUQ?oc=5) — 규제 당국 — Crypto Exchange Blockchain.com Secures FCA Registration.
 - [UK Cryptoasset Regime: What to Know About the FCA Consultation Papers](https://news.google.com/rss/articles/CBMioAFBVV95cUxQZVVNM3BhVF84cm5oRVJVbU10T0lVV0R1LXJEOTAwNVM5cG1aOGhIRHc3T1d0ZC1iT3BCNGxyMDRYY0tKRXZxemJvMHJrb3pqX0hoSGZobEVnWV90X1c4REdxUVczeXl4WlBUZUF2d0pmR1F1VGRiWk5JYUhpd0RaNm9tZVNkcVpLbWgtVHRoLWkwWUFzY091NHU0U2NMeWdT?oc=5) — 암호화폐 — UK Cryptoasset Regime: What to Know About the FCA.
-- ['비트코인 오지급' 긴급 현안질의여야 "금융기관 수준 규제받아야"](https://news.google.com/rss/articles/CBMieEFVX3lxTE5QYmxVejFVNGY5dHhTN0VDY0xPUUJWS2djektEUGVmcFVVRjQ3bGgzbnVRR2o4Q0Q0UEZuaEJZRl9jbDhFZ2lKYzVqdnY3UUNGNElsV3N5YlpkX1hQVFlFVGxoYkZKUW0xWDNNYU5sR0s3Q3pGQ1RZZ9IBeEFVX3lxTE5QYmxVejFVNGY5dHhTN0VDY0xPUUJWS2djektEUGVmcFVVRjQ3bGgzbnVRR2o4Q0Q0UEZuaEJZRl9jbDhFZ2lKYzVqdnY3UUNGNElsV3N5YlpkX1hQVFlFVGxoYkZKUW0xWDNNYU5sR0s3Q3pGQ1RZZw?oc=5) — '비트코인 오지급' 긴급 현안질의여야 "금융기관 수준 규제받아야"입니다.
+- ['비트코인 오지급' 긴급 현안질의여야 "금융기관 수준 규제받아야"](https://news.google.com/rss/articles/CBMieEFVX3lxTE5QYmxVejFVNGY5dHhTN0VDY0xPUUJWS2djektEUGVmcFVVRjQ3bGgzbnVRR2o4Q0Q0UEZuaEJZRl9jbDhFZ2lKYzVqdnY3UUNGNElsV3N5YlpkX1hQVFlFVGxoYkZKUW0xWDNNYU5sR0s3Q3pGQ1RZZ9IBeEFVX3lxTE5QYmxVejFVNGY5dHhTN0VDY0xPUUJWS2djektEUGVmcFVVRjQ3bGgzbnVRR2o4Q0Q0UEZuaEJZRl9jbDhFZ2lKYzVqdnY3UUNGNElsV3N5YlpkX1hQVFlFVGxoYkZKUW0xWDNNYU5sR0s3Q3pGQ1RZZw?oc=5) — '비트코인 오지급' 긴급 현안질의여야 "금융기관 수준 규제받아야".
 - [CFTC, 30 State Regulators Obtain Over $51 Million in Sanctions, Restitution for Victims in California Precious Metals Fraud](https://www.cftc.gov/PressRoom/PressReleases/9139-25) — 규제 당국 — CFTC, 30 State Regulators Obtain Over $51 Million.
 - [CFTC Sanctions Trading Firm $212,500 for Wash Sales](https://www.cftc.gov/PressRoom/PressReleases/9125-25) — 규제 당국 — CFTC Sanctions Trading Firm $212,500 for Wash Sales.
 - [FCA alleges crypto platform breached new rules](https://news.google.com/rss/articles/CBMikgFBVV95cUxQMTZEQmZ3Skh6SXcxM0ZTVnRUM3gtSUw4NXNoNGxMbXBQdGp6WU9JeGxwUlFXTVQ4Q0QzSjhic2Itc1RMSWN1ajVVV1d1eDY5cmRob050TC1vYWhuRlFrMDdUTS13aEI0RXhvM25CWTNRVTlobFVTNnN2OE5UdENxQXBmU05BZ19nRHcySWdfUXg2UQ?oc=5) — 보안 이슈 — FCA alleges crypto platform breached new rules.

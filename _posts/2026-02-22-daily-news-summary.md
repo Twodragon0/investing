@@ -52,7 +52,7 @@ excerpt: "암호화폐 101건, 주식 131건, 보안 1건, 규제 23건, 소셜 
 - [Stock market today: Dow, S&P 500, Nasdaq jump to post weekly gains as Supreme Court strikes down Trump tariffs](https://news.google.com/read/CBMi0wFBVV95cUxOcXE0RXlLLVJ0UkRQNmdETWY4dTBjYnBqU3BfOG9vU2Z1WVJmQ2hadUVrSW1vTEhwMU85dC1IOHZ6LURwMFdEbDhUSnRjVTJjQnFyQnB6ZlV3bTlITllfSmk0emVUc0lLdS13VFhBZ1dLM2tVRWVEYTdTSmZvRzlnYjNpWkQ3QjFSd0hCTk8tOE9IWG56ZVVKYWMzSjU1SVJPVHJqazZlMFA2ZnQ5XzlfZE1BZmNQdzFQMDdGLTc3bnlvQW5SYzJUOFpfaUpVbGlXRzBr?hl=en-US&gl=US&ceid=US%3Aen) — 나스닥 상승 — Stock market today: Dow, S&P 500, Nasdaq jump to post.
 - [Trump to hike global tariffs to 15% from 10%, 'effective immediately'](https://www.cnbc.com/2026/02/21/trump-tariffs.html) — 무역·관세 — Trump to hike global tariffs to 15% from 10%, 'effective.
 - [Airlines start canceling flights ahead of another monster winter storm on the East Coast](https://www.cnbc.com/2026/02/21/blizzard-prompts-airlines-waive-flight-change-fees.html) — Airlines start canceling flights ahead of another monster winter storm on the East Coast.
-- [Chaos, confusion and $200 billion dreams: What I saw at India’s AI summit](https://www.cnbc.com/2026/02/21/ai-summit-india-tech.html) — 상세 보기입니다.
+- [Chaos, confusion and $200 billion dreams: What I saw at India’s AI summit](https://www.cnbc.com/2026/02/21/ai-summit-india-tech.html) — 상세 보기
 - [CME's 24/7 Trading Launch, and Solana's Meme Coin Surge](https://news.google.com/read/CBMiZEFVX3lxTE9PU3pBdGY0NWJMSWFUTFRDUGx3RklNQlNENWdlQjBiNG9meUo5andqSHFER0lkNlhEaFVwOXpLYWZseVJ1YVZsU2Q4RzBWT1RoeUhTM19YaFljM2ZHcm5yMHYxTlc?hl=en-US&gl=US&ceid=US%3Aen) — 솔라나 상승 — CME's 24/7 Trading Launch, and Solana's Meme Coin Surge.
 
 ## 종합 대시보드

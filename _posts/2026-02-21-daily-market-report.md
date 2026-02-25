@@ -67,6 +67,7 @@ image: "/assets/images/generated/market-heatmap-2026-02-21.png"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 극도의 공포 장세: 공포/탐욕 지수 8으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다.
@@ -84,11 +85,11 @@ image: "/assets/images/generated/market-heatmap-2026-02-21.png"
 ## URL 요약
 
 - [Bitcoin, ether, xrp ETFs bleed while Solana bucks outflow trend](https://news.google.com/rss/articles/CBMiqAFBVV95cUxORUxVZnZQRkRjRS1SZ0xfWlVIcDZtZ1BsTGtqN0VrLUhHWHBKWUVydVJ3S0NKaVA2cW9hZ3V2aWZUR0YxQ241dF9CR2d4RWNNZGxhX1QtZ1hSdTFPbnlYTEVJVWpMbVVKejhYR2RrSFhxaTNORHU0dDBNVGhLQnAyUExNRjVMSHV3cjZkYmtyWWo2U1Q2bk9vZnhETDdUX0xQMklmaDkycDU?oc=5) — 온체인 이동 — Bitcoin, ether, xrp ETFs bleed while Solana bucks outflow.
-- [비트코인 ETF, 사이클 최저 잔고 속에서 80억 달러 규모 최대 자금 유출 기록](https://news.google.com/rss/articles/CBMiaEFVX3lxTE4xOUh3MUotQU9FcTNSY1I3OVdKSjFSRnc4bGI5aU1KLUd5akM4NFF5UVVVOEY2dTAyV2Z2UVl1SDdTZHN6Qk5xaTE0a3ludUxUbVhXcGhFTVU5QU82bXhPRXQwSktNLUV6?oc=5) — 비트코인 ETF, 사이클 최저 잔고 속에서 80억 달러 규모 최대 자금 유출 기록입니다.
-- [비트코인 ETF에 자금 유입 증가, 암호화폐 펀드 유입은 기관 투자자들의 선별적 수요를 보여줌](https://news.google.com/rss/articles/CBMitwFBVV95cUxPOVpMN19uWlYwMkU4T0w1bmtqSWZJNUIzdlh6Q3I4eUVBNHUyelZXVzl0d1FFc0NTbFdwWldwYnIwTDBzU1pWNGxDQ2p1MndSTlJvdElna3E0dUFmVEtIZXNUZHhQakZZcW9TRlE5UjFwWnMtMzlmT3hxSjcxMWtUZkJzVUFtZWJncV8xRjE5WWNYU1k3T3dTTUJEYVlLR3haTS1MQWRKbEtQcmN4MEtaR240X1NETWs?oc=5) — 비트코인 ETF에 자금 유입 증가, 암호화폐 펀드 유입은 기관 투자자들의 선별적 수요를 보여줌입니다.
-- [비트코인 ETF, 유출 확대 속에 1억 3,300만 달러 유출](https://news.google.com/rss/articles/CBMikwFBVV95cUxQNHY5bElXbm5NbDVpempWcUpEdjM5WnVPQnNRamlocHdQYkFON0V0REd3NktHblRMYlZVZDVZQ0JJWEZReGhQWEVWUEdXRHBxNTZ2UjdCeDQ2TXc4QkVYX2lSMHZQQU5kaXplUXdzbWxwOVRua2dHRWpXYUtxN3FrMjd4SGwtaVRtQUU3a21FeVl5TUU?oc=5) — 비트코인 ETF, 유출 확대 속에 1억 3,300만 달러 유출입니다.
-- [美 이더리움 현물 ETF 4250만달러 순유출기관 자금 흐름 둔화](https://news.google.com/rss/articles/CBMiUEFVX3lxTE5UU1M5ZmZoMWg3ZzhKN0s0dHBCYVFoN1RXWDlrbWxJc2psSHNtQ3paLUM3cWRsZkFQcmZTMnJsMjNOZWJYbEJTOFduVnYyOThf?oc=5) — 美 이더리움 현물 ETF 4250만달러 순유출기관 자금 흐름 둔화입니다.
-- ['내부자 고래', 거시경제 지표 발표 직전 거래소로 비트코인 5000개 이체](https://news.google.com/rss/articles/CBMiUEFVX3lxTE8tVUY2bXpFMXZBX0plR0NPNkp5RFVacTVyMGJUS19aejYxWV9CS1ZvRzUwS3NGdTdxd3I1YXI0TVNIakx5QUcwdEloc1FZeFFN?oc=5) — '내부자 고래', 거시경제 지표 발표 직전 거래소로 비트코인 5000개 이체입니다.
+- [비트코인 ETF, 사이클 최저 잔고 속에서 80억 달러 규모 최대 자금 유출 기록](https://news.google.com/rss/articles/CBMiaEFVX3lxTE4xOUh3MUotQU9FcTNSY1I3OVdKSjFSRnc4bGI5aU1KLUd5akM4NFF5UVVVOEY2dTAyV2Z2UVl1SDdTZHN6Qk5xaTE0a3ludUxUbVhXcGhFTVU5QU82bXhPRXQwSktNLUV6?oc=5) — 비트코인 ETF, 사이클 최저 잔고 속에서 80억 달러 규모 최대 자금 유출 기록.
+- [비트코인 ETF에 자금 유입 증가, 암호화폐 펀드 유입은 기관 투자자들의 선별적 수요를 보여줌](https://news.google.com/rss/articles/CBMitwFBVV95cUxPOVpMN19uWlYwMkU4T0w1bmtqSWZJNUIzdlh6Q3I4eUVBNHUyelZXVzl0d1FFc0NTbFdwWldwYnIwTDBzU1pWNGxDQ2p1MndSTlJvdElna3E0dUFmVEtIZXNUZHhQakZZcW9TRlE5UjFwWnMtMzlmT3hxSjcxMWtUZkJzVUFtZWJncV8xRjE5WWNYU1k3T3dTTUJEYVlLR3haTS1MQWRKbEtQcmN4MEtaR240X1NETWs?oc=5) — 비트코인 ETF에 자금 유입 증가, 암호화폐 펀드 유입은 기관 투자자들의 선별적 수요를 보여줌.
+- [비트코인 ETF, 유출 확대 속에 1억 3,300만 달러 유출](https://news.google.com/rss/articles/CBMikwFBVV95cUxQNHY5bElXbm5NbDVpempWcUpEdjM5WnVPQnNRamlocHdQYkFON0V0REd3NktHblRMYlZVZDVZQ0JJWEZReGhQWEVWUEdXRHBxNTZ2UjdCeDQ2TXc4QkVYX2lSMHZQQU5kaXplUXdzbWxwOVRua2dHRWpXYUtxN3FrMjd4SGwtaVRtQUU3a21FeVl5TUU?oc=5) — 비트코인 ETF, 유출 확대 속에 1억 3,300만 달러 유출.
+- [美 이더리움 현물 ETF 4250만달러 순유출기관 자금 흐름 둔화](https://news.google.com/rss/articles/CBMiUEFVX3lxTE5UU1M5ZmZoMWg3ZzhKN0s0dHBCYVFoN1RXWDlrbWxJc2psSHNtQ3paLUM3cWRsZkFQcmZTMnJsMjNOZWJYbEJTOFduVnYyOThf?oc=5) — 美 이더리움 현물 ETF 4250만달러 순유출기관 자금 흐름 둔화.
+- ['내부자 고래', 거시경제 지표 발표 직전 거래소로 비트코인 5000개 이체](https://news.google.com/rss/articles/CBMiUEFVX3lxTE8tVUY2bXpFMXZBX0plR0NPNkp5RFVacTVyMGJUS19aejYxWV9CS1ZvRzUwS3NGdTdxd3I1YXI0TVNIakx5QUcwdEloc1FZeFFN?oc=5) — '내부자 고래', 거시경제 지표 발표 직전 거래소로 비트코인 5000개 이체.
 - [Bitcoin Whale Transfer: Stunning $424 Million BTC Movement to Binance Sparks Market Analysis](https://news.google.com/rss/articles/CBMihgFBVV95cUxORVpnWXVUcE5GbzRvVllZdllzN2dUaFpBS3ExbDItSXNvUXQzZFBjekFBZjFzX2l5dUpFVEo2UmluWUVJSVFiSjl0SEI5dlYwY2xUNUtZNXF1QTd2WnV1RGo3cDRReWx3YXNIMDdyZHk0WE02aEVNM29GYnU4ckhoYnRHeFBDZw?oc=5) — 온체인 이동 — Bitcoin Whale Transfer: Stunning $424 Million BTC Movement.
 - [Binance Sees Major Investor Sentiment Shift: Biggest Whale Inflows Since 2024](https://news.google.com/rss/articles/CBMizwFBVV95cUxOY1hSZGQ5cDgtZkRvRnR5T3RkVjhSTWJubkxRd0R4bGk1TFdYYlduUjYxQldJb0J6Y0FXZUJ2ZDVwY1NGMUNwblIxUVkwS1hJN2VEcjhEV1VtYWR1aW9SaGVFVGdsREd1cHl3aUVoTDhsRHZacmZtZTJpa2V6Y05YX05jQkhFTVNITFhoak5oRlg5YVRCLThvcHo4enl6RW5mWHcwUWhnckFyLXFmV2VkX29HbkxXa0o2cVhNbjRGejE3ZjFweC1IWWRrZlNrMm8?oc=5) — 온체인 이동 — Binance Sees Major Investor Sentiment Shift: Biggest Whale.
 - [Bitcoin Whale Transfer Stuns Market: 3,107 BTC Moves to Coinbase Institutional in $206 Million Pivot](https://news.google.com/rss/articles/CBMiR0FVX3lxTE43SXB5OW1BR2psU2M1Tk1IbXlsYlNSNWE5ZEJQWHRWSWIwZVpyUGc4bWo3VWhpcmVwbkplOTgxTnZBS25BUENF?oc=5) — 온체인 이동 — Bitcoin Whale Transfer Stuns Market: 3,107 BTC Moves.

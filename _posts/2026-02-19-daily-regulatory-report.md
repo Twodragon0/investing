@@ -46,6 +46,7 @@ image: "/assets/images/generated/regulatory-summary-2026-02-19.png"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **26건** 수집
@@ -63,24 +64,24 @@ image: "/assets/images/generated/regulatory-summary-2026-02-19.png"
 
 ## URL 요약
 
-- [다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최](https://www.fsc.go.kr/no010101/86297) — 다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최입니다.
+- [다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최](https://www.fsc.go.kr/no010101/86297) — 다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최.
 - [gemi-20260217](https://news.google.com/rss/articles/CBMijAFBVV95cUxNTkpWWm9UeUZmd1JhUXpXdFd5Uk9LTEVhQ1lSaVROdlg5VW1iOUxZLU43RjlLMFltQXBoTmN2enBhT3dfY29mOFV6QVY5Y1NZTk90dHkxWEdKTGVBSXZVS05HTzZ3bnlSVW1HQ3pJdmkxVmhJbVhQeVJtdzdScVg2ejVQV1ZoVVMxejEzbQ?oc=5) — gemi-20260217.
 - [Number Go Down and other Schadenfreude](https://news.google.com/rss/articles/CBMipwFBVV95cUxPZmtLNnJaY3M4UWEtV0trZjhxdDJ6WjVJV1BRRlQxeU95MUlLa2tva2kzUHV1dnJYRE1Gam1LSmpab1RmSUZRQ2h1NmxSQ1BXYTIzQ2lXbGpzVFg5MVZrZFIzeHdWQXRQT0VPcVJGTC1GNlEzMHlkX1JUN2FTbVZjX3l6OG1hbzI2RVk1a1FDWU5oWHlvbmM3M2hRMjlzY3prY0NwTVdCVQ?oc=5) — 다우존스 하락 — Number Go Down and other Schadenfreude.
 - [iset20260213_s1.htm](https://news.google.com/rss/articles/CBMikAFBVV95cUxOUU1Oa2llTjRxZjAyeUdFdGxESEZzWGZZVGVYXzJNQndQX0lxSWx3NjQ3SDI2aEEtampwcmUyVVdhT3U3Vks3aVN3Q1BadEVtX2R3WnU4ZjYxMG1ZTGJmOGt3T1BCb2hJV2dIMHdYYjgwMEhrVTQ3cUYwdmRTeW9uMWZSY0JVaTZkbVBHWVFMcmo?oc=5) — iset20260213_s1.htm.
 - [CFTC Reaffirms Exclusive Jurisdiction over Prediction Markets in U.S. Circuit Court Filing](https://www.cftc.gov/PressRoom/PressReleases/9183-26) — 법적 분쟁 — CFTC Reaffirms Exclusive Jurisdiction over Prediction.
-- [금융정보분석원, 국제자금세탁방지기구(FATF) 총회 참석](https://www.fsc.go.kr/no010101/86301) — 금융정보분석원, 국제자금세탁방지기구(FATF) 총회 참석입니다.
-- [금융위원회 인사 보도(팀장급)](https://www.fsc.go.kr/no010101/86298) — 금융위원회 인사 보도(팀장급)입니다.
-- [이억원 금융위원장, 설 맞이 전통시장 방문](https://www.fsc.go.kr/no010101/86296) — 이억원 금융위원장, 설 맞이 전통시장 방문입니다.
-- [수익증권 장외거래중개업(조각투자* 장외거래소)예비인가금융위원회 정례회의(‘26.2.13.) 의결 * 시장에서는 신탁수익증권 투자와 투자계약증권 투자를 조각투자로 인식,금번 인가는 신탁수익증권 장외거래중개업만을 의미](https://www.fsc.go.kr/no010101/86295) — 수익증권 장외거래중개업(조각투자* 장외거래소)예비인가금융위원회 정례회의(‘26.2.13.) 의결 * 시장에서는 신탁수익증권 투자와 투자계약증권 투자를 조각투자로 인식,금번 인가는입니다.
-- [“한 번의 실패는 결코 끝이 아닙니다.” - 이억원 금융위원장, 「전국민 신용회복지원 수기 공모전」 수상자 면담 -](https://www.fsc.go.kr/no010101/86287) — “한 번의 실패는 결코 끝이 아닙니다.” - 이억원 금융위원장, 「전국민 신용회복지원 수기 공모전」 수상자 면담 -입니다.
-- [본격 가동하는 국민성장펀드, 지역 현장에서 지역‧산업계와 소통합니다 (2일차 : 충북‧충남 지역 방문) - 2.11~2.12일, 국민성장펀드‧지방우대금융 지역간담회 개최 -](https://www.fsc.go.kr/no010101/86275) — 본격 가동하는 국민성장펀드, 지역 현장에서 지역‧산업계와 소통합니다 (2일차 : 충북‧충남 지역 방문) - 2.11~2.12일, 국민성장펀드‧지방우대금융 지역간담회 개최 -입니다.
-- [2026년 상반기 영세·중소가맹점 선정결과 및 2025년 하반기 신규가맹점에 대한 카드수수료 환급 안내 등](https://www.fsc.go.kr/no010101/86274) — 2026년 상반기 영세·중소가맹점 선정결과 및 2025년 하반기 신규가맹점에 대한 카드수수료 환급 안내 등입니다.
-- [부실기업 신속·엄정 퇴출을 위한 상장폐지 개혁 방안](https://www.fsc.go.kr/no010101/86273) — 부실기업 신속·엄정 퇴출을 위한 상장폐지 개혁 방안입니다.
+- [금융정보분석원, 국제자금세탁방지기구(FATF) 총회 참석](https://www.fsc.go.kr/no010101/86301) — 금융정보분석원, 국제자금세탁방지기구(FATF) 총회 참석.
+- [금융위원회 인사 보도(팀장급)](https://www.fsc.go.kr/no010101/86298) — 금융위원회 인사 보도(팀장급).
+- [이억원 금융위원장, 설 맞이 전통시장 방문](https://www.fsc.go.kr/no010101/86296) — 이억원 금융위원장, 설 맞이 전통시장 방문.
+- [수익증권 장외거래중개업(조각투자* 장외거래소)예비인가금융위원회 정례회의(‘26.2.13.) 의결 * 시장에서는 신탁수익증권 투자와 투자계약증권 투자를 조각투자로 인식,금번 인가는 신탁수익증권 장외거래중개업만을 의미](https://www.fsc.go.kr/no010101/86295) — 수익증권 장외거래중개업(조각투자* 장외거래소)예비인가금융위원회 정례회의(‘26.2.13.) 의결 * 시장에서는 신탁수익증권 투자와 투자계약증권 투자를 조각투자로 인식,금번 인가는.
+- [“한 번의 실패는 결코 끝이 아닙니다.” - 이억원 금융위원장, 「전국민 신용회복지원 수기 공모전」 수상자 면담 -](https://www.fsc.go.kr/no010101/86287) — “한 번의 실패는 결코 끝이 아닙니다.” - 이억원 금융위원장, 「전국민 신용회복지원 수기 공모전」 수상자 면담 -.
+- [본격 가동하는 국민성장펀드, 지역 현장에서 지역‧산업계와 소통합니다 (2일차 : 충북‧충남 지역 방문) - 2.11~2.12일, 국민성장펀드‧지방우대금융 지역간담회 개최 -](https://www.fsc.go.kr/no010101/86275) — 본격 가동하는 국민성장펀드, 지역 현장에서 지역‧산업계와 소통합니다 (2일차 : 충북‧충남 지역 방문) - 2.11~2.12일, 국민성장펀드‧지방우대금융 지역간담회 개최 -.
+- [2026년 상반기 영세·중소가맹점 선정결과 및 2025년 하반기 신규가맹점에 대한 카드수수료 환급 안내 등](https://www.fsc.go.kr/no010101/86274) — 2026년 상반기 영세·중소가맹점 선정결과 및 2025년 하반기 신규가맹점에 대한 카드수수료 환급 안내 등.
+- [부실기업 신속·엄정 퇴출을 위한 상장폐지 개혁 방안](https://www.fsc.go.kr/no010101/86273) — 부실기업 신속·엄정 퇴출을 위한 상장폐지 개혁 방안.
 - [빗썸 오지급 보상 안내의 URL링크는 사기입니다. - 빗썸 오지급 사고 관련 스미싱 소비자경보 발령 -](https://www.fsc.go.kr/no010101/86271) — 빗썸 오지급 보상 안내의 URL링크는 사기입니다.
 - [단일종목 레버리지 ETF의 세부방안은 검토중입니다.](https://www.fsc.go.kr/no010102/86267) — 단일종목 레버리지 ETF의 세부방안은 검토중입니다.
-- [“신용사면시 고신용자의 점수 상승폭이 컸다는 보도는 사실이 아닙니다.”](https://www.fsc.go.kr/no010102/86256) — “신용사면시 고신용자의 점수 상승폭이 컸다는 보도는 사실이 아닙니다.”입니다.
-- [026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기”등 기사 관련](https://www.fsc.go.kr/no010102/86234) — 026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기”등 기사 관련입니다.
-- [“금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”](https://www.fsc.go.kr/no010102/86213) — “금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”입니다.
+- [“신용사면시 고신용자의 점수 상승폭이 컸다는 보도는 사실이 아닙니다.”](https://www.fsc.go.kr/no010102/86256) — “신용사면시 고신용자의 점수 상승폭이 컸다는 보도는 사실이 아닙니다.”.
+- [026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기”등 기사 관련](https://www.fsc.go.kr/no010102/86234) — 026.2.9일 머니투데이 인터넷판 “신한캐피탈, 다른 창업자에게도 연대책임 제기”등 기사 관련.
+- [“금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”](https://www.fsc.go.kr/no010102/86213) — “금융회사 지배구조 개선방안은 논의 중인 사항으로 정해진바 없습니다.”.
 - [정부는 대산 1호 프로젝트 사업재편 관련 절차를 차질없이 진행하고 있습니다.](https://www.fsc.go.kr/no010102/86210) — 정부는 대산 1호 프로젝트 사업재편 관련 절차를 차질없이 진행하고 있습니다.
 - [국민성장펀드의 지원대상인 개별사업의민간 참여규모 등은 전혀 확정된바 없습니다.](https://www.fsc.go.kr/no010102/86163) — 국민성장펀드의 지원대상인 개별사업의민간 참여규모 등은 전혀 확정된바 없습니다.
 

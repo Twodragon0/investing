@@ -64,6 +64,7 @@ image: "/assets/images/generated/news-briefing-2026-02-21.png"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **110건** 수집
@@ -81,7 +82,7 @@ image: "/assets/images/generated/news-briefing-2026-02-21.png"
 ## URL 요약
 
 - [레버리지가 코인 폭락 트리거 됐다](https://news.google.com/rss/articles/CBMiVkFVX3lxTE9UWWt2NGRwVEhESnNWZ1FRaE1wbk9BTk1Wdll0b3dvdWgzTXZlRWs3Y1dMcmNNam1UanZrbWZaTWM5T3R4cWwtVmtFMGE0TTVUV1VWZ3FR?oc=5) — 레버리지가 코인 폭락 트리거 됐다
-- [비트코인 대규모 구제금융 "백악관 전략 비축 시나리오" 암호화폐 폭락 저지](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcEhVTjRnRlo0ZTgtU3RFWmM0UWxieG9rUVNsSGJHbl9Rc3EyWGVoREJ6SWVOZWc1UXRMaHRaaUxxTzRxVDRkbzMtUGZkWWpidDZoMjBxM1dDSXdZYjdJNWZoRlVjS0dTbEJRWklYUE1TVHpmZlRnMlFaMHZBc0JLamthRFFpNG5z?oc=5) — 비트코인 대규모 구제금융 "백악관 전략 비축 시나리오" 암호화폐 폭락 저지입니다.
+- [비트코인 대규모 구제금융 "백악관 전략 비축 시나리오" 암호화폐 폭락 저지](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcEhVTjRnRlo0ZTgtU3RFWmM0UWxieG9rUVNsSGJHbl9Rc3EyWGVoREJ6SWVOZWc1UXRMaHRaaUxxTzRxVDRkbzMtUGZkWWpidDZoMjBxM1dDSXdZYjdJNWZoRlVjS0dTbEJRWklYUE1TVHpmZlRnMlFaMHZBc0JLamthRFFpNG5z?oc=5) — 비트코인 대규모 구제금융 "백악관 전략 비축 시나리오" 암호화폐 폭락 저지
 - [Australian Executive Accused of Selling Cyber Secrets to Russia for Crypto](https://decrypt.co/358690/australian-executive-cyber-secrets-russia-crypto) — 법적 분쟁 — Australian Executive Accused of Selling Cyber Secrets.
 - [Bitcoin, Ethereum, XRP Waffle as Crypto Crisis Deepens. Why It Could Get Worse.](https://news.google.com/read/CBMihwNBVV95cUxQRTI5bW9RNnRjb0FCWngtZTgtXzktQWE0ZW16VEJFMHJDTGdha2hSalBzMV8zTDdpZXZ5cVM1ZUIwRERyQTNXeVNTLTlDRGFOcDFoT1MwM2VqaXphTXBFLWtiNzYzRFFRTGxqZG1sam9FMEFZZlJCLWZEVG85V2tDOFh6UDZTaFBqU1FhWWFSeTRvOXpJMW9VTXZKX0xJWFBYSTZHQkhlVENqQWx1Smk2ZGRiYUlCc2dPUlpTRGNDTm1ZeTJieHlrY00yWnYyMlo1dnVlUmgtMjlPT0RqVTVZZXNqck0tWjFqVVY5bERpY3lGRWFOMzlJN08xMHNYazNjMHlhWEZOTFo5RjdzcWJtcVJXbTFsaTByQUdXd3JXakU5eW9yenRLeGV3WHdKZk1IZGo4SU9saFZvTHpJaHQxS2I5b2c3TklPR3paTUhfc1ZDc0w4SjFvbXd5MGh5RnFIYWE0NHRSWjgzMGpHbnp6aFQwSlgzRUMxb2hxLWhzT2NLalJRMHNN?hl=en-US&gl=US&ceid=US%3Aen) — 시장 심리 — Bitcoin, Ethereum, XRP Waffle as Crypto Crisis Deepens.
 - [Goldman Sachs CEO reveals his Bitcoin holdings](https://news.google.com/read/CBMirwFBVV95cUxOeFJNdERrdTBBRC1RMUF3WW54NVFuT1JmT3MxWnc5ZmFCbnNod2FJNGlpT285My1Lb3hPeFRxMm9RVVBhSGhxSndDcjBaRkxRQ05ROTlaRFFDLXNaZ1Z5MlZDLUU4NVdFNjFYbzdNS2h6N2VSNEMwZ2p0M3dCSnl4WXVaYlhpa0lVUmVtLTk1WG9Qb1gydnRDVUp5ZDE3VkZiMFFyRW9NdEdTQzEwZXRN?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 매수·매도 — Goldman Sachs CEO reveals his Bitcoin holdings.
@@ -89,7 +90,7 @@ image: "/assets/images/generated/news-briefing-2026-02-21.png"
 - [Bitcoin Is Not Going To Zero (Cryptocurrency:BTC-USD)](https://news.google.com/read/CBMieEFVX3lxTFA2NEtFLWlWbDB3X1pfZFNfdWtDdVBBWWxybkw3VEcxQ0JNTWRLTnpPbVFEcDhuRXRXTUdlZHZSbFdZbVd6N3ViTmtjSDRHVkhjRFFTNlBqWFdWQ3MwazN2UlczcklpWFZJdnZDMkx2TVdBUHpUX0xSYQ?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 — Bitcoin Is Not Going To Zero (Cryptocurrency:BTC-USD).
 - [Tom Lee Forecasts End Of Crypto Winter By This Month, Says Bitcoin, Ethereum May Find Support At These Levels](https://news.google.com/read/CBMif0FVX3lxTE5mUkZELXdpczdtdjBFbFdfM2YxdFpwRmhCRnVJdWo4NU5iSHJ5NFdmY3hyMi02TmVORjFSR05qbkJpTTVXTG1Wc2dmYjZ5alk0bWJ4OFhUSFZEWnBCSFFxdUpSV1dVcVM5dXd2ZzlsUzBQU1dUZUVibmh5VndIT3c?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 — Tom Lee Forecasts End Of Crypto Winter By This Month, Says.
 - [Trump Adviser Says Regulatory Clarity Will Unlock 'Trillions of Dollars' Waiting To Enter Crypto](https://news.google.com/rss/articles/CBMiiwFBVV95cUxNUTBVeG01bHNBNGlZbmZtb3NOb1M4UGc5VUwyTGpFTlFpZDkyVnM2dnNKTWR6QjhZelp2QVQzQllTazktT1JIWWpid2hGeTE3aFJxa1dwdmN5VmhDa2RTOGYxTTdXLXFSamRSNW5aRFBraVA4VmpBdHRUZi1zTlhYck9TZkVPLWdqdWFj?oc=5) — 규제·정책 — Trump Adviser Says Regulatory Clarity Will Unlock.
-- [관세 위법, 암호화폐 일제↑ 비트 6.8만달러 회복-리플 1%](https://news.google.com/rss/articles/CBMiWEFVX3lxTE1CTVZocW83alM0NnhOMWI0RTV3bE9rY3EwQTdaRXR1cHNrSmEybEVnN3ZXaWY3ZDJaZWFtSmFRSU5RV1B5VXJEcFZNM3VfSDlJZnh4MmRod1Y?oc=5) — 관세 위법, 암호화폐 일제↑ 비트 6.8만달러 회복-리플 1%입니다.
+- [관세 위법, 암호화폐 일제↑ 비트 6.8만달러 회복-리플 1%](https://news.google.com/rss/articles/CBMiWEFVX3lxTE1CTVZocW83alM0NnhOMWI0RTV3bE9rY3EwQTdaRXR1cHNrSmEybEVnN3ZXaWY3ZDJaZWFtSmFRSU5RV1B5VXJEcFZNM3VfSDlJZnh4MmRod1Y?oc=5) — 관세 위법, 암호화폐 일제↑ 비트 6.8만달러 회복-리플 1%.
 - [Trump-Backed World Liberty Plots 'Exit Mechanism' for Maldives Hotel Tokenization Project](https://decrypt.co/358781/trump-backed-world-liberty-exit-mechanism-maldives-hotel-tokenization) — 트럼프 — Trump-Backed World Liberty Plots 'Exit Mechanism'.
 - [After State Lawsuit Losing Streak, Kalshi Nabs Victory in Tennessee—This Could Be Why](https://decrypt.co/358765/after-state-lawsuit-losing-streak-kalshi-victory-tennessee-why) — 법적 분쟁 — After State Lawsuit Losing Streak, Kalshi Nabs Victory.
 - [After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued?](https://news.google.com/rss/articles/CBMimwFBVV95cUxNRW5lMUlzTkxlZEVaYjlTUkVKbTR0Qm9tZzVRN3BGVUtBcVBJSFBTS0FGTVJIc18tUU1wZXV4bk9EZ3J0LXFoZTlfWjFYMTgyU0VnQVdBWmhKTm1rak1Kb3NldkVOQllmaTd3U2JLQVloc2JXUk82TUVtMU5xR1I3cXRraDdOY1Rvd3VFYjhOc01GWG4xWGl1bk1sbw?oc=5) — 거래소 매수·매도 — After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly.

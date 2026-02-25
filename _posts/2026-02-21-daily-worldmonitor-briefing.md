@@ -48,6 +48,7 @@ lang: "ko"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **20건** 수집
@@ -78,8 +79,8 @@ lang: "ko"
 - [Nasa targets early March to send humans back around the Moon](https://www.bbc.com/news/articles/c86y1g6wde3o?at_medium=RSS&at_campaign=rss) — Nasa targets early March to send humans back around the Moon.
 - [Anna Murdoch-Mann, mother of News Corp heir, dies aged 81](https://www.bbc.com/news/articles/cp8150xj36wo?at_medium=RSS&at_campaign=rss) — Anna Murdoch-Mann, mother of News Corp heir, dies aged 81.
 - [Austrian climber found guilty after girlfriend froze to death on mountain](https://www.bbc.com/news/articles/c0k1xkllknmo?at_medium=RSS&at_campaign=rss) — 시장 상승 — Austrian climber found guilty after girlfriend froze.
-- [Rare prison sentences handed to Cameroon soldiers after killing of 21 civilians](https://www.bbc.com/news/articles/cev74dywd7eo?at_medium=RSS&at_campaign=rss) — 솔라나 — Rare prison sentences handed to Cameroon soldiers after.
-- [French soldier dies after being shot in head during 'game' with other soldiers](https://www.bbc.com/news/articles/cj4z25gl24eo?at_medium=RSS&at_campaign=rss) — 솔라나 — French soldier dies after being shot in head during 'game'.
+- [Rare prison sentences handed to Cameroon soldiers after killing of 21 civilians](https://www.bbc.com/news/articles/cev74dywd7eo?at_medium=RSS&at_campaign=rss) — Rare prison sentences handed to Cameroon soldiers after killing of 21 civilians.
+- [French soldier dies after being shot in head during 'game' with other soldiers](https://www.bbc.com/news/articles/cj4z25gl24eo?at_medium=RSS&at_campaign=rss) — French soldier dies after being shot in head during 'game' with other soldiers.
 - [Dog trained to illegally dump rubbish, Italian authorities say](https://www.bbc.com/news/articles/cy57erz57xyo?at_medium=RSS&at_campaign=rss) — Dog trained to illegally dump rubbish, Italian authorities say.
 - [Asos co-founder dies after Thailand apartment block fall](https://www.bbc.com/news/articles/ce8w0n061ryo?at_medium=RSS&at_campaign=rss) — 시장 하락 — Asos co-founder dies after Thailand apartment block fall.
 - [Mother and infant burnt to death in Indian state over witchcraft allegations](https://www.bbc.com/news/articles/c98q93gdy3do?at_medium=RSS&at_campaign=rss) — Mother and infant burnt to death in Indian state over witchcraft allegations.

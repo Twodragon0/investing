@@ -49,6 +49,7 @@ image: "/assets/images/generated/regulatory-summary-2026-02-14.png"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **9건** 수집
@@ -70,8 +71,8 @@ image: "/assets/images/generated/regulatory-summary-2026-02-14.png"
 - [Form F-1](https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcHNGcjZyLTUtQ2VRWGFDSHcyMFI4dGZMRzA1cHhEcFh5LWxEX0dESGZoMnJBcS1NaDA2SXVSb3JPSnI1YW9ybWtpSjZnVkI4bERUdV9vNzlqRFF3YVoydzB3SHFQYlFBLVBkcjE3QUQzVThlbG1aSm1EZmhmRlEzMjFwdUNCMGlN?oc=5) — Form F-1.
 - [asst-20260213](https://news.google.com/rss/articles/CBMijAFBVV95cUxNWDd5VDV6alBYT3BIZkstSGVSNmFmejZ2eGI4SUVjUWFxdkFpRlBWaHQ1QW92Z2tESlV6MHBFSm1JYlVwcUhISU9fZmlpSkRJZVc5b2NaYTcwdnp2UlBRXy01ZFpQRmpBb1ZmWFhkRWdTSVdEM0VYTW5STEc3c3VXTG1SeFhITmVuQm53VQ?oc=5) — asst-20260213.
 - [빗썸 오지급 사태 불똥가상자산거래소, 내부통제 확 바꾼다](https://news.google.com/rss/articles/CBMiakFVX3lxTE1PNkJZNEVfMTVmV3lzUmJ0RkQzdm1WbW1NSTNoME92ZGVXcGVpYnpTM1Q4ejdYOTVpY3FIaXVQa1lxV1pqV0VYT2dyTWdiNDZXb2xtaU11eXkxX1BibmdseE1GX1JRZ0NOSEE?oc=5) — 빗썸 오지급 사태 불똥가상자산거래소, 내부통제 확 바꾼다
-- ['규제 벽'은 높았다디지털자산 중심부서 밀려나는 '창업가들'](https://news.google.com/rss/articles/CBMiWEFVX3lxTFB0b0xyVnpES3lrWjd4bDNHeEVqQnY4UU5YWWFvMDlDNmNMb2M3V3I2b1BfR3R2UDhadWxGVVU3S0NudklzOGdNX280Y0EzTVNVWFFXc0xVbGk?oc=5) — '규제 벽'은 높았다디지털자산 중심부서 밀려나는 '창업가들'입니다.
-- [닥사, 금융당국 가상자산거래소 현장점검 합류빗썸 사태 재발 방지](https://news.google.com/rss/articles/CBMiZkFVX3lxTFA0M0JNdGFzeFBaZ3pNM0dKcGttcUd6VXg4cjFtRW80UjE4eXc5RmdGTldZMTIwaGJ2ZUhOUEM1WmFoZk8wLUdQUmlCajhqeGw2cm5Fb2ZGT2w3MkRCOGQ4U2ZUM2xOUQ?oc=5) — 닥사, 금융당국 가상자산거래소 현장점검 합류빗썸 사태 재발 방지입니다.
+- ['규제 벽'은 높았다디지털자산 중심부서 밀려나는 '창업가들'](https://news.google.com/rss/articles/CBMiWEFVX3lxTFB0b0xyVnpES3lrWjd4bDNHeEVqQnY4UU5YWWFvMDlDNmNMb2M3V3I2b1BfR3R2UDhadWxGVVU3S0NudklzOGdNX280Y0EzTVNVWFFXc0xVbGk?oc=5) — '규제 벽'은 높았다디지털자산 중심부서 밀려나는 '창업가들'.
+- [닥사, 금융당국 가상자산거래소 현장점검 합류빗썸 사태 재발 방지](https://news.google.com/rss/articles/CBMiZkFVX3lxTFA0M0JNdGFzeFBaZ3pNM0dKcGttcUd6VXg4cjFtRW80UjE4eXc5RmdGTldZMTIwaGJ2ZUhOUEM1WmFoZk8wLUdQUmlCajhqeGw2cm5Fb2ZGT2w3MkRCOGQ4U2ZUM2xOUQ?oc=5) — 닥사, 금융당국 가상자산거래소 현장점검 합류빗썸 사태 재발 방지
 - [UK Crypto Regulation Moves Forward: Admissions & Disclosures and Market Abuse for Cryptoassets – Key Takeaways from FCA CP25/41](https://news.google.com/rss/articles/CBMi-gFBVV95cUxQVEo5WHVVbDl5eERkd01OOW5MRElNaDdnQXNjamliUllJeENXMjZPV01fUnRfWHFfWjhjRGpOc005N3lPaXQxMnN6YldTNngyeWtlb2wxNy1lTFFYMXoxazl4Y3ZvTDZqb1g3Rk1vSGtOZ094QnhQRXFTY0JTOXE0S1oxcnFFX2JvNy1EWk91WTR2YS1ycFlNMzJnc2VIUUhhOUJmRXIycmlLRFpnU2J1dklNaHJBYzR0RFFkcGM4NWZGQkNFV28xLWljUzZWNUkzemZwZWRSYVlsMFNydThpYkxzcDBvTGY2NmpqeFNQT3VWU0lvTzdmdWFR?oc=5) — 규제·정책 — UK Crypto Regulation Moves Forward: Admissions &.
 - [DeFi Education Fund calls on UK FCA to narrow definition of control in crypto regulation](https://news.google.com/rss/articles/CBMiygFBVV95cUxPMW1KbkRPMjNwLThZRFgtZkdVOWM3TWptY3dqRWtOUnJIQzNDNVFkWDB0MDZ1Q3JubzNnWlQ0ZWZLWEZFS0ZtcmdlWG1oZnBXd3NYRjAybXNvYnZ5Q1g3NFFRUEdaQ0JXNklVY2NsQlgyNWJPWVpXekhvaUVYRG9HUW52czJxT1JqXzEyemRMNWxHRmczTS1HXzh6SUFRWHhvUS1ZVUpyT0MzWlE4WDlIUUR6VWZpR2w2aVlPcjk2MjhEOGNVU0hQNzhB?oc=5) — De.
 - [Crypto Advocates Urge UK’s FCA to Narrow Regulatory Scope](https://news.google.com/rss/articles/CBMirgFBVV95cUxNZUl4eUVrVW5Eb0NfSEZTa3ROWVc5ZXplX1dJNzlGM2VPZEIzcGN4VTdfcVR1TXNCdWV6WHVramJIMWdqZGRYUmhfUlRwU2IxYVltTk84cUZ3ZG5FNHR3aFdITzZ3X2pUYjV2WEhWdTdRUDd6bkkxVnBDZjk5NDA4bDZQMVZYWHE5LVp3MV9iR0s1bVFIMTlveENvY0twT2RPalFaeURUWlA3MGNVLXc?oc=5) — 규제·정책 — Crypto Advocates Urge UK’s FCA to Narrow Regulatory Scope.

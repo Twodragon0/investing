@@ -32,6 +32,7 @@ image: "/assets/images/generated/source-distribution-2026-02-22.png"
 
 
 
+
 ## 전체 뉴스 요약
 
 오늘 수집된 총 57건 중 텔레그램 20건, 소셜 2건, 정치·경제 35건으로 정치/정책과 매크로/금리 이슈가 집중되었고 비트코인·거래소 관련 발언과 온체인 이동이 단기 변동성 요인으로 부각되었습니다.
@@ -60,8 +61,8 @@ image: "/assets/images/generated/source-distribution-2026-02-22.png"
 
 ## URL 요약
 
-- [[이번주 경제]한은 기준금리 동결 유력 작년 합계출산율 주목](https://news.google.com/rss/articles/CBMiT0FVX3lxTE40amcwWEF5RFZmaDVNRVZtZ2NsdXNfR0VidEJ0TkhzVmEtb293ODVvLWJmd0JJYmotNE5oQlRfcUZ2ZE91Y2ZXUVpQWWlEUzg?oc=5) — [이번주 경제]한은 기준금리 동결 유력 작년 합계출산율 주목입니다.
-- [JAMES LAVISH: “The Federal Reserve manipulating the money supply and access to capital has absolutel](https://t.me/crypto/3509) — 솔라나 — JAMES LAVISH: “The Federal Reserve manipulating the money.
+- [[이번주 경제]한은 기준금리 동결 유력 작년 합계출산율 주목](https://news.google.com/rss/articles/CBMiT0FVX3lxTE40amcwWEF5RFZmaDVNRVZtZ2NsdXNfR0VidEJ0TkhzVmEtb293ODVvLWJmd0JJYmotNE5oQlRfcUZ2ZE91Y2ZXUVpQWWlEUzg?oc=5) — [이번주 경제]한은 기준금리 동결 유력 작년 합계출산율 주목.
+- [JAMES LAVISH: “The Federal Reserve manipulating the money supply and access to capital has absolutel](https://t.me/crypto/3509) — 미 연준 — JAMES LAVISH: “The Federal Reserve manipulating the money.
 - [Whales sent roughly 57,000 $BTC to exchanges over the past four days, according to recent on-chain d](https://t.me/crypto/3511) — 온체인 이동 — Whales sent roughly 57,000 $BTC to exchanges over the past.
 - [CFTC Chair says they will "future-proof" crypto regulations."We can't allow Gary Gensler 2.0 to come](https://t.me/crypto/3512) — 규제·정책 — CFTC Chair says they will "future-proof" crypto.
 - [This user is back after making some INSANE predictions in the past that all came true.He is now pred](https://t.me/crypto/3513) — This user is back after making some INSANE predictions in the past that all came true.He.
@@ -71,8 +72,8 @@ image: "/assets/images/generated/source-distribution-2026-02-22.png"
 - [Binance founder CZ predicts Bitcoin will reach between $500,000 and $1,000,000 this cycle.](https://t.me/crypto/3518) — 비트코인 — Binance founder CZ predicts Bitcoin will reach between.
 - [USDT Transfer Stuns Markets: 200 Million Dollar Whale Movement to Binance Signals Major Activity](https://news.google.com/rss/articles/CBMiggFBVV95cUxQTnV3TmF5UkQ3QWdZZTYydjh4eGlwUEFvRWYzeFE1MDRqOXhwQmJwTnZpVUU4LVJGeTFmdG9ZaHhPZUVfdFNvTndNamJJTU0tVEpobGl5eTV3RzhIQjQ4T29EWkU3dUk4UnBVcmExRDZLZ2RFbE16ZkNYYzhyd1lucnVn?oc=5) — 온체인 이동 — USDT Transfer Stuns Markets: 200 Million Dollar Whale.
 - [Bitcoin News: What's Happening On OSCTwitterSC?](https://news.google.com/rss/articles/CBMiowFBVV95cUxQMXpzSkZzc3lqOUhaQWkzdWJySkVGN2gyYnltbENuLUZ2VmhRWU1xNDUwZUQzZkxWZEkwR0xWSXpwLXdOTUtBX1VabnlHQ3R5YnN3M3JLb1RCNENnYVZ4cDNsQmRaa0FlUEhKZlU1WG1vNlExUW9TbzljZC15LXVXeUdZaW8tMnZkVF9PVV8xT281Szl3UDRLOVBpdEEwMEZXeGdR?oc=5) — 비트코인 — Bitcoin News: What's Happening On OSCTwitter.
-- [트럼프 관세 금지 암호화폐·미국주 반응](https://news.google.com/rss/articles/CBMihgFBVV95cUxQZDJnWFRwQUF4ZXctQzVaa0ZaUXgwcWc0Ylpfb3BpUDlfUVNLNnEybEF2TG9oQllnaS01d1ZTa1ZfNEFtcDE1WC1rRWlsWUVaaFFPYnlIaTlkbFpqSk5iaWpsTXNHQ25TN3FDNDd5dGlRdmtzc3VuZlVIc3Q5Vm5GSG1lQjI1UQ?oc=5) — 트럼프 관세 금지 암호화폐·미국주 반응입니다.
-- [野 "이재명 대통령 SNS 선거 개입" 與 "정책 홍보일 뿐" 공방](https://news.google.com/rss/articles/CBMiT0FVX3lxTE5fU2pDdmJ1X3NUSjhGRzZLQWk2RHg5RXZuNUdEYnotYVhTbHFUSHlqcmQ3b09jMWFycnhBbGljVEtWd2pqOGEtZFVZY1FCeHc?oc=5) — 野 "이재명 대통령 SNS 선거 개입" 與 "정책 홍보일 뿐" 공방입니다.
+- [트럼프 관세 금지 암호화폐·미국주 반응](https://news.google.com/rss/articles/CBMihgFBVV95cUxQZDJnWFRwQUF4ZXctQzVaa0ZaUXgwcWc0Ylpfb3BpUDlfUVNLNnEybEF2TG9oQllnaS01d1ZTa1ZfNEFtcDE1WC1rRWlsWUVaaFFPYnlIaTlkbFpqSk5iaWpsTXNHQ25TN3FDNDd5dGlRdmtzc3VuZlVIc3Q5Vm5GSG1lQjI1UQ?oc=5) — 트럼프 관세 금지 암호화폐·미국주 반응.
+- [野 "이재명 대통령 SNS 선거 개입" 與 "정책 홍보일 뿐" 공방](https://news.google.com/rss/articles/CBMiT0FVX3lxTE5fU2pDdmJ1X3NUSjhGRzZLQWk2RHg5RXZuNUdEYnotYVhTbHFUSHlqcmQ3b09jMWFycnhBbGljVEtWd2pqOGEtZFVZY1FCeHc?oc=5) — 野 "이재명 대통령 SNS 선거 개입" 與 "정책 홍보일 뿐" 공방.
 - [U.S. Supreme Court's decision on Trump's tariffs may not rock crypto — yet](https://news.google.com/rss/articles/CBMivgFBVV95cUxQV3pnY3NpajhZb0c0QzhXSjl3V0JIcmJ6b0ZaOHhNU0RFWV9PYkFoR1dscWstdWpXNHVkRFFMaV9jWXA0VldueEtVVGpvVzk0Z3UxQ1JXNnNDWktQWDdqNDAzU3JjU0RyQXhpdGo3OXoxLV9GUXk5Nkd5T2ZrUDE4WWlIeEVXaTRqYUVpWjRUaHh3bjRDbEU4blYwTzhaQlA3T0U5aEEyeGZGUUNsMUQ4TW4tTUdTdGQ4WFBJd2xB?oc=5) — 무역·관세 — U.S. Supreme Court's decision on Trump's tariffs may not.
 - [Pardoned Binance Founder Hobnobs With Trump Sons and Administration Officials at Mar-a-Lago Crypto Fest](https://news.google.com/rss/articles/CBMi4gNBVV95cUxOVThuSk00ajVBaEtaQVJhVzMyX3VKck1kZXMxbVBpMDZ0ZDRPRWg3Y0J4U2FZM3daMGpkLVM1YWE5ZWpxei01QTItRlFfaGZycXAtU2JmRjF0LTJZbEM0eWgtRU9mLTVXQXNwRlI0YUhIZnJLOTA2YnNIUnBDa2N3TnBvczk4dGkwdWFlVEdzYjRoeFEtN0NrQkVNTkJfQ1RlQWJKX29maUZNTkwtd25xa2dBV1FUTHZKWkgtTm5PTENHUnVfeFdlZkRQNGtDSFJlQ1g0RXFoclo2U1FWSjZtbl83SUpRRzZISjNqT2pyNGNHSFNnVXlrcFJBaHZ6WGRYMkVvYzJoV25hY3JNc1dKb19PRWFWcmtheWNuMm1tTmpnNDVDT2lrd2ZQeV9zX1lsNkxtenpWRzdVbHM5YUdobzBSWGJyeUJfR1E4QzJYZzBTNktwVnhMUDRiWnpVQldDY2VMUlVJYmtJQzJ4MzN0dC1MeThFYVY4aVdsTFhmeGs3d3NrV0ZMMXI0ZVRZeDNSVG9YcU52OW84TUZRVTF4TWFiYWVqWmRtV1FsZDFoN2taTGQ5a2N4ZjFyQ2FURHV6dC1TWlZ5Tk9nd0V4QWlhRE1rblBHN284aFRlb0lZZ1otUQ?oc=5) — 거래소 — Pardoned Binance Founder Hobnobs With Trump Sons.
 - [Crypto super PACs have hundreds of millions ready to spend on the midterms](https://news.google.com/rss/articles/CBMickFVX3lxTE0xUTRCa3BHbXBHYkxLUmloN01uMkRPVFRMazkzdlJUdF82RVRFM19LWU1yQW5JazVzUzZMeDlRbUVjYzJyUGdTc1J6YnVlcE9BWXhHX2dLYTlfUTJCSWtObTUzZGFJQ2pVVzhla3RBcDJhQQ?oc=5) — 암호화폐 — Crypto super PACs have hundreds of millions ready to spend.

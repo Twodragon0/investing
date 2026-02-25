@@ -23,6 +23,7 @@ description: "2026-02-24 기준 WorldMonitor 연계 소스에서 글로벌 이�
 - 주요 출처: WorldMonitor/Al Jazeera (15건), WorldMonitor/Guardian World (5건)
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **20건** 수집
@@ -52,7 +53,7 @@ description: "2026-02-24 기준 WorldMonitor 연계 소스에서 글로벌 이�
 - [Trump set to deliver second term’s first State of the Union: What to expect](https://www.aljazeera.com/news/2026/2/24/trump-set-to-deliver-second-terms-first-state-of-the-union-what-to-expect?traffic_source=rss) — 규제 당국 — Trump set to deliver second term’s first State.
 - [Trump’s new tariff threats trigger economic uncertainty; trade deals stall](https://www.aljazeera.com/economy/2026/2/23/trumps-new-tariff-threats-trigger-economic-uncertainty-trade-deals-stall?traffic_source=rss) — 무역·관세 — Trump’s new tariff threats trigger economic uncertainty.
 - [Tourette syndrome campaigner shouts slur at BAFTA ceremony](https://www.aljazeera.com/video/newsfeed/2026/2/23/tourette-syndrome-campaigner-shouts-slur-at-bafta-ceremony?traffic_source=rss) — Tourette syndrome campaigner shouts slur at BAFTA ceremony.
-- [El Mencho: Mexico officials say 25 soldiers killed after cartel raid](https://www.aljazeera.com/news/2026/2/23/mexican-officials-say-25-soldiers-killed-in-clashes-following-cartel-raid?traffic_source=rss) — 솔라나 — El Mencho: Mexico officials say 25 soldiers killed after.
+- [El Mencho: Mexico officials say 25 soldiers killed after cartel raid](https://www.aljazeera.com/news/2026/2/23/mexican-officials-say-25-soldiers-killed-in-clashes-following-cartel-raid?traffic_source=rss) — El Mencho: Mexico officials say 25 soldiers killed after cartel raid.
 - [Another US boat strike in Caribbean Sea kills three, Pentagon says](https://www.aljazeera.com/news/2026/2/23/another-us-boat-strike-in-caribbean-sea-kills-three-pentagon-says?traffic_source=rss) — Another US boat strike in Caribbean Sea kills three, Pentagon says.
 - [BBC criticised for nixing ‘Free Palestine’ tribute from BAFTA coverage](https://www.aljazeera.com/news/2026/2/23/bbc-criticised-for-nixing-free-palestine-tribute-from-bafta-coverage?traffic_source=rss) — BBC criticised for nixing ‘Free Palestine’ tribute from BAFTA coverage.
 - [Robert Mugabe’s son charged with attempted murder over Johannesburg shooting](https://www.theguardian.com/world/2026/feb/23/robert-mugabe-son-bellarmine-mugabe-charged-with-crimes) — 법적 분쟁 — Robert Mugabe’s son charged with attempted murder over.

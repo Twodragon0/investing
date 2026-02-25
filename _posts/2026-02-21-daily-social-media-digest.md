@@ -63,6 +63,7 @@ image: "/assets/images/generated/source-distribution-2026-02-21.png"
 
 
 
+
 ## 전체 뉴스 요약
 
 오늘 수집된 총 62건 중 텔레그램 20건, 소셜 1건, 정치·경제 41건으로 정치/정책과 매크로/금리 이슈가 집중되었고 비트코인·거래소 관련 발언과 온체인 이동이 단기 변동성 요인으로 부각되었습니다.
@@ -91,11 +92,11 @@ image: "/assets/images/generated/source-distribution-2026-02-21.png"
 
 ## URL 요약
 
-- [키움증권 "2월 금통위 기준금리 동결 예상, 경제성장률 전망 변화에 주목"](https://news.google.com/rss/articles/CBMic0FVX3lxTE1DSkxRUFVydExsLTlEVjloU3pQQkV2ZjRqNTNlRlJRQ0lodXBhOXY0c1FaSFg4SmRmVWxuUVB5ZDh4Vkp4ZFpvZjlaa21qdUlCWjdfY2lwQXhTOVRIRzdPQkRPVW9CSkNlX3FxVUJVaG8zQVU?oc=5) — 키움증권 "2월 금통위 기준금리 동결 예상, 경제성장률 전망 변화에 주목"입니다.
-- [[다음주경제] 한은 금리 결정·출산율·가계소득 지표 발표경제지표 ‘집중 공개’](https://news.google.com/rss/articles/CBMicEFVX3lxTE84dVg4cXBEc2d4azdDdXlPRFBGLV9DWUo1YlZtcjROUXZMWVZMamlHWS1aenY1YUQ3QTh5VkZmYzE1WXdVOU5rY1gxMjFmTmlFQWU2bndCeFJrckhubnlfR2lSemlzZ0N0QkdZTmR1YmHSAXRBVV95cUxNblktRnV1WjZwb3ZPUm5jdXp0TjNGVFZFeFBUZjY1QUFxLXMzU0FvUjRHNUo3dFp0MkpPT3JXdnd5ZjNjdUVlSGFBcWJkSVZYRHlpSWFZUkV3R1A2WDZDVV9VVl9nZzdjRkRzTkZ5QTFhTlNPeA?oc=5) — [다음주경제] 한은 금리 결정·출산율·가계소득 지표 발표경제지표 ‘집중 공개’입니다.
+- [키움증권 "2월 금통위 기준금리 동결 예상, 경제성장률 전망 변화에 주목"](https://news.google.com/rss/articles/CBMic0FVX3lxTE1DSkxRUFVydExsLTlEVjloU3pQQkV2ZjRqNTNlRlJRQ0lodXBhOXY0c1FaSFg4SmRmVWxuUVB5ZDh4Vkp4ZFpvZjlaa21qdUlCWjdfY2lwQXhTOVRIRzdPQkRPVW9CSkNlX3FxVUJVaG8zQVU?oc=5) — 키움증권 "2월 금통위 기준금리 동결 예상, 경제성장률 전망 변화에 주목".
+- [[다음주경제] 한은 금리 결정·출산율·가계소득 지표 발표경제지표 ‘집중 공개’](https://news.google.com/rss/articles/CBMicEFVX3lxTE84dVg4cXBEc2d4azdDdXlPRFBGLV9DWUo1YlZtcjROUXZMWVZMamlHWS1aenY1YUQ3QTh5VkZmYzE1WXdVOU5rY1gxMjFmTmlFQWU2bndCeFJrckhubnlfR2lSemlzZ0N0QkdZTmR1YmHSAXRBVV95cUxNblktRnV1WjZwb3ZPUm5jdXp0TjNGVFZFeFBUZjY1QUFxLXMzU0FvUjRHNUo3dFp0MkpPT3JXdnd5ZjNjdUVlSGFBcWJkSVZYRHlpSWFZUkV3R1A2WDZDVV9VVl9nZzdjRkRzTkZ5QTFhTlNPeA?oc=5) — [다음주경제] 한은 금리 결정·출산율·가계소득 지표 발표경제지표 ‘집중 공개’.
 - [YouTuber Logan Paul purchased this NFT for $635,000 in 2021.Today, it's worth $155.](https://t.me/crypto/3505) — You.
 - [Michael Saylor's 'Strategy' says it can "withstand a drawdown in Bitcoin's price to $8K and still ha](https://t.me/crypto/3507) — 비트코인 — Michael Saylor's 'Strategy' says it can "withstand.
-- [JAMES LAVISH: “The Federal Reserve manipulating the money supply and access to capital has absolutel](https://t.me/crypto/3509) — 솔라나 — JAMES LAVISH: “The Federal Reserve manipulating the money.
+- [JAMES LAVISH: “The Federal Reserve manipulating the money supply and access to capital has absolutel](https://t.me/crypto/3509) — 미 연준 — JAMES LAVISH: “The Federal Reserve manipulating the money.
 - [Whales sent roughly 57,000 $BTC to exchanges over the past four days, according to recent on-chain d](https://t.me/crypto/3511) — 온체인 이동 — Whales sent roughly 57,000 $BTC to exchanges over the past.
 - [CFTC Chair says they will "future-proof" crypto regulations."We can't allow Gary Gensler 2.0 to come](https://t.me/crypto/3512) — 규제·정책 — CFTC Chair says they will "future-proof" crypto.
 - [This user is back after making some INSANE predictions in the past that all came true.He is now pred](https://t.me/crypto/3513) — This user is back after making some INSANE predictions in the past that all came true.He.
@@ -109,8 +110,8 @@ image: "/assets/images/generated/source-distribution-2026-02-21.png"
 - [Supreme Court's reversal of Trump's tariffs could bring 'clarity'](https://news.google.com/rss/articles/CBMirgFBVV95cUxQVmJFSGNrQzRlTG9paHJTWEUzMTNmUXlDTmk3TkZmaHM1dFhKRGxfX1JFU0ItU2ViMmdJTnhJODRZb1RwUVlUVXFfTURMNlE1dEtqRG02TmpldFZvaGJpcThQazhfZ09NdzhZVm55OGZ2ZE5sbFkyeUJIQlhOaDJ0YllGejRFZ0NBeDlCVWhNRkROSnk3SDRXUzRaWU9EU2tBa2dCTmFTYXJKSUZMYmc?oc=5) — 무역·관세 — Supreme Court's reversal of Trump's tariffs could bring.
 - [Custodia CEO Caitlin Long Claims Trump Crypto Ventures Complicate US Regulation Talks](https://news.google.com/rss/articles/CBMiwAFBVV95cUxOMDUydkQ2LXpkRDFkbEZvY200cm12RmxiaWNJMFBBekxMNWNiNzZ2am92VXdYdjllWkNVQ2d3Q3E2emZTYzdVRG10bFFlNGRfQ2tMdWFpX3VLQ2VXekt2WFBQYkFzcFNJZnJEdlM0YW95UGt4dlhFd3A1eFhFTVFwbkhsczJ4b3ItXzhRRElKRmhlZjV2dU1zbWpJT1RJQXV4dmVfX1pTMVdxaFVZdWFiYmtxejI2NGJGalpzQzF0ZjXSAc4BQVVfeXFMUGhUbG9paGVZNVlJbG9XN1VvQ0QzZ3hNajc4VjRreDd4TU5hWXc4RWFQTktXUWs5VGVBSTFmOV9WZ2RpTzByMmxWcmxxMGMyNlNVakgzTkkxbTl3UE05VG1pd2JfVExXbENsUFdFM04xQzk4VmJpaUlhYTBJcEtsU2lrYjRMNDBtOVp0V0dud1BhSTBpT014RHlZM2RFMVNfRVczVTBuS0dMamwxUFhSc2JfOExkMXNHX0llcGVFdDh2bGRGR2lPck9keVBmM1E?oc=5) — 규제·정책 — Custodia CEO Caitlin Long Claims Trump Crypto Ventures.
 - [Trump Adviser Says Regulatory Clarity Will Unlock 'Trillions of Dollars' Waiting To Enter Crypto](https://news.google.com/rss/articles/CBMiiwFBVV95cUxNUTBVeG01bHNBNGlZbmZtb3NOb1M4UGc5VUwyTGpFTlFpZDkyVnM2dnNKTWR6QjhZelp2QVQzQllTazktT1JIWWpid2hGeTE3aFJxa1dwdmN5VmhDa2RTOGYxTTdXLXFSamRSNW5aRFBraVA4VmpBdHRUZi1zTlhYck9TZkVPLWdqdWFj?oc=5) — 규제·정책 — Trump Adviser Says Regulatory Clarity Will Unlock.
-- [野 "이재명 대통령 SNS 선거 개입"與 "정책 홍보일 뿐" 공방](https://news.google.com/rss/articles/CBMiT0FVX3lxTE5fU2pDdmJ1X3NUSjhGRzZLQWk2RHg5RXZuNUdEYnotYVhTbHFUSHlqcmQ3b09jMWFycnhBbGljVEtWd2pqOGEtZFVZY1FCeHc?oc=5) — 9. [사설] 미 대법원도 인정한 ‘불법 관세’, 이재명 정부는 대미투자 굴욕합의 전면 폐기하라 - 현장언론 민플러스입니다.
-- [박수영 의원 “이재명 정부, 마이너스 성장 책임져야경제정책 전면 재설계 촉구”](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9Rd2FLbmVJME8tbi1YZ3lzN0RwcXhJWEwwdTlqbDM0UWliR3Q3Rkh3cEVMU3dLVkViTmluS2Z6LU5tSHlvczF2YzVfcWVQd29MN3MzMVptdHd1YmdYcE9GUUQxN2EwS00?oc=5) — 박수영 의원 “이재명 정부, 마이너스 성장 책임져야경제정책 전면 재설계 촉구”입니다.
+- [野 "이재명 대통령 SNS 선거 개입"與 "정책 홍보일 뿐" 공방](https://news.google.com/rss/articles/CBMiT0FVX3lxTE5fU2pDdmJ1X3NUSjhGRzZLQWk2RHg5RXZuNUdEYnotYVhTbHFUSHlqcmQ3b09jMWFycnhBbGljVEtWd2pqOGEtZFVZY1FCeHc?oc=5) — 9. [사설] 미 대법원도 인정한 ‘불법 관세’, 이재명 정부는 대미투자 굴욕합의 전면 폐기하라 - 현장언론 민플러스.
+- [박수영 의원 “이재명 정부, 마이너스 성장 책임져야경제정책 전면 재설계 촉구”](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9Rd2FLbmVJME8tbi1YZ3lzN0RwcXhJWEwwdTlqbDM0UWliR3Q3Rkh3cEVMU3dLVkViTmluS2Z6LU5tSHlvczF2YzVfcWVQd29MN3MzMVptdHd1YmdYcE9GUUQxN2EwS00?oc=5) — 박수영 의원 “이재명 정부, 마이너스 성장 책임져야경제정책 전면 재설계 촉구”.
 
 ## 텔레그램 주요 소식
 

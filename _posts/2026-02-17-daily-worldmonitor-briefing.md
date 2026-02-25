@@ -48,6 +48,7 @@ lang: "ko"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **20건** 수집
@@ -81,7 +82,7 @@ lang: "ko"
 - [Ancient bone may prove legendary war elephant crossing of Alps](https://www.bbc.com/news/articles/cdr2xl1e41eo?at_medium=RSS&at_campaign=rss) — Ancient bone may prove legendary war elephant crossing of Alps.
 - [Bondi Beach shooting accused faces court for the first time](https://www.bbc.com/news/articles/c3rzwe7lr4jo?at_medium=RSS&at_campaign=rss) — 법적 분쟁 — Bondi Beach shooting accused faces court for the first time.
 - [Savannah Guthrie's new plea for mother's release as FBI analyses glove](https://www.bbc.com/news/articles/c5yrv2g16e2o?at_medium=RSS&at_campaign=rss) — Savannah Guthrie's new plea for mother's release as FBI analyses glove.
-- [Female Israeli soldiers rescued after being chased by ultra-Orthodox men](https://www.bbc.com/news/articles/clyzen2lgw9o?at_medium=RSS&at_campaign=rss) — 솔라나 — Female Israeli soldiers rescued after being chased.
+- [Female Israeli soldiers rescued after being chased by ultra-Orthodox men](https://www.bbc.com/news/articles/clyzen2lgw9o?at_medium=RSS&at_campaign=rss) — Female Israeli soldiers rescued after being chased by ultra-Orthodox men.
 - [Sydney police plead for return of man, 85, kidnapped by mistake](https://www.bbc.com/news/articles/c0ljzye1zgno?at_medium=RSS&at_campaign=rss) — 기관 매수·매도 — Sydney police plead for return of man, 85, kidnapped.
 - [Train derails in Switzerland, injuring five amid avalanches in the Alps](https://www.aljazeera.com/news/2026/2/17/train-derails-in-switzerland-injuring-five-amid-avalanches-in-the-alps?traffic_source=rss) — Train derails in Switzerland, injuring five amid avalanches in the Alps.
 - [Australian PM Albanese says no help for ISIL relatives held in Syria camp](https://www.aljazeera.com/news/2026/2/17/australian-pm-albanese-says-no-help-for-isil-relatives-held-in-syria-camp?traffic_source=rss) — Australian PM Albanese says no help for ISIL relatives held in Syria camp.

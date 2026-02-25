@@ -38,8 +38,8 @@ pin: false
 
 ## URL 요약
 
-- [네이버 금융](https://finance.naver.com/sise/investorDealTrendDay.naver?bizdate=20260210&sosok=) — 네이버 금융입니다.
-- [네이버 금융](https://finance.naver.com/sise/investorDealTrendDay.naver?bizdate=20260210&sosok=02) — 네이버 금융입니다.
+- [네이버 금융](https://finance.naver.com/sise/investorDealTrendDay.naver?bizdate=20260210&sosok=) — 네이버 금융.
+- [네이버 금융](https://finance.naver.com/sise/investorDealTrendDay.naver?bizdate=20260210&sosok=02) — 네이버 금융.
 
 ## 글로벌 시장 대시보드
 
