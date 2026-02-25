@@ -45,6 +45,12 @@ logger = setup_logging("generate_market_summary")
 
 VERIFY_SSL = get_ssl_verify()
 
+STABLECOIN_SYMBOLS = {
+    "usdt", "usdc", "dai", "busd", "tusd", "usdp", "gusd", "frax", "lusd",
+    "usdd", "fdusd", "pyusd", "usds", "usde", "eusd", "crvusd", "gho",
+    "susd", "eurs", "xaut", "paxg", "figr_heloc",
+}
+
 
 def fetch_us_market_data(api_key: str) -> Dict[str, Dict[str, str]]:
     """Fetch US market data from Alpha Vantage + yfinance."""
@@ -656,8 +662,14 @@ def format_gainers_losers(coins: List[Dict]) -> str:
     if not coins:
         return "*데이터를 가져올 수 없습니다.*"
 
+    # Filter out stablecoins for meaningful rankings
+    non_stable = [
+        c for c in coins
+        if c.get("symbol", "").lower() not in STABLECOIN_SYMBOLS
+    ]
+
     by_change = sorted(
-        coins, key=lambda c: c.get("price_change_percentage_24h") or 0, reverse=True
+        non_stable, key=lambda c: c.get("price_change_percentage_24h") or 0, reverse=True
     )
 
     lines = ["### 🚀 Top 5 상승\n"]

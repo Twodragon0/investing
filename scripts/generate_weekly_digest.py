@@ -94,33 +94,36 @@ def extract_key_bullets(body: str, max_bullets: int = 3) -> List[str]:
     if not body:
         return []
 
+    # Strip HTML tags from body first
+    clean_body = re.sub(r"<[^>]+>", "", body)
+
     bullets = []
 
     # Try to find "오늘의 핵심" or "핵심" section bullets
-    core_match = re.search(r"##\s*(?:오늘의\s*)?핵심.*?\n((?:- .+\n?)+)", body)
+    core_match = re.search(r"##\s*(?:오늘의\s*)?핵심.*?\n((?:- .+\n?)+)", clean_body)
     if core_match:
         raw = core_match.group(1).strip()
         for line in raw.split("\n"):
-            line = line.strip()
-            if line.startswith("- "):
-                # Clean markdown bold and truncate
-                clean = re.sub(r"\*\*(.+?)\*\*", r"\1", line[2:])
-                if len(clean) > 120:
-                    clean = clean[:117] + "..."
-                bullets.append(clean)
-                if len(bullets) >= max_bullets:
-                    break
+            line = line.strip().lstrip("- ").strip()
+            if not line:
+                continue
+            # Clean markdown bold and truncate
+            clean = re.sub(r"\*\*(.+?)\*\*", r"\1", line)
+            if len(clean) > 120:
+                clean = clean[:117] + "..."
+            bullets.append(clean)
+            if len(bullets) >= max_bullets:
+                break
         return bullets
 
-    # Fallback: extract first paragraph as summary
+    # Fallback: extract first non-HTML paragraph
     paragraphs = [
         p.strip()
-        for p in body.split("\n\n")
+        for p in clean_body.split("\n\n")
         if p.strip() and not p.strip().startswith(("#", "|", "!", "---", ">", "```"))
     ]
     if paragraphs:
         first = paragraphs[0]
-        # Remove markdown
         first = re.sub(r"\*\*(.+?)\*\*", r"\1", first)
         first = re.sub(r"\[(.+?)\]\(.+?\)", r"\1", first)
         if len(first) > 150:
@@ -192,16 +195,15 @@ def generate_digest(posts: List[Dict]) -> str:
             categories[cat] = []
         categories[cat].append(post)
 
+    # ── 핵심 요약 ──
+    content_parts.append("## 핵심 요약\n")
+    content_parts.append(f"- 총 **{len(posts)}건**의 포스트 분석")
     category_lines = []
-    for name, items in sorted(
-        categories.items(), key=lambda x: len(x[1]), reverse=True
-    ):
+    for name, items in sorted(categories.items(), key=lambda x: len(x[1]), reverse=True):
         category_lines.append(f"{name} {len(items)}건")
     if category_lines:
-        content_parts.append("## 전체 뉴스 요약\n")
-        content_parts.append(f"- 총 **{len(posts)}건**의 포스트를 분석했습니다.")
-        content_parts.append(f"- 카테고리 분포: {', '.join(category_lines[:5])}")
-        content_parts.append("")
+        content_parts.append(f"- 카테고리: {', '.join(category_lines[:5])}")
+    content_parts.append("")
 
     # Extract market data for overview
     market_data = extract_market_data(posts)
@@ -219,9 +221,9 @@ def generate_digest(posts: List[Dict]) -> str:
         )
         if len(prices) >= 2:
             weekly_change = ((prices[-1] - prices[0]) / prices[0]) * 100
-            direction = "🟢" if weekly_change >= 0 else "🔴"
+            direction = "+" if weekly_change >= 0 else ""
             overview_lines.append(
-                f"| BTC 주간 변동 | {direction} {weekly_change:+.1f}% |"
+                f"| BTC 주간 변동 | {direction}{weekly_change:.1f}% |"
             )
 
     # Fear & Greed trend
@@ -252,6 +254,9 @@ def generate_digest(posts: List[Dict]) -> str:
         "market-analysis": "시장 분석",
         "social-media": "소셜 미디어",
         "regulatory-news": "규제 동향",
+        "political-trades": "정치인 거래",
+        "defi-tvl": "DeFi TVL",
+        "worldmonitor": "글로벌 이슈",
     }
 
     # Priority order for categories
@@ -269,43 +274,45 @@ def generate_digest(posts: List[Dict]) -> str:
         cat_posts = categories[cat]
         display_name = cat_names.get(cat, cat)
 
-        content_parts.append(f"## {display_name}\n")
+        content_parts.append(f"## {display_name} ({len(cat_posts)}건)\n")
 
-        # Extract and display key insights from each post
+        # Collect unique insights across all posts in this category
+        seen_insights = set()
+        insight_count = 0
+        max_insights = 8  # Cap total insights per category
+
         for p in sorted(cat_posts, key=lambda x: x.get("file_date", ""), reverse=True):
-            title = p.get("title", "제목 없음")
+            if insight_count >= max_insights:
+                break
             date = p.get("file_date", "")
-            content_parts.append(f"### {title} ({date})\n")
-
             bullets = extract_key_bullets(p.get("body", ""))
-            if bullets:
-                for b in bullets:
-                    content_parts.append(f"- {b}")
-                content_parts.append("")
-            else:
-                # Fallback: show first sentence of body
-                body = p.get("body", "").strip()
-                if body:
-                    first_line = body.split("\n")[0].strip()
-                    if first_line and not first_line.startswith(("#", "|", "!")):
-                        clean = re.sub(r"\*\*(.+?)\*\*", r"\1", first_line)
-                        if len(clean) > 150:
-                            clean = clean[:147] + "..."
-                        content_parts.append(f"- {clean}")
-                content_parts.append("")
+            for b in bullets:
+                if insight_count >= max_insights:
+                    break
+                # Deduplicate by checking first 40 chars
+                key = b[:40].lower()
+                if key in seen_insights:
+                    continue
+                seen_insights.add(key)
+                content_parts.append(f"- [{date}] {b}")
+                insight_count += 1
 
-    # Remaining categories not in priority order
-    for cat, cat_posts in categories.items():
+        if insight_count == 0:
+            content_parts.append(f"- {len(cat_posts)}건의 리포트가 수집되었습니다.")
+        content_parts.append("")
+
+    # Remaining categories - compact list
+    for cat, cat_posts in sorted(categories.items(), key=lambda x: len(x[1]), reverse=True):
         if cat in cat_order:
             continue
         display_name = cat_names.get(cat, cat)
-        content_parts.append(f"## {display_name}\n")
-        content_parts.append("| 날짜 | 제목 |")
-        content_parts.append("|------|------|")
-        for p in sorted(cat_posts, key=lambda x: x.get("file_date", ""), reverse=True):
+        content_parts.append(f"## {display_name} ({len(cat_posts)}건)\n")
+        for p in sorted(cat_posts, key=lambda x: x.get("file_date", ""), reverse=True)[:5]:
             title = p.get("title", "제목 없음")
             date = p.get("file_date", "")
-            content_parts.append(f"| {date} | **{title}** |")
+            content_parts.append(f"- [{date}] {title}")
+        if len(cat_posts) > 5:
+            content_parts.append(f"- ... 외 {len(cat_posts) - 5}건")
         content_parts.append("")
 
     # ── Weekly Statistics ──
