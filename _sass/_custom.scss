@@ -1346,6 +1346,28 @@ a {
     font-size: 0.8rem;
     opacity: 0.7;
   }
+
+  .footer-qr {
+    text-align: center;
+
+    #footer-qrcode {
+      display: inline-block;
+      padding: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba($border-color, 0.3);
+      border-radius: 8px;
+
+      img {
+        display: block;
+      }
+    }
+
+    .qr-label {
+      margin-top: 0.5rem;
+      font-size: 0.75rem;
+      opacity: 0.6;
+    }
+  }
 }
 
 /* ================================

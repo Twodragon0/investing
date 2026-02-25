@@ -68,6 +68,22 @@
     {{ content }}
   </main>
   {% include footer.html %}
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script>
+  (function() {
+    var el = document.getElementById('footer-qrcode');
+    if (el && typeof QRCode !== 'undefined') {
+      new QRCode(el, {
+        text: '{{ site.url }}',
+        width: 120,
+        height: 120,
+        colorDark: '#c9d1d9',
+        colorLight: 'transparent',
+        correctLevel: QRCode.CorrectLevel.M
+      });
+    }
+  })();
+  </script>
   <script>
   (function() {
     var bar = document.getElementById('reading-progress');
