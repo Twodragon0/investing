@@ -14,11 +14,11 @@ description: "2026-02-23 주식 시장에서 144건의 뉴스를 분석했습니
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">144</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 46</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,874.21</div><div class="stat-label">KOSPI +1.17%</div></div><div class="stat-item"><div class="stat-value">1,162.11</div><div class="stat-label">KOSDAQ +0.73%</div></div></div>
+<div class="stat-item"><div class="stat-value">144</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 46</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,874.21</div><div class="stat-label">KOSPI +1.17%</div></div><div class="stat-item"><div class="stat-value">1,162.11</div><div class="stat-label">KOSDAQ +0.73%</div></div></div>
 
-<div class="alert-box alert-info"><strong>주식 시장 **가격/시장, 정치/정책** 부각 144건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 46건 수집</li><li>🏛️ <strong>정치/정책</strong>: 22건 수집</li><li>🤖 <strong>AI/기술</strong>: 30건 수집</li><li>📊 <strong>매크로/금리</strong> (7건): 고환율에 발 묶인 한은…2월 기준금리 '6회 연속 동결' 무게 컨슈머타임스(Consumertimes)</li></ul></div>
+<strong>주식 시장 **가격/시장, 정치/정책** 부각 144건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 46건 수집</li><li>🏛️ <strong>정치/정책</strong>: 22건 수집</li><li>🤖 <strong>AI/기술</strong>: 30건 수집</li><li>📊 <strong>매크로/금리</strong> (7건): 고환율에 발 묶인 한은…2월 기준금리 '6회 연속 동결' 무게 컨슈머타임스(Consumertimes)</li></ul></div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?hl=en-US&gl=US&ceid=US%3Aen">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates</a></li><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a></li><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?oc=5">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates - CNBC</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?hl=en-US&gl=US&ceid=US%3Aen">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates</a></li><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a></li><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?oc=5">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates - CNBC</a></li></ul></div>
 
 
 
@@ -57,7 +57,7 @@ description: "2026-02-23 주식 시장에서 144건의 뉴스를 분석했습니
 <a href="https://news.google.com/read/CBMic0FVX3lxTE5IQ21KTmJWTldwaXh2Mks1UjMyZFBrTXJqbEl6UGdJSlVOY2VnVjVheUxpNTIwVGExWGZOWDA3SFNDeF9jS1ZZVnFKY1hKZGJqaHZfRzdNb1hBQW5WVDA2WTFmVkR0Q2ZkdFFnbTN4RXZwU2c?hl=ko&gl=KR&ceid=KR%3Ako">코스피·코스닥 전 거래일(20일) 주요공시는?... 퀀타매트릭스 "프랑스 자회사 주식 43억원에 추가취득"</a>
 <a href="https://news.google.com/read/CBMiakFVX3lxTE9NWlV0N0ZrRHhvT2MyS1BtSGJXTnpoVnJYRWdkUDB5dnV1ZlgxT3pGUFQwcl92aUVFLUQzb0ZrLWNrQUNzc1llRUlzdUg0R0ZDand6Z2lCYTVWTjNiNnFIZ1B4WXBIb2lmclE?hl=ko&gl=KR&ceid=KR%3Ako">코스피·코스닥, 오름세로 장 출발</a>
 <em>...외 28건</em>
-</div></details>
+</details>
 
 
 ### 🏛️ 정치/정책 (22건)
@@ -77,7 +77,7 @@ description: "2026-02-23 주식 시장에서 144건의 뉴스를 분석했습니
 <a href="https://news.google.com/read/CBMid0FVX3lxTE1SYWhnTDBmNVdEWXc1eGRGbWw4a3B3RGJDVTM0Und0Qm55R2VockhlcFpNaVAybGVSRzRVZFp4cGFyRVYxMmZCQlZ5M3EteF9Jb2ZpQjNwX1gzOWJOQk1sX0x6SE01cmUxS3BqVUVta2VxNFJkdTNB0gF8QVVfeXFMTnotN0RrZ0szeTdEdUpwUklxdG5RdHE4Z1pEWVNRdEw4V21pQmhnYXFFZ1NtN1JRWnBrcWowLUlvV1Q5YXk1dFNIdnY4TEp6YzcwcFNDd1gxZmREWUI1b1g0X2FpaWRQR3NXMVN0NGxIbHR3ZGRzNGtjQ1lnaQ?hl=en-US&gl=US&ceid=US%3Aen">Stock futures fall amid uncertainty about Trump new tariffs: Live updates</a>
 <a href="https://news.google.com/read/CBMivwFBVV95cUxNOGI4OE9oTExGRzJsdS1mZUFWV1Zjc0J2Mk9jeHZpckFyMk1BSktUanlMUHJYaWVoVWZiTGdhTTRTWW9Ga0czWEpVNzJlTV9vSWVUUzFhV2VCQ0NMZndvVy16NXlyTGpGZTdsR000Nm9MdDUxNWRORE5IdUgwLVpqTE8wVUR5SVk3X3pjeHM1OHRhWXBwY09xUUVFOWpRaUxCUnV0bGdSQV92NzNKZng5VV9MZDZrWWtvZWNLWFBZWQ?hl=en-US&gl=US&ceid=US%3Aen">Dow Jones Futures Fall After Trump Hikes Global Tariff To 15%</a>
 <em>...외 3건</em>
-</div></details>
+</details>
 
 
 ### 🤖 AI/기술 (30건)
@@ -97,7 +97,7 @@ description: "2026-02-23 주식 시장에서 144건의 뉴스를 분석했습니
 <a href="https://news.google.com/read/CBMib0FVX3lxTE9raUJSclcxR1JBR3l6YXNQdEdTc1JsUXlPai1PZHZMWm1HX1FGb0V4Y0RQWk5DRnpRR0s0eWI1bGRLanZ5TkxWZmVTV2sxbEZpREFIMEVGTHdLVl9wQ3RsMlg0UDhMLVNwNV9OQ19aONIBc0FVX3lxTE5LalZ1ZFVYQk1KTWxYekZfUkxJbDdkRjZ3ME1hN25oVTVHaTJyOE9hbmJ3cVZxWkJQV0lja25sY2JCSmVKeXVybllIYk53VlpRZExER3p5YVdGcFp1dmI3NGUtUGhkV19EZlF3OXNfenhvWGM?hl=ko&gl=KR&ceid=KR%3Ako">‘윤 무기징역’ 선고된 날 코스피·코스닥 날았다...“내달까지 반도체 주도 상승장”</a>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1XR1RoejFrZ3c2c0FxQ05DZUZnUWQ4eUNOU1cxYk5jbUNvRmJCalJLZkkyUzVLWkdZQkxtWjRGbE1qVG5aZDczWHVMaHYzemJkQ1RZ?oc=5">삼성전자·SK하이닉스, 목표가 일제히 상향…반도체 가격 상승에 관세 우려까지 탈피하며 '6000피' 눈앞 - 네이트</a>
 <em>...외 11건</em>
-</div></details>
+</details>
 
 
 ### 📊 매크로/금리 (7건)
@@ -119,7 +119,7 @@ description: "2026-02-23 주식 시장에서 144건의 뉴스를 분석했습니
 <details><summary>그 외 4건 보기</summary><div class="details-content">
 <a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxPc0trLWZmWFZjZ2FzbXM3V1J0eDFGYTctclpPVzU5aXJNUHh5R3RpUXhXeUk3bHkxVzlpX0ZOWTF1dV8yUUxlN3FlaXdXdS1zMlBCWlNRSXZLWV96bGhRZDYxY01pLW5HT3pYTDVBTkhsdFRiUGhnUVdSTzVnR2p5bmcxdUhIZ9IBmgFBVV95cUxOQ0dPZzVBNjJjQUtxM212dUVRdzcyQThUbnRycUhVeGxqcnUtT0RJMk5fYjdabmNUVVBoODdzRU5McWIzLTVKLXdNSlhpUk9wcFpuQnZKbWo1eUowRWhNWW1QUk1kLTlYWURZRl92Zm1Fakd6SEl5dGwxc0NnOGZ1ZmlyT1R0NVJRRm9aMzU2cDdFcXJXRS1Wczh3?oc=5">[금통위폴] 전문가 전원 “韓銀, 올해 금리 동결할 것”... 일부는 “내년에 인상” 관측도 - 조선비즈 - Chosunbiz</a>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFB5dFFjZ3FyUG5GeU5lRDBnM3RfTEczMnIwd181UkRaYjAxU1VFSl95Wjc4eVdNbGlfNUhjTTBLVFc0X0FWRlcya1ZoZzhjVzEySW9VQjlqNTNRLUJSYk1FdndWcWhjZHByWnh4LdIBcEFVX3lxTE5WLUEtVkdkYlNjNGt4ZFM5SnhaQUZtN2MtWmpEX0Y3dFVxdmx6UVloWldJd1ZfLU41ZGJVWEswbDhRSEpWdVVNS25JOU85Rm02amtRajBmRU1aNWo5NTkzMmktZEFJaVFjR0NQcEU4emQ?oc=5">금리 6연속 동결 무게…한은, 성장률 전망 올릴까 - 남도일보</a>
-</div></details>
+</details>
 
 
 ### 🟠 비트코인 (5건)
@@ -139,7 +139,7 @@ U.S. stock-index futures declined Sunday, as investors grappled with the implica
 <details><summary>그 외 2건 보기</summary><div class="details-content">
 <a href="https://www.cnbc.com/2026/02/23/bitcoin-falls-trump-tariffs.html">Bitcoin falls below $65,000 as Trump tariff moves raise uncertainty</a>
 <a href="https://www.cnbc.com/2026/02/22/trump-demands-netflix-fire-susan-rice-as-doj-probes-warner-deal.html">Trump demands Netflix fire Susan Rice as DOJ probes Warner deal</a>
-</div></details>
+</details>
 
 
 

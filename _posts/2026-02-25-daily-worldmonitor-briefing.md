@@ -11,11 +11,11 @@ description: "2026-02-25 기준 WorldMonitor 연계 소스에서 글로벌 이�
 
 **2026-02-25** 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다.
 
-<div class="alert-box alert-info"><strong>오늘의 글로벌 리스크 스냅샷</strong><ul>
-<li>총 수집: <strong>20건</strong></li>
-<li>핵심 테마: <strong>사회/기타, 지정학/안보, 에너지</strong></li>
-<li>집중 출처: <strong>WorldMonitor/Guardian World</strong></li>
-</ul></div>
+<strong>오늘의 글로벌 리스크 스냅샷</strong><ul>
+총 수집: <strong>20건</strong></li>
+핵심 테마: <strong>사회/기타, 지정학/안보, 에너지</strong></li>
+집중 출처: <strong>WorldMonitor/Guardian World</strong></li>
+</div>
 
 ## 핵심 요약
 - 수집 건수: **20건**
@@ -41,19 +41,15 @@ description: "2026-02-25 기준 WorldMonitor 연계 소스에서 글로벌 이�
 - 상세 지도: https://finance.worldmonitor.app/?lat=20.0000&lon=0.0000&zoom=1.00&view=global&timeRange=7d&layers=conflicts%2Cbases%2Chotspots%2Cnuclear%2Csanctions%2Cweather%2Ceconomic%2Cwaterways%2Coutages%2Cmilitary%2Cnatural
 
 ## 이슈 분포
-<div class="stat-grid">
-<div class="stat-item"><div class="stat-value">20</div><div class="stat-label">총 이슈</div></div>
-<div class="stat-item"><div class="stat-value">4</div><div class="stat-label">테마 수</div></div>
-<div class="stat-item"><div class="stat-value">2</div><div class="stat-label">출처 수</div></div>
-<div class="stat-item"><div class="stat-value">3</div><div class="stat-label">안보 이슈</div></div>
-</div>
+<div class="stat-value">20</div><div class="stat-label">총 이슈</div></div>
+<div class="stat-value">4</div><div class="stat-label">테마 수</div></div>
+<div class="stat-value">2</div><div class="stat-label">출처 수</div></div>
+<div class="stat-value">3</div><div class="stat-label">안보 이슈</div></div>
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">사회/기타</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:75%"></div></div><span class="theme-count">15건 (75%)</span></div>
-<div class="theme-row"><span class="theme-label">지정학/안보</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:15%"></div></div><span class="theme-count">3건 (15%)</span></div>
-<div class="theme-row"><span class="theme-label">에너지</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:8%"></div></div><span class="theme-count">1건 (5%)</span></div>
-<div class="theme-row"><span class="theme-label">정책/법률</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:8%"></div></div><span class="theme-count">1건 (5%)</span></div>
-</div>
+<span class="theme-label">사회/기타</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:75%"></div></div><span class="theme-count">15건 (75%)</span></div>
+<span class="theme-label">지정학/안보</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:15%"></div></div><span class="theme-count">3건 (15%)</span></div>
+<span class="theme-label">에너지</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:8%"></div></div><span class="theme-count">1건 (5%)</span></div>
+<span class="theme-label">정책/법률</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:8%"></div></div><span class="theme-count">1건 (5%)</span></div>
 
 ## 주요 이슈
 
@@ -88,32 +84,32 @@ description: "2026-02-25 기준 WorldMonitor 연계 소스에서 글로벌 이�
 | WorldMonitor/BBC World | 8건 | 40% |
 
 ## 원문 링크 묶음
-<div class="wm-reference-summary"><strong>원문 링크 탐색 가이드</strong><p>시장 영향이 높은 이슈를 우선 확인할 수 있도록 출처별 커버리지를 함께 제공합니다.</p></div>
-<div class="wm-reference-pills"><span class="source-tag">WorldMonitor/Guardian World · 12건</span> <span class="source-tag">WorldMonitor/BBC World · 8건</span></div>
+<strong>원문 링크 탐색 가이드</strong><p>시장 영향이 높은 이슈를 우선 확인할 수 있도록 출처별 커버리지를 함께 제공합니다.</p></div>
+<span class="source-tag">WorldMonitor/Guardian World · 12건</span> <span class="source-tag">WorldMonitor/BBC World · 8건</span></div>
 <details class="wm-reference-details"><summary>전체 원문 20건 펼치기</summary><div class="details-content">
 <ol class="wm-reference-list">
-<li><a href="https://www.theguardian.com/uk-news/2026/feb/24/royal-artillery-access-looted-asante-treasure-ghana" target="_blank" rel="noopener noreferrer">Royal Artillery under fire after denying access to looted Asante treasure</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
-<li><a href="https://www.theguardian.com/world/2026/feb/23/robert-mugabe-son-bellarmine-mugabe-charged-with-crimes" target="_blank" rel="noopener noreferrer">Robert Mugabe’s son charged with attempted murder over Johannesburg shooting</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
-<li><a href="https://www.theguardian.com/world/2026/feb/25/caricom-summit-2026-caribbean-leaders-us-military-strikes" target="_blank" rel="noopener noreferrer">Caribbean leaders call for ‘de-escalation and dialogue’ amid US oil embargo on Cuba</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
-<li><a href="https://www.theguardian.com/world/2026/feb/24/floods-landslides-brazil-kill-after-record-rainfall" target="_blank" rel="noopener noreferrer">Floods and landslides in Brazil kill at least 30 after record rainfall</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
-<li><a href="https://www.theguardian.com/world/2026/feb/24/brazil-supreme-court-trial-rio-marielle-franco-murder" target="_blank" rel="noopener noreferrer">Brazilian politicians accused of ordering murder of Rio councillor go on trial</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
-<li><a href="https://www.theguardian.com/world/2026/feb/24/sheinbaum-world-cup-visitors-violence-el-mencho" target="_blank" rel="noopener noreferrer">Mexico pledges safety for World Cup after violence erupts from cartel boss’s killing</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
-<li><a href="https://www.theguardian.com/world/2026/feb/23/el-mencho-mexican-drug-cartel-boss-killing-violence" target="_blank" rel="noopener noreferrer">Mexican drug cartel boss ‘El Mencho’ tracked through romantic partner</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
-<li><a href="https://www.theguardian.com/world/2026/feb/25/new-zealand-plan-to-abolish-environment-ministry" target="_blank" rel="noopener noreferrer">Anger over plans to abolish New Zealand’s dedicated environment ministry</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
-<li><a href="https://www.theguardian.com/global-development/2026/feb/24/destitute-survivors-of-south-east-asias-cyberscam-farms-an-international-crisis" target="_blank" rel="noopener noreferrer">Destitute survivors of south-east Asia’s cyberscam farms an ‘international crisis’</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
-<li><a href="https://www.theguardian.com/music/2026/feb/24/bts-comeback-show-sells-out-immediately-as-260000-fans-set-to-descend-on-seoul" target="_blank" rel="noopener noreferrer">BTS comeback show sells out immediately as 260,000 fans set to descend on Seoul</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
-<li><a href="https://www.theguardian.com/world/2026/feb/24/us-accuses-china-of-massively-expanding-nuclear-arsenal-amid-fears-of-new-arms-race" target="_blank" rel="noopener noreferrer">US accuses China of ‘massively’ expanding nuclear arsenal amid fears of new arms race</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
-<li><a href="https://www.theguardian.com/world/2026/feb/23/rodrigo-duterte-drug-war-case-icc-pre-trial-hearing-international-criminal-court-ntwnfb" target="_blank" rel="noopener noreferrer">Duterte at ‘very heart’ of murderous drug crackdowns in Philippines, ICC told</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
-<li><a href="https://www.bbc.com/news/articles/cz7gw3l395ro?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Russian soldiers tell BBC they saw fellow troops executed on commanders&#x27; orders</a><span class="source-tag">WorldMonitor/BBC World</span></li>
-<li><a href="https://www.bbc.com/news/articles/clyg7r3nd3ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Ukraine remembers its dead as war enters a fifth year</a><span class="source-tag">WorldMonitor/BBC World</span></li>
-<li><a href="https://www.bbc.com/news/articles/c07jpx7kkvpo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Mexico hunts 23 inmates sprung from jail during wave of violence</a><span class="source-tag">WorldMonitor/BBC World</span></li>
-<li><a href="https://www.bbc.com/news/articles/c70k7vjllzeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Floods and landslides in Brazil kill at least 25</a><span class="source-tag">WorldMonitor/BBC World</span></li>
-<li><a href="https://www.bbc.com/news/articles/c5yjpx2lgdjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Two dead after winter storm hammers the US northeast</a><span class="source-tag">WorldMonitor/BBC World</span></li>
-<li><a href="https://www.bbc.com/news/articles/cd9gj1w2kn1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Japan to deploy missiles on island near Taiwan by 2031</a><span class="source-tag">WorldMonitor/BBC World</span></li>
-<li><a href="https://www.bbc.com/news/articles/cy4wd11j0evo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Nancy Guthrie&#x27;s family offers $1m reward to bring home missing mother</a><span class="source-tag">WorldMonitor/BBC World</span></li>
-<li><a href="https://www.bbc.com/news/articles/c8d5eg5pl34o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">US ambassador to France set for talks with foreign minister after row</a><span class="source-tag">WorldMonitor/BBC World</span></li>
+<a href="https://www.theguardian.com/uk-news/2026/feb/24/royal-artillery-access-looted-asante-treasure-ghana" target="_blank" rel="noopener noreferrer">Royal Artillery under fire after denying access to looted Asante treasure</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
+<a href="https://www.theguardian.com/world/2026/feb/23/robert-mugabe-son-bellarmine-mugabe-charged-with-crimes" target="_blank" rel="noopener noreferrer">Robert Mugabe’s son charged with attempted murder over Johannesburg shooting</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
+<a href="https://www.theguardian.com/world/2026/feb/25/caricom-summit-2026-caribbean-leaders-us-military-strikes" target="_blank" rel="noopener noreferrer">Caribbean leaders call for ‘de-escalation and dialogue’ amid US oil embargo on Cuba</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
+<a href="https://www.theguardian.com/world/2026/feb/24/floods-landslides-brazil-kill-after-record-rainfall" target="_blank" rel="noopener noreferrer">Floods and landslides in Brazil kill at least 30 after record rainfall</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
+<a href="https://www.theguardian.com/world/2026/feb/24/brazil-supreme-court-trial-rio-marielle-franco-murder" target="_blank" rel="noopener noreferrer">Brazilian politicians accused of ordering murder of Rio councillor go on trial</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
+<a href="https://www.theguardian.com/world/2026/feb/24/sheinbaum-world-cup-visitors-violence-el-mencho" target="_blank" rel="noopener noreferrer">Mexico pledges safety for World Cup after violence erupts from cartel boss’s killing</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
+<a href="https://www.theguardian.com/world/2026/feb/23/el-mencho-mexican-drug-cartel-boss-killing-violence" target="_blank" rel="noopener noreferrer">Mexican drug cartel boss ‘El Mencho’ tracked through romantic partner</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
+<a href="https://www.theguardian.com/world/2026/feb/25/new-zealand-plan-to-abolish-environment-ministry" target="_blank" rel="noopener noreferrer">Anger over plans to abolish New Zealand’s dedicated environment ministry</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
+<a href="https://www.theguardian.com/global-development/2026/feb/24/destitute-survivors-of-south-east-asias-cyberscam-farms-an-international-crisis" target="_blank" rel="noopener noreferrer">Destitute survivors of south-east Asia’s cyberscam farms an ‘international crisis’</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
+<a href="https://www.theguardian.com/music/2026/feb/24/bts-comeback-show-sells-out-immediately-as-260000-fans-set-to-descend-on-seoul" target="_blank" rel="noopener noreferrer">BTS comeback show sells out immediately as 260,000 fans set to descend on Seoul</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
+<a href="https://www.theguardian.com/world/2026/feb/24/us-accuses-china-of-massively-expanding-nuclear-arsenal-amid-fears-of-new-arms-race" target="_blank" rel="noopener noreferrer">US accuses China of ‘massively’ expanding nuclear arsenal amid fears of new arms race</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
+<a href="https://www.theguardian.com/world/2026/feb/23/rodrigo-duterte-drug-war-case-icc-pre-trial-hearing-international-criminal-court-ntwnfb" target="_blank" rel="noopener noreferrer">Duterte at ‘very heart’ of murderous drug crackdowns in Philippines, ICC told</a><span class="source-tag">WorldMonitor/Guardian World</span></li>
+<a href="https://www.bbc.com/news/articles/cz7gw3l395ro?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Russian soldiers tell BBC they saw fellow troops executed on commanders&#x27; orders</a><span class="source-tag">WorldMonitor/BBC World</span></li>
+<a href="https://www.bbc.com/news/articles/clyg7r3nd3ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Ukraine remembers its dead as war enters a fifth year</a><span class="source-tag">WorldMonitor/BBC World</span></li>
+<a href="https://www.bbc.com/news/articles/c07jpx7kkvpo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Mexico hunts 23 inmates sprung from jail during wave of violence</a><span class="source-tag">WorldMonitor/BBC World</span></li>
+<a href="https://www.bbc.com/news/articles/c70k7vjllzeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Floods and landslides in Brazil kill at least 25</a><span class="source-tag">WorldMonitor/BBC World</span></li>
+<a href="https://www.bbc.com/news/articles/c5yjpx2lgdjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Two dead after winter storm hammers the US northeast</a><span class="source-tag">WorldMonitor/BBC World</span></li>
+<a href="https://www.bbc.com/news/articles/cd9gj1w2kn1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Japan to deploy missiles on island near Taiwan by 2031</a><span class="source-tag">WorldMonitor/BBC World</span></li>
+<a href="https://www.bbc.com/news/articles/cy4wd11j0evo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Nancy Guthrie&#x27;s family offers $1m reward to bring home missing mother</a><span class="source-tag">WorldMonitor/BBC World</span></li>
+<a href="https://www.bbc.com/news/articles/c8d5eg5pl34o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">US ambassador to France set for talks with foreign minister after row</a><span class="source-tag">WorldMonitor/BBC World</span></li>
 </ol>
-</div></details>
+</details>
 
 ## 읽는 방법
 - **지정학/안보(높음)**: 금/원유/방산/안전자산 변동성과 동시 확인

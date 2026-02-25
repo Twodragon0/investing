@@ -12,18 +12,16 @@ lang: "ko"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">53</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🏛️ 35</div><div class="stat-label">정치/정책</div></div><div class="stat-item"><div class="stat-value">tariff</div><div class="stat-label">핫 키워드 (38회)</div></div></div>
+<div class="stat-item"><div class="stat-value">53</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🏛️ 35</div><div class="stat-label">정치/정책</div></div><div class="stat-item"><div class="stat-value">tariff</div><div class="stat-label">핫 키워드 (38회)</div></div></div>
 
-<div class="alert-box alert-info"><strong>**정치/정책, 매크로/금리** 관련 53건 수집</strong><ul><li>🏛️ <strong>정치/정책</strong> (35건): 10 Reasons Why the Congressional Stock Trading Ban Will Never Pass Independent Voter News</li><li>📊 <strong>매크로/금리</strong> (9건): [다음주 경제] 한은 기준금리 결정지난해 출산율 올랐나 연합뉴스 한민족센터</li><li>📈 <strong>가격/시장</strong> (11건): Rallybio (NASDAQ: RLYB) director granted options in lieu of cash Stock Titan</li></ul></div>
+<strong>**정치/정책, 매크로/금리** 관련 53건 수집</strong><ul><li>🏛️ <strong>정치/정책</strong> (35건): 10 Reasons Why the Congressional Stock Trading Ban Will Never Pass Independent Voter News</li><li>📊 <strong>매크로/금리</strong> (9건): [다음주 경제] 한은 기준금리 결정지난해 출산율 올랐나 연합뉴스 한민족센터</li><li>📈 <strong>가격/시장</strong> (11건): Rallybio (NASDAQ: RLYB) director granted options in lieu of cash Stock Titan</li></ul></div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE8xa29ackYtVUh6dXlhNFJCX2tqM1dvaXhOY09SZEJBSVlzV2FlVU5rZW9TSUhxbzFxekViOTBOM18xU05EYlZSaTh6aDZCNVU?oc=5">미 대법원 “상호 관세 위법”트럼프, “10% 새 관세” 행정명령 - v.daum.net</a></li><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFA2ZXNSUm15UlBxWVdOZ1BweC14SFJQUFdoY3RSUUxWOFEtU0x6eEJPZkZpa3JNcnlpZl9vTzBhTF95QUI3Y3cyZmVDV1JGWU81TG5vTGpiRlV6QdIBVEFVX3lxTE5uXzlrbXI4M3pZT0lqWWFDdkF1alptN0p6YklOLWFmZU5KdUY4bTB6MnN4Zjg3YXlHdm5ybFhFSFdBMDdKcnFJQW1mMkJpU0VQWnNQbA?oc=5">트럼프, 새로운 관세 '전세계 10%' 행정명령"24일 발효" - 한국경제</a></li><li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTFBaM25oS0JJbmNrajhUVTFMdTVSd3RZVmlYeDFCNl84TDdSZjYyejR5czVYNDZvWF94eUZtb1R3THMxU2QwMGJQaWRyUGM0SlRaWkp2S282Nm5uNUJWc2N4RXJxYUxkN3g3eEFXU1VhQ3ZGNXRZ0gF0QVVfeXFMTmxtT1FnR3ZfYzF1TEYxZUZSQTd3aE43UC1NNG1jSFhwYnczYjZaOHQ1Z0ZsdGJheGxWdFh1Ui15eTVDZDdQdDlvTHJMZFFsalNhSkNOQjFWZEI1UUxBdzJScWVtMmwyMmhKNnFCdDhINkNIdEU?oc=5">트럼프, '상호 관세 종료' 행정명령에 서명 - MBC 뉴스</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE8xa29ackYtVUh6dXlhNFJCX2tqM1dvaXhOY09SZEJBSVlzV2FlVU5rZW9TSUhxbzFxekViOTBOM18xU05EYlZSaTh6aDZCNVU?oc=5">미 대법원 “상호 관세 위법”트럼프, “10% 새 관세” 행정명령 - v.daum.net</a></li><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFA2ZXNSUm15UlBxWVdOZ1BweC14SFJQUFdoY3RSUUxWOFEtU0x6eEJPZkZpa3JNcnlpZl9vTzBhTF95QUI3Y3cyZmVDV1JGWU81TG5vTGpiRlV6QdIBVEFVX3lxTE5uXzlrbXI4M3pZT0lqWWFDdkF1alptN0p6YklOLWFmZU5KdUY4bTB6MnN4Zjg3YXlHdm5ybFhFSFdBMDdKcnFJQW1mMkJpU0VQWnNQbA?oc=5">트럼프, 새로운 관세 '전세계 10%' 행정명령"24일 발효" - 한국경제</a></li><li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTFBaM25oS0JJbmNrajhUVTFMdTVSd3RZVmlYeDFCNl84TDdSZjYyejR5czVYNDZvWF94eUZtb1R3THMxU2QwMGJQaWRyUGM0SlRaWkp2S282Nm5uNUJWc2N4RXJxYUxkN3g3eEFXU1VhQ3ZGNXRZ0gF0QVVfeXFMTmxtT1FnR3ZfYzF1TEYxZUZSQTd3aE43UC1NNG1jSFhwYnczYjZaOHQ1Z0ZsdGJheGxWdFh1Ui15eTVDZDdQdDlvTHJMZFFsalNhSkNOQjFWZEI1UUxBdzJScWVtMmwyMmhKNnFCdDhINkNIdEU?oc=5">트럼프, '상호 관세 종료' 행정명령에 서명 - MBC 뉴스</a></li></ul></div>
 
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:66%"></div></div><span class="theme-count">35건 (66%)</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:17%"></div></div><span class="theme-count">9건 (17%)</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:21%"></div></div><span class="theme-count">11건 (21%)</span></div>
-</div>
+<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:66%"></div></div><span class="theme-count">35건 (66%)</span></div>
+<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:17%"></div></div><span class="theme-count">9건 (17%)</span></div>
+<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:21%"></div></div><span class="theme-count">11건 (21%)</span></div>
 
 *총 53건 수집*
 

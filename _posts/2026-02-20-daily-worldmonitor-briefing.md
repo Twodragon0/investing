@@ -14,15 +14,11 @@ lang: "ko"
 
 ## 한눈에 보기
 
-<div class="stat-grid">
-<div class="stat-item"><div class="stat-value">20</div><div class="stat-label">총 이슈</div></div>
-<div class="stat-item"><div class="stat-value">2</div><div class="stat-label">안보 이슈</div></div>
-</div>
+<div class="stat-value">20</div><div class="stat-label">총 이슈</div></div>
+<div class="stat-value">2</div><div class="stat-label">안보 이슈</div></div>
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">사회/기타</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:90%"></div></div><span class="theme-count">18건 (90%)</span></div>
-<div class="theme-row"><span class="theme-label">지정학/안보</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:10%"></div></div><span class="theme-count">2건 (10%)</span></div>
-</div>
+<span class="theme-label">사회/기타</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:90%"></div></div><span class="theme-count">18건 (90%)</span></div>
+<span class="theme-label">지정학/안보</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:10%"></div></div><span class="theme-count">2건 (10%)</span></div>
 
 ---
 
@@ -62,7 +58,7 @@ lang: "ko"
 - 총 **20건** 수집
 - 주요 테마: 사회/기타, 지정학/안보
 - 2026-02-20 글로벌 뉴스 20건을 정리한 지정학·매크로 브리핑입니다.
-- - 이란 핵 협상 최후통첩: Trump가 이란에 "10일 내 합의하지 않으면 나쁜 일이 일어난다"고 경고. 원유 가격과 안전자산(금)에 직접 영향을 미치는 핵심 리스크입니다. - 베네수엘라 경제 위기: IMF가 베네수엘라의 경제·인도적 상황이 "매우 취약"하다고 경고. 원유 공급과...
+- 이란 핵 협상 최후통첩: Trump가 이란에 "10일 내 합의하지 않으면 나쁜 일이 일어난다"고 경고. 원유 가격과 안전자산(금)에 직접 영향을 미치는 핵심 리스크입니다. - 베네수엘라 경제 위기: IMF가 베네수엘라의 경제·인도적 상황이 "매우 취약"하다고 경고. 원유 공급과...
 
 ## 시장 영향 높은 이슈
 

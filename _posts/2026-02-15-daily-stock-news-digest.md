@@ -13,20 +13,18 @@ image: "/assets/images/generated/market-snapshot-2026-02-15.png"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">82</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 26</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,507.01</div><div class="stat-label">KOSPI -0.28%</div></div><div class="stat-item"><div class="stat-value">1,106.08</div><div class="stat-label">KOSDAQ -1.77%</div></div></div>
+<div class="stat-item"><div class="stat-value">82</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 26</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,507.01</div><div class="stat-label">KOSPI -0.28%</div></div><div class="stat-item"><div class="stat-value">1,106.08</div><div class="stat-label">KOSDAQ -1.77%</div></div></div>
 
-<div class="alert-box alert-info"><strong>주식 시장 **가격/시장, 매크로/금리** 부각 82건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 26건 수집</li><li>📊 <strong>매크로/금리</strong>: 14건 수집</li><li>🤖 <strong>AI/기술</strong>: 24건 수집</li><li>🟠 <strong>비트코인</strong> (5건): Stock market today: S&P 500, Dow, Nasdaq step lower after CPI inflation cools more than expected Yah</li></ul></div>
+<strong>주식 시장 **가격/시장, 매크로/금리** 부각 82건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 26건 수집</li><li>📊 <strong>매크로/금리</strong>: 14건 수집</li><li>🤖 <strong>AI/기술</strong>: 24건 수집</li><li>🟠 <strong>비트코인</strong> (5건): Stock market today: S&P 500, Dow, Nasdaq step lower after CPI inflation cools more than expected Yah</li></ul></div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMihAFBVV95cUxQaUMzbk9YY0xLS1lyNGs1VHB2c2FiY2RMb0NjTzdISWpicFJDWU91RXBrS1FZYUkwY0kzek1mQ1dwRmhJVkhoX1lSdTN4b0NhOHhyZGtDTkpzRVlGNkdVYTFIckFVZ19MOHF6NkhXTTktREhxa3RsXzJPTk40aXNOcEh2aEE?hl=en-US&gl=US&ceid=US%3Aen">Gold, silver, S&P 500, crypto crash again amid extreme fear</a></li><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMihAFBVV95cUxQaUMzbk9YY0xLS1lyNGs1VHB2c2FiY2RMb0NjTzdISWpicFJDWU91RXBrS1FZYUkwY0kzek1mQ1dwRmhJVkhoX1lSdTN4b0NhOHhyZGtDTkpzRVlGNkdVYTFIckFVZ19MOHF6NkhXTTktREhxa3RsXzJPTk40aXNOcEh2aEE?hl=en-US&gl=US&ceid=US%3Aen">Gold, silver, S&P 500, crypto crash again amid extreme fear</a></li><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까</a></li></ul></div>
 
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:32%"></div></div><span class="theme-count">26건 (32%)</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:17%"></div></div><span class="theme-count">14건 (17%)</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:29%"></div></div><span class="theme-count">24건 (29%)</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:6%"></div></div><span class="theme-count">5건 (6%)</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:2%"></div></div><span class="theme-count">2건 (2%)</span></div>
-</div>
+<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:32%"></div></div><span class="theme-count">26건 (32%)</span></div>
+<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:17%"></div></div><span class="theme-count">14건 (17%)</span></div>
+<span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:29%"></div></div><span class="theme-count">24건 (29%)</span></div>
+<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:6%"></div></div><span class="theme-count">5건 (6%)</span></div>
+<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:2%"></div></div><span class="theme-count">2건 (2%)</span></div>
 
 *총 82건 수집*
 
@@ -93,7 +91,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-15.png"
 <a href="https://news.google.com/read/CBMiW0FVX3lxTE5MbTV0NXZCdl9Od2tGY1RWc1dIQ1M0WXlmd0Q4ck91LTQ1MFkxaU91X2swNWVrbVFoRVRaS3lCRHJtUjRTdlZ1b2c1QnI4aFhGdjBXaGxrSlhnejDSAWBBVV95cUxQQmtRVVp6d2NkVHlOWkZxZHpvc2drX0g4WU9WRnNFQVl6cUFKWktzY2JrZDQ1bmZhRjJhckN0Zk9fRUJVaVMydjZHYU5OWEg2ZG16Z0V1OXpuRnZRMWRlbEw?hl=ko&gl=KR&ceid=KR%3Ako">[코스피·코스닥 전 거래일(12일) 주요공시]</a>
 <a href="https://news.google.com/read/CBMiUEFVX3lxTE9EbU1yYTJ3RkFjU09zbzZoZGg5UDhqMEl6RmFLOWdHQjlrTTU4T2k5VkVaNnh1bTR2RjZjTFJQNUZqZy14eDNkay1JbjFVZGgt?hl=ko&gl=KR&ceid=KR%3Ako">지난달 외국인 국내주식 980억 순매도코스피 사고 코스닥 팔았다</a>
 <em>외 8건</em>
-</div></details>
+</details>
 
 
 ### 📊 매크로/금리 (14건)
@@ -112,7 +110,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-15.png"
 <details><summary>그 외 11건 보기</summary><div class="details-content">
 <a href="https://news.google.com/read/CBMiuwNBVV95cUxPMVJxQmlFZjBQYjROV3BCZnZUeXJ4TzBYbTRFeWpFOV9oN3ZkdU9jVndSSDBYaERLOWx6dURIQ0xGWWN2cjEyaTZiZV9Tak0xLTQ5cWZ0SGdCbFBOUGw4MmtZaTlxXzlkRjZmMXVpdzlsaXNMaXlMYlE2Mk1fU3hTZm9lOHBLNFhaZXZDaTJtMDNZUW1hb2hmVF82U0FMMEhmOTFmNGI1MWpOMDhJUzdIOWRxbU5DTlk2ZVk4ZVBEbFhJejV5ZWVhbDVJMWxUeWYzOFpKUEhzUkt6WjFGVlBHcmJCUnBGcXFveDFPNi1ObUpuTks5MkRKc2pOaW50eHRrV2hvVktWbXRaU2hraUJkNWswTG1SSGdMWENhWEkyZm4zbW5Oa0syWXhHY2dpNkU3MXhRRmk2Qk51a1BuZWMzNktfQWFSc1NkaW9hd2pJUm4ybVYtXzBiZndCa1RrUFdCeGxaZjJxeGoxTU9KOU01c0NkSHFvV0VHdG05TVNhTTA3dWpOdHRvM2x0Tkw1ckVxbFFRV25RamlfbHFaUFFSUjMybWNQS1RjU3VKQ2g0LUpvM3BydjU1Ym9DNA?hl=en-US&gl=US&ceid=US%3Aen">Stock Market on Feb. 13, 2026: Dow, S&P 500 close with slight gains after inflation report; stocks book a losing week as tech remains under pressure; Treasury yields decline</a>
 <a href="https://news.google.com/read/CBMilwFBVV95cUxPcUJDLUFCOHFOZGU2eXdhLWhacWJqMktka1ltMDBpbUs3RkFySGZiUFNzZXpKNy1pUUxJLU9lV0NVc2NrME1JRWVlSUdLTDg3dkhVcUdCeWZocWQwYUlJcVZpMnNJUEkybEdWLVVHcTB6cWo2VG91V2d1d0x2cnV2amk2V0wteHN1Um0ybml6NjFVN1NmdTVz?hl=en-US&gl=US&ceid=US%3Aen">S&P 500 ends up slightly as tech dips, inflation cools</a>
-</div></details>
+</details>
 
 
 ### 🤖 AI/기술 (24건)
@@ -132,7 +130,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-15.png"
 <a href="https://news.google.com/read/CBMihAFBVV95cUxQaUMzbk9YY0xLS1lyNGs1VHB2c2FiY2RMb0NjTzdISWpicFJDWU91RXBrS1FZYUkwY0kzek1mQ1dwRmhJVkhoX1lSdTN4b0NhOHhyZGtDTkpzRVlGNkdVYTFIckFVZ19MOHF6NkhXTTktREhxa3RsXzJPTk40aXNOcEh2aEE?hl=en-US&gl=US&ceid=US%3Aen">Gold, silver, S&P 500, crypto crash again amid extreme fear</a>
 <a href="https://news.google.com/read/CBMi3gFBVV95cUxQWTlvUVJ2U3ZScDJ6TkRqbmx3dV9yZUVmdEpoSlJGYjVQa3hrMnJ4VGVmOWZSbmU5cWlzMmp2MXlQeDEyeHk3RE5NejEydjM1amdyRXdWUlM1djQtaXpRYzloeGo0TmZRSEV0UGVRZ0NxQVFPbWNNdkNJeVJ6Ymp4Z2JZX0E5bGxfbzlyNUNxN2l4SGl6WGJScVNGa1pORmRJOFhuQVc2Tnphd2gySUNPSVZaNW1jcnRDNjhnbzVVc2EtNXR5MG9WQVJ5RmZoNjJxb19MOXBGQVkyd2h4a1E?hl=en-US&gl=US&ceid=US%3Aen">Stock market today: Dow, S&P 500, Nasdaq gains fizzle to cap week of sharp losses as AI fears grow</a>
 <em>외 5건</em>
-</div></details>
+</details>
 
 
 ### 🟠 비트코인 (5건)
@@ -152,7 +150,7 @@ Stock market today: S&P 500, Dow, Nasdaq step lower after CPI inflation cools mo
 <details><summary>그 외 2건 보기</summary><div class="details-content">
 <a href="https://finance.yahoo.com/news/bitcoin-recovery-likely-slow-painful-233113604.html">Bitcoin Recovery Likely To Be 'Slow And Painful,' Analysts Warn: Watch This Key Level</a>
 <a href="https://finance.yahoo.com/news/daily-etf-flows-vxus-keeps-230005338.html">Daily ETF Flows: VXUS Keeps Rolling</a>
-</div></details>
+</details>
 
 
 ### 🏛️ 정치/정책 (2건)
@@ -225,7 +223,6 @@ Stock market today: S&P 500, Dow, Nasdaq step lower after CPI inflation cools mo
 
 
 <details><summary>참고 링크 (15건)</summary>
-<div class="details-content">
 
 1. [S&P 500 closes little changed after soft inflation report, index notches losing ](https://news.google.com/read/CBMid0FVX3lxTE1rMzAwSXVIelF1VVJ2WU1YbzFiLWtfa0xMRDFVLTZpVE1WcGlrM3hPZnJScFV1b1A2WTNXX3JQeHFEcWRaTU5HdDlYMF83czJndGZqZUY0Y3piUTkzME5LaWFoVlFQQ0xCSXAyaGtlNUlMMU1JMTBJ0gF8QVVfeXFMUG1WcWJDeUpjZVd1ZDdzSWxFaEQ1VUlWX0NnWnFBZTQ1dFBmVlF1dWY1TzRjS2hUbjItWGxzWjFjczZ4QnU4RWVsQ2thWFMyZ0I4T2lfM0p0U3VaUFc4S0t5RXZVTTUyQS1sMzBQYWhOWlhWZ0lncmpnczY1Mw?hl=en-US&gl=US&ceid=US%3Aen) - Google News
 2. [Stock market today: Dow, S&P 500, Nasdaq futures fall after AI-stoked sell-off w](https://news.google.com/read/CBMi4wFBVV95cUxQc19DM1BrWnpvRGM1OVlnQzFJaWYzYzJLYjVpMzVndEozb3lYcHVmV3dKQXJzQXV1aVU1X1RYVlZXR2JsMnJaOFBpSy1KdDNEQU9EY0NFVmUyMXJzN093cldTWVR4b2F6eEhNX3l5RC1TVmR4SjlMQWdQSlR4V3ljNnNJbndnVmV1QWNRdXJ5X1NHRDREc2ZNR1FFNFBHT1hiVXhGVVhIeDZmcF9JbXlqaTVfazhZT2MyY2ljdDJyWjhjN1R2Q1VLWVNKdmx3WnY1d25lUm12TG5RLVhwWDl6Y2s1dw?hl=en-US&gl=US&ceid=US%3Aen) - Google News
@@ -243,7 +240,7 @@ Stock market today: S&P 500, Dow, Nasdaq step lower after CPI inflation cools mo
 14. [The Stock Market Is Finally Broadening Out. The S&P 500 Will Suffer.](https://news.google.com/read/CBMihANBVV95cUxPdWZxMWpYZDVjNjZ6Rk8yTjR5MlRtRFVlMl96aE5lWGhQOGdDMEJ3aUVXY1c0eTRyRDJvOV8tdmttY3hpVjdBZkRHMW9fSUlWLWNRMWJVWVpZSzQ5emtKZkkyQldYam9xRWY0MDVoc3M4MV9VYS1LLWY1WlQ1a2JUV09nSmRaYUJnMU9sTUgwSjMxY1dSV3JYWDI1Z0lxbk9EVGd0VWp3SEdQZXpNaUVXZ0g4dUJCVUEyRHk5dFd1Y2pxejBPWnpwU3JHaUtqN0cycmIteG1jeDBqakZpOG9CdVE5dGJwOGl2RURYSF9LNXNERnVqZ3gwLWdYd25zMlVrV21wZHRXVXI0OHloelJ4a2pKcnF2aFYwVmplWWE0bGxrUUJTU2Qwc0l4anlVQTl5X3hJNHB5QlEzRnZRYXlZYjFXekNRTk94ZTNsRm1MdmpDeGQ2OGhhZUI5UjVHMWMtMmtNa3hkOWxsdXhzckdQQjIxOFNadlpQd3hzeTNBeFBjX2hx?hl=en-US&gl=US&ceid=US%3Aen) - Google News
 15. [S&P 500 Index Explained: What It Is and How to Invest](https://news.google.com/read/CBMia0FVX3lxTE5MTFY2dWxzN2xIN3RGMHh2NTgzMUt4Zm9FSW03MVlGX2tUelV1SkNUQmlyQmk0bHlWYTU2NktldFRqY1B3a3RHR2RBV0lJR19MdFc5VzFyUlJXblBNSlU1TUF6YmQ3ZE5DUmRJ?hl=en-US&gl=US&ceid=US%3Aen) - Google News
 
-</div></details>
+</details>
 
 
 ---

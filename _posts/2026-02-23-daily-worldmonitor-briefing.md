@@ -11,11 +11,11 @@ description: "2026-02-23 기준 WorldMonitor 연계 소스에서 글로벌 이�
 
 **2026-02-23** 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다.
 
-<div class="alert-box alert-info"><strong>오늘의 글로벌 리스크 스냅샷</strong><ul>
-<li>총 수집: <strong>20건</strong></li>
-<li>핵심 테마: <strong>사회/기타, 지정학/안보, 금융시장</strong></li>
-<li>집중 출처: <strong>WorldMonitor/CNBC</strong></li>
-</ul></div>
+<strong>오늘의 글로벌 리스크 스냅샷</strong><ul>
+총 수집: <strong>20건</strong></li>
+핵심 테마: <strong>사회/기타, 지정학/안보, 금융시장</strong></li>
+집중 출처: <strong>WorldMonitor/CNBC</strong></li>
+</div>
 
 ## 핵심 요약
 - 수집 건수: **20건**
@@ -47,20 +47,16 @@ description: "2026-02-23 기준 WorldMonitor 연계 소스에서 글로벌 이�
 - 상세 지도: https://finance.worldmonitor.app/?lat=20.0000&lon=0.0000&zoom=1.00&view=global&timeRange=7d&layers=conflicts%2Cbases%2Chotspots%2Cnuclear%2Csanctions%2Cweather%2Ceconomic%2Cwaterways%2Coutages%2Cmilitary%2Cnatural
 
 ## 이슈 분포
-<div class="stat-grid">
-<div class="stat-item"><div class="stat-value">20</div><div class="stat-label">총 이슈</div></div>
-<div class="stat-item"><div class="stat-value">5</div><div class="stat-label">테마 수</div></div>
-<div class="stat-item"><div class="stat-value">2</div><div class="stat-label">출처 수</div></div>
-<div class="stat-item"><div class="stat-value">3</div><div class="stat-label">안보 이슈</div></div>
-</div>
+<div class="stat-value">20</div><div class="stat-label">총 이슈</div></div>
+<div class="stat-value">5</div><div class="stat-label">테마 수</div></div>
+<div class="stat-value">2</div><div class="stat-label">출처 수</div></div>
+<div class="stat-value">3</div><div class="stat-label">안보 이슈</div></div>
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">사회/기타</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:60%"></div></div><span class="theme-count">12건 (60%)</span></div>
-<div class="theme-row"><span class="theme-label">지정학/안보</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:15%"></div></div><span class="theme-count">3건 (15%)</span></div>
-<div class="theme-row"><span class="theme-label">금융시장</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:10%"></div></div><span class="theme-count">2건 (10%)</span></div>
-<div class="theme-row"><span class="theme-label">정책/법률</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:10%"></div></div><span class="theme-count">2건 (10%)</span></div>
-<div class="theme-row"><span class="theme-label">에너지</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:8%"></div></div><span class="theme-count">1건 (5%)</span></div>
-</div>
+<span class="theme-label">사회/기타</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:60%"></div></div><span class="theme-count">12건 (60%)</span></div>
+<span class="theme-label">지정학/안보</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:15%"></div></div><span class="theme-count">3건 (15%)</span></div>
+<span class="theme-label">금융시장</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:10%"></div></div><span class="theme-count">2건 (10%)</span></div>
+<span class="theme-label">정책/법률</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:10%"></div></div><span class="theme-count">2건 (10%)</span></div>
+<span class="theme-label">에너지</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:8%"></div></div><span class="theme-count">1건 (5%)</span></div>
 
 ## 주요 이슈
 
@@ -95,32 +91,32 @@ description: "2026-02-23 기준 WorldMonitor 연계 소스에서 글로벌 이�
 | WorldMonitor/Al Jazeera | 6건 | 30% |
 
 ## 원문 링크 묶음
-<div class="wm-reference-summary"><strong>원문 링크 탐색 가이드</strong><p>시장 영향이 높은 이슈를 우선 확인할 수 있도록 출처별 커버리지를 함께 제공합니다.</p></div>
-<div class="wm-reference-pills"><span class="source-tag">WorldMonitor/CNBC · 14건</span> <span class="source-tag">WorldMonitor/Al Jazeera · 6건</span></div>
+<strong>원문 링크 탐색 가이드</strong><p>시장 영향이 높은 이슈를 우선 확인할 수 있도록 출처별 커버리지를 함께 제공합니다.</p></div>
+<span class="source-tag">WorldMonitor/CNBC · 14건</span> <span class="source-tag">WorldMonitor/Al Jazeera · 6건</span></div>
 <details class="wm-reference-details"><summary>전체 원문 20건 펼치기</summary><div class="details-content">
 <ol class="wm-reference-list">
-<li><a href="https://www.cnbc.com/2026/02/23/bitcoin-falls-trump-tariffs.html" target="_blank" rel="noopener noreferrer">Bitcoin falls below $65,000 as Trump tariff moves raise uncertainty</a><span class="source-tag">WorldMonitor/CNBC</span></li>
-<li><a href="https://www.cnbc.com/2026/02/23/us-launch-peace-corps-tech-corps-india-export-ai-stack-sovereignty-counter-china.html" target="_blank" rel="noopener noreferrer">Trump unveils ‘Tech Corps’ to promote American AI abroad</a><span class="source-tag">WorldMonitor/CNBC</span></li>
-<li><a href="https://www.cnbc.com/2026/02/22/trump-secret-service-shooting-mar-a-lago.html" target="_blank" rel="noopener noreferrer">Armed man killed by authorities trying to enter Trump Mar-a-Lago club</a><span class="source-tag">WorldMonitor/CNBC</span></li>
-<li><a href="https://www.cnbc.com/2026/02/23/asia-pacific-markets-hang-seng-index-nifty-50-kospi-trump-tariffs-15-percent-supreme-court.html" target="_blank" rel="noopener noreferrer">South Korea&#x27;s Kospi hits fresh high as Asian markets brush off Trump&#x27;s latest tariff moves</a><span class="source-tag">WorldMonitor/CNBC</span></li>
-<li><a href="https://www.cnbc.com/2026/02/22/jim-cramer-looks-at-whether-private-equity-the-next-market-crisis.html" target="_blank" rel="noopener noreferrer">Is private equity the next market crisis? How we got here and what&#x27;s next</a><span class="source-tag">WorldMonitor/CNBC</span></li>
-<li><a href="https://www.cnbc.com/2026/02/22/tsa-airlines-weather-shutdown-blizzard-dhs.html" target="_blank" rel="noopener noreferrer">DHS abruptly reverses suspension of TSA PreCheck</a><span class="source-tag">WorldMonitor/CNBC</span></li>
-<li><a href="https://www.cnbc.com/2026/02/22/trump-demands-netflix-fire-susan-rice-as-doj-probes-warner-deal.html" target="_blank" rel="noopener noreferrer">Trump demands Netflix fire Susan Rice as DOJ probes Warner deal</a><span class="source-tag">WorldMonitor/CNBC</span></li>
-<li><a href="https://www.cnbc.com/2026/02/21/trump-tariffs.html" target="_blank" rel="noopener noreferrer">Trump to hike global tariffs to 15% from 10%, &#x27;effective immediately&#x27;</a><span class="source-tag">WorldMonitor/CNBC</span></li>
-<li><a href="https://www.cnbc.com/2026/02/22/trump-tariffs-ieepa-supreme-court.html" target="_blank" rel="noopener noreferrer">U.S. importers still paying Trump&#x27;s illegal tariffs even after Supreme Court ruling</a><span class="source-tag">WorldMonitor/CNBC</span></li>
-<li><a href="https://www.cnbc.com/2026/02/21/blizzard-prompts-airlines-waive-flight-change-fees.html" target="_blank" rel="noopener noreferrer">Blizzard snarls air travel along U.S. East Coast as airlines cancel thousands of flights</a><span class="source-tag">WorldMonitor/CNBC</span></li>
-<li><a href="https://www.cnbc.com/2026/02/22/the-worlds-largest-energy-lender-has-a-new-head-heres-how-it-could-shape-us-policy.html" target="_blank" rel="noopener noreferrer">The world&#x27;s largest energy lender has a new head: Here&#x27;s how it could shape U.S. policy</a><span class="source-tag">WorldMonitor/CNBC</span></li>
-<li><a href="https://www.cnbc.com/2026/02/22/american-girl-40th-anniversary-sales-mattel.html" target="_blank" rel="noopener noreferrer">As American Girl turns 40, Mattel grapples with bringing dolls into a new era</a><span class="source-tag">WorldMonitor/CNBC</span></li>
-<li><a href="https://www.cnbc.com/2026/02/21/hasbro-vs-mattel-toy-industry-pressures-make-digital-the-star.html" target="_blank" rel="noopener noreferrer">Under mounting toy pressures, Hasbro has a secret sauce that Mattel hasn&#x27;t matched</a><span class="source-tag">WorldMonitor/CNBC</span></li>
-<li><a href="https://www.cnbc.com/2026/02/21/supreme-courts-trump-tariff-decision-five-takeaways.html" target="_blank" rel="noopener noreferrer">Five key takeaways from the Supreme Court&#x27;s landmark decision against Trump&#x27;s tariffs</a><span class="source-tag">WorldMonitor/CNBC</span></li>
-<li><a href="https://www.aljazeera.com/news/2026/2/23/russia-ukraine-war-list-of-key-events-day-1460?traffic_source=rss" target="_blank" rel="noopener noreferrer">Russia-Ukraine war: List of key events, day 1,460</a><span class="source-tag">WorldMonitor/Al Jazeera</span></li>
-<li><a href="https://www.aljazeera.com/news/2026/2/22/north-koreas-kim-jong-un-re-elected-as-chief-of-workers?traffic_source=rss" target="_blank" rel="noopener noreferrer">North Korea’s Kim Jong Un re-elected as chief of Workers’ Party</a><span class="source-tag">WorldMonitor/Al Jazeera</span></li>
-<li><a href="https://www.aljazeera.com/news/2026/2/22/white-house-post-after-us-hockey-win-over-canada-stirs-controversy?traffic_source=rss" target="_blank" rel="noopener noreferrer">White House post after US hockey win over Canada stirs controversy</a><span class="source-tag">WorldMonitor/Al Jazeera</span></li>
-<li><a href="https://www.aljazeera.com/news/2026/2/22/brazil-does-not-want-a-new-cold-war-says-lula?traffic_source=rss" target="_blank" rel="noopener noreferrer">Brazil does not want ‘a new Cold War’, says President Lula</a><span class="source-tag">WorldMonitor/Al Jazeera</span></li>
-<li><a href="https://www.aljazeera.com/news/2026/2/22/mexico-announces-killing-of-drug-cartel-kingpin-el-mencho?traffic_source=rss" target="_blank" rel="noopener noreferrer">Violence erupts in Mexico after killing of drug cartel kingpin ‘El Mencho’</a><span class="source-tag">WorldMonitor/Al Jazeera</span></li>
-<li><a href="https://www.aljazeera.com/video/inside-story/2026/2/22/what-will-trumps-latest-sweeping-tariffs-mean-for-the-world?traffic_source=rss" target="_blank" rel="noopener noreferrer">What will Trump’s latest sweeping tariffs mean for the world?</a><span class="source-tag">WorldMonitor/Al Jazeera</span></li>
+<a href="https://www.cnbc.com/2026/02/23/bitcoin-falls-trump-tariffs.html" target="_blank" rel="noopener noreferrer">Bitcoin falls below $65,000 as Trump tariff moves raise uncertainty</a><span class="source-tag">WorldMonitor/CNBC</span></li>
+<a href="https://www.cnbc.com/2026/02/23/us-launch-peace-corps-tech-corps-india-export-ai-stack-sovereignty-counter-china.html" target="_blank" rel="noopener noreferrer">Trump unveils ‘Tech Corps’ to promote American AI abroad</a><span class="source-tag">WorldMonitor/CNBC</span></li>
+<a href="https://www.cnbc.com/2026/02/22/trump-secret-service-shooting-mar-a-lago.html" target="_blank" rel="noopener noreferrer">Armed man killed by authorities trying to enter Trump Mar-a-Lago club</a><span class="source-tag">WorldMonitor/CNBC</span></li>
+<a href="https://www.cnbc.com/2026/02/23/asia-pacific-markets-hang-seng-index-nifty-50-kospi-trump-tariffs-15-percent-supreme-court.html" target="_blank" rel="noopener noreferrer">South Korea&#x27;s Kospi hits fresh high as Asian markets brush off Trump&#x27;s latest tariff moves</a><span class="source-tag">WorldMonitor/CNBC</span></li>
+<a href="https://www.cnbc.com/2026/02/22/jim-cramer-looks-at-whether-private-equity-the-next-market-crisis.html" target="_blank" rel="noopener noreferrer">Is private equity the next market crisis? How we got here and what&#x27;s next</a><span class="source-tag">WorldMonitor/CNBC</span></li>
+<a href="https://www.cnbc.com/2026/02/22/tsa-airlines-weather-shutdown-blizzard-dhs.html" target="_blank" rel="noopener noreferrer">DHS abruptly reverses suspension of TSA PreCheck</a><span class="source-tag">WorldMonitor/CNBC</span></li>
+<a href="https://www.cnbc.com/2026/02/22/trump-demands-netflix-fire-susan-rice-as-doj-probes-warner-deal.html" target="_blank" rel="noopener noreferrer">Trump demands Netflix fire Susan Rice as DOJ probes Warner deal</a><span class="source-tag">WorldMonitor/CNBC</span></li>
+<a href="https://www.cnbc.com/2026/02/21/trump-tariffs.html" target="_blank" rel="noopener noreferrer">Trump to hike global tariffs to 15% from 10%, &#x27;effective immediately&#x27;</a><span class="source-tag">WorldMonitor/CNBC</span></li>
+<a href="https://www.cnbc.com/2026/02/22/trump-tariffs-ieepa-supreme-court.html" target="_blank" rel="noopener noreferrer">U.S. importers still paying Trump&#x27;s illegal tariffs even after Supreme Court ruling</a><span class="source-tag">WorldMonitor/CNBC</span></li>
+<a href="https://www.cnbc.com/2026/02/21/blizzard-prompts-airlines-waive-flight-change-fees.html" target="_blank" rel="noopener noreferrer">Blizzard snarls air travel along U.S. East Coast as airlines cancel thousands of flights</a><span class="source-tag">WorldMonitor/CNBC</span></li>
+<a href="https://www.cnbc.com/2026/02/22/the-worlds-largest-energy-lender-has-a-new-head-heres-how-it-could-shape-us-policy.html" target="_blank" rel="noopener noreferrer">The world&#x27;s largest energy lender has a new head: Here&#x27;s how it could shape U.S. policy</a><span class="source-tag">WorldMonitor/CNBC</span></li>
+<a href="https://www.cnbc.com/2026/02/22/american-girl-40th-anniversary-sales-mattel.html" target="_blank" rel="noopener noreferrer">As American Girl turns 40, Mattel grapples with bringing dolls into a new era</a><span class="source-tag">WorldMonitor/CNBC</span></li>
+<a href="https://www.cnbc.com/2026/02/21/hasbro-vs-mattel-toy-industry-pressures-make-digital-the-star.html" target="_blank" rel="noopener noreferrer">Under mounting toy pressures, Hasbro has a secret sauce that Mattel hasn&#x27;t matched</a><span class="source-tag">WorldMonitor/CNBC</span></li>
+<a href="https://www.cnbc.com/2026/02/21/supreme-courts-trump-tariff-decision-five-takeaways.html" target="_blank" rel="noopener noreferrer">Five key takeaways from the Supreme Court&#x27;s landmark decision against Trump&#x27;s tariffs</a><span class="source-tag">WorldMonitor/CNBC</span></li>
+<a href="https://www.aljazeera.com/news/2026/2/23/russia-ukraine-war-list-of-key-events-day-1460?traffic_source=rss" target="_blank" rel="noopener noreferrer">Russia-Ukraine war: List of key events, day 1,460</a><span class="source-tag">WorldMonitor/Al Jazeera</span></li>
+<a href="https://www.aljazeera.com/news/2026/2/22/north-koreas-kim-jong-un-re-elected-as-chief-of-workers?traffic_source=rss" target="_blank" rel="noopener noreferrer">North Korea’s Kim Jong Un re-elected as chief of Workers’ Party</a><span class="source-tag">WorldMonitor/Al Jazeera</span></li>
+<a href="https://www.aljazeera.com/news/2026/2/22/white-house-post-after-us-hockey-win-over-canada-stirs-controversy?traffic_source=rss" target="_blank" rel="noopener noreferrer">White House post after US hockey win over Canada stirs controversy</a><span class="source-tag">WorldMonitor/Al Jazeera</span></li>
+<a href="https://www.aljazeera.com/news/2026/2/22/brazil-does-not-want-a-new-cold-war-says-lula?traffic_source=rss" target="_blank" rel="noopener noreferrer">Brazil does not want ‘a new Cold War’, says President Lula</a><span class="source-tag">WorldMonitor/Al Jazeera</span></li>
+<a href="https://www.aljazeera.com/news/2026/2/22/mexico-announces-killing-of-drug-cartel-kingpin-el-mencho?traffic_source=rss" target="_blank" rel="noopener noreferrer">Violence erupts in Mexico after killing of drug cartel kingpin ‘El Mencho’</a><span class="source-tag">WorldMonitor/Al Jazeera</span></li>
+<a href="https://www.aljazeera.com/video/inside-story/2026/2/22/what-will-trumps-latest-sweeping-tariffs-mean-for-the-world?traffic_source=rss" target="_blank" rel="noopener noreferrer">What will Trump’s latest sweeping tariffs mean for the world?</a><span class="source-tag">WorldMonitor/Al Jazeera</span></li>
 </ol>
-</div></details>
+</details>
 
 ## 읽는 방법
 - **지정학/안보(높음)**: 금/원유/방산/안전자산 변동성과 동시 확인

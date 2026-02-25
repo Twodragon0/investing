@@ -12,13 +12,11 @@ image: "/assets/images/generated/news-summary-2026-02-15.png"
 
 ---
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:46%"></div></div><span class="theme-count">31건 (46%)</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:25%"></div></div><span class="theme-count">17건 (25%)</span></div>
-<div class="theme-row"><span class="theme-label">🔷 이더리움</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:21%"></div></div><span class="theme-count">14건 (21%)</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:12%"></div></div><span class="theme-count">8건 (12%)</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:13%"></div></div><span class="theme-count">9건 (13%)</span></div>
-</div>
+<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:46%"></div></div><span class="theme-count">31건 (46%)</span></div>
+<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:25%"></div></div><span class="theme-count">17건 (25%)</span></div>
+<span class="theme-label">🔷 이더리움</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:21%"></div></div><span class="theme-count">14건 (21%)</span></div>
+<span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:12%"></div></div><span class="theme-count">8건 (12%)</span></div>
+<span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:13%"></div></div><span class="theme-count">9건 (13%)</span></div>
 
 *총 67건 수집*
 
@@ -28,11 +26,11 @@ image: "/assets/images/generated/news-summary-2026-02-15.png"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">67</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 31</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (19회)</div></div></div>
+<div class="stat-item"><div class="stat-value">67</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 31</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (19회)</div></div></div>
 
-<div class="alert-box alert-info"><strong>암호화폐 시장 **비트코인, 가격/시장** 중심 67건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 31건 수집</li><li>📈 <strong>가격/시장</strong>: 17건 수집</li><li>🔷 <strong>이더리움</strong>: 14건 수집</li><li>🏦 <strong>거래소</strong> (8건): Barclays, Benchmark, Clear Street, and JPMorgan all cut targets, citing weak retail trading and macr</li></ul></div>
+<strong>암호화폐 시장 **비트코인, 가격/시장** 중심 67건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 31건 수집</li><li>📈 <strong>가격/시장</strong>: 17건 수집</li><li>🔷 <strong>이더리움</strong>: 14건 수집</li><li>🏦 <strong>거래소</strong> (8건): Barclays, Benchmark, Clear Street, and JPMorgan all cut targets, citing weak retail trading and macr</li></ul></div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiiAFBVV95cUxPVUtQQWJPdi1qQVRDcEpCSjcwZVhrM0RoYk5YYmtIN3BnNVVXUFozY0lMb3JFazZyc1YyWWZXckhXUDJxMlpjWGdXYnlaY0IwcS1fbnQ4OTlRUW9FQWlKT2Q5SzV2ell4b3VyS0tOS2tYNU9vVENvNXBNMTdiMnhwNWI1Sk9ON2NN?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin Price Crash Rattles Trump's Crypto Progress. Here's The Upshot For Investors.</a></li><li><a href="https://news.google.com/read/CBMijwNBVV95cUxQRkZCRTkwYjZOM29zV2JmYlNlZFZsd3lHQ0RFbFREWjVsa04tV0Q3U1RuMk1DT2NzbDZ4Y2Q5NzU0Rjh2NHpSbVRERmltUER3TVBtX1U0VFgtb0kzNE13Z253SlBnYWx0bzNUbzZBaV91MU00YTdWWUEtNzZCOVl1bzBFazN1VHhlQ3k4RjZTZWZxMVRFcWZLZktjbUhmVWJLd0l0SkVzSkE3OUxhSGRzWC1VaXJuNDhCNW1GSWhKVjIxYnRSdDVTMXRuRm5HV2xESXdQaVZwVUJNaGVZcjh4dTh2ek9OWmRpdVhnSVZXUHotRWhEZnFlWEV5NHh0dTM3S1pKZkRKbmRYQjViS2dWdzd5bFMzYkhmYW1NTV9VUi1Rc21hUzR0TVhNMWtTbnFGMzYwUjFPdXZFbWlyd24zRzRjT3hzUUtqYTg0aDBoR2NPSFVxbGxWZ1hlSXRNQnFxVTJJekN2YUFlSVhGWTBRVUdoVjdMOFNSYTJOUlEzclJyOE40RUFrRjJuaTY3Z0E?hl=en-US&gl=US&ceid=US%3Aen">Crash Course: Vietnam's Crypto Boom Goes Bust</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiiAFBVV95cUxPVUtQQWJPdi1qQVRDcEpCSjcwZVhrM0RoYk5YYmtIN3BnNVVXUFozY0lMb3JFazZyc1YyWWZXckhXUDJxMlpjWGdXYnlaY0IwcS1fbnQ4OTlRUW9FQWlKT2Q5SzV2ell4b3VyS0tOS2tYNU9vVENvNXBNMTdiMnhwNWI1Sk9ON2NN?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin Price Crash Rattles Trump's Crypto Progress. Here's The Upshot For Investors.</a></li><li><a href="https://news.google.com/read/CBMijwNBVV95cUxQRkZCRTkwYjZOM29zV2JmYlNlZFZsd3lHQ0RFbFREWjVsa04tV0Q3U1RuMk1DT2NzbDZ4Y2Q5NzU0Rjh2NHpSbVRERmltUER3TVBtX1U0VFgtb0kzNE13Z253SlBnYWx0bzNUbzZBaV91MU00YTdWWUEtNzZCOVl1bzBFazN1VHhlQ3k4RjZTZWZxMVRFcWZLZktjbUhmVWJLd0l0SkVzSkE3OUxhSGRzWC1VaXJuNDhCNW1GSWhKVjIxYnRSdDVTMXRuRm5HV2xESXdQaVZwVUJNaGVZcjh4dTh2ek9OWmRpdVhnSVZXUHotRWhEZnFlWEV5NHh0dTM3S1pKZkRKbmRYQjViS2dWdzd5bFMzYkhmYW1NTV9VUi1Rc21hUzR0TVhNMWtTbnFGMzYwUjFPdXZFbWlyd24zRzRjT3hzUUtqYTg0aDBoR2NPSFVxbGxWZ1hlSXRNQnFxVTJJekN2YUFlSVhGWTBRVUdoVjdMOFNSYTJOUlEzclJyOE40RUFrRjJuaTY3Z0E?hl=en-US&gl=US&ceid=US%3Aen">Crash Course: Vietnam's Crypto Boom Goes Bust</a></li></ul></div>
 
 
 ![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-15.png' | relative_url }})
@@ -93,7 +91,7 @@ image: "/assets/images/generated/news-summary-2026-02-15.png"
 <a href="https://news.google.com/read/CBMiqgFBVV95cUxNSUw1MVJnMEpIbDRmWnhlS3pTWXo0cmxudkd6UFNmU0VWVTRJcHVxWWpPYjh0U1R3dWNvaEZiU1prZWsyXzhnVE9tc3RGYndrNVhPbF9oV1hLSllQYWlRX3pGOGpFbzA0VThpRTdKaEQ5SHF5djVWVmhZQ0IwRWJNYjJOcTBnQzFsbVBCV0ctSGltZjJST0VyTE9ZT2VsdmNpdjJ0Z3lhXzRvdw?hl=en-US&gl=US&ceid=US%3Aen">Past crypto winters show bitcoin could keep tumbling to $31,000, research firm says</a>
 <a href="https://news.google.com/read/CBMihwFBVV95cUxOXzBVMHNkUU1TTFBMc2JZSi14eElpYW41bFZLMmRUVzNJc2NJLTY1amZfWS1BNXZGMTE0c1FrYjdrdWdpbFctQ3FacHY1WVByU0Y3NGtVWDMxVGRHd1F3SHE1Um5ZOXN0Ulc1SEZnMW83RlhRTlB0UnpURkNkLWN5dUFZOHhObDA?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin's Plunge Isn't Even Close To Over (Cryptocurrency:BTC-USD)</a>
 <em>외 13건</em>
-</div></details>
+</details>
 
 
 ### 📈 가격/시장 (17건)
@@ -112,7 +110,7 @@ image: "/assets/images/generated/news-summary-2026-02-15.png"
 <details><summary>그 외 14건 보기</summary><div class="details-content">
 <a href="https://news.google.com/read/CBMixgFBVV95cUxONTc4a1gyLVVnSjNMNHdNaU81ZFp2YjQ5YkEwWHFna1B5SkRMRWtwU1QzRUdVSTVGemFfNGlJSEtycGhvV1NZYmxRRm4wLVNqWVFRVW5SeWhoc2RsTVdKSW1SVTBURjc4ajZROTdlQ1BhQTlrQkpSdk5PU1dwSzg2Mlg4T1FuNHZISlczTTVlQk91TE1CcXoxRnAxVzZyQl85bGRGRXY2T2E0R0ktYzMtdEE5NnE5eTY0d2Mya2FwYzdieVVkN0E?hl=en-US&gl=US&ceid=US%3Aen">Crypto lender BlockFills suspends withdrawals amid faltering bitcoin price</a>
 <a href="https://news.google.com/read/CBMijwNBVV95cUxQRkZCRTkwYjZOM29zV2JmYlNlZFZsd3lHQ0RFbFREWjVsa04tV0Q3U1RuMk1DT2NzbDZ4Y2Q5NzU0Rjh2NHpSbVRERmltUER3TVBtX1U0VFgtb0kzNE13Z253SlBnYWx0bzNUbzZBaV91MU00YTdWWUEtNzZCOVl1bzBFazN1VHhlQ3k4RjZTZWZxMVRFcWZLZktjbUhmVWJLd0l0SkVzSkE3OUxhSGRzWC1VaXJuNDhCNW1GSWhKVjIxYnRSdDVTMXRuRm5HV2xESXdQaVZwVUJNaGVZcjh4dTh2ek9OWmRpdVhnSVZXUHotRWhEZnFlWEV5NHh0dTM3S1pKZkRKbmRYQjViS2dWdzd5bFMzYkhmYW1NTV9VUi1Rc21hUzR0TVhNMWtTbnFGMzYwUjFPdXZFbWlyd24zRzRjT3hzUUtqYTg0aDBoR2NPSFVxbGxWZ1hlSXRNQnFxVTJJekN2YUFlSVhGWTBRVUdoVjdMOFNSYTJOUlEzclJyOE40RUFrRjJuaTY3Z0E?hl=en-US&gl=US&ceid=US%3Aen">Crash Course: Vietnam's Crypto Boom Goes Bust</a>
-</div></details>
+</details>
 
 
 ### 🔷 이더리움 (14건)
@@ -131,7 +129,7 @@ image: "/assets/images/generated/news-summary-2026-02-15.png"
 <details><summary>그 외 11건 보기</summary><div class="details-content">
 <a href="https://news.google.com/read/CBMi0wFBVV95cUxPY3lHVHVaRWFrcFZZVWd0QXpPaGV2SDdQTlBBbkUxSWc4cGlBdkFFYkt1N0dXN3BiclZOdUNEenpQSW5BNFhWSHZJVFZxbkJ3NldPQmhOanlEbWd2ZVo2VkhCLVN5Q1hEV1V4dU5XWFlfcVFxMnh2SHVYSTZtMHVYSFV2UXpRQkpTVURYOVJGREp6Y3dodHZ4dG0tVWdhQlVoeFJQNHZHXy14WjJ4b2JLSkJmcVQ0S1MxWEh1dG5MT2RDNGppeWlFTk9JRFdQZWJ0bWNv?hl=en-US&gl=US&ceid=US%3Aen">Here’s Why Dogecoin Is Outperforming Bitcoin And Ethereum Today</a>
 <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxPWG94SUtvUmtobHBCOWd3VU9zeExndWpZanYwRm5MR1J2QmJpUkJqX2w3MXRLNENZc1R1bGdWN1ZkZ1RvYXNrV1ZvejFQMlhJNHRUSlcyeGhUTXlHMkpwV0R5amI1WFFSc2JjUkota0Rua2VUODNRTlZweUxCYkdxYXl1RTkxbC0xMVJ3eC1mZkdKMy1KVkJsRg?oc=5">Better Cryptocurrency to Buy With $3,000 and Hold for 5 Years: XRP vs. Ethereum - The Motley Fool</a>
-</div></details>
+</details>
 
 
 ### 🏦 거래소 (8건)
@@ -151,7 +149,7 @@ Barclays, Benchmark, Clear Street, and JPMorgan all cut targets, citing weak ret
 <details><summary>그 외 5건 보기</summary><div class="details-content">
 <a href="https://www.binance.com/en/support/announcement/list/50">New Fiat ListingsSee which new fiat-to-crypto trading pairs are available on Binance.</a>
 <a href="https://www.binance.com/en/support/announcement/list/128">Crypto AirdropCheck the latest crypto airdrops Binance supports.</a>
-</div></details>
+</details>
 
 
 ### 🔵 규제/정책 (9건)
@@ -172,7 +170,7 @@ Bill to regulate cryptocurrency kiosks in Virginia heads to governor’s desk WV
 <details><summary>그 외 5건 보기</summary><div class="details-content">
 <a href="https://www.coindesk.com/markets/2026/02/14/bitcoin-claws-back-to-usd70-000-on-cooling-inflation-after-usd8-7-billion-wipeout">Bitcoin claws back to $70,000 on cooling inflation after $8.7 billion wipeout</a>
 <a href="https://www.coindesk.com/policy/2026/02/13/crypto-group-counters-wall-street-bankers-with-its-own-stablecoin-principles-for-bill">Crypto group counters Wall Street bankers with its own stablecoin principles for bill</a>
-</div></details>
+</details>
 
 
 
@@ -219,7 +217,7 @@ Bill to regulate cryptocurrency kiosks in Virginia heads to governor’s desk WV
 9. [Trump Media Files to Launch Truth Social-Branded Bitcoin, Ethereum, Cronos ETFs](https://news.google.com/read/CBMiggFBVV95cUxPQVdUUVdnMVNJWEVrTmZ5YU9EbzZoM3VVbVVzN280Z21obWg0VXBOYzRERURIckswVXV4enZFRHZ3azU5YlI5RTY0NEJNUzNfSG1xNVBiOXd4YUk3R0tIemJBelROZnhSdml3YUtLQkUwMU5XSDV3QWZMMkloVUxRQkJn?hl=en-US&gl=US&ceid=US%3Aen) - Google News
 10. [Got $500? 2 Cryptocurrencies to Buy and Hold for Decades.](https://news.google.com/read/CBMimAFBVV95cUxONm90SlhUZUYybUN1QW5tdTdjWDZHdDhzYTRXd3ozT1VhWF8zN2Z2ZG5kc25qUklUejBnbElTOE9Gb0NJeFI3YVRGU0h2bDBPSFNMcGFLZFM4SlFueldVOXF0ZjQ2M2RRTzRDYjZRcGdJLUduZ1ZUMjBaSWFIQXZwakdLc1dremYzc3o0STd5R3FWdWdCTEoxOQ?hl=en-US&gl=US&ceid=US%3Aen) - Google News
 
-</div></details>
+</details>
 
 ---
 

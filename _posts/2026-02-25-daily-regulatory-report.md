@@ -14,11 +14,11 @@ description: "전 세계 금융 규제기관의 최신 동향을 정리합니다
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">36</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 26</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">28</div><div class="stat-label">한국</div></div></div>
+<div class="stat-item"><div class="stat-value">36</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 26</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">28</div><div class="stat-label">한국</div></div></div>
 
-<div class="alert-box alert-info"><strong>글로벌 규제 규제/정책, 거래소 관련 36건 수집</strong><ul><li>🔵 <strong>규제/정책</strong> (26건): WisdomTree Digital Trust, et al. SEC.gov</li><li>🏦 <strong>거래소</strong> (14건): securities and exchange commission - SEC.gov SEC.gov</li><li>🟠 <strong>비트코인</strong> (1건): 단일종목 레버리지 ETF의 세부방안은 검토중입니다. - 2.12일(인터넷판) 서울경제 「’2배 ETF’ 삼전‧하닉‧현대차만 나온다」 제하의 기사에 대한 정부입장 설명 - 1. 기사...</li><li>📈 <strong>가격/시장</strong> (26건): 석유화학산업 사업재편 1호 프로젝트 승인, 금융·세제·원가 등 2.1조원 이상 지원패키지 제공 - 110만톤 규모 롯데케미칼 NCC 설비 가동중단을 통한 공급과잉 해소 - 정유·석...</li></ul></div>
+<strong>글로벌 규제 규제/정책, 거래소 관련 36건 수집</strong><ul><li>🔵 <strong>규제/정책</strong> (26건): WisdomTree Digital Trust, et al. SEC.gov</li><li>🏦 <strong>거래소</strong> (14건): securities and exchange commission - SEC.gov SEC.gov</li><li>🟠 <strong>비트코인</strong> (1건): 단일종목 레버리지 ETF의 세부방안은 검토중입니다. - 2.12일(인터넷판) 서울경제 「’2배 ETF’ 삼전‧하닉‧현대차만 나온다」 제하의 기사에 대한 정부입장 설명 - 1. 기사...</li><li>📈 <strong>가격/시장</strong> (26건): 석유화학산업 사업재편 1호 프로젝트 승인, 금융·세제·원가 등 2.1조원 이상 지원패키지 제공 - 110만톤 규모 롯데케미칼 NCC 설비 가동중단을 통한 공급과잉 해소 - 정유·석...</li></ul></div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://www.fsc.go.kr/no010101/86297">다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://www.fsc.go.kr/no010101/86297">다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최</a></li></ul></div>
 
 
 
@@ -32,13 +32,11 @@ description: "전 세계 금융 규제기관의 최신 동향을 정리합니다
 - **유럽**: 2건
 
 ---
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:37%"></div></div><span class="theme-count">26건 (37%)</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:20%"></div></div><span class="theme-count">14건 (20%)</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:1%"></div></div><span class="theme-count">1건 (1%)</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:37%"></div></div><span class="theme-count">26건 (37%)</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:6%"></div></div><span class="theme-count">4건 (6%)</span></div>
-</div>
+<span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:37%"></div></div><span class="theme-count">26건 (37%)</span></div>
+<span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:20%"></div></div><span class="theme-count">14건 (20%)</span></div>
+<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:1%"></div></div><span class="theme-count">1건 (1%)</span></div>
+<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:37%"></div></div><span class="theme-count">26건 (37%)</span></div>
+<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:6%"></div></div><span class="theme-count">4건 (6%)</span></div>
 
 *총 36건 수집*
 

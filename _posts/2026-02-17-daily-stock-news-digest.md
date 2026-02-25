@@ -13,20 +13,18 @@ image: "/assets/images/generated/market-snapshot-2026-02-17.png"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">119</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 30</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,507.01</div><div class="stat-label">KOSPI -0.28%</div></div><div class="stat-item"><div class="stat-value">1,106.08</div><div class="stat-label">KOSDAQ -1.77%</div></div></div>
+<div class="stat-item"><div class="stat-value">119</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 30</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,507.01</div><div class="stat-label">KOSPI -0.28%</div></div><div class="stat-item"><div class="stat-value">1,106.08</div><div class="stat-label">KOSDAQ -1.77%</div></div></div>
 
-<div class="alert-box alert-info"><strong>주식 시장 **가격/시장, AI/기술** 부각 119건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 30건 수집</li><li>🤖 <strong>AI/기술</strong>: 29건 수집</li><li>📊 <strong>매크로/금리</strong>: 11건 수집</li><li>🟠 <strong>비트코인</strong>: 2건 수집</li></ul></div>
+<strong>주식 시장 **가격/시장, AI/기술** 부각 119건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 30건 수집</li><li>🤖 <strong>AI/기술</strong>: 29건 수집</li><li>📊 <strong>매크로/금리</strong>: 11건 수집</li><li>🟠 <strong>비트코인</strong>: 2건 수집</li></ul></div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까</a></li></ul></div>
 
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:25%"></div></div><span class="theme-count">30건 (25%)</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:24%"></div></div><span class="theme-count">29건 (24%)</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:9%"></div></div><span class="theme-count">11건 (9%)</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:2%"></div></div><span class="theme-count">2건 (2%)</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:1%"></div></div><span class="theme-count">1건 (1%)</span></div>
-</div>
+<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:25%"></div></div><span class="theme-count">30건 (25%)</span></div>
+<span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:24%"></div></div><span class="theme-count">29건 (24%)</span></div>
+<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:9%"></div></div><span class="theme-count">11건 (9%)</span></div>
+<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:2%"></div></div><span class="theme-count">2건 (2%)</span></div>
+<span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:1%"></div></div><span class="theme-count">1건 (1%)</span></div>
 
 *총 119건 수집*
 
@@ -93,7 +91,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-17.png"
 <a href="https://news.google.com/read/CBMiW0FVX3lxTE5MbTV0NXZCdl9Od2tGY1RWc1dIQ1M0WXlmd0Q4ck91LTQ1MFkxaU91X2swNWVrbVFoRVRaS3lCRHJtUjRTdlZ1b2c1QnI4aFhGdjBXaGxrSlhnejDSAWBBVV95cUxQQmtRVVp6d2NkVHlOWkZxZHpvc2drX0g4WU9WRnNFQVl6cUFKWktzY2JrZDQ1bmZhRjJhckN0Zk9fRUJVaVMydjZHYU5OWEg2ZG16Z0V1OXpuRnZRMWRlbEw?hl=ko&gl=KR&ceid=KR%3Ako">[코스피·코스닥 전 거래일(12일) 주요공시]</a>
 <a href="https://news.google.com/read/CBMiUEFVX3lxTE9EbU1yYTJ3RkFjU09zbzZoZGg5UDhqMEl6RmFLOWdHQjlrTTU4T2k5VkVaNnh1bTR2RjZjTFJQNUZqZy14eDNkay1JbjFVZGgt?hl=ko&gl=KR&ceid=KR%3Ako">지난달 외국인 국내주식 980억 순매도코스피 사고 코스닥 팔았다</a>
 <em>외 12건</em>
-</div></details>
+</details>
 
 
 ### 🤖 AI/기술 (29건)
@@ -113,7 +111,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-17.png"
 <a href="https://news.google.com/read/CBMiWkFVX3lxTFBfa2ktamJjQTd3dC13b3Zfb241MnEzSmtaa0F4eDc0RjNxdmZGVGRCQlJHYzFNd3NxcjF5U2hVTnFuNk03RnRYSWg5Zm1MWkFVeTZfbHNLVjZIUQ?hl=ko&gl=KR&ceid=KR%3Ako">코스피·코스닥 열풍의 그늘···AI까지 동원한 ‘불법 리딩방’ 주의보</a>
 <a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxNalpQSGdsVlpfUHJQTTFEM2hWREpReS1VTmpseFdhQzFxQ18yVmVGb1lXR3QxUlhDNFoyY3pIMW9jcVZURkY0Z3hma1JUWklVSzhXdU1VcjIteUdWaERGQlFSOGJuU0I0cjJHQkpwelNqal9jaC1tdmEtLW5pUmt3WmxEUjZpS1V0UDJFaWp5MklBcGRXLVQ0LXBaclBMV3Z1YjNPN3hHUW5wcktMSmQyUzl3aThaWFpGN3AtZlpiWTRGV3REOXI4?oc=5">'The dark side of AI': Wall Street weighs recent stock sell-off over disruption fears - Yahoo Finance</a>
 <em>외 11건</em>
-</div></details>
+</details>
 
 
 ### 📊 매크로/금리 (11건)
@@ -132,7 +130,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-17.png"
 <details><summary>그 외 8건 보기</summary><div class="details-content">
 <a href="https://news.google.com/read/CBMilwFBVV95cUxPcUJDLUFCOHFOZGU2eXdhLWhacWJqMktka1ltMDBpbUs3RkFySGZiUFNzZXpKNy1pUUxJLU9lV0NVc2NrME1JRWVlSUdLTDg3dkhVcUdCeWZocWQwYUlJcVZpMnNJUEkybEdWLVVHcTB6cWo2VG91V2d1d0x2cnV2amk2V0wteHN1Um0ybml6NjFVN1NmdTVz?hl=en-US&gl=US&ceid=US%3Aen">S&P 500 ends up slightly as tech dips, inflation cools</a>
 <a href="https://news.google.com/read/CBMieEFVX3lxTFBGd3Z6M1J4UGVpRzdjNVNLWXhwZHlTWlExb0dYaWc3LV9XOUY5ZWQ3Sk1hd0lyNi0tWTdwRV9PTzhFM0JWWDNqTTM3NTA4SUM2Z2x2MFJpQXI5cXl6dzFPRV9GTW1MX0dYSFh6WldfZm1xeEFUZWlYWA?hl=en-US&gl=US&ceid=US%3Aen">US Stock Market Today: S&P 500 Futures Rise As Inflation Worries Ease</a>
-</div></details>
+</details>
 
 
 ### 🟠 비트코인 (2건)
@@ -212,7 +210,6 @@ image: "/assets/images/generated/market-snapshot-2026-02-17.png"
 
 
 <details><summary>참고 링크 (15건)</summary>
-<div class="details-content">
 
 1. [S&P 500 closes little changed after soft inflation report, index notches losing ](https://news.google.com/read/CBMid0FVX3lxTE1rMzAwSXVIelF1VVJ2WU1YbzFiLWtfa0xMRDFVLTZpVE1WcGlrM3hPZnJScFV1b1A2WTNXX3JQeHFEcWRaTU5HdDlYMF83czJndGZqZUY0Y3piUTkzME5LaWFoVlFQQ0xCSXAyaGtlNUlMMU1JMTBJ?hl=en-US&gl=US&ceid=US%3Aen) - Google News
 2. [Stock Market Today: Dow Dives As S&P 500 Turns Negative For 2026; Cisco, AppLovi](https://news.google.com/read/CBMisAFBVV95cUxNd0NsRFI2VWljUTdwaGhiaXA1QzdkMVFqd1dWNWp4YUZuZEFtdDF0VGZOV2ZZeWxVQ2VaNjZCSFkyb2k3NW1ELU55WGNPb0Y5WURCMzBLUTBUVkp6VHhMVmNhM193TE1lNHE3QndXVTh5U2tBY1lhbjBQYlladGVpT0hMdnVDWmRuNFJYai03dnRPRHlMSEtIZkotV2VaazNTYklKdW9fV3ROcktKUEx2aQ?hl=en-US&gl=US&ceid=US%3Aen) - Google News
@@ -230,7 +227,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-17.png"
 14. [Nasdaq Futures Fall Ahead of Busy Week](https://news.google.com/read/CBMikwNBVV95cUxPODdIcHdaa3p1eXdqTnV2eVJEM1NhbkpkVjBQamNNUTBneDBZcVBRcmZrME5XOHJLOXplVjl4aVFNRll5eVNZY1lzWjd2VGhkWFRiWVRfS0RCTy1YaGMwaFF3UnNpdldEN1JQdDVHbGpKRTVwZklZNXpUallvQmdSc1N4cl9LNENIYXd5Z0d0ZkdvUTBUMDBhZ3NHMXVSeldZUDFPZVVmbFlhZGJlTklYb0IwTkNaTDk3Ym9ZbEZCMjhBLUs5Y1NGTjZkcHdCSVBJOHE3eHBUQjBKTTZkSU1KTTJvcFB3LWJ2Q3A4UENieWhTVFR3UDlmdFVRZzhKbEhRSjJGOE9EWmV1Zm5SdmRrOVF3MkdrR3FjUks0bzI3OWdKTnFfdGxFdEZRUzJWRkxkN0tIRW9OcEJnaWdKb0h5RVFycllYNmZQeldyYV9CaVlWd3JJWFRENE1ySERHT3JhRnlma21SMThBa0hZYUFmcXhrbnB3a0dKeFBiQTRfNnpNTjBma3FqT1JHZlNuQkZPUVlB?hl=en-US&gl=US&ceid=US%3Aen) - Google News
 15. [US Stock Market Today S&P 500 Futures Climb On Cooling Inflation And Yields](https://news.google.com/read/CBMi1gFBVV95cUxQUlF6MjBHRUI1a3JtNDZLRnJhY01pSWVad01FbDJkVS1WVUpBa3hfbXhtWEVsVTVhbFZibUhiWkJkeThINUczTVhRQUZzcVN1Q2hfcUNvbDhDVTNSRGtlaDBpRHdBdUVKeGxiVmdpWDVzTXZLb3h4bHdzOWE2RUptalMxU0hxOFVxUWt5eHhKaXlWLUFmVlhVRHJlMlpMdWZmRUViLXBfVl93ZUdNR2FTWmlsdF9mRHBLdzlFQW9uZ1VUWUtJMXd4ZGdBV3Q3RVJRVjFrT0N3?hl=en-US&gl=US&ceid=US%3Aen) - Google News
 
-</div></details>
+</details>
 
 
 ---

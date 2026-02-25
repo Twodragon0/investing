@@ -14,12 +14,10 @@ image: "/assets/images/generated/source-distribution-2026-02-20.png"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">26</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📊 17</div><div class="stat-label">매크로/금리</div></div></div>
+<div class="stat-item"><div class="stat-value">26</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📊 17</div><div class="stat-label">매크로/금리</div></div></div>
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:65%"></div></div><span class="theme-count">17건 (65%)</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:35%"></div></div><span class="theme-count">9건 (35%)</span></div>
-</div>
+<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:65%"></div></div><span class="theme-count">17건 (65%)</span></div>
+<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:35%"></div></div><span class="theme-count">9건 (35%)</span></div>
 
 ![source-distribution]({{ '/assets/images/generated/source-distribution-2026-02-20.png' | relative_url }})
 

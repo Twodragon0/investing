@@ -13,13 +13,11 @@ excerpt: "BTC 추가 하락 $50K 전망, XRP 강세 속 크래시 대응, Apollo
 
 ---
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:39%"></div></div><span class="theme-count">34건 (39%)</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:28%"></div></div><span class="theme-count">24건 (28%)</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:11%"></div></div><span class="theme-count">10건 (11%)</span></div>
-<div class="theme-row"><span class="theme-label">🟣 DeFi</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:8%"></div></div><span class="theme-count">7건 (8%)</span></div>
-<div class="theme-row"><span class="theme-label">🔷 이더리움</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:10%"></div></div><span class="theme-count">9건 (10%)</span></div>
-</div>
+<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:39%"></div></div><span class="theme-count">34건 (39%)</span></div>
+<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:28%"></div></div><span class="theme-count">24건 (28%)</span></div>
+<span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:11%"></div></div><span class="theme-count">10건 (11%)</span></div>
+<span class="theme-label">🟣 DeFi</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:8%"></div></div><span class="theme-count">7건 (8%)</span></div>
+<span class="theme-label">🔷 이더리움</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:10%"></div></div><span class="theme-count">9건 (10%)</span></div>
 
 *총 87건 수집*
 
@@ -29,11 +27,11 @@ excerpt: "BTC 추가 하락 $50K 전망, XRP 강세 속 크래시 대응, Apollo
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">87</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 34</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (20회)</div></div></div>
+<div class="stat-item"><div class="stat-value">87</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 34</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (20회)</div></div></div>
 
-<div class="alert-box alert-info"><strong>암호화폐 시장 **비트코인, 가격/시장** 중심 87건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 34건 수집</li><li>📈 <strong>가격/시장</strong>: 24건 수집</li><li>🏦 <strong>거래소</strong> (10건): Transparency, which is a hallmark feature of most cryptocurrencies, is likely one of the biggest hur</li><li>🟣 <strong>DeFi</strong> (7건): The asset manager overseeing more than $900 billion assets may buy up to 90 million MORPHO tokens as</li></ul></div>
+<strong>암호화폐 시장 **비트코인, 가격/시장** 중심 87건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 34건 수집</li><li>📈 <strong>가격/시장</strong>: 24건 수집</li><li>🏦 <strong>거래소</strong> (10건): Transparency, which is a hallmark feature of most cryptocurrencies, is likely one of the biggest hur</li><li>🟣 <strong>DeFi</strong> (7건): The asset manager overseeing more than $900 billion assets may buy up to 90 million MORPHO tokens as</li></ul></div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiiAFBVV95cUxPVUtQQWJPdi1qQVRDcEpCSjcwZVhrM0RoYk5YYmtIN3BnNVVXUFozY0lMb3JFazZyc1YyWWZXckhXUDJxMlpjWGdXYnlaY0IwcS1fbnQ4OTlRUW9FQWlKT2Q5SzV2ell4b3VyS0tOS2tYNU9vVENvNXBNMTdiMnhwNWI1Sk9ON2NN?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin Price Crash Rattles Trump's Crypto Progress. Here's The Upshot For Investors.</a></li><li><a href="https://news.google.com/read/CBMimAFBVV95cUxOa3c1eU0wTnZFbHdzV1MyeTRaaGp2NTdfLTlnWXJnZ1BzdXNhM1I0OUtwNS04ZUhjYmRUOG5udndFelB6ZFNTMllfZE1JcUp5MkJVSFMzUFhJaUMxYUFrUjJmcGdTVmVwLVBuQkZULTdINVRTSTVsVldsSFhRb0hKejBXS3hkOExCX281WFBkQzAxbDRJS2MxVQ?hl=en-US&gl=US&ceid=US%3Aen">Crypto Crash: Is Bitcoin Still the Best Cryptocurrency to Buy After This Sell-Off?</a></li><li><a href="https://www.coindesk.com/markets/2026/02/15/xrp-is-outrunning-bitcoin-and-ether-after-investors-piled-into-the-recent-crash">XRP outruns bitcoin, ether after investors piled into the recent crash</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiiAFBVV95cUxPVUtQQWJPdi1qQVRDcEpCSjcwZVhrM0RoYk5YYmtIN3BnNVVXUFozY0lMb3JFazZyc1YyWWZXckhXUDJxMlpjWGdXYnlaY0IwcS1fbnQ4OTlRUW9FQWlKT2Q5SzV2ell4b3VyS0tOS2tYNU9vVENvNXBNMTdiMnhwNWI1Sk9ON2NN?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin Price Crash Rattles Trump's Crypto Progress. Here's The Upshot For Investors.</a></li><li><a href="https://news.google.com/read/CBMimAFBVV95cUxOa3c1eU0wTnZFbHdzV1MyeTRaaGp2NTdfLTlnWXJnZ1BzdXNhM1I0OUtwNS04ZUhjYmRUOG5udndFelB6ZFNTMllfZE1JcUp5MkJVSFMzUFhJaUMxYUFrUjJmcGdTVmVwLVBuQkZULTdINVRTSTVsVldsSFhRb0hKejBXS3hkOExCX281WFBkQzAxbDRJS2MxVQ?hl=en-US&gl=US&ceid=US%3Aen">Crypto Crash: Is Bitcoin Still the Best Cryptocurrency to Buy After This Sell-Off?</a></li><li><a href="https://www.coindesk.com/markets/2026/02/15/xrp-is-outrunning-bitcoin-and-ether-after-investors-piled-into-the-recent-crash">XRP outruns bitcoin, ether after investors piled into the recent crash</a></li></ul></div>
 
 
 ![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-16.png' | relative_url }})
@@ -94,7 +92,7 @@ excerpt: "BTC 추가 하락 $50K 전망, XRP 강세 속 크래시 대응, Apollo
 <a href="https://news.google.com/read/CBMiiANBVV95cUxQdzQxZGFoYWlEbGdNaWRNUWYwY0lIek1ZeU0xZmpjV0RBTUFNVVZSYVA4SEN4YzJGTDNfY1ZraUtVUjlGWlNpNmoyY0NJTlBPQUtDLXh4MEZJRnZKNWlvVWo0TEFNekFsWVYtQ0pXVWZJaTc1NEdtWW9kODRsRmFNbnV2aDNjVUNGemxBMlhnYUl5RGhTUURFaWZhR2NGQ3hFYW1XUVl2Xy01dThNNFRwRnk3emZQMlZ0cUh1c1V6eWVmamdCdUFCVGx1RGM0clpUYnBZRTNzZllzZmxpcFh2eF96bkV2NllxX0NzY3dNVXprX2NHQ181Ql9GaE5vYWhrd3RhTC1CempYdFFDU2twMFZDQlJydmxhN1p6VnhMMkt6ZC0xOHl5aUFBcWN3S0xjMFhEUy03VFEwYklmMGEwU2ttaW5tenp0cmticW5NdmFKTThhdVZiTVZFRXdERzhqTldDLVF0emV0SFZuQnFpSmR3Wmk3cDNLa1MxNkJWUW44RDU5WksteA?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin May Fall to $50,000, Crypto Bull Says. What Happens Next.</a>
 <a href="https://news.google.com/read/CBMiqgNBVV95cUxOUXZkLU9oX181SFNrTHBtaldiTlRyMG5Ndm9MVm5nY3V4dGRCb1IyTzRoNTFsQVlyU1VtR05mRmVOMjduUzM3MHVaZTVsdDdlWDlfUGVocFR2X010YXVKMHFxalhQUzNGbEtvT3NUV2M5Nk1NSnFzNW94cVNQdElpeWtvbXo5aldlSVV6Z1NEZjdwZzU4UVJVdVJ4dUhhR0Z5VC01RW5FeFZaazlqRjc5TVZmUXJOeTdGSEc3X2Jza3plbTFGSlpvWUZLVTB6NHp0WUc1X1NjX3dtb2tMUURQYnJza1BrRXdsVzBnWGZPb0dwZWkybHJjSGRoV1lPeXk2QmtseURtYWtFb29IWEc0MVV3eGlOMUxBTXFpdnQxZjljcFp5UGdhMlNlbHNxQklDTnFFcnZGamNJemxxR1dvZDZza3A5NGZhTkNCdEpqd25jemtFZWJnYjlDeV9tZVJBRHJMeE1GenAydTFNVl9yOXRFYUQ2QkxneE53M2ZhZkFPNUtwR19GRE4xM0RxVzMyLWNPd0dmQVBqWUFxdEFxNElUMmxNekNERVE?hl=en-US&gl=US&ceid=US%3Aen">France is a capital of bitcoin kidnapping: ‘They cut off his finger’</a>
 <em>외 16건</em>
-</div></details>
+</details>
 
 
 ### 📈 가격/시장 (24건)
@@ -114,7 +112,7 @@ excerpt: "BTC 추가 하락 $50K 전망, XRP 강세 속 크래시 대응, Apollo
 <a href="https://news.google.com/read/CBMijwFBVV95cUxOcXloc0NkWG9JNy01MGtsOWxMUHdrTXVVTkhESXVjLUZTMXBEZ216WHN2a0duaE1jbzJuUVFxd3RrSzFnalVUeS1NV1o1N0Nfaml2cDE0akZTTzE0NUhNbHEwN1lZSFhtdUlGX3loZEVzdFZNSzl3RGhSSTd6VWh6ZUlzUW1rTWQ0Tk9RZFo4VQ?hl=en-US&gl=US&ceid=US%3Aen">Crypto Prices Are Tumbling Across the Board. Here's How I'd Put $1,000 to Work Today.</a>
 <a href="https://news.google.com/read/CBMixgFBVV95cUxONTc4a1gyLVVnSjNMNHdNaU81ZFp2YjQ5YkEwWHFna1B5SkRMRWtwU1QzRUdVSTVGemFfNGlJSEtycGhvV1NZYmxRRm4wLVNqWVFRVW5SeWhoc2RsTVdKSW1SVTBURjc4ajZROTdlQ1BhQTlrQkpSdk5PU1dwSzg2Mlg4T1FuNHZISlczTTVlQk91TE1CcXoxRnAxVzZyQl85bGRGRXY2T2E0R0ktYzMtdEE5NnE5eTY0d2Mya2FwYzdieVVkN0E?hl=en-US&gl=US&ceid=US%3Aen">Crypto lender BlockFills suspends withdrawals amid faltering bitcoin price</a>
 <em>외 6건</em>
-</div></details>
+</details>
 
 
 ### 🏦 거래소 (10건)
@@ -135,7 +133,7 @@ Mirae Asset Consulting agreed to acquire a 92.06% controlling stake in South Kor
 <details><summary>그 외 7건 보기</summary><div class="details-content">
 <a href="https://www.binance.com/en/support/announcement/list/48">New Cryptocurrency ListingCheck out the latest coin listings and pairs on Launchpad, Launchpool, Spot, Margin, and Futures markets.</a>
 <a href="https://www.binance.com/en/support/announcement/list/49">Latest Binance NewsStay on top of what's new in Binance.</a>
-</div></details>
+</details>
 
 
 ### 🟣 DeFi (7건)
@@ -157,7 +155,7 @@ Grayscale joins Bitwise in filing to launch a standalone Aave product in the US,
 <details><summary>그 외 4건 보기</summary><div class="details-content">
 <a href="https://cointelegraph.com/news/apollo-deepens-blockchain-play-enters-crypto-lending-via-morpho-partnership?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">TradFi giant Apollo enters crypto lending  arena via Morpho deal</a>
 <a href="https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Here’s what happened in crypto today</a>
-</div></details>
+</details>
 
 
 ### 🔷 이더리움 (9건)
@@ -178,7 +176,7 @@ Better Cryptocurrency to Buy With $3,000 and Hold for 5 Years: XRP vs. Ethereum 
 <details><summary>그 외 6건 보기</summary><div class="details-content">
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1Ed3NqOVhRcVFkWF9ZOUJiY3ktUTZRSDdrQ19uNFVkMEpKUm5xd2ZXLTgzMUNKT1ZIc3JMUGsxblBuRU9FYWFOQnRqZEFtWUpyVFZGOGxsSDRicWlsX2oxV0pkdDNvVkptT1Jra2NBeUdwaTA?oc=5">트럼프 미디어, 비트코인·이더리움·크로노스 기반 2개 암호화폐 ETF 신청 - 디지털투데이</a>
 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE15ZTZtSmtYMnZpb1NwVlhoWlIxTHhYNklJZk5aQ2lhS3g5QlNlUjdRZ2pmcjJvemRQQVJfd09OVVI0bnM5QmdTZmVReEhBbExpR2dpLUVsWlNpU1VFMlNHc0t3THJaRXdrOU8xemlzQQ?oc=5">[가상화폐 시세] 비트코인 1억원선엑스알피 2100원선, 이더리움 290만원선 거래 - 이코노뉴스</a>
-</div></details>
+</details>
 
 
 
@@ -225,7 +223,7 @@ Better Cryptocurrency to Buy With $3,000 and Hold for 5 Years: XRP vs. Ethereum 
 9. [Bitcoin claws back to $70,000 on cooling inflation after $8.7 billion wipeout](https://news.google.com/read/CBMiwwFBVV95cUxPQ0s0YkhVamw1MTE4cXJHRHlSWFphVU13STNSemdIZ1Jsa0NXTWhXUTVEWTFQSXRMZTgyd2EzTlpaVExEQVNaY2I0Y0M2RFVqVXloZ2kwblRhMFBtRG9Zb1dUZ01fR3kxeGU5MEdTMDd1TkVVWWtwamcyampPQ253ZlJBSDdfMkFhaDd5aFVya3BKLXg3RFk2cHFCU0tWY1l2OC1TQ1hlbVhYTmNjOTEwS1Q5RFlzSW5QYVd3eVNzZnFxYzg?hl=en-US&gl=US&ceid=US%3Aen) - Google News
 10. [Crypto Has Finally Found Its Killer App: Human Trafficking](https://news.google.com/read/CBMidEFVX3lxTE1CRTFVUldSWF9EUXJSbTRidHl6bU03Ry0yRlZzUDNJeVU1VG5OTjhncjhsLTNkbTNKcFhad1dhVG9IeFAzdnZ3ZjNZYVRReXBIY2Q3czBxVmN0Y1hCc3B5UjNuUFlndDM3XzdiRUhRc0tiOTRp?hl=en-US&gl=US&ceid=US%3Aen) - Google News
 
-</div></details>
+</details>
 
 ---
 

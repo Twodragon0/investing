@@ -14,12 +14,10 @@ image: "/assets/images/generated/regulatory-summary-2026-02-20.png"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">6</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 4</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">3</div><div class="stat-label">한국</div></div></div>
+<div class="stat-item"><div class="stat-value">6</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 4</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">3</div><div class="stat-label">한국</div></div></div>
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:67%"></div></div><span class="theme-count">4건 (67%)</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:33%"></div></div><span class="theme-count">2건 (33%)</span></div>
-</div>
+<span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:67%"></div></div><span class="theme-count">4건 (67%)</span></div>
+<span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:33%"></div></div><span class="theme-count">2건 (33%)</span></div>
 
 ![regulatory-summary]({{ '/assets/images/generated/regulatory-summary-2026-02-20.png' | relative_url }})
 
@@ -60,7 +58,7 @@ image: "/assets/images/generated/regulatory-summary-2026-02-20.png"
 
 - 주요 테마: 🔵 규제/정책, 🏦 거래소
 - 전 세계 금융 규제기관의 최신 동향 6건을 요약합니다.
-- - SEC: 펀드 포트폴리오 보유 보고 부담 완화를 위한 개정안을 제안했습니다. 기관 투자자들의 보고 의무가 간소화될 전망입니다. - SEC 칼럼: "Number Go Down" 제목의 SEC.gov 칼럼이 게재되어 암호화폐 시장에 대한 SEC의 비판적 시각이 재확인되었습니다.
+- SEC: 펀드 포트폴리오 보유 보고 부담 완화를 위한 개정안을 제안했습니다. 기관 투자자들의 보고 의무가 간소화될 전망입니다. - SEC 칼럼: "Number Go Down" 제목의 SEC.gov 칼럼이 게재되어 암호화폐 시장에 대한 SEC의 비판적 시각이 재확인되었습니다.
 
 ## 규제 요약
 

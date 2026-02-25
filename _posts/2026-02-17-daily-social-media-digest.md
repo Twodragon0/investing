@@ -13,18 +13,16 @@ image: "/assets/images/generated/source-distribution-2026-02-17.png"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">34</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📊 11</div><div class="stat-label">매크로/금리</div></div></div>
+<div class="stat-item"><div class="stat-value">34</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📊 11</div><div class="stat-label">매크로/금리</div></div></div>
 
-<div class="alert-box alert-info"><strong>소셜 미디어 **매크로/금리, 정치/정책** 관련 34건 포착</strong><ul><li>📊 <strong>매크로/금리</strong> (11건): JAMES LAVISH: “The Federal Reserve manipulating the money supply and access to capital has absolutel</li><li>🏛️ <strong>정치/정책</strong> (7건): President Trump suggested "we might pay off the US $35 trillion debt using cryptocurrency."Sponsored</li><li>🟠 <strong>비트코인</strong> (4건): Binance has purchased another 4,545 Bitcoins valued at $305 million for its “SAFU” fund.Sponsored by</li><li>🏦 <strong>거래소</strong> (6건): Binance has purchased another 4,545 Bitcoins valued at $305 million for its “SAFU” fund.Sponsored by</li></ul></div>
+<strong>소셜 미디어 **매크로/금리, 정치/정책** 관련 34건 포착</strong><ul><li>📊 <strong>매크로/금리</strong> (11건): JAMES LAVISH: “The Federal Reserve manipulating the money supply and access to capital has absolutel</li><li>🏛️ <strong>정치/정책</strong> (7건): President Trump suggested "we might pay off the US $35 trillion debt using cryptocurrency."Sponsored</li><li>🟠 <strong>비트코인</strong> (4건): Binance has purchased another 4,545 Bitcoins valued at $305 million for its “SAFU” fund.Sponsored by</li><li>🏦 <strong>거래소</strong> (6건): Binance has purchased another 4,545 Bitcoins valued at $305 million for its “SAFU” fund.Sponsored by</li></ul></div>
 
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:32%"></div></div><span class="theme-count">11건 (32%)</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:21%"></div></div><span class="theme-count">7건 (21%)</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:12%"></div></div><span class="theme-count">4건 (12%)</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:18%"></div></div><span class="theme-count">6건 (18%)</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:35%"></div></div><span class="theme-count">12건 (35%)</span></div>
-</div>
+<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:32%"></div></div><span class="theme-count">11건 (32%)</span></div>
+<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:21%"></div></div><span class="theme-count">7건 (21%)</span></div>
+<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:12%"></div></div><span class="theme-count">4건 (12%)</span></div>
+<span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:18%"></div></div><span class="theme-count">6건 (18%)</span></div>
+<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:35%"></div></div><span class="theme-count">12건 (35%)</span></div>
 
 *총 34건 수집*
 
@@ -191,7 +189,6 @@ Trump Tariffs Backfired, 130,000 Jobs Added In January And More: This Week In Ec
 > *본 소셜 동향 분석은 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*
 
 <details><summary>참고 링크 (10건)</summary>
-<div class="details-content">
 
 1. [[Telegram] How it feels to buy the dipSponsored by @rainbetcom](https://t.me/crypto/3498) - Telegram @crypto
 2. [[Telegram] Binance has purchased another 4,545 Bitcoins valued at $305 million f](https://t.me/crypto/3499) - Telegram @crypto
@@ -204,7 +201,7 @@ Trump Tariffs Backfired, 130,000 Jobs Added In January And More: This Week In Ec
 9. [The Trump Tariffs Are Having a Noticeable Impact on the Stock Market and It's Ra](https://news.google.com/rss/articles/CBMimAFBVV95cUxOcVBzVUEwZ3dkclJodnJ3T1hpdGxGSGRqVGdQU3lobkZHeElTemtsODdMRXVCRE5MY29ETDNmT2U4VjFDSUNURHAzZFVzbEhQb203RllpamtuWFpSM3c5MjlkOUp2SloycXEwVGF4anZ0eUJWX09tVVZma25mVm0xVmlMalpYbFkyT3kzRHFpeXA1MktNc29NcA?oc=5) - Trump Economy
 10. [Trump Tariffs Backfired, 130,000 Jobs Added In January And More: This Week In Ec](https://news.google.com/rss/articles/CBMi5wFBVV95cUxQYXpxSEpBeElZaEQwQmd1U2t3SmlsdUstaDdNa2MxRTF6TG9aSTN2M0F2OEdfQjdQVW1JZ2pGYnRQbzlLX0lzNWowWVgxNFppa2dXQmY3WjRfSTd1Y1g1Sm1KdE1ZYWxyUFFHMkhTOVR2Z3FZOUlMOGVJQmRBTnVEVmkzdW1FZS1GazFaV2dsdzN0VGVfUEpESmxsQjJNX05nMlQ5UmZFVXpRQVFucVhwQzhMRC10WXRtc1RmQzFncVFZUUVKREtLNE1TdXJMVmpPeTJlN1M0a3l5UGlrcWxJR0VnOVdoZDA?oc=5) - Trump Economy
 
-</div></details>
+</details>
 
 ---
 **데이터 수집 시각**: 2026-02-17 03:22 UTC

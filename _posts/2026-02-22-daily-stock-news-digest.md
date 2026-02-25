@@ -13,11 +13,11 @@ image: "/assets/images/generated/market-snapshot-2026-02-22.png"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">131</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 43</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,808.53</div><div class="stat-label">KOSPI +2.31%</div></div><div class="stat-item"><div class="stat-value">1,154.00</div><div class="stat-label">KOSDAQ -0.58%</div></div></div>
+<div class="stat-item"><div class="stat-value">131</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 43</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,808.53</div><div class="stat-label">KOSPI +2.31%</div></div><div class="stat-item"><div class="stat-value">1,154.00</div><div class="stat-label">KOSDAQ -0.58%</div></div></div>
 
-<div class="alert-box alert-info"><strong>주식 시장 **가격/시장, 매크로/금리** 부각 131건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 43건 수집</li><li>📊 <strong>매크로/금리</strong> (15건): ^NDX Today, February 21: AI Rally Lifts Nasdaq as Fed Cut Bets Hold Meyka</li><li>🏛️ <strong>정치/정책</strong>: 16건 수집</li><li>🤖 <strong>AI/기술</strong>: 31건 수집</li></ul></div>
+<strong>주식 시장 **가격/시장, 매크로/금리** 부각 131건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 43건 수집</li><li>📊 <strong>매크로/금리</strong> (15건): ^NDX Today, February 21: AI Rally Lifts Nasdaq as Fed Cut Bets Hold Meyka</li><li>🏛️ <strong>정치/정책</strong>: 16건 수집</li><li>🤖 <strong>AI/기술</strong>: 31건 수집</li></ul></div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?hl=en-US&gl=US&ceid=US%3Aen">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates</a></li><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a></li><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?oc=5">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates - CNBC</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?hl=en-US&gl=US&ceid=US%3Aen">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates</a></li><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a></li><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?oc=5">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates - CNBC</a></li></ul></div>
 
 
 
@@ -62,7 +62,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-22.png"
 <a href="https://news.google.com/read/CBMipAFBVV95cUxNUVliSlNNN1JvaWszYmh4VVhGc3FBczJyOTYtbkVYdmJuc3JoUjROWGdEcjdfdnBybXlteWc1bFRCeEZDTHRxN0xHUnU4Wkg1THdnV3BWUHRKYVhVbGF4QnlwTzZjYU81SkQ2U3VXSElCNXpHQzF4bjFQTXotc3FvSnc4TGxKNlROU3c2SE1PTHM4cmNjanN6X04ydV9kZU5UQ3p1LQ?hl=en-US&gl=US&ceid=US%3Aen">Is a Market Correction Coming?</a>
 <a href="https://news.google.com/read/CBMi2gNBVV95cUxONF8zcUNuLVBqa3hyYUpXalJ3c1p0ZjNBUUpNZU00a1NQUDExQUlndWt0cUpTTEx2MDRTc1gtWkU4T2hiUFB2NFFOVUlPZHhNTmlqMnZQTlpuQUxEUW9zTmdfa0UtUFFlb1RzNlE4Uk5uMzZ3RGo1TmdYaDN1cFZMdjRQY3dmdkNWVnlJOG1WZVIxRWdtUG1WczNmY3hyQXliLXc5ck50SDlqRjBwNEktWVFORXBWbHN2Y1c5R2NBakpkQzNFV3BsMUlTZ19yRWctTkc0eDY0NE55MUZoam1yQ0Jib2lUeERua3dKMUtnaGZHd0h0Zldxa2hhelpLVzQtaXR3bTlRVnBLN3dGd2tMTVBWaHlMM25EUnNaRm1KaUota2UtWDZPZjRJMEVQbUZLaEk1RDNjMEhabGN2UEFsa3hQMjZ6MWN5ajJGYlpHYzk0ZUhrdGhLTkhhZllGTzgwUms1eW5SSlRtQ0YyOFpBbFRiR2lod20zR2VIcGJ1ZDM3WFNYanhhdm9BaDE5YnBnc200Z00zbUdGRzdwMTRodnBpTW9ETUU5SVV3VmxWRXlxaFZvZUNuekM2YzVzQzNTVVp6cF84Vlk1ajhPX2ptemZwVV91TndEVVE?hl=en-US&gl=US&ceid=US%3Aen">Stock Market News, Feb. 19, 2026: Dow and S&P 500 end a 3-day winning streak, Nasdaq finishes the day lower; oil prices jump due to Iran tensions</a>
 <em>...외 25건</em>
-</div></details>
+</details>
 
 
 ### 📊 매크로/금리 (15건)
@@ -82,7 +82,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-22.png"
 <details><summary>그 외 12건 보기</summary><div class="details-content">
 <a href="https://news.google.com/rss/articles/CBMiygNBVV95cUxOeVU1bHpkajNSV05rLU5rWUk0NkFlY1Z4NFI0d0hrM1FPN2ZmS3ktSkdwYjZBSzBETjNmYi1fQzJhdVZPUkdydk90LWt4ZVhUNE1DYWpzTTl6MXVfT3J5TkFHTjcwQzNVU05hN2lpcWxDalhMS0pkeGdmS2lFRGt5OHdnOGxyZ24yQm1DdUNqcXBob0FuQmFhdVB6U3Fnb29heFFHa3FCUUJQcmJHYXVHTExDUFRxR0NmRVFYcllfU214bTB2YnRPMnc0OHpyTm5oWGlfSkwwV2dsZ1ZZRWgta3VUeTUwZld4VXpZMVB3SlFyTk52ai1JeUtwZ25hX3ZSenZaVjUtT0pWMzRKT3VQajhVYWwyaDdWcnNlejBTWG55VjFtQ0t0YVBuVHBrZUU2UzRtR2NpVVE2X0p2NFVZV19wYk5IQ2tOMDJhVWtPVXhNX0Q4RFFBbEZVa29GcDBKbFRnU0g5Q1I0Z3NCNXVDRWpmNnJEUUVuMTJqN0trLW9XczI2NXhwTUdmdENKRWdtUGlDNGc3UTF2YzkzTDBoaGRqdTNqSmFtMm0yUi1neDVCSHlpeGtrclkxbG5YOWdrcVpiRFptcXhoZw?oc=5">Stock Market News, Feb. 20, 2026: S&P 500 and Nasdaq log best week since early-January despite Trump slapping new 10% global tariff after Supreme Court's ruling; Treasury yields rise, dollar retreats - MarketWatch</a>
 <a href="https://news.google.com/rss/articles/CBMi6AFBVV95cUxPLUJjR3ZLb21FVWFLdWVIdmE5bGpJMjFFLVlnRU1tTTBjdmRPSzVwYmJNQW9QRW1SdFFla0poa3doUHZHQUpSU0tMdDVDN29LX1FZUkZtQU05MjJfeEZkMHVQWTllbGZwaWhMdHVBYnNQb0pRaDA1SWFGajFvSzJQSThpTjlacG5YcG5fRnQ2NV8zbTNKeHJOZUNmTXJiNGJMYWRLUGM1LUJOWTM5cHB6ZTVFYmp2WU5FTGRKNjVfaURqTlpZa0ZkRlgzRGhNSTltcDBWTXE3TUNnRHRPem04Wjl6YldlLU1x?oc=5">Stock market today: Dow, S&P 500, Nasdaq futures falter as US GDP cools, Fed-favored PCE inflation heats up - Yahoo Finance</a>
-</div></details>
+</details>
 
 
 ### 🏛️ 정치/정책 (16건)
@@ -101,7 +101,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-22.png"
 <details><summary>그 외 13건 보기</summary><div class="details-content">
 <a href="https://news.google.com/read/CBMi0wFBVV95cUxOcXE0RXlLLVJ0UkRQNmdETWY4dTBjYnBqU3BfOG9vU2Z1WVJmQ2hadUVrSW1vTEhwMU85dC1IOHZ6LURwMFdEbDhUSnRjVTJjQnFyQnB6ZlV3bTlITllfSmk0emVUc0lLdS13VFhBZ1dLM2tVRWVEYTdTSmZvRzlnYjNpWkQ3QjFSd0hCTk8tOE9IWG56ZVVKYWMzSjU1SVJPVHJqazZlMFA2ZnQ5XzlfZE1BZmNQdzFQMDdGLTc3bnlvQW5SYzJUOFpfaUpVbGlXRzBr?hl=en-US&gl=US&ceid=US%3Aen">Stock market today: Dow, S&P 500, Nasdaq jump to post weekly gains as Supreme Court strikes down Trump tariffs</a>
 <a href="https://news.google.com/read/CBMie0FVX3lxTFBZaHJyWC1ZV2xCb0Y0QVByTUREa0p2ZlpvcjdwZ0RDMTRqVkdsUmI3SzVsNkdBWHV0ZzZ5RDJNenlXMUhUbDMyLXExM25FQTJnU2tnUHk5UUV1azgzZUxCTzdOWElqaGVid1R6WnptZWpjRzgtQ3RDdFN0RQ?hl=en-US&gl=US&ceid=US%3Aen">Stock Market Today, Feb. 20: S&P 500 Gains 0.7% As Supreme Court Strikes Down Tariffs</a>
-</div></details>
+</details>
 
 
 ### 🤖 AI/기술 (31건)
@@ -121,7 +121,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-22.png"
 <a href="https://news.google.com/read/CBMivwFBVV95cUxNOGI4OE9oTExGRzJsdS1mZUFWV1Zjc0J2Mk9jeHZpckFyMk1BSktUanlMUHJYaWVoVWZiTGdhTTRTWW9Ga0czWEpVNzJlTV9vSWVUUzFhV2VCQ0NMZndvVy16NXlyTGpGZTdsR000Nm9MdDUxNWRORE5IdUgwLVpqTE8wVUR5SVk3X3pjeHM1OHRhWXBwY09xUUVFOWpRaUxCUnV0bGdSQV92NzNKZng5VV9MZDZrWWtvZWNLWFBZWQ?hl=en-US&gl=US&ceid=US%3Aen">Dow Jones Futures: Trump Hikes Global Tariff To 15% From 10%; Nvidia Earnings Loom</a>
 <a href="https://news.google.com/read/CBMib0FVX3lxTE9raUJSclcxR1JBR3l6YXNQdEdTc1JsUXlPai1PZHZMWm1HX1FGb0V4Y0RQWk5DRnpRR0s0eWI1bGRLanZ5TkxWZmVTV2sxbEZpREFIMEVGTHdLVl9wQ3RsMlg0UDhMLVNwNV9OQ19aONIBc0FVX3lxTE5LalZ1ZFVYQk1KTWxYekZfUkxJbDdkRjZ3ME1hN25oVTVHaTJyOE9hbmJ3cVZxWkJQV0lja25sY2JCSmVKeXVybllIYk53VlpRZExER3p5YVdGcFp1dmI3NGUtUGhkV19EZlF3OXNfenhvWGM?hl=ko&gl=KR&ceid=KR%3Ako">‘윤 무기징역’ 선고된 날 코스피·코스닥 날았다...“내달까지 반도체 주도 상승장”</a>
 <em>...외 13건</em>
-</div></details>
+</details>
 
 
 ### 🔴 보안/해킹 (2건)

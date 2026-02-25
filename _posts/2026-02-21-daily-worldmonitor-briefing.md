@@ -10,11 +10,11 @@ lang: "ko"
 
 **2026-02-21** 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다.
 
-<div class="alert-box alert-info"><strong>오늘의 글로벌 리스크 스냅샷</strong><ul>
-<li>총 수집: <strong>20건</strong></li>
-<li>핵심 테마: <strong>사회/기타, 정책/법률, 지정학/안보</strong></li>
-<li>집중 출처: <strong>WorldMonitor/BBC World</strong></li>
-</ul></div>
+<strong>오늘의 글로벌 리스크 스냅샷</strong><ul>
+총 수집: <strong>20건</strong></li>
+핵심 테마: <strong>사회/기타, 정책/법률, 지정학/안보</strong></li>
+집중 출처: <strong>WorldMonitor/BBC World</strong></li>
+</div>
 
 ## 핵심 요약
 - 수집 건수: **20건**
@@ -51,18 +51,14 @@ lang: "ko"
 
 
 ## 이슈 분포
-<div class="stat-grid">
-<div class="stat-item"><div class="stat-value">20</div><div class="stat-label">총 이슈</div></div>
-<div class="stat-item"><div class="stat-value">3</div><div class="stat-label">테마 수</div></div>
-<div class="stat-item"><div class="stat-value">2</div><div class="stat-label">출처 수</div></div>
-<div class="stat-item"><div class="stat-value">5</div><div class="stat-label">안보 이슈</div></div>
-</div>
+<div class="stat-value">20</div><div class="stat-label">총 이슈</div></div>
+<div class="stat-value">3</div><div class="stat-label">테마 수</div></div>
+<div class="stat-value">2</div><div class="stat-label">출처 수</div></div>
+<div class="stat-value">5</div><div class="stat-label">안보 이슈</div></div>
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">사회/기타</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:50%"></div></div><span class="theme-count">10건 (50%)</span></div>
-<div class="theme-row"><span class="theme-label">정책/법률</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:25%"></div></div><span class="theme-count">5건 (25%)</span></div>
-<div class="theme-row"><span class="theme-label">지정학/안보</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:25%"></div></div><span class="theme-count">5건 (25%)</span></div>
-</div>
+<span class="theme-label">사회/기타</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:50%"></div></div><span class="theme-count">10건 (50%)</span></div>
+<span class="theme-label">정책/법률</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:25%"></div></div><span class="theme-count">5건 (25%)</span></div>
+<span class="theme-label">지정학/안보</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:25%"></div></div><span class="theme-count">5건 (25%)</span></div>
 
 ## 주요 이슈
 
@@ -97,32 +93,32 @@ lang: "ko"
 | WorldMonitor/Al Jazeera | 5건 | 25% |
 
 ## 원문 링크 묶음
-<div class="wm-reference-summary"><strong>원문 링크 탐색 가이드</strong><p>시장 영향이 높은 이슈를 우선 확인할 수 있도록 출처별 커버리지를 함께 제공합니다.</p></div>
-<div class="wm-reference-pills"><span class="source-tag">WorldMonitor/BBC World · 15건</span> <span class="source-tag">WorldMonitor/Al Jazeera · 5건</span></div>
+<strong>원문 링크 탐색 가이드</strong><p>시장 영향이 높은 이슈를 우선 확인할 수 있도록 출처별 커버리지를 함께 제공합니다.</p></div>
+<span class="source-tag">WorldMonitor/BBC World · 15건</span> <span class="source-tag">WorldMonitor/Al Jazeera · 5건</span></div>
 <details class="wm-reference-details"><summary>전체 원문 20건 펼치기</summary><div class="details-content">
 <ol class="wm-reference-list">
-<li><a href="https://www.bbc.com/news/articles/cn8146l0n55o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Trump brings in new 10% tariff as Supreme Court rejects his global import taxes</a><span class="source-tag">WorldMonitor/BBC World</span></li>
-<li><a href="https://www.bbc.com/news/articles/cd9g0e7zd8wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Trump lashes out at Supreme Court justices over tariffs ruling</a><span class="source-tag">WorldMonitor/BBC World</span></li>
-<li><a href="https://www.bbc.com/news/articles/cdxzk4gvzp0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Trump says he is considering limited military strike on Iran</a><span class="source-tag">WorldMonitor/BBC World</span></li>
-<li><a href="https://www.bbc.com/news/articles/cnv61zv534eo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Killing of nationalist student leaves French far left in deep trouble as elections loom</a><span class="source-tag">WorldMonitor/BBC World</span></li>
-<li><a href="https://www.bbc.com/news/articles/c86y1g6wde3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Nasa targets early March to send humans back around the Moon</a><span class="source-tag">WorldMonitor/BBC World</span></li>
-<li><a href="https://www.bbc.com/news/articles/cvg8914dkl0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">At least 10 killed in Israeli strikes on Lebanon - state media</a><span class="source-tag">WorldMonitor/BBC World</span></li>
-<li><a href="https://www.bbc.com/news/articles/cp8150xj36wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Anna Murdoch-Mann, mother of News Corp heir, dies aged 81</a><span class="source-tag">WorldMonitor/BBC World</span></li>
-<li><a href="https://www.bbc.com/news/articles/c0k1xkllknmo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Austrian climber found guilty after girlfriend froze to death on mountain</a><span class="source-tag">WorldMonitor/BBC World</span></li>
-<li><a href="https://www.bbc.com/news/articles/cy57en3590no?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Venezuelan opposition politician released after amnesty law passed</a><span class="source-tag">WorldMonitor/BBC World</span></li>
-<li><a href="https://www.bbc.com/news/articles/cev74dywd7eo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Rare prison sentences handed to Cameroon soldiers after killing of 21 civilians</a><span class="source-tag">WorldMonitor/BBC World</span></li>
-<li><a href="https://www.bbc.com/news/articles/cj4z25gl24eo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">French soldier dies after being shot in head during &#x27;game&#x27; with other soldiers</a><span class="source-tag">WorldMonitor/BBC World</span></li>
-<li><a href="https://www.bbc.com/news/articles/cy57erz57xyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Dog trained to illegally dump rubbish, Italian authorities say</a><span class="source-tag">WorldMonitor/BBC World</span></li>
-<li><a href="https://www.bbc.com/news/articles/ce8w0n061ryo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Asos co-founder dies after Thailand apartment block fall</a><span class="source-tag">WorldMonitor/BBC World</span></li>
-<li><a href="https://www.bbc.com/news/articles/c98q93gdy3do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Mother and infant burnt to death in Indian state over witchcraft allegations</a><span class="source-tag">WorldMonitor/BBC World</span></li>
-<li><a href="https://www.bbc.com/news/articles/c23z0kdypm3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Hamas holds vote to choose new interim leader, source tells BBC</a><span class="source-tag">WorldMonitor/BBC World</span></li>
-<li><a href="https://www.aljazeera.com/news/2026/2/21/trump-jd-vance-vilify-lawless-supreme-court-justices-over-tariff-ruling?traffic_source=rss" target="_blank" rel="noopener noreferrer">Trump, JD Vance vilify ‘lawless’ Supreme Court justices over tariff ruling</a><span class="source-tag">WorldMonitor/Al Jazeera</span></li>
-<li><a href="https://www.aljazeera.com/news/2026/2/21/russia-ukraine-war-list-of-key-events-day-1458?traffic_source=rss" target="_blank" rel="noopener noreferrer">Russia-Ukraine war: List of key events, day 1,458</a><span class="source-tag">WorldMonitor/Al Jazeera</span></li>
-<li><a href="https://www.aljazeera.com/news/2026/2/21/us-military-says-it-attacked-vessel-in-pacific-ocean-killing-three-people?traffic_source=rss" target="_blank" rel="noopener noreferrer">US military says it attacked vessel in Pacific Ocean, killing three people</a><span class="source-tag">WorldMonitor/Al Jazeera</span></li>
-<li><a href="https://www.aljazeera.com/news/2026/2/20/us-envoy-suggests-it-would-be-fine-if-israel-expands-across-middle-east?traffic_source=rss" target="_blank" rel="noopener noreferrer">US envoy suggests it would be ‘fine’ if Israel expands across Middle East</a><span class="source-tag">WorldMonitor/Al Jazeera</span></li>
-<li><a href="https://www.aljazeera.com/news/2026/2/20/heads-held-high-12-palestine-action-action-prisoners-granted-bail?traffic_source=rss" target="_blank" rel="noopener noreferrer">Twelve Palestine Action activists granted bail</a><span class="source-tag">WorldMonitor/Al Jazeera</span></li>
+<a href="https://www.bbc.com/news/articles/cn8146l0n55o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Trump brings in new 10% tariff as Supreme Court rejects his global import taxes</a><span class="source-tag">WorldMonitor/BBC World</span></li>
+<a href="https://www.bbc.com/news/articles/cd9g0e7zd8wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Trump lashes out at Supreme Court justices over tariffs ruling</a><span class="source-tag">WorldMonitor/BBC World</span></li>
+<a href="https://www.bbc.com/news/articles/cdxzk4gvzp0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Trump says he is considering limited military strike on Iran</a><span class="source-tag">WorldMonitor/BBC World</span></li>
+<a href="https://www.bbc.com/news/articles/cnv61zv534eo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Killing of nationalist student leaves French far left in deep trouble as elections loom</a><span class="source-tag">WorldMonitor/BBC World</span></li>
+<a href="https://www.bbc.com/news/articles/c86y1g6wde3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Nasa targets early March to send humans back around the Moon</a><span class="source-tag">WorldMonitor/BBC World</span></li>
+<a href="https://www.bbc.com/news/articles/cvg8914dkl0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">At least 10 killed in Israeli strikes on Lebanon - state media</a><span class="source-tag">WorldMonitor/BBC World</span></li>
+<a href="https://www.bbc.com/news/articles/cp8150xj36wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Anna Murdoch-Mann, mother of News Corp heir, dies aged 81</a><span class="source-tag">WorldMonitor/BBC World</span></li>
+<a href="https://www.bbc.com/news/articles/c0k1xkllknmo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Austrian climber found guilty after girlfriend froze to death on mountain</a><span class="source-tag">WorldMonitor/BBC World</span></li>
+<a href="https://www.bbc.com/news/articles/cy57en3590no?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Venezuelan opposition politician released after amnesty law passed</a><span class="source-tag">WorldMonitor/BBC World</span></li>
+<a href="https://www.bbc.com/news/articles/cev74dywd7eo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Rare prison sentences handed to Cameroon soldiers after killing of 21 civilians</a><span class="source-tag">WorldMonitor/BBC World</span></li>
+<a href="https://www.bbc.com/news/articles/cj4z25gl24eo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">French soldier dies after being shot in head during &#x27;game&#x27; with other soldiers</a><span class="source-tag">WorldMonitor/BBC World</span></li>
+<a href="https://www.bbc.com/news/articles/cy57erz57xyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Dog trained to illegally dump rubbish, Italian authorities say</a><span class="source-tag">WorldMonitor/BBC World</span></li>
+<a href="https://www.bbc.com/news/articles/ce8w0n061ryo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Asos co-founder dies after Thailand apartment block fall</a><span class="source-tag">WorldMonitor/BBC World</span></li>
+<a href="https://www.bbc.com/news/articles/c98q93gdy3do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Mother and infant burnt to death in Indian state over witchcraft allegations</a><span class="source-tag">WorldMonitor/BBC World</span></li>
+<a href="https://www.bbc.com/news/articles/c23z0kdypm3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Hamas holds vote to choose new interim leader, source tells BBC</a><span class="source-tag">WorldMonitor/BBC World</span></li>
+<a href="https://www.aljazeera.com/news/2026/2/21/trump-jd-vance-vilify-lawless-supreme-court-justices-over-tariff-ruling?traffic_source=rss" target="_blank" rel="noopener noreferrer">Trump, JD Vance vilify ‘lawless’ Supreme Court justices over tariff ruling</a><span class="source-tag">WorldMonitor/Al Jazeera</span></li>
+<a href="https://www.aljazeera.com/news/2026/2/21/russia-ukraine-war-list-of-key-events-day-1458?traffic_source=rss" target="_blank" rel="noopener noreferrer">Russia-Ukraine war: List of key events, day 1,458</a><span class="source-tag">WorldMonitor/Al Jazeera</span></li>
+<a href="https://www.aljazeera.com/news/2026/2/21/us-military-says-it-attacked-vessel-in-pacific-ocean-killing-three-people?traffic_source=rss" target="_blank" rel="noopener noreferrer">US military says it attacked vessel in Pacific Ocean, killing three people</a><span class="source-tag">WorldMonitor/Al Jazeera</span></li>
+<a href="https://www.aljazeera.com/news/2026/2/20/us-envoy-suggests-it-would-be-fine-if-israel-expands-across-middle-east?traffic_source=rss" target="_blank" rel="noopener noreferrer">US envoy suggests it would be ‘fine’ if Israel expands across Middle East</a><span class="source-tag">WorldMonitor/Al Jazeera</span></li>
+<a href="https://www.aljazeera.com/news/2026/2/20/heads-held-high-12-palestine-action-action-prisoners-granted-bail?traffic_source=rss" target="_blank" rel="noopener noreferrer">Twelve Palestine Action activists granted bail</a><span class="source-tag">WorldMonitor/Al Jazeera</span></li>
 </ol>
-</div></details>
+</details>
 
 ## 읽는 방법
 - **지정학/안보(높음)**: 금/원유/방산/안전자산 변동성과 동시 확인

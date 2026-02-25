@@ -12,13 +12,11 @@ image: "/assets/images/generated/news-briefing-2026-02-21.png"
 
 ---
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:48%"></div></div><span class="theme-count">53건 (48%)</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:17%"></div></div><span class="theme-count">19건 (17%)</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:12%"></div></div><span class="theme-count">13건 (12%)</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:6%"></div></div><span class="theme-count">7건 (6%)</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:15%"></div></div><span class="theme-count">17건 (15%)</span></div>
-</div>
+<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:48%"></div></div><span class="theme-count">53건 (48%)</span></div>
+<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:17%"></div></div><span class="theme-count">19건 (17%)</span></div>
+<span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:12%"></div></div><span class="theme-count">13건 (12%)</span></div>
+<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:6%"></div></div><span class="theme-count">7건 (6%)</span></div>
+<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:15%"></div></div><span class="theme-count">17건 (15%)</span></div>
 
 *총 110건 수집*
 
@@ -28,11 +26,11 @@ image: "/assets/images/generated/news-briefing-2026-02-21.png"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">110</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 53</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (33회)</div></div></div>
+<div class="stat-item"><div class="stat-value">110</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 53</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (33회)</div></div></div>
 
-<div class="alert-box alert-info"><strong>암호화폐 시장 **비트코인, 정치/정책** 중심 110건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 53건 수집</li><li>🏛️ <strong>정치/정책</strong> (19건): Trump Adviser Says Regulatory Clarity Will Unlock 'Trillions of Dollars' Waiting To Enter Crypto Yah</li><li>🏦 <strong>거래소</strong> (13건): After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued? Morningstar</li><li>📊 <strong>매크로/금리</strong> (7건): Software firm Strategy (formerly MicroStrategy) and its co-founder Michael Saylor have become synony</li></ul></div>
+<strong>암호화폐 시장 **비트코인, 정치/정책** 중심 110건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 53건 수집</li><li>🏛️ <strong>정치/정책</strong> (19건): Trump Adviser Says Regulatory Clarity Will Unlock 'Trillions of Dollars' Waiting To Enter Crypto Yah</li><li>🏦 <strong>거래소</strong> (13건): After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued? Morningstar</li><li>📊 <strong>매크로/금리</strong> (7건): Software firm Strategy (formerly MicroStrategy) and its co-founder Michael Saylor have become synony</li></ul></div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9UWWt2NGRwVEhESnNWZ1FRaE1wbk9BTk1Wdll0b3dvdWgzTXZlRWs3Y1dMcmNNam1UanZrbWZaTWM5T3R4cWwtVmtFMGE0TTVUV1VWZ3FR?oc=5">레버리지가 코인 폭락 트리거 됐다 - 중앙일보</a></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcEhVTjRnRlo0ZTgtU3RFWmM0UWxieG9rUVNsSGJHbl9Rc3EyWGVoREJ6SWVOZWc1UXRMaHRaaUxxTzRxVDRkbzMtUGZkWWpidDZoMjBxM1dDSXdZYjdJNWZoRlVjS0dTbEJRWklYUE1TVHpmZlRnMlFaMHZBc0JLamthRFFpNG5z?oc=5">비트코인 대규모 구제금융 "백악관 전략 비축 시나리오" 암호화폐 폭락 저지 - 글로벌이코노믹</a></li><li><a href="https://decrypt.co/358690/australian-executive-cyber-secrets-russia-crypto">Australian Executive Accused of Selling Cyber Secrets to Russia for Crypto</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9UWWt2NGRwVEhESnNWZ1FRaE1wbk9BTk1Wdll0b3dvdWgzTXZlRWs3Y1dMcmNNam1UanZrbWZaTWM5T3R4cWwtVmtFMGE0TTVUV1VWZ3FR?oc=5">레버리지가 코인 폭락 트리거 됐다 - 중앙일보</a></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcEhVTjRnRlo0ZTgtU3RFWmM0UWxieG9rUVNsSGJHbl9Rc3EyWGVoREJ6SWVOZWc1UXRMaHRaaUxxTzRxVDRkbzMtUGZkWWpidDZoMjBxM1dDSXdZYjdJNWZoRlVjS0dTbEJRWklYUE1TVHpmZlRnMlFaMHZBc0JLamthRFFpNG5z?oc=5">비트코인 대규모 구제금융 "백악관 전략 비축 시나리오" 암호화폐 폭락 저지 - 글로벌이코노믹</a></li><li><a href="https://decrypt.co/358690/australian-executive-cyber-secrets-russia-crypto">Australian Executive Accused of Selling Cyber Secrets to Russia for Crypto</a></li></ul></div>
 
 
 ![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-21.png' | relative_url }})
@@ -93,7 +91,7 @@ image: "/assets/images/generated/news-briefing-2026-02-21.png"
 <a href="https://news.google.com/read/CBMieEFVX3lxTFA2NEtFLWlWbDB3X1pfZFNfdWtDdVBBWWxybkw3VEcxQ0JNTWRLTnpPbVFEcDhuRXRXTUdlZHZSbFdZbVd6N3ViTmtjSDRHVkhjRFFTNlBqWFdWQ3MwazN2UlczcklpWFZJdnZDMkx2TVdBUHpUX0xSYQ?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin Is Not Going To Zero (Cryptocurrency:BTC-USD)</a>
 <a href="https://news.google.com/read/CBMif0FVX3lxTE5mUkZELXdpczdtdjBFbFdfM2YxdFpwRmhCRnVJdWo4NU5iSHJ5NFdmY3hyMi02TmVORjFSR05qbkJpTTVXTG1Wc2dmYjZ5alk0bWJ4OFhUSFZEWnBCSFFxdUpSV1dVcVM5dXd2ZzlsUzBQU1dUZUVibmh5VndIT3c?hl=en-US&gl=US&ceid=US%3Aen">Tom Lee Forecasts End Of Crypto Winter By This Month, Says Bitcoin, Ethereum May Find Support At These Levels</a>
 <em>외 35건</em>
-</div></details>
+</details>
 
 
 ### 🏛️ 정치/정책 (19건)
@@ -116,7 +114,7 @@ Trump Adviser Says Regulatory Clarity Will Unlock 'Trillions of Dollars' Waiting
 <a href="https://decrypt.co/358781/trump-backed-world-liberty-exit-mechanism-maldives-hotel-tokenization">Trump-Backed World Liberty Plots 'Exit Mechanism' for Maldives Hotel Tokenization Project</a>
 <a href="https://decrypt.co/358765/after-state-lawsuit-losing-streak-kalshi-victory-tennessee-why">After State Lawsuit Losing Streak, Kalshi Nabs Victory in Tennessee—This Could Be Why</a>
 <em>외 1건</em>
-</div></details>
+</details>
 
 
 ### 🏦 거래소 (13건)
@@ -138,7 +136,7 @@ Lawmakers in South Korea are intensifying scrutiny over the role of regulators a
 <details><summary>그 외 10건 보기</summary><div class="details-content">
 <a href="https://www.coindesk.com/markets/2026/02/20/dual-s-korea-listings-send-ethereum-layer-2-token-aztec-surging-82">Dual South Korean listings send Ethereum layer-2 token AZTEC surging 82%</a>
 <a href="https://www.binance.com/en/support/announcement/list/48">New Cryptocurrency ListingCheck out the latest coin listings and pairs on Launchpad, Launchpool, Spot, Margin, and Futures markets.</a>
-</div></details>
+</details>
 
 
 ### 📊 매크로/금리 (7건)
@@ -158,7 +156,7 @@ Software firm Strategy (formerly MicroStrategy) and its co-founder Michael Saylo
 <details><summary>그 외 4건 보기</summary><div class="details-content">
 <a href="https://cointelegraph.com/news/wall-street-boosts-bitmine-stakes-defi-lenders-buckle-liquidity-finance-redefined?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Wall Street boosts Bitmine stakes as DeFi lenders buckle on liquidity: Finance Redefined</a>
 <a href="https://cointelegraph.com/news/btc-treasury-reform-1250-percent-risk-basel?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">BTC treasury executives call for reform of 1,250% risk weight in Basel III</a>
-</div></details>
+</details>
 
 
 ### 📈 가격/시장 (17건)
@@ -178,7 +176,7 @@ How to Make the Most of the Volatility of Cryptocurrency Prices The Arizona Repu
 <details><summary>그 외 14건 보기</summary><div class="details-content">
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE84UjQtdWRoSzVNNmk5Q0J2UENlRW56UXZYZlR5MFpVWXo1YTlQaGNqSUc1UWVuQV9nMEdIWFdoaDVoRTVsYlNYa1JyTTEyNVU?oc=5">“무조건 반등할거야”개미들 ‘초상집’ 된 비트코인, 큰 손은 다 도망갔다 - v.daum.net</a>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9UWWt2NGRwVEhESnNWZ1FRaE1wbk9BTk1Wdll0b3dvdWgzTXZlRWs3Y1dMcmNNam1UanZrbWZaTWM5T3R4cWwtVmtFMGE0TTVUV1VWZ3FR?oc=5">레버리지가 코인 폭락 트리거 됐다 - 중앙일보</a>
-</div></details>
+</details>
 
 
 

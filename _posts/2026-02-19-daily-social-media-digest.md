@@ -13,20 +13,18 @@ image: "/assets/images/generated/source-distribution-2026-02-19.png"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">38</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📊 14</div><div class="stat-label">매크로/금리</div></div></div>
+<div class="stat-item"><div class="stat-value">38</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📊 14</div><div class="stat-label">매크로/금리</div></div></div>
 
-<div class="alert-box alert-info"><strong>소셜 미디어 **매크로/금리, 정치/정책** 관련 38건 포착</strong><ul><li>📊 <strong>매크로/금리</strong> (14건): JAMES LAVISH: “The Federal Reserve manipulating the money supply and access to capital has absolutel</li><li>🏛️ <strong>정치/정책</strong> (7건): President Trump suggested "we might pay off the US $35 trillion debt using cryptocurrency."Sponsored</li><li>📈 <strong>가격/시장</strong> (6건): Michael Saylor's 'Strategy' says it can "withstand a drawdown in Bitcoin's price to $8K and still ha</li><li>🔵 <strong>규제/정책</strong> (2건): CFTC Chair says they will "future-proof" crypto regulations."We can't allow Gary Gensler 2.0 to come</li></ul></div>
+<strong>소셜 미디어 **매크로/금리, 정치/정책** 관련 38건 포착</strong><ul><li>📊 <strong>매크로/금리</strong> (14건): JAMES LAVISH: “The Federal Reserve manipulating the money supply and access to capital has absolutel</li><li>🏛️ <strong>정치/정책</strong> (7건): President Trump suggested "we might pay off the US $35 trillion debt using cryptocurrency."Sponsored</li><li>📈 <strong>가격/시장</strong> (6건): Michael Saylor's 'Strategy' says it can "withstand a drawdown in Bitcoin's price to $8K and still ha</li><li>🔵 <strong>규제/정책</strong> (2건): CFTC Chair says they will "future-proof" crypto regulations."We can't allow Gary Gensler 2.0 to come</li></ul></div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE00OUVxOTAyY1NKWVpqdzdLeXR1bVBaS2JYa2hNWHhQcU1MQ2ZoVGZjR0t0WGxtbGM1Z0doTjJBQnZSYkJDVUw0ZHNFTjlSM3FOOG04T1h5UVR6SlM2cTdNYUlvQlhfc0dJdHFrM05XTVptdy1hYjRSWEFzQQ?oc=5">Stock Market Crash in 2026? Bad News About President Trump's Tariffs and a Warning From the Federal Reserve Explain Why It's Possible. - AOL.com</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE00OUVxOTAyY1NKWVpqdzdLeXR1bVBaS2JYa2hNWHhQcU1MQ2ZoVGZjR0t0WGxtbGM1Z0doTjJBQnZSYkJDVUw0ZHNFTjlSM3FOOG04T1h5UVR6SlM2cTdNYUlvQlhfc0dJdHFrM05XTVptdy1hYjRSWEFzQQ?oc=5">Stock Market Crash in 2026? Bad News About President Trump's Tariffs and a Warning From the Federal Reserve Explain Why It's Possible. - AOL.com</a></li></ul></div>
 
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:37%"></div></div><span class="theme-count">14건 (37%)</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:18%"></div></div><span class="theme-count">7건 (18%)</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:16%"></div></div><span class="theme-count">6건 (16%)</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:5%"></div></div><span class="theme-count">2건 (5%)</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:16%"></div></div><span class="theme-count">6건 (16%)</span></div>
-</div>
+<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:37%"></div></div><span class="theme-count">14건 (37%)</span></div>
+<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:18%"></div></div><span class="theme-count">7건 (18%)</span></div>
+<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:16%"></div></div><span class="theme-count">6건 (16%)</span></div>
+<span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:5%"></div></div><span class="theme-count">2건 (5%)</span></div>
+<span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:16%"></div></div><span class="theme-count">6건 (16%)</span></div>
 
 *총 38건 수집*
 

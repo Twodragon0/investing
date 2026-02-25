@@ -13,11 +13,11 @@ image: "/assets/images/generated/regulatory-summary-2026-02-19.png"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">26</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 17</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">22</div><div class="stat-label">한국</div></div></div>
+<div class="stat-item"><div class="stat-value">26</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 17</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">22</div><div class="stat-label">한국</div></div></div>
 
-<div class="alert-box alert-info"><strong>글로벌 규제 **규제/정책, 거래소** 관련 26건 수집</strong><ul><li>🔵 <strong>규제/정책</strong> (17건): gemi-20260217 SEC.gov</li><li>🏦 <strong>거래소</strong> (6건): 수익증권 장외거래중개업 (조각투자 * 장외거래소) 예비인가 금융위원회 정례회의 (‘26.2.13.) 의결 * 시장에서는 신탁수익증권 투자와 투자계약증권 투자를 조각투자로 인식, 금</li><li>📈 <strong>가격/시장</strong> (20건): 금융정보분석원, 국제자금세탁방지기구(FATF) 총회 참석 ◇ FATF는 의장 엘리사 마드라조 (Ms. Elisa Madrazo, 멕시코)의 주재로 멕시코 시티 에서 제34기 5차 </li><li>🟠 <strong>비트코인</strong> (1건): 단일종목 레버리지 ETF의 세부방안은 검토중입니다. - 2.12일(인터넷판) 서울경제 「’2배 ETF’ 삼전‧하닉‧현대차만 나온다」 제하의 기사에 대한 정부입장 설명 - 1. 기사</li></ul></div>
+<strong>글로벌 규제 **규제/정책, 거래소** 관련 26건 수집</strong><ul><li>🔵 <strong>규제/정책</strong> (17건): gemi-20260217 SEC.gov</li><li>🏦 <strong>거래소</strong> (6건): 수익증권 장외거래중개업 (조각투자 * 장외거래소) 예비인가 금융위원회 정례회의 (‘26.2.13.) 의결 * 시장에서는 신탁수익증권 투자와 투자계약증권 투자를 조각투자로 인식, 금</li><li>📈 <strong>가격/시장</strong> (20건): 금융정보분석원, 국제자금세탁방지기구(FATF) 총회 참석 ◇ FATF는 의장 엘리사 마드라조 (Ms. Elisa Madrazo, 멕시코)의 주재로 멕시코 시티 에서 제34기 5차 </li><li>🟠 <strong>비트코인</strong> (1건): 단일종목 레버리지 ETF의 세부방안은 검토중입니다. - 2.12일(인터넷판) 서울경제 「’2배 ETF’ 삼전‧하닉‧현대차만 나온다」 제하의 기사에 대한 정부입장 설명 - 1. 기사</li></ul></div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://www.fsc.go.kr/no010101/86297">다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://www.fsc.go.kr/no010101/86297">다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최</a></li></ul></div>
 
 
 
@@ -55,13 +55,11 @@ image: "/assets/images/generated/regulatory-summary-2026-02-19.png"
 - **미국**: 4건
 
 ---
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:65%"></div></div><span class="theme-count">17건 (65%)</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:23%"></div></div><span class="theme-count">6건 (23%)</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:77%"></div></div><span class="theme-count">20건 (77%)</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:4%"></div></div><span class="theme-count">1건 (4%)</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:15%"></div></div><span class="theme-count">4건 (15%)</span></div>
-</div>
+<span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:65%"></div></div><span class="theme-count">17건 (65%)</span></div>
+<span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:23%"></div></div><span class="theme-count">6건 (23%)</span></div>
+<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:77%"></div></div><span class="theme-count">20건 (77%)</span></div>
+<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:4%"></div></div><span class="theme-count">1건 (4%)</span></div>
+<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:15%"></div></div><span class="theme-count">4건 (15%)</span></div>
 
 *총 26건 수집*
 

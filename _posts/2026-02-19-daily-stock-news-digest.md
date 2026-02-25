@@ -13,20 +13,18 @@ image: "/assets/images/generated/market-snapshot-2026-02-19.png"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">147</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 45</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,660.70</div><div class="stat-label">KOSPI +2.67%</div></div><div class="stat-item"><div class="stat-value">1,156.46</div><div class="stat-label">KOSDAQ +4.81%</div></div></div>
+<div class="stat-item"><div class="stat-value">147</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 45</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,660.70</div><div class="stat-label">KOSPI +2.67%</div></div><div class="stat-item"><div class="stat-value">1,156.46</div><div class="stat-label">KOSDAQ +4.81%</div></div></div>
 
-<div class="alert-box alert-info"><strong>주식 시장 **가격/시장, AI/기술** 부각 147건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 45건 수집</li><li>🤖 <strong>AI/기술</strong>: 50건 수집</li><li>📊 <strong>매크로/금리</strong> (19건): Stock market today: Dow, S&P 500 gain for 3rd straight day, Nasdaq jumps as traders brush aside AI w</li><li>🟠 <strong>비트코인</strong>: 6건 수집</li></ul></div>
+<strong>주식 시장 **가격/시장, AI/기술** 부각 147건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 45건 수집</li><li>🤖 <strong>AI/기술</strong>: 50건 수집</li><li>📊 <strong>매크로/금리</strong> (19건): Stock market today: Dow, S&P 500 gain for 3rd straight day, Nasdaq jumps as traders brush aside AI w</li><li>🟠 <strong>비트코인</strong>: 6건 수집</li></ul></div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMikwJBVV95cUxPNlJjTUlScktMU29FQkU3cF9zUVhyUW5SLUZxbTZhN01kd2NyMzJPaW9qRjZ3VjFUV0VTeFIzZjl3eldHLW4tajBrVkRsaVo2Q3EwT3FaVHBGU21XbTk5Y0NOR2ZYQnNuZ2xXSWh2X0JnZm9iVTJIc2ZHOUlTQ1ZYMGZHNUptT0VoZ1E0bF8xbHRyZ0R5cWdScmVMdlluMmw4dTdMd0s3OW1BanpvencxRENfWTFPaC12R08xVXhFQnBmN20zNERrUjU1UEhZNlVqbG9NaFlSSDBPUUlaOWM0RHNTSmNUR1VmcDJZcUJfRTA2R2s4U25nZEpLanp1Z3BuSm5kWEVGVUlXdlVFdW1DaDhUUdIBmAJBVV95cUxPOHdKMWllU2tRZjVUbktFTzZPMjk0ZnNSQndJRW9NcWVjTmhhM05TaGxIeDFrVTd2S0ZORkxZNng2bHRsbVJLT1dfYWxrazFMclRtazZDMlZKRlI2TmRRTzlMak1OSVZIU3JRb25PSnRPNm50aEx6NEpxaS1HU2gxYV95Z0pVOV9DWUR4UHgwUEdiNDlsOHMwWUx2MW9VQk5VLUVJVWxSWHVJamdmQndYTlNLSk5Ra2V2dlhaRE1QMUx5QUxySGJqR2VCR3BzVTBnN3JpLWZJZ0hyUWdLZTRHRXpCSF80al9Mdm5aOWFYa3FyMlRCclZqNHVtck5YZFFWUk5lNkFxZTdGNElRbERUTU80a1VsUWFY?hl=en-US&gl=US&ceid=US%3Aen">US stock market crashes today: Why Dow Jones, S&P 500 and Nasdaq are down - Bitcoin falls 2.19% and Gold d</a></li><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까</a></li><li><a href="https://news.google.com/rss/articles/CBMikwJBVV95cUxPNlJjTUlScktMU29FQkU3cF9zUVhyUW5SLUZxbTZhN01kd2NyMzJPaW9qRjZ3VjFUV0VTeFIzZjl3eldHLW4tajBrVkRsaVo2Q3EwT3FaVHBGU21XbTk5Y0NOR2ZYQnNuZ2xXSWh2X0JnZm9iVTJIc2ZHOUlTQ1ZYMGZHNUptT0VoZ1E0bF8xbHRyZ0R5cWdScmVMdlluMmw4dTdMd0s3OW1BanpvencxRENfWTFPaC12R08xVXhFQnBmN20zNERrUjU1UEhZNlVqbG9NaFlSSDBPUUlaOWM0RHNTSmNUR1VmcDJZcUJfRTA2R2s4U25nZEpLanp1Z3BuSm5kWEVGVUlXdlVFdW1DaDhUUdIBmAJBVV95cUxPOHdKMWllU2tRZjVUbktFTzZPMjk0ZnNSQndJRW9NcWVjTmhhM05TaGxIeDFrVTd2S0ZORkxZNng2bHRsbVJLT1dfYWxrazFMclRtazZDMlZKRlI2TmRRTzlMak1OSVZIU3JRb25PSnRPNm50aEx6NEpxaS1HU2gxYV95Z0pVOV9DWUR4UHgwUEdiNDlsOHMwWUx2MW9VQk5VLUVJVWxSWHVJamdmQndYTlNLSk5Ra2V2dlhaRE1QMUx5QUxySGJqR2VCR3BzVTBnN3JpLWZJZ0hyUWdLZTRHRXpCSF80al9Mdm5aOWFYa3FyMlRCclZqNHVtck5YZFFWUk5lNkFxZTdGNElRbERUTU80a1VsUWFY?oc=5">US stock market crashes today: Why Dow Jones, S&P 500 and Nasdaq are down - Bitcoin falls 2.19% and Gold d - The Economic Times</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMikwJBVV95cUxPNlJjTUlScktMU29FQkU3cF9zUVhyUW5SLUZxbTZhN01kd2NyMzJPaW9qRjZ3VjFUV0VTeFIzZjl3eldHLW4tajBrVkRsaVo2Q3EwT3FaVHBGU21XbTk5Y0NOR2ZYQnNuZ2xXSWh2X0JnZm9iVTJIc2ZHOUlTQ1ZYMGZHNUptT0VoZ1E0bF8xbHRyZ0R5cWdScmVMdlluMmw4dTdMd0s3OW1BanpvencxRENfWTFPaC12R08xVXhFQnBmN20zNERrUjU1UEhZNlVqbG9NaFlSSDBPUUlaOWM0RHNTSmNUR1VmcDJZcUJfRTA2R2s4U25nZEpLanp1Z3BuSm5kWEVGVUlXdlVFdW1DaDhUUdIBmAJBVV95cUxPOHdKMWllU2tRZjVUbktFTzZPMjk0ZnNSQndJRW9NcWVjTmhhM05TaGxIeDFrVTd2S0ZORkxZNng2bHRsbVJLT1dfYWxrazFMclRtazZDMlZKRlI2TmRRTzlMak1OSVZIU3JRb25PSnRPNm50aEx6NEpxaS1HU2gxYV95Z0pVOV9DWUR4UHgwUEdiNDlsOHMwWUx2MW9VQk5VLUVJVWxSWHVJamdmQndYTlNLSk5Ra2V2dlhaRE1QMUx5QUxySGJqR2VCR3BzVTBnN3JpLWZJZ0hyUWdLZTRHRXpCSF80al9Mdm5aOWFYa3FyMlRCclZqNHVtck5YZFFWUk5lNkFxZTdGNElRbERUTU80a1VsUWFY?hl=en-US&gl=US&ceid=US%3Aen">US stock market crashes today: Why Dow Jones, S&P 500 and Nasdaq are down - Bitcoin falls 2.19% and Gold d</a></li><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까</a></li><li><a href="https://news.google.com/rss/articles/CBMikwJBVV95cUxPNlJjTUlScktMU29FQkU3cF9zUVhyUW5SLUZxbTZhN01kd2NyMzJPaW9qRjZ3VjFUV0VTeFIzZjl3eldHLW4tajBrVkRsaVo2Q3EwT3FaVHBGU21XbTk5Y0NOR2ZYQnNuZ2xXSWh2X0JnZm9iVTJIc2ZHOUlTQ1ZYMGZHNUptT0VoZ1E0bF8xbHRyZ0R5cWdScmVMdlluMmw4dTdMd0s3OW1BanpvencxRENfWTFPaC12R08xVXhFQnBmN20zNERrUjU1UEhZNlVqbG9NaFlSSDBPUUlaOWM0RHNTSmNUR1VmcDJZcUJfRTA2R2s4U25nZEpLanp1Z3BuSm5kWEVGVUlXdlVFdW1DaDhUUdIBmAJBVV95cUxPOHdKMWllU2tRZjVUbktFTzZPMjk0ZnNSQndJRW9NcWVjTmhhM05TaGxIeDFrVTd2S0ZORkxZNng2bHRsbVJLT1dfYWxrazFMclRtazZDMlZKRlI2TmRRTzlMak1OSVZIU3JRb25PSnRPNm50aEx6NEpxaS1HU2gxYV95Z0pVOV9DWUR4UHgwUEdiNDlsOHMwWUx2MW9VQk5VLUVJVWxSWHVJamdmQndYTlNLSk5Ra2V2dlhaRE1QMUx5QUxySGJqR2VCR3BzVTBnN3JpLWZJZ0hyUWdLZTRHRXpCSF80al9Mdm5aOWFYa3FyMlRCclZqNHVtck5YZFFWUk5lNkFxZTdGNElRbERUTU80a1VsUWFY?oc=5">US stock market crashes today: Why Dow Jones, S&P 500 and Nasdaq are down - Bitcoin falls 2.19% and Gold d - The Economic Times</a></li></ul></div>
 
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:31%"></div></div><span class="theme-count">45건 (31%)</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:34%"></div></div><span class="theme-count">50건 (34%)</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:13%"></div></div><span class="theme-count">19건 (13%)</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:4%"></div></div><span class="theme-count">6건 (4%)</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:3%"></div></div><span class="theme-count">5건 (3%)</span></div>
-</div>
+<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:31%"></div></div><span class="theme-count">45건 (31%)</span></div>
+<span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:34%"></div></div><span class="theme-count">50건 (34%)</span></div>
+<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:13%"></div></div><span class="theme-count">19건 (13%)</span></div>
+<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:4%"></div></div><span class="theme-count">6건 (4%)</span></div>
+<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:3%"></div></div><span class="theme-count">5건 (3%)</span></div>
 
 *총 147건 수집*
 
@@ -93,7 +91,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-19.png"
 <a href="https://news.google.com/read/CBMiakFVX3lxTE51OXhzWml2NzZCS29lQTFVTC00RWRjcUE0cDAwbEpYbEllNG1SdDZzQ3hYcm5ZaG1uYmVKQVp2VTNHcTZETTA1RHlKR2l3M1FTUVFydXBlX1JCTHplMDVwdWdFR2dDTzVSR3c?hl=ko&gl=KR&ceid=KR%3Ako">코스피·코스닥, 오름세로 장 출발</a>
 <a href="https://news.google.com/read/CBMiW0FVX3lxTE5ieUxLNEstcnQ2aVAySjJYUG9NZXAzLXlsTUE3ak1sN1N6UXZCeEdkaVNNVWE4Y0Q5RTBvSW1Xd3FReTAwQlc0WC1uRTNzY2p2UVBHN1hWemRjelXSAWBBVV95cUxPVTRwUnZ0YWRldWdhTUszWVVJZnpWdzJfVjJ3aDAzZ190YmNkYVY5N1NiV0dmLXNVOVZfaWJ1MkJsODhvbGpLUEd6bFdWOHR3Ui00SXVlbHpwOTZoeXQxcDQ?hl=ko&gl=KR&ceid=KR%3Ako">코스피·코스닥은 '불장'인데투자자 외면받는 코넥스</a>
 <em>외 27건</em>
-</div></details>
+</details>
 
 
 ### 🤖 AI/기술 (50건)
@@ -113,7 +111,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-19.png"
 <a href="https://news.google.com/read/CBMiywFBVV95cUxPVW9ROG53Q0IzeEJCLUdxaUU1d0ZUSk1MZ3R2bWQ5ZEp5YllaYmg4c2lvUmtoWWFBaDNrb011clJ4TE5GTlJXV0lZYjF3SGZ6ZngxX3FKaWc2RVNCSHFCeHdxR2ZnRVI1QlVab3pOMll2eS1ZV1JPR0NjZHZkeUQ1dTNQV0NXRGJ0ZnhCcjNkUWd5NUtsME00aEt6ZWwxSkp2Rm8zY2ZJRHJiUzdQS18xNEFKSmdRLUtxcUk4WU9ESHRxVG5vRUFvcmoyaw?hl=en-US&gl=US&ceid=US%3Aen">Stock Market Extends Gains For Third Day, But S&P 500 Hits Resistance; Ralph Lauren Eyes Breakout</a>
 <a href="https://news.google.com/read/CBMixAFBVV95cUxQNU43TUZHM1ZhRURsR1RiX3p2WGExdnU4aUNTdGRaRHA4OXFnTHkyT3h3Qk1lY3VqaTZmbFp2RkpIYWg3VVMzdVBhUWNmeVF0MnFqeGlseWZjeXZ0eHFhWVBwRlJNdGhXZ3FCY2ZGTkp1NEpmQ2w2VkQ1a3EzcnVxa1l4MkRVSXFucHVnUXRlQXZ0NV91cmNVdGJqZHFrZ1hMZFJ1ekd0MkJ5eUltRHJSNDU5N2hmY0hiZ0VzdXdGOF9oMkpP?hl=en-US&gl=US&ceid=US%3Aen">Dow Jones Futures: S&P 500 Rises To Resistance As Nvidia, ASML Lead; Carvana Dives Late, Walmart Due</a>
 <em>외 32건</em>
-</div></details>
+</details>
 
 
 ### 📊 매크로/금리 (19건)
@@ -134,7 +132,7 @@ Stock market today: Dow, S&P 500 gain for 3rd straight day, Nasdaq jumps as trad
 <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE54MmJZd3c3cmhNSmtiUFJqMk84MTFHY3ZuRW5XaFNtWG1hRzE1N2ZOamN2Mm9BR3VsdGZnQzJOZ2JRNzIyQUd4STNpajRvWS1EQTFaQnlRc0x2cDd2SzNQandGLXk3WHBUTHpxeGN6SkVzM3NJcTVUag?oc=5">US Stock Market Today: S&P 500 Futures Rise On Cooling Inflation And Steady Yields - Yahoo Finance</a>
 <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxQUWtYZ0NVemdPWURWTTVSaWhQaUdfNzhPNElJdWJxUlJEQi1mdW9lcGxPUE44dXFFVkRRXzYwU1hOcjlUVTVTeDJzWjREekQ4R1hlRXdnNkVXN09uLUotTENTVjd2NDZuQ0tidEFlWDNESGhHWm51cWtONWVpX3dqdVROcC1zdmVKLU10bVRkbHNBTUtWT0U40gGcAUFVX3lxTFBPdmZ0YmtHZ3dCRlRJNldfbFZVOEtyNlU2RDRUWi1LaUVFS0RSSl9wRnFteVoxWVhmZjRtYjAtbXhFYXFMLWRKZjk0djZ1eG1GZVpTbXdqb2pOUjNINWdpU1FfazhGLWoya1Y1RjR0YVlteEhoRi1acS1USXZtaVNiOXhIbXlRaURsTlc4M290NUZ4YlljTzFhTW11UA?oc=5">Treasury yields rise as Fed minutes show disagreement on next rate cut - CNBC</a>
 <em>외 1건</em>
-</div></details>
+</details>
 
 
 ### 🟠 비트코인 (6건)
@@ -153,7 +151,7 @@ Stock market today: Dow, S&P 500 gain for 3rd straight day, Nasdaq jumps as trad
 <details><summary>그 외 3건 보기</summary><div class="details-content">
 <a href="https://news.google.com/rss/articles/CBMikwJBVV95cUxPNlJjTUlScktMU29FQkU3cF9zUVhyUW5SLUZxbTZhN01kd2NyMzJPaW9qRjZ3VjFUV0VTeFIzZjl3eldHLW4tajBrVkRsaVo2Q3EwT3FaVHBGU21XbTk5Y0NOR2ZYQnNuZ2xXSWh2X0JnZm9iVTJIc2ZHOUlTQ1ZYMGZHNUptT0VoZ1E0bF8xbHRyZ0R5cWdScmVMdlluMmw4dTdMd0s3OW1BanpvencxRENfWTFPaC12R08xVXhFQnBmN20zNERrUjU1UEhZNlVqbG9NaFlSSDBPUUlaOWM0RHNTSmNUR1VmcDJZcUJfRTA2R2s4U25nZEpLanp1Z3BuSm5kWEVGVUlXdlVFdW1DaDhUUdIBmAJBVV95cUxPOHdKMWllU2tRZjVUbktFTzZPMjk0ZnNSQndJRW9NcWVjTmhhM05TaGxIeDFrVTd2S0ZORkxZNng2bHRsbVJLT1dfYWxrazFMclRtazZDMlZKRlI2TmRRTzlMak1OSVZIU3JRb25PSnRPNm50aEx6NEpxaS1HU2gxYV95Z0pVOV9DWUR4UHgwUEdiNDlsOHMwWUx2MW9VQk5VLUVJVWxSWHVJamdmQndYTlNLSk5Ra2V2dlhaRE1QMUx5QUxySGJqR2VCR3BzVTBnN3JpLWZJZ0hyUWdLZTRHRXpCSF80al9Mdm5aOWFYa3FyMlRCclZqNHVtck5YZFFWUk5lNkFxZTdGNElRbERUTU80a1VsUWFY?oc=5">US stock market crashes today: Why Dow Jones, S&P 500 and Nasdaq are down - Bitcoin falls 2.19% and Gold d - The Economic Times</a>
 <a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxPV3l0aVFKbFZmSWV1a2xmUk9HYjY1SGVOb1RycU5UaWkzT2dDSEh6MUFORzd3bXRXYmlJX2RmUkhNMHcyeS1jR0dyc05nVGtSR3BLeDVGVGVCNHFkVVpUY1M0eDg0VDEwQVY0Y3VMaFJDZVczaXBDbzZhVFNpeEt3QlZZRDljNU9PSmtRTzVpRmczMHpGVEE?oc=5">Should You Buy the Vanguard S&P 500 ETF With the Stock Market Near a Record High? History Offers a Clear Answer - The Motley Fool</a>
-</div></details>
+</details>
 
 
 ### 🏛️ 정치/정책 (5건)
@@ -174,7 +172,7 @@ Eric Trump and Donald Trump Jr. told CNBC on the sidelines of the World Liberty 
 <details><summary>그 외 2건 보기</summary><div class="details-content">
 <a href="https://www.cnbc.com/2026/02/18/hassett-says-authors-of-new-york-fed-tariff-study-should-be-disciplined-worst-paper-ive-ever-seen.html">Hassett says authors of New York Fed tariff study should be disciplined: 'Worst paper I've ever seen'</a>
 <a href="https://www.cnbc.com/2026/02/18/warren-fed-treasury-crypto-billionaires-bailout-trump.html">Sen. Warren tells Fed and Treasury: No bailout for crypto billionaires</a>
-</div></details>
+</details>
 
 
 

@@ -13,13 +13,11 @@ description: "2026-02-25 암호화폐 시장에서 116건의 뉴스를 분석했
 
 ---
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:44%"></div></div><span class="theme-count">51건 (44%)</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:19%"></div></div><span class="theme-count">22건 (19%)</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:16%"></div></div><span class="theme-count">19건 (16%)</span></div>
-<div class="theme-row"><span class="theme-label">🔷 이더리움</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:12%"></div></div><span class="theme-count">14건 (12%)</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:9%"></div></div><span class="theme-count">11건 (9%)</span></div>
-</div>
+<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:44%"></div></div><span class="theme-count">51건 (44%)</span></div>
+<span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:19%"></div></div><span class="theme-count">22건 (19%)</span></div>
+<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:16%"></div></div><span class="theme-count">19건 (16%)</span></div>
+<span class="theme-label">🔷 이더리움</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:12%"></div></div><span class="theme-count">14건 (12%)</span></div>
+<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:9%"></div></div><span class="theme-count">11건 (9%)</span></div>
 
 *총 116건 수집*
 
@@ -29,11 +27,11 @@ description: "2026-02-25 암호화폐 시장에서 116건의 뉴스를 분석했
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">116</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 51</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (33회)</div></div></div>
+<div class="stat-item"><div class="stat-value">116</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 51</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (33회)</div></div></div>
 
-<div class="alert-box alert-info"><strong>암호화폐 시장 비트코인, 거래소 중심 116건 분석</strong><ul><li>🟠 <strong>비트코인</strong> (51건): Better Buy: Bitcoin vs. Ethereum</li><li>🏦 <strong>거래소</strong> (22건): The Worst-Case Scenario Facing the Cryptocurrency Market Binance</li><li>📈 <strong>가격/시장</strong> (19건): Bitcoin is crashing for 3 reasons today. They have more to do with the state of the world than the c...</li><li>🔷 <strong>이더리움</strong> (14건): Better Buy: Bitcoin vs. Ethereum</li></ul></div>
+<strong>암호화폐 시장 비트코인, 거래소 중심 116건 분석</strong><ul><li>🟠 <strong>비트코인</strong> (51건): Better Buy: Bitcoin vs. Ethereum</li><li>🏦 <strong>거래소</strong> (22건): The Worst-Case Scenario Facing the Cryptocurrency Market Binance</li><li>📈 <strong>가격/시장</strong> (19건): Bitcoin is crashing for 3 reasons today. They have more to do with the state of the world than the c...</li><li>🔷 <strong>이더리움</strong> (14건): Better Buy: Bitcoin vs. Ethereum</li></ul></div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMilgFBVV95cUxNVHZNVEtWTl84SXdaZWF1cFpfTm9LNmtadHU2WF9rQ09WT21LSnh4Z2dYY3RNaTlta203Mzl3Q1p0dE5zUXhJell0WklkX1RnUGxaN3d3SzdsNU9ZVjlMVW5EMDE1aWVyX3JQc0NkV3FVRGtRWFBydi1pUnJTcUhua1ZsTzNRbTVKTlM0X1NJTmR5UHRYMWc?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin is crashing for 3 reasons today. They have more to do with the state of the world than the crypto market</a></li><li><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxNVHZNVEtWTl84SXdaZWF1cFpfTm9LNmtadHU2WF9rQ09WT21LSnh4Z2dYY3RNaTlta203Mzl3Q1p0dE5zUXhJell0WklkX1RnUGxaN3d3SzdsNU9ZVjlMVW5EMDE1aWVyX3JQc0NkV3FVRGtRWFBydi1pUnJTcUhua1ZsTzNRbTVKTlM0X1NJTmR5UHRYMWc?oc=5">Bitcoin is crashing for 3 reasons today. They have more to do with the state of the world than the crypto market - Fast Company</a></li><li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNYldnVG9TczlMa2poLS0ydk1vV0FSa3lEekdxVm9XZl95dlR6QkgzR1B2ZDF0YlNMZnkzYUFjVVNPdG1kM0FNaWszSFN1cXg5NjYtVHpHR19GTjI4Y0huUXJqOWZMNHBkUkFqcG9kMzZaMXFhei02ck4yaUF4clo1LdIBlAFBVV95cUxNQVRBalJGTG5fZDFobzQ3NUJvSjlXcVctNjNEN0hTdG1NZUVIdGZ2UHpyMExsaEM2dm81dmwwX2Z1Z21CX1lraWFKS2pTSVg0R25VYWVMZzBfdVNmLVhoM1ZyekdfN2oySjdzZ3NVOFU1Q3ZOcTY2Z0dZRXZBUnFKbHNTTWl1Z1FLLVV6cWFpMHNuUEZv?oc=5">비트코인·금 ‘디커플링’ 심화…관세 충격에 폭락한 코인, 금·은 구리는 활짝 - 조선일보</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMilgFBVV95cUxNVHZNVEtWTl84SXdaZWF1cFpfTm9LNmtadHU2WF9rQ09WT21LSnh4Z2dYY3RNaTlta203Mzl3Q1p0dE5zUXhJell0WklkX1RnUGxaN3d3SzdsNU9ZVjlMVW5EMDE1aWVyX3JQc0NkV3FVRGtRWFBydi1pUnJTcUhua1ZsTzNRbTVKTlM0X1NJTmR5UHRYMWc?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin is crashing for 3 reasons today. They have more to do with the state of the world than the crypto market</a></li><li><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxNVHZNVEtWTl84SXdaZWF1cFpfTm9LNmtadHU2WF9rQ09WT21LSnh4Z2dYY3RNaTlta203Mzl3Q1p0dE5zUXhJell0WklkX1RnUGxaN3d3SzdsNU9ZVjlMVW5EMDE1aWVyX3JQc0NkV3FVRGtRWFBydi1pUnJTcUhua1ZsTzNRbTVKTlM0X1NJTmR5UHRYMWc?oc=5">Bitcoin is crashing for 3 reasons today. They have more to do with the state of the world than the crypto market - Fast Company</a></li><li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNYldnVG9TczlMa2poLS0ydk1vV0FSa3lEekdxVm9XZl95dlR6QkgzR1B2ZDF0YlNMZnkzYUFjVVNPdG1kM0FNaWszSFN1cXg5NjYtVHpHR19GTjI4Y0huUXJqOWZMNHBkUkFqcG9kMzZaMXFhei02ck4yaUF4clo1LdIBlAFBVV95cUxNQVRBalJGTG5fZDFobzQ3NUJvSjlXcVctNjNEN0hTdG1NZUVIdGZ2UHpyMExsaEM2dm81dmwwX2Z1Z21CX1lraWFKS2pTSVg0R25VYWVMZzBfdVNmLVhoM1ZyekdfN2oySjdzZ3NVOFU1Q3ZOcTY2Z0dZRXZBUnFKbHNTTWl1Z1FLLVV6cWFpMHNuUEZv?oc=5">비트코인·금 ‘디커플링’ 심화…관세 충격에 폭락한 코인, 금·은 구리는 활짝 - 조선일보</a></li></ul></div>
 
 
 
@@ -65,7 +63,7 @@ description: "2026-02-25 암호화폐 시장에서 116건의 뉴스를 분석했
 <a href="https://news.google.com/read/CBMigwFBVV95cUxNMU14T1hTc3RoVVZTajExMHJsa1p5UGVwMklMVTJ3eDdKZ1ZEMThjUXNpMlJZZ2ZfNUt0bjRpeWs2UjZrR1RpTFhURE5kU2NMemRtVXgwd01EMWhGcnVzX1JQZkxwNTJqVzhNNnYweWZuclRRbWdMWUk2a29xSURFWWhEQQ?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin Heads for Worst Month Since Crypto Collapse of June 2022</a>
 <a href="https://news.google.com/read/CBMifEFVX3lxTE1yMUpTbEZLTUJzM3VnVndoOWRGY1BBcXB6bVpXcndGQWlEby1PbGV1M2J2VWJUSHdJNU1udlkydHZWVE5GQUZVR2NJNEZrUmtycW5xV3dIbHB6OEpkXzE2YW9CSnRIXzZza1ppNFJSRWRnT3NuQnJraDhFcUo?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin stabilizes after tariff whiplash briefly sends price below $65,000</a>
 <em>...외 33건</em>
-</div></details>
+</details>
 
 
 ### 🏦 거래소 (22건)
@@ -86,7 +84,7 @@ The Worst-Case Scenario Facing the Cryptocurrency Market Binance
 <a href="https://cointelegraph.com/news/anthropic-faces-industrial-scale-distillation-attacks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Anthropic says it's been targeted in massive distillation attacks</a>
 <a href="https://cointelegraph.com/news/coinbase-opens-stock-and-etf-trading-to-all-us-users-in-multi-asset-push?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Coinbase opens stock and ETF trading to all US users in multi-asset push</a>
 <em>...외 4건</em>
-</div></details>
+</details>
 
 
 ### 📈 가격/시장 (19건)
@@ -107,7 +105,7 @@ Bitcoin is crashing for 3 reasons today. They have more to do with the state of 
 <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNYldnVG9TczlMa2poLS0ydk1vV0FSa3lEekdxVm9XZl95dlR6QkgzR1B2ZDF0YlNMZnkzYUFjVVNPdG1kM0FNaWszSFN1cXg5NjYtVHpHR19GTjI4Y0huUXJqOWZMNHBkUkFqcG9kMzZaMXFhei02ck4yaUF4clo1LdIBlAFBVV95cUxNQVRBalJGTG5fZDFobzQ3NUJvSjlXcVctNjNEN0hTdG1NZUVIdGZ2UHpyMExsaEM2dm81dmwwX2Z1Z21CX1lraWFKS2pTSVg0R25VYWVMZzBfdVNmLVhoM1ZyekdfN2oySjdzZ3NVOFU1Q3ZOcTY2Z0dZRXZBUnFKbHNTTWl1Z1FLLVV6cWFpMHNuUEZv?oc=5">비트코인·금 ‘디커플링’ 심화…관세 충격에 폭락한 코인, 금·은 구리는 활짝 - 조선일보</a>
 <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE9JS043THlBZ3VVYkZ5bmI4cW9Fd0RKNUJoajZfNXR0WFd1QmpOZFNUR2tERkVzZ1l6UE92WWRZMV9BYUdRNkFMNlBldGcyS2ZkS2ZzVEkzcE9oY3UxNjVMUVYtUldXbUQtOWVlajVmZGlpUkZY?oc=5">관세 영향·중동 긴장에 비트코인 약세 흐름 - 부산일보사</a>
 <em>...외 1건</em>
-</div></details>
+</details>
 
 
 ### 🔷 이더리움 (14건)
@@ -126,7 +124,7 @@ Bitcoin is crashing for 3 reasons today. They have more to do with the state of 
 <details><summary>그 외 11건 보기</summary><div class="details-content">
 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE5KdWVzc2xZNjdoRHg4amtKZUhlV3BwdndpdVQ1bkxzNHVyeVlPMG1IdE1udGRGWng4Z3V2cThJalhvYTJlWUxBWjJ4LUhQOTBseExyUEN2R1dmeEhodXlaLUpDNW1HYklMdTd0V0YzVQ?oc=5">[가상화폐 시세] 비트코인 9000만원대 이어져…엑스알피 1900원선, 이더리움 270만원선 거래 - 이코노뉴스</a>
 <a href="https://cointelegraph.com/news/eth-bounces-off-1-8k-as-multiple-ether-price-metrics-point-to-prolonged-weakness?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">ETH bounces off $1.8K as multiple Ether price metrics point to prolonged weakness</a>
-</div></details>
+</details>
 
 
 ### 📊 매크로/금리 (11건)
@@ -148,7 +146,7 @@ An Australian national was said to sell cyber tools designed for the U.S. govern
 <details><summary>그 외 8건 보기</summary><div class="details-content">
 <a href="https://www.coindesk.com/policy/2026/02/24/fed-proposes-rule-to-deal-with-crypto-debanking-by-scrapping-reputation-risk">Fed proposes rule to deal with crypto debanking by scrapping 'reputation risk'</a>
 <a href="https://www.coindesk.com/markets/2026/02/24/adam-back-s-bstr-moving-forward-with-public-listing-plans-hopes-for-april-approval">Adam Back's BSTR moving forward with public listing plans, hopes for April approval</a>
-</div></details>
+</details>
 
 
 

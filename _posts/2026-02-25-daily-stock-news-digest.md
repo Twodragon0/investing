@@ -14,11 +14,11 @@ description: "2026-02-25 주식 시장에서 159건의 뉴스를 분석했습니
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">159</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 50</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">6,121.17</div><div class="stat-label">KOSPI +5.58%</div></div><div class="stat-item"><div class="stat-value">1,166.64</div><div class="stat-label">KOSDAQ +1.14%</div></div></div>
+<div class="stat-item"><div class="stat-value">159</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 50</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">6,121.17</div><div class="stat-label">KOSPI +5.58%</div></div><div class="stat-item"><div class="stat-value">1,166.64</div><div class="stat-label">KOSDAQ +1.14%</div></div></div>
 
-<div class="alert-box alert-info"><strong>주식 시장 가격/시장, 정치/정책 부각 159건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (50건): Stock market today: Dow, S&P 500, Nasdaq jump as software leads AI relief rally ahead of Nvidia earn...</li><li>🏛️ <strong>정치/정책</strong> (20건): Stock market today: Dow, S&P 500, Nasdaq futures dip as Trump to deliver State of the Union, Nvidia ...</li><li>🤖 <strong>AI/기술</strong> (24건): Stock market today: Dow, S&P 500, Nasdaq jump as software leads AI relief rally ahead of Nvidia earn...</li><li>📊 <strong>매크로/금리</strong> (6건): When will mortgage rates go down? With Fed rate cuts on hold, 4-year lows may be the bottom for now ...</li></ul></div>
+<strong>주식 시장 가격/시장, 정치/정책 부각 159건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (50건): Stock market today: Dow, S&P 500, Nasdaq jump as software leads AI relief rally ahead of Nvidia earn...</li><li>🏛️ <strong>정치/정책</strong> (20건): Stock market today: Dow, S&P 500, Nasdaq futures dip as Trump to deliver State of the Union, Nvidia ...</li><li>🤖 <strong>AI/기술</strong> (24건): Stock market today: Dow, S&P 500, Nasdaq jump as software leads AI relief rally ahead of Nvidia earn...</li><li>📊 <strong>매크로/금리</strong> (6건): When will mortgage rates go down? With Fed rate cuts on hold, 4-year lows may be the bottom for now ...</li></ul></div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMimAFBVV95cUxON1d1SmxfaHlXMkpSUlA5Y3pDMy1kZ3dxRlF5QzZkb3dlTmlTMmdWY2RWeURoazZXdVpMS0t6ZjI3NmJYTEwyS2pCWDVSdEdHekN4YWZ4WEZudC1JUDBDSnI2ZWotZWpOMlB1NVlQTkJaLW5XQWttRnpUdlEyQkZrZG1tYVlJWVZfaUw5SlJ5aklsTXN6WUdhaA?hl=en-US&gl=US&ceid=US%3Aen">Worried About a Stock Market Crash? This Is the Single Best Investing Move You Can Make Right Now.</a></li><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a></li><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxON1d1SmxfaHlXMkpSUlA5Y3pDMy1kZ3dxRlF5QzZkb3dlTmlTMmdWY2RWeURoazZXdVpMS0t6ZjI3NmJYTEwyS2pCWDVSdEdHekN4YWZ4WEZudC1JUDBDSnI2ZWotZWpOMlB1NVlQTkJaLW5XQWttRnpUdlEyQkZrZG1tYVlJWVZfaUw5SlJ5aklsTXN6WUdhaA?oc=5">Worried About a Stock Market Crash? This Is the Single Best Investing Move You Can Make Right Now. - The Motley Fool</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMimAFBVV95cUxON1d1SmxfaHlXMkpSUlA5Y3pDMy1kZ3dxRlF5QzZkb3dlTmlTMmdWY2RWeURoazZXdVpMS0t6ZjI3NmJYTEwyS2pCWDVSdEdHekN4YWZ4WEZudC1JUDBDSnI2ZWotZWpOMlB1NVlQTkJaLW5XQWttRnpUdlEyQkZrZG1tYVlJWVZfaUw5SlJ5aklsTXN6WUdhaA?hl=en-US&gl=US&ceid=US%3Aen">Worried About a Stock Market Crash? This Is the Single Best Investing Move You Can Make Right Now.</a></li><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a></li><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxON1d1SmxfaHlXMkpSUlA5Y3pDMy1kZ3dxRlF5QzZkb3dlTmlTMmdWY2RWeURoazZXdVpMS0t6ZjI3NmJYTEwyS2pCWDVSdEdHekN4YWZ4WEZudC1JUDBDSnI2ZWotZWpOMlB1NVlQTkJaLW5XQWttRnpUdlEyQkZrZG1tYVlJWVZfaUw5SlJ5aklsTXN6WUdhaA?oc=5">Worried About a Stock Market Crash? This Is the Single Best Investing Move You Can Make Right Now. - The Motley Fool</a></li></ul></div>
 
 
 
@@ -51,7 +51,7 @@ description: "2026-02-25 주식 시장에서 159건의 뉴스를 분석했습니
 <a href="https://news.google.com/read/CBMiowJBVV95cUxPamw3VDFQNHlmZE5fNmxld09fZlFMb2kzTDd6a29FdGxCYlJySkdiSlo2VnJWd1pzQXBRRlI1RURZdkFITkFfdVE0ZVBRUzRLSXNmTFVsaEdhVDdTNzRCZVIxcVlQc0x6Tm84STdYLV9MRnVEWktiRy0tazd2T0VtVzNTTUNiUXBlemt5M00yek8yYzZzbWJoN3JPbXExb3I0WVJJYWN2YzMzS0tBUC1EYXRrbDY2dzBZMXhEcGFOeERMRXh0VTFTUXhmOUVJYmR0aFl3ZjFIVERaczNQZDMyazk5cmZYanluRXVIQUUzamhSREZGX0ZsR0lRZ3A4SmxVVjJfV0VSb1lsc3U0V0tzcWwyOEdyVG5wamtRLVhsLWo5OXc?hl=en-US&gl=US&ceid=US%3Aen">US Stock Market Today: Dow Gains 380 Points on Trump Tariffs, S&P 500 & Nasdaq Rally as Software Stocks Rebound; Gold & Silver Surges, Bitcoin Falls Below $63K</a>
 <a href="https://news.google.com/read/CBMiakFVX3lxTE5kU0lMdW1yb1lyS2hoaHNDbFJDSE0wMzlhMTVaLTltbGJVd1N4eVJWZXR6WTltRUtUMGJLVlhpcW9jSlhhLUg5ZE9Mckc2SmVDQVZEZExZYWRSRHpUUVN2ZjJNRHpEUjcxMUE?hl=ko&gl=KR&ceid=KR%3Ako">코스피·코스닥, 오름세로 장 출발</a>
 <em>...외 32건</em>
-</div></details>
+</details>
 
 
 ### 🏛️ 정치/정책 (20건)
@@ -71,7 +71,7 @@ description: "2026-02-25 주식 시장에서 159건의 뉴스를 분석했습니
 <a href="https://news.google.com/read/CBMilwFBVV95cUxNQlRveHBpRTFDS3RfQVhlTjg3TDZLck0wTHFXVG1XNkcwenBBU3lqX2NUUFNYYU5KQ29KczJVWTN1azRjS0xwOHhPREdHMTBTam44SGttUm82ZDVCeXhkUWYySVlfU0pTSy1nYTZZZmZOUmRVR1ZWTnFMVWktd0dxS2xMZkFlMU9wcmVWYURkTVljXzNhdWRz?hl=en-US&gl=US&ceid=US%3Aen">The Stock Market Flashes a Warning as President Trump Announces New Tariffs. History Says the S&P 500 Will Do This Next.</a>
 <a href="https://news.google.com/read/CBMivAFBVV95cUxQbTl6WjNOSHZKdXFPbG5BZE5OcTRXaUpna2VCNXdpbVZwX3Y3YnFMOXBHR0tXSDcwc0xEWjVGYnR6VFBjUjRldmk4QnNpRE9TV2pYeVNOZ1BFUlB1Vi1PSDRDOThCQ21obHNMVl9VX2t5c1JMUE5oODZLWnh2VEtSZlNTX0k3UjdBb2FYX1pwSm5LNUV5QVBESUczd0dNUEtxQmRVQnEtRTJNc2oyRGlFWDZhMjVVMnNrVWxQN9IBwgFBVV95cUxPQlIwUTdGd0ZVVmw0MXg2WTY1R2lfelZKdUZlazBtM2F6T3pENDhZUnJqM2s5eFJmNXJXNG1zc1llRXhldGVQSE5aYzlGcjg0eVlGcS11YjFhaVVrcHoweUo2d0dJM19wOVJoZ0FtSVYzcDhMakVjUlhNT3FfTGNGUkphYkZtZXhrWmlFM2dMMXZJNC1TZE1CLTdobnVvQUh5RzF2SjhvcGRrazVrSEw0RkdPbUxRNjF2RWhHUVVSM3lGUQ?hl=en-US&gl=US&ceid=US%3Aen">Stocks drop after Trump ramps up new tariffs and investors dump potential AI losers</a>
 <em>...외 2건</em>
-</div></details>
+</details>
 
 
 ### 🤖 AI/기술 (24건)
@@ -91,7 +91,7 @@ description: "2026-02-25 주식 시장에서 159건의 뉴스를 분석했습니
 <a href="https://news.google.com/read/CBMie0FVX3lxTE9hbFl6dXY2cjF4dXBxNjAyT01lY3RQNXdxcVNkYWhjMlZkTWpzSmVoa1lZRW1KVy1tV2d1ck8yYjlzQ2pQVEYzU19qaGZSNnUyd1N6M3ppUkR5bC05TGQxa1FFaFdQMjdSdTBVUGkyRzloOHl5RERGak9BUQ?hl=en-US&gl=US&ceid=US%3Aen">Stock Market Today, Feb. 24: Broad Rally Lifts Markets As Investors Look Ahead to Nvidia Earnings Tomorrow and Trump's State of the Union</a>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1oTmptVjFuN1QwMllrQ0cxMEJpUnJCMENkYWhWSmxBM0pxNDJlNDd6U25hWUdPTWFOUFJ0LUVrb0VNUUtDczU1cGRzeTNlZEJkWFZlWF9QY09kVDE0VFZHUmVMWGtnTEx3UGJRM3Q5RWRxRkE?oc=5">하나증권 "엔비디아 실적 발표 눈앞, 삼성전자 SK하이닉스 주가 랠리 기대감 유효" - 비즈니스포스트</a>
 <em>...외 6건</em>
-</div></details>
+</details>
 
 
 ### 📊 매크로/금리 (6건)
@@ -113,7 +113,7 @@ When will mortgage rates go down? With Fed rate cuts on hold, 4-year lows may be
 <details><summary>그 외 3건 보기</summary><div class="details-content">
 <a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTFBoX3RfWFRYdGtaa20yOXkyUnlWbDRIbENYb0M1bWlsZHREd3JrNGNOQy12dHoxUzh1bFNNazZENklKdk9ac1lIWWJRcHo1c3FoQU8ySDJDb9IBjwJBVV95cUxPbXJnZUVBbktuVVkyVkZOS2FaTUtOVXdsYzA0QUlkYkxzZ3V5ZmhMSmRNMlRzenl4QzZQY1kwUWhkV2V0OTVLRGxaRE9iRzZsRTFJMHZibHVlZVl0LUpWXzI3bkJyaG1KcEIxSVZZb3Fyclp0X2JFYnd5Zmh4YTRCdjdOdFZJSW5OVHQyenhEdFUxV1I5UXZCbmdaVlE5dDdMd01qV0VnLVJ1WmN5MURWcjFXbFdzQVRZYzU4bkRCMFZLTDcyZjMyUUlmZmFITVNlYk5Mb2VrVVdjMDMwNG1BOEhrblhZdGpfVzhrQnNQNWZlZ1ZGR2pQQU00a2NHVXZQWW5GR3FBSGpKZmhNbENr?oc=5">트럼프 관세 맞불에 환율 변동성 '쑥'…한은, 기준금리 향방 놓고 '고심' - 데일리안</a>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRnlURUJFSHB4anczZlA4Mi1wU3hzdVhuZjhwMHZQanp4MUxBb0NJY3pvR25hYjc3UGR5azlmWnViekM4WTdVS3pLWUV1MG1ITHF5WW1KbGFOelAxQ1dDVFhieEI5LUhEMnJPaVFBalFMN0FOb0gxczZsaFJNNHlKLXFWT28wWjc10gGcAUFVX3lxTE5xRWJLNkhZQTh4SUhBRXNZUm9mWDNEYmZYaEhGd3RLdGs3LTkyYUVYejY4YlVYRzFtRG5wdHBaMGcwVGhTZW5fdHJTbXRTQzMzREg0OW1LUjY3TF9EbzJidE5BVzJDX1VFcGE1aFdyVWdMTm5kZlVuUHp5SDdfblRDNzc4ekxjNzNPcmR4cmxqcTRrOUQtT1pRM0sxVQ?oc=5">[주식 매매 상위 종목 및 환율] 2026년 2월 24일자 - 조선비즈 - Chosunbiz</a>
-</div></details>
+</details>
 
 
 ### 🟠 비트코인 (6건)
@@ -132,7 +132,7 @@ When will mortgage rates go down? With Fed rate cuts on hold, 4-year lows may be
 <details><summary>그 외 3건 보기</summary><div class="details-content">
 <a href="https://news.google.com/rss/articles/CBMiowJBVV95cUxPamw3VDFQNHlmZE5fNmxld09fZlFMb2kzTDd6a29FdGxCYlJySkdiSlo2VnJWd1pzQXBRRlI1RURZdkFITkFfdVE0ZVBRUzRLSXNmTFVsaEdhVDdTNzRCZVIxcVlQc0x6Tm84STdYLV9MRnVEWktiRy0tazd2T0VtVzNTTUNiUXBlemt5M00yek8yYzZzbWJoN3JPbXExb3I0WVJJYWN2YzMzS0tBUC1EYXRrbDY2dzBZMXhEcGFOeERMRXh0VTFTUXhmOUVJYmR0aFl3ZjFIVERaczNQZDMyazk5cmZYanluRXVIQUUzamhSREZGX0ZsR0lRZ3A4SmxVVjJfV0VSb1lsc3U0V0tzcWwyOEdyVG5wamtRLVhsLWo5OXc?oc=5">US Stock Market Today: Dow Gains 380 Points on Trump Tariffs, S&P 500 & Nasdaq Rally as Software Stocks Rebound; Gold & Silver Surges, Bitcoin Falls Below $63K - The Sunday Guardian</a>
 <a href="https://finance.yahoo.com/news/vgt-xlk-qqq-best-tech-152709423.html">VGT, XLK, or QQQ: Which is the Best Tech ETF to Profit From the AI Revolution?</a>
-</div></details>
+</details>
 
 
 

@@ -13,20 +13,18 @@ image: "/assets/images/generated/market-snapshot-2026-02-16.png"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">114</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 36</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,507.01</div><div class="stat-label">KOSPI -0.28%</div></div><div class="stat-item"><div class="stat-value">1,106.08</div><div class="stat-label">KOSDAQ -1.77%</div></div></div>
+<div class="stat-item"><div class="stat-value">114</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 36</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,507.01</div><div class="stat-label">KOSPI -0.28%</div></div><div class="stat-item"><div class="stat-value">1,106.08</div><div class="stat-label">KOSDAQ -1.77%</div></div></div>
 
-<div class="alert-box alert-info"><strong>주식 시장 **가격/시장, AI/기술** 부각 114건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 36건 수집</li><li>🤖 <strong>AI/기술</strong>: 23건 수집</li><li>📊 <strong>매크로/금리</strong>: 12건 수집</li><li>🟠 <strong>비트코인</strong>: 6건 수집</li></ul></div>
+<strong>주식 시장 **가격/시장, AI/기술** 부각 114건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 36건 수집</li><li>🤖 <strong>AI/기술</strong>: 23건 수집</li><li>📊 <strong>매크로/금리</strong>: 12건 수집</li><li>🟠 <strong>비트코인</strong>: 6건 수집</li></ul></div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiuwJBVV95cUxQdlN4NUVqRmNyb0dfNlV2Z1d6bjBNbWZFaldXOXZoX3hHTExBSHJqUjFuVDEyRzhuYmt0TlJqS05wMHdyeXhwNWhRb1hJY1NaV01Najh5Yno3TGlwaFJVNjhEZGJKX2Vydi1zRTlXbGdHdGlINDJWZkoxd29NdHdRLVFVcXR6TmlzQjlFWC1uY1AxdGVKdzZZVGxtNDRHSFFmZVBBMHZOM0lMcWFEdlpLbmV0M3czRnhUcUduZ3lDM0o4QkVYYjhJSjRXTjN4ZU1lN1RMUFFxM2FOdGxVQlFGSjlMODI1UU1Lenp5X0s4TUpjclY4U2xkd3BmV01MV0lyMU9ZOFYxYm1XN3MzejBHWXFDcFFfS18xLVU4NXNMczhhbUtaWmpPSXIwSG1CQ3VETDJIeWpTSTZjWmvSAcACQVVfeXFMTzV5ek5wWGR2cUxYT2Z4Q0x3eFZrT0RNS1I0QlB1QjVxMEZNTHFvdmUzSEJqS0pFTmoyc05DMElWbjNUVl8zSjZDd1U0NHR4ZVExZW9zWFNWSDFZNEQzX0wyMEk3dEtyejZWbWRMU3hSUHlRWEtxY2xtM0xkOVlOTnM0T040dVkwMm44amRNQlo0SFVBR3ZWVVc2TWRZeHZXNDlpcEFJOVVITndpTEx3cDdDY29ENkpER1E5NjNvU2NHREw0UHRqclh2aDZralFodk91ZkNmQTJiTFZUV1gwenRhbE9ZeEdWWFVCR3FFNFkxY21zYzNJei1TcWI2VGg3aFVZWW5WWTNyeWpBSU1KZ3pWSlhBbXItblY1WEJGZjZoNEdmWUNuaFNxSlliY19FcDBxckdEaXpVaWREckhoRVE?hl=en-US&gl=US&ceid=US%3Aen">US stock market crashes again today: Why Dow Jones, S&P 500 and Nasdaq fall for second straight day - Gold</a></li><li><a href="https://news.google.com/read/CBMihAFBVV95cUxQaUMzbk9YY0xLS1lyNGs1VHB2c2FiY2RMb0NjTzdISWpicFJDWU91RXBrS1FZYUkwY0kzek1mQ1dwRmhJVkhoX1lSdTN4b0NhOHhyZGtDTkpzRVlGNkdVYTFIckFVZ19MOHF6NkhXTTktREhxa3RsXzJPTk40aXNOcEh2aEE?hl=en-US&gl=US&ceid=US%3Aen">Gold, silver, S&P 500, crypto crash again amid extreme fear</a></li><li><a href="https://news.google.com/read/CBMifkFVX3lxTE5EeEJqTFJaQ2l4NEJPZTFTVnFydnZZZlE5Q2JFcWNPOENueXlUZ0s2VFE3YUREMUtheDNYRi1oQ05tRzhXTi1VaEFUQjZyMWhaMUpFMERPQ1NNT19QVEZKVFdxaENyYy1RMWNzQUY5TWpFc2FXMXJ3LXhaZGszQQ?hl=en-US&gl=US&ceid=US%3Aen">If a Stock Market Crash Is Coming, This 1 Investing Move Is Critical Right Now</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiuwJBVV95cUxQdlN4NUVqRmNyb0dfNlV2Z1d6bjBNbWZFaldXOXZoX3hHTExBSHJqUjFuVDEyRzhuYmt0TlJqS05wMHdyeXhwNWhRb1hJY1NaV01Najh5Yno3TGlwaFJVNjhEZGJKX2Vydi1zRTlXbGdHdGlINDJWZkoxd29NdHdRLVFVcXR6TmlzQjlFWC1uY1AxdGVKdzZZVGxtNDRHSFFmZVBBMHZOM0lMcWFEdlpLbmV0M3czRnhUcUduZ3lDM0o4QkVYYjhJSjRXTjN4ZU1lN1RMUFFxM2FOdGxVQlFGSjlMODI1UU1Lenp5X0s4TUpjclY4U2xkd3BmV01MV0lyMU9ZOFYxYm1XN3MzejBHWXFDcFFfS18xLVU4NXNMczhhbUtaWmpPSXIwSG1CQ3VETDJIeWpTSTZjWmvSAcACQVVfeXFMTzV5ek5wWGR2cUxYT2Z4Q0x3eFZrT0RNS1I0QlB1QjVxMEZNTHFvdmUzSEJqS0pFTmoyc05DMElWbjNUVl8zSjZDd1U0NHR4ZVExZW9zWFNWSDFZNEQzX0wyMEk3dEtyejZWbWRMU3hSUHlRWEtxY2xtM0xkOVlOTnM0T040dVkwMm44amRNQlo0SFVBR3ZWVVc2TWRZeHZXNDlpcEFJOVVITndpTEx3cDdDY29ENkpER1E5NjNvU2NHREw0UHRqclh2aDZralFodk91ZkNmQTJiTFZUV1gwenRhbE9ZeEdWWFVCR3FFNFkxY21zYzNJei1TcWI2VGg3aFVZWW5WWTNyeWpBSU1KZ3pWSlhBbXItblY1WEJGZjZoNEdmWUNuaFNxSlliY19FcDBxckdEaXpVaWREckhoRVE?hl=en-US&gl=US&ceid=US%3Aen">US stock market crashes again today: Why Dow Jones, S&P 500 and Nasdaq fall for second straight day - Gold</a></li><li><a href="https://news.google.com/read/CBMihAFBVV95cUxQaUMzbk9YY0xLS1lyNGs1VHB2c2FiY2RMb0NjTzdISWpicFJDWU91RXBrS1FZYUkwY0kzek1mQ1dwRmhJVkhoX1lSdTN4b0NhOHhyZGtDTkpzRVlGNkdVYTFIckFVZ19MOHF6NkhXTTktREhxa3RsXzJPTk40aXNOcEh2aEE?hl=en-US&gl=US&ceid=US%3Aen">Gold, silver, S&P 500, crypto crash again amid extreme fear</a></li><li><a href="https://news.google.com/read/CBMifkFVX3lxTE5EeEJqTFJaQ2l4NEJPZTFTVnFydnZZZlE5Q2JFcWNPOENueXlUZ0s2VFE3YUREMUtheDNYRi1oQ05tRzhXTi1VaEFUQjZyMWhaMUpFMERPQ1NNT19QVEZKVFdxaENyYy1RMWNzQUY5TWpFc2FXMXJ3LXhaZGszQQ?hl=en-US&gl=US&ceid=US%3Aen">If a Stock Market Crash Is Coming, This 1 Investing Move Is Critical Right Now</a></li></ul></div>
 
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:32%"></div></div><span class="theme-count">36건 (32%)</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:20%"></div></div><span class="theme-count">23건 (20%)</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:11%"></div></div><span class="theme-count">12건 (11%)</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:5%"></div></div><span class="theme-count">6건 (5%)</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:4%"></div></div><span class="theme-count">5건 (4%)</span></div>
-</div>
+<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:32%"></div></div><span class="theme-count">36건 (32%)</span></div>
+<span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:20%"></div></div><span class="theme-count">23건 (20%)</span></div>
+<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:11%"></div></div><span class="theme-count">12건 (11%)</span></div>
+<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:5%"></div></div><span class="theme-count">6건 (5%)</span></div>
+<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:4%"></div></div><span class="theme-count">5건 (4%)</span></div>
 
 *총 114건 수집*
 
@@ -93,7 +91,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-16.png"
 <a href="https://news.google.com/read/CBMifkFVX3lxTE5EeEJqTFJaQ2l4NEJPZTFTVnFydnZZZlE5Q2JFcWNPOENueXlUZ0s2VFE3YUREMUtheDNYRi1oQ05tRzhXTi1VaEFUQjZyMWhaMUpFMERPQ1NNT19QVEZKVFdxaENyYy1RMWNzQUY5TWpFc2FXMXJ3LXhaZGszQQ?hl=en-US&gl=US&ceid=US%3Aen">If a Stock Market Crash Is Coming, This 1 Investing Move Is Critical Right Now</a>
 <a href="https://news.google.com/read/CBMingFBVV95cUxPYUg5VFd4Z3NQSlZzMnBJc2NMNXVJa0FnZ0pXUWFWdXYySDZBY0xIa0d4eDdOdWhtbGJ1NTU5bzN0clkyWUZSZHFMdXZNUFliVHI0THYtQlVFZW94ZWktWHZsczI0WGhUQVR2Q1VQUXJkeURuVzhrMTliSUR4VXc5WHRtMlVNWGxmT0plMjhtMGpQenNKLTZLUDFKdXlOZw?hl=en-US&gl=US&ceid=US%3Aen">S&P 500: Finally, Something Bearish (Technical Analysis) (SP500)</a>
 <em>외 18건</em>
-</div></details>
+</details>
 
 
 ### 🤖 AI/기술 (23건)
@@ -113,7 +111,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-16.png"
 <a href="https://news.google.com/read/CBMiuwJBVV95cUxQdlN4NUVqRmNyb0dfNlV2Z1d6bjBNbWZFaldXOXZoX3hHTExBSHJqUjFuVDEyRzhuYmt0TlJqS05wMHdyeXhwNWhRb1hJY1NaV01Najh5Yno3TGlwaFJVNjhEZGJKX2Vydi1zRTlXbGdHdGlINDJWZkoxd29NdHdRLVFVcXR6TmlzQjlFWC1uY1AxdGVKdzZZVGxtNDRHSFFmZVBBMHZOM0lMcWFEdlpLbmV0M3czRnhUcUduZ3lDM0o4QkVYYjhJSjRXTjN4ZU1lN1RMUFFxM2FOdGxVQlFGSjlMODI1UU1Lenp5X0s4TUpjclY4U2xkd3BmV01MV0lyMU9ZOFYxYm1XN3MzejBHWXFDcFFfS18xLVU4NXNMczhhbUtaWmpPSXIwSG1CQ3VETDJIeWpTSTZjWmvSAcACQVVfeXFMTzV5ek5wWGR2cUxYT2Z4Q0x3eFZrT0RNS1I0QlB1QjVxMEZNTHFvdmUzSEJqS0pFTmoyc05DMElWbjNUVl8zSjZDd1U0NHR4ZVExZW9zWFNWSDFZNEQzX0wyMEk3dEtyejZWbWRMU3hSUHlRWEtxY2xtM0xkOVlOTnM0T040dVkwMm44amRNQlo0SFVBR3ZWVVc2TWRZeHZXNDlpcEFJOVVITndpTEx3cDdDY29ENkpER1E5NjNvU2NHREw0UHRqclh2aDZralFodk91ZkNmQTJiTFZUV1gwenRhbE9ZeEdWWFVCR3FFNFkxY21zYzNJei1TcWI2VGg3aFVZWW5WWTNyeWpBSU1KZ3pWSlhBbXItblY1WEJGZjZoNEdmWUNuaFNxSlliY19FcDBxckdEaXpVaWREckhoRVE?hl=en-US&gl=US&ceid=US%3Aen">US stock market crashes again today: Why Dow Jones, S&P 500 and Nasdaq fall for second straight day - Gold</a>
 <a href="https://news.google.com/read/CBMihAFBVV95cUxQaUMzbk9YY0xLS1lyNGs1VHB2c2FiY2RMb0NjTzdISWpicFJDWU91RXBrS1FZYUkwY0kzek1mQ1dwRmhJVkhoX1lSdTN4b0NhOHhyZGtDTkpzRVlGNkdVYTFIckFVZ19MOHF6NkhXTTktREhxa3RsXzJPTk40aXNOcEh2aEE?hl=en-US&gl=US&ceid=US%3Aen">Gold, silver, S&P 500, crypto crash again amid extreme fear</a>
 <em>외 5건</em>
-</div></details>
+</details>
 
 
 ### 📊 매크로/금리 (12건)
@@ -132,7 +130,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-16.png"
 <details><summary>그 외 9건 보기</summary><div class="details-content">
 <a href="https://news.google.com/read/CBMiuwNBVV95cUxPV0RYWVRfR2ZrQVBKNWQ4anBTRkpzU0lkamRCT001Zk9PVFJqZ01VeVNucC0tYUstYjl6R1cxQW5PSlZ1cXRoY29vMVVNcjJMN3dkQjRBSFVMbHVHcUtpRElfZ0kyQlY4ckNHSjNTMkJvdHVpZ3RiNGNJV3BPNEdvOVdTTWNTQlhFZENubTdLQWtHazFmbDRmYm5DSktMdXo0Tk9oVDRaS281ODJDVHZVLWhTWEhlLUtCelRjc2VQTWdidU9qejhkUEp5ZmhraFM3WkFGOEhNUHNNZDBhZVJKSC1rUWpWWGFWRGpRSG43MDYtYUg2bHVBVF9NdDFHSTVoVkVlbjlHeVRfR2JLZEJTRVdEeGUyUll1UFdXajNBY3RQTE1lZGlLeDZLblZHc1hGdXYwbFlzbFZqYm5ZenVsYW1SWjBNdFk4UnRocmVzZEZiRWNHV1ktWFN2Mi1FZ1NzYm9uS2xWVjltM2t3V2RfVTl6RS15VExJYW00b3pXUVo0R1A1OW5YZ3NDbnRENi1td2R2dUhMRjFka2hNa1plRWhqVGh5MnIwNEtvSWZfTEVwWFYzQjkxNXdNdw?hl=en-US&gl=US&ceid=US%3Aen">Stock Market on Feb. 13, 2026: Dow, S&P 500 close with slight gains after inflation report; stocks book a losing week as tech remains under pressure; Treasury yields decline</a>
 <a href="https://news.google.com/read/CBMilwFBVV95cUxPcUJDLUFCOHFOZGU2eXdhLWhacWJqMktka1ltMDBpbUs3RkFySGZiUFNzZXpKNy1pUUxJLU9lV0NVc2NrME1JRWVlSUdLTDg3dkhVcUdCeWZocWQwYUlJcVZpMnNJUEkybEdWLVVHcTB6cWo2VG91V2d1d0x2cnV2amk2V0wteHN1Um0ybml6NjFVN1NmdTVz?hl=en-US&gl=US&ceid=US%3Aen">S&P 500 ends up slightly as tech dips, inflation cools</a>
-</div></details>
+</details>
 
 
 ### 🟠 비트코인 (6건)
@@ -151,7 +149,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-16.png"
 <details><summary>그 외 3건 보기</summary><div class="details-content">
 <a href="https://www.cnbc.com/2026/02/15/warner-bros-discovery-paramount-netflix.html">Warner Bros. may reopen sale talks with Paramount following new deal terms, Bloomberg reports</a>
 <a href="https://www.cnbc.com/2026/02/15/iran-energy-mining-aircraft-us-talks.html">Iran says potential energy, mining and aircraft deals are on the table in talks with the U.S.</a>
-</div></details>
+</details>
 
 
 ### 🏛️ 정치/정책 (5건)
@@ -171,7 +169,7 @@ Data centers powering artificial intelligence have strained the electrical grid 
 <details><summary>그 외 2건 보기</summary><div class="details-content">
 <a href="https://www.cnbc.com/2026/02/15/trump-congress-government-shutdown-dhs.html">No clear path to ending the partial government shutdown as lawmakers dig in over DHS oversight</a>
 <a href="https://www.hankyung.com/article/2026021676507">李대통령 "집은 투자 아닌 주거수단다주택 찬양할 일 아냐"</a>
-</div></details>
+</details>
 
 
 
@@ -232,7 +230,6 @@ Data centers powering artificial intelligence have strained the electrical grid 
 
 
 <details><summary>참고 링크 (15건)</summary>
-<div class="details-content">
 
 1. [S&P 500 closes little changed after soft inflation report, index notches losing ](https://news.google.com/read/CBMid0FVX3lxTE1rMzAwSXVIelF1VVJ2WU1YbzFiLWtfa0xMRDFVLTZpVE1WcGlrM3hPZnJScFV1b1A2WTNXX3JQeHFEcWRaTU5HdDlYMF83czJndGZqZUY0Y3piUTkzME5LaWFoVlFQQ0xCSXAyaGtlNUlMMU1JMTBJ0gF8QVVfeXFMUG1WcWJDeUpjZVd1ZDdzSWxFaEQ1VUlWX0NnWnFBZTQ1dFBmVlF1dWY1TzRjS2hUbjItWGxzWjFjczZ4QnU4RWVsQ2thWFMyZ0I4T2lfM0p0U3VaUFc4S0t5RXZVTTUyQS1sMzBQYWhOWlhWZ0lncmpnczY1Mw?hl=en-US&gl=US&ceid=US%3Aen) - Google News
 2. [Stock market today: S&P 500, Dow, Nasdaq gains fizzle as CPI inflation cools, we](https://news.google.com/read/CBMi2gFBVV95cUxNMF9YaUh4WW9yRVVYenZXWEl3dlpMbmpQNHNoeG5lLXhXeWUyS0IyRC02S1l3RWtSbVgxQ3hsT09yZkZrbHlnUXRiREVVWWd5UlN4dzlTYWFfVDFCdkkzeFpDOW8yaFdIbEFjODZrQWk2ZDhOQkZXbE9wR3R3a0VGN3FXZFUxelZHWElGNUM3OWxURlZYbF9oTmN2UjdpMFdPQVBmeU5fR2dHbHlNZlBHdjNzUTlaZkI5ZDJ0b2RFWFRNcXkzWlhwZ2dUajZSRGZ0TEwwWnpWTUNmdw?hl=en-US&gl=US&ceid=US%3Aen) - Google News
@@ -250,7 +247,7 @@ Data centers powering artificial intelligence have strained the electrical grid 
 14. [S&P 500 Index Explained: What It Is and How to Invest](https://news.google.com/read/CBMia0FVX3lxTE5MTFY2dWxzN2xIN3RGMHh2NTgzMUt4Zm9FSW03MVlGX2tUelV1SkNUQmlyQmk0bHlWYTU2NktldFRqY1B3a3RHR2RBV0lJR19MdFc5VzFyUlJXblBNSlU1TUF6YmQ3ZE5DUmRJ?hl=en-US&gl=US&ceid=US%3Aen) - Google News
 15. [Asian Stocks Set to Climb After US CPI Lifts Mood: Markets Wrap](https://news.google.com/read/CBMiswFBVV95cUxOZEp3ZElVbFhGOVFybFlPemN4VU9KSTZVOGtVNnJwallpTU5uVXFqRmJtLTd1TWVlNUZpdFp1bXJsNmZ1ZlRzd2MwWERTOENDN0ZmSVlDb2JYMjlEc0dDb1lmSWVFdTJTbnNjM3lBQVEyX2gtTnV4c244T19uUmtRY2R0Vm5FeGtwYnl4WFhUY0RmeVktZnItOEU5c0l2UEFJSlFTX2xrMlVSNHhwNDNyRFlUOA?hl=en-US&gl=US&ceid=US%3Aen) - Google News
 
-</div></details>
+</details>
 
 
 ---

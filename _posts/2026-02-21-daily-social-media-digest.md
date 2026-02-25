@@ -13,20 +13,18 @@ image: "/assets/images/generated/source-distribution-2026-02-21.png"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">62</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🏛️ 28</div><div class="stat-label">정치/정책</div></div></div>
+<div class="stat-item"><div class="stat-value">62</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🏛️ 28</div><div class="stat-label">정치/정책</div></div></div>
 
-<div class="alert-box alert-info"><strong>소셜 미디어 **정치/정책, 매크로/금리** 관련 62건 포착</strong><ul><li>🏛️ <strong>정치/정책</strong> (28건): ERIC TRUMP: Being de-banked pushed Trump family towards crypto." The banks made the biggest mistake </li><li>📊 <strong>매크로/금리</strong> (14건): JAMES LAVISH: “The Federal Reserve manipulating the money supply and access to capital has absolutel</li><li>🟠 <strong>비트코인</strong> (6건): Michael Saylor's 'Strategy' says it can "withstand a drawdown in Bitcoin's price to $8K and still ha</li><li>🔵 <strong>규제/정책</strong> (4건): CFTC Chair says they will "future-proof" crypto regulations."We can't allow Gary Gensler 2.0 to come</li></ul></div>
+<strong>소셜 미디어 **정치/정책, 매크로/금리** 관련 62건 포착</strong><ul><li>🏛️ <strong>정치/정책</strong> (28건): ERIC TRUMP: Being de-banked pushed Trump family towards crypto." The banks made the biggest mistake </li><li>📊 <strong>매크로/금리</strong> (14건): JAMES LAVISH: “The Federal Reserve manipulating the money supply and access to capital has absolutel</li><li>🟠 <strong>비트코인</strong> (6건): Michael Saylor's 'Strategy' says it can "withstand a drawdown in Bitcoin's price to $8K and still ha</li><li>🔵 <strong>규제/정책</strong> (4건): CFTC Chair says they will "future-proof" crypto regulations."We can't allow Gary Gensler 2.0 to come</li></ul></div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1DSkxRUFVydExsLTlEVjloU3pQQkV2ZjRqNTNlRlJRQ0lodXBhOXY0c1FaSFg4SmRmVWxuUVB5ZDh4Vkp4ZFpvZjlaa21qdUlCWjdfY2lwQXhTOVRIRzdPQkRPVW9CSkNlX3FxVUJVaG8zQVU?oc=5">키움증권 "2월 금통위 기준금리 동결 예상, 경제성장률 전망 변화에 주목" - 비즈니스포스트</a></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE84dVg4cXBEc2d4azdDdXlPRFBGLV9DWUo1YlZtcjROUXZMWVZMamlHWS1aenY1YUQ3QTh5VkZmYzE1WXdVOU5rY1gxMjFmTmlFQWU2bndCeFJrckhubnlfR2lSemlzZ0N0QkdZTmR1YmHSAXRBVV95cUxNblktRnV1WjZwb3ZPUm5jdXp0TjNGVFZFeFBUZjY1QUFxLXMzU0FvUjRHNUo3dFp0MkpPT3JXdnd5ZjNjdUVlSGFBcWJkSVZYRHlpSWFZUkV3R1A2WDZDVV9VVl9nZzdjRkRzTkZ5QTFhTlNPeA?oc=5">[다음주경제] 한은 금리 결정·출산율·가계소득 지표 발표경제지표 ‘집중 공개’ - 산경투데이</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1DSkxRUFVydExsLTlEVjloU3pQQkV2ZjRqNTNlRlJRQ0lodXBhOXY0c1FaSFg4SmRmVWxuUVB5ZDh4Vkp4ZFpvZjlaa21qdUlCWjdfY2lwQXhTOVRIRzdPQkRPVW9CSkNlX3FxVUJVaG8zQVU?oc=5">키움증권 "2월 금통위 기준금리 동결 예상, 경제성장률 전망 변화에 주목" - 비즈니스포스트</a></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE84dVg4cXBEc2d4azdDdXlPRFBGLV9DWUo1YlZtcjROUXZMWVZMamlHWS1aenY1YUQ3QTh5VkZmYzE1WXdVOU5rY1gxMjFmTmlFQWU2bndCeFJrckhubnlfR2lSemlzZ0N0QkdZTmR1YmHSAXRBVV95cUxNblktRnV1WjZwb3ZPUm5jdXp0TjNGVFZFeFBUZjY1QUFxLXMzU0FvUjRHNUo3dFp0MkpPT3JXdnd5ZjNjdUVlSGFBcWJkSVZYRHlpSWFZUkV3R1A2WDZDVV9VVl9nZzdjRkRzTkZ5QTFhTlNPeA?oc=5">[다음주경제] 한은 금리 결정·출산율·가계소득 지표 발표경제지표 ‘집중 공개’ - 산경투데이</a></li></ul></div>
 
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:45%"></div></div><span class="theme-count">28건 (45%)</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:23%"></div></div><span class="theme-count">14건 (23%)</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:10%"></div></div><span class="theme-count">6건 (10%)</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:6%"></div></div><span class="theme-count">4건 (6%)</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:13%"></div></div><span class="theme-count">8건 (13%)</span></div>
-</div>
+<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:45%"></div></div><span class="theme-count">28건 (45%)</span></div>
+<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:23%"></div></div><span class="theme-count">14건 (23%)</span></div>
+<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:10%"></div></div><span class="theme-count">6건 (10%)</span></div>
+<span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:6%"></div></div><span class="theme-count">4건 (6%)</span></div>
+<span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:13%"></div></div><span class="theme-count">8건 (13%)</span></div>
 
 *총 62건 수집*
 

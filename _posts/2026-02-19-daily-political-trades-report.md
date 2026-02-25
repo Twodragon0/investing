@@ -12,17 +12,15 @@ lang: "ko"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">17</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📊 12</div><div class="stat-label">매크로/금리</div></div><div class="stat-item"><div class="stat-value">fed</div><div class="stat-label">핫 키워드 (14회)</div></div></div>
+<div class="stat-item"><div class="stat-value">17</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📊 12</div><div class="stat-label">매크로/금리</div></div><div class="stat-item"><div class="stat-value">fed</div><div class="stat-label">핫 키워드 (14회)</div></div></div>
 
-<div class="alert-box alert-info"><strong>**매크로/금리, 가격/시장** 관련 17건 수집</strong><ul><li>📊 <strong>매크로/금리</strong> (12건): 미 Fed 회의록 "금리 상향 조정" 언급에한은 금통위 ‘동결’ 무게 중앙일보</li><li>📈 <strong>가격/시장</strong> (5건): 미 Fed 회의록 "금리 상향 조정" 언급에한은 금통위 ‘동결’ 무게 중앙일보</li><li>🤖 <strong>AI/기술</strong> (2건): Maine Gov. Janet Mills discloses more than $170,000 in stocks The Portland Press Herald</li><li>🏛️ <strong>정치/정책</strong> (1건): Fed minutes show officials grappling with policy split, impact of AI on economy Reuters</li></ul></div>
+<strong>**매크로/금리, 가격/시장** 관련 17건 수집</strong><ul><li>📊 <strong>매크로/금리</strong> (12건): 미 Fed 회의록 "금리 상향 조정" 언급에한은 금통위 ‘동결’ 무게 중앙일보</li><li>📈 <strong>가격/시장</strong> (5건): 미 Fed 회의록 "금리 상향 조정" 언급에한은 금통위 ‘동결’ 무게 중앙일보</li><li>🤖 <strong>AI/기술</strong> (2건): Maine Gov. Janet Mills discloses more than $170,000 in stocks The Portland Press Herald</li><li>🏛️ <strong>정치/정책</strong> (1건): Fed minutes show officials grappling with policy split, impact of AI on economy Reuters</li></ul></div>
 
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:71%"></div></div><span class="theme-count">12건 (71%)</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:29%"></div></div><span class="theme-count">5건 (29%)</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:12%"></div></div><span class="theme-count">2건 (12%)</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:6%"></div></div><span class="theme-count">1건 (6%)</span></div>
-</div>
+<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:71%"></div></div><span class="theme-count">12건 (71%)</span></div>
+<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:29%"></div></div><span class="theme-count">5건 (29%)</span></div>
+<span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:12%"></div></div><span class="theme-count">2건 (12%)</span></div>
+<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:6%"></div></div><span class="theme-count">1건 (6%)</span></div>
 
 *총 17건 수집*
 

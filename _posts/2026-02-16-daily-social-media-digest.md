@@ -13,18 +13,16 @@ image: "/assets/images/generated/source-distribution-2026-02-16.png"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">29</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📊 9</div><div class="stat-label">매크로/금리</div></div></div>
+<div class="stat-item"><div class="stat-value">29</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📊 9</div><div class="stat-label">매크로/금리</div></div></div>
 
-<div class="alert-box alert-info"><strong>소셜 미디어 **매크로/금리, 비트코인** 관련 29건 포착</strong><ul><li>📊 <strong>매크로/금리</strong> (9건): 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE</li><li>🟠 <strong>비트코인</strong> (4건): Kalshi traders are now betting that Bitcoin could plummet to as low as $48,000 this year.Sponsored b</li><li>🏦 <strong>거래소</strong> (6건): Binance has purchased another 4,545 Bitcoins valued at $305 million for its “SAFU” fund.Sponsored by</li><li>🏛️ <strong>정치/정책</strong> (3건): President Trump suggested "we might pay off the US $35 trillion debt using cryptocurrency."Sponsored</li></ul></div>
+<strong>소셜 미디어 **매크로/금리, 비트코인** 관련 29건 포착</strong><ul><li>📊 <strong>매크로/금리</strong> (9건): 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE</li><li>🟠 <strong>비트코인</strong> (4건): Kalshi traders are now betting that Bitcoin could plummet to as low as $48,000 this year.Sponsored b</li><li>🏦 <strong>거래소</strong> (6건): Binance has purchased another 4,545 Bitcoins valued at $305 million for its “SAFU” fund.Sponsored by</li><li>🏛️ <strong>정치/정책</strong> (3건): President Trump suggested "we might pay off the US $35 trillion debt using cryptocurrency."Sponsored</li></ul></div>
 
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:31%"></div></div><span class="theme-count">9건 (31%)</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:14%"></div></div><span class="theme-count">4건 (14%)</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:21%"></div></div><span class="theme-count">6건 (21%)</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:10%"></div></div><span class="theme-count">3건 (10%)</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:3%"></div></div><span class="theme-count">1건 (3%)</span></div>
-</div>
+<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:31%"></div></div><span class="theme-count">9건 (31%)</span></div>
+<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:14%"></div></div><span class="theme-count">4건 (14%)</span></div>
+<span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:21%"></div></div><span class="theme-count">6건 (21%)</span></div>
+<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:10%"></div></div><span class="theme-count">3건 (10%)</span></div>
+<span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:3%"></div></div><span class="theme-count">1건 (3%)</span></div>
 
 *총 29건 수집*
 
@@ -186,7 +184,6 @@ Trump Affiliates Bannon and Epshteyn Named in ‘Let’s Go Brandon’ Crypto Co
 > *본 소셜 동향 분석은 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*
 
 <details><summary>참고 링크 (10건)</summary>
-<div class="details-content">
 
 1. [[Telegram] This is all we wantSponsored by @rainbetcom](https://t.me/crypto/3496) - Telegram @crypto
 2. [[Telegram] Kalshi traders are now betting that Bitcoin could plummet to as low a](https://t.me/crypto/3497) - Telegram @crypto
@@ -199,7 +196,7 @@ Trump Affiliates Bannon and Epshteyn Named in ‘Let’s Go Brandon’ Crypto Co
 9. [Trump Affiliates Bannon and Epshteyn Named in ‘Let’s Go Brandon’ Crypto Coin Law](https://news.google.com/rss/articles/CBMisgFBVV95cUxNVHUzMnljV1k1dU9JRlBtOVVfSFN5Ri1CdThSdlJqZVZldHZZNHFZNng3ODR4WDZXd3pLT0JwbFFCVVFrWEU4ekJCMUpVYUtyYjlWV2NKZ3JvbXpjZ1pUUXgxSk9hOGM0XzhlMENrdEd1RWk1dmJfWFFDdXltcEYzOGxCOFFjRVhFY2pCODRkbk9pZG94U0xtYXNXSjJnMmk1ZFRGQXNYdUE5WWJRVEdBTVl3?oc=5) - Trump Crypto Policy
 10. [李 대통령 "돈 벌기 위해 집 사 모으는 바람에 온갖 사회문제 야기" - 핀포인트뉴스](https://news.google.com/rss/articles/CBMic0FVX3lxTE9VY2h2Zm90SnBqV3BlQWlyOWlZMHVsRmZwX3hQc1pPVzh2MWd1ODN5WUh5OTNSZzJDYmlNVnQzOE1qY0ZUbUJpS0NjYXZLc0xVd2FHQzVZbW5STkpsSGZLWExJWi1GR0s5bkVxcjdKZFBlaEU?oc=5) - 이재명 경제정책
 
-</div></details>
+</details>
 
 ---
 **데이터 수집 시각**: 2026-02-16 03:27 UTC

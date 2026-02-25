@@ -14,11 +14,11 @@ description: "2026-02-24 주식 시장에서 158건의 뉴스를 분석했습니
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">158</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 47</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,936.78</div><div class="stat-label">KOSPI +1.74%</div></div><div class="stat-item"><div class="stat-value">1,162.86</div><div class="stat-label">KOSDAQ +0.92%</div></div></div>
+<div class="stat-item"><div class="stat-value">158</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 47</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,936.78</div><div class="stat-label">KOSPI +1.74%</div></div><div class="stat-item"><div class="stat-value">1,162.86</div><div class="stat-label">KOSDAQ +0.92%</div></div></div>
 
-<div class="alert-box alert-info"><strong>주식 시장 <strong>가격/시장, 정치/정책</strong> 부각 158건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (47건): Prediction Market Flashes a Stock Market Correction Warning. History Says the S&P 500 May Drop Even ...</li><li>🏛️ <strong>정치/정책</strong> (38건): Stock market today: Dow drops 800 points as S&P 500, Nasdaq slide on Trump tariff fears, AI 'scare t...</li><li>📊 <strong>매크로/금리</strong> (9건): When will mortgage rates go down? With Fed rate cuts on hold, 4-year lows may be the bottom for now ...</li><li>🤖 <strong>AI/기술</strong> (7건): “엔비디아 주가가 떨어져도 삼성전자·하이닉스는 더 오르는 이유” 조선일보</li></ul></div>
+<strong>주식 시장 <strong>가격/시장, 정치/정책</strong> 부각 158건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (47건): Prediction Market Flashes a Stock Market Correction Warning. History Says the S&P 500 May Drop Even ...</li><li>🏛️ <strong>정치/정책</strong> (38건): Stock market today: Dow drops 800 points as S&P 500, Nasdaq slide on Trump tariff fears, AI 'scare t...</li><li>📊 <strong>매크로/금리</strong> (9건): When will mortgage rates go down? With Fed rate cuts on hold, 4-year lows may be the bottom for now ...</li><li>🤖 <strong>AI/기술</strong> (7건): “엔비디아 주가가 떨어져도 삼성전자·하이닉스는 더 오르는 이유” 조선일보</li></ul></div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?hl=en-US&gl=US&ceid=US%3Aen">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates</a></li><li><a href="https://news.google.com/read/CBMi-gFBVV95cUxPWFBCd0RMYVpLZk10T0x4LVpsNU9ZcVpMR1RiUERBZlFMaDhsM2FUVTF5R25aTlVaczAta0lQMDFUdExuRTUwbmZsSmlUR0J6d25mRFpkeV9KS3hkYlNrXzVTeGpqTERXa19OMzFWRG5FLXpEdmN6ZjdIVmFqYk5xR0lZa3FSMzktbFBOZFctS196TzI1SVVxSS1IUXlUNEVlSzFtaERWTmduUzd3dXA0R2EyWk5PakpmX1VOWmQyVkxhbUtabFZqSjFoUEcza0V4elYzWVlacHNtUXc0S0d6LUdZUE1JYmdGRm41VkxGbEtVazNfeU9uZmln0gH_AUFVX3lxTFBwcFBWTzA5YUhhU1lPTGpQZmJiVEJQWlhTNUZZYV9sdDRtd2JVRmVVSXlLdzNqQkc5aEE4a2tVamwtZldpRTFtbHdrNDNzSHRmcEtqVjJwOWEzZi14Q3d4RkZUMFJhOENEOGFGYzBzSmF1OXFZTUVXeGpIb3J2d0JYUGQ1THFtQ25reFItSzE2TklDeFZmanBxN3NFUTVjX0FzVzZmSmJNc21IM2R0R3EzN19oemF5OEJuZzBLWG1hM1lFbEZrN0c0LWpKbTBGeUtrbVJ1bFZQWTVETHZENVNfYkJKdHJEcmNiUG1SVGlpbnh1WWJfOTlDU0JKeXJMQQ?hl=en-US&gl=US&ceid=US%3Aen">S&P 500, Dow Jones, Nasdaq crash at U.S Stock Market. Top gaining, losing stocks at Wall Street</a></li><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?hl=en-US&gl=US&ceid=US%3Aen">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates</a></li><li><a href="https://news.google.com/read/CBMi-gFBVV95cUxPWFBCd0RMYVpLZk10T0x4LVpsNU9ZcVpMR1RiUERBZlFMaDhsM2FUVTF5R25aTlVaczAta0lQMDFUdExuRTUwbmZsSmlUR0J6d25mRFpkeV9KS3hkYlNrXzVTeGpqTERXa19OMzFWRG5FLXpEdmN6ZjdIVmFqYk5xR0lZa3FSMzktbFBOZFctS196TzI1SVVxSS1IUXlUNEVlSzFtaERWTmduUzd3dXA0R2EyWk5PakpmX1VOWmQyVkxhbUtabFZqSjFoUEcza0V4elYzWVlacHNtUXc0S0d6LUdZUE1JYmdGRm41VkxGbEtVazNfeU9uZmln0gH_AUFVX3lxTFBwcFBWTzA5YUhhU1lPTGpQZmJiVEJQWlhTNUZZYV9sdDRtd2JVRmVVSXlLdzNqQkc5aEE4a2tVamwtZldpRTFtbHdrNDNzSHRmcEtqVjJwOWEzZi14Q3d4RkZUMFJhOENEOGFGYzBzSmF1OXFZTUVXeGpIb3J2d0JYUGQ1THFtQ25reFItSzE2TklDeFZmanBxN3NFUTVjX0FzVzZmSmJNc21IM2R0R3EzN19oemF5OEJuZzBLWG1hM1lFbEZrN0c0LWpKbTBGeUtrbVJ1bFZQWTVETHZENVNfYkJKdHJEcmNiUG1SVGlpbnh1WWJfOTlDU0JKeXJMQQ?hl=en-US&gl=US&ceid=US%3Aen">S&P 500, Dow Jones, Nasdaq crash at U.S Stock Market. Top gaining, losing stocks at Wall Street</a></li><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a></li></ul></div>
 
 
 
@@ -52,7 +52,7 @@ description: "2026-02-24 주식 시장에서 158건의 뉴스를 분석했습니
 <a href="https://news.google.com/read/CBMiyAFBVV95cUxNNVZTMk9MaHEzMEdkY1NrUEVnNDVjdk1yd0RUbGtEMDJjZ05TRmVCWDdGZ0FyajBiMFA5Wlh4Z3g4QnRRNF9SOUlNc3Ntc0hWak9DTGNEejJnQ1lRbXRVWUQ2NkFnSkJQWENXdVk0UVBWMC1LS3E3YllWWUxyVUFMTVZEaWE5QXViMmRaV3pzTGc4M2xVWjJibTZ2YWJRVGloU1VfaFFFdUxWRUZKcWc2VnZWenFueXg1R1g3NFRaY2dlY192dnRvZw?hl=en-US&gl=US&ceid=US%3Aen">The S&P 500 is caught in an unusually tight range. Is this bull market resilient or exhausted?</a>
 <a href="https://news.google.com/read/CBMiWkFVX3lxTE1QNWVLTUVSNmUwT21TNTZ0cHR5Zy1BMkM1YWJDUmd3amdPTjNWTm03eEdyTXVvV0JfN1ZyZEtuQlpQUzJxeTBnOE9KQUZ4amlKYk84Unkyc3ZLQdIBWEFVX3lxTFAtMmJTRlEwTVB0Ql9YMm80UHNqR3dVaE96QmRvUmFUcng3SFR1bFZUaEUzLVJpVExPUVZ3YzBpcXZuUkVtNW9PcUxsdExjaGwtMkJWVzNLMHE?hl=ko&gl=KR&ceid=KR%3Ako">[개장시황] 美관세 불확실성·AI 우려에…코스피·코스닥, 상승 출발 후 약세 전환</a>
 <em>...외 29건</em>
-</div></details>
+</details>
 
 
 ### 🏛️ 정치/정책 (38건)
@@ -72,7 +72,7 @@ description: "2026-02-24 주식 시장에서 158건의 뉴스를 분석했습니
 <a href="https://news.google.com/read/CBMipAFBVV95cUxNVjltVUhXaGhvS09kemZuaTdpVUVBaEpTUnFILWdvUk92c3hzYlM2c3dIU1JaSWpRM1hBNE5UVmdBdUNLcHpaUWoxZTkyc1pLd3BtekVyVncxbjhBeDBGMmtHNC1yelVJQVBoQXhYOFVCNU5VVXZZOW5SY2FsNWV2M1NsUHNpczN2UlRjMGdwTjN2N2NuYmM1bjVFby05SkMwaGJnQw?hl=en-US&gl=US&ceid=US%3Aen">S&P 500 Suffers Damage As Tariff, AI Worries Flare Up; Gold Stocks Benefit From Safety Bids</a>
 <a href="https://news.google.com/read/CBMi6AFBVV95cUxObWZrYmctWk9QZjVlejlfTWh6N3l5ZGxBZFRkS0JJSHZGMjA2eWlFSFBXRjlzeWt0YS1XYnhrNnVES1U2US1PbXc0eXRPLTl2bTVhSTNzODVrM0pWMnllN00yM0l4ZVBuOVhKaUNyYWZpellud1JLeWppaTlrRURkRlZZNWVQeU9xUjFocWVTVnplSjROQnhtYWVXMGN1SVBYakIxVEhPN0RsaWdWbnZLWHFGUzJKOVNpUmRuUlpaMnBSTGRuRXFqVThhaDgwdXZmNmlqT1RFZTcwNXFRZjBJMXk3QjN4RXNH?hl=en-US&gl=US&ceid=US%3Aen">Stock market today: Dow, S&P 500, Nasdaq futures rise after AI, tariffs ignite Wall Street's latest sell-off</a>
 <em>...외 20건</em>
-</div></details>
+</details>
 
 
 ### 📊 매크로/금리 (9건)
@@ -94,7 +94,7 @@ When will mortgage rates go down? With Fed rate cuts on hold, 4-year lows may be
 <details><summary>그 외 6건 보기</summary><div class="details-content">
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE5RLWEwMjlhV3hOWkQyZi1TWTFJQjFIbmg5bnl2YjRQdDFyOTcxT2txZjZKSm8zcWxEeEhzQ2M0Y1M5QzltUWExeHVHT3RfVWZyQm51U0FtZjhSc1NoV09Pbk41Z09GN1FWc0E?oc=5">고환율에 발 묶인 한은…2월 기준금리 '6회 연속 동결' 무게 - 컨슈머타임스(Consumertimes)</a>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFB5dFFjZ3FyUG5GeU5lRDBnM3RfTEczMnIwd181UkRaYjAxU1VFSl95Wjc4eVdNbGlfNUhjTTBLVFc0X0FWRlcya1ZoZzhjVzEySW9VQjlqNTNRLUJSYk1FdndWcWhjZHByWnh4LdIBcEFVX3lxTE5WLUEtVkdkYlNjNGt4ZFM5SnhaQUZtN2MtWmpEX0Y3dFVxdmx6UVloWldJd1ZfLU41ZGJVWEswbDhRSEpWdVVNS25JOU85Rm02amtRajBmRU1aNWo5NTkzMmktZEFJaVFjR0NQcEU4emQ?oc=5">금리 6연속 동결 무게…한은, 성장률 전망 올릴까 - 남도일보</a>
-</div></details>
+</details>
 
 
 ### 🤖 AI/기술 (7건)
@@ -115,7 +115,7 @@ When will mortgage rates go down? With Fed rate cuts on hold, 4-year lows may be
 <details><summary>그 외 4건 보기</summary><div class="details-content">
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTFB3aldoeVdBZ2lsMVN2SkVmUEU4UTRDa29QUkxRdXlRcW03aThWWUJaN3dNYWZTUEJhSml5TXlDWjkyUmpUNFBkUldnZG9EMGcwcEpr?oc=5">반도체주 상승 반전…SK하이닉스 황제주 등극·삼성전자 신고가 경신 - 네이트</a>
 <a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE1yemkydzlILWZmRmFSN1VHZGl5YnpTcWdSUXJQa0kwQlByWTdvTm9XejJ5dlRQd3BQLU9UODZ5bHpRVzk2OHVaeFlCS2ZSbTBEUGhHMQ?oc=5">[특징주] 삼전·SK하닉, 반도체 투톱 나란히 신고가 경신 행진 - 이투데이</a>
-</div></details>
+</details>
 
 
 ### 🟠 비트코인 (3건)

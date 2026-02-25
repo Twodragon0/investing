@@ -13,7 +13,7 @@ lang: "ko"
 
 - 총 **70건** 수집
 - 오늘 총 70건의 암호화폐 관련 뉴스가 수집되었습니다. 주요 내용을 정리합니다.
-- - 총 수집된 뉴스: 70건 - 주요 출처: Binance, Google News EN, Google News KR
+- 총 수집된 뉴스: 70건 - 주요 출처: Binance, Google News EN, Google News KR
 
 
 ## 주요 뉴스

@@ -14,15 +14,13 @@ image: "/assets/images/generated/market-snapshot-2026-02-20.png"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">100</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 45</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,747.60</div><div class="stat-label">KOSPI +1.24%</div></div><div class="stat-item"><div class="stat-value">1,157.98</div><div class="stat-label">KOSDAQ -0.46%</div></div></div>
+<div class="stat-item"><div class="stat-value">100</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 45</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,747.60</div><div class="stat-label">KOSPI +1.24%</div></div><div class="stat-item"><div class="stat-value">1,157.98</div><div class="stat-label">KOSDAQ -0.46%</div></div></div>
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:45%"></div></div><span class="theme-count">45건 (45%)</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:22%"></div></div><span class="theme-count">22건 (22%)</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:9%"></div></div><span class="theme-count">9건 (9%)</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:5%"></div></div><span class="theme-count">5건 (5%)</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:2%"></div></div><span class="theme-count">2건 (2%)</span></div>
-</div>
+<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:45%"></div></div><span class="theme-count">45건 (45%)</span></div>
+<span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:22%"></div></div><span class="theme-count">22건 (22%)</span></div>
+<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:9%"></div></div><span class="theme-count">9건 (9%)</span></div>
+<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:5%"></div></div><span class="theme-count">5건 (5%)</span></div>
+<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:2%"></div></div><span class="theme-count">2건 (2%)</span></div>
 
 ![market-snapshot]({{ '/assets/images/generated/market-snapshot-2026-02-20.png' | relative_url }})
 

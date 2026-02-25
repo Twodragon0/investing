@@ -12,13 +12,11 @@ image: "/assets/images/generated/news-briefing-2026-02-22.png"
 
 ---
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:48%"></div></div><span class="theme-count">48건 (48%)</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:20%"></div></div><span class="theme-count">20건 (20%)</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:22%"></div></div><span class="theme-count">22건 (22%)</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:15%"></div></div><span class="theme-count">15건 (15%)</span></div>
-<div class="theme-row"><span class="theme-label">🔷 이더리움</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:13%"></div></div><span class="theme-count">13건 (13%)</span></div>
-</div>
+<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:48%"></div></div><span class="theme-count">48건 (48%)</span></div>
+<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:20%"></div></div><span class="theme-count">20건 (20%)</span></div>
+<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:22%"></div></div><span class="theme-count">22건 (22%)</span></div>
+<span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:15%"></div></div><span class="theme-count">15건 (15%)</span></div>
+<span class="theme-label">🔷 이더리움</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:13%"></div></div><span class="theme-count">13건 (13%)</span></div>
 
 *총 101건 수집*
 
@@ -28,11 +26,11 @@ image: "/assets/images/generated/news-briefing-2026-02-22.png"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">101</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 48</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (37회)</div></div></div>
+<div class="stat-item"><div class="stat-value">101</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 48</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (37회)</div></div></div>
 
-<div class="alert-box alert-info"><strong>암호화폐 시장 **비트코인, 정치/정책** 중심 101건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 48건 수집</li><li>🏛️ <strong>정치/정책</strong> (20건): Russia-linked cryptocurrency services and sanctions evasion Elliptic</li><li>📈 <strong>가격/시장</strong>: 22건 수집</li><li>🏦 <strong>거래소</strong> (15건): After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued? Morningstar</li></ul></div>
+<strong>암호화폐 시장 **비트코인, 정치/정책** 중심 101건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 48건 수집</li><li>🏛️ <strong>정치/정책</strong> (20건): Russia-linked cryptocurrency services and sanctions evasion Elliptic</li><li>📈 <strong>가격/시장</strong>: 22건 수집</li><li>🏦 <strong>거래소</strong> (15건): After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued? Morningstar</li></ul></div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMimAFBVV95cUxNVjFoQ25KUFlISi1meE5jbEw1VDRzYlM0QjNqZERvYlg3SWVmVE1Hd01UdF9SSXpRdWhheWhReG5qdzQwd2VGOVVtS09GaFdFRjJIcDBBWXpTbW1rSVR1cHpiR0VwRC1WRUh6RlB6QkZSaW82MERuXzBtUDJ6Q1UyUjJDV0FvRDNSQ3cxNl9kcUV5Q1VJMWtwTA?hl=en-US&gl=US&ceid=US%3Aen">Crypto Crash Playbook: 2 High-Conviction Buys to Consider Before the Rebound</a></li><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9UWWt2NGRwVEhESnNWZ1FRaE1wbk9BTk1Wdll0b3dvdWgzTXZlRWs3Y1dMcmNNam1UanZrbWZaTWM5T3R4cWwtVmtFMGE0TTVUV1VWZ3FR?oc=5">레버리지가 코인 폭락 트리거 됐다 - 중앙일보</a></li><li><a href="https://cointelegraph.com/news/crypto-retraces-gains-2024-2025-pump?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Crypto market retraces almost all 2024-2025 US election pump gains</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMimAFBVV95cUxNVjFoQ25KUFlISi1meE5jbEw1VDRzYlM0QjNqZERvYlg3SWVmVE1Hd01UdF9SSXpRdWhheWhReG5qdzQwd2VGOVVtS09GaFdFRjJIcDBBWXpTbW1rSVR1cHpiR0VwRC1WRUh6RlB6QkZSaW82MERuXzBtUDJ6Q1UyUjJDV0FvRDNSQ3cxNl9kcUV5Q1VJMWtwTA?hl=en-US&gl=US&ceid=US%3Aen">Crypto Crash Playbook: 2 High-Conviction Buys to Consider Before the Rebound</a></li><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9UWWt2NGRwVEhESnNWZ1FRaE1wbk9BTk1Wdll0b3dvdWgzTXZlRWs3Y1dMcmNNam1UanZrbWZaTWM5T3R4cWwtVmtFMGE0TTVUV1VWZ3FR?oc=5">레버리지가 코인 폭락 트리거 됐다 - 중앙일보</a></li><li><a href="https://cointelegraph.com/news/crypto-retraces-gains-2024-2025-pump?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Crypto market retraces almost all 2024-2025 US election pump gains</a></li></ul></div>
 
 
 
@@ -76,7 +74,7 @@ image: "/assets/images/generated/news-briefing-2026-02-22.png"
 <a href="https://news.google.com/read/CBMitgFBVV95cUxOeGZaUGNQMzctbXFXZGo3dzJuc2ZEMTRtT3RDZXpSTUctcGNQTzRFcDVzWHl5ZTE1SnNkUEp6a1c3dlQxc3pZVXZROTNBeWtzaWViY3VHMHhrZW1nQVRONDB1c3kzZXlCMzZGc1pMTGhEdFF1Y0F0V2hKUzZSUF9LQmI4WEZJa0RaY2oxMHNQd08wQUJnY1hOSmdCdG9JZ2Z1RzhEZEtUZTBTTVZ2eVpQUm5QQkRwdw?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin Trapped in Fragile Trading as Hedge Funds Pivot to Cash</a>
 <a href="https://news.google.com/read/CBMiowFBVV95cUxOdmZfcHlMeDVFODdJVEhwNUczZ2ZqdjZJeDZDU1lXUE9FOWdSMWRhNllqekstZkJVX3BCZi1PRUpPbVhkc0pJOXVGZVBNZ3hhNVVQVWdNM2d5UXpMaVRWSFRPSTZjMVlkNDdxc01yOE51VVJRWldxR2FDeTk0X2tYVHE4YjBISGozd0RtNVB6aFFMOFBTQlRLRDBJc0ptZm4yaWJr?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin and Ethereum are off to their worst start of the year in a decade—but some see a rebound in sight</a>
 <em>...외 30건</em>
-</div></details>
+</details>
 
 
 ### 🏛️ 정치/정책 (20건)
@@ -97,7 +95,7 @@ Russia-linked cryptocurrency services and sanctions evasion Elliptic
 <a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE1CTVZocW83alM0NnhOMWI0RTV3bE9rY3EwQTdaRXR1cHNrSmEybEVnN3ZXaWY3ZDJaZWFtSmFRSU5RV1B5VXJEcFZNM3VfSDlJZnh4MmRod1Y?oc=5">관세 위법, 암호화폐 일제↑ 비트 6.8만달러 회복-리플 1%(상보) - 뉴스1</a>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE81Zy05VHNQczl2NnB3bXNlTkxZc2h6S01ZdjYyRG84emNPSERFRHF4YWFmRlVVUkNZOW5vTHBOX29ZRUVyWVFmaE1NNjVYSnNQQVlKQ2F6WDJyamZndVpOZ1FlVjBqU1l3RVFTWXplaE9mbFU?oc=5">트럼프 관세 인상 발표 후 비트코인 하락했다가 회복 By Investing.com - Investing.com 한국어</a>
 <em>...외 2건</em>
-</div></details>
+</details>
 
 
 ### 📈 가격/시장 (22건)
@@ -117,7 +115,7 @@ Russia-linked cryptocurrency services and sanctions evasion Elliptic
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE5DUlRKMm9GYl8zNHhwaDg3akFWU2Ftby0xQ0pxdlRuSVlWaGFNYnlSQmx5Vmo4cFdNY2tjOGlFcUdGcFhSNHdCM0F2MjFXWFk?oc=5">스트래티지 CEO "비트코인 0달러 안 되면 100만 달러 간다" - v.daum.net</a>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE8xTXpBeDM2YnY0UklONnBJVy1xMTF1alU3dzZJXy1yRUNFM3NWMHVka3QtM0x6NXhYWGstZV9YeGJ3Z1p2eFhLZ2Q0R2QwRVNFckFjSXB3?oc=5">6만 달러 깨지면 끝모를 바닥…네 번째 '크립토 윈터' 위기감 - 중앙일보</a>
 <em>...외 4건</em>
-</div></details>
+</details>
 
 
 ### 🏦 거래소 (15건)
@@ -138,7 +136,7 @@ IoTeX said it is assessing suspicious activity tied to a token safe, coordinatin
 <details><summary>그 외 12건 보기</summary><div class="details-content">
 <a href="https://decrypt.co/358782/bitcoin-sell-pressure-easing-whales-dumping-exchanges">Bitcoin Sell Pressure Is Easing, But Whales Keep Dumping on Exchanges: CryptoQuant</a>
 <a href="https://decrypt.co/358744/south-korean-lawmakers-slam-regulators-bithumb-43-billion-bitcoin-blunder">South Korean Lawmakers Slam Regulators Over Bithumb's $43 Billion Bitcoin Blunder</a>
-</div></details>
+</details>
 
 
 ### 🔷 이더리움 (13건)
@@ -158,7 +156,7 @@ After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued? Morningstar
 <details><summary>그 외 10건 보기</summary><div class="details-content">
 <a href="https://cointelegraph.com/news/bitcoin-price-prediction-retail-user-healthy-crypto-indicator-santiment?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Bitcoin $150K price calls are ‘drying up,’ which is healthy: Santiment</a>
 <a href="https://cointelegraph.com/news/dutch-authorities-call-on-polymarket-arm-to-cease-activities?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Dutch authorities call on Polymarket arm to cease activities</a>
-</div></details>
+</details>
 
 
 

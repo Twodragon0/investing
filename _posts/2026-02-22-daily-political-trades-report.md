@@ -12,11 +12,11 @@ lang: "ko"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">23</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🏛️ 9</div><div class="stat-label">정치/정책</div></div><div class="stat-item"><div class="stat-value">trump</div><div class="stat-label">핫 키워드 (16회)</div></div></div>
+<div class="stat-item"><div class="stat-value">23</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🏛️ 9</div><div class="stat-label">정치/정책</div></div><div class="stat-item"><div class="stat-value">trump</div><div class="stat-label">핫 키워드 (16회)</div></div></div>
 
-<div class="alert-box alert-info"><strong>**정치/정책, 매크로/금리** 관련 23건 수집</strong><ul><li>🏛️ <strong>정치/정책</strong> (9건): 트럼프 "오늘 중으로 10% 글로벌 관세 행정명령 서명"...기존 관세에 추가 v.daum.net</li><li>📊 <strong>매크로/금리</strong> (9건): [금통위poll]①이달 전원일치, 상당 기간 '금리 동결'…이후 향방 갈렸다 아시아경제</li><li>🤖 <strong>AI/기술</strong> (4건): Tariff ruling live coverage: Trump attacks Supreme Court, imposes 10% 'global tariff', then raises i...</li></ul></div>
+<strong>**정치/정책, 매크로/금리** 관련 23건 수집</strong><ul><li>🏛️ <strong>정치/정책</strong> (9건): 트럼프 "오늘 중으로 10% 글로벌 관세 행정명령 서명"...기존 관세에 추가 v.daum.net</li><li>📊 <strong>매크로/금리</strong> (9건): [금통위poll]①이달 전원일치, 상당 기간 '금리 동결'…이후 향방 갈렸다 아시아경제</li><li>🤖 <strong>AI/기술</strong> (4건): Tariff ruling live coverage: Trump attacks Supreme Court, imposes 10% 'global tariff', then raises i...</li></ul></div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFBoam8zR2lDOWJ4SDVJWlRQUFowS2JzZkxDUlhDUmZKWjFNekh2MVlUcWE3T01jeDR5VFNZMUdRdllDajNUdW5FQlZpd2pKM2s?oc=5">트럼프 "오늘 중으로 10% 글로벌 관세 행정명령 서명"...기존 관세에 추가 - v.daum.net</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFBoam8zR2lDOWJ4SDVJWlRQUFowS2JzZkxDUlhDUmZKWjFNekh2MVlUcWE3T01jeDR5VFNZMUdRdllDajNUdW5FQlZpd2pKM2s?oc=5">트럼프 "오늘 중으로 10% 글로벌 관세 행정명령 서명"...기존 관세에 추가 - v.daum.net</a></li></ul></div>
 
 
 

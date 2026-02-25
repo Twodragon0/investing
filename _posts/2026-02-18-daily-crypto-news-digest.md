@@ -12,13 +12,11 @@ image: "/assets/images/generated/news-summary-2026-02-18.png"
 
 ---
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:50%"></div></div><span class="theme-count">57건 (50%)</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:23%"></div></div><span class="theme-count">26건 (23%)</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:14%"></div></div><span class="theme-count">16건 (14%)</span></div>
-<div class="theme-row"><span class="theme-label">🔷 이더리움</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:16%"></div></div><span class="theme-count">18건 (16%)</span></div>
-<div class="theme-row"><span class="theme-label">🟣 DeFi</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:9%"></div></div><span class="theme-count">10건 (9%)</span></div>
-</div>
+<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:50%"></div></div><span class="theme-count">57건 (50%)</span></div>
+<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:23%"></div></div><span class="theme-count">26건 (23%)</span></div>
+<span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:14%"></div></div><span class="theme-count">16건 (14%)</span></div>
+<span class="theme-label">🔷 이더리움</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:16%"></div></div><span class="theme-count">18건 (16%)</span></div>
+<span class="theme-label">🟣 DeFi</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:9%"></div></div><span class="theme-count">10건 (9%)</span></div>
 
 *총 115건 수집*
 
@@ -28,11 +26,11 @@ image: "/assets/images/generated/news-summary-2026-02-18.png"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">115</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 57</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (37회)</div></div></div>
+<div class="stat-item"><div class="stat-value">115</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 57</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (37회)</div></div></div>
 
-<div class="alert-box alert-info"><strong>암호화폐 시장 **비트코인, 가격/시장** 중심 115건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 57건 수집</li><li>📈 <strong>가격/시장</strong>: 26건 수집</li><li>🏦 <strong>거래소</strong> (16건): BitGW.com Takes a Global-First Approach in the Cryptocurrency Exchange Industry USA Today</li><li>🔷 <strong>이더리움</strong> (18건): Ethereum At Risk Of Falling Under $996 (Cryptocurrency:ETH-USD) Seeking Alpha</li></ul></div>
+<strong>암호화폐 시장 **비트코인, 가격/시장** 중심 115건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 57건 수집</li><li>📈 <strong>가격/시장</strong>: 26건 수집</li><li>🏦 <strong>거래소</strong> (16건): BitGW.com Takes a Global-First Approach in the Cryptocurrency Exchange Industry USA Today</li><li>🔷 <strong>이더리움</strong> (18건): Ethereum At Risk Of Falling Under $996 (Cryptocurrency:ETH-USD) Seeking Alpha</li></ul></div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMitwFBVV95cUxPNU9uNnQ5ZXk3WDJUaUVXUzdzR1o5ajZUdTFhb3pVdDB4Q3ZOZVdtT2VBTXJkWnhCTmxidy1wcmZzNjF1SHlQWkNGWlBmR1BxRWZoVW1hcGtHc3ZTNXJWYmg4bV9zRjlqOXh4TkJ6UDlwSmx4R05RZXR2cWxiR2ZxOXh2bUk2d3dfNUxWQkZwU3pBYk9JdXBaSDRxUXpLYjRJaGJxRVI1N1lkVTVPUTExQlVoOGdCVlk?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin's Crash Is Putting Crypto Treasury Stocks To The Test</a></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMkJqRVlOMzViU2xQVWV4cW9DaTZzbHdENlFkSnkxeGNqS3kyRWtQU3gtVlZXcld6TmJIQWtYTmlCWlE2UUhpTHlXbzJMY0hsTmZoMVI4VlpmUmVKajk0bGJJcFpiS0FabUVQQkFsZER4aHhtak02RTBCWjM1MHV6NUZReXpjdjlV?oc=5">비트코인 " 곧 10분의 1 토막 추락"  블룸버그 긴급보고서 - 글로벌이코노믹</a></li><li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFAtbkVjNVNSQW1nV090aDJrSmdXTkFDUEdWaHlhd1VYVlFRakVlMkJHamFiaEIxc1R1bE83dnFmRmJ6VFJYS0JNQm5ROVl2VlE?oc=5">‘폭락’ 비트코인 들어갈까 말까?붕괴 vs 반등 엇갈린 전망 - v.daum.net</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMitwFBVV95cUxPNU9uNnQ5ZXk3WDJUaUVXUzdzR1o5ajZUdTFhb3pVdDB4Q3ZOZVdtT2VBTXJkWnhCTmxidy1wcmZzNjF1SHlQWkNGWlBmR1BxRWZoVW1hcGtHc3ZTNXJWYmg4bV9zRjlqOXh4TkJ6UDlwSmx4R05RZXR2cWxiR2ZxOXh2bUk2d3dfNUxWQkZwU3pBYk9JdXBaSDRxUXpLYjRJaGJxRVI1N1lkVTVPUTExQlVoOGdCVlk?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin's Crash Is Putting Crypto Treasury Stocks To The Test</a></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMkJqRVlOMzViU2xQVWV4cW9DaTZzbHdENlFkSnkxeGNqS3kyRWtQU3gtVlZXcld6TmJIQWtYTmlCWlE2UUhpTHlXbzJMY0hsTmZoMVI4VlpmUmVKajk0bGJJcFpiS0FabUVQQkFsZER4aHhtak02RTBCWjM1MHV6NUZReXpjdjlV?oc=5">비트코인 " 곧 10분의 1 토막 추락"  블룸버그 긴급보고서 - 글로벌이코노믹</a></li><li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFAtbkVjNVNSQW1nV090aDJrSmdXTkFDUEdWaHlhd1VYVlFRakVlMkJHamFiaEIxc1R1bE83dnFmRmJ6VFJYS0JNQm5ROVl2VlE?oc=5">‘폭락’ 비트코인 들어갈까 말까?붕괴 vs 반등 엇갈린 전망 - v.daum.net</a></li></ul></div>
 
 
 ![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-18.png' | relative_url }})
@@ -93,7 +91,7 @@ image: "/assets/images/generated/news-summary-2026-02-18.png"
 <a href="https://news.google.com/read/CBMitwFBVV95cUxPNU9uNnQ5ZXk3WDJUaUVXUzdzR1o5ajZUdTFhb3pVdDB4Q3ZOZVdtT2VBTXJkWnhCTmxidy1wcmZzNjF1SHlQWkNGWlBmR1BxRWZoVW1hcGtHc3ZTNXJWYmg4bV9zRjlqOXh4TkJ6UDlwSmx4R05RZXR2cWxiR2ZxOXh2bUk2d3dfNUxWQkZwU3pBYk9JdXBaSDRxUXpLYjRJaGJxRVI1N1lkVTVPUTExQlVoOGdCVlk?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin's Crash Is Putting Crypto Treasury Stocks To The Test</a>
 <a href="https://news.google.com/read/CBMikgFBVV95cUxOcjJhSTFUVFdXRHlZR0EtenlpLU85UmpmOWRqb1ZMXzdwLVhnWlF4Q3Z6VVI3QnpveDhWQTdJQ3JzQ2xTYU5mZ0VqTUtFbDMtdUtieEJDcWFDa1lHMzBadnJ4XzJSMXpyQ01xVnpPaEVreXQ3UGJXQlY1RkhTTDltME9ZSmZtaHZqTC03Q1FCZ0pwQQ?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin Declines Amid Risk-Off Mood With AI Concerns to The Fore</a>
 <em>외 39건</em>
-</div></details>
+</details>
 
 
 ### 📈 가격/시장 (26건)
@@ -113,7 +111,7 @@ image: "/assets/images/generated/news-summary-2026-02-18.png"
 <a href="https://news.google.com/read/CBMihgNBVV95cUxNeHhtb2xoX1IzengwU0lMQ3Qta2FKZkRNTHNpb0JBQjZpd1BGWGtJc2h6N0hBUXk5Y245Z3VyT1F5MkhIaG1ma3FqRjY1YU9FWmZoam1kSjh6bjFsYzViYzVtMS1ueDB1MHZmTTMxeGcxLVhudGV3djctTHhyYkxzSmVjOVBSbWpmODRoeWZOdGpBVXhCVEdQVnNyMF92a1pYb09taHJpYVFwbFNJZmMyRkRGcVkyZmRjZUVLZ3JiY3VmR0o5aFhxbFlGNFE0dnZTQnY4bmluWk1TU1lwOVNGdkJkVEZxRmwtSVliRkIwWXdqNFJFTXhGSWxBZ0h6WVV2S0R3MV8tc2J6eHota2lwQUpaOVFPTk5BWDF3SGxmcUZLaXZFWHhmYlNmTDBKS0FMTDYzenhuaDNJV0g5VmVUcEh3d1BLSEhlYVE0Y3p0ZHlhVEZ0aE9uV3NaSWpyZjV3RVVJak5TMkxUX3FJYlN6dE0zdEZwQ2ctYTUyd1NuWGlURU1mRmc?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin Price Falls. Why the Crypto Is Struggling to Break Back Above $70,000.</a>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTFBWZWg3UGRGRllmNmZlOWRGYkpsRHI4QlBzRWQ0S25IY05sY3V1VV9DLUFoX0VidTBZUW9jX1lsTnpuYTFNT2FDSWpEajFJZlltTlRn?oc=5">"비트코인 1만달러까지 추락, 미국 침체에 빠트릴 것"-코인데스크 - 네이트</a>
 <em>외 8건</em>
-</div></details>
+</details>
 
 
 ### 🏦 거래소 (16건)
@@ -134,7 +132,7 @@ As crypto industry expands, U.S. slashes office examining dirty money safeguards
 <details><summary>그 외 13건 보기</summary><div class="details-content">
 <a href="https://decrypt.co/358325/gemini-stock-dives-winklevoss-crypto-exchange-dumps-executives">Gemini Stock Dives as Winklevoss-Led Crypto Exchange Dumps Executives</a>
 <a href="https://cointelegraph.com/news/kraken-integrates-with-ice-chat-to-expand-institutional-otc-access?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Kraken integrates with ICE Chat to expand institutional OTC access</a>
-</div></details>
+</details>
 
 
 ### 🔷 이더리움 (18건)
@@ -154,7 +152,7 @@ Ethereum At Risk Of Falling Under $996 (Cryptocurrency:ETH-USD) Seeking Alpha
 <details><summary>그 외 15건 보기</summary><div class="details-content">
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE8yc19lSmZKM2M2OTNkcTl4OFNiVTE0UHpIb25rX1EzQkwzVWlwRElmaUdjaklCdDBud1dxZGNCbWVkazRHUjVfNi1JXzV6Y29oczVxYXNTUGppSFJPSjdJSTdzRzYxUWQ5N3BMcXRlZG_SAXNBVV95cUxPcU9SNXZzTS1URWtzRXVieW5OMWRxUVd2Uk14Tl81X0QyMlZJNm9GV1pMSEdNQXk4SGFaQzBzYUQwQzd6U0xSVzkyOEFUaklCV19RR21KTGtoV24yNmJTTDZrU1d5NXVYbl9kNzUwX1dqbGNV?oc=5">장중 암호화폐비트코인 '하락', 이더리움 '소폭 상승' - 초이스경제</a>
 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE9xRjUxbC15RWZDckZFd2dpbnl3WFg0a3VtbGVRWl9oREVfemJFSzV3Z3ZmNFcwRHQ5ODFVdEZSWkd1Yl94Q0hYcmw2NHpKRHV6dk1fMWZFeHUzclVmNTJMRFFuNnotbV9ISExrZTZVWQ?oc=5">[가상화폐 시세] 비트코인 1억원선 이어져엑스알피 2100원선, 이더리움 290만원선 거래 - 이코노뉴스</a>
-</div></details>
+</details>
 
 
 ### 🟣 DeFi (10건)
@@ -176,7 +174,7 @@ ZeroLend cited an inability to "generate sustainable revenue" as it became the l
 <details><summary>그 외 7건 보기</summary><div class="details-content">
 <a href="https://cointelegraph.com/news/ether-bulls-target-2-5k-as-staking-etf-launch-rwa-market-cap-reflect-growth?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Ether bulls target $2.5K as staking ETF launch, RWA market cap reflect growth</a>
 <a href="https://cointelegraph.com/news/bridge-stripe-occ-approval-national-trust-bank?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Stripe-owned Bridge gets OCC conditional approval for national bank charter</a>
-</div></details>
+</details>
 
 
 
@@ -223,7 +221,7 @@ ZeroLend cited an inability to "generate sustainable revenue" as it became the l
 9. [New Epstein records show payments, crypto talks with former Marblehead resident](https://news.google.com/read/CBMivAFBVV95cUxOamExUkpZSk9hbTlaSmZLWEpYZUNyR2RKZWhlbXNaVU5wOWY2aW92MU1sSDVDSXlNN2wwV0EyYW5YOVIyWkx3UnRUbG4wdUJkZ2FBNXp6elJPTl9FWXNqdG5oSmRuLUdWWUt5LUE4RlBYY2p4UktVS1NjNmxEVl9ZTl9pSm9jRlAtckVVdGhZX29LcUc0ZlQ0YUFXbXRUNlRuNlNyTFNxazg2MG9ndHlUdHk4MWh6N2QyOG1Dcw?hl=en-US&gl=US&ceid=US%3Aen) - Google News
 10. [Stablecoin Payments Show Up at Checkout Despite Crypto Markets Slump](https://news.google.com/read/CBMisgFBVV95cUxNdEFPRU90bzUtQ1RpR1Ywb2t6NmI1czBEVFk1ajFHcVZKZzJ4a1Q2dGZ1b2h3aXZQbnFCVzVsaUVTRkJkaXJOMDFvbmJ1SXlNN1ZzRmdIc3MxV042Unp4RHlfNjJBUmk2RUktM1ZKWmRMQ1hSamowaWRRc1RhX0RLQXJneFBKelB1S08xeTA1S0JFUHdlNko4MVVlYmtYV1RwLW5YcWtUMHBDZUdfR2lLdWZR?hl=en-US&gl=US&ceid=US%3Aen) - Google News
 
-</div></details>
+</details>
 
 ---
 

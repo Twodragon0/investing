@@ -13,18 +13,16 @@ image: "/assets/images/generated/source-distribution-2026-02-18.png"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">36</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🏛️ 8</div><div class="stat-label">정치/정책</div></div></div>
+<div class="stat-item"><div class="stat-value">36</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🏛️ 8</div><div class="stat-label">정치/정책</div></div></div>
 
-<div class="alert-box alert-info"><strong>소셜 미디어 **정치/정책, 매크로/금리** 관련 36건 포착</strong><ul><li>🏛️ <strong>정치/정책</strong> (8건): President Trump suggested "we might pay off the US $35 trillion debt using cryptocurrency."Sponsored</li><li>📊 <strong>매크로/금리</strong> (9건): JAMES LAVISH: “The Federal Reserve manipulating the money supply and access to capital has absolutel</li><li>🟠 <strong>비트코인</strong> (4건): Polymarket rolls out an “Up or Down” Bitcoin marketA new BTC prediction market has gone live, settli</li><li>🏦 <strong>거래소</strong> (6건): Whales sent roughly 57,000 $BTC to exchanges over the past four days, according to recent on-chain d</li></ul></div>
+<strong>소셜 미디어 **정치/정책, 매크로/금리** 관련 36건 포착</strong><ul><li>🏛️ <strong>정치/정책</strong> (8건): President Trump suggested "we might pay off the US $35 trillion debt using cryptocurrency."Sponsored</li><li>📊 <strong>매크로/금리</strong> (9건): JAMES LAVISH: “The Federal Reserve manipulating the money supply and access to capital has absolutel</li><li>🟠 <strong>비트코인</strong> (4건): Polymarket rolls out an “Up or Down” Bitcoin marketA new BTC prediction market has gone live, settli</li><li>🏦 <strong>거래소</strong> (6건): Whales sent roughly 57,000 $BTC to exchanges over the past four days, according to recent on-chain d</li></ul></div>
 
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:22%"></div></div><span class="theme-count">8건 (22%)</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:25%"></div></div><span class="theme-count">9건 (25%)</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:11%"></div></div><span class="theme-count">4건 (11%)</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:17%"></div></div><span class="theme-count">6건 (17%)</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:25%"></div></div><span class="theme-count">9건 (25%)</span></div>
-</div>
+<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:22%"></div></div><span class="theme-count">8건 (22%)</span></div>
+<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:25%"></div></div><span class="theme-count">9건 (25%)</span></div>
+<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:11%"></div></div><span class="theme-count">4건 (11%)</span></div>
+<span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:17%"></div></div><span class="theme-count">6건 (17%)</span></div>
+<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:25%"></div></div><span class="theme-count">9건 (25%)</span></div>
 
 *총 36건 수집*
 
@@ -191,7 +189,6 @@ The Trump Tariffs Are Having a Noticeable Impact on the Stock Market and It's Ra
 > *본 소셜 동향 분석은 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*
 
 <details><summary>참고 링크 (10건)</summary>
-<div class="details-content">
 
 1. [[Telegram] Polymarket rolls out an “Up or Down” Bitcoin marketA new BTC predicti](https://t.me/crypto/3500) - Telegram @crypto
 2. [[Telegram] "why didn’t you buy bitcoin in 2010”me in 2010:Sponsored by @rainbetc](https://t.me/crypto/3501) - Telegram @crypto
@@ -204,7 +201,7 @@ The Trump Tariffs Are Having a Noticeable Impact on the Stock Market and It's Ra
 9. [The Trump Tariffs Are Having a Noticeable Impact on the Stock Market and It's Ra](https://news.google.com/rss/articles/CBMimAFBVV95cUxOcVBzVUEwZ3dkclJodnJ3T1hpdGxGSGRqVGdQU3lobkZHeElTemtsODdMRXVCRE5MY29ETDNmT2U4VjFDSUNURHAzZFVzbEhQb203RllpamtuWFpSM3c5MjlkOUp2SloycXEwVGF4anZ0eUJWX09tVVZma25mVm0xVmlMalpYbFkyT3kzRHFpeXA1MktNc29NcA?oc=5) - Trump Economy
 10. [[정책포커스] 이재명 정부에 바라는 정책금융경제(19) 재정의 지속가능성 높이고 맞춤형 지원도 배려해야 - 시사캐스트](https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA2Q1ZhQl9nSmlSQkNZWWxJUWlnOUl3ZVZfa1NhNUgwai1oRV9VV1B6UWczOTJfckd0bHEyS1dPQ3p3VTNHWlBhUGtzTXBrMnZzTDl6NHlWZmhrZFpnWFRoOXA4MFhjbzQ?oc=5) - 이재명 경제정책
 
-</div></details>
+</details>
 
 ---
 **데이터 수집 시각**: 2026-02-18 03:24 UTC

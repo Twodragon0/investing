@@ -13,13 +13,11 @@ lang: "ko"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">10</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📊 4</div><div class="stat-label">매크로/금리</div></div><div class="stat-item"><div class="stat-value">fed</div><div class="stat-label">핫 키워드 (8회)</div></div></div>
+<div class="stat-item"><div class="stat-value">10</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📊 4</div><div class="stat-label">매크로/금리</div></div><div class="stat-item"><div class="stat-value">fed</div><div class="stat-label">핫 키워드 (8회)</div></div></div>
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:40%"></div></div><span class="theme-count">4건 (40%)</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:40%"></div></div><span class="theme-count">4건 (40%)</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:20%"></div></div><span class="theme-count">2건 (20%)</span></div>
-</div>
+<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:40%"></div></div><span class="theme-count">4건 (40%)</span></div>
+<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:40%"></div></div><span class="theme-count">4건 (40%)</span></div>
+<span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:20%"></div></div><span class="theme-count">2건 (20%)</span></div>
 
 ---
 

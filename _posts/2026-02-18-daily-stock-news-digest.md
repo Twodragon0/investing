@@ -13,20 +13,18 @@ image: "/assets/images/generated/market-snapshot-2026-02-18.png"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">129</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 30</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,507.01</div><div class="stat-label">KOSPI -0.28%</div></div><div class="stat-item"><div class="stat-value">1,106.08</div><div class="stat-label">KOSDAQ -1.77%</div></div></div>
+<div class="stat-item"><div class="stat-value">129</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 30</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,507.01</div><div class="stat-label">KOSPI -0.28%</div></div><div class="stat-item"><div class="stat-value">1,106.08</div><div class="stat-label">KOSDAQ -1.77%</div></div></div>
 
-<div class="alert-box alert-info"><strong>주식 시장 **가격/시장, AI/기술** 부각 129건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 30건 수집</li><li>🤖 <strong>AI/기술</strong>: 48건 수집</li><li>📊 <strong>매크로/금리</strong>: 7건 수집</li><li>🟠 <strong>비트코인</strong> (8건): Should You Buy the Vanguard S&P 500 ETF With the Stock Market Near a Record High? History Offers a C</li></ul></div>
+<strong>주식 시장 **가격/시장, AI/기술** 부각 129건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 30건 수집</li><li>🤖 <strong>AI/기술</strong>: 48건 수집</li><li>📊 <strong>매크로/금리</strong>: 7건 수집</li><li>🟠 <strong>비트코인</strong> (8건): Should You Buy the Vanguard S&P 500 ETF With the Stock Market Near a Record High? History Offers a C</li></ul></div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까</a></li></ul></div>
 
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:23%"></div></div><span class="theme-count">30건 (23%)</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:37%"></div></div><span class="theme-count">48건 (37%)</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:5%"></div></div><span class="theme-count">7건 (5%)</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:6%"></div></div><span class="theme-count">8건 (6%)</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:2%"></div></div><span class="theme-count">3건 (2%)</span></div>
-</div>
+<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:23%"></div></div><span class="theme-count">30건 (23%)</span></div>
+<span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:37%"></div></div><span class="theme-count">48건 (37%)</span></div>
+<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:5%"></div></div><span class="theme-count">7건 (5%)</span></div>
+<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:6%"></div></div><span class="theme-count">8건 (6%)</span></div>
+<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:2%"></div></div><span class="theme-count">3건 (2%)</span></div>
 
 *총 129건 수집*
 
@@ -93,7 +91,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-18.png"
 <a href="https://news.google.com/read/CBMiiwFBVV95cUxNYlNnLWN6cUhyMl9EeU5kX2lKR0k2TzZHYndFVUt2MXhfN0p1SF80VmxiYU13VWR2aThoOEw1RGdfMTNaakNGRkJ2M1gzMjN0WllwWFBQZ3UydUpTeTVUZUx1YzRLdEJYSWd1SndzUTBndkVwWnVONExHSkFJd0hYWVd1MzFPMzJ3UG1B?hl=ko&gl=KR&ceid=KR%3Ako">설 연휴 이후 시장, 흔들리지 않기 위한 코스피·코스닥 기준 정리</a>
 <a href="https://news.google.com/read/CBMiW0FVX3lxTE1fMHJPcGdEYmR6MjJDazhheGN0dzRIckIwdDgyMXU0TnlpSHBpdlhyS1BBOS00U2ZneU1tYUFKak9TcFhFYWZBWmpLWVFRanFYZ3VrNGZWUUZCZGM?hl=ko&gl=KR&ceid=KR%3Ako">질주하는 코스피·코스닥·금값언제까지 달릴까? [뉴스in뉴스]</a>
 <em>외 12건</em>
-</div></details>
+</details>
 
 
 ### 🤖 AI/기술 (48건)
@@ -113,7 +111,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-18.png"
 <a href="https://news.google.com/read/CBMivANBVV95cUxPdG5ubmFIS0hpNVZXUnFlNHhMOXUzdDByQWJQblZPQThJc3owYjB3OXBTU2Z6bjNNNk16M0ZnbE85WE9ndlBjVDVPS1E3emRSaW5hRkJyR0MteFh2VmZUUThsb1RhSmNwWFJrWlhpUWQ3aUliR1dvV3dNSmFmRndQZUpid2xBcS1QajVmMHdJcTNmMk9oS3o1cWp6a3F1d21lRmtBWGpVamFJbThKZzM3bFR6VWRsZHRRV0JPX05OUm4zdFpDSV96X0RZcHdBZ2NQcWJBeWt5Q1RrRG53bVhfUzB0anBKYXRPRjNoTTFtTk5RYU9RTmo3TmlFNUVaWWZzYnBVZHBPQnBwV2Z0eTNCWTRiaGwyYXpoeEk2MFBfOHMyR3BwWkN0VGpCNFhDeHEzLXgzR3djaDdOcVZxMGdIX1o4dThXWUN2ZzE1SWpMdGt5WU1hbkQ0ZE4xVFNkQi05VDdDaVhQUmU4bTVmMUQxSERHZDBZZndZakNoa29zcE9VdEc4U2EyeDdVWC1zLWtIbWhuOUpUamZRcU53R3h2RUNvRjlGYUdmTVRzakNxSmxqQ3ZYTUlCdU1rb1E?hl=en-US&gl=US&ceid=US%3Aen">OpenAI, SpaceX and other IPOs could break the S&P 500, Jeremy Grantham says</a>
 <a href="https://news.google.com/read/CBMitAFBVV95cUxPSEY3dGlSQ1V2dUxmclZXSVRKclBvZ19aSW1vR1lYWUxQNno1b2JqTTNndGRJUmQxUW1ZakpqSmx0ejNMdzg2Z2NlcHAxcnE5RXpQclJRUElqTFlPVXZ1ZGFObWV3ZFhNSWJTYTVPYWJqME5CTEhUYnloeEhWVlJkR1Vhb29EVWtpUGlwS0RwRTcwenB5NTEzcGVINlc0VjZSQ2NBV3BQOXUzZVhpMU42WTl3MFQ?hl=en-US&gl=US&ceid=US%3Aen">US Stocks Waver As Dip Buyers Wade In After Week of AI Wreckage</a>
 <em>외 30건</em>
-</div></details>
+</details>
 
 
 ### 📊 매크로/금리 (7건)
@@ -132,7 +130,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-18.png"
 <details><summary>그 외 4건 보기</summary><div class="details-content">
 <a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNRllkUW9ZVy1GdWoxdGRxaHRIcUNHN2ZvMG1NdkdmSFRSYnBPTlVmU2hRV3hoUmNESmNaX3BYZUNnU2VYSWE0dzRjYU1jQlp0UGdKV1M2V0JwcHdpanlpb3NhdzlnRVRaQzBfRW0tV1BpRVZNNTdVN2ZpdUxKQUtCUUU1N2RTeWhhak4yUFZmN0o?oc=5">Stock Market Today: Stocks Eke Out Gains in Volatile Session To Start Week of Inflation, GDP Data - Investopedia</a>
 <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTFBuZmJtOEdLVG11bmRRaUdKSlQyN3ZxU080SjBPME9YR1h1akl1MWRSN3ZfVm9TOWRsNnZkaTd5bE9zU202UVlrcHpNRTlqMDltQ0RsRE9mU0JTNU9TRWlQNU9vbHluQ1NGMk90b3Rxb2xhOGFKMy1F0gF8QVVfeXFMT1M3VmlvNmhmMk5JTTBhMnhuWUVHMWRjZk12NTRzbG9OUk53LXNQUkh1WS1sc3FXWnJPMkIwREp1N1lwLUlnZV9CMFU5QUp0ZWVRYW5KZXAxdVE3OXkzMFBsaVF3dkNPT0RQUlp3WTNhSERyMEx5WVlSeDh6Sg?oc=5">Stock futures are little changed as traders await Fed meeting minutes: Live updates - CNBC</a>
-</div></details>
+</details>
 
 
 ### 🟠 비트코인 (8건)
@@ -152,7 +150,7 @@ Should You Buy the Vanguard S&P 500 ETF With the Stock Market Near a Record High
 <details><summary>그 외 5건 보기</summary><div class="details-content">
 <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPLWNXdjNsS2QxSHhBZXBBR3M4TUFLWEdiekV2UWU4YkhabGc4T1c1U0FUQnJMWG82SVJRMjFaR1VTQVlDTHNvUkNpd0Y4dExVQVYyYUZVOU1wWWpwNHI5S05ZRUI3VW1ueWFGRGtFMnM1UHhqUDI1Y3ZHek1YS0k3d2laY0dicFNFSWFjS3AzZHhaOVVqbHBKamNQVjFRaUxuYk10MXFvZ1JvbjgzNDNCb2h3SkhYX0k?oc=5">Stock Market Live February 17, 2026: S&P 500 (ETF) Fighting to Go Green Again - 24/7 Wall St.</a>
 <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZGduX0xXbC1VdmtCLXQ1dmZhWENPRkx2M3RyMGUyaUVzbmZ3OG1jeWw1T3ViaGUtbTlQenZSYzQ4bjdVcjdFczc5R3dSSFY3djJ0V0NFYV9HSEVUM2VZWUZKUURITGk5UWZXNGRZWWNtOGsxLWFMaFVRc1dqaGZ2WElzNVVhcHhLWFdpRWpNQmcyUW45MjkyNHQxRVdwT2dMRTNmVFVZQm1pemNkc2hmMm5pbHNNZ2Z4?oc=5">Should You Buy the Vanguard S&P 500 ETF With the Stock Market Near a Record High? History Offers a Clear Answer - Nasdaq</a>
-</div></details>
+</details>
 
 
 ### 🏛️ 정치/정책 (3건)
@@ -229,7 +227,6 @@ The recommendation came as dovish Prime Minister Sanae Takaichi's landslide elec
 
 
 <details><summary>참고 링크 (15건)</summary>
-<div class="details-content">
 
 1. [S&P 500 closes little changed Tuesday as declines in software shares weigh on in](https://news.google.com/read/CBMid0FVX3lxTFB0SlkwNmpSdnJmcEVtQVdMN1psajlqLWNUNDRDVnlQeE1vSVMweW1rMFNnQXZYb044MnBUX1NFX045VFBtNjhPanJUNFFPM194MnFSV3RoQ0lrY0FETktZQ2tyUndBT2hpc0ZkQUVXTkZFZWx1NjVz0gF8QVVfeXFMT2wwYTR1MEg1ZXRldWNnMk9hZTZVRVRfT1lFWWVzUkI5dGVWaVFiM2hLaGxydGs0N1BaZnJWMl8xV0dDYUJFQm1iV2t6UU1Ud3pvOVlvMklEem45Vml6b0hJbVd1WmtjTU9UVGExVm1aa2c3bms0aGQ4MjBqag?hl=en-US&gl=US&ceid=US%3Aen) - Google News
 2. [Stock market today: Dow, S&P 500, Nasdaq end higher in volatile trading day as A](https://news.google.com/read/CBMi0wFBVV95cUxOQnZCTzdiOU56MXB5NlRndko2TUtnaVMwTjZIcERSRDJUTkJVR0RaTk4wSWJRZ0p4c0lmSkUxLXIyb0xGa1NXbllzQlZrY1dFQ2xyU3owMkNaZktyOFdScld3UWFHcmpudWpqQmFVa1hDRHMzcmNYMldHVHZmQ1lIU3JxYzMxWTdKY3oyWURGejE3RnFFdHFrTi1YZ2xSa0IydzdmdDFyS204aFg5b3JTU0dlS2NIS19zSGpHbklhZXExLVhNRmpJTjNPZTVlWGFrS3E4?hl=en-US&gl=US&ceid=US%3Aen) - Google News
@@ -247,7 +244,7 @@ The recommendation came as dovish Prime Minister Sanae Takaichi's landslide elec
 14. [The Stock Market Is Doing Something Witnessed Only 2 Times in 154 Years -- and H](https://news.google.com/read/CBMijAFBVV95cUxNNUtpMnpOYzg4ckVJU2FIZ3I2UHdpTVhScWhyOEZTMG1ORmNWNnU3RFAtM18yNFVjTGRSVE5fR0FrLWZudHFwNVoyUFZCdWhUWmZrOGJYRkozT0lBcTVmWnpXREpTR2lVeWg3eWMzVDVnYi1fczVDbGl4d1dCcjVoQXYtZE1uVFZXR0FLTg?hl=en-US&gl=US&ceid=US%3Aen) - Google News
 15. [US Stock Market Today: S&P 500 Futures Slip As Rate Cut Timing Questions Grow](https://news.google.com/read/CBMi1gFBVV95cUxNU1VfNGFUbU82Zi1TUVRBRmJDa00yZ0h6S0hWOFkzSjhDRHhBZlZkcUVWSGF1MklDN2VDWTBRdkJlbzVaeXllZy1CTWFBeEJkOWRfVmU0RmFIbm1hcEVzRHBMS1RuY2dGTzhfZEdKMVdkT2dReWU2MmtCNXZRaDd0OXlxdGhrNnhBUi1kSG5rMUJKanBVLVhab0ZvODY4R2lZaDRHc2xEVXctUzFJQUFKXzBvWkt1R3Jxd05wR2FLcEpIN213U3FleDZxNThUeTdiR2huM2dR?hl=en-US&gl=US&ceid=US%3Aen) - Google News
 
-</div></details>
+</details>
 
 
 ---

@@ -13,11 +13,11 @@ image: "/assets/images/generated/regulatory-summary-2026-02-21.png"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">31</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 21</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">24</div><div class="stat-label">한국</div></div></div>
+<div class="stat-item"><div class="stat-value">31</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 21</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">24</div><div class="stat-label">한국</div></div></div>
 
-<div class="alert-box alert-info"><strong>글로벌 규제 **규제/정책, 거래소** 관련 31건 수집</strong><ul><li>🔵 <strong>규제/정책</strong> (21건): SEC 스테이블코인 FAQ, 지배구조 개선 논의 등 규제 이슈 집중</li><li>🏦 <strong>거래소</strong> (8건): 조각투자 장외거래중개업 예비인가 등 거래소 관련 공지</li><li>📈 <strong>가격/시장</strong> (23건): FATF 총회 논의와 금융위 보도자료 다수</li><li>🟠 <strong>비트코인</strong> (1건): 단일종목 레버리지 ETF 관련 정부 설명</li></ul></div>
+<strong>글로벌 규제 **규제/정책, 거래소** 관련 31건 수집</strong><ul><li>🔵 <strong>규제/정책</strong> (21건): SEC 스테이블코인 FAQ, 지배구조 개선 논의 등 규제 이슈 집중</li><li>🏦 <strong>거래소</strong> (8건): 조각투자 장외거래중개업 예비인가 등 거래소 관련 공지</li><li>📈 <strong>가격/시장</strong> (23건): FATF 총회 논의와 금융위 보도자료 다수</li><li>🟠 <strong>비트코인</strong> (1건): 단일종목 레버리지 ETF 관련 정부 설명</li></ul></div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://www.fsc.go.kr/no010101/86297">다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://www.fsc.go.kr/no010101/86297">다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최</a></li></ul></div>
 
 
 
@@ -46,13 +46,11 @@ image: "/assets/images/generated/regulatory-summary-2026-02-21.png"
 - **미국**: 1건
 
 ---
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:68%"></div></div><span class="theme-count">21건 (68%)</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:26%"></div></div><span class="theme-count">8건 (26%)</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:74%"></div></div><span class="theme-count">23건 (74%)</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:3%"></div></div><span class="theme-count">1건 (3%)</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:13%"></div></div><span class="theme-count">4건 (13%)</span></div>
-</div>
+<span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:68%"></div></div><span class="theme-count">21건 (68%)</span></div>
+<span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:26%"></div></div><span class="theme-count">8건 (26%)</span></div>
+<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:74%"></div></div><span class="theme-count">23건 (74%)</span></div>
+<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:3%"></div></div><span class="theme-count">1건 (3%)</span></div>
+<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:13%"></div></div><span class="theme-count">4건 (13%)</span></div>
 
 *총 31건 수집*
 

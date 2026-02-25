@@ -12,9 +12,9 @@ lang: "ko"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">4</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📊 3</div><div class="stat-label">매크로/금리</div></div><div class="stat-item"><div class="stat-value">fed</div><div class="stat-label">핫 키워드 (2회)</div></div></div>
+<div class="stat-item"><div class="stat-value">4</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📊 3</div><div class="stat-label">매크로/금리</div></div><div class="stat-item"><div class="stat-value">fed</div><div class="stat-label">핫 키워드 (2회)</div></div></div>
 
-<div class="alert-box alert-info"><strong>**매크로/금리** 관련 4건 수집</strong><ul><li>📊 <strong>매크로/금리</strong> (3건): 2월 기준금리 동결 무게모건스탠리 “성장률 전망치 높일 것” 뉴스투데이</li></ul></div>
+<strong>**매크로/금리** 관련 4건 수집</strong><ul><li>📊 <strong>매크로/금리</strong> (3건): 2월 기준금리 동결 무게모건스탠리 “성장률 전망치 높일 것” 뉴스투데이</li></ul></div>
 
 
 ---
@@ -101,7 +101,7 @@ Rate Cuts Watch: FOMC Minutes, PCE Inflation and Jobs Data To Move Crypto CCN.co
 3. [When’s the next Federal Reserve meeting? Latest news — and what to expect - AOL.](https://news.google.com/rss/articles/CBMigAFBVV95cUxPOURaQ3hIZXdhRFo4dzNNQUxXakRhWXgxSnBMbm5ubW84U0tURHY5NnNBQU56cWxqVldnUl9TbFA5dG5abkgyRU91ZlNuMVRNN29wem1IVXZNa3lNQnlNZXZfcEhLMGE3eS1fS1ZVa0hicndZTnVBTVp0MDJMZTNDcg?oc=5) - Fed Rate Decision
 4. [Rate Cuts Watch: FOMC Minutes, PCE Inflation and Jobs Data To Move Crypto - CCN.](https://news.google.com/rss/articles/CBMimAFBVV95cUxQVGhYaFNaVldtM1VkUjBaTEVPSllvYkgxeWpHOXFmRlFPVUtyOE4ydnRvZVNmSDhLMXBDeHFYeGRPSnQzSUJxalJaUmdzT04xUkJLTWRmUUVvVUlTQlp1dTNmZ3NSRnBVYkF4NnYxc1o0MXVfem9FLVlyME9GWkNsakY5Z3IxSmtIR1NTZ0g0NTNlR2FmUzR0LQ?oc=5) - Fed Rate Decision
 
-</div></details>
+</details>
 
 ---
 **데이터 수집 시각**: 2026-02-16 13:57 UTC

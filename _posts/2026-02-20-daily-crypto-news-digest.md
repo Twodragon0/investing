@@ -14,15 +14,13 @@ image: "/assets/images/generated/news-summary-2026-02-20.png"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">72</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 29</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (19회)</div></div></div>
+<div class="stat-item"><div class="stat-value">72</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 29</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (19회)</div></div></div>
 
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:40%"></div></div><span class="theme-count">29건 (40%)</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:21%"></div></div><span class="theme-count">15건 (21%)</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:10%"></div></div><span class="theme-count">7건 (10%)</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:15%"></div></div><span class="theme-count">11건 (15%)</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:10%"></div></div><span class="theme-count">7건 (10%)</span></div>
-</div>
+<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:40%"></div></div><span class="theme-count">29건 (40%)</span></div>
+<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:21%"></div></div><span class="theme-count">15건 (21%)</span></div>
+<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:10%"></div></div><span class="theme-count">7건 (10%)</span></div>
+<span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:15%"></div></div><span class="theme-count">11건 (15%)</span></div>
+<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:10%"></div></div><span class="theme-count">7건 (10%)</span></div>
 
 ![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-20.png' | relative_url }})
 

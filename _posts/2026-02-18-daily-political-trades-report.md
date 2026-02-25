@@ -12,7 +12,7 @@ lang: "ko"
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">4</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">insider</div><div class="stat-label">핫 키워드 (4회)</div></div></div>
+<div class="stat-item"><div class="stat-value">4</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">insider</div><div class="stat-label">핫 키워드 (4회)</div></div></div>
 
 
 ---
@@ -96,7 +96,7 @@ ServiceNow (NYSE: NOW) CEO to buy $3M in shares as 10b5-1 plans end Stock Titan
 3. [Insider plans 6,000-share Rule 144 sale in Ibex (IBEX) - Stock Titan](https://news.google.com/rss/articles/CBMijgFBVV95cUxNbjZUZFIyYmF4QVJuTjM3TzFvUEZjZWxZMGxXZHlrZWZoTkV2VTlzODRCdTBtMzhvTjdwVXMwdnB5VnpWeUlkOEloeXBKMHJWQkFoRkV0Z0d3WDd6YzlsRy1lSEdHWUY2M0c5b0t6dDN5WDZza3MzVE9nWmR1SlpNclRjb0RaT004YlpDOG5n?oc=5) - SEC Insider Trading
 4. [ServiceNow (NYSE: NOW) CEO to buy $3M in shares as 10b5-1 plans end - Stock Tita](https://news.google.com/rss/articles/CBMipgFBVV95cUxNWGY0WWlmXy1HZ1p5OHcwMzZpUG5DaXRYTXFmOWxqNWMwdlM0VWRfemRqUnFiemYwQzlpdnBHWFF4d2ZzcVItMGJ5SzVSSnJKVG96TzdGTzRvY0ZTaGlTNWZkNFFhYkdUbVQwYUhQMVl5RkZwTWc2RXpmanU3N0JZMEVvRnhLclhqMEgyb2pXZ0ltR21UbkpYamd2RExsQnNwdlNFZG1R?oc=5) - SEC Insider Trading
 
-</div></details>
+</details>
 
 ---
 **데이터 수집 시각**: 2026-02-18 13:59 UTC
