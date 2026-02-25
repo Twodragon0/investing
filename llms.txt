@@ -1,0 +1,48 @@
+---
+layout: null
+---
+# Investing Dragon
+
+> Crypto & Stock News Aggregation and Trading Journal
+
+Investing Dragon은 암호화폐 및 주식 시장의 뉴스를 자동으로 수집하고 분석하는 투자 정보 플랫폼입니다.
+GitHub Actions를 통해 24시간 자동으로 운영되며, 다양한 소스에서 최신 정보를 제공합니다.
+
+- Site: {{ site.url }}
+- Language: Korean (ko)
+- Timezone: Asia/Seoul
+- GitHub: https://github.com/Twodragon0/investing
+
+## Categories
+
+- [암호화폐 뉴스]({{ site.url }}/crypto-news/): CryptoPanic, NewsAPI, Google News RSS 등 다중 소스 자동 수집
+- [주식 시장 뉴스]({{ site.url }}/stock-news/): Yahoo Finance, NASDAQ, Fed/Bond, 한국 시장 뉴스
+- [시장 분석]({{ site.url }}/market-analysis/): 일일 종합 리포트 (미국/한국/암호화폐/매크로)
+- [보안 알림]({{ site.url }}/security-alerts/): Rekt News, 블록체인 해킹/취약점 자동 수집
+- [규제 동향]({{ site.url }}/regulatory-news/): 글로벌 규제/정책 뉴스
+- [정치인 거래]({{ site.url }}/political-trades/): 정치인 주식/암호화폐 거래 내역
+- [암호화폐 일지]({{ site.url }}/crypto-journal/): 암호화폐 매매 기록 및 손익 분석
+- [주식 일지]({{ site.url }}/stock-journal/): 주식 매매 기록 및 손익 분석
+
+## Data Sources
+
+| Source | Type | Update Cycle |
+|--------|------|-------------|
+| CryptoPanic | 암호화폐 뉴스 | 6시간 |
+| NewsAPI | 뉴스 전반 | 6시간 |
+| Google News RSS | 뉴스 (EN/KR, 20+ 피드) | 6~12시간 |
+| Yahoo Finance | 주식 데이터 | 6시간 |
+| yfinance | 미국/한국 시장 데이터 | 1일 |
+| Reddit | 크립토 커뮤니티 | 12시간 |
+| Rekt News | 보안 사고 | 6시간 |
+| CoinGecko | 크립토 가격/시총 | 1일 |
+| CoinMarketCap | 시가총액 순위 | 6시간 |
+| Fear & Greed Index | 시장 심리 지수 | 1일 |
+| FRED | 매크로 경제 지표 | 1일 |
+
+## Optional
+
+- [About]({{ site.url }}/about/)
+- [RSS Feed]({{ site.url }}/feed.xml)
+- [Sitemap]({{ site.url }}/sitemap.xml)
+- [Full LLM Context]({{ site.url }}/llms-full.txt)

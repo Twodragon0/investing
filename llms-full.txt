@@ -1,0 +1,130 @@
+---
+layout: null
+---
+# Investing Dragon - Full Context
+
+> Crypto & Stock News Aggregation and Trading Journal
+> Site: {{ site.url }}
+
+이 문서는 AI 에이전트가 Investing Dragon 사이트의 전체 구조와 콘텐츠를 효율적으로 이해할 수 있도록 작성되었습니다.
+
+---
+
+## Site Overview
+
+Investing Dragon은 암호화폐 및 주식 시장의 뉴스를 자동으로 수집하고 분석하는 투자 정보 플랫폼입니다.
+Jekyll 정적 사이트 + Python 수집 스크립트 + GitHub Actions CI/CD로 구성되어 있으며,
+Vercel을 통해 배포됩니다.
+
+- **Primary URL**: {{ site.url }}
+- **Language**: Korean (ko)
+- **Timezone**: Asia/Seoul (UTC+9)
+- **Theme**: Minima (dark finance customized)
+- **Repository**: https://github.com/Twodragon0/investing
+
+---
+
+## Categories & Pages
+
+### 1. 암호화폐 뉴스 (`/crypto-news/`)
+CryptoPanic, NewsAPI, Google News RSS 등 다중 소스에서 자동 수집되는 암호화폐 관련 뉴스.
+비트코인, 이더리움, 알트코인, DeFi, NFT 등 주요 토픽 포함.
+
+### 2. 주식 시장 뉴스 (`/stock-news/`)
+Google News, Yahoo Finance, NASDAQ/Tech, Fed/Bond, 한국 반도체/수급/금리 뉴스.
+미국 시장과 한국 시장 뉴스를 모두 수집.
+
+### 3. 시장 분석 (`/market-analysis/`)
+일일 종합 리포트: 미국 시장, 한국 시장, 암호화폐, 매크로 지표 분석.
+일일 뉴스 종합 요약, 월드 모니터 브리핑, 주간 다이제스트 포함.
+
+### 4. 보안 알림 (`/security-alerts/`)
+Rekt News, 블록체인 해킹 사고, 스마트 컨트랙트 취약점 자동 수집.
+
+### 5. 규제 동향 (`/regulatory-news/`)
+글로벌 암호화폐/금융 규제 뉴스, SEC/CFTC 동향, 각국 정책 변화.
+
+### 6. 정치인 거래 (`/political-trades/`)
+미국 의원 등 정치인의 주식 및 암호화폐 거래 내역 추적.
+
+### 7. 암호화폐 일지 (`/crypto-journal/`)
+암호화폐 매매 기록 및 손익 분석 트레이딩 저널.
+
+### 8. 주식 일지 (`/stock-journal/`)
+주식 매매 기록 및 손익 분석 트레이딩 저널.
+
+### 9. About (`/about/`)
+사이트 소개, 데이터 소스, 자동화 스케줄, 기술 스택 정보.
+
+---
+
+## Automation Schedule (KST)
+
+| Task | Cycle | Time |
+|------|-------|------|
+| 암호화폐 뉴스 수집 | 6시간 | 09:00, 15:00, 21:00, 03:00 |
+| 주식 뉴스 수집 | 6시간 | 09:30, 15:30, 21:30, 03:30 |
+| 소셜 미디어 수집 | 12시간 | 09:00, 21:00 |
+| 보안 알림 수집 | 6시간 | 09:00, 15:00, 21:00, 03:00 |
+| 규제 뉴스 수집 | 6시간 | 09:00, 15:00, 21:00, 03:00 |
+| 정치인 거래 수집 | 12시간 | 10:00, 22:00 |
+| CoinMarketCap 수집 | 6시간 | 09:00, 15:00, 21:00, 03:00 |
+| 월드 모니터 수집 | 12시간 | 09:00, 21:00 |
+| DeFi Llama 수집 | 12시간 | 09:00, 21:00 |
+| 일일 시장 리포트 | 1일 | 23:00 |
+| 주간 다이제스트 | 매주 | 일요일 자정 |
+
+---
+
+## Data Sources
+
+| Source | Type | Endpoint |
+|--------|------|----------|
+| CryptoPanic | 암호화폐 뉴스 API | cryptopanic.com |
+| NewsAPI | 글로벌 뉴스 API | newsapi.org |
+| Google News RSS | 뉴스 피드 (20+ 피드) | news.google.com |
+| Yahoo Finance | 주식 데이터 | finance.yahoo.com |
+| yfinance | 시장 데이터 Python 라이브러리 | pypi.org/project/yfinance |
+| Reddit | 커뮤니티 (r/CryptoCurrency, r/Bitcoin) | reddit.com |
+| Rekt News | 블록체인 보안 사고 | rekt.news |
+| CoinGecko | 크립토 가격/시총 API | coingecko.com |
+| CoinMarketCap | 시가총액 순위 API | coinmarketcap.com |
+| Fear & Greed Index | 시장 심리 지수 | alternative.me |
+| Alpha Vantage | 미국 시장 데이터 API | alphavantage.co |
+| FRED | 매크로 경제 지표 | fred.stlouisfed.org |
+| DeFi Llama | DeFi TVL/프로토콜 데이터 | defillama.com |
+
+---
+
+## Tech Stack
+
+- **Static Site**: Jekyll (Ruby) + Minima theme (dark finance customized)
+- **Collection**: Python 3 scripts (8 collectors, 3 generators)
+- **CI/CD**: GitHub Actions (20 automated workflows)
+- **Deploy**: Vercel (primary) + GitHub Pages (secondary)
+- **Data**: yfinance, CoinGecko API, Google News RSS, CryptoPanic API
+- **Visualization**: matplotlib, Pillow (heatmaps, charts, Korean text rendering)
+- **Deduplication**: SHA256 hash + fuzzy matching (>80% similarity)
+
+---
+
+## API Endpoints
+
+- **RSS Feed**: {{ site.url }}/feed.xml
+- **Sitemap**: {{ site.url }}/sitemap.xml
+- **LLMs.txt**: {{ site.url }}/llms.txt
+
+---
+
+## Recent Posts
+
+{% for post in site.posts limit:20 %}
+- [{{ post.title }}]({{ site.url }}{{ post.url }}) ({{ post.date | date: "%Y-%m-%d" }}) {% if post.categories.size > 0 %}[{{ post.categories | join: ", " }}]{% endif %}
+{% endfor %}
+
+---
+
+## Disclaimer
+
+본 사이트에서 제공하는 모든 정보는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다.
+모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.

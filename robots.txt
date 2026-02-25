@@ -4,4 +4,35 @@ layout: null
 User-agent: *
 Allow: /
 
-Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml
+# AI Agent / LLM Crawlers
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+Sitemap: {{ site.url }}/sitemap.xml
