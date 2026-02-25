@@ -1352,13 +1352,13 @@ a {
 
     #footer-qrcode {
       display: inline-block;
-      padding: 8px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba($border-color, 0.3);
-      border-radius: 8px;
+      padding: 10px;
+      background: #ffffff;
+      border-radius: 10px;
 
-      img {
+      img, canvas {
         display: block;
+        border-radius: 4px;
       }
     }
 
