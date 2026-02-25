@@ -454,25 +454,28 @@ class ThemeSummarizer:
         if not top_themes:
             return ""
 
-        # Use sum of displayed theme counts as denominator so percentages
-        # add up correctly (articles can match multiple themes).
-        total_theme_count = sum(c for _, _, _, c in top_themes) or 1
+        # Use max theme count as denominator for bar width so bars are
+        # proportional. Articles can match multiple themes so percentages
+        # would be misleading — display counts only.
+        max_theme_count = max(c for _, _, _, c in top_themes) or 1
 
         lines = ['<div class="theme-distribution">']
         for i, (name, _key, emoji, count) in enumerate(top_themes):
-            pct = count / total_theme_count * 100
+            bar_pct = count / max_theme_count * 100
             color = self._BAR_COLORS[i % len(self._BAR_COLORS)]
             lines.append(
                 f'<div class="theme-row">'
                 f'<span class="theme-label">{emoji} {name}</span>'
                 f'<div class="bar-track">'
-                f'<div class="{color} bar-fill" style="width:{pct:.0f}%"></div>'
+                f'<div class="{color} bar-fill" style="width:{bar_pct:.0f}%"></div>'
                 f"</div>"
-                f'<span class="theme-count">{count}건 ({pct:.0f}%)</span>'
+                f'<span class="theme-count">{count}건</span>'
                 f"</div>"
             )
         lines.append("</div>")
-        lines.append(f"\n*총 {len(self.items)}건 수집*\n")
+        lines.append(
+            f"\n*총 {len(self.items)}건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*\n"
+        )
         return "\n".join(lines)
 
     def generate_themed_news_sections(
@@ -953,12 +956,10 @@ class ThemeSummarizer:
                         break
             if top_desc:
                 briefing_items.append(
-                    f"<li>{emoji} <strong>{name}</strong> ({count}건): {top_desc}</li>"
+                    f"<li>{emoji} {name} ({count}건): {top_desc}</li>"
                 )
             else:
-                briefing_items.append(
-                    f"<li>{emoji} <strong>{name}</strong>: {count}건 수집</li>"
-                )
+                briefing_items.append(f"<li>{emoji} {name}: {count}건 수집</li>")
 
         if briefing_items:
             lines.append(

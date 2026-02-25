@@ -730,11 +730,21 @@ def format_korean_market(data: Dict) -> str:
     return markdown_table(["지수", "가격", "변동", "변동률"], rows)
 
 
-def format_macro(data: Dict) -> str:
+def format_macro(data: Dict, has_api_key: bool = True) -> str:
     if not data:
+        if not has_api_key:
+            reason = (
+                "`FRED_API_KEY` 환경변수가 설정되지 않아 매크로 경제 지표를 가져올 수 없습니다. "
+                "FRED API 키를 발급받아 `FRED_API_KEY` 환경변수로 설정하면 이 섹션이 활성화됩니다."
+            )
+        else:
+            reason = (
+                "FRED API에서 매크로 경제 지표를 가져오지 못했습니다. "
+                "API 키(`FRED_API_KEY`)가 유효한지 확인하거나, "
+                "잠시 후 다시 시도해 주세요."
+            )
         return (
-            "> 매크로 경제 지표를 일시적으로 가져올 수 없습니다. "
-            "FRED API 제한 또는 데이터 업데이트 지연일 수 있습니다.\n\n"
+            f"> {reason}\n\n"
             "**참고 링크:**\n"
             "- [FRED - Federal Funds Rate](https://fred.stlouisfed.org/series/FEDFUNDS)\n"
             "- [FRED - 10-Year Treasury](https://fred.stlouisfed.org/series/DGS10)\n"
@@ -1164,7 +1174,7 @@ def main():
     sections["고래 거래 동향"] = format_whale_trades(whale_items)
 
     # Macro
-    sections["매크로 경제 지표"] = format_macro(fred_data)
+    sections["매크로 경제 지표"] = format_macro(fred_data, has_api_key=bool(fred_key))
 
     # Yield Spread
     if yield_spread:

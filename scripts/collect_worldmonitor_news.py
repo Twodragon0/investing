@@ -93,10 +93,10 @@ def impact_label(theme: str) -> str:
     if theme == "지정학/안보":
         return "높음"
     if theme in {"에너지", "금융시장"}:
-        return "중간~높음"
+        return "중간"
     if theme == "정책/법률":
         return "중간"
-    return "낮음~중간"
+    return "낮음"
 
 
 def wm_url(source_url: str) -> str:
@@ -269,6 +269,27 @@ def build_map_snapshot_section(snapshot: Dict[str, Any]) -> List[str]:
     macro = snapshot.get("macro", {}) or {}
     energy = snapshot.get("energy", {}) or {}
 
+    # Skip the section entirely when all intelligence data is empty/zero
+    energy_prices = energy.get("prices", []) if isinstance(energy, dict) else []
+    has_data = any(
+        [
+            acled,
+            ucdp,
+            outages,
+            earthquakes,
+            climate,
+            nav_warnings,
+            disruptions,
+            density_zones,
+            flights,
+            clusters,
+            energy_prices,
+            macro.get("verdict") if isinstance(macro, dict) else None,
+        ]
+    )
+    if not has_data:
+        return []
+
     top_conflict_countries = _top_counts(acled + ucdp, "country")
     top_outage_countries = _top_counts(outages, "country")
     top_climate_zones = _top_counts(climate, "zone")
@@ -288,7 +309,6 @@ def build_map_snapshot_section(snapshot: Dict[str, Any]) -> List[str]:
     bullish = macro.get("bullishCount") if isinstance(macro, dict) else None
     total = macro.get("totalCount") if isinstance(macro, dict) else None
 
-    energy_prices = energy.get("prices", []) if isinstance(energy, dict) else []
     preferred = {"WTI", "Brent", "Henry Hub"}
     selected_prices = [
         p for p in energy_prices if any(key in p.get("name", "") for key in preferred)
@@ -565,7 +585,7 @@ def main() -> None:
             "## 주요 이슈",
             "",
             markdown_table(
-                ["#", "이슈", "테마", "시장 영향", "출처"],
+                ["#", "이슈", "테마", "중요도", "출처"],
                 rows,
                 aligns=["center", "left", "center", "center", "left"],
             ),
@@ -642,7 +662,7 @@ def main() -> None:
             "",
             "## 읽는 방법",
             "- **지정학/안보(높음)**: 금/원유/방산/안전자산 변동성과 동시 확인",
-            "- **에너지(중간~높음)**: 원유/가스 가격과 인플레이션 민감 섹터 연동 점검",
+            "- **에너지(중간)**: 원유/가스 가격과 인플레이션 민감 섹터 연동 점검",
             "- **정책/법률(중간)**: 규제 발표 시 섹터별 이벤트 드리븐 리스크 점검",
             "",
             "> *본 브리핑은 worldmonitor.app RSS proxy를 통해 자동 수집된 데이터를 기반으로 하며, 투자 조언이 아닙니다.*",
@@ -664,6 +684,7 @@ def main() -> None:
         source="worldmonitor",
         source_url="https://worldmonitor.app",
         lang="ko",
+        image="/assets/images/og-default.png",
         slug="daily-worldmonitor-briefing",
     )
 

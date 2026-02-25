@@ -30,6 +30,26 @@ def _slugify(text: str, max_length: int = 80) -> str:
     return text[:max_length]
 
 
+_HARDCODED_IMG_RE = re.compile(r"!\[([^\]]*)\]\((/assets/images/generated/[^)]+)\)")
+
+
+def _normalize_image_paths(content: str) -> str:
+    """Replace hardcoded /assets/images/generated/... paths with Liquid relative_url.
+
+    Converts ``![alt](/assets/images/generated/foo.png)`` to the Liquid form
+    ``![alt]({{ '/assets/images/generated/foo.png' | relative_url }})`` so
+    images render correctly on both the live site and any subdirectory deploy.
+    Already-converted Liquid references are left unchanged.
+    """
+
+    def _replace(match: re.Match) -> str:
+        alt = match.group(1)
+        path = match.group(2)
+        return "![" + alt + "]({{ '" + path + "' | relative_url }})"
+
+    return _HARDCODED_IMG_RE.sub(_replace, content)
+
+
 class PostGenerator:
     """Generate Jekyll markdown posts from collected news data."""
 
@@ -126,17 +146,16 @@ class PostGenerator:
 
         frontmatter_lines.append("---")
 
+        # Normalize hardcoded image paths in content to Liquid relative_url syntax
+        normalized_content = _normalize_image_paths(content.strip())
+
         # Build content
-        post_content = "\n".join(frontmatter_lines) + "\n\n" + content.strip()
+        post_content = "\n".join(frontmatter_lines) + "\n\n" + normalized_content
 
         # Validate frontmatter
         if post_content.count("---") < 2:
             logger.warning("Invalid frontmatter in post: %s", filename)
             return None
-
-        # Add source attribution
-        if source_url:
-            post_content += f"\n\n---\n*출처: [{source}]({source_url})*\n"
 
         with open(filepath, "w", encoding="utf-8") as f:
             f.write(post_content)

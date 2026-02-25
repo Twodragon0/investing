@@ -9,6 +9,7 @@ Sources:
 
 import sys
 import os
+import json
 import time
 import requests
 from datetime import datetime, timezone
@@ -53,6 +54,115 @@ def _format_mcap(mcap: Optional[float]) -> str:
     if mcap is None:
         return "N/A"
     return _format_tvl(mcap)
+
+
+# Korean vowel endings (모음으로 끝나는 경우)
+_KOREAN_VOWEL_ENDINGS = set("aeiouAEIOUyY")
+# Korean jamo vowel codepoints: 가(0xAC00) ~ 힣(0xD7A3), check if final consonant (받침) is absent
+_HANGUL_START = 0xAC00
+_HANGUL_END = 0xD7A3
+
+
+def _has_batchim(char: str) -> bool:
+    """Return True if the Korean syllable has a final consonant (받침)."""
+    code = ord(char)
+    if _HANGUL_START <= code <= _HANGUL_END:
+        return (code - _HANGUL_START) % 28 != 0
+    return False
+
+
+def _korean_ro(word: str) -> str:
+    """Return '로' or '으로' postposition based on the last character of *word*.
+
+    Rule:
+    - Ends with a vowel → '로'
+    - Ends with 'ㄹ' final consonant (받침 ㄹ) → '로'
+    - Ends with any other consonant → '으로'
+    - English word ending in vowel letter → '로'
+    - English word ending in consonant letter → '으로'
+    """
+    if not word:
+        return "으로"
+    last = word[-1]
+    code = ord(last)
+    if _HANGUL_START <= code <= _HANGUL_END:
+        if not _has_batchim(last):
+            return "로"
+        # Check if final consonant is ㄹ (offset 8 in jamo table)
+        if (code - _HANGUL_START) % 28 == 8:
+            return "로"
+        return "으로"
+    # ASCII / Latin letters
+    if last.lower() in _KOREAN_VOWEL_ENDINGS:
+        return "로"
+    return "으로"
+
+
+# ─── TVL staleness tracking ────────────────────────────────────────────────
+
+_REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+_TVL_HISTORY_PATH = os.path.join(_REPO_ROOT, "_state", "defi_tvl_history.json")
+_TVL_STALE_DAYS = 3  # warn if total TVL unchanged for this many days
+
+
+def _load_tvl_history() -> List[Dict[str, Any]]:
+    """Load TVL history from state file."""
+    if not os.path.exists(_TVL_HISTORY_PATH):
+        return []
+    try:
+        with open(_TVL_HISTORY_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, list):
+            return data
+    except (json.JSONDecodeError, OSError):
+        pass
+    return []
+
+
+def _save_tvl_history(history: List[Dict[str, Any]]) -> None:
+    """Persist TVL history (keep last 30 entries)."""
+    os.makedirs(os.path.dirname(_TVL_HISTORY_PATH), exist_ok=True)
+    tmp = _TVL_HISTORY_PATH + ".tmp"
+    try:
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(history[-30:], f, ensure_ascii=False, indent=2)
+        os.replace(tmp, _TVL_HISTORY_PATH)
+    except OSError as e:
+        logger.warning("Failed to save TVL history: %s", e)
+
+
+def _check_tvl_staleness(protocols: List[Dict[str, Any]], today: str) -> Optional[str]:
+    """Check if total protocol TVL has been identical for _TVL_STALE_DAYS or more.
+
+    Returns a warning string if data appears cached/stale, otherwise None.
+    """
+    total_tvl = round(sum(p.get("tvl", 0) or 0 for p in protocols), 2)
+    history = _load_tvl_history()
+
+    # Update history with today's value
+    # Avoid duplicate entries for the same date
+    history = [e for e in history if e.get("date") != today]
+    history.append({"date": today, "total_tvl": total_tvl})
+    _save_tvl_history(history)
+
+    if len(history) < _TVL_STALE_DAYS:
+        return None
+
+    # Check last _TVL_STALE_DAYS entries for identical TVL
+    recent = sorted(history, key=lambda e: e.get("date", ""), reverse=True)[
+        :_TVL_STALE_DAYS
+    ]
+    unique_values = {e.get("total_tvl") for e in recent}
+    if len(unique_values) == 1:
+        dates_str = ", ".join(
+            e["date"] for e in sorted(recent, key=lambda e: e["date"])
+        )
+        return (
+            f"> **데이터 캐시 경고**: 최근 {_TVL_STALE_DAYS}일({dates_str}) 동안 "
+            f"총 TVL이 동일한 값({_format_tvl(total_tvl)})으로 기록되었습니다. "
+            "DeFi Llama API 데이터가 캐시되어 있을 수 있으니 참고 바랍니다.\n"
+        )
+    return None
 
 
 def fetch_protocols() -> List[Dict[str, Any]]:
@@ -641,6 +751,11 @@ def build_post_content(
             )
         )
 
+    # ── TVL staleness warning ──
+    stale_warning = _check_tvl_staleness(protocols, today)
+    if stale_warning:
+        content_parts.append(f"\n{stale_warning}")
+
     # ── Section 4: Insights ──
     content_parts.append("\n## DeFi 시장 인사이트\n")
 
@@ -654,8 +769,9 @@ def build_post_content(
         share_of_total = (
             (top_p_tvl / total_protocol_tvl * 100) if total_protocol_tvl > 0 else 0
         )
+        ro = _korean_ro(top_p_name)
         insight_lines.append(
-            f"현재 DeFi 생태계에서 가장 큰 프로토콜은 **{top_p_name}**으로, "
+            f"현재 DeFi 생태계에서 가장 큰 프로토콜은 **{top_p_name}**{ro}, "
             f"TVL **{_format_tvl(top_p_tvl)}** ({share_of_total:.1f}%)를 차지합니다."
         )
 
@@ -665,8 +781,9 @@ def build_post_content(
         top_c_name = top_c.get("name") or "Unknown"
         top_c_tvl = top_c.get("tvl") or 0
         chain_share = (top_c_tvl / total_chain_tvl * 100) if total_chain_tvl > 0 else 0
+        ro = _korean_ro(top_c_name)
         insight_lines.append(
-            f"\n가장 많은 TVL을 보유한 체인은 **{top_c_name}**으로, "
+            f"\n가장 많은 TVL을 보유한 체인은 **{top_c_name}**{ro}, "
             f"**{_format_tvl(top_c_tvl)}** ({chain_share:.1f}%) 수준입니다."
         )
 

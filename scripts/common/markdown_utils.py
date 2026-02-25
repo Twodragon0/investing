@@ -1,3 +1,4 @@
+import re
 from html import escape
 from typing import Dict, Iterable, List, Optional, Sequence
 
@@ -56,17 +57,43 @@ def html_source_tag(source: str) -> str:
     return f'<span class="source-tag">{html_text(source)}</span>'
 
 
+_GOOGLE_NEWS_RE = re.compile(
+    r"https://news\.google\.com/(?:read|rss/articles)/(CBMi[A-Za-z0-9_\-]+)",
+    re.IGNORECASE,
+)
+
+
+def _normalize_url(url: str) -> str:
+    """Return a canonical key for deduplication.
+
+    Google News publishes the same article under two URL schemes::
+
+        https://news.google.com/read/CBMi<id>
+        https://news.google.com/rss/articles/CBMi<id>
+
+    Both are normalised to ``gnews:<id>`` so they are treated as duplicates.
+    All other URLs are returned unchanged.
+    """
+    m = _GOOGLE_NEWS_RE.match(url)
+    if m:
+        return f"gnews:{m.group(1)}"
+    return url
+
+
 def dedupe_references(
     references: Iterable[Dict[str, str]], limit: Optional[int] = None
 ) -> List[Dict[str, str]]:
     deduped: List[Dict[str, str]] = []
-    seen_links = set()
+    seen_keys: set = set()
 
     for ref in references:
         link = str(ref.get("link", "")).strip()
-        if not link or link in seen_links:
+        if not link:
             continue
-        seen_links.add(link)
+        key = _normalize_url(link)
+        if key in seen_keys:
+            continue
+        seen_keys.add(key)
         deduped.append(
             {
                 "title": str(ref.get("title", "")).strip(),
@@ -78,6 +105,27 @@ def dedupe_references(
             break
 
     return deduped
+
+
+def _truncate_title(text: str, max_len: int) -> str:
+    """Truncate *text* to at most *max_len* characters without cutting mid-word.
+
+    Truncation always happens at the last whitespace boundary within the
+    allowed length so that words like "De", "Io", or "Wisdom" are never
+    produced by a mid-word cut.  A trailing ellipsis ("…") is appended when
+    the text is shortened.
+    """
+    if len(text) <= max_len:
+        return text
+    # Reserve 1 character for the ellipsis so the final string stays within
+    # max_len.
+    candidate = text[: max_len - 1]
+    last_space = candidate.rfind(" ")
+    # Only snap to the word boundary when the result would not be too short
+    # (require at least 70% of the allowed length to avoid over-trimming).
+    if last_space >= int(max_len * 0.7):
+        candidate = candidate[:last_space]
+    return candidate.rstrip() + "…"
 
 
 def html_reference_details(
@@ -96,7 +144,7 @@ def html_reference_details(
     attrs = ' target="_blank" rel="noopener noreferrer"' if open_in_new_tab else ""
     items = []
     for ref in deduped_refs:
-        title = html_text(ref["title"][:title_max_len])
+        title = html_text(_truncate_title(ref["title"], title_max_len))
         link = html_text(ref["link"])
         source = html_source_tag(ref["source"])
         items.append(f'<a href="{link}"{attrs}>{title}</a> {source}')

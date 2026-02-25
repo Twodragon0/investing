@@ -1106,10 +1106,6 @@ def process_post(
     else:
         summary_lines = build_summary(stripped_lines, rebuilt_body)
         updated_lines = insert_summary(stripped_lines, summary_lines)
-    analysis_lines = build_content_analysis(updated_lines, rebuilt_body)
-    updated_lines = insert_analysis(updated_lines, analysis_lines)
-    url_summary_lines = build_url_summary(updated_lines)
-    updated_lines = insert_url_summary(updated_lines, url_summary_lines)
     updated_lines = reorder_worldmonitor_table(
         updated_lines, front_data, wm_from, wm_to
     )

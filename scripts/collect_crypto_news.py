@@ -217,7 +217,14 @@ def _scrape_binance_page(session) -> List[Dict[str, Any]]:
         if len(items) >= 15:
             break
         try:
-            title = sanitize_string(link_el.inner_text().strip(), 300)
+            raw_text = link_el.inner_text().strip()
+            # Binance link elements concatenate heading and description text;
+            # take only the first non-empty line as the title.
+            first_line = next(
+                (line.strip() for line in raw_text.splitlines() if line.strip()),
+                raw_text,
+            )
+            title = sanitize_string(first_line, 300)
             href = link_el.get_attribute("href") or ""
             if not title or len(title) < 5 or title in seen_titles:
                 continue
