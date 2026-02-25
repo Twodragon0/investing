@@ -22,7 +22,13 @@ from collections import OrderedDict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common.config import get_env, get_kst_timezone, setup_logging, get_ssl_verify, REQUEST_TIMEOUT
+from common.config import (
+    get_env,
+    get_kst_timezone,
+    setup_logging,
+    get_ssl_verify,
+    REQUEST_TIMEOUT,
+)
 from common.markdown_utils import markdown_link, markdown_table
 from common.utils import request_with_retry
 from common.post_generator import PostGenerator
