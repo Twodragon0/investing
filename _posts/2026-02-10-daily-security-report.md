@@ -15,34 +15,6 @@ lang: "ko"
 - ` DeFi Exploit       ████████████████████░░░░░░░░░░  40%  (6건) Supply Chain       ████████████████░░░░░░░░░░░░░░  32%  (5건) Social Engineering ████████░░░░░░...
 
 
-
-## 내용 분석
-
-- 본문은 전체 뉴스 요약 등 1개 섹션으로 구성되어 있습니다.
-- 총 18개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.
-
-
-## URL 요약
-
-- [The Record](https://news.google.com/rss/articles/CBMiY0FVX3lxTE5kQkZ2d2xkR3FGYkpJWklrcFFVdVlsdlZ4cHRfc0VoSF9VQjRPc3JDa0syVjJBSXJ4b1lVWjFwZy0zY1BYQ190Q3k3TEs4S1VINVBkbjg1amcwbFh6Yi15VkRPVQ?oc=5) — The Record.
-- [Yahoo Finance](https://news.google.com/rss/articles/CBMie0FVX3lxTE9CSHVNRWNrdlFaX1RNMzFSTTZKRTNsT3d1TEtudVdmM3dTaTdWM040YlVWc2lEVWhFNG1IMDhKRk1WOXM1cm9BeGZEZi05TkRXZVJnWExwSXBVVUpaTjh3ZFJPc0ZIZFRjdmtocE1vTFJIRnZHdDdzQnNtWQ?oc=5) — Yahoo Finance.
-- [The Defiant](https://news.google.com/rss/articles/CBMihwFBVV95cUxQdW1OUkxITWxmUzVKaURId2x0RC11Q0ZxNFNTcDBHQktwMnNFbjJVM1ExblNQUGJaMjgzcEpWVnlWTk5qVERtWFcyUkJYcjZTbzJ2Q1lnbDhVMGxudDVCUnJPTDNHNDBPWEVDRnhrZmFEY2xsSHNfenRMb29QSUdFdkQ2aW9uejg?oc=5) — The Defiant.
-- [Gizmodo](https://news.google.com/rss/articles/CBMilgFBVV95cUxQdUh5VGJsZUlDRm91X1dmZEJja2NwV0NEQW9yT2tBcFZCN3R2dWN2TWFTVDY1SW5xUlBFZDZvSHJYWl9aTm1BVHdGYi03eFFwd00zTGsyVmpGeU8yU1oyUUF5Ni1IUEd5dkpNVW9KeTNyMDN4TjZXbFFfTFNKRklNb29VZHBPOG9FTUNtRWZRQjYwV2w3aGc?oc=5) — Gizmodo.
-- [관련 보안 뉴스](https://news.google.com/rss/articles/CBMioAFBVV95cUxNVnNwZkRWc3dOMjNWdHRtOXg1V3RMcjc1MW5kdGZfdHExLU5wQ0VkUUNERlZMRXI0Z0swRWVaUEtuejNhSkpCUmpIcVRHWThlSmFlWjJQX2JHN2xuTDFiM2MtQk5ZQk92TTVzeG56WlNwMXQwQ3l3VWJTbXVnbjBmUHV0RWt3LXhFbWN1MnNjZ0tfTy1fU1lHdmF3bjFGR3N0?oc=5) — 관련 보안 뉴스.
-- [Finance Magnates](https://news.google.com/rss/articles/CBMixAFBVV95cUxNMzN6QzJLZWJkV0JSbFExYV9vUjB0dGZVRVoxR1dqR0lQYlBDSWtNSXJBU0JMNFF6dGd4dVBCZnFxbUtqOVlDOUVFV2RZbTNpcl9WbDlCOHl6VmpyUzRNeUltNXVUMW5DelAtT1Z4RlpkQUNScGtTbkg2OWxFVkJtUW9ZaEpDSV9ISzlBQWRpM01MN3FHR2ZwZDZERXd6cnJYZU01Wklna1RaNmRsa1ZESWZBVFgxRDlaV205SUpoZjUxbHNZ0gHKAUFVX3lxTFBTaThRZ1JtM3lGenJ2aUNuSmEtMHREWkRwcW9ZbWVhcjJPRDVNemJNSzJodXpEdEhlbldwcG1RZC1lRVVRMTdDTWkxQjJRdE4wSXVheEVjWGJMMjVrRS00TDA5TWNlalY3bktoNWV1YlY4ZEtJNTlHeFpHRW44RkhYV0pKM2x5VWJjUFcyQjBaYm1jZnBoN1pHSFpZUFg3Qlp4SDZUUV91d2hSeXZKbFBTMkVzS3JHY2hyN2FuNVhXQkZJT1FSc0NDWVE?oc=5) — Finance Magnates.
-- [The Hacker News](https://news.google.com/rss/articles/CBMihAFBVV95cUxNLWQ1a0V3RGoxUm41dHpjZFVMdGVLRWc5OU1KRVc1eXpMTW1qTXFJT2tiNXNDMDdhTnpvTzdrTzRCSnV1MXhfX2prS0Q0a0FJMmRHR3VZdERaYVp0SjhNTFVqOVdXekhGZDdZR3REbXhWNkhjVkg3RHUwYl9EWG55ekU2aFc?oc=5) — 보안 이슈 — The Hacker News.
-- [DL News](https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSUwwMmJMdEY2cGdfa1FyaHBXOEk4OHVNODZWZldLLVFvdkgzRVd3MU5XTmt3c19wUXF5YzRaSmJkUVY3R3RtZ3hXU2ltVXo0R1oyN2s5VFl3UmZzbVFESEpkeF9UbXcxYUlfcFd0ZEludGhnTjlSVkY5OEZxVUx4QTlhLXIwOXhSbkFUQ3VqZFNvY2lmenkwSW1SSDFIVnhLUkphQ0k4c0NUeHc?oc=5) — DL News.
-- [Financial Times](https://news.google.com/rss/articles/CBMicEFVX3lxTE12VllERk5pWmJIbkg4d2dKWW1vZVZZQ3ZuVnNPbWRIamptcmFPNWJaS0ZYMzc3LXZMTWItZEdTemN2NndENXZxRUxsNnR4c2pzNUJQZTA1bGxfSk5wMnlaTldkcnhQU25jYUdLMF9rTXM?oc=5) — Financial Times.
-- [CyberScoop](https://news.google.com/rss/articles/CBMijgFBVV95cUxQSXROS2cyaWhXSGU5NUlvNU14UHlFaGJXNnpPQkpjb1ZjNFFQUC1fUWVxWnY1Y0Qwazc2VGN3bnhnS1gxMlpNZ0xjT3pXcmxwemZzUF83YnZqenNpN2ZaZFZJRlpaVlJzTTVWbmI0NnFkTC1BUDNWMEJNLVg2bkxmc1kzQTg3MDBXYlBURlZ3?oc=5) — Cyber.
-- [The Block](https://news.google.com/rss/articles/CBMibkFVX3lxTE9TWWxIRXpwU3ZmVXgwUkdORk9XWkl0TGJocU4weEhFN21RWGJSbnVPc2NTdVIxNUJpTGd0d2J6eUhkTzZzdV9BUTg4cE94WFFsVmx2eWV2QUdBNmRvU0tUQXRDU2F3YXpySFJOZ1F3?oc=5) — The Block.
-- [Investopedia](https://news.google.com/rss/articles/CBMigAFBVV95cUxNZEZmYU5rUGNMSVFIMHNvV3M0STg1X3pPTTVUYTZGQ3hxazZuZ2E0blRBRWE4b2lVUm8tS3ZqLXpjZ1ROM3dScnRDQVdrbWd4VVpZSUl1MXhING9IUHN5UVZLLWwxYnEzWHFxRHdJT3UxUVgzVGJrRFV6U196WnZVSw?oc=5) — Investopedia.
-- [CCN.com](https://news.google.com/rss/articles/CBMilgFBVV95cUxObkV0YjVISHczRXctVmhZZ3R5cERQWmdSV1haR2NMYXRGTFEwUGNSN2dzUGpKM0I4ck5HT3BvZkNHSFM1R0Ftck8tTUFOSHI5YkVvMUQ5dGpwVmVLbXFJR2tvSEItVUFpbjNNc0VkeFFKVjdaeFdHVlBvZDNud29lREloWGpDdUtoaU5YQ1RFRkRjbTFPRHc?oc=5) — CCN.com.
-- [Digital Watch](https://news.google.com/rss/articles/CBMif0FVX3lxTE9RbHZuNklzQ1RtUVhUZGNfeDRfUFJzYzJHTFNZeHdGMFJZX0xwNzZnWUg1QmFtVTBkaHl4ZGEwR1dhbVNJWkdrS19senFDYVZlUWRFT0NOaDJydVloZXF1YkJMc0FSZFRVT0NjbktKU1hhSzNRanhZZGpOeTBXYUU?oc=5) — Digital Watch.
-- [PYMNTS](https://news.google.com/rss/articles/CBMinAFBVV95cUxPTTIzQ292a0h4SnFGTEl3QXlkRkczSmt3M3BTX2x1QkRhYXZFM29wYllobWNUajZWejRSVmVTSkVWbTM4NmV4Z2NUYm12NDZMVEpvc3lvSjFseWlYTUo2OHpYQmhNeEVObno5azk1dnp5bTRKNFRDN183SGVPem9nT0Q4WTdvRlBoSnlQZl9oY1F6S29LNzBLQmhpaVo?oc=5) — PYMNTS.
-- [DeFi Safety](https://defisafety.com/) — De.
-- [Rekt News](https://rekt.news/) — Rekt News.
-- [DeFi Llama](https://defillama.com/) — De.
-
 ## 위험도 분포
 
 ```

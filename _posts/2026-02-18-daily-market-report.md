@@ -68,33 +68,6 @@ image: "/assets/images/generated/market-heatmap-2026-02-18.png"
 
 
 
-## 전체 뉴스 요약
-
-- 극도의 공포 장세: 공포/탐욕 지수 8으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다.
-- 비트코인 $67,410 하락: 24h 기준 -1.83% 변동, 주간 -1.80% 하락.
-- 시가총액 $2.40T으로 하락: 전일 대비 -1.00%. BTC 도미넌스 56.1%로 비트코인 중심 자금 흐름 지속.
-- 암호화폐 시장이 하락세를 보이고 있습니다. 단기 조정 가능성을 염두에 두고 리스크 관리가 필요합니다.
-
-
-## 내용 분석
-
-- 본문은 오늘의 핵심, 전체 뉴스 요약, 오늘의 시장 인사이트 등 4개 섹션으로 구성되어 있습니다.
-- 총 11개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.
-
-
-## URL 요약
-
-- [Bitcoin Whale Transfer: Decoding the $205 Million Mystery Move from Coinbase Institutional](https://news.google.com/rss/articles/CBMihwFBVV95cUxQNlByTUpwSHREcldsdWdIYi1FTGVjc3F0bkl6aHMxV053dkkxUlFXRFkxX3gyZEtVaVBNN3Z6QnJUVXd0dl85YlExS0t2SVRfRFZkNWtLa3dieVUxcUpoUnkzRVN6NGlaODIyNXpJaDV1UWJJbDFNR2VlblFPLTRBU295ZGk4Zjg?oc=5) — 온체인 이동 — Bitcoin Whale Transfer: Decoding the $205 Million Mystery.
-- [Bitcoin Whale’s Strategic $5.86M Pivot to Ethereum via Thorchain Signals Major Cross-Chain Confidence](https://news.google.com/rss/articles/CBMiXkFVX3lxTE1DWHFFRy1nT2NRUHZnQTQ5ajdxTlFiOEtCTE5qbVRta0tIUWItOEJHQURja0tJYlo3OWVPVVhQQkFXRDBpSi1yZlVSVC00bWhfRG9PcXo4dC05MDI0V2fSAWNBVV95cUxOUDNpTnpSZk9oQk1KdzFPUGFrWTJuWTJlQTUtN2tXbTVnakU2MlBLUzRYaDVoelVnWVppaWZMZElmYWtfNnVaWGRsUG5pd2pNWmQxRzRVeG1WLWFVb3lRSWZKWjg?oc=5) — 온체인 이동 — Bitcoin Whale’s Strategic $5.86M Pivot to Ethereum via.
-- [FRED](https://fred.stlouisfed.org/series/FEDFUNDS) — FRED.
-- [FRED - 10-Year Treasury](https://fred.stlouisfed.org/series/DGS10) — 기관 매수·매도 — FRED - 10-Year Treasury.
-- [FRED](https://fred.stlouisfed.org/series/CPIAUCSL) — FRED.
-- [FRED](https://fred.stlouisfed.org/series/VIXCLS) — FRED.
-- [CoinGecko](https://www.coingecko.com/) — Coin.
-- [Alternative.me](https://alternative.me/crypto/fear-and-greed-index/) — Alternative.me.
-- [Investing.com](https://kr.investing.com/indices/kospi) — Investing.com.
-- [Yahoo Finance](https://finance.yahoo.com/) — Yahoo Finance.
-- [FRED](https://fred.stlouisfed.org/) — > *본 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다.
 
 ## 오늘의 시장 인사이트
 

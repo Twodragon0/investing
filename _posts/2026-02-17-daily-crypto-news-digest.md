@@ -65,49 +65,13 @@ image: "/assets/images/generated/news-summary-2026-02-17.png"
 
 
 
+
+
 ## 전체 뉴스 요약
 
 - 총 **109건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔷 이더리움
 - 2026-02-17 암호화폐 시장에서 109건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 이더리움 관련 소식이 주목됩니다.
-
-
-## 내용 분석
-
-- 총 109건의 뉴스 중 🟠 비트코인, 📈 가격/시장 테마가 가장 많은 비중을 차지합니다.
-- 긴급 이슈 1건이 감지되어 우선 확인이 필요합니다.
-- 본문은 전체 뉴스 요약, 한눈에 보기 등 2개 섹션으로 구성되어 있습니다.
-
-
-## URL 요약
-
-- [Veteran analyst warns of shocking Bitcoin crash to $10K](https://news.google.com/read/CBMijAFBVV95cUxQbVV0SmFHakNyTnRETnZxRmptSmN0V1Zva21XX1VsZzhSaFZhTkRwcjEydzJVRDBvck00Q1FLU1h4Rzl5VWR0bVNBM0RlbFhVWDAzRGkybmtXaVRpOC1FZjhTMEpRWEJXUWVvdS13Y05rZHVad19IZnpIQWNUSF9zVEFfNXE1REVLZ0hQbQ?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 하락 — Veteran analyst warns of shocking Bitcoin crash to $10K.
-- [In bitcoin price plummet, ETF flows are down but aren't signaling 'crypto winter' investor panic](https://news.google.com/read/CBMilAFBVV95cUxOUV92a2tBb3BIUTltdFBuc2NRdkR0dGJVSFNrNDFkYlNVbzNqcURqN3h5RFBHMVVVWWVBMW5oVEJyaWxLRDRVU2VmYmgzMU9NaVpWcm16eTktWmg3S0ozQS1LS3RseUNoZnpxbHRUZGVLMExraWt5TjJCcEpsYllWQ3JJdUhXWW9yblNrMlpIZzd3N0RO0gGaAUFVX3lxTFBOUUx4cTRncklycE92QnNUX1dFckVmVVltTjZuTl9SclVjNE55QmtkNFp5Qnc0WUVSeHJQcDNQNVlRRXVvRDFkY1E1QUtFWlpHZTFEV0dySTctX3NsQ3E0VnVnYW4ybGxFc0ltVW9nQTFvWENzOFl5UXZWdExDUjFwb2tqaVBVcFNNVlhocERiWHpXVGUtVUhLaGc?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 하락 — In bitcoin price plummet, ETF flows are down but aren't.
-- [Better Cryptocurrency to Buy Now and Hold for 10 Years: XRP vs. Bitcoin](https://news.google.com/read/CBMimgFBVV95cUxNWXZZVl8wMEthVTFVWE1SR2R0dFBjWW1EWG51YXdrVEt6ckFpX01wZDFXQkdEN0pTcnN3RGdocXFzdEZXTWc2cDJqMzNmTTktNFduQXM4amROamN2cEpHUFFaM0R5WFR0Z1ljMXY3ZndBb0ZnZnNBRXRaMmt5MFplNzZNTU53NG9feWU3WkpJWXMtOTZIcGIwN0VB?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 매수·매도 — Better Cryptocurrency to Buy Now and Hold for 10 Years: XRP.
-- [Bitcoin price will fall to $10,000 as crypto ‘bubble is imploding,’ warns Bloomberg analyst](https://news.google.com/read/CBMiqwFBVV95cUxQT241OTZFZV9MSmFpOW9oNmNhNzdGdXd5cVhmVFpkQnpOUmt3QzBxLTd6bUFiYjRRTC1ib0xfQUV6bWNhRk52THJ3S0xkU0xoVkZVRy1KMUVPVzhJeS1sYXIzTGlOV3d0eXhWd1V2UTRsckdiUElxN0dxbTAxa204ZHR1eXNrUXVDTnE3OWpBbUlST2cxMnFtUkYtaFFzN1VZblN2Y3lvVFZQU0k?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 하락 — Bitcoin price will fall to $10,000 as crypto ‘bubble.
-- [Crypto market drowns in red as bitcoin falls to $68,000, XRP, ETH slide over 5%](https://news.google.com/read/CBMiowFBVV95cUxPMjVkbktCT3VlTElxSWQyU3hHbHYwQ2R4R0pjS0dQU3JvM1I4WFlpS2ZPQmdtVFhyYy1LdWdBWUx3NGh0ckJKU1pncEJhcmNYX1dCYXJRWV9YbkxTOGlhZGtYWDFmYkxWeDhLaE1sTnUya3RtVjNvcVpIZUFKS1d0U0EyVHgxb1o4TU5DZ0kwZU0zSFljaktvSjdfVEF2MHo3dlQ0?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 하락 — Crypto market drowns in red as bitcoin falls to $68,000.
-- [Tom Lee Calls Bitcoin and Ethereum Price Bottom, Claims Crypto Winter Is 'Close To Ending' as Wall Street Backs Bitmine](https://news.google.com/read/CBMiggFBVV95cUxNekF3bTNaREV2T3MtbExTdGxOZHJLeURPOTZhalNfYTRRZ0RGaDU3WlM4Wjd1TXAydnc3a2lCOTU2SzBQbUcweUR6a0tPZlBuOHlkSUtDZHowaFlLNExEb2hPM2I4dzNHOUJicFJiVjczN2JabDZvbjk4QVFVOTY3NjlR?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 — Tom Lee Calls Bitcoin and Ethereum Price Bottom, Claims.
-- [Macro to dictate Bitcoin’s next $10,000 move as traders watch for price breakout](https://news.google.com/read/CBMiqwFBVV95cUxNY0xBdnBQdU5HYU5KQjRPU0JxeFNncFdONnBnMzhnT1FNSmRHd2hwZ25GRlY3LVlkYXNWd2IzeFJveGhxNUh5b2NTYWlnMGxOMzk5TFkwSTFGOF9aTDJOMjhZWF9rQkNzaFNoYUtNUlFURmR1UHFjc2xUUW1zVDVZQ2R6OFNmdHhRWnVuLUpTTUdQTmlfQ21zWVg1Wl84LUw3alFnazBRcmRHd1E?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 — Macro to dictate Bitcoin’s next $10,000 move as traders.
-- [Harvard trims bitcoin ETF holdings by 21%, builds $87 million ether position](https://news.google.com/read/CBMiekFVX3lxTE9Na2JZTHQyYUd6LV9DdjRqUkhoQnRpTk1PR0tFak9KQ1ltOUdFb3lWNnBQUldvMTlmaHA5b3JOZzJ6bV9YR2hhVGFQdXYyUURmdE8tRERjVkVQOERYM1NFcEYxN1dzUXNGSm1idXc3MTB4bGRxMUstc2tn?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 매수·매도 — Harvard trims bitcoin ETF holdings by 21%, builds $87.
-- [HMC Cuts Bitcoin Investment by Around 20 Percent in Q4, Opens Investment in Ethereum](https://news.google.com/read/CBMidkFVX3lxTE82cnpwQlJUTXIxb0Jpb19lb1VxUEhxdzJkX3d0REN3QnpFVF9YSkIxSFNpM25sb1d4MGJkZ0JRcUZ5QkJYOWpBN0FtYXNWMDhSUkdQdHFIQzQxMDZCeVNhWndFQ2EyOThoRVg4eGJzYjhCcnNwQlE?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 — HMC Cuts Bitcoin Investment by Around 20 Percent in Q4.
-- [Bitcoin, Ethereum, XRP Drop. This Could Have a Big Impact on Crypto This Week.](https://news.google.com/read/CBMijgNBVV95cUxPSEc4eUJmeW43R19rdTRGYkI1WnVSMVhCY3ZUSlVfTWlEOGkyc3FyUXlhRkxkR1ZmUHFweElvaU5FZ0FpWXc4VDFHTjJKZHNvNFNPZXQxUXctSFYwZjRyXzE1S1VYeFZpSURPWHc1bWItaFRsa25lbUJIdUw5QVRzeEY2aERuNmtUN0hRc2EwUkxEQXFScTJ3dk5uajRQQ29hbmxKN05DWHd0WUszd2RnVmNfTnQtM1JBWUY4UHpOYWxIXzluNmhpUFRiZDRMT1RoQnNrWVpUVEpuLXpyNi0zYmhSNml6NGVfZ3JUaGlYbGxPOTNWSVQ1QlZsTTAzRjhoY3FYS3dDdTE1T0RVTW9hVkdrXzg1NEU1Qnp6ZWlKaWhIZHFsUkx1S2dDbXBmVDBDbHFPQ3RZNDFqbEdtMkl5S1lYa2hBSnFMUkY2MzAyRXlER095UGRtVVJBSXA0c0VISXZfNDJ1dlYtalliUXAwdFRKUU15R0xCTjVwYndSMjdMZGtEU0dHeUM2VlR3UQ?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 하락 — Bitcoin, Ethereum, XRP Drop.
-- [Mirae Asset acquires Korbit cryptocurrency exchange](https://news.google.com/rss/articles/CBMiiwFBVV95cUxQVmU1QXpiOHBvRFZjYU9DZGNwc3VKSEJZTXY4VVJCMmZFVXVucWsteHZKNHc0MUlPOHhUMHZ0YXo0alFZZ3Z5c2JUaTRPeFFwelRWZGJlR2NLdFU3eEFDZUFmbGx5a3lvRUZ5YU4xM2RGLTBZSVpmU2Q2dERuNENOTm8wTGxqVVBzRWxr?oc=5) — 거래소 매수·매도 — Mirae Asset acquires Korbit cryptocurrency exchange.
-- [Nexo re-enters the U.S. market three years after exiting due to regulatory issues](https://www.coindesk.com/business/2026/02/16/nexo-partners-with-bakkt-reenters-the-u-s-with-crypto-yield-lending-and-exchange-services) — 규제·정책 — Nexo re-enters the U.S.
-- [Binance's CZ echoes Consensus panelists on lack of privacy blocking crypto adoption](https://www.coindesk.com/markets/2026/02/16/binance-co-founder-cz-echoes-consensus-panelists-on-lack-of-privacy-blocking-crypto-adoption) — 거래소 — Binance's CZ echoes Consensus panelists on lack of privacy.
-- [OKX snags European payments license for stablecoin and crypto card expansion](https://www.coindesk.com/policy/2026/02/16/okx-snags-european-payments-license-for-stablecoin-and-crypto-card-expansion) — 거래소 — OKX snags European payments license for stablecoin.
-- [Binance Founder CZ: Privacy 'Missing Link' for Crypto Payments Adoption](https://decrypt.co/358153/binance-founder-cz-privacy-missing-link-for-crypto-payments-adoption) — 거래소 — Binance Founder CZ: Privacy 'Missing Link' for Crypto.
-- [Bitcoin Looks for Direction After Four Straight Weekly Losses](https://news.google.com/read/CBMisgFBVV95cUxPVHgwN0pSZ1RQR3drTWRUbnJGLWsxamdpbUhIZHhZZEtYZ0V1SmRWa3N5M2FEcU4xZGlxVi13N0tfVTdXdnNBM3JUSlBsQzdIR0RFQ3ZrVUljcnFETHMwQmVKOU5FcHdEakV2YmpnWXUtVmg4am5nRkVUUlBoU3A0Qm93WExKM1FzaHB3dl9Na2J0RWd4SE5SUzltejdmbFVjUnMyWGlaWEVVVFpWVEtQT3pn?hl=en-US&gl=US&ceid=US%3Aen) — 비트코인 — Bitcoin Looks for Direction After Four Straight Weekly.
-- [NC pension plan’s crypto bet is down millions. Why supporters remain confident](https://news.google.com/read/CBMifEFVX3lxTFBYbG54cVlMdHFhWTNwMkJPcHg4LUFnMmlLQkw5Y2NGekNqY2F1OTBZRlBtT3FGd0xrakwxZUdpdWRjRmsxdm5qekRmLVNiOXhZTDRudzJnMkhGRVlhVjZNeVZWdHRHZkh6QVI2Z0ItZ0VKNU5JTnFBX0t0QUc?hl=en-US&gl=US&ceid=US%3Aen) — 다우존스 하락 — NC pension plan’s crypto bet is down millions.
-- [Chainalysis Says Crypto Flows to Human Trafficking Groups Jumped 85% in 2025](https://news.google.com/read/CBMiswFBVV95cUxPcEd4c1FJMGZBVEdBX0xqaUlzVkg3T040aWZscTV2Uk9qOEI0V3RnaXN4UDFyYURvdnN4cnhadGk5RXhpLXVEdnktY2RCcGx0WmtqOUxtQ2doMTN0bUxuNkpVd3NEYXhtMlpCbHVHQ2FQOWFfV21lLUthZkhYYXFHOFJWMmpnMGFwQWpBa01CV0RCdzE4YmxsRDZiUnhCVlhOVG1tcjBDaGVpODRjeU52OHI0cw?hl=en-US&gl=US&ceid=US%3Aen) — 암호화폐 상승 — Chainalysis Says Crypto Flows to Human Trafficking Groups.
-- [Russia's daily crypto turnover is over $650 million, Ministry of Finance says](https://news.google.com/rss/articles/CBMiwAFBVV95cUxOdTNOV1EwU09kckxNYk9kRXV0Ml9qbDNvVHM2NTVmTGdXX21LWUl6a3BPV3BweVpUZGktQ3FWWlR4TTFjakVMV3UtRmwzRmphVmVuMnpjOUdqRmx6YkUtS3RDVmdxM2pfRzA5QVBHWjNOLThpNHNXRmVpQWc0ZmJoTHFvajE1WDBRb2RsM2FYZFFseFdrY1JkcWpyNFNQMkI4NFhjUlpsSGdtQUZtRHIwemdEVVcwWWxNcFgzVkFFMFA?oc=5) — 암호화폐 — Russia's daily crypto turnover is over $650 million.
-- [New Cryptocurrency ListingCheck out the latest coin listings and pairs on Launchpad, Launchpool, Spot, Margin, and Futures markets.](https://www.binance.com/en/support/announcement/list/48) — 거래소: Binance.
-- [Latest Binance NewsStay on top of what's new in Binance.](https://www.binance.com/en/support/announcement/list/49) — 거래소: Binance.
-- [Latest ActivitiesFind promotions that interest you.](https://www.binance.com/en/support/announcement/list/93) — 거래소: Binance.
-- [New Fiat ListingsSee which new fiat-to-crypto trading pairs are available on Binance.](https://www.binance.com/en/support/announcement/list/50) — 거래소: Binance.
-- [API UpdatesLearn latest news on API updates.](https://www.binance.com/en/support/announcement/list/51) — 거래소: Binance.
-- [Crypto Is a Victim of Its Own Success](https://news.google.com/read/CBMiggFBVV95cUxQSXRNd2I4OC1OeFFoOVVwNDcteFhCTFFEWjJhblJaLXJpX1k1Wl9ob19QejlzTUVpbDFPY21rbldZTmJDZm9PaE9XTmxTQzdyYmt1ejB1YUJTY0hNWnNjZTZHVVQwSUZoWVRwQURlYWlOLUU3a1lyazRMMUVDbDdTUGdB?hl=en-US&gl=US&ceid=US%3Aen) — 암호화폐 — Crypto Is a Victim of Its Own Success.
-- [Love, Honor and Ledger: Why Couples Are Marrying With Crypto Prenups](https://news.google.com/read/CBMiqgFBVV95cUxPRHAtQlBvVC1xS3lWQXlrR20wbEJMc19wV0FfWTRGYzdyT2JGUFZfUElaTmZ0VEdFMkNfWXRwRUpCbk1UdkZlWDVyVDBqcnh0WXBsTDNCQ21DbmpkV1lVMHZQdVJXM1RsdVBjek15STJtcWtuY09aVnYwRWhIVkpZVkc2UUh2VlNGSFJpQTd6WHVzejlLZGwxNzEwZFQweGVFODRlZXoyTVVBUQ?hl=en-US&gl=US&ceid=US%3Aen) — 암호화폐 — Love, Honor and Ledger: Why Couples Are Marrying.
-- [The Best Cryptocurrency to Buy With $100 Right Now](https://news.google.com/read/CBMilwFBVV95cUxQMlIxcHZJSDZQRlV0d09vY0hheEUwSWJ1ZV9xaVE4anhvd1VJbklOdlQ4UWVHU2NXaW80d01DbEZJUVZrZW8weE41cmpSQnhDNXRPeUNqbTJQOWo2aUh0aWk3T01rbzVOUlBBbDRIX1ZkeDN3TFpFMTZGSDYxZVZGMEVlS0JQOEo4LXJQWlNnemdjVTNKWHVB?hl=en-US&gl=US&ceid=US%3Aen) — 암호화폐 매수·매도 — The Best Cryptocurrency to Buy With $100 Right Now.
 
 ## 테마별 주요 뉴스
 

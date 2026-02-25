@@ -10,32 +10,6 @@ image: "/assets/images/generated/market-heatmap-2026-02-20.png"
 
 ## 시장 시각화
 
-## 전체 뉴스 요약
-
-- 암호화폐: BTC $67K 부근 횡보 지속. Fed 의사록의 예상보다 강한 매파 기조 확인 후 한때 $66K를 붕괴했으나 빠르게 반등. BTC ETF는 5주 연속 순유출 위기이며, 이더리움·XRP ETF도 동반 유출 중. 반면 SOL ETF는 유일하게 유입세를 유지해 알트코인 내 차별화가 뚜렷해지고 있음.
-- 기관 자금 흐름: 비트코인 고래가 3,107 BTC($2.06억)를 Coinbase Institutional로 이동. OTC 매도 또는 기관 청산 가능성이 제기되며 단기 하방 압력으로 작용할 수 있음. 이더리움 현물 ETF는 $4,250만 순유출로 기관 수요 둔화를 시사.
-- 한국 증시: KOSPI 5,744.47 (+1.18%) 강세 마감. 외국인·기관 매수 유입으로 반도체·2차전지 주도. KOSDAQ은 -0.43% 소폭 조정.
-
-
-
-## 내용 분석
-
-- 본문은 오늘의 핵심, 전체 뉴스 요약, 오늘의 시장 인사이트 등 3개 섹션으로 구성되어 있습니다.
-- 총 7개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.
-
-
-## URL 요약
-
-- [CoinGecko](https://www.coingecko.com/) — Coin.
-- [CoinMarketCap](https://coinmarketcap.com/) — Coin.
-- [FRED](https://fred.stlouisfed.org/series/FEDFUNDS) — FRED.
-- [10Y Treasury](https://fred.stlouisfed.org/series/DGS10) — 기관 매수·매도 — 10Y Treasury.
-- [CPI](https://fred.stlouisfed.org/series/CPIAUCSL) — 거시 지표 — CPI.
-- [Fear & Greed Index](https://alternative.me/crypto/fear-and-greed-index/) — 시장 심리 — Fear & Greed Index.
-- [Investing.com KOSPI](https://kr.investing.com/indices/kospi) — 코스피 — Investing.com KOSPI.
-- [Yahoo Finance](https://finance.yahoo.com/) — Yahoo Finance.
-- [FRED](https://fred.stlouisfed.org/) — > *본 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다.*.
-
 ## 오늘의 핵심
 
 | 지표 | 값 | 변동 | 방향 |

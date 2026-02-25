@@ -50,38 +50,6 @@ description: "암호화폐 시장이 하락세를 보이고 있습니다. 단기
 
 
 
-## 전체 뉴스 요약
-
-- 극도의 공포 장세: 공포/탐욕 지수 5으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다.
-- 비트코인 $64,742 하락: 24h 기준 -4.59% 변동, 주간 -5.21% 하락.
-- 시가총액 $2.30T으로 하락: 전일 대비 -4.16%. BTC 도미넌스 56.3%로 비트코인 중심 자금 흐름 지속.
-- 암호화폐 시장이 하락세를 보이고 있습니다. 단기 조정 가능성을 염두에 두고 리스크 관리가 필요합니다.
-
-
-## 내용 분석
-
-- 본문은 오늘의 핵심, 전체 뉴스 요약, 오늘의 시장 인사이트 등 4개 섹션으로 구성되어 있습니다.
-- 총 16개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.
-
-
-## URL 요약
-
-- [Bitcoin ETFs See $88M Inflows, Ending Three-Day Outflow Streak](https://news.google.com/rss/articles/CBMinwFBVV95cUxNWGtvaXZwZmNJTnpRT1pXNUU2di0xTl9idi1JM1hud2RDdGwtY0x6TU5uUGpMX0k2eG9sX3RVUjUzYzMzUjMxNGlQc0dQRUM3WEV4bXZSUmd4ODZWMlNwelNxc2Z1enJIMEtzNXFCSkZsbEs0LTVQZzR4MW8tMjZZX1hLYm90QTVfSW9LTWxuWDZNWmpJTnptV1d2QkpqTkE?oc=5) — 온체인 이동 — Bitcoin ETFs See $88M Inflows, Ending Three-Day Outflow.
-- [Bitcoin ETFs add $88M, ending three-day outflow streak](https://news.google.com/rss/articles/CBMiekFVX3lxTE05dW5vQWNvbHFrUnl2ZmJyZjJaZkhYMzM1cDRJV0xsMkVONnQzVkN4emNETEF4VnpUby1CUEVOeUI1c1RYTnhvSXBrSXkxSDZzQjNXUWNqc25RUlNvanBwa3FOSlZoSGp4bDRwR1VyT29qX3g1TEJ0ZGdn?oc=5) — 온체인 이동 — Bitcoin ETFs add $88M, ending three-day outflow streak.
-- [비트코인 현물 ETF, 연초부터 45억달러 유출 기관투자자 이탈 가속](https://news.google.com/rss/articles/CBMic0FVX3lxTE5EUjd2aGtPejlrQzBhRC1jb1J0TkJJRk5kRDNqZ1pIZ29wR0JWM3ZWVG5Gc242OFRKNmc3b0Jxa0J4MDVmMlpVQWdfaGxUdnBtSEhNdHRmdzdDOTBoeXNBWHQ0SDYwZURpbDZHWUNpVE9NcXc?oc=5) — 비트코인 현물 ETF, 연초부터 45억달러 유출 기관투자자 이탈 가속.
-- [미국 비트코인 현물 ETF 자금 유출세 5주째 지속](https://news.google.com/rss/articles/CBMibEFVX3lxTE1aQVpITjlBcjBOZ1p2VjE0enlNYmtJSzBQWHJLNGFuTVBmYThwakMyQ3hYbm1SdGxXMHNwNlJqRjFQWlMtaGxQX2dyempZYzRRRWZLeXpGd01nbnVwY0IwUjZSaHhGMnY2dG9fRA?oc=5) — 미국 비트코인 현물 ETF 자금 유출세 5주째 지속.
-- [비트코인 ETF, 45억달러 유출 계속될까?](https://news.google.com/rss/articles/CBMifEFVX3lxTE84OUZEcjZTaHdLUHBjRW0yMGd3dllTajhBMjRlRXhsQndVMGZYTS1KdUJTQkEzWk1Ra3FkaGF6dC1MaEZuVDBCRlBUSGloYW9wUUltQ2w5V0JXYjZvRVpfejJWWnFfZkpmMDl4R2FJRllfN2RkVEZuM3dtV0U?oc=5) — 비트코인 ETF, 45억달러 유출 계속될까?
-- [USDT Transfer Stuns Market: $200 Million Whale Movement to Binance Signals Major Liquidity Shift](https://news.google.com/rss/articles/CBMiggFBVV95cUxPR2VGTTVPUTlBbHBzdTFyYjk1R0RGbWZ3elZ5Z0tDOUxLa1YwaUc5akR5dm9qd3Rfbk9jZkdTVWoxUDgxTjcwbTcxREV0bUN2QkJoUHJtVnNGd0NBcHZzZzlEZGtVLTlQZGlTX2xFTk1GOFdtYlhQdTduY1BlSUkySVJ3?oc=5) — 온체인 이동 — USDT Transfer Stuns Market: $200 Million Whale Movement.
-- [USDT Transfer Stuns Market: 200 Million Stablecoin Whale Movement to Binance Signals Potential Shift](https://news.google.com/rss/articles/CBMif0FVX3lxTE9NT2J1S29wYmxxSkRYZWREcC1Ga2tEUHJjUXZJMHZXcUNUWXdXcGJqLURKaFEzd1ZnNVNtZGM1WFZra29mSENoSEdDWi1Mc2w2LVh0ekh6YlhxcFBvNGIycWx6QWZ0ZU9hNFozVmFyc0JSNlkwSWdUdF9CMVkyeXM?oc=5) — 온체인 이동 — USDT Transfer Stuns Market: 200 Million Stablecoin Whale.
-- [FRED](https://fred.stlouisfed.org/series/FEDFUNDS) — FRED.
-- [FRED - 10-Year Treasury](https://fred.stlouisfed.org/series/DGS10) — 기관 매수·매도 — FRED - 10-Year Treasury.
-- [FRED](https://fred.stlouisfed.org/series/CPIAUCSL) — FRED.
-- [FRED](https://fred.stlouisfed.org/series/VIXCLS) — FRED.
-- [CoinGecko](https://www.coingecko.com/) — Coin.
-- [Alternative.me](https://alternative.me/crypto/fear-and-greed-index/) — Alternative.me.
-- [Investing.com](https://kr.investing.com/indices/kospi) — Investing.com.
-- [Yahoo Finance](https://finance.yahoo.com/) — Yahoo Finance.
-- [FRED](https://fred.stlouisfed.org/) — > *본 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다.
 
 ## 퀀트 시그널 요약
 

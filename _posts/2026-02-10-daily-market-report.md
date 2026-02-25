@@ -17,25 +17,6 @@ pin: true
 - 알트코인으로 자금 이동 활발 → 알트 시즌 진입 가능성 주목
 
 
-
-## 내용 분석
-
-- 본문은 전체 뉴스 요약, 오늘의 시장 인사이트 등 2개 섹션으로 구성되어 있습니다.
-- 총 9개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.
-
-
-## URL 요약
-
-- [FRED](https://fred.stlouisfed.org/series/FEDFUNDS) — FRED.
-- [FRED - 10-Year Treasury](https://fred.stlouisfed.org/series/DGS10) — 기관 매수·매도 — FRED - 10-Year Treasury.
-- [FRED](https://fred.stlouisfed.org/series/CPIAUCSL) — FRED.
-- [FRED](https://fred.stlouisfed.org/series/VIXCLS) — FRED.
-- [CoinGecko](https://www.coingecko.com/) — Coin.
-- [Alternative.me](https://alternative.me/crypto/fear-and-greed-index/) — Alternative.me.
-- [Investing.com](https://kr.investing.com/indices/kospi) — Investing.com.
-- [Yahoo Finance](https://finance.yahoo.com/) — Yahoo Finance.
-- [FRED](https://fred.stlouisfed.org/) — FRED.
-
 ## 시장 심리 게이지
 
 ```

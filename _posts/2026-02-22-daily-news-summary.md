@@ -14,46 +14,12 @@ excerpt: "암호화폐 101건, 주식 131건, 보안 1건, 규제 23건, 소셜 
 
 ## 전체 뉴스 요약
 
-오늘 수집된 총 57건 중 텔레그램 20건, 소셜 57건, 정치·경제 35건으로 정치/정책과 매크로/금리 이슈가 집중되었고 비트코인·거래소 관련 발언과 온체인 이동이 단기 변동성 요인으로 부각되었습니다.
-
-온체인 측면에서는 스테이블코인 이동 및 고래 거래소 이동 신호가 동시 포착되어 유동성 재배치 가능성이 있습니다.
+오늘 수집된 총 57건 중 텔레그램 20건, 소셜 57건, 정치·경제 35건으로 다양한 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 정책/규제: 정치/정책·매크로 중심 헤드라인이 리스크 프라이싱에 직접 반영될 가능성.
-- 매크로/유동성: 금리/유동성 발언과 스테이블코인 이동이 단기 수급 변동성 확대 구간.
-- 온체인/수급: 거래소 유입·대형 지갑 이동이 매도 압력 또는 재배치 신호로 해석 가능.
-- 시장 기대감: 장기 가격 전망·매수 뉴스 확산으로 심리 변동폭 확대.
-
-**오늘의 체크리스트**
-- 정책/관세 헤드라인과 암호화폐·미국주 동조 반응 확인
-- 거래소 유입 증가 여부(단기 급락/반등 신호) 모니터링
-- 스테이블코인 발행·이동 속도 변화(유동성 진입 신호) 추적
+- 주요 테마: 분류 데이터 제한적
 - 긴급 알림 1건에 대한 선별 모니터링
 
-
-
-## 내용 분석
-
-- 총 57건의 뉴스 중 📜 정책/규제, 🧭 수급/심리 테마가 가장 많은 비중을 차지합니다.
-- 긴급 이슈 1건이 감지되어 우선 확인이 필요합니다.
-- 본문은 전체 뉴스 요약, 뉴스 내용 기반 핵심 요약, 시장 개요 등 3개 섹션으로 구성되어 있습니다.
-
-
-## URL 요약
-
-- [Crypto Crash Playbook: 2 High-Conviction Buys to Consider Before the Rebound](https://news.google.com/read/CBMimAFBVV95cUxNVjFoQ25KUFlISi1meE5jbEw1VDRzYlM0QjNqZERvYlg3SWVmVE1Hd01UdF9SSXpRdWhheWhReG5qdzQwd2VGOVVtS09GaFdFRjJIcDBBWXpTbW1rSVR1cHpiR0VwRC1WRUh6RlB6QkZSaW82MERuXzBtUDJ6Q1UyUjJDV0FvRDNSQ3cxNl9kcUV5Q1VJMWtwTA?hl=en-US&gl=US&ceid=US%3Aen) — 암호화폐 상승 — Crypto Crash Playbook: 2 High-Conviction Buys to Consider.
-- [S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates](https://news.google.com/read/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?hl=en-US&gl=US&ceid=US%3Aen) — S&P 500 상승 — S&P 500 rises, Dow gains 200 points after Supreme Court.
-- [Bitcoin dips after Trump tariff hike announcement, then recovers](https://news.google.com/read/CBMivwFBVV95cUxQNHRRXzJrRGV0aFNGOHFhWXI3dXA1S2pFS2xjZWtCTWloV1Y4a2lUWllYcTJybTVrd2tKeTJwNE0xeTR1aWhlLUtycU5mR2JxRUxEN3FBbnVRNHNkQ1pwM3JuYll5QWJIay1hcXgxNERwV3prSlppZWE2LUM2NFNfWW1NSEpNOHBFTGh2MmRSVEZ5OGs3SmYwelk5b002dkdSTG5nbmZ3dk9Tbmg3M3NIeXpmdExTV1dDRjRya092TQ?hl=en-US&gl=US&ceid=US%3Aen) — 무역·관세 — Bitcoin dips after Trump tariff hike announcement, then.
-- [Bitcoin, Ethereum hold firm as Trump announces global tariff hike](https://news.google.com/read/CBMioAFBVV95cUxNOGZjeXlzSW9ia2tITUxvQTdTODB5VjFoRzZXRzdCb000dWZVc0xfUnp4WjNBcDZKNjMzOFVzazJoNkFBTFl1SkhNMVlRS0JKY3prelRGeDBqNWc0SXQwVmRpTHZwRXZqVHItcVNUQVZ2UG13cTA4NmdFQ2hNMi1oVkgtWUZ0MS1RUkNMQllwQnctekpLa1RMcjJXYUNPYXlh?hl=en-US&gl=US&ceid=US%3Aen) — 무역·관세 — Bitcoin, Ethereum hold firm as Trump announces global.
-- [Russia-linked cryptocurrency services and sanctions evasion](https://news.google.com/rss/articles/CBMikgFBVV95cUxOcEVoeE1VamlwREtsSUxoRS0tZ2NwWVRxVUZmelRXSUNvSXF1WlQ1Vlh3VGE3SWxtWUk3bTFSMVZ4cGlMeHdKdDNIVWFJeFd6VnpwZ3VBUUtmZXY3Njl6RWpsS2I0Nnp4bUNmYndDemdMSEVMTGk4MndBOEFoOF9hS3d0TC1pVmNYUTNXUzRyZXlMUQ?oc=5) — 암호화폐 — Russia-linked cryptocurrency services and sanctions evasion.
-- [After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued?](https://news.google.com/rss/articles/CBMimwFBVV95cUxNRW5lMUlzTkxlZEVaYjlTUkVKbTR0Qm9tZzVRN3BGVUtBcVBJSFBTS0FGTVJIc18tUU1wZXV4bk9EZ3J0LXFoZTlfWjFYMTgyU0VnQVdBWmhKTm1rak1Kb3NldkVOQllmaTd3U2JLQVloc2JXUk82TUVtMU5xR1I3cXRraDdOY1Rvd3VFYjhOc01GWG4xWGl1bk1sbw?oc=5) — 거래소 매수·매도 — After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly.
-- [Stock Market News, Feb. 20, 2026: S&P 500 and Nasdaq log best week since early-January despite Trump slapping new 10% global tariff after Supreme Court's ruling; Treasury yields rise, dollar retreats](https://news.google.com/read/CBMiygNBVV95cUxQSDdCQ1VTX2xsZjEyWVowRjd0WFpmYUs3SWR0NHdGNXNrel9pY2lGSWExUVRuN0ZNeTZFZ2E3SGhqTVZkUW56RVFaTlRuVG5XbzFyQ245UmU3c0RiVVF2dGxZQzFja1dhckp5Mk9NN0ZrVlZLX3RVVS0tQ1U4Y005QkppNDFJbnQxLUtBcmczQ3ZoY2VUaGhaQmNpdEpQUUtVM1dPc3I1eXNTNk5HeHA5ZFc2UVU4dHRyc0NKMER1RkNpSVlaV2pFUVN2ajkzZHVvaFV4LWFUNFNDLTg3cEt3RmI1azRGeGZGNE9kSmIzZ09ZNE0wQk1HM0xjSHdZQVMwV3l2R3hrbmpjbGhDZG82Y2xZa2lIeVBkLVBpYS1qQzFLZVdVaFRTZFBaT25uMEFkLXhjSWNEbjlKOU9LazZzUmZTcnZGSUtVV0xWZGxsVTNKMW93Sk1rMVVaRkVwckVYZk1RSnlaVHE5dF9sUUpVSmlEbHZpcUowWDhkUV94R0I3Y0VtVDhRTVhrUzBkYVdGZlpsdkxMamJkckw0QW03OXdKc2RtUlBWRjJnbnNMLVUxaG5fRUhjS3ZDalAwQTBMQXVvY0NLOE1Wdw?hl=en-US&gl=US&ceid=US%3Aen) — 나스닥 상승 — Stock Market News, Feb.
-- [Stock Market News From Feb. 20, 2026: Dow Rises After Supreme Court Strikes Down Trump's Tariffs](https://news.google.com/read/CBMi-wJBVV95cUxQQVlfVVF4NlEtRnN2TGpNQjYyN3F5VGdwbUgzZUNwaEN5b3NuSXp4aVNlN1UtZ2FHVFJlcFl3dmpEYk54bGEtcGVrV3F0R2Vabmhta0gyQzZOXzA4OVoyMGJ4Z3E1dHZfbGlwVnJzTDN5MHBvUW9LSTZMV1p5X3JXcWd3dWxpbXpfWGI0Y1BDLWR0aEVKbGdUY0hvdWYyRWM0cDMwOE5ROW9WTDdoS0VwSjJ2TWN5SldXQmtfNFUxeVZpZDBjTU1WOWZRQm1ESDVWaXhDZGEyNXg2aUpBLWFubEI1dHBPZXBrZ2VJcUFocGNNT2pDaW1JSlZ3aDZ2M0tra2RfT2tWUTVuX21QUV9PZ3VwTkZVZTZvNXRCQWFNOEdVd0RHZndFeWUwWVozSHpXX2hMUzZQQm1aZVI0TWlHd1hEbzlYN2pLczhZWlVEZDRyLUUzVDd2TVFlYW83WC1FTmgxMy1zRlRpM1phazU3d1gyanA0LWZYSDlF?hl=en-US&gl=US&ceid=US%3Aen) — 다우존스 상승 — Stock Market News From Feb.
-- [Stock market today: Dow, S&P 500, Nasdaq jump to post weekly gains as Supreme Court strikes down Trump tariffs](https://news.google.com/read/CBMi0wFBVV95cUxOcXE0RXlLLVJ0UkRQNmdETWY4dTBjYnBqU3BfOG9vU2Z1WVJmQ2hadUVrSW1vTEhwMU85dC1IOHZ6LURwMFdEbDhUSnRjVTJjQnFyQnB6ZlV3bTlITllfSmk0emVUc0lLdS13VFhBZ1dLM2tVRWVEYTdTSmZvRzlnYjNpWkQ3QjFSd0hCTk8tOE9IWG56ZVVKYWMzSjU1SVJPVHJqazZlMFA2ZnQ5XzlfZE1BZmNQdzFQMDdGLTc3bnlvQW5SYzJUOFpfaUpVbGlXRzBr?hl=en-US&gl=US&ceid=US%3Aen) — 나스닥 상승 — Stock market today: Dow, S&P 500, Nasdaq jump to post.
-- [Trump to hike global tariffs to 15% from 10%, 'effective immediately'](https://www.cnbc.com/2026/02/21/trump-tariffs.html) — 무역·관세 — Trump to hike global tariffs to 15% from 10%, 'effective.
-- [Airlines start canceling flights ahead of another monster winter storm on the East Coast](https://www.cnbc.com/2026/02/21/blizzard-prompts-airlines-waive-flight-change-fees.html) — Airlines start canceling flights ahead of another monster winter storm on the East Coast.
-- [Chaos, confusion and $200 billion dreams: What I saw at India’s AI summit](https://www.cnbc.com/2026/02/21/ai-summit-india-tech.html) — 상세 보기
-- [CME's 24/7 Trading Launch, and Solana's Meme Coin Surge](https://news.google.com/read/CBMiZEFVX3lxTE9PU3pBdGY0NWJMSWFUTFRDUGx3RklNQlNENWdlQjBiNG9meUo5andqSHFER0lkNlhEaFVwOXpLYWZseVJ1YVZsU2Q4RzBWT1RoeUhTM19YaFljM2ZHcm5yMHYxTlc?hl=en-US&gl=US&ceid=US%3Aen) — 솔라나 상승 — CME's 24/7 Trading Launch, and Solana's Meme Coin Surge.
 
 ## 종합 대시보드
 

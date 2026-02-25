@@ -23,44 +23,6 @@ description: "2026-02-25 기준 WorldMonitor 연계 소스에서 글로벌 이�
 - 주요 출처: WorldMonitor/Guardian World (12건), WorldMonitor/BBC World (8건)
 
 
-## 전체 뉴스 요약
-
-- 총 **20건** 수집
-- 주요 테마: 사회/기타, 지정학/안보, 에너지
-- 범위: 글로벌 지정학, 금융시장, 에너지 이슈
-- 주요 출처: WorldMonitor/Guardian World (12건), WorldMonitor/BBC World (8건)
-
-
-## 내용 분석
-
-- 총 20건의 뉴스 중 사회/기타, 지정학/안보 테마가 가장 많은 비중을 차지합니다.
-- 본문은 핵심 요약, 전체 뉴스 요약 등 2개 섹션으로 구성되어 있습니다.
-- 총 21개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.
-
-
-## URL 요약
-
-- [US accuses China of ‘massively’ expanding nuclear arsenal amid fears of new arms race](https://www.theguardian.com/world/2026/feb/24/us-accuses-china-of-massively-expanding-nuclear-arsenal-amid-fears-of-new-arms-race) — 시장 심리 — US accuses China of ‘massively’ expanding nuclear arsenal.
-- [Ukraine remembers its dead as war enters a fifth year](https://www.bbc.com/news/articles/clyg7r3nd3ko?at_medium=RSS&at_campaign=rss) — Ukraine remembers its dead as war enters a fifth year.
-- [Nancy Guthrie's family offers $1m reward to bring home missing mother](https://www.bbc.com/news/articles/cy4wd11j0evo?at_medium=RSS&at_campaign=rss) — Nancy Guthrie's family offers $1m reward to bring home missing mother.
-- [Caribbean leaders call for ‘de-escalation and dialogue’ amid US oil embargo on Cuba](https://www.theguardian.com/world/2026/feb/25/caricom-summit-2026-caribbean-leaders-us-military-strikes) — 원유 — Caribbean leaders call for ‘de-escalation and dialogue’.
-- [US ambassador to France set for talks with foreign minister after row](https://www.bbc.com/news/articles/c8d5eg5pl34o?at_medium=RSS&at_campaign=rss) — US ambassador to France set for talks with foreign minister after row.
-- [Royal Artillery under fire after denying access to looted Asante treasure](https://www.theguardian.com/uk-news/2026/feb/24/royal-artillery-access-looted-asante-treasure-ghana) — Royal Artillery under fire after denying access to looted Asante treasure.
-- [Robert Mugabe’s son charged with attempted murder over Johannesburg shooting](https://www.theguardian.com/world/2026/feb/23/robert-mugabe-son-bellarmine-mugabe-charged-with-crimes) — 법적 분쟁 — Robert Mugabe’s son charged with attempted murder over.
-- [Floods and landslides in Brazil kill at least 30 after record rainfall](https://www.theguardian.com/world/2026/feb/24/floods-landslides-brazil-kill-after-record-rainfall) — 시장 하락 — Floods and landslides in Brazil kill at least 30 after.
-- [Brazilian politicians accused of ordering murder of Rio councillor go on trial](https://www.theguardian.com/world/2026/feb/24/brazil-supreme-court-trial-rio-marielle-franco-murder) — 법적 분쟁 — Brazilian politicians accused of ordering murder of Rio.
-- [Mexico pledges safety for World Cup after violence erupts from cartel boss’s killing](https://www.theguardian.com/world/2026/feb/24/sheinbaum-world-cup-visitors-violence-el-mencho) — Mexico pledges safety for World Cup after violence erupts from cartel boss’s killing.
-- [Mexican drug cartel boss ‘El Mencho’ tracked through romantic partner](https://www.theguardian.com/world/2026/feb/23/el-mencho-mexican-drug-cartel-boss-killing-violence) — Mexican drug cartel boss ‘El Mencho’ tracked through romantic partner.
-- [Anger over plans to abolish New Zealand’s dedicated environment ministry](https://www.theguardian.com/world/2026/feb/25/new-zealand-plan-to-abolish-environment-ministry) — Anger over plans to abolish New Zealand’s dedicated environment ministry.
-- [Destitute survivors of south-east Asia’s cyberscam farms an ‘international crisis’](https://www.theguardian.com/global-development/2026/feb/24/destitute-survivors-of-south-east-asias-cyberscam-farms-an-international-crisis) — 시장 심리 — Destitute survivors of south-east Asia’s cyberscam farms.
-- [BTS comeback show sells out immediately as 260,000 fans set to descend on Seoul](https://www.theguardian.com/music/2026/feb/24/bts-comeback-show-sells-out-immediately-as-260000-fans-set-to-descend-on-seoul) — 기관 매수·매도 — BTS comeback show sells out immediately as 260,000 fans set.
-- [Duterte at ‘very heart’ of murderous drug crackdowns in Philippines, ICC told](https://www.theguardian.com/world/2026/feb/23/rodrigo-duterte-drug-war-case-icc-pre-trial-hearing-international-criminal-court-ntwnfb) — 다우존스 — Duterte at ‘very heart’ of murderous drug crackdowns.
-- [Russian soldiers tell BBC they saw fellow troops executed on commanders' orders](https://www.bbc.com/news/articles/cz7gw3l395ro?at_medium=RSS&at_campaign=rss) — Russian soldiers tell BBC they saw fellow troops executed on commanders' orders.
-- [Mexico hunts 23 inmates sprung from jail during wave of violence](https://www.bbc.com/news/articles/c07jpx7kkvpo?at_medium=RSS&at_campaign=rss) — Mexico hunts 23 inmates sprung from jail during wave of violence.
-- [Floods and landslides in Brazil kill at least 25](https://www.bbc.com/news/articles/c70k7vjllzeo?at_medium=RSS&at_campaign=rss) — 시장 하락 — Floods and landslides in Brazil kill at least 25.
-- [Two dead after winter storm hammers the US northeast](https://www.bbc.com/news/articles/c5yjpx2lgdjo?at_medium=RSS&at_campaign=rss) — Two dead after winter storm hammers the US northeast.
-- [Japan to deploy missiles on island near Taiwan by 2031](https://www.bbc.com/news/articles/cd9gj1w2kn1o?at_medium=RSS&at_campaign=rss) — Japan to deploy missiles on island near Taiwan by 2031.
-- [worldmonitor](https://worldmonitor.app) — worldmonitor.
 
 ## 지도 인텔리전스 스냅샷
 

@@ -48,27 +48,14 @@ lang: "ko"
 
 
 
+
+
 ## 전체 뉴스 요약
 
 - 총 **4건** 수집
 - 트럼프 관련 1건의 정책 뉴스가 수집되었습니다. 행정명령 및 관세 정책은 글로벌 시장에 직접적인 영향을 미치고 있습니다.
 - 2026-02-16 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. 트럼프 정책 1건, 중앙은행 3건, 총 4건이 수집되었습니다.
 - 1. U.S., India announce historic trade deal, achieve reciprocal trade - Indo-Pacific Defense FORUM U.S., India announce historic trade deal, achieve reciproc...
-
-
-## 내용 분석
-
-- 총 4건의 뉴스를 수집하여 주요 이슈를 정리했습니다.
-- 본문은 전체 뉴스 요약, 정책 영향 분석, 한눈에 보기 등 3개 섹션으로 구성되어 있습니다.
-- 총 8개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.
-
-
-## URL 요약
-
-- [U.S., India announce historic trade deal, achieve reciprocal trade - Indo-Pacific Defense FORUM](https://news.google.com/rss/articles/CBMioAFBVV95cUxQUE5SalFjZndUVUw1TXduZEw2M3ZLa3FWWTBnU19kZ2dfNlJWN1hKME9vYkMySkplRnNUNFpEUHJVX2xfOS1HX29wWDNFczA1NnpBbUhMdEEzdFNDR25DVTZBalk5TEJvOHJ2clcxMDB5dXNndGZDOWVHSjFxRVRQOUJEcDZKU1lPTGRFYlRuY0o0cG5jQ0p1OW5FWFctME9X?oc=5) — U.S., India announce historic trade deal, achieve reciprocal trade - Indo-Pacific Defense.
-- [2월 기준금리 동결 무게모건스탠리 “성장률 전망치 높일 것”](https://news.google.com/rss/articles/CBMiXkFVX3lxTE5ydjczU3FRaEtZclRXa2JlcWMxSmM0RHBHZHRubXdPZmhSOS1QbkxjcTRNZFhCMTdUTzBJWDFQM3dIX1I4S2xSdWZTdnZSZnZiVEJHVDBrMXFkUnBQd2c?oc=5) — 2월 기준금리 동결 무게모건스탠리 “성장률 전망치 높일 것”.
-- [When’s the next Federal Reserve meeting? Latest news — and what to expect](https://news.google.com/rss/articles/CBMigAFBVV95cUxPOURaQ3hIZXdhRFo4dzNNQUxXakRhWXgxSnBMbm5ubW84U0tURHY5NnNBQU56cWxqVldnUl9TbFA5dG5abkgyRU91ZlNuMVRNN29wem1IVXZNa3lNQnlNZXZfcEhLMGE3eS1fS1ZVa0hicndZTnVBTVp0MDJMZTNDcg?oc=5) — 미 연준 — When’s the next Federal Reserve meeting?
-- [Rate Cuts Watch: FOMC Minutes, PCE Inflation and Jobs Data To Move Crypto](https://news.google.com/rss/articles/CBMimAFBVV95cUxQVGhYaFNaVldtM1VkUjBaTEVPSllvYkgxeWpHOXFmRlFPVUtyOE4ydnRvZVNmSDhLMXBDeHFYeGRPSnQzSUJxalJaUmdzT04xUkJLTWRmUUVvVUlTQlp1dTNmZ3NSRnBVYkF4NnYxc1o0MXVfem9FLVlyME9GWkNsakY5Z3IxSmtIR1NTZ0g0NTNlR2FmUzR0LQ?oc=5) — 미 연준 — Rate Cuts Watch: FOMC Minutes, PCE Inflation and Jobs Data.
 
 ## 트럼프 행정명령/정책
 

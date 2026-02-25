@@ -34,44 +34,6 @@ lang: "ko"
 
 
 
-## 전체 뉴스 요약
-
-- 총 **20건** 수집
-- 주요 테마: 사회/기타, 금융시장, 지정학/안보
-- 범위: 글로벌 지정학, 금융시장, 에너지 이슈
-- 주요 출처: WorldMonitor/CNBC (14건), WorldMonitor/BBC World (6건)
-
-
-## 내용 분석
-
-- 총 20건의 뉴스 중 사회/기타, 금융시장 테마가 가장 많은 비중을 차지합니다.
-- 본문은 핵심 요약, 전체 뉴스 요약 등 2개 섹션으로 구성되어 있습니다.
-- 총 21개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.
-
-
-## URL 요약
-
-- [Trump says he's considering limited military strike against Iran](https://www.cnbc.com/2026/02/20/trump-says-hes-considering-limited-military-strike-against-iran.html) — 트럼프 상승 — Trump says he's considering limited military strike against.
-- [Iran students stage first large anti-government protests since deadly crackdown](https://www.bbc.com/news/articles/c5yj2kzkrj0o?at_medium=RSS&at_campaign=rss) — 다우존스 — Iran students stage first large anti-government protests.
-- [Palestinian Authority in dire straits as Israel's hold on West Bank deepens](https://www.bbc.com/news/articles/c9wn8lw0kgjo?at_medium=RSS&at_campaign=rss) — Palestinian Authority in dire straits as Israel's hold on West Bank deepens.
-- [Market volatility trap? Why this income-first strategy may 'leave a lot on the table'](https://www.cnbc.com/2026/02/21/market-volatility-trap-this-investment-strategy-may-hurt-investors-.html) — Market volatility trap?
-- [Berkshire was a net seller of stocks in Buffett's final quarter as CEO](https://www.cnbc.com/2026/02/21/berkshire-was-a-net-seller-of-stocks-in-buffetts-final-quarter-as-ceo.html) — 기관 매수·매도 — Berkshire was a net seller of stocks in Buffett's final.
-- [Fourth-quarter U.S. GDP up just 1.4%, badly missing estimate; inflation firms at 3%](https://www.cnbc.com/2026/02/20/pce-inflation-december-2025.html) — 거시 지표 상승 — Fourth-quarter U.S.
-- [Here are 3 forces that drove the stock market during Wall Street’s comeback week](https://www.cnbc.com/2026/02/21/3-forces-that-drove-the-stock-market-during-wall-streets-comeback-week.html) — Here are 3 forces that drove the stock market during Wall Street’s comeback week.
-- [Supreme Court Trump tariff decision impact: What to expect as fight for billions in refunds begins](https://www.cnbc.com/2026/02/20/supreme-court-trump-tariff-decision-illegal-refunds.html) — 무역·관세 — Supreme Court Trump tariff decision impact: What to expect.
-- [Killing of nationalist student leaves French far left in deep trouble as elections loom](https://www.bbc.com/news/articles/cnv61zv534eo?at_medium=RSS&at_campaign=rss) — Killing of nationalist student leaves French far left in deep trouble as elections loom.
-- [Trump to hike global tariffs to 15% from 10%, 'effective immediately'](https://www.cnbc.com/2026/02/21/trump-tariffs.html) — 무역·관세 — Trump to hike global tariffs to 15% from 10%, 'effective.
-- [Airlines start canceling flights ahead of another monster winter storm on the East Coast](https://www.cnbc.com/2026/02/21/blizzard-prompts-airlines-waive-flight-change-fees.html) — Airlines start canceling flights ahead of another monster winter storm on the East Coast.
-- [Chaos, confusion and $200 billion dreams: What I saw at India’s AI summit](https://www.cnbc.com/2026/02/21/ai-summit-india-tech.html) — Chaos, confusion and $200 billion dreams: What I saw at India’s AI summit.
-- [Trump previewed weak GDP on Truth Social ahead of official data release](https://www.cnbc.com/2026/02/20/trump-gdp-weak-powell-fed-interest-rates.html) — 트럼프 — Trump previewed weak GDP on Truth Social ahead of official.
-- [The 18 highest-paying college majors 5 years after graduation](https://www.cnbc.com/2026/02/21/highest-paying-college-majors.html) — The 18 highest-paying college majors 5 years after graduation.
-- [Under mounting toy pressures, Hasbro has a secret sauce that Mattel hasn't matched](https://www.cnbc.com/2026/02/21/hasbro-vs-mattel-toy-industry-pressures-make-digital-the-star.html) — 규제 당국 — Under mounting toy pressures, Hasbro has a secret sauce.
-- [Trump accounts have 'more unanswered questions than answered,' expert says. What's still unknown](https://www.cnbc.com/2026/02/21/trump-accounts.html) — 트럼프 — Trump accounts have 'more unanswered questions than.
-- [From 'vanlords' to safe parking sites: How RVs became Silicon Valley's housing safety net](https://www.cnbc.com/2026/02/20/how-rvs-became-silicon-valleys-housing-safety-net.html) — From 'vanlords' to safe parking sites: How RVs became Silicon Valley's housing safety net.
-- [Nasa astronauts' moon mission delayed due to rocket issue](https://www.bbc.com/news/articles/c626v265zqlo?at_medium=RSS&at_campaign=rss) — Nasa astronauts' moon mission delayed due to rocket issue.
-- [Divers recover bodies of seven Chinese tourists from bottom of Lake Baikal](https://www.bbc.com/news/articles/czd8y96mldyo?at_medium=RSS&at_campaign=rss) — Divers recover bodies of seven Chinese tourists from bottom of Lake Baikal.
-- [Willie Colón, trombonist who pioneered salsa music, dies aged 75](https://www.bbc.com/news/articles/c98qjed249do?at_medium=RSS&at_campaign=rss) — Willie Colón, trombonist who pioneered salsa music, dies aged 75.
-- [worldmonitor](https://worldmonitor.app) — worldmonitor.
 
 ## 이슈 분포
 <div class="stat-grid">

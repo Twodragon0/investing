@@ -33,55 +33,15 @@ image: "/assets/images/generated/source-distribution-2026-02-22.png"
 
 
 
+
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 57건 중 텔레그램 20건, 소셜 2건, 정치·경제 35건으로 정치/정책과 매크로/금리 이슈가 집중되었고 비트코인·거래소 관련 발언과 온체인 이동이 단기 변동성 요인으로 부각되었습니다.
-
-온체인 측면에서는 대규모 USDT 이동 및 고래 거래소 이동 신호가 동시 포착되어 유동성 재배치 가능성이 있습니다.
+오늘 수집된 총 57건 중 텔레그램 20건, 소셜 2건, 정치·경제 35건으로 정치/정책 및 매크로/금리 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 정책/규제: 정치/정책, 매크로/금리, 비트코인 헤드라인이 리스크 프라이싱에 직접 반영될 가능성.
-- 매크로/유동성: 금리/유동성 발언과 스테이블코인 이동이 단기 수급 변동성 확대 구간.
-- 온체인/수급: 거래소 유입·대형 지갑 이동이 매도 압력 또는 재배치 신호로 해석 가능.
-- 시장 기대감: 장기 가격 전망·매수 뉴스 확산으로 심리 변동폭 확대.
-
-**오늘의 체크리스트**
-- 정책/관세 헤드라인과 암호화폐·미국주 동조 반응 확인
-- 거래소 유입 증가 여부(단기 급락/반등 신호) 모니터링
-- 스테이블코인 발행·이동 속도 변화(유동성 진입 신호) 추적
+- 주요 테마: 정치/정책, 매크로/금리, 비트코인
 - 긴급 알림 1건에 대한 선별 모니터링
-
-
-## 내용 분석
-
-- 총 57건의 뉴스를 수집하여 주요 이슈를 정리했습니다.
-- 긴급 이슈 1건이 감지되어 우선 확인이 필요합니다.
-- 본문은 전체 뉴스 요약, 소셜 동향 분석, 주요 소셜 미디어 트렌드 등 5개 섹션으로 구성되어 있습니다.
-
-
-## URL 요약
-
-- [[이번주 경제]한은 기준금리 동결 유력 작년 합계출산율 주목](https://news.google.com/rss/articles/CBMiT0FVX3lxTE40amcwWEF5RFZmaDVNRVZtZ2NsdXNfR0VidEJ0TkhzVmEtb293ODVvLWJmd0JJYmotNE5oQlRfcUZ2ZE91Y2ZXUVpQWWlEUzg?oc=5) — [이번주 경제]한은 기준금리 동결 유력 작년 합계출산율 주목.
-- [JAMES LAVISH: “The Federal Reserve manipulating the money supply and access to capital has absolutel](https://t.me/crypto/3509) — 미 연준 — JAMES LAVISH: “The Federal Reserve manipulating the money.
-- [Whales sent roughly 57,000 $BTC to exchanges over the past four days, according to recent on-chain d](https://t.me/crypto/3511) — 온체인 이동 — Whales sent roughly 57,000 $BTC to exchanges over the past.
-- [CFTC Chair says they will "future-proof" crypto regulations."We can't allow Gary Gensler 2.0 to come](https://t.me/crypto/3512) — 규제·정책 — CFTC Chair says they will "future-proof" crypto.
-- [This user is back after making some INSANE predictions in the past that all came true.He is now pred](https://t.me/crypto/3513) — This user is back after making some INSANE predictions in the past that all came true.He.
-- [JUST IN: 🇺🇸 CFTC Chair says crypto market structure bill "is on the cusp" of becoming law.](https://t.me/crypto/3514) — 규제 당국 — JUST IN: 🇺🇸 CFTC Chair says crypto market structure bill.
-- [JUST IN: Tom Lee's 'BitMine' buys 45,759 $ETH worth $91 million.](https://t.me/crypto/3515) — JUST IN: Tom Lee's 'Bit.
-- [ERIC TRUMP: Being de-banked pushed Trump family towards crypto." The banks made the biggest mistake](https://t.me/crypto/3517) — 암호화폐 매수·매도 — ERIC TRUMP: Being de-banked pushed Trump family towards.
-- [Binance founder CZ predicts Bitcoin will reach between $500,000 and $1,000,000 this cycle.](https://t.me/crypto/3518) — 비트코인 — Binance founder CZ predicts Bitcoin will reach between.
-- [USDT Transfer Stuns Markets: 200 Million Dollar Whale Movement to Binance Signals Major Activity](https://news.google.com/rss/articles/CBMiggFBVV95cUxQTnV3TmF5UkQ3QWdZZTYydjh4eGlwUEFvRWYzeFE1MDRqOXhwQmJwTnZpVUU4LVJGeTFmdG9ZaHhPZUVfdFNvTndNamJJTU0tVEpobGl5eTV3RzhIQjQ4T29EWkU3dUk4UnBVcmExRDZLZ2RFbE16ZkNYYzhyd1lucnVn?oc=5) — 온체인 이동 — USDT Transfer Stuns Markets: 200 Million Dollar Whale.
-- [Bitcoin News: What's Happening On OSCTwitterSC?](https://news.google.com/rss/articles/CBMiowFBVV95cUxQMXpzSkZzc3lqOUhaQWkzdWJySkVGN2gyYnltbENuLUZ2VmhRWU1xNDUwZUQzZkxWZEkwR0xWSXpwLXdOTUtBX1VabnlHQ3R5YnN3M3JLb1RCNENnYVZ4cDNsQmRaa0FlUEhKZlU1WG1vNlExUW9TbzljZC15LXVXeUdZaW8tMnZkVF9PVV8xT281Szl3UDRLOVBpdEEwMEZXeGdR?oc=5) — 비트코인 — Bitcoin News: What's Happening On OSCTwitter.
-- [트럼프 관세 금지 암호화폐·미국주 반응](https://news.google.com/rss/articles/CBMihgFBVV95cUxQZDJnWFRwQUF4ZXctQzVaa0ZaUXgwcWc0Ylpfb3BpUDlfUVNLNnEybEF2TG9oQllnaS01d1ZTa1ZfNEFtcDE1WC1rRWlsWUVaaFFPYnlIaTlkbFpqSk5iaWpsTXNHQ25TN3FDNDd5dGlRdmtzc3VuZlVIc3Q5Vm5GSG1lQjI1UQ?oc=5) — 트럼프 관세 금지 암호화폐·미국주 반응.
-- [野 "이재명 대통령 SNS 선거 개입" 與 "정책 홍보일 뿐" 공방](https://news.google.com/rss/articles/CBMiT0FVX3lxTE5fU2pDdmJ1X3NUSjhGRzZLQWk2RHg5RXZuNUdEYnotYVhTbHFUSHlqcmQ3b09jMWFycnhBbGljVEtWd2pqOGEtZFVZY1FCeHc?oc=5) — 野 "이재명 대통령 SNS 선거 개입" 與 "정책 홍보일 뿐" 공방.
-- [U.S. Supreme Court's decision on Trump's tariffs may not rock crypto — yet](https://news.google.com/rss/articles/CBMivgFBVV95cUxQV3pnY3NpajhZb0c0QzhXSjl3V0JIcmJ6b0ZaOHhNU0RFWV9PYkFoR1dscWstdWpXNHVkRFFMaV9jWXA0VldueEtVVGpvVzk0Z3UxQ1JXNnNDWktQWDdqNDAzU3JjU0RyQXhpdGo3OXoxLV9GUXk5Nkd5T2ZrUDE4WWlIeEVXaTRqYUVpWjRUaHh3bjRDbEU4blYwTzhaQlA3T0U5aEEyeGZGUUNsMUQ4TW4tTUdTdGQ4WFBJd2xB?oc=5) — 무역·관세 — U.S. Supreme Court's decision on Trump's tariffs may not.
-- [Pardoned Binance Founder Hobnobs With Trump Sons and Administration Officials at Mar-a-Lago Crypto Fest](https://news.google.com/rss/articles/CBMi4gNBVV95cUxOVThuSk00ajVBaEtaQVJhVzMyX3VKck1kZXMxbVBpMDZ0ZDRPRWg3Y0J4U2FZM3daMGpkLVM1YWE5ZWpxei01QTItRlFfaGZycXAtU2JmRjF0LTJZbEM0eWgtRU9mLTVXQXNwRlI0YUhIZnJLOTA2YnNIUnBDa2N3TnBvczk4dGkwdWFlVEdzYjRoeFEtN0NrQkVNTkJfQ1RlQWJKX29maUZNTkwtd25xa2dBV1FUTHZKWkgtTm5PTENHUnVfeFdlZkRQNGtDSFJlQ1g0RXFoclo2U1FWSjZtbl83SUpRRzZISjNqT2pyNGNHSFNnVXlrcFJBaHZ6WGRYMkVvYzJoV25hY3JNc1dKb19PRWFWcmtheWNuMm1tTmpnNDVDT2lrd2ZQeV9zX1lsNkxtenpWRzdVbHM5YUdobzBSWGJyeUJfR1E4QzJYZzBTNktwVnhMUDRiWnpVQldDY2VMUlVJYmtJQzJ4MzN0dC1MeThFYVY4aVdsTFhmeGs3d3NrV0ZMMXI0ZVRZeDNSVG9YcU52OW84TUZRVTF4TWFiYWVqWmRtV1FsZDFoN2taTGQ5a2N4ZjFyQ2FURHV6dC1TWlZ5Tk9nd0V4QWlhRE1rblBHN284aFRlb0lZZ1otUQ?oc=5) — 거래소 — Pardoned Binance Founder Hobnobs With Trump Sons.
-- [Crypto super PACs have hundreds of millions ready to spend on the midterms](https://news.google.com/rss/articles/CBMickFVX3lxTE0xUTRCa3BHbXBHYkxLUmloN01uMkRPVFRMazkzdlJUdF82RVRFM19LWU1yQW5JazVzUzZMeDlRbUVjYzJyUGdTc1J6YnVlcE9BWXhHX2dLYTlfUTJCSWtObTUzZGFJQ2pVVzhla3RBcDJhQQ?oc=5) — 암호화폐 — Crypto super PACs have hundreds of millions ready to spend.
-- [Bitcoin Rises After Supreme Court Rules Against Trump Tariffs](https://news.google.com/rss/articles/CBMihgFBVV95cUxNZEZ5Mjc2bkp2NGFGRkd6Wlpzam9HZmJydEpRZG1DZ0dsR3FtRUlZMC1mOUwwWWs3R2VyOFpVampjbXotZnVxUDRXZFBuM0JuTDVUSm5qck1zY2I2RFdQRmZwd3IxaFlKaFdUYW5TeFU1SnhyaHhxbUZSa3otN1BGeW1kd0RoQQ?oc=5) — 비트코인 상승 — Bitcoin Rises After Supreme Court Rules Against Trump.
-- [Five key takeaways from the Supreme Court's landmark decision against Trump's tariffs](https://news.google.com/rss/articles/CBMikgFBVV95cUxOV0RWMENVN0hoVEd0TTV3ZmlBZTh5V0ZaVFZJQ214SF9MVEZfSEpHa0c0c2xVbUdrYXhMc1lrOGJmUXBTR3l0MUk4SHhocEhyRFFaTUwzeTJKaEZKQmxqSEVZc3RSZHFYaHlIZkRIbnBLZ2JFR0hiS0hoQjM1am8zUXVDNjcyajZWdnNybEFOdDc0Z9IBlwFBVV95cUxNbFBwX2hxenlUSDNxNkdjc085bHdmQ0NCcHRabjNmRUtCUjJLbkVQRFNvclhUaUk2MENVcXk2LWVudHpWZmF3b1RUd1UyWUl1UFBTVkhGdURFbkdJcTV5ZGpkaUJaQ3JLeUgxRFpwaGRCUXBRakV4SWhqQkhNazdReUU2MXloMHNoYWZTUS1TajNaVC0wLURv?oc=5) — 트럼프 상승 — Five key takeaways from the Supreme Court's landmark.
-- [U.S. stocks seesaw after Supreme Court strikes down most of Trump's tariffs](https://news.google.com/rss/articles/CBMimwFBVV95cUxQbktzSG85RzVzMHY4MGRwU1Y1cFZLR1B6Q3dHd3Rsd3JONkFyNkdQUGpIcmU1ZEJiSUhfbE9adV81c2NPWTRaMUdPTGNhSFgzZVlPajJlc2ItMXlFT1JpQ0g0UFNYSS1aRm5ZNEhvcm5Yc3RaT1BlbjBOcHc1R01uQU9YNEJrMUM3M2JQcFF3enY1dnZDWWFmc3k4dw?oc=5) — 다우존스 하락 — U.S. stocks seesaw after Supreme Court strikes down most.
-- [After the Supreme Court's tariff ruling, here's what could be next for stocks (SPY:NYSEARCA)](https://news.google.com/rss/articles/CBMisgFBVV95cUxNNHBvQzlPcXVVeUU4aUZQWXVXT2pvQnBON0lMRE5ma0hQbE1vNGpBcjRfUnJObWFFcGR0UHp2TDJQSWRIWTJraWY0MVlaeEw4UTJ0dTl6MTJNRnZ1Q0hRQkpKWDRucnNIeEpKZW11ZWUwRUxNMHM4SmRHYWNUb0lzTFpPR0hqdktTZE1FV05adHhVWkVqTUxvZE9WUzBVSC1lQk91OHl0UDBSS3ZDSHAweTBB?oc=5) — 무역·관세 — After the Supreme Court's tariff ruling, here's what could.
-- [Wall Street ends higher after Supreme Court rules against Trump tariffs](https://news.google.com/rss/articles/CBMikAFBVV95cUxOZnJCV3UxUW1ORUVxWnpFampuaXhUYk5jMFdmbHZUNmhmNTU2ajFtVzAzREdjSGI5WTYxRGhaTnZVRmN6dUFGT3JxbEpia0gxdXdPVXpwNXFnMVVXRUt6c2hVOVZ5VnJnU29Xc1U1aWtDQV9UendyMUlMLU44RHdhNHNZX0hfZ3VxLWpGaXFZUFM?oc=5) — 트럼프 상승 — Wall Street ends higher after Supreme Court rules against.
 
 ## 텔레그램 주요 소식
 

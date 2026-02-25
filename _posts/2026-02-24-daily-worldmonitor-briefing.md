@@ -24,44 +24,6 @@ description: "2026-02-24 기준 WorldMonitor 연계 소스에서 글로벌 이�
 
 
 
-## 전체 뉴스 요약
-
-- 총 **20건** 수집
-- 주요 테마: 사회/기타, 지정학/안보, 금융시장
-- 범위: 글로벌 지정학, 금융시장, 에너지 이슈
-- 주요 출처: WorldMonitor/Al Jazeera (15건), WorldMonitor/Guardian World (5건)
-
-
-## 내용 분석
-
-- 총 20건의 뉴스 중 사회/기타, 지정학/안보 테마가 가장 많은 비중을 차지합니다.
-- 본문은 핵심 요약, 전체 뉴스 요약 등 2개 섹션으로 구성되어 있습니다.
-- 총 21개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.
-
-
-## URL 요약
-
-- [Russia-Ukraine war: List of key events, day 1,461](https://www.aljazeera.com/news/2026/2/24/russia-ukraine-war-list-of-key-events-day-1461?traffic_source=rss) — Russia-Ukraine war: List of key events, day 1,461.
-- [Trump hits out at reports that top general flagged risks of attacking Iran](https://www.aljazeera.com/news/2026/2/24/trump-hits-out-at-reports-that-top-general-flagged-risks-of-attacking-iran?traffic_source=rss) — 트럼프 — Trump hits out at reports that top general flagged risks.
-- [Are the US and Iran moving closer to war?](https://www.aljazeera.com/video/inside-story/2026/2/23/are-the-us-and-iran-moving-closer-to-war?traffic_source=rss) — Are the US and Iran moving closer to war?
-- [Slovakia halts emergency power supplies to Ukraine over Russian oil dispute](https://www.aljazeera.com/news/2026/2/23/slovakia-halts-emergency-power-supplies-to-ukraine-over-russian-oil-dispute?traffic_source=rss) — 원유 — Slovakia halts emergency power supplies to Ukraine over.
-- [EU sanctions Russian officials as Hungary blocks funds to Ukraine](https://www.aljazeera.com/news/2026/2/23/eu-sanctions-russian-officials-as-hungary-blocks-funds-to-ukraine?traffic_source=rss) — EU sanctions Russian officials as Hungary blocks funds to Ukraine.
-- [Israeli settlers vandalise, torch mosque in occupied West Bank](https://www.aljazeera.com/video/newsfeed/2026/2/23/israeli-settlers-vandalise-torch-mosque-in-occupied-west-bank?traffic_source=rss) — Israeli settlers vandalise, torch mosque in occupied West Bank.
-- [Lebanon’s tax hikes draw anger from economically frustrated public](https://www.aljazeera.com/features/2026/2/23/lebanons-tax-hikes-draw-anger-from-economically-frustrated-public?traffic_source=rss) — Lebanon’s tax hikes draw anger from economically frustrated public.
-- [Australian PM backs removal of ex-Prince Andrew from succession line](https://www.aljazeera.com/news/2026/2/24/australian-pm-backs-removal-of-ex-prince-andrew-from-succession-line?traffic_source=rss) — Australian PM backs removal of ex-Prince Andrew from succession line.
-- [Heavy rains, deadly floods hit southern Peru; thousands seek shelter](https://www.aljazeera.com/news/2026/2/24/heavy-rains-deadly-floods-hit-southern-peru-thousands-seek-shelter?traffic_source=rss) — Heavy rains, deadly floods hit southern Peru; thousands seek shelter.
-- [Trump set to deliver second term’s first State of the Union: What to expect](https://www.aljazeera.com/news/2026/2/24/trump-set-to-deliver-second-terms-first-state-of-the-union-what-to-expect?traffic_source=rss) — 규제 당국 — Trump set to deliver second term’s first State.
-- [Trump’s new tariff threats trigger economic uncertainty; trade deals stall](https://www.aljazeera.com/economy/2026/2/23/trumps-new-tariff-threats-trigger-economic-uncertainty-trade-deals-stall?traffic_source=rss) — 무역·관세 — Trump’s new tariff threats trigger economic uncertainty.
-- [Tourette syndrome campaigner shouts slur at BAFTA ceremony](https://www.aljazeera.com/video/newsfeed/2026/2/23/tourette-syndrome-campaigner-shouts-slur-at-bafta-ceremony?traffic_source=rss) — Tourette syndrome campaigner shouts slur at BAFTA ceremony.
-- [El Mencho: Mexico officials say 25 soldiers killed after cartel raid](https://www.aljazeera.com/news/2026/2/23/mexican-officials-say-25-soldiers-killed-in-clashes-following-cartel-raid?traffic_source=rss) — El Mencho: Mexico officials say 25 soldiers killed after cartel raid.
-- [Another US boat strike in Caribbean Sea kills three, Pentagon says](https://www.aljazeera.com/news/2026/2/23/another-us-boat-strike-in-caribbean-sea-kills-three-pentagon-says?traffic_source=rss) — Another US boat strike in Caribbean Sea kills three, Pentagon says.
-- [BBC criticised for nixing ‘Free Palestine’ tribute from BAFTA coverage](https://www.aljazeera.com/news/2026/2/23/bbc-criticised-for-nixing-free-palestine-tribute-from-bafta-coverage?traffic_source=rss) — BBC criticised for nixing ‘Free Palestine’ tribute from BAFTA coverage.
-- [Robert Mugabe’s son charged with attempted murder over Johannesburg shooting](https://www.theguardian.com/world/2026/feb/23/robert-mugabe-son-bellarmine-mugabe-charged-with-crimes) — 법적 분쟁 — Robert Mugabe’s son charged with attempted murder over.
-- [Mexican drug cartel boss ‘El Mencho’ tracked through romantic partner](https://www.theguardian.com/world/2026/feb/23/el-mencho-mexican-drug-cartel-boss-killing-violence) — Mexican drug cartel boss ‘El Mencho’ tracked through romantic partner.
-- [Canada seeks answers from OpenAI for failing to alert police after suspending school shooter’s account](https://www.theguardian.com/world/2026/feb/23/openai-tumber-ridge-shooter-account-suspended) — Canada seeks answers from Open.
-- [Mexico faces uphill battle to appease kingpin Trump after cartel boss’s killing](https://www.theguardian.com/world/2026/feb/23/mexico-trump-cartel-boss-killing) — 트럼프 — Mexico faces uphill battle to appease kingpin Trump after.
-- [Who was El Mencho, the former police officer who co-founded an ultraviolent cartel in Mexico?](https://www.theguardian.com/world/2026/feb/23/who-was-el-mencho-drug-cartel-boss-killed-mexico) — Who was El Mencho, the former police officer who co-founded an ultraviolent cartel.
-- [worldmonitor](https://worldmonitor.app) — worldmonitor.
 
 ## 지도 인텔리전스 스냅샷
 

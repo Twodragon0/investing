@@ -22,24 +22,6 @@ description: "블록체인 보안 관련 뉴스 2건을 정리합니다."
 
 
 
-## 전체 뉴스 요약
-
-- 총 **2건** 수집
-- 보안 관련 뉴스: 2건
-- 블록체인 보안 관련 뉴스 2건을 정리합니다.
-- - 보안 사고/뉴스: 총 2건 - 보안 관련 뉴스: 2건
-
-
-## 내용 분석
-
-- 총 2건의 뉴스를 수집하여 주요 이슈를 정리했습니다.
-- 본문은 핵심 요약, 전체 뉴스 요약 등 2개 섹션으로 구성되어 있습니다.
-
-
-## URL 요약
-
-- [IoTeX Bridge Hacked In Private Key Exploit - Attacker Bridges Stolen Funds to Bitcoin Via THORChain](https://news.google.com/rss/articles/CBMivgFBVV95cUxQZFFpZUwtRHNqOVRXR3pIMU00NXd3RUlmT05xZmhQLVVmTENfNEE2SXRNZGVGQVNDanpMT1Q3SU90YW5UQ2RValhuSEJpMWZtYk9Lc3NwRDhiMkQ2ZDNpQVVDOGs2dE9JS0xEQlQteWtfaFBUNmhaT1czUzlTMXh0Xy00THA5a1lhZWxCcExQR3VBNXhha0d5MUpwOHN6RWI5SXlVMGtXcXFNaXhOWlJMcE9xSDNEYlQxNTBlbFFR?oc=5) — Io.
-- [IoTeX Hacked: Private Key Exploit Sparks Sharp Token Drop](https://news.google.com/rss/articles/CBMiaEFVX3lxTE11XzhXT290NkJlREZ5b25xWW1LSXhub0l1XzFBU0tSMVVlSHRna0xRZlFqdUdKaFFiZWR3QjF2SXMxY3lRdTZrVGFGUGJsYVNQdUUzOHNFNk9ZY1JodktPVDVVUVp4d1li?oc=5) — Io.
 
 ## 보안 관련 뉴스
 

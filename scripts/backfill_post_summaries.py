@@ -717,43 +717,18 @@ def build_social_summary(body: str) -> List[str]:
     themes = _extract_social_themes(body)
     urgent = _extract_urgent_count(body)
 
-    theme_text = ", ".join(themes) if themes else "정치/정책·매크로 중심"
+    themes_text = " 및 ".join(themes[:2]) if themes else "다양한"
     urgent_text = f"긴급 알림 {urgent}건" if urgent else "긴급 알림 없음"
-    has_usdt = "USDT" in body
-    has_whale = "whale" in body.lower() or "고래" in body
 
     lines = [
         _trim_sentence(
-            "오늘 수집된 총 {total}건 중 텔레그램 {telegram}건, 소셜 {social}건, 정치·경제 {political}건으로 "
-            "정치/정책과 매크로/금리 이슈가 집중되었고 비트코인·거래소 관련 발언과 온체인 이동이 "
-            "단기 변동성 요인으로 부각되었습니다.".format(
-                total=total,
-                telegram=telegram,
-                social=social,
-                political=political,
-            ),
+            f"오늘 수집된 총 {total}건 중 텔레그램 {telegram}건, 소셜 {social}건, "
+            f"정치·경제 {political}건으로 {themes_text} 이슈가 주요 화제입니다.",
             160,
         ),
         "",
-        _trim_sentence(
-            "온체인 측면에서는 {usdt} {whale} 신호가 동시 포착되어 유동성 재배치 가능성이 있습니다. "
-            "커뮤니티 내 규제 법안·정책 발언과 대형 매수/가격 전망이 혼재된 심리 구간입니다.".format(
-                usdt="대규모 USDT 이동" if has_usdt else "스테이블코인 이동",
-                whale="및 고래 거래소 이동" if has_whale else "및 대형 지갑 이동",
-            ),
-            150,
-        ),
-        "",
         "**핵심 신호 정리**",
-        f"- 정책/규제: {theme_text} 헤드라인이 리스크 프라이싱에 직접 반영될 가능성.",
-        "- 매크로/유동성: 금리/유동성 발언과 스테이블코인 이동이 단기 수급 변동성 확대 구간.",
-        "- 온체인/수급: 거래소 유입·대형 지갑 이동이 매도 압력 또는 재배치 신호로 해석 가능.",
-        "- 시장 기대감: 장기 가격 전망·매수 뉴스 확산으로 심리 변동폭 확대.",
-        "",
-        "**오늘의 체크리스트**",
-        "- 정책/관세 헤드라인과 암호화폐·미국주 동조 반응 확인",
-        "- 거래소 유입 증가 여부(단기 급락/반등 신호) 모니터링",
-        "- 스테이블코인 발행·이동 속도 변화(유동성 진입 신호) 추적",
+        f"- 주요 테마: {', '.join(themes) if themes else '분류 데이터 제한적'}",
         f"- {urgent_text}에 대한 선별 모니터링",
     ]
 
@@ -1100,9 +1075,19 @@ def process_post(
     stripped_lines, _ = remove_existing_analysis(stripped_lines)
     stripped_lines, _ = remove_existing_url_summary(stripped_lines)
     rebuilt_body = "\n".join(stripped_lines)
+
+    # Skip redundant "전체 뉴스 요약" if post already has a summary section
+    has_existing_summary = any(
+        find_heading_index(stripped_lines, t) != -1
+        for t in ("오늘의 핵심", "핵심 요약")
+    )
+
     if is_social_media_post(front_data, rebuilt_body):
         summary_lines = build_social_summary(rebuilt_body)
         updated_lines = insert_social_summary(stripped_lines, summary_lines)
+    elif has_existing_summary:
+        # Post already has a prominent summary — don't duplicate
+        updated_lines = stripped_lines
     else:
         summary_lines = build_summary(stripped_lines, rebuilt_body)
         updated_lines = insert_summary(stripped_lines, summary_lines)

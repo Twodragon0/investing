@@ -62,49 +62,15 @@ image: "/assets/images/generated/source-distribution-2026-02-17.png"
 
 
 
+
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 34건 중 텔레그램 20건, 소셜 -건, 정치·경제 14건으로 정치/정책과 매크로/금리 이슈가 집중되었고 비트코인·거래소 관련 발언과 온체인 이동이 단기 변동성 요인으로 부각되었습니다.
-
-온체인 측면에서는 대규모 USDT 이동 및 고래 거래소 이동 신호가 동시 포착되어 유동성 재배치 가능성이 있습니다.
+오늘 수집된 총 34건 중 텔레그램 20건, 소셜 -건, 정치·경제 14건으로 매크로/금리 및 정치/정책 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 정책/규제: 매크로/금리, 정치/정책, 비트코인 헤드라인이 리스크 프라이싱에 직접 반영될 가능성.
-- 매크로/유동성: 금리/유동성 발언과 스테이블코인 이동이 단기 수급 변동성 확대 구간.
-- 온체인/수급: 거래소 유입·대형 지갑 이동이 매도 압력 또는 재배치 신호로 해석 가능.
-- 시장 기대감: 장기 가격 전망·매수 뉴스 확산으로 심리 변동폭 확대.
-
-**오늘의 체크리스트**
-- 정책/관세 헤드라인과 암호화폐·미국주 동조 반응 확인
-- 거래소 유입 증가 여부(단기 급락/반등 신호) 모니터링
-- 스테이블코인 발행·이동 속도 변화(유동성 진입 신호) 추적
+- 주요 테마: 매크로/금리, 정치/정책, 비트코인
 - 긴급 알림 없음에 대한 선별 모니터링
-
-
-## 내용 분석
-
-- 총 34건의 뉴스 중 📊 매크로/금리, 🏛️ 정치/정책 테마가 가장 많은 비중을 차지합니다.
-- 본문은 전체 뉴스 요약, 소셜 동향 분석, 정치·경제 동향 등 4개 섹션으로 구성되어 있습니다.
-- 총 43개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.
-
-
-## URL 요약
-
-- [How it feels to buy the dip](https://t.me/crypto/3498) — 기관 매수·매도 — How it feels to buy the dip.
-- [Binance has purchased another 4,545 Bitcoins valued at $305 million for its “SAFU” fund.](https://t.me/crypto/3499) — 비트코인 — Binance has purchased another 4,545 Bitcoins valued at $305.
-- [Polymarket rolls out an “Up or Down” Bitcoin marketA new BTC prediction market has gone live, settli](https://t.me/crypto/3500) — 비트코인 상승 — Polymarket rolls out an “Up or Down” Bitcoin market.
-- ["why didn’t you buy bitcoin in 2010”me in 2010:](https://t.me/crypto/3501) — 비트코인 매수·매도 — "why didn’t you buy bitcoin in 2010”me in 2010:.
-- [President Trump suggested "we might pay off the US $35 trillion debt using cryptocurrency."](https://t.me/crypto/3502) — 암호화폐 — President Trump suggested "we might pay off the US $35.
-- [How it feels buying alts right now:](https://t.me/crypto/3503) — 기관 매수·매도 — How it feels buying alts right now:.
-- [🇰🇷 In Seoul, South Korea, cryptocurrency trading is an E-sport where competitors buy and sell deriva](https://t.me/crypto/3504) — 암호화폐 매수·매도 — 🇰🇷 In Seoul, South Korea, cryptocurrency trading.
-- [YouTuber Logan Paul purchased this NFT for $635,000 in 2021.Today, it's worth $155.](https://t.me/crypto/3505) — You.
-- [The Trump Tariffs Are Having a Noticeable Impact on the Stock Market and It's Raising a Big Red Flag Right Now](https://news.google.com/rss/articles/CBMimAFBVV95cUxOcVBzVUEwZ3dkclJodnJ3T1hpdGxGSGRqVGdQU3lobkZHeElTemtsODdMRXVCRE5MY29ETDNmT2U4VjFDSUNURHAzZFVzbEhQb203RllpamtuWFpSM3c5MjlkOUp2SloycXEwVGF4anZ0eUJWX09tVVZma25mVm0xVmlMalpYbFkyT3kzRHFpeXA1MktNc29NcA?oc=5) — 무역·관세 — The Trump Tariffs Are Having a Noticeable Impact.
-- [Trump Tariffs Backfired, 130,000 Jobs Added In January And More: This Week In Economy](https://news.google.com/rss/articles/CBMi5wFBVV95cUxQYXpxSEpBeElZaEQwQmd1U2t3SmlsdUstaDdNa2MxRTF6TG9aSTN2M0F2OEdfQjdQVW1JZ2pGYnRQbzlLX0lzNWowWVgxNFppa2dXQmY3WjRfSTd1Y1g1Sm1KdE1ZYWxyUFFHMkhTOVR2Z3FZOUlMOGVJQmRBTnVEVmkzdW1FZS1GazFaV2dsdzN0VGVfUEpESmxsQjJNX05nMlQ5UmZFVXpRQVFucVhwQzhMRC10WXRtc1RmQzFncVFZUUVKREtLNE1TdXJMVmpPeTJlN1M0a3l5UGlrcWxJR0VnOVdoZDA?oc=5) — 무역·관세 — Trump Tariffs Backfired, 130,000 Jobs Added In January.
-- [감사원 정책감사 폐지한다는데이재명 정부에선 ‘정치적 감사’ 사라질까](https://news.google.com/rss/articles/CBMiT0FVX3lxTE1jd1FPUnNqa1A3WnlBeGMyQk5ObHFfRWJadUkza01BeFhJLUpOU1MxYVlDY2c1ek05TXl5VkkxOVQ0OUloX0o4cWpReUhZc1k?oc=5) — 감사원 정책감사 폐지한다는데이재명 정부에선 ‘정치적 감사’ 사라질까
-- [모건스탠리 “한은, 2월 금통위서 기준금리 동결 전망”](https://news.google.com/rss/articles/CBMickFVX3lxTFBSY3N2N1U5b1N6MGVpczB2UDdwSkVEcVhoVVo3X1h6aVBtU0hSeVRER0t2OF9oUFZrdGNBOFlTdUJtR3FCNGdTQkJCTm8zRDg0ZTdFMlhCNnRnby1abXVWNkFWZmVOd0xkSVVRMURNSEJDZw?oc=5) — 모건스탠리 “한은, 2월 금통위서 기준금리 동결 전망”.
-- [한국은행 '금리 동결' 예상반도체 호경기, 성장률 상향 전망](https://news.google.com/rss/articles/CBMiaEFVX3lxTFBLellLT2RxMVdMWkNiaUFqbklqX2FYTFNEaHNDV29WbVhKeWZCQ0tlWnFvVmhGMzJrTEVHVFJHSzJkNmMtMmNveUZEVU93ZWpsZFdmeTBxdjJVSFE4TkxrVElBRjRPd21l?oc=5) — 한국은행 '금리 동결' 예상반도체 호경기, 성장률 상향 전망.
-- [모건스탠리 “한은, 26일 기준금리 2.5% 동결 예상성장률 전망은 상향 조정”](https://news.google.com/rss/articles/CBMiZEFVX3lxTE9jbkdzTVhKckE2TGpmdFFYcXdmVUQ3MXFKcHpIRWN6MDY4SDlhamVLMWpwNjJGZjhSM2JNMnkyZERxTkd3WU5yN1c5THpQMmdiaFY5blpJVG5vckJ6T0FRbUdFdlI?oc=5) — 모건스탠리 “한은, 26일 기준금리 2.5% 동결 예상성장률 전망은 상향 조정”.
-- [모건스탠리 "한은, 2월 금통위서 기준금리 동결 전망올해 성장률은 1.8→2.0% 상향"](https://news.google.com/rss/articles/CBMihAFBVV95cUxQUTd5TktLRjkzUlFQbFVHSlFvcHFIejZueVJsUzlyZmM3VEowdFF3cVhVRzRwaFUyNEJrWHlBQUhXcHB3emdLQmtfeTRramZkRDcyZ3hUbm9fVkVSNUR1QmhHWVZfai14SXJaaWpyLVVpWWhqZWJhR1JlVmt6b2FJS1gtblE?oc=5) — 모건스탠리 "한은, 2월 금통위서 기준금리 동결 전망올해 성장률은 1.8→2.0% 상향".
 
 ## 텔레그램 주요 소식
 
