@@ -306,13 +306,14 @@ def summarize_political_post(post: Dict[str, Any]) -> Dict[str, Any]:
 
 
 def get_post_url(filepath: str, today: str, category: str = "") -> str:
-    """Generate relative URL for a post following Jekyll permalink structure."""
+    """Generate absolute URL for a post following Jekyll permalink structure."""
+    base = "https://investing.2twodragon.com"
     filename = os.path.basename(filepath)
     slug = filename.replace(f"{today}-", "").replace(".md", "")
     date_path = today.replace("-", "/")
     if category:
-        return f"/{category}/{date_path}/{slug}/"
-    return f"/{date_path}/{slug}/"
+        return f"{base}/{category}/{date_path}/{slug}/"
+    return f"{base}/{date_path}/{slug}/"
 
 
 def _collect_all_news_items(summaries: List[Optional[Dict]]) -> List[Dict[str, Any]]:
