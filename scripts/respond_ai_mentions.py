@@ -4,6 +4,7 @@ import json
 import logging
 import os
 import subprocess
+import sys
 import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta, timezone
@@ -11,6 +12,8 @@ from glob import glob
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from common.config import SITE_URL
 
 logger = logging.getLogger("respond_ai_mentions")
 logging.basicConfig(
@@ -81,9 +84,9 @@ def build_summary_text() -> str:
         slug = daily_summary.stem
         parts = slug.split("-", 3)
         if len(parts) == 4:
-            link = f"https://investing.2twodragon.com/market-analysis/{parts[0]}/{parts[1]}/{parts[2]}/{parts[3]}/"
+            link = f"{SITE_URL}/market-analysis/{parts[0]}/{parts[1]}/{parts[2]}/{parts[3]}/"
         else:
-            link = "https://investing.2twodragon.com/"
+            link = f"{SITE_URL}/"
         lines.append(f"- 뉴스 요약: {title}")
         if excerpt:
             lines.append(f"- 핵심: {excerpt[:180]}")
@@ -94,9 +97,9 @@ def build_summary_text() -> str:
         slug = market_report.stem
         parts = slug.split("-", 3)
         if len(parts) == 4:
-            link = f"https://investing.2twodragon.com/market-analysis/{parts[0]}/{parts[1]}/{parts[2]}/{parts[3]}/"
+            link = f"{SITE_URL}/market-analysis/{parts[0]}/{parts[1]}/{parts[2]}/{parts[3]}/"
         else:
-            link = "https://investing.2twodragon.com/"
+            link = f"{SITE_URL}/"
         lines.append(f"- 시장 리포트: {title}")
         lines.append(f"- 리포트 링크: {link}")
 
@@ -135,7 +138,7 @@ def build_ops_status_text() -> str:
         [
             "📟 운영 채널 상태입니다.",
             f"- latest summary file: {latest}",
-            "- site: https://investing.2twodragon.com/",
+            f"- site: {SITE_URL}/",
             "- 배포/헬스체크 이슈는 Actions run 로그를 확인하세요.",
         ]
     )
@@ -148,7 +151,7 @@ def build_security_status_text() -> str:
         [
             "🛡️ 보안 채널 상태입니다.",
             f"- latest security report file: {latest}",
-            "- security posts: https://investing.2twodragon.com/security-alerts/",
+            f"- security posts: {SITE_URL}/security-alerts/",
             "- 주요 키워드(해킹/익스플로잇/사기/취약점) 중심으로 모니터링하세요.",
         ]
     )
@@ -259,11 +262,11 @@ def build_coin_monitoring_text() -> str:
         slug = market_report.stem
         parts = slug.split("-", 3)
         if len(parts) == 4:
-            report_link = f"https://investing.2twodragon.com/market-analysis/{parts[0]}/{parts[1]}/{parts[2]}/{parts[3]}/"
+            report_link = f"{SITE_URL}/market-analysis/{parts[0]}/{parts[1]}/{parts[2]}/{parts[3]}/"
         else:
-            report_link = "https://investing.2twodragon.com/"
+            report_link = f"{SITE_URL}/"
     else:
-        report_link = "https://investing.2twodragon.com/"
+        report_link = f"{SITE_URL}/"
 
     return "\n".join(
         [
@@ -282,11 +285,11 @@ def build_worldmonitor_text() -> str:
         slug = worldmonitor_post.stem
         parts = slug.split("-", 3)
         if len(parts) == 4:
-            post_link = f"https://investing.2twodragon.com/market-analysis/{parts[0]}/{parts[1]}/{parts[2]}/{parts[3]}/"
+            post_link = f"{SITE_URL}/market-analysis/{parts[0]}/{parts[1]}/{parts[2]}/{parts[3]}/"
         else:
-            post_link = "https://investing.2twodragon.com/"
+            post_link = f"{SITE_URL}/"
     else:
-        post_link = "https://investing.2twodragon.com/"
+        post_link = f"{SITE_URL}/"
 
     return "\n".join(
         [

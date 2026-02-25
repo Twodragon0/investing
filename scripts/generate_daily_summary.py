@@ -22,7 +22,7 @@ from typing import Dict, List, Any, Optional, Tuple
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common.config import get_kst_timezone, setup_logging
+from common.config import SITE_URL, get_kst_timezone, setup_logging
 from common.markdown_utils import markdown_table
 from common.post_generator import POSTS_DIR
 from common.summarizer import ThemeSummarizer
@@ -307,13 +307,12 @@ def summarize_political_post(post: Dict[str, Any]) -> Dict[str, Any]:
 
 def get_post_url(filepath: str, today: str, category: str = "") -> str:
     """Generate absolute URL for a post following Jekyll permalink structure."""
-    base = "https://investing.2twodragon.com"
     filename = os.path.basename(filepath)
     slug = filename.replace(f"{today}-", "").replace(".md", "")
     date_path = today.replace("-", "/")
     if category:
-        return f"{base}/{category}/{date_path}/{slug}/"
-    return f"{base}/{date_path}/{slug}/"
+        return f"{SITE_URL}/{category}/{date_path}/{slug}/"
+    return f"{SITE_URL}/{date_path}/{slug}/"
 
 
 def _collect_all_news_items(summaries: List[Optional[Dict]]) -> List[Dict[str, Any]]:

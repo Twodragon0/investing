@@ -126,6 +126,7 @@ def get_kst_timezone():
 
 
 # ── Shared constants ──
+SITE_URL = "https://investing.2twodragon.com"
 REQUEST_TIMEOUT = 15
 USER_AGENT = "Mozilla/5.0 (compatible; InvestingDragon/1.0)"
 BROWSER_USER_AGENT = (
