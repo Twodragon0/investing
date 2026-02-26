@@ -8,6 +8,7 @@ source: "CoinGecko"
 source_url: "https://www.coingecko.com/"
 lang: "ko"
 description: "BTC 도미넌스: 56.7% | ETH 도미넌스: 10.0%"
+image: "/assets/images/generated/news-briefing-cryptomarket-2026-02-11.png"
 ---
 
 ## 시장 인사이트

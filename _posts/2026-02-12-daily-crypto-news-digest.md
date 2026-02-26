@@ -7,6 +7,7 @@ tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
 description: 오늘 총 125건의 암호화폐 관련 뉴스가 수집되었습니다. 주요 내용을 정리합니다.
+image: "/assets/images/generated/news-briefing-crypto-2026-02-12.png"
 ---
 
 오늘 총 125건의 암호화폐 관련 뉴스가 수집되었습니다. 주요 내용을 정리합니다.

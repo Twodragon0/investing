@@ -7,6 +7,7 @@ tags: [market-summary, daily, crypto, stock, macro, top-coins]
 source: "auto-generated"
 lang: "ko"
 description: "시장 상태: 보합세 - 뚜렷한 방향성 없이 횡보 구간 지속"
+image: "/assets/images/generated/news-briefing-market-2026-02-10.png"
 pin: true
 ---
 

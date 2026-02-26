@@ -8,6 +8,7 @@ source: "CoinGecko"
 source_url: "https://www.coingecko.com/"
 lang: "ko"
 description: "공포/탐욕 지수: 5/100 (Extreme Fear)"
+image: "/assets/images/generated/news-briefing-cryptomarket-2026-02-12.png"
 ---
 
 ## 시장 시각화

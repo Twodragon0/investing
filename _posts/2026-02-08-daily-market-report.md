@@ -7,6 +7,7 @@ tags: [market-summary, daily, crypto, stock, macro, top-coins]
 source: "auto-generated"
 lang: "ko"
 description: "암호화폐 시장이 소폭 상승세를 이어가고 있습니다. 안정적인 흐름 속에서 점진적 회복이 진행 중입니다."
+image: "/assets/images/generated/news-briefing-market-2026-02-08.png"
 ---
 
 ## 시장 시각화

@@ -7,6 +7,7 @@ tags: [security, hack, blockchain, daily-digest]
 source: "consolidated"
 lang: "ko"
 description: "Balancer, Truebit 등 해킹된 프로토콜에서 즉시 자금 인출"
+image: "/assets/images/generated/news-briefing-security-2026-02-10.png"
 ---
 
 ## 한줄 요약

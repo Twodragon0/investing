@@ -7,6 +7,7 @@ tags: [경제지표, 거시경제, 인플레이션, GDP, 고용, 금값, 유가]
 source: "Crypto Monitoring System"
 lang: ko
 description: "거시경제 리포트: GDP, 인플레이션, 고용지표를 중심으로 경제 흐름을 분석합니다."
+image: "/assets/images/generated/news-briefing-economic-2026-02-07.png"
 ---
 
 거시경제 리포트: GDP, 인플레이션, 고용지표를 중심으로 경제 흐름을 분석합니다.

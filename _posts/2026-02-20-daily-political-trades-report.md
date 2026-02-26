@@ -7,6 +7,7 @@ tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-
 source: "consolidated"
 lang: "ko"
 description: 2026-02-20 정치인 거래·정책 동향 10건을 요약 분석합니다.
+image: "/assets/images/generated/news-briefing-political-2026-02-20.png"
 ---
 
 **2026-02-20** 정치인 거래·정책 동향 10건을 요약 분석합니다.
