@@ -7,7 +7,7 @@ from typing import List, Dict, Any, Optional
 from urllib.parse import parse_qs, unquote, urlparse
 from bs4 import BeautifulSoup
 from .config import get_ssl_verify, REQUEST_TIMEOUT, USER_AGENT
-from .utils import sanitize_string, parse_date
+from .utils import sanitize_string, parse_date, remove_sponsored_text
 
 logger = logging.getLogger(__name__)
 
@@ -111,6 +111,9 @@ def fetch_rss_feed(
                         )
                         if pub_dt < cutoff:
                             continue
+
+                title = remove_sponsored_text(title)
+                description = remove_sponsored_text(description)
 
                 items.append(
                     {

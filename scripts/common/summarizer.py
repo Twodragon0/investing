@@ -799,15 +799,13 @@ class ThemeSummarizer:
         top_themes = self.get_top_themes()
         theme_names = [t[0] for t in top_themes[:3]] if top_themes else []
 
-        lines = [f"\n## {title}\n"]
+        lines = [f"## {title}\n"]
         if theme_names:
             lines.append(
                 f"- 총 **{total}건** 가운데 **{', '.join(theme_names)}** 테마 비중이 높았습니다."
             )
         else:
-            lines.append(
-                f"- 총 **{total}건**이 수집되었으며, 테마 분류 데이터는 제한적입니다."
-            )
+            lines.append(f"- 총 **{total}건**이 수집되었습니다.")
 
         priority_items = self.classify_priority()
         p0_count = len(priority_items.get("P0", []))
@@ -884,7 +882,7 @@ class ThemeSummarizer:
             f"{themes_str} 관련 {total}건 수집",
         )
 
-        lines = ["\n## 한눈에 보기\n"]
+        lines = ["## 한눈에 보기\n"]
 
         # Stat grid
         stat_items = []
@@ -927,10 +925,13 @@ class ThemeSummarizer:
                     f'<div class="stat-label">{top_r[0]}</div></div>'
                 )
 
-        lines.append(f'<div class="stat-grid">{"".join(stat_items)}</div>\n')
+        lines.append(f'<div class="stat-grid">{"".join(stat_items)}</div>')
 
         # Theme briefings as info callout
         briefing_items = []
+        _sponsored_re = re.compile(
+            r"\s*[Ss]ponsored\s+by\s+@?\S+.*$", flags=re.MULTILINE
+        )
         for name, key, emoji, count in top_themes[:4]:
             articles = self._theme_articles.get(key, [])
             if not articles:
@@ -939,6 +940,7 @@ class ThemeSummarizer:
             # Try description first
             for art in articles[:3]:
                 desc = art.get("description", "").strip()
+                desc = _sponsored_re.sub("", desc).strip()
                 title = art.get("title", "")
                 if desc and desc != title and len(desc) > 20:
                     top_desc = desc[:100]
@@ -949,6 +951,7 @@ class ThemeSummarizer:
             if not top_desc:
                 for art in articles[:2]:
                     title = art.get("title", "").strip()
+                    title = _sponsored_re.sub("", title).strip()
                     if title and len(title) > 10:
                         top_desc = title[:100]
                         if len(title) > 100:
@@ -956,17 +959,19 @@ class ThemeSummarizer:
                         break
             if top_desc:
                 briefing_items.append(
-                    f"<li>{emoji} {name} ({count}건): {top_desc}</li>"
+                    f"<li>{emoji} <strong>{name}</strong> ({count}건): {top_desc}</li>"
                 )
             else:
-                briefing_items.append(f"<li>{emoji} {name}: {count}건 수집</li>")
+                briefing_items.append(
+                    f"<li>{emoji} <strong>{name}</strong>: {count}건 수집</li>"
+                )
 
         if briefing_items:
             lines.append(
                 f'<div class="alert-box alert-info">'
                 f"<strong>{opener}</strong>"
                 f"<ul>{''.join(briefing_items)}</ul>"
-                f"</div>\n"
+                f"</div>"
             )
 
         # P0 urgent alerts as red callout
@@ -985,7 +990,7 @@ class ThemeSummarizer:
                     f'<div class="alert-box alert-urgent">'
                     f"<strong>긴급 알림</strong>"
                     f"<ul>{''.join(p0_items)}</ul>"
-                    f"</div>\n"
+                    f"</div>"
                 )
 
         return "\n".join(lines)

@@ -87,6 +87,15 @@ def detect_language(text: str) -> str:
     return "en"
 
 
+def remove_sponsored_text(text: str) -> str:
+    """Remove 'Sponsored by @xxx' and similar ad/promo patterns from text."""
+    if not text:
+        return text
+    text = re.sub(r"\s*[Ss]ponsored\s+by\s+@?\S+.*$", "", text, flags=re.MULTILINE)
+    text = re.sub(r"\s*[Aa][Dd]:\s+.*$", "", text, flags=re.MULTILINE)
+    return text.strip()
+
+
 def truncate_text(text: str, max_length: int = 300) -> str:
     """Truncate text at word boundary."""
     if len(text) <= max_length:

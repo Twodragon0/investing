@@ -7,7 +7,6 @@ Sources:
 - Google News RSS fallback for social keywords
 """
 
-import re
 import sys
 import os
 import time
@@ -28,7 +27,7 @@ from common.config import (
 )
 from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
-from common.utils import sanitize_string, truncate_text, request_with_retry
+from common.utils import sanitize_string, truncate_text, request_with_retry, remove_sponsored_text
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
 from common.markdown_utils import (
@@ -51,13 +50,6 @@ except ImportError:
 logger = setup_logging("collect_social_media")
 
 VERIFY_SSL = get_ssl_verify()
-
-
-def _remove_sponsored_text(text: str) -> str:
-    """Remove 'Sponsored by @xxx' and similar ad patterns from text."""
-    text = re.sub(r"\s*[Ss]ponsored\s+by\s+@?\S+.*$", "", text, flags=re.MULTILINE)
-    text = re.sub(r"\s*[Aa][Dd]:\s+.*$", "", text, flags=re.MULTILINE)
-    return text.strip()
 
 
 def _parse_telegram_items(channel: str, messages, limit: int) -> List[Dict[str, Any]]:
@@ -90,7 +82,7 @@ def _parse_telegram_items(channel: str, messages, limit: int) -> List[Dict[str, 
             if not text or len(text) < 20:
                 continue
 
-            text = _remove_sponsored_text(text)
+            text = remove_sponsored_text(text)
             if not text or len(text) < 20:
                 continue
 

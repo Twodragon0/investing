@@ -737,7 +737,7 @@ def build_social_summary(body: str) -> List[str]:
         ),
         "",
         "**핵심 신호 정리**",
-        f"- 주요 테마: {', '.join(themes) if themes else '분류 데이터 제한적'}",
+        f"- 주요 테마: {', '.join(themes) if themes else '다양한 이슈'}",
         f"- {urgent_text}에 대한 선별 모니터링",
     ]
 
