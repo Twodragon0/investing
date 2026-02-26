@@ -126,7 +126,10 @@ def is_noise_text(text: str) -> bool:
 def normalize_title(title: str) -> str:
     title = clean_text(title)
     title = title.replace("...", " ").replace("…", " ")
+    title = re.sub(r"^\s*\d+\.\s*", "", title)
+    title = re.sub(r"\s+[–—-]\s+\d+\.\s+\[.*$", "", title)
     title = re.sub(r"\s+-\s+[^-]+$", "", title)
+    title = re.sub(r"\s+[–—]\s+[^–—]+$", "", title)
     title = re.sub(r"\s*\((?:상보|종합|라이브|Live.*?|Updated.*?)\)\s*", " ", title)
     title = re.sub(r"\s*\[(?:상보|종합|속보|단독|포토)\]\s*", " ", title)
     title = re.sub(r"\s+", " ", title)
@@ -467,7 +470,13 @@ def build_url_summary(lines: List[str]) -> List[str]:
             summary = summarize_from_title(title)
         if not summary:
             continue
-        summaries.append(f"- [{normalize_title(title)}]({url}) — {summary}")
+        clean_title = normalize_title(title)
+        clean_title = re.sub(r"\s+\d+\.\s+\[.*$", "", clean_title).strip()
+        if not clean_title:
+            continue
+        if re.match(r"^\d+\.\s*\[", summary):
+            summary = summarize_from_title(clean_title)
+        summaries.append(f"- [{clean_title}]({url}) — {summary}")
     return summaries
 
 
@@ -869,6 +878,58 @@ def remove_missing_local_images(lines: List[str]) -> List[str]:
     return cleaned
 
 
+def normalize_worldmonitor_snapshot(lines: List[str]) -> List[str]:
+    marker_idx = -1
+    for idx, line in enumerate(lines):
+        if "오늘의 글로벌 리스크 스냅샷" in line:
+            marker_idx = idx
+            break
+
+    if marker_idx == -1:
+        return lines
+
+    if '<div class="alert-box alert-info">' in lines[marker_idx]:
+        return lines
+    if marker_idx > 0 and '<div class="alert-box alert-info">' in lines[marker_idx - 1]:
+        return lines
+
+    total_line = ""
+    theme_line = ""
+    source_line = ""
+    end_idx = marker_idx
+
+    for idx in range(marker_idx + 1, min(len(lines), marker_idx + 10)):
+        raw = lines[idx].strip()
+        if not raw:
+            end_idx = idx
+            break
+        if raw.startswith("## "):
+            end_idx = idx
+            break
+        cleaned = clean_text(raw)
+        if cleaned.startswith("총 수집:"):
+            total_line = cleaned
+        elif cleaned.startswith("핵심 테마:"):
+            theme_line = cleaned
+        elif cleaned.startswith("집중 출처:"):
+            source_line = cleaned
+        end_idx = idx + 1
+
+    total_line = total_line or "총 수집: N/A"
+    theme_line = theme_line or "핵심 테마: N/A"
+    source_line = source_line or "집중 출처: N/A"
+
+    replacement = [
+        '<div class="alert-box alert-info"><strong>오늘의 글로벌 리스크 스냅샷</strong><ul>',
+        f"<li>{total_line}</li>",
+        f"<li>{theme_line}</li>",
+        f"<li>{source_line}</li>",
+        "</ul></div>",
+    ]
+
+    return lines[:marker_idx] + replacement + lines[end_idx:]
+
+
 def list_zero_byte_images() -> List[str]:
     assets_dir = os.path.join(REPO_ROOT, "assets", "images", "generated")
     zero_files: List[str] = []
@@ -1061,7 +1122,8 @@ def process_post(
 
     front_data = parse_frontmatter(front)
 
-    lines = body.splitlines()
+    original_lines = body.splitlines()
+    lines = normalize_worldmonitor_snapshot(original_lines)
     if clean_images_only:
         updated_lines = remove_missing_local_images(lines)
         if updated_lines == lines:
@@ -1096,7 +1158,7 @@ def process_post(
     )
     updated_lines = remove_missing_local_images(updated_lines)
 
-    if updated_lines == lines:
+    if updated_lines == original_lines:
         return False
 
     updated_content = front + "\n".join(updated_lines).rstrip() + "\n"
@@ -1129,6 +1191,16 @@ def main() -> None:
         dest="zero_image_report",
         help="Write a report of zero-byte images to the given path.",
     )
+    parser.add_argument(
+        "--from-date",
+        dest="from_date",
+        help="Process posts from date (YYYY-MM-DD).",
+    )
+    parser.add_argument(
+        "--to-date",
+        dest="to_date",
+        help="Process posts up to date (YYYY-MM-DD).",
+    )
     args = parser.parse_args()
 
     if args.zero_image_report:
@@ -1152,6 +1224,11 @@ def main() -> None:
     total = 0
     for filename in sorted(os.listdir(POSTS_DIR)):
         if not filename.endswith(".md"):
+            continue
+        post_date = filename[:10]
+        if args.from_date and post_date < args.from_date:
+            continue
+        if args.to_date and post_date > args.to_date:
             continue
         total += 1
         filepath = os.path.join(POSTS_DIR, filename)

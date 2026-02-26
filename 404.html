@@ -4,6 +4,21 @@ title: "페이지를 찾을 수 없습니다"
 permalink: /404.html
 ---
 
+<script>
+  (function () {
+    var path = window.location.pathname || "";
+    var correctedPath = "";
+    var search = "";
+    var hash = "";
+    if (path === "/investing" || path.indexOf("/investing/") === 0) {
+      correctedPath = path.replace(/^\/investing/, "") || "/";
+      search = window.location.search || "";
+      hash = window.location.hash || "";
+      window.location.replace(correctedPath + search + hash);
+    }
+  })();
+</script>
+
 <section class="error-page">
   <div class="error-content">
     <div class="error-code">404</div>
