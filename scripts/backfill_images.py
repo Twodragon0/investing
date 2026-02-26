@@ -18,7 +18,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 # Import setup_logging directly from common/config.py to avoid triggering
 # common/__init__.py which pulls in heavy dependencies (bs4, requests, etc.)
-_config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "common", "config.py")
+_config_path = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "common", "config.py"
+)
 _spec = importlib.util.spec_from_file_location("common_config", _config_path)
 _config_mod = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_config_mod)
@@ -565,7 +567,7 @@ def update_frontmatter_image(filepath: str, image_path: str) -> bool:
 
     # Check if image: already exists in frontmatter
     image_line = f'image: "{image_path}"'
-    image_re = re.compile(r'^image:.*$', re.MULTILINE)
+    image_re = re.compile(r"^image:.*$", re.MULTILINE)
 
     if image_re.search(fm_text):
         # Replace existing image line
@@ -573,7 +575,7 @@ def update_frontmatter_image(filepath: str, image_path: str) -> bool:
     else:
         # Insert image: before the closing ---
         # Try to insert after description: line for consistency
-        desc_re = re.compile(r'^(description:.*$)', re.MULTILINE)
+        desc_re = re.compile(r"^(description:.*$)", re.MULTILINE)
         desc_match = desc_re.search(fm_text)
         if desc_match:
             insert_pos = desc_match.end()
