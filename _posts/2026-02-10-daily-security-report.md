@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "블록체인 보안 리포트 - 2026-02-10"
 date: 2026-02-10 05:32:56 +0000
 categories: [security-alerts]
 tags: [security, hack, blockchain, daily-digest]
 source: "consolidated"
 lang: "ko"
+description: "Balancer, Truebit 등 해킹된 프로토콜에서 즉시 자금 인출"
 ---
 
 ## 한줄 요약

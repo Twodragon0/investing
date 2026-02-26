@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "암호화폐 뉴스 브리핑 - 2026-02-15"
 date: 2026-02-15 07:47:53 +0000
 categories: [crypto-news]
@@ -6,6 +7,7 @@ tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-summary-2026-02-15.png"
+description: 2026-02-15 암호화폐 시장에서 67건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 이더리움 관련 소식이 주목됩니다.
 ---
 
 **2026-02-15** 암호화폐 시장에서 67건의 뉴스를 분석했습니다. 오늘은 **비트코인, 가격/시장, 이더리움** 관련 소식이 주목됩니다.
@@ -34,38 +36,6 @@ image: "/assets/images/generated/news-summary-2026-02-15.png"
 
 
 ![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-15.png' | relative_url }})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -173,7 +143,6 @@ Bill to regulate cryptocurrency kiosks in Virginia heads to governor’s desk WV
 <a href="https://www.coindesk.com/markets/2026/02/14/bitcoin-claws-back-to-usd70-000-on-cooling-inflation-after-usd8-7-billion-wipeout">Bitcoin claws back to $70,000 on cooling inflation after $8.7 billion wipeout</a>
 <a href="https://www.coindesk.com/policy/2026/02/13/crypto-group-counters-wall-street-bankers-with-its-own-stablecoin-principles-for-bill">Crypto group counters Wall Street bankers with its own stablecoin principles for bill</a>
 </details>
-
 
 
 ## 거래소 공지사항

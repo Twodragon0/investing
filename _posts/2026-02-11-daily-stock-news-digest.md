@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "주식 시장 뉴스 종합 - 2026-02-11"
 date: 2026-02-11 03:30:03 +0000
 categories: [stock-news]
 tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
+description: 오늘 총 120건의 주식 시장 뉴스가 수집되었습니다. 주요 내용을 정리합니다.
 ---
 
 오늘 총 120건의 주식 시장 뉴스가 수집되었습니다. 주요 내용을 정리합니다.

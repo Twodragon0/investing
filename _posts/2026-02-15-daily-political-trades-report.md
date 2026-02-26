@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "정치인 거래·정책 리포트 - 2026-02-15"
 date: 2026-02-15 13:37:20 +0000
 categories: [political-trades]
 tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-trading]
 source: "consolidated"
 lang: "ko"
+description: 2026-02-15 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. SEC 내부자 거래 2건, 트럼프 정책 3건, 총 5건이 수집되었습니다.
 ---
 
 **2026-02-15** 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. SEC 내부자 거래 2건, 트럼프 정책 3건, 총 5건이 수집되었습니다.
@@ -28,39 +30,6 @@ lang: "ko"
 ---
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## 전체 뉴스 요약
 
 - 총 **5건** 수집
@@ -80,7 +49,6 @@ lang: "ko"
 **3. [Congress’s Rejection of Trump’s Canada “Emergency” Is a Welcome—but Woefully Insufficient—Move - Cato Institute](https://news.google.com/rss/articles/CBMipgFBVV95cUxQbjNUb2MxTFlWZDM0RVc1SzVlSkVhNmJVcHRNMDBWU21DZHJSTy12QW93Ny0xTW9tejVjQjAyMko3bnd3WFNBMlVGcVpGLTBQMTF4SmJKWDlmMkNEemJGSXVxZWdFcUh4Z3hpcHlaNGs0RUR3ejA0V2YtS2lzM1FtT1duQUpqQVpzckk5THlNUzVmUnNjdG5hVGdEdU5ZeWdiTnUwN19R?oc=5)**
 Congress’s Rejection of Trump’s Canada “Emergency” Is a Welcome—but Woefully Insufficient—Move Cato Institute
 <span class="source-tag">Trump Tariff Policy</span>
-
 
 
 ## SEC 내부자 거래 (Form 4)

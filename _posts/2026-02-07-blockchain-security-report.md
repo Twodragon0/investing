@@ -4,8 +4,9 @@ title: "블록체인 보안 리포트 - 2026년 02월 07일"
 date: 2026-02-07 17:37:00 +0900
 categories: security-alerts
 tags: [보안, 블록체인, 해킹, 스마트컨트랙트, DeFi]
-lang: ko
 source: "Crypto Monitoring System"
+lang: ko
+description: "스마트 컨트랙트 보안 동향: 최신 보안 패턴과 위협 요소들을 살펴봅니다."
 ---
 
 스마트 컨트랙트 보안 동향: 최신 보안 패턴과 위협 요소들을 살펴봅니다.

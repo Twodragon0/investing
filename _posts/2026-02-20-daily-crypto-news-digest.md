@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "암호화폐 뉴스 브리핑 - 2026-02-20"
 date: 2026-02-20 01:35:22 +0000
 categories: [crypto-news]
@@ -6,6 +7,7 @@ tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-summary-2026-02-20.png"
+description: 2026-02-20 암호화폐 시장 72건의 뉴스를 분석한 요약 브리핑입니다.
 ---
 
 **2026-02-20** 암호화폐 시장 72건의 뉴스를 분석한 요약 브리핑입니다.
@@ -25,40 +27,6 @@ image: "/assets/images/generated/news-summary-2026-02-20.png"
 ![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-20.png' | relative_url }})
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약

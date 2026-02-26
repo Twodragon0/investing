@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "암호화폐 뉴스 브리핑 - 2026-02-14"
 date: 2026-02-14 23:40:27 +0900
 categories: [crypto-news]
@@ -6,6 +7,7 @@ tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-summary-2026-02-14.png"
+description: 2026-02-14 암호화폐 시장에서 70건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 거래소 관련 소식이 주목됩니다.
 ---
 
 **2026-02-14** 암호화폐 시장에서 70건의 뉴스를 분석했습니다. 오늘은 **비트코인, 가격/시장, 거래소** 관련 소식이 주목됩니다.
@@ -44,34 +46,6 @@ DeFi   █░░░░░░░░░░░░░░░░░    10%  (7건)
 | 주요 테마 | 비트코인, 가격/시장, 거래소 |
 | 최다 이슈 | 🟠 비트코인 (31건) |
 | 핫 키워드 | bitcoin(17), ethereum(3), defi(1) |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 핵심 요약
@@ -183,7 +157,6 @@ After the bankers shared a document at the White House demanding a total ban on 
 `출처: CoinDesk`
 
 > 그 외 4건: [U.S.-based DeFi group urges UK FCA to anchor crypto rules to 'unilateral control'](https://www.coindesk.com/policy/2026/02/13/u-s-based-defi-advocacy-group-urges-uk-fca-to-anchor-crypto-rules-to-unilateral-control), [CoinDesk 20 performance update: Uniswap (UNI) jumps 5.4%, leading index higher](https://www.coindesk.com/coindesk-indices/2026/02/13/coindesk-20-performance-update-uniswap-uni-jumps-5-4-leading-index-higher)
-
 
 
 ## 거래소 공지사항

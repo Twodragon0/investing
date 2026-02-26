@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "블록체인 보안 리포트 - 2026-02-20"
 date: 2026-02-20 01:35:22 +0000
 categories: [security-alerts]
 tags: [security, hack, blockchain, daily-digest]
 source: "consolidated"
 lang: "ko"
+description: 블록체인 보안 뉴스 1건을 요약합니다.
 ---
 
 블록체인 보안 뉴스 1건을 요약합니다.
@@ -20,34 +22,6 @@ lang: "ko"
 AI 기반 보안 에이전트는 스마트 컨트랙트 취약점 탐지, 이상 거래 패턴 감지, 실시간 위협 대응 등에 활용되고 있으며, 해킹 피해 규모가 지속적으로 증가함에 따라 그 중요성이 부각되고 있습니다.
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 인사이트

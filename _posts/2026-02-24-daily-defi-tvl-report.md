@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "DeFi TVL 리포트 - 2026-02-24"
 date: 2026-02-24 03:25:06 +0000
 categories: [crypto-news]

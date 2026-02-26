@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "암호화폐 뉴스 브리핑 - 2026-02-18"
 date: 2026-02-18 02:54:22 +0000
 categories: [crypto-news]
@@ -6,6 +7,7 @@ tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-summary-2026-02-18.png"
+description: 2026-02-18 암호화폐 시장에서 115건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 거래소 관련 소식이 주목됩니다.
 ---
 
 **2026-02-18** 암호화폐 시장에서 115건의 뉴스를 분석했습니다. 오늘은 **비트코인, 가격/시장, 거래소** 관련 소식이 주목됩니다.
@@ -34,40 +36,6 @@ image: "/assets/images/generated/news-summary-2026-02-18.png"
 
 
 ![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-18.png' | relative_url }})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -179,7 +147,6 @@ ZeroLend cited an inability to "generate sustainable revenue" as it became the l
 <a href="https://cointelegraph.com/news/ether-bulls-target-2-5k-as-staking-etf-launch-rwa-market-cap-reflect-growth?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Ether bulls target $2.5K as staking ETF launch, RWA market cap reflect growth</a>
 <a href="https://cointelegraph.com/news/bridge-stripe-occ-approval-national-trust-bank?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Stripe-owned Bridge gets OCC conditional approval for national bank charter</a>
 </details>
-
 
 
 ## 거래소 공지사항

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "글로벌 규제 동향 리포트 - 2026-02-23"
 date: 2026-02-23 03:33:54 +0000
 categories: [regulatory-news]
@@ -19,14 +20,6 @@ description: "전 세계 금융 규제기관의 최신 동향을 정리합니다
 <div class="alert-box alert-info"><strong>글로벌 규제 규제/정책, 거래소 관련 23건 수집</strong><br>🔵 <strong>규제/정책</strong> (17건): 금융위원회 인사 보도 및 정책 관련 공시<br>🏦 <strong>거래소</strong> (8건): 수익증권 장외거래중개업(조각투자 장외거래소) 예비인가 금융위원회 정례회의 의결<br>📈 <strong>가격/시장</strong> (22건): 금융정보분석원, 국제자금세탁방지기구(FATF) 총회 참석<br>🟠 <strong>비트코인</strong> (1건): 단일종목 레버리지 ETF의 세부방안 검토 관련 정부 입장 설명</div>
 
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><a href="https://www.fsc.go.kr/no010101/86297">다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최</a></div>
-
-
-
-
-
-
-
-
 
 
 ## 핵심 요약

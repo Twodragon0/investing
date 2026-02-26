@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "암호화폐 뉴스 브리핑 - 2026-02-16"
 date: 2026-02-16 02:54:36 +0000
 categories: [crypto-news]
@@ -6,6 +7,7 @@ tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-summary-2026-02-16.png"
+description: 2026-02-16 암호화폐 시장에서 87건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 거래소 관련 소식이 주목됩니다.
 excerpt: "BTC 추가 하락 $50K 전망, XRP 강세 속 크래시 대응, Apollo Morpho 토큰 딜, 미래에셋 코빗 인수 등 87건 분석"
 ---
 
@@ -35,38 +37,6 @@ excerpt: "BTC 추가 하락 $50K 전망, XRP 강세 속 크래시 대응, Apollo
 
 
 ![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-16.png' | relative_url }})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -179,7 +149,6 @@ Better Cryptocurrency to Buy With $3,000 and Hold for 5 Years: XRP vs. Ethereum 
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1Ed3NqOVhRcVFkWF9ZOUJiY3ktUTZRSDdrQ19uNFVkMEpKUm5xd2ZXLTgzMUNKT1ZIc3JMUGsxblBuRU9FYWFOQnRqZEFtWUpyVFZGOGxsSDRicWlsX2oxV0pkdDNvVkptT1Jra2NBeUdwaTA?oc=5">트럼프 미디어, 비트코인·이더리움·크로노스 기반 2개 암호화폐 ETF 신청 - 디지털투데이</a>
 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE15ZTZtSmtYMnZpb1NwVlhoWlIxTHhYNklJZk5aQ2lhS3g5QlNlUjdRZ2pmcjJvemRQQVJfd09OVVI0bnM5QmdTZmVReEhBbExpR2dpLUVsWlNpU1VFMlNHc0t3THJaRXdrOU8xemlzQQ?oc=5">[가상화폐 시세] 비트코인 1억원선엑스알피 2100원선, 이더리움 290만원선 거래 - 이코노뉴스</a>
 </details>
-
 
 
 ## 거래소 공지사항

@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "글로벌 규제 동향 리포트 - 2026-02-12"
 date: 2026-02-12 03:35:50 +0000
 categories: [regulatory-news]
 tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
+description: 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 100건의 규제 관련 뉴스가 수집되었습니다.
 ---
 
 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 100건의 규제 관련 뉴스가 수집되었습니다.
@@ -18,33 +20,6 @@ lang: "ko"
 - **유럽**: 20건
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 이슈 분포 현황

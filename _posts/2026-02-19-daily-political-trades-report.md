@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "정치인 거래·정책 리포트 - 2026-02-19"
 date: 2026-02-19 14:00:46 +0000
 categories: [political-trades]
 tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-trading]
 source: "consolidated"
 lang: "ko"
+description: 2026-02-19 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. 미국 의회 거래 1건, SEC 내부자 거래 3건, 중앙은행 13건, 총 17건이 수집되었습니다.
 ---
 
 **2026-02-19** 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. 미국 의회 거래 1건, SEC 내부자 거래 3건, 중앙은행 13건, 총 17건이 수집되었습니다.
@@ -28,41 +30,6 @@ lang: "ko"
 ---
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## 전체 뉴스 요약
 
 - 총 **17건** 수집
@@ -74,7 +41,6 @@ lang: "ko"
 **1. [Maine Gov. Janet Mills discloses more than $170,000 in stocks - The Portland Press Herald](https://news.google.com/rss/articles/CBMinwFBVV95cUxNeDRYeTFfcW5MUDVVYTRzaVpoTHRqUFlUSUx4b2Q3OVdPa2hvdGFTelFqRjZlamktLUp5LWd0QlJQalR2QWNKc21xQjN1c2xZS2pQZ2NDWDdUN3h4TE5Wa0xZeUJVZGk5SFQzZVNKZEdfVkZzbFBRLUVlcHZHU0drWlczZWhWVHRyX2FtM1FfeExCeDdNTGRMdFNBVV9XSUk?oc=5)**
 Maine Gov. Janet Mills discloses more than $170,000 in stocks The Portland Press Herald
 <span class="source-tag">Congressional Trades EN</span>
-
 
 
 ## SEC 내부자 거래 (Form 4)
@@ -90,7 +56,6 @@ WCN Insider Trading: 11 Executives Buy Waste Connections Stock Feb 19 Meyka
 **3. [JPM Insider Trading: 6 Executives Sell $5.6M in JPMorgan Chase Stock Feb 19 - Meyka](https://news.google.com/rss/articles/CBMiowFBVV95cUxOSW9HVFNON1hqRWZtTDhRd1hrMkQ1VnlhbTBzMDRjZ0JqQmhLMktYLTh2U3d3eE5TRVowMDVyaTBoVUhqVUlpdGl4MzctRWJyZmlXaFhfcGduZy1ReGtuR2NRWllGQkFoUDlFRkVnRnhiczgybWlIaHZLYXE3VFJnM1VIWlFiRFBoQnRXSGsySTRnaVBWWTl4MVFZZERDSnhjcVJv?oc=5)**
 JPM Insider Trading: 6 Executives Sell $5.6M in JPMorgan Chase Stock Feb 19 Meyka
 <span class="source-tag">SEC Insider Trading</span>
-
 
 
 ## 중앙은행 정책 동향

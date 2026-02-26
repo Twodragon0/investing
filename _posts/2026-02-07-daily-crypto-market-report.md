@@ -4,8 +4,9 @@ title: "암호화폐 시장 리포트 - 2026년 02월 07일"
 date: 2026-02-07 17:37:00 +0900
 categories: market-analysis
 tags: [암호화폐, 시장분석, 투자, 블록체인, BTC, ETH]
-lang: ko
 source: "Crypto Monitoring System"
+lang: ko
+description: "암호화폐 시장 업데이트: 최근 24시간 동안의 주요 움직임과 인기 토큰들을 확인해보세요."
 ---
 
 암호화폐 시장 업데이트: 최근 24시간 동안의 주요 움직임과 인기 토큰들을 확인해보세요.

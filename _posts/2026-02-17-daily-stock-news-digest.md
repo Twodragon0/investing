@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "주식 시장 뉴스 종합 - 2026-02-17"
 date: 2026-02-17 03:17:45 +0000
 categories: [stock-news]
@@ -6,6 +7,7 @@ tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/market-snapshot-2026-02-17.png"
+description: "2026-02-17 주식 시장에서 119건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,507.01(-0.28%), KOSDAQ 1,106.08(-1.77%), USD/KRW 1,445.00(+0.24%)."
 ---
 
 **2026-02-17** 주식 시장에서 119건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,507.01(-0.28%), KOSDAQ 1,106.08(-1.77%), USD/KRW 1,445.00(+0.24%).
@@ -33,40 +35,6 @@ image: "/assets/images/generated/market-snapshot-2026-02-17.png"
 
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -154,7 +122,6 @@ image: "/assets/images/generated/market-snapshot-2026-02-17.png"
 
 **1. [The New York Stock Exchange &#124; NYSE](https://news.google.com/read/CBMiP0FVX3lxTE93UWVlU3g1TVNpdTNEcjI2Yk9kSHU2Tnh5Y0stVFBGRWVkLW9wbU1EbHhQaHdIOE56d2V5NXVhSQ?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
-
 
 
 ---

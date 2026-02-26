@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "주식 시장 뉴스 종합 - 2026-02-15"
 date: 2026-02-15 07:48:09 +0000
 categories: [stock-news]
@@ -6,6 +7,7 @@ tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/market-snapshot-2026-02-15.png"
+description: "2026-02-15 주식 시장에서 82건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,507.01(-0.28%), KOSDAQ 1,106.08(-1.77%), USD/KRW 1,443.30(+0.12%)."
 ---
 
 **2026-02-15** 주식 시장에서 82건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,507.01(-0.28%), KOSDAQ 1,106.08(-1.77%), USD/KRW 1,443.30(+0.12%).
@@ -33,38 +35,6 @@ image: "/assets/images/generated/market-snapshot-2026-02-15.png"
 
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -165,7 +135,6 @@ Stock market today: S&P 500, Dow, Nasdaq step lower after CPI inflation cools mo
 
 **2. [Trump Could Reduce Steel And Aluminum Tariffs And These Stocks Are Responding](https://www.investors.com/news/trump-steel-aluminum-tariffs-steel-stocks-respond/?src=A00220&yptr=yahoo)**
 <span class="source-tag">Yahoo Finance</span>
-
 
 
 ---

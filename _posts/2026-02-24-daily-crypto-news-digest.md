@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "암호화폐 뉴스 브리핑 - 2026-02-24"
 date: 2026-02-24 02:51:54 +0000
 categories: [crypto-news]
@@ -45,15 +46,6 @@ description: "2026-02-24 암호화폐 시장에서 113건의 뉴스를 분석했
 <a href="https://www.coindesk.com/business/2026/02/23/iotex-bridge-exploit-sparks-debate-over-losses-and-recovery-prospects">IoTeX offers cross-bridge hackers 10% bounty if they return $4.4 million within 48 hours</a><br>
 <a href="https://bitcoinmagazine.com/markets/bitcoin-price-crashes-below-65000">Bitcoin Price Crashes Below $65,000, Drops 5% in 2 Hours Amid Six-Week Slump</a>
 </div>
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -164,7 +156,6 @@ The rise of Polymarket, the cryptocurrency-based betting site for current events
 <a href="https://decrypt.co/358839/ethereum-founder-vitalik-buterin-continues-eth-selling-spree">Ethereum Founder Vitalik Buterin Continues ETH Selling Spree</a>
 <a href="https://decrypt.co/358826/ethereum-2-week-low-tom-lee-bitmine-8-4-billion-stash">Ethereum Hits 2-Week Low—And Tom Lee's BitMine Just Added to Its $8.4 Billion Stash</a>
 </details>
-
 
 
 ## 거래소 공지사항

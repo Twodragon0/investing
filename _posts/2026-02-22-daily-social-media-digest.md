@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "소셜 미디어 동향 - 2026-02-22"
 date: 2026-02-22 03:23:36 +0000
 categories: [crypto-news]
@@ -6,6 +7,7 @@ tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, dail
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/source-distribution-2026-02-22.png"
+description: 2026-02-22 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 소셜 미디어 2건, 정치·경제 35건, 총 57건이 수집되었습니다.
 ---
 
 **2026-02-22** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 소셜 미디어 2건, 정치·경제 35건, 총 57건이 수집되었습니다.
@@ -18,26 +20,6 @@ image: "/assets/images/generated/source-distribution-2026-02-22.png"
 <div class="alert-box alert-info"><strong>소셜 미디어 정치/정책, 매크로/금리 관련 57건 포착</strong><br>🏛️ <strong>정치/정책</strong> (22건): ERIC TRUMP: Being de-banked pushed Trump family towards crypto. The banks made the biggest mistake<br>📊 <strong>매크로/금리</strong> (11건): JAMES LAVISH: The Federal Reserve manipulating the money supply and access to capital has absolutely caused the Cantillon Effect<br>🟠 <strong>비트코인</strong> (7건): Whales sent roughly 57,000 $BTC to exchanges over the past four days, according to recent on-chain data<br>🏦 <strong>거래소</strong> (9건): Whales sent roughly 57,000 $BTC to exchanges over the past four days, according to recent on-chain data</div>
 
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE40amcwWEF5RFZmaDVNRVZtZ2NsdXNfR0VidEJ0TkhzVmEtb293ODVvLWJmd0JJYmotNE5oQlRfcUZ2ZE91Y2ZXUVpQWWlEUzg?oc=5">[이번주 경제]한은 기준금리 동결 유력…작년 합계출산율 주목 - v.daum.net</a></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약

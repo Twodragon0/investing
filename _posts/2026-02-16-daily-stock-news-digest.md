@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "주식 시장 뉴스 종합 - 2026-02-16"
 date: 2026-02-16 03:23:14 +0000
 categories: [stock-news]
@@ -6,6 +7,7 @@ tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/market-snapshot-2026-02-16.png"
+description: "2026-02-16 주식 시장에서 114건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,507.01(-0.28%), KOSDAQ 1,106.08(-1.77%), USD/KRW 1,441.89(+0.09%)."
 ---
 
 **2026-02-16** 주식 시장에서 114건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,507.01(-0.28%), KOSDAQ 1,106.08(-1.77%), USD/KRW 1,441.89(+0.09%).
@@ -33,38 +35,6 @@ image: "/assets/images/generated/market-snapshot-2026-02-16.png"
 
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -172,7 +142,6 @@ Data centers powering artificial intelligence have strained the electrical grid 
 <a href="https://www.cnbc.com/2026/02/15/trump-congress-government-shutdown-dhs.html">No clear path to ending the partial government shutdown as lawmakers dig in over DHS oversight</a>
 <a href="https://www.hankyung.com/article/2026021676507">李대통령 "집은 투자 아닌 주거수단다주택 찬양할 일 아냐"</a>
 </details>
-
 
 
 ---

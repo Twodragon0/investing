@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "일일 뉴스 종합 요약 - 2026-02-16"
 date: 2026-02-16 12:00:00 +0900
 categories: [market-analysis]
 tags: [일일요약, 암호화폐, 주식, 규제, 소셜미디어, 보안, 정치인거래]
 source: "consolidated"
 lang: "ko"
+description: "> 암호화폐 87건, 주식 114건, 규제 21건, 소셜 미디어 29건의 뉴스를 종합 분석한 일일 요약입니다."
 pin: true
 excerpt: "암호화폐 87건, 주식 114건, 규제 21건, 소셜 미디어 29건의 뉴스를 종합 분석한 일일 요약"
 ---

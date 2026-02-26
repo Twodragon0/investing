@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "암호화폐 뉴스 브리핑 - 2026-02-11"
 date: 2026-02-11 03:18:31 +0000
 categories: [crypto-news]
 tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
+description: 오늘 총 70건의 암호화폐 관련 뉴스가 수집되었습니다. 주요 내용을 정리합니다.
 ---
 
 오늘 총 70건의 암호화폐 관련 뉴스가 수집되었습니다. 주요 내용을 정리합니다.

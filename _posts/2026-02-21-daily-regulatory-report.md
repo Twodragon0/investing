@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "글로벌 규제 동향 리포트 - 2026-02-21"
 date: 2026-02-21 03:13:50 +0000
 categories: [regulatory-news]
@@ -6,6 +7,7 @@ tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/og-default.png"
+description: 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 31건의 규제 관련 뉴스가 수집되었습니다.
 ---
 
 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 31건의 규제 관련 뉴스가 수집되었습니다.
@@ -18,23 +20,6 @@ image: "/assets/images/og-default.png"
 <div class="alert-box alert-info"><strong>글로벌 규제 규제/정책, 거래소 관련 31건 수집</strong><br>🔵 <strong>규제/정책</strong> (21건): SEC 스테이블코인 FAQ, 지배구조 개선 논의 등 규제 이슈 집중<br>🏦 <strong>거래소</strong> (8건): 조각투자 장외거래중개업 예비인가 등 거래소 관련 공지<br>📈 <strong>가격/시장</strong> (23건): FATF 총회 논의와 금융위 보도자료 다수<br>🟠 <strong>비트코인</strong> (1건): 단일종목 레버리지 ETF 관련 정부 설명</div>
 
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><a href="https://www.fsc.go.kr/no010101/86297">다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최</a></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 핵심 요약

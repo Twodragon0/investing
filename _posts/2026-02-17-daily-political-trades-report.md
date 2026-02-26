@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "정치인 거래·정책 리포트 - 2026-02-17"
 date: 2026-02-17 13:58:24 +0000
 categories: [political-trades]
 tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-trading]
 source: "consolidated"
 lang: "ko"
+description: 2026-02-17 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. 미국 의회 거래 1건, SEC 내부자 거래 10건, 총 11건이 수집되었습니다.
 ---
 
 **2026-02-17** 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. 미국 의회 거래 1건, SEC 내부자 거래 10건, 총 11건이 수집되었습니다.
@@ -25,41 +27,6 @@ lang: "ko"
 ---
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## 전체 뉴스 요약
 
 - 총 **11건** 수집
@@ -71,7 +38,6 @@ lang: "ko"
 **1. [Nancy Pelosi Sold Apple and Bought This 1 Stock Instead. Here’s Why - 24/7 Wall St.](https://news.google.com/rss/articles/CBMirgFBVV95cUxPZ0FXcGk1YUpiZGY0RGlzMkZWeEx1bmR0c0Qzdlh3Qm1FX1dnNmNqN1ZlSVRrS0ZuQ0t1NzhIcWhOODNmQXdTLUxWVV90Mm04SVhVeHhnODMzcGlSckZZVXduMzdIVkpDLUdSM1RyX2JwSnJSOFhKc2NoUnBzQjZvUUZxd2lWZjVPRDJ6UFVKTVA4TG8xTGNjTlVyY3dxTzQ4WkREUldLSjlSRkpzM1E?oc=5)**
 Nancy Pelosi Sold Apple and Bought This 1 Stock Instead. Here’s Why 24/7 Wall St.
 <span class="source-tag">Pelosi Trades</span>
-
 
 
 ## SEC 내부자 거래 (Form 4)

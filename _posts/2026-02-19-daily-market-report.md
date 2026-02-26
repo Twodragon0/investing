@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "일일 시장 종합 리포트 - 2026-02-19"
 date: 2026-02-19 03:21:58 +0000
 categories: [market-analysis]
@@ -6,6 +7,7 @@ tags: [market-summary, daily, crypto, stock, macro, top-coins, quant, trading]
 source: "auto-generated"
 lang: "ko"
 image: "/assets/images/generated/market-heatmap-2026-02-19.png"
+description: "극도의 공포 장세: 공포/탐욕 지수 9으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다."
 ---
 
 ## 시장 시각화
@@ -39,34 +41,6 @@ image: "/assets/images/generated/market-heatmap-2026-02-19.png"
 - **KOSPI**: 5,662.79 (+2.71%)
 - **KOSDAQ**: 1,156.11 (+4.78%)
 - **USD/KRW 환율**: 1,449.66 (+0.61%)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 퀀트 시그널 요약

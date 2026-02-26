@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "주식 시장 뉴스 종합 - 2026-02-12"
 date: 2026-02-12 03:24:58 +0000
 categories: [stock-news]
 tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
+description: 오늘 총 160건의 주식 시장 뉴스가 수집되었습니다. 주요 내용을 정리합니다.
 ---
 
 오늘 총 160건의 주식 시장 뉴스가 수집되었습니다. 주요 내용을 정리합니다.
@@ -15,34 +17,6 @@ lang: "ko"
 - **KOSPI**: 5,498.93 (🟢 +2.69%)
 - **KOSDAQ**: 1,120.19 (🟢 +0.37%)
 - **USD/KRW**: 1,442.58 (🔴 -0.20%)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 이슈 분포 현황

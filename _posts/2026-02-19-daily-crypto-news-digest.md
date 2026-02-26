@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "암호화폐 뉴스 브리핑 - 2026-02-19"
 date: 2026-02-19 02:53:14 +0000
 categories: [crypto-news]
@@ -6,6 +7,7 @@ tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-summary-2026-02-19.png"
+description: 2026-02-19 암호화폐 시장에서 111건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 거래소 관련 소식이 주목됩니다.
 ---
 
 **2026-02-19** 암호화폐 시장에서 111건의 뉴스를 분석했습니다. 오늘은 **비트코인, 가격/시장, 거래소** 관련 소식이 주목됩니다.
@@ -34,40 +36,6 @@ image: "/assets/images/generated/news-summary-2026-02-19.png"
 
 
 ![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-19.png' | relative_url }})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -180,7 +148,6 @@ Coinbase signaled its crypto-backed lending product is expanding in the U.S., un
 <a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxPcXlGSm9wc3diOV83bzlYaGpTY3QwclJkQl9yb3RaamZwTUg5b3pRVDJmbVY2ZDZsWG1lRDlJYm5fYWpMSWRKSWFLdmpDb1FvMmlQbXZMeEMtM3BpU2hWTXVSNVFOVy04UzR1S3I4bmNIcTBLeG4tX2xJdVJIR3JNZ1g0bW9iUU9ROGZyVTR0VUhFVnZz0gGaAUFVX3lxTE10bHg4R2VJaTNYYklERkZuN1VvWW1sQ2FpV1NXUWJWTEpPbkY2anFGbDVWaFRXTjlpWVdTTkFpR0N6S2FoMWxRQ1NMTGdIbXQ3em9tbHRxX01lU2FiNUlxelpVZnMxUmF6NmlTNzlkSDRaQkFaUV8xUmt6S0t5bm9acFE0SjJPVmc1eEVLVVg5TWh3X01BZjBJM3c?oc=5">Sen. Warren tells Fed and Treasury: No bailout for crypto billionaires - CNBC</a>
 <em>외 24건</em>
 </details>
-
 
 
 ## 거래소 공지사항

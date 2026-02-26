@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "글로벌 규제 동향 리포트 - 2026-02-22"
 date: 2026-02-22 03:29:48 +0000
 categories: [regulatory-news]
@@ -6,6 +7,7 @@ tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/og-default.png"
+description: 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 23건의 규제 관련 뉴스가 수집되었습니다.
 ---
 
 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 23건의 규제 관련 뉴스가 수집되었습니다.
@@ -18,20 +20,6 @@ image: "/assets/images/og-default.png"
 <div class="alert-box alert-info"><strong>글로벌 규제 규제/정책, 거래소 관련 23건 수집</strong><br>🔵 <strong>규제/정책</strong> (15건): 금융위원회 인사 보도 복합지원팀장 이호영 (現금융위원회) 【2026. 02. 19日字】 자료생산 : 행정인사과 (TEL 02-2100-2752)<br>🏦 <strong>거래소</strong> (5건): 수익증권 장외거래중개업 (조각투자 * 장외거래소) 예비인가 금융위원회 정례회의 (‘26.2.13.) 의결<br>📈 <strong>가격/시장</strong> (21건): 금융정보분석원, 국제자금세탁방지기구(FATF) 총회 참석<br>🟠 <strong>비트코인</strong> (1건): 단일종목 레버리지 ETF의 세부방안은 검토중입니다.</div>
 
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><a href="https://www.fsc.go.kr/no010101/86297">다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최</a></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 핵심 요약

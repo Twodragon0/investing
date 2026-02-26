@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "글로벌 규제 동향 리포트 - 2026-02-25"
 date: 2026-02-25 03:46:26 +0000
 categories: [regulatory-news]
@@ -19,8 +20,6 @@ description: "전 세계 금융 규제기관의 최신 동향을 정리합니다
 <div class="alert-box alert-info"><strong>글로벌 규제 동향 36건 분석</strong><br><br>📌 규제/정책 (26건) — WisdomTree Digital Trust SEC 제출, 금융위 ESG·포용금융 정책 강화<br>📌 거래소 (14건) — SEC 감독 강화 기조, 거래소 규제 프레임워크 논의<br>📌 비트코인 (1건) — 단일종목 레버리지 ETF 세부방안 검토 중<br>📌 가격/시장 (26건) — 석유화학 사업재편 승인, 2.1조원 지원패키지</div>
 
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><br><a href="https://www.fsc.go.kr/no010101/86297">다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최</a></div>
-
-
 
 
 ## 핵심 요약

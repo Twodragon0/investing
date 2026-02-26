@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "주간 투자 다이제스트 - 2026년 02월 23일"
 date: 2026-02-23 08:23:05 +0900
 categories: [market-analysis]

@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "일일 시장 종합 리포트 - 2026-02-08"
 date: 2026-02-08 14:26:36 +0000
 categories: [market-analysis]
 tags: [market-summary, daily, crypto, stock, macro, top-coins]
 source: "auto-generated"
 lang: "ko"
+description: "암호화폐 시장이 소폭 상승세를 이어가고 있습니다. 안정적인 흐름 속에서 점진적 회복이 진행 중입니다."
 ---
 
 ## 시장 시각화

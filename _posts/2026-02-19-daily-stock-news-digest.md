@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "주식 시장 뉴스 종합 - 2026-02-19"
 date: 2026-02-19 03:19:26 +0000
 categories: [stock-news]
@@ -6,6 +7,7 @@ tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/market-snapshot-2026-02-19.png"
+description: "2026-02-19 주식 시장에서 147건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,660.70(+2.67%), KOSDAQ 1,156.46(+4.81%), USD/KRW 1,449.88(+0.63%)."
 ---
 
 **2026-02-19** 주식 시장에서 147건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,660.70(+2.67%), KOSDAQ 1,156.46(+4.81%), USD/KRW 1,449.88(+0.63%).
@@ -33,40 +35,6 @@ image: "/assets/images/generated/market-snapshot-2026-02-19.png"
 
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -177,7 +145,6 @@ Eric Trump and Donald Trump Jr. told CNBC on the sidelines of the World Liberty 
 <a href="https://www.cnbc.com/2026/02/18/hassett-says-authors-of-new-york-fed-tariff-study-should-be-disciplined-worst-paper-ive-ever-seen.html">Hassett says authors of New York Fed tariff study should be disciplined: 'Worst paper I've ever seen'</a>
 <a href="https://www.cnbc.com/2026/02/18/warren-fed-treasury-crypto-billionaires-bailout-trump.html">Sen. Warren tells Fed and Treasury: No bailout for crypto billionaires</a>
 </details>
-
 
 
 ---

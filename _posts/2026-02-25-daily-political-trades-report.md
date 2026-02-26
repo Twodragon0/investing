@@ -1,12 +1,13 @@
 ---
+layout: post
 title: "정치인 거래·정책 리포트 - 2026-02-25"
 date: 2026-02-25 14:31:30 +0000
 categories: [political-trades]
 tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-trading]
 source: "consolidated"
 lang: "ko"
-description: "2026-02-25 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. 미국 의회 거래 10건, SEC 내부자 거래 15건, 트럼프 정책 3건, 중앙은행 6건, 총 34건이 수집되었습니다."
 image: "/assets/images/og-default.png"
+description: "2026-02-25 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. 미국 의회 거래 10건, SEC 내부자 거래 15건, 트럼프 정책 3건, 중앙은행 6건, 총 34건이 수집되었습니다."
 excerpt: "미국 의회 Pelosi 주식거래 금지 논의, SEC Form 4 내부자 거래 15건, 트럼프 관세 정책 영향, 한국은행 금리 동결 전망 등 34건 분석"
 ---
 
@@ -24,10 +25,6 @@ excerpt: "미국 의회 Pelosi 주식거래 금지 논의, SEC Form 4 내부자 
 </div>
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: <strong>trump</strong>(28회), <strong>pelosi</strong>(15회), <strong>congress</strong>(12회), <strong>fed</strong>(8회), <strong>tariff</strong>(5회)</div>
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -79,7 +76,6 @@ Trump takes a jab at Nancy Pelosi as he pushes congressional stock trading ban, 
 <span class="source-tag">Pelosi Trades</span>
 
 
-
 ## 트럼프 행정명령/정책
 
 **1. [Trump tariffs live updates: Trump’s 10% tariffs take effect as US threatens to raise 'global' levy to 15% - Yahoo Finance](https://news.google.com/rss/articles/CBMi5wFBVV95cUxQaE9EcFEyekhLN0g5eTQ5LTF5QU1fRDgzWlM2SF9uVEtvdnVUZExKSmhnNlVXVWR1T3Vyc2V5M253ejF3Zldrb3g2a0NLUGg1SHNPQjdmRV9FYndWRTcza0dIZzFzVjljTjlWZmJtVXc4VkJlaDlJUDFEYWFpMzY4elQtc1dqMG1uaHFkUmM1NU5yWXhkcndZWmdrdXJja2xyeHVsS2J3R01PSmpzbHlPR0xDZUd2RkV2U2VJYi1oa05Ca3dHeUVSbk13WnI0UnpYMGNURE4tU0pmVWRqMEJwVXNQYmpYbzg?oc=5)**
@@ -93,7 +89,6 @@ Trump’s new suite of tariffs might be illegal too, lawyers suggest The Globe a
 **3. [Trump administration considers requiring banks to collect citizenship information - The Washington Post](https://news.google.com/rss/articles/CBMiigFBVV95cUxNZXZhZ3ljS3ZQZFp3ZllGdFVwRFRiSEU2NTBiNl9nZ0t4UUNBVENPRFhEbVlSbVlpZHZpemJSeUFBdU96NnpXY0tNdE42NHhGbk1NZ2U0eVdZVHRhQmxnRTRyUVhmU0RlcXNzMTIxbXY4VEYyUjIweUNyaUEzX0g1d182b3pIdUdRY0E?oc=5)**
 Trump administration considers requiring banks to collect citizenship information The Washington Post
 <span class="source-tag">Trump EO Economy</span>
-
 
 
 ## SEC 내부자 거래 (Form 4)
@@ -137,7 +132,6 @@ Steel Dynamics VP에 제한 주식 776주 부여
 **10. [Trust linked to Madison Square Garden Sports (MSGS) files initial Form 3 - Stock Titan](https://news.google.com/rss/articles/CBMiywFBVV95cUxPdmcteEJZRWVjVzlBcWdaQlluN0pGT2NiRTZ6UUxYdnBTeUdYRFVIcmNqSWtRcFA3Y2RvSUFZdmNvS1pkN18zeGpfZTNxSmJnRnlrU3JBLXplYnZtVWxkajRYeW5yTndyWVdPaUxxU1Q4dVFPeXFlY3RpUzNMWGEzT3FKNzhvclZCeTQ4WmZ4czl6enh2X1RzWUpNLWlOdzhBb3liMTJFVVdNVGFqSUd2M2RsNllSOEhEWTZvUkU1X2wzekZLSUNqZEJwTQ?oc=5)**
 MSG Sports 관련 신탁이 최초 Form 3 제출
 <span class="source-tag">SEC Insider Trading</span>
-
 
 
 ## 중앙은행 정책 동향

@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "정치인 거래·정책 리포트 - 2026-02-18"
 date: 2026-02-18 13:59:29 +0000
 categories: [political-trades]
 tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-trading]
 source: "consolidated"
 lang: "ko"
+description: 2026-02-18 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. SEC 내부자 거래 3건, 트럼프 정책 1건, 총 4건이 수집되었습니다.
 ---
 
 **2026-02-18** 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. SEC 내부자 거래 3건, 트럼프 정책 1건, 총 4건이 수집되었습니다.
@@ -16,41 +18,6 @@ lang: "ko"
 
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -65,7 +32,6 @@ lang: "ko"
 **1. [India US trade deal: decision on agreed 18% U.S. tariffs expected within ‘3–4 days’, sources say - The Hindu](https://news.google.com/rss/articles/CBMi2wFBVV95cUxOSWtlUE1HMGtWZmJzQXVMSDlBQXdkOGFyUjNOaU1lMjIxQ28tZkhmMU41ZDU3ZXREZk1tMHBjSjlmbWc2T08zWWJXQVhtOURkUnhwaUZrLTBpTlZjQmU1dmVQUUM4ZVZjWHFjdnN5dTZKUE90SzgyUTFmOE45THZfdV9peWUxRWZBa2U1bXBBc2oyV3dMS2NaR3lDaF9WcnRfS3pOQ1pSZ0VRdDA3Q3ptUTJxeng2OU9sVXJwOU00TGowT0tLT3dSSGJpS2NpZXF0VjBRcFNlZFU3Y2PSAeIBQVVfeXFMT0Q5eml1LWozRlkxYjY3blNGMG56ZGtXOThMd0tKRlFqUURuQ1ViSzN2eGl2bzNBTmluTmVqR0lfZ2ZsZE1JMlA0U09Qd0hLVUtWaFQ3amNHUU10b2V5VzdZbDd5M0xxbk1fWm1Jc3FwQ0NIV2FLU3RTay03WDd1RnZZMmxxVFFaNXBPY29CNEZJMmF6SnM4RU16OFZ2SWJndTNDRndXRGFubmdGV3FYTXFDbktadXktbEFwdWUzOUxUNC1PWE01RTF1YzNOMkw2WTRqOGZPdFFYX0Y3WWYybTVyZw?oc=5)**
 India US trade deal: decision on agreed 18% U.S. tariffs expected within ‘3–4 days’, sources say The Hindu
 <span class="source-tag">Trump Tariff Policy</span>
-
 
 
 ## SEC 내부자 거래 (Form 4)

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "암호화폐 뉴스 브리핑 - 2026-02-22"
 date: 2026-02-22 02:54:56 +0000
 categories: [crypto-news]
@@ -6,6 +7,7 @@ tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-2026-02-22.png"
+description: 2026-02-22 암호화폐 시장에서 101건의 뉴스를 분석했습니다. 오늘은 비트코인, 정치/정책, 가격/시장 관련 소식이 주목됩니다.
 ---
 
 **2026-02-22** 암호화폐 시장에서 101건의 뉴스를 분석했습니다. 오늘은 **비트코인, 정치/정책, 가격/시장** 관련 소식이 주목됩니다.
@@ -33,26 +35,6 @@ image: "/assets/images/generated/news-briefing-2026-02-22.png"
 <div class="alert-box alert-info"><strong>암호화폐 시장 비트코인, 정치/정책 중심 101건 분석</strong><br>🟠 <strong>비트코인</strong>: 48건 수집<br>🏛️ <strong>정치/정책</strong> (20건): Russia-linked cryptocurrency services and sanctions evasion Elliptic<br>📈 <strong>가격/시장</strong>: 22건 수집<br>🏦 <strong>거래소</strong> (15건): After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued? Morningstar</div>
 
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><a href="https://news.google.com/read/CBMimAFBVV95cUxNVjFoQ25KUFlISi1meE5jbEw1VDRzYlM0QjNqZERvYlg3SWVmVE1Hd01UdF9SSXpRdWhheWhReG5qdzQwd2VGOVVtS09GaFdFRjJIcDBBWXpTbW1rSVR1cHpiR0VwRC1WRUh6RlB6QkZSaW82MERuXzBtUDJ6Q1UyUjJDV0FvRDNSQ3cxNl9kcUV5Q1VJMWtwTA?hl=en-US&gl=US&ceid=US%3Aen">Crypto Crash Playbook: 2 High-Conviction Buys to Consider Before the Rebound</a><br><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9UWWt2NGRwVEhESnNWZ1FRaE1wbk9BTk1Wdll0b3dvdWgzTXZlRWs3Y1dMcmNNam1UanZrbWZaTWM5T3R4cWwtVmtFMGE0TTVUV1VWZ3FR?oc=5">레버리지가 코인 폭락 트리거 됐다 - 중앙일보</a><br><a href="https://cointelegraph.com/news/crypto-retraces-gains-2024-2025-pump?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Crypto market retraces almost all 2024-2025 US election pump gains</a></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -163,7 +145,6 @@ After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued? Morningstar
 <a href="https://cointelegraph.com/news/bitcoin-price-prediction-retail-user-healthy-crypto-indicator-santiment?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Bitcoin $150K price calls are ‘drying up,’ which is healthy: Santiment</a>
 <a href="https://cointelegraph.com/news/dutch-authorities-call-on-polymarket-arm-to-cease-activities?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Dutch authorities call on Polymarket arm to cease activities</a>
 </details>
-
 
 
 ## 거래소 공지사항

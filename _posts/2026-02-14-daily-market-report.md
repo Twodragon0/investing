@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "일일 시장 종합 리포트 - 2026-02-14"
 date: 2026-02-14 01:41:59 +0000
 categories: [market-analysis]
@@ -6,6 +7,7 @@ tags: [market-summary, daily, crypto, stock, macro, top-coins]
 source: "auto-generated"
 lang: "ko"
 image: "/assets/images/generated/market-heatmap-2026-02-14.png"
+description: "암호화폐 시장이 보합세를 보이고 있습니다. 뚜렷한 방향성 없이 횡보 구간이 이어지고 있습니다."
 ---
 
 ## 오늘의 핵심
@@ -21,34 +23,6 @@ image: "/assets/images/generated/market-heatmap-2026-02-14.png"
 - **KOSPI**: 5,507.01 (-0.28%)
 - **KOSDAQ**: 1,106.08 (-1.77%)
 - **USD/KRW 환율**: 1,440.90 (-0.04%)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 오늘의 시장 인사이트

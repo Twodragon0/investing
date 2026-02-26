@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "주간 투자 다이제스트 - 2026년 02월 07일"
 date: 2026-02-07 14:06:24 +0000
 categories: [market-analysis]
 tags: [weekly-digest, summary, market-analysis]
 source: "auto-generated"
 lang: "ko"
+description: 이번 주 (01월 31일 ~ 02월 07일) 투자 관련 뉴스와 시장 분석을 종합 정리합니다.
 ---
 
 이번 주 (01월 31일 ~ 02월 07일) 투자 관련 뉴스와 시장 분석을 종합 정리합니다.

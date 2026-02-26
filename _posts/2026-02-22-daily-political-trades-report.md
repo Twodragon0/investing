@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "정치인 거래·정책 리포트 - 2026-02-22"
 date: 2026-02-22 13:36:26 +0000
 categories: [political-trades]
 tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-trading]
 source: "consolidated"
 lang: "ko"
+description: 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
 ---
 
 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
@@ -23,25 +25,6 @@ lang: "ko"
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: <strong>trump</strong>(16회) — 정치/정책 9건, 매크로/금리 9건, AI/기술 4건 포함 총 23건 수집</div>
 
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong>: <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFBoam8zR2lDOWJ4SDVJWlRQUFowS2JzZkxDUlhDUmZKWjFNekh2MVlUcWE3T01jeDR5VFNZMUdRdllDajNUdW5FQlZpd2pKM2s?oc=5">트럼프 "오늘 중으로 10% 글로벌 관세 행정명령 서명"...기존 관세에 추가 - v.daum.net</a></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -86,7 +69,6 @@ Trump raises global tariff to 15% shortly after implementing reworked 10% levy N
 <span class="source-tag">Trump EO Economy</span>
 
 
-
 ## SEC 내부자 거래 (Form 4)
 
 **1. [Tax withholding transaction leaves LENSAR (LNSR) CEO share stake unchanged - Stock Titan](https://news.google.com/rss/articles/CBMipwFBVV95cUxNR0pGUXFoYkdTTFI1eGZOWFpCWFRGVHNXQXNxQllaSUM2ZlpsaV93bmdOSjBLY2xNYzZPYlVwc1VJZDI4MGFFMUJOMTVNS3NvSlE0YmtxcEdTWEJheklGVVJXSHlNaDJiZnU0TEpaTXpoRVZqUXpuVU1KbzNycm56N09Ba0tnZ19VbWgxOGVOaXZCdjhmSTlBbjhWVW9zNDNDTUVaSDhzYw?oc=5)**
@@ -98,13 +80,11 @@ Director Donald Hayward sells Clearfield (CLFD) shares in $32 open-market trade 
 <span class="source-tag">SEC Insider Trading</span>
 
 
-
 ## 한국 정치인 재산/거래
 
 **1. [공직자 부동산비위 제보 받는다…정부, 신고센터 신설 추진 - 뉴시스](https://news.google.com/rss/articles/CBMieEFVX3lxTE4xZkRBaE1hU2o5cGJZX1pxVnNGUlljV0hVTUVyUkVnSDFFT3ZrUkJRZ3RsOGo1QVNIdFhCRUVjX3FyVWkzQ0ZhY1IwekVKRHBEWVRmeHA0bTZQcThvMXMyYmpIc2xaSkhUbkZlRTYtSktKZ2t1M3NxTtIBeEFVX3lxTE4xZkRBaE1hU2o5cGJZX1pxVnNGUlljV0hVTUVyUkVnSDFFT3ZrUkJRZ3RsOGo1QVNIdFhCRUVjX3FyVWkzQ0ZhY1IwekVKRHBEWVRmeHA0bTZQcThvMXMyYmpIc2xaSkhUbkZlRTYtSktKZ2t1M3NxTg?oc=5)**
 공직자 부동산비위 제보 받는다…정부, 신고센터 신설 추진 뉴시스
 <span class="source-tag">공직자 재산신고</span>
-
 
 
 ## 중앙은행 정책 동향

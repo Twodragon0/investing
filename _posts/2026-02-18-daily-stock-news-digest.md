@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "주식 시장 뉴스 종합 - 2026-02-18"
 date: 2026-02-18 03:21:03 +0000
 categories: [stock-news]
@@ -6,6 +7,7 @@ tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/market-snapshot-2026-02-18.png"
+description: "2026-02-18 주식 시장에서 129건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,507.01(-0.28%), KOSDAQ 1,106.08(-1.77%), USD/KRW 1,444.05(+0.16%)."
 ---
 
 **2026-02-18** 주식 시장에서 129건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,507.01(-0.28%), KOSDAQ 1,106.08(-1.77%), USD/KRW 1,444.05(+0.16%).
@@ -33,40 +35,6 @@ image: "/assets/images/generated/market-snapshot-2026-02-18.png"
 
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -171,7 +139,6 @@ The recommendation came as dovish Prime Minister Sanae Takaichi's landslide elec
 
 **3. [이 대통령 '다주택자' 메시지 통했나서울 아파트 매도자 비율 최고](https://www.hankyung.com/article/2026021891087)**
 <span class="source-tag">한국경제</span>
-
 
 
 ---

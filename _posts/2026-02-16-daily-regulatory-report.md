@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "글로벌 규제 동향 리포트 - 2026-02-16"
 date: 2026-02-16 03:34:17 +0000
 categories: [regulatory-news]
@@ -6,6 +7,7 @@ tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/regulatory-summary-2026-02-16.png"
+description: 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 21건의 규제 관련 뉴스가 수집되었습니다.
 ---
 
 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 21건의 규제 관련 뉴스가 수집되었습니다.
@@ -18,34 +20,6 @@ image: "/assets/images/generated/regulatory-summary-2026-02-16.png"
 <strong>글로벌 규제 **거래소, 가격/시장** 관련 21건 수집</strong><ul><li>🏦 <strong>거래소</strong> (5건): 수익증권 장외거래중개업 (조각투자 * 장외거래소) 예비인가 금융위원회 정례회의 (‘26.2.13.) 의결 * 시장에서는 신탁수익증권 투자와 투자계약증권 투자를 조각투자로 인식, 금</li><li>📈 <strong>가격/시장</strong> (21건): 금융위원회 인사 보도 복합지원팀장 이호영 (現금융위원회) 【2026. 02. 19日字】 자료생산 : 행정인사과 (TEL 02-2100-2752)</li><li>🟠 <strong>비트코인</strong> (1건): 단일종목 레버리지 ETF의 세부방안은 검토중입니다. - 2.12일(인터넷판) 서울경제 「’2배 ETF’ 삼전‧하닉‧현대차만 나온다」 제하의 기사에 대한 정부입장 설명 - 1. 기사</li><li>🔵 <strong>규제/정책</strong> (15건): 금융위원회 인사 보도 복합지원팀장 이호영 (現금융위원회) 【2026. 02. 19日字】 자료생산 : 행정인사과 (TEL 02-2100-2752)</li></ul></div>
 
 <strong>긴급 알림</strong><ul><li><a href="https://www.fsc.go.kr/no010101/86297">다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최</a></li></ul></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 핵심 요약

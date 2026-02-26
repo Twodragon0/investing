@@ -4,8 +4,9 @@ title: "암호화폐 뉴스 브리핑 - 2026년 02월 07일"
 date: 2026-02-07 17:37:00 +0900
 categories: crypto-news
 tags: [뉴스, 암호화폐, 블록체인, 시장분석, 규제]
-lang: ko
 source: "Crypto Monitoring System"
+lang: ko
+description: "블록체인 업계 뉴스 브리핑: 최신 개발, 규제 동향, 시장 소식을 전해드립니다."
 ---
 
 블록체인 업계 뉴스 브리핑: 최신 개발, 규제 동향, 시장 소식을 전해드립니다.
