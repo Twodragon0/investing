@@ -10,11 +10,11 @@ lang: "ko"
 
 **2026-02-18** 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다.
 
-<strong>오늘의 글로벌 리스크 스냅샷</strong><ul>
-총 수집: <strong>20건</strong></li>
-핵심 테마: <strong>사회/기타, 지정학/안보, 정책/법률</strong></li>
-집중 출처: <strong>WorldMonitor/Al Jazeera</strong></li>
-</div>
+<div class="alert-box alert-info"><strong>오늘의 글로벌 리스크 스냅샷</strong><ul>
+<li>총 수집: 20건</li>
+<li>핵심 테마: 사회/기타, 지정학/안보, 정책/법률</li>
+<li>집중 출처: WorldMonitor/Al Jazeera</li>
+</ul></div>
 
 ## 핵심 요약
 - 수집 건수: **20건**
