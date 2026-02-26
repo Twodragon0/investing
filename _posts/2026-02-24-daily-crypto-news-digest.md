@@ -13,11 +13,13 @@ description: "2026-02-24 암호화폐 시장에서 113건의 뉴스를 분석했
 
 ---
 
-<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:47%"></div></div><span class="theme-count">53건 (47%)</span></div>
-<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:24%"></div></div><span class="theme-count">27건 (24%)</span></div>
-<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:15%"></div></div><span class="theme-count">17건 (15%)</span></div>
-<span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:12%"></div></div><span class="theme-count">13건 (12%)</span></div>
-<span class="theme-label">🔷 이더리움</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:8%"></div></div><span class="theme-count">9건 (8%)</span></div>
+<div class="theme-distribution">
+<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:47%"></div></div><span class="theme-count">53건 (47%)</span></div>
+<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:24%"></div></div><span class="theme-count">27건 (24%)</span></div>
+<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:15%"></div></div><span class="theme-count">17건 (15%)</span></div>
+<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:12%"></div></div><span class="theme-count">13건 (12%)</span></div>
+<div class="theme-row"><span class="theme-label">🔷 이더리움</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:8%"></div></div><span class="theme-count">9건 (8%)</span></div>
+</div>
 
 *총 113건 수집*
 
@@ -27,11 +29,22 @@ description: "2026-02-24 암호화폐 시장에서 113건의 뉴스를 분석했
 
 ## 한눈에 보기
 
-<div class="stat-item"><div class="stat-value">113</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 53</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (40회)</div></div></div>
+<div class="stat-grid"><div class="stat-item"><div class="stat-value">113</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 53</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (40회)</div></div></div>
 
-<strong>암호화폐 시장 <strong>비트코인, 가격/시장</strong> 중심 113건 분석</strong><ul><li>🟠 <strong>비트코인</strong> (53건): Bitcoin falls as much as 5% as Trump tariff moves raise uncertainty</li><li>📈 <strong>가격/시장</strong> (27건): Elizabeth Warren Urges Trump Admin Not To Stabilize Bitcoin's Price, Gets A Response From Changpeng ...</li><li>🏛️ <strong>정치/정책</strong> (17건): Bitcoin falls as much as 5% as Trump tariff moves raise uncertainty</li><li>🏦 <strong>거래소</strong> (13건): Binance Employees Find $1.7 Billion in Crypto Was Sent to Iranian Entities The New York Times</li></ul></div>
+<div class="alert-box alert-info">
+<strong>암호화폐 시장 <strong>비트코인, 가격/시장</strong> 중심 113건 분석</strong><br>
+🟠 <strong>비트코인</strong> (53건): Bitcoin falls as much as 5% as Trump tariff moves raise uncertainty<br>
+📈 <strong>가격/시장</strong> (27건): Elizabeth Warren Urges Trump Admin Not To Stabilize Bitcoin's Price, Gets A Response From Changpeng ...<br>
+🏛️ <strong>정치/정책</strong> (17건): Bitcoin falls as much as 5% as Trump tariff moves raise uncertainty<br>
+🏦 <strong>거래소</strong> (13건): Binance Employees Find $1.7 Billion in Crypto Was Sent to Iranian Entities The New York Times
+</div>
 
-<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxPdUw1OVpzWG9aZ3pGelV4WnZ0ejhwWU8tZFpNY21RNVpYZWlWZ29MODItVWRwdmgxOUJWeWVXOWktMHhBWW50anJTbVpwazN4X0lodWxhUkc0ckJZUlYyc3ZvcjF1Y2VzZlE5UzRqWEZEQlowSFp4WEJIVUVNX0VmcHVqUFV2Xzk4LUF1a2tUaGdyQVRJdXpMM1RSTHYyZkEtUEHSAacBQVVfeXFMT2VCWThyaE9xNVNqYlpxZVdGdURxMHB0UDgtTW1CR19XVzF1VXBUU3pKdkFWVVpzdHBPRzB6a2cyaDVMMm11MG1DNDRPeWxsZjB5UlQzRUk4VG0zREJZVW5MRzQ0UmhxR3Y2dGZxMXVhMmJoNlhtTnBQNGxzYU9lQjBIOW0yT1V3VmY3RmFqLTE3Z2tZbmVqd0tna0s4ZTQyYjBMWHR0c0k?oc=5">Crypto Crash Alert: Why are Bitcoin, Ethereum and XRP Prices Falling Today? - Coinpedia Fintech News</a></li><li><a href="https://www.coindesk.com/business/2026/02/23/iotex-bridge-exploit-sparks-debate-over-losses-and-recovery-prospects">IoTeX offers cross-bridge hackers 10% bounty if they return $4.4 million within 48 hours</a></li><li><a href="https://bitcoinmagazine.com/markets/bitcoin-price-crashes-below-65000">Bitcoin Price Crashes Below $65,000, Drops 5% in 2 Hours Amid Six-Week Slump</a></li></ul></div>
+<div class="alert-box alert-urgent">
+<strong>긴급 알림</strong><br>
+<a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxPdUw1OVpzWG9aZ3pGelV4WnZ0ejhwWU8tZFpNY21RNVpYZWlWZ29MODItVWRwdmgxOUJWeWVXOWktMHhBWW50anJTbVpwazN4X0lodWxhUkc0ckJZUlYyc3ZvcjF1Y2VzZlE5UzRqWEZEQlowSFp4WEJIVUVNX0VmcHVqUFV2Xzk4LUF1a2tUaGdyQVRJdXpMM1RSTHYyZkEtUEHSAacBQVVfeXFMT2VCWThyaE9xNVNqYlpxZVdGdURxMHB0UDgtTW1CR19XVzF1VXBUU3pKdkFWVVpzdHBPRzB6a2cyaDVMMm11MG1DNDRPeWxsZjB5UlQzRUk0VG0zREJZVW5MRzQ0UmhxR3Y2dGZxMXVhMmJoNlhtTnBQNGxzYU9lQjBIOW0yT1V3VmY3RmFqLTE3Z2tZbmVqd0tna0s4ZTQyYjBMWHR0c0k?oc=5">Crypto Crash Alert: Why are Bitcoin, Ethereum and XRP Prices Falling Today? - Coinpedia Fintech News</a><br>
+<a href="https://www.coindesk.com/business/2026/02/23/iotex-bridge-exploit-sparks-debate-over-losses-and-recovery-prospects">IoTeX offers cross-bridge hackers 10% bounty if they return $4.4 million within 48 hours</a><br>
+<a href="https://bitcoinmagazine.com/markets/bitcoin-price-crashes-below-65000">Bitcoin Price Crashes Below $65,000, Drops 5% in 2 Hours Amid Six-Week Slump</a>
+</div>
 
 
 
@@ -44,9 +57,7 @@ description: "2026-02-24 암호화폐 시장에서 113건의 뉴스를 분석했
 
 ## 전체 뉴스 요약
 
-- 총 **113건** 수집
-- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏛️ 정치/정책
-- 2026-02-24 암호화폐 시장에서 113건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 정치/정책 관련 소식이 주목됩니다.
+2026년 2월 24일 암호화폐 시장은 트럼프 행정부의 관세 정책 불확실성이 촉발한 급격한 하락세로 요약됩니다. 비트코인은 장중 최대 5% 하락하며 65,000달러 아래로 떨어졌고, 솔라나와 이더리움도 각각 5.6%, 4.6% 동반 하락했습니다. 시장의 공포 분위기 속에서 Elizabeth Warren 상원의원이 트럼프 행정부에 비트코인 가격 안정 조치를 취하지 말 것을 촉구하자, 바이낸스 전 CEO 창펑 자오가 "암호화폐는 구제금융이 필요한 적 없다"고 반박하며 정치적 논쟁도 가열됐습니다. 한편 바이낸스 직원들이 자사 플랫폼을 통해 이란 단체에 17억 달러 상당의 암호화폐가 전송된 정황을 발견했다는 뉴욕타임스 보도가 나오면서 규제 리스크도 다시 부각됐습니다. IoTeX 브릿지 해킹(피해액 440만 달러)과 Vitalik Buterin의 ETH 지속 매도 소식도 시장 심리를 약화시키는 요인으로 작용했습니다.
 
 ## 테마별 주요 뉴스
 

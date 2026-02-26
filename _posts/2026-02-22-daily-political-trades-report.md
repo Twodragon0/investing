@@ -7,16 +7,22 @@ source: "consolidated"
 lang: "ko"
 ---
 
-**2026-02-22** 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. SEC 내부자 거래 2건, 트럼프 정책 9건, 한국 정치인 1건, 중앙은행 11건, 총 23건이 수집되었습니다.
+미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
 
 
 ## 한눈에 보기
 
-<div class="stat-item"><div class="stat-value">23</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🏛️ 9</div><div class="stat-label">정치/정책</div></div><div class="stat-item"><div class="stat-value">trump</div><div class="stat-label">핫 키워드 (16회)</div></div></div>
+<div class="stat-grid">
+<div class="stat-item"><div class="stat-value">23</div><div class="stat-label">총 수집 건수</div></div>
+<div class="stat-item"><div class="stat-value">2</div><div class="stat-label">SEC 내부자</div></div>
+<div class="stat-item"><div class="stat-value">9</div><div class="stat-label">트럼프 정책</div></div>
+<div class="stat-item"><div class="stat-value">1</div><div class="stat-label">한국 정치인</div></div>
+<div class="stat-item"><div class="stat-value">11</div><div class="stat-label">중앙은행</div></div>
+</div>
 
-<strong>**정치/정책, 매크로/금리** 관련 23건 수집</strong><ul><li>🏛️ <strong>정치/정책</strong> (9건): 트럼프 "오늘 중으로 10% 글로벌 관세 행정명령 서명"...기존 관세에 추가 v.daum.net</li><li>📊 <strong>매크로/금리</strong> (9건): [금통위poll]①이달 전원일치, 상당 기간 '금리 동결'…이후 향방 갈렸다 아시아경제</li><li>🤖 <strong>AI/기술</strong> (4건): Tariff ruling live coverage: Trump attacks Supreme Court, imposes 10% 'global tariff', then raises i...</li></ul></div>
+<div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: <strong>trump</strong>(16회) — 정치/정책 9건, 매크로/금리 9건, AI/기술 4건 포함 총 23건 수집</div>
 
-<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFBoam8zR2lDOWJ4SDVJWlRQUFowS2JzZkxDUlhDUmZKWjFNekh2MVlUcWE3T01jeDR5VFNZMUdRdllDajNUdW5FQlZpd2pKM2s?oc=5">트럼프 "오늘 중으로 10% 글로벌 관세 행정명령 서명"...기존 관세에 추가 - v.daum.net</a></li></ul></div>
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong>: <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFBoam8zR2lDOWJ4SDVJWlRQUFowS2JzZkxDUlhDUmZKWjFNekh2MVlUcWE3T01jeDR5VFNZMUdRdllDajNUdW5FQlZpd2pKM2s?oc=5">트럼프 "오늘 중으로 10% 글로벌 관세 행정명령 서명"...기존 관세에 추가 - v.daum.net</a></div>
 
 
 
@@ -39,10 +45,13 @@ lang: "ko"
 
 ## 전체 뉴스 요약
 
-- 총 **23건** 수집
-- 트럼프 관련 9건의 정책 뉴스가 수집되었습니다. 행정명령 및 관세 정책은 글로벌 시장에 직접적인 영향을 미치고 있습니다.
-- 2026-02-22 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. SEC 내부자 거래 2건, 트럼프 정책 9건, 한국 정치인 1건, 중앙은행 11건, 총 23건이 수집되었습니다.
-- 1. 트럼프 "오늘 중으로 10% 글로벌 관세 행정명령 서명"...기존 관세에 추가 - v.daum.net 트럼프 "오늘 중으로 10% 글로벌 관세 행정명령 서명"...기존 관세에 추가 v.daum.net
+오늘 정치인 거래·정책 분야에서 총 **23건**의 뉴스가 수집되었습니다. 세부 구성은 SEC 내부자 거래 2건, 트럼프 정책 9건, 한국 정치인 1건, 중앙은행 11건입니다.
+
+**트럼프 정책** 관련으로는 대법원의 상호관세 위법 판결 이후 트럼프 대통령이 10% 글로벌 관세를 즉시 서명하고 이후 15%로 추가 인상한 것이 핵심 이슈였습니다. 대법원 우회를 위한 새로운 법적 근거 모색이 주목받고 있습니다.
+
+**한국 정치인** 동향에서는 공직자 부동산 비위 신고센터 신설 추진 소식이 전해졌습니다.
+
+**중앙은행 정책**에서는 한국은행 2월 금통위 기준금리 6연속 동결 전망이 지배적이며, 성장률 전망치 상향 가능성에 시장의 관심이 집중되고 있습니다.
 
 ## 트럼프 행정명령/정책
 

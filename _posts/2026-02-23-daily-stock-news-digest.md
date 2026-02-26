@@ -14,11 +14,11 @@ description: "2026-02-23 주식 시장에서 144건의 뉴스를 분석했습니
 
 ## 한눈에 보기
 
-<div class="stat-item"><div class="stat-value">144</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 46</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,874.21</div><div class="stat-label">KOSPI +1.17%</div></div><div class="stat-item"><div class="stat-value">1,162.11</div><div class="stat-label">KOSDAQ +0.73%</div></div></div>
+<div class="stat-grid"><div class="stat-item"><div class="stat-value">144</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 46</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,874.21</div><div class="stat-label">KOSPI +1.17%</div></div><div class="stat-item"><div class="stat-value">1,162.11</div><div class="stat-label">KOSDAQ +0.73%</div></div></div>
 
-<strong>주식 시장 **가격/시장, 정치/정책** 부각 144건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 46건 수집</li><li>🏛️ <strong>정치/정책</strong>: 22건 수집</li><li>🤖 <strong>AI/기술</strong>: 30건 수집</li><li>📊 <strong>매크로/금리</strong> (7건): 고환율에 발 묶인 한은…2월 기준금리 '6회 연속 동결' 무게 컨슈머타임스(Consumertimes)</li></ul></div>
+<div class="alert-box alert-info"><strong>주식 시장 가격/시장, 정치/정책 부각 144건 분석</strong><br>📈 <strong>가격/시장</strong>: 46건 수집<br>🏛️ <strong>정치/정책</strong>: 22건 수집<br>🤖 <strong>AI/기술</strong>: 30건 수집<br>📊 <strong>매크로/금리</strong> (7건): 고환율에 발 묶인 한은…2월 기준금리 '6회 연속 동결' 무게</div>
 
-<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?hl=en-US&gl=US&ceid=US%3Aen">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates</a></li><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a></li><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?oc=5">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates - CNBC</a></li></ul></div>
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><a href="https://news.google.com/read/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?hl=en-US&gl=US&ceid=US%3Aen">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates</a><br><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">’워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a><br><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?oc=5">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates - CNBC</a></div>
 
 
 
@@ -36,10 +36,7 @@ description: "2026-02-23 주식 시장에서 144건의 뉴스를 분석했습니
 
 ## 전체 뉴스 요약
 
-- 한국 증시는 KOSPI 5,874.21 (+1.17%)으로 마감했습니다.
-- 원달러 환율은 1,445.08원으로, 환율 변동이 외국인 투자 심리에 영향을 줄 수 있습니다.
-- 2026-02-23 주식 시장에서 144건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,874.21(+1.17%), KOSDAQ 1,162.11(+0.73%), USD/KRW 1,445.08(-0.06%).
-- *가격/시장 분야에서 Correction, KOSPI, Surges 관련 이슈가 부각되고 있습니다.*
+2026년 2월 23일 주식 시장은 144건의 뉴스를 기록하며 활발한 흐름을 보였습니다. 한국 증시는 KOSPI 5,874.21(+1.17%), KOSDAQ 1,162.11(+0.73%)으로 강세 마감했으며, 미국 연방대법원이 트럼프 행정부의 긴급 관세를 무효화한 판결 이후 S&P 500이 상승하고 다우존스가 200포인트 이상 반등했습니다. 미국 시장 하락(-3%) 대비 KOSPI가 11% 급등했다는 분석도 나왔습니다. 그러나 '워시 쇼크'로 금·은·비트코인이 동반 폭락하며 코스피·코스닥의 하방 압력도 상존했습니다. 매크로 측면에서는 고환율 부담으로 한국은행이 2월 기준금리를 6회 연속 동결할 것이라는 전망이 우세했으며, 원달러 환율은 1,445.08원(-0.06%)에 거래되었습니다. AI·기술 관련 뉴스 30건, 정치/정책 22건이 시장 변동성 확대 요인으로 작용했습니다.
 
 ## 테마별 주요 뉴스
 

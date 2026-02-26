@@ -14,13 +14,13 @@ image: "/assets/images/generated/market-snapshot-2026-02-20.png"
 
 ## 한눈에 보기
 
-<div class="stat-item"><div class="stat-value">100</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 45</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,747.60</div><div class="stat-label">KOSPI +1.24%</div></div><div class="stat-item"><div class="stat-value">1,157.98</div><div class="stat-label">KOSDAQ -0.46%</div></div></div>
+<div class="stat-grid"><div class="stat-item"><div class="stat-value">100</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 45</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,747.60</div><div class="stat-label">KOSPI +1.24%</div></div><div class="stat-item"><div class="stat-value">1,157.98</div><div class="stat-label">KOSDAQ -0.46%</div></div></div>
 
-<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:45%"></div></div><span class="theme-count">45건 (45%)</span></div>
-<span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:22%"></div></div><span class="theme-count">22건 (22%)</span></div>
-<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:9%"></div></div><span class="theme-count">9건 (9%)</span></div>
-<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:5%"></div></div><span class="theme-count">5건 (5%)</span></div>
-<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:2%"></div></div><span class="theme-count">2건 (2%)</span></div>
+<div class="theme-distribution"><div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:45%"></div></div><span class="theme-count">45건 (45%)</span></div>
+<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:22%"></div></div><span class="theme-count">22건 (22%)</span></div>
+<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:9%"></div></div><span class="theme-count">9건 (9%)</span></div>
+<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:5%"></div></div><span class="theme-count">5건 (5%)</span></div>
+<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:2%"></div></div><span class="theme-count">2건 (2%)</span></div></div>
 
 ![market-snapshot]({{ '/assets/images/generated/market-snapshot-2026-02-20.png' | relative_url }})
 
@@ -62,9 +62,7 @@ image: "/assets/images/generated/market-snapshot-2026-02-20.png"
 
 ## 전체 뉴스 요약
 
-- 주요 테마: 📈 가격/시장, 🤖 AI/기술, 📊 매크로/금리
-- 2026-02-20 주식 시장 100건의 뉴스를 분석한 요약 브리핑입니다.
-- S&P 500(-0.28%), 다우(-0.54%), 나스닥(-0.31%) 모두 하락 마감했습니다. 미국-이란 긴장 고조로 유가가 6개월 최고치까지 급등하면서 리스크 자산에 압박을 가했습니다. 유틸리티와 에너지 섹터만 상승한 반면, Nvidia 하락과 사모펀드주 급락이 시장을 끌어내...
+2026-02-20 주식 시장에서 총 100건의 뉴스가 수집됐다. 주요 테마는 가격/시장(45건), AI/기술(22건), 매크로/금리(9건), 비트코인(5건), 정치/정책(2건) 순이었다. S&P 500(-0.28%), 다우(-0.54%), 나스닥(-0.31%) 모두 하락 마감했으며, 미국-이란 긴장 고조로 유가가 6개월 최고치까지 급등하며 리스크 자산에 압박을 가했다. 반면 한국 KOSPI는 반도체 ETF에 5조원 이상 자금이 유입되며 +1.24% 강세를 기록했다. Walmart의 실적 가이던스 하향과 Fed 의사록의 금리 인하 의견 분열이 미국 시장의 불확실성을 높였다.
 
 ## 시장 데이터
 

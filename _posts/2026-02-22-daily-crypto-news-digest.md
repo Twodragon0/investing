@@ -12,11 +12,13 @@ image: "/assets/images/generated/news-briefing-2026-02-22.png"
 
 ---
 
-<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:48%"></div></div><span class="theme-count">48건 (48%)</span></div>
-<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:20%"></div></div><span class="theme-count">20건 (20%)</span></div>
-<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:22%"></div></div><span class="theme-count">22건 (22%)</span></div>
-<span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:15%"></div></div><span class="theme-count">15건 (15%)</span></div>
-<span class="theme-label">🔷 이더리움</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:13%"></div></div><span class="theme-count">13건 (13%)</span></div>
+<div class="theme-distribution">
+<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:48%"></div></div><span class="theme-count">48건 (48%)</span></div>
+<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:20%"></div></div><span class="theme-count">20건 (20%)</span></div>
+<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:22%"></div></div><span class="theme-count">22건 (22%)</span></div>
+<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:15%"></div></div><span class="theme-count">15건 (15%)</span></div>
+<div class="theme-row"><span class="theme-label">🔷 이더리움</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:13%"></div></div><span class="theme-count">13건 (13%)</span></div>
+</div>
 
 *총 101건 수집*
 
@@ -26,11 +28,11 @@ image: "/assets/images/generated/news-briefing-2026-02-22.png"
 
 ## 한눈에 보기
 
-<div class="stat-item"><div class="stat-value">101</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 48</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (37회)</div></div></div>
+<div class="stat-grid"><div class="stat-item"><div class="stat-value">101</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 48</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (37회)</div></div></div>
 
-<strong>암호화폐 시장 **비트코인, 정치/정책** 중심 101건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 48건 수집</li><li>🏛️ <strong>정치/정책</strong> (20건): Russia-linked cryptocurrency services and sanctions evasion Elliptic</li><li>📈 <strong>가격/시장</strong>: 22건 수집</li><li>🏦 <strong>거래소</strong> (15건): After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued? Morningstar</li></ul></div>
+<div class="alert-box alert-info"><strong>암호화폐 시장 비트코인, 정치/정책 중심 101건 분석</strong><br>🟠 <strong>비트코인</strong>: 48건 수집<br>🏛️ <strong>정치/정책</strong> (20건): Russia-linked cryptocurrency services and sanctions evasion Elliptic<br>📈 <strong>가격/시장</strong>: 22건 수집<br>🏦 <strong>거래소</strong> (15건): After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued? Morningstar</div>
 
-<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMimAFBVV95cUxNVjFoQ25KUFlISi1meE5jbEw1VDRzYlM0QjNqZERvYlg3SWVmVE1Hd01UdF9SSXpRdWhheWhReG5qdzQwd2VGOVVtS09GaFdFRjJIcDBBWXpTbW1rSVR1cHpiR0VwRC1WRUh6RlB6QkZSaW82MERuXzBtUDJ6Q1UyUjJDV0FvRDNSQ3cxNl9kcUV5Q1VJMWtwTA?hl=en-US&gl=US&ceid=US%3Aen">Crypto Crash Playbook: 2 High-Conviction Buys to Consider Before the Rebound</a></li><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9UWWt2NGRwVEhESnNWZ1FRaE1wbk9BTk1Wdll0b3dvdWgzTXZlRWs3Y1dMcmNNam1UanZrbWZaTWM5T3R4cWwtVmtFMGE0TTVUV1VWZ3FR?oc=5">레버리지가 코인 폭락 트리거 됐다 - 중앙일보</a></li><li><a href="https://cointelegraph.com/news/crypto-retraces-gains-2024-2025-pump?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Crypto market retraces almost all 2024-2025 US election pump gains</a></li></ul></div>
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><a href="https://news.google.com/read/CBMimAFBVV95cUxNVjFoQ25KUFlISi1meE5jbEw1VDRzYlM0QjNqZERvYlg3SWVmVE1Hd01UdF9SSXpRdWhheWhReG5qdzQwd2VGOVVtS09GaFdFRjJIcDBBWXpTbW1rSVR1cHpiR0VwRC1WRUh6RlB6QkZSaW82MERuXzBtUDJ6Q1UyUjJDV0FvRDNSQ3cxNl9kcUV5Q1VJMWtwTA?hl=en-US&gl=US&ceid=US%3Aen">Crypto Crash Playbook: 2 High-Conviction Buys to Consider Before the Rebound</a><br><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9UWWt2NGRwVEhESnNWZ1FRaE1wbk9BTk1Wdll0b3dvdWgzTXZlRWs3Y1dMcmNNam1UanZrbWZaTWM5T3R4cWwtVmtFMGE0TTVUV1VWZ3FR?oc=5">레버리지가 코인 폭락 트리거 됐다 - 중앙일보</a><br><a href="https://cointelegraph.com/news/crypto-retraces-gains-2024-2025-pump?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Crypto market retraces almost all 2024-2025 US election pump gains</a></div>
 
 
 
@@ -54,9 +56,7 @@ image: "/assets/images/generated/news-briefing-2026-02-22.png"
 
 ## 전체 뉴스 요약
 
-- 총 **101건** 수집
-- 주요 테마: 🟠 비트코인, 🏛️ 정치/정책, 📈 가격/시장
-- 2026-02-22 암호화폐 시장에서 101건의 뉴스를 분석했습니다. 오늘은 비트코인, 정치/정책, 가격/시장 관련 소식이 주목됩니다.
+2026-02-22 암호화폐 시장에서 총 101건의 뉴스를 분석했습니다. 오늘은 🟠 비트코인(48건)이 절반 가까이를 차지하며 압도적인 존재감을 보였고, 트럼프 관세 인상 발표 이후 비트코인이 일시 하락했다가 회복하는 장면이 연출되었습니다. 🏛️ 정치/정책(20건) 영역에서는 러시아 연계 암호화폐 서비스의 제재 회피 이슈와 미국 CFTC의 규제 강화 방향이 주목받았으며, 📈 가격/시장(22건)에서는 크립토 시장이 2024~2025년 선거 랠리 상승분을 대부분 반납했다는 소식이 투자 심리를 위축시켰습니다. 거래소(15건) 분야에서는 코인베이스 실적 발가 후 매수/매도 판단 논란이 이어졌습니다.
 
 ## 테마별 주요 뉴스
 

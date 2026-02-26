@@ -14,10 +14,10 @@ image: "/assets/images/generated/source-distribution-2026-02-20.png"
 
 ## 한눈에 보기
 
-<div class="stat-item"><div class="stat-value">26</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📊 17</div><div class="stat-label">매크로/금리</div></div></div>
+<div class="stat-grid"><div class="stat-item"><div class="stat-value">26</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📊 17</div><div class="stat-label">매크로/금리</div></div></div>
 
-<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:65%"></div></div><span class="theme-count">17건 (65%)</span></div>
-<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:35%"></div></div><span class="theme-count">9건 (35%)</span></div>
+<div class="theme-distribution"><div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:65%"></div></div><span class="theme-count">17건 (65%)</span></div>
+<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:35%"></div></div><span class="theme-count">9건 (35%)</span></div></div>
 
 ![source-distribution]({{ '/assets/images/generated/source-distribution-2026-02-20.png' | relative_url }})
 
@@ -59,11 +59,7 @@ image: "/assets/images/generated/source-distribution-2026-02-20.png"
 
 ## 전체 뉴스 요약
 
-오늘 수집된 총 -건 중 텔레그램 -건, 소셜 -건, 정치·경제 -건으로 다양한 이슈가 주요 화제입니다.
-
-**핵심 신호 정리**
-- 주요 테마: 분류 데이터 제한적
-- 긴급 알림 없음에 대한 선별 모니터링
+2026-02-20 소셜 미디어에서 총 26건의 동향이 수집됐다. 매크로/금리 관련 논의가 17건(65%)으로 지배적이었으며, 정치/정책 이슈가 9건(35%)으로 뒤를 이었다. Fed 금리 정책 불확실성과 Trump 관세의 무역적자 악화 논란이 주요 커뮤니티 화제였고, 이재명 경제정책 기대감으로 국내 ETF 매수 심리가 강하게 형성됐다. Goldman Sachs CEO가 암호화폐 규칙 기반 시스템의 중요성을 강조한 발언도 주목받았다.
 
 ## 소셜 동향 요약
 

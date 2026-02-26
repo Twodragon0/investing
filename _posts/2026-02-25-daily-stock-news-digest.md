@@ -14,11 +14,11 @@ description: "2026-02-25 주식 시장에서 159건의 뉴스를 분석했습니
 
 ## 한눈에 보기
 
-<div class="stat-item"><div class="stat-value">159</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 50</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">6,121.17</div><div class="stat-label">KOSPI +5.58%</div></div><div class="stat-item"><div class="stat-value">1,166.64</div><div class="stat-label">KOSDAQ +1.14%</div></div></div>
+<div class="stat-grid"><div class="stat-item"><div class="stat-value">159</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 50</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">6,121.17</div><div class="stat-label">KOSPI +5.58%</div></div><div class="stat-item"><div class="stat-value">1,166.64</div><div class="stat-label">KOSDAQ +1.14%</div></div></div>
 
-<strong>주식 시장 가격/시장, 정치/정책 부각 159건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (50건): Stock market today: Dow, S&P 500, Nasdaq jump as software leads AI relief rally ahead of Nvidia earn...</li><li>🏛️ <strong>정치/정책</strong> (20건): Stock market today: Dow, S&P 500, Nasdaq futures dip as Trump to deliver State of the Union, Nvidia ...</li><li>🤖 <strong>AI/기술</strong> (24건): Stock market today: Dow, S&P 500, Nasdaq jump as software leads AI relief rally ahead of Nvidia earn...</li><li>📊 <strong>매크로/금리</strong> (6건): When will mortgage rates go down? With Fed rate cuts on hold, 4-year lows may be the bottom for now ...</li></ul></div>
+<div class="alert-box alert-info"><strong>주식 시장 가격/시장, 정치/정책 부각 159건 분석</strong><br><br>📈 가격/시장 (50건) — 다우·S&P 500·나스닥 소프트웨어 주도 AI 안도 랠리, 엔비디아 실적 기대<br>🏛️ 정치/정책 (20건) — 트럼프 국정연설 앞두고 선물 하락, 무역정책 불확실성<br>🤖 AI/기술 (24건) — AI 관련주 반등 랠리, 엔비디아 실적 발표 임박<br>📊 매크로/금리 (6건) — 모기지 금리 인하 전망, Fed 금리인하 보류</div>
 
-<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMimAFBVV95cUxON1d1SmxfaHlXMkpSUlA5Y3pDMy1kZ3dxRlF5QzZkb3dlTmlTMmdWY2RWeURoazZXdVpMS0t6ZjI3NmJYTEwyS2pCWDVSdEdHekN4YWZ4WEZudC1JUDBDSnI2ZWotZWpOMlB1NVlQTkJaLW5XQWttRnpUdlEyQkZrZG1tYVlJWVZfaUw5SlJ5aklsTXN6WUdhaA?hl=en-US&gl=US&ceid=US%3Aen">Worried About a Stock Market Crash? This Is the Single Best Investing Move You Can Make Right Now.</a></li><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a></li><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxON1d1SmxfaHlXMkpSUlA5Y3pDMy1kZ3dxRlF5QzZkb3dlTmlTMmdWY2RWeURoazZXdVpMS0t6ZjI3NmJYTEwyS2pCWDVSdEdHekN4YWZ4WEZudC1JUDBDSnI2ZWotZWpOMlB1NVlQTkJaLW5XQWttRnpUdlEyQkZrZG1tYVlJWVZfaUw5SlJ5aklsTXN6WUdhaA?oc=5">Worried About a Stock Market Crash? This Is the Single Best Investing Move You Can Make Right Now. - The Motley Fool</a></li></ul></div>
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><br><a href="https://news.google.com/read/CBMimAFBVV95cUxON1d1SmxfaHlXMkpSUlA5Y3pDMy1kZ3dxRlF5QzZkb3dlTmlTMmdWY2RWeURoazZXdVpMS0t6ZjI3NmJYTEwyS2pCWDVSdEdHekN4YWZ4WEZudC1JUDBDSnI2ZWotZWpOMlB1NVlQTkJaLW5XQWttRnpUdlEyQkZrZG1tYVlJWVZfaUw5SlJ5aklsTXN6WUdhaA?hl=en-US&gl=US&ceid=US%3Aen">Stock Market Crash? 지금 할 수 있는 최선의 투자 전략</a><br><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">’워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a></div>
 
 
 
@@ -30,10 +30,7 @@ description: "2026-02-25 주식 시장에서 159건의 뉴스를 분석했습니
 
 ## 전체 뉴스 요약
 
-- 한국 증시는 KOSPI 6,121.17 (+5.58%)으로 마감했습니다.
-- 원달러 환율은 1,436.25원으로, 환율 변동이 외국인 투자 심리에 영향을 줄 수 있습니다.
-- 2026-02-25 주식 시장에서 159건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,121.17(+5.58%), KOSDAQ 1,166.64(+1.14%), USD/KRW 1,436.25(-0.82%).
-- *Stock market today: Dow, S&P 500, Nasdaq jump as software leads AI relief rally ahead of Nvidia e...*
+오늘 글로벌 주식 시장은 **AI 관련주의 반등 랠리**가 주도했습니다. 소프트웨어 섹터가 상승을 이끌며 다우·S&P 500·나스닥 모두 상승했고, 한국 시장에서는 KOSPI가 6,121.17(+5.58%)로 급등하며 강세를 보였습니다. 원달러 환율은 1,436.25원(-0.82%)으로 하락했습니다. 다만 트럼프 대통령의 국정연설을 앞두고 선물 시장이 하락하는 등 **무역정책 불확실성**이 변동성 요인으로 작용하고 있으며, 엔비디아 실적 발표가 시장 방향의 핵심 촉매제로 주목받고 있습니다.
 
 ## 테마별 주요 뉴스
 

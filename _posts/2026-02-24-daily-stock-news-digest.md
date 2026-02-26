@@ -14,11 +14,22 @@ description: "2026-02-24 주식 시장에서 158건의 뉴스를 분석했습니
 
 ## 한눈에 보기
 
-<div class="stat-item"><div class="stat-value">158</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 47</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,936.78</div><div class="stat-label">KOSPI +1.74%</div></div><div class="stat-item"><div class="stat-value">1,162.86</div><div class="stat-label">KOSDAQ +0.92%</div></div></div>
+<div class="stat-grid"><div class="stat-item"><div class="stat-value">158</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 47</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,936.78</div><div class="stat-label">KOSPI +1.74%</div></div><div class="stat-item"><div class="stat-value">1,162.86</div><div class="stat-label">KOSDAQ +0.92%</div></div></div>
 
-<strong>주식 시장 <strong>가격/시장, 정치/정책</strong> 부각 158건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (47건): Prediction Market Flashes a Stock Market Correction Warning. History Says the S&P 500 May Drop Even ...</li><li>🏛️ <strong>정치/정책</strong> (38건): Stock market today: Dow drops 800 points as S&P 500, Nasdaq slide on Trump tariff fears, AI 'scare t...</li><li>📊 <strong>매크로/금리</strong> (9건): When will mortgage rates go down? With Fed rate cuts on hold, 4-year lows may be the bottom for now ...</li><li>🤖 <strong>AI/기술</strong> (7건): “엔비디아 주가가 떨어져도 삼성전자·하이닉스는 더 오르는 이유” 조선일보</li></ul></div>
+<div class=”alert-box alert-info”>
+<strong>주식 시장 <strong>가격/시장, 정치/정책</strong> 부각 158건 분석</strong><br>
+📈 <strong>가격/시장</strong> (47건): Prediction Market Flashes a Stock Market Correction Warning. History Says the S&P 500 May Drop Even ...<br>
+🏛️ <strong>정치/정책</strong> (38건): Stock market today: Dow drops 800 points as S&P 500, Nasdaq slide on Trump tariff fears, AI ‘scare t...<br>
+📊 <strong>매크로/금리</strong> (9건): When will mortgage rates go down? With Fed rate cuts on hold, 4-year lows may be the bottom for now ...<br>
+🤖 <strong>AI/기술</strong> (7건): “엔비디아 주가가 떨어져도 삼성전자·하이닉스는 더 오르는 이유” 조선일보
+</div>
 
-<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?hl=en-US&gl=US&ceid=US%3Aen">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates</a></li><li><a href="https://news.google.com/read/CBMi-gFBVV95cUxPWFBCd0RMYVpLZk10T0x4LVpsNU9ZcVpMR1RiUERBZlFMaDhsM2FUVTF5R25aTlVaczAta0lQMDFUdExuRTUwbmZsSmlUR0J6d25mRFpkeV9KS3hkYlNrXzVTeGpqTERXa19OMzFWRG5FLXpEdmN6ZjdIVmFqYk5xR0lZa3FSMzktbFBOZFctS196TzI1SVVxSS1IUXlUNEVlSzFtaERWTmduUzd3dXA0R2EyWk5PakpmX1VOWmQyVkxhbUtabFZqSjFoUEcza0V4elYzWVlacHNtUXc0S0d6LUdZUE1JYmdGRm41VkxGbEtVazNfeU9uZmln0gH_AUFVX3lxTFBwcFBWTzA5YUhhU1lPTGpQZmJiVEJQWlhTNUZZYV9sdDRtd2JVRmVVSXlLdzNqQkc5aEE4a2tVamwtZldpRTFtbHdrNDNzSHRmcEtqVjJwOWEzZi14Q3d4RkZUMFJhOENEOGFGYzBzSmF1OXFZTUVXeGpIb3J2d0JYUGQ1THFtQ25reFItSzE2TklDeFZmanBxN3NFUTVjX0FzVzZmSmJNc21IM2R0R3EzN19oemF5OEJuZzBLWG1hM1lFbEZrN0c0LWpKbTBGeUtrbVJ1bFZQWTVETHZENVNfYkJKdHJEcmNiUG1SVGlpbnh1WWJfOTlDU0JKeXJMQQ?hl=en-US&gl=US&ceid=US%3Aen">S&P 500, Dow Jones, Nasdaq crash at U.S Stock Market. Top gaining, losing stocks at Wall Street</a></li><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a></li></ul></div>
+<div class=”alert-box alert-urgent”>
+<strong>긴급 알림</strong><br>
+<a href=”https://news.google.com/read/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?hl=en-US&gl=US&ceid=US%3Aen”>S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates</a><br>
+<a href=”https://news.google.com/read/CBMi-gFBVV95cUxPWFBCd0RMYVpLZk10T0x4LVpsNU9ZcVpMR1RiUERBZlFMaDhsM2FUVTF5R25aTlVaczAta0lQMDFUdExuRTUwbmZsSmlUR0J6d25mRFpkeV9KS3hkYlNrXzVTeGpqTERXa19OMzFWRG5FLXpEdmN6ZjdIVmFqYk5xR0lZa3FSMzktbFBOZFctS196TzI1SVVxSS1IUXlUNEVlSzFtaERWTmduUzd3dXA0R2EyWk5PakpmX1VOWmQyVkxhbUtabFZqSjFoUEcza0V4elYzWVlacHNtUXc0S0d6LUdZUE1JYmdGRm41VkxGbEtVazNfeU9uZmln0gH_AUFVX3lxTFBwcFBWTzA5YUhhU1lPTGpQZmJiVEJQWlhTNUZZYV9sdDRtd2JVRmVVSXlLdzNqQkc5aEE4a2tVamwtZldpRTFtbHdrNDNzSHRmcEtqVjJwOWEzZi14Q3d4RkZUMFJhOENEOGFGYzBzSmF1OXFZTUVXeGpIb3J2d0JYUGQ1THFtQ25reFItSzE2TklDeFZmanBxN3NFUTVjX0FzVzZmSmJNc21IM2R0R3EzN19oemF5OEJuZzBLWG1hM1lFbEZrN0c0LWpKbTBGeUtrbVJ1bFZQWTVETHZENVNfYkJKdHJEcmNiUG1SVGlpbnh1WWJfOTlDU0JKeXJMQQ?hl=en-US&gl=US&ceid=US%3Aen”>S&P 500, Dow Jones, Nasdaq crash at U.S Stock Market. Top gaining, losing stocks at Wall Street</a><br>
+<a href=”https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako”>’워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a>
+</div>
 
 
 
@@ -31,10 +42,7 @@ description: "2026-02-24 주식 시장에서 158건의 뉴스를 분석했습니
 
 ## 전체 뉴스 요약
 
-- 한국 증시는 KOSPI 5,936.78 (+1.74%)으로 마감했습니다.
-- 원달러 환율은 1,445.56원으로, 환율 변동이 외국인 투자 심리에 영향을 줄 수 있습니다.
-- 2026-02-24 주식 시장에서 158건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,936.78(+1.74%), KOSDAQ 1,162.86(+0.92%), USD/KRW 1,445.56(+0.18%).
-- *Prediction Market Flashes a Stock Market Correction Warning. History Says the S&P 500 May Drop Ev...*
+2026년 2월 24일 주식 시장은 트럼프 행정부의 관세 정책과 AI 업종 우려가 동시에 불거지며 큰 변동성을 보였습니다. 다우존스 지수는 장중 800포인트 이상 급락했고 S&P 500과 나스닥도 동반 하락했으나, 이후 대법원이 트럼프 긴급 관세 조치에 제동을 거는 판결을 내리자 반등에 성공했습니다. 미국 증시의 혼조 속에서도 한국 증시는 선방해 KOSPI가 5,936.78포인트(+1.74%), KOSDAQ이 1,162.86포인트(+0.92%)로 마감했으며, 삼성전자와 SK하이닉스 등 반도체 투톱이 신고가를 경신하며 지수 상승을 이끌었습니다. 다만 원달러 환율이 1,445.56원(+0.18%)으로 소폭 상승하며 고환율 기조가 지속됐고, 이에 한국은행의 기준금리 6연속 동결 가능성이 무게를 더하고 있습니다. 예측 시장에서는 S&P 500이 추가 조정될 수 있다는 경고 신호가 감지됐으며, AI 섹터의 약세가 금융주 전반에 부정적 영향을 미쳤습니다.
 
 ## 테마별 주요 뉴스
 

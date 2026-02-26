@@ -5,7 +5,7 @@ categories: [regulatory-news]
 tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/regulatory-summary-2026-02-22.png"
+image: "/assets/images/og-default.png"
 ---
 
 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 23건의 규제 관련 뉴스가 수집되었습니다.
@@ -13,11 +13,11 @@ image: "/assets/images/generated/regulatory-summary-2026-02-22.png"
 
 ## 한눈에 보기
 
-<div class="stat-item"><div class="stat-value">23</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 15</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">21</div><div class="stat-label">한국</div></div></div>
+<div class="stat-grid"><div class="stat-item"><div class="stat-value">23</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 15</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">21</div><div class="stat-label">한국</div></div></div>
 
-<strong>글로벌 규제 **규제/정책, 거래소** 관련 23건 수집</strong><ul><li>🔵 <strong>규제/정책</strong> (15건): 금융위원회 인사 보도 복합지원팀장 이호영 (現금융위원회) 【2026. 02. 19日字】 자료생산 : 행정인사과 (TEL 02-2100-2752)</li><li>🏦 <strong>거래소</strong> (5건): 수익증권 장외거래중개업 (조각투자 * 장외거래소) 예비인가 금융위원회 정례회의 (‘26.2.13.) 의결 * 시장에서는 신탁수익증권 투자와 투자계약증권 투자를 조각투자로 인식, 금...</li><li>📈 <strong>가격/시장</strong> (21건): 금융정보분석원, 국제자금세탁방지기구(FATF) 총회 참석 ◇ FATF는 의장 엘리사 마드라조 (Ms. Elisa Madrazo, 멕시코)의 주재로 멕시코 시티 에서 제34기 5차 ...</li><li>🟠 <strong>비트코인</strong> (1건): 단일종목 레버리지 ETF의 세부방안은 검토중입니다. - 2.12일(인터넷판) 서울경제 「’2배 ETF’ 삼전‧하닉‧현대차만 나온다」 제하의 기사에 대한 정부입장 설명 - 1. 기사...</li></ul></div>
+<div class="alert-box alert-info"><strong>글로벌 규제 규제/정책, 거래소 관련 23건 수집</strong><br>🔵 <strong>규제/정책</strong> (15건): 금융위원회 인사 보도 복합지원팀장 이호영 (現금융위원회) 【2026. 02. 19日字】 자료생산 : 행정인사과 (TEL 02-2100-2752)<br>🏦 <strong>거래소</strong> (5건): 수익증권 장외거래중개업 (조각투자 * 장외거래소) 예비인가 금융위원회 정례회의 (‘26.2.13.) 의결<br>📈 <strong>가격/시장</strong> (21건): 금융정보분석원, 국제자금세탁방지기구(FATF) 총회 참석<br>🟠 <strong>비트코인</strong> (1건): 단일종목 레버리지 ETF의 세부방안은 검토중입니다.</div>
 
-<strong>긴급 알림</strong><ul><li><a href="https://www.fsc.go.kr/no010101/86297">다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최</a></li></ul></div>
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><a href="https://www.fsc.go.kr/no010101/86297">다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최</a></div>
 
 
 
@@ -36,21 +36,18 @@ image: "/assets/images/generated/regulatory-summary-2026-02-22.png"
 
 ## 핵심 요약
 
-- **총 수집 건수**: 23건
-- **한국**: 21건
-- **유럽**: 2건
+이날 전 세계 금융 규제 동향으로 총 23건이 수집되었습니다. 한국 금융위원회에서 21건이 발표되었으며, 다주택자 대출 만기연장 긴급 점검회의 개최와 수익증권 장외거래중개업(조각투자 장외거래소) 예비인가가 핵심 이슈였습니다. 부실기업 상장폐지 개혁 방안 및 빗썸 오지급 관련 스미싱 경보도 주목할 사안입니다. 유럽에서는 영국 FCA의 암호자산 소비자보호 가이드라인 및 샌드박스 관련 소식 2건이 포착되었습니다.
 
 ---
-<span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:65%"></div></div><span class="theme-count">15건 (65%)</span></div>
-<span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:22%"></div></div><span class="theme-count">5건 (22%)</span></div>
-<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:91%"></div></div><span class="theme-count">21건 (91%)</span></div>
-<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:4%"></div></div><span class="theme-count">1건 (4%)</span></div>
-<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:17%"></div></div><span class="theme-count">4건 (17%)</span></div>
+<div class="theme-distribution">
+<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:65%"></div></div><span class="theme-count">15건 (65%)</span></div>
+<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:22%"></div></div><span class="theme-count">5건 (22%)</span></div>
+<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:91%"></div></div><span class="theme-count">21건 (91%)</span></div>
+<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:4%"></div></div><span class="theme-count">1건 (4%)</span></div>
+<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:17%"></div></div><span class="theme-count">4건 (17%)</span></div>
+</div>
 
 *총 23건 수집*
-
-
-![regulatory-summary]({{ '/assets/images/generated/regulatory-summary-2026-02-22.png' | relative_url }})
 
 
 ---

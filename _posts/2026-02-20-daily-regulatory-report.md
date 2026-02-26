@@ -5,7 +5,7 @@ categories: [regulatory-news]
 tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/regulatory-summary-2026-02-20.png"
+image: "/assets/images/og-default.png"
 ---
 
 전 세계 금융 규제기관의 최신 동향 6건을 요약합니다.
@@ -14,12 +14,10 @@ image: "/assets/images/generated/regulatory-summary-2026-02-20.png"
 
 ## 한눈에 보기
 
-<div class="stat-item"><div class="stat-value">6</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 4</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">3</div><div class="stat-label">한국</div></div></div>
+<div class="stat-grid"><div class="stat-item"><div class="stat-value">6</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 4</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">3</div><div class="stat-label">한국</div></div></div>
 
-<span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:67%"></div></div><span class="theme-count">4건 (67%)</span></div>
-<span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:33%"></div></div><span class="theme-count">2건 (33%)</span></div>
-
-![regulatory-summary]({{ '/assets/images/generated/regulatory-summary-2026-02-20.png' | relative_url }})
+<div class="theme-distribution"><div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:67%"></div></div><span class="theme-count">4건 (67%)</span></div>
+<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:33%"></div></div><span class="theme-count">2건 (33%)</span></div></div>
 
 ---
 
@@ -59,9 +57,7 @@ image: "/assets/images/generated/regulatory-summary-2026-02-20.png"
 
 ## 전체 뉴스 요약
 
-- 주요 테마: 🔵 규제/정책, 🏦 거래소
-- 전 세계 금융 규제기관의 최신 동향 6건을 요약합니다.
-- - SEC: 펀드 포트폴리오 보유 보고 부담 완화를 위한 개정안을 제안했습니다. 기관 투자자들의 보고 의무가 간소화될 전망입니다. - SEC 칼럼: "Number Go Down" 제목의 SEC.gov 칼럼이 게재되어 암호화폐 시장에 대한 SEC의 비판적 시각이 재확인되었습니다.
+2026-02-20 전 세계 금융 규제기관 동향 6건이 수집됐다. 주요 테마는 규제/정책(4건)과 거래소(2건)였다. 미국 SEC는 펀드 포트폴리오 보유 보고 부담 완화를 위한 개정안을 제안하며 기관 투자자의 보고 의무 간소화 방향을 시사했다. 영국 FCA는 미등록 암호화폐 거래소에 대해 최초로 법적 조치를 취하며 규제 강화 기조를 보였다. 한국에서는 미래에셋이 인수한 코빗의 FIU 대주주 적격성 심사가 진행 중이며, FATF 총회와 거래소 업계 M&A가 동시에 진행되고 있다.
 
 ## 규제 요약
 

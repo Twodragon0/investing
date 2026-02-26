@@ -16,9 +16,9 @@ description: "2026-02-26 주식 시장에서 168건의 뉴스를 분석했습니
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">168</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 63</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">6,219.15</div><div class="stat-label">KOSPI +2.37%</div></div><div class="stat-item"><div class="stat-value">1,188.90</div><div class="stat-label">KOSDAQ +2.35%</div></div></div>
 
-<div class="alert-box alert-info"><strong>주식 시장 가격/시장, AI/기술 부각 168건 분석</strong><ul><li>📈 가격/시장 (63건): Stock market today: Dow, S&P 500, Nasdaq rally on tech jolt as Nvidia earnings loom</li><li>🤖 AI/기술 (37건): Stock market today: Dow, S&P 500, Nasdaq rally on tech jolt as Nvidia earnings loom</li><li>📊 매크로/금리 (17건): 한국은행, 기준금리 6회 연속 동결…연 2.50% 지디넷코리아</li><li>🏛️ 정치/정책 (14건): Stock market today: Dow drops 800 points as S&P 500, Nasdaq slide on Trump tariff fears, AI 'scare t...</li></ul></div>
+<div class="alert-box alert-info"><strong>주식 시장 가격/시장, AI/기술 부각 168건 분석</strong><br><br>📈 가격/시장 (63건) — 다우·S&P 500·나스닥 기술주 랠리, 엔비디아 실적 기대감<br>🤖 AI/기술 (37건) — 엔비디아 실적발표 호재, 나스닥 기술주 선도 랠리<br>📊 매크로/금리 (17건) — 한국은행 기준금리 6회 연속 동결(2.50%), 글로벌 금리 환경 변화<br>🏛️ 정치/정책 (14건) — 트럼프 관세 우려로 다우 800포인트 급락, AI 공포 확산</div>
 
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a></li><li><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxPWHdoMm5kU1pLVFAyQkNxQV9tdXZEd3hDZEdzUjhwbUVLdm92Ml9ORFVEaXBQR3NKeV9FNUNTNjR5cU81MWtVSTJWTGQzOFFNb2RNbUZUUXkwZXdPVzl3RXNZQ1RmbGNjbFM1a2JvYkFmU1RTQzZnRWNRQWJVQjZPTTk0ZFhaRHNuLU1GY2xkUmRRS1hrREE?oc=5">The Stock Market Could Crash in an AI Doomsday Scenario, According to Analysts. Wall Street Is Panicking. - The Motley Fool</a></li></ul></div>
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><br><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">’워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a><br><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxPWHdoMm5kU1pLVFAyQkNxQV9tdXZEd3hDZEdzUjhwbUVLdm92Ml9ORFVEaXBQR3NKeV9FNUNTNjR5cU81MWtVSTJWTGQzOFFNb2RNbUZUUXkwZXdPVzl3RXNZQ1RmbGNjbFM1a2JvYkFmU1RTQzZnRWNRQWJVQjZPTTk0ZFhaRHNuLU1GY2xkUmRRS1hrREE?oc=5">The Stock Market Could Crash in an AI Doomsday Scenario, According to Analysts. Wall Street Is Panicking. - The Motley Fool</a></div>
 
 
 
@@ -26,10 +26,7 @@ description: "2026-02-26 주식 시장에서 168건의 뉴스를 분석했습니
 
 ## 전체 뉴스 요약
 
-- 한국 증시는 KOSPI 6,219.15 (+2.37%)으로 마감했습니다.
-- 원달러 환율은 1,422.88원으로, 환율 변동이 외국인 투자 심리에 영향을 줄 수 있습니다.
-- 2026-02-26 주식 시장에서 168건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,219.15(+2.37%), KOSDAQ 1,188.90(+2.35%), USD/KRW 1,422.88(-0.35%).
-- *Stock market today: Dow, S&P 500, Nasdaq rally on tech jolt as Nvidia earnings loom*
+오늘 글로벌 주식 시장은 **엔비디아 실적발표**를 앞두고 기술주 중심의 강한 랠리를 보였습니다. 다우·S&P 500·나스닥 모두 상승했으며, 한국 시장에서는 KOSPI가 6,219.15(+2.37%), KOSDAQ이 1,188.90(+2.35%)으로 동반 강세를 보였습니다. **한국은행이 기준금리를 6회 연속 동결(2.50%)**하면서 시장 안정에 기여했고, 원달러 환율은 1,422.88원(-0.35%)으로 소폭 하락했습니다. 다만 트럼프 대통령의 관세 우려와 AI 과열 경고가 변동성 요인으로 작용하고 있어, 엔비디아 실적 발표 이후 시장 방향성에 주목할 필요가 있습니다.
 
 ## 테마별 주요 뉴스
 

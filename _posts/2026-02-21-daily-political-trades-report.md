@@ -7,16 +7,22 @@ source: "consolidated"
 lang: "ko"
 ---
 
-**2026-02-21** 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. 미국 의회 거래 2건, SEC 내부자 거래 10건, 트럼프 정책 32건, 중앙은행 9건, 총 53건이 수집되었습니다.
+미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
 
 
 ## 한눈에 보기
 
-<div class="stat-item"><div class="stat-value">53</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🏛️ 35</div><div class="stat-label">정치/정책</div></div><div class="stat-item"><div class="stat-value">tariff</div><div class="stat-label">핫 키워드 (38회)</div></div></div>
+<div class=”stat-grid”>
+<div class=”stat-item”><div class=”stat-value”>53</div><div class=”stat-label”>총 수집 건수</div></div>
+<div class=”stat-item”><div class=”stat-value”>2</div><div class=”stat-label”>의회 거래</div></div>
+<div class=”stat-item”><div class=”stat-value”>10</div><div class=”stat-label”>SEC 내부자</div></div>
+<div class=”stat-item”><div class=”stat-value”>32</div><div class=”stat-label”>트럼프 정책</div></div>
+<div class=”stat-item”><div class=”stat-value”>9</div><div class=”stat-label”>중앙은행</div></div>
+</div>
 
-<strong>**정치/정책, 매크로/금리** 관련 53건 수집</strong><ul><li>🏛️ <strong>정치/정책</strong> (35건): 10 Reasons Why the Congressional Stock Trading Ban Will Never Pass Independent Voter News</li><li>📊 <strong>매크로/금리</strong> (9건): [다음주 경제] 한은 기준금리 결정지난해 출산율 올랐나 연합뉴스 한민족센터</li><li>📈 <strong>가격/시장</strong> (11건): Rallybio (NASDAQ: RLYB) director granted options in lieu of cash Stock Titan</li></ul></div>
+<div class=”alert-box alert-info”><strong>오늘의 핵심 키워드</strong>: <strong>tariff</strong>(38회) — 정치/정책 35건, 매크로/금리 9건, 가격/시장 11건 포함 총 53건 수집</div>
 
-<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE8xa29ackYtVUh6dXlhNFJCX2tqM1dvaXhOY09SZEJBSVlzV2FlVU5rZW9TSUhxbzFxekViOTBOM18xU05EYlZSaTh6aDZCNVU?oc=5">미 대법원 “상호 관세 위법”트럼프, “10% 새 관세” 행정명령 - v.daum.net</a></li><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFA2ZXNSUm15UlBxWVdOZ1BweC14SFJQUFdoY3RSUUxWOFEtU0x6eEJPZkZpa3JNcnlpZl9vTzBhTF95QUI3Y3cyZmVDV1JGWU81TG5vTGpiRlV6QdIBVEFVX3lxTE5uXzlrbXI4M3pZT0lqWWFDdkF1alptN0p6YklOLWFmZU5KdUY4bTB6MnN4Zjg3YXlHdm5ybFhFSFdBMDdKcnFJQW1mMkJpU0VQWnNQbA?oc=5">트럼프, 새로운 관세 '전세계 10%' 행정명령"24일 발효" - 한국경제</a></li><li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTFBaM25oS0JJbmNrajhUVTFMdTVSd3RZVmlYeDFCNl84TDdSZjYyejR5czVYNDZvWF94eUZtb1R3THMxU2QwMGJQaWRyUGM0SlRaWkp2S282Nm5uNUJWc2N4RXJxYUxkN3g3eEFXU1VhQ3ZGNXRZ0gF0QVVfeXFMTmxtT1FnR3ZfYzF1TEYxZUZSQTd3aE43UC1NNG1jSFhwYnczYjZaOHQ1Z0ZsdGJheGxWdFh1Ui15eTVDZDdQdDlvTHJMZFFsalNhSkNOQjFWZEI1UUxBdzJScWVtMmwyMmhKNnFCdDhINkNIdEU?oc=5">트럼프, '상호 관세 종료' 행정명령에 서명 - MBC 뉴스</a></li></ul></div>
+<div class=”alert-box alert-urgent”><strong>긴급 알림</strong>: <a href=”https://news.google.com/rss/articles/CBMiT0FVX3lxTE8xa29ackYtVUh6dXlhNFJCX2tqM1dvaXhOY09SZEJBSVlzV2FlVU5rZW9TSUhxbzFxekViOTBOM18xU05EYlZSaTh6aDZCNVU?oc=5”>미 대법원 “상호 관세 위법”트럼프, “10% 새 관세” 행정명령 - v.daum.net</a> | <a href=”https://news.google.com/rss/articles/CBMiWkFVX3lxTFA2ZXNSUm15UlBxWVdOZ1BweC14SFJQUFdoY3RSUUxWOFEtU0x6eEJPZkZpa3JNcnlpZl9vTzBhTF95QUI3Y3cyZmVDV1JGWU81TG5vTGpiRlV6QdIBVEFVX3lxTE5uXzlrbXI4M3pZT0lqWWFDdkF1alptN0p6YklOLWFmZU5KdUY4bTB6MnN4Zjg3YXlHdm5ybFhFSFdBMDdKcnFJQW1mMkJpU0VQWnNQbA?oc=5”>트럼프, 새로운 관세 '전세계 10%' 행정명령 “24일 발효” - 한국경제</a> | <a href=”https://news.google.com/rss/articles/CBMidEFVX3lxTFBaM25oS0JJbmNrajhUVTFMdTVSd3RZVmlYeDFCNl84TDdSZjYyejR5czVYNDZvWF94eUZtb1R3THMxU2QwMGJQaWRyUGM0SlRaWkp2S282Nm5uNUJWc2N4RXJxYUxkN3g3eEFXU1VhQ3ZGNXRZ0gF0QVVfeXFMTmxtT1FnR3ZfYzF1TEYxZUZSQTd3aE43UC1NNG1jSFhwYnczYjZaOHQ1Z0ZsdGJheGxWdFh1Ui15eTVDZDdQdDlvTHJMZFFsalNhSkNOQjFWZEI1UUxBdzJScWVtMmwyMmhKNnFCdDhINkNIdEU?oc=5”>트럼프, '상호 관세 종료' 행정명령에 서명 - MBC 뉴스</a></div>
 
 
 <span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:66%"></div></div><span class="theme-count">35건 (66%)</span></div>
@@ -65,9 +71,13 @@ lang: "ko"
 
 ## 전체 뉴스 요약
 
-- 총 **53건** 수집
-- 주요 테마: 🏛️ 정치/정책, 📊 매크로/금리, 📈 가격/시장
-- 트럼프 관련 32건의 정책 뉴스가 수집되었습니다. 행정명령 및 관세 정책은 글로벌 시장에 직접적인 영향을 미치고 있습니다.
+오늘 정치인 거래·정책 분야에서 총 **53건**의 뉴스가 수집되었습니다. 세부 구성은 미국 의회 거래 2건, SEC 내부자 거래 10건, 트럼프 정책 32건, 중앙은행 9건입니다.
+
+**트럼프 정책** 관련으로는 미 대법원의 상호관세 위법 판결이 가장 주요한 이슈였습니다. 트럼프 대통령은 판결 직후 IEEPA 근거 상호관세 종료 행정명령을 서명하고, 무역법 122조를 근거로 한 새로운 '전세계 10% 관세' 행정명령을 즉시 발효시켰습니다. 관세 정책의 급변으로 글로벌 무역 불확실성이 크게 확대되었습니다.
+
+**미국 의회 거래** 동향에서는 의회 주식거래 금지법 통과 가능성에 대한 논의와 함께 Nancy Pelosi의 포트폴리오 동향이 주목받았습니다.
+
+**중앙은행 정책**에서는 한국은행 2월 금통위 기준금리 6연속 동결 전망이 우세하며, 트럼프 관세 변동에 따른 환율 불안이 결정의 핵심 변수로 꼽히고 있습니다.
 
 ## 미국 의회 거래 동향
 

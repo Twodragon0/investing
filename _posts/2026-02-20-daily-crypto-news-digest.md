@@ -14,13 +14,13 @@ image: "/assets/images/generated/news-summary-2026-02-20.png"
 
 ## 한눈에 보기
 
-<div class="stat-item"><div class="stat-value">72</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 29</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (19회)</div></div></div>
+<div class="stat-grid"><div class="stat-item"><div class="stat-value">72</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 29</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (19회)</div></div></div>
 
-<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:40%"></div></div><span class="theme-count">29건 (40%)</span></div>
-<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:21%"></div></div><span class="theme-count">15건 (21%)</span></div>
-<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:10%"></div></div><span class="theme-count">7건 (10%)</span></div>
-<span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:15%"></div></div><span class="theme-count">11건 (15%)</span></div>
-<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:10%"></div></div><span class="theme-count">7건 (10%)</span></div>
+<div class="theme-distribution"><div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:40%"></div></div><span class="theme-count">29건 (40%)</span></div>
+<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:21%"></div></div><span class="theme-count">15건 (21%)</span></div>
+<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:10%"></div></div><span class="theme-count">7건 (10%)</span></div>
+<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:15%"></div></div><span class="theme-count">11건 (15%)</span></div>
+<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:10%"></div></div><span class="theme-count">7건 (10%)</span></div></div>
 
 ![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-20.png' | relative_url }})
 
@@ -62,9 +62,7 @@ image: "/assets/images/generated/news-summary-2026-02-20.png"
 
 ## 전체 뉴스 요약
 
-- 주요 테마: 🟠 비트코인, 📈 가격/시장, 📊 매크로/금리
-- 2026-02-20 암호화폐 시장 72건의 뉴스를 분석한 요약 브리핑입니다.
-- BTC는 $67,262 부근에서 횡보 중이며, Fed 의사록 매파 기조 확인 후 한때 $66,000을 붕괴했으나 빠르게 반등했습니다. $70K 저항선 돌파 실패가 반복되며 박스권이 지속되고 있습니다.
+2026-02-20 암호화폐 시장에서 총 72건의 뉴스가 수집됐다. 주요 테마는 비트코인(29건), 가격/시장(15건), 거래소(11건), 매크로/금리(7건), 정치/정책(7건) 순이었다. BTC는 $67,262 부근에서 횡보 중이며, Fed 의사록 매파 기조 확인 후 한때 $66,000을 붕괴했으나 빠르게 반등했다. Harvard 등 기관 투자자의 BTC→ETH 전환과 비트코인 현물 ETF 5주 연속 순유출($1.33억)이 수급 부담을 가중시켰다. Robinhood의 자체 L2 블록체인 구축 추진과 Warren 상원의원의 암호화폐 구제금융 반대 서한 발송도 주목할 만한 이슈였다.
 
 ## 시장 요약
 

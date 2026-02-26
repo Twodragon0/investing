@@ -5,7 +5,7 @@ categories: [regulatory-news]
 tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/regulatory-summary-2026-02-26.png"
+image: "/assets/images/og-default.png"
 description: "전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 34건의 규제 관련 뉴스가 수집되었습니다."
 ---
 
@@ -16,16 +16,12 @@ description: "전 세계 금융 규제기관의 최신 동향을 정리합니다
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">34</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 21</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">24</div><div class="stat-label">한국</div></div></div>
 
-<div class="alert-box alert-info"><strong>글로벌 규제 규제/정책, 비트코인 관련 34건 수집</strong><ul><li>🔵 규제/정책 (21건): 연체채권에 대한 회수 극대화 관행을 개혁하여 사람을 살리는 금융 을 구현하겠습니다. - 제2차 포용적 금융 대전환 회의 개최 - ▴ ｢연체자 보호와 신속한 재기 지원을 위한 개인 ...</li><li>🟠 비트코인 (2건): 단일종목 레버리지 ETF의 세부방안은 검토중입니다. - 2.12일(인터넷판) 서울경제 「’2배 ETF’ 삼전‧하닉‧현대차만 나온다」 제하의 기사에 대한 정부입장 설명 - 1. 기사...</li><li>🏦 거래소 (7건): 금융시장이 기업의 녹색 전환(GX) 을 뒷받침하겠습니다. - 이억원 금융위원장, 제4차 생산적금융 대전환 회의 개최 - 󰊱 ESG 공시기준 최종안 확정 및 ESG 공시제도 로드맵 ...</li><li>📈 가격/시장 (21건): 연체채권에 대한 회수 극대화 관행을 개혁하여 사람을 살리는 금융 을 구현하겠습니다. - 제2차 포용적 금융 대전환 회의 개최 - ▴ ｢연체자 보호와 신속한 재기 지원을 위한 개인 ...</li></ul></div>
+<div class="alert-box alert-info"><strong>글로벌 규제 동향 34건 수집 (2026-02-26)</strong><br><br>📌 규제/정책 (21건) — 한국 금융위원회 연체채권 회수 개혁, 포용적 금융 대전환, 보이스피싱 대응 강화 등 국내 금융정책 중심<br>📌 비트코인 (2건) — 단일종목 레버리지 ETF 방안 검토, 유럽 ESMA의 암호화폐 파생상품 CFD 규제 적용 추진<br>📌 거래소 (7건) — 기업 녹색전환(GX) 금융 지원, 배당소득 과세특례, ETF 관련 정책 동향<br>📌 가격/시장 (21건) — 연체채권 매입 및 새도약기금 운용, 마이데이터 기반 금리인하 서비스 시행</div>
 
 
 ## 핵심 요약
 
-- **총 수집 건수**: 34건
-- **한국**: 24건
-- **유럽**: 5건
-- **아시아**: 4건
-- **미국**: 1건
+오늘 총 34건의 규제 동향이 수집되었습니다. 한국(24건)이 압도적 비중을 차지하며, 금융위원회는 연체채권 회수 개혁·포용적 금융, 보이스피싱 대응, 마이데이터 금리인하 서비스 등 국내 금융 소비자 보호에 집중하는 모습입니다. 유럽(5건)에서는 ESMA가 암호화폐 퍼페추얼 파생상품을 CFD 규제 대상으로 분류하려는 움직임이 주목되며, 영국 FCA는 스테이블코인 샌드박스 실증을 진행 중입니다. 아시아(4건)는 일본 FSA의 기업지배구조 코드 개정 논의가 이어지고 있고, 미국(1건)에서는 CFTC가 예측시장에 대한 집행 지침을 발표했습니다.
 
 ---
 <div class="theme-distribution">
@@ -39,7 +35,6 @@ description: "전 세계 금융 규제기관의 최신 동향을 정리합니다
 *총 34건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
 
 
-![regulatory-summary]({{ '/assets/images/generated/regulatory-summary-2026-02-26.png' | relative_url }})
 
 
 ---

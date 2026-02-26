@@ -13,11 +13,13 @@ description: "2026-02-25 암호화폐 시장에서 116건의 뉴스를 분석했
 
 ---
 
-<span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:44%"></div></div><span class="theme-count">51건 (44%)</span></div>
-<span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:19%"></div></div><span class="theme-count">22건 (19%)</span></div>
-<span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:16%"></div></div><span class="theme-count">19건 (16%)</span></div>
-<span class="theme-label">🔷 이더리움</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:12%"></div></div><span class="theme-count">14건 (12%)</span></div>
-<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:9%"></div></div><span class="theme-count">11건 (9%)</span></div>
+<div class="theme-distribution">
+<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:44%"></div></div><span class="theme-count">51건</span></div>
+<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:19%"></div></div><span class="theme-count">22건</span></div>
+<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:16%"></div></div><span class="theme-count">19건</span></div>
+<div class="theme-row"><span class="theme-label">🔷 이더리움</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:12%"></div></div><span class="theme-count">14건</span></div>
+<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:9%"></div></div><span class="theme-count">11건</span></div>
+</div>
 
 *총 116건 수집*
 
@@ -27,11 +29,11 @@ description: "2026-02-25 암호화폐 시장에서 116건의 뉴스를 분석했
 
 ## 한눈에 보기
 
-<div class="stat-item"><div class="stat-value">116</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 51</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (33회)</div></div></div>
+<div class="stat-grid"><div class="stat-item"><div class="stat-value">116</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 51</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (33회)</div></div></div>
 
-<strong>암호화폐 시장 비트코인, 거래소 중심 116건 분석</strong><ul><li>🟠 <strong>비트코인</strong> (51건): Better Buy: Bitcoin vs. Ethereum</li><li>🏦 <strong>거래소</strong> (22건): The Worst-Case Scenario Facing the Cryptocurrency Market Binance</li><li>📈 <strong>가격/시장</strong> (19건): Bitcoin is crashing for 3 reasons today. They have more to do with the state of the world than the c...</li><li>🔷 <strong>이더리움</strong> (14건): Better Buy: Bitcoin vs. Ethereum</li></ul></div>
+<div class="alert-box alert-info"><strong>암호화폐 시장 비트코인, 거래소 중심 116건 분석</strong><br><br>🟠 비트코인 (51건) — BTC vs ETH 투자 비교 분석, Binance 최악 시나리오 경고<br>🏦 거래소 (22건) — 거래소 규제 강화, Binance 관련 리스크 보도<br>📈 가격/시장 (19건) — 비트코인 급락 원인 3가지, 글로벌 경제 불확실성 영향<br>🔷 이더리움 (14건) — ETH 투자 매력도 재평가, BTC 대비 상대 가치 분석</div>
 
-<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMilgFBVV95cUxNVHZNVEtWTl84SXdaZWF1cFpfTm9LNmtadHU2WF9rQ09WT21LSnh4Z2dYY3RNaTlta203Mzl3Q1p0dE5zUXhJell0WklkX1RnUGxaN3d3SzdsNU9ZVjlMVW5EMDE1aWVyX3JQc0NkV3FVRGtRWFBydi1pUnJTcUhua1ZsTzNRbTVKTlM0X1NJTmR5UHRYMWc?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin is crashing for 3 reasons today. They have more to do with the state of the world than the crypto market</a></li><li><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxNVHZNVEtWTl84SXdaZWF1cFpfTm9LNmtadHU2WF9rQ09WT21LSnh4Z2dYY3RNaTlta203Mzl3Q1p0dE5zUXhJell0WklkX1RnUGxaN3d3SzdsNU9ZVjlMVW5EMDE1aWVyX3JQc0NkV3FVRGtRWFBydi1pUnJTcUhua1ZsTzNRbTVKTlM0X1NJTmR5UHRYMWc?oc=5">Bitcoin is crashing for 3 reasons today. They have more to do with the state of the world than the crypto market - Fast Company</a></li><li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNYldnVG9TczlMa2poLS0ydk1vV0FSa3lEekdxVm9XZl95dlR6QkgzR1B2ZDF0YlNMZnkzYUFjVVNPdG1kM0FNaWszSFN1cXg5NjYtVHpHR19GTjI4Y0huUXJqOWZMNHBkUkFqcG9kMzZaMXFhei02ck4yaUF4clo1LdIBlAFBVV95cUxNQVRBalJGTG5fZDFobzQ3NUJvSjlXcVctNjNEN0hTdG1NZUVIdGZ2UHpyMExsaEM2dm81dmwwX2Z1Z21CX1lraWFKS2pTSVg0R25VYWVMZzBfdVNmLVhoM1ZyekdfN2oySjdzZ3NVOFU1Q3ZOcTY2Z0dZRXZBUnFKbHNTTWl1Z1FLLVV6cWFpMHNuUEZv?oc=5">비트코인·금 ‘디커플링’ 심화…관세 충격에 폭락한 코인, 금·은 구리는 활짝 - 조선일보</a></li></ul></div>
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><br><a href="https://news.google.com/read/CBMilgFBVV95cUxNVHZNVEtWTl84SXdaZWF1cFpfTm9LNmtadHU2WF9rQ09WT21LSnh4Z2dYY3RNaTlta203Mzl3Q1p0dE5zUXhJell0WklkX1RnUGxaN3d3SzdsNU9ZVjlMVW5EMDE1aWVyX3JQc0NkV3FVRGtRWFBydi1pUnJTcUhua1ZsTzNRbTVKTlM0X1NJTmR5UHRYMWc?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin is crashing for 3 reasons today</a><br><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNYldnVG9TczlMa2poLS0ydk1vV0FSa3lEekdxVm9XZl95dlR6QkgzR1B2ZDF0YlNMZnkzYUFjVVNPdG1kM0FNaWszSFN1cXg5NjYtVHpHR19GTjI4Y0huUXJqOWZMNHBkUkFqcG9kMzZaMXFhei02ck4yaUF4clo1LdIBlAFBVV95cUxNQVRBalJGTG5fZDFobzQ3NUJvSjlXcVctNjNEN0hTdG1NZUVIdGZ2UHpyMExsaEM2dm81dmwwX2Z1Z21CX1lraWFKS2pTSVg0R25VYWVMZzBfdVNmLVhoM1ZyekdfN2oySjdzZ3NVOFU1Q3ZOcTY2Z0dZRXZBUnFKbHNTTWl1Z1FLLVV6cWFpMHNuUEZv?oc=5">비트코인·금 ‘디커플링’ 심화</a></div>
 
 
 
@@ -43,9 +45,7 @@ description: "2026-02-25 암호화폐 시장에서 116건의 뉴스를 분석했
 
 ## 전체 뉴스 요약
 
-- 총 **116건** 수집
-- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
-- 2026-02-25 암호화폐 시장에서 116건의 뉴스를 분석했습니다. 오늘은 비트코인, 거래소, 가격/시장 관련 소식이 주목됩니다.
+오늘 암호화폐 시장에서는 **비트코인 급락**이 최대 화두였습니다. 글로벌 경제 불확실성, 트럼프 관세 정책, 매크로 리스크 등 3가지 요인으로 BTC가 급락했으며, 금과의 '디커플링' 현상이 심화되고 있습니다. **거래소** 부문에서는 Binance의 최악 시나리오 분석이 화제가 되었고, **이더리움**은 BTC 대비 투자 매력도 재평가가 진행 중입니다. 전반적으로 변동성이 확대되는 가운데 매크로/금리 이슈가 시장 방향을 좌우할 핵심 변수로 부각되고 있습니다.
 
 ## 테마별 주요 뉴스
 

@@ -13,11 +13,11 @@ lang: "ko"
 
 ## 한눈에 보기
 
-<div class="stat-item"><div class="stat-value">10</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📊 4</div><div class="stat-label">매크로/금리</div></div><div class="stat-item"><div class="stat-value">fed</div><div class="stat-label">핫 키워드 (8회)</div></div></div>
+<div class="stat-grid"><div class="stat-item"><div class="stat-value">10</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📊 4</div><div class="stat-label">매크로/금리</div></div><div class="stat-item"><div class="stat-value">fed</div><div class="stat-label">핫 키워드 (8회)</div></div></div>
 
-<span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:40%"></div></div><span class="theme-count">4건 (40%)</span></div>
-<span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:40%"></div></div><span class="theme-count">4건 (40%)</span></div>
-<span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:20%"></div></div><span class="theme-count">2건 (20%)</span></div>
+<div class="theme-distribution"><div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:40%"></div></div><span class="theme-count">4건 (40%)</span></div>
+<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:40%"></div></div><span class="theme-count">4건 (40%)</span></div>
+<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:20%"></div></div><span class="theme-count">2건 (20%)</span></div></div>
 
 ---
 
@@ -57,9 +57,7 @@ lang: "ko"
 
 ## 전체 뉴스 요약
 
-- 주요 테마: 📊 매크로/금리, 🏛️ 정치/정책, 🤖 AI/기술
-- 2026-02-20 정치인 거래·정책 동향 10건을 요약 분석합니다.
-- Nvidia 매도 패턴 포착: 한 의원이 2022년부터 매년 Nvidia 주식을 매도해, 결과적으로 631% 수익을 놓친 것으로 밝혀졌습니다. 의회 내 AI/반도체 관련 입법 방향과 의원 개인 거래 패턴 간의 괴리가 주목됩니다.
+2026-02-20 정치인 거래·정책 동향 10건이 수집됐다. 주요 테마는 매크로/금리(4건), 정치/정책(4건), AI/기술(2건)이었다. 한 의원이 2022년부터 매년 Nvidia 주식을 매도해 결과적으로 631% 수익 기회를 놓친 사실이 드러나 의회 내 AI/반도체 입법과 개인 거래 패턴 간의 괴리가 주목받았다. Fed 의사록에서 금리 인하에 대한 의견 분열이 확인됐으며, Trump의 이란 제재·관세 프레임워크 연계 입법 논의와 무역적자 사상 최대 경신에 대한 정치적 공방도 이어졌다.
 
 ## 의회 거래 동향
 

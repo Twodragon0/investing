@@ -13,11 +13,11 @@ image: "/assets/images/generated/source-distribution-2026-02-22.png"
 
 ## 한눈에 보기
 
-<div class="stat-item"><div class="stat-value">57</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🏛️ 22</div><div class="stat-label">정치/정책</div></div></div>
+<div class="stat-grid"><div class="stat-item"><div class="stat-value">57</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🏛️ 22</div><div class="stat-label">정치/정책</div></div></div>
 
-<strong>소셜 미디어 **정치/정책, 매크로/금리** 관련 57건 포착</strong><ul><li>🏛️ <strong>정치/정책</strong> (22건): ERIC TRUMP: Being de-banked pushed Trump family towards crypto." The banks made the biggest mistake ...</li><li>📊 <strong>매크로/금리</strong> (11건): JAMES LAVISH: “The Federal Reserve manipulating the money supply and access to capital has absolutel...</li><li>🟠 <strong>비트코인</strong> (7건): Whales sent roughly 57,000 $BTC to exchanges over the past four days, according to recent on-chain d...</li><li>🏦 <strong>거래소</strong> (9건): Whales sent roughly 57,000 $BTC to exchanges over the past four days, according to recent on-chain d...</li></ul></div>
+<div class="alert-box alert-info"><strong>소셜 미디어 정치/정책, 매크로/금리 관련 57건 포착</strong><br>🏛️ <strong>정치/정책</strong> (22건): ERIC TRUMP: Being de-banked pushed Trump family towards crypto. The banks made the biggest mistake<br>📊 <strong>매크로/금리</strong> (11건): JAMES LAVISH: The Federal Reserve manipulating the money supply and access to capital has absolutely caused the Cantillon Effect<br>🟠 <strong>비트코인</strong> (7건): Whales sent roughly 57,000 $BTC to exchanges over the past four days, according to recent on-chain data<br>🏦 <strong>거래소</strong> (9건): Whales sent roughly 57,000 $BTC to exchanges over the past four days, according to recent on-chain data</div>
 
-<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE40amcwWEF5RFZmaDVNRVZtZ2NsdXNfR0VidEJ0TkhzVmEtb293ODVvLWJmd0JJYmotNE5oQlRfcUZ2ZE91Y2ZXUVpQWWlEUzg?oc=5">[이번주 경제]한은 기준금리 동결 유력…작년 합계출산율 주목 - v.daum.net</a></li></ul></div>
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE40amcwWEF5RFZmaDVNRVZtZ2NsdXNfR0VidEJ0TkhzVmEtb293ODVvLWJmd0JJYmotNE5oQlRfcUZ2ZE91Y2ZXUVpQWWlEUzg?oc=5">[이번주 경제]한은 기준금리 동결 유력…작년 합계출산율 주목 - v.daum.net</a></div>
 
 
 
