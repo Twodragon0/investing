@@ -7,6 +7,7 @@ Sources:
 - Google News RSS fallback for social keywords
 """
 
+import re
 import sys
 import os
 import time
@@ -52,6 +53,13 @@ logger = setup_logging("collect_social_media")
 VERIFY_SSL = get_ssl_verify()
 
 
+def _remove_sponsored_text(text: str) -> str:
+    """Remove 'Sponsored by @xxx' and similar ad patterns from text."""
+    text = re.sub(r"\s*[Ss]ponsored\s+by\s+@?\S+.*$", "", text, flags=re.MULTILINE)
+    text = re.sub(r"\s*[Aa][Dd]:\s+.*$", "", text, flags=re.MULTILINE)
+    return text.strip()
+
+
 def _parse_telegram_items(channel: str, messages, limit: int) -> List[Dict[str, Any]]:
     """Parse Telegram message elements (shared between Playwright and BS4 paths)."""
     items: List[Dict[str, Any]] = []
@@ -79,6 +87,10 @@ def _parse_telegram_items(channel: str, messages, limit: int) -> List[Dict[str, 
                 link_el = msg.find("a", class_="tgme_widget_message_date")
                 link = link_el.get("href", "") if link_el else ""
 
+            if not text or len(text) < 20:
+                continue
+
+            text = _remove_sponsored_text(text)
             if not text or len(text) < 20:
                 continue
 
