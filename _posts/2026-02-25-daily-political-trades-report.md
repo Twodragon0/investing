@@ -23,12 +23,12 @@ excerpt: "미국 의회 Pelosi 주식거래 금지 논의, SEC Form 4 내부자 
 
 
 
+
 ## 전체 뉴스 요약
 
-- 총 **34건** 수집 (의회 거래 10건, SEC 내부자 15건, 트럼프 정책 3건, 중앙은행 6건)
-- 트럼프 대통령이 국정연설에서 Pelosi를 직접 거명하며 의회 주식거래 금지를 촉구, 초당적 지지를 이끌어냄
-- SEC Form 4 기반 내부자 거래 활동이 활발하며, UNITED THERAPEUTICS, Natural Alternatives 등 다수 기업에서 주요 임원 거래 보고
-- 한국은행 2월 금통위에서 기준금리 동결이 유력하며, 환율과 성장률이 주요 관전 포인트
+- 트럼프 관련 3건의 정책 뉴스가 수집되었습니다. 행정명령 및 관세 정책은 글로벌 시장에 직접적인 영향을 미치고 있습니다.
+- 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
+- 1. Trump takes jab at Pelosi by name over history of controversial stock trading - Fox News Trump takes jab at Pelosi by name over history of controversial s...
 
 ## 미국 의회 거래 동향
 

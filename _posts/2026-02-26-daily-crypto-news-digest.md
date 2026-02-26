@@ -36,16 +36,13 @@ description: "2026-02-26 암호화폐 시장에서 114건의 뉴스를 분석했
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMilgFBVV95cUxNVHZNVEtWTl84SXdaZWF1cFpfTm9LNmtadHU2WF9rQ09WT21LSnh4Z2dYY3RNaTlta203Mzl3Q1p0dE5zUXhJell0WklkX1RnUGxaN3d3SzdsNU9ZVjlMVW5EMDE1aWVyX3JQc0NkV3FVRGtRWFBydi1pUnJTcUhua1ZsTzNRbTVKTlM0X1NJTmR5UHRYMWc?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin is crashing for 3 reasons today. They have more to do with the state of the world than the crypto market</a></li><li><a href="https://news.google.com/read/CBMidkFVX3lxTE9leW95US1PMHBkVnRlWm9wMmlXYi1nRzFFVnhXODI2OWJCN2J3UXB2WXphNWRJZVZOMFpkLUNPMF9jcW5aak5DUWFhTEg4MjdUZ1AyQ2NUVE5aWXZlM1RQZVA5bGI3S3lTcncyOWNGcHFKR1BBV2c?hl=en-US&gl=US&ceid=US%3Aen">The Winklevoss Twins’ Crypto Company Is in Crisis After the Bitcoin Crash</a></li><li><a href="https://bitcoinmagazine.com/news/us-sanctions-crypto-funded-cyber-theft">U.S. Treasury Sanctions Russian Exploit Broker Over Crypto-Funded Cyber Theft</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
-- 총 **114건** 가운데 **비트코인, 가격/시장, 거래소** 테마 비중이 높았습니다.
-- **우선순위 이슈**: P0 3건, P1 18건
-- **핵심 키워드**: bitcoin, ai, ethereum
-- **주요 출처**: Google News (20건)
-- 거래소 공지 10건 포함
-
-
-![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-26.png' | relative_url }})
+- 총 **114건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- 2026-02-26 암호화폐 시장에서 114건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 거래소 관련 소식이 주목됩니다.
+- *총 114건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
 
 ## 테마별 주요 뉴스
 
