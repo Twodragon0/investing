@@ -23,7 +23,6 @@ from common.config import setup_logging, get_ssl_verify, REQUEST_TIMEOUT
 from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feeds_concurrent
-from common.summarizer import ThemeSummarizer
 from common.collector_metrics import log_collection_summary
 from common.markdown_utils import (
     html_reference_details,
@@ -273,9 +272,6 @@ def main():
         dedup.save()
         return
 
-    # Theme analysis
-    summarizer = ThemeSummarizer(unique_items)
-
     # Count by source category
     congress_count = sum(
         1
@@ -308,25 +304,15 @@ def main():
         "미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.\n"
     )
 
-    # Keyword analysis for executive summary
+    # Keyword analysis
     all_texts = " ".join(
         item.get("title", "") + " " + item.get("description", "")
         for item in unique_items
     ).lower()
     keyword_targets = [
-        "trump",
-        "pelosi",
-        "이재명",
-        "congress",
-        "sec",
-        "fed",
-        "tariff",
-        "관세",
-        "executive order",
-        "행정명령",
-        "insider",
-        "disclosure",
-        "재산",
+        "trump", "pelosi", "이재명", "congress", "sec", "fed",
+        "tariff", "관세", "executive order", "행정명령",
+        "insider", "disclosure", "재산",
     ]
     keyword_hits = {
         kw: len(re.findall(re.escape(kw), all_texts, re.IGNORECASE))
@@ -338,13 +324,14 @@ def main():
         if cnt > 0
     ]
 
-    # Executive summary
-    exec_summary = summarizer.generate_executive_summary(
-        category_type="general",
-        extra_data={"top_keywords": top_keywords},
-    )
-    if exec_summary:
-        content_parts.append(exec_summary)
+    # Helper: extract first sentence from text
+    def _first_sentence(text: str, max_len: int = 200) -> str:
+        """Extract first complete sentence from text."""
+        for sep in ["。", ". ", "다. ", "요. ", "다.", "요."]:
+            idx = text.find(sep)
+            if 15 < idx < max_len:
+                return text[: idx + len(sep)].strip()
+        return text[:max_len].rsplit(" ", 1)[0] if len(text) > max_len else text
 
     # Filter unique items by category for sections
     congress_filtered = [
@@ -357,31 +344,94 @@ def main():
     korea_filtered = [i for i in unique_items if "korea" in i.get("tags", [])]
     cb_filtered = [i for i in unique_items if "central-bank" in i.get("tags", [])]
 
-    # Custom summary instead of generic theme-based one
-    content_parts.append("\n## 전체 뉴스 요약\n")
-    content_parts.append(f"- 총 **{total_count}건** 수집 ({sources_str})")
-    if trump_count:
-        # Get first trump item's description for highlight
-        for item in trump_filtered[:1]:
-            desc = item.get("description", "").strip()
-            title = item.get("title", "")
-            highlight = desc if desc and desc != title else title
-            content_parts.append(f"- 트럼프 정책: {highlight[:120]}")
+    # ── 한눈에 보기 (stat-grid + alert-box, 깨끗한 HTML) ──
+    stat_items = [
+        f'<div class="stat-item"><div class="stat-value">{total_count}</div>'
+        f'<div class="stat-label">총 수집 건수</div></div>'
+    ]
     if congress_count:
-        for item in congress_filtered[:1]:
-            desc = item.get("description", "").strip()
-            title = item.get("title", "")
-            highlight = desc if desc and desc != title else title
-            content_parts.append(f"- 의회 거래: {highlight[:120]}")
+        stat_items.append(
+            f'<div class="stat-item"><div class="stat-value">{congress_count}</div>'
+            f'<div class="stat-label">의회 거래</div></div>'
+        )
+    if trump_count:
+        stat_items.append(
+            f'<div class="stat-item"><div class="stat-value">{trump_count}</div>'
+            f'<div class="stat-label">트럼프 정책</div></div>'
+        )
+    if sec_count:
+        stat_items.append(
+            f'<div class="stat-item"><div class="stat-value">{sec_count}</div>'
+            f'<div class="stat-label">SEC 내부자</div></div>'
+        )
+    if korea_count:
+        stat_items.append(
+            f'<div class="stat-item"><div class="stat-value">{korea_count}</div>'
+            f'<div class="stat-label">한국 정치인</div></div>'
+        )
     if cb_count:
-        for item in cb_filtered[:1]:
-            desc = item.get("description", "").strip()
-            title = item.get("title", "")
-            highlight = desc if desc and desc != title else title
-            content_parts.append(f"- 중앙은행: {highlight[:120]}")
+        stat_items.append(
+            f'<div class="stat-item"><div class="stat-value">{cb_count}</div>'
+            f'<div class="stat-label">중앙은행</div></div>'
+        )
 
-    # Separator before news sections
-    content_parts.append("\n---\n")
+    content_parts.append("## 한눈에 보기\n")
+    content_parts.append(f'<div class="stat-grid">{"".join(stat_items)}</div>\n')
+
+    # Alert box with top keywords
+    if top_keywords:
+        kw_text = ", ".join(f"**{kw}**({cnt}회)" for kw, cnt in top_keywords[:5])
+        content_parts.append(
+            f'<div class="alert-box alert-info">'
+            f"<strong>오늘의 핵심 키워드</strong>: {kw_text}"
+            f"</div>\n"
+        )
+
+    # ── 전체 뉴스 요약 (내러티브 형식) ──
+    content_parts.append("## 전체 뉴스 요약\n")
+    summary_narrative = []
+    summary_narrative.append(
+        f"오늘 정치인 거래·정책 분야에서 총 **{total_count}건**의 뉴스가 수집되었습니다. "
+        f"세부 구성은 {sources_str}입니다."
+    )
+    if trump_count and trump_filtered:
+        item = trump_filtered[0]
+        desc = item.get("description", "").strip()
+        title = item.get("title", "")
+        highlight = _first_sentence(desc) if desc and desc != title and len(desc) > 20 else title
+        summary_narrative.append(
+            f"\n**트럼프 정책** 관련으로는 {highlight} 등의 소식이 포착되었으며, "
+            f"행정명령과 관세 정책 변화가 글로벌 시장 심리에 직접적 영향을 미치고 있습니다."
+        )
+    if congress_count and congress_filtered:
+        item = congress_filtered[0]
+        desc = item.get("description", "").strip()
+        title = item.get("title", "")
+        highlight = _first_sentence(desc) if desc and desc != title and len(desc) > 20 else title
+        summary_narrative.append(
+            f"\n**미국 의회 거래** 동향에서는 {highlight} 등이 보고되었습니다. "
+            "의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다."
+        )
+    if cb_count and cb_filtered:
+        item = cb_filtered[0]
+        desc = item.get("description", "").strip()
+        title = item.get("title", "")
+        highlight = _first_sentence(desc) if desc and desc != title and len(desc) > 20 else title
+        summary_narrative.append(
+            f"\n**중앙은행 정책**에서는 {highlight} 관련 뉴스가 수집되었으며, "
+            "금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다."
+        )
+    if korea_count and korea_filtered:
+        item = korea_filtered[0]
+        desc = item.get("description", "").strip()
+        title = item.get("title", "")
+        highlight = _first_sentence(desc) if desc and desc != title and len(desc) > 20 else title
+        summary_narrative.append(
+            f"\n**한국 정치인** 관련으로는 {highlight} 등의 재산/거래 소식이 수집되었습니다."
+        )
+    content_parts.extend(summary_narrative)
+
+    content_parts.append("\n\n---\n")
 
     # Collect source links
     source_links = []
@@ -404,9 +454,7 @@ def main():
             else:
                 content_parts.append(f"**{i}. {title}**")
             if description and description != title:
-                desc_text = description[:150]
-                if len(description) > 150:
-                    desc_text += "..."
+                desc_text = _first_sentence(description)
                 content_parts.append(f"{desc_text}")
             content_parts.append(f"{html_source_tag(source)}\n")
         content_parts.append("")
@@ -419,36 +467,43 @@ def main():
 
     content_parts.append("---\n")
 
-    # Policy impact analysis (enhanced with description-based insights)
+    # ── 정책 영향 분석 (내러티브 형식) ──
     content_parts.append("\n## 정책 영향 분석\n")
     analysis_lines = []
     if trump_count:
         analysis_lines.append(
-            f"트럼프 관련 {trump_count}건의 정책 뉴스가 수집되었습니다. 행정명령 및 관세 정책은 글로벌 시장에 직접적인 영향을 미치고 있습니다."
+            f"트럼프 관련 **{trump_count}건**의 정책 뉴스가 포착되었습니다. "
+            "행정명령 및 관세 정책의 변화는 미국 내수 시장뿐 아니라 아시아·유럽 수출 기업과 원자재 가격에도 연쇄적으로 영향을 미칩니다. "
+            "특히 관세 관련 키워드가 부각될 경우 반도체·자동차 섹터의 변동성 확대에 유의해야 합니다."
         )
-        # Add top description from trump items
         for item in trump_filtered[:1]:
             desc = item.get("description", "").strip()
             title = item.get("title", "")
             if desc and desc != title and len(desc) > 20:
-                analysis_lines.append(f"> 주요 내용: {desc[:200]}")
+                analysis_lines.append(f"\n> **주요 내용**: {_first_sentence(desc)}")
     if congress_count:
         analysis_lines.append(
-            f"\n미국 의회 거래 {congress_count}건이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향을 예측하는 참고 자료가 될 수 있습니다."
+            f"\n미국 의회에서 **{congress_count}건**의 거래가 보고되었습니다. "
+            "의원들의 대규모 매수·매도 공시는 해당 섹터의 입법 기대감이나 규제 리스크를 반영하는 경우가 많아, "
+            "투자 참고 신호로 활용할 수 있습니다."
         )
     if korea_count:
         analysis_lines.append(
-            f"\n한국 정치인 관련 {korea_count}건의 재산/거래 소식이 수집되었습니다."
+            f"\n한국 정치인 관련 **{korea_count}건**의 재산/거래 소식이 수집되었습니다. "
+            "공직자 재산 공개 시즌에는 부동산·주식 관련 정책 방향의 힌트를 얻을 수 있으며, "
+            "국내 규제 환경 변화에 대한 선제적 대응이 필요합니다."
         )
     if cb_count:
         analysis_lines.append(
-            f"\n중앙은행 정책 관련 {cb_count}건의 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 영향을 줍니다."
+            f"\n중앙은행 정책 관련 **{cb_count}건**의 뉴스가 수집되었습니다. "
+            "금리 결정과 통화정책 기조 변화는 채권 수익률·주식 밸류에이션·암호화폐 유동성에 직접적 영향을 미치므로, "
+            "FOMC 성명과 한국은행 금통위 결과를 면밀히 주시해야 합니다."
         )
         for item in cb_filtered[:1]:
             desc = item.get("description", "").strip()
             title = item.get("title", "")
             if desc and desc != title and len(desc) > 20:
-                analysis_lines.append(f"> 주요 내용: {desc[:200]}")
+                analysis_lines.append(f"\n> **주요 내용**: {_first_sentence(desc)}")
     if not analysis_lines:
         analysis_lines.append("현재 수집된 정치인 거래/정책 데이터가 제한적입니다.")
     analysis_lines.append("")
