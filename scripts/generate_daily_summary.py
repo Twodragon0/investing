@@ -761,16 +761,43 @@ def main():
     )
     content_parts.append("</ul></div>\n")
 
-    summary_lines = [
-        f"- 총 **{total_count}건** 수집, 범위: {counts_str}",
-        f"- **우선순위 이슈**: P0 {len(priority_items.get('P0', []))}건, P1 {len(priority_items.get('P1', []))}건",
-    ]
-    if theme_payload:
-        theme_names = ", ".join(item.get("name", "") for item in theme_payload[:3])
-        if theme_names:
-            summary_lines.append(f"- **주요 테마**: {theme_names}")
     content_parts.append("## 전체 뉴스 요약\n")
-    content_parts.extend(summary_lines)
+    # Narrative-style summary
+    if theme_payload and len(theme_payload) >= 2:
+        theme_count = min(len(theme_payload), 3)
+        content_parts.append(
+            f"오늘 총 **{total_count}건**의 뉴스에서 크게 "
+            f"**{theme_count}가지 흐름**이 감지됩니다.\n"
+        )
+        for i, item in enumerate(theme_payload[:3], 1):
+            emoji = item.get("emoji", "•")
+            name = item.get("name", "")
+            score = item.get("count", 0)
+            keywords = ", ".join(item.get("keywords", [])[:3])
+            if keywords:
+                content_parts.append(
+                    f"{i}. **{emoji} {name}** (신호 강도 {score}): {keywords} 관련 이슈가 집중되고 있습니다."
+                )
+            else:
+                content_parts.append(f"{i}. **{emoji} {name}** (신호 강도 {score})")
+        content_parts.append("")
+    else:
+        content_parts.append(
+            f"총 **{total_count}건**의 뉴스가 수집되었습니다. ({counts_str})\n"
+        )
+
+    # Priority signal
+    p0_count = len(priority_items.get("P0", []))
+    p1_count = len(priority_items.get("P1", []))
+    if p0_count or p1_count:
+        signal_parts = []
+        if p0_count:
+            signal_parts.append(f"P0 긴급 {p0_count}건")
+        if p1_count:
+            signal_parts.append(f"P1 주요 {p1_count}건")
+        content_parts.append(
+            f"**핵심 신호**: {', '.join(signal_parts)}이 포착되었습니다."
+        )
     content_parts.append("")
 
     content_parts.append("## 종합 대시보드\n")

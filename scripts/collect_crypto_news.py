@@ -639,39 +639,49 @@ def main():
                 if shown_exchange >= 10:
                     break
 
-        # Insight section - theme-based analysis
+        # Insight section - theme-based cross-analysis
         content_parts.append("\n## 오늘의 인사이트\n")
         insight_lines = []
 
-        # Top 2 themes cross-analysis
+        # Top themes cross-analysis with narrative
         if top_themes and len(top_themes) >= 2:
-            t1, t2 = top_themes[0][0], top_themes[1][0]
+            t1_name, t1_key, t1_emoji, t1_count = top_themes[0]
+            t2_name, t2_key, t2_emoji, t2_count = top_themes[1]
             insight_lines.append(
-                f"오늘 가장 주목할 테마는 **{t1}**와 **{t2}**입니다. 두 테마의 동시 부각은 시장의 방향성을 가늠하는 데 중요한 신호가 될 수 있습니다."
+                f"오늘 가장 주목할 테마는 **{t1_emoji} {t1_name}**({t1_count}건)과 "
+                f"**{t2_emoji} {t2_name}**({t2_count}건)입니다. "
+                f"두 테마가 동시에 부각되고 있어 시장의 방향성을 가늠하는 핵심 신호로 볼 수 있습니다."
             )
+            # Add top article snippet for context
+            for theme_key in [t1_key, t2_key]:
+                articles = summarizer._theme_articles.get(theme_key, [])
+                if articles:
+                    top_title = articles[0].get("title", "")
+                    if top_title:
+                        insight_lines.append(f"- 주요 기사: *{top_title[:100]}*")
         elif top_themes:
+            t = top_themes[0]
             insight_lines.append(
-                f"오늘 가장 주목할 테마는 **{top_themes[0][0]}**입니다."
+                f"오늘 가장 주목할 테마는 **{t[2]} {t[0]}**({t[3]}건)입니다."
             )
         else:
-            if len(all_items) >= 10:
-                insight_lines.append(
-                    f"오늘 총 {len(all_items)}건의 뉴스가 {len(source_counter)}개 출처에서 수집되었습니다."
-                )
-            else:
-                insight_lines.append(
-                    f"오늘 뉴스 수집량이 {len(all_items)}건으로 비교적 적은 편입니다."
-                )
+            insight_lines.append(
+                f"오늘 총 {len(all_items)}건의 뉴스가 "
+                f"{len(source_counter)}개 출처에서 수집되었습니다."
+            )
 
-        # Keyword monitoring suggestion
+        # Keyword monitoring with context
         if top_keywords:
-            monitoring_kws = ", ".join(f"**{kw}**" for kw, _ in top_keywords[:3])
-            insight_lines.append(f"\n향후 모니터링이 필요한 키워드: {monitoring_kws}")
+            monitoring_kws = ", ".join(
+                f"**{kw}**({cnt}회)" for kw, cnt in top_keywords[:3]
+            )
+            insight_lines.append(f"\n**모니터링 키워드**: {monitoring_kws}")
 
         # Exchange activity connection
         if exchange_rows:
             insight_lines.append(
-                f"\n거래소 공지사항 {len(exchange_rows)}건이 수집되었습니다. 새로운 상장, 이벤트, 정책 변경 등 거래소 동향이 시장 가격에 직접적 영향을 미칠 수 있어 주의가 필요합니다."
+                f"\n**거래소 동향**: 공지사항 {len(exchange_rows)}건이 포착되었습니다. "
+                f"상장/이벤트/정책 변경 등 거래소 동향은 시장 가격에 직접적 영향을 미칩니다."
             )
 
         insight_lines.append("")

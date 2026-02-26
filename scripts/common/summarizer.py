@@ -797,42 +797,68 @@ class ThemeSummarizer:
         extra = extra_data or {}
         total = len(self.items)
         top_themes = self.get_top_themes()
-        theme_names = [t[0] for t in top_themes[:3]] if top_themes else []
 
         lines = [f"## {title}\n"]
-        if theme_names:
+
+        # Narrative intro based on theme count
+        if top_themes and len(top_themes) >= 2:
+            theme_count = min(len(top_themes), 3)
             lines.append(
-                f"- 총 **{total}건** 가운데 **{', '.join(theme_names)}** 테마 비중이 높았습니다."
+                f"오늘 수집된 **{total}건**의 뉴스에서 크게 "
+                f"**{theme_count}가지 흐름**이 감지됩니다.\n"
+            )
+
+            # Theme-based narrative paragraphs with snippets
+            for i, (name, key, emoji, count) in enumerate(top_themes[:3], 1):
+                articles = self._theme_articles.get(key, [])
+                snippet = self._generate_single_theme_briefing(key, articles)
+                if snippet:
+                    lines.append(f"{i}. **{emoji} {name}** ({count}건): {snippet}")
+                else:
+                    lines.append(f"{i}. **{emoji} {name}** ({count}건)")
+            lines.append("")
+        elif top_themes:
+            lines.append(
+                f"총 **{total}건**의 뉴스가 수집되었으며, "
+                f"**{top_themes[0][0]}** 테마가 주도하고 있습니다.\n"
             )
         else:
-            lines.append(f"- 총 **{total}건**이 수집되었습니다.")
+            lines.append(f"총 **{total}건**의 뉴스가 수집되었습니다.\n")
 
+        # Priority signal summary
         priority_items = self.classify_priority()
         p0_count = len(priority_items.get("P0", []))
         p1_count = len(priority_items.get("P1", []))
-        if p0_count or p1_count:
-            lines.append(f"- **우선순위 이슈**: P0 {p0_count}건, P1 {p1_count}건")
+
+        signal_parts = []
+        if p0_count:
+            signal_parts.append(f"P0 긴급 이슈 {p0_count}건")
+        if p1_count:
+            signal_parts.append(f"P1 주요 이슈 {p1_count}건")
 
         top_keywords = extra.get("top_keywords") or []
         if top_keywords:
-            keywords_str = ", ".join(kw for kw, _ in top_keywords[:3])
-            if keywords_str:
-                lines.append(f"- **핵심 키워드**: {keywords_str}")
+            kw_str = ", ".join(f"**{kw}**" for kw, _ in top_keywords[:3])
+            signal_parts.append(f"핵심 키워드 {kw_str}")
 
+        if signal_parts:
+            lines.append(f"**핵심 신호**: {', '.join(signal_parts)}이 포착되었습니다.")
+
+        # Additional context
         region_counts = extra.get("region_counts")
         if region_counts:
             regions_str = ", ".join(
                 f"{name} {count}건" for name, count in region_counts.most_common(2)
             )
             if regions_str:
-                lines.append(f"- **주요 지역**: {regions_str}")
+                lines.append(f"**주요 지역**: {regions_str}")
 
         source_counter = extra.get("source_counter")
         if source_counter:
             top_source = source_counter.most_common(1)
             if top_source:
                 name, count = top_source[0]
-                lines.append(f"- **주요 출처**: {name} ({count}건)")
+                lines.append(f"**주요 출처**: {name} ({count}건)")
 
         summary_points = extra.get("summary_points") or []
         for point in summary_points[:2]:

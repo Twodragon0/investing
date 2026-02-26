@@ -661,23 +661,37 @@ def main():
 
     content_parts.append("\n---\n")
 
-    # Social trend analysis
+    # Social trend analysis - narrative
     content_parts.append("\n## 소셜 동향 분석\n")
     trend_lines = []
+
+    # Theme-based opening
+    top_themes = summarizer.get_top_themes()
+    if top_themes:
+        theme_str = ", ".join(f"**{t[0]}**" for t in top_themes[:3])
+        trend_lines.append(
+            f"오늘 소셜 미디어에서는 {theme_str} 관련 논의가 가장 활발합니다."
+        )
+
     if telegram_items:
         # Channel activity analysis
         tg_channels = Counter(item.get("source", "") for item in telegram_items)
         top_channels = tg_channels.most_common(3)
         ch_str = ", ".join(f"{ch}({cnt}건)" for ch, cnt in top_channels)
-        trend_lines.append(f"텔레그램에서 가장 활발한 채널은 {ch_str}입니다.")
+        trend_lines.append(
+            f"\n**텔레그램**: 가장 활발한 채널은 {ch_str}이며, "
+            f"총 {len(telegram_items)}건의 메시지가 포착되었습니다."
+        )
     if political_items:
         pol_ratio = len(political_items) / max(total_count, 1) * 100
         trend_lines.append(
-            f"정치·경제 관련 뉴스가 전체의 **{pol_ratio:.0f}%**를 차지하고 있어, 정치적 이슈가 시장에 미치는 영향이 큰 상황입니다."
+            f"\n**정치·경제**: 전체의 **{pol_ratio:.0f}%**({len(political_items)}건)를 차지하며, "
+            f"정책 변화가 시장에 미치는 영향력이 큰 상황입니다."
         )
     if reddit_items:
         trend_lines.append(
-            f"Reddit에서 {len(reddit_items)}건의 인기 글이 수집되었으며, 커뮤니티 관심이 활발합니다."
+            f"\n**Reddit**: {len(reddit_items)}건의 인기 글이 수집되었으며, "
+            f"커뮤니티의 시장 관심도가 높은 상태입니다."
         )
     if not trend_lines:
         trend_lines.append("현재 수집된 소셜 데이터가 제한적입니다.")

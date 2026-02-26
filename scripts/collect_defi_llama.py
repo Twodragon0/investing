@@ -642,23 +642,77 @@ def build_post_content(
         f"상위 {len(chains)}개 체인의 총 TVL은 **{_format_tvl(total_chain_tvl)}**입니다.\n"
     )
 
-    content_parts.append("## 전체 뉴스 요약\n")
-    content_parts.append(
-        f"- 총 **{len(protocols)}개 프로토콜**, **{len(chains)}개 체인** 데이터를 분석했습니다."
-    )
+    # 한눈에 보기 (stat-grid + alert-box)
+    stat_items = [
+        f'<div class="stat-item">'
+        f'<div class="stat-value">{_format_tvl(total_protocol_tvl)}</div>'
+        f'<div class="stat-label">프로토콜 TVL</div></div>',
+        f'<div class="stat-item">'
+        f'<div class="stat-value">{_format_tvl(total_chain_tvl)}</div>'
+        f'<div class="stat-label">체인 TVL</div></div>',
+        f'<div class="stat-item">'
+        f'<div class="stat-value">{len(protocols)}</div>'
+        f'<div class="stat-label">프로토콜 수</div></div>',
+        f'<div class="stat-item">'
+        f'<div class="stat-value">{len(chains)}</div>'
+        f'<div class="stat-label">체인 수</div></div>',
+    ]
+    content_parts.append("## 한눈에 보기\n")
+    content_parts.append(f'<div class="stat-grid">{"".join(stat_items)}</div>')
+
+    # Alert-box with top protocol/chain info
+    briefing_items = []
     if protocols:
         top_p = protocols[0]
         top_p_name = top_p.get("name") or "Unknown"
         top_p_tvl = top_p.get("tvl") or 0
-        content_parts.append(
-            f"- **최상위 프로토콜**: {top_p_name} (TVL {_format_tvl(top_p_tvl)})"
+        top_p_cat = top_p.get("category") or ""
+        briefing_items.append(
+            f"<li>🏆 <strong>최상위 프로토콜</strong>: {top_p_name} — TVL {_format_tvl(top_p_tvl)}"
+            + (f" ({top_p_cat})" if top_p_cat else "")
+            + "</li>"
         )
     if chains:
         top_c = chains[0]
         top_c_name = top_c.get("name") or "Unknown"
         top_c_tvl = top_c.get("tvl") or 0
+        share = (top_c_tvl / total_chain_tvl * 100) if total_chain_tvl > 0 else 0
+        briefing_items.append(
+            f"<li>⛓️ <strong>최상위 체인</strong>: {top_c_name} — TVL {_format_tvl(top_c_tvl)} ({share:.1f}%)</li>"
+        )
+    # Category concentration
+    if protocols:
+        category_tvl_temp: Dict[str, float] = {}
+        for p in protocols:
+            cat = p.get("category") or "기타"
+            category_tvl_temp[cat] = category_tvl_temp.get(cat, 0) + (p.get("tvl") or 0)
+        top_cat = max(category_tvl_temp.items(), key=lambda x: x[1])
+        briefing_items.append(
+            f"<li>📊 <strong>최다 카테고리</strong>: {top_cat[0]} — {_format_tvl(top_cat[1])}</li>"
+        )
+    if briefing_items:
         content_parts.append(
-            f"- **최상위 체인**: {top_c_name} (TVL {_format_tvl(top_c_tvl)})"
+            f'<div class="alert-box alert-info">'
+            f"<strong>DeFi 생태계 {_format_tvl(total_protocol_tvl)} 규모 분석</strong>"
+            f"<ul>{''.join(briefing_items)}</ul>"
+            f"</div>"
+        )
+
+    # 전체 뉴스 요약 (narrative)
+    content_parts.append("## 전체 요약\n")
+    content_parts.append(
+        f"총 **{len(protocols)}개 프로토콜**, **{len(chains)}개 체인**의 TVL 데이터를 분석했습니다.\n"
+    )
+    if protocols and chains:
+        top_p = protocols[0]
+        top_c = chains[0]
+        content_parts.append(
+            f"1. **프로토콜**: {top_p.get('name', 'Unknown')}이 TVL "
+            f"{_format_tvl(top_p.get('tvl', 0))}로 1위를 유지하고 있습니다."
+        )
+        content_parts.append(
+            f"2. **체인**: {top_c.get('name', 'Unknown')}이 TVL "
+            f"{_format_tvl(top_c.get('tvl', 0))}로 체인 생태계를 주도합니다."
         )
     content_parts.append("")
 

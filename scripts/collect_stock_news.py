@@ -592,23 +592,51 @@ def main():
             "- [네이버 금융 - KOSPI](https://finance.naver.com/sise/sise_index.naver?code=KOSPI)"
         )
 
-    # Market insight
+    # Market insight - narrative style
     content_parts.append("\n## 시장 인사이트\n")
     insight_lines = []
     kospi = kr_market.get("KOSPI")
+    kosdaq = kr_market.get("KOSDAQ")
     usdkrw = kr_market.get("USD/KRW")
+
+    # Korean market narrative
     if kospi:
+        try:
+            pval = float(kospi["change_pct"].replace("%", "").replace("+", ""))
+            direction = "상승" if pval >= 0 else "하락"
+            sentiment = "투자 심리가 회복" if pval >= 0 else "투자 심리가 위축"
+        except (ValueError, AttributeError):
+            direction = "변동"
+            sentiment = "투자 심리 변화"
         insight_lines.append(
-            f"한국 증시는 KOSPI **{kospi['price']}** ({kospi['change_pct']})으로 마감했습니다."
+            f"한국 증시는 KOSPI **{kospi['price']}** ({kospi['change_pct']}) {direction}하며, "
+            f"{sentiment}되는 모습입니다."
+        )
+    if kosdaq:
+        insight_lines.append(
+            f"KOSDAQ은 **{kosdaq['price']}** ({kosdaq['change_pct']})를 기록했습니다."
         )
     if usdkrw:
         insight_lines.append(
-            f"원달러 환율은 **{usdkrw['price']}**원으로, 환율 변동이 외국인 투자 심리에 영향을 줄 수 있습니다."
+            f"\n원달러 환율은 **{usdkrw['price']}**원으로, 환율 변동은 외국인 자금 유출입과 "
+            f"수출기업 실적에 직접적 영향을 미칩니다."
         )
+
+    # US market narrative
     if alpha_vantage_rows:
         insight_lines.append(
-            f"미국 시장에서 주요 ETF {len(alpha_vantage_rows)}종의 데이터가 수집되었습니다."
+            f"\n미국 시장에서 주요 ETF {len(alpha_vantage_rows)}종의 실시간 데이터가 수집되었습니다. "
+            f"S&P 500, NASDAQ, Dow Jones 방향성이 한국 증시 야간 선물에 영향을 줍니다."
         )
+
+    # Theme connection
+    top_themes = summarizer.get_top_themes()
+    if top_themes:
+        theme_str = ", ".join(f"**{t[0]}**" for t in top_themes[:2])
+        insight_lines.append(
+            f"\n오늘 뉴스 흐름에서 {theme_str} 테마가 부각되고 있어 관련 섹터 주가 변동에 주의가 필요합니다."
+        )
+
     if not insight_lines:
         insight_lines.append(
             "현재 시장 데이터를 충분히 수집하지 못했습니다. API 제한 또는 휴장일일 수 있습니다."

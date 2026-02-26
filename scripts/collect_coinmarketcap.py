@@ -650,73 +650,112 @@ def main():
         except Exception as e:
             logger.warning("Briefing card generation failed: %s", e)
 
-        # 1. Key summary bullet points
-        summary_lines = []
-        if top_coins:
-            summary_lines.append(
-                f"- 시가총액 상위 {len(top_coins)}개 코인을 기준으로 시장을 집계했습니다."
-            )
-            btc = next(
-                (
-                    c
-                    for c in top_coins
-                    if (c.get("symbol") or "").lower() in ("btc", "BTC")
-                ),
-                None,
-            )
-            if btc:
-                if cmc_source == "coingecko":
-                    price = btc.get("current_price", 0)
-                    ch24 = btc.get("price_change_percentage_24h", 0) or 0
-                else:
-                    quote = btc.get("quote", {}).get("USD", {})
-                    price = quote.get("price", 0) or 0
-                    ch24 = quote.get("percent_change_24h", 0) or 0
-                summary_lines.append(
-                    f"- 비트코인 ${price:,.0f}, 24시간 {ch24:+.2f}% 변동"
-                )
-        if fear_greed:
-            fg_val = fear_greed.get("value", 0)
-            fg_cls = fear_greed.get("classification", "N/A")
-            summary_lines.append(f"- 공포/탐욕 지수 {fg_val}/100 ({fg_cls})")
-        if global_data:
-            total_mcap = global_data.get("total_market_cap", {}).get("usd", 0)
-            if total_mcap:
-                summary_lines.append(f"- 총 시가총액 {_fmt_num(total_mcap)}")
-        if summary_lines:
-            sections["전체 뉴스 요약"] = "\n".join(summary_lines)
+        # 1. 한눈에 보기 — stat-grid + alert-box
+        stat_items = []
+        alert_lines = []
 
-        key_bullets = []
-        if top_coins:
-            btc = next(
-                (
-                    c
-                    for c in top_coins
-                    if (c.get("symbol") or "").lower() in ("btc", "BTC")
-                ),
-                None,
+        btc = next(
+            (c for c in top_coins if (c.get("symbol") or "").lower() in ("btc",)),
+            None,
+        )
+        if btc:
+            if cmc_source == "coingecko":
+                btc_price = btc.get("current_price", 0)
+                btc_ch24 = btc.get("price_change_percentage_24h", 0) or 0
+            else:
+                btc_q = btc.get("quote", {}).get("USD", {})
+                btc_price = btc_q.get("price", 0) or 0
+                btc_ch24 = btc_q.get("percent_change_24h", 0) or 0
+            stat_items.append(
+                f'<div class="stat-item"><div class="stat-value">${btc_price:,.0f}</div>'
+                f'<div class="stat-label">BTC ({btc_ch24:+.1f}%)</div></div>'
             )
-            if btc:
-                if cmc_source == "coingecko":
-                    price = btc.get("current_price", 0)
-                    ch24 = btc.get("price_change_percentage_24h", 0) or 0
-                else:
-                    quote = btc.get("quote", {}).get("USD", {})
-                    price = quote.get("price", 0) or 0
-                    ch24 = quote.get("percent_change_24h", 0) or 0
-                direction = "상승" if ch24 >= 0 else "하락"
-                key_bullets.append(
-                    f"- **비트코인**: ${price:,.0f} (24h {ch24:+.2f}% {direction})"
-                )
+
         if fear_greed:
             fg_val = fear_greed.get("value", 0)
             fg_cls = fear_greed.get("classification", "N/A")
-            key_bullets.append(f"- **공포/탐욕 지수**: {fg_val}/100 ({fg_cls})")
+            stat_items.append(
+                f'<div class="stat-item"><div class="stat-value">{fg_val}</div>'
+                f'<div class="stat-label">공포/탐욕 ({fg_cls})</div></div>'
+            )
+
         if global_data:
             total_mcap = global_data.get("total_market_cap", {}).get("usd", 0)
-            key_bullets.append(f"- **총 시가총액**: {_fmt_num(total_mcap)}")
-        if key_bullets:
-            sections["핵심 요약"] = "\n".join(key_bullets)
+            mcap_ch = global_data.get("market_cap_change_percentage_24h_usd", 0)
+            btc_dom = global_data.get("market_cap_percentage", {}).get("btc", 0)
+            if total_mcap:
+                stat_items.append(
+                    f'<div class="stat-item"><div class="stat-value">{_fmt_num(total_mcap)}</div>'
+                    f'<div class="stat-label">총 시가총액</div></div>'
+                )
+            stat_items.append(
+                f'<div class="stat-item"><div class="stat-value">{btc_dom:.1f}%</div>'
+                f'<div class="stat-label">BTC 도미넌스</div></div>'
+            )
+
+        # Alert box: top 3 movers
+        sorted_movers_brief = sorted(
+            top_coins[:20],
+            key=lambda c: abs(
+                c.get("price_change_percentage_24h")
+                or c.get("quote", {}).get("USD", {}).get("percent_change_24h", 0)
+                or 0
+            ),
+            reverse=True,
+        )
+        for coin in sorted_movers_brief[:3]:
+            if cmc_source == "coingecko":
+                mn = coin.get("name", "")
+                ms = coin.get("symbol", "").upper()
+                mch = coin.get("price_change_percentage_24h", 0) or 0
+            else:
+                mn = coin.get("name", "")
+                ms = coin.get("symbol", "")
+                mch = coin.get("quote", {}).get("USD", {}).get("percent_change_24h", 0) or 0
+            emoji = "🟢" if mch >= 0 else "🔴"
+            alert_lines.append(f"<li>{emoji} <strong>{mn}</strong> ({ms}): {mch:+.2f}%</li>")
+
+        overview_parts = []
+        if stat_items:
+            overview_parts.append(f'<div class="stat-grid">{"".join(stat_items)}</div>')
+        if alert_lines:
+            overview_parts.append(
+                '<div class="alert-box alert-info">'
+                "<strong>24시간 주요 변동</strong>"
+                f'<ul>{"".join(alert_lines)}</ul>'
+                "</div>"
+            )
+        if overview_parts:
+            sections["한눈에 보기"] = "\n\n".join(overview_parts)
+
+        # Narrative summary
+        summary_parts = []
+        coin_count = len(top_coins)
+        summary_parts.append(
+            f"오늘 시가총액 상위 **{coin_count}개** 코인을 기준으로 시장을 분석했습니다."
+        )
+        if btc:
+            direction = "상승하며 투자 심리 회복을 견인" if btc_ch24 >= 0 else "하락하며 시장에 조정 신호를 보내"
+            summary_parts.append(
+                f"비트코인은 **${btc_price:,.0f}**에서 24시간 {btc_ch24:+.2f}% {direction}고 있습니다."
+            )
+        if global_data and total_mcap:
+            summary_parts.append(
+                f"전체 시가총액은 **{_fmt_num(total_mcap)}**으로 전일 대비 {mcap_ch:+.2f}% 변동했으며, "
+                f"BTC 도미넌스 {btc_dom:.1f}%로 {'비트코인 중심 자금 흐름이 지속' if btc_dom > 50 else '알트코인으로의 자금 이동이 활발한 상황'}입니다."
+            )
+        if fear_greed:
+            fg_map = {
+                "Extreme Fear": "극도의 공포 상태로, 역발상 매수 기회를 모색할 시점",
+                "Fear": "공포 구간으로, 보수적 접근이 권장되는 시점",
+                "Neutral": "중립 상태로, 시장 방향성 관망이 필요한 시점",
+                "Greed": "탐욕 구간으로, 차익 실현을 고려할 시점",
+                "Extreme Greed": "극도의 탐욕 상태로, 과열 주의가 필요한 시점",
+            }
+            summary_parts.append(
+                f"공포/탐욕 지수는 **{fg_val}** ({fg_cls})으로, {fg_map.get(fg_cls, '시장 심리 주시가 필요')}입니다."
+            )
+        sections["전체 뉴스 요약"] = " ".join(summary_parts)
 
         # 2. Market Insight (Korean analysis)
         insight = generate_market_insight(global_data, top_coins, fear_greed)

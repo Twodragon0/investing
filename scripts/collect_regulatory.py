@@ -22,7 +22,7 @@ from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feed
 from common.summarizer import ThemeSummarizer
-from common.markdown_utils import markdown_link, markdown_table, html_reference_details
+from common.markdown_utils import html_reference_details, html_source_tag
 from common.collector_metrics import log_collection_summary
 
 logger = setup_logging("collect_regulatory")
@@ -117,25 +117,30 @@ def build_region_section(
     region_title: str,
     source_links: list,
 ) -> List[str]:
-    """Build a markdown table section for a region."""
+    """Build a description card section for a region."""
     lines = [f"\n## {region_title}\n"]
     if not items:
         lines.append("*수집된 항목이 없습니다.*")
         return lines
 
-    rows = []
-    for i, item in enumerate(items[:15], 1):
+    for i, item in enumerate(items[:10], 1):
         title = item["title"]
         link = item.get("link", "")
         source = item.get("source", "")
-        if link:
-            title_cell = markdown_link(title, link)
-            source_links.append({"title": title, "link": link, "source": source})
-        else:
-            title_cell = title
-        rows.append((i, title_cell, source))
+        description = item.get("description", "").strip()
 
-    lines.append(markdown_table(["#", "제목", "출처"], rows))
+        if link:
+            source_links.append({"title": title, "link": link, "source": source})
+            lines.append(f"**{i}. [{title}]({link})**")
+        else:
+            lines.append(f"**{i}. {title}**")
+        if description and description != title and i <= 5:
+            desc_text = description[:150]
+            if len(description) > 150:
+                desc_text += "..."
+            lines.append(desc_text)
+        lines.append(f"{html_source_tag(source)}\n")
+
     return lines
 
 
@@ -266,21 +271,35 @@ def main():
     content_parts.append("\n---")
     content_parts.append("\n## 규제 인사이트\n")
     insight_lines = []
+
+    # Cross-region analysis
+    active_regions = []
+    if us_items:
+        active_regions.append(f"미국({len(us_items)}건)")
+    if korea_items:
+        active_regions.append(f"한국({len(korea_items)}건)")
+    if asia_items:
+        active_regions.append(f"아시아({len(asia_items)}건)")
+    if europe_items:
+        active_regions.append(f"유럽({len(europe_items)}건)")
+
+    if active_regions:
+        insight_lines.append(
+            f"오늘 {', '.join(active_regions)}에서 총 {len(all_items)}건의 규제 뉴스가 포착되었습니다."
+        )
+
     if us_items:
         insight_lines.append(
-            f"미국에서 {len(us_items)}건의 규제 관련 뉴스가 수집되었습니다. SEC, CFTC, Fed 동향을 주시해야 합니다."
+            "\n미국 SEC·CFTC·Fed의 규제 동향은 글로벌 암호화폐·금융 시장에 직접적 영향을 미치는 핵심 지표입니다. "
+            "특히 SEC 집행 조치와 CFTC의 디지털 자산 분류 기준을 주시해야 합니다."
         )
     if korea_items:
         insight_lines.append(
-            f"한국 금융위원회 관련 {len(korea_items)}건의 소식이 있습니다."
-        )
-    if asia_items:
-        insight_lines.append(
-            f"아시아 지역(일본 FSA, 싱가포르 MAS)에서 {len(asia_items)}건이 수집되었습니다."
+            "\n한국 금융위원회의 가상자산 규제 프레임워크 변화는 국내 투자자에게 직접적인 영향을 줍니다."
         )
     if europe_items:
         insight_lines.append(
-            f"유럽(ESMA, FCA)에서 {len(europe_items)}건의 규제 뉴스가 확인되었습니다. MiCA 규제 시행에 따른 변화를 모니터링하세요."
+            "\nEU MiCA 규제 시행에 따른 유럽 시장 재편이 진행 중이며, FCA의 영국 독자 규제 노선도 관찰해야 합니다."
         )
     if not insight_lines:
         insight_lines.append("현재 수집된 규제 뉴스가 제한적입니다.")

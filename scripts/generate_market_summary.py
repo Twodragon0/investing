@@ -1116,35 +1116,83 @@ def main():
     if highlights:
         sections["오늘의 핵심"] = highlights
 
-    # Executive summary (한눈에 보기)
-    exec_parts = []
+    # Executive summary (한눈에 보기) — stat-grid + alert-box HTML
+    stat_items = []
+    alert_lines = []
+
     if fear_greed:
         fg_val = fear_greed.get("value", "N/A")
         fg_class = fear_greed.get("classification", "N/A")
-        exec_parts.append(f"- **공포/탐욕 지수**: {fg_val} ({fg_class})")
+        stat_items.append(
+            f'<div class="stat-item"><div class="stat-value">{fg_val}</div>'
+            f'<div class="stat-label">공포/탐욕 ({fg_class})</div></div>'
+        )
+
     if global_data:
         mcap = global_data.get("total_market_cap", {}).get("usd")
         if mcap:
-            exec_parts.append(f"- **글로벌 암호화폐 시총**: ${mcap / 1e12:.2f}T")
+            stat_items.append(
+                f'<div class="stat-item"><div class="stat-value">${mcap / 1e12:.2f}T</div>'
+                f'<div class="stat-label">글로벌 시총</div></div>'
+            )
         btc_dom = global_data.get("market_cap_percentage", {}).get("btc")
         if btc_dom:
-            exec_parts.append(f"- **BTC 도미넌스**: {btc_dom:.1f}%")
+            stat_items.append(
+                f'<div class="stat-item"><div class="stat-value">{btc_dom:.1f}%</div>'
+                f'<div class="stat-label">BTC 도미넌스</div></div>'
+            )
+        mcap_ch = global_data.get("market_cap_change_percentage_24h_usd", 0)
+        stat_items.append(
+            f'<div class="stat-item"><div class="stat-value">{mcap_ch:+.2f}%</div>'
+            f'<div class="stat-label">시총 24h 변동</div></div>'
+        )
+
     if top_coins:
         btc = next((c for c in top_coins if c.get("symbol", "").upper() == "BTC"), None)
         eth = next((c for c in top_coins if c.get("symbol", "").upper() == "ETH"), None)
         if btc:
-            exec_parts.append(
-                f"- **BTC**: ${btc.get('current_price', 0):,.0f} ({btc.get('price_change_percentage_24h', 0):+.2f}%)"
+            btc_price = btc.get("current_price", 0)
+            btc_ch = btc.get("price_change_percentage_24h", 0) or 0
+            alert_lines.append(
+                f"<li><strong>BTC</strong>: ${btc_price:,.0f} ({btc_ch:+.2f}%)</li>"
             )
         if eth:
-            exec_parts.append(
-                f"- **ETH**: ${eth.get('current_price', 0):,.0f} ({eth.get('price_change_percentage_24h', 0):+.2f}%)"
+            eth_price = eth.get("current_price", 0)
+            eth_ch = eth.get("price_change_percentage_24h", 0) or 0
+            alert_lines.append(
+                f"<li><strong>ETH</strong>: ${eth_price:,.0f} ({eth_ch:+.2f}%)</li>"
             )
+
     if kr_market:
         for name, info in kr_market.items():
-            exec_parts.append(f"- **{name}**: {info['price']} ({info['change_pct']})")
+            alert_lines.append(
+                f"<li><strong>{name}</strong>: {info['price']} ({info['change_pct']})</li>"
+            )
+
+    if commodity_data:
+        gold = commodity_data.get("금 (Gold)")
+        oil = commodity_data.get("원유 (WTI)")
+        if gold:
+            alert_lines.append(
+                f"<li><strong>금</strong>: ${gold['price']} ({gold['change_pct']})</li>"
+            )
+        if oil:
+            alert_lines.append(
+                f"<li><strong>원유</strong>: ${oil['price']} ({oil['change_pct']})</li>"
+            )
+
+    exec_parts = []
+    if stat_items:
+        exec_parts.append(f'<div class="stat-grid">{"".join(stat_items)}</div>')
+    if alert_lines:
+        exec_parts.append(
+            '<div class="alert-box alert-info">'
+            "<strong>주요 자산 현황</strong>"
+            f'<ul>{"".join(alert_lines)}</ul>'
+            "</div>"
+        )
     if exec_parts:
-        sections["한눈에 보기"] = "\n".join(exec_parts)
+        sections["한눈에 보기"] = "\n\n".join(exec_parts)
 
     quant_signals = generate_quant_signals(top_coins, global_data, fear_greed)
     if quant_signals:

@@ -562,9 +562,10 @@ def main() -> None:
         [
             "",
             "## 전체 뉴스 요약",
-            f"- 총 **{total_items}건** 수집, 핵심 테마는 **{', '.join(t for t, _ in theme_counter.most_common(3))}** 중심입니다.",
-            f"- **주요 출처**: {top_sources}",
-            f"- **안보 이슈**: {theme_counter.get('지정학/안보', 0)}건",
+            f"오늘 WorldMonitor 연계 소스에서 총 **{total_items}건**의 글로벌 이슈가 수집되었으며, "
+            f"핵심 테마는 **{', '.join(t for t, _ in theme_counter.most_common(3))}** 중심으로 전개되고 있습니다. "
+            f"특히 안보 관련 이슈가 **{theme_counter.get('지정학/안보', 0)}건** 포착되어 원유·금·방산 섹터 변동성에 주의가 필요하며, "
+            f"주요 출처는 {top_sources}입니다.",
             "",
             "## 이슈 분포",
             '<div class="stat-grid">',
