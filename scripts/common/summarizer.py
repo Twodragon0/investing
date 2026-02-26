@@ -532,7 +532,11 @@ class ThemeSummarizer:
                                 desc_text = desc_text[: idx + len(sep)].strip()
                                 break
                         else:
-                            desc_text = desc_text[:200].rsplit(" ", 1)[0] if len(desc_text) > 200 else desc_text
+                            desc_text = (
+                                desc_text[:200].rsplit(" ", 1)[0]
+                                if len(desc_text) > 200
+                                else desc_text
+                            )
                         lines.append(desc_text)
                     if source:
                         lines.append(f"{html_source_tag(source)}\n")
@@ -979,7 +983,9 @@ class ThemeSummarizer:
                             top_desc = desc[: idx + len(sep)].strip()
                             break
                     if not top_desc:
-                        top_desc = desc[:150].rsplit(" ", 1)[0] if len(desc) > 150 else desc
+                        top_desc = (
+                            desc[:150].rsplit(" ", 1)[0] if len(desc) > 150 else desc
+                        )
                     break
             # Fallback: use the top article title (full, no truncation)
             if not top_desc:

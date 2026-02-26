@@ -143,7 +143,11 @@ def build_region_section(
                     desc_text = desc_text[: idx + len(sep)].strip()
                     break
             else:
-                desc_text = desc_text[:200].rsplit(" ", 1)[0] if len(desc_text) > 200 else desc_text
+                desc_text = (
+                    desc_text[:200].rsplit(" ", 1)[0]
+                    if len(desc_text) > 200
+                    else desc_text
+                )
             lines.append(desc_text)
         lines.append(f"{html_source_tag(source)}\n")
 

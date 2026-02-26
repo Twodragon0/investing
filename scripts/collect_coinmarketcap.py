@@ -711,9 +711,14 @@ def main():
             else:
                 mn = coin.get("name", "")
                 ms = coin.get("symbol", "")
-                mch = coin.get("quote", {}).get("USD", {}).get("percent_change_24h", 0) or 0
+                mch = (
+                    coin.get("quote", {}).get("USD", {}).get("percent_change_24h", 0)
+                    or 0
+                )
             emoji = "🟢" if mch >= 0 else "🔴"
-            alert_lines.append(f"<li>{emoji} <strong>{mn}</strong> ({ms}): {mch:+.2f}%</li>")
+            alert_lines.append(
+                f"<li>{emoji} <strong>{mn}</strong> ({ms}): {mch:+.2f}%</li>"
+            )
 
         overview_parts = []
         if stat_items:
@@ -722,7 +727,7 @@ def main():
             overview_parts.append(
                 '<div class="alert-box alert-info">'
                 "<strong>24시간 주요 변동</strong>"
-                f'<ul>{"".join(alert_lines)}</ul>'
+                f"<ul>{''.join(alert_lines)}</ul>"
                 "</div>"
             )
         if overview_parts:
@@ -735,7 +740,11 @@ def main():
             f"오늘 시가총액 상위 **{coin_count}개** 코인을 기준으로 시장을 분석했습니다."
         )
         if btc:
-            direction = "상승하며 투자 심리 회복을 견인" if btc_ch24 >= 0 else "하락하며 시장에 조정 신호를 보내"
+            direction = (
+                "상승하며 투자 심리 회복을 견인"
+                if btc_ch24 >= 0
+                else "하락하며 시장에 조정 신호를 보내"
+            )
             summary_parts.append(
                 f"비트코인은 **${btc_price:,.0f}**에서 24시간 {btc_ch24:+.2f}% {direction}고 있습니다."
             )

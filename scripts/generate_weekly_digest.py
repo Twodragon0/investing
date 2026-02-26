@@ -199,7 +199,9 @@ def generate_digest(posts: List[Dict]) -> str:
     content_parts.append("## 핵심 요약\n")
     content_parts.append(f"- 총 **{len(posts)}건**의 포스트 분석")
     category_lines = []
-    for name, items in sorted(categories.items(), key=lambda x: len(x[1]), reverse=True):
+    for name, items in sorted(
+        categories.items(), key=lambda x: len(x[1]), reverse=True
+    ):
         category_lines.append(f"{name} {len(items)}건")
     if category_lines:
         content_parts.append(f"- 카테고리: {', '.join(category_lines[:5])}")
@@ -302,12 +304,16 @@ def generate_digest(posts: List[Dict]) -> str:
         content_parts.append("")
 
     # Remaining categories - compact list
-    for cat, cat_posts in sorted(categories.items(), key=lambda x: len(x[1]), reverse=True):
+    for cat, cat_posts in sorted(
+        categories.items(), key=lambda x: len(x[1]), reverse=True
+    ):
         if cat in cat_order:
             continue
         display_name = cat_names.get(cat, cat)
         content_parts.append(f"## {display_name} ({len(cat_posts)}건)\n")
-        for p in sorted(cat_posts, key=lambda x: x.get("file_date", ""), reverse=True)[:5]:
+        for p in sorted(cat_posts, key=lambda x: x.get("file_date", ""), reverse=True)[
+            :5
+        ]:
             title = p.get("title", "제목 없음")
             date = p.get("file_date", "")
             content_parts.append(f"- [{date}] {title}")

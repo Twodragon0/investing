@@ -310,9 +310,19 @@ def main():
         for item in unique_items
     ).lower()
     keyword_targets = [
-        "trump", "pelosi", "이재명", "congress", "sec", "fed",
-        "tariff", "관세", "executive order", "행정명령",
-        "insider", "disclosure", "재산",
+        "trump",
+        "pelosi",
+        "이재명",
+        "congress",
+        "sec",
+        "fed",
+        "tariff",
+        "관세",
+        "executive order",
+        "행정명령",
+        "insider",
+        "disclosure",
+        "재산",
     ]
     keyword_hits = {
         kw: len(re.findall(re.escape(kw), all_texts, re.IGNORECASE))
@@ -398,7 +408,11 @@ def main():
         item = trump_filtered[0]
         desc = item.get("description", "").strip()
         title = item.get("title", "")
-        highlight = _first_sentence(desc) if desc and desc != title and len(desc) > 20 else title
+        highlight = (
+            _first_sentence(desc)
+            if desc and desc != title and len(desc) > 20
+            else title
+        )
         summary_narrative.append(
             f"\n**트럼프 정책** 관련으로는 {highlight} 등의 소식이 포착되었으며, "
             f"행정명령과 관세 정책 변화가 글로벌 시장 심리에 직접적 영향을 미치고 있습니다."
@@ -407,7 +421,11 @@ def main():
         item = congress_filtered[0]
         desc = item.get("description", "").strip()
         title = item.get("title", "")
-        highlight = _first_sentence(desc) if desc and desc != title and len(desc) > 20 else title
+        highlight = (
+            _first_sentence(desc)
+            if desc and desc != title and len(desc) > 20
+            else title
+        )
         summary_narrative.append(
             f"\n**미국 의회 거래** 동향에서는 {highlight} 등이 보고되었습니다. "
             "의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다."
@@ -416,7 +434,11 @@ def main():
         item = cb_filtered[0]
         desc = item.get("description", "").strip()
         title = item.get("title", "")
-        highlight = _first_sentence(desc) if desc and desc != title and len(desc) > 20 else title
+        highlight = (
+            _first_sentence(desc)
+            if desc and desc != title and len(desc) > 20
+            else title
+        )
         summary_narrative.append(
             f"\n**중앙은행 정책**에서는 {highlight} 관련 뉴스가 수집되었으며, "
             "금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다."
@@ -425,7 +447,11 @@ def main():
         item = korea_filtered[0]
         desc = item.get("description", "").strip()
         title = item.get("title", "")
-        highlight = _first_sentence(desc) if desc and desc != title and len(desc) > 20 else title
+        highlight = (
+            _first_sentence(desc)
+            if desc and desc != title and len(desc) > 20
+            else title
+        )
         summary_narrative.append(
             f"\n**한국 정치인** 관련으로는 {highlight} 등의 재산/거래 소식이 수집되었습니다."
         )

@@ -27,7 +27,12 @@ from common.config import (
 )
 from common.dedup import DedupEngine
 from common.post_generator import PostGenerator
-from common.utils import sanitize_string, truncate_text, request_with_retry, remove_sponsored_text
+from common.utils import (
+    sanitize_string,
+    truncate_text,
+    request_with_retry,
+    remove_sponsored_text,
+)
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
 from common.markdown_utils import (
