@@ -305,7 +305,7 @@ def main():
     sources_str = ", ".join(source_parts) if source_parts else "데이터 없음"
 
     content_parts.append(
-        f"**{today}** 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. {sources_str}, 총 {total_count}건이 수집되었습니다.\n"
+        "미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.\n"
     )
 
     # Keyword analysis for executive summary
@@ -346,20 +346,41 @@ def main():
     if exec_summary:
         content_parts.append(exec_summary)
 
-    summary_points = []
-    if source_parts:
-        summary_points.append(f"출처 구성: {sources_str}")
-    overall_summary = summarizer.generate_overall_summary_section(
-        extra_data={"top_keywords": top_keywords, "summary_points": summary_points}
-    )
-    if overall_summary:
-        content_parts.append(overall_summary)
+    # Filter unique items by category for sections
+    congress_filtered = [
+        i
+        for i in unique_items
+        if any(t in i.get("tags", []) for t in ["congress", "pelosi", "senate"])
+    ]
+    trump_filtered = [i for i in unique_items if "trump" in i.get("tags", [])]
+    sec_filtered = [i for i in unique_items if "sec" in i.get("tags", [])]
+    korea_filtered = [i for i in unique_items if "korea" in i.get("tags", [])]
+    cb_filtered = [i for i in unique_items if "central-bank" in i.get("tags", [])]
 
-    # Theme distribution
-    dist = summarizer.generate_distribution_chart()
-    if dist:
-        content_parts.append("\n" + dist)
+    # Custom summary instead of generic theme-based one
+    content_parts.append("\n## 전체 뉴스 요약\n")
+    content_parts.append(f"- 총 **{total_count}건** 수집 ({sources_str})")
+    if trump_count:
+        # Get first trump item's description for highlight
+        for item in trump_filtered[:1]:
+            desc = item.get("description", "").strip()
+            title = item.get("title", "")
+            highlight = desc if desc and desc != title else title
+            content_parts.append(f"- 트럼프 정책: {highlight[:120]}")
+    if congress_count:
+        for item in congress_filtered[:1]:
+            desc = item.get("description", "").strip()
+            title = item.get("title", "")
+            highlight = desc if desc and desc != title else title
+            content_parts.append(f"- 의회 거래: {highlight[:120]}")
+    if cb_count:
+        for item in cb_filtered[:1]:
+            desc = item.get("description", "").strip()
+            title = item.get("title", "")
+            highlight = desc if desc and desc != title else title
+            content_parts.append(f"- 중앙은행: {highlight[:120]}")
 
+    # Separator before news sections
     content_parts.append("\n---\n")
 
     # Collect source links
@@ -382,24 +403,13 @@ def main():
                 content_parts.append(f"**{i}. [{title}]({link})**")
             else:
                 content_parts.append(f"**{i}. {title}**")
-            if description and description != title and i <= featured:
+            if description and description != title:
                 desc_text = description[:150]
                 if len(description) > 150:
                     desc_text += "..."
                 content_parts.append(f"{desc_text}")
             content_parts.append(f"{html_source_tag(source)}\n")
         content_parts.append("")
-
-    # Filter unique items by category for sections
-    congress_filtered = [
-        i
-        for i in unique_items
-        if any(t in i.get("tags", []) for t in ["congress", "pelosi", "senate"])
-    ]
-    trump_filtered = [i for i in unique_items if "trump" in i.get("tags", [])]
-    sec_filtered = [i for i in unique_items if "sec" in i.get("tags", [])]
-    korea_filtered = [i for i in unique_items if "korea" in i.get("tags", [])]
-    cb_filtered = [i for i in unique_items if "central-bank" in i.get("tags", [])]
 
     _render_news_cards(congress_filtered, "미국 의회 거래 동향")
     _render_news_cards(trump_filtered, "트럼프 행정명령/정책")
@@ -464,6 +474,20 @@ def main():
 
     content = "\n".join(content_parts)
 
+    # Build excerpt
+    excerpt_parts = []
+    if congress_count:
+        excerpt_parts.append(f"의회 거래 {congress_count}건")
+    if sec_count:
+        excerpt_parts.append(f"SEC 내부자 {sec_count}건")
+    if trump_count:
+        excerpt_parts.append(f"트럼프 정책 {trump_count}건")
+    if korea_count:
+        excerpt_parts.append(f"한국 정치인 {korea_count}건")
+    if cb_count:
+        excerpt_parts.append(f"중앙은행 {cb_count}건")
+    excerpt_text = f"{today} 정치인 거래·정책 리포트: {', '.join(excerpt_parts)}, 총 {total_count}건 수집"
+
     filepath = gen.create_post(
         title=post_title,
         content=content,
@@ -480,6 +504,8 @@ def main():
         source="consolidated",
         lang="ko",
         slug="daily-political-trades-report",
+        image="/assets/images/og-default.png",
+        extra_frontmatter={"excerpt": excerpt_text},
     )
     if filepath:
         # Mark individual items as seen
