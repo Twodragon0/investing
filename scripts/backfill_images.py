@@ -22,6 +22,7 @@ _config_path = os.path.join(
     os.path.dirname(os.path.abspath(__file__)), "common", "config.py"
 )
 _spec = importlib.util.spec_from_file_location("common_config", _config_path)
+assert _spec is not None and _spec.loader is not None
 _config_mod = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_config_mod)
 setup_logging = _config_mod.setup_logging
@@ -459,6 +460,7 @@ def _load_image_generator():
             os.path.dirname(os.path.abspath(__file__)), "common", "image_generator.py"
         )
         spec = importlib.util.spec_from_file_location("image_generator", img_path)
+        assert spec is not None and spec.loader is not None
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
         _IMG_GEN_MOD = mod
