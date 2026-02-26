@@ -135,9 +135,15 @@ def build_region_section(
         else:
             lines.append(f"**{i}. {title}**")
         if description and description != title and i <= 5:
-            desc_text = description[:150]
-            if len(description) > 150:
-                desc_text += "..."
+            # Extract first sentence for clean summary
+            desc_text = description
+            for sep in ["。", ". ", "다. ", "요. "]:
+                idx = desc_text.find(sep)
+                if 20 < idx < 250:
+                    desc_text = desc_text[: idx + len(sep)].strip()
+                    break
+            else:
+                desc_text = desc_text[:200].rsplit(" ", 1)[0] if len(desc_text) > 200 else desc_text
             lines.append(desc_text)
         lines.append(f"{html_source_tag(source)}\n")
 
@@ -222,28 +228,6 @@ def main():
     dist = summarizer.generate_distribution_chart()
     if dist:
         content_parts.append(f"\n---\n{dist}")
-
-    # Image — region distribution bar chart
-    try:
-        from common.image_generator import generate_news_summary_card
-
-        categories = [
-            {"name": region, "count": count}
-            for region, count in region_counts.most_common()
-        ]
-        if categories:
-            img = generate_news_summary_card(
-                categories, today, filename=f"regulatory-summary-{today}.png"
-            )
-            if img:
-                fn = os.path.basename(img)
-                web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
-                content_parts.append(f"\n![regulatory-summary]({web_path})\n")
-                logger.info("Generated regulatory summary image")
-    except ImportError:
-        pass
-    except Exception as e:
-        logger.warning("Regulatory summary image failed: %s", e)
 
     # Region sections
     content_parts.append("\n---")
@@ -343,7 +327,7 @@ def main():
         tags=["regulation", "sec", "cftc", "fsc", "daily-digest"],
         source="consolidated",
         lang="ko",
-        image=f"/assets/images/generated/regulatory-summary-{today}.png",
+        image="/assets/images/og-default.png",
         slug="daily-regulatory-report",
     )
     if filepath:

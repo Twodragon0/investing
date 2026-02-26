@@ -525,9 +525,14 @@ class ThemeSummarizer:
                     else:
                         lines.append(f"**{shown + 1}. {title}**")
                     if description and description != title:
-                        desc_text = description[:150]
-                        if len(description) > 150:
-                            desc_text += "..."
+                        desc_text = description
+                        for sep in ["。", ". ", "다. ", "요. "]:
+                            idx = desc_text.find(sep)
+                            if 20 < idx < 250:
+                                desc_text = desc_text[: idx + len(sep)].strip()
+                                break
+                        else:
+                            desc_text = desc_text[:200].rsplit(" ", 1)[0] if len(desc_text) > 200 else desc_text
                         lines.append(desc_text)
                     if source:
                         lines.append(f"{html_source_tag(source)}\n")
@@ -695,8 +700,8 @@ class ThemeSummarizer:
                 # Take first sentence or up to 120 chars
                 sentences = re.split(r"(?<=[.!?。])\s+", text)
                 snippet = sentences[0] if sentences else text
-                if len(snippet) > 120:
-                    snippet = snippet[:117] + "..."
+                if len(snippet) > 150:
+                    snippet = snippet[:150].rsplit(" ", 1)[0]
                 if len(snippet) > len(best_desc):
                     best_desc = snippet
 
@@ -712,8 +717,6 @@ class ThemeSummarizer:
                 break
 
         if top_title:
-            if len(top_title) > 100:
-                top_title = top_title[:97] + "..."
             return top_title
 
         return ""
@@ -963,25 +966,28 @@ class ThemeSummarizer:
             if not articles:
                 continue
             top_desc = ""
-            # Try description first
+            # Try description first — use full sentence, no truncation
             for art in articles[:3]:
                 desc = art.get("description", "").strip()
                 desc = _sponsored_re.sub("", desc).strip()
                 title = art.get("title", "")
                 if desc and desc != title and len(desc) > 20:
-                    top_desc = desc[:100]
-                    if len(desc) > 100:
-                        top_desc += "..."
+                    # Extract first sentence for clean summary
+                    for sep in ["。", ". ", "다. ", "요. "]:
+                        idx = desc.find(sep)
+                        if 20 < idx < 200:
+                            top_desc = desc[: idx + len(sep)].strip()
+                            break
+                    if not top_desc:
+                        top_desc = desc[:150].rsplit(" ", 1)[0] if len(desc) > 150 else desc
                     break
-            # Fallback: use the top article title
+            # Fallback: use the top article title (full, no truncation)
             if not top_desc:
                 for art in articles[:2]:
                     title = art.get("title", "").strip()
                     title = _sponsored_re.sub("", title).strip()
                     if title and len(title) > 10:
-                        top_desc = title[:100]
-                        if len(title) > 100:
-                            top_desc += "..."
+                        top_desc = title
                         break
             if top_desc:
                 briefing_items.append(
