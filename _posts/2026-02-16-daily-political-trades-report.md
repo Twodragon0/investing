@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "정치인 거래·정책 리포트 - 2026-02-16"
 date: 2026-02-16 13:57:51 +0000
 categories: [political-trades]
 tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-trading]
 source: "consolidated"
 lang: "ko"
+description: 2026-02-16 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. 트럼프 정책 1건, 중앙은행 3건, 총 4건이 수집되었습니다.
 ---
 
 **2026-02-16** 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. 트럼프 정책 1건, 중앙은행 3건, 총 4건이 수집되었습니다.
@@ -20,39 +22,6 @@ lang: "ko"
 ---
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## 전체 뉴스 요약
 
 - 총 **4건** 수집
@@ -65,7 +34,6 @@ lang: "ko"
 **1. [U.S., India announce historic trade deal, achieve reciprocal trade - Indo-Pacific Defense FORUM](https://news.google.com/rss/articles/CBMioAFBVV95cUxQUE5SalFjZndUVUw1TXduZEw2M3ZLa3FWWTBnU19kZ2dfNlJWN1hKME9vYkMySkplRnNUNFpEUHJVX2xfOS1HX29wWDNFczA1NnpBbUhMdEEzdFNDR25DVTZBalk5TEJvOHJ2clcxMDB5dXNndGZDOWVHSjFxRVRQOUJEcDZKU1lPTGRFYlRuY0o0cG5jQ0p1OW5FWFctME9X?oc=5)**
 U.S., India announce historic trade deal, achieve reciprocal trade Indo-Pacific Defense FORUM
 <span class="source-tag">Trump Tariff Policy</span>
-
 
 
 ## 중앙은행 정책 동향

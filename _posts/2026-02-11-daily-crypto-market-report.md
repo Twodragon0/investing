@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "암호화폐 시장 종합 리포트 - 2026-02-11"
 date: 2026-02-11 06:34:16 +0000
 categories: [market-analysis]
@@ -6,6 +7,7 @@ tags: [market-report, crypto, top-coins, trending, daily]
 source: "CoinGecko"
 source_url: "https://www.coingecko.com/"
 lang: "ko"
+description: "BTC 도미넌스: 56.7% | ETH 도미넌스: 10.0%"
 ---
 
 ## 시장 인사이트

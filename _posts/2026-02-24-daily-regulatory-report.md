@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "글로벌 규제 동향 리포트 - 2026-02-24"
 date: 2026-02-24 03:29:03 +0000
 categories: [regulatory-news]
@@ -19,9 +20,6 @@ description: "전 세계 금융 규제기관의 최신 동향을 정리합니다
 <div class=”alert-box”>글로벌 규제 <strong>규제/정책, 가격/시장</strong> 관련 32건 수집<br>🔵 <strong>규제/정책</strong> (27건): 공적자금관리위원회 민간위원 위촉 — 이억원 금융위원장은 공적자금관리특별법 제4조에 따라 국회·법원행정처 등 기관의 추천을 받은 4인을 위촉<br>📈 <strong>가격/시장</strong> (26건): 2026년도 AML/CFT 교육운영방향 발표 — “현장과 제도를 잇는 AML 교육혁신으로 금융회사의 대응역량을 강화하겠습니다.”<br>🟠 <strong>비트코인</strong> (1건): 단일종목 레버리지 ETF 세부방안 검토중 — 서울경제 ‘2배 ETF’ 관련 정부입장 설명<br>🏦 <strong>거래소</strong> (12건): 수익증권 장외거래중개업(조각투자 장외거래소) 예비인가 — 금융위원회 정례회의(2.13.) 의결</div>
 
 <div class="alert-box"><strong>긴급 알림</strong><br><a href="https://www.fsc.go.kr/no010101/86297">다주택자 대출 만기연장 관련 全 금융권 「긴급 점검회의」 개최</a></div>
-
-
-
 
 
 ## 핵심 요약

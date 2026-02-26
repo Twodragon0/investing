@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "일일 시장 종합 리포트 - 2026-02-20"
 date: 2026-02-20 01:38:21 +0000
 categories: [market-analysis]
@@ -6,6 +7,7 @@ tags: [market-summary, daily, crypto, stock, macro, top-coins, quant, trading]
 source: "auto-generated"
 lang: "ko"
 image: "/assets/images/generated/market-heatmap-2026-02-20.png"
+description: "암호화폐: BTC $67K 부근 횡보 지속. Fed 의사록의 예상보다 강한 매파 기조 확인 후 한때 $66K를 붕괴했으나 빠르게 반등. BTC ETF는 5주 연속 순유출 위기이며, 이더리움·XRP ETF도 동반..."
 ---
 
 ## 시장 시각화

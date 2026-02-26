@@ -4,8 +4,9 @@ title: "경제 지표 리포트 - 2026년 02월 07일"
 date: 2026-02-07 17:37:00 +0900
 categories: market-analysis
 tags: [경제지표, 거시경제, 인플레이션, GDP, 고용, 금값, 유가]
-lang: ko
 source: "Crypto Monitoring System"
+lang: ko
+description: "거시경제 리포트: GDP, 인플레이션, 고용지표를 중심으로 경제 흐름을 분석합니다."
 ---
 
 거시경제 리포트: GDP, 인플레이션, 고용지표를 중심으로 경제 흐름을 분석합니다.

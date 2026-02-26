@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "주식 시장 뉴스 종합 - 2026-02-20"
 date: 2026-02-20 01:35:23 +0000
 categories: [stock-news]
@@ -6,6 +7,7 @@ tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/market-snapshot-2026-02-20.png"
+description: 2026-02-20 주식 시장 100건의 뉴스를 분석한 요약 브리핑입니다.
 ---
 
 **2026-02-20** 주식 시장 100건의 뉴스를 분석한 요약 브리핑입니다.
@@ -25,40 +27,6 @@ image: "/assets/images/generated/market-snapshot-2026-02-20.png"
 ![market-snapshot]({{ '/assets/images/generated/market-snapshot-2026-02-20.png' | relative_url }})
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약

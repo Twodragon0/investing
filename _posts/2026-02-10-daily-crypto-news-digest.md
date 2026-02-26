@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "암호화폐 뉴스 브리핑 - 2026-02-10"
 date: 2026-02-10 03:29:34 +0000
 categories: [crypto-news]
 tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
+description: "빗썸 '유령 비트코인' 스캔들과 중국 스테이블코인 규제 강화 속에서 비트코인이 트럼프 시대 상승분을 모두 반납하며 시장 변동성 극대화"
 ---
 
 ## 한줄 요약

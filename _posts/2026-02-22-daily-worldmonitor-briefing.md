@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-02-22"
 date: 2026-02-22 03:33:05 +0000
 categories: [market-analysis]
@@ -6,6 +7,7 @@ tags: [worldmonitor, geopolitics, macro, daily-digest]
 source: "worldmonitor"
 source_url: "https://worldmonitor.app"
 lang: "ko"
+description: 2026-02-22 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다.
 ---
 
 **2026-02-22** 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다.
@@ -16,19 +18,6 @@ lang: "ko"
 - 수집 건수: **20건**
 - 범위: 글로벌 지정학, 금융시장, 에너지 이슈
 - 주요 출처: WorldMonitor/CNBC (14건), WorldMonitor/BBC World (6건)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 이슈 분포

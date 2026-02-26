@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "암호화폐 뉴스 브리핑 - 2026-02-12"
 date: 2026-02-12 03:13:37 +0000
 categories: [crypto-news]
 tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
+description: 오늘 총 125건의 암호화폐 관련 뉴스가 수집되었습니다. 주요 내용을 정리합니다.
 ---
 
 오늘 총 125건의 암호화폐 관련 뉴스가 수집되었습니다. 주요 내용을 정리합니다.
@@ -33,34 +35,6 @@ DeFi   █░░░░░░░░░░░░░░░░░     7%  (9건)
 - **주요 키워드**: bitcoin(24), ai(6), defi(2), ethereum(1), etf(1)
 
 ![news-summary]({{ '/assets/images/generated/news-summary-2026-02-12.png' | relative_url }})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 카테고리별 주요 뉴스

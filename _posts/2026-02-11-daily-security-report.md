@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "블록체인 보안 리포트 - 2026-02-11"
 date: 2026-02-11 03:18:31 +0000
 categories: [security-alerts]
 tags: [security, hack, blockchain, daily-digest]
 source: "consolidated"
 lang: "ko"
+description: 블록체인 보안 관련 뉴스 45건을 정리합니다.
 ---
 
 블록체인 보안 관련 뉴스 45건을 정리합니다.

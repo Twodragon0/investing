@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "일일 시장 종합 리포트 - 2026-02-13"
 date: 2026-02-13 14:39:47 +0000
 categories: [market-analysis]
@@ -6,6 +7,7 @@ tags: [market-summary, daily, crypto, stock, macro, top-coins]
 source: "auto-generated"
 lang: "ko"
 image: "/assets/images/generated/market-heatmap-2026-02-13.png"
+description: "극도의 공포 장세: 공포/탐욕 지수 9으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다."
 ---
 
 ## 시장 시각화
@@ -36,34 +38,6 @@ image: "/assets/images/generated/market-heatmap-2026-02-13.png"
 - **KOSPI**: 5,507.01 (-0.28%)
 - **KOSDAQ**: 1,106.08 (-1.77%)
 - **USD/KRW 환율**: 1,441.56 (+0.00%)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 오늘의 시장 인사이트

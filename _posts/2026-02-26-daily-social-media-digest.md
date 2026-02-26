@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "소셜 미디어 동향 - 2026-02-26"
 date: 2026-02-26 03:35:38 +0000
 categories: [crypto-news]

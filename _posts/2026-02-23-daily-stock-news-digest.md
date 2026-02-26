@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "주식 시장 뉴스 종합 - 2026-02-23"
 date: 2026-02-23 03:22:54 +0000
 categories: [stock-news]
@@ -19,20 +20,6 @@ description: "2026-02-23 주식 시장에서 144건의 뉴스를 분석했습니
 <div class="alert-box alert-info"><strong>주식 시장 가격/시장, 정치/정책 부각 144건 분석</strong><br>📈 <strong>가격/시장</strong>: 46건 수집<br>🏛️ <strong>정치/정책</strong>: 22건 수집<br>🤖 <strong>AI/기술</strong>: 30건 수집<br>📊 <strong>매크로/금리</strong> (7건): 고환율에 발 묶인 한은…2월 기준금리 '6회 연속 동결' 무게</div>
 
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><a href="https://news.google.com/read/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?hl=en-US&gl=US&ceid=US%3Aen">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates</a><br><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">’워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a><br><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?oc=5">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates - CNBC</a></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -144,7 +131,6 @@ U.S. stock-index futures declined Sunday, as investors grappled with the implica
 <a href="https://www.cnbc.com/2026/02/23/bitcoin-falls-trump-tariffs.html">Bitcoin falls below $65,000 as Trump tariff moves raise uncertainty</a>
 <a href="https://www.cnbc.com/2026/02/22/trump-demands-netflix-fire-susan-rice-as-doj-probes-warner-deal.html">Trump demands Netflix fire Susan Rice as DOJ probes Warner deal</a>
 </details>
-
 
 
 ---

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "일일 시장 종합 리포트 - 2026-02-26"
 date: 2026-02-26 13:02:13 +0900
 categories: [market-analysis]

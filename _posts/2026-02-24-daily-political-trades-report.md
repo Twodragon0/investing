@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "정치인 거래·정책 리포트 - 2026-02-24"
 date: 2026-02-24 14:33:08 +0000
 categories: [political-trades]
@@ -26,14 +27,6 @@ description: "2026-02-24 정치인 거래·재산 공개·정책 동향을 종�
 <div class=”alert-box alert-urgent”><strong>긴급 알림</strong>: <a href=”https://news.google.com/rss/articles/CBMipgFBVV95cUxOeWZBMEhZaEttRDY4UHAxSmNlanl2ZU9NWnU0b1otQjVZdEFtOHg3RlFmLUR2U0x2NVlzQXNiMFNsZG9mSkxQTWFrajYtbDcwRnhUSWFJN2NVakRKanhISXRIbExodXRxZ1YxQm1WMVdmc1Y1UzBnTDRIRE5lNmZKLWJrMDFtWXZfOG9lcGpkVjlrRU5CczRfa3lNSmxIb19heU00U1dn?oc=5”>Trump’s Executive Order Elevates Glyphosate Debate on Economy and Security - mezha.net</a></div>
 
 
-
-
-
-
-
-
-
-
 ## 전체 뉴스 요약
 
 - 총 **25건** 수집
@@ -50,7 +43,6 @@ As Rep. Julia Letlow runs for Senate, late disclosure of 210 stock trades draws 
 **2. [As Rep. Julia Letlow runs for Senate, late disclosure of 210 stock trades draws scrutiny - NOLA.com](https://news.google.com/rss/articles/CBMiuwFBVV95cUxNSThWeUVlY25WbHFHREM4LWYtMUJFTHBReUk4Sk1DNVlQd1hFeTBXZlJaMlVhN094S2wzM19kcWlONXhWcGZqMERzQkdQYTNUY2hsNkRCYTRHdjkzN3pXbUotM2ZlT1VKN25FcWRKdm80dzNUZm5kNkV5SjVuRWxGQzJKRzlVbGp3T1YzMTNnTHdNSW1xUGI1Y05zOHRxRWdpd0U5UkkwYVZvUmlnTkxYTnNSckIwSURUS1pR0gHAAUFVX3lxTFBvUm5SSDBNNTJyVVZtRkpibnZxcG9IZjZ2TXFEVWdkSGRPd2IxY2x2ZEhWR2RsQTBrcTFRZU1ud1ZISkc1dGhWMzh2U0hpQkJ5Mm42X3FwdU43c1dXYkYtM3NHSTJ0UjQyUG9TOHV1ZWg4cl9UN2pmeHNscXhCNXN6VFNQWlFrSzYzRkZPSmx5TEI1ZU1YTGljR1N2VFR0UDF6MHZpOG8wZWtTaTBodXdrdjVJN3M0dWQwTmlnMkdaVg?oc=5)**
 As Rep. Julia Letlow runs for Senate, late disclosure of 210 stock trades draws scrutiny NOLA.com
 <span class="source-tag">Congressional Trades EN</span>
-
 
 
 ## 트럼프 행정명령/정책
@@ -83,7 +75,6 @@ Trump’s 10% Levy Takes Effect as US Rebuilds Tariff Wall Bloomberg
 
 **8. [Trump’s Executive Order Elevates Glyphosate Debate on Economy and Security - mezha.net](https://news.google.com/rss/articles/CBMipgFBVV95cUxOeWZBMEhZaEttRDY4UHAxSmNlanl2ZU9NWnU0b1otQjVZdEFtOHg3RlFmLUR2U0x2NVlzQXNiMFNsZG9mSkxQTWFrajYtbDcwRnhUSWFJN2NVakRKanhISXRIbExodXRxZ1YxQm1WMVdmc1Y1UzBnTDRIRE5lNmZKLWJrMDFtWXZfOG9lcGpkVjlrRU5CczRfa3lNSmxIb19heU00U1dn?oc=5)**
 <span class="source-tag">Trump EO Economy</span>
-
 
 
 ## SEC 내부자 거래 (Form 4)
@@ -122,7 +113,6 @@ Travelers (TRV) EVP Daniel Yin exercises stock options and withholds shares for 
 
 **10. [Allison Transmission (NYSE: ALSN) COO gets stock via RSU vesting - Stock Titan](https://news.google.com/rss/articles/CBMixgFBVV95cUxPNW1RbkNCaHh4MUpQUDBRTWlJZWEyMzd4a1dKdzRtY0RTeWZaVzdUMlJPdHJpcERiWnUyaXpfajRwWmtTaHd0WWhlVXVyeEo2cUFqdWNVQjBnNnQtalBvSnp0YWNibUloeDJRMDdGbGhCSnd2a1JsMjhkLTk4bm5EYTNfV0ktMHRTYmhsWGQ2NzNFbDZ1TzJra2lSZklRRkVZbHRuRUJlX1V2MTBlWDFsZWdvTUxkT1h2ZWxvY2VJUHF4U28tSUE?oc=5)**
 <span class="source-tag">SEC Insider Trading</span>
-
 
 
 ## 중앙은행 정책 동향

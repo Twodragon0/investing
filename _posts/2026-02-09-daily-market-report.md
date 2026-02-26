@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "일일 시장 종합 리포트 - 2026-02-09"
 date: 2026-02-09 14:50:47 +0000
 categories: [market-analysis]
 tags: [market-summary, daily, crypto, stock, macro, top-coins]
 source: "auto-generated"
 lang: "ko"
+description: "암호화폐 시장이 하락세를 보이고 있습니다. 단기 조정 가능성을 염두에 두고 리스크 관리가 필요합니다."
 ---
 
 ## 시장 시각화

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "주식 시장 뉴스 종합 - 2026-02-25"
 date: 2026-02-25 03:22:51 +0000
 categories: [stock-news]
@@ -19,14 +20,6 @@ description: "2026-02-25 주식 시장에서 159건의 뉴스를 분석했습니
 <div class="alert-box alert-info"><strong>주식 시장 가격/시장, 정치/정책 부각 159건 분석</strong><br><br>📈 가격/시장 (50건) — 다우·S&P 500·나스닥 소프트웨어 주도 AI 안도 랠리, 엔비디아 실적 기대<br>🏛️ 정치/정책 (20건) — 트럼프 국정연설 앞두고 선물 하락, 무역정책 불확실성<br>🤖 AI/기술 (24건) — AI 관련주 반등 랠리, 엔비디아 실적 발표 임박<br>📊 매크로/금리 (6건) — 모기지 금리 인하 전망, Fed 금리인하 보류</div>
 
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><br><a href="https://news.google.com/read/CBMimAFBVV95cUxON1d1SmxfaHlXMkpSUlA5Y3pDMy1kZ3dxRlF5QzZkb3dlTmlTMmdWY2RWeURoazZXdVpMS0t6ZjI3NmJYTEwyS2pCWDVSdEdHekN4YWZ4WEZudC1JUDBDSnI2ZWotZWpOMlB1NVlQTkJaLW5XQWttRnpUdlEyQkZrZG1tYVlJWVZfaUw5SlJ5aklsTXN6WUdhaA?hl=en-US&gl=US&ceid=US%3Aen">Stock Market Crash? 지금 할 수 있는 최선의 투자 전략</a><br><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">’워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a></div>
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -137,7 +130,6 @@ When will mortgage rates go down? With Fed rate cuts on hold, 4-year lows may be
 <a href="https://news.google.com/rss/articles/CBMiowJBVV95cUxPamw3VDFQNHlmZE5fNmxld09fZlFMb2kzTDd6a29FdGxCYlJySkdiSlo2VnJWd1pzQXBRRlI1RURZdkFITkFfdVE0ZVBRUzRLSXNmTFVsaEdhVDdTNzRCZVIxcVlQc0x6Tm84STdYLV9MRnVEWktiRy0tazd2T0VtVzNTTUNiUXBlemt5M00yek8yYzZzbWJoN3JPbXExb3I0WVJJYWN2YzMzS0tBUC1EYXRrbDY2dzBZMXhEcGFOeERMRXh0VTFTUXhmOUVJYmR0aFl3ZjFIVERaczNQZDMyazk5cmZYanluRXVIQUUzamhSREZGX0ZsR0lRZ3A4SmxVVjJfV0VSb1lsc3U0V0tzcWwyOEdyVG5wamtRLVhsLWo5OXc?oc=5">US Stock Market Today: Dow Gains 380 Points on Trump Tariffs, S&P 500 & Nasdaq Rally as Software Stocks Rebound; Gold & Silver Surges, Bitcoin Falls Below $63K - The Sunday Guardian</a>
 <a href="https://finance.yahoo.com/news/vgt-xlk-qqq-best-tech-152709423.html">VGT, XLK, or QQQ: Which is the Best Tech ETF to Profit From the AI Revolution?</a>
 </details>
-
 
 
 ---

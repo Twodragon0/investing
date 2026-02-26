@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "일일 시장 종합 리포트 - 2026-02-10"
 date: 2026-02-10 03:29:40 +0000
 categories: [market-analysis]
 tags: [market-summary, daily, crypto, stock, macro, top-coins]
 source: "auto-generated"
 lang: "ko"
+description: "시장 상태: 보합세 - 뚜렷한 방향성 없이 횡보 구간 지속"
 pin: true
 ---
 

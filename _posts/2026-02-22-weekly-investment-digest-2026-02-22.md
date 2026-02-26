@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "주간 투자 다이제스트 - 2026년 02월 22일"
 date: 2026-02-22 00:14:12 +0900
 categories: [market-analysis]
 tags: [weekly-digest, summary, market-analysis]
 source: "auto-generated"
 lang: "ko"
+description: 이번 주 (02월 15일 ~ 02월 22일) 투자 시장의 주요 동향과 핵심 이슈를 종합 분석합니다.
 ---
 
 이번 주 (02월 15일 ~ 02월 22일) 투자 시장의 주요 동향과 핵심 이슈를 종합 분석합니다.

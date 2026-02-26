@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "정치인 거래·정책 리포트 - 2026-02-21"
 date: 2026-02-21 13:35:00 +0000
 categories: [political-trades]
 tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-trading]
 source: "consolidated"
 lang: "ko"
+description: 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
 ---
 
 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
@@ -35,41 +37,6 @@ lang: "ko"
 ---
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## 전체 뉴스 요약
 
 - 총 **53건** 수집
@@ -85,7 +52,6 @@ lang: "ko"
 **2. [Nancy Pelosi, Brad Gerstner Pile Into The Same 5 Stocks — What Do They See Coming? - Benzinga](https://news.google.com/rss/articles/CBMizAFBVV95cUxOSnRpU3lPel9sRkxVMWFGd19CN3c4UDhqdXdRNWlZMW91LVJqLW8yaUQzSWgzTmlaQnJSMzFIbFd2VHJxMDB2cHZKVHlyckV2TkVrWjlhWWRjbjhzdHNYZkdEYVlZX1NtaWVuaEVkbXBKVFpyY1pCQUhvY1BCcG5WQ2N1N3Zubjg5azdCRm5uSy04SGhvSVRqTFMxaUhqN0NMUEQtbUZOT09PMVVDVEhjenlqcUtnYWN0YmNIVkkwcnFOZ01za1BwU1ZPbm8?oc=5)**
 Nancy Pelosi, Brad Gerstner Pile Into The Same 5 Stocks — What Do They See Coming? Benzinga
 <span class="source-tag">Pelosi Trades</span>
-
 
 
 ## 트럼프 행정명령/정책
@@ -126,7 +92,6 @@ Nancy Pelosi, Brad Gerstner Pile Into The Same 5 Stocks — What Do They See Com
 <span class="source-tag">트럼프 행정명령 KR</span>
 
 
-
 ## SEC 내부자 거래 (Form 4)
 
 **1. [Equity grant gives Organogenesis (ORGO) director 48,828 RSUs vesting 2027 - Stock Titan](https://news.google.com/rss/articles/CBMivAFBVV95cUxNekZpVVUxUlpNeW9tOGY2UmpEdE5JSk84WnA5ZmNteWxyQlpxaTNwWEtLOXB0UW9xeW5xTXRsOVU4bC1oX0NHSmlJTTlxOGVRWlNwdU5lMmdtOU1TS0FjT2pwTDVjYjhidmN6Mzd3YnB3S1RpT29BV0VrV3VRNVNVcXctdjlFbzRjREVqNUl2S0VGSUFJYVlkUm5mT0VKZ2xiY3VIcnBpamxyNFZhTlhCNF80cVQ2MXVac3g4Uw?oc=5)**
@@ -163,7 +128,6 @@ Albemarle (ALB) director converts deferred phantom stock into common shares Stoc
 
 **10. [First American (NYSE: FAF) officer reports tax-withholding share disposition on RSU vesting - Stock Titan](https://news.google.com/rss/articles/CBMivwFBVV95cUxNc3FaWlN3YXBVTGVUTXUtYzlMQktxaXI2YXdtWFRaMVlPYU1XZmlybm9oUktsaWlTV1dEQXlkNWJ5LWkwYjRkUnh3VjNkd1UtMUtGU2xnWGF4N1NpRTdxYmdtalgwdFZKaEZ5b09xWUVzaUNIWTRkcHJhbG11NWpaYXg3elo0VjRSeUtXcFBmaHJaTmNUTEtTREM0d1pmZDg2X0RESUJmS0pTVmF5SElRS0ZmcjEteXRJTTRUWXJsaw?oc=5)**
 <span class="source-tag">SEC Insider Trading</span>
-
 
 
 ## 중앙은행 정책 동향

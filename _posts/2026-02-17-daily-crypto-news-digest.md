@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "암호화폐 뉴스 브리핑 - 2026-02-17"
 date: 2026-02-17 02:51:20 +0000
 categories: [crypto-news]
@@ -6,6 +7,7 @@ tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-summary-2026-02-17.png"
+description: 2026-02-17 암호화폐 시장에서 109건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 이더리움 관련 소식이 주목됩니다.
 ---
 
 **2026-02-17** 암호화폐 시장에서 109건의 뉴스를 분석했습니다. 오늘은 **비트코인, 가격/시장, 이더리움** 관련 소식이 주목됩니다.
@@ -34,40 +36,6 @@ image: "/assets/images/generated/news-summary-2026-02-17.png"
 
 
 ![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-17.png' | relative_url }})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -178,7 +146,6 @@ Lack of privacy is a barrier to both everyday and institutional use of crypto an
 <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxOdTNOV1EwU09kckxNYk9kRXV0Ml9qbDNvVHM2NTVmTGdXX21LWUl6a3BPV3BweVpUZGktQ3FWWlR4TTFjakVMV3UtRmwzRmphVmVuMnpjOUdqRmx6YkUtS3RDVmdxM2pfRzA5QVBHWjNOLThpNHNXRmVpQWc0ZmJoTHFvajE1WDBRb2RsM2FYZFFseFdrY1JkcWpyNFNQMkI4NFhjUlpsSGdtQUZtRHIwemdEVVcwWWxNcFgzVkFFMFA?oc=5">Russia's daily crypto turnover is over $650 million, Ministry of Finance says - CoinDesk</a>
 <em>외 22건</em>
 </details>
-
 
 
 ## 거래소 공지사항

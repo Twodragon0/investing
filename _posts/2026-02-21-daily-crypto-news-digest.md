@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "암호화폐 뉴스 브리핑 - 2026-02-21"
 date: 2026-02-21 02:42:09 +0000
 categories: [crypto-news]
@@ -6,6 +7,7 @@ tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-2026-02-21.png"
+description: 2026-02-21 암호화폐 시장에서 110건의 뉴스를 분석했습니다. 오늘은 비트코인, 정치/정책, 거래소 관련 소식이 주목됩니다.
 ---
 
 **2026-02-21** 암호화폐 시장에서 110건의 뉴스를 분석했습니다. 오늘은 **비트코인, 정치/정책, 거래소** 관련 소식이 주목됩니다.
@@ -36,40 +38,6 @@ image: "/assets/images/generated/news-briefing-2026-02-21.png"
 
 
 ![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-21.png' | relative_url }})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -183,7 +151,6 @@ How to Make the Most of the Volatility of Cryptocurrency Prices The Arizona Repu
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE84UjQtdWRoSzVNNmk5Q0J2UENlRW56UXZYZlR5MFpVWXo1YTlQaGNqSUc1UWVuQV9nMEdIWFdoaDVoRTVsYlNYa1JyTTEyNVU?oc=5">“무조건 반등할거야”개미들 ‘초상집’ 된 비트코인, 큰 손은 다 도망갔다 - v.daum.net</a>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9UWWt2NGRwVEhESnNWZ1FRaE1wbk9BTk1Wdll0b3dvdWgzTXZlRWs3Y1dMcmNNam1UanZrbWZaTWM5T3R4cWwtVmtFMGE0TTVUV1VWZ3FR?oc=5">레버리지가 코인 폭락 트리거 됐다 - 중앙일보</a>
 </details>
-
 
 
 ## 거래소 공지사항

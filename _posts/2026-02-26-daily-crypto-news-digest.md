@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "암호화폐 뉴스 브리핑 - 2026-02-26"
 date: 2026-02-26 02:48:06 +0000
 categories: [crypto-news]
@@ -34,10 +35,6 @@ description: "2026-02-26 암호화폐 시장에서 114건의 뉴스를 분석했
 <div class="alert-box alert-info"><strong>암호화폐 시장 비트코인, 가격/시장 중심 114건 분석</strong><br><br>🟠 비트코인 (58건) — 위키피디아 창립자의 BTC 가격 전망, 비트코인 $63K 하락 후 반등, 2022년 이후 최악의 월간 하락세<br>📈 가격/시장 (25건) — 대규모 숏 스퀴즈 발생, ETH·DOGE·SOL 동반 상승<br>🏦 거래소 (16건) — 이란 테러자금 Binance 경유 $17억, 거래소 규제 강화<br>🤖 AI/기술 (7건) — 엔비디아 실적발표 호재로 공매도 청산 확대<br>🔵 규제/정책 (26건) — 미 재무부 러시아 해킹 제재, CFTC 예측시장 규제</div>
 
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><br><a href="https://news.google.com/read/CBMilgFBVV95cUxNVHZNVEtWTl84SXdaZWF1cFpfTm9LNmtadHU2WF9rQ09WT21LSnh4Z2dYY3RNaTlta203Mzl3Q1p0dE5zUXhJell0WklkX1RnUGxaN3d3SzdsNU9ZVjlMVW5EMDE1aWVyX3JQc0NkV3FVRGtRWFBydi1pUnJTcUhua1ZsTzNRbTVKTlM0X1NJTmR5UHRYMWc?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin is crashing for 3 reasons today. They have more to do with the state of the world than the crypto market</a><br><a href="https://news.google.com/read/CBMidkFVX3lxTE9leW95US1PMHBkVnRlWm9wMmlXYi1nRzFFVnhXODI2OWJCN2J3UXB2WXphNWRJZVZOMFpkLUNPMF9jcW5aak5DUWFhTEg4MjdUZ1AyQ2NUVE5aWXZlM1RQZVA5bGI3S3lTcncyOWNGcHFKR1BBV2c?hl=en-US&gl=US&ceid=US%3Aen">The Winklevoss Twins’ Crypto Company Is in Crisis After the Bitcoin Crash</a><br><a href="https://bitcoinmagazine.com/news/us-sanctions-crypto-funded-cyber-theft">U.S. Treasury Sanctions Russian Exploit Broker Over Crypto-Funded Cyber Theft</a></div>
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -150,7 +147,6 @@ Wisconsin bill targets cryptocurrency kiosk scams Northern News Now
 <a href="https://decrypt.co/359150/samsung-galaxy-s26-agentic-ai-phone-gemini-perplexity">Samsung's Galaxy S26 Billed as First 'Agentic AI Phone'—Here's What That Means</a>
 <em>...외 8건</em>
 </div></details>
-
 
 
 ## 거래소 공지사항

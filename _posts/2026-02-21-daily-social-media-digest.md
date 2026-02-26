@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "소셜 미디어 동향 - 2026-02-21"
 date: 2026-02-21 03:09:31 +0000
 categories: [crypto-news]
@@ -6,6 +7,7 @@ tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, dail
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/source-distribution-2026-02-21.png"
+description: 2026-02-21 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 소셜 미디어 1건, 정치·경제 41건, 총 62건이 수집되었습니다.
 ---
 
 **2026-02-21** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 소셜 미디어 1건, 정치·경제 41건, 총 62건이 수집되었습니다.
@@ -35,40 +37,6 @@ image: "/assets/images/generated/source-distribution-2026-02-21.png"
 
 
 ![source-distribution]({{ '/assets/images/generated/source-distribution-2026-02-21.png' | relative_url }})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약

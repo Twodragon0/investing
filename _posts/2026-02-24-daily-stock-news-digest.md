@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "주식 시장 뉴스 종합 - 2026-02-24"
 date: 2026-02-24 03:24:03 +0000
 categories: [stock-news]
@@ -30,15 +31,6 @@ description: "2026-02-24 주식 시장에서 158건의 뉴스를 분석했습니
 <a href=”https://news.google.com/read/CBMi-gFBVV95cUxPWFBCd0RMYVpLZk10T0x4LVpsNU9ZcVpMR1RiUERBZlFMaDhsM2FUVTF5R25aTlVaczAta0lQMDFUdExuRTUwbmZsSmlUR0J6d25mRFpkeV9KS3hkYlNrXzVTeGpqTERXa19OMzFWRG5FLXpEdmN6ZjdIVmFqYk5xR0lZa3FSMzktbFBOZFctS196TzI1SVVxSS1IUXlUNEVlSzFtaERWTmduUzd3dXA0R2EyWk5PakpmX1VOWmQyVkxhbUtabFZqSjFoUEcza0V4elYzWVlacHNtUXc0S0d6LUdZUE1JYmdGRm41VkxGbEtVazNfeU9uZmln0gH_AUFVX3lxTFBwcFBWTzA5YUhhU1lPTGpQZmJiVEJQWlhTNUZZYV9sdDRtd2JVRmVVSXlLdzNqQkc5aEE4a2tVamwtZldpRTFtbHdrNDNzSHRmcEtqVjJwOWEzZi14Q3d4RkZUMFJhOENEOGFGYzBzSmF1OXFZTUVXeGpIb3J2d0JYUGQ1THFtQ25reFItSzE2TklDeFZmanBxN3NFUTVjX0FzVzZmSmJNc21IM2R0R3EzN19oemF5OEJuZzBLWG1hM1lFbEZrN0c0LWpKbTBGeUtrbVJ1bFZQWTVETHZENVNfYkJKdHJEcmNiUG1SVGlpbnh1WWJfOTlDU0JKeXJMQQ?hl=en-US&gl=US&ceid=US%3Aen”>S&P 500, Dow Jones, Nasdaq crash at U.S Stock Market. Top gaining, losing stocks at Wall Street</a><br>
 <a href=”https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako”>’워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a>
 </div>
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -146,7 +138,6 @@ When will mortgage rates go down? With Fed rate cuts on hold, 4-year lows may be
 **3. [US Stock Market Today: Dow Jones Plunges as S&P 500, Nasdaq Tumble on Trump Tariffs; Gold and Silver Surge, Bitcoin Slips Below $66K - The Sunday Guardian](https://news.google.com/rss/articles/CBMipAJBVV95cUxOSjF6elpVTWlFcWo1Tm1CZDItaGw1ZmFTUWxRa1RUVVIwNHNuLW9vQl9xbG9Rd21BcnV3TXhIc2FMNlJEeUhCV1g5RXAtUUpNSlRYNmYxVXJuaWNtbHNYaGhVZlRjclZuTmFocWRyVU4wY2U2WGQ2alNfSFlZVFhJbmZVN1NyT1hJZEgwanByNmdvN2VGbDVheExCWkJJUnFEYnNfd1RPMHNKVzd2bkU2M2poRzNpTWpzWUFYR2FNR3JNN0xuUENxZE1HVHN6TU5GRjhQYkNqdmU2VWxfLUEtOER3T2VpOFF4MXRZTjFXZVZMMXBlM2RGdUVTRWRwdUhnQ2M0enRQS3labXlFcVJaaU9Ta2V3WGFqMEdGVDRVRGduZmdC?oc=5)**
 US Stock Market Today: Dow Jones Plunges as S&P 500, Nasdaq Tumble on Trump Tariffs; Gold and Silver Surge, Bitcoin Slips Below $66K The Sunday Guardi...
 <span class="source-tag">Google News Stocks EN</span>
-
 
 
 ---

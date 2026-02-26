@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "주식 시장 뉴스 종합 - 2026-02-26"
 date: 2026-02-26 03:18:42 +0000
 categories: [stock-news]
@@ -19,10 +20,6 @@ description: "2026-02-26 주식 시장에서 168건의 뉴스를 분석했습니
 <div class="alert-box alert-info"><strong>주식 시장 가격/시장, AI/기술 부각 168건 분석</strong><br><br>📈 가격/시장 (63건) — 다우·S&P 500·나스닥 기술주 랠리, 엔비디아 실적 기대감<br>🤖 AI/기술 (37건) — 엔비디아 실적발표 호재, 나스닥 기술주 선도 랠리<br>📊 매크로/금리 (17건) — 한국은행 기준금리 6회 연속 동결(2.50%), 글로벌 금리 환경 변화<br>🏛️ 정치/정책 (14건) — 트럼프 관세 우려로 다우 800포인트 급락, AI 공포 확산</div>
 
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><br><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">’워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a><br><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxPWHdoMm5kU1pLVFAyQkNxQV9tdXZEd3hDZEdzUjhwbUVLdm92Ml9ORFVEaXBQR3NKeV9FNUNTNjR5cU81MWtVSTJWTGQzOFFNb2RNbUZUUXkwZXdPVzl3RXNZQ1RmbGNjbFM1a2JvYkFmU1RTQzZnRWNRQWJVQjZPTTk0ZFhaRHNuLU1GY2xkUmRRS1hrREE?oc=5">The Stock Market Could Crash in an AI Doomsday Scenario, According to Analysts. Wall Street Is Panicking. - The Motley Fool</a></div>
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -130,7 +127,6 @@ An Oppenheimer analyst has turned bullish on Oracle’s stock after a selloff th
 **3. [Japan's Nikkei 225 crosses 59,000 first the first time as central bank board picks fuel 'Takaichi trade'](https://www.cnbc.com/2026/02/26/asia-pacific-markets-nvidia-kospi-nikkei-225-hang-seng-index.html)**
 Asia-Pacific markets were poised to open higher on Thursday, tracking Wall Street gains as strong earnings from Nvidia and Oracle lifted investor sent...
 <span class="source-tag">CNBC Top News</span>
-
 
 
 ---

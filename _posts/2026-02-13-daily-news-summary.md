@@ -1,12 +1,14 @@
 ---
+layout: post
 title: "일일 뉴스 종합 요약 - 2026년 02월 13일"
 date: 2026-02-13 12:00:00 +0900
 categories: [market-analysis]
 tags: [일일요약, 암호화폐, 주식, 규제, 소셜미디어, 보안]
 source: "consolidated"
 lang: "ko"
-pin: false
 image: "/assets/images/generated/news-summary-2026-02-13.png"
+description: "> 암호화폐 111건, 주식 158건, 보안 1건, 규제 30건, 소셜 미디어 39건의 뉴스를 종합 분석한 일일 요약입니다."
+pin: false
 ---
 
 > 암호화폐 111건, 주식 158건, 보안 1건, 규제 30건, 소셜 미디어 39건의 뉴스를 종합 분석한 일일 요약입니다.
@@ -20,38 +22,6 @@ image: "/assets/images/generated/news-summary-2026-02-13.png"
 | **주목** | 금요일 CPI 발표 (시장 방향 결정), 트럼프 암호화폐 법안 진전 여부, 외국인 KOSPI 매수 지속 여부 |
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약

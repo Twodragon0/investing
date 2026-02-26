@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-02-20"
 date: 2026-02-20 01:35:26 +0000
 categories: [market-analysis]
@@ -6,6 +7,7 @@ tags: [worldmonitor, geopolitics, macro, daily-digest]
 source: "worldmonitor"
 source_url: "https://worldmonitor.app"
 lang: "ko"
+description: 2026-02-20 글로벌 뉴스 20건을 정리한 지정학·매크로 브리핑입니다.
 ---
 
 **2026-02-20** 글로벌 뉴스 20건을 정리한 지정학·매크로 브리핑입니다.
@@ -21,40 +23,6 @@ lang: "ko"
 <div class="theme-row"><span class="theme-label">지정학/안보</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:10%"></div></div><span class="theme-count">2건 (10%)</span></div></div>
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약

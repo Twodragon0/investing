@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "글로벌 규제 동향 리포트 - 2026-02-20"
 date: 2026-02-20 01:35:25 +0000
 categories: [regulatory-news]
@@ -6,6 +7,7 @@ tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/og-default.png"
+description: 전 세계 금융 규제기관의 최신 동향 6건을 요약합니다.
 ---
 
 전 세계 금융 규제기관의 최신 동향 6건을 요약합니다.
@@ -20,40 +22,6 @@ image: "/assets/images/og-default.png"
 <div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:33%"></div></div><span class="theme-count">2건 (33%)</span></div></div>
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약

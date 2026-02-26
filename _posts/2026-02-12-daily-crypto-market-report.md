@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "암호화폐 시장 종합 리포트 - 2026-02-12"
 date: 2026-02-12 03:21:17 +0000
 categories: [market-analysis]
@@ -6,6 +7,7 @@ tags: [market-report, crypto, top-coins, trending, daily]
 source: "CoinGecko"
 source_url: "https://www.coingecko.com/"
 lang: "ko"
+description: "공포/탐욕 지수: 5/100 (Extreme Fear)"
 ---
 
 ## 시장 시각화
@@ -19,34 +21,6 @@ lang: "ko"
 - **비트코인**: $67,356 (24h -1.20% 하락)
 - **공포/탐욕 지수**: 5/100 (Extreme Fear)
 - **총 시가총액**: $2.37T
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 시장 인사이트

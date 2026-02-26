@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "암호화폐 뉴스 브리핑 - 2026-02-25"
 date: 2026-02-25 02:53:16 +0000
 categories: [crypto-news]
@@ -34,14 +35,6 @@ description: "2026-02-25 암호화폐 시장에서 116건의 뉴스를 분석했
 <div class="alert-box alert-info"><strong>암호화폐 시장 비트코인, 거래소 중심 116건 분석</strong><br><br>🟠 비트코인 (51건) — BTC vs ETH 투자 비교 분석, Binance 최악 시나리오 경고<br>🏦 거래소 (22건) — 거래소 규제 강화, Binance 관련 리스크 보도<br>📈 가격/시장 (19건) — 비트코인 급락 원인 3가지, 글로벌 경제 불확실성 영향<br>🔷 이더리움 (14건) — ETH 투자 매력도 재평가, BTC 대비 상대 가치 분석</div>
 
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><br><a href="https://news.google.com/read/CBMilgFBVV95cUxNVHZNVEtWTl84SXdaZWF1cFpfTm9LNmtadHU2WF9rQ09WT21LSnh4Z2dYY3RNaTlta203Mzl3Q1p0dE5zUXhJell0WklkX1RnUGxaN3d3SzdsNU9ZVjlMVW5EMDE1aWVyX3JQc0NkV3FVRGtRWFBydi1pUnJTcUhua1ZsTzNRbTVKTlM0X1NJTmR5UHRYMWc?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin is crashing for 3 reasons today</a><br><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNYldnVG9TczlMa2poLS0ydk1vV0FSa3lEekdxVm9XZl95dlR6QkgzR1B2ZDF0YlNMZnkzYUFjVVNPdG1kM0FNaWszSFN1cXg5NjYtVHpHR19GTjI4Y0huUXJqOWZMNHBkUkFqcG9kMzZaMXFhei02ck4yaUF4clo1LdIBlAFBVV95cUxNQVRBalJGTG5fZDFobzQ3NUJvSjlXcVctNjNEN0hTdG1NZUVIdGZ2UHpyMExsaEM2dm81dmwwX2Z1Z21CX1lraWFKS2pTSVg0R25VYWVMZzBfdVNmLVhoM1ZyekdfN2oySjdzZ3NVOFU1Q3ZOcTY2Z0dZRXZBUnFKbHNTTWl1Z1FLLVV6cWFpMHNuUEZv?oc=5">비트코인·금 ‘디커플링’ 심화</a></div>
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -153,7 +146,6 @@ An Australian national was said to sell cyber tools designed for the U.S. govern
 <a href="https://www.coindesk.com/policy/2026/02/24/fed-proposes-rule-to-deal-with-crypto-debanking-by-scrapping-reputation-risk">Fed proposes rule to deal with crypto debanking by scrapping 'reputation risk'</a>
 <a href="https://www.coindesk.com/markets/2026/02/24/adam-back-s-bstr-moving-forward-with-public-listing-plans-hopes-for-april-approval">Adam Back's BSTR moving forward with public listing plans, hopes for April approval</a>
 </details>
-
 
 
 ## 거래소 공지사항

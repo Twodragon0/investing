@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "주식 시장 뉴스 종합 - 2026-02-10"
 date: 2026-02-10 03:29:15 +0000
 categories: [stock-news]
 tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
+description: "글로벌 시장: 다우지수 50000 돌파 후 기술주 중심 2일 연속 반등, 변동성 확대 국면 2. 한국 시장: 코스피 5000 돌파하며 역사적 고점 경신, 코스닥 1000선 회복 3. 리스크 요인: 중국의 미국채..."
 ---
 
 ## 한줄 요약

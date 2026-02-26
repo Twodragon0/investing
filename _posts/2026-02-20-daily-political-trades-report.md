@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "정치인 거래·정책 리포트 - 2026-02-20"
 date: 2026-02-20 01:35:28 +0000
 categories: [political-trades]
 tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-trading]
 source: "consolidated"
 lang: "ko"
+description: 2026-02-20 정치인 거래·정책 동향 10건을 요약 분석합니다.
 ---
 
 **2026-02-20** 정치인 거래·정책 동향 10건을 요약 분석합니다.
@@ -20,40 +22,6 @@ lang: "ko"
 <div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:20%"></div></div><span class="theme-count">2건 (20%)</span></div></div>
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약

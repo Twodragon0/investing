@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-02-26"
 date: 2026-02-26 03:54:26 +0000
 categories: [market-analysis]
