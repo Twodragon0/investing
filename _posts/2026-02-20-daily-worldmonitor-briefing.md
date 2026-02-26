@@ -8,6 +8,7 @@ source: "worldmonitor"
 source_url: "https://worldmonitor.app"
 lang: "ko"
 description: 2026-02-20 글로벌 뉴스 20건을 정리한 지정학·매크로 브리핑입니다.
+image: "/assets/images/generated/news-briefing-worldmonitor-2026-02-20.png"
 ---
 
 **2026-02-20** 글로벌 뉴스 20건을 정리한 지정학·매크로 브리핑입니다.

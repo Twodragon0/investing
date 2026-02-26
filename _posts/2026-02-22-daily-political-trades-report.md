@@ -7,6 +7,7 @@ tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-
 source: "consolidated"
 lang: "ko"
 description: 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
+image: "/assets/images/generated/news-briefing-political-2026-02-22.png"
 ---
 
 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
