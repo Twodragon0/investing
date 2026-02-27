@@ -26,6 +26,7 @@ ko:
   next_post: "다음 포스트"
   scroll_hint: "← 스크롤 →"
   image_error: "이미지를 불러오지 못했습니다."
+  change_theme: "테마 변경"
 en:
   search_placeholder: "Search posts..."
   search_min_hint: "Please enter at least 2 characters."
@@ -54,6 +55,7 @@ en:
   next_post: "Next Post"
   scroll_hint: "← Scroll →"
   image_error: "Failed to load image."
+  change_theme: "Change theme"
 ja:
   search_placeholder: "記事を検索..."
   search_min_hint: "2文字以上入力してください。"
@@ -82,6 +84,7 @@ ja:
   next_post: "次の記事"
   scroll_hint: "← スクロール →"
   image_error: "画像を読み込めませんでした。"
+  change_theme: "テーマ変更"
 zh-CN:
   search_placeholder: "搜索文章..."
   search_min_hint: "请输入至少2个字符。"
@@ -110,6 +113,7 @@ zh-CN:
   next_post: "下一篇"
   scroll_hint: "← 滚动 →"
   image_error: "图片加载失败。"
+  change_theme: "切换主题"
 es:
   search_placeholder: "Buscar publicaciones..."
   search_min_hint: "Ingrese al menos 2 caracteres."
@@ -138,3 +142,4 @@ es:
   next_post: "Publicación siguiente"
   scroll_hint: "← Desplazar →"
   image_error: "No se pudo cargar la imagen."
+  change_theme: "Cambiar tema"
