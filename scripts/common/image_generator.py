@@ -86,6 +86,58 @@ _FK = {"fontfamily": _FONT_STACK} if _MPL_AVAILABLE else {}
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 IMAGES_DIR = os.path.join(REPO_ROOT, "assets", "images", "generated")
 
+# Korean-to-English mapping for image text (CI has no CJK fonts)
+_KO_TO_EN = {
+    # generate_daily_summary.py _cross_asset_topics()
+    "금리/유동성": "Rates/Liquidity",
+    "환율/달러": "FX/Dollar",
+    "정책/규제": "Policy/Regulation",
+    "리스크 이벤트": "Risk Events",
+    "수급/심리": "Supply/Sentiment",
+    "실적/지표": "Earnings/Indicators",
+    # summarizer.py THEMES
+    "규제/정책": "Regulation/Policy",
+    "비트코인": "Bitcoin",
+    "이더리움": "Ethereum",
+    "AI/기술": "AI/Tech",
+    "매크로/금리": "Macro/Rates",
+    "거래소": "Exchange",
+    "보안/해킹": "Security/Hacking",
+    "정치/정책": "Politics/Policy",
+    "가격/시장": "Price/Market",
+    # collect_coinmarketcap.py
+    "공포/탐욕": "Fear/Greed",
+    "시장지배력": "Market Dominance",
+}
+
+
+def _to_en(text: str) -> str:
+    """Translate Korean text to English for image rendering."""
+    if text in _KO_TO_EN:
+        return _KO_TO_EN[text]
+    # If text contains any Hangul, try partial match or return as-is
+    import re
+
+    if re.search(r"[\uac00-\ud7af]", text):
+        # Check if it's a known prefix match
+        for ko, en in _KO_TO_EN.items():
+            if ko in text:
+                return text.replace(ko, en)
+        return text
+    return text
+
+
+def _filter_en_keywords(keywords: list) -> list:
+    """Filter out Korean-only keywords, keep English/mixed ones."""
+    import re
+
+    result = []
+    for kw in keywords:
+        # Keep if it has at least one Latin character
+        if re.search(r"[a-zA-Z]", kw):
+            result.append(kw)
+    return result
+
 # Dark theme colors
 COLORS = {
     "bg": "#0d1117",
@@ -789,7 +841,7 @@ def generate_news_summary_card(
         COLORS["text_secondary"],
     ]
 
-    names = [c["name"] for c in categories]
+    names = [_to_en(c["name"]) for c in categories]
     counts = [c["count"] for c in categories]
     colors = [bar_colors[i % len(bar_colors)] for i in range(len(names))]
 
@@ -1298,8 +1350,12 @@ def generate_sector_heatmap(
             fontfamily=_FONT_FAMILY,
         )
 
-        # Sector name (truncated)
-        name_short = info["name"].split("(")[0].strip()[:12]
+        # Sector name - extract English name from "한글 (English)" format
+        raw_name = info["name"]
+        if "(" in raw_name and ")" in raw_name:
+            name_short = raw_name.split("(")[1].rstrip(")")[:15]
+        else:
+            name_short = _to_en(raw_name)[:15]
         ax.text(
             x + cell_w / 2,
             y + cell_h * 0.55,
@@ -1493,14 +1549,14 @@ def generate_news_briefing_card(
         emoji = theme.get("emoji", "")
         if not use_emoji:
             emoji = ""
-        name = theme.get("name", "")
+        name = _to_en(theme.get("name", ""))
         count = theme.get("count", 0)
-        keywords = theme.get("keywords", [])
+        keywords = _filter_en_keywords(theme.get("keywords", []))
 
         ax.text(
             0.8,
             y + 0.05,
-            f"{emoji} {name}",
+            f"{emoji} {name}".strip(),
             fontsize=13,
             fontweight="bold",
             color=COLORS["text"],
@@ -1512,7 +1568,7 @@ def generate_news_briefing_card(
         ax.text(
             4.5,
             y + 0.05,
-            f"{count}건",
+            str(count),
             fontsize=12,
             fontweight="bold",
             color=t_color,
