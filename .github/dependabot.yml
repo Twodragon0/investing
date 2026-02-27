@@ -1,4 +1,8 @@
 version: 2
+
+# Enable security updates for all ecosystems
+registries: {}
+
 updates:
   - package-ecosystem: "pip"
     directory: "/scripts"
@@ -12,6 +16,12 @@ updates:
       - "python"
     commit-message:
       prefix: "chore(deps):"
+    groups:
+      security-patches:
+        applies-to: security-updates
+        update-types:
+          - "patch"
+          - "minor"
 
   - package-ecosystem: "bundler"
     directory: "/"

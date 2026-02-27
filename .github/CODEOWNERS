@@ -1,0 +1,15 @@
+# Code Owners - Require review for sensitive paths
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for everything
+* @2twodragon
+
+# CI/CD and workflow changes require owner review
+.github/ @2twodragon
+
+# Python scripts and data collection
+scripts/ @2twodragon
+
+# Site configuration
+_config.yml @2twodragon
+Gemfile @2twodragon

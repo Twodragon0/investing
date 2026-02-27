@@ -5,7 +5,19 @@ _site/
 vendor/
 .bundle/
 node_modules/
+# Secrets and credentials
 .env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+secrets.json
+credentials.json
+service-account*.json
+
+# Editor files
 *.swp
 *.swo
 *~

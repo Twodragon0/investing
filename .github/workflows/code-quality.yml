@@ -39,11 +39,16 @@ jobs:
           tar -xzf /tmp/actionlint.tgz -C /tmp
           install /tmp/actionlint /usr/local/bin/actionlint
 
-      - name: Run ruff linter
+      - name: Run ruff linter (with security rules)
         run: python3 -m ruff check scripts/ --output-format=github
 
       - name: Run ruff format check
         run: python3 -m ruff format --check scripts/
+
+      - name: Run bandit security check (high severity)
+        run: |
+          pip install bandit
+          bandit -r scripts/ --severity-level high --confidence-level high -q || true
 
       - name: Run basedpyright type check
         run: python -m basedpyright
