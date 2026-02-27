@@ -72,6 +72,18 @@ jobs:
             ${{ secrets.AI_SLACK_CHANNEL_ID }}
             ${{ secrets.SLACK_CHANNEL }}
 
+      - name: Setup Python
+        if: steps.slack-config.outputs.can_post == 'true'
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: scripts/requirements.txt
+
+      - name: Install dependencies
+        if: steps.slack-config.outputs.can_post == 'true'
+        run: pip install -r scripts/requirements.txt
+
       - name: Respond to AI mentions
         if: steps.slack-config.outputs.can_post == 'true'
         env:

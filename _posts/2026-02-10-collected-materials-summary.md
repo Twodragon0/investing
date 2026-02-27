@@ -6,8 +6,8 @@ categories: [market-analysis]
 tags: [summary, daily-digest, market-analysis, stock-news, crypto-news, social-media, security]
 source: "consolidated"
 lang: "ko"
-description: "> 한줄 요약: 미국 기술주 반등 속 다우 50,000 신기록, 국내 코스피 5,300선 유지 
-image: "/assets/images/generated/news-briefing-collected-2026-02-10.png"--- 암호화폐는 트럼프 정책 불확실성 + DeFi 해킹으로 변동성 확대"
+description: "한줄 요약: 미국 기술주 반등 속 다우 50,000 신기록, 국내 코스피 5,300선 유지 - 암호화폐는 트럼프 정책 불확실성 + DeFi 해킹으로 변동성 확대"
+image: "/assets/images/generated/news-briefing-collected-2026-02-10.png"
 pin: false
 ---
 
