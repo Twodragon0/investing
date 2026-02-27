@@ -41,6 +41,18 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="ko_KR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="ja_JP">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="og:locale:alternate" content="zh_TW">
+
+  <!-- Hreflang for multilingual SEO -->
+  <link rel="alternate" hreflang="ko" href="{{ og_url }}">
+  <link rel="alternate" hreflang="en" href="{{ og_url }}">
+  <link rel="alternate" hreflang="ja" href="{{ og_url }}">
+  <link rel="alternate" hreflang="zh-Hans" href="{{ og_url }}">
+  <link rel="alternate" hreflang="zh-Hant" href="{{ og_url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ og_url }}">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -59,9 +71,17 @@
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
+  <script>
+    window.__i18n = {{ site.data.translations | jsonify }};
+    window.__t = function(key) {
+      var lang = (localStorage.getItem('preferredLang') || 'ko').replace('system','ko');
+      var t = window.__i18n[lang] || window.__i18n['ko'];
+      return (t && t[key]) || (window.__i18n['ko'] && window.__i18n['ko'][key]) || key;
+    };
+  </script>
 </head>
 <body>
-  <a href="#main-content" class="skip-to-content">본문으로 건너뛰기</a>
+  <a href="#main-content" class="skip-to-content" data-i18n="skip_to_content">본문으로 건너뛰기</a>
   {% include header.html %}
   <div class="reading-progress" id="reading-progress"></div>
   <main class="container" id="main-content">
