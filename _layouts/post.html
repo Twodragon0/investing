@@ -10,7 +10,7 @@ layout: default
 
 <article class="post-detail">
   <div class="post-breadcrumb">
-    <a href="{{ '/' | relative_url }}">홈</a>
+    <a href="{{ '/' | relative_url }}" data-i18n="home">홈</a>
     <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M4 2l4 4-4 4"/></svg>
     <a href="{{ first_cat | prepend: '/' | append: '/' | relative_url }}">{{ cat_name }}</a>
   </div>
@@ -28,7 +28,7 @@ layout: default
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
         </svg>
-        <span>{{ reading_time }}분 읽기</span>
+        <span><span class="reading-time-num">{{ reading_time }}</span><span data-i18n="reading_time">분 읽기</span></span>
       </span>
       <span class="post-meta-item">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -56,14 +56,14 @@ layout: default
 
   {% if page.excerpt %}
   <section class="post-summary">
-    <div class="summary-label">요약</div>
+    <div class="summary-label" data-i18n="summary">요약</div>
     <p>{{ page.excerpt | strip_html }}</p>
   </section>
   {% endif %}
 
   <nav class="post-toc" id="post-toc">
     <div class="toc-header" id="toc-header">
-      <span class="toc-title">목차</span>
+      <span class="toc-title" data-i18n="toc">목차</span>
       <svg class="toc-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <ol class="toc-list" id="toc-list"></ol>
@@ -80,24 +80,24 @@ layout: default
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
         </svg>
-        원문 보기
+        <span data-i18n="view_original">원문 보기</span>
       </a>
     </div>
     {% endif %}
 
     <div class="post-share">
-      <span class="share-label">공유하기</span>
+      <span class="share-label" data-i18n="share">공유하기</span>
       <button class="share-btn share-twitter" id="share-twitter">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
           <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
         </svg>
-        트위터
+        <span data-i18n="twitter">트위터</span>
       </button>
       <button class="share-btn share-copy" id="share-copy">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
         </svg>
-        링크 복사
+        <span data-i18n="copy_link">링크 복사</span>
       </button>
     </div>
   </section>
@@ -114,7 +114,7 @@ layout: default
   {% assign shown_urls = "|" %}
   {% if related_all.size > 0 %}
   <section class="related-posts">
-    <h3>관련 포스트</h3>
+    <h3 data-i18n="related_posts">관련 포스트</h3>
     <div class="related-posts-grid">
       {% comment %}
         단일 루프로 우선순위별 관련 포스트 선별:
@@ -190,13 +190,13 @@ layout: default
   <nav class="post-nav">
     {% if page.previous %}
     <a href="{{ page.previous.url | relative_url }}" class="post-nav-link prev">
-      <span class="post-nav-label">이전 포스트</span>
+      <span class="post-nav-label" data-i18n="prev_post">이전 포스트</span>
       <span class="post-nav-title">{{ page.previous.title | truncate: 50 }}</span>
     </a>
     {% endif %}
     {% if page.next %}
     <a href="{{ page.next.url | relative_url }}" class="post-nav-link next">
-      <span class="post-nav-label">다음 포스트</span>
+      <span class="post-nav-label" data-i18n="next_post">다음 포스트</span>
       <span class="post-nav-title">{{ page.next.title | truncate: 50 }}</span>
     </a>
     {% endif %}
@@ -342,7 +342,7 @@ layout: default
       if (!img.nextElementSibling || !img.nextElementSibling.classList.contains('post-image-placeholder')) {
         var holder = document.createElement('div');
         holder.className = 'post-image-placeholder';
-        holder.textContent = '이미지를 불러오지 못했습니다.';
+        holder.textContent = (typeof window.__t === 'function') ? window.__t('image_error') : '이미지를 불러오지 못했습니다.';
         img.insertAdjacentElement('afterend', holder);
       }
     }, { once: true });
@@ -362,7 +362,7 @@ layout: default
   lbImg.className = 'lightbox-img';
   var lbClose = document.createElement('button');
   lbClose.className = 'lightbox-close';
-  lbClose.setAttribute('aria-label', '닫기');
+  lbClose.setAttribute('aria-label', (typeof window.__t === 'function') ? window.__t('close_label') : '닫기');
   lbClose.textContent = '\u00D7';
   overlay.appendChild(lbImg);
   overlay.appendChild(lbClose);
@@ -414,7 +414,7 @@ layout: default
         if (!wrap.querySelector('.scroll-hint')) {
           var hint = document.createElement('span');
           hint.className = 'scroll-hint';
-          hint.textContent = '\u2190 \uC2A4\uD06C\uB864 \u2192';
+          hint.textContent = (typeof window.__t === 'function') ? window.__t('scroll_hint') : '\u2190 \uC2A4\uD06C\uB864 \u2192';
           wrap.appendChild(hint);
         }
       } else {
@@ -463,10 +463,12 @@ if (shareCopyBtn) {
       var poly = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
       poly.setAttribute('points', '20 6 9 17 4 12');
       svg.appendChild(poly); btn.appendChild(svg);
-      btn.appendChild(document.createTextNode(' 복사됨!'));
+      var copiedText = (typeof window.__t === 'function') ? window.__t('copied') : '복사됨!';
+      btn.appendChild(document.createTextNode(' ' + copiedText));
       setTimeout(function() { btn.innerHTML = originalHTML; }, 2000);
     }).catch(function() {
-      window.prompt('링크를 복사하세요:', url);
+      var promptText = (typeof window.__t === 'function') ? window.__t('copy_prompt') : '링크를 복사하세요:';
+      window.prompt(promptText, url);
     });
   });
 }
