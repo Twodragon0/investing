@@ -14,7 +14,7 @@ function googleTranslateElementInit() {
     }
     new google.translate.TranslateElement({
       pageLanguage: 'ko',
-      includedLanguages: 'en,ja,zh-CN,zh-TW',
+      includedLanguages: 'en,ja,zh-CN,es',
       layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
       autoDisplay: false
     }, 'google_translate_element');
@@ -27,13 +27,13 @@ function googleTranslateElementInit() {
 (function() {
   'use strict';
 
-  var LANG_MAP = { 'ko': 'KO', 'en': 'EN', 'ja': 'JA', 'zh-CN': 'CN', 'zh-TW': 'TW', 'zh': 'CN' };
+  var LANG_MAP = { 'ko': 'KO', 'en': 'EN', 'ja': 'JA', 'zh-CN': 'CN', 'zh': 'CN', 'es': 'ES' };
   var LANG_LABELS = {
     'ko': { flag: '\uD83C\uDDF0\uD83C\uDDF7', name: '\uD55C\uAD6D\uC5B4' },
     'en': { flag: '\uD83C\uDDFA\uD83C\uDDF8', name: 'English' },
     'ja': { flag: '\uD83C\uDDEF\uD83C\uDDF5', name: '\u65E5\u672C\u8A9E' },
     'zh-CN': { flag: '\uD83C\uDDE8\uD83C\uDDF3', name: '\u7B80\u4F53\u4E2D\u6587' },
-    'zh-TW': { flag: '\uD83C\uDDF9\uD83C\uDDFC', name: '\u7E41\u9AD4\u4E2D\u6587' }
+    'es': { flag: '\uD83C\uDDEA\uD83C\uDDF8', name: 'Espa\u00F1ol' }
   };
   var translateScriptLoaded = false;
   var maxRetries = 3;
@@ -80,9 +80,9 @@ function googleTranslateElementInit() {
     var l = (navigator.language || navigator.userLanguage || 'ko').toLowerCase();
     if (l.startsWith('ko')) return 'ko';
     if (l.startsWith('ja')) return 'ja';
-    if (l.startsWith('zh-tw') || l.startsWith('zh-hant')) return 'zh-TW';
     if (l.startsWith('zh')) return 'zh-CN';
     if (l.startsWith('en')) return 'en';
+    if (l.startsWith('es')) return 'es';
     return 'ko';
   }
 
