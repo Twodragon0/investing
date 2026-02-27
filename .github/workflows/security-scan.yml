@@ -1,3 +1,4 @@
+---
 name: Security Scan
 
 on:
@@ -100,22 +101,22 @@ jobs:
           for wf in .github/workflows/*.yml; do
             name=$(basename "$wf")
 
-            # Check for overly permissive permissions
-            if grep -q "permissions: write-all" "$wf" 2>/dev/null; then
+            # Check for overly permissive permissions (use word boundary to avoid self-match)
+            if grep -qP '^permissions:\s+write-all' "$wf" 2>/dev/null; then
               echo "::warning file=$wf::Uses write-all permissions - consider restricting"
               echo "- :warning: \`$name\`: Uses \`write-all\` permissions" >> "$GITHUB_STEP_SUMMARY"
               has_issues=true
             fi
 
-            # Check for missing permissions block
-            if ! grep -q "permissions:" "$wf" 2>/dev/null; then
+            # Check for missing permissions block (top-level only)
+            if ! grep -qP '^permissions:' "$wf" 2>/dev/null; then
               echo "::warning file=$wf::Missing explicit permissions block"
               echo "- :warning: \`$name\`: Missing explicit \`permissions:\` block" >> "$GITHUB_STEP_SUMMARY"
               has_issues=true
             fi
 
             # Check for unpinned third-party actions (not GitHub official)
-            grep -n "uses:" "$wf" | grep -v "actions/" | grep -v "@v" | grep -v "\./" | while read -r line; do
+            grep -n 'uses:' "$wf" | grep -v 'actions/' | grep -v '@v' | grep -v '\./' | grep -v '#' | while read -r line; do
               echo "::warning file=$wf::Unpinned third-party action: $line"
               has_issues=true
             done

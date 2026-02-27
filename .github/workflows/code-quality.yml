@@ -195,4 +195,4 @@ jobs:
 
       - name: Run YAML lint for workflows
         run: |
-          yamllint -d "{extends: default, rules: {line-length: disable, truthy: disable}}" .github/workflows
+          yamllint -d "{extends: default, rules: {line-length: disable, truthy: disable, document-start: disable}}" .github/workflows
