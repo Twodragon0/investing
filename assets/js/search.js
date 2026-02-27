@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
       var hint = document.createElement('div');
       hint.style.cssText = 'text-align: center; padding: 3rem; color: #8b949e;';
       var hintP = document.createElement('p');
-      hintP.textContent = '검색어를 2자 이상 입력해주세요.';
+      hintP.textContent = (typeof window.__t === 'function') ? window.__t('search_min_hint') : '검색어를 2자 이상 입력해주세요.';
       hint.appendChild(hintP);
       searchResults.appendChild(hint);
       return;
@@ -42,9 +42,11 @@ document.addEventListener('DOMContentLoaded', function() {
       searchResults.textContent = '';
       var noDiv = document.createElement('div');
       noDiv.style.cssText = 'text-align: center; padding: 3rem; color: #8b949e;';
-      noDiv.innerHTML = '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity: 0.5; margin-bottom: 1rem;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">검색 결과가 없습니다</p>';
+      var noResultsText = (typeof window.__t === 'function') ? window.__t('no_results') : '검색 결과가 없습니다';
+      noDiv.innerHTML = '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity: 0.5; margin-bottom: 1rem;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">' + noResultsText + '</p>';
+      var noResultsFor = (typeof window.__t === 'function') ? window.__t('no_results_for') : '에 대한 포스트를 찾을 수 없습니다.';
       var queryP = document.createElement('p');
-      queryP.textContent = '"' + query + '"에 대한 포스트를 찾을 수 없습니다.';
+      queryP.textContent = '"' + query + '" ' + noResultsFor;
       noDiv.appendChild(queryP);
       searchResults.appendChild(noDiv);
       return;
