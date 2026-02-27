@@ -15,7 +15,6 @@ from typing import Any, Dict, List, Tuple
 
 from common.config import get_kst_timezone
 
-
 GITHUB_API_BASE = "https://api.github.com"
 SLACK_API_BASE = "https://slack.com/api"
 
@@ -149,9 +148,7 @@ def collect_vercel_summary() -> VercelSummary:
     def state_of(item: Dict[str, Any]) -> str:
         return str(item.get("state") or item.get("readyState") or "").upper()
 
-    prod_candidates = [
-        d for d in deployments if str(d.get("target") or "").lower() == "production"
-    ]
+    prod_candidates = [d for d in deployments if str(d.get("target") or "").lower() == "production"]
     primary = prod_candidates[0] if prod_candidates else deployments[0]
     primary_state = state_of(primary) or "UNKNOWN"
 
@@ -173,11 +170,7 @@ def collect_vercel_summary() -> VercelSummary:
     if not logs_ok:
         logs_state = "UNKNOWN"
     else:
-        logs_state = (
-            "YES"
-            if re.search(r"error|exception|failed|fatal", logs_out, re.IGNORECASE)
-            else "NO"
-        )
+        logs_state = "YES" if re.search(r"error|exception|failed|fatal", logs_out, re.IGNORECASE) else "NO"
 
     return VercelSummary(
         production_state=primary_state,
@@ -215,10 +208,7 @@ def collect_openclaw_summary() -> OpenClawSummary:
             line = raw_line.strip().lower()
             if line.startswith("fallbacks"):
                 models_line = raw_line.strip()
-            if any(
-                keyword in line
-                for keyword in ["expired", "missing", "failed", "error", "unusable"]
-            ):
+            if any(keyword in line for keyword in ["expired", "missing", "failed", "error", "unusable"]):
                 degraded_or_missing += 1
                 auth_issues += 1
             elif "expires in 0m" in line:
@@ -257,9 +247,7 @@ def collect_slack_health(token: str, channel: str) -> SlackHealth:
     except urllib.error.URLError:
         return SlackHealth(status="UNRESOLVED", detail="auth.test request failed")
     if not auth.get("ok"):
-        return SlackHealth(
-            status="UNRESOLVED", detail=f"auth.test={auth.get('error', 'unknown')}"
-        )
+        return SlackHealth(status="UNRESOLVED", detail=f"auth.test={auth.get('error', 'unknown')}")
     return SlackHealth(status="READY", detail="auth.test ok")
 
 
@@ -280,9 +268,7 @@ def should_post_today(token: str, channel: str, marker: str) -> bool:
         for message in history.get("messages", []):
             if marker in str(message.get("text", "")):
                 return False
-        cursor = str(
-            history.get("response_metadata", {}).get("next_cursor", "")
-        ).strip()
+        cursor = str(history.get("response_metadata", {}).get("next_cursor", "")).strip()
         if not cursor:
             break
     return True
@@ -300,16 +286,11 @@ def write_state(path: Path, payload: Dict[str, Any]) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def build_actions(
-    gh: GitHubSummary, vercel: VercelSummary, oc: OpenClawSummary, slack: SlackHealth
-) -> List[str]:
+def build_actions(gh: GitHubSummary, vercel: VercelSummary, oc: OpenClawSummary, slack: SlackHealth) -> List[str]:
     actions: List[str] = []
     if gh.failure_count_24h > 0:
         actions.append("@ops | 10:30 | GitHub 실패 워크플로우 원인 확인")
-    if (
-        vercel.recent3_failure_rate != "UNAVAILABLE"
-        and vercel.recent3_failure_rate != "0/3"
-    ):
+    if vercel.recent3_failure_rate != "UNAVAILABLE" and vercel.recent3_failure_rate != "0/3":
         actions.append("@ops | 10:30 | Vercel 최근 배포/로그 점검")
     if oc.fallback_degraded_or_missing > 0 or oc.auth_issue_count > 0:
         actions.append("@ai | 11:00 | OpenClaw fallback provider auth 재검증")
@@ -338,24 +319,14 @@ def format_digest(
     )
 
     fallback_state = (
-        f"{oc.fallback_degraded_or_missing}/{oc.fallback_total} degraded_or_missing"
-        if oc.fallback_total > 0
-        else "0/0"
+        f"{oc.fallback_degraded_or_missing}/{oc.fallback_total} degraded_or_missing" if oc.fallback_total > 0 else "0/0"
     )
     p1_line = f"P1: 모델 라우팅 내구성 {fallback_state} | 최근 배포 실패율 {vercel.recent3_failure_rate}"
 
     prev_gh = prev_state.get("gh_failure_count_24h")
     prev_deg = prev_state.get("fallback_degraded_or_missing")
-    gh_delta = (
-        "N/A"
-        if prev_gh is None or gh.failure_count_24h < 0
-        else f"{gh.failure_count_24h - int(prev_gh):+d}"
-    )
-    deg_delta = (
-        "N/A"
-        if prev_deg is None
-        else f"{oc.fallback_degraded_or_missing - int(prev_deg):+d}"
-    )
+    gh_delta = "N/A" if prev_gh is None or gh.failure_count_24h < 0 else f"{gh.failure_count_24h - int(prev_gh):+d}"
+    deg_delta = "N/A" if prev_deg is None else f"{oc.fallback_degraded_or_missing - int(prev_deg):+d}"
     p2_line = f"P2: 전일 대비 GH 실패 {gh_delta}, 모델 가용성 이슈 {deg_delta}"
 
     action_line = " / ".join(actions[:2])
@@ -391,9 +362,7 @@ def write_github_outputs(payload: Dict[str, str]) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Generate 10AM ops Slack digest")
-    parser.add_argument(
-        "--repo", default=os.getenv("GITHUB_REPOSITORY", "Twodragon0/investing")
-    )
+    parser.add_argument("--repo", default=os.getenv("GITHUB_REPOSITORY", "Twodragon0/investing"))
     parser.add_argument("--github-token", default=os.getenv("GITHUB_TOKEN", ""))
     parser.add_argument("--slack-token", default=os.getenv("SLACK_BOT_TOKEN", ""))
     parser.add_argument("--slack-channel", default=os.getenv("SLACK_CHANNEL_ID", ""))

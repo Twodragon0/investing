@@ -33,9 +33,7 @@ def markdown_table(
         sep_cells = ["---" for _ in headers]
 
     sep_line = "| " + " | ".join(sep_cells) + " |"
-    row_lines = [
-        "| " + " | ".join(escape_table_cell(c) for c in row) + " |" for row in rows
-    ]
+    row_lines = ["| " + " | ".join(escape_table_cell(c) for c in row) + " |" for row in rows]
     return "\n".join([header_line, sep_line, *row_lines])
 
 
@@ -43,14 +41,9 @@ def html_text(value: object) -> str:
     return escape(str(value or "").replace("|", "&#124;").strip(), quote=True)
 
 
-def html_details_list(
-    summary: str, items: Iterable[str], css_class: str = "details-content"
-) -> str:
+def html_details_list(summary: str, items: Iterable[str], css_class: str = "details-content") -> str:
     li = "".join(f"<li>{item}</li>" for item in items)
-    return (
-        f"<details><summary>{html_text(summary)}</summary>"
-        f'<div class="{css_class}"><ol>{li}</ol></div></details>'
-    )
+    return f'<details><summary>{html_text(summary)}</summary><div class="{css_class}"><ol>{li}</ol></div></details>'
 
 
 def html_source_tag(source: str) -> str:
@@ -80,9 +73,7 @@ def _normalize_url(url: str) -> str:
     return url
 
 
-def dedupe_references(
-    references: Iterable[Dict[str, str]], limit: Optional[int] = None
-) -> List[Dict[str, str]]:
+def dedupe_references(references: Iterable[Dict[str, str]], limit: Optional[int] = None) -> List[Dict[str, str]]:
     deduped: List[Dict[str, str]] = []
     seen_keys: set = set()
 

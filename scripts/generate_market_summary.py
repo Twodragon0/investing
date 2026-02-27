@@ -11,35 +11,37 @@ Enhanced version with:
 - High-quality Korean market analysis summary
 """
 
-import sys
 import os
 import re
+import sys
 import time
-import requests
-from datetime import datetime, timedelta
-from typing import Dict, Any, List, Optional
 from collections import OrderedDict
+from datetime import datetime, timedelta
+from typing import Any, Dict, List, Optional
+
+import requests
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.config import (
+    REQUEST_TIMEOUT,
     get_env,
     get_kst_timezone,
-    setup_logging,
     get_ssl_verify,
-    REQUEST_TIMEOUT,
+    setup_logging,
 )
-from common.markdown_utils import markdown_link, markdown_table
-from common.utils import request_with_retry
-from common.post_generator import PostGenerator
-from common.dedup import DedupEngine
 from common.crypto_api import (
+    fetch_coingecko_global,
     fetch_coingecko_top_coins,
     fetch_coingecko_trending,
-    fetch_coingecko_global,
     fetch_fear_greed_index,
 )
-from common.formatters import fmt_number as _fmt, fmt_percent as _pct
+from common.dedup import DedupEngine
+from common.formatters import fmt_number as _fmt
+from common.formatters import fmt_percent as _pct
+from common.markdown_utils import markdown_link, markdown_table
+from common.post_generator import PostGenerator
+from common.utils import request_with_retry
 
 logger = setup_logging("generate_market_summary")
 
@@ -97,9 +99,7 @@ def fetch_us_market_data(api_key: str) -> Dict[str, Dict[str, str]]:
                     "symbol": symbol,
                     "apikey": api_key,
                 }
-                resp = requests.get(
-                    url, params=params, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL
-                )
+                resp = requests.get(url, params=params, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
                 resp.raise_for_status()
                 quote = resp.json().get("Global Quote", {})
                 if quote and quote.get("05. price"):
@@ -260,9 +260,7 @@ def format_commodity_data(data: Dict) -> str:
             icon = "🟢" if pct >= 0 else "🔴"
         except (ValueError, KeyError):
             icon = ""
-        lines.append(
-            f"| {name} | {info['price']} | {info['change']} | {icon} {info['change_pct']} |"
-        )
+        lines.append(f"| {name} | {info['price']} | {info['change']} | {icon} {info['change_pct']} |")
     return "\n".join(lines)
 
 
@@ -302,11 +300,7 @@ def fetch_fred_indicators(api_key: str) -> Dict[str, Dict[str, Any]]:
             obs = resp.json().get("observations", [])
             if obs and obs[0].get("value", ".") != ".":
                 current = float(obs[0]["value"])
-                previous = (
-                    float(obs[1]["value"])
-                    if len(obs) > 1 and obs[1].get("value", ".") != "."
-                    else None
-                )
+                previous = float(obs[1]["value"]) if len(obs) > 1 and obs[1].get("value", ".") != "." else None
                 results[key] = {
                     "label": label,
                     "value": current,
@@ -497,9 +491,7 @@ def format_sector_performance(data: Dict) -> str:
             "- [Finviz - S&P 500 Sectors](https://finviz.com/groups.ashx)"
         )
 
-    sorted_sectors = sorted(
-        data.items(), key=lambda x: x[1].get("change_pct", 0), reverse=True
-    )
+    sorted_sectors = sorted(data.items(), key=lambda x: x[1].get("change_pct", 0), reverse=True)
 
     rows = []
     for symbol, info in sorted_sectors:
@@ -560,11 +552,7 @@ def format_btc_etf(data: Dict) -> str:
 def format_whale_trades(items: list) -> str:
     """Format whale trades news section."""
     if not items:
-        return (
-            "> 고래 거래 데이터를 가져올 수 없습니다.\n\n"
-            "**참고 링크:**\n"
-            "- [Whale Alert](https://whale-alert.io/)"
-        )
+        return "> 고래 거래 데이터를 가져올 수 없습니다.\n\n**참고 링크:**\n- [Whale Alert](https://whale-alert.io/)"
 
     # URL 기반 중복 제거
     seen_urls = set()
@@ -682,9 +670,7 @@ def format_gainers_losers(coins: List[Dict]) -> str:
         return "*데이터를 가져올 수 없습니다.*"
 
     # Filter out stablecoins for meaningful rankings
-    non_stable = [
-        c for c in coins if c.get("symbol", "").lower() not in STABLECOIN_SYMBOLS
-    ]
+    non_stable = [c for c in coins if c.get("symbol", "").lower() not in STABLECOIN_SYMBOLS]
 
     by_change = sorted(
         non_stable,
@@ -756,9 +742,7 @@ def format_korean_market(data: Dict) -> str:
             icon = "🟢" if pct >= 0 else "🔴"
         except (ValueError, KeyError):
             icon = ""
-        rows.append(
-            [name, info["price"], info["change"], f"{icon} {info['change_pct']}"]
-        )
+        rows.append([name, info["price"], info["change"], f"{icon} {info['change_pct']}"])
     return markdown_table(["지수", "가격", "변동", "변동률"], rows)
 
 
@@ -851,13 +835,9 @@ def generate_key_highlights(
         gold = commodity_data.get("금 (Gold)")
         oil = commodity_data.get("원유 (WTI)")
         if gold:
-            bullets.append(
-                f"- **금**: ${gold['price']} ({gold['change']}, {gold['change_pct']})"
-            )
+            bullets.append(f"- **금**: ${gold['price']} ({gold['change']}, {gold['change_pct']})")
         if oil:
-            bullets.append(
-                f"- **원유(WTI)**: ${oil['price']} ({oil['change']}, {oil['change_pct']})"
-            )
+            bullets.append(f"- **원유(WTI)**: ${oil['price']} ({oil['change']}, {oil['change_pct']})")
 
     # Top movers
     if top_coins:
@@ -866,12 +846,8 @@ def generate_key_highlights(
             key=lambda c: c.get("price_change_percentage_24h") or 0,
             reverse=True,
         )
-        gainers = [
-            c for c in sorted_coins if (c.get("price_change_percentage_24h") or 0) > 0
-        ]
-        losers = [
-            c for c in sorted_coins if (c.get("price_change_percentage_24h") or 0) < 0
-        ]
+        gainers = [c for c in sorted_coins if (c.get("price_change_percentage_24h") or 0) > 0]
+        losers = [c for c in sorted_coins if (c.get("price_change_percentage_24h") or 0) < 0]
         if gainers and losers:
             best = gainers[0]
             worst = losers[-1]
@@ -895,12 +871,8 @@ def generate_insight(
     parts = []
 
     # Crypto market sentiment
-    mcap_change = (
-        global_data.get("market_cap_change_percentage_24h_usd", 0) if global_data else 0
-    )
-    btc_dom = (
-        global_data.get("market_cap_percentage", {}).get("btc", 0) if global_data else 0
-    )
+    mcap_change = global_data.get("market_cap_change_percentage_24h_usd", 0) if global_data else 0
+    btc_dom = global_data.get("market_cap_percentage", {}).get("btc", 0) if global_data else 0
 
     if mcap_change > 5:
         parts.append(
@@ -911,9 +883,7 @@ def generate_insight(
             "암호화폐 시장이 **소폭 상승세**를 이어가고 있습니다. 안정적인 흐름 속에서 점진적 회복이 진행 중입니다."
         )
     elif mcap_change > -1:
-        parts.append(
-            "암호화폐 시장이 **보합세**를 보이고 있습니다. 뚜렷한 방향성 없이 횡보 구간이 이어지고 있습니다."
-        )
+        parts.append("암호화폐 시장이 **보합세**를 보이고 있습니다. 뚜렷한 방향성 없이 횡보 구간이 이어지고 있습니다.")
     elif mcap_change > -5:
         parts.append(
             "암호화폐 시장이 **하락세**를 보이고 있습니다. 단기 조정 가능성을 염두에 두고 리스크 관리가 필요합니다."
@@ -950,12 +920,8 @@ def generate_insight(
 
     # Top movers
     if top_coins:
-        best = max(
-            top_coins[:20], key=lambda c: c.get("price_change_percentage_24h") or -999
-        )
-        worst = min(
-            top_coins[:20], key=lambda c: c.get("price_change_percentage_24h") or 999
-        )
+        best = max(top_coins[:20], key=lambda c: c.get("price_change_percentage_24h") or -999)
+        worst = min(top_coins[:20], key=lambda c: c.get("price_change_percentage_24h") or 999)
         best_ch = best.get("price_change_percentage_24h", 0) or 0
         worst_ch = worst.get("price_change_percentage_24h", 0) or 0
         parts.append(
@@ -972,9 +938,7 @@ def generate_insight(
             try:
                 pct_val = float(pct_str.replace("%", "").replace("+", ""))
                 if abs(pct_val) > 2:
-                    parts.append(
-                        "미국 증시의 대폭 변동은 글로벌 위험자산 심리에 직접적 영향을 미칩니다."
-                    )
+                    parts.append("미국 증시의 대폭 변동은 글로벌 위험자산 심리에 직접적 영향을 미칩니다.")
             except (ValueError, AttributeError):
                 pass
 
@@ -983,9 +947,7 @@ def generate_insight(
         kospi = kr_market.get("KOSPI")
         usdkrw = kr_market.get("USD/KRW 환율")
         if kospi:
-            parts.append(
-                f"\n한국 증시는 KOSPI **{kospi['price']}** ({kospi['change_pct']})으로 마감했습니다."
-            )
+            parts.append(f"\n한국 증시는 KOSPI **{kospi['price']}** ({kospi['change_pct']})으로 마감했습니다.")
         if usdkrw:
             parts.append(
                 f"원달러 환율은 **{usdkrw['price']}**원으로, 환율 변동이 외국인 투자 심리에 영향을 줄 수 있습니다."
@@ -1013,15 +975,11 @@ def generate_quant_signals(top_coins: List, global_data: Dict, fear_greed: Dict)
     if btc:
         ch24 = btc.get("price_change_percentage_24h", 0) or 0
         ch7d = btc.get("price_change_percentage_7d_in_currency", 0) or 0
-        lines.append(
-            f"- BTC 모멘텀: 24h {ch24:+.2f}%, 7d {ch7d:+.2f}% ({_trend(ch24, ch7d)})"
-        )
+        lines.append(f"- BTC 모멘텀: 24h {ch24:+.2f}%, 7d {ch7d:+.2f}% ({_trend(ch24, ch7d)})")
     if eth:
         ch24 = eth.get("price_change_percentage_24h", 0) or 0
         ch7d = eth.get("price_change_percentage_7d_in_currency", 0) or 0
-        lines.append(
-            f"- ETH 모멘텀: 24h {ch24:+.2f}%, 7d {ch7d:+.2f}% ({_trend(ch24, ch7d)})"
-        )
+        lines.append(f"- ETH 모멘텀: 24h {ch24:+.2f}%, 7d {ch7d:+.2f}% ({_trend(ch24, ch7d)})")
 
     if global_data:
         mcap_change = global_data.get("market_cap_change_percentage_24h_usd", 0) or 0
@@ -1032,9 +990,7 @@ def generate_quant_signals(top_coins: List, global_data: Dict, fear_greed: Dict)
             regime = "리스크오프(방어적)"
         else:
             regime = "중립/대기"
-        lines.append(
-            f"- 시장 레짐: {regime} | 시총 24h {mcap_change:+.2f}%, BTC 도미넌스 {btc_dom:.1f}%"
-        )
+        lines.append(f"- 시장 레짐: {regime} | 시총 24h {mcap_change:+.2f}%, BTC 도미넌스 {btc_dom:.1f}%")
 
     if fear_greed:
         fg = fear_greed.get("value", "N/A")
@@ -1082,10 +1038,10 @@ def main():
     image_refs = []
     try:
         from common.image_generator import (
-            generate_top_coins_card,
             generate_fear_greed_gauge,
             generate_market_heatmap,
             generate_sector_heatmap,
+            generate_top_coins_card,
         )
 
         img = generate_market_heatmap(top_coins, today)
@@ -1097,9 +1053,7 @@ def main():
             image_refs.append(("top-coins", img))
 
         if fear_greed:
-            img = generate_fear_greed_gauge(
-                fear_greed["value"], fear_greed["classification"], today
-            )
+            img = generate_fear_greed_gauge(fear_greed["value"], fear_greed["classification"], today)
             if img:
                 image_refs.append(("fear-greed", img))
 
@@ -1123,16 +1077,12 @@ def main():
         for label, path in image_refs:
             # Convert absolute path to site-relative URL with baseurl
             filename = os.path.basename(path)
-            web_path = (
-                "{{ '/assets/images/generated/" + filename + "' | relative_url }}"
-            )
+            web_path = "{{ '/assets/images/generated/" + filename + "' | relative_url }}"
             img_lines.append(f"![{label}]({web_path})")
         sections["시장 시각화"] = "\n\n".join(img_lines)
 
     # Key highlights bullet points at the very top
-    highlights = generate_key_highlights(
-        global_data, top_coins, fear_greed, kr_market, commodity_data
-    )
+    highlights = generate_key_highlights(global_data, top_coins, fear_greed, kr_market, commodity_data)
     if highlights:
         sections["오늘의 핵심"] = highlights
 
@@ -1173,43 +1123,30 @@ def main():
         if btc:
             btc_price = btc.get("current_price", 0)
             btc_ch = btc.get("price_change_percentage_24h", 0) or 0
-            alert_lines.append(
-                f"<li><strong>BTC</strong>: ${btc_price:,.0f} ({btc_ch:+.2f}%)</li>"
-            )
+            alert_lines.append(f"<li><strong>BTC</strong>: ${btc_price:,.0f} ({btc_ch:+.2f}%)</li>")
         if eth:
             eth_price = eth.get("current_price", 0)
             eth_ch = eth.get("price_change_percentage_24h", 0) or 0
-            alert_lines.append(
-                f"<li><strong>ETH</strong>: ${eth_price:,.0f} ({eth_ch:+.2f}%)</li>"
-            )
+            alert_lines.append(f"<li><strong>ETH</strong>: ${eth_price:,.0f} ({eth_ch:+.2f}%)</li>")
 
     if kr_market:
         for name, info in kr_market.items():
-            alert_lines.append(
-                f"<li><strong>{name}</strong>: {info['price']} ({info['change_pct']})</li>"
-            )
+            alert_lines.append(f"<li><strong>{name}</strong>: {info['price']} ({info['change_pct']})</li>")
 
     if commodity_data:
         gold = commodity_data.get("금 (Gold)")
         oil = commodity_data.get("원유 (WTI)")
         if gold:
-            alert_lines.append(
-                f"<li><strong>금</strong>: ${gold['price']} ({gold['change_pct']})</li>"
-            )
+            alert_lines.append(f"<li><strong>금</strong>: ${gold['price']} ({gold['change_pct']})</li>")
         if oil:
-            alert_lines.append(
-                f"<li><strong>원유</strong>: ${oil['price']} ({oil['change_pct']})</li>"
-            )
+            alert_lines.append(f"<li><strong>원유</strong>: ${oil['price']} ({oil['change_pct']})</li>")
 
     exec_parts = []
     if stat_items:
         exec_parts.append(f'<div class="stat-grid">{"".join(stat_items)}</div>')
     if alert_lines:
         exec_parts.append(
-            '<div class="alert-box alert-info">'
-            "<strong>주요 자산 현황</strong>"
-            f"<ul>{''.join(alert_lines)}</ul>"
-            "</div>"
+            f'<div class="alert-box alert-info"><strong>주요 자산 현황</strong><ul>{"".join(alert_lines)}</ul></div>'
         )
     if exec_parts:
         sections["한눈에 보기"] = "\n\n".join(exec_parts)

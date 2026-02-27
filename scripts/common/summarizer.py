@@ -9,10 +9,10 @@ and generates markdown summary sections including:
 No LLM or external dependencies required.
 """
 
-import re
 import logging
+import re
 from collections import Counter
-from typing import List, Dict, Any, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 from .markdown_utils import html_source_tag
 
@@ -348,10 +348,7 @@ class ThemeSummarizer:
 
     def _score_themes(self):
         """Score each theme by keyword frequency across all items."""
-        all_text = " ".join(
-            (item.get("title", "") + " " + item.get("description", ""))
-            for item in self.items
-        ).lower()
+        all_text = " ".join((item.get("title", "") + " " + item.get("description", "")) for item in self.items).lower()
 
         token_freq = Counter(re.findall(r"[a-z가-힣]+", all_text))
 
@@ -373,18 +370,12 @@ class ThemeSummarizer:
                 if " " in kw or len(kw) >= 4 or re.search(r"[가-힣]", kw):
                     plain_kw.append(kw)
                 else:
-                    kw_patterns.append(
-                        re.compile(r"\b" + re.escape(kw) + r"\b", re.IGNORECASE)
-                    )
+                    kw_patterns.append(re.compile(r"\b" + re.escape(kw) + r"\b", re.IGNORECASE))
             for idx, item in enumerate(self.items):
-                item_text = (
-                    item.get("title", "") + " " + item.get("description", "")
-                ).lower()
+                item_text = (item.get("title", "") + " " + item.get("description", "")).lower()
                 hit = any(kw in item_text for kw in plain_kw)
                 if not hit:
-                    item_text_raw = (
-                        item.get("title", "") + " " + item.get("description", "")
-                    )
+                    item_text_raw = item.get("title", "") + " " + item.get("description", "")
                     hit = any(p.search(item_text_raw) for p in kw_patterns)
                 if hit:
                     matched.append(item)
@@ -424,9 +415,7 @@ class ThemeSummarizer:
             for idx, item in enumerate(self.items):
                 if idx in assigned:
                     continue
-                text = (
-                    item.get("title", "") + " " + item.get("description", "")
-                ).lower()
+                text = (item.get("title", "") + " " + item.get("description", "")).lower()
                 if any(kw in text for kw in keywords):
                     result[priority].append(item)
                     assigned.add(idx)
@@ -473,14 +462,10 @@ class ThemeSummarizer:
                 f"</div>"
             )
         lines.append("</div>")
-        lines.append(
-            f"\n*총 {len(self.items)}건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*\n"
-        )
+        lines.append(f"\n*총 {len(self.items)}건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*\n")
         return "\n".join(lines)
 
-    def generate_themed_news_sections(
-        self, max_articles: int = ARTICLES_PER_THEME, featured_count: int = 3
-    ) -> str:
+    def generate_themed_news_sections(self, max_articles: int = ARTICLES_PER_THEME, featured_count: int = 3) -> str:
         """Generate theme-based news sections with description cards.
 
         Top articles per theme include description summaries in card format.
@@ -532,11 +517,7 @@ class ThemeSummarizer:
                                 desc_text = desc_text[: idx + len(sep)].strip()
                                 break
                         else:
-                            desc_text = (
-                                desc_text[:200].rsplit(" ", 1)[0]
-                                if len(desc_text) > 200
-                                else desc_text
-                            )
+                            desc_text = desc_text[:200].rsplit(" ", 1)[0] if len(desc_text) > 200 else desc_text
                         lines.append(desc_text)
                     if source:
                         lines.append(f"{html_source_tag(source)}\n")
@@ -552,19 +533,10 @@ class ThemeSummarizer:
                 if shown >= max_articles:
                     break
 
-            overflow = len(
-                [
-                    a
-                    for a in articles
-                    if a.get("title") and a["title"] not in seen_titles
-                ]
-            )
+            overflow = len([a for a in articles if a.get("title") and a["title"] not in seen_titles])
             remaining_count = len(remaining_links) + overflow
             if remaining_links:
-                lines.append(
-                    f"<details><summary>그 외 {remaining_count}건 보기</summary>"
-                    f'<div class="details-content">'
-                )
+                lines.append(f'<details><summary>그 외 {remaining_count}건 보기</summary><div class="details-content">')
                 for link_html in remaining_links[:15]:
                     lines.append(link_html)
                 if remaining_count > 15:
@@ -663,7 +635,6 @@ class ThemeSummarizer:
         "report",
         "check",
         "according",
-        "report",
         "following",
         "based",
         # Korean common
@@ -683,9 +654,7 @@ class ThemeSummarizer:
         "주요뉴스",
     }
 
-    def _generate_single_theme_briefing(
-        self, theme_key: str, articles: List[Dict[str, Any]]
-    ) -> str:
+    def _generate_single_theme_briefing(self, theme_key: str, articles: List[Dict[str, Any]]) -> str:
         """Generate a 1-sentence briefing for a single theme from descriptions.
 
         Extracts the most informative snippet from top article descriptions
@@ -810,10 +779,7 @@ class ThemeSummarizer:
         # Narrative intro based on theme count
         if top_themes and len(top_themes) >= 2:
             theme_count = min(len(top_themes), 3)
-            lines.append(
-                f"오늘 수집된 **{total}건**의 뉴스에서 크게 "
-                f"**{theme_count}가지 흐름**이 감지됩니다.\n"
-            )
+            lines.append(f"오늘 수집된 **{total}건**의 뉴스에서 크게 **{theme_count}가지 흐름**이 감지됩니다.\n")
 
             # Theme-based narrative paragraphs with snippets
             for i, (name, key, emoji, count) in enumerate(top_themes[:3], 1):
@@ -825,10 +791,7 @@ class ThemeSummarizer:
                     lines.append(f"{i}. **{emoji} {name}** ({count}건)")
             lines.append("")
         elif top_themes:
-            lines.append(
-                f"총 **{total}건**의 뉴스가 수집되었으며, "
-                f"**{top_themes[0][0]}** 테마가 주도하고 있습니다.\n"
-            )
+            lines.append(f"총 **{total}건**의 뉴스가 수집되었으며, **{top_themes[0][0]}** 테마가 주도하고 있습니다.\n")
         else:
             lines.append(f"총 **{total}건**의 뉴스가 수집되었습니다.\n")
 
@@ -854,9 +817,7 @@ class ThemeSummarizer:
         # Additional context
         region_counts = extra.get("region_counts")
         if region_counts:
-            regions_str = ", ".join(
-                f"{name} {count}건" for name, count in region_counts.most_common(2)
-            )
+            regions_str = ", ".join(f"{name} {count}건" for name, count in region_counts.most_common(2))
             if regions_str:
                 lines.append(f"**주요 지역**: {regions_str}")
 
@@ -920,9 +881,7 @@ class ThemeSummarizer:
         # Stat grid
         stat_items = []
         stat_items.append(
-            f'<div class="stat-item">'
-            f'<div class="stat-value">{total}</div>'
-            f'<div class="stat-label">수집 건수</div></div>'
+            f'<div class="stat-item"><div class="stat-value">{total}</div><div class="stat-label">수집 건수</div></div>'
         )
         if top_themes:
             t = top_themes[0]
@@ -962,9 +921,7 @@ class ThemeSummarizer:
 
         # Theme briefings as info callout
         briefing_items = []
-        _sponsored_re = re.compile(
-            r"\s*[Ss]ponsored\s+by\s+@?\S+.*$", flags=re.MULTILINE
-        )
+        _sponsored_re = re.compile(r"\s*[Ss]ponsored\s+by\s+@?\S+.*$", flags=re.MULTILINE)
         for name, key, emoji, count in top_themes[:4]:
             articles = self._theme_articles.get(key, [])
             if not articles:
@@ -983,9 +940,7 @@ class ThemeSummarizer:
                             top_desc = desc[: idx + len(sep)].strip()
                             break
                     if not top_desc:
-                        top_desc = (
-                            desc[:150].rsplit(" ", 1)[0] if len(desc) > 150 else desc
-                        )
+                        top_desc = desc[:150].rsplit(" ", 1)[0] if len(desc) > 150 else desc
                     break
             # Fallback: use the top article title (full, no truncation)
             if not top_desc:
@@ -996,20 +951,13 @@ class ThemeSummarizer:
                         top_desc = title
                         break
             if top_desc:
-                briefing_items.append(
-                    f"<li>{emoji} <strong>{name}</strong> ({count}건): {top_desc}</li>"
-                )
+                briefing_items.append(f"<li>{emoji} <strong>{name}</strong> ({count}건): {top_desc}</li>")
             else:
-                briefing_items.append(
-                    f"<li>{emoji} <strong>{name}</strong>: {count}건 수집</li>"
-                )
+                briefing_items.append(f"<li>{emoji} <strong>{name}</strong>: {count}건 수집</li>")
 
         if briefing_items:
             lines.append(
-                f'<div class="alert-box alert-info">'
-                f"<strong>{opener}</strong>"
-                f"<ul>{''.join(briefing_items)}</ul>"
-                f"</div>"
+                f'<div class="alert-box alert-info"><strong>{opener}</strong><ul>{"".join(briefing_items)}</ul></div>'
             )
 
         # P0 urgent alerts as red callout
@@ -1025,10 +973,7 @@ class ThemeSummarizer:
                     p0_items.append(f"<li>{title}</li>")
             if p0_items:
                 lines.append(
-                    f'<div class="alert-box alert-urgent">'
-                    f"<strong>긴급 알림</strong>"
-                    f"<ul>{''.join(p0_items)}</ul>"
-                    f"</div>"
+                    f'<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul>{"".join(p0_items)}</ul></div>'
                 )
 
         return "\n".join(lines)

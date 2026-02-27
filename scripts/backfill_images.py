@@ -7,10 +7,10 @@ image using the image_generator module, and updates the post frontmatter
 with the new image path.
 """
 
-import sys
+import importlib.util
 import os
 import re
-import importlib.util
+import sys
 from typing import Dict, List, Optional, Tuple
 
 # Add scripts directory to path
@@ -18,9 +18,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 # Import setup_logging directly from common/config.py to avoid triggering
 # common/__init__.py which pulls in heavy dependencies (bs4, requests, etc.)
-_config_path = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)), "common", "config.py"
-)
+_config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "common", "config.py")
 _spec = importlib.util.spec_from_file_location("common_config", _config_path)
 assert _spec is not None and _spec.loader is not None
 _config_mod = importlib.util.module_from_spec(_spec)
@@ -283,9 +281,7 @@ def needs_image(filepath: str) -> bool:
     return False
 
 
-def extract_themes(
-    content: str, post_type: str, max_themes: int = 5
-) -> List[Dict[str, object]]:
+def extract_themes(content: str, post_type: str, max_themes: int = 5) -> List[Dict[str, object]]:
     """Extract section themes from post body content.
 
     Parses ## headings and counts bullet points per section,
@@ -359,9 +355,7 @@ def extract_categories_for_weekly(content: str) -> List[Dict[str, object]]:
 
         if line_stripped.startswith("## "):
             if current_section:
-                categories.append(
-                    {"name": current_section, "count": max(bullet_count, 1)}
-                )
+                categories.append({"name": current_section, "count": max(bullet_count, 1)})
             current_section = line_stripped[3:].strip()
             current_section = re.sub(r"[*_`]", "", current_section)
             bullet_count = 0
@@ -456,9 +450,7 @@ def _load_image_generator():
         return _IMG_GEN_MOD
     _IMG_GEN_LOADED = True
     try:
-        img_path = os.path.join(
-            os.path.dirname(os.path.abspath(__file__)), "common", "image_generator.py"
-        )
+        img_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "common", "image_generator.py")
         spec = importlib.util.spec_from_file_location("image_generator", img_path)
         assert spec is not None and spec.loader is not None
         mod = importlib.util.module_from_spec(spec)
@@ -470,9 +462,7 @@ def _load_image_generator():
         return None
 
 
-def generate_image_for_post(
-    filepath: str, post_type: str, date_str: str, body: str
-) -> Optional[str]:
+def generate_image_for_post(filepath: str, post_type: str, date_str: str, body: str) -> Optional[str]:
     """Generate an appropriate image for the given post.
 
     Returns the relative image path (e.g. /assets/images/generated/foo.png)

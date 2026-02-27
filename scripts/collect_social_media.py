@@ -7,42 +7,43 @@ Sources:
 - Google News RSS fallback for social keywords
 """
 
-import sys
 import os
+import sys
 import time
-import requests
 from collections import Counter
-from datetime import datetime, timezone
-from typing import List, Dict, Any
+from datetime import UTC, datetime
+from typing import Any, Dict, List
+
+import requests
 from bs4 import BeautifulSoup
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common.collector_metrics import log_collection_summary
 from common.config import (
-    get_env,
-    setup_logging,
-    get_ssl_verify,
     REQUEST_TIMEOUT,
     USER_AGENT,
+    get_env,
+    get_ssl_verify,
+    setup_logging,
 )
 from common.dedup import DedupEngine
-from common.post_generator import PostGenerator
-from common.utils import (
-    sanitize_string,
-    truncate_text,
-    request_with_retry,
-    remove_sponsored_text,
-)
-from common.rss_fetcher import fetch_rss_feeds_concurrent
-from common.summarizer import ThemeSummarizer
 from common.markdown_utils import (
-    markdown_link,
-    markdown_table,
     html_reference_details,
     html_source_tag,
+    markdown_link,
+    markdown_table,
     smart_truncate,
 )
-from common.collector_metrics import log_collection_summary
+from common.post_generator import PostGenerator
+from common.rss_fetcher import fetch_rss_feeds_concurrent
+from common.summarizer import ThemeSummarizer
+from common.utils import (
+    remove_sponsored_text,
+    request_with_retry,
+    sanitize_string,
+    truncate_text,
+)
 
 try:
     from common.browser import BrowserSession, is_playwright_available
@@ -112,9 +113,7 @@ def _parse_telegram_items(channel: str, messages, limit: int) -> List[Dict[str, 
     return items
 
 
-def _fetch_telegram_browser(
-    channels: List[str], limit: int = 10
-) -> Dict[str, List[Dict[str, Any]]]:
+def _fetch_telegram_browser(channels: List[str], limit: int = 10) -> Dict[str, List[Dict[str, Any]]]:
     """Fetch multiple Telegram channels in a single browser session."""
     results: Dict[str, List[Dict[str, Any]]] = {}
     if not is_playwright_available():
@@ -139,9 +138,7 @@ def _fetch_telegram_browser(
                     messages = session.extract_elements(".tgme_widget_message_wrap")
                     items = _parse_telegram_items(channel, messages, limit)
                     results[channel] = items
-                    logger.info(
-                        "Telegram Browser @%s: fetched %d messages", channel, len(items)
-                    )
+                    logger.info("Telegram Browser @%s: fetched %d messages", channel, len(items))
                 except Exception as e:
                     logger.warning("Telegram Browser @%s failed: %s", channel, e)
                     results[channel] = []
@@ -171,9 +168,7 @@ def fetch_telegram_channel(channel: str, limit: int = 10) -> List[Dict[str, Any]
         return []
 
 
-def fetch_twitter_search(
-    bearer_token: str, query: str, limit: int = 10
-) -> List[Dict[str, Any]]:
+def fetch_twitter_search(bearer_token: str, query: str, limit: int = 10) -> List[Dict[str, Any]]:
     """Search Twitter/X using API v2."""
     if not bearer_token:
         logger.info("Twitter Bearer Token not set, skipping")
@@ -211,9 +206,7 @@ def fetch_twitter_search(
                 {
                     "title": f"[X/Twitter] {title}",
                     "description": text,
-                    "link": f"https://twitter.com/i/web/status/{tweet_id}"
-                    if tweet_id
-                    else "",
+                    "link": f"https://twitter.com/i/web/status/{tweet_id}" if tweet_id else "",
                     "published": tweet.get("created_at", ""),
                     "source": "Twitter/X",
                     "tags": ["social-media", "twitter"],
@@ -364,8 +357,8 @@ def main():
     dedup = DedupEngine("social_media_seen.json")
     gen = PostGenerator("crypto-news")  # Social posts go to crypto-news
 
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    now = datetime.now(timezone.utc)
+    today = datetime.now(UTC).strftime("%Y-%m-%d")
+    now = datetime.now(UTC)
 
     # Collect Telegram messages
     telegram_items = []
@@ -390,11 +383,7 @@ def main():
         for ch in channels:
             telegram_items.extend(browser_results.get(ch, []))
         # Fallback: fetch remaining channels that failed via requests
-        failed_channels = [
-            ch
-            for ch in channels
-            if ch not in browser_results or not browser_results[ch]
-        ]
+        failed_channels = [ch for ch in channels if ch not in browser_results or not browser_results[ch]]
         for ch in failed_channels:
             telegram_items.extend(fetch_telegram_channel(ch))
             time.sleep(2)
@@ -439,9 +428,7 @@ def main():
                 if item.get("title")
             }
         )
-        source_count = len(
-            {item.get("source", "") for item in combined_items if item.get("source")}
-        )
+        source_count = len({item.get("source", "") for item in combined_items if item.get("source")})
         log_collection_summary(
             logger,
             collector="collect_social_media",
@@ -459,12 +446,7 @@ def main():
     # Create theme summarizer
     summarizer = ThemeSummarizer(all_theme_items)
 
-    total_count = (
-        len(telegram_items)
-        + len(social_items)
-        + len(reddit_items)
-        + len(political_items)
-    )
+    total_count = len(telegram_items) + len(social_items) + len(reddit_items) + len(political_items)
 
     if total_count == 0:
         logger.warning("No social media items collected, skipping post")
@@ -518,9 +500,7 @@ def main():
             points.append(f"정치·경제 {len(political_items)}건")
         if points:
             summary_points.append(", ".join(points))
-    overall_summary = summarizer.generate_overall_summary_section(
-        extra_data={"summary_points": summary_points}
-    )
+    overall_summary = summarizer.generate_overall_summary_section(extra_data={"summary_points": summary_points})
     if overall_summary:
         content_parts.append(overall_summary)
 
@@ -571,9 +551,7 @@ def main():
 
             # Collect links for references
             if link:
-                source_links.append(
-                    {"title": item["title"], "link": link, "source": source}
-                )
+                source_links.append({"title": item["title"], "link": link, "source": source})
                 content_parts.append(f"**{i}. [{title}]({link})**")
             else:
                 content_parts.append(f"**{i}. {title}**")
@@ -596,9 +574,7 @@ def main():
             description = item.get("description", "").strip()
 
             if link:
-                source_links.append(
-                    {"title": item["title"], "link": link, "source": source}
-                )
+                source_links.append({"title": item["title"], "link": link, "source": source})
                 content_parts.append(f"**{i}. [{title}]({link})**")
             else:
                 content_parts.append(f"**{i}. {title}**")
@@ -620,9 +596,7 @@ def main():
             score = item.get("score", 0)
 
             if link:
-                source_links.append(
-                    {"title": item["title"], "link": link, "source": source}
-                )
+                source_links.append({"title": item["title"], "link": link, "source": source})
                 title_cell = markdown_link(f"**{title}**", link)
             else:
                 title_cell = f"**{title}**"
@@ -669,9 +643,7 @@ def main():
     top_themes = summarizer.get_top_themes()
     if top_themes:
         theme_str = ", ".join(f"**{t[0]}**" for t in top_themes[:3])
-        trend_lines.append(
-            f"오늘 소셜 미디어에서는 {theme_str} 관련 논의가 가장 활발합니다."
-        )
+        trend_lines.append(f"오늘 소셜 미디어에서는 {theme_str} 관련 논의가 가장 활발합니다.")
 
     if telegram_items:
         # Channel activity analysis
@@ -679,8 +651,7 @@ def main():
         top_channels = tg_channels.most_common(3)
         ch_str = ", ".join(f"{ch}({cnt}건)" for ch, cnt in top_channels)
         trend_lines.append(
-            f"\n**텔레그램**: 가장 활발한 채널은 {ch_str}이며, "
-            f"총 {len(telegram_items)}건의 메시지가 포착되었습니다."
+            f"\n**텔레그램**: 가장 활발한 채널은 {ch_str}이며, 총 {len(telegram_items)}건의 메시지가 포착되었습니다."
         )
     if political_items:
         pol_ratio = len(political_items) / max(total_count, 1) * 100
@@ -690,8 +661,7 @@ def main():
         )
     if reddit_items:
         trend_lines.append(
-            f"\n**Reddit**: {len(reddit_items)}건의 인기 글이 수집되었으며, "
-            f"커뮤니티의 시장 관심도가 높은 상태입니다."
+            f"\n**Reddit**: {len(reddit_items)}건의 인기 글이 수집되었으며, 커뮤니티의 시장 관심도가 높은 상태입니다."
         )
     if not trend_lines:
         trend_lines.append("현재 수집된 소셜 데이터가 제한적입니다.")
@@ -713,9 +683,7 @@ def main():
         )
 
     # Data collection timestamp footer
-    content_parts.append(
-        f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC"
-    )
+    content_parts.append(f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC")
 
     content = "\n".join(content_parts)
 
@@ -752,9 +720,7 @@ def main():
             if item.get("title")
         }
     )
-    source_count = len(
-        {item.get("source", "") for item in combined_items if item.get("source")}
-    )
+    source_count = len({item.get("source", "") for item in combined_items if item.get("source")})
     log_collection_summary(
         logger,
         collector="collect_social_media",

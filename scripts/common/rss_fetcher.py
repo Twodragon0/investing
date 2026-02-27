@@ -1,13 +1,15 @@
 """Shared RSS feed fetcher used by multiple collection scripts."""
 
 import logging
-import requests
-from datetime import datetime, timezone, timedelta
-from typing import List, Dict, Any, Optional
+from datetime import UTC, datetime, timedelta
+from typing import Any, Dict, List, Optional
 from urllib.parse import parse_qs, unquote, urlparse
+
+import requests
 from bs4 import BeautifulSoup
-from .config import get_ssl_verify, REQUEST_TIMEOUT, USER_AGENT
-from .utils import sanitize_string, parse_date, remove_sponsored_text
+
+from .config import REQUEST_TIMEOUT, USER_AGENT, get_ssl_verify
+from .utils import parse_date, remove_sponsored_text, sanitize_string
 
 logger = logging.getLogger(__name__)
 
@@ -83,11 +85,7 @@ def fetch_rss_feed(
                     date_el = entry.find("pubDate")
                     desc_el = entry.find("description")
 
-                title = (
-                    sanitize_string(title_el.get_text(strip=True), 300)
-                    if title_el
-                    else ""
-                )
+                title = sanitize_string(title_el.get_text(strip=True), 300) if title_el else ""
                 if not title:
                     continue
 
@@ -95,9 +93,7 @@ def fetch_rss_feed(
                 if desc_el:
                     raw_desc = desc_el.get_text(strip=True)
                     description = sanitize_string(
-                        BeautifulSoup(raw_desc, "html.parser").get_text(
-                            " ", strip=True
-                        ),
+                        BeautifulSoup(raw_desc, "html.parser").get_text(" ", strip=True),
                         500,
                     )
 
@@ -106,9 +102,7 @@ def fetch_rss_feed(
                 if max_age_hours and published_str:
                     pub_dt = parse_date(published_str)
                     if pub_dt:
-                        cutoff = datetime.now(timezone.utc) - timedelta(
-                            hours=max_age_hours
-                        )
+                        cutoff = datetime.now(UTC) - timedelta(hours=max_age_hours)
                         if pub_dt < cutoff:
                             continue
 
@@ -179,11 +173,7 @@ def fetch_rss_feeds_concurrent(
         url, name, tags = feed_tuple[0], feed_tuple[1], feed_tuple[2]
         limit = feed_tuple[3] if len(feed_tuple) > 3 else 15
         max_age = feed_tuple[4] if len(feed_tuple) > 4 else 48
-        options = (
-            feed_tuple[5]
-            if len(feed_tuple) > 5 and isinstance(feed_tuple[5], dict)
-            else {}
-        )
+        options = feed_tuple[5] if len(feed_tuple) > 5 and isinstance(feed_tuple[5], dict) else {}
         fallback_urls = options.get("fallback_urls", [])
         return fetch_rss_feed(
             url,

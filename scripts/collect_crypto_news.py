@@ -9,38 +9,39 @@ Sources:
 - Rekt News (security incidents -> security-alerts category)
 """
 
-import sys
 import os
 import re
+import sys
 import time
-import requests
 from collections import Counter
-from datetime import datetime, timezone
-from typing import List, Dict, Any
+from datetime import UTC, datetime
+from typing import Any, Dict, List
+
+import requests
 
 # Add scripts directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common.collector_metrics import log_collection_summary
 from common.config import (
-    get_env,
-    setup_logging,
-    get_ssl_verify,
     REQUEST_TIMEOUT,
     USER_AGENT,
+    get_env,
+    get_ssl_verify,
+    setup_logging,
 )
 from common.dedup import DedupEngine
-from common.post_generator import PostGenerator
-from common.utils import sanitize_string
-from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
-from common.summarizer import ThemeSummarizer
-from common.collector_metrics import log_collection_summary
 from common.markdown_utils import (
-    markdown_link,
-    markdown_table,
     html_reference_details,
     html_source_tag,
+    markdown_link,
+    markdown_table,
     smart_truncate,
 )
+from common.post_generator import PostGenerator
+from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
+from common.summarizer import ThemeSummarizer
+from common.utils import sanitize_string
 
 try:
     from common.browser import BrowserSession, is_playwright_available
@@ -71,9 +72,7 @@ def fetch_cryptopanic(api_key: str, limit: int = 20) -> List[Dict[str, Any]]:
     params = {"auth_token": api_key, "public": "true", "filter": "hot", "kind": "news"}
 
     try:
-        resp = requests.get(
-            url, params=params, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL
-        )
+        resp = requests.get(url, params=params, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
         resp.raise_for_status()
         data = resp.json()
         results = data.get("results", [])
@@ -291,9 +290,7 @@ def _fetch_binance_bapi() -> List[Dict[str, Any]]:
                     date_str = ""
                     if release_date:
                         try:
-                            date_str = datetime.fromtimestamp(
-                                release_date / 1000, tz=timezone.utc
-                            ).isoformat()
+                            date_str = datetime.fromtimestamp(release_date / 1000, tz=UTC).isoformat()
                         except (ValueError, OSError):
                             pass
                     items.append(
@@ -365,9 +362,7 @@ def _fetch_browser_sources() -> tuple:
                     wait_until="domcontentloaded",
                     wait_ms=3000,
                 )
-                google_items = extract_google_news_links(
-                    session, 20, ["crypto", "news"]
-                )
+                google_items = extract_google_news_links(session, 20, ["crypto", "news"])
                 logger.info("Google News Browser: fetched %d items", len(google_items))
             except Exception as e:
                 logger.warning("Google News browser scraping failed: %s", e)
@@ -375,9 +370,7 @@ def _fetch_browser_sources() -> tuple:
             # Binance announcements (공유 세션 재사용)
             try:
                 binance_items = _scrape_binance_page(session)
-                logger.info(
-                    "Binance Browser: fetched %d announcements", len(binance_items)
-                )
+                logger.info("Binance Browser: fetched %d announcements", len(binance_items))
             except Exception as e:
                 logger.warning("Binance browser scraping failed: %s", e)
     except Exception as e:
@@ -397,8 +390,8 @@ def main():
     crypto_gen = PostGenerator("crypto-news")
     security_gen = PostGenerator("security-alerts")
 
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    now = datetime.now(timezone.utc)
+    today = datetime.now(UTC).strftime("%Y-%m-%d")
+    now = datetime.now(UTC)
 
     all_items = []
 
@@ -465,14 +458,9 @@ def main():
         ]
         all_titles_lower = " ".join(item["title"].lower() for item in all_items)
         keyword_hits = {
-            kw: len(re.findall(r"\b" + kw + r"\b", all_titles_lower, re.IGNORECASE))
-            for kw in keyword_targets
+            kw: len(re.findall(r"\b" + kw + r"\b", all_titles_lower, re.IGNORECASE)) for kw in keyword_targets
         }
-        top_keywords = [
-            (kw, cnt)
-            for kw, cnt in sorted(keyword_hits.items(), key=lambda x: -x[1])
-            if cnt > 0
-        ]
+        top_keywords = [(kw, cnt) for kw, cnt in sorted(keyword_hits.items(), key=lambda x: -x[1]) if cnt > 0]
 
         # Create theme summarizer for reuse (before opening)
         summarizer = ThemeSummarizer(all_items)
@@ -486,9 +474,7 @@ def main():
                 f"**{today}** 암호화폐 시장에서 {len(all_items)}건의 뉴스를 분석했습니다. 오늘은 **{themes_str}** 관련 소식이 주목됩니다.\n"
             ]
         else:
-            content_parts = [
-                f"**{today}** 암호화폐 시장에서 {len(all_items)}건의 뉴스를 분석했습니다.\n"
-            ]
+            content_parts = [f"**{today}** 암호화폐 시장에서 {len(all_items)}건의 뉴스를 분석했습니다.\n"]
 
         # Distribution chart
         dist_chart = summarizer.generate_distribution_chart()
@@ -550,9 +536,7 @@ def main():
 
             # Check for P0 alerts
             priority_items = summarizer.classify_priority()
-            p0_alerts = [
-                item.get("title", "") for item in priority_items.get("P0", [])[:2]
-            ]
+            p0_alerts = [item.get("title", "") for item in priority_items.get("P0", [])[:2]]
 
             img = generate_news_briefing_card(
                 card_themes,
@@ -576,17 +560,12 @@ def main():
             try:
                 from common.image_generator import generate_news_summary_card
 
-                source_rows = [
-                    {"name": name, "count": count}
-                    for name, count in source_counter.most_common(8)
-                ]
+                source_rows = [{"name": name, "count": count} for name, count in source_counter.most_common(8)]
                 summary_img = generate_news_summary_card(source_rows, today)
                 if summary_img:
                     briefing_image = summary_img
                     fn = os.path.basename(summary_img)
-                    web_path = (
-                        "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
-                    )
+                    web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
                     content_parts.append(f"\n![news-summary]({web_path})\n")
                     logger.info("Generated news summary card")
             except ImportError:
@@ -625,9 +604,7 @@ def main():
                 description = item.get("description", "").strip()
                 if shown_exchange < 5:
                     if link:
-                        content_parts.append(
-                            f"**{shown_exchange + 1}. [{title}]({link})**"
-                        )
+                        content_parts.append(f"**{shown_exchange + 1}. [{title}]({link})**")
                     else:
                         content_parts.append(f"**{shown_exchange + 1}. {title}**")
                     if description and description != title:
@@ -662,20 +639,15 @@ def main():
                         insight_lines.append(f"- 주요 기사: *{top_title[:100]}*")
         elif top_themes:
             t = top_themes[0]
-            insight_lines.append(
-                f"오늘 가장 주목할 테마는 **{t[2]} {t[0]}**({t[3]}건)입니다."
-            )
+            insight_lines.append(f"오늘 가장 주목할 테마는 **{t[2]} {t[0]}**({t[3]}건)입니다.")
         else:
             insight_lines.append(
-                f"오늘 총 {len(all_items)}건의 뉴스가 "
-                f"{len(source_counter)}개 출처에서 수집되었습니다."
+                f"오늘 총 {len(all_items)}건의 뉴스가 {len(source_counter)}개 출처에서 수집되었습니다."
             )
 
         # Keyword monitoring with context
         if top_keywords:
-            monitoring_kws = ", ".join(
-                f"**{kw}**({cnt}회)" for kw, cnt in top_keywords[:3]
-            )
+            monitoring_kws = ", ".join(f"**{kw}**({cnt}회)" for kw, cnt in top_keywords[:3])
             insight_lines.append(f"\n**모니터링 키워드**: {monitoring_kws}")
 
         # Exchange activity connection
@@ -705,12 +677,8 @@ def main():
 
         # Data collection footer
         content_parts.append("\n---\n")
-        content_parts.append(
-            f"**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC"
-        )
-        top_sources_str = ", ".join(
-            f"{name} ({count}건)" for name, count in source_counter.most_common(5)
-        )
+        content_parts.append(f"**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC")
+        top_sources_str = ", ".join(f"{name} ({count}건)" for name, count in source_counter.most_common(5))
         content_parts.append(f"**수집 출처**: {top_sources_str}")
 
         content = "\n".join(content_parts)
@@ -741,17 +709,13 @@ def main():
         post_b_title = f"블록체인 보안 리포트 - {today}"
 
         if not dedup.is_duplicate_exact(post_b_title, "consolidated", today):
-            content_parts = [
-                f"블록체인 보안 관련 뉴스 {len(all_security_items)}건을 정리합니다.\n"
-            ]
+            content_parts = [f"블록체인 보안 관련 뉴스 {len(all_security_items)}건을 정리합니다.\n"]
             security_links = []
 
             security_summarizer = ThemeSummarizer(all_security_items)
             summary_points = []
             if rekt_items or google_security_items:
-                summary_points.append(
-                    f"Rekt News {len(rekt_items)}건, 보안 뉴스 {len(google_security_items)}건"
-                )
+                summary_points.append(f"Rekt News {len(rekt_items)}건, 보안 뉴스 {len(google_security_items)}건")
             overall_summary = security_summarizer.generate_overall_summary_section(
                 extra_data={"summary_points": summary_points}
             )
@@ -760,9 +724,7 @@ def main():
 
             # Key summary for security
             content_parts.append("## 핵심 요약\n")
-            content_parts.append(
-                f"- **보안 사고/뉴스**: 총 {len(all_security_items)}건"
-            )
+            content_parts.append(f"- **보안 사고/뉴스**: 총 {len(all_security_items)}건")
             if rekt_items:
                 content_parts.append(f"- **Rekt News 사고**: {len(rekt_items)}건")
                 # Sum up funds lost where parseable
@@ -777,13 +739,9 @@ def main():
                         except (IndexError, ValueError):
                             pass
                 if total_funds > 0:
-                    content_parts.append(
-                        f"- **총 피해 규모 (추정)**: ${total_funds:,.0f}"
-                    )
+                    content_parts.append(f"- **총 피해 규모 (추정)**: ${total_funds:,.0f}")
             if google_security_items:
-                content_parts.append(
-                    f"- **보안 관련 뉴스**: {len(google_security_items)}건"
-                )
+                content_parts.append(f"- **보안 관련 뉴스**: {len(google_security_items)}건")
 
             technique_counter = Counter()
 
@@ -800,9 +758,7 @@ def main():
 
                     if "Funds Lost:" in desc:
                         try:
-                            funds_lost = (
-                                desc.split("Funds Lost:")[1].split("|")[0].strip()
-                            )
+                            funds_lost = desc.split("Funds Lost:")[1].split("|")[0].strip()
                         except IndexError:
                             pass
                     if "Technique:" in desc:
@@ -826,11 +782,7 @@ def main():
                         )
 
                 if incident_rows:
-                    content_parts.append(
-                        markdown_table(
-                            ["프로젝트", "피해 규모", "공격 유형"], incident_rows
-                        )
-                    )
+                    content_parts.append(markdown_table(["프로젝트", "피해 규모", "공격 유형"], incident_rows))
 
             # Google Security News section with descriptions
             if google_security_items:
@@ -842,9 +794,7 @@ def main():
                     description = item.get("description", "").strip()
                     if link:
                         content_parts.append(f"**{i}. [{title}]({link})**")
-                        security_links.append(
-                            {"title": title, "link": link, "source": source}
-                        )
+                        security_links.append({"title": title, "link": link, "source": source})
                     else:
                         content_parts.append(f"**{i}. {title}**")
                     if description and description != title and i <= 5:
@@ -856,9 +806,7 @@ def main():
             content_parts.append("\n## 보안 인사이트\n")
             sec_insight_lines = []
             if rekt_items:
-                sec_insight_lines.append(
-                    f"최근 보안 사고 {len(rekt_items)}건이 보고되었습니다."
-                )
+                sec_insight_lines.append(f"최근 보안 사고 {len(rekt_items)}건이 보고되었습니다.")
                 if technique_counter:
                     top_tech = technique_counter.most_common(3)
                     tech_str = ", ".join(f"{t}({c}건)" for t, c in top_tech)
@@ -868,9 +816,7 @@ def main():
                     f"블록체인 보안 관련 뉴스 {len(google_security_items)}건이 수집되어 업계 보안 이슈에 대한 관심이 높은 상태입니다."
                 )
             if not sec_insight_lines:
-                sec_insight_lines.append(
-                    "현재 특이할 만한 보안 사고가 보고되지 않았습니다."
-                )
+                sec_insight_lines.append("현재 특이할 만한 보안 사고가 보고되지 않았습니다.")
             sec_insight_lines.append("")
             sec_insight_lines.append(
                 "> *본 보안 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
@@ -908,9 +854,7 @@ def main():
     # Save dedup state
     dedup.save()
 
-    logger.info(
-        "=== Crypto news collection complete: %d posts created ===", created_count
-    )
+    logger.info("=== Crypto news collection complete: %d posts created ===", created_count)
     all_collected_items = all_items + all_security_items
     unique_items = len(
         {
@@ -919,9 +863,7 @@ def main():
             if item.get("title")
         }
     )
-    source_count = len(
-        {item.get("source", "") for item in all_collected_items if item.get("source")}
-    )
+    source_count = len({item.get("source", "") for item in all_collected_items if item.get("source")})
     log_collection_summary(
         logger,
         collector="collect_crypto_news",

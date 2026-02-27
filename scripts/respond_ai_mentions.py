@@ -7,7 +7,7 @@ import subprocess
 import sys
 import urllib.parse
 import urllib.request
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from glob import glob
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -16,9 +16,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common.config import SITE_URL
 
 logger = logging.getLogger("respond_ai_mentions")
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s [%(name)s] %(levelname)s: %(message)s"
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(name)s] %(levelname)s: %(message)s")
 
 ROOT = Path(__file__).resolve().parents[1]
 POSTS_DIR = ROOT / "_posts"
@@ -108,16 +106,12 @@ def build_summary_text() -> str:
 
 def build_dev_status_text() -> str:
     try:
-        commit = subprocess.check_output(
-            ["git", "log", "-1", "--pretty=%h %s"], cwd=ROOT, text=True
-        ).strip()
+        commit = subprocess.check_output(["git", "log", "-1", "--pretty=%h %s"], cwd=ROOT, text=True).strip()
     except Exception:
         commit = "unknown"
 
     try:
-        branch = subprocess.check_output(
-            ["git", "branch", "--show-current"], cwd=ROOT, text=True
-        ).strip()
+        branch = subprocess.check_output(["git", "branch", "--show-current"], cwd=ROOT, text=True).strip()
     except Exception:
         branch = "main"
 
@@ -322,9 +316,7 @@ def build_reply_text(alias: str, text: str) -> str:
     return build_summary_text()
 
 
-def has_bot_reply(
-    token: str, channel_id: str, thread_ts: str, bot_user_id: str
-) -> bool:
+def has_bot_reply(token: str, channel_id: str, thread_ts: str, bot_user_id: str) -> bool:
     replies = slack_api(
         "conversations.replies",
         token,
@@ -390,7 +382,7 @@ def main() -> int:
         logger.error("auth.test returned no user_id")
         return 1
 
-    now = datetime.now(timezone.utc)
+    now = datetime.now(UTC)
     oldest = (now - timedelta(minutes=30)).timestamp()
     history = slack_api(
         "conversations.history",

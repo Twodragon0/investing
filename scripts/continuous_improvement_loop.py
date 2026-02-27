@@ -2,10 +2,9 @@
 
 import argparse
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Dict, List
-
 
 ROOT = Path(__file__).resolve().parents[1]
 POSTS_DIR = ROOT / "_posts"
@@ -28,10 +27,10 @@ class RolePrompt:
 
 
 def count_recent_posts(days: int = 2) -> int:
-    now = datetime.now(timezone.utc)
+    now = datetime.now(UTC)
     count = 0
     for path in POSTS_DIR.glob("*.md"):
-        mtime = datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc)
+        mtime = datetime.fromtimestamp(path.stat().st_mtime, tz=UTC)
         if (now - mtime).days <= days:
             count += 1
     return count
@@ -109,7 +108,7 @@ def build_role_prompts(recent_posts: int, workflow_count: int) -> List[RolePromp
 
 
 def render_report(items: List[PriorityItem], roles: List[RolePrompt]) -> str:
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    now = datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC")
     lines = [
         "# Continuous Improvement Loop Report",
         "",

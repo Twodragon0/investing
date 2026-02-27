@@ -1,12 +1,12 @@
 """Utility functions for news collectors."""
 
-import re
-import logging
-import time
 import email.utils
-from urllib.parse import urlparse
-from datetime import datetime, timezone
+import logging
+import re
+import time
+from datetime import UTC, datetime
 from typing import Optional, Union
+from urllib.parse import urlparse
 
 import requests
 
@@ -56,9 +56,9 @@ def parse_date(date_str: str) -> Optional[datetime]:
     ]
     for fmt in formats:
         try:
-            dt = datetime.strptime(date_str, fmt)
+            dt = datetime.strptime(date_str, fmt)  # noqa: DTZ007 - tz added below
             if dt.tzinfo is None:
-                dt = dt.replace(tzinfo=timezone.utc)
+                dt = dt.replace(tzinfo=UTC)
             return dt
         except ValueError:
             continue
@@ -67,7 +67,7 @@ def parse_date(date_str: str) -> Optional[datetime]:
     try:
         dt = email.utils.parsedate_to_datetime(date_str)
         if dt.tzinfo is None:
-            dt = dt.replace(tzinfo=timezone.utc)
+            dt = dt.replace(tzinfo=UTC)
         return dt
     except (ValueError, TypeError):
         pass

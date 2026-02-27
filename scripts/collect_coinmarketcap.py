@@ -9,27 +9,28 @@ Sources:
 Generates high-quality Korean summary posts with market analysis.
 """
 
-import sys
 import os
+import sys
 import time
-from datetime import datetime, timezone
 from collections import OrderedDict
-from typing import List, Dict, Any, Tuple
+from datetime import UTC, datetime
+from typing import Any, Dict, List, Tuple
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common.config import get_env, setup_logging, get_ssl_verify
-from common.dedup import DedupEngine
-from common.post_generator import PostGenerator
+from common.collector_metrics import log_collection_summary
+from common.config import get_env, get_ssl_verify, setup_logging
 from common.crypto_api import (
+    fetch_coingecko_global,
     fetch_coingecko_top_coins,
     fetch_coingecko_trending,
-    fetch_coingecko_global,
     fetch_fear_greed_index,
 )
-from common.formatters import fmt_number as _fmt_num, fmt_percent as _fmt_pct
+from common.dedup import DedupEngine
+from common.formatters import fmt_number as _fmt_num
+from common.formatters import fmt_percent as _fmt_pct
+from common.post_generator import PostGenerator
 from common.utils import request_with_retry
-from common.collector_metrics import log_collection_summary
 
 try:
     from common.browser import BrowserSession, is_playwright_available
@@ -180,13 +181,7 @@ def format_top_coins_table(coins: List[Dict], source: str = "coingecko") -> str:
             change_7d = quote.get("percent_change_7d", 0)
             mcap = quote.get("market_cap", 0)
 
-        price_str = (
-            f"${price:,.2f}"
-            if price and price >= 1
-            else f"${price:,.6f}"
-            if price
-            else "N/A"
-        )
+        price_str = f"${price:,.2f}" if price and price >= 1 else f"${price:,.6f}" if price else "N/A"
         lines.append(
             f"| {i} | **{name}** ({symbol}) | {price_str} | {_fmt_pct(change_24h)} | {_fmt_pct(change_7d)} | {_fmt_num(mcap)} |"
         )
@@ -233,9 +228,7 @@ def format_gainers_losers(gainers: List[Dict], losers: List[Dict]) -> str:
             quote = coin.get("quote", {}).get("USD", {})
             price = quote.get("price", 0)
             change = quote.get("percent_change_24h", 0)
-            lines.append(
-                f"| **{name}** ({symbol}) | ${price:,.4f} | {_fmt_pct(change)} |"
-            )
+            lines.append(f"| **{name}** ({symbol}) | ${price:,.4f} | {_fmt_pct(change)} |")
 
     if losers:
         lines.append("\n### 📉 24시간 최대 하락\n")
@@ -247,9 +240,7 @@ def format_gainers_losers(gainers: List[Dict], losers: List[Dict]) -> str:
             quote = coin.get("quote", {}).get("USD", {})
             price = quote.get("price", 0)
             change = quote.get("percent_change_24h", 0)
-            lines.append(
-                f"| **{name}** ({symbol}) | ${price:,.4f} | {_fmt_pct(change)} |"
-            )
+            lines.append(f"| **{name}** ({symbol}) | ${price:,.4f} | {_fmt_pct(change)} |")
 
     return "\n".join(lines) if lines else "*급등/급락 데이터를 가져올 수 없습니다.*"
 
@@ -259,9 +250,7 @@ def derive_gainers_losers_from_top(coins: List[Dict]) -> Tuple[str, str]:
     if not coins:
         return "*데이터 없음*", "*데이터 없음*"
 
-    sorted_by_change = sorted(
-        coins, key=lambda c: c.get("price_change_percentage_24h") or 0, reverse=True
-    )
+    sorted_by_change = sorted(coins, key=lambda c: c.get("price_change_percentage_24h") or 0, reverse=True)
 
     # Top 5 gainers
     g_lines = ["| 코인 | 가격 | 24h 변동 |", "|------|------|---------|"]
@@ -270,13 +259,7 @@ def derive_gainers_losers_from_top(coins: List[Dict]) -> Tuple[str, str]:
         symbol = coin.get("symbol", "").upper()
         price = coin.get("current_price", 0)
         change = coin.get("price_change_percentage_24h", 0)
-        price_str = (
-            f"${price:,.2f}"
-            if price and price >= 1
-            else f"${price:,.6f}"
-            if price
-            else "N/A"
-        )
+        price_str = f"${price:,.2f}" if price and price >= 1 else f"${price:,.6f}" if price else "N/A"
         g_lines.append(f"| **{name}** ({symbol}) | {price_str} | {_fmt_pct(change)} |")
 
     # Top 5 losers
@@ -286,43 +269,27 @@ def derive_gainers_losers_from_top(coins: List[Dict]) -> Tuple[str, str]:
         symbol = coin.get("symbol", "").upper()
         price = coin.get("current_price", 0)
         change = coin.get("price_change_percentage_24h", 0)
-        price_str = (
-            f"${price:,.2f}"
-            if price and price >= 1
-            else f"${price:,.6f}"
-            if price
-            else "N/A"
-        )
+        price_str = f"${price:,.2f}" if price and price >= 1 else f"${price:,.6f}" if price else "N/A"
         l_lines.append(f"| **{name}** ({symbol}) | {price_str} | {_fmt_pct(change)} |")
 
     return "\n".join(g_lines), "\n".join(l_lines)
 
 
-def generate_market_insight(
-    global_data: Dict, top_coins: List[Dict], fear_greed: Dict
-) -> str:
+def generate_market_insight(global_data: Dict, top_coins: List[Dict], fear_greed: Dict) -> str:
     """Generate Korean market insight summary."""
     if not global_data and not top_coins:
         return ""
 
-    mcap_change = (
-        global_data.get("market_cap_change_percentage_24h_usd", 0) if global_data else 0
-    )
-    btc_dom = (
-        global_data.get("market_cap_percentage", {}).get("btc", 0) if global_data else 0
-    )
+    mcap_change = global_data.get("market_cap_change_percentage_24h_usd", 0) if global_data else 0
+    btc_dom = global_data.get("market_cap_percentage", {}).get("btc", 0) if global_data else 0
     fg_value = fear_greed.get("value", 50) if fear_greed else 50
     fg_class = fear_greed.get("classification", "Neutral") if fear_greed else "Neutral"
 
     # Determine market sentiment
     if mcap_change > 3:
-        market_mood = (
-            "강세장이 이어지고 있습니다. 시장 전체 시가총액이 큰 폭으로 상승했습니다."
-        )
+        market_mood = "강세장이 이어지고 있습니다. 시장 전체 시가총액이 큰 폭으로 상승했습니다."
     elif mcap_change > 0:
-        market_mood = (
-            "소폭 상승세를 보이고 있습니다. 시장은 안정적인 흐름을 유지하고 있습니다."
-        )
+        market_mood = "소폭 상승세를 보이고 있습니다. 시장은 안정적인 흐름을 유지하고 있습니다."
     elif mcap_change > -3:
         market_mood = "소폭 하락세를 보이고 있습니다. 단기 조정 구간으로 판단됩니다."
     else:
@@ -394,28 +361,14 @@ def fetch_cmc_browser_fallback(limit: int = 20) -> List[Dict[str, Any]]:
                     # name_cell may be "Bitcoin\nBTC" or "Bitcoin BTC"
                     parts = name_cell.replace("\n", " ").split()
                     symbol = parts[-1] if parts else ""
-                    name = (
-                        " ".join(parts[:-1])
-                        if len(parts) > 1
-                        else parts[0]
-                        if parts
-                        else ""
-                    )
+                    name = " ".join(parts[:-1]) if len(parts) > 1 else parts[0] if parts else ""
 
-                    price_text = (
-                        cells[3].inner_text().strip().replace("$", "").replace(",", "")
-                    )
-                    change_24h_text = (
-                        cells[5].inner_text().strip().replace("%", "").replace(",", "")
-                    )
-                    change_7d_text = (
-                        cells[6].inner_text().strip().replace("%", "").replace(",", "")
-                    )
+                    price_text = cells[3].inner_text().strip().replace("$", "").replace(",", "")
+                    change_24h_text = cells[5].inner_text().strip().replace("%", "").replace(",", "")
+                    change_7d_text = cells[6].inner_text().strip().replace("%", "").replace(",", "")
                     # Market cap is typically at cell 7 or later
                     mcap_text = (
-                        cells[7].inner_text().strip().replace("$", "").replace(",", "")
-                        if len(cells) > 7
-                        else "0"
+                        cells[7].inner_text().strip().replace("$", "").replace(",", "") if len(cells) > 7 else "0"
                     )
 
                     def _parse_num(s: str) -> float:
@@ -444,9 +397,7 @@ def fetch_cmc_browser_fallback(limit: int = 20) -> List[Dict[str, Any]]:
                             "symbol": symbol.lower(),
                             "current_price": _parse_num(price_text),
                             "price_change_percentage_24h": _parse_num(change_24h_text),
-                            "price_change_percentage_7d_in_currency": _parse_num(
-                                change_7d_text
-                            ),
+                            "price_change_percentage_7d_in_currency": _parse_num(change_7d_text),
                             "market_cap": _parse_num(mcap_text),
                         }
                     )
@@ -487,8 +438,8 @@ def main():
         )
         return
 
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    now = datetime.now(timezone.utc)
+    today = datetime.now(UTC).strftime("%Y-%m-%d")
+    now = datetime.now(UTC)
 
     dedup = DedupEngine("crypto_news_seen.json")
     gen_analysis = PostGenerator("market-analysis")
@@ -537,8 +488,8 @@ def main():
         image_refs = []
         try:
             from common.image_generator import (
-                generate_top_coins_card,
                 generate_market_heatmap,
+                generate_top_coins_card,
             )
 
             img = generate_top_coins_card(
@@ -596,12 +547,7 @@ def main():
                 else:
                     name = coin.get("name", "")
                     symbol = coin.get("symbol", "")
-                    change = (
-                        coin.get("quote", {})
-                        .get("USD", {})
-                        .get("percent_change_24h", 0)
-                        or 0
-                    )
+                    change = coin.get("quote", {}).get("USD", {}).get("percent_change_24h", 0) or 0
                 emoji = "🟢" if change >= 0 else "🔴"
                 card_themes.append(
                     {
@@ -711,14 +657,9 @@ def main():
             else:
                 mn = coin.get("name", "")
                 ms = coin.get("symbol", "")
-                mch = (
-                    coin.get("quote", {}).get("USD", {}).get("percent_change_24h", 0)
-                    or 0
-                )
+                mch = coin.get("quote", {}).get("USD", {}).get("percent_change_24h", 0) or 0
             emoji = "🟢" if mch >= 0 else "🔴"
-            alert_lines.append(
-                f"<li>{emoji} <strong>{mn}</strong> ({ms}): {mch:+.2f}%</li>"
-            )
+            alert_lines.append(f"<li>{emoji} <strong>{mn}</strong> ({ms}): {mch:+.2f}%</li>")
 
         overview_parts = []
         if stat_items:
@@ -736,15 +677,9 @@ def main():
         # Narrative summary
         summary_parts = []
         coin_count = len(top_coins)
-        summary_parts.append(
-            f"오늘 시가총액 상위 **{coin_count}개** 코인을 기준으로 시장을 분석했습니다."
-        )
+        summary_parts.append(f"오늘 시가총액 상위 **{coin_count}개** 코인을 기준으로 시장을 분석했습니다.")
         if btc:
-            direction = (
-                "상승하며 투자 심리 회복을 견인"
-                if btc_ch24 >= 0
-                else "하락하며 시장에 조정 신호를 보내"
-            )
+            direction = "상승하며 투자 심리 회복을 견인" if btc_ch24 >= 0 else "하락하며 시장에 조정 신호를 보내"
             summary_parts.append(
                 f"비트코인은 **${btc_price:,.0f}**에서 24시간 {btc_ch24:+.2f}% {direction}고 있습니다."
             )
@@ -779,9 +714,7 @@ def main():
             value = fear_greed.get("value", 0)
             classification = fear_greed.get("classification", "N/A")
             bar = "█" * (value // 5) + "░" * (20 - value // 5)
-            sections["공포/탐욕 지수"] = (
-                f"**{value}/100** — {classification}\n\n`[{bar}]`"
-            )
+            sections["공포/탐욕 지수"] = f"**{value}/100** — {classification}\n\n`[{bar}]`"
 
         # 5. Top movers briefing (description card style for top 5)
         if top_coins:
@@ -840,9 +773,7 @@ def main():
             date=now,
             tags=["market-report", "crypto", "top-coins", "trending", "daily"],
             source=source_name,
-            source_url="https://www.coingecko.com/"
-            if cmc_source == "coingecko"
-            else "https://coinmarketcap.com/",
+            source_url="https://www.coingecko.com/" if cmc_source == "coingecko" else "https://coinmarketcap.com/",
             lang="ko",
             slug="daily-crypto-market-report",
         )
@@ -852,13 +783,7 @@ def main():
 
     dedup.save()
     logger.info("=== CoinMarketCap/CoinGecko collection complete ===")
-    unique_count = len(
-        {
-            f"{coin.get('name', '')}|{coin.get('symbol', '')}"
-            for coin in top_coins
-            if coin.get("name")
-        }
-    )
+    unique_count = len({f"{coin.get('name', '')}|{coin.get('symbol', '')}" for coin in top_coins if coin.get("name")})
     source_count = 1 if top_coins else 0
     log_collection_summary(
         logger,

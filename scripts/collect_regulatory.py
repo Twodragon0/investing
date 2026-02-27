@@ -8,22 +8,22 @@ Sources:
 - Europe: ESMA, UK FCA (Google News)
 """
 
-import sys
 import os
+import sys
 import time
 from collections import Counter
-from datetime import datetime, timezone
-from typing import List, Dict, Any, Tuple
+from datetime import UTC, datetime
+from typing import Any, Dict, List, Tuple
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common.collector_metrics import log_collection_summary
 from common.config import setup_logging
 from common.dedup import DedupEngine
+from common.markdown_utils import html_reference_details, html_source_tag
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feed
 from common.summarizer import ThemeSummarizer
-from common.markdown_utils import html_reference_details, html_source_tag
-from common.collector_metrics import log_collection_summary
 
 logger = setup_logging("collect_regulatory")
 
@@ -143,11 +143,7 @@ def build_region_section(
                     desc_text = desc_text[: idx + len(sep)].strip()
                     break
             else:
-                desc_text = (
-                    desc_text[:200].rsplit(" ", 1)[0]
-                    if len(desc_text) > 200
-                    else desc_text
-                )
+                desc_text = desc_text[:200].rsplit(" ", 1)[0] if len(desc_text) > 200 else desc_text
             lines.append(desc_text)
         lines.append(f"{html_source_tag(source)}\n")
 
@@ -162,8 +158,8 @@ def main():
     dedup = DedupEngine("regulatory_news_seen.json")
     gen = PostGenerator("regulatory-news")
 
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    now = datetime.now(timezone.utc)
+    today = datetime.now(UTC).strftime("%Y-%m-%d")
+    now = datetime.now(UTC)
 
     # Collect from all regions
     us_items = fetch_region_feeds(US_FEEDS, "미국")
@@ -185,9 +181,7 @@ def main():
                 if item.get("title")
             }
         )
-        source_count = len(
-            {item.get("source", "") for item in all_items if item.get("source")}
-        )
+        source_count = len({item.get("source", "") for item in all_items if item.get("source")})
         log_collection_summary(
             logger,
             collector="collect_regulatory",
@@ -204,8 +198,7 @@ def main():
     source_links: list = []
 
     content_parts = [
-        f"전 세계 금융 규제기관의 최신 동향을 정리합니다. "
-        f"총 {len(all_items)}건의 규제 관련 뉴스가 수집되었습니다.\n",
+        f"전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 {len(all_items)}건의 규제 관련 뉴스가 수집되었습니다.\n",
     ]
 
     # Executive summary (한눈에 보기)
@@ -216,9 +209,7 @@ def main():
     if exec_summary:
         content_parts.append(exec_summary)
 
-    overall_summary = summarizer.generate_overall_summary_section(
-        extra_data={"region_counts": region_counts}
-    )
+    overall_summary = summarizer.generate_overall_summary_section(extra_data={"region_counts": region_counts})
     if overall_summary:
         content_parts.append(overall_summary)
 
@@ -237,17 +228,11 @@ def main():
     content_parts.append("\n---")
     content_parts.extend(build_region_section(us_items, "미국 규제 동향", source_links))
     content_parts.append("\n---")
-    content_parts.extend(
-        build_region_section(korea_items, "한국 규제 동향", source_links)
-    )
+    content_parts.extend(build_region_section(korea_items, "한국 규제 동향", source_links))
     content_parts.append("\n---")
-    content_parts.extend(
-        build_region_section(asia_items, "아시아 규제 동향", source_links)
-    )
+    content_parts.extend(build_region_section(asia_items, "아시아 규제 동향", source_links))
     content_parts.append("\n---")
-    content_parts.extend(
-        build_region_section(europe_items, "유럽 규제 동향", source_links)
-    )
+    content_parts.extend(build_region_section(europe_items, "유럽 규제 동향", source_links))
 
     # Theme summary
     content_parts.append("\n---")
@@ -318,9 +303,7 @@ def main():
             )
 
     # Data collection timestamp
-    content_parts.append(
-        f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC"
-    )
+    content_parts.append(f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC")
 
     content = "\n".join(content_parts)
 
@@ -347,9 +330,7 @@ def main():
             if item.get("title")
         }
     )
-    source_count = len(
-        {item.get("source", "") for item in all_items if item.get("source")}
-    )
+    source_count = len({item.get("source", "") for item in all_items if item.get("source")})
     log_collection_summary(
         logger,
         collector="collect_regulatory",

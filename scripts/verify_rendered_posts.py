@@ -5,7 +5,6 @@ import os
 import re
 import sys
 
-
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 POSTS_DIR = os.path.join(REPO_ROOT, "_posts")
 SITE_DIR = os.path.join(REPO_ROOT, "_site")
@@ -44,7 +43,7 @@ def _site_path_for_post(post_path: str) -> str:
     # Read category from front matter instead of hardcoding
     category = "market-analysis"
     try:
-        with open(post_path, "r", encoding="utf-8") as f:
+        with open(post_path, encoding="utf-8") as f:
             in_front = False
             for line in f:
                 if line.strip() == "---":
@@ -78,7 +77,7 @@ def main() -> int:
             continue
 
         checked += 1
-        with open(html_path, "r", encoding="utf-8") as f:
+        with open(html_path, encoding="utf-8") as f:
             html = f.read()
 
         if target["must_table"] and "<table" not in html:

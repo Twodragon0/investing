@@ -5,7 +5,7 @@ import os
 import sys
 import time
 from collections import Counter
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from typing import Any, Dict, List, Optional
 from urllib.parse import quote
 
@@ -13,6 +13,7 @@ import requests
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common.collector_metrics import log_collection_summary
 from common.config import REQUEST_TIMEOUT, USER_AGENT, get_ssl_verify, setup_logging
 from common.dedup import DedupEngine
 from common.markdown_utils import (
@@ -24,9 +25,7 @@ from common.markdown_utils import (
 )
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feeds_concurrent
-from common.collector_metrics import log_collection_summary
 from common.worldmonitor_utils import worldmonitor_sort_key
-
 
 logger = setup_logging("collect_worldmonitor_news")
 
@@ -103,9 +102,7 @@ def wm_url(source_url: str) -> str:
     return WM_PROXY + quote(source_url, safe="")
 
 
-def _post_worldmonitor(
-    path: str, payload: Optional[Dict[str, Any]] = None
-) -> Dict[str, Any]:
+def _post_worldmonitor(path: str, payload: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
     url = f"{WM_FINANCE_BASE}{path}"
     try:
         resp = requests.post(
@@ -145,9 +142,7 @@ def _paginate_worldmonitor(
 
 
 def _top_counts(items: List[Dict[str, Any]], key: str, limit: int = 3) -> str:
-    counter = Counter(
-        item.get(key) for item in items if isinstance(item, dict) and item.get(key)
-    )
+    counter = Counter(item.get(key) for item in items if isinstance(item, dict) and item.get(key))
     if not counter:
         return "N/A"
     return ", ".join(f"{name} {count}건" for name, count in counter.most_common(limit))
@@ -163,7 +158,7 @@ def _format_float(value: Optional[float], digits: int = 1) -> str:
 
 
 def fetch_worldmonitor_map_snapshot(days: int = 7) -> Dict[str, Any]:
-    now = datetime.now(timezone.utc)
+    now = datetime.now(UTC)
     start = now - timedelta(days=days)
     time_range = {
         "start": int(start.timestamp() * 1000),
@@ -212,13 +207,9 @@ def fetch_worldmonitor_map_snapshot(days: int = 7) -> Dict[str, Any]:
     )
 
     vessel_snapshot = _post_worldmonitor("/api/maritime/v1/get-vessel-snapshot")
-    snapshot = (
-        vessel_snapshot.get("snapshot", {}) if isinstance(vessel_snapshot, dict) else {}
-    )
+    snapshot = vessel_snapshot.get("snapshot", {}) if isinstance(vessel_snapshot, dict) else {}
     disruptions = snapshot.get("disruptions", []) if isinstance(snapshot, dict) else []
-    density_zones = (
-        snapshot.get("densityZones", []) if isinstance(snapshot, dict) else []
-    )
+    density_zones = snapshot.get("densityZones", []) if isinstance(snapshot, dict) else []
 
     military = _post_worldmonitor(
         "/api/military/v1/list-military-flights",
@@ -310,9 +301,7 @@ def build_map_snapshot_section(snapshot: Dict[str, Any]) -> List[str]:
     total = macro.get("totalCount") if isinstance(macro, dict) else None
 
     preferred = {"WTI", "Brent", "Henry Hub"}
-    selected_prices = [
-        p for p in energy_prices if any(key in p.get("name", "") for key in preferred)
-    ]
+    selected_prices = [p for p in energy_prices if any(key in p.get("name", "") for key in preferred)]
     if not selected_prices:
         selected_prices = energy_prices[:3]
 
@@ -334,11 +323,7 @@ def build_map_snapshot_section(snapshot: Dict[str, Any]) -> List[str]:
         f"- 인터넷 장애: {len(outages)}건 (상위 국가: {top_outage_countries})",
         f"- 기후 이상: {len(climate)}건 (주요 지역: {top_climate_zones})",
         f"- 지진(M4.5+): {len(earthquakes)}건"
-        + (
-            f" (최대 {_format_float(max_quake.get('magnitude'))} {max_quake.get('place', '')})"
-            if max_quake
-            else ""
-        ),
+        + (f" (최대 {_format_float(max_quake.get('magnitude'))} {max_quake.get('place', '')})" if max_quake else ""),
         f"- 해상 경보: {len(nav_warnings)}건 (주요 해역: {top_nav_areas})",
         f"- 해상/AIS 이상: {len(disruptions)}건 (지역: {top_disruption_regions})",
         f"- 선박 혼잡: {len(density_zones)}개 구역 (상위: {top_density_zones})",
@@ -378,9 +363,7 @@ def fetch_worldmonitor_feeds() -> List[Dict[str, Any]]:
             ["worldmonitor", "middleeast"],
         ),
         (
-            wm_url(
-                "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114"
-            ),
+            wm_url("https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114"),
             "WorldMonitor/CNBC",
             ["worldmonitor", "markets"],
             15,
@@ -428,8 +411,8 @@ def main() -> None:
     dedup = DedupEngine("worldmonitor_news_seen.json")
     generator = PostGenerator("market-analysis")
 
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    now = datetime.now(timezone.utc)
+    today = datetime.now(UTC).strftime("%Y-%m-%d")
+    now = datetime.now(UTC)
     post_title = f"WorldMonitor 글로벌 인텔리전스 브리핑 - {today}"
 
     if dedup.is_duplicate_exact(post_title, "worldmonitor", today):
@@ -483,11 +466,7 @@ def main() -> None:
         theme_counter[theme] += 1
         impact = impact_label(theme)
 
-        display_title = (
-            markdown_link(f"**{title}**", link)
-            if link
-            else f"**{escape_table_cell(title)}**"
-        )
+        display_title = markdown_link(f"**{title}**", link) if link else f"**{escape_table_cell(title)}**"
         issue_items.append(
             {
                 "title": display_title,
@@ -518,9 +497,7 @@ def main() -> None:
         )
 
     total_items = len(rows)
-    top_sources = ", ".join(
-        f"{name} ({count}건)" for name, count in source_counter.most_common(5)
-    )
+    top_sources = ", ".join(f"{name} ({count}건)" for name, count in source_counter.most_common(5))
 
     for name, count in source_counter.most_common(6):
         ratio = (count / max(total_items, 1)) * 100
@@ -625,14 +602,10 @@ def main() -> None:
         )
 
         source_pills = []
-        for source, count in Counter(ref["source"] for ref in unique_refs).most_common(
-            6
-        ):
+        for source, count in Counter(ref["source"] for ref in unique_refs).most_common(6):
             source_pills.append(html_source_tag(f"{source} · {count}건"))
         if source_pills:
-            content_parts.append(
-                '<div class="wm-reference-pills">' + " ".join(source_pills) + "</div>"
-            )
+            content_parts.append('<div class="wm-reference-pills">' + " ".join(source_pills) + "</div>")
 
         detail_lines = [
             f'<details class="wm-reference-details"><summary>전체 원문 {len(unique_refs)}건 펼치기</summary><div class="details-content">',

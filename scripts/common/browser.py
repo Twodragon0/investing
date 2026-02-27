@@ -59,9 +59,7 @@ class BrowserSession:
             viewport={"width": 1920, "height": 1080},
         )
         # Hide webdriver flag from detection scripts
-        self._context.add_init_script(
-            "Object.defineProperty(navigator, 'webdriver', {get: () => false});"
-        )
+        self._context.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => false});")
         self._context.set_default_timeout(self._timeout)
         self._page = self._context.new_page()
         return self
@@ -84,9 +82,7 @@ class BrowserSession:
 
     # -- navigation --------------------------------------------------------
 
-    def navigate(
-        self, url: str, wait_until: str = "domcontentloaded", wait_ms: int = 0
-    ) -> Any:
+    def navigate(self, url: str, wait_until: str = "domcontentloaded", wait_ms: int = 0) -> Any:
         """Navigate to *url* and return the Page object.
 
         *wait_ms* — additional milliseconds to wait after the page event
@@ -150,9 +146,7 @@ class BrowserSession:
             cells = tr.query_selector_all("td")
             if not cells or len(cells) != len(headers):
                 continue
-            row = {
-                headers[i]: cells[i].inner_text().strip() for i in range(len(headers))
-            }
+            row = {headers[i]: cells[i].inner_text().strip() for i in range(len(headers))}
             rows.append(row)
 
         return rows

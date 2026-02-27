@@ -10,7 +10,6 @@ from common.config import setup_logging
 from common.markdown_utils import markdown_table, smart_truncate
 from common.worldmonitor_utils import worldmonitor_sort_key
 
-
 logger = setup_logging("backfill_post_summaries")
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -113,10 +112,7 @@ def is_noise_text(text: str) -> bool:
         return True
     if stripped.startswith(("![", "##")):
         return True
-    if any(
-        key in stripped.lower()
-        for key in ["news-briefing", "source-distribution", "market-heatmap"]
-    ):
+    if any(key in stripped.lower() for key in ["news-briefing", "source-distribution", "market-heatmap"]):
         return True
     if stripped.startswith("데이터 수집"):
         return True
@@ -287,9 +283,7 @@ def summarize_from_title(title: str) -> str:
         "반등",
     ]
     _up_boundary = [re.compile(r"\bup\b", re.IGNORECASE)]
-    price_up = any(k in low for k in _up_words) or any(
-        p.search(title) for p in _up_boundary
-    )
+    price_up = any(k in low for k in _up_words) or any(p.search(title) for p in _up_boundary)
     _down_words = [
         "falls",
         "fall",
@@ -308,19 +302,13 @@ def summarize_from_title(title: str) -> str:
         "폭락",
     ]
     _down_boundary = [re.compile(r"\bdown\b", re.IGNORECASE)]
-    price_down = any(k in low for k in _down_words) or any(
-        p.search(title) for p in _down_boundary
-    )
+    price_down = any(k in low for k in _down_words) or any(p.search(title) for p in _down_boundary)
 
     # Build more specific summaries using title context
     if price_up and subject:
-        return normalize_summary(
-            f"{subject} 상승 — {_shorten_title_for_summary(title, 60)}"
-        )
+        return normalize_summary(f"{subject} 상승 — {_shorten_title_for_summary(title, 60)}")
     if price_down and subject:
-        return normalize_summary(
-            f"{subject} 하락 — {_shorten_title_for_summary(title, 60)}"
-        )
+        return normalize_summary(f"{subject} 하락 — {_shorten_title_for_summary(title, 60)}")
     if price_up:
         return normalize_summary(f"시장 상승 — {_shorten_title_for_summary(title, 60)}")
     if price_down:
@@ -331,9 +319,7 @@ def summarize_from_title(title: str) -> str:
         return normalize_summary(f"시장 심리 — {_shorten_title_for_summary(title, 60)}")
     if any(k in low for k in ["hack", "exploit", "breach", "ransom", "해킹", "취약"]):
         return normalize_summary(f"보안 이슈 — {_shorten_title_for_summary(title, 60)}")
-    if any(
-        k in low for k in ["lawsuit", "court", "판결", "소송", "charged", "accused"]
-    ):
+    if any(k in low for k in ["lawsuit", "court", "판결", "소송", "charged", "accused"]):
         return normalize_summary(f"법적 분쟁 — {_shorten_title_for_summary(title, 60)}")
     if any(k in low for k in ["listing", "listed", "상장", "상장폐지", "delist"]):
         return normalize_summary(f"상장·상폐 — {_shorten_title_for_summary(title, 60)}")
@@ -349,9 +335,7 @@ def summarize_from_title(title: str) -> str:
             "announcement",
         ]
     ):
-        return normalize_summary(
-            f"{subject or '신규'} 발표 — {_shorten_title_for_summary(title, 60)}"
-        )
+        return normalize_summary(f"{subject or '신규'} 발표 — {_shorten_title_for_summary(title, 60)}")
     if any(
         k in low
         for k in [
@@ -367,16 +351,9 @@ def summarize_from_title(title: str) -> str:
             "매도",
         ]
     ):
-        return normalize_summary(
-            f"{subject or '기관'} 매수·매도 — {_shorten_title_for_summary(title, 60)}"
-        )
-    if any(
-        k in low
-        for k in ["whale", "wallet", "transfer", "inflow", "outflow", "고래", "이체"]
-    ):
-        return normalize_summary(
-            f"온체인 이동 — {_shorten_title_for_summary(title, 60)}"
-        )
+        return normalize_summary(f"{subject or '기관'} 매수·매도 — {_shorten_title_for_summary(title, 60)}")
+    if any(k in low for k in ["whale", "wallet", "transfer", "inflow", "outflow", "고래", "이체"]):
+        return normalize_summary(f"온체인 이동 — {_shorten_title_for_summary(title, 60)}")
     if any(k in low for k in ["regulation", "regulatory", "법안", "규제", "정책"]):
         return normalize_summary(f"규제·정책 — {_shorten_title_for_summary(title, 60)}")
     if subject:
@@ -456,12 +433,8 @@ def build_url_summary(lines: List[str]) -> List[str]:
         if summary:
             norm_summary = normalize_title(summary)
             norm_title = normalize_title(title)
-            if norm_summary == norm_title:
-                summary = ""
-            elif (
-                norm_title
-                and norm_title in norm_summary
-                and len(norm_summary) <= len(norm_title) + 20
+            if norm_summary == norm_title or (
+                norm_title and norm_title in norm_summary and len(norm_summary) <= len(norm_title) + 20
             ):
                 summary = ""
         if not summary:
@@ -512,9 +485,7 @@ def extract_section_bullets(lines: List[str], title: str, limit: int = 3) -> Lis
     return bullets
 
 
-def extract_section_sentences(
-    lines: List[str], title: str, limit: int = 2
-) -> List[str]:
+def extract_section_sentences(lines: List[str], title: str, limit: int = 2) -> List[str]:
     idx = find_heading_index(lines, title)
     if idx == -1:
         return []
@@ -600,16 +571,12 @@ def build_content_analysis(lines: List[str], body: str) -> List[str]:
 
     # Build a more informative analysis
     if total and themes:
-        analysis.append(
-            f"총 {total}건의 뉴스 중 {', '.join(themes[:2])} 테마가 가장 많은 비중을 차지합니다."
-        )
+        analysis.append(f"총 {total}건의 뉴스 중 {', '.join(themes[:2])} 테마가 가장 많은 비중을 차지합니다.")
     elif total:
         analysis.append(f"총 {total}건의 뉴스를 수집하여 주요 이슈를 정리했습니다.")
 
     if urgent_count:
-        analysis.append(
-            f"긴급 이슈 {urgent_count}건이 감지되어 우선 확인이 필요합니다."
-        )
+        analysis.append(f"긴급 이슈 {urgent_count}건이 감지되어 우선 확인이 필요합니다.")
 
     # Count how many distinct content sections exist in the post
     found_sections = []
@@ -625,9 +592,7 @@ def build_content_analysis(lines: List[str], body: str) -> List[str]:
     # Count links to indicate reference density
     link_count = sum(1 for line in lines if re.search(r"\[.*?\]\(https?://", line))
     if link_count > 5 and len(analysis) < 3:
-        analysis.append(
-            f"총 {link_count}개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다."
-        )
+        analysis.append(f"총 {link_count}개의 출처 링크가 포함되어 있어 원문 확인이 가능합니다.")
 
     if not analysis:
         analysis.append("핵심 이슈를 중심으로 요약과 링크를 정리했습니다.")
@@ -1059,11 +1024,7 @@ def reorder_worldmonitor_table(
 
     title = str(front.get("title", ""))
     tags = _get_front_list(front, "tags")
-    if (
-        "worldmonitor" not in tags
-        and "WorldMonitor" not in title
-        and "월드모니터" not in title
-    ):
+    if "worldmonitor" not in tags and "WorldMonitor" not in title and "월드모니터" not in title:
         return lines
 
     post_date = _get_front_date(front)
@@ -1119,7 +1080,7 @@ def process_post(
     wm_to: Optional[str] = None,
     clean_images_only: bool = False,
 ) -> bool:
-    with open(filepath, "r", encoding="utf-8") as f:
+    with open(filepath, encoding="utf-8") as f:
         content = f.read()
 
     front, body = split_frontmatter(content)
@@ -1145,10 +1106,7 @@ def process_post(
     rebuilt_body = "\n".join(stripped_lines)
 
     # Skip redundant "전체 뉴스 요약" if post already has a summary section
-    has_existing_summary = any(
-        find_heading_index(stripped_lines, t) != -1
-        for t in ("오늘의 핵심", "핵심 요약")
-    )
+    has_existing_summary = any(find_heading_index(stripped_lines, t) != -1 for t in ("오늘의 핵심", "핵심 요약"))
 
     if is_social_media_post(front_data, rebuilt_body):
         summary_lines = build_social_summary(rebuilt_body)
@@ -1159,9 +1117,7 @@ def process_post(
     else:
         summary_lines = build_summary(stripped_lines, rebuilt_body)
         updated_lines = insert_summary(stripped_lines, summary_lines)
-    updated_lines = reorder_worldmonitor_table(
-        updated_lines, front_data, wm_from, wm_to
-    )
+    updated_lines = reorder_worldmonitor_table(updated_lines, front_data, wm_from, wm_to)
     updated_lines = remove_missing_local_images(updated_lines)
 
     if updated_lines == original_lines:
@@ -1174,9 +1130,7 @@ def process_post(
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Backfill post summaries and reorder WorldMonitor tables."
-    )
+    parser = argparse.ArgumentParser(description="Backfill post summaries and reorder WorldMonitor tables.")
     parser.add_argument(
         "--wm-from",
         dest="wm_from",

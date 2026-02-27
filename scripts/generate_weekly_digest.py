@@ -8,11 +8,11 @@ Enhanced version with:
 - Actionable takeaways
 """
 
-import sys
 import os
 import re
+import sys
 from datetime import datetime, timedelta
-from typing import List, Dict
+from typing import Dict, List
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -30,7 +30,7 @@ def parse_post_frontmatter(filepath: str) -> Dict:
     """Parse YAML frontmatter from a markdown post file."""
     result = {"title": "", "date": "", "categories": "", "tags": []}
     try:
-        with open(filepath, "r", encoding="utf-8") as f:
+        with open(filepath, encoding="utf-8") as f:
             content = f.read()
 
         # Extract frontmatter between --- markers
@@ -167,9 +167,7 @@ def extract_market_data(posts: List[Dict]) -> Dict:
         mcap_match = re.search(r"총 시가총액\s*\|\s*\$([0-9.]+)T", body)
         if mcap_match:
             try:
-                data["total_mcap"].append(
-                    {"date": date, "value": float(mcap_match.group(1))}
-                )
+                data["total_mcap"].append({"date": date, "value": float(mcap_match.group(1))})
             except ValueError:
                 pass
 
@@ -198,9 +196,7 @@ def generate_digest(posts: List[Dict]) -> str:
     content_parts.append("## 핵심 요약\n")
     content_parts.append(f"- 총 **{len(posts)}건**의 포스트 분석")
     category_lines = []
-    for name, items in sorted(
-        categories.items(), key=lambda x: len(x[1]), reverse=True
-    ):
+    for name, items in sorted(categories.items(), key=lambda x: len(x[1]), reverse=True):
         category_lines.append(f"{name} {len(items)}건")
     if category_lines:
         content_parts.append(f"- 카테고리: {', '.join(category_lines[:5])}")
@@ -217,24 +213,18 @@ def generate_digest(posts: List[Dict]) -> str:
     # BTC price range
     if market_data["btc_prices"]:
         prices = [d["price"] for d in market_data["btc_prices"]]
-        overview_lines.append(
-            f"| BTC 가격 범위 | ${min(prices):,.0f} ~ ${max(prices):,.0f} |"
-        )
+        overview_lines.append(f"| BTC 가격 범위 | ${min(prices):,.0f} ~ ${max(prices):,.0f} |")
         if len(prices) >= 2:
             weekly_change = ((prices[-1] - prices[0]) / prices[0]) * 100
             direction = "+" if weekly_change >= 0 else ""
-            overview_lines.append(
-                f"| BTC 주간 변동 | {direction}{weekly_change:.1f}% |"
-            )
+            overview_lines.append(f"| BTC 주간 변동 | {direction}{weekly_change:.1f}% |")
 
     # Fear & Greed trend
     if market_data["fear_greed"]:
         fg_values = [d["value"] for d in market_data["fear_greed"]]
         fg_start = market_data["fear_greed"][0]["value"]
         fg_end = market_data["fear_greed"][-1]["value"]
-        overview_lines.append(
-            f"| 공포/탐욕 지수 | {fg_start} → {fg_end} (범위: {min(fg_values)}~{max(fg_values)}) |"
-        )
+        overview_lines.append(f"| 공포/탐욕 지수 | {fg_start} → {fg_end} (범위: {min(fg_values)}~{max(fg_values)}) |")
 
     # Total market cap
     if market_data["total_mcap"]:
@@ -303,16 +293,12 @@ def generate_digest(posts: List[Dict]) -> str:
         content_parts.append("")
 
     # Remaining categories - compact list
-    for cat, cat_posts in sorted(
-        categories.items(), key=lambda x: len(x[1]), reverse=True
-    ):
+    for cat, cat_posts in sorted(categories.items(), key=lambda x: len(x[1]), reverse=True):
         if cat in cat_order:
             continue
         display_name = cat_names.get(cat, cat)
         content_parts.append(f"## {display_name} ({len(cat_posts)}건)\n")
-        for p in sorted(cat_posts, key=lambda x: x.get("file_date", ""), reverse=True)[
-            :5
-        ]:
+        for p in sorted(cat_posts, key=lambda x: x.get("file_date", ""), reverse=True)[:5]:
             title = p.get("title", "제목 없음")
             date = p.get("file_date", "")
             content_parts.append(f"- [{date}] {title}")
@@ -329,9 +315,7 @@ def generate_digest(posts: List[Dict]) -> str:
     # Post count by category
     content_parts.append("\n| 카테고리 | 포스트 수 |")
     content_parts.append("|----------|----------|")
-    for cat, cat_posts in sorted(
-        categories.items(), key=lambda x: len(x[1]), reverse=True
-    ):
+    for cat, cat_posts in sorted(categories.items(), key=lambda x: len(x[1]), reverse=True):
         display_name = cat_names.get(cat, cat)
         content_parts.append(f"| {display_name} | {len(cat_posts)}건 |")
 

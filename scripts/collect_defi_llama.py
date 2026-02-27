@@ -7,27 +7,28 @@ Sources:
   - GET /v2/chains - Chain TVL data (name, tvl, tokenSymbol)
 """
 
-import sys
-import os
 import json
+import os
+import sys
 import time
+from datetime import UTC, datetime
+from typing import Any, Dict, List, Optional, Tuple
+
 import requests
-from datetime import datetime, timezone
-from typing import List, Dict, Any, Optional, Tuple
 
 # Add scripts directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common.config import setup_logging, get_ssl_verify, REQUEST_TIMEOUT
-from common.dedup import DedupEngine
-from common.post_generator import PostGenerator
 from common.collector_metrics import log_collection_summary
+from common.config import REQUEST_TIMEOUT, get_ssl_verify, setup_logging
+from common.dedup import DedupEngine
 from common.markdown_utils import (
-    markdown_link,
-    markdown_table,
     html_reference_details,
     html_source_tag,
+    markdown_link,
+    markdown_table,
 )
+from common.post_generator import PostGenerator
 
 logger = setup_logging("collect_defi_llama")
 
@@ -110,7 +111,7 @@ def _load_tvl_history() -> List[Dict[str, Any]]:
     if not os.path.exists(_TVL_HISTORY_PATH):
         return []
     try:
-        with open(_TVL_HISTORY_PATH, "r", encoding="utf-8") as f:
+        with open(_TVL_HISTORY_PATH, encoding="utf-8") as f:
             data = json.load(f)
         if isinstance(data, list):
             return data
@@ -149,14 +150,10 @@ def _check_tvl_staleness(protocols: List[Dict[str, Any]], today: str) -> Optiona
         return None
 
     # Check last _TVL_STALE_DAYS entries for identical TVL
-    recent = sorted(history, key=lambda e: e.get("date", ""), reverse=True)[
-        :_TVL_STALE_DAYS
-    ]
+    recent = sorted(history, key=lambda e: e.get("date", ""), reverse=True)[:_TVL_STALE_DAYS]
     unique_values = {e.get("total_tvl") for e in recent}
     if len(unique_values) == 1:
-        dates_str = ", ".join(
-            e["date"] for e in sorted(recent, key=lambda e: e["date"])
-        )
+        dates_str = ", ".join(e["date"] for e in sorted(recent, key=lambda e: e["date"]))
         return (
             f"> **데이터 캐시 경고**: 최근 {_TVL_STALE_DAYS}일({dates_str}) 동안 "
             f"총 TVL이 동일한 값({_format_tvl(total_tvl)})으로 기록되었습니다. "
@@ -235,8 +232,8 @@ def generate_tvl_chart_image(
     """Generate a TVL summary dashboard chart image."""
     try:
         from common.image_generator import (
-            _MPL_AVAILABLE,
             _FONT_FAMILY,
+            _MPL_AVAILABLE,
             COLORS,
             IMAGES_DIR,
             _ensure_dir,
@@ -248,8 +245,8 @@ def generate_tvl_chart_image(
         import matplotlib
 
         matplotlib.use("Agg")
-        import matplotlib.pyplot as plt
         import matplotlib.patches as mpatches
+        import matplotlib.pyplot as plt
 
         _ensure_dir()
 
@@ -431,9 +428,7 @@ def generate_tvl_chart_image(
                 ha="center",
                 fontfamily=_FONT_FAMILY,
             )
-            ax.text(
-                0.85, y, name, fontsize=9, color=COLORS["text"], fontfamily=_FONT_FAMILY
-            )
+            ax.text(0.85, y, name, fontsize=9, color=COLORS["text"], fontfamily=_FONT_FAMILY)
             ax.text(
                 3.5,
                 y,
@@ -553,9 +548,7 @@ def generate_tvl_chart_image(
                 ha="center",
                 fontfamily=_FONT_FAMILY,
             )
-            ax.text(
-                8.05, y, name, fontsize=9, color=COLORS["text"], fontfamily=_FONT_FAMILY
-            )
+            ax.text(8.05, y, name, fontsize=9, color=COLORS["text"], fontfamily=_FONT_FAMILY)
             ax.text(
                 10.8,
                 y,
@@ -687,9 +680,7 @@ def build_post_content(
             cat = p.get("category") or "기타"
             category_tvl_temp[cat] = category_tvl_temp.get(cat, 0) + (p.get("tvl") or 0)
         top_cat = max(category_tvl_temp.items(), key=lambda x: x[1])
-        briefing_items.append(
-            f"<li>📊 <strong>최다 카테고리</strong>: {top_cat[0]} — {_format_tvl(top_cat[1])}</li>"
-        )
+        briefing_items.append(f"<li>📊 <strong>최다 카테고리</strong>: {top_cat[0]} — {_format_tvl(top_cat[1])}</li>")
     if briefing_items:
         content_parts.append(
             f'<div class="alert-box alert-info">'
@@ -700,9 +691,7 @@ def build_post_content(
 
     # 전체 뉴스 요약 (narrative)
     content_parts.append("## 전체 요약\n")
-    content_parts.append(
-        f"총 **{len(protocols)}개 프로토콜**, **{len(chains)}개 체인**의 TVL 데이터를 분석했습니다.\n"
-    )
+    content_parts.append(f"총 **{len(protocols)}개 프로토콜**, **{len(chains)}개 체인**의 TVL 데이터를 분석했습니다.\n")
     if protocols and chains:
         top_p = protocols[0]
         top_c = chains[0]
@@ -791,9 +780,7 @@ def build_post_content(
             (
                 cat,
                 _format_tvl(tvl),
-                f"{(tvl / total_protocol_tvl * 100):.1f}%"
-                if total_protocol_tvl > 0
-                else "N/A",
+                f"{(tvl / total_protocol_tvl * 100):.1f}%" if total_protocol_tvl > 0 else "N/A",
             )
             for cat, tvl in sorted_cats
         ]
@@ -820,9 +807,7 @@ def build_post_content(
         top_p = protocols[0]
         top_p_name = top_p.get("name") or "Unknown"
         top_p_tvl = top_p.get("tvl") or 0
-        share_of_total = (
-            (top_p_tvl / total_protocol_tvl * 100) if total_protocol_tvl > 0 else 0
-        )
+        share_of_total = (top_p_tvl / total_protocol_tvl * 100) if total_protocol_tvl > 0 else 0
         ro = _korean_ro(top_p_name)
         insight_lines.append(
             f"현재 DeFi 생태계에서 가장 큰 프로토콜은 **{top_p_name}**{ro}, "
@@ -912,8 +897,8 @@ def main():
     dedup = DedupEngine("defi_llama_seen.json")
     gen = PostGenerator("crypto-news")
 
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    now = datetime.now(timezone.utc)
+    today = datetime.now(UTC).strftime("%Y-%m-%d")
+    now = datetime.now(UTC)
 
     post_title = f"DeFi TVL 리포트 - {today}"
     created_count = 0
@@ -975,9 +960,7 @@ def main():
     dedup.save()
 
     unique_items = len(protocols) + len(chains)
-    logger.info(
-        "=== DeFi Llama collection complete: %d posts created ===", created_count
-    )
+    logger.info("=== DeFi Llama collection complete: %d posts created ===", created_count)
     log_collection_summary(
         logger,
         collector="collect_defi_llama",

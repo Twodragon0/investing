@@ -9,25 +9,26 @@ Sources:
 - Central bank policy decisions (Google News RSS)
 """
 
-import sys
 import os
 import re
+import sys
 import time
+from datetime import UTC, datetime
+from typing import Any, Dict, List
+
 import requests
-from datetime import datetime, timezone
-from typing import List, Dict, Any
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common.config import setup_logging, get_ssl_verify, REQUEST_TIMEOUT
-from common.dedup import DedupEngine
-from common.post_generator import PostGenerator
-from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.collector_metrics import log_collection_summary
+from common.config import REQUEST_TIMEOUT, get_ssl_verify, setup_logging
+from common.dedup import DedupEngine
 from common.markdown_utils import (
     html_reference_details,
     html_source_tag,
 )
+from common.post_generator import PostGenerator
+from common.rss_fetcher import fetch_rss_feeds_concurrent
 
 logger = setup_logging("collect_political_trades")
 
@@ -88,8 +89,8 @@ def fetch_sec_insider_trades() -> List[Dict[str, Any]]:
         params = {
             "q": "Form 4",
             "dateRange": "custom",
-            "startdt": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-            "enddt": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+            "startdt": datetime.now(UTC).strftime("%Y-%m-%d"),
+            "enddt": datetime.now(UTC).strftime("%Y-%m-%d"),
             "forms": "4",
         }
         resp = requests.get(
@@ -208,8 +209,8 @@ def main():
     dedup = DedupEngine("political_trades_seen.json")
     gen = PostGenerator("political-trades")
 
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    now = datetime.now(timezone.utc)
+    today = datetime.now(UTC).strftime("%Y-%m-%d")
+    now = datetime.now(UTC)
 
     # Collect from all sources
     congress_items = fetch_congressional_trades()
@@ -223,9 +224,7 @@ def main():
 
     if dedup.is_duplicate_exact(post_title, "consolidated", today):
         logger.info("Political trades post already exists, skipping")
-        all_items = (
-            congress_items + sec_items + trump_items + korea_items + central_bank_items
-        )
+        all_items = congress_items + sec_items + trump_items + korea_items + central_bank_items
         unique_count = len(
             {
                 f"{item.get('title', '')}|{item.get('source', '')}|{item.get('link', '')}"
@@ -233,9 +232,7 @@ def main():
                 if item.get("title")
             }
         )
-        source_count = len(
-            {item.get("source", "") for item in all_items if item.get("source")}
-        )
+        source_count = len({item.get("source", "") for item in all_items if item.get("source")})
         log_collection_summary(
             logger,
             collector="collect_political_trades",
@@ -247,9 +244,7 @@ def main():
         dedup.save()
         return
 
-    all_items = (
-        congress_items + sec_items + trump_items + korea_items + central_bank_items
-    )
+    all_items = congress_items + sec_items + trump_items + korea_items + central_bank_items
 
     # Deduplicate individual items
     unique_items = []
@@ -274,9 +269,7 @@ def main():
 
     # Count by source category
     congress_count = sum(
-        1
-        for i in unique_items
-        if any(t in i.get("tags", []) for t in ["congress", "pelosi", "senate"])
+        1 for i in unique_items if any(t in i.get("tags", []) for t in ["congress", "pelosi", "senate"])
     )
     sec_count = sum(1 for i in unique_items if "sec" in i.get("tags", []))
     trump_count = sum(1 for i in unique_items if "trump" in i.get("tags", []))
@@ -300,15 +293,10 @@ def main():
         source_parts.append(f"중앙은행 {cb_count}건")
     sources_str = ", ".join(source_parts) if source_parts else "데이터 없음"
 
-    content_parts.append(
-        "미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.\n"
-    )
+    content_parts.append("미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.\n")
 
     # Keyword analysis
-    all_texts = " ".join(
-        item.get("title", "") + " " + item.get("description", "")
-        for item in unique_items
-    ).lower()
+    all_texts = " ".join(item.get("title", "") + " " + item.get("description", "") for item in unique_items).lower()
     keyword_targets = [
         "trump",
         "pelosi",
@@ -324,15 +312,8 @@ def main():
         "disclosure",
         "재산",
     ]
-    keyword_hits = {
-        kw: len(re.findall(re.escape(kw), all_texts, re.IGNORECASE))
-        for kw in keyword_targets
-    }
-    top_keywords = [
-        (kw, cnt)
-        for kw, cnt in sorted(keyword_hits.items(), key=lambda x: -x[1])
-        if cnt > 0
-    ]
+    keyword_hits = {kw: len(re.findall(re.escape(kw), all_texts, re.IGNORECASE)) for kw in keyword_targets}
+    top_keywords = [(kw, cnt) for kw, cnt in sorted(keyword_hits.items(), key=lambda x: -x[1]) if cnt > 0]
 
     # Helper: extract first sentence from text
     def _first_sentence(text: str, max_len: int = 200) -> str:
@@ -345,9 +326,7 @@ def main():
 
     # Filter unique items by category for sections
     congress_filtered = [
-        i
-        for i in unique_items
-        if any(t in i.get("tags", []) for t in ["congress", "pelosi", "senate"])
+        i for i in unique_items if any(t in i.get("tags", []) for t in ["congress", "pelosi", "senate"])
     ]
     trump_filtered = [i for i in unique_items if "trump" in i.get("tags", [])]
     sec_filtered = [i for i in unique_items if "sec" in i.get("tags", [])]
@@ -392,9 +371,7 @@ def main():
     if top_keywords:
         kw_text = ", ".join(f"**{kw}**({cnt}회)" for kw, cnt in top_keywords[:5])
         content_parts.append(
-            f'<div class="alert-box alert-info">'
-            f"<strong>오늘의 핵심 키워드</strong>: {kw_text}"
-            f"</div>\n"
+            f'<div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: {kw_text}</div>\n'
         )
 
     # ── 전체 뉴스 요약 (내러티브 형식) ──
@@ -408,11 +385,7 @@ def main():
         item = trump_filtered[0]
         desc = item.get("description", "").strip()
         title = item.get("title", "")
-        highlight = (
-            _first_sentence(desc)
-            if desc and desc != title and len(desc) > 20
-            else title
-        )
+        highlight = _first_sentence(desc) if desc and desc != title and len(desc) > 20 else title
         summary_narrative.append(
             f"\n**트럼프 정책** 관련으로는 {highlight} 등의 소식이 포착되었으며, "
             f"행정명령과 관세 정책 변화가 글로벌 시장 심리에 직접적 영향을 미치고 있습니다."
@@ -421,11 +394,7 @@ def main():
         item = congress_filtered[0]
         desc = item.get("description", "").strip()
         title = item.get("title", "")
-        highlight = (
-            _first_sentence(desc)
-            if desc and desc != title and len(desc) > 20
-            else title
-        )
+        highlight = _first_sentence(desc) if desc and desc != title and len(desc) > 20 else title
         summary_narrative.append(
             f"\n**미국 의회 거래** 동향에서는 {highlight} 등이 보고되었습니다. "
             "의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다."
@@ -434,11 +403,7 @@ def main():
         item = cb_filtered[0]
         desc = item.get("description", "").strip()
         title = item.get("title", "")
-        highlight = (
-            _first_sentence(desc)
-            if desc and desc != title and len(desc) > 20
-            else title
-        )
+        highlight = _first_sentence(desc) if desc and desc != title and len(desc) > 20 else title
         summary_narrative.append(
             f"\n**중앙은행 정책**에서는 {highlight} 관련 뉴스가 수집되었으며, "
             "금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다."
@@ -447,14 +412,8 @@ def main():
         item = korea_filtered[0]
         desc = item.get("description", "").strip()
         title = item.get("title", "")
-        highlight = (
-            _first_sentence(desc)
-            if desc and desc != title and len(desc) > 20
-            else title
-        )
-        summary_narrative.append(
-            f"\n**한국 정치인** 관련으로는 {highlight} 등의 재산/거래 소식이 수집되었습니다."
-        )
+        highlight = _first_sentence(desc) if desc and desc != title and len(desc) > 20 else title
+        summary_narrative.append(f"\n**한국 정치인** 관련으로는 {highlight} 등의 재산/거래 소식이 수집되었습니다.")
     content_parts.extend(summary_narrative)
 
     content_parts.append("\n\n---\n")
@@ -462,9 +421,7 @@ def main():
     # Collect source links
     source_links = []
 
-    def _render_news_cards(
-        items: List[Dict], section_title: str, max_items: int = 10, featured: int = 5
-    ):
+    def _render_news_cards(items: List[Dict], section_title: str, max_items: int = 10, featured: int = 5):
         """Add a news card section with descriptions to content_parts."""
         if not items:
             return
@@ -549,9 +506,7 @@ def main():
             )
         )
 
-    content_parts.append(
-        f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC"
-    )
+    content_parts.append(f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC")
 
     content = "\n".join(content_parts)
 
@@ -597,9 +552,7 @@ def main():
 
     dedup.save()
     logger.info("=== Political trades collection complete ===")
-    source_count = len(
-        {item.get("source", "") for item in unique_items if item.get("source")}
-    )
+    source_count = len({item.get("source", "") for item in unique_items if item.get("source")})
     log_collection_summary(
         logger,
         collector="collect_political_trades",

@@ -13,12 +13,12 @@ summary post (pinned, market-analysis category) with priority-based structure:
 8. Report links
 """
 
-import sys
+import glob
 import os
 import re
-import glob
+import sys
 from datetime import datetime
-from typing import Dict, List, Any, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -32,7 +32,7 @@ logger = setup_logging("generate_daily_summary")
 
 def read_post_content(filepath: str) -> Dict[str, Any]:
     """Read a Jekyll post and parse frontmatter + content."""
-    with open(filepath, "r", encoding="utf-8") as f:
+    with open(filepath, encoding="utf-8") as f:
         text = f.read()
 
     # Parse frontmatter
@@ -133,9 +133,7 @@ def _extract_highlights(content: str) -> List[str]:
             highlights.extend(bullets)
             break
     # Try alert-info content
-    match = re.search(
-        r'class="alert-box alert-info"[^>]*>.*?<strong>(.*?)</strong>', content
-    )
+    match = re.search(r'class="alert-box alert-info"[^>]*>.*?<strong>(.*?)</strong>', content)
     if match and not highlights:
         highlights.append(f"- {match.group(1)}")
     return highlights
@@ -149,9 +147,7 @@ def summarize_crypto_post(post: Dict[str, Any]) -> Dict[str, Any]:
 
     # Extract themes from HTML progress bars or ASCII chart
     themes = []
-    for match in re.finditer(
-        r'class="theme-label">.\s*(\S+)</span>.*?(\d+)건', content
-    ):
+    for match in re.finditer(r'class="theme-label">.\s*(\S+)</span>.*?(\d+)건', content):
         themes.append((match.group(1), int(match.group(2))))
     if not themes:
         dist_section = extract_section(content, "이슈 분포 현황")
@@ -451,23 +447,15 @@ def _relation_rows(
 def _coverage_warnings(summaries: Dict[str, Optional[Dict[str, Any]]]) -> List[str]:
     warnings = []
     if not summaries.get("crypto"):
-        warnings.append(
-            "- 암호화폐 일일 리포트가 없어 코인-주식 연계 분석 정밀도가 낮습니다."
-        )
+        warnings.append("- 암호화폐 일일 리포트가 없어 코인-주식 연계 분석 정밀도가 낮습니다.")
     if not summaries.get("stock"):
         warnings.append("- 주식 일일 리포트가 없어 교차자산 수급 비교가 제한됩니다.")
     if not summaries.get("market"):
-        warnings.append(
-            "- 시장 종합 리포트가 없어 매크로(금리/환율) 연결 해석이 제한됩니다."
-        )
+        warnings.append("- 시장 종합 리포트가 없어 매크로(금리/환율) 연결 해석이 제한됩니다.")
     if not summaries.get("worldmonitor"):
-        warnings.append(
-            "- 월드모니터 브리핑이 없어 글로벌 지정학/에너지 리스크 연결 분석이 제한됩니다."
-        )
+        warnings.append("- 월드모니터 브리핑이 없어 글로벌 지정학/에너지 리스크 연결 분석이 제한됩니다.")
     if not summaries.get("political") and not summaries.get("regulatory"):
-        warnings.append(
-            "- 정책/규제 데이터가 부족해 이벤트 기반 리스크 점검이 약합니다."
-        )
+        warnings.append("- 정책/규제 데이터가 부족해 이벤트 기반 리스크 점검이 약합니다.")
     return warnings
 
 
@@ -489,7 +477,7 @@ def _to_theme_payload(
 ) -> List[Dict[str, Any]]:
     payload = []
     topic_def = _cross_asset_topics()
-    hit_totals = {k: 0 for k in topic_def.keys()}
+    hit_totals = dict.fromkeys(topic_def.keys(), 0)
     for summary in summaries.values():
         hits = _topic_hits(summary)
         for k, v in hits.items():
@@ -519,9 +507,7 @@ def _to_theme_payload(
 
 
 def _render_generated_image(filename: str, alt: str) -> Optional[str]:
-    image_path = os.path.join(
-        POSTS_DIR, "..", "assets", "images", "generated", filename
-    )
+    image_path = os.path.join(POSTS_DIR, "..", "assets", "images", "generated", filename)
     if not os.path.exists(image_path):
         return None
     return f"![{alt}]({{{{ '/assets/images/generated/{filename}' | relative_url }}}})"
@@ -537,9 +523,7 @@ def _resolve_frontmatter_image(today: str, briefing_image: Optional[str]) -> str
         f"market-heatmap-{today}.png",
     ]
     for filename in candidates:
-        image_path = os.path.join(
-            POSTS_DIR, "..", "assets", "images", "generated", filename
-        )
+        image_path = os.path.join(POSTS_DIR, "..", "assets", "images", "generated", filename)
         if os.path.exists(image_path):
             return f"/assets/images/generated/{filename}"
     return ""
@@ -627,48 +611,34 @@ def main():
         if "crypto-news-digest" in slug:
             crypto_summary = summarize_crypto_post(post)
             crypto_summary["url"] = get_post_url(filepath, today, "crypto-news")
-            post_links.append(
-                ("암호화폐 뉴스", crypto_summary["count"], crypto_summary["url"])
-            )
+            post_links.append(("암호화폐 뉴스", crypto_summary["count"], crypto_summary["url"]))
         elif "stock-news-digest" in slug:
             stock_summary = summarize_stock_post(post)
             stock_summary["url"] = get_post_url(filepath, today, "stock-news")
-            post_links.append(
-                ("주식 시장 뉴스", stock_summary["count"], stock_summary["url"])
-            )
+            post_links.append(("주식 시장 뉴스", stock_summary["count"], stock_summary["url"]))
         elif "security-report" in slug:
             security_summary = summarize_security_post(post)
             security_summary["url"] = get_post_url(filepath, today, "security-alerts")
-            post_links.append(
-                ("보안 리포트", security_summary["count"], security_summary["url"])
-            )
+            post_links.append(("보안 리포트", security_summary["count"], security_summary["url"]))
         elif "regulatory-report" in slug:
             regulatory_summary = summarize_regulatory_post(post)
             regulatory_summary["url"] = get_post_url(filepath, today, "regulatory-news")
-            post_links.append(
-                ("규제 동향", regulatory_summary["count"], regulatory_summary["url"])
-            )
+            post_links.append(("규제 동향", regulatory_summary["count"], regulatory_summary["url"]))
         elif "social-media-digest" in slug:
             social_summary = summarize_social_post(post)
             social_summary["url"] = get_post_url(filepath, today, "crypto-news")
-            post_links.append(
-                ("소셜 미디어", social_summary["count"], social_summary["url"])
-            )
+            post_links.append(("소셜 미디어", social_summary["count"], social_summary["url"]))
         elif "political-trades-report" in slug:
             political_summary = summarize_political_post(post)
             political_summary["url"] = get_post_url(filepath, today, "political-trades")
-            post_links.append(
-                ("정치인 거래", political_summary["count"], political_summary["url"])
-            )
+            post_links.append(("정치인 거래", political_summary["count"], political_summary["url"]))
         elif "market-report" in slug:
             market_summary = summarize_market_post(post)
             market_summary["url"] = get_post_url(filepath, today, "market-analysis")
             post_links.append(("시장 종합 리포트", 0, market_summary["url"]))
         elif "worldmonitor-briefing" in slug:
             worldmonitor_summary = summarize_worldmonitor_post(post)
-            worldmonitor_summary["url"] = get_post_url(
-                filepath, today, "market-analysis"
-            )
+            worldmonitor_summary["url"] = get_post_url(filepath, today, "market-analysis")
             post_links.append(
                 (
                     "월드모니터 브리핑",
@@ -707,9 +677,7 @@ def main():
     }
 
     theme_payload = _to_theme_payload(summary_map)
-    urgent_alerts = [
-        _strip_markdown_link(x.get("title", "")) for x in priority_items.get("P0", [])
-    ]
+    urgent_alerts = [_strip_markdown_link(x.get("title", "")) for x in priority_items.get("P0", [])]
 
     briefing_image = None
     try:
@@ -749,26 +717,17 @@ def main():
     counts_str = ", ".join(count_parts) if count_parts else "뉴스"
     content_parts.append(f"> {counts_str}의 뉴스를 종합 분석한 일일 요약입니다.\n")
 
-    content_parts.append(
-        '<div class="alert-box alert-info"><strong>한눈에 보는 시장 상황</strong><ul>'
-    )
+    content_parts.append('<div class="alert-box alert-info"><strong>한눈에 보는 시장 상황</strong><ul>')
     content_parts.append(f"<li>총 수집: <strong>{total_count}건</strong></li>")
-    content_parts.append(
-        f"<li>긴급 알림(P0): <strong>{len(priority_items.get('P0', []))}건</strong></li>"
-    )
-    content_parts.append(
-        f"<li>중요 뉴스(P1): <strong>{len(priority_items.get('P1', []))}건</strong></li>"
-    )
+    content_parts.append(f"<li>긴급 알림(P0): <strong>{len(priority_items.get('P0', []))}건</strong></li>")
+    content_parts.append(f"<li>중요 뉴스(P1): <strong>{len(priority_items.get('P1', []))}건</strong></li>")
     content_parts.append("</ul></div>\n")
 
     content_parts.append("## 전체 뉴스 요약\n")
     # Narrative-style summary
     if theme_payload and len(theme_payload) >= 2:
         theme_count = min(len(theme_payload), 3)
-        content_parts.append(
-            f"오늘 총 **{total_count}건**의 뉴스에서 크게 "
-            f"**{theme_count}가지 흐름**이 감지됩니다.\n"
-        )
+        content_parts.append(f"오늘 총 **{total_count}건**의 뉴스에서 크게 **{theme_count}가지 흐름**이 감지됩니다.\n")
         for i, item in enumerate(theme_payload[:3], 1):
             emoji = item.get("emoji", "•")
             name = item.get("name", "")
@@ -782,9 +741,7 @@ def main():
                 content_parts.append(f"{i}. **{emoji} {name}** (신호 강도 {score})")
         content_parts.append("")
     else:
-        content_parts.append(
-            f"총 **{total_count}건**의 뉴스가 수집되었습니다. ({counts_str})\n"
-        )
+        content_parts.append(f"총 **{total_count}건**의 뉴스가 수집되었습니다. ({counts_str})\n")
 
     # Priority signal
     p0_count = len(priority_items.get("P0", []))
@@ -795,9 +752,7 @@ def main():
             signal_parts.append(f"P0 긴급 {p0_count}건")
         if p1_count:
             signal_parts.append(f"P1 주요 {p1_count}건")
-        content_parts.append(
-            f"**핵심 신호**: {', '.join(signal_parts)}이 포착되었습니다."
-        )
+        content_parts.append(f"**핵심 신호**: {', '.join(signal_parts)}이 포착되었습니다.")
     content_parts.append("")
 
     content_parts.append("## 종합 대시보드\n")
@@ -814,23 +769,15 @@ def main():
     content_parts.append("")
 
     if briefing_image:
-        content_parts.append(
-            f'![multi-asset-briefing]({{{{ "{briefing_image}" | relative_url }}}})\n'
-        )
-    fallback_briefing = _render_generated_image(
-        f"news-briefing-daily-{today}.png", "multi-asset-briefing"
-    )
-    legacy_briefing = _render_generated_image(
-        f"news-briefing-{today}.png", "multi-asset-briefing"
-    )
+        content_parts.append(f'![multi-asset-briefing]({{{{ "{briefing_image}" | relative_url }}}})\n')
+    fallback_briefing = _render_generated_image(f"news-briefing-daily-{today}.png", "multi-asset-briefing")
+    legacy_briefing = _render_generated_image(f"news-briefing-{today}.png", "multi-asset-briefing")
     if not briefing_image and fallback_briefing:
         content_parts.append(fallback_briefing + "\n")
     elif not briefing_image and legacy_briefing:
         content_parts.append(legacy_briefing + "\n")
 
-    heatmap_img = _render_generated_image(
-        f"market-heatmap-{today}.png", "market-heatmap"
-    )
+    heatmap_img = _render_generated_image(f"market-heatmap-{today}.png", "market-heatmap")
     if heatmap_img:
         content_parts.append(heatmap_img + "\n")
 
@@ -853,9 +800,7 @@ def main():
 
     content_parts.append("## 뉴스 내용 기반 핵심 요약\n")
     if crypto_summary:
-        crypto_themes = ", ".join(
-            f"{name}({cnt})" for name, cnt in (crypto_summary.get("themes") or [])[:3]
-        )
+        crypto_themes = ", ".join(f"{name}({cnt})" for name, cnt in (crypto_summary.get("themes") or [])[:3])
         if crypto_themes:
             content_parts.append(
                 f"- **암호화폐:** {crypto_summary.get('count', 0)}건. 핵심 테마는 {crypto_themes}이며 변동성 확대 헤드라인이 우세합니다."
@@ -906,12 +851,8 @@ def main():
         )
         content_parts.append("")
         content_parts.append("**리스크/기회 메모**")
-        content_parts.append(
-            "- 상위 테마에 집중되는 구간에서는 헤드라인 변동성이 확대될 수 있습니다."
-        )
-        content_parts.append(
-            "- 테마별 키워드가 규제/정책과 겹치면 이벤트 드리븐 리스크 점검이 우선입니다."
-        )
+        content_parts.append("- 상위 테마에 집중되는 구간에서는 헤드라인 변동성이 확대될 수 있습니다.")
+        content_parts.append("- 테마별 키워드가 규제/정책과 겹치면 이벤트 드리븐 리스크 점검이 우선입니다.")
         content_parts.append("")
 
     # ═══════════════════════════════════════
@@ -957,9 +898,7 @@ def main():
                 indicator_rows.append(parts[:3])
 
     if indicator_rows:
-        indicator_parts.append(
-            markdown_table(["지표", "현재 값", "변동"], indicator_rows)
-        )
+        indicator_parts.append(markdown_table(["지표", "현재 값", "변동"], indicator_rows))
 
     # Yield spread
     if market_summary and market_summary.get("yield_section"):
@@ -969,9 +908,7 @@ def main():
         # Extract just the key info
         for line in market_summary["yield_section"].split("\n"):
             line = line.strip()
-            if line.startswith("|") and "스프레드" in line:
-                indicator_parts.append(line)
-            elif line.startswith(">"):
+            if line.startswith("|") and "스프레드" in line or line.startswith(">"):
                 indicator_parts.append(line)
 
     if indicator_parts:
@@ -984,9 +921,7 @@ def main():
 
     if relation_rows or coverage_notes:
         content_parts.append("## 교차자산 연관성 체크\n")
-        content_parts.append(
-            "> 뉴스, 주식, 코인, 정치/규제 이벤트를 연결해 당일 리스크/기회 신호를 점검합니다.\n"
-        )
+        content_parts.append("> 뉴스, 주식, 코인, 정치/규제 이벤트를 연결해 당일 리스크/기회 신호를 점검합니다.\n")
 
         if relation_rows:
             corr_rows = []
@@ -1007,15 +942,9 @@ def main():
             content_parts.append("")
 
         content_parts.append("**운영 체크리스트**")
-        content_parts.append(
-            "- 연관 점수 '높음' 구간은 장중 변동성 확대 가능성으로 우선 모니터링"
-        )
-        content_parts.append(
-            "- 정책/규제 + 정치인 거래가 동시 급증하면 포지션 규모와 레버리지 보수적으로 조정"
-        )
-        content_parts.append(
-            "- 코인/주식 모두 수급·심리 키워드가 증가하면 단기 과열/과매도 반전 가능성 점검"
-        )
+        content_parts.append("- 연관 점수 '높음' 구간은 장중 변동성 확대 가능성으로 우선 모니터링")
+        content_parts.append("- 정책/규제 + 정치인 거래가 동시 급증하면 포지션 규모와 레버리지 보수적으로 조정")
+        content_parts.append("- 코인/주식 모두 수급·심리 키워드가 증가하면 단기 과열/과매도 반전 가능성 점검")
         content_parts.append("")
 
     # ═══════════════════════════════════════
@@ -1060,9 +989,7 @@ def main():
     if crypto_summary:
         content_parts.append(f"### 암호화폐 뉴스 ({crypto_summary['count']}건)\n")
         if crypto_summary.get("themes"):
-            themes_str = ", ".join(
-                f"**{t[0]}**({t[1]}건)" for t in crypto_summary["themes"][:4]
-            )
+            themes_str = ", ".join(f"**{t[0]}**({t[1]}건)" for t in crypto_summary["themes"][:4])
             content_parts.append(f"주요 테마: {themes_str}\n")
         if crypto_summary.get("highlights"):
             for h in crypto_summary["highlights"][:4]:
@@ -1106,9 +1033,7 @@ def main():
         content_parts.append(f"\n[상세 보기]({regulatory_summary.get('url', '#')})\n")
 
     if worldmonitor_summary:
-        content_parts.append(
-            f"### 월드모니터 브리핑 ({worldmonitor_summary['count']}건)\n"
-        )
+        content_parts.append(f"### 월드모니터 브리핑 ({worldmonitor_summary['count']}건)\n")
         if worldmonitor_summary.get("key_summary"):
             for h in worldmonitor_summary["key_summary"][:3]:
                 content_parts.append(h)
@@ -1139,11 +1064,7 @@ def main():
                     incident_rows.append(parts[:3])
             if incident_rows:
                 content_parts.append("")
-                content_parts.append(
-                    markdown_table(
-                        ["프로젝트", "피해 규모", "공격 유형"], incident_rows
-                    )
-                )
+                content_parts.append(markdown_table(["프로젝트", "피해 규모", "공격 유형"], incident_rows))
         content_parts.append(f"\n[상세 보기]({security_summary.get('url', '#')})\n")
 
     # Social section
@@ -1192,9 +1113,7 @@ def main():
         )
 
     content_parts.append("\n---\n")
-    content_parts.append(
-        "*본 요약은 자동 수집된 뉴스 데이터를 기반으로 작성되었으며, 투자 조언이 아닙니다.*"
-    )
+    content_parts.append("*본 요약은 자동 수집된 뉴스 데이터를 기반으로 작성되었으며, 투자 조언이 아닙니다.*")
 
     content = "\n".join(content_parts)
 
@@ -1235,9 +1154,7 @@ excerpt: "{counts_str}의 뉴스를 종합 분석한 일일 요약"
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(post_content)
 
-    logger.info(
-        "Created daily summary: %s (total %d news items)", filepath, total_count
-    )
+    logger.info("Created daily summary: %s (total %d news items)", filepath, total_count)
     logger.info("=== Daily summary generation complete ===")
 
 

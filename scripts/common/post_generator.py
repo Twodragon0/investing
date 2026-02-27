@@ -3,10 +3,10 @@
 Generates _posts/ files with proper frontmatter and content formatting.
 """
 
+import logging
 import os
 import re
-import logging
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Dict, List, Optional
 
 from common.markdown_utils import smart_truncate
@@ -80,7 +80,7 @@ class PostGenerator:
             return None
 
         if date is None:
-            date = datetime.now(timezone.utc)
+            date = datetime.now(UTC)
 
         if slug is None:
             slug = _slugify(title)

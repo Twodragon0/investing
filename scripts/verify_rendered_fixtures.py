@@ -4,7 +4,6 @@ import os
 import re
 import sys
 
-
 FIXTURE_DIR = os.path.join(os.path.dirname(__file__), "fixtures", "rendered_smoke")
 
 TARGETS = [
@@ -100,7 +99,7 @@ def main() -> int:
             failures.append(f"missing-fixture:{fixture_path}")
             continue
 
-        with open(fixture_path, "r", encoding="utf-8") as f:
+        with open(fixture_path, encoding="utf-8") as f:
             html = f.read()
 
         failures.extend(_validate_target(target, fixture_path, html))
@@ -111,16 +110,14 @@ def main() -> int:
             failures.append(f"missing-negative-fixture:{fixture_path}")
             continue
 
-        with open(fixture_path, "r", encoding="utf-8") as f:
+        with open(fixture_path, encoding="utf-8") as f:
             html = f.read()
 
         observed = _validate_target(target, fixture_path, html)
         observed_prefixes = {entry.split(":", 1)[0] for entry in observed}
         for expected_prefix in target["expected_error_prefixes"]:
             if expected_prefix not in observed_prefixes:
-                failures.append(
-                    f"negative-check-missed:{expected_prefix}:{fixture_path}"
-                )
+                failures.append(f"negative-check-missed:{expected_prefix}:{fixture_path}")
 
     if failures:
         print("Rendered fixture smoke test failures:")

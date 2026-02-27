@@ -7,10 +7,10 @@ State is persisted in JSON files under _state/.
 
 import hashlib
 import json
+import logging
 import os
 import re
-import logging
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from difflib import SequenceMatcher
 from typing import Dict, List
 
@@ -49,26 +49,22 @@ class DedupEngine:
         """Load state from JSON file."""
         if os.path.exists(self.state_path):
             try:
-                with open(self.state_path, "r", encoding="utf-8") as f:
+                with open(self.state_path, encoding="utf-8") as f:
                     data = json.load(f)
                 self.seen = data.get("seen", {})
                 self.titles = data.get("titles", [])
                 self._prune()
-            except (json.JSONDecodeError, KeyError, IOError, OSError):
+            except (json.JSONDecodeError, KeyError, OSError):
                 logger.warning("Corrupt state file %s, resetting", self.state_path)
                 self.seen = {}
                 self.titles = []
 
     def _prune(self) -> None:
         """Remove entries older than max_age_days."""
-        cutoff = (
-            datetime.now(timezone.utc) - timedelta(days=self.max_age_days)
-        ).isoformat()
+        cutoff = (datetime.now(UTC) - timedelta(days=self.max_age_days)).isoformat()
         pruned = {k: v for k, v in self.seen.items() if v >= cutoff}
         if len(pruned) < len(self.seen):
-            logger.info(
-                "Pruned %d old entries from dedup state", len(self.seen) - len(pruned)
-            )
+            logger.info("Pruned %d old entries from dedup state", len(self.seen) - len(pruned))
         self.seen = pruned
         # Keep titles list manageable
         self.titles = self.titles[-(5000):]
@@ -137,5 +133,5 @@ class DedupEngine:
     def mark_seen(self, title: str, source: str, date_str: str) -> None:
         """Mark a news item as seen."""
         h = _make_hash(title, source, date_str)
-        self.seen[h] = datetime.now(timezone.utc).isoformat()
+        self.seen[h] = datetime.now(UTC).isoformat()
         self.titles.append(_normalize(title))

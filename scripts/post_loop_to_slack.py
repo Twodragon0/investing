@@ -7,7 +7,6 @@ import urllib.request
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-
 SLACK_API_BASE = "https://slack.com/api"
 
 
@@ -72,11 +71,7 @@ def main() -> int:
         print(f"chat.postMessage failed: {posted}")
         return 1
 
-    print(
-        "Posted loop message to Slack thread"
-        if root_ts
-        else "Posted new loop root message to Slack"
-    )
+    print("Posted loop message to Slack thread" if root_ts else "Posted new loop root message to Slack")
     return 0
 
 

@@ -8,27 +8,28 @@ Sources:
 - Alpha Vantage (market data snapshots)
 """
 
-import sys
 import os
+import sys
 import time
+from datetime import UTC, datetime
+from typing import Any, Dict, List
+
 import requests
-from datetime import datetime, timezone
-from typing import List, Dict, Any
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common.config import get_env, setup_logging, get_ssl_verify, REQUEST_TIMEOUT
+from common.collector_metrics import log_collection_summary
+from common.config import REQUEST_TIMEOUT, get_env, get_ssl_verify, setup_logging
 from common.dedup import DedupEngine
-from common.post_generator import PostGenerator
-from common.utils import detect_language, request_with_retry
-from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
-from common.summarizer import ThemeSummarizer
 from common.markdown_utils import (
     html_reference_details,
     html_source_tag,
     smart_truncate,
 )
-from common.collector_metrics import log_collection_summary
+from common.post_generator import PostGenerator
+from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
+from common.summarizer import ThemeSummarizer
+from common.utils import detect_language, request_with_retry
 
 try:
     from common.browser import BrowserSession, is_playwright_available
@@ -55,9 +56,7 @@ def fetch_google_news_browser_stocks(limit: int = 20) -> List[Dict[str, Any]]:
     Falls back to empty list if Playwright is unavailable.
     """
     if not is_playwright_available():
-        logger.info(
-            "Playwright not available, skipping Google News browser scraping for stocks"
-        )
+        logger.info("Playwright not available, skipping Google News browser scraping for stocks")
         return []
 
     if extract_google_news_links is None:
@@ -82,14 +81,10 @@ def fetch_google_news_browser_stocks(limit: int = 20) -> List[Dict[str, Any]]:
         with BrowserSession(timeout=30_000) as session:
             for search_url, tags in search_configs:
                 try:
-                    session.navigate(
-                        search_url, wait_until="domcontentloaded", wait_ms=3000
-                    )
+                    session.navigate(search_url, wait_until="domcontentloaded", wait_ms=3000)
                     all_items.extend(extract_google_news_links(session, limit, tags))
                 except Exception as e:
-                    logger.warning(
-                        "Google News browser scraping failed for %s: %s", tags, e
-                    )
+                    logger.warning("Google News browser scraping failed for %s: %s", tags, e)
 
         logger.info("Google News Browser stocks: fetched %d items", len(all_items))
     except Exception as e:
@@ -204,9 +199,7 @@ def fetch_alpha_vantage_snapshot(api_key: str) -> List[Dict[str, Any]]:
                 "symbol": symbol,
                 "apikey": api_key,
             }
-            resp = request_with_retry(
-                url, params=params, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL
-            )
+            resp = request_with_retry(url, params=params, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL)
             data = resp.json()
             quote = data.get("Global Quote", {})
 
@@ -220,7 +213,7 @@ def fetch_alpha_vantage_snapshot(api_key: str) -> List[Dict[str, Any]]:
                         "title": f"{name} ({symbol}): ${price} ({change_pct})",
                         "description": f"{name} ({symbol}) - Price: ${price}, Change: {change} ({change_pct})",
                         "link": f"https://finance.yahoo.com/quote/{symbol}",
-                        "published": datetime.now(timezone.utc).isoformat(),
+                        "published": datetime.now(UTC).isoformat(),
                         "source": "Alpha Vantage",
                         "tags": ["stock", "market-data", symbol.lower()],
                     }
@@ -274,8 +267,8 @@ def main():
     dedup = DedupEngine("stock_news_seen.json")
     gen = PostGenerator("stock-news")
 
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    now = datetime.now(timezone.utc)
+    today = datetime.now(UTC).strftime("%Y-%m-%d")
+    now = datetime.now(UTC)
 
     # Collect from all sources
     browser_items = fetch_google_news_browser_stocks()
@@ -284,9 +277,7 @@ def main():
     alpha_items = fetch_alpha_vantage_snapshot(alpha_vantage_key)
 
     financial_rss_items = fetch_financial_rss_feeds()
-    all_items = (
-        browser_items + google_items + yahoo_items + alpha_items + financial_rss_items
-    )
+    all_items = browser_items + google_items + yahoo_items + alpha_items + financial_rss_items
 
     # Fetch Korean market data
     kr_market = fetch_korean_market_data()
@@ -316,9 +307,7 @@ def main():
                 if item.get("title")
             }
         )
-        source_count = len(
-            {item.get("source", "") for item in all_items if item.get("source")}
-        )
+        source_count = len({item.get("source", "") for item in all_items if item.get("source")})
         log_collection_summary(
             logger,
             collector="collect_stock_news",
@@ -352,22 +341,14 @@ def main():
         lang = detect_language(title)
         if lang == "ko":
             if link:
-                korean_rows.append(
-                    f"| {len(korean_rows) + 1} | [**{title}**]({link}) | {source} |"
-                )
+                korean_rows.append(f"| {len(korean_rows) + 1} | [**{title}**]({link}) | {source} |")
             else:
-                korean_rows.append(
-                    f"| {len(korean_rows) + 1} | **{title}** | {source} |"
-                )
+                korean_rows.append(f"| {len(korean_rows) + 1} | **{title}** | {source} |")
         else:
             if link:
-                global_rows.append(
-                    f"| {len(global_rows) + 1} | [**{title}**]({link}) | {source} |"
-                )
+                global_rows.append(f"| {len(global_rows) + 1} | [**{title}**]({link}) | {source} |")
             else:
-                global_rows.append(
-                    f"| {len(global_rows) + 1} | **{title}** | {source} |"
-                )
+                global_rows.append(f"| {len(global_rows) + 1} | **{title}** | {source} |")
 
     global_count = len(global_rows)
     korean_count = len(korean_rows)
@@ -377,9 +358,7 @@ def main():
     korean_rows = korean_rows[:10]
 
     # Data-driven opening with Korean market summary
-    opening_parts = [
-        f"**{today}** 주식 시장에서 {len(all_items)}건의 뉴스를 분석했습니다."
-    ]
+    opening_parts = [f"**{today}** 주식 시장에서 {len(all_items)}건의 뉴스를 분석했습니다."]
     kr_summary_parts = []
     for name, info in kr_market.items():
         kr_summary_parts.append(f"{name} {info['price']}({info['change_pct']})")
@@ -400,14 +379,10 @@ def main():
 
     summary_points = []
     if korean_count or global_count:
-        summary_points.append(
-            f"한국 기사 {korean_count}건, 글로벌 기사 {global_count}건 수집"
-        )
+        summary_points.append(f"한국 기사 {korean_count}건, 글로벌 기사 {global_count}건 수집")
     if kr_summary_parts:
         summary_points.append(f"한국 지수: {', '.join(kr_summary_parts)}")
-    overall_summary = summarizer.generate_overall_summary_section(
-        extra_data={"summary_points": summary_points}
-    )
+    overall_summary = summarizer.generate_overall_summary_section(extra_data={"summary_points": summary_points})
     if overall_summary:
         content_parts.append(overall_summary)
 
@@ -423,11 +398,7 @@ def main():
         desc = item.get("description", "")
         # Parse "Name (SYM) - Price: $X, Change: Y (Z%)"
         try:
-            price_part = (
-                desc.split("Price:")[1].split(",")[0].strip()
-                if "Price:" in desc
-                else "N/A"
-            )
+            price_part = desc.split("Price:")[1].split(",")[0].strip() if "Price:" in desc else "N/A"
             change_part = ""
             if "(" in desc and desc.endswith(")"):
                 change_part = desc.rsplit("(", 1)[1].rstrip(")")
@@ -436,9 +407,7 @@ def main():
             change_part = "N/A"
         snapshot_items.append(
             {
-                "name": item["title"].split(":")[0].strip()
-                if ":" in item["title"]
-                else item["title"],
+                "name": item["title"].split(":")[0].strip() if ":" in item["title"] else item["title"],
                 "price": price_part,
                 "change_pct": change_part or "N/A",
                 "section": "US Market",
@@ -481,8 +450,7 @@ def main():
     global_news_items = [
         item
         for item in all_items
-        if item.get("source") != "Alpha Vantage"
-        and detect_language(item.get("title", "")) != "ko"
+        if item.get("source") != "Alpha Vantage" and detect_language(item.get("title", "")) != "ko"
     ]
     if global_news_items:
         content_parts.append("## 글로벌 주식 뉴스\n")
@@ -506,8 +474,7 @@ def main():
     korean_news_items = [
         item
         for item in all_items
-        if item.get("source") != "Alpha Vantage"
-        and detect_language(item.get("title", "")) == "ko"
+        if item.get("source") != "Alpha Vantage" and detect_language(item.get("title", "")) == "ko"
     ]
     if korean_news_items:
         content_parts.append("\n## 한국 주식 뉴스\n")
@@ -534,11 +501,7 @@ def main():
         content_parts.append("| 지수/ETF | 가격 | 변동률 |")
         content_parts.append("|----------|------|--------|")
         for item in alpha_vantage_rows:
-            title_short = (
-                item["title"].split(":")[0].strip()
-                if ":" in item["title"]
-                else item["title"]
-            )
+            title_short = item["title"].split(":")[0].strip() if ":" in item["title"] else item["title"]
             desc = item.get("description", "")
             # Extract change_pct
             change_pct = "N/A"
@@ -558,9 +521,7 @@ def main():
                     pass
             link = item.get("link", "")
             if link:
-                content_parts.append(
-                    f"| [**{title_short}**]({link}) | {price_str} | {change_display} |"
-                )
+                content_parts.append(f"| [**{title_short}**]({link}) | {price_str} | {change_display} |")
                 source_links.append(
                     {
                         "title": item["title"],
@@ -569,28 +530,18 @@ def main():
                     }
                 )
             else:
-                content_parts.append(
-                    f"| **{title_short}** | {price_str} | {change_display} |"
-                )
+                content_parts.append(f"| **{title_short}** | {price_str} | {change_display} |")
         for name, info in kr_market.items():
             try:
                 pval = float(info["change_pct"].replace("%", "").replace("+", ""))
                 icon = "🟢" if pval >= 0 else "🔴"
             except (ValueError, AttributeError):
                 icon = ""
-            content_parts.append(
-                f"| **{name}** | {info['price']} | {icon} {info['change_pct']} |"
-            )
+            content_parts.append(f"| **{name}** | {info['price']} | {icon} {info['change_pct']} |")
     else:
-        content_parts.append(
-            "> 시장 데이터를 일시적으로 가져올 수 없습니다. 아래 링크에서 직접 확인하세요.\n"
-        )
-        content_parts.append(
-            "- [Yahoo Finance - S&P 500](https://finance.yahoo.com/quote/%5EGSPC/)"
-        )
-        content_parts.append(
-            "- [네이버 금융 - KOSPI](https://finance.naver.com/sise/sise_index.naver?code=KOSPI)"
-        )
+        content_parts.append("> 시장 데이터를 일시적으로 가져올 수 없습니다. 아래 링크에서 직접 확인하세요.\n")
+        content_parts.append("- [Yahoo Finance - S&P 500](https://finance.yahoo.com/quote/%5EGSPC/)")
+        content_parts.append("- [네이버 금융 - KOSPI](https://finance.naver.com/sise/sise_index.naver?code=KOSPI)")
 
     # Market insight - narrative style
     content_parts.append("\n## 시장 인사이트\n")
@@ -613,9 +564,7 @@ def main():
             f"{sentiment}되는 모습입니다."
         )
     if kosdaq:
-        insight_lines.append(
-            f"KOSDAQ은 **{kosdaq['price']}** ({kosdaq['change_pct']})를 기록했습니다."
-        )
+        insight_lines.append(f"KOSDAQ은 **{kosdaq['price']}** ({kosdaq['change_pct']})를 기록했습니다.")
     if usdkrw:
         insight_lines.append(
             f"\n원달러 환율은 **{usdkrw['price']}**원으로, 환율 변동은 외국인 자금 유출입과 "
@@ -638,9 +587,7 @@ def main():
         )
 
     if not insight_lines:
-        insight_lines.append(
-            "현재 시장 데이터를 충분히 수집하지 못했습니다. API 제한 또는 휴장일일 수 있습니다."
-        )
+        insight_lines.append("현재 시장 데이터를 충분히 수집하지 못했습니다. API 제한 또는 휴장일일 수 있습니다.")
     insight_lines.append("")
     insight_lines.append(
         "> *본 시장 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
@@ -661,9 +608,7 @@ def main():
         )
 
     # Data collection footer
-    content_parts.append(
-        f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC"
-    )
+    content_parts.append(f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC")
 
     content = "\n".join(content_parts)
 
@@ -690,9 +635,7 @@ def main():
             if item.get("title")
         }
     )
-    source_count = len(
-        {item.get("source", "") for item in all_items if item.get("source")}
-    )
+    source_count = len({item.get("source", "") for item in all_items if item.get("source")})
     log_collection_summary(
         logger,
         collector="collect_stock_news",

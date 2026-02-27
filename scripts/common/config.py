@@ -1,8 +1,8 @@
 """Environment variable configuration loader."""
 
-import os
 import logging
-from datetime import timezone, timedelta
+import os
+from datetime import timedelta, timezone
 from typing import Optional
 
 try:
@@ -50,8 +50,8 @@ def _get_combined_ca_bundle(certifi_bundle: str) -> Optional[str]:
 
     Returns path to combined bundle, or None if not needed.
     """
-    import subprocess
     import shutil
+    import subprocess
 
     combined_path = os.path.join(os.path.dirname(certifi_bundle), "combined_ca.pem")
 

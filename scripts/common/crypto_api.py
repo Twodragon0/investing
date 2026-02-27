@@ -1,9 +1,11 @@
 """Shared CoinGecko and Fear & Greed Index API helpers."""
 
 import logging
+from typing import Any, Dict, List
+
 import requests
-from typing import Dict, Any, List
-from .config import get_ssl_verify, USER_AGENT
+
+from .config import USER_AGENT, get_ssl_verify
 from .utils import request_with_retry
 
 logger = logging.getLogger(__name__)

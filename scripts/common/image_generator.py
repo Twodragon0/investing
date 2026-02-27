@@ -4,9 +4,9 @@ Generates professional market cards, charts, and gauges using matplotlib and Pil
 Images are saved to assets/images/generated/ for use in Jekyll posts.
 """
 
-import os
 import logging
-from typing import Dict, List, Any, Optional
+import os
+from typing import Any, Dict, List, Optional
 
 logger = logging.getLogger(__name__)
 
@@ -23,9 +23,9 @@ try:
     import matplotlib
 
     matplotlib.use("Agg")
-    import matplotlib.pyplot as plt
-    import matplotlib.patches as mpatches
     import matplotlib.font_manager as fm
+    import matplotlib.patches as mpatches
+    import matplotlib.pyplot as plt
     import numpy as np
 
     _MPL_AVAILABLE = True
@@ -448,9 +448,7 @@ def generate_top_coins_card(
     filepath = os.path.join(IMAGES_DIR, filename)
 
     plt.tight_layout(pad=0.5)
-    plt.savefig(
-        filepath, dpi=150, facecolor=COLORS["bg"], edgecolor="none", bbox_inches="tight"
-    )
+    plt.savefig(filepath, dpi=150, facecolor=COLORS["bg"], edgecolor="none", bbox_inches="tight")
     plt.close(fig)
 
     logger.info("Generated top coins card: %s", filename)
@@ -529,9 +527,7 @@ def generate_fear_greed_gauge(
             ax.add_patch(wedge)
 
     # Inner circle
-    inner = mpatches.Circle(
-        (0, 0), 0.7, facecolor=COLORS["bg"], edgecolor=COLORS["border"], linewidth=1
-    )
+    inner = mpatches.Circle((0, 0), 0.7, facecolor=COLORS["bg"], edgecolor=COLORS["border"], linewidth=1)
     ax.add_patch(inner)
 
     # Needle
@@ -546,9 +542,7 @@ def generate_fear_greed_gauge(
     )
 
     # Center dot
-    center_dot = mpatches.Circle(
-        (0, 0), 0.06, facecolor=COLORS["text"], edgecolor="none"
-    )
+    center_dot = mpatches.Circle((0, 0), 0.06, facecolor=COLORS["text"], edgecolor="none")
     ax.add_patch(center_dot)
 
     # Value display
@@ -638,9 +632,7 @@ def generate_fear_greed_gauge(
     filepath = os.path.join(IMAGES_DIR, filename)
 
     plt.tight_layout(pad=0.3)
-    plt.savefig(
-        filepath, dpi=150, facecolor=COLORS["bg"], edgecolor="none", bbox_inches="tight"
-    )
+    plt.savefig(filepath, dpi=150, facecolor=COLORS["bg"], edgecolor="none", bbox_inches="tight")
     plt.close(fig)
 
     logger.info("Generated fear & greed gauge: %s", filename)
@@ -809,9 +801,7 @@ def generate_market_heatmap(
         filename = f"market-heatmap-{date_str}.png"
     filepath = os.path.join(IMAGES_DIR, filename)
 
-    plt.savefig(
-        filepath, dpi=150, facecolor=COLORS["bg"], edgecolor="none", bbox_inches="tight"
-    )
+    plt.savefig(filepath, dpi=150, facecolor=COLORS["bg"], edgecolor="none", bbox_inches="tight")
     plt.close(fig)
 
     logger.info("Generated market heatmap: %s", filename)
@@ -863,14 +853,10 @@ def generate_news_summary_card(
     bars = ax.barh(y_pos, counts, color=colors, height=0.6, edgecolor="none")
 
     ax.set_yticks(y_pos)
-    ax.set_yticklabels(
-        names, fontsize=11, color=COLORS["text"], fontfamily=_FONT_FAMILY
-    )
+    ax.set_yticklabels(names, fontsize=11, color=COLORS["text"], fontfamily=_FONT_FAMILY)
     ax.invert_yaxis()
 
-    ax.set_xlabel(
-        "Articles", fontsize=10, color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY
-    )
+    ax.set_xlabel("Articles", fontsize=10, color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
     ax.tick_params(axis="x", colors=COLORS["text_secondary"])
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
@@ -878,7 +864,7 @@ def generate_news_summary_card(
     ax.spines["left"].set_color(COLORS["border"])
 
     # Value labels on bars
-    for bar, count in zip(bars, counts):
+    for bar, count in zip(bars, counts, strict=False):
         ax.text(
             bar.get_width() + 0.3,
             bar.get_y() + bar.get_height() / 2,
@@ -916,9 +902,7 @@ def generate_news_summary_card(
     filepath = os.path.join(IMAGES_DIR, filename)
 
     plt.tight_layout(pad=1.0)
-    plt.savefig(
-        filepath, dpi=150, facecolor=COLORS["bg"], edgecolor="none", bbox_inches="tight"
-    )
+    plt.savefig(filepath, dpi=150, facecolor=COLORS["bg"], edgecolor="none", bbox_inches="tight")
     plt.close(fig)
 
     logger.info("Generated news summary card: %s", filename)
@@ -1064,9 +1048,7 @@ def generate_market_snapshot_card(
             color = COLORS["text_secondary"]
             change_display = change_pct
 
-        ax.text(
-            0.5, y, name, fontsize=11, color=COLORS["text"], fontfamily=_FONT_FAMILY
-        )
+        ax.text(0.5, y, name, fontsize=11, color=COLORS["text"], fontfamily=_FONT_FAMILY)
         ax.text(
             5.0,
             y,
@@ -1106,9 +1088,7 @@ def generate_market_snapshot_card(
     filepath = os.path.join(IMAGES_DIR, filename)
 
     plt.tight_layout(pad=0.5)
-    plt.savefig(
-        filepath, dpi=150, facecolor=COLORS["bg"], edgecolor="none", bbox_inches="tight"
-    )
+    plt.savefig(filepath, dpi=150, facecolor=COLORS["bg"], edgecolor="none", bbox_inches="tight")
     plt.close(fig)
 
     logger.info("Generated market snapshot card: %s", filename)
@@ -1208,7 +1188,7 @@ def generate_source_distribution_card(
     # Legend
     legend = ax.legend(
         wedges,
-        [f"{n} ({c})" for n, c in zip(names, counts)],
+        [f"{n} ({c})" for n, c in zip(names, counts, strict=False)],
         loc="lower center",
         bbox_to_anchor=(0.5, -0.08),
         ncol=min(len(names), 4),
@@ -1236,9 +1216,7 @@ def generate_source_distribution_card(
     filepath = os.path.join(IMAGES_DIR, filename)
 
     plt.tight_layout(pad=1.0)
-    plt.savefig(
-        filepath, dpi=150, facecolor=COLORS["bg"], edgecolor="none", bbox_inches="tight"
-    )
+    plt.savefig(filepath, dpi=150, facecolor=COLORS["bg"], edgecolor="none", bbox_inches="tight")
     plt.close(fig)
 
     logger.info("Generated source distribution card: %s", filename)
@@ -1268,9 +1246,7 @@ def generate_sector_heatmap(
         return None
 
     # Sort sectors by change for visual grouping
-    sorted_sectors = sorted(
-        sector_data.items(), key=lambda x: x[1].get("change_pct", 0), reverse=True
-    )
+    sorted_sectors = sorted(sector_data.items(), key=lambda x: x[1].get("change_pct", 0), reverse=True)
     count = len(sorted_sectors)
 
     # Grid layout: adaptive columns
@@ -1425,9 +1401,7 @@ def generate_sector_heatmap(
         filename = f"sector-heatmap-{date_str}.png"
     filepath = os.path.join(IMAGES_DIR, filename)
 
-    plt.savefig(
-        filepath, dpi=150, facecolor=COLORS["bg"], edgecolor="none", bbox_inches="tight"
-    )
+    plt.savefig(filepath, dpi=150, facecolor=COLORS["bg"], edgecolor="none", bbox_inches="tight")
     plt.close(fig)
 
     logger.info("Generated sector heatmap: %s", filename)
@@ -1658,9 +1632,7 @@ def generate_news_briefing_card(
     filepath = os.path.join(IMAGES_DIR, filename)
 
     plt.tight_layout(pad=0.5)
-    plt.savefig(
-        filepath, dpi=150, facecolor=COLORS["bg"], edgecolor="none", bbox_inches="tight"
-    )
+    plt.savefig(filepath, dpi=150, facecolor=COLORS["bg"], edgecolor="none", bbox_inches="tight")
     plt.close(fig)
 
     logger.info("Generated news briefing card: %s", filename)

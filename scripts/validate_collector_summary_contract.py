@@ -4,7 +4,6 @@ import ast
 from pathlib import Path
 from typing import List
 
-
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS_DIR = ROOT / "scripts"
 
@@ -32,9 +31,12 @@ def _find_calls(tree: ast.AST) -> List[ast.Call]:
     for node in ast.walk(tree):
         if isinstance(node, ast.Call):
             fn = node.func
-            if isinstance(fn, ast.Name) and fn.id == "log_collection_summary":
-                calls.append(node)
-            elif isinstance(fn, ast.Attribute) and fn.attr == "log_collection_summary":
+            if (
+                isinstance(fn, ast.Name)
+                and fn.id == "log_collection_summary"
+                or isinstance(fn, ast.Attribute)
+                and fn.attr == "log_collection_summary"
+            ):
                 calls.append(node)
     return calls
 
@@ -78,9 +80,7 @@ def main() -> int:
             print(f"- {fail}")
         return 1
 
-    print(
-        f"Collector summary contract passed for {len(TARGET_COLLECTORS)} collector(s)."
-    )
+    print(f"Collector summary contract passed for {len(TARGET_COLLECTORS)} collector(s).")
     return 0
 
 
