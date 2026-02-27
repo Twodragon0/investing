@@ -394,6 +394,34 @@ def main():
     # Image — market snapshot card
     snapshot_items = []
     # US data from Alpha Vantage
+    if not alpha_vantage_rows:
+        try:
+            import yfinance as yf
+
+            _us_symbols = {"^GSPC": "S&P 500", "^IXIC": "NASDAQ", "^DJI": "다우존스", "^VIX": "VIX"}
+            _tickers = yf.download(list(_us_symbols.keys()), period="2d", progress=False, auto_adjust=True)
+            for sym, label in _us_symbols.items():
+                try:
+                    _hist = _tickers["Close"][sym].dropna()
+                    if len(_hist) >= 2:
+                        _price = _hist.iloc[-1]
+                        _prev = _hist.iloc[-2]
+                        _chg_pct = (_price - _prev) / _prev * 100
+                        _sign = "+" if _chg_pct >= 0 else ""
+                        snapshot_items.append(
+                            {
+                                "name": label,
+                                "price": f"{_price:,.2f}",
+                                "change_pct": f"{_sign}{_chg_pct:.2f}%",
+                                "section": "US Market",
+                            }
+                        )
+                except Exception:
+                    pass
+        except ImportError:
+            logger.debug("yfinance not available for US market fallback")
+        except Exception as e:
+            logger.warning("yfinance US market fallback failed: %s", e)
     for item in alpha_vantage_rows:
         desc = item.get("description", "")
         # Parse "Name (SYM) - Price: $X, Change: Y (Z%)"

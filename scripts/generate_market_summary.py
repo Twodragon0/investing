@@ -69,7 +69,6 @@ STABLECOIN_SYMBOLS = {
     "eurs",
     "xaut",
     "paxg",
-    "figr_heloc",
 }
 
 
@@ -1035,6 +1034,9 @@ def main():
     yield_spread = calculate_yield_spread(fred_data)
 
     # ── Generate images ──
+    # Filter stablecoins for image generation
+    non_stable_coins = [c for c in top_coins if c.get("symbol", "").lower() not in STABLECOIN_SYMBOLS]
+
     image_refs = []
     try:
         from common.image_generator import (
@@ -1044,11 +1046,11 @@ def main():
             generate_top_coins_card,
         )
 
-        img = generate_market_heatmap(top_coins, today)
+        img = generate_market_heatmap(non_stable_coins, today)
         if img:
             image_refs.append(("market-heatmap", img))
 
-        img = generate_top_coins_card(top_coins, today)
+        img = generate_top_coins_card(non_stable_coins, today)
         if img:
             image_refs.append(("top-coins", img))
 

@@ -544,6 +544,7 @@ def main():
                 category="Crypto News Briefing",
                 total_count=len(all_items),
                 urgent_alerts=p0_alerts if p0_alerts else None,
+                filename=f"news-briefing-crypto-{today}.png",
             )
             if img:
                 briefing_image = img
