@@ -407,7 +407,7 @@ def main():
                 raise KeyError("Close column missing")
             for sym, label in _us_symbols.items():
                 try:
-                    _hist = pd.to_numeric(_df["Close"][sym], errors="coerce").dropna()
+                    _hist = pd.Series(pd.to_numeric(_df["Close"][sym], errors="coerce")).dropna()
                     if len(_hist) >= 2:
                         _price = float(_hist.iloc[-1])
                         _prev = float(_hist.iloc[-2])
