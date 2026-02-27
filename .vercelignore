@@ -1,0 +1,13 @@
+scripts/
+_state/
+.github/
+.claude/
+.omc/
+.venv/
+.env
+.env.example
+docs/
+*.pyc
+__pycache__/
+.ruff_cache/
+opencode.json
