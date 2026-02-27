@@ -69,6 +69,7 @@ STABLECOIN_SYMBOLS = {
     "eurs",
     "xaut",
     "paxg",
+    "usd1",
 }
 
 
