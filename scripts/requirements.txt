@@ -3,7 +3,7 @@ certifi>=2026.1.4
 beautifulsoup4==4.14.3
 lxml==6.0.2
 yfinance~=0.2.36
-matplotlib~=3.8.0
+matplotlib~=3.10.8
 Pillow>=12.1.1
 numpy~=1.26.0
 playwright~=1.50
