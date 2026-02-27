@@ -18,7 +18,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Checkout investing
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: Twodragon0/investing
           fetch-depth: 1

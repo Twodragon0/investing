@@ -23,7 +23,7 @@ jobs:
       CMC_API_KEY: ${{ secrets.CMC_API_KEY }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
