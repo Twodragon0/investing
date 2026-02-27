@@ -9,6 +9,8 @@ import logging
 from datetime import datetime, timezone
 from typing import Dict, List, Optional
 
+from common.markdown_utils import smart_truncate
+
 logger = logging.getLogger(__name__)
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
@@ -139,8 +141,7 @@ class PostGenerator:
                 desc_text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", desc_text)
                 desc_text = re.sub(r"[*_`~]", "", desc_text)
                 desc_text = re.sub(r"\s+", " ", desc_text).strip()
-                if len(desc_text) > 160:
-                    desc_text = desc_text[:157] + "..."
+                desc_text = smart_truncate(desc_text, 160)
                 if desc_text:
                     safe_desc = desc_text.replace('"', "'")
                     frontmatter_lines.append(f'description: "{safe_desc}"')

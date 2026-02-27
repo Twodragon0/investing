@@ -23,7 +23,7 @@ from common.post_generator import PostGenerator
 from common.utils import detect_language, request_with_retry
 from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
-from common.markdown_utils import html_reference_details, html_source_tag
+from common.markdown_utils import html_reference_details, html_source_tag, smart_truncate
 from common.collector_metrics import log_collection_summary
 
 try:
@@ -493,9 +493,7 @@ def main():
             else:
                 content_parts.append(f"**{shown + 1}. {title}**")
             if description and description != title:
-                desc_text = description[:150]
-                if len(description) > 150:
-                    desc_text += "..."
+                desc_text = smart_truncate(description, 150)
                 content_parts.append(f"{desc_text}")
                 content_parts.append(f"{html_source_tag(source)}\n")
             shown += 1
@@ -520,9 +518,7 @@ def main():
             else:
                 content_parts.append(f"**{shown + 1}. {title}**")
             if description and description != title:
-                desc_text = description[:150]
-                if len(description) > 150:
-                    desc_text += "..."
+                desc_text = smart_truncate(description, 150)
                 content_parts.append(f"{desc_text}")
                 content_parts.append(f"{html_source_tag(source)}\n")
             shown += 1

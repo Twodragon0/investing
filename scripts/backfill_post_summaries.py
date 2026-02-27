@@ -7,7 +7,7 @@ from html import unescape as html_unescape
 from typing import Dict, List, Optional, Tuple
 
 from common.config import setup_logging
-from common.markdown_utils import markdown_table
+from common.markdown_utils import markdown_table, smart_truncate
 from common.worldmonitor_utils import worldmonitor_sort_key
 
 
@@ -532,8 +532,7 @@ def extract_section_sentences(
             continue
         cleaned = clean_text(raw)
         if cleaned and not is_noise_text(cleaned):
-            if len(cleaned) > 160:
-                cleaned = cleaned[:157] + "..."
+            cleaned = smart_truncate(cleaned, 160)
             results.append(cleaned)
         if len(results) >= limit:
             break
@@ -656,8 +655,7 @@ def extract_intro_bullets(lines: List[str], limit: int = 2) -> List[str]:
     bullets: List[str] = []
     for para in paragraphs[:2]:
         cleaned = clean_text(para)
-        if len(cleaned) > 160:
-            cleaned = cleaned[:157] + "..."
+        cleaned = smart_truncate(cleaned, 160)
         if cleaned and not is_noise_text(cleaned):
             bullets.append(cleaned)
         if len(bullets) >= limit:
@@ -668,6 +666,14 @@ def extract_intro_bullets(lines: List[str], limit: int = 2) -> List[str]:
 def is_social_media_post(front: Dict[str, object], body: str) -> bool:
     title = str(front.get("title", ""))
     tags = _get_front_list(front, "tags")
+    categories = _get_front_list(front, "categories")
+
+    # Exclude daily summary posts that mention social media keywords
+    if front.get("pin") and "market-analysis" in categories:
+        return False
+    if "일일요약" in tags or "일일 뉴스 종합" in title:
+        return False
+
     if "social-media" in tags:
         return True
     if "소셜 미디어 동향" in title:

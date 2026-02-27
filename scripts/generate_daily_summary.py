@@ -23,7 +23,7 @@ from typing import Dict, List, Any, Optional, Tuple
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.config import SITE_URL, get_kst_timezone, setup_logging
-from common.markdown_utils import markdown_table
+from common.markdown_utils import markdown_table, smart_truncate
 from common.post_generator import POSTS_DIR
 from common.summarizer import ThemeSummarizer
 
@@ -562,10 +562,10 @@ def _build_snapshot_table(
             name, cnt = summary["themes"][0]
             return f"{name} {cnt}건"
         if summary.get("market_data"):
-            return _clean_bullet_text(summary["market_data"][0])[:80]
+            return smart_truncate(_clean_bullet_text(summary["market_data"][0]), 80)
         hl = summary.get("highlights") or summary.get("key_summary") or []
         if hl:
-            return _clean_bullet_text(hl[0])[:80]
+            return smart_truncate(_clean_bullet_text(hl[0]), 80)
         return "신호 추출 실패"
 
     dataset = [
@@ -814,7 +814,7 @@ def main():
     content_parts.append("")
 
     if briefing_image:
-        content_parts.append(f"![multi-asset-briefing]({briefing_image})\n")
+        content_parts.append(f'![multi-asset-briefing]({{{{ "{briefing_image}" | relative_url }}}})\n')
     fallback_briefing = _render_generated_image(
         f"news-briefing-daily-{today}.png", "multi-asset-briefing"
     )

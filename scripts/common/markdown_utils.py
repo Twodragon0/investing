@@ -107,7 +107,7 @@ def dedupe_references(
     return deduped
 
 
-def _truncate_title(text: str, max_len: int) -> str:
+def smart_truncate(text: str, max_len: int) -> str:
     """Truncate *text* to at most *max_len* characters without cutting mid-word.
 
     Truncation always happens at the last whitespace boundary within the
@@ -126,6 +126,10 @@ def _truncate_title(text: str, max_len: int) -> str:
     if last_space >= int(max_len * 0.7):
         candidate = candidate[:last_space]
     return candidate.rstrip() + "…"
+
+
+# Backward-compatible alias
+_truncate_title = smart_truncate
 
 
 def html_reference_details(

@@ -40,6 +40,7 @@ from common.markdown_utils import (
     markdown_table,
     html_reference_details,
     html_source_tag,
+    smart_truncate,
 )
 from common.collector_metrics import log_collection_summary
 
@@ -577,9 +578,7 @@ def main():
             else:
                 content_parts.append(f"**{i}. {title}**")
             if description and description != title and i <= 5:
-                desc_text = description[:150]
-                if len(description) > 150:
-                    desc_text += "..."
+                desc_text = smart_truncate(description, 150)
                 content_parts.append(f"{desc_text}")
             content_parts.append(f"{html_source_tag(source)}\n")
 
@@ -604,9 +603,7 @@ def main():
             else:
                 content_parts.append(f"**{i}. {title}**")
             if description and description != title and i <= 5:
-                desc_text = description[:150]
-                if len(description) > 150:
-                    desc_text += "..."
+                desc_text = smart_truncate(description, 150)
                 content_parts.append(f"{desc_text}")
             content_parts.append(f"{html_source_tag(source)}\n")
 
@@ -651,9 +648,7 @@ def main():
             else:
                 content_parts.append(f"**{i}. {title}**")
             if description and description != title and i <= 5:
-                desc_text = description[:150]
-                if len(description) > 150:
-                    desc_text += "..."
+                desc_text = smart_truncate(description, 150)
                 content_parts.append(f"{desc_text}")
             content_parts.append(f"{html_source_tag(source)}\n")
 

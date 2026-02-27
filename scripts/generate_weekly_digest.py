@@ -17,6 +17,7 @@ from typing import List, Dict
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.config import get_kst_timezone, setup_logging
+from common.markdown_utils import smart_truncate
 from common.post_generator import PostGenerator
 
 logger = setup_logging("generate_weekly_digest")
@@ -109,8 +110,7 @@ def extract_key_bullets(body: str, max_bullets: int = 3) -> List[str]:
                 continue
             # Clean markdown bold and truncate
             clean = re.sub(r"\*\*(.+?)\*\*", r"\1", line)
-            if len(clean) > 120:
-                clean = clean[:117] + "..."
+            clean = smart_truncate(clean, 120)
             bullets.append(clean)
             if len(bullets) >= max_bullets:
                 break
@@ -126,8 +126,7 @@ def extract_key_bullets(body: str, max_bullets: int = 3) -> List[str]:
         first = paragraphs[0]
         first = re.sub(r"\*\*(.+?)\*\*", r"\1", first)
         first = re.sub(r"\[(.+?)\]\(.+?\)", r"\1", first)
-        if len(first) > 150:
-            first = first[:147] + "..."
+        first = smart_truncate(first, 150)
         bullets.append(first)
 
     return bullets
