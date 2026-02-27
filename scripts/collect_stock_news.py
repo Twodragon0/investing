@@ -399,17 +399,18 @@ def main():
             import yfinance as yf
 
             _us_symbols = {"^GSPC": "S&P 500", "^IXIC": "NASDAQ", "^DJI": "다우존스", "^VIX": "VIX"}
+            import pandas as pd
+
             _tickers = yf.download(list(_us_symbols.keys()), period="2d", progress=False, auto_adjust=True)
-            _close_data = _tickers.get("Close") if hasattr(_tickers, "get") else _tickers["Close"]
+            _df = pd.DataFrame(_tickers)
+            if "Close" not in _df.columns:
+                raise KeyError("Close column missing")
             for sym, label in _us_symbols.items():
                 try:
-                    if _close_data is None:
-                        continue
-                    _col = _close_data[sym]
-                    _hist = _col.dropna() if hasattr(_col, "dropna") else _col
+                    _hist = pd.to_numeric(_df["Close"][sym], errors="coerce").dropna()
                     if len(_hist) >= 2:
-                        _price = _hist.iloc[-1]
-                        _prev = _hist.iloc[-2]
+                        _price = float(_hist.iloc[-1])
+                        _prev = float(_hist.iloc[-2])
                         _chg_pct = (_price - _prev) / _prev * 100
                         _sign = "+" if _chg_pct >= 0 else ""
                         snapshot_items.append(
