@@ -108,6 +108,15 @@ _KO_TO_EN = {
     # collect_coinmarketcap.py
     "공포/탐욕": "Fear/Greed",
     "시장지배력": "Market Dominance",
+    # generate_daily_summary.py category names
+    "암호화폐": "Crypto",
+    "주식": "Stock",
+    "소셜 미디어": "Social Media",
+    "소셜": "Social",
+    "월드모니터": "WorldMonitor",
+    "정치인 거래": "Political Trades",
+    "보안": "Security",
+    "NFT/Web3": "NFT/Web3",
 }
 
 
