@@ -351,16 +351,34 @@ def fetch_worldmonitor_feeds() -> List[Dict[str, Any]]:
             wm_url("https://feeds.bbci.co.uk/news/world/rss.xml"),
             "WorldMonitor/BBC World",
             ["worldmonitor", "geopolitics"],
+            15,
+            48,
+            {
+                "fallback_urls": [
+                    "https://feeds.bbci.co.uk/news/world/rss.xml",
+                    "https://news.google.com/rss/search?q=site:bbc.com+world+news+when:2d&hl=en-US&gl=US&ceid=US:en",
+                ]
+            },
         ),
         (
             wm_url("https://www.theguardian.com/world/rss"),
             "WorldMonitor/Guardian World",
             ["worldmonitor", "geopolitics"],
+            15,
+            48,
         ),
         (
             wm_url("https://www.aljazeera.com/xml/rss/all.xml"),
             "WorldMonitor/Al Jazeera",
             ["worldmonitor", "middleeast"],
+            15,
+            48,
+            {
+                "fallback_urls": [
+                    "https://www.aljazeera.com/xml/rss/all.xml",
+                    "https://news.google.com/rss/search?q=site:aljazeera.com+when:2d&hl=en-US&gl=US&ceid=US:en",
+                ]
+            },
         ),
         (
             wm_url("https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114"),
@@ -392,6 +410,14 @@ def fetch_worldmonitor_feeds() -> List[Dict[str, Any]]:
             wm_url("https://www.ft.com/rss/home"),
             "WorldMonitor/Financial Times",
             ["worldmonitor", "markets"],
+            15,
+            48,
+            {
+                "fallback_urls": [
+                    "https://www.ft.com/rss/home",
+                    "https://news.google.com/rss/search?q=site:ft.com+markets+when:2d&hl=en-US&gl=US&ceid=US:en",
+                ]
+            },
         ),
         (
             wm_url(
@@ -399,6 +425,13 @@ def fetch_worldmonitor_feeds() -> List[Dict[str, Any]]:
             ),
             "WorldMonitor/Energy",
             ["worldmonitor", "energy"],
+            15,
+            48,
+            {
+                "fallback_urls": [
+                    "https://news.google.com/rss/search?q=(oil+price+OR+OPEC+OR+pipeline+OR+LNG)+when:2d&hl=en-US&gl=US&ceid=US:en",
+                ]
+            },
         ),
     ]
     return fetch_rss_feeds_concurrent(feeds)
