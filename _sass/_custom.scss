@@ -2653,33 +2653,114 @@ body {
 }
 
 .search-result-item {
+  display: block;
   background: rgba($bg-card, 0.6);
   border: 1px solid rgba($border-color, 0.5);
   border-radius: 10px;
   padding: 1.25rem;
   transition: all 0.3s ease;
+  text-decoration: none;
+  color: $text-primary;
 
-  &:hover {
+  &:hover, &:focus {
     background: rgba($bg-card, 0.8);
     border-color: $accent-blue;
     transform: translateX(4px);
+    outline: none;
+  }
+}
+
+.search-result-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+
+  mark {
+    background: rgba($accent-blue, 0.25);
+    color: inherit;
+    padding: 0.1em 0.2em;
+    border-radius: 3px;
+  }
+}
+
+.search-result-item:hover .search-result-title {
+  color: var(--accent-blue);
+}
+
+.search-result-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.search-result-date {
+  color: $text-secondary;
+}
+
+.search-result-cat {
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba($accent-blue, 0.15);
+  color: $accent-blue;
+
+  &.cat-crypto { background: rgba($cat-crypto, 0.15); color: $cat-crypto; }
+  &.cat-stock { background: rgba($cat-stock, 0.15); color: $cat-stock; }
+  &.cat-journal { background: rgba($cat-journal, 0.15); color: $cat-journal; }
+  &.cat-security { background: rgba($cat-security, 0.15); color: $cat-security; }
+  &.cat-analysis { background: rgba($cat-analysis, 0.15); color: $cat-analysis; }
+  &.cat-regulatory { background: rgba($cat-regulatory, 0.15); color: $cat-regulatory; }
+  &.cat-political { background: rgba($cat-political, 0.15); color: $cat-political; }
+}
+
+.search-result-tag {
+  color: $text-secondary;
+  font-size: 0.75rem;
+}
+
+.search-result-snippet {
+  font-size: 0.85rem;
+  color: $text-secondary;
+  line-height: 1.5;
+
+  mark {
+    background: rgba($accent-blue, 0.2);
+    color: var(--text-primary);
+    padding: 0.1em 0.15em;
+    border-radius: 2px;
+  }
+}
+
+.search-result-count {
+  font-size: 0.8rem;
+  color: $text-secondary;
+  padding: 0 0.25rem 0.25rem;
+}
+
+.search-empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: $text-secondary;
+
+  svg {
+    opacity: 0.4;
+    margin-bottom: 1rem;
   }
 
-  a {
-    color: $text-primary;
-    font-size: 1.05rem;
+  .search-empty-title {
+    font-size: 1.1rem;
     font-weight: 600;
-    display: block;
     margin-bottom: 0.5rem;
-
-    &:hover {
-      color: $accent-blue;
-    }
   }
 
-  small {
-    color: $text-secondary;
-    font-size: 0.85rem;
+  .search-empty-query {
+    font-size: 0.9rem;
+    opacity: 0.7;
   }
 }
 
@@ -5816,9 +5897,24 @@ a:focus-visible {
   }
 
   .search-result-item {
-    border-bottom-color: rgba(208, 215, 222, 0.3);
-    a { color: var(--text-primary); &:hover { color: var(--accent-blue); } }
-    small { color: var(--text-secondary); }
+    background: rgba(246, 248, 250, 0.8);
+    border-color: rgba(208, 215, 222, 0.5);
+    color: var(--text-primary);
+    &:hover, &:focus { background: #ffffff; border-color: var(--accent-blue); }
+  }
+
+  .search-result-title mark,
+  .search-result-snippet mark {
+    background: rgba(9, 105, 218, 0.15);
+    color: var(--text-primary);
+  }
+
+  .search-result-date,
+  .search-result-tag,
+  .search-result-snippet,
+  .search-result-count,
+  .search-empty-state {
+    color: var(--text-secondary);
   }
 
   // Stat items
