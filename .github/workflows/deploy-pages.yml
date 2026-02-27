@@ -3,6 +3,22 @@ name: Deploy Jekyll to GitHub Pages
 on:
   push:
     branches: ["main"]
+    paths:
+      - '_posts/**'
+      - '_layouts/**'
+      - '_includes/**'
+      - '_sass/**'
+      - '_data/**'
+      - '_config.yml'
+      - '_config_ghpages.yml'
+      - 'assets/**'
+      - 'pages/**'
+      - 'search.json'
+      - 'Gemfile'
+      - 'Gemfile.lock'
+      - 'index.html'
+      - 'index.md'
+      - 'feed.xml'
   workflow_dispatch:
 
 permissions:
@@ -31,14 +47,6 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-
-      - name: Resolve Vercel scope context
-        run: |
-          if command -v vercel >/dev/null 2>&1; then
-            bash scripts/vercel_scope.sh context
-          else
-            echo "vercel CLI not installed in this job; skipping scope context check"
-          fi
 
       - name: Build with Jekyll
         run: bundle exec jekyll build --config _config.yml,_config_ghpages.yml --baseurl "${{ steps.pages.outputs.base_path }}"
