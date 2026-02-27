@@ -39,6 +39,7 @@ excerpt: "BTC 추가 하락 $50K 전망, XRP 강세 속 크래시 대응, Apollo
 ![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-16.png' | relative_url }})
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **87건** 수집

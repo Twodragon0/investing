@@ -38,6 +38,7 @@ description: 2026-02-18 암호화폐 시장에서 115건의 뉴스를 분석했�
 ![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-18.png' | relative_url }})
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **115건** 수집

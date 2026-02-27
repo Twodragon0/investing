@@ -32,20 +32,13 @@ description: "2026-02-27 암호화폐 시장에서 111건의 뉴스를 분석했
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">111</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 52</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (37회)</div></div></div>
 <div class="alert-box alert-info"><strong>암호화폐 시장 비트코인, 가격/시장 중심 111건 분석</strong><ul><li>🟠 <strong>비트코인</strong> (52건): Bitcoin Miner Tied to Trump Family Pummeled by Crypto Crash</li><li>📈 <strong>가격/시장</strong> (26건): Bitcoin Miner Tied to Trump Family Pummeled by Crypto Crash</li><li>🏦 <strong>거래소</strong> (16건): 뉴욕증시 상장사 "비트코인 대량 매도" ..</li><li>🔵 <strong>규제/정책</strong> (20건): Bitcoin (BTC) and Altcoins catch a breather after Jane Street lawsuit – $70,000 coming?</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMirwFBVV95cUxPNVI3dmpUOS1OZ0ppVm1BZ1pVZVdwdG9xLTNsQ2RYVV9UTHBZWHI2R3lEUVU4Vk9PSlI4VC1uMmpHMFVZanJMb0QxSjZScDNVYmpldUhxNVIwcnNrNWZxY29HYmNCal9xWmNMR29CRFU4dnFMRWU5N2VIdmRmNEZoQ0I0V2dub3R6RnhGREltNXZvQWNRbzlfalZUWUZMWVI2ZUhTa3hiY1lFR1J0QVBr?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin Miner Tied to Trump Family Pummeled by Crypto Crash</a></li><li><a href="https://news.google.com/read/CBMigwFBVV95cUxPSmNjaTFSOV9FaDkycDk2TG5kWEpZT0UyOV9jd05Cb3VzYXlxWmljUkd6NktOOVR4RmFwMXhwc2cyT0g0Vl9zOS02dTJnUWx4M2steDZEXzNQeVNZVnpUbXRWXzFDSlM1aFhtVFllNTNoTXJOWDBMaGZ3YWNnanMzajA5WQ?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin Miner Tied to Trumps Pummeled by Crypto Crash</a></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUWYzME5LUnpwVXVxRG5JZnFvWGJLa1B5dXI4YUZ2RzRzRlFRMWwzcDE4ZVRDRTJCQzY0RUdHMXFrWmk4UEtSS3hNOVY0NjdtT015a05qcURaTjk1cDVMUExyOEF1b0hmbFBXZUROQ01acE13R3A2aVp4OU9OZkNFUWdIbWxWQ0g5?oc=5">뉴욕증시 상장사 "비트코인 대량 매도" .. .블룸버그 "양자컴 암호화폐 해킹 급물살" - 글로벌이코노믹</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-오늘 수집된 **111건**의 뉴스에서 크게 **3가지 흐름**이 감지됩니다.
-
-1. **🟠 비트코인** (52건): Bitcoin Miner Tied to Trump Family Pummeled by Crypto Crash
-2. **📈 가격/시장** (26건): Bitcoin Miner Tied to Trump Family Pummeled by Crypto Crash
-3. **🏦 거래소** (16건): Multiple employees at Axiom, a non-custodial trading platform, allegedly engaged in insider trading, said blockchain investigator ZachXBT.
-
-**핵심 신호**: P0 긴급 이슈 4건, P1 주요 이슈 12건, 핵심 키워드 **bitcoin**, **ai**, **ethereum**이 포착되었습니다.
-**주요 출처**: Google News (20건)
-- 거래소 공지 10건 포함
-
-
-![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-27.png' | relative_url }})
+- 총 **111건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- 2026-02-27 암호화폐 시장에서 111건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 거래소 관련 소식이 주목됩니다.
+- *총 111건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
 
 ## 테마별 주요 뉴스
 

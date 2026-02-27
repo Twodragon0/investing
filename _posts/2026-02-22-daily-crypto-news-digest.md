@@ -37,6 +37,7 @@ description: 2026-02-22 암호화폐 시장에서 101건의 뉴스를 분석했�
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><a href="https://news.google.com/read/CBMimAFBVV95cUxNVjFoQ25KUFlISi1meE5jbEw1VDRzYlM0QjNqZERvYlg3SWVmVE1Hd01UdF9SSXpRdWhheWhReG5qdzQwd2VGOVVtS09GaFdFRjJIcDBBWXpTbW1rSVR1cHpiR0VwRC1WRUh6RlB6QkZSaW82MERuXzBtUDJ6Q1UyUjJDV0FvRDNSQ3cxNl9kcUV5Q1VJMWtwTA?hl=en-US&gl=US&ceid=US%3Aen">Crypto Crash Playbook: 2 High-Conviction Buys to Consider Before the Rebound</a><br><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9UWWt2NGRwVEhESnNWZ1FRaE1wbk9BTk1Wdll0b3dvdWgzTXZlRWs3Y1dMcmNNam1UanZrbWZaTWM5T3R4cWwtVmtFMGE0TTVUV1VWZ3FR?oc=5">레버리지가 코인 폭락 트리거 됐다 - 중앙일보</a><br><a href="https://cointelegraph.com/news/crypto-retraces-gains-2024-2025-pump?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Crypto market retraces almost all 2024-2025 US election pump gains</a></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **101건** 수집

@@ -16,17 +16,6 @@ description: "전 세계 금융 규제기관의 최신 동향을 정리합니다
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">34</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 24</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">25</div><div class="stat-label">한국</div></div></div>
 <div class="alert-box alert-info"><strong>글로벌 규제 규제/정책, 비트코인 관련 34건 수집</strong><ul><li>🔵 <strong>규제/정책</strong> (24건): [금융위 1박2일 현장방문] 국민성장펀드가 대구·경북지역의 방산·로봇산업 중심지 도약을 지원합니다.</li><li>🟠 <strong>비트코인</strong> (2건): 단일종목 레버리지 ETF의 세부방안은 검토중입니다.</li><li>🏦 <strong>거래소</strong> (4건): 단일종목 레버리지 ETF의 세부방안은 검토중입니다.</li><li>🏛️ <strong>정치/정책</strong> (5건): [금융위 1박2일 현장방문] 국민성장펀드가 대구·경북지역의 방산·로봇산업 중심지 도약을 지원합니다.</li></ul></div>
-## 전체 뉴스 요약
-
-오늘 수집된 **34건**의 뉴스에서 크게 **3가지 흐름**이 감지됩니다.
-
-1. **🔵 규제/정책** (24건): ‘26년 국민성장펀드 간접투자부문(7조원)에 투입되는 재정(4,500억원) 및 자펀드 관리업무를 수행할 재정모펀드 운용사를 선정하였습니다.
-2. **🟠 비트코인** (2건): EU Securities Watchdog ESMA Targets Crypto-Asset Perpetual Futures as CFDs Bitcoin.com News
-3. **🏦 거래소** (4건): “디지털자산거래소 ‘공동 기금’ 및 수수료 체계 개편 등은 논의된 바 없습니다.” - 1.28일 헤럴드경제 「[단독] 당국, 디지털자산거래소 ‘공동 기금’ 마련 논의...
-
-**핵심 신호**: P1 주요 이슈 10건이 포착되었습니다.
-**주요 지역**: 한국 25건, 유럽 6건
-
 ## 핵심 요약
 
 - **총 수집 건수**: 34건

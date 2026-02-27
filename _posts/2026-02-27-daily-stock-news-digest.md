@@ -17,34 +17,13 @@ description: "2026-02-27 주식 시장에서 162건의 뉴스를 분석했습니
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">162</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 68</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">6,265.29</div><div class="stat-label">KOSPI -0.14%</div></div><div class="stat-item"><div class="stat-value">1,195.47</div><div class="stat-label">KOSDAQ +0.67%</div></div></div>
 <div class="alert-box alert-info"><strong>주식 시장 가격/시장, AI/기술 부각 162건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (68건): Stock Market News, Feb. 26, 2026: Dow finishes flat; S&P 500 and Nasdaq fall as a tech selloff hits the market following Nvidia earnings; oil prices waver during U.S.-Iran talks</li><li>🤖 <strong>AI/기술</strong> (39건): Stock market today: Dow, S&P 500, Nasdaq futures waver as Nvidia leaves investors wanting more</li><li>📊 <strong>매크로/금리</strong> (18건): Stock futures slide after S&P 500 closes lower; wholesale inflation reading looms: Live updates CNBC</li><li>🏛️ <strong>정치/정책</strong> (7건): 한국은행, 올해 성장률 1.8→2.0% 상향…관세 누른 '반도체' 톱데일리</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiowJBVV95cUxQVFdKRlhMMk40ZE9oQUcyWGFJX3k0UkZtU3JuRnp2ZU5TUFhZWDhaY1dwalRaWjZwbVdNN052bkZZanV4U21udXhaN3lPRDNlWTgzS0lSZ0VhYUFxUnJlR3VfTXgzeUhsWGtoUWtDWmlESjk3Ujl2SDEwREI4d0M1M3hGT09ja1hpZ0pRdklWeDk4RzBMckFoenh3eVQ0MlpnOExxTE1VZWZBSE5UNHdRVlZob0NRLS1zY3lhRnNTV3RUR3JOcm9FTXVka2d0dWZfNy13eUxmSGtLMHJfcGtlQmVNOGRoakhtTi1GRXFhdnNvVjZwVU5WekpYYV9sT0hLMDdiSHBya29FZ3dXV2NsTWNFSjlxUGkxZ2FZV0Q4RFpaZ2vSAagCQVVfeXFMT09iN19WREtfSWxFTzJmazJPS2I5UHhQNFdDUkpFYzNDVnoxaEstTUpaci1BSW54djlmTGEyb3VkYjhFYnRpSm01bm5TNXBKSWFSM21WT3dhd1lfTFRwdmFNTGo2WGN1cEZsV3U1eUl4NC1HenJKVHdadlZFNDRXS1YxeFE1WmZGNV9VTWItT2VCaTZVX3FKam5CemtjdzBWZk0xcDJ1WmZDUGlDajJHdUZyZ1JWekFxMDQtbmRGVmZLWnpIczBLLWNROVBSSnlVYTM5cDFMaWYwQkY2Tk9DemM4YmhXRjFsWFotdWYyY214NmZiYUw2YlQ1aXN5OGVaYWZiU05fVVA2eVZaNUR3V3BtTU9aRGc1RkMtbGRsTTRJYm02TFBoNVU?hl=en-US&gl=US&ceid=US%3Aen">US stock market crashes big: Why Dow, Nasdaq, S&P 500 in deep red today? Nvidia stock crashes, Gold and Si</a></li><li><a href="https://news.google.com/read/CBMinwJBVV95cUxOMmFXazhlenpSQlk0dVZnb3Q2a1diV2MxNkdVSGFJSkRNSTE4TmMzNE5ObzUySGlBRUF2a1NmR09SWjJGS1V0UWFDNUxhUU1DVHNRWG9GcVJLdmREbXh6VWZYLVpRZzdHZ1NzaE9UQ3JITlhwdWdHTjlkV1VRXzhQRzBzRS1zdWI0QjE4MzZSb2JPN1NaSnRJeVlJTUQ4dHBQTUFPbzgyaVZKaWZtWkhtUS1RUzJkTFJlWVdwaWh2LWtVOHR6ejJCN3lLT2ZYcUI0T2RxR1QyM29mUGJSRG4yQ2hYUWxrS0Y2SmQ5U095dm9EX0lKc1lEeW0zb3RRYm11bzVQYjVNVnRWS1dvc3ZZQ1dweEtaWDBRblJGRjgyTdIBpAJBVV95cUxOWk1KYWdURkRFRkpLTHZXcHliXy03RjFSTTFyUnJkZXpVSGZLeXdUb0pKUGNUVnplOXhKelZkYnQyaWoyRm15VDVGc2ItWWwzaE1UbzRkTTBxZlBIcnJObWZQN1FJQi1rcTdxWnMtaUtBQkYtVmVBbTg5S2ZIczV2aDlKSmMxLVYxUTdHd2pKczUzTDJ4d3N0NEd4NGZjSXJ0Ukd2OWFyQnFsRkdkRHdIZVd3bTRzWEJHUElfMDVTRDhESU4wWDhPdkNWSWMyMUxjY3dFT0FGbUFHdmxhRVIzbHB2QjB4ZUxaSC1oOVVLazNZVnh2ZHQzbllPV05iWXUwZ3NJbVJib29iemFYTXdPTDhOWkFEcWRHNTFqX2pZT2F3aElP?hl=en-US&gl=US&ceid=US%3Aen">US stock market today: Why Dow up while Nasdaq and S&P 500 fall — Is Nvidia stock crash signaling AI trade</a></li><li><a href="https://news.google.com/read/CBMizAFBVV95cUxNX3BNX05kajhRUUFKN19CNWk4OEJNUmJUWHBmNlR0VVVLeGd1VDRzNFptSGFKalc3ZTE5WFhDMFp3NUFZUVRsWWtWZmMxaGZsbmdnSklGTVItSWNyenFvYUYzSFR3NVowczNnbjNmU2puenJRV2NMRkd0N0dueUU2WnpXUVc2UTZMaFhfenFtejA3b2ZXTHpOZVRLSEtxdHAwZzg2cFptWTZnMURmUkJNQzk0bGZXTHRmQTBOQW0wRmhrb3ZiY2JwUzlwZWY?hl=en-US&gl=US&ceid=US%3Aen">This Expert Says the S&P 500 Has 'Crashed Under the Surface.' What a Stealth Correction Means.</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-오늘 수집된 **162건**의 뉴스에서 크게 **3가지 흐름**이 감지됩니다.
-
-1. **📈 가격/시장** (68건): Stock Market News, Feb. 26, 2026: Dow finishes flat; S&P 500 and Nasdaq fall as a tech selloff hits the market following Nvidia earnings; oil prices waver during U.S.-Iran talks
-2. **🤖 AI/기술** (39건): Stock market today: Dow, S&P 500, Nasdaq futures waver as Nvidia leaves investors wanting more
-3. **📊 매크로/금리** (18건): Stock futures slide after S&P 500 closes lower; wholesale inflation reading looms: Live updates CNBC
-
-**핵심 신호**: P0 긴급 이슈 8건, P1 주요 이슈 20건이 포착되었습니다.
-- 한국 기사 78건, 글로벌 기사 84건 수집
-- 한국 지수: KOSPI 6,265.29(-0.14%), KOSDAQ 1,195.47(+0.67%), USD/KRW 1,433.46(+0.01%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">68건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:57%"></div></div><span class="theme-count">39건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:26%"></div></div><span class="theme-count">18건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:10%"></div></div><span class="theme-count">7건</span></div>
-<div class="theme-row"><span class="theme-label">🔷 이더리움</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:7%"></div></div><span class="theme-count">5건</span></div>
-</div>
-
-*총 162건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
-
-
-![market-snapshot]({{ '/assets/images/generated/market-snapshot-2026-02-27.png' | relative_url }})
-
-
----
+- 한국 증시는 KOSPI 6,265.29 (-0.14%) 하락하며, 투자 심리가 위축되는 모습입니다.
+- KOSDAQ은 1,195.47 (+0.67%)를 기록했습니다.
+- 2026-02-27 주식 시장에서 162건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,265.29(-0.14%), KOSDAQ 1,195.47(+0.67%), USD/KRW 1,433.46(+0.01%).
+- *Stock Market News, Feb. 26, 2026: Dow finishes flat; S&P 500 and Nasdaq fall as a tech selloff hits the market following Nvidia earnings; oil prices waver d...
 
 ## 테마별 주요 뉴스
 
