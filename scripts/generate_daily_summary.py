@@ -373,7 +373,7 @@ def _collect_all_news_items(summaries: List[Optional[Dict]]) -> List[Dict[str, A
                 items.append({"title": title, "description": title, "link": link, "source": s.get("type", "")})
 
         # 2. Bullet points with markdown links: - [Title](URL) or - **[Title](URL)**
-        for match in re.finditer(r'[-*]\s+(?:\*\*)?(?:\d+\.\s*)?\[([^\]]+)\]\(([^)]+)\)', content):
+        for match in re.finditer(r"[-*]\s+(?:\*\*)?(?:\d+\.\s*)?\[([^\]]+)\]\(([^)]+)\)", content):
             title = match.group(1).strip()
             link = match.group(2).strip()
             if not title or len(title) < 10:
@@ -384,7 +384,7 @@ def _collect_all_news_items(summaries: List[Optional[Dict]]) -> List[Dict[str, A
                 items.append({"title": title, "description": title, "link": link, "source": s.get("type", "")})
 
         # 3. All remaining markdown links: [Title](URL) or [**Title**](URL) (tables, etc.)
-        for match in re.finditer(r'\[(?:\*\*)?([^\]]+?)(?:\*\*)?\]\(([^)]+)\)', content):
+        for match in re.finditer(r"\[(?:\*\*)?([^\]]+?)(?:\*\*)?\]\(([^)]+)\)", content):
             title = match.group(1).strip()
             link = match.group(2).strip()
             if not title or len(title) < 10:
