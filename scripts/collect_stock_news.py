@@ -416,8 +416,8 @@ def main():
                                 "section": "US Market",
                             }
                         )
-                except Exception:
-                    pass
+                except Exception as exc:
+                    logger.debug("yfinance symbol %s parse error: %s", sym, exc)
         except ImportError:
             logger.debug("yfinance not available for US market fallback")
         except Exception as e:
