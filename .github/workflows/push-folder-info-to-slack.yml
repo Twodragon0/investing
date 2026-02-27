@@ -151,6 +151,7 @@ jobs:
           target_channel_alias: ${{ matrix.channel_alias }}
           token_candidates: |
             ${{ secrets.SLACK_BOT_TOKEN }}
+            ${{ secrets.OPENCLAW_SLACK_BOT_TOKEN }}
             ${{ secrets.AI_SLACK_BOT_TOKEN }}
             ${{ secrets.SLACK_TOKEN }}
           channel_candidates_default: |

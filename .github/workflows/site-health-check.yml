@@ -110,3 +110,35 @@ jobs:
           HTTP_CODE: ${{ steps.site_check.outputs.http_code }}
           RECENT_COUNT: ${{ steps.posts_check.outputs.recent_count }}
           TOTAL_COUNT: ${{ steps.posts_check.outputs.total_count }}
+
+      - name: Resolve Slack config
+        id: slack
+        if: steps.site_check.outputs.http_code != '200'
+        uses: ./.github/actions/resolve-slack-config
+        with:
+          target_channel_alias: ops
+          token_candidates: |
+            ${{ secrets.SLACK_BOT_TOKEN }}
+            ${{ secrets.OPENCLAW_SLACK_BOT_TOKEN }}
+            ${{ secrets.AI_SLACK_BOT_TOKEN }}
+            ${{ secrets.SLACK_TOKEN }}
+          channel_candidates_ops: |
+            ${{ secrets.SLACK_CHANNEL_ID_OPS }}
+            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_OPS }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID_OPS }}
+            ${{ secrets.SLACK_CHANNEL_OPS }}
+          channel_candidates_default: |
+            ${{ secrets.SLACK_CHANNEL_ID }}
+            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID }}
+            ${{ secrets.SLACK_CHANNEL }}
+
+      - name: Alert Slack on site failure
+        if: steps.site_check.outputs.http_code != '200' && steps.slack.outputs.can_post == 'true'
+        uses: slackapi/slack-github-action@v2.1.1
+        with:
+          method: chat.postMessage
+          token: ${{ steps.slack.outputs.token }}
+          payload: |
+            channel: "${{ steps.slack.outputs.channel }}"
+            text: ":warning: *Site Health Check Failed* — HTTP `${{ steps.site_check.outputs.http_code }}` — recent posts: ${{ steps.posts_check.outputs.recent_count }} — https://investing.2twodragon.com/"

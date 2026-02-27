@@ -29,3 +29,33 @@ jobs:
           script: scripts/generate_daily_summary.py
           commit-message: 'chore: generate daily news summary'
           git-add-paths: '_posts/ assets/images/'
+
+      - name: Resolve Slack config
+        id: slack
+        uses: ./.github/actions/resolve-slack-config
+        with:
+          target_channel_alias: investing
+          token_candidates: |
+            ${{ secrets.SLACK_BOT_TOKEN }}
+            ${{ secrets.OPENCLAW_SLACK_BOT_TOKEN }}
+            ${{ secrets.AI_SLACK_BOT_TOKEN }}
+            ${{ secrets.SLACK_TOKEN }}
+          channel_candidates_investing: |
+            ${{ secrets.SLACK_CHANNEL_ID_INVESTING }}
+            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_INVESTING }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID_INVESTING }}
+            ${{ secrets.SLACK_CHANNEL_INVESTING }}
+            ${{ secrets.SLACK_CHANNEL_ID }}
+            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID }}
+            ${{ secrets.SLACK_CHANNEL }}
+
+      - name: Post daily summary notification to Slack
+        if: steps.slack.outputs.can_post == 'true'
+        uses: slackapi/slack-github-action@v2.1.1
+        with:
+          method: chat.postMessage
+          token: ${{ steps.slack.outputs.token }}
+          payload: |
+            channel: "${{ steps.slack.outputs.channel }}"
+            text: ":newspaper: *Daily News Summary* generated (run #${{ github.run_number }}) — https://investing.2twodragon.com/market-analysis/"
