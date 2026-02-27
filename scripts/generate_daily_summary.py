@@ -359,6 +359,41 @@ def _collect_all_news_items(summaries: List[Optional[Dict]]) -> List[Dict[str, A
             # Stop card parsing at next major section
             if line.startswith("## ") and in_card_section:
                 in_card_section = False
+
+        # Second comprehensive pass: extract ALL links from the full content
+        # 1. <a href="URL">Title</a> tags (details blocks, HTML)
+        for match in re.finditer(r'<a\s+href="([^"]+)"[^>]*>([^<]+)</a>', content):
+            link = match.group(1)
+            title = match.group(2).strip()
+            if not title or len(title) < 10:
+                continue
+            norm = re.sub(r"[^a-z가-힣0-9]", "", title.lower())
+            if norm not in seen_titles:
+                seen_titles.add(norm)
+                items.append({"title": title, "description": title, "link": link, "source": s.get("type", "")})
+
+        # 2. Bullet points with markdown links: - [Title](URL) or - **[Title](URL)**
+        for match in re.finditer(r'[-*]\s+(?:\*\*)?(?:\d+\.\s*)?\[([^\]]+)\]\(([^)]+)\)', content):
+            title = match.group(1).strip()
+            link = match.group(2).strip()
+            if not title or len(title) < 10:
+                continue
+            norm = re.sub(r"[^a-z가-힣0-9]", "", title.lower())
+            if norm not in seen_titles:
+                seen_titles.add(norm)
+                items.append({"title": title, "description": title, "link": link, "source": s.get("type", "")})
+
+        # 3. All remaining markdown links: [Title](URL) or [**Title**](URL) (tables, etc.)
+        for match in re.finditer(r'\[(?:\*\*)?([^\]]+?)(?:\*\*)?\]\(([^)]+)\)', content):
+            title = match.group(1).strip()
+            link = match.group(2).strip()
+            if not title or len(title) < 10:
+                continue
+            norm = re.sub(r"[^a-z가-힣0-9]", "", title.lower())
+            if norm not in seen_titles:
+                seen_titles.add(norm)
+                items.append({"title": title, "description": title, "link": link, "source": s.get("type", "")})
+
     return items
 
 
@@ -434,9 +469,9 @@ def _relation_rows(
             continue
         score = sum(v for _, v in shared_topics[:3])
         top_topics = ", ".join(t for t, _ in shared_topics[:2])
-        if score >= 8:
+        if score >= 25:
             level = "높음"
-        elif score >= 4:
+        elif score >= 12:
             level = "중간"
         else:
             level = "낮음"
