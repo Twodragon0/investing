@@ -1,0 +1,17 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "*": {
+      "*": "allow"
+    },
+    "task": "allow"
+  },
+  "tools": {
+    "task_*": true,
+    "grep_app_*": true,
+    "LspHover": true,
+    "LspCodeActions": true,
+    "LspCodeActionResolve": true,
+    "teammate": true
+  }
+}
