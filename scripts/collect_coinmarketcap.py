@@ -454,9 +454,11 @@ def main():
         source_name = "CoinMarketCap"
         cmc_source = "cmc"
         time.sleep(1)
-        trending = fetch_cmc_trending(cmc_key)
-        time.sleep(1)
-        gainers, losers = fetch_cmc_gainers_losers(cmc_key)
+        # Trending & gainers/losers: use CoinGecko (CMC Basic plan doesn't include these premium endpoints)
+        trending = fetch_coingecko_trending()
+        # Switch to coingecko format for trending/gainers since we can't use CMC premium endpoints
+        cmc_source = "coingecko"
+        gainers, losers = [], []
     else:
         top_coins = fetch_coingecko_top_coins(30)
         source_name = "CoinGecko"

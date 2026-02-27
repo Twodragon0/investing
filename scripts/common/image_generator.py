@@ -33,6 +33,11 @@ try:
     # Configure Korean/CJK font support
     _FONT_FAMILY = "monospace"
     _korean_font_candidates = [
+        # Linux (CI: Ubuntu)
+        "/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc",
+        "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+        "/usr/share/fonts/truetype/noto/NotoSansKR-Regular.ttf",
+        # macOS
         "/System/Library/Fonts/AppleSDGothicNeo.ttc",
         "/Library/Fonts/Arial Unicode.ttf",
         "/System/Library/Fonts/Supplemental/AppleGothic.ttf",

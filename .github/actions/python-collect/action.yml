@@ -55,6 +55,13 @@ runs:
       shell: bash
       run: touch /tmp/collect-start-marker
 
+    - name: Install CJK fonts
+      shell: bash
+      run: |
+        if ! fc-list :lang=ko | grep -q .; then
+          sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk >/dev/null 2>&1
+        fi
+
     - name: Run script
       shell: bash
       run: python "${{ inputs.script }}"

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "일일 뉴스 종합 요약 - 2026-02-27"
 date: 2026-02-27 12:00:00 +0900
 categories: [market-analysis]
