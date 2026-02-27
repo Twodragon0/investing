@@ -177,6 +177,7 @@ jobs:
           target_channel_alias: investing
           token_candidates: |
             ${{ secrets.SLACK_BOT_TOKEN }}
+            ${{ secrets.OPENCLAW_SLACK_BOT_TOKEN }}
             ${{ secrets.AI_SLACK_BOT_TOKEN }}
             ${{ secrets.SLACK_TOKEN }}
           channel_candidates_investing: |
@@ -196,10 +197,7 @@ jobs:
           payload: |
             channel: "${{ steps.slack.outputs.channel }}"
             text: |
-              [workflow-failure-router]
-              workflow=${{ github.event.workflow_run.name }}
-              run=${{ github.event.workflow_run.html_url }}
-              classification_raw=${{ steps.classify.outputs.classification }}
-              classification_final=${{ steps.classify_final.outputs.final_classification }}
-              escalated=${{ steps.classify_final.outputs.escalated }}
-              rerun=${{ steps.rerun.outputs.rerun || 'false' }}
+              :rotating_light: *CI Failure: ${{ github.event.workflow_run.name }}* #${{ github.event.workflow_run.run_number }}
+              • Classification: `${{ steps.classify_final.outputs.final_classification }}` (raw: `${{ steps.classify.outputs.classification }}`)
+              • Escalated: ${{ steps.classify_final.outputs.escalated }}  |  Retried: ${{ steps.rerun.outputs.rerun || 'false' }}
+              • Run: ${{ github.event.workflow_run.html_url }}
