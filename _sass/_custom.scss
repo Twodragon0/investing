@@ -46,6 +46,7 @@ a {
    ================================ */
 .site-header {
   background: rgba($bg-secondary, 0.95);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba($border-color, 0.5);
   padding: 1rem 0;
@@ -103,6 +104,8 @@ a {
     position: relative;
 
     .nav-dropdown-btn {
+      -webkit-appearance: none;
+      appearance: none;
       display: flex;
       align-items: center;
       gap: 0.3rem;
@@ -114,6 +117,8 @@ a {
       background: none;
       border: none;
       cursor: pointer;
+      font-family: inherit;
+      line-height: normal;
       transition: all 0.3s ease;
       white-space: nowrap;
 
@@ -143,6 +148,7 @@ a {
       left: 0;
       min-width: 160px;
       background: rgba($bg-secondary, 0.98);
+      -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
       border: 1px solid rgba($border-color, 0.5);
       border-radius: 10px;
@@ -252,6 +258,7 @@ a {
 
 .category-card {
   background: rgba($bg-card, 0.6);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba($border-color, 0.5);
   border-radius: 12px;
@@ -324,6 +331,7 @@ a {
 
 .post-card {
   background: linear-gradient(120deg, rgba($bg-card, 0.7) 0%, rgba($bg-secondary, 0.6) 100%);
+  -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   border: 1px solid rgba($border-color, 0.6);
   border-radius: 14px;
@@ -336,7 +344,10 @@ a {
   &::before {
     content: '';
     position: absolute;
-    inset: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background: linear-gradient(135deg,
       rgba($accent-blue, 0.03) 0%,
       rgba($accent-purple, 0.02) 100%
@@ -1273,6 +1284,7 @@ a {
    ================================ */
 .site-footer {
   background: rgba($bg-secondary, 0.8);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba($border-color, 0.5);
   padding: 3rem 0 2rem;
@@ -1380,6 +1392,7 @@ a {
     width: 100%;
     padding: 1rem 1.5rem;
     background: rgba($bg-card, 0.6);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border: 1px solid rgba($border-color, 0.5);
     border-radius: 12px;
@@ -1406,6 +1419,7 @@ a {
   margin: 2rem 0 3rem;
   padding: 2.5rem;
   background: linear-gradient(135deg, rgba($bg-card, 0.7) 0%, rgba($bg-secondary, 0.5) 100%);
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   border-radius: 20px;
   border: 1px solid rgba($border-color, 0.6);
@@ -1468,6 +1482,7 @@ a {
   text-align: center;
   padding: 4rem;
   background: rgba($bg-card, 0.6);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 12px;
   border: 1px dashed $border-color;
@@ -1527,6 +1542,7 @@ a {
       left: 0;
       right: 0;
       background: rgba($bg-secondary, 0.98);
+      -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
       flex-direction: column;
       padding: 1rem;
@@ -1755,6 +1771,12 @@ html {
   color: $text-secondary;
   cursor: pointer;
   transition: all 0.3s ease;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: normal;
 
   &:hover {
     background: rgba($bg-card, 0.8);
@@ -1766,6 +1788,7 @@ html {
     flex-shrink: 0;
     width: 18px;
     height: 18px;
+    pointer-events: none;
   }
 
   .lang-code {
@@ -1773,12 +1796,16 @@ html {
     font-size: 0.75rem;
     font-weight: 600;
     line-height: 1;
+    pointer-events: none;
   }
 }
 
 .lang-dropdown-overlay {
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 99;
   background: rgba(0, 0, 0, 0.3);
   opacity: 0;
@@ -1803,6 +1830,7 @@ html {
   min-width: 140px;
   padding: 4px;
   background: rgba($bg-secondary, 0.98);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba($border-color, 0.5);
   border-radius: 10px;
@@ -1821,6 +1849,8 @@ html {
 }
 
 .lang-option {
+  -webkit-appearance: none;
+  appearance: none;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -1831,7 +1861,9 @@ html {
   border-radius: 6px;
   color: $text-primary;
   cursor: pointer;
+  font-family: inherit;
   font-size: 0.85rem;
+  line-height: normal;
   transition: all 0.2s ease;
   text-align: left;
 
@@ -2013,6 +2045,7 @@ body {
   gap: 1.35rem;
   padding: 2rem;
   background: linear-gradient(135deg, rgba($bg-card, 0.75) 0%, rgba($bg-secondary, 0.6) 100%);
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   border: 1px solid rgba($border-color, 0.6);
   border-radius: 16px;
@@ -2233,6 +2266,7 @@ body {
     rgba($accent-blue, 0.08) 50%,
     rgba($bg-card, 0.9) 100%
   );
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   border: 2px solid transparent;
   border-radius: 18px;
@@ -2570,8 +2604,12 @@ body {
 
 .search-overlay {
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: rgba($bg-primary, 0.97);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   z-index: 9999;
   opacity: 0;
@@ -2625,6 +2663,8 @@ body {
 }
 
 .search-overlay-close {
+  -webkit-appearance: none;
+  appearance: none;
   width: 48px;
   height: 48px;
   background: rgba($bg-card, 0.8);
@@ -2632,6 +2672,8 @@ body {
   border-radius: 12px;
   color: $text-secondary;
   cursor: pointer;
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
@@ -2832,6 +2874,7 @@ body {
     width: 100%;
     padding: 0.95rem 1.25rem 0.95rem 3rem;
     background: linear-gradient(135deg, rgba($bg-card, 0.7) 0%, rgba($bg-secondary, 0.5) 100%);
+    -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     border: 1px solid rgba($border-color, 0.6);
     border-radius: 12px;
@@ -2864,6 +2907,7 @@ body {
   gap: 0.6rem;
   padding: 0.95rem 1.35rem;
   background: linear-gradient(135deg, rgba($bg-card, 0.7) 0%, rgba($bg-secondary, 0.5) 100%);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border: 1px solid rgba($border-color, 0.6);
   border-radius: 12px;
@@ -2901,6 +2945,7 @@ body {
     rgba($bg-card, 0.6) 0%,
     rgba($bg-secondary, 0.4) 100%
   );
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   border: 2px dashed rgba($border-color, 0.6);
   border-radius: 20px;
@@ -2912,7 +2957,10 @@ body {
   &::before {
     content: '';
     position: absolute;
-    inset: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background: radial-gradient(circle at center, rgba($accent-blue, 0.05) 0%, transparent 70%);
     pointer-events: none;
   }
@@ -3223,8 +3271,12 @@ body {
 
 .search-overlay {
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: rgba($bg-primary, 0.95);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   z-index: 1000;
   display: flex;
@@ -3466,6 +3518,7 @@ body {
   gap: 1.1rem;
   padding: 1.15rem 1.65rem;
   background: rgba($bg-card, 0.7);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border: 1px solid rgba($border-color, 0.6);
   border-radius: 14px;
@@ -3477,7 +3530,10 @@ body {
   &::before {
     content: '';
     position: absolute;
-    inset: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     border-radius: 14px;
     padding: 1px;
     background: linear-gradient(135deg, rgba($accent-blue, 0.2), rgba($accent-purple, 0.1));
@@ -3678,6 +3734,7 @@ body {
     rgba($accent-purple, 0.08) 50%,
     rgba($bg-card, 0.9) 100%
   );
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   border: 2px solid transparent;
   border-radius: 20px;
@@ -3691,7 +3748,10 @@ body {
   &::before {
     content: '';
     position: absolute;
-    inset: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     border-radius: 20px;
     padding: 2px;
     background: linear-gradient(135deg, $accent-blue 0%, $accent-purple 100%);
@@ -3785,7 +3845,10 @@ body {
   &::before {
     content: '';
     position: absolute;
-    inset: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -4526,6 +4589,7 @@ main {
 
 .latest-news-card {
   background: linear-gradient(135deg, rgba($bg-card, 0.7) 0%, rgba($bg-secondary, 0.5) 100%);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border: 1px solid rgba($border-color, 0.6);
   border-radius: 14px;
@@ -4673,6 +4737,7 @@ main {
 
 .news-overview-card {
   background: linear-gradient(135deg, rgba($bg-card, 0.8) 0%, rgba($bg-secondary, 0.6) 100%);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border: 1px solid rgba($border-color, 0.6);
   border-radius: 12px;
@@ -4859,6 +4924,7 @@ main {
     white-space: nowrap;
     padding: 0.5rem 1.15rem;
     background: linear-gradient(135deg, rgba($bg-card, 0.8) 0%, rgba($bg-secondary, 0.6) 100%);
+    -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     border-radius: 10px;
     border: 1px solid rgba($border-color, 0.5);
@@ -4869,7 +4935,10 @@ main {
     &::before {
       content: '';
       position: absolute;
-      inset: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       border-radius: 10px;
       background: linear-gradient(135deg, rgba($accent-blue, 0.1) 0%, transparent 100%);
       opacity: 0.5;
@@ -4936,6 +5005,7 @@ main {
   border-radius: 12px;
   margin-bottom: 2rem;
   overflow: hidden;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   transition: all 0.3s ease;
 
@@ -5489,6 +5559,8 @@ a:focus-visible {
 
 // Theme toggle button
 .theme-toggle {
+  -webkit-appearance: none;
+  appearance: none;
   background: none;
   border: 1px solid rgba($border-color, 0.4);
   border-radius: 8px;
@@ -5498,6 +5570,9 @@ a:focus-visible {
   align-items: center;
   justify-content: center;
   color: $text-secondary;
+  font-family: inherit;
+  line-height: normal;
+  -webkit-tap-highlight-color: transparent;
   transition: all 0.2s ease;
   width: 36px;
   height: 36px;
@@ -5551,6 +5626,7 @@ a:focus-visible {
     background: rgba(255, 255, 255, 0.95);
     border-bottom: 1px solid rgba(208, 215, 222, 0.7);
     box-shadow: 0 1px 3px rgba(31, 35, 40, 0.08), 0 0 1px rgba(31, 35, 40, 0.04);
+    -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
 
     .site-logo {
@@ -5902,6 +5978,7 @@ a:focus-visible {
   // Search overlay
   .search-overlay {
     background: var(--search-overlay-bg);
+    -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
 
     .search-overlay-input {
@@ -6025,6 +6102,7 @@ a:focus-visible {
   // Lightbox
   .lightbox-overlay {
     background: rgba(255, 255, 255, 0.95);
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     .lightbox-close { color: var(--text-primary); &:hover { background: rgba(31, 35, 40, 0.08); } }
   }
