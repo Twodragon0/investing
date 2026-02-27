@@ -8,7 +8,9 @@ layout: null
     "url": "{{ post.url | relative_url }}",
     "date": "{{ post.date | date: '%Y-%m-%d' }}",
     "categories": {{ post.categories | join: ', ' | jsonify }},
-    "tags": {{ post.tags | join: ', ' | jsonify }}
+    "tags": {{ post.tags | join: ', ' | jsonify }},
+    "excerpt": {{ post.excerpt | strip_html | strip_newlines | truncate: 200 | jsonify }},
+    "content": {{ post.content | strip_html | strip_newlines | truncate: 500 | jsonify }}
   }{% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
