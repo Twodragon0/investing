@@ -41,3 +41,57 @@ $shadow-glow-purple: 0 0 20px rgba(188, 140, 255, 0.3);
 $glass-bg: rgba(22, 27, 34, 0.8);
 $glass-border: rgba(48, 54, 61, 0.6);
 $glass-hover: rgba(28, 33, 40, 0.9);
+
+// CSS Custom Properties - Dark (default)
+:root {
+  --bg-primary: #{$bg-primary};
+  --bg-secondary: #{$bg-secondary};
+  --bg-card: #{$bg-card};
+  --text-primary: #{$text-primary};
+  --text-secondary: #{$text-secondary};
+  --accent-blue: #{$accent-blue};
+  --accent-green: #{$accent-green};
+  --accent-red: #{$accent-red};
+  --accent-orange: #{$accent-orange};
+  --accent-purple: #{$accent-purple};
+  --border-color: #{$border-color};
+  --shadow-alpha: 0.2;
+  --glass-bg: #{$glass-bg};
+  --glass-border: #{$glass-border};
+  --code-bg: #1a1f29;
+  --blockquote-bg: rgba(88, 166, 255, 0.06);
+  --table-stripe: rgba(22, 27, 34, 0.4);
+  --alert-info-bg: rgba(88, 166, 255, 0.08);
+  --alert-warning-bg: rgba(210, 153, 34, 0.08);
+  --alert-success-bg: rgba(63, 185, 80, 0.08);
+  --alert-danger-bg: rgba(248, 81, 73, 0.08);
+  --search-overlay-bg: rgba(13, 17, 23, 0.92);
+  --reading-progress: linear-gradient(90deg, #58a6ff, #bc8cff);
+}
+
+// CSS Custom Properties - Light
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f6f8fa;
+  --bg-card: #ffffff;
+  --text-primary: #1f2328;
+  --text-secondary: #656d76;
+  --accent-blue: #0969da;
+  --accent-green: #1a7f37;
+  --accent-red: #cf222e;
+  --accent-orange: #9a6700;
+  --accent-purple: #8250df;
+  --border-color: #d0d7de;
+  --shadow-alpha: 0.06;
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(208, 215, 222, 0.6);
+  --code-bg: #f6f8fa;
+  --blockquote-bg: rgba(9, 105, 218, 0.04);
+  --table-stripe: rgba(246, 248, 250, 0.6);
+  --alert-info-bg: rgba(9, 105, 218, 0.06);
+  --alert-warning-bg: rgba(154, 103, 0, 0.06);
+  --alert-success-bg: rgba(26, 127, 55, 0.06);
+  --alert-danger-bg: rgba(207, 34, 46, 0.06);
+  --search-overlay-bg: rgba(255, 255, 255, 0.95);
+  --reading-progress: linear-gradient(90deg, #0969da, #8250df);
+}
