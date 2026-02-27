@@ -400,9 +400,13 @@ def main():
 
             _us_symbols = {"^GSPC": "S&P 500", "^IXIC": "NASDAQ", "^DJI": "다우존스", "^VIX": "VIX"}
             _tickers = yf.download(list(_us_symbols.keys()), period="2d", progress=False, auto_adjust=True)
+            _close_data = _tickers.get("Close") if hasattr(_tickers, "get") else _tickers["Close"]
             for sym, label in _us_symbols.items():
                 try:
-                    _hist = _tickers["Close"][sym].dropna()
+                    if _close_data is None:
+                        continue
+                    _col = _close_data[sym]
+                    _hist = _col.dropna() if hasattr(_col, "dropna") else _col
                     if len(_hist) >= 2:
                         _price = _hist.iloc[-1]
                         _prev = _hist.iloc[-2]
