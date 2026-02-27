@@ -814,7 +814,9 @@ def main():
     content_parts.append("")
 
     if briefing_image:
-        content_parts.append(f'![multi-asset-briefing]({{{{ "{briefing_image}" | relative_url }}}})\n')
+        content_parts.append(
+            f'![multi-asset-briefing]({{{{ "{briefing_image}" | relative_url }}}})\n'
+        )
     fallback_briefing = _render_generated_image(
         f"news-briefing-daily-{today}.png", "multi-asset-briefing"
     )

@@ -23,7 +23,11 @@ from common.post_generator import PostGenerator
 from common.utils import detect_language, request_with_retry
 from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
-from common.markdown_utils import html_reference_details, html_source_tag, smart_truncate
+from common.markdown_utils import (
+    html_reference_details,
+    html_source_tag,
+    smart_truncate,
+)
 from common.collector_metrics import log_collection_summary
 
 try:

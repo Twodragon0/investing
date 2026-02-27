@@ -147,6 +147,7 @@ def _filter_en_keywords(keywords: list) -> list:
             result.append(kw)
     return result
 
+
 # Dark theme colors
 COLORS = {
     "bg": "#0d1117",
