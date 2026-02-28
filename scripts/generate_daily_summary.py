@@ -1336,17 +1336,27 @@ def main():
 
         # Dynamic operational checklist based on actual relation data
         content_parts.append("**운영 체크리스트**")
-        high_pairs = [(l, r, s, n) for l, r, s, n in relation_rows if s >= 25]
-        mid_pairs = [(l, r, s, n) for l, r, s, n in relation_rows if 12 <= s < 25]
+        high_pairs = [
+            (left, right, sc, nt)
+            for left, right, sc, nt in relation_rows if sc >= 25
+        ]
+        mid_pairs = [
+            (left, right, sc, nt)
+            for left, right, sc, nt in relation_rows if 12 <= sc < 25
+        ]
 
         if high_pairs:
-            pair_names = ", ".join(f"{l}↔{r}" for l, r, _, _ in high_pairs[:3])
+            pair_names = ", ".join(
+                f"{left}↔{right}" for left, right, _, _ in high_pairs[:3]
+            )
             content_parts.append(
                 f"- **높은 연관성 감지**: {pair_names} 구간에서 "
                 f"장중 변동성 확대 가능성이 높아 우선 모니터링 필요"
             )
         if mid_pairs:
-            pair_names = ", ".join(f"{l}↔{r}" for l, r, _, _ in mid_pairs[:3])
+            pair_names = ", ".join(
+                f"{left}↔{right}" for left, right, _, _ in mid_pairs[:3]
+            )
             content_parts.append(
                 f"- **중간 연관성**: {pair_names} 구간은 "
                 f"후속 이벤트에 따라 연관성 강화 가능"
@@ -1359,8 +1369,12 @@ def main():
 
         # Check specific cross patterns from actual data
         crypto_reg = next(
-            ((l, r, s, n) for l, r, s, n in relation_rows
-             if ("암호화폐" in l and "규제" in r) or ("규제" in l and "암호화폐" in r)),
+            (
+                (left, right, sc, nt)
+                for left, right, sc, nt in relation_rows
+                if ("암호화폐" in left and "규제" in right)
+                or ("규제" in left and "암호화폐" in right)
+            ),
             None,
         )
         if crypto_reg and crypto_reg[2] >= 12:
@@ -1369,8 +1383,11 @@ def main():
                 f"규제 이벤트가 코인 시장에 직접 영향을 줄 수 있는 구간"
             )
         political_overlap = next(
-            ((l, r, s, n) for l, r, s, n in relation_rows
-             if "정치인" in l or "정치인" in r),
+            (
+                (left, right, sc, nt)
+                for left, right, sc, nt in relation_rows
+                if "정치인" in left or "정치인" in right
+            ),
             None,
         )
         if political_overlap and political_overlap[2] >= 12:
@@ -1418,56 +1435,89 @@ def main():
     content_parts.append("---\n")
     content_parts.append("## 카테고리별 요약\n")
 
-    # Crypto section with description highlights
+    # Crypto section with data-driven analysis
     if crypto_summary:
         content_parts.append(f"### 암호화폐 뉴스 ({crypto_summary['count']}건)\n")
+        crypto_dp = _extract_category_data_points(crypto_summary)
         if crypto_summary.get("themes"):
             themes_str = ", ".join(f"**{t[0]}**({t[1]}건)" for t in crypto_summary["themes"][:4])
-            content_parts.append(f"주요 테마: {themes_str}\n")
-        if crypto_summary.get("highlights"):
-            for h in crypto_summary["highlights"][:4]:
+            total_themed = sum(t[1] for t in crypto_summary["themes"])
+            if total_themed and crypto_summary["count"]:
+                coverage = round(total_themed / crypto_summary["count"] * 100)
+                content_parts.append(f"주요 테마: {themes_str} (전체의 {coverage}% 커버)\n")
+            else:
+                content_parts.append(f"주요 테마: {themes_str}\n")
+        # Data points first, then highlights
+        if crypto_dp["figures"]:
+            content_parts.append(f"**주요 수치**: {', '.join(crypto_dp['figures'][:3])}\n")
+        if crypto_dp["titles"]:
+            content_parts.append("**대표 헤드라인:**")
+            for t in crypto_dp["titles"][:3]:
+                content_parts.append(f"- {smart_truncate(t, 80)}")
+            content_parts.append("")
+        elif crypto_summary.get("highlights"):
+            for h in crypto_summary["highlights"][:3]:
                 content_parts.append(h)
-        elif crypto_summary.get("key_summary"):
-            for h in crypto_summary["key_summary"][:4]:
-                content_parts.append(h)
-        content_parts.append(f"\n[상세 보기]({crypto_summary.get('url', '#')})\n")
+        content_parts.append(f"[상세 보기]({crypto_summary.get('url', '#')})\n")
 
-    # Stock section with description highlights
+    # Stock section with market data emphasis
     if stock_summary:
         content_parts.append(f"### 주식 시장 뉴스 ({stock_summary['count']}건)\n")
+        stock_dp = _extract_category_data_points(stock_summary)
         seen_stock = set()
         if stock_summary.get("market_data"):
+            content_parts.append("**시장 지표:**")
             for md in stock_summary["market_data"][:3]:
                 cleaned = _clean_bullet_text(md)
                 if cleaned and cleaned not in seen_stock:
                     content_parts.append(f"- {cleaned}")
                     seen_stock.add(cleaned)
             content_parts.append("")
-        if stock_summary.get("highlights"):
-            for h in stock_summary["highlights"][:4]:
+        if stock_dp["figures"]:
+            fig_str = ", ".join(f for f in stock_dp["figures"][:3] if f not in seen_stock)
+            if fig_str:
+                content_parts.append(f"**주요 수치**: {fig_str}\n")
+        if stock_dp["titles"]:
+            content_parts.append("**대표 헤드라인:**")
+            for t in stock_dp["titles"][:3]:
+                cleaned = smart_truncate(t, 80)
+                if cleaned not in seen_stock:
+                    content_parts.append(f"- {cleaned}")
+                    seen_stock.add(cleaned)
+            content_parts.append("")
+        elif stock_summary.get("highlights"):
+            for h in stock_summary["highlights"][:3]:
                 cleaned = _clean_bullet_text(h)
                 if cleaned and cleaned not in seen_stock:
                     content_parts.append(f"- {cleaned}")
                     seen_stock.add(cleaned)
-        elif stock_summary.get("key_summary"):
-            for h in stock_summary["key_summary"][:4]:
-                cleaned = _clean_bullet_text(h)
-                if cleaned and cleaned not in seen_stock:
-                    content_parts.append(f"- {cleaned}")
-                    seen_stock.add(cleaned)
-        content_parts.append(f"\n[상세 보기]({stock_summary.get('url', '#')})\n")
+        content_parts.append(f"[상세 보기]({stock_summary.get('url', '#')})\n")
 
-    # Regulatory section
+    # Regulatory section with specific issue extraction
     if regulatory_summary:
         content_parts.append(f"### 규제 동향 ({regulatory_summary['count']}건)\n")
-        if regulatory_summary.get("key_summary"):
+        reg_dp = _extract_category_data_points(regulatory_summary)
+        if reg_dp["titles"]:
+            content_parts.append("**주요 규제 이슈:**")
+            for t in reg_dp["titles"][:3]:
+                content_parts.append(f"- {smart_truncate(t, 80)}")
+            content_parts.append("")
+        elif regulatory_summary.get("key_summary"):
             for h in regulatory_summary["key_summary"][:3]:
                 content_parts.append(h)
-        content_parts.append(f"\n[상세 보기]({regulatory_summary.get('url', '#')})\n")
+        if reg_dp["figures"]:
+            content_parts.append(f"**관련 수치**: {', '.join(reg_dp['figures'][:2])}\n")
+        content_parts.append(f"[상세 보기]({regulatory_summary.get('url', '#')})\n")
 
     if worldmonitor_summary:
         content_parts.append(f"### 월드모니터 브리핑 ({worldmonitor_summary['count']}건)\n")
-        if worldmonitor_summary.get("key_summary"):
+        world_dp = _extract_category_data_points(worldmonitor_summary)
+        if world_dp["titles"]:
+            content_parts.append("**주요 글로벌 이슈:**")
+            for t in world_dp["titles"][:3]:
+                content_parts.append(f"- {smart_truncate(t, 80)}")
+            content_parts.append("")
+        elif worldmonitor_summary.get("key_summary"):
             for h in worldmonitor_summary["key_summary"][:3]:
                 content_parts.append(h)
         if worldmonitor_summary.get("issues"):
@@ -1479,14 +1529,22 @@ def main():
                 elif len(parts) >= 3:
                     world_rows.append([parts[1], parts[2]])
             if world_rows:
-                content_parts.append("")
                 content_parts.append(markdown_table(["제목", "출처"], world_rows))
-        content_parts.append(f"\n[상세 보기]({worldmonitor_summary.get('url', '#')})\n")
+                content_parts.append("")
+        if world_dp["figures"]:
+            content_parts.append(f"**관련 수치**: {', '.join(world_dp['figures'][:2])}\n")
+        content_parts.append(f"[상세 보기]({worldmonitor_summary.get('url', '#')})\n")
 
-    # Security section
+    # Security section with incident details
     if security_summary:
         content_parts.append(f"### 보안 리포트 ({security_summary['count']}건)\n")
-        if security_summary.get("key_summary"):
+        sec_dp = _extract_category_data_points(security_summary)
+        if sec_dp["titles"]:
+            content_parts.append("**주요 보안 이슈:**")
+            for t in sec_dp["titles"][:3]:
+                content_parts.append(f"- {smart_truncate(t, 80)}")
+            content_parts.append("")
+        elif security_summary.get("key_summary"):
             for h in security_summary["key_summary"][:3]:
                 content_parts.append(h)
         if security_summary.get("incidents"):
@@ -1496,20 +1554,30 @@ def main():
                 if len(parts) >= 3:
                     incident_rows.append(parts[:3])
             if incident_rows:
-                content_parts.append("")
                 content_parts.append(markdown_table(["프로젝트", "피해 규모", "공격 유형"], incident_rows))
-        content_parts.append(f"\n[상세 보기]({security_summary.get('url', '#')})\n")
+                content_parts.append("")
+        if sec_dp["figures"]:
+            content_parts.append(f"**피해 수치**: {', '.join(sec_dp['figures'][:2])}\n")
+        content_parts.append(f"[상세 보기]({security_summary.get('url', '#')})\n")
 
-    # Social section
+    # Social section with trend extraction
     if social_summary:
         content_parts.append(f"### 소셜 미디어 동향 ({social_summary['count']}건)\n")
-        if social_summary.get("highlights"):
+        social_dp = _extract_category_data_points(social_summary)
+        if social_dp["titles"]:
+            content_parts.append("**화제 토픽:**")
+            for t in social_dp["titles"][:3]:
+                content_parts.append(f"- {smart_truncate(t, 80)}")
+            content_parts.append("")
+        elif social_summary.get("highlights"):
             for h in social_summary["highlights"][:3]:
                 content_parts.append(h)
         elif social_summary.get("key_summary"):
             for h in social_summary["key_summary"][:3]:
                 content_parts.append(h)
-        content_parts.append(f"\n[상세 보기]({social_summary.get('url', '#')})\n")
+        if social_dp["figures"]:
+            content_parts.append(f"**관련 수치**: {', '.join(social_dp['figures'][:2])}\n")
+        content_parts.append(f"[상세 보기]({social_summary.get('url', '#')})\n")
 
     # ═══════════════════════════════════════
     # 7. NOTABLE NEWS (P2)
