@@ -15,6 +15,7 @@ image: "/assets/images/generated/news-briefing-crypto-2026-02-11.png"
 ## 전체 뉴스 요약
 
 - 총 **70건** 수집
+- 오늘 총 70건의 암호화폐 관련 뉴스가 수집되었습니다. 주요 내용을 정리합니다.
 - - 총 수집된 뉴스: 70건 - 주요 출처: Binance, Google News EN, Google News KR
 
 

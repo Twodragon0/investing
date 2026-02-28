@@ -17,37 +17,13 @@ description: "2026-02-28 주식 시장에서 104건의 뉴스를 분석했습니
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">104</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 24</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">6,244.13</div><div class="stat-label">KOSPI -1.00%</div></div><div class="stat-item"><div class="stat-value">1,192.78</div><div class="stat-label">KOSDAQ +0.39%</div></div></div>
 <div class="alert-box alert-info"><strong>주식 시장 긴급: SK하이닉스 주가 장중 3%대 하락, 엔비디아 급락에 반도체주 투심 위축 - 비즈니스포스트 - 104건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (24건): 하이닉스, 코스피, 주요공시, 삼성전자, 엔비디아</li><li>📊 <strong>매크로/금리</strong> (12건): inflation, 기준금리, Dow, points, 한국은행</li><li>🤖 <strong>AI/기술</strong> (15건): and, Nvidia, Trump, 하이닉스, 반도체</li><li>🏛️ <strong>정치/정책</strong> (13건): Trump, geopolitical, uncertainty, blacklists, Anthropic</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBJd2NHajNzaE9aQWVGMkxRZFlUYkpnV0hmZXF1M3l1RmVLVFY1dW5RZ0tGN2V6OE9CT1VhYWxYWHZTSnZtRUptdHpNRVNIcWdhRU8zdVZ2T1UtbDdHZWFybGlSWjlTUjR2ZENYS3lORlRQclE?oc=5">SK하이닉스 주가 장중 3%대 하락, 엔비디아 급락에 반도체주 투심 위축 - 비즈니스포스트</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: SK하이닉스 주가 장중 3%대 하락, 엔비디아 급락에 반도체주 투심 위축 - 비즈니스포스트  
-총 104건의 뉴스 중 P1 주요 이슈도 23건 확인됩니다.
-
-1. **📈 가격/시장** (24건): 하이닉스, 코스피, 주요공시, 삼성전자, 엔비디아
-2. **📊 매크로/금리** (12건): inflation, 기준금리, Dow, points, 한국은행
-3. **🤖 AI/기술** (15건): and, Nvidia, Trump, 하이닉스, 반도체
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-**P0 긴급**: SK하이닉스 주가 장중 3%대 하락, 엔비디아 급락에 반도체주 투심 위축 - 비즈니스포스트
-**P1 주요**: 23건 확인
-- 한국 기사 40건, 글로벌 기사 64건 수집
-- 한국 지수: KOSPI 6,244.13(-1.00%), KOSDAQ 1,192.78(+0.39%), USD/KRW 1,439.23(+0.41%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">24건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:50%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:62%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:54%"></div></div><span class="theme-count">13건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:17%"></div></div><span class="theme-count">4건</span></div>
-</div>
-
-*총 104건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
-
-
-![market-snapshot]({{ '/assets/images/generated/market-snapshot-2026-02-28.png' | relative_url }})
-
-
----
+- KOSPI 6,244.13 (-1.00%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
+- KOSDAQ 1,192.78 (+0.39%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-02-28 주식 시장에서 104건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,244.13(-1.00%), KOSDAQ 1,192.78(+0.39%), USD/KRW 1,439.23(+0.41%).
+- *하이닉스, 코스피, 주요공시, 삼성전자, 엔비디아*
 
 ## 테마별 주요 뉴스
 

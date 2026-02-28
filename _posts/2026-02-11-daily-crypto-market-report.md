@@ -15,6 +15,7 @@ image: "/assets/images/generated/news-briefing-cryptomarket-2026-02-11.png"
 
 ## 전체 뉴스 요약
 
+- 총 시가총액: $2.36T (🔴 -2.27%)
 - 24시간 거래량: $113.94B
 
 

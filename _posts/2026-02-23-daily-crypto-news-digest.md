@@ -37,10 +37,12 @@ description: "2026-02-23 암호화폐 시장에서 85건의 뉴스를 분석했�
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxOaEtNMUM4YndMWk9PMlFyTjI5bWE1MF9QWTRYSi13NUdrZ2NuWVV0eGJjTmRod0lZOHNVakZ0R0RVNDBSM1RZRUQ2THZ3S1NnRWJneEMxeEN5OEwyZ3lqTm1JWlM1QkZVWDZYUkIxMWk1eWJOclRFWjMya0RicGlJSWdjR2U3WFU?oc=5">[속보] 비트코인 끝내 사망 " 구글 검색 급속 확산"... 뉴튜데이 긴급 보도 - 글로벌이코노믹</a><br><a href="https://cointelegraph.com/news/crypto-retraces-gains-2024-2025-pump?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Crypto market retraces almost all 2024-2025 US election pump gains</a><br><a href="https://www.coindesk.com/markets/2026/02/22/bitcoin-dips-to-usd67-000-doge-eth-slide-as-tariff-uncertainty-weighs-on-risk-assets">Bitcoin see-saws around $68,000, DOGE, ETH slide as tariff uncertainty weighs on risk assets</a></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **85건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏛️ 정치/정책
+- 2026-02-23 암호화폐 시장에서 85건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 정치/정책 관련 소식이 주목됩니다.
 
 ## 테마별 주요 뉴스
 

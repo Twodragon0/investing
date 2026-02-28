@@ -14,7 +14,8 @@ image: "/assets/images/generated/news-briefing-security-2026-02-10.png"
 
 ## 전체 뉴스 요약
 
-- ` DeFi Exploit       ████████████████████░░░░░░░░░░  40%  (6건) Supply Chain       ████████████████░░░░░░░░░░░░░░  32%  (5건) Social Engineering ████████░░░░░░...
+- ` Critical (3건):  ████████████░░░░░░░░  20%  ($368.6M+) High     (4건):  ████████████████░░░░  27%  (10억+ 다운로드 영향) Medium   (3건):  ████████░░░░░░░░░░░░  20%…
+- ` DeFi Exploit       ████████████████████░░░░░░░░░░  40%  (6건) Supply Chain       ████████████████░░░░░░░░░░░░░░  32%  (5건) Social Engineering…
 
 
 ## 위험도 분포

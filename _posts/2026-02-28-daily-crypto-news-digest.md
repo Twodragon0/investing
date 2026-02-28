@@ -32,24 +32,13 @@ description: "2026-02-28 암호화폐 시장에서 124건의 뉴스를 분석했
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">124</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 46</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">리스크 위험</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (21회)</div></div></div>
 <div class="alert-box alert-info"><strong>암호화폐 긴급: Butchering, Million, Seizes - 124건 분석</strong><ul><li>🟠 <strong>비트코인</strong> (46건): 비트코인, 암호화폐, 하락, com, 글로벌이코노믹</li><li>🏦 <strong>거래소</strong> (32건): Binance, Futures, Trading, Democrats, Perpetual</li><li>📈 <strong>가격/시장</strong> (23건): 비트코인, 암호화폐, 하락, 충격, 일제</li><li>🔷 <strong>이더리움</strong> (13건): Ethereum, and, XRP, for, Cryptocurrency</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOLUhxdzdoVFFTT2QydElpU3locWJDQTlnZXNmYTJRRXJHRW1WSjY3ZFo0NmZIUU9QSURrSTd2bThfRDNTLVpIMEVXYkcwTVJsMjlzQVZKZDhBT0pvTkxvb2VKa1FJdHRDRjdlc3Y4el9LSGRjTmFneS1pTVU1MDN4OXBhWQ?oc=5">DoJ Seizes $61 Million in Tether Linked to Pig Butchering Crypto Scams - The Hacker News</a></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUWYzME5LUnpwVXVxRG5JZnFvWGJLa1B5dXI4YUZ2RzRzRlFRMWwzcDE4ZVRDRTJCQzY0RUdHMXFrWmk4UEtSS3hNOVY0NjdtT015a05qcURaTjk1cDVMUExyOEF1b0hmbFBXZUROQ01acE13R3A2aVp4OU9OZkNFUWdIbWxWQ0g5?oc=5">뉴욕증시 상장사 "비트코인 대량 매도" .. .블룸버그 "양자컴 암호화폐 해킹 급물살" - 글로벌이코노믹</a></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5jQ1NKZEZxci12R3lGVVl3QzBBeWZFZE1pVTBkZ25INUIyT21VMGNZZFJ1bnNrRXdqaFFzSnhpRF8xbnlmQjU5LWdaN2lpZWVwQWthTVM1eUtWcHJhZktFOUNvLTNnREdHUE9ieVQ5MEpFUFU?oc=5">비트코인, 매일 10시만 되면 폭락?…'제인스트리트 조작설' 진실 공방 - 디지털투데이</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: DoJ Seizes $61 Million in Tether Linked to Pig Butchering Crypto Scams - The ...  
-외 P0 긴급 이슈 6건이 추가 감지되었습니다. 총 124건의 뉴스 중 P1 주요 이슈도 11건 확인됩니다.
-
-1. **🟠 비트코인** (46건): 비트코인, 암호화폐, 하락, com, 글로벌이코노믹
-2. **🏦 거래소** (32건): Binance, Futures, Trading, Democrats, Perpetual
-3. **📈 가격/시장** (23건): 비트코인, 암호화폐, 하락, 충격, 일제
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-**P0 긴급**: DoJ Seizes $61 Million in Tether Linked to Pig Butchering Cr / 뉴욕증시 상장사 "비트코인 대량 매도" .. .블룸버그 "양자컴 암호화폐 해킹 급물살" - 글로벌이코노믹 / 비트코인, 매일 10시만 되면 폭락?…'제인스트리트 조작설' 진실 공방 - 디지털투데이
-**P1 주요**: 11건 확인
-**핵심 키워드**: **bitcoin**, **ai**, **ethereum**, **etf**
-**주요 출처**: Binance(40건), Google News KR(15건), Decrypt(15건)
-- 거래소 공지 10건 포함
-
-
-![news-briefing]({{ '/assets/images/generated/news-briefing-crypto-2026-02-28.png' | relative_url }})
+- 총 **124건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-02-28 암호화폐 시장에서 124건의 뉴스를 분석했습니다. 오늘은 비트코인, 거래소, 가격/시장 관련 소식이 주목됩니다.
+- *총 124건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
 
 ## 테마별 주요 뉴스
 
