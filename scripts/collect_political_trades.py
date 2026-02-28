@@ -576,6 +576,94 @@ def main():
             if desc and desc != title and len(desc) > 20:
                 analysis_lines.append(f"\n> **주요 내용**: {_first_sentence(desc)}")
 
+    # Cross-theme synthesis: combined signals across categories
+    active_categories = []
+    if trump_count:
+        active_categories.append("트럼프 정책")
+    if congress_count:
+        active_categories.append("의회 거래")
+    if cb_count:
+        active_categories.append("중앙은행")
+    if korea_count:
+        active_categories.append("한국 정치인")
+    if sec_count:
+        active_categories.append("SEC 내부자")
+
+    if len(active_categories) >= 2:
+        _CROSS_POLICY_TEMPLATES = [
+            (
+                {"트럼프 정책", "중앙은행"},
+                "행정부 정책과 중앙은행 통화정책이 동시에 움직이는 구간입니다. "
+                "재정·통화 정책의 방향이 일치하면 시장 모멘텀이 강화되고, "
+                "충돌하면 혼조세와 변동성 확대가 나타납니다.",
+            ),
+            (
+                {"트럼프 정책", "의회 거래"},
+                "행정명령과 의회 거래가 동시에 포착되어, 정책 수혜 예상 종목에 "
+                "정치인 자금이 선제적으로 유입되었을 가능성이 있습니다. "
+                "관련 섹터의 입법·규제 일정을 주시하세요.",
+            ),
+            (
+                {"의회 거래", "SEC 내부자"},
+                "의회 거래와 SEC 내부자 활동이 동시에 활발한 것은 "
+                "특정 섹터에 대한 정보 비대칭이 존재할 수 있음을 시사합니다. "
+                "해당 종목의 실적 발표와 규제 일정을 함께 점검하세요.",
+            ),
+            (
+                {"중앙은행", "의회 거래"},
+                "금리 결정과 의원 거래 패턴이 함께 나타나, "
+                "통화정책 변화에 앞선 포지셔닝이 진행 중일 수 있습니다. "
+                "금리 민감 섹터(부동산·금융·성장주) 중심으로 점검이 필요합니다.",
+            ),
+            (
+                {"트럼프 정책", "한국 정치인"},
+                "미국 행정부 정책과 한국 정치 동향이 동시에 부각되어, "
+                "한미 경제 관계(반도체·무역·방산)에 영향을 줄 수 있는 구간입니다.",
+            ),
+            (
+                {"중앙은행", "한국 정치인"},
+                "글로벌 통화정책과 국내 정치 동향이 겹쳐, "
+                "한국은행 금리 결정과 재정정책 방향에 대한 시장의 관심이 높아지고 있습니다.",
+            ),
+        ]
+
+        cross_text = None
+        active_set = set(active_categories)
+        for required_set, template in _CROSS_POLICY_TEMPLATES:
+            if required_set.issubset(active_set):
+                cross_text = template
+                break
+
+        if not cross_text:
+            # Concentration-based fallback
+            cat_counts = {
+                "트럼프 정책": trump_count,
+                "의회 거래": congress_count,
+                "중앙은행": cb_count,
+                "한국 정치인": korea_count,
+                "SEC 내부자": sec_count,
+            }
+            sorted_cats = sorted(
+                ((k, v) for k, v in cat_counts.items() if v > 0),
+                key=lambda x: -x[1],
+            )
+            if sorted_cats:
+                top_cat = sorted_cats[0]
+                top_pct = top_cat[1] / max(total_count, 1) * 100
+                if top_pct > 50:
+                    cross_text = (
+                        f"**{top_cat[0]}** 관련 뉴스가 전체의 {top_pct:.0f}%를 차지하여, "
+                        f"오늘 시장의 정책 리스크가 이 분야에 집중됩니다."
+                    )
+                else:
+                    cross_text = (
+                        f"{len(active_categories)}개 분야에서 뉴스가 고르게 분포하여, "
+                        "다각적 정책 리스크 모니터링이 필요한 시점입니다."
+                    )
+
+        if cross_text:
+            analysis_lines.append(f"\n**복합 정책 신호**: {cross_text}")
+
     if not analysis_lines:
         analysis_lines.append("현재 수집된 정치인 거래/정책 데이터가 제한적입니다.")
     analysis_lines.append("")
