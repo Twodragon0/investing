@@ -6,7 +6,7 @@ categories: [political-trades]
 tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-trading]
 source: "consolidated"
 lang: "ko"
-description: 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
+description: "미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다."
 image: "/assets/images/generated/news-briefing-political-2026-02-22.png"
 ---
 
@@ -28,12 +28,10 @@ image: "/assets/images/generated/news-briefing-political-2026-02-22.png"
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong>: <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFBoam8zR2lDOWJ4SDVJWlRQUFowS2JzZkxDUlhDUmZKWjFNekh2MVlUcWE3T01jeDR5VFNZMUdRdllDajNUdW5FQlZpd2pKM2s?oc=5">트럼프 "오늘 중으로 10% 글로벌 관세 행정명령 서명"...기존 관세에 추가 - v.daum.net</a></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **23건** 수집
 - 트럼프 관련 9건의 정책 뉴스가 수집되었습니다. 행정명령 및 관세 정책은 글로벌 시장에 직접적인 영향을 미치고 있습니다.
-- 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
 - 1. 트럼프 "오늘 중으로 10% 글로벌 관세 행정명령 서명"...기존 관세에 추가 - v.daum.net 트럼프 "오늘 중으로 10% 글로벌 관세 행정명령 서명"...기존 관세에 추가 v.daum.net
 
 ## 트럼프 행정명령/정책

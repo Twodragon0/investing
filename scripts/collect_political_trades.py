@@ -13,6 +13,7 @@ import os
 import re
 import sys
 import time
+from collections import Counter
 from datetime import UTC, datetime
 from typing import Any, Dict, List
 
@@ -450,48 +451,225 @@ def main():
 
     content_parts.append("---\n")
 
-    # ── 정책 영향 분석 (내러티브 형식) ──
+    # ── 정책 영향 분석 (데이터 기반 내러티브) ──
     content_parts.append("\n## 정책 영향 분석\n")
     analysis_lines = []
-    if trump_count:
+
+    # Buy/sell pattern detection from titles
+    buy_signals = 0
+    sell_signals = 0
+    stock_mentions: Counter = Counter()
+    _BUY_KW = ["buy", "bought", "purchase", "매수", "매입", "취득", "long"]
+    _SELL_KW = ["sell", "sold", "sale", "매도", "매각", "처분", "short"]
+    for item in unique_items:
+        title_lower = item.get("title", "").lower()
+        desc_lower = item.get("description", "").lower()
+        text = title_lower + " " + desc_lower
+        if any(kw in text for kw in _BUY_KW):
+            buy_signals += 1
+        if any(kw in text for kw in _SELL_KW):
+            sell_signals += 1
+        # Extract stock ticker mentions (e.g., $AAPL, NVDA, MSFT)
+        tickers = re.findall(r"\$([A-Z]{2,5})\b", item.get("title", "") + " " + item.get("description", ""))
+        for ticker in tickers:
+            stock_mentions[ticker] += 1
+
+    # Trade pattern summary
+    if buy_signals or sell_signals:
+        total_trades = buy_signals + sell_signals
+        buy_pct = buy_signals / max(total_trades, 1) * 100
+        if buy_signals > sell_signals * 1.5:
+            pattern_note = "매수 비중이 압도적으로 높아, 정치인들이 시장에 대해 낙관적 시각을 갖고 있음을 시사합니다."
+        elif sell_signals > buy_signals * 1.5:
+            pattern_note = "매도 비중이 높아, 리스크 회피 또는 차익 실현 움직임이 감지됩니다."
+        else:
+            pattern_note = "매수·매도가 균형을 이루며, 시장 방향에 대한 정치권의 의견이 엇갈리고 있습니다."
         analysis_lines.append(
-            f"트럼프 관련 **{trump_count}건**의 정책 뉴스가 포착되었습니다. "
-            "행정명령 및 관세 정책의 변화는 미국 내수 시장뿐 아니라 아시아·유럽 수출 기업과 원자재 가격에도 연쇄적으로 영향을 미칩니다. "
-            "특히 관세 관련 키워드가 부각될 경우 반도체·자동차 섹터의 변동성 확대에 유의해야 합니다."
+            f"**거래 패턴**: 매수 신호 {buy_signals}건({buy_pct:.0f}%), "
+            f"매도 신호 {sell_signals}건({100 - buy_pct:.0f}%). {pattern_note}"
+        )
+
+    # Stock concentration analysis
+    if stock_mentions:
+        top_stocks = stock_mentions.most_common(5)
+        stocks_str = ", ".join(f"**${t}**({c}건)" for t, c in top_stocks)
+        analysis_lines.append(
+            f"\n**종목 집중도**: {stocks_str}. "
+            f"정치인 거래가 특정 종목에 집중되는 것은 "
+            f"해당 섹터의 입법·규제 방향에 대한 내부 정보 가능성을 시사합니다."
+        )
+
+    if trump_count:
+        # Detect specific policy areas
+        tariff_items = sum(
+            1 for i in trump_filtered
+            if any(kw in (i.get("title", "") + " " + i.get("description", "")).lower()
+                   for kw in ["tariff", "관세", "trade war", "무역"])
+        )
+        crypto_items = sum(
+            1 for i in trump_filtered
+            if any(kw in (i.get("title", "") + " " + i.get("description", "")).lower()
+                   for kw in ["crypto", "bitcoin", "digital asset", "암호화폐"])
+        )
+        eo_items = sum(
+            1 for i in trump_filtered
+            if any(kw in (i.get("title", "") + " " + i.get("description", "")).lower()
+                   for kw in ["executive order", "행정명령"])
+        )
+        policy_details = []
+        if tariff_items:
+            policy_details.append(f"관세·무역 {tariff_items}건")
+        if crypto_items:
+            policy_details.append(f"암호화폐 {crypto_items}건")
+        if eo_items:
+            policy_details.append(f"행정명령 {eo_items}건")
+        detail_str = f" ({', '.join(policy_details)})" if policy_details else ""
+
+        analysis_lines.append(
+            f"\n**트럼프 정책**: {trump_count}건{detail_str}. "
+            "행정명령 및 관세 정책 변화는 반도체·자동차·에너지 섹터의 변동성을 확대시킵니다."
         )
         for item in trump_filtered[:1]:
             desc = item.get("description", "").strip()
             title = item.get("title", "")
             if desc and desc != title and len(desc) > 20:
                 analysis_lines.append(f"\n> **주요 내용**: {_first_sentence(desc)}")
+
     if congress_count:
         analysis_lines.append(
-            f"\n미국 의회에서 **{congress_count}건**의 거래가 보고되었습니다. "
-            "의원들의 대규모 매수·매도 공시는 해당 섹터의 입법 기대감이나 규제 리스크를 반영하는 경우가 많아, "
-            "투자 참고 신호로 활용할 수 있습니다."
+            f"\n**미국 의회 거래**: {congress_count}건. "
+            "의원들의 거래 패턴은 입법 방향의 간접 신호로 해석됩니다. "
+            "특히 대규모 매수는 해당 섹터 지원 법안 발의 가능성과 연결될 수 있습니다."
         )
+
     if korea_count:
         analysis_lines.append(
-            f"\n한국 정치인 관련 **{korea_count}건**의 재산/거래 소식이 수집되었습니다. "
-            "공직자 재산 공개 시즌에는 부동산·주식 관련 정책 방향의 힌트를 얻을 수 있으며, "
+            f"\n**한국 정치인**: {korea_count}건. "
+            "공직자 재산 변동 공개는 부동산·주식 정책 방향의 선행 지표가 될 수 있으며, "
             "국내 규제 환경 변화에 대한 선제적 대응이 필요합니다."
         )
+
     if cb_count:
+        # Detect hawkish/dovish signals
+        hawkish = sum(
+            1 for i in cb_filtered
+            if any(kw in (i.get("title", "") + " " + i.get("description", "")).lower()
+                   for kw in ["hike", "인상", "hawkish", "매파", "tightening", "긴축"])
+        )
+        dovish = sum(
+            1 for i in cb_filtered
+            if any(kw in (i.get("title", "") + " " + i.get("description", "")).lower()
+                   for kw in ["cut", "인하", "dovish", "비둘기", "easing", "완화"])
+        )
+        if hawkish > dovish:
+            cb_tone = "매파적 신호가 우세하여, 채권 수익률 상승과 성장주 압박이 예상됩니다."
+        elif dovish > hawkish:
+            cb_tone = "비둘기파 신호가 우세하여, 유동성 확대 기대감이 형성되고 있습니다."
+        else:
+            cb_tone = "금리 결정과 통화정책 기조를 면밀히 주시해야 합니다."
         analysis_lines.append(
-            f"\n중앙은행 정책 관련 **{cb_count}건**의 뉴스가 수집되었습니다. "
-            "금리 결정과 통화정책 기조 변화는 채권 수익률·주식 밸류에이션·암호화폐 유동성에 직접적 영향을 미치므로, "
-            "FOMC 성명과 한국은행 금통위 결과를 면밀히 주시해야 합니다."
+            f"\n**중앙은행 정책**: {cb_count}건. {cb_tone}"
         )
         for item in cb_filtered[:1]:
             desc = item.get("description", "").strip()
             title = item.get("title", "")
             if desc and desc != title and len(desc) > 20:
                 analysis_lines.append(f"\n> **주요 내용**: {_first_sentence(desc)}")
+
+    # Cross-theme synthesis: combined signals across categories
+    active_categories = []
+    if trump_count:
+        active_categories.append("트럼프 정책")
+    if congress_count:
+        active_categories.append("의회 거래")
+    if cb_count:
+        active_categories.append("중앙은행")
+    if korea_count:
+        active_categories.append("한국 정치인")
+    if sec_count:
+        active_categories.append("SEC 내부자")
+
+    if len(active_categories) >= 2:
+        _CROSS_POLICY_TEMPLATES = [
+            (
+                {"트럼프 정책", "중앙은행"},
+                "행정부 정책과 중앙은행 통화정책이 동시에 움직이는 구간입니다. "
+                "재정·통화 정책의 방향이 일치하면 시장 모멘텀이 강화되고, "
+                "충돌하면 혼조세와 변동성 확대가 나타납니다.",
+            ),
+            (
+                {"트럼프 정책", "의회 거래"},
+                "행정명령과 의회 거래가 동시에 포착되어, 정책 수혜 예상 종목에 "
+                "정치인 자금이 선제적으로 유입되었을 가능성이 있습니다. "
+                "관련 섹터의 입법·규제 일정을 주시하세요.",
+            ),
+            (
+                {"의회 거래", "SEC 내부자"},
+                "의회 거래와 SEC 내부자 활동이 동시에 활발한 것은 "
+                "특정 섹터에 대한 정보 비대칭이 존재할 수 있음을 시사합니다. "
+                "해당 종목의 실적 발표와 규제 일정을 함께 점검하세요.",
+            ),
+            (
+                {"중앙은행", "의회 거래"},
+                "금리 결정과 의원 거래 패턴이 함께 나타나, "
+                "통화정책 변화에 앞선 포지셔닝이 진행 중일 수 있습니다. "
+                "금리 민감 섹터(부동산·금융·성장주) 중심으로 점검이 필요합니다.",
+            ),
+            (
+                {"트럼프 정책", "한국 정치인"},
+                "미국 행정부 정책과 한국 정치 동향이 동시에 부각되어, "
+                "한미 경제 관계(반도체·무역·방산)에 영향을 줄 수 있는 구간입니다.",
+            ),
+            (
+                {"중앙은행", "한국 정치인"},
+                "글로벌 통화정책과 국내 정치 동향이 겹쳐, "
+                "한국은행 금리 결정과 재정정책 방향에 대한 시장의 관심이 높아지고 있습니다.",
+            ),
+        ]
+
+        cross_text = None
+        active_set = set(active_categories)
+        for required_set, template in _CROSS_POLICY_TEMPLATES:
+            if required_set.issubset(active_set):
+                cross_text = template
+                break
+
+        if not cross_text:
+            # Concentration-based fallback
+            cat_counts = {
+                "트럼프 정책": trump_count,
+                "의회 거래": congress_count,
+                "중앙은행": cb_count,
+                "한국 정치인": korea_count,
+                "SEC 내부자": sec_count,
+            }
+            sorted_cats = sorted(
+                ((k, v) for k, v in cat_counts.items() if v > 0),
+                key=lambda x: -x[1],
+            )
+            if sorted_cats:
+                top_cat = sorted_cats[0]
+                top_pct = top_cat[1] / max(total_count, 1) * 100
+                if top_pct > 50:
+                    cross_text = (
+                        f"**{top_cat[0]}** 관련 뉴스가 전체의 {top_pct:.0f}%를 차지하여, "
+                        f"오늘 시장의 정책 리스크가 이 분야에 집중됩니다."
+                    )
+                else:
+                    cross_text = (
+                        f"{len(active_categories)}개 분야에서 뉴스가 고르게 분포하여, "
+                        "다각적 정책 리스크 모니터링이 필요한 시점입니다."
+                    )
+
+        if cross_text:
+            analysis_lines.append(f"\n**복합 정책 신호**: {cross_text}")
+
     if not analysis_lines:
         analysis_lines.append("현재 수집된 정치인 거래/정책 데이터가 제한적입니다.")
     analysis_lines.append("")
     analysis_lines.append(
-        "> *본 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
+        "> *본 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, "
+        "투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
     )
     content_parts.extend(analysis_lines)
 

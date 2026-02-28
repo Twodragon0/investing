@@ -373,6 +373,122 @@ TOP_THEMES_COUNT = 5
 ARTICLES_PER_THEME = 5
 BAR_WIDTH = 18
 
+# Cross-theme analysis patterns: (theme_key_a, theme_key_b) -> list of insight templates
+# Each template should describe what the co-occurrence means for the market.
+CROSS_THEME_INSIGHTS: Dict[Tuple[str, str], List[str]] = {
+    ("bitcoin", "price_market"): [
+        "비트코인 가격 변동성이 확대되면서 시장 전반의 방향성에 대한 관심이 높아지고 있습니다",
+        "비트코인 가격 움직임이 전체 시장 심리를 좌우하는 상황입니다",
+        "비트코인과 가격/시장 테마가 동시에 부각되어 트레이딩 기회와 리스크가 공존합니다",
+    ],
+    ("regulation", "exchange"): [
+        "규제 당국의 움직임이 거래소 운영에 직접적인 영향을 미치고 있어 주의가 필요합니다",
+        "거래소 관련 규제 강화 신호가 감지되고 있으며, 상장/상폐 이슈에 유의해야 합니다",
+        "규제와 거래소 테마가 동시에 부각되어 거래 환경 변화 가능성이 있습니다",
+    ],
+    ("regulation", "politics"): [
+        "정치적 결정이 규제 방향에 영향을 주고 있어, 정책 변화를 면밀히 모니터링해야 합니다",
+        "정치권의 암호화폐 관련 입장 변화가 규제 환경에 파급 효과를 줄 수 있습니다",
+        "정치/정책과 규제 테마가 맞물리며 법적 프레임워크 변화 가능성이 제기됩니다",
+    ],
+    ("bitcoin", "regulation"): [
+        "비트코인 관련 규제 동향이 가격과 시장 구조에 영향을 미칠 수 있습니다",
+        "비트코인 ETF, 채굴 규제 등 제도권 편입 관련 이슈가 동시에 부각되고 있습니다",
+        "규제 당국의 비트코인 관련 정책 변화에 시장이 민감하게 반응할 수 있습니다",
+    ],
+    ("defi", "security"): [
+        "DeFi 프로토콜의 보안 취약점이 부각되고 있어, 스마트 컨트랙트 리스크에 주의해야 합니다",
+        "DeFi 해킹/보안 이슈가 발생하여 프로토콜 안전성에 대한 점검이 필요합니다",
+        "DeFi 성장과 함께 보안 위협도 증가하고 있어 리스크 관리가 중요합니다",
+    ],
+    ("macro", "price_market"): [
+        "금리/경제 지표 변화가 시장 가격에 직접적인 영향을 미치는 국면입니다",
+        "매크로 환경 변화가 위험자산 전반의 가격 움직임을 주도하고 있습니다",
+        "거시경제 이벤트와 시장 가격이 밀접하게 연동되고 있어 경제 지표 발표에 주목해야 합니다",
+    ],
+    ("macro", "bitcoin"): [
+        "거시경제 흐름이 비트코인 가격에 영향을 미치는 구간입니다",
+        "금리/인플레이션 관련 이슈가 비트코인 투자 심리에 파급되고 있습니다",
+        "연준/중앙은행 정책이 비트코인을 포함한 위험자산 전반에 영향을 주고 있습니다",
+    ],
+    ("ethereum", "defi"): [
+        "이더리움 생태계와 DeFi 프로토콜 관련 업데이트가 동시에 진행되고 있습니다",
+        "이더리움 네트워크 변화가 DeFi 활동에 영향을 미칠 수 있는 구간입니다",
+        "L2 확장과 DeFi 성장이 이더리움 생태계의 핵심 동력입니다",
+    ],
+    ("politics", "price_market"): [
+        "정치적 이벤트가 시장 가격에 직접 영향을 미치고 있어 정세 변화에 주의가 필요합니다",
+        "정치 리스크가 시장 변동성을 높이는 요인으로 작용하고 있습니다",
+        "정책 방향에 따른 시장 가격 변동 가능성에 대비해야 합니다",
+    ],
+    ("security", "exchange"): [
+        "거래소 보안 이슈가 발생하여 자산 안전성에 대한 점검이 필요합니다",
+        "보안 사고가 거래소 운영에 영향을 미칠 수 있어 출금/입금 상태를 확인해야 합니다",
+        "거래소 해킹/보안 관련 뉴스가 집중되어 자산 분산 보관의 중요성이 부각됩니다",
+    ],
+    ("ai_tech", "price_market"): [
+        "AI/기술 섹터의 뉴스가 관련 토큰 및 주식 가격에 영향을 미치고 있습니다",
+        "AI 관련 기술 발전이 시장에서 새로운 투자 테마로 주목받고 있습니다",
+        "AI/반도체 테마가 시장 가격과 연동되어 기술주 흐름에 주의가 필요합니다",
+    ],
+}
+
+# Risk level descriptions based on P0/P1 counts
+RISK_LEVELS = {
+    "critical": "시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.",
+    "elevated": "주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.",
+    "moderate": "일부 주의 이벤트가 있으나, 전반적으로 안정적인 상황입니다.",
+    "low": "특별한 리스크 이벤트 없이 안정적인 시장 흐름입니다.",
+}
+
+# Theme dominant narrative templates
+THEME_DOMINANT_NARRATIVES: Dict[str, List[str]] = {
+    "bitcoin": [
+        "비트코인 관련 이슈가 시장을 주도하고 있습니다",
+        "비트코인이 오늘 시장의 핵심 화제입니다",
+    ],
+    "price_market": [
+        "가격 변동과 시장 흐름에 대한 관심이 집중되고 있습니다",
+        "시장 가격 움직임이 투자자들의 이목을 끌고 있습니다",
+    ],
+    "regulation": [
+        "규제/정책 관련 뉴스가 시장의 불확실성을 높이고 있습니다",
+        "규제 동향이 시장 참여자들의 주요 관심사입니다",
+    ],
+    "macro": [
+        "거시경제 지표와 통화정책이 시장의 주요 변수로 작용하고 있습니다",
+        "금리/경제 관련 이슈가 투자 심리에 큰 영향을 미치고 있습니다",
+    ],
+    "security": [
+        "보안/해킹 이슈가 시장 신뢰에 영향을 주고 있습니다",
+        "보안 사건이 발생하여 시장 참여자들의 경각심이 높아지고 있습니다",
+    ],
+    "exchange": [
+        "거래소 관련 뉴스가 거래 환경에 영향을 미치고 있습니다",
+        "거래소 상장/운영 관련 변동이 주목받고 있습니다",
+    ],
+    "defi": [
+        "DeFi 프로토콜 활동과 TVL 변화가 주요 이슈입니다",
+        "탈중앙화 금융 관련 뉴스가 집중되고 있습니다",
+    ],
+    "ethereum": [
+        "이더리움 생태계 업데이트가 시장의 관심을 받고 있습니다",
+        "이더리움 관련 기술 발전과 생태계 변화가 진행 중입니다",
+    ],
+    "politics": [
+        "정치적 이슈가 시장에 불확실성을 더하고 있습니다",
+        "정치/정책 변화가 투자 환경에 영향을 미칠 수 있습니다",
+    ],
+    "ai_tech": [
+        "AI/기술 관련 뉴스가 시장의 새로운 동력으로 주목받고 있습니다",
+        "기술 섹터 변화가 투자 테마에 영향을 주고 있습니다",
+    ],
+    "nft_web3": [
+        "NFT/Web3 관련 활동이 주목받고 있습니다",
+        "디지털 자산 및 Web3 생태계 변화가 감지되고 있습니다",
+    ],
+}
+
 # Priority classification keywords
 PRIORITY_KEYWORDS: Dict[str, List[str]] = {
     "P0": [
@@ -600,10 +716,16 @@ class ThemeSummarizer:
         lines.append(f"\n*총 {len(self.items)}건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*\n")
         return "\n".join(lines)
 
-    def generate_themed_news_sections(self, max_articles: int = ARTICLES_PER_THEME, featured_count: int = 3) -> str:
-        """Generate theme-based news sections with description cards.
+    def generate_themed_news_sections(
+        self,
+        max_articles: int = ARTICLES_PER_THEME,
+        featured_count: int = 3,
+    ) -> str:
+        """Generate theme-based news sections with cross-theme deduplication.
 
         Top articles per theme include description summaries in card format.
+        Articles already featured (top N) in a previous theme are skipped
+        in subsequent themes to avoid repetitive #1 articles.
         Remaining articles are shown in a collapsible <details> block.
         Returns empty string if fewer than 5 items.
 
@@ -619,6 +741,10 @@ class ThemeSummarizer:
             return ""
 
         lines = ["## 테마별 주요 뉴스\n"]
+
+        # Cross-theme dedup: track titles that have been featured (top N)
+        # across themes so the same article doesn't appear as #1 everywhere.
+        cross_theme_featured: set = set()
 
         for name, key, emoji, count in top_themes:
             articles = self._theme_articles.get(key, [])
@@ -639,6 +765,15 @@ class ThemeSummarizer:
                 source = article.get("source", "")
                 description = article.get("description", "").strip()
 
+                # Skip articles already featured in previous themes
+                if shown < featured_count and title in cross_theme_featured:
+                    # Demote to remaining links instead
+                    if link:
+                        remaining_links.append(f'<a href="{link}">{title}</a>')
+                    else:
+                        remaining_links.append(title)
+                    continue
+
                 if shown < featured_count:
                     if link:
                         lines.append(f"**{shown + 1}. [{title}]({link})**")
@@ -652,12 +787,17 @@ class ThemeSummarizer:
                                 desc_text = desc_text[: idx + len(sep)].strip()
                                 break
                         else:
-                            desc_text = desc_text[:200].rsplit(" ", 1)[0] if len(desc_text) > 200 else desc_text
+                            desc_text = (
+                                desc_text[:200].rsplit(" ", 1)[0]
+                                if len(desc_text) > 200
+                                else desc_text
+                            )
                         lines.append(desc_text)
                     if source:
                         lines.append(f"{html_source_tag(source)}\n")
                     else:
                         lines.append("")
+                    cross_theme_featured.add(title)
                 else:
                     if link:
                         remaining_links.append(f'<a href="{link}">{title}</a>')
@@ -668,10 +808,19 @@ class ThemeSummarizer:
                 if shown >= max_articles:
                     break
 
-            overflow = len([a for a in articles if a.get("title") and a["title"] not in seen_titles])
+            overflow = len(
+                [
+                    a
+                    for a in articles
+                    if a.get("title") and a["title"] not in seen_titles
+                ]
+            )
             remaining_count = len(remaining_links) + overflow
             if remaining_links:
-                lines.append(f'<details><summary>그 외 {remaining_count}건 보기</summary><div class="details-content">')
+                lines.append(
+                    f'<details><summary>그 외 {remaining_count}건 보기</summary>'
+                    f'<div class="details-content">'
+                )
                 for link_html in remaining_links[:15]:
                     lines.append(link_html)
                 if remaining_count > 15:
@@ -789,23 +938,64 @@ class ThemeSummarizer:
         "주요뉴스",
     }
 
-    def _generate_single_theme_briefing(self, theme_key: str, articles: List[Dict[str, Any]]) -> str:
-        """Generate a 1-sentence briefing for a single theme from descriptions.
+    def _extract_title_keywords(
+        self, articles: List[Dict[str, Any]], max_keywords: int = 5
+    ) -> List[str]:
+        """Extract salient keywords from article titles, excluding stop words.
 
-        Extracts the most informative snippet from top article descriptions
-        rather than relying on generic keyword templates.
+        Returns up to *max_keywords* unique keywords ordered by frequency.
+        Prefers longer / more specific tokens.
+        """
+        word_counter: Counter = Counter()
+        for article in articles[:15]:
+            title = article.get("title", "")
+            # Extract tokens: English 3+ chars, Korean 2+ chars, numbers with $ or %
+            tokens = re.findall(r"\$[\d,.]+[KkMmBb]?%?|[\d,.]+%|[A-Za-z]{3,}|[가-힣]{2,}", title)
+            for token in tokens:
+                normalized = token.lower() if re.match(r"[A-Za-z]", token) else token
+                if normalized not in self._STOP_WORDS and len(normalized) >= 2:
+                    word_counter[token] += 1
+        # Sort by frequency desc, then length desc (prefer specific tokens)
+        sorted_words = sorted(
+            word_counter.items(),
+            key=lambda x: (x[1], len(x[0])),
+            reverse=True,
+        )
+        seen_lower: set = set()
+        result = []
+        for word, _count in sorted_words:
+            lower = word.lower()
+            if lower not in seen_lower:
+                seen_lower.add(lower)
+                result.append(word)
+            if len(result) >= max_keywords:
+                break
+        return result
+
+    def _generate_single_theme_briefing(self, theme_key: str, articles: List[Dict[str, Any]]) -> str:
+        """Generate a keyword-rich 1-line briefing for a single theme.
+
+        Strategy:
+        1. Extract top keywords from article titles within this theme.
+        2. Combine them into a comma-separated briefing line.
+        3. Falls back to the best description snippet if keyword extraction
+           yields too few results.
         """
         if not articles:
             return ""
 
-        # Try to find the best description snippet from top articles
+        # Strategy 1: Build keyword-based composite briefing
+        keywords = self._extract_title_keywords(articles, max_keywords=5)
+        if len(keywords) >= 3:
+            return ", ".join(keywords[:5])
+
+        # Strategy 2: Best description snippet from top articles
         best_desc = ""
         for article in articles[:5]:
             desc = article.get("description", "").strip()
             title = article.get("title", "")
             text = desc if desc and desc != title and len(desc) > 30 else ""
             if text:
-                # Take first sentence or up to 120 chars
                 sentences = re.split(r"(?<=[.!?。])\s+", text)
                 snippet = sentences[0] if sentences else text
                 if len(snippet) > 150:
@@ -816,16 +1006,15 @@ class ThemeSummarizer:
         if best_desc:
             return best_desc
 
-        # Fallback: use top article title as briefing
-        top_title = ""
+        # Strategy 3: Use top article title
         for article in articles[:3]:
             title = article.get("title", "").strip()
             if title and len(title) > 15:
-                top_title = title
-                break
+                return title
 
-        if top_title:
-            return top_title
+        # Strategy 4: return whatever keywords we have
+        if keywords:
+            return ", ".join(keywords)
 
         return ""
 
@@ -897,26 +1086,122 @@ class ThemeSummarizer:
 
         return "\n".join(lines)
 
+    def _assess_risk_level(self, priority_items: Dict[str, List[Dict[str, Any]]]) -> str:
+        """Assess market risk level based on P0/P1 issue counts."""
+        p0_count = len(priority_items.get("P0", []))
+        p1_count = len(priority_items.get("P1", []))
+        if p0_count >= 3:
+            return "critical"
+        if p0_count >= 1:
+            return "elevated"
+        if p1_count >= 5:
+            return "elevated"
+        if p1_count >= 2:
+            return "moderate"
+        return "low"
+
+    def _build_narrative_intro(
+        self,
+        top_themes: List[Tuple[str, str, str, int]],
+        priority_items: Dict[str, List[Dict[str, Any]]],
+        total: int,
+    ) -> str:
+        """Build a narrative intro paragraph based on actual news content.
+
+        Uses P0 issues, dominant themes, and cross-theme patterns to construct
+        a descriptive opening rather than generic count-based summaries.
+        """
+        p0_items = priority_items.get("P0", [])
+        p1_items = priority_items.get("P1", [])
+
+        # Case 1: P0 urgent issues exist — lead with them
+        if p0_items:
+            p0_title = p0_items[0].get("title", "긴급 이슈")
+            # Truncate long English titles
+            if len(p0_title) > 80:
+                p0_title = p0_title[:77] + "..."
+            intro = f"**긴급**: {p0_title}  \n"
+            if len(p0_items) > 1:
+                intro += f"외 P0 긴급 이슈 {len(p0_items) - 1}건이 추가 감지되었습니다. "
+            intro += f"총 {total}건의 뉴스 중 "
+            if p1_items:
+                intro += f"P1 주요 이슈도 {len(p1_items)}건 확인됩니다."
+            else:
+                intro += "긴급 이슈를 중심으로 시장 움직임을 분석합니다."
+            return intro
+
+        # Case 2: Strong dominant theme (>40% of articles)
+        if top_themes:
+            dominant = top_themes[0]
+            dominant_ratio = dominant[3] / total if total > 0 else 0
+            theme_key = dominant[1]
+
+            if dominant_ratio > 0.4 and theme_key in THEME_DOMINANT_NARRATIVES:
+                narratives = THEME_DOMINANT_NARRATIVES[theme_key]
+                # Use total as seed for deterministic but varying selection
+                idx = total % len(narratives)
+                intro = f"총 {total}건의 뉴스 중 **{dominant[0]}** 관련이 "
+                intro += f"{dominant[3]}건({dominant_ratio:.0%})으로 압도적입니다. "
+                intro += narratives[idx]
+                return intro
+
+        # Case 3: Two themes dominating together — detect cross-theme pattern
+        if len(top_themes) >= 2:
+            key_a = top_themes[0][1]
+            key_b = top_themes[1][1]
+            pair = (key_a, key_b)
+            pair_rev = (key_b, key_a)
+            cross_insights = CROSS_THEME_INSIGHTS.get(pair) or CROSS_THEME_INSIGHTS.get(pair_rev)
+            if cross_insights:
+                idx = total % len(cross_insights)
+                intro = (
+                    f"총 {total}건의 뉴스에서 "
+                    f"**{top_themes[0][0]}**({top_themes[0][3]}건)과 "
+                    f"**{top_themes[1][0]}**({top_themes[1][3]}건)이 "
+                    f"동시에 부각되고 있습니다. "
+                    f"{cross_insights[idx]}"
+                )
+                return intro
+
+        # Case 4: General multi-theme
+        if top_themes and len(top_themes) >= 2:
+            theme_names = [f"**{t[0]}**({t[3]}건)" for t in top_themes[:3]]
+            intro = (
+                f"총 {total}건의 뉴스에서 "
+                f"{', '.join(theme_names[:-1])}과 {theme_names[-1]} 순으로 "
+                f"많은 보도가 집중되고 있습니다."
+            )
+            return intro
+
+        # Fallback
+        return f"총 **{total}건**의 뉴스가 수집되었습니다."
+
     def generate_overall_summary_section(
         self,
         extra_data: Optional[Dict[str, Any]] = None,
         title: str = "전체 뉴스 요약",
     ) -> str:
+        """Generate a content-aware overall summary section.
+
+        Analyzes P0/P1 issues, dominant themes, and cross-theme patterns
+        to produce a narrative summary rather than generic count listings.
+        """
         if len(self.items) < 3:
             return ""
 
         extra = extra_data or {}
         total = len(self.items)
         top_themes = self.get_top_themes()
+        priority_items = self.classify_priority()
 
         lines = [f"## {title}\n"]
 
-        # Narrative intro based on theme count
-        if top_themes and len(top_themes) >= 2:
-            theme_count = min(len(top_themes), 3)
-            lines.append(f"오늘 수집된 **{total}건**의 뉴스에서 크게 **{theme_count}가지 흐름**이 감지됩니다.\n")
+        # Narrative intro based on actual content analysis
+        intro = self._build_narrative_intro(top_themes, priority_items, total)
+        lines.append(f"{intro}\n")
 
-            # Theme-based narrative paragraphs with snippets
+        # Theme breakdown with keyword-based briefings
+        if top_themes:
             for i, (name, key, emoji, count) in enumerate(top_themes[:3], 1):
                 articles = self._theme_articles.get(key, [])
                 snippet = self._generate_single_theme_briefing(key, articles)
@@ -925,43 +1210,47 @@ class ThemeSummarizer:
                 else:
                     lines.append(f"{i}. **{emoji} {name}** ({count}건)")
             lines.append("")
-        elif top_themes:
-            lines.append(f"총 **{total}건**의 뉴스가 수집되었으며, **{top_themes[0][0]}** 테마가 주도하고 있습니다.\n")
-        else:
-            lines.append(f"총 **{total}건**의 뉴스가 수집되었습니다.\n")
 
-        # Priority signal summary
-        priority_items = self.classify_priority()
-        p0_count = len(priority_items.get("P0", []))
-        p1_count = len(priority_items.get("P1", []))
+        # Risk assessment
+        risk_level = self._assess_risk_level(priority_items)
+        if risk_level != "low":
+            risk_desc = RISK_LEVELS.get(risk_level, "")
+            if risk_desc:
+                lines.append(f"**리스크 수준 [{risk_level.upper()}]**: {risk_desc}")
 
-        signal_parts = []
-        if p0_count:
-            signal_parts.append(f"P0 긴급 이슈 {p0_count}건")
-        if p1_count:
-            signal_parts.append(f"P1 주요 이슈 {p1_count}건")
+        # Priority signal with specific titles instead of just counts
+        p0_items = priority_items.get("P0", [])
+        p1_items = priority_items.get("P1", [])
+        if p0_items:
+            p0_titles = [item.get("title", "")[:60] for item in p0_items[:3]]
+            lines.append(f"**P0 긴급**: {' / '.join(t for t in p0_titles if t)}")
+        if p1_items and len(p1_items) <= 5:
+            p1_titles = [item.get("title", "")[:50] for item in p1_items[:3]]
+            lines.append(f"**P1 주요**: {' / '.join(t for t in p1_titles if t)}")
+        elif p1_items:
+            lines.append(f"**P1 주요**: {len(p1_items)}건 확인")
 
+        # Top keywords
         top_keywords = extra.get("top_keywords") or []
         if top_keywords:
-            kw_str = ", ".join(f"**{kw}**" for kw, _ in top_keywords[:3])
-            signal_parts.append(f"핵심 키워드 {kw_str}")
-
-        if signal_parts:
-            lines.append(f"**핵심 신호**: {', '.join(signal_parts)}이 포착되었습니다.")
+            kw_str = ", ".join(f"**{kw}**" for kw, _ in top_keywords[:5])
+            lines.append(f"**핵심 키워드**: {kw_str}")
 
         # Additional context
         region_counts = extra.get("region_counts")
         if region_counts:
-            regions_str = ", ".join(f"{name} {count}건" for name, count in region_counts.most_common(2))
+            regions_str = ", ".join(
+                f"{name} {count}건" for name, count in region_counts.most_common(3)
+            )
             if regions_str:
                 lines.append(f"**주요 지역**: {regions_str}")
 
         source_counter = extra.get("source_counter")
         if source_counter:
-            top_source = source_counter.most_common(1)
-            if top_source:
-                name, count = top_source[0]
-                lines.append(f"**주요 출처**: {name} ({count}건)")
+            top_sources = source_counter.most_common(3)
+            if top_sources:
+                src_str = ", ".join(f"{name}({count}건)" for name, count in top_sources)
+                lines.append(f"**주요 출처**: {src_str}")
 
         summary_points = extra.get("summary_points") or []
         for point in summary_points[:2]:
@@ -971,6 +1260,57 @@ class ThemeSummarizer:
         lines.append("")
         return "\n".join(lines)
 
+    def _build_executive_opener(
+        self,
+        category_type: str,
+        top_themes: List[Tuple[str, str, str, int]],
+        priority_items: Dict[str, List[Dict[str, Any]]],
+        total: int,
+        extra: Dict[str, Any],
+    ) -> str:
+        """Build a specific, content-driven opener for the executive summary.
+
+        Prioritizes P0 issues and price data over generic theme listings.
+        """
+        p0_items = priority_items.get("P0", [])
+
+        # If P0 issues exist, lead with the most urgent one
+        if p0_items:
+            p0_title = p0_items[0].get("title", "")
+            if len(p0_title) > 60:
+                # Try to extract key phrase
+                keywords = self._extract_title_keywords(p0_items[:1], max_keywords=3)
+                p0_title = ", ".join(keywords) if keywords else p0_title[:57] + "..."
+            prefix = {
+                "crypto": "암호화폐",
+                "stock": "주식 시장",
+                "regulatory": "규제",
+                "social": "소셜",
+                "security": "보안",
+                "market": "시장",
+            }.get(category_type, "시장")
+            return f"{prefix} 긴급: {p0_title} - {total}건 분석"
+
+        # Use theme keywords for more specific openers
+        if top_themes:
+            dominant_key = top_themes[0][1]
+            dominant_articles = self._theme_articles.get(dominant_key, [])
+            top_kws = self._extract_title_keywords(dominant_articles, max_keywords=3)
+            kw_str = ", ".join(top_kws[:3]) if top_kws else top_themes[0][0]
+
+            openers = {
+                "crypto": f"암호화폐: {kw_str} 중심 {total}건 분석",
+                "stock": f"주식 시장: {kw_str} 부각 {total}건 분석",
+                "regulatory": f"글로벌 규제: {kw_str} 관련 {total}건 수집",
+                "social": f"소셜 트렌드: {kw_str} 관련 {total}건 포착",
+                "security": f"보안: {kw_str} 관련 {total}건 보고",
+                "market": f"시장: {kw_str} 주도 {total}건 분석",
+            }
+            return openers.get(category_type, f"{kw_str} 관련 {total}건 수집")
+
+        themes_str = ", ".join(t[0] for t in top_themes[:2]) if top_themes else "다양한 이슈"
+        return f"{themes_str} 관련 {total}건 수집"
+
     def generate_executive_summary(
         self,
         category_type: str = "general",
@@ -978,7 +1318,8 @@ class ThemeSummarizer:
     ) -> str:
         """Generate an enhanced TL;DR executive summary with HTML components.
 
-        Uses stat grid, theme briefings, and styled P0 alerts.
+        Uses stat grid, keyword-based theme briefings, and styled P0 alerts.
+        Opener is content-driven: P0 issues or dominant keywords lead.
 
         Args:
             category_type: One of "crypto", "stock", "regulatory", "social",
@@ -994,29 +1335,21 @@ class ThemeSummarizer:
         top_themes = self.get_top_themes()
         extra = extra_data or {}
         total = len(self.items)
+        priority_items = self.classify_priority()
 
-        theme_names = [t[0] for t in top_themes[:3]] if top_themes else []
-        themes_str = ", ".join(theme_names[:2]) if theme_names else "다양한 이슈"
-
-        openers = {
-            "crypto": f"암호화폐 시장 {themes_str} 중심 {total}건 분석",
-            "stock": f"주식 시장 {themes_str} 부각 {total}건 분석",
-            "regulatory": f"글로벌 규제 {themes_str} 관련 {total}건 수집",
-            "social": f"소셜 미디어 {themes_str} 관련 {total}건 포착",
-            "security": f"보안 분야 {total}건 보고",
-            "market": f"시장 전반 {themes_str} 주도",
-        }
-        opener = openers.get(
-            category_type,
-            f"{themes_str} 관련 {total}건 수집",
+        opener = self._build_executive_opener(
+            category_type, top_themes, priority_items, total, extra
         )
 
         lines = ["## 한눈에 보기\n"]
 
-        # Stat grid
+        # Stat grid — risk level stat added
+        risk_level = self._assess_risk_level(priority_items)
         stat_items = []
         stat_items.append(
-            f'<div class="stat-item"><div class="stat-value">{total}</div><div class="stat-label">수집 건수</div></div>'
+            f'<div class="stat-item">'
+            f'<div class="stat-value">{total}</div>'
+            f'<div class="stat-label">수집 건수</div></div>'
         )
         if top_themes:
             t = top_themes[0]
@@ -1025,6 +1358,19 @@ class ThemeSummarizer:
                 f'<div class="stat-value">{t[2]} {t[3]}</div>'
                 f'<div class="stat-label">{t[0]}</div></div>'
             )
+        # Risk level indicator
+        risk_labels = {
+            "critical": "위험",
+            "elevated": "주의",
+            "moderate": "보통",
+            "low": "안정",
+        }
+        risk_emoji = {"critical": "🔴", "elevated": "🟡", "moderate": "🟢", "low": "🟢"}
+        stat_items.append(
+            f'<div class="stat-item">'
+            f'<div class="stat-value">{risk_emoji[risk_level]}</div>'
+            f'<div class="stat-label">리스크 {risk_labels[risk_level]}</div></div>'
+        )
         # Category-specific stats
         if category_type == "stock" and extra.get("kr_market"):
             kr = extra["kr_market"]
@@ -1054,61 +1400,168 @@ class ThemeSummarizer:
 
         lines.append(f'<div class="stat-grid">{"".join(stat_items)}</div>')
 
-        # Theme briefings as info callout
+        # Theme briefings — use keyword-extracted briefings
         briefing_items = []
-        _sponsored_re = re.compile(r"\s*[Ss]ponsored\s+by\s+@?\S+.*$", flags=re.MULTILINE)
+        _sponsored_re = re.compile(
+            r"\s*[Ss]ponsored\s+by\s+@?\S+.*$", flags=re.MULTILINE
+        )
         for name, key, emoji, count in top_themes[:4]:
             articles = self._theme_articles.get(key, [])
             if not articles:
                 continue
-            top_desc = ""
-            # Try description first — use full sentence, no truncation
-            for art in articles[:3]:
-                desc = art.get("description", "").strip()
-                desc = _sponsored_re.sub("", desc).strip()
-                title = art.get("title", "")
-                if desc and desc != title and len(desc) > 20:
-                    # Extract first sentence for clean summary
-                    for sep in ["。", ". ", "다. ", "요. "]:
-                        idx = desc.find(sep)
-                        if 20 < idx < 200:
-                            top_desc = desc[: idx + len(sep)].strip()
-                            break
-                    if not top_desc:
-                        top_desc = desc[:150].rsplit(" ", 1)[0] if len(desc) > 150 else desc
-                    break
-            # Fallback: use the top article title (full, no truncation)
-            if not top_desc:
-                for art in articles[:2]:
-                    title = art.get("title", "").strip()
-                    title = _sponsored_re.sub("", title).strip()
-                    if title and len(title) > 10:
-                        top_desc = title
-                        break
-            if top_desc:
-                briefing_items.append(f"<li>{emoji} <strong>{name}</strong> ({count}건): {top_desc}</li>")
+            # Use improved keyword-based briefing
+            briefing = self._generate_single_theme_briefing(key, articles)
+            if briefing:
+                # Clean sponsored text from briefing
+                briefing = _sponsored_re.sub("", briefing).strip()
+            if briefing:
+                briefing_items.append(
+                    f"<li>{emoji} <strong>{name}</strong> ({count}건): {briefing}</li>"
+                )
             else:
-                briefing_items.append(f"<li>{emoji} <strong>{name}</strong>: {count}건 수집</li>")
+                briefing_items.append(
+                    f"<li>{emoji} <strong>{name}</strong>: {count}건 수집</li>"
+                )
 
         if briefing_items:
             lines.append(
-                f'<div class="alert-box alert-info"><strong>{opener}</strong><ul>{"".join(briefing_items)}</ul></div>'
+                f'<div class="alert-box alert-info">'
+                f"<strong>{opener}</strong>"
+                f'<ul>{"".join(briefing_items)}</ul></div>'
             )
 
         # P0 urgent alerts as red callout
-        priority_items = self.classify_priority()
         if priority_items.get("P0"):
-            p0_items = []
+            p0_html_items = []
             for item in priority_items["P0"][:3]:
-                title = item.get("title", "")
+                p0_title = item.get("title", "")
                 link = item.get("link", "")
                 if link:
-                    p0_items.append(f'<li><a href="{link}">{title}</a></li>')
+                    p0_html_items.append(f'<li><a href="{link}">{p0_title}</a></li>')
                 else:
-                    p0_items.append(f"<li>{title}</li>")
-            if p0_items:
+                    p0_html_items.append(f"<li>{p0_title}</li>")
+            if p0_html_items:
                 lines.append(
-                    f'<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul>{"".join(p0_items)}</ul></div>'
+                    f'<div class="alert-box alert-urgent">'
+                    f"<strong>긴급 알림</strong>"
+                    f'<ul>{"".join(p0_html_items)}</ul></div>'
                 )
 
         return "\n".join(lines)
+
+    def generate_market_insight(self) -> str:
+        """Generate cross-theme market insight with monitoring points.
+
+        Analyzes theme co-occurrence patterns and priority issues to produce
+        actionable investor takeaways. Does not rely on LLM -- uses rule-based
+        pattern matching against CROSS_THEME_INSIGHTS and priority data.
+
+        Returns:
+            Markdown section with market insight, or empty string if
+            insufficient data.
+        """
+        if len(self.items) < 5:
+            return ""
+
+        top_themes = self.get_top_themes()
+        if len(top_themes) < 2:
+            return ""
+
+        priority_items = self.classify_priority()
+        total = len(self.items)
+
+        lines = ["## 투자자 인사이트\n"]
+
+        # 1. Cross-theme pattern detection
+        insight_found = False
+        seen_pairs: set = set()
+        theme_keys = [t[1] for t in top_themes]
+
+        for i, key_a in enumerate(theme_keys):
+            for key_b in theme_keys[i + 1 :]:
+                pair = (key_a, key_b)
+                pair_rev = (key_b, key_a)
+                if pair in seen_pairs or pair_rev in seen_pairs:
+                    continue
+                seen_pairs.add(pair)
+
+                insights = CROSS_THEME_INSIGHTS.get(
+                    pair
+                ) or CROSS_THEME_INSIGHTS.get(pair_rev)
+                if insights:
+                    idx = total % len(insights)
+                    name_a = next(
+                        (t[0] for t in top_themes if t[1] == key_a), key_a
+                    )
+                    name_b = next(
+                        (t[0] for t in top_themes if t[1] == key_b), key_b
+                    )
+                    lines.append(
+                        f"- **{name_a} + {name_b}**: {insights[idx]}"
+                    )
+                    insight_found = True
+
+        # 2. Risk assessment
+        risk_level = self._assess_risk_level(priority_items)
+        risk_desc = RISK_LEVELS.get(risk_level, "")
+        if risk_desc:
+            lines.append(f"\n**리스크 평가**: {risk_desc}")
+
+        # 3. Monitoring points based on dominant themes
+        monitor_points: List[str] = []
+        p0_items = priority_items.get("P0", [])
+        p1_items = priority_items.get("P1", [])
+
+        if p0_items:
+            p0_kws = self._extract_title_keywords(p0_items, max_keywords=3)
+            if p0_kws:
+                monitor_points.append(
+                    f"P0 긴급 이슈 ({', '.join(p0_kws)}) 후속 보도"
+                )
+
+        if p1_items:
+            p1_kws = self._extract_title_keywords(p1_items, max_keywords=3)
+            if p1_kws:
+                monitor_points.append(
+                    f"P1 주요 이슈 ({', '.join(p1_kws)}) 전개 방향"
+                )
+
+        # Theme-specific monitoring suggestions
+        theme_monitors: Dict[str, str] = {
+            "regulation": "규제 당국 후속 조치 및 시행 일정",
+            "price_market": "주요 지지/저항선 돌파 여부 및 거래량 변화",
+            "bitcoin": "비트코인 온체인 지표 (해시레이트, 고래 움직임)",
+            "macro": "다음 경제 지표 발표 일정 (CPI, FOMC, 고용)",
+            "security": "해킹 피해 규모 확정 및 자금 추적 현황",
+            "exchange": "거래소 상장/상폐 확정 공지 및 거래량 변화",
+            "defi": "TVL 변동 추이 및 프로토콜 업데이트 일정",
+            "ethereum": "가스비 추이 및 L2 활동량 변화",
+            "politics": "법안 진행 상황 및 투표 일정",
+            "ai_tech": "AI 관련 토큰/주식 가격 및 거래량 추이",
+        }
+        for _name, key, _emoji, _count in top_themes[:3]:
+            if key in theme_monitors:
+                monitor_points.append(theme_monitors[key])
+
+        if monitor_points:
+            lines.append("\n**모니터링 포인트**:")
+            for point in monitor_points[:5]:
+                lines.append(f"- {point}")
+
+        # 4. Theme concentration analysis
+        if top_themes:
+            dominant_ratio = top_themes[0][3] / total if total > 0 else 0
+            if dominant_ratio > 0.5:
+                lines.append(
+                    f"\n> {top_themes[0][0]} 테마가 전체의 "
+                    f"{dominant_ratio:.0%}를 차지하며 시장의 관심이 "
+                    f"집중되어 있습니다. 다른 테마의 중요 뉴스가 "
+                    f"묻힐 수 있으니 주의가 필요합니다."
+                )
+
+        if not insight_found and not monitor_points:
+            return ""
+
+        lines.append("")
+        return "\n".join(lines)
+

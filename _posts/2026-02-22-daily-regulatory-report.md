@@ -7,7 +7,7 @@ tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-regulatory-2026-02-22.png"
-description: 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 23건의 규제 관련 뉴스가 수집되었습니다.
+description: "전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 23건의 규제 관련 뉴스가 수집되었습니다."
 ---
 
 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 23건의 규제 관련 뉴스가 수집되었습니다.

@@ -74,7 +74,6 @@ Tenet Healthcare (NYSE: THC) CFO Sun Park converts 3,800 RSUs into stock Stock T
 <span class="source-tag">SEC Insider Trading</span>
 
 
-
 ## 한국 정치인 재산/거래
 
 **1. [이재명 ‘정책 멘토’ 이한주, 75억원 신고···2월 고위공직자 재산 공개 - 경향신문](https://news.google.com/rss/articles/CBMiWkFVX3lxTE0zZDAzRjRXVkpURWZmYmkwVUlkLVM4RWtNZWZBOUNrVzFmbmgyYVEyaGI0ajZlOFlXQmFNSGVCNGtCODlTQTFydEE3cGVIZURMdDJrN3FiR0tRUdIBX0FVX3lxTE5ObE54cldKTk5NbHNWNW5nQWxEZFpKOWJ4TGZZajNyOGFCVERXb05OT0ZsM3l1dERjeXRabURoMVNCV0taWFU5dlpvdFQ4bTRMZjNiYkZpb1B3dDZLZTRv?oc=5)**
@@ -92,7 +91,6 @@ Tenet Healthcare (NYSE: THC) CFO Sun Park converts 3,800 RSUs into stock Stock T
 **4. [신분 변동 공직자 120명 재산 등록⋯1위는 이한주 경인사회 이사장 - 이투데이](https://news.google.com/rss/articles/CBMiVEFVX3lxTFBMdGsteXZJMjloVVExSU80YWZhcEVra3FSbHBKaHBEbUJoSm9CbGZVSlpKemJhSHRqc2xZUFQyZlRVX05Sd3N3RVA1NVBXX1haZkpLVA?oc=5)**
 신분 변동 공직자 120명 재산 등록⋯1위는 이한주 경인사회 이사장 이투데이
 <span class="source-tag">공직자 재산신고</span>
-
 
 
 ## 중앙은행 정책 동향

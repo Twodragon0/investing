@@ -7,7 +7,7 @@ tags: [worldmonitor, geopolitics, macro, daily-digest]
 source: "worldmonitor"
 source_url: "https://worldmonitor.app"
 lang: "ko"
-description: 2026-02-17 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다.
+description: "2026-02-17 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다."
 image: "/assets/images/generated/news-briefing-worldmonitor-2026-02-17.png"
 ---
 

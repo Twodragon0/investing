@@ -14,7 +14,6 @@ image: "/assets/images/generated/news-briefing-insider-2026-02-07.png"
 
 ## 전체 뉴스 요약
 
-- 스마트 머니 추적: 기업 내부자들의 최근 거래 활동을 통해 시장 신호를 파악합니다.
 - - 전체 거래: 8건 - 매수 거래: 6건 - 매도 거래: 2건
 
 

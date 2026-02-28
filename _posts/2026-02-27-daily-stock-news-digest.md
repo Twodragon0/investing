@@ -22,7 +22,6 @@ description: "2026-02-27 주식 시장에서 162건의 뉴스를 분석했습니
 
 - 한국 증시는 KOSPI 6,265.29 (-0.14%) 하락하며, 투자 심리가 위축되는 모습입니다.
 - KOSDAQ은 1,195.47 (+0.67%)를 기록했습니다.
-- 2026-02-27 주식 시장에서 162건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,265.29(-0.14%), KOSDAQ 1,195.47(+0.67%), USD/KRW 1,433.46(+0.01%).
 - *Stock Market News, Feb. 26, 2026: Dow finishes flat; S&P 500 and Nasdaq fall as a tech selloff hits the market following Nvidia earnings; oil prices waver d...
 
 ## 테마별 주요 뉴스
@@ -126,7 +125,6 @@ Stock Market Today, Feb.
 <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE1odkhwMUI1aExCNWtmSW9tMDdjcXJWX1hvRDdzUjhVMUFRRGZCN1B3bHF6Zkg0MGNZbUdZOW55YVQ3ZXlNMlBITHV3dTQtbXZqbFVndENRejAxYlhLMW15Wkp6aktlRl96NUlRekYyN3BFLVU1UkM4SA?oc=5">US Stock Market Today: S&P 500 Futures Dip As Rate Sensitivity Tempers Optimism - Yahoo Finance</a>
 <a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxNN29OZ2ZkaUZEMFJjTTRWUnZoYnBYYjI4ZU92QUlRbGdfRFZBdl9EM2p0SXZ5UElLSER3elJyLURMUlRyZnJwQmhjSUtxMUo3VEJKcFdJSXY2THJwTTJ2NlZOVjA5TkFhQWZJNU5ud1A5U29QWUQ3LUtmSU9rY3VsVGhScVF4ZjduMUZhOTZQMk13bkItR21rN3RJXzdzUVR5SHhnQkQ1aWlScnc4TkhMcWc2dUp2ZnpqSkNJT29LTmdiNFJiRGV3bjZJUlB2bjFO?oc=5">Stock Market Today, Feb. 25: Nasdaq Gains 1.3% As Nvidia Reignites AI Optimism - The Motley Fool</a>
 </div></details>
-
 
 
 ---

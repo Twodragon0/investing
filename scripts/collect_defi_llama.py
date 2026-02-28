@@ -802,39 +802,150 @@ def build_post_content(
 
     insight_lines = []
 
-    # Top protocol highlight
+    # Protocol concentration analysis
     if protocols:
         top_p = protocols[0]
         top_p_name = top_p.get("name") or "Unknown"
         top_p_tvl = top_p.get("tvl") or 0
         share_of_total = (top_p_tvl / total_protocol_tvl * 100) if total_protocol_tvl > 0 else 0
-        ro = _korean_ro(top_p_name)
-        insight_lines.append(
-            f"현재 DeFi 생태계에서 가장 큰 프로토콜은 **{top_p_name}**{ro}, "
-            f"TVL **{_format_tvl(top_p_tvl)}** ({share_of_total:.1f}%)를 차지합니다."
-        )
 
-    # Top chain highlight
+        # Top 3 concentration
+        top3_tvl = sum((p.get("tvl") or 0) for p in protocols[:3])
+        top3_share = (top3_tvl / total_protocol_tvl * 100) if total_protocol_tvl > 0 else 0
+        top3_names = ", ".join(p.get("name", "?") for p in protocols[:3])
+
+        ro = _korean_ro(top_p_name)
+        if share_of_total > 30:
+            concentration_note = (
+                f"**{top_p_name}**{ro} TVL **{_format_tvl(top_p_tvl)}** "
+                f"({share_of_total:.1f}%)로 시장을 압도적으로 지배하고 있습니다. "
+                f"단일 프로토콜 의존도가 높아, 해당 프로토콜의 보안 이슈나 "
+                f"거버넌스 변경이 생태계 전체에 영향을 줄 수 있습니다."
+            )
+        elif share_of_total > 15:
+            concentration_note = (
+                f"**{top_p_name}**{ro} TVL **{_format_tvl(top_p_tvl)}** "
+                f"({share_of_total:.1f}%)로 선두를 유지하고 있으며, "
+                f"상위 3개({top3_names})가 전체의 {top3_share:.0f}%를 차지합니다."
+            )
+        else:
+            concentration_note = (
+                f"**{top_p_name}**{ro} TVL **{_format_tvl(top_p_tvl)}** "
+                f"({share_of_total:.1f}%)로 1위이나, 생태계가 상당히 분산되어 있습니다. "
+                f"프로토콜 간 경쟁이 활발한 건강한 구조입니다."
+            )
+        insight_lines.append(concentration_note)
+
+    # Chain ecosystem analysis
     if chains:
         top_c = chains[0]
         top_c_name = top_c.get("name") or "Unknown"
         top_c_tvl = top_c.get("tvl") or 0
         chain_share = (top_c_tvl / total_chain_tvl * 100) if total_chain_tvl > 0 else 0
         ro = _korean_ro(top_c_name)
-        insight_lines.append(
-            f"\n가장 많은 TVL을 보유한 체인은 **{top_c_name}**{ro}, "
-            f"**{_format_tvl(top_c_tvl)}** ({chain_share:.1f}%) 수준입니다."
-        )
 
-    # Category concentration insight
-    if protocols:
-        top_cat_name, top_cat_tvl = sorted_cats[0] if sorted_cats else ("", 0)
+        # Chain distribution analysis
+        if len(chains) >= 3:
+            second_c = chains[1]
+            third_c = chains[2]
+            second_share = ((second_c.get("tvl") or 0) / total_chain_tvl * 100) if total_chain_tvl > 0 else 0
+            gap = chain_share - second_share
+
+            if gap > 30:
+                chain_note = (
+                    f"**{top_c_name}**{ro} TVL **{_format_tvl(top_c_tvl)}** ({chain_share:.1f}%)로 "
+                    f"2위 {second_c.get('name', '?')}({second_share:.1f}%) 대비 {gap:.0f}%p 격차를 보이며 "
+                    f"체인 생태계를 독점적으로 주도합니다."
+                )
+            elif gap > 10:
+                chain_note = (
+                    f"**{top_c_name}**{ro} TVL **{_format_tvl(top_c_tvl)}** ({chain_share:.1f}%)로 선두이나, "
+                    f"{second_c.get('name', '?')}({second_share:.1f}%)가 추격 중입니다. "
+                    f"멀티체인 자금 이동 추세를 주시하세요."
+                )
+            else:
+                chain_note = (
+                    f"**{top_c_name}** ({chain_share:.1f}%), "
+                    f"**{second_c.get('name', '?')}** ({second_share:.1f}%), "
+                    f"**{third_c.get('name', '?')}**가 치열한 경쟁 중입니다. "
+                    f"체인 간 자금 유동성이 활발하며, 브릿지 활동량 변화에 주목하세요."
+                )
+        else:
+            chain_note = (
+                f"**{top_c_name}**{ro} TVL **{_format_tvl(top_c_tvl)}** ({chain_share:.1f}%)를 보유합니다."
+            )
+        insight_lines.append(f"\n{chain_note}")
+
+    # Category-based fund flow patterns
+    if protocols and sorted_cats:
+        top_cat_name, top_cat_tvl = sorted_cats[0]
         if top_cat_name and total_protocol_tvl > 0:
             cat_pct = top_cat_tvl / total_protocol_tvl * 100
-            insight_lines.append(
-                f"\n카테고리별로는 **{top_cat_name}** 섹터가 TVL {_format_tvl(top_cat_tvl)} "
-                f"({cat_pct:.1f}%)로 가장 큰 비중을 차지하고 있습니다."
+
+            _CAT_INSIGHTS = {
+                "Liquid Staking": (
+                    f"리퀴드 스테이킹이 TVL의 {cat_pct:.0f}%를 차지하며, "
+                    f"스테이킹 수익률 추구와 DeFi 조합 전략(LSTfi)이 활발합니다."
+                ),
+                "DEXes": (
+                    f"DEX가 TVL의 {cat_pct:.0f}%를 차지하며, "
+                    f"탈중앙 거래소의 유동성 깊이가 시장 효율성을 결정하는 핵심 지표입니다."
+                ),
+                "Lending": (
+                    f"렌딩 프로토콜이 TVL의 {cat_pct:.0f}%를 차지하며, "
+                    f"대출 수요 증가는 레버리지 포지션 확대를 시사합니다. "
+                    f"청산 리스크에 유의하세요."
+                ),
+                "Bridge": (
+                    f"브릿지가 TVL의 {cat_pct:.0f}%를 차지하며, "
+                    f"크로스체인 자금 이동이 활발합니다. 브릿지 보안 사고 리스크에 주의하세요."
+                ),
+                "CDP": (
+                    f"CDP(담보부채 포지션)가 TVL의 {cat_pct:.0f}%를 차지하며, "
+                    f"탈중앙 스테이블코인 수요가 반영됩니다."
+                ),
+                "Restaking": (
+                    f"리스테이킹이 TVL의 {cat_pct:.0f}%를 차지하며, "
+                    f"보안 공유 모델을 통한 수익 극대화 전략이 주목받고 있습니다."
+                ),
+            }
+
+            cat_insight = _CAT_INSIGHTS.get(
+                top_cat_name,
+                f"**{top_cat_name}** 카테고리가 TVL {_format_tvl(top_cat_tvl)} "
+                f"({cat_pct:.1f}%)로 가장 큰 비중을 차지합니다.",
             )
+            insight_lines.append(f"\n**카테고리 분석**: {cat_insight}")
+
+        # Secondary category comparison
+        if len(sorted_cats) >= 2:
+            cat2_name, cat2_tvl = sorted_cats[1]
+            cat2_pct = (cat2_tvl / total_protocol_tvl * 100) if total_protocol_tvl > 0 else 0
+            gap_pct = cat_pct - cat2_pct
+            if gap_pct < 5:
+                insight_lines.append(
+                    f"2위 카테고리 **{cat2_name}**({cat2_pct:.1f}%)와 격차가 {gap_pct:.1f}%p로 좁아, "
+                    f"자금 흐름 역전 가능성이 있습니다."
+                )
+
+    # TVL scale context
+    if total_protocol_tvl > 0:
+        if total_protocol_tvl > 100_000_000_000:
+            scale_note = (
+                f"전체 프로토콜 TVL **{_format_tvl(total_protocol_tvl)}**는 "
+                f"전통 금융 기관과 비교할 수 있는 규모로, DeFi의 제도적 성숙도를 보여줍니다."
+            )
+        elif total_protocol_tvl > 50_000_000_000:
+            scale_note = (
+                f"전체 프로토콜 TVL **{_format_tvl(total_protocol_tvl)}**는 "
+                f"중견 금융사 수준으로, 기관 자금 유입이 활발한 상태입니다."
+            )
+        else:
+            scale_note = (
+                f"전체 프로토콜 TVL **{_format_tvl(total_protocol_tvl)}**로, "
+                f"시장 규모 확장 여력이 상당합니다."
+            )
+        insight_lines.append(f"\n{scale_note}")
 
     insight_lines.append("")
     insight_lines.append(

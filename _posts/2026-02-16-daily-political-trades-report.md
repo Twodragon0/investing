@@ -6,7 +6,7 @@ categories: [political-trades]
 tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-trading]
 source: "consolidated"
 lang: "ko"
-description: 2026-02-16 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. 트럼프 정책 1건, 중앙은행 3건, 총 4건이 수집되었습니다.
+description: "2026-02-16 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. 트럼프 정책 1건, 중앙은행 3건, 총 4건이 수집되었습니다."
 image: "/assets/images/generated/news-briefing-political-2026-02-16.png"
 ---
 
@@ -23,12 +23,10 @@ image: "/assets/images/generated/news-briefing-political-2026-02-16.png"
 ---
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **4건** 수집
 - 트럼프 관련 1건의 정책 뉴스가 수집되었습니다. 행정명령 및 관세 정책은 글로벌 시장에 직접적인 영향을 미치고 있습니다.
-- 2026-02-16 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. 트럼프 정책 1건, 중앙은행 3건, 총 4건이 수집되었습니다.
 - 1. U.S., India announce historic trade deal, achieve reciprocal trade - Indo-Pacific Defense FORUM U.S., India announce historic trade deal, achieve reciproc...
 
 ## 트럼프 행정명령/정책

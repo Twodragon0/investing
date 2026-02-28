@@ -6,7 +6,7 @@ categories: [market-analysis]
 tags: [weekly-digest, summary, market-analysis]
 source: "auto-generated"
 lang: "ko"
-description: 이번 주 (02월 01일 ~ 02월 08일) 투자 관련 뉴스와 시장 분석을 종합 정리합니다.
+description: "이번 주 (02월 01일 ~ 02월 08일) 투자 관련 뉴스와 시장 분석을 종합 정리합니다."
 image: "/assets/images/generated/news-summary-weekly-2026-02-08.png"
 ---
 
@@ -14,7 +14,6 @@ image: "/assets/images/generated/news-summary-weekly-2026-02-08.png"
 
 ## 전체 뉴스 요약
 
-- 이번 주 (02월 01일 ~ 02월 08일) 투자 관련 뉴스와 시장 분석을 종합 정리합니다.
 - - 총 포스트 수: 11건 - 카테고리: 4개 - 기간: 02월 01일 ~ 02월 08일
 
 
