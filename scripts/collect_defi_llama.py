@@ -871,9 +871,7 @@ def build_post_content(
                     f"체인 간 자금 유동성이 활발하며, 브릿지 활동량 변화에 주목하세요."
                 )
         else:
-            chain_note = (
-                f"**{top_c_name}**{ro} TVL **{_format_tvl(top_c_tvl)}** ({chain_share:.1f}%)를 보유합니다."
-            )
+            chain_note = f"**{top_c_name}**{ro} TVL **{_format_tvl(top_c_tvl)}** ({chain_share:.1f}%)를 보유합니다."
         insight_lines.append(f"\n{chain_note}")
 
     # Category-based fund flow patterns
@@ -901,8 +899,7 @@ def build_post_content(
                     f"크로스체인 자금 이동이 활발합니다. 브릿지 보안 사고 리스크에 주의하세요."
                 ),
                 "CDP": (
-                    f"CDP(담보부채 포지션)가 TVL의 {cat_pct:.0f}%를 차지하며, "
-                    f"탈중앙 스테이블코인 수요가 반영됩니다."
+                    f"CDP(담보부채 포지션)가 TVL의 {cat_pct:.0f}%를 차지하며, 탈중앙 스테이블코인 수요가 반영됩니다."
                 ),
                 "Restaking": (
                     f"리스테이킹이 TVL의 {cat_pct:.0f}%를 차지하며, "
@@ -941,10 +938,7 @@ def build_post_content(
                 f"중견 금융사 수준으로, 기관 자금 유입이 활발한 상태입니다."
             )
         else:
-            scale_note = (
-                f"전체 프로토콜 TVL **{_format_tvl(total_protocol_tvl)}**로, "
-                f"시장 규모 확장 여력이 상당합니다."
-            )
+            scale_note = f"전체 프로토콜 TVL **{_format_tvl(total_protocol_tvl)}**로, 시장 규모 확장 여력이 상당합니다."
         insight_lines.append(f"\n{scale_note}")
 
     insight_lines.append("")

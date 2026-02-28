@@ -358,13 +358,9 @@ def generate_market_insight(global_data: Dict, top_coins: List[Dict], fear_greed
                 "단기 투기적 거래가 활발합니다. 변동성 확대에 대비하세요."
             )
         elif vol_ratio > 8:
-            vol_mcap_note = (
-                f"거래량/시가총액 비율 **{vol_ratio:.1f}%**로 활발한 거래가 이루어지고 있습니다."
-            )
+            vol_mcap_note = f"거래량/시가총액 비율 **{vol_ratio:.1f}%**로 활발한 거래가 이루어지고 있습니다."
         elif vol_ratio > 3:
-            vol_mcap_note = (
-                f"거래량/시가총액 비율 **{vol_ratio:.1f}%**로 정상 범위 내 거래량입니다."
-            )
+            vol_mcap_note = f"거래량/시가총액 비율 **{vol_ratio:.1f}%**로 정상 범위 내 거래량입니다."
         else:
             vol_mcap_note = (
                 f"거래량/시가총액 비율 **{vol_ratio:.1f}%**로 낮아, "
@@ -404,6 +400,7 @@ def generate_market_insight(global_data: Dict, top_coins: List[Dict], fear_greed
     # Top coin performance analysis
     coin_insight = ""
     if top_coins:
+
         def _get_change(c: Dict) -> float:
             return (
                 c.get("price_change_percentage_24h")
@@ -424,10 +421,7 @@ def generate_market_insight(global_data: Dict, top_coins: List[Dict], fear_greed
                 "전반적 매도 압력이 나타나고 있습니다."
             )
         else:
-            coin_insight = (
-                f"Top 20 코인 중 {len(gainers)}개 상승, {len(losers)}개 하락으로 "
-                "종목별 차별화가 뚜렷합니다."
-            )
+            coin_insight = f"Top 20 코인 중 {len(gainers)}개 상승, {len(losers)}개 하락으로 종목별 차별화가 뚜렷합니다."
 
         # Best/worst performer highlight
         sorted_by_ch = sorted(top_coins[:20], key=_get_change, reverse=True)
@@ -449,30 +443,60 @@ def generate_market_insight(global_data: Dict, top_coins: List[Dict], fear_greed
     cross_signal = ""
     _CROSS_SIGNAL_TEMPLATES = [
         # (mcap_up, btc_dom_high, fg_greed) -> interpretation
-        (True, True, True, (
-            "시가총액 상승 + BTC 도미넌스 강세 + 탐욕 구간이 겹치는 '비트코인 독주 과열' 패턴입니다. "
-            "알트코인 진입은 비트코인 조정 이후를 고려하는 것이 유리할 수 있습니다."
-        )),
-        (True, False, True, (
-            "시가총액 상승 + 알트코인 강세 + 탐욕 구간이 겹치는 '알트 시즌 과열' 패턴입니다. "
-            "과거 사이클에서 이 조합은 단기 고점 형성 가능성이 높았습니다."
-        )),
-        (False, True, False, (
-            "시가총액 하락에도 BTC 도미넌스가 상승하고 있어, 알트코인에서 비트코인으로의 "
-            "'안전 자산 회귀' 흐름입니다. 공포 구간과 겹쳐 바닥 탐색 중일 수 있습니다."
-        )),
-        (False, False, False, (
-            "시가총액 하락 + 도미넌스 하락 + 공포 구간이 겹치는 '전면적 이탈' 패턴입니다. "
-            "현금 비중 확대와 분할 매수 전략이 가장 유효한 구간입니다."
-        )),
-        (True, True, False, (
-            "시가총액이 상승하지만 공포 심리가 지속되어, 아직 대중이 참여하지 않은 "
-            "'초기 회복' 구간일 수 있습니다. 비트코인 중심의 신중한 접근이 유리합니다."
-        )),
-        (True, False, False, (
-            "시가총액 상승과 알트코인 강세에도 공포가 남아 있어, "
-            "'회의적 상승(Wall of Worry)' 구간입니다. 추세 확인 후 단계적 진입이 적절합니다."
-        )),
+        (
+            True,
+            True,
+            True,
+            (
+                "시가총액 상승 + BTC 도미넌스 강세 + 탐욕 구간이 겹치는 '비트코인 독주 과열' 패턴입니다. "
+                "알트코인 진입은 비트코인 조정 이후를 고려하는 것이 유리할 수 있습니다."
+            ),
+        ),
+        (
+            True,
+            False,
+            True,
+            (
+                "시가총액 상승 + 알트코인 강세 + 탐욕 구간이 겹치는 '알트 시즌 과열' 패턴입니다. "
+                "과거 사이클에서 이 조합은 단기 고점 형성 가능성이 높았습니다."
+            ),
+        ),
+        (
+            False,
+            True,
+            False,
+            (
+                "시가총액 하락에도 BTC 도미넌스가 상승하고 있어, 알트코인에서 비트코인으로의 "
+                "'안전 자산 회귀' 흐름입니다. 공포 구간과 겹쳐 바닥 탐색 중일 수 있습니다."
+            ),
+        ),
+        (
+            False,
+            False,
+            False,
+            (
+                "시가총액 하락 + 도미넌스 하락 + 공포 구간이 겹치는 '전면적 이탈' 패턴입니다. "
+                "현금 비중 확대와 분할 매수 전략이 가장 유효한 구간입니다."
+            ),
+        ),
+        (
+            True,
+            True,
+            False,
+            (
+                "시가총액이 상승하지만 공포 심리가 지속되어, 아직 대중이 참여하지 않은 "
+                "'초기 회복' 구간일 수 있습니다. 비트코인 중심의 신중한 접근이 유리합니다."
+            ),
+        ),
+        (
+            True,
+            False,
+            False,
+            (
+                "시가총액 상승과 알트코인 강세에도 공포가 남아 있어, "
+                "'회의적 상승(Wall of Worry)' 구간입니다. 추세 확인 후 단계적 진입이 적절합니다."
+            ),
+        ),
     ]
     mcap_up = mcap_change > 0
     dom_high = btc_dom > 50
@@ -497,15 +521,17 @@ def generate_market_insight(global_data: Dict, top_coins: List[Dict], fear_greed
         lines.extend(["", vol_mcap_note])
     if coin_insight:
         lines.extend(["", coin_insight])
-    lines.extend([
-        "",
-        f"**공포/탐욕 지수**: {fg_insight}",
-        "",
-        f"**복합 신호 분석**: {cross_signal}",
-        "",
-        "> *본 분석은 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. "
-        "투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*",
-    ])
+    lines.extend(
+        [
+            "",
+            f"**공포/탐욕 지수**: {fg_insight}",
+            "",
+            f"**복합 신호 분석**: {cross_signal}",
+            "",
+            "> *본 분석은 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. "
+            "투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*",
+        ]
+    )
     return "\n".join(lines)
 
 

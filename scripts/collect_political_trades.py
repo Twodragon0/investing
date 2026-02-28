@@ -502,19 +502,28 @@ def main():
     if trump_count:
         # Detect specific policy areas
         tariff_items = sum(
-            1 for i in trump_filtered
-            if any(kw in (i.get("title", "") + " " + i.get("description", "")).lower()
-                   for kw in ["tariff", "관세", "trade war", "무역"])
+            1
+            for i in trump_filtered
+            if any(
+                kw in (i.get("title", "") + " " + i.get("description", "")).lower()
+                for kw in ["tariff", "관세", "trade war", "무역"]
+            )
         )
         crypto_items = sum(
-            1 for i in trump_filtered
-            if any(kw in (i.get("title", "") + " " + i.get("description", "")).lower()
-                   for kw in ["crypto", "bitcoin", "digital asset", "암호화폐"])
+            1
+            for i in trump_filtered
+            if any(
+                kw in (i.get("title", "") + " " + i.get("description", "")).lower()
+                for kw in ["crypto", "bitcoin", "digital asset", "암호화폐"]
+            )
         )
         eo_items = sum(
-            1 for i in trump_filtered
-            if any(kw in (i.get("title", "") + " " + i.get("description", "")).lower()
-                   for kw in ["executive order", "행정명령"])
+            1
+            for i in trump_filtered
+            if any(
+                kw in (i.get("title", "") + " " + i.get("description", "")).lower()
+                for kw in ["executive order", "행정명령"]
+            )
         )
         policy_details = []
         if tariff_items:
@@ -552,14 +561,20 @@ def main():
     if cb_count:
         # Detect hawkish/dovish signals
         hawkish = sum(
-            1 for i in cb_filtered
-            if any(kw in (i.get("title", "") + " " + i.get("description", "")).lower()
-                   for kw in ["hike", "인상", "hawkish", "매파", "tightening", "긴축"])
+            1
+            for i in cb_filtered
+            if any(
+                kw in (i.get("title", "") + " " + i.get("description", "")).lower()
+                for kw in ["hike", "인상", "hawkish", "매파", "tightening", "긴축"]
+            )
         )
         dovish = sum(
-            1 for i in cb_filtered
-            if any(kw in (i.get("title", "") + " " + i.get("description", "")).lower()
-                   for kw in ["cut", "인하", "dovish", "비둘기", "easing", "완화"])
+            1
+            for i in cb_filtered
+            if any(
+                kw in (i.get("title", "") + " " + i.get("description", "")).lower()
+                for kw in ["cut", "인하", "dovish", "비둘기", "easing", "완화"]
+            )
         )
         if hawkish > dovish:
             cb_tone = "매파적 신호가 우세하여, 채권 수익률 상승과 성장주 압박이 예상됩니다."
@@ -567,9 +582,7 @@ def main():
             cb_tone = "비둘기파 신호가 우세하여, 유동성 확대 기대감이 형성되고 있습니다."
         else:
             cb_tone = "금리 결정과 통화정책 기조를 면밀히 주시해야 합니다."
-        analysis_lines.append(
-            f"\n**중앙은행 정책**: {cb_count}건. {cb_tone}"
-        )
+        analysis_lines.append(f"\n**중앙은행 정책**: {cb_count}건. {cb_tone}")
         for item in cb_filtered[:1]:
             desc = item.get("description", "").strip()
             title = item.get("title", "")

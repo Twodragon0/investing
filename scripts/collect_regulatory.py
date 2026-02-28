@@ -306,23 +306,15 @@ def main():
 
         if enforce_count > enable_count:
             impact_tone = (
-                "집행·제재 성격의 규제가 우세하여, "
-                "관련 프로젝트 및 거래소의 컴플라이언스 리스크가 상승하고 있습니다."
+                "집행·제재 성격의 규제가 우세하여, 관련 프로젝트 및 거래소의 컴플라이언스 리스크가 상승하고 있습니다."
             )
         elif enable_count > enforce_count:
             impact_tone = (
-                "승인·라이선스 등 시장 참여 확대 방향의 규제가 부각되어, "
-                "제도권 진입 기대감이 형성되고 있습니다."
+                "승인·라이선스 등 시장 참여 확대 방향의 규제가 부각되어, 제도권 진입 기대감이 형성되고 있습니다."
             )
         else:
-            impact_tone = (
-                "규제 강화와 시장 개방 신호가 혼재하여, "
-                "방향성 확인이 필요한 시점입니다."
-            )
-        top_impacts = ", ".join(
-            f"**{label}**({cnt}건)"
-            for label, cnt in impact_counter.most_common(4)
-        )
+            impact_tone = "규제 강화와 시장 개방 신호가 혼재하여, 방향성 확인이 필요한 시점입니다."
+        top_impacts = ", ".join(f"**{label}**({cnt}건)" for label, cnt in impact_counter.most_common(4))
         insight_lines.append(f"\n**규제 성격 분석**: {top_impacts}. {impact_tone}")
 
     # Region-specific insights with data-driven content extraction
@@ -349,34 +341,22 @@ def main():
 
         # Dynamic US insight based on dominant agency
         if sec_count > cftc_count and sec_count > fed_count:
-            us_focus = (
-                "SEC 중심 규제 활동이 집중되어, 증권성 판단과 거래소 등록 이슈가 "
-                "시장의 핵심 변수입니다."
-            )
+            us_focus = "SEC 중심 규제 활동이 집중되어, 증권성 판단과 거래소 등록 이슈가 시장의 핵심 변수입니다."
         elif cftc_count > sec_count:
-            us_focus = (
-                "CFTC 관련 소식이 부각되어, 파생상품·선물 시장 규제와 "
-                "디지털 자산 상품 분류가 쟁점입니다."
-            )
+            us_focus = "CFTC 관련 소식이 부각되어, 파생상품·선물 시장 규제와 디지털 자산 상품 분류가 쟁점입니다."
         elif fed_count > 0:
             us_focus = (
-                "Fed 관련 뉴스가 포함되어, 통화정책과 금융 안정성 규제가 "
-                "디지털 자산 시장 유동성에 영향을 줍니다."
+                "Fed 관련 뉴스가 포함되어, 통화정책과 금융 안정성 규제가 디지털 자산 시장 유동성에 영향을 줍니다."
             )
         else:
-            us_focus = (
-                f"{_REGION_MARKET_IMPACT['미국']}에 직접적 영향을 미치는 규제 변화를 주시해야 합니다."
-            )
+            us_focus = f"{_REGION_MARKET_IMPACT['미국']}에 직접적 영향을 미치는 규제 변화를 주시해야 합니다."
         top_us = _extract_top_topic(us_items)
         us_topic_note = f" 주요 건: *{top_us}*" if top_us else ""
         insight_lines.append(f"\n**미국**{agency_str}: {us_focus}{us_topic_note}")
 
     if korea_items:
         fsc_count = sum(1 for i in korea_items if "fsc" in " ".join(i.get("tags", [])))
-        va_count = sum(
-            1 for i in korea_items
-            if "가상자산" in (i.get("title", "") + " " + i.get("description", ""))
-        )
+        va_count = sum(1 for i in korea_items if "가상자산" in (i.get("title", "") + " " + i.get("description", "")))
         kr_detail = f" (금융위 {fsc_count}건 포함)" if fsc_count else ""
         if va_count > 0:
             kr_focus = (
@@ -384,10 +364,7 @@ def main():
                 "거래소 운영 기준과 이용자 보호 정책 변화를 주시하세요."
             )
         else:
-            kr_focus = (
-                "금융 규제 전반의 동향이 수집되었으며, "
-                "국내 금융시장 제도 변화에 대한 모니터링이 필요합니다."
-            )
+            kr_focus = "금융 규제 전반의 동향이 수집되었으며, 국내 금융시장 제도 변화에 대한 모니터링이 필요합니다."
         top_kr = _extract_top_topic(korea_items)
         kr_topic_note = f" 주요 건: *{top_kr}*" if top_kr else ""
         insight_lines.append(f"\n**한국**{kr_detail}: {kr_focus}{kr_topic_note}")
@@ -406,16 +383,12 @@ def main():
                 "아시아 디지털 자산 허브 경쟁의 방향을 결정짓고 있습니다."
             )
         else:
-            asia_focus = (
-                "일본 FSA와 싱가포르 MAS의 라이선스 정책이 "
-                "아태 지역 디지털 자산 허브 경쟁의 핵심 변수입니다."
-            )
+            asia_focus = "일본 FSA와 싱가포르 MAS의 라이선스 정책이 아태 지역 디지털 자산 허브 경쟁의 핵심 변수입니다."
         insight_lines.append(f"\n**아시아**: {asia_focus}")
 
     if europe_items:
         mica_count = sum(
-            1 for i in europe_items
-            if "mica" in (i.get("title", "") + " " + i.get("description", "")).lower()
+            1 for i in europe_items if "mica" in (i.get("title", "") + " " + i.get("description", "")).lower()
         )
         if mica_count > 0:
             eu_focus = (

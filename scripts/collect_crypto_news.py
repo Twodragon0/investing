@@ -629,9 +629,7 @@ def main():
         for item in all_items:
             title_lower = item.get("title", "").lower()
             # Extract BTC/ETH price references
-            price_match = re.findall(
-                r"\$[\d,]+(?:\.\d+)?[kKmMbB]?", item.get("title", "")
-            )
+            price_match = re.findall(r"\$[\d,]+(?:\.\d+)?[kKmMbB]?", item.get("title", ""))
             if price_match:
                 price_mentions.extend(price_match)
             # Detect listing/delisting announcements
@@ -692,9 +690,7 @@ def main():
             # Find matching cross-analysis template
             cross_text = None
             for tpl_a, tpl_b, tpl_text in _CROSS_TEMPLATES:
-                if (t1_name == tpl_a and t2_name == tpl_b) or (
-                    t1_name == tpl_b and t2_name == tpl_a
-                ):
+                if (t1_name == tpl_a and t2_name == tpl_b) or (t1_name == tpl_b and t2_name == tpl_a):
                     cross_text = tpl_text
                     break
 
@@ -709,8 +705,7 @@ def main():
                     )
                 elif concentration > 40:
                     cross_text = (
-                        f"두 테마가 전체의 {concentration:.0f}%를 차지하며 "
-                        f"오늘 시장의 주요 서사를 형성하고 있습니다."
+                        f"두 테마가 전체의 {concentration:.0f}%를 차지하며 오늘 시장의 주요 서사를 형성하고 있습니다."
                     )
                 else:
                     cross_text = (
@@ -737,8 +732,7 @@ def main():
             t = top_themes[0]
             ratio = t[3] / max(len(all_items), 1) * 100
             insight_lines.append(
-                f"**{t[2]} {t[0]}** 테마가 {t[3]}건(전체의 {ratio:.0f}%)으로 "
-                f"오늘 시장 논의를 주도하고 있습니다."
+                f"**{t[2]} {t[0]}** 테마가 {t[3]}건(전체의 {ratio:.0f}%)으로 오늘 시장 논의를 주도하고 있습니다."
             )
         else:
             insight_lines.append(
@@ -756,9 +750,7 @@ def main():
 
         # Keyword monitoring with trend context
         if top_keywords:
-            monitoring_kws = ", ".join(
-                f"**{kw}**({cnt}회)" for kw, cnt in top_keywords[:3]
-            )
+            monitoring_kws = ", ".join(f"**{kw}**({cnt}회)" for kw, cnt in top_keywords[:3])
             top_kw = top_keywords[0][0]
             kw_context_map = {
                 "bitcoin": "BTC 가격 및 네트워크 활동이 시장의 중심 화두",
@@ -769,12 +761,8 @@ def main():
                 "ai": "AI 관련 토큰 및 프로젝트에 대한 투자 관심 확대",
                 "nft": "NFT 시장 거래량 변화 모니터링 권장",
             }
-            kw_context = kw_context_map.get(
-                top_kw, f"'{top_kw}' 키워드가 다수 등장하여 관련 자산 변동에 유의"
-            )
-            insight_lines.append(
-                f"\n**모니터링 키워드**: {monitoring_kws} — {kw_context}입니다."
-            )
+            kw_context = kw_context_map.get(top_kw, f"'{top_kw}' 키워드가 다수 등장하여 관련 자산 변동에 유의")
+            insight_lines.append(f"\n**모니터링 키워드**: {monitoring_kws} — {kw_context}입니다.")
 
         # Listing/delisting highlights
         if listing_mentions:
@@ -790,15 +778,9 @@ def main():
 
         # Exchange activity with specific analysis
         if exchange_rows:
-            exchange_sources = Counter(
-                row.get("source", "") for row in exchange_rows
-            )
+            exchange_sources = Counter(row.get("source", "") for row in exchange_rows)
             top_exchange = exchange_sources.most_common(1)
-            ex_detail = (
-                f" (가장 활발: {top_exchange[0][0]} {top_exchange[0][1]}건)"
-                if top_exchange
-                else ""
-            )
+            ex_detail = f" (가장 활발: {top_exchange[0][0]} {top_exchange[0][1]}건)" if top_exchange else ""
             insight_lines.append(
                 f"\n**거래소 동향**: 공지사항 {len(exchange_rows)}건{ex_detail}. "
                 f"거래소별 정책 변경, 신규 서비스, 수수료 조정 등은 "
