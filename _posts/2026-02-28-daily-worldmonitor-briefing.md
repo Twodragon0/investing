@@ -42,7 +42,7 @@ description: "2026-02-28 기준 WorldMonitor 연계 소스에서 글로벌 이�
 
 ## 주요 이슈
 
-| # | 이슈 | 테마 | 중요도 | 출처 |
+| 순번 | 주요 이슈 | 테마 | 중요도 | 출처 |
 | :---: | --- | :---: | :---: | --- |
 | 1 | [**Trump, Iran and geopolitical mind games**](https://www.aljazeera.com/video/the-listening-post/2026/2/28/trump-iran-and-geopolitical-mind-games?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
 | 2 | [**Pakistan-Afghanistan live: Iran, EU urge dialogue amid deadly clashes**](https://www.aljazeera.com/news/liveblog/2026/2/28/pakistan-afghanistan-live-calls-for-dialogue-amid-deadly-border-clashes?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |

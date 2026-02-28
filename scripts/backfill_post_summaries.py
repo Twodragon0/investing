@@ -1064,7 +1064,7 @@ def reorder_worldmonitor_table(
         rebuilt.append(cells)
 
     table_text = markdown_table(
-        ["#", "이슈", "테마", "시장 영향", "출처"],
+        ["순번", "주요 이슈", "테마", "시장 영향", "출처"],
         rebuilt,
         aligns=["center", "left", "center", "center", "left"],
     )

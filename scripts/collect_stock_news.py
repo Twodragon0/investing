@@ -599,9 +599,7 @@ def main():
         else:
             kr_mood = "뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요."
 
-        insight_lines.append(
-            f"KOSPI **{kospi['price']}** ({kospi['change_pct']}): {kr_mood}"
-        )
+        insight_lines.append(f"KOSPI **{kospi['price']}** ({kospi['change_pct']}): {kr_mood}")
 
     if kosdaq:
         try:
@@ -619,9 +617,7 @@ def main():
                     kq_note = " KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다."
             except (ValueError, AttributeError):
                 pass
-        insight_lines.append(
-            f"KOSDAQ **{kosdaq['price']}** ({kosdaq['change_pct']}).{kq_note}"
-        )
+        insight_lines.append(f"KOSDAQ **{kosdaq['price']}** ({kosdaq['change_pct']}).{kq_note}")
 
     if usdkrw:
         try:
@@ -636,9 +632,7 @@ def main():
             fx_note = "1,300원대로 비교적 안정적이며, 외국인 자금 유입에 긍정적 환경입니다."
         else:
             fx_note = "원화 강세 구간으로, 내수주에 유리하고 수출주는 환차손에 유의해야 합니다."
-        insight_lines.append(
-            f"\n**원달러 환율**: **{usdkrw['price']}**원 ({usdkrw['change_pct']}). {fx_note}"
-        )
+        insight_lines.append(f"\n**원달러 환율**: **{usdkrw['price']}**원 ({usdkrw['change_pct']}). {fx_note}")
 
     # US market narrative with direction analysis
     if alpha_vantage_rows:
@@ -662,9 +656,7 @@ def main():
             us_mood = "미국 지수가 하락 흐름을 보여, 다음 거래일 아시아 시장 개장에 부담이 될 수 있습니다."
         else:
             us_mood = "미국 시장이 혼조세로, 섹터별 차별화된 흐름이 나타나고 있습니다."
-        insight_lines.append(
-            f"\n**미국 시장**: ETF {len(alpha_vantage_rows)}종 데이터 수집. {us_mood}"
-        )
+        insight_lines.append(f"\n**미국 시장**: ETF {len(alpha_vantage_rows)}종 데이터 수집. {us_mood}")
 
     # Sector flow from news themes
     top_themes = summarizer.get_top_themes()
@@ -692,10 +684,7 @@ def main():
             )
 
     if not insight_lines:
-        insight_lines.append(
-            "현재 시장 데이터를 충분히 수집하지 못했습니다. "
-            "API 제한 또는 휴장일일 수 있습니다."
-        )
+        insight_lines.append("현재 시장 데이터를 충분히 수집하지 못했습니다. API 제한 또는 휴장일일 수 있습니다.")
     insight_lines.append("")
     insight_lines.append(
         "> *본 시장 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, "

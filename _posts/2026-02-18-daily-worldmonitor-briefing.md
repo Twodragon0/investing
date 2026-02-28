@@ -37,7 +37,7 @@ image: "/assets/images/generated/news-briefing-worldmonitor-2026-02-18.png"
 
 ## 주요 이슈
 
-| # | 이슈 | 테마 | 시장 영향 | 출처 |
+| 순번 | 주요 이슈 | 테마 | 시장 영향 | 출처 |
 | :---: | --- | :---: | :---: | --- |
 | 1 | [**Russia-Ukraine war: List of key events, day 1,455**](https://www.aljazeera.com/news/2026/2/18/russia-ukraine-war-list-of-key-events-day-1455?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
 | 2 | [**Hamas: Trump’s ‘Board of Peace’ must stop Israel’s killing in Gaza**](https://www.aljazeera.com/news/2026/2/17/hamas-trumps-board-of-peace-must-stop-israels-killing-in-gaza?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |

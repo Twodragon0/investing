@@ -49,7 +49,7 @@ image: "/assets/images/generated/news-briefing-worldmonitor-2026-02-24.png"
 
 ## 주요 이슈
 
-| # | 이슈 | 테마 | 시장 영향 | 출처 |
+| 순번 | 주요 이슈 | 테마 | 시장 영향 | 출처 |
 | :---: | --- | :---: | :---: | --- |
 | 1 | [**Russia-Ukraine war: List of key events, day 1,461**](https://www.aljazeera.com/news/2026/2/24/russia-ukraine-war-list-of-key-events-day-1461?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
 | 2 | [**Trump hits out at reports that top general flagged risks of attacking Iran**](https://www.aljazeera.com/news/2026/2/24/trump-hits-out-at-reports-that-top-general-flagged-risks-of-attacking-iran?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |

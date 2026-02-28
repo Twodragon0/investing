@@ -400,38 +400,123 @@ def _collect_all_news_items(summaries: List[Optional[Dict]]) -> List[Dict[str, A
 def _cross_asset_topics() -> Dict[str, List[str]]:
     return {
         "금리/유동성": [
-            "금리", "연준", "fed", "fomc", "유동성", "국채", "yield",
-            "기준금리", "인하", "인상", "양적", "긴축", "완화", "pivot",
+            "금리",
+            "연준",
+            "fed",
+            "fomc",
+            "유동성",
+            "국채",
+            "yield",
+            "기준금리",
+            "인하",
+            "인상",
+            "양적",
+            "긴축",
+            "완화",
+            "pivot",
         ],
         "환율/달러": [
-            "환율", "usd/krw", "달러", "dxy", "원화", "엔화", "위안",
-            "강달러", "약달러", "환헤지",
+            "환율",
+            "usd/krw",
+            "달러",
+            "dxy",
+            "원화",
+            "엔화",
+            "위안",
+            "강달러",
+            "약달러",
+            "환헤지",
         ],
         "정책/규제": [
-            "규제", "sec", "etf", "법안", "정책", "행정명령", "tariff",
-            "관세", "승인", "거부", "감독", "제재", "스테이블코인",
-            "자금세탁", "aml", "kyc", "mifid",
+            "규제",
+            "sec",
+            "etf",
+            "법안",
+            "정책",
+            "행정명령",
+            "tariff",
+            "관세",
+            "승인",
+            "거부",
+            "감독",
+            "제재",
+            "스테이블코인",
+            "자금세탁",
+            "aml",
+            "kyc",
+            "mifid",
         ],
         "리스크 이벤트": [
-            "해킹", "exploit", "파산", "청산", "liquidation", "보안사고",
-            "러그풀", "디페깅", "depeg", "공격", "취약점", "유출",
+            "해킹",
+            "exploit",
+            "파산",
+            "청산",
+            "liquidation",
+            "보안사고",
+            "러그풀",
+            "디페깅",
+            "depeg",
+            "공격",
+            "취약점",
+            "유출",
         ],
         "수급/심리": [
-            "고래", "whale", "수급", "공포", "탐욕", "sentiment", "social",
-            "거래량", "미결제약정", "open interest", "펀딩비", "매수",
-            "매도", "롱", "숏", "청산량",
+            "고래",
+            "whale",
+            "수급",
+            "공포",
+            "탐욕",
+            "sentiment",
+            "social",
+            "거래량",
+            "미결제약정",
+            "open interest",
+            "펀딩비",
+            "매수",
+            "매도",
+            "롱",
+            "숏",
+            "청산량",
         ],
         "실적/지표": [
-            "실적", "cpi", "pce", "고용", "매출", "earnings", "gdp",
-            "ism", "pmi", "소비자신뢰", "실업률", "비농업",
+            "실적",
+            "cpi",
+            "pce",
+            "고용",
+            "매출",
+            "earnings",
+            "gdp",
+            "ism",
+            "pmi",
+            "소비자신뢰",
+            "실업률",
+            "비농업",
         ],
         "기술/온체인": [
-            "tvl", "defi", "nft", "레이어2", "l2", "업그레이드",
-            "하드포크", "반감기", "halving", "해시레이트", "gas",
+            "tvl",
+            "defi",
+            "nft",
+            "레이어2",
+            "l2",
+            "업그레이드",
+            "하드포크",
+            "반감기",
+            "halving",
+            "해시레이트",
+            "gas",
         ],
         "지정학": [
-            "전쟁", "분쟁", "제재", "opec", "원유", "에너지",
-            "중국", "러시아", "대만", "nato", "무역전쟁",
+            "전쟁",
+            "분쟁",
+            "제재",
+            "opec",
+            "원유",
+            "에너지",
+            "중국",
+            "러시아",
+            "대만",
+            "nato",
+            "무역전쟁",
         ],
     }
 
@@ -440,16 +525,59 @@ def _sentiment_keywords() -> Dict[str, List[str]]:
     """Keywords for positive/negative sentiment classification."""
     return {
         "positive": [
-            "상승", "급등", "반등", "돌파", "신고가", "강세", "호재",
-            "승인", "확대", "성장", "개선", "회복", "상향", "증가",
-            "rally", "bull", "surge", "breakout", "upgrade", "adoption",
-            "매수", "유입", "낙관", "기대감", "사상최고",
+            "상승",
+            "급등",
+            "반등",
+            "돌파",
+            "신고가",
+            "강세",
+            "호재",
+            "승인",
+            "확대",
+            "성장",
+            "개선",
+            "회복",
+            "상향",
+            "증가",
+            "rally",
+            "bull",
+            "surge",
+            "breakout",
+            "upgrade",
+            "adoption",
+            "매수",
+            "유입",
+            "낙관",
+            "기대감",
+            "사상최고",
         ],
         "negative": [
-            "하락", "급락", "폭락", "약세", "악재", "위험", "경고",
-            "해킹", "파산", "소송", "제재", "규제", "위축", "감소",
-            "crash", "bear", "dump", "hack", "exploit", "fraud",
-            "매도", "유출", "공포", "불안", "하향", "적자",
+            "하락",
+            "급락",
+            "폭락",
+            "약세",
+            "악재",
+            "위험",
+            "경고",
+            "해킹",
+            "파산",
+            "소송",
+            "제재",
+            "규제",
+            "위축",
+            "감소",
+            "crash",
+            "bear",
+            "dump",
+            "hack",
+            "exploit",
+            "fraud",
+            "매도",
+            "유출",
+            "공포",
+            "불안",
+            "하향",
+            "적자",
         ],
     }
 
@@ -542,7 +670,7 @@ def _extract_key_figures(content: str) -> List[str]:
         content,
     ):
         ctx_start = max(0, m.start() - 30)
-        ctx = content[ctx_start:m.end()].strip()
+        ctx = content[ctx_start : m.end()].strip()
         # Get just the meaningful part
         ctx = re.sub(r"^[^\w가-힣]+", "", ctx)
         if ctx and ctx not in seen and len(ctx) > 5:
@@ -583,11 +711,7 @@ def _find_shared_topics_across_categories(
                     break
 
     # Only topics mentioned in 2+ categories are cross-cutting
-    cross_topics = [
-        (topic, len(cats), cats)
-        for topic, cats in topic_presence.items()
-        if len(cats) >= 2
-    ]
+    cross_topics = [(topic, len(cats), cats) for topic, cats in topic_presence.items() if len(cats) >= 2]
     cross_topics.sort(key=lambda x: x[1], reverse=True)
     return cross_topics
 
@@ -1105,9 +1229,7 @@ def main():
 
     if crypto_summary:
         crypto_dp = _extract_category_data_points(crypto_summary)
-        crypto_themes = ", ".join(
-            f"{name}({cnt})" for name, cnt in (crypto_summary.get("themes") or [])[:3]
-        )
+        crypto_themes = ", ".join(f"{name}({cnt})" for name, cnt in (crypto_summary.get("themes") or [])[:3])
         crypto_detail = ""
         if crypto_themes:
             crypto_detail = f"핵심 테마는 {crypto_themes}."
@@ -1117,9 +1239,7 @@ def main():
             crypto_detail += f" 대표 헤드라인: {smart_truncate(crypto_dp['titles'][0], 50)}."
         if not crypto_detail:
             crypto_detail = "세부 데이터 확인 필요."
-        content_parts.append(
-            f"- **암호화폐:** {crypto_summary.get('count', 0)}건. {crypto_detail.strip()}"
-        )
+        content_parts.append(f"- **암호화폐:** {crypto_summary.get('count', 0)}건. {crypto_detail.strip()}")
     if stock_summary:
         stock_dp = _extract_category_data_points(stock_summary)
         stock_detail = ""
@@ -1141,9 +1261,7 @@ def main():
             reg_detail += f" 관련 수치: {reg_dp['figures'][0]}."
         if not reg_detail:
             reg_detail = "정책 공시 및 감독 이슈 중심."
-        content_parts.append(
-            f"- **규제:** {regulatory_summary.get('count', 0)}건. {reg_detail.strip()}"
-        )
+        content_parts.append(f"- **규제:** {regulatory_summary.get('count', 0)}건. {reg_detail.strip()}")
     if social_summary:
         social_dp = _extract_category_data_points(social_summary)
         social_detail = ""
@@ -1153,9 +1271,7 @@ def main():
             social_detail += f" {social_dp['figures'][0]}."
         if not social_detail:
             social_detail = "소셜 채널 키워드 분석 기반."
-        content_parts.append(
-            f"- **소셜:** {social_summary.get('count', 0)}건. {social_detail.strip()}"
-        )
+        content_parts.append(f"- **소셜:** {social_summary.get('count', 0)}건. {social_detail.strip()}")
     if worldmonitor_summary:
         world_dp = _extract_category_data_points(worldmonitor_summary)
         world_detail = ""
@@ -1165,9 +1281,7 @@ def main():
             world_detail += f" {world_dp['figures'][0]}."
         if not world_detail:
             world_detail = "글로벌 이슈 모니터링 기반."
-        content_parts.append(
-            f"- **월드모니터:** {worldmonitor_summary.get('count', 0)}건. {world_detail.strip()}"
-        )
+        content_parts.append(f"- **월드모니터:** {worldmonitor_summary.get('count', 0)}건. {world_detail.strip()}")
     if priority_items.get("P0") or priority_items.get("P1"):
         p0_titles = [
             smart_truncate(_strip_markdown_link(x.get("title", "")), 40)
@@ -1215,8 +1329,7 @@ def main():
             )
         elif top_score >= 15:
             content_parts.append(
-                f"- **{top_name}** 테마가 주도적(강도 {top_score})이며 "
-                f"후속 뉴스에 따라 방향성이 결정될 구간입니다."
+                f"- **{top_name}** 테마가 주도적(강도 {top_score})이며 후속 뉴스에 따라 방향성이 결정될 구간입니다."
             )
         else:
             content_parts.append(
@@ -1231,8 +1344,7 @@ def main():
         )
         if policy_theme and policy_theme.get("count", 0) >= 5:
             content_parts.append(
-                f"- 정책/규제 신호(강도 {policy_theme['count']})가 감지되어 "
-                f"이벤트 드리븐 포지션 점검이 필요합니다."
+                f"- 정책/규제 신호(강도 {policy_theme['count']})가 감지되어 이벤트 드리븐 포지션 점검이 필요합니다."
             )
 
         # Sentiment-driven observation
@@ -1336,35 +1448,20 @@ def main():
 
         # Dynamic operational checklist based on actual relation data
         content_parts.append("**운영 체크리스트**")
-        high_pairs = [
-            (left, right, sc, nt)
-            for left, right, sc, nt in relation_rows if sc >= 25
-        ]
-        mid_pairs = [
-            (left, right, sc, nt)
-            for left, right, sc, nt in relation_rows if 12 <= sc < 25
-        ]
+        high_pairs = [(left, right, sc, nt) for left, right, sc, nt in relation_rows if sc >= 25]
+        mid_pairs = [(left, right, sc, nt) for left, right, sc, nt in relation_rows if 12 <= sc < 25]
 
         if high_pairs:
-            pair_names = ", ".join(
-                f"{left}↔{right}" for left, right, _, _ in high_pairs[:3]
-            )
+            pair_names = ", ".join(f"{left}↔{right}" for left, right, _, _ in high_pairs[:3])
             content_parts.append(
-                f"- **높은 연관성 감지**: {pair_names} 구간에서 "
-                f"장중 변동성 확대 가능성이 높아 우선 모니터링 필요"
+                f"- **높은 연관성 감지**: {pair_names} 구간에서 장중 변동성 확대 가능성이 높아 우선 모니터링 필요"
             )
         if mid_pairs:
-            pair_names = ", ".join(
-                f"{left}↔{right}" for left, right, _, _ in mid_pairs[:3]
-            )
-            content_parts.append(
-                f"- **중간 연관성**: {pair_names} 구간은 "
-                f"후속 이벤트에 따라 연관성 강화 가능"
-            )
+            pair_names = ", ".join(f"{left}↔{right}" for left, right, _, _ in mid_pairs[:3])
+            content_parts.append(f"- **중간 연관성**: {pair_names} 구간은 후속 이벤트에 따라 연관성 강화 가능")
         if not high_pairs and not mid_pairs:
             content_parts.append(
-                "- 교차자산 연관성이 전반적으로 낮아 "
-                "개별 자산/이벤트 중심의 독립적 대응이 적합합니다."
+                "- 교차자산 연관성이 전반적으로 낮아 개별 자산/이벤트 중심의 독립적 대응이 적합합니다."
             )
 
         # Check specific cross patterns from actual data
@@ -1372,28 +1469,21 @@ def main():
             (
                 (left, right, sc, nt)
                 for left, right, sc, nt in relation_rows
-                if ("암호화폐" in left and "규제" in right)
-                or ("규제" in left and "암호화폐" in right)
+                if ("암호화폐" in left and "규제" in right) or ("규제" in left and "암호화폐" in right)
             ),
             None,
         )
         if crypto_reg and crypto_reg[2] >= 12:
             content_parts.append(
-                f"- 암호화폐↔규제 연관 점수 {crypto_reg[2]}점: "
-                f"규제 이벤트가 코인 시장에 직접 영향을 줄 수 있는 구간"
+                f"- 암호화폐↔규제 연관 점수 {crypto_reg[2]}점: 규제 이벤트가 코인 시장에 직접 영향을 줄 수 있는 구간"
             )
         political_overlap = next(
-            (
-                (left, right, sc, nt)
-                for left, right, sc, nt in relation_rows
-                if "정치인" in left or "정치인" in right
-            ),
+            ((left, right, sc, nt) for left, right, sc, nt in relation_rows if "정치인" in left or "정치인" in right),
             None,
         )
         if political_overlap and political_overlap[2] >= 12:
             content_parts.append(
-                f"- 정치인 거래 연관 점수 {political_overlap[2]}점: "
-                f"정책 변화에 따른 인사이더 거래 패턴 주시"
+                f"- 정치인 거래 연관 점수 {political_overlap[2]}점: 정책 변화에 따른 인사이더 거래 패턴 주시"
             )
         content_parts.append("")
 
@@ -1607,7 +1697,7 @@ def main():
     if report_rows:
         content_parts.append(
             markdown_table(
-                ["리포트", "수집 건수", "링크"],
+                ["카테고리", "건수", "상세 보기"],
                 report_rows,
                 aligns=["left", "center", "left"],
             )

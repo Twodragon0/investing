@@ -642,18 +642,39 @@ def main():
 
     # Sentiment keyword detection across all items
     _BULLISH_KW = [
-        "bullish", "강세", "상승", "rally", "moon", "breakout", "돌파",
-        "pump", "ath", "신고가", "매수", "buy", "long",
+        "bullish",
+        "강세",
+        "상승",
+        "rally",
+        "moon",
+        "breakout",
+        "돌파",
+        "pump",
+        "ath",
+        "신고가",
+        "매수",
+        "buy",
+        "long",
     ]
     _BEARISH_KW = [
-        "bearish", "약세", "하락", "crash", "dump", "폭락", "급락",
-        "sell", "short", "매도", "correction", "조정", "fear",
+        "bearish",
+        "약세",
+        "하락",
+        "crash",
+        "dump",
+        "폭락",
+        "급락",
+        "sell",
+        "short",
+        "매도",
+        "correction",
+        "조정",
+        "fear",
     ]
     bullish_count = 0
     bearish_count = 0
     all_social_texts = " ".join(
-        item.get("title", "").lower() + " " + item.get("description", "").lower()
-        for item in all_theme_items
+        item.get("title", "").lower() + " " + item.get("description", "").lower() for item in all_theme_items
     )
     for kw in _BULLISH_KW:
         bullish_count += all_social_texts.count(kw)
@@ -663,13 +684,60 @@ def main():
     # Trending topic extraction from titles
     word_counter: Counter = Counter()
     _TREND_STOP = {
-        "the", "and", "for", "are", "that", "this", "with", "from",
-        "has", "was", "will", "its", "not", "but", "you", "all",
-        "can", "had", "her", "one", "our", "out", "been", "have",
-        "new", "now", "old", "see", "way", "who", "did", "get",
-        "let", "say", "she", "too", "use", "how", "man", "day",
-        "관련", "오늘", "최근", "현재", "시장", "뉴스", "이슈",
-        "대한", "것으로", "있는", "것이", "하는", "했다", "위해",
+        "the",
+        "and",
+        "for",
+        "are",
+        "that",
+        "this",
+        "with",
+        "from",
+        "has",
+        "was",
+        "will",
+        "its",
+        "not",
+        "but",
+        "you",
+        "all",
+        "can",
+        "had",
+        "her",
+        "one",
+        "our",
+        "out",
+        "been",
+        "have",
+        "new",
+        "now",
+        "old",
+        "see",
+        "way",
+        "who",
+        "did",
+        "get",
+        "let",
+        "say",
+        "she",
+        "too",
+        "use",
+        "how",
+        "man",
+        "day",
+        "관련",
+        "오늘",
+        "최근",
+        "현재",
+        "시장",
+        "뉴스",
+        "이슈",
+        "대한",
+        "것으로",
+        "있는",
+        "것이",
+        "하는",
+        "했다",
+        "위해",
     }
     for item in all_theme_items:
         words = re.findall(r"[a-zA-Z가-힣]{3,}", item.get("title", ""))
@@ -678,9 +746,7 @@ def main():
             if wl not in _TREND_STOP and len(wl) >= 3:
                 word_counter[wl] += 1
 
-    trending_words = [
-        (w, c) for w, c in word_counter.most_common(10) if c >= 3
-    ]
+    trending_words = [(w, c) for w, c in word_counter.most_common(10) if c >= 3]
 
     # Theme-based opening with sentiment
     top_themes = summarizer.get_top_themes()
@@ -692,10 +758,7 @@ def main():
             sentiment_note = "전반적으로 **경계** 분위기가 우세합니다."
         else:
             sentiment_note = "낙관·비관 의견이 혼재하는 **혼조** 분위기입니다."
-        trend_lines.append(
-            f"오늘 소셜 미디어에서는 {theme_str} 관련 논의가 가장 활발하며, "
-            f"{sentiment_note}"
-        )
+        trend_lines.append(f"오늘 소셜 미디어에서는 {theme_str} 관련 논의가 가장 활발하며, {sentiment_note}")
 
     # Sentiment ratio detail
     total_sentiment = bullish_count + bearish_count
@@ -715,26 +778,18 @@ def main():
 
     if telegram_items:
         # Channel activity analysis with content focus
-        tg_channels = Counter(
-            item.get("source", "") for item in telegram_items
-        )
+        tg_channels = Counter(item.get("source", "") for item in telegram_items)
         top_channels = tg_channels.most_common(3)
         ch_str = ", ".join(f"{ch}({cnt}건)" for ch, cnt in top_channels)
         # Extract dominant channel topics
         top_ch_name = top_channels[0][0] if top_channels else ""
-        top_ch_items = [
-            item for item in telegram_items
-            if item.get("source") == top_ch_name
-        ]
+        top_ch_items = [item for item in telegram_items if item.get("source") == top_ch_name]
         ch_topic = ""
         if top_ch_items:
             ch_title = top_ch_items[0].get("title", "").replace("[Telegram] ", "")
             if ch_title:
                 ch_topic = f" 최신 메시지: *{ch_title[:80]}*"
-        trend_lines.append(
-            f"\n**텔레그램**: 활발한 채널 — {ch_str}. "
-            f"총 {len(telegram_items)}건 포착.{ch_topic}"
-        )
+        trend_lines.append(f"\n**텔레그램**: 활발한 채널 — {ch_str}. 총 {len(telegram_items)}건 포착.{ch_topic}")
 
     if political_items:
         pol_ratio = len(political_items) / max(total_count, 1) * 100
@@ -759,18 +814,14 @@ def main():
 
     if reddit_items:
         # Reddit sentiment from scores
-        avg_score = sum(
-            item.get("score", 0) for item in reddit_items
-        ) / max(len(reddit_items), 1)
+        avg_score = sum(item.get("score", 0) for item in reddit_items) / max(len(reddit_items), 1)
         top_reddit = reddit_items[0] if reddit_items else None
         reddit_highlight = ""
         if top_reddit:
             r_title = top_reddit.get("title", "").replace("[Reddit] ", "")
             r_score = top_reddit.get("score", 0)
             reddit_highlight = f" 최고 인기 글: *{r_title[:70]}* (↑{r_score})"
-        trend_lines.append(
-            f"\n**Reddit**: {len(reddit_items)}건 수집, 평균 스코어 {avg_score:.0f}.{reddit_highlight}"
-        )
+        trend_lines.append(f"\n**Reddit**: {len(reddit_items)}건 수집, 평균 스코어 {avg_score:.0f}.{reddit_highlight}")
 
     if not trend_lines:
         trend_lines.append("현재 수집된 소셜 데이터가 제한적입니다.")

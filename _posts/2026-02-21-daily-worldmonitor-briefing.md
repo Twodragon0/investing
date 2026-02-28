@@ -33,7 +33,7 @@ image: "/assets/images/generated/news-briefing-worldmonitor-2026-02-21.png"
 
 ## 주요 이슈
 
-| # | 이슈 | 테마 | 시장 영향 | 출처 |
+| 순번 | 주요 이슈 | 테마 | 시장 영향 | 출처 |
 | :---: | --- | :---: | :---: | --- |
 | 1 | [**Trump says he is considering limited military strike on Iran**](https://www.bbc.com/news/articles/cdxzk4gvzp0o?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
 | 2 | [**At least 10 killed in Israeli strikes on Lebanon - state media**](https://www.bbc.com/news/articles/cvg8914dkl0o?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |

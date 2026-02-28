@@ -50,7 +50,7 @@ image: "/assets/images/generated/news-briefing-worldmonitor-2026-02-25.png"
 
 ## 주요 이슈
 
-| # | 이슈 | 테마 | 시장 영향 | 출처 |
+| 순번 | 주요 이슈 | 테마 | 시장 영향 | 출처 |
 | :---: | --- | :---: | :---: | --- |
 | 1 | [**US accuses China of ‘massively’ expanding nuclear arsenal amid fears of new arms race**](https://www.theguardian.com/world/2026/feb/24/us-accuses-china-of-massively-expanding-nuclear-arsenal-amid-fears-of-new-arms-race) | 지정학/안보 | 높음 | WorldMonitor/Guardian World |
 | 2 | [**Ukraine remembers its dead as war enters a fifth year**](https://www.bbc.com/news/articles/clyg7r3nd3ko?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |

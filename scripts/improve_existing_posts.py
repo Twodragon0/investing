@@ -24,76 +24,58 @@ POSTS_DIR = Path(__file__).resolve().parent.parent / "_posts"
 # Theme combination -> contextual insight mapping (at least 15 combos)
 THEME_INSIGHTS: dict[tuple[str, str], str] = {
     ("비트코인", "가격/시장"): (
-        "비트코인 가격 변동이 시장 전반에 영향을 미치고 있으며, "
-        "단기 방향성에 주목할 필요가 있습니다."
+        "비트코인 가격 변동이 시장 전반에 영향을 미치고 있으며, 단기 방향성에 주목할 필요가 있습니다."
     ),
     ("비트코인", "거래소"): (
-        "비트코인 관련 거래소 이슈가 부각되고 있어, "
-        "거래소 정책 변화와 수급 동향을 함께 살펴야 합니다."
+        "비트코인 관련 거래소 이슈가 부각되고 있어, 거래소 정책 변화와 수급 동향을 함께 살펴야 합니다."
     ),
     ("비트코인", "규제/정책"): (
-        "비트코인을 둘러싼 규제 논의가 활발해지고 있어, "
-        "각국 정책 방향이 시장에 미칠 영향을 주시해야 합니다."
+        "비트코인을 둘러싼 규제 논의가 활발해지고 있어, 각국 정책 방향이 시장에 미칠 영향을 주시해야 합니다."
     ),
     ("비트코인", "이더리움"): (
-        "비트코인과 이더리움이 동시에 주목받고 있어, "
-        "주요 코인 간 자금 흐름과 도미넌스 변화를 확인할 필요가 있습니다."
+        "비트코인과 이더리움이 동시에 주목받고 있어, 주요 코인 간 자금 흐름과 도미넌스 변화를 확인할 필요가 있습니다."
     ),
     ("비트코인", "정치/정책"): (
-        "정치적 이슈가 비트코인 시장 심리에 영향을 주고 있어, "
-        "정책 발표와 관련 인사들의 발언에 주의가 필요합니다."
+        "정치적 이슈가 비트코인 시장 심리에 영향을 주고 있어, 정책 발표와 관련 인사들의 발언에 주의가 필요합니다."
     ),
     ("비트코인", "AI/기술"): (
-        "AI/기술 섹터 동향이 비트코인 시장 심리와 맞물리고 있어, "
-        "기술주 실적과 크립토 시장의 연관성을 주시해야 합니다."
+        "AI/기술 섹터 동향이 비트코인 시장 심리와 맞물리고 있어, 기술주 실적과 크립토 시장의 연관성을 주시해야 합니다."
     ),
     ("비트코인", "매크로/금리"): (
         "거시 경제 지표가 비트코인 가격에 직접적 영향을 미치고 있어, "
         "금리 결정과 인플레이션 데이터를 함께 모니터링해야 합니다."
     ),
     ("규제/정책", "거래소"): (
-        "규제 환경 변화가 거래소 운영에 직접적 영향을 미칠 수 있어 "
-        "관련 동향 모니터링이 중요합니다."
+        "규제 환경 변화가 거래소 운영에 직접적 영향을 미칠 수 있어 관련 동향 모니터링이 중요합니다."
     ),
     ("AI/기술", "가격/시장"): (
-        "AI/반도체 섹터 동향이 시장 심리에 큰 영향을 주고 있어, "
-        "기술주 실적과 연계한 흐름을 주시해야 합니다."
+        "AI/반도체 섹터 동향이 시장 심리에 큰 영향을 주고 있어, 기술주 실적과 연계한 흐름을 주시해야 합니다."
     ),
-    ("매크로/금리", "정치/정책"): (
-        "거시 경제 지표와 정책 변화가 시장의 핵심 변수로 "
-        "작용하고 있습니다."
-    ),
+    ("매크로/금리", "정치/정책"): ("거시 경제 지표와 정책 변화가 시장의 핵심 변수로 작용하고 있습니다."),
     ("매크로/금리", "가격/시장"): (
-        "금리와 인플레이션 데이터가 시장 가격에 직접적으로 반영되고 있어, "
-        "매크로 지표 발표 일정에 주목해야 합니다."
+        "금리와 인플레이션 데이터가 시장 가격에 직접적으로 반영되고 있어, 매크로 지표 발표 일정에 주목해야 합니다."
     ),
     ("가격/시장", "거래소"): (
-        "시장 가격 변동과 거래소 동향이 밀접하게 연결되어 있어, "
-        "거래량 변화와 거래소 공지사항을 함께 확인해야 합니다."
+        "시장 가격 변동과 거래소 동향이 밀접하게 연결되어 있어, 거래량 변화와 거래소 공지사항을 함께 확인해야 합니다."
     ),
     ("가격/시장", "정치/정책"): (
-        "정치적 불확실성이 시장 가격에 변동성을 높이고 있어, "
-        "정책 관련 뉴스 흐름을 면밀히 추적해야 합니다."
+        "정치적 불확실성이 시장 가격에 변동성을 높이고 있어, 정책 관련 뉴스 흐름을 면밀히 추적해야 합니다."
     ),
     ("이더리움", "가격/시장"): (
         "이더리움 가격 움직임이 알트코인 시장 전반에 신호를 주고 있어, "
         "ETH 생태계 업데이트와 가격 추이를 함께 살펴야 합니다."
     ),
     ("이더리움", "규제/정책"): (
-        "이더리움 관련 규제 이슈가 부각되고 있어, "
-        "스테이킹 규제와 ETF 승인 논의에 주목해야 합니다."
+        "이더리움 관련 규제 이슈가 부각되고 있어, 스테이킹 규제와 ETF 승인 논의에 주목해야 합니다."
     ),
     ("규제/정책", "정치/정책"): (
-        "금융 규제와 정치적 의제가 동시에 움직이고 있어, "
-        "입법 동향과 규제 기관 발표를 병행 모니터링해야 합니다."
+        "금융 규제와 정치적 의제가 동시에 움직이고 있어, 입법 동향과 규제 기관 발표를 병행 모니터링해야 합니다."
     ),
     ("AI/기술", "정치/정책"): (
-        "AI/기술 정책과 정치적 논의가 시장에 새로운 변수를 만들고 있어, "
-        "관련 법안과 정부 지원 정책에 주목해야 합니다."
+        "AI/기술 정책과 정치적 논의가 시장에 새로운 변수를 만들고 있어, 관련 법안과 정부 지원 정책에 주목해야 합니다."
     ),
     ("AI/기술", "매크로/금리"): (
-        "AI/기술 투자 심리가 금리 환경에 민감하게 반응하고 있어, "
-        "기술 성장주와 금리 방향성의 관계를 주시해야 합니다."
+        "AI/기술 투자 심리가 금리 환경에 민감하게 반응하고 있어, 기술 성장주와 금리 방향성의 관계를 주시해야 합니다."
     ),
 }
 
@@ -150,12 +132,8 @@ KEYWORD_KO: dict[str, str] = {
 
 # Generic phrases to detect and replace in insight section
 GENERIC_INSIGHT_PATTERNS: list[re.Pattern[str]] = [
-    re.compile(
-        r"두 테마가 동시에 부각되고 있어 시장의 방향성을 가늠하는 핵심 신호로 볼 수 있습니다[.]?"
-    ),
-    re.compile(
-        r"두 테마의 동시 부각은 시장의 방향성을 가늠하는 데 중요한 신호가 될 수 있습니다[.]?"
-    ),
+    re.compile(r"두 테마가 동시에 부각되고 있어 시장의 방향성을 가늠하는 핵심 신호로 볼 수 있습니다[.]?"),
+    re.compile(r"두 테마의 동시 부각은 시장의 방향성을 가늠하는 데 중요한 신호가 될 수 있습니다[.]?"),
 ]
 
 
@@ -207,9 +185,7 @@ def clean_description(fm: dict[str, str]) -> bool:
 
     original = desc
     # Strip surrounding quotes
-    if (desc.startswith('"') and desc.endswith('"')) or (
-        desc.startswith("'") and desc.endswith("'")
-    ):
+    if (desc.startswith('"') and desc.endswith('"')) or (desc.startswith("'") and desc.endswith("'")):
         inner = desc[1:-1]
     else:
         inner = desc
@@ -296,9 +272,7 @@ def remove_intro_duplication_in_summary(body: str) -> tuple[str, bool]:
             intro_words = set(intro_norm.split())
             bullet_words = set(bullet_norm.split())
             if intro_words and bullet_words:
-                overlap = len(intro_words & bullet_words) / max(
-                    len(intro_words), len(bullet_words)
-                )
+                overlap = len(intro_words & bullet_words) / max(len(intro_words), len(bullet_words))
                 if overlap > 0.7:
                     changed = True
                     continue
@@ -497,9 +471,7 @@ def remove_duplicate_articles_in_themes(body: str) -> tuple[str, bool]:
     changed = False
 
     # Find theme sections: ### emoji theme (Nk)
-    theme_pattern = re.compile(
-        r"^### .+? \(\d+건\)\s*$", re.MULTILINE
-    )
+    theme_pattern = re.compile(r"^### .+? \(\d+건\)\s*$", re.MULTILINE)
     matches = list(theme_pattern.finditer(body))
 
     if len(matches) < 2:
@@ -528,9 +500,7 @@ def remove_duplicate_articles_in_themes(body: str) -> tuple[str, bool]:
         section = body[section_start:section_end]
 
         # Find standalone italic line: starts with \n*text*\n
-        italic_match = re.search(
-            r"\n(\*[^*\n]+\*)\s*\n", section
-        )
+        italic_match = re.search(r"\n(\*[^*\n]+\*)\s*\n", section)
         if italic_match:
             summary_text = italic_match.group(1).strip()
             if summary_text in seen_summaries:
@@ -615,9 +585,7 @@ def process_post(filepath: Path, dry_run: bool = False) -> dict[str, int]:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Batch improve existing posts quality."
-    )
+    parser = argparse.ArgumentParser(description="Batch improve existing posts quality.")
     parser.add_argument(
         "--dry-run",
         action="store_true",

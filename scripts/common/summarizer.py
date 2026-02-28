@@ -787,11 +787,7 @@ class ThemeSummarizer:
                                 desc_text = desc_text[: idx + len(sep)].strip()
                                 break
                         else:
-                            desc_text = (
-                                desc_text[:200].rsplit(" ", 1)[0]
-                                if len(desc_text) > 200
-                                else desc_text
-                            )
+                            desc_text = desc_text[:200].rsplit(" ", 1)[0] if len(desc_text) > 200 else desc_text
                         lines.append(desc_text)
                     if source:
                         lines.append(f"{html_source_tag(source)}\n")
@@ -808,19 +804,10 @@ class ThemeSummarizer:
                 if shown >= max_articles:
                     break
 
-            overflow = len(
-                [
-                    a
-                    for a in articles
-                    if a.get("title") and a["title"] not in seen_titles
-                ]
-            )
+            overflow = len([a for a in articles if a.get("title") and a["title"] not in seen_titles])
             remaining_count = len(remaining_links) + overflow
             if remaining_links:
-                lines.append(
-                    f'<details><summary>그 외 {remaining_count}건 보기</summary>'
-                    f'<div class="details-content">'
-                )
+                lines.append(f'<details><summary>그 외 {remaining_count}건 보기</summary><div class="details-content">')
                 for link_html in remaining_links[:15]:
                     lines.append(link_html)
                 if remaining_count > 15:
@@ -938,9 +925,7 @@ class ThemeSummarizer:
         "주요뉴스",
     }
 
-    def _extract_title_keywords(
-        self, articles: List[Dict[str, Any]], max_keywords: int = 5
-    ) -> List[str]:
+    def _extract_title_keywords(self, articles: List[Dict[str, Any]], max_keywords: int = 5) -> List[str]:
         """Extract salient keywords from article titles, excluding stop words.
 
         Returns up to *max_keywords* unique keywords ordered by frequency.
@@ -1239,9 +1224,7 @@ class ThemeSummarizer:
         # Additional context
         region_counts = extra.get("region_counts")
         if region_counts:
-            regions_str = ", ".join(
-                f"{name} {count}건" for name, count in region_counts.most_common(3)
-            )
+            regions_str = ", ".join(f"{name} {count}건" for name, count in region_counts.most_common(3))
             if regions_str:
                 lines.append(f"**주요 지역**: {regions_str}")
 
@@ -1337,9 +1320,7 @@ class ThemeSummarizer:
         total = len(self.items)
         priority_items = self.classify_priority()
 
-        opener = self._build_executive_opener(
-            category_type, top_themes, priority_items, total, extra
-        )
+        opener = self._build_executive_opener(category_type, top_themes, priority_items, total, extra)
 
         lines = ["## 한눈에 보기\n"]
 
@@ -1347,9 +1328,7 @@ class ThemeSummarizer:
         risk_level = self._assess_risk_level(priority_items)
         stat_items = []
         stat_items.append(
-            f'<div class="stat-item">'
-            f'<div class="stat-value">{total}</div>'
-            f'<div class="stat-label">수집 건수</div></div>'
+            f'<div class="stat-item"><div class="stat-value">{total}</div><div class="stat-label">수집 건수</div></div>'
         )
         if top_themes:
             t = top_themes[0]
@@ -1402,9 +1381,7 @@ class ThemeSummarizer:
 
         # Theme briefings — use keyword-extracted briefings
         briefing_items = []
-        _sponsored_re = re.compile(
-            r"\s*[Ss]ponsored\s+by\s+@?\S+.*$", flags=re.MULTILINE
-        )
+        _sponsored_re = re.compile(r"\s*[Ss]ponsored\s+by\s+@?\S+.*$", flags=re.MULTILINE)
         for name, key, emoji, count in top_themes[:4]:
             articles = self._theme_articles.get(key, [])
             if not articles:
@@ -1415,19 +1392,13 @@ class ThemeSummarizer:
                 # Clean sponsored text from briefing
                 briefing = _sponsored_re.sub("", briefing).strip()
             if briefing:
-                briefing_items.append(
-                    f"<li>{emoji} <strong>{name}</strong> ({count}건): {briefing}</li>"
-                )
+                briefing_items.append(f"<li>{emoji} <strong>{name}</strong> ({count}건): {briefing}</li>")
             else:
-                briefing_items.append(
-                    f"<li>{emoji} <strong>{name}</strong>: {count}건 수집</li>"
-                )
+                briefing_items.append(f"<li>{emoji} <strong>{name}</strong>: {count}건 수집</li>")
 
         if briefing_items:
             lines.append(
-                f'<div class="alert-box alert-info">'
-                f"<strong>{opener}</strong>"
-                f'<ul>{"".join(briefing_items)}</ul></div>'
+                f'<div class="alert-box alert-info"><strong>{opener}</strong><ul>{"".join(briefing_items)}</ul></div>'
             )
 
         # P0 urgent alerts as red callout
@@ -1444,7 +1415,7 @@ class ThemeSummarizer:
                 lines.append(
                     f'<div class="alert-box alert-urgent">'
                     f"<strong>긴급 알림</strong>"
-                    f'<ul>{"".join(p0_html_items)}</ul></div>'
+                    f"<ul>{''.join(p0_html_items)}</ul></div>"
                 )
 
         return "\n".join(lines)
@@ -1485,20 +1456,12 @@ class ThemeSummarizer:
                     continue
                 seen_pairs.add(pair)
 
-                insights = CROSS_THEME_INSIGHTS.get(
-                    pair
-                ) or CROSS_THEME_INSIGHTS.get(pair_rev)
+                insights = CROSS_THEME_INSIGHTS.get(pair) or CROSS_THEME_INSIGHTS.get(pair_rev)
                 if insights:
                     idx = total % len(insights)
-                    name_a = next(
-                        (t[0] for t in top_themes if t[1] == key_a), key_a
-                    )
-                    name_b = next(
-                        (t[0] for t in top_themes if t[1] == key_b), key_b
-                    )
-                    lines.append(
-                        f"- **{name_a} + {name_b}**: {insights[idx]}"
-                    )
+                    name_a = next((t[0] for t in top_themes if t[1] == key_a), key_a)
+                    name_b = next((t[0] for t in top_themes if t[1] == key_b), key_b)
+                    lines.append(f"- **{name_a} + {name_b}**: {insights[idx]}")
                     insight_found = True
 
         # 2. Risk assessment
@@ -1515,16 +1478,12 @@ class ThemeSummarizer:
         if p0_items:
             p0_kws = self._extract_title_keywords(p0_items, max_keywords=3)
             if p0_kws:
-                monitor_points.append(
-                    f"P0 긴급 이슈 ({', '.join(p0_kws)}) 후속 보도"
-                )
+                monitor_points.append(f"P0 긴급 이슈 ({', '.join(p0_kws)}) 후속 보도")
 
         if p1_items:
             p1_kws = self._extract_title_keywords(p1_items, max_keywords=3)
             if p1_kws:
-                monitor_points.append(
-                    f"P1 주요 이슈 ({', '.join(p1_kws)}) 전개 방향"
-                )
+                monitor_points.append(f"P1 주요 이슈 ({', '.join(p1_kws)}) 전개 방향")
 
         # Theme-specific monitoring suggestions
         theme_monitors: Dict[str, str] = {
@@ -1564,4 +1523,3 @@ class ThemeSummarizer:
 
         lines.append("")
         return "\n".join(lines)
-

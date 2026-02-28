@@ -466,24 +466,19 @@ def _generate_worldmonitor_summary(
         risk_level = "안정"
         risk_note = "글로벌 안보 환경이 비교적 안정적인 상황입니다."
 
-    lines.append(
-        f"**지정학 리스크 레벨: {risk_level}** — {risk_note}"
-    )
+    lines.append(f"**지정학 리스크 레벨: {risk_level}** — {risk_note}")
 
     # Theme-based analysis
     top_3_themes = theme_counter.most_common(3)
     if top_3_themes:
-        theme_str = ", ".join(
-            f"**{t}**({c}건)" for t, c in top_3_themes
-        )
-        lines.append(
-            f"\n핵심 테마는 {theme_str} 중심으로 전개되고 있습니다."
-        )
+        theme_str = ", ".join(f"**{t}**({c}건)" for t, c in top_3_themes)
+        lines.append(f"\n핵심 테마는 {theme_str} 중심으로 전개되고 있습니다.")
 
     # Cross-theme analysis with diverse templates
     _CROSS_THEME_TEMPLATES = [
         (
-            "지정학/안보", "에너지",
+            "지정학/안보",
+            "에너지",
             lambda sc, ec: (
                 f"안보 이슈({sc}건)와 에너지 뉴스({ec}건)가 동시 부각되어, "
                 "중동·러시아 관련 긴장이 원유 공급망에 직접 영향을 미치는 구간입니다. "
@@ -491,7 +486,8 @@ def _generate_worldmonitor_summary(
             ),
         ),
         (
-            "지정학/안보", "금융시장",
+            "지정학/안보",
+            "금융시장",
             lambda sc, mc: (
                 f"안보({sc}건)와 금융시장({mc}건) 이슈가 동시 전개되어, "
                 "지정학적 리스크가 시장 심리에 직접 전이되고 있습니다. "
@@ -499,7 +495,8 @@ def _generate_worldmonitor_summary(
             ),
         ),
         (
-            "에너지", "금융시장",
+            "에너지",
+            "금융시장",
             lambda ec, mc: (
                 f"에너지({ec}건)와 금융시장({mc}건) 뉴스가 맞물려, "
                 "에너지 가격 변동이 인플레이션 기대와 금리 전망을 흔들 수 있는 구간입니다. "
@@ -507,7 +504,8 @@ def _generate_worldmonitor_summary(
             ),
         ),
         (
-            "정책/법률", "금융시장",
+            "정책/법률",
+            "금융시장",
             lambda pc, mc: (
                 f"정책·법률({pc}건)과 금융시장({mc}건) 이슈가 교차하여, "
                 "규제 변화나 선거·입법 이벤트가 시장 방향성에 직접 영향을 줍니다. "
@@ -515,7 +513,8 @@ def _generate_worldmonitor_summary(
             ),
         ),
         (
-            "지정학/안보", "정책/법률",
+            "지정학/안보",
+            "정책/법률",
             lambda sc, pc: (
                 f"안보({sc}건)와 정책({pc}건) 이슈가 함께 부각되어, "
                 "제재·외교 정책 변화가 안보 상황과 직결되는 국면입니다. "
@@ -523,7 +522,8 @@ def _generate_worldmonitor_summary(
             ),
         ),
         (
-            "에너지", "정책/법률",
+            "에너지",
+            "정책/법률",
             lambda ec, pc: (
                 f"에너지({ec}건)와 정책({pc}건) 이슈가 교차하여, "
                 "에너지 정책(보조금·탄소세·OPEC 협상)이 "
@@ -539,11 +539,11 @@ def _generate_worldmonitor_summary(
         t2_name, t2_count = top_3_themes[1]
 
         for tpl_a, tpl_b, tpl_fn in _CROSS_THEME_TEMPLATES:
-            if (t1_name == tpl_a and t2_name == tpl_b):
+            if t1_name == tpl_a and t2_name == tpl_b:
                 lines.append(f"\n{tpl_fn(t1_count, t2_count)}")
                 cross_applied = True
                 break
-            if (t1_name == tpl_b and t2_name == tpl_a):
+            if t1_name == tpl_b and t2_name == tpl_a:
                 lines.append(f"\n{tpl_fn(t2_count, t1_count)}")
                 cross_applied = True
                 break
@@ -594,13 +594,9 @@ def _generate_worldmonitor_summary(
             )
 
     # Key issue highlights (distinct titles from top items)
-    high_impact_items = [
-        item for item in issue_items if item.get("impact") == "높음"
-    ]
+    high_impact_items = [item for item in issue_items if item.get("impact") == "높음"]
     if high_impact_items:
-        lines.append(
-            f"\n**고중요도 이슈 {len(high_impact_items)}건** 중 주요 건:"
-        )
+        lines.append(f"\n**고중요도 이슈 {len(high_impact_items)}건** 중 주요 건:")
         seen: set = set()
         for item in high_impact_items[:3]:
             title = item.get("title", "")
@@ -750,9 +746,7 @@ def main() -> None:
         [
             "",
             "## 전체 뉴스 요약",
-            _generate_worldmonitor_summary(
-                theme_counter, total_items, top_sources, issue_items
-            ),
+            _generate_worldmonitor_summary(theme_counter, total_items, top_sources, issue_items),
             "",
             "## 이슈 분포",
             '<div class="stat-grid">',
@@ -773,7 +767,7 @@ def main() -> None:
             "## 주요 이슈",
             "",
             markdown_table(
-                ["#", "이슈", "테마", "중요도", "출처"],
+                ["순번", "주요 이슈", "테마", "중요도", "출처"],
                 rows,
                 aligns=["center", "left", "center", "center", "left"],
             ),

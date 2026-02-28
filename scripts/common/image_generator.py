@@ -193,8 +193,8 @@ COLORS = {
 # Design system constants -- applied to every chart
 # ---------------------------------------------------------------------------
 _DS = {
-    "pad_outer": 0.5,       # tight_layout outer padding
-    "pad_title": 15,        # title top padding (set_title pad)
+    "pad_outer": 0.5,  # tight_layout outer padding
+    "pad_title": 15,  # title top padding (set_title pad)
     "dpi": 150,
     "footer_size": 8,
     "title_size": 18,
@@ -202,8 +202,8 @@ _DS = {
     "header_size": 9,
     "body_size": 11,
     "small_size": 9,
-    "row_height": 0.62,     # unified row height
-    "line_spacing": 0.55,   # vertical spacing between rows
+    "row_height": 0.62,  # unified row height
+    "line_spacing": 0.55,  # vertical spacing between rows
     "watermark": "Investing Dragon",
 }
 
@@ -222,8 +222,9 @@ def _get_change_color(change: float) -> str:
     return COLORS["text_secondary"]
 
 
-def _draw_rounded_rect(ax, x, y, w, h, *, facecolor, edgecolor="none",
-                       linewidth=0, alpha=1.0, transform=None, pad=0.01):
+def _draw_rounded_rect(
+    ax, x, y, w, h, *, facecolor, edgecolor="none", linewidth=0, alpha=1.0, transform=None, pad=0.01
+):
     """Draw a rounded rectangle -- centralised helper."""
     kwargs = {
         "boxstyle": f"round,pad={pad}",
@@ -239,10 +240,10 @@ def _draw_rounded_rect(ax, x, y, w, h, *, facecolor, edgecolor="none",
     return rect
 
 
-def _draw_gradient_bar(ax, x, y, w, h, *, color_start, color_end,
-                       steps=20, transform=None, alpha=1.0):
+def _draw_gradient_bar(ax, x, y, w, h, *, color_start, color_end, steps=20, transform=None, alpha=1.0):
     """Approximate a horizontal gradient rectangle using thin strips."""
     from matplotlib.colors import to_rgba
+
     c0 = np.array(to_rgba(color_start))
     c1 = np.array(to_rgba(color_end))
     strip_w = w / steps
@@ -253,8 +254,7 @@ def _draw_gradient_bar(ax, x, y, w, h, *, color_start, color_end,
         kwargs = {}
         if transform is not None:
             kwargs["transform"] = transform
-        rect = mpatches.Rectangle((x + i * strip_w, y), strip_w, h,
-                                  facecolor=c, edgecolor="none", **kwargs)
+        rect = mpatches.Rectangle((x + i * strip_w, y), strip_w, h, facecolor=c, edgecolor="none", **kwargs)
         ax.add_patch(rect)
 
 
@@ -262,15 +262,30 @@ def _add_footer(ax, text=None, *, use_fig=False, fig=None, y=None):
     """Add the standard watermark footer."""
     label = text or f"{_DS['watermark']} | Auto-generated"
     if use_fig and fig is not None:
-        fig.text(0.5, 0.01, label, ha="center", fontsize=_DS["footer_size"],
-                 color=COLORS["text_muted"], fontfamily=_FONT_FAMILY,
-                 style="italic")
+        fig.text(
+            0.5,
+            0.01,
+            label,
+            ha="center",
+            fontsize=_DS["footer_size"],
+            color=COLORS["text_muted"],
+            fontfamily=_FONT_FAMILY,
+            style="italic",
+        )
     else:
         y_pos = y if y is not None else 0.01
-        ax.text(0.5, y_pos, label, ha="center", va="bottom",
-                transform=ax.transAxes, fontsize=_DS["footer_size"],
-                color=COLORS["text_muted"], fontfamily=_FONT_FAMILY,
-                style="italic")
+        ax.text(
+            0.5,
+            y_pos,
+            label,
+            ha="center",
+            va="bottom",
+            transform=ax.transAxes,
+            fontsize=_DS["footer_size"],
+            color=COLORS["text_muted"],
+            fontfamily=_FONT_FAMILY,
+            style="italic",
+        )
 
 
 def _heatmap_bg_color(change: float, *, extreme=5.0) -> str:
@@ -296,14 +311,14 @@ def _heatmap_bg_color(change: float, *, extreme=5.0) -> str:
 def _save_and_close(fig, filepath, *, bg=None):
     """Shared save-and-close to reduce repetition."""
     bg_color = bg or COLORS["bg"]
-    plt.savefig(filepath, dpi=_DS["dpi"], facecolor=bg_color,
-                edgecolor="none", bbox_inches="tight")
+    plt.savefig(filepath, dpi=_DS["dpi"], facecolor=bg_color, edgecolor="none", bbox_inches="tight")
     plt.close(fig)
 
 
 # ===================================================================
 # 1. Top Coins Card
 # ===================================================================
+
 
 def generate_top_coins_card(
     coins: List[Dict[str, Any]],
@@ -336,16 +351,25 @@ def generate_top_coins_card(
 
     # Title
     ax.text(
-        5, fig_height - 0.5,
+        5,
+        fig_height - 0.5,
         "Top 10 Cryptocurrencies by Market Cap",
-        ha="center", va="center", fontsize=_DS["title_size"],
-        fontweight="bold", color=COLORS["text"], fontfamily=_FONT_FAMILY,
+        ha="center",
+        va="center",
+        fontsize=_DS["title_size"],
+        fontweight="bold",
+        color=COLORS["text"],
+        fontfamily=_FONT_FAMILY,
     )
     ax.text(
-        5, fig_height - 1.0,
+        5,
+        fig_height - 1.0,
         f"{date_str}  |  Source: {source}",
-        ha="center", va="center", fontsize=_DS["subtitle_size"],
-        color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY,
+        ha="center",
+        va="center",
+        fontsize=_DS["subtitle_size"],
+        color=COLORS["text_secondary"],
+        fontfamily=_FONT_FAMILY,
     )
 
     # Column headers
@@ -360,15 +384,18 @@ def generate_top_coins_card(
     ]
     for hx, hlabel, ha in headers:
         ax.text(
-            hx, y_start, hlabel,
-            fontsize=_DS["header_size"], fontweight="bold",
-            color=COLORS["text_muted"], fontfamily=_FONT_FAMILY,
+            hx,
+            y_start,
+            hlabel,
+            fontsize=_DS["header_size"],
+            fontweight="bold",
+            color=COLORS["text_muted"],
+            fontfamily=_FONT_FAMILY,
             ha=ha if ha != "left" else "left",
         )
 
     # Divider
-    ax.plot([0.2, 9.8], [y_start - 0.2, y_start - 0.2],
-            color=COLORS["border"], linewidth=0.5)
+    ax.plot([0.2, 9.8], [y_start - 0.2, y_start - 0.2], color=COLORS["border"], linewidth=0.5)
 
     # Coin rows
     for i, coin in enumerate(display_coins):
@@ -392,8 +419,7 @@ def generate_top_coins_card(
 
         # Row background (alternating) with subtle border
         if i % 2 == 0:
-            _draw_rounded_rect(ax, 0.15, y - 0.2, 9.7, 0.55,
-                               facecolor=COLORS["bg_inner"], alpha=0.6)
+            _draw_rounded_rect(ax, 0.15, y - 0.2, 9.7, 0.55, facecolor=COLORS["bg_inner"], alpha=0.6)
 
         # Rank: medal colours for top 3, with larger font
         rank_colors = {0: COLORS["gold"], 1: COLORS["silver"], 2: COLORS["bronze"]}
@@ -402,25 +428,36 @@ def generate_top_coins_card(
 
         # Medal circle for top 3
         if i < 3:
-            circle = mpatches.Circle((0.4, y), 0.18, facecolor=rank_color,
-                                     edgecolor="none", alpha=0.15)
+            circle = mpatches.Circle((0.4, y), 0.18, facecolor=rank_color, edgecolor="none", alpha=0.15)
             ax.add_patch(circle)
 
         ax.text(
-            0.4, y, str(i + 1),
-            fontsize=rank_size, fontweight="bold", color=rank_color,
-            ha="center", fontfamily=_FONT_FAMILY,
+            0.4,
+            y,
+            str(i + 1),
+            fontsize=rank_size,
+            fontweight="bold",
+            color=rank_color,
+            ha="center",
+            fontfamily=_FONT_FAMILY,
         )
 
         # Coin name
         ax.text(
-            1.0, y + 0.05, name,
-            fontsize=_DS["body_size"], fontweight="bold",
-            color=COLORS["text"], fontfamily=_FONT_FAMILY,
+            1.0,
+            y + 0.05,
+            name,
+            fontsize=_DS["body_size"],
+            fontweight="bold",
+            color=COLORS["text"],
+            fontfamily=_FONT_FAMILY,
         )
         ax.text(
-            1.0, y - 0.18, full_name[:18],
-            fontsize=7, color=COLORS["text_secondary"],
+            1.0,
+            y - 0.18,
+            full_name[:18],
+            fontsize=7,
+            color=COLORS["text_secondary"],
             fontfamily=_FONT_FAMILY,
         )
 
@@ -432,8 +469,12 @@ def generate_top_coins_card(
         else:
             price_str = f"${price:,.6f}"
         ax.text(
-            4.5, y, price_str,
-            fontsize=10, color=COLORS["text"], ha="right",
+            4.5,
+            y,
+            price_str,
+            fontsize=10,
+            color=COLORS["text"],
+            ha="right",
             fontfamily=_FONT_FAMILY,
         )
 
@@ -441,29 +482,36 @@ def generate_top_coins_card(
         color_24h = _get_change_color(change_24h)
         arrow_24h = "+" if change_24h >= 0 else ""
         ax.text(
-            5.5, y, f"{arrow_24h}{change_24h:.2f}%",
-            fontsize=10, color=color_24h, ha="left",
-            fontfamily=_FONT_FAMILY, fontweight="bold",
+            5.5,
+            y,
+            f"{arrow_24h}{change_24h:.2f}%",
+            fontsize=10,
+            color=color_24h,
+            ha="left",
+            fontfamily=_FONT_FAMILY,
+            fontweight="bold",
         )
         # Visual bar for 24h change
         bar_max_w = 0.8
         bar_w = min(abs(change_24h) / 10.0, 1.0) * bar_max_w
         bar_x = 6.4
-        _draw_rounded_rect(ax, bar_x, y - 0.06, bar_w, 0.12,
-                           facecolor=color_24h, alpha=0.35, pad=0.005)
+        _draw_rounded_rect(ax, bar_x, y - 0.06, bar_w, 0.12, facecolor=color_24h, alpha=0.35, pad=0.005)
 
         # --- 7d change with mini bar ---
         color_7d = _get_change_color(change_7d)
         arrow_7d = "+" if change_7d >= 0 else ""
         ax.text(
-            7.0, y, f"{arrow_7d}{change_7d:.2f}%",
-            fontsize=10, color=color_7d, ha="left",
+            7.0,
+            y,
+            f"{arrow_7d}{change_7d:.2f}%",
+            fontsize=10,
+            color=color_7d,
+            ha="left",
             fontfamily=_FONT_FAMILY,
         )
         bar_w_7d = min(abs(change_7d) / 15.0, 1.0) * bar_max_w
         bar_x_7d = 7.9
-        _draw_rounded_rect(ax, bar_x_7d, y - 0.06, bar_w_7d, 0.12,
-                           facecolor=color_7d, alpha=0.3, pad=0.005)
+        _draw_rounded_rect(ax, bar_x_7d, y - 0.06, bar_w_7d, 0.12, facecolor=color_7d, alpha=0.3, pad=0.005)
 
         # Market cap
         if mcap >= 1_000_000_000_000:
@@ -475,22 +523,30 @@ def generate_top_coins_card(
         else:
             mcap_str = f"${mcap:,.0f}"
         ax.text(
-            9.7, y, mcap_str,
-            fontsize=10, color=COLORS["text"], ha="right",
+            9.7,
+            y,
+            mcap_str,
+            fontsize=10,
+            color=COLORS["text"],
+            ha="right",
             fontfamily=_FONT_FAMILY,
         )
 
     # Row separator lines for readability
     for i in range(len(display_coins)):
         y_line = y_start - 0.5 - i * 0.6 - 0.28
-        ax.plot([0.2, 9.8], [y_line, y_line],
-                color=COLORS["border"], linewidth=0.3, alpha=0.5)
+        ax.plot([0.2, 9.8], [y_line, y_line], color=COLORS["border"], linewidth=0.3, alpha=0.5)
 
     # Footer
     ax.text(
-        5, 0.2, f"{_DS['watermark']} | Auto-generated Market Report",
-        ha="center", fontsize=_DS["footer_size"],
-        color=COLORS["text_muted"], fontfamily=_FONT_FAMILY, style="italic",
+        5,
+        0.2,
+        f"{_DS['watermark']} | Auto-generated Market Report",
+        ha="center",
+        fontsize=_DS["footer_size"],
+        color=COLORS["text_muted"],
+        fontfamily=_FONT_FAMILY,
+        style="italic",
     )
 
     if not filename:
@@ -507,6 +563,7 @@ def generate_top_coins_card(
 # ===================================================================
 # 2. Fear & Greed Gauge
 # ===================================================================
+
 
 def generate_fear_greed_gauge(
     value: int,
@@ -530,14 +587,25 @@ def generate_fear_greed_gauge(
 
     # Title
     ax.text(
-        0, 1.50, "Crypto Fear & Greed Index",
-        ha="center", va="center", fontsize=_DS["title_size"],
-        fontweight="bold", color=COLORS["text"], fontfamily=_FONT_FAMILY,
+        0,
+        1.50,
+        "Crypto Fear & Greed Index",
+        ha="center",
+        va="center",
+        fontsize=_DS["title_size"],
+        fontweight="bold",
+        color=COLORS["text"],
+        fontfamily=_FONT_FAMILY,
     )
     ax.text(
-        0, 1.30, date_str,
-        ha="center", va="center", fontsize=_DS["subtitle_size"],
-        color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY,
+        0,
+        1.30,
+        date_str,
+        ha="center",
+        va="center",
+        fontsize=_DS["subtitle_size"],
+        color=COLORS["text_secondary"],
+        fontfamily=_FONT_FAMILY,
     )
 
     # --- Gradient arc segments ---
@@ -555,6 +623,7 @@ def generate_fear_greed_gauge(
 
     for start, end, c_start, c_end in segment_defs:
         from matplotlib.colors import to_rgba
+
         c0 = np.array(to_rgba(c_start))
         c1 = np.array(to_rgba(c_end))
         n_steps = 40
@@ -565,24 +634,38 @@ def generate_fear_greed_gauge(
             # Brightness gradient: brighter toward outer edge
             alpha_val = 0.65 + 0.35 * frac
             wedge = mpatches.Wedge(
-                (0, 0), r_outer, np.degrees(t_vals[j + 1]),
-                np.degrees(t_vals[j]), width=arc_width,
-                facecolor=c_mix, edgecolor="none", alpha=alpha_val,
+                (0, 0),
+                r_outer,
+                np.degrees(t_vals[j + 1]),
+                np.degrees(t_vals[j]),
+                width=arc_width,
+                facecolor=c_mix,
+                edgecolor="none",
+                alpha=alpha_val,
             )
             ax.add_patch(wedge)
 
     # Outer glow ring
     glow = mpatches.Wedge(
-        (0, 0), r_outer + 0.03, 0, 180, width=0.03,
-        facecolor="none", edgecolor=COLORS["border_highlight"],
-        linewidth=0.8, alpha=0.5,
+        (0, 0),
+        r_outer + 0.03,
+        0,
+        180,
+        width=0.03,
+        facecolor="none",
+        edgecolor=COLORS["border_highlight"],
+        linewidth=0.8,
+        alpha=0.5,
     )
     ax.add_patch(glow)
 
     # Inner filled circle
     inner = mpatches.Circle(
-        (0, 0), r_inner - 0.04, facecolor=COLORS["bg"],
-        edgecolor=COLORS["border"], linewidth=1.5,
+        (0, 0),
+        r_inner - 0.04,
+        facecolor=COLORS["bg"],
+        edgecolor=COLORS["border"],
+        linewidth=1.5,
     )
     ax.add_patch(inner)
 
@@ -592,13 +675,18 @@ def generate_fear_greed_gauge(
     needle_x = needle_len * np.cos(needle_angle)
     needle_y = needle_len * np.sin(needle_angle)
     ax.annotate(
-        "", xy=(needle_x, needle_y), xytext=(0, 0),
+        "",
+        xy=(needle_x, needle_y),
+        xytext=(0, 0),
         arrowprops=dict(arrowstyle="-|>", color=COLORS["text"], lw=2.5),
     )
 
     # Center dot
     center_dot = mpatches.Circle(
-        (0, 0), 0.07, facecolor=COLORS["text"], edgecolor=COLORS["bg"],
+        (0, 0),
+        0.07,
+        facecolor=COLORS["text"],
+        edgecolor=COLORS["bg"],
         linewidth=2,
     )
     ax.add_patch(center_dot)
@@ -617,14 +705,26 @@ def generate_fear_greed_gauge(
         val_color = COLORS["green"]
 
     ax.text(
-        0, 0.30, str(value),
-        ha="center", va="center", fontsize=44, fontweight="bold",
-        color=val_color, fontfamily=_FONT_FAMILY,
+        0,
+        0.30,
+        str(value),
+        ha="center",
+        va="center",
+        fontsize=44,
+        fontweight="bold",
+        color=val_color,
+        fontfamily=_FONT_FAMILY,
     )
     ax.text(
-        0, -0.02, classification,
-        ha="center", va="center", fontsize=14, fontweight="bold",
-        color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY,
+        0,
+        -0.02,
+        classification,
+        ha="center",
+        va="center",
+        fontsize=14,
+        fontweight="bold",
+        color=COLORS["text_secondary"],
+        fontfamily=_FONT_FAMILY,
     )
 
     # --- Segment labels along the arc ---
@@ -640,9 +740,15 @@ def generate_fear_greed_gauge(
         lx = label_r * np.cos(angle)
         ly = label_r * np.sin(angle)
         ax.text(
-            lx, ly, label,
-            fontsize=7, color=color, ha="center", va="center",
-            fontfamily=_FONT_FAMILY, fontweight="bold",
+            lx,
+            ly,
+            label,
+            fontsize=7,
+            color=color,
+            ha="center",
+            va="center",
+            fontfamily=_FONT_FAMILY,
+            fontweight="bold",
             linespacing=1.0,
         )
 
@@ -657,15 +763,26 @@ def generate_fear_greed_gauge(
         tx = (r_outer + 0.04) * np.cos(tick_angle)
         ty = (r_outer + 0.04) * np.sin(tick_angle)
         ax.text(
-            tx, ty, tick_val, fontsize=8, color=tick_color,
-            ha="center", va="center", fontfamily=_FONT_FAMILY,
+            tx,
+            ty,
+            tick_val,
+            fontsize=8,
+            color=tick_color,
+            ha="center",
+            va="center",
+            fontfamily=_FONT_FAMILY,
         )
 
     # Footer
     ax.text(
-        0, -0.50, f"{_DS['watermark']} | alternative.me",
-        ha="center", fontsize=_DS["footer_size"],
-        color=COLORS["text_muted"], fontfamily=_FONT_FAMILY, style="italic",
+        0,
+        -0.50,
+        f"{_DS['watermark']} | alternative.me",
+        ha="center",
+        fontsize=_DS["footer_size"],
+        color=COLORS["text_muted"],
+        fontfamily=_FONT_FAMILY,
+        style="italic",
     )
 
     if not filename:
@@ -682,6 +799,7 @@ def generate_fear_greed_gauge(
 # ===================================================================
 # 3. Market Heatmap
 # ===================================================================
+
 
 def generate_market_heatmap(
     coins: List[Dict[str, Any]],
@@ -706,15 +824,26 @@ def generate_market_heatmap(
 
     # Title
     ax.text(
-        0.5, 0.97, "Crypto Market Heatmap - Top 20",
-        ha="center", va="top", transform=ax.transAxes,
-        fontsize=_DS["title_size"], fontweight="bold",
-        color=COLORS["text"], fontfamily=_FONT_FAMILY,
+        0.5,
+        0.97,
+        "Crypto Market Heatmap - Top 20",
+        ha="center",
+        va="top",
+        transform=ax.transAxes,
+        fontsize=_DS["title_size"],
+        fontweight="bold",
+        color=COLORS["text"],
+        fontfamily=_FONT_FAMILY,
     )
     ax.text(
-        0.5, 0.93, f"{date_str} | 24h Price Change",
-        ha="center", va="top", transform=ax.transAxes,
-        fontsize=_DS["subtitle_size"], color=COLORS["text_secondary"],
+        0.5,
+        0.93,
+        f"{date_str} | 24h Price Change",
+        ha="center",
+        va="top",
+        transform=ax.transAxes,
+        fontsize=_DS["subtitle_size"],
+        color=COLORS["text_secondary"],
         fontfamily=_FONT_FAMILY,
     )
 
@@ -755,16 +884,29 @@ def generate_market_heatmap(
             edge_width = 1.2
 
         _draw_rounded_rect(
-            ax, x, y, cell_w, cell_h,
-            facecolor=bg_color, edgecolor=edge_color,
-            linewidth=edge_width, transform=ax.transAxes, pad=0.008,
+            ax,
+            x,
+            y,
+            cell_w,
+            cell_h,
+            facecolor=bg_color,
+            edgecolor=edge_color,
+            linewidth=edge_width,
+            transform=ax.transAxes,
+            pad=0.008,
         )
 
         # Symbol -- larger, bolder
         ax.text(
-            x + cell_w / 2, y + cell_h * 0.72, symbol,
-            ha="center", va="center", transform=ax.transAxes,
-            fontsize=15, fontweight="bold", color=COLORS["text"],
+            x + cell_w / 2,
+            y + cell_h * 0.72,
+            symbol,
+            ha="center",
+            va="center",
+            transform=ax.transAxes,
+            fontsize=15,
+            fontweight="bold",
+            color=COLORS["text"],
             fontfamily=_FONT_FAMILY,
         )
 
@@ -774,9 +916,14 @@ def generate_market_heatmap(
         else:
             price_str = f"${price:,.4f}"
         ax.text(
-            x + cell_w / 2, y + cell_h * 0.44, price_str,
-            ha="center", va="center", transform=ax.transAxes,
-            fontsize=_DS["small_size"], color=COLORS["text_secondary"],
+            x + cell_w / 2,
+            y + cell_h * 0.44,
+            price_str,
+            ha="center",
+            va="center",
+            transform=ax.transAxes,
+            fontsize=_DS["small_size"],
+            color=COLORS["text_secondary"],
             fontfamily=_FONT_FAMILY,
         )
 
@@ -784,10 +931,15 @@ def generate_market_heatmap(
         change_color = _get_change_color(change)
         sign = "+" if change >= 0 else ""
         ax.text(
-            x + cell_w / 2, y + cell_h * 0.18,
+            x + cell_w / 2,
+            y + cell_h * 0.18,
             f"{sign}{change:.2f}%",
-            ha="center", va="center", transform=ax.transAxes,
-            fontsize=12, fontweight="bold", color=change_color,
+            ha="center",
+            va="center",
+            transform=ax.transAxes,
+            fontsize=12,
+            fontweight="bold",
+            color=change_color,
             fontfamily=_FONT_FAMILY,
         )
 
@@ -803,16 +955,36 @@ def generate_market_heatmap(
         lc = _heatmap_bg_color(pct, extreme=7.0)
         strip_w = legend_w / n_legend
         rect = mpatches.Rectangle(
-            (legend_x_start + li * strip_w, legend_y), strip_w, legend_h,
-            facecolor=lc, edgecolor="none", transform=ax.transAxes,
+            (legend_x_start + li * strip_w, legend_y),
+            strip_w,
+            legend_h,
+            facecolor=lc,
+            edgecolor="none",
+            transform=ax.transAxes,
         )
         ax.add_patch(rect)
-    ax.text(legend_x_start - 0.02, legend_y + legend_h / 2, "-7%",
-            ha="right", va="center", transform=ax.transAxes,
-            fontsize=7, color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
-    ax.text(legend_x_start + legend_w + 0.02, legend_y + legend_h / 2, "+7%",
-            ha="left", va="center", transform=ax.transAxes,
-            fontsize=7, color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
+    ax.text(
+        legend_x_start - 0.02,
+        legend_y + legend_h / 2,
+        "-7%",
+        ha="right",
+        va="center",
+        transform=ax.transAxes,
+        fontsize=7,
+        color=COLORS["text_secondary"],
+        fontfamily=_FONT_FAMILY,
+    )
+    ax.text(
+        legend_x_start + legend_w + 0.02,
+        legend_y + legend_h / 2,
+        "+7%",
+        ha="left",
+        va="center",
+        transform=ax.transAxes,
+        fontsize=7,
+        color=COLORS["text_secondary"],
+        fontfamily=_FONT_FAMILY,
+    )
 
     _add_footer(ax, f"{_DS['watermark']} | Auto-generated Market Heatmap")
 
@@ -829,6 +1001,7 @@ def generate_market_heatmap(
 # ===================================================================
 # 4. News Summary Card (horizontal bar chart)
 # ===================================================================
+
 
 def generate_news_summary_card(
     categories: List[Dict[str, Any]],
@@ -872,23 +1045,26 @@ def generate_news_summary_card(
     ax.set_facecolor(COLORS["bg"])
 
     y_pos = np.arange(len(names))
-    bars = ax.barh(y_pos, counts, color=colors, height=0.55,
-                   edgecolor="none", alpha=0.85)
+    bars = ax.barh(y_pos, counts, color=colors, height=0.55, edgecolor="none", alpha=0.85)
 
     # Rounded bar ends via overlay
     for bar, color in zip(bars, colors, strict=False):
         _draw_rounded_rect(
-            ax, bar.get_x(), bar.get_y(), bar.get_width(), bar.get_height(),
-            facecolor=color, alpha=0.15, pad=0.01,
+            ax,
+            bar.get_x(),
+            bar.get_y(),
+            bar.get_width(),
+            bar.get_height(),
+            facecolor=color,
+            alpha=0.15,
+            pad=0.01,
         )
 
     ax.set_yticks(y_pos)
-    ax.set_yticklabels(names, fontsize=_DS["body_size"],
-                       color=COLORS["text"], fontfamily=_FONT_FAMILY)
+    ax.set_yticklabels(names, fontsize=_DS["body_size"], color=COLORS["text"], fontfamily=_FONT_FAMILY)
     ax.invert_yaxis()
 
-    ax.set_xlabel("Articles", fontsize=10, color=COLORS["text_secondary"],
-                  fontfamily=_FONT_FAMILY)
+    ax.set_xlabel("Articles", fontsize=10, color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
     ax.tick_params(axis="x", colors=COLORS["text_secondary"])
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
@@ -900,21 +1076,33 @@ def generate_news_summary_card(
         ax.text(
             bar.get_width() + 0.3,
             bar.get_y() + bar.get_height() / 2,
-            str(count), va="center", fontsize=10,
-            color=COLORS["text"], fontfamily=_FONT_FAMILY, fontweight="bold",
+            str(count),
+            va="center",
+            fontsize=10,
+            color=COLORS["text"],
+            fontfamily=_FONT_FAMILY,
+            fontweight="bold",
         )
 
     ax.set_title(
         f"News Source Distribution \u2014 {date_str}",
-        fontsize=14, fontweight="bold", color=COLORS["text"],
-        fontfamily=_FONT_FAMILY, pad=_DS["pad_title"],
+        fontsize=14,
+        fontweight="bold",
+        color=COLORS["text"],
+        fontfamily=_FONT_FAMILY,
+        pad=_DS["pad_title"],
     )
 
     # Footer
     fig.text(
-        0.5, 0.01, f"{_DS['watermark']} | Auto-generated",
-        ha="center", fontsize=_DS["footer_size"],
-        color=COLORS["text_muted"], fontfamily=_FONT_FAMILY, style="italic",
+        0.5,
+        0.01,
+        f"{_DS['watermark']} | Auto-generated",
+        ha="center",
+        fontsize=_DS["footer_size"],
+        color=COLORS["text_muted"],
+        fontfamily=_FONT_FAMILY,
+        style="italic",
     )
 
     if not filename:
@@ -931,6 +1119,7 @@ def generate_news_summary_card(
 # ===================================================================
 # 5. Market Snapshot Card
 # ===================================================================
+
 
 def generate_market_snapshot_card(
     market_data: List[Dict[str, Any]],
@@ -966,31 +1155,60 @@ def generate_market_snapshot_card(
 
     # Title
     ax.text(
-        5, fig_height - 0.5, "Market Snapshot",
-        ha="center", va="center", fontsize=_DS["title_size"],
-        fontweight="bold", color=COLORS["text"], fontfamily=_FONT_FAMILY,
+        5,
+        fig_height - 0.5,
+        "Market Snapshot",
+        ha="center",
+        va="center",
+        fontsize=_DS["title_size"],
+        fontweight="bold",
+        color=COLORS["text"],
+        fontfamily=_FONT_FAMILY,
     )
     ax.text(
-        5, fig_height - 1.0,
+        5,
+        fig_height - 1.0,
         f"{date_str} | US & Korean Markets",
-        ha="center", va="center", fontsize=_DS["subtitle_size"],
-        color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY,
+        ha="center",
+        va="center",
+        fontsize=_DS["subtitle_size"],
+        color=COLORS["text_secondary"],
+        fontfamily=_FONT_FAMILY,
     )
 
     # Column headers
     y_start = fig_height - 1.5
-    ax.text(0.5, y_start, "Index / ETF", fontsize=_DS["header_size"],
-            fontweight="bold", color=COLORS["text_muted"],
-            fontfamily=_FONT_FAMILY)
-    ax.text(5.0, y_start, "Price", fontsize=_DS["header_size"],
-            fontweight="bold", color=COLORS["text_muted"],
-            fontfamily=_FONT_FAMILY, ha="center")
-    ax.text(8.0, y_start, "Change", fontsize=_DS["header_size"],
-            fontweight="bold", color=COLORS["text_muted"],
-            fontfamily=_FONT_FAMILY, ha="center")
+    ax.text(
+        0.5,
+        y_start,
+        "Index / ETF",
+        fontsize=_DS["header_size"],
+        fontweight="bold",
+        color=COLORS["text_muted"],
+        fontfamily=_FONT_FAMILY,
+    )
+    ax.text(
+        5.0,
+        y_start,
+        "Price",
+        fontsize=_DS["header_size"],
+        fontweight="bold",
+        color=COLORS["text_muted"],
+        fontfamily=_FONT_FAMILY,
+        ha="center",
+    )
+    ax.text(
+        8.0,
+        y_start,
+        "Change",
+        fontsize=_DS["header_size"],
+        fontweight="bold",
+        color=COLORS["text_muted"],
+        fontfamily=_FONT_FAMILY,
+        ha="center",
+    )
 
-    ax.plot([0.3, 9.7], [y_start - 0.2, y_start - 0.2],
-            color=COLORS["border"], linewidth=0.5)
+    ax.plot([0.3, 9.7], [y_start - 0.2, y_start - 0.2], color=COLORS["border"], linewidth=0.5)
 
     current_section = None
     y = y_start - 0.5
@@ -1000,19 +1218,21 @@ def generate_market_snapshot_card(
         if section and section != current_section:
             current_section = section
             # Section header with accent bar
-            _draw_rounded_rect(ax, 0.3, y - 0.12, 0.12, 0.35,
-                               facecolor=COLORS["accent"], pad=0.005)
+            _draw_rounded_rect(ax, 0.3, y - 0.12, 0.12, 0.35, facecolor=COLORS["accent"], pad=0.005)
             ax.text(
-                0.6, y, section,
-                fontsize=10, fontweight="bold", color=COLORS["accent"],
+                0.6,
+                y,
+                section,
+                fontsize=10,
+                fontweight="bold",
+                color=COLORS["accent"],
                 fontfamily=_FONT_FAMILY,
             )
             y -= 0.45
 
         # Row background
         if i % 2 == 0:
-            _draw_rounded_rect(ax, 0.3, y - 0.18, 9.4, 0.5,
-                               facecolor=COLORS["bg_inner"], alpha=0.5)
+            _draw_rounded_rect(ax, 0.3, y - 0.18, 9.4, 0.5, facecolor=COLORS["bg_inner"], alpha=0.5)
 
         name = item.get("name", "")
         price = item.get("price", "N/A")
@@ -1028,21 +1248,31 @@ def generate_market_snapshot_card(
             color = COLORS["text_secondary"]
             change_display = change_pct
 
-        ax.text(0.5, y, name, fontsize=_DS["body_size"],
-                color=COLORS["text"], fontfamily=_FONT_FAMILY)
-        ax.text(5.0, y, price, fontsize=_DS["body_size"],
-                color=COLORS["text"], fontfamily=_FONT_FAMILY, ha="center")
-        ax.text(8.0, y, change_display, fontsize=_DS["body_size"],
-                color=color, fontfamily=_FONT_FAMILY, ha="center",
-                fontweight="bold")
+        ax.text(0.5, y, name, fontsize=_DS["body_size"], color=COLORS["text"], fontfamily=_FONT_FAMILY)
+        ax.text(5.0, y, price, fontsize=_DS["body_size"], color=COLORS["text"], fontfamily=_FONT_FAMILY, ha="center")
+        ax.text(
+            8.0,
+            y,
+            change_display,
+            fontsize=_DS["body_size"],
+            color=color,
+            fontfamily=_FONT_FAMILY,
+            ha="center",
+            fontweight="bold",
+        )
 
         y -= 0.55
 
     # Footer
     ax.text(
-        5, 0.15, f"{_DS['watermark']} | Auto-generated Market Snapshot",
-        ha="center", fontsize=_DS["footer_size"],
-        color=COLORS["text_muted"], fontfamily=_FONT_FAMILY, style="italic",
+        5,
+        0.15,
+        f"{_DS['watermark']} | Auto-generated Market Snapshot",
+        ha="center",
+        fontsize=_DS["footer_size"],
+        color=COLORS["text_muted"],
+        fontfamily=_FONT_FAMILY,
+        style="italic",
     )
 
     if not filename:
@@ -1059,6 +1289,7 @@ def generate_market_snapshot_card(
 # ===================================================================
 # 6. Source Distribution (donut chart)
 # ===================================================================
+
 
 def generate_source_distribution_card(
     sources: List[Dict[str, Any]],
@@ -1103,8 +1334,12 @@ def generate_source_distribution_card(
     ax.set_facecolor(COLORS["bg"])
 
     wedges, _texts, autotexts = ax.pie(
-        counts, labels=None, colors=colors, autopct="%1.1f%%",
-        startangle=90, pctdistance=0.78,
+        counts,
+        labels=None,
+        colors=colors,
+        autopct="%1.1f%%",
+        startangle=90,
+        pctdistance=0.78,
         wedgeprops=dict(width=0.4, edgecolor=COLORS["bg"], linewidth=2),
     )
 
@@ -1115,29 +1350,46 @@ def generate_source_distribution_card(
 
     # Center text -- total count
     ax.text(
-        0, 0.05, str(total),
-        ha="center", va="center", fontsize=36, fontweight="bold",
-        color=COLORS["text"], fontfamily=_FONT_FAMILY,
+        0,
+        0.05,
+        str(total),
+        ha="center",
+        va="center",
+        fontsize=36,
+        fontweight="bold",
+        color=COLORS["text"],
+        fontfamily=_FONT_FAMILY,
     )
     ax.text(
-        0, -0.12, "total",
-        ha="center", va="center", fontsize=12,
-        color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY,
+        0,
+        -0.12,
+        "total",
+        ha="center",
+        va="center",
+        fontsize=12,
+        color=COLORS["text_secondary"],
+        fontfamily=_FONT_FAMILY,
     )
 
     # Title
     ax.set_title(
         f"Source Distribution \u2014 {date_str}",
-        fontsize=14, fontweight="bold", color=COLORS["text"],
-        fontfamily=_FONT_FAMILY, pad=20,
+        fontsize=14,
+        fontweight="bold",
+        color=COLORS["text"],
+        fontfamily=_FONT_FAMILY,
+        pad=20,
     )
 
     # Legend
     legend = ax.legend(
         wedges,
         [f"{n} ({c})" for n, c in zip(names, counts, strict=False)],
-        loc="lower center", bbox_to_anchor=(0.5, -0.08),
-        ncol=min(len(names), 4), fontsize=_DS["small_size"], frameon=False,
+        loc="lower center",
+        bbox_to_anchor=(0.5, -0.08),
+        ncol=min(len(names), 4),
+        fontsize=_DS["small_size"],
+        frameon=False,
     )
     for text in legend.get_texts():
         text.set_color(COLORS["text"])
@@ -1145,9 +1397,14 @@ def generate_source_distribution_card(
 
     # Footer
     fig.text(
-        0.5, 0.01, f"{_DS['watermark']} | Auto-generated",
-        ha="center", fontsize=_DS["footer_size"],
-        color=COLORS["text_muted"], fontfamily=_FONT_FAMILY, style="italic",
+        0.5,
+        0.01,
+        f"{_DS['watermark']} | Auto-generated",
+        ha="center",
+        fontsize=_DS["footer_size"],
+        color=COLORS["text_muted"],
+        fontfamily=_FONT_FAMILY,
+        style="italic",
     )
 
     if not filename:
@@ -1164,6 +1421,7 @@ def generate_source_distribution_card(
 # ===================================================================
 # 7. Sector Heatmap
 # ===================================================================
+
 
 def generate_sector_heatmap(
     sector_data: Dict[str, Dict[str, Any]],
@@ -1206,15 +1464,26 @@ def generate_sector_heatmap(
 
     # Title
     ax.text(
-        0.5, 0.97, "S&P 500 Sector Performance",
-        ha="center", va="top", transform=ax.transAxes,
-        fontsize=_DS["title_size"], fontweight="bold",
-        color=COLORS["text"], fontfamily=_FONT_FAMILY,
+        0.5,
+        0.97,
+        "S&P 500 Sector Performance",
+        ha="center",
+        va="top",
+        transform=ax.transAxes,
+        fontsize=_DS["title_size"],
+        fontweight="bold",
+        color=COLORS["text"],
+        fontfamily=_FONT_FAMILY,
     )
     ax.text(
-        0.5, 0.93, f"{date_str} | Daily Change",
-        ha="center", va="top", transform=ax.transAxes,
-        fontsize=_DS["subtitle_size"], color=COLORS["text_secondary"],
+        0.5,
+        0.93,
+        f"{date_str} | Daily Change",
+        ha="center",
+        va="top",
+        transform=ax.transAxes,
+        fontsize=_DS["subtitle_size"],
+        color=COLORS["text_secondary"],
         fontfamily=_FONT_FAMILY,
     )
 
@@ -1248,16 +1517,29 @@ def generate_sector_heatmap(
             edge_width = 1.5
 
         _draw_rounded_rect(
-            ax, x, y, cell_w, cell_h,
-            facecolor=bg_color, edgecolor=edge_color,
-            linewidth=edge_width, transform=ax.transAxes, pad=0.008,
+            ax,
+            x,
+            y,
+            cell_w,
+            cell_h,
+            facecolor=bg_color,
+            edgecolor=edge_color,
+            linewidth=edge_width,
+            transform=ax.transAxes,
+            pad=0.008,
         )
 
         # ETF Symbol -- larger
         ax.text(
-            x + cell_w / 2, y + cell_h * 0.78, symbol,
-            ha="center", va="center", transform=ax.transAxes,
-            fontsize=14, fontweight="bold", color=COLORS["text"],
+            x + cell_w / 2,
+            y + cell_h * 0.78,
+            symbol,
+            ha="center",
+            va="center",
+            transform=ax.transAxes,
+            fontsize=14,
+            fontweight="bold",
+            color=COLORS["text"],
             fontfamily=_FONT_FAMILY,
         )
 
@@ -1268,18 +1550,27 @@ def generate_sector_heatmap(
         else:
             name_short = _to_en(raw_name)[:15]
         ax.text(
-            x + cell_w / 2, y + cell_h * 0.55, name_short,
-            ha="center", va="center", transform=ax.transAxes,
-            fontsize=_DS["small_size"], color=COLORS["text_secondary"],
+            x + cell_w / 2,
+            y + cell_h * 0.55,
+            name_short,
+            ha="center",
+            va="center",
+            transform=ax.transAxes,
+            fontsize=_DS["small_size"],
+            color=COLORS["text_secondary"],
             fontfamily=_FONT_FAMILY,
         )
 
         # Price
         ax.text(
-            x + cell_w / 2, y + cell_h * 0.35,
+            x + cell_w / 2,
+            y + cell_h * 0.35,
             f"${info['price']}",
-            ha="center", va="center", transform=ax.transAxes,
-            fontsize=_DS["small_size"], color=COLORS["text_secondary"],
+            ha="center",
+            va="center",
+            transform=ax.transAxes,
+            fontsize=_DS["small_size"],
+            color=COLORS["text_secondary"],
             fontfamily=_FONT_FAMILY,
         )
 
@@ -1287,10 +1578,15 @@ def generate_sector_heatmap(
         change_color = _get_change_color(change)
         sign = "+" if change >= 0 else ""
         ax.text(
-            x + cell_w / 2, y + cell_h * 0.15,
+            x + cell_w / 2,
+            y + cell_h * 0.15,
             f"{sign}{abs(change):.2f}%",
-            ha="center", va="center", transform=ax.transAxes,
-            fontsize=12, fontweight="bold", color=change_color,
+            ha="center",
+            va="center",
+            transform=ax.transAxes,
+            fontsize=12,
+            fontweight="bold",
+            color=change_color,
             fontfamily=_FONT_FAMILY,
         )
 
@@ -1306,18 +1602,36 @@ def generate_sector_heatmap(
         lc = _heatmap_bg_color(pct, extreme=scale_extreme)
         strip_w = legend_w / n_legend
         rect = mpatches.Rectangle(
-            (legend_x_start + li * strip_w, legend_y), strip_w, legend_h,
-            facecolor=lc, edgecolor="none", transform=ax.transAxes,
+            (legend_x_start + li * strip_w, legend_y),
+            strip_w,
+            legend_h,
+            facecolor=lc,
+            edgecolor="none",
+            transform=ax.transAxes,
         )
         ax.add_patch(rect)
-    ax.text(legend_x_start - 0.02, legend_y + legend_h / 2,
-            f"-{scale_extreme:.1f}%", ha="right", va="center",
-            transform=ax.transAxes, fontsize=7,
-            color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
-    ax.text(legend_x_start + legend_w + 0.02, legend_y + legend_h / 2,
-            f"+{scale_extreme:.1f}%", ha="left", va="center",
-            transform=ax.transAxes, fontsize=7,
-            color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY)
+    ax.text(
+        legend_x_start - 0.02,
+        legend_y + legend_h / 2,
+        f"-{scale_extreme:.1f}%",
+        ha="right",
+        va="center",
+        transform=ax.transAxes,
+        fontsize=7,
+        color=COLORS["text_secondary"],
+        fontfamily=_FONT_FAMILY,
+    )
+    ax.text(
+        legend_x_start + legend_w + 0.02,
+        legend_y + legend_h / 2,
+        f"+{scale_extreme:.1f}%",
+        ha="left",
+        va="center",
+        transform=ax.transAxes,
+        fontsize=7,
+        color=COLORS["text_secondary"],
+        fontfamily=_FONT_FAMILY,
+    )
 
     if not filename:
         filename = f"sector-heatmap-{date_str}.png"
@@ -1332,6 +1646,7 @@ def generate_sector_heatmap(
 # ===================================================================
 # 8. News Briefing Card
 # ===================================================================
+
 
 def generate_news_briefing_card(
     themes: List[Dict[str, Any]],
@@ -1384,26 +1699,36 @@ def generate_news_briefing_card(
     header_y = fig_height - 1.8
     header_h = 1.6
     # Gradient fill for header
-    _draw_gradient_bar(ax, 0.2, header_y, 9.6, header_h,
-                       color_start="#0f1923", color_end="#152238",
-                       steps=30, alpha=0.95)
+    _draw_gradient_bar(
+        ax, 0.2, header_y, 9.6, header_h, color_start="#0f1923", color_end="#152238", steps=30, alpha=0.95
+    )
     # Border for header
-    _draw_rounded_rect(ax, 0.2, header_y, 9.6, header_h,
-                       facecolor="none", edgecolor=COLORS["accent"],
-                       linewidth=1.5, pad=0.08)
+    _draw_rounded_rect(
+        ax, 0.2, header_y, 9.6, header_h, facecolor="none", edgecolor=COLORS["accent"], linewidth=1.5, pad=0.08
+    )
 
     # Title
     ax.text(
-        5, fig_height - 0.55, category,
-        ha="center", va="center", fontsize=22, fontweight="bold",
-        color=COLORS["text"], fontfamily=_FONT_FAMILY,
+        5,
+        fig_height - 0.55,
+        category,
+        ha="center",
+        va="center",
+        fontsize=22,
+        fontweight="bold",
+        color=COLORS["text"],
+        fontfamily=_FONT_FAMILY,
     )
     # Date and count
     ax.text(
-        5, fig_height - 1.1,
+        5,
+        fig_height - 1.1,
         f"{date_str}  |  {total_count} articles collected",
-        ha="center", va="center", fontsize=_DS["body_size"],
-        color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY,
+        ha="center",
+        va="center",
+        fontsize=_DS["body_size"],
+        color=COLORS["text_secondary"],
+        fontfamily=_FONT_FAMILY,
     )
 
     # --- Theme rows ---
@@ -1422,13 +1747,12 @@ def generate_news_briefing_card(
         t_color = theme_colors[i % len(theme_colors)]
 
         # Row background card
-        _draw_rounded_rect(ax, 0.3, y - 0.25, 9.4, 0.65,
-                           facecolor=COLORS["bg_card"],
-                           edgecolor=COLORS["border"], linewidth=0.5)
+        _draw_rounded_rect(
+            ax, 0.3, y - 0.25, 9.4, 0.65, facecolor=COLORS["bg_card"], edgecolor=COLORS["border"], linewidth=0.5
+        )
 
         # Left accent bar
-        _draw_rounded_rect(ax, 0.3, y - 0.25, 0.12, 0.65,
-                           facecolor=t_color, pad=0.005)
+        _draw_rounded_rect(ax, 0.3, y - 0.25, 0.12, 0.65, facecolor=t_color, pad=0.005)
 
         # Theme emoji + name
         emoji = theme.get("emoji", "")
@@ -1439,31 +1763,49 @@ def generate_news_briefing_card(
         keywords = _filter_en_keywords(theme.get("keywords", []))
 
         ax.text(
-            0.8, y + 0.05, f"{emoji} {name}".strip(),
-            fontsize=13, fontweight="bold", color=COLORS["text"],
-            fontfamily=_FONT_FAMILY, va="center",
+            0.8,
+            y + 0.05,
+            f"{emoji} {name}".strip(),
+            fontsize=13,
+            fontweight="bold",
+            color=COLORS["text"],
+            fontfamily=_FONT_FAMILY,
+            va="center",
         )
 
         # Count badge with background circle
         badge_x, badge_y = 4.5, y + 0.05
         badge_circle = mpatches.Circle(
-            (badge_x, badge_y), 0.2, facecolor=t_color, alpha=0.15,
+            (badge_x, badge_y),
+            0.2,
+            facecolor=t_color,
+            alpha=0.15,
             edgecolor="none",
         )
         ax.add_patch(badge_circle)
         ax.text(
-            badge_x, badge_y, str(count),
-            fontsize=13, fontweight="bold", color=t_color,
-            fontfamily=_FONT_FAMILY, va="center", ha="center",
+            badge_x,
+            badge_y,
+            str(count),
+            fontsize=13,
+            fontweight="bold",
+            color=t_color,
+            fontfamily=_FONT_FAMILY,
+            va="center",
+            ha="center",
         )
 
         # Keywords with dot separator
         if keywords:
             kw_str = " \u00b7 ".join(keywords[:4])
             ax.text(
-                5.2, y + 0.05, kw_str,
-                fontsize=_DS["small_size"], color=COLORS["text_secondary"],
-                fontfamily=_FONT_FAMILY, va="center",
+                5.2,
+                y + 0.05,
+                kw_str,
+                fontsize=_DS["small_size"],
+                color=COLORS["text_secondary"],
+                fontfamily=_FONT_FAMILY,
+                va="center",
             )
 
     # --- Urgent alerts section ---
@@ -1471,14 +1813,19 @@ def generate_news_briefing_card(
         y_urgent = y_start - len(display_themes) * 0.75 - 0.3
 
         # Urgent box with red glow
-        _draw_rounded_rect(ax, 0.3, y_urgent - 0.35, 9.4, 0.75,
-                           facecolor=COLORS["red_dim"],
-                           edgecolor=COLORS["red"], linewidth=1.5)
+        _draw_rounded_rect(
+            ax, 0.3, y_urgent - 0.35, 9.4, 0.75, facecolor=COLORS["red_dim"], edgecolor=COLORS["red"], linewidth=1.5
+        )
 
         ax.text(
-            0.8, y_urgent + 0.05, "URGENT",
-            fontsize=12, fontweight="bold", color=COLORS["red"],
-            fontfamily=_FONT_FAMILY, va="center",
+            0.8,
+            y_urgent + 0.05,
+            "URGENT",
+            fontsize=12,
+            fontweight="bold",
+            color=COLORS["red"],
+            fontfamily=_FONT_FAMILY,
+            va="center",
         )
 
         alert_text = ""
@@ -1488,16 +1835,25 @@ def generate_news_briefing_card(
             if len(first_alert) > 60:
                 alert_text += "..."
         ax.text(
-            2.8, y_urgent + 0.05, alert_text,
-            fontsize=10, color=COLORS["text"], fontfamily=_FONT_FAMILY,
+            2.8,
+            y_urgent + 0.05,
+            alert_text,
+            fontsize=10,
+            color=COLORS["text"],
+            fontfamily=_FONT_FAMILY,
             va="center",
         )
 
     # Footer
     ax.text(
-        5, 0.2, f"{_DS['watermark']} | Auto-generated News Briefing",
-        ha="center", fontsize=_DS["footer_size"],
-        color=COLORS["text_muted"], fontfamily=_FONT_FAMILY, style="italic",
+        5,
+        0.2,
+        f"{_DS['watermark']} | Auto-generated News Briefing",
+        ha="center",
+        fontsize=_DS["footer_size"],
+        color=COLORS["text_muted"],
+        fontfamily=_FONT_FAMILY,
+        style="italic",
     )
 
     if not filename:
