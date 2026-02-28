@@ -6,7 +6,7 @@ categories: [crypto-news]
 tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
-description: 오늘 총 125건의 암호화폐 관련 뉴스가 수집되었습니다. 주요 내용을 정리합니다.
+description: "오늘 총 125건의 암호화폐 관련 뉴스가 수집되었습니다. 주요 내용을 정리합니다."
 image: "/assets/images/generated/news-briefing-crypto-2026-02-12.png"
 ---
 
@@ -109,7 +109,7 @@ DeFi   █░░░░░░░░░░░░░░░░░     7%  (9건)
 ## 오늘의 인사이트
 
 오늘 총 125건의 뉴스가 7개 출처에서 수집되었습니다.
-가장 많이 언급된 키워드는 **bitcoin**(24회)입니다.
+가장 많이 언급된 키워드는 **bitcoin(비트코인)**(24회)입니다.
 거래소 공지사항 10건이 수집되어, 거래소 동향 확인이 필요합니다.
 
 > *본 뉴스 브리핑은 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*

@@ -399,21 +399,227 @@ def _collect_all_news_items(summaries: List[Optional[Dict]]) -> List[Dict[str, A
 
 def _cross_asset_topics() -> Dict[str, List[str]]:
     return {
-        "금리/유동성": ["금리", "연준", "fed", "fomc", "유동성", "국채", "yield"],
-        "환율/달러": ["환율", "usd/krw", "달러", "dxy"],
-        "정책/규제": [
-            "규제",
-            "sec",
-            "etf",
-            "법안",
-            "정책",
-            "행정명령",
-            "tariff",
-            "관세",
+        "금리/유동성": [
+            "금리", "연준", "fed", "fomc", "유동성", "국채", "yield",
+            "기준금리", "인하", "인상", "양적", "긴축", "완화", "pivot",
         ],
-        "리스크 이벤트": ["해킹", "exploit", "파산", "청산", "liquidation", "보안사고"],
-        "수급/심리": ["고래", "whale", "수급", "공포", "탐욕", "sentiment", "social"],
-        "실적/지표": ["실적", "cpi", "pce", "고용", "매출", "earnings"],
+        "환율/달러": [
+            "환율", "usd/krw", "달러", "dxy", "원화", "엔화", "위안",
+            "강달러", "약달러", "환헤지",
+        ],
+        "정책/규제": [
+            "규제", "sec", "etf", "법안", "정책", "행정명령", "tariff",
+            "관세", "승인", "거부", "감독", "제재", "스테이블코인",
+            "자금세탁", "aml", "kyc", "mifid",
+        ],
+        "리스크 이벤트": [
+            "해킹", "exploit", "파산", "청산", "liquidation", "보안사고",
+            "러그풀", "디페깅", "depeg", "공격", "취약점", "유출",
+        ],
+        "수급/심리": [
+            "고래", "whale", "수급", "공포", "탐욕", "sentiment", "social",
+            "거래량", "미결제약정", "open interest", "펀딩비", "매수",
+            "매도", "롱", "숏", "청산량",
+        ],
+        "실적/지표": [
+            "실적", "cpi", "pce", "고용", "매출", "earnings", "gdp",
+            "ism", "pmi", "소비자신뢰", "실업률", "비농업",
+        ],
+        "기술/온체인": [
+            "tvl", "defi", "nft", "레이어2", "l2", "업그레이드",
+            "하드포크", "반감기", "halving", "해시레이트", "gas",
+        ],
+        "지정학": [
+            "전쟁", "분쟁", "제재", "opec", "원유", "에너지",
+            "중국", "러시아", "대만", "nato", "무역전쟁",
+        ],
+    }
+
+
+def _sentiment_keywords() -> Dict[str, List[str]]:
+    """Keywords for positive/negative sentiment classification."""
+    return {
+        "positive": [
+            "상승", "급등", "반등", "돌파", "신고가", "강세", "호재",
+            "승인", "확대", "성장", "개선", "회복", "상향", "증가",
+            "rally", "bull", "surge", "breakout", "upgrade", "adoption",
+            "매수", "유입", "낙관", "기대감", "사상최고",
+        ],
+        "negative": [
+            "하락", "급락", "폭락", "약세", "악재", "위험", "경고",
+            "해킹", "파산", "소송", "제재", "규제", "위축", "감소",
+            "crash", "bear", "dump", "hack", "exploit", "fraud",
+            "매도", "유출", "공포", "불안", "하향", "적자",
+        ],
+    }
+
+
+def _analyze_sentiment(summaries: List[Optional[Dict[str, Any]]]) -> Dict[str, Any]:
+    """Analyze sentiment across all summaries by counting keyword hits in titles and content."""
+    pos_kw = _sentiment_keywords()["positive"]
+    neg_kw = _sentiment_keywords()["negative"]
+
+    pos_count = 0
+    neg_count = 0
+    pos_examples: List[str] = []
+    neg_examples: List[str] = []
+
+    for s in summaries:
+        if not s or not s.get("content"):
+            continue
+        # Analyze titles extracted from bullet points and headings
+        titles = []
+        content = s["content"]
+        for line in content.split("\n"):
+            line = line.strip()
+            # Extract titles from markdown links
+            for m in re.finditer(r"\[([^\]]+)\]", line):
+                titles.append(m.group(1))
+            # Extract from bold text
+            for m in re.finditer(r"\*\*([^*]+)\*\*", line):
+                titles.append(m.group(1))
+
+        for title in titles:
+            t_lower = title.lower()
+            for kw in pos_kw:
+                if kw in t_lower:
+                    pos_count += 1
+                    if len(pos_examples) < 3 and len(title) > 10:
+                        if title not in pos_examples:
+                            pos_examples.append(smart_truncate(title, 60))
+                    break
+            for kw in neg_kw:
+                if kw in t_lower:
+                    neg_count += 1
+                    if len(neg_examples) < 3 and len(title) > 10:
+                        if title not in neg_examples:
+                            neg_examples.append(smart_truncate(title, 60))
+                    break
+
+    total = pos_count + neg_count
+    if total == 0:
+        tone = "중립"
+        ratio = 50
+    else:
+        ratio = round(pos_count / total * 100)
+        if ratio >= 65:
+            tone = "긍정 우세"
+        elif ratio >= 45:
+            tone = "혼조"
+        elif ratio >= 30:
+            tone = "부정 우세"
+        else:
+            tone = "경계"
+
+    return {
+        "tone": tone,
+        "positive": pos_count,
+        "negative": neg_count,
+        "ratio": ratio,
+        "pos_examples": pos_examples,
+        "neg_examples": neg_examples,
+    }
+
+
+def _extract_key_figures(content: str) -> List[str]:
+    """Extract numeric data points (prices, percentages, amounts) from content."""
+    figures: List[str] = []
+    seen = set()
+    # Prices with currency
+    for m in re.finditer(
+        r"(?:비트코인|BTC|이더리움|ETH|KOSPI|KOSDAQ|S&P|나스닥|다우)"
+        r"[^0-9]*?([\d,.]+)\s*(?:달러|원|USD|KRW|포인트|pt)",
+        content,
+    ):
+        fig = m.group(0).strip()
+        if fig not in seen:
+            seen.add(fig)
+            figures.append(fig)
+    # Percentage changes
+    for m in re.finditer(
+        r"(?:전일 대비|전주 대비|전월 대비|YoY|MoM|QoQ)?[^0-9]*?"
+        r"([+-]?\d+\.?\d*)\s*%",
+        content,
+    ):
+        ctx_start = max(0, m.start() - 30)
+        ctx = content[ctx_start:m.end()].strip()
+        # Get just the meaningful part
+        ctx = re.sub(r"^[^\w가-힣]+", "", ctx)
+        if ctx and ctx not in seen and len(ctx) > 5:
+            seen.add(ctx)
+            figures.append(smart_truncate(ctx, 80))
+    return figures[:5]
+
+
+def _find_shared_topics_across_categories(
+    summaries: List[Optional[Dict[str, Any]]],
+) -> List[Tuple[str, int, List[str]]]:
+    """Find topics that appear across multiple categories, returning (topic, category_count, categories)."""
+    topic_defs = _cross_asset_topics()
+    # Map: topic -> list of category names that mention it
+    topic_presence: Dict[str, List[str]] = {t: [] for t in topic_defs}
+    category_labels = {
+        "crypto": "암호화폐",
+        "stock": "주식",
+        "regulatory": "규제",
+        "social": "소셜",
+        "worldmonitor": "월드모니터",
+        "political": "정치인 거래",
+        "market": "시장",
+        "security": "보안",
+    }
+
+    for s in summaries:
+        if not s or not s.get("content"):
+            continue
+        stype = s.get("type", "")
+        label = category_labels.get(stype, stype)
+        text = (s.get("content", "") + " " + " ".join(s.get("highlights", []) or [])).lower()
+        for topic, keywords in topic_defs.items():
+            for kw in keywords:
+                if kw.lower() in text:
+                    if label not in topic_presence[topic]:
+                        topic_presence[topic].append(label)
+                    break
+
+    # Only topics mentioned in 2+ categories are cross-cutting
+    cross_topics = [
+        (topic, len(cats), cats)
+        for topic, cats in topic_presence.items()
+        if len(cats) >= 2
+    ]
+    cross_topics.sort(key=lambda x: x[1], reverse=True)
+    return cross_topics
+
+
+def _extract_category_data_points(summary: Optional[Dict[str, Any]]) -> Dict[str, Any]:
+    """Extract structured data points from a category summary for richer output."""
+    if not summary or not summary.get("content"):
+        return {"titles": [], "figures": [], "theme_names": [], "count": 0}
+
+    content = summary["content"]
+    count = summary.get("count", 0)
+
+    # Extract top titles (first 5 meaningful ones)
+    titles: List[str] = []
+    for m in re.finditer(r"\[([^\]]{10,})\]\([^)]+\)", content):
+        title = m.group(1).strip()
+        if title not in titles:
+            titles.append(title)
+        if len(titles) >= 5:
+            break
+
+    # Numeric figures
+    figures = _extract_key_figures(content)
+
+    # Theme names from crypto themes
+    theme_names = [t[0] for t in (summary.get("themes") or [])]
+
+    return {
+        "titles": titles,
+        "figures": figures,
+        "theme_names": theme_names,
+        "count": count,
     }
 
 
@@ -431,8 +637,12 @@ def _topic_hits(summary: Optional[Dict[str, Any]]) -> Dict[str, int]:
     hits: Dict[str, int] = {}
     for topic, keywords in _cross_asset_topics().items():
         score = 0
+        matched_keywords: List[str] = []
         for kw in keywords:
-            score += text.count(kw.lower())
+            cnt = text.count(kw.lower())
+            if cnt > 0:
+                score += cnt
+                matched_keywords.append(kw)
         hits[topic] = score
     return hits
 
@@ -454,6 +664,18 @@ def _relation_rows(
     topic_keys = list(_cross_asset_topics().keys())
     hit_maps = {k: _topic_hits(v) for k, v in summaries.items()}
 
+    # Diagnostic templates by topic
+    diagnostics = {
+        "금리/유동성": "금리/유동성 이슈가 양쪽 자산에 동시 영향",
+        "환율/달러": "달러·환율 변동이 교차 자산 민감도 확대",
+        "정책/규제": "정책·규제 이벤트가 복수 시장에 파급",
+        "리스크 이벤트": "리스크 이벤트(해킹/청산 등) 동시 노출",
+        "수급/심리": "수급·심리 키워드 동반 급증 → 변동성 주의",
+        "실적/지표": "매크로 지표 발표가 연쇄 반응 유발 가능",
+        "기술/온체인": "온체인·기술 이슈가 시장 전반에 확산",
+        "지정학": "지정학 리스크가 안전자산·위험자산 동시 압박",
+    }
+
     for left_name, right_name, left_key, right_key in pairs:
         left = hit_maps.get(left_key, {})
         right = hit_maps.get(right_key, {})
@@ -465,17 +687,18 @@ def _relation_rows(
                 shared_topics.append((t, min(left[t], right[t])))
         shared_topics.sort(key=lambda x: x[1], reverse=True)
         if not shared_topics:
-            rows.append((left_name, right_name, 0, "낮음"))
+            rows.append((left_name, right_name, 0, "낮음 — 공통 이슈 미감지"))
             continue
         score = sum(v for _, v in shared_topics[:3])
-        top_topics = ", ".join(t for t, _ in shared_topics[:2])
+        top_topic = shared_topics[0][0]
+        diag = diagnostics.get(top_topic, f"{top_topic} 관련 공통 신호 감지")
         if score >= 25:
             level = "높음"
         elif score >= 12:
             level = "중간"
         else:
             level = "낮음"
-        rows.append((left_name, right_name, score, f"{level} ({top_topics})"))
+        rows.append((left_name, right_name, score, f"{level} — {diag}"))
     return rows
 
 
@@ -816,52 +1039,145 @@ def main():
     if heatmap_img:
         content_parts.append(heatmap_img + "\n")
 
-    # Executive briefing: 3-5 line summary from each category
+    # Executive briefing: cross-category synthesis with data points
+    content_parts.append("## 핵심 브리핑\n")
+
+    # 1. Cross-cutting theme analysis
+    cross_topics = _find_shared_topics_across_categories(all_summaries)
+    if cross_topics:
+        top_cross = cross_topics[:3]
+        content_parts.append(f"오늘 **{len(cross_topics)}개 교차 테마**가 복수 카테고리에 걸쳐 감지되었습니다.\n")
+        for topic_name, cat_count, cats in top_cross:
+            cats_str = ", ".join(cats[:4])
+            content_parts.append(f"> - **{topic_name}**: {cat_count}개 영역({cats_str})에서 동시 언급")
+        content_parts.append("")
+
+    # 2. Sentiment snapshot
+    sentiment = _analyze_sentiment(all_summaries)
+    active_categories = sum(1 for s in all_summaries if s and s.get("count", 0) > 0)
+    content_parts.append(
+        f"**시장 심리**: {sentiment['tone']} "
+        f"(긍정 {sentiment['positive']}건 vs 부정 {sentiment['negative']}건, "
+        f"긍정 비율 {sentiment['ratio']}%) — "
+        f"{active_categories}개 카테고리 {total_count}건 기준\n"
+    )
+
+    # 3. Per-category one-liner with concrete data
     briefing_lines = []
-    for s in all_summaries:
-        if not s or not s.get("highlights"):
+    category_configs = [
+        ("crypto", "암호화폐"),
+        ("stock", "주식"),
+        ("regulatory", "규제"),
+        ("worldmonitor", "월드모니터"),
+        ("social", "소셜"),
+        ("political", "정치인 거래"),
+    ]
+    summary_lookup = {
+        "crypto": crypto_summary,
+        "stock": stock_summary,
+        "regulatory": regulatory_summary,
+        "worldmonitor": worldmonitor_summary,
+        "social": social_summary,
+        "political": political_summary,
+    }
+    for key, label in category_configs:
+        s = summary_lookup.get(key)
+        if not s or not s.get("count"):
             continue
-        # Pick the most informative highlight
-        for h in s["highlights"][:1]:
-            line = h.strip()
-            if line.startswith("- "):
-                line = line[2:]
-            if len(line) > 15:
-                briefing_lines.append(f"> - {line}")
+        dp = _extract_category_data_points(s)
+        line_parts = [f"**{label}** {dp['count']}건"]
+        if dp["theme_names"]:
+            line_parts.append(f"핵심 테마 {', '.join(dp['theme_names'][:3])}")
+        if dp["figures"]:
+            line_parts.append(dp["figures"][0])
+        elif dp["titles"]:
+            line_parts.append(smart_truncate(dp["titles"][0], 50))
+        briefing_lines.append("> - " + " — ".join(line_parts))
+
     if briefing_lines:
-        content_parts.append("## 핵심 브리핑\n")
         content_parts.extend(briefing_lines)
         content_parts.append("")
 
     content_parts.append("## 뉴스 내용 기반 핵심 요약\n")
+    # Use sentiment already computed above (or compute if not yet)
+    if "sentiment" not in dir():
+        sentiment = _analyze_sentiment(all_summaries)
+
     if crypto_summary:
-        crypto_themes = ", ".join(f"{name}({cnt})" for name, cnt in (crypto_summary.get("themes") or [])[:3])
+        crypto_dp = _extract_category_data_points(crypto_summary)
+        crypto_themes = ", ".join(
+            f"{name}({cnt})" for name, cnt in (crypto_summary.get("themes") or [])[:3]
+        )
+        crypto_detail = ""
         if crypto_themes:
-            content_parts.append(
-                f"- **암호화폐:** {crypto_summary.get('count', 0)}건. 핵심 테마는 {crypto_themes}이며 변동성 확대 헤드라인이 우세합니다."
-            )
-    if stock_summary:
-        stock_line = ""
-        if stock_summary.get("market_data"):
-            stock_line = _clean_bullet_text(stock_summary["market_data"][0])
+            crypto_detail = f"핵심 테마는 {crypto_themes}."
+        if crypto_dp["figures"]:
+            crypto_detail += f" 주요 수치: {crypto_dp['figures'][0]}."
+        if crypto_dp["titles"]:
+            crypto_detail += f" 대표 헤드라인: {smart_truncate(crypto_dp['titles'][0], 50)}."
+        if not crypto_detail:
+            crypto_detail = "세부 데이터 확인 필요."
         content_parts.append(
-            f"- **주식:** {stock_summary.get('count', 0)}건. {stock_line if stock_line else '글로벌/국내 혼조 신호가 공존합니다.'}"
+            f"- **암호화폐:** {crypto_summary.get('count', 0)}건. {crypto_detail.strip()}"
+        )
+    if stock_summary:
+        stock_dp = _extract_category_data_points(stock_summary)
+        stock_detail = ""
+        if stock_summary.get("market_data"):
+            stock_detail = _clean_bullet_text(stock_summary["market_data"][0]) + "."
+        if stock_dp["figures"]:
+            stock_detail += f" 주요 수치: {stock_dp['figures'][0]}."
+        if stock_dp["titles"] and not stock_detail.strip():
+            stock_detail = f"대표 헤드라인: {smart_truncate(stock_dp['titles'][0], 50)}."
+        content_parts.append(
+            f"- **주식:** {stock_summary.get('count', 0)}건. {stock_detail.strip() if stock_detail.strip() else '시장 데이터 확인 필요.'}"
         )
     if regulatory_summary:
+        reg_dp = _extract_category_data_points(regulatory_summary)
+        reg_detail = ""
+        if reg_dp["titles"]:
+            reg_detail = f"주요 이슈: {smart_truncate(reg_dp['titles'][0], 50)}."
+        if reg_dp["figures"]:
+            reg_detail += f" 관련 수치: {reg_dp['figures'][0]}."
+        if not reg_detail:
+            reg_detail = "정책 공시 및 감독 이슈 중심."
         content_parts.append(
-            f"- **규제:** {regulatory_summary.get('count', 0)}건. 정책 공시/감독 이슈 비중이 높아 업권별 이벤트 리스크 관리가 필요합니다."
+            f"- **규제:** {regulatory_summary.get('count', 0)}건. {reg_detail.strip()}"
         )
     if social_summary:
+        social_dp = _extract_category_data_points(social_summary)
+        social_detail = ""
+        if social_dp["titles"]:
+            social_detail = f"화제 키워드: {smart_truncate(social_dp['titles'][0], 50)}."
+        if social_dp["figures"]:
+            social_detail += f" {social_dp['figures'][0]}."
+        if not social_detail:
+            social_detail = "소셜 채널 키워드 분석 기반."
         content_parts.append(
-            f"- **소셜:** {social_summary.get('count', 0)}건. 텔레그램·정치/거시 키워드 확산이 단기 심리 변동을 키우고 있습니다."
+            f"- **소셜:** {social_summary.get('count', 0)}건. {social_detail.strip()}"
         )
     if worldmonitor_summary:
+        world_dp = _extract_category_data_points(worldmonitor_summary)
+        world_detail = ""
+        if world_dp["titles"]:
+            world_detail = f"핵심 이슈: {smart_truncate(world_dp['titles'][0], 50)}."
+        if world_dp["figures"]:
+            world_detail += f" {world_dp['figures'][0]}."
+        if not world_detail:
+            world_detail = "글로벌 이슈 모니터링 기반."
         content_parts.append(
-            f"- **월드모니터:** {worldmonitor_summary.get('count', 0)}건. 지정학/안보 이슈가 에너지·안전자산 민감도를 높이고 있습니다."
+            f"- **월드모니터:** {worldmonitor_summary.get('count', 0)}건. {world_detail.strip()}"
         )
     if priority_items.get("P0") or priority_items.get("P1"):
+        p0_titles = [
+            smart_truncate(_strip_markdown_link(x.get("title", "")), 40)
+            for x in priority_items.get("P0", [])[:2]
+            if x.get("title")
+        ]
+        p0_hint = f" 긴급: {', '.join(p0_titles)}." if p0_titles else ""
         content_parts.append(
-            f"- **우선순위:** P0 {len(priority_items.get('P0', []))}건, P1 {len(priority_items.get('P1', []))}건 중심으로 장중 대응 우선순위를 조정합니다."
+            f"- **우선순위:** P0 {len(priority_items.get('P0', []))}건, "
+            f"P1 {len(priority_items.get('P1', []))}건.{p0_hint}"
         )
     content_parts.append("")
 
@@ -885,9 +1201,51 @@ def main():
             )
         )
         content_parts.append("")
+
+        # Dynamic risk/opportunity memo based on actual theme data
         content_parts.append("**리스크/기회 메모**")
-        content_parts.append("- 상위 테마에 집중되는 구간에서는 헤드라인 변동성이 확대될 수 있습니다.")
-        content_parts.append("- 테마별 키워드가 규제/정책과 겹치면 이벤트 드리븐 리스크 점검이 우선입니다.")
+        top_theme = theme_payload[0]
+        top_name = top_theme.get("name", "")
+        top_score = top_theme.get("count", 0)
+
+        if top_score >= 30:
+            content_parts.append(
+                f"- **{top_name}** 테마에 신호가 집중(강도 {top_score})되어 "
+                f"관련 자산의 단기 변동성 확대 가능성이 높습니다."
+            )
+        elif top_score >= 15:
+            content_parts.append(
+                f"- **{top_name}** 테마가 주도적(강도 {top_score})이며 "
+                f"후속 뉴스에 따라 방향성이 결정될 구간입니다."
+            )
+        else:
+            content_parts.append(
+                f"- 뚜렷한 지배 테마 없이 분산된 흐름(최대 강도 {top_score})으로 "
+                f"개별 종목/이벤트 중심 대응이 유효합니다."
+            )
+
+        # Check policy/regulation overlap
+        policy_theme = next(
+            (t for t in theme_payload if "정책" in t.get("name", "") or "규제" in t.get("name", "")),
+            None,
+        )
+        if policy_theme and policy_theme.get("count", 0) >= 5:
+            content_parts.append(
+                f"- 정책/규제 신호(강도 {policy_theme['count']})가 감지되어 "
+                f"이벤트 드리븐 포지션 점검이 필요합니다."
+            )
+
+        # Sentiment-driven observation
+        if sentiment["ratio"] >= 65:
+            content_parts.append(
+                f"- 긍정 헤드라인 비율이 {sentiment['ratio']}%로 높아 "
+                f"과열 가능성을 역발상 관점에서 점검할 필요가 있습니다."
+            )
+        elif sentiment["ratio"] <= 35:
+            content_parts.append(
+                f"- 부정 헤드라인 비율이 {100 - sentiment['ratio']}%로 높아 "
+                f"공포 구간 매수 기회 여부를 점검할 수 있습니다."
+            )
         content_parts.append("")
 
     # ═══════════════════════════════════════
@@ -976,10 +1334,50 @@ def main():
             content_parts.extend(coverage_notes)
             content_parts.append("")
 
+        # Dynamic operational checklist based on actual relation data
         content_parts.append("**운영 체크리스트**")
-        content_parts.append("- 연관 점수 '높음' 구간은 장중 변동성 확대 가능성으로 우선 모니터링")
-        content_parts.append("- 정책/규제 + 정치인 거래가 동시 급증하면 포지션 규모와 레버리지 보수적으로 조정")
-        content_parts.append("- 코인/주식 모두 수급·심리 키워드가 증가하면 단기 과열/과매도 반전 가능성 점검")
+        high_pairs = [(l, r, s, n) for l, r, s, n in relation_rows if s >= 25]
+        mid_pairs = [(l, r, s, n) for l, r, s, n in relation_rows if 12 <= s < 25]
+
+        if high_pairs:
+            pair_names = ", ".join(f"{l}↔{r}" for l, r, _, _ in high_pairs[:3])
+            content_parts.append(
+                f"- **높은 연관성 감지**: {pair_names} 구간에서 "
+                f"장중 변동성 확대 가능성이 높아 우선 모니터링 필요"
+            )
+        if mid_pairs:
+            pair_names = ", ".join(f"{l}↔{r}" for l, r, _, _ in mid_pairs[:3])
+            content_parts.append(
+                f"- **중간 연관성**: {pair_names} 구간은 "
+                f"후속 이벤트에 따라 연관성 강화 가능"
+            )
+        if not high_pairs and not mid_pairs:
+            content_parts.append(
+                "- 교차자산 연관성이 전반적으로 낮아 "
+                "개별 자산/이벤트 중심의 독립적 대응이 적합합니다."
+            )
+
+        # Check specific cross patterns from actual data
+        crypto_reg = next(
+            ((l, r, s, n) for l, r, s, n in relation_rows
+             if ("암호화폐" in l and "규제" in r) or ("규제" in l and "암호화폐" in r)),
+            None,
+        )
+        if crypto_reg and crypto_reg[2] >= 12:
+            content_parts.append(
+                f"- 암호화폐↔규제 연관 점수 {crypto_reg[2]}점: "
+                f"규제 이벤트가 코인 시장에 직접 영향을 줄 수 있는 구간"
+            )
+        political_overlap = next(
+            ((l, r, s, n) for l, r, s, n in relation_rows
+             if "정치인" in l or "정치인" in r),
+            None,
+        )
+        if political_overlap and political_overlap[2] >= 12:
+            content_parts.append(
+                f"- 정치인 거래 연관 점수 {political_overlap[2]}점: "
+                f"정책 변화에 따른 인사이더 거래 패턴 주시"
+            )
         content_parts.append("")
 
     # ═══════════════════════════════════════

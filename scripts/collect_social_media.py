@@ -8,6 +8,7 @@ Sources:
 """
 
 import os
+import re
 import sys
 import time
 from collections import Counter
@@ -635,39 +636,148 @@ def main():
 
     content_parts.append("\n---\n")
 
-    # Social trend analysis - narrative
+    # Social trend analysis - data-driven narrative
     content_parts.append("\n## 소셜 동향 분석\n")
     trend_lines = []
 
-    # Theme-based opening
+    # Sentiment keyword detection across all items
+    _BULLISH_KW = [
+        "bullish", "강세", "상승", "rally", "moon", "breakout", "돌파",
+        "pump", "ath", "신고가", "매수", "buy", "long",
+    ]
+    _BEARISH_KW = [
+        "bearish", "약세", "하락", "crash", "dump", "폭락", "급락",
+        "sell", "short", "매도", "correction", "조정", "fear",
+    ]
+    bullish_count = 0
+    bearish_count = 0
+    all_social_texts = " ".join(
+        item.get("title", "").lower() + " " + item.get("description", "").lower()
+        for item in all_theme_items
+    )
+    for kw in _BULLISH_KW:
+        bullish_count += all_social_texts.count(kw)
+    for kw in _BEARISH_KW:
+        bearish_count += all_social_texts.count(kw)
+
+    # Trending topic extraction from titles
+    word_counter: Counter = Counter()
+    _TREND_STOP = {
+        "the", "and", "for", "are", "that", "this", "with", "from",
+        "has", "was", "will", "its", "not", "but", "you", "all",
+        "can", "had", "her", "one", "our", "out", "been", "have",
+        "new", "now", "old", "see", "way", "who", "did", "get",
+        "let", "say", "she", "too", "use", "how", "man", "day",
+        "관련", "오늘", "최근", "현재", "시장", "뉴스", "이슈",
+        "대한", "것으로", "있는", "것이", "하는", "했다", "위해",
+    }
+    for item in all_theme_items:
+        words = re.findall(r"[a-zA-Z가-힣]{3,}", item.get("title", ""))
+        for w in words:
+            wl = w.lower()
+            if wl not in _TREND_STOP and len(wl) >= 3:
+                word_counter[wl] += 1
+
+    trending_words = [
+        (w, c) for w, c in word_counter.most_common(10) if c >= 3
+    ]
+
+    # Theme-based opening with sentiment
     top_themes = summarizer.get_top_themes()
     if top_themes:
         theme_str = ", ".join(f"**{t[0]}**" for t in top_themes[:3])
-        trend_lines.append(f"오늘 소셜 미디어에서는 {theme_str} 관련 논의가 가장 활발합니다.")
+        if bullish_count > bearish_count * 1.5:
+            sentiment_note = "전반적으로 **낙관적** 분위기가 감지됩니다."
+        elif bearish_count > bullish_count * 1.5:
+            sentiment_note = "전반적으로 **경계** 분위기가 우세합니다."
+        else:
+            sentiment_note = "낙관·비관 의견이 혼재하는 **혼조** 분위기입니다."
+        trend_lines.append(
+            f"오늘 소셜 미디어에서는 {theme_str} 관련 논의가 가장 활발하며, "
+            f"{sentiment_note}"
+        )
+
+    # Sentiment ratio detail
+    total_sentiment = bullish_count + bearish_count
+    if total_sentiment >= 5:
+        bull_pct = bullish_count / total_sentiment * 100
+        bear_pct = bearish_count / total_sentiment * 100
+        trend_lines.append(
+            f"\n**감성 분석**: 긍정 키워드 {bullish_count}회({bull_pct:.0f}%) vs "
+            f"부정 키워드 {bearish_count}회({bear_pct:.0f}%). "
+            f"{'매수 심리 우세' if bull_pct > 60 else '매도 심리 우세' if bear_pct > 60 else '심리 균형 상태'}입니다."
+        )
+
+    # Trending topics
+    if trending_words:
+        tw_str = ", ".join(f"**{w}**({c}회)" for w, c in trending_words[:5])
+        trend_lines.append(f"\n**트렌딩 토픽**: {tw_str}")
 
     if telegram_items:
-        # Channel activity analysis
-        tg_channels = Counter(item.get("source", "") for item in telegram_items)
+        # Channel activity analysis with content focus
+        tg_channels = Counter(
+            item.get("source", "") for item in telegram_items
+        )
         top_channels = tg_channels.most_common(3)
         ch_str = ", ".join(f"{ch}({cnt}건)" for ch, cnt in top_channels)
+        # Extract dominant channel topics
+        top_ch_name = top_channels[0][0] if top_channels else ""
+        top_ch_items = [
+            item for item in telegram_items
+            if item.get("source") == top_ch_name
+        ]
+        ch_topic = ""
+        if top_ch_items:
+            ch_title = top_ch_items[0].get("title", "").replace("[Telegram] ", "")
+            if ch_title:
+                ch_topic = f" 최신 메시지: *{ch_title[:80]}*"
         trend_lines.append(
-            f"\n**텔레그램**: 가장 활발한 채널은 {ch_str}이며, 총 {len(telegram_items)}건의 메시지가 포착되었습니다."
+            f"\n**텔레그램**: 활발한 채널 — {ch_str}. "
+            f"총 {len(telegram_items)}건 포착.{ch_topic}"
         )
+
     if political_items:
         pol_ratio = len(political_items) / max(total_count, 1) * 100
+        # Identify dominant political topic
+        pol_topics = Counter()
+        for item in political_items:
+            title = item.get("title", "").lower()
+            if "trump" in title or "트럼프" in title:
+                pol_topics["트럼프"] += 1
+            elif "이재명" in title:
+                pol_topics["이재명"] += 1
+            elif "fed" in title or "금리" in title or "한국은행" in title:
+                pol_topics["금리/통화정책"] += 1
+            elif "관세" in title or "tariff" in title:
+                pol_topics["관세/무역"] += 1
+        top_pol = pol_topics.most_common(1)
+        pol_focus = f" 핵심 화두는 **{top_pol[0][0]}**({top_pol[0][1]}건)." if top_pol else ""
         trend_lines.append(
-            f"\n**정치·경제**: 전체의 **{pol_ratio:.0f}%**({len(political_items)}건)를 차지하며, "
-            f"정책 변화가 시장에 미치는 영향력이 큰 상황입니다."
+            f"\n**정치·경제**: 전체의 **{pol_ratio:.0f}%**({len(political_items)}건).{pol_focus} "
+            f"정책 이벤트는 시장 센티먼트에 즉각 반영되므로 관련 자산의 변동성에 유의하세요."
         )
+
     if reddit_items:
+        # Reddit sentiment from scores
+        avg_score = sum(
+            item.get("score", 0) for item in reddit_items
+        ) / max(len(reddit_items), 1)
+        top_reddit = reddit_items[0] if reddit_items else None
+        reddit_highlight = ""
+        if top_reddit:
+            r_title = top_reddit.get("title", "").replace("[Reddit] ", "")
+            r_score = top_reddit.get("score", 0)
+            reddit_highlight = f" 최고 인기 글: *{r_title[:70]}* (↑{r_score})"
         trend_lines.append(
-            f"\n**Reddit**: {len(reddit_items)}건의 인기 글이 수집되었으며, 커뮤니티의 시장 관심도가 높은 상태입니다."
+            f"\n**Reddit**: {len(reddit_items)}건 수집, 평균 스코어 {avg_score:.0f}.{reddit_highlight}"
         )
+
     if not trend_lines:
         trend_lines.append("현재 수집된 소셜 데이터가 제한적입니다.")
     trend_lines.append("")
     trend_lines.append(
-        "> *본 소셜 동향 분석은 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
+        "> *본 소셜 동향 분석은 자동 수집된 데이터를 기반으로 생성되었으며, "
+        "투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
     )
     content_parts.extend(trend_lines)
 

@@ -7,7 +7,7 @@ tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-summary-2026-02-16.png"
-description: 2026-02-16 암호화폐 시장에서 87건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 거래소 관련 소식이 주목됩니다.
+description: "2026-02-16 암호화폐 시장에서 87건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 거래소 관련 소식이 주목됩니다."
 excerpt: "BTC 추가 하락 $50K 전망, XRP 강세 속 크래시 대응, Apollo Morpho 토큰 딜, 미래에셋 코빗 인수 등 87건 분석"
 ---
 
@@ -39,12 +39,10 @@ excerpt: "BTC 추가 하락 $50K 전망, XRP 강세 속 크래시 대응, Apollo
 ![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-16.png' | relative_url }})
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **87건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
-- 2026-02-16 암호화폐 시장에서 87건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 거래소 관련 소식이 주목됩니다.
 
 ## 테마별 주요 뉴스
 
@@ -172,9 +170,9 @@ Better Cryptocurrency to Buy With $3,000 and Hold for 5 Years: XRP vs. Ethereum 
 
 ## 오늘의 인사이트
 
-오늘 가장 주목할 테마는 **비트코인**와 **가격/시장**입니다. 두 테마의 동시 부각은 시장의 방향성을 가늠하는 데 중요한 신호가 될 수 있습니다.
+오늘 가장 주목할 테마는 **비트코인**와 **가격/시장**입니다. 비트코인 가격 변동이 시장 전반에 영향을 미치고 있으며, 단기 방향성에 주목할 필요가 있습니다.
 
-향후 모니터링이 필요한 키워드: **bitcoin**, **etf**, **ai**
+향후 모니터링이 필요한 키워드: **bitcoin(비트코인)**None, **etf(상장지수펀드)**None, **ai(인공지능)**None
 
 거래소 공지사항 10건이 수집되었습니다. 새로운 상장, 이벤트, 정책 변경 등 거래소 동향이 시장 가격에 직접적 영향을 미칠 수 있어 주의가 필요합니다.
 

@@ -6,7 +6,7 @@ categories: [crypto-news]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
-description: 2026-02-13 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 19건, 총 39건이 수집되었습니다.
+description: "2026-02-13 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 19건, 총 39건이 수집되었습니다."
 image: "/assets/images/generated/news-briefing-social-2026-02-13.png"
 ---
 
@@ -22,7 +22,6 @@ image: "/assets/images/generated/news-briefing-social-2026-02-13.png"
 - **주요 키워드**: ai(16), bitcoin(15), trump(6), 이재명(4), fed(2)
 
 
-
 ## 전체 뉴스 요약
 
 오늘 수집된 총 39건 중 텔레그램 20건, 소셜 -건, 정치·경제 19건으로 다양한 이슈가 주요 화제입니다.
@@ -33,7 +32,7 @@ image: "/assets/images/generated/news-briefing-social-2026-02-13.png"
 
 ## 오늘의 핵심
 
-- 가장 많이 언급된 키워드는 **ai**(16회)입니다.
+- 가장 많이 언급된 키워드는 **ai(인공지능)**(16회)입니다.
 - 가장 활발한 채널: 텔레그램(20건), 정치·경제(19건)
 - 총 39건의 소셜 데이터가 수집되어 커뮤니티 관심이 높은 상황입니다.
 

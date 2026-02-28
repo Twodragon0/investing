@@ -48,7 +48,6 @@ description: "2026-02-24 암호화폐 시장에서 113건의 뉴스를 분석했
 </div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **113건** 수집
@@ -99,8 +98,6 @@ description: "2026-02-24 암호화폐 시장에서 113건의 뉴스를 분석했
 
 
 ### 🏛️ 정치/정책 (17건)
-
-*Bitcoin falls as much as 5% as Trump tariff moves raise uncertainty*
 
 **1. [Bitcoin falls as much as 5% as Trump tariff moves raise uncertainty](https://news.google.com/read/CBMickFVX3lxTE9KOVlMMkJ6alBfQUtyaUdQcEtPNVItbDliQXJLZVE0NUpWWUdpWmptbWgwUnpKVDhCUGNGOHdpMy1EREdXMzFDWURGWGtUWGloMjd2ZFRpeklVZFk2UkhjSXBEYl9LTWtINEoyWnBWdTN5Z9IBd0FVX3lxTE5veFNabXpDTlN6TW9tMGNLeFlERndSYzdiUEVWSWh5WDJ2ZWFXaVJkVmxWUDhUSEZJbGdnckJMOURqVmhNWFBuQ2lNaWpvYzdlS19BOFNzVHhMczBSVzEwLWN4c3pwSHVQbC1PV3lsSE51X1V3azRV?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
@@ -179,9 +176,9 @@ The rise of Polymarket, the cryptocurrency-based betting site for current events
 
 ## 오늘의 인사이트
 
-오늘 가장 주목할 테마는 **비트코인**와 **가격/시장**입니다. 두 테마의 동시 부각은 시장의 방향성을 가늠하는 데 중요한 신호가 될 수 있습니다.
+오늘 가장 주목할 테마는 **비트코인**와 **가격/시장**입니다. 비트코인 가격 변동이 시장 전반에 영향을 미치고 있으며, 단기 방향성에 주목할 필요가 있습니다.
 
-향후 모니터링이 필요한 키워드: **bitcoin**, **ai**, **ethereum**
+향후 모니터링이 필요한 키워드: **bitcoin(비트코인)**None, **ai(인공지능)**None, **ethereum(이더리움)**None
 
 거래소 공지사항 10건이 수집되었습니다. 새로운 상장, 이벤트, 정책 변경 등 거래소 동향이 시장 가격에 직접적 영향을 미칠 수 있어 주의가 필요합니다.
 

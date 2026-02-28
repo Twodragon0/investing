@@ -276,53 +276,236 @@ def derive_gainers_losers_from_top(coins: List[Dict]) -> Tuple[str, str]:
 
 
 def generate_market_insight(global_data: Dict, top_coins: List[Dict], fear_greed: Dict) -> str:
-    """Generate Korean market insight summary."""
+    """Generate data-driven Korean market insight summary."""
     if not global_data and not top_coins:
         return ""
 
     mcap_change = global_data.get("market_cap_change_percentage_24h_usd", 0) if global_data else 0
     btc_dom = global_data.get("market_cap_percentage", {}).get("btc", 0) if global_data else 0
+    eth_dom = global_data.get("market_cap_percentage", {}).get("eth", 0) if global_data else 0
+    total_vol = global_data.get("total_volume", {}).get("usd", 0) if global_data else 0
+    total_mcap = global_data.get("total_market_cap", {}).get("usd", 0) if global_data else 0
     fg_value = fear_greed.get("value", 50) if fear_greed else 50
     fg_class = fear_greed.get("classification", "Neutral") if fear_greed else "Neutral"
 
-    # Determine market sentiment
-    if mcap_change > 3:
-        market_mood = "강세장이 이어지고 있습니다. 시장 전체 시가총액이 큰 폭으로 상승했습니다."
+    # Determine market sentiment with more granularity
+    if mcap_change > 5:
+        market_mood = (
+            f"24시간 시가총액 변동 **{mcap_change:+.2f}%**로 강한 상승 랠리가 진행 중입니다. "
+            "FOMO(Fear of Missing Out) 심리가 작동할 수 있으나, "
+            "급등 후 단기 조정 가능성도 염두에 두어야 합니다."
+        )
+    elif mcap_change > 3:
+        market_mood = (
+            f"24시간 변동 **{mcap_change:+.2f}%**로 뚜렷한 강세입니다. "
+            "거래량이 동반된 상승이라면 추세 지속 신호로 해석할 수 있습니다."
+        )
     elif mcap_change > 0:
-        market_mood = "소폭 상승세를 보이고 있습니다. 시장은 안정적인 흐름을 유지하고 있습니다."
+        market_mood = (
+            f"24시간 변동 **{mcap_change:+.2f}%**로 완만한 상승세입니다. "
+            "주요 저항선 돌파 여부에 따라 추가 상승 탄력이 결정됩니다."
+        )
     elif mcap_change > -3:
-        market_mood = "소폭 하락세를 보이고 있습니다. 단기 조정 구간으로 판단됩니다."
+        market_mood = (
+            f"24시간 변동 **{mcap_change:+.2f}%**로 소폭 조정 구간입니다. "
+            "기술적 지지선에서의 매수세 유입 여부를 확인해야 합니다."
+        )
+    elif mcap_change > -5:
+        market_mood = (
+            f"24시간 변동 **{mcap_change:+.2f}%**로 뚜렷한 하락세입니다. "
+            "패닉셀 징후가 없다면 저가 매수 기회가 될 수 있으나, 추가 하락 리스크를 관리하세요."
+        )
     else:
-        market_mood = "큰 하락세를 보이고 있습니다. 리스크 관리에 주의가 필요합니다."
+        market_mood = (
+            f"24시간 변동 **{mcap_change:+.2f}%**로 급락 구간입니다. "
+            "레버리지 청산과 연쇄 매도가 발생할 수 있으며, 현금 비중 확대를 고려하세요."
+        )
 
-    # BTC dominance insight
-    if btc_dom > 55:
-        btc_insight = f"BTC 도미넌스가 {btc_dom:.1f}%로 높은 수준이며, 비트코인 중심의 시장 흐름이 지속되고 있습니다."
+    # BTC dominance insight with market cycle context
+    if btc_dom > 60:
+        btc_insight = (
+            f"BTC 도미넌스 **{btc_dom:.1f}%**는 역사적 고점 수준입니다. "
+            f"비트코인으로의 자금 쏠림이 극심하며, 알트코인 시장은 유동성 부족에 직면해 있습니다."
+        )
+    elif btc_dom > 55:
+        btc_insight = (
+            f"BTC 도미넌스 **{btc_dom:.1f}%**로 비트코인 중심 흐름이 지속됩니다. "
+            f"과거 사이클에서 도미넌스 55% 이상 구간은 알트 시즌 이전 축적기에 해당하는 경우가 많았습니다."
+        )
     elif btc_dom > 45:
-        btc_insight = f"BTC 도미넌스 {btc_dom:.1f}%로 알트코인과 비트코인이 균형을 이루고 있습니다."
+        btc_insight = (
+            f"BTC 도미넌스 **{btc_dom:.1f}%**로 비트코인과 알트코인이 균형 상태입니다. "
+            f"ETH 도미넌스 {eth_dom:.1f}%와 함께 시장 자금 분배가 다변화되고 있습니다."
+        )
+    elif btc_dom > 35:
+        btc_insight = (
+            f"BTC 도미넌스 **{btc_dom:.1f}%**로 낮아져, 알트코인 시즌이 진행 중일 수 있습니다. "
+            f"다만 도미넌스 급락 구간에서는 과열 주의가 필요합니다."
+        )
     else:
-        btc_insight = f"BTC 도미넌스가 {btc_dom:.1f}%로 낮아 알트코인 시즌이 진행 중일 수 있습니다."
+        btc_insight = (
+            f"BTC 도미넌스 **{btc_dom:.1f}%**는 극단적 저점 수준입니다. "
+            f"알트코인 버블 위험이 있으며, 비트코인 회귀 시 알트 대폭락이 동반될 수 있습니다."
+        )
 
-    # Fear & Greed insight
-    fg_map = {
-        "Extreme Fear": "극도의 공포 상태로, 역발상 매수 기회가 될 수 있습니다.",
-        "Fear": "공포 상태이며, 보수적인 투자 접근이 권장됩니다.",
-        "Neutral": "중립적 상태로, 시장 방향성을 주시해야 합니다.",
-        "Greed": "탐욕 상태이며, 차익 실현을 고려해 볼 시점입니다.",
-        "Extreme Greed": "극도의 탐욕 상태로, 과열 주의가 필요합니다.",
+    # Volume/MCap ratio analysis
+    vol_mcap_note = ""
+    if total_mcap > 0 and total_vol > 0:
+        vol_ratio = total_vol / total_mcap * 100
+        if vol_ratio > 15:
+            vol_mcap_note = (
+                f"거래량/시가총액 비율 **{vol_ratio:.1f}%**로 매우 높아, "
+                "단기 투기적 거래가 활발합니다. 변동성 확대에 대비하세요."
+            )
+        elif vol_ratio > 8:
+            vol_mcap_note = (
+                f"거래량/시가총액 비율 **{vol_ratio:.1f}%**로 활발한 거래가 이루어지고 있습니다."
+            )
+        elif vol_ratio > 3:
+            vol_mcap_note = (
+                f"거래량/시가총액 비율 **{vol_ratio:.1f}%**로 정상 범위 내 거래량입니다."
+            )
+        else:
+            vol_mcap_note = (
+                f"거래량/시가총액 비율 **{vol_ratio:.1f}%**로 낮아, "
+                "시장 관심이 줄어든 상태입니다. 급격한 가격 변동 시 유동성 부족에 유의하세요."
+            )
+
+    # Fear & Greed insight with historical context
+    _FG_DETAIL = {
+        "Extreme Fear": (
+            f"극도의 공포 상태(**{fg_value}/100**)입니다. "
+            "역사적으로 F&G 지수 10~20 구간은 중장기 저점 형성과 동행한 경우가 많았습니다. "
+            "역발상 매수 관점에서 주목할 시점이나, 추가 하락 여지도 있습니다."
+        ),
+        "Fear": (
+            f"공포 상태(**{fg_value}/100**)이며, 시장 참여자들의 불안 심리가 반영되고 있습니다. "
+            "보수적 포지션 관리와 분할 매수 전략이 유효한 구간입니다."
+        ),
+        "Neutral": (
+            f"중립 상태(**{fg_value}/100**)로, 시장이 방향성을 탐색하고 있습니다. "
+            "추세 전환 신호(거래량 급증, 주요 지지/저항선 돌파)를 주시하세요."
+        ),
+        "Greed": (
+            f"탐욕 상태(**{fg_value}/100**)이며, 투자 심리가 과열되기 시작했습니다. "
+            "수익 구간에서의 부분 차익 실현과 손절매 라인 점검을 권장합니다."
+        ),
+        "Extreme Greed": (
+            f"극도의 탐욕 상태(**{fg_value}/100**)입니다. "
+            "역사적으로 F&G 지수 80 이상 구간은 단기 고점 형성 가능성이 높았습니다. "
+            "레버리지 축소와 리스크 관리를 최우선으로 고려하세요."
+        ),
     }
-    fg_insight = fg_map.get(fg_class, "시장 심리를 확인할 수 없습니다.")
+    fg_insight = _FG_DETAIL.get(
+        fg_class,
+        f"시장 심리 지수 **{fg_value}/100** ({fg_class})입니다.",
+    )
+
+    # Top coin performance analysis
+    coin_insight = ""
+    if top_coins:
+        def _get_change(c: Dict) -> float:
+            return (
+                c.get("price_change_percentage_24h")
+                or c.get("quote", {}).get("USD", {}).get("percent_change_24h", 0)
+                or 0
+            )
+
+        gainers = [c for c in top_coins[:20] if _get_change(c) > 0]
+        losers = [c for c in top_coins[:20] if _get_change(c) < 0]
+        if len(gainers) > len(losers) * 2:
+            coin_insight = (
+                f"Top 20 코인 중 **{len(gainers)}개 상승**, {len(losers)}개 하락으로 "
+                "광범위한 매수세가 유입되고 있습니다."
+            )
+        elif len(losers) > len(gainers) * 2:
+            coin_insight = (
+                f"Top 20 코인 중 {len(gainers)}개 상승, **{len(losers)}개 하락**으로 "
+                "전반적 매도 압력이 나타나고 있습니다."
+            )
+        else:
+            coin_insight = (
+                f"Top 20 코인 중 {len(gainers)}개 상승, {len(losers)}개 하락으로 "
+                "종목별 차별화가 뚜렷합니다."
+            )
+
+        # Best/worst performer highlight
+        sorted_by_ch = sorted(top_coins[:20], key=_get_change, reverse=True)
+        if sorted_by_ch:
+            best = sorted_by_ch[0]
+            worst = sorted_by_ch[-1]
+            best_name = best.get("name", "")
+            best_sym = (best.get("symbol") or "").upper()
+            best_ch = _get_change(best)
+            worst_name = worst.get("name", "")
+            worst_sym = (worst.get("symbol") or "").upper()
+            worst_ch = _get_change(worst)
+            coin_insight += (
+                f" 최고 상승은 **{best_name}**({best_sym}) {best_ch:+.2f}%, "
+                f"최대 하락은 **{worst_name}**({worst_sym}) {worst_ch:+.2f}%입니다."
+            )
+
+    # Cross-indicator signal: combined BTC dominance + F&G + market direction
+    cross_signal = ""
+    _CROSS_SIGNAL_TEMPLATES = [
+        # (mcap_up, btc_dom_high, fg_greed) -> interpretation
+        (True, True, True, (
+            "시가총액 상승 + BTC 도미넌스 강세 + 탐욕 구간이 겹치는 '비트코인 독주 과열' 패턴입니다. "
+            "알트코인 진입은 비트코인 조정 이후를 고려하는 것이 유리할 수 있습니다."
+        )),
+        (True, False, True, (
+            "시가총액 상승 + 알트코인 강세 + 탐욕 구간이 겹치는 '알트 시즌 과열' 패턴입니다. "
+            "과거 사이클에서 이 조합은 단기 고점 형성 가능성이 높았습니다."
+        )),
+        (False, True, False, (
+            "시가총액 하락에도 BTC 도미넌스가 상승하고 있어, 알트코인에서 비트코인으로의 "
+            "'안전 자산 회귀' 흐름입니다. 공포 구간과 겹쳐 바닥 탐색 중일 수 있습니다."
+        )),
+        (False, False, False, (
+            "시가총액 하락 + 도미넌스 하락 + 공포 구간이 겹치는 '전면적 이탈' 패턴입니다. "
+            "현금 비중 확대와 분할 매수 전략이 가장 유효한 구간입니다."
+        )),
+        (True, True, False, (
+            "시가총액이 상승하지만 공포 심리가 지속되어, 아직 대중이 참여하지 않은 "
+            "'초기 회복' 구간일 수 있습니다. 비트코인 중심의 신중한 접근이 유리합니다."
+        )),
+        (True, False, False, (
+            "시가총액 상승과 알트코인 강세에도 공포가 남아 있어, "
+            "'회의적 상승(Wall of Worry)' 구간입니다. 추세 확인 후 단계적 진입이 적절합니다."
+        )),
+    ]
+    mcap_up = mcap_change > 0
+    dom_high = btc_dom > 50
+    fg_greedy = fg_value > 55
+    for cond_up, cond_dom, cond_fg, text in _CROSS_SIGNAL_TEMPLATES:
+        if mcap_up == cond_up and dom_high == cond_dom and fg_greedy == cond_fg:
+            cross_signal = text
+            break
+    if not cross_signal:
+        cross_signal = (
+            f"시가총액 {mcap_change:+.2f}%, BTC 도미넌스 {btc_dom:.1f}%, "
+            f"F&G {fg_value}의 조합은 명확한 방향성보다 관망세가 적절한 구간입니다."
+        )
 
     lines = [
         "**오늘의 시장 인사이트:**\n",
-        f"암호화폐 시장은 현재 {market_mood}",
+        market_mood,
         "",
-        f"{btc_insight}",
-        "",
-        f"공포/탐욕 지수는 **{fg_value}** ({fg_class})으로, {fg_insight}",
-        "",
-        "> *본 분석은 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*",
+        btc_insight,
     ]
+    if vol_mcap_note:
+        lines.extend(["", vol_mcap_note])
+    if coin_insight:
+        lines.extend(["", coin_insight])
+    lines.extend([
+        "",
+        f"**공포/탐욕 지수**: {fg_insight}",
+        "",
+        f"**복합 신호 분석**: {cross_signal}",
+        "",
+        "> *본 분석은 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. "
+        "투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*",
+    ])
     return "\n".join(lines)
 
 

@@ -6,7 +6,7 @@ categories: [market-analysis]
 tags: [일일요약, 암호화폐, 주식, 규제, 소셜미디어, 보안, 정치인거래, 월드모니터]
 source: "consolidated"
 lang: "ko"
-description: "> BTC $67K 횡보, KOSPI 반도체 주도 강세, Fed 매파 의사록에 달러 강세·VIX 상승. 이란 핵 협상 최후통첩으로 유가 급등. 총 229건 분석."
+description: "BTC $67K 횡보, KOSPI 반도체 주도 강세, Fed 매파 의사록에 달러 강세·VIX 상승. 이란 핵 협상 최후통첩으로 유가 급등. 총 229건 분석."
 image: "/assets/images/generated/news-briefing-summary-2026-02-20.png"
 pin: true
 excerpt: "암호화폐 72건, 주식 100건, 보안 1건, 규제 6건, 소셜 미디어 26건, 월드모니터 20건, 정치인 거래 10건의 뉴스를 종합 분석한 일일 요약"

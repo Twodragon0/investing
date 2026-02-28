@@ -6,7 +6,7 @@ categories: [crypto-trading-journal]
 tags: [trading, crypto, journal, BTC, ETH]
 source: "manual"
 lang: "ko"
-description: 크립토 트레이딩 일지 작성 가이드입니다. 이 템플릿을 참고하여 일일 매매 기록을 작성하세요.
+description: "크립토 트레이딩 일지 작성 가이드입니다. 이 템플릿을 참고하여 일일 매매 기록을 작성하세요."
 image: "/assets/images/generated/news-briefing-journal-2026-02-10.png"
 ---
 
@@ -14,7 +14,6 @@ image: "/assets/images/generated/news-briefing-journal-2026-02-10.png"
 
 ## 전체 뉴스 요약
 
-- 크립토 트레이딩 일지 작성 가이드입니다. 이 템플릿을 참고하여 일일 매매 기록을 작성하세요.
 - - 진입 근거: 시장 구조, 기술적 분석, 온체인 데이터 등 - 리스크 관리: 스탑로스 설정, 포지션 사이징 - 시장 관찰: 주요 뉴스, 이벤트 등
 
 

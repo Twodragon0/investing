@@ -6,7 +6,7 @@ categories: [crypto-news]
 tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
-description: 비트코인이 15% 급락하며 한때 $61,000 아래로 떨어졌으나, 기술주 반등에 힘입어 $70,000 위로 빠르게 회복하며 극심한 변동성을 보인 하루였다. 하루 동안 26억 5,000만 달러 규모의 청산이 발생했으며, '죽음의 소용돌이' 경고부터 바닥 신호까지 엇갈린 전망이...
+description: "비트코인이 15% 급락하며 한때 $61,000 아래로 떨어졌으나, 기술주 반등에 힘입어 $70,000 위로 빠르게 회복하며 극심한 변동성을 보인 하루였다. 하루 동안 26억 5,000만 달러 규모의 청산이 발생했으며, '죽음의 소용돌이' 경고부터 바닥 신호까지 엇갈린 전망이..."
 image: "/assets/images/generated/news-briefing-crypto-2026-02-07.png"
 ---
 

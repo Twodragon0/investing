@@ -6,7 +6,7 @@ categories: [stock-news]
 tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
-description: 오늘 총 120건의 주식 시장 뉴스가 수집되었습니다. 주요 내용을 정리합니다.
+description: "오늘 총 120건의 주식 시장 뉴스가 수집되었습니다. 주요 내용을 정리합니다."
 image: "/assets/images/generated/news-briefing-stock-2026-02-11.png"
 ---
 
@@ -15,9 +15,6 @@ image: "/assets/images/generated/news-briefing-stock-2026-02-11.png"
 ## 전체 뉴스 요약
 
 - 총 **120건** 수집
-- 오늘 총 120건의 주식 시장 뉴스가 수집되었습니다. 주요 내용을 정리합니다.
-- *Alpha Vantage 데이터를 가져올 수 없습니다.*
-
 
 ## 글로벌 주식 뉴스
 
@@ -55,8 +52,6 @@ image: "/assets/images/generated/news-briefing-stock-2026-02-11.png"
 | 10 | [**코스피-코스닥 동시 하락하며 마감한 주식시장 - 네이트**](https://news.google.com/rss/articles/CBMieEFVX3lxTFB3bHR0SWhqSi1icXMycXhBTF9pbU9mVHJTb2J3YUE5andrWlhNSlhNYkdZM1E2Q2dtZllBdXN3bDBGY1ZYdmVycjhoMl9ya08tMnVQTUJ4NEpmdERha2lyeE1abzFMenFaZXVuN2xIRWYxZ3VVTFFMXw?oc=5) | Google News Stocks KR |
 
 ## 시장 데이터 스냅샷
-
-*Alpha Vantage 데이터를 가져올 수 없습니다.*
 
 ## 뉴스 요약
 - 총 수집 뉴스: 120건

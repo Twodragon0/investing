@@ -6,7 +6,7 @@ categories: [market-analysis]
 tags: [일일요약, 암호화폐, 주식, 규제, 소셜미디어, 보안, 정치인거래]
 source: "consolidated"
 lang: "ko"
-description: "> 암호화폐 67건, 주식 82건, 규제 25건, 소셜 미디어 7건, 정치인 거래 5건의 뉴스를 종합 분석한 일일 요약입니다."
+description: "암호화폐 67건, 주식 82건, 규제 25건, 소셜 미디어 7건, 정치인 거래 5건의 뉴스를 종합 분석한 일일 요약입니다."
 image: "/assets/images/generated/news-briefing-summary-2026-02-15.png"
 pin: true
 excerpt: "암호화폐 67건, 주식 82건, 규제 25건, 소셜 미디어 7건, 정치인 거래 5건의 뉴스를 종합 분석한 일일 요약"

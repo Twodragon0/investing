@@ -6,7 +6,7 @@ categories: [crypto-news]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
-description: 오늘의 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 소셜 미디어 45건, Reddit 0건, 정치·경제 135건 총 200건이 수집되었습니다.
+description: "오늘의 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 소셜 미디어 45건, Reddit 0건, 정치·경제 135건 총 200건이 수집되었습니다."
 image: "/assets/images/generated/news-briefing-social-2026-02-12.png"
 ---
 
@@ -20,7 +20,6 @@ image: "/assets/images/generated/news-briefing-social-2026-02-12.png"
 - **Reddit**: 0건
 - **정치·경제**: 135건
 - **주요 키워드**: 이재명(66), trump(52), ai(42), fed(32), bitcoin(26)
-
 
 
 ## 전체 뉴스 요약

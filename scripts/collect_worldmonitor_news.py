@@ -2,6 +2,7 @@
 """Collect worldmonitor-curated RSS feeds and generate a daily briefing post."""
 
 import os
+import re
 import sys
 import time
 from collections import Counter
@@ -437,6 +438,92 @@ def fetch_worldmonitor_feeds() -> List[Dict[str, Any]]:
     return fetch_rss_feeds_concurrent(feeds)
 
 
+def _generate_worldmonitor_summary(
+    theme_counter: Counter,
+    total_items: int,
+    top_sources: str,
+    issue_items: list,
+) -> str:
+    """Generate data-driven global intelligence summary."""
+    lines = []
+
+    # Geopolitical risk level assessment
+    security_count = theme_counter.get("지정학/안보", 0)
+    energy_count = theme_counter.get("에너지", 0)
+    market_count = theme_counter.get("금융시장", 0)
+    policy_count = theme_counter.get("정책/법률", 0)
+
+    risk_score = security_count * 3 + energy_count * 2 + policy_count
+    if risk_score > 30:
+        risk_level = "높음"
+        risk_note = "지정학적 긴장이 고조되어 안전자산(금·달러·미국채) 선호가 강화될 수 있습니다."
+    elif risk_score > 15:
+        risk_level = "보통"
+        risk_note = "안보·에너지 이슈가 산발적으로 발생하고 있어, 관련 섹터 변동성에 유의가 필요합니다."
+    elif risk_score > 5:
+        risk_level = "낮음"
+        risk_note = "지정학적 리스크가 비교적 안정적이나, 돌발 이벤트 가능성은 상존합니다."
+    else:
+        risk_level = "안정"
+        risk_note = "글로벌 안보 환경이 비교적 안정적인 상황입니다."
+
+    lines.append(
+        f"**지정학 리스크 레벨: {risk_level}** — {risk_note}"
+    )
+
+    # Theme-based analysis
+    top_3_themes = theme_counter.most_common(3)
+    if top_3_themes:
+        theme_str = ", ".join(
+            f"**{t}**({c}건)" for t, c in top_3_themes
+        )
+        lines.append(
+            f"\n핵심 테마는 {theme_str} 중심으로 전개되고 있습니다."
+        )
+
+    # Security-market cross impact
+    if security_count and market_count:
+        lines.append(
+            f"\n안보 이슈({security_count}건)와 금융시장 뉴스({market_count}건)가 동시 부각되고 있어, "
+            f"지정학적 긴장이 시장 심리에 직접 영향을 미치는 구간입니다. "
+            f"원유·금·방산 섹터 변동성에 주의가 필요합니다."
+        )
+    elif security_count:
+        lines.append(
+            f"\n안보 관련 이슈가 **{security_count}건** 포착되었습니다. "
+            f"무력 충돌·제재 확대 시 원유 공급 차질과 방산 수요 증가 가능성이 있습니다."
+        )
+
+    # Energy market impact
+    if energy_count:
+        energy_pct = energy_count / max(total_items, 1) * 100
+        lines.append(
+            f"\n에너지 이슈가 전체의 **{energy_pct:.0f}%**({energy_count}건)를 차지합니다. "
+            f"{'원유·가스 가격 변동이 인플레이션 기대에 직접 반영되므로, 중앙은행 정책 전환점에 주목해야 합니다.' if energy_pct > 20 else '에너지 가격 추이를 모니터링하며 관련 섹터 포지션을 점검하세요.'}"
+        )
+
+    # Key issue highlights (distinct titles from top items)
+    high_impact_items = [
+        item for item in issue_items if item.get("impact") == "높음"
+    ]
+    if high_impact_items:
+        lines.append(
+            f"\n**고중요도 이슈 {len(high_impact_items)}건** 중 주요 건:"
+        )
+        seen = set()
+        for item in high_impact_items[:3]:
+            title = item.get("title", "")
+            # Strip markdown link formatting for display
+            clean_title = re.sub(r"\[?\*\*(.*?)\*\*\]?\(.*?\)", r"\1", title)
+            if clean_title and clean_title not in seen:
+                seen.add(clean_title)
+                lines.append(f"- {clean_title[:100]}")
+
+    lines.append(f"\n주요 출처: {top_sources}")
+
+    return "\n".join(lines)
+
+
 def main() -> None:
     logger.info("=== Starting worldmonitor feed collection ===")
     started_at = time.monotonic()
@@ -572,10 +659,9 @@ def main() -> None:
         [
             "",
             "## 전체 뉴스 요약",
-            f"오늘 WorldMonitor 연계 소스에서 총 **{total_items}건**의 글로벌 이슈가 수집되었으며, "
-            f"핵심 테마는 **{', '.join(t for t, _ in theme_counter.most_common(3))}** 중심으로 전개되고 있습니다. "
-            f"특히 안보 관련 이슈가 **{theme_counter.get('지정학/안보', 0)}건** 포착되어 원유·금·방산 섹터 변동성에 주의가 필요하며, "
-            f"주요 출처는 {top_sources}입니다.",
+            _generate_worldmonitor_summary(
+                theme_counter, total_items, top_sources, issue_items
+            ),
             "",
             "## 이슈 분포",
             '<div class="stat-grid">',

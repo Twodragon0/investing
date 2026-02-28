@@ -7,7 +7,7 @@ tags: [market-report, crypto, top-coins, trending, daily]
 source: "CoinMarketCap"
 source_url: "https://coinmarketcap.com/"
 lang: "ko"
-description: "<div class='stat-grid'><div class='stat-item'><div class='stat-value'>$65,905</div><div class='stat-label'>BTC (-3.3%)</div></div><div class='stat-item'><div…"
+description: "$65,905BTC (-3.3%)<div…"
 ---
 
 ## 시장 시각화
@@ -85,13 +85,13 @@ BTC 도미넌스가 56.0%로 높은 수준이며, 비트코인 중심의 시장 
 
 | # | 코인 | 가격 (USD) | 24h 변동 | 7d 변동 | 시가총액 |
 |---|------|-----------|---------|--------|---------|
-| 1 | **Bitcoin** (BTC) | $65,904.92 | 🔴 -3.28% | 🔴 -1.39% | $1.32T |
-| 2 | **Ethereum** (ETH) | $1,955.13 | 🔴 -5.48% | 🟢 +1.16% | $235.97B |
+| 1 | **Bitcoin(비트코인)**None (BTC) | $65,904.92 | 🔴 -3.28% | 🔴 -1.39% | $1.32T |
+| 2 | **Ethereum(이더리움)**None (ETH) | $1,955.13 | 🔴 -5.48% | 🟢 +1.16% | $235.97B |
 | 3 | **Tether USDt** (USDT) | $1.00 | 🟢 +0.00% | 🟢 +0.03% | $183.56B |
-| 4 | **XRP** (XRP) | $1.37 | 🔴 -5.00% | 🔴 -1.59% | $83.66B |
+| 4 | **XRP(리플)**None (XRP) | $1.37 | 🔴 -5.00% | 🔴 -1.59% | $83.66B |
 | 5 | **BNB** (BNB) | $612.49 | 🔴 -2.25% | 🟢 +1.38% | $83.52B |
 | 6 | **USDC** (USDC) | $1.00 | 🟢 +0.02% | 🟢 +0.02% | $75.24B |
-| 7 | **Solana** (SOL) | $82.71 | 🔴 -5.66% | 🟢 +0.48% | $47.05B |
+| 7 | **Solana(솔라나)**None (SOL) | $82.71 | 🔴 -5.66% | 🟢 +0.48% | $47.05B |
 | 8 | **TRON** (TRX) | $0.284113 | 🔴 -0.89% | 🔴 -0.18% | $26.92B |
 | 9 | **Dogecoin** (DOGE) | $0.094408 | 🔴 -4.90% | 🔴 -2.18% | $15.95B |
 | 10 | **Cardano** (ADA) | $0.282233 | 🔴 -3.52% | 🟢 +3.92% | $10.18B |
@@ -107,5 +107,3 @@ BTC 도미넌스가 56.0%로 높은 수준이며, 비트코인 중심의 시장 
 | 20 | **World Liberty Financial USD** (USD1) | $0.999865 | 🟢 +0.04% | 🟢 +0.08% | $4.71B |
 
 ## 트렌딩 코인
-
-*트렌딩 데이터를 가져올 수 없습니다.*

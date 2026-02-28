@@ -37,7 +37,6 @@ description: "2026-02-27 암호화폐 시장에서 111건의 뉴스를 분석했
 
 - 총 **111건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
-- 2026-02-27 암호화폐 시장에서 111건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 거래소 관련 소식이 주목됩니다.
 - *총 111건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
 
 ## 테마별 주요 뉴스
@@ -63,8 +62,6 @@ description: "2026-02-27 암호화폐 시장에서 111건의 뉴스를 분석했
 
 
 ### 📈 가격/시장 (26건)
-
-*Bitcoin Miner Tied to Trump Family Pummeled by Crypto Crash*
 
 **1. [Bitcoin Miner Tied to Trump Family Pummeled by Crypto Crash](https://news.google.com/read/CBMirwFBVV95cUxPNVI3dmpUOS1OZ0ppVm1BZ1pVZVdwdG9xLTNsQ2RYVV9UTHBZWHI2R3lEUVU4Vk9PSlI4VC1uMmpHMFVZanJMb0QxSjZScDNVYmpldUhxNVIwcnNrNWZxY29HYmNCal9xWmNMR29CRFU4dnFMRWU5N2VIdmRmNEZoQ0I0V2dub3R6RnhGREltNXZvQWNRbzlfalZUWUZMWVI2ZUhTa3hiY1lFR1J0QVBr?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
@@ -145,7 +142,6 @@ Starknet revealed a Bitcoin-based asset aimed at enabling people to better maint
 </div></details>
 
 
-
 ## 거래소 공지사항
 
 **1. [New Cryptocurrency Listing](https://www.binance.com/en/support/announcement/list/48)**
@@ -166,11 +162,10 @@ Starknet revealed a Bitcoin-based asset aimed at enabling people to better maint
 
 ## 오늘의 인사이트
 
-오늘 가장 주목할 테마는 **🟠 비트코인**(52건)과 **📈 가격/시장**(26건)입니다. 두 테마가 동시에 부각되고 있어 시장의 방향성을 가늠하는 핵심 신호로 볼 수 있습니다.
-- 주요 기사: *Bitcoin Miner Tied to Trump Family Pummeled by Crypto Crash*
+오늘 가장 주목할 테마는 **🟠 비트코인**(52건)과 **📈 가격/시장**(26건)입니다. 비트코인 가격 변동이 시장 전반에 영향을 미치고 있으며, 단기 방향성에 주목할 필요가 있습니다.
 - 주요 기사: *Bitcoin Miner Tied to Trump Family Pummeled by Crypto Crash*
 
-**모니터링 키워드**: **bitcoin**(37회), **ai**(7회), **ethereum**(4회)
+**모니터링 키워드**: **bitcoin(비트코인)**(37회), **ai(인공지능)**(7회), **ethereum(이더리움)**(4회)
 
 **거래소 동향**: 공지사항 10건이 포착되었습니다. 상장/이벤트/정책 변경 등 거래소 동향은 시장 가격에 직접적 영향을 미칩니다.
 

@@ -240,45 +240,154 @@ def main():
     if theme_summary:
         content_parts.append(theme_summary)
 
-    # Regulatory insight
+    # Regulatory insight - impact analysis
     content_parts.append("\n---")
     content_parts.append("\n## 규제 인사이트\n")
     insight_lines = []
 
-    # Cross-region analysis
+    # Regulatory keyword analysis for impact assessment
+    _REG_IMPACT_KEYWORDS = {
+        "enforcement": "집행",
+        "lawsuit": "소송",
+        "fine": "벌금",
+        "ban": "금지",
+        "approval": "승인",
+        "license": "라이선스",
+        "framework": "프레임워크",
+        "compliance": "준수",
+        "consultation": "협의",
+        "guidance": "가이드라인",
+        "제재": "제재",
+        "처분": "처분",
+        "인가": "인가",
+        "허가": "허가",
+    }
+    impact_counter: Counter = Counter()
+    for item in all_items:
+        text = (item.get("title", "") + " " + item.get("description", "")).lower()
+        for kw, label in _REG_IMPACT_KEYWORDS.items():
+            if kw in text:
+                impact_counter[label] += 1
+
+    # Market impact mapping
+    _REGION_MARKET_IMPACT = {
+        "미국": "글로벌 암호화폐·주식 시장",
+        "한국": "국내 가상자산·금융 시장",
+        "아시아": "아시아-태평양 금융 시장",
+        "유럽": "EU 디지털 자산 시장",
+    }
+
+    # Cross-region analysis with impact assessment
     active_regions = []
     if us_items:
-        active_regions.append(f"미국({len(us_items)}건)")
+        active_regions.append(("미국", len(us_items)))
     if korea_items:
-        active_regions.append(f"한국({len(korea_items)}건)")
+        active_regions.append(("한국", len(korea_items)))
     if asia_items:
-        active_regions.append(f"아시아({len(asia_items)}건)")
+        active_regions.append(("아시아", len(asia_items)))
     if europe_items:
-        active_regions.append(f"유럽({len(europe_items)}건)")
+        active_regions.append(("유럽", len(europe_items)))
 
     if active_regions:
+        # Identify the most active region
+        most_active = max(active_regions, key=lambda x: x[1])
+        regions_str = ", ".join(f"{r}({c}건)" for r, c in active_regions)
         insight_lines.append(
-            f"오늘 {', '.join(active_regions)}에서 총 {len(all_items)}건의 규제 뉴스가 포착되었습니다."
+            f"오늘 {regions_str}에서 총 {len(all_items)}건의 규제 뉴스가 포착되었으며, "
+            f"**{most_active[0]}**이 가장 활발합니다."
         )
 
+    # Impact type summary
+    if impact_counter:
+        enforcement_types = ["집행", "소송", "벌금", "금지", "제재", "처분"]
+        enabling_types = ["승인", "라이선스", "인가", "허가", "프레임워크"]
+        enforce_count = sum(impact_counter.get(t, 0) for t in enforcement_types)
+        enable_count = sum(impact_counter.get(t, 0) for t in enabling_types)
+
+        if enforce_count > enable_count:
+            impact_tone = (
+                "집행·제재 성격의 규제가 우세하여, "
+                "관련 프로젝트 및 거래소의 컴플라이언스 리스크가 상승하고 있습니다."
+            )
+        elif enable_count > enforce_count:
+            impact_tone = (
+                "승인·라이선스 등 시장 참여 확대 방향의 규제가 부각되어, "
+                "제도권 진입 기대감이 형성되고 있습니다."
+            )
+        else:
+            impact_tone = (
+                "규제 강화와 시장 개방 신호가 혼재하여, "
+                "방향성 확인이 필요한 시점입니다."
+            )
+        top_impacts = ", ".join(
+            f"**{label}**({cnt}건)"
+            for label, cnt in impact_counter.most_common(4)
+        )
+        insight_lines.append(f"\n**규제 성격 분석**: {top_impacts}. {impact_tone}")
+
+    # Region-specific insights with market impact
     if us_items:
+        # Extract specific agency mentions
+        sec_count = sum(1 for i in us_items if "sec" in " ".join(i.get("tags", [])))
+        cftc_count = sum(1 for i in us_items if "cftc" in " ".join(i.get("tags", [])))
+        fed_count = sum(1 for i in us_items if "fed" in " ".join(i.get("tags", [])))
+        agency_parts = []
+        if sec_count:
+            agency_parts.append(f"SEC {sec_count}건")
+        if cftc_count:
+            agency_parts.append(f"CFTC {cftc_count}건")
+        if fed_count:
+            agency_parts.append(f"Fed {fed_count}건")
+        agency_str = f" ({', '.join(agency_parts)})" if agency_parts else ""
         insight_lines.append(
-            "\n미국 SEC·CFTC·Fed의 규제 동향은 글로벌 암호화폐·금융 시장에 직접적 영향을 미치는 핵심 지표입니다. "
-            "특히 SEC 집행 조치와 CFTC의 디지털 자산 분류 기준을 주시해야 합니다."
+            f"\n**미국**{agency_str}: "
+            f"{_REGION_MARKET_IMPACT['미국']}에 직접적 영향을 미치는 핵심 지표입니다. "
+            f"SEC 집행 조치와 CFTC의 디지털 자산 분류 기준을 주시해야 합니다."
         )
+
     if korea_items:
+        fsc_count = sum(1 for i in korea_items if "fsc" in " ".join(i.get("tags", [])))
+        kr_detail = f" (금융위 {fsc_count}건 포함)" if fsc_count else ""
         insight_lines.append(
-            "\n한국 금융위원회의 가상자산 규제 프레임워크 변화는 국내 투자자에게 직접적인 영향을 줍니다."
+            f"\n**한국**{kr_detail}: "
+            f"가상자산이용자보호법 시행 이후 규제 프레임워크 변화가 "
+            f"국내 거래소 운영과 투자자 보호에 직접적 영향을 줍니다."
         )
+
+    if asia_items:
+        insight_lines.append(
+            "\n**아시아**: 일본 FSA와 싱가포르 MAS의 라이선스 정책은 "
+            "아태 지역 디지털 자산 허브 경쟁의 핵심 변수입니다."
+        )
+
     if europe_items:
         insight_lines.append(
-            "\nEU MiCA 규제 시행에 따른 유럽 시장 재편이 진행 중이며, FCA의 영국 독자 규제 노선도 관찰해야 합니다."
+            "\n**유럽**: MiCA 규제 본격 시행에 따라 스테이블코인·거래소 등록 요건이 "
+            "강화되고 있으며, 글로벌 규제 표준 형성에 영향을 미칩니다."
         )
+
+    # Regional trend summary
+    if len(active_regions) >= 2:
+        trend_note = ""
+        if all(r[1] >= 3 for r in active_regions):
+            trend_note = (
+                "다수 지역에서 동시에 규제 논의가 활발한 것은 "
+                "글로벌 규제 동조화 경향을 시사합니다."
+            )
+        else:
+            dominant = max(active_regions, key=lambda x: x[1])
+            trend_note = (
+                f"**{dominant[0]}** 중심의 규제 이벤트가 다른 지역의 "
+                f"후속 정책에 영향을 줄 수 있습니다."
+            )
+        insight_lines.append(f"\n**지역별 트렌드**: {trend_note}")
+
     if not insight_lines:
         insight_lines.append("현재 수집된 규제 뉴스가 제한적입니다.")
     insight_lines.append("")
     insight_lines.append(
-        "> *본 규제 동향 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 법률 자문이 아닙니다. 규제 관련 의사결정은 전문가와 상담하시기 바랍니다.*"
+        "> *본 규제 동향 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, "
+        "법률 자문이 아닙니다. 규제 관련 의사결정은 전문가와 상담하시기 바랍니다.*"
     )
     content_parts.extend(insight_lines)
 

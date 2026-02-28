@@ -15,7 +15,6 @@ image: "/assets/images/generated/news-briefing-cryptomarket-2026-02-11.png"
 
 ## 전체 뉴스 요약
 
-- 총 시가총액: $2.36T (🔴 -2.27%)
 - 24시간 거래량: $113.94B
 
 
@@ -39,13 +38,13 @@ image: "/assets/images/generated/news-briefing-cryptomarket-2026-02-11.png"
 
 | # | 코인 | 가격 (USD) | 24h 변동 | 7d 변동 | 시가총액 |
 |---|------|-----------|---------|--------|---------|
-| 1 | **Bitcoin** (BTC) | $67,058.00 | 🔴 -3.08% | 🔴 -11.96% | $1.34T |
-| 2 | **Ethereum** (ETH) | $1,957.48 | 🔴 -4.04% | 🔴 -13.46% | $236.19B |
+| 1 | **Bitcoin(비트코인)**None (BTC) | $67,058.00 | 🔴 -3.08% | 🔴 -11.96% | $1.34T |
+| 2 | **Ethereum(이더리움)**None (ETH) | $1,957.48 | 🔴 -4.04% | 🔴 -13.46% | $236.19B |
 | 3 | **Tether** (USDT) | $0.999434 | 🔴 -0.00% | 🟢 +0.07% | $184.29B |
-| 4 | **XRP** (XRP) | $1.37 | 🔴 -4.39% | 🔴 -13.49% | $83.47B |
+| 4 | **XRP(리플)**None (XRP) | $1.37 | 🔴 -4.39% | 🔴 -13.49% | $83.47B |
 | 5 | **BNB** (BNB) | $601.98 | 🔴 -5.14% | 🔴 -20.24% | $82.21B |
 | 6 | **USDC** (USDC) | $0.999936 | 🟢 +0.01% | 🟢 +0.03% | $73.28B |
-| 7 | **Solana** (SOL) | $81.39 | 🔴 -4.71% | 🔴 -16.18% | $46.15B |
+| 7 | **Solana(솔라나)**None (SOL) | $81.39 | 🔴 -4.71% | 🔴 -16.18% | $46.15B |
 | 8 | **TRON** (TRX) | $0.274585 | 🔴 -1.12% | 🔴 -4.11% | $26.01B |
 | 9 | **Figure Heloc** (FIGR_HELOC) | $1.03 | 🔴 -0.20% | 🔴 -0.32% | $15.55B |
 | 10 | **Dogecoin** (DOGE) | $0.091126 | 🔴 -3.39% | 🔴 -15.29% | $15.36B |
@@ -65,13 +64,13 @@ image: "/assets/images/generated/news-briefing-cryptomarket-2026-02-11.png"
 **현재 가장 주목받는 코인들:**
 
 1. **LayerZero** (ZRO) — 시가총액 순위 #99
-2. **Bitcoin** (BTC) — 시가총액 순위 #1
+2. **Bitcoin(비트코인)**None (BTC) — 시가총액 순위 #1
 3. **Sui** (SUI) — 시가총액 순위 #31
 4. **Pudgy Penguins** (PENGU) — 시가총액 순위 #115
 5. **Zama** (ZAMA) — 시가총액 순위 #464
-6. **Solana** (SOL) — 시가총액 순위 #7
+6. **Solana(솔라나)**None (SOL) — 시가총액 순위 #7
 7. **Aster** (ASTER) — 시가총액 순위 #45
-8. **Ethereum** (ETH) — 시가총액 순위 #2
+8. **Ethereum(이더리움)**None (ETH) — 시가총액 순위 #2
 9. **Monad** (MON) — 시가총액 순위 #168
 10. **Hyperliquid** (HYPE) — 시가총액 순위 #16
 
@@ -89,10 +88,10 @@ image: "/assets/images/generated/news-briefing-cryptomarket-2026-02-11.png"
 
 | 코인 | 가격 | 24h 변동 |
 |------|------|---------|
-| **Ethereum** (ETH) | $1,957.48 | 🔴 -4.04% |
-| **XRP** (XRP) | $1.37 | 🔴 -4.39% |
+| **Ethereum(이더리움)**None (ETH) | $1,957.48 | 🔴 -4.04% |
+| **XRP(리플)**None (XRP) | $1.37 | 🔴 -4.39% |
 | **Sui** (SUI) | $0.901143 | 🔴 -4.47% |
-| **Solana** (SOL) | $81.39 | 🔴 -4.71% |
+| **Solana(솔라나)**None (SOL) | $81.39 | 🔴 -4.71% |
 | **BNB** (BNB) | $601.98 | 🔴 -5.14% |
 
 ---

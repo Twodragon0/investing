@@ -618,44 +618,191 @@ def main():
                 if shown_exchange >= 10:
                     break
 
-        # Insight section - theme-based cross-analysis
+        # Insight section - data-driven cross-analysis
         content_parts.append("\n## 오늘의 인사이트\n")
         insight_lines = []
 
-        # Top themes cross-analysis with narrative
+        # Extract price mentions from titles for concrete analysis
+        price_mentions = []
+        listing_mentions = []
+        delisting_mentions = []
+        for item in all_items:
+            title_lower = item.get("title", "").lower()
+            # Extract BTC/ETH price references
+            price_match = re.findall(
+                r"\$[\d,]+(?:\.\d+)?[kKmMbB]?", item.get("title", "")
+            )
+            if price_match:
+                price_mentions.extend(price_match)
+            # Detect listing/delisting announcements
+            if any(kw in title_lower for kw in ["listing", "상장", "list"]):
+                if "delist" not in title_lower and "상장폐지" not in title_lower:
+                    listing_mentions.append(item.get("title", "")[:80])
+            if any(kw in title_lower for kw in ["delist", "상장폐지"]):
+                delisting_mentions.append(item.get("title", "")[:80])
+
+        # Theme cross-analysis with diverse templates
+        _CROSS_TEMPLATES = [
+            (
+                "규제/정책",
+                "비트코인",
+                "규제 논의와 비트코인 움직임이 동시에 포착되어, 정책 방향에 따른 가격 변동 가능성이 높습니다.",
+            ),
+            (
+                "비트코인",
+                "가격/시장",
+                "비트코인 관련 뉴스와 시장 가격 움직임이 함께 부각되어, 단기 변동성 확대 구간에 진입한 것으로 보입니다.",
+            ),
+            (
+                "DeFi",
+                "이더리움",
+                "DeFi 프로토콜과 이더리움 생태계가 동시에 주목받고 있어, L2 확장 및 TVL 변동에 유의해야 합니다.",
+            ),
+            (
+                "거래소",
+                "가격/시장",
+                "거래소 관련 소식과 시장 가격 변동이 맞물려 있어, 상장·이벤트에 따른 거래량 변화를 주시해야 합니다.",
+            ),
+            (
+                "보안/해킹",
+                "DeFi",
+                "보안 사고와 DeFi 프로토콜 이슈가 함께 보고되어, 스마트 컨트랙트 리스크 점검이 필요한 시점입니다.",
+            ),
+            (
+                "AI/기술",
+                "비트코인",
+                "AI·기술 혁신과 비트코인이 함께 부각되어, 기술 기반 시장 내러티브가 형성되고 있습니다.",
+            ),
+            (
+                "정치/정책",
+                "매크로/금리",
+                "정치적 이벤트와 금리·매크로 지표가 동시에 움직여, 글로벌 유동성 변화에 따른 자산 재배치 가능성이 있습니다.",
+            ),
+            (
+                "NFT/Web3",
+                "이더리움",
+                "NFT/Web3 활동과 이더리움 생태계 소식이 겹치며, 가스비 변동과 신규 프로젝트 론칭에 주목해야 합니다.",
+            ),
+        ]
+
         if top_themes and len(top_themes) >= 2:
             t1_name, t1_key, t1_emoji, t1_count = top_themes[0]
             t2_name, t2_key, t2_emoji, t2_count = top_themes[1]
+
+            # Find matching cross-analysis template
+            cross_text = None
+            for tpl_a, tpl_b, tpl_text in _CROSS_TEMPLATES:
+                if (t1_name == tpl_a and t2_name == tpl_b) or (
+                    t1_name == tpl_b and t2_name == tpl_a
+                ):
+                    cross_text = tpl_text
+                    break
+
+            if not cross_text:
+                # Concentration-based analysis
+                total_themed = t1_count + t2_count
+                concentration = total_themed / max(len(all_items), 1) * 100
+                if concentration > 60:
+                    cross_text = (
+                        f"전체 뉴스의 {concentration:.0f}%가 이 두 테마에 집중되어 있어, "
+                        f"시장 참여자들의 관심이 뚜렷하게 쏠리고 있습니다."
+                    )
+                elif concentration > 40:
+                    cross_text = (
+                        f"두 테마가 전체의 {concentration:.0f}%를 차지하며 "
+                        f"오늘 시장의 주요 서사를 형성하고 있습니다."
+                    )
+                else:
+                    cross_text = (
+                        "다양한 테마가 분산되어 있지만, "
+                        "이 두 테마의 교차점에서 투자 기회나 리스크 신호가 나타날 수 있습니다."
+                    )
+
             insight_lines.append(
-                f"오늘 가장 주목할 테마는 **{t1_emoji} {t1_name}**({t1_count}건)과 "
-                f"**{t2_emoji} {t2_name}**({t2_count}건)입니다. "
-                f"두 테마가 동시에 부각되고 있어 시장의 방향성을 가늠하는 핵심 신호로 볼 수 있습니다."
+                f"**{t1_emoji} {t1_name}**({t1_count}건)과 "
+                f"**{t2_emoji} {t2_name}**({t2_count}건)이 오늘의 핵심 테마입니다. "
+                f"{cross_text}"
             )
-            # Add top article snippet for context
+            # Add distinct top articles (avoid repeating same title)
+            seen_insight_titles: set = set()
             for theme_key in [t1_key, t2_key]:
                 articles = summarizer._theme_articles.get(theme_key, [])
-                if articles:
-                    top_title = articles[0].get("title", "")
-                    if top_title:
+                for art in articles:
+                    top_title = art.get("title", "")
+                    if top_title and top_title not in seen_insight_titles:
+                        seen_insight_titles.add(top_title)
                         insight_lines.append(f"- 주요 기사: *{top_title[:100]}*")
+                        break
         elif top_themes:
             t = top_themes[0]
-            insight_lines.append(f"오늘 가장 주목할 테마는 **{t[2]} {t[0]}**({t[3]}건)입니다.")
+            ratio = t[3] / max(len(all_items), 1) * 100
+            insight_lines.append(
+                f"**{t[2]} {t[0]}** 테마가 {t[3]}건(전체의 {ratio:.0f}%)으로 "
+                f"오늘 시장 논의를 주도하고 있습니다."
+            )
         else:
             insight_lines.append(
-                f"오늘 총 {len(all_items)}건의 뉴스가 {len(source_counter)}개 출처에서 수집되었습니다."
+                f"오늘 {len(source_counter)}개 출처에서 {len(all_items)}건의 뉴스가 "
+                f"수집되었으나 뚜렷한 테마 집중은 관찰되지 않았습니다."
             )
 
-        # Keyword monitoring with context
-        if top_keywords:
-            monitoring_kws = ", ".join(f"**{kw}**({cnt}회)" for kw, cnt in top_keywords[:3])
-            insight_lines.append(f"\n**모니터링 키워드**: {monitoring_kws}")
-
-        # Exchange activity connection
-        if exchange_rows:
+        # Price mentions analysis
+        if price_mentions:
             insight_lines.append(
-                f"\n**거래소 동향**: 공지사항 {len(exchange_rows)}건이 포착되었습니다. "
-                f"상장/이벤트/정책 변경 등 거래소 동향은 시장 가격에 직접적 영향을 미칩니다."
+                f"\n**가격 언급**: 뉴스 제목에서 {len(price_mentions)}건의 가격 데이터가 포착되었습니다"
+                f" ({', '.join(price_mentions[:5])}). 구체적 가격대가 언급되는 것은 "
+                f"시장의 가격 민감도가 높다는 신호입니다."
+            )
+
+        # Keyword monitoring with trend context
+        if top_keywords:
+            monitoring_kws = ", ".join(
+                f"**{kw}**({cnt}회)" for kw, cnt in top_keywords[:3]
+            )
+            top_kw = top_keywords[0][0]
+            kw_context_map = {
+                "bitcoin": "BTC 가격 및 네트워크 활동이 시장의 중심 화두",
+                "ethereum": "이더리움 생태계 변화에 대한 관심 집중",
+                "regulation": "규제 환경 변화에 대한 경계감 상승",
+                "etf": "ETF 관련 자금 유입/유출이 가격에 직접 영향",
+                "defi": "DeFi 프로토콜 TVL 및 수익률 변동 주시 필요",
+                "ai": "AI 관련 토큰 및 프로젝트에 대한 투자 관심 확대",
+                "nft": "NFT 시장 거래량 변화 모니터링 권장",
+            }
+            kw_context = kw_context_map.get(
+                top_kw, f"'{top_kw}' 키워드가 다수 등장하여 관련 자산 변동에 유의"
+            )
+            insight_lines.append(
+                f"\n**모니터링 키워드**: {monitoring_kws} — {kw_context}입니다."
+            )
+
+        # Listing/delisting highlights
+        if listing_mentions:
+            insight_lines.append(
+                f"\n**신규 상장**: {len(listing_mentions)}건의 상장 관련 소식이 포착되었습니다. "
+                f"신규 상장은 단기 거래량 급증과 가격 변동성을 동반하는 경우가 많습니다."
+            )
+        if delisting_mentions:
+            insight_lines.append(
+                f"\n**상장폐지 주의**: {len(delisting_mentions)}건의 상장폐지 관련 소식이 있습니다. "
+                f"보유 자산 점검이 필요합니다."
+            )
+
+        # Exchange activity with specific analysis
+        if exchange_rows:
+            exchange_sources = Counter(
+                row.get("source", "") for row in exchange_rows
+            )
+            top_exchange = exchange_sources.most_common(1)
+            ex_detail = (
+                f" (가장 활발: {top_exchange[0][0]} {top_exchange[0][1]}건)"
+                if top_exchange
+                else ""
+            )
+            insight_lines.append(
+                f"\n**거래소 동향**: 공지사항 {len(exchange_rows)}건{ex_detail}. "
+                f"거래소별 정책 변경, 신규 서비스, 수수료 조정 등은 "
+                f"트레이딩 전략에 직접적 영향을 미칩니다."
             )
 
         insight_lines.append("")

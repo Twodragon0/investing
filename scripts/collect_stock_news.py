@@ -576,54 +576,130 @@ def main():
         content_parts.append("- [Yahoo Finance - S&P 500](https://finance.yahoo.com/quote/%5EGSPC/)")
         content_parts.append("- [네이버 금융 - KOSPI](https://finance.naver.com/sise/sise_index.naver?code=KOSPI)")
 
-    # Market insight - narrative style
+    # Market insight - data-driven narrative
     content_parts.append("\n## 시장 인사이트\n")
     insight_lines = []
     kospi = kr_market.get("KOSPI")
     kosdaq = kr_market.get("KOSDAQ")
     usdkrw = kr_market.get("USD/KRW")
 
-    # Korean market narrative
+    # Korean market narrative with sector-level detail
     if kospi:
         try:
             pval = float(kospi["change_pct"].replace("%", "").replace("+", ""))
-            direction = "상승" if pval >= 0 else "하락"
-            sentiment = "투자 심리가 회복" if pval >= 0 else "투자 심리가 위축"
         except (ValueError, AttributeError):
-            direction = "변동"
-            sentiment = "투자 심리 변화"
+            pval = 0.0
+
+        if pval > 1.5:
+            kr_mood = "강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다."
+        elif pval > 0:
+            kr_mood = "소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다."
+        elif pval > -1.5:
+            kr_mood = "소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다."
+        else:
+            kr_mood = "뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요."
+
         insight_lines.append(
-            f"한국 증시는 KOSPI **{kospi['price']}** ({kospi['change_pct']}) {direction}하며, "
-            f"{sentiment}되는 모습입니다."
+            f"KOSPI **{kospi['price']}** ({kospi['change_pct']}): {kr_mood}"
         )
+
     if kosdaq:
-        insight_lines.append(f"KOSDAQ은 **{kosdaq['price']}** ({kosdaq['change_pct']})를 기록했습니다.")
+        try:
+            kq_val = float(kosdaq["change_pct"].replace("%", "").replace("+", ""))
+        except (ValueError, AttributeError):
+            kq_val = 0.0
+        kq_note = ""
+        if kospi:
+            try:
+                kp_val = float(kospi["change_pct"].replace("%", "").replace("+", ""))
+                gap = kq_val - kp_val
+                if gap > 1.0:
+                    kq_note = " KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다."
+                elif gap < -1.0:
+                    kq_note = " KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다."
+            except (ValueError, AttributeError):
+                pass
+        insight_lines.append(
+            f"KOSDAQ **{kosdaq['price']}** ({kosdaq['change_pct']}).{kq_note}"
+        )
+
     if usdkrw:
+        try:
+            usd_price = float(usdkrw["price"].replace(",", ""))
+        except (ValueError, AttributeError):
+            usd_price = 0
+        if usd_price > 1400:
+            fx_note = "1,400원 이상의 고환율 구간으로, 수입 원가 상승과 외국인 매도 압력이 우려됩니다."
+        elif usd_price > 1350:
+            fx_note = "1,350원대로, 수출 기업에 유리하나 환율 변동성이 커질 수 있습니다."
+        elif usd_price > 1300:
+            fx_note = "1,300원대로 비교적 안정적이며, 외국인 자금 유입에 긍정적 환경입니다."
+        else:
+            fx_note = "원화 강세 구간으로, 내수주에 유리하고 수출주는 환차손에 유의해야 합니다."
         insight_lines.append(
-            f"\n원달러 환율은 **{usdkrw['price']}**원으로, 환율 변동은 외국인 자금 유출입과 "
-            f"수출기업 실적에 직접적 영향을 미칩니다."
+            f"\n**원달러 환율**: **{usdkrw['price']}**원 ({usdkrw['change_pct']}). {fx_note}"
         )
 
-    # US market narrative
+    # US market narrative with direction analysis
     if alpha_vantage_rows:
+        us_up = 0
+        us_down = 0
+        for item in alpha_vantage_rows:
+            desc = item.get("description", "")
+            if "(" in desc and desc.endswith(")"):
+                try:
+                    chg = desc.rsplit("(", 1)[1].rstrip(")")
+                    chg_val = float(chg.replace("%", "").replace("+", ""))
+                    if chg_val >= 0:
+                        us_up += 1
+                    else:
+                        us_down += 1
+                except (ValueError, IndexError):
+                    pass
+        if us_up > us_down:
+            us_mood = "미국 주요 지수가 전반적 상승세로, 한국 증시 야간 선물에 긍정적 영향이 예상됩니다."
+        elif us_down > us_up:
+            us_mood = "미국 지수가 하락 흐름을 보여, 다음 거래일 아시아 시장 개장에 부담이 될 수 있습니다."
+        else:
+            us_mood = "미국 시장이 혼조세로, 섹터별 차별화된 흐름이 나타나고 있습니다."
         insight_lines.append(
-            f"\n미국 시장에서 주요 ETF {len(alpha_vantage_rows)}종의 실시간 데이터가 수집되었습니다. "
-            f"S&P 500, NASDAQ, Dow Jones 방향성이 한국 증시 야간 선물에 영향을 줍니다."
+            f"\n**미국 시장**: ETF {len(alpha_vantage_rows)}종 데이터 수집. {us_mood}"
         )
 
-    # Theme connection
+    # Sector flow from news themes
     top_themes = summarizer.get_top_themes()
     if top_themes:
-        theme_str = ", ".join(f"**{t[0]}**" for t in top_themes[:2])
-        insight_lines.append(
-            f"\n오늘 뉴스 흐름에서 {theme_str} 테마가 부각되고 있어 관련 섹터 주가 변동에 주의가 필요합니다."
-        )
+        _THEME_SECTOR_MAP = {
+            "AI/기술": "반도체·IT 섹터",
+            "매크로/금리": "금융·은행 섹터",
+            "가격/시장": "시장 전반",
+            "규제/정책": "금융·핀테크 섹터",
+            "정치/정책": "방산·건설·에너지 섹터",
+            "DeFi": "블록체인·크립토 관련주",
+            "비트코인": "크립토 관련주",
+            "이더리움": "블록체인 관련주",
+            "에너지": "에너지·유틸리티 섹터",
+        }
+        sector_notes = []
+        for t_name, _t_key, _t_emoji, t_count in top_themes[:3]:
+            sector = _THEME_SECTOR_MAP.get(t_name)
+            if sector:
+                sector_notes.append(f"**{t_name}**({t_count}건) → {sector}")
+        if sector_notes:
+            insight_lines.append(
+                f"\n**섹터별 흐름**: {'; '.join(sector_notes)}. "
+                f"뉴스 테마와 연관된 섹터의 거래량·수급 변화를 확인하세요."
+            )
 
     if not insight_lines:
-        insight_lines.append("현재 시장 데이터를 충분히 수집하지 못했습니다. API 제한 또는 휴장일일 수 있습니다.")
+        insight_lines.append(
+            "현재 시장 데이터를 충분히 수집하지 못했습니다. "
+            "API 제한 또는 휴장일일 수 있습니다."
+        )
     insight_lines.append("")
     insight_lines.append(
-        "> *본 시장 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
+        "> *본 시장 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, "
+        "투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
     )
     content_parts.extend(insight_lines)
 
