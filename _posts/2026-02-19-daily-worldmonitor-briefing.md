@@ -38,7 +38,7 @@ image: "/assets/images/generated/news-briefing-worldmonitor-2026-02-19.png"
 
 ## 주요 이슈
 
-| # | 이슈 | 테마 | 시장 영향 | 출처 |
+| 순번 | 주요 이슈 | 테마 | 시장 영향 | 출처 |
 | :---: | --- | :---: | :---: | --- |
 | 1 | [**Hamas is reasserting control in Gaza despite its heavy losses fighting Israel**](https://www.bbc.com/news/articles/c98g1klxnpxo?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
 | 2 | [**US to withdraw troops from Syria as tensions mount with Iran**](https://www.bbc.com/news/articles/c875pey8vy2o?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |

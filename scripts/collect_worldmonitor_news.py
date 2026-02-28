@@ -773,7 +773,7 @@ def main() -> None:
             "## 주요 이슈",
             "",
             markdown_table(
-                ["#", "이슈", "테마", "중요도", "출처"],
+                ["순번", "주요 이슈", "테마", "중요도", "출처"],
                 rows,
                 aligns=["center", "left", "center", "center", "left"],
             ),

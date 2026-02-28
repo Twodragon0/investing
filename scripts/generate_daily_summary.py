@@ -1607,7 +1607,7 @@ def main():
     if report_rows:
         content_parts.append(
             markdown_table(
-                ["리포트", "수집 건수", "링크"],
+                ["카테고리", "건수", "상세 보기"],
                 report_rows,
                 aligns=["left", "center", "left"],
             )

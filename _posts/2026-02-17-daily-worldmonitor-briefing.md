@@ -39,7 +39,7 @@ image: "/assets/images/generated/news-briefing-worldmonitor-2026-02-17.png"
 
 ## 주요 이슈
 
-| # | 이슈 | 테마 | 시장 영향 | 출처 |
+| 순번 | 주요 이슈 | 테마 | 시장 영향 | 출처 |
 | :---: | --- | :---: | :---: | --- |
 | 1 | [**US build-up of warships and fighter jets tracked near Iran**](https://www.bbc.com/news/articles/c1d64p3q2d0o?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
 | 2 | [**Trump's new world order has become real and Europe is having to adjust fast**](https://www.bbc.com/news/articles/cddn002g6qzo?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |

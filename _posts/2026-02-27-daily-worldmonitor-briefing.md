@@ -42,7 +42,7 @@ description: "2026-02-27 기준 WorldMonitor 연계 소스에서 글로벌 이�
 
 ## 주요 이슈
 
-| # | 이슈 | 테마 | 중요도 | 출처 |
+| 순번 | 주요 이슈 | 테마 | 중요도 | 출처 |
 | :---: | --- | :---: | :---: | --- |
 | 1 | [**Netflix ditches deal for Warner Bros. Discovery after Paramount’s offer is deemed superior**](https://www.cnbc.com/2026/02/26/warner-bros-discovery-paramount-skydance-deal-superior-netflix.html) | 지정학/안보 | 높음 | WorldMonitor/CNBC |
 | 2 | [**U.S. and Iran wrap up 'most intense' nuclear talks with no deal — more negotiations ahead**](https://www.cnbc.com/2026/02/27/us-iran-nuclear-talks-oil-middle-east.html) | 지정학/안보 | 높음 | WorldMonitor/CNBC |

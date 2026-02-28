@@ -51,7 +51,7 @@ image: "/assets/images/generated/news-briefing-worldmonitor-2026-02-23.png"
 
 ## 주요 이슈
 
-| # | 이슈 | 테마 | 시장 영향 | 출처 |
+| 순번 | 주요 이슈 | 테마 | 시장 영향 | 출처 |
 | :---: | --- | :---: | :---: | --- |
 | 1 | [**Trump demands Netflix fire Susan Rice as DOJ probes Warner deal**](https://www.cnbc.com/2026/02/22/trump-demands-netflix-fire-susan-rice-as-doj-probes-warner-deal.html) | 지정학/안보 | 높음 | WorldMonitor/CNBC |
 | 2 | [**Russia-Ukraine war: List of key events, day 1,460**](https://www.aljazeera.com/news/2026/2/23/russia-ukraine-war-list-of-key-events-day-1460?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |

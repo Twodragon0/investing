@@ -34,7 +34,7 @@ image: "/assets/images/generated/news-briefing-worldmonitor-2026-02-22.png"
 
 ## 주요 이슈
 
-| # | 이슈 | 테마 | 시장 영향 | 출처 |
+| 순번 | 주요 이슈 | 테마 | 시장 영향 | 출처 |
 | :---: | --- | :---: | :---: | --- |
 | 1 | [**Trump says he's considering limited military strike against Iran**](https://www.cnbc.com/2026/02/20/trump-says-hes-considering-limited-military-strike-against-iran.html) | 지정학/안보 | 높음 | WorldMonitor/CNBC |
 | 2 | [**Iran students stage first large anti-government protests since deadly crackdown**](https://www.bbc.com/news/articles/c5yj2kzkrj0o?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |

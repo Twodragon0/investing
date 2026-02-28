@@ -41,7 +41,7 @@ description: "2026-02-26 기준 WorldMonitor 연계 소스에서 글로벌 이�
 
 ## 주요 이슈
 
-| # | 이슈 | 테마 | 중요도 | 출처 |
+| 순번 | 주요 이슈 | 테마 | 중요도 | 출처 |
 | :---: | --- | :---: | :---: | --- |
 | 1 | [**'Fear is everywhere': BBC reports from Mexican city turned into war zone by drug cartel feud**](https://www.bbc.com/news/articles/cx2g3vmde0eo?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
 | 2 | [**Trump keeps world waiting on his plans for Iran after State of the Union**](https://www.bbc.com/news/articles/cge821xwyz8o?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
