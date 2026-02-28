@@ -298,6 +298,8 @@ def main():
         )
 
     # Impact type summary
+    enforce_count = 0
+    enable_count = 0
     if impact_counter:
         enforcement_types = ["집행", "소송", "벌금", "금지", "제재", "처분"]
         enabling_types = ["승인", "라이선스", "인가", "허가", "프레임워크"]
