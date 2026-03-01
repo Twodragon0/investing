@@ -246,6 +246,7 @@ def main():
         return
 
     all_items = congress_items + sec_items + trump_items + korea_items + central_bank_items
+    pre_dedup_count = len(all_items)
 
     # Deduplicate individual items
     unique_items = []
@@ -254,9 +255,15 @@ def main():
             unique_items.append(item)
 
     total_count = len(unique_items)
+    logger.info(
+        "Dedup filter: %d items -> %d unique (%d removed)",
+        pre_dedup_count,
+        total_count,
+        pre_dedup_count - total_count,
+    )
 
     if total_count == 0:
-        logger.warning("No political trades items collected, skipping post")
+        logger.warning("No political trades items after dedup (pre-dedup: %d), skipping post", pre_dedup_count)
         log_collection_summary(
             logger,
             collector="collect_political_trades",

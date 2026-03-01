@@ -30,10 +30,30 @@ from common.summarizer import ThemeSummarizer
 logger = setup_logging("generate_daily_summary")
 
 
+_HTML_TAG_RE = re.compile(r"<[^>]+>")
+_HTML_BLOCK_RE = re.compile(r"<div\b[^>]*>.*?</div>", re.DOTALL)
+
+
+def strip_html_tags(text: str) -> str:
+    """Remove HTML tags from text, preserving readable content."""
+    # Remove entire HTML block elements (div, details, summary) first
+    text = re.sub(r"<details[^>]*>.*?</details>", "", text, flags=re.DOTALL)
+    text = _HTML_BLOCK_RE.sub("", text)
+    # Remove remaining inline tags
+    text = _HTML_TAG_RE.sub("", text)
+    # Collapse multiple blank lines
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
+
+
 def read_post_content(filepath: str) -> Dict[str, Any]:
     """Read a Jekyll post and parse frontmatter + content."""
-    with open(filepath, encoding="utf-8") as f:
-        text = f.read()
+    try:
+        with open(filepath, encoding="utf-8") as f:
+            text = f.read()
+    except OSError as e:
+        logger.warning("Failed to read post %s: %s", filepath, e)
+        return {"frontmatter": {}, "content": "", "filepath": filepath}
 
     # Parse frontmatter
     parts = text.split("---", 2)
@@ -50,6 +70,9 @@ def read_post_content(filepath: str) -> Dict[str, Any]:
             key = key.strip()
             value = value.strip().strip('"').strip("'")
             frontmatter[key] = value
+
+    # Strip HTML tags from content for clean markdown extraction
+    content = strip_html_tags(content)
 
     return {
         "frontmatter": frontmatter,

@@ -12,7 +12,7 @@ import os
 import re
 from datetime import UTC, datetime, timedelta
 from difflib import SequenceMatcher
-from typing import Dict, List
+from typing import Dict, List, Union
 
 logger = logging.getLogger(__name__)
 
@@ -38,11 +38,14 @@ def _make_hash(title: str, source: str, date_str: str) -> str:
 class DedupEngine:
     """Deduplication engine with JSON state persistence."""
 
+    SAME_DAY_THRESHOLD = 0.80
+    CROSS_DAY_THRESHOLD = 0.95
+
     def __init__(self, state_file: str, max_age_days: int = 30):
         self.state_path = os.path.join(STATE_DIR, state_file)
         self.max_age_days = max_age_days
         self.seen: Dict[str, str] = {}  # hash -> timestamp
-        self.titles: List[str] = []  # for fuzzy matching
+        self.titles: List[List[str]] = []  # [[normalized_title, date_str], ...]
         self._load()
 
     def _load(self) -> None:
@@ -52,7 +55,12 @@ class DedupEngine:
                 with open(self.state_path, encoding="utf-8") as f:
                     data = json.load(f)
                 self.seen = data.get("seen", {})
-                self.titles = data.get("titles", [])
+                raw_titles: List[Union[str, List[str]]] = data.get("titles", [])
+                # Backward compatibility: convert old plain strings to [title, ""] pairs
+                self.titles = [
+                    entry if isinstance(entry, list) and len(entry) == 2 else [entry, ""]
+                    for entry in raw_titles
+                ]
                 self._prune()
             except (json.JSONDecodeError, KeyError, OSError):
                 logger.warning("Corrupt state file %s, resetting", self.state_path)
@@ -93,7 +101,9 @@ class DedupEngine:
     def is_duplicate(self, title: str, source: str, date_str: str) -> bool:
         """Check if a news item is a duplicate.
 
-        Uses exact hash match first, then fuzzy title matching (>80% similarity).
+        Uses exact hash match first, then date-aware fuzzy title matching:
+        - Same-day comparisons use 0.80 threshold (catch rephrased duplicates)
+        - Cross-day comparisons use 0.95 threshold (only catch near-identical titles)
         """
         if not title or not title.strip():
             return True
@@ -103,13 +113,24 @@ class DedupEngine:
         if h in self.seen:
             return True
 
-        # Fuzzy matching against recent titles
+        # Date-aware fuzzy matching against recent titles
         normalized_title = _normalize(title)
-        for existing_title in self.titles[-500:]:
+        current_date = date_str[:10]
+        for entry in self.titles[-500:]:
+            existing_title = entry[0] if isinstance(entry, list) else entry
+            existing_date = entry[1] if isinstance(entry, list) and len(entry) > 1 else ""
+            # Use stricter threshold for cross-day comparison
+            threshold = (
+                self.SAME_DAY_THRESHOLD
+                if existing_date == current_date
+                else self.CROSS_DAY_THRESHOLD
+            )
             ratio = SequenceMatcher(None, normalized_title, existing_title).ratio()
-            if ratio > 0.80:
+            if ratio > threshold:
                 logger.debug(
-                    "Fuzzy duplicate: %.2f '%s' ~ '%s'",
+                    "Fuzzy duplicate (threshold=%.2f, %s): %.2f '%s' ~ '%s'",
+                    threshold,
+                    "same-day" if existing_date == current_date else "cross-day",
                     ratio,
                     title[:50],
                     existing_title[:50],
@@ -134,4 +155,4 @@ class DedupEngine:
         """Mark a news item as seen."""
         h = _make_hash(title, source, date_str)
         self.seen[h] = datetime.now(UTC).isoformat()
-        self.titles.append(_normalize(title))
+        self.titles.append([_normalize(title), date_str[:10]])

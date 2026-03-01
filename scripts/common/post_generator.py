@@ -105,7 +105,7 @@ class PostGenerator:
         ]
 
         if tags:
-            safe_tags = [t.replace('"', '\\"') for t in tags[:10]]
+            safe_tags = [f'"{t.replace(chr(34), chr(92) + chr(34))}"' for t in tags[:10]]
             frontmatter_lines.append(f"tags: [{', '.join(safe_tags)}]")
 
         if source:
@@ -119,7 +119,8 @@ class PostGenerator:
 
         if extra_frontmatter:
             for key, value in extra_frontmatter.items():
-                frontmatter_lines.append(f'{key}: "{value}"')
+                safe_value = str(value).replace('"', '\\"').replace("\n", " ")
+                frontmatter_lines.append(f'{key}: "{safe_value}"')
 
         # description 자동 생성 (SEO용, 160자 이내)
         if not (extra_frontmatter and "description" in extra_frontmatter):
