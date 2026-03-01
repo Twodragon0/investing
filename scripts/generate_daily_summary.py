@@ -130,7 +130,7 @@ def count_news_items(content: str) -> int:
         r"뉴스\s*(\d+)건",
         r"총 뉴스 건수\*?\*?:\s*(\d+)건",
         r"총 수집 건수\*?\*?:\s*(\d+)건",
-        r"총 (\d+)건",
+        r"총\s*\*{0,2}(\d+)건\*{0,2}",
         r"(\d+)건이 수집",
     ]
     for pattern in patterns:
@@ -307,12 +307,36 @@ def summarize_worldmonitor_post(post: Dict[str, Any]) -> Dict[str, Any]:
     }
 
 
+def _extract_bold_lines(content: str, heading: str, max_items: int = 5) -> List[str]:
+    """Extract **bold**: text lines from a section (fallback for non-bullet sections)."""
+    section = extract_section(content, heading)
+    if not section:
+        return []
+    lines = []
+    for line in section.split("\n"):
+        stripped = line.strip()
+        if stripped.startswith("**") and ":" in stripped:
+            lines.append(f"- {stripped}")
+            if len(lines) >= max_items:
+                break
+    return lines
+
+
 def summarize_political_post(post: Dict[str, Any]) -> Dict[str, Any]:
     """Extract key info from political trades post."""
     content = post["content"]
     count = count_news_items(content)
-    key_summary = extract_bullet_points(content, "핵심 요약")
-    highlights = extract_bullet_points(content, "정책 영향 분석", 3)
+    # Try multiple section names and formats used by political trades posts
+    key_summary = (
+        extract_bullet_points(content, "핵심 요약")
+        or extract_bullet_points(content, "전체 뉴스 요약", 5)
+        or _extract_bold_lines(content, "전체 뉴스 요약", 5)
+    )
+    highlights = (
+        extract_bullet_points(content, "정책 영향 분석", 3)
+        or _extract_bold_lines(content, "정책 영향 분석", 3)
+        or extract_bullet_points(content, "한눈에 보기", 3)
+    )
 
     return {
         "type": "political",
@@ -1752,11 +1776,13 @@ def main():
     frontmatter_image = _resolve_frontmatter_image(today, briefing_image)
     image_line = f'\nimage: "{frontmatter_image}"' if frontmatter_image else ""
 
+    safe_tags = [f'"{t}"' for t in tags]
     frontmatter = f"""---
+layout: post
 title: "{escaped_title}"
 date: {today} 12:00:00 +0900
 categories: [market-analysis]
-tags: [{", ".join(tags)}]
+tags: [{", ".join(safe_tags)}]
 source: "consolidated"
 lang: "ko"{image_line}
 pin: true

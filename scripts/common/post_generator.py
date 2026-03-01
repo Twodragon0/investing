@@ -135,10 +135,12 @@ class PostGenerator:
                     and not stripped.startswith("![")
                     and not stripped.startswith("---")
                     and not stripped.startswith("-")
+                    and not stripped.startswith("<")
                 ):
                     desc_text = stripped
                     break
             if desc_text:
+                desc_text = re.sub(r"<[^>]+>", "", desc_text)
                 desc_text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", desc_text)
                 desc_text = re.sub(r"[*_`~]", "", desc_text)
                 desc_text = re.sub(r"\s+", " ", desc_text).strip()
