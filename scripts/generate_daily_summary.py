@@ -718,10 +718,10 @@ def _extract_key_figures(content: str) -> List[str]:
     ):
         _add(m.group(1).strip())
 
-    # Named prices: "비트코인 83,200 달러"
+    # Named prices: "비트코인 83,200 달러" — require currency right after number
     for m in re.finditer(
         r"((?:비트코인|BTC|이더리움|ETH|KOSPI|KOSDAQ|S&P|나스닥|다우)"
-        r"[^0-9\n]{0,10}[\d,.]+\s*(?:달러|원|USD|KRW|포인트|pt))",
+        r"\s+[\d,.]+\s*(?:달러|원|포인트|pt))",
         content,
     ):
         _add(m.group(1).strip())
@@ -1071,7 +1071,10 @@ def main():
             political_summary = summarize_political_post(post)
             political_summary["url"] = get_post_url(filepath, today, "political-trades")
             post_links.append(("정치인 거래", political_summary["count"], political_summary["url"]))
-        elif "market-report" in slug:
+        elif slug == "daily-market-report" or slug.endswith("-market-report"):
+            # Avoid matching crypto-market-report (already handled as crypto)
+            if "crypto-market" in slug:
+                continue
             market_summary = summarize_market_post(post)
             market_summary["url"] = get_post_url(filepath, today, "market-analysis")
             post_links.append(("시장 종합 리포트", 0, market_summary["url"]))
