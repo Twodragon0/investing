@@ -535,6 +535,34 @@ def generate_market_insight(global_data: Dict, top_coins: List[Dict], fear_greed
     return "\n".join(lines)
 
 
+def normalize_cmc_to_coingecko(coins: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Convert CMC API response format to CoinGecko-compatible dict format.
+
+    CMC returns nested ``coin["quote"]["USD"]["price"]`` while CoinGecko uses
+    flat ``coin["current_price"]``.  Normalising early lets all downstream
+    formatting functions use a single code-path (``source="coingecko"``).
+    """
+    result: List[Dict[str, Any]] = []
+    for c in coins:
+        quote = c.get("quote", {}).get("USD", {})
+        price = quote.get("price", 0) or 0
+        if price <= 0:
+            logger.debug("Skipping %s: zero/negative price", c.get("symbol", "?"))
+            continue
+        result.append(
+            {
+                "name": c.get("name", ""),
+                "symbol": (c.get("symbol") or "").lower(),
+                "current_price": price,
+                "price_change_percentage_24h": quote.get("percent_change_24h", 0) or 0,
+                "price_change_percentage_7d_in_currency": quote.get("percent_change_7d", 0) or 0,
+                "market_cap": quote.get("market_cap", 0) or 0,
+                "total_volume": quote.get("volume_24h", 0) or 0,
+            }
+        )
+    return result
+
+
 def fetch_cmc_browser_fallback(limit: int = 20) -> List[Dict[str, Any]]:
     """Scrape CoinMarketCap homepage table as fallback when APIs fail.
 
@@ -659,14 +687,13 @@ def main():
 
     # Try CMC first, fallback to CoinGecko, then browser scraping
     if cmc_key:
-        top_coins = fetch_cmc_top_coins(cmc_key, 30)
+        raw_cmc = fetch_cmc_top_coins(cmc_key, 30)
+        top_coins = normalize_cmc_to_coingecko(raw_cmc) if raw_cmc else []
         source_name = "CoinMarketCap"
-        cmc_source = "cmc"
+        cmc_source = "coingecko"  # normalized to coingecko format
         time.sleep(1)
         # Trending & gainers/losers: use CoinGecko (CMC Basic plan doesn't include these premium endpoints)
         trending = fetch_coingecko_trending()
-        # Switch to coingecko format for trending/gainers since we can't use CMC premium endpoints
-        cmc_source = "coingecko"
         gainers, losers = [], []
     else:
         top_coins = fetch_coingecko_top_coins(30)
