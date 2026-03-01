@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "일일 시장 종합 리포트 - 2026-03-01"
-date: 2026-03-01 13:09:12 +0900
+date: 2026-03-01 23:01:36 +0900
 categories: [market-analysis]
-tags: [market-summary, daily, crypto, stock, macro, top-coins, quant, trading]
+tags: ["market-summary", "daily", "crypto", "stock", "macro", "top-coins", "quant", "trading"]
 source: "auto-generated"
 lang: "ko"
 image: "/assets/images/generated/market-heatmap-2026-03-01.png"
@@ -23,37 +23,37 @@ description: "<div class='stat-grid'><div class='stat-item'><div class='stat-val
 ## 오늘의 핵심
 
 - **극도의 공포 장세**: 공포/탐욕 지수 14으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다.
-- **비트코인 $67,420 상승**: 24h 기준 +2.53% 변동, 주간 -0.87% 하락.
-- **시가총액 $2.41T으로 회복**: 전일 대비 +2.85%. BTC 도미넌스 56.1%로 비트코인 중심 자금 흐름 지속.
+- **비트코인 $66,989 상승**: 24h 기준 +2.84% 변동, 주간 -1.39% 하락.
+- **시가총액 $2.39T으로 회복**: 전일 대비 +3.01%. BTC 도미넌스 56.2%로 비트코인 중심 자금 흐름 지속.
 - **KOSPI**: 6,244.13 (-63.14, -1.00%)
 - **KOSDAQ**: 1,192.78 (+4.63, +0.39%)
 - **USD/KRW 환율**: 1,439.23 (+5.89, +0.41%)
-- **금**: $5,230.50 (+30.00, +0.58%)
+- **금**: $5,247.90 (+47.40, +0.91%)
 - **원유(WTI)**: $67.02 (+1.71, +2.62%)
-- **주목할 코인**: Hyperliquid +15.33% 급등, Figure Heloc -1.87% 하락.
+- **주목할 코인**: Hyperliquid +12.86% 급등, Figure Heloc -1.85% 하락.
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">14</div><div class="stat-label">공포/탐욕 (Extreme Fear)</div></div><div class="stat-item"><div class="stat-value">$2.41T</div><div class="stat-label">글로벌 시총</div></div><div class="stat-item"><div class="stat-value">56.1%</div><div class="stat-label">BTC 도미넌스</div></div><div class="stat-item"><div class="stat-value">+2.85%</div><div class="stat-label">시총 24h 변동</div></div></div>
+<div class="stat-grid"><div class="stat-item"><div class="stat-value">14</div><div class="stat-label">공포/탐욕 (Extreme Fear)</div></div><div class="stat-item"><div class="stat-value">$2.39T</div><div class="stat-label">글로벌 시총</div></div><div class="stat-item"><div class="stat-value">56.2%</div><div class="stat-label">BTC 도미넌스</div></div><div class="stat-item"><div class="stat-value">+3.01%</div><div class="stat-label">시총 24h 변동</div></div></div>
 
-<div class="alert-box alert-info"><strong>주요 자산 현황</strong><ul><li><strong>BTC</strong>: $67,420 (+2.53%)</li><li><strong>ETH</strong>: $2,021 (+4.98%)</li><li><strong>KOSPI</strong>: 6,244.13 (-1.00%)</li><li><strong>KOSDAQ</strong>: 1,192.78 (+0.39%)</li><li><strong>USD/KRW 환율</strong>: 1,439.23 (+0.41%)</li><li><strong>금</strong>: $5,230.50 (+0.58%)</li><li><strong>원유</strong>: $67.02 (+2.62%)</li></ul></div>
+<div class="alert-box alert-info"><strong>주요 자산 현황</strong><ul><li><strong>BTC</strong>: $66,989 (+2.84%)</li><li><strong>ETH</strong>: $2,009 (+5.89%)</li><li><strong>KOSPI</strong>: 6,244.13 (-1.00%)</li><li><strong>KOSDAQ</strong>: 1,192.78 (+0.39%)</li><li><strong>USD/KRW 환율</strong>: 1,439.23 (+0.41%)</li><li><strong>금</strong>: $5,247.90 (+0.91%)</li><li><strong>원유</strong>: $67.02 (+2.62%)</li></ul></div>
 
 ## 퀀트 시그널 요약
 
-- BTC 모멘텀: 24h +2.53%, 7d -0.87% (혼조)
-- ETH 모멘텀: 24h +4.98%, 7d +2.51% (상승 추세)
-- 시장 레짐: 중립/대기 | 시총 24h +2.85%, BTC 도미넌스 56.1%
+- BTC 모멘텀: 24h +2.84%, 7d -1.39% (혼조)
+- ETH 모멘텀: 24h +5.89%, 7d +2.17% (상승 추세)
+- 시장 레짐: 중립/대기 | 시총 24h +3.01%, BTC 도미넌스 56.2%
 - 심리 지표: 공포/탐욕 14 (Extreme Fear)
 
 ## 오늘의 시장 인사이트
 
 암호화폐 시장이 **소폭 상승세**를 이어가고 있습니다. 안정적인 흐름 속에서 점진적 회복이 진행 중입니다.
 
-BTC 도미넌스가 **56.1%**로 높은 수준입니다. 비트코인 중심의 자금 흐름이 지속되고 있어, 알트코인 투자 시 주의가 필요합니다.
+BTC 도미넌스가 **56.2%**로 높은 수준입니다. 비트코인 중심의 자금 흐름이 지속되고 있어, 알트코인 투자 시 주의가 필요합니다.
 
 공포/탐욕 지수는 **14** (Extreme Fear)으로, 극도의 공포 상태입니다. 역사적으로 이 구간은 장기 투자자에게 매수 기회가 되어 왔습니다.
 
-Top 20 중 가장 큰 상승은 **Hyperliquid** (+15.33%), 가장 큰 하락은 **Figure Heloc** (-1.87%)입니다.
+Top 20 중 가장 큰 상승은 **Hyperliquid** (+12.86%), 가장 큰 하락은 **Figure Heloc** (-1.85%)입니다.
 
 미국 시장에서 S&P 500은 **-0.43%** 변동을 보였습니다.
 
@@ -66,11 +66,11 @@ Top 20 중 가장 큰 상승은 **Hyperliquid** (+15.33%), 가장 큰 하락은 
 
 | 지표 | 값 |
 | --- | --- |
-| 총 시가총액 | $2.41T (🟢 +2.85%) |
-| 24시간 거래량 | $130.24B |
-| BTC 도미넌스 | 56.1% |
-| ETH 도미넌스 | 10.2% |
-| 활성 코인 수 | 18,712개 |
+| 총 시가총액 | $2.39T (🟢 +3.01%) |
+| 24시간 거래량 | $108.69B |
+| BTC 도미넌스 | 56.2% |
+| ETH 도미넌스 | 10.1% |
+| 활성 코인 수 | 18,675개 |
 
 **공포/탐욕 지수: 14/100** — Extreme Fear (전일: 11)
 `[██░░░░░░░░░░░░░░░░░░]`
@@ -79,38 +79,38 @@ Top 20 중 가장 큰 상승은 **Hyperliquid** (+15.33%), 가장 큰 하락은 
 
 | # | 코인 | 가격 (USD) | 24h | 7d | 시가총액 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | **Bitcoin** (BTC) | $67,420.00 | 🟢 +2.53% | 🔴 -0.87% | $1.35T |
-| 2 | **Ethereum** (ETH) | $2,021.17 | 🟢 +4.98% | 🟢 +2.51% | $244.47B |
-| 3 | **Tether** (USDT) | $1.00 | 🟢 +0.03% | 🟢 +0.06% | $183.69B |
-| 4 | **XRP** (XRP) | $1.42 | 🟢 +4.63% | 🔴 -0.34% | $86.65B |
-| 5 | **BNB** (BNB) | $628.91 | 🟢 +2.23% | 🟢 +0.88% | $85.82B |
-| 6 | **USDC** (USDC) | $0.999904 | 🔴 -0.01% | 🔴 -0.01% | $75.17B |
-| 7 | **Solana** (SOL) | $88.00 | 🟢 +7.68% | 🟢 +3.50% | $50.17B |
-| 8 | **TRON** (TRX) | $0.282061 | 🔴 -0.16% | 🔴 -2.30% | $26.72B |
-| 9 | **Dogecoin** (DOGE) | $0.096396 | 🟢 +3.37% | 🔴 -1.03% | $16.29B |
-| 10 | **Figure Heloc** (FIGR_HELOC) | $1.03 | 🔴 -1.87% | 🔴 -1.63% | $15.91B |
-| 11 | **WhiteBIT Coin** (WBT) | $50.11 | 🟢 +2.11% | 🔴 -1.03% | $10.72B |
-| 12 | **Cardano** (ADA) | $0.286816 | 🟢 +3.59% | 🟢 +3.48% | $10.57B |
-| 13 | **USDS** (USDS) | $0.999918 | 🟢 +0.01% | 🟢 +0.09% | $10.08B |
-| 14 | **Bitcoin Cash** (BCH) | $460.50 | 🔴 -0.18% | 🔴 -17.89% | $9.22B |
-| 15 | **LEO Token** (LEO) | $8.98 | 🟢 +1.77% | 🟢 +7.91% | $8.27B |
-| 16 | **Hyperliquid** (HYPE) | $31.03 | 🟢 +15.33% | 🟢 +4.43% | $7.40B |
-| 17 | **Chainlink** (LINK) | $9.06 | 🟢 +4.46% | 🟢 +2.45% | $6.42B |
-| 18 | **Monero** (XMR) | $346.48 | 🟢 +2.56% | 🟢 +6.93% | $6.40B |
-| 19 | **Canton** (CC) | $0.167987 | 🔴 -0.65% | 🟢 +4.78% | $6.38B |
-| 20 | **Ethena USDe** (USDE) | $0.998891 | 🔴 -0.03% | 🟢 +0.00% | $6.04B |
+| 1 | **Bitcoin** (BTC) | $66,989.00 | 🟢 +2.84% | 🔴 -1.39% | $1.34T |
+| 2 | **Ethereum** (ETH) | $2,009.10 | 🟢 +5.89% | 🟢 +2.17% | $242.74B |
+| 3 | **Tether** (USDT) | $1.00 | 🔴 -0.01% | 🟢 +0.03% | $183.65B |
+| 4 | **BNB** (BNB) | $626.68 | 🟢 +4.24% | 🟢 +0.94% | $85.47B |
+| 5 | **XRP** (XRP) | $1.39 | 🟢 +4.69% | 🔴 -1.25% | $84.92B |
+| 6 | **USDC** (USDC) | $1.00 | 🟢 +0.00% | 🟢 +0.01% | $75.19B |
+| 7 | **Solana** (SOL) | $86.31 | 🟢 +7.07% | 🟢 +2.20% | $49.21B |
+| 8 | **TRON** (TRX) | $0.281984 | 🟢 +0.73% | 🔴 -2.35% | $26.71B |
+| 9 | **Dogecoin** (DOGE) | $0.094463 | 🟢 +3.93% | 🔴 -2.96% | $15.94B |
+| 10 | **Figure Heloc** (FIGR_HELOC) | $1.03 | 🔴 -1.85% | 🔴 -1.63% | $15.91B |
+| 11 | **WhiteBIT Coin** (WBT) | $49.80 | 🟢 +2.14% | 🔴 -2.03% | $10.63B |
+| 12 | **Cardano** (ADA) | $0.280966 | 🟢 +4.41% | 🟢 +1.79% | $10.33B |
+| 13 | **USDS** (USDS) | $0.999941 | 🟢 +0.03% | 🟢 +0.06% | $10.10B |
+| 14 | **Bitcoin Cash** (BCH) | $450.07 | 🟢 +0.19% | 🔴 -21.12% | $9.00B |
+| 15 | **LEO Token** (LEO) | $9.00 | 🟢 +2.00% | 🟢 +10.27% | $8.29B |
+| 16 | **Hyperliquid** (HYPE) | $31.05 | 🟢 +12.86% | 🟢 +6.03% | $7.41B |
+| 17 | **Monero** (XMR) | $344.78 | 🟢 +3.50% | 🟢 +8.05% | $6.36B |
+| 18 | **Chainlink** (LINK) | $8.98 | 🟢 +6.03% | 🟢 +2.46% | $6.34B |
+| 19 | **Canton** (CC) | $0.166042 | 🟢 +1.30% | 🟢 +4.61% | $6.30B |
+| 20 | **Ethena USDe** (USDE) | $0.998926 | 🔴 -0.06% | 🟢 +0.00% | $6.03B |
 
 ## 트렌딩 코인
 
 **실시간 트렌딩 코인:**
 
-1. **Bitcoin** (BTC) — 시총 순위 #1
-2. **Pudgy Penguins** (PENGU) — 시총 순위 #107
-3. **Grass** (GRASS) — 시총 순위 #228
-4. **Hyperliquid** (HYPE) — 시총 순위 #16
-5. **Solana** (SOL) — 시총 순위 #7
-6. **Power Protocol** (POWER) — 시총 순위 #113
-7. **Tether Gold** (XAUT) — 시총 순위 #35
+1. **Grass** (GRASS) — 시총 순위 #232
+2. **Pudgy Penguins** (PENGU) — 시총 순위 #109
+3. **PAX Gold** (PAXG) — 시총 순위 #38
+4. **Bitcoin** (BTC) — 시총 순위 #1
+5. **Ethereum** (ETH) — 시총 순위 #2
+6. **Hyperliquid** (HYPE) — 시총 순위 #16
+7. **Solana** (SOL) — 시총 순위 #7
 
 ## 급등/급락 코인
 
@@ -118,21 +118,21 @@ Top 20 중 가장 큰 상승은 **Hyperliquid** (+15.33%), 가장 큰 하락은 
 
 | 코인 | 가격 | 24h 변동 |
 | --- | --- | --- |
-| **Hyperliquid** (HYPE) | $31.03 | 🟢 +15.33% |
-| **Solana** (SOL) | $88.00 | 🟢 +7.68% |
-| **Ethereum** (ETH) | $2,021.17 | 🟢 +4.98% |
-| **Sui** (SUI) | $0.93 | 🟢 +4.76% |
-| **XRP** (XRP) | $1.42 | 🟢 +4.63% |
+| **Hyperliquid** (HYPE) | $31.05 | 🟢 +12.86% |
+| **Solana** (SOL) | $86.31 | 🟢 +7.07% |
+| **Sui** (SUI) | $0.91 | 🟢 +6.08% |
+| **Chainlink** (LINK) | $8.98 | 🟢 +6.03% |
+| **Zcash** (ZEC) | $223.98 | 🟢 +5.89% |
 
 ### 📉 Top 5 하락
 
 | 코인 | 가격 | 24h 변동 |
 | --- | --- | --- |
-| **TRON** (TRX) | $0.28 | 🔴 -0.16% |
-| **Bitcoin Cash** (BCH) | $460.50 | 🔴 -0.18% |
-| **Canton** (CC) | $0.17 | 🔴 -0.65% |
-| **Rain** (RAIN) | $0.01 | 🔴 -1.65% |
-| **Figure Heloc** (FIGR_HELOC) | $1.03 | 🔴 -1.87% |
+| **LEO Token** (LEO) | $9.00 | 🟢 +2.00% |
+| **Canton** (CC) | $0.17 | 🟢 +1.30% |
+| **TRON** (TRX) | $0.28 | 🟢 +0.73% |
+| **Bitcoin Cash** (BCH) | $450.07 | 🟢 +0.19% |
+| **Figure Heloc** (FIGR_HELOC) | $1.03 | 🔴 -1.85% |
 
 ## 미국 주식 시장
 
@@ -158,10 +158,10 @@ Top 20 중 가장 큰 상승은 **Hyperliquid** (+15.33%), 가장 큰 하락은 
 
 | 원자재/지수 | 가격 | 변동 | 변동률 |
 |-------------|------|------|--------|
-| 금 (Gold) | 5,230.50 | +30.00 | 🟢 +0.58% |
+| 금 (Gold) | 5,247.90 | +47.40 | 🟢 +0.91% |
 | 원유 (WTI) | 67.02 | +1.71 | 🟢 +2.62% |
 | 천연가스 | 2.86 | +0.04 | 🟢 +1.24% |
-| 달러 인덱스 (DXY) | 97.61 | -0.04 | 🔴 -0.04% |
+| 달러 인덱스 (DXY) | 97.65 | -0.01 | 🔴 -0.01% |
 
 ## S&P 500 섹터 퍼포먼스
 
@@ -190,15 +190,13 @@ Top 20 중 가장 큰 상승은 **Hyperliquid** (+15.33%), 가장 큰 하락은 
 **주요 ETF 뉴스:**
 
 1. [비트코인 ETF 순유입 행진이 2,700만 달러 순유출로 끊기다 - Bitcoin.com News](https://news.google.com/rss/articles/CBMinwFBVV95cUxNX1Z3V1JkS1NaUENrSDAzNHlZLXZFaE1VWHNPTVJiV0JJQk5HdEI4UEUyYW9qZGJvSGZRLWVrSER2T29CX2xHRnJ2SF9UTkJBbGVsQi1uNkZjZXlJaUozWG1kWThaVUlPLTJaT0Z4aFF2VUVaWUlHTU1ONGpBUUl6V1c4QWpZLVhURnFpU29ER3Y5V3RUQUJfTHlPZnl2d3M?oc=5)
-2. [비트코인 ETF 사흘간 1.6조원 순유입…주간으론 한달반 만에 최대 - 이데일리TV](https://news.google.com/rss/articles/CBMie0FVX3lxTE5GZlZ3bDdDN09vRkFHYjVEMHZjYjdFbUw5aFpqaHRWWmJ0cXN2LVZsSDlKUXZ5UWVhTTRhZjVIUHZGUWt3NlZYaDVfX2JCYTJwa1Zjd0gxYy1DVzJ3YVhpck0wQk5tenFNV3Rpd3g4cnVwUF9Ea1RrUVVaQQ?oc=5)
-3. [비트코인·이더리움 현물 ETF 순유출 행진…솔라나 ETF에 자금 들어오는 이유는? - BeInCrypto](https://news.google.com/rss/articles/CBMiggFBVV95cUxQeHB1akFiT0h3T1ZsUk5lZEdCcTJTT0h4UFptV0t2NEkzeTY1ZkxhN09BUE9iMHBvY1NCbkRJV0xUOXpCVHF1Yk04RW9lNVpvWU1QVHZ1YURsX29uZlh1SmRvY3VpczNVamZjM2pLRW45cERlRFAxSUR6WGlRSGd1YnF3?oc=5)
-4. [비트코인 현물 ETF, 5억달러 유입…블랙록·피델리티 강세 - 디지털투데이](https://news.google.com/rss/articles/CBMic0FVX3lxTE15TTdmSk5WOTZLQWFYWHZzTjNTN05jWGh5a2ljdFdmLTBwZElIYnRBbjVUZ1E5OVdoWExUZDhCNUYxZ2RCeXNlalV0SWZwRG5QcWw1S0J1QmxiZm1mSmFRR0pOT2hoYmdDcmlkZ1BTZzhKRG8?oc=5)
+2. [비트코인·이더리움 현물 ETF 순유출 행진…솔라나 ETF에 자금 들어오는 이유는? - BeInCrypto](https://news.google.com/rss/articles/CBMiggFBVV95cUxQeHB1akFiT0h3T1ZsUk5lZEdCcTJTT0h4UFptV0t2NEkzeTY1ZkxhN09BUE9iMHBvY1NCbkRJV0xUOXpCVHF1Yk04RW9lNVpvWU1QVHZ1YURsX29uZlh1SmRvY3VpczNVamZjM2pLRW45cERlRFAxSUR6WGlRSGd1YnF3?oc=5)
 
 ## 고래 거래 동향
 
 | # | 제목 | 출처 |
 | --- | --- | --- |
-| 1 | [Ethereum Whale Makes Audacious $7 Million Purchase Amid Market Downturn, Signaling Strategic Confidence - Bitcoin world](https://news.google.com/rss/articles/CBMibkFVX3lxTE15NVZaMVd6cklMRllFSDZZUzN5MjNtc0Rkcy1BQkRQT2J0azIyWUxVd1ZRQXFsQ3BxQ3J1dGdCR2pER0N4WUI5cWZWWE9INFNTeUViWEhRLXFwVjlwS0VfTnYtWVFuNk95c1hobDF3?oc=5) | Crypto Whale |
+| 1 | [Ethereum Whale Makes Audacious $7 Million Purchase Amid Market Downturn, Signaling Strategic Confidence - MEXC](https://news.google.com/rss/articles/CBMiR0FVX3lxTFAxbVltMmhWUDdzR05ITEFXUE9nbTNWR1BFM3ViMHU0WjlXT1M4N2pfY01iY0ppdllaMFZHNTZNOGt4a0FELXYw?oc=5) | Crypto Whale |
 
 ## 매크로 경제 지표
 
