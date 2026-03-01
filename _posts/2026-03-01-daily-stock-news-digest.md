@@ -17,37 +17,13 @@ description: "2026-03-01 주식 시장에서 119건의 뉴스를 분석했습니
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">119</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 39</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">리스크 위험</div></div><div class="stat-item"><div class="stat-value">6,244.13</div><div class="stat-label">KOSPI -1.00%</div></div><div class="stat-item"><div class="stat-value">1,192.78</div><div class="stat-label">KOSDAQ +0.39%</div></div></div>
 <div class="alert-box alert-info"><strong>주식 시장 긴급: inflation, sinking, Nasdaq - 119건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (39건): 코스피, 코스닥, the, 주요공시, Why</li><li>🤖 <strong>AI/기술</strong> (13건): Nasdaq, Nvidia, Anthropic, Stocks, ETF</li><li>🏛️ <strong>정치/정책</strong> (13건): 대통령, Trump, 속보, geopolitical, uncertainty</li><li>📊 <strong>매크로/금리</strong> (9건): Dow, inflation, worries, Nasdaq, rates</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMitgJBVV95cUxQNmlUVk5sMGdQNzg2TnFMLXNmR1VjN1FuODJGVjVyTFNVcEdNX3F6NDV4bWZPZURxaDFuOHpNVkRsd2FOM2VPRURta2U1UlR5QVNEak50Y1YtRlhjNFhFMnoteFZ6MXJlcVZaQ040QXFjUnBfWjhWMm9TcHFVbVJwY0o5Z0hkdkJnUXZmWGQ0cU1OXzdmbW5JRnRhM25rWklPNlRuVW5GRWxRN1E4UWdSek9Cb0J1bFJnUzRhVm1tMUM4aVUwSktfRTZXN3NacjFOZU9tMzhYZmZsQzlnVVlncVpnbFc2WFNmX2czdlRMODYzcEJYMkFNS0x3REFsVkw0Q2JkRDEtM1kxWWVsaTRGamFsOFNuclR1QndkY0pEV0Voa1dSS2NBN3BqWWpnVHlJRE9tNS1n0gG7AkFVX3lxTFBuQkhpb0otaV94Z2VFb0ZuYVJ2WnExbFh5VTk2bmtjWjR5dTZUcUN2M1pSdGpGVHlUNFBacVNtOV9qbHJBT0trYmpEM1JWMVd1LS1vSnhhaERiOEhMbm1kSlpvQURCbDhac19oTHNFd0sxOUl3LUwtek9odl85OUtLemxEcXFQVFVqUzBMVzllaEgxMVVGWF9FekNaYXpMTUw3ZWx5ZmpuNnQxd0I3SjJHZThkcFZmeDN1OWpHZWNWYmdldWV1SDMzYTZNMU16MC1aT2VnQWdsWVRZdE1BMUFEa1pia0ZNazZySF94eGt5cGVoN1N5WXA2Nm02a3pFY3pCVGJGVnlEd25BaVZOcE9hRmpNQnBldzVFeUNDajVHeDNLeUF5WVZfQlRXTHZIY0Z6STAwdlRHbGtxYw?hl=en-US&gl=US&ceid=US%3Aen">Why is the US stock market sinking deep in red today? Dow Jones, S&P 500, Nasdaq crash as hot inflation da</a></li><li><a href="https://news.google.com/read/CBMizAFBVV95cUxNX3BNX05kajhRUUFKN19CNWk4OEJNUmJUWHBmNlR0VVVLeGd1VDRzNFptSGFKalc3ZTE5WFhDMFp3NUFZUVRsWWtWZmMxaGZsbmdnSklGTVItSWNyenFvYUYzSFR3NVowczNnbjNmU2puenJRV2NMRkd0N0dueUU2WnpXUVc2UTZMaFhfenFtejA3b2ZXTHpOZVRLSEtxdHAwZzg2cFptWTZnMURmUkJNQzk0bGZXTHRmQTBOQW0wRmhrb3ZiY2JwUzlwZWY?hl=en-US&gl=US&ceid=US%3Aen">This Expert Says the S&P 500 Has 'Crashed Under the Surface.' What a Stealth Correction Means.</a></li><li><a href="https://news.google.com/read/CBMiVEFVX3lxTFBPaW9tN0xXc3BRYU9wMy12aFBFZjQ0U1d6VWdDdVR1XzdtVHRVLXBtWTBfZTZrdkFOQ2pSekN4Ml9Cdl9CT1o5bTNpN3liY1pXa1lOeA?hl=ko&gl=KR&ceid=KR%3Ako">5600선 올라선 코스피…코스닥은 매수 사이드카</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Why is the US stock market sinking deep in red today? Dow Jones, S&P 500, Nas...  
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 119건의 뉴스 중 P1 주요 이슈도 14건 확인됩니다.
-
-1. **📈 가격/시장** (39건): 코스피, 코스닥, the, 주요공시, Why
-2. **🤖 AI/기술** (13건): Nasdaq, Nvidia, Anthropic, Stocks, ETF
-3. **🏛️ 정치/정책** (13건): 대통령, Trump, 속보, geopolitical, uncertainty
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-**P0 긴급**: Why is the US stock market sinking deep in red today? Dow Jo / This Expert Says the S&P 500 Has 'Crashed Under the Surface. / 5600선 올라선 코스피…코스닥은 매수 사이드카
-**P1 주요**: 14건 확인
-- 한국 기사 46건, 글로벌 기사 73건 수집
-- 한국 지수: KOSPI 6,244.13(-1.00%), KOSDAQ 1,192.78(+0.39%), USD/KRW 1,439.23(+0.41%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">39건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:33%"></div></div><span class="theme-count">13건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:33%"></div></div><span class="theme-count">13건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:23%"></div></div><span class="theme-count">9건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:15%"></div></div><span class="theme-count">6건</span></div>
-</div>
-
-*총 119건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
-
-
-![market-snapshot]({{ '/assets/images/generated/market-snapshot-2026-03-01.png' | relative_url }})
-
-
----
+- KOSPI 6,244.13 (-1.00%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
+- KOSDAQ 1,192.78 (+0.39%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-03-01 주식 시장에서 119건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,244.13(-1.00%), KOSDAQ 1,192.78(+0.39%), USD/KRW 1,439.23(+0.41%).
+- *코스피, 코스닥, the, 주요공시, Why*
 
 ## 테마별 주요 뉴스
 

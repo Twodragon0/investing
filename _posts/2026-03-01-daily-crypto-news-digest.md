@@ -32,24 +32,13 @@ description: "2026-03-01 암호화폐 시장에서 108건의 뉴스를 분석했
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">108</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 51</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">리스크 위험</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (31회)</div></div></div>
 <div class="alert-box alert-info"><strong>암호화폐 긴급: Bitcoin Miner Tied to Trumps Pummeled by Crypto Crash - 108건 분석</strong><ul><li>🟠 <strong>비트코인</strong> (51건): Bitcoin, crypto, Iran, 비트코인, $64,000</li><li>📈 <strong>가격/시장</strong> (28건): Bitcoin, 비트코인, 달러, Iran, 암호화폐</li><li>🤖 <strong>AI/기술</strong> (10건): Anthropic, Pentagon, Bitcoin, Nvidia, OpenAI</li><li>🏦 <strong>거래소</strong> (12건): Binance, New, Democrats, Treasury, Senate</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMigwFBVV95cUxPSmNjaTFSOV9FaDkycDk2TG5kWEpZT0UyOV9jd05Cb3VzYXlxWmljUkd6NktOOVR4RmFwMXhwc2cyT0g0Vl9zOS02dTJnUWx4M2steDZEXzNQeVNZVnpUbXRWXzFDSlM1aFhtVFllNTNoTXJOWDBMaGZ3YWNnanMzajA5WQ?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin Miner Tied to Trumps Pummeled by Crypto Crash</a></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOYnk1a2lGZGZfV2t4ZEtfMUpkbEN6UjBMRzJ2UDdkeURUSHUtY3ZERTk1ejZXLU9qYnFHUEdQd0g1dTVlSm9wenZyZF9YQ21Rek5EN1hWME51Q3FvdlBrWFpidDVzM3pPamszNTNEWk5BeFVhZWFlbGdjX1NzdFpSSl9IbFFwZ0VX?oc=5">뉴욕증시 엔비디아 공매도 폭탄 "무려 500억 달러... 비트코인 급락 - 글로벌이코노믹</a></li><li><a href="https://decrypt.co/359367/jane-street-lawsuit-fuels-late-double-digit-pop-in-terra-luna-classic">Jane Street Lawsuit Fuels Late Double-Digit Pop in Terra Luna Classic</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Bitcoin Miner Tied to Trumps Pummeled by Crypto Crash  
-외 P0 긴급 이슈 5건이 추가 감지되었습니다. 총 108건의 뉴스 중 P1 주요 이슈도 11건 확인됩니다.
-
-1. **🟠 비트코인** (51건): Bitcoin, crypto, Iran, 비트코인, $64,000
-2. **📈 가격/시장** (28건): Bitcoin, 비트코인, 달러, Iran, 암호화폐
-3. **🤖 AI/기술** (10건): Anthropic, Pentagon, Bitcoin, Nvidia, OpenAI
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-**P0 긴급**: Bitcoin Miner Tied to Trumps Pummeled by Crypto Crash / 뉴욕증시 엔비디아 공매도 폭탄 "무려 500억 달러... 비트코인 급락 - 글로벌이코노믹 / Jane Street Lawsuit Fuels Late Double-Digit Pop in Terra Lun
-**P1 주요**: 11건 확인
-**핵심 키워드**: **bitcoin**, **ethereum**, **ai**, **etf**
-**주요 출처**: Google News(20건), Decrypt(15건), Cointelegraph(15건)
-- 거래소 공지 10건 포함
-
-
-![news-briefing]({{ '/assets/images/generated/news-briefing-crypto-2026-03-01.png' | relative_url }})
+- 총 **108건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🤖 AI/기술
+- 2026-03-01 암호화폐 시장에서 108건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, AI/기술 관련 소식이 주목됩니다.
+- *총 108건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
 
 ## 테마별 주요 뉴스
 

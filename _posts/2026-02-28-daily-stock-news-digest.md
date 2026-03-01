@@ -18,6 +18,7 @@ description: "2026-02-28 주식 시장에서 104건의 뉴스를 분석했습니
 <div class="alert-box alert-info"><strong>주식 시장 긴급: SK하이닉스 주가 장중 3%대 하락, 엔비디아 급락에 반도체주 투심 위축 - 비즈니스포스트 - 104건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (24건): 하이닉스, 코스피, 주요공시, 삼성전자, 엔비디아</li><li>📊 <strong>매크로/금리</strong> (12건): inflation, 기준금리, Dow, points, 한국은행</li><li>🤖 <strong>AI/기술</strong> (15건): and, Nvidia, Trump, 하이닉스, 반도체</li><li>🏛️ <strong>정치/정책</strong> (13건): Trump, geopolitical, uncertainty, blacklists, Anthropic</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBJd2NHajNzaE9aQWVGMkxRZFlUYkpnV0hmZXF1M3l1RmVLVFY1dW5RZ0tGN2V6OE9CT1VhYWxYWHZTSnZtRUptdHpNRVNIcWdhRU8zdVZ2T1UtbDdHZWFybGlSWjlTUjR2ZENYS3lORlRQclE?oc=5">SK하이닉스 주가 장중 3%대 하락, 엔비디아 급락에 반도체주 투심 위축 - 비즈니스포스트</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,244.13 (-1.00%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.

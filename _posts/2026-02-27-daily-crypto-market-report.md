@@ -27,6 +27,7 @@ description: "$65,905BTC (-3.3%)<div…"
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Bitcoin Cash</strong> (BCH): -6.88%</li><li>🔴 <strong>Solana</strong> (SOL): -5.66%</li><li>🔴 <strong>Ethereum</strong> (ETH): -5.48%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 오늘의 시장 인사이트:

@@ -27,6 +27,7 @@ description: "<div class='stat-grid'><div class='stat-item'><div class='stat-val
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Solana</strong> (SOL): +0.00%</li><li>🟢 <strong>Hyperliquid</strong> (HYPE): +0.00%</li><li>🟢 <strong>Ethereum</strong> (ETH): +0.00%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 오늘의 시장 인사이트:

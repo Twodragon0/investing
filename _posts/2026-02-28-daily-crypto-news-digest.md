@@ -33,6 +33,7 @@ description: "2026-02-28 암호화폐 시장에서 124건의 뉴스를 분석했
 <div class="alert-box alert-info"><strong>암호화폐 긴급: Butchering, Million, Seizes - 124건 분석</strong><ul><li>🟠 <strong>비트코인</strong> (46건): 비트코인, 암호화폐, 하락, com, 글로벌이코노믹</li><li>🏦 <strong>거래소</strong> (32건): Binance, Futures, Trading, Democrats, Perpetual</li><li>📈 <strong>가격/시장</strong> (23건): 비트코인, 암호화폐, 하락, 충격, 일제</li><li>🔷 <strong>이더리움</strong> (13건): Ethereum, and, XRP, for, Cryptocurrency</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOLUhxdzdoVFFTT2QydElpU3locWJDQTlnZXNmYTJRRXJHRW1WSjY3ZFo0NmZIUU9QSURrSTd2bThfRDNTLVpIMEVXYkcwTVJsMjlzQVZKZDhBT0pvTkxvb2VKa1FJdHRDRjdlc3Y4el9LSGRjTmFneS1pTVU1MDN4OXBhWQ?oc=5">DoJ Seizes $61 Million in Tether Linked to Pig Butchering Crypto Scams - The Hacker News</a></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUWYzME5LUnpwVXVxRG5JZnFvWGJLa1B5dXI4YUZ2RzRzRlFRMWwzcDE4ZVRDRTJCQzY0RUdHMXFrWmk4UEtSS3hNOVY0NjdtT015a05qcURaTjk1cDVMUExyOEF1b0hmbFBXZUROQ01acE13R3A2aVp4OU9OZkNFUWdIbWxWQ0g5?oc=5">뉴욕증시 상장사 "비트코인 대량 매도" .. .블룸버그 "양자컴 암호화폐 해킹 급물살" - 글로벌이코노믹</a></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5jQ1NKZEZxci12R3lGVVl3QzBBeWZFZE1pVTBkZ25INUIyT21VMGNZZFJ1bnNrRXdqaFFzSnhpRF8xbnlmQjU5LWdaN2lpZWVwQWthTVM1eUtWcHJhZktFOUNvLTNnREdHUE9ieVQ5MEpFUFU?oc=5">비트코인, 매일 10시만 되면 폭락?…'제인스트리트 조작설' 진실 공방 - 디지털투데이</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **124건** 수집
