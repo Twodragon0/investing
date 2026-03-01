@@ -297,13 +297,16 @@ def summarize_worldmonitor_post(post: Dict[str, Any]) -> Dict[str, Any]:
                 count = int(m.group(1))
                 break
 
+    # Strip section headings that would be duplicated in the daily summary
+    cleaned = re.sub(r"^##\s+이슈 분포.*$", "", content, flags=re.MULTILINE)
+
     return {
         "type": "worldmonitor",
         "title": post["frontmatter"].get("title", ""),
         "count": count,
         "key_summary": key_summary,
         "issues": issues,
-        "content": content,
+        "content": cleaned,
     }
 
 
@@ -697,32 +700,39 @@ def _analyze_sentiment(summaries: List[Optional[Dict[str, Any]]]) -> Dict[str, A
 
 
 def _extract_key_figures(content: str) -> List[str]:
-    """Extract numeric data points (prices, percentages, amounts) from content."""
+    """Extract clean numeric data points (prices, index levels, percentages) from content."""
     figures: List[str] = []
-    seen = set()
-    # Prices with currency
-    for m in re.finditer(
-        r"(?:비트코인|BTC|이더리움|ETH|KOSPI|KOSDAQ|S&P|나스닥|다우)"
-        r"[^0-9]*?([\d,.]+)\s*(?:달러|원|USD|KRW|포인트|pt)",
-        content,
-    ):
-        fig = m.group(0).strip()
-        if fig not in seen:
-            seen.add(fig)
+    seen: set[str] = set()
+
+    def _add(fig: str) -> None:
+        key = re.sub(r"[^\w%.]", "", fig.lower())
+        if key not in seen and len(fig) > 5:
+            seen.add(key)
             figures.append(fig)
-    # Percentage changes
+
+    # Market indices with percentage: "KOSPI 6,244.13(-1.00%)"
     for m in re.finditer(
-        r"(?:전일 대비|전주 대비|전월 대비|YoY|MoM|QoQ)?[^0-9]*?"
-        r"([+-]?\d+\.?\d*)\s*%",
+        r"((?:KOSPI|KOSDAQ|S&P|나스닥|다우|USD/KRW|EUR/USD|BTC|ETH)"
+        r"\s*[\d,.]+\s*\([+-]?[\d.]+%\))",
         content,
     ):
-        ctx_start = max(0, m.start() - 30)
-        ctx = content[ctx_start : m.end()].strip()
-        # Get just the meaningful part
-        ctx = re.sub(r"^[^\w가-힣]+", "", ctx)
-        if ctx and ctx not in seen and len(ctx) > 5:
-            seen.add(ctx)
-            figures.append(smart_truncate(ctx, 80))
+        _add(m.group(1).strip())
+
+    # Named prices: "비트코인 83,200 달러"
+    for m in re.finditer(
+        r"((?:비트코인|BTC|이더리움|ETH|KOSPI|KOSDAQ|S&P|나스닥|다우)"
+        r"[^0-9\n]{0,10}[\d,.]+\s*(?:달러|원|USD|KRW|포인트|pt))",
+        content,
+    ):
+        _add(m.group(1).strip())
+
+    # Explicit percentage changes: "전일 대비 +2.3%"
+    for m in re.finditer(
+        r"((?:전일|전주|전월|YoY|MoM|QoQ)\s*대비\s*[+-]?[\d.]+\s*%)",
+        content,
+    ):
+        _add(m.group(1).strip())
+
     return figures[:5]
 
 
@@ -1146,11 +1156,10 @@ def main():
     counts_str = ", ".join(count_parts) if count_parts else "뉴스"
     content_parts.append(f"> {counts_str}의 뉴스를 종합 분석한 일일 요약입니다.\n")
 
-    content_parts.append('<div class="alert-box alert-info"><strong>한눈에 보는 시장 상황</strong><ul>')
-    content_parts.append(f"<li>총 수집: <strong>{total_count}건</strong></li>")
-    content_parts.append(f"<li>긴급 알림(P0): <strong>{len(priority_items.get('P0', []))}건</strong></li>")
-    content_parts.append(f"<li>중요 뉴스(P1): <strong>{len(priority_items.get('P1', []))}건</strong></li>")
-    content_parts.append("</ul></div>\n")
+    content_parts.append("> **한눈에 보는 시장 상황**")
+    content_parts.append(f"> - 총 수집: **{total_count}건**")
+    content_parts.append(f"> - 긴급 알림(P0): **{len(priority_items.get('P0', []))}건**")
+    content_parts.append(f"> - 중요 뉴스(P1): **{len(priority_items.get('P1', []))}건**\n")
 
     content_parts.append("## 전체 뉴스 요약\n")
     # Narrative-style summary
