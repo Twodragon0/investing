@@ -57,9 +57,13 @@ class DedupEngine:
                 self.seen = data.get("seen", {})
                 raw_titles: List[Union[str, List[str]]] = data.get("titles", [])
                 # Backward compatibility: convert old plain strings to [title, ""] pairs
-                self.titles = [
-                    entry if isinstance(entry, list) and len(entry) == 2 else [entry, ""] for entry in raw_titles
-                ]
+                converted: List[List[str]] = []
+                for entry in raw_titles:
+                    if isinstance(entry, list) and len(entry) == 2:
+                        converted.append(entry)
+                    else:
+                        converted.append([str(entry), ""])
+                self.titles = converted
                 self._prune()
             except (json.JSONDecodeError, KeyError, OSError):
                 logger.warning("Corrupt state file %s, resetting", self.state_path)
