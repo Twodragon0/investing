@@ -58,8 +58,7 @@ class DedupEngine:
                 raw_titles: List[Union[str, List[str]]] = data.get("titles", [])
                 # Backward compatibility: convert old plain strings to [title, ""] pairs
                 self.titles = [
-                    entry if isinstance(entry, list) and len(entry) == 2 else [entry, ""]
-                    for entry in raw_titles
+                    entry if isinstance(entry, list) and len(entry) == 2 else [entry, ""] for entry in raw_titles
                 ]
                 self._prune()
             except (json.JSONDecodeError, KeyError, OSError):
@@ -120,11 +119,7 @@ class DedupEngine:
             existing_title = entry[0] if isinstance(entry, list) else entry
             existing_date = entry[1] if isinstance(entry, list) and len(entry) > 1 else ""
             # Use stricter threshold for cross-day comparison
-            threshold = (
-                self.SAME_DAY_THRESHOLD
-                if existing_date == current_date
-                else self.CROSS_DAY_THRESHOLD
-            )
+            threshold = self.SAME_DAY_THRESHOLD if existing_date == current_date else self.CROSS_DAY_THRESHOLD
             ratio = SequenceMatcher(None, normalized_title, existing_title).ratio()
             if ratio > threshold:
                 logger.debug(
