@@ -69,7 +69,7 @@ def github_api(repo: str, token: str) -> Dict[str, Any]:
     req.add_header("Accept", "application/vnd.github+json")
     if token:
         req.add_header("Authorization", f"Bearer {token}")
-    with urllib.request.urlopen(req, timeout=20) as response:
+    with urllib.request.urlopen(req, timeout=20) as response:  # nosec B310 - HTTPS-only hardcoded URL
         return json.loads(response.read().decode("utf-8"))
 
 
@@ -235,7 +235,7 @@ def slack_api(method: str, token: str, payload: Dict[str, Any]) -> Dict[str, Any
         },
         method="POST",
     )
-    with urllib.request.urlopen(req, timeout=20) as response:
+    with urllib.request.urlopen(req, timeout=20) as response:  # nosec B310 - HTTPS-only hardcoded URL
         return json.loads(response.read().decode("utf-8"))
 
 

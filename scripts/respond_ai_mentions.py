@@ -43,7 +43,7 @@ def slack_api(method: str, token: str, data: Dict[str, Any]) -> Dict[str, Any]:
         },
         method="POST",
     )
-    with urllib.request.urlopen(req, timeout=20) as res:
+    with urllib.request.urlopen(req, timeout=20) as res:  # nosec B310 - HTTPS-only hardcoded URL
         return json.loads(res.read().decode("utf-8"))
 
 
