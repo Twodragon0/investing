@@ -27,6 +27,8 @@ description: "오늘 시가총액 상위 30개 코인을 기준으로 시장을 
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Stellar</strong> (XLM): -5.29%</li><li>🔴 <strong>Cardano</strong> (ADA): -5.06%</li><li>🔴 <strong>Canton</strong> (CC): -4.87%</li></ul></div>
 
 
+
+
 ## 전체 뉴스 요약
 
 - 오늘의 시장 인사이트:
