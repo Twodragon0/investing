@@ -7,7 +7,7 @@ tags: ["market-summary", "daily", "crypto", "stock", "macro", "top-coins", "quan
 source: "auto-generated"
 lang: "ko"
 image: "/assets/images/generated/market-heatmap-2026-03-01.png"
-description: "<div class='stat-grid'><div class='stat-item'><div class='stat-value'>14</div><div class='stat-label'>공포/탐욕 (Extreme Fear)</div></div><div…"
+description: "2026-03-01 일일 시장 종합 리포트. 공포/탐욕 지수 14 (Extreme Fear). 암호화폐·주식·매크로 통합 분석."
 ---
 
 ## 시장 시각화

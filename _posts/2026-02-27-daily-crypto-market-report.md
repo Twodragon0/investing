@@ -7,7 +7,7 @@ tags: [market-report, crypto, top-coins, trending, daily]
 source: "CoinMarketCap"
 source_url: "https://coinmarketcap.com/"
 lang: "ko"
-description: "$65,905BTC (-3.3%)<div…"
+description: "2026-02-27 암호화폐 시장 종합 리포트. BTC $65,905 (-3.3%). 시가총액 상위 30개 코인 분석."
 ---
 
 ## 시장 시각화

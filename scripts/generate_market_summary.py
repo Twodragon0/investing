@@ -684,7 +684,8 @@ def format_gainers_losers(coins: List[Dict]) -> str:
         sym = c.get("symbol", "").upper()
         p = c.get("current_price", 0) or 0
         ch = c.get("price_change_percentage_24h", 0) or 0
-        gainer_rows.append([f"**{c.get('name', '')}** ({sym})", f"${p:,.2f}", _pct(ch)])
+        p_str = f"${p:,.2f}" if p >= 1 else f"${p:,.6f}"
+        gainer_rows.append([f"**{c.get('name', '')}** ({sym})", p_str, _pct(ch)])
 
     lines.append(markdown_table(["코인", "가격", "24h 변동"], gainer_rows))
 
@@ -694,7 +695,8 @@ def format_gainers_losers(coins: List[Dict]) -> str:
         sym = c.get("symbol", "").upper()
         p = c.get("current_price", 0) or 0
         ch = c.get("price_change_percentage_24h", 0) or 0
-        loser_rows.append([f"**{c.get('name', '')}** ({sym})", f"${p:,.2f}", _pct(ch)])
+        p_str = f"${p:,.2f}" if p >= 1 else f"${p:,.6f}"
+        loser_rows.append([f"**{c.get('name', '')}** ({sym})", p_str, _pct(ch)])
 
     lines.append(markdown_table(["코인", "가격", "24h 변동"], loser_rows))
 

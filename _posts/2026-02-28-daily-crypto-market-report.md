@@ -7,7 +7,7 @@ tags: [market-report, crypto, top-coins, trending, daily]
 source: "CoinMarketCap"
 source_url: "https://www.coingecko.com/"
 lang: "ko"
-description: "<div class='stat-grid'><div class='stat-item'><div class='stat-value'>$0</div><div class='stat-label'>BTC (+0.0%)</div></div><div class='stat-item'><div…"
+description: "2026-02-28 암호화폐 시장 종합 리포트. (API 데이터 수집 오류로 가격 정보가 불완전합니다)"
 ---
 
 ## 시장 시각화

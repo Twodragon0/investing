@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "정치인 거래·정책 리포트 - 2026-02-26"
 date: 2026-02-26 14:30:32 +0000
 categories: [political-trades]
