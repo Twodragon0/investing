@@ -23,7 +23,7 @@ from typing import Any, Dict, List, Optional, Tuple
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.config import SITE_URL, get_kst_timezone, setup_logging
-from common.markdown_utils import markdown_table, smart_truncate
+from common.markdown_utils import _normalize_url, markdown_table, smart_truncate
 from common.post_generator import POSTS_DIR
 from common.summarizer import ThemeSummarizer
 
@@ -365,6 +365,7 @@ def _collect_all_news_items(summaries: List[Optional[Dict]]) -> List[Dict[str, A
     """Collect all news item titles+descriptions from post contents for priority classification."""
     items = []
     seen_titles = set()
+    seen_urls: set[str] = set()
     for s in summaries:
         if not s or not s.get("content"):
             continue
@@ -382,10 +383,12 @@ def _collect_all_news_items(summaries: List[Optional[Dict]]) -> List[Dict[str, A
                 if match:
                     title = match.group(1)
                     link = match.group(2)
-                    # Deduplicate by normalized title
+                    url_key = _normalize_url(link)
+                    # Deduplicate by normalized title and URL
                     norm = re.sub(r"[^a-z가-힣0-9]", "", title.lower())
-                    if norm not in seen_titles:
+                    if norm not in seen_titles and url_key not in seen_urls:
                         seen_titles.add(norm)
+                        seen_urls.add(url_key)
                         items.append(
                             {
                                 "title": f"[{title}]({link})",
@@ -417,9 +420,11 @@ def _collect_all_news_items(summaries: List[Optional[Dict]]) -> List[Dict[str, A
             title = match.group(2).strip()
             if not title or len(title) < 10:
                 continue
+            url_key = _normalize_url(link)
             norm = re.sub(r"[^a-z가-힣0-9]", "", title.lower())
-            if norm not in seen_titles:
+            if norm not in seen_titles and url_key not in seen_urls:
                 seen_titles.add(norm)
+                seen_urls.add(url_key)
                 items.append({"title": title, "description": title, "link": link, "source": s.get("type", "")})
 
         # 2. Bullet points with markdown links: - [Title](URL) or - **[Title](URL)**
@@ -428,9 +433,11 @@ def _collect_all_news_items(summaries: List[Optional[Dict]]) -> List[Dict[str, A
             link = match.group(2).strip()
             if not title or len(title) < 10:
                 continue
+            url_key = _normalize_url(link)
             norm = re.sub(r"[^a-z가-힣0-9]", "", title.lower())
-            if norm not in seen_titles:
+            if norm not in seen_titles and url_key not in seen_urls:
                 seen_titles.add(norm)
+                seen_urls.add(url_key)
                 items.append({"title": title, "description": title, "link": link, "source": s.get("type", "")})
 
         # 3. All remaining markdown links: [Title](URL) or [**Title**](URL) (tables, etc.)
@@ -439,9 +446,11 @@ def _collect_all_news_items(summaries: List[Optional[Dict]]) -> List[Dict[str, A
             link = match.group(2).strip()
             if not title or len(title) < 10:
                 continue
+            url_key = _normalize_url(link)
             norm = re.sub(r"[^a-z가-힣0-9]", "", title.lower())
-            if norm not in seen_titles:
+            if norm not in seen_titles and url_key not in seen_urls:
                 seen_titles.add(norm)
+                seen_urls.add(url_key)
                 items.append({"title": title, "description": title, "link": link, "source": s.get("type", "")})
 
     return items
@@ -664,14 +673,14 @@ def _analyze_sentiment(summaries: List[Optional[Dict[str, Any]]]) -> Dict[str, A
                     pos_count += 1
                     if len(pos_examples) < 3 and len(title) > 10:
                         if title not in pos_examples:
-                            pos_examples.append(smart_truncate(title, 60))
+                            pos_examples.append(smart_truncate(title, 120))
                     break
             for kw in neg_kw:
                 if kw in t_lower:
                     neg_count += 1
                     if len(neg_examples) < 3 and len(title) > 10:
                         if title not in neg_examples:
-                            neg_examples.append(smart_truncate(title, 60))
+                            neg_examples.append(smart_truncate(title, 120))
                     break
 
     total = pos_count + neg_count
@@ -788,6 +797,8 @@ def _extract_category_data_points(summary: Optional[Dict[str, Any]]) -> Dict[str
         url = m.group(2)
         # Skip image file links (e.g. .png, .jpg, assets/images paths)
         if re.search(r"\.(png|jpg|jpeg|gif|svg|webp)", url, re.IGNORECASE):
+            continue
+        if _is_noise_title(title):
             continue
         if title not in titles:
             titles.append(title)
@@ -908,6 +919,26 @@ def _strip_markdown_link(text: str) -> str:
     return text.strip()
 
 
+_NOISE_TITLE_PATTERNS = [
+    re.compile(r"^new cryptocurrency listing[s]?$", re.I),
+    re.compile(r"^new fiat listing[s]?$", re.I),
+    re.compile(r"^api update[s]?$", re.I),
+    re.compile(r"^new listing[s]?$", re.I),
+    re.compile(r"^maintenance update[s]?$", re.I),
+    re.compile(r"^scheduled maintenance", re.I),
+    re.compile(r"^notice:", re.I),
+    re.compile(r"^announcement$", re.I),
+]
+
+
+def _is_noise_title(title: str) -> bool:
+    """Return True if *title* is a low-value noise headline (e.g. exchange notices)."""
+    clean = _strip_markdown_link(title).strip()
+    if len(clean) < 8:
+        return True
+    return any(p.match(clean) for p in _NOISE_TITLE_PATTERNS)
+
+
 def _clean_bullet_text(text: str) -> str:
     text = _strip_markdown_link(text)
     if text.startswith("- "):
@@ -989,10 +1020,10 @@ def _build_snapshot_table(
             name, cnt = summary["themes"][0]
             return f"{name} {cnt}건"
         if summary.get("market_data"):
-            return smart_truncate(_clean_bullet_text(summary["market_data"][0]), 80)
+            return _clean_bullet_text(summary["market_data"][0])
         hl = summary.get("highlights") or summary.get("key_summary") or []
         if hl:
-            return smart_truncate(_clean_bullet_text(hl[0]), 80)
+            return _clean_bullet_text(hl[0])
         return "신호 추출 실패"
 
     dataset = [
@@ -1278,7 +1309,7 @@ def main():
         if dp["figures"]:
             line_parts.append(dp["figures"][0])
         elif dp["titles"]:
-            line_parts.append(smart_truncate(dp["titles"][0], 50))
+            line_parts.append(dp["titles"][0])
         briefing_lines.append("> - " + " — ".join(line_parts))
 
     if briefing_lines:
@@ -1299,7 +1330,7 @@ def main():
         if crypto_dp["figures"]:
             crypto_detail += f" 주요 수치: {crypto_dp['figures'][0]}."
         if crypto_dp["titles"]:
-            crypto_detail += f" 대표 헤드라인: {smart_truncate(crypto_dp['titles'][0], 50)}."
+            crypto_detail += f" 대표 헤드라인: {crypto_dp['titles'][0]}."
         if not crypto_detail:
             crypto_detail = "세부 데이터 확인 필요."
         content_parts.append(f"- **암호화폐:** {crypto_summary.get('count', 0)}건. {crypto_detail.strip()}")
@@ -1311,7 +1342,7 @@ def main():
         if stock_dp["figures"]:
             stock_detail += f" 주요 수치: {stock_dp['figures'][0]}."
         if stock_dp["titles"] and not stock_detail.strip():
-            stock_detail = f"대표 헤드라인: {smart_truncate(stock_dp['titles'][0], 50)}."
+            stock_detail = f"대표 헤드라인: {stock_dp['titles'][0]}."
         content_parts.append(
             f"- **주식:** {stock_summary.get('count', 0)}건. {stock_detail.strip() if stock_detail.strip() else '시장 데이터 확인 필요.'}"
         )
@@ -1319,7 +1350,7 @@ def main():
         reg_dp = _extract_category_data_points(regulatory_summary)
         reg_detail = ""
         if reg_dp["titles"]:
-            reg_detail = f"주요 이슈: {smart_truncate(reg_dp['titles'][0], 50)}."
+            reg_detail = f"주요 이슈: {reg_dp['titles'][0]}."
         if reg_dp["figures"]:
             reg_detail += f" 관련 수치: {reg_dp['figures'][0]}."
         if not reg_detail:
@@ -1329,7 +1360,7 @@ def main():
         social_dp = _extract_category_data_points(social_summary)
         social_detail = ""
         if social_dp["titles"]:
-            social_detail = f"화제 키워드: {smart_truncate(social_dp['titles'][0], 50)}."
+            social_detail = f"화제 키워드: {social_dp['titles'][0]}."
         if social_dp["figures"]:
             social_detail += f" {social_dp['figures'][0]}."
         if not social_detail:
@@ -1339,7 +1370,7 @@ def main():
         world_dp = _extract_category_data_points(worldmonitor_summary)
         world_detail = ""
         if world_dp["titles"]:
-            world_detail = f"핵심 이슈: {smart_truncate(world_dp['titles'][0], 50)}."
+            world_detail = f"핵심 이슈: {world_dp['titles'][0]}."
         if world_dp["figures"]:
             world_detail += f" {world_dp['figures'][0]}."
         if not world_detail:
@@ -1347,9 +1378,7 @@ def main():
         content_parts.append(f"- **월드모니터:** {worldmonitor_summary.get('count', 0)}건. {world_detail.strip()}")
     if priority_items.get("P0") or priority_items.get("P1"):
         p0_titles = [
-            smart_truncate(_strip_markdown_link(x.get("title", "")), 40)
-            for x in priority_items.get("P0", [])[:2]
-            if x.get("title")
+            _strip_markdown_link(x.get("title", "")) for x in priority_items.get("P0", [])[:2] if x.get("title")
         ]
         p0_hint = f" 긴급: {', '.join(p0_titles)}." if p0_titles else ""
         content_parts.append(
@@ -1432,6 +1461,8 @@ def main():
         seen_p0 = set()
         for item in priority_items["P0"][:5]:
             title = item.get("title", "")
+            if _is_noise_title(title):
+                continue
             norm = re.sub(r"[^a-z가-힣0-9]", "", item.get("description", title).lower())
             if norm in seen_p0:
                 continue
@@ -1575,6 +1606,8 @@ def main():
         seen_p1 = set()
         for item in priority_items["P1"][:7]:
             title = item.get("title", "")
+            if _is_noise_title(title):
+                continue
             norm = re.sub(r"[^a-z가-힣0-9]", "", item.get("description", title).lower())
             if norm in seen_p1:
                 continue
@@ -1606,7 +1639,7 @@ def main():
         if crypto_dp["titles"]:
             content_parts.append("**대표 헤드라인:**")
             for t in crypto_dp["titles"][:3]:
-                content_parts.append(f"- {smart_truncate(t, 80)}")
+                content_parts.append(f"- {t}")
             content_parts.append("")
         elif crypto_summary.get("highlights"):
             for h in crypto_summary["highlights"][:3]:
@@ -1633,10 +1666,9 @@ def main():
         if stock_dp["titles"]:
             content_parts.append("**대표 헤드라인:**")
             for t in stock_dp["titles"][:3]:
-                cleaned = smart_truncate(t, 80)
-                if cleaned not in seen_stock:
-                    content_parts.append(f"- {cleaned}")
-                    seen_stock.add(cleaned)
+                if t not in seen_stock:
+                    content_parts.append(f"- {t}")
+                    seen_stock.add(t)
             content_parts.append("")
         elif stock_summary.get("highlights"):
             for h in stock_summary["highlights"][:3]:
@@ -1653,7 +1685,7 @@ def main():
         if reg_dp["titles"]:
             content_parts.append("**주요 규제 이슈:**")
             for t in reg_dp["titles"][:3]:
-                content_parts.append(f"- {smart_truncate(t, 80)}")
+                content_parts.append(f"- {t}")
             content_parts.append("")
         elif regulatory_summary.get("key_summary"):
             for h in regulatory_summary["key_summary"][:3]:
@@ -1695,7 +1727,7 @@ def main():
         if sec_dp["titles"]:
             content_parts.append("**주요 보안 이슈:**")
             for t in sec_dp["titles"][:3]:
-                content_parts.append(f"- {smart_truncate(t, 80)}")
+                content_parts.append(f"- {t}")
             content_parts.append("")
         elif security_summary.get("key_summary"):
             for h in security_summary["key_summary"][:3]:
@@ -1720,7 +1752,7 @@ def main():
         if social_dp["titles"]:
             content_parts.append("**화제 토픽:**")
             for t in social_dp["titles"][:3]:
-                content_parts.append(f"- {smart_truncate(t, 80)}")
+                content_parts.append(f"- {t}")
             content_parts.append("")
         elif social_summary.get("highlights"):
             for h in social_summary["highlights"][:3]:
@@ -1741,6 +1773,8 @@ def main():
         seen_p2 = set()
         for item in priority_items["P2"][:5]:
             title = item.get("title", "")
+            if _is_noise_title(title):
+                continue
             norm = re.sub(r"[^a-z가-힣0-9]", "", item.get("description", title).lower())
             if norm in seen_p2:
                 continue
