@@ -544,16 +544,20 @@ def extract_theme_names(lines: List[str]) -> List[str]:
 
 
 def extract_total_count(body: str) -> str:
+    # Strip table rows and HTML blocks to avoid picking up embedded counts
+    # (e.g. social media "총 25건" inside a dashboard table cell)
+    cleaned = re.sub(r"^\|.*\|$", "", body, flags=re.MULTILINE)
+    cleaned = re.sub(r"<[^>]+>.*?</[^>]+>", "", cleaned, flags=re.DOTALL)
     patterns = [
         r"총\s*\*\*(\d{1,6})\*\*\s*건",
-        r"총\s*(\d{1,6})\s*건",
         r"총\s*수집[^\d]*(\d{1,6})\s*건",
         r"수집\s*건수\s*[:：]?\s*(\d{1,6})",
+        r"총\s*(\d{1,6})\s*건",
         r"(?:뉴스|이슈)\s*(\d{1,6})\s*건",
         r"(\d{1,6})\s*건\s*을\s*정리",
     ]
     for pattern in patterns:
-        match = re.search(pattern, body)
+        match = re.search(pattern, cleaned)
         if match:
             return match.group(1)
     return ""

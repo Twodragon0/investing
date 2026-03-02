@@ -783,8 +783,12 @@ def _extract_category_data_points(summary: Optional[Dict[str, Any]]) -> Dict[str
 
     # Extract top titles (first 5 meaningful ones)
     titles: List[str] = []
-    for m in re.finditer(r"\[([^\]]{10,})\]\([^)]+\)", content):
+    for m in re.finditer(r"(?<!!)\[([^\]]{10,})\]\(([^)]+)\)", content):
         title = m.group(1).strip()
+        url = m.group(2)
+        # Skip image file links (e.g. .png, .jpg, assets/images paths)
+        if re.search(r"\.(png|jpg|jpeg|gif|svg|webp)", url, re.IGNORECASE):
+            continue
         if title not in titles:
             titles.append(title)
         if len(titles) >= 5:
