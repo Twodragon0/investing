@@ -27,6 +27,7 @@ description: "오늘 시가총액 상위 30개 코인을 기준으로 시장을 
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Hyperliquid</strong> (HYPE): +11.22%</li><li>🟢 <strong>Chainlink</strong> (LINK): +5.58%</li><li>🟢 <strong>Solana</strong> (SOL): +5.48%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 오늘의 시장 인사이트:
