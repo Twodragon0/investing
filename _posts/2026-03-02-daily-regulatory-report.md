@@ -16,18 +16,6 @@ description: "전 세계 금융 규제기관의 최신 동향을 정리합니다
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">21</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 15</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">20</div><div class="stat-label">한국</div></div></div>
 <div class="alert-box alert-info"><strong>글로벌 규제: 없습니다, 대한, 보이스피싱 관련 21건 수집</strong><ul><li>🔵 <strong>규제/정책</strong> (15건): 없습니다, 대한, 보이스피싱, 개선방안은, 현장방문</li><li>🟠 <strong>비트코인</strong> (1건): 검토중입니다, 세부방안은, 단일종목, 레버리지, ETF</li><li>🤖 <strong>AI/기술</strong> (1건): 국민성장펀드가, 이차전지와, 첨단반도체, 지원합니다, 차세대</li><li>🏛️ <strong>정치/정책</strong> (7건): 국민성장펀드가, 지원합니다, 선정하였습니다, 국민성장펀드, 간접투자부문</li></ul></div>
-## 전체 뉴스 요약
-
-총 21건의 뉴스 중 **규제/정책** 관련이 15건(71%)으로 압도적입니다. 규제 동향이 시장 참여자들의 주요 관심사입니다
-
-1. **🔵 규제/정책** (15건): 없습니다, 대한, 보이스피싱, 개선방안은, 현장방문
-2. **🟠 비트코인** (1건): 검토중입니다, 세부방안은, 단일종목, 레버리지, ETF
-3. **🤖 AI/기술** (1건): 국민성장펀드가, 이차전지와, 첨단반도체, 지원합니다, 차세대
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-**P1 주요**: “다주택자·임대사업자 대출연장 개선방안은 확정된 바 없습니다” / 단일종목 레버리지 ETF의 세부방안은 검토중입니다. / 026.2.9일 머니투데이 인터넷판  “신한캐피탈, 다른 창업자에게도 연대책임 제기...”
-**주요 지역**: 한국 20건, 미국 1건
-
 ## 핵심 요약
 
 - **총 수집 건수**: 21건

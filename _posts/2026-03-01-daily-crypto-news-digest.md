@@ -33,6 +33,7 @@ description: "2026-03-01 암호화폐 시장에서 108건의 뉴스를 분석했
 <div class="alert-box alert-info"><strong>암호화폐 긴급: Bitcoin Miner Tied to Trumps Pummeled by Crypto Crash - 108건 분석</strong><ul><li>🟠 <strong>비트코인</strong> (51건): Bitcoin, crypto, Iran, 비트코인, $64,000</li><li>📈 <strong>가격/시장</strong> (28건): Bitcoin, 비트코인, 달러, Iran, 암호화폐</li><li>🤖 <strong>AI/기술</strong> (10건): Anthropic, Pentagon, Bitcoin, Nvidia, OpenAI</li><li>🏦 <strong>거래소</strong> (12건): Binance, New, Democrats, Treasury, Senate</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMigwFBVV95cUxPSmNjaTFSOV9FaDkycDk2TG5kWEpZT0UyOV9jd05Cb3VzYXlxWmljUkd6NktOOVR4RmFwMXhwc2cyT0g0Vl9zOS02dTJnUWx4M2steDZEXzNQeVNZVnpUbXRWXzFDSlM1aFhtVFllNTNoTXJOWDBMaGZ3YWNnanMzajA5WQ?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin Miner Tied to Trumps Pummeled by Crypto Crash</a></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOYnk1a2lGZGZfV2t4ZEtfMUpkbEN6UjBMRzJ2UDdkeURUSHUtY3ZERTk1ejZXLU9qYnFHUEdQd0g1dTVlSm9wenZyZF9YQ21Rek5EN1hWME51Q3FvdlBrWFpidDVzM3pPamszNTNEWk5BeFVhZWFlbGdjX1NzdFpSSl9IbFFwZ0VX?oc=5">뉴욕증시 엔비디아 공매도 폭탄 "무려 500억 달러... 비트코인 급락 - 글로벌이코노믹</a></li><li><a href="https://decrypt.co/359367/jane-street-lawsuit-fuels-late-double-digit-pop-in-terra-luna-classic">Jane Street Lawsuit Fuels Late Double-Digit Pop in Terra Luna Classic</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **108건** 수집

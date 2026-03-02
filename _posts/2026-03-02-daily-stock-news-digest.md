@@ -17,37 +17,13 @@ description: "2026-03-02 주식 시장에서 114건의 뉴스를 분석했습니
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">114</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 49</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">리스크 위험</div></div><div class="stat-item"><div class="stat-value">6,244.13</div><div class="stat-label">KOSPI -1.00%</div></div><div class="stat-item"><div class="stat-value">1,192.78</div><div class="stat-label">KOSDAQ +0.39%</div></div></div>
 <div class="alert-box alert-info"><strong>주식 시장 긴급: prediction, worries, Nasdaq - 114건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (49건): 코스피, 코스닥, Nasdaq, crash, 거래대금</li><li>🤖 <strong>AI/기술</strong> (7건): Nasdaq, Nvidia, prediction, worries, Monday</li><li>🟠 <strong>비트코인</strong> (3건): ETF, Intelligence, Struggling, Artificial, Dividends</li><li>🏛️ <strong>정치/정책</strong> (4건): Trump, the, Administration, operations, continue</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMirwJBVV95cUxQSE1tQ0pjTzdwSUtkSGVrS0J3UlRwa1ZEald5NWJEZjhDVmIxSktBeHFzWmJfUW1JWTg2NkhfQ1N0VmRWOVJaZlBWdUcyVUp4MnlaOFB0T3dxSGV0a2FpQkUtXzl6eHhJWEJ1THF2dlVZY0R4dW96bkVKRktSUHBUeEcwZmwzemlVd3BqN3BhZXViQXpjb094MDB5VF85U003dmloV0VTMnlraFoyVkRWdVUxZ3dSTU5WNldjN2RqOEk5QjJ5bEVjeUdXTEVhdmN5MkdTRlEtR29jWkl5ME5qalZsUDdVU0JKbzZBelNwblk3QnRpTXNVLUEtamdzb05kZ1lhczN2bjZrY0VnUkxVS1pVbG9BLXFCTDVpR244VElLSGNxVC0tZl9KeWhtc1nSAbQCQVVfeXFMUFhCMzBUZ3JxVVhtMTNCLXNVZ3M2MExodGVrb3p6SFloWG9sdm5ZNTZVaFZHTkdrTm1BSGFRLXgxSV9WRnpCcXZrSUNFZ29BRzVxSXI0d0pKTk1pb2tmZVdXWDlBamx1WkxXb293TldVOEZ2dUctenF1cUNmR2FjX0VNb1ZwN0Y5T2JSWGJUU3RLcjEyYlNLSlFCLTZ5amxBVUVxdW16YlM5TjZwY0wtYzBwV3NoTzUtZ3lSRG9CTjdLNmpSUXNuTXdxb2Z2RTdxTnFjNm9jWU5MQnI3bU53TTl5ZFhmdnBUMWduRkpRT3gtdjl5WjFuWWpRdFRfOUk2NEdjWVV2V3RpbWpKa1NFeElLUkVDbUtTRnZ6b09NMkRlWXAzY3NqMW5aaGJDU25iZTMtV3c?hl=en-US&gl=US&ceid=US%3Aen">U.S. Stock Market prediction: S&P 500, Nasdaq, Dow Jones to crash on Monday? Nvidia stocks, AI worries, US</a></li><li><a href="https://news.google.com/read/CBMizAFBVV95cUxNX3BNX05kajhRUUFKN19CNWk4OEJNUmJUWHBmNlR0VVVLeGd1VDRzNFptSGFKalc3ZTE5WFhDMFp3NUFZUVRsWWtWZmMxaGZsbmdnSklGTVItSWNyenFvYUYzSFR3NVowczNnbjNmU2puenJRV2NMRkd0N0dueUU2WnpXUVc2UTZMaFhfenFtejA3b2ZXTHpOZVRLSEtxdHAwZzg2cFptWTZnMURmUkJNQzk0bGZXTHRmQTBOQW0wRmhrb3ZiY2JwUzlwZWY?hl=en-US&gl=US&ceid=US%3Aen">This Expert Says the S&P 500 Has 'Crashed Under the Surface.' What a Stealth Correction Means.</a></li><li><a href="https://news.google.com/read/CBMijgFBVV95cUxQaUY0aW5oakJkbnRYTEhGSzBnQm1MajlHQXcwdGRVQmRkXzZVOFlWY1g2R0UycmlvRFB1bzdSbUdWeWRHNVhLX2UtbmdJbmFsOHhqZ1VWUmtaMVRXMzVmdXo4VzE1QUxwMmtyZ3JLWVRGT1lONGJUSEJUajQwUXRoekV1aF9FRVh6blpsNDJB?hl=en-US&gl=US&ceid=US%3Aen">Be prepared for a historic stock market crash</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: U.S. Stock Market prediction: S&P 500, Nasdaq, Dow Jones to crash on Monday? ...  
-외 P0 긴급 이슈 6건이 추가 감지되었습니다. 총 114건의 뉴스 중 P1 주요 이슈도 5건 확인됩니다.
-
-1. **📈 가격/시장** (49건): 코스피, 코스닥, Nasdaq, crash, 거래대금
-2. **🤖 AI/기술** (7건): Nasdaq, Nvidia, prediction, worries, Monday
-3. **🟠 비트코인** (3건): ETF, Intelligence, Struggling, Artificial, Dividends
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-**P0 긴급**: U.S. Stock Market prediction: S&P 500, Nasdaq, Dow Jones to  / This Expert Says the S&P 500 Has 'Crashed Under the Surface. / Be prepared for a historic stock market crash
-**P1 주요**: The Warning Signs Flashing From the Tech-Heavy Blo / Struggling to Pick Artificial Intelligence (AI) St / Use This ETF to Earn Dividends From Berkshire Hath
-- 한국 기사 43건, 글로벌 기사 71건 수집
-- 한국 지수: KOSPI 6,244.13(-1.00%), KOSDAQ 1,192.78(+0.39%), USD/KRW 1,451.24(+0.83%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">49건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:14%"></div></div><span class="theme-count">7건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:6%"></div></div><span class="theme-count">3건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:8%"></div></div><span class="theme-count">4건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:10%"></div></div><span class="theme-count">5건</span></div>
-</div>
-
-*총 114건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
-
-
-![market-snapshot]({{ '/assets/images/generated/market-snapshot-2026-03-02.png' | relative_url }})
-
-
----
+- KOSPI 6,244.13 (-1.00%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
+- KOSDAQ 1,192.78 (+0.39%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-03-02 주식 시장에서 114건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,244.13(-1.00%), KOSDAQ 1,192.78(+0.39%), USD/KRW 1,451.24(+0.83%).
+- *코스피, 코스닥, Nasdaq, crash, 거래대금*
 
 ## 테마별 주요 뉴스
 
