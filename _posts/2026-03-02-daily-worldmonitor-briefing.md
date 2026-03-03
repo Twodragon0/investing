@@ -15,7 +15,7 @@ description: "2026-03-02 기준 WorldMonitor 연계 소스에서 글로벌 이�
 
 <div class="alert-box alert-info"><strong>오늘의 글로벌 리스크 스냅샷</strong><ul>
 <li>총 수집: <strong>20건</strong></li>
-<li>핵심 테마: <strong>지정학/안보, 사회/기타</strong></li>
+<li>핵심 테마: <strong>지정학/안보</strong></li>
 <li>집중 출처: <strong>WorldMonitor/Al Jazeera</strong></li>
 </ul></div>
 
@@ -28,14 +28,13 @@ description: "2026-03-02 기준 WorldMonitor 연계 소스에서 글로벌 이�
 ## 이슈 분포
 <div class="stat-grid">
 <div class="stat-item"><div class="stat-value">20</div><div class="stat-label">총 이슈</div></div>
-<div class="stat-item"><div class="stat-value">2</div><div class="stat-label">테마 수</div></div>
+<div class="stat-item"><div class="stat-value">1</div><div class="stat-label">테마 수</div></div>
 <div class="stat-item"><div class="stat-value">2</div><div class="stat-label">출처 수</div></div>
-<div class="stat-item"><div class="stat-value">18</div><div class="stat-label">안보 이슈</div></div>
+<div class="stat-item"><div class="stat-value">20</div><div class="stat-label">안보 이슈</div></div>
 </div>
 
 <div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">지정학/안보</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:90%"></div></div><span class="theme-count">18건 (90%)</span></div>
-<div class="theme-row"><span class="theme-label">사회/기타</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:10%"></div></div><span class="theme-count">2건 (10%)</span></div>
+<div class="theme-row"><span class="theme-label">지정학/안보</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:100%"></div></div><span class="theme-count">20건 (100%)</span></div>
 </div>
 
 ## 주요 이슈
@@ -60,8 +59,8 @@ description: "2026-03-02 기준 WorldMonitor 연계 소스에서 글로벌 이�
 | 16 | [**U.S. crude oil jumps more than 8%, topping $72 a barrel on fears of Iran supply disruption**](https://www.cnbc.com/2026/03/01/crude-oil-futures-iran.html) | 지정학/안보 | 높음 | WorldMonitor/CNBC |
 | 17 | [**Asia airline stocks drop while energy shares rise as Iran conflict escalates**](https://www.cnbc.com/2026/03/02/asia-markets-live-trump-iran-oil-prices-nikkei-hang-seng-us-israel-strikes-oil.html) | 지정학/안보 | 높음 | WorldMonitor/CNBC |
 | 18 | [**What travelers need to know after the U.S., Israeli strikes on Iran**](https://www.cnbc.com/2026/03/01/travel-iran-attack-middle-east-flights.html) | 지정학/안보 | 높음 | WorldMonitor/CNBC |
-| 19 | [**Netanyahu vows increasing strikes on Tehran**](https://www.aljazeera.com/video/newsfeed/2026/3/2/netanyahu-vows-increasing-strikes-on-tehran?traffic_source=rss) | 사회/기타 | 낮음 | WorldMonitor/Al Jazeera |
-| 20 | [**Global week ahe**](https://www.cnbc.com/2026/03/02/global-week-ahead-operation-epic-fury-us-israel-iran-strikes-oil-shipping-markets-volatility.html) | 사회/기타 | 낮음 | WorldMonitor/CNBC |
+| 19 | [**Netanyahu vows increasing strikes on Tehran**](https://www.aljazeera.com/video/newsfeed/2026/3/2/netanyahu-vows-increasing-strikes-on-tehran?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
+| 20 | [**Global week ahead: Operation Epic Fury — US-Israel Iran strikes, oil, shipping, markets volatility**](https://www.cnbc.com/2026/03/02/global-week-ahead-operation-epic-fury-us-israel-iran-strikes-oil-shipping-markets-volatility.html) | 지정학/안보 | 높음 | WorldMonitor/CNBC |
 
 ## 출처 커버리지
 
@@ -92,7 +91,7 @@ description: "2026-03-02 기준 WorldMonitor 연계 소스에서 글로벌 이�
 <li><a href="https://www.aljazeera.com/video/newsfeed/2026/3/1/spanish-prime-minister-condemns-war-on-iran-as-breach-of-international-law?traffic_source=rss" target="_blank" rel="noopener noreferrer">Spanish Prime Minister condemns war on Iran as breach of international law</a><span class="source-tag">WorldMonitor/Al Jazeera</span></li>
 <li><a href="https://www.cnbc.com/2026/03/01/us-israel-attacks-strikes-iran-retaliate-china-russia-allies.html" target="_blank" rel="noopener noreferrer">Iran may &#x27;lash out harder&#x27; as Khamenei&#x27;s death puts Tehran on a war footing, leaving the world bracing for wha</a><span class="source-tag">WorldMonitor/CNBC</span></li>
 <li><a href="https://www.cnbc.com/2026/03/01/crude-oil-futures-iran.html" target="_blank" rel="noopener noreferrer">U.S. crude oil jumps more than 8%, topping $72 a barrel on fears of Iran supply disruption</a><span class="source-tag">WorldMonitor/CNBC</span></li>
-<li><a href="https://www.cnbc.com/2026/03/02/global-week-ahead-operation-epic-fury-us-israel-iran-strikes-oil-shipping-markets-volatility.html" target="_blank" rel="noopener noreferrer">Global week ahe</a><span class="source-tag">WorldMonitor/CNBC</span></li>
+<li><a href="https://www.cnbc.com/2026/03/02/global-week-ahead-operation-epic-fury-us-israel-iran-strikes-oil-shipping-markets-volatility.html" target="_blank" rel="noopener noreferrer">Global week ahead: Operation Epic Fury — US-Israel Iran strikes, oil, shipping, markets volatility</a><span class="source-tag">WorldMonitor/CNBC</span></li>
 <li><a href="https://www.cnbc.com/2026/03/02/asia-markets-live-trump-iran-oil-prices-nikkei-hang-seng-us-israel-strikes-oil.html" target="_blank" rel="noopener noreferrer">Asia airline stocks drop while energy shares rise as Iran conflict escalates</a><span class="source-tag">WorldMonitor/CNBC</span></li>
 <li><a href="https://www.cnbc.com/2026/03/01/travel-iran-attack-middle-east-flights.html" target="_blank" rel="noopener noreferrer">What travelers need to know after the U.S., Israeli strikes on Iran</a><span class="source-tag">WorldMonitor/CNBC</span></li>
 </ol>

@@ -127,7 +127,7 @@ Iran Strikes Could Make Fed Rate Cuts Even Less Likely Barron's
 
 **감성 분석**: 긍정 키워드 7회(64%) vs 부정 키워드 4회(36%). 매수 심리 우세입니다.
 
-**트렌딩 토픽**: **telegram**(20회), **usd**(10회), **https**(10회), **bitcoin**(9회), **unknown**(9회)
+**트렌딩 토픽**: **bitcoin**(9회), **BlackRock**(3회), **USDT/Tether**(5회), **Bithumb 대량이체**(3회)
 
 **텔레그램**: 활발한 채널 — Telegram @crypto(10건), Telegram @whale_alert(10건). 총 20건 포착. 최신 메시지: *Blackrock ETF has sold $117,440,000 in Bitcoin.*
 

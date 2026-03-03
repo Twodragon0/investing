@@ -15,7 +15,7 @@ description: "전 세계 금융 규제기관의 최신 동향을 정리합니다
 ## 한눈에 보기
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">21</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 15</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">20</div><div class="stat-label">한국</div></div></div>
-<div class="alert-box alert-info"><strong>글로벌 규제: 없습니다, 대한, 보이스피싱 관련 21건 수집</strong><ul><li>🔵 <strong>규제/정책</strong> (15건): 없습니다, 대한, 보이스피싱, 개선방안은, 현장방문</li><li>🟠 <strong>비트코인</strong> (1건): 검토중입니다, 세부방안은, 단일종목, 레버리지, ETF</li><li>🤖 <strong>AI/기술</strong> (1건): 국민성장펀드가, 이차전지와, 첨단반도체, 지원합니다, 차세대</li><li>🏛️ <strong>정치/정책</strong> (7건): 국민성장펀드가, 지원합니다, 선정하였습니다, 국민성장펀드, 간접투자부문</li></ul></div>
+<div class="alert-box alert-info"><strong>글로벌 규제: 벤처지원, 보이스피싱, 국민성장펀드 관련 21건 수집</strong><ul><li>🔵 <strong>규제/정책</strong> (15건): 벤처지원, 보이스피싱 대응, 채무상환·재기, 사업보고서 감리</li><li>🟠 <strong>비트코인</strong> (1건): 단일종목 레버리지 ETF 세부방안 검토 중</li><li>🤖 <strong>AI/기술</strong> (1건): 차세대 이차전지·첨단반도체 국민성장펀드 지원</li><li>🏛️ <strong>정치/정책</strong> (7건): 국민성장펀드 운용사 선정, 포용적 금융 대전환</li></ul></div>
 ## 핵심 요약
 
 - **총 수집 건수**: 21건
@@ -82,18 +82,6 @@ Private Markets Roundtable SEC.gov
 **10. [사업보고서 등에 대한 조사·감리결과 조치](https://www.fsc.go.kr/no010101/86331)**
 <span class="source-tag">금융위원회 보도자료</span>
 
-
----
-
-## 아시아 규제 동향
-
-*수집된 항목이 없습니다.*
-
----
-
-## 유럽 규제 동향
-
-*수집된 항목이 없습니다.*
 
 ---
 

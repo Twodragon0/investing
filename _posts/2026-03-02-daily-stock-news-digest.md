@@ -22,10 +22,10 @@ description: "2026-03-02 주식 시장에서 114건의 뉴스를 분석했습니
 
 ## 전체 뉴스 요약
 
-- KOSPI 6,244.13 (-1.00%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
-- KOSDAQ 1,192.78 (+0.39%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- 2026-03-02 주식 시장에서 114건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,244.13(-1.00%), KOSDAQ 1,192.78(+0.39%), USD/KRW 1,451.24(+0.83%).
-- *코스피, 코스닥, Nasdaq, crash, 거래대금*
+- **KOSPI** 6,244.13 (-1.00%): 이란 분쟁 여파로 소폭 조정, 기술적 지지선 부근에서 반등 가능성
+- **KOSDAQ** 1,192.78 (+0.39%): KOSPI 대비 강세로 중소형주·성장주 선호 심리 반영
+- **USD/KRW** 1,451.24 (+0.83%): 중동 리스크로 1,450원선 돌파, 외국인 매도 압력 우려
+- **미국**: S&P 500·나스닥 선물 급락, 이란 분쟁에 따른 유가 폭등이 핵심 변수
 
 ## 테마별 주요 뉴스
 
@@ -67,13 +67,13 @@ Struggling to Pick Artificial Intelligence (AI) Stocks? You're Not Alone -- Try 
 <details><summary>그 외 4건 보기</summary><div class="details-content">
 <a href="https://news.google.com/read/CBMirwJBVV95cUxQSE1tQ0pjTzdwSUtkSGVrS0J3UlRwa1ZEald5NWJEZjhDVmIxSktBeHFzWmJfUW1JWTg2NkhfQ1N0VmRWOVJaZlBWdUcyVUp4MnlaOFB0T3dxSGV0a2FpQkUtXzl6eHhJWEJ1THF2dlVZY0R4dW96bkVKRktSUHBUeEcwZmwzemlVd3BqN3BhZXViQXpjb094MDB5VF85U003dmloV0VTMnlraFoyVkRWdVUxZ3dSTU5WNldjN2RqOEk5QjJ5bEVjeUdXTEVhdmN5MkdTRlEtR29jWkl5ME5qalZsUDdVU0JKbzZBelNwblk3QnRpTXNVLUEtamdzb05kZ1lhczN2bjZrY0VnUkxVS1pVbG9BLXFCTDVpR244VElLSGNxVC0tZl9KeWhtc1nSAbQCQVVfeXFMUFhCMzBUZ3JxVVhtMTNCLXNVZ3M2MExodGVrb3p6SFloWG9sdm5ZNTZVaFZHTkdrTm1BSGFRLXgxSV9WRnpCcXZrSUNFZ29BRzVxSXI0d0pKTk1pb2tmZVdXWDlBamx1WkxXb293TldVOEZ2dUctenF1cUNmR2FjX0VNb1ZwN0Y5T2JSWGJUU3RLcjEyYlNLSlFCLTZ5amxBVUVxdW16YlM5TjZwY0wtYzBwV3NoTzUtZ3lSRG9CTjdLNmpSUXNuTXdxb2Z2RTdxTnFjNm9jWU5MQnI3bU53TTl5ZFhmdnBUMWduRkpRT3gtdjl5WjFuWWpRdFRfOUk2NEdjWVV2V3RpbWpKa1NFeElLUkVDbUtTRnZ6b09NMkRlWXAzY3NqMW5aaGJDU25iZTMtV3c?hl=en-US&gl=US&ceid=US%3Aen">U.S. Stock Market prediction: S&P 500, Nasdaq, Dow Jones to crash on Monday? Nvidia stocks, AI worries, US</a>
 <a href="https://www.marketwatch.com/story/anthropics-claude-tops-app-store-charts-as-backlash-builds-against-openais-chatgpt-3fdce792?mod=mw_rss_topstories">Anthropic’s Claude tops App Store charts as backlash builds against OpenAI’s ChatGPT</a>
-<a href="https://www.cnbc.com/2026/03/02/global-week-ahead-operation-epic-fury-us-israel-iran-strikes-oil-shipping-markets-volatility.html">Global week ahe</a>
+<a href="https://www.cnbc.com/2026/03/02/global-week-ahead-operation-epic-fury-us-israel-iran-strikes-oil-shipping-markets-volatility.html">Global week ahead: Operation Epic Fury — US-Israel Iran strikes, oil, markets volatility</a>
 </div></details>
 
 
 ### 🟠 비트코인 (3건)
 
-*ETF, Intelligence, Struggling, Artificial, Dividends*
+*ETF, AI 주식, 비트코인 ETF, 금·은 하락*
 
 **1. [‘워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까](https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako)**
 <span class="source-tag">Google News</span>
@@ -88,7 +88,7 @@ Struggling to Pick Artificial Intelligence (AI) Stocks? You're Not Alone -- Try 
 
 ### 🏛️ 정치/정책 (4건)
 
-*Trump, the, Administration, operations, continue*
+*Trump, 이란 공습, 한국 정책, 싱가포르 국빈방문*
 
 **1. [Stock Market Under the Trump Administration](https://news.google.com/read/CBMingFBVV95cUxPcUowVHR1VXAzd0Zfamw1MkVSejFsRGo1bkdGdHhjNVBZVFdwU3VpcE5neGJOeWl6RmdQVkFsYlcxNEVTRGg3WHNYSGR1d1BpTjV4T2NqdWdER3ZtQ0RVbU40WTcyRXRaTEM5bFZteVlYNE5EYkM1M1BaR0lYTGlUeFlTeDhVMzRaWFFqZEZhcGc3RFJoZy1qZy1mTGViQQ?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
