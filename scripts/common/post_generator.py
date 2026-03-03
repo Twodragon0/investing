@@ -136,6 +136,10 @@ class PostGenerator:
                     and not stripped.startswith("---")
                     and not stripped.startswith("-")
                     and not stripped.startswith("<")
+                    and not stripped.startswith("*")
+                    and len(stripped) >= 50
+                    and not re.match(r"^https?://", stripped)
+                    and not re.match(r"^\d+[\.\)]\s", stripped)
                 ):
                     desc_text = stripped
                     break

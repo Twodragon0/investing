@@ -297,8 +297,9 @@ def summarize_worldmonitor_post(post: Dict[str, Any]) -> Dict[str, Any]:
                 count = int(m.group(1))
                 break
 
-    # Strip section headings that would be duplicated in the daily summary
+    # Strip section headings and stat-grid blocks that would be duplicated
     cleaned = re.sub(r"^##\s+이슈 분포.*$", "", content, flags=re.MULTILINE)
+    cleaned = re.sub(r'<div class="stat-grid">.*?</div>\s*</div>\s*</div>', "", cleaned, flags=re.DOTALL)
 
     return {
         "type": "worldmonitor",

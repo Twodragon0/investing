@@ -108,7 +108,7 @@ def _parse_telegram_items(channel: str, messages, limit: int) -> List[Dict[str, 
                     "tags": ["social-media", "telegram", channel],
                 }
             )
-        except Exception as e:
+        except (AttributeError, TypeError, IndexError) as e:
             logger.debug("Telegram RSS item parse error: %s", e)
             continue
     return items
@@ -255,7 +255,7 @@ def fetch_reddit_posts(limit: int = 10) -> List[Dict[str, Any]]:
                 all_items.append(
                     {
                         "title": f"[Reddit] {title}",
-                        "description": truncate_text(pd.get("selftext", title), 300),
+                        "description": truncate_text(pd.get("selftext", ""), 300),
                         "link": f"https://reddit.com{pd.get('permalink', '')}",
                         "published": "",
                         "source": display_name,
@@ -536,8 +536,8 @@ def main():
                 web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
                 content_parts.append(f"\n![source-distribution]({web_path})\n")
                 logger.info("Generated source distribution image")
-    except ImportError:
-        pass
+    except ImportError as e:
+        logger.debug("Optional dependency unavailable: %s", e)
     except Exception as e:
         logger.warning("Source distribution image failed: %s", e)
 

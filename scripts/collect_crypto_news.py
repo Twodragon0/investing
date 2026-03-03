@@ -236,14 +236,14 @@ def _scrape_binance_page(session) -> List[Dict[str, Any]]:
             items.append(
                 {
                     "title": title,
-                    "description": title,
+                    "description": "",
                     "link": href,
                     "published": "",
                     "source": "Binance",
                     "tags": ["crypto", "exchange", "binance"],
                 }
             )
-        except Exception as e:
+        except (AttributeError, TypeError) as e:
             logger.debug("Binance link parse error: %s", e)
             continue
     return items
@@ -296,7 +296,7 @@ def _fetch_binance_bapi() -> List[Dict[str, Any]]:
                     items.append(
                         {
                             "title": title,
-                            "description": title,
+                            "description": "",
                             "link": "https://www.binance.com/en/support/announcement",
                             "published": date_str,
                             "source": "Binance",
@@ -552,8 +552,8 @@ def main():
                 web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
                 content_parts.append(f"\n![news-briefing]({web_path})\n")
                 logger.info("Generated news briefing card")
-        except ImportError:
-            pass
+        except ImportError as e:
+            logger.debug("Optional dependency unavailable: %s", e)
         except Exception as e:
             logger.warning("News briefing card failed: %s", e)
 
@@ -569,8 +569,8 @@ def main():
                     web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
                     content_parts.append(f"\n![news-summary]({web_path})\n")
                     logger.info("Generated news summary card")
-            except ImportError:
-                pass
+            except ImportError as e:
+                logger.debug("Optional dependency unavailable: %s", e)
             except Exception as e:
                 logger.warning("News summary card failed: %s", e)
 

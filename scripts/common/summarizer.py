@@ -908,6 +908,22 @@ class ThemeSummarizer:
         "according",
         "following",
         "based",
+        "and", "the", "are", "new", "but", "down", "may", "set", "get",
+        "has", "had", "not", "all", "can", "now", "how", "why", "who",
+        "its", "our", "his", "her", "per", "via", "top",
+        "two", "one", "see", "use", "big", "old", "own", "off", "run",
+        "try", "way", "end", "let", "put", "say", "too", "did", "got",
+        "hit", "low", "key", "any", "yet", "ago", "day", "due", "far",
+        "few", "high", "hold", "keep", "left", "long", "move", "need",
+        "open", "part", "plan", "play", "push", "pull", "real", "rise",
+        "risk", "seen", "send", "sent", "sure", "tell", "test", "turn",
+        "view", "want", "well", "went", "wide", "work", "help", "head",
+        "eyes", "call", "data", "full", "goes", "gone", "good", "half",
+        "hand", "hard", "line", "mark", "mean", "meet", "note", "once",
+        "only", "past", "rate", "read", "rest", "role", "rule", "soon",
+        "step", "stop", "talk", "told", "true", "upon", "used", "wins",
+        "lost", "lead", "drop", "fell", "grew", "lose", "pays", "sell",
+        "rose", "https", "unknown",
         # Korean common
         "관련",
         "이슈",
@@ -939,6 +955,9 @@ class ThemeSummarizer:
             for token in tokens:
                 normalized = token.lower() if re.match(r"[A-Za-z]", token) else token
                 if normalized not in self._STOP_WORDS and len(normalized) >= 2:
+                    # Skip short generic English tokens (1-2 chars)
+                    if re.match(r"^[a-z]{1,2}$", normalized):
+                        continue
                     word_counter[token] += 1
         # Sort by frequency desc, then length desc (prefer specific tokens)
         sorted_words = sorted(

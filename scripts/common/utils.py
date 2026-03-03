@@ -107,6 +107,31 @@ def truncate_text(text: str, max_length: int = 300) -> str:
     return truncated + "..."
 
 
+def validate_news_item(item: dict) -> Optional[dict]:
+    """Validate and clean a news item dict.
+
+    Returns the cleaned item, or None if invalid.
+    Required fields: title (min 10 chars), link (valid URL).
+    Fixes: description == title → empty string.
+    """
+    title = item.get("title", "").strip()
+    if len(title) < 10:
+        logger.debug("Skipping item with short title: %r", title[:30])
+        return None
+
+    link = item.get("link", "").strip()
+    if link and not validate_url(link):
+        logger.debug("Skipping item with invalid URL: %r", link[:60])
+        return None
+
+    # Fix description that's identical to title
+    desc = item.get("description", "").strip()
+    if desc == title:
+        item["description"] = ""
+
+    return item
+
+
 def request_with_retry(
     url: str,
     params=None,
