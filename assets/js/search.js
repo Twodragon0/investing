@@ -23,9 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function highlightText(text, query) {
     if (!text || !query) return escapeHtml(text || '');
-    var escaped = escapeHtml(text);
     var regex = new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
-    return escaped.replace(regex, '<mark>$1</mark>');
+    var parts = text.split(regex);
+    return parts.map(function(part, i) {
+      return i % 2 === 1 ? '<mark>' + escapeHtml(part) + '</mark>' : escapeHtml(part);
+    }).join('');
   }
 
   function getExcerptAround(text, query, maxLen) {
