@@ -607,12 +607,12 @@ layout: default
   const scrollToTopBtn = document.getElementById('scroll-to-top');
 
   window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
+    if (window.scrollY > 300) {
       scrollToTopBtn.classList.add('visible');
     } else {
       scrollToTopBtn.classList.remove('visible');
     }
-  });
+  }, { passive: true });
 
   scrollToTopBtn.addEventListener('click', () => {
     window.scrollTo({

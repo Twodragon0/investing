@@ -239,8 +239,13 @@ function googleTranslateElementInit() {
     var info = LANG_LABELS[lang] || {};
     var text = (typeof window.__t === 'function') ? window.__t('translate_notice') : 'AI Translated';
     notice.innerHTML = '<span style="margin-right:6px;">' + (info.flag || '') + '</span>' + text +
-      ' <a href="https://translate.google.com/" target="_blank" rel="noopener" style="color:#58a6ff;margin-left:8px;text-decoration:underline;font-size:0.75rem;">Powered by Google Translate</a>' +
-      '<button onclick="this.parentElement.remove()" style="background:none;border:none;color:#8cb4e0;margin-left:12px;cursor:pointer;font-size:1rem;" aria-label="Close">&times;</button>';
+      ' <a href="https://translate.google.com/" target="_blank" rel="noopener" style="color:#58a6ff;margin-left:8px;text-decoration:underline;font-size:0.75rem;">Powered by Google Translate</a>';
+    var closeBtn = document.createElement('button');
+    closeBtn.style.cssText = 'background:none;border:none;color:#8cb4e0;margin-left:12px;cursor:pointer;font-size:1rem;';
+    closeBtn.setAttribute('aria-label', 'Close');
+    closeBtn.textContent = '\u00D7';
+    closeBtn.addEventListener('click', function() { notice.remove(); });
+    notice.appendChild(closeBtn);
     var header = document.querySelector('.site-header');
     if (header && header.parentNode) header.parentNode.insertBefore(notice, header.nextSibling);
   }
@@ -273,7 +278,14 @@ function googleTranslateElementInit() {
   else initFn();
 
   if ('MutationObserver' in window) {
-    new MutationObserver(function() { cleanupFontTags(); hideGoogleTranslateBanner(); }).observe(document.body, {childList:true, subtree:true});
+    var _translateObserverTimer;
+    new MutationObserver(function() {
+      clearTimeout(_translateObserverTimer);
+      _translateObserverTimer = setTimeout(function() {
+        cleanupFontTags();
+        hideGoogleTranslateBanner();
+      }, 200);
+    }).observe(document.body, {childList:true, subtree:true});
   }
 
   var sysLang = getSystemLanguage(), curLang = getCurrentLang(), userPref = safeGet(localStorage, 'preferredLang');

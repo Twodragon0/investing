@@ -123,6 +123,10 @@ runs:
 
         profile_label="${alias}-agent"
 
+        if [ -n "$token" ]; then
+          echo "::add-mask::$token"
+        fi
+
         {
           echo "can_post=$can_post"
           echo "token=$token"

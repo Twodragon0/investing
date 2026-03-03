@@ -24,6 +24,8 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: "3.11"
+          cache: 'pip'
+          cache-dependency-path: scripts/requirements.txt
 
       - name: Run ultraworker-sisyphus loop cycle
         run: |
