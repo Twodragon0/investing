@@ -991,7 +991,10 @@ class ThemeSummarizer:
         # Strategy 1: Build keyword-based composite briefing
         keywords = self._extract_title_keywords(articles, max_keywords=5)
         if len(keywords) >= 3:
-            return ", ".join(keywords[:5])
+            # Generate a descriptive briefing
+            count = len(articles)
+            kw_str = ", ".join(keywords[:3])
+            return f"{kw_str} 관련 {count}건의 뉴스가 보고되었습니다."
 
         # Strategy 2: Best description snippet from top articles
         best_desc = ""
@@ -1542,3 +1545,125 @@ class ThemeSummarizer:
 
         lines.append("")
         return "\n".join(lines)
+
+    # Impact multipliers by source authority
+    _SOURCE_WEIGHTS = {
+        "reuters": 2.0,
+        "bloomberg": 2.0,
+        "coindesk": 1.5,
+        "cointelegraph": 1.5,
+        "sec": 2.0,
+        "fed": 2.0,
+        "wsj": 1.8,
+        "cnbc": 1.5,
+        "google news": 1.0,
+        "binance": 1.3,
+        "cryptopanic": 1.0,
+    }
+
+    def score_impact(self, item: Dict[str, Any]) -> float:
+        """Score an item's impact (0-10) based on source authority and content signals."""
+        text = (item.get("title", "") + " " + item.get("description", "")).lower()
+        source = item.get("source", "").lower()
+
+        # Base score from source authority
+        base = 1.0
+        for src_key, weight in self._SOURCE_WEIGHTS.items():
+            if src_key in source:
+                base = weight
+                break
+
+        # Content signals
+        signals = 0.0
+        # Price percentage mentions suggest quantitative impact
+        if re.search(r"[+-]?\d+\.?\d*%", text):
+            signals += 1.5
+        # Large dollar amounts
+        if re.search(r"\$[\d,.]+\s*(?:billion|million|B|M)", text, re.I):
+            signals += 2.0
+        # Institutional names
+        institutions = ["fed", "sec", "ecb", "imf", "world bank", "금융위", "한국은행", "금감원"]
+        if any(inst in text for inst in institutions):
+            signals += 1.5
+        # Urgency words
+        urgency = ["breaking", "urgent", "emergency", "속보", "긴급", "flash"]
+        if any(u in text for u in urgency):
+            signals += 2.0
+
+        return min(base + signals, 10.0)
+
+    _SENTIMENT_POS = {
+        "rally", "surge", "bull", "gain", "rise", "jump", "soar", "breakout",
+        "upgrade", "adoption", "approval", "recovery",
+        "상승", "급등", "반등", "돌파", "강세", "호재", "승인", "회복", "성장",
+    }
+    _SENTIMENT_NEG = {
+        "crash", "dump", "bear", "drop", "fall", "plunge", "decline", "hack",
+        "exploit", "fraud", "ban", "lawsuit", "bankruptcy",
+        "하락", "급락", "폭락", "약세", "악재", "해킹", "파산", "소송", "위축",
+    }
+
+    def get_theme_sentiment(self, theme_key: str) -> str:
+        """Return sentiment label for a theme: 'bullish', 'bearish', or 'neutral'."""
+        self._ensure_scored()
+        articles = self._theme_articles.get(theme_key, [])
+        if not articles:
+            return "neutral"
+        pos = neg = 0
+        for item in articles:
+            text = (item.get("title", "") + " " + item.get("description", "")).lower()
+            pos += sum(1 for kw in self._SENTIMENT_POS if kw in text)
+            neg += sum(1 for kw in self._SENTIMENT_NEG if kw in text)
+        if pos > neg * 1.5:
+            return "bullish"
+        elif neg > pos * 1.5:
+            return "bearish"
+        return "neutral"
+
+    def detect_concentration(self) -> Optional[Tuple[str, str, float]]:
+        """Detect if news is unusually concentrated on one theme.
+
+        Returns (theme_name, theme_key, concentration_ratio) if >40% of articles
+        fall into a single theme, else None.
+        """
+        self._ensure_scored()
+        total = len(self.items)
+        if total < 5:
+            return None
+        top = self.get_top_themes()
+        if not top:
+            return None
+        name, key, _emoji, count = top[0]
+        ratio = count / total
+        if ratio >= 0.4:
+            return (name, key, ratio)
+        return None
+
+    def get_top_themes_with_sentiment(self) -> List[Tuple[str, str, str, int, str]]:
+        """Return top themes with sentiment: (name, key, emoji, count, sentiment)."""
+        themes = self.get_top_themes()
+        result = []
+        for name, key, emoji, count in themes:
+            sentiment = self.get_theme_sentiment(key)
+            sentiment_label = {"bullish": "📈", "bearish": "📉", "neutral": "➡️"}
+            result.append((name, key, emoji, count, sentiment_label.get(sentiment, "➡️")))
+        return result
+
+    def detect_anomalies(self) -> List[Tuple[str, str, int, str]]:
+        """Detect themes with unusually high article counts.
+
+        Returns list of (name, key, count, description) for anomalous themes.
+        """
+        self._ensure_scored()
+        top = self.get_top_themes()
+        if len(top) < 3:
+            return []
+        counts = [c for _, _, _, c in top]
+        avg = sum(counts) / len(counts)
+        anomalies = []
+        for name, key, _emoji, count in top:
+            if count > avg * 2 and count >= 5:
+                anomalies.append(
+                    (name, key, count, f"{name} 관련 뉴스가 평균 대비 {count/avg:.1f}배 집중 — 주요 이벤트 가능성")
+                )
+        return anomalies
