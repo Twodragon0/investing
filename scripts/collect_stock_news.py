@@ -490,7 +490,7 @@ def main():
     if global_news_items:
         content_parts.append("## 글로벌 주식 뉴스\n")
         shown = 0
-        for item in global_news_items[:5]:
+        for item in global_news_items[:15]:
             title = item["title"]
             link = item.get("link", "")
             source = item.get("source", "")
@@ -514,7 +514,7 @@ def main():
     if korean_news_items:
         content_parts.append("\n## 한국 주식 뉴스\n")
         shown = 0
-        for item in korean_news_items[:5]:
+        for item in korean_news_items[:15]:
             title = item["title"]
             link = item.get("link", "")
             source = item.get("source", "")

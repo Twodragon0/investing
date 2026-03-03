@@ -561,7 +561,7 @@ def main():
                 content_parts.append(f"**{i}. [{title}]({link})**")
             else:
                 content_parts.append(f"**{i}. {title}**")
-            if description and description != title and i <= 5:
+            if description and description != title:
                 desc_text = smart_truncate(description, 150)
                 content_parts.append(f"{desc_text}")
             content_parts.append(f"{html_source_tag(source)}\n")
@@ -584,7 +584,7 @@ def main():
                 content_parts.append(f"**{i}. [{title}]({link})**")
             else:
                 content_parts.append(f"**{i}. {title}**")
-            if description and description != title and i <= 5:
+            if description and description != title:
                 desc_text = smart_truncate(description, 150)
                 content_parts.append(f"{desc_text}")
             content_parts.append(f"{html_source_tag(source)}\n")
@@ -627,7 +627,7 @@ def main():
                 content_parts.append(f"**{i}. [{title}]({link})**")
             else:
                 content_parts.append(f"**{i}. {title}**")
-            if description and description != title and i <= 5:
+            if description and description != title:
                 desc_text = smart_truncate(description, 150)
                 content_parts.append(f"{desc_text}")
             content_parts.append(f"{html_source_tag(source)}\n")

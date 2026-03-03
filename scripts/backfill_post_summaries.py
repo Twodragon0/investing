@@ -694,10 +694,10 @@ def _trim_sentence(text: str, limit: int = 110) -> str:
 
 def build_social_summary(body: str) -> List[str]:
     counts = _extract_social_counts(body)
-    total = counts.get("total", "-")
-    telegram = counts.get("telegram", "-")
-    social = counts.get("social", "-")
-    political = counts.get("political", "-")
+    total = counts.get("total", "0")
+    telegram = counts.get("telegram", "0")
+    social = counts.get("social", "0")
+    political = counts.get("political", "0")
     themes = _extract_social_themes(body)
     urgent = _extract_urgent_count(body)
 

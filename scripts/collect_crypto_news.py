@@ -609,17 +609,18 @@ def main():
                 link = item.get("link", "")
                 source = item.get("source", "")
                 description = item.get("description", "").strip()
-                if shown_exchange < 5:
-                    if link:
-                        content_parts.append(f"**{shown_exchange + 1}. [{title}]({link})**")
-                    else:
-                        content_parts.append(f"**{shown_exchange + 1}. {title}**")
-                    if description and description != title:
-                        desc_text = description[:120]
-                        if len(description) > 120:
-                            desc_text += "..."
-                        content_parts.append(f"{desc_text}")
-                    content_parts.append(f"`거래소: {source}`\n")
+                if link:
+                    content_parts.append(f"**{shown_exchange + 1}. [{title}]({link})**")
+                else:
+                    content_parts.append(f"**{shown_exchange + 1}. {title}**")
+                if description and description != title:
+                    desc_text = description[:120]
+                    if len(description) > 120:
+                        desc_text += "..."
+                    content_parts.append(f"{desc_text}")
+                else:
+                    content_parts.append(f"{source} 거래소 공지사항입니다.")
+                content_parts.append(f"`거래소: {source}`\n")
                 shown_exchange += 1
                 if shown_exchange >= 10:
                     break
@@ -933,7 +934,7 @@ def main():
                         security_links.append({"title": title, "link": link, "source": source})
                     else:
                         content_parts.append(f"**{i}. {title}**")
-                    if description and description != title and i <= 5:
+                    if description and description != title:
                         desc_text = smart_truncate(description, 150)
                         content_parts.append(f"{desc_text}")
                     content_parts.append(f"{html_source_tag(source)}\n")
