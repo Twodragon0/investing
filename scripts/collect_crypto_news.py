@@ -31,6 +31,7 @@ from common.config import (
     setup_logging,
 )
 from common.dedup import DedupEngine
+from common.enrichment import _CRYPTO_SOURCE_CONTEXT, enrich_items
 from common.markdown_utils import (
     html_reference_details,
     html_source_tag,
@@ -413,11 +414,17 @@ def main():
 
     # Exchange: browser items first, BAPI fallback
     exchange_items = browser_binance if browser_binance else _fetch_binance_bapi()
+    enrich_items(exchange_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=True, max_fetch=10)
     all_items.extend(exchange_items)
+
+    # Enrich remaining items (RSS, CryptoPanic, Google News browser)
+    enrich_items(all_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=True, max_fetch=10)
 
     # Security news from multiple sources -> security-alerts category
     rekt_items = fetch_rekt_news()
     google_security_items = fetch_google_news_security()
+    enrich_items(rekt_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=False)
+    enrich_items(google_security_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=True, max_fetch=5)
 
     created_count = 0
 

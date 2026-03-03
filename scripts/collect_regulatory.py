@@ -16,13 +16,12 @@ from collections import Counter
 from datetime import UTC, datetime
 from typing import Any, Dict, List, Tuple
 
-import requests
-
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.collector_metrics import log_collection_summary
 from common.config import get_ssl_verify, setup_logging
 from common.dedup import DedupEngine
+from common.enrichment import fetch_page_description
 from common.markdown_utils import html_reference_details, html_source_tag
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feed
@@ -156,32 +155,6 @@ def _clean_rss_title(title: str) -> str:
     return title.strip()
 
 
-def _fetch_page_description(url: str) -> str:
-    """Try to fetch meta description from a URL page (best-effort)."""
-    try:
-        from bs4 import BeautifulSoup as BS4
-
-        resp = requests.get(
-            url,
-            timeout=8,
-            headers={"User-Agent": "Mozilla/5.0 (compatible; InvestingBot/1.0)"},
-            verify=VERIFY_SSL,
-        )
-        resp.raise_for_status()
-        soup = BS4(resp.text, "html.parser")
-        for attr_key, attr_val in [("name", "description"), ("property", "og:description")]:
-            meta = soup.find("meta", attrs={attr_key: attr_val})
-            if meta and meta.get("content", "").strip() and len(meta["content"].strip()) > 20:
-                return meta["content"].strip()[:300]
-        for p in soup.find_all("p"):
-            text = p.get_text(strip=True)
-            if len(text) > 50:
-                return text[:300]
-    except Exception as e:  # noqa: BLE001
-        logger.debug("Failed to fetch description from %s: %s", url, e)
-    return ""
-
-
 def _generate_synthetic_description(title: str, source: str) -> str:
     """Generate a contextual description when RSS provides none."""
     source_ctx = _SOURCE_CONTEXT.get(source, source)
@@ -215,7 +188,7 @@ def _enrich_item(item: dict) -> None:
 
     # Try fetching from URL (skip Google News proxy links)
     if link and "news.google.com/rss/" not in link:
-        fetched = _fetch_page_description(link)
+        fetched = fetch_page_description(link)
         if fetched and fetched != title and len(fetched) > 20:
             item["description"] = fetched
             return

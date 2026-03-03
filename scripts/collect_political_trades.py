@@ -24,6 +24,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common.collector_metrics import log_collection_summary
 from common.config import REQUEST_TIMEOUT, get_ssl_verify, setup_logging
 from common.dedup import DedupEngine
+from common.enrichment import _POLITICAL_SOURCE_CONTEXT, enrich_items
 from common.markdown_utils import (
     html_reference_details,
     html_source_tag,
@@ -274,6 +275,8 @@ def main():
         )
         dedup.save()
         return
+
+    enrich_items(unique_items, context_map=_POLITICAL_SOURCE_CONTEXT, max_fetch=8)
 
     # Count by source category
     congress_count = sum(

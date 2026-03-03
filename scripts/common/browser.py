@@ -205,7 +205,7 @@ def extract_google_news_links(
             items.append(
                 {
                     "title": title,
-                    "description": sanitize_string(title, 500),
+                    "description": "",
                     "link": href,
                     "published": "",
                     "source": "Google News",

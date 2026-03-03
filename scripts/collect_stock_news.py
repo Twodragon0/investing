@@ -21,6 +21,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common.collector_metrics import log_collection_summary
 from common.config import REQUEST_TIMEOUT, get_env, get_ssl_verify, setup_logging
 from common.dedup import DedupEngine
+from common.enrichment import _STOCK_SOURCE_CONTEXT, enrich_items
 from common.markdown_utils import (
     html_reference_details,
     html_source_tag,
@@ -487,6 +488,7 @@ def main():
         for item in all_items
         if item.get("source") != "Alpha Vantage" and detect_language(item.get("title", "")) != "ko"
     ]
+    enrich_items(global_news_items, context_map=_STOCK_SOURCE_CONTEXT, max_fetch=8)
     if global_news_items:
         content_parts.append("## 글로벌 주식 뉴스\n")
         shown = 0
@@ -511,6 +513,7 @@ def main():
         for item in all_items
         if item.get("source") != "Alpha Vantage" and detect_language(item.get("title", "")) == "ko"
     ]
+    enrich_items(korean_news_items, context_map=_STOCK_SOURCE_CONTEXT, max_fetch=8)
     if korean_news_items:
         content_parts.append("\n## 한국 주식 뉴스\n")
         shown = 0
