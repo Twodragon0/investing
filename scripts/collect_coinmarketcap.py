@@ -16,6 +16,8 @@ from collections import OrderedDict
 from datetime import UTC, datetime
 from typing import Any, Dict, List, Tuple
 
+import requests
+
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.collector_metrics import log_collection_summary
@@ -77,7 +79,7 @@ def fetch_cmc_top_coins(api_key: str, limit: int = 30) -> List[Dict[str, Any]]:
         coins = data.get("data", [])
         logger.info("CMC: fetched %d top coins", len(coins))
         return coins
-    except Exception as e:
+    except (requests.exceptions.RequestException, ValueError, KeyError) as e:
         logger.warning("CMC top coins fetch failed: %s", e)
         return []
 
@@ -102,7 +104,7 @@ def fetch_cmc_trending(api_key: str) -> List[Dict[str, Any]]:
         coins = data.get("data", [])
         logger.info("CMC: fetched %d trending coins", len(coins))
         return coins
-    except Exception as e:
+    except (requests.exceptions.RequestException, ValueError, KeyError) as e:
         logger.warning("CMC trending fetch failed: %s", e)
         return []
 
@@ -128,7 +130,7 @@ def fetch_cmc_gainers_losers(api_key: str) -> Tuple[List[Dict], List[Dict]]:
         losers = data.get("losers", [])
         logger.info("CMC: fetched %d gainers, %d losers", len(gainers), len(losers))
         return gainers, losers
-    except Exception as e:
+    except (requests.exceptions.RequestException, ValueError, KeyError) as e:
         logger.warning("CMC gainers/losers fetch failed: %s", e)
         return [], []
 
@@ -829,8 +831,8 @@ def main():
                 fn = os.path.basename(briefing_img)
                 web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
                 sections["오늘의 브리핑"] = f"![market-briefing]({web_path})"
-        except ImportError:
-            pass
+        except ImportError as e:
+            logger.debug("Optional dependency unavailable: %s", e)
         except Exception as e:
             logger.warning("Briefing card generation failed: %s", e)
 

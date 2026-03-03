@@ -115,7 +115,7 @@ def _post_worldmonitor(path: str, payload: Optional[Dict[str, Any]] = None) -> D
         )
         resp.raise_for_status()
         return resp.json()
-    except Exception as e:
+    except (requests.exceptions.RequestException, ValueError) as e:
         logger.warning("WorldMonitor API failed (%s): %s", path, e)
         return {}
 

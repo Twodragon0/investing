@@ -250,7 +250,7 @@ def fetch_korean_market_data() -> dict:
                         "change": f"{change:+,.2f}",
                         "change_pct": f"{change_pct:+.2f}%",
                     }
-            except Exception as e:
+            except (ValueError, TypeError, AttributeError) as e:
                 logger.warning("yfinance %s: %s", symbol, e)
     except ImportError:
         logger.warning("yfinance not installed, skipping Korean market data")
@@ -421,7 +421,7 @@ def main():
                                 "section": "US Market",
                             }
                         )
-                except Exception as exc:
+                except (ValueError, TypeError, IndexError, KeyError) as exc:
                     logger.debug("yfinance symbol %s parse error: %s", sym, exc)
         except ImportError:
             logger.debug("yfinance not available for US market fallback")
@@ -467,8 +467,8 @@ def main():
                 web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
                 content_parts.append(f"\n![market-snapshot]({web_path})\n")
                 logger.info("Generated market snapshot image")
-    except ImportError:
-        pass
+    except ImportError as e:
+        logger.debug("Optional dependency unavailable: %s", e)
     except Exception as e:
         logger.warning("Market snapshot image failed: %s", e)
 

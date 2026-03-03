@@ -120,7 +120,7 @@ def fetch_sec_insider_trades() -> List[Dict[str, Any]]:
                     }
                 )
             logger.info("SEC EDGAR: fetched %d Form 4 filings", len(hits[:10]))
-    except Exception as e:
+    except (requests.exceptions.RequestException, ValueError, KeyError) as e:
         logger.warning("SEC EDGAR search failed: %s", e)
 
     return items

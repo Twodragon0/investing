@@ -188,8 +188,11 @@ def fetch_rss_feeds_concurrent(
         futures = {pool.submit(_fetch_one, f): f for f in feeds}
         for future in as_completed(futures):
             try:
-                items = future.result()
+                items = future.result(timeout=25)
                 all_items.extend(items)
+            except TimeoutError:
+                feed = futures[future]
+                logger.warning("RSS fetch timed out for %s", feed[1])
             except Exception as e:
                 feed = futures[future]
                 logger.warning("Concurrent RSS fetch failed for %s: %s", feed[1], e)
