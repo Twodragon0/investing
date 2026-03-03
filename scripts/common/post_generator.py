@@ -95,7 +95,7 @@ class PostGenerator:
             return None
 
         # Build frontmatter
-        escaped_title = title.replace('"', '\\"')
+        escaped_title = title.replace("\\", "\\\\").replace('"', '\\"')
         frontmatter_lines = [
             "---",
             "layout: post",
@@ -161,8 +161,8 @@ class PostGenerator:
         # Build content
         post_content = "\n".join(frontmatter_lines) + "\n\n" + normalized_content
 
-        # Validate frontmatter
-        if post_content.count("---") < 2:
+        # Validate frontmatter structure (must start with --- and have closing ---)
+        if not post_content.startswith("---\n") or "\n---\n" not in post_content[4:]:
             logger.warning("Invalid frontmatter in post: %s", filename)
             return None
 

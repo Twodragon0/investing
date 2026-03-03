@@ -29,6 +29,7 @@ from common.markdown_utils import (
     markdown_table,
 )
 from common.post_generator import PostGenerator
+from common.utils import request_with_retry
 
 logger = setup_logging("collect_defi_llama")
 
@@ -169,8 +170,7 @@ def fetch_protocols() -> List[Dict[str, Any]]:
     """
     url = f"{BASE_URL}/v2/protocols"
     try:
-        resp = requests.get(url, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
-        resp.raise_for_status()
+        resp = request_with_retry(url, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL)
         data = resp.json()
         if not isinstance(data, list):
             logger.warning("Unexpected protocols response type: %s", type(data))
@@ -200,8 +200,7 @@ def fetch_chains() -> List[Dict[str, Any]]:
     """
     url = f"{BASE_URL}/v2/chains"
     try:
-        resp = requests.get(url, timeout=REQUEST_TIMEOUT, verify=VERIFY_SSL)
-        resp.raise_for_status()
+        resp = request_with_retry(url, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL)
         data = resp.json()
         if not isinstance(data, list):
             logger.warning("Unexpected chains response type: %s", type(data))
@@ -1002,8 +1001,8 @@ def main():
     dedup = DedupEngine("defi_llama_seen.json")
     gen = PostGenerator("crypto-news")
 
-    today = datetime.now(UTC).strftime("%Y-%m-%d")
     now = datetime.now(UTC)
+    today = now.strftime("%Y-%m-%d")
 
     post_title = f"DeFi TVL 리포트 - {today}"
     created_count = 0

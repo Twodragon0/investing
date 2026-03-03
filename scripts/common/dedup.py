@@ -87,7 +87,7 @@ class DedupEngine:
 
     def _prune(self) -> None:
         """Remove entries older than max_age_days."""
-        cutoff = (datetime.now(UTC) - timedelta(days=self.max_age_days)).isoformat()
+        cutoff = (datetime.now(UTC) - timedelta(days=self.max_age_days)).strftime("%Y-%m-%dT%H:%M:%S")
         pruned = {k: v for k, v in self.seen.items() if v >= cutoff}
         if len(pruned) < len(self.seen):
             logger.info("Pruned %d old entries from dedup state", len(self.seen) - len(pruned))
@@ -168,5 +168,5 @@ class DedupEngine:
     def mark_seen(self, title: str, source: str, date_str: str) -> None:
         """Mark a news item as seen."""
         h = _make_hash(title, source, date_str)
-        self.seen[h] = datetime.now(UTC).isoformat()
+        self.seen[h] = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%S")
         self.titles.append([_normalize(title), date_str[:10]])

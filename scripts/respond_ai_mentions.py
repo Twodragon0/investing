@@ -107,12 +107,12 @@ def build_summary_text() -> str:
 def build_dev_status_text() -> str:
     try:
         commit = subprocess.check_output(["git", "log", "-1", "--pretty=%h %s"], cwd=ROOT, text=True).strip()
-    except Exception:
+    except (subprocess.CalledProcessError, FileNotFoundError, OSError):
         commit = "unknown"
 
     try:
         branch = subprocess.check_output(["git", "branch", "--show-current"], cwd=ROOT, text=True).strip()
-    except Exception:
+    except (subprocess.CalledProcessError, FileNotFoundError, OSError):
         branch = "main"
 
     return "\n".join(

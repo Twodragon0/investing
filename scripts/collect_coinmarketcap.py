@@ -677,8 +677,8 @@ def main():
         )
         return
 
-    today = datetime.now(UTC).strftime("%Y-%m-%d")
     now = datetime.now(UTC)
+    today = now.strftime("%Y-%m-%d")
 
     dedup = DedupEngine("crypto_news_seen.json")
     gen_analysis = PostGenerator("market-analysis")

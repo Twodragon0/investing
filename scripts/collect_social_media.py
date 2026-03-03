@@ -526,6 +526,7 @@ def main():
     if political_items:
         source_dist.append({"name": "Politics/Economy", "count": len(political_items)})
 
+    distribution_image_path = ""
     try:
         from common.image_generator import generate_source_distribution_card
 
@@ -533,6 +534,7 @@ def main():
             img = generate_source_distribution_card(source_dist, today)
             if img:
                 fn = os.path.basename(img)
+                distribution_image_path = f"/assets/images/generated/{fn}"
                 web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
                 content_parts.append(f"\n![source-distribution]({web_path})\n")
                 logger.info("Generated source distribution image")
@@ -864,7 +866,7 @@ def main():
         ],
         source="consolidated",
         lang="ko",
-        image=f"/assets/images/generated/source-distribution-{today}.png",
+        image=distribution_image_path,
         slug="daily-social-media-digest",
     )
     if filepath:

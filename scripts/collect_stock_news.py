@@ -457,6 +457,7 @@ def main():
             }
         )
 
+    snapshot_image_path = ""
     try:
         from common.image_generator import generate_market_snapshot_card
 
@@ -464,6 +465,7 @@ def main():
             img = generate_market_snapshot_card(snapshot_items, today)
             if img:
                 fn = os.path.basename(img)
+                snapshot_image_path = f"/assets/images/generated/{fn}"
                 web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
                 content_parts.append(f"\n![market-snapshot]({web_path})\n")
                 logger.info("Generated market snapshot image")
@@ -717,7 +719,7 @@ def main():
         tags=["stock", "market", "daily-digest"],
         source="consolidated",
         lang="ko",
-        image=f"/assets/images/generated/market-snapshot-{today}.png",
+        image=snapshot_image_path,
         slug="daily-stock-news-digest",
     )
     if filepath:
