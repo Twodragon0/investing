@@ -9,7 +9,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from .config import REQUEST_TIMEOUT, USER_AGENT, get_ssl_verify
-from .utils import parse_date, remove_sponsored_text, sanitize_string
+from .utils import parse_date, remove_sponsored_text, sanitize_string, truncate_sentence
 
 logger = logging.getLogger(__name__)
 
@@ -92,10 +92,8 @@ def fetch_rss_feed(
                 description = ""
                 if desc_el:
                     raw_desc = desc_el.get_text(strip=True)
-                    description = sanitize_string(
-                        BeautifulSoup(raw_desc, "html.parser").get_text(" ", strip=True),
-                        500,
-                    )
+                    cleaned_desc = BeautifulSoup(raw_desc, "html.parser").get_text(" ", strip=True)
+                    description = truncate_sentence(sanitize_string(cleaned_desc, 600), 300)
 
                 published_str = date_el.get_text(strip=True) if date_el else ""
 

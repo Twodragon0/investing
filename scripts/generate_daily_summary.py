@@ -889,7 +889,7 @@ def _relation_rows(
         score = sum(v for _, v in shared_topics[:3])
         top_topic = shared_topics[0][0]
         diag = diagnostics.get(top_topic, f"{top_topic} 관련 공통 신호 감지")
-        if score >= 25:
+        if score >= 20:
             level = "높음"
         elif score >= 12:
             level = "중간"
@@ -929,6 +929,12 @@ _NOISE_TITLE_PATTERNS = [
     re.compile(r"^scheduled maintenance", re.I),
     re.compile(r"^notice:", re.I),
     re.compile(r"^announcement$", re.I),
+    re.compile(r"^latest (?:binance |)(?:news|activities|announcements)$", re.I),
+    re.compile(r"^delisting", re.I),
+    re.compile(r"^token (?:swap|migration)", re.I),
+    re.compile(r"^trading pair (?:add|remov)", re.I),
+    re.compile(r"^system (?:upgrade|maintenance)", re.I),
+    re.compile(r"^\[.*\]\s*$"),
 ]
 
 
@@ -1016,7 +1022,9 @@ def _build_snapshot_table(
 
     def top_signal(summary: Optional[Dict[str, Any]]) -> str:
         if not summary:
-            return "데이터 없음"
+            return "금일 수집 데이터 없음"
+        if summary.get("count", 0) == 0:
+            return "금일 수집 데이터 없음"
         if summary.get("themes"):
             name, cnt = summary["themes"][0]
             return f"{name} {cnt}건"
@@ -1037,7 +1045,8 @@ def _build_snapshot_table(
     ]
     for name, summary in dataset:
         count = summary.get("count", 0) if summary else 0
-        rows.append([name, count, top_signal(summary)])
+        count_display: Any = count if (summary is not None and count > 0) else "-"
+        rows.append([name, count_display, top_signal(summary)])
     return [
         markdown_table(
             ["영역", "수집 건수", "핵심 신호"],
@@ -1195,10 +1204,22 @@ def main():
     counts_str = ", ".join(count_parts) if count_parts else "뉴스"
     content_parts.append(f"> {counts_str}의 뉴스를 종합 분석한 일일 요약입니다.\n")
 
+    # Calculate risk level
+    p0_count = len(priority_items.get("P0", []))
+    sentiment_for_risk = _analyze_sentiment(all_summaries)
+    neg_ratio = 100 - sentiment_for_risk.get("ratio", 50)
+    if p0_count >= 3 or neg_ratio >= 70:
+        risk_level, risk_emoji = "높음", "🔴"
+    elif p0_count >= 1 or neg_ratio >= 55:
+        risk_level, risk_emoji = "주의", "🟡"
+    else:
+        risk_level, risk_emoji = "안정", "🟢"
+
     content_parts.append("> **한눈에 보는 시장 상황**")
     content_parts.append(f"> - 총 수집: **{total_count}건**")
     content_parts.append(f"> - 긴급 알림(P0): **{len(priority_items.get('P0', []))}건**")
-    content_parts.append(f"> - 중요 뉴스(P1): **{len(priority_items.get('P1', []))}건**\n")
+    content_parts.append(f"> - 중요 뉴스(P1): **{len(priority_items.get('P1', []))}건**")
+    content_parts.append(f"> - 리스크 레벨: **{risk_emoji} {risk_level}** (P0 {p0_count}건, 부정비율 {neg_ratio}%)\n")
 
     content_parts.append("## 전체 뉴스 요약\n")
     # Narrative-style summary
@@ -1271,7 +1292,20 @@ def main():
             content_parts.append(f"> - **{topic_name}**: {cat_count}개 영역({cats_str})에서 동시 언급")
         content_parts.append("")
 
-    # 2. Sentiment snapshot
+    # 2. Concentration & anomaly detection
+    if all_news_items:
+        concentration = summarizer.detect_concentration()
+        if concentration:
+            c_name, _c_key, c_ratio = concentration
+            content_parts.append(
+                f"> **집중도 경고**: 전체 뉴스의 **{c_ratio:.0%}**가 '{c_name}' 테마에 집중되어 있습니다. "
+                f"단일 이벤트 발생 시 시장 변동성이 확대될 수 있으니 관련 포지션을 점검하세요.\n"
+            )
+        anomalies = summarizer.detect_anomalies()
+        for _a_name, _a_key, _a_count, a_desc in anomalies:
+            content_parts.append(f"> **이상 탐지**: {a_desc}\n")
+
+    # 3. Sentiment snapshot
     sentiment = _analyze_sentiment(all_summaries)
     active_categories = sum(1 for s in all_summaries if s and s.get("count", 0) > 0)
     content_parts.append(
@@ -1281,7 +1315,16 @@ def main():
         f"{active_categories}개 카테고리 {total_count}건 기준\n"
     )
 
-    # 3. Per-category one-liner with concrete data
+    # Actionable insights based on sentiment
+    if sentiment["pos_examples"] or sentiment["neg_examples"]:
+        content_parts.append("")
+        if sentiment["pos_examples"]:
+            content_parts.append(f"  - 긍정 신호: {'; '.join(sentiment['pos_examples'][:2])}")
+        if sentiment["neg_examples"]:
+            content_parts.append(f"  - 주의 신호: {'; '.join(sentiment['neg_examples'][:2])}")
+        content_parts.append("")
+
+    # 4. Per-category one-liner with concrete data
     briefing_lines = []
     category_configs = [
         ("crypto", "암호화폐"),
@@ -1308,9 +1351,13 @@ def main():
         if dp["theme_names"]:
             line_parts.append(f"핵심 테마 {', '.join(dp['theme_names'][:3])}")
         if dp["figures"]:
-            line_parts.append(dp["figures"][0])
+            line_parts.append(f"주요 지표: {dp['figures'][0]}")
         elif dp["titles"]:
             line_parts.append(dp["titles"][0])
+        # Add the top headline as a highlighted note for extra context
+        if dp["titles"] and len(dp["titles"]) >= 1:
+            top_title = dp["titles"][0][:60]
+            line_parts.append(f"주목: *{top_title}*")
         briefing_lines.append("> - " + " — ".join(line_parts))
 
     if briefing_lines:
@@ -1535,6 +1582,14 @@ def main():
                 )
             )
             content_parts.append("")
+
+            # System risk warning when 3+ pairs show high correlation
+            high_relation_count = sum(1 for r in relation_rows if "높음" in r[3])
+            if high_relation_count >= 3:
+                content_parts.append(
+                    "\n> **시스템 리스크 주의**: 3개 이상 자산 쌍에서 높은 연관성이 감지되었습니다. "
+                    "단일 이벤트가 복수 시장에 동시 영향을 줄 수 있으니 포트폴리오 분산 상태를 점검하세요.\n"
+                )
 
         if coverage_notes:
             content_parts.append("**데이터 커버리지 경고**")
@@ -1790,7 +1845,7 @@ def main():
     content_parts.append("## 상세 리포트 링크\n")
     report_rows = []
     for name, count, url in post_links:
-        count_str = f"{count}건" if count else "-"
+        count_str = f"{count}건" if count is not None else "-"
         report_rows.append([name, count_str, f"[바로가기]({url})"])
     if report_rows:
         content_parts.append(

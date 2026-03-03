@@ -231,7 +231,7 @@ def _scrape_binance_page(session) -> List[Dict[str, Any]]:
             seen_titles.add(title)
             if href and not href.startswith("http"):
                 href = "https://www.binance.com" + href
-            if "/detail/" not in href and "/list/" not in href:
+            if "/detail/" not in href:
                 continue
             items.append(
                 {
@@ -293,11 +293,17 @@ def _fetch_binance_bapi() -> List[Dict[str, Any]]:
                             date_str = datetime.fromtimestamp(release_date / 1000, tz=UTC).isoformat()
                         except (ValueError, OSError):
                             pass
+                    code = article.get("code", "")
+                    link = (
+                        f"https://www.binance.com/en/support/announcement/detail/{code}"
+                        if code
+                        else "https://www.binance.com/en/support/announcement"
+                    )
                     items.append(
                         {
                             "title": title,
                             "description": "",
-                            "link": "https://www.binance.com/en/support/announcement",
+                            "link": link,
                             "published": date_str,
                             "source": "Binance",
                             "tags": ["crypto", "exchange", "binance"],
