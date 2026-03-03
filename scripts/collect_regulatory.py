@@ -9,16 +9,19 @@ Sources:
 """
 
 import os
+import re
 import sys
 import time
 from collections import Counter
 from datetime import UTC, datetime
 from typing import Any, Dict, List, Tuple
 
+import requests
+
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.collector_metrics import log_collection_summary
-from common.config import setup_logging
+from common.config import get_ssl_verify, setup_logging
 from common.dedup import DedupEngine
 from common.markdown_utils import html_reference_details, html_source_tag
 from common.post_generator import PostGenerator
@@ -26,6 +29,7 @@ from common.rss_fetcher import fetch_rss_feed
 from common.summarizer import ThemeSummarizer
 
 logger = setup_logging("collect_regulatory")
+VERIFY_SSL = get_ssl_verify()
 
 
 # Feed definitions: (url, source_name, tags, region)
@@ -97,17 +101,148 @@ EUROPE_FEEDS: List[Tuple[str, str, List[str]]] = [
 ]
 
 
+# ---------- Noise title filtering & enrichment ----------
+
+_NOISE_TITLE_PATTERNS = [
+    re.compile(r"^10-[KQ]\b"),
+    re.compile(r"^Washington,?\s+DC"),
+    re.compile(r"^\d{1,5}$"),
+    re.compile(r"^Form\s+\d"),
+    re.compile(r"^[A-Z]-\d+$"),
+]
+_NOISE_TITLE_SUBSTRINGS = ["DC 20549"]
+
+_SOURCE_CONTEXT = {
+    "Japan FSA": "일본 금융청(FSA)",
+    "MAS Singapore": "싱가포르 통화청(MAS)",
+    "UK FCA": "영국 금융행위감독청(FCA)",
+    "EU ESMA": "유럽증권시장청(ESMA)",
+    "CFTC Press Releases": "미국 상품선물거래위원회(CFTC)",
+    "CFTC Enforcement": "미국 CFTC 집행부서",
+    "Federal Reserve": "미국 연방준비제도(Fed)",
+    "SEC (Google News)": "미국 증권거래위원회(SEC)",
+    "금융위원회 보도자료": "금융위원회",
+    "금융위원회 보도참고": "금융위원회",
+    "한국 금융규제 뉴스": "한국 금융규제",
+}
+
+
+def _is_noise_title(title: str) -> bool:
+    """Filter out meaningless RSS titles (SEC filing IDs, addresses, etc.)."""
+    title_s = title.strip()
+    if len(title_s) < 5:
+        return True
+    for pat in _NOISE_TITLE_PATTERNS:
+        if pat.match(title_s):
+            return True
+    return any(sub in title_s for sub in _NOISE_TITLE_SUBSTRINGS)
+
+
+def _clean_rss_title(title: str) -> str:
+    """Clean common RSS title formatting issues."""
+    # Japan FSA "Category,Title" format — e.g.
+    #   "Publication,Publication of AI Discussion Paper"
+    #   "Press Conferences,Press Conference by KATAYAMA"
+    if "," in title:
+        parts = title.split(",", 1)
+        rest = parts[1].strip()
+        prefix = parts[0].strip()
+        # Check if the rest shares the first word with the prefix
+        prefix_first = prefix.split()[0].lower() if prefix else ""
+        if prefix_first and rest.lower().startswith(prefix_first):
+            title = rest
+    # Remove trailing " - SEC.gov" duplication
+    title = re.sub(r"\s*-\s*SEC\.gov$", "", title)
+    return title.strip()
+
+
+def _fetch_page_description(url: str) -> str:
+    """Try to fetch meta description from a URL page (best-effort)."""
+    try:
+        from bs4 import BeautifulSoup as BS4
+
+        resp = requests.get(
+            url,
+            timeout=8,
+            headers={"User-Agent": "Mozilla/5.0 (compatible; InvestingBot/1.0)"},
+            verify=VERIFY_SSL,
+        )
+        resp.raise_for_status()
+        soup = BS4(resp.text, "html.parser")
+        for attr_key, attr_val in [("name", "description"), ("property", "og:description")]:
+            meta = soup.find("meta", attrs={attr_key: attr_val})
+            if meta and meta.get("content", "").strip() and len(meta["content"].strip()) > 20:
+                return meta["content"].strip()[:300]
+        for p in soup.find_all("p"):
+            text = p.get_text(strip=True)
+            if len(text) > 50:
+                return text[:300]
+    except Exception as e:  # noqa: BLE001
+        logger.debug("Failed to fetch description from %s: %s", url, e)
+    return ""
+
+
+def _generate_synthetic_description(title: str, source: str) -> str:
+    """Generate a contextual description when RSS provides none."""
+    source_ctx = _SOURCE_CONTEXT.get(source, source)
+    title_lower = title.lower()
+    if any(kw in title_lower for kw in ["press conference", "기자회견"]):
+        return f"{source_ctx} 기자회견 발표 내용입니다."
+    if any(kw in title_lower for kw in ["discussion paper", "consultation"]):
+        return f"{source_ctx}에서 발표한 정책 토론 자료로, 업계 의견 수렴 단계입니다."
+    if any(kw in title_lower for kw in ["enforcement", "집행", "제재"]):
+        return f"{source_ctx}의 규제 집행 관련 조치입니다."
+    if any(kw in title_lower for kw in ["stablecoin", "스테이블코인"]):
+        return f"{source_ctx}의 스테이블코인 규제 동향입니다."
+    if any(kw in title_lower for kw in ["sandbox", "pilot"]):
+        return f"{source_ctx}의 규제 샌드박스 프로그램 관련 자료입니다."
+    if any(kw in title_lower for kw in ["announces", "announcement"]):
+        return f"{source_ctx}의 공식 인사·조직 발표입니다."
+    if any(kw in title_lower for kw in ["crypto", "digital asset", "가상자산"]):
+        return f"{source_ctx}의 디지털 자산 규제 동향입니다."
+    return f"{source_ctx}에서 발표한 규제 관련 자료입니다."
+
+
+def _enrich_item(item: dict) -> None:
+    """Enrich an item with a description if missing or duplicate of title."""
+    title = item.get("title", "")
+    desc = item.get("description", "").strip()
+    source = item.get("source", "")
+    link = item.get("link", "")
+
+    if desc and desc != title and len(desc) > 20:
+        return  # already has a good description
+
+    # Try fetching from URL (skip Google News proxy links)
+    if link and "news.google.com/rss/" not in link:
+        fetched = _fetch_page_description(link)
+        if fetched and fetched != title and len(fetched) > 20:
+            item["description"] = fetched
+            return
+
+    # Generate synthetic description
+    item["description"] = _generate_synthetic_description(title, source)
+
+
 def fetch_region_feeds(
     feeds: List[Tuple[str, str, List[str]]],
     region: str,
 ) -> List[Dict[str, Any]]:
-    """Fetch all feeds for a given region, tagging items with the region."""
+    """Fetch all feeds for a given region.
+
+    Filters noise titles, cleans formatting, and enriches descriptions.
+    """
     items = []
     for url, name, tags in feeds:
         fetched = fetch_rss_feed(url, name, tags, limit=10)
         for item in fetched:
+            item["title"] = _clean_rss_title(item.get("title", ""))
+            if _is_noise_title(item["title"]):
+                logger.debug("Filtered noise title: %s", item["title"])
+                continue
             item["region"] = region
-        items.extend(fetched)
+            _enrich_item(item)
+            items.append(item)
         time.sleep(1)
     return items
 
@@ -134,7 +269,7 @@ def build_region_section(
             lines.append(f"**{i}. [{title}]({link})**")
         else:
             lines.append(f"**{i}. {title}**")
-        if description and description != title and i <= 5:
+        if description and description != title:
             # Extract first sentence for clean summary
             desc_text = description
             for sep in ["。", ". ", "다. ", "요. "]:
@@ -148,6 +283,95 @@ def build_region_section(
         lines.append(f"{html_source_tag(source)}\n")
 
     return lines
+
+
+def _build_regulatory_theme_analysis(
+    summarizer: ThemeSummarizer,
+    all_items: List[Dict[str, Any]],
+) -> str:
+    """Build regulatory-specific theme analysis with analysis text per theme.
+
+    Unlike the generic summarizer which just lists links, this produces
+    analysis paragraphs with source/region breakdowns and description excerpts.
+    """
+    top_themes = summarizer.get_top_themes()
+    if not top_themes:
+        return ""
+
+    total = len(all_items)
+    lines = ["\n## 주요 테마 분석\n"]
+
+    for name, key, emoji, count in top_themes:
+        articles = summarizer._theme_articles.get(key, [])
+        ratio = count / total if total > 0 else 0
+
+        # Theme-level analysis paragraph
+        if ratio > 0.5:
+            ratio_text = "압도적 비중을 차지합니다"
+        elif ratio > 0.3:
+            ratio_text = "높은 비중을 보입니다"
+        else:
+            ratio_text = "주목할 만한 수치입니다"
+
+        # Source & region distribution within this theme
+        theme_sources = Counter(a.get("source", "") for a in articles if a.get("source"))
+        theme_regions = Counter(a.get("region", "") for a in articles if a.get("region"))
+        top_sources = ", ".join(f"{s}({c}건)" for s, c in theme_sources.most_common(3))
+        top_regions = ", ".join(f"{r}" for r, _ in theme_regions.most_common())
+
+        lines.append(f"### {emoji} {name} ({count}건)\n")
+
+        # Analysis sentence
+        analysis_parts = []
+        if ratio > 0.15:
+            analysis_parts.append(f"전체의 {ratio:.0%}로 {ratio_text}.")
+        if top_sources:
+            analysis_parts.append(f"주요 출처: {top_sources}.")
+        if top_regions and len(theme_regions) > 1:
+            analysis_parts.append(f"관련 지역: {top_regions}.")
+        if analysis_parts:
+            lines.append(" ".join(analysis_parts))
+            lines.append("")
+
+        # Key articles with descriptions
+        lines.append("**주요 동향:**")
+        shown = 0
+        seen_titles: set = set()
+        for article in articles:
+            a_title = article.get("title", "")
+            if not a_title or a_title in seen_titles or _is_noise_title(a_title):
+                continue
+            seen_titles.add(a_title)
+            a_link = article.get("link", "")
+            a_desc = article.get("description", "").strip()
+            a_source = article.get("source", "")
+
+            display_title = _clean_rss_title(a_title)
+            if a_link:
+                lines.append(f"- [{display_title}]({a_link}) — {a_source}")
+            else:
+                lines.append(f"- {display_title} — {a_source}")
+
+            # Show description excerpt if available
+            if a_desc and a_desc != a_title and len(a_desc) > 20:
+                desc_short = a_desc
+                for sep in ["。", ". ", "다. "]:
+                    idx = desc_short.find(sep)
+                    if 10 < idx < 120:
+                        desc_short = desc_short[: idx + len(sep)].strip()
+                        break
+                else:
+                    if len(desc_short) > 120:
+                        desc_short = desc_short[:120].rsplit(" ", 1)[0] + "..."
+                lines.append(f"  > {desc_short}")
+
+            shown += 1
+            if shown >= 3:
+                break
+
+        lines.append("")
+
+    return "\n".join(lines)
 
 
 def main():
@@ -234,11 +458,11 @@ def main():
     content_parts.append("\n---")
     content_parts.extend(build_region_section(europe_items, "유럽 규제 동향", source_links))
 
-    # Theme summary
+    # Theme summary (custom regulatory analysis with descriptions)
     content_parts.append("\n---")
-    theme_summary = summarizer.generate_summary_section()
-    if theme_summary:
-        content_parts.append(theme_summary)
+    theme_analysis = _build_regulatory_theme_analysis(summarizer, all_items)
+    if theme_analysis:
+        content_parts.append(theme_analysis)
 
     # Regulatory insight - impact analysis
     content_parts.append("\n---")
@@ -306,7 +530,10 @@ def main():
         enforce_count = sum(impact_counter.get(t, 0) for t in enforcement_types)
         enable_count = sum(impact_counter.get(t, 0) for t in enabling_types)
 
-        if enforce_count > enable_count:
+        matched_total = enforce_count + enable_count
+        if matched_total < 3:
+            impact_tone = "뚜렷한 규제 방향성 키워드가 제한적으로 포착되어, 개별 건별 확인이 필요합니다."
+        elif enforce_count > enable_count:
             impact_tone = (
                 "집행·제재 성격의 규제가 우세하여, 관련 프로젝트 및 거래소의 컴플라이언스 리스크가 상승하고 있습니다."
             )
@@ -322,11 +549,12 @@ def main():
 
     # Region-specific insights with data-driven content extraction
     def _extract_top_topic(items: list, max_len: int = 80) -> str:
-        """Extract the most relevant topic from region items."""
-        if not items:
-            return ""
-        title = items[0].get("title", "")
-        return title[:max_len] if title else ""
+        """Extract the most relevant topic from region items, skipping noise."""
+        for item in items:
+            title = item.get("title", "")
+            if title and not _is_noise_title(title):
+                return _clean_rss_title(title)[:max_len]
+        return ""
 
     if us_items:
         # Extract specific agency mentions
