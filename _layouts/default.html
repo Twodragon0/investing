@@ -51,10 +51,6 @@
 
   <!-- Hreflang for multilingual SEO -->
   <link rel="alternate" hreflang="ko" href="{{ og_url }}">
-  <link rel="alternate" hreflang="en" href="{{ og_url }}">
-  <link rel="alternate" hreflang="ja" href="{{ og_url }}">
-  <link rel="alternate" hreflang="zh-Hans" href="{{ og_url }}">
-  <link rel="alternate" hreflang="es" href="{{ og_url }}">
   <link rel="alternate" hreflang="x-default" href="{{ og_url }}">
 
   <!-- Twitter Card -->
@@ -66,14 +62,15 @@
 
   <!-- Canonical -->
   <link rel="canonical" href="{{ og_url }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
+  {% if jekyll.environment == "production" %}
   <script defer src="/_vercel/insights/script.js"></script>
+  {% endif %}
   <script>
     window.__i18n = {{ site.data.translations | jsonify }};
     window.__t = function(key) {
@@ -92,9 +89,9 @@
   </main>
   {% include footer.html %}
   <script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js" integrity="sha256-aN/MVMcUbBVwLMfjzdmVppWXjmOhFLGCaMUZRR9TkNE=" crossorigin="anonymous"></script>
   <script>
-  (function() {
+  document.addEventListener('DOMContentLoaded', function() {
     var el = document.getElementById('footer-qrcode');
     if (el && typeof QRCode !== 'undefined') {
       new QRCode(el, {
@@ -106,7 +103,7 @@
         correctLevel: QRCode.CorrectLevel.M
       });
     }
-  })();
+  });
   </script>
   <script>
   (function() {
@@ -138,7 +135,9 @@
   <script>
     window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
   </script>
+  {% if jekyll.environment == "production" %}
   <script defer src="/_vercel/speed-insights/script.js"></script>
+  {% endif %}
   <script>
   (function() {
     var toggle = document.getElementById('theme-toggle');

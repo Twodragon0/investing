@@ -18,7 +18,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-paginate
 
 permalink: /:categories/:year/:month/:day/:title/
 

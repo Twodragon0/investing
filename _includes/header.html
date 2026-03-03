@@ -5,7 +5,7 @@
       {% for item in site.data.navigation.main %}
         {% if item.children %}
           <div class="nav-dropdown">
-            <button class="nav-dropdown-btn" type="button">
+            <button class="nav-dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">
               {{ item.title }}
               <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><path d="M2 4l3 3 3-3"/></svg>
             </button>
@@ -87,6 +87,7 @@ document.querySelectorAll('.nav-dropdown-btn').forEach(function(btn) {
       e.preventDefault();
       e.stopPropagation();
       this.closest('.nav-dropdown').classList.toggle('open');
+      btn.setAttribute('aria-expanded', btn.closest('.nav-dropdown').classList.contains('open'));
     }
   });
 });
