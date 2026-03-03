@@ -116,7 +116,7 @@ def truncate_sentence(text: str, max_length: int = 300) -> str:
     for sep in [". ", "。", "! ", "? ", ".\n"]:
         last_sep = truncated.rfind(sep)
         if last_sep > max_length * 0.5:
-            return truncated[:last_sep + 1].strip()
+            return truncated[: last_sep + 1].strip()
     # Fall back to word boundary
     return truncate_text(text, max_length)
 

@@ -908,22 +908,138 @@ class ThemeSummarizer:
         "according",
         "following",
         "based",
-        "and", "the", "are", "new", "but", "down", "may", "set", "get",
-        "has", "had", "not", "all", "can", "now", "how", "why", "who",
-        "its", "our", "his", "her", "per", "via", "top",
-        "two", "one", "see", "use", "big", "old", "own", "off", "run",
-        "try", "way", "end", "let", "put", "say", "too", "did", "got",
-        "hit", "low", "key", "any", "yet", "ago", "day", "due", "far",
-        "few", "high", "hold", "keep", "left", "long", "move", "need",
-        "open", "part", "plan", "play", "push", "pull", "real", "rise",
-        "risk", "seen", "send", "sent", "sure", "tell", "test", "turn",
-        "view", "want", "well", "went", "wide", "work", "help", "head",
-        "eyes", "call", "data", "full", "goes", "gone", "good", "half",
-        "hand", "hard", "line", "mark", "mean", "meet", "note", "once",
-        "only", "past", "rate", "read", "rest", "role", "rule", "soon",
-        "step", "stop", "talk", "told", "true", "upon", "used", "wins",
-        "lost", "lead", "drop", "fell", "grew", "lose", "pays", "sell",
-        "rose", "https", "unknown",
+        "and",
+        "the",
+        "are",
+        "new",
+        "but",
+        "down",
+        "may",
+        "set",
+        "get",
+        "has",
+        "had",
+        "not",
+        "all",
+        "can",
+        "now",
+        "how",
+        "why",
+        "who",
+        "its",
+        "our",
+        "his",
+        "her",
+        "per",
+        "via",
+        "top",
+        "two",
+        "one",
+        "see",
+        "use",
+        "big",
+        "old",
+        "own",
+        "off",
+        "run",
+        "try",
+        "way",
+        "end",
+        "let",
+        "put",
+        "say",
+        "too",
+        "did",
+        "got",
+        "hit",
+        "low",
+        "key",
+        "any",
+        "yet",
+        "ago",
+        "day",
+        "due",
+        "far",
+        "few",
+        "high",
+        "hold",
+        "keep",
+        "left",
+        "long",
+        "move",
+        "need",
+        "open",
+        "part",
+        "plan",
+        "play",
+        "push",
+        "pull",
+        "real",
+        "rise",
+        "risk",
+        "seen",
+        "send",
+        "sent",
+        "sure",
+        "tell",
+        "test",
+        "turn",
+        "view",
+        "want",
+        "well",
+        "went",
+        "wide",
+        "work",
+        "help",
+        "head",
+        "eyes",
+        "call",
+        "data",
+        "full",
+        "goes",
+        "gone",
+        "good",
+        "half",
+        "hand",
+        "hard",
+        "line",
+        "mark",
+        "mean",
+        "meet",
+        "note",
+        "once",
+        "only",
+        "past",
+        "rate",
+        "read",
+        "rest",
+        "role",
+        "rule",
+        "soon",
+        "step",
+        "stop",
+        "talk",
+        "told",
+        "true",
+        "upon",
+        "used",
+        "wins",
+        "lost",
+        "lead",
+        "drop",
+        "fell",
+        "grew",
+        "lose",
+        "pays",
+        "sell",
+        "rose",
+        "https",
+        "unknown",
+        "was",
+        "your",
+        "through",
+        "between",
+        "such",
         # Korean common
         "관련",
         "이슈",
@@ -1019,9 +1135,9 @@ class ThemeSummarizer:
             if title and len(title) > 15:
                 return title
 
-        # Strategy 4: return whatever keywords we have
+        # Strategy 4: return whatever keywords we have (formatted, not raw dump)
         if keywords:
-            return ", ".join(keywords)
+            return f"주요 키워드: {', '.join(keywords)}"
 
         return ""
 
@@ -1066,25 +1182,60 @@ class ThemeSummarizer:
         if not top_themes:
             return ""
 
+        total = len(self.items)
         lines = ["\n## 주요 테마 분석\n"]
 
         for name, key, emoji, count in top_themes:
             articles = self._theme_articles.get(key, [])
+            ratio = count / total if total > 0 else 0
+
             lines.append(f"### {emoji} {name} ({count}건)\n")
+
+            # Analysis sentence with ratio and source breakdown
+            analysis_parts = []
+            if ratio > 0.4:
+                analysis_parts.append(f"전체의 {ratio:.0%}로 가장 높은 비중을 차지합니다.")
+            elif ratio > 0.2:
+                analysis_parts.append(f"전체의 {ratio:.0%}로 주요 테마입니다.")
+
+            source_counts: Counter = Counter(a.get("source", "") for a in articles if a.get("source"))
+            if source_counts:
+                top_src = ", ".join(f"{s}({c}건)" for s, c in source_counts.most_common(3))
+                analysis_parts.append(f"주요 출처: {top_src}.")
+
+            if analysis_parts:
+                lines.append(" ".join(analysis_parts))
+                lines.append("")
 
             shown = 0
             seen_titles: set = set()
             for article in articles:
                 title = article.get("title", "")
-                if not title or title in seen_titles:
+                if not title or title in seen_titles or len(title.strip()) < 5:
                     continue
                 seen_titles.add(title)
                 link = article.get("link", "")
                 source = article.get("source", "")
+                desc = article.get("description", "").strip()
+
                 if link:
                     lines.append(f"- [{title}]({link}) — {source}")
                 else:
                     lines.append(f"- {title} — {source}")
+
+                # Add description excerpt (first sentence, up to 120 chars)
+                if desc and desc != title and len(desc) > 20:
+                    desc_short = desc
+                    for sep in ["。", ". ", "다. "]:
+                        idx = desc_short.find(sep)
+                        if 10 < idx < 120:
+                            desc_short = desc_short[: idx + len(sep)].strip()
+                            break
+                    else:
+                        if len(desc_short) > 120:
+                            desc_short = desc_short[:120].rsplit(" ", 1)[0] + "..."
+                    lines.append(f"  > {desc_short}")
+
                 shown += 1
                 if shown >= 3:
                     break
@@ -1593,14 +1744,51 @@ class ThemeSummarizer:
         return min(base + signals, 10.0)
 
     _SENTIMENT_POS = {
-        "rally", "surge", "bull", "gain", "rise", "jump", "soar", "breakout",
-        "upgrade", "adoption", "approval", "recovery",
-        "상승", "급등", "반등", "돌파", "강세", "호재", "승인", "회복", "성장",
+        "rally",
+        "surge",
+        "bull",
+        "gain",
+        "rise",
+        "jump",
+        "soar",
+        "breakout",
+        "upgrade",
+        "adoption",
+        "approval",
+        "recovery",
+        "상승",
+        "급등",
+        "반등",
+        "돌파",
+        "강세",
+        "호재",
+        "승인",
+        "회복",
+        "성장",
     }
     _SENTIMENT_NEG = {
-        "crash", "dump", "bear", "drop", "fall", "plunge", "decline", "hack",
-        "exploit", "fraud", "ban", "lawsuit", "bankruptcy",
-        "하락", "급락", "폭락", "약세", "악재", "해킹", "파산", "소송", "위축",
+        "crash",
+        "dump",
+        "bear",
+        "drop",
+        "fall",
+        "plunge",
+        "decline",
+        "hack",
+        "exploit",
+        "fraud",
+        "ban",
+        "lawsuit",
+        "bankruptcy",
+        "하락",
+        "급락",
+        "폭락",
+        "약세",
+        "악재",
+        "해킹",
+        "파산",
+        "소송",
+        "위축",
     }
 
     def get_theme_sentiment(self, theme_key: str) -> str:
@@ -1664,6 +1852,6 @@ class ThemeSummarizer:
         for name, key, _emoji, count in top:
             if count > avg * 2 and count >= 5:
                 anomalies.append(
-                    (name, key, count, f"{name} 관련 뉴스가 평균 대비 {count/avg:.1f}배 집중 — 주요 이벤트 가능성")
+                    (name, key, count, f"{name} 관련 뉴스가 평균 대비 {count / avg:.1f}배 집중 — 주요 이벤트 가능성")
                 )
         return anomalies
