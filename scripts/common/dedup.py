@@ -57,12 +57,27 @@ class DedupEngine:
                 self.seen = data.get("seen", {})
                 raw_titles: List[Union[str, List[str]]] = data.get("titles", [])
                 # Backward compatibility: convert old plain strings to [title, ""] pairs
+                # Get file mtime as fallback date for old entries
+                fallback_date = ""
+                try:
+                    mtime = os.path.getmtime(self.state_path)
+                    fallback_date = datetime.fromtimestamp(mtime, tz=UTC).strftime("%Y-%m-%d")
+                except OSError:
+                    pass
                 converted: List[List[str]] = []
+                migrated_count = 0
                 for entry in raw_titles:
                     if isinstance(entry, list) and len(entry) == 2:
                         converted.append(entry)
                     else:
-                        converted.append([str(entry), ""])
+                        converted.append([str(entry), fallback_date])
+                        migrated_count += 1
+                if migrated_count:
+                    logger.warning(
+                        "Migrated %d old dedup entries with fallback date %s",
+                        migrated_count,
+                        fallback_date,
+                    )
                 self.titles = converted
                 self._prune()
             except (json.JSONDecodeError, KeyError, OSError):
