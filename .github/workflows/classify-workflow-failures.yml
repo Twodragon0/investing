@@ -23,6 +23,10 @@ permissions:
   contents: read
   issues: write
 
+concurrency:
+  group: classify-failures-${{ github.event.workflow_run.id }}
+  cancel-in-progress: false
+
 jobs:
   classify:
     if: github.event.workflow_run.conclusion == 'failure'

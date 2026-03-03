@@ -2,11 +2,15 @@ name: Respond AI Mentions
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: read
+
+concurrency:
+  group: respond-ai-mentions
+  cancel-in-progress: true
 
 jobs:
   respond-mentions:

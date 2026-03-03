@@ -2,7 +2,7 @@ name: Collect WorldMonitor News
 
 on:
   schedule:
-    - cron: '30 1 * * *'
+    - cron: '30 0 * * *'
   workflow_dispatch:
 
 permissions:

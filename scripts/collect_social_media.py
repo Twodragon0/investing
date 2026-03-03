@@ -267,6 +267,9 @@ def fetch_reddit_posts(limit: int = 10) -> List[Dict[str, Any]]:
             logger.info("Reddit %s: fetched %d posts", display_name, sub_count)
         except requests.exceptions.RequestException as e:
             logger.warning("Reddit %s fetch failed: %s", display_name, e)
+            if hasattr(e, "response") and e.response is not None and e.response.status_code == 429:
+                logger.warning("Reddit rate limited (429), stopping remaining subreddit fetches")
+                break
         time.sleep(1)
 
     # Sort by score

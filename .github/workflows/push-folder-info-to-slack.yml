@@ -2,11 +2,15 @@ name: Push Folder Info To Slack
 
 on:
   schedule:
-    - cron: '0 1 * * *'
+    - cron: '5 1 * * *'
   workflow_dispatch:
 
 permissions:
   contents: read
+
+concurrency:
+  group: push-folder-info
+  cancel-in-progress: true
 
 jobs:
   push-folder-info:
@@ -20,7 +24,6 @@ jobs:
       - name: Checkout investing
         uses: actions/checkout@v6
         with:
-          repository: Twodragon0/investing
           fetch-depth: 1
 
       - name: Build folder summary
@@ -133,9 +136,7 @@ jobs:
             printf -- "- time (UTC): %s\n" "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
             printf -- "- channels: #ops #dev #security #openclaw #investing\n"
             build_investing_digest
-            build_line "ai" "ai"
             build_line "investing" "."
-            build_line "crypto" "crypto"
           } > "$report_file"
 
           {
