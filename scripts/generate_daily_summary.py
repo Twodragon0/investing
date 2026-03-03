@@ -941,7 +941,14 @@ _NOISE_TITLE_PATTERNS = [
 def _is_noise_title(title: str) -> bool:
     """Return True if *title* is a low-value noise headline (e.g. exchange notices)."""
     clean = _strip_markdown_link(title).strip()
-    if len(clean) < 8:
+    if len(clean) < 10:
+        return True
+    # SEC/regulatory filing artifact: "Washington, DC 20549"
+    if "dc 20549" in clean.lower() or "20549" in clean:
+        return True
+    # Filing-style IDs: mostly uppercase letters, numbers, dashes, no spaces
+    # e.g. "FORM-10K-2024", "DEF14A", "8-K/A"
+    if re.match(r"^[A-Z0-9/\-]{4,20}$", clean):
         return True
     return any(p.match(clean) for p in _NOISE_TITLE_PATTERNS)
 
@@ -951,6 +958,15 @@ def _clean_bullet_text(text: str) -> str:
     if text.startswith("- "):
         text = text[2:]
     return text.strip()
+
+
+def _clean_headline(title: str) -> str:
+    """Remove trailing period artifacts (.., ..., double periods) from a headline."""
+    title = title.rstrip()
+    # Collapse multiple trailing dots/ellipsis into nothing or single ellipsis
+    title = re.sub(r"\.{2,}$", "", title)
+    title = re.sub(r"\.\s*\.$", "", title)
+    return title.rstrip(". ").strip()
 
 
 def _to_theme_payload(
@@ -1022,17 +1038,17 @@ def _build_snapshot_table(
 
     def top_signal(summary: Optional[Dict[str, Any]]) -> str:
         if not summary:
-            return "금일 수집 데이터 없음"
+            return "데이터 없음"
         if summary.get("count", 0) == 0:
-            return "금일 수집 데이터 없음"
+            return "데이터 없음"
         if summary.get("themes"):
             name, cnt = summary["themes"][0]
             return f"{name} {cnt}건"
         if summary.get("market_data"):
-            return _clean_bullet_text(summary["market_data"][0])
+            return smart_truncate(_clean_bullet_text(summary["market_data"][0]), 80)
         hl = summary.get("highlights") or summary.get("key_summary") or []
         if hl:
-            return _clean_bullet_text(hl[0])
+            return smart_truncate(_clean_bullet_text(hl[0]), 80)
         return "신호 추출 실패"
 
     dataset = [
@@ -1045,8 +1061,13 @@ def _build_snapshot_table(
     ]
     for name, summary in dataset:
         count = summary.get("count", 0) if summary else 0
-        count_display: Any = count if (summary is not None and count > 0) else "-"
-        rows.append([name, count_display, top_signal(summary)])
+        has_data = summary is not None and count > 0
+        count_display: Any = count if has_data else "-"
+        signal = top_signal(summary)
+        # When there is no data, collapse into a single clean "데이터 없음" signal
+        if not has_data:
+            signal = "데이터 없음"
+        rows.append([name, count_display, signal])
     return [
         markdown_table(
             ["영역", "수집 건수", "핵심 신호"],
@@ -1353,10 +1374,10 @@ def main():
         if dp["figures"]:
             line_parts.append(f"주요 지표: {dp['figures'][0]}")
         elif dp["titles"]:
-            line_parts.append(dp["titles"][0])
+            line_parts.append(_clean_headline(dp["titles"][0]))
         # Add the top headline as a highlighted note for extra context
         if dp["titles"] and len(dp["titles"]) >= 1:
-            top_title = dp["titles"][0][:60]
+            top_title = _clean_headline(dp["titles"][0])[:60]
             line_parts.append(f"주목: *{top_title}*")
         briefing_lines.append("> - " + " — ".join(line_parts))
 
@@ -1378,7 +1399,7 @@ def main():
         if crypto_dp["figures"]:
             crypto_detail += f" 주요 수치: {crypto_dp['figures'][0]}."
         if crypto_dp["titles"]:
-            crypto_detail += f" 대표 헤드라인: {crypto_dp['titles'][0]}."
+            crypto_detail += f" 대표 헤드라인: {_clean_headline(crypto_dp['titles'][0])}."
         if not crypto_detail:
             crypto_detail = "세부 데이터 확인 필요."
         content_parts.append(f"- **암호화폐:** {crypto_summary.get('count', 0)}건. {crypto_detail.strip()}")
@@ -1390,7 +1411,7 @@ def main():
         if stock_dp["figures"]:
             stock_detail += f" 주요 수치: {stock_dp['figures'][0]}."
         if stock_dp["titles"] and not stock_detail.strip():
-            stock_detail = f"대표 헤드라인: {stock_dp['titles'][0]}."
+            stock_detail = f"대표 헤드라인: {_clean_headline(stock_dp['titles'][0])}."
         content_parts.append(
             f"- **주식:** {stock_summary.get('count', 0)}건. {stock_detail.strip() if stock_detail.strip() else '시장 데이터 확인 필요.'}"
         )
@@ -1398,7 +1419,7 @@ def main():
         reg_dp = _extract_category_data_points(regulatory_summary)
         reg_detail = ""
         if reg_dp["titles"]:
-            reg_detail = f"주요 이슈: {reg_dp['titles'][0]}."
+            reg_detail = f"주요 이슈: {_clean_headline(reg_dp['titles'][0])}."
         if reg_dp["figures"]:
             reg_detail += f" 관련 수치: {reg_dp['figures'][0]}."
         if not reg_detail:
@@ -1408,7 +1429,7 @@ def main():
         social_dp = _extract_category_data_points(social_summary)
         social_detail = ""
         if social_dp["titles"]:
-            social_detail = f"화제 키워드: {social_dp['titles'][0]}."
+            social_detail = f"화제 키워드: {_clean_headline(social_dp['titles'][0])}."
         if social_dp["figures"]:
             social_detail += f" {social_dp['figures'][0]}."
         if not social_detail:
@@ -1418,7 +1439,7 @@ def main():
         world_dp = _extract_category_data_points(worldmonitor_summary)
         world_detail = ""
         if world_dp["titles"]:
-            world_detail = f"핵심 이슈: {world_dp['titles'][0]}."
+            world_detail = f"핵심 이슈: {_clean_headline(world_dp['titles'][0])}."
         if world_dp["figures"]:
             world_detail += f" {world_dp['figures'][0]}."
         if not world_detail:
