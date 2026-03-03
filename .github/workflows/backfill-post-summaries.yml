@@ -2,7 +2,7 @@ name: Backfill Post Summaries
 
 on:
   schedule:
-    - cron: '15 2 * * *'
+    - cron: '45 2 * * *'
   workflow_dispatch:
 
 permissions:
