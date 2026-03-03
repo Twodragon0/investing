@@ -317,7 +317,8 @@ def main():
         else:
             impact_tone = "규제 강화와 시장 개방 신호가 혼재하여, 방향성 확인이 필요한 시점입니다."
         top_impacts = ", ".join(f"**{label}**({cnt}건)" for label, cnt in impact_counter.most_common(4))
-        insight_lines.append(f"\n**규제 성격 분석**: {top_impacts}. {impact_tone}")
+        total_items_count = len(all_items)
+        insight_lines.append(f"\n**규제 성격 분석** (총 {total_items_count}건 기준): {top_impacts}. {impact_tone}")
 
     # Region-specific insights with data-driven content extraction
     def _extract_top_topic(items: list, max_len: int = 80) -> str:
