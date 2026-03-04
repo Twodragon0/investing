@@ -42,7 +42,7 @@ from common.markdown_utils import (
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
-from common.utils import sanitize_string
+from common.utils import sanitize_string, truncate_text
 
 try:
     from common.browser import BrowserSession, is_playwright_available
@@ -740,7 +740,7 @@ def main():
                     top_title = art.get("title", "")
                     if top_title and top_title not in seen_insight_titles:
                         seen_insight_titles.add(top_title)
-                        insight_lines.append(f"- 주요 기사: *{top_title[:100]}*")
+                        insight_lines.append(f"- 주요 기사: *{truncate_text(top_title, 100)}*")
                         break
         elif top_themes:
             t = top_themes[0]

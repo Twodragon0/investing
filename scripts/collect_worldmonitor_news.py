@@ -27,6 +27,7 @@ from common.markdown_utils import (
 )
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feeds_concurrent
+from common.utils import truncate_text
 from common.worldmonitor_utils import worldmonitor_sort_key
 
 logger = setup_logging("collect_worldmonitor_news")
@@ -605,7 +606,7 @@ def _generate_worldmonitor_summary(
             clean_title = re.sub(r"\[?\*\*(.*?)\*\*\]?\(.*?\)", r"\1", title)
             if clean_title and clean_title not in seen:
                 seen.add(clean_title)
-                lines.append(f"- {clean_title[:100]}")
+                lines.append(f"- {truncate_text(clean_title, 100)}")
 
     lines.append(f"\n주요 출처: {top_sources}")
 
