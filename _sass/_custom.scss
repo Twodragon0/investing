@@ -2624,6 +2624,34 @@ body {
   flex-direction: column;
   gap: 1rem;
 
+  .date-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .date-group-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    border-bottom: 1px solid rgba($border-color, 0.3);
+    color: $text-secondary;
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      opacity: 0.6;
+    }
+  }
+
+  .date-group:first-of-type .date-group-header {
+    margin-top: 0;
+  }
+
   .post-item {
     transition: opacity 0.3s ease, transform 0.3s ease;
 
