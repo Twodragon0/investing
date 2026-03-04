@@ -430,7 +430,10 @@ def main():
     enrich_items(political_items, context_map=_SOCIAL_SOURCE_CONTEXT, fetch_url=True, max_fetch=10)
     logger.info(
         "Enrichment complete: telegram=%d, social=%d, reddit=%d, political=%d",
-        len(telegram_items), len(social_items), len(reddit_items), len(political_items),
+        len(telegram_items),
+        len(social_items),
+        len(reddit_items),
+        len(political_items),
     )
 
     # ── Consolidated social media post ──
