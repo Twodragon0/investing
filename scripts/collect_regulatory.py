@@ -21,7 +21,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common.collector_metrics import log_collection_summary
 from common.config import get_ssl_verify, setup_logging
 from common.dedup import DedupEngine
-from common.enrichment import fetch_page_description
+from common.enrichment import enrich_items, fetch_page_description
 from common.markdown_utils import html_reference_details, html_source_tag
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feed
@@ -366,6 +366,10 @@ def main():
     europe_items = fetch_region_feeds(EUROPE_FEEDS, "유럽")
 
     all_items = us_items + korea_items + asia_items + europe_items
+
+    # Translation pass — descriptions already enriched by _enrich_item()
+    enrich_items(all_items, context_map=_SOURCE_CONTEXT, fetch_url=False)
+
     summarizer = ThemeSummarizer(all_items)
 
     post_title = f"글로벌 규제 동향 리포트 - {today}"
