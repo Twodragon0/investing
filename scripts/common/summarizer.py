@@ -18,6 +18,18 @@ from .markdown_utils import html_source_tag
 
 logger = logging.getLogger(__name__)
 
+# Noise title patterns to filter out (e.g., SEC page addresses, form names)
+_NOISE_TITLE_RE = re.compile(
+    r"^(?:"
+    r"(?:Washington,?\s*DC\s*\d+)|"  # SEC address
+    r"(?:10-[KQ](?:\s|$))|"  # SEC form names
+    r"(?:Form\s+\d)|"  # SEC form numbers
+    r"(?:SEC\.gov\s*-?\s*SEC\.gov)|"  # SEC.gov self-links
+    r"(?:EDGAR\s)"  # EDGAR system pages
+    r")",
+    re.IGNORECASE,
+)
+
 # Theme definitions: (theme_name_ko, theme_key, emoji, keywords)
 THEMES = [
     (
@@ -760,6 +772,8 @@ class ThemeSummarizer:
                 title = article.get("title", "")
                 if not title or title in seen_titles:
                     continue
+                if _NOISE_TITLE_RE.search(title):
+                    continue
                 seen_titles.add(title)
                 link = article.get("link", "")
                 source = article.get("source", "")
@@ -775,10 +789,24 @@ class ThemeSummarizer:
                     continue
 
                 if shown < featured_count:
+                    # Build HTML card for featured item
+                    num = shown + 1
+                    from html import escape as _esc
+
+                    safe_title = _esc(title, quote=True)
+                    card_parts = [
+                        '<div class="news-card-item">',
+                        f'<div class="news-card-num">{num}</div>',
+                        '<div class="news-card-body">',
+                    ]
                     if link:
-                        lines.append(f"**{shown + 1}. [{title}]({link})**")
+                        safe_link = _esc(link, quote=True)
+                        card_parts.append(
+                            f'<a href="{safe_link}" class="news-title" target="_blank" rel="noopener noreferrer">{safe_title}</a>'
+                        )
                     else:
-                        lines.append(f"**{shown + 1}. {title}**")
+                        card_parts.append(f'<span class="news-title">{safe_title}</span>')
+
                     if description and description != title:
                         desc_text = description
                         for sep in ["。", ". ", "다. ", "요. "]:
@@ -788,11 +816,16 @@ class ThemeSummarizer:
                                 break
                         else:
                             desc_text = desc_text[:200].rsplit(" ", 1)[0] if len(desc_text) > 200 else desc_text
-                        lines.append(desc_text)
+                        card_parts.append(f'<p class="news-desc">{_esc(desc_text, quote=True)}</p>')
+
                     if source:
-                        lines.append(f"{html_source_tag(source)}\n")
-                    else:
-                        lines.append("")
+                        card_parts.append(html_source_tag(source))
+
+                    card_parts.append("</div>")  # close news-card-body
+                    card_parts.append("</div>")  # close news-card-item
+                    lines.append("")  # blank line before HTML block
+                    lines.append("\n".join(card_parts))
+                    lines.append("")  # blank line after HTML block
                     cross_theme_featured.add(title)
                 else:
                     if link:
@@ -807,12 +840,15 @@ class ThemeSummarizer:
             overflow = len([a for a in articles if a.get("title") and a["title"] not in seen_titles])
             remaining_count = len(remaining_links) + overflow
             if remaining_links:
-                lines.append(f'<details><summary>그 외 {remaining_count}건 보기</summary><div class="details-content">')
+                lines.append(
+                    f"<details><summary>그 외 {remaining_count}건 보기</summary>"
+                    f'<div class="details-content"><ol class="news-overflow-list">'
+                )
                 for link_html in remaining_links[:15]:
-                    lines.append(link_html)
+                    lines.append(f"<li>{link_html}</li>")
                 if remaining_count > 15:
-                    lines.append(f"<em>...외 {remaining_count - 15}건</em>")
-                lines.append("</div></details>\n")
+                    lines.append(f"<li><em>...외 {remaining_count - 15}건</em></li>")
+                lines.append("</ol></div></details>\n")
 
             lines.append("")
 
@@ -1212,6 +1248,8 @@ class ThemeSummarizer:
             for article in articles:
                 title = article.get("title", "")
                 if not title or title in seen_titles or len(title.strip()) < 5:
+                    continue
+                if _NOISE_TITLE_RE.search(title):
                     continue
                 seen_titles.add(title)
                 link = article.get("link", "")

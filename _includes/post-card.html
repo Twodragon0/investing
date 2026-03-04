@@ -20,6 +20,11 @@
   </div>
   <h3>{{ post.title }}</h3>
   {% if post.excerpt %}<p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>{% endif %}
+  {% if post.description and post.description != "" %}
+    {% assign exc_plain = post.excerpt | strip_html | truncate: 100 %}
+    {% assign desc_plain = post.description | truncate: 100 %}
+    {% unless exc_plain == desc_plain %}<p class="post-desc-hint">{{ desc_plain }}</p>{% endunless %}
+  {% endif %}
   <div class="post-card-footer">
     {% if post.tags.size > 0 %}
     <div class="post-tags">

@@ -41,21 +41,17 @@ description: "전 세계 금융 규제기관의 최신 동향을 정리합니다
 
 ## 미국 규제 동향
 
-**1. [Washington, DC 20549 - SEC.gov - SEC.gov](https://news.google.com/rss/articles/CBMimgFBVV95cUxNSm1DVGswVXFiSDFSQnhaUzdVZnZoN3llY2RibTR3NG0zc0ZkM0Q2Rjc1T0Q2bndfdTVjX29FY3FCZ2VLbzU0UVVHT04xOXpsNGVLQzVpcU8wT0hwNXMxVGFzZzJlRXRiTE10a0VHazJFT3V3QVhMSXYyNElTRlBJWFljWWlzVjBYV1JkTlVJMFVhYmN6RHQyenpR?oc=5)**
-Washington, DC 20549 - SEC.gov SEC.gov
-<span class="source-tag">SEC (Google News)</span>
+**1. [중동 상황 관련 긴급 금융시장상황점검회의 개최](https://www.fsc.go.kr/no010101/86360)**
+금융위원회가 중동 상황 악화에 따른 금융시장 영향을 점검하기 위해 긴급 회의를 개최했습니다.
+<span class="source-tag">금융위원회</span>
 
-**2. [10-K - SEC.gov](https://news.google.com/rss/articles/CBMikAFBVV95cUxQcUNuOVFoMV9Ud29CT2F4aHZFcEJtSWFHaGxjdGhRaF9sMHNjSnI4eGJCV3FTWllPWldkNlR6Tjc4NkJNYmFna0ZjUlJaRHhiS1FJdm1SNUhJbGJmZXdpSmNkX2ZjdllIZWxVUXI3YTlvTFpnM2FkZjJHSTUzcEJTbHkxUGFCRkU4YXJ2NTc1UW0?oc=5)**
-10-K SEC.gov
-<span class="source-tag">SEC (Google News)</span>
-
-**3. [CFTC Chairman Selig Announces Mel Gunewardena as Director of the Office of International Affairs and Senior Markets Advisor to the Chairman](https://www.cftc.gov/PressRoom/PressReleases/9189-26)**
+**2. [CFTC Chairman Selig Announces Mel Gunewardena as Director of the Office of International Affairs and Senior Markets Advisor to the Chairman](https://www.cftc.gov/PressRoom/PressReleases/9189-26)**
 <span class="source-tag">CFTC Press Releases</span>
 
-**4. [CFTC Chairman Selig Announces Alan Brubaker as Director of the Office of Legislative and Intergovernmental Affairs](https://www.cftc.gov/PressRoom/PressReleases/9188-26)**
+**3. [CFTC Chairman Selig Announces Alan Brubaker as Director of the Office of Legislative and Intergovernmental Affairs](https://www.cftc.gov/PressRoom/PressReleases/9188-26)**
 <span class="source-tag">CFTC Press Releases</span>
 
-**5. [CFTC Chairman Selig Announces David I. Miller as Director of Enforcement](https://www.cftc.gov/PressRoom/PressReleases/9187-26)**
+**4. [CFTC Chairman Selig Announces David I. Miller as Director of Enforcement](https://www.cftc.gov/PressRoom/PressReleases/9187-26)**
 <span class="source-tag">CFTC Press Releases</span>
 
 

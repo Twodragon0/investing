@@ -405,6 +405,19 @@ a {
     font-size: 0.95rem;
     line-height: 1.6;
   }
+
+  .post-desc-hint {
+    color: $text-secondary;
+    font-size: 0.85rem;
+    font-style: italic;
+    line-height: 1.5;
+    margin-top: 0.25rem;
+    opacity: 0.75;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }
 
 .post-category {
@@ -1067,6 +1080,178 @@ a {
       border: 1px solid rgba($border-color, 0.15);
       font-style: normal;
       font-family: inherit;
+
+      // Color coding by source type
+      &[data-source-type="crypto-media"] {
+        color: $cat-crypto;
+        background: rgba($cat-crypto, 0.12);
+        border-color: rgba($cat-crypto, 0.25);
+      }
+      &[data-source-type="exchange"] {
+        color: $accent-purple;
+        background: rgba($accent-purple, 0.12);
+        border-color: rgba($accent-purple, 0.25);
+      }
+      &[data-source-type="finance-media"] {
+        color: $accent-blue;
+        background: rgba($accent-blue, 0.12);
+        border-color: rgba($accent-blue, 0.25);
+      }
+      &[data-source-type="world-media"] {
+        color: $accent-green;
+        background: rgba($accent-green, 0.12);
+        border-color: rgba($accent-green, 0.25);
+      }
+      &[data-source-type="regulator"] {
+        color: $accent-red;
+        background: rgba($accent-red, 0.12);
+        border-color: rgba($accent-red, 0.25);
+      }
+      &[data-source-type="aggregator"] {
+        color: $text-secondary;
+        background: rgba($bg-secondary, 0.5);
+        border-color: rgba($border-color, 0.2);
+      }
+    }
+
+    // News card item (featured articles)
+    .news-card-item {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      padding: 0.85rem 1rem;
+      margin: 0.5rem 0;
+      border-radius: 10px;
+      background: rgba($bg-secondary, 0.25);
+      border: 1px solid rgba($border-color, 0.2);
+      border-left: 3px solid transparent;
+      transition: all 0.25s ease;
+
+      &:hover {
+        background: rgba($bg-secondary, 0.4);
+        border-left-color: $accent-blue;
+        transform: translateX(4px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .news-card-num {
+        flex-shrink: 0;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: rgba($accent-blue, 0.15);
+        color: $accent-blue;
+        font-size: 0.8rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0.1rem;
+      }
+
+      .news-card-body {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .news-title {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: $text-primary;
+        line-height: 1.45;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: $accent-blue;
+          text-decoration: none;
+
+          &::after {
+            content: ' ↗';
+            font-size: 0.75rem;
+            opacity: 0.6;
+          }
+        }
+      }
+
+      .news-desc {
+        margin: 0.3rem 0 0.4rem;
+        font-size: 0.88rem;
+        color: $text-secondary;
+        line-height: 1.55;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .source-tag {
+        margin-top: 0.15rem;
+      }
+    }
+
+    // Overflow list (inside details)
+    .news-overflow-list {
+      list-style: none;
+      counter-reset: overflow-num;
+      padding: 0;
+      margin: 0;
+
+      li {
+        counter-increment: overflow-num;
+        padding: 0.45rem 0.6rem 0.45rem 2.2rem;
+        border-radius: 6px;
+        position: relative;
+        transition: background 0.2s ease;
+        font-size: 0.9rem;
+        line-height: 1.5;
+
+        &::before {
+          content: counter(overflow-num) ".";
+          position: absolute;
+          left: 0.6rem;
+          color: $text-secondary;
+          font-size: 0.8rem;
+          font-weight: 600;
+          min-width: 1.2rem;
+        }
+
+        &:hover {
+          background: rgba($accent-blue, 0.06);
+        }
+
+        a {
+          font-weight: 500;
+        }
+
+        .source-tag {
+          float: right;
+          margin-top: 0.1rem;
+        }
+      }
+    }
+
+    // Legacy markdown compat (older posts: **1. [Title](URL)** style)
+    > p > strong:first-child > a[href] {
+      // Detected as legacy news item link
+    }
+
+    @supports selector(:has(a)) {
+      > p:has(> strong:first-child > a[href]) {
+        padding: 0.5rem 0.75rem;
+        border-left: 3px solid rgba($accent-blue, 0.4);
+        border-radius: 0 8px 8px 0;
+        background: rgba($bg-secondary, 0.15);
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background: rgba($bg-secondary, 0.3);
+          border-left-color: $accent-blue;
+        }
+      }
     }
 
     .wm-reference-summary {
@@ -5707,6 +5892,7 @@ a:focus-visible {
 
     .post-title { color: var(--text-primary); }
     .post-excerpt { color: var(--text-secondary); }
+    .post-desc-hint { color: var(--text-secondary); opacity: 0.7; }
 
     .post-card-meta {
       color: var(--text-secondary);
@@ -6034,6 +6220,70 @@ a:focus-visible {
     color: var(--text-secondary);
     background: var(--bg-secondary);
     border: 1px solid rgba(208, 215, 222, 0.5);
+
+    &[data-source-type="crypto-media"] {
+      color: #b45309;
+      background: rgba(180, 83, 9, 0.08);
+      border-color: rgba(180, 83, 9, 0.2);
+    }
+    &[data-source-type="exchange"] {
+      color: #7c3aed;
+      background: rgba(124, 58, 237, 0.08);
+      border-color: rgba(124, 58, 237, 0.2);
+    }
+    &[data-source-type="finance-media"] {
+      color: #0969da;
+      background: rgba(9, 105, 218, 0.08);
+      border-color: rgba(9, 105, 218, 0.2);
+    }
+    &[data-source-type="world-media"] {
+      color: #1a7f37;
+      background: rgba(26, 127, 55, 0.08);
+      border-color: rgba(26, 127, 55, 0.2);
+    }
+    &[data-source-type="regulator"] {
+      color: #cf222e;
+      background: rgba(207, 34, 46, 0.08);
+      border-color: rgba(207, 34, 46, 0.2);
+    }
+    &[data-source-type="aggregator"] {
+      color: var(--text-secondary);
+      background: rgba(240, 243, 246, 0.8);
+      border-color: rgba(208, 215, 222, 0.4);
+    }
+  }
+
+  // News card item
+  .news-card-item {
+    background: rgba(246, 248, 250, 0.6);
+    border: 1px solid rgba(208, 215, 222, 0.4);
+    border-left: 3px solid transparent;
+
+    &:hover {
+      background: rgba(246, 248, 250, 0.9);
+      border-left-color: var(--accent-blue);
+      box-shadow: 0 4px 12px rgba(31, 35, 40, 0.08);
+    }
+
+    .news-card-num {
+      background: rgba(9, 105, 218, 0.1);
+      color: var(--accent-blue);
+    }
+
+    .news-title {
+      color: var(--text-primary);
+      &:hover { color: var(--accent-blue); }
+    }
+
+    .news-desc {
+      color: var(--text-secondary);
+    }
+  }
+
+  // Overflow list
+  .news-overflow-list li {
+    &:hover { background: rgba(9, 105, 218, 0.04); }
+    &::before { color: var(--text-secondary); }
   }
 
   // Footer
@@ -6170,4 +6420,30 @@ a:focus-visible {
   // Price change indicators keep their semantic colors
   .price-up, .change-positive { color: #1a7f37; }
   .price-down, .change-negative { color: #cf222e; }
+}
+
+/* ================================
+   RESPONSIVE - News Card Items
+   ================================ */
+@media (max-width: 768px) {
+  .post-content .news-card-item {
+    padding: 0.65rem 0.75rem;
+    gap: 0.5rem;
+
+    .news-title { font-size: 0.9rem; }
+    .news-desc { font-size: 0.82rem; -webkit-line-clamp: 2; }
+    .news-card-num { width: 24px; height: 24px; font-size: 0.72rem; }
+  }
+
+  .post-content .news-overflow-list li {
+    padding: 0.35rem 0.5rem 0.35rem 1.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-content .news-card-item {
+    .news-card-num { display: none; }
+    padding: 0.55rem 0.6rem;
+  }
 }

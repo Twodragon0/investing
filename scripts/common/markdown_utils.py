@@ -46,8 +46,37 @@ def html_details_list(summary: str, items: Iterable[str], css_class: str = "deta
     return f'<details><summary>{html_text(summary)}</summary><div class="{css_class}"><ol>{li}</ol></div></details>'
 
 
+_SOURCE_TYPE_MAP: Dict[str, str] = {}
+_SOURCE_RULES: List[tuple] = [
+    ("crypto-media", ["coindesk", "decrypt", "cointelegraph", "theblock", "bitcoinmagazine", "blockworks"]),
+    ("exchange", ["binance", "okx", "bybit", "upbit", "coinbase", "bithumb", "kraken", "bitfinex"]),
+    ("finance-media", ["reuters", "bloomberg", "cnbc", "marketwatch", "wsj", "ft.com", "barron"]),
+    ("world-media", ["bbc", "guardian", "al jazeera", "nytimes", "washingtonpost", "worldmonitor"]),
+    ("regulator", ["sec", "cftc", "금융위", "금감원", "fca", "esma", "bis", "federal reserve"]),
+    ("aggregator", ["google news", "rss", "yahoo", "investing.com"]),
+]
+
+
+def _classify_source(source: str) -> str:
+    """Classify source name into one of 6 predefined types for color coding."""
+    if not source:
+        return "default"
+    low = source.lower().strip()
+    # Check cache first
+    if low in _SOURCE_TYPE_MAP:
+        return _SOURCE_TYPE_MAP[low]
+    for src_type, keywords in _SOURCE_RULES:
+        for kw in keywords:
+            if kw in low:
+                _SOURCE_TYPE_MAP[low] = src_type
+                return src_type
+    _SOURCE_TYPE_MAP[low] = "default"
+    return "default"
+
+
 def html_source_tag(source: str) -> str:
-    return f'<span class="source-tag">{html_text(source)}</span>'
+    src_type = _classify_source(source)
+    return f'<span class="source-tag" data-source-type="{src_type}">{html_text(source)}</span>'
 
 
 _GOOGLE_NEWS_RE = re.compile(

@@ -170,7 +170,7 @@ Wisconsin lawmakers crack down on cryptocurrency scams WTAQ
 
 **🟠 비트코인**(54건)과 **📈 가격/시장**(28건)이 오늘의 핵심 테마입니다. 비트코인 관련 뉴스와 시장 가격 움직임이 함께 부각되어, 단기 변동성 확대 구간에 진입한 것으로 보입니다.
 - 주요 기사: *Will U.S.-Israeli airstrikes target Iran's bitcoin mining farms?*
-- 주요 기사: *A brief collapse in Bitcoin’s price echoes earlier geopolitical conflicts—but a rapid bounceback sho*
+- 주요 기사: *A brief collapse in Bitcoin’s price echoes earlier geopolitical conflicts—but a rapid bounceback shows long-term impact unclear*
 
 **가격 언급**: 뉴스 제목에서 24건의 가격 데이터가 포착되었습니다 ($69,000, $67,000, $1,000, $1,000, $328). 구체적 가격대가 언급되는 것은 시장의 가격 민감도가 높다는 신호입니다.
 

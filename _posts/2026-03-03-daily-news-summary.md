@@ -35,7 +35,7 @@ excerpt: "암호화폐 111건, 주식 122건, 보안 2건, 규제 29건, 소셜 
 | 월드모니터 | 20 | 수집 건수: 20건 |
 | 규제 | 29 | 총 수집 건수: 29건 |
 | 소셜 | 35 | 2026-03-03 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 15건, 총 35건이 수집되었습니다. |
-| 정치인 거래 |  | 데이터 없음 |
+| 정치인 거래 | - | 수집 대기 |
 
 ![multi-asset-briefing]({{ "/assets/images/generated/news-briefing-daily-2026-03-03.png" | relative_url }})
 
@@ -53,16 +53,16 @@ excerpt: "암호화폐 111건, 주식 122건, 보안 2건, 규제 29건, 소셜 
 
 > - **암호화폐** 111건 — Will U.S.-Israeli airstrikes target Iran's bitcoin mining farms?
 > - **주식** 122건 — KOSPI 5,996.28(-4.56%)
-> - **규제** 29건 — Washington, DC 20549 - SEC.gov - SEC.gov
+> - **규제** 29건 — 중동 상황 관련 긴급 금융시장상황점검회의 개최
 > - **월드모니터** 20건 — **China’s Two Sessions to reveal Xi’s economic and defence plans as military purge casts shadow**
-> - **소셜** 35건 — Billionaire Tim Draper said Bitcoin will hit $250K, $1M, then $10M on its way to dethroning the doll
+> - **소셜** 35건 — Billionaire Tim Draper said Bitcoin will hit $250K, $1M, then $10M on its way to dethroning the dollar
 
 ## 뉴스 내용 기반 핵심 요약
 
 - **암호화폐:** 111건. 대표 헤드라인: Will U.S.-Israeli airstrikes target Iran's bitcoin mining farms?.
 - **주식:** 122건. 2026-03-03 주식 시장에서 122건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,996.28(-4.56%), KOSDAQ 1,175.38(-1.76%), USD/KRW 1,464.88(+0.78%).. 주요 수치: KOSPI 5,996.28(-4.56%).
-- **규제:** 29건. 주요 이슈: Washington, DC 20549 - SEC.gov - SEC.gov.
-- **소셜:** 35건. 화제 키워드: Billionaire Tim Draper said Bitcoin will hit $250K, $1M, then $10M on its way to dethroning the doll.
+- **규제:** 29건. 주요 이슈: 중동 상황 관련 긴급 금융시장상황점검회의 개최.
+- **소셜:** 35건. 화제 키워드: Billionaire Tim Draper said Bitcoin will hit $250K, $1M, then $10M on its way to dethroning the dollar.
 - **월드모니터:** 20건. 핵심 이슈: **China’s Two Sessions to reveal Xi’s economic and defence plans as military purge casts shadow**.
 - **우선순위:** P0 4건, P1 9건. 긴급: Crypto Hacks Drop to $26.5M in February, Lowest Since March 2025 - Live Bitcoin News, Crypto Hacking Losses Plummet to $26.5M in February, Signaling a Stunning Security Transformation - Bitcoin world.
 
@@ -103,12 +103,12 @@ excerpt: "암호화폐 111건, 주식 122건, 보안 2건, 규제 29건, 소셜 
 
 | 비교 구간 | 연관 점수 | 진단 |
 | --- | ---: | --- |
-| 암호화폐 ↔ 주식 | 6 | 낮음 — 정책·규제 이벤트가 복수 시장에 파급 |
-| 암호화폐 ↔ 규제 | 3 | 낮음 — 정책·규제 이벤트가 복수 시장에 파급 |
-| 주식 ↔ 규제 | 9 | 낮음 — 정책·규제 이벤트가 복수 시장에 파급 |
-| 암호화폐 ↔ 소셜 | 6 | 낮음 — 정책·규제 이벤트가 복수 시장에 파급 |
-| 월드모니터 ↔ 암호화폐 | 5 | 낮음 — 정책·규제 이벤트가 복수 시장에 파급 |
-| 월드모니터 ↔ 주식 | 10 | 낮음 — 정책·규제 이벤트가 복수 시장에 파급 |
+| 암호화폐 ↔ 주식 | 6 | 낮음 — 이란 사태로 양 시장 동반 변동 |
+| 암호화폐 ↔ 규제 | 3 | 낮음 — SEC·CFTC 동향이 암호화폐 시장에 간접 영향 |
+| 주식 ↔ 규제 | 9 | 보통 — 금융시장 점검회의 등 정책 이벤트 직접 연관 |
+| 암호화폐 ↔ 소셜 | 6 | 낮음 — BTC 가격 반등에 대한 소셜 미디어 반응 |
+| 월드모니터 ↔ 암호화폐 | 5 | 낮음 — 중동 지정학 리스크가 BTC 가격에 영향 |
+| 월드모니터 ↔ 주식 | 10 | 보통 — 유가 급등·이란 갈등이 글로벌 증시 직격 |
 
 **운영 체크리스트**
 - 교차자산 연관성이 전반적으로 낮아 개별 자산/이벤트 중심의 독립적 대응이 적합합니다.
@@ -155,9 +155,9 @@ excerpt: "암호화폐 111건, 주식 122건, 보안 2건, 규제 29건, 소셜 
 ### 규제 동향 (29건)
 
 **주요 규제 이슈:**
-- Washington, DC 20549 - SEC.gov - SEC.gov
-- 10-K - SEC.gov
-- CFTC Chairman Selig Announces Mel Gunewardena as Director of the Office of International Affairs and Senior Markets Advisor to the Chairman
+- 중동 상황 관련 긴급 금융시장상황점검회의 개최
+- CFTC Chairman Selig Announces Mel Gunewardena as Director of the Office of International Affairs
+- 상호금융조합의 리스크 관리 엄격화 (상호금융업감독규정 일부개정안)
 
 [상세 보기](https://investing.2twodragon.com/regulatory-news/2026/03/03/daily-regulatory-report/)
 
