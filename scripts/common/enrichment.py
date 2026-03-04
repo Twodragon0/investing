@@ -46,8 +46,9 @@ def fetch_page_description(url: str, timeout: int = 8) -> str:
             ("property", "og:description"),
         ]:
             meta = soup.find("meta", attrs={attr_key: attr_val})
-            if meta and meta.get("content", "").strip() and len(meta["content"].strip()) > 20:
-                return meta["content"].strip()[:300]
+            content = str(meta.get("content", "")) if meta else ""
+            if content.strip() and len(content.strip()) > 20:
+                return content.strip()[:300]
 
         for p in soup.find_all("p"):
             text = p.get_text(strip=True)
