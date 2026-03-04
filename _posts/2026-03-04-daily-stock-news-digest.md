@@ -17,37 +17,13 @@ description: "외 P0 긴급 이슈 23건이 추가 감지되었습니다. 총 14
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">147</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 70</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">리스크 위험</div></div><div class="stat-item"><div class="stat-value">5,384.06</div><div class="stat-label">KOSPI -7.62%</div></div><div class="stat-item"><div class="stat-value">1,051.52</div><div class="stat-label">KOSDAQ -8.68%</div></div></div>
 <div class="alert-box alert-info"><strong>주식 시장 긴급: Nasdaq, prices, crash - 147건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (70건): Dow, 코스피, Nasdaq 관련 70건의 뉴스가 보고되었습니다.</li><li>📊 <strong>매크로/금리</strong> (20건): 환율, 한은, 달러 관련 20건의 뉴스가 보고되었습니다.</li><li>🤖 <strong>AI/기술</strong> (5건): 반도체, 삼성전자, 하이닉스 관련 5건의 뉴스가 보고되었습니다.</li><li>🏛️ <strong>정치/정책</strong> (6건): Trump, Iran, kick 관련 6건의 뉴스가 보고되었습니다.</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMizAJBVV95cUxPb0pPMXJJeUd2YzVGSWZjRGk2VTdfS2czUC1hU19qYmd6VUo5UzZnVDBtcUVVbklrZjA3X3dEZFluUXFpQmVTSVFrTjZfbkItRGdBOFNYQWFLNEtHeEduODdNQUNCT01YOE5mbjY5SWNmRnFpRUgzYVFtVmFuMEV0Z0E0b2daQXNrYzZRWUI1a3UteEx2YnhKTVlTVHFYeEpJOUJjYTlUZzlQS19hV1VZeWRLcVgzZW0tU0J6akhtMHRNd1ptSS1fQl9WUTU2SUYyOC1BQXptY3BfaFRTTXJJbzFiQW5LTnZBQVVfeFJIRkhhazNESEVoTFFKaEFibnpHNVNUUkZhaTRfWGJOZ2dscjdWdDBvMFRhVUh2TXNXV0JRYV8yLVM0TC1MQVVoVkNkSzBuUXQ2RnpCamJpOGd4NzVUR2s4bk9vN1NaSdIB0gJBVV95cUxPdU9mR2pwX3haSVE0VTFKMTktanJ6SFZqWEcxTEVBcC1oemxvdmFTNjJuWlNzeXBKTFF2Z0NTUjMxMVpvWFE0THJZZV80UXRERGVzb3NORFE2dGNiUEJFUmRCYmR0UzBXYWNJRnBlWTYtb1paaERsQVJkbW9nX01HRE5JWUpYVVZOSUZHSWQ5aWlYc2JwSUlGR09jMlgxYXY5WF9qTVZBdGRYNUlJeUxMYzdKZkVDUjRPOFFfREpVYld0em1oZ1c3TG0wdzFNNm8wbllpbEYzSWlXa0s3STNEUkhYT2dxaTNhMkIxVWJPRTRKY1NFcU5mN29aMi1fWDE2RVBnNXpyTWNsM3VWeDR0dC1VZ2pYbjltVW5YQWdCZ0JuYlRqb3gweTVRSnBRTVlicUd2S0pXbkt5R0g2c0NTN1hZSEY5T2ljTjN3YV9YOXRxQQ?hl=en-US&gl=US&ceid=US%3Aen">US stock market big crash today: Why Dow, S&P 500, Nasdaq in deep red today? Oil, gas and gold prices surg</a></li><li><a href="https://news.google.com/read/CBMixAJBVV95cUxQM0hoVjB4R3haRkNYNi1BckY5bkhXeWhpb3M3UVBLQ3psbUNDbzJQcURGTXVFMFdXbE5yZ2VhLVpDVVF1SWhzXzB2RXVzam5sLUtOU2E5cmM3T3UwdFJyWmUxWkVmSXFOSDU3eGpmajMzMjkwR3VyTWtKNU1CQ0JiN19WbktaV1c2M2hDU3dIbDU0NXV6MGtsQkRvREcyelFQY0VJUGc3R0kzX3ZBSm56c1N1ZVR4ZnR3dk4zaW5PVEM4MGRyM2dHR3N0ZmwyU2I0UFRmTjZPd2JiRGdDbG8wMEFVcldDQlFZMFcwajRvQ3NvNVEwT0dWWEpGbGFmdWtXeE1DbVNjYUVfYnZoeU9aeDFnaFFIVmZlbjgtWnhDRVhndlEzSEFqS3VtQnhpZkZuQ09rLW00TkdOcjl3SmI1akFaTW7SAcoCQVVfeXFMT2Rzb21QbmZ2WUFDeTZESWNlOHE3Y3RDRVhCa1NNZWdwYld3N042eTZfcklvbVVwZjlkZDQwX1MxcENHaUt0THhQTzloMDhIWktCMUJIZFo1MTViLWtQY2RrTzhacmtDTW9NRm56SU93THBiTS1icy1OT1FzemVpR2gyTjZSM3c5enhlVDE1dGM4UWVqWWpDUFM1RUlVVVJEXzJuMzdOSmtJZlJCOWRtTXZXN2hCOGVKVnRlS2pMVWhEaUtnMGk0VlNKRGxqR2dwMWxWUEFIM0t1TDdTQy1uR2JKakd5c3NSWUN4MTJCdTRFa1YySThPQUNYRERqai1aQ0JjVm9uNzYyRG1veDB2bjhhNEJpOU5lMXRQTG01N2oxWGRhQ0V2YTVDaDMzNS1LdktFZm8xWEJsdnFKc1hCeS1JclRPSm5ia09n?hl=en-US&gl=US&ceid=US%3Aen">Why didn't US avert stock market Dow Jones, S&P 500 and Nasdaq crash today like UAE? Analysts insights, ma</a></li><li><a href="https://news.google.com/read/CBMi4gJBVV95cUxOTU1aOWJoOXp6bGtDbFVsUDZTc2pySVMwRWFydExEdTEwUGNLUUdaZmtkb3o5SGRRWGY5bm1tU0NFUGkyOUJNV0pPdTVPTnNUZzdSWTJkYU1aemlKSENDRDA3elc3RnJ1SzZfUWhkTGlYMkd5bVNnOFE0VXBhSThZM3RjRWZJZnJSVGY0R05ZZWs2MDJXM04yQ3RLcnc1SFQ0WjI5bEp3T0xHOU1hQVV1ZFM5a3ZBU2RGdmFIRVhSdEkyM2pWSHpQZTFzRFFwN0lTc2l6QlV0Rk1DczNyWkFRR0tYRElsUHZCbDNETFBjdWV5d182YjIzN1JpLWcwLWlwcUZPSEgwbDFDby1uUWZDblNLUWh1djBNNllVZlpnRXNGbXl5akZ3S19fUHo2dnlBVHRmVnJwNWc4WWlEMV9rVFlnOEdHYUdzZE5DallaenNXbHZpdjBfMUI4RUdoVkRwelHSAecCQVVfeXFMTUs3TlZYb3R4aTRJVlFIbTVCUHo5TVA5TVc3VjhWV3Z0ZkJjclhBbXZHanFadkJaVmFXSDQ4Q1Y0bVVyZm1iRW1jYXkyYXJfUExHb2ZNXzlrQ0d6WnNUVjJCZlNxRkFWVC16RHV5c3ctQVJTZ25LdW56ZE5Jekt4NWZhQ0dpYzBZNHdtNjlueE9rX3BOWlBtQ2gxbVdWQTR2c05QTW90SWJILUU1WExyVzhiOWRTUVZqcG9JNnZpUzNTZllYOGZxalRDbzdmSkJBX3hsVWFuZlJyOGhnS2JhamM3ckxRT0w0QlZjNWNSeDE5VzVBMVlzU2hWVGxRT0YwLWRuSEVHVjRkZVB1UDJFemVJdmRNU2hNMzBJVXpXZHZzbzZSLTlCYmtWTW45NU5WUGx6dkxXeTVhRnVialJSZkFzakF2TE1sUU1BandiUTBNa092azlLeE5lTjFLbHZmTFMyeXpnUnM?hl=en-US&gl=US&ceid=US%3Aen">US stock market Dow Jones, S&P 500 and Nasdaq crash today biggest losers and gainers: Here's complete list</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: US stock market big crash today: Why Dow, S&P 500, Nasdaq in deep red today? ...  
-외 P0 긴급 이슈 23건이 추가 감지되었습니다. 총 147건의 뉴스 중 P1 주요 이슈도 7건 확인됩니다.
-
-1. **📈 가격/시장** (70건): Dow, 코스피, Nasdaq 관련 70건의 뉴스가 보고되었습니다.
-2. **📊 매크로/금리** (20건): 환율, 한은, 달러 관련 20건의 뉴스가 보고되었습니다.
-3. **🤖 AI/기술** (5건): 반도체, 삼성전자, 하이닉스 관련 5건의 뉴스가 보고되었습니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-**P0 긴급**: US stock market big crash today: Why Dow, S&P 500, Nasdaq in / Why didn't US avert stock market Dow Jones, S&P 500 and Nasd / US stock market Dow Jones, S&P 500 and Nasdaq crash today bi
-**P1 주요**: 7건 확인
-- 한국 기사 68건, 글로벌 기사 79건 수집
-- 한국 지수: KOSPI 5,384.06(-7.62%), KOSDAQ 1,051.52(-8.68%), USD/KRW 1,481.07(-0.31%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">70건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:29%"></div></div><span class="theme-count">20건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:7%"></div></div><span class="theme-count">5건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:9%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:4%"></div></div><span class="theme-count">3건</span></div>
-</div>
-
-*총 147건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
-
-
-![market-snapshot]({{ '/assets/images/generated/market-snapshot-2026-03-04.png' | relative_url }})
-
-
----
+- KOSPI 5,384.06 (-7.62%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 1,051.52 (-8.68%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-03-04 주식 시장에서 147건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,384.06(-7.62%), KOSDAQ 1,051.52(-8.68%), USD/KRW 1,481.07(-0.31%).
+- *Dow, 코스피, Nasdaq 관련 70건의 뉴스가 보고되었습니다.*
 
 ## 테마별 주요 뉴스
 

@@ -33,6 +33,7 @@ description: "2026-03-03 암호화폐 시장에서 111건의 뉴스를 분석했
 <div class="alert-box alert-info"><strong>암호화폐 긴급: 조기 종전 기대, 암호화폐 일제 급등…비트 6%-이더 7%↑(종합) - v.daum.net - 111건 분석</strong><ul><li>🟠 <strong>비트코인</strong> (54건): Bitcoin, Iran, Cryptocurrency, conflict, Israel</li><li>📈 <strong>가격/시장</strong> (28건): 비트코인, Bitcoin, Iran, 암호화폐, geopolitical</li><li>🏦 <strong>거래소</strong> (18건): Binance, billion, crypto, airstrikes, liquidity</li><li>🔵 <strong>규제/정책</strong> (19건): million, billion, Crypto, Nasdaq, cryptocurrency</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFBYdjVoTDJlZkxrTmNwNUNLQTVVaGRWRW1TYzVQWGVWcXRUQ0pPaHpVNFplTmFmeGV6RGR2TkFFalI1QnRVV0Z1b1Ixb25ObE0?oc=5">조기 종전 기대, 암호화폐 일제 급등…비트 6%-이더 7%↑(종합) - v.daum.net</a></li><li><a href="https://www.coindesk.com/tech/2026/03/02/vitalik-buterin-unveils-plan-to-curb-ethereum-block-builder-centralization">Vitalik Buterin unveils plan to curb Ethereum block builder centralization</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **111건** 수집

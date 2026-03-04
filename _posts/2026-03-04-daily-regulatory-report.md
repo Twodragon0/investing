@@ -17,20 +17,6 @@ description: "전 세계 금융 규제기관의 최신 동향을 정리합니다
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">38</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 22</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">30</div><div class="stat-label">한국</div></div></div>
 <div class="alert-box alert-info"><strong>규제 긴급: 중동 상황 관련  긴급 금융시장상황점검회의 개최 - 38건 분석</strong><ul><li>🔵 <strong>규제/정책</strong> (22건): 개최, Chairman, 금융위 관련 22건의 뉴스가 보고되었습니다.</li><li>🏦 <strong>거래소</strong> (6건): 가상자산, 거래소, 금융위 관련 6건의 뉴스가 보고되었습니다.</li><li>🟠 <strong>비트코인</strong> (1건): 검토중입니다, 세부방안은, 단일종목 관련 1건의 뉴스가 보고되었습니다.</li><li>🏛️ <strong>정치/정책</strong> (7건): 금융위, 현장방문, 개최 관련 7건의 뉴스가 보고되었습니다.</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://www.fsc.go.kr/no010101/86360">중동 상황 관련  긴급 금융시장상황점검회의 개최</a></li></ul></div>
-## 전체 뉴스 요약
-
-**긴급**: 중동 상황 관련  긴급 금융시장상황점검회의 개최  
-총 38건의 뉴스 중 P1 주요 이슈도 7건 확인됩니다.
-
-1. **🔵 규제/정책** (22건): 개최, Chairman, 금융위 관련 22건의 뉴스가 보고되었습니다.
-2. **🏦 거래소** (6건): 가상자산, 거래소, 금융위 관련 6건의 뉴스가 보고되었습니다.
-3. **🟠 비트코인** (1건): 검토중입니다, 세부방안은, 단일종목 관련 1건의 뉴스가 보고되었습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-**P0 긴급**: 중동 상황 관련  긴급 금융시장상황점검회의 개최
-**P1 주요**: 7건 확인
-**주요 지역**: 한국 30건, 미국 4건, 아시아 2건
-
 ## 핵심 요약
 
 - **총 수집 건수**: 38건

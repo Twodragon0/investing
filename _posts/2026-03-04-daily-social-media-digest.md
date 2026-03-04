@@ -17,36 +17,14 @@ description: "Cathie Wood says Bitcoin is 'hands down' better than Gold.'Bitcoin
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">37</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🏛️ 9</div><div class="stat-label">정치/정책</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div></div>
 <div class="alert-box alert-info"><strong>소셜 긴급: 암호화폐 강세 속 금·은 급락…트럼프 "빅 웨이브 곧 온다" 경고 - 디지털투데이 - 37건 분석</strong><ul><li>🏛️ <strong>정치/정책</strong> (9건): 이재명, 대통령, 싱가포르 관련 9건의 뉴스가 보고되었습니다.</li><li>🟠 <strong>비트코인</strong> (10건): Telegram, Bitcoin, years 관련 10건의 뉴스가 보고되었습니다.</li><li>📊 <strong>매크로/금리</strong> (10건): Telegram, Bitcoin, Tether 관련 10건의 뉴스가 보고되었습니다.</li><li>📈 <strong>가격/시장</strong> (6건): 기준금리, $296,750,000., Blackrock 관련 6건의 뉴스가 보고되었습니다.</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBQekdUcHFRUkVFcm9mcFV6c3JaN2tldUhNODZaRXd1OWtKMmFjLXlJRG5mU21BR0EtaHlfM2w4c1NHTGtsR3loN1VINk4yZ0tiMzVGTUF6WUIyaHhNQ2gzdXFQVnlfQnEzd2pDOER3dnlDV00?oc=5">암호화폐 강세 속 금·은 급락…트럼프 "빅 웨이브 곧 온다" 경고 - 디지털투데이</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 암호화폐 강세 속 금·은 급락…트럼프 "빅 웨이브 곧 온다" 경고 - 디지털투데이  
-총 37건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
+오늘 수집된 총 37건 중 텔레그램 20건, 소셜 0건, 정치·경제 17건으로 정치/정책 및 비트코인 이슈가 주요 화제입니다.
 
-1. **🏛️ 정치/정책** (9건): 이재명, 대통령, 싱가포르 관련 9건의 뉴스가 보고되었습니다.
-2. **🟠 비트코인** (10건): Telegram, Bitcoin, years 관련 10건의 뉴스가 보고되었습니다.
-3. **📊 매크로/금리** (10건): Telegram, Bitcoin, Tether 관련 10건의 뉴스가 보고되었습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-**P0 긴급**: 암호화폐 강세 속 금·은 급락…트럼프 "빅 웨이브 곧 온다" 경고 - 디지털투데이
-**P1 주요**: [Telegram] 500,000 #FTT (1,238,192 USD) transferre
-- 텔레그램 20건, 정치·경제 17건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:90%"></div></div><span class="theme-count">9건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:100%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:100%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:60%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:50%"></div></div><span class="theme-count">5건</span></div>
-</div>
-
-*총 37건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
-
-
----
-
-
-![source-distribution]({{ '/assets/images/generated/source-distribution-2026-03-04.png' | relative_url }})
+**핵심 신호 정리**
+- 주요 테마: 정치/정책, 비트코인, 매크로/금리
+- 긴급 알림 1건에 대한 선별 모니터링
 
 ## 텔레그램 주요 소식
 

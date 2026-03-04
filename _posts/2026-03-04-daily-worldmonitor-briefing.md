@@ -25,24 +25,6 @@ description: "핵심 테마는 사회/기타(10건), 지정학/안보(6건), 금
 - 주요 출처: WorldMonitor/MarketWatch (10건), WorldMonitor/Guardian World (7건), WorldMonitor/BBC World (3건)
 
 
-## 전체 뉴스 요약
-**지정학 리스크 레벨: 보통** — 안보·에너지 이슈가 산발적으로 발생하고 있어, 관련 섹터 변동성에 유의가 필요합니다.
-
-핵심 테마는 **사회/기타**(10건), **지정학/안보**(6건), **금융시장**(2건) 중심으로 전개되고 있습니다.
-
-안보 이슈(6건)와 금융시장 뉴스(2건)가 동시 부각되고 있어, 지정학적 긴장이 시장 심리에 직접 영향을 미치는 구간입니다.
-
-에너지 이슈 **2건**이 포착되었습니다. 에너지 가격 추이를 모니터링하며 관련 섹터 포지션을 점검하세요.
-
-**테마 집중도**: 상위 2개 테마가 전체의 80%를 차지하여, 시장의 관심이 뚜렷하게 쏠리고 있습니다. 소외 테마에서 서프라이즈 이벤트 발생 시 충격이 증폭될 수 있습니다.
-
-**고중요도 이슈 6건** 중 주요 건:
-- South Sudan risks return to full-blown civil war as violence escalates
-- ‘Imperialist undertones’: global south condemns US-Israeli war with Iran
-- Wall Street’s ‘fear gauge’ is rising as Iran conflict escalates. Here’s what investors should watch.
-
-주요 출처: WorldMonitor/MarketWatch (10건), WorldMonitor/Guardian World (7건), WorldMonitor/BBC World (3건)
-
 ## 이슈 분포
 <div class="stat-grid">
 <div class="stat-item"><div class="stat-value">20</div><div class="stat-label">총 이슈</div></div>
