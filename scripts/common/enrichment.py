@@ -116,6 +116,30 @@ _WORLDMONITOR_SOURCE_CONTEXT: Dict[str, str] = {
     "Google News": "구글 뉴스",
 }
 
+_SOCIAL_SOURCE_CONTEXT: Dict[str, str] = {
+    "Twitter/X": "트위터/X",
+    "Google News Social EN": "구글 뉴스 소셜",
+    "Google News Social KR": "구글 뉴스 소셜",
+    "Whale & On-chain": "고래·온체인 분석",
+    "Trump Crypto Policy": "트럼프 암호화폐 정책",
+    "Trump Economy": "트럼프 경제 정책",
+    "트럼프 경제정책 KR": "트럼프 경제정책",
+    "이재명 경제정책": "이재명 경제정책",
+    "이재명 암호화폐정책": "이재명 암호화폐정책",
+    "이재명 부동산·금리": "이재명 부동산·금리",
+    "Fed Policy": "연준 통화정책",
+    "한국은행 금리정책": "한국은행 금리정책",
+    "한국증시 수급": "한국증시 수급",
+    "r/CryptoCurrency": "Reddit 암호화폐",
+    "r/Bitcoin": "Reddit 비트코인",
+    "r/EthTrader": "Reddit 이더리움",
+    "r/WallStreetBets": "Reddit 월스트리트벳",
+    "r/Stocks": "Reddit 주식",
+    "r/Investing": "Reddit 투자",
+    "r/DeFi": "Reddit 디파이",
+    "Google News": "구글 뉴스",
+}
+
 
 def _get_source_label(source: str, context_map: Dict[str, str]) -> str:
     """Get a Korean label for a source name."""

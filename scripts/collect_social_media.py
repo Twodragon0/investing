@@ -29,6 +29,7 @@ from common.config import (
     setup_logging,
 )
 from common.dedup import DedupEngine
+from common.enrichment import _SOCIAL_SOURCE_CONTEXT, enrich_items
 from common.markdown_utils import (
     html_reference_details,
     html_source_tag,
@@ -420,6 +421,18 @@ def main():
     # Collect political/economy news (Trump, 이재명, Fed, 한국은행)
     political_items = fetch_political_economy_news()
 
+    # ── Enrich items (URL descriptions + Korean translation) ──
+    # Telegram items already have descriptions (full message text),
+    # but need translation. Political/social items need both enrichment and translation.
+    enrich_items(telegram_items, context_map=_SOCIAL_SOURCE_CONTEXT, fetch_url=False)
+    enrich_items(social_items, context_map=_SOCIAL_SOURCE_CONTEXT, fetch_url=True, max_fetch=10)
+    enrich_items(reddit_items, context_map=_SOCIAL_SOURCE_CONTEXT, fetch_url=False)
+    enrich_items(political_items, context_map=_SOCIAL_SOURCE_CONTEXT, fetch_url=True, max_fetch=10)
+    logger.info(
+        "Enrichment complete: telegram=%d, social=%d, reddit=%d, political=%d",
+        len(telegram_items), len(social_items), len(reddit_items), len(political_items),
+    )
+
     # ── Consolidated social media post ──
     post_title = f"소셜 미디어 동향 - {today}"
 
@@ -562,9 +575,14 @@ def main():
                 content_parts.append(f"**{i}. [{title}]({link})**")
             else:
                 content_parts.append(f"**{i}. {title}**")
-            if description and description != title:
-                desc_text = smart_truncate(description, 150)
-                content_parts.append(f"{desc_text}")
+            # Show description only if it adds info beyond title
+            # (Telegram descriptions are full message text — skip if title is just truncated version)
+            if description and description != title and not title.startswith(description[:30]):
+                # Check if description is merely a longer version of the title
+                title_clean = title.replace("[Telegram] ", "").strip()
+                if not description.startswith(title_clean):
+                    desc_text = smart_truncate(description, 150)
+                    content_parts.append(f"{desc_text}")
             content_parts.append(f"{html_source_tag(source)}\n")
 
         content_parts.append("\n---\n")
@@ -618,13 +636,13 @@ def main():
     if political_items:
         content_parts.append("\n## 정치·경제 동향\n")
         for i, item in enumerate(political_items[:10], 1):
-            title = item["title"]
+            title = get_display_title(item)
             source = item.get("source", "unknown")
             link = item.get("link", "")
-            description = item.get("description", "").strip()
+            description = (item.get("description_ko") or item.get("description", "")).strip()
 
             if link:
-                source_links.append({"title": title, "link": link, "source": source})
+                source_links.append(item)
                 content_parts.append(f"**{i}. [{title}]({link})**")
             else:
                 content_parts.append(f"**{i}. {title}**")
