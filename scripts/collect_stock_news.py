@@ -30,6 +30,7 @@ from common.markdown_utils import (
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
+from common.translator import get_display_title
 from common.utils import detect_language, request_with_retry
 
 try:
@@ -493,10 +494,10 @@ def main():
         content_parts.append("## 글로벌 주식 뉴스\n")
         shown = 0
         for item in global_news_items[:15]:
-            title = item["title"]
+            title = get_display_title(item)
             link = item.get("link", "")
             source = item.get("source", "")
-            description = item.get("description", "").strip()
+            description = (item.get("description_ko") or item.get("description", "")).strip()
             if link:
                 content_parts.append(f"**{shown + 1}. [{title}]({link})**")
             else:
@@ -518,10 +519,10 @@ def main():
         content_parts.append("\n## 한국 주식 뉴스\n")
         shown = 0
         for item in korean_news_items[:15]:
-            title = item["title"]
+            title = get_display_title(item)
             link = item.get("link", "")
             source = item.get("source", "")
-            description = item.get("description", "").strip()
+            description = (item.get("description_ko") or item.get("description", "")).strip()
             if link:
                 content_parts.append(f"**{shown + 1}. [{title}]({link})**")
             else:

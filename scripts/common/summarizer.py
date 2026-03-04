@@ -611,7 +611,10 @@ class ThemeSummarizer:
 
     def _score_themes(self):
         """Score each theme by keyword frequency across all items."""
-        all_text = " ".join((item.get("title", "") + " " + item.get("description", "")) for item in self.items).lower()
+        all_text = " ".join(
+            (item.get("title_original", item.get("title", "")) + " " + item.get("description", ""))
+            for item in self.items
+        ).lower()
 
         token_freq = Counter(re.findall(r"[a-z가-힣]+", all_text))
 
@@ -635,10 +638,14 @@ class ThemeSummarizer:
                 else:
                     kw_patterns.append(re.compile(r"\b" + re.escape(kw) + r"\b", re.IGNORECASE))
             for idx, item in enumerate(self.items):
-                item_text = (item.get("title", "") + " " + item.get("description", "")).lower()
+                item_text = (
+                    item.get("title_original", item.get("title", "")) + " " + item.get("description", "")
+                ).lower()
                 hit = any(kw in item_text for kw in plain_kw)
                 if not hit:
-                    item_text_raw = item.get("title", "") + " " + item.get("description", "")
+                    item_text_raw = (
+                        item.get("title_original", item.get("title", "")) + " " + item.get("description", "")
+                    )
                     hit = any(p.search(item_text_raw) for p in kw_patterns)
                 if hit:
                     matched.append(item)
@@ -769,18 +776,19 @@ class ThemeSummarizer:
             seen_titles: set = set()
             remaining_links = []
             for article in articles:
-                title = article.get("title", "")
-                if not title or title in seen_titles:
+                orig_title = article.get("title", "")
+                if not orig_title or orig_title in seen_titles:
                     continue
-                if _NOISE_TITLE_RE.search(title):
+                if _NOISE_TITLE_RE.search(orig_title):
                     continue
-                seen_titles.add(title)
+                seen_titles.add(orig_title)
+                title = article.get("title_ko") or orig_title
                 link = article.get("link", "")
                 source = article.get("source", "")
-                description = article.get("description", "").strip()
+                description = (article.get("description_ko") or article.get("description", "")).strip()
 
                 # Skip articles already featured in previous themes
-                if shown < featured_count and title in cross_theme_featured:
+                if shown < featured_count and orig_title in cross_theme_featured:
                     # Demote to remaining links instead
                     if link:
                         remaining_links.append(f'<a href="{link}">{title}</a>')
@@ -826,7 +834,7 @@ class ThemeSummarizer:
                     lines.append("")  # blank line before HTML block
                     lines.append("\n".join(card_parts))
                     lines.append("")  # blank line after HTML block
-                    cross_theme_featured.add(title)
+                    cross_theme_featured.add(orig_title)
                 else:
                     if link:
                         remaining_links.append(f'<a href="{link}">{title}</a>')
@@ -1312,8 +1320,8 @@ class ThemeSummarizer:
 
         # Case 1: P0 urgent issues exist — lead with them
         if p0_items:
-            p0_title = p0_items[0].get("title", "긴급 이슈")
-            # Truncate long English titles
+            p0_title = p0_items[0].get("title_ko") or p0_items[0].get("title", "긴급 이슈")
+            # Truncate long titles
             if len(p0_title) > 80:
                 p0_title = p0_title[:77] + "..."
             intro = f"**긴급**: {p0_title}  \n"
@@ -1418,10 +1426,10 @@ class ThemeSummarizer:
         p0_items = priority_items.get("P0", [])
         p1_items = priority_items.get("P1", [])
         if p0_items:
-            p0_titles = [item.get("title", "")[:60] for item in p0_items[:3]]
+            p0_titles = [(item.get("title_ko") or item.get("title", ""))[:60] for item in p0_items[:3]]
             lines.append(f"**P0 긴급**: {' / '.join(t for t in p0_titles if t)}")
         if p1_items and len(p1_items) <= 5:
-            p1_titles = [item.get("title", "")[:50] for item in p1_items[:3]]
+            p1_titles = [(item.get("title_ko") or item.get("title", ""))[:50] for item in p1_items[:3]]
             lines.append(f"**P1 주요**: {' / '.join(t for t in p1_titles if t)}")
         elif p1_items:
             lines.append(f"**P1 주요**: {len(p1_items)}건 확인")
@@ -1470,7 +1478,7 @@ class ThemeSummarizer:
 
         # If P0 issues exist, lead with the most urgent one
         if p0_items:
-            p0_title = p0_items[0].get("title", "")
+            p0_title = p0_items[0].get("title_ko") or p0_items[0].get("title", "")
             if len(p0_title) > 60:
                 # Try to extract key phrase
                 keywords = self._extract_title_keywords(p0_items[:1], max_keywords=3)
@@ -1616,12 +1624,18 @@ class ThemeSummarizer:
         if priority_items.get("P0"):
             p0_html_items = []
             for item in priority_items["P0"][:3]:
-                p0_title = item.get("title", "")
+                p0_title = item.get("title_ko") or item.get("title", "")
                 link = item.get("link", "")
+                desc = (item.get("description_ko") or item.get("description", "")).strip()
+                # Build alert content: title + short description
+                desc_part = ""
+                if desc and desc != p0_title and desc != item.get("title", "") and len(desc) > 15:
+                    desc_short = desc[:100] + "..." if len(desc) > 100 else desc
+                    desc_part = f' <span class="p0-desc">{desc_short}</span>'
                 if link:
-                    p0_html_items.append(f'<li><a href="{link}">{p0_title}</a></li>')
+                    p0_html_items.append(f'<li><a href="{link}">{p0_title}</a>{desc_part}</li>')
                 else:
-                    p0_html_items.append(f"<li>{p0_title}</li>")
+                    p0_html_items.append(f"<li>{p0_title}{desc_part}</li>")
             if p0_html_items:
                 lines.append(
                     f'<div class="alert-box alert-urgent">'

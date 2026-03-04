@@ -39,6 +39,7 @@ from common.markdown_utils import (
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
+from common.translator import get_display_title
 from common.utils import (
     remove_sponsored_text,
     request_with_retry,
@@ -550,14 +551,14 @@ def main():
     if telegram_items:
         content_parts.append("## 텔레그램 주요 소식\n")
         for i, item in enumerate(telegram_items[:8], 1):
-            title = item["title"].replace("[Telegram] ", "")
+            title = get_display_title(item).replace("[Telegram] ", "")
             source = item.get("source", "unknown")
             link = item.get("link", "")
-            description = item.get("description", "").strip()
+            description = (item.get("description_ko") or item.get("description", "")).strip()
 
             # Collect links for references
             if link:
-                source_links.append({"title": item["title"], "link": link, "source": source})
+                source_links.append(item)
                 content_parts.append(f"**{i}. [{title}]({link})**")
             else:
                 content_parts.append(f"**{i}. {title}**")
@@ -572,15 +573,15 @@ def main():
     if social_items:
         content_parts.append("\n## 주요 소셜 미디어 트렌드\n")
         for i, item in enumerate(social_items[:8], 1):
-            title = item["title"]
+            title = get_display_title(item)
             for prefix in ("[X/Twitter] ", "[Twitter] "):
                 title = title.replace(prefix, "")
             source = item.get("source", "unknown")
             link = item.get("link", "")
-            description = item.get("description", "").strip()
+            description = (item.get("description_ko") or item.get("description", "")).strip()
 
             if link:
-                source_links.append({"title": item["title"], "link": link, "source": source})
+                source_links.append(item)
                 content_parts.append(f"**{i}. [{title}]({link})**")
             else:
                 content_parts.append(f"**{i}. {title}**")
@@ -596,13 +597,13 @@ def main():
         content_parts.append("\n## Reddit 커뮤니티 인기 글\n")
         reddit_rows = []
         for i, item in enumerate(reddit_items[:10], 1):
-            title = item["title"].replace("[Reddit] ", "")
+            title = get_display_title(item).replace("[Reddit] ", "")
             source = item.get("source", "unknown")
             link = item.get("link", "")
             score = item.get("score", 0)
 
             if link:
-                source_links.append({"title": item["title"], "link": link, "source": source})
+                source_links.append(item)
                 title_cell = markdown_link(f"**{title}**", link)
             else:
                 title_cell = f"**{title}**"
@@ -791,7 +792,7 @@ def main():
         top_ch_items = [item for item in telegram_items if item.get("source") == top_ch_name]
         ch_topic = ""
         if top_ch_items:
-            ch_title = top_ch_items[0].get("title", "").replace("[Telegram] ", "")
+            ch_title = get_display_title(top_ch_items[0]).replace("[Telegram] ", "")
             if ch_title:
                 ch_topic = f" 최신 메시지: *{ch_title[:80]}*"
         trend_lines.append(f"\n**텔레그램**: 활발한 채널 — {ch_str}. 총 {len(telegram_items)}건 포착.{ch_topic}")
@@ -823,7 +824,7 @@ def main():
         top_reddit = reddit_items[0] if reddit_items else None
         reddit_highlight = ""
         if top_reddit:
-            r_title = top_reddit.get("title", "").replace("[Reddit] ", "")
+            r_title = get_display_title(top_reddit).replace("[Reddit] ", "")
             r_score = top_reddit.get("score", 0)
             reddit_highlight = f" 최고 인기 글: *{r_title[:70]}* (↑{r_score})"
         trend_lines.append(f"\n**Reddit**: {len(reddit_items)}건 수집, 평균 스코어 {avg_score:.0f}.{reddit_highlight}")

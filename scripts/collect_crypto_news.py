@@ -42,6 +42,7 @@ from common.markdown_utils import (
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
+from common.translator import get_display_title
 from common.utils import sanitize_string, truncate_text
 
 try:
@@ -441,19 +442,19 @@ def main():
         source_links = []
 
         for item in all_items:
-            title = item["title"]
+            title = get_display_title(item)
             source = item.get("source", "unknown")
             link = item.get("link", "")
             source_counter[source] += 1
 
             # Collect links for references section
             if link:
-                source_links.append({"title": title, "link": link, "source": source})
+                source_links.append(item)
 
             if source in ("Binance", "OKX", "Bybit"):
-                exchange_rows.append({"title": title, "source": source, "link": link})
+                exchange_rows.append(item)
             else:
-                news_rows.append({"title": title, "source": source, "link": link})
+                news_rows.append(item)
 
         # Limit to top items
         news_rows = news_rows[:15]
@@ -549,7 +550,7 @@ def main():
 
             # Check for P0 alerts
             priority_items = summarizer.classify_priority()
-            p0_alerts = [item.get("title", "") for item in priority_items.get("P0", [])[:2]]
+            p0_alerts = [get_display_title(item) for item in priority_items.get("P0", [])[:2]]
 
             img = generate_news_briefing_card(
                 card_themes,
@@ -597,7 +598,8 @@ def main():
             if news_rows:
                 table_rows = []
                 for i, row in enumerate(news_rows, 1):
-                    title_cell = f"**{row['title']}**"
+                    display = get_display_title(row)
+                    title_cell = f"**{display}**"
                     if row["link"]:
                         title_cell = markdown_link(title_cell, row["link"])
                     table_rows.append((i, title_cell, row["source"]))
@@ -612,10 +614,10 @@ def main():
             for item in all_items:
                 if item.get("source") not in ("Binance", "OKX", "Bybit"):
                     continue
-                title = item["title"]
+                title = get_display_title(item)
                 link = item.get("link", "")
                 source = item.get("source", "")
-                description = item.get("description", "").strip()
+                description = (item.get("description_ko") or item.get("description", "")).strip()
                 if link:
                     content_parts.append(f"**{shown_exchange + 1}. [{title}]({link})**")
                 else:
@@ -737,9 +739,10 @@ def main():
             for theme_key in [t1_key, t2_key]:
                 articles = summarizer._theme_articles.get(theme_key, [])
                 for art in articles:
-                    top_title = art.get("title", "")
-                    if top_title and top_title not in seen_insight_titles:
-                        seen_insight_titles.add(top_title)
+                    top_title = get_display_title(art)
+                    orig_title = art.get("title", "")
+                    if orig_title and orig_title not in seen_insight_titles:
+                        seen_insight_titles.add(orig_title)
                         insight_lines.append(f"- 주요 기사: *{truncate_text(top_title, 100)}*")
                         break
         elif top_themes:
@@ -932,13 +935,13 @@ def main():
             if google_security_items:
                 content_parts.append("\n## 보안 관련 뉴스\n")
                 for i, item in enumerate(google_security_items[:10], 1):
-                    title = item["title"]
+                    title = get_display_title(item)
                     link = item.get("link", "")
                     source = item.get("source", "")
-                    description = item.get("description", "").strip()
+                    description = (item.get("description_ko") or item.get("description", "")).strip()
                     if link:
                         content_parts.append(f"**{i}. [{title}]({link})**")
-                        security_links.append({"title": title, "link": link, "source": source})
+                        security_links.append(item)
                     else:
                         content_parts.append(f"**{i}. {title}**")
                     if description and description != title:

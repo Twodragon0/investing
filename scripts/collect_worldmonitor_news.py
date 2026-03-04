@@ -27,6 +27,7 @@ from common.markdown_utils import (
 )
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feeds_concurrent
+from common.translator import get_display_title
 from common.utils import truncate_text
 from common.worldmonitor_utils import worldmonitor_sort_key
 
@@ -666,17 +667,18 @@ def main() -> None:
         if len(issue_items) >= 20:
             break
 
-        title = item.get("title", "").strip()
+        orig_title = item.get("title", "").strip()
         link = item.get("link", "").strip()
         source = item.get("source", "unknown").strip()
-        if not title:
+        if not orig_title:
             continue
 
         source_counter[source] += 1
-        theme = classify_theme(title)
+        theme = classify_theme(orig_title)
         theme_counter[theme] += 1
         impact = impact_label(theme)
 
+        title = get_display_title(item) or orig_title
         display_title = markdown_link(f"**{title}**", link) if link else f"**{escape_table_cell(title)}**"
         issue_items.append(
             {
@@ -688,7 +690,7 @@ def main() -> None:
             }
         )
         if link:
-            ref_items.append({"title": title, "link": link, "source": source})
+            ref_items.append(item)
 
     def _sort_key(entry: Dict[str, str]) -> tuple:
         return worldmonitor_sort_key(
@@ -821,7 +823,8 @@ def main() -> None:
         ]
         for ref in unique_refs:
             link = html_text(ref["link"])
-            title = html_text(ref["title"][:110])
+            raw_title = ref.get("title_ko") or ref.get("title", "")
+            title = html_text(raw_title[:110])
             source = html_text(ref["source"])
             detail_lines.append(
                 "<li>"

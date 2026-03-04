@@ -31,6 +31,7 @@ from common.markdown_utils import (
 )
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feeds_concurrent
+from common.translator import get_display_title
 
 logger = setup_logging("collect_political_trades")
 
@@ -438,12 +439,12 @@ def main():
             return
         content_parts.append(f"\n## {section_title}\n")
         for i, item in enumerate(items[:max_items], 1):
-            title = item.get("title", "")
+            title = get_display_title(item)
             source = item.get("source", "unknown")
             link = item.get("link", "")
-            description = item.get("description", "").strip()
+            description = (item.get("description_ko") or item.get("description", "")).strip()
             if link:
-                source_links.append({"title": title, "link": link, "source": source})
+                source_links.append(item)
                 content_parts.append(f"**{i}. [{title}]({link})**")
             else:
                 content_parts.append(f"**{i}. {title}**")
@@ -549,8 +550,8 @@ def main():
             "행정명령 및 관세 정책 변화는 반도체·자동차·에너지 섹터의 변동성을 확대시킵니다."
         )
         for item in trump_filtered[:1]:
-            desc = item.get("description", "").strip()
-            title = item.get("title", "")
+            desc = (item.get("description_ko") or item.get("description", "")).strip()
+            title = get_display_title(item)
             if desc and desc != title and len(desc) > 20:
                 analysis_lines.append(f"\n> **주요 내용**: {_first_sentence(desc)}")
 
@@ -594,8 +595,8 @@ def main():
             cb_tone = "금리 결정과 통화정책 기조를 면밀히 주시해야 합니다."
         analysis_lines.append(f"\n**중앙은행 정책**: {cb_count}건. {cb_tone}")
         for item in cb_filtered[:1]:
-            desc = item.get("description", "").strip()
-            title = item.get("title", "")
+            desc = (item.get("description_ko") or item.get("description", "")).strip()
+            title = get_display_title(item)
             if desc and desc != title and len(desc) > 20:
                 analysis_lines.append(f"\n> **주요 내용**: {_first_sentence(desc)}")
 

@@ -114,13 +114,15 @@ def dedupe_references(references: Iterable[Dict[str, str]], limit: Optional[int]
         if key in seen_keys:
             continue
         seen_keys.add(key)
-        deduped.append(
-            {
-                "title": str(ref.get("title", "")).strip(),
-                "link": link,
-                "source": str(ref.get("source", "")).strip(),
-            }
-        )
+        entry: Dict[str, str] = {
+            "title": str(ref.get("title", "")).strip(),
+            "link": link,
+            "source": str(ref.get("source", "")).strip(),
+        }
+        title_ko = ref.get("title_ko")
+        if title_ko:
+            entry["title_ko"] = str(title_ko).strip()
+        deduped.append(entry)
         if limit is not None and len(deduped) >= limit:
             break
 
@@ -168,7 +170,8 @@ def html_reference_details(
     attrs = ' target="_blank" rel="noopener noreferrer"' if open_in_new_tab else ""
     items = []
     for ref in deduped_refs:
-        title = html_text(_truncate_title(ref["title"], title_max_len))
+        raw_title = ref.get("title_ko") or ref.get("title", "")
+        title = html_text(_truncate_title(raw_title, title_max_len))
         link = html_text(ref["link"])
         source = html_source_tag(ref["source"])
         items.append(f'<a href="{link}"{attrs}>{title}</a> {source}')

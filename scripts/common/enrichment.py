@@ -237,7 +237,12 @@ def enrich_items(
     fetch_url: bool = True,
     max_fetch: int = 10,
 ) -> None:
-    """Enrich a list of items in-place."""
+    """Enrich a list of items in-place.
+
+    After standard enrichment, translates English titles and
+    descriptions to Korean (stored as ``title_ko`` / ``description_ko``).
+    Original fields are never modified to preserve dedup safety.
+    """
     counter = [0]
     for item in items:
         enrich_item(
@@ -247,3 +252,30 @@ def enrich_items(
             max_fetch=max_fetch,
             _fetch_counter=counter,
         )
+
+    # --- Translation pass (after all enrichment is done) ---
+    from .translator import (
+        TRANSLATION_ENABLED,
+        save_translation_cache,
+        translate_to_korean,
+    )
+    from .utils import detect_language
+
+    if not TRANSLATION_ENABLED:
+        return
+
+    for item in items:
+        title = item.get("title", "")
+        if title and detect_language(title) == "en":
+            item["title_original"] = title
+            ko = translate_to_korean(title)
+            if ko != title:
+                item["title_ko"] = ko
+
+        desc = item.get("description", "")
+        if desc and detect_language(desc) == "en" and not desc.startswith(("구글 뉴스", "에서 보도")):
+            ko_desc = translate_to_korean(desc)
+            if ko_desc != desc:
+                item["description_ko"] = ko_desc
+
+    save_translation_cache()

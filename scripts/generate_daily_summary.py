@@ -26,6 +26,7 @@ from common.config import SITE_URL, get_kst_timezone, setup_logging
 from common.markdown_utils import _normalize_url, markdown_table, smart_truncate
 from common.post_generator import POSTS_DIR
 from common.summarizer import ThemeSummarizer
+from common.translator import get_display_title
 
 logger = setup_logging("generate_daily_summary")
 
@@ -372,6 +373,7 @@ def _collect_all_news_items(summaries: List[Optional[Dict]]) -> List[Dict[str, A
             continue
         content = s["content"]
         in_card_section = False
+        last_card_item: Optional[Dict[str, Any]] = None
         for line in content.split("\n"):
             line = line.strip()
             # Detect card section headers (### 🟠 비트코인, etc.)
@@ -390,26 +392,27 @@ def _collect_all_news_items(summaries: List[Optional[Dict]]) -> List[Dict[str, A
                     if norm not in seen_titles and url_key not in seen_urls:
                         seen_titles.add(norm)
                         seen_urls.add(url_key)
-                        items.append(
-                            {
-                                "title": f"[{title}]({link})",
-                                "description": title,
-                                "source": s.get("type", ""),
-                            }
-                        )
-            # Also extract description lines right after card items
-            if (
+                        last_card_item: Optional[Dict[str, Any]] = {
+                            "title": f"[{title}]({link})",
+                            "description": title,
+                            "link": link,
+                            "source": s.get("type", ""),
+                        }
+                        items.append(last_card_item)
+                    else:
+                        last_card_item = None
+                else:
+                    last_card_item = None
+            # Capture description line right after a card item
+            elif (
                 in_card_section
-                and not line.startswith("**")
-                and not line.startswith(">")
-                and not line.startswith("`")
-                and not line.startswith("#")
-                and not line.startswith("|")
+                and last_card_item is not None
+                and not line.startswith(("**", ">", "`", "#", "|", "---", "<"))
                 and line
-                and not line.startswith("---")
+                and len(line) > 15
             ):
-                # This might be a description line, skip it for item collection
-                pass
+                last_card_item["description"] = line
+                last_card_item = None
             # Stop card parsing at next major section
             if line.startswith("## ") and in_card_section:
                 in_card_section = False
@@ -1185,7 +1188,7 @@ def main():
     }
 
     theme_payload = _to_theme_payload(summary_map)
-    urgent_alerts = [_strip_markdown_link(x.get("title", "")) for x in priority_items.get("P0", [])]
+    urgent_alerts = [_strip_markdown_link(get_display_title(x)) for x in priority_items.get("P0", [])]
 
     briefing_image = None
     try:
@@ -1447,7 +1450,7 @@ def main():
         content_parts.append(f"- **월드모니터:** {worldmonitor_summary.get('count', 0)}건. {world_detail.strip()}")
     if priority_items.get("P0") or priority_items.get("P1"):
         p0_titles = [
-            _strip_markdown_link(x.get("title", "")) for x in priority_items.get("P0", [])[:2] if x.get("title")
+            _strip_markdown_link(get_display_title(x)) for x in priority_items.get("P0", [])[:2] if x.get("title")
         ]
         p0_hint = f" 긴급: {', '.join(p0_titles)}." if p0_titles else ""
         content_parts.append(
@@ -1529,14 +1532,26 @@ def main():
         content_parts.append("> 즉시 확인이 필요한 긴급 뉴스입니다.\n")
         seen_p0 = set()
         for item in priority_items["P0"][:5]:
-            title = item.get("title", "")
-            if _is_noise_title(title):
+            orig_title = item.get("title", "")
+            if _is_noise_title(orig_title):
                 continue
-            norm = re.sub(r"[^a-z가-힣0-9]", "", item.get("description", title).lower())
+            norm = re.sub(r"[^a-z가-힣0-9]", "", item.get("description", orig_title).lower())
             if norm in seen_p0:
                 continue
             seen_p0.add(norm)
-            content_parts.append(f"- **{title}**")
+            display = get_display_title(item)
+            link = item.get("link", "")
+            desc = (item.get("description_ko") or item.get("description", "")).strip()
+            # Build alert line: Korean title with link + description summary
+            if link:
+                title_part = f"[{display}]({link})"
+            else:
+                title_part = display
+            content_parts.append(f"- **{title_part}**")
+            # Add description summary if available and different from title
+            if desc and desc != display and desc != orig_title and len(desc) > 15:
+                desc_short = smart_truncate(desc, 120)
+                content_parts.append(f"  > {desc_short}")
         content_parts.append("")
 
     # ═══════════════════════════════════════

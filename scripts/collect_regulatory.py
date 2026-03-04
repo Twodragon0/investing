@@ -26,6 +26,7 @@ from common.markdown_utils import html_reference_details, html_source_tag
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feed
 from common.summarizer import ThemeSummarizer
+from common.translator import get_display_title
 
 logger = setup_logging("collect_regulatory")
 VERIFY_SSL = get_ssl_verify()
@@ -232,13 +233,13 @@ def build_region_section(
         return lines
 
     for i, item in enumerate(items[:10], 1):
-        title = item["title"]
+        title = get_display_title(item)
         link = item.get("link", "")
         source = item.get("source", "")
-        description = item.get("description", "").strip()
+        description = (item.get("description_ko") or item.get("description", "")).strip()
 
         if link:
-            source_links.append({"title": title, "link": link, "source": source})
+            source_links.append(item)
             lines.append(f"**{i}. [{title}]({link})**")
         else:
             lines.append(f"**{i}. {title}**")
@@ -316,10 +317,10 @@ def _build_regulatory_theme_analysis(
                 continue
             seen_titles.add(a_title)
             a_link = article.get("link", "")
-            a_desc = article.get("description", "").strip()
+            a_desc = (article.get("description_ko") or article.get("description", "")).strip()
             a_source = article.get("source", "")
 
-            display_title = _clean_rss_title(a_title)
+            display_title = _clean_rss_title(get_display_title(article))
             if a_link:
                 lines.append(f"- [{display_title}]({a_link}) — {a_source}")
             else:
@@ -526,7 +527,7 @@ def main():
         for item in items:
             title = item.get("title", "")
             if title and not _is_noise_title(title):
-                return _clean_rss_title(title)[:max_len]
+                return _clean_rss_title(get_display_title(item))[:max_len]
         return ""
 
     if us_items:
