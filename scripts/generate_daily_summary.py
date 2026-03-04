@@ -1377,7 +1377,7 @@ def main():
             line_parts.append(_clean_headline(dp["titles"][0]))
         # Add the top headline as a highlighted note for extra context
         if dp["titles"] and len(dp["titles"]) >= 1:
-            top_title = _clean_headline(dp["titles"][0])[:60]
+            top_title = smart_truncate(_clean_headline(dp["titles"][0]), 60)
             line_parts.append(f"주목: *{top_title}*")
         briefing_lines.append("> - " + " — ".join(line_parts))
 

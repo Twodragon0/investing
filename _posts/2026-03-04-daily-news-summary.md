@@ -61,7 +61,7 @@ excerpt: "암호화폐 107건, 주식 147건, 규제 38건, 소셜 미디어 37�
 > - **암호화폐** 107건 — Wallet Maintenance for Ethereum Network (ETH) - 2026-03-04 — 주목: *Wallet Maintenance for Ethereum Network (ETH) - 2026-03-04*
 > - **주식** 147건 — 주요 지표: KOSPI 5,384.06(-7.62%) — 주목: *Stock market today: Dow, S&P 500, Nasdaq trim losses but end*
 > - **규제** 38건 — AMENDMENT NO. 1 TO FORM F-1 — 주목: *AMENDMENT NO. 1 TO FORM F-1*
-> - **월드모니터** 20건 — **South Sudan risks return to full-blown civil war as violence escalates** — 주목: ***South Sudan risks return to full-blown civil war as violen*
+> - **월드모니터** 20건 — **South Sudan risks return to full-blown civil war as violence escalates** — 주목: ***South Sudan risks return to full-blown civil war as violence escalates*
 > - **소셜** 37건 — Cathie Wood says Bitcoin is "hands down" better than Gold."Bitcoin is a hedge against Both — 주목: *Cathie Wood says Bitcoin is "hands down" better than Gold."B*
 > - **정치인 거래** 18건 — Florida Senate moves to mandate dual citizenship disclosures, cement gold as legal tender - Florida’s Voice — 주목: *Florida Senate moves to mandate dual citizenship disclosures*
 
