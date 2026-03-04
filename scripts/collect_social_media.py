@@ -94,7 +94,7 @@ def _parse_telegram_items(channel: str, messages, limit: int) -> List[Dict[str, 
             if not text or len(text) < 20:
                 continue
 
-            title = text.split("\n")[0][:100]
+            title = truncate_text(text.split("\n")[0], 100)
             if len(title) < 10:
                 title = truncate_text(text, 100)
 
