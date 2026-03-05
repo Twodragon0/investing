@@ -98,7 +98,7 @@ description: "2026-02-27 암호화폐 시장에서 111건의 뉴스를 분석했
 <span class="source-tag">Google News KR</span>
 
 **3. [Y Combinator-Backed Axiom Exchange Employees Accused of Insider Trading: ZachXBT](https://decrypt.co/359223/y-combinator-backed-axiom-employees-accused-insider-trading-zachxbt)**
-Multiple employees at Axiom, a non-custodial trading platform, allegedly engaged in insider trading, said blockchain investigator ZachXBT.
+비수탁형 트레이딩 플랫폼 Axiom의 여러 직원이 내부자 거래에 관여한 것으로 알려졌다고 블록체인 조사관 ZachXBT가 밝혔습니다.
 <span class="source-tag">Decrypt</span>
 
 <details><summary>그 외 13건 보기</summary><div class="details-content">
@@ -109,7 +109,7 @@ Multiple employees at Axiom, a non-custodial trading platform, allegedly engaged
 
 ### 🔵 규제/정책 (20건)
 
-*Law enforcement asks legislators to ban cryptocurrency kiosks to curb scams MN House of Representatives (.gov)*
+*사기 방지를 위해 암호화폐 키오스크 금지 입법을 요청하는 법 집행 기관들 - 미네소타 주 하원*
 
 **1. [Bitcoin (BTC) and Altcoins catch a breather after Jane Street lawsuit – $70,000 coming?](https://news.google.com/read/CBMijwFBVV95cUxPTDJFTzhZQVgwVS1yOThvRm54ck5iNUd1aURIZ2MxclFWQ0hlSE1zR1poU0V4RGdiVS1lT3FsQkc2RjF6M0NSNi1ENU91aC1QZGlkV2hHV3ZWN1k0Nm41RmMzOFdCUmdtczUxVEY5TUdmMWpGS29WWjViMm41aGxLeFNsc1Z1ZkVqQ2FjMHh0TQ?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
@@ -129,18 +129,18 @@ Multiple employees at Axiom, a non-custodial trading platform, allegedly engaged
 
 ### 🔷 이더리움 (13건)
 
-*Prediction market users are getting more bullish on near-term price moves for Bitcoin and Ethereum, but the crypto market is still fearful.*
+*예측 시장 사용자들이 비트코인과 이더리움의 단기 가격 움직임에 대해 더 낙관적이 되고 있지만, 암호화폐 시장은 여전히 공포 구간에 머물러 있습니다.*
 
 **1. [[가상화폐 시세] 비트코인 9700만원대…엑스알피 2000원선, 이더리움 290만원선 거래 - 이코노뉴스](https://news.google.com/rss/articles/CBMib0FVX3lxTE0wdG45XzZJdHJ2Y3NWUm5yck5uazJ0Uk10bGFBRGZJTUc5UXVYdlMyanpyTVYxMWM2dWxXd3FiZFFuX3BqVHVXdk5jbjhvSjY2TjVPYTdoTlBaaHBHUHNQYkFtb1lVaVFsWUdhZy1pSQ?oc=5)**
 [가상화폐 시세] 비트코인 9700만원대…엑스알피 2000원선, 이더리움 290만원선 거래 이코노뉴스
 <span class="source-tag">Google News KR</span>
 
 **2. [Vitalik Buterin Maps Quantum Upgrade to Ethereum to Replace Core Cryptography](https://decrypt.co/359352/vitalik-buterin-maps-quantum-upgrade-ethereum)**
-Buterin has outlined a phased roadmap to replace four vulnerable components of Ethereum's cryptographic architecture.
+부테린은 이더리움 암호화 아키텍처의 취약한 네 가지 구성 요소를 교체하는 단계적 로드맵을 제시했습니다.
 <span class="source-tag">Decrypt</span>
 
 **3. ['Private Bitcoin' to Launch on Starknet With Zcash-Like Features](https://decrypt.co/359344/private-bitcoin-debuts-starknet-zcash-like-features)**
-Starknet revealed a Bitcoin-based asset aimed at enabling people to better maintain their privacy on the Ethereum layer-2 scaling network.
+Starknet이 이더리움 레이어-2 스케일링 네트워크에서 사용자들의 프라이버시를 더 잘 보호할 수 있도록 하는 비트코인 기반 자산을 공개했습니다.
 <span class="source-tag">Decrypt</span>
 
 <details><summary>그 외 10건 보기</summary><div class="details-content">

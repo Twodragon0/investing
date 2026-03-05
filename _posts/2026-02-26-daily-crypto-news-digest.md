@@ -101,7 +101,7 @@ description: "2026-02-26 암호화폐 시장에서 114건의 뉴스를 분석했
 <span class="source-tag">Google News</span>
 
 **3. [Terror groups receive $1.7b. from Iran through Binance - The Jerusalem Post](https://news.google.com/rss/articles/CBMiakFVX3lxTE9peVJ4TmdRRHgwRmtLMEwzdEppYU1sUUhSdnRRVlcxMkR2TFlNUUc5R3ptdUN2SmhjSUdYaXNjYXNXOFZTT3J5UTVLUUxzNDc2UHQxd01kN1F6dHo1VHhadG9sTmd4ai1QMEE?oc=5)**
-Terror groups receive $1.7b. from Iran through Binance The Jerusalem Post
+이란을 통해 바이낸스로 테러단체에 17억 달러 전달 - The Jerusalem Post
 <span class="source-tag">구글 뉴스</span>
 
 <details><summary>그 외 13건 보기</summary><div class="details-content">
@@ -112,18 +112,18 @@ Terror groups receive $1.7b. from Iran through Binance The Jerusalem Post
 
 ### 🤖 AI/기술 (7건)
 
-*Nvidia’s earnings lifted technology shares and steadied broader markets, even as investors weigh how long the AI inve...*
+*엔비디아 실적이 기술주를 끌어올리며 시장을 안정시켰으나, 투자자들은 AI 투자 사이클이 얼마나 지속될지 가늠하고 있습니다...*
 
 **1. [비트코인· 이더리움 "공매도 포지션 청산" ...엔비디아 실적발표 환호 - 글로벌이코노믹](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWGFVS25ZTHpjM09pbHRUeE5ISDBhVTIzYU5UNVprTjlQclVscGpNVlBZQXMydG5jUU5rbjBJc2tiVEduQl82T180aUo2ZVhHRUE1M0FMeWdwZWs5Vk05WV9PMEUtLUpkSGhIQkJYM3lZZTd4ZnRzQ0VMeVpPLW9TbE9zQ3B0emZn?oc=5)**
 비트코인· 이더리움 "공매도 포지션 청산" ...엔비디아 실적발표 환호 글로벌이코노믹
 <span class="source-tag">Google News KR</span>
 
 **2. [Anthropic, OpenAI Dial Back Safety Language as AI Race Accelerates](https://decrypt.co/359179/anthropic-openai-dial-back-safety-language-ai-race)**
-Reports show both Anthropic and OpenAI are revising safety commitments amid surging investment and competition.
+투자 급증과 경쟁이 심화되는 가운데 Anthropic과 OpenAI 모두 안전 기준을 수정하고 있는 것으로 나타났습니다.
 <span class="source-tag">Decrypt</span>
 
 **3. [Nvidia Earnings Results Steady Markets as AI Spending Debate Intensifies](https://decrypt.co/359175/nvidia-earnings-steady-markets-ai-spending-debate-intensifies)**
-Nvidia’s earnings lifted technology shares and steadied broader markets, even as investors weigh how long the AI investment cycle can run.
+엔비디아 실적이 기술주를 끌어올리며 시장 전반을 안정시켰으나, AI 투자 사이클이 얼마나 지속될지 투자자들의 고민이 이어지고 있습니다.
 <span class="source-tag">Decrypt</span>
 
 <details><summary>그 외 4건 보기</summary><div class="details-content">
@@ -134,7 +134,7 @@ Nvidia’s earnings lifted technology shares and steadied broader markets, even 
 
 ### 🔵 규제/정책 (26건)
 
-*The Galaxy S26 doesn't just answer your questions—it acts on your behalf.*
+*갤럭시 S26은 단순히 질문에 답하는 것을 넘어 사용자를 대신해 행동합니다.*
 
 **1. [Bitcoin ETFs are hemorrhaging billions. Here’s what investors awaiting a crypto turnaround should watch for.](https://news.google.com/read/CBMi5wNBVV95cUxNRGY0RGNPNktMUkJ2MkJLbkt3VkVPOGtucnFMM3NIUFQzWlBDV2hsdTZOWC01VkJ6S1hNWHFWaG1Zd0lKNERyTEdncDBSUE9rRTY4bTZhVFNKRF9RbFk3b1p4eHVET1lMYlBTR3cyVWpCdGJnNVRiYjNHUzFjRGhtb29BWGpLd0ZHY05aOGl6SnRwdlhxZlNPWDFwWXRyZVJRWXVhVzRjb0FObnIwX1lKM0txVkpITDVreDhBYTQ4Tm9KZFBIN3BTYXdHXzFNaktNMUg2VFpsSTlSc3lrWlpfUkljSHBGOXU2MUV0NXFIVzR0QmhJQjcxWjl0dDVSMlVNNnhpVmlpS19IeWFZZU85cDhHR3pmelpQTU1EVTFlNEZRbFoyYmVkc1N5eTZGSWR2bGdjUklraXhaT2lpT3Y3eFh3U2dyTnFyS19LOHNCcjlIUnE3U1V6R0YwRmc4RHpZV193NEd6UHI0VUlpbF85bldBYUdXTnZfd1JmMl9ZOVhmWXduMHc4ZlJ4dVB1d3BjX0xPMERTTU1na29GdFU4YkFLSzJzbnVwUXpzRU9ia3Fvb2N0ZWowN1p5SGhOWGowV1gxaVdRVGo0aWRZdU04eGNZZUVFVlVBMXhNWUY3SXVHbHBXV3Uw?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
@@ -143,7 +143,7 @@ Nvidia’s earnings lifted technology shares and steadied broader markets, even 
 <span class="source-tag">Google News</span>
 
 **3. [Wisconsin bill targets cryptocurrency kiosk scams - Northern News Now](https://news.google.com/rss/articles/CBMimAFBVV95cUxQdzk0dm1HTVRBU2dKQk9sbWgtclkyQVVNYzBNRXRFSVlSRTRycFFfNUgyVGpUa2psWEp6cTExVWNFX0RRZkJYVVJBbWQtbEZEOVJyVWpEYWYxbGVGX3Q2a3lLR3RUVVI3Znl3S2xvZ0NxWHFodnRYbGtiRkt1ekdpUlNCcDRnNWVWTWtJWDB1b0ZXWWRwdE0tTdIBrAFBVV95cUxQQUl1MjF5LTNiUkpQQkVJNEM1N2wxOHhHTDRneTMwM1VRMUVuT1pwU3FUTzdsa0F3QkRPWUFYZEl4b1RILTZYNU54UU5TWUJldS1PN3oxdW91d0ZsQnZ5UWg2eDZfYllTbWs0bU1SWV9tVHVVVVh3TjkwSktXV1d6NXNJYlVLZURLOTY3QVJhWmFBVFN3QWpBRGxzb0R4VGpkTmpyMU5XRnpFRUQ4?oc=5)**
-Wisconsin bill targets cryptocurrency kiosk scams Northern News Now
+위스콘신 법안, 암호화폐 키오스크 사기 겨냥 - Northern News Now
 <span class="source-tag">구글 뉴스</span>
 
 <details><summary>그 외 23건 보기</summary><div class="details-content">

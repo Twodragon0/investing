@@ -74,11 +74,11 @@ JUST IN: 🇺🇸 CFTC Chair says crypto market structure bill "is on the cusp" 
 ## 주요 소셜 미디어 트렌드
 
 **1. [USDT Transfer Stuns Markets: 200 Million Dollar Whale Movement to Binance Signals Major Activity - CryptoRank](https://news.google.com/rss/articles/CBMiggFBVV95cUxQTnV3TmF5UkQ3QWdZZTYydjh4eGlwUEFvRWYzeFE1MDRqOXhwQmJwTnZpVUU4LVJGeTFmdG9ZaHhPZUVfdFNvTndNamJJTU0tVEpobGl5eTV3RzhIQjQ4T29EWkU3dUk4UnBVcmExRDZLZ2RFbE16ZkNYYzhyd1lucnVn?oc=5)**
-USDT Transfer Stuns Markets: 200 Million Dollar Whale Movement to Binance Signals Major Activity CryptoRank
+USDT 대규모 이전으로 시장 충격: 바이낸스로의 2억 달러 고래 이동이 주요 활동 신호 - CryptoRank
 <span class="source-tag">Whale &amp; On-chain</span>
 
 **2. [Bitcoin News: What's Happening On OSCTwitterSC? - thedetroitbureau.com](https://news.google.com/rss/articles/CBMiowFBVV95cUxQMXpzSkZzc3lqOUhaQWkzdWJySkVGN2gyYnltbENuLUZ2VmhRWU1xNDUwZUQzZkxWZEkwR0xWSXpwLXdOTUtBX1VabnlHQ3R5YnN3M3JLb1RCNENnYVZ4cDNsQmRaa0FlUEhKZlU1WG1vNlExUW9TbzljZC15LXVXeUdZaW8tMnZkVF9PVV8xT281Szl3UDRLOVBpdEEwMEZXeGdR?oc=5)**
-Bitcoin News: What's Happening On OSCTwitterSC? thedetroitbureau.com
+비트코인 뉴스: OSCTwitterSC에서는 무슨 일이? - thedetroitbureau.com
 <span class="source-tag">Google News Social EN</span>
 
 

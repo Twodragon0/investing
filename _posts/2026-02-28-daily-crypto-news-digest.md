@@ -76,15 +76,15 @@ description: "2026-02-28 암호화폐 시장에서 124건의 뉴스를 분석했
 *Binance, Futures, Trading, Democrats, Perpetual*
 
 **1. [Terror groups receive $1.7b. from Iran through Binance - The Jerusalem Post](https://news.google.com/rss/articles/CBMiakFVX3lxTE9peVJ4TmdRRHgwRmtLMEwzdEppYU1sUUhSdnRRVlcxMkR2TFlNUUc5R3ptdUN2SmhjSUdYaXNjYXNXOFZTT3J5UTVLUUxzNDc2UHQxd01kN1F6dHo1VHhadG9sTmd4ai1QMEE?oc=5)**
-Terror groups receive $1.7b.
+테러단체, 바이낸스 통해 이란으로부터 17억 달러 수령 - The Jerusalem Post
 <span class="source-tag">구글 뉴스</span>
 
 **2. [Crypto Biz: A Bitcoin treasury shareholder revolt](https://cointelegraph.com/news/crypto-biz-bitcoin-treasury-shareholder-revolt?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound)**
-Bitcoin treasury companies face investor backlash as stablecoin issuers post strong earnings and legacy payment giants navigate mounting pressure.
+비트코인 재무 기업들이 투자자 반발에 직면한 가운데, 스테이블코인 발행사들은 강한 실적을 기록하고 기존 결제 대기업들은 가중되는 압박을 헤쳐나가고 있습니다.
 <span class="source-tag">Cointelegraph</span>
 
 **3. [U.S. Senate Democrats asked Treasury, DOJ to probe Binance's illicit finance controls](https://www.coindesk.com/policy/2026/02/27/u-s-senate-democrats-asked-treasury-doj-to-probe-binance-s-illicit-finance-controls)**
-Nine lawmakers asked the federal agencies to investigate the global crypto exchange after reports of potential funding channeled to terrorist groups.
+9명의 의원이 테러단체로 자금이 유입됐다는 보도 이후 글로벌 암호화폐 거래소 조사를 연방기관에 요청했습니다.
 <span class="source-tag">CoinDesk</span>
 
 <details><summary>그 외 29건 보기</summary><div class="details-content">
@@ -125,11 +125,11 @@ Nine lawmakers asked the federal agencies to investigate the global crypto excha
 *Ethereum, and, XRP, for, Cryptocurrency*
 
 **1. [Better Cryptocurrency to Buy With $5,000 and Hold Forever: XRP vs. Ethereum - Yahoo Finance](https://news.google.com/rss/articles/CBMigwFBVV95cUxOQ2phZC1OUkl1cUhnSEJDNk1yOEk3aEFZRlRIT0R4NnFERnJfZ0Fydm1lYVBsd0p5U0RHbnVYSkVoTDFrenNwNXRGT3o1THJHQm1hYnYyRmdjanpGUV83V0pSNUVHVUZreDNVMURUeWpQb3VIUkpCM3EtNXpSemktRF9HYw?oc=5)**
-Better Cryptocurrency to Buy With $5,000 and Hold Forever: XRP vs.
+5,000달러로 장기 보유할 암호화폐: XRP vs. 이더리움 - 어느 쪽이 더 나은 선택인가?
 <span class="source-tag">구글 뉴스</span>
 
 **2. [Better Cryptocurrency to Buy With $5,000 and Hold Forever: XRP vs. Ethereum - The Motley Fool](https://news.google.com/rss/articles/CBMimAFBVV95cUxQTkNfSUtwYUVKUUdMNWRMdlBNV3NIRnRDczN0VWpzWHhqY0lyaXYyOVNVYnU0N2JxNzZTZDJVZXEzT09pZzdXLWpNZml6bzM0bFRNeFhodEx3RXk1QnVDTEYtdUxpMl9iZE1jdDNYRzFCektzZVZjM2xsZjd3MWRKX1k3S0U2d0pCM1o0eEgtZjk5eDltNTR4TQ?oc=5)**
-Better Cryptocurrency to Buy With $5,000 and Hold Forever: XRP vs.
+5,000달러로 장기 보유할 암호화폐: XRP vs. 이더리움 - 어느 쪽이 더 나은 선택인가?
 <span class="source-tag">구글 뉴스</span>
 
 **3. [엔비디아 훈풍에 비트코인 반등…이더리움 매도압력 완화·엑스알피 수급 개선 [이수현의 코인레이더] - 한국경제](https://news.google.com/rss/articles/CBMiWkFVX3lxTE50TnFGWGd0ci1GZS0zS1FRM0d1MFJJaDZFWkJZUndMYjJVaUtfWGRzZkI5ODVXNEpCVjA3SGJ1SGc0QkZBWUwwWmpjX0xzLUdrZ1hTTWlNMXJNQdIBVEFVX3lxTE1YOXlIY0FyN1F3N2RxMHo1eGdWbmdSbDE4SmpFRVhaNFQ5Qm9hY1ZKOTBkR2daUXk3RFg1am9ZMUJ1bjBmVE1jQnlDdjBDeG1aTUhXTQ?oc=5)**
@@ -147,15 +147,15 @@ Better Cryptocurrency to Buy With $5,000 and Hold Forever: XRP vs.
 *Senate, Crypto, DOJ, cryptocurrency, Democrats*
 
 **1. [Tether says it has frozen $4.2 billion of its stablecoin over crime links - Reuters](https://news.google.com/rss/articles/CBMi3AFBVV95cUxOdllLSEgydHc1bUNTdGpzOVF4Y0RXX0dlWndPZmp2REZkcTl0N2hydzRlbkdGLXBtbnZWY1NHUGFjOHdtdFh6Y1ZKSlVFOFctVHNqV2NiMFF4bGVidnpadG1HSmZ2OHlaRTlVUEhPZEhCdl8wSE5nVzZvYm1FTW0tS2RuenU1RW1SaVhmeDdwaE5Lcml5RUREanlMRk81bHV0ckpRejhxVVlsY2dNaXZuaFFJWmNDZW1aRTRpZFBaQzY2RmFCYnpvUzlKSVNiYnYyNV9wSTBWdUctZUFU?oc=5)**
-Tether says it has frozen $4.2 billion of its stablecoin over crime links Reuters
+Tether, 범죄 연루 이유로 42억 달러 상당 스테이블코인 동결 - Reuters
 <span class="source-tag">구글 뉴스</span>
 
 **2. [NH Senate bill aims to protect Granite Staters from cryptocurrency scams - WMUR](https://news.google.com/rss/articles/CBMijwFBVV95cUxQLVhPZWEzUFBJNVhOV3U1SE9iaVVLMlpnanJ5VVRGeVcxWE43R3IyQjBESkY1Q1hTanA0WjllUjh3RmwtRDBpZEhSZzRFX0o4NDJyVnJZNHVNTHI3WW4zdXFXUVRzYk8xeExqeFpzdGhQbmFZWWNmc1h3SURSeFlmWGVQSExsRGxCamFtalBIUQ?oc=5)**
-NH Senate bill aims to protect Granite Staters from cryptocurrency scams WMUR
+NH 상원 법안, 뉴햄프셔 주민들을 암호화폐 사기로부터 보호 - WMUR
 <span class="source-tag">구글 뉴스</span>
 
 **3. [DoJ Seizes $61 Million in Tether Linked to Pig Butchering Crypto Scams - The Hacker News](https://news.google.com/rss/articles/CBMigwFBVV95cUxOLUhxdzdoVFFTT2QydElpU3locWJDQTlnZXNmYTJRRXJHRW1WSjY3ZFo0NmZIUU9QSURrSTd2bThfRDNTLVpIMEVXYkcwTVJsMjlzQVZKZDhBT0pvTkxvb2VKa1FJdHRDRjdlc3Y4el9LSGRjTmFneS1pTVU1MDN4OXBhWQ?oc=5)**
-DoJ Seizes $61 Million in Tether Linked to Pig Butchering Crypto Scams The Hacker News
+미 법무부, 피그 버처링 사기 연루 Tether 6,100만 달러 압수 - The Hacker News
 <span class="source-tag">구글 뉴스</span>
 
 <details><summary>그 외 16건 보기</summary><div class="details-content">

@@ -53,7 +53,7 @@ description: "2026-02-25 암호화폐 시장에서 116건의 뉴스를 분석했
 
 ### 🟠 비트코인 (51건)
 
-*Better Buy: Bitcoin vs. Ethereum*
+*비트코인 vs. 이더리움: 어떤 것이 더 나은 매수 선택인가?*
 
 **1. [Better Buy: Bitcoin vs. Ethereum](https://news.google.com/read/CBMifkFVX3lxTFB6eTdEb0tEZ2hNdGxUazZSZHJzaWtnM0N6NUZvMk5wYjI3OU5oR2prdXdQaTZiS0FsNEQ1c3p5U2hKRHl6WTJxaElNcHA2WUF6ZTZvbUNaR09sOW1PWnBTeWJxM3FLUWlDd3FXTktoSWw3R3pPbDBBdUFWTy1VZw?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>

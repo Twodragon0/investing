@@ -38,18 +38,18 @@ A property seller featured on a 2015 episode of Million Dollar Listing New York 
 <span class="source-tag">Telegram @crypto</span>
 
 **2. [🇺🇸 Billionaire Grant Cardone says, "#Bitcoin will grind sideways, provide one more chance to buy low](https://t.me/crypto/3525)**
-🇺🇸 Billionaire Grant Cardone says, "#Bitcoin will grind sideways, provide one more chance to buy lower and then rip to $189,000."
+🇺🇸 억만장자 Grant Cardone: "#비트코인은 횡보하다 한 번 더 저가 매수 기회를 줄 것이며, 그 후 $189,000까지 급등할 것입니다."
 <span class="source-tag">Telegram @crypto</span>
 
 **3. [Michael Saylor said, “We are making $500 million a day” with Bitcoin and “we may very well be the mo](https://t.me/crypto/3527)**
-Michael Saylor said, “We are making $500 million a day” with Bitcoin and “we may very well be the most profitable company in the US growing the fastes...
+Michael Saylor: "비트코인으로 하루 5억 달러를 벌고 있으며, 미국에서 가장 빠르게 성장하는 수익성 기업이 될 수 있습니다."
 <span class="source-tag">Telegram @crypto</span>
 
 **4. [Tom Lee said, "I think Bitcoin hits $180,000 by February 31."](https://t.me/crypto/3530)**
 <span class="source-tag">Telegram @crypto</span>
 
 **5. [Former President of PayPal said he's dedicating his life to making #Bitcoin the "winning payment sys](https://t.me/crypto/3532)**
-Former President of PayPal said he's dedicating his life to making #Bitcoin the "winning payment system in the world."
+PayPal 前 대표, 비트코인을 "세계 최고의 결제 시스템"으로 만드는 데 인생을 바치겠다고 밝혔습니다.
 <span class="source-tag">Telegram @crypto</span>
 
 **6. [Blackrock ETF has sold $117,440,000 in Bitcoin.](https://t.me/crypto/3534)**
@@ -68,7 +68,7 @@ Former President of PayPal said he's dedicating his life to making #Bitcoin the 
 ## 주요 소셜 미디어 트렌드
 
 **1. [How do crypto whales protect their identities? - Binance](https://news.google.com/rss/articles/CBMiZEFVX3lxTE1pN05Fb0sxZDBoeVRzX1Y2YkVXWEd1MGtUM3hncXcwZkpjY0NDeXVMbkQ4MVlZUERFaTF1WWw2c2FRYVAzSDBDRkU4NVdsejJ2c28xZE1DcTVGNEFfMGF3ZVBwbGQ?oc=5)**
-How do crypto whales protect their identities? Binance
+암호화폐 고래들은 어떻게 신원을 보호하는가? - Binance
 <span class="source-tag">Whale &amp; On-chain</span>
 
 
@@ -86,11 +86,11 @@ How do crypto whales protect their identities? Binance
 <span class="source-tag">트럼프 경제정책 KR</span>
 
 **3. [Trump announces new retirement plan for non-401(k) workers - thestreet.com](https://news.google.com/rss/articles/CBMingFBVV95cUxOVUtWZTFBRHI1OUJVN3ZGV3kwOFJBcEJHTE1kVmdqOTZXdnhhbmlIbUZfUFc1cUJtUW1xWjRvR2l2Y0ROSVo5RTJSc0VqRFVVYTExeExKcUxLbE4ydXhOcXpQLUxmREZkTFZ1UjZGV1hSOEctbUhpbEhRRHA4ajBCVEoxZ3lnUmZMdTBhLUhoaXAyR3V3X0VxZWlsdnhpdw?oc=5)**
-Trump announces new retirement plan for non-401(k) workers thestreet.com
+트럼프, 401(k) 미가입 근로자를 위한 신규 퇴직 플랜 발표 - thestreet.com
 <span class="source-tag">Trump Crypto Policy</span>
 
 **4. [Stock Futures Flat Ahead of Key Economic Data, Tariff Ruling - National Today](https://news.google.com/rss/articles/CBMiuAFBVV95cUxQcnFXYUM2OTJXYWhqVjlsSnBZZGZ3Z25XWHhiYWphUmRtdWhGRXBLVVQtR3dabkgwSndnaXlUM0hERFhWMmZqazJiTE1meEFVend0WFo3RjNIT25kR3BRUmVHRHZacTRKZ0FsYjBxcko0Y1E5ZzAzZzRXT3N3VXNONkktQUYyVlFUc2Q2aVdhTW9FMjdsRFRmUTFBLXVXY1QydFBHdWN2dHdwZ09GVWtQUUpva1dNR0l3?oc=5)**
-Stock Futures Flat Ahead of Key Economic Data, Tariff Ruling National Today
+주요 경제 지표 및 관세 판결 앞두고 주식 선물 보합세 - National Today
 <span class="source-tag">Trump Economy</span>
 
 **5. [[한국갤럽] 이재명 지지율 64%로 1%p 올라, 긍정 이유는 '경제·민생'과 '부동산'(https://news.google.com/rss/articles/CBMic0FVX3lxTFB6R25Da1dmTHk0am9XVm5vUnhwajhaM2RBT0cwcnFEUHFEeHpTNFFjYWNxX0dEN2J2eGRiRnpnZnhKaVRiTGpabzFCZzMyd01kc3dTM2tlMk5wZF9FN19iTVhzZTlabGNOa3lJTEZ5cUhUSmM?oc=5)**

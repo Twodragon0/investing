@@ -131,7 +131,7 @@ description: "2026-02-24 암호화폐 시장에서 113건의 뉴스를 분석했
 <span class="source-tag">Google News</span>
 
 **3. [Binance Employees Find $1.7 Billion in Crypto Was Sent to Iranian Entities - The New York Times](https://news.google.com/rss/articles/CBMiiAFBVV95cUxQSnlzQ1lkdW5nTmhtc3JkT3BNWERLQ1p3VW0zc19WTGhESWZxVzY0V01jLWM4UFk2cUpES1lVZkFiVjg1VklJYnRHS3pkWkNFOS1hbXd4YmkybnA2SXhmTFJpdW1QWVRENGdaZHZkcW85Sk1iaWtJN0hfMWFDUmFQTUlUWmE2QU9D?oc=5)**
-Binance Employees Find $1.7 Billion in Crypto Was Sent to Iranian Entities The New York Times
+바이낸스 직원들, 이란 법인에 17억 달러 상당 암호화폐 전송 확인 - The New York Times
 <span class="source-tag">구글 뉴스</span>
 
 <details><summary>그 외 10건 보기</summary><div class="details-content">
@@ -142,14 +142,14 @@ Binance Employees Find $1.7 Billion in Crypto Was Sent to Iranian Entities The N
 
 ### 🔷 이더리움 (9건)
 
-*Ethereum founder Vitalik Buterin has been selling ETH in the last few days as the second-largest crypto asset continu...*
+*이더리움 창시자 비탈릭 부테린이 최근 며칠간 ETH를 매도하고 있으며, 두 번째로 큰 암호화폐 자산이 계속해서...*
 
 **1. [Crypto Crash Alert: Why are Bitcoin, Ethereum and XRP Prices Falling Today? - Coinpedia Fintech News](https://news.google.com/rss/articles/CBMiogFBVV95cUxPdUw1OVpzWG9aZ3pGelV4WnZ0ejhwWU8tZFpNY21RNVpYZWlWZ29MODItVWRwdmgxOUJWeWVXOWktMHhBWW50anJTbVpwazN4X0lodWxhUkc0ckJZUlYyc3ZvcjF1Y2VzZlE5UzRqWEZEQlowSFp4WEJIVUVNX0VmcHVqUFV2Xzk4LUF1a2tUaGdyQVRJdXpMM1RSTHYyZkEtUEHSAacBQVVfeXFMT2VCWThyaE9xNVNqYlpxZVdGdURxMHB0UDgtTW1CR19XVzF1VXBUU3pKdkFWVVpzdHBPRzB6a2cyaDVMMm11MG1DNDRPeWxsZjB5UlQzRUk4VG0zREJZVW5MRzQ0UmhxR3Y2dGZxMXVhMmJoNlhtTnBQNGxzYU9lQjBIOW0yT1V3VmY3RmFqLTE3Z2tZbmVqd0tna0s4ZTQyYjBMWHR0c0k?oc=5)**
-Crypto Crash Alert: Why are Bitcoin, Ethereum and XRP Prices Falling Today? Coinpedia Fintech News
+암호화폐 폭락 경보: 오늘 비트코인, 이더리움, XRP 가격이 하락하는 이유는? - Coinpedia Fintech News
 <span class="source-tag">구글 뉴스</span>
 
 **2. [The rise of Polymarket, the cryptocurrency-based betting site for current events - Le Monde.fr](https://news.google.com/rss/articles/CBMi4gFBVV95cUxPd29SeDlNMHZ6VEREeTRRMDVVdVp3Rk1namMxUVRzSGVJRDlyN3pEd3AyQVJTaHRkS1FHZkVMX2F4dG1yVmNfbW5EMkJscjZwYS1OLTl6N3pTUkc5cExlbjRXTnFkdkMwV2hQekpaUXhzSmE0MmVCTzg3SWtVNV9hcmt1c3p2bno1ZWI1REw5SFVPZllDQmtZMlVyQVpMRHBIbGt3TUdjUXlQV3VPM3lpVmFRVmZadnRzZXg4ZVJNZmlENkw5ako5UWJxQ0VrYWt6Q1pXNVJsakJ0WDVKeFEyNTFB?oc=5)**
-The rise of Polymarket, the cryptocurrency-based betting site for current events Le Monde.fr
+현재 이슈에 대한 암호화폐 기반 베팅 사이트 Polymarket의 부상 - Le Monde.fr
 <span class="source-tag">구글 뉴스</span>
 
 **3. [솔라나 5.6%·이더리움 4.6% 하락…비트코인 등 시세는? - 이투데이](https://news.google.com/rss/articles/CBMiVEFVX3lxTE5JYUUyVWk5UjV6TFE1SFFJZWxKNVFoV1NVQlFOQ1FHcVlFZzVBN0xmRDZUR3BPUmIwbC1WY2Jabkg4OVRVbGdFcWxFRzJwZllaV3hNcQ?oc=5)**
