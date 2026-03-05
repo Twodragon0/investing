@@ -18,6 +18,74 @@ from .markdown_utils import html_source_tag
 
 logger = logging.getLogger(__name__)
 
+
+def _truncate_sentence(text: str, max_len: int = 300) -> str:
+    """Truncate text at the nearest sentence boundary within max_len.
+
+    Handles Korean sentence endings (다., 요., 음., 됩니다.)
+    as well as English (. ) and Japanese (。) boundaries.
+    Returns empty string if text is too short to be useful.
+    """
+    text = text.strip()
+    if not text or len(text) < 15:
+        return ""
+    if len(text) <= max_len:
+        return text
+
+    # Korean and English sentence-ending patterns
+    _SENTENCE_ENDS = [
+        "다. ",
+        "요. ",
+        "음. ",
+        "됩니다. ",
+        "입니다. ",
+        "습니다. ",
+        "했다. ",
+        "됐다. ",
+        "였다. ",
+        "합니다. ",
+        "。",
+        ". ",
+        "! ",
+        "? ",
+    ]
+    best_idx = -1
+    for sep in _SENTENCE_ENDS:
+        idx = text.find(sep, 20)
+        if 20 < idx < max_len:
+            candidate = idx + len(sep)
+            if candidate > best_idx:
+                best_idx = candidate
+
+    if best_idx > 20:
+        return text[:best_idx].strip()
+
+    # No sentence boundary found — cut at word/character boundary
+    truncated = text[:max_len]
+    # Try space-based word boundary first
+    space_idx = truncated.rfind(" ", max_len // 2)
+    if space_idx > max_len // 2:
+        return truncated[:space_idx].strip() + "..."
+    # For CJK text without spaces, cut at max_len
+    return truncated.strip() + "..."
+
+
+_GENERIC_DESC_PATTERNS = [
+    re.compile(r"에서 보도한.{2,15}입니다\.?$"),
+    re.compile(r"거래소 공지사항입니다\.?$"),
+    re.compile(r"에서 보도한 뉴스입니다\.?$"),
+    re.compile(r"^.{2,20} 관련 소식입니다\.?\s*\(.{2,20}\)$"),
+    re.compile(r"please enable javascript", re.I),
+    re.compile(r"^AMENDMENT NO\.", re.I),
+    re.compile(r"^FORM\s+\d", re.I),
+]
+
+
+def _is_generic_desc(desc: str) -> bool:
+    """Return True if description is a generic/synthetic placeholder with no real info."""
+    return any(p.search(desc.strip()) for p in _GENERIC_DESC_PATTERNS)
+
+
 # Noise title patterns to filter out (e.g., SEC page addresses, form names)
 _NOISE_TITLE_RE = re.compile(
     r"^(?:"
@@ -815,16 +883,10 @@ class ThemeSummarizer:
                     else:
                         card_parts.append(f'<span class="news-title">{safe_title}</span>')
 
-                    if description and description != title:
-                        desc_text = description
-                        for sep in ["。", ". ", "다. ", "요. "]:
-                            idx = desc_text.find(sep)
-                            if 20 < idx < 250:
-                                desc_text = desc_text[: idx + len(sep)].strip()
-                                break
-                        else:
-                            desc_text = desc_text[:200].rsplit(" ", 1)[0] if len(desc_text) > 200 else desc_text
-                        card_parts.append(f'<p class="news-desc">{_esc(desc_text, quote=True)}</p>')
+                    if description and description != title and not _is_generic_desc(description):
+                        desc_text = _truncate_sentence(description, max_len=300)
+                        if desc_text:
+                            card_parts.append(f'<p class="news-desc">{_esc(desc_text, quote=True)}</p>')
 
                     if source:
                         card_parts.append(html_source_tag(source))
@@ -1269,18 +1331,11 @@ class ThemeSummarizer:
                 else:
                     lines.append(f"- {title} — {source}")
 
-                # Add description excerpt (first sentence, up to 120 chars)
-                if desc and desc != title and len(desc) > 20:
-                    desc_short = desc
-                    for sep in ["。", ". ", "다. "]:
-                        idx = desc_short.find(sep)
-                        if 10 < idx < 120:
-                            desc_short = desc_short[: idx + len(sep)].strip()
-                            break
-                    else:
-                        if len(desc_short) > 120:
-                            desc_short = desc_short[:120].rsplit(" ", 1)[0] + "..."
-                    lines.append(f"  > {desc_short}")
+                # Add description excerpt (first sentence, up to 150 chars)
+                if desc and desc != title and len(desc) > 20 and not _is_generic_desc(desc):
+                    desc_short = _truncate_sentence(desc, max_len=150)
+                    if desc_short:
+                        lines.append(f"  > {desc_short}")
 
                 shown += 1
                 if shown >= 3:

@@ -60,7 +60,13 @@ def classify_theme(title: str) -> str:
         ]
     ):
         return "지정학/안보"
-    if any(key in text for key in ["oil", "opec", "lng", "pipeline", "energy", "gas"]):
+    if any(key in text for key in ["oil", "opec", "lng", "energy", "fuel"]):
+        return "에너지"
+    # "pipeline" and "gas" are ambiguous (vaccine pipeline, gas prices in market context)
+    # Only classify as energy if no stock/market keywords present
+    if any(key in text for key in ["pipeline", "gas"]) and not any(
+        key in text for key in ["stock", "market", "vaccine", "rally", "earnings"]
+    ):
         return "에너지"
     if any(
         key in text
@@ -754,7 +760,7 @@ def main() -> None:
             "## 전체 뉴스 요약",
             _generate_worldmonitor_summary(theme_counter, total_items, top_sources, issue_items),
             "",
-            "## 이슈 분포",
+            "## 테마별 현황",
             '<div class="stat-grid">',
             f'<div class="stat-item"><div class="stat-value">{total_items}</div><div class="stat-label">총 이슈</div></div>',
             f'<div class="stat-item"><div class="stat-value">{len(theme_counter)}</div><div class="stat-label">테마 수</div></div>',

@@ -938,6 +938,13 @@ _NOISE_TITLE_PATTERNS = [
     re.compile(r"^trading pair (?:add|remov)", re.I),
     re.compile(r"^system (?:upgrade|maintenance)", re.I),
     re.compile(r"^\[.*\]\s*$"),
+    re.compile(r"^wallet maintenance", re.I),
+    re.compile(r"^notice of removal", re.I),
+    re.compile(r"^listing (?:of|new)", re.I),
+    re.compile(r"^margin tier update", re.I),
+    re.compile(r"^api (?:update|maintenance|change)", re.I),
+    re.compile(r"^(?:AMENDMENT|FORM)\s+(?:NO\.?\s*)?\d", re.I),
+    re.compile(r"^(?:10-[KQ]|8-K|DEF\s*14|S-\d|F-\d)", re.I),
 ]
 
 
@@ -946,12 +953,26 @@ def _is_noise_title(title: str) -> bool:
     clean = _strip_markdown_link(title).strip()
     if len(clean) < 10:
         return True
+    clean_lower = clean.lower()
     # SEC/regulatory filing artifact: "Washington, DC 20549"
-    if "dc 20549" in clean.lower() or "20549" in clean:
+    if "dc 20549" in clean_lower or "20549" in clean:
         return True
     # Filing-style IDs: mostly uppercase letters, numbers, dashes, no spaces
     # e.g. "FORM-10K-2024", "DEF14A", "8-K/A"
     if re.match(r"^[A-Z0-9/\-]{4,20}$", clean):
+        return True
+    # Exchange wallet/system maintenance notices
+    if any(
+        kw in clean_lower
+        for kw in [
+            "wallet maintenance",
+            "system maintenance",
+            "scheduled maintenance",
+            "notice of removal",
+            "network upgrade",
+            "margin tier update",
+        ]
+    ):
         return True
     return any(p.match(clean) for p in _NOISE_TITLE_PATTERNS)
 
@@ -1044,14 +1065,33 @@ def _build_snapshot_table(
             return "데이터 없음"
         if summary.get("count", 0) == 0:
             return "데이터 없음"
+
+        # Priority 1: market data (price, index values)
+        if summary.get("market_data"):
+            return smart_truncate(_clean_bullet_text(summary["market_data"][0]), 80)
+
+        # Priority 2: meaningful highlights/key_summary
+        hl = summary.get("highlights") or summary.get("key_summary") or []
+        for h in hl:
+            cleaned = _clean_bullet_text(h)
+            # Skip noise: pure count lines, empty signals
+            if re.match(r"^[\d,]+건", cleaned) or "수집 건수" in cleaned:
+                continue
+            if len(cleaned) > 15:
+                return smart_truncate(cleaned, 80)
+
+        # Priority 3: top theme + representative headline
+        dp = _extract_category_data_points(summary)
+        if dp["titles"]:
+            headline = _clean_headline(dp["titles"][0])
+            if len(headline) > 15 and not _is_noise_title(headline):
+                return smart_truncate(headline, 80)
+
+        # Priority 4: theme name with count
         if summary.get("themes"):
             name, cnt = summary["themes"][0]
             return f"{name} {cnt}건"
-        if summary.get("market_data"):
-            return smart_truncate(_clean_bullet_text(summary["market_data"][0]), 80)
-        hl = summary.get("highlights") or summary.get("key_summary") or []
-        if hl:
-            return smart_truncate(_clean_bullet_text(hl[0]), 80)
+
         return "신호 추출 실패"
 
     dataset = [
@@ -1146,7 +1186,7 @@ def main():
                 continue
             market_summary = summarize_market_post(post)
             market_summary["url"] = get_post_url(filepath, today, "market-analysis")
-            post_links.append(("시장 종합 리포트", 0, market_summary["url"]))
+            post_links.append(("시장 종합 리포트", market_summary.get("count", "-"), market_summary["url"]))
         elif "worldmonitor-briefing" in slug:
             worldmonitor_summary = summarize_worldmonitor_post(post)
             worldmonitor_summary["url"] = get_post_url(filepath, today, "market-analysis")
@@ -1881,7 +1921,7 @@ def main():
     content_parts.append("## 상세 리포트 링크\n")
     report_rows = []
     for name, count, url in post_links:
-        count_str = f"{count}건" if count is not None else "-"
+        count_str = f"{count}건" if isinstance(count, int) and count > 0 else "-"
         report_rows.append([name, count_str, f"[바로가기]({url})"])
     if report_rows:
         content_parts.append(

@@ -19,11 +19,72 @@ VERIFY_SSL = get_ssl_verify()
 _USER_AGENT = "Mozilla/5.0 (compatible; InvestingBot/1.0)"
 
 
+# Patterns that indicate the description is noise, not real content
+_NOISE_DESC_PATTERNS = [
+    re.compile(r"please enable javascript", re.I),
+    re.compile(r"enable cookies", re.I),
+    re.compile(r"your browser.{0,20}(not supported|outdated|javascript)", re.I),
+    re.compile(r"^access denied", re.I),
+    re.compile(r"^403 forbidden", re.I),
+    re.compile(r"^page not found", re.I),
+    re.compile(r"^404\b", re.I),
+    re.compile(r"^we use cookies", re.I),
+    re.compile(r"^this site requires", re.I),
+    re.compile(r"^you need to enable", re.I),
+    re.compile(r"^AMENDMENT NO\.", re.I),
+    re.compile(r"^FORM\s+\d", re.I),
+]
+
+
+def _clean_description(text: str) -> str:
+    """Clean extracted description text for quality."""
+    text = text.strip()
+    # Remove common site-wide boilerplate prefixes
+    for noise in [
+        "Sign up for ",
+        "Subscribe to ",
+        "Get the latest ",
+        "Read more about ",
+        "Click here ",
+        "Share this ",
+        "Follow us ",
+    ]:
+        if text.startswith(noise):
+            return ""
+    # Reject noise patterns (JS required, 403, etc.)
+    for pattern in _NOISE_DESC_PATTERNS:
+        if pattern.search(text):
+            return ""
+    # Remove trailing "Read more..." / "Continue reading..."
+    text = re.sub(r"\s*(Read more|Continue reading|더 보기|자세히 보기)\.{0,3}\s*$", "", text)
+    # Remove trailing source name appended to RSS titles (e.g. "Title Text - SourceName")
+    # English sources (short, capitalized)
+    text = re.sub(r"\s+[-–—]\s+[A-Z][A-Za-z\s]{2,25}$", "", text)
+    # Korean sources (e.g. "...내용 디지털투데이", "...내용 연합인포맥스")
+    text = re.sub(
+        r"\s+[-–—]?\s*(?:디지털투데이|연합인포맥스|펜앤마이크|네이트|복지TV\S*"
+        r"|ER\s*이코노믹리뷰|v\.daum\.net|매일경제|한국경제|조선일보|중앙일보"
+        r"|경향신문|한겨레|BBS불교방송|이데일리|뉴시스|아시아경제)\s*$",
+        "",
+        text,
+    )
+    # Generic trailing domain-like source (e.g. "...text simplywall.st")
+    text = re.sub(r"\s+[a-z][a-z0-9-]*\.[a-z]{2,6}$", "", text)
+    # Collapse whitespace
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
+
+
 def fetch_page_description(url: str, timeout: int = 8) -> str:
     """Try to fetch meta description from a URL page (best-effort).
 
-    Checks ``<meta name="description">``, ``og:description``, and
-    falls back to the first ``<p>`` with more than 50 characters.
+    Priority order:
+    1. ``<meta name="description">``
+    2. ``<meta property="og:description">``
+    3. ``<meta name="twitter:description">``
+    4. ``<article>`` first meaningful ``<p>`` (avoids nav/sidebar noise)
+    5. Any ``<p>`` with more than 50 characters
+
     Returns an empty string on failure.
     """
     if not url or "news.google.com/rss/" in url:
@@ -41,19 +102,37 @@ def fetch_page_description(url: str, timeout: int = 8) -> str:
         resp.raise_for_status()
         soup = BS4(resp.text, "html.parser")
 
+        # 1-3: Meta description tags
         for attr_key, attr_val in [
             ("name", "description"),
             ("property", "og:description"),
+            ("name", "twitter:description"),
         ]:
             meta = soup.find("meta", attrs={attr_key: attr_val})
             content = str(meta.get("content", "")) if meta else ""
-            if content.strip() and len(content.strip()) > 20:
-                return content.strip()[:300]
+            cleaned = _clean_description(content)
+            if cleaned and len(cleaned) > 20:
+                return cleaned[:500]
 
+        # 4: Article body paragraphs (more reliable than random <p>)
+        article = soup.find("article") or soup.find(class_=re.compile(r"article|post|entry|content"))
+        if article:
+            paragraphs = []
+            for p in article.find_all("p"):
+                text = _clean_description(p.get_text(strip=True))
+                if len(text) > 50:
+                    paragraphs.append(text)
+                if len(paragraphs) >= 2:
+                    break
+            if paragraphs:
+                combined = " ".join(paragraphs)
+                return combined[:500]
+
+        # 5: Fallback to any <p>
         for p in soup.find_all("p"):
-            text = p.get_text(strip=True)
+            text = _clean_description(p.get_text(strip=True))
             if len(text) > 50:
-                return text[:300]
+                return text[:500]
     except Exception as e:  # noqa: BLE001
         logger.debug("Failed to fetch description from %s: %s", url, e)
     return ""
@@ -146,6 +225,26 @@ def _get_source_label(source: str, context_map: Dict[str, str]) -> str:
     return context_map.get(source, source)
 
 
+def _extract_title_entities(title: str) -> list:
+    """Extract meaningful entities (names, tickers, numbers) from title."""
+    entities = []
+    # Tickers and crypto symbols (e.g., BTC, ETH, AAPL)
+    tickers = re.findall(r"\b[A-Z]{2,5}\b", title)
+    # Price/percentage values (e.g., $90K, 5.3%, $100B)
+    values = re.findall(r"\$[\d,.]+[KkMmBbTt]?|\d+(?:\.\d+)?%", title)
+    # Korean entities (2+ chars)
+    kr_entities = re.findall(r"[가-힣]{2,}", title)
+    # Proper nouns (capitalized words, not common English)
+    _COMMON = {"The", "And", "For", "With", "Has", "Are", "Its", "But", "How", "Why", "What", "New", "All", "Can"}
+    proper = [w for w in re.findall(r"\b[A-Z][a-z]{2,}\b", title) if w not in _COMMON]
+
+    entities.extend(values)
+    entities.extend(tickers[:2])
+    entities.extend(proper[:2])
+    entities.extend(kr_entities[:3])
+    return entities
+
+
 def generate_synthetic_description(
     title: str,
     source: str,
@@ -153,59 +252,98 @@ def generate_synthetic_description(
 ) -> str:
     """Generate a contextual description when RSS provides none.
 
-    Uses title keywords to produce a relevant Korean summary sentence.
+    Creates a meaningful summary by extracting key entities from the title
+    and combining them with topic context. Produces specific, informative
+    sentences rather than generic boilerplate.
     """
     label = _get_source_label(source, context_map or {})
     title_lower = title.lower()
+    entities = _extract_title_entities(title)
+    entity_str = ", ".join(entities[:3]) if entities else ""
 
-    # Crypto-specific patterns
+    # --- Topic-specific patterns with entity insertion ---
+
+    # Crypto patterns
     if any(kw in title_lower for kw in ["bitcoin", "btc", "비트코인"]):
-        return f"{label}에서 보도한 비트코인 관련 시장 동향입니다."
+        if entity_str:
+            return f"비트코인 관련 주요 소식입니다. {entity_str} 등 핵심 내용을 {label}에서 보도했습니다."
+        return f"{label}에서 비트코인 시장 동향을 보도했습니다."
     if any(kw in title_lower for kw in ["ethereum", "eth", "이더리움"]):
-        return f"{label}에서 보도한 이더리움 관련 소식입니다."
+        if entity_str:
+            return f"이더리움 관련 소식입니다. {entity_str} 등이 언급되었습니다. ({label})"
+        return f"{label}에서 이더리움 관련 소식을 전했습니다."
+    if any(kw in title_lower for kw in ["solana", "sol", "솔라나"]):
+        return f"{label}에서 솔라나 생태계 관련 소식을 보도했습니다." + (f" ({entity_str})" if entity_str else "")
+    if any(kw in title_lower for kw in ["xrp", "ripple", "리플"]):
+        return f"{label}에서 XRP·리플 관련 소식을 전했습니다." + (f" ({entity_str})" if entity_str else "")
     if any(kw in title_lower for kw in ["defi", "디파이", "tvl"]):
-        return f"{label}에서 보도한 DeFi 생태계 동향입니다."
+        return "DeFi 생태계 동향입니다." + (
+            f" {entity_str} 관련 변화가 보고되었습니다." if entity_str else f" ({label})"
+        )
     if any(kw in title_lower for kw in ["nft", "metaverse", "메타버스"]):
-        return f"{label}에서 보도한 NFT·메타버스 관련 소식입니다."
+        return "NFT·메타버스 관련 소식입니다." + (f" ({entity_str})" if entity_str else f" ({label})")
     if any(kw in title_lower for kw in ["hack", "exploit", "breach", "해킹", "보안"]):
-        return f"{label}에서 보도한 보안 사건 관련 보도입니다."
+        return "보안 사건이 보고되었습니다." + (
+            f" {entity_str} 관련 내용을 확인하세요." if entity_str else f" ({label})"
+        )
+    if any(kw in title_lower for kw in ["stablecoin", "스테이블코인", "usdt", "usdc"]):
+        return "스테이블코인 관련 소식입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
+    if any(kw in title_lower for kw in ["whale", "고래", "large transfer"]):
+        return "대규모 자금 이동이 감지되었습니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
+    if any(kw in title_lower for kw in ["etf", "spot etf"]):
+        return "ETF 관련 소식입니다." + (f" {entity_str} 흐름이 주목됩니다." if entity_str else f" ({label})")
+    if any(kw in title_lower for kw in ["mining", "채굴", "hashrate", "해시레이트"]):
+        return "채굴·해시레이트 관련 소식입니다." + (f" ({entity_str})" if entity_str else f" ({label})")
 
     # Stock-specific patterns
     if any(kw in title_lower for kw in ["earnings", "revenue", "실적", "매출"]):
-        return f"{label}에서 보도한 기업 실적 관련 뉴스입니다."
+        return "기업 실적 관련 뉴스입니다." + (f" {entity_str} 실적이 주목됩니다." if entity_str else f" ({label})")
     if any(kw in title_lower for kw in ["fed", "fomc", "금리", "rate", "interest"]):
-        return f"{label}에서 보도한 금리·통화정책 관련 뉴스입니다."
+        return "금리·통화정책 관련 뉴스입니다." + (
+            f" {entity_str} 변동이 시장에 영향을 줄 수 있습니다." if entity_str else f" ({label})"
+        )
     if any(kw in title_lower for kw in ["ipo", "상장"]):
-        return f"{label}에서 보도한 IPO·상장 관련 뉴스입니다."
+        return "IPO·상장 관련 뉴스입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
     if any(kw in title_lower for kw in ["tariff", "관세", "trade war", "무역"]):
-        return f"{label}에서 보도한 관세·무역 정책 관련 뉴스입니다."
+        return "관세·무역 정책 관련 뉴스입니다." + (
+            f" {entity_str} 이슈가 부각되고 있습니다." if entity_str else f" ({label})"
+        )
+    if any(kw in title_lower for kw in ["nasdaq", "s&p", "dow", "나스닥", "다우"]):
+        return "미국 증시 관련 소식입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
+    if any(kw in title_lower for kw in ["kospi", "kosdaq", "코스피", "코스닥"]):
+        return "한국 증시 관련 소식입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
 
     # Political-specific patterns
     if any(kw in title_lower for kw in ["executive order", "행정명령"]):
-        return f"{label}에서 보도한 행정명령 관련 뉴스입니다."
+        return "행정명령 관련 뉴스입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
     if any(kw in title_lower for kw in ["congress", "의회", "senate", "상원"]):
-        return f"{label}에서 보도한 의회 동향 관련 뉴스입니다."
+        return "의회 동향 관련 뉴스입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
     if any(kw in title_lower for kw in ["insider", "내부자", "form 4"]):
-        return f"{label}에서 보도한 내부자 거래 관련 공시입니다."
+        return "내부자 거래 관련 공시입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
+    if any(kw in title_lower for kw in ["trump", "트럼프"]):
+        return "트럼프 관련 정책 소식입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
 
     # Regulatory patterns
     if any(kw in title_lower for kw in ["regulation", "규제", "compliance"]):
-        return f"{label}에서 보도한 규제 관련 뉴스입니다."
+        return "규제 관련 뉴스입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
     if any(kw in title_lower for kw in ["sec", "cftc", "금융위"]):
-        return f"{label}에서 보도한 금융 당국 관련 소식입니다."
+        return "금융 당국 관련 소식입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
 
     # World news patterns
     if any(kw in title_lower for kw in ["war", "전쟁", "conflict", "분쟁"]):
-        return f"{label}에서 보도한 분쟁·안보 관련 뉴스입니다."
+        return "분쟁·안보 관련 뉴스입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
     if any(kw in title_lower for kw in ["election", "선거", "vote", "투표"]):
-        return f"{label}에서 보도한 선거·정치 관련 뉴스입니다."
+        return "선거·정치 관련 뉴스입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
     if any(kw in title_lower for kw in ["climate", "기후", "환경"]):
-        return f"{label}에서 보도한 기후·환경 관련 뉴스입니다."
+        return "기후·환경 관련 뉴스입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
 
     # Exchange-specific fallback
     if any(kw in source.lower() for kw in ["binance", "bybit", "okx", "upbit"]):
-        return f"{label} 공지사항입니다."
+        return f"{label} 공지사항입니다." + (f" ({entity_str})" if entity_str else "")
 
+    # Generic fallback: use title entities for specificity
+    if entity_str:
+        return f"{label}에서 {entity_str} 관련 소식을 보도했습니다."
     return f"{label}에서 보도한 뉴스입니다."
 
 
@@ -236,8 +374,18 @@ def enrich_item(
     source = item.get("source", "")
     link = item.get("link", "")
 
-    if desc and desc != title and len(desc) > 20:
-        return  # already has a good description
+    # Check if existing description is actually good
+    if desc and len(desc) > 20:
+        # Reject if desc is just title with source appended (RSS artifact)
+        # e.g. "Article Title Here sourcename.com"
+        if desc == title:
+            pass  # fall through to enrichment
+        elif title and desc.startswith(title[:30]):
+            pass  # description is title prefix + noise
+        elif any(p.search(desc) for p in _NOISE_DESC_PATTERNS):
+            pass  # noise content (JS required, etc.)
+        else:
+            return  # already has a good description
 
     # Try fetching from URL (skip Google News proxy links)
     if fetch_url and link and "news.google.com" not in link:
@@ -246,8 +394,9 @@ def enrich_item(
             counter[0] += 1
             fetched = fetch_page_description(link)
             if fetched and fetched != title and len(fetched) > 20:
-                # Clean HTML entities
-                fetched = re.sub(r"&[a-z]+;", " ", fetched).strip()
+                # Clean HTML entities and normalize whitespace
+                fetched = re.sub(r"&[a-z]+;", " ", fetched)
+                fetched = re.sub(r"\s+", " ", fetched).strip()
                 item["description"] = fetched
                 return
 
