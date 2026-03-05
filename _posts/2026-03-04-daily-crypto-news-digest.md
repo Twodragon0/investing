@@ -51,7 +51,6 @@ description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 �
 <div class="news-card-num">1</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMirgFBVV95cUxQZ3BQTmUzZmNESUxiX1NLMnhITFhNTjdLWFY1NHA4Q0xkbGl4TlpSQjlpaFduX0JfX0pwdW84OGJhdHprV2E4ekhIZmZ1T255MWVid092SjlPUXh6aGNrMThsLVpISEJzSXplN0JfWE5qMmZOZnZnNDZlQ2NFSFgwVWREQm53bEVFRHNydEhlb0lyR2hmNG9UUG43bFRzaVdOcW9fQkpUVWp5MVc0REE?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin Slides as Risk of Prolonged Iran War Weighs on Crypto</a>
-<p class="news-desc">구글 뉴스에서 보도한 비트코인 관련 시장 동향입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -61,7 +60,6 @@ description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 �
 <div class="news-card-num">2</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMiiwFBVV95cUxNWjA5cGFwWFRmUWJ3Zl9JcFp1NDNFblU2b3NwaFY1U0R3QlpqRnRMN2NEam8yZ3VLSFhDVU9rdVVZZms1eHRLNkNFbXpCWTZUM09MX0Z5QlY2UVoyM3k0X3lPc05kNnNURXltTUtwZEhKUDgwODhfU1JOcG9RaGZJQTgyUTc3cFRsQWNF?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin rises 5.2% amid U.S.-Israel-Iran conflict (BTC-USD:Cryptocurrency)</a>
-<p class="news-desc">구글 뉴스에서 보도한 비트코인 관련 시장 동향입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -71,7 +69,6 @@ description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 �
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMi0gFBVV95cUxQODFHejJySllJam1UdVZCUVVjZEEtcmlqTXRjZGRYR2pSaDk0RWFjTzhuTUF5QThfLThWTk9JaWtEcGcycGVmQTVXMkdtdExVVmVFVWxvNk5uaHBCbnIyT1ZuR2ZTV2FmZ29OVGxwamNDamxIMnlCRDRWOXlJOHR6MzJTblROSDZBUGRYZUNnMUVmX19BYWpkTzUwdlkybDVFTV9qbWJXb2NjdThiemFwbmQxS21GUVBNNW5vamFYazdNbDdST05vdURSYzJ0ektJcnc?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Inside the Harvard&#x27;s crypto play: Why the endowment is swapping bitcoin for ethereum ETFs</a>
-<p class="news-desc">구글 뉴스에서 보도한 비트코인 관련 시장 동향입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -92,7 +89,6 @@ description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 �
 <div class="news-card-num">1</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMipgFBVV95cUxPTDFLMjhtaVU2MENlSDVIcHFGZ2MtM3UtQXVyOVNZRUpYM3V0SUZ6WWhhQktDT2YtaVpCdmI1UUdqY1NPYVRxc1BQakZxTll0b3lnT3FkMGp5VnFyXzJvNXVuampvdzF4ZE81M2JSeFRQbG4zeFJCaXhWUTdnTGFSUTREZVN2QkViaWJQenVBSkNkOUxnMDVRN0h5enhjcDh6Y3B1cFN3?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">A brief collapse in Bitcoin’s price echoes earlier geopolitical conflicts—but a rapid bounceback shows the long term impact of Iran strikes are unclear</a>
-<p class="news-desc">구글 뉴스에서 보도한 비트코인 관련 시장 동향입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -102,7 +98,6 @@ description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 �
 <div class="news-card-num">2</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMiugFBVV95cUxNZ1YzQ1NEUVZEbEQ1ZFo4dHpBQ1ZJYkRWR0pCX1RLZzE1N1ZHTVpjZW5KUHBLdEE1T1ZhOFFaTllNZjNWeEVrUVhEZThOeUFvaGRER0l2VHFFRnpmN2N3QWlPYnNkV1BxRGd0NmkzZXdqdkRldDdmR2stYmxjbkRiQVM1SnhGNS0xVXJGanF1dTJwU1RkNnBFaEVsempwTXNWbWF0bkJyblY5TmZUeldMWlEzcUoweDdtSmc?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Texas’ $10M bitcoin investment slips into the red amid crypto price dive</a>
-<p class="news-desc">구글 뉴스에서 보도한 비트코인 관련 시장 동향입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -112,7 +107,6 @@ description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 �
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMisAFBVV95cUxNbEpjcm9hUm5HZVdKbnVHcEU1R1Z6TzRwamIxWGFyX2RuYnd1YTRTel82WVFmWFJsTVdyUmhnQmh1aUd0Vm5GblRYU1BnZ3h3WlBIVjJKTEFFYUpUa3JuVVFUdEdfdS12b0lUcmhqdmRJMDljMEcxcms3VEFvTjVaS0Jlb2laajZQZktNWEpoXzNqOUl0N1NoVUhtVEU5eHZNNjZsU1A3SkVkLXFsX1FtNA?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">&#x27;Number Goes Up&#x27;—Iran Conflict Has Bitcoin Bulls Eyeing $500K</a>
-<p class="news-desc">구글 뉴스에서 보도한 비트코인 관련 시장 동향입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -133,7 +127,6 @@ description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 �
 <div class="news-card-num">1</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMipwFBVV95cUxQQ1VuREF3UG5NbGtNdDFCWUpIbFZyQk5jbjE4S0NBclV1endpR1lJUFBLZzk5dEZxcDdVWC1vLUlTYnBtS0x5dGU2ellkX1FmRlhjc3ZPMUc1NVVGbVptRVFidllLZlZFUjFEbzlYd09kbXV0N1BFcnlKakdSUGZsWnBORUZ0YTh4YmJhdnFnYTBva29VM3JvRVJLamdkaXF0VXVvU0o2UQ?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">CFTC Prepares to Allow Perpetual Crypto Futures Within Weeks</a>
-<p class="news-desc">구글 뉴스에서 보도한 금융 당국 관련 소식입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -249,23 +242,23 @@ description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 �
 ## 거래소 공지사항
 
 **1. [Wallet Maintenance for Ethereum Network (ETH) - 2026-03-04](https://www.binance.com/en/support/announcement/detail/33cffe565e5747639eb1db1abec008a3)**
-바이낸스 거래소에서 보도한 이더리움 관련 소식입니다.
+이더리움 네트워크 지갑 점검이 예정되어 있습니다. 입출금 일시 중단에 유의하세요.
 `거래소: Binance`
 
 **2. [Binance Launches AI Agent Skills, Powering Every Agent with a Binance-Grade Brain](https://www.binance.com/en/support/announcement/detail/bafb9dda6cbb47d5882a4090c31d4c64)**
-바이낸스 거래소 공지사항입니다.
+바이낸스가 AI Agent Skills 기능을 출시했습니다. AI 에이전트에 바이낸스급 트레이딩 역량을 제공합니다.
 `거래소: Binance`
 
 **3. [Fabric Protocol Trading Competition: Trade Fabric Protocol (ROBO) and Share $100K Worth of Rewards](https://www.binance.com/en/support/announcement/detail/6e1bee9d7a424f509a18e51a458ad1d3)**
-바이낸스 거래소에서 보도한 분쟁·안보 관련 뉴스입니다.
+Fabric Protocol(ROBO) 트레이딩 경쟁 이벤트입니다. 총 $100K 상금이 제공됩니다.
 `거래소: Binance`
 
 **4. [Notice of Removal of Spot Trading Pairs - 2026-03-06](https://www.binance.com/en/support/announcement/detail/7bd34bbcdd994fe5920b33dc347db0ff)**
-바이낸스 거래소 공지사항입니다.
+일부 현물 거래쌍이 2026-03-06에 제거됩니다. 해당 자산 보유 시 사전 정리가 필요합니다.
 `거래소: Binance`
 
 **5. [Notice on New Trading Pairs & Trading Bots Services on Binance Spot - 2026-03-05](https://www.binance.com/en/support/announcement/detail/ef499f7320c14852b4fd3328f948caaf)**
-바이낸스 거래소 공지사항입니다.
+새로운 현물 거래쌍 및 트레이딩 봇 서비스가 추가됩니다.
 `거래소: Binance`
 
 

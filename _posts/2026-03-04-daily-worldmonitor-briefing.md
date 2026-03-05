@@ -8,7 +8,7 @@ source: "worldmonitor"
 source_url: "https://worldmonitor.app"
 lang: "ko"
 image: "/assets/images/og-default.png"
-description: "핵심 테마는 사회/기타(10건), 지정학/안보(6건), 금융시장(2건) 중심으로 전개되고 있습니다."
+description: "이란 분쟁 확대로 VIX 급등, 남수단 내전 위기, 트럼프 스페인 무역 중단 위협 등 지정학 리스크 심화. 금융시장·에너지 섹터 변동성 확대."
 ---
 
 **2026-03-04** 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다.
@@ -25,7 +25,7 @@ description: "핵심 테마는 사회/기타(10건), 지정학/안보(6건), 금
 - 주요 출처: WorldMonitor/MarketWatch (10건), WorldMonitor/Guardian World (7건), WorldMonitor/BBC World (3건)
 
 
-## 이슈 분포
+## 테마별 현황
 <div class="stat-grid">
 <div class="stat-item"><div class="stat-value">20</div><div class="stat-label">총 이슈</div></div>
 <div class="stat-item"><div class="stat-value">4</div><div class="stat-label">테마 수</div></div>
@@ -35,9 +35,9 @@ description: "핵심 테마는 사회/기타(10건), 지정학/안보(6건), 금
 
 <div class="theme-distribution">
 <div class="theme-row"><span class="theme-label">사회/기타</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:50%"></div></div><span class="theme-count">10건 (50%)</span></div>
-<div class="theme-row"><span class="theme-label">지정학/안보</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:30%"></div></div><span class="theme-count">6건 (30%)</span></div>
-<div class="theme-row"><span class="theme-label">금융시장</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:10%"></div></div><span class="theme-count">2건 (10%)</span></div>
-<div class="theme-row"><span class="theme-label">에너지</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:10%"></div></div><span class="theme-count">2건 (10%)</span></div>
+<div class="theme-row"><span class="theme-label">지정학/안보</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:25%"></div></div><span class="theme-count">5건 (25%)</span></div>
+<div class="theme-row"><span class="theme-label">금융시장</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:20%"></div></div><span class="theme-count">4건 (20%)</span></div>
+<div class="theme-row"><span class="theme-label">에너지</span><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:5%"></div></div><span class="theme-count">1건 (5%)</span></div>
 </div>
 
 ## 주요 이슈
@@ -47,12 +47,12 @@ description: "핵심 테마는 사회/기타(10건), 지정학/안보(6건), 금
 | 1 | [**South Sudan risks return to full-blown civil war as violence escalates**](https://www.theguardian.com/world/2026/mar/03/south-sudan-risks-return-civil-war-violence-escalates) | 지정학/안보 | 높음 | WorldMonitor/Guardian World |
 | 2 | [**‘Imperialist undertones’: global south condemns US-Israeli war with Iran**](https://www.theguardian.com/world/2026/mar/03/global-south-condemns-us-israeli-war-with-iran) | 지정학/안보 | 높음 | WorldMonitor/Guardian World |
 | 3 | [**Wall Street’s ‘fear gauge’ is rising as Iran conflict escalates. Here’s what investors should watch.**](https://www.marketwatch.com/story/wall-streets-fear-gauge-is-rising-as-iran-conflict-escalates-heres-what-investors-should-watch-543b5d5c?mod=mw_rss_topstories) | 지정학/안보 | 높음 | WorldMonitor/MarketWatch |
-| 4 | [**Software stocks just quietly trounced chip stocks to a historic extent — but don’t get too excited**](https://www.marketwatch.com/story/software-stocks-just-quietly-trounced-chip-stocks-to-a-historic-extent-but-dont-get-too-excited-5babf59c?mod=mw_rss_topstories) | 지정학/안보 | 높음 | WorldMonitor/MarketWatch |
+| 4 | [**Software stocks just quietly trounced chip stocks to a historic extent — but don’t get too excited**](https://www.marketwatch.com/story/software-stocks-just-quietly-trounced-chip-stocks-to-a-historic-extent-but-dont-get-too-excited-5babf59c?mod=mw_rss_topstories) | 금융시장 | 높음 | WorldMonitor/MarketWatch |
 | 5 | [**The stock market’s wild swings are sending a message about the escalating Iran conflict**](https://www.marketwatch.com/story/the-stock-markets-wild-swings-are-sending-a-message-about-the-escalating-iran-conflict-9dc81cac?mod=mw_rss_topstories) | 지정학/안보 | 높음 | WorldMonitor/MarketWatch |
 | 6 | [**Trump threatens to halt trade with Spain over military base access**](https://www.bbc.com/news/articles/c8r1mzd8vygo?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
-| 7 | [**My rude, ungrateful relative gave her lawyer power of attorney — and has lived to regret it. Should I get involved?**](https://www.marketwatch.com/story/my-rude-ungrateful-relative-gave-her-lawyer-power-of-attorney-and-has-lived-to-regret-it-should-i-get-involved-5db8088d?mod=mw_rss_topstories) | 금융시장 | 중간 | WorldMonitor/MarketWatch |
+| 7 | [**My rude, ungrateful relative gave her lawyer power of attorney — and has lived to regret it. Should I get involved?**](https://www.marketwatch.com/story/my-rude-ungrateful-relative-gave-her-lawyer-power-of-attorney-and-has-lived-to-regret-it-should-i-get-involved-5db8088d?mod=mw_rss_topstories) | 사회/기타 | 낮음 | WorldMonitor/MarketWatch |
 | 8 | [**CrowdStrike gives upbeat earnings outlook as AI raises the stakes around cyberthreats**](https://www.marketwatch.com/story/crowdstrike-gives-upbeat-earnings-outlook-as-ai-raises-the-stakes-around-cyberthreats-087a4b2e?mod=mw_rss_topstories) | 금융시장 | 중간 | WorldMonitor/MarketWatch |
-| 9 | [**Moderna’s stock rallies 8% as deal over a patent dispute clears vaccine pipeline**](https://www.marketwatch.com/story/modernas-stock-rallies-more-than-10-as-deal-over-a-patent-dispute-clears-vaccine-pipeline-d34e6793?mod=mw_rss_topstories) | 에너지 | 중간 | WorldMonitor/MarketWatch |
+| 9 | [**Moderna’s stock rallies 8% as deal over a patent dispute clears vaccine pipeline**](https://www.marketwatch.com/story/modernas-stock-rallies-more-than-10-as-deal-over-a-patent-dispute-clears-vaccine-pipeline-d34e6793?mod=mw_rss_topstories) | 금융시장 | 중간 | WorldMonitor/MarketWatch |
 | 10 | [**Gas and oil prices soar and shares tumble on fears conflict could escalate**](https://www.bbc.com/news/articles/cr5lz0vgy52o?at_medium=RSS&at_campaign=rss) | 에너지 | 중간 | WorldMonitor/BBC World |
 | 11 | [**China’s Two Sessions: what are the meetings and why do they matter?**](https://www.theguardian.com/world/2026/mar/04/china-two-sessions-2026-meeting-what-are-they-when-is-it-explainer) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
 | 12 | [**New Zealand coalition votes to make English an official language as critics slam ‘cynical’ bill**](https://www.theguardian.com/world/2026/mar/04/new-zealand-english-official-language-bill) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
@@ -60,7 +60,7 @@ description: "핵심 테마는 사회/기타(10건), 지정학/안보(6건), 금
 | 14 | [**More generals purged as delegates gather for China’s Two Sessions event**](https://www.theguardian.com/world/2026/mar/03/china-two-sessions-president-xi-economy-defence-technology) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
 | 15 | [**Trump’s show of force in the Middle East creates a weakness China can exploit**](https://www.theguardian.com/world/2026/mar/03/trump-us-iran-middle-east-china) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
 | 16 | [**Ross Stores touts ‘very strong start’ for spring shopping, boosting case for a retail rebound**](https://www.marketwatch.com/story/ross-stores-touts-very-strong-start-for-spring-shopping-boosting-case-for-a-retail-rebound-4d8f168b?mod=mw_rss_topstories) | 사회/기타 | 낮음 | WorldMonitor/MarketWatch |
-| 17 | [**My mother will live in her second husband’s house if he dies before her. Will his kids be hopping mad?**](https://www.marketwatch.com/story/his-children-might-resent-her-my-widowed-mother-has-a-life-estate-does-that-override-a-prenup-and-will-0e217484?mod=mw_rss_topstories) | 사회/기타 | 낮음 | WorldMonitor/MarketWatch |
+| ~~17~~ | ~~[My mother will live in her second husband’s house...](https://www.marketwatch.com/story/his-children-might-resent-her-my-widowed-mother-has-a-life-estate-does-that-override-a-prenup-and-will-0e217484?mod=mw_rss_topstories)~~ | 사회/기타 | 낮음 | *개인 재테크 Q&A — 시장 무관* |
 | 18 | [**Here are the U.S. airlines most vulnerable to rising fuel prices**](https://www.marketwatch.com/story/here-are-the-u-s-airlines-most-vulnerable-to-rising-fuel-prices-b3ed82b3?mod=mw_rss_topstories) | 사회/기타 | 낮음 | WorldMonitor/MarketWatch |
 | 19 | [**How Nvidia turned a steal of a deal into its secret weapon**](https://www.marketwatch.com/story/how-nvidia-turned-a-steal-of-a-deal-into-its-secret-weapon-17c2027a?mod=mw_rss_topstories) | 사회/기타 | 낮음 | WorldMonitor/MarketWatch |
 | 20 | [**European allies rush to bolster Cyprus defences after drones target British base**](https://www.bbc.com/news/articles/c4g74npdwnyo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음 | WorldMonitor/BBC World |

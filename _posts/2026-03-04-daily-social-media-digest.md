@@ -64,43 +64,43 @@ BREAKING :🇺🇸 Blackrock is loading again, they have bought 4,309 BTC worth 
 ## 정치·경제 동향
 
 **1. [암호화폐 강세 속 금·은 급락…트럼프 "빅 웨이브 곧 온다" 경고 - 디지털투데이](https://news.google.com/rss/articles/CBMic0FVX3lxTFBQekdUcHFRUkVFcm9mcFV6c3JaN2tldUhNODZaRXd1OWtKMmFjLXlJRG5mU21BR0EtaHlfM2w4c1NHTGtsR3loN1VINk4yZ0tiMzVGTUF6WUIyaHhNQ2gzdXFQVnlfQnEzd2pDOER3dnlDV00?oc=5)**
-암호화폐 강세 속 금·은 급락…트럼프 "빅 웨이브 곧 온다" 경고 디지털투데이
+트럼프 "빅 웨이브 곧 온다" 경고. 암호화폐 강세 속 금·은 급락, 자산 재편 신호 포착.
 <span class="source-tag" data-source-type="default">트럼프 경제정책 KR</span>
 
 **2. [The U.S. economy is already unsteady. A war in Iran could add to that uncertainty - PBS](https://news.google.com/rss/articles/CBMitwFBVV95cUxPMGZwN2dPeVE3elNLdWxScUI1akZ3RlRRN05hYTNHdXBDZHI2TG4yZWxXNTAxbkxLTlFSRHNGeFFTVGtTS2dBN3ZlOFUwOEFEZDVJaGhReFZ2b0phMzAwbGJxUHU4M1ZDWU5YdkNBM0hlUU1zUjdTZGR0S052a3NzODZxaFBzanpESDVBS1B3bzRTaGp1a2E3N2pYT2VXSHowSVVWalp4a254cXlHLWJiYzZKSlk5eW8?oc=5)**
-The U.S. economy is already unsteady. A war in Iran could add to that uncertainty PBS
+이란 전쟁 가능성이 이미 불안정한 미국 경제에 추가 불확실성을 더할 수 있다는 분석.
 <span class="source-tag" data-source-type="default">Trump Economy</span>
 
 **3. [이재명 대통령, 싱가포르 타르만 대통령 향해 "인공지능 등 경제 협력" - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTFBadzZzaURwbUFqTDFIcTdWdHU4THJ4bEpfNVVzV0NVYmVlTTRUWVh4VzJOanNxemQ2SW5tMjBMTF9naVlJZGIxXzlNNHFQSFk?oc=5)**
-이재명 대통령, 싱가포르 타르만 대통령 향해 "인공지능 등 경제 협력" v.daum.net
+이재명 대통령이 싱가포르 방문에서 AI·전력 등 경제 협력 확대를 제안.
 <span class="source-tag" data-source-type="default">이재명 경제정책</span>
 
 **4. [싱가포르의 최고 예우…'이재명·김혜경 蘭' 생겼다 - 연합인포맥스](https://news.google.com/rss/articles/CBMicEFVX3lxTFBXQlZfRUNlbjVrR1hWaG9wdnZybEl5SFN2MnFBSl9wLTJVTHlvOThPcVhlN0pPR1oxd0RYTWtVOXBGYWd3VWZIdmJCQV9WSk5jWnlwdFUzcDlCVWdIU2x5dC03Z3FKd2ZHem9SS1R2S24?oc=5)**
-싱가포르의 최고 예우…'이재명·김혜경 蘭' 생겼다 연합인포맥스
+싱가포르가 이재명·김혜경 부부 이름을 딴 난초 명명 등 최고 수준의 국빈 예우 제공.
 <span class="source-tag" data-source-type="default">이재명 경제정책</span>
 
 **5. [박수영 의원, “적자가구 25%, 민생경제 낙제점”…이재명 정부에 대국민 사과촉구 - 복지TV부울경방송](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9GM2c4S190dmJvb002Y2tUaUhfVzVQX0FyUmxGV0hLcUoyekFZZzlha3BBeFpQTUdfNmpKNEpqalNrbndlVlRqTnFiQk9lY1VGc01uOGlRUU9Mb0I1OWdXam5RZTNKN1k?oc=5)**
-박수영 의원, “적자가구 25%, 민생경제 낙제점”…이재명 정부에 대국민 사과촉구 복지TV부울경방송
+야당 박수영 의원, 적자가구 비율 25% 지적하며 이재명 정부에 민생경제 사과 촉구.
 <span class="source-tag" data-source-type="default">이재명 경제정책</span>
 
 **6. [여의도연구원, 이번 4일 '이재명 정부의 외교·안보·경제·통상정책' 토론회 개최 - 펜앤마이크](https://news.google.com/rss/articles/CBMia0FVX3lxTE1DOGlJTGZFZFNSNzFGN0tHVUY3TzdsUnlrZS0tU1p0WjdSUGlrM1RoOElXVC1kamQwRVhVY0p2Rzl0Q1dTMkhHWEVZR2VrQU5qQUVYX3hNLWpwQ2o0ZFhoSU5TVDNwRFBJSU1j0gFvQVVfeXFMT2ZGZ1FZclFaOEpRd1hsREs4QWdpYldmVWR5N3hVRzlnLTdxMmxndUpoRlU4RmY5VlU1UzllSXJMQzQyaVo5UWtFYjIzT29hclAwcFVpSVA1TG9wZ2dfa2NXNWdMaENObXh5eml0SmVN?oc=5)**
-여의도연구원, 이번 4일 '이재명 정부의 외교·안보·경제·통상정책' 토론회 개최 펜앤마이크
+여의도연구원이 이재명 정부의 외교·안보·경제·통상정책 전반을 점검하는 토론회 개최.
 <span class="source-tag" data-source-type="default">이재명 경제정책</span>
 
 **7. [이재명 대통령 "싱가포르 부동산 정책 배워야…AI·전력 협력 여지 많아" - ER 이코노믹리뷰](https://news.google.com/rss/articles/CBMibEFVX3lxTE41dUVkSWdQaHNsTjhCLTdiZ2hLeWh1THVnR05hMmM5UU41cVZaTlZrM01yNjZCbFNSMmtCeEVLSnNnMUhPUncxckpQMVNqNGhEWTctb0YtZTNvUzRkRmFvc01FSkZUNWJGUzg4RA?oc=5)**
-이재명 대통령 "싱가포르 부동산 정책 배워야…AI·전력 협력 여지 많아" ER 이코노믹리뷰
+이재명 대통령, 싱가포르의 공공주택·부동산 정책 벤치마킹 의사 표명. AI·전력 협력도 강조.
 <span class="source-tag" data-source-type="default">이재명 경제정책</span>
 
 **8. [박정희가 성공한 '오일 쇼크' 대책…이재명은 불가능한 이유 - 네이트](https://news.google.com/rss/articles/CBMiU0FVX3lxTE5oNGVBd0pLT3RFbGc4amNmY2VVQ3k4eDRJVi16VXRtb2JMcldaempILVh2bVZ0S0hGNld6dFZZc3ZrczBXWklDWk1GTnNCajdyak9z?oc=5)**
-박정희가 성공한 '오일 쇼크' 대책…이재명은 불가능한 이유 네이트
+박정희 시대 오일쇼크 대응과 현 이재명 정부의 에너지 위기 대응 능력 비교 분석.
 <span class="source-tag" data-source-type="default">이재명 경제정책</span>
 
 **9. [李대통령, 싱가포르 일정 마치고 필리핀行…오후 정상회담 - 연합인포맥스](https://news.google.com/rss/articles/CBMicEFVX3lxTE5tN3lxVUhmR0c0UnloN2RhbmVRYzJWazBmY3FLT2llNG9zaUxOek04b0I2b1I5U2d0RFFZSE9USlpXVS11bHN3NXlGY0J0ZE9QaFVlN013U1BDaEhHQXlmRE8yVjU2eFdNRW1UR0lNNmY?oc=5)**
-李대통령, 싱가포르 일정 마치고 필리핀行…오후 정상회담 연합인포맥스
+이재명 대통령, 싱가포르 순방을 마치고 필리핀으로 이동. 오후 정상회담 예정.
 <span class="source-tag" data-source-type="default">이재명 경제정책</span>
 
 **10. [Trump Urges Congress to Move on Crypto Rules Amid Banking Clash - Decrypt](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPRzFkZU02N0VpMUtJaHpMMkdRWUllU3BVd1hnU05rSTNzUVBsSmRYLXB1dEItLTM4TUlhN0czeV9EZVhoYTlST2VzMC1wUW9lUlUxZWphMmVFNUNxM3ZZanc0QUJ1NUxvdW5vUkE3SnNNSTJJY1JzeTgzRFVPWVdZU3BoMkZEM0o30gGQAUFVX3lxTE5HM1Yxek8tSzZkWVNYMGRoTEpxd2JvdmExa1VzM01RTkY4QnFEMDBsRHVtU1Z4N09kYlAzbEk3YVNGY2s3ajdvZmZaQnVWNkZWSlBoZWNJaVgtTG9qYTJ0bUx3R1dwNXB6WlRmakNfV0txSEVVWFVGY09jeXJISTVwMkhxbm5BUkJYaER0ckRjdA?oc=5)**
-Trump Urges Congress to Move on Crypto Rules Amid Banking Clash Decrypt
+트럼프, 은행업계 반발 속 의회에 암호화폐 규제 법안 신속 처리를 촉구.
 <span class="source-tag" data-source-type="default">Trump Crypto Policy</span>
 
 
@@ -116,9 +116,9 @@ Trump Urges Congress to Move on Crypto Rules Amid Banking Clash Decrypt
 - [[Telegram] 🇺🇸 President Trump said, Unfortunately, in recent years, the US Government sold 10,000s of #Bitcoin...](https://t.me/crypto/3550) — Telegram @crypto
   > 🇺🇸 President Trump said, Unfortunately, in recent years, the US Government sold 10,000s of #Bitcoin that would have...
 - [이재명 대통령, 싱가포르 타르만 대통령 향해 "인공지능 등 경제 협력" - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTFBadzZzaURwbUFqTDFIcTdWdHU4THJ4bEpfNVVzV0NVYmVlTTRUWVh4VzJOanNxemQ2SW5tMjBMTF9naVlJZGIxXzlNNHFQSFk?oc=5) — 이재명 경제정책
-  > 이재명 대통령, 싱가포르 타르만 대통령 향해 "인공지능 등 경제 협력" v.daum.net
+  > 이재명 대통령이 싱가포르 방문에서 AI·전력 등 경제 협력 확대를 제안.
 - [싱가포르의 최고 예우…'이재명·김혜경 蘭' 생겼다 - 연합인포맥스](https://news.google.com/rss/articles/CBMicEFVX3lxTFBXQlZfRUNlbjVrR1hWaG9wdnZybEl5SFN2MnFBSl9wLTJVTHlvOThPcVhlN0pPR1oxd0RYTWtVOXBGYWd3VWZIdmJCQV9WSk5jWnlwdFUzcDlCVWdIU2x5dC03Z3FKd2ZHem9SS1R2S24?oc=5) — 이재명 경제정책
-  > 싱가포르의 최고 예우…'이재명·김혜경 蘭' 생겼다 연합인포맥스
+  > 싱가포르가 이재명·김혜경 부부 이름을 딴 난초 명명 등 최고 수준의 국빈 예우 제공.
 
 ### 🟠 비트코인 (10건)
 
@@ -149,7 +149,7 @@ Trump Urges Congress to Move on Crypto Rules Amid Banking Clash Decrypt
 - [[Telegram] BREAKING :🇺🇸 Blackrock is loading again, they have bought 4,309 BTC worth $296,750,000.This is...](https://t.me/crypto/3542) — Telegram @crypto
   > BREAKING :🇺🇸 Blackrock is loading again, they have bought 4,309 BTC worth $296,750,000.This is Bullish🔥
 - [암호화폐 강세 속 금·은 급락…트럼프 "빅 웨이브 곧 온다" 경고 - 디지털투데이](https://news.google.com/rss/articles/CBMic0FVX3lxTFBQekdUcHFRUkVFcm9mcFV6c3JaN2tldUhNODZaRXd1OWtKMmFjLXlJRG5mU21BR0EtaHlfM2w4c1NHTGtsR3loN1VINk4yZ0tiMzVGTUF6WUIyaHhNQ2gzdXFQVnlfQnEzd2pDOER3dnlDV00?oc=5) — 트럼프 경제정책 KR
-  > 암호화폐 강세 속 금·은 급락…트럼프 "빅 웨이브 곧 온다" 경고 디지털투데이
+  > 트럼프 "빅 웨이브 곧 온다" 경고. 암호화폐 강세 속 금·은 급락, 자산 재편 신호.
 - [What happens to prices, interest rates if US strikes in Iran escalate? - USA Today](https://news.google.com/rss/articles/CBMirgFBVV95cUxQeXQ4Rk91Rk9nclBPdVcyTkRsV1lUdi0tcTEzaHVnYmVaZVpueHRHakhnSWJPOVVLWi01clJaeVdSeDhWZzBBM29GaGRNUEFnbHJrSWJGR0xwOVlhTkZzdHdhckRXMDQyUGE4dmxyTHhwSkk1Rjk3VXpPbDA3d1kwcXBfRkxSYUpydnJUa0R0MlFqZ3hyellpTTRtNWRLR1J4Rk4zbG9LRDg3ZnowS3c?oc=5) — Fed Policy
   > What happens to prices, interest rates if US strikes in Iran escalate? USA Today
 

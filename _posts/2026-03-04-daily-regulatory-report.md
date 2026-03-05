@@ -108,11 +108,11 @@ Commodity Futures Trading Commission Chairman Michael S.
 ## 아시아 규제 동향
 
 **1. [Publication of AI Discussion Paper (Version 1.1)](https://www.fsa.go.jp/en/news/2026/20260303/aidp.html)**
-For the complete experience, please enable JavaScript in your browser.
+일본 금융청(FSA)이 AI 관련 논의 보고서(버전 1.1)를 발표했습니다. 금융 분야 AI 활용 규제 방향이 주목됩니다.
 <span class="source-tag" data-source-type="default">Japan FSA</span>
 
 **2. [Press Conference by KATAYAMA Satsuki, Minister of State for Financial Services (February 20, 2026)](https://www.fsa.go.jp/en/conference/minister/2026/20260220.html)**
-For the complete experience, please enable JavaScript in your browser.
+가타야마 사츠키 금융담당 국무장관 기자회견 내용입니다. 일본 금융 정책 방향 관련 발언이 포함됩니다.
 <span class="source-tag" data-source-type="default">Japan FSA</span>
 
 
@@ -139,7 +139,7 @@ FCA to review U.K.’s new listing rules Investment Executive
 
 **주요 동향:**
 - [AMENDMENT NO. 1 TO FORM F-1](https://news.google.com/rss/articles/CBMiigFBVV95cUxNalZraU5ES3lPd19TOUt5bE1FbjV1NllXTjhyVEF0YU11WEM1YTUtMHhkX1JCNUllTExmbU9hS0pYTjdJeU82M21IMGszV1FsRzZ1TUhjMmF5UFFDTmVjdjFmbVo2LXZwQnVna1RQem56UjRKbmhIejB5akV3dkFoQWs4TGUxMG4zX0E?oc=5) — SEC (Google News)
-  > AMENDMENT NO.
+  > SEC EDGAR에 제출된 해외기업 IPO 등록 수정서류입니다.
 - [CFTC Chairman Selig Announces Mel Gunewardena as Director of the Office of International Affairs and Senior Markets Advisor to the Chairman](https://www.cftc.gov/PressRoom/PressReleases/9189-26) — CFTC Press Releases
   > CFTC Chairman Michael S.
 - [CFTC Chairman Selig Announces Alan Brubaker as Director of the Office of Legislative and Intergovernmental Affairs](https://www.cftc.gov/PressRoom/PressReleases/9188-26) — CFTC Press Releases
@@ -194,7 +194,7 @@ FCA to review U.K.’s new listing rules Investment Executive
 
 **규제 성격 분석** (총 38건 기준): **집행**(1건). 뚜렷한 규제 방향성 키워드가 제한적으로 포착되어, 개별 건별 확인이 필요합니다.
 
-**미국** (SEC 1건, CFTC 3건): CFTC 관련 소식이 부각되어, 파생상품·선물 시장 규제와 디지털 자산 상품 분류가 쟁점입니다. 주요 건: *AMENDMENT NO. 1 TO FORM F-1*
+**미국** (SEC 1건, CFTC 3건): CFTC 관련 소식이 부각되어, 파생상품·선물 시장 규제와 디지털 자산 상품 분류가 쟁점입니다. 주요 건: *CFTC 디지털 자산 규제 프레임워크 논의*
 
 **한국** (금융위 20건 포함): 가상자산 관련 규제가 **7건** 포착되어, 거래소 운영 기준과 이용자 보호 정책 변화를 주시하세요. 주요 건: *민·관 합동 ｢토큰증권 협의체｣  Kick-off 회의 개최*
 

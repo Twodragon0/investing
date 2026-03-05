@@ -7,7 +7,7 @@ tags: ["stock", "market", "daily-digest"]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/market-snapshot-2026-03-04.png"
-description: "외 P0 긴급 이슈 23건이 추가 감지되었습니다. 총 147건의 뉴스 중 P1 주요 이슈도 7건 확인됩니다."
+description: "KOSPI -7.62%, KOSDAQ -8.68% 급락. 이란 분쟁 확대에 따른 글로벌 증시 폭락, 유가 급등, 반도체 투톱 삼성전자·SK하이닉스 붕괴 등 147건 분석."
 ---
 
 **2026-03-04** 주식 시장에서 147건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,384.06(-7.62%), KOSDAQ 1,051.52(-8.68%), USD/KRW 1,481.07(-0.31%).
@@ -24,13 +24,13 @@ description: "외 P0 긴급 이슈 23건이 추가 감지되었습니다. 총 14
 - KOSPI 5,384.06 (-7.62%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 1,051.52 (-8.68%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
 - 2026-03-04 주식 시장에서 147건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,384.06(-7.62%), KOSDAQ 1,051.52(-8.68%), USD/KRW 1,481.07(-0.31%).
-- *Dow, 코스피, Nasdaq 관련 70건의 뉴스가 보고되었습니다.*
+- 이란 분쟁 확대로 Dow -400pt, S&P 500·Nasdaq 약 1% 급락. 유가·금값 급등하며 안전자산 선호 심화.
 
 ## 테마별 주요 뉴스
 
 ### 📈 가격/시장 (70건)
 
-*Dow, 코스피, Nasdaq 관련 70건의 뉴스가 보고되었습니다.*
+*Dow -400pt·KOSPI -7.62% 급락, 이란 분쟁 확대로 글로벌 증시 전면 하락. 유가·원유 급등 속 방산·에너지 섹터 주목.*
 
 
 <div class="news-card-item">
@@ -68,7 +68,7 @@ description: "외 P0 긴급 이슈 23건이 추가 감지되었습니다. 총 14
 
 ### 📊 매크로/금리 (20건)
 
-*환율, 한은, 달러 관련 20건의 뉴스가 보고되었습니다.*
+*USD/KRW 1,481원(-0.31%), 한은 "환율 1500원 일시적" 진단. S&P 500 선물 하락, 10년물 국채 금리 상승 속 인플레이션·지정학 리스크 부각.*
 
 
 <div class="news-card-item">
@@ -84,7 +84,7 @@ description: "외 P0 긴급 이슈 23건이 추가 감지되었습니다. 총 14
 <div class="news-card-num">2</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxPZnJJNmd4aXZQQmhFSGo3enhrcWNJMW1LVWY2eHQ0aTBnNGVuQ3pvTXJRVk9wbHhYc3djTngxVE83VTRUcjU1dHlyT2xENkZYcThXRFJ2VXphYXZDZUVPelczbS1oZXN2MVJhYVR0S25NM0hmckVWRXFLSy1vcE5CZ1JleFRYYUlMVlJZeDZJTWxDa2pFSkh2THhlUmhPQ0dEZ3ZsVUtFUTA5SkJPeUJqa3JnTzF4MVpUY2g1MDV5aEhuLTRKSXfSAcsBQVVfeXFMUHc3YmttUUhnTmN2UFhkWEJ1MlJCdnQ5NnJpbE1KbThFZkVpUGNJMDh5eEd1eE1fYzJXWk5waThuVGhqbVIwT2xkUDQxeFNoNy1xTTJ1cHZnV3N5VVhmeC1VeFJJMXFhck51LUF2RlhHRnpWbWVSczRYQ0ItNzY5dnJSRm1zS1V2UU9hY0dFQnNSTVBGV2RnRC1vZHNIU3paRlRjZTdDMkZUTUlyX3UzUGprR1VYTkNqVDNpSXgwTlMxdG43NHBYZFNPRkk?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">US Stock Market Today S&amp;P 500 Futures Slide On Inflation And Geopolitical Jitters - simplywall.st</a>
-<p class="news-desc">US Stock Market Today S&amp;P 500 Futures Slide On Inflation And Geopolitical Jitters simplywall.st</p>
+<p class="news-desc">인플레이션 우려와 지정학적 긴장 고조로 S&P 500 선물 하락. 투자자들의 리스크 회피 심리가 강화되는 양상.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -94,7 +94,7 @@ description: "외 P0 긴급 이슈 23건이 추가 감지되었습니다. 총 14
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxOakZQcnZkOEFEaEd3Z3JpbDZFM0JpUlNvMU03NWVKemxySlZWenJVSXVwejJhWUJoNW5rbFdQVTUxNFp0bjJUTnJYeVYwVjJZOWNFMk9KWno4YU5XY3ZYaDdTejBncERGNlc2aGF4SHBvaWtYT25jNTN5bWdGU2tVUFcxaTJtTVhLS0kyQWRXQW9pZGZDYlZoMEhaUS1KZWtXWUVCa0o4SkNRODlzNktGMUJ3S2FHQUZYQVoweA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">10-Year Treasury Yield Long-Term Perspective: February 2026 - advisorperspectives.com</a>
-<p class="news-desc">10-Year Treasury Yield Long-Term Perspective: February 2026 advisorperspectives.com</p>
+<p class="news-desc">2026년 2월 기준 미국 10년물 국채 금리 장기 추세 분석. 이란 분쟁에 따른 유가 급등으로 금리 상승 압력 가중.</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>
@@ -109,14 +109,14 @@ description: "외 P0 긴급 이슈 23건이 추가 감지되었습니다. 총 14
 
 ### 🤖 AI/기술 (5건)
 
-*반도체, 삼성전자, 하이닉스 관련 5건의 뉴스가 보고되었습니다.*
+*중동 사태에 삼성전자 20만원·SK하이닉스 100만원 붕괴. 반도체 투톱 동반 급락으로 기술주 투자 심리 위축.*
 
 
 <div class="news-card-item">
 <div class="news-card-num">1</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTFBRbUwxektxLVhMVFdoakNWT2NCR05yTVhJMEdaNG9acHB2UHdrTC1NQVc4VW1CSkdrTlNkV3BaekJvUGRsUE9PTWZSRk8yN2RoNkE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">중동 사태에 ‘반도체 투톱’ 와르르…삼성전자 20만원·SK하이닉스 100만원 붕괴 - 매일경제</a>
-<p class="news-desc">중동 사태에 ‘반도체 투톱’ 와르르…삼성전자 20만원·SK하이닉스 100만원 붕괴 매일경제</p>
+<p class="news-desc">이란 분쟁 여파로 삼성전자 20만원, SK하이닉스 100만원 지지선 무너짐. 외국인 매도세 확대와 프로그램 매도 동반.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

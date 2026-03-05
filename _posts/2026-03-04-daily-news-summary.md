@@ -16,21 +16,21 @@ excerpt: "암호화폐 107건, 주식 147건, 보안 2건, 규제 38건, 소셜 
 ## 전체 뉴스 요약
 
 - 주요 테마: 📜 정책/규제, 🧭 수급/심리, 🏦 금리/유동성
-- 암호화폐: 107건. 대표 헤드라인: Wallet Maintenance for Ethereum Network (ETH) - 2026-03-04.
-- 주식: 147건. 2026-03-04 주식 시장에서 147건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,384.06(-7.62%), KOSDAQ 1,051.52(-8.68%), USD/KRW 1,481.07(-0.31%).. 주요 수치: KOSPI 5,384.06(-7.62%).
-- 규제: 38건. 주요 이슈: AMENDMENT NO. 1 TO FORM F-1.
+- 암호화폐: 107건. 비트코인 55건(51%)으로 시장 주도. 규제/정책·가격/시장 테마 주목.
+- 주식: 147건. KOSPI 5,384.06(-7.62%), KOSDAQ 1,051.52(-8.68%), USD/KRW 1,481.07(-0.31%). 미국 증시 급락 영향 확대.
+- 규제: 38건. CFTC 디지털 자산 규제 프레임워크 논의, 일본 FSA 가상자산 거래소 감독 강화.
 
 
 ## 종합 대시보드
 
 | 영역 | 수집 건수 | 핵심 신호 |
 | --- | ---: | --- |
-| 암호화폐 | 107 | 2026-03-04 암호화폐 시장에서 107건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 규제/정책 관련 소식이 주목됩니다. |
-| 주식 | 147 | 2026-03-04 주식 시장에서 147건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,384.06(-7.62%), KOSDAQ… |
-| 월드모니터 | 20 | 수집 건수: 20건 |
-| 규제 | 38 | 총 수집 건수: 38건 |
-| 소셜 | 37 | 2026-03-04 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 17건, 총 37건이 수집되었습니다. |
-| 정치인 거래 | 18 | 트럼프 정책: 1건. 행정명령 및 관세 정책 변화는 반도체·자동차·에너지 섹터의 변동성을 확대시킵니다. |
+| 암호화폐 | 107 | 비트코인 55건(51%) 시장 주도, 규제/정책·가격 테마 부각 |
+| 주식 | 147 | KOSPI -7.62%, KOSDAQ -8.68% 급락. 미 증시 연쇄 하락 |
+| 월드모니터 | 20 | 남수단 내전 위기 고조, 글로벌 분쟁·무역 이슈 |
+| 규제 | 38 | SEC·CFTC 암호화폐 규제 동향, 인디애나 암호화폐 법안 서명 |
+| 소셜 | 37 | Cathie Wood BTC 지지 발언, 고래 온체인 활동 증가 |
+| 정치인 거래 | 18 | 트럼프 관세 정책 영향, 플로리다 금 법정화폐 추진 |
 
 ![multi-asset-briefing]({{ "/assets/images/generated/news-briefing-daily-2026-03-04.png" | relative_url }})
 
@@ -49,24 +49,24 @@ excerpt: "암호화폐 107건, 주식 147건, 보안 2건, 규제 38건, 소셜 
 **시장 심리**: 혼조 (긍정 22건 vs 부정 27건, 긍정 비율 45%) — 7개 카테고리 369건 기준
 
 
-  - 긍정 신호: Stock Market News, March 3, 2026: Dow ends down 400 points, S&P 500 and Nasdaq tumble around 1% as investors digest…; 4. [Stock Market News, March 3, 2026: Dow ends down 400 points, S&P 500 and Nasdaq tumble around 1% as investors…
-  - 주의 신호: 비트코인, 가격/시장, 규제/정책; US stock market big crash today: Why Dow, S&P 500, Nasdaq in deep red today? Oil, gas and gold prices surge
+  - 긍정 신호: Cathie Wood BTC 지지 발언, ETF 논의 진전, 인디애나 암호화폐 법안 서명
+  - 주의 신호: 미 증시 급락(Dow -400pt, S&P·나스닥 -1%), KOSPI -7.62% 폭락, 지정학 리스크 확대
 
-> - **암호화폐** 107건 — Wallet Maintenance for Ethereum Network (ETH) - 2026-03-04 — 주목: *Wallet Maintenance for Ethereum Network (ETH) - 2026-03-04*
-> - **주식** 147건 — 주요 지표: KOSPI 5,384.06(-7.62%) — 주목: *Stock market today: Dow, S&P 500, Nasdaq trim losses but…*
-> - **규제** 38건 — AMENDMENT NO. 1 TO FORM F-1 — 주목: *AMENDMENT NO. 1 TO FORM F-1*
-> - **월드모니터** 20건 — **South Sudan risks return to full-blown civil war as violence escalates** — 주목: ***South Sudan risks return to full-blown civil war as…*
-> - **소셜** 37건 — Cathie Wood says Bitcoin is "hands down" better than Gold."Bitcoin is a hedge against Both — 주목: *Cathie Wood says Bitcoin is "hands down" better than…*
-> - **정치인 거래** 18건 — Florida Senate moves to mandate dual citizenship disclosures, cement gold as legal tender - Florida’s Voice — 주목: *Florida Senate moves to mandate dual citizenship…*
+> - **암호화폐** 107건 — 비트코인 55건(51%) 주도, 규제/정책 15건 — 주목: *BTC 가격 변동성 확대, ETF 논의 진전*
+> - **주식** 147건 — 주요 지표: KOSPI 5,384.06(-7.62%) — 주목: *미국 증시 급락 → 한국 증시 연쇄 하락*
+> - **규제** 38건 — SEC·CFTC 암호화폐 규제, 인디애나 법안 서명 — 주목: *암호화폐 규제 프레임워크 변화*
+> - **월드모니터** 20건 — 남수단 내전 위기, 글로벌 무역 긴장 — 주목: *South Sudan 내전 고조, 지정학 리스크*
+> - **소셜** 37건 — Cathie Wood BTC 지지, 고래 활동 증가 — 주목: *Cathie Wood "BTC is hands down better than Gold"*
+> - **정치인 거래** 18건 — 플로리다 금 법정화폐 추진, 트럼프 관세 정책 — 주목: *Florida 금 법정화폐 법안, 관세 영향 분석*
 
 ## 뉴스 내용 기반 핵심 요약
 
-- **암호화폐:** 107건. 대표 헤드라인: Wallet Maintenance for Ethereum Network (ETH) - 2026-03-04.
-- **주식:** 147건. 2026-03-04 주식 시장에서 147건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,384.06(-7.62%), KOSDAQ 1,051.52(-8.68%), USD/KRW 1,481.07(-0.31%).. 주요 수치: KOSPI 5,384.06(-7.62%).
-- **규제:** 38건. 주요 이슈: AMENDMENT NO. 1 TO FORM F-1.
-- **소셜:** 37건. 화제 키워드: Cathie Wood says Bitcoin is "hands down" better than Gold."Bitcoin is a hedge against Both.
-- **월드모니터:** 20건. 핵심 이슈: **South Sudan risks return to full-blown civil war as violence escalates**.
-- **우선순위:** P0 9건, P1 5건. 긴급: US stock market big crash today: Why Dow, S&P 500, Nasdaq in deep red today? Oil, gas and gold prices surge, Why didn't US avert stock market Dow Jones, S&P 500 and Nasdaq crash today like UAE? Analysts insights.
+- **암호화폐:** 107건. 비트코인 55건(51%) 시장 주도. 규제/정책(15건), 가격/시장(23건) 테마 부각. ETF 논의와 인디애나 암호화폐 법안 서명 주목.
+- **주식:** 147건. KOSPI 5,384.06(-7.62%), KOSDAQ 1,051.52(-8.68%). 미국 Dow -400pt, S&P·나스닥 1% 하락으로 글로벌 증시 연쇄 급락.
+- **규제:** 38건. SEC·CFTC 암호화폐 규제 프레임워크 논의 활발. 인디애나 암호화폐 법안 서명, 아시아 규제 동향 포함.
+- **소셜:** 37건. Cathie Wood "BTC is hands down better than Gold" 발언 화제. 고래 온체인 활동 증가 감지.
+- **월드모니터:** 20건. 남수단 내전 위기 고조, 글로벌 무역 긴장 지속. 에너지·안보 리스크 확대.
+- **우선순위:** P0 9건, P1 5건. 긴급: 미 증시 급락(Dow -400pt), KOSPI -7.62% 폭락, 글로벌 증시 동반 하락. 지정학 리스크(남수단, 유가 급등) 경계 필요.
 
 ## 테마 스냅샷
 
@@ -229,7 +229,7 @@ excerpt: "암호화폐 107건, 주식 147건, 보안 2건, 규제 38건, 소셜 
 | 카테고리 | 건수 | 상세 보기 |
 | --- | :---: | --- |
 | 암호화폐 뉴스 | 107건 | [바로가기](https://investing.2twodragon.com/crypto-news/2026/03/04/daily-crypto-news-digest/) |
-| 시장 종합 리포트 | 0건 | [바로가기](https://investing.2twodragon.com/market-analysis/2026/03/04/daily-market-report/) |
+| 시장 종합 리포트 | - | [바로가기](https://investing.2twodragon.com/market-analysis/2026/03/04/daily-market-report/) |
 | 정치인 거래 | 18건 | [바로가기](https://investing.2twodragon.com/political-trades/2026/03/04/daily-political-trades-report/) |
 | 규제 동향 | 38건 | [바로가기](https://investing.2twodragon.com/regulatory-news/2026/03/04/daily-regulatory-report/) |
 | 보안 리포트 | 2건 | [바로가기](https://investing.2twodragon.com/security-alerts/2026/03/04/daily-security-report/) |
