@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-crypto-2026-03-05.png"
-description: "외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 109건의 뉴스 중 P1 주요 이슈도 14건 확인됩니다."
+description: "비트코인 $73,000 돌파 후 7% 급등, 트럼프 암호화폐 법안 지지, Kraken 연준 결제 시스템 접근 획득. 총 109건 분석."
 ---
 
 **2026-03-05** 암호화폐 시장에서 109건의 뉴스를 분석했습니다. 오늘은 **비트코인, 가격/시장, 거래소** 관련 소식이 주목됩니다.
@@ -30,8 +30,8 @@ description: "외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 109
 ## 한눈에 보기
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">109</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 59</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">리스크 위험</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (39회)</div></div></div>
-<div class="alert-box alert-info"><strong>암호화폐 긴급: 암호화폐 폭락: 비트코인 또는 XRP 동안 더 나은 구매를 원하십니까? - 109건 분석</strong><ul><li>🟠 <strong>비트코인</strong> (59건): Bitcoin, Crypto, Cryptocurrency 관련 59건의 뉴스가 보고되었습니다.</li><li>📈 <strong>가격/시장</strong> (34건): Bitcoin, crypto, stocks 관련 34건의 뉴스가 보고되었습니다.</li><li>🏦 <strong>거래소</strong> (25건): Coinbase, crypto, Kraken 관련 25건의 뉴스가 보고되었습니다.</li><li>🏛️ <strong>정치/정책</strong> (15건): Trump, crypto, Bitcoin 관련 15건의 뉴스가 보고되었습니다.</li></ul></div>
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMigwFBVV95cUxPVWVwMUFIS01xY0JpaGR5cFJnZ1FnM1Byd3B5cFdSRkJoVkJNZFB5M2FlNWRsUUlNSm9mYzNQQkF1YU13ZTFrdUc2T3I0emNKN0tiaXJBWFpFVWlqeDhmNHEwOWRlcERsSzNnMHQ5a05jaG9JRWxqSUkzVnBSRUk0QUFCaw?hl=en-US&gl=US&ceid=US%3Aen">암호화폐 폭락: 비트코인 또는 XRP 동안 더 나은 구매를 원하십니까?</a> <span class="p0-desc">구글 뉴스에서 보도한 비트코인 관련 시장 동향입니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE50NGZBdUhaOHB2LVl5Wm9wY0NfV29xSS1JaDctVl9XdFlhaU44NHNUWEx1dFdwenlsOVF0OEFwLWVYVy1qeEQ5bEtaeUkyYkgtbUNjV2NBOWdFUFdLQ1N4am5kdVZuQlR3VnhPRkNKTk1kNzQ?oc=5">국장·미장은 폭락하는데…비트코인 슬금슬글 7만달러 턱 밑 - 디지털투데이</a> <span class="p0-desc">국장·미장은 폭락하는데…비트코인 슬금슬글 7만달러 턱 밑 디지털투데이</span></li><li><a href="https://decrypt.co/359927/apple-iphone-hacking-kit-used-by-spies-crypto-scams-could-have-us-intelligence-origins">애플 스파이가 사용하는 iPhone 해킹 키트, 암호화폐 사기의 출처는 미국 정보일 수 있음</a> <span class="p0-desc">연구원들은 23가지 iOS 취약점을 포함하는 정교한 익스플로잇 킷을 간첩 및 사이버 범죄 캠프AIgns에서 사용하고 있습니다.</span></li></ul></div>
+<div class="alert-box alert-info"><strong>암호화폐 긴급: 암호화폐 폭락: 비트코인 또는 XRP 동안 더 나은 구매를 원하십니까? - 109건 분석</strong><ul><li>🟠 <strong>비트코인</strong> (59건): BTC $73,000 돌파 후 7% 급등, 트럼프 법안 지지로 강세 전환.</li><li>📈 <strong>가격/시장</strong> (34건): 코인베이스·암호화폐 주식 급등, Kraken 연준 결제 시스템 접근 획득.</li><li>🏦 <strong>거래소</strong> (25건): Coinbase 주가 급등, Morgan Stanley BTC ETF 관리인 선정.</li><li>🏛️ <strong>정치/정책</strong> (15건): 트럼프 디지털자산 법안 지지, 친비트코인 연준 의장 지명.</li></ul></div>
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMigwFBVV95cUxPVWVwMUFIS01xY0JpaGR5cFJnZ1FnM1Byd3B5cFdSRkJoVkJNZFB5M2FlNWRsUUlNSm9mYzNQQkF1YU13ZTFrdUc2T3I0emNKN0tiaXJBWFpFVWlqeDhmNHEwOWRlcERsSzNnMHQ5a05jaG9JRWxqSUkzVnBSRUk0QUFCaw?hl=en-US&gl=US&ceid=US%3Aen">암호화폐 폭락: 비트코인 또는 XRP 동안 더 나은 구매를 원하십니까?</a> <span class="p0-desc">비트코인·XRP 폭락 시 매수 전략 분석.</span></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE50NGZBdUhaOHB2LVl5Wm9wY0NfV29xSS1JaDctVl9XdFlhaU44NHNUWEx1dFdwenlsOVF0OEFwLWVYVy1qeEQ5bEtaeUkyYkgtbUNjV2NBOWdFUFdLQ1N4am5kdVZuQlR3VnhPRkNKTk1kNzQ?oc=5">국장·미장은 폭락하는데…비트코인 슬금슬글 7만달러 턱 밑 - 디지털투데이</a> <span class="p0-desc">국장·미장은 폭락하는데…비트코인 슬금슬글 7만달러 턱 밑 디지털투데이</span></li><li><a href="https://decrypt.co/359927/apple-iphone-hacking-kit-used-by-spies-crypto-scams-could-have-us-intelligence-origins">애플 스파이가 사용하는 iPhone 해킹 키트, 암호화폐 사기의 출처는 미국 정보일 수 있음</a> <span class="p0-desc">연구원들은 23가지 iOS 취약점을 포함하는 정교한 익스플로잇 킷을 간첩 및 사이버 범죄 캠페인에서 사용하고 있습니다.</span></li></ul></div>
 
 ## 전체 뉴스 요약
 
@@ -44,14 +44,14 @@ description: "외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 109
 
 ### 🟠 비트코인 (59건)
 
-*Bitcoin, Crypto, Cryptocurrency 관련 59건의 뉴스가 보고되었습니다.*
+*비트코인 $73,000 돌파 후 7% 급등, 트럼프 암호화폐 법안 지지 발표로 시장 강세 전환.*
 
 
 <div class="news-card-item">
 <div class="news-card-num">1</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMifkFVX3lxTE52TzYycnJoOW9tZkRleElWajduS190alhoWmh2WG1kM0xGemdsVTdJS2RZZFpOTE8tR0RUa1pOMVVXNFdWSTU4cnBIZlg5VmJJZ2dwSU56S3FoZndpZzBmaWcydFY2QXh6RTU4NGplYUxEVm9EQlRkaWgyV1NmZw?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 암호화폐의 탐나는 변동성이 돌아오면서 $73,000를 넘어섰습니다.</a>
-<p class="news-desc">구글 뉴스에서 보도한 비트코인 관련 시장 동향입니다.</p>
+<p class="news-desc">비트코인 가격 변동 및 시장 심리 분석.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -61,7 +61,7 @@ description: "외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 109
 <div class="news-card-num">2</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMi1wFBVV95cUxQTUd6dG5qSF8xVFAxZWxrRFNtTUZJckpUV2dsQTJzQWt4WlRsQVBUZjRiSlVJU2QzTVZha1JqY3RTMW9VSVJGTTFheVJlZnF5cHAxSnlqcHlXYWI4MjV0aG95bF85ZHJQckVrdFJOSGM0QnlNTnl4S0xESXVJVmtPOElJd1o2N21qX3NIdWE2UTdQd2tyYWxnTWVCRU1BYm5aZ2dXMmdyakdwLWo1dnZNVjYxQnFrM2sxbXp6R0x2bEtpZ2xycGRCOHdDQ1YydTRBRDJHZVRHbw?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">암호화폐 장단기: 비트코인의 양자 공포가 기후 패닉처럼 지나갈 이유</a>
-<p class="news-desc">구글 뉴스에서 보도한 비트코인 관련 시장 동향입니다.</p>
+<p class="news-desc">비트코인 가격 변동 및 시장 심리 분석.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -71,7 +71,7 @@ description: "외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 109
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMimAFBVV95cUxPVXdVZXE0VzdDdnVwX3h5M25WUEFQNGVpaGJiQmY0aTZISXcxTHd0WnJmd0FBRXpfS2pObE5YSy1sdzJFOXlvRDljaUNjb1JZNEFNNUtRYVFfOTdqTkxjQ1E5UEZzckNNdjlaTG1JcnFJMS11ekxfRDZRMElYby1NclRrdHVKTk11TElzYVFESnJZLTE0VEprLQ?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 포효: 오늘날 세계 최대 암호화폐의 7% 급등을 가져온 요인은 다음과 같습니다.</a>
-<p class="news-desc">구글 뉴스에서 보도한 비트코인 관련 시장 동향입니다.</p>
+<p class="news-desc">비트코인 가격 변동 및 시장 심리 분석.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -85,14 +85,14 @@ description: "외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 109
 
 ### 📈 가격/시장 (34건)
 
-*Bitcoin, crypto, stocks 관련 34건의 뉴스가 보고되었습니다.*
+*코인베이스·암호화폐 주식 급등, Kraken 연준 결제 시스템 접근 획득, 이란 거래소 자금 유출.*
 
 
 <div class="news-card-item">
 <div class="news-card-num">1</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMiogNBVV95cUxPSmQzWTQ0ZHVyVHdGVHdnYjBwcFpyaTB4Tm96dW1PYWE5cU4zMzhVcFdkWG4zZ2hRQ3lTTkVTeEhtSWNBUElKUERLSm9pdUZQRUsydG11MTVPdVVFd3BKU3dPWDFPeXRMckxGNnR1N05tZnc4ek1RM2dQaHZpTUp6Nk5oeFBGemJBMEk2c09MZnViZnVFY2pPZkFhbFUyT015SHZQWEM3b25zNWd3c093WGk2UnY1ZjlNTXJFM2Q5UHFLZ054bkxSMEZBWDNWMU1RTVR3b2FWQnlrMDdiMFU2bnpQUXNiX3lkTnZCMEpic1ZJaHNOSlYzUVJfbE04MW5IMlh0NGE5Yktzc25UcFhWdHFKVkhwOWVYcEtSd0RjRVR0UjFxRTFrLTR2dVA5ZVR0STA0UXBGLXRJNDJwNFZWWDZMZDRtQWZqT2M3NDBhU09FTDAyaktEZ2dfSDlKQkNvYXZETlVNbjhwUXBraXVIbm5SRE9LQy1BSXBMc3AzUC01M09YZE5CNUlvbXpHQndNRzJPZUZEak9jQkZ2YkdqOUNB?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">코인베이스, 기타 암호화폐 주식 급등. 랠리 뒤에 무엇이 있습니까?</a>
-<p class="news-desc">구글 뉴스에서 보도한 뉴스입니다.</p>
+<p class="news-desc">암호화폐 시장 주요 동향.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -102,7 +102,7 @@ description: "외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 109
 <div class="news-card-num">2</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMixgNBVV95cUxNb0hPRVM1VExUbTlaWnNRR2lDeGprcjJTd29IZ18xUlJiUURfangzOWFyMVFHOWhvUDNkYUtPRW5YOHNiQ3U5d2kxVV9CaXFHSXVCUWV6d1dVVU5XZFYwRW82c2pVQ0NXNE16RVM4M3Eyc2x0M3hhOGRxeFlPSE94Y3BiTGJnMEs2bl9Cc0ZSMnc3Z2o1eVBzNHFTVWtlRmdmVGdodDc4U0hFckZwV2RrMGdMWnRSWDhhTmR1dHRabnJWQjk0a0Z6cU00Yk5jLUh3elA1X1RlZU5MVnk0OW1NaFQwRF81M0xYM0JLX1pycVpMSjBiMVpOV3lyZk9mb2llZDhFR3cwX3BZZWxucEJPc2l2dmN4UVdPc09aUVhWX2lXVnd2YlYxejBvNUJ3bDJKT0JuaXk0aDJVeFI4SGZEcG5jckJ1aThEY1RMSTdxU0lEbm14UFhvTmxEQzE2MDRZMUdqZS1ZOWhvaW5LUDN2bUhuOU5DdGg2eFlPNmVSUVA0b24tRkFIY1J6SkZwdk5QRkp3NzRSWU1FVnJKSzRaUFNvc0lMQnpjdmFmTWVlMTVFc0FYOVNRVXZlMGZFRkdJSm1BaUhR?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Kraken은 연준의 핵심 결제 시스템에 대한 액세스 권한을 획득한 최초의 암호화 회사가 되었습니다</a>
-<p class="news-desc">구글 뉴스에서 보도한 금리·통화정책 관련 뉴스입니다.</p>
+<p class="news-desc">암호화폐 기업의 금융 인프라 접근 확대 관련 소식.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -112,7 +112,7 @@ description: "외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 109
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMisgFBVV95cUxObUcyUHBYcmhtV21Sa0xtU2R6QlZZTi1KMWtkQlZ3NC1HXzBVZnVNX18xQWFjZUpqejdzd0Vjc0l1WFZ2ZHhTM1N2NjRQb3Q4aGVoVW9nU1JqckRNTXd2REF0aS1pLVU1QUphbk5sOFQyZWE4OUMwSlBXdGMxUGhScG04UXotakl1c1RYWGZDblVQU1J5Z3lYWGVCWnRVaEhzcTBLdURKRTJOUXF6b0RkWnlR?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 대통령이 트럼프 주요 암호화폐 법안을 지지한 후 $74,000로 급등</a>
-<p class="news-desc">구글 뉴스에서 보도한 비트코인 관련 시장 동향입니다.</p>
+<p class="news-desc">비트코인 가격 변동 및 시장 심리 분석.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -126,14 +126,14 @@ description: "외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 109
 
 ### 🏦 거래소 (25건)
 
-*Coinbase, crypto, Kraken 관련 25건의 뉴스가 보고되었습니다.*
+*Coinbase 트럼프 법안 지지 후 주가 상승, Kraken 연준 결제 계정 확보, Morgan Stanley 비트코인 ETF 관리인 선정.*
 
 
 <div class="news-card-item">
 <div class="news-card-num">1</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMi1wFBVV95cUxNNHI5LUVzbFBkd01vU3c3ZU9fWjVtem1PQmdROVJObjQtb0ZWU3lRY3B3dURsWmxUdExDN1Z0a0VnZGlIbmxtRGs5NDBRQ2hmb0ppcGgxaW5uS2JxSTNqb2thQzVpeFFiM1Q0N2FmRlJUa3hLRHJ2UWtXWTBqYkpkZU0tQXR1TV9TRWpJNXE1TG5PMGpPc0Uxb20waTZCT2xZb3M1UXhTeDJyVDhid2VJbjlBVGF0dnZZM2oybVhfbzY2RE0wWE12YUlfUzVqeEVKLV95clhXd9IB3AFBVV95cUxOV2N2aHJ6YW03TDRnZ0ZYenRLRm5haU5WZERZcDhoajRkdDdKR3psaXNuRkVEOG1hbUhQVDNGYlZrUWpOM3kxSWdCckpDODlGTDJheEQtTXBrZVBOZWM4LXZicE1UZ21GZDlDZEUzeGc2a2xtYWZGSUdrUVdFYm9UOGdiWHBiaW9BUFRsemNyOGlFTjItM3hIMlZHRHpMQUdQeXRHMXBlUDRKMWZyUnhSTlA4TDFpY3B5M1YyRGd3c0NUNW01bDJrRVY0X2hfS1pLWWtlb0RpdE44a1RF?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Coinbase는 트럼프이 디지털 자산 시장 구조 법안을 지지한다는 신호를 보낸 후 암호화폐 주식을 더 높게 이끌었습니다.</a>
-<p class="news-desc">구글 뉴스에서 보도한 뉴스입니다.</p>
+<p class="news-desc">암호화폐 시장 주요 동향.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -143,7 +143,7 @@ description: "외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 109
 <div class="news-card-num">2</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMiygFBVV95cUxQM0ptNENGWHRYQngxLXM5d0pENWo0ZUM5bzVLZV9IcWNMSkh4LTVma0lOX3dZMlhPT2VzUnRSTmdIUFVKcEZXQzM3a1hlMDQzbXB6MTQ1UE5IZkZTRnY0TXRrWFhWWlpjOVEyakZDRmhwdDc2bVJjNWhlZlZQQ1hsYUl0ZEtGYUFZYkd4MXBsSzhKbWNFZWtUb0h5OWdYSVc5a0hRanlRakpmdGJtM0REcTlvUS0zZWtnY21WTy12d0R5TF80UDNBQXZB?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">파업 이후 이란 거래소에서 수백만 달러 상당의 암호화폐가 빠져나갔다고 연구원들이 밝혔습니다.</a>
-<p class="news-desc">구글 뉴스에서 보도한 뉴스입니다.</p>
+<p class="news-desc">암호화폐 시장 주요 동향.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -153,7 +153,7 @@ description: "외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 109
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMirgFBVV95cUxNT2VoX0dVNXZLZjNZRmstUFFiNUlSNVFzMmpFTHhhVEJVbThmZVpWc0Q3b1JXazNpZXMtbjk1cUlITmdOTmhyWWV4M2o3NEtOSkwzYlF1MnpVc2lSa2JNQUFDd2lvdld1aEpuWm16Wmc2Smx5UDhsYnhFV0RKRFR5WkNZNVY2R1dKZDdiYUdxYnhvTVg4TjMyRUR3TmltbmVjM2lkR0NWSGdwZXNUU3c?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Kraken의 은행 부문은 연준으로 SEC결제 계정을 확보한 최초의 암호화 회사가 되었습니다.</a>
-<p class="news-desc">구글 뉴스에서 보도한 금리·통화정책 관련 뉴스입니다.</p>
+<p class="news-desc">암호화폐 기업의 금융 인프라 접근 확대 관련 소식.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -169,14 +169,14 @@ description: "외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 109
 
 ### 🏛️ 정치/정책 (15건)
 
-*Trump, crypto, Bitcoin 관련 15건의 뉴스가 보고되었습니다.*
+*트럼프 Truth Social에서 디지털자산 법안 지지, 연준 의장 친비트코인 인사 지명, 스테이블코인 규제 논의.*
 
 
 <div class="news-card-item">
 <div class="news-card-num">1</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMiowFBVV95cUxNdGIyVy01OVFNazI4cmFaZHdNa3loWnd1SWNSYklyOEZROURZSzctSnNGXzI4VUc0RGhZLW5vRGloanVtVDYxMXRKN1l2T0pXYlFRLV9yeE5aa2tMeEllSldObzAtTGQ4anBKRWxJQzhkaDJiTXBmbUJTM29OZVliNjRvNE5lZi1zckcwV3JYYjM1MHR3eEVOdTFwV3Q4U1ltRFo0?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인, XRP 및 기타 암호화폐 가격이 오늘 상승하고 있습니다. 트럼프은 디지털 자산을 강화하기 위해 Truth Social에서 AId를 진행했습니다.</a>
-<p class="news-desc">구글 뉴스에서 보도한 비트코인 관련 시장 동향입니다.</p>
+<p class="news-desc">비트코인 가격 변동 및 시장 심리 분석.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -186,7 +186,7 @@ description: "외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 109
 <div class="news-card-num">2</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMixgFBVV95cUxPdGJRYmtvcXVXZGZ5eExsWWdPOE9PQW53VEFpNFZFdERNWXFZdU9HMDBGS0xITDQtc0ZROGRuaXMxd3pyYUxtaG9xUGJDSEM5dk11bzdpVjBwc1Ywcm9xc1FVSkdJMFRhMDAtQlZNZkpwNlEzTVFoeV9Eek1aSkNsMkRkM1RFc1pqWUg2bFlNXzdfM3BRb2tRTUxCZW40ay1rRGw5R0ZDSFp3SWQ1QWNKeTYwVGRHZkoxd20ySmI2RldQZDJ3U0E?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">스테이블코인은 비트코인이 반등하고 트럼프이 암호화폐 대 은행을 지원하면서 주목을 받고 있습니다.</a>
-<p class="news-desc">구글 뉴스에서 보도한 비트코인 관련 시장 동향입니다.</p>
+<p class="news-desc">비트코인 가격 변동 및 시장 심리 분석.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -213,14 +213,14 @@ description: "외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 109
 
 ### 🔵 규제/정책 (18건)
 
-*Crypto, Trump, Coinbase 관련 18건의 뉴스가 보고되었습니다.*
+*이란 $78억 암호화폐 시장 전쟁 속 주목, 인디애나주 암호화폐 법안 서명, 버지니아 키오스크 규정 통과.*
 
 
 <div class="news-card-item">
 <div class="news-card-num">1</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMisgFBVV95cUxNN2ZJckFfRDhSRDczMkN1WWQ5RXRTSlB2cngzc0dpNnRoTk9XNFRoaUVXQm9FcHpjckVXMWxxM0tmcVdLaFl5dUJyNFhTWDU5NTdOZ181ck1jM3VaZ09lb003OVFKMTNMS1FDd2Z5bEpxemdGdmJJNEZHZ28tS0JBWjctT2pfQmszaFlMaVlnNFNfQzN1R0ZfWDQwTHhscldzMXBkcVBjYnNPaXRCRjRvdk1B?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">이란의 78억 달러 규모의 암호화폐 시장이 전쟁에서 새로운 관심을 끌고 있습니다</a>
-<p class="news-desc">구글 뉴스에서 보도한 분쟁·안보 관련 뉴스입니다.</p>
+<p class="news-desc">이란-미국 갈등 속 암호화폐 시장 영향 분석.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -257,7 +257,7 @@ description: "외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 109
 ## 거래소 공지사항
 
 **1. [바이낸스 아카데미 비트코인 페이지: 퀴즈를 완료하고 2026년 3월 BTC 보상을 받으세요!](https://www.binance.com/en/support/announcement/detail/911c48510326483c913d1ed229dff2ae)**
-바이낸스 거래소에서 보도한 비트코인 관련 시장 동향입니다.
+바이낸스 아카데미 BTC 학습 퀴즈 이벤트로, 마케팅 프로모션입니다.
 `거래소: Binance`
 
 **2. [바이낸스는 수익 창출, 암호화폐 구매, 전환, VIP 대출 및 마진에 패브릭 프로토콜(ROBO)을 추가할 예정입니다.](https://www.binance.com/en/support/announcement/detail/caec3d0eff0546be94e5b56844e0c432)**
@@ -265,7 +265,7 @@ description: "외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 109
 `거래소: Binance`
 
 **3. [Block Street 거래 대회: Block Street(BSB) 거래 및 100만 BSB 보상 공유](https://www.binance.com/en/support/announcement/detail/70735b44f2de4791a6068cf3797ca084)**
-바이낸스 거래소에서 보도한 분쟁·안보 관련 뉴스입니다.
+바이낸스 BSB 토큰 거래 대회로, 100만 BSB 보상 이벤트입니다.
 `거래소: Binance`
 
 **4. [바이낸스, 시드 태그가 적용된 패브릭 프로토콜(ROBO) 상장 예정](https://www.binance.com/en/support/announcement/detail/82c9c8166a2a434681c20a23a346a5b8)**

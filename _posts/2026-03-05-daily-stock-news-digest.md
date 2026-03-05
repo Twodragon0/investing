@@ -7,7 +7,7 @@ tags: ["stock", "market", "daily-digest"]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/market-snapshot-2026-03-05.png"
-description: "외 P0 긴급 이슈 32건이 추가 감지되었습니다. 총 173건의 뉴스 중 P1 주요 이슈도 6건 확인됩니다."
+description: "KOSPI +8.13%(5,614), KOSDAQ +11.33%(1,117) 급등 반등. 미중동 유가 급등, 다우 238p 상승. 173건 분석."
 ---
 
 **2026-03-05** 주식 시장에서 173건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,614.49(+8.13%), KOSDAQ 1,117.23(+11.33%), USD/KRW 1,464.58(+0.19%).
@@ -15,7 +15,7 @@ description: "외 P0 긴급 이슈 32건이 추가 감지되었습니다. 총 17
 ## 한눈에 보기
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">173</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 81</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">리스크 위험</div></div><div class="stat-item"><div class="stat-value">5,614.49</div><div class="stat-label">KOSPI +8.13%</div></div><div class="stat-item"><div class="stat-value">1,117.23</div><div class="stat-label">KOSDAQ +11.33%</div></div></div>
-<div class="alert-box alert-info"><strong>주식 시장 긴급: [속보] '패닉셀' 코스피·코스닥 8%대 폭락…동반 서킷브레이커 - 173건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (81건): 코스피, 코스닥, Oil 관련 81건의 뉴스가 보고되었습니다.</li><li>📊 <strong>매크로/금리</strong> (21건): 환율, Inflation, 한은 관련 21건의 뉴스가 보고되었습니다.</li><li>🤖 <strong>AI/기술</strong> (14건): 삼성전자, Apple, 하이닉스 관련 14건의 뉴스가 보고되었습니다.</li><li>🟠 <strong>비트코인</strong> (5건): Nasdaq, Surges, Iran 관련 5건의 뉴스가 보고되었습니다.</li></ul></div>
+<div class="alert-box alert-info"><strong>주식 시장 긴급: [속보] '패닉셀' 코스피·코스닥 8%대 폭락…동반 서킷브레이커 - 173건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (81건): KOSPI·KOSDAQ 서킷브레이커 후 급반등, 매수 사이드카 발동. 유가 급등.</li><li>📊 <strong>매크로/금리</strong> (21건): S&P 500 인플레이션 우려, USD/KRW 1,464원, 한국 증시 반등 전망.</li><li>🤖 <strong>AI/기술</strong> (14건): 삼성전자·SK하이닉스 반도체 관련, 애플 MacBook Neo $599 출시.</li><li>🟠 <strong>비트코인</strong> (5건): 이란 긴장 속 비트코인 $70K 돌파, 나스닥 급등.</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiVkFVX3lxTFBqT2tyQ2FCSGVWMDc1bl9YSy1odWdSQmNVLS1qbzAtZTBuUDFQejVtakh1LWNIdmc2OXp4R1FreEx5TC02SWJPZGVBQVhSMnJBaG5KMmlR?hl=ko&gl=KR&ceid=KR%3Ako">[속보] '패닉셀' 코스피·코스닥 8%대 폭락…동반 서킷브레이커</a></li><li><a href="https://news.google.com/read/CBMibEFVX3lxTFBoR01UNGVEQTZIM0J3aTYzeldtLWFxZFBPNENLOWU0WUNXQjFuRE5HYUIydjNrdVdXdUZoNmNFa3VsOXl5dFRldXdkZ1BzOEMtVTJWSC1UbFhZTW1CZ01YcW1POGtmdjVXb1lYMA?hl=ko&gl=KR&ceid=KR%3Ako">코스피·코스닥 동반 급등…하루 만에 ‘매수 사이드카’</a></li><li><a href="https://news.google.com/read/CBMiVkFVX3lxTE4tV2RTVWtSODhTSFVhb0ZBUFVhR2M4T3N2QjBiR0xkNklWQnFJaUhfbEdzQ1lnOHFKUVIzcGFmNF9meDBQQ0xlaXhEeml1dEVWUEY4aVJR?hl=ko&gl=KR&ceid=KR%3Ako">[속보] 코스피·코스닥 서킷브레이커 발동…20분간 거래 중단</a></li></ul></div>
 
 ## 전체 뉴스 요약
@@ -23,13 +23,13 @@ description: "외 P0 긴급 이슈 32건이 추가 감지되었습니다. 총 17
 - KOSPI 5,614.49 (+8.13%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 1,117.23 (+11.33%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
 - 2026-03-05 주식 시장에서 173건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,614.49(+8.13%), KOSDAQ 1,117.23(+11.33%), USD/KRW 1,464.58(+0.19%).
-- *코스피, 코스닥, Oil 관련 81건의 뉴스가 보고되었습니다.*
+- *KOSPI·KOSDAQ 서킷브레이커 발동 후 급반등, 중동 유가 급등 여파로 에너지·방산주 강세.*
 
 ## 테마별 주요 뉴스
 
 ### 📈 가격/시장 (81건)
 
-*코스피, 코스닥, Oil 관련 81건의 뉴스가 보고되었습니다.*
+*KOSPI·KOSDAQ 서킷브레이커 발동 후 급반등, 중동 유가 급등 여파로 에너지·방산주 강세.*
 
 
 <div class="news-card-item">
@@ -67,7 +67,7 @@ description: "외 P0 긴급 이슈 32건이 추가 감지되었습니다. 총 17
 
 ### 📊 매크로/금리 (21건)
 
-*환율, Inflation, 한은 관련 21건의 뉴스가 보고되었습니다.*
+*S&P 500 선물 인플레이션 우려로 약세, USD/KRW 1,464원대, 한국 증시 반등 전망.*
 
 
 <div class="news-card-item">
@@ -83,7 +83,7 @@ description: "외 P0 긴급 이슈 32건이 추가 감지되었습니다. 총 17
 <div class="news-card-num">2</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxPeXJTRFp0RFotdVIxM1ZIbExTOGtMNHJuMTRKYUF0UlBRUm9rcjd2b1pxZWctcmlqbUh1c0lWeDFCQ20tUjlNZkJ6VnFrYmxuelRGUzl1LTBNUEpMV2tDZnRhV2ZnVWkxU0FfSjljZ3pMYmdQS2tORHFxS0dLVHE2VGV6NmYxWl9YblgwbUlmVUxTczIyRkpSeW4tWVM0a3N5dGhrX2ZIdFRWSDQyLXRHWTh3QUdZZDNDNGfSAb8BQVVfeXFMT0JCZF9OYW5WT2JuQ2lfZFZ0Mm5rUThfLXg5S0xkZWhmUFQyX3ZCUGdBVGxBeFAzSU85VlpRSHhyaWhZVmhwZXhRWFhuY2lvMlFDbWthNHpCV1NFRmRlOUV0SnpPYkRSVWx0aTlXcHdXbDRMQmNuSFlTY2NhMWVOSkV6WFBsaWJyVjljWFotOTVNQ0ZCYlRfM1d3YkFTQXhVeEJFbV8yZkVQS2UyREMxRnRFQlRlazVhZ1QwYk9ZNGs?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">US Stock Market Today S&amp;P 500 Futures Edge Lower As Inflation Concerns Linger - simplywall.st</a>
-<p class="news-desc">US Stock Market Today S&amp;P 500 Futures Edge Lower As Inflation Concerns Linger simplywall.st</p>
+<p class="news-desc">S&P 500 선물 소폭 하락, 인플레이션 우려가 지속되는 가운데 시장 경계감 확대.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -93,7 +93,7 @@ description: "외 P0 긴급 이슈 32건이 추가 감지되었습니다. 총 17
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxOU0NfeU51TTZJV3VpdS1TRGRGNWE5c1hYZE4tZ3Y4djNzWmliU0trU2ZvRmRiMnQ2SGprZmhGVlNkaTcyRXpmRWJTSXM2cjhiLWl1dGp0eTFXT1dRclNNN3FyUFNNZTJyWm0tYko1RzFvdEViWnVsUjBpVzM1OWxJVUZhUlppdkkwMjQ2bzU5ajBmRHd6Qnc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Korean Stocks to Bounce, US Inflation Fears Ease: Markets Wrap - Bloomberg.com</a>
-<p class="news-desc">Korean Stocks to Bounce, US Inflation Fears Ease: Markets Wrap Bloomberg.com</p>
+<p class="news-desc">한국 증시 반등 전망, 미국 인플레이션 우려 완화 — Bloomberg 시장 종합.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>

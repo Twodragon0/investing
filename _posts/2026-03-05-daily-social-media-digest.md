@@ -2,12 +2,12 @@
 layout: post
 title: "소셜 미디어 동향 - 2026-03-05"
 date: 2026-03-05 03:31:10 +0000
-categories: [crypto-news]
+categories: [social-media]
 tags: ["social-media", "telegram", "twitter", "reddit", "politics", "trump", "이재명", "daily-digest"]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/source-distribution-2026-03-05.png"
-description: "속보:🇺🇸 Blackrock은 agAIn을 로드하고 있으며 $296,750,000 상당의 4,309 BTC을 구입했습니다.이것은 강세🔥입니다."
+description: "BlackRock 4,309 BTC($2.97억) 매수, 트럼프 암호화폐 법안 지지, 코스피 폭락 후 100조 시장안정 프로그램 가동. 46건 분석."
 ---
 
 **2026-03-05** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 26건, 총 46건이 수집되었습니다.
@@ -15,8 +15,8 @@ description: "속보:🇺🇸 Blackrock은 agAIn을 로드하고 있으며 $296,
 ## 한눈에 보기
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">46</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🏛️ 14</div><div class="stat-label">정치/정책</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div></div>
-<div class="alert-box alert-info"><strong>소셜 긴급: 박수영 "코스피 대폭락…경제 패닉서 李대통령 침묵 일관" - 데일리안 - 46건 분석</strong><ul><li>🏛️ <strong>정치/정책</strong> (14건): Trump, banks, crypto 관련 14건의 뉴스가 보고되었습니다.</li><li>📊 <strong>매크로/금리</strong> (12건): 금리, Telegram, Tether 관련 12건의 뉴스가 보고되었습니다.</li><li>🟠 <strong>비트코인</strong> (12건): Telegram, Bitcoin, Blackrock 관련 12건의 뉴스가 보고되었습니다.</li><li>📈 <strong>가격/시장</strong> (10건): 금리, 비트코인, 암호화폐 관련 10건의 뉴스가 보고되었습니다.</li></ul></div>
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFAxdHl5M1ltMmZ6bl9ZME9Bb254WnBXd0NjWlEtZWl4R0VyNE1KcENvNUNZRGctdDB4S2dQcmowLXBWenE0bGY0UE1JMjVrSjNZMllxZkF30gGmAkFVX3lxTE9KSVRWWmF5Ty0xcm1zOXdvMjF2a1hPTjRCU1FWN3NHMWpBNHp3Q1lmcnV3SVNDbE1pUmxrbjNyUVhjRnJPRWVsMjhrclNhZU5KQXBIS19nNW1yQWJXTGE2dlFSWlh0Mm1YdDFZQWg3T2F2Z0h2bUhqbndzNHZ5LXl4WFJjLWpCd0JzeW9wYUtadUNra056TWd1VEhDRGotcklqYVBVU1ZySENyREtqMUpnYnJVdDVDZUNFN3BUcS0tb0hCTV8zaGRuT0dGamt1RmNwT0VFS3ExdXJXSk5qVlFWaWt3RTU5ZmRGZUdqUHpoZkYwSmZ2MWxMQXVZS18zMGtUVnRVeWFkQ0FkXzlFbzc5QThVSjdWNmNHdnJXMkdDalpPcU9zQQ?oc=5">박수영 "코스피 대폭락…경제 패닉서 李대통령 침묵 일관" - 데일리안</a> <span class="p0-desc">박수영 "코스피 대폭락…경제 패닉서 李대통령 침묵 일관" 데일리안</span></li></ul></div>
+<div class="alert-box alert-info"><strong>소셜 긴급: 박수영 "코스피 대폭락…경제 패닉서 李대통령 침묵 일관" - 데일리안 - 46건 분석</strong><ul><li>🏛️ <strong>정치/정책</strong> (14건): 트럼프 암호화폐 법안 지지, 은행 비난. 이재명 100조 시장안정 프로그램.</li><li>📊 <strong>매크로/금리</strong> (12건): Tether 6천만 USDT 발행, 한은 금리정책, 증시 안정 조치.</li><li>🟠 <strong>비트코인</strong> (12건): BlackRock 4,309 BTC 매수, 이란 최고지도자 사망 후 BTC $68K 회복.</li><li>📈 <strong>가격/시장</strong> (10건): 코스피 폭락·반등, 비트코인 급등, 환율 변동성 확대.</li></ul></div>
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFAxdHl5M1ltMmZ6bl9ZME9Bb254WnBXd0NjWlEtZWl4R0VyNE1KcENvNUNZRGctdDB4S2dQcmowLXBWenE0bGY0UE1JMjVrSjNZMllxZkF30gGmAkFVX3lxTE9KSVRWWmF5Ty0xcm1zOXdvMjF2a1hPTjRCU1FWN3NHMWpBNHp3Q1lmcnV3SVNDbE1pUmxrbjNyUVhjRnJPRWVsMjhrclNhZU5KQXBIS19nNW1yQWJXTGE2dlFSWlh0Mm1YdDFZQWg3T2F2Z0h2bUhqbndzNHZ5LXl4WFJjLWpCd0JzeW9wYUtadUNra056TWd1VEhDRGotcklqYVBVU1ZySENyREtqMUpnYnJVdDVDZUNFN3BUcS0tb0hCTV8zaGRuT0dGamt1RmNwT0VFS3ExdXJXSk5qVlFWaWt3RTU5ZmRGZUdqUHpoZkYwSmZ2MWxMQXVZS18zMGtUVnRVeWFkQ0FkXzlFbzc5QThVSjdWNmNHdnJXMkdDalpPcU9zQQ?oc=5">박수영 "코스피 대폭락…경제 패닉서 李대통령 침묵 일관" - 데일리안</a> <span class="p0-desc">국민의힘 박수영 의원, 코스피 대폭락 속 이재명 대통령의 경제 위기 대응 침묵 비판.</span></li></ul></div>
 
 ## 전체 뉴스 요약
 
@@ -67,19 +67,19 @@ Ledger에 따르면 2.3M - 3.7M 비트코인은 영구적으로 손실됩니다.
 ## 정치·경제 동향
 
 **1. [비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지-[美증시 특징주] - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9OY1hwcktwa1JpaTBIdzdZRmF4alMxbW1WUDN0azdyVk1TdUhXNGpsdzJHTnB5bDBUaG1VSzg5XzVGXzROZmZGX3VFdmpXaGM?oc=5)**
-비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지-[美증시 특징주] v.daum.net
+트럼프 대통령이 Truth Social에서 암호화폐 시장구조 법안을 공개 지지하며 비트코인이 반등했습니다. 미 증시 특징주.
 <span class="source-tag" data-source-type="default">트럼프 경제정책 KR</span>
 
 **2. [[오늘의 비트코인] 트럼프, 암호화폐 법안 지지…7만2000달러 돌파 - 네이트](https://news.google.com/rss/articles/CBMiU0FVX3lxTFBJcEJkLW9nbWZoMU9DRnlVUEdkSDBhZTlVVW45Z24wMXVDRDlOQUF2MWV4OGQ4dVBVUTluQ0p6TkpmS2dtMklxR3RJeW1PdnctS0p3?oc=5)**
-[오늘의 비트코인] 트럼프, 암호화폐 법안 지지…7만2000달러 돌파 네이트
+트럼프의 암호화폐 법안 지지 발표로 비트코인이 7만2000달러를 돌파했습니다.
 <span class="source-tag" data-source-type="default">트럼프 경제정책 KR</span>
 
 **3. [[속보] 李 대통령, 증시·환율 변동성에 '100조 시장안정 프로그램 신속 가동' 지시 - 내외뉴스통신](https://news.google.com/rss/articles/CBMibkFVX3lxTE1TR1JBYlRsMF9yR3VDMEFuVWJwQVdlYk1EbU1uVmh2SlZpRkJjV0pMbExWaUR3LW5ITjU2MVlvSlNOczE1M0NSaTJoT3NLSEVZSVBISUhlWGVLeUpnWkVCRlV3c2x1VXlWenJKYWRR0gFwQVVfeXFMT1ZjVTlmRnFHemt4cTZBcm94QWg1T0RmZE9NeXhFdEk5TXgxZkwxQ3F3ZlljMi01ajFIZ1oxVWF0S0xCQWx1M2Q1TlppNVN3Z1NQelFlNklTcWtGSGprLVhIVU5JLTU3bVpEWS1mRWdpaQ?oc=5)**
-[속보] 李 대통령, 증시·환율 변동성에 '100조 시장안정 프로그램 신속 가동' 지시 내외뉴스통신
+이재명 대통령이 증시·환율 급변동에 대응하여 100조원 규모의 시장안정 프로그램 신속 가동을 지시했습니다.
 <span class="source-tag" data-source-type="default">이재명 경제정책</span>
 
 **4. [박수영 "코스피 대폭락…경제 패닉서 李대통령 침묵 일관" - 데일리안](https://news.google.com/rss/articles/CBMiVkFVX3lxTFAxdHl5M1ltMmZ6bl9ZME9Bb254WnBXd0NjWlEtZWl4R0VyNE1KcENvNUNZRGctdDB4S2dQcmowLXBWenE0bGY0UE1JMjVrSjNZMllxZkF30gGmAkFVX3lxTE9KSVRWWmF5Ty0xcm1zOXdvMjF2a1hPTjRCU1FWN3NHMWpBNHp3Q1lmcnV3SVNDbE1pUmxrbjNyUVhjRnJPRWVsMjhrclNhZU5KQXBIS19nNW1yQWJXTGE2dlFSWlh0Mm1YdDFZQWg3T2F2Z0h2bUhqbndzNHZ5LXl4WFJjLWpCd0JzeW9wYUtadUNra056TWd1VEhDRGotcklqYVBVU1ZySENyREtqMUpnYnJVdDVDZUNFN3BUcS0tb0hCTV8zaGRuT0dGamt1RmNwT0VFS3ExdXJXSk5qVlFWaWt3RTU5ZmRGZUdqUHpoZkYwSmZ2MWxMQXVZS18zMGtUVnRVeWFkQ0FkXzlFbzc5QThVSjdWNmNHdnJXMkdDalpPcU9zQQ?oc=5)**
-박수영 "코스피 대폭락…경제 패닉서 李대통령 침묵 일관" 데일리안
+국민의힘 박수영 의원이 코스피 대폭락 속 이재명 대통령의 침묵을 비판했습니다.
 <span class="source-tag" data-source-type="default">이재명 경제정책</span>
 
 **5. [브라이언 암스트롱은 대통령이 암호화폐 청구서 때문에 은행을 비난하기 전 트럼프을 만났습니다 - CoinDesk](https://news.google.com/rss/articles/CBMiyAFBVV95cUxPU3l0eTIyNmdRLWlKNUg1V20tejE3eTJjODdaZlRBUVVZWklqYV9xaFVaQnhIb28zamdER0tTNW1xaEZSeXFuZlZjTlY1Z1FDcDUtaGFORzYxdm82V0VNbHlqT3BBUkVLNWFYQ1lCM05ubmRpVkZrSTZ4S0pYQmZIU3l1NERGRGVVOFVuQjlJb2NYSnJtdGdqREpXZlNsbkdLeTZpU21IV2hvdFVsV0dla3ctZG1VNHJEZWdZbnQ0cFRZa3ZhMUlRTw?oc=5)**
@@ -87,7 +87,7 @@ Ledger에 따르면 2.3M - 3.7M 비트코인은 영구적으로 손실됩니다.
 <span class="source-tag" data-source-type="default">Trump Crypto Policy</span>
 
 **6. [트럼프 대통령: 은행들이 미국 암호화폐 의제를 '위협'하고 있습니다 — 최대한 빨리 CLARITY 법 통과를 요구합니다 - Yahoo Finance](https://news.google.com/rss/articles/CBMiigFBVV95cUxNNlpYd1prallxNUdQTWdYenRUM0IzRG12VjNWM09TWThOb0N2LU9ldmlvVy14YW1pRkhva0t0ekQyakdVS2dfSC1SYkZQZkF4TkZqNm9nUEZTTi1mYlpYa3g0MG5OWmFWTHhxdmd4bl9MZHQyR2tVS3NDWnR5QmVVN3FIOXFqOC1oZVE?oc=5)**
-트럼프 대통령: 은행들이 미국 암호화폐 의제를 '위협'하고 있습니다 - 최대한 빨리 CLARITY 법 통과를 요구 Yahoo Finance
+트럼프 대통령이 은행들이 미국 암호화폐 의제를 '위협'하고 있다며 CLARITY 법 조속 통과를 요구했습니다.
 <span class="source-tag" data-source-type="default">Trump Crypto Policy</span>
 
 **7. [트럼프, 암호화폐 청구서 보류로 은행 비난, 의회에 '최대한 빨리' 법안 통과 촉구 - The Hill](https://news.google.com/rss/articles/CBMivAFBVV95cUxQX3VKZjhKX29hSWxRLTl6WmowcHBGZl9DeHBTM1BWVXdrckxCb3B1Nk5oTTJHcV9QUmFST1pNSURLcE5XclRrMjBZRnpCRDVnRUR4WUYwdjhzZFV5NGQzT2Z6RlpCTjhDZXRCcnNYWmNES0RFTUsxU240QzhBVUFOal9wRWktZjBMbldxVGx6WTMwNW5vcVpxeTJXMDlhM245SmRPUXg0SlBtY0lUbmdLMTBFTWtyN1Z1MnNiMNIBwgFBVV95cUxNQXV3SXhTZkFDM1ZXNEtwUVgxWHpZUllNSU51UkktdEFwTHVsYmpwOGF6RUhtTDZZSnBtbEtPRk96b1IyQ1VYNjhiV2FVaXIwV19iVUVTSzNvUlNPMENGUVNJVHEzMm02dkJaSVp2R3FRZmhfaENTOEw4Q1NPWHBtVFV1WlZvZDdhdVdlRGJISzE3M0xKdm1yYU1fbmtmaFVKYVllRElvYVRpcEE5RWVHSkV0UGp3T25jUDkyYVowSWxXZw?oc=5)**
@@ -119,9 +119,9 @@ World Liberty의 공동 창립자인 Eric 트럼프은 스테이블코인이 Coi
 - [[Telegram] 🇺🇸 President Trump said, Unfortunately, in recent years, the US Government sold 10,000s of #Bitcoin...](https://t.me/crypto/3550) — Telegram @crypto
   > 🇺🇸 President Trump said, Unfortunately, in recent years, the US Government sold 10,000s of #Bitcoin that would have...
 - [비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지-[美증시 특징주] - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9OY1hwcktwa1JpaTBIdzdZRmF4alMxbW1WUDN0azdyVk1TdUhXNGpsdzJHTnB5bDBUaG1VSzg5XzVGXzROZmZGX3VFdmpXaGM?oc=5) — 트럼프 경제정책 KR
-  > 비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지-[美증시 특징주] v.daum.net
+  > 비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지-[美증시 특징주]
 - [[속보] 李 대통령, 증시·환율 변동성에 '100조 시장안정 프로그램 신속 가동' 지시 - 내외뉴스통신](https://news.google.com/rss/articles/CBMibkFVX3lxTE1TR1JBYlRsMF9yR3VDMEFuVWJwQVdlYk1EbU1uVmh2SlZpRkJjV0pMbExWaUR3LW5ITjU2MVlvSlNOczE1M0NSaTJoT3NLSEVZSVBISUhlWGVLeUpnWkVCRlV3c2x1VXlWenJKYWRR0gFwQVVfeXFMT1ZjVTlmRnFHemt4cTZBcm94QWg1T0RmZE9NeXhFdEk5TXgxZkwxQ3F3ZlljMi01ajFIZ1oxVWF0S0xCQWx1M2Q1TlppNVN3Z1NQelFlNklTcWtGSGprLVhIVU5JLTU3bVpEWS1mRWdpaQ?oc=5) — 이재명 경제정책
-  > [속보] 李 대통령, 증시·환율 변동성에 '100조 시장안정 프로그램 신속 가동' 지시 내외뉴스통신
+  > [속보] 李 대통령, 증시·환율 변동성에 '100조 시장안정 프로그램 신속 가동' 지시
 
 ### 📊 매크로/금리 (12건)
 
@@ -132,7 +132,7 @@ World Liberty의 공동 창립자인 Eric 트럼프은 스테이블코인이 Coi
 - [[Telegram] 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx:...](https://t.me/whale_alert/11524) — Telegram @whale_alert
   > 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://t.co/8IMl0Zw0DM
 - [[속보] 李 대통령, 증시·환율 변동성에 '100조 시장안정 프로그램 신속 가동' 지시 - 내외뉴스통신](https://news.google.com/rss/articles/CBMibkFVX3lxTE1TR1JBYlRsMF9yR3VDMEFuVWJwQVdlYk1EbU1uVmh2SlZpRkJjV0pMbExWaUR3LW5ITjU2MVlvSlNOczE1M0NSaTJoT3NLSEVZSVBISUhlWGVLeUpnWkVCRlV3c2x1VXlWenJKYWRR0gFwQVVfeXFMT1ZjVTlmRnFHemt4cTZBcm94QWg1T0RmZE9NeXhFdEk5TXgxZkwxQ3F3ZlljMi01ajFIZ1oxVWF0S0xCQWx1M2Q1TlppNVN3Z1NQelFlNklTcWtGSGprLVhIVU5JLTU3bVpEWS1mRWdpaQ?oc=5) — 이재명 경제정책
-  > [속보] 李 대통령, 증시·환율 변동성에 '100조 시장안정 프로그램 신속 가동' 지시 내외뉴스통신
+  > [속보] 李 대통령, 증시·환율 변동성에 '100조 시장안정 프로그램 신속 가동' 지시
 
 ### 🟠 비트코인 (12건)
 
@@ -152,9 +152,9 @@ World Liberty의 공동 창립자인 Eric 트럼프은 스테이블코인이 Coi
 - [[Telegram] BREAKING :🇺🇸 Blackrock is loading again, they have bought 4,309 BTC worth $296,750,000.This is...](https://t.me/crypto/3542) — Telegram @crypto
   > BREAKING :🇺🇸 Blackrock is loading again, they have bought 4,309 BTC worth $296,750,000.This is Bullish🔥
 - [비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지-[美증시 특징주] - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9OY1hwcktwa1JpaTBIdzdZRmF4alMxbW1WUDN0azdyVk1TdUhXNGpsdzJHTnB5bDBUaG1VSzg5XzVGXzROZmZGX3VFdmpXaGM?oc=5) — 트럼프 경제정책 KR
-  > 비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지-[美증시 특징주] v.daum.net
+  > 비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지-[美증시 특징주]
 - [[오늘의 비트코인] 트럼프, 암호화폐 법안 지지…7만2000달러 돌파 - 네이트](https://news.google.com/rss/articles/CBMiU0FVX3lxTFBJcEJkLW9nbWZoMU9DRnlVUEdkSDBhZTlVVW45Z24wMXVDRDlOQUF2MWV4OGQ4dVBVUTluQ0p6TkpmS2dtMklxR3RJeW1PdnctS0p3?oc=5) — 트럼프 경제정책 KR
-  > [오늘의 비트코인] 트럼프, 암호화폐 법안 지지…7만2000달러 돌파 네이트
+  > [오늘의 비트코인] 트럼프, 암호화폐 법안 지지…7만2000달러 돌파
 
 ### 🔵 규제/정책 (6건)
 
@@ -163,9 +163,9 @@ World Liberty의 공동 창립자인 Eric 트럼프은 스테이블코인이 Coi
 - [[Telegram] 🇺🇸 President Trump said, Unfortunately, in recent years, the US Government sold 10,000s of #Bitcoin...](https://t.me/crypto/3550) — Telegram @crypto
   > 🇺🇸 President Trump said, Unfortunately, in recent years, the US Government sold 10,000s of #Bitcoin that would have...
 - [비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지-[美증시 특징주] - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9OY1hwcktwa1JpaTBIdzdZRmF4alMxbW1WUDN0azdyVk1TdUhXNGpsdzJHTnB5bDBUaG1VSzg5XzVGXzROZmZGX3VFdmpXaGM?oc=5) — 트럼프 경제정책 KR
-  > 비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지-[美증시 특징주] v.daum.net
+  > 비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지-[美증시 특징주]
 - [[오늘의 비트코인] 트럼프, 암호화폐 법안 지지…7만2000달러 돌파 - 네이트](https://news.google.com/rss/articles/CBMiU0FVX3lxTFBJcEJkLW9nbWZoMU9DRnlVUEdkSDBhZTlVVW45Z24wMXVDRDlOQUF2MWV4OGQ4dVBVUTluQ0p6TkpmS2dtMklxR3RJeW1PdnctS0p3?oc=5) — 트럼프 경제정책 KR
-  > [오늘의 비트코인] 트럼프, 암호화폐 법안 지지…7만2000달러 돌파 네이트
+  > [오늘의 비트코인] 트럼프, 암호화폐 법안 지지…7만2000달러 돌파
 
 
 ---
