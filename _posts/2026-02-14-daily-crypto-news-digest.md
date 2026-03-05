@@ -112,7 +112,7 @@ DeFi   █░░░░░░░░░░░░░░░░░    10%  (7건)
 > 거래소 분야에서 Binance, Barclays, Benchmark 관련 이슈가 부각되고 있습니다.
 
 **1. [Wall Street analysts slash Coinbase price targets after Q4 miss — but shares rally](https://www.coindesk.com/markets/2026/02/13/wall-street-analysts-slash-coinbase-price-targets-after-q4-miss-but-shares-still-rally)**
-Barclays, Benchmark, Clear Street, and JPMorgan all cut targets, citing weak retail trading and macro headwinds.
+바클레이스, 벤치마크, 클리어 스트리트, JP모건 모두 약한 소매 거래와 거시경제 역풍을 이유로 목표가를 하향 조정했습니다.
 `출처: CoinDesk`
 
 **2. [New Cryptocurrency ListingCheck out the latest coin listings and pairs on Launchpad, Launchpool, Spot, Margin, and Futures markets.](https://www.binance.com/en/support/announcement/list/48)**
@@ -145,15 +145,15 @@ Barclays, Benchmark, Clear Street, and JPMorgan all cut targets, citing weak ret
 > DeFi 분야에서 recovery, Crypto, Fear 관련 이슈가 부각되고 있습니다.
 
 **1. [Bitcoin claws back to $70,000 on cooling inflation after $8.7 billion wipeout](https://www.coindesk.com/markets/2026/02/14/bitcoin-claws-back-to-usd70-000-on-cooling-inflation-after-usd8-7-billion-wipeout)**
-Despite the price recovery, the Crypto Fear & Greed Index remains in “extreme fear,” indicating underlying market anxiety.
+가격이 회복되었음에도 불구하고, 암호화폐 공포·탐욕 지수는 “극도의 공포” 상태를 유지하며 시장 저변의 불안감을 나타내고 있습니다.
 `출처: CoinDesk`
 
 **2. [Trump-linked Truth Social seeks SEC approval for two crypto ETFs](https://www.coindesk.com/markets/2026/02/13/trump-linked-truth-social-seeks-sec-approval-for-two-crypto-etfs)**
-The filings include a bitcoin and ether ETF and a staking-focused Cronos fund, deepening the Truth Social brand’s ambitions in digital asset investing
+신청서에는 비트코인·이더 ETF와 스테이킹 중심의 크로노스 펀드가 포함되어 있으며, 디지털 자산 투자에 대한 Truth Social 브랜드의 야망을 더욱 심화시키고 있습니다.
 `출처: CoinDesk`
 
 **3. [Crypto group counters Wall Street bankers with its own stablecoin principles for bill](https://www.coindesk.com/policy/2026/02/13/crypto-group-counters-wall-street-bankers-with-its-own-stablecoin-principles-for-bill)**
-After the bankers shared a document at the White House demanding a total ban on stablecoin yield, the crypto side answers that it needs some stablecoi
+은행가들이 스테이블코인 수익률의 전면 금지를 요구하는 문서를 백악관에서 공유한 후, 암호화폐 측은 일부 스테이블코인 수익률이 필요하다고 반박했습니다.
 `출처: CoinDesk`
 
 > 그 외 4건: [U.S.-based DeFi group urges UK FCA to anchor crypto rules to 'unilateral control'](https://www.coindesk.com/policy/2026/02/13/u-s-based-defi-advocacy-group-urges-uk-fca-to-anchor-crypto-rules-to-unilateral-control), [CoinDesk 20 performance update: Uniswap (UNI) jumps 5.4%, leading index higher](https://www.coindesk.com/coindesk-indices/2026/02/13/coindesk-20-performance-update-uniswap-uni-jumps-5-4-leading-index-higher)

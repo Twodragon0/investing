@@ -92,7 +92,7 @@ excerpt: "암호화폐 67건, 주식 82건, 규제 25건, 소셜 미디어 7건,
 
 - [Trump Media Files to Launch Truth Social-Branded Bitcoin, Ethereum, Cronos ETFs](https://news.google.com/read/CBMiggFBVV95cUxPQVdUUVdnMVNJWEVrTmZ5YU9EbzZoM3VVbVVzN280Z21obWg0VXBOYzRERURIckswVXV4enZFRHZ3azU5YlI5RTY0NEJNUzNfSG1xNVBiOXd4YUk3R0tIemJBelROZnhSdml3YUtLQkUwMU5XSDV3QWZMMkloVUxRQkJn?hl=en-US&gl=US&ceid=US%3Aen)
 - [Interested in Bitcoin or Ethereum? These ETFs Offer Exposure to Digital Tokens](https://news.google.com/read/CBMipgFBVV95cUxPVmNlUndHM2ExT2hOZVJMS3AyeUZiVTl6NVN4UjBhbUJmalpqNm01cS10SjJHUnRBRG9ZcGZhc213S3lVaHM5aXoyTkdfR2dlZEVGVVlVYVpHenhGLUpGX2FIYkNka3pDMFlVTGh0dllNSFpzeDA2S2tnM0hQVUNRUEZpR0d3VklFTkhzMjAtYlBPNnBEVzhnWmhmYjlqQ0w3WTdPTEVn?hl=en-US&gl=US&ceid=US%3Aen)
-- [New Cryptocurrency ListingCheck out the latest coin listings and pairs on Launchpad, Launchpool, Spot, Margin, and Futures markets.](https://www.binance.com/en/support/announcement/list/48)
+- [새로운 암호화폐 상장 - Launchpad, Launchpool, Spot, Margin, Futures 시장의 최신 코인 상장 및 거래 쌍 확인](https://www.binance.com/en/support/announcement/list/48)
 - [Trump-linked Truth Social seeks SEC approval for two crypto ETFs](https://news.google.com/read/CBMirAFBVV95cUxQVmJ1bmNyMG1wZl9BLVFSMXZ2UklUMmRmM1pTVkJ4blBDbDdUOFAyUlV5TmFacU9PZXI1MlY4MlBSS1BiVVp2N29qTHBROTlDSEJPNTNaMjFaR1FHZzFOcWlIOWVnZjQtdEZxRjU2S05uRTFlSXJuTUdfYng3cE9wbkp3SjVCZzdkTTM0NVJGYXpXbDAyVWlkektjbFpOb0hUMExRMnl0UVJjZ1Az?hl=en-US&gl=US&ceid=US%3Aen)
 - [Trump Could Reduce Steel And Aluminum Tariffs And These Stocks Are Responding](https://www.investors.com/news/trump-steel-aluminum-tariffs-steel-stocks-respond/?src=A00220&yptr=yahoo)
 

@@ -28,11 +28,11 @@ image: "/assets/images/generated/news-briefing-crypto-2026-02-07.png"
 
 ## 글로벌 뉴스
 
-1. **How Should Cryptocurrency Be Taxed? Bipartisan Principles on Mining, Staking, De Minimis, and More** (Bipartisan Policy Center)
-2. **Cryptocurrency Earthquake: Satoshi Nakamoto's identity revealed, it turns out to be a team** (Binance)
-3. **It's known as "Don Colossus." A group of cryptocurrency investors paid $300,000 to have a 15-foot-tall statue of President Trump sculpted** (Google News)
-4. **How cryptocurrency's second largest coin missed out on the industry's boom** (The Guardian)
-5. **Utahn who lost $850K hopes lawmakers crack down on cryptocurrency fraud** (KSL News)
+1. **암호화폐 과세 방법은? 채굴, 스테이킹, 소액 면세 등에 관한 초당파적 원칙** (Bipartisan Policy Center)
+2. **암호화폐 대지진: 사토시 나카모토의 정체 공개, 팀으로 밝혀져** (Binance)
+3. **"돈 콜로수스"로 알려진 이 작품, 암호화폐 투자자 그룹이 30만 달러를 들여 트럼프 대통령의 4.5미터 조각상 제작** (Google News)
+4. **암호화폐 시가총액 2위 코인이 업계 호황을 놓친 이유** (The Guardian)
+5. **85만 달러를 잃은 유타주 피해자, 암호화폐 사기 단속을 위한 입법 촉구** (KSL News)
 
 ### 핵심 데이터
 - **수집된 뉴스**: 20개 (국내 10개, 글로벌 15개)

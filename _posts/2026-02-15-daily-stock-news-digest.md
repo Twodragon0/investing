@@ -121,7 +121,7 @@ description: "2026-02-15 주식 시장에서 82건의 뉴스를 분석했습니�
 <span class="source-tag">Google News</span>
 
 **3. [Stock market today: S&P 500, Dow, Nasdaq step lower after CPI inflation cools more than expected - Yahoo Finance](https://news.google.com/rss/articles/CBMi5wFBVV95cUxPTF91VUVDTkxYUjUxNE5SZjFUc3I0alF3aTVTZmktODZTSENrNlpxYnU5VWxHbFczcFhhMW9wSnpZTHdJSDRjWGZZUS1VbzZmcERsanNLQU5vREZ5dE1VSXotczFEUF8zQzBobUdPVnNWRGV1eFhESzRyMnhfZkxsZERLWGJhbndEQTk4d2JvNURBVFJHQzYxbmpGei1MamMtaWJHUkQwN2wwanhvVmtCc1dEX1RoaTk5eFhlVEJ4MDZIWHF3TF9DWmwwTzZDQmxsd2stejVqOEVqbmxBdk0xVnA3c2lpN0E?oc=5)**
-Stock market today: S&P 500, Dow, Nasdaq step lower after CPI inflation cools more than expected Yahoo Finance Stock market today: Dow, S&P 500, Nasda
+주식 시장: CPI 인플레이션이 예상보다 큰 폭으로 냉각된 후 S&P 500, 다우, 나스닥 하락 - Yahoo Finance
 <span class="source-tag">Google News Stocks EN</span>
 
 <details><summary>그 외 2건 보기</summary><div class="details-content">
@@ -135,7 +135,7 @@ Stock market today: S&P 500, Dow, Nasdaq step lower after CPI inflation cools mo
 *정치/정책 분야에서 Nasdaq, step, lower 관련 이슈가 부각되고 있습니다.*
 
 **1. [Stock market today: S&P 500, Dow, Nasdaq step lower after CPI inflation cools more than expected - Yahoo Finance](https://news.google.com/rss/articles/CBMi5wFBVV95cUxPTF91VUVDTkxYUjUxNE5SZjFUc3I0alF3aTVTZmktODZTSENrNlpxYnU5VWxHbFczcFhhMW9wSnpZTHdJSDRjWGZZUS1VbzZmcERsanNLQU5vREZ5dE1VSXotczFEUF8zQzBobUdPVnNWRGV1eFhESzRyMnhfZkxsZERLWGJhbndEQTk4d2JvNURBVFJHQzYxbmpGei1MamMtaWJHUkQwN2wwanhvVmtCc1dEX1RoaTk5eFhlVEJ4MDZIWHF3TF9DWmwwTzZDQmxsd2stejVqOEVqbmxBdk0xVnA3c2lpN0E?oc=5)**
-Stock market today: S&P 500, Dow, Nasdaq step lower after CPI inflation cools more than expected Yahoo Finance Stock market today: Dow, S&P 500, Nasda
+주식 시장: CPI 인플레이션이 예상보다 큰 폭으로 냉각된 후 S&P 500, 다우, 나스닥 하락 - Yahoo Finance
 <span class="source-tag">Google News Stocks EN</span>
 
 **2. [Trump Could Reduce Steel And Aluminum Tariffs And These Stocks Are Responding](https://www.investors.com/news/trump-steel-aluminum-tariffs-steel-stocks-respond/?src=A00220&yptr=yahoo)**

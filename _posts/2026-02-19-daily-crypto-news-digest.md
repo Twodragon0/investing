@@ -104,7 +104,7 @@ As crypto industry expands, U.S. slashes office examining dirty money safeguards
 <span class="source-tag">구글 뉴스</span>
 
 **3. [Coinbase’s Crypto-Backed Lending Product Expands to XRP and DOGE](https://decrypt.co/358480/coinbases-crypto-backed-lending-product-xrp-doge)**
-Coinbase signaled its crypto-backed lending product is expanding in the U.S., unveiling support for XRP, Dogecoin, Cardano, and Litecoin.
+코인베이스는 암호화폐 담보 대출 상품의 미국 내 확장을 예고하며 XRP, 도지코인, 카르다노, 라이트코인 지원을 발표했다.
 <span class="source-tag">Decrypt</span>
 
 <details><summary>그 외 17건 보기</summary><div class="details-content">
@@ -157,7 +157,7 @@ Coinbase signaled its crypto-backed lending product is expanding in the U.S., un
 
 ## 거래소 공지사항
 
-**1. [New Cryptocurrency ListingCheck out the latest coin listings and pairs on Launchpad, Launchpool, Spot, Margin, and Futures markets.](https://www.binance.com/en/support/announcement/list/48)**
+**1. [새로운 암호화폐 상장 - Launchpad, Launchpool, Spot, Margin, Futures 시장의 최신 코인 상장 및 거래 쌍 확인](https://www.binance.com/en/support/announcement/list/48)**
 `거래소: Binance`
 
 **2. [Latest Binance NewsStay on top of what's new in Binance.](https://www.binance.com/en/support/announcement/list/49)**

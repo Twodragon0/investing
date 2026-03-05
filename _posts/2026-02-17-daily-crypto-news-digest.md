@@ -120,11 +120,11 @@ Mirae Asset acquires Korbit cryptocurrency exchange ledgerinsights.com
 <span class="source-tag">구글 뉴스</span>
 
 **2. [Nexo re-enters the U.S. market three years after exiting due to regulatory issues](https://www.coindesk.com/business/2026/02/16/nexo-partners-with-bakkt-reenters-the-u-s-with-crypto-yield-lending-and-exchange-services)**
-The digital assets wealth platform’s rollout includes regulated yield accounts, credit lines and exchange access backed by Bakkt.
+이 디지털 자산 자산관리 플랫폼의 출시에는 Bakkt가 지원하는 규제된 수익 계정, 신용 한도 및 거래소 접근이 포함된다.
 <span class="source-tag">CoinDesk</span>
 
 **3. [Binance's CZ echoes Consensus panelists on lack of privacy blocking crypto adoption](https://www.coindesk.com/markets/2026/02/16/binance-co-founder-cz-echoes-consensus-panelists-on-lack-of-privacy-blocking-crypto-adoption)**
-Lack of privacy is a barrier to both everyday and institutional use of crypto and blockchain technology, CZ and institutions argue.
+CZ와 기관들은 프라이버시 부재가 일상적·기관적 암호화폐 및 블록체인 기술 활용 모두에 장벽이 된다고 주장한다.
 <span class="source-tag">CoinDesk</span>
 
 <details><summary>그 외 9건 보기</summary><div class="details-content">
@@ -155,7 +155,7 @@ Lack of privacy is a barrier to both everyday and institutional use of crypto an
 
 ## 거래소 공지사항
 
-**1. [New Cryptocurrency ListingCheck out the latest coin listings and pairs on Launchpad, Launchpool, Spot, Margin, and Futures markets.](https://www.binance.com/en/support/announcement/list/48)**
+**1. [새로운 암호화폐 상장 - Launchpad, Launchpool, Spot, Margin, Futures 시장의 최신 코인 상장 및 거래 쌍 확인](https://www.binance.com/en/support/announcement/list/48)**
 `거래소: Binance`
 
 **2. [Latest Binance NewsStay on top of what's new in Binance.](https://www.binance.com/en/support/announcement/list/49)**

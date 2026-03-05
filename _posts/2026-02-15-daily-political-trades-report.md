@@ -54,7 +54,7 @@ image: "/assets/images/generated/news-briefing-political-2026-02-15.png"
 <span class="source-tag">트럼프 행정명령 KR</span>
 
 **3. [Congress’s Rejection of Trump’s Canada “Emergency” Is a Welcome—but Woefully Insufficient—Move - Cato Institute](https://news.google.com/rss/articles/CBMipgFBVV95cUxQbjNUb2MxTFlWZDM0RVc1SzVlSkVhNmJVcHRNMDBWU21DZHJSTy12QW93Ny0xTW9tejVjQjAyMko3bnd3WFNBMlVGcVpGLTBQMTF4SmJKWDlmMkNEemJGSXVxZWdFcUh4Z3hpcHlaNGs0RUR3ejA0V2YtS2lzM1FtT1duQUpqQVpzckk5THlNUzVmUnNjdG5hVGdEdU5ZeWdiTnUwN19R?oc=5)**
-Congress’s Rejection of Trump’s Canada “Emergency” Is a Welcome—but Woefully Insufficient—Move Cato Institute
+트럼프의 캐나다 “비상사태” 선언에 대한 의회의 거부는 환영할 만하지만 턱없이 부족한 조치 - Cato Institute
 <span class="source-tag">Trump Tariff Policy</span>
 
 
@@ -65,7 +65,7 @@ SEC, 암호화폐 자산 ‘비증권’ 분류 추진시장 변화 예고 디�
 <span class="source-tag">SEC 내부자거래 KR</span>
 
 **2. [TTEK SEC Filings - Tetra Tech 10-K, 10-Q, 8-K Forms - Stock Titan](https://news.google.com/rss/articles/CBMiZkFVX3lxTE5QekJJVWVSb3UyY2MwcS1VTndjRDl3ZVlGRFd1Yk14TmszVFdsRFdKS2Z3d3h1b1FvTUlJQ0ZRejlkOGdHa0l0ZGIySk9USHNUZnVLa1RzWTF1WVNsV05rLXl5QjhuQQ?oc=5)**
-TTEK SEC Filings - Tetra Tech 10-K, 10-Q, 8-K Forms Stock Titan
+TTEK SEC 공시 - Tetra Tech 10-K, 10-Q, 8-K 양식 - Stock Titan
 <span class="source-tag">SEC Insider Trading</span>
 
 

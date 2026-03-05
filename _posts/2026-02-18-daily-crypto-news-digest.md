@@ -137,15 +137,15 @@ Ethereum At Risk Of Falling Under $996 (Cryptocurrency:ETH-USD) Seeking Alpha
 *DeFi 분야에서 Bridge, stablecoin, firm 관련 이슈가 부각되고 있습니다.*
 
 **1. [Stripe-Owned Bridge Gains National Bank Trust Charter to Boost Stablecoin Offerings](https://decrypt.co/358355/stripe-owned-bridge-national-bank-trust-charter-stablecoin-offerings)**
-Bridge, the stablecoin firm of payments giant Stripe, was awarded conditional approval for a national trust banking charter.
+결제 대기업 스트라이프 산하 스테이블코인 기업 브릿지가 전국 신탁 은행 인가에 대한 조건부 승인을 받았다.
 <span class="source-tag">Decrypt</span>
 
 **2. [Tom Lee Expects 'Defining Year for Ethereum' as BitMine Buys ETH Amid 'Rock Bottom' Vibes](https://decrypt.co/358322/tom-lee-defining-year-ethereum-bitmine-buys-eth-rock-bottom-vibes)**
-BitMine Immersion Technologies is sitting on a nearly $8 billion unrealized loss, but Tom Lee remains optimistic about Ethereum.
+BitMine Immersion Technologies는 약 80억 달러의 미실현 손실을 안고 있지만, 톰 리는 이더리움에 대해 낙관적인 입장을 유지하고 있다.
 <span class="source-tag">Decrypt</span>
 
 **3. [ZeroLend Latest DeFi Platform to Shut Down Amid Liquidity, Revenue Pressures](https://decrypt.co/358304/zerolend-latest-defi-platform-to-shut-down-amid-liquidity-revenue-pressures)**
-ZeroLend cited an inability to "generate sustainable revenue" as it became the latest DeFi platform to wind down amid the ongoing slump.
+ZeroLend는 "지속 가능한 수익 창출 불가"를 이유로 들며, 장기 침체 속에 서비스를 종료하는 최신 DeFi 플랫폼이 됐다.
 <span class="source-tag">Decrypt</span>
 
 <details><summary>그 외 7건 보기</summary><div class="details-content">
@@ -156,7 +156,7 @@ ZeroLend cited an inability to "generate sustainable revenue" as it became the l
 
 ## 거래소 공지사항
 
-**1. [New Cryptocurrency ListingCheck out the latest coin listings and pairs on Launchpad, Launchpool, Spot, Margin, and Futures markets.](https://www.binance.com/en/support/announcement/list/48)**
+**1. [새로운 암호화폐 상장 - Launchpad, Launchpool, Spot, Margin, Futures 시장의 최신 코인 상장 및 거래 쌍 확인](https://www.binance.com/en/support/announcement/list/48)**
 `거래소: Binance`
 
 **2. [Latest Binance NewsStay on top of what's new in Binance.](https://www.binance.com/en/support/announcement/list/49)**

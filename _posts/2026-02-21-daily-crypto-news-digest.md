@@ -106,16 +106,16 @@ After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued? Morningstar
 <span class="source-tag">구글 뉴스</span>
 
 **2. [Bitcoin Sell Pressure Is Easing, But Whales Keep Dumping on Exchanges: CryptoQuant](https://decrypt.co/358782/bitcoin-sell-pressure-easing-whales-dumping-exchanges)**
-Bitcoin is down 46% from its October peak—and the largest holders keep depositing to exchanges, presumably to sell, says CryptoQuant.
+비트코인은 10월 고점 대비 46% 하락한 상태이며, CryptoQuant에 따르면 대형 보유자들이 매도 목적으로 추정되는 거래소 입금을 계속하고 있다.
 <span class="source-tag">Decrypt</span>
 
 **3. [South Korean Lawmakers Slam Regulators Over Bithumb's $43 Billion Bitcoin Blunder](https://decrypt.co/358744/south-korean-lawmakers-slam-regulators-bithumb-43-billion-bitcoin-blunder)**
-Lawmakers in South Korea are intensifying scrutiny over the role of regulators after Bithumb accidentally gave out $43 billion in Bitcoin.
+빗썸이 실수로 430억 달러 규모의 비트코인을 지급한 사건 이후, 한국 국회의원들이 규제 당국의 역할에 대한 감시를 강화하고 있다.
 <span class="source-tag">Decrypt</span>
 
 <details><summary>그 외 10건 보기</summary><div class="details-content">
 <a href="https://www.coindesk.com/markets/2026/02/20/dual-s-korea-listings-send-ethereum-layer-2-token-aztec-surging-82">Dual South Korean listings send Ethereum layer-2 token AZTEC surging 82%</a>
-<a href="https://www.binance.com/en/support/announcement/list/48">New Cryptocurrency ListingCheck out the latest coin listings and pairs on Launchpad, Launchpool, Spot, Margin, and Futures markets.</a>
+<a href="https://www.binance.com/en/support/announcement/list/48">새로운 암호화폐 상장 - Launchpad, Launchpool, Spot, Margin, Futures 시장의 최신 코인 상장 및 거래 쌍 확인</a>
 </details>
 
 
@@ -130,7 +130,7 @@ Lawmakers in South Korea are intensifying scrutiny over the role of regulators a
 <span class="source-tag">Google News</span>
 
 **3. [What Is Strategy (MSTR)? The Bitcoin Treasury Company](https://decrypt.co/resources/what-is-strategy-microstrategy-mstr-the-bitcoin-treasury-company)**
-Software firm Strategy (formerly MicroStrategy) and its co-founder Michael Saylor have become synonymous with Bitcoin. Here’s what you need to know.
+소프트웨어 기업 Strategy(구 MicroStrategy)와 공동 창업자 마이클 세일러는 비트코인과 동의어가 됐다. 알아야 할 핵심 내용을 정리했다.
 <span class="source-tag">Decrypt</span>
 
 <details><summary>그 외 4건 보기</summary><div class="details-content">
@@ -161,7 +161,7 @@ How to Make the Most of the Volatility of Cryptocurrency Prices The Arizona Repu
 
 ## 거래소 공지사항
 
-**1. [New Cryptocurrency ListingCheck out the latest coin listings and pairs on Launchpad, Launchpool, Spot, Margin, and Futures markets.](https://www.binance.com/en/support/announcement/list/48)**
+**1. [새로운 암호화폐 상장 - Launchpad, Launchpool, Spot, Margin, Futures 시장의 최신 코인 상장 및 거래 쌍 확인](https://www.binance.com/en/support/announcement/list/48)**
 `거래소: Binance`
 
 **2. [Latest Binance NewsStay on top of what's new in Binance.](https://www.binance.com/en/support/announcement/list/49)**

@@ -156,7 +156,7 @@ An Australian national was said to sell cyber tools designed for the U.S. govern
 
 ## 거래소 공지사항
 
-**1. [New Cryptocurrency ListingCheck out the latest coin listings and pairs on Launchpad, Launchpool, Spot, Margin, and Futures markets.](https://www.binance.com/en/support/announcement/list/48)**
+**1. [새로운 암호화폐 상장 - Launchpad, Launchpool, Spot, Margin, Futures 시장의 최신 코인 상장 및 거래 쌍 확인](https://www.binance.com/en/support/announcement/list/48)**
 `거래소: Binance`
 
 **2. [Latest Binance NewsStay on top of what's new in Binance.](https://www.binance.com/en/support/announcement/list/49)**

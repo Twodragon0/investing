@@ -32,7 +32,7 @@ description: "2026-02-22 암호화폐 시장에서 101건의 뉴스를 분석했
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">101</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 48</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (37회)</div></div></div>
 
-<div class="alert-box alert-info"><strong>암호화폐 시장 비트코인, 정치/정책 중심 101건 분석</strong><br>🟠 <strong>비트코인</strong>: 48건 수집<br>🏛️ <strong>정치/정책</strong> (20건): Russia-linked cryptocurrency services and sanctions evasion Elliptic<br>📈 <strong>가격/시장</strong>: 22건 수집<br>🏦 <strong>거래소</strong> (15건): After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued? Morningstar</div>
+<div class="alert-box alert-info"><strong>암호화폐 시장 비트코인, 정치/정책 중심 101건 분석</strong><br>🟠 <strong>비트코인</strong>: 48건 수집<br>🏛️ <strong>정치/정책</strong> (20건): 러시아 연계 암호화폐 서비스 및 제재 회피 - Elliptic<br>📈 <strong>가격/시장</strong>: 22건 수집<br>🏦 <strong>거래소</strong> (15건): 실적 발표 후 Coinbase 주식은 매수, 매도, 적정 가치 중 어떤 상태인가? - Morningstar</div>
 
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><a href="https://news.google.com/read/CBMimAFBVV95cUxNVjFoQ25KUFlISi1meE5jbEw1VDRzYlM0QjNqZERvYlg3SWVmVE1Hd01UdF9SSXpRdWhheWhReG5qdzQwd2VGOVVtS09GaFdFRjJIcDBBWXpTbW1rSVR1cHpiR0VwRC1WRUh6RlB6QkZSaW82MERuXzBtUDJ6Q1UyUjJDV0FvRDNSQ3cxNl9kcUV5Q1VJMWtwTA?hl=en-US&gl=US&ceid=US%3Aen">Crypto Crash Playbook: 2 High-Conviction Buys to Consider Before the Rebound</a><br><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9UWWt2NGRwVEhESnNWZ1FRaE1wbk9BTk1Wdll0b3dvdWgzTXZlRWs3Y1dMcmNNam1UanZrbWZaTWM5T3R4cWwtVmtFMGE0TTVUV1VWZ3FR?oc=5">레버리지가 코인 폭락 트리거 됐다 - 중앙일보</a><br><a href="https://cointelegraph.com/news/crypto-retraces-gains-2024-2025-pump?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Crypto market retraces almost all 2024-2025 US election pump gains</a></div>
 
@@ -82,7 +82,7 @@ description: "2026-02-22 암호화폐 시장에서 101건의 뉴스를 분석했
 <span class="source-tag">Google News</span>
 
 **3. [Russia-linked cryptocurrency services and sanctions evasion - Elliptic](https://news.google.com/rss/articles/CBMikgFBVV95cUxOcEVoeE1VamlwREtsSUxoRS0tZ2NwWVRxVUZmelRXSUNvSXF1WlQ1Vlh3VGE3SWxtWUk3bTFSMVZ4cGlMeHdKdDNIVWFJeFd6VnpwZ3VBUUtmZXY3Njl6RWpsS2I0Nnp4bUNmYndDemdMSEVMTGk4MndBOEFoOF9hS3d0TC1pVmNYUTNXUzRyZXlMUQ?oc=5)**
-Russia-linked cryptocurrency services and sanctions evasion Elliptic
+러시아 연계 암호화폐 서비스 및 제재 회피 - Elliptic
 <span class="source-tag">구글 뉴스</span>
 
 <details><summary>그 외 17건 보기</summary><div class="details-content">
@@ -120,7 +120,7 @@ Russia-linked cryptocurrency services and sanctions evasion Elliptic
 <span class="source-tag">Google News</span>
 
 **2. [After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued? - Morningstar](https://news.google.com/rss/articles/CBMimwFBVV95cUxNRW5lMUlzTkxlZEVaYjlTUkVKbTR0Qm9tZzVRN3BGVUtBcVBJSFBTS0FGTVJIc18tUU1wZXV4bk9EZ3J0LXFoZTlfWjFYMTgyU0VnQVdBWmhKTm1rak1Kb3NldkVOQllmaTd3U2JLQVloc2JXUk82TUVtMU5xR1I3cXRraDdOY1Rvd3VFYjhOc01GWG4xWGl1bk1sbw?oc=5)**
-After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued? Morningstar
+실적 발표 후 Coinbase 주식은 매수, 매도, 적정 가치 중 어떤 상태인가? - Morningstar
 <span class="source-tag">구글 뉴스</span>
 
 **3. [IoTeX confirms ‘suspicious activity’ involving token safe, says losses contained](https://cointelegraph.com/news/iotex-investigates-token-safe-suspicious-activity-4-3m-loss?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound)**
@@ -144,7 +144,7 @@ IoTeX said it is assessing suspicious activity tied to a token safe, coordinatin
 <span class="source-tag">Google News</span>
 
 **3. [After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued? - Morningstar](https://news.google.com/rss/articles/CBMimwFBVV95cUxNRW5lMUlzTkxlZEVaYjlTUkVKbTR0Qm9tZzVRN3BGVUtBcVBJSFBTS0FGTVJIc18tUU1wZXV4bk9EZ3J0LXFoZTlfWjFYMTgyU0VnQVdBWmhKTm1rak1Kb3NldkVOQllmaTd3U2JLQVloc2JXUk82TUVtMU5xR1I3cXRraDdOY1Rvd3VFYjhOc01GWG4xWGl1bk1sbw?oc=5)**
-After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued? Morningstar
+실적 발표 후 Coinbase 주식은 매수, 매도, 적정 가치 중 어떤 상태인가? - Morningstar
 <span class="source-tag">구글 뉴스</span>
 
 <details><summary>그 외 10건 보기</summary><div class="details-content">
@@ -155,7 +155,7 @@ After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued? Morningstar
 
 ## 거래소 공지사항
 
-**1. [New Cryptocurrency ListingCheck out the latest coin listings and pairs on Launchpad, Launchpool, Spot, Margin, and Futures markets.](https://www.binance.com/en/support/announcement/list/48)**
+**1. [새로운 암호화폐 상장 - Launchpad, Launchpool, Spot, Margin, Futures 시장의 최신 코인 상장 및 거래 쌍 확인](https://www.binance.com/en/support/announcement/list/48)**
 `거래소: Binance`
 
 **2. [Latest Binance NewsStay on top of what's new in Binance.](https://www.binance.com/en/support/announcement/list/49)**

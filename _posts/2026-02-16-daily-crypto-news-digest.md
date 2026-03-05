@@ -100,15 +100,15 @@ excerpt: "BTC 추가 하락 $50K 전망, XRP 강세 속 크래시 대응, Apollo
 <span class="source-tag">Google News</span>
 
 **2. [CZ says lack of onchain privacy is holding back crypto payments](https://cointelegraph.com/news/cz-privacy-holding-back-crypto-payments?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound)**
-Transparency, which is a hallmark feature of most cryptocurrencies, is likely one of the biggest hurdles to mass adoption, the Binance founder said.
+대부분의 암호화폐의 핵심 특성인 투명성이 대중 채택을 가로막는 가장 큰 장벽 중 하나일 수 있다고 바이낸스 창업자 CZ가 밝혔다.
 <span class="source-tag">Cointelegraph</span>
 
 **3. [Mirae Asset agrees to buy 92% stake in Korean exchange Korbit for $93M](https://cointelegraph.com/news/mirae-asset-buy-92-percent-korbit-korea-crypto-exchange?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound)**
-Mirae Asset Consulting agreed to acquire a 92.06% controlling stake in South Korean crypto exchange Korbit for about $93 million in cash.
+미래에셋컨설팅이 한국 암호화폐 거래소 코빗의 92.06% 지배 지분을 약 9,300만 달러 현금으로 인수하기로 합의했다.
 <span class="source-tag">Cointelegraph</span>
 
 <details><summary>그 외 7건 보기</summary><div class="details-content">
-<a href="https://www.binance.com/en/support/announcement/list/48">New Cryptocurrency ListingCheck out the latest coin listings and pairs on Launchpad, Launchpool, Spot, Margin, and Futures markets.</a>
+<a href="https://www.binance.com/en/support/announcement/list/48">새로운 암호화폐 상장 - Launchpad, Launchpool, Spot, Margin, Futures 시장의 최신 코인 상장 및 거래 쌍 확인</a>
 <a href="https://www.binance.com/en/support/announcement/list/49">Latest Binance NewsStay on top of what's new in Binance.</a>
 </details>
 
@@ -118,15 +118,15 @@ Mirae Asset Consulting agreed to acquire a 92.06% controlling stake in South Kor
 *DeFi 분야에서 asset, manager, overseeing 관련 이슈가 부각되고 있습니다.*
 
 **1. [Wall Street giant Apollo deepens crypto push with Morpho token deal](https://www.coindesk.com/business/2026/02/15/wall-street-giant-apollo-deepens-crypto-push-with-morpho-token-deal)**
-The asset manager overseeing more than $900 billion assets may buy up to 90 million MORPHO tokens as part of a partnership to support DeFi credit mark
+9,000억 달러 이상의 자산을 운용하는 이 자산운용사는 DeFi 신용 시장을 지원하는 파트너십의 일환으로 최대 9,000만 개의 MORPHO 토큰을 매입할 수 있다.
 <span class="source-tag">CoinDesk</span>
 
 **2. [Bitcoin claws back to $70,000 on cooling inflation after $8.7 billion wipeout](https://www.coindesk.com/markets/2026/02/14/bitcoin-claws-back-to-usd70-000-on-cooling-inflation-after-usd8-7-billion-wipeout)**
-Despite the price recovery, the Crypto Fear & Greed Index remains in “extreme fear,” indicating underlying market anxiety.
+가격이 회복됐음에도 불구하고, 암호화폐 공포·탐욕 지수는 “극도의 공포” 상태를 유지하며 시장의 근본적인 불안감을 반영하고 있다.
 <span class="source-tag">CoinDesk</span>
 
 **3. [Grayscale seeks to convert Aave trust into ETF on NYSE Arca](https://cointelegraph.com/news/grayscale-files-convert-aave-trust-etf-launch-nyse-arca?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound)**
-Grayscale joins Bitwise in filing to launch a standalone Aave product in the US, betting that Wall Street has retained its appetite for altcoins.
+그레이스케일은 비트와이즈에 이어 미국에서 독립형 Aave 상품 출시를 신청하며, 월스트리트가 알트코인에 대한 수요를 유지하고 있다는 데 베팅했다.
 <span class="source-tag">Cointelegraph</span>
 
 <details><summary>그 외 4건 보기</summary><div class="details-content">
@@ -158,7 +158,7 @@ Better Cryptocurrency to Buy With $3,000 and Hold for 5 Years: XRP vs. Ethereum 
 
 ## 거래소 공지사항
 
-**1. [New Cryptocurrency ListingCheck out the latest coin listings and pairs on Launchpad, Launchpool, Spot, Margin, and Futures markets.](https://www.binance.com/en/support/announcement/list/48)**
+**1. [새로운 암호화폐 상장 - Launchpad, Launchpool, Spot, Margin, Futures 시장의 최신 코인 상장 및 거래 쌍 확인](https://www.binance.com/en/support/announcement/list/48)**
 `거래소: Binance`
 
 **2. [Latest Binance NewsStay on top of what's new in Binance.](https://www.binance.com/en/support/announcement/list/49)**
