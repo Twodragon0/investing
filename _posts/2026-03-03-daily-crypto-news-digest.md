@@ -89,15 +89,15 @@ description: "2026-03-03 암호화폐 시장에서 111건의 뉴스를 분석했
 *Binance, billion, crypto, airstrikes, liquidity*
 
 **1. [PayPay, 40% owner of Binance Japan, seeks up to $1.1 billion in Nasdaq IPO](https://www.coindesk.com/business/2026/03/02/paypay-40-owner-of-binance-japan-seeks-up-to-usd1-1-billion-in-nasdaq-ipo)**
-The Nasdaq-bound payments firm backed by SoftBank targets a valuation above $10 billion.
+소프트뱅크가 지원하는 나스닥 상장 예정 결제기업으로, 기업가치 100억 달러 이상을 목표로 합니다.
 <span class="source-tag">CoinDesk</span>
 
 **2. [Australia could unlock A$24 billion in digital finance gains, is on track for just A$1 billion](https://www.coindesk.com/policy/2026/03/02/australia-could-unlock-ausd24-billion-in-digital-finance-gains-is-on-track-for-just-ausd1-billion)**
-An OKX-backed report estimates tokenization and digital finance could generate A$24 billion annually, with productivity gains hinging on reforms to licensing, sandboxes and financial market rules.
+OKX가 후원한 보고서에 따르면 토큰화와 디지털 금융이 연간 A$240억을 창출할 수 있으나, 라이선싱·샌드박스·금융시장 규정 개혁이 선행 조건입니다.
 <span class="source-tag">CoinDesk</span>
 
 **3. [Weekend warriors: How HyperLiquid became retail’s bear market playground](https://www.coindesk.com/business/2026/03/02/weekend-warriors-how-hyperliquid-became-retail-s-bear-market-playground)**
-While bitcoin and ether remain in bear markets, HYPE has climbed alongside gold as HyperLiquid’s derivatives volume expands, weekend equity trading gains traction.
+비트코인·이더리움이 약세장인 반면 HYPE는 금과 동반 상승, 하이퍼리퀴드 파생상품 거래량 확대 및 주말 주식 거래가 주목받고 있습니다.
 <span class="source-tag">CoinDesk</span>
 
 <details><summary>그 외 15건 보기</summary><div class="details-content">
@@ -118,7 +118,7 @@ DOJ: Florida cryptocurrency CEO arrested in $328 million fraud scheme wtsp.com
 <span class="source-tag">Google News EN</span>
 
 **3. [Senate Advances Housing Bill With CBDC Ban, Draws White House Backing](https://decrypt.co/359695/senate-advances-housing-bill-cbdc-ban-draws-white-house)**
-The vote marks one of the strongest bipartisan showings of this Congress, suggesting the package could clear further procedural hurdles.
+이번 표결은 현 의회에서 가장 강력한 초당적 지지를 받은 사례 중 하나로, 추가 절차적 난관도 돌파할 가능성이 있습니다.
 <span class="source-tag">Decrypt</span>
 
 <details><summary>그 외 16건 보기</summary><div class="details-content">

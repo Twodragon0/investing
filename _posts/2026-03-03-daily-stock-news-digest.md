@@ -81,7 +81,7 @@ AI 랠리에 탄 반도체, ‘개별주’ 대신 ‘ETF’로 자금 쏠린다
 <span class="source-tag">한국 반도체</span>
 
 **3. [Apple launches new iPhone and iPad Air as it gears up for a major AI push](https://www.marketwatch.com/story/apple-launches-new-iphone-and-ipad-air-as-it-gears-up-for-a-major-ai-push-570b24ae?mod=mw_rss_topstories)**
-The company is boosting the storage capacity of its devices, a move thought to be a prelude to expected Siri enhancements later this year.
+애플은 기기 저장 용량을 확대하며, 올해 후반 예정된 시리(Siri) 기능 강화의 사전 포석으로 분석됩니다.
 <span class="source-tag">MarketWatch</span>
 
 <details><summary>그 외 3건 보기</summary><div class="details-content">
@@ -121,7 +121,7 @@ CHAT vs. SOXX: Which AI ETF Is the Better Buy for Investors Right Now? Nasdaq
 <span class="source-tag">Yahoo Finance</span>
 
 **3. [Supreme Court bars redrawing only Republican-held NYC congressional district for 2026 election](https://www.cnbc.com/2026/03/02/supreme-court-republican-new-york-malliotakis.html)**
-The Supreme Court ruling is a potentially significant one for Republicans, who are trying to retain their majorities in both chambers of Congress.
+이번 대법원 판결은 양원 다수당 유지를 목표로 하는 공화당에 잠재적으로 중요한 결정으로 평가됩니다.
 <span class="source-tag">CNBC Top News</span>
 
 <details><summary>그 외 1건 보기</summary><div class="details-content">

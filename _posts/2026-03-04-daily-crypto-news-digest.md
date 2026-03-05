@@ -136,7 +136,7 @@ description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 �
 <div class="news-card-num">2</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxQYlQ4ZXpfQmNuek8tS0JNN0xfYnNCZGdRdzhFeWRlazg5SkJvUktaNExZaW51cDdDSU1WMGtLcm9uRlYtVERMV1ViY0RTQnh0aFlwWEhRTDlOZTJvNklVR2liYzVydW1hRDVrNWE0X2tHT1hKdTlQVHhLNXFuVkNNRVhoYUpkdEhMX2pLZmF5MWstVHJ4SzUyYXp2U05PWjRmc2NzY2xGRXBvVEFRSkpaY3JQWW54QkdmMnk1VTY2cGtCSTRnT1VkRGtIbV82aFNUSlA2Yg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Bills on cryptocurrency, child care, more are signed into Indiana law - IndyStar</a>
-<p class="news-desc">Bills on cryptocurrency, child care, more are signed into Indiana law IndyStar</p>
+<p class="news-desc">인디애나 주에서 암호화폐, 보육 등 관련 법안이 법률로 서명되었습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -146,7 +146,7 @@ description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 �
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxNdDEwdnJCWlpRTERWRzdkbVZVZklUTzVkVUREQUQzMWRsb3EzNTI0V0ZpVjNhZjl4N3hiMjFRLXpLZTJFOWhiS19pbVhWYVNDZjd1Z1dGQ2g3VThWQlZOdGlmdHN1d3BhZjhmTXJ6ZXBkd2xtUXZNaUtTN2NWMUJZZURWcEw0SFdzWkhlM1NRZEhRX2I3TWpfY0lKcFNoejhyV3gtUFpjMA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Scam Center Strike Force seizures surpass more than $580M in cryptocurrency - Financial Regulation News -</a>
-<p class="news-desc">Scam Center Strike Force seizures surpass more than $580M in cryptocurrency Financial Regulation News -</p>
+<p class="news-desc">사기 센터 특별팀이 5억 8천만 달러 이상의 암호화폐를 압수했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -166,7 +166,7 @@ description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 �
 <div class="news-card-num">1</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxNVWRoaTNCM3ZvdFl3ajZ5S0ZjX1pqekhGOVVHY0dORUZnY1JyVFBhYlUybXBuRXpnMUtibGtLcnFsMnljOVQtbld4eEJJUUo0OXM4SVJVeGtPLTh4UVdUeVlJSV9jWExiQ0p2MDdjalY1SDZmOU5RWE5vVzkwNm9sUnhQdWF1SDRuVDBhZVZYWmJkendCQ0N0bHVpZjg3aWpG?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Better Cryptocurrency to Buy Now With $1,000 and Hold for 3 Years: XRP vs. Ethereum - Nasdaq</a>
-<p class="news-desc">Better Cryptocurrency to Buy Now With $1,000 and Hold for 3 Years: XRP vs.</p>
+<p class="news-desc">$1,000으로 3년간 보유할 최적의 암호화폐: XRP 대비 분석.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -176,7 +176,7 @@ description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 �
 <div class="news-card-num">2</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNTUdXaWFqT3gzYVJQT1ZJaDJPNk9qaExRS29sbWZPRXoyNnZzVV9TVTJKbTlXTHJIZ3E5NmptOGJzNEZrWktzZFJJTXpPWGxvZWV6ZEp1eW5EaEtrUWtiSENsMUJxUG4yWjVXX0xVWFJ6SmIxdkdBTlNHUzVsTllnNWE1bVhfLTBmZk5PWXg1alpQZVJjSlFUOQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Better Cryptocurrency to Buy Right Now With $2,000 and Hold for 5 Years: XRP vs. Ethereum - The Motley Fool</a>
-<p class="news-desc">Better Cryptocurrency to Buy Right Now With $2,000 and Hold for 5 Years: XRP vs.</p>
+<p class="news-desc">$2,000으로 5년간 보유할 최적의 암호화폐: XRP 대비 분석.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -207,7 +207,7 @@ description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 �
 <div class="news-card-num">1</div>
 <div class="news-card-body">
 <a href="https://cointelegraph.com/news/trump-takes-swipe-banks-over-stalled-crypto-bill?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Donald Trump takes swipe at banks over stalled crypto bill</a>
-<p class="news-desc">Trump has urged banking groups to “make a good deal” with the crypto industry and said undermining the GENIUS Act is “unacceptable.”</p>
+<p class=”news-desc”>트럼프, 은행 단체에 암호화폐 업계와 “좋은 거래를 하라” 촉구. GENIUS 법안 방해는 “용납할 수 없다”고 발언.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -217,7 +217,7 @@ description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 �
 <div class="news-card-num">2</div>
 <div class="news-card-body">
 <a href="https://cointelegraph.com/news/crypto-laws-states-party-primaries?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">What&#x27;s at stake for crypto as 3 US states kick off party primaries?</a>
-<p class="news-desc">Super PACs backed by the crypto industry are expected to spend millions of dollars in the 2026 midterm elections after many of their chosen candidates won in 2024.</p>
+<p class="news-desc">암호화폐 업계가 지원하는 슈퍼PAC들이 2026년 중간선거에 수백만 달러를 투입할 전망입니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -227,7 +227,7 @@ description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 �
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://decrypt.co/359890/ai-models-prefer-bitcoin-over-fiat-stablecoins-study" class="news-title" target="_blank" rel="noopener noreferrer">AI Models Prefer Bitcoin Over Fiat and Stablecoins, Study Finds</a>
-<p class="news-desc">Bitcoin Policy Institute study finds AI systems, including Claude, GPT, Grok, and Gemini, favored Bitcoin over fiat and other digital assets.</p>
+<p class="news-desc">비트코인 정책연구소 연구 결과, Claude·GPT·Grok·Gemini 등 AI 시스템이 법정화폐 및 기타 디지털 자산보다 비트코인을 선호하는 것으로 나타났습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>

@@ -42,19 +42,19 @@ description: "전 세계 금융 규제기관의 최신 동향을 정리합니다
 ## 미국 규제 동향
 
 **1. [AMENDMENT NO. 1 TO FORM F-1](https://news.google.com/rss/articles/CBMiigFBVV95cUxNalZraU5ES3lPd19TOUt5bE1FbjV1NllXTjhyVEF0YU11WEM1YTUtMHhkX1JCNUllTExmbU9hS0pYTjdJeU82M21IMGszV1FsRzZ1TUhjMmF5UFFDTmVjdjFmbVo2LXZwQnVna1RQem56UjRKbmhIejB5akV3dkFoQWs4TGUxMG4zX0E?oc=5)**
-AMENDMENT NO. 1 TO FORM F-1 SEC.gov
+SEC에 제출된 해외기업 IPO 등록 수정서류(Form F-1 수정안 1호)입니다.
 <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
 
 **2. [CFTC Chairman Selig Announces Mel Gunewardena as Director of the Office of International Affairs and Senior Markets Advisor to the Chairman](https://www.cftc.gov/PressRoom/PressReleases/9189-26)**
-CFTC Chairman Michael S.
+CFTC 셀리그 위원장이 주요 인사 임명을 발표했습니다.
 <span class="source-tag" data-source-type="regulator">CFTC Press Releases</span>
 
 **3. [CFTC Chairman Selig Announces Alan Brubaker as Director of the Office of Legislative and Intergovernmental Affairs](https://www.cftc.gov/PressRoom/PressReleases/9188-26)**
-CFTC Chairman Michael S.
+CFTC 셀리그 위원장이 주요 인사 임명을 발표했습니다.
 <span class="source-tag" data-source-type="regulator">CFTC Press Releases</span>
 
 **4. [CFTC Chairman Selig Announces David I. Miller as Director of Enforcement](https://www.cftc.gov/PressRoom/PressReleases/9187-26)**
-Commodity Futures Trading Commission Chairman Michael S.
+CFTC 셀리그 위원장이 주요 인사 임명을 발표했습니다.
 <span class="source-tag" data-source-type="regulator">CFTC Press Releases</span>
 
 
@@ -121,11 +121,11 @@ Commodity Futures Trading Commission Chairman Michael S.
 ## 유럽 규제 동향
 
 **1. [UK FCA picks 4 firms to test stablecoin innovation in its sandbox - CoinGeek](https://news.google.com/rss/articles/CBMikAFBVV95cUxQLXUzckNRcGphUGVMeGFGRWJTWlFQWHpqcVFuajRFUVFLRWNyeWNnbEEzR3NoRkRHYmZ5V0sxM2c1RkVpZHRDU216UzkxWVlRb3lvQVN3YXFUQldfNk1qamlpQWt3ZU1UZ3BRcS1sY3JfVURQOXp5MHd2NThKTjl5dnItZEJpcm5CcTVsVWY0Vms?oc=5)**
-UK FCA picks 4 firms to test stablecoin innovation in its sandbox CoinGeek
+영국 FCA가 스테이블코인 혁신 테스트를 위해 4개 기업을 샌드박스에 선정했습니다.
 <span class="source-tag" data-source-type="regulator">UK FCA</span>
 
 **2. [FCA to review U.K.’s new listing rules - Investment Executive](https://news.google.com/rss/articles/CBMihgFBVV95cUxNSHZtOEVsajZOM0V0ZHltV21lWEk3RnlVei1jQWxzV3VySkl3ZkViNjdyd1FLVTBCendHOFFINHM2UWk0QjFNZ1lteGYzcjlrY0tsbTI4aEVxaXlQTmd6Rzg5Qk5wRTNtRkdPd00yQTc4NWNFZ1NXdUVPaUZVQnlvRUhGcEt0Zw?oc=5)**
-FCA to review U.K.’s new listing rules Investment Executive
+FCA가 영국의 새 상장 규정 검토에 착수했습니다.
 <span class="source-tag" data-source-type="regulator">UK FCA</span>
 
 
@@ -141,9 +141,9 @@ FCA to review U.K.’s new listing rules Investment Executive
 - [AMENDMENT NO. 1 TO FORM F-1](https://news.google.com/rss/articles/CBMiigFBVV95cUxNalZraU5ES3lPd19TOUt5bE1FbjV1NllXTjhyVEF0YU11WEM1YTUtMHhkX1JCNUllTExmbU9hS0pYTjdJeU82M21IMGszV1FsRzZ1TUhjMmF5UFFDTmVjdjFmbVo2LXZwQnVna1RQem56UjRKbmhIejB5akV3dkFoQWs4TGUxMG4zX0E?oc=5) — SEC (Google News)
   > SEC EDGAR에 제출된 해외기업 IPO 등록 수정서류입니다.
 - [CFTC Chairman Selig Announces Mel Gunewardena as Director of the Office of International Affairs and Senior Markets Advisor to the Chairman](https://www.cftc.gov/PressRoom/PressReleases/9189-26) — CFTC Press Releases
-  > CFTC Chairman Michael S.
+  > CFTC 셀리그 위원장이 주요 인사 임명을 발표했습니다.
 - [CFTC Chairman Selig Announces Alan Brubaker as Director of the Office of Legislative and Intergovernmental Affairs](https://www.cftc.gov/PressRoom/PressReleases/9188-26) — CFTC Press Releases
-  > CFTC Chairman Michael S.
+  > CFTC 셀리그 위원장이 주요 인사 임명을 발표했습니다.
 
 ### 🏦 거래소 (6건)
 

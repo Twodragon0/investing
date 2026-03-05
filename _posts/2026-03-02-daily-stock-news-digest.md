@@ -97,7 +97,7 @@ Struggling to Pick Artificial Intelligence (AI) Stocks? You're Not Alone -- Try 
 <span class="source-tag">Google News</span>
 
 **2. [Live updates: Trump vows to 'avenge' the deaths of U.S. service members, says combat operations continue](https://www.cnbc.com/2026/03/01/us-iran-live-updates-khamenei-death-trump-gulf-strikes.html)**
-Follow the latest news after the U.S.
+미국의 이란 공격 이후 최신 소식을 전합니다.
 <span class="source-tag">CNBC Top News</span>
 
 **3. [李, 싱가포르 대통령에 "좁은 국토, 사회 문제 안돼 놀라워"](https://www.hankyung.com/article/202603023348i)**

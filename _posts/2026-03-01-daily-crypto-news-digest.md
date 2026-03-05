@@ -101,7 +101,7 @@ description: "2026-03-01 암호화폐 시장에서 108건의 뉴스를 분석했
 <span class="source-tag">Google News KR</span>
 
 **3. [Trump Orders Federal Agencies to Dump 'Woke' Anthropic AI After Pentagon Dispute](https://decrypt.co/359453/trump-orders-federal-agencies-dump-woke-anthropic-ai)**
-President Trump gave government agencies six months to phase out Anthropic's products after a clash over military safeguards.
+트럼프 대통령은 군사 안전 기준 충돌 이후 연방기관에 6개월 내 Anthropic 제품을 단계적으로 퇴출하도록 지시했습니다.
 <span class="source-tag">Decrypt</span>
 
 <details><summary>그 외 7건 보기</summary><div class="details-content">
@@ -116,15 +116,15 @@ President Trump gave government agencies six months to phase out Anthropic's pro
 *Binance, New, Democrats, Treasury, Senate*
 
 **1. [Banking Regulator Floats New Stablecoin Yield Rules—Do They Hurt Coinbase?](https://decrypt.co/359506/banking-occ-new-stablecoin-yield-rules-coinbase)**
-The proposed rules would limit the ability of third parties to pass stablecoin rewards on to users, but experts are split on what the language could mean for America’s top crypto firms.
+제안된 규정은 제3자가 스테이블코인 보상을 사용자에게 전달하는 것을 제한하며, 미국 주요 크립토 기업에 미칠 영향에 대해 전문가 의견이 엇갈립니다.
 <span class="source-tag">Decrypt</span>
 
 **2. [11 US senators request federal probe into Binance’s sanctions compliance](https://cointelegraph.com/news/11-us-senators-request-binance-sanctions-probe?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound)**
-Lawmakers urge US regulators to review Binance’s AML and sanctions controls after reports of Iran-linked transactions and potential evasion risks.
+의원들은 이란 연계 거래 및 제재 회피 리스크 보고 이후 미국 규제당국에 바이낸스의 AML·제재 통제 검토를 촉구했습니다.
 <span class="source-tag">Cointelegraph</span>
 
 **3. [XRP tumbles 9% as break below $1.36 wipes out relief rally](https://www.coindesk.com/markets/2026/02/28/xrp-tumbles-9-as-break-below-usd1-36-wipes-out-relief-rally)**
-Traders are watching $1.30 as immediate support after heavy-volume selling confirmed a bearish shift.
+대량 매도로 하락 전환이 확인되며 트레이더들은 즉각적 지지선으로 $1.30을 주시하고 있습니다.
 <span class="source-tag">CoinDesk</span>
 
 <details><summary>그 외 9건 보기</summary><div class="details-content">
@@ -146,7 +146,7 @@ Better Cryptocurrency to Buy With $5,000 and Hold Forever: XRP vs.
 <span class="source-tag">Google News KR</span>
 
 **3. [Magic Eden Pulls Plug on Bitcoin and Ethereum Support, Doubles Down on Solana](https://decrypt.co/359422/magic-eden-pulls-plug-bitcoin-ethereum-doubles-down-solana)**
-Magic Eden is pulling support for Ethereum-compatible and Bitcoin-based assets, marking an end to its multi-chain approach to user adoption.
+매직 에덴이 이더리움 호환·비트코인 기반 자산 지원을 종료하며 멀티체인 전략에 마침표를 찍었습니다.
 <span class="source-tag">Decrypt</span>
 
 <details><summary>그 외 8건 보기</summary><div class="details-content">

@@ -81,7 +81,7 @@ description: "2026-03-01 주식 시장에서 119건의 뉴스를 분석했습니
 <span class="source-tag">Google News</span>
 
 **3. [Stock market today: Dow, S&P 500, Nasdaq fall to end volatile month as AI worries buffet markets - Yahoo Finance](https://news.google.com/rss/articles/CBMi2wFBVV95cUxQOWlVSkJzemhqaU1vT0QtcE41SzBTN0RELTdOSnU0M211ZENIT19MTWRvT2tFb3hDN0FTWXh0b2NDaWJKX3RHX1FMWFJFNGxqMmxyT3JuWWpSMmxjSTNjejRmRVlQbEJ4RUhyUzBiMkRuNGlGaXREQVY0VGlwYzBQVkNrZFdMSDNxY0ZkdVBKSFR3Wk5JR3dqb3RZVDdjSGpDb0pmcHlDNlVfYTZXMmlobDhjaDQ2YTcwZ3ZzaXNuZGx4ajhmbXJSWG05ODU4SE0wRjRXVElxTGdrbnM?oc=5)**
-Stock market today: Dow, S&P 500, Nasdaq fall to end volatile month as AI worries buffet markets Yahoo Finance Dow closes more than 500 points lower after hot inflation report, mounting concerns
+Stock market today: Dow, S&P 500, Nasdaq fall to end volatile month as AI worries buffet markets Yahoo Finance 뜨거운 인플레이션 보고서와 가중되는 우려로 다우지수 500포인트 이상 하락 마감
 <span class="source-tag">Google News Stocks EN</span>
 
 <details><summary>그 외 10건 보기</summary><div class="details-content">
@@ -102,7 +102,7 @@ Stock market today: Dow, S&P 500, Nasdaq fall to end volatile month as AI worrie
 <span class="source-tag">Google News</span>
 
 **3. [Stocks slump as inflation, AI worries rattle investors - CBS News](https://news.google.com/rss/articles/CBMimgFBVV95cUxQT3owZlVNNVNYN3NCbHF2cTNWZDEtd3R5S3VscXNMbFNLTXJrTFBWSTJmSlg5a28tTTg3czUxZGxVWDFGNXFyU215emtFUkVraXVvM3B3TExCNUxxZG1jdkdCNkxVSlVnS0Y4ajlfb0ZFNlVVdEtjX3A4anVpVGVQUmxNSEhKUXhWa3Mxa091ZE1xempFclpESHRR0gGfAUFVX3lxTE9XbVlnVXVCbnQxaTBlZkxtS3lyRVF2Z2JZbElNZVB6WXNnbFVueGw0Ylk5bUJuRW96Y2szVFpna1NYX0xkV2Z1THRHSTEyZmVUaHlPSkhVMVZ5Y2prcHRhRlBKWHQyYTd6UUY3OEdpSG5uRVpYeDJ3UVRhRktxaFJIMDk3TEJrcjd1ZEJzeThMVmZBZ2pyMUc5UVhkd1ZZNA?oc=5)**
-Stocks slump as inflation, AI worries rattle investors CBS News
+인플레이션·AI 우려로 투자자 심리 위축, 주가 전반 하락
 <span class="source-tag">NASDAQ/Tech</span>
 
 <details><summary>그 외 6건 보기</summary><div class="details-content">

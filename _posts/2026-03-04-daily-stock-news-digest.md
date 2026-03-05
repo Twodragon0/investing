@@ -136,7 +136,7 @@ description: "KOSPI -7.62%, KOSDAQ -8.68% 급락. 이란 분쟁 확대에 따른
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://www.marketwatch.com/story/how-nvidia-turned-a-steal-of-a-deal-into-its-secret-weapon-17c2027a?mod=mw_rss_topstories" class="news-title" target="_blank" rel="noopener noreferrer">How Nvidia turned a steal of a deal into its secret weapon</a>
-<p class="news-desc">Building on the foundations of its $7 billion Mellanox acquisition, Nvidia has made networking sales a major driver of its growth</p>
+<p class="news-desc">엔비디아는 70억 달러 멜라녹스 인수를 기반으로 네트워킹 매출을 주요 성장 동력으로 삼고 있습니다.</p>
 <span class="source-tag" data-source-type="finance-media">MarketWatch</span>
 </div>
 </div>
@@ -165,7 +165,7 @@ description: "KOSPI -7.62%, KOSDAQ -8.68% 급락. 이란 분쟁 확대에 따른
 <div class="news-card-num">2</div>
 <div class="news-card-body">
 <a href="https://www.cnbc.com/2026/03/03/us-iran-war-live-updates.html" class="news-title" target="_blank" rel="noopener noreferrer">Iran war live updates: Trump says U.S. to offer insurance for Gulf shipping and escort tankers</a>
-<p class="news-desc">Follow the latest news after the U.S.</p>
+<p class="news-desc">미국의 이란 공격 이후 최신 소식을 전합니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -175,7 +175,7 @@ description: "KOSPI -7.62%, KOSDAQ -8.68% 급락. 이란 분쟁 확대에 따른
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://www.cnbc.com/2026/03/03/trump-iran-shifting-narrative-us-war.html" class="news-title" target="_blank" rel="noopener noreferrer">Trump administration offers shifting narrative for U.S. war in Iran as Democrats pounce</a>
-<p class="news-desc">Trump said when the invasion began his objective was to &quot;defend the American people by eliminating imminent threats from the Iranian regime, a vicious group.&quot;</p>
+<p class="news-desc">트럼프는 침공 시작 시 목표가 "이란 정권의 임박한 위협을 제거하여 미국 국민을 방어하는 것"이었다고 밝혔습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
