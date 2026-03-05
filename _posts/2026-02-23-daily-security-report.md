@@ -22,11 +22,11 @@ image: "/assets/images/generated/news-briefing-security-2026-02-23.png"
 
 **1. [IoTeX Bridge Hacked In Private Key Exploit - Attacker Bridges Stolen Funds to Bitcoin Via THORChain - Yellow.com](https://news.google.com/rss/articles/CBMivgFBVV95cUxQZFFpZUwtRHNqOVRXR3pIMU00NXd3RUlmT05xZmhQLVVmTENfNEE2SXRNZGVGQVNDanpMT1Q3SU90YW5UQ2RValhuSEJpMWZtYk9Lc3NwRDhiMkQ2ZDNpQVVDOGs2dE9JS0xEQlQteWtfaFBUNmhaT1czUzlTMXh0Xy00THA5a1lhZWxCcExQR3VBNXhha0d5MUpwOHN6RWI5SXlVMGtXcXFNaXhOWlJMcE9xSDNEYlQxNTBlbFFR?oc=5)**
 IoTeX Bridge Hacked In Private Key Exploit - Attacker Bridges Stolen Funds to Bitcoin Via THORChain Yellow.com
-<span class="source-tag">Blockchain Security EN</span>
+<span class="source-tag">블록체인 보안</span>
 
 **2. [IoTeX Hacked: Private Key Exploit Sparks Sharp Token Drop - BeInCrypto](https://news.google.com/rss/articles/CBMiaEFVX3lxTE11XzhXT290NkJlREZ5b25xWW1LSXhub0l1XzFBU0tSMVVlSHRna0xRZlFqdUdKaFFiZWR3QjF2SXMxY3lRdTZrVGFGUGJsYVNQdUUzOHNFNk9ZY1JodktPVDVVUVp4d1li?oc=5)**
 IoTeX Hacked: Private Key Exploit Sparks Sharp Token Drop BeInCrypto
-<span class="source-tag">Blockchain Security EN</span>
+<span class="source-tag">블록체인 보안</span>
 
 
 ## 보안 인사이트
@@ -37,4 +37,4 @@ IoTeX Hacked: Private Key Exploit Sparks Sharp Token Drop BeInCrypto
 
 ## 참고 링크
 
-<details><summary>참고 링크 (2건)</summary><div class="details-content"><ol><li><a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxQZFFpZUwtRHNqOVRXR3pIMU00NXd3RUlmT05xZmhQLVVmTENfNEE2SXRNZGVGQVNDanpMT1Q3SU90YW5UQ2RValhuSEJpMWZtYk9Lc3NwRDhiMkQ2ZDNpQVVDOGs2dE9JS0xEQlQteWtfaFBUNmhaT1czUzlTMXh0Xy00THA5a1lhZWxCcExQR3VBNXhha0d5MUpwOHN6RWI5SXlVMGtXcXFNaXhOWlJMcE9xSDNEYlQxNTBlbFFR?oc=5">IoTeX Bridge Hacked In Private Key Exploit - Attacker Bridges Stolen Funds to Bi</a> <span class="source-tag">Blockchain Security EN</span></li><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE11XzhXT290NkJlREZ5b25xWW1LSXhub0l1XzFBU0tSMVVlSHRna0xRZlFqdUdKaFFiZWR3QjF2SXMxY3lRdTZrVGFGUGJsYVNQdUUzOHNFNk9ZY1JodktPVDVVUVp4d1li?oc=5">IoTeX Hacked: Private Key Exploit Sparks Sharp Token Drop - BeInCrypto</a> <span class="source-tag">Blockchain Security EN</span></li></ol></div></details>
+<details><summary>참고 링크 (2건)</summary><div class="details-content"><ol><li><a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxQZFFpZUwtRHNqOVRXR3pIMU00NXd3RUlmT05xZmhQLVVmTENfNEE2SXRNZGVGQVNDanpMT1Q3SU90YW5UQ2RValhuSEJpMWZtYk9Lc3NwRDhiMkQ2ZDNpQVVDOGs2dE9JS0xEQlQteWtfaFBUNmhaT1czUzlTMXh0Xy00THA5a1lhZWxCcExQR3VBNXhha0d5MUpwOHN6RWI5SXlVMGtXcXFNaXhOWlJMcE9xSDNEYlQxNTBlbFFR?oc=5">IoTeX Bridge Hacked In Private Key Exploit - Attacker Bridges Stolen Funds to Bi</a> <span class="source-tag">블록체인 보안</span></li><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE11XzhXT290NkJlREZ5b25xWW1LSXhub0l1XzFBU0tSMVVlSHRna0xRZlFqdUdKaFFiZWR3QjF2SXMxY3lRdTZrVGFGUGJsYVNQdUUzOHNFNk9ZY1JodktPVDVVUVp4d1li?oc=5">IoTeX Hacked: Private Key Exploit Sparks Sharp Token Drop - BeInCrypto</a> <span class="source-tag">블록체인 보안</span></li></ol></div></details>

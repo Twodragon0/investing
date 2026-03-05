@@ -2,7 +2,7 @@
 layout: post
 title: "소셜 미디어 동향 - 2026-02-27"
 date: 2026-02-27 03:32:15 +0000
-categories: [crypto-news]
+categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
@@ -93,11 +93,11 @@ Trump announces new retirement plan for non-401(k) workers thestreet.com
 Stock Futures Flat Ahead of Key Economic Data, Tariff Ruling National Today
 <span class="source-tag">Trump Economy</span>
 
-**5. [[한국갤럽] 이재명 지지율 64%로 1%p 올라, 긍정 이유는 '경제·민생'과 '부동산' - 비즈니스포스트](https://news.google.com/rss/articles/CBMic0FVX3lxTFB6R25Da1dmTHk0am9XVm5vUnhwajhaM2RBT0cwcnFEUHFEeHpTNFFjYWNxX0dEN2J2eGRiRnpnZnhKaVRiTGpabzFCZzMyd01kc3dTM2tlMk5wZF9FN19iTVhzZTlabGNOa3lJTEZ5cUhUSmM?oc=5)**
-[한국갤럽] 이재명 지지율 64%로 1%p 올라, 긍정 이유는 '경제·민생'과 '부동산' 비즈니스포스트
+**5. [[한국갤럽] 이재명 지지율 64%로 1%p 올라, 긍정 이유는 '경제·민생'과 '부동산'(https://news.google.com/rss/articles/CBMic0FVX3lxTFB6R25Da1dmTHk0am9XVm5vUnhwajhaM2RBT0cwcnFEUHFEeHpTNFFjYWNxX0dEN2J2eGRiRnpnZnhKaVRiTGpabzFCZzMyd01kc3dTM2tlMk5wZF9FN19iTVhzZTlabGNOa3lJTEZ5cUhUSmM?oc=5)**
+[한국갤럽] 이재명 지지율 64%로 1%p 올라, 긍정 이유는 '경제·민생'과 '부동산'
 <span class="source-tag">이재명 경제정책</span>
 
-**6. [‘또 칭찬’ 이재명 대통령이 반한 전남 지역 정책은? - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE1hTFNDeEJ2TzlyNXlnN2g1MkZwREdjcGFmZXRPSlhldlhGM3JHODV5R21mczJjYnpnaVFmUWdHaHZCR3RfWWZnLXduRG1fWXM?oc=5)**
+**6. [‘또 칭찬’ 이재명 대통령이 반한 전남 지역 정책은? ](https://news.google.com/rss/articles/CBMiT0FVX3lxTE1hTFNDeEJ2TzlyNXlnN2g1MkZwREdjcGFmZXRPSlhldlhGM3JHODV5R21mczJjYnpnaVFmUWdHaHZCR3RfWWZnLXduRG1fWXM?oc=5)**
 <span class="source-tag">이재명 경제정책</span>
 
 **7. [최현덕 예비후보, “KOSPI 6200 시대, 청년에 ‘경제 체력’ 길러주겠다” - 경인매일](https://news.google.com/rss/articles/CBMiaEFVX3lxTE9JcFNKa05rSkN3WWVnMi0yXzRrTEhKSnJwLVN3UDJ5cjY3alh2YTNtUTBjRkJlWVFqU1lLZ0U0LUUwUmZJT1N5NGZEZGd2c21jZ1V0dEZOd0NBY3MwUlFjQ05QX3VyX2g3?oc=5)**

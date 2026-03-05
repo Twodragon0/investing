@@ -80,10 +80,10 @@ description: "2026-02-21 암호화폐 시장에서 110건의 뉴스를 분석했
 
 **1. [Trump Adviser Says Regulatory Clarity Will Unlock 'Trillions of Dollars' Waiting To Enter Crypto - Yahoo Finance](https://news.google.com/rss/articles/CBMiiwFBVV95cUxNUTBVeG01bHNBNGlZbmZtb3NOb1M4UGc5VUwyTGpFTlFpZDkyVnM2dnNKTWR6QjhZelp2QVQzQllTazktT1JIWWpid2hGeTE3aFJxa1dwdmN5VmhDa2RTOGYxTTdXLXFSamRSNW5aRFBraVA4VmpBdHRUZi1zTlhYck9TZkVPLWdqdWFj?oc=5)**
 Trump Adviser Says Regulatory Clarity Will Unlock 'Trillions of Dollars' Waiting To Enter Crypto Yahoo Finance
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
-**2. [관세 위법, 암호화폐 일제↑ 비트 6.8만달러 회복-리플 1%(상보) - 뉴스1](https://news.google.com/rss/articles/CBMiWEFVX3lxTE1CTVZocW83alM0NnhOMWI0RTV3bE9rY3EwQTdaRXR1cHNrSmEybEVnN3ZXaWY3ZDJaZWFtSmFRSU5RV1B5VXJEcFZNM3VfSDlJZnh4MmRod1Y?oc=5)**
-관세 위법, 암호화폐 일제↑ 비트 6.8만달러 회복-리플 1%(상보) 뉴스1
+**2. [관세 위법, 암호화폐 일제↑ 비트 6.8만달러 회복-리플 1%(상보)(https://news.google.com/rss/articles/CBMiWEFVX3lxTE1CTVZocW83alM0NnhOMWI0RTV3bE9rY3EwQTdaRXR1cHNrSmEybEVnN3ZXaWY3ZDJaZWFtSmFRSU5RV1B5VXJEcFZNM3VfSDlJZnh4MmRod1Y?oc=5)**
+관세 위법, 암호화폐 일제↑ 비트 6.8만달러 회복-리플 1%(상보)
 <span class="source-tag">Google News KR</span>
 
 **3. [비트코인 대규모 구제금융 "백악관 전략 비축 시나리오" 암호화폐 폭락 저지 - 글로벌이코노믹](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcEhVTjRnRlo0ZTgtU3RFWmM0UWxieG9rUVNsSGJHbl9Rc3EyWGVoREJ6SWVOZWc1UXRMaHRaaUxxTzRxVDRkbzMtUGZkWWpidDZoMjBxM1dDSXdZYjdJNWZoRlVjS0dTbEJRWklYUE1TVHpmZlRnMlFaMHZBc0JLamthRFFpNG5z?oc=5)**
@@ -103,7 +103,7 @@ Trump Adviser Says Regulatory Clarity Will Unlock 'Trillions of Dollars' Waiting
 
 **1. [After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued? - Morningstar](https://news.google.com/rss/articles/CBMimwFBVV95cUxNRW5lMUlzTkxlZEVaYjlTUkVKbTR0Qm9tZzVRN3BGVUtBcVBJSFBTS0FGTVJIc18tUU1wZXV4bk9EZ3J0LXFoZTlfWjFYMTgyU0VnQVdBWmhKTm1rak1Kb3NldkVOQllmaTd3U2JLQVloc2JXUk82TUVtMU5xR1I3cXRraDdOY1Rvd3VFYjhOc01GWG4xWGl1bk1sbw?oc=5)**
 After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued? Morningstar
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 **2. [Bitcoin Sell Pressure Is Easing, But Whales Keep Dumping on Exchanges: CryptoQuant](https://decrypt.co/358782/bitcoin-sell-pressure-easing-whales-dumping-exchanges)**
 Bitcoin is down 46% from its October peak—and the largest holders keep depositing to exchanges, presumably to sell, says CryptoQuant.
@@ -151,10 +151,10 @@ Software firm Strategy (formerly MicroStrategy) and its co-founder Michael Saylo
 
 **3. [How to Make the Most of the Volatility of Cryptocurrency Prices - The Arizona Republic](https://news.google.com/rss/articles/CBMi4AFBVV95cUxQUE1uWWRBRC1wVzdSQk1DT25QME9wTENzMldjeWtvOXZPaUtZLVJNd3ZHNmxIUnMxUm9MU0VFY2tSZGxpWTJ4ZGJNSjN1ZFcxd3gxbXZQcFMyMTBIRE91TkNJZ1hDVDJjRTBHRmk4OHZ6WXdUcUd0Q2U4NFNJQmVNMUhaQjFXZGZuVUk1UV84WFBGcURhZkpDek9BelhnZmZSR1pJTTJ0YnBDeUVILTN3QUpaQmROdmo5RnJMMXpKXzlqNFNiWEw3Tm5CZnF6OFFvc01PMUxDc2tYUm5Ud1p0RQ?oc=5)**
 How to Make the Most of the Volatility of Cryptocurrency Prices The Arizona Republic
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 <details><summary>그 외 14건 보기</summary><div class="details-content">
-<a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE84UjQtdWRoSzVNNmk5Q0J2UENlRW56UXZYZlR5MFpVWXo1YTlQaGNqSUc1UWVuQV9nMEdIWFdoaDVoRTVsYlNYa1JyTTEyNVU?oc=5">“무조건 반등할거야”개미들 ‘초상집’ 된 비트코인, 큰 손은 다 도망갔다 - v.daum.net</a>
+<a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE84UjQtdWRoSzVNNmk5Q0J2UENlRW56UXZYZlR5MFpVWXo1YTlQaGNqSUc1UWVuQV9nMEdIWFdoaDVoRTVsYlNYa1JyTTEyNVU?oc=5">“무조건 반등할거야”개미들 ‘초상집’ 된 비트코인, 큰 손은 다 도망갔다</a>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9UWWt2NGRwVEhESnNWZ1FRaE1wbk9BTk1Wdll0b3dvdWgzTXZlRWs3Y1dMcmNNam1UanZrbWZaTWM5T3R4cWwtVmtFMGE0TTVUV1VWZ3FR?oc=5">레버리지가 코인 폭락 트리거 됐다 - 중앙일보</a>
 </details>
 
@@ -181,7 +181,7 @@ How to Make the Most of the Volatility of Cryptocurrency Prices The Arizona Repu
 
 오늘 가장 주목할 테마는 **비트코인**와 **정치/정책**입니다. 정치적 이슈가 비트코인 시장 심리에 영향을 주고 있어, 정책 발표와 관련 인사들의 발언에 주의가 필요합니다.
 
-향후 모니터링이 필요한 키워드: **bitcoin(비트코인)**None, **ethereum(이더리움)**None, **defi(디파이)**None
+향후 모니터링이 필요한 키워드: **bitcoin(비트코인), **ethereum(이더리움), **defi(디파이)
 
 거래소 공지사항 10건이 수집되었습니다. 새로운 상장, 이벤트, 정책 변경 등 거래소 동향이 시장 가격에 직접적 영향을 미칠 수 있어 주의가 필요합니다.
 

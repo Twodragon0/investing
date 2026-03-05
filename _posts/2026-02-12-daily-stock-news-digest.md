@@ -20,7 +20,7 @@ image: "/assets/images/generated/news-briefing-stock-2026-02-12.png"
 - **USD/KRW**: 1,442.58 (🔴 -0.20%)
 
 
-## 이슈 분포 현황
+## 테마별 현황 현황
 
 ```
 매크로/금리  ███░░░░░░░░░░░░░░░    18%  (28건)
@@ -67,7 +67,7 @@ DeFi    ░░░░░░░░░░░░░░░░░░     4%  (7건)
 | [Stock Rally Fades as Traders Brace for Data Deluge: Markets Wrap - Bloomberg.com](https://news.google.com/rss/articles/CBMilAFBVV95cUxQLVF3cHNBZnF5QTY4djRXR25NRXB3ME54eG01dUs4TmhGOG1GYXVfT2h5Q1BpUVRWdXdRV1BaMTlmVDQ2QU5fcFZJQ29INVhDdU9obmR3QzFiWEN5T2pmTnowX2MzeU1PVWF1bDN5cEF2VDY4QjJhUW4xV0Y5YUdKTnZ6MW5MYnpRenRUcXo5RGFVamhr?oc=5) | Google News Stocks EN |
 | [Tech stocks rally strongly after three days of heavy selling - Financial Times](https://news.google.com/rss/articles/CBMicEFVX3lxTE1SWnp5WUh3UXRvUmFrTlBQUjkxS2VNUWZoLVc3b1NtUzZEcmdqdmxSN3gyejRiZk1ybzBwYVE0VjNTd1VrOWFsQkJTbVY5SHIyYmdZbDdMckw4aFpydEkyVlo3MDRZbllCOHlHdlBMajQ?oc=5) | NASDAQ/Tech |
 | [Tech Giants Reclaim the Throne: Nasdaq Surges as AI Capital Expenditure Hits Record Highs - FinancialContent](https://news.google.com/rss/articles/CBMi9gFBVV95cUxPSnhxMGEzeXNNYTJvNDBpY3dJUFlWOWZOR3BDMUNMRkdGZGJER2UxRTYtZkJnT3kwOEloUUxVWWpwdGF5LVNXeEY0VjhpMGJJQUdWekZwWU5fb1EzX2FwWDFRMy15aTBqOHY5alZSN3lpQUZvMjV6MHFDMV9ZY0VqclJpVTBDNURZNjRiR3V1U3VQUDdhcURsdTFUWHRRdmdjM1B3OXFsdk02NzVHc0VOenVYODNOUkFHTjA3YUxhdEdfTUtYcDMzRmtEekRUMVhoeUFSMlpOc0ozN0YyN2RCbkVPOS1SMnhSSDVPZU1ESkcyU3dkdkE?oc=5) | NASDAQ/Tech |
-| [‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까 - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?oc=5) | Google News Stocks KR |
+| [‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까 ](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?oc=5) | Google News Stocks KR |
 
 ### 🏛️ 정치/정책 (7건)
 
@@ -121,7 +121,7 @@ DeFi    ░░░░░░░░░░░░░░░░░░     4%  (7건)
 | 3 | [**[코스피·코스닥 전 거래일(10일) 주요공시] - 연합뉴스**](https://news.google.com/rss/articles/CBMiW0FVX3lxTE5fOFZBd3Y5VHBZb2UwVVdmWWNMTFNzQ0pESFdyYnlpcWtJYTY2RFpHRmdIakR6RzR4UGRwVHdnMlVQaGtmOV9BR05OVTZJaldPcEVmQkdGckNxRlnSAWBBVV95cUxQRnp0NURJTFJNV09OYk44SUJRc1dfbkVFRlAtU3RabFo1VjBrQ1hpQWZfUVNDOHhmTzFuc3BDOXo0TTcxT19uY0VkZjVvSEZ2b2xkVzJYcF9hMFRwb0ppSUg?oc=5) | Google News Stocks KR |
 | 4 | [**코스피 5000 시대 활짝코스닥도 1000선 회복 - 농민신문**](https://news.google.com/rss/articles/CBMiWkFVX3lxTE5qZ3RLZlNUMFY1cU41d2JZNkdQQW9UR25ZMnJ2NVBJRXZ2U0pnWTkyN3NEOTgya09Bbl9HVEhQMlVvRllYMDlwN2tESDRMTFdhb3JxaG8tcjJJUQ?oc=5) | Google News Stocks KR |
 | 5 | [**질주하는 코스피·코스닥·금값언제까지 달릴까? [뉴스in뉴스] - KBS 뉴스**](https://news.google.com/rss/articles/CBMiW0FVX3lxTE1fMHJPcGdEYmR6MjJDazhheGN0dzRIckIwdDgyMXU0TnlpSHBpdlhyS1BBOS00U2ZneU1tYUFKak9TcFhFYWZBWmpLWVFRanFYZ3VrNGZWUUZCZGM?oc=5) | Google News Stocks KR |
-| 6 | [**‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까 - v.daum.net**](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?oc=5) | Google News Stocks KR |
+| 6 | [**‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까 **](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?oc=5) | Google News Stocks KR |
 | 7 | [**[개장시황] 코스피·코스닥 동반 상승 출발 - 중앙이코노미뉴스**](https://news.google.com/rss/articles/CBMickFVX3lxTE5LejdSaUwweXB2M3ZVbFhPNFhMSUxLWWpQdG5CeTJENjdacWJfNnhNWHJETWlzTVhIMmJXWW13TkNkQmxWUWhIRVRFYTVoQVg1a3FSc3B1RExHM0FqWWFPLUFDX043OTVOZldPUHpWRjVYZw?oc=5) | Google News Stocks KR |
 | 8 | [**[코스피·코스닥지수] 미국서 불어온 훈풍다우존스·S&P500·나스닥지수 동반 상승 - 한국강사신문**](https://news.google.com/rss/articles/CBMicEFVX3lxTE9kSFB0Q25lQ0ZvODZWampPMW9vbHJINFJqcU5GSTlDdVF3NWdkUEQ1S1JYX1lpVUk5VzBMNDhnTDlQOW5hNG9JZFE3REFZSU5xZG5HSXV4cmtjdzdTS2xfRnRXNGc4RHdEVmJRX2RCQmg?oc=5) | Google News Stocks KR |
 | 9 | [**[주식] 코스피·코스닥 약세 속 '코오롱티슈진'·'인벤티지랩' 급등 - 히트뉴스**](https://news.google.com/rss/articles/CBMia0FVX3lxTE5JeDFZQkptNGRQYnBkV1VvMnZFY3NfLTc2dkJXLVdlWVNoYmVWdDhZM0c0QjJhVW5ZMDd3M0E3MVVYeWVvVmRMbzhoUHhwR09VSEhIZllxeXI2X3NaSFBvYThjRV9rSVQtcUNr?oc=5) | Google News Stocks KR |

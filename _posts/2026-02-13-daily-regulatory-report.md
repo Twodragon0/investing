@@ -22,7 +22,7 @@ image: "/assets/images/generated/news-briefing-regulatory-2026-02-13.png"
 ---
 
 
-## 이슈 분포 현황
+## 테마별 현황 현황
 
 ```
 규제/정책   ████████████░░░░░░    70%  (21건)

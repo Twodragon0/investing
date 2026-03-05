@@ -2,7 +2,7 @@
 layout: post
 title: "소셜 미디어 동향 - 2026-02-21"
 date: 2026-02-21 03:09:31 +0000
-categories: [crypto-news]
+categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
@@ -126,7 +126,7 @@ Supreme Court's reversal of Trump's tariffs could bring 'clarity' thestreet.com
 **7. [Trump Adviser Says Regulatory Clarity Will Unlock 'Trillions of Dollars' Waiting To Enter Crypto - Yahoo Finance](https://news.google.com/rss/articles/CBMiiwFBVV95cUxNUTBVeG01bHNBNGlZbmZtb3NOb1M4UGc5VUwyTGpFTlFpZDkyVnM2dnNKTWR6QjhZelp2QVQzQllTazktT1JIWWpid2hGeTE3aFJxa1dwdmN5VmhDa2RTOGYxTTdXLXFSamRSNW5aRFBraVA4VmpBdHRUZi1zTlhYck9TZkVPLWdqdWFj?oc=5)**
 <span class="source-tag">Trump Crypto Policy</span>
 
-**8. [野 "이재명 대통령 SNS 선거 개입"與 "정책 홍보일 뿐" 공방 - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE5fU2pDdmJ1X3NUSjhGRzZLQWk2RHg5RXZuNUdEYnotYVhTbHFUSHlqcmQ3b09jMWFycnhBbGljVEtWd2pqOGEtZFVZY1FCeHc?oc=5)**
+**8. [野 "이재명 대통령 SNS 선거 개입"與 "정책 홍보일 뿐" 공방 ](https://news.google.com/rss/articles/CBMiT0FVX3lxTE5fU2pDdmJ1X3NUSjhGRzZLQWk2RHg5RXZuNUdEYnotYVhTbHFUSHlqcmQ3b09jMWFycnhBbGljVEtWd2pqOGEtZFVZY1FCeHc?oc=5)**
 <span class="source-tag">이재명 경제정책</span>
 
 **9. [[사설] 미 대법원도 인정한 ‘불법 관세’, 이재명 정부는 대미투자 굴욕합의 전면 폐기하라 - 현장언론 민플러스](https://news.google.com/rss/articles/CBMibkFVX3lxTE5Ic01YbFFpblFKNWFhM2RQbDBSbFZFSDd6TXM4VzZkUnFyRVNyTDl3SzdNRHYtXzBRa1ItcG8wOXNzaUF3dXp5QkJ2SUNnU3gzOW51ZTlqWmo4ZXZfZkNLZ1NsR0FHSl9aSERGZUZ3?oc=5)**

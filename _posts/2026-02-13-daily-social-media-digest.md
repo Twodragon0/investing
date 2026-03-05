@@ -2,7 +2,7 @@
 layout: post
 title: "소셜 미디어 동향 - 2026-02-13"
 date: 2026-02-13 03:31:15 +0000
-categories: [crypto-news]
+categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
@@ -42,7 +42,7 @@ image: "/assets/images/generated/news-briefing-social-2026-02-13.png"
 - 가장 활발한 채널: 텔레그램(20건), 정치·경제(19건)
 - 총 39건의 소셜 데이터가 수집되어 커뮤니티 관심이 높은 상황입니다.
 
-## 이슈 분포 현황
+## 테마별 현황 현황
 
 ```
 매크로/금리  ████░░░░░░░░░░░░░░    26%  (10건)
@@ -106,12 +106,12 @@ image: "/assets/images/generated/news-briefing-social-2026-02-13.png"
 
 - [[Telegram] 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
 - [[Telegram] 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://](https://t.me/whale_alert/11524) — Telegram @whale_alert
-- [증시 활성화는 A+물가 안정·부동산 세금정책은 '숙제' - 네이트](https://news.google.com/rss/articles/CBMiU0FVX3lxTE9tang5WWJyN2R5TGtheHNoSzhlV1BhYXNGQ1NXREtuYnVWT2hvNUVHWmduSlQ1WXMwTWJsZ0hJblVyc1NHdzFTdTJsTFVQZGNYbzVJ?oc=5) — 이재명 경제정책
+- [증시 활성화는 A+물가 안정·부동산 세금정책은 '숙제'(https://news.google.com/rss/articles/CBMiU0FVX3lxTE9tang5WWJyN2R5TGtheHNoSzhlV1BhYXNGQ1NXREtuYnVWT2hvNUVHWmduSlQ1WXMwTWJsZ0hJblVyc1NHdzFTdTJsTFVQZGNYbzVJ?oc=5) — 이재명 경제정책
 
 ### 📈 가격/시장 (15건)
 
 - [[Telegram] Polymarket rolls out an “Up or Down” Bitcoin marketA new BTC prediction market has gone live, settli](https://t.me/crypto/3500) — Telegram @crypto
-- [증시 활성화는 A+물가 안정·부동산 세금정책은 '숙제' - 네이트](https://news.google.com/rss/articles/CBMiU0FVX3lxTE9tang5WWJyN2R5TGtheHNoSzhlV1BhYXNGQ1NXREtuYnVWT2hvNUVHWmduSlQ1WXMwTWJsZ0hJblVyc1NHdzFTdTJsTFVQZGNYbzVJ?oc=5) — 이재명 경제정책
+- [증시 활성화는 A+물가 안정·부동산 세금정책은 '숙제'(https://news.google.com/rss/articles/CBMiU0FVX3lxTE9tang5WWJyN2R5TGtheHNoSzhlV1BhYXNGQ1NXREtuYnVWT2hvNUVHWmduSlQ1WXMwTWJsZ0hJblVyc1NHdzFTdTJsTFVQZGNYbzVJ?oc=5) — 이재명 경제정책
 - [李 대통령, 다주택자 대출연장 제한 시사"금융 혜택 문제 있어" - 핀포인트뉴스](https://news.google.com/rss/articles/CBMic0FVX3lxTE15V2RNRlZFOV9keGpWdm9iM2t5bjNWTkVCc1N5djc1NTNKaVZsWmUzNEFFeTl5UGxJZml0bVkxNlFDX0dOWGRxeW1KWUhkZVJwSi1aUTlhZmlzZE1mRkFpZFNGY2tXSDFLQkhtR1NTVDd1NWM?oc=5) — 이재명 경제정책
 
 ### 🟠 비트코인 (7건)
@@ -159,7 +159,7 @@ image: "/assets/images/generated/news-briefing-social-2026-02-13.png"
 12. [Explained: The growing personal ties between crypto and Trump &#124; TRENDING - ](https://news.google.com/rss/articles/CBMiqAFBVV95cUxOR0x3NmZzbUxESDVBQ3pvejZ2X3VMUEhBM2VmaEpOTWJtT0xMYVNvaDJ0VDN2eUFhMjVuRmpNcy1rSGNpbHhJTHdIMGxKSXA2Und4SWpqTlBNdVpFOExMVzFPa3Y5djJQRWNTMnpwX29UWFIzeWJiTERzdzl0ajBTUkVmUG9OaXZ2c0FuajY4Um5IcVVBTXNsRjZmWVNkdHNwclExWXZlb2w?oc=5) - Trump Crypto Policy
 13. [국회 경제 대정부질문 이재명 정부 부동산 정책 설전 격화 - 공감신문](https://news.google.com/rss/articles/CBMiaEFVX3lxTE9LV3gyYjV0LU53RWdTMjM4NUh3b09IWjh4cnJSR1VHUmRvOVd4bldJNHBRTjZKbUZhaTFfTTQ4bnFWczFJNElaYWFjQWtaVjlNak56ME1SeDQ4bmtGbVZwalBnMV9FTEY1?oc=5) - 이재명 경제정책
 14. [야당 의원 우재준, 金 총리에 “박근혜표 창조경제, 이재명 정부가 살려야” - 영남일보](https://news.google.com/rss/articles/CBMia0FVX3lxTFBLcUU1WTBJb1YzRXFuWERuTV9TWnBGckVVaUtqUlJBVG5hVWRjbmxYemRxZTFuRFhtN05iS2pPY2hHQ0ZMMGJheHJtU1BMU245MTV3cXhwMlVrWGozenpDdFJiSVg5V1ZsV1Bj?oc=5) - 이재명 경제정책
-15. [증시 활성화는 A+물가 안정·부동산 세금정책은 '숙제' - 네이트](https://news.google.com/rss/articles/CBMiU0FVX3lxTE9tang5WWJyN2R5TGtheHNoSzhlV1BhYXNGQ1NXREtuYnVWT2hvNUVHWmduSlQ1WXMwTWJsZ0hJblVyc1NHdzFTdTJsTFVQZGNYbzVJ?oc=5) - 이재명 경제정책
+15. [증시 활성화는 A+물가 안정·부동산 세금정책은 '숙제'(https://news.google.com/rss/articles/CBMiU0FVX3lxTE9tang5WWJyN2R5TGtheHNoSzhlV1BhYXNGQ1NXREtuYnVWT2hvNUVHWmduSlQ1WXMwTWJsZ0hJblVyc1NHdzFTdTJsTFVQZGNYbzVJ?oc=5) - 이재명 경제정책
 16. [李 대통령, 다주택자 대출연장 제한 시사"금융 혜택 문제 있어" - 핀포인트뉴스](https://news.google.com/rss/articles/CBMic0FVX3lxTE15V2RNRlZFOV9keGpWdm9iM2t5bjNWTkVCc1N5djc1NTNKaVZsWmUzNEFFeTl5UGxJZml0bVkxNlFDX0dOWGRxeW1KWUhkZVJwSi1aUTlhZmlzZE1mRkFpZFNGY2tXSDFLQkhtR1NTVDd1NWM?oc=5) - 이재명 경제정책
 17. [Fed's interest rate pause bolstered by jobs data, but concerns linger - Reuters](https://news.google.com/rss/articles/CBMimgFBVV95cUxQa3FiMHVLTXhSU2hqb2ZuaWhEeXVEOVlMQnRtQWxWb0xyTEFYYlFQT1kwajlsQ0dyeC1adG40X3FHM0NHcWw5aHZHeUlzRjZENDNEeEJ1ZzlKb3pObDFfbnBheFE0ejJGTEJ2SzVVMWkwVUdHOGpNenVQSzhvYTVfUVI2UnQwZmt1NmxZSHRfOHpjNnhobFZSeHNn?oc=5) - Fed Policy
 18. [기준금리 2.5%인데 주담대 7% 육박  커지는 '금리 괴리'에 정부·한은 동시 경고 - 뉴데일리 경제](https://news.google.com/rss/articles/CBMie0FVX3lxTFBqVHFvdXN4U0FySmFLb1hKV2c3Y1hkVDUySWJUSXlXanZwSjEwalhIN3FLZzU2bGJ6eUdkUmloUmRJanJUMC03OVdsckxiUHFSV2JQNWR0OHd2Uk9LbS1KTkUtVTVsSF9GSVNRRUplZ3ZWdWx1WVlaU2FyTQ?oc=5) - 한국은행 금리정책

@@ -49,7 +49,7 @@ As Rep. Julia Letlow runs for Senate, late disclosure of 210 stock trades draws 
 
 **2. [As Rep. Julia Letlow runs for Senate, late disclosure of 210 stock trades draws scrutiny - NOLA.com](https://news.google.com/rss/articles/CBMiuwFBVV95cUxNSThWeUVlY25WbHFHREM4LWYtMUJFTHBReUk4Sk1DNVlQd1hFeTBXZlJaMlVhN094S2wzM19kcWlONXhWcGZqMERzQkdQYTNUY2hsNkRCYTRHdjkzN3pXbUotM2ZlT1VKN25FcWRKdm80dzNUZm5kNkV5SjVuRWxGQzJKRzlVbGp3T1YzMTNnTHdNSW1xUGI1Y05zOHRxRWdpd0U5UkkwYVZvUmlnTkxYTnNSckIwSURUS1pR0gHAAUFVX3lxTFBvUm5SSDBNNTJyVVZtRkpibnZxcG9IZjZ2TXFEVWdkSGRPd2IxY2x2ZEhWR2RsQTBrcTFRZU1ud1ZISkc1dGhWMzh2U0hpQkJ5Mm42X3FwdU43c1dXYkYtM3NHSTJ0UjQyUG9TOHV1ZWg4cl9UN2pmeHNscXhCNXN6VFNQWlFrSzYzRkZPSmx5TEI1ZU1YTGljR1N2VFR0UDF6MHZpOG8wZWtTaTBodXdrdjVJN3M0dWQwTmlnMkdaVg?oc=5)**
 As Rep. Julia Letlow runs for Senate, late disclosure of 210 stock trades draws scrutiny NOLA.com
-<span class="source-tag">Congressional Trades EN</span>
+<span class="source-tag">미국 의회 거래</span>
 
 
 ## 트럼프 행정명령/정책

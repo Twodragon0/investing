@@ -132,7 +132,7 @@ description: "2026-02-24 암호화폐 시장에서 113건의 뉴스를 분석했
 
 **3. [Binance Employees Find $1.7 Billion in Crypto Was Sent to Iranian Entities - The New York Times](https://news.google.com/rss/articles/CBMiiAFBVV95cUxQSnlzQ1lkdW5nTmhtc3JkT3BNWERLQ1p3VW0zc19WTGhESWZxVzY0V01jLWM4UFk2cUpES1lVZkFiVjg1VklJYnRHS3pkWkNFOS1hbXd4YmkybnA2SXhmTFJpdW1QWVRENGdaZHZkcW85Sk1iaWtJN0hfMWFDUmFQTUlUWmE2QU9D?oc=5)**
 Binance Employees Find $1.7 Billion in Crypto Was Sent to Iranian Entities The New York Times
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 <details><summary>그 외 10건 보기</summary><div class="details-content">
 <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxOemROdXcwRHpHcTFTWnpWQzBkaUFGN2txNjI0OHQ1c2lGVm9yaFBhZXA0WXFHeEVGZ3lUcFduRkRjYU9FcXdrdEwzdmRoczE5REFBLXRNYVFhdjlDb0U4TTV6MlNkVlQ5Zi1pbENBNWxPeWNOS0JUNVZVeGprRDdIZQ?oc=5">Crypto exchange Binance may have funded Iranian entities, reports say - The Guardian</a>
@@ -146,11 +146,11 @@ Binance Employees Find $1.7 Billion in Crypto Was Sent to Iranian Entities The N
 
 **1. [Crypto Crash Alert: Why are Bitcoin, Ethereum and XRP Prices Falling Today? - Coinpedia Fintech News](https://news.google.com/rss/articles/CBMiogFBVV95cUxPdUw1OVpzWG9aZ3pGelV4WnZ0ejhwWU8tZFpNY21RNVpYZWlWZ29MODItVWRwdmgxOUJWeWVXOWktMHhBWW50anJTbVpwazN4X0lodWxhUkc0ckJZUlYyc3ZvcjF1Y2VzZlE5UzRqWEZEQlowSFp4WEJIVUVNX0VmcHVqUFV2Xzk4LUF1a2tUaGdyQVRJdXpMM1RSTHYyZkEtUEHSAacBQVVfeXFMT2VCWThyaE9xNVNqYlpxZVdGdURxMHB0UDgtTW1CR19XVzF1VXBUU3pKdkFWVVpzdHBPRzB6a2cyaDVMMm11MG1DNDRPeWxsZjB5UlQzRUk4VG0zREJZVW5MRzQ0UmhxR3Y2dGZxMXVhMmJoNlhtTnBQNGxzYU9lQjBIOW0yT1V3VmY3RmFqLTE3Z2tZbmVqd0tna0s4ZTQyYjBMWHR0c0k?oc=5)**
 Crypto Crash Alert: Why are Bitcoin, Ethereum and XRP Prices Falling Today? Coinpedia Fintech News
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 **2. [The rise of Polymarket, the cryptocurrency-based betting site for current events - Le Monde.fr](https://news.google.com/rss/articles/CBMi4gFBVV95cUxPd29SeDlNMHZ6VEREeTRRMDVVdVp3Rk1namMxUVRzSGVJRDlyN3pEd3AyQVJTaHRkS1FHZkVMX2F4dG1yVmNfbW5EMkJscjZwYS1OLTl6N3pTUkc5cExlbjRXTnFkdkMwV2hQekpaUXhzSmE0MmVCTzg3SWtVNV9hcmt1c3p2bno1ZWI1REw5SFVPZllDQmtZMlVyQVpMRHBIbGt3TUdjUXlQV3VPM3lpVmFRVmZadnRzZXg4ZVJNZmlENkw5ako5UWJxQ0VrYWt6Q1pXNVJsakJ0WDVKeFEyNTFB?oc=5)**
 The rise of Polymarket, the cryptocurrency-based betting site for current events Le Monde.fr
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 **3. [솔라나 5.6%·이더리움 4.6% 하락…비트코인 등 시세는? - 이투데이](https://news.google.com/rss/articles/CBMiVEFVX3lxTE5JYUUyVWk5UjV6TFE1SFFJZWxKNVFoV1NVQlFOQ1FHcVlFZzVBN0xmRDZUR3BPUmIwbC1WY2Jabkg4OVRVbGdFcWxFRzJwZllaV3hNcQ?oc=5)**
 솔라나 5.6%·이더리움 4.6% 하락…비트코인 등 시세는? 이투데이
@@ -184,7 +184,7 @@ The rise of Polymarket, the cryptocurrency-based betting site for current events
 
 오늘 가장 주목할 테마는 **비트코인**와 **가격/시장**입니다. 비트코인 가격 변동이 시장 전반에 영향을 미치고 있으며, 단기 방향성에 주목할 필요가 있습니다.
 
-향후 모니터링이 필요한 키워드: **bitcoin(비트코인)**None, **ai(인공지능)**None, **ethereum(이더리움)**None
+향후 모니터링이 필요한 키워드: **bitcoin(비트코인), **ai(인공지능), **ethereum(이더리움)
 
 거래소 공지사항 10건이 수집되었습니다. 새로운 상장, 이벤트, 정책 변경 등 거래소 동향이 시장 가격에 직접적 영향을 미칠 수 있어 주의가 필요합니다.
 

@@ -31,7 +31,7 @@ image: "/assets/images/generated/news-briefing-political-2026-02-14.png"
 | 최다 이슈 | 🔵 규제/정책 (5건) |
 
 
-## 이슈 분포 현황
+## 테마별 현황 현황
 
 ```
 규제/정책   ███████░░░░░░░░░░░    42%  (5건)
@@ -49,14 +49,14 @@ image: "/assets/images/generated/news-briefing-political-2026-02-14.png"
 
 | # | 제목 | 출처 |
 |---|------|------|
-| 1 | [**Congressman Pulls 9-Day Round-Trip On Microsoft Stock — What Was The Point? - Benzinga**](https://news.google.com/rss/articles/CBMioAFBVV95cUxOWDI1N0tuY1psSEJVY0t3UUNBRDlKUFltNkp6QmJic2g5TjJRMnRlSElfcVptNjNXUmw4dlV1em1sWWNRRlFQeE5NcXpxSnAzZk43a0xORjFyLTJTbVo3QmJsOU1wOFBwV1lwQU9PWkZJQWE2REJlTkZOa2VrOHJPd1VjQ0pCRnRpSEQzb0h3dmttdTJSdVJvNHJzdW9WZ2sz?oc=5) | Congressional Trades EN |
+| 1 | [**Congressman Pulls 9-Day Round-Trip On Microsoft Stock — What Was The Point? - Benzinga**](https://news.google.com/rss/articles/CBMioAFBVV95cUxOWDI1N0tuY1psSEJVY0t3UUNBRDlKUFltNkp6QmJic2g5TjJRMnRlSElfcVptNjNXUmw4dlV1em1sWWNRRlFQeE5NcXpxSnAzZk43a0xORjFyLTJTbVo3QmJsOU1wOFBwV1lwQU9PWkZJQWE2REJlTkZOa2VrOHJPd1VjQ0pCRnRpSEQzb0h3dmttdTJSdVJvNHJzdW9WZ2sz?oc=5) | 미국 의회 거래 |
 
 
 ## 트럼프 행정명령/정책
 
 | # | 제목 | 출처 |
 |---|------|------|
-| 1 | [**트럼프 "유권자 신분증 의무화, 행정 명령으로 추진" - v.daum.net**](https://news.google.com/rss/articles/CBMiT0FVX3lxTE82VGxlZmVsTjhwLW92bm8xaENlZ1Ztak5XWUpWNUZ6WFNXckdXcG95RnU4SV95cGZtNkNUOXJVb3pxZVZmQzhtTGEwTlRETWM?oc=5) | 트럼프 행정명령 KR |
+| 1 | [**트럼프 "유권자 신분증 의무화, 행정 명령으로 추진" **](https://news.google.com/rss/articles/CBMiT0FVX3lxTE82VGxlZmVsTjhwLW92bm8xaENlZ1Ztak5XWUpWNUZ6WFNXckdXcG95RnU4SV95cGZtNkNUOXJVb3pxZVZmQzhtTGEwTlRETWM?oc=5) | 트럼프 행정명령 KR |
 | 2 | [**트럼프 "유권자 신분증 의무화, 행정명령으로 추진" - 네이트**](https://news.google.com/rss/articles/CBMiU0FVX3lxTE9pRWtmckNITktpU0NkbmtlQ3JKLTA2eGVsb3NIWHBsZFU0ZGxqTjlyWW9pRW9WU3I4RkJiejN3UUtPMDF4My1VWmtqWXdoT3dqd2U4?oc=5) | 트럼프 행정명령 KR |
 | 3 | [**Congress’s Rejection of Trump’s Canada “Emergency” Is a Welcome—but Woefully Insufficient—Move - Cato Institute**](https://news.google.com/rss/articles/CBMipgFBVV95cUxQbjNUb2MxTFlWZDM0RVc1SzVlSkVhNmJVcHRNMDBWU21DZHJSTy12QW93Ny0xTW9tejVjQjAyMko3bnd3WFNBMlVGcVpGLTBQMTF4SmJKWDlmMkNEemJGSXVxZWdFcUh4Z3hpcHlaNGs0RUR3ejA0V2YtS2lzM1FtT1duQUpqQVpzckk5THlNUzVmUnNjdG5hVGdEdU5ZeWdiTnUwN19R?oc=5) | Trump Tariff Policy |
 | 4 | [**House votes to slap back Trump’s tariffs on Canada in rare bipartisan rebuke - Oregon Public Broadcasting - OPB**](https://news.google.com/rss/articles/CBMitwFBVV95cUxPWTJMdzRMY25vSGFvZ1NVRXRqUXNGR0pMSVZYSXlFaTg2eVVQLXprZ3pkNUJ2aUlUTDRJUHhneHFLNFBUV0tKUWllV1VTN21NM2pfNzh5TjJXdWlxXzloaUthYndnQ0hVM0lucFcyMVBaUGx3aGRGNGYteXVJYk9wSmxFQTcwcnlsb1gzU2tVbmdqMkowNXY4NTdWcTR1SzRGdGUtb1UzbGRFa2RleHdLYnc0UTN0VkE?oc=5) | Trump Tariff Policy |
@@ -86,9 +86,9 @@ image: "/assets/images/generated/news-briefing-political-2026-02-14.png"
 
 ## 참고 링크
 
-1. [Congressman Pulls 9-Day Round-Trip On Microsoft Stock — What Was The Point? - Be](https://news.google.com/rss/articles/CBMioAFBVV95cUxOWDI1N0tuY1psSEJVY0t3UUNBRDlKUFltNkp6QmJic2g5TjJRMnRlSElfcVptNjNXUmw4dlV1em1sWWNRRlFQeE5NcXpxSnAzZk43a0xORjFyLTJTbVo3QmJsOU1wOFBwV1lwQU9PWkZJQWE2REJlTkZOa2VrOHJPd1VjQ0pCRnRpSEQzb0h3dmttdTJSdVJvNHJzdW9WZ2sz?oc=5) - Congressional Trades EN
-2. [트럼프 "유권자 신분증 의무화, 행정 명령으로 추진" - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE82VGxlZmVsTjhwLW92bm8xaENlZ1Ztak5XWUpWNUZ6WFNXckdXcG95RnU4SV95cGZtNkNUOXJVb3pxZVZmQzhtTGEwTlRETWM?oc=5) - 트럼프 행정명령 KR
-3. [트럼프 "유권자 신분증 의무화, 행정명령으로 추진" - 네이트](https://news.google.com/rss/articles/CBMiU0FVX3lxTE9pRWtmckNITktpU0NkbmtlQ3JKLTA2eGVsb3NIWHBsZFU0ZGxqTjlyWW9pRW9WU3I4RkJiejN3UUtPMDF4My1VWmtqWXdoT3dqd2U4?oc=5) - 트럼프 행정명령 KR
+1. [Congressman Pulls 9-Day Round-Trip On Microsoft Stock — What Was The Point? - Be](https://news.google.com/rss/articles/CBMioAFBVV95cUxOWDI1N0tuY1psSEJVY0t3UUNBRDlKUFltNkp6QmJic2g5TjJRMnRlSElfcVptNjNXUmw4dlV1em1sWWNRRlFQeE5NcXpxSnAzZk43a0xORjFyLTJTbVo3QmJsOU1wOFBwV1lwQU9PWkZJQWE2REJlTkZOa2VrOHJPd1VjQ0pCRnRpSEQzb0h3dmttdTJSdVJvNHJzdW9WZ2sz?oc=5) - 미국 의회 거래
+2. [트럼프 "유권자 신분증 의무화, 행정 명령으로 추진" ](https://news.google.com/rss/articles/CBMiT0FVX3lxTE82VGxlZmVsTjhwLW92bm8xaENlZ1Ztak5XWUpWNUZ6WFNXckdXcG95RnU4SV95cGZtNkNUOXJVb3pxZVZmQzhtTGEwTlRETWM?oc=5) - 트럼프 행정명령 KR
+3. [트럼프 "유권자 신분증 의무화, 행정명령으로 추진"(https://news.google.com/rss/articles/CBMiU0FVX3lxTE9pRWtmckNITktpU0NkbmtlQ3JKLTA2eGVsb3NIWHBsZFU0ZGxqTjlyWW9pRW9WU3I4RkJiejN3UUtPMDF4My1VWmtqWXdoT3dqd2U4?oc=5) - 트럼프 행정명령 KR
 4. [Congress’s Rejection of Trump’s Canada “Emergency” Is a Welcome—but Woefully Ins](https://news.google.com/rss/articles/CBMipgFBVV95cUxQbjNUb2MxTFlWZDM0RVc1SzVlSkVhNmJVcHRNMDBWU21DZHJSTy12QW93Ny0xTW9tejVjQjAyMko3bnd3WFNBMlVGcVpGLTBQMTF4SmJKWDlmMkNEemJGSXVxZWdFcUh4Z3hpcHlaNGs0RUR3ejA0V2YtS2lzM1FtT1duQUpqQVpzckk5THlNUzVmUnNjdG5hVGdEdU5ZeWdiTnUwN19R?oc=5) - Trump Tariff Policy
 5. [House votes to slap back Trump’s tariffs on Canada in rare bipartisan rebuke - O](https://news.google.com/rss/articles/CBMitwFBVV95cUxPWTJMdzRMY25vSGFvZ1NVRXRqUXNGR0pMSVZYSXlFaTg2eVVQLXprZ3pkNUJ2aUlUTDRJUHhneHFLNFBUV0tKUWllV1VTN21NM2pfNzh5TjJXdWlxXzloaUthYndnQ0hVM0lucFcyMVBaUGx3aGRGNGYteXVJYk9wSmxFQTcwcnlsb1gzU2tVbmdqMkowNXY4NTdWcTR1SzRGdGUtb1UzbGRFa2RleHdLYnc0UTN0VkE?oc=5) - Trump Tariff Policy
 6. [Trump Tariffs Job Growth All In Home Care - - Random Lengths News](https://news.google.com/rss/articles/CBMihAFBVV95cUxOc3hSczdCZVhkY3cwckFvbDE0MkljRkE3aDI1YURMZ2JfRjJtMlpMUEIxc01PaGJ3V0VDUDlYcmxrM2FneHFqQ0tycHdHLVhCSzdWWVh1MTIwZlhzSnF2RmVNYXlQenh0X041R1JZMk1aNXZkcFFRTllDeWIzSjNkQlhwVEU?oc=5) - Trump Tariff Policy

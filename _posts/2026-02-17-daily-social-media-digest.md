@@ -2,7 +2,7 @@
 layout: post
 title: "소셜 미디어 동향 - 2026-02-17"
 date: 2026-02-17 03:22:03 +0000
-categories: [crypto-news]
+categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
@@ -96,15 +96,15 @@ Trump Tariffs Backfired, 130,000 Jobs Added In January And More: This Week In Ec
 [정책포커스] 이재명 정부에 바라는 정책금융경제(19) 재정의 지속가능성 높이고 맞춤형 지원도 배려해야 시사캐스트
 <span class="source-tag">이재명 경제정책</span>
 
-**4. [감사원 정책감사 폐지한다는데이재명 정부에선 ‘정치적 감사’ 사라질까 - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE1jd1FPUnNqa1A3WnlBeGMyQk5ObHFfRWJadUkza01BeFhJLUpOU1MxYVlDY2c1ek05TXl5VkkxOVQ0OUloX0o4cWpReUhZc1k?oc=5)**
-감사원 정책감사 폐지한다는데이재명 정부에선 ‘정치적 감사’ 사라질까 v.daum.net
+**4. [감사원 정책감사 폐지한다는데이재명 정부에선 ‘정치적 감사’ 사라질까 ](https://news.google.com/rss/articles/CBMiT0FVX3lxTE1jd1FPUnNqa1A3WnlBeGMyQk5ObHFfRWJadUkza01BeFhJLUpOU1MxYVlDY2c1ek05TXl5VkkxOVQ0OUloX0o4cWpReUhZc1k?oc=5)**
+감사원 정책감사 폐지한다는데이재명 정부에선 ‘정치적 감사’ 사라질까
 <span class="source-tag">이재명 경제정책</span>
 
 **5. [정책에 또 정쟁으로? '이재명표 주거'에 누가 돌을 던지나 [왜 지금] > 뉴스 - 지데일리](https://news.google.com/rss/articles/CBMibEFVX3lxTFAyZ1ZkOHd4NkppY1Axb1BKanMySWVhY1Y0Skt0d0pCZGZjS28xTDhhMVZmMlBXMENLOUZXSzlWdm1ibkFyUWVDSXQ0OTh0UE5JTUh0emlkaldmcHd1RkpJcjBzRFlvQVFIaDd0dw?oc=5)**
 정책에 또 정쟁으로? '이재명표 주거'에 누가 돌을 던지나 [왜 지금] > 뉴스 지데일리
 <span class="source-tag">이재명 경제정책</span>
 
-**6. [[MBC여론조사] 이재명 대통령 국정 지지율 64%‥지방선거 여당 후보 지지도 54% - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE1QRHNQbzhmbEFaV2tWY2lMN2Jqdmk3cEJDdWttZmVDa0VWNzJzdUtHTUJuZkQyNk1JcVlnQnM4LXJrS2FYTmM2aWlyTEI3RjA?oc=5)**
+**6. [[MBC여론조사] 이재명 대통령 국정 지지율 64%‥지방선거 여당 후보 지지도 54% ](https://news.google.com/rss/articles/CBMiT0FVX3lxTE1QRHNQbzhmbEFaV2tWY2lMN2Jqdmk3cEJDdWttZmVDa0VWNzJzdUtHTUJuZkQyNk1JcVlnQnM4LXJrS2FYTmM2aWlyTEI3RjA?oc=5)**
 <span class="source-tag">이재명 경제정책</span>
 
 **7. [모건스탠리 “한은, 2월 금통위서 기준금리 동결 전망” - 인더스트리뉴스](https://news.google.com/rss/articles/CBMickFVX3lxTFBSY3N2N1U5b1N6MGVpczB2UDdwSkVEcVhoVVo3X1h6aVBtU0hSeVRER0t2OF9oUFZrdGNBOFlTdUJtR3FCNGdTQkJCTm8zRDg0ZTdFMlhCNnRnby1abXVWNkFWZmVOd0xkSVVRMURNSEJDZw?oc=5)**

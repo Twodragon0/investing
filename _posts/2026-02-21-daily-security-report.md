@@ -22,7 +22,7 @@ image: "/assets/images/generated/news-briefing-security-2026-02-21.png"
 
 **1. [AI agents put to the test as crypto hacks hit $3.4 billion - Cryptopolitan](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9ibHk4Q0Q4aElHY1dpWmxwVjZhRFNDWGVGWGUzWlZkNGNQbkpVU2NiZzRYRklzZFhSa1JqTF9ObnhIdGQ0dG0yNlVReEF2aENzRW82T1l5ZVJtT0RyTzVKYVl0OTU5bWM?oc=5)**
 AI agents put to the test as crypto hacks hit $3.4 billion Cryptopolitan
-<span class="source-tag">Blockchain Security EN</span>
+<span class="source-tag">블록체인 보안</span>
 
 
 ## 보안 인사이트
@@ -33,4 +33,4 @@ AI agents put to the test as crypto hacks hit $3.4 billion Cryptopolitan
 
 ## 참고 링크
 
-<details><summary>참고 링크 (1건)</summary><div class="details-content"><ol><li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9ibHk4Q0Q4aElHY1dpWmxwVjZhRFNDWGVGWGUzWlZkNGNQbkpVU2NiZzRYRklzZFhSa1JqTF9ObnhIdGQ0dG0yNlVReEF2aENzRW82T1l5ZVJtT0RyTzVKYVl0OTU5bWM?oc=5">AI agents put to the test as crypto hacks hit $3.4 billion - Cryptopolitan</a> <span class="source-tag">Blockchain Security EN</span></li></ol></div></details>
+<details><summary>참고 링크 (1건)</summary><div class="details-content"><ol><li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9ibHk4Q0Q4aElHY1dpWmxwVjZhRFNDWGVGWGUzWlZkNGNQbkpVU2NiZzRYRklzZFhSa1JqTF9ObnhIdGQ0dG0yNlVReEF2aENzRW82T1l5ZVJtT0RyTzVKYVl0OTU5bWM?oc=5">AI agents put to the test as crypto hacks hit $3.4 billion - Cryptopolitan</a> <span class="source-tag">블록체인 보안</span></li></ol></div></details>

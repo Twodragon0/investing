@@ -83,8 +83,8 @@ description: "2026-02-26 주식 시장에서 168건의 뉴스를 분석했습니
 한국은행, 기준금리 6회 연속 동결…연 2.50% 지디넷코리아
 <span class="source-tag">한국 금리/환율</span>
 
-**2. [환율·부동산에 묶인 한은…오늘 기준금리 '2.5% 동결' 유력 - 뉴스1](https://news.google.com/rss/articles/CBMiVEFVX3lxTE9vUl9RWmZ3V3RSMHBITVZqNVBsQ0g5TWxrUWc2ZkJjbEhmZHRKQ1RhWmtIVklWSjRrSGlCako1WHdrcnBpQlo0Sl8xaEZoUG4zMi1WWA?oc=5)**
-환율·부동산에 묶인 한은…오늘 기준금리 '2.5% 동결' 유력 뉴스1
+**2. [환율·부동산에 묶인 한은…오늘 기준금리 '2.5% 동결' 유력(https://news.google.com/rss/articles/CBMiVEFVX3lxTE9vUl9RWmZ3V3RSMHBITVZqNVBsQ0g5TWxrUWc2ZkJjbEhmZHRKQ1RhWmtIVklWSjRrSGlCako1WHdrcnBpQlo0Sl8xaEZoUG4zMi1WWA?oc=5)**
+환율·부동산에 묶인 한은…오늘 기준금리 '2.5% 동결' 유력
 <span class="source-tag">한국 금리/환율</span>
 
 **3. [한은, 기준금리 연 2.50% 동결…수도권 집값·환율 불안에 여섯 차례 연속 동결 - 인더스트리뉴스](https://news.google.com/rss/articles/CBMickFVX3lxTE9kTUFrUTJiQVI0UUNudXJQdEhQTC1KTHZjbGlhZHEza2VDLTN1MEJPNzlDVFRHTlUwcFhXZDJPTUU5Y1h0UjRZMjU4SzgyQVVRRlpIZFNqckNTYzVuanlkQl9uTlRnbTRNbU85QXdWcEdoQQ?oc=5)**
@@ -92,7 +92,7 @@ description: "2026-02-26 주식 시장에서 168건의 뉴스를 분석했습니
 <span class="source-tag">한국 금리/환율</span>
 
 <details><summary>그 외 14건 보기</summary><div class="details-content">
-<a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE1aMzUwREpyRGR5ZGl1NHZTUUFxRXUzUkVET2N5SXNoSGk1Sm9MbEpXVjhGLU8tY0VOUFJXRERPQkdnSlJPajcxT3VuTW1OQmc?oc=5">불안한 환율·집값에…한은, 기준금리 2.5% '6연속 동결'(종합) - v.daum.net</a>
+<a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE1aMzUwREpyRGR5ZGl1NHZTUUFxRXUzUkVET2N5SXNoSGk1Sm9MbEpXVjhGLU8tY0VOUFJXRERPQkdnSlJPajcxT3VuTW1OQmc?oc=5">불안한 환율·집값에…한은, 기준금리 2.5% '6연속 동결'(종합)</a>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE8wV1NfVGJESTV4U3BkejFHSm1TQU9zaE9VSnRGMTFHZGlrWFp0ek1iZjQzbWdyN29ORjV2Y0xlOWlXSVFaeG5BR040N3NMdVBKNjd3Z2ROTDBpVHBOdV9nSk1IY2UzaTJJSlE?oc=5">한은, 기준금리 2.50% ‘6회 연속' 동결…1,400원대 환율·집값 상승 부담 - 금융소비자뉴스</a>
 </div></details>
 

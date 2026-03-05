@@ -144,7 +144,7 @@ Grayscale joins Bitwise in filing to launch a standalone Aave product in the US,
 
 **2. [Better Cryptocurrency to Buy With $3,000 and Hold for 5 Years: XRP vs. Ethereum - Nasdaq](https://news.google.com/rss/articles/CBMimwFBVV95cUxPTFhDN0xxcHdnbkQ2N2FMNm1qUGtXNzdJbDJYSDl6dmh4LW5kdHhONUQtNU4tV0lTei1yUWllWGJ4R3QzTWNzaklHU1p4dEx3RGxxZ1ZhMVQ5dF93RExfWkFlUmtPWG4wV1ktMWVlRjUwNjFTSzAtaDZfOUNQOHNYOWxmU2VnUjZGdFRQWEN4TUJTZDhCZy1mR215MA?oc=5)**
 Better Cryptocurrency to Buy With $3,000 and Hold for 5 Years: XRP vs. Ethereum Nasdaq
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 **3. [암호화폐 도지코인 하루 20% 급등 비트코인·이더리움 압도한 이유는? - 위키트리](https://news.google.com/rss/articles/CBMiVkFVX3lxTE5JZ2VfUGIwRGVFemV4aW5GbTZId1U1bFlZeGpmSzJ1bzVfZE1adEVWN2wyT3NlZzNqWGJWVTRQd2FOU3l2REtaZXlEZGlLbGtJTjRjeUd3?oc=5)**
 암호화폐 도지코인 하루 20% 급등 비트코인·이더리움 압도한 이유는? 위키트리
@@ -178,7 +178,7 @@ Better Cryptocurrency to Buy With $3,000 and Hold for 5 Years: XRP vs. Ethereum 
 
 오늘 가장 주목할 테마는 **비트코인**와 **가격/시장**입니다. 비트코인 가격 변동이 시장 전반에 영향을 미치고 있으며, 단기 방향성에 주목할 필요가 있습니다.
 
-향후 모니터링이 필요한 키워드: **bitcoin(비트코인)**None, **etf(상장지수펀드)**None, **ai(인공지능)**None
+향후 모니터링이 필요한 키워드: **bitcoin(비트코인), **etf(상장지수펀드), **ai(인공지능)
 
 거래소 공지사항 10건이 수집되었습니다. 새로운 상장, 이벤트, 정책 변경 등 거래소 동향이 시장 가격에 직접적 영향을 미칠 수 있어 주의가 필요합니다.
 
@@ -204,4 +204,4 @@ Better Cryptocurrency to Buy With $3,000 and Hold for 5 Years: XRP vs. Ethereum 
 ---
 
 **데이터 수집 시각**: 2026-02-16 02:54 UTC
-**수집 출처**: Google News (20건), Cointelegraph (15건), Binance (13건), Google News EN (11건), Google News KR (11건)
+**수집 출처**: Google News (20건), Cointelegraph (15건), Binance (13건), 구글 뉴스 (11건), Google News KR (11건)

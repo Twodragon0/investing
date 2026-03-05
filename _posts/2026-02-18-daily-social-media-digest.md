@@ -2,7 +2,7 @@
 layout: post
 title: "소셜 미디어 동향 - 2026-02-18"
 date: 2026-02-18 03:24:53 +0000
-categories: [crypto-news]
+categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
@@ -92,8 +92,8 @@ The Trump Tariffs Are Having a Noticeable Impact on the Stock Market and It's Ra
 [정책포커스] 이재명 정부에 바라는 정책금융경제(19) 재정의 지속가능성 높이고 맞춤형 지원도 배려해야 시사캐스트
 <span class="source-tag">이재명 경제정책</span>
 
-**3. [감사원 정책감사 폐지한다는데이재명 정부에선 ‘정치적 감사’ 사라질까 - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE1jd1FPUnNqa1A3WnlBeGMyQk5ObHFfRWJadUkza01BeFhJLUpOU1MxYVlDY2c1ek05TXl5VkkxOVQ0OUloX0o4cWpReUhZc1k?oc=5)**
-감사원 정책감사 폐지한다는데이재명 정부에선 ‘정치적 감사’ 사라질까 v.daum.net
+**3. [감사원 정책감사 폐지한다는데이재명 정부에선 ‘정치적 감사’ 사라질까 ](https://news.google.com/rss/articles/CBMiT0FVX3lxTE1jd1FPUnNqa1A3WnlBeGMyQk5ObHFfRWJadUkza01BeFhJLUpOU1MxYVlDY2c1ek05TXl5VkkxOVQ0OUloX0o4cWpReUhZc1k?oc=5)**
+감사원 정책감사 폐지한다는데이재명 정부에선 ‘정치적 감사’ 사라질까
 <span class="source-tag">이재명 경제정책</span>
 
 **4. [이재명 대통령, 설날에 영화 관람“대한민국 문화의 힘” - 포인트데일리](https://news.google.com/rss/articles/CBMicEFVX3lxTE1Vb1hkWVV1bXA4Qm54X1dzdXp6ejFuaWFkMlItTWdtUXRVMVpxZVphTm5XWkNPdlZHX0NhMUt2OHphQjVsTmFyenJFV1lack0zTjBqQlVZa2s3cWQ0WFM0eGZPSDQ2QXhiSFpVblBPZzDSAXRBVV95cUxNU21MNTh2YjF2T3JTd2JfTVljRzNZTDlheFJKY0RwWG9YdTVJbl9aVnRQWURtNnpOa1l3cG1QMzVJQzZ0YzlYM21RWlZoUGVna3ZUMW9KLTVNSU13SmtubUZyYzh0dEFCQllYVDF0bGxRdzcxWQ?oc=5)**

@@ -21,7 +21,7 @@ image: "/assets/images/generated/news-briefing-worldmonitor-2026-02-22.png"
 - 주요 출처: WorldMonitor/CNBC (14건), WorldMonitor/BBC World (6건)
 
 
-## 이슈 분포
+## 테마별 현황
 <div class="stat-value">20</div><div class="stat-label">총 이슈</div></div>
 <div class="stat-value">4</div><div class="stat-label">테마 수</div></div>
 <div class="stat-value">2</div><div class="stat-label">출처 수</div></div>

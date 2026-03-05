@@ -2,7 +2,7 @@
 layout: post
 title: "소셜 미디어 동향 - 2026-02-23"
 date: 2026-02-23 03:27:00 +0000
-categories: [crypto-news]
+categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
@@ -90,8 +90,8 @@ USDT Transfer Stuns Markets: 200 Million Dollar Whale Movement to Binance Signal
 [오늘 주요 경제·암호화폐 일정] 美 12월 공장수주 外 블루밍비트
 <span class="source-tag">트럼프 경제정책 KR</span>
 
-**2. [이거 혹시 시그널? 트럼프 일가, 마러라고서 크립토 세력 과시 이유는[나우,어스] - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE90c0x3X3pEOE10U0hCT3VUV0hIZHZiM2pLV0pzZUQ4NUdtR09UYXJ3cDFFaDRKN2laQlQwRll5X2JQVjEzUUQtS1BmSjJyS3c?oc=5)**
-이거 혹시 시그널? 트럼프 일가, 마러라고서 크립토 세력 과시 이유는[나우,어스] v.daum.net
+**2. [이거 혹시 시그널? 트럼프 일가, 마러라고서 크립토 세력 과시 이유는[나우,어스] ](https://news.google.com/rss/articles/CBMiT0FVX3lxTE90c0x3X3pEOE10U0hCT3VUV0hIZHZiM2pLV0pzZUQ4NUdtR09UYXJ3cDFFaDRKN2laQlQwRll5X2JQVjEzUUQtS1BmSjJyS3c?oc=5)**
+이거 혹시 시그널? 트럼프 일가, 마러라고서 크립토 세력 과시 이유는[나우,어스]
 <span class="source-tag">트럼프 경제정책 KR</span>
 
 **3. [[한주간 주요 경제·암호화폐 일정] 도널드 트럼프 미국 대통령 국정연설 外 - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE5ockxSd25VbWNOOGN5WnpIa0tTTWQ4cEg0T1Awa3gyaFdrT0hvRU5xeG5SRzVQbkFXMkVnQnBZNzNDVWdISFFqbmxxVEdjQ1hh?oc=5)**
@@ -137,7 +137,7 @@ Trump’s Trade Gamble Will Continue, Despite Supreme Court Rebuke The New York 
 
 - [[Telegram] 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
 - [[Telegram] 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://](https://t.me/whale_alert/11524) — Telegram @whale_alert
-- [[이번주 경제]한은 기준금리 동결 유력…작년 합계출산율 주목 - 뉴스1](https://news.google.com/rss/articles/CBMiVEFVX3lxTE0xY2c5dFRzSFJIZ2wxTHJRaENsazBzbXBPMUxtSGNLbVM0c1JqSXhxOENSRllsakJ0VV9ZcTc0dXg2Ni1mQnUwblRuWmRQNkRqUGZkMw?oc=5) — 한국은행 금리정책
+- [[이번주 경제]한은 기준금리 동결 유력…작년 합계출산율 주목(https://news.google.com/rss/articles/CBMiVEFVX3lxTE0xY2c5dFRzSFJIZ2wxTHJRaENsazBzbXBPMUxtSGNLbVM0c1JqSXhxOENSRllsakJ0VV9ZcTc0dXg2Ni1mQnUwblRuWmRQNkRqUGZkMw?oc=5) — 한국은행 금리정책
 
 ### 🟠 비트코인 (7건)
 

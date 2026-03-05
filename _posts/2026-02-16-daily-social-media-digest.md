@@ -2,7 +2,7 @@
 layout: post
 title: "소셜 미디어 동향 - 2026-02-16"
 date: 2026-02-16 03:27:09 +0000
-categories: [crypto-news]
+categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
@@ -96,8 +96,8 @@ Trump Affiliates Bannon and Epshteyn Named in ‘Let’s Go Brandon’ Crypto Co
 모건스탠리 “한은, 반도체 호조에 성장률 상향금리 2.5% 동결 전망” 전자신문
 <span class="source-tag">한국은행 금리정책</span>
 
-**4. [모건스탠리 “한은, 이달 기준금리 2.5% 동결 전망” - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9ndVBDbEctZGVic1pJb0NDTVFubWRSX2p4ZWVhQjVWWFBPSU1MMkI1QkRsbFU3S2xWamxHZzdVamVOZFdzdFlxR3FpT21jc0U?oc=5)**
-모건스탠리 “한은, 이달 기준금리 2.5% 동결 전망” v.daum.net
+**4. [모건스탠리 “한은, 이달 기준금리 2.5% 동결 전망” ](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9ndVBDbEctZGVic1pJb0NDTVFubWRSX2p4ZWVhQjVWWFBPSU1MMkI1QkRsbFU3S2xWamxHZzdVamVOZFdzdFlxR3FpT21jc0U?oc=5)**
+모건스탠리 “한은, 이달 기준금리 2.5% 동결 전망”
 <span class="source-tag">한국은행 금리정책</span>
 
 **5. [“미국은 축소, 한국은 확대” 두 나라 ‘금리 방향 예고’ 기조 엇갈리나 - 헤럴드경제](https://news.google.com/rss/articles/CBMiVkFVX3lxTE9fbkdud0dGXzFwVjI2cGNZZDR1RzVYQ0szNzc3cWduel9FVXRmc2dSMklQZ0FYZEJ6YXJJeGtrUmRzaGZQMXRodExLbURLMTk3dVJLakNR?oc=5)**
@@ -113,7 +113,7 @@ Trump Affiliates Bannon and Epshteyn Named in ‘Let’s Go Brandon’ Crypto Co
 **8. [모건스탠리 "2月 금통위 금리동결 예상" - 전파신문](https://news.google.com/rss/articles/CBMiakFVX3lxTE16c3phSzBXdDZRQTk4ZFhHeWVJUkpQbU1yM211YmxWYmVILWwxd0R1MVZTRzhDOFlFMXhGMmFqcjRDaU9ZUDJwckZlTDZnLWgxNjB1WHc5U0VIWEpiZGJNd0hUemNGRE5Jd2c?oc=5)**
 <span class="source-tag">한국은행 금리정책</span>
 
-**9. [불안한 환율·집값2월 기준금리 향방은 - 네이트](https://news.google.com/rss/articles/CBMibkFVX3lxTE12QzdpZ21QZG9zbkJRQ0JlcUdidzZtanFRd0dNWXc2UTBRd0RCWXRQQzBpZEp0WmtwcTR6U29iRDZIRUZDYjQweDd6bXB4eU5oekc5MXJZZjZJNEppWFI4cEM3czVKaDNmbDZ4blJn?oc=5)**
+**9. [불안한 환율·집값2월 기준금리 향방은(https://news.google.com/rss/articles/CBMibkFVX3lxTE12QzdpZ21QZG9zbkJRQ0JlcUdidzZtanFRd0dNWXc2UTBRd0RCWXRQQzBpZEp0WmtwcTR6U29iRDZIRUZDYjQweDd6bXB4eU5oekc5MXJZZjZJNEppWFI4cEM3czVKaDNmbDZ4blJn?oc=5)**
 <span class="source-tag">한국은행 금리정책</span>
 
 

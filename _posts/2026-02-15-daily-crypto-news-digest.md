@@ -138,11 +138,11 @@ Barclays, Benchmark, Clear Street, and JPMorgan all cut targets, citing weak ret
 
 **2. [US lawmakers make stunning pivot on major cryptocurrency bill in final moments: 'Unfortunately can't support' - Yahoo](https://news.google.com/rss/articles/CBMijAFBVV95cUxQM3lNd3c3Nl9uTE4tQ2phMlppa2l3S0xETUl2djNTd2p0X0NKN3l4dVQzMEtnNDhuY3ZKbnVkMkhNakpPYklzQ2o2Njh6YzNVbjRyWlFYMVl0RXhhOEk4U0FWWmJmR0h2ZGUxbHFXMXpDS0M3Mmo2VjdEUDYyNF96OC1VR2NlM3ZISkF4Qw?oc=5)**
 US lawmakers make stunning pivot on major cryptocurrency bill in final moments: 'Unfortunately can't support' Yahoo
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 **3. [Bill to regulate cryptocurrency kiosks in Virginia heads to governor’s desk - WVIR](https://news.google.com/rss/articles/CBMiogFBVV95cUxQaGRkS0VBMW92ZkdnSnlSWGlJV1ppV1hPbGNZZWpqaFZ4N2lBc3R1cU1Tbm9QYmt4enhTbU5EUk9jX0c3eDBTckZaTVM2b0xId0xxdUxfM1A2aGl2dzl0bVVPV3RsblNydWxtbmhIYWh5UkV0azY5V29JWEQ4TEhwbnZERHpUeE5ucXYtUjFGR01lbnZ5SUJBcmlnX1pUSUtEMkHSAbYBQVVfeXFMTk1qcTYxaW9ZWmJ0TDJ5TmJUVVAyeTRScVBxMG5FZVVhTnJBVVZlVjlzTUZhcGlRZWxtQ19Ud0p3bU5aZ09saUt3dklvektFQ1I2UU40dmY0ZnVBZXJ0Yng4UGd4VlV6R3RHek9xd1ZYY3NDNFVyTmttQ1ZBUzhSY25CREpmemhnMFB5OHp2MFYwbm43bTFIOTd2UGdGVmU3WW9Id21KMlRJd2RVdVBCNVlFRThjMHc?oc=5)**
 Bill to regulate cryptocurrency kiosks in Virginia heads to governor’s desk WVIR
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 <details><summary>그 외 5건 보기</summary><div class="details-content">
 <a href="https://www.coindesk.com/markets/2026/02/14/bitcoin-claws-back-to-usd70-000-on-cooling-inflation-after-usd8-7-billion-wipeout">Bitcoin claws back to $70,000 on cooling inflation after $8.7 billion wipeout</a>
@@ -172,7 +172,7 @@ Bill to regulate cryptocurrency kiosks in Virginia heads to governor’s desk WV
 
 오늘 가장 주목할 테마는 **비트코인**와 **가격/시장**입니다. 비트코인 가격 변동이 시장 전반에 영향을 미치고 있으며, 단기 방향성에 주목할 필요가 있습니다.
 
-향후 모니터링이 필요한 키워드: **bitcoin(비트코인)**None, **ethereum(이더리움)**None, **defi(디파이)**None
+향후 모니터링이 필요한 키워드: **bitcoin(비트코인), **ethereum(이더리움), **defi(디파이)
 
 거래소 공지사항 10건이 수집되었습니다. 새로운 상장, 이벤트, 정책 변경 등 거래소 동향이 시장 가격에 직접적 영향을 미칠 수 있어 주의가 필요합니다.
 
@@ -198,4 +198,4 @@ Bill to regulate cryptocurrency kiosks in Virginia heads to governor’s desk WV
 ---
 
 **데이터 수집 시각**: 2026-02-15 07:47 UTC
-**수집 출처**: Google News (20건), CoinDesk (15건), Binance (13건), Google News KR (10건), Google News EN (9건)
+**수집 출처**: Google News (20건), CoinDesk (15건), Binance (13건), Google News KR (10건), 구글 뉴스 (9건)

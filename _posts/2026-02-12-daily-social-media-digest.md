@@ -2,7 +2,7 @@
 layout: post
 title: "소셜 미디어 동향 - 2026-02-12"
 date: 2026-02-12 03:30:18 +0000
-categories: [crypto-news]
+categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
@@ -36,7 +36,7 @@ image: "/assets/images/generated/news-briefing-social-2026-02-12.png"
 - 주요 테마: 다양한 이슈
 - 긴급 알림 없음에 대한 선별 모니터링
 
-## 이슈 분포 현황
+## 테마별 현황 현황
 
 ```
 정치/정책   █████░░░░░░░░░░░░░    31%  (62건)

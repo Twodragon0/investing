@@ -37,7 +37,7 @@ image: "/assets/images/generated/news-briefing-worldmonitor-2026-02-24.png"
 - 정적 레이어(핫스팟/기지/핵시설/제재국가/경제 중심지)는 WorldMonitor 기준 데이터셋 기반입니다.
 - 상세 지도: https://finance.worldmonitor.app/?lat=20.0000&lon=0.0000&zoom=1.00&view=global&timeRange=7d&layers=conflicts%2Cbases%2Chotspots%2Cnuclear%2Csanctions%2Cweather%2Ceconomic%2Cwaterways%2Coutages%2Cmilitary%2Cnatural
 
-## 이슈 분포
+## 테마별 현황
 <div class="stat-value">20</div><div class="stat-label">총 이슈</div></div>
 <div class="stat-value">3</div><div class="stat-label">테마 수</div></div>
 <div class="stat-value">2</div><div class="stat-label">출처 수</div></div>

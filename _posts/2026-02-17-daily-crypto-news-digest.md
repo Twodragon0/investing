@@ -117,7 +117,7 @@ description: "2026-02-17 암호화폐 시장에서 109건의 뉴스를 분석했
 
 **1. [Mirae Asset acquires Korbit cryptocurrency exchange - ledgerinsights.com](https://news.google.com/rss/articles/CBMiiwFBVV95cUxQVmU1QXpiOHBvRFZjYU9DZGNwc3VKSEJZTXY4VVJCMmZFVXVucWsteHZKNHc0MUlPOHhUMHZ0YXo0alFZZ3Z5c2JUaTRPeFFwelRWZGJlR2NLdFU3eEFDZUFmbGx5a3lvRUZ5YU4xM2RGLTBZSVpmU2Q2dERuNENOTm8wTGxqVVBzRWxr?oc=5)**
 Mirae Asset acquires Korbit cryptocurrency exchange ledgerinsights.com
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 **2. [Nexo re-enters the U.S. market three years after exiting due to regulatory issues](https://www.coindesk.com/business/2026/02/16/nexo-partners-with-bakkt-reenters-the-u-s-with-crypto-yield-lending-and-exchange-services)**
 The digital assets wealth platform’s rollout includes regulated yield accounts, credit lines and exchange access backed by Bakkt.
@@ -175,7 +175,7 @@ Lack of privacy is a barrier to both everyday and institutional use of crypto an
 
 오늘 가장 주목할 테마는 **비트코인**와 **가격/시장**입니다. 비트코인 가격 변동이 시장 전반에 영향을 미치고 있으며, 단기 방향성에 주목할 필요가 있습니다.
 
-향후 모니터링이 필요한 키워드: **bitcoin(비트코인)**None, **etf(상장지수펀드)**None, **ethereum(이더리움)**None
+향후 모니터링이 필요한 키워드: **bitcoin(비트코인), **etf(상장지수펀드), **ethereum(이더리움)
 
 거래소 공지사항 10건이 수집되었습니다. 새로운 상장, 이벤트, 정책 변경 등 거래소 동향이 시장 가격에 직접적 영향을 미칠 수 있어 주의가 필요합니다.
 

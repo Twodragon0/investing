@@ -97,11 +97,11 @@ description: "2026-02-19 암호화폐 시장에서 111건의 뉴스를 분석했
 
 **1. [BitGW.com Takes a Global-First Approach in the Cryptocurrency Exchange Industry - USA Today](https://news.google.com/rss/articles/CBMi9AFBVV95cUxPOFRvS1g5Nkw4NnVFcjB0Z19JdjlzcmdNM0xPS1Q5VE9POWluQ3llNTV3aUdkWDJYZFRyc3pBajEyd21PY0xtVXNraV9FR0hRVXVJbWFkV091LUo0OEZkRmhwSEVjMUduUGllSl9xS0QxWHl5NlJhUS1LcW1lVmFDb2prVi1wQWVxOU9laG9WZlJOVzgwdW5sd1pjYlVsRE9INlk4Q1h1aWxoREdGRFJXelhzTl90cndiYW1aTTdEQ0hMSGF1SFlfeFE2QjVSWjZVMUhwTVUxUFlSMkVhd0VsSG42c21vY2FvOElzbUJGZUVST3l6?oc=5)**
 BitGW.com Takes a Global-First Approach in the Cryptocurrency Exchange Industry USA Today
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 **2. [As crypto industry expands, U.S. slashes office examining dirty money safeguards of cryptocurrency exchanges - International Consortium of Investigative Journalists - ICIJ](https://news.google.com/rss/articles/CBMi7AFBVV95cUxQN0hSbFlxbnFHWlozNEFPNkZPZFRGWTJFdG5EVU1wOFFfeTVXa3VMUU9BSzFIMk9lcEJZNHBJYUM5X2NMUU5sZTBxdHNkS1lwbmVfWUxHUE1FUG9LUUVDYUc3V2FvODJVTEo4OUtoeHZCaU5TcGUzVXhTWTdZc3FGakhoM2dxRm5fcV93VjdURUY1ZE94Z2tURVVHMVhLTklGd2ZDaEZoSUd5OWRJYTRYVTg4S2hKYlpDeWZlZzlXN2xkUlp5TEtDanVGd1pLNzZROXExcHljb2JfZi1NN2JQWkV2UlFGU05mbWNXZA?oc=5)**
 As crypto industry expands, U.S. slashes office examining dirty money safeguards of cryptocurrency exchanges International Consortium of Investigative
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 **3. [Coinbase’s Crypto-Backed Lending Product Expands to XRP and DOGE](https://decrypt.co/358480/coinbases-crypto-backed-lending-product-xrp-doge)**
 Coinbase signaled its crypto-backed lending product is expanding in the U.S., unveiling support for XRP, Dogecoin, Cardano, and Litecoin.
@@ -177,7 +177,7 @@ Coinbase signaled its crypto-backed lending product is expanding in the U.S., un
 
 오늘 가장 주목할 테마는 **비트코인**와 **가격/시장**입니다. 비트코인 가격 변동이 시장 전반에 영향을 미치고 있으며, 단기 방향성에 주목할 필요가 있습니다.
 
-향후 모니터링이 필요한 키워드: **bitcoin(비트코인)**None, **ai(인공지능)**None, **ethereum(이더리움)**None
+향후 모니터링이 필요한 키워드: **bitcoin(비트코인), **ai(인공지능), **ethereum(이더리움)
 
 거래소 공지사항 10건이 수집되었습니다. 새로운 상장, 이벤트, 정책 변경 등 거래소 동향이 시장 가격에 직접적 영향을 미칠 수 있어 주의가 필요합니다.
 

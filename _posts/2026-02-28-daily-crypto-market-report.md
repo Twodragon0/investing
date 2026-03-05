@@ -5,7 +5,7 @@ date: 2026-02-28 02:40:17 +0000
 categories: [market-analysis]
 tags: [market-report, crypto, top-coins, trending, daily]
 source: "CoinMarketCap"
-source_url: "https://www.coingecko.com/"
+source_url: "https://coinmarketcap.com/"
 lang: "ko"
 description: "2026-02-28 암호화폐 시장 종합 리포트. (API 데이터 수집 오류로 가격 정보가 불완전합니다)"
 ---

@@ -102,7 +102,7 @@ description: "2026-02-26 암호화폐 시장에서 114건의 뉴스를 분석했
 
 **3. [Terror groups receive $1.7b. from Iran through Binance - The Jerusalem Post](https://news.google.com/rss/articles/CBMiakFVX3lxTE9peVJ4TmdRRHgwRmtLMEwzdEppYU1sUUhSdnRRVlcxMkR2TFlNUUc5R3ptdUN2SmhjSUdYaXNjYXNXOFZTT3J5UTVLUUxzNDc2UHQxd01kN1F6dHo1VHhadG9sTmd4ai1QMEE?oc=5)**
 Terror groups receive $1.7b. from Iran through Binance The Jerusalem Post
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 <details><summary>그 외 13건 보기</summary><div class="details-content">
 <a href="https://decrypt.co/359126/bitcoin-giant-strategy-coinbase-most-shorted-stocks-goldman-sachs">Bitcoin Giant Strategy, Coinbase Among Most-Shorted Stocks: Goldman Sachs</a>
@@ -144,7 +144,7 @@ Nvidia’s earnings lifted technology shares and steadied broader markets, even 
 
 **3. [Wisconsin bill targets cryptocurrency kiosk scams - Northern News Now](https://news.google.com/rss/articles/CBMimAFBVV95cUxQdzk0dm1HTVRBU2dKQk9sbWgtclkyQVVNYzBNRXRFSVlSRTRycFFfNUgyVGpUa2psWEp6cTExVWNFX0RRZkJYVVJBbWQtbEZEOVJyVWpEYWYxbGVGX3Q2a3lLR3RUVVI3Znl3S2xvZ0NxWHFodnRYbGtiRkt1ekdpUlNCcDRnNWVWTWtJWDB1b0ZXWWRwdE0tTdIBrAFBVV95cUxQQUl1MjF5LTNiUkpQQkVJNEM1N2wxOHhHTDRneTMwM1VRMUVuT1pwU3FUTzdsa0F3QkRPWUFYZEl4b1RILTZYNU54UU5TWUJldS1PN3oxdW91d0ZsQnZ5UWg2eDZfYllTbWs0bU1SWV9tVHVVVVh3TjkwSktXV1d6NXNJYlVLZURLOTY3QVJhWmFBVFN3QWpBRGxzb0R4VGpkTmpyMU5XRnpFRUQ4?oc=5)**
 Wisconsin bill targets cryptocurrency kiosk scams Northern News Now
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 <details><summary>그 외 23건 보기</summary><div class="details-content">
 <a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxPWUpXSDVrNDVDSnFuYjBoSkp1bF96MWlPZlpSMWhVVEhzcGMzUHlCMnRReWVuNDdqcFVtVmtJYl9XdEFlSUp0X2N5dEZMRzV2LVRiVGZwRDc3Wnd3UEhIalQxdTJfdFdybkd6bWM2d0R0anJsbUxoZlBrS2ZTdVAzY09fR2EtT2xnRnl4by15cFFmSXA4OTgxWGln?oc=5">Wisconsin bill targets cryptocurrency kiosk scams - WMTV 15 NEWS</a>
@@ -175,7 +175,7 @@ Wisconsin bill targets cryptocurrency kiosk scams Northern News Now
 
 오늘 가장 주목할 테마는 **비트코인**와 **가격/시장**입니다. 비트코인 가격 변동이 시장 전반에 영향을 미치고 있으며, 단기 방향성에 주목할 필요가 있습니다.
 
-향후 모니터링이 필요한 키워드: **bitcoin(비트코인)**None, **ai(인공지능)**None, **ethereum(이더리움)**None
+향후 모니터링이 필요한 키워드: **bitcoin(비트코인), **ai(인공지능), **ethereum(이더리움)
 
 거래소 공지사항 10건이 수집되었습니다. 새로운 상장, 이벤트, 정책 변경 등 거래소 동향이 시장 가격에 직접적 영향을 미칠 수 있어 주의가 필요합니다.
 
@@ -188,4 +188,4 @@ Wisconsin bill targets cryptocurrency kiosk scams Northern News Now
 ---
 
 **데이터 수집 시각**: 2026-02-26 02:48 UTC
-**수집 출처**: Google News (20건), Decrypt (15건), Cointelegraph (15건), CoinDesk (15건), Google News EN (13건)
+**수집 출처**: Google News (20건), Decrypt (15건), Cointelegraph (15건), CoinDesk (15건), 구글 뉴스 (13건)

@@ -2,7 +2,7 @@
 layout: post
 title: "소셜 미디어 동향 - 2026-02-28"
 date: 2026-02-28 03:41:23 +0000
-categories: [crypto-news]
+categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
@@ -64,27 +64,27 @@ Trump announces new retirement plan for non-401(k) workers thestreet.com
 Bitcoin State of the Union Snub: Peter Schiff’s Explosive Claim About Trump’s Deliberate Omission CryptoRank
 <span class="source-tag">Trump Crypto Policy</span>
 
-**4. [‘또 칭찬’ 이재명 대통령이 반한 전남 지역 정책은? - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE1hTFNDeEJ2TzlyNXlnN2g1MkZwREdjcGFmZXRPSlhldlhGM3JHODV5R21mczJjYnpnaVFmUWdHaHZCR3RfWWZnLXduRG1fWXM?oc=5)**
-‘또 칭찬’ 이재명 대통령이 반한 전남 지역 정책은? v.daum.net
+**4. [‘또 칭찬’ 이재명 대통령이 반한 전남 지역 정책은? ](https://news.google.com/rss/articles/CBMiT0FVX3lxTE1hTFNDeEJ2TzlyNXlnN2g1MkZwREdjcGFmZXRPSlhldlhGM3JHODV5R21mczJjYnpnaVFmUWdHaHZCR3RfWWZnLXduRG1fWXM?oc=5)**
+‘또 칭찬’ 이재명 대통령이 반한 전남 지역 정책은?
 <span class="source-tag">이재명 경제정책</span>
 
 **5. [[시사쇼]'이재명 신세력' '뉴이재명'은 누구인가 - 아시아경제 - campaigns.do](https://news.google.com/rss/articles/CBMiS0FVX3lxTE1zOUFYTkpvNzBmbVNPdGh3LTRqSVAtM1gyM1JabEtJVHhhRlozV0ZweWVlMXhuMkw0Zl81OVVYQTM5U0VJdy0tWW5OOA?oc=5)**
 [시사쇼]'이재명 신세력' '뉴이재명'은 누구인가 - 아시아경제 campaigns.do
 <span class="source-tag">이재명 경제정책</span>
 
-**6. [[한국갤럽] 이재명 지지율 64%로 1%p 올라, 긍정 이유 '경제·민생' '부동산' - 비즈니스포스트](https://news.google.com/rss/articles/CBMic0FVX3lxTFB6R25Da1dmTHk0am9XVm5vUnhwajhaM2RBT0cwcnFEUHFEeHpTNFFjYWNxX0dEN2J2eGRiRnpnZnhKaVRiTGpabzFCZzMyd01kc3dTM2tlMk5wZF9FN19iTVhzZTlabGNOa3lJTEZ5cUhUSmM?oc=5)**
+**6. [[한국갤럽] 이재명 지지율 64%로 1%p 올라, 긍정 이유 '경제·민생' '부동산'(https://news.google.com/rss/articles/CBMic0FVX3lxTFB6R25Da1dmTHk0am9XVm5vUnhwajhaM2RBT0cwcnFEUHFEeHpTNFFjYWNxX0dEN2J2eGRiRnpnZnhKaVRiTGpabzFCZzMyd01kc3dTM2tlMk5wZF9FN19iTVhzZTlabGNOa3lJTEZ5cUhUSmM?oc=5)**
 <span class="source-tag">이재명 경제정책</span>
 
 **7. [[6·3 포커스]최현덕 남양주시장 예비후보 “이재명 정부가 연 KOSPI 황금기, 남양주 청년과 함께!” - 경기신문](https://news.google.com/rss/articles/CBMiYkFVX3lxTFAtSHhid2xxY0laOGJiYnZvSTNLaHRPVWZVZlpIYkRuV0ZhSlNiWFBJYXRpcUdvbnd1SVJOY3ZzMVFFbXM1NGR6cDRWTVZ5NEs0WXRaVUozTVlzd1VadUpGTkln?oc=5)**
 <span class="source-tag">이재명 경제정책</span>
 
-**8. ["살집 하나면 족하다"…이재명 대통령 부동산 정책에 맞장구 친 홍준표 - 네이트](https://news.google.com/rss/articles/CBMiU0FVX3lxTFBlNnRKcERNdXk4aXVJT1R4cnBQLUF4YUZRRXhLeVFpdktQS3FWOFVOaDh4QUsxeXVTcXdGNUFCQlhFdmhnV2hpSFo5cDNSX1FjTXFZ?oc=5)**
+**8. ["살집 하나면 족하다"…이재명 대통령 부동산 정책에 맞장구 친 홍준표(https://news.google.com/rss/articles/CBMiU0FVX3lxTFBlNnRKcERNdXk4aXVJT1R4cnBQLUF4YUZRRXhLeVFpdktQS3FWOFVOaDh4QUsxeXVTcXdGNUFCQlhFdmhnV2hpSFo5cDNSX1FjTXFZ?oc=5)**
 <span class="source-tag">이재명 경제정책</span>
 
 **9. [이재명 '정책 멘토' 이한주 경제인문사회연구회 이사장, 재산 75억 신고 - 뉴스핌](https://news.google.com/rss/articles/CBMiXEFVX3lxTFByV3l0VGtPU1pPRnpfSENYV3ZkWmZ1YW1CY2hkd1d5SjhDYmhIcWxsNEVkdVJ6a0hlVzRUMVdzaUM5U1luelZMd1FZRDJ6eWVSRC0wRzNnN2JFeHVZ?oc=5)**
 <span class="source-tag">이재명 경제정책</span>
 
-**10. ['코스피 6000·최고지지율' 이재명 부동산 총력전, 문재인 정부와 다른 점은? - 비즈니스포스트](https://news.google.com/rss/articles/CBMic0FVX3lxTFA4UEtCQ2dETHlfY3l5NHc3Yk5yWHh5UUVkUlAtd3JOM19HTS10MHVvQVF2YnhJY25EUnp2TktDbzEtcG9peDJMdmdaRnhyRzlQNF9SOFNmRFB0MXBqM2l1Y0JsY2pfUlVrUTMtZGx5ODRrRDQ?oc=5)**
+**10. ['코스피 6000·최고지지율' 이재명 부동산 총력전, 문재인 정부와 다른 점은?(https://news.google.com/rss/articles/CBMic0FVX3lxTFA4UEtCQ2dETHlfY3l5NHc3Yk5yWHh5UUVkUlAtd3JOM19HTS10MHVvQVF2YnhJY25EUnp2TktDbzEtcG9peDJMdmdaRnhyRzlQNF9SOFNmRFB0MXBqM2l1Y0JsY2pfUlVrUTMtZGx5ODRrRDQ?oc=5)**
 <span class="source-tag">이재명 경제정책</span>
 
 
@@ -109,7 +109,7 @@ Bitcoin State of the Union Snub: Peter Schiff’s Explosive Claim About Trump’
 
 - [[Reddit] Iranians are Mining Bitcoin for $1,325 with 50x Returns Despite Electricity Shortages](https://reddit.com/r/CryptoCurrency/comments/1rge90w/iranians_are_mining_bitcoin_for_1325_with_50x/) — r/CryptoCurrency
 - [[Reddit] Norway’s $2T Sovereign Wealth Fund Books ~$250B Profit in 2025 – Powered by Big Tech &amp; Banking Rally](https://reddit.com/r/stocks/comments/1rg6yw1/norways_2t_sovereign_wealth_fund_books_250b/) — r/Stocks
-- [[한국갤럽] 이재명 지지율 64%로 1%p 올라, 긍정 이유 '경제·민생' '부동산' - 비즈니스포스트](https://news.google.com/rss/articles/CBMic0FVX3lxTFB6R25Da1dmTHk0am9XVm5vUnhwajhaM2RBT0cwcnFEUHFEeHpTNFFjYWNxX0dEN2J2eGRiRnpnZnhKaVRiTGpabzFCZzMyd01kc3dTM2tlMk5wZF9FN19iTVhzZTlabGNOa3lJTEZ5cUhUSmM?oc=5) — 이재명 경제정책
+- [[한국갤럽] 이재명 지지율 64%로 1%p 올라, 긍정 이유 '경제·민생' '부동산'(https://news.google.com/rss/articles/CBMic0FVX3lxTFB6R25Da1dmTHk0am9XVm5vUnhwajhaM2RBT0cwcnFEUHFEeHpTNFFjYWNxX0dEN2J2eGRiRnpnZnhKaVRiTGpabzFCZzMyd01kc3dTM2tlMk5wZF9FN19iTVhzZTlabGNOa3lJTEZ5cUhUSmM?oc=5) — 이재명 경제정책
 
 ### 🟠 비트코인 (6건)
 

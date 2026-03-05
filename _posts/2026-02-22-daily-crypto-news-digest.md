@@ -83,7 +83,7 @@ description: "2026-02-22 암호화폐 시장에서 101건의 뉴스를 분석했
 
 **3. [Russia-linked cryptocurrency services and sanctions evasion - Elliptic](https://news.google.com/rss/articles/CBMikgFBVV95cUxOcEVoeE1VamlwREtsSUxoRS0tZ2NwWVRxVUZmelRXSUNvSXF1WlQ1Vlh3VGE3SWxtWUk3bTFSMVZ4cGlMeHdKdDNIVWFJeFd6VnpwZ3VBUUtmZXY3Njl6RWpsS2I0Nnp4bUNmYndDemdMSEVMTGk4MndBOEFoOF9hS3d0TC1pVmNYUTNXUzRyZXlMUQ?oc=5)**
 Russia-linked cryptocurrency services and sanctions evasion Elliptic
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 <details><summary>그 외 17건 보기</summary><div class="details-content">
 <a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE1CTVZocW83alM0NnhOMWI0RTV3bE9rY3EwQTdaRXR1cHNrSmEybEVnN3ZXaWY3ZDJaZWFtSmFRSU5RV1B5VXJEcFZNM3VfSDlJZnh4MmRod1Y?oc=5">관세 위법, 암호화폐 일제↑ 비트 6.8만달러 회복-리플 1%(상보) - 뉴스1</a>
@@ -106,7 +106,7 @@ Russia-linked cryptocurrency services and sanctions evasion Elliptic
 <span class="source-tag">Google News</span>
 
 <details><summary>그 외 19건 보기</summary><div class="details-content">
-<a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE5DUlRKMm9GYl8zNHhwaDg3akFWU2Ftby0xQ0pxdlRuSVlWaGFNYnlSQmx5Vmo4cFdNY2tjOGlFcUdGcFhSNHdCM0F2MjFXWFk?oc=5">스트래티지 CEO "비트코인 0달러 안 되면 100만 달러 간다" - v.daum.net</a>
+<a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE5DUlRKMm9GYl8zNHhwaDg3akFWU2Ftby0xQ0pxdlRuSVlWaGFNYnlSQmx5Vmo4cFdNY2tjOGlFcUdGcFhSNHdCM0F2MjFXWFk?oc=5">스트래티지 CEO "비트코인 0달러 안 되면 100만 달러 간다"</a>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE8xTXpBeDM2YnY0UklONnBJVy1xMTF1alU3dzZJXy1yRUNFM3NWMHVka3QtM0x6NXhYWGstZV9YeGJ3Z1p2eFhLZ2Q0R2QwRVNFckFjSXB3?oc=5">6만 달러 깨지면 끝모를 바닥…네 번째 '크립토 윈터' 위기감 - 중앙일보</a>
 <em>...외 4건</em>
 </details>
@@ -121,7 +121,7 @@ Russia-linked cryptocurrency services and sanctions evasion Elliptic
 
 **2. [After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued? - Morningstar](https://news.google.com/rss/articles/CBMimwFBVV95cUxNRW5lMUlzTkxlZEVaYjlTUkVKbTR0Qm9tZzVRN3BGVUtBcVBJSFBTS0FGTVJIc18tUU1wZXV4bk9EZ3J0LXFoZTlfWjFYMTgyU0VnQVdBWmhKTm1rak1Kb3NldkVOQllmaTd3U2JLQVloc2JXUk82TUVtMU5xR1I3cXRraDdOY1Rvd3VFYjhOc01GWG4xWGl1bk1sbw?oc=5)**
 After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued? Morningstar
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 **3. [IoTeX confirms ‘suspicious activity’ involving token safe, says losses contained](https://cointelegraph.com/news/iotex-investigates-token-safe-suspicious-activity-4-3m-loss?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound)**
 IoTeX said it is assessing suspicious activity tied to a token safe, coordinating with exchanges to trace funds after analysts linked the incident to ...
@@ -145,7 +145,7 @@ IoTeX said it is assessing suspicious activity tied to a token safe, coordinatin
 
 **3. [After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued? - Morningstar](https://news.google.com/rss/articles/CBMimwFBVV95cUxNRW5lMUlzTkxlZEVaYjlTUkVKbTR0Qm9tZzVRN3BGVUtBcVBJSFBTS0FGTVJIc18tUU1wZXV4bk9EZ3J0LXFoZTlfWjFYMTgyU0VnQVdBWmhKTm1rak1Kb3NldkVOQllmaTd3U2JLQVloc2JXUk82TUVtMU5xR1I3cXRraDdOY1Rvd3VFYjhOc01GWG4xWGl1bk1sbw?oc=5)**
 After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued? Morningstar
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 <details><summary>그 외 10건 보기</summary><div class="details-content">
 <a href="https://cointelegraph.com/news/bitcoin-price-prediction-retail-user-healthy-crypto-indicator-santiment?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Bitcoin $150K price calls are ‘drying up,’ which is healthy: Santiment</a>
@@ -175,7 +175,7 @@ After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued? Morningstar
 
 오늘 가장 주목할 테마는 **비트코인**와 **정치/정책**입니다. 정치적 이슈가 비트코인 시장 심리에 영향을 주고 있어, 정책 발표와 관련 인사들의 발언에 주의가 필요합니다.
 
-향후 모니터링이 필요한 키워드: **bitcoin(비트코인)**None, **ai(인공지능)**None, **ethereum(이더리움)**None
+향후 모니터링이 필요한 키워드: **bitcoin(비트코인), **ai(인공지능), **ethereum(이더리움)
 
 거래소 공지사항 10건이 수집되었습니다. 새로운 상장, 이벤트, 정책 변경 등 거래소 동향이 시장 가격에 직접적 영향을 미칠 수 있어 주의가 필요합니다.
 

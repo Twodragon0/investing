@@ -32,7 +32,7 @@ description: "2026-02-18 암호화폐 시장에서 115건의 뉴스를 분석했
 
 <strong>암호화폐 시장 **비트코인, 가격/시장** 중심 115건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 57건 수집</li><li>📈 <strong>가격/시장</strong>: 26건 수집</li><li>🏦 <strong>거래소</strong> (16건): BitGW.com Takes a Global-First Approach in the Cryptocurrency Exchange Industry USA Today</li><li>🔷 <strong>이더리움</strong> (18건): Ethereum At Risk Of Falling Under $996 (Cryptocurrency:ETH-USD) Seeking Alpha</li></ul></div>
 
-<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMitwFBVV95cUxPNU9uNnQ5ZXk3WDJUaUVXUzdzR1o5ajZUdTFhb3pVdDB4Q3ZOZVdtT2VBTXJkWnhCTmxidy1wcmZzNjF1SHlQWkNGWlBmR1BxRWZoVW1hcGtHc3ZTNXJWYmg4bV9zRjlqOXh4TkJ6UDlwSmx4R05RZXR2cWxiR2ZxOXh2bUk2d3dfNUxWQkZwU3pBYk9JdXBaSDRxUXpLYjRJaGJxRVI1N1lkVTVPUTExQlVoOGdCVlk?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin's Crash Is Putting Crypto Treasury Stocks To The Test</a></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMkJqRVlOMzViU2xQVWV4cW9DaTZzbHdENlFkSnkxeGNqS3kyRWtQU3gtVlZXcld6TmJIQWtYTmlCWlE2UUhpTHlXbzJMY0hsTmZoMVI4VlpmUmVKajk0bGJJcFpiS0FabUVQQkFsZER4aHhtak02RTBCWjM1MHV6NUZReXpjdjlV?oc=5">비트코인 " 곧 10분의 1 토막 추락"  블룸버그 긴급보고서 - 글로벌이코노믹</a></li><li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFAtbkVjNVNSQW1nV090aDJrSmdXTkFDUEdWaHlhd1VYVlFRakVlMkJHamFiaEIxc1R1bE83dnFmRmJ6VFJYS0JNQm5ROVl2VlE?oc=5">‘폭락’ 비트코인 들어갈까 말까?붕괴 vs 반등 엇갈린 전망 - v.daum.net</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMitwFBVV95cUxPNU9uNnQ5ZXk3WDJUaUVXUzdzR1o5ajZUdTFhb3pVdDB4Q3ZOZVdtT2VBTXJkWnhCTmxidy1wcmZzNjF1SHlQWkNGWlBmR1BxRWZoVW1hcGtHc3ZTNXJWYmg4bV9zRjlqOXh4TkJ6UDlwSmx4R05RZXR2cWxiR2ZxOXh2bUk2d3dfNUxWQkZwU3pBYk9JdXBaSDRxUXpLYjRJaGJxRVI1N1lkVTVPUTExQlVoOGdCVlk?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin's Crash Is Putting Crypto Treasury Stocks To The Test</a></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMkJqRVlOMzViU2xQVWV4cW9DaTZzbHdENlFkSnkxeGNqS3kyRWtQU3gtVlZXcld6TmJIQWtYTmlCWlE2UUhpTHlXbzJMY0hsTmZoMVI4VlpmUmVKajk0bGJJcFpiS0FabUVQQkFsZER4aHhtak02RTBCWjM1MHV6NUZReXpjdjlV?oc=5">비트코인 " 곧 10분의 1 토막 추락"  블룸버그 긴급보고서 - 글로벌이코노믹</a></li><li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFAtbkVjNVNSQW1nV090aDJrSmdXTkFDUEdWaHlhd1VYVlFRakVlMkJHamFiaEIxc1R1bE83dnFmRmJ6VFJYS0JNQm5ROVl2VlE?oc=5">‘폭락’ 비트코인 들어갈까 말까?붕괴 vs 반등 엇갈린 전망</a></li></ul></div>
 
 
 ![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-18.png' | relative_url }})
@@ -100,11 +100,11 @@ description: "2026-02-18 암호화폐 시장에서 115건의 뉴스를 분석했
 
 **2. [BitGW.com Takes a Global-First Approach in the Cryptocurrency Exchange Industry - USA Today](https://news.google.com/rss/articles/CBMi9AFBVV95cUxPOFRvS1g5Nkw4NnVFcjB0Z19JdjlzcmdNM0xPS1Q5VE9POWluQ3llNTV3aUdkWDJYZFRyc3pBajEyd21PY0xtVXNraV9FR0hRVXVJbWFkV091LUo0OEZkRmhwSEVjMUduUGllSl9xS0QxWHl5NlJhUS1LcW1lVmFDb2prVi1wQWVxOU9laG9WZlJOVzgwdW5sd1pjYlVsRE9INlk4Q1h1aWxoREdGRFJXelhzTl90cndiYW1aTTdEQ0hMSGF1SFlfeFE2QjVSWjZVMUhwTVUxUFlSMkVhd0VsSG42c21vY2FvOElzbUJGZUVST3l6?oc=5)**
 BitGW.com Takes a Global-First Approach in the Cryptocurrency Exchange Industry USA Today
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 **3. [As crypto industry expands, U.S. slashes office examining dirty money safeguards of cryptocurrency exchanges - International Consortium of Investigative Journalists - ICIJ](https://news.google.com/rss/articles/CBMi7AFBVV95cUxQN0hSbFlxbnFHWlozNEFPNkZPZFRGWTJFdG5EVU1wOFFfeTVXa3VMUU9BSzFIMk9lcEJZNHBJYUM5X2NMUU5sZTBxdHNkS1lwbmVfWUxHUE1FUG9LUUVDYUc3V2FvODJVTEo4OUtoeHZCaU5TcGUzVXhTWTdZc3FGakhoM2dxRm5fcV93VjdURUY1ZE94Z2tURVVHMVhLTklGd2ZDaEZoSUd5OWRJYTRYVTg4S2hKYlpDeWZlZzlXN2xkUlp5TEtDanVGd1pLNzZROXExcHljb2JfZi1NN2JQWkV2UlFGU05mbWNXZA?oc=5)**
 As crypto industry expands, U.S. slashes office examining dirty money safeguards of cryptocurrency exchanges International Consortium of Investigative
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 <details><summary>그 외 13건 보기</summary><div class="details-content">
 <a href="https://decrypt.co/358325/gemini-stock-dives-winklevoss-crypto-exchange-dumps-executives">Gemini Stock Dives as Winklevoss-Led Crypto Exchange Dumps Executives</a>
@@ -124,7 +124,7 @@ As crypto industry expands, U.S. slashes office examining dirty money safeguards
 
 **3. [Ethereum At Risk Of Falling Under $996 (Cryptocurrency:ETH-USD) - Seeking Alpha](https://news.google.com/rss/articles/CBMihAFBVV95cUxNMlR6X0pNWmhhcjUycGxKLUdWUXdNd3RlSW1xSkNUOFdHNjNCQmVvXzFVaWoycnZ5V2VuN0tDOGptZVhjNDBYMUVTSlZvMmg3ajl5MjN0cnJCT1pucFFMbl96d2FwWUs3a2tmUFN1dmJ1RWVZM2g0Y0hwcHYzVm8weWZwSGo?oc=5)**
 Ethereum At Risk Of Falling Under $996 (Cryptocurrency:ETH-USD) Seeking Alpha
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 <details><summary>그 외 15건 보기</summary><div class="details-content">
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE8yc19lSmZKM2M2OTNkcTl4OFNiVTE0UHpIb25rX1EzQkwzVWlwRElmaUdjaklCdDBud1dxZGNCbWVkazRHUjVfNi1JXzV6Y29oczVxYXNTUGppSFJPSjdJSTdzRzYxUWQ5N3BMcXRlZG_SAXNBVV95cUxPcU9SNXZzTS1URWtzRXVieW5OMWRxUVd2Uk14Tl81X0QyMlZJNm9GV1pMSEdNQXk4SGFaQzBzYUQwQzd6U0xSVzkyOEFUaklCV19RR21KTGtoV24yNmJTTDZrU1d5NXVYbl9kNzUwX1dqbGNV?oc=5">장중 암호화폐비트코인 '하락', 이더리움 '소폭 상승' - 초이스경제</a>
@@ -176,7 +176,7 @@ ZeroLend cited an inability to "generate sustainable revenue" as it became the l
 
 오늘 가장 주목할 테마는 **비트코인**와 **가격/시장**입니다. 비트코인 가격 변동이 시장 전반에 영향을 미치고 있으며, 단기 방향성에 주목할 필요가 있습니다.
 
-향후 모니터링이 필요한 키워드: **bitcoin(비트코인)**None, **etf(상장지수펀드)**None, **ai(인공지능)**None
+향후 모니터링이 필요한 키워드: **bitcoin(비트코인), **etf(상장지수펀드), **ai(인공지능)
 
 거래소 공지사항 10건이 수집되었습니다. 새로운 상장, 이벤트, 정책 변경 등 거래소 동향이 시장 가격에 직접적 영향을 미칠 수 있어 주의가 필요합니다.
 

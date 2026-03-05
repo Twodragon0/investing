@@ -2,7 +2,7 @@
 layout: post
 title: "소셜 미디어 동향 - 2026-02-24"
 date: 2026-02-24 05:48:07 +0000
-categories: [crypto-news]
+categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
@@ -114,7 +114,7 @@ Stocks drop after Trump ramps up new tariffs and investors dump potential AI los
 **9. [[기획특집] 이재명 「국민주권정부」 ⑦ 경제정책 라인, 경제정책 - 르몽드 디플로마티크](https://news.google.com/rss/articles/CBMiakFVX3lxTFBJMElCUmF5dzU5ZXdRLVV2Q2t0Y0F0VTA5ejdoSzQ5YWNjcHh5OEFDWlFLcHhKMmY4RG5RYml1YTV0ZDg4bHFPUW50aWZ6SWxic3hLTjBPU1o0aV93QkJaNWI4QS1hRmNHUEE?oc=5)**
 <span class="source-tag">이재명 경제정책</span>
 
-**10. [이재명·장동혁 부동산 설전…李대통령의 정책 실패 탓 - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE03aUI2cmJoVDZOalg4ay0xRjYxaUlJMmhtNEp4dGxOamk5YjhmdVlJWjFCQkNVQUNsU1dfQWFsWDJTVWNEM1dXNlNjZm9kV3M?oc=5)**
+**10. [이재명·장동혁 부동산 설전…李대통령의 정책 실패 탓 ](https://news.google.com/rss/articles/CBMiT0FVX3lxTE03aUI2cmJoVDZOalg4ay0xRjYxaUlJMmhtNEp4dGxOamk5YjhmdVlJWjFCQkNVQUNsU1dfQWFsWDJTVWNEM1dXNlNjZm9kV3M?oc=5)**
 <span class="source-tag">이재명 경제정책</span>
 
 
@@ -133,7 +133,7 @@ Stocks drop after Trump ramps up new tariffs and investors dump potential AI los
 
 - [[Telegram] 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
 - [[Telegram] 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://](https://t.me/whale_alert/11524) — Telegram @whale_alert
-- [로이터 "한국은행 올해 금리 2.5%로 동결 전망", 환율과 부동산 리스크 고려 - 비즈니스포스트](https://news.google.com/rss/articles/CBMic0FVX3lxTE9zU2xsSWtUZDVid2dXOVhaenpWVzltZlh5SE9hXzQ5eXFHS1NsVGZyQ2IydFZsZTBDblNIYmxGVHVnZjVWRTZ2Q3V2Vjc3M0M5cm1jekJXSUtEOV9TTHJPTTlpRXZ3cGdZSWpCdl9ab0pKMkU?oc=5) — 한국은행 금리정책
+- [로이터 "한국은행 올해 금리 2.5%로 동결 전망", 환율과 부동산 리스크 고려(https://news.google.com/rss/articles/CBMic0FVX3lxTE9zU2xsSWtUZDVid2dXOVhaenpWVzltZlh5SE9hXzQ5eXFHS1NsVGZyQ2IydFZsZTBDblNIYmxGVHVnZjVWRTZ2Q3V2Vjc3M0M5cm1jekJXSUtEOV9TTHJPTTlpRXZ3cGdZSWpCdl9ab0pKMkU?oc=5) — 한국은행 금리정책
 
 ### 🟠 비트코인 (8건)
 

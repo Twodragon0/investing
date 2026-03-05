@@ -14,7 +14,7 @@ image: "/assets/images/generated/news-briefing-crypto-2026-02-13.png"
 
 ---
 
-## 이슈 분포 현황
+## 테마별 현황 현황
 
 ```
 비트코인   ███████░░░░░░░░░░░    44%  (49건)
@@ -84,9 +84,9 @@ AI/기술  ███████░░░░░░░░░░░    40%  (44건
 |------|------|
 | [Crypto expert explains why bitcoin makes 'perfect record' for tracking down criminals](https://news.google.com/read/CBMiuAFBVV95cUxOVDEtNWZuQ0dCOVdhN1RMM29uSnBtY2RId04zWTNDdUdoVzV2VUxBbGZ5NlR6b3lrNVVmYnVoZDN1XzlacS1hNk5IaDNiNGlpajZNdS1zbGI3TTdEbzhpSUNMSUxSNGkxVGs1WDRQTm1LR1haUm1CZjUxdzFVOFVkYkRSNENuX1FoSzJZVUlXbDBEUlBHYTJsMDdORDhRUG04MGlQYVZ5Z1BDNEsxSks5ZWxxbjlaZTJR0gG-AUFVX3lxTFA0ZF90eXl0UHZXNnZoWDVMd2c0eEhOOVhTWW1iMzRvaURrUEwyR1RHaDE2UmhvTzY5WE10bHZ6bUtXeUZyVTAyS2JRZ0xVS3FPdkpBX3RVRmlzTUxBZTJZTWtzdU9xcVBxRE9pWmpHQXZIbDVsQ2RYOEsyRDFtMDZIdTlGT01qR2UyWnc3S1dycHZGTGNRMkhzQmZIT0JZVWNzc2F2VHFTNkJxSC12bjdTY2ptNnY1M01DXzQxZXc?hl=en-US&gl=US&ceid=US%3Aen) | Google News |
 | [Crypto lender BlockFills suspends withdrawals for clients in latest blow to the blockchain sector](https://news.google.com/read/CBMikwFBVV95cUxPWHRWSWtaY2M4U1VfZ1FGZTdhUkg4TElITnE4dE9Wa0pla1psdXlYRUNYbnlYT0t4RXpxZ3ZuMW15SjFfU3BoN0ZWNnVFTDNpVUlzMlFwZi0zV2V4b181YmcwS3YycFUyR2ZpTHg4Y250QlkyUjNQUlZ5Njd3TlRQZGFmcTNhNTlIVTkwd0ZCWlI0MGM?hl=en-US&gl=US&ceid=US%3Aen) | Google News |
-| [Bitcoin is getting slammed again as No. 1 cryptocurrency loses nearly $2,000 - MarketWatch](https://news.google.com/rss/articles/CBMiwwNBVV95cUxNaHdlWU9sM0VDMTJqYmhiZmUtTFpEbGtCaDB4TlBiMkFpT2g3RVZrMW5meUUtbVBkVnFja25yVFNSZGNhR25yLXY5dmxRR3oyWkdmNWF2aDNaaEFyQ0hvOHBSeWwwNmVuSEpoYVV5UGtvci1wZFM1NnNOdGo0enJ3YXdGZHZEUG5WYWRiVzFPekNQeF85Qk1mek1vTjNmdG5Ldm5GSS1YYkIxNHJTVTRlSFNHVlhab2JBRW5aMURqQ0piMzQ5NnJ2aXNQMWFLX21BTFl6NFNlUXVRcmJraGxNZ3dtVWR5a1hfXzF2ZmVTWkhRd1JoT2lrSzI5RlpjV1lSS0Y4d1BLVDJtcF9USEFzYTVRLWlvdjhZekNHdUgzc0VXT1Y3eGc2Z2dOeV9qamZqMDR0Vk4zeVdpMkQ0VTFkSDd5MGZTenlPdVNQbmFfcUtCVW9WcFFERUhybGpQem5LMjduYkF5WHJGTnhPSXIzQUtNUGU0eHFrTDMtV2dBaWhGQllHUm5xU2ZSR3VpaUx5V3lXZWpwc1k3WWlFM1JhLXFTQ1pBYjYxeWJVNmM5UldHM2pxWlBfLUctVjl5M0RCOHNr?oc=5) | Google News EN |
-| [North Korea-Linked UNC1069 Uses AI Lures to Attack Cryptocurrency Organizations - The Hacker News](https://news.google.com/rss/articles/CBMifkFVX3lxTE9vdUIyQTNVVUlHajdaX3owNmJOdExQNWtDbXkyVk5FUFh1Ti1hdWVWYTlkYkFtdVZoNWpiZjRWLXg3ZGt1Q2J6ZlRWQVVqZng3dTFfU3lWdmNQelgtUkRhS2dMcllIdVdQZ0VfSUhYdTh3WDk4NGJINllkRXpKUQ?oc=5) | Google News EN |
-| [Crypto expert explains why bitcoin makes 'perfect record' for tracking down criminals - Fox Business](https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVDEtNWZuQ0dCOVdhN1RMM29uSnBtY2RId04zWTNDdUdoVzV2VUxBbGZ5NlR6b3lrNVVmYnVoZDN1XzlacS1hNk5IaDNiNGlpajZNdS1zbGI3TTdEbzhpSUNMSUxSNGkxVGs1WDRQTm1LR1haUm1CZjUxdzFVOFVkYkRSNENuX1FoSzJZVUlXbDBEUlBHYTJsMDdORDhRUG04MGlQYVZ5Z1BDNEsxSks5ZWxxbjlaZTJR0gG-AUFVX3lxTFA0ZF90eXl0UHZXNnZoWDVMd2c0eEhOOVhTWW1iMzRvaURrUEwyR1RHaDE2UmhvTzY5WE10bHZ6bUtXeUZyVTAyS2JRZ0xVS3FPdkpBX3RVRmlzTUxBZTJZTWtzdU9xcVBxRE9pWmpHQXZIbDVsQ2RYOEsyRDFtMDZIdTlGT01qR2UyWnc3S1dycHZGTGNRMkhzQmZIT0JZVWNzc2F2VHFTNkJxSC12bjdTY2ptNnY1M01DXzQxZXc?oc=5) | Google News EN |
+| [Bitcoin is getting slammed again as No. 1 cryptocurrency loses nearly $2,000 - MarketWatch](https://news.google.com/rss/articles/CBMiwwNBVV95cUxNaHdlWU9sM0VDMTJqYmhiZmUtTFpEbGtCaDB4TlBiMkFpT2g3RVZrMW5meUUtbVBkVnFja25yVFNSZGNhR25yLXY5dmxRR3oyWkdmNWF2aDNaaEFyQ0hvOHBSeWwwNmVuSEpoYVV5UGtvci1wZFM1NnNOdGo0enJ3YXdGZHZEUG5WYWRiVzFPekNQeF85Qk1mek1vTjNmdG5Ldm5GSS1YYkIxNHJTVTRlSFNHVlhab2JBRW5aMURqQ0piMzQ5NnJ2aXNQMWFLX21BTFl6NFNlUXVRcmJraGxNZ3dtVWR5a1hfXzF2ZmVTWkhRd1JoT2lrSzI5RlpjV1lSS0Y4d1BLVDJtcF9USEFzYTVRLWlvdjhZekNHdUgzc0VXT1Y3eGc2Z2dOeV9qamZqMDR0Vk4zeVdpMkQ0VTFkSDd5MGZTenlPdVNQbmFfcUtCVW9WcFFERUhybGpQem5LMjduYkF5WHJGTnhPSXIzQUtNUGU0eHFrTDMtV2dBaWhGQllHUm5xU2ZSR3VpaUx5V3lXZWpwc1k3WWlFM1JhLXFTQ1pBYjYxeWJVNmM5UldHM2pxWlBfLUctVjl5M0RCOHNr?oc=5) | 구글 뉴스 |
+| [North Korea-Linked UNC1069 Uses AI Lures to Attack Cryptocurrency Organizations - The Hacker News](https://news.google.com/rss/articles/CBMifkFVX3lxTE9vdUIyQTNVVUlHajdaX3owNmJOdExQNWtDbXkyVk5FUFh1Ti1hdWVWYTlkYkFtdVZoNWpiZjRWLXg3ZGt1Q2J6ZlRWQVVqZng3dTFfU3lWdmNQelgtUkRhS2dMcllIdVdQZ0VfSUhYdTh3WDk4NGJINllkRXpKUQ?oc=5) | 구글 뉴스 |
+| [Crypto expert explains why bitcoin makes 'perfect record' for tracking down criminals - Fox Business](https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVDEtNWZuQ0dCOVdhN1RMM29uSnBtY2RId04zWTNDdUdoVzV2VUxBbGZ5NlR6b3lrNVVmYnVoZDN1XzlacS1hNk5IaDNiNGlpajZNdS1zbGI3TTdEbzhpSUNMSUxSNGkxVGs1WDRQTm1LR1haUm1CZjUxdzFVOFVkYkRSNENuX1FoSzJZVUlXbDBEUlBHYTJsMDdORDhRUG04MGlQYVZ5Z1BDNEsxSks5ZWxxbjlaZTJR0gG-AUFVX3lxTFA0ZF90eXl0UHZXNnZoWDVMd2c0eEhOOVhTWW1iMzRvaURrUEwyR1RHaDE2UmhvTzY5WE10bHZ6bUtXeUZyVTAyS2JRZ0xVS3FPdkpBX3RVRmlzTUxBZTJZTWtzdU9xcVBxRE9pWmpHQXZIbDVsQ2RYOEsyRDFtMDZIdTlGT01qR2UyWnc3S1dycHZGTGNRMkhzQmZIT0JZVWNzc2F2VHFTNkJxSC12bjdTY2ptNnY1M01DXzQxZXc?oc=5) | 구글 뉴스 |
 
 ### 🔵 규제/정책 (22건)
 
@@ -118,7 +118,7 @@ AI/기술  ███████░░░░░░░░░░░    40%  (44건
 
 오늘 가장 주목할 테마는 **비트코인**와 **거래소**입니다. 비트코인 관련 거래소 이슈가 부각되고 있어, 거래소 정책 변화와 수급 동향을 함께 살펴야 합니다.
 
-향후 모니터링이 필요한 키워드: **bitcoin(비트코인)**None, **ai(인공지능)**None, **ethereum(이더리움)**None
+향후 모니터링이 필요한 키워드: **bitcoin(비트코인), **ai(인공지능), **ethereum(이더리움)
 
 거래소 공지사항 10건이 수집되었습니다. 새로운 상장, 이벤트, 정책 변경 등 거래소 동향이 시장 가격에 직접적 영향을 미칠 수 있어 주의가 필요합니다.
 

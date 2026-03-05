@@ -56,8 +56,8 @@ description: "2026-02-28 암호화폐 시장에서 124건의 뉴스를 분석했
 뉴욕증시 상장사 "비트코인 대량 매도" ..
 <span class="source-tag">Google News KR</span>
 
-**2. [“아 비트코인 결국”…7만달러 못넘고 다시 6만달러대 ‘털썩’ - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTFB3NllwYjh2d1NYbHd3TUM3UlhjTUxQNkVfOTNLM096Tk5Yd3YtX1RHZjdYSFQ1LVBMa2dPVm51VFVuSzUxLWlvLXBLQ3JmSlU?oc=5)**
-“아 비트코인 결국”…7만달러 못넘고 다시 6만달러대 ‘털썩’ v.daum.net
+**2. [“아 비트코인 결국”…7만달러 못넘고 다시 6만달러대 ‘털썩’ ](https://news.google.com/rss/articles/CBMiT0FVX3lxTFB3NllwYjh2d1NYbHd3TUM3UlhjTUxQNkVfOTNLM096Tk5Yd3YtX1RHZjdYSFQ1LVBMa2dPVm51VFVuSzUxLWlvLXBLQ3JmSlU?oc=5)**
+“아 비트코인 결국”…7만달러 못넘고 다시 6만달러대 ‘털썩’
 <span class="source-tag">Google News KR</span>
 
 **3. [비트코인 4년 주기 논란…코인뷰로 CEO "예측 불가 변수 많다" - 디지털투데이](https://news.google.com/rss/articles/CBMic0FVX3lxTFBmWXlOaGFpanYtYkJDTXM0TU53Z1kyMzFhY202eE11NDcxV1ZOZkpZU0lhUUpOOTZiNThWYWJUc05KUEhwa2MzdVRITVdTQThZN3p4M3g3VTV6MmdSa2hUVGVZemJRUjRiTDk5cWdiUmRidVk?oc=5)**
@@ -77,7 +77,7 @@ description: "2026-02-28 암호화폐 시장에서 124건의 뉴스를 분석했
 
 **1. [Terror groups receive $1.7b. from Iran through Binance - The Jerusalem Post](https://news.google.com/rss/articles/CBMiakFVX3lxTE9peVJ4TmdRRHgwRmtLMEwzdEppYU1sUUhSdnRRVlcxMkR2TFlNUUc5R3ptdUN2SmhjSUdYaXNjYXNXOFZTT3J5UTVLUUxzNDc2UHQxd01kN1F6dHo1VHhadG9sTmd4ai1QMEE?oc=5)**
 Terror groups receive $1.7b.
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 **2. [Crypto Biz: A Bitcoin treasury shareholder revolt](https://cointelegraph.com/news/crypto-biz-bitcoin-treasury-shareholder-revolt?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound)**
 Bitcoin treasury companies face investor backlash as stablecoin issuers post strong earnings and legacy payment giants navigate mounting pressure.
@@ -99,8 +99,8 @@ Nine lawmakers asked the federal agencies to investigate the global crypto excha
 
 *비트코인, 암호화폐, 하락, 충격, 일제*
 
-**1. [엔비디아 충격, 암호화폐 일제 하락…비트 2%-리플 4%↓(상보) - 뉴스1](https://news.google.com/rss/articles/CBMiWEFVX3lxTFBXVVllQ3Q3T3YyYWR3ZlY3MmdUMDVHeUM4TXAxNjdyYkNfX282WGQzYWdhWmhDaWFkYzRVeEJhaDRjT1NLREduMy0tSHlLdWFsYzZ0MS1pelM?oc=5)**
-엔비디아 충격, 암호화폐 일제 하락…비트 2%-리플 4%↓(상보) 뉴스1
+**1. [엔비디아 충격, 암호화폐 일제 하락…비트 2%-리플 4%↓(상보)(https://news.google.com/rss/articles/CBMiWEFVX3lxTFBXVVllQ3Q3T3YyYWR3ZlY3MmdUMDVHeUM4TXAxNjdyYkNfX282WGQzYWdhWmhDaWFkYzRVeEJhaDRjT1NLREduMy0tSHlLdWFsYzZ0MS1pelM?oc=5)**
+엔비디아 충격, 암호화폐 일제 하락…비트 2%-리플 4%↓(상보)
 <span class="source-tag">Google News KR</span>
 
 **2. [비트코인, 반등 주춤하며 6만8천 달러 아래로 하락...5개월 연속 하락세 - Investing.com 한국어](https://news.google.com/rss/articles/CBMic0FVX3lxTE5wZ2hXdXNQdU1NWEpUcDk1M0FWZTRTcG02aGRCbk1TNWxoRmhTSXhCV3E0S3RIUWxTaTlqTWtZZ2Z4WmFlR215LTFqUHpseGtoZGFlQ1dESzY3R1JsVzBYU0pmUU9CWGZSX1dHMUNKQ2dmNWc?oc=5)**
@@ -113,7 +113,7 @@ Nine lawmakers asked the federal agencies to investigate the global crypto excha
 
 <details><summary>그 외 20건 보기</summary><div class="details-content">
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUWYzME5LUnpwVXVxRG5JZnFvWGJLa1B5dXI4YUZ2RzRzRlFRMWwzcDE4ZVRDRTJCQzY0RUdHMXFrWmk4UEtSS3hNOVY0NjdtT015a05qcURaTjk1cDVMUExyOEF1b0hmbFBXZUROQ01acE13R3A2aVp4OU9OZkNFUWdIbWxWQ0g5?oc=5">뉴욕증시 상장사 "비트코인 대량 매도" .. .블룸버그 "양자컴 암호화폐 해킹 급물살" - 글로벌이코노믹</a>
-<a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFB3NllwYjh2d1NYbHd3TUM3UlhjTUxQNkVfOTNLM096Tk5Yd3YtX1RHZjdYSFQ1LVBMa2dPVm51VFVuSzUxLWlvLXBLQ3JmSlU?oc=5">“아 비트코인 결국”…7만달러 못넘고 다시 6만달러대 ‘털썩’ - v.daum.net</a>
+<a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFB3NllwYjh2d1NYbHd3TUM3UlhjTUxQNkVfOTNLM096Tk5Yd3YtX1RHZjdYSFQ1LVBMa2dPVm51VFVuSzUxLWlvLXBLQ3JmSlU?oc=5">“아 비트코인 결국”…7만달러 못넘고 다시 6만달러대 ‘털썩’</a>
 <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE9BcGhBb2p5RExSRXkwNEpTa25qMGFnd1RrNzhkQXNOdlNXUExvdmR0RmhpalpOYUczYVdMNk9iaVJWWmR4RnNHcXpIenZVejhrMnVaZDZLQ0R5Wm1aaU13Y3Vsck5uUTVRU2xQRk5R?oc=5">비트코인 9600만 원대 조정… '사하라에이아이' 50% 폭등하며 광풍 - gukjenews.com</a>
 <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE50TnFGWGd0ci1GZS0zS1FRM0d1MFJJaDZFWkJZUndMYjJVaUtfWGRzZkI5ODVXNEpCVjA3SGJ1SGc0QkZBWUwwWmpjX0xzLUdrZ1hTTWlNMXJNQdIBVEFVX3lxTE1YOXlIY0FyN1F3N2RxMHo1eGdWbmdSbDE4SmpFRVhaNFQ5Qm9hY1ZKOTBkR2daUXk3RFg1am9ZMUJ1bjBmVE1jQnlDdjBDeG1aTUhXTQ?oc=5">엔비디아 훈풍에 비트코인 반등…이더리움 매도압력 완화·엑스알피 수급 개선 [이수현의 코인레이더] - 한국경제</a>
 <em>...외 5건</em>
@@ -126,11 +126,11 @@ Nine lawmakers asked the federal agencies to investigate the global crypto excha
 
 **1. [Better Cryptocurrency to Buy With $5,000 and Hold Forever: XRP vs. Ethereum - Yahoo Finance](https://news.google.com/rss/articles/CBMigwFBVV95cUxOQ2phZC1OUkl1cUhnSEJDNk1yOEk3aEFZRlRIT0R4NnFERnJfZ0Fydm1lYVBsd0p5U0RHbnVYSkVoTDFrenNwNXRGT3o1THJHQm1hYnYyRmdjanpGUV83V0pSNUVHVUZreDNVMURUeWpQb3VIUkpCM3EtNXpSemktRF9HYw?oc=5)**
 Better Cryptocurrency to Buy With $5,000 and Hold Forever: XRP vs.
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 **2. [Better Cryptocurrency to Buy With $5,000 and Hold Forever: XRP vs. Ethereum - The Motley Fool](https://news.google.com/rss/articles/CBMimAFBVV95cUxQTkNfSUtwYUVKUUdMNWRMdlBNV3NIRnRDczN0VWpzWHhqY0lyaXYyOVNVYnU0N2JxNzZTZDJVZXEzT09pZzdXLWpNZml6bzM0bFRNeFhodEx3RXk1QnVDTEYtdUxpMl9iZE1jdDNYRzFCektzZVZjM2xsZjd3MWRKX1k3S0U2d0pCM1o0eEgtZjk5eDltNTR4TQ?oc=5)**
 Better Cryptocurrency to Buy With $5,000 and Hold Forever: XRP vs.
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 **3. [엔비디아 훈풍에 비트코인 반등…이더리움 매도압력 완화·엑스알피 수급 개선 [이수현의 코인레이더] - 한국경제](https://news.google.com/rss/articles/CBMiWkFVX3lxTE50TnFGWGd0ci1GZS0zS1FRM0d1MFJJaDZFWkJZUndMYjJVaUtfWGRzZkI5ODVXNEpCVjA3SGJ1SGc0QkZBWUwwWmpjX0xzLUdrZ1hTTWlNMXJNQdIBVEFVX3lxTE1YOXlIY0FyN1F3N2RxMHo1eGdWbmdSbDE4SmpFRVhaNFQ5Qm9hY1ZKOTBkR2daUXk3RFg1am9ZMUJ1bjBmVE1jQnlDdjBDeG1aTUhXTQ?oc=5)**
 엔비디아 훈풍에 비트코인 반등…이더리움 매도압력 완화·엑스알피 수급 개선 [이수현의 코인레이더] 한국경제
@@ -148,15 +148,15 @@ Better Cryptocurrency to Buy With $5,000 and Hold Forever: XRP vs.
 
 **1. [Tether says it has frozen $4.2 billion of its stablecoin over crime links - Reuters](https://news.google.com/rss/articles/CBMi3AFBVV95cUxOdllLSEgydHc1bUNTdGpzOVF4Y0RXX0dlWndPZmp2REZkcTl0N2hydzRlbkdGLXBtbnZWY1NHUGFjOHdtdFh6Y1ZKSlVFOFctVHNqV2NiMFF4bGVidnpadG1HSmZ2OHlaRTlVUEhPZEhCdl8wSE5nVzZvYm1FTW0tS2RuenU1RW1SaVhmeDdwaE5Lcml5RUREanlMRk81bHV0ckpRejhxVVlsY2dNaXZuaFFJWmNDZW1aRTRpZFBaQzY2RmFCYnpvUzlKSVNiYnYyNV9wSTBWdUctZUFU?oc=5)**
 Tether says it has frozen $4.2 billion of its stablecoin over crime links Reuters
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 **2. [NH Senate bill aims to protect Granite Staters from cryptocurrency scams - WMUR](https://news.google.com/rss/articles/CBMijwFBVV95cUxQLVhPZWEzUFBJNVhOV3U1SE9iaVVLMlpnanJ5VVRGeVcxWE43R3IyQjBESkY1Q1hTanA0WjllUjh3RmwtRDBpZEhSZzRFX0o4NDJyVnJZNHVNTHI3WW4zdXFXUVRzYk8xeExqeFpzdGhQbmFZWWNmc1h3SURSeFlmWGVQSExsRGxCamFtalBIUQ?oc=5)**
 NH Senate bill aims to protect Granite Staters from cryptocurrency scams WMUR
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 **3. [DoJ Seizes $61 Million in Tether Linked to Pig Butchering Crypto Scams - The Hacker News](https://news.google.com/rss/articles/CBMigwFBVV95cUxOLUhxdzdoVFFTT2QydElpU3locWJDQTlnZXNmYTJRRXJHRW1WSjY3ZFo0NmZIUU9QSURrSTd2bThfRDNTLVpIMEVXYkcwTVJsMjlzQVZKZDhBT0pvTkxvb2VKa1FJdHRDRjdlc3Y4el9LSGRjTmFneS1pTVU1MDN4OXBhWQ?oc=5)**
 DoJ Seizes $61 Million in Tether Linked to Pig Butchering Crypto Scams The Hacker News
-<span class="source-tag">Google News EN</span>
+<span class="source-tag">구글 뉴스</span>
 
 <details><summary>그 외 16건 보기</summary><div class="details-content">
 <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE5xenlTNXltamRteENBdUNZN2tRNkZlOVZoRk1vZHR5S3RHZzRab2tCMlJycUp6ZF95XzRoaGZCLUFrbFZwcWJVRkRMRHRpSGFld3pfZW43RXpzVjQxREE?oc=5">Law enforcement asks legislators to ban cryptocurrency kiosks to curb scams - Minnesota House of Representatives (.gov)</a>
@@ -202,7 +202,7 @@ DoJ Seizes $61 Million in Tether Linked to Pig Butchering Crypto Scams The Hacke
 
 ---
 
-<details><summary>참고 링크 (10건)</summary><div class="details-content"><ol><li><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxOZWtuTFNwU043YWlUQXJaQkY1eW52dzBfWUJZdFYwMFlxN3BVQm1mdU83czJJczU2MlNqNEV6OVFIdHNuS2RzcWpOdU83M3d6WnliRGs0QjlPT2g3NGN3NU5weHp0YlVEaDFOQ21IcVFyU2tCUzhSSGVrQjlHSWdMOHc0NVhnVWxIMHZnS2pR?oc=5">Should You Buy the Cryptocurrency XRP While It&#x27;s Under $1.50? - Nasdaq</a> <span class="source-tag">Google News EN</span></li><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOQ2phZC1OUkl1cUhnSEJDNk1yOEk3aEFZRlRIT0R4NnFERnJfZ0Fydm1lYVBsd0p5U0RHbnVYSkVoTDFrenNwNXRGT3o1THJHQm1hYnYyRmdjanpGUV83V0pSNUVHVUZreDNVMURUeWpQb3VIUkpCM3EtNXpSemktRF9HYw?oc=5">Better Cryptocurrency to Buy With $5,000 and Hold Forever: XRP vs. Ethereum -…</a> <span class="source-tag">Google News EN</span></li><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQTkNfSUtwYUVKUUdMNWRMdlBNV3NIRnRDczN0VWpzWHhqY0lyaXYyOVNVYnU0N2JxNzZTZDJVZXEzT09pZzdXLWpNZml6bzM0bFRNeFhodEx3RXk1QnVDTEYtdUxpMl9iZE1jdDNYRzFCektzZVZjM2xsZjd3MWRKX1k3S0U2d0pCM1o0eEgtZjk5eDltNTR4TQ?oc=5">Better Cryptocurrency to Buy With $5,000 and Hold Forever: XRP vs. Ethereum -…</a> <span class="source-tag">Google News EN</span></li><li><a href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxOdllLSEgydHc1bUNTdGpzOVF4Y0RXX0dlWndPZmp2REZkcTl0N2hydzRlbkdGLXBtbnZWY1NHUGFjOHdtdFh6Y1ZKSlVFOFctVHNqV2NiMFF4bGVidnpadG1HSmZ2OHlaRTlVUEhPZEhCdl8wSE5nVzZvYm1FTW0tS2RuenU1RW1SaVhmeDdwaE5Lcml5RUREanlMRk81bHV0ckpRejhxVVlsY2dNaXZuaFFJWmNDZW1aRTRpZFBaQzY2RmFCYnpvUzlKSVNiYnYyNV9wSTBWdUctZUFU?oc=5">Tether says it has frozen $4.2 billion of its stablecoin over crime links -…</a> <span class="source-tag">Google News EN</span></li><li><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxNcThfM1B2QjdWNjU1QXl3Z2RGU3FncHdDVmVLTnlia3g0dTJXTDVnZFZRM2tqTjNZVWZCcmEyNnBIcnZveGZtSnhTNTdVR05ZcnNETEE4UF83Z2FtbG8ycHlfTTR3THdod0lNbF9tdXEyOUNjN2NyeFFWU3RmeDJWM09rVTZ1OVhmRkFXSno3X0lFZWJHZU54ZG95RC1rUWNndE1ENml5ODFVa1BpaktYWG9JenJLdElQV2c?oc=5">Fake postman from WA charged in alleged cryptocurrency extortion scheme - The…</a> <span class="source-tag">Google News EN</span></li><li><a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxQLVhPZWEzUFBJNVhOV3U1SE9iaVVLMlpnanJ5VVRGeVcxWE43R3IyQjBESkY1Q1hTanA0WjllUjh3RmwtRDBpZEhSZzRFX0o4NDJyVnJZNHVNTHI3WW4zdXFXUVRzYk8xeExqeFpzdGhQbmFZWWNmc1h3SURSeFlmWGVQSExsRGxCamFtalBIUQ?oc=5">NH Senate bill aims to protect Granite Staters from cryptocurrency scams - WMUR</a> <span class="source-tag">Google News EN</span></li><li><a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxQZVp3WmROQ1BEclFnYmZHcWREUmQ3WEFVNG02V2JIOGUzNllGSWt4OVR3dGVtZ3A0TUJwVUZUcVhHSnREREo1RHYxMm1ZTjd5RDNyVWNnRHdtS2RlUk1kQk1tYnkwUDE5a3VWdnRGOUUxa1VxLWxZTEY1VERETTlweDZUamhfV0l3NVVCSEpwQnRWNWc0VzBBN01tX05iR2o4TzFmVHhaRWNmUVVYWThMbktYZTdwd2gxWGx2WUhZWHA4SC03Z2Fj?oc=5">US strike force freezes and seizes over $580 million in crypto tied to Chinese…</a> <span class="source-tag">Google News EN</span></li><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOLUhxdzdoVFFTT2QydElpU3locWJDQTlnZXNmYTJRRXJHRW1WSjY3ZFo0NmZIUU9QSURrSTd2bThfRDNTLVpIMEVXYkcwTVJsMjlzQVZKZDhBT0pvTkxvb2VKa1FJdHRDRjdlc3Y4el9LSGRjTmFneS1pTVU1MDN4OXBhWQ?oc=5">DoJ Seizes $61 Million in Tether Linked to Pig Butchering Crypto Scams - The…</a> <span class="source-tag">Google News EN</span></li><li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9peVJ4TmdRRHgwRmtLMEwzdEppYU1sUUhSdnRRVlcxMkR2TFlNUUc5R3ptdUN2SmhjSUdYaXNjYXNXOFZTT3J5UTVLUUxzNDc2UHQxd01kN1F6dHo1VHhadG9sTmd4ai1QMEE?oc=5">Terror groups receive $1.7b. from Iran through Binance - The Jerusalem Post</a> <span class="source-tag">Google News EN</span></li><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxQb1hFQmJaekFzTkZXUmtqVkRhOVRocVcwb0U3NlkweFdqYkozS1JUVDl4REo4MnBBZDJCTzN2YUZoRnVJN05hX3ByWHEzVTFNRmpUSDdaNExtZUJVTzR5QTB2WU90RjFYUjhXdGZHcEptbFBjZ25GOG5SZ056bC1VSXY3eDczbFBpQUdCRlI2VUhSakVfeURfYk9md0VKQQ?oc=5">Dryden says no to data centers, cryptocurrency mines - WSKG</a> <span class="source-tag">Google News EN</span></li></ol></div></details>
+<details><summary>참고 링크 (10건)</summary><div class="details-content"><ol><li><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxOZWtuTFNwU043YWlUQXJaQkY1eW52dzBfWUJZdFYwMFlxN3BVQm1mdU83czJJczU2MlNqNEV6OVFIdHNuS2RzcWpOdU83M3d6WnliRGs0QjlPT2g3NGN3NU5weHp0YlVEaDFOQ21IcVFyU2tCUzhSSGVrQjlHSWdMOHc0NVhnVWxIMHZnS2pR?oc=5">Should You Buy the Cryptocurrency XRP While It&#x27;s Under $1.50? - Nasdaq</a> <span class="source-tag">구글 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOQ2phZC1OUkl1cUhnSEJDNk1yOEk3aEFZRlRIT0R4NnFERnJfZ0Fydm1lYVBsd0p5U0RHbnVYSkVoTDFrenNwNXRGT3o1THJHQm1hYnYyRmdjanpGUV83V0pSNUVHVUZreDNVMURUeWpQb3VIUkpCM3EtNXpSemktRF9HYw?oc=5">Better Cryptocurrency to Buy With $5,000 and Hold Forever: XRP vs. Ethereum -…</a> <span class="source-tag">구글 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQTkNfSUtwYUVKUUdMNWRMdlBNV3NIRnRDczN0VWpzWHhqY0lyaXYyOVNVYnU0N2JxNzZTZDJVZXEzT09pZzdXLWpNZml6bzM0bFRNeFhodEx3RXk1QnVDTEYtdUxpMl9iZE1jdDNYRzFCektzZVZjM2xsZjd3MWRKX1k3S0U2d0pCM1o0eEgtZjk5eDltNTR4TQ?oc=5">Better Cryptocurrency to Buy With $5,000 and Hold Forever: XRP vs. Ethereum -…</a> <span class="source-tag">구글 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxOdllLSEgydHc1bUNTdGpzOVF4Y0RXX0dlWndPZmp2REZkcTl0N2hydzRlbkdGLXBtbnZWY1NHUGFjOHdtdFh6Y1ZKSlVFOFctVHNqV2NiMFF4bGVidnpadG1HSmZ2OHlaRTlVUEhPZEhCdl8wSE5nVzZvYm1FTW0tS2RuenU1RW1SaVhmeDdwaE5Lcml5RUREanlMRk81bHV0ckpRejhxVVlsY2dNaXZuaFFJWmNDZW1aRTRpZFBaQzY2RmFCYnpvUzlKSVNiYnYyNV9wSTBWdUctZUFU?oc=5">Tether says it has frozen $4.2 billion of its stablecoin over crime links -…</a> <span class="source-tag">구글 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxNcThfM1B2QjdWNjU1QXl3Z2RGU3FncHdDVmVLTnlia3g0dTJXTDVnZFZRM2tqTjNZVWZCcmEyNnBIcnZveGZtSnhTNTdVR05ZcnNETEE4UF83Z2FtbG8ycHlfTTR3THdod0lNbF9tdXEyOUNjN2NyeFFWU3RmeDJWM09rVTZ1OVhmRkFXSno3X0lFZWJHZU54ZG95RC1rUWNndE1ENml5ODFVa1BpaktYWG9JenJLdElQV2c?oc=5">Fake postman from WA charged in alleged cryptocurrency extortion scheme - The…</a> <span class="source-tag">구글 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxQLVhPZWEzUFBJNVhOV3U1SE9iaVVLMlpnanJ5VVRGeVcxWE43R3IyQjBESkY1Q1hTanA0WjllUjh3RmwtRDBpZEhSZzRFX0o4NDJyVnJZNHVNTHI3WW4zdXFXUVRzYk8xeExqeFpzdGhQbmFZWWNmc1h3SURSeFlmWGVQSExsRGxCamFtalBIUQ?oc=5">NH Senate bill aims to protect Granite Staters from cryptocurrency scams - WMUR</a> <span class="source-tag">구글 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxQZVp3WmROQ1BEclFnYmZHcWREUmQ3WEFVNG02V2JIOGUzNllGSWt4OVR3dGVtZ3A0TUJwVUZUcVhHSnREREo1RHYxMm1ZTjd5RDNyVWNnRHdtS2RlUk1kQk1tYnkwUDE5a3VWdnRGOUUxa1VxLWxZTEY1VERETTlweDZUamhfV0l3NVVCSEpwQnRWNWc0VzBBN01tX05iR2o4TzFmVHhaRWNmUVVYWThMbktYZTdwd2gxWGx2WUhZWHA4SC03Z2Fj?oc=5">US strike force freezes and seizes over $580 million in crypto tied to Chinese…</a> <span class="source-tag">구글 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOLUhxdzdoVFFTT2QydElpU3locWJDQTlnZXNmYTJRRXJHRW1WSjY3ZFo0NmZIUU9QSURrSTd2bThfRDNTLVpIMEVXYkcwTVJsMjlzQVZKZDhBT0pvTkxvb2VKa1FJdHRDRjdlc3Y4el9LSGRjTmFneS1pTVU1MDN4OXBhWQ?oc=5">DoJ Seizes $61 Million in Tether Linked to Pig Butchering Crypto Scams - The…</a> <span class="source-tag">구글 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9peVJ4TmdRRHgwRmtLMEwzdEppYU1sUUhSdnRRVlcxMkR2TFlNUUc5R3ptdUN2SmhjSUdYaXNjYXNXOFZTT3J5UTVLUUxzNDc2UHQxd01kN1F6dHo1VHhadG9sTmd4ai1QMEE?oc=5">Terror groups receive $1.7b. from Iran through Binance - The Jerusalem Post</a> <span class="source-tag">구글 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxQb1hFQmJaekFzTkZXUmtqVkRhOVRocVcwb0U3NlkweFdqYkozS1JUVDl4REo4MnBBZDJCTzN2YUZoRnVJN05hX3ByWHEzVTFNRmpUSDdaNExtZUJVTzR5QTB2WU90RjFYUjhXdGZHcEptbFBjZ25GOG5SZ056bC1VSXY3eDczbFBpQUdCRlI2VUhSakVfeURfYk9md0VKQQ?oc=5">Dryden says no to data centers, cryptocurrency mines - WSKG</a> <span class="source-tag">구글 뉴스</span></li></ol></div></details>
 
 ---
 
