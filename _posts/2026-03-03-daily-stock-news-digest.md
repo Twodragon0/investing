@@ -73,11 +73,11 @@ description: "2026-03-03 주식 시장에서 122건의 뉴스를 분석했습니
 *new, and, launches, iPhone, Apple*
 
 **1. [AI 랠리에 탄 반도체, ‘개별주’ 대신 ‘ETF’로 자금 쏠린다 - 뉴스피릿](https://news.google.com/rss/articles/CBMia0FVX3lxTE1iTWxXa3VvNjItb1d4LXJlcXRWR01DZ1lzNkJSbkludGs2aHl5c3J2cGlNOUg5MmVXaEFEbm5kZ3lGMGVzWnVSZ0ZmdVRjNnFhSHhiVjNJU3FNUDRlQWxPbEtVaFhERC10M0Nv?oc=5)**
-AI 랠리에 탄 반도체, ‘개별주’ 대신 ‘ETF’로 자금 쏠린다 뉴스피릿
+AI 랠리에 탄 반도체, ‘개별주’ 대신 ‘ETF’로 자금 쏠린다
 <span class="source-tag">한국 반도체</span>
 
 **2. [미래에셋운용 'TIGER 반도체TOP10' 올해 개인 순매수 1조 돌파 - 뉴시스](https://news.google.com/rss/articles/CBMiYEFVX3lxTFBBc2hTQlViNDZCOXRtSDJROXNLVHdBNGhrQmxlSF9DdEQ1T2Vjd0Q4VmRkOEtlck1MSXdkdktlOWYwU1NocXV3MVlWOW1ITi1kdVpVeGVMakdFZzE1X0hnctIBeEFVX3lxTE1WYTd1NFZNZWJ0SUhtQUJMT1lOdXNaUHBROHZMY2t4dlZrWWVfbmhOcWdSdG9GaWxGTUFDVzlWMHdaTTRiS2dvVGM5RVhMcTF0WXNyT194NnN1amR1M1VweW9iTVZFWDdtTmU2cXBPa05wVmVrVGQ4VA?oc=5)**
-미래에셋운용 'TIGER 반도체TOP10' 올해 개인 순매수 1조 돌파 뉴시스
+미래에셋운용 'TIGER 반도체TOP10' 올해 개인 순매수 1조 돌파
 <span class="source-tag">한국 반도체</span>
 
 **3. [Apple launches new iPhone and iPad Air as it gears up for a major AI push](https://www.marketwatch.com/story/apple-launches-new-iphone-and-ipad-air-as-it-gears-up-for-a-major-ai-push-570b24ae?mod=mw_rss_topstories)**
@@ -106,7 +106,7 @@ CHAT vs. SOXX: Which AI ETF Is the Better Buy for Investors Right Now? Nasdaq
 <span class="source-tag">NASDAQ/Tech</span>
 
 <details><summary>그 외 1건 보기</summary><div class="details-content">
-<a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE1iTWxXa3VvNjItb1d4LXJlcXRWR01DZ1lzNkJSbkludGs2aHl5c3J2cGlNOUg5MmVXaEFEbm5kZ3lGMGVzWnVSZ0ZmdVRjNnFhSHhiVjNJU3FNUDRlQWxPbEtVaFhERC10M0Nv?oc=5">AI 랠리에 탄 반도체, ‘개별주’ 대신 ‘ETF’로 자금 쏠린다 - 뉴스피릿</a>
+<a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE1iTWxXa3VvNjItb1d4LXJlcXRWR01DZ1lzNkJSbkludGs2aHl5c3J2cGlNOUg5MmVXaEFEbm5kZ3lGMGVzWnVSZ0ZmdVRjNnFhSHhiVjNJU3FNUDRlQWxPbEtVaFhERC10M0Nv?oc=5">AI 랠리에 탄 반도체, ‘개별주’ 대신 ‘ETF’로 자금 쏠린다</a>
 </div></details>
 
 

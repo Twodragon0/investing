@@ -31,7 +31,7 @@ description: "2026-03-01 암호화폐 시장에서 108건의 뉴스를 분석했
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">108</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 51</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">리스크 위험</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (31회)</div></div></div>
 <div class="alert-box alert-info"><strong>암호화폐 긴급: Bitcoin Miner Tied to Trumps Pummeled by Crypto Crash - 108건 분석</strong><ul><li>🟠 <strong>비트코인</strong> (51건): Bitcoin, crypto, Iran, 비트코인, $64,000</li><li>📈 <strong>가격/시장</strong> (28건): Bitcoin, 비트코인, 달러, Iran, 암호화폐</li><li>🤖 <strong>AI/기술</strong> (10건): Anthropic, Pentagon, Bitcoin, Nvidia, OpenAI</li><li>🏦 <strong>거래소</strong> (12건): Binance, New, Democrats, Treasury, Senate</li></ul></div>
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMigwFBVV95cUxPSmNjaTFSOV9FaDkycDk2TG5kWEpZT0UyOV9jd05Cb3VzYXlxWmljUkd6NktOOVR4RmFwMXhwc2cyT0g0Vl9zOS02dTJnUWx4M2steDZEXzNQeVNZVnpUbXRWXzFDSlM1aFhtVFllNTNoTXJOWDBMaGZ3YWNnanMzajA5WQ?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin Miner Tied to Trumps Pummeled by Crypto Crash</a></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOYnk1a2lGZGZfV2t4ZEtfMUpkbEN6UjBMRzJ2UDdkeURUSHUtY3ZERTk1ejZXLU9qYnFHUEdQd0g1dTVlSm9wenZyZF9YQ21Rek5EN1hWME51Q3FvdlBrWFpidDVzM3pPamszNTNEWk5BeFVhZWFlbGdjX1NzdFpSSl9IbFFwZ0VX?oc=5">뉴욕증시 엔비디아 공매도 폭탄 "무려 500억 달러... 비트코인 급락 - 글로벌이코노믹</a></li><li><a href="https://decrypt.co/359367/jane-street-lawsuit-fuels-late-double-digit-pop-in-terra-luna-classic">Jane Street Lawsuit Fuels Late Double-Digit Pop in Terra Luna Classic</a></li></ul></div>
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMigwFBVV95cUxPSmNjaTFSOV9FaDkycDk2TG5kWEpZT0UyOV9jd05Cb3VzYXlxWmljUkd6NktOOVR4RmFwMXhwc2cyT0g0Vl9zOS02dTJnUWx4M2steDZEXzNQeVNZVnpUbXRWXzFDSlM1aFhtVFllNTNoTXJOWDBMaGZ3YWNnanMzajA5WQ?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin Miner Tied to Trumps Pummeled by Crypto Crash</a></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOYnk1a2lGZGZfV2t4ZEtfMUpkbEN6UjBMRzJ2UDdkeURUSHUtY3ZERTk1ejZXLU9qYnFHUEdQd0g1dTVlSm9wenZyZF9YQ21Rek5EN1hWME51Q3FvdlBrWFpidDVzM3pPamszNTNEWk5BeFVhZWFlbGdjX1NzdFpSSl9IbFFwZ0VX?oc=5">뉴욕증시 엔비디아 공매도 폭탄 "무려 500억 달러... 비트코인 급락</a></li><li><a href="https://decrypt.co/359367/jane-street-lawsuit-fuels-late-double-digit-pop-in-terra-luna-classic">Jane Street Lawsuit Fuels Late Double-Digit Pop in Terra Luna Classic</a></li></ul></div>
 
 
 
@@ -83,7 +83,7 @@ description: "2026-03-01 암호화폐 시장에서 108건의 뉴스를 분석했
 <details><summary>그 외 25건 보기</summary><div class="details-content">
 <a href="https://news.google.com/read/CBMigAFBVV95cUxPYTBnZmlRcThpWXhOSWxjWVRFbzlWR0lhZHVTSFJ1MV85elJ6WGZnT3pwbE1tX3U4bEY2VnhZVUhuREx1a2V2dldiem5SeC1OeDBBOVloTzQyLUZnMUxwOE9sdVVEMnd0VjdxWmYyRVBNYUl5NUd1NXB2NENhOWxEdA?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin fans latch on to ‘ridiculous’ Jane Street conspiracy to explain price slump</a>
 <a href="https://news.google.com/read/CBMigwFBVV95cUxPSmNjaTFSOV9FaDkycDk2TG5kWEpZT0UyOV9jd05Cb3VzYXlxWmljUkd6NktOOVR4RmFwMXhwc2cyT0g0Vl9zOS02dTJnUWx4M2steDZEXzNQeVNZVnpUbXRWXzFDSlM1aFhtVFllNTNoTXJOWDBMaGZ3YWNnanMzajA5WQ?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin Miner Tied to Trumps Pummeled by Crypto Crash</a>
-<a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5hYndpMmNxQWhNemwxS0FLbkxaakFQTXB6cG1uVm81Y1NhTXFldHZkQmJScnhuazVCZEh6bjItXzFCTjdXVXgxVWxPSG5XRVJkNlZwb2RPY2Y?oc=5">PPI 충격, 암호화폐 일제 하락…비트코인 3%-리플 4%↓(상보) - 뉴스1</a>
+<a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5hYndpMmNxQWhNemwxS0FLbkxaakFQTXB6cG1uVm81Y1NhTXFldHZkQmJScnhuazVCZEh6bjItXzFCTjdXVXgxVWxPSG5XRVJkNlZwb2RPY2Y?oc=5">PPI 충격, 암호화폐 일제 하락…비트코인 3%-리플 4%↓(상보)</a>
 <em>...외 10건</em>
 </div></details>
 
@@ -92,12 +92,12 @@ description: "2026-03-01 암호화폐 시장에서 108건의 뉴스를 분석했
 
 *Anthropic, Pentagon, Bitcoin, Nvidia, OpenAI*
 
-**1. [뉴욕증시 엔비디아 공매도 폭탄 "무려 500억 달러... 비트코인 급락 - 글로벌이코노믹](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOYnk1a2lGZGZfV2t4ZEtfMUpkbEN6UjBMRzJ2UDdkeURUSHUtY3ZERTk1ejZXLU9qYnFHUEdQd0g1dTVlSm9wenZyZF9YQ21Rek5EN1hWME51Q3FvdlBrWFpidDVzM3pPamszNTNEWk5BeFVhZWFlbGdjX1NzdFpSSl9IbFFwZ0VX?oc=5)**
+**1. [뉴욕증시 엔비디아 공매도 폭탄 "무려 500억 달러... 비트코인 급락](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOYnk1a2lGZGZfV2t4ZEtfMUpkbEN6UjBMRzJ2UDdkeURUSHUtY3ZERTk1ejZXLU9qYnFHUEdQd0g1dTVlSm9wenZyZF9YQ21Rek5EN1hWME51Q3FvdlBrWFpidDVzM3pPamszNTNEWk5BeFVhZWFlbGdjX1NzdFpSSl9IbFFwZ0VX?oc=5)**
 뉴욕증시 엔비디아 공매도 폭탄 "무려 500억 달러...
 <span class="source-tag">Google News KR</span>
 
-**2. [엔비디아 훈풍에 비트코인 반등…이더리움 매도압력 완화·엑스알피 수급 개선 [이수현의 코인레이더] - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE1PcGIteDRSaEc0NFpKZmFRUWI3cWEyWl9RSVZwN25ZOXVCdDh6WVVuMEp4SmlCcVItNlNmZGUtdHlHVnNzYkF3bzk4cXFLWnlJ?oc=5)**
-엔비디아 훈풍에 비트코인 반등…이더리움 매도압력 완화·엑스알피 수급 개선 [이수현의 코인레이더] 블루밍비트
+**2. [엔비디아 훈풍에 비트코인 반등…이더리움 매도압력 완화·엑스알피 수급 개선 [이수현의 코인레이더]](https://news.google.com/rss/articles/CBMiUEFVX3lxTE1PcGIteDRSaEc0NFpKZmFRUWI3cWEyWl9RSVZwN25ZOXVCdDh6WVVuMEp4SmlCcVItNlNmZGUtdHlHVnNzYkF3bzk4cXFLWnlJ?oc=5)**
+엔비디아 훈풍에 비트코인 반등…이더리움 매도압력 완화·엑스알피 수급 개선 [이수현의 코인레이더]
 <span class="source-tag">Google News KR</span>
 
 **3. [Trump Orders Federal Agencies to Dump 'Woke' Anthropic AI After Pentagon Dispute](https://decrypt.co/359453/trump-orders-federal-agencies-dump-woke-anthropic-ai)**
@@ -151,7 +151,7 @@ Magic Eden is pulling support for Ethereum-compatible and Bitcoin-based assets, 
 
 <details><summary>그 외 8건 보기</summary><div class="details-content">
 <a href="https://news.google.com/read/CBMihwNBVV95cUxNVXY0eDFwdGNrWGNZWEV6TmU5UUx5TXU4cE5sc3EzNl9RUWlYS0tEU1hzclR0RDNBZzRnNjNDdmVoTkVVRXE2U3FjUFZGamJvUFA3WldQSGt4ck9UT1FCYnVPQi03aHJXV2ZrVHNhSHN5cjJSNHViSjNyeXJXT0QtZV9XbmhqLVJmUGlYZDNrTHNCc19WTkEzcHR6c0ZOZHBJOEd0MDBFV2NadmFtTEpfTEdic3kweE9ZVEhzNDQwRlUyWm1fSUJ4OERxOER6MmlNUGFjNzBtZ0ctYkxuVW9mTDZfODdfUU1jUG4zcUdIQWFRUE9BbGhZbE51alphaHlJNDVrVHNRbWdpSW9hNGpJMm9UMC11ejhPR1E5VTlxQ1dLYm81RkQyODlWS00xdkd5N0lHaERxaXMzaHZjbTNEdDNHYXpLeVU1TUJ1SmdWaDlQVnhKUGdFeW9XZWxqV1F5YnZrZ3QzR0E1ZG5iOUpNSEpVYmYxZHBZQjB2R2NkenAyQURyMVFB?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin, Ethereum, XRP Fall as Cryptos Unwind Gains. Blame Nvidia.</a>
-<a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE1PcGIteDRSaEc0NFpKZmFRUWI3cWEyWl9RSVZwN25ZOXVCdDh6WVVuMEp4SmlCcVItNlNmZGUtdHlHVnNzYkF3bzk4cXFLWnlJ?oc=5">엔비디아 훈풍에 비트코인 반등…이더리움 매도압력 완화·엑스알피 수급 개선 [이수현의 코인레이더] - 블루밍비트</a>
+<a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE1PcGIteDRSaEc0NFpKZmFRUWI3cWEyWl9RSVZwN25ZOXVCdDh6WVVuMEp4SmlCcVItNlNmZGUtdHlHVnNzYkF3bzk4cXFLWnlJ?oc=5">엔비디아 훈풍에 비트코인 반등…이더리움 매도압력 완화·엑스알피 수급 개선 [이수현의 코인레이더]</a>
 <a href="https://decrypt.co/359506/banking-occ-new-stablecoin-yield-rules-coinbase">Banking Regulator Floats New Stablecoin Yield Rules—Do They Hurt Coinbase?</a>
 <a href="https://decrypt.co/359404/ethereum-tokens-swiped-returned-south-korean-tax-service">Ethereum Tokens Swiped, Returned After South Korean Tax Service Publishes Wallet Seed Phrases</a>
 <a href="https://cointelegraph.com/news/ethereum-smart-accounts-are-finally-coming-within-a-year-says-vitalik?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Ethereum smart accounts are finally coming 'within a year' — Vitalik Buterin</a>

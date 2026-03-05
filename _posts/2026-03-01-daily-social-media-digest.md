@@ -2,7 +2,7 @@
 layout: post
 title: "소셜 미디어 동향 - 2026-03-01"
 date: 2026-03-01 03:43:42 +0000
-categories: [crypto-news]
+categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
@@ -65,23 +65,23 @@ Billionaire Tim Draper said Bitcoin will hit $250K, $1M, then $10M on its way to
 ## 정치·경제 동향
 
 **1. [“살집 하나면 족하다”…이재명 대통령 부동산 정책에 맞장구 친 홍준표 - v.daum.net](https://news.google.com/rss/articles/CBMiRkFVX3lxTE40V3U0TkZMWlhCRzlhTVNYQ0E2dEQtdDhqcnJCaEhaRGo2LUVCNUNBNUNuLVVZMnNycjlIazN4TS0tV0lHMmc?oc=5)**
-“살집 하나면 족하다”…이재명 대통령 부동산 정책에 맞장구 친 홍준표 v.daum.net
+“살집 하나면 족하다”…이재명 대통령 부동산 정책에 맞장구 친 홍준표
 <span class="source-tag">이재명 경제정책</span>
 
 **2. [[시사쇼]'이재명 신세력' '뉴이재명'은 누구인가 - 아시아경제 - campaigns.do](https://news.google.com/rss/articles/CBMiS0FVX3lxTE1zOUFYTkpvNzBmbVNPdGh3LTRqSVAtM1gyM1JabEtJVHhhRlozV0ZweWVlMXhuMkw0Zl81OVVYQTM5U0VJdy0tWW5OOA?oc=5)**
-[시사쇼]'이재명 신세력' '뉴이재명'은 누구인가 - 아시아경제 campaigns.do
+[시사쇼]'이재명 신세력' '뉴이재명'은 누구인가 - 아시아경제
 <span class="source-tag">이재명 경제정책</span>
 
 **3. [What economists got wrong about Trump’s tariffs - vox.com](https://news.google.com/rss/articles/CBMickFVX3lxTE41dHRMTlZaTGNvMG9UODdPLWZHRWlpbkhFVEF3UnJBeTZkZjl0RHJaZlhEMTR2UUlQY3ZMNEN1RDNXc3VPdUp4WVdXRXFMbFNEanFNMERCUkRSUElZbTU3d2FvOV9pSnNkVDBwbW55M3l3dw?oc=5)**
-What economists got wrong about Trump’s tariffs vox.com
+What economists got wrong about Trump’s tariffs
 <span class="source-tag">Trump Economy</span>
 
 **4. [Trump's Tariffs and Tax Cuts: Who Benefits the Most? - Investopedia](https://news.google.com/rss/articles/CBMipwFBVV95cUxPMkk1RUVpWjVLU01FY1NxRWVqV013VjMwd3NnTXR6RW42T05sbzc5czZic1I3eEJGRU1UQk41aTA5eE9qVWoxakJMYzdLUklRdUVyMjdtLWFwRUZNeGRzR3ZEYUV2UFBZc2JxZy1pUTcteWNWejBrR2NIZ0ZIWXl3eEdtZGpJRXpiTHl1TkdmUDlXcnpteW4ydUhhcGpOcy1scDlIVURUYw?oc=5)**
-Trump's Tariffs and Tax Cuts: Who Benefits the Most? Investopedia
+Trump's Tariffs and Tax Cuts: Who Benefits the Most?
 <span class="source-tag">Trump Economy</span>
 
 **5. [통화정책방향: 기준금리 2.50% 유지 - KDI 경제교육·정보센터](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1uUER2STEzV1Z2NUttcl92bnV3M2xFVGZ5bnd4cWE3azB1T2RqY05YSnpCclYyX3Z2ZW9URThUSVpfSlZ1RGx2UTFGZGhMa2c4dnVpT1B5T1hXYmdQelFZSUdtN05kakk?oc=5)**
-통화정책방향: 기준금리 2.50% 유지 KDI 경제교육·정보센터
+통화정책방향: 기준금리 2.50% 유지
 <span class="source-tag">한국은행 금리정책</span>
 
 **6. [Iran Strikes Could Make Fed Rate Cuts Even Less Likely - Barron's](https://news.google.com/rss/articles/CBMi-wJBVV95cUxNYW5nZ0pUUmtyeGlNeWNma19PSC1UYUttRlhUTDZKRkxIRWxwRThPREw5MDJXMml4X0twejlua2ZkcE00MjFBWUQ3c1FvUDdIenBHSEM0LVhWRnBWMUNRT2xkYWs4WkZXUGl3MmE2SThEb1hmVzZ3dG9ES2tXR2RfT3FLckk0N2RhbHNzektqa0VKNGR3MU1zRUJENlNYcHhWak9HMFhydENFYWtDVGZnMEd5ZTZ4cmlvVE9MNVNWanY3b21FQWl6WnlNa18zazBfOE5HRlRvYVd5XzM4UFNzVFVqb1hKbmU2TmlZdkVnMkJBV251emJsMFY4ZXJCM3h6YVhXbm4xUTFNQmRya095eUp1QnVCamhvTGxvQlZNN0tNdW5LeUY3b0J6bklwb0c1dW16a2N2MWc1aXBSamxKRmljblhuYm45RzBOd0Z2QUhMVExSMnhWbUtzdF8zTGJNSU45OHRzNjRlT2RyejU1ZFAxQ0Z6Rjd0RVV3?oc=5)**

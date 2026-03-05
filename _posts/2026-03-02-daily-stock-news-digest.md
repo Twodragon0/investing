@@ -60,11 +60,11 @@ description: "2026-03-02 주식 시장에서 114건의 뉴스를 분석했습니
 <span class="source-tag">Google News</span>
 
 **2. [U.S. Stock Market prediction: S&P 500, Nasdaq, Dow Jones to crash on Monday? Nvidia stocks, AI worries, US - The Economic Times](https://news.google.com/rss/articles/CBMirwJBVV95cUxQSE1tQ0pjTzdwSUtkSGVrS0J3UlRwa1ZEald5NWJEZjhDVmIxSktBeHFzWmJfUW1JWTg2NkhfQ1N0VmRWOVJaZlBWdUcyVUp4MnlaOFB0T3dxSGV0a2FpQkUtXzl6eHhJWEJ1THF2dlVZY0R4dW96bkVKRktSUHBUeEcwZmwzemlVd3BqN3BhZXViQXpjb094MDB5VF85U003dmloV0VTMnlraFoyVkRWdVUxZ3dSTU5WNldjN2RqOEk5QjJ5bEVjeUdXTEVhdmN5MkdTRlEtR29jWkl5ME5qalZsUDdVU0JKbzZBelNwblk3QnRpTXNVLUEtamdzb05kZ1lhczN2bjZrY0VnUkxVS1pVbG9BLXFCTDVpR244VElLSGNxVC0tZl9KeWhtc1nSAbQCQVVfeXFMUFhCMzBUZ3JxVVhtMTNCLXNVZ3M2MExodGVrb3p6SFloWG9sdm5ZNTZVaFZHTkdrTm1BSGFRLXgxSV9WRnpCcXZrSUNFZ29BRzVxSXI0d0pKTk1pb2tmZVdXWDlBamx1WkxXb293TldVOEZ2dUctenF1cUNmR2FjX0VNb1ZwN0Y5T2JSWGJUU3RLcjEyYlNLSlFCLTZ5amxBVUVxdW16YlM5TjZwY0wtYzBwV3NoTzUtZ3lSRG9CTjdLNmpSUXNuTXdxb2Z2RTdxTnFjNm9jWU5MQnI3bU53TTl5ZFhmdnBUMWduRkpRT3gtdjl5WjFuWWpRdFRfOUk2NEdjWVV2V3RpbWpKa1NFeElLUkVDbUtTRnZ6b09NMkRlWXAzY3NqMW5aaGJDU25iZTMtV3c?oc=5)**
-U.S. Stock Market prediction: S&P 500, Nasdaq, Dow Jones to crash on Monday? Nvidia stocks, AI worries, US The Economic Times
+U.S. Stock Market prediction: S&P 500, Nasdaq, Dow Jones to crash on Monday? Nvidia stocks, AI worries, US
 <span class="source-tag">Google News Stocks EN</span>
 
 **3. [Struggling to Pick Artificial Intelligence (AI) Stocks? You're Not Alone -- Try This ETF Instead - Nasdaq](https://news.google.com/rss/articles/CBMiswFBVV95cUxPM1hUbXFDSmZ6Wm9YVGhqd2otRW94S0I5ak1BRkpjbnlNVkN5NkRkZ0tnX1ktYTFSUjBYQktqaW9wX3RLLWZwdWpSSUh0aG9yZVJidE9DdS1QRl9mcW51Wk1mZkVHT1J4RkpiQ20wXzBrOUFtNVZ6MVNyaDVSZjNXSmV5SEU2b2NRdXd4bjNtWnloaktrak1lOWhhSEpGUG01dW94b2ljSmFFdFBqZmM3aFVFdw?oc=5)**
-Struggling to Pick Artificial Intelligence (AI) Stocks? You're Not Alone -- Try This ETF Instead Nasdaq
+Struggling to Pick Artificial Intelligence (AI) Stocks? You're Not Alone -- Try This ETF Instead
 <span class="source-tag">NASDAQ/Tech</span>
 
 <details><summary>그 외 4건 보기</summary><div class="details-content">
@@ -119,7 +119,7 @@ Follow the latest news after the U.S.
 <span class="source-tag">Google News</span>
 
 **3. [[코스피·코스닥지수] 미국 뉴욕증시 다우존스·S&P500·나스닥지수 하락…AI산업 불확실성·美도매물가 급등 등 영향 - 한국강사신문](https://news.google.com/rss/articles/CBMicEFVX3lxTFBULVk2NVRkbFYtWWlQX0VyUGliUzFtTUE4WWgyNXpTbVpveEd6SjZrS0szNU1JbnJreFlEdERqTFc4NWFtRjlLLVFiZkV6bGFlblVCb2hfOWxCME16VDNkZzZodm41Zms4b1FyM1FLLU0?oc=5)**
-[코스피·코스닥지수] 미국 뉴욕증시 다우존스·S&P500·나스닥지수 하락…AI산업 불확실성·美도매물가 급등 등 영향 한국강사신문
+[코스피·코스닥지수] 미국 뉴욕증시 다우존스·S&P500·나스닥지수 하락…AI산업 불확실성·美도매물가 급등 등 영향
 <span class="source-tag">Google News Stocks KR</span>
 
 <details><summary>그 외 2건 보기</summary><div class="details-content">

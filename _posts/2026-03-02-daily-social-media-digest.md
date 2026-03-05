@@ -2,7 +2,7 @@
 layout: post
 title: "소셜 미디어 동향 - 2026-03-02"
 date: 2026-03-02 03:32:58 +0000
-categories: [crypto-news]
+categories: [social-media]
 tags: ["social-media", "telegram", "twitter", "reddit", "politics", "trump", "이재명", "daily-digest"]
 source: "consolidated"
 lang: "ko"
@@ -65,23 +65,23 @@ Cathie Wood says Bitcoin is "hands down" better than Gold."Bitcoin is a hedge ag
 ## 정치·경제 동향
 
 **1. ['보라색 넥타이' 맨 李대통령…워킹맘부터 금융인·기업가 목소리 경청 - 연합인포맥스](https://news.google.com/rss/articles/CBMicEFVX3lxTFBWNVdyUDA4R0ZKdEw2akFINjdsVnp1ZDhaOEtKUVMxSGZWVlhESG5qal9tVzAzd2RVMm05SXMwSjMwTnNpclA0QzRxT0JFelpVVEdPY2hDNHdnSDJoSTRyVDF6bEhUOTdEcHpfZHVEc0c?oc=5)**
-'보라색 넥타이' 맨 李대통령…워킹맘부터 금융인·기업가 목소리 경청 연합인포맥스
+'보라색 넥타이' 맨 李대통령…워킹맘부터 금융인·기업가 목소리 경청
 <span class="source-tag">이재명 경제정책</span>
 
 **2. [싱가포르 국빈 방문 李대통령 "부동산 정책·공직사회 문화 배울 것 많아" - 네이트](https://news.google.com/rss/articles/CBMiU0FVX3lxTE53TEpablYyaXotSDVuUWFwQW9tTk1PV3NHbFV6U0ZYTk95d1VPejhvWlZjck1ZenJQcW4zWEdIWTFhcVRZVnl2MU5FVEdGQnU4MEw0?oc=5)**
-싱가포르 국빈 방문 李대통령 "부동산 정책·공직사회 문화 배울 것 많아" 네이트
+싱가포르 국빈 방문 李대통령 "부동산 정책·공직사회 문화 배울 것 많아"
 <span class="source-tag">이재명 경제정책</span>
 
 **3. [Iran Strikes Could Make Fed Rate Cuts Even Less Likely - Barron's](https://news.google.com/rss/articles/CBMi-wJBVV95cUxNWVVxamlVWFRJS014Umkwb1pqV0VFSklTUThldDZ6eXFVazg4SVlSZXhxNlNMcDFfbUZKMHE4ZGVFZHNHbTZCVDJwclJ6RUdJQTZBOS0weU5YaThDellQM2JYUUY0V3RBR3dLZjVOWlZ3VWZSZm1ySnh3QXRSNGRRZ0FJREFoVENXcld0VUFpS2syWENqTDFOZkY1MlpZekxKbk8wNTdGWS1vQkw5YThQTVR1b3NFTFpDUEhNRWNZTjdqMXRLbjNnaTh1NVFFNjAtMmhQUTZkaXZ5RlN3QTk2YUJMS1hBX0lWbDNDSEtFeUJVNzR4TjV5dmlTaWw5ZkpDWERHeXZlMDlfcjlueTkyTzYzZ3dDa2pRV19McnJuTzYyblJraGNwQ3JpNjExVEdSNTIwQnBJUXk0TXN6dDFGMjZiUlA0MFIyZ05Bd2hmNC1BUnZyeGpKLXN4X3FmNkJMODdScWZhM2lOU3NXRGpjU2tkc3hESlpxRmZn?oc=5)**
-Iran Strikes Could Make Fed Rate Cuts Even Less Likely Barron's
+Iran Strikes Could Make Fed Rate Cuts Even Less Likely
 <span class="source-tag">Fed Policy</span>
 
 **4. [외국인 14조 ‘팔자’·기관 8조 ‘사자’…엇갈린 코스피 수급 - 파이낸셜뉴스](https://news.google.com/rss/articles/CBMiWkFVX3lxTE9xbG5wY3prRHREcGhJcm54XzdadThNejhFaUtWNEc1djF2RlZDRUoxaTZTX0p0cXFrY3ZEa0E0VjFnMDRzdklmOXd1TEJXb1dFWTd1eWo1eTEzUdIBXkFVX3lxTE1faTZKejUtTEtCWnpQeU1tNTRjaXJNNGJKbmI0X2dfekszOVN4cE1PUGlHTWhvenhOMW95bnJuTVlJc0VrVUJzLWNWa2dtbzRIQTFsWmhUYWdCb3I2Znc?oc=5)**
-외국인 14조 ‘팔자’·기관 8조 ‘사자’…엇갈린 코스피 수급 파이낸셜뉴스
+외국인 14조 ‘팔자’·기관 8조 ‘사자’…엇갈린 코스피 수급
 <span class="source-tag">한국증시 수급</span>
 
 **5. [기준금리 6연속 동결인데 대출금리는 왜 오르는거야? - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE10MlFPMXF3U3Itb1RrYzNiUWtFUTJQREJQNDJzZWtrMWh0YmZoTXVya1V0Y2E1d3BuUjFDdDJyWl94REZPQkdFbDlqM0ZNUjA?oc=5)**
-기준금리 6연속 동결인데 대출금리는 왜 오르는거야? v.daum.net
+기준금리 6연속 동결인데 대출금리는 왜 오르는거야?
 <span class="source-tag">한국은행 금리정책</span>
 
 

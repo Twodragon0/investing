@@ -7,7 +7,7 @@ tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/og-default.png"
-description: "전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 28건의 규제 관련 뉴스가 수집되었습니다."
+description: "2026-03-01 SEC·CFTC 규제 동향, 한국 금융위 디지털자산 정책 등 글로벌 규제 뉴스 28건 분석."
 ---
 
 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 28건의 규제 관련 뉴스가 수집되었습니다.

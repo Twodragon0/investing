@@ -7,7 +7,7 @@ tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/og-default.png"
-description: "전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 29건의 규제 관련 뉴스가 수집되었습니다."
+description: "2026-03-03 금융위 긴급 금융시장점검회의 개최, CFTC 인사 발표 등 글로벌 규제 동향 29건 분석."
 ---
 
 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 29건의 규제 관련 뉴스가 수집되었습니다.

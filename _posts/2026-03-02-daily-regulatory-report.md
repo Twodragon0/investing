@@ -7,10 +7,10 @@ tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/og-default.png"
-description: "전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 21건의 규제 관련 뉴스가 수집되었습니다."
+description: "2026-03-02 SEC 비공개 시장 라운드테이블, 금융위 국민성장펀드 등 글로벌 규제 동향 21건 분석."
 ---
 
-전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 21건의 규제 관련 뉴스가 수집되었습니다.
+2026-03-02 SEC 비공개 시장 라운드테이블, 금융위 국민성장펀드 등 글로벌 규제 동향 21건 분석.
 
 ## 한눈에 보기
 
