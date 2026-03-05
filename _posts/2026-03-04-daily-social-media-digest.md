@@ -18,6 +18,7 @@ description: "Cathie Wood says Bitcoin is 'hands down' better than Gold.'Bitcoin
 <div class="alert-box alert-info"><strong>소셜 긴급: 암호화폐 강세 속 금·은 급락…트럼프 "빅 웨이브 곧 온다" 경고 - 디지털투데이 - 37건 분석</strong><ul><li>🏛️ <strong>정치/정책</strong> (9건): 이재명, 대통령, 싱가포르 관련 9건의 뉴스가 보고되었습니다.</li><li>🟠 <strong>비트코인</strong> (10건): Telegram, Bitcoin, years 관련 10건의 뉴스가 보고되었습니다.</li><li>📊 <strong>매크로/금리</strong> (10건): Telegram, Bitcoin, Tether 관련 10건의 뉴스가 보고되었습니다.</li><li>📈 <strong>가격/시장</strong> (6건): 기준금리, $296,750,000., Blackrock 관련 6건의 뉴스가 보고되었습니다.</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBQekdUcHFRUkVFcm9mcFV6c3JaN2tldUhNODZaRXd1OWtKMmFjLXlJRG5mU21BR0EtaHlfM2w4c1NHTGtsR3loN1VINk4yZ0tiMzVGTUF6WUIyaHhNQ2gzdXFQVnlfQnEzd2pDOER3dnlDV00?oc=5">암호화폐 강세 속 금·은 급락…트럼프 "빅 웨이브 곧 온다" 경고 - 디지털투데이</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 오늘 수집된 총 37건 중 텔레그램 20건, 소셜 0건, 정치·경제 17건으로 정치/정책 및 비트코인 이슈가 주요 화제입니다.

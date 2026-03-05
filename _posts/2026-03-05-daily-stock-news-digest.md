@@ -17,37 +17,13 @@ description: "외 P0 긴급 이슈 32건이 추가 감지되었습니다. 총 17
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">173</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 81</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">리스크 위험</div></div><div class="stat-item"><div class="stat-value">5,614.49</div><div class="stat-label">KOSPI +8.13%</div></div><div class="stat-item"><div class="stat-value">1,117.23</div><div class="stat-label">KOSDAQ +11.33%</div></div></div>
 <div class="alert-box alert-info"><strong>주식 시장 긴급: [속보] '패닉셀' 코스피·코스닥 8%대 폭락…동반 서킷브레이커 - 173건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (81건): 코스피, 코스닥, Oil 관련 81건의 뉴스가 보고되었습니다.</li><li>📊 <strong>매크로/금리</strong> (21건): 환율, Inflation, 한은 관련 21건의 뉴스가 보고되었습니다.</li><li>🤖 <strong>AI/기술</strong> (14건): 삼성전자, Apple, 하이닉스 관련 14건의 뉴스가 보고되었습니다.</li><li>🟠 <strong>비트코인</strong> (5건): Nasdaq, Surges, Iran 관련 5건의 뉴스가 보고되었습니다.</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiVkFVX3lxTFBqT2tyQ2FCSGVWMDc1bl9YSy1odWdSQmNVLS1qbzAtZTBuUDFQejVtakh1LWNIdmc2OXp4R1FreEx5TC02SWJPZGVBQVhSMnJBaG5KMmlR?hl=ko&gl=KR&ceid=KR%3Ako">[속보] '패닉셀' 코스피·코스닥 8%대 폭락…동반 서킷브레이커</a></li><li><a href="https://news.google.com/read/CBMibEFVX3lxTFBoR01UNGVEQTZIM0J3aTYzeldtLWFxZFBPNENLOWU0WUNXQjFuRE5HYUIydjNrdVdXdUZoNmNFa3VsOXl5dFRldXdkZ1BzOEMtVTJWSC1UbFhZTW1CZ01YcW1POGtmdjVXb1lYMA?hl=ko&gl=KR&ceid=KR%3Ako">코스피·코스닥 동반 급등…하루 만에 ‘매수 사이드카’</a></li><li><a href="https://news.google.com/read/CBMiVkFVX3lxTE4tV2RTVWtSODhTSFVhb0ZBUFVhR2M4T3N2QjBiR0xkNklWQnFJaUhfbEdzQ1lnOHFKUVIzcGFmNF9meDBQQ0xlaXhEeml1dEVWUEY4aVJR?hl=ko&gl=KR&ceid=KR%3Ako">[속보] 코스피·코스닥 서킷브레이커 발동…20분간 거래 중단</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: [속보] '패닉셀' 코스피·코스닥 8%대 폭락…동반 서킷브레이커  
-외 P0 긴급 이슈 32건이 추가 감지되었습니다. 총 173건의 뉴스 중 P1 주요 이슈도 6건 확인됩니다.
-
-1. **📈 가격/시장** (81건): 코스피, 코스닥, Oil 관련 81건의 뉴스가 보고되었습니다.
-2. **📊 매크로/금리** (21건): 환율, Inflation, 한은 관련 21건의 뉴스가 보고되었습니다.
-3. **🤖 AI/기술** (14건): 삼성전자, Apple, 하이닉스 관련 14건의 뉴스가 보고되었습니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-**P0 긴급**: [속보] '패닉셀' 코스피·코스닥 8%대 폭락…동반 서킷브레이커 / 코스피·코스닥 동반 급등…하루 만에 ‘매수 사이드카’ / [속보] 코스피·코스닥 서킷브레이커 발동…20분간 거래 중단
-**P1 주요**: 6건 확인
-- 한국 기사 90건, 글로벌 기사 83건 수집
-- 한국 지수: KOSPI 5,614.49(+8.13%), KOSDAQ 1,117.23(+11.33%), USD/KRW 1,464.58(+0.19%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">81건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:26%"></div></div><span class="theme-count">21건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:17%"></div></div><span class="theme-count">14건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:6%"></div></div><span class="theme-count">5건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:7%"></div></div><span class="theme-count">6건</span></div>
-</div>
-
-*총 173건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
-
-
-![market-snapshot]({{ '/assets/images/generated/market-snapshot-2026-03-05.png' | relative_url }})
-
-
----
+- KOSPI 5,614.49 (+8.13%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 1,117.23 (+11.33%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-03-05 주식 시장에서 173건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,614.49(+8.13%), KOSDAQ 1,117.23(+11.33%), USD/KRW 1,464.58(+0.19%).
+- *코스피, 코스닥, Oil 관련 81건의 뉴스가 보고되었습니다.*
 
 ## 테마별 주요 뉴스
 

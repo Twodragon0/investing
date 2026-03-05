@@ -17,20 +17,6 @@ description: "전 세계 금융 규제기관의 최신 동향을 정리합니다
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">14</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 11</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">9</div><div class="stat-label">한국</div></div></div>
 <div class="alert-box alert-info"><strong>규제 긴급: 코스피 대폭락에 내일 당정 연기…스테이블코인법 난항 - 마켓인 - 14건 분석</strong><ul><li>🔵 <strong>규제/정책</strong> (11건): 금융위, 디지털자산기본법, 정부안 관련 11건의 뉴스가 보고되었습니다.</li><li>🏦 <strong>거래소</strong> (5건): 지분, 규제, 가상자산거래소 관련 5건의 뉴스가 보고되었습니다.</li><li>📈 <strong>가격/시장</strong> (8건): 금융위, 디지털자산기본법, 정부안 관련 8건의 뉴스가 보고되었습니다.</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9FMmV5TUVVQ19jSTBxMkk4TnFQcmNwTm9zemsyS2JDcHdFNWhIUVRLeVByVllIem1waXI0enVjWDJSdTNIVzFIS1ExTWlKYjF1X01YY0x5Z3NTeUhhY3B0VmJRcndYRjV3ZVczUnI1V2JlU2c?oc=5">코스피 대폭락에 내일 당정 연기…스테이블코인법 난항 - 마켓인</a> <span class="p0-desc">코스피 대폭락에 내일 당정 연기…스테이블코인법 난항 마켓인</span></li></ul></div>
-## 전체 뉴스 요약
-
-**긴급**: 코스피 대폭락에 내일 당정 연기…스테이블코인법 난항 - 마켓인  
-총 14건의 뉴스 중 P1 주요 이슈도 4건 확인됩니다.
-
-1. **🔵 규제/정책** (11건): 금융위, 디지털자산기본법, 정부안 관련 11건의 뉴스가 보고되었습니다.
-2. **🏦 거래소** (5건): 지분, 규제, 가상자산거래소 관련 5건의 뉴스가 보고되었습니다.
-3. **📈 가격/시장** (8건): 금융위, 디지털자산기본법, 정부안 관련 8건의 뉴스가 보고되었습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-**P0 긴급**: 코스피 대폭락에 내일 당정 연기…스테이블코인법 난항 - 마켓인
-**P1 주요**: 당국, 가상자산거래소 지분 제한 규제 강행…점유율별 차등 적용 유력 - 뉴스1 / 금융위, 올해 첫 가상자산위원회 개최…은행 중심 스테이블코인·거래소 지분 규제 검토 - 오 / 금융위 "은행 51%룰·가상자산거래소 지분 규제" 검토 - v.daum.net
-**주요 지역**: 한국 9건, 아시아 2건, 유럽 2건
-
 ## 핵심 요약
 
 - **총 수집 건수**: 14건

@@ -32,24 +32,13 @@ description: "외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 109
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">109</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 59</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">리스크 위험</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (39회)</div></div></div>
 <div class="alert-box alert-info"><strong>암호화폐 긴급: 암호화폐 폭락: 비트코인 또는 XRP 동안 더 나은 구매를 원하십니까? - 109건 분석</strong><ul><li>🟠 <strong>비트코인</strong> (59건): Bitcoin, Crypto, Cryptocurrency 관련 59건의 뉴스가 보고되었습니다.</li><li>📈 <strong>가격/시장</strong> (34건): Bitcoin, crypto, stocks 관련 34건의 뉴스가 보고되었습니다.</li><li>🏦 <strong>거래소</strong> (25건): Coinbase, crypto, Kraken 관련 25건의 뉴스가 보고되었습니다.</li><li>🏛️ <strong>정치/정책</strong> (15건): Trump, crypto, Bitcoin 관련 15건의 뉴스가 보고되었습니다.</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMigwFBVV95cUxPVWVwMUFIS01xY0JpaGR5cFJnZ1FnM1Byd3B5cFdSRkJoVkJNZFB5M2FlNWRsUUlNSm9mYzNQQkF1YU13ZTFrdUc2T3I0emNKN0tiaXJBWFpFVWlqeDhmNHEwOWRlcERsSzNnMHQ5a05jaG9JRWxqSUkzVnBSRUk0QUFCaw?hl=en-US&gl=US&ceid=US%3Aen">암호화폐 폭락: 비트코인 또는 XRP 동안 더 나은 구매를 원하십니까?</a> <span class="p0-desc">구글 뉴스에서 보도한 비트코인 관련 시장 동향입니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE50NGZBdUhaOHB2LVl5Wm9wY0NfV29xSS1JaDctVl9XdFlhaU44NHNUWEx1dFdwenlsOVF0OEFwLWVYVy1qeEQ5bEtaeUkyYkgtbUNjV2NBOWdFUFdLQ1N4am5kdVZuQlR3VnhPRkNKTk1kNzQ?oc=5">국장·미장은 폭락하는데…비트코인 슬금슬글 7만달러 턱 밑 - 디지털투데이</a> <span class="p0-desc">국장·미장은 폭락하는데…비트코인 슬금슬글 7만달러 턱 밑 디지털투데이</span></li><li><a href="https://decrypt.co/359927/apple-iphone-hacking-kit-used-by-spies-crypto-scams-could-have-us-intelligence-origins">애플 스파이가 사용하는 iPhone 해킹 키트, 암호화폐 사기의 출처는 미국 정보일 수 있음</a> <span class="p0-desc">연구원들은 23가지 iOS 취약점을 포함하는 정교한 익스플로잇 킷을 간첩 및 사이버 범죄 캠프AIgns에서 사용하고 있습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 암호화폐 폭락: 비트코인 또는 XRP 동안 더 나은 구매를 원하십니까?  
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 109건의 뉴스 중 P1 주요 이슈도 14건 확인됩니다.
-
-1. **🟠 비트코인** (59건): Bitcoin, Crypto, Cryptocurrency 관련 59건의 뉴스가 보고되었습니다.
-2. **📈 가격/시장** (34건): Bitcoin, crypto, stocks 관련 34건의 뉴스가 보고되었습니다.
-3. **🏦 거래소** (25건): Coinbase, crypto, Kraken 관련 25건의 뉴스가 보고되었습니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-**P0 긴급**: 암호화폐 폭락: 비트코인 또는 XRP 동안 더 나은 구매를 원하십니까? / 국장·미장은 폭락하는데…비트코인 슬금슬글 7만달러 턱 밑 - 디지털투데이 / 애플 스파이가 사용하는 iPhone 해킹 키트, 암호화폐 사기의 출처는 미국 정보일 수 있음
-**P1 주요**: 14건 확인
-**핵심 키워드**: **bitcoin**, **etf**, **ethereum**, **ai**
-**주요 출처**: Google News(20건), Google News KR(15건), Decrypt(15건)
-- 거래소 공지 5건 포함
-
-
-![news-briefing]({{ '/assets/images/generated/news-briefing-crypto-2026-03-05.png' | relative_url }})
+- 총 **109건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- 2026-03-05 암호화폐 시장에서 109건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 거래소 관련 소식이 주목됩니다.
+- *총 109건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
 
 ## 테마별 주요 뉴스
 

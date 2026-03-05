@@ -32,6 +32,7 @@ description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 �
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">107</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 55</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (40회)</div></div></div>
 <div class="alert-box alert-info"><strong>암호화폐: Bitcoin, Iran, Crypto 중심 107건 분석</strong><ul><li>🟠 <strong>비트코인</strong> (55건): Bitcoin, Iran, Crypto 관련 55건의 뉴스가 보고되었습니다.</li><li>📈 <strong>가격/시장</strong> (23건): 비트코인, 암호화폐, Bitcoin 관련 23건의 뉴스가 보고되었습니다.</li><li>🔵 <strong>규제/정책</strong> (15건): crypto, Bitcoin, CFTC 관련 15건의 뉴스가 보고되었습니다.</li><li>🔷 <strong>이더리움</strong> (11건): for, Ethereum, Cryptocurrency 관련 11건의 뉴스가 보고되었습니다.</li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **107건** 수집

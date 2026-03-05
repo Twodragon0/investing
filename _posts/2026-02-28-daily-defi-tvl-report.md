@@ -23,6 +23,7 @@ description: "2026-02-28 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked
 
 
 
+
 ## 전체 뉴스 요약
 
 - Lido로 TVL $33.92B (13.7%)로 1위이나, 생태계가 상당히 분산되어 있습니다. 프로토콜 간 경쟁이 활발한 건강한 구조입니다.

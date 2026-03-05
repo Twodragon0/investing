@@ -17,36 +17,14 @@ description: "속보:🇺🇸 Blackrock은 agAIn을 로드하고 있으며 $296,
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">46</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🏛️ 14</div><div class="stat-label">정치/정책</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div></div>
 <div class="alert-box alert-info"><strong>소셜 긴급: 박수영 "코스피 대폭락…경제 패닉서 李대통령 침묵 일관" - 데일리안 - 46건 분석</strong><ul><li>🏛️ <strong>정치/정책</strong> (14건): Trump, banks, crypto 관련 14건의 뉴스가 보고되었습니다.</li><li>📊 <strong>매크로/금리</strong> (12건): 금리, Telegram, Tether 관련 12건의 뉴스가 보고되었습니다.</li><li>🟠 <strong>비트코인</strong> (12건): Telegram, Bitcoin, Blackrock 관련 12건의 뉴스가 보고되었습니다.</li><li>📈 <strong>가격/시장</strong> (10건): 금리, 비트코인, 암호화폐 관련 10건의 뉴스가 보고되었습니다.</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFAxdHl5M1ltMmZ6bl9ZME9Bb254WnBXd0NjWlEtZWl4R0VyNE1KcENvNUNZRGctdDB4S2dQcmowLXBWenE0bGY0UE1JMjVrSjNZMllxZkF30gGmAkFVX3lxTE9KSVRWWmF5Ty0xcm1zOXdvMjF2a1hPTjRCU1FWN3NHMWpBNHp3Q1lmcnV3SVNDbE1pUmxrbjNyUVhjRnJPRWVsMjhrclNhZU5KQXBIS19nNW1yQWJXTGE2dlFSWlh0Mm1YdDFZQWg3T2F2Z0h2bUhqbndzNHZ5LXl4WFJjLWpCd0JzeW9wYUtadUNra056TWd1VEhDRGotcklqYVBVU1ZySENyREtqMUpnYnJVdDVDZUNFN3BUcS0tb0hCTV8zaGRuT0dGamt1RmNwT0VFS3ExdXJXSk5qVlFWaWt3RTU5ZmRGZUdqUHpoZkYwSmZ2MWxMQXVZS18zMGtUVnRVeWFkQ0FkXzlFbzc5QThVSjdWNmNHdnJXMkdDalpPcU9zQQ?oc=5">박수영 "코스피 대폭락…경제 패닉서 李대통령 침묵 일관" - 데일리안</a> <span class="p0-desc">박수영 "코스피 대폭락…경제 패닉서 李대통령 침묵 일관" 데일리안</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 박수영 "코스피 대폭락…경제 패닉서 李대통령 침묵 일관" - 데일리안  
-총 46건의 뉴스 중 P1 주요 이슈도 3건 확인됩니다.
+오늘 수집된 총 46건 중 텔레그램 20건, 소셜 0건, 정치·경제 26건으로 정치/정책 및 매크로/금리 이슈가 주요 화제입니다.
 
-1. **🏛️ 정치/정책** (14건): Trump, banks, crypto 관련 14건의 뉴스가 보고되었습니다.
-2. **📊 매크로/금리** (12건): 금리, Telegram, Tether 관련 12건의 뉴스가 보고되었습니다.
-3. **🟠 비트코인** (12건): Telegram, Bitcoin, Blackrock 관련 12건의 뉴스가 보고되었습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-**P0 긴급**: 박수영 "코스피 대폭락…경제 패닉서 李대통령 침묵 일관" - 데일리안
-**P1 주요**: [텔레그램] 속보 :🇺🇸 Blackrock ETF은 비트코인에 $264,520,000를 구 / [텔레그램] #Huobi에서 #BitfinexTx로 500,000 #FTT (1,238,1 / 트럼프의 새로운 관세는 그의 자존심을 높일 수 있지만 경제에 해를 끼칠 것입니다. 스티븐 
-- 텔레그램 20건, 정치·경제 26건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">14건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:86%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:86%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:71%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:43%"></div></div><span class="theme-count">6건</span></div>
-</div>
-
-*총 46건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
-
-
----
-
-
-![source-distribution]({{ '/assets/images/generated/source-distribution-2026-03-05.png' | relative_url }})
+**핵심 신호 정리**
+- 주요 테마: 정치/정책, 매크로/금리, 비트코인
+- 긴급 알림 1건에 대한 선별 모니터링
 
 ## 텔레그램 주요 소식
 
