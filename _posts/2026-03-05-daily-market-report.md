@@ -22,7 +22,7 @@ description: "암호화폐 시장이 강한 상승세를 보이고 있습니다.
 
 ## 오늘의 핵심
 
-- **극도의 공포 장세**: 공포/탐욕 지수 22으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다.
+- **공포 장세**: 공포/탐욕 지수 22으로 Fear 구간입니다. 시장 심리가 위축되어 있으나 점진적 회복 가능성이 있습니다.
 - **비트코인 $72,664 상승**: 24h 기준 +7.45% 변동, 주간 +6.53% 상승.
 - **시가총액 $2.53T으로 회복**: 전일 대비 +5.80%. BTC 도미넌스 57.4%로 비트코인 중심 자금 흐름 지속.
 - **KOSPI**: 5,526.08 (+333.62, +6.43%)
@@ -34,7 +34,7 @@ description: "암호화폐 시장이 강한 상승세를 보이고 있습니다.
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">22</div><div class="stat-label">공포/탐욕 (Extreme Fear)</div></div><div class="stat-item"><div class="stat-value">$2.53T</div><div class="stat-label">글로벌 시총</div></div><div class="stat-item"><div class="stat-value">57.4%</div><div class="stat-label">BTC 도미넌스</div></div><div class="stat-item"><div class="stat-value">+5.80%</div><div class="stat-label">시총 24h 변동</div></div></div>
+<div class="stat-grid"><div class="stat-item"><div class="stat-value">22</div><div class="stat-label">공포/탐욕 (Fear)</div></div><div class="stat-item"><div class="stat-value">$2.53T</div><div class="stat-label">글로벌 시총</div></div><div class="stat-item"><div class="stat-value">57.4%</div><div class="stat-label">BTC 도미넌스</div></div><div class="stat-item"><div class="stat-value">+5.80%</div><div class="stat-label">시총 24h 변동</div></div></div>
 
 <div class="alert-box alert-info"><strong>주요 자산 현황</strong><ul><li><strong>BTC</strong>: $72,664 (+7.45%)</li><li><strong>ETH</strong>: $2,126 (+8.80%)</li><li><strong>KOSPI</strong>: 5,526.08 (+6.43%)</li><li><strong>KOSDAQ</strong>: 1,107.00 (+10.31%)</li><li><strong>USD/KRW 환율</strong>: 1,465.98 (+0.29%)</li><li><strong>금</strong>: $5,193.80 (+0.53%)</li><li><strong>원유</strong>: $77.32 (+2.48%)</li></ul></div>
 
@@ -43,7 +43,7 @@ description: "암호화폐 시장이 강한 상승세를 보이고 있습니다.
 - BTC 모멘텀: 24h +7.45%, 7d +6.53% (상승 추세)
 - ETH 모멘텀: 24h +8.80%, 7d +3.50% (상승 추세)
 - 시장 레짐: 중립/대기 | 시총 24h +5.80%, BTC 도미넌스 57.4%
-- 심리 지표: 공포/탐욕 22 (Extreme Fear)
+- 심리 지표: 공포/탐욕 22 (Fear)
 
 ## 오늘의 시장 인사이트
 
@@ -51,7 +51,7 @@ description: "암호화폐 시장이 강한 상승세를 보이고 있습니다.
 
 BTC 도미넌스가 **57.4%**로 높은 수준입니다. 비트코인 중심의 자금 흐름이 지속되고 있어, 알트코인 투자 시 주의가 필요합니다.
 
-공포/탐욕 지수는 **22** (Extreme Fear)으로, 극도의 공포 상태입니다. 역사적으로 이 구간은 장기 투자자에게 매수 기회가 되어 왔습니다.
+공포/탐욕 지수는 **22** (Fear)으로, 공포 상태입니다. 시장 심리가 위축되어 있으나 점진적 회복 가능성이 있습니다.
 
 Top 20 중 가장 큰 상승은 **Ethereum** (+8.80%), 가장 큰 하락은 **Canton** (-1.87%)입니다.
 
@@ -72,7 +72,7 @@ Top 20 중 가장 큰 상승은 **Ethereum** (+8.80%), 가장 큰 하락은 **Ca
 | ETH 도미넌스 | 10.1% |
 | 활성 코인 수 | 18,531개 |
 
-**공포/탐욕 지수: 22/100** — Extreme Fear (전일: 10)
+**공포/탐욕 지수: 22/100** — Fear (전일: 10)
 `[████░░░░░░░░░░░░░░░░]`
 
 ## 시가총액 Top 20

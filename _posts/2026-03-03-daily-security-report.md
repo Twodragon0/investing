@@ -6,7 +6,7 @@ categories: [security-alerts]
 tags: ["security", "hack", "blockchain", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-description: "블록체인 보안 관련 뉴스 2건을 정리합니다."
+description: "2026년 2월 블록체인 해킹 피해액 $26.5M으로 2025년 3월 이후 최저. 보안 환경 개선 분석."
 ---
 
 블록체인 보안 관련 뉴스 2건을 정리합니다.
@@ -19,12 +19,12 @@ description: "블록체인 보안 관련 뉴스 2건을 정리합니다."
 ## 보안 관련 뉴스
 
 **1. [Crypto Hacks Drop to $26.5M in February, Lowest Since March 2025 - Live Bitcoin News](https://news.google.com/rss/articles/CBMimwFBVV95cUxQM2hqZDRnRGRyaHF3a0I3N29ZbWF6eWlSNTZyUjQ0RTBsa1RBeTNuMXU2cE1SN2JvaFdOTVVVbzY5TTduSzdTdDI1SnU2ZkhHOGdBdEt3VkZQOGZ3MFVKMlJYZDVjRGdtaW9NVjhfUXNNbXh4aHFjRTJnSnBqcjBMNlktODFJN242cDlEQWg1a18xakhlZGRfNnAtQQ?oc=5)**
-Crypto Hacks Drop to $26.5M in February, Lowest Since March 2025 Live Bitcoin News
-<span class="source-tag">Blockchain Security EN</span>
+CertiK 기준 2월 해킹 피해액 $26.5M으로 급감. 2025년 3월 이후 최저치를 기록했습니다.
+<span class="source-tag">블록체인 보안</span>
 
 **2. [Crypto Hacking Losses Plummet to $26.5M in February, Signaling a Stunning Security Transformation - Bitcoin world](https://news.google.com/rss/articles/CBMicEFVX3lxTE1vOHdMZUhPT0N5MUZhY1YxLUJ0cDRLZTlUQktpbnkzdjNlamRLRGNUdHdSYXVfY21VNGZDT2ZxOW5OVTlkLW9qa1g2RW54Q3VtemxtTmVjU255angtblJzSHg1QzRrTEdBTld0eURpVHg?oc=5)**
 Crypto Hacking Losses Plummet to $26.5M in February, Signaling a Stunning Security Transformation Bitcoin world
-<span class="source-tag">Blockchain Security EN</span>
+<span class="source-tag">블록체인 보안</span>
 
 
 ## 보안 인사이트
@@ -35,4 +35,4 @@ Crypto Hacking Losses Plummet to $26.5M in February, Signaling a Stunning Securi
 
 ## 참고 링크
 
-<details><summary>참고 링크 (2건)</summary><div class="details-content"><ol><li><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxQM2hqZDRnRGRyaHF3a0I3N29ZbWF6eWlSNTZyUjQ0RTBsa1RBeTNuMXU2cE1SN2JvaFdOTVVVbzY5TTduSzdTdDI1SnU2ZkhHOGdBdEt3VkZQOGZ3MFVKMlJYZDVjRGdtaW9NVjhfUXNNbXh4aHFjRTJnSnBqcjBMNlktODFJN242cDlEQWg1a18xakhlZGRfNnAtQQ?oc=5">Crypto Hacks Drop to $26.5M in February, Lowest Since March 2025 - Live…</a> <span class="source-tag">Blockchain Security EN</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1vOHdMZUhPT0N5MUZhY1YxLUJ0cDRLZTlUQktpbnkzdjNlamRLRGNUdHdSYXVfY21VNGZDT2ZxOW5OVTlkLW9qa1g2RW54Q3VtemxtTmVjU255angtblJzSHg1QzRrTEdBTld0eURpVHg?oc=5">Crypto Hacking Losses Plummet to $26.5M in February, Signaling a Stunning…</a> <span class="source-tag">Blockchain Security EN</span></li></ol></div></details>
+<details><summary>참고 링크 (2건)</summary><div class="details-content"><ol><li><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxQM2hqZDRnRGRyaHF3a0I3N29ZbWF6eWlSNTZyUjQ0RTBsa1RBeTNuMXU2cE1SN2JvaFdOTVVVbzY5TTduSzdTdDI1SnU2ZkhHOGdBdEt3VkZQOGZ3MFVKMlJYZDVjRGdtaW9NVjhfUXNNbXh4aHFjRTJnSnBqcjBMNlktODFJN242cDlEQWg1a18xakhlZGRfNnAtQQ?oc=5">Crypto Hacks Drop to $26.5M in February, Lowest Since March 2025 - Live…</a> <span class="source-tag">블록체인 보안</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1vOHdMZUhPT0N5MUZhY1YxLUJ0cDRLZTlUQktpbnkzdjNlamRLRGNUdHdSYXVfY21VNGZDT2ZxOW5OVTlkLW9qa1g2RW54Q3VtemxtTmVjU255angtblJzSHg1QzRrTEdBTld0eURpVHg?oc=5">Crypto Hacking Losses Plummet to $26.5M in February, Signaling a Stunning…</a> <span class="source-tag">블록체인 보안</span></li></ol></div></details>

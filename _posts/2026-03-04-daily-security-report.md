@@ -6,7 +6,7 @@ categories: [security-alerts]
 tags: ["security", "hack", "blockchain", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-description: "Crypto Hacks Drop to $26.5M in February, Lowest Since March 2025 Live Bitcoin News"
+description: "2026년 2월 블록체인 해킹 피해액 $26.5M으로 급감, 2025년 3월 이후 최저치. ClickFix 취약점 악용 사례 경고."
 ---
 
 블록체인 보안 관련 뉴스 2건을 정리합니다.
@@ -19,12 +19,12 @@ description: "Crypto Hacks Drop to $26.5M in February, Lowest Since March 2025 L
 ## 보안 관련 뉴스
 
 **1. [Crypto Hacks Drop to $26.5M in February, Lowest Since March 2025 - Live Bitcoin News](https://news.google.com/rss/articles/CBMimwFBVV95cUxQM2hqZDRnRGRyaHF3a0I3N29ZbWF6eWlSNTZyUjQ0RTBsa1RBeTNuMXU2cE1SN2JvaFdOTVVVbzY5TTduSzdTdDI1SnU2ZkhHOGdBdEt3VkZQOGZ3MFVKMlJYZDVjRGdtaW9NVjhfUXNNbXh4aHFjRTJnSnBqcjBMNlktODFJN242cDlEQWg1a18xakhlZGRfNnAtQQ?oc=5)**
-Crypto Hacks Drop to $26.5M in February, Lowest Since March 2025 Live Bitcoin News
-<span class="source-tag" data-source-type="regulator">Blockchain Security EN</span>
+CertiK 기준 2월 해킹 피해액 $26.5M으로 급감. 스마트 컨트랙트 감사 강화가 주요 원인입니다.
+<span class="source-tag" data-source-type="regulator">블록체인 보안</span>
 
 **2. [Crypto hackers exploit ClickFix via fake venture capital outreach - Invezz](https://news.google.com/rss/articles/CBMipwFBVV95cUxQaDlnQVE3X0JEYjFab1A1U0IyY0c2R3V5MUh4VEl4SlowN05vODNJdGs2WUtBdUpydGhMSFhNQm0xZVQ0VENIdXo5ampuT25jYU5XUFVHZ0xQamFPbUZGdFoyMHpzSndEOEUyRHlCWHlNNnh3V1NFQ1JteUpjMWtvdU42OVVlZ1VoekpsUm5mVUYzSW5HMVBpVXNFS3VEX0Zmc0pvc0JaNA?oc=5)**
-Crypto hackers exploit ClickFix via fake venture capital outreach Invezz
-<span class="source-tag" data-source-type="regulator">Blockchain Security EN</span>
+해커들이 가짜 VC 접촉을 통한 ClickFix 취약점을 악용. 사회공학 공격 주의 필요.
+<span class="source-tag" data-source-type="regulator">블록체인 보안</span>
 
 
 ## 보안 인사이트
@@ -35,4 +35,4 @@ Crypto hackers exploit ClickFix via fake venture capital outreach Invezz
 
 ## 참고 링크
 
-<details><summary>참고 링크 (2건)</summary><div class="details-content"><ol><li><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxQM2hqZDRnRGRyaHF3a0I3N29ZbWF6eWlSNTZyUjQ0RTBsa1RBeTNuMXU2cE1SN2JvaFdOTVVVbzY5TTduSzdTdDI1SnU2ZkhHOGdBdEt3VkZQOGZ3MFVKMlJYZDVjRGdtaW9NVjhfUXNNbXh4aHFjRTJnSnBqcjBMNlktODFJN242cDlEQWg1a18xakhlZGRfNnAtQQ?oc=5">Crypto Hacks Drop to $26.5M in February, Lowest Since March 2025 - Live…</a> <span class="source-tag" data-source-type="regulator">Blockchain Security EN</span></li><li><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxQaDlnQVE3X0JEYjFab1A1U0IyY0c2R3V5MUh4VEl4SlowN05vODNJdGs2WUtBdUpydGhMSFhNQm0xZVQ0VENIdXo5ampuT25jYU5XUFVHZ0xQamFPbUZGdFoyMHpzSndEOEUyRHlCWHlNNnh3V1NFQ1JteUpjMWtvdU42OVVlZ1VoekpsUm5mVUYzSW5HMVBpVXNFS3VEX0Zmc0pvc0JaNA?oc=5">Crypto hackers exploit ClickFix via fake venture capital outreach - Invezz</a> <span class="source-tag" data-source-type="regulator">Blockchain Security EN</span></li></ol></div></details>
+<details><summary>참고 링크 (2건)</summary><div class="details-content"><ol><li><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxQM2hqZDRnRGRyaHF3a0I3N29ZbWF6eWlSNTZyUjQ0RTBsa1RBeTNuMXU2cE1SN2JvaFdOTVVVbzY5TTduSzdTdDI1SnU2ZkhHOGdBdEt3VkZQOGZ3MFVKMlJYZDVjRGdtaW9NVjhfUXNNbXh4aHFjRTJnSnBqcjBMNlktODFJN242cDlEQWg1a18xakhlZGRfNnAtQQ?oc=5">Crypto Hacks Drop to $26.5M in February, Lowest Since March 2025 - Live…</a> <span class="source-tag" data-source-type="regulator">블록체인 보안</span></li><li><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxQaDlnQVE3X0JEYjFab1A1U0IyY0c2R3V5MUh4VEl4SlowN05vODNJdGs2WUtBdUpydGhMSFhNQm0xZVQ0VENIdXo5ampuT25jYU5XUFVHZ0xQamFPbUZGdFoyMHpzSndEOEUyRHlCWHlNNnh3V1NFQ1JteUpjMWtvdU42OVVlZ1VoekpsUm5mVUYzSW5HMVBpVXNFS3VEX0Zmc0pvc0JaNA?oc=5">Crypto hackers exploit ClickFix via fake venture capital outreach - Invezz</a> <span class="source-tag" data-source-type="regulator">블록체인 보안</span></li></ol></div></details>
