@@ -52,15 +52,15 @@ Trump tariff chaos: What does 15% levy mean for trade deals the US signed? Al Ja
 <span class="source-tag">Trump Tariff Policy</span>
 
 **3. [Trump’s Trade Gamble Will Continue, Despite Supreme Court Rebuke - The New York Times](https://news.google.com/rss/articles/CBMihwFBVV95cUxQcGp2c2NyYURDbm5wdDMtdG4zNmd4bmd6dmtBZnQzZHg1bmdna0VaeDdpYzdjOVhuWm9KeVQzdU5kUW9qbVlha1dJajJpbTJNWWNmbjVmeC1XUnJfVnhjRl94YXRzd0Z3YllDTHpBR01idzlDc050aWR3Ym9EOElwLURXY3hVNGs?oc=5)**
-Trump’s Trade Gamble Will Continue, Despite Supreme Court Rebuke The New York Times
+트럼프의 무역 도박은 대법원의 제동에도 불구하고 계속될 것 - The New York Times
 <span class="source-tag">Trump Tariff Policy</span>
 
 **4. [Tariff ruling live coverage: Trump attacks Supreme Court, imposes 10% 'global tariff', then raises it to 15% - Yahoo Finance](https://news.google.com/rss/articles/CBMi5wFBVV95cUxQaE9EcFEyekhLN0g5eTQ5LTF5QU1fRDgzWlM2SF9uVEtvdnVUZExKSmhnNlVXVWR1T3Vyc2V5M253ejF3Zldrb3g2a0NLUGg1SHNPQjdmRV9FYndWRTcza0dIZzFzVjljTjlWZmJtVXc4VkJlaDlJUDFEYWFpMzY4elQtc1dqMG1uaHFkUmM1NU5yWXhkcndZWmdrdXJja2xyeHVsS2J3R01PSmpzbHlPR0xDZUd2RkV2U2VJYi1oa05Ca3dHeUVSbk13WnI0UnpYMGNURE4tU0pmVWRqMEJwVXNQYmpYbzg?oc=5)**
-Tariff ruling live coverage: Trump attacks Supreme Court, imposes 10% 'global tariff', then raises it to 15% Yahoo Finance
+관세 판결 실시간 보도: 트럼프, 대법원 공격하며 10% '글로벌 관세' 부과 후 15%로 인상 - Yahoo Finance
 <span class="source-tag">Trump Tariff Policy</span>
 
 **5. [Trump raises global tariff to 15% shortly after implementing reworked 10% levy - NBC News](https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZDIxak9SS2daTXpPTkN2M01MbTlXakF5V1hBdElEeThra1J0VmxZaXN0TzZLOGZyMTNpZk9tNXgyRXBhTVVad21MeXdJT0NqeVZYQWxqOEFyVzBsN3E0Q0ExN0szRkJsNjNla3BtOHBXRERUUmRVdUkxRHRaRXBOemVIWUZBejRUMkN4eWlNd2lfN21MWkloaUwzZUZRbm9ZTV9NZTNScmU1VzFIOEJER1YxMVU0cGp3dVdzSWYyMG4?oc=5)**
-Trump raises global tariff to 15% shortly after implementing reworked 10% levy NBC News
+트럼프, 재편된 10% 관세 시행 직후 글로벌 관세 15%로 인상 - NBC News
 <span class="source-tag">Trump Tariff Policy</span>
 
 **6. [Bypassing court ruling, Trump imposes 15% US global tariff under alternative mechanism - The Times of Israel](https://news.google.com/rss/articles/CBMitgFBVV95cUxPdV9BNEs2Ylk0ZXRveUpPWVpNWU9CaXJFaWdRMVFlUDlsUVZXbkx5Q2twaEVkM3FVdXRLQVFWeDVHZVdpNEdnbVFnWFpBSmNUSVBfa1RtWGFCVU1IdEpJOVU2ajh2N0wwaEc1RFlBMXhmTWhWLUdTdTRacGtxWENPd05KR24zZVNiTkFDRVV4czBLbUZiTzRZOXprSG9xRzVrdUtaRE9wUkJTNXNhZTdlMGZvYW5WZ9IBuwFBVV95cUxOVENlckQ4OHhFRUREMHdWS1l5N1h6UEhoZ0J0eFdoc2thX2gzcWhTT3otSDlNZ1JiM0gxRlNEQXQ2dHhUMlVRU2ptZjB4ZVZobThnTFpUVHVLd1ZTUEZFNWtERXpQallXd3k3ME80amc1TThNS1ZJZVFVakctRTV4TnBsbFVnMWdJZ2dOY0FITm1iMy11ZF90eXlIQWdtUmgzazUwa1dqN1J6Q0U2cEtzN0E3dWNNajFGS19z?oc=5)**

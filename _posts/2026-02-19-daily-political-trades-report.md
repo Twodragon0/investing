@@ -46,7 +46,7 @@ image: "/assets/images/generated/news-briefing-political-2026-02-19.png"
 ## 미국 의회 거래 동향
 
 **1. [Maine Gov. Janet Mills discloses more than $170,000 in stocks - The Portland Press Herald](https://news.google.com/rss/articles/CBMinwFBVV95cUxNeDRYeTFfcW5MUDVVYTRzaVpoTHRqUFlUSUx4b2Q3OVdPa2hvdGFTelFqRjZlamktLUp5LWd0QlJQalR2QWNKc21xQjN1c2xZS2pQZ2NDWDdUN3h4TE5Wa0xZeUJVZGk5SFQzZVNKZEdfVkZzbFBRLUVlcHZHU0drWlczZWhWVHRyX2FtM1FfeExCeDdNTGRMdFNBVV9XSUk?oc=5)**
-Maine Gov. Janet Mills discloses more than $170,000 in stocks The Portland Press Herald
+메인 주지사 Janet Mills, 보유 주식 $170,000 이상 공개 - The Portland Press Herald
 <span class="source-tag">미국 의회 거래</span>
 
 

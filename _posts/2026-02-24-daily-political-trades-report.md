@@ -39,39 +39,39 @@ image: "/assets/images/generated/news-briefing-political-2026-02-24.png"
 - 총 **25건** 수집
 - 트럼프 관련 8건의 정책 뉴스가 수집되었습니다. 행정명령 및 관세 정책은 글로벌 시장에 직접적인 영향을 미치고 있습니다.
 - 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
-- 1. As Rep. Julia Letlow runs for Senate, late disclosure of 210 stock trades draws scrutiny - NOLA.com As Rep. Julia Letlow runs for Senate, late disclosure…
+- 1. Julia Letlow 하원의원, 상원 출마 중 210건 주식 거래 늦은 신고로 논란 - NOLA.com
 
 ## 미국 의회 거래 동향
 
 **1. [As Rep. Julia Letlow runs for Senate, late disclosure of 210 stock trades draws scrutiny - NOLA.com](https://news.google.com/rss/articles/CBMiuwFBVV95cUxNSThWeUVlY25WbHFHREM4LWYtMUJFTHBReUk4Sk1DNVlQd1hFeTBXZlJaMlVhN094S2wzM19kcWlONXhWcGZqMERzQkdQYTNUY2hsNkRCYTRHdjkzN3pXbUotM2ZlT1VKN25FcWRKdm80dzNUZm5kNkV5SjVuRWxGQzJKRzlVbGp3T1YzMTNnTHdNSW1xUGI1Y05zOHRxRWdpd0U5UkkwYVZvUmlnTkxYTnNSckIwSURUS1pR0gHAAUFVX3lxTFBvUm5SSDBNNTJyVVZtRkpibnZxcG9IZjZ2TXFEVWdkSGRPd2IxY2x2ZEhWR2RsQTBrcTFRZU1ud1ZISkc1dGhWMzh2U0hpQkJ5Mm42X3FwdU43c1dXYkYtM3NHSTJ0UjQyUG9TOHV1ZWg4cl9UN2pmeHNscXhCNXN6VFNQWlFrSzYzRkZPSmx5TEI1ZU1YTGljR1N2VFR0UDF6MHZpOG8wZWtTaTBodXdrdjVJN3M0dWQwTmlnMkdaVg?oc=5)**
-As Rep. Julia Letlow runs for Senate, late disclosure of 210 stock trades draws scrutiny NOLA.com
+Julia Letlow 하원의원, 상원 출마 중 210건 주식 거래 늦은 신고로 논란 - NOLA.com
 <span class="source-tag">Senator Trades</span>
 
 **2. [As Rep. Julia Letlow runs for Senate, late disclosure of 210 stock trades draws scrutiny - NOLA.com](https://news.google.com/rss/articles/CBMiuwFBVV95cUxNSThWeUVlY25WbHFHREM4LWYtMUJFTHBReUk4Sk1DNVlQd1hFeTBXZlJaMlVhN094S2wzM19kcWlONXhWcGZqMERzQkdQYTNUY2hsNkRCYTRHdjkzN3pXbUotM2ZlT1VKN25FcWRKdm80dzNUZm5kNkV5SjVuRWxGQzJKRzlVbGp3T1YzMTNnTHdNSW1xUGI1Y05zOHRxRWdpd0U5UkkwYVZvUmlnTkxYTnNSckIwSURUS1pR0gHAAUFVX3lxTFBvUm5SSDBNNTJyVVZtRkpibnZxcG9IZjZ2TXFEVWdkSGRPd2IxY2x2ZEhWR2RsQTBrcTFRZU1ud1ZISkc1dGhWMzh2U0hpQkJ5Mm42X3FwdU43c1dXYkYtM3NHSTJ0UjQyUG9TOHV1ZWg4cl9UN2pmeHNscXhCNXN6VFNQWlFrSzYzRkZPSmx5TEI1ZU1YTGljR1N2VFR0UDF6MHZpOG8wZWtTaTBodXdrdjVJN3M0dWQwTmlnMkdaVg?oc=5)**
-As Rep. Julia Letlow runs for Senate, late disclosure of 210 stock trades draws scrutiny NOLA.com
+Julia Letlow 하원의원, 상원 출마 중 210건 주식 거래 늦은 신고로 논란 - NOLA.com
 <span class="source-tag">미국 의회 거래</span>
 
 
 ## 트럼프 행정명령/정책
 
 **1. [Trump's new global tariff comes into effect at 10% - BBC](https://news.google.com/rss/articles/CBMiWkFVX3lxTFBvYkhFUWNZNXVOTkNzQXkwelRtcjN0WUZiTVpkNm5GRWdpbm5Tc0lGNU5jXzRVRURrYnN4WDRGSmlGdFlySWJFbjZXWEdLYjB2MWFFQ05HSUFSdw?oc=5)**
-Trump's new global tariff comes into effect at 10% BBC
+트럼프의 새 글로벌 관세 10%로 발효 - BBC
 <span class="source-tag">Trump Tariff Policy</span>
 
 **2. [The Supreme Court Clipped Trump’s Tariff Powers—and Opened New Trade Battlefronts - Council on Foreign Relations](https://news.google.com/rss/articles/CBMirwFBVV95cUxQa0x6NFdlR0plUVV6c2VZa0F5SmdOcFd1dDdOYV83elVWZGlzVlFsTzdXUVFzSXJaSkJkUjlTRkt5aC1TejdSek1ZUE1XQ0hBZS1XbHhoZzRiUnlPb204cFVOckJZRzkxQWlrdTA3dEt1QUJCWllzX2RSeUQyYlIydWdiOFVVWGhfVUpiRGQ1NFJURGRXcXM1djBFSFNINWJHajNPLTZ6bkRyNXdyRnpN?oc=5)**
-The Supreme Court Clipped Trump’s Tariff Powers—and Opened New Trade Battlefronts Council on Foreign Relations
+대법원, 트럼프의 관세 권한 축소 - 새로운 무역 전선 열려 - Council on Foreign Relations
 <span class="source-tag">Trump Tariff Policy</span>
 
 **3. [President Trump Implements Temporary Import Duties under Section 122 of the Trade Act of 1974 and Continues the Suspension of Duty-Free De Minimis Exception for International Shipments - thompsonhinesmartrade.com](https://news.google.com/rss/articles/CBMi0AJBVV95cUxQdG1vcFEzTnA5U3VDajRrU3RfQ3ZfdXN0TTk3OUVlcU4yQUR0a3dLNkVIb0pJU0hCMm1QR2R0UHlWRHhMRTJVS1U4NjBzSkNIcnp1ZG1wbzg0Z0hrYU8xeXo4YnJ1X1RUN0NidFBacHN1dFpDSjZERE8wZWloY19PdGl0R3NQeFNMUTdTeTFNVXV5YVdXLUdmXzFGQ3BYNGR2QTRFOUJTajJFalp3UWVIVUxUcC1lXzVVQVpqbGpKcGs2OXhodzY2UXdEZ09nTkN1dHZpV0JaQ29KT09WR09VV3V6Z3hkS2VmSmlFS1JOX2lwZ2JJNk02ZUw0eG9Sd21hc2ozVlNTMTVPRER6eXExeFc3emREc3FObUNCeGV6T3lHb0xNVlZYYlcwaEJpQkRQWEIwWFptc1V0bnFadnNJcm9ERThmdTV4aEZtcFZKVnE?oc=5)**
-President Trump Implements Temporary Import Duties under Section 122 of the Trade Act of 1974 and Continues the Suspension of Duty-Free De Minimis Exc...
+트럼프 대통령, 1974년 무역법 제122조에 따른 임시 수입 관세 시행 및 소액 면세 예외 규정 유지 계속
 <span class="source-tag">Trump Tariff Policy</span>
 
 **4. [Trump’s new tariff threats trigger economic uncertainty; trade deals stall - Al Jazeera](https://news.google.com/rss/articles/CBMitwFBVV95cUxNNFhlR1dSUXc4MDg3aDdzYlVQd2VfU3lOcDdXZnN0LUZmcUY2LTFPVlRoWEp1N25UVmh4WXA4eWpBUVp5cWMtZ0U3WU01Z3VBUzJycmNjLXJXUWpxRFczZVI5VzJYNDhLZ2RicThIbFJEWmZ0WHFsT1NYTGdSM0pLRkxhbXlrOXdYSFVPM3AzSXRlaEFhOGdaMDBuQ1hXNXVQU19NTkRvMmcwWDBwalI5LVNmMGRRX2PSAbwBQVVfeXFMTjRzbFlUcmxiS1ZWVkFxN2lXTjJ2dldYdGZNZXlqX2NvX3ZUZnNMQU9fMXl4M3U5SGJ1b0FHLVJUODdrRnk1U1Y1M08yNDhjM1hQb3I0ckZYVXhpTFRKZDZueWNneDk3Njh1c0VSZnFGTW5sSENMRVhKX21rLVdOUklOT1l4WXh5dlhzQXVMRml2VmV6MG5IVThXbGVHVUdpUHNmdmh0SENDdTEwY0w4NnpSQkxCLU5WM0RFeEs?oc=5)**
-Trump’s new tariff threats trigger economic uncertainty; trade deals stall Al Jazeera
+트럼프의 새 관세 위협, 경제 불확실성 심화 - 무역 협상 교착 - Al Jazeera
 <span class="source-tag">Trump Tariff Policy</span>
 
 **5. [Trump’s 10% Levy Takes Effect as US Rebuilds Tariff Wall - Bloomberg](https://news.google.com/rss/articles/CBMiswFBVV95cUxPS2dQbjhWQ2ZIV05WaFRLYmtiYkV6MlNSb05tRXQzcGNVN0QtTjFENE1xUlEzcHdTajYzdUxQaGtnaTdRMTRPOFhGMUVIZ1Q1dzlWTmE4STNGZnZZeUlSeW9YRzd5WVlIU2hLMHdUNjYyOHhsWGYtXzdEVVd0WWJoTTQzZG5CNUtnN21fTkFjNUg3RzVnYUMtR3gyRlBNbEJpNnFiYmRpeUpoS0pmUEc4SmJGMA?oc=5)**
-Trump’s 10% Levy Takes Effect as US Rebuilds Tariff Wall Bloomberg
+트럼프의 10% 관세 발효, 미국 관세 장벽 재구축 - Bloomberg
 <span class="source-tag">Trump Tariff Policy</span>
 
 **6. [US Supreme Court Curbs Presidential Tariff Power: Implications for the Global Bike Industry - bikebiz.com](https://news.google.com/rss/articles/CBMisAFBVV95cUxQWUhpTjF0TDhEc0cwRzdJNjVBNjQ2dmg0VmpadXlpMFJZMUVrRzBIN0g5ZkNyVzhneEhSQkVQWHNwZkNOVzJWbFJSVHViZTFuYkxlblJKQ1haMW5rcXdLdHpGUFhSWlRNaGJCY2owaHVFNVNZbEk4a2s1TlYtVmZjbWNPVkRCZDFQUXMwTTRIRGtGUXR2dEpJeFNkdmlSb1Z5alV6NVNEcWxLZjZjQjYydg?oc=5)**
@@ -143,7 +143,7 @@ Top Fed Official Sees Little Effect on Rate Outlook From Supreme Court’s Tarif
 ## 정책 영향 분석
 
 트럼프 관련 8건의 정책 뉴스가 수집되었습니다. 행정명령 및 관세 정책은 글로벌 시장에 직접적인 영향을 미치고 있습니다.
-> 주요 내용: Trump's new global tariff comes into effect at 10% BBC
+> 주요 내용: 트럼프의 새 글로벌 관세 10%로 발효 - BBC
 
 미국 의회 거래 2건이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향을 예측하는 참고 자료가 될 수 있습니다.
 

@@ -37,28 +37,28 @@ excerpt: "미국 의회 Pelosi 주식거래 금지 논의, SEC Form 4 내부자 
 
 - 트럼프 관련 3건의 정책 뉴스가 포착되었습니다. 10% 관세가 발효되면서 글로벌 수준의 관세율을 15%까지 인상할 수 있다는 경고가 나왔으며, 행정명령 및 관세 정책의 변화는 미국 내수 시장뿐 아니라 아시아·유럽 수출 기업과 원자재 가격에도 연쇄적으로 영향을 미칩니다. 특히 관세…
 - 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
-- 1. Trump takes jab at Pelosi by name over history of controversial stock trading - Fox News Trump takes jab at Pelosi by name over history of controversial…
+- 1. 트럼프, Pelosi 실명 언급하며 논란의 주식 거래 이력 비판 - Fox News
 
 ## 미국 의회 거래 동향
 
 **1. [Trump takes jab at Pelosi by name over history of controversial stock trading - Fox News](https://news.google.com/rss/articles/CBMipAFBVV95cUxPcXRJM3FXU3pQcVZJM3BBUzFWa29NU25Tbm5DR3Vta2lCT3phSVJGZllwZzlpaTlrc3BEcUVWUW8zX1VhRFlBVVdhYmFCVWdGdmF4OWVUQ3BlbWczTllhTHFVdUZ4ZkhEZWdCZFdiSnhLTXRIQ2FEZ2N0VEw0S1MxMnN4YzBvOU1NdW1DOFF0bDZ0aDF1Wk5WX1hDX1NoTXdoTVRnadIBqgFBVV95cUxOX0xpY3ZWOFhFTWtGeW8tQmlhUEQ2dF9zZ3AwM0ljX3BwdzB1QzZFcmY4bUFCSEtjdUREeTZXc2RpX1dsXy1MMmphbndLclktTnhqZGlrdGZvZkVMT1Jocmo4VHpfLWJIUmNja1ppMmdaT3QtaGQ0dWc3dkxkd1oxazNuRmIwcGVSTkFKZTJQRGNSZFlTY2I4WlFHZ1hDemJHc1dqQjVBLXlpdw?oc=5)**
-Trump takes jab at Pelosi by name over history of controversial stock trading Fox News
+트럼프, Pelosi 실명 언급하며 논란의 주식 거래 이력 비판 - Fox News
 <span class="source-tag">Pelosi Trades</span>
 
 **2. [Trump throws shade at Pelosi with call to end congressional stock trading, gets ovation from Sen. Warren - New York Post](https://news.google.com/rss/articles/CBMi5gFBVV95cUxNVDhiYWhkZkdQV0x3RVJDSWxNQ0RWbEpQeUhWdVU2WENSb3IzelRCdWFTVmlrYW40bVNzUGtzV2JWakZiZkIzeV9IcC1Wc2hIc1ZVLTJvSEs5WDdYeUpzSVdFeTJVWnpWZmxHMnF3ckNjaHVhNEN1WnV4VEVTMDhaV3hNTzhSUW5QdXJkSDlRUnpGZ1dtY1IxLWpGRmlPSG9nb2JmclJlV1JXM1QxN1pKbjdtTWkxZDR1Z05XOVhjdzFuQURuTzhYR1gwMjZHbkpBVGpkWDVZbEplUmtJYjlVX2UwZW9ydw?oc=5)**
-Trump throws shade at Pelosi with call to end congressional stock trading, gets ovation from Sen. Warren New York Post
+트럼프, 의회 주식 거래 금지 촉구하며 Pelosi 비판 - Warren 의원도 환호 - New York Post
 <span class="source-tag">Pelosi Trades</span>
 
 **3. [Trump calls out Congressional stock trading, Nancy Pelosi - LiveNOW from FOX](https://news.google.com/rss/articles/CBMiY0FVX3lxTE5BSWRtLWc2WWwyOU5NZFNXVW0xVnFicm8zUldiZDJfYmhHNzlTTTA4R3dWR3NhaVVfZFd1Z3ZzV0RYNGw2cGRvNC01cmpRMDlRNVZkb2lNTl9qUlBnLU9ER3pCWdIBaEFVX3lxTFBsQXZJSUluSDVfSU9fbnZNLUJKclZmekpwMmQ5OWoyZldSUjBudXhjcEFnbFNNcTBEQWI4R0NIU2FRVEkybUl2OTJKbDF6SXlvR2laM2xCZEEzYjFVVU5yU1ZST2xoLXcx?oc=5)**
-Trump calls out Congressional stock trading, Nancy Pelosi LiveNOW from FOX
+트럼프, 의회 주식 거래와 Nancy Pelosi 문제 직접 비판 - LiveNOW from FOX
 <span class="source-tag">Pelosi Trades</span>
 
 **4. [Trump takes shot at Pelosi’s stock trades during State of the Union - Washington Times](https://news.google.com/rss/articles/CBMioAFBVV95cUxPNzg0bnZIZVUzUjFYRjY5STNxaUVENEtHWGtPaWJWaHJGakVQWnJ4OFUyUlFjNFRndXd1LWgyUElxazJvMVRwRjAxdDhCSmJOMXJxZU1RdUFvek9MNjdrNVpXcDh5azg0M0k5Q3RmRldzX0plYV8yd0dOZUNIZ3VQMUZ3aUROYjJMZnl3dFE0WTNsdjFwc0RlUktxMGpUTmI4?oc=5)**
-Trump takes shot at Pelosi’s stock trades during State of the Union Washington Times
+트럼프, 국정연설에서 Pelosi의 주식 거래 문제 직접 겨냥 - Washington Times
 <span class="source-tag">Pelosi Trades</span>
 
 **5. [Trump takes a jab at Nancy Pelosi as he pushes congressional stock trading ban, briefly unites Republicans - The Economic Times](https://news.google.com/rss/articles/CBMijgJBVV95cUxOSWtEUE5uR2g5T3J6TENKdzJfTk9MbktyTmJuSVFHN1h1ZDR3X0hhVEJBNEpBMkhKaVExWTZraGVOX2ZRM0tNMTZieVRNYXg2b2c3RkZaV0dCamZzU3haYlNRMkN3aENITUYwQUFfTkVxS0c1OTNhS2dTNlVkalVacy1BdS1nMldibVZ6OENBU19TYVJPRUViN3dLUjVfRUo4Qk5IT2hRRlFIWENhQnY3M0lQeThWQlNGUHBIU2E3cEo2STExQm8zTW1wcU5xazBaN3Y0cHBOVGVGSFN6dWxyVUVKS1V5blF5MkJuUG52akZTcE1oN3o2WDNfejhJTnZ1cWVGRmlHWEc2b2tETmfSAZMCQVVfeXFMT2d1ZTl6SXdaQm54ak5xUXliTU9tZjhIT25pdk83dkE2bHdET0pYX29RQWc0WXVSQ0J4bkswdGNRcVpFdGlvdXdtSld2WUhONDBiTnY5VF82Zk9fYWdXdWpDNk82YXlXb0Y4TV9qT0JFZ2NwYjlmWDJ5cXdnVmFUbGRvaFBKSFZ1aUo0ZURTQWotUDJZb2pfYWx2aEh4dFY0cWNTdzdZUTVGR0sxeC1IeTFwMXIxczFkbjZDa0ZKOFFHVzBfV3NoRTY2UGEwaGpBQmpWcjJLel83N1cxM1VxRzh0WFdvOU13OGt4LXdfdlhWMU5oOVF1VDNJOV8yYld1ekp5NlVJRkFrV3ZxZm1pT25ucFk?oc=5)**
-Trump takes a jab at Nancy Pelosi as he pushes congressional stock trading ban, briefly unites Republicans The Economic Times
+트럼프, 의회 주식 거래 금지 추진하며 Nancy Pelosi 비판 - 공화당 내 일시적 단결 - The Economic Times
 <span class="source-tag">Pelosi Trades</span>
 
 **6. [Trump mocks Nancy Pelosi in call to pass stock trading ban - Washington Examiner](https://news.google.com/rss/articles/CBMirgFBVV95cUxPNnlQOGNrMDYxWDZCU0gzMU5oU2tnVW1yUEJydjVPTVNrT0I3ME0wOTczeXhZaS03UGRtazFsUzJZMTVLanRfbU13YXhRdlNjcEVsOUg3QnBXOUdxdkpFOWhYUGJjQjFMdHhHTFdLZ1N2dDZfdkhsX3hXbVFfOVVHUThvRFNsZDhibHUtdXkxT19wNGZaMVNzWmRIRE9UVlRqYWdod3pFU18tMVdXdEE?oc=5)**
@@ -85,15 +85,15 @@ Trump takes a jab at Nancy Pelosi as he pushes congressional stock trading ban, 
 ## 트럼프 행정명령/정책
 
 **1. [Trump tariffs live updates: Trump’s 10% tariffs take effect as US threatens to raise 'global' levy to 15% - Yahoo Finance](https://news.google.com/rss/articles/CBMi5wFBVV95cUxQaE9EcFEyekhLN0g5eTQ5LTF5QU1fRDgzWlM2SF9uVEtvdnVUZExKSmhnNlVXVWR1T3Vyc2V5M253ejF3Zldrb3g2a0NLUGg1SHNPQjdmRV9FYndWRTcza0dIZzFzVjljTjlWZmJtVXc4VkJlaDlJUDFEYWFpMzY4elQtc1dqMG1uaHFkUmM1NU5yWXhkcndZWmdrdXJja2xyeHVsS2J3R01PSmpzbHlPR0xDZUd2RkV2U2VJYi1oa05Ca3dHeUVSbk13WnI0UnpYMGNURE4tU0pmVWRqMEJwVXNQYmpYbzg?oc=5)**
-Trump tariffs live updates: Trump’s 10% tariffs take effect as US threatens to raise 'global' levy to 15% Yahoo Finance
+트럼프 관세 실시간 업데이트: 10% 관세 발효, 미국 ‘글로벌’ 관세 15% 인상 위협 - Yahoo Finance
 <span class="source-tag">Trump Tariff Policy</span>
 
 **2. [Trump’s new suite of tariffs might be illegal too, lawyers suggest - The Globe and Mail](https://news.google.com/rss/articles/CBMikAFBVV95cUxNcUhoMk4yNlNzUVlKMzVTTlNIUHB0OFpnMmtlWGYyV2llT3dWdHhEQXhmdkZKYzNidm1QMTdaMkltVk5jVm9xdGRHMU5xY2l1eHFBaFVFVThqUk1ZbjMwUnNmMENzS0Fjb2N6bGJfX2REUkF0RlJ1SWJlVnZMMG4xWjVDYmFUWjhyaEJwLWxaSF8?oc=5)**
-Trump’s new suite of tariffs might be illegal too, lawyers suggest The Globe and Mail
+트럼프의 새로운 관세 패키지도 불법일 수 있다고 변호사들 지적 - The Globe and Mail
 <span class="source-tag">Trump Tariff Policy</span>
 
 **3. [Trump administration considers requiring banks to collect citizenship information - The Washington Post](https://news.google.com/rss/articles/CBMiigFBVV95cUxNZXZhZ3ljS3ZQZFp3ZllGdFVwRFRiSEU2NTBiNl9nZ0t4UUNBVENPRFhEbVlSbVlpZHZpemJSeUFBdU96NnpXY0tNdE42NHhGbk1NZ2U0eVdZVHRhQmxnRTRyUVhmU0RlcXNzMTIxbXY4VEYyUjIweUNyaUEzX0g1d182b3pIdUdRY0E?oc=5)**
-Trump administration considers requiring banks to collect citizenship information The Washington Post
+트럼프 행정부, 은행에 시민권 정보 수집 의무화 검토 - The Washington Post
 <span class="source-tag">Trump EO Economy</span>
 
 

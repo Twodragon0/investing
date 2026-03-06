@@ -17,7 +17,7 @@ description: "2026-02-18 주식 시장에서 129건의 뉴스를 분석했습니
 
 <div class="stat-item"><div class="stat-value">129</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 30</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">5,507.01</div><div class="stat-label">KOSPI -0.28%</div></div><div class="stat-item"><div class="stat-value">1,106.08</div><div class="stat-label">KOSDAQ -1.77%</div></div></div>
 
-<strong>주식 시장 **가격/시장, AI/기술** 부각 129건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 30건 수집</li><li>🤖 <strong>AI/기술</strong>: 48건 수집</li><li>📊 <strong>매크로/금리</strong>: 7건 수집</li><li>🟠 <strong>비트코인</strong> (8건): Should You Buy the Vanguard S&P 500 ETF With the Stock Market Near a Record High? History Offers a C</li></ul></div>
+<strong>주식 시장 **가격/시장, AI/기술** 부각 129건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 30건 수집</li><li>🤖 <strong>AI/기술</strong>: 48건 수집</li><li>📊 <strong>매크로/금리</strong>: 7건 수집</li><li>🟠 <strong>비트코인</strong> (8건): 주식 시장이 사상 최고치에 근접한 지금 Vanguard S&P 500 ETF를 매수해야 할까? 역사가 시사하는 것</li></ul></div>
 
 <strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까</a></li></ul></div>
 
@@ -114,19 +114,19 @@ description: "2026-02-18 주식 시장에서 129건의 뉴스를 분석했습니
 
 *비트코인 분야에서 Vanguard, Record, High 관련 이슈가 부각되고 있습니다.*
 
-**1. [Should You Buy the Vanguard S&P 500 ETF With the Stock Market Near a Record High? History Offers a Clear Answer](https://news.google.com/read/CBMilgFBVV95cUxPV3l0aVFKbFZmSWV1a2xmUk9HYjY1SGVOb1RycU5UaWkzT2dDSEh6MUFORzd3bXRXYmlJX2RmUkhNMHcyeS1jR0dyc05nVGtSR3BLeDVGVGVCNHFkVVpUY1M0eDg0VDEwQVY0Y3VMaFJDZVczaXBDbzZhVFNpeEt3QlZZRDljNU9PSmtRTzVpRmczMHpGVEE?hl=en-US&gl=US&ceid=US%3Aen)**
+**1. [주식 시장이 사상 최고치에 근접한 지금 Vanguard S&P 500 ETF를 매수해야 할까? 역사가 시사하는 것lear Answer](https://news.google.com/read/CBMilgFBVV95cUxPV3l0aVFKbFZmSWV1a2xmUk9HYjY1SGVOb1RycU5UaWkzT2dDSEh6MUFORzd3bXRXYmlJX2RmUkhNMHcyeS1jR0dyc05nVGtSR3BLeDVGVGVCNHFkVVpUY1M0eDg0VDEwQVY0Y3VMaFJDZVczaXBDbzZhVFNpeEt3QlZZRDljNU9PSmtRTzVpRmczMHpGVEE?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
 **2. [‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까](https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako)**
 <span class="source-tag">Google News</span>
 
-**3. [Should You Buy the Vanguard S&P 500 ETF With the Stock Market Near a Record High? History Offers a Clear Answer - The Motley Fool](https://news.google.com/rss/articles/CBMilgFBVV95cUxPV3l0aVFKbFZmSWV1a2xmUk9HYjY1SGVOb1RycU5UaWkzT2dDSEh6MUFORzd3bXRXYmlJX2RmUkhNMHcyeS1jR0dyc05nVGtSR3BLeDVGVGVCNHFkVVpUY1M0eDg0VDEwQVY0Y3VMaFJDZVczaXBDbzZhVFNpeEt3QlZZRDljNU9PSmtRTzVpRmczMHpGVEE?oc=5)**
-Should You Buy the Vanguard S&P 500 ETF With the Stock Market Near a Record High? History Offers a Clear Answer The Motley Fool
+**3. [주식 시장이 사상 최고치에 근접한 지금 Vanguard S&P 500 ETF를 매수해야 할까? 역사가 시사하는 것lear Answer - The Motley Fool](https://news.google.com/rss/articles/CBMilgFBVV95cUxPV3l0aVFKbFZmSWV1a2xmUk9HYjY1SGVOb1RycU5UaWkzT2dDSEh6MUFORzd3bXRXYmlJX2RmUkhNMHcyeS1jR0dyc05nVGtSR3BLeDVGVGVCNHFkVVpUY1M0eDg0VDEwQVY0Y3VMaFJDZVczaXBDbzZhVFNpeEt3QlZZRDljNU9PSmtRTzVpRmczMHpGVEE?oc=5)**
+주식 시장이 사상 최고치에 근접한 지금 Vanguard S&P 500 ETF를 매수해야 할까? 역사가 시사하는 것lear Answer The Motley Fool
 <span class="source-tag">Google News Stocks EN</span>
 
 <details><summary>그 외 5건 보기</summary><div class="details-content">
 <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPLWNXdjNsS2QxSHhBZXBBR3M4TUFLWEdiekV2UWU4YkhabGc4T1c1U0FUQnJMWG82SVJRMjFaR1VTQVlDTHNvUkNpd0Y4dExVQVYyYUZVOU1wWWpwNHI5S05ZRUI3VW1ueWFGRGtFMnM1UHhqUDI1Y3ZHek1YS0k3d2laY0dicFNFSWFjS3AzZHhaOVVqbHBKamNQVjFRaUxuYk10MXFvZ1JvbjgzNDNCb2h3SkhYX0k?oc=5">Stock Market Live February 17, 2026: S&P 500 (ETF) Fighting to Go Green Again - 24/7 Wall St.</a>
-<a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZGduX0xXbC1VdmtCLXQ1dmZhWENPRkx2M3RyMGUyaUVzbmZ3OG1jeWw1T3ViaGUtbTlQenZSYzQ4bjdVcjdFczc5R3dSSFY3djJ0V0NFYV9HSEVUM2VZWUZKUURITGk5UWZXNGRZWWNtOGsxLWFMaFVRc1dqaGZ2WElzNVVhcHhLWFdpRWpNQmcyUW45MjkyNHQxRVdwT2dMRTNmVFVZQm1pemNkc2hmMm5pbHNNZ2Z4?oc=5">Should You Buy the Vanguard S&P 500 ETF With the Stock Market Near a Record High? History Offers a Clear Answer - Nasdaq</a>
+<a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZGduX0xXbC1VdmtCLXQ1dmZhWENPRkx2M3RyMGUyaUVzbmZ3OG1jeWw1T3ViaGUtbTlQenZSYzQ4bjdVcjdFczc5R3dSSFY3djJ0V0NFYV9HSEVUM2VZWUZKUURITGk5UWZXNGRZWWNtOGsxLWFMaFVRc1dqaGZ2WElzNVVhcHhLWFdpRWpNQmcyUW45MjkyNHQxRVdwT2dMRTNmVFVZQm1pemNkc2hmMm5pbHNNZ2Z4?oc=5">주식 시장이 사상 최고치에 근접한 지금 Vanguard S&P 500 ETF를 매수해야 할까? 역사가 시사하는 것lear Answer - Nasdaq</a>
 </details>
 
 
