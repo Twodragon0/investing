@@ -213,7 +213,7 @@ excerpt: "이란 전쟁 확전으로 글로벌 리스크오프 전환 — 원유
 - **USDT 발행**: Tether Treasury에서 6,000만 USDT 추가 발행, 2,500만 USDT 미확인 지갑으로 전송 — 유동성 공급 신호
 - **한국 정치**: 이재명 대통령 싱가포르 국빈 방문, 금융인·기업가 의견 경청. 기준금리 6연속 동결 속 대출금리 상승 문제 부각
 
-[상세 보기](https://investing.2twodragon.com/crypto-news/2026/03/02/daily-social-media-digest/)
+[상세 보기](https://investing.2twodragon.com/social-media/2026/03/02/daily-social-media-digest/)
 
 ---
 
@@ -240,7 +240,7 @@ excerpt: "이란 전쟁 확전으로 글로벌 리스크오프 전환 — 원유
 | 암호화폐 뉴스 | 88건 | [바로가기](https://investing.2twodragon.com/crypto-news/2026/03/02/daily-crypto-news-digest/) |
 | 시장 종합 리포트 | - | [바로가기](https://investing.2twodragon.com/market-analysis/2026/03/02/daily-market-report/) |
 | 규제 동향 | 21건 | [바로가기](https://investing.2twodragon.com/regulatory-news/2026/03/02/daily-regulatory-report/) |
-| 소셜 미디어 | 25건 | [바로가기](https://investing.2twodragon.com/crypto-news/2026/03/02/daily-social-media-digest/) |
+| 소셜 미디어 | 25건 | [바로가기](https://investing.2twodragon.com/social-media/2026/03/02/daily-social-media-digest/) |
 | 주식 시장 뉴스 | 114건 | [바로가기](https://investing.2twodragon.com/stock-news/2026/03/02/daily-stock-news-digest/) |
 | 월드모니터 브리핑 | 20건 | [바로가기](https://investing.2twodragon.com/market-analysis/2026/03/02/daily-worldmonitor-briefing/) |
 

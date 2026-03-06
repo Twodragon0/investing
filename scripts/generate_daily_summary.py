@@ -1174,7 +1174,7 @@ def main():
             post_links.append(("규제 동향", regulatory_summary["count"], regulatory_summary["url"]))
         elif "social-media-digest" in slug:
             social_summary = summarize_social_post(post)
-            social_summary["url"] = get_post_url(filepath, today, "crypto-news")
+            social_summary["url"] = get_post_url(filepath, today, "social-media")
             post_links.append(("소셜 미디어", social_summary["count"], social_summary["url"]))
         elif "political-trades-report" in slug:
             political_summary = summarize_political_post(post)

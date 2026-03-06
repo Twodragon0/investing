@@ -2,11 +2,11 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-column">
-        <h4>About</h4>
+        <h4 data-i18n="footer_about">소개</h4>
         <p>암호화폐와 주식 뉴스를 자동으로 수집하고 분석하는 투자 정보 플랫폼입니다.</p>
       </div>
       <div class="footer-column">
-        <h4>Quick Links</h4>
+        <h4 data-i18n="footer_links">바로가기</h4>
         <ul>
           <li><a href="{{ '/crypto-news/' | relative_url }}">암호화폐 뉴스</a></li>
           <li><a href="{{ '/stock-news/' | relative_url }}">주식 뉴스</a></li>
@@ -15,7 +15,7 @@
         </ul>
       </div>
       <div class="footer-column">
-        <h4>Connect</h4>
+        <h4 data-i18n="footer_connect">연결</h4>
         <ul class="footer-connect">
           <li>
             <a href="https://github.com/Twodragon0/investing" target="_blank" rel="noopener noreferrer">
@@ -36,13 +36,13 @@
         </ul>
       </div>
       <div class="footer-column footer-qr">
-        <h4>QR Code</h4>
+        <h4 data-i18n="footer_qrcode">QR 코드</h4>
         <div id="footer-qrcode"></div>
         <p class="qr-label">{{ site.url }}</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+      <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. <span data-i18n="footer_rights">All rights reserved.</span></p>
       <p class="footer-credits">Powered by <a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a> & <a href="https://github.com/features/actions" target="_blank" rel="noopener">GitHub Actions</a></p>
     </div>
   </div>

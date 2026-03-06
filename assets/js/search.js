@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var countDiv = document.createElement('div');
     countDiv.className = 'search-result-count';
-    countDiv.textContent = results.length + (results.length >= 15 ? '+' : '') + ' results';
+    countDiv.textContent = results.length + (results.length >= 15 ? '+' : '') + t('result_count');
     searchResults.appendChild(countDiv);
 
     for (var j = 0; j < results.length; j++) {

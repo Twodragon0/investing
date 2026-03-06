@@ -437,7 +437,9 @@ layout: default
   const dateEl = document.getElementById('current-date');
   const now = new Date();
   const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
-  dateEl.textContent = now.toLocaleDateString('ko-KR', options);
+  if (dateEl) {
+    dateEl.textContent = now.toLocaleDateString('ko-KR', options);
+  }
 
   // Tab switching with animation
   const tabs = document.querySelectorAll('.posts-tab');
@@ -455,10 +457,10 @@ layout: default
       // Filter posts
       postItems.forEach(item => {
         if (category === 'all') {
-          item.style.display = 'block';
+          item.style.display = '';
         } else {
           const match = item.dataset.catType === category;
-          item.style.display = match ? 'block' : 'none';
+          item.style.display = match ? '' : 'none';
         }
       });
 
@@ -475,19 +477,23 @@ layout: default
   const scrollToTopBtn = document.getElementById('scroll-to-top');
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      scrollToTopBtn.classList.add('visible');
-    } else {
-      scrollToTopBtn.classList.remove('visible');
+    if (scrollToTopBtn) {
+      if (window.scrollY > 300) {
+        scrollToTopBtn.classList.add('visible');
+      } else {
+        scrollToTopBtn.classList.remove('visible');
+      }
     }
   }, { passive: true });
 
-  scrollToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  if (scrollToTopBtn) {
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
-  });
+  }
 </script>
 
 {{ content }}

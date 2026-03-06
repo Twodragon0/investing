@@ -57,3 +57,9 @@ political-trades:
   color: "cat-political"
   url: "/political-trades/"
   description: "미국 의회·SEC 내부자 거래, 정책 동향 추적"
+
+social-media:
+  name: "소셜 미디어"
+  color: "cat-social"
+  url: "/social-media/"
+  description: "소셜 미디어 뉴스 및 커뮤니티 동향"

@@ -210,7 +210,7 @@ excerpt: "암호화폐 107건, 주식 147건, 보안 2건, 규제 38건, 소셜 
 - MICHAEL SAYLOR: "We're in the business of not selling Bitcoin.""We have a PhD in HODLing."
 - BREAKING :🇺🇸 Blackrock is loading again, they have bought 4,309 BTC worth $296,750,000.This is...
 
-[상세 보기](https://investing.2twodragon.com/crypto-news/2026/03/04/daily-social-media-digest/)
+[상세 보기](https://investing.2twodragon.com/social-media/2026/03/04/daily-social-media-digest/)
 
 ---
 
@@ -233,7 +233,7 @@ excerpt: "암호화폐 107건, 주식 147건, 보안 2건, 규제 38건, 소셜 
 | 정치인 거래 | 18건 | [바로가기](https://investing.2twodragon.com/political-trades/2026/03/04/daily-political-trades-report/) |
 | 규제 동향 | 38건 | [바로가기](https://investing.2twodragon.com/regulatory-news/2026/03/04/daily-regulatory-report/) |
 | 보안 리포트 | 2건 | [바로가기](https://investing.2twodragon.com/security-alerts/2026/03/04/daily-security-report/) |
-| 소셜 미디어 | 37건 | [바로가기](https://investing.2twodragon.com/crypto-news/2026/03/04/daily-social-media-digest/) |
+| 소셜 미디어 | 37건 | [바로가기](https://investing.2twodragon.com/social-media/2026/03/04/daily-social-media-digest/) |
 | 주식 시장 뉴스 | 147건 | [바로가기](https://investing.2twodragon.com/stock-news/2026/03/04/daily-stock-news-digest/) |
 | 월드모니터 브리핑 | 20건 | [바로가기](https://investing.2twodragon.com/market-analysis/2026/03/04/daily-worldmonitor-briefing/) |
 
