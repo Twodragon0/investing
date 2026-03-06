@@ -124,7 +124,7 @@ def fetch_rss_feed(
                 if not image_url:
                     enclosure = entry.find("enclosure")
                     if enclosure and enclosure.get("url"):
-                        enc_type = enclosure.get("type", "")
+                        enc_type = str(enclosure.get("type", "") or "")
                         if enc_type.startswith("image/") or enc_type == "":
                             image_url = enclosure["url"]
                 # 4. Embedded <img> in description HTML
