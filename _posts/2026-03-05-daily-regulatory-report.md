@@ -48,7 +48,7 @@ SEC가 비공개 시장 관련 원탁회의를 개최하여 규제 방향을 논
 
 ## 한국 규제 동향
 
-**1. [당국, 가상자산거래소 지분 제한 규제 강행…점유율별 차등 적용 유력 - 뉴스1](https://news.google.com/rss/articles/CBMiaEFVX3lxTFB0LUstZWRUQUVqZzdHUXBJTW9SQUNNek1jdzd0TmNsaGU3OWs5eUI3aHQtN3U3SFJhRkxqNFg0dk9XTnN0c3ltVlF3OWdpekVLYWdPZnFZT25XRlhZeFdqM01OMDRzYUZV?oc=5)**
+**1. [당국, 가상자산거래소 지분 제한 규제 강행…점유율별 차등 적용 유력](https://news.google.com/rss/articles/CBMiaEFVX3lxTFB0LUstZWRUQUVqZzdHUXBJTW9SQUNNek1jdzd0TmNsaGU3OWs5eUI3aHQtN3U3SFJhRkxqNFg0dk9XTnN0c3ltVlF3OWdpekVLYWdPZnFZT25XRlhZeFdqM01OMDRzYUZV?oc=5)**
 금융당국이 가상자산거래소 대주주 지분 제한 규제를 강행하며, 시장점유율에 따른 차등 적용 방안이 유력하게 검토되고 있습니다.
 <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
 
@@ -56,7 +56,7 @@ SEC가 비공개 시장 관련 원탁회의를 개최하여 규제 방향을 논
 금융위원회 가상자산위원회가 디지털자산기본법 정부안 마련을 임박한 것으로 알려졌습니다.
 <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
 
-**3. [금융위 올해 첫 가상자산위원회 회의 열어, 디지털자산기본법 정부안 윤곽 - 비즈니스포스트](https://news.google.com/rss/articles/CBMic0FVX3lxTE82RzZFMDRnSUYteVB0cDhpTWEzWHZ5Q1FwRmJKeWV3dUlzcEF0aTdrWlR3Y1ZXNnNsN1VZUi1zT2s5azZ5SWtOYmtZbDcyNFBVazJfTmhDd1NmbmFRdHlrNGpNNEljcVF0RWdDdGZUaWFBZmM?oc=5)**
+**3. [금융위 올해 첫 가상자산위원회 회의 열어, 디지털자산기본법 정부안 윤곽](https://news.google.com/rss/articles/CBMic0FVX3lxTE82RzZFMDRnSUYteVB0cDhpTWEzWHZ5Q1FwRmJKeWV3dUlzcEF0aTdrWlR3Y1ZXNnNsN1VZUi1zT2s5azZ5SWtOYmtZbDcyNFBVazJfTmhDd1NmbmFRdHlrNGpNNEljcVF0RWdDdGZUaWFBZmM?oc=5)**
 금융위가 올해 첫 가상자산위원회 회의를 개최하여 디지털자산기본법 정부안의 윤곽을 잡았습니다.
 <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
 
@@ -64,7 +64,7 @@ SEC가 비공개 시장 관련 원탁회의를 개최하여 규제 방향을 논
 금융위 가상자산위원회에서 은행 중심 스테이블코인 발행 및 거래소 지분 규제 방안을 검토했습니다.
 <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
 
-**5. [금융위 "은행 51%룰·가상자산거래소 지분 규제" 검토 - v.daum.net](https://news.google.com/rss/articles/CBMiRkFVX3lxTE9TT01PSVFzR3hYeU8wZC03dF9yVG54QVdvVmxSN2owUVg1b3BSeEZzeGJ4NG1MelpfVEhMcVI0WFhzMGltT0E?oc=5)**
+**5. [금융위 "은행 51%룰·가상자산거래소 지분 규제" 검토](https://news.google.com/rss/articles/CBMiRkFVX3lxTE9TT01PSVFzR3hYeU8wZC03dF9yVG54QVdvVmxSN2owUVg1b3BSeEZzeGJ4NG1MelpfVEhMcVI0WFhzMGltT0E?oc=5)**
 금융위가 은행의 가상자산거래소 51% 지분 보유 규제와 거래소 지분 제한 방안을 검토하고 있습니다.
 <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
 
@@ -76,11 +76,11 @@ SEC가 비공개 시장 관련 원탁회의를 개최하여 규제 방향을 논
 코스피 대폭락 여파로 당정 협의가 연기되었으며, 스테이블코인법 논의에 난항을 겪고 있습니다.
 <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
 
-**8. [금융위, 올해 첫 가상자산委…디지털자산기본법 정부안 윤곽 - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE1ZN2xEVDdPT3YtRUdjNWFqZ2RWQnIxcHRrZXN4MEpwV2Uyc29nNng2eUM3LTA5TnhqSXhTbXNFVVRpd1BaNE9McEpkNFA4UkxY?oc=5)**
+**8. [금융위, 올해 첫 가상자산委…디지털자산기본법 정부안 윤곽](https://news.google.com/rss/articles/CBMiUEFVX3lxTE1ZN2xEVDdPT3YtRUdjNWFqZ2RWQnIxcHRrZXN4MEpwV2Uyc29nNng2eUM3LTA5TnhqSXhTbXNFVVRpd1BaNE9McEpkNFA4UkxY?oc=5)**
 금융위가 올해 첫 가상자산위원회를 통해 디지털자산기본법 정부안의 큰 틀을 확정했습니다.
 <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
 
-**9. [금융위, 올해 첫 가상자산委…디지털자산기본법 정부안 윤곽 - 한국경제](https://news.google.com/rss/articles/CBMiWkFVX3lxTE5pYm5GNGpHYVBhczNpOVk0bDJwNGpYVkY0MXlsMlRYNHd5WEIyWi13N2tBLXl4bEpRWlk3b2xpdG1LNWFnRW5vb1U5VzllRkxOeWpxZDFhSWJFZ9IBVEFVX3lxTE1aS3I5bElQSlYydVRIS1RVTjNwVlJtZFgzdG9QSzIzM0JIRFVUWUJYdWpJQ2R4SS1xNm1XT3psZWRWalBUdV9YMnF0RXI1MHlRT29aag?oc=5)**
+**9. [금융위, 올해 첫 가상자산委…디지털자산기본법 정부안 윤곽](https://news.google.com/rss/articles/CBMiWkFVX3lxTE5pYm5GNGpHYVBhczNpOVk0bDJwNGpYVkY0MXlsMlRYNHd5WEIyWi13N2tBLXl4bEpRWlk3b2xpdG1LNWFnRW5vb1U5VzllRkxOeWpxZDFhSWJFZ9IBVEFVX3lxTE1aS3I5bElQSlYydVRIS1RVTjNwVlJtZFgzdG9QSzIzM0JIRFVUWUJYdWpJQ2R4SS1xNm1XT3psZWRWalBUdV9YMnF0RXI1MHlRT29aag?oc=5)**
 금융위 가상자산위원회에서 디지털자산기본법 정부안 윤곽이 드러났으며, 코인 발행 허용 방향이 확인되었습니다.
 <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
 
@@ -121,7 +121,7 @@ FCA의 HTX 조치는 암호화폐 광고 규칙을 따라야 함을 보여줍니
 
 **주요 동향:**
 - [비공개 시장 원탁회의](https://news.google.com/rss/articles/CBMie0FVX3lxTFA4RFJmV0U2eVJfOWxMVWplRFdIZHVKMkxSaEU1UGZaaTFyb2ZTY1RWbmdjdXNKVmJpaFl1Z05XcWUyU0FZVDQ2c2ZVanlLdGFxZ29jdDg4VHZld1FpN0tKeG4xV2cwdjhkb2VyRkRDYnNvSUo0UmhmOGxvZw?oc=5) — SEC (Google News)
-- [당국, 가상자산거래소 지분 제한 규제 강행…점유율별 차등 적용 유력 - 뉴스1](https://news.google.com/rss/articles/CBMiaEFVX3lxTFB0LUstZWRUQUVqZzdHUXBJTW9SQUNNek1jdzd0TmNsaGU3OWs5eUI3aHQtN3U3SFJhRkxqNFg0dk9XTnN0c3ltVlF3OWdpekVLYWdPZnFZT25XRlhZeFdqM01OMDRzYUZV?oc=5) — 한국 금융규제 뉴스
+- [당국, 가상자산거래소 지분 제한 규제 강행…점유율별 차등 적용 유력](https://news.google.com/rss/articles/CBMiaEFVX3lxTFB0LUstZWRUQUVqZzdHUXBJTW9SQUNNek1jdzd0TmNsaGU3OWs5eUI3aHQtN3U3SFJhRkxqNFg0dk9XTnN0c3ltVlF3OWdpekVLYWdPZnFZT25XRlhZeFdqM01OMDRzYUZV?oc=5) — 한국 금융규제 뉴스
   > 당국, 가상자산거래소 지분 제한 규제 강행…점유율별 차등 적용 유력
 - [금융위 가상자산위, 디지털자산기본법 정부안 ‘임박’ - 투데이신문](https://news.google.com/rss/articles/CBMib0FVX3lxTE1TQkMxcU5hd00wSEk0STJydGlsMTJCbHZ2TUp0VTdkUUM2UVA1QU14QkJUWUktNTNNc1d2MXV2M3paWUZZTmJYMlFLRkV1MDNJcVNQNGVkVkxyaHV1dURsV1NSMWViSmpPb2VGRm40VdIBb0FVX3lxTE1TQkMxcU5hd00wSEk0STJydGlsMTJCbHZ2TUp0VTdkUUM2UVA1QU14QkJUWUktNTNNc1d2MXV2M3paWUZZTmJYMlFLRkV1MDNJcVNQNGVkVkxyaHV1dURsV1NSMWViSmpPb2VGRm40VQ?oc=5) — 한국 금융규제 뉴스
   > 금융위 가상자산위, 디지털자산기본법 정부안 ‘임박’
@@ -131,11 +131,11 @@ FCA의 HTX 조치는 암호화폐 광고 규칙을 따라야 함을 보여줍니
 전체의 36%로 높은 비중을 보입니다. 주요 출처: 한국 금융규제 뉴스(3건), UK FCA(2건). 관련 지역: 한국, 유럽.
 
 **주요 동향:**
-- [당국, 가상자산거래소 지분 제한 규제 강행…점유율별 차등 적용 유력 - 뉴스1](https://news.google.com/rss/articles/CBMiaEFVX3lxTFB0LUstZWRUQUVqZzdHUXBJTW9SQUNNek1jdzd0TmNsaGU3OWs5eUI3aHQtN3U3SFJhRkxqNFg0dk9XTnN0c3ltVlF3OWdpekVLYWdPZnFZT25XRlhZeFdqM01OMDRzYUZV?oc=5) — 한국 금융규제 뉴스
+- [당국, 가상자산거래소 지분 제한 규제 강행…점유율별 차등 적용 유력](https://news.google.com/rss/articles/CBMiaEFVX3lxTFB0LUstZWRUQUVqZzdHUXBJTW9SQUNNek1jdzd0TmNsaGU3OWs5eUI3aHQtN3U3SFJhRkxqNFg0dk9XTnN0c3ltVlF3OWdpekVLYWdPZnFZT25XRlhZeFdqM01OMDRzYUZV?oc=5) — 한국 금융규제 뉴스
   > 당국, 가상자산거래소 지분 제한 규제 강행…점유율별 차등 적용 유력
 - [금융위, 올해 첫 가상자산위원회 개최…은행 중심 스테이블코인·거래소 지분 규제 검토 - 오피니언뉴스](https://news.google.com/rss/articles/CBMickFVX3lxTFBZa0h3dF8yeTZPX00tekc0SFBlc1dXWXZiaHpaaVd6a3JMZmFZNEl0WU1IMk44TTB4Um1mVXEyYjE0ZmdXMkwyVkNuU3ltcmx3STFLLXZZWkg1cDlHNXJkN0hZUjUtY2QwRGZKTWU5a1VQZw?oc=5) — 한국 금융규제 뉴스
   > 금융위, 올해 첫 가상자산위원회 개최…은행 중심 스테이블코인·거래소 지분 규제 검토
-- [금융위 "은행 51%룰·가상자산거래소 지분 규제" 검토 - v.daum.net](https://news.google.com/rss/articles/CBMiRkFVX3lxTE9TT01PSVFzR3hYeU8wZC03dF9yVG54QVdvVmxSN2owUVg1b3BSeEZzeGJ4NG1MelpfVEhMcVI0WFhzMGltT0E?oc=5) — 한국 금융규제 뉴스
+- [금융위 "은행 51%룰·가상자산거래소 지분 규제" 검토](https://news.google.com/rss/articles/CBMiRkFVX3lxTE9TT01PSVFzR3hYeU8wZC03dF9yVG54QVdvVmxSN2owUVg1b3BSeEZzeGJ4NG1MelpfVEhMcVI0WFhzMGltT0E?oc=5) — 한국 금융규제 뉴스
   > 금융위 "은행 51%룰·가상자산거래소 지분 규제" 검토
 
 ### 📈 가격/시장 (8건)
@@ -145,7 +145,7 @@ FCA의 HTX 조치는 암호화폐 광고 규칙을 따라야 함을 보여줍니
 **주요 동향:**
 - [금융위 가상자산위, 디지털자산기본법 정부안 ‘임박’ - 투데이신문](https://news.google.com/rss/articles/CBMib0FVX3lxTE1TQkMxcU5hd00wSEk0STJydGlsMTJCbHZ2TUp0VTdkUUM2UVA1QU14QkJUWUktNTNNc1d2MXV2M3paWUZZTmJYMlFLRkV1MDNJcVNQNGVkVkxyaHV1dURsV1NSMWViSmpPb2VGRm40VdIBb0FVX3lxTE1TQkMxcU5hd00wSEk0STJydGlsMTJCbHZ2TUp0VTdkUUM2UVA1QU14QkJUWUktNTNNc1d2MXV2M3paWUZZTmJYMlFLRkV1MDNJcVNQNGVkVkxyaHV1dURsV1NSMWViSmpPb2VGRm40VQ?oc=5) — 한국 금융규제 뉴스
   > 금융위 가상자산위, 디지털자산기본법 정부안 ‘임박’
-- [금융위 올해 첫 가상자산위원회 회의 열어, 디지털자산기본법 정부안 윤곽 - 비즈니스포스트](https://news.google.com/rss/articles/CBMic0FVX3lxTE82RzZFMDRnSUYteVB0cDhpTWEzWHZ5Q1FwRmJKeWV3dUlzcEF0aTdrWlR3Y1ZXNnNsN1VZUi1zT2s5azZ5SWtOYmtZbDcyNFBVazJfTmhDd1NmbmFRdHlrNGpNNEljcVF0RWdDdGZUaWFBZmM?oc=5) — 한국 금융규제 뉴스
+- [금융위 올해 첫 가상자산위원회 회의 열어, 디지털자산기본법 정부안 윤곽](https://news.google.com/rss/articles/CBMic0FVX3lxTE82RzZFMDRnSUYteVB0cDhpTWEzWHZ5Q1FwRmJKeWV3dUlzcEF0aTdrWlR3Y1ZXNnNsN1VZUi1zT2s5azZ5SWtOYmtZbDcyNFBVazJfTmhDd1NmbmFRdHlrNGpNNEljcVF0RWdDdGZUaWFBZmM?oc=5) — 한국 금융규제 뉴스
   > 금융위 올해 첫 가상자산위원회 회의 열어, 디지털자산기본법 정부안 윤곽
 - [금융위, 올해 첫 가상자산위원회 개최…은행 중심 스테이블코인·거래소 지분 규제 검토 - 오피니언뉴스](https://news.google.com/rss/articles/CBMickFVX3lxTFBZa0h3dF8yeTZPX00tekc0SFBlc1dXWXZiaHpaaVd6a3JMZmFZNEl0WU1IMk44TTB4Um1mVXEyYjE0ZmdXMkwyVkNuU3ltcmx3STFLLXZZWkg1cDlHNXJkN0hZUjUtY2QwRGZKTWU5a1VQZw?oc=5) — 한국 금융규제 뉴스
   > 금융위, 올해 첫 가상자산위원회 개최…은행 중심 스테이블코인·거래소 지분 규제 검토
@@ -161,7 +161,7 @@ FCA의 HTX 조치는 암호화폐 광고 규칙을 따라야 함을 보여줍니
 
 **미국** (SEC 1건): SEC 중심 규제 활동이 집중되어, 증권성 판단과 거래소 등록 이슈가 시장의 핵심 변수입니다. 주요 건: *비공개 시장 원탁회의*
 
-**한국**: 가상자산 관련 규제가 **7건** 포착되어, 거래소 운영 기준과 이용자 보호 정책 변화를 주시하세요. 주요 건: *당국, 가상자산거래소 지분 제한 규제 강행…점유율별 차등 적용 유력 - 뉴스1*
+**한국**: 가상자산 관련 규제가 **7건** 포착되어, 거래소 운영 기준과 이용자 보호 정책 변화를 주시하세요. 주요 건: *당국, 가상자산거래소 지분 제한 규제 강행…점유율별 차등 적용 유력*
 
 **아시아**: 일본 FSA 관련 2건으로, 일본의 Web3 전략과 스테이블코인 규제 프레임워크가 아태 시장의 기준점이 되고 있습니다.
 
@@ -173,7 +173,7 @@ FCA의 HTX 조치는 암호화폐 광고 규칙을 따라야 함을 보여줍니
 
 ## 참고 링크
 
-<details><summary>참고 링크 (14건)</summary><div class="details-content"><ol><li><a href="https://news.google.com/rss/articles/CBMie0FVX3lxTFA4RFJmV0U2eVJfOWxMVWplRFdIZHVKMkxSaEU1UGZaaTFyb2ZTY1RWbmdjdXNKVmJpaFl1Z05XcWUyU0FZVDQ2c2ZVanlLdGFxZ29jdDg4VHZld1FpN0tKeG4xV2cwdjhkb2VyRkRDYnNvSUo0UmhmOGxvZw?oc=5">비공개 시장 원탁회의</a> <span class="source-tag" data-source-type="regulator">SEC (Google News)</span></li><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFB0LUstZWRUQUVqZzdHUXBJTW9SQUNNek1jdzd0TmNsaGU3OWs5eUI3aHQtN3U3SFJhRkxqNFg0dk9XTnN0c3ltVlF3OWdpekVLYWdPZnFZT25XRlhZeFdqM01OMDRzYUZV?oc=5">당국, 가상자산거래소 지분 제한 규제 강행…점유율별 차등 적용 유력 - 뉴스1</a> <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE1TQkMxcU5hd00wSEk0STJydGlsMTJCbHZ2TUp0VTdkUUM2UVA1QU14QkJUWUktNTNNc1d2MXV2M3paWUZZTmJYMlFLRkV1MDNJcVNQNGVkVkxyaHV1dURsV1NSMWViSmpPb2VGRm40VdIBb0FVX3lxTE1TQkMxcU5hd00wSEk0STJydGlsMTJCbHZ2TUp0VTdkUUM2UVA1QU14QkJUWUktNTNNc1d2MXV2M3paWUZZTmJYMlFLRkV1MDNJcVNQNGVkVkxyaHV1dURsV1NSMWViSmpPb2VGRm40VQ?oc=5">금융위 가상자산위, 디지털자산기본법 정부안 ‘임박’ - 투데이신문</a> <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE82RzZFMDRnSUYteVB0cDhpTWEzWHZ5Q1FwRmJKeWV3dUlzcEF0aTdrWlR3Y1ZXNnNsN1VZUi1zT2s5azZ5SWtOYmtZbDcyNFBVazJfTmhDd1NmbmFRdHlrNGpNNEljcVF0RWdDdGZUaWFBZmM?oc=5">금융위 올해 첫 가상자산위원회 회의 열어, 디지털자산기본법 정부안 윤곽 - 비즈니스포스트</a> <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTFBZa0h3dF8yeTZPX00tekc0SFBlc1dXWXZiaHpaaVd6a3JMZmFZNEl0WU1IMk44TTB4Um1mVXEyYjE0ZmdXMkwyVkNuU3ltcmx3STFLLXZZWkg1cDlHNXJkN0hZUjUtY2QwRGZKTWU5a1VQZw?oc=5">금융위, 올해 첫 가상자산위원회 개최…은행 중심 스테이블코인·거래소 지분 규제 검토 - 오피니언뉴스</a> <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiRkFVX3lxTE9TT01PSVFzR3hYeU8wZC03dF9yVG54QVdvVmxSN2owUVg1b3BSeEZzeGJ4NG1MelpfVEhMcVI0WFhzMGltT0E?oc=5">금융위 &quot;은행 51%룰·가상자산거래소 지분 규제&quot; 검토 - v.daum.net</a> <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFA3SUZpLS1jSy1lSUtJRF80WWJpQjFvZUh5X2g1NnYxQWxhRU4zUXdIVlIyZ1RmNUpWSFp4UC1ndEtvNDIyeUFrOUZoR196N0NEak1DcWx3?oc=5">국내서도 코인발행 허용 가닥…금감원, 디지털자산기본법 감독규정 준비 - 지디넷코리아</a> <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9FMmV5TUVVQ19jSTBxMkk4TnFQcmNwTm9zemsyS2JDcHdFNWhIUVRLeVByVllIem1waXI0enVjWDJSdTNIVzFIS1ExTWlKYjF1X01YY0x5Z3NTeUhhY3B0VmJRcndYRjV3ZVczUnI1V2JlU2c?oc=5">코스피 대폭락에 내일 당정 연기…스테이블코인법 난항 - 마켓인</a> <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE1ZN2xEVDdPT3YtRUdjNWFqZ2RWQnIxcHRrZXN4MEpwV2Uyc29nNng2eUM3LTA5TnhqSXhTbXNFVVRpd1BaNE9McEpkNFA4UkxY?oc=5">금융위, 올해 첫 가상자산委…디지털자산기본법 정부안 윤곽 - 블루밍비트</a> <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5pYm5GNGpHYVBhczNpOVk0bDJwNGpYVkY0MXlsMlRYNHd5WEIyWi13N2tBLXl4bEpRWlk3b2xpdG1LNWFnRW5vb1U5VzllRkxOeWpxZDFhSWJFZ9IBVEFVX3lxTE1aS3I5bElQSlYydVRIS1RVTjNwVlJtZFgzdG9QSzIzM0JIRFVUWUJYdWpJQ2R4SS1xNm1XT3psZWRWalBUdV9YMnF0RXI1MHlRT29aag?oc=5">금융위, 올해 첫 가상자산委…디지털자산기본법 정부안 윤곽 - 한국경제</a> <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span></li><li><a href="https://www.fsa.go.jp/en/newsletter/weekly2026/677.html">출판물, FSA Weekly Review No.677 2026년 3월 3일</a> <span class="source-tag" data-source-type="default">Japan FSA</span></li><li><a href="https://www.fsa.go.jp/en/news/2026/20260303/aidp.html">AI 토론 논문 출판(버전 1.1)</a> <span class="source-tag" data-source-type="default">Japan FSA</span></li><li><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxQRXg3OUtZblFNN0VMdjVvcTdkdnhIZ2pCSFQ4cFVLbC02VkprdGhSYmp1TUNGTmJtMU1aYmhjZnlLbWszcHF5LXUyQ19yRGJfcFBuZ1E3Ty02MEJ2ZU05amJJdFk0VWhfYS1STzd2ZWxubjlIS3BucllyNTV1ZUs0a3g4eXNpOWFxTUlEdGM4bW1PS01yRTJETDVFSdIBVkFVX3lxTE9PcHRIaVVwT2lBaUVTQVE1WEQ3bHVJVVBDcW9RVXJtVG94c3MxMDVmdmstZzRrdkNmckNhYlRLcm5ibkdDZVFiNU1LZ2twalU4NUNDX2Zn?oc=5">FCA의 HTX 조치는 암호화폐 광고 규칙을 따라야 함을 보여줍니다 - Law360</a> <span class="source-tag" data-source-type="regulator">UK FCA</span></li><li><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE5EMXQ2ejB1endweUVlN2tDVFlhN3pFWG5EaVM4VFBhU09ka0NyOWtjSXMzSXIxQVZXRDJIc2dxSUM3QkgteWh1N19VeTR5RFpWVWgyYzFpSUUtNnE5UGpRdkhJNNIBaEFVX3lxTE5ZYnBMaXJtMFpHRHp2dk5KMEZYTzVLUjlNOGNyNWQweWd6OUFrQno3VkNNdzdoRzUwVEZ2X0NoTW5ta0NJSmVqX0g4RXdidVppYlc1MndoYUNFWXYxVVp6VVJWekhKV1V3?oc=5">영국 암호화폐 규정 2026: EU, 미국 및 글로벌 프레임워크에 대한 전체 가이드 - Bitget</a> <span class="source-tag" data-source-type="regulator">UK FCA</span></li></ol></div></details>
+<details><summary>참고 링크 (14건)</summary><div class="details-content"><ol><li><a href="https://news.google.com/rss/articles/CBMie0FVX3lxTFA4RFJmV0U2eVJfOWxMVWplRFdIZHVKMkxSaEU1UGZaaTFyb2ZTY1RWbmdjdXNKVmJpaFl1Z05XcWUyU0FZVDQ2c2ZVanlLdGFxZ29jdDg4VHZld1FpN0tKeG4xV2cwdjhkb2VyRkRDYnNvSUo0UmhmOGxvZw?oc=5">비공개 시장 원탁회의</a> <span class="source-tag" data-source-type="regulator">SEC (Google News)</span></li><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFB0LUstZWRUQUVqZzdHUXBJTW9SQUNNek1jdzd0TmNsaGU3OWs5eUI3aHQtN3U3SFJhRkxqNFg0dk9XTnN0c3ltVlF3OWdpekVLYWdPZnFZT25XRlhZeFdqM01OMDRzYUZV?oc=5">당국, 가상자산거래소 지분 제한 규제 강행…점유율별 차등 적용 유력</a> <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE1TQkMxcU5hd00wSEk0STJydGlsMTJCbHZ2TUp0VTdkUUM2UVA1QU14QkJUWUktNTNNc1d2MXV2M3paWUZZTmJYMlFLRkV1MDNJcVNQNGVkVkxyaHV1dURsV1NSMWViSmpPb2VGRm40VdIBb0FVX3lxTE1TQkMxcU5hd00wSEk0STJydGlsMTJCbHZ2TUp0VTdkUUM2UVA1QU14QkJUWUktNTNNc1d2MXV2M3paWUZZTmJYMlFLRkV1MDNJcVNQNGVkVkxyaHV1dURsV1NSMWViSmpPb2VGRm40VQ?oc=5">금융위 가상자산위, 디지털자산기본법 정부안 ‘임박’</a> <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE82RzZFMDRnSUYteVB0cDhpTWEzWHZ5Q1FwRmJKeWV3dUlzcEF0aTdrWlR3Y1ZXNnNsN1VZUi1zT2s5azZ5SWtOYmtZbDcyNFBVazJfTmhDd1NmbmFRdHlrNGpNNEljcVF0RWdDdGZUaWFBZmM?oc=5">금융위 올해 첫 가상자산위원회 회의 열어, 디지털자산기본법 정부안 윤곽</a> <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTFBZa0h3dF8yeTZPX00tekc0SFBlc1dXWXZiaHpaaVd6a3JMZmFZNEl0WU1IMk44TTB4Um1mVXEyYjE0ZmdXMkwyVkNuU3ltcmx3STFLLXZZWkg1cDlHNXJkN0hZUjUtY2QwRGZKTWU5a1VQZw?oc=5">금융위, 올해 첫 가상자산위원회 개최…은행 중심 스테이블코인·거래소 지분 규제 검토</a> <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiRkFVX3lxTE9TT01PSVFzR3hYeU8wZC03dF9yVG54QVdvVmxSN2owUVg1b3BSeEZzeGJ4NG1MelpfVEhMcVI0WFhzMGltT0E?oc=5">금융위 &quot;은행 51%룰·가상자산거래소 지분 규제&quot; 검토</a> <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFA3SUZpLS1jSy1lSUtJRF80WWJpQjFvZUh5X2g1NnYxQWxhRU4zUXdIVlIyZ1RmNUpWSFp4UC1ndEtvNDIyeUFrOUZoR196N0NEak1DcWx3?oc=5">국내서도 코인발행 허용 가닥…금감원, 디지털자산기본법 감독규정 준비</a> <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9FMmV5TUVVQ19jSTBxMkk4TnFQcmNwTm9zemsyS2JDcHdFNWhIUVRLeVByVllIem1waXI0enVjWDJSdTNIVzFIS1ExTWlKYjF1X01YY0x5Z3NTeUhhY3B0VmJRcndYRjV3ZVczUnI1V2JlU2c?oc=5">코스피 대폭락에 내일 당정 연기…스테이블코인법 난항</a> <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE1ZN2xEVDdPT3YtRUdjNWFqZ2RWQnIxcHRrZXN4MEpwV2Uyc29nNng2eUM3LTA5TnhqSXhTbXNFVVRpd1BaNE9McEpkNFA4UkxY?oc=5">금융위, 올해 첫 가상자산委…디지털자산기본법 정부안 윤곽</a> <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5pYm5GNGpHYVBhczNpOVk0bDJwNGpYVkY0MXlsMlRYNHd5WEIyWi13N2tBLXl4bEpRWlk3b2xpdG1LNWFnRW5vb1U5VzllRkxOeWpxZDFhSWJFZ9IBVEFVX3lxTE1aS3I5bElQSlYydVRIS1RVTjNwVlJtZFgzdG9QSzIzM0JIRFVUWUJYdWpJQ2R4SS1xNm1XT3psZWRWalBUdV9YMnF0RXI1MHlRT29aag?oc=5">금융위, 올해 첫 가상자산委…디지털자산기본법 정부안 윤곽</a> <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span></li><li><a href="https://www.fsa.go.jp/en/newsletter/weekly2026/677.html">출판물, FSA Weekly Review No.677 2026년 3월 3일</a> <span class="source-tag" data-source-type="default">Japan FSA</span></li><li><a href="https://www.fsa.go.jp/en/news/2026/20260303/aidp.html">AI 토론 논문 출판(버전 1.1)</a> <span class="source-tag" data-source-type="default">Japan FSA</span></li><li><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxQRXg3OUtZblFNN0VMdjVvcTdkdnhIZ2pCSFQ4cFVLbC02VkprdGhSYmp1TUNGTmJtMU1aYmhjZnlLbWszcHF5LXUyQ19yRGJfcFBuZ1E3Ty02MEJ2ZU05amJJdFk0VWhfYS1STzd2ZWxubjlIS3BucllyNTV1ZUs0a3g4eXNpOWFxTUlEdGM4bW1PS01yRTJETDVFSdIBVkFVX3lxTE9PcHRIaVVwT2lBaUVTQVE1WEQ3bHVJVVBDcW9RVXJtVG94c3MxMDVmdmstZzRrdkNmckNhYlRLcm5ibkdDZVFiNU1LZ2twalU4NUNDX2Zn?oc=5">FCA의 HTX 조치는 암호화폐 광고 규칙을 따라야 함을 보여줍니다</a> <span class="source-tag" data-source-type="regulator">UK FCA</span></li><li><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE5EMXQ2ejB1endweUVlN2tDVFlhN3pFWG5EaVM4VFBhU09ka0NyOWtjSXMzSXIxQVZXRDJIc2dxSUM3QkgteWh1N19VeTR5RFpWVWgyYzFpSUUtNnE5UGpRdkhJNNIBaEFVX3lxTE5ZYnBMaXJtMFpHRHp2dk5KMEZYTzVLUjlNOGNyNWQweWd6OUFrQno3VkNNdzdoRzUwVEZ2X0NoTW5ta0NJSmVqX0g4RXdidVppYlc1MndoYUNFWXYxVVp6VVJWekhKV1V3?oc=5">영국 암호화폐 규정 2026: EU, 미국 및 글로벌 프레임워크에 대한 전체 가이드</a> <span class="source-tag" data-source-type="regulator">UK FCA</span></li></ol></div></details>
 
 ---
 **데이터 수집 시각**: 2026-03-05 03:38 UTC

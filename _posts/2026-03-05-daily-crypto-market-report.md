@@ -22,7 +22,7 @@ description: "오늘 시가총액 상위 30개 코인을 기준으로 시장을 
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">$72,748</div><div class="stat-label">BTC (+6.7%)</div></div><div class="stat-item"><div class="stat-value">22</div><div class="stat-label">공포/탐욕 (Fear)</div></div><div class="stat-item"><div class="stat-value">$2.53T</div><div class="stat-label">총 시가총액</div></div><div class="stat-item"><div class="stat-value">57.4%</div><div class="stat-label">BTC 도미넌스</div></div></div>
+<div class="stat-grid"><div class="stat-item"><div class="stat-value">$72,748</div><div class="stat-label">BTC (+6.7%)</div></div><div class="stat-item"><div class="stat-value">22</div><div class="stat-label">공포/탐욕 (Extreme Fear)</div></div><div class="stat-item"><div class="stat-value">$2.53T</div><div class="stat-label">총 시가총액</div></div><div class="stat-item"><div class="stat-value">57.4%</div><div class="stat-label">BTC 도미넌스</div></div></div>
 
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Ethereum</strong> (ETH): +7.76%</li><li>🟢 <strong>Dogecoin</strong> (DOGE): +7.41%</li><li>🟢 <strong>Bitcoin</strong> (BTC): +6.72%</li></ul></div>
 
@@ -43,7 +43,7 @@ BTC 도미넌스 **57.4%**로 비트코인 중심 흐름이 지속됩니다. 과
 
 Top 20 코인 중 **14개 상승**, 6개 하락으로 광범위한 매수세가 유입되고 있습니다. 최고 상승은 **Ethereum**(ETH) +7.76%, 최대 하락은 **Canton**(CC) -1.70%입니다.
 
-**공포/탐욕 지수**: 공포 상태(**22/100**)입니다. 역사적으로 F&G 지수 20~30 구간은 중장기 저점 형성과 동행한 경우가 많았습니다. 역발상 매수 관점에서 주목할 시점이나, 추가 하락 여지도 있습니다.
+**공포/탐욕 지수**: 극도 공포 상태(**22/100**)입니다. 역사적으로 F&G 지수 20~30 구간은 중장기 저점 형성과 동행한 경우가 많았습니다. 역발상 매수 관점에서 주목할 시점이나, 추가 하락 여지도 있습니다.
 
 **복합 신호 분석**: 시가총액이 상승하지만 공포 심리가 지속되어, 아직 대중이 참여하지 않은 '초기 회복' 구간일 수 있습니다. 비트코인 중심의 신중한 접근이 유리합니다.
 
@@ -61,7 +61,7 @@ Top 20 코인 중 **14개 상승**, 6개 하락으로 광범위한 매수세가 
 
 ## 공포/탐욕 지수
 
-**22/100** — Fear
+**22/100** — Extreme Fear
 
 `[████░░░░░░░░░░░░░░░░]`
 
