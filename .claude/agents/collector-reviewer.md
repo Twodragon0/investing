@@ -4,6 +4,8 @@ description: Python 수집 스크립트 코드 리뷰 및 품질 검사. Use pro
 tools: Read, Grep, Glob, Bash
 disallowedTools: Write, Edit
 model: sonnet
+permissionMode: plan
+maxTurns: 10
 memory: project
 ---
 

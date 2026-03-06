@@ -1,6 +1,7 @@
 ---
 name: lint-fix
 description: Python 린트 오류 자동 수정. Use when ruff check fails or code quality issues found.
+user-invocable: true
 disable-model-invocation: true
 allowed-tools: Bash, Read, Edit
 ---
