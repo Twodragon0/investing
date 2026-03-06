@@ -83,19 +83,23 @@ def fetch_cryptopanic(api_key: str, limit: int = 20) -> List[Dict[str, Any]]:
 
         items = []
         for r in results[:limit]:
-            items.append(
-                {
-                    "title": sanitize_string(r.get("title", ""), 300),
-                    "description": sanitize_string(
-                        r.get("metadata", {}).get("description", r.get("title", "")),
-                        500,
-                    ),
-                    "link": r.get("url", ""),
-                    "published": r.get("published_at", ""),
-                    "source": "CryptoPanic",
-                    "tags": ["crypto", "hot-news"],
-                }
-            )
+            metadata = r.get("metadata", {})
+            item_data = {
+                "title": sanitize_string(r.get("title", ""), 300),
+                "description": sanitize_string(
+                    metadata.get("description", r.get("title", "")),
+                    500,
+                ),
+                "link": r.get("url", ""),
+                "published": r.get("published_at", ""),
+                "source": "CryptoPanic",
+                "tags": ["crypto", "hot-news"],
+            }
+            # Extract image from CryptoPanic metadata
+            img = metadata.get("image") or metadata.get("og_image", "")
+            if img:
+                item_data["image"] = img
+            items.append(item_data)
         logger.info("CryptoPanic: fetched %d items", len(items))
         return items
     except requests.exceptions.RequestException as e:

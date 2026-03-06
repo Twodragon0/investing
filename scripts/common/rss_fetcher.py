@@ -1,6 +1,7 @@
 """Shared RSS feed fetcher used by multiple collection scripts."""
 
 import logging
+import re
 from datetime import UTC, datetime, timedelta
 from typing import Any, Dict, List, Optional
 from urllib.parse import parse_qs, unquote, urlparse
@@ -107,16 +108,44 @@ def fetch_rss_feed(
                 title = remove_sponsored_text(title)
                 description = remove_sponsored_text(description)
 
-                items.append(
-                    {
-                        "title": title,
-                        "description": description,
-                        "link": link_val,
-                        "published": published_str,
-                        "source": source_name,
-                        "tags": tags,
-                    }
-                )
+                # Extract image URL from RSS entry
+                image_url = ""
+                # 1. media:content (most common for news RSS)
+                # BS4 xml parser may strip namespace prefix → try both
+                media = entry.find("media:content") or entry.find("content", attrs={"url": True})
+                if media and media.get("url"):
+                    image_url = media["url"]
+                # 2. media:thumbnail
+                if not image_url:
+                    thumb = entry.find("media:thumbnail") or entry.find("thumbnail", attrs={"url": True})
+                    if thumb and thumb.get("url"):
+                        image_url = thumb["url"]
+                # 3. enclosure (podcast/media feeds)
+                if not image_url:
+                    enclosure = entry.find("enclosure")
+                    if enclosure and enclosure.get("url"):
+                        enc_type = enclosure.get("type", "")
+                        if enc_type.startswith("image/") or enc_type == "":
+                            image_url = enclosure["url"]
+                # 4. Embedded <img> in description HTML
+                if not image_url and desc_el:
+                    raw_html = str(desc_el)
+                    img_match = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', raw_html)
+                    if img_match:
+                        image_url = img_match.group(1)
+
+                item_data = {
+                    "title": title,
+                    "description": description,
+                    "link": link_val,
+                    "published": published_str,
+                    "source": source_name,
+                    "tags": tags,
+                }
+                if image_url:
+                    item_data["image"] = image_url
+
+                items.append(item_data)
 
             logger.info(
                 "RSS %s: fetched %d items%s",

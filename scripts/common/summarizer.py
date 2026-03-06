@@ -873,8 +873,19 @@ class ThemeSummarizer:
                     card_parts = [
                         '<div class="news-card-item">',
                         f'<div class="news-card-num">{num}</div>',
-                        '<div class="news-card-body">',
                     ]
+
+                    # Add thumbnail if image available
+                    image_url = art.get("image", "")
+                    if image_url:
+                        safe_img = _esc(image_url, quote=True)
+                        card_parts.append(
+                            f'<div class="news-card-thumb">'
+                            f'<img src="{safe_img}" alt="" loading="lazy" onerror="this.parentElement.style.display=\'none\'">'
+                            f'</div>'
+                        )
+
+                    card_parts.append('<div class="news-card-body">')
                     if link:
                         safe_link = _esc(link, quote=True)
                         card_parts.append(

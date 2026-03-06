@@ -75,20 +75,14 @@ def _clean_description(text: str) -> str:
     return text
 
 
-def fetch_page_description(url: str, timeout: int = 8) -> str:
-    """Try to fetch meta description from a URL page (best-effort).
+def fetch_page_metadata(url: str, timeout: int = 8) -> Dict[str, str]:
+    """Fetch meta description and og:image from a URL page (best-effort).
 
-    Priority order:
-    1. ``<meta name="description">``
-    2. ``<meta property="og:description">``
-    3. ``<meta name="twitter:description">``
-    4. ``<article>`` first meaningful ``<p>`` (avoids nav/sidebar noise)
-    5. Any ``<p>`` with more than 50 characters
-
-    Returns an empty string on failure.
+    Returns a dict with keys ``description`` and ``image`` (empty strings on failure).
     """
+    result: Dict[str, str] = {"description": "", "image": ""}
     if not url or "news.google.com/rss/" in url:
-        return ""
+        return result
 
     try:
         from bs4 import BeautifulSoup as BS4
@@ -102,6 +96,18 @@ def fetch_page_description(url: str, timeout: int = 8) -> str:
         resp.raise_for_status()
         soup = BS4(resp.text, "html.parser")
 
+        # Extract og:image / twitter:image
+        for img_attr_key, img_attr_val in [
+            ("property", "og:image"),
+            ("name", "twitter:image"),
+        ]:
+            meta = soup.find("meta", attrs={img_attr_key: img_attr_val})
+            if meta:
+                img_url = str(meta.get("content", "")).strip()
+                if img_url and img_url.startswith("http"):
+                    result["image"] = img_url
+                    break
+
         # 1-3: Meta description tags
         for attr_key, attr_val in [
             ("name", "description"),
@@ -112,7 +118,8 @@ def fetch_page_description(url: str, timeout: int = 8) -> str:
             content = str(meta.get("content", "")) if meta else ""
             cleaned = _clean_description(content)
             if cleaned and len(cleaned) > 20:
-                return cleaned[:500]
+                result["description"] = cleaned[:500]
+                return result
 
         # 4: Article body paragraphs (more reliable than random <p>)
         article = soup.find("article") or soup.find(class_=re.compile(r"article|post|entry|content"))
@@ -126,16 +133,26 @@ def fetch_page_description(url: str, timeout: int = 8) -> str:
                     break
             if paragraphs:
                 combined = " ".join(paragraphs)
-                return combined[:500]
+                result["description"] = combined[:500]
+                return result
 
         # 5: Fallback to any <p>
         for p in soup.find_all("p"):
             text = _clean_description(p.get_text(strip=True))
             if len(text) > 50:
-                return text[:500]
+                result["description"] = text[:500]
+                return result
     except Exception as e:  # noqa: BLE001
-        logger.debug("Failed to fetch description from %s: %s", url, e)
-    return ""
+        logger.debug("Failed to fetch metadata from %s: %s", url, e)
+    return result
+
+
+def fetch_page_description(url: str, timeout: int = 8) -> str:
+    """Try to fetch meta description from a URL page (best-effort).
+
+    Wrapper around :func:`fetch_page_metadata` for backward compatibility.
+    """
+    return fetch_page_metadata(url, timeout).get("description", "")
 
 
 # ---------------------------------------------------------------------------
@@ -392,12 +409,17 @@ def enrich_item(
         counter = _fetch_counter or [0]
         if counter[0] < max_fetch:
             counter[0] += 1
-            fetched = fetch_page_description(link)
+            metadata = fetch_page_metadata(link)
+            fetched = metadata.get("description", "")
             if fetched and fetched != title and len(fetched) > 20:
                 # Clean HTML entities and normalize whitespace
                 fetched = re.sub(r"&[a-z]+;", " ", fetched)
                 fetched = re.sub(r"\s+", " ", fetched).strip()
                 item["description"] = fetched
+            # Extract og:image if not already set from RSS
+            if not item.get("image") and metadata.get("image"):
+                item["image"] = metadata["image"]
+            if item.get("description") and len(item["description"]) > 20:
                 return
 
     # Generate synthetic description
