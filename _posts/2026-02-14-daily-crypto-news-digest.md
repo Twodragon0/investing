@@ -115,29 +115,29 @@ DeFi   █░░░░░░░░░░░░░░░░░    10%  (7건)
 바클레이스, 벤치마크, 클리어 스트리트, JP모건 모두 약한 소매 거래와 거시경제 역풍을 이유로 목표가를 하향 조정했습니다.
 `출처: CoinDesk`
 
-**2. [New Cryptocurrency ListingCheck out the latest coin listings and pairs on Launchpad, Launchpool, Spot, Margin, and Futures markets.](https://www.binance.com/en/support/announcement/list/48)**
+**2. [새로운 암호화폐 상장 — 론치패드, 론치풀, 현물, 마진, 선물 시장 최신 코인 및 거래쌍 확인](https://www.binance.com/en/support/announcement/list/48)**
 `출처: Binance`
 
-**3. [Latest Binance NewsStay on top of what's new in Binance.](https://www.binance.com/en/support/announcement/list/49)**
+**3. [최신 Binance 뉴스 — Binance의 새로운 소식을 한눈에](https://www.binance.com/en/support/announcement/list/49)**
 `출처: Binance`
 
-> 그 외 5건: [New Fiat ListingsSee which new fiat-to-crypto trading pairs are available on Binance.](https://www.binance.com/en/support/announcement/list/50), [Crypto AirdropCheck the latest crypto airdrops Binance supports.](https://www.binance.com/en/support/announcement/list/128)
+> 그 외 5건: [신규 법정화폐 상장 — Binance에서 사용 가능한 새로운 법정화폐·암호화폐 거래쌍 확인](https://www.binance.com/en/support/announcement/list/50), [암호화폐 에어드랍 — Binance가 지원하는 최신 에어드랍 확인](https://www.binance.com/en/support/announcement/list/128)
 
 
 ### 🏛️ 정치/정책 (6건)
 
 > 정치/정책 분야에서 Maga, losing, faith 관련 이슈가 부각되고 있습니다.
 
-**1. [Bitcoin Price Crash Rattles Trump's Crypto Progress. Here's The Upshot For Investors.](https://news.google.com/read/CBMiiAFBVV95cUxPVUtQQWJPdi1qQVRDcEpCSjcwZVhrM0RoYk5YYmtIN3BnNVVXUFozY0lMb3JFazZyc1YyWWZXckhXUDJxMlpjWGdXYnlaY0IwcS1fbnQ4OTlRUW9FQWlKT2Q5SzV2ell4b3VyS0tOS2tYNU9vVENvNXBNMTdiMnhwNWI1Sk9ON2NN?hl=en-US&gl=US&ceid=US%3Aen)**
+**1. [비트코인 가격 폭락, 트럼프의 암호화폐 행보에 충격 — 투자자를 위한 시사점](https://news.google.com/read/CBMiiAFBVV95cUxPVUtQQWJPdi1qQVRDcEpCSjcwZVhrM0RoYk5YYmtIN3BnNVVXUFozY0lMb3JFazZyc1YyWWZXckhXUDJxMlpjWGdXYnlaY0IwcS1fbnQ4OTlRUW9FQWlKT2Q5SzV2ell4b3VyS0tOS2tYNU9vVENvNXBNMTdiMnhwNWI1Sk9ON2NN?hl=en-US&gl=US&ceid=US%3Aen)**
 `출처: Google News`
 
-**2. [Is Maga losing faith in Trump’s bitcoin promise?](https://news.google.com/read/CBMijANBVV95cUxQNWZaY05sOXh6N2w5czRmSi1WWFdfdGI2cXlrbWplS0o2VXZ5a251V0FGLVVLdFlkcmhLa2J0alp0Z1dCRlFMQ0hDMjhoZ1I1a0laWFRtcUNyR0doZXNCenptMDg5VTBrU3hFa0FMc2FrUTZTVlBEY05OdmNVNHJTVGJuVEdvMmY5QjZlMGtRMzlKd3E4dWd0Q0pjRk1nRUxZMTRJSENZdkhudjl3MWNhUGhKM2dhMGtRT0JTcEVuS0puMFo3Zk50aG9fcVRXWnhUMEZvQ3VUYUhyeF9EWEkyamZHZ2NLQkZ3d1BRRndRVWhPRUJTRGFVWkxlMC1zN21NZ0pKeC1Xd2FSbTl6YXUzZF9sZUI0aGFtVTFDSERsQ202YzJ6dW91UkhoUlNka29CTE5EU1RpanY1Z3VWbjhrcnA1bkNQVVROMTd5X2I5UXVzZG9lQjF6eDNaX1BuMGpGYThaenlqUkN2LXBQLVZ6TVNSZnMzdDlRQ0tVMXEweTNFUUpxcWdidHF5czQ?hl=en-US&gl=US&ceid=US%3Aen)**
+**2. [마가(Maga)는 트럼프의 비트코인 약속을 잃어가고 있는가?](https://news.google.com/read/CBMijANBVV95cUxQNWZaY05sOXh6N2w5czRmSi1WWFdfdGI2cXlrbWplS0o2VXZ5a251V0FGLVVLdFlkcmhLa2J0alp0Z1dCRlFMQ0hDMjhoZ1I1a0laWFRtcUNyR0doZXNCenptMDg5VTBrU3hFa0FMc2FrUTZTVlBEY05OdmNVNHJTVGJuVEdvMmY5QjZlMGtRMzlKd3E4dWd0Q0pjRk1nRUxZMTRJSENZdkhudjl3MWNhUGhKM2dhMGtRT0JTcEVuS0puMFo3Zk50aG9fcVRXWnhUMEZvQ3VUYUhyeF9EWEkyamZHZ2NLQkZ3d1BRRndRVWhPRUJTRGFVWkxlMC1zN21NZ0pKeC1Xd2FSbTl6YXUzZF9sZUI0aGFtVTFDSERsQ202YzJ6dW91UkhoUlNka29CTE5EU1RpanY1Z3VWbjhrcnA1bkNQVVROMTd5X2I5UXVzZG9lQjF6eDNaX1BuMGpGYThaenlqUkN2LXBQLVZ6TVNSZnMzdDlRQ0tVMXEweTNFUUpxcWdidHF5czQ?hl=en-US&gl=US&ceid=US%3Aen)**
 `출처: Google News`
 
-**3. [Trump-linked Truth Social seeks SEC approval for two crypto ETFs](https://news.google.com/read/CBMirAFBVV95cUxQVmJ1bmNyMG1wZl9BLVFSMXZ2UklUMmRmM1pTVkJ4blBDbDdUOFAyUlV5TmFacU9PZXI1MlY4MlBSS1BiVVp2N29qTHBROTlDSEJPNTNaMjFaR1FHZzFOcWlIOWVnZjQtdEZxRjU2S05uRTFlSXJuTUdfYng3cE9wbkp3SjVCZzdkTTM0NVJGYXpXbDAyVWlkektjbFpOb0hUMExRMnl0UVJjZ1Az?hl=en-US&gl=US&ceid=US%3Aen)**
+**3. [트럼프 연계 Truth Social, 두 가지 암호화폐 ETF에 대한 SEC 승인 신청](https://news.google.com/read/CBMirAFBVV95cUxQVmJ1bmNyMG1wZl9BLVFSMXZ2UklUMmRmM1pTVkJ4blBDbDdUOFAyUlV5TmFacU9PZXI1MlY4MlBSS1BiVVp2N29qTHBROTlDSEJPNTNaMjFaR1FHZzFOcWlIOWVnZjQtdEZxRjU2S05uRTFlSXJuTUdfYng3cE9wbkp3SjVCZzdkTTM0NVJGYXpXbDAyVWlkektjbFpOb0hUMExRMnl0UVJjZ1Az?hl=en-US&gl=US&ceid=US%3Aen)**
 `출처: Google News`
 
-> 그 외 2건: [Is Maga losing faith in Trump’s bitcoin promise? - The Times](https://news.google.com/rss/articles/CBMijANBVV95cUxPN1p1ZVIzbVpDVFR3OTJ3MlN5d29jM2ZJaDRWSEFxRU9VMWtWS0gzLTVhYTZlWTJSeUYwWm16VUhuRGJuM3Y4YVJPWE5GVVFpeWREWEx6d2xlZ19oN3NIRE1CUHRyb3R5ei1IXzlzTkVERlpoNGVWbTFtbVBpTm56c1pfcVB5U1BsT3o0YVc0X2kxQWR3bDJkVVVLc1FiTUdxUHV3Q0tXZUVtRFUxQnRBdU9ISHlFNm45Y1h3SG9kMVRoTEFaenFocnlpbGE2SldDVnNkcDRFa0kxeVlBN3RDbWlmVXFLUElxd2tCMml0RlBxVi1oZDFpbm41NWQzclowMTlmQngtY3ktb1FIeUUzb0hVWmxaY1RTQU5qS3ZWX1FBdm82dmhjWVdBQXVvaGdNYWZGeGJoOWNMS1RiYTAzeWt2dzdEekpON1M1OUJERjBaaDZlaW11Z2VTUEpqcUFTNWRrb19kUkM3dlRlZHJHVE9YLTVkdlc3Y0xaQjhBYkVubU1jU2NLNEdzY1I?oc=5), [Bessent continues to push Congress to pass crypto bill (BTC-USD:Cryptocurrency) - Seeking Alpha](https://news.google.com/rss/articles/CBMilwFBVV95cUxQc0ZrNV84eU9VY3E4cUlxNTkxdVQ2VFZGRV9mWkhmdjhTQXNjYnAxOVhhMFNDd1BfM21qcHFwQ0g1d1RDWU5hU2YxV1Q5VWdZX2VxeHNrWEttVmllUWtJYzF6ai1QMUR6YVhLQzA0X1hFWW1OV0FJaHIzWTdvTHY2SXJjVjlkT1J1OTdxTkotakV0REpyWXlR?oc=5)
+> 그 외 2건: [마가(Maga)는 트럼프의 비트코인 약속을 잃어가고 있는가? - The Times](https://news.google.com/rss/articles/CBMijANBVV95cUxPN1p1ZVIzbVpDVFR3OTJ3MlN5d29jM2ZJaDRWSEFxRU9VMWtWS0gzLTVhYTZlWTJSeUYwWm16VUhuRGJuM3Y4YVJPWE5GVVFpeWREWEx6d2xlZ19oN3NIRE1CUHRyb3R5ei1IXzlzTkVERlpoNGVWbTFtbVBpTm56c1pfcVB5U1BsT3o0YVc0X2kxQWR3bDJkVVVLc1FiTUdxUHV3Q0tXZUVtRFUxQnRBdU9ISHlFNm45Y1h3SG9kMVRoTEFaenFocnlpbGE2SldDVnNkcDRFa0kxeVlBN3RDbWlmVXFLUElxd2tCMml0RlBxVi1oZDFpbm41NWQzclowMTlmQngtY3ktb1FIeUUzb0hVWmxaY1RTQU5qS3ZWX1FBdm82dmhjWVdBQXVvaGdNYWZGeGJoOWNMS1RiYTAzeWt2dzdEekpON1M1OUJERjBaaDZlaW11Z2VTUEpqcUFTNWRrb19kUkM3dlRlZHJHVE9YLTVkdlc3Y0xaQjhBYkVubU1jU2NLNEdzY1I?oc=5), [베센트, 의회에 암호화폐 법안 통과 촉구 지속 (BTC-USD:Cryptocurrency) - Seeking Alpha](https://news.google.com/rss/articles/CBMilwFBVV95cUxQc0ZrNV84eU9VY3E4cUlxNTkxdVQ2VFZGRV9mWkhmdjhTQXNjYnAxOVhhMFNDd1BfM21qcHFwQ0g1d1RDWU5hU2YxV1Q5VWdZX2VxeHNrWEttVmllUWtJYzF6ai1QMUR6YVhLQzA0X1hFWW1OV0FJaHIzWTdvTHY2SXJjVjlkT1J1OTdxTkotakV0REpyWXlR?oc=5)
 
 
 ### 🟣 DeFi (7건)
