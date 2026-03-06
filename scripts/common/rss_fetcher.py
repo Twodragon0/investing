@@ -25,6 +25,46 @@ def get_feed_health() -> Dict[str, Dict[str, Any]]:
     return dict(_feed_health)
 
 
+# Common source suffixes to strip from RSS titles
+_SOURCE_SUFFIX_RE = re.compile(
+    r"\s*[-–—|]\s*(?:"
+    # English media
+    r"Reuters|Bloomberg|CNBC|CNN|BBC|AP\s*(?:News)?|Forbes|WSJ"
+    r"|Yahoo\s*Finance|MarketWatch|The\s*(?:Block|Verge|Guardian)"
+    r"|CBS\s*(?:News|뉴스)?|NBC\s*News|ABC\s*News|Fox\s*(?:News|Business)"
+    r"|Variety|Barron'?s|Motley\s*Fool|Nasdaq"
+    # Korean media
+    r"|디지털투데이|연합인포맥스|펜앤마이크|네이트|복지TV\S*"
+    r"|이코노믹리뷰|매일경제|한국경제|조선일보|중앙일보"
+    r"|경향신문|한겨레|이데일리|뉴시스|아시아경제"
+    r"|서울경제|뉴스1|노컷뉴스|SBS뉴스|MBC뉴스|KBS뉴스"
+    r"|JTBC|채널A|TV조선|연합뉴스|파이낸셜뉴스"
+    r"|헤럴드경제|머니투데이|더팩트|데일리안|뉴데일리"
+    r"|오마이뉴스|프레시안|시사저널|공감신문|브레이크뉴스"
+    r"|한국글로벌뉴스|핀포인트뉴스|글로벌이코노믹|비즈니스포스트|토큰포스트|블록미디어|코인데스크코리아|디센터"
+    r"|전자신문|ZDNet\s*Korea|IT조선|디지털데일리|바이라인네트워크"
+    r"|BBS불교방송|ER\s*이코노믹리뷰"
+    # Domain suffixes
+    r"|v\.daum\.net|gukjenews\.com|ilyoseoul\.co\.kr"
+    r"|ir\.edaily\.co\.kr|simplywall\.st"
+    r"|[a-z][a-z0-9-]*\.(?:com|co\.kr|net|org|io)"
+    r")\s*$",
+    re.IGNORECASE,
+)
+
+
+def _clean_rss_title(title: str) -> str:
+    """Remove trailing source names and decorative markers from RSS titles."""
+    cleaned = _SOURCE_SUFFIX_RE.sub("", title).strip()
+    # Remove decorative prefixes like "▒종합 경제정보 미디어 - 이데일리IR▒"
+    cleaned = re.sub(r"^[▒▶▷►◆◇■□●○※☆★\[\]【】〔〕]+\s*", "", cleaned)
+    cleaned = re.sub(r"\s*[▒▶▷►◆◇■□●○※☆★\[\]【】〔〕]+\s*$", "", cleaned)
+    # Remove Korean news category tags like "[속보]", "[단독]", "(종합)", "(1보)"
+    cleaned = re.sub(r"^\s*[\[〈<]\s*(?:속보|단독|긴급|종합|1보|2보|3보|포토|영상|인터뷰)\s*[\]〉>]\s*", "", cleaned)
+    cleaned = re.sub(r"^\s*\(\s*(?:속보|단독|종합|1보|2보|3보)\s*\)\s*", "", cleaned)
+    return cleaned if len(cleaned) >= 10 else title
+
+
 def fetch_rss_feed(
     url: str,
     source_name: str,
@@ -94,6 +134,16 @@ def fetch_rss_feed(
                 if desc_el:
                     raw_desc = desc_el.get_text(strip=True)
                     cleaned_desc = BeautifulSoup(raw_desc, "html.parser").get_text(" ", strip=True)
+                    # Remove Korean news boilerplate
+                    cleaned_desc = re.sub(
+                        r"(?:무단\s*전재\s*및\s*재배포\s*금지|저작권자\s*©[^.]*\.|"
+                        r"기사제보[^.]*\.|ⓒ[^.]*\.)",
+                        "",
+                        cleaned_desc,
+                    )
+                    # Remove trailing whitespace/dots artifacts
+                    cleaned_desc = re.sub(r"\s*\.{2,}\s*$", "", cleaned_desc)
+                    cleaned_desc = re.sub(r"\s+", " ", cleaned_desc).strip()
                     description = truncate_sentence(sanitize_string(cleaned_desc, 600), 300)
 
                 published_str = date_el.get_text(strip=True) if date_el else ""
@@ -106,6 +156,7 @@ def fetch_rss_feed(
                             continue
 
                 title = remove_sponsored_text(title)
+                title = _clean_rss_title(title)
                 description = remove_sponsored_text(description)
 
                 # Extract image URL from RSS entry

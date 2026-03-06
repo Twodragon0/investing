@@ -48,6 +48,12 @@ def _clean_description(text: str) -> str:
         "Click here ",
         "Share this ",
         "Follow us ",
+        # Korean boilerplate
+        "무단전재 및 재배포 금지",
+        "저작권자 ©",
+        "기사제보 및 보도자료",
+        "네이버 뉴스스탠드에서",
+        "카카오톡에서 받아보기",
     ]:
         if text.startswith(noise):
             return ""
@@ -64,7 +70,12 @@ def _clean_description(text: str) -> str:
     text = re.sub(
         r"\s+[-–—]?\s*(?:디지털투데이|연합인포맥스|펜앤마이크|네이트|복지TV\S*"
         r"|ER\s*이코노믹리뷰|v\.daum\.net|매일경제|한국경제|조선일보|중앙일보"
-        r"|경향신문|한겨레|BBS불교방송|이데일리|뉴시스|아시아경제)\s*$",
+        r"|경향신문|한겨레|BBS불교방송|이데일리|뉴시스|아시아경제"
+        r"|서울경제|뉴스1|노컷뉴스|SBS뉴스|MBC뉴스|KBS뉴스|JTBC|채널A|TV조선|연합뉴스"
+        r"|파이낸셜뉴스|헤럴드경제|머니투데이|더팩트|데일리안|뉴데일리|오마이뉴스"
+        r"|프레시안|시사저널|주간조선|한겨레21|인사이트|위키트리|ZDNet\s*Korea"
+        r"|핀포인트뉴스|공감신문|브레이크뉴스|한국글로벌뉴스|gukjenews\.com|ilyoseoul\.co\.kr"
+        r")\s*$",
         "",
         text,
     )
@@ -252,7 +263,33 @@ def _extract_title_entities(title: str) -> list:
     # Korean entities (2+ chars)
     kr_entities = re.findall(r"[가-힣]{2,}", title)
     # Proper nouns (capitalized words, not common English)
-    _COMMON = {"The", "And", "For", "With", "Has", "Are", "Its", "But", "How", "Why", "What", "New", "All", "Can"}
+    _COMMON = {
+        "The", "And", "For", "With", "Has", "Are", "Its", "But", "How", "Why",
+        "What", "New", "All", "Can", "Now", "Get", "Set", "May", "Not",
+        "Other", "Others", "Another", "Being", "Having", "Doing",
+        "Becomes", "Become", "Getting", "Going", "Coming", "Making",
+        "Says", "Said", "Warns", "Faces", "Shows", "Finds", "Takes",
+        "Gives", "Looks", "Tells", "Seems", "Turns", "Leads", "Holds",
+        "Spikes", "Spike", "Surges", "Surge", "Drops", "Drop", "Falls",
+        "First", "Last", "Next", "After", "Before", "During", "Under",
+        "Over", "About", "Every", "Where", "Which", "While", "Their",
+        "These", "Those", "Could", "Would", "Should", "Might", "Still",
+        "Just", "Also", "More", "Most", "Some", "Much", "Many", "Each",
+        "Only", "Even", "Very", "Here", "There", "Then", "Than", "Into",
+        "From", "This", "That", "Been", "Were", "Will", "Your", "They",
+        "Them", "Such", "Like", "Near", "Amid", "Ahead", "Along",
+        "Among", "Above", "Below", "Behind", "Between", "Through",
+        "Against", "Within", "Without", "Across", "Inside",
+        "Global", "World", "Major", "Latest", "Breaking", "Live",
+        "Watch", "Alert", "Update", "Report", "Check",
+        "Shares", "Stock", "Stocks", "Market", "Markets",
+        "Price", "Prices", "Trade", "Trades", "Trading",
+        "Company", "Companies", "Industry",
+        "Million", "Billion", "Trillion",
+        "Today", "Yesterday", "Tomorrow", "Year", "Week", "Month",
+    }
+    _NOISE_TICKERS = {"CEO", "IPO", "SEC", "FED", "GDP", "CPI", "ETF", "AI", "USD", "FOR", "THE", "ARE", "HAS", "NOT", "BUT", "ALL", "CAN", "NOW", "HOW", "NEW", "CBS", "FBI", "GOP"}
+    tickers = [t for t in tickers if t not in _NOISE_TICKERS]
     proper = [w for w in re.findall(r"\b[A-Z][a-z]{2,}\b", title) if w not in _COMMON]
 
     entities.extend(values)
@@ -332,6 +369,30 @@ def _analyze_korean_title(title: str) -> str:
 
     if any(kw in title for kw in ["관세", "무역", "수출", "수입"]):
         return "통상·무역 정책 관련 소식입니다. 글로벌 공급망과 수출 기업 실적에 영향을 줄 수 있습니다."
+
+    if any(kw in title for kw in ["배당", "주주환원", "자사주"]):
+        return "배당·주주환원 정책 관련 소식입니다. 배당 수익률과 자사주 매입 규모가 주가에 긍정적 영향을 줄 수 있습니다."
+
+    if any(kw in title for kw in ["부동산", "아파트", "전세", "분양"]):
+        return "부동산 시장 관련 소식입니다. 금리·정책 변화에 따른 부동산 시장 흐름을 주시해야 합니다."
+
+    if any(kw in title for kw in ["인수", "합병", "M&A"]):
+        return "기업 인수·합병(M&A) 관련 소식입니다. 인수 프리미엄과 시너지 효과가 양사 주가에 영향을 줍니다."
+
+    if any(kw in title for kw in ["디파이", "디지털자산", "가상자산", "코인", "블록체인"]):
+        return "디지털 자산·블록체인 관련 소식입니다. 규제 동향과 기술 발전이 시장 방향의 핵심 변수입니다."
+
+    if any(kw in title for kw in ["AI", "인공지능", "챗봇", "생성형"]):
+        return "AI·인공지능 관련 소식입니다. AI 산업 성장에 따른 관련주 투자 기회를 점검해 보세요."
+
+    if any(kw in title for kw in ["2차전지", "배터리", "전기차", "EV"]):
+        return "2차전지·전기차 관련 소식입니다. 글로벌 전기차 수요와 배터리 기술 경쟁이 섹터 성장을 좌우합니다."
+
+    if any(kw in title for kw in ["외국인", "기관", "순매수", "순매도", "수급"]):
+        return "외국인·기관 수급 동향입니다. 대규모 순매수/순매도는 시장 방향성의 중요한 선행 지표입니다."
+
+    if any(kw in title for kw in ["실적", "어닝", "매출", "영업이익"]):
+        return "기업 실적 관련 소식입니다. 실적 서프라이즈 여부와 컨센서스 대비 결과가 주가 방향을 결정합니다."
 
     # Fallback: extract key nouns from title
     nouns = re.findall(r"[가-힣]{2,}", title)[:3]
@@ -417,6 +478,27 @@ def _analyze_english_title(title: str, title_lower: str) -> str:
     if any(kw in title_lower for kw in ["daylight", "spring forward"]):
         return "서머타임(DST) 전환이 증시에 미치는 영향을 분석한 기사입니다. 계절적 패턴 참고용 데이터입니다."
 
+    if any(kw in title_lower for kw in ["gold", "silver", "precious metal"]):
+        return "귀금속 시장 관련 소식입니다. 금·은 가격은 인플레이션 헤지와 안전자산 수요의 바로미터입니다."
+
+    if any(kw in title_lower for kw in ["real estate", "housing", "mortgage"]):
+        return "부동산·주택 시장 관련 소식입니다. 모기지 금리와 주택 공급이 경기 흐름의 핵심 지표입니다."
+
+    if any(kw in title_lower for kw in ["m&a", "merger", "acquisition", "takeover"]):
+        return "기업 인수·합병(M&A) 관련 소식입니다. 딜 성사 여부와 인수 프리미엄이 관련주 가격에 영향을 미칩니다."
+
+    if any(kw in title_lower for kw in ["dividend", "buyback", "shareholder"]):
+        return "배당·주주환원 관련 소식입니다. 배당 정책 변화와 자사주 매입은 장기 투자 매력도를 높입니다."
+
+    if any(kw in title_lower for kw in ["china", "chinese", "beijing"]):
+        return "중국 경제·시장 관련 소식입니다. 중국 경기 흐름은 글로벌 원자재·무역에 직접적 영향을 미칩니다."
+
+    if any(kw in title_lower for kw in ["japan", "yen", "nikkei", "boj"]):
+        return "일본 경제·시장 관련 소식입니다. 엔화 약세와 BOJ 정책이 글로벌 캐리트레이드에 영향을 줍니다."
+
+    if any(kw in title_lower for kw in ["eu ", "europe", "euro", "ecb"]):
+        return "유럽 경제·시장 관련 소식입니다. ECB 통화정책과 유럽 경기 흐름이 글로벌 시장에 영향을 미칩니다."
+
     # Fallback: extract meaningful entities
     entities = _extract_title_entities(title)
     if entities:
@@ -449,7 +531,10 @@ def generate_synthetic_description(
         return f"{label} 공지사항입니다." + (f" ({entity_str})" if entity_str else "")
 
     if entity_str:
-        return f"{entity_str} 관련 시장 뉴스입니다. 투자 판단 시 원문을 확인하세요."
+        return f"{label}에서 {entity_str} 관련 소식을 전했습니다."
+    # Final fallback: use source label for minimal context
+    if label and label != source:
+        return f"{label}에서 보도한 소식입니다. 원문에서 세부 내용을 확인하세요."
     return title
 
 
@@ -557,7 +642,15 @@ def enrich_items(
                 item["title_ko"] = ko
 
         desc = item.get("description", "")
-        if desc and detect_language(desc) == "en" and not desc.startswith(("구글 뉴스", "에서 보도")):
+        if desc and detect_language(desc) == "en" and not any(
+            desc.startswith(prefix) for prefix in (
+                "구글 뉴스", "에서 보도", "시장", "규제", "암호화폐", "비트코인",
+                "이더리움", "거래소", "연준", "인플레이션", "미국", "한국",
+                "관세", "지정학", "기업 실적", "고용", "보안", "금융",
+                "AI·", "반도체", "원유", "귀금속", "부동산", "배당",
+                "디지털", "2차전지", "외국인", "중국", "일본", "유럽",
+            )
+        ):
             ko_desc = translate_to_korean(desc)
             if ko_desc != desc:
                 item["description_ko"] = ko_desc

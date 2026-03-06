@@ -81,8 +81,8 @@ def detect_language(text: str) -> str:
     if not text:
         return "en"
     korean_chars = len(re.findall(r"[가-힣]", text))
-    total_chars = len(text.strip())
-    if total_chars > 0 and korean_chars / total_chars > 0.1:
+    total_chars = len(re.sub(r"\s+", "", text))
+    if total_chars > 0 and korean_chars >= 2 and korean_chars / total_chars > 0.2:
         return "ko"
     return "en"
 
@@ -93,6 +93,8 @@ def remove_sponsored_text(text: str) -> str:
         return text
     text = re.sub(r"\s*[Ss]ponsored\s+by\s+@?\S+.*$", "", text, flags=re.MULTILINE)
     text = re.sub(r"\s*[Aa][Dd]:\s+.*$", "", text, flags=re.MULTILINE)
+    # Remove decorative bracket markers
+    text = re.sub(r"[▒▶▷►◆◇■□●○※☆★]+", "", text)
     return text.strip()
 
 
@@ -112,11 +114,15 @@ def truncate_sentence(text: str, max_length: int = 300) -> str:
     if len(text) <= max_length:
         return text
     truncated = text[:max_length]
-    # Try to end at sentence boundary
-    for sep in [". ", "。", "! ", "? ", ".\n"]:
+    # Try Korean sentence endings first, then general
+    for sep in [
+        "다. ", "요. ", "음. ", "됩니다. ", "입니다. ", "습니다. ",
+        "했다. ", "됐다. ", "였다. ", "합니다. ",
+        ". ", "。", "! ", "? ", ".\n",
+    ]:
         last_sep = truncated.rfind(sep)
-        if last_sep > max_length * 0.5:
-            return truncated[: last_sep + 1].strip()
+        if last_sep > max_length * 0.4:
+            return truncated[: last_sep + len(sep)].strip()
     # Fall back to word boundary
     return truncate_text(text, max_length)
 
@@ -137,6 +143,20 @@ def validate_news_item(item: dict) -> Optional[dict]:
     if link and not validate_url(link):
         logger.debug("Skipping item with invalid URL: %r", link[:60])
         return None
+
+    # Filter noise titles (SEC forms, addresses, system pages)
+    _NOISE_TITLE_PATTERNS = [
+        r"^(?:Washington,?\s*DC\s*\d+)",
+        r"^(?:10-[KQ](?:\s|$))",
+        r"^(?:Form\s+\d)",
+        r"^(?:SEC\.gov\s*-?\s*SEC\.gov)",
+        r"^(?:EDGAR\s)",
+        r"^(?:AMENDMENT NO\.)",
+    ]
+    for pattern in _NOISE_TITLE_PATTERNS:
+        if re.match(pattern, title, re.IGNORECASE):
+            logger.debug("Skipping noise title: %r", title[:50])
+            return None
 
     # Fix description that's identical to title
     desc = item.get("description", "").strip()

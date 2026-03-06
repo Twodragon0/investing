@@ -86,12 +86,15 @@ def _generate_title_based_desc(title: str, theme_key: str) -> str:
         "altcoin": "알트코인 시장 동향 관련 소식입니다.",
         "regulation": "암호화폐 규제 및 정책 관련 소식입니다.",
         "price": "가격 및 시장 움직임 관련 소식입니다.",
+        "price_market": "가격 및 시장 움직임 관련 소식입니다.",
         "defi": "탈중앙화 금융(DeFi) 관련 소식입니다.",
         "nft": "NFT 및 디지털 자산 관련 소식입니다.",
+        "nft_web3": "NFT·Web3 생태계 관련 소식입니다.",
         "exchange": "거래소 동향 관련 소식입니다.",
         "macro": "거시경제 및 금리 관련 소식입니다.",
         "ai_tech": "AI 및 기술 관련 소식입니다.",
         "politics": "정치 및 정책 관련 소식입니다.",
+        "security": "보안 및 해킹 관련 소식입니다.",
     }
 
     # Check if title is already Korean
@@ -104,10 +107,17 @@ def _generate_title_based_desc(title: str, theme_key: str) -> str:
             return f"{clean}. {ctx}"
         return clean
 
-    # English title: provide analytical context
+    # English title: provide analytical context in Korean
     ctx = _THEME_CONTEXT.get(theme_key, "관련 소식입니다.")
-    # Remove source suffix (e.g., " - Reuters", " | Bloomberg")
-    clean = re.sub(r"\s*[-–—|]\s*(?:Reuters|Bloomberg|CNBC|CNN|BBC|AP|Forbes|WSJ)\s*$", "", title, flags=re.I).strip()
+    # Remove source suffix (expanded list)
+    clean = re.sub(
+        r"\s*[-–—|]\s*(?:Reuters|Bloomberg|CNBC|CNN|BBC|AP|Forbes|WSJ"
+        r"|MarketWatch|Yahoo\s*Finance|The\s*(?:Block|Verge|Guardian)"
+        r"|Decrypt|CoinDesk|CoinTelegraph|Barron'?s)\s*$",
+        "",
+        title,
+        flags=re.I,
+    ).strip()
     if len(clean) > 120:
         clean = clean[:117] + "..."
     return f"{clean} — {ctx}"
@@ -115,10 +125,15 @@ def _generate_title_based_desc(title: str, theme_key: str) -> str:
 
 _GENERIC_DESC_PATTERNS = [
     re.compile(r"에서 보도한 뉴스입니다\.?$"),
+    re.compile(r"에서 보도한 소식입니다\.?$"),
+    re.compile(r"관련 소식을 전했습니다\.?$"),
+    re.compile(r"원문에서 세부 내용을 확인하세요\.?$"),
     re.compile(r"거래소 공지사항입니다\.?\s*$"),
     re.compile(r"please enable javascript", re.I),
     re.compile(r"^AMENDMENT NO\.", re.I),
     re.compile(r"^FORM\s+\d", re.I),
+    re.compile(r"^access denied", re.I),
+    re.compile(r"^403 forbidden", re.I),
 ]
 
 
@@ -1222,6 +1237,96 @@ class ThemeSummarizer:
         "방안부터",
         "전망까지",
         "주요뉴스",
+        # Additional English stop words
+        "for",
+        "you",
+        "crypto",
+        "cryptocurrency",
+        "blockchain",
+        "token",
+        "tokens",
+        "digital",
+        "asset",
+        "assets",
+        "trading",
+        "exchange",
+        "becomes",
+        "become",
+        "becoming",
+        "others",
+        "another",
+        "being",
+        "having",
+        "doing",
+        "going",
+        "getting",
+        "million",
+        "billion",
+        "trillion",
+        "during",
+        "without",
+        "within",
+        "against",
+        "really",
+        "already",
+        "enough",
+        "announces",
+        "announced",
+        "announcement",
+        "reports",
+        "reported",
+        "company",
+        "companies",
+        "global",
+        "world",
+        "international",
+        "major",
+        "breaking",
+        "shares",
+        "investors",
+        "investor",
+        "article",
+        "source",
+        "watch",
+        "alert",
+        "warns",
+        # Additional Korean stop words
+        "텔레그램",
+        "전송",
+        "알려진",
+        "보도",
+        "발표",
+        "것으로",
+        "있는",
+        "따르면",
+        "한다",
+        "있다",
+        "했다",
+        "된다",
+        "라고",
+        "에서",
+        "이번",
+        "통해",
+        "대해",
+        "위해",
+        "가운데",
+        "것이",
+        "하는",
+        "것을",
+    }
+
+    _NOISE_ENGLISH = {
+        "becomes", "become", "becoming", "spikes", "spike",
+        "gets", "getting", "other", "others", "another",
+        "makes", "making", "takes", "taking", "going",
+        "coming", "shows", "showing", "looks", "looking",
+        "gives", "giving", "being", "having", "doing",
+        "finds", "finding", "seems", "tells",
+        "warns", "warning", "faces", "facing", "says",
+        "might", "could", "should", "would", "every",
+        "where", "which", "while", "until", "since",
+        "among", "along", "above", "below", "ahead",
+        "across", "behind", "before", "during", "inside",
     }
 
     def _extract_title_keywords(self, articles: List[Dict[str, Any]], max_keywords: int = 5) -> List[str]:
@@ -1237,7 +1342,7 @@ class ThemeSummarizer:
             tokens = re.findall(r"\$[\d,.]+[KkMmBb]?%?|[\d,.]+%|[A-Za-z]{3,}|[가-힣]{2,}", title)
             for token in tokens:
                 normalized = token.lower() if re.match(r"[A-Za-z]", token) else token
-                if normalized not in self._STOP_WORDS and len(normalized) >= 2:
+                if normalized not in self._STOP_WORDS and normalized not in self._NOISE_ENGLISH and len(normalized) >= 2:
                     # Skip short generic English tokens (1-2 chars)
                     if re.match(r"^[a-z]{1,2}$", normalized):
                         continue
@@ -1273,11 +1378,26 @@ class ThemeSummarizer:
 
         # Strategy 1: Build keyword-based composite briefing
         keywords = self._extract_title_keywords(articles, max_keywords=5)
-        if len(keywords) >= 3:
-            # Generate a descriptive briefing
+        if len(keywords) >= 2:
             count = len(articles)
-            kw_str = ", ".join(keywords[:3])
-            return f"{kw_str} 관련 {count}건의 뉴스가 보고되었습니다."
+            # Separate Korean and English keywords for natural phrasing
+            kr_kw = [k for k in keywords if re.search(r"[가-힣]", k)]
+            en_kw = [k for k in keywords if not re.search(r"[가-힣]", k)]
+
+            # Build a more natural Korean briefing
+            display_kw = kr_kw[:3] if kr_kw else en_kw[:3]
+            if not display_kw:
+                display_kw = keywords[:3]
+
+            kw_str = ", ".join(display_kw)
+
+            # Use varied templates instead of one fixed pattern
+            templates = [
+                f"{kw_str} 중심으로 {count}건의 뉴스가 수집되었습니다.",
+                f"{kw_str} 이슈가 {count}건으로 주목받고 있습니다.",
+                f"{count}건의 뉴스에서 {kw_str} 키워드가 부각되고 있습니다.",
+            ]
+            return templates[count % len(templates)]
 
         # Strategy 2: Best description snippet from top articles
         best_desc = ""
