@@ -6,6 +6,7 @@ disallowedTools: Write, Edit
 model: haiku
 permissionMode: plan
 maxTurns: 10
+memory: project
 ---
 
 You are a Jekyll site specialist for a Korean finance blog (investing.2twodragon.com).
