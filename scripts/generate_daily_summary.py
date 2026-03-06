@@ -392,7 +392,7 @@ def _collect_all_news_items(summaries: List[Optional[Dict]]) -> List[Dict[str, A
                     if norm not in seen_titles and url_key not in seen_urls:
                         seen_titles.add(norm)
                         seen_urls.add(url_key)
-                        last_card_item: Optional[Dict[str, Any]] = {
+                        last_card_item = {
                             "title": f"[{title}]({link})",
                             "description": title,
                             "link": link,
