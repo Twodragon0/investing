@@ -32,24 +32,13 @@ description: "외 P0 긴급 이슈 6건이 추가 감지되었습니다. 총 108
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">108</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 49</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">리스크 위험</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (29회)</div></div></div>
 <div class="alert-box alert-info"><strong>암호화폐 긴급: 국장·미장은 폭락하는데…비트코인 슬금슬글 7만달러 턱 밑 - 디지털투데이 - 108건 분석</strong><ul><li>🟠 <strong>비트코인</strong> (49건): Bitcoin, Cryptocurrency, Crypto 관련 49건의 뉴스가 보고되었습니다.</li><li>📈 <strong>가격/시장</strong> (32건): Bitcoin, 비트코인, Kraken 관련 32건의 뉴스가 보고되었습니다.</li><li>🤖 <strong>AI/기술</strong> (29건): Cryptocurrency, for, Bitcoin 관련 29건의 뉴스가 보고되었습니다.</li><li>🏦 <strong>거래소</strong> (17건): crypto, Kraken, Fed 관련 17건의 뉴스가 보고되었습니다.</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE50NGZBdUhaOHB2LVl5Wm9wY0NfV29xSS1JaDctVl9XdFlhaU44NHNUWEx1dFdwenlsOVF0OEFwLWVYVy1qeEQ5bEtaeUkyYkgtbUNjV2NBOWdFUFdLQ1N4am5kdVZuQlR3VnhPRkNKTk1kNzQ?oc=5">국장·미장은 폭락하는데…비트코인 슬금슬글 7만달러 턱 밑 - 디지털투데이</a> <span class="p0-desc">비트코인 관련 주요 소식입니다. 국장, 미장은, 폭락하는데 등 핵심 내용을 Google News KR에서 보도했습니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMEQyODdzdUZjVnhKOVVrRDZlZTljZEFjZWhiaTVyaGMxaGlVSzZMTnpvX1A1NGlxcEFlVHQ1bkFlN3BzdFJ1ZWhZWE5Dbmw1SVhad1pGYUFsTnk2azFZd2hjTVk0SGtmNkZFdVJTR0F0QlZTNVdzUUdvdkxiTS16cU05ZEdiZXBr?oc=5">비트코인 곧 "제2차 대폭락" ... 골드만삭스 "이란전쟁 암호 가상화폐 강타" - 글로벌이코노믹</a> <span class="p0-desc">비트코인 관련 주요 소식입니다. 비트코인, 대폭락, 골드만삭스 등 핵심 내용을 Google News KR에서 보도했습니다.</span></li><li><a href="https://cointelegraph.com/news/bitcoin-miners-unwind-btc-treasuries-margin-pressure?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">비트코인 채굴자는 10월부터 15,000 BTC을 오프로드하며 더 많은 매출이 예상됩니다.</a> <span class="p0-desc">마진 축소, 부채 압력 및 폭락 이후의 재설정으로 인해 업계가 한때 인기 있었던 보유 전략을 ETH 잉크로 바꾸게 되면서 공공 채굴자들은 비트코인 매장량을 줄이고 있습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 국장·미장은 폭락하는데…비트코인 슬금슬글 7만달러 턱 밑 - 디지털투데이  
-외 P0 긴급 이슈 6건이 추가 감지되었습니다. 총 108건의 뉴스 중 P1 주요 이슈도 8건 확인됩니다.
-
-1. **🟠 비트코인** (49건): Bitcoin, Cryptocurrency, Crypto 관련 49건의 뉴스가 보고되었습니다.
-2. **📈 가격/시장** (32건): Bitcoin, 비트코인, Kraken 관련 32건의 뉴스가 보고되었습니다.
-3. **🤖 AI/기술** (29건): Cryptocurrency, for, Bitcoin 관련 29건의 뉴스가 보고되었습니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-**P0 긴급**: 국장·미장은 폭락하는데…비트코인 슬금슬글 7만달러 턱 밑 - 디지털투데이 / 비트코인 곧 "제2차 대폭락" ... 골드만삭스 "이란전쟁 암호 가상화폐 강타" - 글로벌이코노믹 / 비트코인 채굴자는 10월부터 15,000 BTC을 오프로드하며 더 많은 매출이 예상됩니다.
-**P1 주요**: 8건 확인
-**핵심 키워드**: **bitcoin**, **ethereum**, **ai**, **etf**
-**주요 출처**: Google News(20건), Decrypt(15건), Cointelegraph(15건)
-- 거래소 공지 5건 포함
-
-
-![news-briefing]({{ '/assets/images/generated/news-briefing-crypto-2026-03-06.png' | relative_url }})
+- 총 **108건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🤖 AI/기술
+- 2026-03-06 암호화폐 시장에서 108건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, AI/기술 관련 소식이 주목됩니다.
+- *총 108건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
 
 ## 테마별 주요 뉴스
 

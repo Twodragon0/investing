@@ -33,6 +33,7 @@ description: "비트코인 $73,000 돌파 후 7% 급등, 트럼프 암호화폐 
 <div class="alert-box alert-info"><strong>암호화폐 긴급: 암호화폐 폭락: 비트코인과 XRP 중 더 나은 매수 기회는? - 109건 분석</strong><ul><li>🟠 <strong>비트코인</strong> (59건): BTC $73,000 돌파 후 7% 급등, 트럼프 법안 지지로 강세 전환.</li><li>📈 <strong>가격/시장</strong> (34건): 코인베이스·암호화폐 주식 급등, Kraken 연준 결제 시스템 접근 획득.</li><li>🏦 <strong>거래소</strong> (25건): Coinbase 주가 급등, Morgan Stanley BTC ETF 관리인 선정.</li><li>🏛️ <strong>정치/정책</strong> (15건): 트럼프 디지털자산 법안 지지, 친비트코인 연준 의장 지명.</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMigwFBVV95cUxPVWVwMUFIS01xY0JpaGR5cFJnZ1FnM1Byd3B5cFdSRkJoVkJNZFB5M2FlNWRsUUlNSm9mYzNQQkF1YU13ZTFrdUc2T3I0emNKN0tiaXJBWFpFVWlqeDhmNHEwOWRlcERsSzNnMHQ5a05jaG9JRWxqSUkzVnBSRUk0QUFCaw?hl=en-US&gl=US&ceid=US%3Aen">암호화폐 폭락: 비트코인과 XRP 중 더 나은 매수 기회는?</a> <span class="p0-desc">비트코인·XRP 폭락 시 매수 전략 분석.</span></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE50NGZBdUhaOHB2LVl5Wm9wY0NfV29xSS1JaDctVl9XdFlhaU44NHNUWEx1dFdwenlsOVF0OEFwLWVYVy1qeEQ5bEtaeUkyYkgtbUNjV2NBOWdFUFdLQ1N4am5kdVZuQlR3VnhPRkNKTk1kNzQ?oc=5">국장·미장은 폭락하는데…비트코인 슬금슬글 7만달러 턱 밑 - 디지털투데이</a> <span class="p0-desc">국장·미장은 폭락하는데…비트코인 슬금슬글 7만달러 턱 밑 디지털투데이</span></li><li><a href="https://decrypt.co/359927/apple-iphone-hacking-kit-used-by-spies-crypto-scams-could-have-us-intelligence-origins">애플 스파이가 사용하는 iPhone 해킹 키트, 암호화폐 사기의 출처는 미국 정보일 수 있음</a> <span class="p0-desc">연구원들은 23가지 iOS 취약점을 포함하는 정교한 익스플로잇 킷을 간첩 및 사이버 범죄 캠페인에서 사용하고 있습니다.</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **109건** 수집

@@ -33,11 +33,12 @@ excerpt: "미국 의회 Pelosi 주식거래 금지 논의, SEC Form 4 내부자 
 
 
 
+
 ## 전체 뉴스 요약
 
 - 트럼프 관련 3건의 정책 뉴스가 포착되었습니다. 10% 관세가 발효되면서 글로벌 수준의 관세율을 15%까지 인상할 수 있다는 경고가 나왔으며, 행정명령 및 관세 정책의 변화는 미국 내수 시장뿐 아니라 아시아·유럽 수출 기업과 원자재 가격에도 연쇄적으로 영향을 미칩니다. 특히 관세…
 - 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
-- 1. 트럼프, Pelosi 실명 언급하며 논란의 주식 거래 이력 비판 - Fox News
+- 1. Trump takes jab at Pelosi by name over history of controversial stock trading - Fox News 트럼프, Pelosi 실명 언급하며 논란의 주식 거래 이력 비판 - Fox News
 
 ## 미국 의회 거래 동향
 

@@ -16,17 +16,6 @@ description: "전 세계 금융 규제기관의 최신 동향을 정리합니다
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">9</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 8</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">6</div><div class="stat-label">한국</div></div></div>
 <div class="alert-box alert-info"><strong>글로벌 규제: 금융위, 디지털자산기본법, 정부안 관련 9건 수집</strong><ul><li>🔵 <strong>규제/정책</strong> (8건): 금융위, 디지털자산기본법, 정부안 관련 8건의 뉴스가 보고되었습니다.</li><li>🏦 <strong>거래소</strong> (3건): Crypto, Rules, FCA 관련 3건의 뉴스가 보고되었습니다.</li></ul></div>
-## 전체 뉴스 요약
-
-총 9건의 뉴스 중 **규제/정책** 관련이 8건(89%)으로 압도적입니다. 규제 동향이 시장 참여자들의 주요 관심사입니다
-
-1. **🔵 규제/정책** (8건): 금융위, 디지털자산기본법, 정부안 관련 8건의 뉴스가 보고되었습니다.
-2. **🏦 거래소** (3건): Crypto, Rules, FCA 관련 3건의 뉴스가 보고되었습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-**P1 주요**: 금융위, 올해 첫 가상자산위원회 개최…은행 중심 스테이블코인·거래소 지분 규제 검토 - 오 / 금융위 "스테이블코인 컨소시엄, 기술 기업 배려할 것" - 지디넷코리아 / 금융위 올해 첫 가상자산위원회 회의 열어, 디지털자산기본법 정부안 윤곽 - 비즈니스포스트
-**주요 지역**: 한국 6건, 유럽 2건, 아시아 1건
-
 ## 핵심 요약
 
 - **총 수집 건수**: 9건

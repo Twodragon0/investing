@@ -16,7 +16,7 @@ image: "/assets/images/generated/news-briefing-security-2026-02-11.png"
 
 - 총 **45건** 수집
 - 블록체인 보안 관련 뉴스 45건을 정리합니다.
-- 1. 해커, Matcha Meta 사용자로부터 1,350만 달러 탈취 — 프로토콜 보안 사고 공식 인정 2. Balancer DeFi 프로토콜 익스플로잇으로 1억 달러 이상 피해…
+- 1. 해커, Matcha Meta 사용자로부터 1,350만 달러 탈취 — 보안 사고 공식 인정 - 블록체인 보안 2. Balancer DeFi 프로토콜 익스플로잇으로 1억 달러 이상 피해 - The Record - 블록체인 보안 3. Bybit부터 GMX까지: 2025년 10대…
 
 
 ## 보안 관련 뉴스
