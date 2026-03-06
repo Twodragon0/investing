@@ -153,7 +153,7 @@ OCC 제안에서 스테이블코인 수익률 절차 조항이 해당 규정안 
 
 ## 거래소 공지사항
 
-**1. [New Cryptocurrency Listing](https://www.binance.com/en/support/announcement/list/48)**
+**1. [신규 암호화폐 상장](https://www.binance.com/en/support/announcement/list/48)**
 `거래소: Binance`
 
 **2. [Latest Binance News](https://www.binance.com/en/support/announcement/list/49)**
@@ -172,8 +172,8 @@ OCC 제안에서 스테이블코인 수익률 절차 조항이 해당 규정안 
 ## 오늘의 인사이트
 
 **🟠 비트코인**(39건)과 **📈 가격/시장**(24건)이 오늘의 핵심 테마입니다. 비트코인 관련 뉴스와 시장 가격 움직임이 함께 부각되어, 단기 변동성 확대 구간에 진입한 것으로 보입니다.
-- 주요 기사: *Better Cryptocurrency to Buy Now With $1,000 And Hold For 3 Years: XRP vs. Bitcoin*
-- 주요 기사: *Bitcoin price today: slips to $66k as Middle East conflict sparks risk-off wave*
+- 주요 기사: *지금 $1,000으로 사서 3년 보유할 더 나은 암호화폐: XRP vs. Bitcoin*
+- 주요 기사: *오늘의 비트코인 가격: 중동 갈등으로 위험 회피 심리 확산되며 $66k 하락*
 
 **가격 언급**: 뉴스 제목에서 17건의 가격 데이터가 포착되었습니다 ($1,000, $7.8, $580, $4.8M, $66k). 구체적 가격대가 언급되는 것은 시장의 가격 민감도가 높다는 신호입니다.
 

@@ -204,7 +204,7 @@ description: "KOSPI -7.62%, KOSDAQ -8.68% 급락. 이란 분쟁 확대에 따른
 <div class="news-card-num">2</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxOY0Radks3LV9DSUtsa1lHdVFELUdXQXhwRzlaTnBDWks5SDFyTG1ZckUyTGV3bzNwOGZIQk5MOUxWaEFnRVpacmlQMkZkaVZkblE5eTZFN3lSN2ZUMThtdUJRN0tRNDUwckJlRkV4UFFDZVM0RUdnamNpY09uM0w4ZnpuYUdlR2pjalFJUU53STZTUQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">CHAT vs. SOXX: Which AI ETF Is the Better Buy for Investors Right Now? - Nasdaq</a>
-<p class="news-desc">CHAT vs. SOXX: Which AI ETF Is the Better Buy for Investors Right Now? Nasdaq</p>
+<p class="news-desc">CHAT vs. SOXX: 지금 투자자들에게 더 나은 AI ETF는 어느 것인가? Nasdaq</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
@@ -214,7 +214,7 @@ description: "KOSPI -7.62%, KOSDAQ -8.68% 급락. 이란 분쟁 확대에 따른
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMiugJBVV95cUxONkRXXy10UVNLcklkdTkwRzFJM3dkZGpZa2hvMnlYNTBhTUFpa1B0MjZicDRvLXRXb3JnTlQtcXlvd3BiMzE3THFPMkdqaHpyZXRhMFpEMTFpQ19MX0JJaFF6TTZXd1VENko5bVZZTEtmTnBSVkVOZGlaZ1ZudTIxVW9ZM2V5T0VacG51NDdYbDZwVkRaZzRaRkRjWW04X0xDdzd0UVhyTmxWQXpiOHZIU3BybkI1LTRMNWl3V3RzajA4T2M5MnFaWFFTenlncXl4Q2l1bUJjNUxIU1RudzNMcTQ2YnhMSE5HWng2TGJITGNVc1dxX0VYaGYwVHdYWmpLLWN3V0Raak5icVBEUzNWaXZLWlNHUnBLVlRsRmIxaFJIRGdkTlFqOTE0c1dhbDdQUjBuczVWZ2NRUQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">US Stock Market Today: Dow Plunges 1,110 Points, S&amp;P 500 &amp; Nasdaq Slide Deep into the Red Amid Iran Conflict; Crude Oil, Gas, Gold &amp; Silver Surges; Bitcoin Retreat Near $67K - The Sunday Guardian</a>
-<p class="news-desc">US Stock Market Today: Dow Plunges 1,110 Points, S&amp;P 500 &amp; Nasdaq Slide Deep into the Red Amid Iran Conflict; Crude Oil, Gas, Gold &amp; Silver Surges; Bitcoin Retreat Near $67K The Sunday Guardian</p>
+<p class="news-desc">오늘의 미국 증시: 이란 갈등으로 다우 1,110포인트 폭락, S&P 500·나스닥 급락; 원유·가스·금·은 급등; 비트코인 $67K 근처로 후퇴 - The Sunday Guardian</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>

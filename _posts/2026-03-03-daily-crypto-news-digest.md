@@ -135,12 +135,12 @@ DOJ: Florida cryptocurrency CEO arrested in $328 million fraud scheme wtsp.com
 **1. [Why Minnesota lawmakers are trying to ban crypto ATMs](https://news.google.com/read/CBMiekFVX3lxTE50SXJyNU1HdE1TLUhwNkdZbWRlcVBnN0ZHckF1UVdqN1kwdkFHaHluNm1STzYtYmdRNlBoTTliN3p1NEFqMkdEcEg0elloRVNaazlneVpvR0tSUFI3UF9kSW9EQ1VnUE4xNDMzMFZ1Y3NmQVkxTnplRkd3?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
-**2. [Why Minnesota lawmakers are trying to ban crypto ATMs - Mashable](https://news.google.com/rss/articles/CBMiekFVX3lxTE50SXJyNU1HdE1TLUhwNkdZbWRlcVBnN0ZHckF1UVdqN1kwdkFHaHluNm1STzYtYmdRNlBoTTliN3p1NEFqMkdEcEg0elloRVNaazlneVpvR0tSUFI3UF9kSW9EQ1VnUE4xNDMzMFZ1Y3NmQVkxTnplRkd3?oc=5)**
-Why Minnesota lawmakers are trying to ban crypto ATMs Mashable
+**2. [미네소타 주의원들이 크립토 ATM 금지를 추진하는 이유 - Mashable](https://news.google.com/rss/articles/CBMiekFVX3lxTE50SXJyNU1HdE1TLUhwNkdZbWRlcVBnN0ZHckF1UVdqN1kwdkFHaHluNm1STzYtYmdRNlBoTTliN3p1NEFqMkdEcEg0elloRVNaazlneVpvR0tSUFI3UF9kSW9EQ1VnUE4xNDMzMFZ1Y3NmQVkxTnplRkd3?oc=5)**
+미네소타 주의원들이 크립토 ATM 금지를 추진하는 이유 Mashable
 <span class="source-tag">Google News EN</span>
 
-**3. [Wisconsin lawmakers crack down on cryptocurrency scams - WTAQ](https://news.google.com/rss/articles/CBMiTEFVX3lxTE5odTB3Qks5bWUtMzdubWxjTm1PNDU1WWl5ekNiYm8wTTVQdDJsVU1LN0J1eHNHVkZnc05leGFiNVZ0dEZEV3ZnRXpmQjg?oc=5)**
-Wisconsin lawmakers crack down on cryptocurrency scams WTAQ
+**3. [위스콘신 주의원들, 암호화폐 사기 단속 강화 - WTAQ](https://news.google.com/rss/articles/CBMiTEFVX3lxTE5odTB3Qks5bWUtMzdubWxjTm1PNDU1WWl5ekNiYm8wTTVQdDJsVU1LN0J1eHNHVkZnc05leGFiNVZ0dEZEV3ZnRXpmQjg?oc=5)**
+위스콘신 주의원들, 암호화폐 사기 단속 강화 WTAQ
 <span class="source-tag">Google News EN</span>
 
 <details><summary>그 외 8건 보기</summary><div class="details-content">
@@ -152,19 +152,19 @@ Wisconsin lawmakers crack down on cryptocurrency scams WTAQ
 
 ## 거래소 공지사항
 
-**1. [New Cryptocurrency Listing](https://www.binance.com/en/support/announcement/list/48)**
+**1. [신규 암호화폐 상장](https://www.binance.com/en/support/announcement/list/48)**
 `거래소: Binance`
 
-**2. [Latest Binance News](https://www.binance.com/en/support/announcement/list/49)**
+**2. [최신 Binance 뉴스](https://www.binance.com/en/support/announcement/list/49)**
 `거래소: Binance`
 
-**3. [Latest Activities](https://www.binance.com/en/support/announcement/list/93)**
+**3. [최신 활동](https://www.binance.com/en/support/announcement/list/93)**
 `거래소: Binance`
 
-**4. [New Fiat Listings](https://www.binance.com/en/support/announcement/list/50)**
+**4. [신규 법정화폐 상장](https://www.binance.com/en/support/announcement/list/50)**
 `거래소: Binance`
 
-**5. [API Updates](https://www.binance.com/en/support/announcement/list/51)**
+**5. [API 업데이트](https://www.binance.com/en/support/announcement/list/51)**
 `거래소: Binance`
 
 

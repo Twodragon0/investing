@@ -16,7 +16,7 @@ excerpt: "암호화폐 111건, 주식 122건, 보안 2건, 규제 29건, 소셜 
 ## 전체 뉴스 요약
 
 - 주요 테마: 📜 정책/규제, 🧭 수급/심리, 🏦 금리/유동성
-- 암호화폐: 111건. 대표 헤드라인: Will U.S.-Israeli airstrikes target Iran's bitcoin mining farms?.
+- 암호화폐: 111건. 대표 헤드라인: 미-이스라엘 공습, 이란 비트코인 채굴 시설 타격할까?.
 - 주식: 122건. 2026-03-03 주식 시장에서 122건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,996.28(-4.56%), KOSDAQ 1,175.38(-1.76%), USD/KRW 1,464.88(+0.78%).. 주요 수치: KOSPI 5,996.28(-4.56%).
 - 규제: 29건. 주요 이슈: 중동 상황 관련 긴급 금융시장상황점검회의 개최.
 
@@ -46,19 +46,19 @@ excerpt: "암호화폐 111건, 주식 122건, 보안 2건, 규제 29건, 소셜 
 
 **시장 심리**: 혼조 (긍정 20건 vs 부정 20건, 긍정 비율 50%) — 6개 카테고리 319건 기준
 
-> - **암호화폐** 111건 — Will U.S.-Israeli airstrikes target Iran's bitcoin mining farms?
+> - **암호화폐** 111건 — 미-이스라엘 공습, 이란 비트코인 채굴 시설 타격할까?
 > - **주식** 122건 — KOSPI 5,996.28(-4.56%)
 > - **규제** 29건 — 중동 상황 관련 긴급 금융시장상황점검회의 개최
-> - **월드모니터** 20건 — **China’s Two Sessions to reveal Xi’s economic and defence plans as military purge casts shadow**
-> - **소셜** 35건 — Billionaire Tim Draper said Bitcoin will hit $250K, $1M, then $10M on its way to dethroning the dollar
+> - **월드모니터** 20건 — **중국 양회, 군부 숙청 속에 시진핑의 경제·국방 계획 공개 예정**
+> - **소셜** 35건 — 억만장자 Tim Draper, 비트코인이 달러 패권 무너뜨리는 과정에서 $250K, $1M, $10M에 도달할 것이라 발언
 
 ## 뉴스 내용 기반 핵심 요약
 
-- **암호화폐:** 111건. 대표 헤드라인: Will U.S.-Israeli airstrikes target Iran's bitcoin mining farms?.
+- **암호화폐:** 111건. 대표 헤드라인: 미-이스라엘 공습, 이란 비트코인 채굴 시설 타격할까?.
 - **주식:** 122건. 2026-03-03 주식 시장에서 122건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,996.28(-4.56%), KOSDAQ 1,175.38(-1.76%), USD/KRW 1,464.88(+0.78%).. 주요 수치: KOSPI 5,996.28(-4.56%).
 - **규제:** 29건. 주요 이슈: 중동 상황 관련 긴급 금융시장상황점검회의 개최.
-- **소셜:** 35건. 화제 키워드: Billionaire Tim Draper said Bitcoin will hit $250K, $1M, then $10M on its way to dethroning the dollar.
-- **월드모니터:** 20건. 핵심 이슈: **China’s Two Sessions to reveal Xi’s economic and defence plans as military purge casts shadow**.
+- **소셜:** 35건. 화제 키워드: 억만장자 Tim Draper, 비트코인이 달러 패권 무너뜨리는 과정에서 $250K, $1M, $10M에 도달할 것이라 발언.
+- **월드모니터:** 20건. 핵심 이슈: **중국 양회, 군부 숙청 속에 시진핑의 경제·국방 계획 공개 예정**.
 - **우선순위:** P0 4건, P1 9건. 긴급: Crypto Hacks Drop to $26.5M in February, Lowest Since March 2025 - Live Bitcoin News, Crypto Hacking Losses Plummet to $26.5M in February, Signaling a Stunning Security Transformation - Bitcoin world.
 
 ## 테마 스냅샷
@@ -127,9 +127,9 @@ excerpt: "암호화폐 111건, 주식 122건, 보안 2건, 규제 29건, 소셜 
 ### 암호화폐 뉴스 (111건)
 
 **대표 헤드라인:**
-- Will U.S.-Israeli airstrikes target Iran's bitcoin mining farms?
-- Bitcoin Falls Amid Conflict in Middle East. Why Crypto Is Not a Haven.
-- Bitcoin tops $69,000 as analysts point to crypto 'resilience' amid Middle East war
+- 미-이스라엘 공습, 이란 비트코인 채굴 시설 타격할까?
+- 중동 갈등 속 비트코인 하락 — 암호화폐가 안전자산이 아닌 이유
+- 비트코인 $69,000 돌파 — 중동 전쟁 속에도 '회복탄력성' 주목
 
 [상세 보기](https://investing.2twodragon.com/crypto-news/2026/03/03/daily-crypto-news-digest/)
 
@@ -141,9 +141,9 @@ excerpt: "암호화폐 111건, 주식 122건, 보안 2건, 규제 29건, 소셜 
 **주요 수치**: KOSPI 5,996.28(-4.56%), KOSDAQ 1,175.38(-1.76%), USD/KRW 1,464.88(+0.78%)
 
 **대표 헤드라인:**
-- Stock Market on March 2, 2026: Dow ends lower, S&P 500 ekes out gain, Nasdaq rises as investors weighed Iran conflict; oil prices climb
-- Oil Stocks Heat Up Amid Iran War As S&P 500 Slips; How High Will Oil Prices Go?
-- U.S. stocks rebound from sharp losses, while oil prices leap on worries about Iran war
+- 2026년 3월 2일 증시: 이란 갈등 영향 속 다우 하락, S&P 500 소폭 상승, 나스닥 반등 — 유가 급등
+- S&P 500 하락 속 이란 전쟁 우려에 에너지주 급등 — 유가 어디까지?
+- 미국 주식, 급락에서 반등 — 이란 전쟁 우려에 유가 급등
 
 [상세 보기](https://investing.2twodragon.com/stock-news/2026/03/03/daily-stock-news-digest/)
 
@@ -159,15 +159,15 @@ excerpt: "암호화폐 111건, 주식 122건, 보안 2건, 규제 29건, 소셜 
 ### 월드모니터 브리핑 (20건)
 
 **주요 글로벌 이슈:**
-- **China’s Two Sessions to reveal Xi’s economic and defence plans as military…
-- **MongoDB’s stock sinks after earnings, signaling more tough times for the…
-- **Chevron’s stock surges to a record as U.S.-Israeli attacks on Iran spark an…
+- **중국 양회, 군부 숙청 속에 시진핑의 경제·국방 계획 공개 예정…**
+- **MongoDB 주가, 실적 발표 후 급락 — 소프트웨어 섹터 한파 지속 예고…**
+- **Chevron 주가, 미-이스라엘 이란 공습에 따른 유가 랠리로 사상 최고치 급등…**
 
 | 제목 | 출처 |
 | --- | --- |
-| [**China’s Two Sessions to reveal Xi’s economic and defence plans as military purge casts shadow**](https://www.theguardian.com/world/2026/mar/03/china-two-sessions-president-xi-economy-defence-technology) | WorldMonitor/Guardian World |
-| [**MongoDB’s stock sinks after earnings, signaling more tough times for the software sector**](https://www.marketwatch.com/story/mongodbs-stock-sinks-after-earnings-signaling-more-tough-times-for-the-software-sector-5dd37daa?mod=mw_rss_topstories) | WorldMonitor/MarketWatch |
-| [**Chevron’s stock surges to a record as U.S.-Israeli attacks on Iran spark an oil rally**](https://www.marketwatch.com/story/chevrons-stock-surges-toward-a-record-as-u-s-israeli-attacks-on-iran-spark-an-oil-rally-c6283fd5?mod=mw_rss_topstories) | WorldMonitor/MarketWatch |
+| [**중국 양회, 군부 숙청 속에 시진핑의 경제·국방 계획 공개 예정**](https://www.theguardian.com/world/2026/mar/03/china-two-sessions-president-xi-economy-defence-technology) | WorldMonitor/Guardian World |
+| [**MongoDB 주가, 실적 발표 후 급락 — 소프트웨어 섹터 한파 지속 예고**](https://www.marketwatch.com/story/mongodbs-stock-sinks-after-earnings-signaling-more-tough-times-for-the-software-sector-5dd37daa?mod=mw_rss_topstories) | WorldMonitor/MarketWatch |
+| [**Chevron 주가, 미-이스라엘 이란 공습에 따른 유가 랠리로 사상 최고치 급등**](https://www.marketwatch.com/story/chevrons-stock-surges-toward-a-record-as-u-s-israeli-attacks-on-iran-spark-an-oil-rally-c6283fd5?mod=mw_rss_topstories) | WorldMonitor/MarketWatch |
 
 [상세 보기](https://investing.2twodragon.com/market-analysis/2026/03/03/daily-worldmonitor-briefing/)
 
@@ -182,9 +182,9 @@ excerpt: "암호화폐 111건, 주식 122건, 보안 2건, 규제 29건, 소셜 
 ### 소셜 미디어 동향 (35건)
 
 **화제 토픽:**
-- Billionaire Tim Draper said Bitcoin will hit $250K, $1M, then $10M on its way to dethroning the doll
-- Unknown YouTube legend explaining how to buy #Bitcoin at $30 in 2011 👀
-- Cathie Wood says Bitcoin is "hands down" better than Gold."Bitcoin is a hedge against Both inflation
+- 억만장자 Tim Draper, 비트코인이 달러 패권 무너뜨리는 과정에서 $250K → $1M → $10M 도달 예고
+- YouTube 전설적 유저, 2011년 $30에 비트코인 사는 방법 설명 영상 공개
+- Cathie Wood, 비트코인이 금보다 "압도적으로" 낫다고 주장 — "비트코인은 인플레이션 양면 모두에 대한 헤지"
 
 [상세 보기](https://investing.2twodragon.com/crypto-news/2026/03/03/daily-social-media-digest/)
 
@@ -193,8 +193,8 @@ excerpt: "암호화폐 111건, 주식 122건, 보안 2건, 규제 29건, 소셜 
 ## 주목할 소식
 
 - [Apple launches new iPhone and iPad Air as it gears up for a major AI push](https://www.marketwatch.com/story/apple-launches-new-iphone-and-ipad-air-as-it-gears-up-for-a-major-ai-push-570b24ae?mod=mw_rss_topstories)
-- S&P 500 closes flat, rebounding from lows as traders buy the dip after U.S.-Iran attacks: Live updates
-- US Embassy in Saudi capital Riyadh hit by drones, fire reported: Ministry
+- S&P 500, 미-이란 공습 후 저점 매수세 유입으로 낙폭 회복 보합 마감: 실시간 업데이트
+- 사우디 수도 리야드 주재 미국 대사관 드론 공격, 화재 발생: 당국 발표
 
 ---
 

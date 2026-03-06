@@ -137,8 +137,8 @@ description: "2026-03-01 암호화폐 시장에서 108건의 뉴스를 분석했
 
 *Ethereum, Bitcoin, 비트코인, 이더리움, 엑스알피*
 
-**1. [Better Cryptocurrency to Buy With $5,000 and Hold Forever: XRP vs. Ethereum - Nasdaq](https://news.google.com/rss/articles/CBMimwFBVV95cUxQWnlXYmV1MklnQVF3bF9XRVNaWDZ0eC1hcmhsWDZiVm1QY1gtRXdacWFKU3FxdWFsU2xsNHBtZ20xa1VLVkdyMnpWbUVta2ZpX0ROSGpmWm4zZ08xYjhOZkxUejBsclBHa1lyWlNsSFZXUEE0RVFST1RzeGRaZ1dHN1hGX0IwYVdjenFoYkZyRlBUcVlPRk94WElsbw?oc=5)**
-Better Cryptocurrency to Buy With $5,000 and Hold Forever: XRP vs.
+**1. [$5,000으로 영구 보유할 더 나은 암호화폐: XRP vs. Ethereum - Nasdaq](https://news.google.com/rss/articles/CBMimwFBVV95cUxQWnlXYmV1MklnQVF3bF9XRVNaWDZ0eC1hcmhsWDZiVm1QY1gtRXdacWFKU3FxdWFsU2xsNHBtZ20xa1VLVkdyMnpWbUVta2ZpX0ROSGpmWm4zZ08xYjhOZkxUejBsclBHa1lyWlNsSFZXUEE0RVFST1RzeGRaZ1dHN1hGX0IwYVdjenFoYkZyRlBUcVlPRk94WElsbw?oc=5)**
+$5,000으로 영구 보유할 더 나은 암호화폐: XRP vs. Ethereum
 <span class="source-tag">Google News EN</span>
 
 **2. [[가상화폐 시세] 비트코인 9700만원대 유지…엑스알피 2000원선, 이더리움 280만원선 거래 - 이코노뉴스](https://news.google.com/rss/articles/CBMib0FVX3lxTE1wV3otVEFYbldQYjY3bkRlZjd3eC14dy1BQVNEdU9xX1J1X2VKT1dNT0dXNjBzM1NoN0d2Z0YxZUg5cmxqcHN4bldTckhEcE1fc3VKb3FPcU5BbEI0RjFGV3RMelU2VDRVSVVwNXZIcw?oc=5)**
@@ -161,27 +161,27 @@ Better Cryptocurrency to Buy With $5,000 and Hold Forever: XRP vs.
 
 ## 거래소 공지사항
 
-**1. [New Cryptocurrency Listing](https://www.binance.com/en/support/announcement/list/48)**
+**1. [신규 암호화폐 상장](https://www.binance.com/en/support/announcement/list/48)**
 `거래소: Binance`
 
-**2. [Latest Binance News](https://www.binance.com/en/support/announcement/list/49)**
+**2. [최신 Binance 뉴스](https://www.binance.com/en/support/announcement/list/49)**
 `거래소: Binance`
 
-**3. [Latest Activities](https://www.binance.com/en/support/announcement/list/93)**
+**3. [최신 활동](https://www.binance.com/en/support/announcement/list/93)**
 `거래소: Binance`
 
-**4. [New Fiat Listings](https://www.binance.com/en/support/announcement/list/50)**
+**4. [신규 법정화폐 상장](https://www.binance.com/en/support/announcement/list/50)**
 `거래소: Binance`
 
-**5. [API Updates](https://www.binance.com/en/support/announcement/list/51)**
+**5. [API 업데이트](https://www.binance.com/en/support/announcement/list/51)**
 `거래소: Binance`
 
 
 ## 오늘의 인사이트
 
 **🟠 비트코인**(51건)과 **📈 가격/시장**(28건)이 오늘의 핵심 테마입니다. 비트코인 관련 뉴스와 시장 가격 움직임이 함께 부각되어, 단기 변동성 확대 구간에 진입한 것으로 보입니다.
-- 주요 기사: *Bitcoin fans latch on to ‘ridiculous’ Jane Street conspiracy to explain price slump*
-- 주요 기사: *Bitcoin prices fall below $64,000 after U.S./Israel attack on Iran*
+- 주요 기사: *비트코인 팬들, 가격 급락 설명 위해 ‘터무니없는’ Jane Street 음모론에 매달려*
+- 주요 기사: *미-이스라엘 이란 공습 후 비트코인 $64,000 이하로 하락*
 
 **가격 언급**: 뉴스 제목에서 24건의 가격 데이터가 포착되었습니다 ($1,000, $64,000, $150,000, $70,000, $64,000). 구체적 가격대가 언급되는 것은 시장의 가격 민감도가 높다는 신호입니다.
 

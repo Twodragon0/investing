@@ -39,10 +39,10 @@ image: "/assets/images/generated/news-briefing-crypto-2026-02-10.png"
 
 | 제목 | 출처 | 영향도 |
 |------|------|--------|
-| Bitcoin loses Trump-era gains as crypto market volatility signals uncertainty | Reuters | 상 |
-| Trump meme coin down 96% as Bitcoin and meme coins slide | Fast Company | 상 |
-| The Trump family's crypto portfolio is getting battered with the rest of the industry | Fortune | 중 |
-| What is next for Bitcoin after its recent plunge? | Seeking Alpha | 중 |
+| 비트코인, 트럼프 시대 상승분 반납 — 암호화폐 시장 변동성 속 불확실성 | Reuters | 상 |
+| 트럼프 밈코인 96% 하락, 비트코인·밈코인 동반 급락 | Fast Company | 상 |
+| 트럼프 가문 암호화폐 포트폴리오, 업계 전반 급락 속 직격타 | Fortune | 중 |
+| 최근 급락 이후 Bitcoin의 다음 행보는? | Seeking Alpha | 중 |
 | 비트코인 역대급 레버리지 청산 폭탄 사나에노믹스 "엔캐리 환류" | 글로벌이코노믹 | 상 |
 | 비트 6만달러 붕괴하면 미정부가 대량 매입한다고? | 뉴스1 | 중 |
 | 비트코인 채굴업체 캉고, 4451 BTC 매각AI 투자 재원 확보 | 디지털투데이 | 하 |
@@ -56,13 +56,13 @@ image: "/assets/images/generated/news-briefing-crypto-2026-02-10.png"
 
 | 제목 | 출처 | 영향도 |
 |------|------|--------|
-| Korea Probes Crypto Exchange Over $40 Billion in 'Ghost Bitcoin' | Bloomberg | 상 |
+| 한국, 400억 달러 규모 '유령 비트코인' 관련 암호화폐 거래소 조사 | Bloomberg | 상 |
 | 4만 개 있는데 62만 개 쐈다 빗썸 '유령 비트코인' 전말 | 중앙일보 | 상 |
-| China Extends Crypto Ban to Stablecoins and Tokenized Assets | PYMNTS.com | 상 |
+| 중국, 스테이블코인·토큰화 자산까지 암호화폐 금지 확대 | PYMNTS.com | 상 |
 | [현장에서] 실존적 위기에 처한 암호화폐거래소 | 연합인포맥스 | 중 |
-| Cryptocurrency might make its way into local election campaigns | thebeaconnews.org | 하 |
-| Capitol Connections: Rep. Scot Matayoshi on banning cryptocurrency kiosks | Hawaii News Now | 하 |
-| Missouri officials warn residents as growing cryptocurrency scams continue | fox2now.com | 중 |
+| 암호화폐, 지방 선거 캠페인에 등장 가능성 | thebeaconnews.org | 하 |
+| 국회 연결: 암호화폐 키오스크 금지 법안 논의 | Hawaii News Now | 하 |
+| 미주리 당국, 증가하는 암호화폐 사기에 주민 경고 | fox2now.com | 중 |
 
 **핵심 포인트:**
 - 빗썸 400억 달러 규모 '유령 비트코인' 사건으로 한국 거래소 신뢰도 위기
@@ -73,9 +73,9 @@ image: "/assets/images/generated/news-briefing-crypto-2026-02-10.png"
 
 | 제목 | 출처 | 영향도 |
 |------|------|--------|
-| Malicious packages for dYdX cryptocurrency exchange empties user wallets | Ars Technica | 상 |
-| UNC1069 Targets Cryptocurrency Sector with New Tooling and AI-Enabled Social Engineering | Google Cloud | 상 |
-| Files cast light on Jeffrey Epstein's ties to cryptocurrency | The Guardian | 중 |
+| dYdX 거래소 악성 패키지로 사용자 지갑 탈취 | Ars Technica | 상 |
+| UNC1069, 신규 도구·AI 기반 소셜 엔지니어링으로 암호화폐 분야 공격 | Google Cloud | 상 |
+| Jeffrey Epstein의 암호화폐 연관성 조명 | The Guardian | 중 |
 
 **핵심 포인트:**
 - dYdX 거래소 악성 패키지로 사용자 지갑 탈취 사건 발생
@@ -86,8 +86,8 @@ image: "/assets/images/generated/news-briefing-crypto-2026-02-10.png"
 
 | 제목 | 출처 | 영향도 |
 |------|------|--------|
-| Prediction: This Popular Cryptocurrency Will Plunge 50% (or More) by Year-End 2026 | The Motley Fool | 중 |
-| Is This 1 Massively Undervalued Cryptocurrency a Screaming Buy? | Yahoo Finance | 하 |
+| 전망: 인기 암호화폐, 2026년 말까지 50% 이상 폭락 가능성 | The Motley Fool | 중 |
+| 극도로 저평가된 암호화폐, 강력 매수 기회인가? | Yahoo Finance | 하 |
 
 **핵심 포인트:**
 - 일부 전문가들이 2026년 말까지 특정 암호화폐 50% 이상 급락 예측

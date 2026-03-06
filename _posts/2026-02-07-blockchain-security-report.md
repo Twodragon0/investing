@@ -23,10 +23,10 @@ image: "/assets/images/generated/news-briefing-security-2026-02-07.png"
 
 | 프로젝트 | 피해 규모 | 공격 유형 | 출처 |
 |----------|----------|----------|------|
-| CrossCurve | $3,000,000 | Spoofed Cross-Chain Messages | DeFi Llama |
-| Step Finance | $40,000,000 | Private Key Compromised | DeFi Llama |
-| Revert Lend | $50,000 | Staked Collateral Exploit | DeFi Llama |
-| SwapNet | $16,800,000 | Unlimited Approval Exploit | DeFi Llama |
+| CrossCurve | $3,000,000 | 크로스체인 메시지 스푸핑 | DeFi Llama |
+| Step Finance | $40,000,000 | 개인키 탈취 | DeFi Llama |
+| Revert Lend | $50,000 | 스테이킹 담보 악용 | DeFi Llama |
+| SwapNet | $16,800,000 | 무제한 승인 악용 | DeFi Llama |
 | Aperture LM | $3,200,000 | - | DeFi Llama |
 
 **총 수집된 보안 사고**: 10건

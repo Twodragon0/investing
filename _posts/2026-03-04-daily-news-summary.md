@@ -86,8 +86,8 @@ excerpt: "암호화폐 107건, 주식 147건, 보안 2건, 규제 38건, 소셜 
 
 > 즉시 확인이 필요한 긴급 뉴스입니다.
 
-- **US stock market big crash today: Why Dow, S&P 500, Nasdaq in deep red today? Oil, gas and gold prices surge**
-- **Why didn't US avert stock market Dow Jones, S&P 500 and Nasdaq crash today like UAE? Analysts insights**
+- **미국 증시 오늘 대폭락: 다우, S&P 500, 나스닥 급락 이유는? 유가·가스·금 가격 급등**
+- **왜 미국은 UAE처럼 다우, S&P 500, 나스닥 폭락을 막지 못했나? 전문가 분석**
 - **미국-이란 중동전쟁에 코스피·코스닥 급락…제약·바이오도 타격**
 - **5600선 올라선 코스피…코스닥은 매수 사이드카**
 - **Crypto Hacks Drop to $26.5M in February, Lowest Since March 2025 - Live Bitcoin News**
@@ -124,7 +124,7 @@ excerpt: "암호화폐 107건, 주식 147건, 보안 2건, 규제 38건, 소셜 
 
 ## 정치인 워치
 
-- **중앙은행 정책**에서는 Next Fed Meeting: When It Is in March and What To Expect on Interest Rates Investopedia 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
+- **중앙은행 정책**에서는 3월 Fed 회의 일정과 금리 전망 (Investopedia) 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
 
 - **트럼프 정책**: 1건. 행정명령 및 관세 정책 변화는 반도체·자동차·에너지 섹터의 변동성을 확대시킵니다.
 - **미국 의회 거래**: 1건. 의원들의 거래 패턴은 입법 방향의 간접 신호로 해석됩니다. 특히 대규모 매수는 해당 섹터 지원 법안 발의 가능성과 연결될 수 있습니다.
@@ -141,8 +141,8 @@ excerpt: "암호화폐 107건, 주식 147건, 보안 2건, 규제 38건, 소셜 
 - 단일종목 레버리지 ETF의 세부방안은 검토중입니다.
 - 거래소 '무과실 배상' 카드 꺼낸 정부…가상자산 규제, 책임 중심으로 - v.daum.net
 - 장기(예:2년) 미정리 PF 대출의 회수예상가액을 공시지가로 하는 등 상호금융조합의 리스크 관리를 엄격화하겠습니다.  - ｢상호금융업감독규정｣ 일부개정안 규정변경예고 (3.3일~3.16일) -
-- FCA to review U.K.’s new listing rules - Investment Executive
-- CrowdStrike gives upbeat earnings outlook as AI raises the stakes around cyberthreats
+- FCA, 영국 신규 상장 규정 검토 착수 - Investment Executive
+- CrowdStrike, AI로 사이버 위협 고조되는 가운데 긍정적 실적 전망 제시
 
 ---
 
@@ -151,9 +151,9 @@ excerpt: "암호화폐 107건, 주식 147건, 보안 2건, 규제 38건, 소셜 
 ### 암호화폐 뉴스 (107건)
 
 **대표 헤드라인:**
-- Wallet Maintenance for Ethereum Network (ETH) - 2026-03-04
-- Binance Launches AI Agent Skills, Powering Every Agent with a Binance-Grade Brain
-- Fabric Protocol Trading Competition: Trade Fabric Protocol (ROBO) and Share $100K Worth of Rewards
+- Ethereum 네트워크(ETH) 지갑 점검 - 2026-03-04
+- Binance, AI 에이전트 스킬 출시 — 모든 에이전트에 Binance급 두뇌 탑재
+- Fabric Protocol 트레이딩 대회: Fabric Protocol(ROBO) 거래하고 $100K 보상 나누기
 
 [상세 보기](https://investing.2twodragon.com/crypto-news/2026/03/04/daily-crypto-news-digest/)
 
@@ -165,9 +165,9 @@ excerpt: "암호화폐 107건, 주식 147건, 보안 2건, 규제 38건, 소셜 
 **주요 수치**: KOSPI 5,384.06(-7.62%), KOSDAQ 1,051.52(-8.68%), USD/KRW 1,481.07(-0.31%)
 
 **대표 헤드라인:**
-- Stock market today: Dow, S&P 500, Nasdaq trim losses but end sharply lower as Wall Street assesses Iran war worries
-- Stock futures fall as traders monitor latest developments in U.S.-Iran war: Live updates
-- Stock Market Today: Dow Sinks 300 Points; Oil Prices Jump on Iran Conflict — Live Updates
+- 오늘 증시: 다우, S&P 500, 나스닥 낙폭 줄였지만 이란 전쟁 우려 속 급락 마감
+- 주가 선물, 미-이란 전쟁 최신 상황 주시하며 하락: 실시간 업데이트
+- 오늘의 증시: 다우 300포인트 급락 — 이란 갈등에 유가 급등
 
 [상세 보기](https://investing.2twodragon.com/stock-news/2026/03/04/daily-stock-news-digest/)
 
@@ -183,15 +183,15 @@ excerpt: "암호화폐 107건, 주식 147건, 보안 2건, 규제 38건, 소셜 
 ### 월드모니터 브리핑 (20건)
 
 **주요 글로벌 이슈:**
-- **South Sudan risks return to full-blown civil war as violence escalates**
-- **‘Imperialist undertones’: global south condemns US-Israeli war with Iran**
-- **Wall Street’s ‘fear gauge’ is rising as Iran conflict escalates. Here’s what…
+- **남수단, 폭력 사태 고조로 전면 내전 재발 위기**
+- **’제국주의적 색채’: 글로벌 사우스, 미-이스라엘의 이란 전쟁 강력 규탄**
+- **이란 갈등 고조에 Wall Street ‘공포 지수’ 상승 — 투자자가 주목해야 할 것들…**
 
 | 제목 | 출처 |
 | --- | --- |
-| [**South Sudan risks return to full-blown civil war as violence escalates**](https://www.theguardian.com/world/2026/mar/03/south-sudan-risks-return-civil-war-violence-escalates) | WorldMonitor/Guardian World |
-| [**‘Imperialist undertones’: global south condemns US-Israeli war with Iran**](https://www.theguardian.com/world/2026/mar/03/global-south-condemns-us-israeli-war-with-iran) | WorldMonitor/Guardian World |
-| [**Wall Street’s ‘fear gauge’ is rising as Iran conflict escalates. Here’s what investors should watch.**](https://www.marketwatch.com/story/wall-streets-fear-gauge-is-rising-as-iran-conflict-escalates-heres-what-investors-should-watch-543b5d5c?mod=mw_rss_topstories) | WorldMonitor/MarketWatch |
+| [**남수단, 폭력 사태 고조로 전면 내전 재발 위기**](https://www.theguardian.com/world/2026/mar/03/south-sudan-risks-return-civil-war-violence-escalates) | WorldMonitor/Guardian World |
+| [**’제국주의적 색채’: 글로벌 사우스, 미-이스라엘의 이란 전쟁 강력 규탄**](https://www.theguardian.com/world/2026/mar/03/global-south-condemns-us-israeli-war-with-iran) | WorldMonitor/Guardian World |
+| [**이란 갈등 고조에 Wall Street ‘공포 지수’ 상승 — 투자자가 주목해야 할 것들**](https://www.marketwatch.com/story/wall-streets-fear-gauge-is-rising-as-iran-conflict-escalates-heres-what-investors-should-watch-543b5d5c?mod=mw_rss_topstories) | WorldMonitor/MarketWatch |
 
 [상세 보기](https://investing.2twodragon.com/market-analysis/2026/03/04/daily-worldmonitor-briefing/)
 
@@ -206,9 +206,9 @@ excerpt: "암호화폐 107건, 주식 147건, 보안 2건, 규제 38건, 소셜 
 ### 소셜 미디어 동향 (37건)
 
 **화제 토픽:**
-- Cathie Wood says Bitcoin is "hands down" better than Gold."Bitcoin is a hedge against Both...
-- MICHAEL SAYLOR: "We're in the business of not selling Bitcoin.""We have a PhD in HODLing."
-- BREAKING :🇺🇸 Blackrock is loading again, they have bought 4,309 BTC worth $296,750,000.This is...
+- Cathie Wood, 비트코인이 금보다 "압도적으로" 낫다고 발언 — "비트코인은 인플레이션 양면 모두에 대한 헤지"
+- MICHAEL SAYLOR: "우리는 비트코인을 팔지 않는 사업을 하고 있다." "우리는 HODLing 박사 학위 보유자다."
+- 속보: Blackrock, 다시 매집 시작 — 4,309 BTC ($296,750,000 상당) 추가 매수…
 
 [상세 보기](https://investing.2twodragon.com/social-media/2026/03/04/daily-social-media-digest/)
 
@@ -216,11 +216,11 @@ excerpt: "암호화폐 107건, 주식 147건, 보안 2건, 규제 38건, 소셜 
 
 ## 주목할 소식
 
-- Binance Launches AI Agent Skills, Powering Every Agent with a Binance-Grade Brain
-- Stock futures fall as traders monitor latest developments in U.S.-Iran war: Live updates
-- Stock Market Today: Dow Sinks 300 Points; Oil Prices Jump on Iran Conflict — Live Updates
-- Dow closes down 400 points after falling as much as 1,200 points as Iran conflict volatility continues: Live updates
-- S&P 500 closes flat, rebounding from lows as traders buy the dip after U.S.-Iran attacks: Live updates
+- Binance, AI 에이전트 스킬 출시 — 모든 에이전트에 Binance급 두뇌 탑재
+- 주가 선물, 미-이란 전쟁 최신 상황 주시하며 하락: 실시간 업데이트
+- 오늘의 증시: 다우 300포인트 급락 — 이란 갈등에 유가 급등
+- 다우, 장중 1,200포인트 급락 후 400포인트 하락 마감 — 이란 갈등 변동성 지속: 실시간 업데이트
+- S&P 500, 미-이란 공습 후 저점 매수세 유입으로 낙폭 회복 보합 마감: 실시간 업데이트
 
 ---
 
