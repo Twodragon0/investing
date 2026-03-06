@@ -31,7 +31,7 @@ ko:
   footer_links: "바로가기"
   footer_connect: "연결"
   footer_qrcode: "QR 코드"
-  footer_rights: "All rights reserved."
+  footer_rights: "모든 권리 보유."
   result_count: "건"
 en:
   search_placeholder: "Search posts..."
@@ -101,7 +101,7 @@ ja:
   footer_links: "クイックリンク"
   footer_connect: "接続"
   footer_qrcode: "QRコード"
-  footer_rights: "All rights reserved."
+  footer_rights: "著作権所有."
   result_count: "件"
 zh-CN:
   search_placeholder: "搜索文章..."
