@@ -103,16 +103,16 @@ AI/기술  ███████░░░░░░░░░░░    40%  (44건
 
 | # | 제목 | 거래소 |
 |---|------|--------|
-| 1 | [**New Cryptocurrency ListingCheck out the latest coin listings and pairs on Launchpad, Launchpool, Spot, Margin, and Futures markets.**](https://www.binance.com/en/support/announcement/list/48) | Binance |
-| 2 | [**Latest Binance NewsStay on top of what's new in Binance.**](https://www.binance.com/en/support/announcement/list/49) | Binance |
-| 3 | [**Latest ActivitiesFind promotions that interest you.**](https://www.binance.com/en/support/announcement/list/93) | Binance |
-| 4 | [**New Fiat ListingsSee which new fiat-to-crypto trading pairs are available on Binance.**](https://www.binance.com/en/support/announcement/list/50) | Binance |
-| 5 | [**API UpdatesLearn latest news on API updates.**](https://www.binance.com/en/support/announcement/list/51) | Binance |
-| 6 | [**Maintenance UpdatesStay updated on maintenance of various networks and tokens.**](https://www.binance.com/en/support/announcement/list/157) | Binance |
-| 7 | [**Crypto AirdropCheck the latest crypto airdrops Binance supports.**](https://www.binance.com/en/support/announcement/list/128) | Binance |
-| 8 | [**DelistingGet information on coins or trading pairs to be removed.**](https://www.binance.com/en/support/announcement/list/161) | Binance |
-| 9 | [**Binance Will Add Espresso (ESP) on Earn, Buy Crypto, Convert, VIP Loan, Margin & Futures**](https://www.binance.com/en/support/announcement/detail/b4a7618315fc4e32acbea2f68143f11d) | Binance |
-| 10 | [**MENA and South Asia Exclusive: Binance P2P Merchant Protection Plan Extended, Join and Trade with Confidence Today!**](https://www.binance.com/en/support/announcement/detail/f276cec35e6f4417900736ea184b9099) | Binance |
+| 1 | [**새로운 암호화폐 상장 — 론치패드, 론치풀, 현물, 마진, 선물 시장 최신 코인 및 거래쌍 확인**](https://www.binance.com/en/support/announcement/list/48) | Binance |
+| 2 | [**최신 Binance 뉴스 — Binance의 새로운 소식을 한눈에**](https://www.binance.com/en/support/announcement/list/49) | Binance |
+| 3 | [**최신 이벤트 — 관심 있는 프로모션 찾기**](https://www.binance.com/en/support/announcement/list/93) | Binance |
+| 4 | [**신규 법정화폐 상장 — Binance에서 사용 가능한 새로운 법정화폐·암호화폐 거래쌍 확인**](https://www.binance.com/en/support/announcement/list/50) | Binance |
+| 5 | [**API 업데이트 — 최신 API 관련 소식 확인**](https://www.binance.com/en/support/announcement/list/51) | Binance |
+| 6 | [**점검 업데이트 — 각종 네트워크 및 토큰 점검 현황 확인**](https://www.binance.com/en/support/announcement/list/157) | Binance |
+| 7 | [**암호화폐 에어드랍 — Binance가 지원하는 최신 에어드랍 확인**](https://www.binance.com/en/support/announcement/list/128) | Binance |
+| 8 | [**상장 폐지 — 제거 예정 코인 또는 거래쌍 정보 확인**](https://www.binance.com/en/support/announcement/list/161) | Binance |
+| 9 | [**Binance, Espresso(ESP)를 적립, 암호화폐 구매, 전환, VIP 대출, 마진 및 선물에 추가 예정**](https://www.binance.com/en/support/announcement/detail/b4a7618315fc4e32acbea2f68143f11d) | Binance |
+| 10 | [**MENA·남아시아 한정: Binance P2P 상인 보호 플랜 연장 — 지금 가입하고 안심하고 거래하세요!**](https://www.binance.com/en/support/announcement/detail/f276cec35e6f4417900736ea184b9099) | Binance |
 
 ## 오늘의 인사이트
 
