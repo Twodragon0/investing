@@ -876,12 +876,14 @@ class ThemeSummarizer:
                     ]
 
                     # Add thumbnail if image available
-                    image_url = art.get("image", "")
+                    image_url = article.get("image", "")
                     if image_url:
                         safe_img = _esc(image_url, quote=True)
+                        onerr = "this.parentElement.style.display='none'"
                         card_parts.append(
                             f'<div class="news-card-thumb">'
-                            f'<img src="{safe_img}" alt="" loading="lazy" onerror="this.parentElement.style.display=\'none\'">'
+                            f'<img src="{safe_img}" alt="" loading="lazy"'
+                            f' onerror="{onerr}">'
                             f'</div>'
                         )
 
@@ -889,7 +891,9 @@ class ThemeSummarizer:
                     if link:
                         safe_link = _esc(link, quote=True)
                         card_parts.append(
-                            f'<a href="{safe_link}" class="news-title" target="_blank" rel="noopener noreferrer">{safe_title}</a>'
+                            f'<a href="{safe_link}" class="news-title"'
+                            f' target="_blank" rel="noopener noreferrer">'
+                            f'{safe_title}</a>'
                         )
                     else:
                         card_parts.append(f'<span class="news-title">{safe_title}</span>')
