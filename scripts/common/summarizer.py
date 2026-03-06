@@ -71,10 +71,8 @@ def _truncate_sentence(text: str, max_len: int = 300) -> str:
 
 
 _GENERIC_DESC_PATTERNS = [
-    re.compile(r"에서 보도한.{2,15}입니다\.?$"),
-    re.compile(r"거래소 공지사항입니다\.?$"),
     re.compile(r"에서 보도한 뉴스입니다\.?$"),
-    re.compile(r"^.{2,20} 관련 소식입니다\.?\s*\(.{2,20}\)$"),
+    re.compile(r"거래소 공지사항입니다\.?\s*$"),
     re.compile(r"please enable javascript", re.I),
     re.compile(r"^AMENDMENT NO\.", re.I),
     re.compile(r"^FORM\s+\d", re.I),

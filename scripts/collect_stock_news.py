@@ -24,13 +24,10 @@ from common.dedup import DedupEngine
 from common.enrichment import _STOCK_SOURCE_CONTEXT, enrich_items
 from common.markdown_utils import (
     html_reference_details,
-    html_source_tag,
-    smart_truncate,
 )
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
-from common.translator import get_display_title
 from common.utils import detect_language, request_with_retry
 
 try:
@@ -476,62 +473,15 @@ def main():
     except Exception as e:
         logger.warning("Market snapshot image failed: %s", e)
 
+    # Enrich all items with descriptions before themed sections
+    enrich_items(all_items, context_map=_STOCK_SOURCE_CONTEXT, max_fetch=15)
+
     # Themed news sections with description cards
     content_parts.append("\n---\n")
     themed = summarizer.generate_themed_news_sections()
     if themed:
         content_parts.append(themed)
         content_parts.append("\n---\n")
-
-    # Global stock news with descriptions (top 5 featured)
-    global_news_items = [
-        item
-        for item in all_items
-        if item.get("source") != "Alpha Vantage" and detect_language(item.get("title", "")) != "ko"
-    ]
-    enrich_items(global_news_items, context_map=_STOCK_SOURCE_CONTEXT, max_fetch=8)
-    if global_news_items:
-        content_parts.append("## 글로벌 주식 뉴스\n")
-        shown = 0
-        for item in global_news_items[:15]:
-            title = get_display_title(item)
-            link = item.get("link", "")
-            source = item.get("source", "")
-            description = (item.get("description_ko") or item.get("description", "")).strip()
-            if link:
-                content_parts.append(f"**{shown + 1}. [{title}]({link})**")
-            else:
-                content_parts.append(f"**{shown + 1}. {title}**")
-            if description and description != title:
-                desc_text = smart_truncate(description, 150)
-                content_parts.append(f"{desc_text}")
-                content_parts.append(f"{html_source_tag(source)}\n")
-            shown += 1
-
-    # Korean stock news with descriptions (top 5 featured)
-    korean_news_items = [
-        item
-        for item in all_items
-        if item.get("source") != "Alpha Vantage" and detect_language(item.get("title", "")) == "ko"
-    ]
-    enrich_items(korean_news_items, context_map=_STOCK_SOURCE_CONTEXT, max_fetch=8)
-    if korean_news_items:
-        content_parts.append("\n## 한국 주식 뉴스\n")
-        shown = 0
-        for item in korean_news_items[:15]:
-            title = get_display_title(item)
-            link = item.get("link", "")
-            source = item.get("source", "")
-            description = (item.get("description_ko") or item.get("description", "")).strip()
-            if link:
-                content_parts.append(f"**{shown + 1}. [{title}]({link})**")
-            else:
-                content_parts.append(f"**{shown + 1}. {title}**")
-            if description and description != title:
-                desc_text = smart_truncate(description, 150)
-                content_parts.append(f"{desc_text}")
-                content_parts.append(f"{html_source_tag(source)}\n")
-            shown += 1
 
     # Market data snapshot table (improved with emoji direction + Korean data)
     content_parts.append("\n## 시장 데이터 스냅샷\n")

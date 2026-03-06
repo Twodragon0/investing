@@ -262,6 +262,168 @@ def _extract_title_entities(title: str) -> list:
     return entities
 
 
+def _analyze_title_content(title: str) -> str:
+    """Generate an analytical Korean description from a news title.
+
+    Instead of generic templates, this produces a title-derived summary
+    that explains what the article is about and why it matters.
+    """
+    title_lower = title.lower()
+    title_stripped = title.strip()
+
+    # --- Korean title: extract meaning and add context ---
+    kr_chars = len(re.findall(r"[가-힣]", title_stripped))
+    if kr_chars > len(title_stripped) * 0.3:
+        return _analyze_korean_title(title_stripped)
+
+    # --- English title: translate key concepts and add analysis ---
+    return _analyze_english_title(title_stripped, title_lower)
+
+
+def _analyze_korean_title(title: str) -> str:
+    """Analyze a Korean news title and generate contextual description."""
+    # Circuit breaker / market crash
+    if any(kw in title for kw in ["서킷브레이커", "사이드카"]):
+        if "매수" in title:
+            return "급락 이후 반등 과정에서 매수 사이드카가 발동되었습니다. 변동성 확대 장세에서 저점 매수세 유입 신호입니다."
+        return "급격한 하락으로 매매거래가 일시 중단되었습니다. 투자 심리 위축과 추가 하방 리스크에 유의해야 합니다."
+
+    if any(kw in title for kw in ["폭락", "급락", "패닉"]):
+        pct = re.search(r"(\d+(?:\.\d+)?)\s*%", title)
+        pct_str = f" {pct.group(1)}% " if pct else " 큰 폭으로 "
+        return f"시장이{pct_str}급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다."
+
+    if any(kw in title for kw in ["급등", "폭등", "반등"]):
+        return "시장 반등 움직임이 포착되었습니다. 기술적 반등인지 추세 전환인지 거래량과 수급 확인이 필요합니다."
+
+    if any(kw in title for kw in ["전쟁", "분쟁", "군사", "이란", "중동"]):
+        return "지정학적 리스크가 금융시장에 영향을 미치고 있습니다. 유가·환율·안전자산 흐름을 주시해야 합니다."
+
+    if any(kw in title for kw in ["금리", "금통위", "한은", "한국은행"]):
+        return "한국은행 통화정책 관련 소식입니다. 금리 결정은 채권·부동산·주식 시장 전반에 영향을 미칩니다."
+
+    if any(kw in title for kw in ["환율", "원달러", "원화"]):
+        return "환율 변동 소식입니다. 원화 약세는 수입 물가 상승과 외국인 매도 압력으로 이어질 수 있습니다."
+
+    if any(kw in title for kw in ["삼성전자", "하이닉스", "반도체"]):
+        if any(kw in title for kw in ["매수", "기회", "긍정"]):
+            return "반도체 섹터에 대한 매수 기회론이 제기되고 있습니다. 업종 펀더멘탈과 글로벌 수요 동향 확인이 필요합니다."
+        if any(kw in title for kw in ["하락", "흔들", "약세"]):
+            return "반도체주가 외부 리스크로 약세를 보이고 있습니다. 섹터 하락이 일시적인지 구조적인지 판단이 중요합니다."
+        return "반도체 산업 관련 주요 소식입니다. 한국 증시에서 반도체는 시가총액 비중이 가장 높은 핵심 섹터입니다."
+
+    if any(kw in title for kw in ["상장폐지", "주가조작", "불공정거래"]):
+        return "불공정거래 적발 소식입니다. 투자 시 기업 실체와 거래 패턴 검증의 중요성을 재확인시킵니다."
+
+    if any(kw in title for kw in ["거래시간", "제도", "규정"]):
+        return "증시 제도 변경 관련 소식입니다. 거래 환경 변화에 따른 투자 전략 조정이 필요할 수 있습니다."
+
+    if any(kw in title for kw in ["버블", "과열", "밸류에이션"]):
+        return "시장 밸류에이션 논쟁이 이어지고 있습니다. 펀더멘탈 대비 가격 수준 점검이 필요한 시점입니다."
+
+    if any(kw in title for kw in ["바이오", "제약"]):
+        return "바이오·제약 섹터 관련 소식입니다. 임상 결과와 규제 승인 여부가 주가 변동의 핵심 변수입니다."
+
+    if any(kw in title for kw in ["IPO", "공모", "상장"]):
+        return "IPO·신규 상장 관련 소식입니다. 공모가 대비 시장 평가와 수급 동향을 주시하세요."
+
+    if any(kw in title for kw in ["유가", "원유", "석유"]):
+        return "유가 변동 소식입니다. 원유 가격은 인플레이션·교역조건·에너지 섹터에 직접적 영향을 미칩니다."
+
+    if any(kw in title for kw in ["관세", "무역", "수출", "수입"]):
+        return "통상·무역 정책 관련 소식입니다. 글로벌 공급망과 수출 기업 실적에 영향을 줄 수 있습니다."
+
+    # Fallback: extract key nouns from title
+    nouns = re.findall(r"[가-힣]{2,}", title)[:3]
+    if nouns:
+        return f"{', '.join(nouns)} 관련 시장 뉴스입니다. 투자 판단 시 원문 기사의 세부 내용을 확인하세요."
+    return title
+
+
+def _analyze_english_title(title: str, title_lower: str) -> str:
+    """Analyze an English news title and generate Korean description."""
+    # Market crash / plunge
+    if any(kw in title_lower for kw in ["crash", "plunge", "tumble", "sink", "slump"]):
+        pct_m = re.search(r"(\d[\d,.]*)\s*(?:points?|pts?|%)", title)
+        extra = f" {pct_m.group(0)}의 하락폭을 기록했습니다." if pct_m else ""
+        return f"시장 급락 소식입니다.{extra} 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다."
+
+    if any(kw in title_lower for kw in ["rally", "surge", "soar", "jump", "climb"]):
+        return "시장 상승 소식입니다. 상승 동력의 지속성과 추격 매수 리스크를 함께 고려해야 합니다."
+
+    if any(kw in title_lower for kw in ["oil", "crude", "brent", "wti"]):
+        price_m = re.search(r"\$(\d[\d,.]*)", title)
+        price_str = f" 배럴당 ${price_m.group(1)}를 기록했습니다." if price_m else ""
+        return f"원유 가격 변동 소식입니다.{price_str} 유가는 인플레이션과 에너지 섹터 수익성의 핵심 변수입니다."
+
+    if any(kw in title_lower for kw in ["iran", "war", "conflict", "military"]):
+        return "지정학적 분쟁이 글로벌 금융시장에 충격을 주고 있습니다. 안전자산 선호와 위험자산 회피 흐름에 주목하세요."
+
+    if any(kw in title_lower for kw in ["treasury", "yield", "bond"]):
+        return "미 국채 시장 동향입니다. 금리 변동은 주식 밸류에이션과 대출 비용에 직접적 영향을 미칩니다."
+
+    if any(kw in title_lower for kw in ["inflation", "cpi", "pce"]):
+        return "인플레이션 관련 소식입니다. 물가 지표는 연준 통화정책의 핵심 판단 기준이 됩니다."
+
+    if any(kw in title_lower for kw in ["fed", "fomc", "powell", "rate cut", "rate hike"]):
+        return "연준 통화정책 관련 소식입니다. 금리 결정은 글로벌 자산 배분에 가장 큰 영향을 미치는 변수입니다."
+
+    if any(kw in title_lower for kw in ["earning", "revenue", "profit", "guidance"]):
+        tickers = re.findall(r"\b[A-Z]{2,5}\b", title)
+        names = [t for t in tickers if t not in {"CEO", "IPO", "SEC", "FED", "GDP", "CPI", "ETF", "AI"}]
+        if names:
+            return f"{', '.join(names[:2])} 기업 실적 발표 소식입니다. 실적 서프라이즈 여부와 향후 가이던스가 주가 방향을 결정합니다."
+        return "기업 실적 발표 소식입니다. 실적 서프라이즈 여부와 향후 가이던스가 주가 방향을 결정합니다."
+
+    if any(kw in title_lower for kw in ["trump", "white house", "executive order"]):
+        return "미국 정치·정책 관련 소식입니다. 정책 변화는 특정 섹터와 글로벌 무역 환경에 영향을 줄 수 있습니다."
+
+    if any(kw in title_lower for kw in ["ai ", "artificial intelligence", "anthropic", "openai", "nvidia"]):
+        return "AI·기술 섹터 관련 소식입니다. AI 산업의 성장세와 규제 동향이 관련주 투자에 핵심 변수입니다."
+
+    if any(kw in title_lower for kw in ["chip", "semiconductor", "broadcom", "tsmc", "amd", "intel"]):
+        return "반도체 산업 관련 소식입니다. 글로벌 반도체 사이클과 AI 수요가 업종 방향성을 좌우합니다."
+
+    if any(kw in title_lower for kw in ["bitcoin", "btc", "crypto", "ethereum"]):
+        return "암호화폐 시장 관련 소식입니다. 디지털 자산 가격은 거시경제 환경과 규제 동향에 연동됩니다."
+
+    if any(kw in title_lower for kw in ["etf", "fund", "inflow", "outflow"]):
+        return "ETF·펀드 자금 흐름 관련 소식입니다. 기관 자금 동향은 중기 시장 방향의 선행 지표입니다."
+
+    if any(kw in title_lower for kw in ["s&p", "nasdaq", "dow", "futures"]):
+        return "미국 주요 지수 동향입니다. 글로벌 증시의 방향성을 가늠하는 핵심 지표입니다."
+
+    if any(kw in title_lower for kw in ["korea", "kospi", "kosdaq"]):
+        return "한국 증시 관련 글로벌 보도입니다. 외국인 투자자 시각에서 본 한국 시장 평가를 확인하세요."
+
+    if any(kw in title_lower for kw in ["tariff", "trade war", "sanction"]):
+        return "관세·무역 분쟁 관련 소식입니다. 글로벌 공급망 재편과 수출 기업 실적에 영향을 미칩니다."
+
+    if any(kw in title_lower for kw in ["jobs", "employment", "unemployment", "nonfarm"]):
+        return "고용 지표 관련 소식입니다. 노동시장 데이터는 연준 금리 정책과 소비 전망의 핵심 지표입니다."
+
+    if any(kw in title_lower for kw in ["hack", "breach", "security"]):
+        return "보안 사건 관련 소식입니다. 관련 기업 주가와 사이버보안 섹터 수혜 여부를 확인하세요."
+
+    if any(kw in title_lower for kw in ["sec", "regulation", "compliance"]):
+        return "금융 규제 관련 소식입니다. 규제 변화는 해당 섹터의 비용 구조와 사업 환경을 변화시킵니다."
+
+    if any(kw in title_lower for kw in ["cuba", "regime"]):
+        return "미국 외교·안보 정책 관련 소식입니다. 지정학적 리스크 확대가 시장 심리에 영향을 줄 수 있습니다."
+
+    if any(kw in title_lower for kw in ["dhs", "secretary", "cabinet"]):
+        return "미국 정부 인사 변경 소식입니다. 주요 부처 수장 교체는 관련 정책 방향에 변화를 가져올 수 있습니다."
+
+    if any(kw in title_lower for kw in ["daylight", "spring forward"]):
+        return "서머타임(DST) 전환이 증시에 미치는 영향을 분석한 기사입니다. 계절적 패턴 참고용 데이터입니다."
+
+    # Fallback: extract meaningful entities
+    entities = _extract_title_entities(title)
+    if entities:
+        return f"{', '.join(entities[:3])} 관련 글로벌 시장 소식입니다. 원문에서 세부 내용을 확인하세요."
+    return title
+
+
 def generate_synthetic_description(
     title: str,
     source: str,
@@ -269,99 +431,26 @@ def generate_synthetic_description(
 ) -> str:
     """Generate a contextual description when RSS provides none.
 
-    Creates a meaningful summary by extracting key entities from the title
-    and combining them with topic context. Produces specific, informative
-    sentences rather than generic boilerplate.
+    Uses title content analysis to produce meaningful, specific summaries
+    instead of generic template-based descriptions.
     """
+    # Try title-based analysis first (produces specific, analytical content)
+    analysis = _analyze_title_content(title)
+    if analysis and analysis != title and len(analysis) > 20:
+        return analysis
+
+    # Fallback to source-labeled description
     label = _get_source_label(source, context_map or {})
-    title_lower = title.lower()
     entities = _extract_title_entities(title)
     entity_str = ", ".join(entities[:3]) if entities else ""
-
-    # --- Topic-specific patterns with entity insertion ---
-
-    # Crypto patterns
-    if any(kw in title_lower for kw in ["bitcoin", "btc", "비트코인"]):
-        if entity_str:
-            return f"비트코인 관련 주요 소식입니다. {entity_str} 등 핵심 내용을 {label}에서 보도했습니다."
-        return f"{label}에서 비트코인 시장 동향을 보도했습니다."
-    if any(kw in title_lower for kw in ["ethereum", "eth", "이더리움"]):
-        if entity_str:
-            return f"이더리움 관련 소식입니다. {entity_str} 등이 언급되었습니다. ({label})"
-        return f"{label}에서 이더리움 관련 소식을 전했습니다."
-    if any(kw in title_lower for kw in ["solana", "sol", "솔라나"]):
-        return f"{label}에서 솔라나 생태계 관련 소식을 보도했습니다." + (f" ({entity_str})" if entity_str else "")
-    if any(kw in title_lower for kw in ["xrp", "ripple", "리플"]):
-        return f"{label}에서 XRP·리플 관련 소식을 전했습니다." + (f" ({entity_str})" if entity_str else "")
-    if any(kw in title_lower for kw in ["defi", "디파이", "tvl"]):
-        return "DeFi 생태계 동향입니다." + (
-            f" {entity_str} 관련 변화가 보고되었습니다." if entity_str else f" ({label})"
-        )
-    if any(kw in title_lower for kw in ["nft", "metaverse", "메타버스"]):
-        return "NFT·메타버스 관련 소식입니다." + (f" ({entity_str})" if entity_str else f" ({label})")
-    if any(kw in title_lower for kw in ["hack", "exploit", "breach", "해킹", "보안"]):
-        return "보안 사건이 보고되었습니다." + (
-            f" {entity_str} 관련 내용을 확인하세요." if entity_str else f" ({label})"
-        )
-    if any(kw in title_lower for kw in ["stablecoin", "스테이블코인", "usdt", "usdc"]):
-        return "스테이블코인 관련 소식입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
-    if any(kw in title_lower for kw in ["whale", "고래", "large transfer"]):
-        return "대규모 자금 이동이 감지되었습니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
-    if any(kw in title_lower for kw in ["etf", "spot etf"]):
-        return "ETF 관련 소식입니다." + (f" {entity_str} 흐름이 주목됩니다." if entity_str else f" ({label})")
-    if any(kw in title_lower for kw in ["mining", "채굴", "hashrate", "해시레이트"]):
-        return "채굴·해시레이트 관련 소식입니다." + (f" ({entity_str})" if entity_str else f" ({label})")
-
-    # Stock-specific patterns
-    if any(kw in title_lower for kw in ["earnings", "revenue", "실적", "매출"]):
-        return "기업 실적 관련 뉴스입니다." + (f" {entity_str} 실적이 주목됩니다." if entity_str else f" ({label})")
-    if any(kw in title_lower for kw in ["fed", "fomc", "금리", "rate", "interest"]):
-        return "금리·통화정책 관련 뉴스입니다." + (
-            f" {entity_str} 변동이 시장에 영향을 줄 수 있습니다." if entity_str else f" ({label})"
-        )
-    if any(kw in title_lower for kw in ["ipo", "상장"]):
-        return "IPO·상장 관련 뉴스입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
-    if any(kw in title_lower for kw in ["tariff", "관세", "trade war", "무역"]):
-        return "관세·무역 정책 관련 뉴스입니다." + (
-            f" {entity_str} 이슈가 부각되고 있습니다." if entity_str else f" ({label})"
-        )
-    if any(kw in title_lower for kw in ["nasdaq", "s&p", "dow", "나스닥", "다우"]):
-        return "미국 증시 관련 소식입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
-    if any(kw in title_lower for kw in ["kospi", "kosdaq", "코스피", "코스닥"]):
-        return "한국 증시 관련 소식입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
-
-    # Political-specific patterns
-    if any(kw in title_lower for kw in ["executive order", "행정명령"]):
-        return "행정명령 관련 뉴스입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
-    if any(kw in title_lower for kw in ["congress", "의회", "senate", "상원"]):
-        return "의회 동향 관련 뉴스입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
-    if any(kw in title_lower for kw in ["insider", "내부자", "form 4"]):
-        return "내부자 거래 관련 공시입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
-    if any(kw in title_lower for kw in ["trump", "트럼프"]):
-        return "트럼프 관련 정책 소식입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
-
-    # Regulatory patterns
-    if any(kw in title_lower for kw in ["regulation", "규제", "compliance"]):
-        return "규제 관련 뉴스입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
-    if any(kw in title_lower for kw in ["sec", "cftc", "금융위"]):
-        return "금융 당국 관련 소식입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
-
-    # World news patterns
-    if any(kw in title_lower for kw in ["war", "전쟁", "conflict", "분쟁"]):
-        return "분쟁·안보 관련 뉴스입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
-    if any(kw in title_lower for kw in ["election", "선거", "vote", "투표"]):
-        return "선거·정치 관련 뉴스입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
-    if any(kw in title_lower for kw in ["climate", "기후", "환경"]):
-        return "기후·환경 관련 뉴스입니다." + (f" {entity_str} ({label})" if entity_str else f" ({label})")
 
     # Exchange-specific fallback
     if any(kw in source.lower() for kw in ["binance", "bybit", "okx", "upbit"]):
         return f"{label} 공지사항입니다." + (f" ({entity_str})" if entity_str else "")
 
-    # Generic fallback: use title entities for specificity
     if entity_str:
-        return f"{label}에서 {entity_str} 관련 소식을 보도했습니다."
-    return f"{label}에서 보도한 뉴스입니다."
+        return f"{entity_str} 관련 시장 뉴스입니다. 투자 판단 시 원문을 확인하세요."
+    return title
 
 
 def enrich_item(
