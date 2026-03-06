@@ -884,7 +884,7 @@ class ThemeSummarizer:
                             f'<div class="news-card-thumb">'
                             f'<img src="{safe_img}" alt="" loading="lazy"'
                             f' onerror="{onerr}">'
-                            f'</div>'
+                            f"</div>"
                         )
 
                     card_parts.append('<div class="news-card-body">')
@@ -893,7 +893,7 @@ class ThemeSummarizer:
                         card_parts.append(
                             f'<a href="{safe_link}" class="news-title"'
                             f' target="_blank" rel="noopener noreferrer">'
-                            f'{safe_title}</a>'
+                            f"{safe_title}</a>"
                         )
                     else:
                         card_parts.append(f'<span class="news-title">{safe_title}</span>')
