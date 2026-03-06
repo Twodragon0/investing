@@ -33,13 +33,6 @@ description: "2026-02-24 주식 시장에서 158건의 뉴스를 분석했습니
 </div>
 
 
-
-
-
-
-
-
-
 ## 전체 뉴스 요약
 
 - 한국 증시는 KOSPI 5,936.78 (+1.74%)으로 마감했습니다.
@@ -148,22 +141,6 @@ US Stock Market Today: Dow Jones Plunges as S&P 500, Nasdaq Tumble on Trump Tari
 
 
 ---
-
-## 글로벌 주식 뉴스
-
-**1. [Stock market today: Dow drops 800 points as S&P 500, Nasdaq slide on Trump tariff fears, AI 'scare trade'](https://news.google.com/read/CBMi5AFBVV95cUxQOUEzaHViRHpGS0txMUhlU1JnSkVIOWZOV19adUV6WGs3RzdJelpmX1NIRTBuRm1MNG84Z2UtRV9PV3lRSXhNWTIwZ3RuS3Q5VS1PSlA3YXhZZVB3dlZ0RTIxY3hrd0pObzVYYzZVM2U2cWtVcldlLVhyY0ZzZkRpTEtnbTVCTVUwMUpzM0tuOUJ4TmFLMnZCay04Z1hEbW10VWFvVWxkN190aVNRU0pyakVWaXlMNlFxRUFXWnFRM25EdXU2SExraGhsQ2lCNFRnekZqeWt3THR6RzgxS0Q4MlpGUVM?hl=en-US&gl=US&ceid=US%3Aen)**
-**2. [Stock Market Today: Dow logs worst day in a month, S&P 500 and Nasdaq end lower after Trump hikes global tariffs and investors worry about private credit](https://news.google.com/read/CBMivgNBVV95cUxOMnM5Z2dBb1M1YndRTlJpaXBRaDF6ZjA0MGM2SjhUY2MtUTNOYVFaRkctd3ZpamsybTIxakhsS2pmN2FhYU44SnBHVDBSTW1VdlAzaGNiN3l1cDFrdEJlcUd4OTRPMHRaUng4SVJta195TmM2TUZTNnFwclBlbFpsdUNvZzdqQ3lodzZiQkJiX0RsVTBib05jS040QVJOU3E4VVVCNFlCQmYwRUJkeThJemVYRjl3STBjbGpFY2VMZ1gwS0hQMFllM1hHb1BzWlF2aGNhOWpZaDEwSnQxYzgxQmxrdldZT0NiNFdLQVJFV2NIcE9pVTU4S01HTWtoa3Q5cHFOMno2STU5M2ZTeDgxcld3MU0tZjZnNHZmak00YnVwZGFlRUhlaTItdnJmSGhGY0YwNUJEVVFBYU5TcjdkVUFLWDUyVm9idUdPNDNyZjJxUld6SkthWWdFMGJ6Y2s1NEtsQWZKWnFKdXhOT2d4ekVBc0ZYeEplcDVoNHZpckMzYkFxS1RTZVFPa2FubGE2NWNOb184M2J1bnNpOUxab1R2MGFEOERsNm43M29xRkQ4Z1lOYjFVcURZQzlJUQ?hl=en-US&gl=US&ceid=US%3Aen)**
-**3. [Dow Falls Sharply. AI Worries Are Hitting Financial Stocks.](https://news.google.com/read/CBMi-wJBVV95cUxNMWhQZ3JWcjZaczc3NWJQalpzUlpkMEhVSW9Ba2Vtci1EQTZ2cXdLSUVNTHdXSFJBY3FtSnFqVVV0U1J5bGlxVC1XV1JXbVg2QWxRRUhSM1MteDQ0V19wc1FycXJnMndnOEJhYkdzRGVZUmd1NVh0TGF0SXNnaVlHVElxajE0dlUxR011UFhXWEktaU1RWU8xRDVHQ3VvUU53OVlhVEFIaVpydjdxVmkwSGNwdUo4cE9rM2V6dGF3Q0xOVElzcmhWUk9SQzBqdzc4SHJ6azRVenVFelVYMmZubkt5d0E2T2dHb2hnckNEME94M0VKWmF4ZnJ0bVNJckZyNDVJRHVBM3N2aFdMTHBVYzkxZ0hoaG9BcW9jS01OdGtIUDZvYVNMcWN1djFQMEpGZnEtRHI0Ukp4NFFhanYtdl9UTmRNR0Y4WDEzVTBzZHY2YTE5RkVXQmMwRllNaVdXWEJOeGhJUGZaakV0YmxoVTAwODBZVk5CUnFJ?hl=en-US&gl=US&ceid=US%3Aen)**
-**4. [Stock Market News, Feb. 23, 2026: Dow Falls More Than 800 Points on AI, Trade Uncertainty](https://news.google.com/read/CBMilwNBVV95cUxOWldGRmtlNU8tUkpYTDhrem1hT0xWbDVjb083WnFBTjh3WTJCeG1xUHVqZmJGVmdJam1LUGJjLWhvODhZQjFLcVBtRVpwa2FaWlZvVjQxXzJQWUhEMl9mb1ZIRl84eXVocHRKcGZjZTlfdndDdWFMZVlZUjNvUEFyUTFWOE5iN1ZYbXJWM1VFeGVCT280bXc0WlpsWFNLY2ZvSS1adTFXUGRDZTZodV9Eb3JnQjhKbGtwZmpLQkt2OFM2WkFYM2tqUlBXT3o4ejIzdF9hRWlwQmdnemlhYmlYY3pUXzdBQmtENXlNS0h1MUt3UmFqc1hRTzZHQ1VEUDJGWGtCYVVFTEs0a3NTVGdxRWpuZWkyeUFmemlDbk1NN1JVOE9SY0pkTGlKTGh2eXZDOXBPdmtkcUVzR20xVkNDSXBKZjF6enV6LTQ0bGU5RlhYZWZFV19XVmRNTWdGN21ZcDBwazJjQ0swcEJYUHJaRzl5bzd0ZXF3WXpLNUF1WjZsX1RhWW9CTE05U1dCcVBmVFhqVGtZbw?hl=en-US&gl=US&ceid=US%3Aen)**
-**5. [Stock Market Live February 23, 2026: S&P 500 (SPY) Tried to Shrug Off Tariff Uncertainty](https://news.google.com/read/CBMixgFBVV95cUxQMFE1Y2NXZnZSUGtiY0N1b29TbHMxNUhtekNqQ1UxZm5jdkZUTkFZSkd1SWlac1JoUFUtd2NtQ0FCTFJlTDNhel85bU5OcGtXNUdyNnVaQnltblZCR1d5WndzcjRPYm5yUEQ2OVVTRWZXTWM0SWZSdVBDYzRRUDU0YnJseEljdUgwLU1SbnFrRmtOeVRmckZYTVdsOS02SFZSVVdjRHhMWlZJTU1QTnZBZy04TVlKYnJyMF9wS1BXa1RzV3N2b2c?hl=en-US&gl=US&ceid=US%3Aen)**
-
-## 한국 주식 뉴스
-
-**1. [[개장시황] 美관세 불확실성·AI 우려에…코스피·코스닥, 상승 출발 후 약세 전환](https://news.google.com/read/CBMiWkFVX3lxTE1QNWVLTUVSNmUwT21TNTZ0cHR5Zy1BMkM1YWJDUmd3amdPTjNWTm03eEdyTXVvV0JfN1ZyZEtuQlpQUzJxeTBnOE9KQUZ4amlKYk84Unkyc3ZLQdIBWEFVX3lxTFAtMmJTRlEwTVB0Ql9YMm80UHNqR3dVaE96QmRvUmFUcng3SFR1bFZUaEUzLVJpVExPUVZ3YzBpcXZuUkVtNW9PcUxsdExjaGwtMkJWVzNLMHE?hl=ko&gl=KR&ceid=KR%3Ako)**
-**2. [코스피·코스닥, 오름세로 장 출발](https://news.google.com/read/CBMiakFVX3lxTE5qR3duRGsxcmxZZmFCUW5JMEZBbl9UY2dxYktaeVlVa0F0TFp0UUMzcmtLbjhCXzg5a1N1Q3FHMi1oYVFCWmFLbjA5a19BUGRsRGFiRUVlTkZFZWhQUEkzcWNRbVU3S1czbnc?hl=ko&gl=KR&ceid=KR%3Ako)**
-**3. [[코스피·코스닥,한화생명 SK네트웍스 지투지바이오 한화에어로스페이스 에코프로에이치엔 동부건설 동아ST 한양디지텍등 23일 주요공시]](https://news.google.com/read/CBMiakFVX3lxTE00VzI0Z3hwX0FseW1PMjB2Mk9sRGRrc1NrMWhVdHd1UElJUjRyVHB3OWRHTXc1ZEhyTVpwTmNqYWRsRGFTX3o5blZMRko3QUpzelY3cjFsXzUxekZkVV9aR3hvVjBjZ1p6T3fSAW5BVV95cUxQVDFDbG5Fc0w4QWVnSndRSG5JY2J4VEFIR1RxY2JCeWlLUDZXaG8wVDRwbGJuTWhPNk9xaFduTy0xOURUaDRpMU01RjE3MzBXOG4xWjJ2dkJrRjBmTHY0MVBPSjIyYndubk90Q2M4UQ?hl=ko&gl=KR&ceid=KR%3Ako)**
-**4. [5600선 올라선 코스피…코스닥은 매수 사이드카](https://news.google.com/read/CBMiT0FVX3lxTE1LSjYwOVRZRGRoa0NmUGR4TW1hel9leDhlRXFBRmVEa0RaNlJWRmhLOFlJNFFCdFRRQnR0V3Q2VVJhVUE2UGtLaDM5T1Z1WWs?hl=ko&gl=KR&ceid=KR%3Ako)**
-**5. ['불장'에 나만 소외 됐다면···코스피·코스닥 '체질'알아야](https://news.google.com/read/CBMiakFVX3lxTE56Z0tEVS1FdUxhZmFLSi1EUU9xMWxpcEg0cUdCMzVRRlZWNUQxQ01OZFdvSzNFSGhnUUxjdGJYckJScU1fWExqcXhjcTFKcXVja0NMTG1pVDBJSkV6dFVicVRETGx6RlJZUXc?hl=ko&gl=KR&ceid=KR%3Ako)**
 
 ## 시장 데이터 스냅샷
 

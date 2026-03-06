@@ -22,13 +22,6 @@ description: "2026-02-26 주식 시장에서 168건의 뉴스를 분석했습니
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><br><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">’워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a><br><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxPWHdoMm5kU1pLVFAyQkNxQV9tdXZEd3hDZEdzUjhwbUVLdm92Ml9ORFVEaXBQR3NKeV9FNUNTNjR5cU81MWtVSTJWTGQzOFFNb2RNbUZUUXkwZXdPVzl3RXNZQ1RmbGNjbFM1a2JvYkFmU1RTQzZnRWNRQWJVQjZPTTk0ZFhaRHNuLU1GY2xkUmRRS1hrREE?oc=5">The Stock Market Could Crash in an AI Doomsday Scenario, According to Analysts. Wall Street Is Panicking. - The Motley Fool</a></div>
 
 
-
-
-
-
-
-
-
 ## 전체 뉴스 요약
 
 - 한국 증시는 KOSPI 6,219.15 (+2.37%)으로 마감했습니다.
@@ -135,22 +128,6 @@ Asia-Pacific markets were poised to open higher on Thursday, tracking Wall Stree
 
 
 ---
-
-## 글로벌 주식 뉴스
-
-**1. [Stock market today: Dow, S&P 500, Nasdaq rally on tech jolt as Nvidia earnings loom](https://news.google.com/read/CBMiygFBVV95cUxORlFiY21NalFpdUxrMURXaEtaN2FaU2Z1Umtha2I1UkpIQjA3aTdRdU5GbjVMNzV3dmgzZi1BV3ZTdlZBY2Nfbmo3U2RhNk1fLV9renZlakFiaGVRM3R2Vk5sTGsycmJQck4wWVRFc3dSbFlKUUxXN0p1Nk44a2dMWEhJSFJFYksyaXFCbXVveGFqVzhxcnN6bHRIUl9GZ1ZndEtRbURZaDBqMjc2ZGJMdnFYelhUUEVNYkowbUpYTDlpYnFJaTZ0cWtB?hl=en-US&gl=US&ceid=US%3Aen)**
-**2. [S&P 500 posts back-to-back gains, Dow jumps 300 points as Nvidia rises: Live updates](https://news.google.com/read/CBMid0FVX3lxTE5ieXZxVk1RWW52MThkTlJiaUROa1JQajh2Z3lxVmtjcW5ZMDNHNnluMjRraFZVTnpaRGhBa2ZBckpWdW05YkpYZEtLY1Jjd3BTM2lud194YUxYaV9TS0IzaVFOT3ZYcU1yZGdsekE4M1F1Ymg2Y29R0gF8QVVfeXFMUGJBVi1KMVlUd0dqQ1pfXy0zNmZaZ1VSUGtITGFEcTdKWmpIYzF0UWljRXFhS0FXMV9HelptOUI5RzI1OXpZQm1LdUtBQndCRF9rYUpTRVRJQmZ5SGVMenQ2R184TzFFNGlHcW9JTzM1SVRRSkRFUV9kUkhvWQ?hl=en-US&gl=US&ceid=US%3Aen)**
-**3. [Stock market today: Dow, S&P 500, Nasdaq futures wobble after Nvidia's big earnings, forecast beats](https://news.google.com/read/CBMi3AFBVV95cUxOV0RGalgtcHFieHFXLTJOS3R3ZU83ZFg4amh4bHdDaV9rVkVwRXFUYUg4VTVlbXRCVTBoQ1JRbFZFZFJ5a3VQZHNLNkhhMFowWGE5elhrZU94V3NqVUdZQ0tqaXY3WW1mSm45UkZPRGRtM3hFZlhtSm5RSnFkaHFJcDZEblZhaEYyLXRFb3BqRy0xcUNkNUQzWlF3NUlOcG5xekRfVGxCWGI0b1h2ZEZJVWRFU1JjWXR6U1hIcUV3ZThrVkFqRk9Sbk1SN3BuUVpmNnI3Xy0yNWVMd190?hl=en-US&gl=US&ceid=US%3Aen)**
-**4. [Dow closes more than 350 points higher as software stocks bounce back from AI disruption sell-off: Live updates](https://news.google.com/read/CBMid0FVX3lxTE51eVA4NjlEaEFLbTBtWkZuR0Qyam1FSllHN2ZrYUVtQnhkbjgwamh5eTFlQ0JuTmFDbklfWFR2Qkl0akl4OWZ3c2xlQTQ4RFBwenlqdTdTcDF2c0ZqaGFzQUI2RGp2T19jN2lNcE4tUjBTaks1NnlF0gF8QVVfeXFMTXAxaHYtYjFScmJCR2p1TmJZZDhaTTdibDJLS2pvX0xZeWJwejZBOHMwSWZQRjdpN042MmRrSHlzeVN3THBzRXYxN1hiNGVJQm9HaXJyMlFrMUlqa3V4aEI0MkZCUlY1ZWY1aDF6dGs2elZ4Y29wVXBuZUpsSw?hl=en-US&gl=US&ceid=US%3Aen)**
-**5. [Stock Market News From Feb. 25, 2026: Nasdaq Rallies Ahead of Nvidia Earnings](https://news.google.com/read/CBMi-wJBVV95cUxQWU5uLTF6YWFGQ21rV3ZfOUhER1hrWnI0bEQtRGJpVE9jeFB0WUZIZ1otaXY1MTdXNk5ERjV0MkR6TlZ3eHE1NHY4TEVQSVUwMXloMVBTQzlTTlAxc09qV1MwNnItTVJEVUM3OFpHTzdULXhvNTFYNXQyX2hKSjZ4VGdrNHFkZlhLRjgxTnFDWXowMHhqdmNzYU1maGFCbUJiNGMyZVgwY0h0UlVnanJlVERmSjMxQWpoRDRtMEpIT3MwS3NDZ3FKc05pWFFMQVkzQ1RpQ0lkQkZhZDZ6VDdyWG5hNXFrZ1lnU1hiaGVRdERWZGhPSGRYNURZQm1MODBGczdPbG4xY0ZTS0xxOEdMUDI5TXBIYjVpbE8xQVlENDJTYnV5cUdPdmRSVzNLaFFfbG1TUHNTOFl5Y2VvTHU4NmlOazJ5TDFjaDJTeEZrZzYwcWljS1Vva3prM3VsaDJHOVRudHZJMmFXT1JsdkJKeUdMNTNPU0ljT2FV?hl=en-US&gl=US&ceid=US%3Aen)**
-
-## 한국 주식 뉴스
-
-**1. [주식시장은 살려냈다…분류체계 바꾸면 '코스피 10000·코스닥 3000' 간다](https://news.google.com/read/CBMiVkFVX3lxTE9CUnlxOVZ6WlI2UkhVUi1LTnFpZzQxOGZBd0JUd1U3X2J6YXhYTFByUF9WdGJuN3NxWHQxT0FUNUpLYy1GX2tHNjdoMUlwVmdWTUlqdEl3?hl=ko&gl=KR&ceid=KR%3Ako)**
-**2. [코스피·코스닥, 오름세로 장 출발](https://news.google.com/read/CBMiakFVX3lxTE1LTS1ia2Y4YzFfdmxGcGhuQ3RBTWI0cnFvMHhkNElQNFBPamFIa3VEVk8zQ01BOVBwa3dsTDRZSkEwYWNISnlOVnZEU0M2VFVoZGRpNUpRNmx5MjRGNmF5UTdGSHpxQnE2UGc?hl=ko&gl=KR&ceid=KR%3Ako)**
-**3. [[코스피·코스닥 전 거래일(23일) 주요공시]](https://news.google.com/read/CBMiW0FVX3lxTE15VGlEU09uUW0tRDgycGlOcERic2xaQjJSMC1udmozdkdJMHJQUGFLcC1PRC1FRHUwWVNBVDZrbWJYRjdQc0x3dk1wbDJqaHB0U3l3ak1HZWwtSWvSAWBBVV95cUxPejk4b2JENkpoZFRhRlNjUXNaSF8tZEJQTGJmUnFhRTZSNVdJbC02T2xyZlg2QWl0THNzTnBLUGNMRUEtblJmbEd0eUllVldPeHpIRzNOdkJHeUZmUDIzUzk?hl=ko&gl=KR&ceid=KR%3Ako)**
-**4. ['불장'에 나만 소외 됐다면···코스피·코스닥 '체질'알아야](https://news.google.com/read/CBMiakFVX3lxTE56Z0tEVS1FdUxhZmFLSi1EUU9xMWxpcEg0cUdCMzVRRlZWNUQxQ01OZFdvSzNFSGhnUUxjdGJYckJScU1fWExqcXhjcTFKcXVja0NMTG1pVDBJSkV6dFVicVRETGx6RlJZUXc?hl=ko&gl=KR&ceid=KR%3Ako)**
-**5. [외국인, 1월 코스피 사고 코스닥 팔았다](https://news.google.com/read/CBMijgFBVV95cUxNY0VHNHVDUEtLRmdnaW1Kd2xsN0V5WTRJXzhKRWlVS2pld1dwakk0ZVdKdWI4LUtJcUE2dlA0eDYwOXVMaC1qR04wOVkwcmgycXJkQldtUldLcTBtSEhaem00WEVsT2pISUh6RUZ2YVNqQmlENlRpOWhqak01SDFHOFBpNTZRTUk3dmJibGZR0gGiAUFVX3lxTFBmVG4ta0hNdkFUVzZtTE0xeDhUMlhuSmUzaGk1MHI0cTN3aFFIZ2pSZmFDTHNiNF9BUXZPUFJuOEJKNzgxVFdqYW4zN01qOWN5cHVvTWh5WUM4aXpnT1pIUU56dXhvYzlDZGhRUnVyR1Z5cGxtOEUzbl9Dby1oX3ZRa0I0Q3lLa2hFYi05UjhzNk5DS0ZnbkloNUhCaHJPMFFNdw?hl=ko&gl=KR&ceid=KR%3Ako)**
 
 ## 시장 데이터 스냅샷
 

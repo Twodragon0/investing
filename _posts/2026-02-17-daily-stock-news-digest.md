@@ -19,7 +19,7 @@ description: "2026-02-17 주식 시장에서 119건의 뉴스를 분석했습니
 
 <strong>주식 시장 **가격/시장, AI/기술** 부각 119건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 30건 수집</li><li>🤖 <strong>AI/기술</strong>: 29건 수집</li><li>📊 <strong>매크로/금리</strong>: 11건 수집</li><li>🟠 <strong>비트코인</strong>: 2건 수집</li></ul></div>
 
-<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까</a> — 시장이 큰 폭으로 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</li></ul></div>
 
 
 <span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:25%"></div></div><span class="theme-count">30건 (25%)</span></div>
@@ -35,13 +35,6 @@ description: "2026-02-17 주식 시장에서 119건의 뉴스를 분석했습니
 
 
 ---
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -131,42 +124,6 @@ description: "2026-02-17 주식 시장에서 119건의 뉴스를 분석했습니
 
 
 ---
-
-## 글로벌 주식 뉴스
-
-**1. [S&P 500 closes little changed after soft inflation report, index notches losing week: Live updates](https://news.google.com/read/CBMid0FVX3lxTE1rMzAwSXVIelF1VVJ2WU1YbzFiLWtfa0xMRDFVLTZpVE1WcGlrM3hPZnJScFV1b1A2WTNXX3JQeHFEcWRaTU5HdDlYMF83czJndGZqZUY0Y3piUTkzME5LaWFoVlFQQ0xCSXAyaGtlNUlMMU1JMTBJ?hl=en-US&gl=US&ceid=US%3Aen)**
-<span class="source-tag">Google News</span>
-
-**2. [Stock Market Today: Dow Dives As S&P 500 Turns Negative For 2026; Cisco, AppLovin Crater (Live Coverage)](https://news.google.com/read/CBMisAFBVV95cUxNd0NsRFI2VWljUTdwaGhiaXA1QzdkMVFqd1dWNWp4YUZuZEFtdDF0VGZOV2ZZeWxVQ2VaNjZCSFkyb2k3NW1ELU55WGNPb0Y5WURCMzBLUTBUVkp6VHhMVmNhM193TE1lNHE3QndXVTh5U2tBY1lhbjBQYlladGVpT0hMdnVDWmRuNFJYai03dnRPRHlMSEtIZkotV2VaazNTYklKdW9fV3ROcktKUEx2aQ?hl=en-US&gl=US&ceid=US%3Aen)**
-<span class="source-tag">Google News</span>
-
-**3. [Asian Stocks Set for Muted Start in Holiday Trade: Markets Wrap](https://news.google.com/read/CBMiswFBVV95cUxNNGNMd19mVHpma1pEcHRyeUw3VTdQcktsaG04RGRfSFVNUHdTV3FsajNEMUlhbHQ1VXhqOXJBNTdiOG9uS0xlS0lEYlBwZko5QXVoc1h5TDZBdXV0UnlXMXBUWXdYaXY5dDV5TWpzcVpEazZVSm5tdjBjcVNnWVFCeUNxajlGT2EyamFwd2c4bm53NHhyMV91dS1JUFRjMFdRT3BTMlNudmFFa0lRSW9NbFBoVQ?hl=en-US&gl=US&ceid=US%3Aen)**
-<span class="source-tag">Google News</span>
-
-**4. [Stock market today: Dow, S&P 500, Nasdaq futures climb into shortened week with AI disruption fears in focus](https://news.google.com/read/CBMi6AFBVV95cUxPWFFuc2dnN1hiQ1Z2X056a0xSWWdic3psckU1NTN4UjVXOEV0dFRQU3c1LUFVVTdPOU1VUmJPdG1IMlg5eGdaX0tCWUdjNk5OaTRSd3hNaF93Wld0aEhMMHdFclpCSTladmswb0pNS3BQYzBZM0hpMzRndkZpSHBTZXdRanVLM0FlMGNLMTVURm00RGNIY3gzU2ItbXUyNDNKekhLS2szRkdodHFQYXc5Z3VtMU1TUzQteHlzS0Z4MnJldkE4dnhTNG4tbmlEcHFuX19xYjVkaDVlQTREeTY2NjBzb2U4U2VG?hl=en-US&gl=US&ceid=US%3Aen)**
-<span class="source-tag">Google News</span>
-
-**5. [Buy 2 Vanguard Index Funds to Beat the S&P 500 in the Next Decade, According to Wall Street Analysts](https://news.google.com/read/CBMimAFBVV95cUxNdVF3MGdpeGpPcWxuWG1hd09LRDNoVDFIWW5HRHQ2azdZUmRZVS1BNExiMFVIYjB4YmZfRGJWWi1HQ0NtdEQzYW9POTU4MTRKRDdqbDhCaTV0SjRyNm52VnZzRUFnQjdpSFV5U0UxMVU1TlJqTGM5Z01yUVA2ckZ0MWxKUUw2eUdPX3VkcG9JUzhVM3ZlVm1TYw?hl=en-US&gl=US&ceid=US%3Aen)**
-<span class="source-tag">Google News</span>
-
-
-## 한국 주식 뉴스
-
-**1. [외국인, 1월 코스피 사고 코스닥 팔았다](https://news.google.com/read/CBMijgFBVV95cUxNY0VHNHVDUEtLRmdnaW1Kd2xsN0V5WTRJXzhKRWlVS2pld1dwakk0ZVdKdWI4LUtJcUE2dlA0eDYwOXVMaC1qR04wOVkwcmgycXJkQldtUldLcTBtSEhaem00WEVsT2pISUh6RUZ2YVNqQmlENlRpOWhqak01SDFHOFBpNTZRTUk3dmJibGZR0gGiAUFVX3lxTFBmVG4ta0hNdkFUVzZtTE0xeDhUMlhuSmUzaGk1MHI0cTN3aFFIZ2pSZmFDTHNiNF9BUXZPUFJuOEJKNzgxVFdqYW4zN01qOWN5cHVvTWh5WUM4aXpnT1pIUU56dXhvYzlDZGhRUnVyR1Z5cGxtOEUzbl9Dby1oX3ZRa0I0Q3lLa2hFYi05UjhzNk5DS0ZnbkloNUhCaHJPMFFNdw?hl=ko&gl=KR&ceid=KR%3Ako)**
-<span class="source-tag">Google News</span>
-
-**2. [설 연휴 이후 시장, 흔들리지 않기 위한 코스피·코스닥 기준 정리](https://news.google.com/read/CBMiiwFBVV95cUxNYlNnLWN6cUhyMl9EeU5kX2lKR0k2TzZHYndFVUt2MXhfN0p1SF80VmxiYU13VWR2aThoOEw1RGdfMTNaakNGRkJ2M1gzMjN0WllwWFBQZ3UydUpTeTVUZUx1YzRLdEJYSWd1SndzUTBndkVwWnVONExHSkFJd0hYWVd1MzFPMzJ3UG1B?hl=ko&gl=KR&ceid=KR%3Ako)**
-<span class="source-tag">Google News</span>
-
-**3. [[코스피·코스닥 전 거래일(12일) 주요공시]](https://news.google.com/read/CBMiW0FVX3lxTE5MbTV0NXZCdl9Od2tGY1RWc1dIQ1M0WXlmd0Q4ck91LTQ1MFkxaU91X2swNWVrbVFoRVRaS3lCRHJtUjRTdlZ1b2c1QnI4aFhGdjBXaGxrSlhnejDSAWBBVV95cUxQQmtRVVp6d2NkVHlOWkZxZHpvc2drX0g4WU9WRnNFQVl6cUFKWktzY2JrZDQ1bmZhRjJhckN0Zk9fRUJVaVMydjZHYU5OWEg2ZG16Z0V1OXpuRnZRMWRlbEw?hl=ko&gl=KR&ceid=KR%3Ako)**
-<span class="source-tag">Google News</span>
-
-**4. [지난달 외국인 국내주식 980억 순매도코스피 사고 코스닥 팔았다](https://news.google.com/read/CBMiUEFVX3lxTE9EbU1yYTJ3RkFjU09zbzZoZGg5UDhqMEl6RmFLOWdHQjlrTTU4T2k5VkVaNnh1bTR2RjZjTFJQNUZqZy14eDNkay1JbjFVZGgt?hl=ko&gl=KR&ceid=KR%3Ako)**
-<span class="source-tag">Google News</span>
-
-**5. [코스피 5000 시대 활짝코스닥도 1000선 회복](https://news.google.com/read/CBMiWkFVX3lxTE5qZ3RLZlNUMFY1cU41d2JZNkdQQW9UR25ZMnJ2NVBJRXZ2U0pnWTkyN3NEOTgya09Bbl9HVEhQMlVvRllYMDlwN2tESDRMTFdhb3JxaG8tcjJJUQ?hl=ko&gl=KR&ceid=KR%3Ako)**
-<span class="source-tag">Google News</span>
-
 
 ## 시장 데이터 스냅샷
 

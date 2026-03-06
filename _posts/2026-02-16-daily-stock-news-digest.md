@@ -19,7 +19,7 @@ description: "2026-02-16 주식 시장에서 114건의 뉴스를 분석했습니
 
 <strong>주식 시장 **가격/시장, AI/기술** 부각 114건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 36건 수집</li><li>🤖 <strong>AI/기술</strong>: 23건 수집</li><li>📊 <strong>매크로/금리</strong>: 12건 수집</li><li>🟠 <strong>비트코인</strong>: 6건 수집</li></ul></div>
 
-<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiuwJBVV95cUxQdlN4NUVqRmNyb0dfNlV2Z1d6bjBNbWZFaldXOXZoX3hHTExBSHJqUjFuVDEyRzhuYmt0TlJqS05wMHdyeXhwNWhRb1hJY1NaV01Najh5Yno3TGlwaFJVNjhEZGJKX2Vydi1zRTlXbGdHdGlINDJWZkoxd29NdHdRLVFVcXR6TmlzQjlFWC1uY1AxdGVKdzZZVGxtNDRHSFFmZVBBMHZOM0lMcWFEdlpLbmV0M3czRnhUcUduZ3lDM0o4QkVYYjhJSjRXTjN4ZU1lN1RMUFFxM2FOdGxVQlFGSjlMODI1UU1Lenp5X0s4TUpjclY4U2xkd3BmV01MV0lyMU9ZOFYxYm1XN3MzejBHWXFDcFFfS18xLVU4NXNMczhhbUtaWmpPSXIwSG1CQ3VETDJIeWpTSTZjWmvSAcACQVVfeXFMTzV5ek5wWGR2cUxYT2Z4Q0x3eFZrT0RNS1I0QlB1QjVxMEZNTHFvdmUzSEJqS0pFTmoyc05DMElWbjNUVl8zSjZDd1U0NHR4ZVExZW9zWFNWSDFZNEQzX0wyMEk3dEtyejZWbWRMU3hSUHlRWEtxY2xtM0xkOVlOTnM0T040dVkwMm44amRNQlo0SFVBR3ZWVVc2TWRZeHZXNDlpcEFJOVVITndpTEx3cDdDY29ENkpER1E5NjNvU2NHREw0UHRqclh2aDZralFodk91ZkNmQTJiTFZUV1gwenRhbE9ZeEdWWFVCR3FFNFkxY21zYzNJei1TcWI2VGg3aFVZWW5WWTNyeWpBSU1KZ3pWSlhBbXItblY1WEJGZjZoNEdmWUNuaFNxSlliY19FcDBxckdEaXpVaWREckhoRVE?hl=en-US&gl=US&ceid=US%3Aen">US stock market crashes again today: Why Dow Jones, S&P 500 and Nasdaq fall for second straight day - Gold</a></li><li><a href="https://news.google.com/read/CBMihAFBVV95cUxQaUMzbk9YY0xLS1lyNGs1VHB2c2FiY2RMb0NjTzdISWpicFJDWU91RXBrS1FZYUkwY0kzek1mQ1dwRmhJVkhoX1lSdTN4b0NhOHhyZGtDTkpzRVlGNkdVYTFIckFVZ19MOHF6NkhXTTktREhxa3RsXzJPTk40aXNOcEh2aEE?hl=en-US&gl=US&ceid=US%3Aen">Gold, silver, S&P 500, crypto crash again amid extreme fear</a></li><li><a href="https://news.google.com/read/CBMifkFVX3lxTE5EeEJqTFJaQ2l4NEJPZTFTVnFydnZZZlE5Q2JFcWNPOENueXlUZ0s2VFE3YUREMUtheDNYRi1oQ05tRzhXTi1VaEFUQjZyMWhaMUpFMERPQ1NNT19QVEZKVFdxaENyYy1RMWNzQUY5TWpFc2FXMXJ3LXhaZGszQQ?hl=en-US&gl=US&ceid=US%3Aen">If a Stock Market Crash Is Coming, This 1 Investing Move Is Critical Right Now</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiuwJBVV95cUxQdlN4NUVqRmNyb0dfNlV2Z1d6bjBNbWZFaldXOXZoX3hHTExBSHJqUjFuVDEyRzhuYmt0TlJqS05wMHdyeXhwNWhRb1hJY1NaV01Najh5Yno3TGlwaFJVNjhEZGJKX2Vydi1zRTlXbGdHdGlINDJWZkoxd29NdHdRLVFVcXR6TmlzQjlFWC1uY1AxdGVKdzZZVGxtNDRHSFFmZVBBMHZOM0lMcWFEdlpLbmV0M3czRnhUcUduZ3lDM0o4QkVYYjhJSjRXTjN4ZU1lN1RMUFFxM2FOdGxVQlFGSjlMODI1UU1Lenp5X0s4TUpjclY4U2xkd3BmV01MV0lyMU9ZOFYxYm1XN3MzejBHWXFDcFFfS18xLVU4NXNMczhhbUtaWmpPSXIwSG1CQ3VETDJIeWpTSTZjWmvSAcACQVVfeXFMTzV5ek5wWGR2cUxYT2Z4Q0x3eFZrT0RNS1I0QlB1QjVxMEZNTHFvdmUzSEJqS0pFTmoyc05DMElWbjNUVl8zSjZDd1U0NHR4ZVExZW9zWFNWSDFZNEQzX0wyMEk3dEtyejZWbWRMU3hSUHlRWEtxY2xtM0xkOVlOTnM0T040dVkwMm44amRNQlo0SFVBR3ZWVVc2TWRZeHZXNDlpcEFJOVVITndpTEx3cDdDY29ENkpER1E5NjNvU2NHREw0UHRqclh2aDZralFodk91ZkNmQTJiTFZUV1gwenRhbE9ZeEdWWFVCR3FFNFkxY21zYzNJei1TcWI2VGg3aFVZWW5WWTNyeWpBSU1KZ3pWSlhBbXItblY1WEJGZjZoNEdmWUNuaFNxSlliY19FcDBxckdEaXpVaWREckhoRVE?hl=en-US&gl=US&ceid=US%3Aen">US stock market crashes again today: Why Dow Jones, S&P 500 and Nasdaq fall for second straight day - Gold</a> — 시장 급락 소식입니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</li><li><a href="https://news.google.com/read/CBMihAFBVV95cUxQaUMzbk9YY0xLS1lyNGs1VHB2c2FiY2RMb0NjTzdISWpicFJDWU91RXBrS1FZYUkwY0kzek1mQ1dwRmhJVkhoX1lSdTN4b0NhOHhyZGtDTkpzRVlGNkdVYTFIckFVZ19MOHF6NkhXTTktREhxa3RsXzJPTk40aXNOcEh2aEE?hl=en-US&gl=US&ceid=US%3Aen">Gold, silver, S&P 500, crypto crash again amid extreme fear</a> — 시장 급락 소식입니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</li><li><a href="https://news.google.com/read/CBMifkFVX3lxTE5EeEJqTFJaQ2l4NEJPZTFTVnFydnZZZlE5Q2JFcWNPOENueXlUZ0s2VFE3YUREMUtheDNYRi1oQ05tRzhXTi1VaEFUQjZyMWhaMUpFMERPQ1NNT19QVEZKVFdxaENyYy1RMWNzQUY5TWpFc2FXMXJ3LXhaZGszQQ?hl=en-US&gl=US&ceid=US%3Aen">If a Stock Market Crash Is Coming, This 1 Investing Move Is Critical Right Now</a> — 시장 급락 소식입니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</li></ul></div>
 
 
 <span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:32%"></div></div><span class="theme-count">36건 (32%)</span></div>
@@ -35,13 +35,6 @@ description: "2026-02-16 주식 시장에서 114건의 뉴스를 분석했습니
 
 
 ---
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -151,42 +144,6 @@ Data centers powering artificial intelligence have strained the electrical grid 
 
 
 ---
-
-## 글로벌 주식 뉴스
-
-**1. [S&P 500 closes little changed after soft inflation report, index notches losing week: Live updates](https://news.google.com/read/CBMid0FVX3lxTE1rMzAwSXVIelF1VVJ2WU1YbzFiLWtfa0xMRDFVLTZpVE1WcGlrM3hPZnJScFV1b1A2WTNXX3JQeHFEcWRaTU5HdDlYMF83czJndGZqZUY0Y3piUTkzME5LaWFoVlFQQ0xCSXAyaGtlNUlMMU1JMTBJ0gF8QVVfeXFMUG1WcWJDeUpjZVd1ZDdzSWxFaEQ1VUlWX0NnWnFBZTQ1dFBmVlF1dWY1TzRjS2hUbjItWGxzWjFjczZ4QnU4RWVsQ2thWFMyZ0I4T2lfM0p0U3VaUFc4S0t5RXZVTTUyQS1sMzBQYWhOWlhWZ0lncmpnczY1Mw?hl=en-US&gl=US&ceid=US%3Aen)**
-<span class="source-tag">Google News</span>
-
-**2. [Stock market today: S&P 500, Dow, Nasdaq gains fizzle as CPI inflation cools, weekly losses loom](https://news.google.com/read/CBMi2gFBVV95cUxNMF9YaUh4WW9yRVVYenZXWEl3dlpMbmpQNHNoeG5lLXhXeWUyS0IyRC02S1l3RWtSbVgxQ3hsT09yZkZrbHlnUXRiREVVWWd5UlN4dzlTYWFfVDFCdkkzeFpDOW8yaFdIbEFjODZrQWk2ZDhOQkZXbE9wR3R3a0VGN3FXZFUxelZHWElGNUM3OWxURlZYbF9oTmN2UjdpMFdPQVBmeU5fR2dHbHlNZlBHdjNzUTlaZkI5ZDJ0b2RFWFRNcXkzWlhwZ2dUajZSRGZ0TEwwWnpWTUNmdw?hl=en-US&gl=US&ceid=US%3Aen)**
-<span class="source-tag">Google News</span>
-
-**3. [The Stock Market and Bond Market Flash Warnings Not Seen in Decades. History Says the S&P 500 Will Do This Next.](https://news.google.com/read/CBMilwFBVV95cUxQU3oxRnk3SFpXOEZNY21pMDBPb21ra1JGZEJlVDctRzhYTTBFRTdObkRzRGc5UVJhVjJHNEpxOHlxdF9tdXBnd1l2MzI4bEtnbW9wc3Nfd2JUNlRlQzRfeFNqb0s3c1NENkhsMGh1VUt4QnBoeHJrc0tGV2FrbGI4NjBtSk1lMHlQdU5VN0w2azY4THZpUEJr?hl=en-US&gl=US&ceid=US%3Aen)**
-<span class="source-tag">Google News</span>
-
-**4. [History Suggests the S&P 500 Could Plunge in 2026. Here's Why.](https://news.google.com/read/CBMif0FVX3lxTFBaODZwRTQwMW13c3BRTW82QTU3VUNnQXF4TFVvcmM2Z1V0akRxX2xkS0dNYjFLZ25vc0pvMVRmUGQ3OVBWNDNYZkxSNFQweUJWbFctMmt4aDhFekZHUHhMQmtuTFBlM0JTNlFObTg4N29abmVPMTJHc1gwREJxblE?hl=en-US&gl=US&ceid=US%3Aen)**
-<span class="source-tag">Google News</span>
-
-**5. [Stock Market Suffers AI-Inspired Meltdown. The Real World Wins Again.](https://news.google.com/read/CBMikANBVV95cUxPT1dlM1BaSC1QbU4wMmRoTUdTUk5GMDZmb2pES1BtUzNlNVAzMVVOamdFQWRMa0ZxUXZWRmdTT0xXT1lzVFJnQTVuX05scVFEQlZfbjVGOGJqa1ZablB3QnE0U28xTnh1Zm52Y01qaGxHb2dqTUd1c2RfdDI0VElpeG9hbjJISGdHUGRrZU4zcC0yc0JjcUwya21OSXhWemxzSUgxX3VrbmpTS0E0dEFPanROb3M4cGh6ODNaaVd6aUtBTmlqUjUzTHUtemJCS29QeDY0UE5MVzBsN0xNUVY4MkZxMVZWV0gwdHRnQW1XV3FxRTVFa1dROUtDVFpFb3ZSanA2dEdTUUlqakZOcVVUUUdnWjNraUlSMWxlNkhLODg2Y1lBQ1JPMXI3QVBvUEt3cWlWU0k0c3RpTFBfbjkzTWtJRF9mbWMtUFh0M0VoamY4UE5hOWltbVUyc0J0WDBUSC1aRVM1eVYxYlFMQnBtNDBNVi1vMlBaWXM0VFZSdGhsRl9QVTVPeGp5d0lldDdW?hl=en-US&gl=US&ceid=US%3Aen)**
-<span class="source-tag">Google News</span>
-
-
-## 한국 주식 뉴스
-
-**1. [외국인, 1월 코스피 사고 코스닥 팔았다](https://news.google.com/read/CBMijgFBVV95cUxNY0VHNHVDUEtLRmdnaW1Kd2xsN0V5WTRJXzhKRWlVS2pld1dwakk0ZVdKdWI4LUtJcUE2dlA0eDYwOXVMaC1qR04wOVkwcmgycXJkQldtUldLcTBtSEhaem00WEVsT2pISUh6RUZ2YVNqQmlENlRpOWhqak01SDFHOFBpNTZRTUk3dmJibGZR0gGiAUFVX3lxTFBmVG4ta0hNdkFUVzZtTE0xeDhUMlhuSmUzaGk1MHI0cTN3aFFIZ2pSZmFDTHNiNF9BUXZPUFJuOEJKNzgxVFdqYW4zN01qOWN5cHVvTWh5WUM4aXpnT1pIUU56dXhvYzlDZGhRUnVyR1Z5cGxtOEUzbl9Dby1oX3ZRa0I0Q3lLa2hFYi05UjhzNk5DS0ZnbkloNUhCaHJPMFFNdw?hl=ko&gl=KR&ceid=KR%3Ako)**
-<span class="source-tag">Google News</span>
-
-**2. ["동전주 퇴출, 상폐 시총 상향"코스닥·코스피 부실기업 본격 손질](https://news.google.com/read/CBMiVkFVX3lxTE5lT0RmcXNJQndJN2VZeDdGc0dVbUU1UGZTTVZuNlMtbWFpTzdrb2xXRnB0X3BlR2s1Q1ZqSklaemctcVN4ZGhDRmxJc2RKTHFEWEZrNW93?hl=ko&gl=KR&ceid=KR%3Ako)**
-<span class="source-tag">Google News</span>
-
-**3. [[코스피·코스닥 전 거래일(12일) 주요공시]](https://news.google.com/read/CBMiW0FVX3lxTE5MbTV0NXZCdl9Od2tGY1RWc1dIQ1M0WXlmd0Q4ck91LTQ1MFkxaU91X2swNWVrbVFoRVRaS3lCRHJtUjRTdlZ1b2c1QnI4aFhGdjBXaGxrSlhnejDSAWBBVV95cUxQQmtRVVp6d2NkVHlOWkZxZHpvc2drX0g4WU9WRnNFQVl6cUFKWktzY2JrZDQ1bmZhRjJhckN0Zk9fRUJVaVMydjZHYU5OWEg2ZG16Z0V1OXpuRnZRMWRlbEw?hl=ko&gl=KR&ceid=KR%3Ako)**
-<span class="source-tag">Google News</span>
-
-**4. [지난달 외국인 국내주식 980억 순매도코스피 사고 코스닥 팔았다](https://news.google.com/read/CBMiUEFVX3lxTE9EbU1yYTJ3RkFjU09zbzZoZGg5UDhqMEl6RmFLOWdHQjlrTTU4T2k5VkVaNnh1bTR2RjZjTFJQNUZqZy14eDNkay1JbjFVZGgt?hl=ko&gl=KR&ceid=KR%3Ako)**
-<span class="source-tag">Google News</span>
-
-**5. [외국인 1월 코스닥 팔고 코스피 사들여채권 석달째 순투자](https://news.google.com/read/CBMib0FVX3lxTE55Z3VpRzRMRjhMSEsxSHdiWEhKTzc0TE5XOHpoN1BILWsweXNoMGFLQ0xyMEpMRDFhSm1DRjhfNzdZMXBLYmprWEoxSVRNQnp1SUlOMUtBNG1NUHRUbUFMMnF6Yk5UX193TG14RDN1RdIBc0FVX3lxTE02SlAwWXQ0Tmw0VERXaU5sQnhxTlAyVWl1c25wNnlNbWlUcFdlbjRzNDZoSXFYQUxjOWgxcTZ3UHowbHpOWWNPZTFxVXN1WFVRSUM4TC1LRDFnbDdSSlNBenpfUGJTMHhGZEdKRVVMYWtkUkk?hl=ko&gl=KR&ceid=KR%3Ako)**
-<span class="source-tag">Google News</span>
-
 
 ## 시장 데이터 스냅샷
 

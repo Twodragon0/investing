@@ -22,13 +22,6 @@ description: "2026-02-22 주식 시장에서 131건의 뉴스를 분석했습니
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><a href="https://news.google.com/read/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?hl=en-US&gl=US&ceid=US%3Aen">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates</a><br><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">’워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a><br><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0A0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?oc=5">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates - CNBC</a></div>
 
 
-
-
-
-
-
-
-
 ## 전체 뉴스 요약
 
 - 한국 증시는 KOSPI 5,808.53 (+2.31%)으로 마감했습니다.
@@ -131,22 +124,6 @@ The Social Security Administration requires 40 credits to qualify for benefits a
 
 
 ---
-
-## 글로벌 주식 뉴스
-
-**1. [S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates](https://news.google.com/read/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?hl=en-US&gl=US&ceid=US%3Aen)**
-**2. [Stock Market News, Feb. 20, 2026: S&P 500 and Nasdaq log best week since early-January despite Trump slapping new 10% global tariff after Supreme Court's ruling; Treasury yields rise, dollar retreats](https://news.google.com/read/CBMiygNBVV95cUxQSDdCQ1VTX2xsZjEyWVowRjd0WFpmYUs3SWR0NHdGNXNrel9pY2lGSWExUVRuN0ZNeTZFZ2E3SGhqTVZkUW56RVFaTlRuVG5XbzFyQ245UmU3c0RiVVF2dGxZQzFja1dhckp5Mk9NN0ZrVlZLX3RVVS0tQ1U4Y005QkppNDFJbnQxLUtBcmczQ3ZoY2VUaGhaQmNpdEpQUUtVM1dPc3I1eXNTNk5HeHA5ZFc2UVU4dHRyc0NKMER1RkNpSVlaV2pFUVN2ajkzZHVvaFV4LWFUNFNDLTg3cEt3RmI1azRGeGZGNE9kSmIzZ09ZNE0wQk1HM0xjSHdZQVMwV3l2R3hrbmpjbGhDZG82Y2xZa2lIeVBkLVBpYS1qQzFLZVdVaFRTZFBaT25uMEFkLXhjSWNEbjlKOU9LazZzUmZTcnZGSUtVV0xWZGxsVTNKMW93Sk1rMVVaRkVwckVYZk1RSnlaVHE5dF9sUUpVSmlEbHZpcUowWDhkUV94R0I3Y0VtVDhRTVhrUzBkYVdGZlpsdkxMamJkckw0QW03OXdKc2RtUlBWRjJnbnNMLVUxaG5fRUhjS3ZDalAwQTBMQXVvY0NLOE1Wdw?hl=en-US&gl=US&ceid=US%3Aen)**
-**3. [Stock market today: Dow, S&P 500, Nasdaq slip as oil prices continue rally amid Iran-US tensions](https://news.google.com/read/CBMi2wFBVV95cUxOOWhPeDlNTElfbGcyek1lbldJVlBtM2NSSzBFSV9PYWJsVEtLZGZ3NTQ0QllXSENleVNoV3BVWDBZUm9uMWF3aVUtbFo3NTk3STZqTVM4NkJTdm5uS1ZNNGJUb2R5a2hKUURGRFJkeEFhS3RnYnFDT05mNGlhWHpqaGp5WEpoQW1UMFlUOGd1aC0xZTRZU0JFMUU3dVVtNDE4WkpjcUdoeEVOMFFnemZyaUNTTWtKWVlGVHp2bTU0ak4yMHpmZUtlTkUzR1hTSXVuSkRYY09ZVmRTTjg?hl=en-US&gl=US&ceid=US%3Aen)**
-**4. [Prediction Market Flashes a Stock Market Correction Warning. History Says the S&P 500 May Drop Even Further in 2026.](https://news.google.com/read/CBMikAFBVV95cUxPc3lyYzdHTFNZeU9QaVJrS0FXSmN4QkV5RlRobE9QYjQ1eWJhUjFPRVNObDJZUUREaDBvVHlTVWRwSjN5dTJQYzN5MWZPUEk4UFBLV2FPTkNhOG54MFEtZ3RqRUJmbS1iN3I5cTlMaW95LVM0dVI0RlUyQ2E1b1pQc3FXelhsOFZVRDNlcVE5TlI?hl=en-US&gl=US&ceid=US%3Aen)**
-**5. [Stock Market News From Feb. 20, 2026: Dow Rises After Supreme Court Strikes Down Trump's Tariffs](https://news.google.com/read/CBMi-wJBVV95cUxQQVlfVVF4NlEtRnN2TGpNQjYyN3F5VGdwbUgzZUNwaEN5b3NuSXp4aVNlN1UtZ2FHVFJlcFl3dmpEYk54bGEtcGVrV3F0R2Vabmhta0gyQzZOXzA4OVoyMGJ4Z3E1dHZfbGlwVnJzTDN5MHBvUW9LSTZMV1p5X3JXcWd3dWxpbXpfWGI0Y1BDLWR0aEVKbGdUY0hvdWYyRWM0cDMwOE5ROW9WTDdoS0VwSjJ2TWN5SldXQmtfNFUxeVZpZDBjTU1WOWZRQm1ESDVWaXhDZGEyNXg2aUpBLWFubEI1dHBPZXBrZ2VJcUFocGNNT2pDaW1JSlZ3aDZ2M0tra2RfT2tWUTVuX21QUV9PZ3VwTkZVZTZvNXRCQWFNOEdVd0RHZndFeWUwWVozSHpXX2hMUzZQQm1aZVI0TWlHd1hEbzlYN2pLczhZWlVEZDRyLUUzVDd2TVFlYW83WC1FTmgxMy1zRlRpM1phazU3d1gyanA0LWZYSDlF?hl=en-US&gl=US&ceid=US%3Aen)**
-
-## 한국 주식 뉴스
-
-**1. [코스피·코스닥은 '불장'인데…투자자 외면받는 코넥스](https://news.google.com/read/CBMiW0FVX3lxTE5ieUxLNEstcnQ2aVAySjJYUG9NZXAzLXlsTUE3ak1sN1N6UXZCeEdkaVNNVWE4Y0Q5RTBvSW1Xd3FReTAwQlc0WC1uRTNzY2p2UVBHN1hWemRjelXSAWBBVV95cUxPVTRwUnZ0YWRldWdhTUszWVVJZnpWdzJfVjJ3aDAzZ190YmNkYVY5N1NiV0dmLXNVOVZfaWJ1MkJsODhvbGpLUEd6bFdWOHR3Ui00SXVlbHpwOTZoeXQxcDQ?hl=ko&gl=KR&ceid=KR%3Ako)**
-**2. [외국인, 1월 코스피 사고 코스닥 팔았다](https://news.google.com/read/CBMijgFBVV95cUxNY0VHNHVDUEtLRmdnaW1Kd2xsN0V5WTRJXzhKRWlVS2pld1dwakk0ZVdKdWI4LUtJcUE2dlA0eDYwOXVMaC1qR04wOVkwcmgycXJkQldtUldLcTBtSEhaem00WEVsT2pISUh6RUZ2YVNqQmlENlRpOWhqak01SDFHOFBpNTZRTUk3dmJibGZR0gGiAUFVX3lxTFBmVG4ta0hNdkFUVzZtTE0xeDhUMlhuSmUzaGk1MHI0cTN3aFFIZ2pSZmFDTHNiNF9BUXZPUFJuOEJKNzgxVFdqYW4zN01qOWN5cHVvTWh5WUM4aXpnT1pIUU56dXhvYzlDZGhRUnVyR1Z5cGxtOEUzbl9Dby1oX3ZRa0I0Q3lLa2hFYi05UjhzNk5DS0ZnbkloNUhCaHJPMFFNdw?hl=ko&gl=KR&ceid=KR%3Ako)**
-**3. [코스피·코스닥, 오름세로 장 마감](https://news.google.com/read/CBMiakFVX3lxTFBzMHI4TC1paFZTVWZOaXRTSGlOMlcycG9wVHZISWlXRWFEYlVCeEJFbEwtN1ZaQXdESzVwYU1XSDlVUGowbkY3WDJXWVY4aWlKYzhfMnp2WVI2cF9MX0F6RXBfdmhBN09lVFE?hl=ko&gl=KR&ceid=KR%3Ako)**
-**4. [[개장시황] 코스피·코스닥, 연휴 이후 급등 출발](https://news.google.com/read/CBMickFVX3lxTE42Ul9LMUhfRXJaQ09Cel9aSVZmVHJ3bUIyUmZ0UXJVZDlkSGhIb0xnOG9oU29kV09iMFhEUVdNdkM3ckh5M3hmQ2xUOURVSUM5RDVWS25kV1F6dGpJQ181RUItdWdVTDNkOUlLYVh6OFZNUQ?hl=ko&gl=KR&ceid=KR%3Ako)**
-**5. [‘윤 무기징역’ 선고된 날 코스피·코스닥 날았다...“내달까지 반도체 주도 상승장”](https://news.google.com/read/CBMib0FVX3lxTE9raUJSclcxR1JBR3l6YXNQdEdTc1JsUXlPai1PZHZMWm1HX1FGb0V4Y0RQWk5DRnpRR0s0eWI1bGRLanZ5TkxWZmVTV2sxbEZpREFIMEVGTHdLVl9wQ3RsMlg0UDhMLVNwNV9OQ19aONIBc0FVX3lxTE5LalZ1ZFVYQk1KTWxYekZfUkxJbDdkRjZ3ME1hN25oVTVHaTJyOE9hbmJ3cVZxWkJQV0lja25sY2JCSmVKeXVybllIYk53VlpRZExER3p5YVdGcFp1dmI3NGUtUGhkV19EZlF3OXNfenhvWGM?hl=ko&gl=KR&ceid=KR%3Ako)**
 
 ## 시장 데이터 스냅샷
 

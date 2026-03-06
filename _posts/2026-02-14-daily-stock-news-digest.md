@@ -151,42 +151,6 @@ Stock market today: Dow, S&P 500, Nasdaq sink as tech gets hit as AI disruption 
 
 ---
 
-## 글로벌 주식 뉴스
-
-**1. [S&P 500 closes little changed after soft inflation report, index notches losing week: Live updates](https://news.google.com/read/CBMid0FVX3lxTE1rMzAwSXVIelF1VVJ2WU1YbzFiLWtfa0xMRDFVLTZpVE1WcGlrM3hPZnJScFV1b1A2WTNXX3JQeHFEcWRaTU5HdDlYMF83czJndGZqZUY0Y3piUTkzME5LaWFoVlFQQ0xCSXAyaGtlNUlMMU1JMTBJ0gF8QVVfeXFMUG1WcWJDeUpjZVd1ZDdzSWxFaEQ1VUlWX0NnWnFBZTQ1dFBmVlF1dWY1TzRjS2hUbjItWGxzWjFjczZ4QnU4RWVsQ2thWFMyZ0I4T2lfM0p0U3VaUFc4S0t5RXZVTTUyQS1sMzBQYWhOWlhWZ0lncmpnczY1Mw?hl=en-US&gl=US&ceid=US%3Aen)**
-`출처: Google News`
-
-**2. [Stock market today: Dow, S&P 500, Nasdaq futures fall after AI-stoked sell-off with CPI inflation on deck](https://news.google.com/read/CBMi4wFBVV95cUxQc19DM1BrWnpvRGM1OVlnQzFJaWYzYzJLYjVpMzVndEozb3lYcHVmV3dKQXJzQXV1aVU1X1RYVlZXR2JsMnJaOFBpSy1KdDNEQU9EY0NFVmUyMXJzN093cldTWVR4b2F6eEhNX3l5RC1TVmR4SjlMQWdQSlR4V3ljNnNJbndnVmV1QWNRdXJ5X1NHRDREc2ZNR1FFNFBHT1hiVXhGVVhIeDZmcF9JbXlqaTVfazhZT2MyY2ljdDJyWjhjN1R2Q1VLWVNKdmx3WnY1d25lUm12TG5RLVhwWDl6Y2s1dw?hl=en-US&gl=US&ceid=US%3Aen)**
-`출처: Google News`
-
-**3. [Stock Market Today: Dow Dives As S&P 500 Turns Negative For 2026; Cisco, AppLovin Crater (Live Coverage)](https://news.google.com/read/CBMisAFBVV95cUxNd0NsRFI2VWljUTdwaGhiaXA1QzdkMVFqd1dWNWp4YUZuZEFtdDF0VGZOV2ZZeWxVQ2VaNjZCSFkyb2k3NW1ELU55WGNPb0Y5WURCMzBLUTBUVkp6VHhMVmNhM193TE1lNHE3QndXVTh5U2tBY1lhbjBQYlladGVpT0hMdnVDWmRuNFJYai03dnRPRHlMSEtIZkotV2VaazNTYklKdW9fV3ROcktKUEx2aQ?hl=en-US&gl=US&ceid=US%3Aen)**
-`출처: Google News`
-
-**4. [Dow slides 600 points, S&P 500 falls for a third day as AI disruption fears rattle markets: Live updates](https://news.google.com/read/CBMid0FVX3lxTE9FN2VlMkQwUUxVWHdDU0E4SU41bmdRTXliZFdLc2RTZVJGeU93RVd0WVJtcmJQcWFuUXZIcXJCU2RyaEFmOUJvTGF4ck5IXzJEMTBqMWdNSGZybDAzdnQyZlpIZVRoVVJIVXB4ZkdvTjVGX3VLYnM00gF8QVVfeXFMTUJFYjdqZHI4dXI5WUdRVWpOWVlYcUc0WWRQVUF3RVlBWVBKS3ZYZjJpMktKbE9pZWV4X3BLT180ZFBsanpaWF9vTTI2QV9xcTk5VC1fR0dpb3hXbVdoNWJkZXNQT1ZnZ0hnN3pBaHdwQTVnazFXZjJWY1BkSQ?hl=en-US&gl=US&ceid=US%3Aen)**
-`출처: Google News`
-
-**5. [Stock Market News From Feb. 12, 2026: Dow Drops 660 Points](https://news.google.com/read/CBMi-wJBVV95cUxOMG05YnpLSXFSZHVlSENaVy1iQWV4UlI4dkVxU1dkeFF2engxZC0wT0ozVGpWZ0Q2ajdWSlF3ZERIYkxfRzljMi1EVmFCUENtT01jUG9FOHZzaHd2ZjVVS1ZVdjFaSzdQaUpVNUFwQ3o1dGpfTVpWc2tZN2x6UjBzZ0xoSjl4WGI5TC0zeHZKYTZrZW5GMXM1aXVUcldsbmtxNDlJdGJfNTRFUE11RjkyZEt3ZFU5U3dfV3hoajNTaE1nVzV1a3p2V1BLb0Vwc01QeVZ0dEJhMmtfTWFXRDFsQzkzWVZ6RHdheWdQcDNpZE5ub3lzZnNHVGRDNTBPSnJSUi1RMGNrbkpkWG5kaF9oeUpnRnVPMkgtTFBVbG9OMnAwTElWSDBmNlhrMEtrZVdpUzY4QjVUUUhqcWQ2S3dYRURKcGtTQmhZUk5rbXFYZE9vRjlGUW5TX3pQb1NQdkxfa0MzUTRJUnNWZF9JMldnLXdNMkxDNmM5aVJj?hl=en-US&gl=US&ceid=US%3Aen)**
-`출처: Google News`
-
-
-## 한국 주식 뉴스
-
-**1. [[코스피·코스닥 전 거래일(12일) 주요공시]](https://news.google.com/read/CBMiW0FVX3lxTE5MbTV0NXZCdl9Od2tGY1RWc1dIQ1M0WXlmd0Q4ck91LTQ1MFkxaU91X2swNWVrbVFoRVRaS3lCRHJtUjRTdlZ1b2c1QnI4aFhGdjBXaGxrSlhnejDSAWBBVV95cUxQQmtRVVp6d2NkVHlOWkZxZHpvc2drX0g4WU9WRnNFQVl6cUFKWktzY2JrZDQ1bmZhRjJhckN0Zk9fRUJVaVMydjZHYU5OWEg2ZG16Z0V1OXpuRnZRMWRlbEw?hl=ko&gl=KR&ceid=KR%3Ako)**
-`출처: Google News`
-
-**2. [지난달 외국인 국내주식 980억 순매도코스피 사고 코스닥 팔았다](https://news.google.com/read/CBMiUEFVX3lxTE9EbU1yYTJ3RkFjU09zbzZoZGg5UDhqMEl6RmFLOWdHQjlrTTU4T2k5VkVaNnh1bTR2RjZjTFJQNUZqZy14eDNkay1JbjFVZGgt?hl=ko&gl=KR&ceid=KR%3Ako)**
-`출처: Google News`
-
-**3. [외국인 1월 코스닥 팔고 코스피 사들여채권 석달째 순투자](https://news.google.com/read/CBMib0FVX3lxTE55Z3VpRzRMRjhMSEsxSHdiWEhKTzc0TE5XOHpoN1BILWsweXNoMGFLQ0xyMEpMRDFhSm1DRjhfNzdZMXBLYmprWEoxSVRNQnp1SUlOMUtBNG1NUHRUbUFMMnF6Yk5UX193TG14RDN1RdIBc0FVX3lxTE02SlAwWXQ0Tmw0VERXaU5sQnhxTlAyVWl1c25wNnlNbWlUcFdlbjRzNDZoSXFYQUxjOWgxcTZ3UHowbHpOWWNPZTFxVXN1WFVRSUM4TC1LRDFnbDdSSlNBenpfUGJTMHhGZEdKRVVMYWtkUkk?hl=ko&gl=KR&ceid=KR%3Ako)**
-`출처: Google News`
-
-**4. ["코스피만 샀다"코스닥은 4590억원 팔아치운 외국인](https://news.google.com/read/CBMiWkFVX3lxTE5CalZLWElsN1RQdjJFaS1WeWJoM1hhYklXLXp2dXFvUFdxUzYwTkk4bzl2QTE1Q01IN2ptNkJveWt3NjNSSDJQWkFEZ1VVdEVBNHpEaDJQVzNrQdIBVEFVX3lxTE1yaVJ3Y0F0cWd5NFNsa29kbE13enVHaUZfX3dlek43QV90cEZuc25SS0doSHBQU0FnODRNZC00UHNvckduOExwYXdOX3JvbW9lQS00WQ?hl=ko&gl=KR&ceid=KR%3Ako)**
-`출처: Google News`
-
-**5. [외국인, 지난달 코스피 사고 코스닥 팔았다](https://news.google.com/read/CBMiZ0FVX3lxTE9FRW1pUkVsUG1PZURqVXVRS3RCMWpTRUx5Y28zQndiRGxkcTYtUXdpLTVzamY3VkF0RmRaall4QjFHbk0wT2ctQ2VzTi10NWFESG5NWjZqV0cxc3Nyb0otOFhob2RUQ2c?hl=ko&gl=KR&ceid=KR%3Ako)**
-`출처: Google News`
-
-
 ## 시장 데이터 스냅샷
 
 | 지수/ETF | 가격 | 변동률 |

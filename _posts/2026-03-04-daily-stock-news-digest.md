@@ -16,8 +16,7 @@ description: "KOSPI -7.62%, KOSDAQ -8.68% 급락. 이란 분쟁 확대에 따른
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">147</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 70</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">리스크 위험</div></div><div class="stat-item"><div class="stat-value">5,384.06</div><div class="stat-label">KOSPI -7.62%</div></div><div class="stat-item"><div class="stat-value">1,051.52</div><div class="stat-label">KOSDAQ -8.68%</div></div></div>
 <div class="alert-box alert-info"><strong>주식 시장 긴급: Nasdaq, prices, crash - 147건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (70건): Dow, 코스피, Nasdaq 관련 70건의 뉴스가 보고되었습니다.</li><li>📊 <strong>매크로/금리</strong> (20건): 환율, 한은, 달러 관련 20건의 뉴스가 보고되었습니다.</li><li>🤖 <strong>AI/기술</strong> (5건): 반도체, 삼성전자, 하이닉스 관련 5건의 뉴스가 보고되었습니다.</li><li>🏛️ <strong>정치/정책</strong> (6건): Trump, Iran, kick 관련 6건의 뉴스가 보고되었습니다.</li></ul></div>
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMizAJBVV95cUxPb0pPMXJJeUd2YzVGSWZjRGk2VTdfS2czUC1hU19qYmd6VUo5UzZnVDBtcUVVbklrZjA3X3dEZFluUXFpQmVTSVFrTjZfbkItRGdBOFNYQWFLNEtHeEduODdNQUNCT01YOE5mbjY5SWNmRnFpRUgzYVFtVmFuMEV0Z0E0b2daQXNrYzZRWUI1a3UteEx2YnhKTVlTVHFYeEpJOUJjYTlUZzlQS19hV1VZeWRLcVgzZW0tU0J6akhtMHRNd1ptSS1fQl9WUTU2SUYyOC1BQXptY3BfaFRTTXJJbzFiQW5LTnZBQVVfeFJIRkhhazNESEVoTFFKaEFibnpHNVNUUkZhaTRfWGJOZ2dscjdWdDBvMFRhVUh2TXNXV0JRYV8yLVM0TC1MQVVoVkNkSzBuUXQ2RnpCamJpOGd4NzVUR2s4bk9vN1NaSdIB0gJBVV95cUxPdU9mR2pwX3haSVE0VTFKMTktanJ6SFZqWEcxTEVBcC1oemxvdmFTNjJuWlNzeXBKTFF2Z0NTUjMxMVpvWFE0THJZZV80UXRERGVzb3NORFE2dGNiUEJFUmRCYmR0UzBXYWNJRnBlWTYtb1paaERsQVJkbW9nX01HRE5JWUpYVVZOSUZHSWQ5aWlYc2JwSUlGR09jMlgxYXY5WF9qTVZBdGRYNUlJeUxMYzdKZkVDUjRPOFFfREpVYld0em1oZ1c3TG0wdzFNNm8wbllpbEYzSWlXa0s3STNEUkhYT2dxaTNhMkIxVWJPRTRKY1NFcU5mN29aMi1fWDE2RVBnNXpyTWNsM3VWeDR0dC1VZ2pYbjltVW5YQWdCZ0JuYlRqb3gweTVRSnBRTVlicUd2S0pXbkt5R0g2c0NTN1hZSEY5T2ljTjN3YV9YOXRxQQ?hl=en-US&gl=US&ceid=US%3Aen">US stock market big crash today: Why Dow, S&P 500, Nasdaq in deep red today? Oil, gas and gold prices surg</a></li><li><a href="https://news.google.com/read/CBMixAJBVV95cUxQM0hoVjB4R3haRkNYNi1BckY5bkhXeWhpb3M3UVBLQ3psbUNDbzJQcURGTXVFMFdXbE5yZ2VhLVpDVVF1SWhzXzB2RXVzam5sLUtOU2E5cmM3T3UwdFJyWmUxWkVmSXFOSDU3eGpmajMzMjkwR3VyTWtKNU1CQ0JiN19WbktaV1c2M2hDU3dIbDU0NXV6MGtsQkRvREcyelFQY0VJUGc3R0kzX3ZBSm56c1N1ZVR4ZnR3dk4zaW5PVEM4MGRyM2dHR3N0ZmwyU2I0UFRmTjZPd2JiRGdDbG8wMEFVcldDQlFZMFcwajRvQ3NvNVEwT0dWWEpGbGFmdWtXeE1DbVNjYUVfYnZoeU9aeDFnaFFIVmZlbjgtWnhDRVhndlEzSEFqS3VtQnhpZkZuQ09rLW00TkdOcjl3SmI1akFaTW7SAcoCQVVfeXFMT2Rzb21QbmZ2WUFDeTZESWNlOHE3Y3RDRVhCa1NNZWdwYld3N042eTZfcklvbVVwZjlkZDQwX1MxcENHaUt0THhQTzloMDhIWktCMUJIZFo1MTViLWtQY2RrTzhacmtDTW9NRm56SU93THBiTS1icy1OT1FzemVpR2gyTjZSM3c5enhlVDE1dGM4UWVqWWpDUFM1RUlVVVJEXzJuMzdOSmtJZlJCOWRtTXZXN2hCOGVKVnRlS2pMVWhEaUtnMGk0VlNKRGxqR2dwMWxWUEFIM0t1TDdTQy1uR2JKakd5c3NSWUN4MTJCdTRFa1YySThPQUNYRERqai1aQ0JjVm9uNzYyRG1veDB2bjhhNEJpOU5lMXRQTG01N2oxWGRhQ0V2YTVDaDMzNS1LdktFZm8xWEJsdnFKc1hCeS1JclRPSm5ia09n?hl=en-US&gl=US&ceid=US%3Aen">Why didn't US avert stock market Dow Jones, S&P 500 and Nasdaq crash today like UAE? Analysts insights, ma</a></li><li><a href="https://news.google.com/read/CBMi4gJBVV95cUxOTU1aOWJoOXp6bGtDbFVsUDZTc2pySVMwRWFydExEdTEwUGNLUUdaZmtkb3o5SGRRWGY5bm1tU0NFUGkyOUJNV0pPdTVPTnNUZzdSWTJkYU1aemlKSENDRDA3elc3RnJ1SzZfUWhkTGlYMkd5bVNnOFE0VXBhSThZM3RjRWZJZnJSVGY0R05ZZWs2MDJXM04yQ3RLcnc1SFQ0WjI5bEp3T0xHOU1hQVV1ZFM5a3ZBU2RGdmFIRVhSdEkyM2pWSHpQZTFzRFFwN0lTc2l6QlV0Rk1DczNyWkFRR0tYRElsUHZCbDNETFBjdWV5d182YjIzN1JpLWcwLWlwcUZPSEgwbDFDby1uUWZDblNLUWh1djBNNllVZlpnRXNGbXl5akZ3S19fUHo2dnlBVHRmVnJwNWc4WWlEMV9rVFlnOEdHYUdzZE5DallaenNXbHZpdjBfMUI4RUdoVkRwelHSAecCQVVfeXFMTUs3TlZYb3R4aTRJVlFIbTVCUHo5TVA5TVc3VjhWV3Z0ZkJjclhBbXZHanFadkJaVmFXSDQ4Q1Y0bVVyZm1iRW1jYXkyYXJfUExHb2ZNXzlrQ0d6WnNUVjJCZlNxRkFWVC16RHV5c3ctQVJTZ25LdW56ZE5Jekt4NWZhQ0dpYzBZNHdtNjlueE9rX3BOWlBtQ2gxbVdWQTR2c05QTW90SWJILUU1WExyVzhiOWRTUVZqcG9JNnZpUzNTZllYOGZxalRDbzdmSkJBX3hsVWFuZlJyOGhnS2JhamM3ckxRT0w0QlZjNWNSeDE5VzVBMVlzU2hWVGxRT0YwLWRuSEVHVjRkZVB1UDJFemVJdmRNU2hNMzBJVXpXZHZzbzZSLTlCYmtWTW45NU5WUGx6dkxXeTVhRnVialJSZkFzakF2TE1sUU1BandiUTBNa092azlLeE5lTjFLbHZmTFMyeXpnUnM?hl=en-US&gl=US&ceid=US%3Aen">US stock market Dow Jones, S&P 500 and Nasdaq crash today biggest losers and gainers: Here's complete list</a></li></ul></div>
-
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMizAJBVV95cUxPb0pPMXJJeUd2YzVGSWZjRGk2VTdfS2czUC1hU19qYmd6VUo5UzZnVDBtcUVVbklrZjA3X3dEZFluUXFpQmVTSVFrTjZfbkItRGdBOFNYQWFLNEtHeEduODdNQUNCT01YOE5mbjY5SWNmRnFpRUgzYVFtVmFuMEV0Z0E0b2daQXNrYzZRWUI1a3UteEx2YnhKTVlTVHFYeEpJOUJjYTlUZzlQS19hV1VZeWRLcVgzZW0tU0J6akhtMHRNd1ptSS1fQl9WUTU2SUYyOC1BQXptY3BfaFRTTXJJbzFiQW5LTnZBQVVfeFJIRkhhazNESEVoTFFKaEFibnpHNVNUUkZhaTRfWGJOZ2dscjdWdDBvMFRhVUh2TXNXV0JRYV8yLVM0TC1MQVVoVkNkSzBuUXQ2RnpCamJpOGd4NzVUR2s4bk9vN1NaSdIB0gJBVV95cUxPdU9mR2pwX3haSVE0VTFKMTktanJ6SFZqWEcxTEVBcC1oemxvdmFTNjJuWlNzeXBKTFF2Z0NTUjMxMVpvWFE0THJZZV80UXRERGVzb3NORFE2dGNiUEJFUmRCYmR0UzBXYWNJRnBlWTYtb1paaERsQVJkbW9nX01HRE5JWUpYVVZOSUZHSWQ5aWlYc2JwSUlGR09jMlgxYXY5WF9qTVZBdGRYNUlJeUxMYzdKZkVDUjRPOFFfREpVYld0em1oZ1c3TG0wdzFNNm8wbllpbEYzSWlXa0s3STNEUkhYT2dxaTNhMkIxVWJPRTRKY1NFcU5mN29aMi1fWDE2RVBnNXpyTWNsM3VWeDR0dC1VZ2pYbjltVW5YQWdCZ0JuYlRqb3gweTVRSnBRTVlicUd2S0pXbkt5R0g2c0NTN1hZSEY5T2ljTjN3YV9YOXRxQQ?hl=en-US&gl=US&ceid=US%3Aen">US stock market big crash today: Why Dow, S&P 500, Nasdaq in deep red today? Oil, gas and gold prices surg</a> — 시장 급락 소식입니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</li><li><a href="https://news.google.com/read/CBMixAJBVV95cUxQM0hoVjB4R3haRkNYNi1BckY5bkhXeWhpb3M3UVBLQ3psbUNDbzJQcURGTXVFMFdXbE5yZ2VhLVpDVVF1SWhzXzB2RXVzam5sLUtOU2E5cmM3T3UwdFJyWmUxWkVmSXFOSDU3eGpmajMzMjkwR3VyTWtKNU1CQ0JiN19WbktaV1c2M2hDU3dIbDU0NXV6MGtsQkRvREcyelFQY0VJUGc3R0kzX3ZBSm56c1N1ZVR4ZnR3dk4zaW5PVEM4MGRyM2dHR3N0ZmwyU2I0UFRmTjZPd2JiRGdDbG8wMEFVcldDQlFZMFcwajRvQ3NvNVEwT0dWWEpGbGFmdWtXeE1DbVNjYUVfYnZoeU9aeDFnaFFIVmZlbjgtWnhDRVhndlEzSEFqS3VtQnhpZkZuQ09rLW00TkdOcjl3SmI1akFaTW7SAcoCQVVfeXFMT2Rzb21QbmZ2WUFDeTZESWNlOHE3Y3RDRVhCa1NNZWdwYld3N042eTZfcklvbVVwZjlkZDQwX1MxcENHaUt0THhQTzloMDhIWktCMUJIZFo1MTViLWtQY2RrTzhacmtDTW9NRm56SU93THBiTS1icy1OT1FzemVpR2gyTjZSM3c5enhlVDE1dGM4UWVqWWpDUFM1RUlVVVJEXzJuMzdOSmtJZlJCOWRtTXZXN2hCOGVKVnRlS2pMVWhEaUtnMGk0VlNKRGxqR2dwMWxWUEFIM0t1TDdTQy1uR2JKakd5c3NSWUN4MTJCdTRFa1YySThPQUNYRERqai1aQ0JjVm9uNzYyRG1veDB2bjhhNEJpOU5lMXRQTG01N2oxWGRhQ0V2YTVDaDMzNS1LdktFZm8xWEJsdnFKc1hCeS1JclRPSm5ia09n?hl=en-US&gl=US&ceid=US%3Aen">Why didn't US avert stock market Dow Jones, S&P 500 and Nasdaq crash today like UAE? Analysts insights, ma</a> — 시장 급락 소식입니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</li><li><a href="https://news.google.com/read/CBMi4gJBVV95cUxOTU1aOWJoOXp6bGtDbFVsUDZTc2pySVMwRWFydExEdTEwUGNLUUdaZmtkb3o5SGRRWGY5bm1tU0NFUGkyOUJNV0pPdTVPTnNUZzdSWTJkYU1aemlKSENDRDA3elc3RnJ1SzZfUWhkTGlYMkd5bVNnOFE0VXBhSThZM3RjRWZJZnJSVGY0R05ZZWs2MDJXM04yQ3RLcnc1SFQ0WjI5bEp3T0xHOU1hQVV1ZFM5a3ZBU2RGdmFIRVhSdEkyM2pWSHpQZTFzRFFwN0lTc2l6QlV0Rk1DczNyWkFRR0tYRElsUHZCbDNETFBjdWV5d182YjIzN1JpLWcwLWlwcUZPSEgwbDFDby1uUWZDblNLUWh1djBNNllVZlpnRXNGbXl5akZ3S19fUHo2dnlBVHRmVnJwNWc4WWlEMV9rVFlnOEdHYUdzZE5DallaenNXbHZpdjBfMUI4RUdoVkRwelHSAecCQVVfeXFMTUs3TlZYb3R4aTRJVlFIbTVCUHo5TVA5TVc3VjhWV3Z0ZkJjclhBbXZHanFadkJaVmFXSDQ4Q1Y0bVVyZm1iRW1jYXkyYXJfUExHb2ZNXzlrQ0d6WnNUVjJCZlNxRkFWVC16RHV5c3ctQVJTZ25LdW56ZE5Jekt4NWZhQ0dpYzBZNHdtNjlueE9rX3BOWlBtQ2gxbVdWQTR2c05QTW90SWJILUU1WExyVzhiOWRTUVZqcG9JNnZpUzNTZllYOGZxalRDbzdmSkJBX3hsVWFuZlJyOGhnS2JhamM3ckxRT0w0QlZjNWNSeDE5VzVBMVlzU2hWVGxRT0YwLWRuSEVHVjRkZVB1UDJFemVJdmRNU2hNMzBJVXpXZHZzbzZSLTlCYmtWTW45NU5WUGx6dkxXeTVhRnVialJSZkFzakF2TE1sUU1BandiUTBNa092azlLeE5lTjFLbHZmTFMyeXpnUnM?hl=en-US&gl=US&ceid=US%3Aen">US stock market Dow Jones, S&P 500 and Nasdaq crash today biggest losers and gainers: Here's complete list</a> — 시장 급락 소식입니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</li></ul></div>
 
 
 ## 전체 뉴스 요약
@@ -38,6 +37,7 @@ description: "KOSPI -7.62%, KOSDAQ -8.68% 급락. 이란 분쟁 확대에 따른
 <div class="news-card-num">1</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMijANBVV95cUxQY1o2dTNvbFVTdzNzX2xXZ0FFSVppQWo2VHdicUtXYjNKeGJxeHJ3TXZVREtNaUpCaUhGU21zQjkwXzJwcmQ3NU85eTBpUS1pMEM2YWdsTTN4YXZBUUZDVTM3WTJOd2lPYjd3ZWVrNEVjMTAyQk5qbnZ3Q2RSOVhBbDlyRFlfNkx3SEZ1d2pnNXRqTVJ4SG9ET2EzYW5FWTh4THg5WjhSeXhvSDRVUVNIQlRtdXVmWnlZRFlRSTROdU54cmZCNTBfeWVMXzJuTklrSU5IYmFxLTdTLVN2VV9GQVV0ZDVENUhreVdwdEhONXJMRXBPd3FkT25pMGVsclg3MHZHcmpuMVEyUmh2aGFmZjRSTlNwQXdSTy1YcUgyM0NsSldyOUNKdFRoTy1reFFmZlRqUFNySlhjRGUtcVNsUlNnbjl4Y1BTeUl2NHVNbi04SXVtdUJfQlNFZzBpMmp0SE5Rb1dsOUpCRGowOXI5aHNRcUVhUy1EdmhfNEd0NU16MlBYMDJEQmRMSHA?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">오늘의 증시: 다우 300포인트 급락 — 이란 갈등에 유가 급등: 실시간 업데이트</a>
+<p class="news-desc">시장이 큰 폭으로 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -47,6 +47,7 @@ description: "KOSPI -7.62%, KOSDAQ -8.68% 급락. 이란 분쟁 확대에 따른
 <div class="news-card-num">2</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMitANBVV95cUxQQmwzZ3BLaTNVT2FLX3FQRjJLN1U4a1FYTXNqNTdmZ1R1MHgyb0x0NWRDV2JzdnhIdW1VejJOaks0Tm9naHZQN0VvYko1bm9SUWpidEgzaHFYdHd0aUNSRUY0eEtBZlI5MVFIVGlyTFc4aE9iaVRzZHlfZjZiTW4wV2dZM29ES19nN2l0YWhYMlNvZUJZX0xXTXlMbTFYVnludlZhSVJPbXltbEtraEhnVzh2a3pUNzV3aGUzMVRMcEVRVGJwZGhBdko3SUhULVBIY1h3OVcyTE1fMGNaU1hVMmFfWXg0QmhNNkNoek9KcUpPT3E5WVZ4R2VyS2s4a1piOU5IdjJSc3VWNVAzNS05OGkzVFh0bkJNUU9xUmRUZzRnYml6X2RDcUVCOEJwTUFSc1dsU3lvNkRxN01MS2ZxdS01a2lMdFpOUkh3YkZac1lLRGExY09FUjFFVlU5OFdWUEtMaEFqVGtJb0txY045M0FNMHl1bFVmNl8zT18tOTEzMlB3Z3VtR3VuVDgxdURKMjQtemRLd1M5aVd0VlMycTQtTno4eHlEcjd2ZTl3Qm51c1FF?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Stock Market News, March 3, 2026: Dow ends down 400 points, S&amp;P 500 and Nasdaq tumble around 1% as investors digest the war in the Middle East; Treasury yields rise as oil prices surge</a>
+<p class="news-desc">시장 급락 소식입니다. 400 points의 하락폭을 기록했습니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -56,13 +57,14 @@ description: "KOSPI -7.62%, KOSDAQ -8.68% 급락. 이란 분쟁 확대에 따른
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMizAJBVV95cUxPb0pPMXJJeUd2YzVGSWZjRGk2VTdfS2czUC1hU19qYmd6VUo5UzZnVDBtcUVVbklrZjA3X3dEZFluUXFpQmVTSVFrTjZfbkItRGdBOFNYQWFLNEtHeEduODdNQUNCT01YOE5mbjY5SWNmRnFpRUgzYVFtVmFuMEV0Z0E0b2daQXNrYzZRWUI1a3UteEx2YnhKTVlTVHFYeEpJOUJjYTlUZzlQS19hV1VZeWRLcVgzZW0tU0J6akhtMHRNd1ptSS1fQl9WUTU2SUYyOC1BQXptY3BfaFRTTXJJbzFiQW5LTnZBQVVfeFJIRkhhazNESEVoTFFKaEFibnpHNVNUUkZhaTRfWGJOZ2dscjdWdDBvMFRhVUh2TXNXV0JRYV8yLVM0TC1MQVVoVkNkSzBuUXQ2RnpCamJpOGd4NzVUR2s4bk9vN1NaSdIB0gJBVV95cUxPdU9mR2pwX3haSVE0VTFKMTktanJ6SFZqWEcxTEVBcC1oemxvdmFTNjJuWlNzeXBKTFF2Z0NTUjMxMVpvWFE0THJZZV80UXRERGVzb3NORFE2dGNiUEJFUmRCYmR0UzBXYWNJRnBlWTYtb1paaERsQVJkbW9nX01HRE5JWUpYVVZOSUZHSWQ5aWlYc2JwSUlGR09jMlgxYXY5WF9qTVZBdGRYNUlJeUxMYzdKZkVDUjRPOFFfREpVYld0em1oZ1c3TG0wdzFNNm8wbllpbEYzSWlXa0s3STNEUkhYT2dxaTNhMkIxVWJPRTRKY1NFcU5mN29aMi1fWDE2RVBnNXpyTWNsM3VWeDR0dC1VZ2pYbjltVW5YQWdCZ0JuYlRqb3gweTVRSnBRTVlicUd2S0pXbkt5R0g2c0NTN1hZSEY5T2ljTjN3YV9YOXRxQQ?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">US stock market big crash today: Why Dow, S&amp;P 500, Nasdaq in deep red today? Oil, gas and gold prices surg</a>
+<p class="news-desc">시장 급락 소식입니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
 
 <details><summary>그 외 67건 보기</summary><div class="details-content"><ol class="news-overflow-list">
-<li><a href="https://news.google.com/read/CBMixAJBVV95cUxQM0hoVjB4R3haRkNYNi1BckY5bkhXeWhpb3M3UVBLQ3psbUNDbzJQcURGTXVFMFdXbE5yZ2VhLVpDVVF1SWhzXzB2RXVzam5sLUtOU2E5cmM3T3UwdFJyWmUxWkVmSXFOSDU3eGpmajMzMjkwR3VyTWtKNU1CQ0JiN19WbktaV1c2M2hDU3dIbDU0NXV6MGtsQkRvREcyelFQY0VJUGc3R0kzX3ZBSm56c1N1ZVR4ZnR3dk4zaW5PVEM4MGRyM2dHR3N0ZmwyU2I0UFRmTjZPd2JiRGdDbG8wMEFVcldDQlFZMFcwajRvQ3NvNVEwT0dWWEpGbGFmdWtXeE1DbVNjYUVfYnZoeU9aeDFnaFFIVmZlbjgtWnhDRVhndlEzSEFqS3VtQnhpZkZuQ09rLW00TkdOcjl3SmI1akFaTW7SAcoCQVVfeXFMT2Rzb21QbmZ2WUFDeTZESWNlOHE3Y3RDRVhCa1NNZWdwYld3N042eTZfcklvbVVwZjlkZDQwX1MxcENHaUt0THhQTzloMDhIWktCMUJIZFo1MTViLWtQY2RrTzhacmtDTW9NRm56SU93THBiTS1icy1OT1FzemVpR2gyTjZSM3c5enhlVDE1dGM4UWVqWWpDUFM1RUlVVVJEXzJuMzdOSmtJZlJCOWRtTXZXN2hCOGVKVnRlS2pMVWhEaUtnMGk0VlNKRGxqR2dwMWxWUEFIM0t1TDdTQy1uR2JKakd5c3NSWUN4MTJCdTRFa1YySThPQUNYRERqai1aQ0JjVm9uNzYyRG1veDB2bjhhNEJpOU5lMXRQTG01N2oxWGRhQ0V2YTVDaDMzNS1LdktFZm8xWEJsdnFKc1hCeS1JclRPSm5ia09n?hl=en-US&gl=US&ceid=US%3Aen">Why didn't US avert stock market Dow Jones, S&P 500 and Nasdaq crash today like UAE? Analysts insights, ma</a></li>
-<li><a href="https://news.google.com/read/CBMivgFBVV95cUxPYi1QeXpCMzg0VWVQSVZPaGRWdU4wNmNpSHJIY3B1Wk5hTG1Ccl9RTnFXQm1DdE94Z2YzVm5JRnlJbDZBSzllaF9nSm5tcktyWXZSZmx3MTJxYXBDY29HNXBHWFo1em9xWFBLQW5jUDl4dDhRZDA4d2NwNDlBdm1jaXU1NVoyUU1lQ2NTdG9fZ0dxbjFpSWpxRXZfNExzcGY1OUx4bXVOYUFrNFU5MXp4ZFZseXdkNjBOaktoblhB0gHDAUFVX3lxTE1hYUpQekd0RllUY1B2ajNGWGJoWVFDNU9Ea0VwV1VjeTJONUZFNGtWaDd4bFE5cTNJX2FTRzFVT1E1THdDejl5ZUI2aVZqeTZCdDlPVUhlVTdoNW5hcVlyLTNDUDgxaHFZV2RZa1lBT0lJTXpqTV9pTlJ3c2hjSTFOS0M0azJUakVBb09MWTl5V1lXdEZqS3pzeTM0dEhLMGVxZnMwMlZtUHNyUXBlcGotaWFUVHBiaUtJZDRGUGRMdmg3UQ?hl=en-US&gl=US&ceid=US%3Aen">U.S. stocks rebound from sharp losses, while oil prices leap on worries about Iran war</a></li>
+<li><a href="https://news.google.com/read/CBMixAJBVV95cUxQM0hoVjB4R3haRkNYNi1BckY5bkhXeWhpb3M3UVBLQ3psbUNDbzJQcURGTXVFMFdXbE5yZ2VhLVpDVVF1SWhzXzB2RXVzam5sLUtOU2E5cmM3T3UwdFJyWmUxWkVmSXFOSDU3eGpmajMzMjkwR3VyTWtKNU1CQ0JiN19WbktaV1c2M2hDU3dIbDU0NXV6MGtsQkRvREcyelFQY0VJUGc3R0kzX3ZBSm56c1N1ZVR4ZnR3dk4zaW5PVEM4MGRyM2dHR3N0ZmwyU2I0UFRmTjZPd2JiRGdDbG8wMEFVcldDQlFZMFcwajRvQ3NvNVEwT0dWWEpGbGFmdWtXeE1DbVNjYUVfYnZoeU9aeDFnaFFIVmZlbjgtWnhDRVhndlEzSEFqS3VtQnhpZkZuQ09rLW00TkdOcjl3SmI1akFaTW7SAcoCQVVfeXFMT2Rzb21QbmZ2WUFDeTZESWNlOHE3Y3RDRVhCa1NNZWdwYld3N042eTZfcklvbVVwZjlkZDQwX1MxcENHaUt0THhQTzloMDhIWktCMUJIZFo1MTViLWtQY2RrTzhacmtDTW9NRm56SU93THBiTS1icy1OT1FzemVpR2gyTjZSM3c5enhlVDE1dGM4UWVqWWpDUFM1RUlVVVJEXzJuMzdOSmtJZlJCOWRtTXZXN2hCOGVKVnRlS2pMVWhEaUtnMGk0VlNKRGxqR2dwMWxWUEFIM0t1TDdTQy1uR2JKakd5c3NSWUN4MTJCdTRFa1YySThPQUNYRERqai1aQ0JjVm9uNzYyRG1veDB2bjhhNEJpOU5lMXRQTG01N2oxWGRhQ0V2YTVDaDMzNS1LdktFZm8xWEJsdnFKc1hCeS1JclRPSm5ia09n?hl=en-US&gl=US&ceid=US%3Aen">Why didn't US avert stock market Dow Jones, S&P 500 and Nasdaq crash today like UAE? Analysts insights, ma</a> — 시장 급락 소식입니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</li>
+<li><a href="https://news.google.com/read/CBMivgFBVV95cUxPYi1QeXpCMzg0VWVQSVZPaGRWdU4wNmNpSHJIY3B1Wk5hTG1Ccl9RTnFXQm1DdE94Z2YzVm5JRnlJbDZBSzllaF9nSm5tcktyWXZSZmx3MTJxYXBDY29HNXBHWFo1em9xWFBLQW5jUDl4dDhRZDA4d2NwNDlBdm1jaXU1NVoyUU1lQ2NTdG9fZ0dxbjFpSWpxRXZfNExzcGY1OUx4bXVOYUFrNFU5MXp4ZFZseXdkNjBOaktoblhB0gHDAUFVX3lxTE1hYUpQekd0RllUY1B2ajNGWGJoWVFDNU9Ea0VwV1VjeTJONUZFNGtWaDd4bFE5cTNJX2FTRzFVT1E1THdDejl5ZUI2aVZqeTZCdDlPVUhlVTdoNW5hcVlyLTNDUDgxaHFZV2RZa1lBT0lJTXpqTV9pTlJ3c2hjSTFOS0M0azJUakVBb09MWTl5V1lXdEZqS3pzeTM0dEhLMGVxZnMwMlZtUHNyUXBlcGotaWFUVHBiaUtJZDRGUGRMdmg3UQ?hl=en-US&gl=US&ceid=US%3Aen">U.S. stocks rebound from sharp losses, while oil prices leap on worries about Iran war</a> — 원유 가격 변동 소식입니다. 유가는 인플레이션과 에너지 섹터 수익성의 핵심 변수입니다.</li>
 <li><em>...외 52건</em></li>
 </ol></div></details>
 
@@ -76,6 +78,7 @@ description: "KOSPI -7.62%, KOSDAQ -8.68% 급락. 이란 분쟁 확대에 따른
 <div class="news-card-num">1</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMicEFVX3lxTFBULVk2NVRkbFYtWWlQX0VyUGliUzFtTUE4WWgyNXpTbVpveEd6SjZrS0szNU1JbnJreFlEdERqTFc4NWFtRjlLLVFiZkV6bGFlblVCb2hfOWxCME16VDNkZzZodm41Zms4b1FyM1FLLU0?hl=ko&amp;gl=KR&amp;ceid=KR%3Ako" class="news-title" target="_blank" rel="noopener noreferrer">[코스피·코스닥지수] 미국 뉴욕증시 다우존스·S&amp;P500·나스닥지수 하락…AI산업 불확실성·美도매물가 급등 등 영향</a>
+<p class="news-desc">시장 반등 움직임이 포착되었습니다. 기술적 반등인지 추세 전환인지 거래량과 수급 확인이 필요합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -101,9 +104,9 @@ description: "KOSPI -7.62%, KOSDAQ -8.68% 급락. 이란 분쟁 확대에 따른
 </div>
 
 <details><summary>그 외 17건 보기</summary><div class="details-content"><ol class="news-overflow-list">
-<li><a href="https://news.google.com/read/CBMitANBVV95cUxQQmwzZ3BLaTNVT2FLX3FQRjJLN1U4a1FYTXNqNTdmZ1R1MHgyb0x0NWRDV2JzdnhIdW1VejJOaks0Tm9naHZQN0VvYko1bm9SUWpidEgzaHFYdHd0aUNSRUY0eEtBZlI5MVFIVGlyTFc4aE9iaVRzZHlfZjZiTW4wV2dZM29ES19nN2l0YWhYMlNvZUJZX0xXTXlMbTFYVnludlZhSVJPbXltbEtraEhnVzh2a3pUNzV3aGUzMVRMcEVRVGJwZGhBdko3SUhULVBIY1h3OVcyTE1fMGNaU1hVMmFfWXg0QmhNNkNoek9KcUpPT3E5WVZ4R2VyS2s4a1piOU5IdjJSc3VWNVAzNS05OGkzVFh0bkJNUU9xUmRUZzRnYml6X2RDcUVCOEJwTUFSc1dsU3lvNkRxN01MS2ZxdS01a2lMdFpOUkh3YkZac1lLRGExY09FUjFFVlU5OFdWUEtMaEFqVGtJb0txY045M0FNMHl1bFVmNl8zT18tOTEzMlB3Z3VtR3VuVDgxdURKMjQtemRLd1M5aVd0VlMycTQtTno4eHlEcjd2ZTl3Qm51c1FF?hl=en-US&gl=US&ceid=US%3Aen">Stock Market News, March 3, 2026: Dow ends down 400 points, S&P 500 and Nasdaq tumble around 1% as investors digest the war in the Middle East; Treasury yields rise as oil prices surge</a></li>
-<li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFBUazA2SnI3Zlh1WXkzbXpwUmpoUFRpWVNxd0NRS2Raa1FtRll2ZmNIem9WUXVxTU9KalN4T2JuT3dRSmgzcVppY19hUDRWRW9zTy1mck1VUjhrT0w1aW5xVjlES2NpRmJCVFRZ?oc=5">한국은행, "시장심리 한 방향으로 쏠리지 않도록 적기 대응" - BBS불교방송</a></li>
-<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE95ci1QSERFMkJ1WFZNVGhxSFVoQkpMZzdJa2dnS1B6XzQxdXE1UTVrSGk4bkdlcEUtRE9lUVpVQjEwdGlHV21GMmJEWHhkdWJEZDVEbUVwVm83Z9IBX0FVX3lxTFBuSWJtSXJ2Z1hXOW5HaE1sNFVTYVNtVGNybFpoUjV2blh3Zm1DaTBkQlloMkpEN3hQakNpT2VDZE93YWthQkE1cUVVRWZ2Q2FnN3J4X1RRUHc5ZkZ5OTl3?oc=5">한은 “환율 1500원 일시적…달러 유동성 풍부·CDS 프리미엄 안정적” - 경향신문</a></li>
+<li><a href="https://news.google.com/read/CBMitANBVV95cUxQQmwzZ3BLaTNVT2FLX3FQRjJLN1U4a1FYTXNqNTdmZ1R1MHgyb0x0NWRDV2JzdnhIdW1VejJOaks0Tm9naHZQN0VvYko1bm9SUWpidEgzaHFYdHd0aUNSRUY0eEtBZlI5MVFIVGlyTFc4aE9iaVRzZHlfZjZiTW4wV2dZM29ES19nN2l0YWhYMlNvZUJZX0xXTXlMbTFYVnludlZhSVJPbXltbEtraEhnVzh2a3pUNzV3aGUzMVRMcEVRVGJwZGhBdko3SUhULVBIY1h3OVcyTE1fMGNaU1hVMmFfWXg0QmhNNkNoek9KcUpPT3E5WVZ4R2VyS2s4a1piOU5IdjJSc3VWNVAzNS05OGkzVFh0bkJNUU9xUmRUZzRnYml6X2RDcUVCOEJwTUFSc1dsU3lvNkRxN01MS2ZxdS01a2lMdFpOUkh3YkZac1lLRGExY09FUjFFVlU5OFdWUEtMaEFqVGtJb0txY045M0FNMHl1bFVmNl8zT18tOTEzMlB3Z3VtR3VuVDgxdURKMjQtemRLd1M5aVd0VlMycTQtTno4eHlEcjd2ZTl3Qm51c1FF?hl=en-US&gl=US&ceid=US%3Aen">Stock Market News, March 3, 2026: Dow ends down 400 points, S&P 500 and Nasdaq tumble around 1% as investors digest the war in the Middle East; Treasury yields rise as oil prices surge</a> — 시장 급락 소식입니다. 400 points의 하락폭을 기록했습니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</li>
+<li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFBUazA2SnI3Zlh1WXkzbXpwUmpoUFRpWVNxd0NRS2Raa1FtRll2ZmNIem9WUXVxTU9KalN4T2JuT3dRSmgzcVppY19hUDRWRW9zTy1mck1VUjhrT0w1aW5xVjlES2NpRmJCVFRZ?oc=5">한국은행, "시장심리 한 방향으로 쏠리지 않도록 적기 대응" - BBS불교방송</a> — 한국은행 통화정책 관련 소식입니다. 금리 결정은 채권·부동산·주식 시장 전반에 영향을 미칩니다.</li>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE95ci1QSERFMkJ1WFZNVGhxSFVoQkpMZzdJa2dnS1B6XzQxdXE1UTVrSGk4bkdlcEUtRE9lUVpVQjEwdGlHV21GMmJEWHhkdWJEZDVEbUVwVm83Z9IBX0FVX3lxTFBuSWJtSXJ2Z1hXOW5HaE1sNFVTYVNtVGNybFpoUjV2blh3Zm1DaTBkQlloMkpEN3hQakNpT2VDZE93YWthQkE1cUVVRWZ2Q2FnN3J4X1RRUHc5ZkZ5OTl3?oc=5">한은 “환율 1500원 일시적…달러 유동성 풍부·CDS 프리미엄 안정적” - 경향신문</a> — 한국은행 통화정책 관련 소식입니다. 금리 결정은 채권·부동산·주식 시장 전반에 영향을 미칩니다.</li>
 <li><em>...외 2건</em></li>
 </ol></div></details>
 
@@ -143,8 +146,8 @@ description: "KOSPI -7.62%, KOSDAQ -8.68% 급락. 이란 분쟁 확대에 따른
 </div>
 
 <details><summary>그 외 2건 보기</summary><div class="details-content"><ol class="news-overflow-list">
-<li><a href="https://www.cnbc.com/2026/03/03/sam-altman-tells-openai-staff-operational-decisions-up-to-government.html">Sam Altman tells OpenAI staffers that military's 'operational decisions' are up to the government</a></li>
-<li><a href="https://www.hankyung.com/article/202603048021i">[마켓PRO] 서학개미, 급락장서 반도체·한국증시 반등 '베팅'</a></li>
+<li><a href="https://www.cnbc.com/2026/03/03/sam-altman-tells-openai-staff-operational-decisions-up-to-government.html">Sam Altman tells OpenAI staffers that military's 'operational decisions' are up to the government</a> — 지정학적 분쟁이 글로벌 금융시장에 충격을 주고 있습니다. 안전자산 선호와 위험자산 회피 흐름에 주목하세요.</li>
+<li><a href="https://www.hankyung.com/article/202603048021i">[마켓PRO] 서학개미, 급락장서 반도체·한국증시 반등 '베팅'</a> — 시장이 큰 폭으로 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</li>
 </ol></div></details>
 
 
@@ -157,6 +160,7 @@ description: "KOSPI -7.62%, KOSDAQ -8.68% 급락. 이란 분쟁 확대에 따른
 <div class="news-card-num">1</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMikAFBVV95cUxOMG03UGJ1NnZBX25SaVZ3T0lpTWNQT2RETkRhbi1lbmZ0aUVodmJmT1dqVVhSS0ZsLTBlXzBLcGNoeEZqTEd0MW9KNFJMZXNIdk5tOXlTUkx6NU1aNVpCcnQyTk01SFJVS0ZnaFF1MTdZbVBwN2lOQk1iTkhTcmpWd1pEYkVTWm5yWnI4T2tMMkw?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">오늘의 증시: 주요 지수 낙폭 줄였지만 하락 마감 — Trump, 호르무즈 해협 유조선에 해군 에스코트 제안</a>
+<p class="news-desc">오늘의, 증시, 주요 관련 시장 뉴스입니다. 투자 판단 시 원문 기사의 세부 내용을 확인하세요.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -182,8 +186,8 @@ description: "KOSPI -7.62%, KOSDAQ -8.68% 급락. 이란 분쟁 확대에 따른
 </div>
 
 <details><summary>그 외 3건 보기</summary><div class="details-content"><ol class="news-overflow-list">
-<li><a href="https://www.cnbc.com/2026/03/04/china-two-sessions-policy-meeting.html">China is set to kick off its big policy meeting. What will be the key announcements?</a></li>
-<li><a href="https://www.cnbc.com/2026/03/03/2026-midterm-elections-five-races-to-watch.html">Five races to watch on the day the 2026 midterm elections kick off</a></li>
+<li><a href="https://www.cnbc.com/2026/03/04/china-two-sessions-policy-meeting.html">China is set to kick off its big policy meeting. What will be the key announcements?</a> — China 관련 글로벌 시장 소식입니다. 원문에서 세부 내용을 확인하세요.</li>
+<li><a href="https://www.cnbc.com/2026/03/03/2026-midterm-elections-five-races-to-watch.html">Five races to watch on the day the 2026 midterm elections kick off</a> — Five 관련 글로벌 시장 소식입니다. 원문에서 세부 내용을 확인하세요.</li>
 </ol></div></details>
 
 
@@ -196,6 +200,7 @@ description: "KOSPI -7.62%, KOSDAQ -8.68% 급락. 이란 분쟁 확대에 따른
 <div class="news-card-num">1</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMiugJBVV95cUxONkRXXy10UVNLcklkdTkwRzFJM3dkZGpZa2hvMnlYNTBhTUFpa1B0MjZicDRvLXRXb3JnTlQtcXlvd3BiMzE3THFPMkdqaHpyZXRhMFpEMTFpQ19MX0JJaFF6TTZXd1VENko5bVZZTEtmTnBSVkVOZGlaZ1ZudTIxVW9ZM2V5T0VacG51NDdYbDZwVkRaZzRaRkRjWW04X0xDdzd0UVhyTmxWQXpiOHZIU3BybkI1LTRMNWl3V3RzajA4T2M5MnFaWFFTenlncXl4Q2l1bUJjNUxIU1RudzNMcTQ2YnhMSE5HWng2TGJITGNVc1dxX0VYaGYwVHdYWmpLLWN3V0Raak5icVBEUzNWaXZLWlNHUnBLVlRsRmIxaFJIRGdkTlFqOTE0c1dhbDdQUjBuczVWZ2NRUQ?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">오늘의 미국 증시: 이란 갈등으로 다우 1,110포인트 폭락, S&amp;P 500·나스닥 급락; 원유·가스·금·은 급등; 비트코인 $67K 근처로 후퇴</a>
+<p class="news-desc">시장이 큰 폭으로 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -221,134 +226,7 @@ description: "KOSPI -7.62%, KOSDAQ -8.68% 급락. 이란 분쟁 확대에 따른
 </div>
 
 
-
 ---
-
-## 글로벌 주식 뉴스
-
-**1. [오늘의 증시: 이란 전쟁 우려 속 낙폭 줄였지만 다우, S&P 500, 나스닥 급락 마감](https://news.google.com/read/CBMi9AFBVV95cUxNNGNycTMweldUSzc4YzJwd251RGFlUXJZVlpITl96SUNGdklzSjlSbXpfaDB1c0RsMmxlVnIwT3JFaG1JYm9iYTBlTkFST1pUUjJDckNPclAxQmFDaExUNnYxdUpzd2toOXR6QWtCa3E4aXp6eld2bjk3QWdVcFZxUjUyNy04dklrRmdENDFQSUNOV2FMaE1kSGNPNC1ZOGVuaGtUMDF3T01yWlo1a3owTkIzRnpiRXNac2daUVNPUkI5Qm4tRjBnYkR1V2cxZldHV3FGRkhrUWhVOFFFWWhHSm9YNmM3Umt5N01ZSUQ5M2ZXanhs?hl=en-US&gl=US&ceid=US%3Aen)**
-구글 뉴스에서 보도한 분쟁·안보 관련 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**2. [주가 선물, 미-이란 전쟁 최신 상황 주시하며 하락: 실시간 업데이트](https://news.google.com/read/CBMid0FVX3lxTE1rbUhISERDd25Kc1ZsUDk1Q2ZJdG5zdzFLSWQwdlZwWElTOU52TzhZVmV2VnhxdzVuR0hrN2NvOVE3Mkd2MFBQZmZwTUpyc3otWEhReXRlVFRlbURGTld5WU5sMmx2Y3lJTGcwcmRBcTJKVnd5V21v0gF8QVVfeXFMTmhOOHF2THBoeTRMSFRpLU5ZOUdoSEU1aWhLRlVKU2ZoN28xZHh5eGhtU0hyTERKMFMxMi1mdF9ONFRiTW41a043TFRGOWtNQ2JtRHlpYVl4Z2lhNjY3RlZIREQxNWxlcjZ2VVc4ZjVUVUZoNGRCaTNleDlfNA?hl=en-US&gl=US&ceid=US%3Aen)**
-구글 뉴스에서 보도한 분쟁·안보 관련 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**3. [오늘의 증시: 다우 300포인트 급락 — 이란 갈등에 유가 급등: 실시간 업데이트](https://news.google.com/read/CBMijANBVV95cUxQY1o2dTNvbFVTdzNzX2xXZ0FFSVppQWo2VHdicUtXYjNKeGJxeHJ3TXZVREtNaUpCaUhGU21zQjkwXzJwcmQ3NU85eTBpUS1pMEM2YWdsTTN4YXZBUUZDVTM3WTJOd2lPYjd3ZWVrNEVjMTAyQk5qbnZ3Q2RSOVhBbDlyRFlfNkx3SEZ1d2pnNXRqTVJ4SG9ET2EzYW5FWTh4THg5WjhSeXhvSDRVUVNIQlRtdXVmWnlZRFlRSTROdU54cmZCNTBfeWVMXzJuTklrSU5IYmFxLTdTLVN2VV9GQVV0ZDVENUhreVdwdEhONXJMRXBPd3FkT25pMGVsclg3MHZHcmpuMVEyUmh2aGFmZjRSTlNwQXdSTy1YcUgyM0NsSldyOUNKdFRoTy1reFFmZlRqUFNySlhjRGUtcVNsUlNnbjl4Y1BTeUl2NHVNbi04SXVtdUJfQlNFZzBpMmp0SE5Rb1dsOUpCRGowOXI5aHNRcUVhUy1EdmhfNEd0NU16MlBYMDJEQmRMSHA?hl=en-US&gl=US&ceid=US%3Aen)**
-구글 뉴스에서 보도한 분쟁·안보 관련 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**4. [2026년 3월 3일 증시 뉴스: 중동 전쟁 영향 소화 속 다우 400포인트 하락, S&P 500·나스닥 약 1% 급락; 유가 급등에 국채금리 상승](https://news.google.com/read/CBMitANBVV95cUxQQmwzZ3BLaTNVT2FLX3FQRjJLN1U4a1FYTXNqNTdmZ1R1MHgyb0x0NWRDV2JzdnhIdW1VejJOaks0Tm9naHZQN0VvYko1bm9SUWpidEgzaHFYdHd0aUNSRUY0eEtBZlI5MVFIVGlyTFc4aE9iaVRzZHlfZjZiTW4wV2dZM29ES19nN2l0YWhYMlNvZUJZX0xXTXlMbTFYVnludlZhSVJPbXltbEtraEhnVzh2a3pUNzV3aGUzMVRMcEVRVGJwZGhBdko3SUhULVBIY1h3OVcyTE1fMGNaU1hVMmFfWXg0QmhNNkNoek9KcUpPT3E5WVZ4R2VyS2s4a1piOU5IdjJSc3VWNVAzNS05OGkzVFh0bkJNUU9xUmRUZzRnYml6X2RDcUVCOEJwTUFSc1dsU3lvNkRxN01MS2ZxdS01a2lMdFpOUkh3YkZac1lLRGExY09FUjFFVlU5OFdWUEtMaEFqVGtJb0txY045M0FNMHl1bFVmNl8zT18tOTEzMlB3Z3VtR3VuVDgxdURKMjQtemRLd1M5aVd0VlMycTQtTno4eHlEcjd2ZTl3Qm51c1FF?hl=en-US&gl=US&ceid=US%3Aen)**
-구글 뉴스에서 보도한 분쟁·안보 관련 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**5. [S&P 500 Ekes Out Gain In Biggest Intraday Comeback Since November](https://news.google.com/read/CBMi-wJBVV95cUxOcTJsVm01M1h0YzRjZWMzTDhISHRPWVBCeUVjLWpBT3EtN0xnVTdoeDRLYTVyZEhyajhUYTFjNXNnVjdmTTJ0LTVYbnBvRXFseXpvb2JTNWxRYVlmUm1BZTNCRGpCR0lpVEZsMmQwcXUwMEt6WHFWQTY2NXRBSDZqS0NOeHhQNmZ4LVVKMkpDOFQwQUEzYXhkaEdDU0h3QWp2dnpYWnByOVJMX3V1dkxqdkdiZW04dlFUelVBRmNsS3drbW4zRVlmOWFySzRkS1pxWmNQc25CQlF4QnNiWlVnMmJSdUwybDNOUkFVdG9UZUs3NGN3Rmxyb1owbnRvTU1ROGI1MkRJT1V4cXoyblVqQXRPOW9FbldKUnE0VERpYWVDaDFzREJHWE9PNVUzcWRUejVpYzAxZFZCakxmZnZDd1Bja2dkdEtVcVdZSGloVDNscE1yYmtlZ0JnNmdFdnVjQkh1dU53QlhqbzNaN0xMaEI3RHRfejVjWC1F?hl=en-US&gl=US&ceid=US%3Aen)**
-구글 뉴스에서 보도한 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**6. [Stock Market Today: Major Indexes End Lower But Pare Losses After Steep Declines; Trump Offers Navy Escorts to Tankers Through Strait of Hormuz](https://news.google.com/read/CBMikAFBVV95cUxOMG03UGJ1NnZBX25SaVZ3T0lpTWNQT2RETkRhbi1lbmZ0aUVodmJmT1dqVVhSS0ZsLTBlXzBLcGNoeEZqTEd0MW9KNFJMZXNIdk5tOXlTUkx6NU1aNVpCcnQyTk01SFJVS0ZnaFF1MTdZbVBwN2lOQk1iTkhTcmpWd1pEYkVTWm5yWnI4T2tMMkw?hl=en-US&gl=US&ceid=US%3Aen)**
-구글 뉴스에서 보도한 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**7. [Dow closes down 400 points after falling as much as 1,200 points as Iran conflict volatility continues: Live updates](https://news.google.com/read/CBMid0FVX3lxTFAtRGs1ODk1dGlCRlpqVXdxejJnTDVYcEU1Q0ZhcmpodE41TjkzeXFxVlRSQ3dTRXF0NGtHaVNtSVRtTm1qMzdFMWJhZXlHRElqcGlJZVJvWkh1SXJFenRaanFjOEFhS3dMNkNubzMwLThIbDVvRDlv0gF8QVVfeXFMTmJVb180Y0pONWFXNXV2SThMSUdSMERGc2xLdnk4andtSU1mRDZwN0dSa0R5b21OLUswbFM5QkxjMFRxN3dFZ1Bpc3ZOeVJjRFA1bk53ckZHeUdvOXdWRlBlRTE3YXlzRDhnS2xNOGxrSVpRUzN6c0QxOGcxag?hl=en-US&gl=US&ceid=US%3Aen)**
-구글 뉴스에서 보도한 분쟁·안보 관련 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**8. [US stock market big crash today: Why Dow, S&P 500, Nasdaq in deep red today? Oil, gas and gold prices surge](https://news.google.com/read/CBMizAJBVV95cUxPb0pPMXJJeUd2YzVGSWZjRGk2VTdfS2czUC1hU19qYmd6VUo5UzZnVDBtcUVVbklrZjA3X3dEZFluUXFpQmVTSVFrTjZfbkItRGdBOFNYQWFLNEtHeEduODdNQUNCT01YOE5mbjY5SWNmRnFpRUgzYVFtVmFuMEV0Z0E0b2daQXNrYzZRWUI1a3UteEx2YnhKTVlTVHFYeEpJOUJjYTlUZzlQS19hV1VZeWRLcVgzZW0tU0J6akhtMHRNd1ptSS1fQl9WUTU2SUYyOC1BQXptY3BfaFRTTXJJbzFiQW5LTnZBQVVfeFJIRkhhazNESEVoTFFKaEFibnpHNVNUUkZhaTRfWGJOZ2dscjdWdDBvMFRhVUh2TXNXV0JRYV8yLVM0TC1MQVVoVkNkSzBuUXQ2RnpCamJpOGd4NzVUR2s4bk9vN1NaSdIB0gJBVV95cUxPdU9mR2pwX3haSVE0VTFKMTktanJ6SFZqWEcxTEVBcC1oemxvdmFTNjJuWlNzeXBKTFF2Z0NTUjMxMVpvWFE0THJZZV80UXRERGVzb3NORFE2dGNiUEJFUmRCYmR0UzBXYWNJRnBlWTYtb1paaERsQVJkbW9nX01HRE5JWUpYVVZOSUZHSWQ5aWlYc2JwSUlGR09jMlgxYXY5WF9qTVZBdGRYNUlJeUxMYzdKZkVDUjRPOFFfREpVYld0em1oZ1c3TG0wdzFNNm8wbllpbEYzSWlXa0s3STNEUkhYT2dxaTNhMkIxVWJPRTRKY1NFcU5mN29aMi1fWDE2RVBnNXpyTWNsM3VWeDR0dC1VZ2pYbjltVW5YQWdCZ0JuYlRqb3gweTVRSnBRTVlicUd2S0pXbkt5R0g2c0NTN1hZSEY5T2ljTjN3YV9YOXRxQQ?hl=en-US&gl=US&ceid=US%3Aen)**
-구글 뉴스에서 보도한 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**9. [S&P 500 closes flat, rebounding from lows as traders buy the dip after U.S.-Iran attacks: Live updates](https://news.google.com/read/CBMidkFVX3lxTE96ajBWdWw5MkM0U3k1c0kzS1BrcnVOcTl2a3hJN1lwbzdXMzNDa1M1cHEyaFNPOFEyUE42UmZNTVdKcGNQZzhUdFlOZWtwY3JaX3BfMVM4N1BDMFhUMnFTS0FTTXhNaERMTi1CRHBVbWJHaUVCZmfSAXtBVV95cUxPNDlYdUJSVzlRTnVtbC1lN2xYSGZ6NDJVTGZEaDlYUWhNanN5c0EtbkhZMHVJYmVOSkJ2NHJybS1XVWhVeVZRN004dFVnbXVkSFJkVlNzbENob1FDaWVyaFNDRzFYSGZfUW5rclBjNWV1NHpaRVJHWmk1bE0?hl=en-US&gl=US&ceid=US%3Aen)**
-구글 뉴스에서 보도한 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**10. [Stocks and Bonds Sink as Oil Surge Rattles Traders: Markets Wrap](https://news.google.com/read/CBMisAFBVV95cUxQVnJXWGZ6eUVVQ0kzaGFzTXJMUEFvdlFxZkY1c3p2YkxEdnZxUVNlbmdMMjU5Q2g0cFM4LUhIeC1WeU1yaDhyOTMyUlBNMW0tWnJ3alhBckF6eTlRQjZEVW43ZWtGejBZY0dydTBtQ1FBblBCMmFMMTVUYWU1U19zR0EwODl2VkJ3NlJQOVNUclFxNC1pNlZSMWZqa0d3c1hTekRTdWhXUjN1TEhOQjRpWg?hl=en-US&gl=US&ceid=US%3Aen)**
-구글 뉴스에서 보도한 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**11. [Why didn't US avert stock market Dow Jones, S&P 500 and Nasdaq crash today like UAE? Analysts insights](https://news.google.com/read/CBMixAJBVV95cUxQM0hoVjB4R3haRkNYNi1BckY5bkhXeWhpb3M3UVBLQ3psbUNDbzJQcURGTXVFMFdXbE5yZ2VhLVpDVVF1SWhzXzB2RXVzam5sLUtOU2E5cmM3T3UwdFJyWmUxWkVmSXFOSDU3eGpmajMzMjkwR3VyTWtKNU1CQ0JiN19WbktaV1c2M2hDU3dIbDU0NXV6MGtsQkRvREcyelFQY0VJUGc3R0kzX3ZBSm56c1N1ZVR4ZnR3dk4zaW5PVEM4MGRyM2dHR3N0ZmwyU2I0UFRmTjZPd2JiRGdDbG8wMEFVcldDQlFZMFcwajRvQ3NvNVEwT0dWWEpGbGFmdWtXeE1DbVNjYUVfYnZoeU9aeDFnaFFIVmZlbjgtWnhDRVhndlEzSEFqS3VtQnhpZkZuQ09rLW00TkdOcjl3SmI1akFaTW7SAcoCQVVfeXFMT2Rzb21QbmZ2WUFDeTZESWNlOHE3Y3RDRVhCa1NNZWdwYld3N042eTZfcklvbVVwZjlkZDQwX1MxcENHaUt0THhQTzloMDhIWktCMUJIZFo1MTViLWtQY2RrTzhacmtDTW9NRm56SU93THBiTS1icy1OT1FzemVpR2gyTjZSM3c5enhlVDE1dGM4UWVqWWpDUFM1RUlVVVJEXzJuMzdOSmtJZlJCOWRtTXZXN2hCOGVKVnRlS2pMVWhEaUtnMGk0VlNKRGxqR2dwMWxWUEFIM0t1TDdTQy1uR2JKakd5c3NSWUN4MTJCdTRFa1YySThPQUNYRERqai1aQ0JjVm9uNzYyRG1veDB2bjhhNEJpOU5lMXRQTG01N2oxWGRhQ0V2YTVDaDMzNS1LdktFZm8xWEJsdnFKc1hCeS1JclRPSm5ia09n?hl=en-US&gl=US&ceid=US%3Aen)**
-구글 뉴스에서 보도한 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**12. [Why stocks are acting so weird about a spiraling war with Iran](https://news.google.com/read/CBMicEFVX3lxTE1GX21wNUtYNHhMU21Ud2ZSZkkwSHQ3VXVBcE9hSGNoOUZ6ZVBLdHlZcGVZMVhHYXcyU19mZVZ2M3oxb25tZXZKM3p0VTAxWTBrRkRfYzdJOGVlUTJXS1JFZnk2VjFNQldlOUNENGxvbzk?hl=en-US&gl=US&ceid=US%3Aen)**
-구글 뉴스에서 보도한 분쟁·안보 관련 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**13. [Stock market today: Dow, S&P 500, Nasdaq futures slide as Iran war volatility continues](https://news.google.com/read/CBMizwFBVV95cUxPcXR5UmZOYkRZNUJ0ZDFRdUJaS0lxSnhkaEg4N3FwUkVuSXVQSFJPME1DVU8wcHhHZG9YTjdhMl9fbUtOUE9rOG5BVmp0bkxSN0Y4X2NnU0pRcl80SFBIbnZaVlFJNDF0enVFSXQ4M3FNWWpyRXktOUdIc0J0UGNyUDRrS3E1MUZpdW5VdmY2YnQ4aWVORW1RMWs3VGxLNDlUbVVYVllkalJBbWdxTUQ3c3gzSTJOQUVjdmFvekw0NXlsaEpGYnhveWJGOS1rdUk?hl=en-US&gl=US&ceid=US%3Aen)**
-구글 뉴스에서 보도한 분쟁·안보 관련 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**14. [These S&P 500 stocks are falling the hardest on Tuesday](https://news.google.com/read/CBMipANBVV95cUxQWmg2ZW5ycmoydGNDUmR0N0NodFhfRkI2TFFzVWd4cTdyWlVXMTRZa0pSYWUyeC01YUFUMkN3Sy1oUDJDOG1MVkViRWR5dGZPdXU5UGloRFhkVFlDa0R6ajlLbzI2elpYUW1WUURTSXE4emwtTXZxS3NhN0ZIcFdFbWltb29lVUYxeFF0X01yYnVDb05meGlmOVZqLUZLelNHMU5LWF9IUld0NGR2M0l2UkNUb255S2IxMlJwaUZTTWJqYlpPSEdQR0VvX21zZ1RZQmY4VDhKdEFiM0NLSXhsX0I1a0tjZXFhZDRqMmFOZFFYVzlvdklhYlUxeG4yWlpQN21Na2J2U3FYX1lnaUFZT1ZkUnAyUno5cmJ2MlprMHJXZ0tlNE5UTDR0a0hvZ2JFMVBZSXFTYUtKUF91cFhhdWVEa2VpUHByRW9WUUxKUTNSd0lDWFJUeFdaUjc0NmZoX0kzbG10cHlKODhrUmx1RXNlSWpjRlZQb21yRU5OOVNfSmlaTm42VzZMTnBzc0JVMEw4ay1HcUhPM2dWUjdlNlBSamc?hl=en-US&gl=US&ceid=US%3Aen)**
-구글 뉴스에서 보도한 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**15. [Oil surges, stocks tumble as fears of prolonged Iran war hit markets](https://news.google.com/read/CBMimAFBVV95cUxQVHEwelRZamtOTEhPVGxFVkYtcTBSTFJJRndEbjFia0NvdHdGZE1JbDljMnMzRlRzblFSVkVNX1BmTDhPdFpSMzFSbWtvalN4T0xMclV2eGxEdkt6MVBLVUtPcjZsa2hBLTB3OGtJN0RnWDZ0SmVjWWJzUXBKd2RJMWpiaDhFcFNWS1VKbjN4QWZqWlFJaXpvUA?hl=en-US&gl=US&ceid=US%3Aen)**
-구글 뉴스에서 보도한 분쟁·안보 관련 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-
-## 한국 주식 뉴스
-
-**1. [[속보] '패닉셀' 코스피·코스닥 8%대 폭락…동반 서킷브레이커](https://news.google.com/read/CBMiVkFVX3lxTFBqT2tyQ2FCSGVWMDc1bl9YSy1odWdSQmNVLS1qbzAtZTBuUDFQejVtakh1LWNIdmc2OXp4R1FreEx5TC02SWJPZGVBQVhSMnJBaG5KMmlR?hl=ko&gl=KR&ceid=KR%3Ako)**
-구글 뉴스에서 보도한 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**2. [미국-이란 중동전쟁에 코스피·코스닥 급락…제약·바이오도 타격](https://news.google.com/read/CBMia0FVX3lxTE5iTXh4VE1reWk5Rm1VNFo2UFFDakJhR28wd1hiQ2N0X0VpMTYzS09WSy1FeDAzNUJTXzVyT3AxWG1TV1ZBT1owcDZkcWo0bjNlTlRWa2hRazMtTVlPN0pyNEpDcFhrVHhkc09B?hl=ko&gl=KR&ceid=KR%3Ako)**
-구글 뉴스에서 보도한 분쟁·안보 관련 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**3. [미국-이란 전쟁이슈 : 한국증시의 뇌관, 개인투자자 빚투 점검 및 전망 (feat. 코스피, 코스닥)](https://news.google.com/read/CBMigwFBVV95cUxPcGJ0Y2R5QmpXU0FGTE9PZUZVSFlMQk15VHA2bjdQNkFZZjFzWlpnZ1pFMEpKWE9GV0xRT0ZwMS1nUi00bllZQ0NBWENXVVVvRi1SZXNRZ0ZXRkJVMEpZenkzTTdGekhiNkhwRi1lRlEtUWNiYTh5ZkJVWFExZzRFbTgtdw?hl=ko&gl=KR&ceid=KR%3Ako)**
-구글 뉴스에서 보도한 분쟁·안보 관련 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**4. [코스피·코스닥, 내림세로 장 출발](https://news.google.com/read/CBMiakFVX3lxTE1RbWhMQXZSd1R6UjFQTTBkZmRZZEtFVWV0UzQ3cE8tY1Z3eTg5Zm5KdjlhRTZhbnQ1THppYWp2MUpCTGZIRGZQOGk2d0xxWVNPRi01X3dyMllmaEVmaHpKT1hMWkRiSGpNcUE?hl=ko&gl=KR&ceid=KR%3Ako)**
-구글 뉴스에서 보도한 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**5. [[코스피·코스닥 전 거래일(27일) 주요공시]](https://news.google.com/read/CBMiW0FVX3lxTE9aOUNTOXZ3WTNlNHEyZjE5WGpsMDlwU0ZKZ0FwenIySVg3T0JLRTh6aXZnLXFaT3BfeTBnM1NMcTNBVU53M0RVWU9kUzB0UEZSV1Y5Y3JhUC1SMknSAWBBVV95cUxNaHNYNmRXSzU1ekE5WE1YMlp1OGl5cFYxMERMRG1jZld2ZkkyQTRCcWFwdTdCU1p3elRIUk1EOXZRUUhIRVpWZ0oySmdjTUJHZjdjbGNuM3lTR0ZtdG03NDc?hl=ko&gl=KR&ceid=KR%3Ako)**
-구글 뉴스에서 보도한 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**6. [[코스피·코스닥지수] 미국 뉴욕증시 다우존스·S&P500·나스닥지수 하락…AI산업 불확실성·美도매물가 급등 등 영향](https://news.google.com/read/CBMicEFVX3lxTFBULVk2NVRkbFYtWWlQX0VyUGliUzFtTUE4WWgyNXpTbVpveEd6SjZrS0szNU1JbnJreFlEdERqTFc4NWFtRjlLLVFiZkV6bGFlblVCb2hfOWxCME16VDNkZzZodm41Zms4b1FyM1FLLU0?hl=ko&gl=KR&ceid=KR%3Ako)**
-구글 뉴스에서 보도한 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**7. [[속보]코스피·코스닥, 이란사태에 2%대 급락](https://news.google.com/read/CBMiUkFVX3lxTE9nZTBzY1FLX0FoMUdFTE5Hcmp5Zy0yalV6czh2Wm1DY1hsb09Vcm4yZS1ZUTVlVFZVZjh5OUhObjRucmw3MVoxSVZTMmRIQlQ2Smc?hl=ko&gl=KR&ceid=KR%3Ako)**
-구글 뉴스에서 보도한 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**8. ["동전주 퇴출, 상폐 시총 상향"…코스닥·코스피 부실기업 본격 손질](https://news.google.com/read/CBMiVkFVX3lxTE5lT0RmcXNJQndJN2VZeDdGc0dVbUU1UGZTTVZuNlMtbWFpTzdrb2xXRnB0X3BlR2s1Q1ZqSklaemctcVN4ZGhDRmxJc2RKTHFEWEZrNW93?hl=ko&gl=KR&ceid=KR%3Ako)**
-구글 뉴스에서 보도한 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**9. [외국인, 1월 코스피 사고 코스닥 팔았다](https://news.google.com/read/CBMijgFBVV95cUxNY0VHNHVDUEtLRmdnaW1Kd2xsN0V5WTRJXzhKRWlVS2pld1dwakk0ZVdKdWI4LUtJcUE2dlA0eDYwOXVMaC1qR04wOVkwcmgycXJkQldtUldLcTBtSEhaem00WEVsT2pISUh6RUZ2YVNqQmlENlRpOWhqak01SDFHOFBpNTZRTUk3dmJibGZR0gGiAUFVX3lxTFBmVG4ta0hNdkFUVzZtTE0xeDhUMlhuSmUzaGk1MHI0cTN3aFFIZ2pSZmFDTHNiNF9BUXZPUFJuOEJKNzgxVFdqYW4zN01qOWN5cHVvTWh5WUM4aXpnT1pIUU56dXhvYzlDZGhRUnVyR1Z5cGxtOEUzbl9Dby1oX3ZRa0I0Q3lLa2hFYi05UjhzNk5DS0ZnbkloNUhCaHJPMFFNdw?hl=ko&gl=KR&ceid=KR%3Ako)**
-구글 뉴스에서 보도한 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**10. [5600선 올라선 코스피…코스닥은 매수 사이드카](https://news.google.com/read/CBMiVEFVX3lxTFBPaW9tN0xXc3BRYU9wMy12aFBFZjQ0U1d6VWdDdVR1XzdtVHRVLXBtWTBfZTZrdkFOQ2pSekN4Ml9Cdl9CT1o5bTNpN3liY1pXa1lOeA?hl=ko&gl=KR&ceid=KR%3Ako)**
-구글 뉴스에서 보도한 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**11. [[주식] 코스피·코스닥 약세 속 '코오롱티슈진'·'인벤티지랩' 급등](https://news.google.com/read/CBMia0FVX3lxTE5JeDFZQkptNGRQYnBkV1VvMnZFY3NfLTc2dkJXLVdlWVNoYmVWdDhZM0c0QjJhVW5ZMDd3M0E3MVVYeWVvVmRMbzhoUHhwR09VSEhIZllxeXI2X3NaSFBvYThjRV9rSVQtcUNr?hl=ko&gl=KR&ceid=KR%3Ako)**
-구글 뉴스에서 보도한 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**12. [코스피 5000 시대 활짝…코스닥도 1000선 회복](https://news.google.com/read/CBMiWkFVX3lxTE5qZ3RLZlNUMFY1cU41d2JZNkdQQW9UR25ZMnJ2NVBJRXZ2U0pnWTkyN3NEOTgya09Bbl9HVEhQMlVvRllYMDlwN2tESDRMTFdhb3JxaG8tcjJJUQ?hl=ko&gl=KR&ceid=KR%3Ako)**
-구글 뉴스에서 보도한 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**13. [코스피·코스닥 전 거래일(26일) 주요공시는?...HLB테라퓨틱스, 주당 0.05주 무상증자 결정](https://news.google.com/read/CBMic0FVX3lxTE1UcDQ3TnhlUVYyclJzMGVVcEVoZGt4YWVzNHllWWtILS1VMVNUcWRMdWR5YUh0MTFDSjkyRm5mbUtaN0dXelpjVnNGdW0yc2MtT0pFbU11c2x1U1htWk1kYW9RVHYwaDZqdFg0R3RnaER3Qk3SAXdBVV95cUxQa24wc19tYXVHU1FYc21ESHlXTFpKd3lEWVB4MG9ETl9fNzFYcnM4c0ZxcmFiWFBqaWFUenQzSndWSklLMWxQMmVHSWVvR193NllYU2VVcmNyWjZ3c2x6azduSmpTS3cwaFpkdEVoNmE1UzJWbFh3dw?hl=ko&gl=KR&ceid=KR%3Ako)**
-구글 뉴스에서 보도한 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**14. [주식시장은 살려냈다…분류체계 바꾸면 '코스피 10000·코스닥 3000' 간다](https://news.google.com/read/CBMiVkFVX3lxTE9CUnlxOVZ6WlI2UkhVUi1LTnFpZzQxOGZBd0JUd1U3X2J6YXhYTFByUF9WdGJuN3NxWHQxT0FUNUpLYy1GX2tHNjdoMUlwVmdWTUlqdEl3?hl=ko&gl=KR&ceid=KR%3Ako)**
-구글 뉴스에서 보도한 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
-**15. [코스피·코스닥, 내림세로 장 마감](https://news.google.com/read/CBMiakFVX3lxTE5ZYVdWOC13eTB3clh1aVJlMHNQYkN1dDYza2ZXWW83X2E5NDVpb1NWTzJlYmxySERBN1dKQVBMbXhtU04tNUpPcFUwN1dIMGdMLTdYYS1aSkdjQlF2bTdwOTFoVEhjSGlpMkE?hl=ko&gl=KR&ceid=KR%3Ako)**
-구글 뉴스에서 보도한 뉴스입니다.
-<span class="source-tag" data-source-type="aggregator">Google News</span>
-
 
 ## 시장 데이터 스냅샷
 

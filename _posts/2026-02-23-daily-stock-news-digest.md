@@ -22,13 +22,6 @@ description: "2026-02-23 주식 시장에서 144건의 뉴스를 분석했습니
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><a href="https://news.google.com/read/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?hl=en-US&gl=US&ceid=US%3Aen">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates</a><br><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">’워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a><br><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?oc=5">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates - CNBC</a></div>
 
 
-
-
-
-
-
-
-
 ## 전체 뉴스 요약
 
 - 한국 증시는 KOSPI 5,874.21 (+1.17%)으로 마감했습니다.
@@ -141,22 +134,6 @@ U.S. stock-index futures declined Sunday, as investors grappled with the implica
 
 
 ---
-
-## 글로벌 주식 뉴스
-
-**1. [S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates](https://news.google.com/read/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?hl=en-US&gl=US&ceid=US%3Aen)**
-**2. [Forget the S&P 500. If you have the dough, one luxury investment has crushed the market over time.](https://news.google.com/read/CBMiqwFBVV95cUxNWjgtOEV0UHNEdFRJdHYtSDNHUzEwdUlfV2JaOG1YclVhaVlMMVhvc3JNVmRxYUFjVjBLMmpEOEVZQVFZdl9kZ2ZzblBfSWFfTXFUNk9zZ3VPd1A1aGVpOF84dEt2bllDdFpRbFFNUUNDMU1QbTRIOXhLMnBDUlRwRWwyLWZIZ0FBT0JuLUU4bktFYWlQb0c3V3VzekU5UFhTdzRZdFFvNDFzOE0?hl=en-US&gl=US&ceid=US%3Aen)**
-**3. [The Stock Market Does This Every 4 Years. It Signals an Alarming S&P 500 Drop in 2026 If History Repeats.](https://news.google.com/read/CBMimAFBVV95cUxNcmFVOElBaDFXV3VaQ0phdVJ3N3huZFJvVnpPWkI2ODhJRHRNZGJwUG5IdFAtakFnRUNhcElqQTF0WEZqSlZtTlZIdlBZWDhvaVNiazhMR2RhaFdNamp1Mk0tWGFWcWhsYjJsZVFKMjRBUERNbWFyLTdVY1llbnViNmVLbExfV2dYZDdYWUxqdWNQZ1ZRWnR0OQ?hl=en-US&gl=US&ceid=US%3Aen)**
-**4. [Technical strategist says S&P 500 "appears coiled for a significant move" soon](https://news.google.com/read/CBMizAFBVV95cUxOVXpSNFlOTVlyaDBBZHI3MUxZSW84NGJuYTZQWmNNZWZkWWZQRkJyekFrWWk3QUxfdGRLZWwzU2JDOXJIcEVGdkxsY3BNcU9HcUFGLU93Q1R3WVVudUtnS0hmOWZhdWxpOC1JUTBHY21KdUpsQTFzX01GakVpLUtSRlJjOXhzSUk4T2cyS3lDdWJ2STlMTnh4dWVHYUlSTlpqRHFUYi0tYTVRRTJsTVE4ZEdTUFQ5d2ZuRXNjZVpDMUkyLVZDaExyNHk2aFM?hl=en-US&gl=US&ceid=US%3Aen)**
-**5. [Stock Market News From Feb. 20, 2026: Dow Rises After Supreme Court Strikes Down Trump's Tariffs](https://news.google.com/read/CBMi-wJBVV95cUxOejctUy13eGRWWDF6QU5saEhHTGlFaHo3dFZ2ZGU2M3BwcEJJaWpneUVKOU1NZTRLRU01X1cwbEZxRE5iNHc2aUYwc0Nwa2E3ZVFJN1hsV25ubWl1YnRsTTRaNmMzRmdSYTlnTVlKU0ZLZGgzcTMtdlFQSjNQTXI3RXNoSjNnVDduMnFSVWdiSW5KdFdjcG81bEdWQXhFTmJlMExEUkl5U1p2dnltd2VpeXQ0U3UyU1UtT2NWUUpmZ042a29WY0FGWWNJSlJzbnFsSk4zdjB6ODNsbU1mbWpkMjlscDY2WkRybjlhNE9aTkNpVVd0eUhqQmdJRjZ0SkowYmhMTW4xT01TMUN1ZTlVcHBNTnRQNTZZZ1NKZEQ0Q3dJNkdKZF9ubEFtOXBfV0VVQzhJZVFGaFg0OUxMRU1uQVdTbjZhUVhKY2JnLU9xRVRQMC1qZTNIQUtYTlVaLWxTR1o3RHlUVnJjcDQwX05pcXBzejhOdDN6bW1V?hl=en-US&gl=US&ceid=US%3Aen)**
-
-## 한국 주식 뉴스
-
-**1. [코스피·코스닥 전 거래일(20일) 주요공시는?... 퀀타매트릭스 "프랑스 자회사 주식 43억원에 추가취득"](https://news.google.com/read/CBMic0FVX3lxTE5IQ21KTmJWTldwaXh2Mks1UjMyZFBrTXJqbEl6UGdJSlVOY2VnVjVheUxpNTIwVGExWGZOWDA3SFNDeF9jS1ZZVnFKY1hKZGJqaHZfRzdNb1hBQW5WVDA2WTFmVkR0Q2ZkdFFnbTN4RXZwU2c?hl=ko&gl=KR&ceid=KR%3Ako)**
-**2. [코스피·코스닥, 오름세로 장 출발](https://news.google.com/read/CBMiakFVX3lxTE9NWlV0N0ZrRHhvT2MyS1BtSGJXTnpoVnJYRWdkUDB5dnV1ZlgxT3pGUFQwcl92aUVFLUQzb0ZrLWNrQUNzc1llRUlzdUg0R0ZDand6Z2lCYTVWTjNiNnFIZ1B4WXBIb2lmclE?hl=ko&gl=KR&ceid=KR%3Ako)**
-**3. [코스피·코스닥은 '불장'인데…투자자 외면받는 코넥스](https://news.google.com/read/CBMiW0FVX3lxTE5ieUxLNEstcnQ2aVAySjJYUG9NZXAzLXlsTUE3ak1sN1N6UXZCeEdkaVNNVWE4Y0Q5RTBvSW1Xd3FReTAwQlc0WC1uRTNzY2p2UVBHN1hWemRjelXSAWBBVV95cUxPVTRwUnZ0YWRldWdhTUszWVVJZnpWdzJfVjJ3aDAzZ190YmNkYVY5N1NiV0dmLXNVOVZfaWJ1MkJsODhvbGpLUEd6bFdWOHR3Ui00SXVlbHpwOTZoeXQxcDQ?hl=ko&gl=KR&ceid=KR%3Ako)**
-**4. [외국인, 1월 코스피 사고 코스닥 팔았다](https://news.google.com/read/CBMijgFBVV95cUxNY0VHNHVDUEtLRmdnaW1Kd2xsN0V5WTRJXzhKRWlVS2pld1dwakk0ZVdKdWI4LUtJcUE2dlA0eDYwOXVMaC1qR04wOVkwcmgycXJkQldtUldLcTBtSEhaem00WEVsT2pISUh6RUZ2YVNqQmlENlRpOWhqak01SDFHOFBpNTZRTUk3dmJibGZR0gGiAUFVX3lxTFBmVG4ta0hNdkFUVzZtTE0xeDhUMlhuSmUzaGk1MHI0cTN3aFFIZ2pSZmFDTHNiNF9BUXZPUFJuOEJKNzgxVFdqYW4zN01qOWN5cHVvTWh5WUM4aXpnT1pIUU56dXhvYzlDZGhRUnVyR1Z5cGxtOEUzbl9Dby1oX3ZRa0I0Q3lLa2hFYi05UjhzNk5DS0ZnbkloNUhCaHJPMFFNdw?hl=ko&gl=KR&ceid=KR%3Ako)**
-**5. [질주하는 코스피·코스닥·금값…언제까지 달릴까? [뉴스in뉴스]](https://news.google.com/read/CBMiW0FVX3lxTE1fMHJPcGdEYmR6MjJDazhheGN0dzRIckIwdDgyMXU0TnlpSHBpdlhyS1BBOS00U2ZneU1tYUFKak9TcFhFYWZBWmpLWVFRanFYZ3VrNGZWUUZCZGM?hl=ko&gl=KR&ceid=KR%3Ako)**
 
 ## 시장 데이터 스냅샷
 

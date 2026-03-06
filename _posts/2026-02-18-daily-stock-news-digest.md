@@ -19,7 +19,7 @@ description: "2026-02-18 주식 시장에서 129건의 뉴스를 분석했습니
 
 <strong>주식 시장 **가격/시장, AI/기술** 부각 129건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 30건 수집</li><li>🤖 <strong>AI/기술</strong>: 48건 수집</li><li>📊 <strong>매크로/금리</strong>: 7건 수집</li><li>🟠 <strong>비트코인</strong> (8건): 주식 시장이 사상 최고치에 근접한 지금 Vanguard S&P 500 ETF를 매수해야 할까? 역사가 시사하는 것</li></ul></div>
 
-<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">‘워시 쇼크’에 금·은·비트코인 동반 폭락코스피·코스닥은 이겨낼까</a> — 시장이 큰 폭으로 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</li></ul></div>
 
 
 <span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:23%"></div></div><span class="theme-count">30건 (23%)</span></div>
@@ -35,13 +35,6 @@ description: "2026-02-18 주식 시장에서 129건의 뉴스를 분석했습니
 
 
 ---
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약
@@ -148,42 +141,6 @@ The recommendation came as dovish Prime Minister Sanae Takaichi's landslide elec
 
 
 ---
-
-## 글로벌 주식 뉴스
-
-**1. [S&P 500 closes little changed Tuesday as declines in software shares weigh on index: Live updates](https://news.google.com/read/CBMid0FVX3lxTFB0SlkwNmpSdnJmcEVtQVdMN1psajlqLWNUNDRDVnlQeE1vSVMweW1rMFNnQXZYb044MnBUX1NFX045VFBtNjhPanJUNFFPM194MnFSV3RoQ0lrY0FETktZQ2tyUndBT2hpc0ZkQUVXTkZFZWx1NjVz0gF8QVVfeXFMT2wwYTR1MEg1ZXRldWNnMk9hZTZVRVRfT1lFWWVzUkI5dGVWaVFiM2hLaGxydGs0N1BaZnJWMl8xV0dDYUJFQm1iV2t6UU1Ud3pvOVlvMklEem45Vml6b0hJbVd1WmtjTU9UVGExVm1aa2c3bms0aGQ4MjBqag?hl=en-US&gl=US&ceid=US%3Aen)**
-<span class="source-tag">Google News</span>
-
-**2. [Stock market today: Dow, S&P 500, Nasdaq end higher in volatile trading day as Apple jumps](https://news.google.com/read/CBMi0wFBVV95cUxOQnZCTzdiOU56MXB5NlRndko2TUtnaVMwTjZIcERSRDJUTkJVR0RaTk4wSWJRZ0p4c0lmSkUxLXIyb0xGa1NXbllzQlZrY1dFQ2xyU3owMkNaZktyOFdScld3UWFHcmpudWpqQmFVa1hDRHMzcmNYMldHVHZmQ1lIU3JxYzMxWTdKY3oyWURGejE3RnFFdHFrTi1YZ2xSa0IydzdmdDFyS204aFg5b3JTU0dlS2NIS19zSGpHbklhZXExLVhNRmpJTjNPZTVlWGFrS3E4?hl=en-US&gl=US&ceid=US%3Aen)**
-<span class="source-tag">Google News</span>
-
-**3. [Stock Market News, Feb. 17, 2026: Indexes Waver, While Dollar Strengthens](https://news.google.com/read/CBMijANBVV95cUxNdDlDenNSNGg5SGlhVWpteWdDTXBvbzdyQ0VKV0dGS2RHenFEeWxHdkt6OHNpWGQ0RWV3a2RMcEhvdC1JYU8zMjRUa2NqMzFCOXE3UDBwYVZjbHc5VTctZDIxRXluR0ZpaGdBSkpKRzdmc2xjOTlSNXdoUHdXMmF2bmFIMEtZUXBFUmFJak1vT0ZIcTJjX2J6TEVtb05MYVNRWGhLb0JRZmdJaks5aWpDM0JHeDVCUFluX1pSTmdJZUd0NUdfOUhNcE9ZTjE4SEdQOVhnQkNYcFRvR0NRNHM3ZjZlTEZUVUltNnVyYy1GN0V6ZDRNaXdpUHUxdWdvUzNYQlBzQTNkNFBHVXdQd3d2T2MyMUM4OUZvZGliQWpUT3U4aDV6T3dCZTNmenJoRllLNm1RX053TDNTU2hKSzczVzllSDFsXzVCb2tHMWNPUDA5V2EyM05Vck9Nb3ZKM3l0R1F3YjVxMElTOVpRcXROOUd3Q0RzNW1EZ29oYlFCS0xqRGQ3alEzdnRHTy0?hl=en-US&gl=US&ceid=US%3Aen)**
-<span class="source-tag">Google News</span>
-
-**4. [Asia Set for Positive Open After Choppy US Session: Markets Wrap](https://news.google.com/read/CBMilgFBVV95cUxPWnBZdm8yaFdMLVNRQXNyakRzbUNxRFNmbFBFWTEwb2s3YTJGWGZMLTJlbl9ZSGpiaVlFanE4YmwwMzhqSGFYeDU5N1hmRElaY05JUHJlVVlBaExKVFNEQmhQTFMwNlAyUGF3bW1EWDJWUGI5V2dqSEQ1Sy1NMmR6X1pyUmVSM3k1cDhNZTVMTzVVTDJCWUE?hl=en-US&gl=US&ceid=US%3Aen)**
-<span class="source-tag">Google News</span>
-
-**5. [Nasdaq Ends Higher to Snap a 4-Session Losing Streak](https://news.google.com/read/CBMi-wJBVV95cUxPc3lqQ1VTZWVJWE5nczRuUHE0b3RzbnM3VVpZdmFseTc0b252WWRMcFhKTGc0UmNUNGkteHpBZTZTZW5fY1ZjSFVINGRJRXpVVVk4TUVFc2N0ZE5WRldLQXViRHh1WmZWYmVkNWxxVHdlbWRMWXZtbXdPQ3JyZGxCSnNSdnU0Y0M0OGNBaFdvZkxWTDVMV29sbHh6WDluak9VdldCZnNsQ2U2MEQxeGhJc2RkWlVOUjdGR05XOUFiSmpZNnpMYWUtLW1TNU81elhXbHNENlV0aXZ0Qnpiemk5M214eGpXZ08xR3NEQnFvT3NmVTNzY1A3bFlrSkgyWHRULUswUlVZekJtM2kzY0JDbmpwRzhlTzEyQVVfbW5WLS1Ua0ZDOWtKOUtTM1F1NGE3ZS12b1dsYy1VTU03OVZIcmkyWC1ObnJtOUMxck5Gb1ppVG9oRlZQb1R6MlYyZFQ1SjZzcHh0ZFdJWFBiSWQ2VDFMRnZLWXd2ZnZV?hl=en-US&gl=US&ceid=US%3Aen)**
-<span class="source-tag">Google News</span>
-
-
-## 한국 주식 뉴스
-
-**1. [코스피·코스닥은 '불장'인데투자자 외면받는 코넥스](https://news.google.com/read/CBMiW0FVX3lxTE5ieUxLNEstcnQ2aVAySjJYUG9NZXAzLXlsTUE3ak1sN1N6UXZCeEdkaVNNVWE4Y0Q5RTBvSW1Xd3FReTAwQlc0WC1uRTNzY2p2UVBHN1hWemRjelXSAWBBVV95cUxPVTRwUnZ0YWRldWdhTUszWVVJZnpWdzJfVjJ3aDAzZ190YmNkYVY5N1NiV0dmLXNVOVZfaWJ1MkJsODhvbGpLUEd6bFdWOHR3Ui00SXVlbHpwOTZoeXQxcDQ?hl=ko&gl=KR&ceid=KR%3Ako)**
-<span class="source-tag">Google News</span>
-
-**2. [코스피·코스닥 불장에도외면받는 ‘코넥스’](https://news.google.com/read/CBMiUkFVX3lxTE9Qb21JdEtSMjYzdmp6MTVNWVRKb3ZTODRKMHgtR3cyM1VRV095SHJxNzlzWXJramdWa0IzMGNmTkJ4Q0pJcERlaUpoZy16WHdhb2c?hl=ko&gl=KR&ceid=KR%3Ako)**
-<span class="source-tag">Google News</span>
-
-**3. [외국인, 1월 코스피 사고 코스닥 팔았다](https://news.google.com/read/CBMijgFBVV95cUxNY0VHNHVDUEtLRmdnaW1Kd2xsN0V5WTRJXzhKRWlVS2pld1dwakk0ZVdKdWI4LUtJcUE2dlA0eDYwOXVMaC1qR04wOVkwcmgycXJkQldtUldLcTBtSEhaem00WEVsT2pISUh6RUZ2YVNqQmlENlRpOWhqak01SDFHOFBpNTZRTUk3dmJibGZR0gGiAUFVX3lxTFBmVG4ta0hNdkFUVzZtTE0xeDhUMlhuSmUzaGk1MHI0cTN3aFFIZ2pSZmFDTHNiNF9BUXZPUFJuOEJKNzgxVFdqYW4zN01qOWN5cHVvTWh5WUM4aXpnT1pIUU56dXhvYzlDZGhRUnVyR1Z5cGxtOEUzbl9Dby1oX3ZRa0I0Q3lLa2hFYi05UjhzNk5DS0ZnbkloNUhCaHJPMFFNdw?hl=ko&gl=KR&ceid=KR%3Ako)**
-<span class="source-tag">Google News</span>
-
-**4. [설 연휴 이후 시장, 흔들리지 않기 위한 코스피·코스닥 기준 정리](https://news.google.com/read/CBMiiwFBVV95cUxNYlNnLWN6cUhyMl9EeU5kX2lKR0k2TzZHYndFVUt2MXhfN0p1SF80VmxiYU13VWR2aThoOEw1RGdfMTNaakNGRkJ2M1gzMjN0WllwWFBQZ3UydUpTeTVUZUx1YzRLdEJYSWd1SndzUTBndkVwWnVONExHSkFJd0hYWVd1MzFPMzJ3UG1B?hl=ko&gl=KR&ceid=KR%3Ako)**
-<span class="source-tag">Google News</span>
-
-**5. [질주하는 코스피·코스닥·금값언제까지 달릴까? [뉴스in뉴스]](https://news.google.com/read/CBMiW0FVX3lxTE1fMHJPcGdEYmR6MjJDazhheGN0dzRIckIwdDgyMXU0TnlpSHBpdlhyS1BBOS00U2ZneU1tYUFKak9TcFhFYWZBWmpLWVFRanFYZ3VrNGZWUUZCZGM?hl=ko&gl=KR&ceid=KR%3Ako)**
-<span class="source-tag">Google News</span>
-
 
 ## 시장 데이터 스냅샷
 
