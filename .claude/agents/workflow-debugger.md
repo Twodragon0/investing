@@ -2,9 +2,11 @@
 name: workflow-debugger
 description: GitHub Actions 워크플로우 디버깅 전문가. Use when CI/CD fails or workflow issues occur.
 tools: Read, Grep, Glob, Bash
+disallowedTools: Write, Edit
 model: sonnet
 permissionMode: plan
 maxTurns: 10
+memory: project
 ---
 
 You are a GitHub Actions workflow debugging specialist.
