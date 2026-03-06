@@ -70,6 +70,49 @@ def _truncate_sentence(text: str, max_len: int = 300) -> str:
     return truncated.strip() + "..."
 
 
+def _generate_title_based_desc(title: str, theme_key: str) -> str:
+    """Generate a short analytical description from the news title and theme.
+
+    Returns a Korean sentence summarizing the article's significance,
+    or empty string if the title is too short to generate a useful description.
+    """
+    if len(title) < 10:
+        return ""
+
+    # Theme-specific context suffixes
+    _THEME_CONTEXT = {
+        "bitcoin": "비트코인 시장 동향과 관련된 소식입니다.",
+        "ethereum": "이더리움 생태계 관련 소식입니다.",
+        "altcoin": "알트코인 시장 동향 관련 소식입니다.",
+        "regulation": "암호화폐 규제 및 정책 관련 소식입니다.",
+        "price": "가격 및 시장 움직임 관련 소식입니다.",
+        "defi": "탈중앙화 금융(DeFi) 관련 소식입니다.",
+        "nft": "NFT 및 디지털 자산 관련 소식입니다.",
+        "exchange": "거래소 동향 관련 소식입니다.",
+        "macro": "거시경제 및 금리 관련 소식입니다.",
+        "ai_tech": "AI 및 기술 관련 소식입니다.",
+        "politics": "정치 및 정책 관련 소식입니다.",
+    }
+
+    # Check if title is already Korean
+    has_korean = bool(re.search(r"[가-힣]", title))
+    if has_korean:
+        # Korean title: use directly with context
+        clean = re.sub(r"\s*[-–—|]\s*\S+$", "", title).strip()
+        ctx = _THEME_CONTEXT.get(theme_key, "")
+        if ctx and len(clean) < 60:
+            return f"{clean}. {ctx}"
+        return clean
+
+    # English title: provide analytical context
+    ctx = _THEME_CONTEXT.get(theme_key, "관련 소식입니다.")
+    # Remove source suffix (e.g., " - Reuters", " | Bloomberg")
+    clean = re.sub(r"\s*[-–—|]\s*(?:Reuters|Bloomberg|CNBC|CNN|BBC|AP|Forbes|WSJ)\s*$", "", title, flags=re.I).strip()
+    if len(clean) > 120:
+        clean = clean[:117] + "..."
+    return f"{clean} — {ctx}"
+
+
 _GENERIC_DESC_PATTERNS = [
     re.compile(r"에서 보도한 뉴스입니다\.?$"),
     re.compile(r"거래소 공지사항입니다\.?\s*$"),
@@ -900,6 +943,11 @@ class ThemeSummarizer:
                         desc_text = _truncate_sentence(description, max_len=300)
                         if desc_text:
                             card_parts.append(f'<p class="news-desc">{_esc(desc_text, quote=True)}</p>')
+                    else:
+                        # Fallback: generate analytical description from title
+                        fallback_desc = _generate_title_based_desc(orig_title, key)
+                        if fallback_desc:
+                            card_parts.append(f'<p class="news-desc">{_esc(fallback_desc, quote=True)}</p>')
 
                     if source:
                         card_parts.append(html_source_tag(source))

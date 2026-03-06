@@ -724,6 +724,38 @@ def main():
 
     content = "\n".join(content_parts)
 
+    # Generate briefing card image
+    briefing_image = ""
+    try:
+        from common.image_generator import generate_news_briefing_card
+
+        top_themes = summarizer.get_top_themes()
+        card_themes = []
+        for t_name, t_key, t_emoji, t_count in (top_themes or [])[:5]:
+            t_articles = summarizer._theme_articles.get(t_key, [])
+            t_keywords = []
+            for art in t_articles[:5]:
+                words = re.findall(r"[a-zA-Z가-힣]{4,}", art.get("title", ""))
+                t_keywords.extend(words[:2])
+            seen_kw: set = set()
+            unique_kw = [kw for kw in t_keywords if not (kw.lower() in seen_kw or seen_kw.add(kw.lower()))]  # type: ignore[func-returns-value]
+            card_themes.append({"name": t_name, "emoji": t_emoji, "count": t_count, "keywords": unique_kw[:4]})
+        if card_themes:
+            img = generate_news_briefing_card(
+                card_themes,
+                today,
+                category="Regulatory Report",
+                total_count=len(all_items),
+                filename=f"news-briefing-regulatory-{today}.png",
+            )
+            if img:
+                briefing_image = img
+                logger.info("Generated regulatory briefing card")
+    except ImportError:
+        pass
+    except Exception as e:
+        logger.warning("Regulatory briefing card failed: %s", e)
+
     filepath = gen.create_post(
         title=post_title,
         content=content,
@@ -731,7 +763,7 @@ def main():
         tags=["regulation", "sec", "cftc", "fsc", "daily-digest"],
         source="consolidated",
         lang="ko",
-        image="/assets/images/og-default.png",
+        image=briefing_image or "/assets/images/og-default.png",
         slug="daily-regulatory-report",
     )
     if filepath:

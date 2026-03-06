@@ -1959,6 +1959,7 @@ def main():
     image_line = f'\nimage: "{frontmatter_image}"' if frontmatter_image else ""
 
     safe_tags = [f'"{t}"' for t in tags]
+    safe_desc = f"{counts_str}의 뉴스를 종합 분석한 일일 요약입니다.".replace('"', "'")
     frontmatter = f"""---
 layout: post
 title: "{escaped_title}"
@@ -1968,6 +1969,7 @@ tags: [{", ".join(safe_tags)}]
 source: "consolidated"
 lang: "ko"{image_line}
 pin: true
+description: "{safe_desc}"
 excerpt: "{counts_str}의 뉴스를 종합 분석한 일일 요약"
 ---"""
 

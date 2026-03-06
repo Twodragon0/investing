@@ -867,6 +867,39 @@ def main() -> None:
 
     content = "\n".join(content_parts)
 
+    # Generate briefing card image
+    briefing_image = ""
+    try:
+        from common.image_generator import generate_news_briefing_card
+
+        theme_emojis = {
+            "지정학/안보": "🌍",
+            "에너지": "⛽",
+            "금융시장": "📈",
+            "정책/법률": "📜",
+            "사회/기타": "🔔",
+        }
+        card_themes = []
+        for t_name, t_count in theme_counter.most_common(5):
+            card_themes.append(
+                {"name": t_name, "emoji": theme_emojis.get(t_name, "📌"), "count": t_count, "keywords": []}
+            )
+        if card_themes:
+            img = generate_news_briefing_card(
+                card_themes,
+                today,
+                category="WorldMonitor Briefing",
+                total_count=total_items,
+                filename=f"news-briefing-worldmonitor-{today}.png",
+            )
+            if img:
+                briefing_image = img
+                logger.info("Generated worldmonitor briefing card")
+    except ImportError:
+        pass
+    except Exception as e:
+        logger.warning("Worldmonitor briefing card failed: %s", e)
+
     filepath = generator.create_post(
         title=post_title,
         content=content,
@@ -875,7 +908,7 @@ def main() -> None:
         source="worldmonitor",
         source_url="https://worldmonitor.app",
         lang="ko",
-        image="/assets/images/og-default.png",
+        image=briefing_image or "/assets/images/og-default.png",
         slug="daily-worldmonitor-briefing",
     )
 

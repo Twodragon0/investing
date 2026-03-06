@@ -726,6 +726,38 @@ def main():
         excerpt_parts.append(f"중앙은행 {cb_count}건")
     excerpt_text = f"{today} 정치인 거래·정책 리포트: {', '.join(excerpt_parts)}, 총 {total_count}건 수집"
 
+    # Generate briefing card image
+    briefing_image = ""
+    try:
+        from common.image_generator import generate_news_briefing_card
+
+        card_themes = []
+        theme_data = [
+            ("SEC 내부자 거래", "📊", sec_count),
+            ("트럼프 정책", "🏛️", trump_count),
+            ("의회 거래", "🏦", congress_count),
+            ("한국 정치인", "🇰🇷", korea_count),
+            ("중앙은행", "💰", cb_count),
+        ]
+        for t_name, t_emoji, t_count in theme_data:
+            if t_count:
+                card_themes.append({"name": t_name, "emoji": t_emoji, "count": t_count, "keywords": []})
+        if card_themes:
+            img = generate_news_briefing_card(
+                card_themes,
+                today,
+                category="Political Trades",
+                total_count=total_count,
+                filename=f"news-briefing-political-{today}.png",
+            )
+            if img:
+                briefing_image = img
+                logger.info("Generated political trades briefing card")
+    except ImportError:
+        pass
+    except Exception as e:
+        logger.warning("Political trades briefing card failed: %s", e)
+
     filepath = gen.create_post(
         title=post_title,
         content=content,
@@ -742,7 +774,7 @@ def main():
         source="consolidated",
         lang="ko",
         slug="daily-political-trades-report",
-        image="/assets/images/og-default.png",
+        image=briefing_image or "/assets/images/og-default.png",
         extra_frontmatter={"excerpt": excerpt_text},
     )
     if filepath:
