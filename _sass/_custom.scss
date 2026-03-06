@@ -2151,31 +2151,31 @@ body {
   .dashboard-title-row {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 0.85rem;
   }
 
   .dashboard-icon {
-    width: 48px;
-    height: 48px;
+    width: 38px;
+    height: 38px;
     background: linear-gradient(135deg, $accent-blue 0%, $accent-purple 100%);
-    border-radius: 10px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
 
     svg {
-      width: 28px;
-      height: 28px;
+      width: 22px;
+      height: 22px;
       color: $text-primary;
     }
   }
 
   .dashboard-info {
     h1 {
-      font-size: 1.85rem;
+      font-size: 1.55rem;
       font-weight: 800;
-      margin: 0 0 0.3rem 0;
+      margin: 0 0 0.2rem 0;
       color: $text-primary;
       letter-spacing: -0.02em;
       text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 0 20px rgba($accent-blue, 0.1);
@@ -2188,7 +2188,7 @@ body {
 
     p {
       margin: 0;
-      font-size: 0.92rem;
+      font-size: 0.82rem;
       color: $text-secondary;
       font-weight: 500;
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
@@ -2198,12 +2198,12 @@ body {
   .dashboard-date {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.6rem 1rem;
+    gap: 0.4rem;
+    padding: 0.4rem 0.75rem;
     background: rgba($bg-primary, 0.5);
     border: 1px solid rgba($border-color, 0.4);
-    border-radius: 8px;
-    font-size: 0.85rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
     color: $text-secondary;
     font-weight: 600;
     white-space: nowrap;
@@ -2219,21 +2219,21 @@ body {
 /* Category Grid v2 - Enhanced Cards with Icons */
 .category-grid-v2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.1rem;
+  margin-bottom: 2.5rem;
 }
 
 .cat-card {
   display: flex;
   align-items: flex-start;
-  gap: 1.35rem;
-  padding: 2rem;
+  gap: 1rem;
+  padding: 1.4rem;
   background: linear-gradient(135deg, rgba($bg-card, 0.75) 0%, rgba($bg-secondary, 0.6) 100%);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   border: 1px solid rgba($border-color, 0.6);
-  border-radius: 16px;
+  border-radius: 12px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -2285,9 +2285,9 @@ body {
   }
 
   .cat-icon {
-    width: 52px;
-    height: 52px;
-    border-radius: 12px;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2308,8 +2308,8 @@ body {
     }
 
     svg {
-      width: 26px;
-      height: 26px;
+      width: 22px;
+      height: 22px;
       stroke-width: 2.5;
       filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
       position: relative;
@@ -2322,7 +2322,7 @@ body {
     min-width: 0;
 
     h3 {
-      font-size: 1.15rem;
+      font-size: 1.05rem;
       font-weight: 700;
       margin: 0 0 0.5rem 0;
       color: $text-primary;
@@ -2593,12 +2593,12 @@ body {
 }
 
 .posts-tab {
-  padding: 0.65rem 1.25rem;
+  padding: 0.45rem 0.9rem;
   background: rgba($bg-card, 0.6);
   border: 1px solid rgba($border-color, 0.5);
-  border-radius: 8px;
+  border-radius: 6px;
   color: $text-secondary;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -2608,14 +2608,14 @@ body {
     background: rgba($bg-card, 0.8);
     border-color: $accent-blue;
     color: $text-primary;
-    transform: translateY(-2px);
+    transform: translateY(-1px);
   }
 
   &.active {
     background: linear-gradient(135deg, $accent-blue 0%, $accent-purple 100%);
     border-color: transparent;
     color: $text-primary;
-    box-shadow: 0 4px 12px rgba($accent-blue, 0.3);
+    box-shadow: 0 3px 10px rgba($accent-blue, 0.25);
   }
 }
 
@@ -2769,8 +2769,8 @@ body {
   }
 
   .posts-tab {
-    padding: 0.55rem 1rem;
-    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.78rem;
   }
 
   .recent-posts-tabbed h2 {
@@ -3529,16 +3529,17 @@ body {
 .market-pulse {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
+  gap: 0.35rem;
+  padding: 0.3rem 0.7rem;
   background: rgba($accent-green, 0.1);
   border: 1px solid rgba($accent-green, 0.3);
-  border-radius: 20px;
+  border-radius: 14px;
+  font-size: 0.78rem;
 }
 
 .pulse-dot {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   background: $accent-green;
   border-radius: 50%;
   animation: pulse-anim 2s ease-in-out infinite;
@@ -3553,7 +3554,7 @@ body {
 
 .pulse-text {
   color: $accent-green;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
@@ -3621,14 +3622,14 @@ body {
   flex: 0 0 auto;
   display: flex;
   align-items: center;
-  gap: 1.1rem;
-  padding: 1.15rem 1.65rem;
+  gap: 0.75rem;
+  padding: 0.7rem 1.1rem;
   background: rgba($bg-card, 0.7);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border: 1px solid rgba($border-color, 0.6);
-  border-radius: 14px;
-  min-width: 195px;
+  border-radius: 10px;
+  min-width: 160px;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
@@ -3640,7 +3641,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    border-radius: 14px;
+    border-radius: 10px;
     padding: 1px;
     background: linear-gradient(135deg, rgba($accent-blue, 0.2), rgba($accent-purple, 0.1));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -3653,7 +3654,7 @@ body {
   &:hover {
     background: rgba($bg-card, 0.95);
     border-color: rgba($accent-blue, 0.5);
-    transform: translateY(-3px) scale(1.02);
+    transform: translateY(-2px) scale(1.01);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), 0 0 20px rgba($accent-blue, 0.15);
 
     &::before {
@@ -3662,8 +3663,8 @@ body {
   }
 
   svg {
-    width: 26px;
-    height: 26px;
+    width: 20px;
+    height: 20px;
     color: $accent-blue;
     flex-shrink: 0;
     filter: drop-shadow(0 2px 6px rgba($accent-blue, 0.3));
@@ -3684,7 +3685,7 @@ body {
 }
 
 .stat-value {
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: $text-primary;
 }
@@ -3787,8 +3788,8 @@ body {
 .section-header {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
 
   h2 {
     margin: 0;
@@ -4650,8 +4651,8 @@ main {
 
 @media (max-width: 480px) {
   .stat-item {
-    min-width: 150px;
-    padding: 0.875rem 1rem;
+    min-width: 130px;
+    padding: 0.6rem 0.8rem;
   }
 
   .section-header {
