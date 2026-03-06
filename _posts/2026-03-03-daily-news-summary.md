@@ -114,9 +114,9 @@ excerpt: "암호화폐 111건, 주식 122건, 보안 2건, 규제 29건, 소셜 
 
 > 규제, ETF, 실적 등 주요 뉴스입니다.
 
-- [PayPay, 40% owner of Binance Japan, seeks up to $1.1 billion in Nasdaq IPO](https://www.coindesk.com/business/2026/03/02/paypay-40-owner-of-binance-japan-seeks-up-to-usd1-1-billion-in-nasdaq-ipo)
+- [PayPay, Binance Japan 지분 40% 보유사, Nasdaq IPO로 최대 11억 달러 조달 추진](https://www.coindesk.com/business/2026/03/02/paypay-40-owner-of-binance-japan-seeks-up-to-usd1-1-billion-in-nasdaq-ipo)
 - [AI 랠리에 탄 반도체, ‘개별주’ 대신 ‘ETF’로 자금 쏠린다 - 뉴스피릿](https://news.google.com/rss/articles/CBMia0FVX3lxTE1iTWxXa3VvNjItb1d4LXJlcXRWR01DZ1lzNkJSbkludGs2aHl5c3J2cGlNOUg5MmVXaEFEbm5kZ3lGMGVzWnVSZ0ZmdVRjNnFhSHhiVjNJU3FNUDRlQWxPbEtVaFhERC10M0Nv?oc=5)
-- [CHAT vs. SOXX: Which AI ETF Is the Better Buy for Investors Right Now? - Nasdaq](https://news.google.com/rss/articles/CBMikgFBVV95cUxOY0Radks3LV9DSUtsa1lHdVFELUdXQXhwRzlaTnBDWks5SDFyTG1ZckUyTGV3bzNwOGZIQk5MOUxWaEFnRVpacmlQMkZkaVZkblE5eTZFN3lSN2ZUMThtdUJRN0tRNDUwckJlRkV4UFFDZVM0RUdnamNpY09uM0w4ZnpuYUdlR2pjalFJUU53STZTUQ?oc=5)
+- [CHAT vs. SOXX: 지금 투자자에게 더 나은 AI ETF는? - Nasdaq](https://news.google.com/rss/articles/CBMikgFBVV95cUxOY0Radks3LV9DSUtsa1lHdVFELUdXQXhwRzlaTnBDWks5SDFyTG1ZckUyTGV3bzNwOGZIQk5MOUxWaEFnRVpacmlQMkZkaVZkblE5eTZFN3lSN2ZUMThtdUJRN0tRNDUwckJlRkV4UFFDZVM0RUdnamNpY09uM0w4ZnpuYUdlR2pjalFJUU53STZTUQ?oc=5)
 - 단일종목 레버리지 ETF의 세부방안은 검토중입니다.
 - 장기(예:2년) 미정리 PF 대출의 회수예상가액을 공시지가로 하는 등 상호금융조합의 리스크 관리를 엄격화하겠습니다.  - ｢상호금융업감독규정｣ 일부개정안 규정변경예고 (3.3일~3.16일) -
 
@@ -192,7 +192,7 @@ excerpt: "암호화폐 111건, 주식 122건, 보안 2건, 규제 29건, 소셜 
 
 ## 주목할 소식
 
-- [Apple launches new iPhone and iPad Air as it gears up for a major AI push](https://www.marketwatch.com/story/apple-launches-new-iphone-and-ipad-air-as-it-gears-up-for-a-major-ai-push-570b24ae?mod=mw_rss_topstories)
+- [Apple, 대규모 AI 공세 앞두고 신형 iPhone 및 iPad Air 공개](https://www.marketwatch.com/story/apple-launches-new-iphone-and-ipad-air-as-it-gears-up-for-a-major-ai-push-570b24ae?mod=mw_rss_topstories)
 - S&P 500, 미-이란 공습 후 저점 매수세 유입으로 낙폭 회복 보합 마감: 실시간 업데이트
 - 사우디 수도 리야드 주재 미국 대사관 드론 공격, 화재 발생: 당국 발표
 

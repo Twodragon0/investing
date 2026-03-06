@@ -51,13 +51,13 @@ description: "2026-03-01 암호화폐 시장에서 108건의 뉴스를 분석했
 
 *Bitcoin, crypto, Iran, 비트코인, $64,000*
 
-**1. [Bitcoin fans latch on to ‘ridiculous’ Jane Street conspiracy to explain price slump](https://news.google.com/read/CBMigAFBVV95cUxPYTBnZmlRcThpWXhOSWxjWVRFbzlWR0lhZHVTSFJ1MV85elJ6WGZnT3pwbE1tX3U4bEY2VnhZVUhuREx1a2V2dldiem5SeC1OeDBBOVloTzQyLUZnMUxwOE9sdVVEMnd0VjdxWmYyRVBNYUl5NUd1NXB2NENhOWxEdA?hl=en-US&gl=US&ceid=US%3Aen)**
+**1. [비트코인 팬들, 가격 급락 설명 위해 ‘터무니없는’ Jane Street 음모론에 매달려](https://news.google.com/read/CBMigAFBVV95cUxPYTBnZmlRcThpWXhOSWxjWVRFbzlWR0lhZHVTSFJ1MV85elJ6WGZnT3pwbE1tX3U4bEY2VnhZVUhuREx1a2V2dldiem5SeC1OeDBBOVloTzQyLUZnMUxwOE9sdVVEMnd0VjdxWmYyRVBNYUl5NUd1NXB2NENhOWxEdA?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
-**2. [Bitcoin, Ethereum, XRP Fall as Cryptos Unwind Gains. Blame Nvidia.](https://news.google.com/read/CBMihwNBVV95cUxNVXY0eDFwdGNrWGNZWEV6TmU5UUx5TXU4cE5sc3EzNl9RUWlYS0tEU1hzclR0RDNBZzRnNjNDdmVoTkVVRXE2U3FjUFZGamJvUFA3WldQSGt4ck9UT1FCYnVPQi03aHJXV2ZrVHNhSHN5cjJSNHViSjNyeXJXT0QtZV9XbmhqLVJmUGlYZDNrTHNCc19WTkEzcHR6c0ZOZHBJOEd0MDBFV2NadmFtTEpfTEdic3kweE9ZVEhzNDQwRlUyWm1fSUJ4OERxOER6MmlNUGFjNzBtZ0ctYkxuVW9mTDZfODdfUU1jUG4zcUdIQWFRUE9BbGhZbE51alphaHlJNDVrVHNRbWdpSW9hNGpJMm9UMC11ejhPR1E5VTlxQ1dLYm81RkQyODlWS00xdkd5N0lHaERxaXMzaHZjbTNEdDNHYXpLeVU1TUJ1SmdWaDlQVnhKUGdFeW9XZWxqV1F5YnZrZ3QzR0E1ZG5iOUpNSEpVYmYxZHBZQjB2R2NkenAyQURyMVFB?hl=en-US&gl=US&ceid=US%3Aen)**
+**2. [비트코인, 이더리움, XRP 하락 — 상승분 반납. Nvidia 탓?](https://news.google.com/read/CBMihwNBVV95cUxNVXY0eDFwdGNrWGNZWEV6TmU5UUx5TXU4cE5sc3EzNl9RUWlYS0tEU1hzclR0RDNBZzRnNjNDdmVoTkVVRXE2U3FjUFZGamJvUFA3WldQSGt4ck9UT1FCYnVPQi03aHJXV2ZrVHNhSHN5cjJSNHViSjNyeXJXT0QtZV9XbmhqLVJmUGlYZDNrTHNCc19WTkEzcHR6c0ZOZHBJOEd0MDBFV2NadmFtTEpfTEdic3kweE9ZVEhzNDQwRlUyWm1fSUJ4OERxOER6MmlNUGFjNzBtZ0ctYkxuVW9mTDZfODdfUU1jUG4zcUdIQWFRUE9BbGhZbE51alphaHlJNDVrVHNRbWdpSW9hNGpJMm9UMC11ejhPR1E5VTlxQ1dLYm81RkQyODlWS00xdkd5N0lHaERxaXMzaHZjbTNEdDNHYXpLeVU1TUJ1SmdWaDlQVnhKUGdFeW9XZWxqV1F5YnZrZ3QzR0E1ZG5iOUpNSEpVYmYxZHBZQjB2R2NkenAyQURyMVFB?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
-**3. [Trump brothers-backed American Bitcoin swings to quarterly loss amid crypto selloff](https://news.google.com/read/CBMiwwFBVV95cUxNT3RWTWRiUUZ3U2FmRmdzTk0tQ3dlZW44N09FUDhDMzJqVFFUOEM5dlVuX1BMbVJ0TEoyT3NNNkQ2ZWVIQlUxeUhkSFBnR0tXRzMyT09qZVdRTVNkVF9pX1dQVjNzalliRjY1Y2hqVDloTnBZSGpvNTVCRmVrUW5KM0trMnBGS1V6b2Nla0xWV3MyQXJ3WkhwTGNRVVRYaGtqZjFtWGZsOVhNTDluRTY0cnB1Vi1YVjJDTkJ5NlBZVUJLZlE?hl=en-US&gl=US&ceid=US%3Aen)**
+**3. [Trump 형제 지원 American Bitcoin, 암호화폐 침체 속 분기 손실 전환](https://news.google.com/read/CBMiwwFBVV95cUxNT3RWTWRiUUZ3U2FmRmdzTk0tQ3dlZW44N09FUDhDMzJqVFFUOEM5dlVuX1BMbVJ0TEoyT3NNNkQ2ZWVIQlUxeUhkSFBnR0tXRzMyT09qZVdRTVNkVF9pX1dQVjNzalliRjY1Y2hqVDloTnBZSGpvNTVCRmVrUW5KM0trMnBGS1V6b2Nla0xWV3MyQXJ3WkhwTGNRVVRYaGtqZjFtWGZsOVhNTDluRTY0cnB1Vi1YVjJDTkJ5NlBZVUJLZlE?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
 <details><summary>그 외 48건 보기</summary><div class="details-content">
@@ -71,7 +71,7 @@ description: "2026-03-01 암호화폐 시장에서 108건의 뉴스를 분석했
 
 *Bitcoin, 비트코인, 달러, Iran, 암호화폐*
 
-**1. [Bitcoin prices fall below $64,000 after U.S./Israel attack on Iran](https://news.google.com/read/CBMiwAFBVV95cUxOYmdkWjk3SHVnUGhvVmZOUHplQWI5SVJQbGREWU1nSF9qNlQ1NkdiUlV5OFlBQXBaU1JqaXZaQ0ZLNXFzMURoTDFWazNTY0tEOVFhS0hySmFYWmVLUjVRb3cwN25yS2J0dlJkbUxHX1NEa1NBOU5ZTGpNNEJ3c0pzTlRnLVZYLXpUSW5aOE1YMUhaZUM2Ni1MNkNXTklHN3A4UDR4WXZJMUpydkxXQVZLRlFibXN0NFZQckVjRjlWcVk?hl=en-US&gl=US&ceid=US%3Aen)**
+**1. [미-이스라엘 이란 공격 후 비트코인 $64,000 아래로 하락](https://news.google.com/read/CBMiwAFBVV95cUxOYmdkWjk3SHVnUGhvVmZOUHplQWI5SVJQbGREWU1nSF9qNlQ1NkdiUlV5OFlBQXBaU1JqaXZaQ0ZLNXFzMURoTDFWazNTY0tEOVFhS0hySmFYWmVLUjVRb3cwN25yS2J0dlJkbUxHX1NEa1NBOU5ZTGpNNEJ3c0pzTlRnLVZYLXpUSW5aOE1YMUhaZUM2Ni1MNkNXTklHN3A4UDR4WXZJMUpydkxXQVZLRlFibXN0NFZQckVjRjlWcVk?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
 **2. [Crypto Prediction Markets Say Bitcoin Is Nowhere Near $150,000 -- but Here's the Bull Case They Might Be Missing](https://news.google.com/read/CBMimAFBVV95cUxOdmRzb3lPVWFtVi1Ea3Jmcm9GVTk0LU5VeUVOYXFkb04wY2hOTVhidnNfSll3ai14VUxUVC1jUGlJUE9BZlJQcHJfT3VBcUxHTmFfUFZJeWlQQ3NMV2ZRMkZWMjQxMzZ4TktUWkZZN0I3M2lJNTFQU09Wa1N5OVZxWDdLcDNUU0l6cmdRTUctOWxMNUlCeWRqTw?hl=en-US&gl=US&ceid=US%3Aen)**

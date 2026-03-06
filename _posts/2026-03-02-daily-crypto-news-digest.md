@@ -51,13 +51,13 @@ description: "2026-03-02 암호화폐 시장에서 88건의 뉴스를 분석했�
 
 *Bitcoin, Iran, BTC 가격, 채굴, 제재*
 
-**1. [Better Cryptocurrency to Buy Now With $1,000 And Hold For 3 Years: XRP vs. Bitcoin](https://news.google.com/read/CBMimAFBVV95cUxPdHdkT3ozYVZMbC0zV0ZWSUtLb2tBQWpWaXYwdGUwcEdNdWhJOFI1azI1a0ppTVd0OXlRelZFOVNiR0ZSNk9OeHpoeTNWdXJ6NDlZNGRaaF9VMWpNUHRsRGU3UXYwQ21rREF6TjBCNjJBUU1MLURsQWltcTFkMmNZOHlyeGxzM19qd1RsZU1MVTlfQ19UVHltag?hl=en-US&gl=US&ceid=US%3Aen)**
+**1. [지금 $1,000으로 사서 3년 보유할 더 좋은 암호화폐: XRP vs. Bitcoin](https://news.google.com/read/CBMimAFBVV95cUxPdHdkT3ozYVZMbC0zV0ZWSUtLb2tBQWpWaXYwdGUwcEdNdWhJOFI1azI1a0ppTVd0OXlRelZFOVNiR0ZSNk9OeHpoeTNWdXJ6NDlZNGRaaF9VMWpNUHRsRGU3UXYwQ21rREF6TjBCNjJBUU1MLURsQWltcTFkMmNZOHlyeGxzM19qd1RsZU1MVTlfQ19UVHltag?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
-**2. [Eric Trump Says He Believes In BTC 'Long Term' And American Bitcoin's 'Growth Metric' Is To Increase Its Stash, Not Chase Exhashes Like Other Miners](https://news.google.com/read/CBMif0FVX3lxTFBSOTdNRTgtajExSGlUWjJDemRSRW5vZE5SZ3R3NEl0ZEoxd3dOUU8td29CY0xCLWtFWVFlQmtJUHNtNkhhckVDc0otak9nV0ZSdVNiQlhiSUNORlVBbE5IRktrVFdBNHBvMTc3cThzbDd4Rk10WlkwWl95aHV5cDg?hl=en-US&gl=US&ceid=US%3Aen)**
+**2. [Eric Trump, BTC '장기적' 가치 믿어 — American Bitcoin의 '성장 지표'는 채굴 해시 경쟁 아닌 보유량 확대](https://news.google.com/read/CBMif0FVX3lxTFBSOTdNRTgtajExSGlUWjJDemRSRW5vZE5SZ3R3NEl0ZEoxd3dOUU8td29CY0xCLWtFWVFlQmtJUHNtNkhhckVDc0otak9nV0ZSdVNiQlhiSUNORlVBbE5IRktrVFdBNHBvMTc3cThzbDd4Rk10WlkwWl95aHV5cDg?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
-**3. [Will U.S.-Israeli airstrikes target Iran's bitcoin mining farms?](https://news.google.com/read/CBMihgJBVV95cUxPMFNLdlFvUEZQcVpNNzZPcGd5amVUVDdpdzdQeDlLZ2hfVVp6Q1REU1dPV3pwU2d4Z1hZYS1FemdOLUhzLVpadHRNMjVGcFZfMFZhLVRBQmN0SEtpQWdFZTRGbTRoeFBXQldUUjNSTG9OSDlxV0VtYmJpcFZtUXc1WlJ1a2w3cTNpNVo5MGNJM2FCRUN0NHhpcVFtQkNscUNvZWpFa2J3cW9ucDVnUkl2c2k4MktIUTF6Y1ZuZ2JQUDZ5cjVMV25xV1pJOUhJR3ZmbHVDbk0wQTFad014NU1XaVhrOElKbHlST0d5V3BhWjlPQ3Z6Z2ZFMlI0OWhqMF9kYm5MTkN3?hl=en-US&gl=US&ceid=US%3Aen)**
+**3. [미-이스라엘 공습, 이란 비트코인 채굴 시설 타격할까?](https://news.google.com/read/CBMihgJBVV95cUxPMFNLdlFvUEZQcVpNNzZPcGd5amVUVDdpdzdQeDlLZ2hfVVp6Q1REU1dPV3pwU2d4Z1hZYS1FemdOLUhzLVpadHRNMjVGcFZfMFZhLVRBQmN0SEtpQWdFZTRGbTRoeFBXQldUUjNSTG9OSDlxV0VtYmJpcFZtUXc1WlJ1a2w3cTNpNVo5MGNJM2FCRUN0NHhpcVFtQkNscUNvZWpFa2J3cW9ucDVnUkl2c2k4MktIUTF6Y1ZuZ2JQUDZ5cjVMV25xV1pJOUhJR3ZmbHVDbk0wQTFad014NU1XaVhrOElKbHlST0d5V3BhWjlPQ3Z6Z2ZFMlI0OWhqMF9kYm5MTkN3?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
 <details><summary>그 외 36건 보기</summary><div class="details-content">
@@ -71,7 +71,7 @@ description: "2026-03-02 암호화폐 시장에서 88건의 뉴스를 분석했�
 
 *비트코인, Bitcoin, 암호화폐, Iran, 이란*
 
-**1. [Bitcoin price today: slips to $66k as Middle East conflict sparks risk-off wave](https://news.google.com/read/CBMi0AFBVV95cUxNS1dQcHVHUk90Z0hXY1I2dUUxcWVoVk1WVTVZZVNpSlQ3ZklaMWduMVdFOGhJSGt2LTJVZ1BrdFFkMGVHOVhWQUFMVnZxWHV1NWdKWEJhZjA2S19xMGdHdExTT28xSldLY096eHNUUFkybkVSQWljaU5IQkV1RDN3dlNhY0htN0x5dGo4cTBlRkFjM3A1d0hGb293NldBdkNMZUExZFFEa2ZEcWdXQUNJV202ZjFPeTh1eGZhRHEtYks3VF9Edy1RTXdUVV9fWUY1?hl=en-US&gl=US&ceid=US%3Aen)**
+**1. [오늘 비트코인 시세: 중동 분쟁에 위험자산 회피 확산, $66k로 미끄러져](https://news.google.com/read/CBMi0AFBVV95cUxNS1dQcHVHUk90Z0hXY1I2dUUxcWVoVk1WVTVZZVNpSlQ3ZklaMWduMVdFOGhJSGt2LTJVZ1BrdFFkMGVHOVhWQUFMVnZxWHV1NWdKWEJhZjA2S19xMGdHdExTT28xSldLY096eHNUUFkybkVSQWljaU5IQkV1RDN3dlNhY0htN0x5dGo4cTBlRkFjM3A1d0hGb293NldBdkNMZUExZFFEa2ZEcWdXQUNJV202ZjFPeTh1eGZhRHEtYks3VF9Edy1RTXdUVV9fWUY1?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
 **2. [이란 공습 여파에 비트코인 약세…위험자산 조정 확대 - 뉴시스](https://news.google.com/rss/articles/CBMiYEFVX3lxTE1XZGJQdE8tN2tRdnFYOGt3dkJtZ1JpWTk5Qm1XektUdHUtYm1OZmNMbnR6aUpOanhFcGJrM1lSMHdwTmJzX200REFSeGwyUVFLOHg0UjZxZ1ZMUnFoeE04btIBeEFVX3lxTFBHMTY2dEJ2VzJmbDJ6cjk1QmRlOVd2akxWS2ktRzI2TnJ3WF9GaDZYcThPMWpDQWJVSkdsdGx0NHFuR3N1eEMzUV9DZlNLbTRXZmpuYTVyWW9iN19GemNfSnZnTG1PQmg2dk1sLXlCWEg2aE4zZjZrZQ?oc=5)**
@@ -115,10 +115,10 @@ description: "2026-03-02 암호화폐 시장에서 88건의 뉴스를 분석했�
 
 *Ethereum, ETH 하락, 이란 공습, 가격 조정*
 
-**1. [Bitcoin, Ethereum, XRP Fall as Cryptos Unwind Gains. Blame Nvidia.](https://news.google.com/read/CBMihwNBVV95cUxNVjItdG5aNTdoQktLdmNhR2N5b1NLR2ppRkZYZzJfdjdNajVJQTJqeEZQLXRrTTYzSjc0ZThLajZWbl9zekNBWFFYSFFQeVdTUGxBek5fWWtVNGlNTDhGN1FkYmNKQVNfeklGOXoyMWRXdW1lclcxOElJV1M3Wm8xU04tUXd5enJaMzctZHM2YTlxZFZpNmVxakFHaVZTbnlmN1d4cHhhN0hTWmdkb2xIR3hnT3k3U0NHTmNjX084dk80a3RLZ05UWVpNb0R1aHRfMW5lWjVKYVNMSVNFU0ZrRWNZR1NGV0lieGxqYk1CalJDelRFeW41VElqZGpQbHN6X3VRYTczVk8yeldqeUF3dHl0LVoxWnQ4ci1yTEFta0VhNmEwWUY0T2szYkRHaWZXcUV3UEg4SDZJZ0FIY2ppdHg1RWI2UU4xUklWSnl4Nmx5bUdYN29LRDVDclh1Y0IxdFdEUjljNGlNeHQ2NnlBSUJ4WUtfd3NmSDRJdHY2bjlkazJrcU1V?hl=en-US&gl=US&ceid=US%3Aen)**
+**1. [비트코인, 이더리움, XRP 하락 — 상승분 반납. Nvidia 탓?](https://news.google.com/read/CBMihwNBVV95cUxNVjItdG5aNTdoQktLdmNhR2N5b1NLR2ppRkZYZzJfdjdNajVJQTJqeEZQLXRrTTYzSjc0ZThLajZWbl9zekNBWFFYSFFQeVdTUGxBek5fWWtVNGlNTDhGN1FkYmNKQVNfeklGOXoyMWRXdW1lclcxOElJV1M3Wm8xU04tUXd5enJaMzctZHM2YTlxZFZpNmVxakFHaVZTbnlmN1d4cHhhN0hTWmdkb2xIR3hnT3k3U0NHTmNjX084dk80a3RLZ05UWVpNb0R1aHRfMW5lWjVKYVNMSVNFU0ZrRWNZR1NGV0lieGxqYk1CalJDelRFeW41VElqZGpQbHN6X3VRYTczVk8yeldqeUF3dHl0LVoxWnQ4ci1yTEFta0VhNmEwWUY0T2szYkRHaWZXcUV3UEg4SDZJZ0FIY2ppdHg1RWI2UU4xUklWSnl4Nmx5bUdYN29LRDVDclh1Y0IxdFdEUjljNGlNeHQ2NnlBSUJ4WUtfd3NmSDRJdHY2bjlkazJrcU1V?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
-**2. [Bitcoin, Ethereum ‘pumping hard’ after Iran strikes, but states brace for financial fallout](https://news.google.com/read/CBMihwFBVV95cUxPZ2VFN3ZWd3hBRGhZbTA4ZlRDSXdsVDZDOFcxNlRFU3pXSENOZ01ZTi14bFdMdEJjVzNnaHJoV2hfTUYxd1U0QWczQWZHME1OTGVjeXplS1VhZ05yVXc0TVJLcDRSVE9oQzBackpGT2t6NDNLNWRaVVYzZmF3YnhqS2dybDJtbjg?hl=en-US&gl=US&ceid=US%3Aen)**
+**2. [이란 공습 후 비트코인·이더리움 ‘강한 상승’, 그러나 각 주(州) 재정 파장 대비](https://news.google.com/read/CBMihwFBVV95cUxPZ2VFN3ZWd3hBRGhZbTA4ZlRDSXdsVDZDOFcxNlRFU3pXSENOZ01ZTi14bFdMdEJjVzNnaHJoV2hfTUYxd1U0QWczQWZHME1OTGVjeXplS1VhZ05yVXc0TVJLcDRSVE9oQzBackpGT2t6NDNLNWRaVVYzZmF3YnhqS2dybDJtbjg?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
 **3. [[속보] 비트코인 이더리움 리플 "다시 급락 반전" 국제유가 폭등... 이란 대대적 보복 - 글로벌이코노믹](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPY2ljMHFfME43REx1M1F5YXZkOFlXRWFsekpHR1R4SFFENll6VkRfbldDVHBWeUJ4b2tOOWpWLTF5R1U3bWJZS1JpQW5meTNYWndtNVJWTVNVQ3QyRktaZGlMVkpuUUw3VWg1OUZtcXVaWTBzZ3NuS2lqb0g0RjRBV3ZHcGR1Zld5?oc=5)**

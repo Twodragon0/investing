@@ -90,7 +90,7 @@ excerpt: "암호화폐 107건, 주식 147건, 보안 2건, 규제 38건, 소셜 
 - **왜 미국은 UAE처럼 다우, S&P 500, 나스닥 폭락을 막지 못했나? 전문가 분석**
 - **미국-이란 중동전쟁에 코스피·코스닥 급락…제약·바이오도 타격**
 - **5600선 올라선 코스피…코스닥은 매수 사이드카**
-- **Crypto Hacks Drop to $26.5M in February, Lowest Since March 2025 - Live Bitcoin News**
+- **2월 암호화폐 해킹 피해 $2,650만으로 급감 — 2025년 3월 이후 최저 - Live Bitcoin News**
 
 ## 시장 개요
 
@@ -174,9 +174,9 @@ excerpt: "암호화폐 107건, 주식 147건, 보안 2건, 규제 38건, 소셜 
 ### 규제 동향 (38건)
 
 **주요 규제 이슈:**
-- AMENDMENT NO. 1 TO FORM F-1
-- CFTC Chairman Selig Announces Mel Gunewardena as Director of the Office of International Affairs and Senior Markets Advisor to the Chairman
-- CFTC Chairman Selig Announces Alan Brubaker as Director of the Office of Legislative and Intergovernmental Affairs
+- F-1 양식 수정 제1호 제출
+- CFTC 의장 Selig, Mel Gunewardena를 국제업무국장 겸 의장 선임 시장 자문으로 임명 발표
+- CFTC 의장 Selig, Alan Brubaker를 입법·정부간업무국장으로 임명 발표
 
 [상세 보기](https://investing.2twodragon.com/regulatory-news/2026/03/04/daily-regulatory-report/)
 
@@ -198,8 +198,8 @@ excerpt: "암호화폐 107건, 주식 147건, 보안 2건, 규제 38건, 소셜 
 ### 보안 리포트 (2건)
 
 **주요 보안 이슈:**
-- Crypto Hacks Drop to $26.5M in February, Lowest Since March 2025 - Live Bitcoin News
-- Crypto hackers exploit ClickFix via fake venture capital outreach - Invezz
+- 2월 암호화폐 해킹 피해 $2,650만으로 급감 — 2025년 3월 이후 최저 - Live Bitcoin News
+- 암호화폐 해커, 가짜 벤처캐피털 접근을 통한 ClickFix 취약점 악용 - Invezz
 
 [상세 보기](https://investing.2twodragon.com/security-alerts/2026/03/04/daily-security-report/)
 

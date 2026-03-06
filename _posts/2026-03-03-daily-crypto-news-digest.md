@@ -48,13 +48,13 @@ description: "2026-03-03 암호화폐 시장에서 111건의 뉴스를 분석했
 
 *Bitcoin, Iran, Cryptocurrency, conflict, Israel*
 
-**1. [Will U.S.-Israeli airstrikes target Iran's bitcoin mining farms?](https://news.google.com/read/CBMihgJBVV95cUxPMFNLdlFvUEZQcVpNNzZPcGd5amVUVDdpdzdQeDlLZ2hfVVp6Q1REU1dPV3pwU2d4Z1hZYS1FemdOLUhzLVpadHRNMjVGcFZfMFZhLVRBQmN0SEtpQWdFZTRGbTRoeFBXQldUUjNSTG9OSDlxV0VtYmJpcFZtUXc1WlJ1a2w3cTNpNVo5MGNJM2FCRUN0NHhpcVFtQkNscUNvZWpFa2J3cW9ucDVnUkl2c2k4MktIUTF6Y1ZuZ2JQUDZ5cjVMV25xV1pJOUhJR3ZmbHVDbk0wQTFad014NU1XaVhrOElKbHlST0d5V3BhWjlPQ3Z6Z2ZFMlI0OWhqMF9kYm5MTkN3?hl=en-US&gl=US&ceid=US%3Aen)**
+**1. [미-이스라엘 공습, 이란 비트코인 채굴 시설 타격할까?](https://news.google.com/read/CBMihgJBVV95cUxPMFNLdlFvUEZQcVpNNzZPcGd5amVUVDdpdzdQeDlLZ2hfVVp6Q1REU1dPV3pwU2d4Z1hZYS1FemdOLUhzLVpadHRNMjVGcFZfMFZhLVRBQmN0SEtpQWdFZTRGbTRoeFBXQldUUjNSTG9OSDlxV0VtYmJpcFZtUXc1WlJ1a2w3cTNpNVo5MGNJM2FCRUN0NHhpcVFtQkNscUNvZWpFa2J3cW9ucDVnUkl2c2k4MktIUTF6Y1ZuZ2JQUDZ5cjVMV25xV1pJOUhJR3ZmbHVDbk0wQTFad014NU1XaVhrOElKbHlST0d5V3BhWjlPQ3Z6Z2ZFMlI0OWhqMF9kYm5MTkN3?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
-**2. [Bitcoin Falls Amid Conflict in Middle East. Why Crypto Is Not a Haven.](https://news.google.com/read/CBMiqANBVV95cUxOb25jS0twcGNGUFZnaERTaG1nMURLdjVyRDNHR3lpUGFjc1p2RktDNHZwczdGZnV6M0pQN1VTNm9iYmU1V0ZwYkhlbjRwUlpNbmVkMUktU3hGYTZVaTFKYTdxV3RtQWVaRHJiUmFRbzNDLXIyNzFLVEVJNUhwRWJNTUZPU2d1NWxLRlNPdmZxY2pOMmRoc25HVFlKbEtWNWFrdDVkMWwxNFFURVJqSTZmalpmaDBzTEMzNXdNUF8tcHFmOHJJYWhNMDlxT052ajh3MGNXTWZkclBpblEtN2stWjhRMzg1allVRFNjRW9JRUZlR2xqd0I1b0FGWW92eDdVR3pibUdOeTd0LS10SENkUDI0bU9ZeU9aSzlZZTdfcTB4c0hMZjF0Ml92UHlEZ0hlSGZiLWllYldJZkk2RVlRQkZFMHBnS1lqeHFXMFMxQUtUOXZrbV9JRjVtbEIzcF8wNWR5R3NuOFczUzlZMDd5WTZGU1dhSDZHTXJnU0g3TTdRZjg3bXNWNEZwT0RsY2JBTWlLdk5WMVBMX0x3OE9ZYWpxQUlReWNC?hl=en-US&gl=US&ceid=US%3Aen)**
+**2. [중동 분쟁 속 비트코인 하락 — 암호화폐가 안전자산이 아닌 이유](https://news.google.com/read/CBMiqANBVV95cUxOb25jS0twcGNGUFZnaERTaG1nMURLdjVyRDNHR3lpUGFjc1p2RktDNHZwczdGZnV6M0pQN1VTNm9iYmU1V0ZwYkhlbjRwUlpNbmVkMUktU3hGYTZVaTFKYTdxV3RtQWVaRHJiUmFRbzNDLXIyNzFLVEVJNUhwRWJNTUZPU2d1NWxLRlNPdmZxY2pOMmRoc25HVFlKbEtWNWFrdDVkMWwxNFFURVJqSTZmalpmaDBzTEMzNXdNUF8tcHFmOHJJYWhNMDlxT052ajh3MGNXTWZkclBpblEtN2stWjhRMzg1allVRFNjRW9JRUZlR2xqd0I1b0FGWW92eDdVR3pibUdOeTd0LS10SENkUDI0bU9ZeU9aSzlZZTdfcTB4c0hMZjF0Ml92UHlEZ0hlSGZiLWllYldJZkk2RVlRQkZFMHBnS1lqeHFXMFMxQUtUOXZrbV9JRjVtbEIzcF8wNWR5R3NuOFczUzlZMDd5WTZGU1dhSDZHTXJnU0g3TTdRZjg3bXNWNEZwT0RsY2JBTWlLdk5WMVBMX0x3OE9ZYWpxQUlReWNC?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
-**3. [Bitcoin tops $69,000 as analysts point to crypto 'resilience' amid Middle East war](https://news.google.com/read/CBMiwgFBVV95cUxNYUtzNF9OSTdUVzhNeXR1cGpOdmZqWEJPd05yUnNDNDZXYW9YM0RocDJ1NTMtX243amRMbnlnaEFSR28xTGlTVjJhM0Rqcm9CZnRDRlhpcGk2TzZFMUJEVmhiejljMFVsa09yQnVINTVFZWhfVlViNm9NNGZReUZnUE1tMW9sSkR3YjgtUF9ORGhUdm5zSzdJQ0pJRXJMZ3lVN3Fxc0hubUl1MVpEYU9zWG10UW9sTS1fdWtSRlBGaTByUQ?hl=en-US&gl=US&ceid=US%3Aen)**
+**3. [비트코인 $69,000 돌파 — 중동 전쟁 속에도 '회복탄력성' 주목](https://news.google.com/read/CBMiwgFBVV95cUxNYUtzNF9OSTdUVzhNeXR1cGpOdmZqWEJPd05yUnNDNDZXYW9YM0RocDJ1NTMtX243amRMbnlnaEFSR28xTGlTVjJhM0Rqcm9CZnRDRlhpcGk2TzZFMUJEVmhiejljMFVsa09yQnVINTVFZWhfVlViNm9NNGZReUZnUE1tMW9sSkR3YjgtUF9ORGhUdm5zSzdJQ0pJRXJMZ3lVN3Fxc0hubUl1MVpEYU9zWG10UW9sTS1fdWtSRlBGaTByUQ?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
 <details><summary>그 외 51건 보기</summary><div class="details-content">
@@ -68,13 +68,13 @@ description: "2026-03-03 암호화폐 시장에서 111건의 뉴스를 분석했
 
 *비트코인, Bitcoin, Iran, 암호화폐, geopolitical*
 
-**1. [A brief collapse in Bitcoin’s price echoes earlier geopolitical conflicts—but a rapid bounceback shows the long term impact of Iran strikes are unclear](https://news.google.com/read/CBMipgFBVV95cUxPTDFLMjhtaVU2MENlSDVIcHFGZ2MtM3UtQXVyOVNZRUpYM3V0SUZ6WWhhQktDT2YtaVpCdmI1UUdqY1NPYVRxc1BQakZxTll0b3lnT3FkMGp5VnFyXzJvNXVuampvdzF4ZE81M2JSeFRQbG4zeFJCaXhWUTdnTGFSUTREZVN2QkViaWJQenVBSkNkOUxnMDVRN0h5enhjcDh6Y3B1cFN3?hl=en-US&gl=US&ceid=US%3Aen)**
+**1. [비트코인 가격의 일시적 폭락, 과거 지정학적 분쟁과 유사 — 빠른 반등으로 이란 공습 장기 영향은 불투명](https://news.google.com/read/CBMipgFBVV95cUxPTDFLMjhtaVU2MENlSDVIcHFGZ2MtM3UtQXVyOVNZRUpYM3V0SUZ6WWhhQktDT2YtaVpCdmI1UUdqY1NPYVRxc1BQakZxTll0b3lnT3FkMGp5VnFyXzJvNXVuampvdzF4ZE81M2JSeFRQbG4zeFJCaXhWUTdnTGFSUTREZVN2QkViaWJQenVBSkNkOUxnMDVRN0h5enhjcDh6Y3B1cFN3?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
-**2. [Bitcoin, cryptos under pressure as oil spikes 6% and global markets price in U.S.-Iran conflict](https://news.google.com/read/CBMi0gFBVV95cUxQWU94Q2N5YnlNa1NoZnRzWjZsZVFZb0ZZWmRMcjJ5X1VWVlUxTjhaMEI4SzlzNFIzUWNYblo0WVhlbl9BRjJWMEtQSV9Kenp5dnlhQ3FrT3FzQU5NYXdFME5JLXBVVEE4Yml5M3dwQnYwaDQyLUlRQlZuX3JXeVhOZTRSYlpfX3RfZ0FIM3VJUXRKSVRxaTNET0t3NFB3TTJjd25DZGpoc2pyaC1RTG9xX1ZWVkZCNmNuMVQ5S19oejRxLTQ3X1Z5aVVyenNwUlpKUFE?hl=en-US&gl=US&ceid=US%3Aen)**
+**2. [유가 6% 급등·글로벌 시장 미-이란 분쟁 반영에 비트코인·암호화폐 압박](https://news.google.com/read/CBMi0gFBVV95cUxQWU94Q2N5YnlNa1NoZnRzWjZsZVFZb0ZZWmRMcjJ5X1VWVlUxTjhaMEI4SzlzNFIzUWNYblo0WVhlbl9BRjJWMEtQSV9Kenp5dnlhQ3FrT3FzQU5NYXdFME5JLXBVVEE4Yml5M3dwQnYwaDQyLUlRQlZuX3JXeVhOZTRSYlpfX3RfZ0FIM3VJUXRKSVRxaTNET0t3NFB3TTJjd25DZGpoc2pyaC1RTG9xX1ZWVkZCNmNuMVQ5S19oejRxLTQ3X1Z5aVVyenNwUlpKUFE?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
-**3. [Bitcoin Recovers Following Plunge as US, Israel Begin Bombing Iran](https://news.google.com/read/CBMilgFBVV95cUxOdTBXdHhGdTl5RXphVnVsVmNMT2JnelNPRVlkN2dRU0x2czVONzJhTXlHZVJyTzdhalFfUngwVUpubmtmdHFDV2xSM3ZsZUlfS2lzSGIwM1psMzJvV2N6RlozQ2V2LWZxMFYyemItQk5zVnBXMjRmeVNoMU1feHdjTkZmaEVZWjc5b1VTRkI0Q2dZODNaWGfSAZ4BQVVfeXFMT2xISlZwaVRtcnZ0dTduYVY4OENIbE1BTFFlNDJPNmhLRHFnb3pHTHZzdTJCbUxvRkFwUnZ5emtRWUU3dnFPaHRyU3dTRE4ycy1sLUxjMEFUdGZlempHaEF6TjZtRUpsWTBoalBsWGVaTGNSUDhYbURhbjJFQjBHLVllTmVjUmRyQjFLbWVLOU1wVEdPajkwRERPLXF3d0E?hl=en-US&gl=US&ceid=US%3Aen)**
+**3. [미-이스라엘 이란 폭격 시작 후 비트코인 급락에서 회복](https://news.google.com/read/CBMilgFBVV95cUxOdTBXdHhGdTl5RXphVnVsVmNMT2JnelNPRVlkN2dRU0x2czVONzJhTXlHZVJyTzdhalFfUngwVUpubmtmdHFDV2xSM3ZsZUlfS2lzSGIwM1psMzJvV2N6RlozQ2V2LWZxMFYyemItQk5zVnBXMjRmeVNoMU1feHdjTkZmaEVZWjc5b1VTRkI0Q2dZODNaWGfSAZ4BQVVfeXFMT2xISlZwaVRtcnZ0dTduYVY4OENIbE1BTFFlNDJPNmhLRHFnb3pHTHZzdTJCbUxvRkFwUnZ5emtRWUU3dnFPaHRyU3dTRE4ycy1sLUxjMEFUdGZlempHaEF6TjZtRUpsWTBoalBsWGVaTGNSUDhYbURhbjJFQjBHLVllTmVjUmRyQjFLbWVLOU1wVEdPajkwRERPLXF3d0E?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
 <details><summary>그 외 25건 보기</summary><div class="details-content">
@@ -88,15 +88,15 @@ description: "2026-03-03 암호화폐 시장에서 111건의 뉴스를 분석했
 
 *Binance, billion, crypto, airstrikes, liquidity*
 
-**1. [PayPay, 40% owner of Binance Japan, seeks up to $1.1 billion in Nasdaq IPO](https://www.coindesk.com/business/2026/03/02/paypay-40-owner-of-binance-japan-seeks-up-to-usd1-1-billion-in-nasdaq-ipo)**
+**1. [PayPay, Binance Japan 지분 40% 보유사, Nasdaq IPO로 최대 11억 달러 조달 추진](https://www.coindesk.com/business/2026/03/02/paypay-40-owner-of-binance-japan-seeks-up-to-usd1-1-billion-in-nasdaq-ipo)**
 소프트뱅크가 지원하는 나스닥 상장 예정 결제기업으로, 기업가치 100억 달러 이상을 목표로 합니다.
 <span class="source-tag">CoinDesk</span>
 
-**2. [Australia could unlock A$24 billion in digital finance gains, is on track for just A$1 billion](https://www.coindesk.com/policy/2026/03/02/australia-could-unlock-ausd24-billion-in-digital-finance-gains-is-on-track-for-just-ausd1-billion)**
+**2. [호주, 디지털 금융으로 A$240억 창출 가능하지만 현재 경로는 A$10억에 그칠 듯](https://www.coindesk.com/policy/2026/03/02/australia-could-unlock-ausd24-billion-in-digital-finance-gains-is-on-track-for-just-ausd1-billion)**
 OKX가 후원한 보고서에 따르면 토큰화와 디지털 금융이 연간 A$240억을 창출할 수 있으나, 라이선싱·샌드박스·금융시장 규정 개혁이 선행 조건입니다.
 <span class="source-tag">CoinDesk</span>
 
-**3. [Weekend warriors: How HyperLiquid became retail’s bear market playground](https://www.coindesk.com/business/2026/03/02/weekend-warriors-how-hyperliquid-became-retail-s-bear-market-playground)**
+**3. [주말 전사들: HyperLiquid가 어떻게 개인 투자자의 약세장 놀이터가 됐나](https://www.coindesk.com/business/2026/03/02/weekend-warriors-how-hyperliquid-became-retail-s-bear-market-playground)**
 비트코인·이더리움이 약세장인 반면 HYPE는 금과 동반 상승, 하이퍼리퀴드 파생상품 거래량 확대 및 주말 주식 거래가 주목받고 있습니다.
 <span class="source-tag">CoinDesk</span>
 
@@ -110,14 +110,14 @@ OKX가 후원한 보고서에 따르면 토큰화와 디지털 금융이 연간 
 
 *million, billion, Crypto, Nasdaq, cryptocurrency*
 
-**1. [Law enforcement asks legislators to ban cryptocurrency kiosks to curb scams](https://news.google.com/read/CBMiXkFVX3lxTE5xenlTNXltamRteENBdUNZN2tRNkZlOVZoRk1vZHR5S3RHZzRab2tCMlJycUp6ZF95XzRoaGZCLUFrbFZwcWJVRkRMRHRpSGFld3pfZW43RXpzVjQxREE?hl=en-US&gl=US&ceid=US%3Aen)**
+**1. [사기 방지 위해 법 집행기관, 의원들에 암호화폐 키오스크 금지 요청](https://news.google.com/read/CBMiXkFVX3lxTE5xenlTNXltamRteENBdUNZN2tRNkZlOVZoRk1vZHR5S3RHZzRab2tCMlJycUp6ZF95XzRoaGZCLUFrbFZwcWJVRkRMRHRpSGFld3pfZW43RXpzVjQxREE?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
 **2. [DOJ: Florida cryptocurrency CEO arrested in $328 million fraud scheme - wtsp.com](https://news.google.com/rss/articles/CBMi2AFBVV95cUxQRGVUSkE3LTJidDBkdHRkeVhhR1M2UFJPSjI5amRHU3NyRFBTd3dMNGhVaXFldmMtay1PMndWaTk0a3dSM2laYms4TFE5U2NEWnloaHgyZ0g3TVBFYnA0Q3ZoNllhTEh1aWI5MHQxaW1SUFFMeXd0T01NOUtOaDBMUURnLU9idVJGWEctYUpxbHpxQjV6QnhfS0gxdVNadm50RlpCS1drMGd3S3B5d0FGSUU0ZWdDekZCLU9DZVpFNWJmbF9TbnA2bi1MSllRekFDT0MyRng3clI?oc=5)**
 DOJ: Florida cryptocurrency CEO arrested in $328 million fraud scheme wtsp.com
 <span class="source-tag">Google News EN</span>
 
-**3. [Senate Advances Housing Bill With CBDC Ban, Draws White House Backing](https://decrypt.co/359695/senate-advances-housing-bill-cbdc-ban-draws-white-house)**
+**3. [상원, CBDC 금지 조항 포함 주택법안 진전 — 백악관 지지](https://decrypt.co/359695/senate-advances-housing-bill-cbdc-ban-draws-white-house)**
 이번 표결은 현 의회에서 가장 강력한 초당적 지지를 받은 사례 중 하나로, 추가 절차적 난관도 돌파할 가능성이 있습니다.
 <span class="source-tag">Decrypt</span>
 
@@ -132,7 +132,7 @@ DOJ: Florida cryptocurrency CEO arrested in $328 million fraud scheme wtsp.com
 
 *crypto, lawmakers, stablecoin, Minnesota, liquidity*
 
-**1. [Why Minnesota lawmakers are trying to ban crypto ATMs](https://news.google.com/read/CBMiekFVX3lxTE50SXJyNU1HdE1TLUhwNkdZbWRlcVBnN0ZHckF1UVdqN1kwdkFHaHluNm1STzYtYmdRNlBoTTliN3p1NEFqMkdEcEg0elloRVNaazlneVpvR0tSUFI3UF9kSW9EQ1VnUE4xNDMzMFZ1Y3NmQVkxTnplRkd3?hl=en-US&gl=US&ceid=US%3Aen)**
+**1. [미네소타 주의원들이 암호화폐 ATM 금지를 추진하는 이유](https://news.google.com/read/CBMiekFVX3lxTE50SXJyNU1HdE1TLUhwNkdZbWRlcVBnN0ZHckF1UVdqN1kwdkFHaHluNm1STzYtYmdRNlBoTTliN3p1NEFqMkdEcEg0elloRVNaazlneVpvR0tSUFI3UF9kSW9EQ1VnUE4xNDMzMFZ1Y3NmQVkxTnplRkd3?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
 **2. [미네소타 주의원들이 크립토 ATM 금지를 추진하는 이유 - Mashable](https://news.google.com/rss/articles/CBMiekFVX3lxTE50SXJyNU1HdE1TLUhwNkdZbWRlcVBnN0ZHckF1UVdqN1kwdkFHaHluNm1STzYtYmdRNlBoTTliN3p1NEFqMkdEcEg0elloRVNaazlneVpvR0tSUFI3UF9kSW9EQ1VnUE4xNDMzMFZ1Y3NmQVkxTnplRkd3?oc=5)**
