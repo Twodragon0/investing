@@ -1,16 +1,13 @@
 #!/bin/bash
-# protect-files.sh - Block edits to sensitive files in the investing project
-
+# protect-files.sh - Block edits to sensitive files with proper JSON output
 INPUT=$(cat)
 FILE_PATH=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
+PROTECTED=(".env" "_state/" "package-lock.json" ".git/" ".ssh" "credentials" "secrets")
 
-PROTECTED_PATTERNS=(".env" "_state/" "package-lock.json" ".git/" ".ssh" "credentials" "secrets")
-
-for pattern in "${PROTECTED_PATTERNS[@]}"; do
-  if [[ "$FILE_PATH" == *"$pattern"* ]]; then
-    echo "Blocked: $FILE_PATH matches protected pattern '$pattern'. These files should not be modified directly." >&2
+for p in "${PROTECTED[@]}"; do
+  if [[ "$FILE_PATH" == *"$p"* ]]; then
+    echo "{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"Protected pattern '$p' matched in $FILE_PATH\"}}" >&2
     exit 2
   fi
 done
-
 exit 0

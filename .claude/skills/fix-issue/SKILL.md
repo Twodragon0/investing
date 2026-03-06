@@ -1,6 +1,7 @@
 ---
 name: fix-issue
 description: GitHub 이슈를 분석하고 수정합니다
+user-invocable: true
 disable-model-invocation: true
 ---
 

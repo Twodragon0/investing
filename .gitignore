@@ -30,3 +30,6 @@ Gemfile.lock
 .vercel
 worldmonitor_requests.txt
 worldmonitor_snapshot.md
+
+# Claude local settings (personal)
+.claude/settings.local.json

@@ -1,6 +1,7 @@
 ---
 name: new-collector
 description: 새로운 데이터 수집 스크립트를 생성합니다
+user-invocable: true
 disable-model-invocation: true
 ---
 

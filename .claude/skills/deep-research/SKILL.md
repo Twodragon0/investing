@@ -1,6 +1,7 @@
 ---
 name: deep-research
 description: 코드베이스를 심층 분석합니다
+user-invocable: true
 context: fork
 agent: Explore
 ---

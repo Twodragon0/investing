@@ -4,6 +4,8 @@ description: Jekyll 포스트 및 프론트엔드 검증. Use when modifying _po
 tools: Read, Grep, Glob, Bash
 disallowedTools: Write, Edit
 model: haiku
+permissionMode: plan
+maxTurns: 10
 ---
 
 You are a Jekyll site specialist for a Korean finance blog (investing.2twodragon.com).
