@@ -8,6 +8,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-daily-2026-03-04.png"
 pin: true
+description: "암호화폐 107건, 주식 147건, 보안 2건, 규제 38건, 소셜 미디어 37건, 월드모니터 20건, 정치인 거래 18건의 뉴스를 종합 분석한 일일 요약입니다."
 excerpt: "암호화폐 107건, 주식 147건, 보안 2건, 규제 38건, 소셜 미디어 37건, 월드모니터 20건, 정치인 거래 18건의 뉴스를 종합 분석한 일일 요약"
 ---
 

@@ -52,6 +52,7 @@ description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 �
 <div class="news-card-num">1</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMirgFBVV95cUxQZ3BQTmUzZmNESUxiX1NLMnhITFhNTjdLWFY1NHA4Q0xkbGl4TlpSQjlpaFduX0JfX0pwdW84OGJhdHprV2E4ekhIZmZ1T255MWVid092SjlPUXh6aGNrMThsLVpISEJzSXplN0JfWE5qMmZOZnZnNDZlQ2NFSFgwVWREQm53bEVFRHNydEhlb0lyR2hmNG9UUG43bFRzaVdOcW9fQkpUVWp5MVc0REE?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin Slides as Risk of Prolonged Iran War Weighs on Crypto</a>
+<p class="news-desc">이란 전쟁 장기화 리스크가 암호화폐 시장에 부담을 주면서 비트코인이 하락세를 보이고 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -61,6 +62,7 @@ description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 �
 <div class="news-card-num">2</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMiiwFBVV95cUxNWjA5cGFwWFRmUWJ3Zl9JcFp1NDNFblU2b3NwaFY1U0R3QlpqRnRMN2NEam8yZ3VLSFhDVU9rdVVZZms1eHRLNkNFbXpCWTZUM09MX0Z5QlY2UVoyM3k0X3lPc05kNnNURXltTUtwZEhKUDgwODhfU1JOcG9RaGZJQTgyUTc3cFRsQWNF?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin rises 5.2% amid U.S.-Israel-Iran conflict (BTC-USD:Cryptocurrency)</a>
+<p class="news-desc">미-이스라엘-이란 분쟁 속에서 비트코인이 5.2% 상승하며 안전자산으로서의 면모를 보여주고 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -70,6 +72,7 @@ description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 �
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMi0gFBVV95cUxQODFHejJySllJam1UdVZCUVVjZEEtcmlqTXRjZGRYR2pSaDk0RWFjTzhuTUF5QThfLThWTk9JaWtEcGcycGVmQTVXMkdtdExVVmVFVWxvNk5uaHBCbnIyT1ZuR2ZTV2FmZ29OVGxwamNDamxIMnlCRDRWOXlJOHR6MzJTblROSDZBUGRYZUNnMUVmX19BYWpkTzUwdlkybDVFTV9qbWJXb2NjdThiemFwbmQxS21GUVBNNW5vamFYazdNbDdST05vdURSYzJ0ektJcnc?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Inside the Harvard&#x27;s crypto play: Why the endowment is swapping bitcoin for ethereum ETFs</a>
+<p class="news-desc">하버드 대학 기금이 비트코인 ETF에서 이더리움 ETF로 전환하는 이유와 전략을 분석합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -90,6 +93,7 @@ description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 �
 <div class="news-card-num">1</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMipgFBVV95cUxPTDFLMjhtaVU2MENlSDVIcHFGZ2MtM3UtQXVyOVNZRUpYM3V0SUZ6WWhhQktDT2YtaVpCdmI1UUdqY1NPYVRxc1BQakZxTll0b3lnT3FkMGp5VnFyXzJvNXVuampvdzF4ZE81M2JSeFRQbG4zeFJCaXhWUTdnTGFSUTREZVN2QkViaWJQenVBSkNkOUxnMDVRN0h5enhjcDh6Y3B1cFN3?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">A brief collapse in Bitcoin’s price echoes earlier geopolitical conflicts—but a rapid bounceback shows the long term impact of Iran strikes are unclear</a>
+<p class="news-desc">비트코인 가격이 이란 공습 직후 급락했으나 빠르게 반등하며 지정학적 충격의 장기 영향은 제한적일 수 있음을 시사합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -99,6 +103,7 @@ description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 �
 <div class="news-card-num">2</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMiugFBVV95cUxNZ1YzQ1NEUVZEbEQ1ZFo4dHpBQ1ZJYkRWR0pCX1RLZzE1N1ZHTVpjZW5KUHBLdEE1T1ZhOFFaTllNZjNWeEVrUVhEZThOeUFvaGRER0l2VHFFRnpmN2N3QWlPYnNkV1BxRGd0NmkzZXdqdkRldDdmR2stYmxjbkRiQVM1SnhGNS0xVXJGanF1dTJwU1RkNnBFaEVsempwTXNWbWF0bkJyblY5TmZUeldMWlEzcUoweDdtSmc?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Texas’ $10M bitcoin investment slips into the red amid crypto price dive</a>
+<p class="news-desc">텍사스 주의 1,000만 달러 비트코인 투자가 암호화폐 가격 급락으로 손실 구간에 진입했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -108,6 +113,7 @@ description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 �
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMisAFBVV95cUxNbEpjcm9hUm5HZVdKbnVHcEU1R1Z6TzRwamIxWGFyX2RuYnd1YTRTel82WVFmWFJsTVdyUmhnQmh1aUd0Vm5GblRYU1BnZ3h3WlBIVjJKTEFFYUpUa3JuVVFUdEdfdS12b0lUcmhqdmRJMDljMEcxcms3VEFvTjVaS0Jlb2laajZQZktNWEpoXzNqOUl0N1NoVUhtVEU5eHZNNjZsU1A3SkVkLXFsX1FtNA?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">&#x27;Number Goes Up&#x27;—Iran Conflict Has Bitcoin Bulls Eyeing $500K</a>
+<p class="news-desc">이란 분쟁이 비트코인 강세론자들의 50만 달러 목표가 전망에 힘을 실어주고 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -128,6 +134,7 @@ description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 �
 <div class="news-card-num">1</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMipwFBVV95cUxQQ1VuREF3UG5NbGtNdDFCWUpIbFZyQk5jbjE4S0NBclV1endpR1lJUFBLZzk5dEZxcDdVWC1vLUlTYnBtS0x5dGU2ellkX1FmRlhjc3ZPMUc1NVVGbVptRVFidllLZlZFUjFEbzlYd09kbXV0N1BFcnlKakdSUGZsWnBORUZ0YTh4YmJhdnFnYTBva29VM3JvRVJLamdkaXF0VXVvU0o2UQ?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">CFTC Prepares to Allow Perpetual Crypto Futures Within Weeks</a>
+<p class="news-desc">CFTC(미국 상품선물거래위원회)가 수 주 내에 영구 암호화폐 선물(무기한 선물) 거래를 허용할 준비를 하고 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
