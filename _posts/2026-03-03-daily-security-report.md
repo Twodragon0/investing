@@ -24,13 +24,13 @@ CertiK 기준 2월 해킹 피해액 $26.5M으로 급감. 2025년 3월 이후 최
 <span class="source-tag">블록체인 보안</span>
 
 **2. [Crypto Hacking Losses Plummet to $26.5M in February, Signaling a Stunning Security Transformation - Bitcoin world](https://news.google.com/rss/articles/CBMicEFVX3lxTE1vOHdMZUhPT0N5MUZhY1YxLUJ0cDRLZTlUQktpbnkzdjNlamRLRGNUdHdSYXVfY21VNGZDT2ZxOW5OVTlkLW9qa1g2RW54Q3VtemxtTmVjU255angtblJzSHg1QzRrTEdBTld0eURpVHg?oc=5)**
-Crypto Hacking Losses Plummet to $26.5M in February, Signaling a Stunning Security Transformation Bitcoin world
+2월 암호화폐 해킹 피해액이 2,650만 달러로 급감하며 보안 환경의 개선을 시사하고 있습니다.
 <span class="source-tag">블록체인 보안</span>
 
 
 ## 보안 인사이트
 
-블록체인 보안 관련 뉴스 2건이 수집되어 업계 보안 이슈에 대한 관심이 높은 상태입니다.
+두 매체 모두 CertiK 집계를 인용해 2월 해킹 피해액이 2,650만 달러로 급감했음을 보도했습니다. 이는 2025년 3월 이후 월간 최저치로, 주요 프로토콜의 감사 강화와 온체인 모니터링 고도화가 실질적인 효과를 내고 있음을 보여줍니다. 다만 단일 사건으로 수억 달러 피해가 발생했던 전례를 감안하면, 수치 개선이 지속될지는 추가 관찰이 필요합니다.
 
 > *본 보안 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*
 
