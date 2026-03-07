@@ -28,12 +28,7 @@ description: "오늘 시가총액 상위 30개 코인을 기준으로 시장을 
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Ethereum</strong> (ETH): +7.76%</li><li>🟢 <strong>Dogecoin</strong> (DOGE): +7.41%</li><li>🟢 <strong>Bitcoin</strong> (BTC): +6.72%</li></ul></div>
 
 
-
-
 ## 전체 뉴스 요약
-
-- 오늘의 시장 인사이트:
-- 24시간 시가총액 변동 +5.77%로 강한 상승 랠리가 진행 중입니다. FOMO(Fear of Missing Out) 심리가 작동할 수 있으나, 급등 후 단기 조정 가능성도 염두에 두어야 합니다.
 
 ## 시장 인사이트
 

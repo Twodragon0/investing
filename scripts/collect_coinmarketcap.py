@@ -10,6 +10,7 @@ Generates high-quality Korean summary posts with market analysis.
 """
 
 import os
+import re
 import sys
 import time
 from collections import OrderedDict
@@ -942,7 +943,9 @@ def main():
             summary_parts.append(
                 f"공포/탐욕 지수는 **{fg_val}** ({fg_cls})으로, {fg_map.get(fg_cls, '시장 심리 주시가 필요')}입니다."
             )
-        sections["전체 뉴스 요약"] = " ".join(summary_parts)
+        summary_text = " ".join(summary_parts).strip()
+        if summary_text:
+            sections["전체 뉴스 요약"] = summary_text
 
         # 2. Market Insight (Korean analysis)
         insight = generate_market_insight(global_data, top_coins, fear_greed)
@@ -1012,7 +1015,11 @@ def main():
 
         filepath = gen_analysis.create_post(
             title=title,
-            content="\n\n".join(f"## {k}\n\n{v}" for k, v in sections.items()),
+            content=re.sub(
+                r"\n{3,}",
+                "\n\n",
+                "\n\n".join(f"## {k}\n\n{v}" for k, v in sections.items() if v and v.strip()),
+            ),
             date=now,
             tags=["market-report", "crypto", "top-coins", "trending", "daily"],
             source=source_name,

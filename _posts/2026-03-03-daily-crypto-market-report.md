@@ -27,15 +27,7 @@ description: "오늘 시가총액 상위 30개 코인을 기준으로 시장을 
 
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Hyperliquid</strong> (HYPE): +3.81%</li><li>🟢 <strong>Bitcoin</strong> (BTC): +2.72%</li><li>🟢 <strong>Ethereum</strong> (ETH): +2.46%</li></ul></div>
 
-
-
-
-
-
 ## 전체 뉴스 요약
-
-- 오늘의 시장 인사이트:
-- 24시간 변동 +1.73%로 완만한 상승세입니다. 주요 저항선 돌파 여부에 따라 추가 상승 탄력이 결정됩니다.
 
 ## 시장 인사이트
 
