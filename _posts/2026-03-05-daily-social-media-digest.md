@@ -6,7 +6,7 @@ categories: [social-media]
 tags: ["social-media", "telegram", "twitter", "reddit", "politics", "trump", "이재명", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/source-distribution-2026-03-05.png"
+image: "/assets/images/generated/og-daily-social-media-digest-2026-03-05.png"
 description: "BlackRock 4,309 BTC($2.97억) 매수, 트럼프 암호화폐 법안 지지, 코스피 폭락 후 100조 시장안정 프로그램 가동. 46건 분석."
 ---
 

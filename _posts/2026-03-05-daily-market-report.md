@@ -6,7 +6,7 @@ categories: [market-analysis]
 tags: ["market-summary", "daily", "crypto", "stock", "macro", "top-coins", "quant", "trading"]
 source: "auto-generated"
 lang: "ko"
-image: "/assets/images/generated/market-heatmap-2026-03-05.png"
+image: "/assets/images/generated/og-daily-market-report-2026-03-05.png"
 description: "암호화폐 시장이 강한 상승세를 보이고 있습니다. 전체 시가총액이 대폭 증가하며 매수 심리가 확산되고 있습니다."
 ---
 

@@ -7,7 +7,7 @@ tags: ["defi", "tvl", "crypto", "blockchain", "daily-digest"]
 source: "defi-llama"
 source_url: "https://defillama.com"
 lang: "ko"
-image: "/assets/images/generated/defi-tvl-dashboard-2026-03-03.png"
+image: "/assets/images/generated/og-daily-defi-tvl-report-2026-03-03.png"
 description: "2026-03-03 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked, 총 예치 자산) 현황을 정리합니다. 상위 20개 프로토콜의 총 TVL은 $247.99B이며, 상위 15개 체인의 총 TVL은 $90.17B입니다."
 ---
 

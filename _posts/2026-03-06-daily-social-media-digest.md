@@ -6,7 +6,7 @@ categories: [crypto-news]
 tags: ["social-media", "telegram", "twitter", "reddit", "politics", "trump", "이재명", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/source-distribution-2026-03-06.png"
+image: "/assets/images/generated/og-daily-social-media-digest-2026-03-06.png"
 description: "총 47건의 뉴스 중 정치/정책 관련이 23건(49%)으로 압도적입니다. 정치/정책 변화가 투자 환경에 영향을 미칠 수 있습니다"
 ---
 

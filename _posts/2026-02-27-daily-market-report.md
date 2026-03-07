@@ -6,7 +6,7 @@ categories: [market-analysis]
 tags: [market-summary, daily, crypto, stock, macro, top-coins, quant, trading]
 source: "auto-generated"
 lang: "ko"
-image: "/assets/images/generated/market-heatmap-2026-02-27.png"
+image: "/assets/images/generated/og-daily-market-report-2026-02-27.png"
 description: "13공포/탐욕 (Extreme Fear)..."
 ---
 

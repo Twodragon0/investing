@@ -6,7 +6,7 @@ categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/source-distribution-2026-02-25.png"
+image: "/assets/images/generated/og-daily-social-media-digest-2026-02-25.png"
 description: "2026-02-25 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 트럼프 관세 충격으로 글로벌 증시 하락, CZ·Saylor 등 비트코인 강세론 지속, 이재명 대통령 경제정책 동향이 주요 이슈입니다."
 ---
 

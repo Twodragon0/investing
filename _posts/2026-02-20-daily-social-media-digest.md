@@ -6,7 +6,7 @@ categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/source-distribution-2026-02-20.png"
+image: "/assets/images/generated/og-daily-social-media-digest-2026-02-20.png"
 description: "2026-02-20 암호화폐·주식 커뮤니티 소셜 미디어 동향 26건을 요약합니다."
 ---
 

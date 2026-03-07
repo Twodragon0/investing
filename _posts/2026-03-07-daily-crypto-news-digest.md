@@ -6,7 +6,7 @@ categories: [crypto-news]
 tags: ["crypto", "news", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-crypto-2026-03-07.png"
+image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-07.png"
 description: "2026-03-07 암호화폐 시장에서 120건의 뉴스를 분석했습니다. 오늘은 비트코인, 거래소, 규제/정책 관련 소식이 주목됩니다."
 ---
 

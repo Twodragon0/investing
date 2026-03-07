@@ -6,7 +6,7 @@ categories: [crypto-news]
 tags: ["social-media", "telegram", "twitter", "reddit", "politics", "trump", "이재명", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/source-distribution-2026-03-04.png"
+image: "/assets/images/generated/og-daily-social-media-digest-2026-03-04.png"
 description: "캐시 우드, 비트코인이 금보다 월등히 낫다고 발언. 인플레이션·디플레이션 모두에 대한 헤지 수단으로 평가."
 ---
 

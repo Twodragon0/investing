@@ -6,7 +6,7 @@ categories: [stock-news]
 tags: ["stock", "market", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/market-snapshot-2026-03-04.png"
+image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-04.png"
 description: "KOSPI -7.62%, KOSDAQ -8.68% 급락. 이란 분쟁 확대에 따른 글로벌 증시 폭락, 유가 급등, 반도체 투톱 삼성전자·SK하이닉스 붕괴 등 147건 분석."
 ---
 

@@ -6,7 +6,7 @@ categories: [crypto-news]
 tags: ["crypto", "news", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-crypto-2026-03-05.png"
+image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-05.png"
 description: "비트코인 $73,000 돌파 후 7% 급등, 트럼프 암호화폐 법안 지지, Kraken 연준 결제 시스템 접근 획득. 총 109건 분석."
 ---
 

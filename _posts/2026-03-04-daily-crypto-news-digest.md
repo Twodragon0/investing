@@ -6,7 +6,7 @@ categories: [crypto-news]
 tags: ["crypto", "news", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-crypto-2026-03-04.png"
+image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-04.png"
 description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 압도적입니다. 비트코인이 오늘 시장의 핵심 화제입니다"
 ---
 

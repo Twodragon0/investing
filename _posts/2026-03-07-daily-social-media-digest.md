@@ -6,7 +6,7 @@ categories: [social-media]
 tags: ["social-media", "telegram", "twitter", "reddit", "politics", "trump", "이재명", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/source-distribution-2026-03-07.png"
+image: "/assets/images/generated/og-daily-social-media-digest-2026-03-07.png"
 description: "2026-03-07 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 소셜 미디어 3건, Reddit 20건, 정치·경제 19건, 총 42건이 수집되었습니다."
 ---
 

@@ -6,7 +6,7 @@ categories: [stock-news]
 tags: ["stock", "market", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/market-snapshot-2026-03-06.png"
+image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-06.png"
 description: "미국-이란 분쟁 확대로 글로벌 증시 폭락. 다우 -800pt, 코스피·코스닥 8%대 급락 후 서킷브레이커 발동. 유가 $80 돌파. 총 143건 뉴스 분석."
 ---
 

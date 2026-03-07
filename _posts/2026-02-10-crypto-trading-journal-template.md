@@ -7,7 +7,7 @@ tags: [trading, crypto, journal, BTC, ETH]
 source: "manual"
 lang: "ko"
 description: "크립토 트레이딩 일지 작성 가이드입니다. 이 템플릿을 참고하여 일일 매매 기록을 작성하세요."
-image: "/assets/images/generated/news-briefing-journal-2026-02-10.png"
+image: "/assets/images/generated/og-crypto-trading-journal-template-2026-02-10.png"
 ---
 
 크립토 트레이딩 일지 작성 가이드입니다. 이 템플릿을 참고하여 일일 매매 기록을 작성하세요.

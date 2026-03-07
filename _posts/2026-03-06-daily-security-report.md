@@ -6,7 +6,7 @@ categories: [security-alerts]
 tags: ["security", "hack", "blockchain", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/og-default.png"
+image: "/assets/images/generated/og-daily-security-report-2026-03-06.png"
 description: "iPhone 보안 취약점을 통한 암호화폐 지갑 복구 문구 해킹, DeFi 플랫폼 GMX·Peapods 악용 등 블록체인 보안 이슈 2건 분석."
 ---
 

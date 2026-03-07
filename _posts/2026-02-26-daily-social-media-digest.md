@@ -6,7 +6,7 @@ categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/source-distribution-2026-02-26.png"
+image: "/assets/images/generated/og-daily-social-media-digest-2026-02-26.png"
 description: "2026-02-26 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 트럼프 국정연설에 비트코인 언급 없었으나 가격 상승, 10% 관세 발효, 한국은행 기준금리 결정, 코스피 개인투자자 머니무브가 주요 이슈입니다."
 ---
 

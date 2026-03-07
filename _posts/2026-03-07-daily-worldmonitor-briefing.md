@@ -7,7 +7,7 @@ tags: ["worldmonitor", "geopolitics", "macro", "daily-digest"]
 source: "worldmonitor"
 source_url: "https://worldmonitor.app"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-worldmonitor-2026-03-07.png"
+image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-03-07.png"
 description: "2026-03-07 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다."
 ---
 

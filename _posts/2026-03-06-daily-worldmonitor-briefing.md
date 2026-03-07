@@ -7,7 +7,7 @@ tags: ["worldmonitor", "geopolitics", "macro", "daily-digest"]
 source: "worldmonitor"
 source_url: "https://worldmonitor.app"
 lang: "ko"
-image: "/assets/images/og-default.png"
+image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-03-06.png"
 description: "핵심 테마는 지정학/안보(11건), 사회/기타(8건), 정책/법률(1건) 중심으로 전개되고 있습니다."
 ---
 

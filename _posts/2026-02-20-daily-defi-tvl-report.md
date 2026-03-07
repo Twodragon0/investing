@@ -7,7 +7,7 @@ tags: [defi, tvl, crypto, blockchain, daily-digest]
 source: "defi-llama"
 source_url: "https://defillama.com"
 lang: "ko"
-image: "/assets/images/generated/defi-tvl-dashboard-2026-02-20.png"
+image: "/assets/images/generated/og-daily-defi-tvl-report-2026-02-20.png"
 description: "2026-02-20 기준 DeFi 전체 TVL은 $247.99B 규모입니다. Liquid Staking과 Lending이 전체의 34%를 차지하며 시장을 주도하고, Ethereum이 60.1% 점유율로 압도적 1위를 유지하는 가운데 Hyperliquid L1 같은 신흥 체인이..."
 ---
 

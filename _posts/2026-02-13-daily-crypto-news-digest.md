@@ -7,7 +7,7 @@ tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
 description: "2026-02-13 암호화폐 시장에서 111건의 뉴스를 분석했습니다. 오늘은 비트코인, 거래소, 가격/시장 관련 소식이 주목됩니다."
-image: "/assets/images/generated/news-briefing-crypto-2026-02-13.png"
+image: "/assets/images/generated/og-daily-crypto-news-digest-2026-02-13.png"
 ---
 
 **2026-02-13** 암호화폐 시장에서 111건의 뉴스를 분석했습니다. 오늘은 **비트코인, 거래소, 가격/시장** 관련 소식이 주목됩니다.

@@ -6,7 +6,7 @@ categories: [regulatory-news]
 tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/og-default.png"
+image: "/assets/images/generated/og-daily-regulatory-report-2026-03-02.png"
 description: "2026-03-02 SEC 비공개 시장 라운드테이블, 금융위 국민성장펀드 등 글로벌 규제 동향 21건 분석."
 ---
 

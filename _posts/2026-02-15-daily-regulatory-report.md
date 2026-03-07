@@ -6,7 +6,7 @@ categories: [regulatory-news]
 tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/regulatory-summary-2026-02-15.png"
+image: "/assets/images/generated/og-daily-regulatory-report-2026-02-15.png"
 description: "전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 25건의 규제 관련 뉴스가 수집되었습니다."
 ---
 

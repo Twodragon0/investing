@@ -6,7 +6,7 @@ categories: [stock-news]
 tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/market-snapshot-2026-02-20.png"
+image: "/assets/images/generated/og-daily-stock-news-digest-2026-02-20.png"
 description: "2026-02-20 주식 시장 100건의 뉴스를 분석한 요약 브리핑입니다."
 ---
 

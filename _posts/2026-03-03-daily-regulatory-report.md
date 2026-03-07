@@ -6,7 +6,7 @@ categories: [regulatory-news]
 tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/og-default.png"
+image: "/assets/images/generated/og-daily-regulatory-report-2026-03-03.png"
 description: "2026-03-03 금융위 긴급 금융시장점검회의 개최, CFTC 인사 발표 등 글로벌 규제 동향 29건 분석."
 ---
 

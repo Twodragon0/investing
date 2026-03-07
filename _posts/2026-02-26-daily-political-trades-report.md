@@ -6,7 +6,7 @@ categories: [political-trades]
 tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-trading]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-political-2026-02-26.png"
+image: "/assets/images/generated/og-daily-political-trades-report-2026-02-26.png"
 excerpt: "2026-02-26 정치인 거래·정책 리포트: 의회 거래 8건, SEC 내부자 9건, 트럼프 정책 5건, 한국 정치인 1건, 중앙은행 17건, 총 40건 수집"
 description: "미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다."
 ---

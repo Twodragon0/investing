@@ -6,7 +6,7 @@ categories: [market-analysis]
 tags: [일일요약, 암호화폐, 주식, 규제, 소셜미디어, 보안, 정치인거래, 월드모니터]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-daily-2026-02-24.png"
+image: "/assets/images/generated/og-daily-news-summary-2026-02-24.png"
 description: "암호화폐 113건, 주식 158건, 규제 32건의 뉴스를 종합 분석한 일일 요약입니다."
 pin: true
 excerpt: "암호화폐 113건, 주식 158건, 규제 32건의 뉴스를 종합 분석한 일일 요약"

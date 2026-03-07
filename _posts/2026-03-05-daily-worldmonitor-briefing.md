@@ -7,7 +7,7 @@ tags: ["worldmonitor", "geopolitics", "macro", "daily-digest"]
 source: "worldmonitor"
 source_url: "https://worldmonitor.app"
 lang: "ko"
-image: "/assets/images/og-default.png"
+image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-03-05.png"
 description: "미국-이란 전쟁 격화, 호르무즈 해협 유조선 전세가 급등. 지정학/안보(8건), 금융시장(5건), 사회/기타(6건) 중심."
 ---
 
