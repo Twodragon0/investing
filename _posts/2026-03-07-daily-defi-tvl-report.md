@@ -1,28 +1,28 @@
 ---
 layout: post
 title: "DeFi TVL 리포트 - 2026-03-07"
-date: 2026-03-07 03:07:05 +0000
+date: 2026-03-07 01:51:29 +0000
 categories: [crypto-news]
 tags: ["defi", "tvl", "crypto", "blockchain", "daily-digest"]
 source: "defi-llama"
 source_url: "https://defillama.com"
 lang: "ko"
 image: "/assets/images/generated/defi-tvl-dashboard-2026-03-07.png"
-description: "2026-03-07 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked, 총 예치 자산) 현황을 정리합니다. 상위 20개 프로토콜의 총 TVL은 $247.99B이며, 상위 15개 체인의 총 TVL은 $90.69B입니다."
+description: "2026-03-07 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked, 총 예치 자산) 현황을 정리합니다. 상위 20개 프로토콜의 총 TVL은 $247.99B이며, 상위 15개 체인의 총 TVL은 $90.58B입니다."
 ---
 
-**2026-03-07** DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked, 총 예치 자산) 현황을 정리합니다. 상위 20개 프로토콜의 총 TVL은 **$247.99B**이며, 상위 15개 체인의 총 TVL은 **$90.69B**입니다.
+**2026-03-07** DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked, 총 예치 자산) 현황을 정리합니다. 상위 20개 프로토콜의 총 TVL은 **$247.99B**이며, 상위 15개 체인의 총 TVL은 **$90.58B**입니다.
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">$247.99B</div><div class="stat-label">프로토콜 TVL</div></div><div class="stat-item"><div class="stat-value">$90.69B</div><div class="stat-label">체인 TVL</div></div><div class="stat-item"><div class="stat-value">20</div><div class="stat-label">프로토콜 수</div></div><div class="stat-item"><div class="stat-value">15</div><div class="stat-label">체인 수</div></div></div>
-<div class="alert-box alert-info"><strong>DeFi 생태계 $247.99B 규모 분석</strong><ul><li>🏆 <strong>최상위 프로토콜</strong>: Lido — TVL $33.92B (Liquid Staking)</li><li>⛓️ <strong>최상위 체인</strong>: Ethereum — TVL $54.66B (60.3%)</li><li>📊 <strong>최다 카테고리</strong>: 기타 — $80.55B</li></ul></div>
+<div class="stat-grid"><div class="stat-item"><div class="stat-value">$247.99B</div><div class="stat-label">프로토콜 TVL</div></div><div class="stat-item"><div class="stat-value">$90.58B</div><div class="stat-label">체인 TVL</div></div><div class="stat-item"><div class="stat-value">20</div><div class="stat-label">프로토콜 수</div></div><div class="stat-item"><div class="stat-value">15</div><div class="stat-label">체인 수</div></div></div>
+<div class="alert-box alert-info"><strong>DeFi 생태계 $247.99B 규모 분석</strong><ul><li>🏆 <strong>최상위 프로토콜</strong>: Lido — TVL $33.92B (Liquid Staking)</li><li>⛓️ <strong>최상위 체인</strong>: Ethereum — TVL $54.56B (60.2%)</li><li>📊 <strong>최다 카테고리</strong>: 기타 — $80.55B</li></ul></div>
 ## 전체 요약
 
 총 **20개 프로토콜**, **15개 체인**의 TVL 데이터를 분석했습니다.
 
 1. **프로토콜**: Lido이 TVL $33.92B로 1위를 유지하고 있습니다.
-2. **체인**: Ethereum이 TVL $54.66B로 체인 생태계를 주도합니다.
+2. **체인**: Ethereum이 TVL $54.56B로 체인 생태계를 주도합니다.
 
 
 ![DeFi TVL Dashboard]({{ '/assets/images/generated/defi-tvl-dashboard-2026-03-07.png' | relative_url }})
@@ -57,21 +57,21 @@ description: "2026-03-07 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked
 
 | # | 체인 | 네이티브 토큰 | TVL | 점유율 |
 | ---: | --- | --- | ---: | ---: |
-| 1 | Ethereum | ETH | $54.66B | 60.3% |
-| 2 | Solana | SOL | $6.61B | 7.3% |
-| 3 | BSC | BNB | $5.85B | 6.4% |
-| 4 | Bitcoin | BTC | $4.40B | 4.9% |
-| 5 | Tron | TRON | $4.06B | 4.5% |
+| 1 | Ethereum | ETH | $54.56B | 60.2% |
+| 2 | Solana | SOL | $6.60B | 7.3% |
+| 3 | BSC | BNB | $5.86B | 6.5% |
+| 4 | Bitcoin | BTC | $4.41B | 4.9% |
+| 5 | Tron | TRON | $4.05B | 4.5% |
 | 6 | Base |  | $4.00B | 4.4% |
 | 7 | Arbitrum | ARB | $2.06B | 2.3% |
 | 8 | Plasma | XPL | $2.00B | 2.2% |
 | 9 | Hyperliquid L1 | HYPE | $1.61B | 1.8% |
 | 10 | Provenance | HASH | $1.50B | 1.7% |
 | 11 | Polygon | POL | $1.13B | 1.2% |
-| 12 | Avalanche | AVAX | $790.4M | 0.9% |
-| 13 | Mantle | MNT | $742.6M | 0.8% |
+| 12 | Avalanche | AVAX | $790.5M | 0.9% |
+| 13 | Mantle | MNT | $742.4M | 0.8% |
 | 14 | Katana |  | $709.7M | 0.8% |
-| 15 | Sui | SUI | $567.1M | 0.6% |
+| 15 | Sui | SUI | $566.4M | 0.6% |
 
 ## 카테고리별 TVL 분석
 
@@ -95,7 +95,7 @@ description: "2026-03-07 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked
 
 **Lido**로 TVL **$33.92B** (13.7%)로 1위이나, 생태계가 상당히 분산되어 있습니다. 프로토콜 간 경쟁이 활발한 건강한 구조입니다.
 
-**Ethereum**으로 TVL **$54.66B** (60.3%)로 2위 Solana(7.3%) 대비 53%p 격차를 보이며 체인 생태계를 독점적으로 주도합니다.
+**Ethereum**으로 TVL **$54.56B** (60.2%)로 2위 Solana(7.3%) 대비 53%p 격차를 보이며 체인 생태계를 독점적으로 주도합니다.
 
 **카테고리 분석**: **기타** 카테고리가 TVL $80.55B (32.5%)로 가장 큰 비중을 차지합니다.
 
@@ -109,5 +109,5 @@ description: "2026-03-07 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked
 
 ---
 
-**데이터 수집 시각**: 2026-03-07 03:07 UTC  
+**데이터 수집 시각**: 2026-03-07 01:51 UTC  
 **데이터 출처**: <span class="source-tag" data-source-type="default">DeFi Llama</span> (https://defillama.com)
