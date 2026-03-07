@@ -43,7 +43,7 @@ description: "오늘 정치인 거래·정책 분야에서 총 7건의 뉴스가
 ## 한국 정치인 재산/거래
 
 **1. [2013공직자 정기재산변동 신고 공개 - 경북신문](https://news.google.com/rss/articles/CBMiT0FVX3lxTE14bDZJODVOcnI1eGh4V3ZMT0lIMGZhMDBZdXpuWWtLZHhRVnNTSzJOai14ZEttOGNrN0xpbm9NaTdXcHRwWTVJZlN0VVhjUlE?oc=5)**
-2013공직자 정기재산변동 신고 공개 경북신문
+2026년 공직자 정기재산변동 신고가 공개되었습니다. 국가·지방 정무직, 4급 이상 공무원 등 약 30만 명의 재산 변동 내역이 포함됩니다.
 <span class="source-tag" data-source-type="default">공직자 재산신고</span>
 
 
@@ -54,15 +54,15 @@ description: "오늘 정치인 거래·정책 분야에서 총 7건의 뉴스가
 <span class="source-tag" data-source-type="default">한국은행 금리결정</span>
 
 **2. [연준 취약한 일자리, 높은 인플레이션으로 인해 어려운 선택에 직면함](https://news.google.com/rss/articles/CBMikgFBVV95cUxPT2Z6RTJfVGFZUmRsODVsZDd6R0E0Z01SVi11UWJSZlliVV83V2N0VFZFeWZDUVk2RXJfVm1SU2RLeUlja0c4NWEtTDFkV2R6dDFVTTFhVXZFNzZrWEVZcmZDbHBPZEVKYmlBSEUzSzBEalQteE1tengtZHc4UlBPWWhmbVhDdTg5SEJjMjlycXczQQ?oc=5)**
-인플레이션 관련 소식입니다. 물가 지표는 연준 통화정책의 핵심 판단 기준이 됩니다.
+2월 미국 고용이 9만 2,000건 감소하고 유가가 배럴당 90달러까지 급등하면서, 연준이 인플레이션 억제와 고용 시장 보호 사이에서 스태그플레이션 딜레마에 직면했습니다.
 <span class="source-tag" data-source-type="default">Fed Rate Decision</span>
 
 **3. [연준의 3월 결정에서 주목해야 할 사항](https://news.google.com/rss/articles/CBMinwFBVV95cUxQSGJIYUIyMldFMTJBU0lHMFk2OFpNX3pRQkF5c1lPLXExTkZjT0Q4TS0xSkFCdTVxTEFwZXRxajNjYTFPVjJtbW1yX21iaWQ2NGc4SzlKWDdaSXdTOUgyclRWMXo3cmVENm5NVkd4djcxbEg4eVlJRFZoVmhnazYxVldmdlhsQmlqWVdjV3ROc1dXcC1DSUVqM0oxbGMyNHM?oc=5)**
-연준 통화정책 관련 소식입니다.
+3월 17~18일 FOMC에서 금리 동결이 99% 확률로 예상됩니다. 케빈 워시 차기 의장 인준 일정과 이란 전쟁발 유가 상승이 향후 정책 방향의 핵심 변수입니다.
 <span class="source-tag" data-source-type="default">Fed Rate Decision</span>
 
 **4. [연준 금리 인하 전망: 연준이 테일러 법칙에 따라 정책 금리 인하를 지연시킬 것인가 - The Economic Times](https://news.google.com/rss/articles/CBMi1AJBVV95cUxOWEpoRmxKbzBjTDRfSlNDUF9SVHVuaDlxWFZ6ZlJsQ0dfdk52dWZSdUM1Vm91MDZmWU1aVnpKenZOZDJ5cTRLcEJGZXdUN3hpX01CLV90d2RNWTJSZHFRcVB3cGczVm96Y3IydFNTM1BKR29aSUk3UDZBLWlHbGU3S1BsMlFZNXgwb0p6aDlsSnV0elIzR1g2X1VLTmhaVFF6MnpCcTJlYUN4TWpQUkVveUZUc2YxeGVqNFpXcTl3WGlkUjJQbk5aR01qdW96S09UdWVuSWtNSVZ2ZWZ4YU9xQVZ5VE1GSVFEUm1WU2V0MWU2VFk0cGNOamdtdUpwVmkwczhvR2lPQ3lNOF9rb05wcGNaRHpWQnRWTWdndHd0bHk0LTBJakMyZHJQU3IxVTJSRnJ1YUtEMHB0RlZWRzFCYkNCTjZaUHM4UFdGbmFOZFNMMEVB0gHaAkFVX3lxTE92bU5KM0ZfY09rcnJTcWlZWXlhNkVsbW5EM2lFcHdONmY5aHhHNDRNS0dCbnRZdUR1bXM5TWp0SHoyQkdpb1o4MjhyYXhBcUx3eHdOb2daUHZabFdIQXJhY09zNHJtQU1TOW1YUURnc0lURlk3T3dvc3FiWlpua09ZcEhPU2FXbDIzQjFIYzJWclpuQ0c4T2dRRldwanBnQTBGRS11MFloczk1Z0plR284VGsxMk9IRFlNU1hNT1ViaHNKZUlBTXdiS3BldWRBSksxaVo4MVRlbF9VaXY2TTd1Vkk2eS1XZ2F0UnVIaVJ5LUJMbU5YMTZ6SHBjTEFweHhxQ253X3l3LXRtNXR6TjJhNEpiNEUtUF83MUtvd2ZPQng3aXJqZURDbUh6U1lYY1VXWHdSN2EtSmxRaUVoT1NYNEdYZnRRb0Q5eDFSQzhoQ0Y2VHNKSmRYTXc?oc=5)**
-연준 통화정책 관련 소식입니다.
+현재 기준금리 3.5~3.75%에서 인플레이션이 3%대로 목표치(2%)를 상회하고 있어, 테일러 법칙상 금리 인하를 정당화하기 어렵습니다. 시장은 올해 최대 2회 인하를 전망합니다.
 <span class="source-tag" data-source-type="default">Fed Rate Decision</span>
 
 
