@@ -250,11 +250,17 @@ def main():
     all_items = congress_items + sec_items + trump_items + korea_items + central_bank_items
     pre_dedup_count = len(all_items)
 
-    # Deduplicate individual items
+    # Deduplicate individual items (by title+source AND by URL)
     unique_items = []
+    seen_links: set[str] = set()
     for item in all_items:
+        link = item.get("link", "").split("?")[0].rstrip("/")  # normalize URL
+        if link and link in seen_links:
+            continue
         if not dedup.is_duplicate(item.get("title", ""), item.get("source", ""), today):
             unique_items.append(item)
+            if link:
+                seen_links.add(link)
 
     total_count = len(unique_items)
     logger.info(

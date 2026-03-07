@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-crypto-2026-03-06.png"
-description: "외 P0 긴급 이슈 6건이 추가 감지되었습니다. 총 108건의 뉴스 중 P1 주요 이슈도 8건 확인됩니다."
+description: "2026-03-06 암호화폐 시장 108건 뉴스 분석. 비트코인·가격/시장·AI/기술 테마 주목. P0 긴급 이슈 6건, P1 주요 이슈 8건 감지."
 ---
 
 **2026-03-06** 암호화폐 시장에서 108건의 뉴스를 분석했습니다. 오늘은 **비트코인, 가격/시장, AI/기술** 관련 소식이 주목됩니다.

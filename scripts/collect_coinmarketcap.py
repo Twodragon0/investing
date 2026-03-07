@@ -1013,7 +1013,7 @@ def main():
             date=now,
             tags=["market-report", "crypto", "top-coins", "trending", "daily"],
             source=source_name,
-            source_url="https://www.coingecko.com/" if cmc_source == "coingecko" else "https://coinmarketcap.com/",
+            source_url="https://coinmarketcap.com/" if "CoinMarketCap" in source_name else "https://www.coingecko.com/",
             lang="ko",
             slug="daily-crypto-market-report",
         )
