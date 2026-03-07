@@ -107,6 +107,7 @@ _FK: Dict[str, Any] = {"fontfamily": _FONT_FAMILY} if _MPL_AVAILABLE else {}
 
 # ── YAML front matter parser ──
 
+
 def parse_front_matter(filepath: str) -> Optional[Dict[str, str]]:
     """Parse YAML front matter from a markdown file.
 
@@ -127,7 +128,7 @@ def parse_front_matter(filepath: str) -> Optional[Dict[str, str]]:
     result: Dict[str, str] = {}
 
     for key in ("title", "date", "description", "image", "categories"):
-        pattern = rf'^{key}:\s*(.+)$'
+        pattern = rf"^{key}:\s*(.+)$"
         m = re.search(pattern, fm_text, re.MULTILINE)
         if m:
             val = m.group(1).strip().strip('"').strip("'")
@@ -221,9 +222,7 @@ def generate_og_image(
     ax.set_axis_off()
 
     # Background
-    bg_rect = mpatches.FancyBboxPatch(
-        (0, 0), 1200, 630, boxstyle="square,pad=0", facecolor=BG_COLOR, edgecolor="none"
-    )
+    bg_rect = mpatches.FancyBboxPatch((0, 0), 1200, 630, boxstyle="square,pad=0", facecolor=BG_COLOR, edgecolor="none")
     ax.add_patch(bg_rect)
 
     # Accent color bar at top (8px)
@@ -234,9 +233,15 @@ def generate_og_image(
 
     # Branding: "INVESTING DRAGON"
     ax.text(
-        60, 580, "INVESTING DRAGON",
-        fontsize=14, color=TEXT_MUTED, fontweight="bold",
-        ha="left", va="center", **_FK,
+        60,
+        580,
+        "INVESTING DRAGON",
+        fontsize=14,
+        color=TEXT_MUTED,
+        fontweight="bold",
+        ha="left",
+        va="center",
+        **_FK,
     )
 
     # Category badge
@@ -245,7 +250,8 @@ def generate_og_image(
     badge_width = len(badge_text) * 11
     badge_rect = mpatches.FancyBboxPatch(
         (badge_x - 4, badge_y - 14),
-        badge_width, 28,
+        badge_width,
+        28,
         boxstyle="round,pad=4",
         facecolor=accent_color,
         edgecolor="none",
@@ -253,66 +259,92 @@ def generate_og_image(
     )
     ax.add_patch(badge_rect)
     ax.text(
-        badge_x + badge_width / 2 - 4, badge_y,
+        badge_x + badge_width / 2 - 4,
+        badge_y,
         category_label,
-        fontsize=13, color=TEXT_WHITE, fontweight="bold",
-        ha="center", va="center", **_FK,
+        fontsize=13,
+        color=TEXT_WHITE,
+        fontweight="bold",
+        ha="center",
+        va="center",
+        **_FK,
     )
 
     # Title (large, bold, max 2 lines)
     title_y_start = 460
     for i, line in enumerate(title_lines):
         ax.text(
-            60, title_y_start - i * 50,
+            60,
+            title_y_start - i * 50,
             line,
-            fontsize=32, color=TEXT_WHITE, fontweight="bold",
-            ha="left", va="center", **_FK,
+            fontsize=32,
+            color=TEXT_WHITE,
+            fontweight="bold",
+            ha="left",
+            va="center",
+            **_FK,
         )
 
     # Date in Korean format
     date_y = title_y_start - len(title_lines) * 50 - 10
     ax.text(
-        60, date_y,
+        60,
+        date_y,
         date_korean,
-        fontsize=15, color=TEXT_GRAY,
-        ha="left", va="center", **_FK,
+        fontsize=15,
+        color=TEXT_GRAY,
+        ha="left",
+        va="center",
+        **_FK,
     )
 
     # Description (smaller, gray, max 2 lines)
     desc_y_start = date_y - 45
     for i, line in enumerate(desc_lines):
         ax.text(
-            60, desc_y_start - i * 30,
+            60,
+            desc_y_start - i * 30,
             line,
-            fontsize=14, color=TEXT_GRAY,
-            ha="left", va="center", **_FK,
+            fontsize=14,
+            color=TEXT_GRAY,
+            ha="left",
+            va="center",
+            **_FK,
         )
 
     # Divider line
     divider_y = 70
     ax.plot(
-        [60, 1140], [divider_y, divider_y],
-        color=DIVIDER_COLOR, linewidth=1,
+        [60, 1140],
+        [divider_y, divider_y],
+        color=DIVIDER_COLOR,
+        linewidth=1,
     )
 
     # Footer: site URL (left) and date (right)
     ax.text(
-        60, 35,
+        60,
+        35,
         "investing.2twodragon.com",
-        fontsize=13, color=TEXT_MUTED,
-        ha="left", va="center", **_FK,
+        fontsize=13,
+        color=TEXT_MUTED,
+        ha="left",
+        va="center",
+        **_FK,
     )
     ax.text(
-        1140, 35,
+        1140,
+        35,
         date_dotted,
-        fontsize=13, color=TEXT_MUTED,
-        ha="right", va="center", **_FK,
+        fontsize=13,
+        color=TEXT_MUTED,
+        ha="right",
+        va="center",
+        **_FK,
     )
 
     # Subtle accent dot in bottom-right area
-    accent_dot = mpatches.Circle(
-        (1140, 580), 6, facecolor=accent_color, edgecolor="none", alpha=0.6
-    )
+    accent_dot = mpatches.Circle((1140, 580), 6, facecolor=accent_color, edgecolor="none", alpha=0.6)
     ax.add_patch(accent_dot)
 
     # Save
@@ -353,7 +385,7 @@ def update_post_frontmatter(filepath: str, image_path: str) -> bool:
         return False
 
     pre, fm_body, post = fm_match.group(1), fm_match.group(2), fm_match.group(3)
-    rest = content[fm_match.end():]
+    rest = content[fm_match.end() :]
     new_image_line = f'image: "{image_path}"'
 
     if re.search(r"^image:", fm_body, re.MULTILINE):
@@ -407,14 +439,16 @@ def collect_posts(
             logger.warning("No front matter in %s, skipping", filename)
             continue
 
-        posts.append({
-            "filepath": filepath,
-            "slug": slug_from_filename(filename),
-            "date": file_date,
-            "title": fm.get("title", ""),
-            "category": fm.get("categories", ""),
-            "description": fm.get("description", ""),
-        })
+        posts.append(
+            {
+                "filepath": filepath,
+                "slug": slug_from_filename(filename),
+                "date": file_date,
+                "title": fm.get("title", ""),
+                "category": fm.get("categories", ""),
+                "description": fm.get("description", ""),
+            }
+        )
 
     return posts
 
@@ -430,9 +464,7 @@ def og_image_url(slug: str, date_str: str) -> str:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Generate OG images (1200x630) for Jekyll posts"
-    )
+    parser = argparse.ArgumentParser(description="Generate OG images (1200x630) for Jekyll posts")
     parser.add_argument(
         "--date",
         type=str,
@@ -500,7 +532,9 @@ def main() -> None:
 
     logger.info(
         "Done: %d generated, %d skipped, %d front matter updated",
-        generated, skipped, updated,
+        generated,
+        skipped,
+        updated,
     )
 
 
