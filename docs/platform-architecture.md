@@ -138,7 +138,7 @@ GitHub: Twodragon0/crypto
 | 데이터 수집기 | 6개 | economic, alternative, regulatory, onchain, cdp, threat |
 | 트레이딩 모듈 | 7개 | swing_strategy, swing_indicators (VWAP 포함), paper_broker, state_cache 등 |
 | 마켓 인텔리전스 컴포넌트 | 14개 | F&G, social, macro, funding 등 (가중치 합계 1.0) |
-| 테스트 | 2,373개 | 전체 모듈 커버리지 (73 test files) |
+| 테스트 | 2,373개 (crypto) + 112개 (investing) = **2,485개** | 전체 모듈 커버리지 |
 | GitHub Actions | 14개 | CI/CD, security scan, quant trader 실행 등 |
 
 ---
@@ -231,8 +231,8 @@ GitHub: Twodragon0/crypto
 │  │  Lint   │  │  Test   │  │ Security │  │    Deploy        │  │
 │  │         │  │         │  │          │  │                 │  │
 │  │ ruff    │→│ pytest  │→│ Bandit   │→│ GitHub Pages    │  │
-│  │ pyright │  │ 32 test │  │ Trivy    │  │ Vercel          │  │
-│  │ actionl │  │  files  │  │ CodeQL   │  │ Docker          │  │
+│  │ pyright │  │ 2,485  │  │ Trivy    │  │ Vercel          │  │
+│  │ actionl │  │ tests  │  │ CodeQL   │  │ Docker          │  │
 │  │         │  │         │  │ Gitleaks │  │                 │  │
 │  └─────────┘  └─────────┘  └──────────┘  └─────────────────┘  │
 │                                                                 │
