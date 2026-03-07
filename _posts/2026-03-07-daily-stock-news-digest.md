@@ -17,37 +17,13 @@ description: "2026-03-07 주식 시장에서 94건의 뉴스를 분석했습니�
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">94</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📊 11</div><div class="stat-label">매크로/금리</div></div><div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">리스크 위험</div></div><div class="stat-item"><div class="stat-value">5,584.87</div><div class="stat-label">KOSPI +0.02%</div></div><div class="stat-item"><div class="stat-value">1,154.67</div><div class="stat-label">KOSDAQ +3.43%</div></div></div>
 <div class="alert-box alert-info"><strong>주식 시장 긴급: consecutive, Economic, biggest - 94건 분석</strong><ul><li>📊 <strong>매크로/금리</strong> (11건): 11건의 뉴스에서 조선비즈, 주식, 매매 키워드가 부각되고 있습니다.</li><li>📈 <strong>가격/시장</strong> (26건): 26건의 뉴스에서 삼성전자, 주식, 연속 키워드가 부각되고 있습니다.</li><li>🏛️ <strong>정치/정책</strong> (11건): 11건의 뉴스에서 Trump, Iran, order 키워드가 부각되고 있습니다.</li><li>🤖 <strong>AI/기술</strong> (7건): conflict, Iran, Challenging 이슈가 7건으로 주목받고 있습니다.</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMipwNBVV95cUxPQ0oxWFRGSUE4UDhBZHl6MXo1LVppb0hjYVc0ZTQ5N0hWeFhwT0ZuTFgwWkZTNmZBM2VIVlFMYV9RT2lRZU5pSjFidHlINy1oV0pkMnExMkgzZFJHenlaX3lDRGUxS3NEa1hoVmJITS10NnphWXRUZkNkTDlvd0RTMkIwQ2psNnVUd2JEazlENFBuX25XcExtWkFHejgxSWx4bTBBb1VOSHZBVmxiUEtyN19HZG84UE5XR3BFS1Z1X3RJRkZLbVhHcGFNNTZkNnpiSGtBeTdoVC00VHF0bkxlMWFVNW8tNUN6enA0V05sMzNELUFWaFdfcFZHZFByNzQ0SFJpX3JGQ29oMkRqd3hxNGtkT1FhTUFNdzRjbkJ1Tll0TUpSbElPUHBXTjdrTkdleVRBX2ZUVGwtb3pXR0dDcy1DZEZaV2VzVW92Yy1INmJ1UEJaYkxHbWR0NDhuZzRHTHItcmpiWXlONDNCdUFMMHBYV3QxU0lta2VibHhleWdicGxSRk5Qamc3T09keUUzbkotYXRIRjNPcmJpeXFpQXgyQkxzclHSAawDQVVfeXFMTlN2S2RvajViYlFBeUxRRHdhYndSVFNoeG9HVnRaZ1A1TGRmODF5NmxpazZuc3NlLUR1Mjh5M084Q1Voajk5UzVOMEpsMUpNeG5zSU91Z3NDRjYtaUM3U2hodkgya1FwSHZoOEs0aEFMcWFoUWdFRGI0eEk5cFJ0M3hqTnhMOWp6QkNQZkZmenc1ekkySlJoMXk2UjJOOE9wTVNrcWdoN0xWUGhQZ3BvS0pCd2Q2T2NmSE5MdWE3QWoxU0ZJcGNnd202ei01UTJPR2VlVUc1QU45UHppTFNORVRVU01uMmlHWml3OEphRWNydTgwQXBFYmE2VHc0cXpidFVBdGVUOFl6MUpwV2lZc1l1QmVlVlFoMkVFTVpPWktuLUJqSFNlOGowejVMSlFYQ2h1amxUalkxb3NEN18xTnhZZWNfZElQSkx4U1BZTTlWSVVNYUZDS2ZkeUVSajh3bXhDTkhPRzBZTi1hNlJjLWxISGZrS19FU2o2ZzhRVTFWMzJjNHpNamxsb1RCZDJnVjRINXlKWWRIRFNBcHByVExtX2Ztekt2SWVObzY?oc=5">US stock market biggest consecutive crash: Dow opens with 900-point loss after oil prices jump to highest - The Economic Times</a> <span class="p0-desc">US stock market biggest consecutive crash: Dow opens with 900-point loss after oil prices jump to hi...</span></li><li><a href="https://news.google.com/rss/articles/CBMilwJBVV95cUxPUGFMQlctNG5CODN3TG41UDNMV3phRkUyUElYeTNwVDhPRHN1S3pXVzV5V0JVUnhJd2NmY19Fbk1PcXRsTng4dTE1eXRjTTJfU1Q3Nmk2VjhBb29ycHhyc3BocTZxd180bmhhMmk0RWR1Y1lwWlNCYWtjNEpxUkhOSVdtVUlQNTFnVWl6dTNSckd6bFdWV21XQlAzXzM1RmtXSnlFUThoUi16aUhwenpWSE53YVZiWkZTdWl0MTJNYmNvb1lPcnctOThJTWcxa3dic01iRmxBSW15SkdpOHUyZlVGMVpUekV1Ykg3WmJUdkx2SUlZNGxudEhWeEhKTG1JM1NxT1lfdTlIcVZ2NVhscHdJSlh5Q1nSAZwCQVVfeXFMTk9oQVltWGZfajMwTTZEcXJVcUhzSlFnZnZYdXRkcEJEWmIzcUNqWE93cGlOb1VSX2F6WENJN2s1a1pEMEl0ZEh1Z0RIZmJrYVlMeUpRVzU3ckhMS0tBSlY1dnZxZWVCakZWNUZoWExqdDRFVTRLMTZjY2hvbGdqZFh6Q0dPVzdQdUdoTHAwVUwxM1psWHNJZnVtSWdVcU1RTUtqdm9VUC1TRmpjN1VtcnhMM0dENFd5TTZNUnowTEt0SFczNlhwWk0yMmpaM01rRC1OOTdOWVNIZ3dZOTRIdWFROTZYRFhEUTJNdkRRU2pnS0l3RHBackhFSUhENnkzSTQ3ZnZtNjFQY0Q0WWdJV0x0emozajlQMFptdUs?oc=5">US stock market crash: Dow, S&P 500 and Nasdaq down today - Here's biggest gainers and losers amid Dow Jon - The Economic Times</a> <span class="p0-desc">US stock market crash: Dow, S&P 500 and Nasdaq down today - Here's biggest gainers and losers amid D...</span></li><li><a href="https://www.cnbc.com/2026/03/06/trump-college-football-sports-congress.html">Trump vows executive order to 'fix' college sports NIL payments 'mess'</a> <span class="p0-desc">Critics of paying college athletes say it undercuts schools' finances and their educational mandate.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: US stock market biggest consecutive crash: Dow opens with 900-point loss afte...  
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 94건의 뉴스 중 P1 주요 이슈도 7건 확인됩니다.
-
-1. **📊 매크로/금리** (11건): 11건의 뉴스에서 조선비즈, 주식, 매매 키워드가 부각되고 있습니다.
-2. **📈 가격/시장** (26건): 26건의 뉴스에서 삼성전자, 주식, 연속 키워드가 부각되고 있습니다.
-3. **🏛️ 정치/정책** (11건): 11건의 뉴스에서 Trump, Iran, order 키워드가 부각되고 있습니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-**P0 긴급**: US stock market biggest consecutive crash: Dow opens with 90 / US stock market crash: Dow, S&P 500 and Nasdaq down today -  / Trump vows executive order to 'fix' college sports NIL payme
-**P1 주요**: 7건 확인
-- 한국 기사 34건, 글로벌 기사 60건 수집
-- 한국 지수: KOSPI 5,584.87(+0.02%), KOSDAQ 1,154.67(+3.43%), USD/KRW 1,479.51(-0.06%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:42%"></div></div><span class="theme-count">11건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:100%"></div></div><span class="theme-count">26건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:42%"></div></div><span class="theme-count">11건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:27%"></div></div><span class="theme-count">7건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:15%"></div></div><span class="theme-count">4건</span></div>
-</div>
-
-*총 94건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
-
-
-![market-snapshot]({{ '/assets/images/generated/market-snapshot-2026-03-07.png' | relative_url }})
-
-
----
+- KOSPI 5,584.87 (+0.02%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
+- KOSDAQ 1,154.67 (+3.43%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-03-07 주식 시장에서 94건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,584.87(+0.02%), KOSDAQ 1,154.67(+3.43%), USD/KRW 1,479.51(-0.06%).
+- *11건의 뉴스에서 조선비즈, 주식, 매매 키워드가 부각되고 있습니다.*
 
 ## 테마별 주요 뉴스
 

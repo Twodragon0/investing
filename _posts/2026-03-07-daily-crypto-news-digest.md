@@ -32,24 +32,13 @@ description: "2026-03-07 암호화폐 시장에서 120건의 뉴스를 분석했
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">120</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 45</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">리스크 위험</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (20회)</div></div></div>
 <div class="alert-box alert-info"><strong>암호화폐 긴급: 연준카리브해에서 4,600만 달러의 암호화폐를 훔친 혐의로 체포된 계약자, FBI가 밝혔습니다. - 120건 분석</strong><ul><li>🟠 <strong>비트코인</strong> (45건): 비트코인, 중동, 여부부터 중심으로 45건의 뉴스가 수집되었습니다.</li><li>🏦 <strong>거래소</strong> (40건): Senate, Binance, KuCoin 이슈가 40건으로 주목받고 있습니다.</li><li>🔵 <strong>규제/정책</strong> (33건): 비트코인 중심으로 33건의 뉴스가 수집되었습니다.</li><li>📈 <strong>가격/시장</strong> (31건): 비트코인, 중동, 여부부터 이슈가 31건으로 주목받고 있습니다.</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNeUpDdFBzR2Y5STE2UzRSd2tHUzVMM21GY2ZoMHI3dGJUSlpoeFJMSzN1SG1YUTdMUklHNl81M3Awdi0td19WaHlJTnFzZWNRNmFoa3E4Tnl1dUVKNDFUOWpybG5FeXFUY0pQbzk5STU2MkRRcUVNYVNrZnBwYTV4QWRvUEF4aUJ3TDg0aFNTSDJsMS1EdXcxSmREV2todko1SnZXZDdhT0o1c01rVzhxa3J3R1ZwV3RMUGV1N9IBwgFBVV95cUxPVmJaVy1nc2JnRENlc01SU3RWRlRyc2l1cDdTb0tXTWxvWG9zckZxcXZud1JMRjRTZ0FuUjlmN2QycmhWb2FBLXMwZ2laWXRQRkktcjRvUEozd0JJa0dWcC1URzk1ay1QRldNSG5HUEpvN3lKOTRtb1o3elZXNkw0OTEzYkkwS2R4ZjQwZVlOUjlrZ1RHMUdoakFEckxRd25Tc3hoSHItUG5xMDIzVXFISUVlQ2J1Wm9mUUl0Y1dlNG54QQ?oc=5">연준카리브해에서 4,600만 달러의 암호화폐를 훔친 혐의로 체포된 계약자, FBI가 밝혔습니다.</a> <span class="p0-desc">연준 통화정책 관련 소식입니다. 금리 결정은 글로벌 자산 배분에 가장 큰 영향을 미치는 변수입니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMizwFBVV95cUxPUWlxSDc2Tm91QTI2RlNfSWR6aFZMNlc3bmZwZGN3SkdSblMzSzdNb1ZoSHZsN24yUDltNVVoMl96a3hXdGpWSnh4Wmt3Q1o2SFAybXE2VlJoZWo0SHlWSXpfdHlnMlp6bDV5ZVlSQllZSFlJWThsS2FTNmhNNkpIa0hWak1jWmYxX1JJVjc2X25mQ0lDcllveHJsQXBuUHA2YnpSTGpoOGdhLUpnMEtfVks2TG5XUTQtN05ZZlk2aEFnNVJteDVRZ1VGbDFvTjA?oc=5">John Daghita(일명 "John/Lick"), 미국 보안관과 관련된 암호화폐 절도 혐의로 체포됨 &#124; TRM 블로그 - TRM 연구소</a> <span class="p0-desc">암호화폐 시장 관련 소식입니다. 디지털 자산 가격은 거시경제 환경과 규제 동향에 연동됩니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1wOGUzbkU4VkdobklKd0kxUDZreXRiazlSU290R0xRbDRCNVBkZzVrUFJzV0dTb183Zm5RMTF6a2ZKNVYzTW0wNERCQWViTUpZejJ4WkdJclhueWp6MzlEUWxIcEFpM1dPZk9aeUxxNU_SAXNBVV95cUxPMUtDY2V6RkswQ3E4MzZIRXlaeVJYX25NUDNoNlJHQ05jQ0ZuYV9TMlFxOXJ1TzkteUJjV2RlUExuaWxDSGVNa3o0RkpxVWdrNEdXQU0tNXd0R2pXVkRrZk94aXJWRXdBOFlHZGxTYTZqX29v?oc=5">비트코인·알트코인 '장중 급락'...주요 변수는? - 초이스경제</a> <span class="p0-desc">비트코인·알트코인 '장중 급락'...주요 변수는? 초이스경제</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 연준카리브해에서 4,600만 달러의 암호화폐를 훔친 혐의로 체포된 계약자, FBI가 밝혔습니다.  
-외 P0 긴급 이슈 5건이 추가 감지되었습니다. 총 120건의 뉴스 중 P1 주요 이슈도 29건 확인됩니다.
-
-1. **🟠 비트코인** (45건): 비트코인, 중동, 여부부터 중심으로 45건의 뉴스가 수집되었습니다.
-2. **🏦 거래소** (40건): Senate, Binance, KuCoin 이슈가 40건으로 주목받고 있습니다.
-3. **🔵 규제/정책** (33건): 비트코인 중심으로 33건의 뉴스가 수집되었습니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-**P0 긴급**: 연준카리브해에서 4,600만 달러의 암호화폐를 훔친 혐의로 체포된 계약자, FBI가 밝혔습니다. / John Daghita(일명 "John/Lick"), 미국 보안관과 관련된 암호화폐 절도 혐의로 체포됨 &# / 비트코인·알트코인 '장중 급락'...주요 변수는? - 초이스경제
-**P1 주요**: 29건 확인
-**핵심 키워드**: **bitcoin**, **ai**, **defi**, **ethereum**
-**주요 출처**: Binance(40건), CoinDesk(15건), Cointelegraph(15건)
-- 거래소 공지 10건 포함
-
-
-![news-briefing]({{ '/assets/images/generated/news-briefing-crypto-2026-03-07.png' | relative_url }})
+- 총 **120건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 🔵 규제/정책
+- 2026-03-07 암호화폐 시장에서 120건의 뉴스를 분석했습니다. 오늘은 비트코인, 거래소, 규제/정책 관련 소식이 주목됩니다.
+- *총 120건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
 
 ## 테마별 주요 뉴스
 

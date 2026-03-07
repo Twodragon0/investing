@@ -19,6 +19,7 @@ description: "전체 프로토콜 TVL $247.99B는 전통 금융 기관과 비교
 <div class="alert-box alert-info"><strong>DeFi 생태계 $247.99B 규모 분석</strong><ul><li>🏆 <strong>최상위 프로토콜</strong>: Lido — TVL $33.92B (Liquid Staking)</li><li>⛓️ <strong>최상위 체인</strong>: Ethereum — TVL $56.06B (60.0%)</li><li>📊 <strong>최다 카테고리</strong>: 기타 — $80.55B</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - Lido가 TVL $33.92B (13.7%)로 1위이나, 생태계가 상당히 분산되어 있습니다. 프로토콜 간 경쟁이 활발한 건강한 구조입니다.
