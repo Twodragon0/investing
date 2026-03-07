@@ -102,7 +102,7 @@ description: "2026-03-07 암호화폐 시장에서 120건의 뉴스를 분석했
 <div class="news-card-num">2</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxQM3I0YklsaGpuQ2tHdE1YclMwUlpfOGtsekJrTmZROVRJVy1WeUhwTk5NTFlMeVZzcGYyamdFdEd6UFJoWlRwWjlNWDV2bVU3TzBJNDV1X1BCSW1Dd1h4TVZYcW50NlM1V1l6ck1MNUVwMENfYWRaTE9Ubi0zcGhKeG05TnNHYmxzYWJnSFQxazM1SFVZSUM5cncyOVEzVDdjX1ZlRFRacXJwa2I0?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">오늘(3월 6일) 암호화폐 시장 동향: 세계 최대 거래소의 새로운 움직임. - Vietnam.vn</a>
-<p class="news-desc">오늘, 암호화폐, 시장 관련 시장 뉴스입니다. 투자 판단 시 원문 기사의 세부 내용을 확인하세요.</p>
+<p class="news-desc">3월 6일 기준 바이낸스 등 세계 최대 거래소들의 신규 상장, 서비스 변경 등 주요 움직임을 정리한 베트남 현지 보도입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -175,7 +175,7 @@ description: "2026-03-07 암호화폐 시장에서 120건의 뉴스를 분석했
 <div class="news-card-num">1</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNeUpDdFBzR2Y5STE2UzRSd2tHUzVMM21GY2ZoMHI3dGJUSlpoeFJMSzN1SG1YUTdMUklHNl81M3Awdi0td19WaHlJTnFzZWNRNmFoa3E4Tnl1dUVKNDFUOWpybG5FeXFUY0pQbzk5STU2MkRRcUVNYVNrZnBwYTV4QWRvUEF4aUJ3TDg0aFNTSDJsMS1EdXcxSmREV2todko1SnZXZDdhT0o1c01rVzhxa3J3R1ZwV3RMUGV1N9IBwgFBVV95cUxPVmJaVy1nc2JnRENlc01SU3RWRlRyc2l1cDdTb0tXTWxvWG9zckZxcXZud1JMRjRTZ0FuUjlmN2QycmhWb2FBLXMwZ2laWXRQRkktcjRvUEozd0JJa0dWcC1URzk1ay1QRldNSG5HUEpvN3lKOTRtb1o3elZXNkw0OTEzYkkwS2R4ZjQwZVlOUjlrZ1RHMUdoakFEckxRd25Tc3hoSHItUG5xMDIzVXFISUVlQ2J1Wm9mUUl0Y1dlNG54QQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">연준카리브해에서 4,600만 달러의 암호화폐를 훔친 혐의로 체포된 계약자, FBI가 밝혔습니다.</a>
-<p class="news-desc">연준 통화정책 관련 소식입니다. 금리 결정은 글로벌 자산 배분에 가장 큰 영향을 미치는 변수입니다.</p>
+<p class="news-desc">US Marshals 압수 암호화폐 관리 계약업체 관련자가 4,600만 달러를 탈취해 카리브해에서 체포된 사건으로, 정부 보유 디지털 자산 보안 체계에 대한 전면 감사 요구가 이어지고 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -195,17 +195,17 @@ description: "2026-03-07 암호화폐 시장에서 120건의 뉴스를 분석했
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE5LNlc1YUNJNjVrMHV4LTNkX2VDU0d0a1h5ZkZCMVBJdEtwQkRwU295cm9rMGRRNmpRajdvemU2NVFZQm5NMFY2ODNuYmNqczd3ajFLUGFpZmJPN0hvd1Y5UklDblkwTXdKZWdlVGNn?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">&quot;비트코인 1억 원 위태&quot; 중동 전쟁 공포에 가상자산 시장 일제히 &#x27;파란불&#x27;</a>
-<p class="news-desc">지정학적 리스크가 금융시장에 영향을 미치고 있습니다. 유가·환율·안전자산 흐름을 주시해야 합니다.</p>
+<p class="news-desc">미-이란 전쟁 확전 우려로 공포탐욕지수가 14(극단적 공포)까지 하락한 가운데, 비트코인이 1억 원(7만 달러) 선 공방을 벌이며 이더리움(-2.45%), 솔라나(-2.23%) 등 알트코인도 동반 하락했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
 
 <details><summary>그 외 27건 보기</summary><div class="details-content"><ol class="news-overflow-list">
-<li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE8tQ0ZMeUtVZmUwMy1FeThMRzN0NFJVMnJvaThvbkM5QzJEcG95VmFiQTZiM1prZ0x3OGFDY3JRRjBHdHhFVzdydEZvSGpCdzA?oc=5">죽 쑤던 비트코인, 중동 사태 발발 이후 12% 껑충…코인 시총은 6% '쑥'</a> — 지정학적 리스크가 금융시장에 영향을 미치고 있습니다. 유가·환율·안전자산 흐름을 주시해야 합니다.</li>
-<li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNUFctUUNwSGhWU0FHNV9ZX1I4UnFRckRVREVpQllwWjIwbDlqdVNRUUZpLW5XNEF2bUhVVmpwdzVIX19sRVgxQk9hMW5rekxuQVdVZnpjUWowQ2djWjljTEpfY2d5VnBtcWtLamhtY0Z1TzBZYTVHdzhqcXFvYmQ3ZtIBlAFBVV95cUxPWXRqc19nMC1TOERRdk45QUZoSVFzLTVweVdkOHNMS3hxRjM3YjRGNldTcVQ0VlRvRi1IX1ZIUk9KUU5BSzF3X2k3bllVMTdVMVJNOHNHejExWHoxa2k5a0RRUl94aUhGYld5QzZxZzJyb2hOc1N5TF81TEpaTnR1dXhDSnZlYTJ4MXhLMTBuZG1aVEV1?oc=5">비트코인, 전쟁통에도 선방... 중동 소식에 가격은 요동</a> — 지정학적 리스크가 금융시장에 영향을 미치고 있습니다. 유가·환율·안전자산 흐름을 주시해야 합니다.</li>
-<li><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE53UlMwejRkbV9XbDFkNGlWVG13Z2w1N3RCYktTY00tWjNoVUZJNGhBZTZYWTdva2s1OVdHWmU0a010RGFQc0VxMElvWjdQOWtoUFBj?oc=5">비트코인, 러시아 이혼 소송서 최대 분쟁 자산…"존재 여부부터 증명해야"</a> — 지정학적 리스크가 금융시장에 영향을 미치고 있습니다. 유가·환율·안전자산 흐름을 주시해야 합니다.</li>
-<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE05YXBqNlVhV0pVVFZpQ1JrckluSXNuNjgxVjg0RVF1V1daRVdzcU9pZFVuSjlIaVU5a0k4U3hwTnlrbUJIN0pJbmhLX1YxZkpTeWxVQm5CVDUtZ9IBVEFVX3lxTE45WUNIQTBJY29NWDF0QXg1c0p0dFAtcVYtajlLcXZzaWZRbUQwZkZPc0JpYTBWSXVmamRxWVNSWHdqd1IySGpaTEJGN3VIUDFoREEyQw?oc=5">"비트코인, 안전자산 지위 입증했다"…이란 사태에 '디지털 금' 재조명</a> — 지정학적 리스크가 금융시장에 영향을 미치고 있습니다. 유가·환율·안전자산 흐름을 주시해야 합니다.</li>
-<li><a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE1qQjFMTVUyUFJhUFFGa0RaZmRSOUw1QU4tM1VlLWRPY0xJSUZIV0lRSnJmcG9reVpIZXBuSVlqeGZyc0xvMVdzWDV5ZHdhbl9SbHBwRFVjUmZ1bkprVjJXbDZn?oc=5">금보다 더 금 같네, 전쟁 뚫고 치솟는 코인 - 미주중앙일보</a> — 지정학적 리스크가 금융시장에 영향을 미치고 있습니다. 유가·환율·안전자산 흐름을 주시해야 합니다.</li>
+<li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE8tQ0ZMeUtVZmUwMy1FeThMRzN0NFJVMnJvaThvbkM5QzJEcG95VmFiQTZiM1prZ0x3OGFDY3JRRjBHdHhFVzdydEZvSGpCdzA?oc=5">죽 쑤던 비트코인, 중동 사태 발발 이후 12% 껑충…코인 시총은 6% '쑥'</a> — 전쟁 발발 후 비트코인 12% 상승, 가상자산 시총 2조 4,880억 달러로 6% 증가.</li>
+<li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNUFctUUNwSGhWU0FHNV9ZX1I4UnFRckRVREVpQllwWjIwbDlqdVNRUUZpLW5XNEF2bUhVVmpwdzVIX19sRVgxQk9hMW5rekxuQVdVZnpjUWowQ2djWjljTEpfY2d5VnBtcWtLamhtY0Z1TzBZYTVHdzhqcXFvYmQ3ZtIBlAFBVV95cUxPWXRqc19nMC1TOERRdk45QUZoSVFzLTVweVdkOHNMS3hxRjM3YjRGNldTcVQ0VlRvRi1IX1ZIUk9KUU5BSzF3X2k3bllVMTdVMVJNOHNHejExWHoxa2k5a0RRUl94aUhGYld5QzZxZzJyb2hOc1N5TF81TEpaTnR1dXhDSnZlYTJ4MXhLMTBuZG1aVEV1?oc=5">비트코인, 전쟁통에도 선방... 중동 소식에 가격은 요동</a> — 공습 직후 급락했으나 V자 반등으로 7만 달러 재돌파.</li>
+<li><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE53UlMwejRkbV9XbDFkNGlWVG13Z2w1N3RCYktTY00tWjNoVUZJNGhBZTZYWTdva2s1OVdHWmU0a010RGFQc0VxMElvWjdQOWtoUFBj?oc=5">비트코인, 러시아 이혼 소송서 최대 분쟁 자산…"존재 여부부터 증명해야"</a> — 러시아 암호화폐 이혼 재산분할 법제화 추진, 자산 추적·은닉 문제가 쟁점.</li>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE05YXBqNlVhV0pVVFZpQ1JrckluSXNuNjgxVjg0RVF1V1daRVdzcU9pZFVuSjlIaVU5a0k4U3hwTnlrbUJIN0pJbmhLX1YxZkpTeWxVQm5CVDUtZ9IBVEFVX3lxTE45WUNIQTBJY29NWDF0QXg1c0p0dFAtcVYtajlLcXZzaWZRbUQwZkZPc0JpYTBWSXVmamRxWVNSWHdqd1IySGpaTEJGN3VIUDFoREEyQw?oc=5">"비트코인, 안전자산 지위 입증했다"…이란 사태에 '디지털 금' 재조명</a> — 이란 사태 속 비트코인이 증시 대비 강한 회복세를 보이며 안전자산 지위 논쟁 재점화.</li>
+<li><a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE1qQjFMTVUyUFJhUFFGa0RaZmRSOUw1QU4tM1VlLWRPY0xJSUZIV0lRSnJmcG9reVpIZXBuSVlqeGZyc0xvMVdzWDV5ZHdhbl9SbHBwRFVjUmZ1bkprVjJXbDZn?oc=5">금보다 더 금 같네, 전쟁 뚫고 치솟는 코인 - 미주중앙일보</a> — 중동 전쟁 속에서 금보다 높은 수익률을 기록한 비트코인 동향 분석.</li>
 <li><em>...외 12건</em></li>
 </ol></div></details>
 
@@ -256,11 +256,11 @@ description: "2026-03-07 암호화폐 시장에서 120건의 뉴스를 분석했
 ## 거래소 공지사항
 
 **1. [바이낸스는 수익 창출, 암호화폐 구매, 전환, VIP 대출, 마진 및 선물에 대한 OPN(오피니언)을 추가합니다.](https://www.binance.com/en/support/announcement/detail/b3ef81d0193c42e791d517481867b558)**
-암호화폐 시장 관련 소식입니다. 디지털 자산 가격은 거시경제 환경과 규제 동향에 연동됩니다.
+바이낸스가 OPN(오피니언) 토큰을 수익 창출, 구매, 전환, VIP 대출, 마진 및 선물 거래 서비스에 추가합니다.
 `거래소: Binance`
 
 **2. [바이낸스는 수익 창출, 암호화폐 구매, 전환, VIP 대출 및 마진에 패브릭 프로토콜(ROBO)을 추가할 예정입니다.](https://www.binance.com/en/support/announcement/detail/caec3d0eff0546be94e5b56844e0c432)**
-암호화폐 시장 관련 소식입니다. 디지털 자산 가격은 거시경제 환경과 규제 동향에 연동됩니다.
+바이낸스가 패브릭 프로토콜(ROBO) 토큰을 수익 창출, 구매, 전환, VIP 대출 및 마진 서비스에 추가할 예정입니다.
 `거래소: Binance`
 
 **3. [바이낸스, 시드 태그가 적용된 패브릭 프로토콜(ROBO) 상장 예정](https://www.binance.com/en/support/announcement/detail/82c9c8166a2a434681c20a23a346a5b8)**
@@ -268,19 +268,19 @@ ROBO, Binance, List 관련 글로벌 시장 소식입니다. 원문에서 세부
 `거래소: Binance`
 
 **4. [바이낸스 선물, USDⓈ 마진 COPPERUSDT 무기한 계약 출시 예정(2026-03-06)](https://www.binance.com/en/support/announcement/detail/44a37bb537b3460aafed58b8d68f5313)**
-미국 주요 지수 동향입니다. 글로벌 증시의 방향성을 가늠하는 핵심 지표입니다.
+바이낸스 선물이 구리(COPPER) 기반 USDⓈ 마진 무기한 계약을 신규 출시합니다.
 `거래소: Binance`
 
 **5. [바이낸스는 수익 창출, 암호화폐 구매, 전환, VIP 대출, 마진 및 선물에 MANTRA(MANTRA)를 추가할 예정입니다.](https://www.binance.com/en/support/announcement/detail/e2571aedb19d4e66876089fcc7a8f601)**
-암호화폐 시장 관련 소식입니다. 디지털 자산 가격은 거시경제 환경과 규제 동향에 연동됩니다.
+바이낸스가 MANTRA 토큰을 수익 창출, 구매, 전환, VIP 대출, 마진 및 선물 거래에 추가할 예정입니다.
 `거래소: Binance`
 
 **6. [새로운 AI 에이전트 기술로 Binance Square에서 콘텐츠 제작 수준을 높이세요](https://www.binance.com/en/support/announcement/detail/7ba0c9871b17429ba8af46f0c6ec187c)**
-AI·기술 섹터 관련 소식입니다. AI 산업의 성장세와 규제 동향이 관련주 투자에 핵심 변수입니다.
+바이낸스 스퀘어에 AI 에이전트 기반 콘텐츠 제작 도구가 도입되어 크리에이터들이 자동화된 콘텐츠 생성 기능을 활용할 수 있게 됩니다.
 `거래소: Binance`
 
 **7. [바이낸스 USDⓈ-M 선물 WebSocket 시스템 업그레이드 안내 (2026-03-06)](https://www.binance.com/en/support/announcement/detail/ebf9b0aa9eca4ff3804eef6fb09ba32a)**
-미국 주요 지수 동향입니다. 글로벌 증시의 방향성을 가늠하는 핵심 지표입니다.
+바이낸스가 USDⓈ-M 선물 WebSocket API 시스템 업그레이드를 실시합니다. 트레이딩 봇 운영자는 연결 설정 확인이 필요합니다.
 `거래소: Binance`
 
 **8. [바이낸스는 2026년 3월 6일에 COS, DEGO, FORTH, FUN, HOOK, LRC, MBOX, OXT 및 WIF를 포함하도록 모니터링 태그를 확장하고 FLOW에 대한 모니터링 태그를 제거하며 ONDO 및 VIRTUAL에 대한 시드 태그를 제거합니다.](https://www.binance.com/en/support/announcement/detail/e56e5e6b33ad493c98a71189643ade4f)**
