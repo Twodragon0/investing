@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "글로벌 규제 동향 리포트 - 2026-03-07"
-date: 2026-03-07 03:26:03 +0000
+date: 2026-03-07 01:51:23 +0000
 categories: [regulatory-news]
 tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 source: "consolidated"
@@ -45,8 +45,8 @@ description: "전 세계 금융 규제기관의 최신 동향을 정리합니다
 
 ## 미국 규제 동향
 
-**1. [CFTC ChAIrman Selig, 수석 고문 Brigitte Weyls의 퇴임 발표](https://www.cftc.gov/PressRoom/PressReleases/9190-26)**
-상품선물거래위원회(Commodity Futures Trading Commission) ChAIrman Michael S.
+**1. [CFTC Chairman Selig, 수석 고문 Brigitte Weyls의 퇴임 발표](https://www.cftc.gov/PressRoom/PressReleases/9190-26)**
+상품선물거래위원회(Commodity Futures Trading Commission) Chairman Michael S.
 <span class="source-tag" data-source-type="regulator">CFTC Press Releases</span>
 
 
@@ -65,7 +65,7 @@ FSA는 "FSA Analytical Notes(2026.3)" 영문판을 발행했습니다.full text 
 <span class="source-tag" data-source-type="default">Japan FSA</span>
 
 **2. [가타야마 사츠키 금융장관 기자회견(2026년 2월 27일)](https://www.fsa.go.jp/en/conference/minister/2026/20260227.html)**
-(2026년 2월 27일 금요일 오전 43시 ~ 오전 48시) 먼저 FSA가 제출한 법안에 대해 이야기하겠습니다.
+(2026년 2월 27일 금요일 오전 8시 43분 ~ 오전 8시 48분) 먼저 FSA가 제출한 법안에 대해 이야기하겠습니다.
 <span class="source-tag" data-source-type="default">Japan FSA</span>
 
 
@@ -73,16 +73,16 @@ FSA는 "FSA Analytical Notes(2026.3)" 영문판을 발행했습니다.full text 
 
 ## 유럽 규제 동향
 
-**1. [영국 암호화폐 규제 진전: 암호화폐 기업을 위한 건전성 체제 – FCA CP25/42의 주요 내용 - Winston & Strawn](https://news.google.com/rss/articles/CBMioAJBVV95cUxOQ3A0R1ZqUDBleG15R1p1QVZxT3gtNy1KN0JvOHhiOHFtcUd0cFVrVm1wQjhSODFIc1lfZU1hdFRuY0EzS1ZHNDlRekxmOFcyRXF5N2Exa2dKSC15RWE0SkJQbXNZSzBFd3lyZ1Vob1YxMlQzTE14SzlRSG4tU1ZkM0Nmc1VXSUZWMDJ2NXJiakZ3clBJN1JIQ0VlRkJ3RlVlOU5yN0hjMUFpY1V5ajdGRmx0WnFhZXpxMmZ4ZjNmTTFJRURvWjRPbUVQYkJWMlJOS2JrVmhfR0p3dnh2UmMwTDRtQ1JabE5mSFdGd2xBa0l0Qkl1MWg2MVlXZ3lPSXd0TloxM1BuVGFibTNubGU5T2haUUhKbEFjdjJUSTlOeWM?oc=5)**
-지정학적 분쟁이 글로벌 금융시장에 충격을 주고 있습니다.
+**1. [영국 암호화폐 규제 진전: 암호화폐 기업을 위한 건전성 체제 – FCA CP25/42의 주요 시사점 - Winston & Strawn](https://news.google.com/rss/articles/CBMioAJBVV95cUxOQ3A0R1ZqUDBleG15R1p1QVZxT3gtNy1KN0JvOHhiOHFtcUd0cFVrVm1wQjhSODFIc1lfZU1hdFRuY0EzS1ZHNDlRekxmOFcyRXF5N2Exa2dKSC15RWE0SkJQbXNZSzBFd3lyZ1Vob1YxMlQzTE14SzlRSG4tU1ZkM0Nmc1VXSUZWMDJ2NXJiakZ3clBJN1JIQ0VlRkJ3RlVlOU5yN0hjMUFpY1V5ajdGRmx0WnFhZXpxMmZ4ZjNmTTFJRURvWjRPbUVQYkJWMlJOS2JrVmhfR0p3dnh2UmMwTDRtQ1JabE5mSFdGd2xBa0l0Qkl1MWg2MVlXZ3lPSXd0TloxM1BuVGFibTNubGU5T2haUUhKbEFjdjJUSTlOeWM?oc=5)**
+영국 FCA가 암호화폐 기업에 대한 건전성 규제 체계(CP25/42)를 발표했습니다. 자본 요건과 리스크 관리 기준이 핵심입니다.
 <span class="source-tag" data-source-type="regulator">UK FCA</span>
 
 **2. [금융 및 기술: 영국은 암호화폐에 대한 자체 규제 과정을 도표화합니다. - 국제 변호사 협회 &#124; IBA](https://news.google.com/rss/articles/CBMingFBVV95cUxPVG5rYk92MEpZNno3R0FtNWRVWFVBSGttdmdETlpScUlya0hoNlBCYmtkTFpoRjZrMVVpR2VOUWZKVzJRREt2Q0lRTDFxUUg2ZW1pY1hiZmdxMEt1UURxdTd6NkN4SXlsYzJ2UXRfUDA5aWVpZjVsZVVMd3gzM1V4MWU3U3F5T1ZDbjBMb0JQSmo5U19kZm9mVl8zVTZFQQ?oc=5)**
-암호화폐 시장 관련 소식입니다. 디지털 자산 가격은 거시경제 환경과 규제 동향에 연동됩니다.
+영국이 EU MiCA와 별도로 독자적인 암호화폐 규제 프레임워크를 수립하고 있습니다. 영국 시장 진출 기업에 중요한 변화입니다.
 <span class="source-tag" data-source-type="regulator">UK FCA</span>
 
 **3. [암호화폐와 CASS: 영국 FCA, 암호화폐에 대한 고객 자산 규칙 적용, James Morris, Simon Treacy - Linklaters](https://news.google.com/rss/articles/CBMiwwFBVV95cUxNZHVzd0tLMGk0WUJuenVJdmRFSkhmaUduS0ZySnpXRHVQMGFOTWw5MFVEeENlRmVoZnRLd2RCTXhuWVlYcVhHUExXNUJwdFBEb2M2SkZIU2FQZ1hlUDJNQ0F3bVdyTTRud1dwRm5RMjBRc25GakdZcHpnemI4T3dZVlc1TS16NWdXazc1NEE0NndKcldXMVY0SVp1aWl0OFdiazVCUFlwazFudHJjZ3NrUVJsdFhYTWpoOGV4RGMzZDJYX0U?oc=5)**
-암호화폐 시장 관련 소식입니다. 디지털 자산 가격은 거시경제 환경과 규제 동향에 연동됩니다.
+영국 FCA가 암호화폐에 고객 자산 보호 규칙(CASS)을 적용합니다. 거래소의 고객 자산 분리 보관 의무가 강화됩니다.
 <span class="source-tag" data-source-type="regulator">UK FCA</span>
 
 
@@ -95,12 +95,12 @@ FSA는 "FSA Analytical Notes(2026.3)" 영문판을 발행했습니다.full text 
 전체의 83%로 압도적 비중을 차지합니다. 주요 출처: UK FCA(3건), CFTC Press Releases(1건), Japan FSA(1건). 관련 지역: 유럽, 미국, 아시아.
 
 **주요 동향:**
-- [CFTC ChAIrman Selig, 수석 고문 Brigitte Weyls의 퇴임 발표](https://www.cftc.gov/PressRoom/PressReleases/9190-26) — CFTC Press Releases
-  > 상품선물거래위원회(Commodity Futures Trading Commission) ChAIrman Michael S.
+- [CFTC Chairman Selig, 수석 고문 Brigitte Weyls의 퇴임 발표](https://www.cftc.gov/PressRoom/PressReleases/9190-26) — CFTC Press Releases
+  > 상품선물거래위원회(Commodity Futures Trading Commission) Chairman Michael S.
 - [가타야마 사츠키 금융장관 기자회견(2026년 2월 27일)](https://www.fsa.go.jp/en/conference/minister/2026/20260227.html) — Japan FSA
-  > (2026년 2월 27일 금요일 오전 43시 ~ 오전 48시) 먼저 FSA가 제출한 법안에 대해 이야기하겠습니다.
-- [영국 암호화폐 규제 진전: 암호화폐 기업을 위한 건전성 체제 – FCA CP25/42의 주요 내용 - Winston & Strawn](https://news.google.com/rss/articles/CBMioAJBVV95cUxOQ3A0R1ZqUDBleG15R1p1QVZxT3gtNy1KN0JvOHhiOHFtcUd0cFVrVm1wQjhSODFIc1lfZU1hdFRuY0EzS1ZHNDlRekxmOFcyRXF5N2Exa2dKSC15RWE0SkJQbXNZSzBFd3lyZ1Vob1YxMlQzTE14SzlRSG4tU1ZkM0Nmc1VXSUZWMDJ2NXJiakZ3clBJN1JIQ0VlRkJ3RlVlOU5yN0hjMUFpY1V5ajdGRmx0WnFhZXpxMmZ4ZjNmTTFJRURvWjRPbUVQYkJWMlJOS2JrVmhfR0p3dnh2UmMwTDRtQ1JabE5mSFdGd2xBa0l0Qkl1MWg2MVlXZ3lPSXd0TloxM1BuVGFibTNubGU5T2haUUhKbEFjdjJUSTlOeWM?oc=5) — UK FCA
-  > 지정학적 분쟁이 글로벌 금융시장에 충격을 주고 있습니다.
+  > (2026년 2월 27일 금요일 오전 8시 43분 ~ 오전 8시 48분) 먼저 FSA가 제출한 법안에 대해 이야기하겠습니다.
+- [영국 암호화폐 규제 진전: 암호화폐 기업을 위한 건전성 체제 – FCA CP25/42의 주요 시사점 - Winston & Strawn](https://news.google.com/rss/articles/CBMioAJBVV95cUxOQ3A0R1ZqUDBleG15R1p1QVZxT3gtNy1KN0JvOHhiOHFtcUd0cFVrVm1wQjhSODFIc1lfZU1hdFRuY0EzS1ZHNDlRekxmOFcyRXF5N2Exa2dKSC15RWE0SkJQbXNZSzBFd3lyZ1Vob1YxMlQzTE14SzlRSG4tU1ZkM0Nmc1VXSUZWMDJ2NXJiakZ3clBJN1JIQ0VlRkJ3RlVlOU5yN0hjMUFpY1V5ajdGRmx0WnFhZXpxMmZ4ZjNmTTFJRURvWjRPbUVQYkJWMlJOS2JrVmhfR0p3dnh2UmMwTDRtQ1JabE5mSFdGd2xBa0l0Qkl1MWg2MVlXZ3lPSXd0TloxM1BuVGFibTNubGU5T2haUUhKbEFjdjJUSTlOeWM?oc=5) — UK FCA
+  > 영국 FCA가 암호화폐 기업에 대한 건전성 규제 체계(CP25/42)를 발표했습니다.
 
 
 ---
@@ -109,7 +109,7 @@ FSA는 "FSA Analytical Notes(2026.3)" 영문판을 발행했습니다.full text 
 
 오늘 미국(1건), 아시아(2건), 유럽(3건)에서 총 6건의 규제 뉴스가 포착되었으며, **유럽**이 가장 활발합니다.
 
-**미국** (CFTC 1건): CFTC 관련 소식이 부각되어, 파생상품·선물 시장 규제와 디지털 자산 상품 분류가 쟁점입니다. 주요 건: *CFTC ChAIrman Selig, 수석 고문 Brigitte Weyls의 퇴임 발표*
+**미국** (CFTC 1건): CFTC 관련 소식이 부각되어, 파생상품·선물 시장 규제와 디지털 자산 상품 분류가 쟁점입니다. 주요 건: *CFTC Chairman Selig, 수석 고문 Brigitte Weyls의 퇴임 발표*
 
 **아시아**: 일본 FSA 관련 2건으로, 일본의 Web3 전략과 스테이블코인 규제 프레임워크가 아태 시장의 기준점이 되고 있습니다.
 
@@ -121,7 +121,7 @@ FSA는 "FSA Analytical Notes(2026.3)" 영문판을 발행했습니다.full text 
 
 ## 참고 링크
 
-<details><summary>참고 링크 (6건)</summary><div class="details-content"><ol><li><a href="https://www.cftc.gov/PressRoom/PressReleases/9190-26">CFTC ChAIrman Selig, 수석 고문 Brigitte Weyls의 퇴임 발표</a> <span class="source-tag" data-source-type="regulator">CFTC Press Releases</span></li><li><a href="https://www.fsa.go.jp/en/about/fsaanalyticalnotes/20260306/20260306.html">&quot;FSA 분석노트(2026.3): 장외파생상품시장의 다면적 이해를 위한 실증적 고찰&quot; 발간</a> <span class="source-tag" data-source-type="default">Japan FSA</span></li><li><a href="https://www.fsa.go.jp/en/conference/minister/2026/20260227.html">가타야마 사츠키 금융장관 기자회견(2026년 2월 27일)</a> <span class="source-tag" data-source-type="default">Japan FSA</span></li><li><a href="https://news.google.com/rss/articles/CBMioAJBVV95cUxOQ3A0R1ZqUDBleG15R1p1QVZxT3gtNy1KN0JvOHhiOHFtcUd0cFVrVm1wQjhSODFIc1lfZU1hdFRuY0EzS1ZHNDlRekxmOFcyRXF5N2Exa2dKSC15RWE0SkJQbXNZSzBFd3lyZ1Vob1YxMlQzTE14SzlRSG4tU1ZkM0Nmc1VXSUZWMDJ2NXJiakZ3clBJN1JIQ0VlRkJ3RlVlOU5yN0hjMUFpY1V5ajdGRmx0WnFhZXpxMmZ4ZjNmTTFJRURvWjRPbUVQYkJWMlJOS2JrVmhfR0p3dnh2UmMwTDRtQ1JabE5mSFdGd2xBa0l0Qkl1MWg2MVlXZ3lPSXd0TloxM1BuVGFibTNubGU5T2haUUhKbEFjdjJUSTlOeWM?oc=5">영국 암호화폐 규제 진전: 암호화폐 기업을 위한 건전성 체제 – FCA CP25/42의 주요 내용 - Winston &amp; Strawn</a> <span class="source-tag" data-source-type="regulator">UK FCA</span></li><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxPVG5rYk92MEpZNno3R0FtNWRVWFVBSGttdmdETlpScUlya0hoNlBCYmtkTFpoRjZrMVVpR2VOUWZKVzJRREt2Q0lRTDFxUUg2ZW1pY1hiZmdxMEt1UURxdTd6NkN4SXlsYzJ2UXRfUDA5aWVpZjVsZVVMd3gzM1V4MWU3U3F5T1ZDbjBMb0JQSmo5U19kZm9mVl8zVTZFQQ?oc=5">금융 및 기술: 영국은 암호화폐에 대한 자체 규제 과정을 도표화합니다. - 국제 변호사 협회 &amp;#124; IBA</a> <span class="source-tag" data-source-type="regulator">UK FCA</span></li><li><a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxNZHVzd0tLMGk0WUJuenVJdmRFSkhmaUduS0ZySnpXRHVQMGFOTWw5MFVEeENlRmVoZnRLd2RCTXhuWVlYcVhHUExXNUJwdFBEb2M2SkZIU2FQZ1hlUDJNQ0F3bVdyTTRud1dwRm5RMjBRc25GakdZcHpnemI4T3dZVlc1TS16NWdXazc1NEE0NndKcldXMVY0SVp1aWl0OFdiazVCUFlwazFudHJjZ3NrUVJsdFhYTWpoOGV4RGMzZDJYX0U?oc=5">암호화폐와 CASS: 영국 FCA, 암호화폐에 대한 고객 자산 규칙 적용, James Morris, Simon Treacy -…</a> <span class="source-tag" data-source-type="regulator">UK FCA</span></li></ol></div></details>
+<details><summary>참고 링크 (6건)</summary><div class="details-content"><ol><li><a href="https://www.cftc.gov/PressRoom/PressReleases/9190-26">CFTC Chairman Selig, 수석 고문 Brigitte Weyls의 퇴임 발표</a> <span class="source-tag" data-source-type="regulator">CFTC Press Releases</span></li><li><a href="https://www.fsa.go.jp/en/about/fsaanalyticalnotes/20260306/20260306.html">&quot;FSA 분석노트(2026.3): 장외파생상품시장의 다면적 이해를 위한 실증적 고찰&quot; 발간</a> <span class="source-tag" data-source-type="default">Japan FSA</span></li><li><a href="https://www.fsa.go.jp/en/conference/minister/2026/20260227.html">가타야마 사츠키 금융장관 기자회견(2026년 2월 27일)</a> <span class="source-tag" data-source-type="default">Japan FSA</span></li><li><a href="https://news.google.com/rss/articles/CBMioAJBVV95cUxOQ3A0R1ZqUDBleG15R1p1QVZxT3gtNy1KN0JvOHhiOHFtcUd0cFVrVm1wQjhSODFIc1lfZU1hdFRuY0EzS1ZHNDlRekxmOFcyRXF5N2Exa2dKSC15RWE0SkJQbXNZSzBFd3lyZ1Vob1YxMlQzTE14SzlRSG4tU1ZkM0Nmc1VXSUZWMDJ2NXJiakZ3clBJN1JIQ0VlRkJ3RlVlOU5yN0hjMUFpY1V5ajdGRmx0WnFhZXpxMmZ4ZjNmTTFJRURvWjRPbUVQYkJWMlJOS2JrVmhfR0p3dnh2UmMwTDRtQ1JabE5mSFdGd2xBa0l0Qkl1MWg2MVlXZ3lPSXd0TloxM1BuVGFibTNubGU5T2haUUhKbEFjdjJUSTlOeWM?oc=5">영국 암호화폐 규제 진전: 암호화폐 기업을 위한 건전성 체제 – FCA CP25/42의 주요 시사점 - Winston &amp; Strawn</a> <span class="source-tag" data-source-type="regulator">UK FCA</span></li><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxPVG5rYk92MEpZNno3R0FtNWRVWFVBSGttdmdETlpScUlya0hoNlBCYmtkTFpoRjZrMVVpR2VOUWZKVzJRREt2Q0lRTDFxUUg2ZW1pY1hiZmdxMEt1UURxdTd6NkN4SXlsYzJ2UXRfUDA5aWVpZjVsZVVMd3gzM1V4MWU3U3F5T1ZDbjBMb0JQSmo5U19kZm9mVl8zVTZFQQ?oc=5">금융 및 기술: 영국은 암호화폐에 대한 자체 규제 과정을 도표화합니다. - 국제 변호사 협회 &amp;#124; IBA</a> <span class="source-tag" data-source-type="regulator">UK FCA</span></li><li><a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxNZHVzd0tLMGk0WUJuenVJdmRFSkhmaUduS0ZySnpXRHVQMGFOTWw5MFVEeENlRmVoZnRLd2RCTXhuWVlYcVhHUExXNUJwdFBEb2M2SkZIU2FQZ1hlUDJNQ0F3bVdyTTRud1dwRm5RMjBRc25GakdZcHpnemI4T3dZVlc1TS16NWdXazc1NEE0NndKcldXMVY0SVp1aWl0OFdiazVCUFlwazFudHJjZ3NrUVJsdFhYTWpoOGV4RGMzZDJYX0U?oc=5">암호화폐와 CASS: 영국 FCA, 암호화폐에 대한 고객 자산 규칙 적용, James Morris, Simon Treacy -…</a> <span class="source-tag" data-source-type="regulator">UK FCA</span></li></ol></div></details>
 
 ---
-**데이터 수집 시각**: 2026-03-07 03:26 UTC
+**데이터 수집 시각**: 2026-03-07 01:51 UTC
