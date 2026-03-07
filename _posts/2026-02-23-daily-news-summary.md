@@ -32,7 +32,7 @@ excerpt: "암호화폐 85건, 주식 144건, 보안 2건, 규제 23건, 소셜 �
 | 규제 | 23 | 총 수집 건수: 23건 |
 | 소셜 | 41 | 텔레그램 20건, 소셜 미디어 2건, 정치·경제 19건 |
 
-![multi-asset-briefing](/assets/images/generated/news-briefing-daily-2026-02-23.png)
+![multi-asset-briefing]({{ '/assets/images/generated/news-briefing-daily-2026-02-23.png' | relative_url }})
 
 
 ![market-heatmap]({{ '/assets/images/generated/market-heatmap-2026-02-23.png' | relative_url }})

@@ -317,8 +317,12 @@ def _save_and_close(fig, filepath, *, bg=None):
     """Shared save-and-close to reduce repetition."""
     bg_color = bg or COLORS["bg"]
     plt.savefig(
-        filepath, dpi=_DS["dpi"], facecolor=bg_color, edgecolor="none",
-        bbox_inches="tight", pad_inches=0.1,
+        filepath,
+        dpi=_DS["dpi"],
+        facecolor=bg_color,
+        edgecolor="none",
+        bbox_inches="tight",
+        pad_inches=0.1,
     )
     plt.close(fig)
 
@@ -359,16 +363,28 @@ def generate_top_coins_card(
 
     # 전체 카드 외곽 border
     _draw_rounded_rect(
-        ax, 0.05, 0.05, 9.9, fig_height - 0.1,
-        facecolor="none", edgecolor=COLORS["border_highlight"],
-        linewidth=1.0, alpha=0.6,
+        ax,
+        0.05,
+        0.05,
+        9.9,
+        fig_height - 0.1,
+        facecolor="none",
+        edgecolor=COLORS["border_highlight"],
+        linewidth=1.0,
+        alpha=0.6,
     )
 
     # 헤더 영역 배경 그라디언트 바
     _draw_gradient_bar(
-        ax, 0.1, fig_height - 1.25, 9.8, 1.1,
-        color_start=COLORS["bg_header"], color_end=COLORS["bg"],
-        steps=25, alpha=0.7,
+        ax,
+        0.1,
+        fig_height - 1.25,
+        9.8,
+        1.1,
+        color_start=COLORS["bg_header"],
+        color_end=COLORS["bg"],
+        steps=25,
+        alpha=0.7,
     )
 
     # Title
@@ -1991,39 +2007,63 @@ def generate_category_og_image(
 
     # 배경 그라디언트 효과
     _draw_gradient_bar(
-        ax, 0, 0, 12, 6.3,
-        color_start=COLORS["bg"], color_end=COLORS["bg_header"],
-        steps=30, alpha=0.8,
+        ax,
+        0,
+        0,
+        12,
+        6.3,
+        color_start=COLORS["bg"],
+        color_end=COLORS["bg_header"],
+        steps=30,
+        alpha=0.8,
     )
 
     # 하단 액센트 라인
     _draw_rounded_rect(
-        ax, 0.5, 0.4, 11, 0.08,
-        facecolor=accent, alpha=0.7, pad=0.005,
+        ax,
+        0.5,
+        0.4,
+        11,
+        0.08,
+        facecolor=accent,
+        alpha=0.7,
+        pad=0.005,
     )
 
     # 사이트 로고 텍스트
     ax.text(
-        6, 5.2, "🐉 Investing Dragon",
-        ha="center", va="center",
-        fontsize=14, color=COLORS["text_secondary"],
+        6,
+        5.2,
+        "🐉 Investing Dragon",
+        ha="center",
+        va="center",
+        fontsize=14,
+        color=COLORS["text_secondary"],
         fontfamily=_FONT_FAMILY,
     )
 
     # 카테고리명 (큰 텍스트)
     ax.text(
-        6, 3.2, cat_name,
-        ha="center", va="center",
-        fontsize=36, fontweight="bold",
+        6,
+        3.2,
+        cat_name,
+        ha="center",
+        va="center",
+        fontsize=36,
+        fontweight="bold",
         color=COLORS["text"],
         fontfamily=_FONT_FAMILY,
     )
 
     # 설명 텍스트
     ax.text(
-        6, 1.8, "Crypto & Stock News • Trading Journal",
-        ha="center", va="center",
-        fontsize=12, color=COLORS["text_secondary"],
+        6,
+        1.8,
+        "Crypto & Stock News • Trading Journal",
+        ha="center",
+        va="center",
+        fontsize=12,
+        color=COLORS["text_secondary"],
         fontfamily=_FONT_FAMILY,
     )
 
@@ -2037,8 +2077,12 @@ def generate_category_og_image(
 
     plt.tight_layout(pad=0)
     plt.savefig(
-        filepath, dpi=150, facecolor=COLORS["bg"],
-        edgecolor="none", bbox_inches="tight", pad_inches=0,
+        filepath,
+        dpi=150,
+        facecolor=COLORS["bg"],
+        edgecolor="none",
+        bbox_inches="tight",
+        pad_inches=0,
     )
     plt.close(fig)
 

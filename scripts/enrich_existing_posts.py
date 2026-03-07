@@ -33,11 +33,11 @@ _HAS_DESC_RE = re.compile(r'class="news-desc"')
 
 # Match the duplicate 글로벌/한국 주식 뉴스 sections
 _GLOBAL_SECTION_RE = re.compile(
-    r'\n## 글로벌 주식 뉴스\n.*?(?=\n## |\n---|\Z)',
+    r"\n## 글로벌 주식 뉴스\n.*?(?=\n## |\n---|\Z)",
     re.DOTALL,
 )
 _KOREAN_SECTION_RE = re.compile(
-    r'\n## 한국 주식 뉴스\n.*?(?=\n## |\n---|\Z)',
+    r"\n## 한국 주식 뉴스\n.*?(?=\n## |\n---|\Z)",
     re.DOTALL,
 )
 
@@ -92,17 +92,9 @@ def enrich_card(card_html: str) -> str:
         if close_pos > 0:
             close_pos = card_html.rfind("</div>", 0, close_pos)
         if close_pos > 0:
-            return (
-                card_html[:close_pos]
-                + f'\n<p class="news-desc">{safe_desc}</p>\n'
-                + card_html[close_pos:]
-            )
+            return card_html[:close_pos] + f'\n<p class="news-desc">{safe_desc}</p>\n' + card_html[close_pos:]
     else:
-        return (
-            card_html[:source_tag_pos]
-            + f'<p class="news-desc">{safe_desc}</p>\n'
-            + card_html[source_tag_pos:]
-        )
+        return card_html[:source_tag_pos] + f'<p class="news-desc">{safe_desc}</p>\n' + card_html[source_tag_pos:]
 
     return card_html
 
@@ -112,12 +104,7 @@ def enrich_overflow_item(match: re.Match) -> str:
     url = match.group(1)
     title = match.group(2).strip()
 
-    title_unesc = (
-        title.replace("&amp;", "&")
-        .replace("&lt;", "<")
-        .replace("&gt;", ">")
-        .replace("&#x27;", "'")
-    )
+    title_unesc = title.replace("&amp;", "&").replace("&lt;", "<").replace("&gt;", ">").replace("&#x27;", "'")
 
     # Only add description if item doesn't already have one
     full_match = match.group(0)
@@ -170,11 +157,7 @@ def process_post(filepath: str) -> bool:
 def main():
     """Process all stock news digest posts."""
     pattern = re.compile(r"\d{4}-\d{2}-\d{2}-daily-stock-news-digest\.md$")
-    posts = sorted(
-        f
-        for f in os.listdir(POSTS_DIR)
-        if pattern.search(f)
-    )
+    posts = sorted(f for f in os.listdir(POSTS_DIR) if pattern.search(f))
 
     modified = 0
     for filename in posts:

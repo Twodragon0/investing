@@ -32,7 +32,7 @@ excerpt: "암호화폐 101건, 주식 131건, 보안 1건, 규제 23건, 소셜 
 | 규제 | 23 | 총 수집 건수: 23건 |
 | 소셜 | 57 | 텔레그램 20건, 정치·경제 35건, CFTC 규제 강화·에릭 트럼프 탈은행화 발언 주목 |
 
-![multi-asset-briefing](/assets/images/generated/news-briefing-daily-2026-02-22.png)
+![multi-asset-briefing]({{ '/assets/images/generated/news-briefing-daily-2026-02-22.png' | relative_url }})
 
 
 ![market-heatmap]({{ '/assets/images/generated/market-heatmap-2026-02-22.png' | relative_url }})

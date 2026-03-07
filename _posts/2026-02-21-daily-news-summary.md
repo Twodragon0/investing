@@ -33,7 +33,7 @@ excerpt: "암호화폐 110건, 주식 139건, 보안 1건, 규제 31건, 소셜 
 | 소셜 | 62 | 정치/정책 28건, 매크로/금리 14건, 텔레그램 20건 |
 | 정치인 거래 | 9 | 신호 추출 실패 |
 
-![multi-asset-briefing](/assets/images/generated/news-briefing-daily-2026-02-21.png)
+![multi-asset-briefing]({{ '/assets/images/generated/news-briefing-daily-2026-02-21.png' | relative_url }})
 
 ![market-heatmap]({{ '/assets/images/generated/market-heatmap-2026-02-21.png' | relative_url }})
 

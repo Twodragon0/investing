@@ -59,8 +59,7 @@ def build_priorities(recent_posts: int, workflow_count: int) -> List[PriorityIte
             priority="P1",
             title="Rendered fixture expansion",
             detail=(
-                "Add edge fixtures for long links, empty refs, "
-                "and mixed source tags on every content format change."
+                "Add edge fixtures for long links, empty refs, and mixed source tags on every content format change."
             ),
         ),
         PriorityItem(
