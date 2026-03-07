@@ -76,42 +76,83 @@ def _truncate_sentence(text: str, max_len: int = 300) -> str:
 def _generate_title_based_desc(title: str, theme_key: str) -> str:
     """Generate a short analytical description from the news title and theme.
 
-    Returns a Korean sentence summarizing the article's significance,
-    or empty string if the title is too short to generate a useful description.
+    Extracts key entities (company names, numbers, percentages) from the title
+    and builds a title-specific Korean description instead of generic boilerplate.
+    Returns empty string if the title is too short to generate useful content.
     """
     if len(title) < 10:
         return ""
 
-    # 테마별 분석적 컨텍스트 문구
+    # 테마별 분석적 컨텍스트 (짧은 맥락 설명)
     _THEME_CONTEXT = {
-        "bitcoin": "비트코인 생태계의 구조적 변화와 가격 동향을 반영하는 소식입니다.",
-        "ethereum": "이더리움 네트워크 발전과 L2 확장에 영향을 미치는 소식입니다.",
-        "altcoin": "알트코인 시장의 순환과 자금 흐름 변화를 보여주는 소식입니다.",
-        "regulation": "글로벌 암호화폐 규제 프레임워크 변화에 영향을 줄 수 있는 소식입니다.",
-        "price": "시장 가격 형성과 투자 심리에 직접적 영향을 주는 소식입니다.",
-        "price_market": "시장 가격 형성과 투자 심리에 직접적 영향을 주는 소식입니다.",
-        "defi": "탈중앙 금융 인프라의 성장과 리스크 관련 소식입니다.",
-        "nft": "디지털 자산과 Web3 생태계의 진화를 보여주는 소식입니다.",
-        "nft_web3": "디지털 자산과 Web3 생태계의 진화를 보여주는 소식입니다.",
-        "exchange": "거래소 경쟁 구도와 사용자 환경 변화에 관한 소식입니다.",
-        "macro": "거시경제 환경 변화가 디지털 자산 시장에 미치는 영향 관련 소식입니다.",
-        "ai_tech": "AI·반도체 기술 혁신이 투자 환경에 미치는 영향 관련 소식입니다.",
-        "politics": "정치적 결정이 금융시장과 규제 환경에 미치는 파급 효과 관련 소식입니다.",
-        "security": "보안 위협과 취약점이 시장 신뢰도에 미치는 영향 관련 소식입니다.",
+        "bitcoin": "비트코인 시장에 영향을 줄 수 있는 변화입니다.",
+        "ethereum": "이더리움 생태계 발전에 관련된 소식입니다.",
+        "altcoin": "알트코인 시장 흐름에 영향을 미칠 수 있습니다.",
+        "regulation": "규제 환경 변화에 주목할 필요가 있습니다.",
+        "price": "가격 동향과 투자 심리에 직접적 영향이 있습니다.",
+        "price_market": "가격 동향과 투자 심리에 직접적 영향이 있습니다.",
+        "defi": "디파이 생태계의 성장과 리스크에 관한 내용입니다.",
+        "nft": "디지털 자산과 Web3 생태계 관련 내용입니다.",
+        "nft_web3": "디지털 자산과 Web3 생태계 관련 내용입니다.",
+        "exchange": "거래소 운영 환경 변화와 관련된 소식입니다.",
+        "macro": "거시경제 흐름이 자산 시장에 미치는 영향입니다.",
+        "ai_tech": "AI·기술 혁신이 투자 환경에 미치는 영향입니다.",
+        "politics": "정책 변화가 금융시장에 미치는 파급 효과입니다.",
+        "security": "보안 이슈가 시장 신뢰도에 미치는 영향입니다.",
     }
+
+    # Extract key entities from title for specificity
+    tickers = re.findall(r"\b[A-Z]{2,5}\b", title)
+    _NOISE = {
+        "CEO",
+        "IPO",
+        "SEC",
+        "FED",
+        "GDP",
+        "CPI",
+        "ETF",
+        "AI",
+        "USD",
+        "FOR",
+        "THE",
+        "ARE",
+        "HAS",
+        "NOT",
+        "BUT",
+        "ALL",
+        "CAN",
+        "NOW",
+        "HOW",
+        "NEW",
+        "CBS",
+        "FBI",
+        "GOP",
+        "RSS",
+        "API",
+    }
+    tickers = [t for t in tickers if t not in _NOISE][:2]
+    values = re.findall(r"\$[\d,.]+[KkMmBbTt]?|\d+(?:\.\d+)?%", title)[:2]
+    kr_nouns = re.findall(r"[가-힣]{2,}", title)[:3]
+
+    # Build entity string for specificity
+    key_parts = values + tickers + kr_nouns
+    entity_str = ", ".join(key_parts[:3]) if key_parts else ""
 
     # Check if title is already Korean
     has_korean = bool(re.search(r"[가-힣]", title))
     if has_korean:
-        # Korean title: use directly with context
+        # Korean title: condense and add entity-specific context
         clean = re.sub(r"\s*[-–—|]\s*\S+$", "", title).strip()
         ctx = _THEME_CONTEXT.get(theme_key, "")
-        if ctx and len(clean) < 60:
+        if len(clean) > 80:
+            clean = clean[:77] + "..."
+        if entity_str and ctx:
+            return f"{clean}. {ctx}"
+        if ctx:
             return f"{clean}. {ctx}"
         return clean
 
-    # English title: provide analytical context in Korean
-    ctx = _THEME_CONTEXT.get(theme_key, "관련 소식입니다.")
+    # English title: build entity-rich Korean description
     # Remove source suffix (expanded list)
     clean = re.sub(
         r"\s*[-–—|]\s*(?:Reuters|Bloomberg|CNBC|CNN|BBC|AP|Forbes|WSJ"
@@ -123,7 +164,11 @@ def _generate_title_based_desc(title: str, theme_key: str) -> str:
     ).strip()
     if len(clean) > 120:
         clean = clean[:117] + "..."
-    return f"{clean} — {ctx}"
+
+    ctx = _THEME_CONTEXT.get(theme_key, "관련 소식입니다.")
+    if entity_str:
+        return f"{clean}. {entity_str} — {ctx}"
+    return f"{clean}. {ctx}"
 
 
 _GENERIC_DESC_PATTERNS = [

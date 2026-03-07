@@ -31,10 +31,7 @@ description: "2026-03-03 암호화폐 시장에서 111건의 뉴스를 분석했
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">111</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 54</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (34회)</div></div></div>
 <div class="alert-box alert-info"><strong>암호화폐 긴급: 조기 종전 기대, 암호화폐 일제 급등…비트 6%-이더 7%↑(종합) - 111건 분석</strong><ul><li>🟠 <strong>비트코인</strong> (54건): Bitcoin, Iran, Cryptocurrency, conflict, Israel</li><li>📈 <strong>가격/시장</strong> (28건): 비트코인, Bitcoin, Iran, 암호화폐, geopolitical</li><li>🏦 <strong>거래소</strong> (18건): Binance, billion, crypto, airstrikes, liquidity</li><li>🔵 <strong>규제/정책</strong> (19건): million, billion, Crypto, Nasdaq, cryptocurrency</li></ul></div>
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFBYdjVoTDJlZkxrTmNwNUNLQTVVaGRWRW1TYzVQWGVWcXRUQ0pPaHpVNFplTmFmeGV6RGR2TkFFalI1QnRVV0Z1b1Ixb25ObE0?oc=5">조기 종전 기대, 암호화폐 일제 급등…비트 6%-이더 7%↑(종합)</a></li><li><a href="https://www.coindesk.com/tech/2026/03/02/vitalik-buterin-unveils-plan-to-curb-ethereum-block-builder-centralization">Vitalik Buterin unveils plan to curb Ethereum block builder centralization</a></li></ul></div>
-
-
-
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFBYdjVoTDJlZkxrTmNwNUNLQTVVaGRWRW1TYzVQWGVWcXRUQ0pPaHpVNFplTmFmeGV6RGR2TkFFalI1QnRVV0Z1b1Ixb25ObE0?oc=5">조기 종전 기대, 암호화폐 일제 급등…비트 6%-이더 7%↑(종합)</a> — 시장 반등 움직임이 포착되었습니다. 기술적 반등인지 추세 전환인지 거래량과 수급 확인이 필요합니다.</li><li><a href="https://www.coindesk.com/tech/2026/03/02/vitalik-buterin-unveils-plan-to-curb-ethereum-block-builder-centralization">Vitalik Buterin unveils plan to curb Ethereum block builder centralization</a> — 암호화폐 시장 관련 소식입니다. 디지털 자산 가격은 거시경제 환경과 규제 동향에 연동됩니다.</li></ul></div>
 
 
 ## 전체 뉴스 요약
@@ -149,7 +146,6 @@ DOJ: Florida cryptocurrency CEO arrested in $328 million fraud scheme wtsp.com
 <a href="https://www.coindesk.com/news-analysis/2026/03/02/crypto-world-faces-growing-pressure-to-relent-on-stablecoin-rewards-to-win-bigger-prize">Crypto world faces growing pressure to relent on stablecoin rewards to win bigger prize</a>
 <a href="https://www.coindesk.com/business/2026/03/02/eu-banks-euro-pegged-stablecoin-in-talks-with-crypto-exchanges-to-ensure-liquidity">EU banks’ euro-pegged stablecoin in talks with crypto exchanges to ensure liquidity</a>
 </div></details>
-
 
 
 ## 거래소 공지사항

@@ -33,18 +33,10 @@ excerpt: "BTC 추가 하락 $50K 전망, XRP 강세 속 크래시 대응, Apollo
 
 <strong>암호화폐 시장 **비트코인, 가격/시장** 중심 87건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 34건 수집</li><li>📈 <strong>가격/시장</strong>: 24건 수집</li><li>🏦 <strong>거래소</strong> (10건): Transparency, which is a hallmark feature of most cryptocurrencies, is likely one of the biggest hur</li><li>🟣 <strong>DeFi</strong> (7건): The asset manager overseeing more than $900 billion assets may buy up to 90 million MORPHO tokens as</li></ul></div>
 
-<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiiAFBVV95cUxPVUtQQWJPdi1qQVRDcEpCSjcwZVhrM0RoYk5YYmtIN3BnNVVXUFozY0lMb3JFazZyc1YyWWZXckhXUDJxMlpjWGdXYnlaY0IwcS1fbnQ4OTlRUW9FQWlKT2Q5SzV2ell4b3VyS0tOS2tYNU9vVENvNXBNMTdiMnhwNWI1Sk9ON2NN?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin Price Crash Rattles Trump's Crypto Progress. Here's The Upshot For Investors.</a></li><li><a href="https://news.google.com/read/CBMimAFBVV95cUxOa3c1eU0wTnZFbHdzV1MyeTRaaGp2NTdfLTlnWXJnZ1BzdXNhM1I0OUtwNS04ZUhjYmRUOG5udndFelB6ZFNTMllfZE1JcUp5MkJVSFMzUFhJaUMxYUFrUjJmcGdTVmVwLVBuQkZULTdINVRTSTVsVldsSFhRb0hKejBXS3hkOExCX281WFBkQzAxbDRJS2MxVQ?hl=en-US&gl=US&ceid=US%3Aen">Crypto Crash: Is Bitcoin Still the Best Cryptocurrency to Buy After This Sell-Off?</a></li><li><a href="https://www.coindesk.com/markets/2026/02/15/xrp-is-outrunning-bitcoin-and-ether-after-investors-piled-into-the-recent-crash">XRP outruns bitcoin, ether after investors piled into the recent crash</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiiAFBVV95cUxPVUtQQWJPdi1qQVRDcEpCSjcwZVhrM0RoYk5YYmtIN3BnNVVXUFozY0lMb3JFazZyc1YyWWZXckhXUDJxMlpjWGdXYnlaY0IwcS1fbnQ4OTlRUW9FQWlKT2Q5SzV2ell4b3VyS0tOS2tYNU9vVENvNXBNMTdiMnhwNWI1Sk9ON2NN?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin Price Crash Rattles Trump's Crypto Progress. Here's The Upshot For Investors.</a> — 시장 급락 소식입니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</li><li><a href="https://news.google.com/read/CBMimAFBVV95cUxOa3c1eU0wTnZFbHdzV1MyeTRaaGp2NTdfLTlnWXJnZ1BzdXNhM1I0OUtwNS04ZUhjYmRUOG5udndFelB6ZFNTMllfZE1JcUp5MkJVSFMzUFhJaUMxYUFrUjJmcGdTVmVwLVBuQkZULTdINVRTSTVsVldsSFhRb0hKejBXS3hkOExCX281WFBkQzAxbDRJS2MxVQ?hl=en-US&gl=US&ceid=US%3Aen">Crypto Crash: Is Bitcoin Still the Best Cryptocurrency to Buy After This Sell-Off?</a> — 시장 급락 소식입니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</li><li><a href="https://www.coindesk.com/markets/2026/02/15/xrp-is-outrunning-bitcoin-and-ether-after-investors-piled-into-the-recent-crash">XRP outruns bitcoin, ether after investors piled into the recent crash</a> — 시장 급락 소식입니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</li></ul></div>
 
 
 ![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-16.png' | relative_url }})
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약

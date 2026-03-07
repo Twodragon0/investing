@@ -19,15 +19,7 @@ description: "2026-02-24 암호화폐·주식 커뮤니티 소셜 미디어 동�
 
 <strong>소셜 미디어 <strong>정치/정책, 매크로/금리</strong> 관련 46건 포착</strong><ul><li>🏛️ <strong>정치/정책</strong> (14건): ERIC TRUMP: Being de-banked pushed Trump family towards crypto." The banks made the biggest mistake ...</li><li>📊 <strong>매크로/금리</strong> (12건): 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE</li><li>🟠 <strong>비트코인</strong> (8건): Binance founder CZ predicts Bitcoin will reach between $500,000 and $1,000,000 this cycle.Sponsored ...</li><li>🏦 <strong>거래소</strong> (9건): Binance founder CZ predicts Bitcoin will reach between $500,000 and $1,000,000 this cycle.Sponsored ...</li></ul></div>
 
-<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMi3wNBVV95cUxQa3BGTjBYVjJmcTFVeW1KWEZNaEU1dUxibVotUFdUdXl1cTlqcVJoUXdjcmRudGN2cVVySm1iaGJrMkMxak5kbl9NN1lKN1dzVFRobmxZQUpCWExORFBtNTRaV0RsSUhNMTdvclNjd2dlNjg3S21Vd21wTHM0Z1ZYeTdnUW11VUZ6ZFFQWDhBSS1tb0dzM2V2ZWVzTURib0FlRnBjTmp4VkM4T0U0OUc1QlozX0kwblhMVUlybkFJaURsbEtGSWlyckEtRXV0VFhtOFhCTFVKWmx5MS1EREo1ODBTV29kTDNHb29EeGZBN0hvdnhCdW9rYXZwVEZpbUNVc0RCVVprOGVXSjM4M2luRFU0UzNMNl9VbFBOcFZ3a25HU1dTbWVBNmQtMDRjVVdaNDdtN3NxS0ZMUjdqSWNOMEFsTHhoRmctOGw0RnJLNFNlbDBWdzg3QVhMVS1SSmVQQURpRVhvcDdrSzRtX3pZWUU4RkNaLU5qakVSZE5XNmJWQ0NQMFNiUnoxbXVuSk8xRGhuUXRZREtkOVdHVV9ma3MtRFRBQUViSF9LaEh4Q1ZITmJRaHNOa3M2WWlnVE1UZEZsbXJJMmUtQUhjd016ZlROVUVlTjVEZ0JDc1l1WQ?oc=5">Fed’s Waller says next jobs report, not Supreme Court ruling, will be key for March interest rate decision - MarketWatch</a></li></ul></div>
-
-
-
-
-
-
-
-
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMi3wNBVV95cUxQa3BGTjBYVjJmcTFVeW1KWEZNaEU1dUxibVotUFdUdXl1cTlqcVJoUXdjcmRudGN2cVVySm1iaGJrMkMxak5kbl9NN1lKN1dzVFRobmxZQUpCWExORFBtNTRaV0RsSUhNMTdvclNjd2dlNjg3S21Vd21wTHM0Z1ZYeTdnUW11VUZ6ZFFQWDhBSS1tb0dzM2V2ZWVzTURib0FlRnBjTmp4VkM4T0U0OUc1QlozX0kwblhMVUlybkFJaURsbEtGSWlyckEtRXV0VFhtOFhCTFVKWmx5MS1EREo1ODBTV29kTDNHb29EeGZBN0hvdnhCdW9rYXZwVEZpbUNVc0RCVVprOGVXSjM4M2luRFU0UzNMNl9VbFBOcFZ3a25HU1dTbWVBNmQtMDRjVVdaNDdtN3NxS0ZMUjdqSWNOMEFsTHhoRmctOGw0RnJLNFNlbDBWdzg3QVhMVS1SSmVQQURpRVhvcDdrSzRtX3pZWUU4RkNaLU5qakVSZE5XNmJWQ0NQMFNiUnoxbXVuSk8xRGhuUXRZREtkOVdHVV9ma3MtRFRBQUViSF9LaEh4Q1ZITmJRaHNOa3M2WWlnVE1UZEZsbXJJMmUtQUhjd016ZlROVUVlTjVEZ0JDc1l1WQ?oc=5">Fed’s Waller says next jobs report, not Supreme Court ruling, will be key for March interest rate decision - MarketWatch</a> — 연준 통화정책 관련 소식입니다. 금리 결정은 글로벌 자산 배분에 가장 큰 영향을 미치는 변수입니다.</li></ul></div>
 
 
 ## 전체 뉴스 요약

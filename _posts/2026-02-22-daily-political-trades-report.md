@@ -28,14 +28,6 @@ image: "/assets/images/generated/og-daily-political-trades-report-2026-02-22.png
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong>: <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFBoam8zR2lDOWJ4SDVJWlRQUFowS2JzZkxDUlhDUmZKWjFNekh2MVlUcWE3T01jeDR5VFNZMUdRdllDajNUdW5FQlZpd2pKM2s?oc=5">트럼프 "오늘 중으로 10% 글로벌 관세 행정명령 서명"...기존 관세에 추가</a></div>
 
 
-
-
-
-
-
-
-
-
 ## 전체 뉴스 요약
 
 - 총 **23건** 수집

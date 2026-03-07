@@ -32,18 +32,10 @@ description: "2026-02-17 암호화폐 시장에서 109건의 뉴스를 분석했
 
 <strong>암호화폐 시장 **비트코인, 가격/시장** 중심 109건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 51건 수집</li><li>📈 <strong>가격/시장</strong>: 23건 수집</li><li>🔷 <strong>이더리움</strong>: 19건 수집</li><li>🏦 <strong>거래소</strong> (12건): Mirae Asset acquires Korbit cryptocurrency exchange ledgerinsights.com</li></ul></div>
 
-<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMijAFBVV95cUxQbVV0SmFHakNyTnRETnZxRmptSmN0V1Zva21XX1VsZzhSaFZhTkRwcjEydzJVRDBvck00Q1FLU1h4Rzl5VWR0bVNBM0RlbFhVWDAzRGkybmtXaVRpOC1FZjhTMEpRWEJXUWVvdS13Y05rZHVad19IZnpIQWNUSF9zVEFfNXE1REVLZ0hQbQ?hl=en-US&gl=US&ceid=US%3Aen">Veteran analyst warns of shocking Bitcoin crash to $10K</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMijAFBVV95cUxQbVV0SmFHakNyTnRETnZxRmptSmN0V1Zva21XX1VsZzhSaFZhTkRwcjEydzJVRDBvck00Q1FLU1h4Rzl5VWR0bVNBM0RlbFhVWDAzRGkybmtXaVRpOC1FZjhTMEpRWEJXUWVvdS13Y05rZHVad19IZnpIQWNUSF9zVEFfNXE1REVLZ0hQbQ?hl=en-US&gl=US&ceid=US%3Aen">Veteran analyst warns of shocking Bitcoin crash to $10K</a> — 시장 급락 소식입니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</li></ul></div>
 
 
 ![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-17.png' | relative_url }})
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약

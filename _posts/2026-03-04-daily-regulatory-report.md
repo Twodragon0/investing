@@ -16,7 +16,7 @@ description: "전 세계 금융 규제기관의 최신 동향을 정리합니다
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">38</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 22</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">30</div><div class="stat-label">한국</div></div></div>
 <div class="alert-box alert-info"><strong>규제 긴급: 중동 상황 관련  긴급 금융시장상황점검회의 개최 - 38건 분석</strong><ul><li>🔵 <strong>규제/정책</strong> (22건): 개최, Chairman, 금융위 관련 22건의 뉴스가 보고되었습니다.</li><li>🏦 <strong>거래소</strong> (6건): 가상자산, 거래소, 금융위 관련 6건의 뉴스가 보고되었습니다.</li><li>🟠 <strong>비트코인</strong> (1건): 검토중입니다, 세부방안은, 단일종목 관련 1건의 뉴스가 보고되었습니다.</li><li>🏛️ <strong>정치/정책</strong> (7건): 금융위, 현장방문, 개최 관련 7건의 뉴스가 보고되었습니다.</li></ul></div>
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://www.fsc.go.kr/no010101/86360">중동 상황 관련  긴급 금융시장상황점검회의 개최</a></li></ul></div>
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://www.fsc.go.kr/no010101/86360">중동 상황 관련  긴급 금융시장상황점검회의 개최</a> — 지정학적 리스크가 금융시장에 영향을 미치고 있습니다. 유가·환율·안전자산 흐름을 주시해야 합니다.</li></ul></div>
 ## 핵심 요약
 
 - **총 수집 건수**: 38건

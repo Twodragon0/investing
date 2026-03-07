@@ -19,7 +19,7 @@ image: "/assets/images/generated/og-daily-political-trades-report-2026-02-15.png
 
 <strong>**규제/정책, 정치/정책** 관련 5건 수집</strong><ul><li>🔵 <strong>규제/정책</strong> (2건): SEC, 암호화폐 자산 ‘비증권’ 분류 추진시장 변화 예고 디지털투데이</li><li>🏛️ <strong>정치/정책</strong> (2건): 트럼프 “유권자 신분증 의무화, 행정명령으로 추진” 브릿지경제</li></ul></div>
 
-<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTFA3bGU1S21MVkNDV0paalVVSlh5TndpRlIxZllXQzN6VkhnNk45b2Z5b0MzU3ZtRHMzSURwZ213bkdDWUVXbGZCVWh5VjloVXhGWFRnVFVQVHBYTUt0MWVCSjM1eDdvVXN0TTV3QWxvNjRRT2lNRDFrQg?oc=5">트럼프 “유권자 신분증 의무화, 행정명령으로 추진” - 브릿지경제</a></li><li><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxQbjNUb2MxTFlWZDM0RVc1SzVlSkVhNmJVcHRNMDBWU21DZHJSTy12QW93Ny0xTW9tejVjQjAyMko3bnd3WFNBMlVGcVpGLTBQMTF4SmJKWDlmMkNEemJGSXVxZWdFcUh4Z3hpcHlaNGs0RUR3ejA0V2YtS2lzM1FtT1duQUpqQVpzckk5THlNUzVmUnNjdG5hVGdEdU5ZeWdiTnUwN19R?oc=5">Congress’s Rejection of Trump’s Canada “Emergency” Is a Welcome—but Woefully Insufficient—Move - Cato Institute</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTFA3bGU1S21MVkNDV0paalVVSlh5TndpRlIxZllXQzN6VkhnNk45b2Z5b0MzU3ZtRHMzSURwZ213bkdDWUVXbGZCVWh5VjloVXhGWFRnVFVQVHBYTUt0MWVCSjM1eDdvVXN0TTV3QWxvNjRRT2lNRDFrQg?oc=5">트럼프 “유권자 신분증 의무화, 행정명령으로 추진” - 브릿지경제</a> — 트럼프, 유권자, 신분증 관련 시장 뉴스입니다. 투자 판단 시 원문 기사의 세부 내용을 확인하세요.</li><li><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxQbjNUb2MxTFlWZDM0RVc1SzVlSkVhNmJVcHRNMDBWU21DZHJSTy12QW93Ny0xTW9tejVjQjAyMko3bnd3WFNBMlVGcVpGLTBQMTF4SmJKWDlmMkNEemJGSXVxZWdFcUh4Z3hpcHlaNGs0RUR3ejA0V2YtS2lzM1FtT1duQUpqQVpzckk5THlNUzVmUnNjdG5hVGdEdU5ZeWdiTnUwN19R?oc=5">Congress’s Rejection of Trump’s Canada “Emergency” Is a Welcome—but Woefully Insufficient—Move - Cato Institute</a> — 미국 정치·정책 관련 소식입니다. 정책 변화는 특정 섹터와 글로벌 무역 환경에 영향을 줄 수 있습니다.</li></ul></div>
 
 
 <span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:40%"></div></div><span class="theme-count">2건 (40%)</span></div>
@@ -29,14 +29,6 @@ image: "/assets/images/generated/og-daily-political-trades-report-2026-02-15.png
 
 
 ---
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약

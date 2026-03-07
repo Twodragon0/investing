@@ -31,7 +31,7 @@ description: "2026-03-07 암호화폐 시장에서 120건의 뉴스를 분석했
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">120</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 45</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">리스크 위험</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (20회)</div></div></div>
 <div class="alert-box alert-info"><strong>암호화폐 긴급: 연준카리브해에서 4,600만 달러의 암호화폐를 훔친 혐의로 체포된 계약자, FBI가 밝혔습니다. - 120건 분석</strong><ul><li>🟠 <strong>비트코인</strong> (45건): 비트코인, 중동, 여부부터 중심으로 45건의 뉴스가 수집되었습니다.</li><li>🏦 <strong>거래소</strong> (40건): Senate, Binance, KuCoin 이슈가 40건으로 주목받고 있습니다.</li><li>🔵 <strong>규제/정책</strong> (33건): 비트코인 중심으로 33건의 뉴스가 수집되었습니다.</li><li>📈 <strong>가격/시장</strong> (31건): 비트코인, 중동, 여부부터 이슈가 31건으로 주목받고 있습니다.</li></ul></div>
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNeUpDdFBzR2Y5STE2UzRSd2tHUzVMM21GY2ZoMHI3dGJUSlpoeFJMSzN1SG1YUTdMUklHNl81M3Awdi0td19WaHlJTnFzZWNRNmFoa3E4Tnl1dUVKNDFUOWpybG5FeXFUY0pQbzk5STU2MkRRcUVNYVNrZnBwYTV4QWRvUEF4aUJ3TDg0aFNTSDJsMS1EdXcxSmREV2todko1SnZXZDdhT0o1c01rVzhxa3J3R1ZwV3RMUGV1N9IBwgFBVV95cUxPVmJaVy1nc2JnRENlc01SU3RWRlRyc2l1cDdTb0tXTWxvWG9zckZxcXZud1JMRjRTZ0FuUjlmN2QycmhWb2FBLXMwZ2laWXRQRkktcjRvUEozd0JJa0dWcC1URzk1ay1QRldNSG5HUEpvN3lKOTRtb1o3elZXNkw0OTEzYkkwS2R4ZjQwZVlOUjlrZ1RHMUdoakFEckxRd25Tc3hoSHItUG5xMDIzVXFISUVlQ2J1Wm9mUUl0Y1dlNG54QQ?oc=5">연준카리브해에서 4,600만 달러의 암호화폐를 훔친 혐의로 체포된 계약자, FBI가 밝혔습니다.</a> <span class="p0-desc">연준 통화정책 관련 소식입니다. 금리 결정은 글로벌 자산 배분에 가장 큰 영향을 미치는 변수입니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMizwFBVV95cUxPUWlxSDc2Tm91QTI2RlNfSWR6aFZMNlc3bmZwZGN3SkdSblMzSzdNb1ZoSHZsN24yUDltNVVoMl96a3hXdGpWSnh4Wmt3Q1o2SFAybXE2VlJoZWo0SHlWSXpfdHlnMlp6bDV5ZVlSQllZSFlJWThsS2FTNmhNNkpIa0hWak1jWmYxX1JJVjc2X25mQ0lDcllveHJsQXBuUHA2YnpSTGpoOGdhLUpnMEtfVks2TG5XUTQtN05ZZlk2aEFnNVJteDVRZ1VGbDFvTjA?oc=5">John Daghita(일명 "John/Lick"), 미국 보안관과 관련된 암호화폐 절도 혐의로 체포됨 &#124; TRM 블로그 - TRM 연구소</a> <span class="p0-desc">암호화폐 시장 관련 소식입니다. 디지털 자산 가격은 거시경제 환경과 규제 동향에 연동됩니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1wOGUzbkU4VkdobklKd0kxUDZreXRiazlSU290R0xRbDRCNVBkZzVrUFJzV0dTb183Zm5RMTF6a2ZKNVYzTW0wNERCQWViTUpZejJ4WkdJclhueWp6MzlEUWxIcEFpM1dPZk9aeUxxNU_SAXNBVV95cUxPMUtDY2V6RkswQ3E4MzZIRXlaeVJYX25NUDNoNlJHQ05jQ0ZuYV9TMlFxOXJ1TzkteUJjV2RlUExuaWxDSGVNa3o0RkpxVWdrNEdXQU0tNXd0R2pXVkRrZk94aXJWRXdBOFlHZGxTYTZqX29v?oc=5">비트코인·알트코인 '장중 급락'...주요 변수는? - 초이스경제</a> <span class="p0-desc">비트코인·알트코인 '장중 급락'...주요 변수는? 초이스경제</span></li></ul></div>
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNeUpDdFBzR2Y5STE2UzRSd2tHUzVMM21GY2ZoMHI3dGJUSlpoeFJMSzN1SG1YUTdMUklHNl81M3Awdi0td19WaHlJTnFzZWNRNmFoa3E4Tnl1dUVKNDFUOWpybG5FeXFUY0pQbzk5STU2MkRRcUVNYVNrZnBwYTV4QWRvUEF4aUJ3TDg0aFNTSDJsMS1EdXcxSmREV2todko1SnZXZDdhT0o1c01rVzhxa3J3R1ZwV3RMUGV1N9IBwgFBVV95cUxPVmJaVy1nc2JnRENlc01SU3RWRlRyc2l1cDdTb0tXTWxvWG9zckZxcXZud1JMRjRTZ0FuUjlmN2QycmhWb2FBLXMwZ2laWXRQRkktcjRvUEozd0JJa0dWcC1URzk1ay1QRldNSG5HUEpvN3lKOTRtb1o3elZXNkw0OTEzYkkwS2R4ZjQwZVlOUjlrZ1RHMUdoakFEckxRd25Tc3hoSHItUG5xMDIzVXFISUVlQ2J1Wm9mUUl0Y1dlNG54QQ?oc=5">연준카리브해에서 4,600만 달러의 암호화폐를 훔친 혐의로 체포된 계약자, FBI가 밝혔습니다.</a> <span class="p0-desc">미 연방정부 계약업체 대표의 아들 John Daghita가 US Marshals 관리 암호화폐 지갑에서 4,600만 달러를 탈취한 혐의로 카리브해 생마르탱에서 FBI 합동작전으로 체포되었습니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMizwFBVV95cUxPUWlxSDc2Tm91QTI2RlNfSWR6aFZMNlc3bmZwZGN3SkdSblMzSzdNb1ZoSHZsN24yUDltNVVoMl96a3hXdGpWSnh4Wmt3Q1o2SFAybXE2VlJoZWo0SHlWSXpfdHlnMlp6bDV5ZVlSQllZSFlJWThsS2FTNmhNNkpIa0hWak1jWmYxX1JJVjc2X25mQ0lDcllveHJsQXBuUHA2YnpSTGpoOGdhLUpnMEtfVks2TG5XUTQtN05ZZlk2aEFnNVJteDVRZ1VGbDFvTjA?oc=5">John Daghita(일명 "John/Lick"), 미국 보안관과 관련된 암호화폐 절도 혐의로 체포됨 &#124; TRM 블로그 - TRM 연구소</a> <span class="p0-desc">블록체인 분석가 ZachXBT가 텔레그램 대화와 온체인 데이터로 Daghita의 정체를 밝혔으며, 탈취 자금 중 2,490만 달러는 2016년 비트파이넥스 해킹 압수 자산에서 유래했습니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1wOGUzbkU4VkdobklKd0kxUDZreXRiazlSU290R0xRbDRCNVBkZzVrUFJzV0dTb183Zm5RMTF6a2ZKNVYzTW0wNERCQWViTUpZejJ4WkdJclhueWp6MzlEUWxIcEFpM1dPZk9aeUxxNU_SAXNBVV95cUxPMUtDY2V6RkswQ3E4MzZIRXlaeVJYX25NUDNoNlJHQ05jQ0ZuYV9TMlFxOXJ1TzkteUJjV2RlUExuaWxDSGVNa3o0RkpxVWdrNEdXQU0tNXd0R2pXVkRrZk94aXJWRXdBOFlHZGxTYTZqX29v?oc=5">비트코인·알트코인 '장중 급락'...주요 변수는? - 초이스경제</a> <span class="p0-desc">비트코인·알트코인 '장중 급락'...주요 변수는? 초이스경제</span></li></ul></div>
 
 ## 전체 뉴스 요약
 
@@ -51,7 +51,7 @@ description: "2026-03-07 암호화폐 시장에서 120건의 뉴스를 분석했
 <div class="news-card-num">1</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE8tQ0ZMeUtVZmUwMy1FeThMRzN0NFJVMnJvaThvbkM5QzJEcG95VmFiQTZiM1prZ0x3OGFDY3JRRjBHdHhFVzdydEZvSGpCdzA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">죽 쑤던 비트코인, 중동 사태 발발 이후 12% 껑충…코인 시총은 6% &#x27;쑥&#x27;</a>
-<p class="news-desc">지정학적 리스크가 금융시장에 영향을 미치고 있습니다. 유가·환율·안전자산 흐름을 주시해야 합니다.</p>
+<p class="news-desc">미-이란 전쟁 발발 후 약 일주일간 비트코인이 12% 상승해 7만 3,888달러까지 치솟았으며, 글로벌 가상자산 시총도 2조 4,880억 달러로 6% 증가했습니다. 반면 S&P500은 전쟁 이전 수준을 회복하지 못하고 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -61,7 +61,7 @@ description: "2026-03-07 암호화폐 시장에서 120건의 뉴스를 분석했
 <div class="news-card-num">2</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNUFctUUNwSGhWU0FHNV9ZX1I4UnFRckRVREVpQllwWjIwbDlqdVNRUUZpLW5XNEF2bUhVVmpwdzVIX19sRVgxQk9hMW5rekxuQVdVZnpjUWowQ2djWjljTEpfY2d5VnBtcWtLamhtY0Z1TzBZYTVHdzhqcXFvYmQ3ZtIBlAFBVV95cUxPWXRqc19nMC1TOERRdk45QUZoSVFzLTVweVdkOHNMS3hxRjM3YjRGNldTcVQ0VlRvRi1IX1ZIUk9KUU5BSzF3X2k3bllVMTdVMVJNOHNHejExWHoxa2k5a0RRUl94aUhGYld5QzZxZzJyb2hOc1N5TF81TEpaTnR1dXhDSnZlYTJ4MXhLMTBuZG1aVEV1?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인, 전쟁통에도 선방... 중동 소식에 가격은 요동</a>
-<p class="news-desc">지정학적 리스크가 금융시장에 영향을 미치고 있습니다. 유가·환율·안전자산 흐름을 주시해야 합니다.</p>
+<p class="news-desc">미-이란 공습 직후 6만 3,000달러대까지 급락했던 비트코인이 V자 반등하며 7만 달러를 재돌파했습니다. 증시 급락과 대비되며 디지털 금 내러티브가 재조명되고 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -71,14 +71,14 @@ description: "2026-03-07 암호화폐 시장에서 120건의 뉴스를 분석했
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE53UlMwejRkbV9XbDFkNGlWVG13Z2w1N3RCYktTY00tWjNoVUZJNGhBZTZYWTdva2s1OVdHWmU0a010RGFQc0VxMElvWjdQOWtoUFBj?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인, 러시아 이혼 소송서 최대 분쟁 자산…&quot;존재 여부부터 증명해야&quot;</a>
-<p class="news-desc">지정학적 리스크가 금융시장에 영향을 미치고 있습니다. 유가·환율·안전자산 흐름을 주시해야 합니다.</p>
+<p class="news-desc">러시아가 암호화폐를 이혼 시 재산분할 대상으로 법적 재산 인정하는 법제화를 추진 중이며, 블록체인 자산의 추적·은닉 문제로 존재 여부 증명 자체가 최대 쟁점으로 부각되고 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
 
 <details><summary>그 외 41건 보기</summary><div class="details-content"><ol class="news-overflow-list">
-<li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTTR4R0FMemZRYXpaUlR6MWppaW5jZEViUzRqUC05ZEtqaEFpcFlPQkdYcHJ6bW1IOTlZYzFPNDRzaU1QS3dMMGpEaGdrZm5oLTRrb3VvWm4zUlBUNUlRUXZwdkVQR3JTbm9nakV3X3RPa0dRUjc3TUxZX1Vta1QzSkVjbUF0R0tS?oc=5">양자 컴퓨터가 비트코인 뚫을 때 XRP는 웃는다?…독보적 프로토콜 주목</a></li>
-<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1KZjNVdzBSLVh6NTZEY2RlNGRkUC0wRVlQc3VLX1hNNkdXem5raGpoTFpLRG9rd2FDeUw1WWFubTZFUk1DUDFRdFZoNV9jWTdVU0Y3UGNvdG1NaFREZUM4OFg2UGlZVm5wRHJ4amRaRmt5b28?oc=5">비트코인, 5만 달러 항복 전 더 낮은 저점 예상 - ’암호화폐 대부’ - Investing.com 한국어</a></li>
+<li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTTR4R0FMemZRYXpaUlR6MWppaW5jZEViUzRqUC05ZEtqaEFpcFlPQkdYcHJ6bW1IOTlZYzFPNDRzaU1QS3dMMGpEaGdrZm5oLTRrb3VvWm4zUlBUNUlRUXZwdkVQR3JTbm9nakV3X3RPa0dRUjc3TUxZX1Vta1QzSkVjbUF0R0tS?oc=5">양자 컴퓨터가 비트코인 뚫을 때 XRP는 웃는다?…독보적 프로토콜 주목</a> — 디지털 자산·블록체인 관련 소식입니다. 규제 동향과 기술 발전이 시장 방향의 핵심 변수입니다.</li>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1KZjNVdzBSLVh6NTZEY2RlNGRkUC0wRVlQc3VLX1hNNkdXem5raGpoTFpLRG9rd2FDeUw1WWFubTZFUk1DUDFRdFZoNV9jWTdVU0Y3UGNvdG1NaFREZUM4OFg2UGlZVm5wRHJ4amRaRmt5b28?oc=5">비트코인, 5만 달러 항복 전 더 낮은 저점 예상 - ’암호화폐 대부’ - Investing.com 한국어</a> — 디지털 자산·블록체인 관련 소식입니다. 규제 동향과 기술 발전이 시장 방향의 핵심 변수입니다.</li>
 <li><em>...외 26건</em></li>
 </ol></div></details>
 
@@ -92,7 +92,7 @@ description: "2026-03-07 암호화폐 시장에서 120건의 뉴스를 분석했
 <div class="news-card-num">1</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxOYjhkamxsMTZnMGR3RkN5X3NwNDBkbEJtclNETGx6cjMxZmktcFFOQmI0X2g2bjNRampET0tmYUNYUWJfb1k5U3RGOEQwcGZqTkZMekRlblg2RkNJUDRuRTdYUk9jSGJxU0h1T3d0eUhmaFQtUjRxUk1sR0tOenZsc1ozZkR0elYyWllvQ2V0bDQ1WG5aa1o2eUl5RThCRVk3MXk3Uk9TblFsbzJyaXN2TUFqZUoyYzhES19HV2RJTkl6T0tkOG5XMFRzUEc4R1ZiTFE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Vara, 암호화폐 거래소 KuCoin에 Dubai 운영 중단 지시 - CoinDesk</a>
-<p class="news-desc">AI·기술 섹터 관련 소식입니다. AI 산업의 성장세와 규제 동향이 관련주 투자에 핵심 변수입니다.</p>
+<p class="news-desc">두바이 가상자산규제청(VARA)이 KuCoin이 적절한 라이선스 없이 운영 중이라며 즉시 중단을 명령했습니다. 오스트리아 FMA의 신규 고객 금지 조치에 이은 연쇄 규제 조치입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -119,8 +119,8 @@ description: "2026-03-07 암호화폐 시장에서 120건의 뉴스를 분석했
 </div>
 
 <details><summary>그 외 37건 보기</summary><div class="details-content"><ol class="news-overflow-list">
-<li><a href="https://www.coindesk.com/policy/2026/03/06/dubai-crypto-regulator-says-kucoin-exchange-is-operating-without-proper-license-and-must-stop">Dubai 암호화폐 규제 기관에서는 KuCoin 거래소가 적절한 라이선스 없이 운영되고 있으며 이를 중단해야 한다고 말합니다.</a></li>
-<li><a href="https://cointelegraph.com/news/bitcoin-etf-rebound-stablecoin-inflows-defi-governance-hacks-finance-redefined?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">비트코인 회복은 에이브 균열이 심화됨에 따라 디파이 긴장을 충족시킵니다. 재정 Re디파이ned</a></li>
+<li><a href="https://www.coindesk.com/policy/2026/03/06/dubai-crypto-regulator-says-kucoin-exchange-is-operating-without-proper-license-and-must-stop">Dubai 암호화폐 규제 기관에서는 KuCoin 거래소가 적절한 라이선스 없이 운영되고 있으며 이를 중단해야 한다고 말합니다.</a> — 외국인·기관 수급 동향입니다. 대규모 순매수/순매도는 시장 방향성의 중요한 선행 지표입니다.</li>
+<li><a href="https://cointelegraph.com/news/bitcoin-etf-rebound-stablecoin-inflows-defi-governance-hacks-finance-redefined?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">비트코인 회복은 에이브 균열이 심화됨에 따라 디파이 긴장을 충족시킵니다. 재정 Re디파이ned</a> — 디지털 자산·블록체인 관련 소식입니다. 규제 동향과 기술 발전이 시장 방향의 핵심 변수입니다.</li>
 <li><em>...외 22건</em></li>
 </ol></div></details>
 
@@ -134,7 +134,7 @@ description: "2026-03-07 암호화폐 시장에서 120건의 뉴스를 분석했
 <div class="news-card-num">1</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQVEk2Ty0tTndRMTk5RWJEWmVUNVJIRzN3TkZjRVh5TW1zUVZzTUo4ZVd3MjdjX2NvNlpfeVdoR2l2MjRjbVI2NmpLSV9qaUhvempmTmRqQ29QRkdSaDlIOFA0dzRIS3FFazVGeGhvUWlodUR6Rkc4WWU0RGlIeHFMc1hfWVphd1U1NzB3ZHcxQnhmaUpTcDRyUQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">1,000달러 있어요? 이 암호화폐는 장기 보유를 위한 No-Brainer 구매입니다 - The Motley Fool</a>
-<p class="news-desc">암호화폐 시장 관련 소식입니다. 디지털 자산 가격은 거시경제 환경과 규제 동향에 연동됩니다.</p>
+<p class="news-desc">Motley Fool이 이더리움(ETH)을 1,000달러 장기투자 최적 종목으로 추천했습니다. DeFi 시장 TVL 550억 달러 점유와 2026년 하반기 Hegota 업그레이드 예정이 핵심 근거입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -144,7 +144,7 @@ description: "2026-03-07 암호화폐 시장에서 120건의 뉴스를 분석했
 <div class="news-card-num">2</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxQRkt5YVk1VHNNeFQ2VlpKdVJ4bkI2VWZJTWI1TFo5dlduVzR0QmRORlJtRWJjT3k4Y1B2bE92bzVDTkRJVjVRblIweUVoUzlCX1k0SFhYdW5JaWVNU1l0Zmlxc0w4ZjczSXVsSE1jc2Q5bGU3UjZ2aG9BV1h0UUsxcHoyVTlWdW1fS1ZrSDE1S1cxYjFhLUVhU0ZiWXR2UUtzQWhkVA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Ben McKenzie 암호화폐 다큐멘터리 &#x27;모두가 돈 때문에 당신에게 거짓말을 하고 있습니다&#x27; The Forge에서 인수(독점)</a>
-<p class="news-desc">암호화폐 시장 관련 소식입니다. 디지털 자산 가격은 거시경제 환경과 규제 동향에 연동됩니다.</p>
+<p class="news-desc">OC·고담 배우 Ben McKenzie가 감독한 암호화폐 사기 다큐멘터리를 The Forge가 북미 배급권을 인수했습니다. FTX 창립자 Sam Bankman-Fried 인터뷰를 포함하며 4월 17일 극장 개봉 예정입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -154,14 +154,14 @@ description: "2026-03-07 암호화폐 시장에서 120건의 뉴스를 분석했
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxNaTNwSWdmMFE0QnFTemJRcm1teXl5OVFHbjZzNTdNOUtDa2VsVWRNbUlCYXhzRU5LbUVUeHZFVkEzYXlqaWtuV2pfYWF3SGpPNWMwbjgwTU1TNDh3Mk1zSE9obE1jWGdjU0RhLTY1Q2JTNWxqRHdZTEY5MjBYYWFGSjVKNnZjdw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">1 2026년에 반등할 암호화폐</a>
-<p class="news-desc">암호화폐 시장 관련 소식입니다. 디지털 자산 가격은 거시경제 환경과 규제 동향에 연동됩니다.</p>
+<p class="news-desc">2026년 암호화폐 시장이 조정기를 겪고 있는 가운데, 반감기 사이클과 기관 자금 유입을 근거로 반등 가능성이 높은 종목을 분석한 기사입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
 
 <details><summary>그 외 30건 보기</summary><div class="details-content"><ol class="news-overflow-list">
-<li><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNeUpDdFBzR2Y5STE2UzRSd2tHUzVMM21GY2ZoMHI3dGJUSlpoeFJMSzN1SG1YUTdMUklHNl81M3Awdi0td19WaHlJTnFzZWNRNmFoa3E4Tnl1dUVKNDFUOWpybG5FeXFUY0pQbzk5STU2MkRRcUVNYVNrZnBwYTV4QWRvUEF4aUJ3TDg0aFNTSDJsMS1EdXcxSmREV2todko1SnZXZDdhT0o1c01rVzhxa3J3R1ZwV3RMUGV1N9IBwgFBVV95cUxPVmJaVy1nc2JnRENlc01SU3RWRlRyc2l1cDdTb0tXTWxvWG9zckZxcXZud1JMRjRTZ0FuUjlmN2QycmhWb2FBLXMwZ2laWXRQRkktcjRvUEozd0JJa0dWcC1URzk1ay1QRldNSG5HUEpvN3lKOTRtb1o3elZXNkw0OTEzYkkwS2R4ZjQwZVlOUjlrZ1RHMUdoakFEckxRd25Tc3hoSHItUG5xMDIzVXFISUVlQ2J1Wm9mUUl0Y1dlNG54QQ?oc=5">연준카리브해에서 4,600만 달러의 암호화폐를 훔친 혐의로 체포된 계약자, FBI가 밝혔습니다.</a></li>
-<li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxQMHp0ZV9UT2pFSG15a2RtaHQ5YUJNbTlfUlBLNHAzcnRScmptOHF2MFhOMm1pUGZ3Z0tRM091Wks4dllBU0U0RzBENF9yelRudnB1WkRyRi1Pc211MzBvYlNmUzQ1dkk1Zkd0N0NfQlFseGJzeWJ5bUtiQzRtR21Vc1o5QW94NldrT3JPa0dyQXRYTGR6SFEwdHY0QXlHOHJMYzQ0RmF6YjJzMnZsZlFGSk93?oc=5">암호화폐 법안이 새로운 난관에 부딪혔고 rai은 미래에 대한 의구심을 품었습니다.</a></li>
+<li><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNeUpDdFBzR2Y5STE2UzRSd2tHUzVMM21GY2ZoMHI3dGJUSlpoeFJMSzN1SG1YUTdMUklHNl81M3Awdi0td19WaHlJTnFzZWNRNmFoa3E4Tnl1dUVKNDFUOWpybG5FeXFUY0pQbzk5STU2MkRRcUVNYVNrZnBwYTV4QWRvUEF4aUJ3TDg0aFNTSDJsMS1EdXcxSmREV2todko1SnZXZDdhT0o1c01rVzhxa3J3R1ZwV3RMUGV1N9IBwgFBVV95cUxPVmJaVy1nc2JnRENlc01SU3RWRlRyc2l1cDdTb0tXTWxvWG9zckZxcXZud1JMRjRTZ0FuUjlmN2QycmhWb2FBLXMwZ2laWXRQRkktcjRvUEozd0JJa0dWcC1URzk1ay1QRldNSG5HUEpvN3lKOTRtb1o3elZXNkw0OTEzYkkwS2R4ZjQwZVlOUjlrZ1RHMUdoakFEckxRd25Tc3hoSHItUG5xMDIzVXFISUVlQ2J1Wm9mUUl0Y1dlNG54QQ?oc=5">연준카리브해에서 4,600만 달러의 암호화폐를 훔친 혐의로 체포된 계약자, FBI가 밝혔습니다.</a> — 연준카리브해에서, 달러의, 암호화폐를 관련 시장 뉴스입니다. 투자 판단 시 원문 기사의 세부 내용을 확인하세요.</li>
+<li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxQMHp0ZV9UT2pFSG15a2RtaHQ5YUJNbTlfUlBLNHAzcnRScmptOHF2MFhOMm1pUGZ3Z0tRM091Wks4dllBU0U0RzBENF9yelRudnB1WkRyRi1Pc211MzBvYlNmUzQ1dkk1Zkd0N0NfQlFseGJzeWJ5bUtiQzRtR21Vc1o5QW94NldrT3JPa0dyQXRYTGR6SFEwdHY0QXlHOHJMYzQ0RmF6YjJzMnZsZlFGSk93?oc=5">암호화폐 법안이 새로운 난관에 부딪혔고 rai은 미래에 대한 의구심을 품었습니다.</a> — 암호화폐, 법안이, 새로운 관련 시장 뉴스입니다. 투자 판단 시 원문 기사의 세부 내용을 확인하세요.</li>
 <li><em>...외 15건</em></li>
 </ol></div></details>
 
@@ -201,11 +201,11 @@ description: "2026-03-07 암호화폐 시장에서 120건의 뉴스를 분석했
 </div>
 
 <details><summary>그 외 27건 보기</summary><div class="details-content"><ol class="news-overflow-list">
-<li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE8tQ0ZMeUtVZmUwMy1FeThMRzN0NFJVMnJvaThvbkM5QzJEcG95VmFiQTZiM1prZ0x3OGFDY3JRRjBHdHhFVzdydEZvSGpCdzA?oc=5">죽 쑤던 비트코인, 중동 사태 발발 이후 12% 껑충…코인 시총은 6% '쑥'</a></li>
-<li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNUFctUUNwSGhWU0FHNV9ZX1I4UnFRckRVREVpQllwWjIwbDlqdVNRUUZpLW5XNEF2bUhVVmpwdzVIX19sRVgxQk9hMW5rekxuQVdVZnpjUWowQ2djWjljTEpfY2d5VnBtcWtLamhtY0Z1TzBZYTVHdzhqcXFvYmQ3ZtIBlAFBVV95cUxPWXRqc19nMC1TOERRdk45QUZoSVFzLTVweVdkOHNMS3hxRjM3YjRGNldTcVQ0VlRvRi1IX1ZIUk9KUU5BSzF3X2k3bllVMTdVMVJNOHNHejExWHoxa2k5a0RRUl94aUhGYld5QzZxZzJyb2hOc1N5TF81TEpaTnR1dXhDSnZlYTJ4MXhLMTBuZG1aVEV1?oc=5">비트코인, 전쟁통에도 선방... 중동 소식에 가격은 요동</a></li>
-<li><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE53UlMwejRkbV9XbDFkNGlWVG13Z2w1N3RCYktTY00tWjNoVUZJNGhBZTZYWTdva2s1OVdHWmU0a010RGFQc0VxMElvWjdQOWtoUFBj?oc=5">비트코인, 러시아 이혼 소송서 최대 분쟁 자산…"존재 여부부터 증명해야"</a></li>
-<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE05YXBqNlVhV0pVVFZpQ1JrckluSXNuNjgxVjg0RVF1V1daRVdzcU9pZFVuSjlIaVU5a0k4U3hwTnlrbUJIN0pJbmhLX1YxZkpTeWxVQm5CVDUtZ9IBVEFVX3lxTE45WUNIQTBJY29NWDF0QXg1c0p0dFAtcVYtajlLcXZzaWZRbUQwZkZPc0JpYTBWSXVmamRxWVNSWHdqd1IySGpaTEJGN3VIUDFoREEyQw?oc=5">"비트코인, 안전자산 지위 입증했다"…이란 사태에 '디지털 금' 재조명</a></li>
-<li><a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE1qQjFMTVUyUFJhUFFGa0RaZmRSOUw1QU4tM1VlLWRPY0xJSUZIV0lRSnJmcG9reVpIZXBuSVlqeGZyc0xvMVdzWDV5ZHdhbl9SbHBwRFVjUmZ1bkprVjJXbDZn?oc=5">금보다 더 금 같네, 전쟁 뚫고 치솟는 코인 - 미주중앙일보</a></li>
+<li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE8tQ0ZMeUtVZmUwMy1FeThMRzN0NFJVMnJvaThvbkM5QzJEcG95VmFiQTZiM1prZ0x3OGFDY3JRRjBHdHhFVzdydEZvSGpCdzA?oc=5">죽 쑤던 비트코인, 중동 사태 발발 이후 12% 껑충…코인 시총은 6% '쑥'</a> — 지정학적 리스크가 금융시장에 영향을 미치고 있습니다. 유가·환율·안전자산 흐름을 주시해야 합니다.</li>
+<li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNUFctUUNwSGhWU0FHNV9ZX1I4UnFRckRVREVpQllwWjIwbDlqdVNRUUZpLW5XNEF2bUhVVmpwdzVIX19sRVgxQk9hMW5rekxuQVdVZnpjUWowQ2djWjljTEpfY2d5VnBtcWtLamhtY0Z1TzBZYTVHdzhqcXFvYmQ3ZtIBlAFBVV95cUxPWXRqc19nMC1TOERRdk45QUZoSVFzLTVweVdkOHNMS3hxRjM3YjRGNldTcVQ0VlRvRi1IX1ZIUk9KUU5BSzF3X2k3bllVMTdVMVJNOHNHejExWHoxa2k5a0RRUl94aUhGYld5QzZxZzJyb2hOc1N5TF81TEpaTnR1dXhDSnZlYTJ4MXhLMTBuZG1aVEV1?oc=5">비트코인, 전쟁통에도 선방... 중동 소식에 가격은 요동</a> — 지정학적 리스크가 금융시장에 영향을 미치고 있습니다. 유가·환율·안전자산 흐름을 주시해야 합니다.</li>
+<li><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE53UlMwejRkbV9XbDFkNGlWVG13Z2w1N3RCYktTY00tWjNoVUZJNGhBZTZYWTdva2s1OVdHWmU0a010RGFQc0VxMElvWjdQOWtoUFBj?oc=5">비트코인, 러시아 이혼 소송서 최대 분쟁 자산…"존재 여부부터 증명해야"</a> — 지정학적 리스크가 금융시장에 영향을 미치고 있습니다. 유가·환율·안전자산 흐름을 주시해야 합니다.</li>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE05YXBqNlVhV0pVVFZpQ1JrckluSXNuNjgxVjg0RVF1V1daRVdzcU9pZFVuSjlIaVU5a0k4U3hwTnlrbUJIN0pJbmhLX1YxZkpTeWxVQm5CVDUtZ9IBVEFVX3lxTE45WUNIQTBJY29NWDF0QXg1c0p0dFAtcVYtajlLcXZzaWZRbUQwZkZPc0JpYTBWSXVmamRxWVNSWHdqd1IySGpaTEJGN3VIUDFoREEyQw?oc=5">"비트코인, 안전자산 지위 입증했다"…이란 사태에 '디지털 금' 재조명</a> — 지정학적 리스크가 금융시장에 영향을 미치고 있습니다. 유가·환율·안전자산 흐름을 주시해야 합니다.</li>
+<li><a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE1qQjFMTVUyUFJhUFFGa0RaZmRSOUw1QU4tM1VlLWRPY0xJSUZIV0lRSnJmcG9reVpIZXBuSVlqeGZyc0xvMVdzWDV5ZHdhbl9SbHBwRFVjUmZ1bkprVjJXbDZn?oc=5">금보다 더 금 같네, 전쟁 뚫고 치솟는 코인 - 미주중앙일보</a> — 지정학적 리스크가 금융시장에 영향을 미치고 있습니다. 유가·환율·안전자산 흐름을 주시해야 합니다.</li>
 <li><em>...외 12건</em></li>
 </ol></div></details>
 
@@ -248,10 +248,9 @@ description: "2026-03-07 암호화폐 시장에서 120건의 뉴스를 분석했
 </div>
 
 <details><summary>그 외 14건 보기</summary><div class="details-content"><ol class="news-overflow-list">
-<li><a href="https://cointelegraph.com/news/ex-cfo-sentenced-crypto-venture-fraud?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">3,500만 달러를 암호화폐 벤처에 전용한 전 CFO에게 징역 2년 선고</a></li>
-<li><a href="https://cointelegraph.com/news/curve-accuses-pancakeswap-copy-code?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Curve Finance는 PancakeSwap이 코드를 복사했다고 비난했습니다.</a></li>
+<li><a href="https://cointelegraph.com/news/ex-cfo-sentenced-crypto-venture-fraud?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">3,500만 달러를 암호화폐 벤처에 전용한 전 CFO에게 징역 2년 선고</a> — 달러를, 암호화폐, 벤처에 관련 시장 뉴스입니다. 투자 판단 시 원문 기사의 세부 내용을 확인하세요.</li>
+<li><a href="https://cointelegraph.com/news/curve-accuses-pancakeswap-copy-code?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Curve Finance는 PancakeSwap이 코드를 복사했다고 비난했습니다.</a> — 코드를, 복사했다고, 비난했습니다 관련 시장 뉴스입니다. 투자 판단 시 원문 기사의 세부 내용을 확인하세요.</li>
 </ol></div></details>
-
 
 
 ## 거래소 공지사항
