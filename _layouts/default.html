@@ -189,5 +189,28 @@
     });
   })();
   </script>
+
+  <!-- Mermaid.js for diagrams -->
+  <script>
+  (function() {
+    var mermaids = document.querySelectorAll('.language-mermaid, pre code.language-mermaid');
+    if (!mermaids.length) return;
+    mermaids.forEach(function(el) {
+      var pre = el.closest('pre');
+      var container = document.createElement('div');
+      container.className = 'mermaid';
+      container.textContent = el.textContent;
+      if (pre) { pre.parentNode.replaceChild(container, pre); }
+      else { el.parentNode.replaceChild(container, el); }
+    });
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js';
+    script.onload = function() {
+      var isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+      mermaid.initialize({ startOnLoad: true, theme: isDark ? 'dark' : 'default', securityLevel: 'loose' });
+    };
+    document.head.appendChild(script);
+  })();
+  </script>
 </body>
 </html>
