@@ -191,7 +191,7 @@ description: "2026-03-07 주식 시장에서 94건의 뉴스를 분석했습니�
 <div class="news-card-item">
 <div class="news-card-num">2</div>
 <div class="news-card-body">
-<a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxOWE1yQl94N1ZzOVUtaFEwVG42Z0xOQkcxS2F4Z2VPWGxPN1c3eXJwZ0U5RG5JNlRqRlo4bk1iM0I0ZnZQTlJSU3JNQ01xZTdJanZpcXhWTE9fTlZPbGJySkVjRFAzMXd1Z3JpZ2NmeFpfbnNxYlBSTEpBcDdaMHVtcHNfUTlPcGd0WVlOdkZMa1RmUGNwNUNHOUJwNnJGNTMt?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">엔비디아-동점 AI 주식 Vertiv, Lumentum, Coherent가 S&amp;P 500 지수에 합류 - 투자자 비즈니스 DAIly</a>
+<a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxOWE1yQl94N1ZzOVUtaFEwVG42Z0xOQkcxS2F4Z2VPWGxPN1c3eXJwZ0U5RG5JNlRqRlo4bk1iM0I0ZnZQTlJSU3JNQ01xZTdJanZpcXhWTE9fTlZPbGJySkVjRFAzMXd1Z3JpZ2NmeFpfbnNxYlBSTEpBcDdaMHVtcHNfUTlPcGd0WVlOdkZMa1RmUGNwNUNHOUJwNnJGNTMt?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">엔비디아-동점 AI 주식 Vertiv, Lumentum, Coherent가 S&amp;P 500 지수에 합류 - 투자자 비즈니스 Daily</a>
 <p class="news-desc">AI·기술 섹터 관련 소식입니다. AI 산업의 성장세와 규제 동향이 관련주 투자에 핵심 변수입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
