@@ -4,7 +4,7 @@ title: "암호화폐 시장 종합 리포트 - 2026-03-06"
 date: 2026-03-06 03:08:44 +0000
 categories: [market-analysis]
 tags: ["market-report", "crypto", "top-coins", "trending", "daily"]
-source: "CoinMarketCap"
+source: "CoinGecko"
 source_url: "https://www.coingecko.com/"
 lang: "ko"
 description: "오늘 시가총액 상위 30개 코인을 기준으로 시장을 분석했습니다. 비트코인은 $71,244에서 24시간 -1.98% 하락하며 시장에 조정 신호를 보내고 있습니다. 전체 시가총액은 $2.49T으로 전일 대비 -1.20% 변동했으며, BTC 도미넌스 57.1%로 비트코인 중심 자금 흐름이…"
