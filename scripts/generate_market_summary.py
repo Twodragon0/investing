@@ -855,14 +855,8 @@ def generate_key_highlights(
             key=lambda c: c.get("price_change_percentage_24h") or 0,
             reverse=True,
         )
-        gainers = [
-            c for c in sorted_coins
-            if (c.get("price_change_percentage_24h") or 0) > 0
-        ]
-        losers = [
-            c for c in sorted_coins
-            if (c.get("price_change_percentage_24h") or 0) < 0
-        ]
+        gainers = [c for c in sorted_coins if (c.get("price_change_percentage_24h") or 0) > 0]
+        losers = [c for c in sorted_coins if (c.get("price_change_percentage_24h") or 0) < 0]
         if gainers and losers:
             best = gainers[0]
             worst = losers[-1]

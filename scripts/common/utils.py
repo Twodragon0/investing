@@ -116,9 +116,21 @@ def truncate_sentence(text: str, max_length: int = 300) -> str:
     truncated = text[:max_length]
     # Try Korean sentence endings first, then general
     for sep in [
-        "다. ", "요. ", "음. ", "됩니다. ", "입니다. ", "습니다. ",
-        "했다. ", "됐다. ", "였다. ", "합니다. ",
-        ". ", "。", "! ", "? ", ".\n",
+        "다. ",
+        "요. ",
+        "음. ",
+        "됩니다. ",
+        "입니다. ",
+        "습니다. ",
+        "했다. ",
+        "됐다. ",
+        "였다. ",
+        "합니다. ",
+        ". ",
+        "。",
+        "! ",
+        "? ",
+        ".\n",
     ]:
         last_sep = truncated.rfind(sep)
         if last_sep > max_length * 0.4:

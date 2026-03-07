@@ -1345,7 +1345,9 @@ def main():
 
     if briefing_image:
         content_parts.append(f'![multi-asset-briefing]({{{{ "{briefing_image}" | relative_url }}}})\n')
-    fallback_briefing = _render_generated_image(f"news-briefing-daily-{today}.png", "시가총액 기준 상위 10 암호화폐 현황")
+    fallback_briefing = _render_generated_image(
+        f"news-briefing-daily-{today}.png", "시가총액 기준 상위 10 암호화폐 현황"
+    )
     legacy_briefing = _render_generated_image(f"news-briefing-{today}.png", "시가총액 기준 상위 10 암호화폐 현황")
     if not briefing_image and fallback_briefing:
         content_parts.append(fallback_briefing + "\n")

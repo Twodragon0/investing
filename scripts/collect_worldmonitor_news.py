@@ -500,9 +500,11 @@ def _generate_worldmonitor_summary(
             lambda sc, mc: (
                 f"안보({sc}건)와 금융시장({mc}건) 이슈가 동시 전개되어, "
                 "지정학적 리스크가 시장 심리에 직접 전이되고 있습니다. "
-                + ("안보 이슈 비중이 높아, 방산·금·안전자산 중심의 포지셔닝이 유리합니다."
-                   if sc > mc else
-                   "금융시장 이슈가 우세하여, 안보 리스크는 제한적 영향에 그칠 수 있습니다.")
+                + (
+                    "안보 이슈 비중이 높아, 방산·금·안전자산 중심의 포지셔닝이 유리합니다."
+                    if sc > mc
+                    else "금융시장 이슈가 우세하여, 안보 리스크는 제한적 영향에 그칠 수 있습니다."
+                )
             ),
         ),
         (
@@ -832,7 +834,7 @@ def main() -> None:
 
         detail_lines = [
             f'<details class="wm-reference-details">'
-            f'<summary>전체 원문 {len(unique_refs)}건 펼치기</summary>'
+            f"<summary>전체 원문 {len(unique_refs)}건 펼치기</summary>"
             '<div class="details-content">',
             '<ol class="wm-reference-list">',
         ]

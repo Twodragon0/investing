@@ -175,10 +175,7 @@ def fetch_images_concurrent(
     """
     from concurrent.futures import ThreadPoolExecutor, as_completed
 
-    targets = [
-        (i, item) for i, item in enumerate(items)
-        if not item.get("image") and item.get("link")
-    ][:max_items]
+    targets = [(i, item) for i, item in enumerate(items) if not item.get("image") and item.get("link")][:max_items]
 
     if not targets:
         return 0
@@ -195,10 +192,7 @@ def fetch_images_concurrent(
         return idx, _fetch_og_image(link)
 
     with ThreadPoolExecutor(max_workers=max_workers) as pool:
-        futures = {
-            pool.submit(_fetch_one, idx, item): idx
-            for idx, item in targets
-        }
+        futures = {pool.submit(_fetch_one, idx, item): idx for idx, item in targets}
         for future in as_completed(futures):
             try:
                 idx, img_url = future.result(timeout=15)
@@ -397,34 +391,179 @@ def _extract_title_entities(title: str) -> list:
     kr_entities = re.findall(r"[가-힣]{2,}", title)
     # Proper nouns (capitalized words, not common English)
     _COMMON = {
-        "The", "And", "For", "With", "Has", "Are", "Its", "But", "How", "Why",
-        "What", "New", "All", "Can", "Now", "Get", "Set", "May", "Not",
-        "Other", "Others", "Another", "Being", "Having", "Doing",
-        "Becomes", "Become", "Getting", "Going", "Coming", "Making",
-        "Says", "Said", "Warns", "Faces", "Shows", "Finds", "Takes",
-        "Gives", "Looks", "Tells", "Seems", "Turns", "Leads", "Holds",
-        "Spikes", "Spike", "Surges", "Surge", "Drops", "Drop", "Falls",
-        "First", "Last", "Next", "After", "Before", "During", "Under",
-        "Over", "About", "Every", "Where", "Which", "While", "Their",
-        "These", "Those", "Could", "Would", "Should", "Might", "Still",
-        "Just", "Also", "More", "Most", "Some", "Much", "Many", "Each",
-        "Only", "Even", "Very", "Here", "There", "Then", "Than", "Into",
-        "From", "This", "That", "Been", "Were", "Will", "Your", "They",
-        "Them", "Such", "Like", "Near", "Amid", "Ahead", "Along",
-        "Among", "Above", "Below", "Behind", "Between", "Through",
-        "Against", "Within", "Without", "Across", "Inside",
-        "Global", "World", "Major", "Latest", "Breaking", "Live",
-        "Watch", "Alert", "Update", "Report", "Check",
-        "Shares", "Stock", "Stocks", "Market", "Markets",
-        "Price", "Prices", "Trade", "Trades", "Trading",
-        "Company", "Companies", "Industry",
-        "Million", "Billion", "Trillion",
-        "Today", "Yesterday", "Tomorrow", "Year", "Week", "Month",
+        "The",
+        "And",
+        "For",
+        "With",
+        "Has",
+        "Are",
+        "Its",
+        "But",
+        "How",
+        "Why",
+        "What",
+        "New",
+        "All",
+        "Can",
+        "Now",
+        "Get",
+        "Set",
+        "May",
+        "Not",
+        "Other",
+        "Others",
+        "Another",
+        "Being",
+        "Having",
+        "Doing",
+        "Becomes",
+        "Become",
+        "Getting",
+        "Going",
+        "Coming",
+        "Making",
+        "Says",
+        "Said",
+        "Warns",
+        "Faces",
+        "Shows",
+        "Finds",
+        "Takes",
+        "Gives",
+        "Looks",
+        "Tells",
+        "Seems",
+        "Turns",
+        "Leads",
+        "Holds",
+        "Spikes",
+        "Spike",
+        "Surges",
+        "Surge",
+        "Drops",
+        "Drop",
+        "Falls",
+        "First",
+        "Last",
+        "Next",
+        "After",
+        "Before",
+        "During",
+        "Under",
+        "Over",
+        "About",
+        "Every",
+        "Where",
+        "Which",
+        "While",
+        "Their",
+        "These",
+        "Those",
+        "Could",
+        "Would",
+        "Should",
+        "Might",
+        "Still",
+        "Just",
+        "Also",
+        "More",
+        "Most",
+        "Some",
+        "Much",
+        "Many",
+        "Each",
+        "Only",
+        "Even",
+        "Very",
+        "Here",
+        "There",
+        "Then",
+        "Than",
+        "Into",
+        "From",
+        "This",
+        "That",
+        "Been",
+        "Were",
+        "Will",
+        "Your",
+        "They",
+        "Them",
+        "Such",
+        "Like",
+        "Near",
+        "Amid",
+        "Ahead",
+        "Along",
+        "Among",
+        "Above",
+        "Below",
+        "Behind",
+        "Between",
+        "Through",
+        "Against",
+        "Within",
+        "Without",
+        "Across",
+        "Inside",
+        "Global",
+        "World",
+        "Major",
+        "Latest",
+        "Breaking",
+        "Live",
+        "Watch",
+        "Alert",
+        "Update",
+        "Report",
+        "Check",
+        "Shares",
+        "Stock",
+        "Stocks",
+        "Market",
+        "Markets",
+        "Price",
+        "Prices",
+        "Trade",
+        "Trades",
+        "Trading",
+        "Company",
+        "Companies",
+        "Industry",
+        "Million",
+        "Billion",
+        "Trillion",
+        "Today",
+        "Yesterday",
+        "Tomorrow",
+        "Year",
+        "Week",
+        "Month",
     }
     _NOISE_TICKERS = {
-        "CEO", "IPO", "SEC", "FED", "GDP", "CPI", "ETF", "AI", "USD",
-        "FOR", "THE", "ARE", "HAS", "NOT", "BUT", "ALL", "CAN", "NOW",
-        "HOW", "NEW", "CBS", "FBI", "GOP",
+        "CEO",
+        "IPO",
+        "SEC",
+        "FED",
+        "GDP",
+        "CPI",
+        "ETF",
+        "AI",
+        "USD",
+        "FOR",
+        "THE",
+        "ARE",
+        "HAS",
+        "NOT",
+        "BUT",
+        "ALL",
+        "CAN",
+        "NOW",
+        "HOW",
+        "NEW",
+        "CBS",
+        "FBI",
+        "GOP",
     }
     tickers = [t for t in tickers if t not in _NOISE_TICKERS]
     proper = [w for w in re.findall(r"\b[A-Z][a-z]{2,}\b", title) if w not in _COMMON]
@@ -493,8 +632,7 @@ def _analyze_korean_title(title: str) -> str:
             )
         if any(kw in title for kw in ["하락", "흔들", "약세"]):
             return (
-                "반도체주가 외부 리스크로 약세를 보이고 있습니다. "
-                "섹터 하락이 일시적인지 구조적인지 판단이 중요합니다."
+                "반도체주가 외부 리스크로 약세를 보이고 있습니다. 섹터 하락이 일시적인지 구조적인지 판단이 중요합니다."
             )
         return "반도체 산업 관련 주요 소식입니다. 한국 증시에서 반도체는 시가총액 비중이 가장 높은 핵심 섹터입니다."
 
@@ -521,8 +659,7 @@ def _analyze_korean_title(title: str) -> str:
 
     if any(kw in title for kw in ["배당", "주주환원", "자사주"]):
         return (
-            "배당·주주환원 정책 관련 소식입니다. "
-            "배당 수익률과 자사주 매입 규모가 주가에 긍정적 영향을 줄 수 있습니다."
+            "배당·주주환원 정책 관련 소식입니다. 배당 수익률과 자사주 매입 규모가 주가에 긍정적 영향을 줄 수 있습니다."
         )
 
     if any(kw in title for kw in ["부동산", "아파트", "전세", "분양"]):
@@ -571,8 +708,7 @@ def _analyze_english_title(title: str, title_lower: str) -> str:
 
     if any(kw in title_lower for kw in ["iran", "war", "conflict", "military"]):
         return (
-            "지정학적 분쟁이 글로벌 금융시장에 충격을 주고 있습니다. "
-            "안전자산 선호와 위험자산 회피 흐름에 주목하세요."
+            "지정학적 분쟁이 글로벌 금융시장에 충격을 주고 있습니다. 안전자산 선호와 위험자산 회피 흐름에 주목하세요."
         )
 
     if any(kw in title_lower for kw in ["treasury", "yield", "bond"]):
@@ -803,13 +939,43 @@ def enrich_items(
                 item["title_ko"] = ko
 
         desc = item.get("description", "")
-        if desc and detect_language(desc) == "en" and not any(
-            desc.startswith(prefix) for prefix in (
-                "구글 뉴스", "에서 보도", "시장", "규제", "암호화폐", "비트코인",
-                "이더리움", "거래소", "연준", "인플레이션", "미국", "한국",
-                "관세", "지정학", "기업 실적", "고용", "보안", "금융",
-                "AI·", "반도체", "원유", "귀금속", "부동산", "배당",
-                "디지털", "2차전지", "외국인", "중국", "일본", "유럽",
+        if (
+            desc
+            and detect_language(desc) == "en"
+            and not any(
+                desc.startswith(prefix)
+                for prefix in (
+                    "구글 뉴스",
+                    "에서 보도",
+                    "시장",
+                    "규제",
+                    "암호화폐",
+                    "비트코인",
+                    "이더리움",
+                    "거래소",
+                    "연준",
+                    "인플레이션",
+                    "미국",
+                    "한국",
+                    "관세",
+                    "지정학",
+                    "기업 실적",
+                    "고용",
+                    "보안",
+                    "금융",
+                    "AI·",
+                    "반도체",
+                    "원유",
+                    "귀금속",
+                    "부동산",
+                    "배당",
+                    "디지털",
+                    "2차전지",
+                    "외국인",
+                    "중국",
+                    "일본",
+                    "유럽",
+                )
             )
         ):
             ko_desc = translate_to_korean(desc)
