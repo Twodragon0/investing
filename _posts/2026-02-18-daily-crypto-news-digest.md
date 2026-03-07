@@ -32,18 +32,10 @@ description: "2026-02-18 암호화폐 시장에서 115건의 뉴스를 분석했
 
 <strong>암호화폐 시장 **비트코인, 가격/시장** 중심 115건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 57건 수집</li><li>📈 <strong>가격/시장</strong>: 26건 수집</li><li>🏦 <strong>거래소</strong> (16건): BitGW.com Takes a Global-First Approach in the Cryptocurrency Exchange Industry USA Today</li><li>🔷 <strong>이더리움</strong> (18건): Ethereum At Risk Of Falling Under $996 (Cryptocurrency:ETH-USD) Seeking Alpha</li></ul></div>
 
-<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMitwFBVV95cUxPNU9uNnQ5ZXk3WDJUaUVXUzdzR1o5ajZUdTFhb3pVdDB4Q3ZOZVdtT2VBTXJkWnhCTmxidy1wcmZzNjF1SHlQWkNGWlBmR1BxRWZoVW1hcGtHc3ZTNXJWYmg4bV9zRjlqOXh4TkJ6UDlwSmx4R05RZXR2cWxiR2ZxOXh2bUk2d3dfNUxWQkZwU3pBYk9JdXBaSDRxUXpLYjRJaGJxRVI1N1lkVTVPUTExQlVoOGdCVlk?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin's Crash Is Putting Crypto Treasury Stocks To The Test</a></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMkJqRVlOMzViU2xQVWV4cW9DaTZzbHdENlFkSnkxeGNqS3kyRWtQU3gtVlZXcld6TmJIQWtYTmlCWlE2UUhpTHlXbzJMY0hsTmZoMVI4VlpmUmVKajk0bGJJcFpiS0FabUVQQkFsZER4aHhtak02RTBCWjM1MHV6NUZReXpjdjlV?oc=5">비트코인 " 곧 10분의 1 토막 추락"  블룸버그 긴급보고서 - 글로벌이코노믹</a></li><li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFAtbkVjNVNSQW1nV090aDJrSmdXTkFDUEdWaHlhd1VYVlFRakVlMkJHamFiaEIxc1R1bE83dnFmRmJ6VFJYS0JNQm5ROVl2VlE?oc=5">‘폭락’ 비트코인 들어갈까 말까?붕괴 vs 반등 엇갈린 전망</a></li></ul></div>
+<strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMitwFBVV95cUxPNU9uNnQ5ZXk3WDJUaUVXUzdzR1o5ajZUdTFhb3pVdDB4Q3ZOZVdtT2VBTXJkWnhCTmxidy1wcmZzNjF1SHlQWkNGWlBmR1BxRWZoVW1hcGtHc3ZTNXJWYmg4bV9zRjlqOXh4TkJ6UDlwSmx4R05RZXR2cWxiR2ZxOXh2bUk2d3dfNUxWQkZwU3pBYk9JdXBaSDRxUXpLYjRJaGJxRVI1N1lkVTVPUTExQlVoOGdCVlk?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin's Crash Is Putting Crypto Treasury Stocks To The Test</a> — 시장 급락 소식입니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMkJqRVlOMzViU2xQVWV4cW9DaTZzbHdENlFkSnkxeGNqS3kyRWtQU3gtVlZXcld6TmJIQWtYTmlCWlE2UUhpTHlXbzJMY0hsTmZoMVI4VlpmUmVKajk0bGJJcFpiS0FabUVQQkFsZER4aHhtak02RTBCWjM1MHV6NUZReXpjdjlV?oc=5">비트코인 " 곧 10분의 1 토막 추락"  블룸버그 긴급보고서 - 글로벌이코노믹</a> — 디지털 자산·블록체인 관련 소식입니다. 규제 동향과 기술 발전이 시장 방향의 핵심 변수입니다.</li><li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFAtbkVjNVNSQW1nV090aDJrSmdXTkFDUEdWaHlhd1VYVlFRakVlMkJHamFiaEIxc1R1bE83dnFmRmJ6VFJYS0JNQm5ROVl2VlE?oc=5">‘폭락’ 비트코인 들어갈까 말까?붕괴 vs 반등 엇갈린 전망</a> — 시장이 큰 폭으로 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</li></ul></div>
 
 
 ![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-18.png' | relative_url }})
-
-
-
-
-
-
-
-
 
 
 ## 전체 뉴스 요약

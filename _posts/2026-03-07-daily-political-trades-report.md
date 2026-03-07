@@ -33,7 +33,6 @@ description: "오늘 정치인 거래·정책 분야에서 총 7건의 뉴스가
 <span class="source-tag" data-source-type="default">Congressional Trades EN</span>
 
 
-
 ## 트럼프 행정명령/정책
 
 **1. [Nintendo, 트럼프의 터무니없는 관세에 대한 환불을 받기 위해 미국 정부를 고소 - Gizmodo](https://news.google.com/rss/articles/CBMirAFBVV95cUxQdXgzUlpNYUVQNUhzdm9Ga01DQ2plbTVIVHNMZTV4N2M5QXFZWTFBWF93N1pVMkh1bW55SmwtZWhNUXdJSGFKSHhIZlBocm9ENkJrWDVHR0hIaFJJeDNSYmdZU1B4NGNOMlN2TTYtNFhDUUhVOVJVdXNXRmdESDhlYTY1aEoySVJkZnF6UmV1ZUN4eGNTQS1JOGFudWNDVTRZeHdySmxBR2hHY2FE?oc=5)**
@@ -41,13 +40,11 @@ description: "오늘 정치인 거래·정책 분야에서 총 7건의 뉴스가
 <span class="source-tag" data-source-type="default">Trump Tariff Policy</span>
 
 
-
 ## 한국 정치인 재산/거래
 
 **1. [2013공직자 정기재산변동 신고 공개 - 경북신문](https://news.google.com/rss/articles/CBMiT0FVX3lxTE14bDZJODVOcnI1eGh4V3ZMT0lIMGZhMDBZdXpuWWtLZHhRVnNTSzJOai14ZEttOGNrN0xpbm9NaTdXcHRwWTVJZlN0VVhjUlE?oc=5)**
 2013공직자 정기재산변동 신고 공개 경북신문
 <span class="source-tag" data-source-type="default">공직자 재산신고</span>
-
 
 
 ## 중앙은행 정책 동향

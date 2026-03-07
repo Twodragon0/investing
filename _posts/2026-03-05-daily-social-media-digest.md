@@ -19,7 +19,6 @@ description: "BlackRock 4,309 BTC($2.97억) 매수, 트럼프 암호화폐 법�
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFAxdHl5M1ltMmZ6bl9ZME9Bb254WnBXd0NjWlEtZWl4R0VyNE1KcENvNUNZRGctdDB4S2dQcmowLXBWenE0bGY0UE1JMjVrSjNZMllxZkF30gGmAkFVX3lxTE9KSVRWWmF5Ty0xcm1zOXdvMjF2a1hPTjRCU1FWN3NHMWpBNHp3Q1lmcnV3SVNDbE1pUmxrbjNyUVhjRnJPRWVsMjhrclNhZU5KQXBIS19nNW1yQWJXTGE2dlFSWlh0Mm1YdDFZQWg3T2F2Z0h2bUhqbndzNHZ5LXl4WFJjLWpCd0JzeW9wYUtadUNra056TWd1VEhDRGotcklqYVBVU1ZySENyREtqMUpnYnJVdDVDZUNFN3BUcS0tb0hCTV8zaGRuT0dGamt1RmNwT0VFS3ExdXJXSk5qVlFWaWt3RTU5ZmRGZUdqUHpoZkYwSmZ2MWxMQXVZS18zMGtUVnRVeWFkQ0FkXzlFbzc5QThVSjdWNmNHdnJXMkdDalpPcU9zQQ?oc=5">박수영 "코스피 대폭락…경제 패닉서 李대통령 침묵 일관" - 데일리안</a> <span class="p0-desc">국민의힘 박수영 의원, 코스피 대폭락 속 이재명 대통령의 경제 위기 대응 침묵 비판.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 오늘 수집된 총 46건 중 텔레그램 20건, 소셜 0건, 정치·경제 26건으로 정치/정책 및 매크로/금리 이슈가 주요 화제입니다.

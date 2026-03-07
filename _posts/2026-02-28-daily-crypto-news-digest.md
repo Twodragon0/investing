@@ -31,14 +31,7 @@ description: "2026-02-28 암호화폐 시장에서 124건의 뉴스를 분석했
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">124</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 46</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">리스크 위험</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (21회)</div></div></div>
 <div class="alert-box alert-info"><strong>암호화폐 긴급: Butchering, Million, Seizes - 124건 분석</strong><ul><li>🟠 <strong>비트코인</strong> (46건): 비트코인, 암호화폐, 하락, com, 글로벌이코노믹</li><li>🏦 <strong>거래소</strong> (32건): Binance, Futures, Trading, Democrats, Perpetual</li><li>📈 <strong>가격/시장</strong> (23건): 비트코인, 암호화폐, 하락, 충격, 일제</li><li>🔷 <strong>이더리움</strong> (13건): Ethereum, and, XRP, for, Cryptocurrency</li></ul></div>
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOLUhxdzdoVFFTT2QydElpU3locWJDQTlnZXNmYTJRRXJHRW1WSjY3ZFo0NmZIUU9QSURrSTd2bThfRDNTLVpIMEVXYkcwTVJsMjlzQVZKZDhBT0pvTkxvb2VKa1FJdHRDRjdlc3Y4el9LSGRjTmFneS1pTVU1MDN4OXBhWQ?oc=5">DoJ Seizes $61 Million in Tether Linked to Pig Butchering Crypto Scams - The Hacker News</a></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUWYzME5LUnpwVXVxRG5JZnFvWGJLa1B5dXI4YUZ2RzRzRlFRMWwzcDE4ZVRDRTJCQzY0RUdHMXFrWmk4UEtSS3hNOVY0NjdtT015a05qcURaTjk1cDVMUExyOEF1b0hmbFBXZUROQ01acE13R3A2aVp4OU9OZkNFUWdIbWxWQ0g5?oc=5">뉴욕증시 상장사 "비트코인 대량 매도" .. .블룸버그 "양자컴 암호화폐 해킹 급물살" - 글로벌이코노믹</a></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5jQ1NKZEZxci12R3lGVVl3QzBBeWZFZE1pVTBkZ25INUIyT21VMGNZZFJ1bnNrRXdqaFFzSnhpRF8xbnlmQjU5LWdaN2lpZWVwQWthTVM1eUtWcHJhZktFOUNvLTNnREdHUE9ieVQ5MEpFUFU?oc=5">비트코인, 매일 10시만 되면 폭락?…'제인스트리트 조작설' 진실 공방 - 디지털투데이</a></li></ul></div>
-
-
-
-
-
-
-
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOLUhxdzdoVFFTT2QydElpU3locWJDQTlnZXNmYTJRRXJHRW1WSjY3ZFo0NmZIUU9QSURrSTd2bThfRDNTLVpIMEVXYkcwTVJsMjlzQVZKZDhBT0pvTkxvb2VKa1FJdHRDRjdlc3Y4el9LSGRjTmFneS1pTVU1MDN4OXBhWQ?oc=5">DoJ Seizes $61 Million in Tether Linked to Pig Butchering Crypto Scams - The Hacker News</a> — 암호화폐 시장 관련 소식입니다. 디지털 자산 가격은 거시경제 환경과 규제 동향에 연동됩니다.</li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUWYzME5LUnpwVXVxRG5JZnFvWGJLa1B5dXI4YUZ2RzRzRlFRMWwzcDE4ZVRDRTJCQzY0RUdHMXFrWmk4UEtSS3hNOVY0NjdtT015a05qcURaTjk1cDVMUExyOEF1b0hmbFBXZUROQ01acE13R3A2aVp4OU9OZkNFUWdIbWxWQ0g5?oc=5">뉴욕증시 상장사 "비트코인 대량 매도" .. .블룸버그 "양자컴 암호화폐 해킹 급물살" - 글로벌이코노믹</a> — IPO·신규 상장 관련 소식입니다. 공모가 대비 시장 평가와 수급 동향을 주시하세요.</li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5jQ1NKZEZxci12R3lGVVl3QzBBeWZFZE1pVTBkZ25INUIyT21VMGNZZFJ1bnNrRXdqaFFzSnhpRF8xbnlmQjU5LWdaN2lpZWVwQWthTVM1eUtWcHJhZktFOUNvLTNnREdHUE9ieVQ5MEpFUFU?oc=5">비트코인, 매일 10시만 되면 폭락?…'제인스트리트 조작설' 진실 공방 - 디지털투데이</a> — 시장이 큰 폭으로 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</li></ul></div>
 
 
 ## 전체 뉴스 요약
@@ -165,7 +158,6 @@ NH 상원 법안, 뉴햄프셔 주민들을 암호화폐 사기로부터 보호 
 <a href="https://decrypt.co/359410/ban-on-crypto-privacy-tools-would-be-counterproductive-uk-think-tank">Ban on Crypto Privacy Tools Would Be Counterproductive: UK Think Tank</a>
 <em>...외 1건</em>
 </div></details>
-
 
 
 ## 거래소 공지사항

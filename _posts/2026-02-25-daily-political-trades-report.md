@@ -27,14 +27,6 @@ excerpt: "미국 의회 Pelosi 주식거래 금지 논의, SEC Form 4 내부자 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: <strong>trump</strong>(28회), <strong>pelosi</strong>(15회), <strong>congress</strong>(12회), <strong>fed</strong>(8회), <strong>tariff</strong>(5회)</div>
 
 
-
-
-
-
-
-
-
-
 ## 전체 뉴스 요약
 
 - 트럼프 관련 3건의 정책 뉴스가 포착되었습니다. 10% 관세가 발효되면서 글로벌 수준의 관세율을 15%까지 인상할 수 있다는 경고가 나왔으며, 행정명령 및 관세 정책의 변화는 미국 내수 시장뿐 아니라 아시아·유럽 수출 기업과 원자재 가격에도 연쇄적으로 영향을 미칩니다. 특히 관세…

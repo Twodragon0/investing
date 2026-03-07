@@ -37,14 +37,6 @@ description: "2026-02-25 암호화폐 시장에서 116건의 뉴스를 분석했
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><br><a href="https://news.google.com/read/CBMilgFBVV95cUxNVHZNVEtWTl84SXdaZWF1cFpfTm9LNmtadHU2WF9rQ09WT21LSnh4Z2dYY3RNaTlta203Mzl3Q1p0dE5zUXhJell0WklkX1RnUGxaN3d3SzdsNU9ZVjlMVW5EMDE1aWVyX3JQc0NkV3FVRGtRWFBydi1pUnJTcUhua1ZsTzNRbTVKTlM0X1NJTmR5UHRYMWc?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin is crashing for 3 reasons today</a><br><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNYldnVG9TczlMa2poLS0ydk1vV0FSa3lEekdxVm9XZl95dlR6QkgzR1B2ZDF0YlNMZnkzYUFjVVNPdG1kM0FNaWszSFN1cXg5NjYtVHpHR19GTjI4Y0huUXJqOWZMNHBkUkFqcG9kMzZaMXFhei02ck4yaUF4clo1LdIBlAFBVV95cUxNQVRBalJGTG5fZDFobzQ3NUJvSjlXcVctNjNEN0hTdG1NZUVIdGZ2UHpyMExsaEM2dm81dmwwX2Z1Z21CX1lraWFKS2pTSVg0R25VYWVMZzBfdVNmLVhoM1ZyekdfN2oySjdzZ3NVOFU1Q3ZOcTY2Z0dZRXZBUnFKbHNTTWl1Z1FLLVV6cWFpMHNuUEZv?oc=5">비트코인·금 ‘디커플링’ 심화</a></div>
 
 
-
-
-
-
-
-
-
-
 ## 전체 뉴스 요약
 
 - 총 **116건** 수집

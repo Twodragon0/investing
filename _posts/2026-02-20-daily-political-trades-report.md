@@ -25,14 +25,6 @@ image: "/assets/images/generated/og-daily-political-trades-report-2026-02-20.png
 ---
 
 
-
-
-
-
-
-
-
-
 ## 전체 뉴스 요약
 
 - 주요 테마: 📊 매크로/금리, 🏛️ 정치/정책, 🤖 AI/기술

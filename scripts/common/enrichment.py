@@ -86,15 +86,73 @@ def _clean_description(text: str) -> str:
     return text
 
 
+def _decode_google_news_base64(url: str) -> str:
+    """Try to extract the actual article URL from a Google News RSS URL.
+
+    Google News RSS URLs like ``https://news.google.com/rss/articles/CBMi...``
+    contain a base64-encoded payload that wraps the real article URL.
+    """
+    import base64
+    import urllib.parse
+
+    try:
+        # Extract the base64 segment after /articles/
+        match = re.search(r"/rss/articles/([A-Za-z0-9_-]+)", url)
+        if not match:
+            return ""
+        encoded = match.group(1)
+        # Add padding if needed
+        padded = encoded + "=" * (4 - len(encoded) % 4) if len(encoded) % 4 else encoded
+        # Try standard and URL-safe base64
+        for decoder in [base64.urlsafe_b64decode, base64.b64decode]:
+            try:
+                raw = decoder(padded)
+                decoded_str = raw.decode("utf-8", errors="ignore")
+                # Find URLs embedded in the decoded bytes
+                urls = re.findall(r"https?://[^\s\"'<>\x00-\x1f]+", decoded_str)
+                for candidate in urls:
+                    if "news.google.com" not in candidate and "google." not in candidate:
+                        return urllib.parse.unquote(candidate).rstrip("\x00")
+            except Exception:  # noqa: BLE001, S112
+                continue
+    except Exception:  # noqa: BLE001, S110
+        pass
+    return ""
+
+
 def _resolve_google_news_url(url: str, timeout: int = 8) -> str:
     """Follow Google News redirect to get the real article URL.
 
-    Google News may use HTTP redirects or JavaScript redirects.
-    We try HTTP first; if that stays on Google, we look for
-    canonical/og:url in the HTML.
+    Strategy:
+    1. Try base64 decoding of the RSS article path (fastest, no network).
+    2. Follow HTTP redirects with ``requests.head`` then ``requests.get``.
+    3. Parse HTML for canonical/og:url if still on Google domain.
     """
     if not url or "news.google.com" not in url:
         return url
+
+    # 1. Try base64 decoding (no network call needed)
+    decoded = _decode_google_news_base64(url)
+    if decoded:
+        logger.debug("Google News base64 decoded: %s -> %s", url[:60], decoded[:80])
+        return decoded
+
+    # 2. Follow HTTP redirects
+    try:
+        # Try HEAD first (lighter)
+        head_resp = requests.head(
+            url,
+            timeout=timeout,
+            allow_redirects=True,
+            headers={"User-Agent": _BROWSER_UA},
+            verify=VERIFY_SSL,
+        )
+        if head_resp.url and "news.google.com" not in head_resp.url:
+            return head_resp.url
+    except requests.exceptions.RequestException:
+        pass
+
+    # 3. Full GET and parse HTML for canonical/og:url
     try:
         resp = requests.get(
             url,
@@ -107,16 +165,15 @@ def _resolve_google_news_url(url: str, timeout: int = 8) -> str:
         if resp.url and "news.google.com" not in resp.url:
             return resp.url
         # Try to find canonical or data-url in HTML
-        import re as _re
-
         for pattern in [
             r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']([^"\']+)',
             r'<meta[^>]+property=["\']og:url["\'][^>]+content=["\']([^"\']+)',
             r'data-url=["\']([^"\']+)',
+            r'<a[^>]+data-redirect=["\']([^"\']+)',
         ]:
-            match = _re.search(pattern, resp.text[:20_000])
-            if match:
-                found = match.group(1)
+            m = re.search(pattern, resp.text[:20_000])
+            if m:
+                found = m.group(1)
                 if found and "news.google.com" not in found:
                     return found
     except requests.exceptions.RequestException:
@@ -215,8 +272,8 @@ def fetch_page_metadata(url: str, timeout: int = 8) -> Dict[str, str]:
     result: Dict[str, str] = {"description": "", "image": ""}
     if not url:
         return result
-    # Resolve Google News redirects
-    if "news.google.com/rss/" in url:
+    # Resolve Google News redirects (any news.google.com URL)
+    if "news.google.com" in url:
         resolved = _resolve_google_news_url(url)
         if not resolved:
             return result
@@ -815,7 +872,7 @@ def generate_synthetic_description(
     if analysis and analysis != title and len(analysis) > 20:
         return analysis
 
-    # Fallback to source-labeled description
+    # Fallback: build a title-derived description with source context
     label = _get_source_label(source, context_map or {})
     entities = _extract_title_entities(title)
     entity_str = ", ".join(entities[:3]) if entities else ""
@@ -824,12 +881,26 @@ def generate_synthetic_description(
     if any(kw in source.lower() for kw in ["binance", "bybit", "okx", "upbit"]):
         return f"{label} 공지사항입니다." + (f" ({entity_str})" if entity_str else "")
 
+    # Build a title-condensed description instead of boilerplate
+    # Clean trailing source names from the title
+    clean_title = re.sub(r"\s*[-–—|]\s*\S+$", "", title).strip()
+    # For Korean titles, extract a condensed version
+    kr_chars = len(re.findall(r"[가-힣]", clean_title))
+    if kr_chars > len(clean_title) * 0.3:
+        # Korean: use title core + entities for context
+        core = clean_title[:80] if len(clean_title) > 80 else clean_title
+        if entity_str:
+            return f"{core}. {entity_str} 관련 세부 내용은 원문을 참고하세요."
+        return f"{core}. 원문에서 상세 내용을 확인하세요."
+
+    # English: entity-rich description
     if entity_str:
-        return f"{label}에서 {entity_str} 관련 소식을 전했습니다."
-    # Final fallback: use source label for minimal context
+        src_part = f"{label}의 " if label and label != source else ""
+        return f"{src_part}{entity_str} 관련 소식입니다. {clean_title[:60]}"
+    # Final fallback: use cleaned title itself (better than generic boilerplate)
     if label and label != source:
-        return f"{label}에서 보도한 소식입니다. 원문에서 세부 내용을 확인하세요."
-    return title
+        return f"{label}: {clean_title[:100]}"
+    return clean_title if len(clean_title) > 15 else title
 
 
 def enrich_item(
@@ -872,8 +943,8 @@ def enrich_item(
         else:
             return  # already has a good description
 
-    # Try fetching from URL (skip Google News proxy links)
-    if fetch_url and link and "news.google.com" not in link:
+    # Try fetching from URL (including Google News URLs via resolution)
+    if fetch_url and link:
         counter = _fetch_counter or [0]
         if counter[0] < max_fetch:
             counter[0] += 1

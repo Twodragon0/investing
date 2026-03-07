@@ -16,7 +16,7 @@ description: "2026-03-03 금융위 긴급 금융시장점검회의 개최, CFTC 
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">29</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 22</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">21</div><div class="stat-label">한국</div></div></div>
 <div class="alert-box alert-info"><strong>규제 긴급: 중동 상황 관련  긴급 금융시장상황점검회의 개최 - 29건 분석</strong><ul><li>🔵 <strong>규제/정책</strong> (22건): Chairman, Announces, Director, Selig, CFTC</li><li>🟠 <strong>비트코인</strong> (1건): 검토중입니다, 세부방안은, 단일종목, 레버리지, ETF</li><li>📊 <strong>매크로/금리</strong> (6건): 중동, 상황, 개최, 금융시장상황점검회의, 상호금융업감독규정</li><li>🏛️ <strong>정치/정책</strong> (10건): 현장방문, 금융위, 개최, 금융시장상황점검회의, 상호금융업감독규정</li></ul></div>
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://www.fsc.go.kr/no010101/86360">중동 상황 관련  긴급 금융시장상황점검회의 개최</a></li></ul></div>
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://www.fsc.go.kr/no010101/86360">중동 상황 관련  긴급 금융시장상황점검회의 개최</a> — 지정학적 리스크가 금융시장에 영향을 미치고 있습니다. 유가·환율·안전자산 흐름을 주시해야 합니다.</li></ul></div>
 ## 핵심 요약
 
 - **총 수집 건수**: 29건

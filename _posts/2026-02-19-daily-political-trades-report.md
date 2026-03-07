@@ -31,14 +31,6 @@ image: "/assets/images/generated/og-daily-political-trades-report-2026-02-19.png
 ---
 
 
-
-
-
-
-
-
-
-
 ## 전체 뉴스 요약
 
 - 총 **17건** 수집
