@@ -1342,7 +1342,11 @@ class ThemeSummarizer:
             tokens = re.findall(r"\$[\d,.]+[KkMmBb]?%?|[\d,.]+%|[A-Za-z]{3,}|[가-힣]{2,}", title)
             for token in tokens:
                 normalized = token.lower() if re.match(r"[A-Za-z]", token) else token
-                if normalized not in self._STOP_WORDS and normalized not in self._NOISE_ENGLISH and len(normalized) >= 2:
+                if (
+                    normalized not in self._STOP_WORDS
+                    and normalized not in self._NOISE_ENGLISH
+                    and len(normalized) >= 2
+                ):
                     # Skip short generic English tokens (1-2 chars)
                     if re.match(r"^[a-z]{1,2}$", normalized):
                         continue

@@ -489,7 +489,8 @@ def main():
         if theme_names:
             themes_str = ", ".join(theme_names[:3])
             content_parts = [
-                f"**{today}** 암호화폐 시장에서 {len(all_items)}건의 뉴스를 분석했습니다. 오늘은 **{themes_str}** 관련 소식이 주목됩니다.\n"
+                f"**{today}** 암호화폐 시장에서 {len(all_items)}건의 뉴스를 분석했습니다. "
+                f"오늘은 **{themes_str}** 관련 소식이 주목됩니다.\n"
             ]
         else:
             content_parts = [f"**{today}** 암호화폐 시장에서 {len(all_items)}건의 뉴스를 분석했습니다.\n"]
@@ -669,7 +670,8 @@ def main():
             (
                 "비트코인",
                 "가격/시장",
-                "비트코인 관련 뉴스와 시장 가격 움직임이 함께 부각되어, 단기 변동성 확대 구간에 진입한 것으로 보입니다.",
+                "비트코인 관련 뉴스와 시장 가격 움직임이 함께 부각되어, "
+                "단기 변동성 확대 구간에 진입한 것으로 보입니다.",
             ),
             (
                 "DeFi",
@@ -694,7 +696,8 @@ def main():
             (
                 "정치/정책",
                 "매크로/금리",
-                "정치적 이벤트와 금리·매크로 지표가 동시에 움직여, 글로벌 유동성 변화에 따른 자산 재배치 가능성이 있습니다.",
+                "정치적 이벤트와 금리·매크로 지표가 동시에 움직여, "
+                "글로벌 유동성 변화에 따른 자산 재배치 가능성이 있습니다.",
             ),
             (
                 "NFT/Web3",
@@ -810,7 +813,8 @@ def main():
 
         insight_lines.append("")
         insight_lines.append(
-            "> *본 뉴스 브리핑은 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
+            "> *본 뉴스 브리핑은 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. "
+            "모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
         )
         content_parts.extend(insight_lines)
 
@@ -964,13 +968,15 @@ def main():
                     sec_insight_lines.append(f"주요 공격 유형: {tech_str}.")
             if google_security_items:
                 sec_insight_lines.append(
-                    f"블록체인 보안 관련 뉴스 {len(google_security_items)}건이 수집되어 업계 보안 이슈에 대한 관심이 높은 상태입니다."
+                    f"블록체인 보안 관련 뉴스 {len(google_security_items)}건이 수집되어 "
+                    "업계 보안 이슈에 대한 관심이 높은 상태입니다."
                 )
             if not sec_insight_lines:
                 sec_insight_lines.append("현재 특이할 만한 보안 사고가 보고되지 않았습니다.")
             sec_insight_lines.append("")
             sec_insight_lines.append(
-                "> *본 보안 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
+                "> *본 보안 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. "
+                "모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
             )
             content_parts.extend(sec_insight_lines)
 

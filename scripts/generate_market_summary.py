@@ -793,7 +793,9 @@ def generate_key_highlights(
         fg_cls = fear_greed["classification"]
         if fg_cls == "Extreme Fear":
             bullets.append(
-                f"- **극도의 공포 장세**: 공포/탐욕 지수 {fg}으로 {fg_cls} 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다."
+                f"- **극도의 공포 장세**: 공포/탐욕 지수 {fg}으로 {fg_cls} 구간 진입. "
+                "역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, "
+                "장기 투자자에게 분할 매수 기회로 평가됩니다."
             )
         elif fg_cls == "Fear":
             bullets.append(
@@ -813,7 +815,9 @@ def generate_key_highlights(
             ch7d = btc.get("price_change_percentage_7d_in_currency", 0) or 0
             direction = "상승" if ch24 >= 0 else "하락"
             bullets.append(
-                f"- **비트코인 ${price:,.0f} {direction}**: 24h 기준 {ch24:+.2f}% 변동, 주간 {ch7d:+.2f}% {'상승' if ch7d >= 0 else '하락'}."
+                f"- **비트코인 ${price:,.0f} {direction}**: "
+                f"24h 기준 {ch24:+.2f}% 변동, "
+                f"주간 {ch7d:+.2f}% {'상승' if ch7d >= 0 else '하락'}."
             )
 
     # Global market cap
@@ -823,7 +827,10 @@ def generate_key_highlights(
         btc_dom = global_data.get("market_cap_percentage", {}).get("btc", 0)
         direction = "회복" if mcap_change >= 0 else "하락"
         bullets.append(
-            f"- **시가총액 {_fmt(total_mcap)}으로 {direction}**: 전일 대비 {mcap_change:+.2f}%. BTC 도미넌스 {btc_dom:.1f}%로 비트코인 중심 자금 흐름 {'지속' if btc_dom > 50 else '약화'}."
+            f"- **시가총액 {_fmt(total_mcap)}으로 {direction}**: "
+            f"전일 대비 {mcap_change:+.2f}%. "
+            f"BTC 도미넌스 {btc_dom:.1f}%로 "
+            f"비트코인 중심 자금 흐름 {'지속' if btc_dom > 50 else '약화'}."
         )
 
     # Korean market
@@ -848,15 +855,23 @@ def generate_key_highlights(
             key=lambda c: c.get("price_change_percentage_24h") or 0,
             reverse=True,
         )
-        gainers = [c for c in sorted_coins if (c.get("price_change_percentage_24h") or 0) > 0]
-        losers = [c for c in sorted_coins if (c.get("price_change_percentage_24h") or 0) < 0]
+        gainers = [
+            c for c in sorted_coins
+            if (c.get("price_change_percentage_24h") or 0) > 0
+        ]
+        losers = [
+            c for c in sorted_coins
+            if (c.get("price_change_percentage_24h") or 0) < 0
+        ]
         if gainers and losers:
             best = gainers[0]
             worst = losers[-1]
             best_ch = best.get("price_change_percentage_24h", 0) or 0
             worst_ch = worst.get("price_change_percentage_24h", 0) or 0
             bullets.append(
-                f"- **주목할 코인**: {best.get('name', '')} {best_ch:+.2f}% 급등, {worst.get('name', '')} {worst_ch:+.2f}% 하락."
+                f"- **주목할 코인**: {best.get('name', '')} "
+                f"{best_ch:+.2f}% 급등, "
+                f"{worst.get('name', '')} {worst_ch:+.2f}% 하락."
             )
 
     return "\n".join(bullets) if bullets else ""
@@ -878,7 +893,8 @@ def generate_insight(
 
     if mcap_change > 5:
         parts.append(
-            "암호화폐 시장이 **강한 상승세**를 보이고 있습니다. 전체 시가총액이 대폭 증가하며 매수 심리가 확산되고 있습니다."
+            "암호화폐 시장이 **강한 상승세**를 보이고 있습니다. "
+            "전체 시가총액이 대폭 증가하며 매수 심리가 확산되고 있습니다."
         )
     elif mcap_change > 1:
         parts.append(
@@ -898,11 +914,14 @@ def generate_insight(
     # BTC dominance
     if btc_dom > 55:
         parts.append(
-            f"\nBTC 도미넌스가 **{btc_dom:.1f}%**로 높은 수준입니다. 비트코인 중심의 자금 흐름이 지속되고 있어, 알트코인 투자 시 주의가 필요합니다."
+            f"\nBTC 도미넌스가 **{btc_dom:.1f}%**로 높은 수준입니다. "
+            "비트코인 중심의 자금 흐름이 지속되고 있어, "
+            "알트코인 투자 시 주의가 필요합니다."
         )
     elif btc_dom < 45:
         parts.append(
-            f"\nBTC 도미넌스가 **{btc_dom:.1f}%**로 낮은 편입니다. 알트코인으로의 자금 이동이 활발한 '알트 시즌' 가능성이 있습니다."
+            f"\nBTC 도미넌스가 **{btc_dom:.1f}%**로 낮은 편입니다. "
+            "알트코인으로의 자금 이동이 활발한 '알트 시즌' 가능성이 있습니다."
         )
 
     # Fear & Greed
@@ -927,7 +946,10 @@ def generate_insight(
         best_ch = best.get("price_change_percentage_24h", 0) or 0
         worst_ch = worst.get("price_change_percentage_24h", 0) or 0
         parts.append(
-            f"\nTop 20 중 가장 큰 상승은 **{best.get('name', '')}** ({best_ch:+.2f}%), 가장 큰 하락은 **{worst.get('name', '')}** ({worst_ch:+.2f}%)입니다."
+            f"\nTop 20 중 가장 큰 상승은 **{best.get('name', '')}** "
+            f"({best_ch:+.2f}%), "
+            f"가장 큰 하락은 **{worst.get('name', '')}** "
+            f"({worst_ch:+.2f}%)입니다."
         )
 
     # US market insight
@@ -956,7 +978,8 @@ def generate_insight(
             )
 
     parts.append(
-        "\n> *본 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
+        "\n> *본 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, "
+        "투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
     )
 
     return "\n".join(parts)
@@ -1209,7 +1232,9 @@ def main():
         "- [Investing.com - KOSPI](https://kr.investing.com/indices/kospi) - 한국 주식 시장 데이터\n"
         "- [Yahoo Finance - 미국 시장](https://finance.yahoo.com/) - 미국 주식 시장 데이터\n"
         "- [FRED - 경제 지표](https://fred.stlouisfed.org/) - 미국 연방준비은행 경제 데이터\n\n"
-        "> *본 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
+        "> *본 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, "
+        "투자 조언이 아닙니다. "
+        "모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
     )
 
     # Generate post
