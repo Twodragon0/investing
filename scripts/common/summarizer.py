@@ -44,6 +44,9 @@ def _truncate_sentence(text: str, max_len: int = 300) -> str:
         "됐다. ",
         "였다. ",
         "합니다. ",
+        "했습니다. ",
+        "겠습니다. ",
+        "봅니다. ",
         "。",
         ". ",
         "! ",
@@ -79,22 +82,22 @@ def _generate_title_based_desc(title: str, theme_key: str) -> str:
     if len(title) < 10:
         return ""
 
-    # Theme-specific context suffixes
+    # 테마별 분석적 컨텍스트 문구
     _THEME_CONTEXT = {
-        "bitcoin": "비트코인 시장 동향과 관련된 소식입니다.",
-        "ethereum": "이더리움 생태계 관련 소식입니다.",
-        "altcoin": "알트코인 시장 동향 관련 소식입니다.",
-        "regulation": "암호화폐 규제 및 정책 관련 소식입니다.",
-        "price": "가격 및 시장 움직임 관련 소식입니다.",
-        "price_market": "가격 및 시장 움직임 관련 소식입니다.",
-        "defi": "탈중앙화 금융(DeFi) 관련 소식입니다.",
-        "nft": "NFT 및 디지털 자산 관련 소식입니다.",
-        "nft_web3": "NFT·Web3 생태계 관련 소식입니다.",
-        "exchange": "거래소 동향 관련 소식입니다.",
-        "macro": "거시경제 및 금리 관련 소식입니다.",
-        "ai_tech": "AI 및 기술 관련 소식입니다.",
-        "politics": "정치 및 정책 관련 소식입니다.",
-        "security": "보안 및 해킹 관련 소식입니다.",
+        "bitcoin": "비트코인 생태계의 구조적 변화와 가격 동향을 반영하는 소식입니다.",
+        "ethereum": "이더리움 네트워크 발전과 L2 확장에 영향을 미치는 소식입니다.",
+        "altcoin": "알트코인 시장의 순환과 자금 흐름 변화를 보여주는 소식입니다.",
+        "regulation": "글로벌 암호화폐 규제 프레임워크 변화에 영향을 줄 수 있는 소식입니다.",
+        "price": "시장 가격 형성과 투자 심리에 직접적 영향을 주는 소식입니다.",
+        "price_market": "시장 가격 형성과 투자 심리에 직접적 영향을 주는 소식입니다.",
+        "defi": "탈중앙 금융 인프라의 성장과 리스크 관련 소식입니다.",
+        "nft": "디지털 자산과 Web3 생태계의 진화를 보여주는 소식입니다.",
+        "nft_web3": "디지털 자산과 Web3 생태계의 진화를 보여주는 소식입니다.",
+        "exchange": "거래소 경쟁 구도와 사용자 환경 변화에 관한 소식입니다.",
+        "macro": "거시경제 환경 변화가 디지털 자산 시장에 미치는 영향 관련 소식입니다.",
+        "ai_tech": "AI·반도체 기술 혁신이 투자 환경에 미치는 영향 관련 소식입니다.",
+        "politics": "정치적 결정이 금융시장과 규제 환경에 미치는 파급 효과 관련 소식입니다.",
+        "security": "보안 위협과 취약점이 시장 신뢰도에 미치는 영향 관련 소식입니다.",
     }
 
     # Check if title is already Korean
@@ -188,6 +191,9 @@ THEMES = [
             "audit",
             "감사",
             "처분",
+            "stablecoin bill",
+            "market structure",
+            "cbdc",
         ],
     ),
     (
@@ -219,6 +225,9 @@ THEMES = [
             "rwa",
             "tokenized",
             "real world asset",
+            "intent",
+            "chain abstraction",
+            "payfi",
         ],
     ),
     (
@@ -246,6 +255,9 @@ THEMES = [
             "고래",
             "accumulation",
             "block reward",
+            "spot etf",
+            "strategic reserve",
+            "taproot",
         ],
     ),
     (
@@ -276,6 +288,9 @@ THEMES = [
             "eip",
             "gasless",
             "account abstraction",
+            "verkle",
+            "blob space",
+            "restaking",
         ],
     ),
     (
@@ -311,6 +326,9 @@ THEMES = [
             "deepseek",
             "llm",
             "transformer",
+            "ai agent",
+            "inference",
+            "sovereign ai",
         ],
     ),
     (
@@ -406,6 +424,9 @@ THEMES = [
             "smart contract bug",
             "취약점",
             "인증",
+            "zero day",
+            "social engineering",
+            "private key",
         ],
     ),
     (
@@ -501,6 +522,9 @@ THEMES = [
             "매도",
             "시총",
             "market cap",
+            "liquidation",
+            "open interest",
+            "funding rate",
         ],
     ),
 ]
@@ -547,25 +571,28 @@ CROSS_THEME_INSIGHTS: Dict[Tuple[str, str], List[str]] = {
         "금리/인플레이션 관련 이슈가 비트코인 투자 심리에 파급되고 있습니다",
         "연준/중앙은행 정책이 비트코인을 포함한 위험자산 전반에 영향을 주고 있습니다",
     ],
+    # 이더리움-DeFi 연계 분석
     ("ethereum", "defi"): [
-        "이더리움 생태계와 DeFi 프로토콜 관련 업데이트가 동시에 진행되고 있습니다",
-        "이더리움 네트워크 변화가 DeFi 활동에 영향을 미칠 수 있는 구간입니다",
-        "L2 확장과 DeFi 성장이 이더리움 생태계의 핵심 동력입니다",
+        "이더리움 생태계와 DeFi 프로토콜의 동반 성장이 가속화되고 있습니다",
+        "이더리움 업그레이드가 DeFi TVL과 유동성 구조에 직접적인 영향을 미칩니다",
+        "L2 확장과 DeFi 혁신이 이더리움 수요를 견인하는 핵심 동력입니다",
     ],
-    ("politics", "price_market"): [
-        "정치적 이벤트가 시장 가격에 직접 영향을 미치고 있어 정세 변화에 주의가 필요합니다",
-        "정치 리스크가 시장 변동성을 높이는 요인으로 작용하고 있습니다",
-        "정책 방향에 따른 시장 가격 변동 가능성에 대비해야 합니다",
-    ],
+    # 거래소 보안 이슈
     ("security", "exchange"): [
-        "거래소 보안 이슈가 발생하여 자산 안전성에 대한 점검이 필요합니다",
-        "보안 사고가 거래소 운영에 영향을 미칠 수 있어 출금/입금 상태를 확인해야 합니다",
-        "거래소 해킹/보안 관련 뉴스가 집중되어 자산 분산 보관의 중요성이 부각됩니다",
+        "거래소 보안 사고가 발생하여 자산 자기 보관의 중요성이 다시 부각됩니다",
+        "보안 취약점이 거래소 유동성과 사용자 신뢰에 즉각적인 타격을 줄 수 있습니다",
+        "거래소 해킹 관련 뉴스 집중 시 출금 지연 및 서비스 중단 가능성에 유의해야 합니다",
     ],
     ("ai_tech", "price_market"): [
         "AI/기술 섹터의 뉴스가 관련 토큰 및 주식 가격에 영향을 미치고 있습니다",
         "AI 관련 기술 발전이 시장에서 새로운 투자 테마로 주목받고 있습니다",
         "AI/반도체 테마가 시장 가격과 연동되어 기술주 흐름에 주의가 필요합니다",
+    ],
+    # 정치 이벤트와 시장 가격 연동
+    ("politics", "price_market"): [
+        "정치적 이벤트가 시장 가격에 직접 영향을 미치고 있어 정세 변화에 주의가 필요합니다",
+        "정치 리스크가 시장 변동성을 높이는 요인으로 작용하고 있습니다",
+        "정책 방향에 따른 시장 가격 변동 가능성에 대비해야 합니다",
     ],
 }
 

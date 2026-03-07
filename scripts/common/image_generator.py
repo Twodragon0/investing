@@ -158,16 +158,16 @@ def _filter_en_keywords(keywords: list) -> list:
 # ---------------------------------------------------------------------------
 COLORS = {
     # Backgrounds -- deeper, richer darks
-    "bg": "#0a0e14",
+    "bg": "#0b1018",
     "bg_card": "#111820",
     "bg_inner": "#161d27",
     "bg_header": "#0f1923",
     # Text hierarchy
-    "text": "#e8edf4",
+    "text": "#ecf0f8",
     "text_secondary": "#7d8a9a",
     "text_muted": "#4a5568",
     # Positive / Negative -- higher contrast
-    "green": "#00d26a",
+    "green": "#00e676",
     "green_dim": "#0b3d24",
     "red": "#ff4757",
     "red_dim": "#3d1420",
@@ -195,7 +195,7 @@ COLORS = {
 _DS = {
     "pad_outer": 0.5,  # tight_layout outer padding
     "pad_title": 15,  # title top padding (set_title pad)
-    "dpi": 150,
+    "dpi": 180,
     "footer_size": 8,
     "title_size": 18,
     "subtitle_size": 10,
@@ -223,7 +223,7 @@ def _get_change_color(change: float) -> str:
 
 
 def _draw_rounded_rect(
-    ax, x, y, w, h, *, facecolor, edgecolor="none", linewidth=0, alpha=1.0, transform=None, pad=0.01
+    ax, x, y, w, h, *, facecolor, edgecolor="none", linewidth=0, alpha=1.0, transform=None, pad=0.012
 ):
     """Draw a rounded rectangle -- centralised helper."""
     kwargs = {
@@ -259,7 +259,10 @@ def _draw_gradient_bar(ax, x, y, w, h, *, color_start, color_end, steps=20, tran
 
 
 def _add_footer(ax, text=None, *, use_fig=False, fig=None, y=None):
-    """Add the standard watermark footer."""
+    """Add the standard watermark footer.
+
+    alpha를 높여 더 세련된 워터마크를 표시한다.
+    """
     label = text or f"{_DS['watermark']} | Auto-generated"
     if use_fig and fig is not None:
         fig.text(
@@ -268,9 +271,10 @@ def _add_footer(ax, text=None, *, use_fig=False, fig=None, y=None):
             label,
             ha="center",
             fontsize=_DS["footer_size"],
-            color=COLORS["text_muted"],
+            color=COLORS["text_secondary"],
             fontfamily=_FONT_FAMILY,
             style="italic",
+            alpha=0.65,
         )
     else:
         y_pos = y if y is not None else 0.01
@@ -282,9 +286,10 @@ def _add_footer(ax, text=None, *, use_fig=False, fig=None, y=None):
             va="bottom",
             transform=ax.transAxes,
             fontsize=_DS["footer_size"],
-            color=COLORS["text_muted"],
+            color=COLORS["text_secondary"],
             fontfamily=_FONT_FAMILY,
             style="italic",
+            alpha=0.65,
         )
 
 
@@ -311,7 +316,10 @@ def _heatmap_bg_color(change: float, *, extreme=5.0) -> str:
 def _save_and_close(fig, filepath, *, bg=None):
     """Shared save-and-close to reduce repetition."""
     bg_color = bg or COLORS["bg"]
-    plt.savefig(filepath, dpi=_DS["dpi"], facecolor=bg_color, edgecolor="none", bbox_inches="tight")
+    plt.savefig(
+        filepath, dpi=_DS["dpi"], facecolor=bg_color, edgecolor="none",
+        bbox_inches="tight", pad_inches=0.1,
+    )
     plt.close(fig)
 
 
@@ -348,6 +356,20 @@ def generate_top_coins_card(
     ax.set_xlim(0, 10)
     ax.set_ylim(0, fig_height)
     ax.axis("off")
+
+    # 전체 카드 외곽 border
+    _draw_rounded_rect(
+        ax, 0.05, 0.05, 9.9, fig_height - 0.1,
+        facecolor="none", edgecolor=COLORS["border_highlight"],
+        linewidth=1.0, alpha=0.6,
+    )
+
+    # 헤더 영역 배경 그라디언트 바
+    _draw_gradient_bar(
+        ax, 0.1, fig_height - 1.25, 9.8, 1.1,
+        color_start=COLORS["bg_header"], color_end=COLORS["bg"],
+        steps=25, alpha=0.7,
+    )
 
     # Title
     ax.text(
@@ -417,8 +439,10 @@ def generate_top_coins_card(
             change_7d = quote.get("percent_change_7d", 0) or 0
             mcap = quote.get("market_cap", 0) or 0
 
-        # Row background (alternating) with subtle border
-        if i % 2 == 0:
+        # Row background (alternating) -- 상위 3개 코인은 더 두드러진 배경색 적용
+        if i < 3:
+            _draw_rounded_rect(ax, 0.15, y - 0.2, 9.7, 0.55, facecolor=COLORS["bg_inner"], alpha=0.85)
+        elif i % 2 == 0:
             _draw_rounded_rect(ax, 0.15, y - 0.2, 9.7, 0.55, facecolor=COLORS["bg_inner"], alpha=0.6)
 
         # Rank: medal colours for top 3, with larger font
@@ -541,12 +565,13 @@ def generate_top_coins_card(
     ax.text(
         5,
         0.2,
-        f"{_DS['watermark']} | Auto-generated Market Report",
+        f"{_DS['watermark']} | {date_str}",
         ha="center",
         fontsize=_DS["footer_size"],
-        color=COLORS["text_muted"],
+        color=COLORS["text_secondary"],
         fontfamily=_FONT_FAMILY,
         style="italic",
+        alpha=0.65,
     )
 
     if not filename:
@@ -674,6 +699,15 @@ def generate_fear_greed_gauge(
     needle_len = r_inner - 0.08
     needle_x = needle_len * np.cos(needle_angle)
     needle_y = needle_len * np.sin(needle_angle)
+    # 바늘 그림자 효과 (약간 offset으로 어둡게)
+    shadow_offset = 0.02
+    ax.annotate(
+        "",
+        xy=(needle_x + shadow_offset, needle_y - shadow_offset),
+        xytext=(shadow_offset, -shadow_offset),
+        arrowprops=dict(arrowstyle="-|>", color="#000000", lw=3.0, alpha=0.3),
+    )
+    # 실제 바늘
     ax.annotate(
         "",
         xy=(needle_x, needle_y),
@@ -706,7 +740,7 @@ def generate_fear_greed_gauge(
 
     ax.text(
         0,
-        0.30,
+        0.33,
         str(value),
         ha="center",
         va="center",
@@ -715,9 +749,20 @@ def generate_fear_greed_gauge(
         color=val_color,
         fontfamily=_FONT_FAMILY,
     )
+    # "/ 100" 보조 텍스트
     ax.text(
         0,
-        -0.02,
+        0.10,
+        "/ 100",
+        ha="center",
+        va="center",
+        fontsize=12,
+        color=COLORS["text_muted"],
+        fontfamily=_FONT_FAMILY,
+    )
+    ax.text(
+        0,
+        -0.05,
         classification,
         ha="center",
         va="center",
@@ -777,12 +822,13 @@ def generate_fear_greed_gauge(
     ax.text(
         0,
         -0.50,
-        f"{_DS['watermark']} | alternative.me",
+        f"{_DS['watermark']} | {date_str} | alternative.me",
         ha="center",
         fontsize=_DS["footer_size"],
-        color=COLORS["text_muted"],
+        color=COLORS["text_secondary"],
         fontfamily=_FONT_FAMILY,
         style="italic",
+        alpha=0.65,
     )
 
     if not filename:
@@ -896,6 +942,20 @@ def generate_market_heatmap(
             pad=0.008,
         )
 
+        # 순위 번호 (왼쪽 상단 코너에 작게 표시)
+        ax.text(
+            x + 0.012,
+            y + cell_h - 0.012,
+            str(i + 1),
+            ha="left",
+            va="top",
+            transform=ax.transAxes,
+            fontsize=7,
+            color=COLORS["text_muted"],
+            fontfamily=_FONT_FAMILY,
+            alpha=0.8,
+        )
+
         # Symbol -- larger, bolder
         ax.text(
             x + cell_w / 2,
@@ -970,8 +1030,9 @@ def generate_market_heatmap(
         ha="right",
         va="center",
         transform=ax.transAxes,
-        fontsize=7,
-        color=COLORS["text_secondary"],
+        fontsize=9,
+        fontweight="bold",
+        color=COLORS["red"],
         fontfamily=_FONT_FAMILY,
     )
     ax.text(
@@ -981,12 +1042,25 @@ def generate_market_heatmap(
         ha="left",
         va="center",
         transform=ax.transAxes,
+        fontsize=9,
+        fontweight="bold",
+        color=COLORS["green"],
+        fontfamily=_FONT_FAMILY,
+    )
+    # 범례 중앙 레이블
+    ax.text(
+        legend_x_start + legend_w / 2,
+        legend_y + legend_h + 0.012,
+        "24h Change",
+        ha="center",
+        va="bottom",
+        transform=ax.transAxes,
         fontsize=7,
-        color=COLORS["text_secondary"],
+        color=COLORS["text_muted"],
         fontfamily=_FONT_FAMILY,
     )
 
-    _add_footer(ax, f"{_DS['watermark']} | Auto-generated Market Heatmap")
+    _add_footer(ax, f"{_DS['watermark']} | {date_str}")
 
     if not filename:
         filename = f"market-heatmap-{date_str}.png"
@@ -1097,12 +1171,13 @@ def generate_news_summary_card(
     fig.text(
         0.5,
         0.01,
-        f"{_DS['watermark']} | Auto-generated",
+        f"{_DS['watermark']} | {date_str}",
         ha="center",
         fontsize=_DS["footer_size"],
-        color=COLORS["text_muted"],
+        color=COLORS["text_secondary"],
         fontfamily=_FONT_FAMILY,
         style="italic",
+        alpha=0.65,
     )
 
     if not filename:
@@ -1267,12 +1342,13 @@ def generate_market_snapshot_card(
     ax.text(
         5,
         0.15,
-        f"{_DS['watermark']} | Auto-generated Market Snapshot",
+        f"{_DS['watermark']} | {date_str}",
         ha="center",
         fontsize=_DS["footer_size"],
-        color=COLORS["text_muted"],
+        color=COLORS["text_secondary"],
         fontfamily=_FONT_FAMILY,
         style="italic",
+        alpha=0.65,
     )
 
     if not filename:
@@ -1865,3 +1941,119 @@ def generate_news_briefing_card(
 
     logger.info("Generated news briefing card: %s", filename)
     return f"/assets/images/generated/{filename}"
+
+
+# ===================================================================
+# Category OG Images (1200x630 for SNS sharing)
+# ===================================================================
+
+# 카테고리별 설정 (이름, 이모지, 색상)
+_CATEGORY_OG_CONFIG = {
+    "crypto": ("Crypto News", "₿", COLORS["orange"]),
+    "stock": ("Stock Market", "📊", COLORS["green"]),
+    "market-analysis": ("Market Analysis", "📈", COLORS["blue"]),
+    "social-media": ("Social Media", "💬", COLORS["purple"]),
+    "regulatory": ("Regulatory", "⚖️", COLORS["cyan"]),
+    "defi": ("DeFi & Web3", "🔗", COLORS["purple"]),
+    "political-trades": ("Political Trades", "🏛️", COLORS["orange"]),
+    "worldmonitor": ("World Monitor", "🌍", COLORS["blue"]),
+}
+
+
+def generate_category_og_image(
+    category: str,
+    filename: Optional[str] = None,
+) -> Optional[str]:
+    """Generate a 1200x630 OG image for a category.
+
+    SNS(카카오톡, LinkedIn, X 등) 공유 시 미리보기에 사용되는 이미지를 생성합니다.
+    """
+    if not _MPL_AVAILABLE:
+        return None
+
+    # OG 이미지는 assets/images/ 디렉토리에 저장 (generated가 아닌 상위)
+    og_dir = os.path.join(REPO_ROOT, "assets", "images")
+    os.makedirs(og_dir, exist_ok=True)
+
+    config = _CATEGORY_OG_CONFIG.get(category)
+    if not config:
+        return None
+
+    cat_name, emoji, accent = config
+
+    # 1200x630 @ 150dpi -> 8x4.2 inches
+    fig, ax = plt.subplots(figsize=(8, 4.2))
+    fig.patch.set_facecolor(COLORS["bg"])
+    ax.set_facecolor(COLORS["bg"])
+    ax.set_xlim(0, 12)
+    ax.set_ylim(0, 6.3)
+    ax.axis("off")
+
+    # 배경 그라디언트 효과
+    _draw_gradient_bar(
+        ax, 0, 0, 12, 6.3,
+        color_start=COLORS["bg"], color_end=COLORS["bg_header"],
+        steps=30, alpha=0.8,
+    )
+
+    # 하단 액센트 라인
+    _draw_rounded_rect(
+        ax, 0.5, 0.4, 11, 0.08,
+        facecolor=accent, alpha=0.7, pad=0.005,
+    )
+
+    # 사이트 로고 텍스트
+    ax.text(
+        6, 5.2, "🐉 Investing Dragon",
+        ha="center", va="center",
+        fontsize=14, color=COLORS["text_secondary"],
+        fontfamily=_FONT_FAMILY,
+    )
+
+    # 카테고리명 (큰 텍스트)
+    ax.text(
+        6, 3.2, cat_name,
+        ha="center", va="center",
+        fontsize=36, fontweight="bold",
+        color=COLORS["text"],
+        fontfamily=_FONT_FAMILY,
+    )
+
+    # 설명 텍스트
+    ax.text(
+        6, 1.8, "Crypto & Stock News • Trading Journal",
+        ha="center", va="center",
+        fontsize=12, color=COLORS["text_secondary"],
+        fontfamily=_FONT_FAMILY,
+    )
+
+    # 액센트 장식 (좌우 라인)
+    ax.plot([1.5, 4.5], [4.3, 4.3], color=accent, linewidth=2, alpha=0.5)
+    ax.plot([7.5, 10.5], [4.3, 4.3], color=accent, linewidth=2, alpha=0.5)
+
+    if not filename:
+        filename = f"og-{category}.png"
+    filepath = os.path.join(og_dir, filename)
+
+    plt.tight_layout(pad=0)
+    plt.savefig(
+        filepath, dpi=150, facecolor=COLORS["bg"],
+        edgecolor="none", bbox_inches="tight", pad_inches=0,
+    )
+    plt.close(fig)
+
+    logger.info("Generated category OG image: %s", filename)
+    return f"/assets/images/{filename}"
+
+
+def generate_all_category_og_images() -> Dict[str, str]:
+    """Generate OG images for all categories.
+
+    Returns dict mapping category -> image path.
+    """
+    results = {}
+    for cat in _CATEGORY_OG_CONFIG:
+        path = generate_category_og_image(cat)
+        if path:
+            results[cat] = path
+    return results

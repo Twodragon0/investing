@@ -37,14 +37,27 @@ _HTML_BLOCK_RE = re.compile(r"<div\b[^>]*>.*?</div>", re.DOTALL)
 
 def strip_html_tags(text: str) -> str:
     """Remove HTML tags from text, preserving readable content."""
-    # Remove entire HTML block elements (div, details, summary) first
+    # Remove entire HTML block elements (div, details, summary, style, script) first
     text = re.sub(r"<details[^>]*>.*?</details>", "", text, flags=re.DOTALL)
+    text = re.sub(r"<summary[^>]*>.*?</summary>", "", text, flags=re.DOTALL)
+    text = re.sub(r"<style[^>]*>.*?</style>", "", text, flags=re.DOTALL)
+    text = re.sub(r"<script[^>]*>.*?</script>", "", text, flags=re.DOTALL)
     text = _HTML_BLOCK_RE.sub("", text)
     # Remove remaining inline tags
     text = _HTML_TAG_RE.sub("", text)
     # Collapse multiple blank lines
     text = re.sub(r"\n{3,}", "\n\n", text)
     return text.strip()
+
+
+def _is_similar_title(title1: str, title2: str, threshold: float = 0.6) -> bool:
+    """두 제목의 단어 기반 유사도를 체크합니다."""
+    words1 = set(title1.lower().split())
+    words2 = set(title2.lower().split())
+    if not words1 or not words2:
+        return False
+    overlap = len(words1 & words2)
+    return overlap / min(len(words1), len(words2)) > threshold
 
 
 def read_post_content(filepath: str) -> Dict[str, Any]:
@@ -1005,11 +1018,11 @@ def _to_theme_payload(
             hit_totals[k] += v
 
     emojis = {
-        "금리/유동성": "🏦",
-        "환율/달러": "💵",
-        "정책/규제": "📜",
-        "리스크 이벤트": "🚨",
-        "수급/심리": "🧭",
+        "금리/유동성": "💰",
+        "환율/달러": "💱",
+        "정책/규제": "📋",
+        "리스크 이벤트": "⚠️",
+        "수급/심리": "🔄",
         "실적/지표": "📊",
     }
 
@@ -1332,14 +1345,14 @@ def main():
 
     if briefing_image:
         content_parts.append(f'![multi-asset-briefing]({{{{ "{briefing_image}" | relative_url }}}})\n')
-    fallback_briefing = _render_generated_image(f"news-briefing-daily-{today}.png", "multi-asset-briefing")
-    legacy_briefing = _render_generated_image(f"news-briefing-{today}.png", "multi-asset-briefing")
+    fallback_briefing = _render_generated_image(f"news-briefing-daily-{today}.png", "시가총액 기준 상위 10 암호화폐 현황")
+    legacy_briefing = _render_generated_image(f"news-briefing-{today}.png", "시가총액 기준 상위 10 암호화폐 현황")
     if not briefing_image and fallback_briefing:
         content_parts.append(fallback_briefing + "\n")
     elif not briefing_image and legacy_briefing:
         content_parts.append(legacy_briefing + "\n")
 
-    heatmap_img = _render_generated_image(f"market-heatmap-{today}.png", "market-heatmap")
+    heatmap_img = _render_generated_image(f"market-heatmap-{today}.png", "암호화폐 시장 히트맵 (24시간 변동)")
     if heatmap_img:
         content_parts.append(heatmap_img + "\n")
 
