@@ -1,3 +1,4 @@
+@use "sass:color";
 @import "variables";
 
 /* ================================
@@ -16,7 +17,7 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
-  background: linear-gradient(180deg, $bg-primary 0%, darken($bg-primary, 2%) 100%);
+  background: linear-gradient(180deg, $bg-primary 0%, color.adjust($bg-primary, $lightness: -2%) 100%);
   color: $text-primary;
   line-height: 1.7;
   font-size: 16px;
@@ -30,7 +31,7 @@ a {
   transition: all 0.3s ease;
 
   &:hover {
-    color: lighten($accent-blue, 10%);
+    color: color.adjust($accent-blue, $lightness: 10%);
     text-decoration: none;
   }
 }
@@ -1026,11 +1027,11 @@ a {
       transition: width 0.5s ease;
     }
 
-    .bar-fill-blue { background: linear-gradient(90deg, $accent-blue, lighten($accent-blue, 10%)); }
+    .bar-fill-blue { background: linear-gradient(90deg, $accent-blue, color.adjust($accent-blue, $lightness: 10%)); }
     .bar-fill-orange { background: linear-gradient(90deg, #f7931a, #ffb347); }
-    .bar-fill-purple { background: linear-gradient(90deg, $accent-purple, lighten($accent-purple, 10%)); }
-    .bar-fill-green { background: linear-gradient(90deg, $accent-green, lighten($accent-green, 10%)); }
-    .bar-fill-red { background: linear-gradient(90deg, $accent-red, lighten($accent-red, 10%)); }
+    .bar-fill-purple { background: linear-gradient(90deg, $accent-purple, color.adjust($accent-purple, $lightness: 10%)); }
+    .bar-fill-green { background: linear-gradient(90deg, $accent-green, color.adjust($accent-green, $lightness: 10%)); }
+    .bar-fill-red { background: linear-gradient(90deg, $accent-red, color.adjust($accent-red, $lightness: 10%)); }
 
     .theme-count {
       min-width: 80px;
@@ -2117,7 +2118,7 @@ body {
   gap: 2rem;
   padding: 2rem 2.5rem;
   margin-bottom: 2.5rem;
-  background: linear-gradient(135deg, rgba($bg-secondary, 0.95) 0%, rgba($bg-card, 0.9) 50%, rgba(darken($bg-card, 2%), 0.85) 100%);
+  background: linear-gradient(135deg, rgba($bg-secondary, 0.95) 0%, rgba($bg-card, 0.9) 50%, rgba(color.adjust($bg-card, $lightness: -2%), 0.85) 100%);
   border: 1px solid rgba($border-color, 0.7);
   border-radius: 16px;
   position: relative;
@@ -3436,7 +3437,7 @@ body {
   border: 2px solid $bg-primary;
 
   &:hover {
-  background: linear-gradient(180deg, lighten($accent-blue, 5%), lighten($accent-purple, 5%));
+  background: linear-gradient(180deg, color.adjust($accent-blue, $lightness: 5%), color.adjust($accent-purple, $lightness: 5%));
   }
 }
 
@@ -3629,7 +3630,7 @@ body {
     transition: background 0.3s ease;
 
     &:hover {
-  background: linear-gradient(90deg, lighten($accent-blue, 5%), lighten($accent-purple, 5%));
+  background: linear-gradient(90deg, color.adjust($accent-blue, $lightness: 5%), color.adjust($accent-purple, $lightness: 5%));
     }
   }
 }
@@ -3835,7 +3836,7 @@ body {
 
   &:hover {
     gap: 0.75rem;
-    color: lighten($accent-blue, 10%);
+    color: color.adjust($accent-blue, $lightness: 10%);
   }
 }
 
