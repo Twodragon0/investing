@@ -86,14 +86,147 @@ def _clean_description(text: str) -> str:
     return text
 
 
+def _resolve_google_news_url(url: str, timeout: int = 8) -> str:
+    """Follow Google News redirect to get the real article URL.
+
+    Google News may use HTTP redirects or JavaScript redirects.
+    We try HTTP first; if that stays on Google, we look for
+    canonical/og:url in the HTML.
+    """
+    if not url or "news.google.com" not in url:
+        return url
+    try:
+        resp = requests.get(
+            url,
+            timeout=timeout,
+            allow_redirects=True,
+            headers={"User-Agent": _BROWSER_UA},
+            verify=VERIFY_SSL,
+        )
+        # Check if HTTP redirect resolved to real site
+        if resp.url and "news.google.com" not in resp.url:
+            return resp.url
+        # Try to find canonical or data-url in HTML
+        import re as _re
+
+        for pattern in [
+            r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']([^"\']+)',
+            r'<meta[^>]+property=["\']og:url["\'][^>]+content=["\']([^"\']+)',
+            r'data-url=["\']([^"\']+)',
+        ]:
+            match = _re.search(pattern, resp.text[:20_000])
+            if match:
+                found = match.group(1)
+                if found and "news.google.com" not in found:
+                    return found
+    except requests.exceptions.RequestException:
+        pass
+    return ""
+
+
+_BROWSER_UA = (
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/120.0.0.0 Safari/537.36"
+)
+
+
+def _fetch_og_image(url: str, timeout: int = 8) -> str:
+    """Fetch only og:image from a URL (lightweight, no description)."""
+    if not url:
+        return ""
+    try:
+        import re as _re
+
+        resp = requests.get(
+            url,
+            timeout=timeout,
+            headers={"User-Agent": _BROWSER_UA},
+            verify=VERIFY_SSL,
+        )
+        resp.raise_for_status()
+        # Search in first 30KB of HTML for og:image via regex (faster than BS4)
+        head_html = resp.text[:30_000]
+        for pattern in [
+            r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)',
+            r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image',
+            r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)',
+            r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']twitter:image',
+        ]:
+            match = _re.search(pattern, head_html, _re.IGNORECASE)
+            if match:
+                img_url = match.group(1).strip()
+                if img_url.startswith("http"):
+                    return img_url
+    except Exception as exc:
+        logger.debug("og:image fetch failed for %s: %s", url, exc)
+    return ""
+
+
+def fetch_images_concurrent(
+    items: list,
+    max_workers: int = 8,
+    max_items: int = 30,
+) -> int:
+    """Fetch og:image for items missing images, using concurrent threads.
+
+    Resolves Google News redirect URLs first, then fetches og:image.
+    Returns the number of images successfully fetched.
+    """
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    targets = [
+        (i, item) for i, item in enumerate(items)
+        if not item.get("image") and item.get("link")
+    ][:max_items]
+
+    if not targets:
+        return 0
+
+    fetched = 0
+
+    def _fetch_one(idx: int, item: dict) -> tuple:
+        link = item["link"]
+        # Resolve Google News redirects
+        if "news.google.com" in link:
+            link = _resolve_google_news_url(link)
+        if not link:
+            return idx, ""
+        return idx, _fetch_og_image(link)
+
+    with ThreadPoolExecutor(max_workers=max_workers) as pool:
+        futures = {
+            pool.submit(_fetch_one, idx, item): idx
+            for idx, item in targets
+        }
+        for future in as_completed(futures):
+            try:
+                idx, img_url = future.result(timeout=15)
+                if img_url:
+                    items[idx]["image"] = img_url
+                    fetched += 1
+            except Exception as exc:
+                logger.debug("Image fetch failed for item %d: %s", idx, exc)
+
+    if fetched:
+        logger.info("Fetched %d og:images for %d items", fetched, len(targets))
+    return fetched
+
+
 def fetch_page_metadata(url: str, timeout: int = 8) -> Dict[str, str]:
     """Fetch meta description and og:image from a URL page (best-effort).
 
     Returns a dict with keys ``description`` and ``image`` (empty strings on failure).
     """
     result: Dict[str, str] = {"description": "", "image": ""}
-    if not url or "news.google.com/rss/" in url:
+    if not url:
         return result
+    # Resolve Google News redirects
+    if "news.google.com/rss/" in url:
+        resolved = _resolve_google_news_url(url)
+        if not resolved:
+            return result
+        url = resolved
 
     try:
         from bs4 import BeautifulSoup as BS4
@@ -646,6 +779,9 @@ def enrich_items(
             max_fetch=max_fetch,
             _fetch_counter=counter,
         )
+
+    # --- Image fetch pass (concurrent og:image for items missing images) ---
+    fetch_images_concurrent(items, max_workers=8, max_items=30)
 
     # --- Translation pass (after all enrichment is done) ---
     from .translator import (
