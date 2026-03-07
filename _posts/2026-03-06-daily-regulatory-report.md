@@ -72,7 +72,7 @@ description: "전 세계 금융 규제기관의 최신 동향을 정리합니다
 ## 아시아 규제 동향
 
 **1. [가타야마 사츠키 금융장관 기자회견(2026년 2월 27일)](https://www.fsa.go.jp/en/conference/minister/2026/20260227.html)**
-(2026년 2월 27일 금요일 오전 43시 ~ 오전 48시) 먼저 FSA가 제출한 법안에 대해 이야기하겠습니다.
+(2026년 2월 27일 금요일 오전 8시 43분 ~ 오전 8시 48분) 먼저 FSA가 제출한 법안에 대해 이야기하겠습니다.
 <span class="source-tag" data-source-type="default">Japan FSA</span>
 
 
