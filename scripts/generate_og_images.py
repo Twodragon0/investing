@@ -216,7 +216,7 @@ def generate_og_image(
 
     # Create figure: 12x6.3 inches at 100 DPI = 1200x630 px
     fig = plt.figure(figsize=(12, 6.3), dpi=100)
-    ax = fig.add_axes([0, 0, 1, 1])
+    ax = fig.add_axes((0, 0, 1, 1))
     ax.set_xlim(0, 1200)
     ax.set_ylim(0, 630)
     ax.set_axis_off()
