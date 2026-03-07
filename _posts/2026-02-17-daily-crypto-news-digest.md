@@ -6,7 +6,7 @@ categories: [crypto-news]
 tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-summary-2026-02-17.png"
+image: "/assets/images/generated/og-daily-crypto-news-digest-2026-02-17.png"
 description: "2026-02-17 암호화폐 시장에서 109건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 이더리움 관련 소식이 주목됩니다."
 ---
 

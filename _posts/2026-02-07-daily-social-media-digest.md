@@ -7,7 +7,7 @@ tags: [social-media, telegram, twitter, daily-digest]
 source: "consolidated"
 lang: "ko"
 description: "암호화폐 소셜 미디어에서는 비트코인 폭락과 급반등을 둘러싼 극단적인 심리 변화가 포착됐다. 트럼프 대통령의 \"나는 크립토 지지자\" 발언, 블랙록의 대규모 비트코인 ETF 매수, 바이낸스 SAFU 펀드의 3,600 BTC 매입 등 강세 신호와 함께, 이더리움 $2,000 붕괴로..."
-image: "/assets/images/generated/news-briefing-social-2026-02-07.png"
+image: "/assets/images/generated/og-daily-social-media-digest-2026-02-07.png"
 ---
 
 암호화폐 소셜 미디어에서는 비트코인 폭락과 급반등을 둘러싼 극단적인 심리 변화가 포착됐다. 트럼프 대통령의 "나는 크립토 지지자" 발언, 블랙록의 대규모 비트코인 ETF 매수, 바이낸스 SAFU 펀드의 3,600 BTC 매입 등 강세 신호와 함께, 이더리움 $2,000 붕괴로 인한 6.86억 달러 손실 등 공포 심리가 공존하는 복잡한 시장 심리를 보여줬다.

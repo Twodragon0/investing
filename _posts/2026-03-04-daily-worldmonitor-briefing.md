@@ -7,7 +7,7 @@ tags: ["worldmonitor", "geopolitics", "macro", "daily-digest"]
 source: "worldmonitor"
 source_url: "https://worldmonitor.app"
 lang: "ko"
-image: "/assets/images/og-default.png"
+image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-03-04.png"
 description: "이란 분쟁 확대로 VIX 급등, 남수단 내전 위기, 트럼프 스페인 무역 중단 위협 등 지정학 리스크 심화. 금융시장·에너지 섹터 변동성 확대."
 ---
 

@@ -7,7 +7,7 @@ tags: ["defi", "tvl", "crypto", "blockchain", "daily-digest"]
 source: "defi-llama"
 source_url: "https://defillama.com"
 lang: "ko"
-image: "/assets/images/generated/defi-tvl-dashboard-2026-03-06.png"
+image: "/assets/images/generated/og-daily-defi-tvl-report-2026-03-06.png"
 description: "전체 프로토콜 TVL $247.99B는 전통 금융 기관과 비교할 수 있는 규모로, DeFi의 제도적 성숙도를 보여줍니다."
 ---
 

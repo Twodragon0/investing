@@ -6,7 +6,7 @@ categories: [crypto-news]
 tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-2026-02-21.png"
+image: "/assets/images/generated/og-daily-crypto-news-digest-2026-02-21.png"
 description: "2026-02-21 암호화폐 시장에서 110건의 뉴스를 분석했습니다. 오늘은 비트코인, 정치/정책, 거래소 관련 소식이 주목됩니다."
 ---
 

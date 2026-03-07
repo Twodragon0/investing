@@ -7,7 +7,7 @@ tags: [암호화폐, 시장분석, 투자, 블록체인, BTC, ETH]
 source: "Crypto Monitoring System"
 lang: ko
 description: "암호화폐 시장 업데이트: 최근 24시간 동안의 주요 움직임과 인기 토큰들을 확인해보세요."
-image: "/assets/images/generated/news-briefing-cryptomarket-2026-02-07.png"
+image: "/assets/images/generated/og-daily-crypto-market-report-2026-02-07.png"
 ---
 
 암호화폐 시장 업데이트: 최근 24시간 동안의 주요 움직임과 인기 토큰들을 확인해보세요.

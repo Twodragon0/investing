@@ -6,7 +6,7 @@ categories: [regulatory-news]
 tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/og-default.png"
+image: "/assets/images/generated/og-daily-regulatory-report-2026-03-01.png"
 description: "2026-03-01 SEC·CFTC 규제 동향, 한국 금융위 디지털자산 정책 등 글로벌 규제 뉴스 28건 분석."
 ---
 

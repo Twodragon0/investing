@@ -6,7 +6,7 @@ categories: [crypto-news]
 tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-summary-2026-02-20.png"
+image: "/assets/images/generated/og-daily-crypto-news-digest-2026-02-20.png"
 description: "2026-02-20 암호화폐 시장 72건의 뉴스를 분석한 요약 브리핑입니다."
 ---
 

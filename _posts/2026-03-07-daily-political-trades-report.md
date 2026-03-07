@@ -6,7 +6,7 @@ categories: [political-trades]
 tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-bank", "insider-trading"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-political-2026-03-07.png"
+image: "/assets/images/generated/og-daily-political-trades-report-2026-03-07.png"
 excerpt: "2026-03-07 정치인 거래·정책 리포트: 의회 거래 1건, 트럼프 정책 1건, 한국 정치인 1건, 중앙은행 4건, 총 7건 수집"
 description: "오늘 정치인 거래·정책 분야에서 총 7건의 뉴스가 수집되었습니다. 세부 구성은 미국 의회 거래 1건, 트럼프 정책 1건, 한국 정치인 1건, 중앙은행 4건입니다."
 ---

@@ -6,7 +6,7 @@ categories: [market-analysis]
 tags: [market-summary, daily, crypto, stock, macro, top-coins, quant, trading]
 source: "auto-generated"
 lang: "ko"
-image: "/assets/images/generated/market-heatmap-2026-02-28.png"
+image: "/assets/images/generated/og-daily-market-report-2026-02-28.png"
 description: "2026-02-28 일일 시장 종합 리포트. 공포/탐욕 지수 11 (Extreme Fear). 암호화폐·주식·매크로 통합 분석."
 ---
 

@@ -6,7 +6,7 @@ categories: [stock-news]
 tags: ["stock", "market", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/market-snapshot-2026-03-07.png"
+image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-07.png"
 description: "2026-03-07 주식 시장에서 94건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,584.87(+0.02%), KOSDAQ 1,154.67(+3.43%), USD/KRW 1,479.51(-0.06%)."
 ---
 

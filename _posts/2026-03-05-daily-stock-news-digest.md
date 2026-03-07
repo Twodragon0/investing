@@ -6,7 +6,7 @@ categories: [stock-news]
 tags: ["stock", "market", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/market-snapshot-2026-03-05.png"
+image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-05.png"
 description: "KOSPI +8.13%(5,614), KOSDAQ +11.33%(1,117) 급등 반등. 미중동 유가 급등, 다우 238p 상승. 173건 분석."
 ---
 

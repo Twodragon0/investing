@@ -7,7 +7,7 @@ tags: [security, hack, blockchain, daily-digest]
 source: "consolidated"
 lang: "ko"
 description: "블록체인 보안 관련 뉴스 1건을 정리합니다."
-image: "/assets/images/generated/news-briefing-security-2026-02-13.png"
+image: "/assets/images/generated/og-daily-security-report-2026-02-13.png"
 ---
 
 블록체인 보안 관련 뉴스 1건을 정리합니다.

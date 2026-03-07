@@ -7,7 +7,7 @@ tags: [보안, 블록체인, 해킹, 스마트컨트랙트, DeFi]
 source: "Crypto Monitoring System"
 lang: ko
 description: "스마트 컨트랙트 보안 동향: 최신 보안 패턴과 위협 요소들을 살펴봅니다."
-image: "/assets/images/generated/news-briefing-security-2026-02-07.png"
+image: "/assets/images/generated/og-blockchain-security-report-2026-02-07.png"
 ---
 
 스마트 컨트랙트 보안 동향: 최신 보안 패턴과 위협 요소들을 살펴봅니다.

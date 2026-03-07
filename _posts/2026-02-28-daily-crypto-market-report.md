@@ -8,6 +8,7 @@ source: "CoinMarketCap"
 source_url: "https://coinmarketcap.com/"
 lang: "ko"
 description: "2026-02-28 암호화폐 시장 종합 리포트. (API 데이터 수집 오류로 가격 정보가 불완전합니다)"
+image: "/assets/images/generated/og-daily-crypto-market-report-2026-02-28.png"
 ---
 
 ## 시장 시각화

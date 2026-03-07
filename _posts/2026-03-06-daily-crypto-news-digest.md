@@ -6,7 +6,7 @@ categories: [crypto-news]
 tags: ["crypto", "news", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-crypto-2026-03-06.png"
+image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-06.png"
 description: "2026-03-06 암호화폐 시장 108건 뉴스 분석. 비트코인·가격/시장·AI/기술 테마 주목. P0 긴급 이슈 6건, P1 주요 이슈 8건 감지."
 ---
 

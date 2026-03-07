@@ -7,7 +7,7 @@ tags: ["market-report", "crypto", "top-coins", "trending", "daily"]
 source: "CoinMarketCap"
 source_url: "https://coinmarketcap.com/"
 lang: "ko"
-image: "/assets/images/og-market-analysis.png"
+image: "/assets/images/generated/og-daily-crypto-market-report-2026-03-04.png"
 description: "오늘 시가총액 상위 30개 코인을 기준으로 시장을 분석했습니다. 비트코인은 $68,099에서 24시간 -0.51% 하락하며 시장에 조정 신호를 보내고 있습니다. 전체 시가총액은 $2.40T으로 전일 대비 -0.77% 변동했으며, BTC 도미넌스 56.7%로 비트코인 중심 자금 흐름이…"
 ---
 

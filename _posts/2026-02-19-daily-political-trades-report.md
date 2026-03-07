@@ -7,7 +7,7 @@ tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-
 source: "consolidated"
 lang: "ko"
 description: "2026-02-19 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. 미국 의회 거래 1건, SEC 내부자 거래 3건, 중앙은행 13건, 총 17건이 수집되었습니다."
-image: "/assets/images/generated/news-briefing-political-2026-02-19.png"
+image: "/assets/images/generated/og-daily-political-trades-report-2026-02-19.png"
 ---
 
 **2026-02-19** 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. 미국 의회 거래 1건, SEC 내부자 거래 3건, 중앙은행 13건, 총 17건이 수집되었습니다.

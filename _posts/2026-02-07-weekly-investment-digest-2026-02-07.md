@@ -7,7 +7,7 @@ tags: [weekly-digest, summary, market-analysis]
 source: "auto-generated"
 lang: "ko"
 description: "이번 주 (01월 31일 ~ 02월 07일) 투자 관련 뉴스와 시장 분석을 종합 정리합니다."
-image: "/assets/images/generated/news-summary-weekly-2026-02-07.png"
+image: "/assets/images/generated/og-weekly-investment-digest-2026-02-07-2026-02-07.png"
 ---
 
 이번 주 (01월 31일 ~ 02월 07일) 투자 관련 뉴스와 시장 분석을 종합 정리합니다.

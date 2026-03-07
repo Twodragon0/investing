@@ -6,7 +6,7 @@ categories: [security-alerts]
 tags: ["security", "hack", "blockchain", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/og-regulatory.png"
+image: "/assets/images/generated/og-daily-security-report-2026-03-03.png"
 description: "2026년 2월 블록체인 해킹 피해액 $26.5M으로 2025년 3월 이후 최저. 보안 환경 개선 분석."
 ---
 

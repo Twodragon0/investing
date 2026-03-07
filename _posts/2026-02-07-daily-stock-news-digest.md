@@ -7,7 +7,7 @@ tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
 description: "다우지수가 1,200포인트 폭등하며 사상 최초로 50,000선을 돌파 마감했다. 3일간의 기술주 폭락에서 극적으로 반등한 장세로, 엔비디아가 AI 하드웨어 반등을 이끌며 시장 회복에 앞장섰다. S&P 500이 한때 2026년 들어 마이너스로 전환될 정도로 변동성이 극심했지만, 주..."
-image: "/assets/images/generated/news-briefing-stock-2026-02-07.png"
+image: "/assets/images/generated/og-daily-stock-news-digest-2026-02-07.png"
 ---
 
 다우지수가 1,200포인트 폭등하며 사상 최초로 50,000선을 돌파 마감했다. 3일간의 기술주 폭락에서 극적으로 반등한 장세로, 엔비디아가 AI 하드웨어 반등을 이끌며 시장 회복에 앞장섰다. S&P 500이 한때 2026년 들어 마이너스로 전환될 정도로 변동성이 극심했지만, 주 후반 강력한 매수세로 주요 지수 모두 급등 마감했다.
