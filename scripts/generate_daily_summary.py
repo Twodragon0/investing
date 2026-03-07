@@ -1456,7 +1456,8 @@ def main():
         if stock_dp["titles"] and not stock_detail.strip():
             stock_detail = f"대표 헤드라인: {_clean_headline(stock_dp['titles'][0])}."
         content_parts.append(
-            f"- **주식:** {stock_summary.get('count', 0)}건. {stock_detail.strip() if stock_detail.strip() else '시장 데이터 확인 필요.'}"
+            f"- **주식:** {stock_summary.get('count', 0)}건. "
+            f"{stock_detail.strip() if stock_detail.strip() else '시장 데이터 확인 필요.'}"
         )
     if regulatory_summary:
         reg_dp = _extract_category_data_points(regulatory_summary)

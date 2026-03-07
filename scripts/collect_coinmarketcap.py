@@ -185,7 +185,8 @@ def format_top_coins_table(coins: List[Dict], source: str = "coingecko") -> str:
 
         price_str = f"${price:,.2f}" if price and price >= 1 else f"${price:,.6f}" if price else "N/A"
         lines.append(
-            f"| {i} | **{name}** ({symbol}) | {price_str} | {_fmt_pct(change_24h)} | {_fmt_pct(change_7d)} | {_fmt_num(mcap)} |"
+            f"| {i} | **{name}** ({symbol}) | {price_str} | "
+            f"{_fmt_pct(change_24h)} | {_fmt_pct(change_7d)} | {_fmt_num(mcap)} |"
         )
 
     return "\n".join(lines)
@@ -926,7 +927,9 @@ def main():
         if global_data and total_mcap:
             summary_parts.append(
                 f"전체 시가총액은 **{_fmt_num(total_mcap)}**으로 전일 대비 {mcap_ch:+.2f}% 변동했으며, "
-                f"BTC 도미넌스 {btc_dom:.1f}%로 {'비트코인 중심 자금 흐름이 지속' if btc_dom > 50 else '알트코인으로의 자금 이동이 활발한 상황'}입니다."
+                f"BTC 도미넌스 {btc_dom:.1f}%로 "
+                f"{'비트코인 중심 자금 흐름이 지속' if btc_dom > 50 else '알트코인으로의 자금 이동이 활발한 상황'}"
+                "입니다."
             )
         if fear_greed:
             fg_map = {

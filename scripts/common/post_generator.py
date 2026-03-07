@@ -16,6 +16,79 @@ logger = logging.getLogger(__name__)
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 POSTS_DIR = os.path.join(REPO_ROOT, "_posts")
 
+# ---------------------------------------------------------------------------
+# Translation artifact cleanup
+# ---------------------------------------------------------------------------
+
+# Known artifacts produced when crypto/finance token names get embedded inside
+# ordinary English words during the placeholder-based translation process.
+# Format: {wrong_form: correct_form}
+_TOKEN_ARTIFACTS: dict[str, str] = {
+    # AI token artifacts
+    "RAIse": "Raise",
+    "RAIses": "Raises",
+    "RAIsed": "Raised",
+    "RAIsing": "Raising",
+    "gAIn": "gain",
+    "gAIns": "gains",
+    "gAIned": "gained",
+    "gAIning": "gaining",
+    "ChAIrman": "Chairman",
+    "ChAIr": "Chair",
+    "ChAIn": "Chain",
+    "trAIl": "trail",
+    "trAIling": "trailing",
+    "pAId": "paid",
+    "sAId": "said",
+    "mAIn": "main",
+    "mAIntain": "maintain",
+    "mAIntains": "maintains",
+    "remAIn": "remain",
+    "remAIns": "remains",
+    "remAIning": "remaining",
+    "contAIn": "contain",
+    "contAIns": "contains",
+    "contAIner": "container",
+    "certAIn": "certain",
+    "sustAIn": "sustain",
+    "explAIn": "explain",
+    "obtAIn": "obtain",
+    "attAIn": "attain",
+    # SOL token artifacts
+    "GaSOLine": "Gasoline",
+    "gaSOLine": "gasoline",
+    "abSOLute": "absolute",
+    "abSOLutely": "absolutely",
+    "reSOLve": "resolve",
+    "reSOLved": "resolved",
+    "reSOLution": "resolution",
+    "SOLution": "Solution",
+    "SOLutions": "Solutions",
+    "SOLving": "Solving",
+    "diSSOLve": "dissolve",
+    "conSOLidate": "consolidate",
+    "conSOLidation": "consolidation",
+    # XRP token artifacts (less common but possible)
+    "XRPected": "Expected",
+    "XRPress": "Express",
+    # ETH token artifacts
+    "ETHical": "Ethical",
+    "ETHics": "Ethics",
+}
+
+
+def _fix_translation_artifacts(text: str) -> str:
+    """Remove token-name artifacts embedded in ordinary words after translation.
+
+    When the placeholder-based translation system fails to protect a token name
+    (e.g. AI, SOL) from being matched inside common words, the restored text
+    can contain mixed-case oddities like "gAIn" or "GaSOLine". This function
+    corrects those known patterns as a safety net.
+    """
+    for wrong, correct in _TOKEN_ARTIFACTS.items():
+        text = text.replace(wrong, correct)
+    return text
+
 
 def _slugify(text: str, max_length: int = 80) -> str:
     """Convert text to URL-safe slug (English-only, strips Korean characters).
@@ -154,6 +227,9 @@ class PostGenerator:
                     frontmatter_lines.append(f'description: "{safe_desc}"')
 
         frontmatter_lines.append("---")
+
+        # Fix translation artifacts (e.g. "gAIn", "GaSOLine") before writing
+        content = _fix_translation_artifacts(content)
 
         # Normalize hardcoded image paths in content to Liquid relative_url syntax
         normalized_content = _normalize_image_paths(content.strip())

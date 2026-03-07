@@ -288,7 +288,11 @@ def _extract_title_entities(title: str) -> list:
         "Million", "Billion", "Trillion",
         "Today", "Yesterday", "Tomorrow", "Year", "Week", "Month",
     }
-    _NOISE_TICKERS = {"CEO", "IPO", "SEC", "FED", "GDP", "CPI", "ETF", "AI", "USD", "FOR", "THE", "ARE", "HAS", "NOT", "BUT", "ALL", "CAN", "NOW", "HOW", "NEW", "CBS", "FBI", "GOP"}
+    _NOISE_TICKERS = {
+        "CEO", "IPO", "SEC", "FED", "GDP", "CPI", "ETF", "AI", "USD",
+        "FOR", "THE", "ARE", "HAS", "NOT", "BUT", "ALL", "CAN", "NOW",
+        "HOW", "NEW", "CBS", "FBI", "GOP",
+    }
     tickers = [t for t in tickers if t not in _NOISE_TICKERS]
     proper = [w for w in re.findall(r"\b[A-Z][a-z]{2,}\b", title) if w not in _COMMON]
 
@@ -322,13 +326,19 @@ def _analyze_korean_title(title: str) -> str:
     # Circuit breaker / market crash
     if any(kw in title for kw in ["서킷브레이커", "사이드카"]):
         if "매수" in title:
-            return "급락 이후 반등 과정에서 매수 사이드카가 발동되었습니다. 변동성 확대 장세에서 저점 매수세 유입 신호입니다."
+            return (
+                "급락 이후 반등 과정에서 매수 사이드카가 발동되었습니다. "
+                "변동성 확대 장세에서 저점 매수세 유입 신호입니다."
+            )
         return "급격한 하락으로 매매거래가 일시 중단되었습니다. 투자 심리 위축과 추가 하방 리스크에 유의해야 합니다."
 
     if any(kw in title for kw in ["폭락", "급락", "패닉"]):
         pct = re.search(r"(\d+(?:\.\d+)?)\s*%", title)
         pct_str = f" {pct.group(1)}% " if pct else " 큰 폭으로 "
-        return f"시장이{pct_str}급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다."
+        return (
+            f"시장이{pct_str}급락하며 투매 양상이 나타났습니다. "
+            "패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다."
+        )
 
     if any(kw in title for kw in ["급등", "폭등", "반등"]):
         return "시장 반등 움직임이 포착되었습니다. 기술적 반등인지 추세 전환인지 거래량과 수급 확인이 필요합니다."
@@ -344,9 +354,15 @@ def _analyze_korean_title(title: str) -> str:
 
     if any(kw in title for kw in ["삼성전자", "하이닉스", "반도체"]):
         if any(kw in title for kw in ["매수", "기회", "긍정"]):
-            return "반도체 섹터에 대한 매수 기회론이 제기되고 있습니다. 업종 펀더멘탈과 글로벌 수요 동향 확인이 필요합니다."
+            return (
+                "반도체 섹터에 대한 매수 기회론이 제기되고 있습니다. "
+                "업종 펀더멘탈과 글로벌 수요 동향 확인이 필요합니다."
+            )
         if any(kw in title for kw in ["하락", "흔들", "약세"]):
-            return "반도체주가 외부 리스크로 약세를 보이고 있습니다. 섹터 하락이 일시적인지 구조적인지 판단이 중요합니다."
+            return (
+                "반도체주가 외부 리스크로 약세를 보이고 있습니다. "
+                "섹터 하락이 일시적인지 구조적인지 판단이 중요합니다."
+            )
         return "반도체 산업 관련 주요 소식입니다. 한국 증시에서 반도체는 시가총액 비중이 가장 높은 핵심 섹터입니다."
 
     if any(kw in title for kw in ["상장폐지", "주가조작", "불공정거래"]):
@@ -371,7 +387,10 @@ def _analyze_korean_title(title: str) -> str:
         return "통상·무역 정책 관련 소식입니다. 글로벌 공급망과 수출 기업 실적에 영향을 줄 수 있습니다."
 
     if any(kw in title for kw in ["배당", "주주환원", "자사주"]):
-        return "배당·주주환원 정책 관련 소식입니다. 배당 수익률과 자사주 매입 규모가 주가에 긍정적 영향을 줄 수 있습니다."
+        return (
+            "배당·주주환원 정책 관련 소식입니다. "
+            "배당 수익률과 자사주 매입 규모가 주가에 긍정적 영향을 줄 수 있습니다."
+        )
 
     if any(kw in title for kw in ["부동산", "아파트", "전세", "분양"]):
         return "부동산 시장 관련 소식입니다. 금리·정책 변화에 따른 부동산 시장 흐름을 주시해야 합니다."
@@ -418,7 +437,10 @@ def _analyze_english_title(title: str, title_lower: str) -> str:
         return f"원유 가격 변동 소식입니다.{price_str} 유가는 인플레이션과 에너지 섹터 수익성의 핵심 변수입니다."
 
     if any(kw in title_lower for kw in ["iran", "war", "conflict", "military"]):
-        return "지정학적 분쟁이 글로벌 금융시장에 충격을 주고 있습니다. 안전자산 선호와 위험자산 회피 흐름에 주목하세요."
+        return (
+            "지정학적 분쟁이 글로벌 금융시장에 충격을 주고 있습니다. "
+            "안전자산 선호와 위험자산 회피 흐름에 주목하세요."
+        )
 
     if any(kw in title_lower for kw in ["treasury", "yield", "bond"]):
         return "미 국채 시장 동향입니다. 금리 변동은 주식 밸류에이션과 대출 비용에 직접적 영향을 미칩니다."
@@ -433,7 +455,10 @@ def _analyze_english_title(title: str, title_lower: str) -> str:
         tickers = re.findall(r"\b[A-Z]{2,5}\b", title)
         names = [t for t in tickers if t not in {"CEO", "IPO", "SEC", "FED", "GDP", "CPI", "ETF", "AI"}]
         if names:
-            return f"{', '.join(names[:2])} 기업 실적 발표 소식입니다. 실적 서프라이즈 여부와 향후 가이던스가 주가 방향을 결정합니다."
+            return (
+                f"{', '.join(names[:2])} 기업 실적 발표 소식입니다. "
+                "실적 서프라이즈 여부와 향후 가이던스가 주가 방향을 결정합니다."
+            )
         return "기업 실적 발표 소식입니다. 실적 서프라이즈 여부와 향후 가이던스가 주가 방향을 결정합니다."
 
     if any(kw in title_lower for kw in ["trump", "white house", "executive order"]):

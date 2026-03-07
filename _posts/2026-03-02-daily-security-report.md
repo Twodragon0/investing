@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "블록체인 보안 리포트 - 2026-03-02"
-date: 2026-03-02 19:01:13 +0000
+date: 2026-03-02 12:01:13 +0900
 categories: [security-alerts]
 tags: ["security", "hack", "blockchain", "daily-digest"]
 source: "consolidated"

@@ -500,7 +500,9 @@ def _generate_worldmonitor_summary(
             lambda sc, mc: (
                 f"안보({sc}건)와 금융시장({mc}건) 이슈가 동시 전개되어, "
                 "지정학적 리스크가 시장 심리에 직접 전이되고 있습니다. "
-                f"{'안보 이슈 비중이 높아, 방산·금·안전자산 중심의 포지셔닝이 유리합니다.' if sc > mc else '금융시장 이슈가 우세하여, 안보 리스크는 제한적 영향에 그칠 수 있습니다.'}"
+                + ("안보 이슈 비중이 높아, 방산·금·안전자산 중심의 포지셔닝이 유리합니다."
+                   if sc > mc else
+                   "금융시장 이슈가 우세하여, 안보 리스크는 제한적 영향에 그칠 수 있습니다.")
             ),
         ),
         (
@@ -737,7 +739,8 @@ def main() -> None:
         )
 
     content_parts = [
-        f"**{today}** 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 {total_items}건을 정리했습니다.",
+        f"**{today}** 기준 WorldMonitor 연계 소스에서 "
+        f"글로벌 이벤트/시장/에너지 관련 뉴스 {total_items}건을 정리했습니다.",
         "",
         '<div class="alert-box alert-info"><strong>오늘의 글로벌 리스크 스냅샷</strong><ul>',
         f"<li>총 수집: <strong>{total_items}건</strong></li>",
@@ -762,10 +765,14 @@ def main() -> None:
             "",
             "## 테마별 현황",
             '<div class="stat-grid">',
-            f'<div class="stat-item"><div class="stat-value">{total_items}</div><div class="stat-label">총 이슈</div></div>',
-            f'<div class="stat-item"><div class="stat-value">{len(theme_counter)}</div><div class="stat-label">테마 수</div></div>',
-            f'<div class="stat-item"><div class="stat-value">{len(source_counter)}</div><div class="stat-label">출처 수</div></div>',
-            f'<div class="stat-item"><div class="stat-value">{theme_counter.get("지정학/안보", 0)}</div><div class="stat-label">안보 이슈</div></div>',
+            f'<div class="stat-item"><div class="stat-value">{total_items}</div>'
+            '<div class="stat-label">총 이슈</div></div>',
+            f'<div class="stat-item"><div class="stat-value">{len(theme_counter)}</div>'
+            '<div class="stat-label">테마 수</div></div>',
+            f'<div class="stat-item"><div class="stat-value">{len(source_counter)}</div>'
+            '<div class="stat-label">출처 수</div></div>',
+            f'<div class="stat-item"><div class="stat-value">{theme_counter.get("지정학/안보", 0)}</div>'
+            '<div class="stat-label">안보 이슈</div></div>',
             "</div>",
             "",
             '<div class="theme-distribution">',
@@ -824,7 +831,9 @@ def main() -> None:
             content_parts.append('<div class="wm-reference-pills">' + " ".join(source_pills) + "</div>")
 
         detail_lines = [
-            f'<details class="wm-reference-details"><summary>전체 원문 {len(unique_refs)}건 펼치기</summary><div class="details-content">',
+            f'<details class="wm-reference-details">'
+            f'<summary>전체 원문 {len(unique_refs)}건 펼치기</summary>'
+            '<div class="details-content">',
             '<ol class="wm-reference-list">',
         ]
         for ref in unique_refs:
@@ -856,7 +865,8 @@ def main() -> None:
             "- **에너지(중간)**: 원유/가스 가격과 인플레이션 민감 섹터 연동 점검",
             "- **정책/법률(중간)**: 규제 발표 시 섹터별 이벤트 드리븐 리스크 점검",
             "",
-            "> *본 브리핑은 worldmonitor.app RSS proxy를 통해 자동 수집된 데이터를 기반으로 하며, 투자 조언이 아닙니다.*",
+            "> *본 브리핑은 worldmonitor.app RSS proxy를 통해 자동 수집된 데이터를 기반으로 하며, "
+            "투자 조언이 아닙니다.*",
             "",
             "---",
             f"**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC",

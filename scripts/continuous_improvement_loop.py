@@ -58,7 +58,10 @@ def build_priorities(recent_posts: int, workflow_count: int) -> List[PriorityIte
             stage="SISYPHUS_EXECUTE",
             priority="P1",
             title="Rendered fixture expansion",
-            detail="Add edge fixtures for long links, empty refs, and mixed source tags on every content format change.",
+            detail=(
+                "Add edge fixtures for long links, empty refs, "
+                "and mixed source tags on every content format change."
+            ),
         ),
         PriorityItem(
             stage="SISYPHUS_EXECUTE",
@@ -70,7 +73,11 @@ def build_priorities(recent_posts: int, workflow_count: int) -> List[PriorityIte
             stage="LOOP_VERIFY",
             priority="P2",
             title="Weekly loop health review",
-            detail=f"Recent posts (48h): {recent_posts}, workflow files: {workflow_count}. Review loop signal quality weekly.",
+            detail=(
+                f"Recent posts (48h): {recent_posts}, "
+                f"workflow files: {workflow_count}. "
+                "Review loop signal quality weekly."
+            ),
         ),
     ]
 

@@ -177,6 +177,9 @@ def _apply_term_overrides(text: str) -> tuple:
 
     Returns (modified_text, replacements) where replacements is a list
     of (placeholder, korean_term) tuples for post-translation restoration.
+
+    Uses word boundaries (\\b) to prevent partial-word matches such as
+    "AI" inside "gain" → "gAIn", or "SOL" inside "Gasoline" → "GaSOLine".
     """
     replacements = []
     result = text
@@ -184,11 +187,17 @@ def _apply_term_overrides(text: str) -> tuple:
     # Sort by length (longest first) to avoid partial matches
     sorted_terms = sorted(_TERM_LOOKUP.items(), key=lambda x: len(x[0]), reverse=True)
 
-    for _lower_key, (original, korean) in sorted_terms:
-        # Case-insensitive search for the term
-        import re
+    import re
 
-        pattern = re.compile(re.escape(original), re.IGNORECASE)
+    for _lower_key, (original, korean) in sorted_terms:
+        # Use word boundaries to prevent matching inside other words.
+        # re.escape handles special chars (e.g. "S&P 500"); \b anchors to
+        # word boundaries so "AI" won't match inside "gain" or "raise".
+        escaped = re.escape(original)
+        # Only wrap with \b when the term starts/ends with a word character
+        left_b = r"\b" if re.match(r"\w", original[0]) else ""
+        right_b = r"\b" if re.match(r"\w", original[-1]) else ""
+        pattern = re.compile(left_b + escaped + right_b, re.IGNORECASE)
         if pattern.search(result):
             placeholder = f"__TERM{len(replacements)}__"
             result = pattern.sub(placeholder, result)

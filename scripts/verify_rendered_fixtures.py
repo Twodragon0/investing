@@ -126,7 +126,8 @@ def main() -> int:
         return 1
 
     print(
-        f"Rendered fixture smoke tests passed for {len(TARGETS)} positive and {len(NEGATIVE_TARGETS)} negative fixture(s)."
+        f"Rendered fixture smoke tests passed for {len(TARGETS)} positive "
+        f"and {len(NEGATIVE_TARGETS)} negative fixture(s)."
     )
     return 0
 

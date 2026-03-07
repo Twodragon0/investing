@@ -494,7 +494,8 @@ def main():
         source_parts.append(f"정치·경제 {len(political_items)}건")
     sources_str = ", ".join(source_parts) if source_parts else "데이터 없음"
     content_parts = [
-        f"**{today}** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. {sources_str}, 총 {total_count}건이 수집되었습니다.\n"
+        f"**{today}** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. "
+        f"{sources_str}, 총 {total_count}건이 수집되었습니다.\n"
     ]
 
     # Collect all source links
