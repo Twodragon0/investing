@@ -490,6 +490,33 @@ a {
   font-weight: 600;
 }
 
+// 포스트 카드 썸네일
+.post-card-thumb {
+  height: 160px;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  margin: -1.15rem -1.4rem 0.85rem -1.4rem;
+  width: calc(100% + 2.8rem);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+  }
+}
+
+.post-card:hover .post-card-thumb img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  .post-card-thumb {
+    height: 120px;
+  }
+}
+
 .post-tags {
   display: flex;
   gap: 0.5rem;
@@ -514,6 +541,21 @@ a {
     border-color: rgba($accent-purple, 0.3);
     transform: translateY(-1px);
     text-decoration: none;
+  }
+}
+
+// 포스트 카드 태그 현대화 (카드 내부)
+.post-tags .tag {
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: rgba(77, 166, 255, 0.1);
+  color: #4da6ff;
+  border: 1px solid rgba(77, 166, 255, 0.2);
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: rgba(77, 166, 255, 0.2);
   }
 }
 

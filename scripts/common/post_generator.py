@@ -98,6 +98,36 @@ _TOKEN_ARTIFACTS: dict[str, str] = {
     # ETH token artifacts
     "ETHical": "Ethical",
     "ETHics": "Ethics",
+    # AI token artifacts (additional)
+    "AIm": "aim",
+    "AImed": "aimed",
+    "AIming": "aiming",
+    "trAIned": "trained",
+    "trAIning": "training",
+    "strAIght": "straight",
+    "portrAIt": "portrait",
+    # SOL token artifacts (additional)
+    "SOLar": "solar",
+    "SOLe": "sole",
+    "SOLid": "solid",
+    # DOT token artifacts
+    "anecDOTe": "anecdote",
+}
+
+
+# ---------------------------------------------------------------------------
+# Category default og:image mapping
+# ---------------------------------------------------------------------------
+
+_DEFAULT_CATEGORY_IMAGES: dict[str, str] = {
+    "crypto": "/assets/images/og-crypto.png",
+    "stock": "/assets/images/og-stock.png",
+    "market-analysis": "/assets/images/og-market-analysis.png",
+    "social-media": "/assets/images/og-social-media.png",
+    "regulatory": "/assets/images/og-regulatory.png",
+    "defi": "/assets/images/og-defi.png",
+    "political-trades": "/assets/images/og-political-trades.png",
+    "worldmonitor": "/assets/images/og-worldmonitor.png",
 }
 
 
@@ -204,6 +234,9 @@ class PostGenerator:
         if tags:
             safe_tags = [f'"{t.replace(chr(34), chr(92) + chr(34))}"' for t in tags[:10]]
             frontmatter_lines.append(f"tags: [{', '.join(safe_tags)}]")
+            # tags 기반으로 keywords 생성 (SEO용)
+            keywords = ", ".join(tags[:5])
+            frontmatter_lines.append(f'keywords: "{keywords}"')
 
         if source:
             frontmatter_lines.append(f'source: "{source}"')
@@ -211,8 +244,9 @@ class PostGenerator:
             frontmatter_lines.append(f'source_url: "{source_url}"')
         if lang:
             frontmatter_lines.append(f'lang: "{lang}"')
-        if image:
-            frontmatter_lines.append(f'image: "{image}"')
+        if not image:
+            image = _DEFAULT_CATEGORY_IMAGES.get(self.category, "/assets/images/og-default.png")
+        frontmatter_lines.append(f'image: "{image}"')
 
         if extra_frontmatter:
             for key, value in extra_frontmatter.items():
@@ -224,21 +258,27 @@ class PostGenerator:
             desc_text = ""
             for line in content.strip().split("\n"):
                 stripped = line.strip()
+                # 마크다운 리스트 항목도 허용 (- 접두사 제거)
+                is_list_item = stripped.startswith("- ") and len(stripped) >= 4
+                if is_list_item:
+                    candidate = stripped[2:].strip()
+                else:
+                    candidate = stripped
                 if (
-                    stripped
-                    and not stripped.startswith("#")
-                    and not stripped.startswith("|")
-                    and not stripped.startswith(">")
-                    and not stripped.startswith("![")
-                    and not stripped.startswith("---")
-                    and not stripped.startswith("-")
-                    and not stripped.startswith("<")
-                    and not (stripped.startswith("*") and not stripped.startswith("**"))
-                    and len(stripped) >= 50
-                    and not re.match(r"^https?://", stripped)
-                    and not re.match(r"^\d+[\.\)]\s", stripped)
+                    candidate
+                    and not candidate.startswith("#")
+                    and not candidate.startswith("|")
+                    and not candidate.startswith(">")
+                    and not candidate.startswith("![")
+                    and not candidate.startswith("---")
+                    and not candidate.startswith("<")
+                    and not (candidate.startswith("*") and not candidate.startswith("**"))
+                    and len(candidate) >= 30
+                    and not re.match(r"^https?://", candidate)
+                    and not re.match(r"^\d+[\.\)]\s", candidate)
+                    and (is_list_item or not stripped.startswith("-"))
                 ):
-                    desc_text = stripped
+                    desc_text = candidate
                     break
             if desc_text:
                 desc_text = re.sub(r"<[^>]+>", "", desc_text)
