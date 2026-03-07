@@ -110,10 +110,10 @@ Live:   investing.2twodragon.com
 | 구성 요소 | 수량 | 설명 |
 |:----------|:-----|:-----|
 | 수집기 (Collectors) | 8개 | crypto, stock, regulatory, political, social, coinmarketcap, worldmonitor, defi_llama |
-| 생성기 (Generators) | 3개 | daily_summary, market_summary, weekly_digest |
-| 공통 모듈 | 13개 | config, dedup, utils, post_generator, image_generator 등 |
+| 생성기 (Generators) | 5개 | daily_summary, market_summary, weekly_digest, og_images, ops_10am_digest |
+| 공통 모듈 | 15개 | config, dedup, utils, post_generator, image_generator 등 |
 | 데이터 소스 | 20+ | CryptoPanic, NewsAPI, FRED, CoinGecko, SEC, FSC 등 |
-| GitHub Actions | 22개 | 수집 8 + 생성 4 + 운영 10 |
+| GitHub Actions | 23개 | 수집 8 + 생성 5 + 운영 10 |
 | 카테고리 페이지 | 9개 | crypto, stock, regulatory, political, social 등 |
 
 ### crypto (퀀트 트레이딩 엔진)
@@ -135,11 +135,11 @@ GitHub: Twodragon0/crypto
 | 구성 요소 | 수량 | 설명 |
 |:----------|:-----|:-----|
 | 핵심 서비스 | 4개 | monitor, quant_trader, post_generator, dashboard |
-| 데이터 수집기 | 6개 | economic, alternative, regulatory, onchain, cdp, threat |
+| 데이터 수집기 | 9개 | economic, alternative, regulatory, onchain, cdp, cmc, polymarket, social_signal, worldmonitor |
 | 트레이딩 모듈 | 7개 | swing_strategy, swing_indicators (VWAP 포함), paper_broker, state_cache 등 |
 | 마켓 인텔리전스 컴포넌트 | 14개 | F&G, social, macro, funding 등 (가중치 합계 1.0) |
 | 테스트 | 2,373개 (crypto) + 112개 (investing) = **2,485개** | 전체 모듈 커버리지 |
-| GitHub Actions | 14개 | CI/CD, security scan, quant trader 실행 등 |
+| GitHub Actions | 16개 | CI/CD, security scan, quant trader 실행 등 |
 
 ---
 
@@ -237,7 +237,7 @@ GitHub: Twodragon0/crypto
 │  └─────────┘  └─────────┘  └──────────┘  └─────────────────┘  │
 │                                                                 │
 │  동시성 제어: collect-data 그룹 (push 충돌 방지)                  │
-│  워크플로우: investing 22개 + crypto 14개 = 36개                  │
+│  워크플로우: investing 23개 + crypto 16개 = 39개                  │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
