@@ -128,6 +128,7 @@ _DEFAULT_CATEGORY_IMAGES: dict[str, str] = {
     "defi": "/assets/images/og-defi.png",
     "political-trades": "/assets/images/og-political-trades.png",
     "worldmonitor": "/assets/images/og-worldmonitor.png",
+    "security-alerts": "/assets/images/og-security-alerts.png",
 }
 
 
