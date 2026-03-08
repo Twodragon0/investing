@@ -122,6 +122,10 @@ _KO_TO_EN = {
     "정치인 거래": "Political Trades",
     "보안": "Security",
     "NFT/Web3": "NFT/Web3",
+    # collect_stock_news.py market snapshot names
+    "다우존스": "Dow Jones",
+    "다우존스 ETF": "Dow Jones ETF",
+    "원/달러": "USD/KRW",
 }
 
 
@@ -1325,7 +1329,7 @@ def generate_market_snapshot_card(
         if i % 2 == 0:
             _draw_rounded_rect(ax, 0.3, y - 0.18, 9.4, 0.5, facecolor=COLORS["bg_inner"], alpha=0.5)
 
-        name = item.get("name", "")
+        name = _to_en(item.get("name", ""))
         price = item.get("price", "N/A")
         change_pct = item.get("change_pct", "N/A")
 
@@ -1973,6 +1977,7 @@ _CATEGORY_OG_CONFIG = {
     "defi": ("DeFi & Web3", "🔗", COLORS["purple"]),
     "political-trades": ("Political Trades", "🏛️", COLORS["orange"]),
     "worldmonitor": ("World Monitor", "🌍", COLORS["blue"]),
+    "security-alerts": ("Security Alerts", "🛡️", COLORS["red"]),
 }
 
 

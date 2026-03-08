@@ -749,14 +749,20 @@ def _analyze_korean_title(title: str) -> str:
 
 def _analyze_english_title(title: str, title_lower: str) -> str:
     """Analyze an English news title and generate Korean description."""
+    # Extract subject entities for more specific descriptions
+    _subj = _extract_title_entities(title)
+    _subj_str = ", ".join(_subj[:2]) if _subj else ""
+
     # Market crash / plunge
-    if any(kw in title_lower for kw in ["crash", "plunge", "tumble", "sink", "slump"]):
+    if any(kw in title_lower for kw in ["crash", "plunge", "tumble", "sink", "slump", "dive", "drop", "fall "]):
         pct_m = re.search(r"(\d[\d,.]*)\s*(?:points?|pts?|%)", title)
         extra = f" {pct_m.group(0)}의 하락폭을 기록했습니다." if pct_m else ""
-        return f"시장 급락 소식입니다.{extra} 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다."
+        prefix = f"{_subj_str} " if _subj_str else ""
+        return f"{prefix}시장 급락 소식입니다.{extra} 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다."
 
     if any(kw in title_lower for kw in ["rally", "surge", "soar", "jump", "climb"]):
-        return "시장 상승 소식입니다. 상승 동력의 지속성과 추격 매수 리스크를 함께 고려해야 합니다."
+        prefix = f"{_subj_str} " if _subj_str else ""
+        return f"{prefix}시장 상승 소식입니다. 상승 동력의 지속성과 추격 매수 리스크를 함께 고려해야 합니다."
 
     if any(kw in title_lower for kw in ["oil", "crude", "brent", "wti"]):
         price_m = re.search(r"\$(\d[\d,.]*)", title)
@@ -764,9 +770,8 @@ def _analyze_english_title(title: str, title_lower: str) -> str:
         return f"원유 가격 변동 소식입니다.{price_str} 유가는 인플레이션과 에너지 섹터 수익성의 핵심 변수입니다."
 
     if any(kw in title_lower for kw in ["iran", "war", "conflict", "military"]):
-        return (
-            "지정학적 분쟁이 글로벌 금융시장에 충격을 주고 있습니다. 안전자산 선호와 위험자산 회피 흐름에 주목하세요."
-        )
+        prefix = f"{_subj_str}: " if _subj_str else ""
+        return f"{prefix}지정학적 분쟁이 글로벌 금융시장에 충격을 주고 있습니다. 안전자산 선호와 위험자산 회피 흐름에 주목하세요."
 
     if any(kw in title_lower for kw in ["treasury", "yield", "bond"]):
         return "미 국채 시장 동향입니다. 금리 변동은 주식 밸류에이션과 대출 비용에 직접적 영향을 미칩니다."
@@ -785,25 +790,29 @@ def _analyze_english_title(title: str, title_lower: str) -> str:
                 f"{', '.join(names[:2])} 기업 실적 발표 소식입니다. "
                 "실적 서프라이즈 여부와 향후 가이던스가 주가 방향을 결정합니다."
             )
-        return "기업 실적 발표 소식입니다. 실적 서프라이즈 여부와 향후 가이던스가 주가 방향을 결정합니다."
+        prefix = f"{_subj_str} " if _subj_str else ""
+        return f"{prefix}기업 실적 발표 소식입니다. 실적 서프라이즈 여부와 향후 가이던스가 주가 방향을 결정합니다."
 
     if any(kw in title_lower for kw in ["trump", "white house", "executive order"]):
         return "미국 정치·정책 관련 소식입니다. 정책 변화는 특정 섹터와 글로벌 무역 환경에 영향을 줄 수 있습니다."
 
     if any(kw in title_lower for kw in ["ai ", "artificial intelligence", "anthropic", "openai", "nvidia"]):
-        return "AI·기술 섹터 관련 소식입니다. AI 산업의 성장세와 규제 동향이 관련주 투자에 핵심 변수입니다."
+        prefix = f"{_subj_str} " if _subj_str else ""
+        return f"{prefix}AI·기술 섹터 관련 소식입니다. AI 산업의 성장세와 규제 동향이 관련주 투자에 핵심 변수입니다."
 
     if any(kw in title_lower for kw in ["chip", "semiconductor", "broadcom", "tsmc", "amd", "intel"]):
         return "반도체 산업 관련 소식입니다. 글로벌 반도체 사이클과 AI 수요가 업종 방향성을 좌우합니다."
 
     if any(kw in title_lower for kw in ["bitcoin", "btc", "crypto", "ethereum"]):
-        return "암호화폐 시장 관련 소식입니다. 디지털 자산 가격은 거시경제 환경과 규제 동향에 연동됩니다."
+        prefix = f"{_subj_str} " if _subj_str else ""
+        return f"{prefix}암호화폐 시장 관련 소식입니다. 디지털 자산 가격은 거시경제 환경과 규제 동향에 연동됩니다."
 
     if any(kw in title_lower for kw in ["etf", "fund", "inflow", "outflow"]):
         return "ETF·펀드 자금 흐름 관련 소식입니다. 기관 자금 동향은 중기 시장 방향의 선행 지표입니다."
 
     if any(kw in title_lower for kw in ["s&p", "nasdaq", "dow", "futures"]):
-        return "미국 주요 지수 동향입니다. 글로벌 증시의 방향성을 가늠하는 핵심 지표입니다."
+        prefix = f"{_subj_str} " if _subj_str else ""
+        return f"{prefix}미국 주요 지수 동향입니다. 글로벌 증시의 방향성을 가늠하는 핵심 지표입니다."
 
     if any(kw in title_lower for kw in ["korea", "kospi", "kosdaq"]):
         return "한국 증시 관련 글로벌 보도입니다. 외국인 투자자 시각에서 본 한국 시장 평가를 확인하세요."
@@ -952,7 +961,7 @@ def enrich_item(
             fetched = metadata.get("description", "")
             if fetched and fetched != title and len(fetched) > 20:
                 # Clean HTML entities and normalize whitespace
-                fetched = re.sub(r"&[a-z]+;", " ", fetched)
+                fetched = re.sub(r"&#?\w+;", " ", fetched)
                 fetched = re.sub(r"\s+", " ", fetched).strip()
                 item["description"] = fetched
             # Extract og:image if not already set from RSS
