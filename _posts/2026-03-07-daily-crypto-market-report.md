@@ -28,7 +28,11 @@ description: "오늘 시가총액 상위 30개 코인을 기준으로 시장을 
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Chainlink</strong> (LINK): -5.27%</li><li>🔴 <strong>Ethereum</strong> (ETH): -5.26%</li><li>🔴 <strong>Monero</strong> (XMR): -4.58%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
+
+- 오늘의 시장 인사이트:
+- 24시간 변동 -3.63%로 뚜렷한 하락세입니다. 패닉셀 징후가 없다면 저가 매수 기회가 될 수 있으나, 추가 하락 리스크를 관리하세요.
 
 ## 시장 인사이트
 

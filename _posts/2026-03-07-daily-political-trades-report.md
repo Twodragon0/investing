@@ -20,6 +20,7 @@ description: "오늘 정치인 거래·정책 분야에서 총 7건의 뉴스가
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **fed**(4회), **재산**(2회), **trump**(1회), **tariff**(1회), **disclosure**(1회)</div>
 
 
+
 ## 전체 뉴스 요약
 
 - 트럼프 정책: 1건 (관세·무역 1건). 행정명령 및 관세 정책 변화는 반도체·자동차·에너지 섹터의 변동성을 확대시킵니다.

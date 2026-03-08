@@ -28,7 +28,11 @@ description: "오늘 시가총액 상위 30개 코인을 기준으로 시장을 
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Hyperliquid</strong> (HYPE): +11.22%</li><li>🟢 <strong>Chainlink</strong> (LINK): +5.58%</li><li>🟢 <strong>Solana</strong> (SOL): +5.48%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
+
+- 오늘의 시장 인사이트:
+- 24시간 변동 +3.38%로 뚜렷한 강세입니다. 거래량이 동반된 상승이라면 추세 지속 신호로 해석할 수 있습니다.
 
 ## 시장 인사이트
 

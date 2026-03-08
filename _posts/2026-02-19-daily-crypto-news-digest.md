@@ -38,6 +38,7 @@ description: "2026-02-19 암호화폐 시장에서 111건의 뉴스를 분석했
 ![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-19.png' | relative_url }})
 
 
+
 ## 전체 뉴스 요약
 
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소

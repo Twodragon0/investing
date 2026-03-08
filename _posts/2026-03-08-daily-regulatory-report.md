@@ -17,16 +17,6 @@ description: "전 세계 금융 규제기관의 최신 동향을 정리합니다
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">6</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 5</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">🟢</div><div class="stat-label">리스크 보통</div></div><div class="stat-item"><div class="stat-value">3</div><div class="stat-label">유럽</div></div></div>
 <div class="alert-box alert-info"><strong>글로벌 규제: cryptoassets, FCA, Cryptoasset 관련 6건 수집</strong><ul><li>🔵 <strong>규제/정책</strong> (5건): 5건의 뉴스에서 cryptoassets, FCA, Cryptoasset 키워드가 부각되고 있습니다.</li></ul></div>
-## 전체 뉴스 요약
-
-총 6건의 뉴스 중 **규제/정책** 관련이 5건(83%)으로 압도적입니다. 규제/정책 관련 뉴스가 시장의 불확실성을 높이고 있습니다
-
-1. **🔵 규제/정책** (5건): 5건의 뉴스에서 cryptoassets, FCA, Cryptoasset 키워드가 부각되고 있습니다.
-
-**리스크 수준 [MODERATE]**: 일부 주의 이벤트가 있으나, 전반적으로 안정적인 상황입니다.
-**P1 주요**: 영국 암호화폐 규제 진전: 암호화폐 기업을 위한 건전성 체제 – FCA CP25/42의 주 / 금융 및 기술: 영국은 암호화폐에 대한 자체 규제 과정을 도표화합니다. - 국제 변호사 협 / 암호화폐와 CASS: 영국 FCA, 암호화폐에 대한 고객 자산 규칙 적용, James Mo
-**주요 지역**: 유럽 3건, 아시아 2건, 미국 1건
-
 ## 핵심 요약
 
 - **총 수집 건수**: 6건
