@@ -2706,8 +2706,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    content-visibility: auto;
-    contain-intrinsic-size: auto 500px;
   }
 
   .date-group-header {
