@@ -29,20 +29,7 @@
         </button>
       </div>
       <div class="lang-toggle-wrapper notranslate" translate="no">
-        <button class="lang-toggle" id="lang-toggle" aria-label="언어 변경" data-i18n-aria="change_language" aria-expanded="false" aria-controls="lang-dropdown" type="button">
-          <svg class="globe-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-          </svg>
-          <span class="lang-code notranslate" id="current-lang" translate="no">KO</span>
-        </button>
-        <div class="lang-dropdown-overlay" id="lang-dropdown-overlay" aria-hidden="true"></div>
-        <div class="lang-dropdown notranslate" id="lang-dropdown" translate="no" role="menu" aria-label="언어 선택" data-i18n-aria="select_language">
-          <button class="lang-option" data-lang="ko" title="한국어" role="menuitem"><span class="lang-flag">🇰🇷</span><span class="lang-name">한국어</span></button>
-          <button class="lang-option" data-lang="en" title="English" role="menuitem"><span class="lang-flag">🇺🇸</span><span class="lang-name">English</span></button>
-          <button class="lang-option" data-lang="ja" title="日本語" role="menuitem"><span class="lang-flag">🇯🇵</span><span class="lang-name">日本語</span></button>
-          <button class="lang-option" data-lang="zh-CN" title="简体中文" role="menuitem"><span class="lang-flag">🇨🇳</span><span class="lang-name">简体中文</span></button>
-          <button class="lang-option" data-lang="es" title="Español" role="menuitem"><span class="lang-flag">🇪🇸</span><span class="lang-name">Español</span></button>
-        </div>
+        <div id="google_translate_element" class="gt-widget"></div>
         {% include google-translate.html %}
       </div>
       <button class="theme-toggle" id="theme-toggle" aria-label="테마 변경" data-i18n-aria="change_theme" type="button">

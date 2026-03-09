@@ -2150,9 +2150,9 @@ html {
   }
 }
 
-// Hide Google Translate UI elements
+// Hide Google Translate banner/popup elements (but keep our widget visible)
 .goog-te-banner-frame,
-.skiptranslate,
+body > .skiptranslate:not(.gt-widget .skiptranslate),
 [class*="VIpgJd"],
 #goog-gt-tt,
 .goog-te-balloon-frame {
@@ -2164,6 +2164,42 @@ html {
 body {
   top: 0 !important;
   position: static !important;
+}
+
+// Google Translate widget styling
+.gt-widget {
+  display: flex;
+  align-items: center;
+
+  .goog-te-gadget {
+    font-size: 0 !important;
+    margin: 0;
+
+    > span { display: none; } // Hide "Powered by" text
+
+    .goog-te-combo {
+      background: rgba($bg-card, 0.6);
+      border: 1px solid rgba($border-color, 0.5);
+      border-radius: 6px;
+      color: $text-primary;
+      padding: 0.35rem 0.6rem;
+      font-size: 0.82rem;
+      font-family: inherit;
+      cursor: pointer;
+      outline: none;
+      transition: border-color $transition-fast, background $transition-fast;
+
+      &:hover, &:focus {
+        border-color: $accent-blue;
+        background: rgba($accent-blue, 0.08);
+      }
+
+      option {
+        background: $bg-secondary;
+        color: $text-primary;
+      }
+    }
+  }
 }
 
 /* ================================
