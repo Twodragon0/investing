@@ -265,6 +265,68 @@ def fetch_images_concurrent(
     return fetched
 
 
+def fetch_descriptions_concurrent(
+    items: list,
+    max_workers: int = 6,
+    max_items: int = 50,
+) -> int:
+    """Fetch descriptions for items with missing/synthetic descriptions using concurrent threads.
+
+    Resolves Google News redirect URLs first, then fetches meta descriptions
+    and article body text. Returns the number of descriptions successfully fetched.
+    """
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    _SYNTHETIC_MARKERS = [
+        "관련 소식입니다",
+        "관련 시장 뉴스입니다",
+        "원문에서 세부 내용을 확인하세요",
+        "원문 기사의 세부 내용을 확인하세요",
+        "투자 판단 시",
+        "면밀히 분석해야 합니다",
+        "함께 고려해야 합니다",
+    ]
+
+    def _needs_enrichment(item: dict) -> bool:
+        desc = item.get("description", "").strip()
+        if not desc or len(desc) < 30:
+            return True
+        if desc == item.get("title", ""):
+            return True
+        return any(marker in desc for marker in _SYNTHETIC_MARKERS)
+
+    targets = [(i, item) for i, item in enumerate(items) if _needs_enrichment(item) and item.get("link")][:max_items]
+
+    if not targets:
+        return 0
+
+    fetched = 0
+
+    def _fetch_one(idx: int, item: dict) -> tuple:
+        link = item.get("link", "")
+        if "news.google.com" in link:
+            link = _resolve_google_news_url(link)
+        if not link:
+            return idx, ""
+        metadata = fetch_page_metadata(link)
+        return idx, metadata.get("description", "")
+
+    with ThreadPoolExecutor(max_workers=max_workers) as pool:
+        futures = {pool.submit(_fetch_one, idx, item): idx for idx, item in targets}
+        for future in as_completed(futures):
+            try:
+                idx, desc = future.result(timeout=15)
+                if desc and len(desc) > 30 and desc != items[idx].get("title", ""):
+                    items[idx]["description"] = desc
+                    fetched += 1
+            except Exception as exc:
+                logger.debug("Description fetch failed for item %d: %s", futures[future], exc)
+
+    if fetched:
+        logger.info("Concurrent description fetch: enriched %d/%d items", fetched, len(targets))
+    return fetched
+
+
 def fetch_page_metadata(url: str, timeout: int = 8) -> Dict[str, str]:
     """Fetch meta description and og:image from a URL page (best-effort).
 
@@ -323,9 +385,9 @@ def fetch_page_metadata(url: str, timeout: int = 8) -> Dict[str, str]:
             paragraphs = []
             for p in article.find_all("p"):
                 text = _clean_description(p.get_text(strip=True))
-                if len(text) > 50:
+                if len(text) > 30:
                     paragraphs.append(text)
-                if len(paragraphs) >= 2:
+                if len(paragraphs) >= 3:
                     break
             if paragraphs:
                 combined = " ".join(paragraphs)
@@ -335,7 +397,7 @@ def fetch_page_metadata(url: str, timeout: int = 8) -> Dict[str, str]:
         # 5: Fallback to any <p>
         for p in soup.find_all("p"):
             text = _clean_description(p.get_text(strip=True))
-            if len(text) > 50:
+            if len(text) > 30:
                 result["description"] = smart_truncate(text, 500)
                 return result
     except Exception as e:  # noqa: BLE001
@@ -597,6 +659,37 @@ def _extract_title_entities(title: str) -> list:
         "Year",
         "Week",
         "Month",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+        "Better",
+        "Bigger",
+        "Lower",
+        "Higher",
+        "Early",
+        "Late",
+        "Huge",
+        "Massive",
+        "Record",
+        "Rising",
+        "Falling",
+        "Since",
+        "Until",
+        "Whether",
+        "Biggest",
+        "Worst",
+        "Best",
+        "Headed",
+        "Heads",
+        "Keep",
+        "Keeps",
+        "Stayed",
+        "Stays",
+        "Stay",
     }
     _NOISE_TICKERS = {
         "CEO",
@@ -607,6 +700,9 @@ def _extract_title_entities(title: str) -> list:
         "CPI",
         "ETF",
         "AI",
+        "US",
+        "UK",
+        "EU",
         "USD",
         "FOR",
         "THE",
@@ -622,6 +718,8 @@ def _extract_title_entities(title: str) -> list:
         "CBS",
         "FBI",
         "GOP",
+        "DHS",
+        "RFK",
     }
     tickers = [t for t in tickers if t not in _NOISE_TICKERS]
     proper = [w for w in re.findall(r"\b[A-Z][a-z]{2,}\b", title) if w not in _COMMON]
@@ -630,7 +728,14 @@ def _extract_title_entities(title: str) -> list:
     entities.extend(tickers[:2])
     entities.extend(proper[:2])
     entities.extend(kr_entities[:3])
-    return entities
+    # Deduplicate while preserving order
+    seen = set()
+    deduped = []
+    for e in entities:
+        if e.lower() not in seen:
+            seen.add(e.lower())
+            deduped.append(e)
+    return deduped
 
 
 def _analyze_title_content(title: str) -> str:
@@ -726,8 +831,13 @@ def _analyze_korean_title(title: str) -> str:
     if any(kw in title for kw in ["인수", "합병", "M&A"]):
         return "기업 인수·합병(M&A) 관련 소식입니다. 인수 프리미엄과 시너지 효과가 양사 주가에 영향을 줍니다."
 
+    if any(kw in title for kw in ["비트코인", "이더리움", "알트코인", "리플"]):
+        clean = re.sub(r"\s*[-–—|]\s*\S+$", "", title).strip()
+        return f"{clean[:120]}."
+
     if any(kw in title for kw in ["디파이", "디지털자산", "가상자산", "코인", "블록체인"]):
-        return "디지털 자산·블록체인 관련 소식입니다. 규제 동향과 기술 발전이 시장 방향의 핵심 변수입니다."
+        clean = re.sub(r"\s*[-–—|]\s*\S+$", "", title).strip()
+        return f"{clean[:120]}."
 
     if any(kw in title for kw in ["AI", "인공지능", "챗봇", "생성형"]):
         return "AI·인공지능 관련 소식입니다. AI 산업 성장에 따른 관련주 투자 기회를 점검해 보세요."
@@ -743,128 +853,107 @@ def _analyze_korean_title(title: str) -> str:
 
     # Fallback: extract key nouns from title
     nouns = re.findall(r"[가-힣]{2,}", title)[:3]
+    # Default: use title core as description
+    clean = re.sub(r"\s*[-–—|]\s*\S+$", "", title).strip()
     if nouns:
-        return f"{', '.join(nouns)} 관련 시장 뉴스입니다. 투자 판단 시 원문 기사의 세부 내용을 확인하세요."
-    return title
+        return f"{clean[:120]}. 주요 키워드: {', '.join(nouns[:3])}."
+    return clean[:150] if len(clean) > 15 else title
 
 
 def _analyze_english_title(title: str, title_lower: str) -> str:
-    """Analyze an English news title and generate Korean description."""
-    # Extract subject entities for more specific descriptions
+    """Analyze an English news title and generate a specific Korean description."""
     _subj = _extract_title_entities(title)
-    _subj_str = ", ".join(_subj[:2]) if _subj else ""
+    # Use only named entities (not raw numbers/prices) for the subject prefix
+    _named = [e for e in _subj if not re.match(r"^[\d$,.%+\-]+$", e)]
+    _subj_str = ", ".join(_named[:3]) if _named else ""
 
-    # Market crash / plunge
-    if any(kw in title_lower for kw in ["crash", "plunge", "tumble", "sink", "slump", "dive", "drop", "fall "]):
-        pct_m = re.search(r"(\d[\d,.]*)\s*(?:points?|pts?|%)", title)
-        extra = f" {pct_m.group(0)}의 하락폭을 기록했습니다." if pct_m else ""
-        prefix = f"{_subj_str} " if _subj_str else ""
-        return f"{prefix}시장 급락 소식입니다.{extra} 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다."
+    # Extract numbers/percentages/prices from title for specificity
+    pct_match = re.search(r"(\d[\d,.]*)\s*%", title)
+    price_match = re.search(
+        r"\$(\d[\d,.]*(?:\.\d+)?)\s*(billion|million|trillion|B|M|T)?",
+        title,
+        re.IGNORECASE,
+    )
+    points_match = re.search(r"(\d[\d,.]*)\s*(?:points?|pts?)", title, re.IGNORECASE)
 
-    if any(kw in title_lower for kw in ["rally", "surge", "soar", "jump", "climb"]):
-        prefix = f"{_subj_str} " if _subj_str else ""
-        return f"{prefix}시장 상승 소식입니다. 상승 동력의 지속성과 추격 매수 리스크를 함께 고려해야 합니다."
+    # Clean title: remove trailing source names for use as base description
+    clean_title = re.sub(
+        r"\s*[-–—|]\s*(?:Reuters|Bloomberg|CNBC|AP|MarketWatch|CoinDesk|Cointelegraph|TradingView|Yahoo Finance|The Motley Fool|Investopedia)\s*$",
+        "",
+        title,
+        flags=re.IGNORECASE,
+    ).strip()
+    # Also remove generic trailing patterns (require a space before separator to avoid
+    # matching hyphenated words like "All-Time")
+    clean_title = re.sub(r"\s+[–—|]\s*[A-Z][\w\s]{2,20}$", "", clean_title).strip()
+
+    # Build detail string from extracted numbers
+    detail_parts = []
+    if pct_match:
+        detail_parts.append(f"{pct_match.group(1)}% 변동")
+    if price_match:
+        unit = price_match.group(2) or ""
+        detail_parts.append(f"${price_match.group(1)}{unit}")
+    if points_match:
+        detail_parts.append(f"{points_match.group(1)}포인트")
+    detail_str = ", ".join(detail_parts)
+
+    # Determine event category and add specific context
+    if any(kw in title_lower for kw in ["crash", "plunge", "tumble", "sink", "slump", "dive"]):
+        base = clean_title[:120]
+        extra = f" ({detail_str})" if detail_str else ""
+        return f"{base}.{extra} 급락 배경과 반등 시점을 주시해야 합니다."
+
+    if any(kw in title_lower for kw in ["rally", "surge", "soar", "jump", "climb", "gain"]):
+        base = clean_title[:120]
+        extra = f" ({detail_str})" if detail_str else ""
+        return f"{base}.{extra} 상승 지속성을 확인해야 합니다."
+
+    if any(kw in title_lower for kw in ["drop", "fall ", "decline", "down ", "lower", "slip"]):
+        base = clean_title[:120]
+        extra = f" ({detail_str})" if detail_str else ""
+        return f"{base}.{extra}"
+
+    if any(kw in title_lower for kw in ["rise", "up ", "higher", "advance"]):
+        base = clean_title[:120]
+        extra = f" ({detail_str})" if detail_str else ""
+        return f"{base}.{extra}"
 
     if any(kw in title_lower for kw in ["oil", "crude", "brent", "wti"]):
-        price_m = re.search(r"\$(\d[\d,.]*)", title)
-        price_str = f" 배럴당 ${price_m.group(1)}를 기록했습니다." if price_m else ""
-        return f"원유 가격 변동 소식입니다.{price_str} 유가는 인플레이션과 에너지 섹터 수익성의 핵심 변수입니다."
+        base = clean_title[:120]
+        extra = f" ({detail_str})" if detail_str else ""
+        return f"{base}.{extra} 유가 변동은 인플레이션과 에너지 섹터에 직접 영향을 미칩니다."
 
-    if any(kw in title_lower for kw in ["iran", "war", "conflict", "military"]):
-        prefix = f"{_subj_str}: " if _subj_str else ""
-        return f"{prefix}지정학적 분쟁이 글로벌 금융시장에 충격을 주고 있습니다. 안전자산 선호와 위험자산 회피 흐름에 주목하세요."
+    if any(kw in title_lower for kw in ["iran", "war", "conflict", "military", "attack"]):
+        return f"{clean_title[:120]}. 지정학적 리스크가 글로벌 시장 심리에 영향을 주고 있습니다."
 
-    if any(kw in title_lower for kw in ["treasury", "yield", "bond"]):
-        return "미 국채 시장 동향입니다. 금리 변동은 주식 밸류에이션과 대출 비용에 직접적 영향을 미칩니다."
-
-    if any(kw in title_lower for kw in ["inflation", "cpi", "pce"]):
-        return "인플레이션 관련 소식입니다. 물가 지표는 연준 통화정책의 핵심 판단 기준이 됩니다."
+    if any(kw in title_lower for kw in ["earning", "revenue", "profit", "guidance", "beat", "miss"]):
+        return f"{clean_title[:120]}. 실적 결과가 향후 주가 방향을 결정합니다."
 
     if any(kw in title_lower for kw in ["fed", "fomc", "powell", "rate cut", "rate hike"]):
-        return "연준 통화정책 관련 소식입니다. 금리 결정은 글로벌 자산 배분에 가장 큰 영향을 미치는 변수입니다."
+        return f"{clean_title[:120]}. 연준 정책은 글로벌 자산 배분의 핵심 변수입니다."
 
-    if any(kw in title_lower for kw in ["earning", "revenue", "profit", "guidance"]):
-        tickers = re.findall(r"\b[A-Z]{2,5}\b", title)
-        names = [t for t in tickers if t not in {"CEO", "IPO", "SEC", "FED", "GDP", "CPI", "ETF", "AI"}]
-        if names:
-            return (
-                f"{', '.join(names[:2])} 기업 실적 발표 소식입니다. "
-                "실적 서프라이즈 여부와 향후 가이던스가 주가 방향을 결정합니다."
-            )
-        prefix = f"{_subj_str} " if _subj_str else ""
-        return f"{prefix}기업 실적 발표 소식입니다. 실적 서프라이즈 여부와 향후 가이던스가 주가 방향을 결정합니다."
+    if any(kw in title_lower for kw in ["trump", "white house", "executive order", "tariff"]):
+        return f"{clean_title[:120]}. 정책 변화가 시장에 미치는 영향을 주시해야 합니다."
 
-    if any(kw in title_lower for kw in ["trump", "white house", "executive order"]):
-        return "미국 정치·정책 관련 소식입니다. 정책 변화는 특정 섹터와 글로벌 무역 환경에 영향을 줄 수 있습니다."
+    if any(kw in title_lower for kw in ["bitcoin", "btc", "crypto", "ethereum", "altcoin"]):
+        return f"{clean_title[:120]}."
 
-    if any(kw in title_lower for kw in ["ai ", "artificial intelligence", "anthropic", "openai", "nvidia"]):
-        prefix = f"{_subj_str} " if _subj_str else ""
-        return f"{prefix}AI·기술 섹터 관련 소식입니다. AI 산업의 성장세와 규제 동향이 관련주 투자에 핵심 변수입니다."
+    if any(kw in title_lower for kw in ["s&p", "nasdaq", "dow", "futures", "stock market"]):
+        base = clean_title[:120]
+        extra = f" ({detail_str})" if detail_str else ""
+        return f"{base}.{extra}"
 
-    if any(kw in title_lower for kw in ["chip", "semiconductor", "broadcom", "tsmc", "amd", "intel"]):
-        return "반도체 산업 관련 소식입니다. 글로벌 반도체 사이클과 AI 수요가 업종 방향성을 좌우합니다."
+    if any(kw in title_lower for kw in ["ai ", "artificial intelligence", "nvidia", "semiconductor", "chip"]):
+        return f"{clean_title[:120]}."
 
-    if any(kw in title_lower for kw in ["bitcoin", "btc", "crypto", "ethereum"]):
-        prefix = f"{_subj_str} " if _subj_str else ""
-        return f"{prefix}암호화폐 시장 관련 소식입니다. 디지털 자산 가격은 거시경제 환경과 규제 동향에 연동됩니다."
+    if any(kw in title_lower for kw in ["gold", "silver", "precious"]):
+        return f"{clean_title[:120]}."
 
-    if any(kw in title_lower for kw in ["etf", "fund", "inflow", "outflow"]):
-        return "ETF·펀드 자금 흐름 관련 소식입니다. 기관 자금 동향은 중기 시장 방향의 선행 지표입니다."
-
-    if any(kw in title_lower for kw in ["s&p", "nasdaq", "dow", "futures"]):
-        prefix = f"{_subj_str} " if _subj_str else ""
-        return f"{prefix}미국 주요 지수 동향입니다. 글로벌 증시의 방향성을 가늠하는 핵심 지표입니다."
-
-    if any(kw in title_lower for kw in ["korea", "kospi", "kosdaq"]):
-        return "한국 증시 관련 글로벌 보도입니다. 외국인 투자자 시각에서 본 한국 시장 평가를 확인하세요."
-
-    if any(kw in title_lower for kw in ["tariff", "trade war", "sanction"]):
-        return "관세·무역 분쟁 관련 소식입니다. 글로벌 공급망 재편과 수출 기업 실적에 영향을 미칩니다."
-
-    if any(kw in title_lower for kw in ["jobs", "employment", "unemployment", "nonfarm"]):
-        return "고용 지표 관련 소식입니다. 노동시장 데이터는 연준 금리 정책과 소비 전망의 핵심 지표입니다."
-
-    if any(kw in title_lower for kw in ["hack", "breach", "security"]):
-        return "보안 사건 관련 소식입니다. 관련 기업 주가와 사이버보안 섹터 수혜 여부를 확인하세요."
-
-    if any(kw in title_lower for kw in ["sec", "regulation", "compliance"]):
-        return "금융 규제 관련 소식입니다. 규제 변화는 해당 섹터의 비용 구조와 사업 환경을 변화시킵니다."
-
-    if any(kw in title_lower for kw in ["cuba", "regime"]):
-        return "미국 외교·안보 정책 관련 소식입니다. 지정학적 리스크 확대가 시장 심리에 영향을 줄 수 있습니다."
-
-    if any(kw in title_lower for kw in ["dhs", "secretary", "cabinet"]):
-        return "미국 정부 인사 변경 소식입니다. 주요 부처 수장 교체는 관련 정책 방향에 변화를 가져올 수 있습니다."
-
-    if any(kw in title_lower for kw in ["daylight", "spring forward"]):
-        return "서머타임(DST) 전환이 증시에 미치는 영향을 분석한 기사입니다. 계절적 패턴 참고용 데이터입니다."
-
-    if any(kw in title_lower for kw in ["gold", "silver", "precious metal"]):
-        return "귀금속 시장 관련 소식입니다. 금·은 가격은 인플레이션 헤지와 안전자산 수요의 바로미터입니다."
-
-    if any(kw in title_lower for kw in ["real estate", "housing", "mortgage"]):
-        return "부동산·주택 시장 관련 소식입니다. 모기지 금리와 주택 공급이 경기 흐름의 핵심 지표입니다."
-
-    if any(kw in title_lower for kw in ["m&a", "merger", "acquisition", "takeover"]):
-        return "기업 인수·합병(M&A) 관련 소식입니다. 딜 성사 여부와 인수 프리미엄이 관련주 가격에 영향을 미칩니다."
-
-    if any(kw in title_lower for kw in ["dividend", "buyback", "shareholder"]):
-        return "배당·주주환원 관련 소식입니다. 배당 정책 변화와 자사주 매입은 장기 투자 매력도를 높입니다."
-
-    if any(kw in title_lower for kw in ["china", "chinese", "beijing"]):
-        return "중국 경제·시장 관련 소식입니다. 중국 경기 흐름은 글로벌 원자재·무역에 직접적 영향을 미칩니다."
-
-    if any(kw in title_lower for kw in ["japan", "yen", "nikkei", "boj"]):
-        return "일본 경제·시장 관련 소식입니다. 엔화 약세와 BOJ 정책이 글로벌 캐리트레이드에 영향을 줍니다."
-
-    if any(kw in title_lower for kw in ["eu ", "europe", "euro", "ecb"]):
-        return "유럽 경제·시장 관련 소식입니다. ECB 통화정책과 유럽 경기 흐름이 글로벌 시장에 영향을 미칩니다."
-
-    # Fallback: extract meaningful entities
-    entities = _extract_title_entities(title)
-    if entities:
-        return f"{', '.join(entities[:3])} 관련 글로벌 시장 소식입니다. 원문에서 세부 내용을 확인하세요."
-    return title
+    # Default: use cleaned title as description (always better than generic template)
+    if _subj_str:
+        return f"{_subj_str}: {clean_title[:120]}"
+    return clean_title[:150] if len(clean_title) > 15 else title
 
 
 def generate_synthetic_description(
@@ -979,7 +1068,7 @@ def enrich_items(
     items: list,
     context_map: Optional[Dict[str, str]] = None,
     fetch_url: bool = True,
-    max_fetch: int = 10,
+    max_fetch: int = 30,
 ) -> None:
     """Enrich a list of items in-place.
 
@@ -999,6 +1088,10 @@ def enrich_items(
 
     # --- Image fetch pass (concurrent og:image for items missing images) ---
     fetch_images_concurrent(items, max_workers=8, max_items=30)
+
+    # --- Description enrichment pass (concurrent fetch for synthetic descriptions) ---
+    if fetch_url:
+        fetch_descriptions_concurrent(items, max_workers=6, max_items=50)
 
     # --- Translation pass (after all enrichment is done) ---
     from .translator import (
