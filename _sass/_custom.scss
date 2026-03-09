@@ -2850,11 +2850,18 @@ body {
 
   .posts-tabs {
     gap: 0.4rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    &::-webkit-scrollbar { display: none; }
   }
 
   .posts-tab {
     padding: 0.4rem 0.75rem;
     font-size: 0.78rem;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   .recent-posts-tabbed h2 {

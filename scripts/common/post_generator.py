@@ -290,6 +290,12 @@ class PostGenerator:
         if not title or not title.strip():
             return None
 
+        # Decode HTML entities (e.g. &#x27; → ', &amp; → &) in title and content
+        import html
+
+        title = html.unescape(title)
+        content = html.unescape(content)
+
         if date is None:
             date = datetime.now(UTC)
 

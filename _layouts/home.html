@@ -3,7 +3,7 @@ layout: default
 ---
 
 <!-- Dashboard Header with Gradient -->
-<section class="dashboard-header">
+<section class="dashboard-header" aria-label="대시보드 헤더">
   <div class="dashboard-gradient-bg"></div>
   <div class="dashboard-content-wrapper">
     <div class="dashboard-title-row">
@@ -36,7 +36,7 @@ layout: default
 </section>
 
 <!-- Market Quick Stats Bar -->
-<section class="market-stats-bar">
+<section class="market-stats-bar" aria-label="시장 통계">
   <div class="stats-scroll-wrapper">
     <div class="stat-item">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -94,7 +94,7 @@ layout: default
 </section>
 
 <!-- Recent Posts - Date Grouped (Main Content) -->
-<section class="recent-posts-tabbed">
+<section class="recent-posts-tabbed" aria-label="최근 포스트">
   <div class="section-header">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <rect x="3" y="4" width="18" height="18" rx="2"/>
@@ -105,49 +105,49 @@ layout: default
     <h2>최근 포스트</h2>
   </div>
 
-  <div class="posts-tabs">
-    <button class="posts-tab active" data-category="all">
+  <div class="posts-tabs" role="tablist" aria-label="카테고리 필터">
+    <button class="posts-tab active" role="tab" aria-selected="true" data-category="all">
       전체
       <span class="tab-count">{{ site.posts | size }}</span>
     </button>
     {% assign crypto_posts = site.posts | where_exp: "post", "post.categories[0] contains 'crypto'" %}
-    <button class="posts-tab" data-category="crypto">
+    <button class="posts-tab" role="tab" aria-selected="false" data-category="crypto">
       암호화폐
       <span class="tab-count">{{ crypto_posts | size }}</span>
     </button>
     {% assign stock_posts = site.posts | where_exp: "post", "post.categories[0] contains 'stock'" %}
-    <button class="posts-tab" data-category="stock">
+    <button class="posts-tab" role="tab" aria-selected="false" data-category="stock">
       주식
       <span class="tab-count">{{ stock_posts | size }}</span>
     </button>
     {% assign analysis_posts = site.posts | where_exp: "post", "post.categories[0] contains 'analysis'" %}
-    <button class="posts-tab" data-category="analysis">
+    <button class="posts-tab" role="tab" aria-selected="false" data-category="analysis">
       분석
       <span class="tab-count">{{ analysis_posts | size }}</span>
     </button>
     {% assign regulatory_posts = site.posts | where_exp: "post", "post.categories[0] contains 'regulatory'" %}
-    <button class="posts-tab" data-category="regulatory">
+    <button class="posts-tab" role="tab" aria-selected="false" data-category="regulatory">
       규제
       <span class="tab-count">{{ regulatory_posts | size }}</span>
     </button>
     {% assign social_posts = site.posts | where_exp: "post", "post.categories[0] contains 'social'" %}
-    <button class="posts-tab" data-category="social">
+    <button class="posts-tab" role="tab" aria-selected="false" data-category="social">
       소셜
       <span class="tab-count">{{ social_posts | size }}</span>
     </button>
     {% assign security_posts = site.posts | where_exp: "post", "post.categories[0] contains 'security'" %}
-    <button class="posts-tab" data-category="security">
+    <button class="posts-tab" role="tab" aria-selected="false" data-category="security">
       보안
       <span class="tab-count">{{ security_posts | size }}</span>
     </button>
     {% assign political_posts = site.posts | where_exp: "post", "post.categories[0] contains 'political'" %}
-    <button class="posts-tab" data-category="political">
+    <button class="posts-tab" role="tab" aria-selected="false" data-category="political">
       정치
       <span class="tab-count">{{ political_posts | size }}</span>
     </button>
   </div>
 
-  <div class="posts-tab-content">
+  <div class="posts-tab-content" role="tabpanel">
     {% comment %} 1단계: 고정(pin) 포스트 먼저 출력 {% endcomment %}
     {% for post in site.posts %}
       {% if post.pin %}
@@ -500,8 +500,9 @@ layout: default
       const category = tab.dataset.category;
 
       // Update active tab
-      tabs.forEach(t => t.classList.remove('active'));
+      tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
       tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
 
       // Filter posts
       postItems.forEach(item => {

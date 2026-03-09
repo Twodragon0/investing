@@ -8,7 +8,7 @@
 <a href="{{ post.url | relative_url }}" class="post-card cat-border-{{ pc_cat | slugify }}{% if post.pin %} pinned{% endif %}">
   {% if post.image %}
   <div class="post-card-thumb">
-    <img src="{{ post.image | relative_url }}" alt="{{ post.title | truncate: 60 }}" loading="lazy" decoding="async">
+    <img src="{{ post.image | relative_url }}" alt="{{ post.title | truncate: 60 }}" loading="lazy" decoding="async" width="400" height="210" onerror="this.style.display='none'">
   </div>
   {% endif %}
   <div class="post-card-meta">
