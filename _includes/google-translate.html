@@ -180,7 +180,8 @@ function googleTranslateElementInit() {
     }
   }
 
-  function doTranslate(lang) {
+  function doTranslate(lang, attempt) {
+    attempt = attempt || 0;
     var sel = document.querySelector('.goog-te-combo');
     if (sel) {
       try {
@@ -196,10 +197,12 @@ function googleTranslateElementInit() {
           } else { safeRemove(sessionStorage, 'langReloadCount'); }
         }, 800);
       } catch(e) { setTimeout(function() { location.reload(); }, 200); }
+    } else if (attempt < 20) {
+      setTimeout(function() { doTranslate(lang, attempt + 1); }, 300);
     } else {
       safeSet(sessionStorage,'langChanging','false');
       safeSet(sessionStorage,'langApplied','true');
-      setTimeout(function() { location.reload(); }, 200);
+      location.reload();
     }
   }
 
@@ -309,11 +312,8 @@ function googleTranslateElementInit() {
     }).observe(document.body, {childList:true, subtree:true});
   }
 
-  var sysLang = getSystemLanguage(), curLang = getCurrentLang(), userPref = safeGet(localStorage, 'preferredLang');
-  var needsTranslate = (userPref && userPref !== 'system' && userPref !== 'ko') || (!userPref && sysLang !== 'ko') || (curLang !== 'ko');
-  if (needsTranslate) {
-    if (document.readyState === 'complete') setTimeout(loadTranslateScript, 100);
-    else window.addEventListener('load', function() { setTimeout(loadTranslateScript, 100); });
-  }
+  // Always load translate script so widget is ready when user clicks language
+  if (document.readyState === 'complete') setTimeout(loadTranslateScript, 100);
+  else window.addEventListener('load', function() { setTimeout(loadTranslateScript, 100); });
 })();
 </script>
