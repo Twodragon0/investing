@@ -2150,55 +2150,122 @@ html {
   }
 }
 
-// Hide Google Translate banner/popup elements (but keep our widget visible)
-.goog-te-banner-frame,
-body > .skiptranslate:not(.gt-widget .skiptranslate),
-[class*="VIpgJd"],
-#goog-gt-tt,
-.goog-te-balloon-frame {
-  display: none !important;
-  visibility: hidden !important;
-  height: 0 !important;
-  overflow: hidden !important;
-}
-body {
-  top: 0 !important;
-  position: static !important;
-}
-
-// Google Translate widget styling
-.gt-widget {
+// Custom Language Selector
+.lang-selector {
+  position: relative;
   display: flex;
   align-items: center;
+}
 
-  .goog-te-gadget {
-    font-size: 0 !important;
-    margin: 0;
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba($bg-card, 0.6);
+  border: 1px solid rgba($border-color, 0.5);
+  border-radius: 6px;
+  color: $text-primary;
+  padding: 0.3rem 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color $transition-fast, background $transition-fast;
 
-    > span { display: none; } // Hide "Powered by" text
+  &:hover, &:focus {
+    border-color: $accent-blue;
+    background: rgba($accent-blue, 0.08);
+  }
 
-    .goog-te-combo {
-      background: rgba($bg-card, 0.6);
-      border: 1px solid rgba($border-color, 0.5);
-      border-radius: 6px;
-      color: $text-primary;
-      padding: 0.35rem 0.6rem;
-      font-size: 0.82rem;
-      font-family: inherit;
-      cursor: pointer;
-      outline: none;
-      transition: border-color $transition-fast, background $transition-fast;
+  .lang-chevron {
+    opacity: 0.6;
+    transition: transform 0.2s ease;
+  }
 
-      &:hover, &:focus {
-        border-color: $accent-blue;
-        background: rgba($accent-blue, 0.08);
-      }
+  &[aria-expanded="true"] .lang-chevron {
+    transform: rotate(180deg);
+  }
+}
 
-      option {
-        background: $bg-secondary;
-        color: $text-primary;
-      }
-    }
+.lang-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 180px;
+  background: $bg-card;
+  border: 1px solid rgba($border-color, 0.6);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  padding: 4px;
+  animation: langMenuIn 0.15s ease;
+
+  &.open {
+    display: block;
+  }
+}
+
+@keyframes langMenuIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.lang-menu-header {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $text-secondary;
+  padding: 6px 10px 2px;
+  opacity: 0.7;
+}
+
+.lang-menu-divider {
+  height: 1px;
+  background: rgba($border-color, 0.4);
+  margin: 4px 6px;
+}
+
+.lang-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 7px 10px;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  color: $text-primary;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  text-align: left;
+
+  &:hover {
+    background: rgba($accent-blue, 0.1);
+  }
+
+  &.active {
+    background: rgba($accent-blue, 0.15);
+    font-weight: 600;
+  }
+
+  .lang-item-flag {
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+
+  .lang-item-name {
+    flex: 1;
+  }
+}
+
+.lang-translate-btn {
+  color: $accent-blue;
+  gap: 6px;
+
+  span { flex: 1; }
+
+  &:hover {
+    background: rgba($accent-blue, 0.12);
   }
 }
 
@@ -5663,6 +5730,21 @@ main {
       background: var(--accent-blue);
       color: #ffffff;
     }
+  }
+}
+
+[data-theme="light"] {
+  .lang-btn {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+  .lang-menu {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+  .lang-menu-item:hover {
+    background: rgba(0, 100, 255, 0.06);
   }
 }
 

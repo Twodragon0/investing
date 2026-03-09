@@ -1,23 +1,29 @@
-<!-- Google Translate Widget Integration -->
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'ko',
-    includedLanguages: 'en,ja,zh-CN,es',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    autoDisplay: false,
-    multilanguagePage: true
-  }, 'google_translate_element');
-}
-</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!-- Custom Language Selector (replaces Google Translate - blocked in Korea) -->
 <script type="text/javascript">
 (function() {
   'use strict';
 
+  var LANGS = {
+    ko: { name: '한국어', flag: '🇰🇷' },
+    en: { name: 'English', flag: '🇺🇸' },
+    ja: { name: '日本語', flag: '🇯🇵' },
+    'zh-CN': { name: '中文', flag: '🇨🇳' },
+    es: { name: 'Español', flag: '🇪🇸' }
+  };
+
+  // Papago language codes differ slightly
+  var PAPAGO_CODES = { ko: 'ko', en: 'en', ja: 'ja', 'zh-CN': 'zh-CN', es: 'es' };
+
+  function getCurrentLang() {
+    try { return localStorage.getItem('preferredLang') || 'ko'; } catch(e) { return 'ko'; }
+  }
+
+  function setLang(lang) {
+    try { localStorage.setItem('preferredLang', lang); } catch(e) {}
+  }
+
   function applyI18nStrings(lang) {
     if (typeof window.__t !== 'function') return;
-    try { localStorage.setItem('preferredLang', lang); } catch(e) {}
     document.querySelectorAll('[data-i18n]').forEach(function(el) {
       el.textContent = window.__t(el.getAttribute('data-i18n'));
     });
@@ -29,39 +35,142 @@ function googleTranslateElementInit() {
     });
   }
 
-  function hideGoogleBanner() {
-    document.querySelectorAll('.goog-te-banner-frame, [class*="VIpgJd"], #goog-gt-tt, .goog-te-balloon-frame').forEach(function(el) {
-      el.style.setProperty('display', 'none', 'important');
+  function openTranslator(lang) {
+    if (lang === 'ko') return; // No translation needed for Korean
+    var url = window.location.href;
+    // Use Papago website translator (works in Korea)
+    var papagoUrl = 'https://papago.naver.com/website?source=ko&target=' +
+      encodeURIComponent(PAPAGO_CODES[lang] || 'en') + '&url=' + encodeURIComponent(url);
+    window.open(papagoUrl, '_blank', 'noopener,noreferrer');
+  }
+
+  function buildDropdown() {
+    var wrapper = document.getElementById('lang-selector');
+    if (!wrapper) return;
+
+    var currentLang = getCurrentLang();
+    var currentInfo = LANGS[currentLang] || LANGS.ko;
+
+    // Build the toggle button
+    var btn = document.createElement('button');
+    btn.className = 'lang-btn';
+    btn.type = 'button';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-haspopup', 'listbox');
+    btn.setAttribute('aria-label', window.__t ? window.__t('select_language') : 'Select language');
+    btn.innerHTML = '<span class="lang-current-flag">' + currentInfo.flag + '</span>' +
+      '<svg class="lang-chevron" width="10" height="10" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><path d="M2 4l3 3 3-3"/></svg>';
+
+    // Build dropdown menu
+    var menu = document.createElement('div');
+    menu.className = 'lang-menu';
+    menu.setAttribute('role', 'listbox');
+    menu.setAttribute('aria-label', 'Language options');
+
+    // UI-only section header
+    var uiHeader = document.createElement('div');
+    uiHeader.className = 'lang-menu-header';
+    uiHeader.textContent = 'UI Language';
+    menu.appendChild(uiHeader);
+
+    Object.keys(LANGS).forEach(function(code) {
+      var info = LANGS[code];
+      var item = document.createElement('button');
+      item.className = 'lang-menu-item' + (code === currentLang ? ' active' : '');
+      item.type = 'button';
+      item.setAttribute('role', 'option');
+      item.setAttribute('aria-selected', code === currentLang ? 'true' : 'false');
+      item.setAttribute('data-lang', code);
+      item.innerHTML = '<span class="lang-item-flag">' + info.flag + '</span><span class="lang-item-name">' + info.name + '</span>';
+
+      item.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var lang = this.getAttribute('data-lang');
+        setLang(lang);
+        applyI18nStrings(lang);
+        // Update active state
+        menu.querySelectorAll('.lang-menu-item').forEach(function(el) {
+          el.classList.remove('active');
+          el.setAttribute('aria-selected', 'false');
+        });
+        this.classList.add('active');
+        this.setAttribute('aria-selected', 'true');
+        // Update button flag
+        btn.querySelector('.lang-current-flag').textContent = LANGS[lang].flag;
+        // Close menu
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+
+      menu.appendChild(item);
     });
-    if (document.body) { document.body.style.top = '0'; document.body.style.position = ''; }
-  }
 
-  function getCurrentLang() {
-    try {
-      var c = document.cookie.match(/googtrans=\/[^\/]+\/([^;\/]+)/);
-      if (c) return c[1];
-    } catch(e) {}
-    return 'ko';
-  }
+    // Divider
+    var divider = document.createElement('div');
+    divider.className = 'lang-menu-divider';
+    menu.appendChild(divider);
 
-  var initFn = function() {
-    setTimeout(function() {
-      hideGoogleBanner();
+    // Full page translate button
+    var translateHeader = document.createElement('div');
+    translateHeader.className = 'lang-menu-header';
+    translateHeader.textContent = 'Translate Page';
+    menu.appendChild(translateHeader);
+
+    var translateBtn = document.createElement('button');
+    translateBtn.className = 'lang-menu-item lang-translate-btn';
+    translateBtn.type = 'button';
+    translateBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>' +
+      '<span>Papago Translate</span>' +
+      '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
+
+    translateBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
       var lang = getCurrentLang();
-      if (lang !== 'ko') applyI18nStrings(lang);
-    }, 500);
-  };
+      if (lang === 'ko') lang = 'en'; // Default to English if Korean
+      openTranslator(lang);
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+    menu.appendChild(translateBtn);
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initFn);
-  else initFn();
+    // Toggle dropdown
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
 
-  // Watch for Google Translate banner and hide it
-  if ('MutationObserver' in window) {
-    var timer;
-    new MutationObserver(function() {
-      clearTimeout(timer);
-      timer = setTimeout(hideGoogleBanner, 200);
-    }).observe(document.documentElement, {childList: true, subtree: true});
+    // Close on outside click
+    document.addEventListener('click', function(e) {
+      if (!wrapper.contains(e.target)) {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    wrapper.appendChild(btn);
+    wrapper.appendChild(menu);
+  }
+
+  // Apply saved language on load
+  function init() {
+    var lang = getCurrentLang();
+    if (lang !== 'ko') applyI18nStrings(lang);
+    buildDropdown();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
   }
 })();
 </script>
