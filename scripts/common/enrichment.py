@@ -690,6 +690,38 @@ def _extract_title_entities(title: str) -> list:
         "Stayed",
         "Stays",
         "Stay",
+        "Worse",
+        "Linked",
+        "Issues",
+        "Issue",
+        "Based",
+        "Using",
+        "Asked",
+        "Asking",
+        "Called",
+        "Calls",
+        "Named",
+        "Known",
+        "Seen",
+        "Taken",
+        "Given",
+        "Several",
+        "Certain",
+        "Entire",
+        "Recent",
+        "Little",
+        "Large",
+        "Small",
+        "Long",
+        "Short",
+        "Full",
+        "Half",
+        "Wants",
+        "Needs",
+        "Tries",
+        "Three",
+        "Four",
+        "Five",
     }
     _NOISE_TICKERS = {
         "CEO",
@@ -720,6 +752,20 @@ def _extract_title_entities(title: str) -> list:
         "GOP",
         "DHS",
         "RFK",
+        "ITS",
+        "WAS",
+        "HIS",
+        "HER",
+        "WHO",
+        "MAY",
+        "BIG",
+        "TOP",
+        "TWO",
+        "OUR",
+        "SAY",
+        "ANY",
+        "FEW",
+        "RED",
     }
     tickers = [t for t in tickers if t not in _NOISE_TICKERS]
     proper = [w for w in re.findall(r"\b[A-Z][a-z]{2,}\b", title) if w not in _COMMON]
@@ -951,8 +997,11 @@ def _analyze_english_title(title: str, title_lower: str) -> str:
         return f"{clean_title[:120]}."
 
     # Default: use cleaned title as description (always better than generic template)
-    if _subj_str:
-        return f"{_subj_str}: {clean_title[:120]}"
+    # Only use named entities (not prices/numbers) as prefix to avoid awkward patterns
+    # like "$67,000, Bitcoin: ..." or "US, Monday: ..."
+    _meaningful = [e for e in _named if len(e) > 2]
+    if _meaningful:
+        return f"{', '.join(_meaningful[:2])} 관련 소식입니다. {clean_title[:100]}"
     return clean_title[:150] if len(clean_title) > 15 else title
 
 
@@ -992,14 +1041,10 @@ def generate_synthetic_description(
             return f"{core}. {entity_str} 관련 세부 내용은 원문을 참고하세요."
         return f"{core}. 원문에서 상세 내용을 확인하세요."
 
-    # English: entity-rich description
-    if entity_str:
-        src_part = f"{label}의 " if label and label != source else ""
-        return f"{src_part}{entity_str} 관련 소식입니다. {clean_title[:60]}"
-    # Final fallback: use cleaned title itself (better than generic boilerplate)
+    # English: use cleaned title with source context
     if label and label != source:
-        return f"{label}: {clean_title[:100]}"
-    return clean_title if len(clean_title) > 15 else title
+        return f"{label} 보도입니다. {clean_title[:100]}"
+    return clean_title[:150] if len(clean_title) > 15 else title
 
 
 def enrich_item(

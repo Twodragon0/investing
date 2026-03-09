@@ -151,13 +151,26 @@ def _to_en(text: str) -> str:
 
 
 def _filter_en_keywords(keywords: list) -> list:
-    """Filter out Korean-only keywords, keep English/mixed ones."""
+    """Filter out Korean-only keywords and common noise words, keep meaningful ones."""
     import re
 
+    _NOISE_KEYWORDS = {
+        "the", "and", "for", "with", "has", "are", "its", "but", "how", "why",
+        "what", "new", "all", "can", "now", "get", "set", "may", "not", "other",
+        "only", "just", "also", "more", "most", "some", "much", "many", "each",
+        "even", "very", "here", "there", "then", "than", "into", "from", "this",
+        "that", "been", "were", "will", "your", "they", "them", "such", "like",
+        "better", "bigger", "lower", "higher", "early", "late", "huge", "linked",
+        "issues", "says", "said", "first", "last", "next", "after", "before",
+        "about", "every", "where", "which", "while", "could", "would", "should",
+        "still", "today", "monday", "tuesday", "wednesday", "thursday", "friday",
+        "saturday", "sunday", "report", "update", "alert", "check", "watch",
+        "live", "latest", "breaking", "global", "world", "major", "keep",
+    }
     result = []
     for kw in keywords:
-        # Keep if it has at least one Latin character
-        if re.search(r"[a-zA-Z]", kw):
+        # Keep if it has at least one Latin character and is not a noise word
+        if re.search(r"[a-zA-Z]", kw) and kw.lower().strip() not in _NOISE_KEYWORDS:
             result.append(kw)
     return result
 
@@ -641,18 +654,18 @@ def generate_fear_greed_gauge(
 
     _ensure_dir()
 
-    fig, ax = plt.subplots(figsize=(8, 5.5))
+    fig, ax = plt.subplots(figsize=(8, 6.0))
     fig.patch.set_facecolor(COLORS["bg"])
     ax.set_facecolor(COLORS["bg"])
     ax.set_xlim(-1.6, 1.6)
-    ax.set_ylim(-0.6, 1.6)
+    ax.set_ylim(-0.6, 1.75)
     ax.set_aspect("equal")
     ax.axis("off")
 
     # Title
     ax.text(
         0,
-        1.50,
+        1.65,
         "Crypto Fear & Greed Index",
         ha="center",
         va="center",
@@ -663,7 +676,7 @@ def generate_fear_greed_gauge(
     )
     ax.text(
         0,
-        1.30,
+        1.45,
         date_str,
         ha="center",
         va="center",
@@ -1261,7 +1274,9 @@ def generate_market_snapshot_card(
         return None
 
     row_count = len(market_data)
-    fig_height = 2.5 + row_count * 0.55
+    # Count section headers (each adds extra vertical space)
+    section_count = len({item.get("section", "") for item in market_data if item.get("section")})
+    fig_height = 3.0 + row_count * 0.55 + section_count * 0.45
     fig, ax = plt.subplots(figsize=(12, fig_height))
     fig.patch.set_facecolor(COLORS["bg"])
     ax.set_facecolor(COLORS["bg"])
@@ -1574,7 +1589,7 @@ def generate_sector_heatmap(
     cols = 4 if count > 8 else 3
     rows = (count + cols - 1) // cols
 
-    fig, ax = plt.subplots(figsize=(14, 3.5 + rows * 1.8))
+    fig, ax = plt.subplots(figsize=(14, 4.2 + rows * 1.8))
     fig.patch.set_facecolor(COLORS["bg"])
     ax.set_facecolor(COLORS["bg"])
     ax.axis("off")
@@ -1606,8 +1621,10 @@ def generate_sector_heatmap(
 
     margin = 0.03
     gap = 0.01
+    top_area = 0.88
+    bottom_area = 0.07  # reserve space for legend
     cell_w = (1.0 - margin * 2 - gap * (cols - 1)) / cols
-    cell_h = (0.88 - margin * 2 - gap * (rows - 1)) / rows
+    cell_h = (top_area - bottom_area - margin * 2 - gap * (rows - 1)) / rows
 
     # Find the range for scaling
     all_changes = [info.get("change_pct", 0) for _, info in sorted_sectors]
@@ -1697,7 +1714,7 @@ def generate_sector_heatmap(
         ax.text(
             x + cell_w / 2,
             y + cell_h * 0.15,
-            f"{sign}{abs(change):.2f}%",
+            f"{sign}{change:.2f}%",
             ha="center",
             va="center",
             transform=ax.transAxes,
