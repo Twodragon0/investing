@@ -1,0 +1,31 @@
+name: Collect Market Indicators
+
+on:
+  schedule:
+    - cron: '0 14,22 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect-data
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Collect market indicators
+        uses: ./.github/actions/python-collect
+        with:
+          script: scripts/collect_market_indicators.py
+          commit-message: 'chore: collect market indicators'
+          git-add-paths: '_posts/ _state/'

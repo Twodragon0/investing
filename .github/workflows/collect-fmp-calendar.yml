@@ -1,0 +1,33 @@
+name: Collect FMP Calendar
+
+on:
+  schedule:
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect-data
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Collect FMP calendar data
+        uses: ./.github/actions/python-collect
+        with:
+          script: scripts/collect_fmp_calendar.py
+          commit-message: 'chore: collect FMP calendar'
+          git-add-paths: '_posts/ _state/'
