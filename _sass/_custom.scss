@@ -477,6 +477,12 @@ a {
     border-color: rgba($cat-political, 0.25);
     box-shadow: 0 2px 8px rgba($cat-political, 0.15);
   }
+  &.cat-social-media {
+    background: rgba($cat-social, 0.15);
+    color: $cat-social;
+    border-color: rgba($cat-social, 0.25);
+    box-shadow: 0 2px 8px rgba($cat-social, 0.15);
+  }
 }
 
 .post-source {
@@ -2700,6 +2706,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    content-visibility: auto;
+    contain-intrinsic-size: auto 500px;
   }
 
   .date-group-header {
@@ -2757,6 +2765,10 @@ body {
 
   &.cat-border-political-trades {
     border-left: 3px solid $cat-political;
+  }
+
+  &.cat-border-social-media {
+    border-left: 3px solid $cat-social;
   }
 
   &.cat-border-crypto-trading-journal {
@@ -3038,6 +3050,7 @@ body {
   &.cat-analysis { background: rgba($cat-analysis, 0.15); color: $cat-analysis; }
   &.cat-regulatory { background: rgba($cat-regulatory, 0.15); color: $cat-regulatory; }
   &.cat-political { background: rgba($cat-political, 0.15); color: $cat-political; }
+  &.cat-social { background: rgba($cat-social, 0.15); color: $cat-social; }
 }
 
 .search-result-tag {
