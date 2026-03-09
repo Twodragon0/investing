@@ -27,6 +27,7 @@ image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-02-20.png"
 
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **20건** 수집
