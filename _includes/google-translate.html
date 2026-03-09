@@ -1,4 +1,4 @@
-<!-- Custom Language Selector (replaces Google Translate - blocked in Korea) -->
+<!-- Custom Language Selector with In-Page Translation -->
 <script type="text/javascript">
 (function() {
   'use strict';
@@ -11,8 +11,8 @@
     es: { name: 'Español', flag: '🇪🇸' }
   };
 
-  // Papago language codes differ slightly
-  var PAPAGO_CODES = { ko: 'ko', en: 'en', ja: 'ja', 'zh-CN': 'zh-CN', es: 'es' };
+  var CACHE_KEY = 'translate_cache_v1';
+  var translating = false;
 
   function getCurrentLang() {
     try { return localStorage.getItem('preferredLang') || 'ko'; } catch(e) { return 'ko'; }
@@ -35,13 +35,148 @@
     });
   }
 
-  function openTranslator(lang) {
-    if (lang === 'ko') return; // No translation needed for Korean
-    var url = window.location.href;
-    // Use Papago website translator (works in Korea)
-    var papagoUrl = 'https://papago.naver.com/website?source=ko&target=' +
-      encodeURIComponent(PAPAGO_CODES[lang] || 'en') + '&url=' + encodeURIComponent(url);
-    window.open(papagoUrl, '_blank', 'noopener,noreferrer');
+  // Get translation cache from sessionStorage
+  function getCache() {
+    try {
+      return JSON.parse(sessionStorage.getItem(CACHE_KEY)) || {};
+    } catch(e) { return {}; }
+  }
+
+  function setCache(cache) {
+    try { sessionStorage.setItem(CACHE_KEY, JSON.stringify(cache)); } catch(e) {}
+  }
+
+  // Translate text via Google Translate API endpoint
+  function translateText(text, targetLang) {
+    var cache = getCache();
+    var cacheKey = targetLang + ':' + text.substring(0, 200);
+    if (cache[cacheKey]) return Promise.resolve(cache[cacheKey]);
+
+    var apiLang = targetLang === 'zh-CN' ? 'zh-CN' : targetLang;
+    var url = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=ko&tl=' +
+      encodeURIComponent(apiLang) + '&dt=t&q=' + encodeURIComponent(text);
+
+    return fetch(url)
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (!data || !data[0]) return text;
+        var result = '';
+        data[0].forEach(function(seg) {
+          if (seg && seg[0]) result += seg[0];
+        });
+        // Cache the result
+        cache[cacheKey] = result;
+        setCache(cache);
+        return result;
+      })
+      .catch(function() { return text; });
+  }
+
+  // Batch translate: split large text into chunks
+  function translateBatch(texts, targetLang) {
+    var promises = texts.map(function(t) {
+      if (!t.text || !t.text.trim()) return Promise.resolve({ el: t.el, attr: t.attr, text: t.text });
+      return translateText(t.text, targetLang).then(function(translated) {
+        return { el: t.el, attr: t.attr, text: translated };
+      });
+    });
+    return Promise.all(promises);
+  }
+
+  // Collect translatable text nodes from the page
+  function getTranslatableElements() {
+    var elements = [];
+    var selectors = [
+      'main h1, main h2, main h3, main h4',
+      'main p',
+      'main li',
+      'main td, main th',
+      'main .post-card-title',
+      'main .post-card-excerpt',
+      'main .post-excerpt',
+      'main figcaption',
+      'main blockquote',
+      'main .post-content span',
+      '.post-title',
+      '.post-meta-text'
+    ];
+
+    document.querySelectorAll(selectors.join(',')).forEach(function(el) {
+      // Skip elements with notranslate class or translate="no"
+      if (el.closest('.notranslate') || el.getAttribute('translate') === 'no') return;
+      // Skip code blocks
+      if (el.closest('pre') || el.closest('code')) return;
+      // Skip empty elements
+      var text = el.textContent.trim();
+      if (!text || text.length < 2) return;
+      // Store original text
+      if (!el.getAttribute('data-original-text')) {
+        el.setAttribute('data-original-text', el.textContent);
+      }
+      elements.push({ el: el, attr: 'textContent', text: text });
+    });
+
+    return elements;
+  }
+
+  // Show/hide translation loading indicator
+  function showLoading(show) {
+    var indicator = document.getElementById('translate-loading');
+    if (!indicator && show) {
+      indicator = document.createElement('div');
+      indicator.id = 'translate-loading';
+      indicator.className = 'translate-loading';
+      indicator.innerHTML = '<div class="translate-loading-spinner"></div><span>Translating...</span>';
+      document.body.appendChild(indicator);
+    }
+    if (indicator) {
+      indicator.style.display = show ? 'flex' : 'none';
+    }
+  }
+
+  // Translate page content
+  function translatePage(targetLang) {
+    if (translating) return;
+    if (targetLang === 'ko') {
+      // Restore original text
+      document.querySelectorAll('[data-original-text]').forEach(function(el) {
+        el.textContent = el.getAttribute('data-original-text');
+      });
+      return;
+    }
+
+    translating = true;
+    showLoading(true);
+
+    var elements = getTranslatableElements();
+
+    // Translate in batches of 5 to avoid overwhelming the API
+    var batchSize = 5;
+    var batches = [];
+    for (var i = 0; i < elements.length; i += batchSize) {
+      batches.push(elements.slice(i, i + batchSize));
+    }
+
+    var chain = Promise.resolve();
+    batches.forEach(function(batch) {
+      chain = chain.then(function() {
+        return translateBatch(batch, targetLang).then(function(results) {
+          results.forEach(function(r) {
+            if (r.el && r.text) {
+              r.el.textContent = r.text;
+            }
+          });
+        });
+      });
+    });
+
+    chain.then(function() {
+      translating = false;
+      showLoading(false);
+    }).catch(function() {
+      translating = false;
+      showLoading(false);
+    });
   }
 
   function buildDropdown() {
@@ -51,7 +186,6 @@
     var currentLang = getCurrentLang();
     var currentInfo = LANGS[currentLang] || LANGS.ko;
 
-    // Build the toggle button
     var btn = document.createElement('button');
     btn.className = 'lang-btn';
     btn.type = 'button';
@@ -61,17 +195,10 @@
     btn.innerHTML = '<span class="lang-current-flag">' + currentInfo.flag + '</span>' +
       '<svg class="lang-chevron" width="10" height="10" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><path d="M2 4l3 3 3-3"/></svg>';
 
-    // Build dropdown menu
     var menu = document.createElement('div');
     menu.className = 'lang-menu';
     menu.setAttribute('role', 'listbox');
     menu.setAttribute('aria-label', 'Language options');
-
-    // UI-only section header
-    var uiHeader = document.createElement('div');
-    uiHeader.className = 'lang-menu-header';
-    uiHeader.textContent = 'UI Language';
-    menu.appendChild(uiHeader);
 
     Object.keys(LANGS).forEach(function(code) {
       var info = LANGS[code];
@@ -95,52 +222,22 @@
         });
         this.classList.add('active');
         this.setAttribute('aria-selected', 'true');
-        // Update button flag
         btn.querySelector('.lang-current-flag').textContent = LANGS[lang].flag;
-        // Close menu
         menu.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
+        // Translate content in-page
+        translatePage(lang);
       });
 
       menu.appendChild(item);
     });
 
-    // Divider
-    var divider = document.createElement('div');
-    divider.className = 'lang-menu-divider';
-    menu.appendChild(divider);
-
-    // Full page translate button
-    var translateHeader = document.createElement('div');
-    translateHeader.className = 'lang-menu-header';
-    translateHeader.textContent = 'Translate Page';
-    menu.appendChild(translateHeader);
-
-    var translateBtn = document.createElement('button');
-    translateBtn.className = 'lang-menu-item lang-translate-btn';
-    translateBtn.type = 'button';
-    translateBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>' +
-      '<span>Papago Translate</span>' +
-      '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
-
-    translateBtn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var lang = getCurrentLang();
-      if (lang === 'ko') lang = 'en'; // Default to English if Korean
-      openTranslator(lang);
-      menu.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-    });
-    menu.appendChild(translateBtn);
-
-    // Toggle dropdown
     btn.addEventListener('click', function(e) {
       e.stopPropagation();
       var isOpen = menu.classList.toggle('open');
       btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
-    // Close on outside click
     document.addEventListener('click', function(e) {
       if (!wrapper.contains(e.target)) {
         menu.classList.remove('open');
@@ -148,7 +245,6 @@
       }
     });
 
-    // Close on Escape
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
         menu.classList.remove('open');
@@ -160,11 +256,14 @@
     wrapper.appendChild(menu);
   }
 
-  // Apply saved language on load
   function init() {
     var lang = getCurrentLang();
     if (lang !== 'ko') applyI18nStrings(lang);
     buildDropdown();
+    // Auto-translate if a non-Korean language was previously selected
+    if (lang !== 'ko') {
+      setTimeout(function() { translatePage(lang); }, 300);
+    }
   }
 
   if (document.readyState === 'loading') {
