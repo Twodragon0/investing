@@ -8,7 +8,7 @@ keywords: "social-media, telegram, twitter, reddit, politics"
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/source-distribution-2026-03-09.png"
-description: "2026-03-09 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 20건, 총 40건이 수집되었습니다."
+description: "2026-03-09 소셜 미디어 40건: Blackrock ETF 비트코인 $264.5M 매수, 한은 금리·환율 괴리 시장안정화 조치 언급, 트럼프 관세 주식폭락 위험. 텔레그램 20건·정치·경제 20건."
 ---
 
 **2026-03-09** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 20건, 총 40건이 수집되었습니다.

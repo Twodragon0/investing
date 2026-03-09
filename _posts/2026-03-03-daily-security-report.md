@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "블록체인 보안 리포트 - 2026-03-03"
-date: 2026-03-03 02:51:57 +0000
+date: 2026-03-03 02:51:57 +0900
 categories: [security-alerts]
 tags: ["security", "hack", "blockchain", "daily-digest"]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-security-report-2026-03-03.png"
-description: "2026년 2월 블록체인 해킹 피해액 $26.5M으로 2025년 3월 이후 최저. 보안 환경 개선 분석."
+description: "2026년 2월 블록체인 해킹 피해액 $26.5M으로 2025년 3월 이후 월간 최저치. CertiK 두 매체 공통 인용. 프로토콜 감사 강화·온체인 모니터링 고도화 효과로 보안 환경 개선 분석."
 ---
 
 블록체인 보안 관련 뉴스 2건을 정리합니다.

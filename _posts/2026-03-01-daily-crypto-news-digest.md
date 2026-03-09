@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "암호화폐 뉴스 브리핑 - 2026-03-01"
-date: 2026-03-01 03:18:57 +0000
+date: 2026-03-01 03:18:57 +0900
 categories: [crypto-news]
 tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-01.png"
-description: "2026-03-01 암호화폐 시장에서 108건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, AI/기술 관련 소식이 주목됩니다."
+description: "2026-03-01 암호화폐 108건 분석. 비트코인 51건(47%) 압도적, BTC 트럼프 채굴사 충격·Jane Street 음모론 화제. 가격/시장 28건, AI/기술 10건, 핫 키워드 bitcoin(31회)."
 ---
 
 **2026-03-01** 암호화폐 시장에서 108건의 뉴스를 분석했습니다. 오늘은 **비트코인, 가격/시장, AI/기술** 관련 소식이 주목됩니다.

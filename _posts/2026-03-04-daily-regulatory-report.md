@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "글로벌 규제 동향 리포트 - 2026-03-04"
-date: 2026-03-04 02:31:18 +0000
+date: 2026-03-04 02:31:18 +0900
 categories: [regulatory-news]
 tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-regulatory-report-2026-03-04.png"
-description: "전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 38건의 규제 관련 뉴스가 수집되었습니다."
+description: "2026-03-04 글로벌 규제 38건: 한국 30건(금융위 긴급 금융시장점검회의·가상자산거래소 규제), 미국 4건, 유럽 2건. 규제/정책 22건·거래소 6건·정치/정책 7건 중심 분석."
 ---
 
 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 38건의 규제 관련 뉴스가 수집되었습니다.

@@ -8,7 +8,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-news-summary-2026-03-02.png"
 pin: true
-description: "이란 전쟁 확전으로 글로벌 리스크오프 전환 — 원유 +8%, BTC $66.8K, 공포지수 10, KOSPI -1%. 268건 종합 분석.입니다."
+description: "이란 전쟁 확전으로 글로벌 리스크오프 전환 — 원유 +8%, BTC $66.8K, 공포지수 10, KOSPI -1%. 268건 일일 종합 분석."
 excerpt: "이란 전쟁 확전으로 글로벌 리스크오프 전환 — 원유 +8%, BTC $66.8K, 공포지수 10, KOSPI -1%. 268건 종합 분석."
 ---
 

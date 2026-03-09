@@ -8,7 +8,7 @@ keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-crypto-2026-03-09.png"
-description: "2026-03-09 암호화폐 시장에서 79건의 뉴스를 분석했습니다. 오늘은 비트코인, 규제/정책, 가격/시장 관련 소식이 주목됩니다."
+description: "2026-03-09 암호화폐 79건: 애널리스트 BTC $63,700 하락 경계 경고, 유가 급등으로 BTC 동반 급락, 공포/탐욕 극단적 공포 재진입. 규제/정책 38건·비트코인 36건·가격/시장 27건."
 ---
 
 **2026-03-09** 암호화폐 시장에서 79건의 뉴스를 분석했습니다. 오늘은 **비트코인, 규제/정책, 가격/시장** 관련 소식이 주목됩니다.

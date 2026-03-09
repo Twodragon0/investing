@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "글로벌 규제 동향 리포트 - 2026-03-01"
-date: 2026-03-01 03:49:11 +0000
+date: 2026-03-01 03:49:11 +0900
 categories: [regulatory-news]
 tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-regulatory-report-2026-03-01.png"
-description: "2026-03-01 SEC·CFTC 규제 동향, 한국 금융위 디지털자산 정책 등 글로벌 규제 뉴스 28건 분석."
+description: "2026-03-01 글로벌 규제 28건: 한국 21건(벤처지원·보이스피싱 대응·새출발기금), SEC 비공개시장 라운드테이블, 규제/정책 18건·정치/정책 7건 중심으로 분석."
 ---
 
 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 28건의 규제 관련 뉴스가 수집되었습니다.

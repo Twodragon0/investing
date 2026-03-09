@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "글로벌 규제 동향 리포트 - 2026-03-06"
-date: 2026-03-06 03:36:55 +0000
+date: 2026-03-06 03:36:55 +0900
 categories: [regulatory-news]
 tags: ["regulation", "stablecoin", "digital-asset-basic-act", "fca", "fsc", "virtual-asset-committee", "htx", "kraken", "fsa-japan", "consortium", "investor-protection", "market-maker", "daily-digest"]
 keywords: "디지털자산기본법, 스테이블코인, 가상자산위원회, 금융위, FCA, HTX, 크라켄, 거래소지분제한, 무과실손해배상, 시장조성자, 원화스테이블코인"

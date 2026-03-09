@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "암호화폐 시장 종합 리포트 - 2026-03-06"
-date: 2026-03-06 03:08:44 +0000
+date: 2026-03-06 03:08:44 +0900
 categories: [market-analysis]
 tags: ["market-report", "crypto", "top-coins", "trending", "daily"]
 source: "CoinGecko"

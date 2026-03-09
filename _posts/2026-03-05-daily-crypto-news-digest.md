@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "암호화폐 뉴스 브리핑 - 2026-03-05"
-date: 2026-03-05 02:47:56 +0000
+date: 2026-03-05 02:47:56 +0900
 categories: [crypto-news]
 tags: ["crypto", "news", "daily-digest"]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-05.png"
-description: "비트코인 $73,000 돌파 후 7% 급등, 트럼프 암호화폐 법안 지지, Kraken 연준 결제 시스템 접근 획득. 총 109건 분석."
+description: "2026-03-05 암호화폐 109건: BTC $73,000 돌파 후 7% 급등, 트럼프 디지털자산 법안 지지, Kraken 연준 결제망 접근 획득, Coinbase 주가 급등. 비트코인 59건·거래소 25건 분석."
 ---
 
 **2026-03-05** 암호화폐 시장에서 109건의 뉴스를 분석했습니다. 오늘은 **비트코인, 가격/시장, 거래소** 관련 소식이 주목됩니다.

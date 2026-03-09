@@ -8,7 +8,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-news-summary-2026-03-05.png"
 pin: true
-description: "암호화폐 109건, 주식 173건, 규제 14건, 소셜 미디어 46건, 월드모니터 20건의 뉴스를 종합 분석한 일일 요약입니다."
+description: "2026-03-05 일일 종합: BTC $73K 돌파·KOSPI +8% 급등, 암호화폐 109건, 주식 173건(KOSPI +8.13%), 규제 14건(디지털자산기본법 윤곽), 소셜 46건, 월드모니터 20건 분석."
 excerpt: "암호화폐 109건, 주식 173건, 규제 14건, 소셜 미디어 46건, 월드모니터 20건의 뉴스를 종합 분석한 일일 요약"
 ---
 

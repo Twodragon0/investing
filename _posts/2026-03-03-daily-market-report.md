@@ -7,7 +7,7 @@ tags: ["market-summary", "daily", "crypto", "stock", "macro", "top-coins", "quan
 source: "auto-generated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-market-report-2026-03-03.png"
-description: "암호화폐 시장이 소폭 상승세를 이어가고 있습니다. 안정적인 흐름 속에서 점진적 회복이 진행 중입니다."
+description: "2026-03-03 시장 종합: 공포/탐욕 14(Extreme Fear), BTC $68,360(+2.29%), ETH $2,008(+1.69%), 시총 $2.42T(+1.69%), KOSPI 5,991(-4.63%), 원유 $72.42(+1.56%)."
 ---
 
 ## 시장 시각화

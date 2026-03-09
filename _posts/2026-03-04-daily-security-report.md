@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "블록체인 보안 리포트 - 2026-03-04"
-date: 2026-03-04 02:44:49 +0000
+date: 2026-03-04 02:44:49 +0900
 categories: [security-alerts]
 tags: ["security", "hack", "blockchain", "daily-digest"]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-security-report-2026-03-04.png"
-description: "2026년 2월 블록체인 해킹 피해액 $26.5M으로 급감, 2025년 3월 이후 최저치. ClickFix 취약점 악용 사례 경고."
+description: "2026-03-04 블록체인 보안: 2월 해킹 피해 $26.5M으로 감소 추세이나, 가짜 VC 접촉 통한 ClickFix 취약점 악용 신종 공격 포착. 온체인 보안 개선·사회공학 공격 경계 필요."
 ---
 
 블록체인 보안 관련 뉴스 2건을 정리합니다.

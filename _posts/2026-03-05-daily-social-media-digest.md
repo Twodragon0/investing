@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "소셜 미디어 동향 - 2026-03-05"
-date: 2026-03-05 03:31:10 +0000
+date: 2026-03-05 03:31:10 +0900
 categories: [social-media]
 tags: ["social-media", "telegram", "twitter", "reddit", "politics", "trump", "이재명", "daily-digest"]
 source: "consolidated"

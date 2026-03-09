@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "암호화폐 뉴스 브리핑 - 2026-03-02"
-date: 2026-03-02 02:49:02 +0000
+date: 2026-03-02 02:49:02 +0900
 categories: [crypto-news]
 tags: ["crypto", "news", "daily-digest"]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-02.png"
-description: "2026-03-02 암호화폐 시장에서 88건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 거래소 관련 소식이 주목됩니다."
+description: "2026-03-02 암호화폐 88건 분석: 이란 보복으로 BTC·ETH·XRP 재차 급락, 비트코인 펀딩 비율 -6% 숏 스퀴즈 가능성. 비트코인 39건, 가격/시장 24건, 거래소 11건."
 ---
 
 **2026-03-02** 암호화폐 시장에서 88건의 뉴스를 분석했습니다. 오늘은 **비트코인, 가격/시장, 거래소** 관련 소식이 주목됩니다.

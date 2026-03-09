@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "DeFi TVL 리포트 - 2026-03-04"
-date: 2026-03-04 02:37:44 +0000
+date: 2026-03-04 02:37:44 +0900
 categories: [crypto-news]
 tags: ["defi", "tvl", "crypto", "blockchain", "daily-digest"]
 source: "defi-llama"
 source_url: "https://defillama.com"
 lang: "ko"
 image: "/assets/images/generated/og-daily-defi-tvl-report-2026-03-04.png"
-description: "전체 프로토콜 TVL $247.99B는 전통 금융 기관과 비교할 수 있는 규모로, DeFi의 제도적 성숙도를 보여줍니다."
+description: "2026-03-04 DeFi TVL 현황: 상위 20개 프로토콜 총 $247.99B, 체인 TVL $89.15B. Lido 1위($33.92B), Ethereum 체인 선두($53.39B, 59.9%). 프로토콜 간 경쟁 활발한 분산 구조."
 ---
 
 **2026-03-04** DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked, 총 예치 자산) 현황을 정리합니다. 상위 20개 프로토콜의 총 TVL은 **$247.99B**이며, 상위 15개 체인의 총 TVL은 **$89.15B**입니다.

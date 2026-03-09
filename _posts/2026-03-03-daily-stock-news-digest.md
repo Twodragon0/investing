@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "주식 시장 뉴스 종합 - 2026-03-03"
-date: 2026-03-03 03:20:46 +0000
+date: 2026-03-03 03:20:46 +0900
 categories: [stock-news]
 tags: ["stock", "market", "daily-digest"]
 source: "consolidated"

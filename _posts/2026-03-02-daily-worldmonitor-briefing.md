@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-03-02"
-date: 2026-03-02 03:42:25 +0000
+date: 2026-03-02 03:42:25 +0900
 categories: [market-analysis]
 tags: ["worldmonitor", "geopolitics", "macro", "daily-digest"]
 source: "worldmonitor"
 source_url: "https://worldmonitor.app"
 lang: "ko"
 image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-03-02.png"
-description: "2026-03-02 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다."
+description: "2026-03-02 WorldMonitor 글로벌 브리핑 20건: 지정학/안보 100%(이란 보복 전면전 확대, 하메네이 사망 여파). Al Jazeera 15건, CNBC 5건. 호르무즈 해협 위기 집중."
 ---
 
 **2026-03-02** 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다.

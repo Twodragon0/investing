@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-03-06"
-date: 2026-03-06 03:14:28 +0000
+date: 2026-03-06 03:14:28 +0900
 categories: [market-analysis]
 tags: ["worldmonitor", "geopolitics", "macro", "daily-digest"]
 source: "worldmonitor"
 source_url: "https://worldmonitor.app"
 lang: "ko"
 image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-03-06.png"
-description: "핵심 테마는 지정학/안보(11건), 사회/기타(8건), 정책/법률(1건) 중심으로 전개되고 있습니다."
+description: "2026-03-06 WorldMonitor 글로벌 브리핑 20건: 지정학/안보 11건(55%), 사회/기타 8건(40%), 정책/법률 1건. Al Jazeera 15건·Guardian World 5건 출처로 중동 안보 이슈 집중."
 ---
 
 **2026-03-06** 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다.

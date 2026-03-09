@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "정치인 거래·정책 리포트 - 2026-03-02"
-date: 2026-03-02 14:13:10 +0000
+date: 2026-03-02 14:13:10 +0900
 categories: [political-trades]
 tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-bank", "insider-trading"]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-political-trades-report-2026-03-02.png"
 excerpt: "2026-03-02 정치인 거래·정책 리포트: SEC 내부자 15건, 중앙은행 1건, 총 16건 수집"
-description: "미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다."
+description: "2026-03-02 정치인 거래 리포트: SEC Form 4 내부자 거래 15건(MIDDLEFIELD BANC, Range Resources 등), 중앙은행 1건, 총 16건. 매도 신호 100%, 차익 실현 움직임 포착."
 ---
 
 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.

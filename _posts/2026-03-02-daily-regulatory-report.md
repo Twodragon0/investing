@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "글로벌 규제 동향 리포트 - 2026-03-02"
-date: 2026-03-02 03:39:15 +0000
+date: 2026-03-02 03:39:15 +0900
 categories: [regulatory-news]
 tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-regulatory-report-2026-03-02.png"
-description: "2026-03-02 SEC 비공개 시장 라운드테이블, 금융위 국민성장펀드 등 글로벌 규제 동향 21건 분석."
+description: "2026-03-02 글로벌 규제 21건: 한국 20건(벤처지원 칸막이 제거·보이스피싱·국민성장펀드 운용사), SEC 비공개시장 라운드테이블, 단일종목 레버리지 ETF 세부방안 검토 중."
 ---
 
 2026-03-02 SEC 비공개 시장 라운드테이블, 금융위 국민성장펀드 등 글로벌 규제 동향 21건 분석.

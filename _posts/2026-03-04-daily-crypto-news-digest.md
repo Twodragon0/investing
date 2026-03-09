@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "암호화폐 뉴스 브리핑 - 2026-03-04"
-date: 2026-03-04 02:25:58 +0000
+date: 2026-03-04 02:25:58 +0900
 categories: [crypto-news]
 tags: ["crypto", "news", "daily-digest"]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-04.png"
-description: "총 107건의 뉴스 중 비트코인 관련이 55건(51%)으로 압도적입니다. 비트코인이 오늘 시장의 핵심 화제입니다"
+description: "2026-03-04 암호화폐 107건: 비트코인 55건(51%) 압도적, Bitcoin 핫 키워드 40회. 이란·규제 이슈 중심으로 가격/시장 23건, 규제/정책 15건, 이더리움 11건 분석."
 ---
 
 **2026-03-04** 암호화폐 시장에서 107건의 뉴스를 분석했습니다. 오늘은 **비트코인, 가격/시장, 규제/정책** 관련 소식이 주목됩니다.

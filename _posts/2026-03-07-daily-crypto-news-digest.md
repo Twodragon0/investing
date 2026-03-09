@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "암호화폐 뉴스 브리핑 - 2026-03-07"
-date: 2026-03-07 01:51:23 +0000
+date: 2026-03-07 01:51:23 +0900
 categories: [crypto-news]
 tags: ["crypto", "news", "daily-digest"]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-07.png"
-description: "2026-03-07 암호화폐 시장에서 120건의 뉴스를 분석했습니다. 오늘은 비트코인, 거래소, 규제/정책 관련 소식이 주목됩니다."
+description: "2026-03-07 암호화폐 120건: FBI 연준 관련 $4,600만 암호화폐 절도 용의자 체포, BTC·알트코인 장중 급락. 비트코인 45건·거래소 40건·규제/정책 33건·가격/시장 31건 분석."
 ---
 
 **2026-03-07** 암호화폐 시장에서 120건의 뉴스를 분석했습니다. 오늘은 **비트코인, 거래소, 규제/정책** 관련 소식이 주목됩니다.

@@ -8,7 +8,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-news-summary-2026-03-03.png"
 pin: true
-description: "암호화폐 111건, 주식 122건, 보안 2건, 규제 29건, 소셜 미디어 35건, 월드모니터 20건의 뉴스를 종합 분석한 일일 요약입니다."
+description: "2026-03-03 일일 종합: 암호화폐 111건(BTC 이란 공습 급락 후 $69K 반등), 주식 122건(KOSPI -4.56%), 규제 29건(금융위 긴급점검회의), 소셜 35건, 월드모니터 20건 분석."
 excerpt: "암호화폐 111건, 주식 122건, 보안 2건, 규제 29건, 소셜 미디어 35건, 월드모니터 20건의 뉴스를 종합 분석한 일일 요약"
 ---
 

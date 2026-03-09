@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "소셜 미디어 동향 - 2026-03-06"
-date: 2026-03-06 03:29:29 +0000
+date: 2026-03-06 03:29:29 +0900
 categories: [crypto-news]
 tags: ["social-media", "telegram", "twitter", "reddit", "politics", "trump", "이재명", "daily-digest"]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-social-media-digest-2026-03-06.png"
-description: "총 47건의 뉴스 중 정치/정책 관련이 23건(49%)으로 압도적입니다. 정치/정책 변화가 투자 환경에 영향을 미칠 수 있습니다"
+description: "2026-03-06 소셜 미디어 47건: 정치/정책 23건(49%) 압도적, 비트코인 15건, 매크로/금리 11건. Trump·이재명 정책 이슈 집중. 텔레그램 20건·소셜 2건·정치·경제 25건 수집."
 ---
 
 **2026-03-06** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 소셜 미디어 2건, 정치·경제 25건, 총 47건이 수집되었습니다.

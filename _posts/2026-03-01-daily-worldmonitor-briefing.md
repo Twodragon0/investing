@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-03-01"
-date: 2026-03-01 04:01:36 +0000
+date: 2026-03-01 04:01:36 +0900
 categories: [market-analysis]
 tags: [worldmonitor, geopolitics, macro, daily-digest]
 source: "worldmonitor"
 source_url: "https://worldmonitor.app"
 lang: "ko"
 image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-03-01.png"
-description: "2026-03-01 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다."
+description: "2026-03-01 WorldMonitor 글로벌 브리핑 20건: 사회/기타 11건(55%), 지정학/안보 6건(30%, 가나·이란 공습), 정책/법률 2건, 금융시장 1건. CNBC·Guardian World 출처."
 ---
 
 **2026-03-01** 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다.

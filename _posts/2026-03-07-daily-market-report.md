@@ -7,7 +7,7 @@ tags: ["market-summary", "daily", "crypto", "stock", "macro", "top-coins", "quan
 source: "auto-generated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-market-report-2026-03-07.png"
-description: "암호화폐 시장이 하락세를 보이고 있습니다. 단기 조정 가능성을 염두에 두고 리스크 관리가 필요합니다."
+description: "2026-03-07 시장 종합: 공포/탐욕 12(Extreme Fear), BTC $67,957(-4.28%), ETH $1,970(-5.41%), 시총 $2.40T(-3.21%), 원유 $91.27(+14.02%) 급등, KOSDAQ +3.43% 분석."
 ---
 
 ## 시장 시각화

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "소셜 미디어 동향 - 2026-03-01"
-date: 2026-03-01 03:43:42 +0000
+date: 2026-03-01 03:43:42 +0900
 categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-social-media-digest-2026-03-01.png"
-description: "2026-03-01 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 7건, 총 27건이 수집되었습니다."
+description: "2026-03-01 소셜 미디어 27건: PayPal 전 대표 비트코인 결제 시스템 헌신 선언, Blackrock BTC $117M 매도, Trump 포트폴리오 상승 발언. 텔레그램 20건, 정치·경제 7건."
 ---
 
 **2026-03-01** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 7건, 총 27건이 수집되었습니다.

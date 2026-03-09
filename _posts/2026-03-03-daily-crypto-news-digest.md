@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "암호화폐 뉴스 브리핑 - 2026-03-03"
-date: 2026-03-03 02:51:57 +0000
+date: 2026-03-03 02:51:57 +0900
 categories: [crypto-news]
 tags: ["crypto", "news", "daily-digest"]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-03.png"
-description: "2026-03-03 암호화폐 시장에서 111건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 거래소 관련 소식이 주목됩니다."
+description: "2026-03-03 암호화폐 111건: 조기 종전 기대로 BTC 6%·ETH 7% 급등, Vitalik 이더리움 블록빌더 탈중앙화 계획 발표. 비트코인 54건, 규제/정책 19건, 거래소 18건 분석."
 ---
 
 **2026-03-03** 암호화폐 시장에서 111건의 뉴스를 분석했습니다. 오늘은 **비트코인, 가격/시장, 거래소** 관련 소식이 주목됩니다.

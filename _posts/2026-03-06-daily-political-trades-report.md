@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "정치인 거래·정책 리포트 - 2026-03-06"
-date: 2026-03-06 14:06:07 +0000
+date: 2026-03-06 14:06:07 +0900
 categories: [political-trades]
 tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-bank", "insider-trading"]
 source: "consolidated"

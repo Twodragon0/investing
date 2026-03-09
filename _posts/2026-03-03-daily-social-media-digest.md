@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "소셜 미디어 동향 - 2026-03-03"
-date: 2026-03-03 03:36:02 +0000
+date: 2026-03-03 03:36:02 +0900
 categories: [social-media]
 tags: ["social-media", "telegram", "twitter", "reddit", "politics", "trump", "이재명", "daily-digest"]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-social-media-digest-2026-03-03.png"
-description: "2026-03-03 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 15건, 총 35건이 수집되었습니다."
+description: "2026-03-03 소셜 미디어 35건: 암호화폐 강세 속 금·은 급락, 트럼프 '빅 웨이브' 경고, Blackrock 4,309 BTC 매수, Tim Draper BTC $10M 예고. 텔레그램 20건, 정치·경제 15건."
 ---
 
 **2026-03-03** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 15건, 총 35건이 수집되었습니다.

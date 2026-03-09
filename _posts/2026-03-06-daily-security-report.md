@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "블록체인 보안 리포트 - 2026-03-06"
-date: 2026-03-06 16:59:08 +0000
+date: 2026-03-06 16:59:08 +0900
 categories: [security-alerts]
 tags: ["security", "hack", "blockchain", "daily-digest"]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-security-report-2026-03-06.png"
-description: "iPhone 보안 취약점을 통한 암호화폐 지갑 복구 문구 해킹, DeFi 플랫폼 GMX·Peapods 악용 등 블록체인 보안 이슈 2건 분석."
+description: "2026-03-06 블록체인 보안 2건: Coruna 해킹이 iPhone 취약점으로 암호화폐 지갑 시드 문구 탈취, DeFi 플랫폼 GMX·Peapods 스마트 컨트랙트 취약점 악용 피해 발생 경고."
 ---
 
 블록체인 보안 관련 뉴스 2건을 정리합니다.

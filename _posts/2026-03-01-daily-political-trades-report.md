@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "정치인 거래·정책 리포트 - 2026-03-01"
-date: 2026-03-01 13:57:39 +0000
+date: 2026-03-01 13:57:39 +0900
 categories: [political-trades]
 tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-bank", "insider-trading"]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-political-trades-report-2026-03-01.png"
 excerpt: "2026-03-01 정치인 거래·정책 리포트: 의회 거래 1건, SEC 내부자 12건, 중앙은행 1건, 총 14건 수집"
-description: "미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다."
+description: "2026-03-01 정치인 거래 리포트: 의회 거래 1건(Pelosi 내부자 거래 반박), SEC Form 4 내부자 거래 12건, 중앙은행 1건, 총 14건. 매도 신호 100%로 리스크 회피 움직임."
 ---
 
 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
