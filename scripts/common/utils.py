@@ -207,6 +207,11 @@ def request_with_retry(
             return resp
         except requests.exceptions.RequestException as e:
             last_exc = e
+            # Don't retry on client errors (401-422) — they won't succeed
+            status = getattr(getattr(e, "response", None), "status_code", None)
+            if status in (401, 402, 403, 404, 405, 422):
+                logger.warning("Request to %s failed (HTTP %s, no retry): %s", url, status, e)
+                break
             if attempt < max_retries:
                 delay = base_delay * (2**attempt)
                 logger.warning(

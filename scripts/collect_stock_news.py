@@ -120,6 +120,74 @@ def fetch_financial_rss_feeds() -> List[Dict[str, Any]]:
             "조선비즈",
             ["stock", "korean", "조선비즈"],
         ),
+        # Investing.com RSS
+        (
+            "https://www.investing.com/rss/news.rss",
+            "Investing.com",
+            ["stock", "investing.com"],
+        ),
+        # Seeking Alpha
+        (
+            "https://seekingalpha.com/market_currents.xml",
+            "Seeking Alpha",
+            ["stock", "seeking-alpha"],
+        ),
+        # Bloomberg (via Google News proxy)
+        (
+            "https://news.google.com/rss/search?q=site:bloomberg.com+markets+economy&hl=en-US&gl=US&ceid=US:en",
+            "Bloomberg via Google",
+            ["stock", "bloomberg"],
+        ),
+        # Financial Times (via Google News proxy)
+        (
+            "https://news.google.com/rss/search?q=site:ft.com+markets+economy&hl=en-US&gl=US&ceid=US:en",
+            "FT via Google",
+            ["stock", "ft"],
+        ),
+        # 서울경제
+        (
+            "https://www.sedaily.com/RSS/Economy",
+            "서울경제",
+            ["stock", "korean", "서울경제"],
+        ),
+        # 이데일리 증권
+        (
+            "https://rss.edaily.co.kr/edaily_stock.xml",
+            "이데일리 증권",
+            ["stock", "korean", "이데일리"],
+        ),
+    ]
+    return fetch_rss_feeds_concurrent(feeds)
+
+
+def fetch_sector_rotation_feeds() -> List[Dict[str, Any]]:
+    """Fetch sector rotation and institutional flow news."""
+    feeds = [
+        (
+            "https://news.google.com/rss/search?q=%22sector+rotation%22+OR+%22sector+performance%22+S%26P+500&hl=en-US&gl=US&ceid=US:en",
+            "Sector Rotation",
+            ["stock", "sector-rotation"],
+        ),
+        (
+            "https://news.google.com/rss/search?q=%2213F+filing%22+OR+%22institutional+buying%22+OR+%22hedge+fund%22+portfolio&hl=en-US&gl=US&ceid=US:en",
+            "Institutional Flow",
+            ["stock", "institutional-flow", "13f"],
+        ),
+        (
+            "https://news.google.com/rss/search?q=%22earnings+surprise%22+OR+%22earnings+beat%22+OR+%22revenue+beat%22&hl=en-US&gl=US&ceid=US:en",
+            "Earnings Momentum",
+            ["stock", "earnings", "momentum"],
+        ),
+        (
+            "https://news.google.com/rss/search?q=IPO+%22initial+public+offering%22+2026&hl=en-US&gl=US&ceid=US:en",
+            "IPO Watch",
+            ["stock", "ipo"],
+        ),
+        (
+            "https://news.google.com/rss/search?q=%22options+activity%22+OR+%22unusual+options%22+OR+%22put+call+ratio%22&hl=en-US&gl=US&ceid=US:en",
+            "Options Activity",
+            ["stock", "options"],
+        ),
     ]
     return fetch_rss_feeds_concurrent(feeds)
 
@@ -276,7 +344,8 @@ def main():
     alpha_items = fetch_alpha_vantage_snapshot(alpha_vantage_key)
 
     financial_rss_items = fetch_financial_rss_feeds()
-    all_items = browser_items + google_items + yahoo_items + alpha_items + financial_rss_items
+    sector_items = fetch_sector_rotation_feeds()
+    all_items = browser_items + google_items + yahoo_items + alpha_items + financial_rss_items + sector_items
 
     # Fetch Korean market data
     kr_market = fetch_korean_market_data()
