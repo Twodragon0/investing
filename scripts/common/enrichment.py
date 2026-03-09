@@ -11,6 +11,7 @@ from typing import Any, Dict, Optional
 import requests
 
 from .config import get_ssl_verify
+from .markdown_utils import smart_truncate
 
 logger = logging.getLogger(__name__)
 
@@ -313,7 +314,7 @@ def fetch_page_metadata(url: str, timeout: int = 8) -> Dict[str, str]:
             content = str(meta.get("content", "")) if meta else ""
             cleaned = _clean_description(content)
             if cleaned and len(cleaned) > 20:
-                result["description"] = cleaned[:500]
+                result["description"] = smart_truncate(cleaned, 500)
                 return result
 
         # 4: Article body paragraphs (more reliable than random <p>)
@@ -328,14 +329,14 @@ def fetch_page_metadata(url: str, timeout: int = 8) -> Dict[str, str]:
                     break
             if paragraphs:
                 combined = " ".join(paragraphs)
-                result["description"] = combined[:500]
+                result["description"] = smart_truncate(combined, 500)
                 return result
 
         # 5: Fallback to any <p>
         for p in soup.find_all("p"):
             text = _clean_description(p.get_text(strip=True))
             if len(text) > 50:
-                result["description"] = text[:500]
+                result["description"] = smart_truncate(text, 500)
                 return result
     except Exception as e:  # noqa: BLE001
         logger.debug("Failed to fetch metadata from %s: %s", url, e)

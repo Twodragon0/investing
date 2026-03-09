@@ -222,6 +222,19 @@ def _ensure_dir():
     os.makedirs(IMAGES_DIR, exist_ok=True)
 
 
+def _safe_float(value: Any, default: float = 0.0) -> float:
+    """Safely convert value to float, handling None/NaN/Inf."""
+    if value is None:
+        return default
+    try:
+        f = float(value)
+        if np and (np.isnan(f) or np.isinf(f)):
+            return default
+        return f
+    except (ValueError, TypeError):
+        return default
+
+
 def _get_change_color(change: float) -> str:
     """Get color based on price change."""
     if change > 0:
@@ -310,6 +323,7 @@ def _heatmap_bg_color(change: float, *, extreme=5.0) -> str:
     """
     from matplotlib.colors import to_hex, to_rgba
 
+    change = _safe_float(change)
     ratio = min(abs(change) / extreme, 1.0)
     if change >= 0:
         base = np.array(to_rgba(COLORS["bg_card"]))

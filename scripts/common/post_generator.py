@@ -183,6 +183,86 @@ def _normalize_image_paths(content: str) -> str:
     return _HARDCODED_IMG_RE.sub(_replace, content)
 
 
+def _extract_description(content: str) -> str:
+    """Extract first meaningful text line from markdown content for SEO description."""
+    candidates = []
+    for line in content.strip().split("\n"):
+        stripped = line.strip()
+        is_list_item = stripped.startswith("- ") and len(stripped) >= 4
+        candidate = stripped[2:].strip() if is_list_item else stripped
+        if (
+            candidate
+            and not candidate.startswith("#")
+            and not candidate.startswith("|")
+            and not candidate.startswith(">")
+            and not candidate.startswith("![")
+            and not candidate.startswith("---")
+            and not candidate.startswith("<")
+            and not (candidate.startswith("*") and not candidate.startswith("**"))
+            and len(candidate) >= 20
+            and not re.match(r"^https?://", candidate)
+            and not re.match(r"^\d+[\.\)]\s", candidate)
+            and (is_list_item or not stripped.startswith("-"))
+        ):
+            candidates.append(candidate)
+            if len(candidates) >= 3:
+                break
+
+    if not candidates:
+        return ""
+
+    # Try single best candidate first
+    desc_text = candidates[0]
+    desc_text = re.sub(r"<[^>]+>", "", desc_text)
+    desc_text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", desc_text)
+    desc_text = re.sub(r"[*_`~]", "", desc_text)
+    desc_text = re.sub(r"\s+", " ", desc_text).strip()
+
+    # If too short, combine multiple candidates
+    if len(desc_text) < 80 and len(candidates) > 1:
+        combined = []
+        total = 0
+        for c in candidates:
+            c = re.sub(r"<[^>]+>", "", c)
+            c = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", c)
+            c = re.sub(r"[*_`~]", "", c)
+            c = re.sub(r"\s+", " ", c).strip()
+            combined.append(c)
+            total += len(c)
+            if total >= 80:
+                break
+        desc_text = " ".join(combined)
+
+    return smart_truncate(desc_text, 160)
+
+
+# Category Korean names for fallback descriptions
+_CATEGORY_KO: dict[str, str] = {
+    "crypto": "암호화폐",
+    "stock": "주식",
+    "market-analysis": "시장 분석",
+    "social-media": "소셜 미디어",
+    "regulatory": "규제",
+    "defi": "DeFi",
+    "political-trades": "정치인 거래",
+    "worldmonitor": "글로벌 이슈",
+    "security-alerts": "보안",
+}
+
+
+def _build_fallback_description(title: str, category: str, tags: Optional[List[str]] = None) -> str:
+    """Build a fallback SEO description from title and category when content extraction fails."""
+    cat_ko = _CATEGORY_KO.get(category, category)
+    tag_str = ""
+    if tags and len(tags) >= 2:
+        tag_str = f" 주요 키워드: {', '.join(tags[:4])}."
+
+    # Clean title for description use
+    clean_title = re.sub(r"[*_`~]", "", title).strip()
+    desc = f"{clean_title} - 최신 {cat_ko} 뉴스와 분석을 확인하세요.{tag_str}"
+    return smart_truncate(desc, 160)
+
+
 class PostGenerator:
     """Generate Jekyll markdown posts from collected news data."""
 
@@ -262,44 +342,15 @@ class PostGenerator:
                 safe_value = str(value).replace('"', '\\"').replace("\n", " ")
                 frontmatter_lines.append(f'{key}: "{safe_value}"')
 
-        # description 자동 생성 (SEO용, 160자 이내)
+        # description 자동 생성 (SEO용, 80-160자)
         if not (extra_frontmatter and "description" in extra_frontmatter):
-            desc_text = ""
-            for line in content.strip().split("\n"):
-                stripped = line.strip()
-                # 마크다운 리스트 항목도 허용 (- 접두사 제거)
-                is_list_item = stripped.startswith("- ") and len(stripped) >= 4
-                if is_list_item:
-                    candidate = stripped[2:].strip()
-                else:
-                    candidate = stripped
-                if (
-                    candidate
-                    and not candidate.startswith("#")
-                    and not candidate.startswith("|")
-                    and not candidate.startswith(">")
-                    and not candidate.startswith("![")
-                    and not candidate.startswith("---")
-                    and not candidate.startswith("<")
-                    and not (candidate.startswith("*") and not candidate.startswith("**"))
-                    and len(candidate) >= 30
-                    and not re.match(r"^https?://", candidate)
-                    and not re.match(r"^\d+[\.\)]\s", candidate)
-                    and (is_list_item or not stripped.startswith("-"))
-                ):
-                    desc_text = candidate
-                    break
-            if desc_text:
-                desc_text = re.sub(r"<[^>]+>", "", desc_text)
-                desc_text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", desc_text)
-                desc_text = re.sub(r"[*_`~]", "", desc_text)
-                desc_text = re.sub(r"\s+", " ", desc_text).strip()
-                desc_text = smart_truncate(desc_text, 160)
-                if len(desc_text) < 80:
-                    desc_text = ""  # Too short, skip
-                if desc_text:
-                    safe_desc = desc_text.replace('"', "'")
-                    frontmatter_lines.append(f'description: "{safe_desc}"')
+            desc_text = _extract_description(content)
+            if not desc_text or len(desc_text) < 80:
+                # Fallback: combine title + category context for SEO
+                desc_text = _build_fallback_description(title, self.category, tags)
+            if desc_text and len(desc_text) >= 80:
+                safe_desc = desc_text.replace('"', "'")
+                frontmatter_lines.append(f'description: "{safe_desc}"')
 
         frontmatter_lines.append("---")
 
