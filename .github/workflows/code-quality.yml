@@ -64,6 +64,18 @@ jobs:
           python -c "import common.summarizer; print('✓ common.summarizer')"
           python -c "import common.crypto_api; print('✓ common.crypto_api')"
           python -c "import common.formatters; print('✓ common.formatters')"
+          python -c "import common.enrichment; print('✓ common.enrichment')"
+          python -c "import common.translator; print('✓ common.translator')"
+          python -c "import common.markdown_utils; print('✓ common.markdown_utils')"
+          python -c "import common.fmp_api; print('✓ common.fmp_api')"
+          python -c "import common.worldmonitor_utils; print('✓ common.worldmonitor_utils')"
+          python -c "import common.collector_metrics; print('✓ common.collector_metrics')"
+          python -c "import common.browser; print('✓ common.browser')"
+
+      - name: Run pip-audit security scan
+        run: |
+          pip install pip-audit
+          pip-audit --desc --skip-editable 2>&1 || echo "::warning::pip-audit found vulnerabilities (non-blocking)"
 
       - name: Run rendered fixture smoke check
         run: python scripts/verify_rendered_fixtures.py
