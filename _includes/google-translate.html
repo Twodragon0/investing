@@ -1,145 +1,67 @@
-<!-- Google Translate Integration - URL redirect approach -->
+<!-- Google Translate Widget Integration -->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'ko',
+    includedLanguages: 'en,ja,zh-CN,es',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false,
+    multilanguagePage: true
+  }, 'google_translate_element');
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script type="text/javascript">
 (function() {
   'use strict';
 
-  var LANG_MAP = { 'ko': 'KO', 'en': 'EN', 'ja': 'JA', 'zh-CN': 'CN', 'zh': 'CN', 'es': 'ES' };
-  var LANG_CODES = { 'ko': 'ko', 'en': 'en', 'ja': 'ja', 'zh-CN': 'zh-CN', 'es': 'es' };
-
-  function safeGet(storage, key) { try { return storage.getItem(key); } catch(e) { return null; } }
-  function safeSet(storage, key, val) { try { storage.setItem(key, val); } catch(e) {} }
-
-  function isTranslatedPage() {
-    return location.hostname.indexOf('translate.goog') !== -1 ||
-           location.hostname.indexOf('translate.google') !== -1;
-  }
-
-  function getOriginalUrl() {
-    if (isTranslatedPage()) {
-      var params = new URLSearchParams(location.search);
-      var u = params.get('u');
-      if (u) return u;
-      // translate.goog rewrites hostname: investing-2twodragon-com.translate.goog
-      var orig = location.href.replace(/\.translate\.goog\//, '.com/').replace(/\?_x_tr_[^#]*/, '');
-      return orig;
-    }
-    return location.href;
-  }
-
-  function changeLang(lang) {
-    safeSet(localStorage, 'preferredLang', lang);
-    var cs = document.getElementById('current-lang');
-    if (LANG_MAP[lang] && cs) cs.textContent = LANG_MAP[lang];
-
-    applyI18nStrings(lang);
-
-    if (lang === 'ko') {
-      // Return to original page
-      if (isTranslatedPage()) {
-        var orig = getOriginalUrl();
-        if (orig && orig !== location.href) { window.location.href = orig; return; }
-      }
-      showTranslateNotice('ko');
-      return;
-    }
-
-    // Redirect to Google Translate URL-based translation
-    var pageUrl = isTranslatedPage() ? getOriginalUrl() : location.href;
-    var translateUrl = 'https://translate.google.com/translate?sl=ko&tl=' +
-      encodeURIComponent(lang) + '&u=' + encodeURIComponent(pageUrl);
-    window.location.href = translateUrl;
-  }
-
   function applyI18nStrings(lang) {
     if (typeof window.__t !== 'function') return;
-    localStorage.setItem('preferredLang', lang);
+    try { localStorage.setItem('preferredLang', lang); } catch(e) {}
     document.querySelectorAll('[data-i18n]').forEach(function(el) {
-      var key = el.getAttribute('data-i18n');
-      el.textContent = window.__t(key);
+      el.textContent = window.__t(el.getAttribute('data-i18n'));
     });
     document.querySelectorAll('[data-i18n-aria]').forEach(function(el) {
-      var key = el.getAttribute('data-i18n-aria');
-      el.setAttribute('aria-label', window.__t(key));
+      el.setAttribute('aria-label', window.__t(el.getAttribute('data-i18n-aria')));
     });
     document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
-      var key = el.getAttribute('data-i18n-placeholder');
-      el.setAttribute('placeholder', window.__t(key));
+      el.setAttribute('placeholder', window.__t(el.getAttribute('data-i18n-placeholder')));
     });
   }
 
-  function showTranslateNotice(lang) {
-    var existing = document.getElementById('translate-notice');
-    if (lang === 'ko') { if (existing) existing.remove(); return; }
-    if (existing) return;
-    var notice = document.createElement('div');
-    notice.id = 'translate-notice';
-    notice.className = 'notranslate';
-    notice.setAttribute('translate', 'no');
-    notice.style.cssText = 'background:linear-gradient(90deg,#1a365d,#0d2137);color:#8cb4e0;text-align:center;padding:6px 16px;font-size:0.8rem;position:relative;z-index:50;border-bottom:1px solid #1e3a5f;';
-    var text = (typeof window.__t === 'function') ? window.__t('translate_notice') : 'Translated by Google';
-    notice.innerHTML = text +
-      ' <a href="https://translate.google.com/" target="_blank" rel="noopener" style="color:#58a6ff;margin-left:8px;text-decoration:underline;font-size:0.75rem;">Powered by Google Translate</a>';
-    var closeBtn = document.createElement('button');
-    closeBtn.style.cssText = 'background:none;border:none;color:#8cb4e0;margin-left:12px;cursor:pointer;font-size:1rem;';
-    closeBtn.setAttribute('aria-label', 'Close');
-    closeBtn.textContent = '\u00D7';
-    closeBtn.addEventListener('click', function() { notice.remove(); });
-    notice.appendChild(closeBtn);
-    var header = document.querySelector('.site-header');
-    if (header && header.parentNode) header.parentNode.insertBefore(notice, header.nextSibling);
+  function hideGoogleBanner() {
+    document.querySelectorAll('.goog-te-banner-frame, [class*="VIpgJd"], #goog-gt-tt, .goog-te-balloon-frame').forEach(function(el) {
+      el.style.setProperty('display', 'none', 'important');
+    });
+    if (document.body) { document.body.style.top = '0'; document.body.style.position = ''; }
   }
 
-  function initLangToggle() {
-    var toggle = document.getElementById('lang-toggle');
-    var dropdown = document.getElementById('lang-dropdown');
-    var overlay = document.getElementById('lang-dropdown-overlay');
-    var currentSpan = document.getElementById('current-lang');
-    if (!toggle || !dropdown) return;
-
-    toggle.addEventListener('click', function(e) {
-      e.preventDefault(); e.stopPropagation();
-      var isActive = dropdown.classList.contains('active');
-      if (isActive) { dropdown.classList.remove('active'); toggle.setAttribute('aria-expanded','false'); if (overlay) { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden','true'); } }
-      else { dropdown.classList.add('active'); toggle.setAttribute('aria-expanded','true'); if (overlay) { overlay.classList.add('active'); overlay.setAttribute('aria-hidden','false'); } }
-    }, true);
-
-    document.addEventListener('click', function(e) {
-      var t = e.target; while (t && t.tagName === 'FONT') t = t.parentNode;
-      if (!toggle.contains(t) && !dropdown.contains(t)) { dropdown.classList.remove('active'); toggle.setAttribute('aria-expanded','false'); if (overlay) { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden','true'); } }
-    });
-
-    dropdown.addEventListener('click', function(e) {
-      var t = e.target;
-      while (t && !t.classList.contains('lang-option')) { if (t === dropdown || t === document.body) return; t = t.parentNode; }
-      if (t && t.classList.contains('lang-option')) {
-        e.preventDefault(); e.stopPropagation();
-        var lang = t.getAttribute('data-lang');
-        if (lang) {
-          dropdown.classList.remove('active'); toggle.setAttribute('aria-expanded','false');
-          if (overlay) { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden','true'); }
-          changeLang(lang);
-        }
-      }
-    }, true);
-
-    // Set current language display
-    var pref = safeGet(localStorage, 'preferredLang') || 'ko';
-    if (LANG_MAP[pref] && currentSpan) currentSpan.textContent = LANG_MAP[pref];
-
-    // Show notice if on translated page
-    if (isTranslatedPage()) {
-      showTranslateNotice(pref !== 'ko' ? pref : 'en');
-    }
+  function getCurrentLang() {
+    try {
+      var c = document.cookie.match(/googtrans=\/[^\/]+\/([^;\/]+)/);
+      if (c) return c[1];
+    } catch(e) {}
+    return 'ko';
   }
 
   var initFn = function() {
     setTimeout(function() {
-      initLangToggle();
-      var pref = safeGet(localStorage, 'preferredLang') || 'ko';
-      applyI18nStrings(pref);
-    }, 100);
+      hideGoogleBanner();
+      var lang = getCurrentLang();
+      if (lang !== 'ko') applyI18nStrings(lang);
+    }, 500);
   };
+
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initFn);
   else initFn();
+
+  // Watch for Google Translate banner and hide it
+  if ('MutationObserver' in window) {
+    var timer;
+    new MutationObserver(function() {
+      clearTimeout(timer);
+      timer = setTimeout(hideGoogleBanner, 200);
+    }).observe(document.documentElement, {childList: true, subtree: true});
+  }
 })();
 </script>
