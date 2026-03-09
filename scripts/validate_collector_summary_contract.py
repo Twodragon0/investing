@@ -15,6 +15,8 @@ TARGET_COLLECTORS = [
     "collect_political_trades.py",
     "collect_worldmonitor_news.py",
     "collect_coinmarketcap.py",
+    "collect_fmp_calendar.py",
+    "collect_market_indicators.py",
 ]
 
 REQUIRED_KWARGS = {

@@ -29,5 +29,6 @@ jobs:
         uses: ./.github/actions/python-collect
         with:
           script: scripts/collect_stock_news.py
+          install-playwright: 'true'
           commit-message: 'chore: collect stock news'
           git-add-paths: '_posts/ _state/ assets/images/'

@@ -12,6 +12,14 @@ inputs:
     description: 'Paths to git add (space-separated)'
     required: false
     default: '_posts/ _state/'
+  install-playwright:
+    description: 'Install Playwright browser and deps (true/false)'
+    required: false
+    default: 'false'
+  ssl-strict:
+    description: 'Fail job if DISABLE_SSL_VERIFY is enabled (true/false)'
+    required: false
+    default: 'true'
 
 runs:
   using: 'composite'
@@ -28,6 +36,7 @@ runs:
       run: pip install -r scripts/requirements.txt
 
     - name: Cache Playwright browsers
+      if: inputs.install-playwright == 'true'
       id: playwright-cache
       uses: actions/cache@v4
       with:
@@ -35,12 +44,12 @@ runs:
         key: playwright-${{ runner.os }}-${{ hashFiles('scripts/requirements.txt') }}
 
     - name: Install Playwright browsers
-      if: steps.playwright-cache.outputs.cache-hit != 'true'
+      if: inputs.install-playwright == 'true' && steps.playwright-cache.outputs.cache-hit != 'true'
       shell: bash
       run: python -m playwright install chromium --with-deps
 
     - name: Install Playwright deps only (cached)
-      if: steps.playwright-cache.outputs.cache-hit == 'true'
+      if: inputs.install-playwright == 'true' && steps.playwright-cache.outputs.cache-hit == 'true'
       shell: bash
       run: python -m playwright install-deps chromium
 
@@ -48,6 +57,10 @@ runs:
       shell: bash
       run: |
         if [ "${DISABLE_SSL_VERIFY:-}" = "true" ] || [ "${DISABLE_SSL_VERIFY:-}" = "1" ]; then
+          if [ "${{ inputs.ssl-strict }}" = "true" ]; then
+            echo "::error::DISABLE_SSL_VERIFY is set in CI while ssl-strict=true"
+            exit 1
+          fi
           echo "::warning::DISABLE_SSL_VERIFY is set in CI — SSL verification is disabled!"
         fi
 

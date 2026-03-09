@@ -32,7 +32,7 @@ DragonQuant Platform
 
 ## Features
 
-### 데이터 수집 (8 Collectors)
+### 데이터 수집 (10 Collectors)
 
 | 수집기 | 주기 | 주요 소스 | 카테고리 |
 |:-------|:----:|:---------|:---------|
@@ -44,6 +44,8 @@ DragonQuant Platform
 | `collect_regulatory` | 12h | SEC, CFTC, Fed, FSC, FSA, MAS, ESMA, FCA (RSS) | regulation |
 | `collect_political_trades` | 일간 | 의회 거래공시, SEC EDGAR, 한국 정치인 자산 | political-trades |
 | `collect_worldmonitor_news` | 일간 | WorldMonitor RSS (지정학, 에너지) | world-monitor |
+| `collect_fmp_calendar` | 12h | FMP 경제 캘린더/실적 일정, 섹터 퍼포먼스 | market-analysis |
+| `collect_market_indicators` | 평일 2회 | CNN Fear & Greed, VIX/DXY/원자재, 시장 폭/마진 뉴스 | market-analysis |
 
 ### 콘텐츠 생성 (3 Generators)
 
@@ -72,7 +74,7 @@ DragonQuant Platform
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    GitHub Actions (22 Workflows)                 │
+│                    GitHub Actions (25 Workflows)                 │
 │  Concurrency Group: collect-data  │  Cron Schedule  │  Deploy   │
 └────────┬────────────────────┬──────────────────────┬────────────┘
          │                    │                      │
@@ -80,7 +82,7 @@ DragonQuant Platform
 ┌─────────────────┐  ┌─────────────────┐  ┌──────────────────┐
 │   Collection    │  │   Processing    │  │   Presentation   │
 │                 │  │                 │  │                  │
-│  8 Collectors   │─▶│  3 Generators   │─▶│  Jekyll Site     │
+│ 10 Collectors   │─▶│  3 Generators   │─▶│  Jekyll Site     │
 │  20+ Sources    │  │  Image Gen      │  │  GitHub Pages    │
 │  Dedup Engine   │  │  Summarizer     │  │  OG/SNS 최적화   │
 │  Enrichment     │  │  OG Image Gen   │  │  9 Categories    │
@@ -140,9 +142,9 @@ python scripts/generate_daily_summary.py
 2. **Fuzzy 매칭**: `difflib.SequenceMatcher` 유사도 80% 초과 시 중복 판정
 3. **상태 파일**: `_state/*.json`에 해시 저장 (30일 보관)
 
-## GitHub Actions Workflows (22개)
+## GitHub Actions Workflows (25개)
 
-### 데이터 수집 (8개)
+### 데이터 수집 (10개)
 
 | 워크플로우 | 스케줄 (UTC) | 설명 |
 |:-----------|:------------|:-----|
@@ -154,6 +156,8 @@ python scripts/generate_daily_summary.py
 | `collect-regulatory` | 매 12h | 글로벌 규제 |
 | `collect-political-trades` | 매일 | 정치인 거래 |
 | `collect-worldmonitor-news` | 매일 | 글로벌 뉴스 |
+| `collect-fmp-calendar` | 매 12h `:00` | FMP 경제 캘린더/실적 |
+| `collect-market-indicators` | 평일 14:00/22:00 UTC | 시장 심리·리스크 지표 |
 
 ### 콘텐츠 생성 (4개)
 
@@ -164,7 +168,7 @@ python scripts/generate_daily_summary.py
 | `backfill-post-summaries` | 매일 | 포스트 요약 보강 |
 | `weekly-digest` | 매주 일 | 주간 다이제스트 |
 
-### 배포 & 운영 (10개)
+### 배포 & 운영 (11개)
 
 | 워크플로우 | 트리거 | 설명 |
 |:-----------|:------|:-----|
@@ -173,7 +177,7 @@ python scripts/generate_daily_summary.py
 | `dependency-check` | 매주 월 | pip-audit 보안 의존성 |
 | `site-health-check` | 매일 | 사이트 가용성 확인 |
 | `cleanup-old-images` | 매주 일 | 30일 이상 이미지 정리 |
-| `respond-ai-mentions` | 5분마다 | Slack AI 봇 응답 |
+| `respond-ai-mentions` | 30분마다 | Slack AI 봇 응답 |
 | `push-folder-info-to-slack` | 매일 | 레포 상태 Slack 알림 |
 | `ops-10am-digest` | 매일 | 운영 다이제스트 |
 | `classify-workflow-failures` | 실패 시 | CI 실패 자동 분류 |
@@ -200,15 +204,15 @@ investing/
 │   │   ├── summarizer.py       # 키워드 기반 요약
 │   │   ├── image_generator.py  # matplotlib/Pillow 시각화
 │   │   └── ...                 # utils, rss_fetcher, crypto_api 등
-│   ├── collect_*.py            # 수집기 8개
-│   ├── generate_*.py           # 생성기 3개 + OG 이미지
+│   ├── collect_*.py            # 수집기 10개
+│   ├── generate_*.py           # 생성기 5개 + OG 이미지
 │   └── enrich_existing_posts.py # 포스트 품질 보강
 ├── docs/
 │   ├── platform-architecture.md # DragonQuant 통합 아키텍처
 │   ├── architecture.md         # 이 저장소 상세 아키텍처
 │   └── data-sources.md         # 데이터 소스 카탈로그
 ├── .github/
-│   ├── workflows/              # 22개 자동화 워크플로우
+│   ├── workflows/              # 25개 자동화 워크플로우
 │   └── actions/                # 재사용 액션 (python-collect, resolve-slack-config)
 ├── Gemfile                     # Ruby 의존성
 └── README.md

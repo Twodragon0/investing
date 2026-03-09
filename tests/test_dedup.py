@@ -1,6 +1,5 @@
 """Tests for dedup engine (scripts/common/dedup.py)."""
 
-
 import pytest
 
 from common.dedup import DedupEngine, _make_hash, _normalize
@@ -49,9 +48,9 @@ class TestMakeHash:
 class TestDedupEngine:
     @pytest.fixture
     def engine(self, tmp_path):
-        state_file = str(tmp_path / "test_dedup.json")
         # Patch STATE_DIR to tmp_path
         import common.dedup as dedup_mod
+
         original_state_dir = dedup_mod.STATE_DIR
         dedup_mod.STATE_DIR = str(tmp_path)
         eng = DedupEngine("test_dedup.json", max_age_days=30)
@@ -87,6 +86,7 @@ class TestDedupEngine:
 
     def test_save_and_reload(self, tmp_path):
         import common.dedup as dedup_mod
+
         original_state_dir = dedup_mod.STATE_DIR
         dedup_mod.STATE_DIR = str(tmp_path)
         try:
@@ -101,6 +101,7 @@ class TestDedupEngine:
 
     def test_corrupt_state_resets(self, tmp_path):
         import common.dedup as dedup_mod
+
         original_state_dir = dedup_mod.STATE_DIR
         dedup_mod.STATE_DIR = str(tmp_path)
         try:
@@ -114,6 +115,7 @@ class TestDedupEngine:
 
     def test_titles_list_capped_at_5000_on_reload(self, tmp_path):
         import common.dedup as dedup_mod
+
         original_state_dir = dedup_mod.STATE_DIR
         dedup_mod.STATE_DIR = str(tmp_path)
         try:
