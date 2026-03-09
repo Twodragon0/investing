@@ -13,19 +13,21 @@ Jekyll(Ruby) 정적 사이트 + Python 수집 스크립트 + GitHub Actions CI/C
 
 ```
 scripts/           # Python 자동화 스크립트
-  common/          # 공통 모듈 13개 (config, dedup, utils, post_generator, image_generator,
+  common/          # 공통 모듈 17개 (config, dedup, utils, post_generator, image_generator,
                    #   crypto_api, rss_fetcher, summarizer, formatters, browser,
-                   #   collector_metrics, markdown_utils, __init__)
-  collect_*.py     # 뉴스 수집기 8개 (crypto, stock, social, regulatory, political,
-                   #   coinmarketcap, worldmonitor, defi_llama)
-  generate_*.py    # 요약 생성기 3개 (daily_summary, market_summary, weekly_digest)
+                   #   collector_metrics, markdown_utils, enrichment, fmp_api,
+                   #   translator, worldmonitor_utils, __init__)
+  collect_*.py     # 뉴스 수집기 10개 (crypto, stock, social, regulatory, political,
+                   #   coinmarketcap, worldmonitor, defi_llama, fmp_calendar, market_indicators)
+  generate_*.py    # 요약 생성기 5개 (daily_summary, market_summary, weekly_digest,
+                   #   og_images, ops_10am_digest)
   respond_ai_mentions.py  # Slack 멘션 응답
 _posts/            # Jekyll 포스트 (자동 생성)
 _state/            # 중복 방지 상태 JSON (SHA256 해시 + fuzzy matching >80%)
 _data/, _includes/, _layouts/, _sass/  # Jekyll 템플릿 및 스타일
 assets/images/generated/  # 자동 생성 이미지
 pages/             # 카테고리 랜딩 페이지 9개
-.github/workflows/ # 20개 자동화 워크플로우
+.github/workflows/ # 25개 자동화 워크플로우
 .github/actions/   # 재사용 액션 2개 (python-collect, resolve-slack-config)
 ```
 
