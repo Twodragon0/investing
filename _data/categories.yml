@@ -10,23 +10,11 @@ stock-news:
   url: "/stock-news/"
   description: "미국·한국 주식 시장 동향 및 종목 분석"
 
-crypto-journal:
-  name: "크립토 트레이딩 일지"
-  color: "cat-journal"
-  url: "/crypto-journal/"
-  description: "일일 암호화폐 매매 기록 및 전략 분석"
-
 crypto-trading-journal:
   name: "크립토 트레이딩 일지"
   color: "cat-journal"
   url: "/crypto-journal/"
   description: "일일 암호화폐 매매 기록 및 전략 분석"
-
-stock-journal:
-  name: "주식 트레이딩 일지"
-  color: "cat-journal"
-  url: "/stock-journal/"
-  description: "일일 주식 매매 기록 및 포트폴리오 리뷰"
 
 stock-trading-journal:
   name: "주식 트레이딩 일지"

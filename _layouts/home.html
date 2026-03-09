@@ -209,6 +209,7 @@ layout: default
   {% assign market_analysis_count = site.categories['market-analysis'] | size %}
   {% assign regulatory_news_count = site.categories['regulatory-news'] | size %}
   {% assign political_trades_count = site.categories['political-trades'] | size %}
+  {% assign social_media_count = site.categories['social-media'] | size %}
 
   <div class="section-header">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -390,6 +391,27 @@ layout: default
       <h3>정치인 거래</h3>
       <p>미국 의회·SEC 내부자 거래, 정책 동향 추적</p>
       <span class="cat-badge">{{ political_trades_count }} 포스트</span>
+    </div>
+    <div class="cat-arrow">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </div>
+  </a>
+
+  <a href="{{ '/social-media/' | relative_url }}" class="cat-card cat-social">
+    <div class="cat-icon-wrapper">
+      <div class="cat-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+      </div>
+    </div>
+    <div class="cat-content">
+      <h3>소셜 미디어</h3>
+      <p>소셜 미디어 뉴스 및 커뮤니티 동향</p>
+      <span class="cat-badge">{{ social_media_count }} 포스트</span>
     </div>
     <div class="cat-arrow">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
