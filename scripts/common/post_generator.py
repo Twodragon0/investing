@@ -8,8 +8,11 @@ import os
 import re
 from datetime import UTC, datetime
 from typing import Dict, List, Optional
+from zoneinfo import ZoneInfo
 
 from common.markdown_utils import smart_truncate
+
+KST = ZoneInfo("Asia/Seoul")
 
 logger = logging.getLogger(__name__)
 
@@ -224,11 +227,16 @@ class PostGenerator:
 
         # Build frontmatter
         escaped_title = title.replace("\\", "\\\\").replace('"', '\\"')
+        # Convert to KST for frontmatter display (filename keeps original date)
+        if date.tzinfo is not None:
+            date_kst = date.astimezone(KST)
+        else:
+            date_kst = date.replace(tzinfo=UTC).astimezone(KST)
         frontmatter_lines = [
             "---",
             "layout: post",
             f'title: "{escaped_title}"',
-            f"date: {date.strftime('%Y-%m-%d %H:%M:%S %z')}",
+            f"date: {date_kst.strftime('%Y-%m-%d %H:%M:%S %z')}",
             f"categories: [{self.category}]",
         ]
 
@@ -287,6 +295,8 @@ class PostGenerator:
                 desc_text = re.sub(r"[*_`~]", "", desc_text)
                 desc_text = re.sub(r"\s+", " ", desc_text).strip()
                 desc_text = smart_truncate(desc_text, 160)
+                if len(desc_text) < 80:
+                    desc_text = ""  # Too short, skip
                 if desc_text:
                     safe_desc = desc_text.replace('"', "'")
                     frontmatter_lines.append(f'description: "{safe_desc}"')

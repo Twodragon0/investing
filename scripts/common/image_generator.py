@@ -37,6 +37,8 @@ try:
         "/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc",
         "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
         "/usr/share/fonts/truetype/noto/NotoSansKR-Regular.ttf",
+        "/usr/share/fonts/truetype/nanum/NanumGothic.ttf",
+        "/usr/share/fonts/truetype/fonts-nanum/NanumGothic.ttf",
         # macOS
         "/System/Library/Fonts/AppleSDGothicNeo.ttc",
         "/Library/Fonts/Arial Unicode.ttf",
@@ -50,7 +52,10 @@ try:
             logger.info("Using font '%s' for CJK support", _FONT_FAMILY)
             break
     else:
-        logger.warning("No CJK font found, Korean text may not render correctly")
+        logger.warning(
+            "No CJK font found. Korean text will render as □□□. "
+            "Install: apt-get install fonts-noto-cjk (Linux) or check system fonts (macOS)"
+        )
 
     def _is_font_usable(path: str) -> bool:
         try:
@@ -1117,6 +1122,7 @@ def generate_news_summary_card(
     _ensure_dir()
 
     if not categories:
+        logger.warning("No source data for summary card")
         return None
 
     bar_colors = [
@@ -1237,6 +1243,7 @@ def generate_market_snapshot_card(
     _ensure_dir()
 
     if not market_data:
+        logger.warning("No market data for snapshot card")
         return None
 
     row_count = len(market_data)
@@ -1776,6 +1783,7 @@ def generate_news_briefing_card(
     _ensure_dir()
 
     if not themes:
+        logger.warning("No themes provided for briefing card")
         return None
 
     display_themes = themes[:5]

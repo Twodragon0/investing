@@ -209,6 +209,28 @@ def fetch_google_news_security() -> List[Dict[str, Any]]:
     return all_items
 
 
+def _binance_desc_from_title(title: str) -> str:
+    """Generate a brief Korean description from a Binance announcement title."""
+    title_lower = title.lower()
+    if any(kw in title_lower for kw in ["list", "상장"]):
+        return "신규 토큰 상장 관련 공지"
+    if any(kw in title_lower for kw in ["delist", "상장폐지", "removal"]):
+        return "토큰 상장폐지 관련 공지"
+    if any(kw in title_lower for kw in ["maintenance", "upgrade", "업그레이드"]):
+        return "시스템 점검 및 업그레이드 공지"
+    if any(kw in title_lower for kw in ["airdrop", "에어드롭"]):
+        return "에어드롭 이벤트 공지"
+    if any(kw in title_lower for kw in ["margin", "leverage", "레버리지"]):
+        return "마진/레버리지 거래 관련 공지"
+    if any(kw in title_lower for kw in ["deposit", "withdraw", "입금", "출금"]):
+        return "입출금 관련 공지"
+    if any(kw in title_lower for kw in ["fee", "수수료"]):
+        return "수수료 변경 공지"
+    if any(kw in title_lower for kw in ["trading pair", "거래쌍"]):
+        return "거래쌍 변경 공지"
+    return "Binance 거래소 공지사항"
+
+
 def _scrape_binance_page(session) -> List[Dict[str, Any]]:
     """Scrape Binance announcements from an open browser session."""
     items: List[Dict[str, Any]] = []
@@ -242,7 +264,7 @@ def _scrape_binance_page(session) -> List[Dict[str, Any]]:
             items.append(
                 {
                     "title": title,
-                    "description": "",
+                    "description": _binance_desc_from_title(title),
                     "link": href,
                     "published": "",
                     "source": "Binance",
@@ -308,7 +330,7 @@ def _fetch_binance_bapi() -> List[Dict[str, Any]]:
                     items.append(
                         {
                             "title": title,
-                            "description": "",
+                            "description": _binance_desc_from_title(title),
                             "link": link,
                             "published": date_str,
                             "source": "Binance",
