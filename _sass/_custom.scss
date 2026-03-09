@@ -2258,15 +2258,36 @@ html {
   }
 }
 
-.lang-translate-btn {
-  color: $accent-blue;
-  gap: 6px;
+// Translation loading indicator
+.translate-loading {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: $bg-card;
+  border: 1px solid rgba($border-color, 0.5);
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  color: $text-primary;
+  font-size: 0.85rem;
+}
 
-  span { flex: 1; }
+.translate-loading-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba($accent-blue, 0.3);
+  border-top-color: $accent-blue;
+  border-radius: 50%;
+  animation: translateSpin 0.8s linear infinite;
+}
 
-  &:hover {
-    background: rgba($accent-blue, 0.12);
-  }
+@keyframes translateSpin {
+  to { transform: rotate(360deg); }
 }
 
 /* ================================
@@ -5745,6 +5766,11 @@ main {
   }
   .lang-menu-item:hover {
     background: rgba(0, 100, 255, 0.06);
+  }
+  .translate-loading {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   }
 }
 
