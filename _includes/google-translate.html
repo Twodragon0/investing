@@ -16,7 +16,8 @@ function googleTranslateElementInit() {
       pageLanguage: 'ko',
       includedLanguages: 'en,ja,zh-CN,es',
       layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      autoDisplay: false
+      autoDisplay: true,
+      multilanguagePage: true
     }, 'google_translate_element');
     googleTranslateLoaded = true;
   } catch (e) {
