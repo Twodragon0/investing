@@ -8,7 +8,7 @@ keywords: "weekly-digest, summary, market-analysis"
 source: "auto-generated"
 lang: "ko"
 image: "/assets/images/og-market-analysis.png"
-description: "이번 주 (03월 02일 03월 09일) 투자 시장의 주요 동향과 핵심 이슈를 종합 분석합니다."
+description: "이번 주 (03월 02일 ~ 03월 09일) 투자 시장의 주요 동향과 핵심 이슈를 종합 분석합니다. 암호화폐, 주식, 규제, 글로벌 이슈 등 주간 핵심 요약."
 ---
 
 이번 주 (03월 02일 ~ 03월 09일) 투자 시장의 주요 동향과 핵심 이슈를 종합 분석합니다.

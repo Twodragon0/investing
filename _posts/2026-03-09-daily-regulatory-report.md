@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "글로벌 규제 동향 리포트 - 2026-03-09"
-date: 2026-03-09 03:42:58 +0000
+date: 2026-03-09 12:42:58 +0900
 categories: [regulatory-news]
 tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 keywords: "regulation, sec, cftc, fsc, daily-digest"
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-regulatory-2026-03-09.png"
-description: "전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 24건의 규제 관련 뉴스가 수집되었습니다."
+description: "2026-03-09 전 세계 금융 규제기관의 최신 동향을 정리합니다. SEC, CFTC, FSC 등 주요 기관의 규제 관련 뉴스 24건을 분석했습니다."
 ---
 
 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 24건의 규제 관련 뉴스가 수집되었습니다.

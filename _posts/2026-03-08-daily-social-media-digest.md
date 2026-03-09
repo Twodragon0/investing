@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "소셜 미디어 동향 - 2026-03-08"
-date: 2026-03-08 03:32:43 +0000
+date: 2026-03-08 12:32:43 +0900
 categories: [crypto-news]
 tags: ["social-media", "telegram", "twitter", "reddit", "politics", "trump", "이재명", "daily-digest"]
 keywords: "social-media, telegram, twitter, reddit, politics"
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/source-distribution-2026-03-08.png"
-description: "2026-03-08 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 8건, 총 28건이 수집되었습니다."
+description: "2026-03-08 암호화폐·주식 커뮤니티 소셜 미디어 동향 28건 요약. 텔레그램 20건, 정치·경제 8건의 주요 의견과 트렌드를 한눈에 정리했습니다."
 ---
 
 **2026-03-08** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 8건, 총 28건이 수집되었습니다.

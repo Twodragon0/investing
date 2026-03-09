@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "DeFi TVL 리포트 - 2026-03-09"
-date: 2026-03-09 03:27:52 +0000
+date: 2026-03-09 12:27:52 +0900
 categories: [crypto-news]
 tags: ["defi", "tvl", "crypto", "blockchain", "daily-digest"]
 keywords: "defi, tvl, crypto, blockchain, daily-digest"

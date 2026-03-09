@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "정치인 거래·정책 리포트 - 2026-03-08"
-date: 2026-03-08 13:56:03 +0000
+date: 2026-03-08 22:56:03 +0900
 categories: [political-trades]
 tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-bank", "insider-trading"]
 keywords: "political-trades, congress, sec, trump, 이재명"
@@ -9,7 +9,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-political-2026-03-08.png"
 excerpt: "2026-03-08 정치인 거래·정책 리포트: 의회 거래 2건, 트럼프 정책 2건, 중앙은행 1건, 총 5건 수집"
-description: "미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다."
+description: "2026-03-08 미국 의회 거래 2건, 트럼프 정책 2건, 중앙은행 동향 1건 등 총 5건의 정치인 거래·정책 변동을 분석한 일일 리포트입니다."
 ---
 
 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-03-08"
-date: 2026-03-08 03:18:06 +0000
+date: 2026-03-08 12:18:06 +0900
 categories: [market-analysis]
 tags: ["worldmonitor", "geopolitics", "macro", "daily-digest"]
 keywords: "worldmonitor, geopolitics, macro, daily-digest"
@@ -9,7 +9,7 @@ source: "worldmonitor"
 source_url: "https://worldmonitor.app"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-worldmonitor-2026-03-08.png"
-description: "2026-03-08 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다."
+description: "2026-03-08 WorldMonitor 기반 글로벌 인텔리전스 브리핑. 지정학, 에너지, 거시경제 관련 뉴스 20건을 분석한 일일 글로벌 시장 동향 리포트입니다."
 ---
 
 **2026-03-08** 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다.

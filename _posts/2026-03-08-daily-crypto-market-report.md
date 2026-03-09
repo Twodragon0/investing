@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "암호화폐 시장 종합 리포트 - 2026-03-08"
-date: 2026-03-08 03:12:36 +0000
+date: 2026-03-08 12:12:36 +0900
 categories: [market-analysis]
 tags: ["market-report", "crypto", "top-coins", "trending", "daily"]
 keywords: "market-report, crypto, top-coins, trending, daily"

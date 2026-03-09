@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "암호화폐 뉴스 브리핑 - 2026-03-09"
-date: 2026-03-09 02:52:51 +0000
+date: 2026-03-09 11:52:51 +0900
 categories: [crypto-news]
 tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"

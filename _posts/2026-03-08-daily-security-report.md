@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "블록체인 보안 리포트 - 2026-03-08"
-date: 2026-03-08 02:51:32 +0000
+date: 2026-03-08 11:51:32 +0900
 categories: [security-alerts]
 tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/og-default.png"
-description: "1. 오늘의 암호화폐 시장 뉴스: Solv 프로토콜은 디파이 해킹에서 270만 달러 손실을 입었고 Pepeto는 곧 267배 폭발을 목표로 하고 있습니다 - FinanceFeeds"
+description: "2026-03-08 블록체인 보안 리포트. Solv 프로토콜 DeFi 해킹 270만 달러 손실 등 암호화폐 보안 사고 2건을 분석한 일일 보안 동향 요약입니다."
 ---
 
 블록체인 보안 관련 뉴스 2건을 정리합니다.

@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "암호화폐 뉴스 브리핑 - 2026-03-08"
-date: 2026-03-08 02:51:32 +0000
+date: 2026-03-08 11:51:32 +0900
 categories: [crypto-news]
 tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-crypto-2026-03-08.png"
-description: "2026-03-08 암호화폐 시장에서 93건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 규제/정책 관련 소식이 주목됩니다."
+description: "2026-03-08 암호화폐 시장 93건 뉴스 브리핑. 비트코인, 가격/시장 동향, 규제/정책 관련 핵심 소식을 한눈에 정리한 일일 크립토 뉴스 요약입니다."
 ---
 
 **2026-03-08** 암호화폐 시장에서 93건의 뉴스를 분석했습니다. 오늘은 **비트코인, 가격/시장, 규제/정책** 관련 소식이 주목됩니다.
