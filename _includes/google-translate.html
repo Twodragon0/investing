@@ -180,6 +180,29 @@ function googleTranslateElementInit() {
     }
   }
 
+  function doTranslate(lang) {
+    var sel = document.querySelector('.goog-te-combo');
+    if (sel) {
+      try {
+        sel.value = lang;
+        sel.dispatchEvent(new Event('change', {bubbles:true}));
+        safeSet(sessionStorage,'langChanging','false');
+        safeSet(sessionStorage,'langApplied','true');
+        var reloadCount = parseInt(safeGet(sessionStorage, 'langReloadCount') || '0', 10);
+        setTimeout(function() {
+          if (getCurrentLang() !== lang && reloadCount < 3) {
+            safeSet(sessionStorage, 'langReloadCount', String(reloadCount + 1));
+            location.reload();
+          } else { safeRemove(sessionStorage, 'langReloadCount'); }
+        }, 800);
+      } catch(e) { setTimeout(function() { location.reload(); }, 200); }
+    } else {
+      safeSet(sessionStorage,'langChanging','false');
+      safeSet(sessionStorage,'langApplied','true');
+      setTimeout(function() { location.reload(); }, 200);
+    }
+  }
+
   function changeLang(lang) {
     if (safeGet(sessionStorage, 'langChanging') === 'true') return;
     safeSet(sessionStorage, 'langChanging', 'true');
@@ -199,13 +222,11 @@ function googleTranslateElementInit() {
     var cs = document.getElementById('current-lang'); if (LANG_MAP[lang] && cs) cs.textContent = LANG_MAP[lang];
     applyI18nStrings(lang);
     showTranslateNotice(lang);
-    var sel = document.querySelector('.goog-te-combo');
-    if (sel && translateScriptLoaded) {
-      try { sel.value = lang; sel.dispatchEvent(new Event('change', {bubbles:true})); safeSet(sessionStorage,'langChanging','false'); safeSet(sessionStorage,'langApplied','true');
-        var reloadCount = parseInt(safeGet(sessionStorage, 'langReloadCount') || '0', 10);
-        setTimeout(function() { if (getCurrentLang() !== lang && reloadCount < 3) { safeSet(sessionStorage, 'langReloadCount', String(reloadCount + 1)); location.reload(); } else { safeRemove(sessionStorage, 'langReloadCount'); } }, 500);
-      } catch(e) { setTimeout(function() { location.reload(); }, 150); }
-    } else { safeSet(sessionStorage,'langChanging','false'); safeSet(sessionStorage,'langApplied','true'); setTimeout(function() { location.reload(); }, 150); }
+    if (translateScriptLoaded && document.querySelector('.goog-te-combo')) {
+      doTranslate(lang);
+    } else {
+      loadTranslateScript(function() { setTimeout(function() { doTranslate(lang); }, 800); });
+    }
   }
 
   function applyI18nStrings(lang) {
