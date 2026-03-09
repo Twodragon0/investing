@@ -22,7 +22,10 @@ def get_ssl_verify():
     Allows disabling via DISABLE_SSL_VERIFY=true for local dev.
     """
     if os.environ.get("DISABLE_SSL_VERIFY", "").lower() in ("true", "1"):
-        logger.warning("SSL verification disabled via DISABLE_SSL_VERIFY")
+        logger.critical(
+            "SSL verification disabled via DISABLE_SSL_VERIFY — "
+            "MITM attacks possible. Do NOT use in production/CI."
+        )
         return False
 
     try:

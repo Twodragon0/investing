@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import os
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -35,12 +36,22 @@ def find_root_thread_ts(messages: List[Dict[str, Any]], marker: str) -> Optional
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--token", required=True)
+    parser.add_argument(
+        "--token",
+        default=None,
+        help="Slack token (prefer SLACK_BOT_TOKEN env var)",
+    )
     parser.add_argument("--channel", required=True)
     parser.add_argument("--message-path", required=True)
     parser.add_argument("--marker", default="[ultrawork-loop]")
     parser.add_argument("--history-limit", type=int, default=50)
     args = parser.parse_args()
+
+    # Prefer env var over CLI arg to avoid token exposure in process list
+    token = args.token or os.environ.get("SLACK_BOT_TOKEN", "")
+    if not token:
+        print("No Slack token: set SLACK_BOT_TOKEN env var or pass --token")
+        return 1
 
     message = Path(args.message_path).read_text(encoding="utf-8").strip()
     if not message:
@@ -49,7 +60,7 @@ def main() -> int:
 
     history = slack_api(
         "conversations.history",
-        args.token,
+        token,
         {"channel": args.channel, "limit": str(max(1, args.history_limit))},
     )
     if not history.get("ok"):
@@ -66,7 +77,7 @@ def main() -> int:
     if root_ts:
         payload["thread_ts"] = root_ts
 
-    posted = slack_api("chat.postMessage", args.token, payload)
+    posted = slack_api("chat.postMessage", token, payload)
     if not posted.get("ok"):
         print(f"chat.postMessage failed: {posted}")
         return 1
