@@ -125,10 +125,25 @@ layout: default
       분석
       <span class="tab-count">{{ analysis_posts | size }}</span>
     </button>
+    {% assign regulatory_posts = site.posts | where_exp: "post", "post.categories[0] contains 'regulatory'" %}
+    <button class="posts-tab" data-category="regulatory">
+      규제
+      <span class="tab-count">{{ regulatory_posts | size }}</span>
+    </button>
+    {% assign social_posts = site.posts | where_exp: "post", "post.categories[0] contains 'social'" %}
+    <button class="posts-tab" data-category="social">
+      소셜
+      <span class="tab-count">{{ social_posts | size }}</span>
+    </button>
     {% assign security_posts = site.posts | where_exp: "post", "post.categories[0] contains 'security'" %}
     <button class="posts-tab" data-category="security">
       보안
       <span class="tab-count">{{ security_posts | size }}</span>
+    </button>
+    {% assign political_posts = site.posts | where_exp: "post", "post.categories[0] contains 'political'" %}
+    <button class="posts-tab" data-category="political">
+      정치
+      <span class="tab-count">{{ political_posts | size }}</span>
     </button>
   </div>
 
@@ -146,6 +161,12 @@ layout: default
           {% assign cat_type = "analysis" %}
         {% elsif first_cat contains "security" %}
           {% assign cat_type = "security" %}
+        {% elsif first_cat contains "regulatory" %}
+          {% assign cat_type = "regulatory" %}
+        {% elsif first_cat contains "social" %}
+          {% assign cat_type = "social" %}
+        {% elsif first_cat contains "political" %}
+          {% assign cat_type = "political" %}
         {% endif %}
         <div class="post-item pinned-post" data-cat-type="{{ cat_type }}">
           {% include post-card.html post=post %}
@@ -185,6 +206,12 @@ layout: default
             {% assign cat_type = "analysis" %}
           {% elsif first_cat contains "security" %}
             {% assign cat_type = "security" %}
+          {% elsif first_cat contains "regulatory" %}
+            {% assign cat_type = "regulatory" %}
+          {% elsif first_cat contains "social" %}
+            {% assign cat_type = "social" %}
+          {% elsif first_cat contains "political" %}
+            {% assign cat_type = "political" %}
           {% endif %}
           <div class="post-item" data-cat-type="{{ cat_type }}">
             {% include post-card.html post=post %}
