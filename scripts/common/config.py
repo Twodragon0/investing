@@ -84,7 +84,7 @@ def _get_combined_ca_bundle(certifi_bundle: str) -> Optional[str]:
             return None
 
         shutil.copy(certifi_bundle, combined_path)
-        with open(combined_path, "a") as f:
+        with open(combined_path, "a", encoding="utf-8") as f:
             f.write("\n# Zscaler proxy CA from macOS system keychain\n")
             f.write(result.stdout)
 

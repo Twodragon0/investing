@@ -58,12 +58,12 @@ US_FEEDS: List[Tuple[str, str, List[str]]] = [
 
 KOREA_FEEDS: List[Tuple[str, str, List[str]]] = [
     (
-        "http://www.fsc.go.kr/about/fsc_bbs_rss/?fid=0111",
+        "https://www.fsc.go.kr/about/fsc_bbs_rss/?fid=0111",
         "금융위원회 보도자료",
         ["regulation", "fsc", "korea"],
     ),
     (
-        "http://www.fsc.go.kr/about/fsc_bbs_rss/?fid=0112",
+        "https://www.fsc.go.kr/about/fsc_bbs_rss/?fid=0112",
         "금융위원회 보도참고",
         ["regulation", "fsc", "korea"],
     ),

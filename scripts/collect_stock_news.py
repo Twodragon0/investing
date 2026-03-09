@@ -111,7 +111,7 @@ def fetch_financial_rss_feeds() -> List[Dict[str, Any]]:
             ["stock", "korean", "한경"],
         ),
         (
-            "http://file.mk.co.kr/news/rss/rss_30000001.xml",
+            "https://file.mk.co.kr/news/rss/rss_30000001.xml",
             "매일경제",
             ["stock", "korean", "매경"],
         ),
