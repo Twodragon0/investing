@@ -283,7 +283,7 @@ def main():
         dedup.save()
         return
 
-    enrich_items(unique_items, context_map=_POLITICAL_SOURCE_CONTEXT, max_fetch=8)
+    enrich_items(unique_items, context_map=_POLITICAL_SOURCE_CONTEXT, max_fetch=20)
 
     # Count by source category
     congress_count = sum(

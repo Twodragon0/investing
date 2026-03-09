@@ -441,17 +441,17 @@ def main():
 
     # Exchange: browser items first, BAPI fallback
     exchange_items = browser_binance if browser_binance else _fetch_binance_bapi()
-    enrich_items(exchange_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=True, max_fetch=10)
+    enrich_items(exchange_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=True, max_fetch=30)
     all_items.extend(exchange_items)
 
     # Enrich remaining items (RSS, CryptoPanic, Google News browser)
-    enrich_items(all_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=True, max_fetch=10)
+    enrich_items(all_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=True, max_fetch=30)
 
     # Security news from multiple sources -> security-alerts category
     rekt_items = fetch_rekt_news()
     google_security_items = fetch_google_news_security()
     enrich_items(rekt_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=False)
-    enrich_items(google_security_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=True, max_fetch=5)
+    enrich_items(google_security_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=True, max_fetch=15)
 
     created_count = 0
 

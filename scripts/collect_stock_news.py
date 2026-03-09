@@ -543,7 +543,7 @@ def main():
         logger.warning("Market snapshot image failed: %s", e)
 
     # Enrich all items with descriptions before themed sections
-    enrich_items(all_items, context_map=_STOCK_SOURCE_CONTEXT, max_fetch=15)
+    enrich_items(all_items, context_map=_STOCK_SOURCE_CONTEXT, max_fetch=40)
 
     # Themed news sections with description cards
     content_parts.append("\n---\n")

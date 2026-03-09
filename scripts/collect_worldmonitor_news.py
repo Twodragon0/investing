@@ -664,7 +664,7 @@ def main() -> None:
         dedup.save()
         return
 
-    enrich_items(items, context_map=_WORLDMONITOR_SOURCE_CONTEXT, max_fetch=8)
+    enrich_items(items, context_map=_WORLDMONITOR_SOURCE_CONTEXT, max_fetch=20)
 
     source_counter: Counter = Counter()
     theme_counter: Counter = Counter()

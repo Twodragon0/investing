@@ -425,9 +425,9 @@ def main():
     # Telegram items already have descriptions (full message text),
     # but need translation. Political/social items need both enrichment and translation.
     enrich_items(telegram_items, context_map=_SOCIAL_SOURCE_CONTEXT, fetch_url=False)
-    enrich_items(social_items, context_map=_SOCIAL_SOURCE_CONTEXT, fetch_url=True, max_fetch=10)
+    enrich_items(social_items, context_map=_SOCIAL_SOURCE_CONTEXT, fetch_url=True, max_fetch=25)
     enrich_items(reddit_items, context_map=_SOCIAL_SOURCE_CONTEXT, fetch_url=False)
-    enrich_items(political_items, context_map=_SOCIAL_SOURCE_CONTEXT, fetch_url=True, max_fetch=10)
+    enrich_items(political_items, context_map=_SOCIAL_SOURCE_CONTEXT, fetch_url=True, max_fetch=25)
     logger.info(
         "Enrichment complete: telegram=%d, social=%d, reddit=%d, political=%d",
         len(telegram_items),
