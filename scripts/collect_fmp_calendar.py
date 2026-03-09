@@ -120,9 +120,7 @@ def _build_economic_section(events: List[Dict[str, Any]]) -> str:
     # Sort: High first, then Medium; within same impact sort by date
     high = [e for e in events if e.get("impact") == "High"]
     medium = [e for e in events if e.get("impact") == "Medium"]
-    sorted_events = sorted(high, key=lambda x: x.get("date", "")) + sorted(
-        medium, key=lambda x: x.get("date", "")
-    )
+    sorted_events = sorted(high, key=lambda x: x.get("date", "")) + sorted(medium, key=lambda x: x.get("date", ""))
 
     lines = [
         "## 📅 주요 경제 이벤트\n",

@@ -23,8 +23,7 @@ def get_ssl_verify():
     """
     if os.environ.get("DISABLE_SSL_VERIFY", "").lower() in ("true", "1"):
         logger.critical(
-            "SSL verification disabled via DISABLE_SSL_VERIFY — "
-            "MITM attacks possible. Do NOT use in production/CI."
+            "SSL verification disabled via DISABLE_SSL_VERIFY — MITM attacks possible. Do NOT use in production/CI."
         )
         return False
 
