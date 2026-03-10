@@ -154,7 +154,7 @@ def _paginate_worldmonitor(
 def _top_counts(items: List[Dict[str, Any]], key: str, limit: int = 3) -> str:
     counter = Counter(item.get(key) for item in items if isinstance(item, dict) and item.get(key))
     if not counter:
-        return "N/A"
+        return "데이터 없음"
     return ", ".join(f"{name} {count}건" for name, count in counter.most_common(limit))
 
 
@@ -337,8 +337,10 @@ def build_map_snapshot_section(snapshot: Dict[str, Any]) -> List[str]:
         f"- 해상 경보: {len(nav_warnings)}건 (주요 해역: {top_nav_areas})",
         f"- 해상/AIS 이상: {len(disruptions)}건 (지역: {top_disruption_regions})",
         f"- 선박 혼잡: {len(density_zones)}개 구역 (상위: {top_density_zones})",
-        f"- 매크로 신호: {verdict or 'UNKNOWN'} (Bullish {bullish or 0}/{total or 0})",
     ]
+    # Only show macro signal if data is available
+    if verdict:
+        lines.append(f"- 매크로 신호: {verdict} (Bullish {bullish or 0}/{total or 0})")
 
     if energy_summary:
         lines.append(f"- 에너지 가격: {', '.join(energy_summary)}")

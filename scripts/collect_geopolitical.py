@@ -317,9 +317,54 @@ def _build_polymarket_section(markets: List[Dict[str, Any]]) -> List[str]:
     if not markets:
         return []
 
+    # Filter out entertainment/sports/gaming markets — only keep geopolitical/financial
+    _GEO_KEYWORDS = {
+        "war",
+        "conflict",
+        "election",
+        "president",
+        "congress",
+        "senate",
+        "sanction",
+        "tariff",
+        "trade",
+        "nuclear",
+        "military",
+        "nato",
+        "china",
+        "russia",
+        "iran",
+        "israel",
+        "ukraine",
+        "taiwan",
+        "fed",
+        "rate",
+        "inflation",
+        "recession",
+        "gdp",
+        "economy",
+        "oil",
+        "energy",
+        "opec",
+        "bitcoin",
+        "crypto",
+        "regulation",
+        "trump",
+        "biden",
+        "政",
+        "전쟁",
+        "제재",
+        "선거",
+        "금리",
+    }
+    filtered_markets = [m for m in markets if any(kw in m.get("title", "").lower() for kw in _GEO_KEYWORDS)]
+    # Fall back to all markets if filter is too aggressive
+    if len(filtered_markets) < 3:
+        filtered_markets = markets
+
     lines = []
     rows = []
-    for i, market in enumerate(markets[:10], 1):
+    for i, market in enumerate(filtered_markets[:10], 1):
         question = truncate_text(market.get("title", ""), 80)
         link = market.get("link", "")
         probability = market.get("probability", "N/A")

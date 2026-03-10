@@ -208,6 +208,20 @@ def _extract_description(content: str) -> str:
             if len(candidates) >= 3:
                 break
 
+    # Filter out boilerplate intro patterns that would create duplication
+    _BOILERPLATE_STARTS = [
+        "총 ",
+        "오늘 ",
+        "금일 ",
+        "2026-",
+        "2025-",
+        "전 세계 ",
+        "미국 정치인",
+        "소셜 미디어",
+    ]
+    filtered = [c for c in candidates if not any(c.startswith(prefix) for prefix in _BOILERPLATE_STARTS)]
+    candidates = filtered or candidates  # fall back to original if all filtered
+
     if not candidates:
         return ""
 
