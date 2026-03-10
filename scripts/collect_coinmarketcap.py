@@ -1047,14 +1047,25 @@ def main():
             if signals and SignalComposer is not None:
                 composer = SignalComposer()
                 result = composer.compose_signals(signals)
-                outlook_parts.append(composer.generate_outlook_markdown(result))
+                stance = composer.analyze_stance(result)
+                outlook_parts.append(composer.generate_prediction_markdown(result, stance))
 
-                # MindSpider topic extraction
+                # MindSpider topic extraction + entity analysis
                 if all_news and MindSpider is not None:
                     spider = MindSpider()
                     topic_summary = spider.generate_topic_summary(spider.cluster_topics(all_news, max_topics=3))
                     if topic_summary:
                         outlook_parts.append("\n" + topic_summary)
+
+                    # Entity analysis
+                    news_items = all_news
+                    if news_items:
+                        entities = spider.extract_entities(news_items)
+                        if entities:
+                            relations = spider.detect_relations(news_items, entities)
+                            entity_report = spider.generate_entity_report(entities, relations)
+                            if entity_report:
+                                outlook_parts.append("\n" + entity_report)
 
             if outlook_parts:
                 sections["시장 전망"] = "\n\n".join(outlook_parts)

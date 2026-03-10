@@ -662,7 +662,8 @@ def build_post_content(
         if signals:
             composer = SignalComposer()
             result = composer.compose_signals(signals)
-            outlook_md = composer.generate_outlook_markdown(result)
+            stance = composer.analyze_stance(result)
+            outlook_md = composer.generate_prediction_markdown(result, stance)
             parts.append("\n" + outlook_md + "\n")
 
             analyzer = BettaFishAnalyzer()

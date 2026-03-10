@@ -276,7 +276,158 @@ STOPWORDS_EN = {
 }
 
 
+# ── 엔티티 사전 ──────────────────────────────────────────────────────────────
+
+# (canonical_name) -> (entity_type, [aliases...])
+_KNOWN_ENTITIES: dict[str, tuple[str, list[str]]] = {
+    # Asset/Currency — 상위 크립토
+    "비트코인": ("Asset", ["BTC", "bitcoin", "btc"]),
+    "이더리움": ("Asset", ["ETH", "ethereum", "eth"]),
+    "솔라나": ("Asset", ["SOL", "solana", "sol"]),
+    "리플": ("Asset", ["XRP", "ripple", "xrp"]),
+    "바이낸스코인": ("Asset", ["BNB", "bnb", "binance coin"]),
+    "에이다": ("Asset", ["ADA", "cardano", "ada"]),
+    "아발란체": ("Asset", ["AVAX", "avalanche", "avax"]),
+    "도지코인": ("Asset", ["DOGE", "dogecoin", "doge"]),
+    "폴리곤": ("Asset", ["MATIC", "polygon", "matic"]),
+    "체인링크": ("Asset", ["LINK", "chainlink", "link"]),
+    "유니스왑": ("Asset", ["UNI", "uniswap", "uni"]),
+    "라이트코인": ("Asset", ["LTC", "litecoin", "ltc"]),
+    "앱토스": ("Asset", ["APT", "aptos", "apt"]),
+    "수이": ("Asset", ["SUI", "sui"]),
+    "아비트럼": ("Asset", ["ARB", "arbitrum", "arb"]),
+    "옵티미즘": ("Asset", ["OP", "optimism"]),
+    "셀레스티아": ("Asset", ["TIA", "celestia", "tia"]),
+    "이더리움클래식": ("Asset", ["ETC", "ethereum classic", "etc"]),
+    "비트코인캐시": ("Asset", ["BCH", "bitcoin cash", "bch"]),
+    "스텔라": ("Asset", ["XLM", "stellar", "xlm"]),
+    # 주요 주식/지수
+    "테슬라": ("Asset", ["TSLA", "tesla", "tsla"]),
+    "애플": ("Asset", ["AAPL", "apple", "aapl"]),
+    "엔비디아": ("Asset", ["NVDA", "nvidia", "nvda"]),
+    "마이크로소프트": ("Asset", ["MSFT", "microsoft", "msft"]),
+    "구글": ("Asset", ["GOOGL", "google", "googl", "알파벳"]),
+    "메타": ("Asset", ["META", "meta", "facebook", "페이스북"]),
+    "아마존": ("Asset", ["AMZN", "amazon", "amzn"]),
+    # Regulator
+    "SEC": ("Regulator", ["미국 증권거래위원회", "securities and exchange commission"]),
+    "연준": ("Regulator", ["Fed", "Federal Reserve", "FOMC", "연방준비제도", "연방준비위원회"]),
+    "금감원": ("Regulator", ["금융감독원", "fss"]),
+    "FSC": ("Regulator", ["금융위원회", "financial services commission"]),
+    "CFTC": ("Regulator", ["상품선물거래위원회", "commodity futures trading commission"]),
+    "재무부": ("Regulator", ["기획재정부", "treasury", "treasury department"]),
+    "바이든": ("Regulator", ["biden", "행정부"]),
+    "트럼프": ("Person", ["Trump", "도널드 트럼프", "donald trump"]),
+    # Organization/Exchange
+    "바이낸스": ("Exchange", ["Binance", "binance"]),
+    "코인베이스": ("Exchange", ["Coinbase", "coinbase"]),
+    "업비트": ("Exchange", ["Upbit", "upbit"]),
+    "빗썸": ("Exchange", ["Bithumb", "bithumb"]),
+    "크라켄": ("Exchange", ["Kraken", "kraken"]),
+    "OKX": ("Exchange", ["okx", "okex"]),
+    "바이비트": ("Exchange", ["Bybit", "bybit"]),
+    "후오비": ("Exchange", ["Huobi", "huobi"]),
+    "블랙록": ("Organization", ["BlackRock", "blackrock"]),
+    "그레이스케일": ("Organization", ["Grayscale", "grayscale"]),
+    "피델리티": ("Organization", ["Fidelity", "fidelity"]),
+    "ARK": ("Organization", ["ARK Invest", "ark invest", "아크인베스트"]),
+    "마이크로스트래티지": ("Organization", ["MicroStrategy", "microstrategy"]),
+    "JP모건": ("Organization", ["JPMorgan", "jpmorgan", "jp morgan"]),
+    "골드만삭스": ("Organization", ["Goldman Sachs", "goldman sachs"]),
+    "테더": ("Organization", ["Tether", "tether", "USDT"]),
+    "써클": ("Organization", ["Circle", "circle", "USDC"]),
+    # Person
+    "일론 머스크": ("Person", ["Elon Musk", "elon musk", "머스크", "musk"]),
+    "게리 겐슬러": ("Person", ["Gary Gensler", "gary gensler", "겐슬러", "gensler"]),
+    "비탈릭 부테린": ("Person", ["Vitalik Buterin", "vitalik buterin", "비탈릭", "vitalik"]),
+    "사토시": ("Person", ["Satoshi Nakamoto", "satoshi", "사토시 나카모토"]),
+    "마이클 세일러": ("Person", ["Michael Saylor", "michael saylor", "세일러", "saylor"]),
+    "CZ": ("Person", ["창펑 자오", "Changpeng Zhao", "changpeng zhao"]),
+    "샘 뱅크먼프리드": ("Person", ["Sam Bankman-Fried", "sbf", "SBF", "뱅크먼프리드"]),
+    # MediaOutlet
+    "CoinDesk": ("MediaOutlet", ["코인데스크", "coindesk"]),
+    "Bloomberg": ("MediaOutlet", ["블룸버그", "bloomberg"]),
+    "Reuters": ("MediaOutlet", ["로이터", "reuters"]),
+    "CNBC": ("MediaOutlet", ["cnbc"]),
+    "CoinTelegraph": ("MediaOutlet", ["코인텔레그래프", "cointelegraph"]),
+    "The Block": ("MediaOutlet", ["더블록", "theblock", "the block"]),
+}
+
+# 엔티티 타입 한국어 매핑
+_ENTITY_TYPE_KO: dict[str, str] = {
+    "Person": "인물",
+    "Organization": "기관/기업",
+    "Regulator": "규제기관",
+    "Asset": "자산",
+    "Exchange": "거래소",
+    "MediaOutlet": "미디어",
+}
+
+# 관계 감지 키워드
+_RELATION_KEYWORDS: dict[str, list[str]] = {
+    "SUPPORTS": ["지지", "승인", "찬성", "투자", "매수", "지원", "support", "approve", "invest", "back", "advocate"],
+    "OPPOSES": ["반대", "제재", "소송", "고발", "비판", "부정", "oppose", "ban", "sue", "reject", "criticize"],
+    "REGULATES": ["규제", "감독", "조사", "벌금", "규정", "단속", "regulate", "investigate", "fine", "enforce"],
+    "INVESTS_IN": ["투자", "매수", "인수", "펀딩", "보유", "축적", "invest", "acquire", "fund", "buy", "hold"],
+    "AFFECTS": ["영향", "변동", "충격", "파급", "촉발", "견인", "affect", "impact", "drive", "trigger", "influence"],
+    "COMMENTS_ON": ["언급", "발언", "코멘트", "트윗", "성명", "발표", "mention", "comment", "tweet", "announce"],
+}
+
+# 관계 타입 한국어 매핑
+_RELATION_TYPE_KO: dict[str, str] = {
+    "SUPPORTS": "지지",
+    "OPPOSES": "반대/제재",
+    "REGULATES": "규제",
+    "INVESTS_IN": "투자",
+    "AFFECTS": "영향",
+    "COMMENTS_ON": "언급",
+}
+
+
 # ── 데이터 클래스 ─────────────────────────────────────────────────────────────
+
+
+@dataclass
+class FinancialEntity:
+    """뉴스에서 추출된 금융 엔티티 (인물, 기관, 자산 등)."""
+
+    name: str
+    """엔티티명 (예: 'SEC', '비트코인', '일론 머스크')"""
+
+    entity_type: str
+    """Person | Organization | Regulator | Asset | Exchange | MediaOutlet"""
+
+    mentions: int
+    """언급 횟수"""
+
+    sentiment_bias: float
+    """문맥 기반 감성 편향 (-1.0 ~ 1.0)"""
+
+    stance: str
+    """supportive | opposing | neutral | observer"""
+
+    related_entities: list[str] = field(default_factory=list)
+    """공동 언급된 관련 엔티티명"""
+
+
+@dataclass
+class EntityRelation:
+    """두 엔티티 간의 관계."""
+
+    source: str
+    """소스 엔티티"""
+
+    target: str
+    """타겟 엔티티"""
+
+    relation_type: str
+    """SUPPORTS | OPPOSES | REGULATES | INVESTS_IN | AFFECTS | COMMENTS_ON"""
+
+    fact: str
+    """관계 설명 (뉴스 제목/설명에서 추출)"""
+
+    sentiment: float
+    """관계 감성 (-1.0 ~ 1.0)"""
 
 
 @dataclass
@@ -687,6 +838,231 @@ class MindSpider:
         )
         return result
 
+    # ── 엔티티 추출 (MiroFish 패턴) ───────────────────────────────────────────
+
+    def _build_entity_lookup(self) -> dict[str, str]:
+        """alias → canonical_name 역방향 매핑 테이블 생성."""
+        lookup: dict[str, str] = {}
+        for canonical, (_, aliases) in _KNOWN_ENTITIES.items():
+            lookup[canonical.lower()] = canonical
+            for alias in aliases:
+                lookup[alias.lower()] = canonical
+        return lookup
+
+    def _scan_text_for_entities(self, text: str, lookup: dict[str, str]) -> list[str]:
+        """텍스트에서 알려진 엔티티 canonical name 목록 반환 (중복 포함)."""
+        text_lower = text.lower()
+        found: list[str] = []
+        for alias, canonical in lookup.items():
+            # 단어 경계를 고려한 매칭 (영문은 단어 단위, 한글은 포함 여부)
+            if re.search(r"(?<![a-z])" + re.escape(alias) + r"(?![a-z])", text_lower):
+                found.append(canonical)
+        return found
+
+    def extract_entities(self, news_items: list[dict]) -> list[FinancialEntity]:
+        """뉴스 아이템에서 금융 엔티티를 추출하고 빈도/감성을 계산합니다.
+
+        Args:
+            news_items: 뉴스 아이템 목록 (``title``, ``description`` 키 포함).
+
+        Returns:
+            :class:`FinancialEntity` 목록 (언급 횟수 내림차순).
+        """
+        if not news_items:
+            logger.warning("extract_entities: 빈 뉴스 목록")
+            return []
+
+        lookup = self._build_entity_lookup()
+
+        # 엔티티별 통계 수집
+        entity_mentions: Counter = Counter()
+        entity_sentiment_tokens: dict[str, list[str]] = defaultdict(list)
+        # 엔티티가 등장한 기사 인덱스 → 함께 등장한 엔티티 추적
+        article_entities: list[list[str]] = []
+
+        for item in news_items:
+            title = item.get("title", "")
+            desc = item.get("description", "")
+            combined = f"{title} {desc}"
+
+            found_in_article = list(set(self._scan_text_for_entities(combined, lookup)))
+            article_entities.append(found_in_article)
+
+            for canonical in found_in_article:
+                entity_mentions[canonical] += 1
+
+            # 감성 토큰 수집 (각 엔티티에 기사 전체 토큰 귀속)
+            tokens = self._tokenize(combined)
+            for canonical in found_in_article:
+                entity_sentiment_tokens[canonical].extend(tokens)
+
+        if not entity_mentions:
+            logger.info("extract_entities: 알려진 엔티티 없음")
+            return []
+
+        # 엔티티별 공동 언급 관계 계산
+        co_occurrence: dict[str, Counter] = defaultdict(Counter)
+        for entities_in_article in article_entities:
+            for ent_a in entities_in_article:
+                for ent_b in entities_in_article:
+                    if ent_a != ent_b:
+                        co_occurrence[ent_a][ent_b] += 1
+
+        results: list[FinancialEntity] = []
+        for canonical, count in entity_mentions.most_common():
+            entity_type = _KNOWN_ENTITIES[canonical][0]
+            tokens = entity_sentiment_tokens[canonical]
+            sentiment_bias = self._score_sentiment(tokens)
+
+            # 입장 분류
+            if sentiment_bias > 0.15:
+                stance = "supportive"
+            elif sentiment_bias < -0.15:
+                stance = "opposing"
+            elif entity_type in ("Regulator",):
+                stance = "observer"
+            else:
+                stance = "neutral"
+
+            # 상위 5개 관련 엔티티
+            related = [e for e, _ in co_occurrence[canonical].most_common(5)]
+
+            results.append(
+                FinancialEntity(
+                    name=canonical,
+                    entity_type=entity_type,
+                    mentions=count,
+                    sentiment_bias=round(sentiment_bias, 3),
+                    stance=stance,
+                    related_entities=related,
+                )
+            )
+
+        logger.info("엔티티 추출 완료: %d개 엔티티 (입력 %d건)", len(results), len(news_items))
+        return results
+
+    def detect_relations(
+        self,
+        news_items: list[dict],
+        entities: list[FinancialEntity],
+    ) -> list[EntityRelation]:
+        """뉴스 아이템에서 엔티티 간 관계를 감지합니다.
+
+        같은 기사에 두 엔티티가 공동 등장하고,
+        관계 키워드가 포함된 경우 관계로 판단합니다.
+
+        Args:
+            news_items: 뉴스 아이템 목록.
+            entities: :meth:`extract_entities` 반환값.
+
+        Returns:
+            :class:`EntityRelation` 목록.
+        """
+        if not news_items or not entities:
+            return []
+
+        lookup = self._build_entity_lookup()
+        entity_names = {e.name for e in entities}
+
+        relations: dict[tuple[str, str, str], EntityRelation] = {}
+
+        for item in news_items:
+            title = item.get("title", "")
+            desc = item.get("description", "")
+            combined = f"{title} {desc}"
+            combined_lower = combined.lower()
+
+            found_in_article = list(set(self._scan_text_for_entities(combined, lookup)))
+            # 알려진 엔티티만 필터링
+            found_in_article = [e for e in found_in_article if e in entity_names]
+
+            if len(found_in_article) < 2:
+                continue
+
+            # 관계 키워드 감지
+            detected_relation = None
+            for rel_type, keywords in _RELATION_KEYWORDS.items():
+                if any(kw.lower() in combined_lower for kw in keywords):
+                    detected_relation = rel_type
+                    break
+
+            if not detected_relation:
+                detected_relation = "AFFECTS"  # 기본값: 공동 등장 시 영향 관계
+
+            # 감성 계산
+            tokens = self._tokenize(combined)
+            sentiment = self._score_sentiment(tokens)
+
+            # 모든 쌍에 대해 관계 추가 (첫 번째 → 두 번째)
+            for i, src in enumerate(found_in_article):
+                for tgt in found_in_article[i + 1 :]:
+                    key = (src, tgt, detected_relation)
+                    if key not in relations:
+                        relations[key] = EntityRelation(
+                            source=src,
+                            target=tgt,
+                            relation_type=detected_relation,
+                            fact=title[:120],
+                            sentiment=round(sentiment, 3),
+                        )
+
+        result_list = list(relations.values())
+        logger.info("관계 감지 완료: %d개 관계 (입력 %d건)", len(result_list), len(news_items))
+        return result_list
+
+    def generate_entity_report(
+        self,
+        entities: list[FinancialEntity],
+        relations: list[EntityRelation],
+        top_n: int = 10,
+    ) -> str:
+        """엔티티와 관계 목록으로부터 Jekyll 포스트용 마크다운 섹션을 생성합니다.
+
+        Args:
+            entities: :meth:`extract_entities` 반환값.
+            relations: :meth:`detect_relations` 반환값.
+            top_n: 표에 표시할 최대 엔티티 수.
+
+        Returns:
+            마크다운 문자열. 엔티티가 없으면 빈 문자열 반환.
+        """
+        if not entities:
+            return ""
+
+        lines: list[str] = ["### 핵심 엔티티 네트워크", ""]
+
+        # 엔티티 테이블
+        lines.append("| 엔티티 | 유형 | 언급 | 감성 | 입장 |")
+        lines.append("|--------|------|------|------|------|")
+
+        stance_ko = {
+            "supportive": "긍정",
+            "opposing": "부정",
+            "neutral": "중립",
+            "observer": "관찰",
+        }
+
+        for entity in entities[:top_n]:
+            type_ko = _ENTITY_TYPE_KO.get(entity.entity_type, entity.entity_type)
+            sentiment_str = f"{entity.sentiment_bias:+.2f}"
+            stance_str = stance_ko.get(entity.stance, entity.stance)
+            lines.append(f"| {entity.name} | {type_ko} | {entity.mentions}회 | {sentiment_str} | {stance_str} |")
+
+        lines.append("")
+
+        # 주요 관계
+        if relations:
+            lines.append("**주요 관계:**")
+            # 감성 절대값 기준 상위 관계 정렬
+            sorted_relations = sorted(relations, key=lambda r: abs(r.sentiment), reverse=True)
+            for rel in sorted_relations[:8]:
+                rel_ko = _RELATION_TYPE_KO.get(rel.relation_type, rel.relation_type)
+                sentiment_str = f"{rel.sentiment:+.2f}"
+                lines.append(f'- {rel.source} --[{rel_ko}]--> {rel.target} ({sentiment_str}): "{rel.fact}"')
+            lines.append("")
+
+        return "\n".join(lines)
+
     # ── 내부 헬퍼 ─────────────────────────────────────────────────────────────
 
     def _find_best_seed(self, indices: list[int], doc_sets: list[set[str]]) -> int:
@@ -771,13 +1147,15 @@ def analyze_news(
     news_items: list[dict],
     top_n: int = 15,
     max_topics: int = 5,
+    include_entities: bool = True,
 ) -> dict:
-    """뉴스 아이템 목록을 분석하여 키워드, 클러스터, 시장 신호를 반환하는 편의 함수.
+    """뉴스 아이템 목록을 분석하여 키워드, 클러스터, 시장 신호, 엔티티를 반환하는 편의 함수.
 
     Args:
         news_items: 뉴스 아이템 목록.
         top_n: 추출할 상위 키워드 수.
         max_topics: 최대 토픽 클러스터 수.
+        include_entities: 엔티티 추출 및 관계 감지 포함 여부 (기본값: True).
 
     Returns:
         분석 결과 딕셔너리::
@@ -787,6 +1165,9 @@ def analyze_news(
                 "clusters": list[TopicCluster],
                 "topic_summary_md": str,
                 "market_signals": dict,
+                "entities": list[FinancialEntity],       # include_entities=True 시
+                "relations": list[EntityRelation],        # include_entities=True 시
+                "entity_report_md": str,                  # include_entities=True 시
             }
     """
     spider = MindSpider()
@@ -795,9 +1176,19 @@ def analyze_news(
     topic_summary_md = spider.generate_topic_summary(clusters)
     market_signals = spider.detect_market_signals(news_items)
 
-    return {
+    result: dict = {
         "keywords": keywords,
         "clusters": clusters,
         "topic_summary_md": topic_summary_md,
         "market_signals": market_signals,
     }
+
+    if include_entities:
+        entities = spider.extract_entities(news_items)
+        relations = spider.detect_relations(news_items, entities)
+        entity_report_md = spider.generate_entity_report(entities, relations)
+        result["entities"] = entities
+        result["relations"] = relations
+        result["entity_report_md"] = entity_report_md
+
+    return result

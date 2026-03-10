@@ -17,6 +17,27 @@ from .config import setup_logging
 logger = setup_logging("signal_composer")
 
 
+# ── MiroFish 촉매 상수 ───────────────────────────────────────────────────────
+
+_BULLISH_CATALYSTS: List[str] = [
+    "연준 비둘기파 발언",
+    "ETF 승인",
+    "기관 대량 매수",
+    "VIX 하락 안정화",
+    "달러 약세 전환",
+    "금리 인하 기대",
+]
+
+_BEARISH_CATALYSTS: List[str] = [
+    "VIX 30 돌파",
+    "규제 강화 발표",
+    "대규모 해킹",
+    "금리 인상 시사",
+    "달러 강세 가속",
+    "대량 매도 포착",
+]
+
+
 # ── 데이터 클래스 ────────────────────────────────────────────────────────────
 
 
@@ -50,6 +71,30 @@ class ScenarioResult:
     """발생 확률 (%)."""
     description: str
     """시나리오 설명."""
+    catalysts: List[str] = field(default_factory=list)
+    """이 시나리오를 촉발할 수 있는 촉매 목록 (MiroFish 패턴)."""
+    time_horizon: str = ""
+    """예상 시간 프레임 (예: '단기 1-3일', '중기 1-2주')."""
+    support_level: str = ""
+    """지지선 수준 추정 (선택적)."""
+    resistance_level: str = ""
+    """저항선 수준 추정 (선택적)."""
+
+
+@dataclass
+class StanceAnalysis:
+    """시장 참여자 입장 분석 (MiroFish AgentActivityConfig 패턴)."""
+
+    bulls: List[str]
+    """강세 입장 요인 목록."""
+    bears: List[str]
+    """약세 입장 요인 목록."""
+    observers: List[str]
+    """관망 요인 목록."""
+    dominant_stance: str
+    """지배 입장: 'supportive' | 'opposing' | 'neutral' | 'observer'."""
+    consensus_ratio: float
+    """합의 비율 0~1."""
 
 
 @dataclass
@@ -197,6 +242,161 @@ class SignalComposer:
             agreement_count=agreement_count,
             total_signals=len(signal_results),
         )
+
+    def analyze_stance(self, result: CompositeResult) -> StanceAnalysis:
+        """개별 신호의 방향성을 분석하여 시장 참여자 입장을 추론한다.
+
+        MiroFish의 AgentActivityConfig에서 영감: 각 지표를 시장 참여자의
+        '입장(stance)'으로 해석한다.
+
+        Args:
+            result: compose_signals()의 반환값.
+
+        Returns:
+            StanceAnalysis: 강세/약세/관망 진영 분류 및 지배 입장.
+        """
+        bulls: List[str] = []
+        bears: List[str] = []
+        observers: List[str] = []
+
+        for sr in result.signal_results:
+            entry = f"{sr.name} ({sr.raw_display})"
+            if sr.verdict == "강세":
+                bulls.append(entry)
+            elif sr.verdict == "약세":
+                bears.append(entry)
+            else:
+                observers.append(entry)
+
+        bull_count = len(bulls)
+        bear_count = len(bears)
+        obs_count = len(observers)
+        total = bull_count + bear_count + obs_count
+
+        if total == 0:
+            return StanceAnalysis(
+                bulls=bulls,
+                bears=bears,
+                observers=observers,
+                dominant_stance="neutral",
+                consensus_ratio=0.0,
+            )
+
+        # sentiment_bias 스타일 (-1.0 ~ 1.0): 강세 vs 약세 편향
+        sentiment_bias = (bull_count - bear_count) / total  # -1.0 ~ 1.0
+
+        if sentiment_bias >= 0.3:
+            dominant_stance = "supportive"
+            consensus_ratio = bull_count / total
+        elif sentiment_bias <= -0.3:
+            dominant_stance = "opposing"
+            consensus_ratio = bear_count / total
+        elif obs_count >= max(bull_count, bear_count):
+            dominant_stance = "observer"
+            consensus_ratio = obs_count / total
+        else:
+            dominant_stance = "neutral"
+            # 중립: 어느 쪽도 지배하지 않음 → 가장 많은 진영 비율
+            consensus_ratio = max(bull_count, bear_count, obs_count) / total
+
+        return StanceAnalysis(
+            bulls=bulls,
+            bears=bears,
+            observers=observers,
+            dominant_stance=dominant_stance,
+            consensus_ratio=round(consensus_ratio, 2),
+        )
+
+    def generate_prediction_markdown(
+        self,
+        result: CompositeResult,
+        stance: StanceAnalysis,
+    ) -> str:
+        """MiroFish 스타일의 예측 분석 마크다운을 생성한다.
+
+        기존 generate_outlook_markdown보다 상세한 예측 정보를 포함:
+        - 시장 참여자 입장 분석 (MiroFish stance 패턴)
+        - 시나리오별 촉매(catalyst) 분석
+        - 시간 프레임 전망
+
+        Args:
+            result: compose_signals()의 반환값.
+            stance: analyze_stance()의 반환값.
+
+        Returns:
+            str: 마크다운 형식의 상세 시장 전망 섹션.
+        """
+        lines: List[str] = []
+
+        lines.append("## 시장 전망 분석")
+        lines.append("")
+
+        # 신호 테이블
+        lines.append("| 지표 | 현재값 | 신호 | 가중치 |")
+        lines.append("|------|--------|------|--------|")
+        for sr in result.signal_results:
+            weight_pct = f"{sr.weight * 100:.0f}%"
+            display = sr.raw_display
+            if sr.trend_arrow:
+                display = f"{display} {sr.trend_arrow}"
+            lines.append(f"| {sr.name} | {display} | {sr.verdict} | {weight_pct} |")
+
+        lines.append("")
+
+        # 종합 점수
+        verdict_score_label = _verdict_with_icon(result.verdict)
+        lines.append(f"**종합 점수**: {result.score:.0f}/100 ({verdict_score_label})")
+
+        # 신뢰도
+        agree_str = f"{result.agreement_count}/{result.total_signals} 지표 일치"
+        lines.append(f"**신뢰도**: {result.confidence_label} ({agree_str})")
+
+        lines.append("")
+
+        # ── 시장 참여자 입장 분석 ──────────────────────────────────────────────
+        lines.append("### 시장 참여자 입장 분석")
+
+        bulls_str = ", ".join(stance.bulls) if stance.bulls else "없음"
+        bears_str = ", ".join(stance.bears) if stance.bears else "없음"
+        obs_str = ", ".join(stance.observers) if stance.observers else "없음"
+
+        lines.append(f"- **강세 진영**: {bulls_str}")
+        lines.append(f"- **약세 진영**: {bears_str}")
+        lines.append(f"- **관망**: {obs_str}")
+
+        dominant_label_map = {
+            "supportive": "강세",
+            "opposing": "약세",
+            "neutral": "중립",
+            "observer": "관망",
+        }
+        dominant_kr = dominant_label_map.get(stance.dominant_stance, stance.dominant_stance)
+        consensus_pct = int(stance.consensus_ratio * 100)
+        lines.append(f"- **지배 입장**: {dominant_kr} ({consensus_pct}% 합의)")
+
+        lines.append("")
+
+        # ── 시나리오 분석 ──────────────────────────────────────────────────────
+        lines.append("### 시나리오 분석")
+
+        for scenario in result.scenarios:
+            lines.append(
+                f"- {scenario.emoji} **{scenario.label} 시나리오** ({scenario.probability}%): {scenario.description}"
+            )
+            if scenario.catalysts:
+                catalyst_str = ", ".join(scenario.catalysts)
+                lines.append(f"  - *촉매*: {catalyst_str}")
+            if scenario.time_horizon:
+                lines.append(f"  - *시간 프레임*: {scenario.time_horizon}")
+            if scenario.support_level:
+                lines.append(f"  - *지지선*: {scenario.support_level}")
+            if scenario.resistance_level:
+                lines.append(f"  - *저항선*: {scenario.resistance_level}")
+
+        lines.append("")
+        lines.append("> ⚠️ 본 분석은 알고리즘 기반 자동 생성이며, 투자 조언이 아닙니다.")
+
+        return "\n".join(lines)
 
     def generate_outlook_markdown(self, result: CompositeResult) -> str:
         """CompositeResult를 Jekyll 포스트 삽입용 마크다운으로 변환한다.
@@ -639,10 +839,74 @@ class SignalComposer:
         fg_result = next((r for r in results if r.name == "공포·탐욕 지수"), None)
         vix_result = next((r for r in results if r.name == "VIX 변동성"), None)
         momentum_result = next((r for r in results if r.name == "모멘텀"), None)
+        macro_result = next((r for r in results if r.name == "매크로"), None)
 
         fg_display = fg_result.raw_display if fg_result else "N/A"
         vix_display = vix_result.raw_display if vix_result else "N/A"
         momentum_display = momentum_result.raw_display if momentum_result else "N/A"
+
+        # ── 시간 프레임 결정 (모멘텀 강도 기반) ──────────────────────────────
+        # 모멘텀 normalized 값으로 단기/중기 구분
+        if momentum_result:
+            mom_norm = momentum_result.normalized
+            if abs(mom_norm - 0.5) > 0.2:  # 강한 방향성
+                bull_horizon = "중기 1-2주 내 추세 지속 가능"
+                base_horizon = "단기 1-3일 관망 후 방향 확인"
+                bear_horizon = "단기 1-3일 내 압박 지속"
+            else:  # 약한 방향성
+                bull_horizon = "단기 1-3일 내 확인 가능"
+                base_horizon = "중기 1-2주 횡보 예상"
+                bear_horizon = "중기 1-2주 내 약세 전환 가능성"
+        else:
+            bull_horizon = "단기 1-3일 내 확인 가능"
+            base_horizon = "중기 1-2주 방향 모색"
+            bear_horizon = "단기 1-3일 내 압박 지속"
+
+        # ── VIX 기반 지지/저항 수준 추정 ─────────────────────────────────────
+        # VIX가 높으면 변동폭 확대 → 더 넓은 지지/저항 범위
+        vix_val = float(vix_result.raw_display.split()[0]) if vix_result else 20.0
+        try:
+            vix_val = float(str(vix_result.raw_display).split()[0]) if vix_result else 20.0
+        except (ValueError, IndexError):
+            vix_val = 20.0
+
+        # 점수 기반 레벨 표현 (구체적 가격 없이 상대적 수준)
+        if score >= 55:
+            support_est = "현재가 -3~5%"
+            resistance_est = "현재가 +5~8%"
+        elif score <= 45:
+            support_est = "현재가 -5~8%"
+            resistance_est = "현재가 +3~5%"
+        else:
+            support_est = "현재가 -3~4%"
+            resistance_est = "현재가 +3~4%"
+
+        if vix_val >= 25:  # 고변동성 → 범위 확대
+            support_est = support_est.replace("3~5", "5~8").replace("5~8", "8~12").replace("3~4", "4~6")
+            resistance_est = resistance_est.replace("5~8", "8~12").replace("3~5", "5~8").replace("3~4", "4~6")
+
+        # ── 촉매 선택 (MiroFish 패턴) ─────────────────────────────────────────
+        # 약세 신호가 많을수록 강세 시나리오에 더 많은 촉매 필요
+        bear_signals = sum(1 for r in results if r.verdict == "약세")
+        bull_signals = sum(1 for r in results if r.verdict == "강세")
+
+        # 강세 시나리오 촉매: 주로 상승 전환 필요 조건
+        bull_catalyst_pool = list(_BULLISH_CATALYSTS)
+        if vix_result and vix_result.verdict == "약세":
+            bull_catalyst_pool = ["VIX 하락 안정화"] + [c for c in bull_catalyst_pool if c != "VIX 하락 안정화"]
+        if macro_result and macro_result.verdict == "약세":
+            bull_catalyst_pool = ["달러 약세 전환", "금리 인하 기대"] + [
+                c for c in bull_catalyst_pool if c not in ("달러 약세 전환", "금리 인하 기대")
+            ]
+        bull_catalysts = bull_catalyst_pool[: min(2, max(1, bear_signals))]
+
+        # 약세 시나리오 촉매: 현재 약세 신호 악화
+        bear_catalyst_pool = list(_BEARISH_CATALYSTS)
+        if vix_result and vix_result.verdict == "약세":
+            bear_catalyst_pool = ["VIX 30 돌파"] + [c for c in bear_catalyst_pool if c != "VIX 30 돌파"]
+        if macro_result and macro_result.verdict == "약세":
+            bear_catalyst_pool = ["달러 강세 가속"] + [c for c in bear_catalyst_pool if c != "달러 강세 가속"]
+        bear_catalysts = bear_catalyst_pool[: min(2, max(1, bull_signals))]
 
         bull_desc = (
             f"공포·탐욕 지수({fg_display}) 반등 시 위험자산 선호 회복, "
@@ -655,9 +919,31 @@ class SignalComposer:
         )
 
         return [
-            ScenarioResult(label="강세", emoji="🟢", probability=probs["bull"], description=bull_desc),
-            ScenarioResult(label="기본", emoji="🟡", probability=probs["base"], description=base_desc),
-            ScenarioResult(label="약세", emoji="🔴", probability=probs["bear"], description=bear_desc),
+            ScenarioResult(
+                label="강세",
+                emoji="🟢",
+                probability=probs["bull"],
+                description=bull_desc,
+                catalysts=bull_catalysts,
+                time_horizon=bull_horizon,
+                resistance_level=resistance_est,
+            ),
+            ScenarioResult(
+                label="기본",
+                emoji="🟡",
+                probability=probs["base"],
+                description=base_desc,
+                time_horizon=base_horizon,
+            ),
+            ScenarioResult(
+                label="약세",
+                emoji="🔴",
+                probability=probs["bear"],
+                description=bear_desc,
+                catalysts=bear_catalysts,
+                time_horizon=bear_horizon,
+                support_level=support_est,
+            ),
         ]
 
     @staticmethod
@@ -744,3 +1030,13 @@ def compose_signals(signals: Dict[str, Any], weights: Optional[Dict[str, float]]
 def generate_outlook_markdown(result: CompositeResult) -> str:
     """CompositeResult → 마크다운 편의 함수."""
     return SignalComposer().generate_outlook_markdown(result)
+
+
+def analyze_stance(result: CompositeResult) -> StanceAnalysis:
+    """CompositeResult → StanceAnalysis 편의 함수."""
+    return SignalComposer().analyze_stance(result)
+
+
+def generate_prediction_markdown(result: CompositeResult, stance: StanceAnalysis) -> str:
+    """CompositeResult + StanceAnalysis → MiroFish 스타일 마크다운 편의 함수."""
+    return SignalComposer().generate_prediction_markdown(result, stance)

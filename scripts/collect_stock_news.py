@@ -760,8 +760,8 @@ def main():
         if signals:
             composer = SignalComposer()
             result = composer.compose_signals(signals)
-
-            content_parts.append("\n" + composer.generate_outlook_markdown(result))
+            stance = composer.analyze_stance(result)
+            content_parts.append("\n" + composer.generate_prediction_markdown(result, stance))
 
             # MindSpider topic analysis
             if all_items:
@@ -795,6 +795,16 @@ def main():
                     if brief:
                         content_parts.append("\n### 멀티 관점 요약\n")
                         content_parts.append(brief)
+
+                    # Entity analysis
+                    news_items = news_items_for_spider
+                    if news_items:
+                        entities = spider.extract_entities(news_items)
+                        if entities:
+                            relations = spider.detect_relations(news_items, entities)
+                            entity_report = spider.generate_entity_report(entities, relations)
+                            if entity_report:
+                                content_parts.append("\n" + entity_report)
     except Exception as exc:
         logger.warning("시장 전망 생성 실패: %s", exc)
 
