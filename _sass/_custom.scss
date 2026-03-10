@@ -483,6 +483,12 @@ a {
     border-color: rgba($cat-social, 0.25);
     box-shadow: 0 2px 8px rgba($cat-social, 0.15);
   }
+  &.cat-worldmonitor {
+    background: rgba($cat-worldmonitor, 0.15);
+    color: $cat-worldmonitor;
+    border-color: rgba($cat-worldmonitor, 0.25);
+    box-shadow: 0 2px 8px rgba($cat-worldmonitor, 0.15);
+  }
 }
 
 .post-source {
@@ -2900,6 +2906,10 @@ html {
   &.cat-border-stock-trading-journal {
     border-left: 3px solid $cat-journal;
   }
+
+  &.cat-border-worldmonitor {
+    border-left: 3px solid $cat-worldmonitor;
+  }
 }
 
 /* Responsive - Dashboard Homepage */
@@ -3180,6 +3190,7 @@ html {
   &.cat-regulatory { background: rgba($cat-regulatory, 0.15); color: $cat-regulatory; }
   &.cat-political { background: rgba($cat-political, 0.15); color: $cat-political; }
   &.cat-social { background: rgba($cat-social, 0.15); color: $cat-social; }
+  &.cat-worldmonitor { background: rgba($cat-worldmonitor, 0.15); color: $cat-worldmonitor; }
 }
 
 .search-result-tag {

@@ -51,3 +51,9 @@ social-media:
   color: "cat-social"
   url: "/social-media/"
   description: "소셜 미디어 뉴스 및 커뮤니티 동향"
+
+worldmonitor:
+  name: "글로벌 모니터"
+  color: "cat-worldmonitor"
+  url: "/worldmonitor/"
+  description: "지정학적 리스크, 글로벌 이슈, 국제 정세 모니터링"
