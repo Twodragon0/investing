@@ -13,6 +13,12 @@ description: "2026-03-10 기준 주요 시장 지수 2종, 섹터 11개, 경제 
 
 **2026-03-10** 기준 주요 시장 지수 2종, 섹터 11개, 경제 이벤트 19건(고·중간 중요도), 대형주 실적 발표 4건을 수집했습니다.
 
+## 전체 뉴스 요약
+
+- 2026-03-10 기준 주요 시장 지수 2종, 섹터 11개, 경제 이벤트 19건(고·중간 중요도), 대형주 실적 발표 4건을 수집했습니다.
+- - Will Ciena (CIEN) Beat Estimates Again in Its Next Earnings Report? (Tue, 03 Mar 2026 17:10:02 GMT) - Why Broadcom Stock Has Done What Nvidia Couldn’t After…
+
+
 ## 📊 주요 시장 지수
 
 | 심볼 | 이름 | 현재가 | 변동 | 변동률 | 고가 | 저가 |

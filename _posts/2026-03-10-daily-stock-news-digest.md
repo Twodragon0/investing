@@ -18,37 +18,13 @@ description: "2026-03-10 주식 시장에서 234건의 뉴스를 분석했습니
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">234</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 82</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">리스크 위험</div></div><div class="stat-item"><div class="stat-value">5,526.01</div><div class="stat-label">KOSPI +5.66%</div></div><div class="stat-item"><div class="stat-value">1,142.15</div><div class="stat-label">KOSDAQ +4.03%</div></div></div>
 <div class="alert-box alert-info"><strong>주식 시장 긴급: crashing, Nasdaq, silver - 234건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (82건): 코스닥, 코스피, 서킷브레이커 이슈가 82건으로 주목받고 있습니다.</li><li>📊 <strong>매크로/금리</strong> (21건): 환율, 한은, 조치 중심으로 21건의 뉴스가 수집되었습니다.</li><li>🏛️ <strong>정치/정책</strong> (26건): 26건의 뉴스에서 Trump, Iran, oil 키워드가 부각되고 있습니다.</li><li>🤖 <strong>AI/기술</strong> (9건): 반도체, 삼성전자, 하이닉스 중심으로 9건의 뉴스가 수집되었습니다.</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiqAJBVV95cUxON19ES2lGWk1yN0pLUGVSUW91MjFrTmpYcE9xb2k3VEQ5S0piSVJKbTdvWFo4SGN3aG9QRzQ4RkZiNFpUeHhabjRjSmVEVWQ5eTJSUjVsWkc3c2VIRDJVQ2F0cnpxMjFzY09oVkc2c1dTX21OQlJPZVNjSE5VR3ZVS0oydDFnZDU3UnRzdllBeWc1bFFNaF9XQnM3cEdlaTJhVDJvX2k4b1FERUhlLTRVdnRNYTQ2Y2x0NHVpbDFnUlRpUzZtWDUyc2NnSWowU0ZmNjhOUVQwNlFPaVpHWEhXS2w1WmpLdWhEb2xVSkdMLXNCajlMeTI3eTFVb3R2WjZjdHltRmdLejNTLTBWQ0tZbXlnTjdYd29aVno1M213b1VwdlE5MXJvb9IBrgJBVV95cUxQRVpJcHI3LUQtQnd0TU1TaU9fTE5zRU1DY2hQTVBjaEF5Mk5JbXZqLXZzeHJFWnkzMVR1cnM2UXJEYmlOWHZDY1I0ZkFoWV9lQUowY3JnX3A5b0kzZmRtVjRqZURMS1ZTTjAxRWE5X3RjLTVwRTktVWRzSHdjVmVIYndpUnd2TnhNbE1IMENfQ0hCT0VNMWlFMzdwT3BocjNnbVlfUDVsOTNKdFRaX2YxbWZpeU9GVmlEWC03NzFkcHVob3ZoYzhvMUdkbkhvaENSM3RkUDVvcVZPYVRzb19YNVpQazJtbkpIUE9ITjk5WlpESzdqVUNweHRfUUJROEZ0VnBuNHlrVHlhdFUxeVI4Rmp1UzFwVzY1Y1ZiTEZsUUlxd1pTYl9IZV96THBGUQ?hl=en-US&gl=US&ceid=US%3Aen">Why is US stock market crashing again today? Dow, S&P 500 and Nasdaq in deep red as oil and silver surge w</a></li><li><a href="https://news.google.com/read/CBMiVkFVX3lxTE4tV2RTVWtSODhTSFVhb0ZBUFVhR2M4T3N2QjBiR0xkNklWQnFJaUhfbEdzQ1lnOHFKUVIzcGFmNF9meDBQQ0xlaXhEeml1dEVWUEY4aVJR?hl=ko&gl=KR&ceid=KR%3Ako">[속보] 코스피·코스닥 서킷브레이커 발동…20분간 거래 중단</a></li><li><a href="https://news.google.com/read/CBMiVkFVX3lxTFBqT2tyQ2FCSGVWMDc1bl9YSy1odWdSQmNVLS1qbzAtZTBuUDFQejVtakh1LWNIdmc2OXp4R1FreEx5TC02SWJPZGVBQVhSMnJBaG5KMmlR?hl=ko&gl=KR&ceid=KR%3Ako">[속보] '패닉셀' 코스피·코스닥 8%대 폭락…동반 서킷브레이커</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Why is US stock market crashing again today? Dow, S&P 500 and Nasdaq in deep ...  
-외 P0 긴급 이슈 29건이 추가 감지되었습니다. 총 234건의 뉴스 중 P1 주요 이슈도 22건 확인됩니다.
-
-1. **📈 가격/시장** (82건): 코스닥, 코스피, 서킷브레이커 이슈가 82건으로 주목받고 있습니다.
-2. **📊 매크로/금리** (21건): 환율, 한은, 조치 중심으로 21건의 뉴스가 수집되었습니다.
-3. **🏛️ 정치/정책** (26건): 26건의 뉴스에서 Trump, Iran, oil 키워드가 부각되고 있습니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-**P0 긴급**: Why is US stock market crashing again today? Dow, S&P 500 an / [속보] 코스피·코스닥 서킷브레이커 발동…20분간 거래 중단 / [속보] '패닉셀' 코스피·코스닥 8%대 폭락…동반 서킷브레이커
-**P1 주요**: 22건 확인
-- 한국 기사 87건, 글로벌 기사 147건 수집
-- 한국 지수: KOSPI 5,526.01(+5.66%), KOSDAQ 1,142.15(+4.03%), USD/KRW 1,470.08(+0.57%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">82건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:26%"></div></div><span class="theme-count">21건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:32%"></div></div><span class="theme-count">26건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:11%"></div></div><span class="theme-count">9건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:6%"></div></div><span class="theme-count">5건</span></div>
-</div>
-
-*총 234건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
-
-
-![market-snapshot]({{ '/assets/images/generated/market-snapshot-2026-03-10.png' | relative_url }})
-
-
----
+- KOSPI 5,526.01 (+5.66%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 1,142.15 (+4.03%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-03-10 주식 시장에서 234건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,526.01(+5.66%), KOSDAQ 1,142.15(+4.03%), USD/KRW 1,470.08(+0.57%).
+- *코스닥, 코스피, 서킷브레이커 이슈가 82건으로 주목받고 있습니다.*
 
 ## 테마별 주요 뉴스
 
