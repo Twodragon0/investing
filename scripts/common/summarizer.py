@@ -347,7 +347,6 @@ THEMES = [
             "account abstraction",
             "verkle",
             "blob space",
-            "restaking",
         ],
     ),
     (
@@ -367,7 +366,6 @@ THEMES = [
             "anthropic",
             "semiconductor",
             "tsmc",
-            "ai agent",
             "ai model",
             "생성형 ai",
             "apple",
@@ -893,7 +891,9 @@ class ThemeSummarizer:
             for idx, item in enumerate(self.items):
                 if idx in assigned:
                     continue
-                text = (item.get("title", "") + " " + item.get("description", "")).lower()
+                text = (
+                    item.get("title", "") + " " + item.get("title_original", "") + " " + item.get("description", "")
+                ).lower()
                 if any(kw in text for kw in keywords):
                     result[priority].append(item)
                     assigned.add(idx)
@@ -1528,7 +1528,11 @@ class ThemeSummarizer:
                 f"{kw_str} 이슈가 {count}건으로 주목받고 있습니다.",
                 f"{count}건의 뉴스에서 {kw_str} 키워드가 부각되고 있습니다.",
             ]
-            return templates[count % len(templates)]
+            import datetime as _dt
+
+            today_str = _dt.datetime.now(tz=_dt.UTC).date().isoformat()
+            seed = hash((today_str, count, kw_str))
+            return templates[seed % len(templates)]
 
         # Strategy 2: Best description snippet from top articles
         best_desc = ""
@@ -1709,8 +1713,12 @@ class ThemeSummarizer:
 
             if dominant_ratio > 0.4 and theme_key in THEME_DOMINANT_NARRATIVES:
                 narratives = THEME_DOMINANT_NARRATIVES[theme_key]
-                # Use total as seed for deterministic but varying selection
-                idx = total % len(narratives)
+                # Use date+total as seed for daily variety
+                import datetime as _dt
+
+                today_str = _dt.datetime.now(tz=_dt.UTC).date().isoformat()
+                seed = hash((today_str, total, theme_key))
+                idx = seed % len(narratives)
                 intro = f"총 {total}건의 뉴스 중 **{dominant[0]}** 관련이 "
                 intro += f"{dominant[3]}건({dominant_ratio:.0%})으로 압도적입니다. "
                 intro += narratives[idx]
@@ -1724,7 +1732,11 @@ class ThemeSummarizer:
             pair_rev = (key_b, key_a)
             cross_insights = CROSS_THEME_INSIGHTS.get(pair) or CROSS_THEME_INSIGHTS.get(pair_rev)
             if cross_insights:
-                idx = total % len(cross_insights)
+                import datetime as _dt
+
+                today_str = _dt.datetime.now(tz=_dt.UTC).date().isoformat()
+                seed = hash((today_str, total, pair))
+                idx = seed % len(cross_insights)
                 intro = (
                     f"총 {total}건의 뉴스에서 "
                     f"**{top_themes[0][0]}**({top_themes[0][3]}건)과 "

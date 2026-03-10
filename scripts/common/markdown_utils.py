@@ -52,8 +52,24 @@ _SOURCE_RULES: List[tuple] = [
     ("exchange", ["binance", "okx", "bybit", "upbit", "coinbase", "bithumb", "kraken", "bitfinex"]),
     ("finance-media", ["reuters", "bloomberg", "cnbc", "marketwatch", "wsj", "ft.com", "barron"]),
     ("world-media", ["bbc", "guardian", "al jazeera", "nytimes", "washingtonpost", "worldmonitor"]),
-    ("regulator", ["sec", "cftc", "금융위", "금감원", "fca", "esma", "bis", "federal reserve"]),
+    (
+        "regulator",
+        [
+            "sec",
+            "cftc",
+            "금융위",
+            "금감원",
+            "fca",
+            "esma",
+            "bis",
+            "federal reserve",
+            "금융위원회",
+            "한국은행",
+            "금융감독원",
+        ],
+    ),
     ("aggregator", ["google news", "rss", "yahoo", "investing.com"]),
+    ("kr-media", ["연합뉴스", "한국경제", "매일경제", "조선비즈", "서울경제", "이데일리", "머니투데이", "한겨레"]),
 ]
 
 
@@ -147,6 +163,13 @@ def smart_truncate(text: str, max_len: int) -> str:
     # (require at least 70% of the allowed length to avoid over-trimming).
     if last_space >= int(max_len * 0.7):
         candidate = candidate[:last_space]
+    elif last_space < int(max_len * 0.7):
+        # Korean fallback: try to break at sentence endings
+        for ending in ["다.", "요.", "음.", "임.", "됨."]:
+            ko_idx = candidate.rfind(ending, 0, max_len)
+            if ko_idx >= int(max_len * 0.5):
+                candidate = candidate[: ko_idx + len(ending)]
+                break
     return candidate.rstrip() + "…"
 
 

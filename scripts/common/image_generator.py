@@ -1560,7 +1560,7 @@ def generate_source_distribution_card(
     for at in autotexts:
         at.set_color(COLORS["text"])
         at.set_fontsize(_DS["small_size"])
-        at.set_fontfamily("monospace")
+        at.set_fontfamily(_FONT_FAMILY)
 
     # Center text -- total count
     ax.text(

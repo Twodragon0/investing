@@ -259,7 +259,14 @@ def _build_fallback_description(title: str, category: str, tags: Optional[List[s
 
     # Clean title for description use
     clean_title = re.sub(r"[*_`~]", "", title).strip()
-    desc = f"{clean_title} - 최신 {cat_ko} 뉴스와 분석을 확인하세요.{tag_str}"
+    templates = [
+        f"{clean_title} - 최신 {cat_ko} 뉴스와 분석을 확인하세요.{tag_str}",
+        f"{cat_ko} 분야 핵심 동향: {clean_title}.{tag_str}",
+        f"오늘의 {cat_ko} 브리핑 — {clean_title}.{tag_str}",
+        f"{clean_title} 관련 {cat_ko} 리포트입니다.{tag_str}",
+    ]
+    seed = hash((datetime.now(UTC).date().isoformat(), title))
+    desc = templates[seed % len(templates)]
     return smart_truncate(desc, 160)
 
 
@@ -274,11 +281,7 @@ def _clean_description(desc: str) -> str:
     # Fix concatenated number artifacts (e.g. "612개월" → "6~12개월")
     desc = re.sub(
         r"(?<!\d)([1-9])(\d{1,2})(개월|년|일|시간)",
-        lambda m: (
-            m.group(1) + "~" + m.group(2) + m.group(3)
-            if int(m.group(1)) < int(m.group(2))
-            else m.group(0)
-        ),
+        lambda m: m.group(1) + "~" + m.group(2) + m.group(3) if int(m.group(1)) < int(m.group(2)) else m.group(0),
         desc,
     )
     # Remove HTML tags

@@ -101,7 +101,7 @@ def fetch_sec_insider_trades() -> List[Dict[str, Any]]:
             params=params,
             timeout=REQUEST_TIMEOUT,
             verify=VERIFY_SSL,
-            headers={"User-Agent": "InvestingDragon/1.0 (contact@example.com)"},
+            headers={"User-Agent": "InvestingDragon/1.0 (https://investing.2twodragon.com)"},
         )
         if resp.status_code == 200:
             data = resp.json()
