@@ -597,9 +597,7 @@ def main():
                 icon = ""
             content_parts.append(f"| **{name}** | {info['price']} | {icon} {info['change_pct']} |")
     else:
-        content_parts.append("> 시장 데이터를 일시적으로 가져올 수 없습니다. 아래 링크에서 직접 확인하세요.\n")
-        content_parts.append("- [Yahoo Finance - S&P 500](https://finance.yahoo.com/quote/%5EGSPC/)")
-        content_parts.append("- [네이버 금융 - KOSPI](https://finance.naver.com/sise/sise_index.naver?code=KOSPI)")
+        pass
 
     # Market insight - data-driven narrative
     content_parts.append("\n## 시장 인사이트\n")

@@ -139,7 +139,7 @@ def fetch_cmc_gainers_losers(api_key: str) -> Tuple[List[Dict], List[Dict]]:
 def format_global_market(data: Dict[str, Any]) -> str:
     """Format global market overview."""
     if not data:
-        return "*글로벌 시장 데이터를 가져올 수 없습니다.*"
+        return ""
 
     total_mcap = data.get("total_market_cap", {}).get("usd", 0)
     total_vol = data.get("total_volume", {}).get("usd", 0)
@@ -160,7 +160,7 @@ def format_global_market(data: Dict[str, Any]) -> str:
 def format_top_coins_table(coins: List[Dict], source: str = "coingecko") -> str:
     """Format top coins as a markdown table."""
     if not coins:
-        return "*데이터를 가져올 수 없습니다.*"
+        return ""
 
     lines = [
         "| # | 코인 | 가격 (USD) | 24h 변동 | 7d 변동 | 시가총액 |",
@@ -196,7 +196,7 @@ def format_top_coins_table(coins: List[Dict], source: str = "coingecko") -> str:
 def format_trending_coins(coins: List[Dict], source: str = "coingecko") -> str:
     """Format trending coins."""
     if not coins:
-        return "*트렌딩 데이터를 가져올 수 없습니다.*"
+        return ""
 
     lines = ["**현재 가장 주목받는 코인들:**\n"]
 
@@ -246,7 +246,7 @@ def format_gainers_losers(gainers: List[Dict], losers: List[Dict]) -> str:
             change = quote.get("percent_change_24h", 0)
             lines.append(f"| **{name}** ({symbol}) | ${price:,.4f} | {_fmt_pct(change)} |")
 
-    return "\n".join(lines) if lines else "*급등/급락 데이터를 가져올 수 없습니다.*"
+    return "\n".join(lines) if lines else ""
 
 
 def derive_gainers_losers_from_top(coins: List[Dict]) -> Tuple[str, str]:

@@ -356,7 +356,7 @@ def _price_icon(change_pct: Optional[float]) -> str:
 def _format_news_rows(items: List[Dict[str, Any]], limit: int = 5) -> str:
     """Format news items into a bullet list (max `limit` items)."""
     if not items:
-        return "> 관련 뉴스를 가져올 수 없습니다.\n"
+        return ""
     rows = []
     seen_titles: set = set()
     for item in items:
@@ -372,7 +372,7 @@ def _format_news_rows(items: List[Dict[str, Any]], limit: int = 5) -> str:
             rows.append(f"- {title} *({source})*")
         if len(rows) >= limit:
             break
-    return "\n".join(rows) + "\n" if rows else "> 관련 뉴스를 가져올 수 없습니다.\n"
+    return "\n".join(rows) + "\n" if rows else ""
 
 
 def _build_fred_section(fred_data: Dict[str, Any]) -> str:
@@ -503,13 +503,12 @@ def build_post_content(
     else:
         parts.append("| VIX (공포 지수) | 데이터 없음 | — | — |")
 
-    # Put/Call news (indicator of sentiment)
-    parts.append("| Put/Call 비율 | 뉴스 기반 | 아래 참조 | 옵션 시장 심리 |")
     parts.append("")
 
-    # Put/Call news detail
-    parts.append("**Put/Call 비율 관련 뉴스:**\n")
-    parts.append(_format_news_rows(put_call_news, limit=4))
+    # Put/Call news detail (only if news available)
+    if put_call_news:
+        parts.append("**Put/Call 비율 관련 뉴스:**\n")
+        parts.append(_format_news_rows(put_call_news, limit=4))
 
     # ── Section 2: 주요 자산 동향 ─────────────────────────────────────────
     parts.append("\n## 📈 주요 자산 동향\n")
@@ -532,8 +531,8 @@ def build_post_content(
     # Treasury yields: show FRED data if available, otherwise fall back to news row
     has_fred_yields = any(k in fred_data for k in ("DGS10", "DGS2"))
     if not has_fred_yields:
-        parts.append("| 10년물 국채 금리 | 뉴스 기반 | 아래 참조 | — |")
-        parts.append("| 2년물 국채 금리 | 뉴스 기반 | 아래 참조 | — |")
+        parts.append("| 10년물 국채 금리 | — | — | FRED 데이터 없음 |")
+        parts.append("| 2년물 국채 금리 | — | — | FRED 데이터 없음 |")
     parts.append("")
 
     # National treasury news — always shown as supplementary (or sole source)

@@ -273,8 +273,12 @@ def _clean_description(desc: str) -> str:
     """
     # Fix concatenated number artifacts (e.g. "612개월" → "6~12개월")
     desc = re.sub(
-        r"(\d)(\d{1,2})(개월|년|일|시간)",
-        lambda m: m.group(1) + "~" + m.group(2) + m.group(3),
+        r"(?<!\d)([1-9])(\d{1,2})(개월|년|일|시간)",
+        lambda m: (
+            m.group(1) + "~" + m.group(2) + m.group(3)
+            if int(m.group(1)) < int(m.group(2))
+            else m.group(0)
+        ),
         desc,
     )
     # Remove HTML tags

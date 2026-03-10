@@ -361,7 +361,7 @@ def main():
     twitter_token = get_env("TWITTER_BEARER_TOKEN")
 
     dedup = DedupEngine("social_media_seen.json")
-    gen = PostGenerator("crypto-news")  # Social posts go to crypto-news
+    gen = PostGenerator("social-media")  # Social posts go to social-media
 
     today = datetime.now(UTC).strftime("%Y-%m-%d")
     now = datetime.now(UTC)

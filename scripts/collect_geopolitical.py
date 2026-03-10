@@ -315,7 +315,7 @@ def _risk_level_from_theme(theme: str) -> str:
 def _build_polymarket_section(markets: List[Dict[str, Any]]) -> List[str]:
     """Build the Polymarket prediction market section of the post."""
     if not markets:
-        return ["*Polymarket 예측 시장 데이터를 수집하지 못했습니다.*\n"]
+        return []
 
     lines = []
     rows = []
@@ -351,7 +351,7 @@ def _build_polymarket_section(markets: List[Dict[str, Any]]) -> List[str]:
 def _build_gdelt_section(articles: List[Dict[str, Any]]) -> List[str]:
     """Build the GDELT news section with tone analysis."""
     if not articles:
-        return ["*GDELT 데이터를 수집하지 못했습니다.*\n"]
+        return []
 
     lines = []
 
@@ -391,7 +391,7 @@ def _build_gdelt_section(articles: List[Dict[str, Any]]) -> List[str]:
 def _build_news_section(items: List[Dict[str, Any]]) -> List[str]:
     """Build the Google News geopolitical section."""
     if not items:
-        return ["*뉴스를 수집하지 못했습니다.*\n"]
+        return []
 
     lines = []
     theme_counter: Counter = Counter()

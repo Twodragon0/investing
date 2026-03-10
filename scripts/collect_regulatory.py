@@ -157,24 +157,11 @@ def _clean_rss_title(title: str) -> str:
 
 
 def _generate_synthetic_description(title: str, source: str) -> str:
-    """Generate a contextual description when RSS provides none."""
+    """Generate a minimal description when RSS provides none."""
     source_ctx = _SOURCE_CONTEXT.get(source, source)
-    title_lower = title.lower()
-    if any(kw in title_lower for kw in ["press conference", "기자회견"]):
-        return f"{source_ctx} 기자회견 발표 내용입니다."
-    if any(kw in title_lower for kw in ["discussion paper", "consultation"]):
-        return f"{source_ctx}에서 발표한 정책 토론 자료로, 업계 의견 수렴 단계입니다."
-    if any(kw in title_lower for kw in ["enforcement", "집행", "제재"]):
-        return f"{source_ctx}의 규제 집행 관련 조치입니다."
-    if any(kw in title_lower for kw in ["stablecoin", "스테이블코인"]):
-        return f"{source_ctx}의 스테이블코인 규제 동향입니다."
-    if any(kw in title_lower for kw in ["sandbox", "pilot"]):
-        return f"{source_ctx}의 규제 샌드박스 프로그램 관련 자료입니다."
-    if any(kw in title_lower for kw in ["announces", "announcement"]):
-        return f"{source_ctx}의 공식 인사·조직 발표입니다."
-    if any(kw in title_lower for kw in ["crypto", "digital asset", "가상자산"]):
-        return f"{source_ctx}의 디지털 자산 규제 동향입니다."
-    return f"{source_ctx}에서 발표한 규제 관련 자료입니다."
+    if source_ctx and source_ctx != source:
+        return f"{source_ctx} — {title}"
+    return title
 
 
 def _enrich_item(item: dict) -> None:
@@ -227,10 +214,9 @@ def build_region_section(
     source_links: list,
 ) -> List[str]:
     """Build a description card section for a region."""
-    lines = [f"\n## {region_title}\n"]
     if not items:
-        lines.append("*수집된 항목이 없습니다.*")
-        return lines
+        return []
+    lines = [f"\n## {region_title}\n"]
 
     for i, item in enumerate(items[:10], 1):
         title = get_display_title(item)

@@ -75,7 +75,7 @@ def _fmt_change_pct(val: Any) -> str:
 def _build_index_section(indices: List[Dict[str, Any]]) -> str:
     """Build markdown table for market index quotes."""
     if not indices:
-        return "> 시장 지수 데이터를 가져올 수 없습니다. FMP_API_KEY를 확인하세요.\n"
+        return ""
 
     lines = [
         "## 📊 주요 시장 지수\n",
@@ -98,7 +98,7 @@ def _build_index_section(indices: List[Dict[str, Any]]) -> str:
 def _build_sector_section(sectors: List[Dict[str, Any]]) -> str:
     """Build markdown table for sector performance."""
     if not sectors:
-        return "> 섹터 데이터를 가져올 수 없습니다.\n"
+        return ""
 
     lines = [
         "## 🏭 섹터 퍼포먼스\n",
@@ -117,7 +117,7 @@ def _build_sector_section(sectors: List[Dict[str, Any]]) -> str:
 def _build_economic_section(events: List[Dict[str, Any]]) -> str:
     """Build markdown table for economic calendar (High impact first)."""
     if not events:
-        return "> 향후 30일 내 주요 경제 이벤트가 없거나 데이터를 가져올 수 없습니다.\n"
+        return ""
 
     # Sort: High first, then Medium; within same impact sort by date
     high = [e for e in events if e.get("impact") == "High"]
@@ -146,7 +146,7 @@ def _build_economic_section(events: List[Dict[str, Any]]) -> str:
 def _build_treasury_section(rates: List[Dict[str, Any]]) -> str:
     """Build markdown table for US Treasury yields."""
     if not rates:
-        return "> 미국 국채 금리 데이터를 가져올 수 없습니다.\n"
+        return ""
 
     lines = [
         "## 🏦 미국 국채 금리\n",
@@ -183,7 +183,7 @@ def _build_treasury_section(rates: List[Dict[str, Any]]) -> str:
 def _build_ipo_section(ipos: List[Dict[str, Any]]) -> str:
     """Build markdown table/list for upcoming IPO calendar."""
     if not ipos:
-        return "> 향후 30일 내 예정된 IPO가 없거나 데이터를 가져올 수 없습니다.\n"
+        return ""
 
     is_news = any(ipo.get("is_news_fallback") for ipo in ipos)
 
@@ -229,7 +229,7 @@ def _build_ipo_section(ipos: List[Dict[str, Any]]) -> str:
 def _build_earnings_section(earnings: List[Dict[str, Any]]) -> str:
     """Build markdown table for earnings calendar."""
     if not earnings:
-        return "> 향후 7일 내 대형주 실적 발표 일정이 없거나 데이터를 가져올 수 없습니다.\n"
+        return ""
 
     # Check if this is news fallback data
     is_news = any(e.get("is_news_fallback") for e in earnings)

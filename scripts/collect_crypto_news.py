@@ -632,7 +632,7 @@ def main():
                     table_rows.append((i, title_cell, row["source"]))
                 content_parts.append(markdown_table(["#", "제목", "출처"], table_rows))
             else:
-                content_parts.append("*수집된 뉴스가 없습니다.*")
+                pass
 
         # Exchange announcements with descriptions
         if exchange_rows:
