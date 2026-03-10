@@ -2,7 +2,7 @@ name: Collect Social Media
 
 on:
   schedule:
-    - cron: '0 1,13 * * *'
+    - cron: '0 0,6,12,18 * * *'  # KST 09:00, 15:00, 21:00, 03:00 (every 6h covering market hours)
   workflow_dispatch:
 
 permissions:

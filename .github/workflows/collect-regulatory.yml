@@ -2,7 +2,7 @@ name: Collect Regulatory News
 
 on:
   schedule:
-    - cron: '15 1,13 * * *'
+    - cron: '15 0,8,14 * * *'  # KST 09:15, 17:15, 23:15 (KR open + US pre-market + US market open)
   workflow_dispatch:
 
 permissions:

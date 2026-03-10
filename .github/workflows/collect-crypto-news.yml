@@ -2,7 +2,7 @@ name: Collect Crypto News
 
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 0,4,8,12,16,20 * * *'  # KST 09:00, 13:00, 17:00, 21:00, 01:00, 05:00 (every 4h, crypto peak hours)
   workflow_dispatch:
 
 permissions:

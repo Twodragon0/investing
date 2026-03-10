@@ -2,7 +2,7 @@ name: Collect Stock News
 
 on:
   schedule:
-    - cron: '30 */6 * * *'
+    - cron: '30 0,6,12,14,18 * * *'  # KST 09:30, 15:30, 21:30, 23:30, 03:30 (KR open + US pre-market + US market)
   workflow_dispatch:
 
 permissions:

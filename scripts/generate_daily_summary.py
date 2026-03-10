@@ -23,6 +23,7 @@ from typing import Any, Dict, List, Optional, Tuple
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.config import SITE_URL, get_kst_timezone, setup_logging
+from common.entity_extractor import extract_market_signals, group_related_items
 from common.markdown_utils import _normalize_url, markdown_table, smart_truncate
 from common.post_generator import POSTS_DIR
 from common.summarizer import ThemeSummarizer
@@ -1047,6 +1048,145 @@ def _to_theme_payload(
     return payload[:5]
 
 
+def _build_market_signal_section(all_news_items: List[Dict[str, Any]]) -> List[str]:
+    """Build '시장 시그널 분석' section using entity extraction.
+
+    Analyzes all collected news items and returns markdown lines for the section.
+    Returns an empty list if there are no items or no signals found.
+    """
+    if not all_news_items:
+        return []
+
+    try:
+        signals = extract_market_signals(all_news_items)
+    except Exception as e:
+        logger.warning("Failed to extract market signals: %s", e)
+        return []
+
+    dominant_themes = signals.get("dominant_themes", [])
+    entity_freq = signals.get("entity_frequencies", {})
+    total = signals.get("total_items", len(all_news_items))
+
+    # Need at least some signal data to render the section
+    if not dominant_themes and not any(entity_freq.values()):
+        return []
+
+    parts: List[str] = []
+    parts.append("## 시장 시그널 분석\n")
+
+    # --- 주요 테마 ---
+    if dominant_themes:
+        parts.append("### 주요 테마\n")
+        theme_rows = []
+        for theme, count in dominant_themes[:5]:
+            pct = round(count / total * 100) if total else 0
+            theme_rows.append([theme, count, f"{pct}%"])
+        parts.append(
+            markdown_table(
+                ["테마", "언급 횟수", "비중"],
+                theme_rows,
+                aligns=["left", "right", "right"],
+            )
+        )
+        parts.append("")
+
+    # --- 핫 엔티티 ---
+    crypto_freq = entity_freq.get("crypto", {})
+    stock_freq = entity_freq.get("stock", {})
+    person_freq = entity_freq.get("person", {})
+
+    # Canonical name → display label maps (from entity_extractor internals)
+    _CRYPTO_LABELS = {
+        "bitcoin": "비트코인(BTC)",
+        "ethereum": "이더리움(ETH)",
+        "xrp": "XRP",
+        "solana": "솔라나(SOL)",
+        "dogecoin": "도지코인(DOGE)",
+        "cardano": "에이다(ADA)",
+        "bnb": "BNB",
+        "avalanche": "아발란체(AVAX)",
+        "polygon": "폴리곤(MATIC)",
+        "chainlink": "체인링크(LINK)",
+    }
+    _STOCK_LABELS = {
+        "nvidia": "엔비디아(NVDA)",
+        "tesla": "테슬라(TSLA)",
+        "apple": "애플(AAPL)",
+        "microsoft": "마이크로소프트(MSFT)",
+        "amazon": "아마존(AMZN)",
+        "google": "구글(GOOGL)",
+        "meta": "메타(META)",
+        "samsung": "삼성전자",
+        "sk_hynix": "SK하이닉스",
+    }
+    _PERSON_LABELS = {
+        "trump": "트럼프",
+        "powell": "파월",
+        "yellen": "옐런",
+        "gensler": "겐슬러",
+        "musk": "머스크",
+        "buffett": "버핏",
+    }
+
+    entity_lines = []
+
+    if crypto_freq:
+        top_crypto = list(crypto_freq.items())[:5]
+        crypto_str = ", ".join(f"{_CRYPTO_LABELS.get(name, name)} {cnt}회" for name, cnt in top_crypto)
+        entity_lines.append(f"- 🪙 **암호화폐**: {crypto_str}")
+
+    if stock_freq:
+        top_stock = list(stock_freq.items())[:5]
+        stock_str = ", ".join(f"{_STOCK_LABELS.get(name, name)} {cnt}회" for name, cnt in top_stock)
+        entity_lines.append(f"- 📈 **주식**: {stock_str}")
+
+    if person_freq:
+        top_person = list(person_freq.items())[:5]
+        person_str = ", ".join(f"{_PERSON_LABELS.get(name, name)} {cnt}회" for name, cnt in top_person)
+        entity_lines.append(f"- 👤 **인물**: {person_str}")
+
+    if entity_lines:
+        parts.append("### 핫 엔티티\n")
+        parts.extend(entity_lines)
+        parts.append("")
+
+    # --- 연관 뉴스 클러스터 ---
+    try:
+        related_groups = group_related_items(all_news_items, title_key="title")
+    except Exception as e:
+        logger.warning("Failed to group related items: %s", e)
+        related_groups = {}
+
+    # related_groups is dict[label -> list[item]]
+    if related_groups:
+        parts.append("### 연관 뉴스 클러스터\n")
+        rendered = 0
+        for label, group_items in list(related_groups.items())[:3]:
+            if label == "기타 뉴스":
+                continue
+            count = len(group_items)
+            parts.append(f"**{label}** ({count}건 연관)")
+            seen_cluster: set = set()
+            for item in group_items[:4]:
+                raw_title = item.get("title", "")
+                # Strip markdown link syntax to plain text
+                plain = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", raw_title).strip()
+                plain = plain.replace("**", "").strip()
+                if not plain or len(plain) < 5:
+                    plain = raw_title
+                norm = re.sub(r"[^가-힣a-z0-9]", "", plain.lower())
+                if norm in seen_cluster:
+                    continue
+                seen_cluster.add(norm)
+                parts.append(f"- {smart_truncate(plain, 80)}")
+            parts.append("")
+            rendered += 1
+            if rendered >= 3:
+                break
+
+    return parts
+
+
 def _render_generated_image(filename: str, alt: str) -> Optional[str]:
     image_path = os.path.join(POSTS_DIR, "..", "assets", "images", "generated", filename)
     if not os.path.exists(image_path):
@@ -1954,6 +2094,14 @@ def main():
                 aligns=["left", "center", "left"],
             )
         )
+
+    # ═══════════════════════════════════════
+    # 9. MARKET SIGNAL ANALYSIS
+    # ═══════════════════════════════════════
+    signal_section = _build_market_signal_section(all_news_items)
+    if signal_section:
+        content_parts.append("---\n")
+        content_parts.extend(signal_section)
 
     content_parts.append("\n---\n")
     content_parts.append("*본 요약은 자동 수집된 뉴스 데이터를 기반으로 작성되었으며, 투자 조언이 아닙니다.*")
