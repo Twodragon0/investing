@@ -263,6 +263,46 @@ def _build_fallback_description(title: str, category: str, tags: Optional[List[s
     return smart_truncate(desc, 160)
 
 
+def _clean_description(desc: str) -> str:
+    """Clean and optimize description for SEO.
+
+    - Removes HTML tags and markdown formatting
+    - Fixes encoding artifacts (e.g. "612개월" → "6~12개월")
+    - Truncates to 160 chars at a natural sentence boundary
+    - Pads to at least 80 chars if too short
+    """
+    # Fix concatenated number artifacts (e.g. "612개월" → "6~12개월")
+    desc = re.sub(
+        r"(\d)(\d{1,2})(개월|년|일|시간)",
+        lambda m: m.group(1) + "~" + m.group(2) + m.group(3),
+        desc,
+    )
+    # Remove HTML tags
+    desc = re.sub(r"<[^>]+>", "", desc)
+    # Remove markdown links but keep link text
+    desc = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", desc)
+    # Remove markdown formatting characters
+    desc = re.sub(r"[*_`#~]", "", desc)
+    # Collapse multiple whitespace
+    desc = re.sub(r"\s+", " ", desc).strip()
+    # Truncate to 160 chars at sentence boundary
+    if len(desc) > 160:
+        cut = -1
+        for end in ["니다.", "습니다.", "세요.", "다.", "요."]:
+            idx = desc.rfind(end, 0, 160)
+            if idx > 80:
+                cut = idx + len(end)
+                break
+        if cut > 0:
+            desc = desc[:cut]
+        else:
+            desc = desc[:157] + "..."
+    # Pad if too short
+    if len(desc) < 80 and desc:
+        desc = desc.rstrip(".") + " - Investing Dragon 자동 수집 분석 리포트."
+    return desc
+
+
 class PostGenerator:
     """Generate Jekyll markdown posts from collected news data."""
 
@@ -351,9 +391,11 @@ class PostGenerator:
         # description 자동 생성 (SEO용, 80-160자)
         if not (extra_frontmatter and "description" in extra_frontmatter):
             desc_text = _extract_description(content)
+            desc_text = _clean_description(desc_text)
             if not desc_text or len(desc_text) < 80:
                 # Fallback: combine title + category context for SEO
                 desc_text = _build_fallback_description(title, self.category, tags)
+                desc_text = _clean_description(desc_text)
             if desc_text and len(desc_text) >= 80:
                 safe_desc = desc_text.replace('"', "'")
                 frontmatter_lines.append(f'description: "{safe_desc}"')

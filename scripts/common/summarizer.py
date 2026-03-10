@@ -85,20 +85,20 @@ def _generate_title_based_desc(title: str, theme_key: str) -> str:
 
     # 테마별 분석적 컨텍스트 (짧은 맥락 설명)
     _THEME_CONTEXT = {
-        "bitcoin": "비트코인 시장에 영향을 줄 수 있는 변화입니다.",
-        "ethereum": "이더리움 생태계 발전에 관련된 소식입니다.",
-        "altcoin": "알트코인 시장 흐름에 영향을 미칠 수 있습니다.",
-        "regulation": "규제 환경 변화에 주목할 필요가 있습니다.",
-        "price": "가격 동향과 투자 심리에 직접적 영향이 있습니다.",
-        "price_market": "가격 동향과 투자 심리에 직접적 영향이 있습니다.",
-        "defi": "디파이 생태계의 성장과 리스크에 관한 내용입니다.",
-        "nft": "디지털 자산과 Web3 생태계 관련 내용입니다.",
-        "nft_web3": "디지털 자산과 Web3 생태계 관련 내용입니다.",
-        "exchange": "거래소 운영 환경 변화와 관련된 소식입니다.",
-        "macro": "거시경제 흐름이 자산 시장에 미치는 영향입니다.",
-        "ai_tech": "AI·기술 혁신이 투자 환경에 미치는 영향입니다.",
-        "politics": "정책 변화가 금융시장에 미치는 파급 효과입니다.",
-        "security": "보안 이슈가 시장 신뢰도에 미치는 영향입니다.",
+        "bitcoin": "비트코인 시장 심리와 가격 흐름에 주목하세요.",
+        "ethereum": "이더리움 생태계의 기술적 발전을 반영합니다.",
+        "altcoin": "알트코인 순환매 여부를 판단하는 데 참고하세요.",
+        "regulation": "규제 방향이 시장 구조를 바꿀 수 있습니다.",
+        "price": "단기 트레이딩 관점에서 주요 변동 요인입니다.",
+        "price_market": "시장 모멘텀과 투자 심리를 반영하는 핵심 지표입니다.",
+        "defi": "탈중앙 금융 프로토콜의 TVL과 수익률에 주목하세요.",
+        "nft": "디지털 자산 시장의 문화적·경제적 트렌드를 보여줍니다.",
+        "nft_web3": "Web3 생태계의 채택률과 사용자 경험 변화를 주시하세요.",
+        "exchange": "거래소 정책 변화는 유동성과 접근성에 직결됩니다.",
+        "macro": "거시경제 흐름이 위험자산 선호도를 좌우합니다.",
+        "ai_tech": "AI 기술 혁신이 산업 전반의 투자 기회를 창출합니다.",
+        "politics": "정치적 결정이 시장 불확실성의 핵심 변수로 작용합니다.",
+        "security": "보안 사고는 시장 신뢰도와 자산 가격에 즉각적 영향을 줍니다.",
     }
 
     # Extract key entities from title for specificity
@@ -182,6 +182,14 @@ _GENERIC_DESC_PATTERNS = [
     re.compile(r"^FORM\s+\d", re.I),
     re.compile(r"^access denied", re.I),
     re.compile(r"^403 forbidden", re.I),
+    re.compile(r"^Your (?:privacy|cookie)", re.I),
+    re.compile(r"^We use cookies", re.I),
+    re.compile(r"^Subscribe to", re.I),
+    re.compile(r"^Sign up (?:for|to)", re.I),
+    re.compile(r"^JavaScript (?:is )?(?:required|must)", re.I),
+    re.compile(r"^This (?:page|site|website) (?:uses|requires)", re.I),
+    re.compile(r"^Loading\.\.\.", re.I),
+    re.compile(r"에서 확인하세요\.?\s*$"),
 ]
 
 
@@ -197,7 +205,11 @@ _NOISE_TITLE_RE = re.compile(
     r"(?:10-[KQ](?:\s|$))|"  # SEC form names
     r"(?:Form\s+\d)|"  # SEC form numbers
     r"(?:SEC\.gov\s*-?\s*SEC\.gov)|"  # SEC.gov self-links
-    r"(?:EDGAR\s)"  # EDGAR system pages
+    r"(?:EDGAR\s)|"  # EDGAR system pages
+    r"(?:Advertisement\s)|"  # Ad pages
+    r"(?:Sponsored\s)|"  # Sponsored content
+    r"(?:Subscribe\s)|"  # Subscription pages
+    r"(?:Login\s)"  # Login pages
     r")",
     re.IGNORECASE,
 )

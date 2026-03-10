@@ -185,13 +185,13 @@ COLORS = {
     "bg_inner": "#161d27",
     "bg_header": "#0f1923",
     # Text hierarchy
-    "text": "#ecf0f8",
-    "text_secondary": "#7d8a9a",
+    "text": "#f0f4fc",
+    "text_secondary": "#8b9bb0",
     "text_muted": "#4a5568",
     # Positive / Negative -- higher contrast
-    "green": "#00e676",
+    "green": "#00f07a",
     "green_dim": "#0b3d24",
-    "red": "#ff4757",
+    "red": "#ff5263",
     "red_dim": "#3d1420",
     # Accent colors
     "blue": "#4da6ff",
@@ -217,12 +217,13 @@ COLORS = {
 _DS = {
     "pad_outer": 0.5,  # tight_layout outer padding
     "pad_title": 15,  # title top padding (set_title pad)
-    "dpi": 180,
+    "dpi": 200,
     "footer_size": 8,
-    "title_size": 18,
+    "title_size": 20,
     "subtitle_size": 10,
     "header_size": 9,
-    "body_size": 11,
+    "body_size": 12,
+    "label_size": 10,
     "small_size": 9,
     "row_height": 0.62,  # unified row height
     "line_spacing": 0.55,  # vertical spacing between rows
@@ -358,7 +359,7 @@ def _save_and_close(fig, filepath, *, bg=None):
         facecolor=bg_color,
         edgecolor="none",
         bbox_inches="tight",
-        pad_inches=0.1,
+        pad_inches=0.15,
     )
     plt.close(fig)
 
@@ -386,9 +387,9 @@ def generate_top_coins_card(
     if not coins:
         return None
 
-    display_coins = coins[:10]
+    display_coins = coins[:15]
     row_h = _DS["row_height"]
-    fig_height = 2.4 + len(display_coins) * row_h
+    fig_height = 2.6 + len(display_coins) * row_h
 
     fig, ax = plt.subplots(figsize=(12, fig_height))
     fig.patch.set_facecolor(COLORS["bg"])
@@ -654,7 +655,7 @@ def generate_fear_greed_gauge(
 
     _ensure_dir()
 
-    fig, ax = plt.subplots(figsize=(8, 6.0))
+    fig, ax = plt.subplots(figsize=(8, 6.5))
     fig.patch.set_facecolor(COLORS["bg"])
     ax.set_facecolor(COLORS["bg"])
     ax.set_xlim(-1.6, 1.6)
@@ -796,7 +797,7 @@ def generate_fear_greed_gauge(
         str(value),
         ha="center",
         va="center",
-        fontsize=44,
+        fontsize=48,
         fontweight="bold",
         color=val_color,
         fontfamily=_FONT_FAMILY,
@@ -818,7 +819,7 @@ def generate_fear_greed_gauge(
         classification,
         ha="center",
         va="center",
-        fontsize=14,
+        fontsize=16,
         fontweight="bold",
         color=COLORS["text_secondary"],
         fontfamily=_FONT_FAMILY,
@@ -972,7 +973,7 @@ def generate_market_heatmap(
             _mcap = quote.get("market_cap", 0) or 0
 
         # Dynamic background color scaling with change magnitude
-        bg_color = _heatmap_bg_color(change, extreme=7.0)
+        bg_color = _heatmap_bg_color(change, extreme=5.0)
 
         # Cell border highlight for large movers
         edge_color = COLORS["border"]
@@ -1589,7 +1590,7 @@ def generate_sector_heatmap(
     cols = 4 if count > 8 else 3
     rows = (count + cols - 1) // cols
 
-    fig, ax = plt.subplots(figsize=(14, 4.2 + rows * 1.8))
+    fig, ax = plt.subplots(figsize=(14, 4.5 + rows * 2.0))
     fig.patch.set_facecolor(COLORS["bg"])
     ax.set_facecolor(COLORS["bg"])
     ax.axis("off")
