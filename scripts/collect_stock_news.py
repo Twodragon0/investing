@@ -18,6 +18,7 @@ import requests
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common.bettafish_analyzer import BettaFishAnalyzer
 from common.collector_metrics import log_collection_summary
 from common.config import REQUEST_TIMEOUT, get_env, get_ssl_verify, setup_logging
 from common.dedup import DedupEngine
@@ -25,8 +26,10 @@ from common.enrichment import _STOCK_SOURCE_CONTEXT, enrich_items
 from common.markdown_utils import (
     html_reference_details,
 )
+from common.mindspider import MindSpider
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
+from common.signal_composer import SignalComposer
 from common.summarizer import ThemeSummarizer
 from common.utils import detect_language, request_with_retry
 
@@ -714,6 +717,86 @@ def main():
         "투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
     )
     content_parts.extend(insight_lines)
+
+    # ── MiroFish-inspired Market Outlook ──
+    try:
+        signals: dict = {}
+
+        # Momentum from Korean market and Alpha Vantage ETF data
+        momentum: dict = {}
+        if kospi:
+            try:
+                kospi_pct = float(kospi["change_pct"].replace("%", "").replace("+", ""))
+                momentum["sp500_5d"] = kospi_pct  # use KOSPI as proxy for momentum signal
+            except (ValueError, AttributeError):
+                pass
+        if alpha_vantage_rows:
+            etf_pcts = []
+            for _item in alpha_vantage_rows:
+                _desc = _item.get("description", "")
+                if "(" in _desc and _desc.endswith(")"):
+                    try:
+                        _chg = _desc.rsplit("(", 1)[1].rstrip(")")
+                        etf_pcts.append(float(_chg.replace("%", "").replace("+", "")))
+                    except (ValueError, IndexError):
+                        pass
+            if etf_pcts:
+                import statistics
+
+                momentum["sp500_5d"] = statistics.mean(etf_pcts)
+        if momentum:
+            signals["momentum"] = momentum
+
+        # Sentiment from collected news titles
+        if all_items:
+            _bullish_kws = {"상승", "강세", "rally", "surge", "bull", "급등", "호재", "반등"}
+            _bearish_kws = {"하락", "약세", "crash", "bear", "dump", "급락", "폭락", "위기"}
+            _positive = sum(1 for _a in all_items if any(kw in _a.get("title", "").lower() for kw in _bullish_kws))
+            _negative = sum(1 for _a in all_items if any(kw in _a.get("title", "").lower() for kw in _bearish_kws))
+            _total = _positive + _negative
+            _score = (_positive - _negative) / _total if _total > 0 else 0.0
+            signals["sentiment"] = {"score": _score, "positive": _positive, "negative": _negative}
+
+        if signals:
+            composer = SignalComposer()
+            result = composer.compose_signals(signals)
+
+            content_parts.append("\n" + composer.generate_outlook_markdown(result))
+
+            # MindSpider topic analysis
+            if all_items:
+                spider = MindSpider()
+                news_items_for_spider = [
+                    {
+                        "title": _a.get("title", ""),
+                        "description": _a.get("description", ""),
+                        "source": _a.get("source", ""),
+                        "category": "stock",
+                        "date": now.strftime("%Y-%m-%d"),
+                    }
+                    for _a in all_items
+                    if _a.get("title")
+                ]
+                if news_items_for_spider:
+                    clusters = spider.cluster_topics(news_items_for_spider, max_topics=3)
+                    topic_md = spider.generate_topic_summary(clusters)
+                    if topic_md:
+                        content_parts.append("\n" + topic_md)
+
+                    # BettaFish brief outlook
+                    extracted_keywords = spider.extract_keywords(news_items_for_spider, top_n=10)
+                    analyzer = BettaFishAnalyzer()
+                    bf_report = analyzer.analyze(
+                        composite_result=result,
+                        topic_clusters=clusters,
+                        keywords=extracted_keywords,
+                    )
+                    brief = analyzer.generate_brief_outlook(bf_report)
+                    if brief:
+                        content_parts.append("\n### 멀티 관점 요약\n")
+                        content_parts.append(brief)
+    except Exception as exc:
+        logger.warning("시장 전망 생성 실패: %s", exc)
 
     content_parts.append("\n---\n")
 

@@ -20,12 +20,14 @@ import requests
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common.bettafish_analyzer import BettaFishAnalyzer
 from common.collector_metrics import log_collection_summary
 from common.config import BROWSER_USER_AGENT, REQUEST_TIMEOUT, get_env, get_ssl_verify, setup_logging
 from common.dedup import DedupEngine
 from common.markdown_utils import html_reference_details
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feeds_concurrent
+from common.signal_composer import SignalComposer
 from common.utils import request_with_retry
 
 logger = setup_logging("collect_market_indicators")
@@ -623,6 +625,54 @@ def build_post_content(
         parts.append("| 달러 강세 | N/A | — |")
 
     parts.append("")
+
+    # ── 시장 전망 분석 (SignalComposer + BettaFish) ────────────────────────────
+    try:
+        signals = {}
+
+        # Fear & Greed
+        if cnn_fg:
+            signals["fear_greed"] = {"value": cnn_fg.get("score", 50), "label": cnn_fg.get("rating", "")}
+
+        # VIX
+        vix = market_data.get("VIX")
+        if vix:
+            vix_val = vix.get("price", 20)
+            vix_change = vix.get("change_pct", 0)
+            signals["vix"] = {
+                "value": vix_val,
+                "trend": "rising" if vix_change > 0 else ("falling" if vix_change < 0 else "stable"),
+            }
+
+        # Macro
+        macro: Dict[str, Any] = {}
+        dxy = market_data.get("DXY")
+        if dxy:
+            macro["dxy"] = dxy.get("price", 100)
+        if fred_data:
+            us10y = fred_data.get("GS10", {}).get("value")
+            if us10y:
+                macro["us10y"] = us10y
+            fed_rate = fred_data.get("FEDFUNDS", {}).get("value")
+            if fed_rate:
+                macro["fed_rate"] = fed_rate
+        if macro:
+            signals["macro"] = macro
+
+        if signals:
+            composer = SignalComposer()
+            result = composer.compose_signals(signals)
+            outlook_md = composer.generate_outlook_markdown(result)
+            parts.append("\n" + outlook_md + "\n")
+
+            analyzer = BettaFishAnalyzer()
+            report = analyzer.analyze(composite_result=result, macro_data=macro if macro else None)
+            brief = analyzer.generate_brief_outlook(report)
+            if brief:
+                parts.append("\n### 멀티 관점 요약\n")
+                parts.append(brief + "\n")
+    except Exception as exc:
+        logger.warning("시장 전망 분석 생성 실패 (기존 기능에 영향 없음): %s", exc)
 
     # ── Disclaimer ────────────────────────────────────────────────────────────
     parts.append("\n---\n")

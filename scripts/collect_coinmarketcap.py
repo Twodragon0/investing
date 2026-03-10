@@ -36,6 +36,15 @@ from common.post_generator import PostGenerator
 from common.utils import request_with_retry
 
 try:
+    from common.bettafish_analyzer import BettaFishAnalyzer
+    from common.mindspider import MindSpider
+    from common.signal_composer import SignalComposer
+except ImportError:
+    SignalComposer = None  # type: ignore[assignment,misc]
+    MindSpider = None  # type: ignore[assignment,misc]
+    BettaFishAnalyzer = None  # type: ignore[assignment,misc]
+
+try:
     from common.browser import BrowserSession, is_playwright_available
 except ImportError:
     BrowserSession = None  # type: ignore[assignment,misc]
@@ -944,6 +953,113 @@ def main():
         insight = generate_market_insight(global_data, top_coins, fear_greed)
         if insight:
             sections["시장 인사이트"] = insight
+
+        # ── MiroFish-inspired Market Outlook ──
+        try:
+            outlook_parts = []
+            signals = {}
+
+            # Fear & Greed signal
+            if fear_greed:
+                fg_val = fear_greed.get("value", 50)
+                signals["fear_greed"] = {"value": fg_val, "label": fear_greed.get("classification", "")}
+
+            # Momentum from top coins
+            if top_coins:
+                btc = next((c for c in top_coins if (c.get("symbol") or "").upper() == "BTC"), None)
+                eth = next((c for c in top_coins if (c.get("symbol") or "").upper() == "ETH"), None)
+                momentum = {}
+                if btc:
+                    if cmc_source == "coingecko":
+                        momentum["btc_24h"] = btc.get("price_change_percentage_24h", 0) or 0
+                        momentum["btc_7d"] = btc.get("price_change_percentage_7d_in_currency", 0) or 0
+                    else:
+                        q = btc.get("quote", {}).get("USD", {})
+                        momentum["btc_24h"] = q.get("percent_change_24h", 0) or 0
+                        momentum["btc_7d"] = q.get("percent_change_7d", 0) or 0
+                if eth:
+                    if cmc_source == "coingecko":
+                        momentum["eth_24h"] = eth.get("price_change_percentage_24h", 0) or 0
+                        momentum["eth_7d"] = eth.get("price_change_percentage_7d_in_currency", 0) or 0
+                    else:
+                        q = eth.get("quote", {}).get("USD", {})
+                        momentum["eth_24h"] = q.get("percent_change_24h", 0) or 0
+                        momentum["eth_7d"] = q.get("percent_change_7d", 0) or 0
+                if momentum:
+                    signals["momentum"] = momentum
+
+            # Build news-like items from top coins for MindSpider sentiment analysis
+            all_news = []
+            if top_coins:
+                for coin in top_coins[:20]:
+                    if cmc_source == "coingecko":
+                        coin_name = coin.get("name", "")
+                        coin_sym = coin.get("symbol", "").upper()
+                        change = coin.get("price_change_percentage_24h", 0) or 0
+                    else:
+                        coin_name = coin.get("name", "")
+                        coin_sym = coin.get("symbol", "")
+                        change = coin.get("quote", {}).get("USD", {}).get("percent_change_24h", 0) or 0
+                    if change > 3:
+                        title = f"{coin_name} ({coin_sym}) 상승 {change:+.1f}% 강세"
+                        desc = f"rally surge 상승 강세 {coin_sym}"
+                    elif change < -3:
+                        title = f"{coin_name} ({coin_sym}) 하락 {change:+.1f}% 약세"
+                        desc = f"drop fall 하락 약세 {coin_sym}"
+                    else:
+                        title = f"{coin_name} ({coin_sym}) {change:+.1f}% 변동"
+                        desc = f"{coin_sym} neutral"
+                    all_news.append(
+                        {
+                            "title": title,
+                            "description": desc,
+                            "source": source_name,
+                            "category": "crypto",
+                            "date": now.strftime("%Y-%m-%d"),
+                        }
+                    )
+
+            # Sentiment signal from news-like items
+            if all_news:
+                positive = sum(
+                    1
+                    for n in all_news
+                    if any(
+                        kw in (n.get("title", "") + n.get("description", "")).lower()
+                        for kw in ["상승", "돌파", "강세", "rally", "surge", "bull"]
+                    )
+                )
+                negative = sum(
+                    1
+                    for n in all_news
+                    if any(
+                        kw in (n.get("title", "") + n.get("description", "")).lower()
+                        for kw in ["하락", "급락", "약세", "crash", "dump", "bear"]
+                    )
+                )
+                total = positive + negative
+                if total > 0:
+                    score = (positive - negative) / total
+                else:
+                    score = 0.0
+                signals["sentiment"] = {"score": score, "positive": positive, "negative": negative}
+
+            if signals and SignalComposer is not None:
+                composer = SignalComposer()
+                result = composer.compose_signals(signals)
+                outlook_parts.append(composer.generate_outlook_markdown(result))
+
+                # MindSpider topic extraction
+                if all_news and MindSpider is not None:
+                    spider = MindSpider()
+                    topic_summary = spider.generate_topic_summary(spider.cluster_topics(all_news, max_topics=3))
+                    if topic_summary:
+                        outlook_parts.append("\n" + topic_summary)
+
+            if outlook_parts:
+                sections["시장 전망"] = "\n\n".join(outlook_parts)
+        except Exception as exc:
+            logger.warning("시장 전망 생성 실패: %s", exc)
 
         # 3. Global market overview
         sections["글로벌 암호화폐 시장 현황"] = format_global_market(global_data)
