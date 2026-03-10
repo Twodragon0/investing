@@ -1,0 +1,9 @@
+# Merge strategies for auto-generated files
+# State files: always accept the latest version (avoid dedup conflicts)
+_state/*.json merge=ours
+
+# Generated images: binary files, accept ours on conflict
+assets/images/generated/*.png binary
+
+# Posts: text files with standard merge
+_posts/*.md merge=union

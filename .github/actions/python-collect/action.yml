@@ -110,14 +110,29 @@ runs:
               echo "Rebase succeeded, retrying push..."
               continue
             fi
-            # Rebase failed (conflict), fall back to merge
-            echo "Rebase failed, falling back to merge strategy..."
+            # Rebase failed (conflict), resolve and retry
+            echo "Rebase failed, resolving conflicts..."
             git rebase --abort 2>/dev/null || true
-            if git pull --no-rebase -X ours origin main 2>&1; then
-              echo "Merge succeeded, retrying push..."
-              continue
-            fi
-            echo "Merge also failed on attempt $i"
+            # For state files, always accept remote (latest dedup state)
+            git pull --no-rebase -X theirs origin main 2>&1 || {
+              # If still conflicting, force-resolve remaining conflicts
+              for cf in $(git diff --name-only --diff-filter=U 2>/dev/null); do
+                case "$cf" in
+                  _state/*|*.json)
+                    echo "Resolving $cf with remote version (latest state)"
+                    git checkout --theirs "$cf" && git add "$cf" ;;
+                  _posts/*|assets/*)
+                    echo "Resolving $cf with local version (our generation)"
+                    git checkout --ours "$cf" && git add "$cf" ;;
+                  *)
+                    echo "Resolving $cf with local version"
+                    git checkout --ours "$cf" && git add "$cf" ;;
+                esac
+              done
+              git -c core.editor=true merge --continue 2>/dev/null || \
+                git commit --no-edit 2>/dev/null || true
+            }
+            echo "Conflict resolved, retrying push..."
           done
           echo "::error::All $MAX_RETRIES push attempts failed"
           exit 1
