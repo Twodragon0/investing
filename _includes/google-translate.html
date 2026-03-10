@@ -1,275 +1,56 @@
-<!-- Custom Language Selector with In-Page Translation -->
-<script type="text/javascript">
+<!-- Google Translate Widget SDK Integration -->
+<button class="lang-toggle" id="lang-toggle" aria-label="언어 변경" aria-expanded="false" aria-controls="lang-dropdown" type="button">
+  <svg class="globe-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+    <circle cx="12" cy="12" r="10"/>
+    <line x1="2" y1="12" x2="22" y2="12"/>
+    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+  </svg>
+  <span class="lang-code notranslate" id="current-lang" translate="no">KO</span>
+</button>
+<div class="lang-dropdown-overlay" id="lang-dropdown-overlay" aria-hidden="true"></div>
+<div class="lang-dropdown notranslate" id="lang-dropdown" translate="no" role="menu" aria-label="언어 선택">
+  <div class="lang-ai-badge" aria-hidden="true">Google Translate</div>
+  <button class="lang-option" data-lang="ko" title="한국어" role="menuitem">
+    <span class="lang-flag">🇰🇷</span>
+    <span class="lang-name">한국어</span>
+  </button>
+  <button class="lang-option" data-lang="en" title="English" role="menuitem">
+    <span class="lang-flag">🇺🇸</span>
+    <span class="lang-name">English</span>
+  </button>
+  <button class="lang-option" data-lang="ja" title="日本語" role="menuitem">
+    <span class="lang-flag">🇯🇵</span>
+    <span class="lang-name">日本語</span>
+  </button>
+  <button class="lang-option" data-lang="zh-CN" title="简体中文" role="menuitem">
+    <span class="lang-flag">🇨🇳</span>
+    <span class="lang-name">简体中文</span>
+  </button>
+  <button class="lang-option" data-lang="es" title="Español" role="menuitem">
+    <span class="lang-flag">🇪🇸</span>
+    <span class="lang-name">Español</span>
+  </button>
+</div>
+<!-- Hidden Google Translate Element -->
+<div id="google_translate_element" style="display:none;"></div>
+<!-- Google Translate: lazy-loaded on first interaction or non-Korean preference -->
+<script>
 (function() {
-  'use strict';
-
-  var LANGS = {
-    ko: { name: '한국어', flag: '🇰🇷' },
-    en: { name: 'English', flag: '🇺🇸' },
-    ja: { name: '日本語', flag: '🇯🇵' },
-    'zh-CN': { name: '中文', flag: '🇨🇳' },
-    es: { name: 'Español', flag: '🇪🇸' }
+  var loaded = false;
+  var toggle = document.getElementById('lang-toggle');
+  if (!toggle) return;
+  var loadTranslate = function() {
+    if (loaded) return;
+    loaded = true;
+    var s = document.createElement('script');
+    s.src = '{{ "/assets/js/google-translate.js" | relative_url }}?v={{ site.time | date: "%Y%m%d%H%M" }}';
+    s.defer = true;
+    document.body.appendChild(s);
   };
-
-  var CACHE_KEY = 'translate_cache_v1';
-  var translating = false;
-
-  function getCurrentLang() {
-    try { return localStorage.getItem('preferredLang') || 'ko'; } catch(e) { return 'ko'; }
-  }
-
-  function setLang(lang) {
-    try { localStorage.setItem('preferredLang', lang); } catch(e) {}
-  }
-
-  function applyI18nStrings(lang) {
-    if (typeof window.__t !== 'function') return;
-    document.querySelectorAll('[data-i18n]').forEach(function(el) {
-      el.textContent = window.__t(el.getAttribute('data-i18n'));
-    });
-    document.querySelectorAll('[data-i18n-aria]').forEach(function(el) {
-      el.setAttribute('aria-label', window.__t(el.getAttribute('data-i18n-aria')));
-    });
-    document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
-      el.setAttribute('placeholder', window.__t(el.getAttribute('data-i18n-placeholder')));
-    });
-  }
-
-  // Get translation cache from sessionStorage
-  function getCache() {
-    try {
-      return JSON.parse(sessionStorage.getItem(CACHE_KEY)) || {};
-    } catch(e) { return {}; }
-  }
-
-  function setCache(cache) {
-    try { sessionStorage.setItem(CACHE_KEY, JSON.stringify(cache)); } catch(e) {}
-  }
-
-  // Translate text via Google Translate API endpoint
-  function translateText(text, targetLang) {
-    var cache = getCache();
-    var cacheKey = targetLang + ':' + text.substring(0, 200);
-    if (cache[cacheKey]) return Promise.resolve(cache[cacheKey]);
-
-    var apiLang = targetLang === 'zh-CN' ? 'zh-CN' : targetLang;
-    var url = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=ko&tl=' +
-      encodeURIComponent(apiLang) + '&dt=t&q=' + encodeURIComponent(text);
-
-    return fetch(url)
-      .then(function(r) { return r.json(); })
-      .then(function(data) {
-        if (!data || !data[0]) return text;
-        var result = '';
-        data[0].forEach(function(seg) {
-          if (seg && seg[0]) result += seg[0];
-        });
-        // Cache the result
-        cache[cacheKey] = result;
-        setCache(cache);
-        return result;
-      })
-      .catch(function() { return text; });
-  }
-
-  // Batch translate: split large text into chunks
-  function translateBatch(texts, targetLang) {
-    var promises = texts.map(function(t) {
-      if (!t.text || !t.text.trim()) return Promise.resolve({ el: t.el, attr: t.attr, text: t.text });
-      return translateText(t.text, targetLang).then(function(translated) {
-        return { el: t.el, attr: t.attr, text: translated };
-      });
-    });
-    return Promise.all(promises);
-  }
-
-  // Collect translatable text nodes from the page
-  function getTranslatableElements() {
-    var elements = [];
-    var selectors = [
-      'main h1, main h2, main h3, main h4',
-      'main p',
-      'main li',
-      'main td, main th',
-      'main .post-card-title',
-      'main .post-card-excerpt',
-      'main .post-excerpt',
-      'main figcaption',
-      'main blockquote',
-      'main .post-content span',
-      '.post-title',
-      '.post-meta-text'
-    ];
-
-    document.querySelectorAll(selectors.join(',')).forEach(function(el) {
-      // Skip elements with notranslate class or translate="no"
-      if (el.closest('.notranslate') || el.getAttribute('translate') === 'no') return;
-      // Skip code blocks
-      if (el.closest('pre') || el.closest('code')) return;
-      // Skip empty elements
-      var text = el.textContent.trim();
-      if (!text || text.length < 2) return;
-      // Store original text
-      if (!el.getAttribute('data-original-text')) {
-        el.setAttribute('data-original-text', el.textContent);
-      }
-      elements.push({ el: el, attr: 'textContent', text: text });
-    });
-
-    return elements;
-  }
-
-  // Show/hide translation loading indicator
-  function showLoading(show) {
-    var indicator = document.getElementById('translate-loading');
-    if (!indicator && show) {
-      indicator = document.createElement('div');
-      indicator.id = 'translate-loading';
-      indicator.className = 'translate-loading';
-      indicator.innerHTML = '<div class="translate-loading-spinner"></div><span>Translating...</span>';
-      document.body.appendChild(indicator);
-    }
-    if (indicator) {
-      indicator.style.display = show ? 'flex' : 'none';
-    }
-  }
-
-  // Translate page content
-  function translatePage(targetLang) {
-    if (translating) return;
-    if (targetLang === 'ko') {
-      // Restore original text
-      document.querySelectorAll('[data-original-text]').forEach(function(el) {
-        el.textContent = el.getAttribute('data-original-text');
-      });
-      return;
-    }
-
-    translating = true;
-    showLoading(true);
-
-    var elements = getTranslatableElements();
-
-    // Translate in batches of 5 to avoid overwhelming the API
-    var batchSize = 5;
-    var batches = [];
-    for (var i = 0; i < elements.length; i += batchSize) {
-      batches.push(elements.slice(i, i + batchSize));
-    }
-
-    var chain = Promise.resolve();
-    batches.forEach(function(batch) {
-      chain = chain.then(function() {
-        return translateBatch(batch, targetLang).then(function(results) {
-          results.forEach(function(r) {
-            if (r.el && r.text) {
-              r.el.textContent = r.text;
-            }
-          });
-        });
-      });
-    });
-
-    chain.then(function() {
-      translating = false;
-      showLoading(false);
-    }).catch(function() {
-      translating = false;
-      showLoading(false);
-    });
-  }
-
-  function buildDropdown() {
-    var wrapper = document.getElementById('lang-selector');
-    if (!wrapper) return;
-
-    var currentLang = getCurrentLang();
-    var currentInfo = LANGS[currentLang] || LANGS.ko;
-
-    var btn = document.createElement('button');
-    btn.className = 'lang-btn';
-    btn.type = 'button';
-    btn.setAttribute('aria-expanded', 'false');
-    btn.setAttribute('aria-haspopup', 'listbox');
-    btn.setAttribute('aria-label', window.__t ? window.__t('select_language') : 'Select language');
-    btn.innerHTML = '<span class="lang-current-flag">' + currentInfo.flag + '</span>' +
-      '<svg class="lang-chevron" width="10" height="10" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><path d="M2 4l3 3 3-3"/></svg>';
-
-    var menu = document.createElement('div');
-    menu.className = 'lang-menu';
-    menu.setAttribute('role', 'listbox');
-    menu.setAttribute('aria-label', 'Language options');
-
-    Object.keys(LANGS).forEach(function(code) {
-      var info = LANGS[code];
-      var item = document.createElement('button');
-      item.className = 'lang-menu-item' + (code === currentLang ? ' active' : '');
-      item.type = 'button';
-      item.setAttribute('role', 'option');
-      item.setAttribute('aria-selected', code === currentLang ? 'true' : 'false');
-      item.setAttribute('data-lang', code);
-      item.innerHTML = '<span class="lang-item-flag">' + info.flag + '</span><span class="lang-item-name">' + info.name + '</span>';
-
-      item.addEventListener('click', function(e) {
-        e.stopPropagation();
-        var lang = this.getAttribute('data-lang');
-        setLang(lang);
-        applyI18nStrings(lang);
-        // Update active state
-        menu.querySelectorAll('.lang-menu-item').forEach(function(el) {
-          el.classList.remove('active');
-          el.setAttribute('aria-selected', 'false');
-        });
-        this.classList.add('active');
-        this.setAttribute('aria-selected', 'true');
-        btn.querySelector('.lang-current-flag').textContent = LANGS[lang].flag;
-        menu.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-        // Translate content in-page
-        translatePage(lang);
-      });
-
-      menu.appendChild(item);
-    });
-
-    btn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var isOpen = menu.classList.toggle('open');
-      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-
-    document.addEventListener('click', function(e) {
-      if (!wrapper.contains(e.target)) {
-        menu.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        menu.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    wrapper.appendChild(btn);
-    wrapper.appendChild(menu);
-  }
-
-  function init() {
-    var lang = getCurrentLang();
-    if (lang !== 'ko') applyI18nStrings(lang);
-    buildDropdown();
-    // Auto-translate if a non-Korean language was previously selected
-    if (lang !== 'ko') {
-      setTimeout(function() { translatePage(lang); }, 300);
-    }
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
+  toggle.addEventListener('click', loadTranslate, { once: true, passive: true });
+  try {
+    var pref = localStorage.getItem('preferredLang');
+    if (pref && pref !== 'system' && pref !== 'ko') { loadTranslate(); }
+  } catch(e) {}
 })();
 </script>

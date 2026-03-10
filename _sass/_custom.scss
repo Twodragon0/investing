@@ -2156,144 +2156,14 @@ html {
   }
 }
 
-// Custom Language Selector
-.lang-selector {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.lang-btn {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  background: rgba($bg-card, 0.6);
-  border: 1px solid rgba($border-color, 0.5);
-  border-radius: 6px;
-  color: $text-primary;
-  padding: 0.3rem 0.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: border-color $transition-fast, background $transition-fast;
-
-  &:hover, &:focus {
-    border-color: $accent-blue;
-    background: rgba($accent-blue, 0.08);
-  }
-
-  .lang-chevron {
-    opacity: 0.6;
-    transition: transform 0.2s ease;
-  }
-
-  &[aria-expanded="true"] .lang-chevron {
-    transform: rotate(180deg);
-  }
-}
-
-.lang-menu {
-  display: none;
-  position: absolute;
-  top: calc(100% + 6px);
-  right: 0;
-  min-width: 180px;
-  background: $bg-card;
-  border: 1px solid rgba($border-color, 0.6);
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
-  padding: 4px;
-  animation: langMenuIn 0.15s ease;
-
-  &.open {
-    display: block;
-  }
-}
-
-@keyframes langMenuIn {
-  from { opacity: 0; transform: translateY(-4px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.lang-menu-header {
-  font-size: 0.7rem;
+.lang-ai-badge {
+  font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: $text-secondary;
-  padding: 6px 10px 2px;
-  opacity: 0.7;
-}
-
-.lang-menu-divider {
-  height: 1px;
-  background: rgba($border-color, 0.4);
-  margin: 4px 6px;
-}
-
-.lang-menu-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
-  padding: 7px 10px;
-  border: none;
-  border-radius: 5px;
-  background: transparent;
-  color: $text-primary;
-  font-size: 0.85rem;
-  cursor: pointer;
-  transition: background 0.15s ease;
-  text-align: left;
-
-  &:hover {
-    background: rgba($accent-blue, 0.1);
-  }
-
-  &.active {
-    background: rgba($accent-blue, 0.15);
-    font-weight: 600;
-  }
-
-  .lang-item-flag {
-    font-size: 1.1rem;
-    line-height: 1;
-  }
-
-  .lang-item-name {
-    flex: 1;
-  }
-}
-
-// Translation loading indicator
-.translate-loading {
-  position: fixed;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: $bg-card;
-  border: 1px solid rgba($border-color, 0.5);
-  border-radius: 10px;
-  padding: 10px 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  z-index: 10000;
-  color: $text-primary;
-  font-size: 0.85rem;
-}
-
-.translate-loading-spinner {
-  width: 16px;
-  height: 16px;
-  border: 2px solid rgba($accent-blue, 0.3);
-  border-top-color: $accent-blue;
-  border-radius: 50%;
-  animation: translateSpin 0.8s linear infinite;
-}
-
-@keyframes translateSpin {
-  to { transform: rotate(360deg); }
+  padding: 4px 10px 2px;
+  opacity: 0.6;
+  text-align: center;
 }
 
 /* ================================
