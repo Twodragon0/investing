@@ -810,7 +810,17 @@ def format_macro(data: Dict, has_api_key: bool = True) -> str:
     group_order = ["금리", "경제 지표", "유동성"]
 
     # Percentage-formatted indicators (show % suffix)
-    pct_keys = {"CPI", "BREAKEVEN_5Y", "FED_RATE", "10Y_YIELD", "2Y_YIELD", "T10Y2Y", "MORTGAGE_30Y", "UNEMPLOYMENT", "GDP_GROWTH"}
+    pct_keys = {
+        "CPI",
+        "BREAKEVEN_5Y",
+        "FED_RATE",
+        "10Y_YIELD",
+        "2Y_YIELD",
+        "T10Y2Y",
+        "MORTGAGE_30Y",
+        "UNEMPLOYMENT",
+        "GDP_GROWTH",
+    }
 
     # Build grouped sections
     sections: Dict[str, list] = {g: [] for g in group_order}
