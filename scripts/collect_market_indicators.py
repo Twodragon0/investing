@@ -21,7 +21,7 @@ import requests
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.collector_metrics import log_collection_summary
-from common.config import BROWSER_USER_AGENT, REQUEST_TIMEOUT, get_ssl_verify, setup_logging
+from common.config import BROWSER_USER_AGENT, REQUEST_TIMEOUT, get_env, get_ssl_verify, setup_logging
 from common.dedup import DedupEngine
 from common.markdown_utils import html_reference_details
 from common.post_generator import PostGenerator
@@ -213,6 +213,89 @@ def fetch_market_breadth_news() -> List[Dict[str, Any]]:
     return items
 
 
+def fetch_fred_indicators(api_key: str) -> Dict[str, Any]:
+    """Fetch real economic indicators from FRED (St. Louis Fed) API.
+
+    Series fetched:
+        DGS10   - 10-Year Treasury Yield
+        DGS2    - 2-Year Treasury Yield
+        DGS30   - 30-Year Treasury Yield
+        FEDFUNDS - Federal Funds Rate
+        T10Y2Y  - 10Y-2Y Treasury Spread
+        BAMLH0A0HYM2 - ICE BofA High Yield Corporate Spread
+
+    Returns dict keyed by series_id with label, value, date, change, series_id fields.
+    Returns empty dict if no API key or all fetches fail.
+    """
+    if not api_key:
+        logger.info("FRED_API_KEY not set, skipping FRED data fetch")
+        return {}
+
+    from datetime import timedelta
+
+    series_config = [
+        ("DGS10", "10년물 국채 금리"),
+        ("DGS2", "2년물 국채 금리"),
+        ("DGS30", "30년물 국채 금리"),
+        ("FEDFUNDS", "연방기금금리"),
+        ("T10Y2Y", "10Y-2Y 스프레드"),
+        ("BAMLH0A0HYM2", "하이일드 회사채 스프레드"),
+    ]
+
+    obs_start = (datetime.now(UTC) - timedelta(days=60)).strftime("%Y-%m-%d")
+    base_url = "https://api.stlouisfed.org/fred/series/observations"
+    results: Dict[str, Any] = {}
+
+    for series_id, label in series_config:
+        try:
+            resp = request_with_retry(
+                base_url,
+                timeout=REQUEST_TIMEOUT,
+                verify_ssl=VERIFY_SSL,
+                params={
+                    "series_id": series_id,
+                    "api_key": api_key,
+                    "observation_start": obs_start,
+                    "file_type": "json",
+                    "sort_order": "desc",
+                    "limit": 2,
+                },
+            )
+            data = resp.json()
+            observations = data.get("observations", [])
+            # Filter out missing values (".")
+            valid_obs = [o for o in observations if o.get("value", ".") != "."]
+            if not valid_obs:
+                logger.warning("FRED %s: no valid observations", series_id)
+                continue
+
+            latest = valid_obs[0]
+            value = float(latest["value"])
+            obs_date = latest["date"]
+
+            change: Optional[float] = None
+            if len(valid_obs) >= 2:
+                prev_value = float(valid_obs[1]["value"])
+                change = round(value - prev_value, 4)
+
+            results[series_id] = {
+                "label": label,
+                "value": value,
+                "date": obs_date,
+                "change": change,
+                "series_id": series_id,
+            }
+            logger.info("FRED %s (%s): %.4f (date=%s)", series_id, label, value, obs_date)
+
+        except requests.exceptions.RequestException as e:
+            logger.warning("FRED %s fetch failed: %s", series_id, e)
+        except (ValueError, KeyError, TypeError) as e:
+            logger.warning("FRED %s parse error: %s", series_id, e)
+
+    logger.info("FRED indicators fetched: %d/%d series", len(results), len(series_config))
+    return results
+
+
 # ── Formatting helpers ─────────────────────────────────────────────────────────
 
 
@@ -292,6 +375,74 @@ def _format_news_rows(items: List[Dict[str, Any]], limit: int = 5) -> str:
     return "\n".join(rows) + "\n" if rows else "> 관련 뉴스를 가져올 수 없습니다.\n"
 
 
+def _build_fred_section(fred_data: Dict[str, Any]) -> str:
+    """Build markdown section for FRED economic indicators.
+
+    Includes yield curve inversion warning and high yield spread interpretation.
+    Returns empty string if fred_data is empty.
+    """
+    if not fred_data:
+        return ""
+
+    lines: List[str] = []
+    lines.append("## 📊 매크로 경제 지표 (FRED)\n")
+    lines.append("| 지표 | 현재값 | 변동 | 기준일 |")
+    lines.append("|------|--------|------|--------|")
+
+    for series_id in ["DGS10", "DGS2", "DGS30", "FEDFUNDS", "T10Y2Y", "BAMLH0A0HYM2"]:
+        d = fred_data.get(series_id)
+        if d is None:
+            continue
+        label = d["label"]
+        value = d["value"]
+        obs_date = d["date"]
+        change = d["change"]
+
+        # Format value
+        value_str = f"{value:.2f}%"
+
+        # Format change
+        if change is not None:
+            change_str = f"{change:+.4f}%p"
+        else:
+            change_str = "—"
+
+        lines.append(f"| {label} | **{value_str}** | {change_str} | {obs_date} |")
+
+    lines.append("")
+
+    # Yield curve inversion warning
+    t10y2y = fred_data.get("T10Y2Y")
+    if t10y2y is not None and t10y2y["value"] < 0:
+        spread = t10y2y["value"]
+        lines.append(
+            f"> ⚠️ **장단기 금리 역전 경보**: 10Y-2Y 스프레드 {spread:.2f}%p — "
+            "역사적으로 경기 침체의 선행 지표입니다. 12~18개월 내 경기 둔화 가능성을 모니터링하세요."
+        )
+        lines.append("")
+
+    # High yield spread interpretation
+    hy = fred_data.get("BAMLH0A0HYM2")
+    if hy is not None:
+        hy_val = hy["value"]
+        if hy_val < 4.0:
+            hy_interp = "정상 (투자자 낙관론 우세)"
+            hy_icon = "🟢"
+        elif hy_val < 6.0:
+            hy_interp = "확대 (신용 위험 상승 주의)"
+            hy_icon = "🟡"
+        else:
+            hy_interp = "위기 수준 (신용 시장 스트레스)"
+            hy_icon = "🔴"
+        lines.append(
+            f"> {hy_icon} **하이일드 스프레드 해석**: {hy_val:.2f}%p → {hy_interp}  \n"
+            "> (기준: 정상 <4%, 확대 4~6%, 위기 >6%)"
+        )
+        lines.append("")
+
+    return "\n".join(lines)
+
+
 # ── Content builder ────────────────────────────────────────────────────────────
 
 
@@ -304,8 +455,11 @@ def build_post_content(
     margin_news: List[Dict[str, Any]],
     today: str,
     now: datetime,
+    fred_data: Dict[str, Any] = None,
 ) -> str:
     """Build full markdown content for the market indicators post."""
+    if fred_data is None:
+        fred_data = {}
     parts: List[str] = []
 
     # ── Opening ──────────────────────────────────────────────────────────────
@@ -317,6 +471,7 @@ def build_post_content(
             1 if put_call_news else 0,
             1 if breadth_news else 0,
             1 if margin_news else 0,
+            1 if fred_data else 0,
         ]
     )
     parts.append(f"**{today}** 기준 시장 심리·리스크 지표를 {source_count}개 소스에서 수집했습니다.\n")
@@ -374,12 +529,18 @@ def build_post_content(
         else:
             parts.append(f"| {label} | 데이터 없음 | — | — |")
 
-    # Treasury yields (news-based)
-    parts.append("| 10년물 국채 금리 | 뉴스 기반 | 아래 참조 | — |")
-    parts.append("| 2년물 국채 금리 | 뉴스 기반 | 아래 참조 | — |")
+    # Treasury yields: show FRED data if available, otherwise fall back to news row
+    has_fred_yields = any(k in fred_data for k in ("DGS10", "DGS2"))
+    if not has_fred_yields:
+        parts.append("| 10년물 국채 금리 | 뉴스 기반 | 아래 참조 | — |")
+        parts.append("| 2년물 국채 금리 | 뉴스 기반 | 아래 참조 | — |")
     parts.append("")
 
-    parts.append("**국채 금리 관련 뉴스:**\n")
+    # National treasury news — always shown as supplementary (or sole source)
+    if has_fred_yields:
+        parts.append("**국채 금리 관련 뉴스 (보완):**\n")
+    else:
+        parts.append("**국채 금리 관련 뉴스:**\n")
     parts.append(_format_news_rows(treasury_news, limit=5))
 
     # DXY narrative
@@ -395,6 +556,11 @@ def build_post_content(
         else:
             dxy_note = "달러 약세 — 위험자산 선호 심리 강화 환경."
         parts.append(f"\n> **DXY 해석**: {dxy_note}")
+
+    # ── Section 2.5: 매크로 경제 지표 (FRED) ─────────────────────────────
+    fred_section = _build_fred_section(fred_data)
+    if fred_section:
+        parts.append(f"\n{fred_section}")
 
     # ── Section 3: 시장 건강도 (Market Breadth) ───────────────────────────
     parts.append("\n## 📊 시장 건강도 (Market Breadth)\n")
@@ -481,6 +647,7 @@ def build_post_content(
     parts.append("- [CNN Fear & Greed Index](https://www.cnn.com/markets/fear-and-greed)")
     parts.append("- [CBOE VIX](https://www.cboe.com/tradable_products/vix/)")
     parts.append("- [FINVIZ Market Map](https://finviz.com/map.ashx)")
+    parts.append("- [FRED - 경제 지표](https://fred.stlouisfed.org/) - 미국 연방준비은행 경제 데이터")
 
     parts.append(f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC")
 
@@ -518,15 +685,17 @@ def main() -> None:
         return
 
     # Fetch all data sources (news fetches run concurrently internally)
+    fred_key = get_env("FRED_API_KEY")
     cnn_fg = fetch_cnn_fear_greed()
     market_data = fetch_yfinance_market_data()
+    fred_data = fetch_fred_indicators(fred_key)
     treasury_news = fetch_treasury_yield_news()
     put_call_news = fetch_put_call_ratio_news()
     breadth_news = fetch_market_breadth_news()
     margin_news = fetch_margin_debt_news()
 
     all_news_items = treasury_news + put_call_news + breadth_news + margin_news
-    has_any_data = cnn_fg or market_data or all_news_items
+    has_any_data = cnn_fg or market_data or fred_data or all_news_items
 
     if not has_any_data:
         logger.warning("No data collected from any source, skipping post creation")
@@ -551,14 +720,20 @@ def main() -> None:
         margin_news=margin_news,
         today=today,
         now=now,
+        fred_data=fred_data,
     )
+
+    # Build tags list
+    tags = ["market-analysis", "fear-greed", "vix", "market-breadth", "sentiment"]
+    if fred_data:
+        tags.append("fred")
 
     # Generate Jekyll post
     filepath = gen.create_post(
         title=post_title,
         content=content,
         date=now,
-        tags=["market-analysis", "fear-greed", "vix", "market-breadth", "sentiment"],
+        tags=tags,
         source="consolidated",
         lang="ko",
         slug="daily-market-indicators",
@@ -576,7 +751,7 @@ def main() -> None:
     unique_items = len(
         {f"{item.get('title', '')}|{item.get('link', '')}" for item in all_news_items if item.get("title")}
     )
-    source_count = len([x for x in [cnn_fg, market_data] if x]) + len(
+    source_count = len([x for x in [cnn_fg, market_data, fred_data] if x]) + len(
         {item.get("source", "") for item in all_news_items if item.get("source")}
     )
 

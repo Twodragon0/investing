@@ -18,6 +18,7 @@ jobs:
     timeout-minutes: 10
     env:
       FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+      FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6

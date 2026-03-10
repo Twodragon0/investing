@@ -275,6 +275,12 @@ def fetch_fred_indicators(api_key: str) -> Dict[str, Dict[str, Any]]:
         "2Y_YIELD": ("DGS2", "2년 국채 수익률"),
         "VIX": ("VIXCLS", "VIX 변동성 지수"),
         "CPI": ("CPIAUCSL", "소비자물가지수"),
+        "UNEMPLOYMENT": ("UNRATE", "실업률"),
+        "GDP_GROWTH": ("A191RL1Q225SBEA", "실질 GDP 성장률 (QoQ)"),
+        "M2": ("M2SL", "M2 통화공급"),
+        "T10Y2Y": ("T10Y2Y", "장단기 금리 스프레드"),
+        "MORTGAGE_30Y": ("MORTGAGE30US", "30년 모기지 금리"),
+        "BREAKEVEN_5Y": ("T5YIE", "5년 기대 인플레이션"),
     }
     results = {}
 
@@ -316,9 +322,27 @@ def fetch_fred_indicators(api_key: str) -> Dict[str, Dict[str, Any]]:
 def calculate_yield_spread(fred_data: Dict) -> Dict[str, Any]:
     """Calculate 2Y-10Y yield spread from FRED data.
 
+    Uses T10Y2Y directly from FRED if available; falls back to manual calculation.
     Returns dict with spread value and inversion status.
     """
     result = {}
+
+    # Prefer FRED's own T10Y2Y series (more accurate, daily updated)
+    t10y2y = fred_data.get("T10Y2Y", {})
+    if t10y2y.get("value") is not None:
+        spread = t10y2y["value"]
+        y10 = fred_data.get("10Y_YIELD", {})
+        y2 = fred_data.get("2Y_YIELD", {})
+        result = {
+            "spread": spread,
+            "y10": y10.get("value"),
+            "y2": y2.get("value"),
+            "inverted": spread < 0,
+            "date": t10y2y.get("date", ""),
+        }
+        return result
+
+    # Fallback: manual calculation from individual yield series
     y10 = fred_data.get("10Y_YIELD", {})
     y2 = fred_data.get("2Y_YIELD", {})
     if y10.get("value") is not None and y2.get("value") is not None:
@@ -769,12 +793,62 @@ def format_macro(data: Dict, has_api_key: bool = True) -> str:
             "- [FRED - Consumer Price Index](https://fred.stlouisfed.org/series/CPIAUCSL)\n"
             "- [FRED - VIX](https://fred.stlouisfed.org/series/VIXCLS)"
         )
-    rows = []
-    for d in data.values():
-        val = f"{d['value']:.2f}"
+    # Group definitions: key → group label
+    group_map = {
+        "FED_RATE": "금리",
+        "10Y_YIELD": "금리",
+        "2Y_YIELD": "금리",
+        "T10Y2Y": "금리",
+        "MORTGAGE_30Y": "금리",
+        "UNEMPLOYMENT": "경제 지표",
+        "GDP_GROWTH": "경제 지표",
+        "CPI": "경제 지표",
+        "BREAKEVEN_5Y": "경제 지표",
+        "VIX": "유동성",
+        "M2": "유동성",
+    }
+    group_order = ["금리", "경제 지표", "유동성"]
+
+    # Percentage-formatted indicators (show % suffix)
+    pct_keys = {"CPI", "BREAKEVEN_5Y", "FED_RATE", "10Y_YIELD", "2Y_YIELD", "T10Y2Y", "MORTGAGE_30Y", "UNEMPLOYMENT", "GDP_GROWTH"}
+
+    # Build grouped sections
+    sections: Dict[str, list] = {g: [] for g in group_order}
+    for key, d in data.items():
+        group = group_map.get(key, "기타")
+        if group not in sections:
+            sections[group] = []
+
+        val_num = d["value"]
+        if key in pct_keys:
+            val_str = f"{val_num:.2f}%"
+        elif key == "M2":
+            val_str = f"{val_num:,.1f}B"
+        else:
+            val_str = f"{val_num:.2f}"
+
         ch = f"{d['change']:+.2f}" if d.get("change") is not None else "N/A"
-        rows.append([d["label"], val, ch])
-    return markdown_table(["지표", "현재 값", "변동"], rows)
+
+        label = d["label"]
+        # Yield spread inversion warning
+        if key == "T10Y2Y" and val_num < 0:
+            label = f"🔴 {label}"
+
+        sections[group].append([label, val_str, ch])
+
+    parts = []
+    for group in group_order:
+        rows = sections.get(group, [])
+        if not rows:
+            continue
+        parts.append(f"**{group}**\n\n{markdown_table(['지표', '현재 값', '변동'], rows)}")
+
+    # Append any ungrouped indicators
+    extra = sections.get("기타", [])
+    if extra:
+        parts.append(f"**기타**\n\n{markdown_table(['지표', '현재 값', '변동'], extra)}")
+
+    return "\n\n".join(parts)
 
 
 def generate_key_highlights(
