@@ -1,0 +1,31 @@
+name: Collect Geopolitical Risk Data
+
+on:
+  schedule:
+    - cron: '45 0,12 * * *'  # 09:45, 21:45 KST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect-data
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Collect geopolitical risk data
+        uses: ./.github/actions/python-collect
+        with:
+          script: scripts/collect_geopolitical.py
+          commit-message: 'chore: collect geopolitical risk data'
+          git-add-paths: '_posts/ _state/ assets/images/'

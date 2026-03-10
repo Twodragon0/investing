@@ -363,3 +363,182 @@ def _fetch_sector_etf_fallback() -> List[Dict[str, Any]]:
     sectors.sort(key=lambda s: float(str(s.get("change_pct", "0")).replace("%", "")), reverse=True)
     logger.info("Sector ETF fallback: fetched %d sectors", len(sectors))
     return sectors
+
+
+def fetch_treasury_rates() -> List[Dict[str, Any]]:
+    """Fetch US Treasury rates (2Y, 5Y, 10Y, 30Y).
+
+    Tries FMP /stable/treasury-rates first (requires FMP_API_KEY),
+    falls back to yfinance symbols: ^IRX (13W), ^FVX (5Y), ^TNX (10Y), ^TYX (30Y).
+    Returns list of dicts with keys: maturity, rate, change, change_pct.
+    """
+    api_key = get_env("FMP_API_KEY")
+
+    if api_key:
+        try:
+            url = f"{_FMP_STABLE}/treasury-rates"
+            params = {"apikey": api_key}
+            resp = request_with_retry(
+                url,
+                params=params,
+                timeout=REQUEST_TIMEOUT,
+                verify_ssl=VERIFY_SSL,
+                headers={"User-Agent": USER_AGENT},
+            )
+            data = resp.json()
+            if isinstance(data, list) and data:
+                # FMP returns list of objects; take the most recent entry
+                latest = data[0]
+                rates = []
+                maturity_map = {
+                    "month3": "3개월",
+                    "year2": "2년",
+                    "year5": "5년",
+                    "year10": "10년",
+                    "year30": "30년",
+                }
+                for key, label in maturity_map.items():
+                    val = latest.get(key)
+                    if val is not None:
+                        try:
+                            rate_f = float(val)
+                        except (ValueError, TypeError):
+                            continue
+                        rates.append(
+                            {
+                                "maturity": label,
+                                "rate": rate_f,
+                                "change": None,
+                                "change_pct": None,
+                            }
+                        )
+                logger.info("FMP treasury rates: fetched %d maturities", len(rates))
+                return rates
+        except requests.exceptions.RequestException as e:
+            logger.info("FMP treasury rates unavailable: %s — trying yfinance fallback", e)
+
+    # Fallback: yfinance treasury symbols
+    return _fetch_treasury_yfinance_fallback()
+
+
+def _fetch_treasury_yfinance_fallback() -> List[Dict[str, Any]]:
+    """Fallback: fetch Treasury yields via yfinance."""
+    try:
+        import yfinance as yf
+    except ImportError:
+        logger.info("yfinance not installed, skipping treasury fallback")
+        return []
+
+    # yfinance symbols → maturity label
+    symbol_map = {
+        "^IRX": "3개월",
+        "^FVX": "5년",
+        "^TNX": "10년",
+        "^TYX": "30년",
+    }
+    rates = []
+    for symbol, label in symbol_map.items():
+        try:
+            info = yf.Ticker(symbol).fast_info
+            price = getattr(info, "last_price", None)
+            prev = getattr(info, "previous_close", None)
+            if price is None:
+                continue
+            change = (price - prev) if prev else None
+            change_pct = ((price - prev) / prev * 100) if prev else None
+            rates.append(
+                {
+                    "maturity": label,
+                    "rate": float(price),
+                    "change": round(change, 4) if change is not None else None,
+                    "change_pct": round(change_pct, 4) if change_pct is not None else None,
+                }
+            )
+        except (ValueError, TypeError, AttributeError) as e:
+            logger.warning("yfinance treasury %s: %s", symbol, e)
+
+    # Sort by maturity order
+    order = {"3개월": 0, "2년": 1, "5년": 2, "10년": 3, "30년": 4}
+    rates.sort(key=lambda r: order.get(r["maturity"], 99))
+    logger.info("yfinance treasury fallback: fetched %d rates", len(rates))
+    return rates
+
+
+def fetch_ipo_calendar(days_ahead: int = 30) -> List[Dict[str, Any]]:
+    """Fetch upcoming IPO calendar.
+
+    Tries FMP /stable/ipo-calendar first (requires FMP_API_KEY),
+    falls back to Google News RSS for IPO news.
+    Returns list of dicts with keys: date, company, symbol, exchange,
+    shares_offered, price_range, market_value.
+    """
+    api_key = get_env("FMP_API_KEY")
+    start = datetime.now(UTC).strftime("%Y-%m-%d")
+    end = (datetime.now(UTC) + timedelta(days=days_ahead)).strftime("%Y-%m-%d")
+
+    if api_key:
+        try:
+            url = f"{_FMP_STABLE}/ipo-calendar"
+            params = {"from": start, "to": end, "apikey": api_key}
+            resp = request_with_retry(
+                url,
+                params=params,
+                timeout=REQUEST_TIMEOUT,
+                verify_ssl=VERIFY_SSL,
+                headers={"User-Agent": USER_AGENT},
+            )
+            data = resp.json()
+            if isinstance(data, list) and data:
+                ipos = []
+                for item in data:
+                    ipos.append(
+                        {
+                            "date": item.get("date", ""),
+                            "company": item.get("company", ""),
+                            "symbol": item.get("symbol", ""),
+                            "exchange": item.get("exchange", ""),
+                            "shares_offered": item.get("shares", ""),
+                            "price_range": item.get("priceRange", ""),
+                            "market_value": item.get("marketCap", ""),
+                            "is_news_fallback": False,
+                        }
+                    )
+                ipos.sort(key=lambda x: x.get("date", ""))
+                logger.info("FMP IPO calendar: fetched %d upcoming IPOs", len(ipos))
+                return ipos
+        except requests.exceptions.RequestException as e:
+            logger.info("FMP IPO calendar unavailable: %s — trying fallback", e)
+
+    # Fallback: Google News RSS
+    return _fetch_ipo_news_fallback()
+
+
+def _fetch_ipo_news_fallback() -> List[Dict[str, Any]]:
+    """Fallback: fetch IPO news headlines from Google News RSS."""
+    from .rss_fetcher import fetch_rss_feed
+
+    items = fetch_rss_feed(
+        url="https://news.google.com/rss/search?q=IPO+%22initial+public+offering%22+2026&hl=en-US&gl=US&ceid=US:en",
+        source_name="IPO News",
+        tags=["ipo"],
+        limit=15,
+        max_age_hours=168,  # 7 days
+    )
+    ipos = []
+    for item in items:
+        ipos.append(
+            {
+                "date": item.get("published", ""),
+                "company": "",
+                "symbol": "",
+                "exchange": "",
+                "shares_offered": "",
+                "price_range": "",
+                "market_value": "",
+                "title": item.get("title", ""),
+                "link": item.get("link", ""),
+                "is_news_fallback": True,
+            }
+        )
+    logger.info("IPO news fallback: fetched %d items", len(ipos))
+    return ipos

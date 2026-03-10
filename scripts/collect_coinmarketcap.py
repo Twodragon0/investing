@@ -665,19 +665,12 @@ def main():
 
     cmc_key = get_env("CMC_API_KEY")
 
-    # Skip entirely if no CMC key — CoinGecko fallback duplicates generate_market_summary.py
-    if not cmc_key:
-        logger.info("CMC API key not set, skipping to avoid duplicate CoinGecko report")
-        log_collection_summary(
-            logger,
-            collector="collect_coinmarketcap",
-            source_count=0,
-            unique_items=0,
-            post_created=0,
-            started_at=started_at,
-            extras={"status": "no_api_key"},
+    if cmc_key:
+        logger.info("Using CMC premium API (key found)")
+    else:
+        logger.info(
+            "Using CoinGecko free API (no CMC key) — slug=daily-crypto-market-report is distinct from daily-market-report"
         )
-        return
 
     now = datetime.now(UTC)
     today = now.strftime("%Y-%m-%d")

@@ -17,8 +17,9 @@ scripts/           # Python 자동화 스크립트
                    #   crypto_api, rss_fetcher, summarizer, formatters, browser,
                    #   collector_metrics, markdown_utils, enrichment, fmp_api,
                    #   translator, worldmonitor_utils, __init__)
-  collect_*.py     # 뉴스 수집기 10개 (crypto, stock, social, regulatory, political,
-                   #   coinmarketcap, worldmonitor, defi_llama, fmp_calendar, market_indicators)
+  collect_*.py     # 뉴스 수집기 11개 (crypto, stock, social, regulatory, political,
+                   #   coinmarketcap, worldmonitor, defi_llama, fmp_calendar, market_indicators,
+                   #   geopolitical)
   generate_*.py    # 요약 생성기 5개 (daily_summary, market_summary, weekly_digest,
                    #   og_images, ops_10am_digest)
   respond_ai_mentions.py  # Slack 멘션 응답

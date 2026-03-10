@@ -15,8 +15,10 @@ from common.dedup import DedupEngine
 from common.fmp_api import (
     fetch_earnings_calendar,
     fetch_economic_calendar,
+    fetch_ipo_calendar,
     fetch_market_index_data,
     fetch_sector_performance,
+    fetch_treasury_rates,
 )
 from common.post_generator import PostGenerator
 
@@ -141,6 +143,89 @@ def _build_economic_section(events: List[Dict[str, Any]]) -> str:
     return "\n".join(lines) + "\n"
 
 
+def _build_treasury_section(rates: List[Dict[str, Any]]) -> str:
+    """Build markdown table for US Treasury yields."""
+    if not rates:
+        return "> 미국 국채 금리 데이터를 가져올 수 없습니다.\n"
+
+    lines = [
+        "## 🏦 미국 국채 금리\n",
+        "| 만기 | 금리 (%) | 변동 (bp) | 변동률 |",
+        "|------|----------|-----------|--------|",
+    ]
+    for r in rates:
+        maturity = r.get("maturity", "")
+        rate = r.get("rate")
+        change = r.get("change")
+        change_pct = r.get("change_pct")
+
+        rate_str = f"{rate:.3f}" if rate is not None else "N/A"
+
+        if change is not None:
+            bp = change * 100  # percentage points → basis points
+            sign = "+" if bp >= 0 else ""
+            icon = "🔺" if bp >= 0 else "🔻"
+            change_str = f"{icon} {sign}{bp:.1f}bp"
+        else:
+            change_str = "-"
+
+        if change_pct is not None:
+            sign = "+" if change_pct >= 0 else ""
+            pct_str = f"{sign}{change_pct:.2f}%"
+        else:
+            pct_str = "-"
+
+        lines.append(f"| {maturity} | {rate_str} | {change_str} | {pct_str} |")
+
+    return "\n".join(lines) + "\n"
+
+
+def _build_ipo_section(ipos: List[Dict[str, Any]]) -> str:
+    """Build markdown table/list for upcoming IPO calendar."""
+    if not ipos:
+        return "> 향후 30일 내 예정된 IPO가 없거나 데이터를 가져올 수 없습니다.\n"
+
+    is_news = any(ipo.get("is_news_fallback") for ipo in ipos)
+
+    if is_news:
+        lines = ["## 🚀 IPO 관련 뉴스\n"]
+        for ipo in ipos[:15]:
+            title = ipo.get("title", "")
+            link = ipo.get("link", "")
+            date = ipo.get("date", "")
+            if link:
+                lines.append(f"- [{title}]({link}) ({date})")
+            else:
+                lines.append(f"- {title} ({date})")
+        return "\n".join(lines) + "\n"
+
+    lines = [
+        "## 🚀 IPO 캘린더\n",
+        "| 날짜 | 기업명 | 심볼 | 거래소 | 공모가 범위 | 시가총액 |",
+        "|------|--------|------|--------|-------------|----------|",
+    ]
+    for ipo in ipos:
+        date = ipo.get("date", "")
+        company = ipo.get("company", "-")
+        symbol = ipo.get("symbol", "-")
+        exchange = ipo.get("exchange", "-")
+        price_range = ipo.get("price_range", "") or "-"
+        market_value = ipo.get("market_value", "")
+        try:
+            mv_f = float(market_value)
+            if mv_f >= 1_000_000_000:
+                mv_str = f"${mv_f / 1_000_000_000:,.2f}B"
+            elif mv_f >= 1_000_000:
+                mv_str = f"${mv_f / 1_000_000:,.2f}M"
+            else:
+                mv_str = f"${mv_f:,.0f}"
+        except (ValueError, TypeError):
+            mv_str = str(market_value) if market_value else "-"
+        lines.append(f"| {date} | **{company}** | {symbol} | {exchange} | {price_range} | {mv_str} |")
+
+    return "\n".join(lines) + "\n"
+
+
 def _build_earnings_section(earnings: List[Dict[str, Any]]) -> str:
     """Build markdown table for earnings calendar."""
     if not earnings:
@@ -242,7 +327,15 @@ def main() -> None:
     logger.info("Fetching earnings calendar (7 days ahead)")
     earnings = fetch_earnings_calendar(days_ahead=7)
 
-    total_items = len(indices) + len(sectors) + len(economic_events) + len(earnings)
+    logger.info("Fetching US Treasury rates")
+    treasury_rates = fetch_treasury_rates()
+
+    logger.info("Fetching IPO calendar (30 days ahead)")
+    ipo_data = fetch_ipo_calendar(days_ahead=30)
+
+    total_items = (
+        len(indices) + len(sectors) + len(economic_events) + len(earnings) + len(treasury_rates) + len(ipo_data)
+    )
 
     if total_items == 0:
         logger.warning("No FMP data collected — FMP_API_KEY may not be set or API is unavailable")
@@ -264,17 +357,23 @@ def main() -> None:
     content_parts.append(
         f"**{today}** 기준 주요 시장 지수 {len(indices)}종, "
         f"섹터 {len(sectors)}개, "
+        f"국채 금리 {len(treasury_rates)}개 만기, "
         f"경제 이벤트 {len(economic_events)}건(고·중간 중요도), "
-        f"대형주 실적 발표 {len(earnings)}건을 수집했습니다.\n"
+        f"대형주 실적 발표 {len(earnings)}건, "
+        f"IPO 일정 {len(ipo_data)}건을 수집했습니다.\n"
     )
 
     content_parts.append(_build_index_section(indices))
+    content_parts.append("\n---\n")
+    content_parts.append(_build_treasury_section(treasury_rates))
     content_parts.append("\n---\n")
     content_parts.append(_build_sector_section(sectors))
     content_parts.append("\n---\n")
     content_parts.append(_build_economic_section(economic_events))
     content_parts.append("\n---\n")
     content_parts.append(_build_earnings_section(earnings))
+    content_parts.append("\n---\n")
+    content_parts.append(_build_ipo_section(ipo_data))
     content_parts.append("\n---\n")
     content_parts.append(
         "> *본 캘린더는 Financial Modeling Prep API에서 자동 수집된 데이터이며, "
@@ -288,7 +387,7 @@ def main() -> None:
         title=post_title,
         content=content,
         date=now,
-        tags=["market-analysis", "economic-calendar", "earnings", "fmp"],
+        tags=["market-analysis", "economic-calendar", "earnings", "treasury", "ipo", "fmp"],
         source="fmp",
         lang="ko",
         slug="fmp-economic-calendar",
@@ -306,7 +405,7 @@ def main() -> None:
     log_collection_summary(
         logger,
         collector="collect_fmp_calendar",
-        source_count=4,  # indices, sectors, economic, earnings
+        source_count=6,  # indices, sectors, treasury, economic, earnings, ipo
         unique_items=total_items,
         post_created=post_created,
         started_at=started_at,
