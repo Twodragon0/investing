@@ -1,5 +1,10 @@
 # Investing Dragon - Project Guide
 
+## Global OpenCode Precedence
+
+- Use global OpenCode settings as the runtime baseline (`~/.config/opencode/opencode.json`, `~/.config/opencode/instructions.md`).
+- This repo guide defines project workflow only and should not override global model/reasoning/default-agent defaults.
+
 ## Overview
 
 Crypto & Stock 뉴스 수집 자동화 + 트레이딩 저널 사이트.
@@ -45,6 +50,9 @@ python scripts/generate_daily_summary.py
 # 코드 품질 검사
 python3 -m ruff check scripts/
 
+# OpenCode 동기화 (git pull, 중앙 관리자)
+bash /Users/namyongkim/Desktop/.twodragon0/bin/hourly-opencode-git-pull.sh
+
 # 의존성 설치
 pip install -r scripts/requirements.txt
 bundle install
@@ -73,6 +81,13 @@ Slack 연동:
 - `_state/*.json` 파일은 중복 방지 상태이므로 수동 수정 금지
 - `assets/images/generated/`는 30일 이상 된 이미지 자동 정리됨
 - GitHub Actions는 동시성 그룹(`collect-data`)으로 순차 실행
+
+## Continuous Improvement Loop
+
+- `.github/workflows/continuous-improvement-loop.yml`는 매시간(`0 * * * *`) OpenClaw 기반 개선 루프를 실행
+- 루프 시작 시 중앙 관리자 스크립트로 동기화 수행
+- 루프는 Ralph(포스트 품질) + Ultrawork(이미지 백필) + 개선 리포트 생성을 결합
+- 개선 포럼 축: 운영, 보안, 모니터링, 성능, 코드 품질, 콘텐츠 품질, UI/UX, 디자인
 
 ---
 
