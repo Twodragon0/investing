@@ -152,11 +152,25 @@ def count_news_items(content: str) -> int:
         r"총 수집 건수\*?\*?:\s*(\d+)건",
         r"총\s*\*{0,2}(\d+)건\*{0,2}",
         r"(\d+)건이 수집",
+        r"이벤트\s*(\d+)건",
+        r"(\d+)건을 수집",
     ]
     for pattern in patterns:
         match = re.search(pattern, content)
         if match:
             return int(match.group(1))
+
+    # DeFi TVL: sum protocol + chain counts (e.g. "20개 프로토콜", "15개 체인")
+    proto_match = re.search(r"(\d+)개 프로토콜", content)
+    chain_match = re.search(r"(\d+)개 체인", content)
+    if proto_match or chain_match:
+        total = 0
+        if proto_match:
+            total += int(proto_match.group(1))
+        if chain_match:
+            total += int(chain_match.group(1))
+        return total
+
     return 0
 
 
@@ -698,19 +712,22 @@ def _analyze_sentiment(summaries: List[Optional[Dict[str, Any]]]) -> Dict[str, A
 
         for title in titles:
             t_lower = title.lower()
+            # Strip markdown link syntax to get plain text for display
+            display_title = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", title).strip()
+            display_title = display_title.lstrip("0123456789. ")
             for kw in pos_kw:
                 if kw in t_lower:
                     pos_count += 1
-                    if len(pos_examples) < 3 and len(title) > 10:
-                        if title not in pos_examples:
-                            pos_examples.append(smart_truncate(title, 120))
+                    if len(pos_examples) < 3 and len(display_title) > 10:
+                        if display_title not in pos_examples:
+                            pos_examples.append(smart_truncate(display_title, 120))
                     break
             for kw in neg_kw:
                 if kw in t_lower:
                     neg_count += 1
-                    if len(neg_examples) < 3 and len(title) > 10:
-                        if title not in neg_examples:
-                            neg_examples.append(smart_truncate(title, 120))
+                    if len(neg_examples) < 3 and len(display_title) > 10:
+                        if display_title not in neg_examples:
+                            neg_examples.append(smart_truncate(display_title, 120))
                     break
 
     total = pos_count + neg_count
@@ -1351,7 +1368,13 @@ def main():
                 continue
             market_summary = summarize_market_post(post)
             market_summary["url"] = get_post_url(filepath, today, "market-analysis")
-            post_links.append(("시장 종합 리포트", market_summary.get("count", "-"), market_summary["url"]))
+            # Market report is a dashboard, not news items; count table rows as proxy
+            market_count = count_news_items(post["content"])
+            if not market_count:
+                # Count Top 20 table rows as fallback
+                top_rows = extract_table_rows(post["content"], "시가총액 Top 20", 25)
+                market_count = len(top_rows) if top_rows else 0
+            post_links.append(("시장 종합 리포트", market_count or "종합", market_summary["url"]))
         elif "worldmonitor-briefing" in slug:
             worldmonitor_summary = summarize_worldmonitor_post(post)
             worldmonitor_summary["url"] = get_post_url(filepath, today, "market-analysis")
@@ -1362,6 +1385,16 @@ def main():
                     worldmonitor_summary["url"],
                 )
             )
+        elif "defi-tvl-report" in slug:
+            defi_post = read_post_content(filepath)
+            defi_count = count_news_items(defi_post["content"])
+            defi_url = get_post_url(filepath, today, "crypto-news")
+            post_links.append(("DeFi TVL 리포트", defi_count or "-", defi_url))
+        elif "fmp-economic-calendar" in slug:
+            fmp_post = read_post_content(filepath)
+            fmp_count = count_news_items(fmp_post["content"])
+            fmp_url = get_post_url(filepath, today, "market-analysis")
+            post_links.append(("경제 캘린더", fmp_count or "-", fmp_url))
 
     # Calculate total count
     all_summaries = [
@@ -1912,7 +1945,13 @@ def main():
             if norm in seen_p1:
                 continue
             seen_p1.add(norm)
-            content_parts.append(f"- {title}")
+            # Ensure P1 items have clickable links
+            link = item.get("link", "")
+            if link and "[" not in title:
+                display = get_display_title(item)
+                content_parts.append(f"- {markdown_link(display, link)}")
+            else:
+                content_parts.append(f"- {title}")
         content_parts.append("")
 
     # ═══════════════════════════════════════
