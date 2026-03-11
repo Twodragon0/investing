@@ -22,7 +22,6 @@ description: "2026-03-10 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked
 ## 전체 뉴스 요약
 
 - Lido로 TVL $33.92B (13.7%)로 1위이나, 생태계가 상당히 분산되어 있습니다. 프로토콜 간 경쟁이 활발한 건강한 구조입니다.
-- 2026-03-10 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked, 총 예치 자산) 현황을 정리합니다. 상위 20개 프로토콜의 총 TVL은 $247.99B이며, 상위 15개 체인의 총 TVL은 $91.72B입니다.
 - 총 20개 프로토콜, 15개 체인의 TVL 데이터를 분석했습니다.
 
 ## 전체 요약
@@ -103,7 +102,7 @@ description: "2026-03-10 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked
 
 **Lido**로 TVL **$33.92B** (13.7%)로 1위이나, 생태계가 상당히 분산되어 있습니다. 프로토콜 간 경쟁이 활발한 건강한 구조입니다.
 
-**Ethereum**으로 TVL **$55.47B** (60.5%)로 2위 Solana(7.2%) 대비 53%p 격차를 보이며 체인 생태계를 독점적으로 주도합니다.
+**Ethereum(이더리움)**None으로 TVL **$55.47B** (60.5%)로 2위 Solana(7.2%) 대비 53%p 격차를 보이며 체인 생태계를 독점적으로 주도합니다.
 
 **카테고리 분석**: **기타** 카테고리가 TVL $80.55B (32.5%)로 가장 큰 비중을 차지합니다.
 
@@ -117,5 +116,5 @@ description: "2026-03-10 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked
 
 ---
 
-**데이터 수집 시각**: 2026-03-10 00:52 UTC  
+**데이터 수집 시각**: 2026-03-10 00:52 UTC
 **데이터 출처**: <span class="source-tag" data-source-type="default">DeFi Llama</span> (https://defillama.com)

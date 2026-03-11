@@ -15,7 +15,6 @@ description: "2026-03-09 FMP 기준 SPY -1.31%·VIX 30.81(+4.48%), 경제 이벤
 
 ## 전체 뉴스 요약
 
-- 2026-03-09 기준 주요 시장 지수 2종, 섹터 11개, 경제 이벤트 18건(고·중간 중요도), 대형주 실적 발표 2건을 수집했습니다.
 - - Will Ciena (CIEN) Beat Estimates Again in Its Next Earnings Report? (Tue, 03 Mar 2026 17:10:02 GMT) - Why Broadcom Stock Has Done What Nvidia Couldn’t After…
 
 

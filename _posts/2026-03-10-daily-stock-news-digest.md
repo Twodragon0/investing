@@ -23,7 +23,6 @@ description: "2026-03-10 주식 시장에서 234건의 뉴스를 분석했습니
 
 - KOSPI 5,526.01 (+5.66%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 1,142.15 (+4.03%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
-- 2026-03-10 주식 시장에서 234건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,526.01(+5.66%), KOSDAQ 1,142.15(+4.03%), USD/KRW 1,470.08(+0.57%).
 - *코스닥, 코스피, 서킷브레이커 이슈가 82건으로 주목받고 있습니다.*
 
 ## 테마별 주요 뉴스
@@ -230,7 +229,6 @@ description: "2026-03-10 주식 시장에서 234건의 뉴스를 분석했습니
 <li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPaVZVQXBLaWJRNTg1LXhYMFhSX2tSTllsc2dDVVliSUQ4U2Qwd2NnZTRjcXVLQ1ZVNzVxRE5PUl9nS0xWLVhmNnVpTGtMYUlTcWhBZFMtdmRmQzJTNWZic2JFYk5ESkp0SW45cjdMZnRBc284UzV1R3dKbTBnYl9CYzAyMFlBa0RM0gGcAUFVX3lxTE1oVTA0eXJGdU95UlliQTlkeDJ1Q0RCZFBncE9WMUxGSnBOS2VqblRaWVdrODBWVUdMSzk2SHgwRF9NbFpKS3FTWjBnbDFaQnFLaFhjN005dWFNcV9qbXAyd2pLcUYzNGhUVVNHekdwWmh2dzdjam5QUFc0OFd0ZGZtSmlWSE1lT0RSa1c5TEw3ODctV29XT3lueW04aA?oc=5">증시 급락하는데 거래소 먹통…‘원유 ETF’ 거래 정지 - 조선비즈 - Chosunbiz</a></li>
 <li><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxPTDF0X3BvZ0FocDZLZFUyVk1IUHh1eV9Fdmp3Q3pXaldJQVE0allmNU9JWlFYUFJ5a01QQzFxczhwN3RYREtYQXZqTVdZVEZZNWhiSW1KSllSVFdSV1drZ0pNM0c3T3dSaGxCNmNxR3lTaE9lZFVsbnlBWFBDY2ltRzNqZnJncVhuUU1yQUYwTk0yV0VOVlBXUndxeDliaVVWYkhCemNDaUJNTTM2a0diaXlBdXFyS2luT2c?oc=5">Coeur Mining의 옵션 활동 디코딩: 큰 그림은 무엇입니까?</a></li>
 </ol></div></details>
-
 
 
 ---

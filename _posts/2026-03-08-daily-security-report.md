@@ -7,7 +7,7 @@ tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/og-default.png"
+image: "/assets/images/generated/news-briefing-security-2026-03-08.png"
 description: "2026-03-08 블록체인 보안 리포트. Solv 프로토콜 DeFi 해킹 270만 달러 손실 등 암호화폐 보안 사고 2건을 분석한 일일 보안 동향 요약입니다."
 ---
 
