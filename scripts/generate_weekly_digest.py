@@ -192,15 +192,40 @@ def generate_digest(posts: List[Dict]) -> str:
             categories[cat] = []
         categories[cat].append(post)
 
-    # ── 핵심 요약 ──
+    # ── 핵심 요약 (stat-grid) ──
     content_parts.append("## 핵심 요약\n")
-    content_parts.append(f"- 총 **{len(posts)}건**의 포스트 분석")
-    category_lines = []
-    for name, items in sorted(categories.items(), key=lambda x: len(x[1]), reverse=True):
-        category_lines.append(f"{name} {len(items)}건")
-    if category_lines:
-        content_parts.append(f"- 카테고리: {', '.join(category_lines[:5])}")
-    content_parts.append("")
+    content_parts.append('<div class="stat-grid">')
+    content_parts.append(
+        f'<div class="stat-item"><span class="stat-value">{len(posts)}</span>'
+        '<span class="stat-label">총 포스트</span></div>'
+    )
+    content_parts.append(
+        f'<div class="stat-item"><span class="stat-value">{len(categories)}</span>'
+        '<span class="stat-label">카테고리</span></div>'
+    )
+    content_parts.append(
+        '<div class="stat-item"><span class="stat-value">7</span>'
+        '<span class="stat-label">분석 일수</span></div>'
+    )
+    # Top category
+    _cat_names_lookup = {
+        "crypto-news": "암호화폐",
+        "stock-news": "주식",
+        "security-alerts": "보안",
+        "market-analysis": "시장 분석",
+        "social-media": "소셜",
+        "regulatory-news": "규제",
+        "political-trades": "정치인 거래",
+        "defi-tvl": "DeFi",
+        "worldmonitor": "글로벌",
+    }
+    top_cat = max(categories.items(), key=lambda x: len(x[1])) if categories else ("N/A", [])
+    top_cat_name = _cat_names_lookup.get(top_cat[0], top_cat[0]) if categories else "N/A"
+    content_parts.append(
+        f'<div class="stat-item"><span class="stat-value">{len(top_cat[1])}</span>'
+        f'<span class="stat-label">{top_cat_name}</span></div>'
+    )
+    content_parts.append("</div>\n")
 
     # Extract market data for overview
     market_data = extract_market_data(posts)
@@ -321,7 +346,11 @@ def generate_digest(posts: List[Dict]) -> str:
 
     content_parts.append("")
     content_parts.append(
-        "> *본 다이제스트는 한 주간 수집된 데이터를 기반으로 자동 생성되었으며, 투자 조언이 아닙니다.*"
+        '<div class="wm-footer-meta">'
+        f"생성 시각: {now.strftime('%Y-%m-%d %H:%M')} KST · "
+        f"분석 기간: {week_start} ~ {week_end} · "
+        "자동 생성 (투자 조언 아님)"
+        "</div>"
     )
 
     return "\n".join(content_parts)

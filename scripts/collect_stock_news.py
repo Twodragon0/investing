@@ -437,6 +437,29 @@ def main():
         opening_parts.append(f"한국 시장: {', '.join(kr_summary_parts)}.")
     content_parts = [" ".join(opening_parts) + "\n"]
 
+    # Stat grid - market snapshot
+    content_parts.append('<div class="stat-grid">')
+    if kr_market:
+        for name, info in list(kr_market.items())[:4]:
+            content_parts.append(
+                f'<div class="stat-item"><span class="stat-value">{info["price"]}</span>'
+                f'<span class="stat-label">{name} ({info["change_pct"]})</span></div>'
+            )
+    else:
+        content_parts.append(
+            f'<div class="stat-item"><span class="stat-value">{len(all_items)}</span>'
+            '<span class="stat-label">수집 뉴스</span></div>'
+        )
+        content_parts.append(
+            f'<div class="stat-item"><span class="stat-value">{global_count}</span>'
+            '<span class="stat-label">글로벌</span></div>'
+        )
+        content_parts.append(
+            f'<div class="stat-item"><span class="stat-value">{korean_count}</span>'
+            '<span class="stat-label">한국</span></div>'
+        )
+    content_parts.append("</div>\n")
+
     # Create summarizer
     summarizer = ThemeSummarizer(all_items)
 
@@ -822,7 +845,12 @@ def main():
         )
 
     # Data collection footer
-    content_parts.append(f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC")
+    content_parts.append(
+        '\n<div class="wm-footer-meta">'
+        f'<span>수집 시각: {now.strftime("%Y-%m-%d %H:%M")} UTC</span>'
+        '<span>소스: NewsAPI, Yahoo Finance, Google News, Alpha Vantage</span>'
+        '</div>'
+    )
 
     content = "\n".join(content_parts)
 

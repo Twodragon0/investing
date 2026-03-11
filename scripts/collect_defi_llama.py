@@ -24,7 +24,6 @@ from common.config import REQUEST_TIMEOUT, get_ssl_verify, setup_logging
 from common.dedup import DedupEngine
 from common.markdown_utils import (
     html_reference_details,
-    html_source_tag,
     markdown_link,
     markdown_table,
 )
@@ -984,10 +983,11 @@ def build_post_content(
     )
 
     # Footer
-    content_parts.append("\n---\n")
     content_parts.append(
-        f"**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC  \n"
-        f"**데이터 출처**: {html_source_tag('DeFi Llama')} (https://defillama.com)"
+        '\n<div class="wm-footer-meta">'
+        f'<span>수집 시각: {now.strftime("%Y-%m-%d %H:%M")} UTC</span>'
+        '<span>소스: DeFi Llama (defillama.com)</span>'
+        '</div>'
     )
 
     return "\n".join(content_parts)

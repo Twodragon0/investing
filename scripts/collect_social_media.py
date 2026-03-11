@@ -498,6 +498,30 @@ def main():
         f"{sources_str}, 총 {total_count}건이 수집되었습니다.\n"
     ]
 
+    # Stat grid - source breakdown
+    content_parts.append('<div class="stat-grid">')
+    if telegram_items:
+        content_parts.append(
+            f'<div class="stat-item"><span class="stat-value">{len(telegram_items)}</span>'
+            '<span class="stat-label">Telegram</span></div>'
+        )
+    if social_items:
+        content_parts.append(
+            f'<div class="stat-item"><span class="stat-value">{len(social_items)}</span>'
+            '<span class="stat-label">소셜 미디어</span></div>'
+        )
+    if reddit_items:
+        content_parts.append(
+            f'<div class="stat-item"><span class="stat-value">{len(reddit_items)}</span>'
+            '<span class="stat-label">Reddit</span></div>'
+        )
+    if political_items:
+        content_parts.append(
+            f'<div class="stat-item"><span class="stat-value">{len(political_items)}</span>'
+            '<span class="stat-label">정치·경제</span></div>'
+        )
+    content_parts.append("</div>\n")
+
     # Collect all source links
     source_links = []
 
@@ -872,7 +896,12 @@ def main():
         )
 
     # Data collection timestamp footer
-    content_parts.append(f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC")
+    content_parts.append(
+        '\n<div class="wm-footer-meta">'
+        f'<span>수집 시각: {now.strftime("%Y-%m-%d %H:%M")} UTC</span>'
+        '<span>소스: Telegram, Reddit, Google News, 소셜 미디어</span>'
+        '</div>'
+    )
 
     content = "\n".join(content_parts)
 

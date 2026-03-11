@@ -308,9 +308,10 @@ def _build_regulatory_theme_analysis(
 
             display_title = _clean_rss_title(get_display_title(article))
             if a_link:
-                lines.append(f"- [{display_title}]({a_link}) — {a_source}")
+                lines.append(f"- [{display_title}]({a_link})")
             else:
-                lines.append(f"- {display_title} — {a_source}")
+                lines.append(f"- {display_title}")
+            lines.append(f"  {html_source_tag(a_source)}")
 
             # Show description excerpt if available
             if a_desc and a_desc != a_title and len(a_desc) > 20:
@@ -388,6 +389,15 @@ def main():
     content_parts = [
         f"전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 {len(all_items)}건의 규제 관련 뉴스가 수집되었습니다.\n",
     ]
+
+    # Stat grid - region counts
+    content_parts.append('<div class="stat-grid">')
+    for region, count in region_counts.most_common(4):
+        content_parts.append(
+            f'<div class="stat-item"><span class="stat-value">{count}</span>'
+            f'<span class="stat-label">{region}</span></div>'
+        )
+    content_parts.append("</div>\n")
 
     # Executive summary (한눈에 보기)
     exec_summary = summarizer.generate_executive_summary(
@@ -706,7 +716,12 @@ def main():
             )
 
     # Data collection timestamp
-    content_parts.append(f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC")
+    content_parts.append(
+        '\n<div class="wm-footer-meta">'
+        f'<span>수집 시각: {now.strftime("%Y-%m-%d %H:%M")} UTC</span>'
+        '<span>소스: SEC, FSC/FSS, Google News, 규제 기관 RSS</span>'
+        '</div>'
+    )
 
     content = "\n".join(content_parts)
 

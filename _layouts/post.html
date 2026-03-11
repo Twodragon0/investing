@@ -208,21 +208,31 @@ layout: default
   "@type": "Article",
   "headline": {{ page.title | jsonify }},
   "datePublished": "{{ page.date | date_to_xmlschema }}",
-  "dateModified": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
+  "inLanguage": "ko-KR",
   "author": {
-    "@type": "Organization",
-    "name": "Investing Dragon"
+    "@type": "Person",
+    "name": "{{ site.social.name | default: 'Investing Dragon' }}",
+    "url": "{{ site.url }}",
+    "sameAs": ["https://github.com/Twodragon0"]
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Investing Dragon",
+    "name": "{{ site.title }}",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ '/assets/images/og-default.png' | absolute_url }}"
+      "url": "{{ site.logo | absolute_url }}"
     }
   },
-  "description": {{ page.description | default: page.excerpt | strip_html | truncate: 160 | jsonify }},
-  {% if page.image %}"image": "{{ page.image | absolute_url }}",{% endif %}
+  "description": {{ page.excerpt | default: page.description | default: site.description | strip_html | strip_newlines | truncate: 200 | jsonify }},
+  {% if page.image %}"image": {
+    "@type": "ImageObject",
+    "url": "{{ page.image | absolute_url }}",
+    "width": 1200,
+    "height": 630
+  },{% endif %}
+  {% if page.categories %}"articleSection": "{{ page.categories | first }}",{% endif %}
+  {% if page.tags %}"keywords": "{{ page.tags | join: ', ' }}",{% endif %}
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "{{ page.url | absolute_url }}"

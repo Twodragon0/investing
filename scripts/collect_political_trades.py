@@ -714,7 +714,12 @@ def main():
             )
         )
 
-    content_parts.append(f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC")
+    content_parts.append(
+        '\n<div class="wm-footer-meta">'
+        f'<span>수집 시각: {now.strftime("%Y-%m-%d %H:%M")} UTC</span>'
+        '<span>소스: Capitol Trades, QuiverQuant, SEC EDGAR</span>'
+        '</div>'
+    )
 
     content = "\n".join(content_parts)
 

@@ -824,7 +824,8 @@ def main() -> None:
         content_parts.append(
             '<div class="wm-reference-summary">'
             "<strong>원문 링크 탐색 가이드</strong>"
-            "<p>시장 영향이 높은 이슈를 우선 확인할 수 있도록 출처별 커버리지를 함께 제공합니다.</p>"
+            f"<p>{len(unique_refs)}건의 원문을 출처별로 정리했습니다. "
+            "시장 영향이 높은 이슈를 우선 확인하세요.</p>"
             "</div>"
         )
 
@@ -836,7 +837,8 @@ def main() -> None:
 
         detail_lines = [
             f'<details class="wm-reference-details">'
-            f"<summary>전체 원문 {len(unique_refs)}건 펼치기</summary>"
+            f'<summary><span class="ref-toggle-icon">&#9654;</span> '
+            f"전체 원문 <strong>{len(unique_refs)}건</strong> 보기</summary>"
             '<div class="details-content">',
             '<ol class="wm-reference-list">',
         ]
@@ -864,18 +866,41 @@ def main() -> None:
     content_parts.extend(
         [
             "",
+            "## 글로벌 리스크 지도",
+            '<div class="wm-map-card">',
+            f'<a href="{WM_MAP_VIEW_URL}" target="_blank" rel="noopener noreferrer" class="wm-map-link">',
+            '<div class="wm-map-icon">&#127758;</div>',
+            "<div class=\"wm-map-text\">",
+            "<strong>WorldMonitor 글로벌 리스크 지도</strong>",
+            "<span>분쟁, 핵, 제재, 에너지, 기상, 군사 등 7개 레이어 실시간 지도</span>",
+            "</div>",
+            '<div class="wm-map-arrow">&#8594;</div>',
+            "</a>",
+            "</div>",
+            "",
             "## 읽는 방법",
-            "- **지정학/안보(높음)**: 금/원유/방산/안전자산 변동성과 동시 확인",
-            "- **에너지(중간)**: 원유/가스 가격과 인플레이션 민감 섹터 연동 점검",
-            "- **정책/법률(중간)**: 규제 발표 시 섹터별 이벤트 드리븐 리스크 점검",
+            '<div class="wm-reading-guide">',
+            '<div class="guide-item guide-high">'
+            "<strong>지정학/안보</strong>"
+            "<span>금/원유/방산/안전자산 변동성과 동시 확인</span>"
+            "</div>",
+            '<div class="guide-item guide-mid">'
+            "<strong>에너지</strong>"
+            "<span>원유/가스 가격과 인플레이션 민감 섹터 연동 점검</span>"
+            "</div>",
+            '<div class="guide-item guide-mid">'
+            "<strong>정책/법률</strong>"
+            "<span>규제 발표 시 섹터별 이벤트 드리븐 리스크 점검</span>"
+            "</div>",
+            "</div>",
             "",
             "> *본 브리핑은 worldmonitor.app RSS proxy를 통해 자동 수집된 데이터를 기반으로 하며, "
             "투자 조언이 아닙니다.*",
             "",
-            "---",
-            f"**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC",
-            "**연계 소스**: worldmonitor.app/api/rss-proxy, finance.worldmonitor.app API",
-            f"**지도 뷰**: {WM_MAP_VIEW_URL}",
+            '<div class="wm-footer-meta">',
+            f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} UTC</span>",
+            "<span>소스: worldmonitor.app API, finance.worldmonitor.app</span>",
+            "</div>",
         ]
     )
 

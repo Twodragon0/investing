@@ -24,7 +24,7 @@ from common.bettafish_analyzer import BettaFishAnalyzer
 from common.collector_metrics import log_collection_summary
 from common.config import BROWSER_USER_AGENT, REQUEST_TIMEOUT, get_env, get_ssl_verify, setup_logging
 from common.dedup import DedupEngine
-from common.markdown_utils import html_reference_details
+from common.markdown_utils import html_reference_details, html_source_tag
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.signal_composer import SignalComposer
@@ -356,11 +356,12 @@ def _price_icon(change_pct: Optional[float]) -> str:
 
 
 def _format_news_rows(items: List[Dict[str, Any]], limit: int = 5) -> str:
-    """Format news items into a bullet list (max `limit` items)."""
+    """Format news items into numbered cards with source tags."""
     if not items:
         return ""
     rows = []
     seen_titles: set = set()
+    idx = 0
     for item in items:
         title = item.get("title", "").strip()
         link = item.get("link", "")
@@ -368,11 +369,13 @@ def _format_news_rows(items: List[Dict[str, Any]], limit: int = 5) -> str:
         if not title or title in seen_titles:
             continue
         seen_titles.add(title)
+        idx += 1
         if link:
-            rows.append(f"- [{title}]({link}) *({source})*")
+            rows.append(f"**{idx}. [{title}]({link})**")
         else:
-            rows.append(f"- {title} *({source})*")
-        if len(rows) >= limit:
+            rows.append(f"**{idx}. {title}**")
+        rows.append(f"{html_source_tag(source)}\n")
+        if idx >= limit:
             break
     return "\n".join(rows) + "\n" if rows else ""
 
@@ -477,6 +480,24 @@ def build_post_content(
         ]
     )
     parts.append(f"**{today}** 기준 시장 심리·리스크 지표를 {source_count}개 소스에서 수집했습니다.\n")
+
+    # Stat grid - key indicators at a glance
+    stat_items = []
+    if cnn_fg:
+        score = cnn_fg["score"]
+        rating_ko = _rating_to_korean(cnn_fg.get("rating", ""))
+        stat_items.append(f'<div class="stat-item"><div class="stat-value">{score}</div><div class="stat-label">공포탐욕 ({rating_ko})</div></div>')
+    vix_data = market_data.get("VIX")
+    if vix_data:
+        stat_items.append(f'<div class="stat-item"><div class="stat-value">{vix_data["price_fmt"]}</div><div class="stat-label">VIX</div></div>')
+    dxy_data = market_data.get("DXY")
+    if dxy_data:
+        stat_items.append(f'<div class="stat-item"><div class="stat-value">{dxy_data["price_fmt"]}</div><div class="stat-label">DXY</div></div>')
+    gold_data = market_data.get("Gold")
+    if gold_data:
+        stat_items.append(f'<div class="stat-item"><div class="stat-value">{gold_data["price_fmt"]}</div><div class="stat-label">금</div></div>')
+    if stat_items:
+        parts.append('<div class="stat-grid">' + "".join(stat_items) + "</div>\n")
 
     # ── Section 1: 시장 심리 지표 ──────────────────────────────────────────
     parts.append("## 🌡️ 시장 심리 지표\n")
@@ -693,13 +714,25 @@ def build_post_content(
         parts.append("\n" + html_reference_details("참고 링크", source_links, limit=20, title_max_len=90))
 
     # Fixed reference links
-    parts.append("\n**데이터 소스:**")
-    parts.append("- [CNN Fear & Greed Index](https://www.cnn.com/markets/fear-and-greed)")
-    parts.append("- [CBOE VIX](https://www.cboe.com/tradable_products/vix/)")
-    parts.append("- [FINVIZ Market Map](https://finviz.com/map.ashx)")
-    parts.append("- [FRED - 경제 지표](https://fred.stlouisfed.org/) - 미국 연방준비은행 경제 데이터")
-
-    parts.append(f"\n---\n**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC")
+    parts.append(
+        '\n<div class="wm-reading-guide">'
+        '<div class="guide-item guide-high">'
+        '<strong>데이터 소스</strong>'
+        '<span>'
+        '<a href="https://www.cnn.com/markets/fear-and-greed" target="_blank" rel="noopener noreferrer">CNN Fear &amp; Greed</a> · '
+        '<a href="https://www.cboe.com/tradable_products/vix/" target="_blank" rel="noopener noreferrer">CBOE VIX</a> · '
+        '<a href="https://finviz.com/map.ashx" target="_blank" rel="noopener noreferrer">FINVIZ</a> · '
+        '<a href="https://fred.stlouisfed.org/" target="_blank" rel="noopener noreferrer">FRED</a>'
+        '</span>'
+        '</div>'
+        '</div>'
+    )
+    parts.append(
+        '\n<div class="wm-footer-meta">'
+        f'<span>수집 시각: {now.strftime("%Y-%m-%d %H:%M")} UTC</span>'
+        '<span>소스: CNN, CBOE, yfinance, FRED</span>'
+        '</div>'
+    )
 
     return "\n".join(parts)
 

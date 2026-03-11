@@ -656,7 +656,7 @@ def main():
                     content_parts.append(f"{desc_text}")
                 else:
                     content_parts.append(f"{source} 거래소 공지사항입니다.")
-                content_parts.append(f"`거래소: {source}`\n")
+                content_parts.append(f"{html_source_tag(source)}\n")
                 shown_exchange += 1
                 if shown_exchange >= 10:
                     break
@@ -853,8 +853,12 @@ def main():
             )
 
         # Data collection footer
-        content_parts.append("\n---\n")
-        content_parts.append(f"**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC")
+        content_parts.append(
+            '\n<div class="wm-footer-meta">'
+            f'<span>수집 시각: {now.strftime("%Y-%m-%d %H:%M")} UTC</span>'
+            '<span>소스: CryptoPanic, CoinGecko, Google News, 거래소 RSS</span>'
+            '</div>'
+        )
         top_sources_str = ", ".join(f"{name} ({count}건)" for name, count in source_counter.most_common(5))
         content_parts.append(f"**수집 출처**: {top_sources_str}")
 

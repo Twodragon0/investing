@@ -409,17 +409,32 @@ class PostGenerator:
                 safe_value = str(value).replace('"', '\\"').replace("\n", " ")
                 frontmatter_lines.append(f'{key}: "{safe_value}"')
 
-        # description 자동 생성 (SEO용, 80-160자)
+        # description 자동 생성 (SEO용, 80-200자)
+        desc_text = ""
         if not (extra_frontmatter and "description" in extra_frontmatter):
             desc_text = _extract_description(content)
             desc_text = _clean_description(desc_text)
             if not desc_text or len(desc_text) < 80:
-                # Fallback: combine title + category context for SEO
                 desc_text = _build_fallback_description(title, self.category, tags)
                 desc_text = _clean_description(desc_text)
             if desc_text and len(desc_text) >= 80:
                 safe_desc = desc_text.replace('"', "'")
                 frontmatter_lines.append(f'description: "{safe_desc}"')
+
+        # excerpt 자동 생성 (SNS 미리보기용, 짧은 요약)
+        if not (extra_frontmatter and "excerpt" in extra_frontmatter):
+            excerpt_text = desc_text if desc_text else _extract_description(content)
+            if excerpt_text:
+                excerpt_text = smart_truncate(excerpt_text, 100).replace('"', "'")
+                frontmatter_lines.append(f'excerpt: "{excerpt_text}"')
+
+        # image_alt 자동 생성 (접근성 + SNS 이미지 설명)
+        if not (extra_frontmatter and "image_alt" in extra_frontmatter):
+            cat_ko = _CATEGORY_KO.get(self.category, self.category)
+            clean_title = re.sub(r"[*_`~]", "", title).strip()
+            image_alt = f"{clean_title} - {cat_ko} 뉴스 요약 이미지"
+            safe_alt = image_alt.replace('"', "'")
+            frontmatter_lines.append(f'image_alt: "{safe_alt}"')
 
         frontmatter_lines.append("---")
 

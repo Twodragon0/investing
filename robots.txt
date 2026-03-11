@@ -36,3 +36,5 @@ User-agent: cohere-ai
 Allow: /
 
 Sitemap: {{ site.url }}/sitemap.xml
+Feed: {{ site.url }}/feed.xml
+Feed: {{ site.url }}/atom.xml

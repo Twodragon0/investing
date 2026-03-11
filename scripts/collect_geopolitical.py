@@ -30,6 +30,7 @@ from common.dedup import DedupEngine
 from common.enrichment import enrich_items
 from common.markdown_utils import (
     html_reference_details,
+    html_source_tag,
     markdown_link,
     markdown_table,
 )
@@ -427,7 +428,7 @@ def _build_gdelt_section(articles: List[Dict[str, Any]]) -> List[str]:
             lines.append(f"**{shown + 1}. [{truncate_text(title, 100)}]({link})**")
         else:
             lines.append(f"**{shown + 1}. {truncate_text(title, 100)}**")
-        lines.append(f"출처: `{source}` | 감성: `{tone_str}` ({tone_lbl})\n")
+        lines.append(f"{html_source_tag(source)} | 감성: `{tone_str}` ({tone_lbl})\n")
         shown += 1
 
     return lines
@@ -681,6 +682,26 @@ def main() -> None:
         ]
     )
 
+    # Stat grid - source counts at a glance
+    content_parts.append('<div class="stat-grid">')
+    content_parts.append(
+        f'<div class="stat-item"><span class="stat-value">{len(markets)}</span>'
+        '<span class="stat-label">Polymarket</span></div>'
+    )
+    content_parts.append(
+        f'<div class="stat-item"><span class="stat-value">{len(gdelt_articles)}</span>'
+        '<span class="stat-label">GDELT 뉴스</span></div>'
+    )
+    content_parts.append(
+        f'<div class="stat-item"><span class="stat-value">{len(google_news_items)}</span>'
+        '<span class="stat-label">뉴스 기사</span></div>'
+    )
+    content_parts.append(
+        f'<div class="stat-item"><span class="stat-value">{source_count}</span>'
+        '<span class="stat-label">데이터 소스</span></div>'
+    )
+    content_parts.append("</div>\n")
+
     # Section 1: Polymarket prediction markets
     content_parts.append("## 1. 예측 시장 동향 (Polymarket)\n")
     content_parts.append(
@@ -720,12 +741,11 @@ def main() -> None:
         )
 
     # Footer
-    content_parts.extend(
-        [
-            "\n---",
-            f"**데이터 수집 시각**: {now.strftime('%Y-%m-%d %H:%M')} UTC",
-            "**데이터 소스**: Polymarket (gamma-api.polymarket.com), GDELT Project, Google News RSS",
-        ]
+    content_parts.append(
+        '\n<div class="wm-footer-meta">'
+        f'<span>수집 시각: {now.strftime("%Y-%m-%d %H:%M")} UTC</span>'
+        '<span>소스: Polymarket, GDELT Project, Google News RSS</span>'
+        '</div>'
     )
 
     content = "\n".join(content_parts)
