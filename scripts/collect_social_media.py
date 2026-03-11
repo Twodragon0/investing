@@ -600,7 +600,7 @@ def main():
             # Collect links for references
             if link:
                 source_links.append(item)
-                content_parts.append(f"**{i}. [{title}]({link})**")
+                content_parts.append(f"**{i}. {markdown_link(title, link)}**")
             else:
                 content_parts.append(f"**{i}. {title}**")
             # Show description only if it adds info beyond title
@@ -628,7 +628,7 @@ def main():
 
             if link:
                 source_links.append(item)
-                content_parts.append(f"**{i}. [{title}]({link})**")
+                content_parts.append(f"**{i}. {markdown_link(title, link)}**")
             else:
                 content_parts.append(f"**{i}. {title}**")
             if description and description != title:
@@ -671,7 +671,7 @@ def main():
 
             if link:
                 source_links.append(item)
-                content_parts.append(f"**{i}. [{title}]({link})**")
+                content_parts.append(f"**{i}. {markdown_link(title, link)}**")
             else:
                 content_parts.append(f"**{i}. {title}**")
             if description and description != title:

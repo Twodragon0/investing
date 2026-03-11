@@ -28,6 +28,7 @@ from common.enrichment import _POLITICAL_SOURCE_CONTEXT, enrich_items
 from common.markdown_utils import (
     html_reference_details,
     html_source_tag,
+    markdown_link,
 )
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feeds_concurrent
@@ -451,7 +452,7 @@ def main():
             description = (item.get("description_ko") or item.get("description", "")).strip()
             if link:
                 source_links.append(item)
-                content_parts.append(f"**{i}. [{title}]({link})**")
+                content_parts.append(f"**{i}. {markdown_link(title, link)}**")
             else:
                 content_parts.append(f"**{i}. {title}**")
             if description and description != title:

@@ -14,7 +14,7 @@ import re
 from collections import Counter
 from typing import Any, Dict, List, Optional, Tuple
 
-from .markdown_utils import html_source_tag
+from .markdown_utils import html_source_tag, markdown_link
 
 logger = logging.getLogger(__name__)
 
@@ -1663,7 +1663,7 @@ class ThemeSummarizer:
                 desc = article.get("description", "").strip()
 
                 if link:
-                    lines.append(f"- [{title}]({link}) — {source}")
+                    lines.append(f"- {markdown_link(title, link)} — {source}")
                 else:
                     lines.append(f"- {title} — {source}")
 

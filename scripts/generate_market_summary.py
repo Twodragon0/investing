@@ -566,7 +566,7 @@ def format_btc_etf(data: Dict) -> str:
             title = item.get("title", "")
             link = item.get("link", "")
             if link:
-                parts.append(f"{i}. [{title}]({link})")
+                parts.append(f"{i}. {markdown_link(title, link)}")
             else:
                 parts.append(f"{i}. {title}")
 

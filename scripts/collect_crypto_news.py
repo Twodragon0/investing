@@ -646,7 +646,7 @@ def main():
                 source = item.get("source", "")
                 description = (item.get("description_ko") or item.get("description", "")).strip()
                 if link:
-                    content_parts.append(f"**{shown_exchange + 1}. [{title}]({link})**")
+                    content_parts.append(f"**{shown_exchange + 1}. {markdown_link(title, link)}**")
                 else:
                     content_parts.append(f"**{shown_exchange + 1}. {title}**")
                 if description and description != title:
@@ -974,7 +974,7 @@ def main():
                     source = item.get("source", "")
                     description = (item.get("description_ko") or item.get("description", "")).strip()
                     if link:
-                        content_parts.append(f"**{i}. [{title}]({link})**")
+                        content_parts.append(f"**{i}. {markdown_link(title, link)}**")
                         security_links.append(item)
                     else:
                         content_parts.append(f"**{i}. {title}**")

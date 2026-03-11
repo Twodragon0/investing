@@ -24,7 +24,11 @@ from common.bettafish_analyzer import BettaFishAnalyzer
 from common.collector_metrics import log_collection_summary
 from common.config import BROWSER_USER_AGENT, REQUEST_TIMEOUT, get_env, get_ssl_verify, setup_logging
 from common.dedup import DedupEngine
-from common.markdown_utils import html_reference_details, html_source_tag
+from common.markdown_utils import (
+    html_reference_details,
+    html_source_tag,
+    markdown_link,
+)
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.signal_composer import SignalComposer
@@ -371,7 +375,7 @@ def _format_news_rows(items: List[Dict[str, Any]], limit: int = 5) -> str:
         seen_titles.add(title)
         idx += 1
         if link:
-            rows.append(f"**{idx}. [{title}]({link})**")
+            rows.append(f"**{idx}. {markdown_link(title, link)}**")
         else:
             rows.append(f"**{idx}. {title}**")
         rows.append(f"{html_source_tag(source)}\n")

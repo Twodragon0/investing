@@ -20,6 +20,7 @@ from common.fmp_api import (
     fetch_sector_performance,
     fetch_treasury_rates,
 )
+from common.markdown_utils import markdown_link
 from common.post_generator import PostGenerator
 
 logger = setup_logging("collect_fmp_calendar")
@@ -194,7 +195,7 @@ def _build_ipo_section(ipos: List[Dict[str, Any]]) -> str:
             link = ipo.get("link", "")
             date = ipo.get("date", "")
             if link:
-                lines.append(f"- [{title}]({link}) ({date})")
+                lines.append(f"- {markdown_link(title, link)} ({date})")
             else:
                 lines.append(f"- {title} ({date})")
         return "\n".join(lines) + "\n"
@@ -243,7 +244,7 @@ def _build_earnings_section(earnings: List[Dict[str, Any]]) -> str:
             link = e.get("link", "")
             date = e.get("date", "")
             if link:
-                lines.append(f"- [{title}]({link}) ({date})")
+                lines.append(f"- {markdown_link(title, link)} ({date})")
             else:
                 lines.append(f"- {title} ({date})")
         return "\n".join(lines) + "\n"

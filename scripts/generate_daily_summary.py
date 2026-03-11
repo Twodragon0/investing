@@ -24,7 +24,12 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.config import SITE_URL, get_kst_timezone, setup_logging
 from common.entity_extractor import extract_market_signals, group_related_items
-from common.markdown_utils import _normalize_url, markdown_table, smart_truncate
+from common.markdown_utils import (
+    _normalize_url,
+    markdown_link,
+    markdown_table,
+    smart_truncate,
+)
 from common.post_generator import POSTS_DIR
 from common.summarizer import ThemeSummarizer
 from common.translator import get_display_title
@@ -414,7 +419,7 @@ def _collect_all_news_items(summaries: List[Optional[Dict]]) -> List[Dict[str, A
                         seen_titles.add(norm)
                         seen_urls.add(url_key)
                         last_card_item = {
-                            "title": f"[{title}]({link})",
+                            "title": markdown_link(title, link),
                             "description": title,
                             "link": link,
                             "source": s.get("type", ""),
