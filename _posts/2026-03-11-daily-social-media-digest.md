@@ -125,7 +125,7 @@ Arthur Hayes는 미국이 곧 많은 돈을 인쇄할 것이며 비트코인이 
 이재명 "최악 상황 염두에 두고 선제적 대응, 석유 최고가격제 신속 시행" 비즈니스포스트
 <span class="source-tag" data-source-type="default">이재명 경제정책</span>
 
-**10. [경제위기 독주견제]송언석 원내대표,“지방선거는 이재명 정권 독주 견제”…경제위기 대응 촉구 - 전국뉴스](https://news.google.com/rss/articles/CBMicEFVX3lxTE9wQUlyckV5eW5ZUEtXN3p1c0ZmcTJNYXF0dmlXSXFYdl9yZDhtWnVXdkhwV3NERFlqNzhrY2xrMUstX1dPSGpFb0h0QkRVZU0wTTN4cGZQbDFzUWplZkV6aHh3eHFhSzhXcnozVDZ5X0o?oc=5)**
+**10. [\[경제위기 독주견제\]송언석 원내대표,“지방선거는 이재명 정권 독주 견제”…경제위기 대응 촉구 - 전국뉴스](https://news.google.com/rss/articles/CBMicEFVX3lxTE9wQUlyckV5eW5ZUEtXN3p1c0ZmcTJNYXF0dmlXSXFYdl9yZDhtWnVXdkhwV3NERFlqNzhrY2xrMUstX1dPSGpFb0h0QkRVZU0wTTN4cGZQbDFzUWplZkV6aHh3eHFhSzhXcnozVDZ5X0o?oc=5)**
 [경제위기 독주견제]송언석 원내대표,“지방선거는 이재명 정권 독주 견제”…경제위기 대응 촉구 전국뉴스
 <span class="source-tag" data-source-type="default">이재명 경제정책</span>
 
@@ -176,7 +176,7 @@ Arthur Hayes는 미국이 곧 많은 돈을 인쇄할 것이며 비트코인이 
   > BREAKING :🇺🇸 Blackrock ETF has bought $306,250,000 in Bitcoin.Giga Bullish 🔥
 - [박수영 “코스피 5200 붕괴·환율 1500원 육박…이재명 정부 10개월 만에 경제 쓰나미”](https://news.google.com/rss/articles/CBMiaEFVX3lxTFBnYnozcXB6RXZBcVBRQlFLcnZrWDhiYzJlSUJKa3ZUb3RzNE9mVF9oOHFPVFcyVTJpSjRNOFo5VU9MeGFzV2tRUU9FeGZmODJkclo3OU1wNy0tc0dSOUFicUpxclhxZ25k?oc=5) — 이재명 경제정책
   > 박수영 “코스피 5200 붕괴·환율 1500원 육박…이재명 정부 10개월 만에 경제 쓰나미” 복지TV부울경방송
-- [마감시황] 코스피, '외국인·기관' 2조 매수에 5% 상승…5530선 회복 - 뉴스핌](https://news.google.com/rss/articles/CBMiXEFVX3lxTFB0aXR3LXI1bGh2WEZYZG85d2V4eGFrRGVWRVlXa1BPR0xBN3VTTWNFNDZNcXRYWVVpYjBXdEo3eERab1hHN2Q1YzFyOVNab0F4SG5iMHVJQlhGQmRG?oc=5) — 한국증시 수급
+- [\[마감시황\] 코스피, '외국인·기관' 2조 매수에 5% 상승…5530선 회복 - 뉴스핌](https://news.google.com/rss/articles/CBMiXEFVX3lxTFB0aXR3LXI1bGh2WEZYZG85d2V4eGFrRGVWRVlXa1BPR0xBN3VTTWNFNDZNcXRYWVVpYjBXdEo3eERab1hHN2Q1YzFyOVNab0F4SG5iMHVJQlhGQmRG?oc=5) — 한국증시 수급
   > [마감시황] 코스피, '외국인·기관' 2조 매수에 5% 상승…5530선 회복 뉴스핌
 
 ### 🏦 거래소 (5건)

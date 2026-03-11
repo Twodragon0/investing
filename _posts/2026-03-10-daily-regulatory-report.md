@@ -159,7 +159,7 @@ description: "전 세계 금융 규제기관의 최신 동향을 정리합니다
   > 중동상황 관련 ｢금융시장반｣ 점검회의 개최 금융위원회 는 3.6일(금) 16:00 신진창 사무처장 주재 로 금융감독원‧한국거래소‧산업은 행‧기업은행‧수출입은행‧신용보증기금 등 관계기관 및 금융시장 전문가 와 함께...
 - [국힘 "가상자산 거래소 지분제한은 위헌"...여당·정부와 대립각 - 지디넷코리아](https://news.google.com/rss/articles/CBMiVkFVX3lxTE1uaFR5Z05vQWJDUktUQ0FscHR6elZtVzNLX0ZLLWdkckFvTTdGal9VOGVIWkhJa21BWnctenJOXzdQTm80d3ppdG0xQ05wT0cwR2xxdjh3?oc=5) — 한국 금융규제 뉴스
   > 한국은행 통화정책 관련 소식입니다.
-- [이슈] 국힘, 디지털자산 입법 재검토 요구...“거래소 지분 제한은 전례 없는 규제" - 팍스경제TV](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5palIzRnVyTndraGkxMFNfcEliZy1nT2RVOVAtckRIYWVYV2UzeTVSQVVEV0ZxSDdOX0dhV2hQTGw2LXVEbndrNXRJdG9VM2lid3pIN1hqeGUzQmFjbWdOSUlaRW1mejQ?oc=5) — 한국 금융규제 뉴스
+- [\[이슈\] 국힘, 디지털자산 입법 재검토 요구...“거래소 지분 제한은 전례 없는 규제" - 팍스경제TV](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5palIzRnVyTndraGkxMFNfcEliZy1nT2RVOVAtckRIYWVYV2UzeTVSQVVEV0ZxSDdOX0dhV2hQTGw2LXVEbndrNXRJdG9VM2lid3pIN1hqeGUzQmFjbWdOSUlaRW1mejQ?oc=5) — 한국 금융규제 뉴스
   > [이슈] 국힘, 디지털자산 입법 재검토 요구...“거래소 지분 제한은 전례 없는 규제" 팍스경제TV
 
 

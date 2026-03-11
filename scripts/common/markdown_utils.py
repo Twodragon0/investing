@@ -9,7 +9,8 @@ def escape_table_cell(value: object) -> str:
 
 
 def markdown_link(text: str, url: str) -> str:
-    return f"[{escape_table_cell(text)}]({url})"
+    safe = escape_table_cell(text).replace("[", "\\[").replace("]", "\\]")
+    return f"[{safe}]({url})"
 
 
 def markdown_table(
