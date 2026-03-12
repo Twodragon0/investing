@@ -1,0 +1,5 @@
+posts_checked=21
+unique_urls=264
+invalid_format=0
+live_checked=60
+live_failures=0

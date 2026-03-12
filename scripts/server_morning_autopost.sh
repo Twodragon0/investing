@@ -69,6 +69,7 @@ fi
 
 run_py scripts/backfill_images.py
 run_py scripts/backfill_post_summaries.py --clean-images-only --zero-image-report _state/zero-byte-images.txt
+run_py scripts/check_recent_post_urls.py --days 2 --limit 60 --report _state/recent-url-quality.txt
 
 if command -v bundle >/dev/null 2>&1; then
   bundle exec jekyll build
@@ -77,12 +78,12 @@ else
   echo "$LOG_PREFIX bundle not found, skip render verification"
 fi
 
-if git diff --quiet -- _posts/ assets/images/ _state/zero-byte-images.txt 2>/dev/null; then
+if git diff --quiet -- _posts/ assets/images/ _state/zero-byte-images.txt _state/recent-url-quality.txt 2>/dev/null; then
   echo "$LOG_PREFIX no content/image changes"
   exit 0
 fi
 
-git add _posts/ assets/images/ _state/zero-byte-images.txt
+git add _posts/ assets/images/ _state/zero-byte-images.txt _state/recent-url-quality.txt
 
 if git diff --staged --quiet; then
   echo "$LOG_PREFIX nothing staged"
@@ -95,6 +96,7 @@ GIT_COMMITTER_NAME="opencode-bot" \
 GIT_COMMITTER_EMAIL="opencode-bot@users.noreply.github.com" \
 git commit -m "chore: server 09:10 자동 포스팅 및 품질 보정 ${TODAY_KST}" || {
   git add _posts/ assets/images/ _state/zero-byte-images.txt
+  git add _state/recent-url-quality.txt
   if git diff --staged --quiet; then
     echo "$LOG_PREFIX commit skipped after hooks"
     exit 0
