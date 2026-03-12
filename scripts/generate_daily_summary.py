@@ -32,13 +32,28 @@ from common.markdown_utils import (
 )
 from common.post_generator import POSTS_DIR
 from common.summarizer import ThemeSummarizer
-from common.translator import get_display_title
+from common.translator import get_display_title, translate_to_korean
 
 logger = setup_logging("generate_daily_summary")
 
 
 _HTML_TAG_RE = re.compile(r"<[^>]+>")
 _HTML_BLOCK_RE = re.compile(r"<div\b[^>]*>.*?</div>", re.DOTALL)
+_SUMMARY_KEYWORD_LABELS = {
+    "sec": "SEC",
+    "cftc": "CFTC",
+    "etf": "ETF",
+    "whale": "고래",
+    "opec": "OPEC",
+    "fed": "연준",
+    "fomc": "FOMC",
+    "usd/krw": "원/달러",
+    "dxy": "달러인덱스",
+}
+_SOURCE_SUFFIX_RE = re.compile(
+    r"\s+-\s+(?:The New York Times|CryptoRank|Winston & Strawn|European Business Magazine|SEC\.gov|BeInCrypto|Bitget)\s*$",
+    re.I,
+)
 
 
 def strip_html_tags(text: str) -> str:
@@ -988,6 +1003,7 @@ _NOISE_TITLE_PATTERNS = [
     re.compile(r"^api (?:update|maintenance|change)", re.I),
     re.compile(r"^(?:AMENDMENT|FORM)\s+(?:NO\.?\s*)?\d", re.I),
     re.compile(r"^(?:10-[KQ]|8-K|DEF\s*14|S-\d|F-\d)", re.I),
+    re.compile(r"^asst-\d+", re.I),
 ]
 
 
@@ -1003,6 +1019,29 @@ def _is_noise_title(title: str) -> bool:
     # Filing-style IDs: mostly uppercase letters, numbers, dashes, no spaces
     # e.g. "FORM-10K-2024", "DEF14A", "8-K/A"
     if re.match(r"^[A-Z0-9/\-]{4,20}$", clean):
+        return True
+    if any(
+        kw in clean_lower
+        for kw in [
+            "가격 알림",
+            "price alert",
+            "share rewards",
+            "보상을 공유",
+            "vip loan",
+            "vip 대출",
+            "hodler airdrop",
+            "hodler 에어드롭",
+            "perpetual milestone challenge",
+            "무기한 계약 출시",
+            "상품 에디션",
+            "기간 한정 혜택",
+            "연이율 최대",
+            "적립 구독",
+            "획득하세요",
+            "수익 창출 아레나",
+            "yield arena",
+        ]
+    ):
         return True
     # Exchange wallet/system maintenance notices
     if any(
@@ -1030,10 +1069,58 @@ def _clean_bullet_text(text: str) -> str:
 def _clean_headline(title: str) -> str:
     """Remove trailing period artifacts (.., ..., double periods) from a headline."""
     title = title.rstrip()
+    title = _SOURCE_SUFFIX_RE.sub("", title)
     # Collapse multiple trailing dots/ellipsis into nothing or single ellipsis
     title = re.sub(r"\.{2,}$", "", title)
     title = re.sub(r"\.\s*\.$", "", title)
     return title.rstrip(". ").strip()
+
+
+def _looks_english_heavy(text: str) -> bool:
+    letters = re.findall(r"[A-Za-z]", text)
+    korean = re.findall(r"[가-힣]", text)
+    if len(letters) < 8:
+        return False
+    return len(letters) > len(korean) * 2
+
+
+def _headline_for_korean_summary(title: str) -> str:
+    cleaned = _clean_headline(title)
+    if _looks_english_heavy(cleaned):
+        translated = translate_to_korean(cleaned).strip()
+        if translated:
+            return _clean_headline(translated)
+    return cleaned
+
+
+def _summary_keywords_for_korean(keywords: List[str]) -> str:
+    converted = []
+    seen = set()
+    for kw in keywords:
+        normalized = _SUMMARY_KEYWORD_LABELS.get(kw.lower(), _headline_for_korean_summary(kw))
+        key = normalized.lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        converted.append(normalized)
+    return ", ".join(converted)
+
+
+def _display_title_for_korean_item(item: Dict[str, Any]) -> str:
+    return _headline_for_korean_summary(get_display_title(item))
+
+
+def _description_for_korean_item(item: Dict[str, Any]) -> str:
+    desc = (item.get("description_ko") or item.get("description") or "").strip()
+    return _headline_for_korean_summary(desc) if desc else ""
+
+
+def _best_non_noise_title(titles: List[str]) -> str:
+    for title in titles:
+        cleaned = _headline_for_korean_summary(title)
+        if len(cleaned) > 15 and not _is_noise_title(cleaned):
+            return cleaned
+    return ""
 
 
 def _to_theme_payload(
@@ -1200,7 +1287,7 @@ def _build_market_signal_section(all_news_items: List[Dict[str, Any]]) -> List[s
                 if norm in seen_cluster:
                     continue
                 seen_cluster.add(norm)
-                parts.append(f"- {smart_truncate(plain, 80)}")
+                parts.append(f"- {smart_truncate(_headline_for_korean_summary(plain), 80)}")
             parts.append("")
             rendered += 1
             if rendered >= 3:
@@ -1492,7 +1579,7 @@ def main():
             emoji = item.get("emoji", "•")
             name = item.get("name", "")
             score = item.get("count", 0)
-            keywords = ", ".join(item.get("keywords", [])[:3])
+            keywords = _summary_keywords_for_korean(item.get("keywords", [])[:3])
             if keywords:
                 content_parts.append(
                     f"{i}. **{emoji} {name}** (신호 강도 {score}): {keywords} 관련 이슈가 집중되고 있습니다."
@@ -1617,11 +1704,13 @@ def main():
         if dp["figures"]:
             line_parts.append(f"주요 지표: {dp['figures'][0]}")
         elif dp["titles"]:
-            line_parts.append(_clean_headline(dp["titles"][0]))
-        # Add the top headline as a highlighted note for extra context
-        if dp["titles"] and len(dp["titles"]) >= 1:
-            top_title = smart_truncate(_clean_headline(dp["titles"][0]), 60)
-            line_parts.append(f"주목: *{top_title}*")
+            best_title = _best_non_noise_title(dp["titles"])
+            if best_title:
+                line_parts.append(best_title)
+        if dp["titles"]:
+            top_title = _best_non_noise_title(dp["titles"])
+            if top_title:
+                line_parts.append(f"주목: *{smart_truncate(top_title, 60)}*")
         briefing_lines.append("> - " + " — ".join(line_parts))
 
     if briefing_lines:
@@ -1642,7 +1731,9 @@ def main():
         if crypto_dp["figures"]:
             crypto_detail += f" 주요 수치: {crypto_dp['figures'][0]}."
         if crypto_dp["titles"]:
-            crypto_detail += f" 대표 헤드라인: {_clean_headline(crypto_dp['titles'][0])}."
+            best_crypto_title = _best_non_noise_title(crypto_dp["titles"])
+            if best_crypto_title:
+                crypto_detail += f" 대표 헤드라인: {best_crypto_title}."
         if not crypto_detail:
             crypto_detail = "세부 데이터 확인 필요."
         content_parts.append(f"- **암호화폐:** {crypto_summary.get('count', 0)}건. {crypto_detail.strip()}")
@@ -1654,7 +1745,9 @@ def main():
         if stock_dp["figures"]:
             stock_detail += f" 주요 수치: {stock_dp['figures'][0]}."
         if stock_dp["titles"] and not stock_detail.strip():
-            stock_detail = f"대표 헤드라인: {_clean_headline(stock_dp['titles'][0])}."
+            best_stock_title = _best_non_noise_title(stock_dp["titles"])
+            if best_stock_title:
+                stock_detail = f"대표 헤드라인: {best_stock_title}."
         content_parts.append(
             f"- **주식:** {stock_summary.get('count', 0)}건. "
             f"{stock_detail.strip() if stock_detail.strip() else '시장 데이터 확인 필요.'}"
@@ -1663,7 +1756,9 @@ def main():
         reg_dp = _extract_category_data_points(regulatory_summary)
         reg_detail = ""
         if reg_dp["titles"]:
-            reg_detail = f"주요 이슈: {_clean_headline(reg_dp['titles'][0])}."
+            best_reg_title = _best_non_noise_title(reg_dp["titles"])
+            if best_reg_title:
+                reg_detail = f"주요 이슈: {best_reg_title}."
         if reg_dp["figures"]:
             reg_detail += f" 관련 수치: {reg_dp['figures'][0]}."
         if not reg_detail:
@@ -1673,7 +1768,9 @@ def main():
         social_dp = _extract_category_data_points(social_summary)
         social_detail = ""
         if social_dp["titles"]:
-            social_detail = f"화제 키워드: {_clean_headline(social_dp['titles'][0])}."
+            best_social_title = _best_non_noise_title(social_dp["titles"])
+            if best_social_title:
+                social_detail = f"화제 키워드: {best_social_title}."
         if social_dp["figures"]:
             social_detail += f" {social_dp['figures'][0]}."
         if not social_detail:
@@ -1683,7 +1780,9 @@ def main():
         world_dp = _extract_category_data_points(worldmonitor_summary)
         world_detail = ""
         if world_dp["titles"]:
-            world_detail = f"핵심 이슈: {_clean_headline(world_dp['titles'][0])}."
+            best_world_title = _best_non_noise_title(world_dp["titles"])
+            if best_world_title:
+                world_detail = f"핵심 이슈: {best_world_title}."
         if world_dp["figures"]:
             world_detail += f" {world_dp['figures'][0]}."
         if not world_detail:
@@ -1704,7 +1803,7 @@ def main():
         content_parts.append("## 테마 스냅샷\n")
         theme_rows = []
         for item in theme_payload:
-            keywords = ", ".join(item.get("keywords", []))
+            keywords = _summary_keywords_for_korean(item.get("keywords", []))
             theme_rows.append(
                 [
                     f"{item.get('emoji', '•')} {item.get('name', '')}",
@@ -1780,9 +1879,9 @@ def main():
             if norm in seen_p0:
                 continue
             seen_p0.add(norm)
-            display = get_display_title(item)
+            display = _display_title_for_korean_item(item)
             link = item.get("link", "")
-            desc = (item.get("description_ko") or item.get("description", "")).strip()
+            desc = _description_for_korean_item(item)
             # Build alert line: Korean title with link + description summary
             if link:
                 title_part = f"[{display}]({link})"
@@ -1948,10 +2047,10 @@ def main():
             # Ensure P1 items have clickable links
             link = item.get("link", "")
             if link and "[" not in title:
-                display = get_display_title(item)
+                display = _display_title_for_korean_item(item)
                 content_parts.append(f"- {markdown_link(display, link)}")
             else:
-                content_parts.append(f"- {title}")
+                content_parts.append(f"- {_headline_for_korean_summary(title)}")
         content_parts.append("")
 
     # ═══════════════════════════════════════
@@ -1978,7 +2077,7 @@ def main():
         if crypto_dp["titles"]:
             content_parts.append("**대표 헤드라인:**")
             for t in crypto_dp["titles"][:3]:
-                content_parts.append(f"- {t}")
+                content_parts.append(f"- {_headline_for_korean_summary(t)}")
             content_parts.append("")
         elif crypto_summary.get("highlights"):
             for h in crypto_summary["highlights"][:3]:
@@ -2006,7 +2105,7 @@ def main():
             content_parts.append("**대표 헤드라인:**")
             for t in stock_dp["titles"][:3]:
                 if t not in seen_stock:
-                    content_parts.append(f"- {t}")
+                    content_parts.append(f"- {_headline_for_korean_summary(t)}")
                     seen_stock.add(t)
             content_parts.append("")
         elif stock_summary.get("highlights"):
@@ -2024,7 +2123,7 @@ def main():
         if reg_dp["titles"]:
             content_parts.append("**주요 규제 이슈:**")
             for t in reg_dp["titles"][:3]:
-                content_parts.append(f"- {t}")
+                content_parts.append(f"- {_headline_for_korean_summary(t)}")
             content_parts.append("")
         elif regulatory_summary.get("key_summary"):
             for h in regulatory_summary["key_summary"][:3]:
@@ -2066,7 +2165,7 @@ def main():
         if sec_dp["titles"]:
             content_parts.append("**주요 보안 이슈:**")
             for t in sec_dp["titles"][:3]:
-                content_parts.append(f"- {t}")
+                content_parts.append(f"- {_headline_for_korean_summary(t)}")
             content_parts.append("")
         elif security_summary.get("key_summary"):
             for h in security_summary["key_summary"][:3]:
@@ -2091,7 +2190,7 @@ def main():
         if social_dp["titles"]:
             content_parts.append("**화제 토픽:**")
             for t in social_dp["titles"][:3]:
-                content_parts.append(f"- {t}")
+                content_parts.append(f"- {_headline_for_korean_summary(t)}")
             content_parts.append("")
         elif social_summary.get("highlights"):
             for h in social_summary["highlights"][:3]:
@@ -2118,7 +2217,7 @@ def main():
             if norm in seen_p2:
                 continue
             seen_p2.add(norm)
-            content_parts.append(f"- {title}")
+            content_parts.append(f"- {_headline_for_korean_summary(title)}")
         content_parts.append("")
 
     # ═══════════════════════════════════════

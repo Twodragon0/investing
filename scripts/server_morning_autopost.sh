@@ -28,22 +28,11 @@ git checkout main
 git pull --rebase --autostash origin main
 
 TODAY_KST="$(TZ=Asia/Seoul date +%Y-%m-%d)"
-SUMMARY_POST="_posts/${TODAY_KST}-daily-news-summary.md"
-MARKET_POST="_posts/${TODAY_KST}-daily-market-report.md"
+echo "$LOG_PREFIX regenerate daily summary for latest coverage"
+run_py scripts/generate_daily_summary.py
 
-if [[ ! -f "$SUMMARY_POST" ]]; then
-  echo "$LOG_PREFIX daily summary missing, generate"
-  run_py scripts/generate_daily_summary.py
-else
-  echo "$LOG_PREFIX daily summary exists, skip generation"
-fi
-
-if [[ ! -f "$MARKET_POST" ]]; then
-  echo "$LOG_PREFIX market summary missing, generate"
-  run_py scripts/generate_market_summary.py
-else
-  echo "$LOG_PREFIX market summary exists, skip generation"
-fi
+echo "$LOG_PREFIX regenerate market summary for latest coverage"
+run_py scripts/generate_market_summary.py
 
 RECENT_POSTS_RAW="$(run_py - <<'PY'
 from datetime import datetime, timedelta

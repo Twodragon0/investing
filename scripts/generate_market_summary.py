@@ -1352,7 +1352,7 @@ def main():
         dedup.mark_seen(title, "auto-generated", today)
         logger.info("Created enhanced market summary: %s", filepath)
     else:
-        logger.warning("Failed to create market summary")
+        logger.info("Market summary not updated (already exists or no content changes)")
 
     dedup.save()
 
