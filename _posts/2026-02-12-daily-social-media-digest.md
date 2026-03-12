@@ -22,9 +22,6 @@ image: "/assets/images/generated/og-daily-social-media-digest-2026-02-12.png"
 - **주요 키워드**: 이재명(66), trump(52), ai(42), fed(32), bitcoin(26)
 
 
-
-
-
 ## 전체 뉴스 요약
 
 오늘 수집된 총 200건 중 텔레그램 20건, 소셜 45건, 정치·경제 135건으로 다양한 이슈가 주요 화제입니다.

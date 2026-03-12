@@ -34,11 +34,11 @@ description: "2026-03-10 암호화폐 시장에서 106건의 뉴스를 분석했
 <div class="alert-box alert-info"><strong>암호화폐 긴급: AirDropped, Trojanized, Developer - 106건 분석</strong><ul><li>🟠 <strong>비트코인</strong> (59건): 59건의 뉴스에서 Bitcoin, Oil, Ethereum 키워드가 부각되고 있습니다.</li><li>📈 <strong>가격/시장</strong> (33건): 비트코인, 유가, 암호화폐 중심으로 33건의 뉴스가 수집되었습니다.</li><li>🏦 <strong>거래소</strong> (16건): Coinbase, Tokenized, Binance 이슈가 16건으로 주목받고 있습니다.</li><li>🟣 <strong>DeFi</strong> (11건): 11건의 뉴스에서 Tokenized, Nasdaq, Stocks 키워드가 부각되고 있습니다.</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNVTlCQ0ttU3dkYzFGSUdxeUdaUHNMM0h6dnUxeVdIeTl4TkNQZkYtdXpBcjlQVEkzY01zRWJxRHpKVFFaNnVVNVM1YjRnYzlUM1BLRWx6d1dDNEdXOXk4SkoxbTY4N1h1MU5SLXpnSFJZMFFEc0huZGZfNVZGb0hWcC03MA?oc=5">개발자가 트로이 목마 파일을 작업 장치에 AirDrop한 후 UNC4899가 암호화 회사에 침입했습니다 - 해커 뉴스</a> <span class="p0-desc">개발자가 트로이 목마 파일을 작업 장치에 AirDrop한 후 UNC4899가 암호화 회사에 침입했습니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxQaXU1eG11RHRaS3pDb25GQ2liVVBxUG96TVRBZjBxWUw5UkJQWXNRT2RZbTFXMXRCdFhLZmxsYzdGUmV3UzJBazQwdFByLURyV0R5bkVoai0yQURrRnNWWkMwY3hFWmloeDBXUVdJNTBfa0lqbVZuQ2IxcGtUbXh0dm5jZw?oc=5">Clarity Act, 암호화폐에 대한 논쟁 촉발 - Payments Dive</a> <span class="p0-desc">Clarity Act stokes debate on crypto - Payments Dive. 급락 배경과 반등 시점을 주시해야 합니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9wcmtSelRpV1hGOGN5VFQ1Z01FWk44R3E1NmMzVVY4Tk5xVmVJeTFkeHFCQjB5VUdyazlQVDdyVDdHakZVR3VtVXhsMlQ2TERreW5ZQm9IVU9OVk02OWRybW9TUDU3dE5GM0hiZklwWnhtcmM?oc=5">"비트코인, 깊은 약세장 진입…4년 주기 따라 올해 30% 더 폭락한다"</a> <span class="p0-desc">시장이 30% 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **106건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
-- 2026-03-10 암호화폐 시장에서 106건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 거래소 관련 소식이 주목됩니다.
 - *총 106건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
 
 ## 테마별 주요 뉴스
@@ -249,7 +249,6 @@ description: "2026-03-10 암호화폐 시장에서 106건의 뉴스를 분석했
 </ol></div></details>
 
 
-
 ## 거래소 공지사항
 
 **1. [Binance를 구독하고 제품을 적립하고 2,000 USDC를 공유하세요!](https://www.binance.com/en/support/announcement/detail/f6106586265d496faf88b135635d9203)**
@@ -281,7 +280,7 @@ Word of the Day: Test Your Knowledge on “AI Agents” to Unlock HOME Rewards!.
 
 **가격 언급**: 뉴스 제목에서 30건의 가격 데이터가 포착되었습니다 ($0, $1M, $67,000, $0, $1M). 구체적 가격대가 언급되는 것은 시장의 가격 민감도가 높다는 신호입니다.
 
-**모니터링 키워드**: **bitcoin**(41회), **ai**(11회), **ethereum**(5회) — BTC 가격 및 네트워크 활동이 시장의 중심 화두입니다.
+**모니터링 키워드**: **bitcoin(비트코인)**(41회), **ai(인공지능)**(11회), **ethereum(이더리움)**(5회) — BTC 가격 및 네트워크 활동이 시장의 중심 화두입니다.
 
 **거래소 동향**: 공지사항 5건 (가장 활발: Binance 5건). 거래소별 정책 변경, 신규 서비스, 수수료 조정 등은 트레이딩 전략에 직접적 영향을 미칩니다.
 

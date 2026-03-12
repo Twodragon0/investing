@@ -34,13 +34,10 @@ description: "2026-03-07 암호화폐 120건: FBI 연준 관련 $4,600만 암호
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNeUpDdFBzR2Y5STE2UzRSd2tHUzVMM21GY2ZoMHI3dGJUSlpoeFJMSzN1SG1YUTdMUklHNl81M3Awdi0td19WaHlJTnFzZWNRNmFoa3E4Tnl1dUVKNDFUOWpybG5FeXFUY0pQbzk5STU2MkRRcUVNYVNrZnBwYTV4QWRvUEF4aUJ3TDg0aFNTSDJsMS1EdXcxSmREV2todko1SnZXZDdhT0o1c01rVzhxa3J3R1ZwV3RMUGV1N9IBwgFBVV95cUxPVmJaVy1nc2JnRENlc01SU3RWRlRyc2l1cDdTb0tXTWxvWG9zckZxcXZud1JMRjRTZ0FuUjlmN2QycmhWb2FBLXMwZ2laWXRQRkktcjRvUEozd0JJa0dWcC1URzk1ay1QRldNSG5HUEpvN3lKOTRtb1o3elZXNkw0OTEzYkkwS2R4ZjQwZVlOUjlrZ1RHMUdoakFEckxRd25Tc3hoSHItUG5xMDIzVXFISUVlQ2J1Wm9mUUl0Y1dlNG54QQ?oc=5">연준카리브해에서 4,600만 달러의 암호화폐를 훔친 혐의로 체포된 계약자, FBI가 밝혔습니다.</a> <span class="p0-desc">미 연방정부 계약업체 대표의 아들 John Daghita가 US Marshals 관리 암호화폐 지갑에서 4,600만 달러를 탈취한 혐의로 카리브해 생마르탱에서 FBI 합동작전으로 체포되었습니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMizwFBVV95cUxPUWlxSDc2Tm91QTI2RlNfSWR6aFZMNlc3bmZwZGN3SkdSblMzSzdNb1ZoSHZsN24yUDltNVVoMl96a3hXdGpWSnh4Wmt3Q1o2SFAybXE2VlJoZWo0SHlWSXpfdHlnMlp6bDV5ZVlSQllZSFlJWThsS2FTNmhNNkpIa0hWak1jWmYxX1JJVjc2X25mQ0lDcllveHJsQXBuUHA2YnpSTGpoOGdhLUpnMEtfVks2TG5XUTQtN05ZZlk2aEFnNVJteDVRZ1VGbDFvTjA?oc=5">John Daghita(일명 "John/Lick"), 미국 보안관과 관련된 암호화폐 절도 혐의로 체포됨 &#124; TRM 블로그 - TRM 연구소</a> <span class="p0-desc">블록체인 분석가 ZachXBT가 텔레그램 대화와 온체인 데이터로 Daghita의 정체를 밝혔으며, 탈취 자금 중 2,490만 달러는 2016년 비트파이넥스 해킹 압수 자산에서 유래했습니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1wOGUzbkU4VkdobklKd0kxUDZreXRiazlSU290R0xRbDRCNVBkZzVrUFJzV0dTb183Zm5RMTF6a2ZKNVYzTW0wNERCQWViTUpZejJ4WkdJclhueWp6MzlEUWxIcEFpM1dPZk9aeUxxNU_SAXNBVV95cUxPMUtDY2V6RkswQ3E4MzZIRXlaeVJYX25NUDNoNlJHQ05jQ0ZuYV9TMlFxOXJ1TzkteUJjV2RlUExuaWxDSGVNa3o0RkpxVWdrNEdXQU0tNXd0R2pXVkRrZk94aXJWRXdBOFlHZGxTYTZqX29v?oc=5">비트코인·알트코인 '장중 급락'...주요 변수는? - 초이스경제</a> <span class="p0-desc">비트코인·알트코인 '장중 급락'...주요 변수는? 초이스경제</span></li></ul></div>
 
 
-
-
 ## 전체 뉴스 요약
 
 - 총 **120건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 🔵 규제/정책
-- 2026-03-07 암호화폐 시장에서 120건의 뉴스를 분석했습니다. 오늘은 비트코인, 거래소, 규제/정책 관련 소식이 주목됩니다.
 - *총 120건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
 
 ## 테마별 주요 뉴스
@@ -307,7 +304,7 @@ Binance, Bot 관련 글로벌 시장 소식입니다. 원문에서 세부 내용
 
 **가격 언급**: 뉴스 제목에서 23건의 가격 데이터가 포착되었습니다 ($1,000, $46, $35M, $500, $70,000). 구체적 가격대가 언급되는 것은 시장의 가격 민감도가 높다는 신호입니다.
 
-**모니터링 키워드**: **bitcoin**(20회), **ai**(4회), **defi**(2회) — BTC 가격 및 네트워크 활동이 시장의 중심 화두입니다.
+**모니터링 키워드**: **bitcoin(비트코인)**(20회), **ai(인공지능)**(4회), **defi(디파이)**(2회) — BTC 가격 및 네트워크 활동이 시장의 중심 화두입니다.
 
 **신규 상장**: 1건의 상장 관련 소식이 포착되었습니다. 신규 상장은 단기 거래량 급증과 가격 변동성을 동반하는 경우가 많습니다.
 

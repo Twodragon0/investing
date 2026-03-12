@@ -34,14 +34,10 @@ description: "2026-02-28 암호화폐 시장에서 124건의 뉴스를 분석했
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOLUhxdzdoVFFTT2QydElpU3locWJDQTlnZXNmYTJRRXJHRW1WSjY3ZFo0NmZIUU9QSURrSTd2bThfRDNTLVpIMEVXYkcwTVJsMjlzQVZKZDhBT0pvTkxvb2VKa1FJdHRDRjdlc3Y4el9LSGRjTmFneS1pTVU1MDN4OXBhWQ?oc=5">DoJ Seizes $61 Million in Tether Linked to Pig Butchering Crypto Scams - The Hacker News</a> — 암호화폐 시장 관련 소식입니다. 디지털 자산 가격은 거시경제 환경과 규제 동향에 연동됩니다.</li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUWYzME5LUnpwVXVxRG5JZnFvWGJLa1B5dXI4YUZ2RzRzRlFRMWwzcDE4ZVRDRTJCQzY0RUdHMXFrWmk4UEtSS3hNOVY0NjdtT015a05qcURaTjk1cDVMUExyOEF1b0hmbFBXZUROQ01acE13R3A2aVp4OU9OZkNFUWdIbWxWQ0g5?oc=5">뉴욕증시 상장사 "비트코인 대량 매도" .. .블룸버그 "양자컴 암호화폐 해킹 급물살" - 글로벌이코노믹</a> — IPO·신규 상장 관련 소식입니다. 공모가 대비 시장 평가와 수급 동향을 주시하세요.</li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5jQ1NKZEZxci12R3lGVVl3QzBBeWZFZE1pVTBkZ25INUIyT21VMGNZZFJ1bnNrRXdqaFFzSnhpRF8xbnlmQjU5LWdaN2lpZWVwQWthTVM1eUtWcHJhZktFOUNvLTNnREdHUE9ieVQ5MEpFUFU?oc=5">비트코인, 매일 10시만 되면 폭락?…'제인스트리트 조작설' 진실 공방 - 디지털투데이</a> — 시장이 큰 폭으로 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</li></ul></div>
 
 
-
-
-
 ## 전체 뉴스 요약
 
 - 총 **124건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
-- 2026-02-28 암호화폐 시장에서 124건의 뉴스를 분석했습니다. 오늘은 비트코인, 거래소, 가격/시장 관련 소식이 주목됩니다.
 - *총 124건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
 
 ## 테마별 주요 뉴스
@@ -189,7 +185,7 @@ NH 상원 법안, 뉴햄프셔 주민들을 암호화폐 사기로부터 보호 
 
 **가격 언급**: 뉴스 제목에서 17건의 가격 데이터가 포착되었습니다 ($1.50, $5,000, $5,000, $4.2, $580). 구체적 가격대가 언급되는 것은 시장의 가격 민감도가 높다는 신호입니다.
 
-**모니터링 키워드**: **bitcoin**(21회), **ai**(7회), **ethereum**(6회) — BTC 가격 및 네트워크 활동이 시장의 중심 화두입니다.
+**모니터링 키워드**: **bitcoin(비트코인)**(21회), **ai(인공지능)**(7회), **ethereum(이더리움)**(6회) — BTC 가격 및 네트워크 활동이 시장의 중심 화두입니다.
 
 **신규 상장**: 1건의 상장 관련 소식이 포착되었습니다. 신규 상장은 단기 거래량 급증과 가격 변동성을 동반하는 경우가 많습니다.
 

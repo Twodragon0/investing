@@ -18,9 +18,6 @@ description: "2026-03-01 소셜 미디어 27건: PayPal 전 대표 비트코인 
 <div class="alert-box alert-info"><strong>소셜 트렌드: Telegram, Bitcoin, the 관련 27건 포착</strong><ul><li>🟠 <strong>비트코인</strong> (9건): Telegram, Bitcoin, the, Blackrock, $296,750,000.</li><li>📊 <strong>매크로/금리</strong> (6건): Telegram, Bitcoin, Tether, https, USDT</li><li>🏛️ <strong>정치/정책</strong> (6건): Trump, 이재명, Investopedia, portfolios, economists</li><li>🏦 <strong>거래소</strong> (5건): transferred, Telegram, unknown, https, USD</li></ul></div>
 
 
-
-
-
 ## 전체 뉴스 요약
 
 오늘 수집된 총 27건 중 텔레그램 20건, 소셜 0건, 정치·경제 7건으로 비트코인 및 매크로/금리 이슈가 주요 화제입니다.
@@ -133,7 +130,7 @@ Trump의 관세와 감세: 가장 큰 혜택을 받는 사람은?
 
 **감성 분석**: 긍정 키워드 5회(56%) vs 부정 키워드 4회(44%). 심리 균형 상태입니다.
 
-**트렌딩 토픽**: **telegram**(20회), **usd**(10회), **https**(10회), **bitcoin**(9회), **unknown**(9회)
+**트렌딩 토픽**: **telegram**(20회), **usd**(10회), **https**(10회), **bitcoin(비트코인)**(9회), **unknown**(9회)
 
 **텔레그램**: 활발한 채널 — Telegram @crypto(10건), Telegram @whale_alert(10건). 총 20건 포착. 최신 메시지: *PayPal 전 대표, #Bitcoin을 세계 최고의 결제 시스템으로 만드는 데 인생 헌신*
 

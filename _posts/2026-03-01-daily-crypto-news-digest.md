@@ -34,14 +34,10 @@ description: "2026-03-01 암호화폐 108건 분석. 비트코인 51건(47%) 압
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMigwFBVV95cUxPSmNjaTFSOV9FaDkycDk2TG5kWEpZT0UyOV9jd05Cb3VzYXlxWmljUkd6NktOOVR4RmFwMXhwc2cyT0g0Vl9zOS02dTJnUWx4M2steDZEXzNQeVNZVnpUbXRWXzFDSlM1aFhtVFllNTNoTXJOWDBMaGZ3YWNnanMzajA5WQ?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin Miner Tied to Trumps Pummeled by Crypto Crash</a> — 시장 급락 소식입니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOYnk1a2lGZGZfV2t4ZEtfMUpkbEN6UjBMRzJ2UDdkeURUSHUtY3ZERTk1ejZXLU9qYnFHUEdQd0g1dTVlSm9wenZyZF9YQ21Rek5EN1hWME51Q3FvdlBrWFpidDVzM3pPamszNTNEWk5BeFVhZWFlbGdjX1NzdFpSSl9IbFFwZ0VX?oc=5">뉴욕증시 엔비디아 공매도 폭탄 "무려 500억 달러... 비트코인 급락</a> — 시장이 큰 폭으로 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</li><li><a href="https://decrypt.co/359367/jane-street-lawsuit-fuels-late-double-digit-pop-in-terra-luna-classic">Jane Street Lawsuit Fuels Late Double-Digit Pop in Terra Luna Classic</a> — Jane, Street 관련 글로벌 시장 소식입니다. 원문에서 세부 내용을 확인하세요.</li></ul></div>
 
 
-
-
-
 ## 전체 뉴스 요약
 
 - 총 **108건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🤖 AI/기술
-- 2026-03-01 암호화폐 시장에서 108건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, AI/기술 관련 소식이 주목됩니다.
 - *총 108건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
 
 ## 테마별 주요 뉴스
@@ -183,7 +179,7 @@ $5,000으로 영구 보유할 더 나은 암호화폐: XRP vs. Ethereum
 
 **가격 언급**: 뉴스 제목에서 24건의 가격 데이터가 포착되었습니다 ($1,000, $64,000, $150,000, $70,000, $64,000). 구체적 가격대가 언급되는 것은 시장의 가격 민감도가 높다는 신호입니다.
 
-**모니터링 키워드**: **bitcoin**(31회), **ethereum**(6회), **ai**(6회) — BTC 가격 및 네트워크 활동이 시장의 중심 화두입니다.
+**모니터링 키워드**: **bitcoin(비트코인)**(31회), **ethereum(이더리움)**(6회), **ai(인공지능)**(6회) — BTC 가격 및 네트워크 활동이 시장의 중심 화두입니다.
 
 **신규 상장**: 2건의 상장 관련 소식이 포착되었습니다. 신규 상장은 단기 거래량 급증과 가격 변동성을 동반하는 경우가 많습니다.
 

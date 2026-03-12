@@ -16,7 +16,6 @@ description: "2026-02-21 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked
 ## 전체 뉴스 요약
 
 - 현재 DeFi 생태계에서 가장 큰 프로토콜은 Lido으로, TVL $33.92B (13.7%)를 차지합니다.
-- 2026-02-21 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked, 총 예치 자산) 현황을 정리합니다. 상위 20개 프로토콜의 총 TVL은 $247.99B이며, 상위 15개 체인의 총 TVL은 $90.49B입니다.
 
 
 ## 상위 20개 프로토콜 TVL 순위
@@ -95,7 +94,7 @@ description: "2026-02-21 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked
 
 ---
 
-**데이터 수집 시각**: 2026-02-21 03:12 UTC  
+**데이터 수집 시각**: 2026-02-21 03:12 UTC
 **데이터 출처**: <span class="source-tag">DeFi Llama</span> (https://defillama.com)
 
 ---

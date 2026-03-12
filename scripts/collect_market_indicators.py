@@ -490,16 +490,24 @@ def build_post_content(
     if cnn_fg:
         score = cnn_fg["score"]
         rating_ko = _rating_to_korean(cnn_fg.get("rating", ""))
-        stat_items.append(f'<div class="stat-item"><div class="stat-value">{score}</div><div class="stat-label">공포탐욕 ({rating_ko})</div></div>')
+        stat_items.append(
+            f'<div class="stat-item"><div class="stat-value">{score}</div><div class="stat-label">공포탐욕 ({rating_ko})</div></div>'
+        )
     vix_data = market_data.get("VIX")
     if vix_data:
-        stat_items.append(f'<div class="stat-item"><div class="stat-value">{vix_data["price_fmt"]}</div><div class="stat-label">VIX</div></div>')
+        stat_items.append(
+            f'<div class="stat-item"><div class="stat-value">{vix_data["price_fmt"]}</div><div class="stat-label">VIX</div></div>'
+        )
     dxy_data = market_data.get("DXY")
     if dxy_data:
-        stat_items.append(f'<div class="stat-item"><div class="stat-value">{dxy_data["price_fmt"]}</div><div class="stat-label">DXY</div></div>')
+        stat_items.append(
+            f'<div class="stat-item"><div class="stat-value">{dxy_data["price_fmt"]}</div><div class="stat-label">DXY</div></div>'
+        )
     gold_data = market_data.get("Gold")
     if gold_data:
-        stat_items.append(f'<div class="stat-item"><div class="stat-value">{gold_data["price_fmt"]}</div><div class="stat-label">금</div></div>')
+        stat_items.append(
+            f'<div class="stat-item"><div class="stat-value">{gold_data["price_fmt"]}</div><div class="stat-label">금</div></div>'
+        )
     if stat_items:
         parts.append('<div class="stat-grid">' + "".join(stat_items) + "</div>\n")
 
@@ -721,21 +729,21 @@ def build_post_content(
     parts.append(
         '\n<div class="wm-reading-guide">'
         '<div class="guide-item guide-high">'
-        '<strong>데이터 소스</strong>'
-        '<span>'
+        "<strong>데이터 소스</strong>"
+        "<span>"
         '<a href="https://www.cnn.com/markets/fear-and-greed" target="_blank" rel="noopener noreferrer">CNN Fear &amp; Greed</a> · '
         '<a href="https://www.cboe.com/tradable_products/vix/" target="_blank" rel="noopener noreferrer">CBOE VIX</a> · '
         '<a href="https://finviz.com/map.ashx" target="_blank" rel="noopener noreferrer">FINVIZ</a> · '
         '<a href="https://fred.stlouisfed.org/" target="_blank" rel="noopener noreferrer">FRED</a>'
-        '</span>'
-        '</div>'
-        '</div>'
+        "</span>"
+        "</div>"
+        "</div>"
     )
     parts.append(
         '\n<div class="wm-footer-meta">'
-        f'<span>수집 시각: {now.strftime("%Y-%m-%d %H:%M")} UTC</span>'
-        '<span>소스: CNN, CBOE, yfinance, FRED</span>'
-        '</div>'
+        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} UTC</span>"
+        "<span>소스: CNN, CBOE, yfinance, FRED</span>"
+        "</div>"
     )
 
     return "\n".join(parts)

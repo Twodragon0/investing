@@ -19,19 +19,15 @@ description: "2026-03-02 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked
 <div class="alert-box alert-info"><strong>DeFi 생태계 $247.99B 규모 분석</strong><ul><li>🏆 <strong>최상위 프로토콜</strong>: Lido — TVL $33.92B (Liquid Staking)</li><li>⛓️ <strong>최상위 체인</strong>: Ethereum — TVL $53.68B (60.3%)</li><li>📊 <strong>최다 카테고리</strong>: 기타 — $80.55B</li></ul></div>
 
 
-
-
-
 ## 전체 뉴스 요약
 
 - Lido가 TVL $33.92B (13.7%)로 1위이나, 생태계가 상당히 분산되어 있습니다. 프로토콜 간 경쟁이 활발한 건강한 구조입니다.
-- 2026-03-02 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked, 총 예치 자산) 현황을 정리합니다. 상위 20개 프로토콜의 총 TVL은 $247.99B이며, 상위 15개 체인의 총 TVL은 $89.07B입니다.
 - - Lido TVL $33.92B (13.7%)로 프로토콜 1위이나, AAVE($33.66B)와 거의 동률 — 프로토콜 간 경쟁이 활발한 건강한 구조 - Ethereum TVL $53.68B (60.3%)로 체인 독점적 지위 유지, 2위 Solana(7.4%)와 53%p 격차 -…
 
 ## 전체 요약
 
 - **Lido** TVL $33.92B (13.7%)로 프로토콜 1위이나, AAVE($33.66B)와 거의 동률 — 프로토콜 간 경쟁이 활발한 건강한 구조
-- **Ethereum** TVL $53.68B (60.3%)로 체인 독점적 지위 유지, 2위 Solana(7.4%)와 53%p 격차
+- **Ethereum(이더리움)** TVL $53.68B (60.3%)로 체인 독점적 지위 유지, 2위 Solana(7.4%)와 53%p 격차
 - **이란 분쟁 영향**: 3일 연속 TVL 동일 수치($247.99B) 기록 — API 캐시 또는 시장 관망세 가능성
 
 
@@ -105,7 +101,7 @@ description: "2026-03-02 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked
 
 **Lido**가 TVL **$33.92B** (13.7%)로 1위이나, 생태계가 상당히 분산되어 있습니다. 프로토콜 간 경쟁이 활발한 건강한 구조입니다.
 
-**Ethereum**이 TVL **$53.68B** (60.3%)로 2위 Solana(7.4%) 대비 53%p 격차를 보이며 체인 생태계를 독점적으로 주도합니다.
+**Ethereum(이더리움)**이 TVL **$53.68B** (60.3%)로 2위 Solana(7.4%) 대비 53%p 격차를 보이며 체인 생태계를 독점적으로 주도합니다.
 
 **카테고리 분석**: **기타** 카테고리가 TVL $80.55B (32.5%)로 가장 큰 비중을 차지합니다.
 
@@ -119,5 +115,5 @@ description: "2026-03-02 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked
 
 ---
 
-**데이터 수집 시각**: 2026-03-02 03:20 UTC  
+**데이터 수집 시각**: 2026-03-02 03:20 UTC
 **데이터 출처**: <span class="source-tag">DeFi Llama</span> (https://defillama.com)

@@ -45,28 +45,38 @@ def build_priorities(recent_posts: int, workflow_count: int) -> List[PriorityIte
         PriorityItem(
             stage="ULTRAWORKER_SCAN",
             priority="P0",
-            title="Collector reliability baseline",
-            detail="Enforce collection-summary fields in all collectors and detect missing fields in CI.",
+            title="Ralph post quality sweep",
+            detail="Run improve_existing_posts.py on schedule and keep duplicate/insight/SEO cleanup continuously applied.",
         ),
         PriorityItem(
             stage="ULTRAWORKER_SCAN",
             priority="P0",
-            title="Failure classifier evidence quality",
-            detail="Track issue evidence snippet quality and expand pattern coverage for root-cause speed.",
+            title="Ultrawork image backfill",
+            detail="Run backfill_images.py on schedule so missing or placeholder post images are regenerated and front matter is updated.",
         ),
         PriorityItem(
             stage="SISYPHUS_EXECUTE",
             priority="P1",
             title="Rendered fixture expansion",
-            detail=(
-                "Add edge fixtures for long links, empty refs, and mixed source tags on every content format change."
-            ),
+            detail="Add edge fixtures for long links, empty refs, and mixed source tags on every content format change.",
         ),
         PriorityItem(
             stage="SISYPHUS_EXECUTE",
             priority="P1",
             title="Workflow observability",
             detail="Keep actionlint annotations + PR report synchronized and monitor drift across workflows.",
+        ),
+        PriorityItem(
+            stage="SISYPHUS_EXECUTE",
+            priority="P1",
+            title="Performance and optimization guardrails",
+            detail="Track runtime/cost regressions across collectors and optimize cache-first workflows and API usage.",
+        ),
+        PriorityItem(
+            stage="SISYPHUS_EXECUTE",
+            priority="P1",
+            title="Quality triage sweep",
+            detail="Review code quality, content quality, UI/UX, and design signals and publish concrete remediation tasks.",
         ),
         PriorityItem(
             stage="LOOP_VERIFY",
@@ -110,6 +120,51 @@ def build_role_prompts(recent_posts: int, workflow_count: int) -> List[RolePromp
                 f"Check content freshness: recent_posts_48h={recent_posts}, workflows={workflow_count}.",
             ],
         ),
+        RolePrompt(
+            role="monitoring",
+            focus="Observability and incident response readiness",
+            prompts=[
+                "Review recurring workflow failures and escalation paths; confirm owner assignment.",
+                "Verify health checks and alert routing for site/data pipeline degradation.",
+                "Track 7-day trend for failed jobs and list top 3 repeat causes.",
+            ],
+        ),
+        RolePrompt(
+            role="performance",
+            focus="Runtime efficiency, caching, and API cost control",
+            prompts=[
+                "Measure slowest collector/generator jobs and propose top 3 speedups.",
+                "Audit cache hit opportunities before external API calls.",
+                "Flag quota-heavy sources and define fallback/data-thinning plan.",
+            ],
+        ),
+        RolePrompt(
+            role="code-quality",
+            focus="Lint/type/test hygiene and maintainability",
+            prompts=[
+                "Review new lint/type warnings and identify owners with deadlines.",
+                "Expand regression coverage for recently changed scripts/workflows.",
+                "Prioritize small refactors that reduce duplication in scripts/common.",
+            ],
+        ),
+        RolePrompt(
+            role="content-quality",
+            focus="Post quality, source credibility, and editorial consistency",
+            prompts=[
+                "Sample recent posts for source quality, duplication, and factual consistency.",
+                "Run title/summary clarity checks and list weak posts to refresh.",
+                "Track category imbalance and propose next-day editorial rebalance.",
+            ],
+        ),
+        RolePrompt(
+            role="design",
+            focus="Visual consistency, readability, and mobile-first presentation",
+            prompts=[
+                "Review generated images and identify style drift across categories.",
+                "Check contrast/readability of key pages on desktop and mobile.",
+                "Propose one low-risk design polish task for this cycle.",
+            ],
+        ),
     ]
 
 
@@ -121,7 +176,7 @@ def render_report(items: List[PriorityItem], roles: List[RolePrompt]) -> str:
         f"- generated_at: {now}",
         "- model_flow: ultraworker -> sisyphus -> loop_verify",
         "- coordination_targets: opencode, openclaw, slack",
-        "- multi_agent_forum: ops, security, uiux",
+        "- multi_agent_forum: ops, security, monitoring, performance, code-quality, content-quality, uiux, design",
         "",
         "## Priorities",
     ]

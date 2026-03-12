@@ -1,8 +1,6 @@
 name: Generate Daily Summary
 
 on:
-  schedule:
-    - cron: '0 0 * * *'  # 09:00 KST
   workflow_dispatch:
 
 permissions:

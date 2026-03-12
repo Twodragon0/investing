@@ -19,9 +19,6 @@ description: "2026-03-04 소셜 미디어 37건: Cathie Wood 비트코인이 금
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBQekdUcHFRUkVFcm9mcFV6c3JaN2tldUhNODZaRXd1OWtKMmFjLXlJRG5mU21BR0EtaHlfM2w4c1NHTGtsR3loN1VINk4yZ0tiMzVGTUF6WUIyaHhNQ2gzdXFQVnlfQnEzd2pDOER3dnlDV00?oc=5">암호화폐 강세 속 금·은 급락…트럼프 "빅 웨이브 곧 온다" 경고 - 디지털투데이</a> — 시장이 큰 폭으로 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</li></ul></div>
 
 
-
-
-
 ## 전체 뉴스 요약
 
 오늘 수집된 총 37건 중 텔레그램 20건, 소셜 0건, 정치·경제 17건으로 정치/정책 및 비트코인 이슈가 주요 화제입니다.
@@ -177,7 +174,7 @@ description: "2026-03-04 소셜 미디어 37건: Cathie Wood 비트코인이 금
 
 **감성 분석**: 긍정 키워드 7회(50%) vs 부정 키워드 7회(50%). 심리 균형 상태입니다.
 
-**트렌딩 토픽**: **telegram**(20회), **bitcoin**(10회), **usd**(10회), **transferred**(8회), **unknown**(8회)
+**트렌딩 토픽**: **telegram**(20회), **bitcoin(비트코인)**(10회), **usd**(10회), **transferred**(8회), **unknown**(8회)
 
 **텔레그램**: 활발한 채널 — Telegram @crypto(10건), Telegram @whale_alert(10건). 총 20건 포착. 최신 메시지: *캐시 우드, 비트코인이 금보다 "확실히" 낫다고 발언. "비트코인은 인플레이션과 디플레이션 모두에 대한 헤지 수단이다."*
 

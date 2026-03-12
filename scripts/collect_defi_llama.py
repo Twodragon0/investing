@@ -985,9 +985,9 @@ def build_post_content(
     # Footer
     content_parts.append(
         '\n<div class="wm-footer-meta">'
-        f'<span>수집 시각: {now.strftime("%Y-%m-%d %H:%M")} UTC</span>'
-        '<span>소스: DeFi Llama (defillama.com)</span>'
-        '</div>'
+        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} UTC</span>"
+        "<span>소스: DeFi Llama (defillama.com)</span>"
+        "</div>"
     )
 
     return "\n".join(content_parts)
