@@ -1,0 +1,190 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "openai/gpt-5.3-codex",
+  "variant": "medium",
+  "small_model": "openai/gpt-5.3-codex",
+  "small_model_variant": "medium",
+  "default_agent": "lead",
+  "autoupdate": true,
+  "instructions": [
+    "CLAUDE.md",
+    ".opencode/README.md"
+  ],
+  "compaction": {
+    "auto": true,
+    "prune": true,
+    "reserved": 10000
+  },
+  "watcher": {
+    "ignore": [
+      "node_modules/**",
+      ".git/**",
+      "_site/**",
+      ".opencode/node_modules/**",
+      "**/.DS_Store"
+    ]
+  },
+  "permission": {
+    "*": "allow",
+    "read": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow"
+    },
+    "glob": "allow",
+    "grep": "allow",
+    "list": "allow",
+    "todoread": "allow",
+    "todowrite": "allow",
+    "task": "deny",
+    "skill": {
+      "*": "allow",
+      "security-review": "allow",
+      "cost-audit": "allow",
+      "post-validation": "allow",
+      "opencode-governance": "allow"
+    },
+    "edit": "allow",
+    "bash": {
+      "*": "allow",
+      "git status*": "allow",
+      "git diff*": "allow",
+      "git log*": "allow",
+      "git pull*": "allow",
+      "python3 scripts/*": "allow",
+      "bundle exec jekyll build*": "allow",
+      "npm test*": "allow",
+      "npm run *": "allow",
+      "ruff *": "allow",
+      "mypy *": "allow",
+      "rm *": "deny",
+      "sudo *": "deny",
+      "git reset --hard*": "deny",
+      "git clean -fd*": "deny",
+      "git push --force*": "deny",
+      "git push * main --force*": "deny",
+      "git push * master --force*": "deny",
+      "git push *": "allow"
+    }
+  },
+  "mcp": {
+    "playwright": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@playwright/mcp@latest"
+      ]
+    },
+    "filesystem": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "."
+      ]
+    },
+    "git": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-git"
+      ]
+    },
+    "memory": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
+    }
+  },
+  "agent": {
+    "lead": {
+      "description": "Lead orchestrator for repo-wide tasks; delegates to specialist subagents and enforces verification gates",
+      "mode": "primary",
+      "model": "openai/gpt-5.3-codex",
+      "variant": "medium",
+      "temperature": 0.2,
+      "steps": 50,
+      "tools": {
+        "write": true,
+        "edit": true,
+        "bash": true
+      },
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "task": "deny"
+      }
+    },
+    "primary": {
+      "description": "Compatibility primary agent for existing project commands",
+      "mode": "primary",
+      "model": "openai/gpt-5.3-codex",
+      "variant": "medium",
+      "temperature": 0.2,
+      "steps": 40,
+      "tools": {
+        "write": true,
+        "edit": true,
+        "bash": true
+      }
+    },
+    "explore": {
+      "description": "Read-only repo exploration and pattern discovery subagent",
+      "mode": "subagent",
+      "model": "google/antigravity-gemini-3-flash",
+      "variant": "medium",
+      "temperature": 0.1,
+      "steps": 20,
+      "tools": {
+        "write": false,
+        "edit": false,
+        "bash": false
+      },
+      "permission": {
+        "edit": "deny",
+        "bash": "deny"
+      }
+    },
+    "validate": {
+      "description": "Read-only quality, security, and compliance validation subagent",
+      "mode": "subagent",
+      "model": "google/antigravity-claude-sonnet-4-5-thinking",
+      "variant": "low",
+      "temperature": 0.1,
+      "steps": 20,
+      "tools": {
+        "write": false,
+        "edit": false,
+        "bash": false
+      },
+      "permission": {
+        "edit": "deny",
+        "bash": "deny"
+      }
+    },
+    "code": {
+      "description": "Implementation subagent for coding, refactor, and bug fixes",
+      "mode": "subagent",
+      "model": "openai/gpt-5.3-codex",
+      "variant": "medium",
+      "temperature": 0.2,
+      "steps": 35,
+      "tools": {
+        "write": true,
+        "edit": true,
+        "bash": true
+      },
+      "permission": {
+        "edit": "allow",
+        "bash": "allow"
+      }
+    }
+  }
+}
