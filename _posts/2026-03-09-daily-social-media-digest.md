@@ -20,7 +20,6 @@ description: "2026-03-09 소셜 미디어 40건: Blackrock ETF 비트코인 $264
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxONktFNlYyRFJVRFcxQ2xBa2YwN3ZVT2Z6b29rRUxXMlhFaHlKZG1hNlZBb1VpS0VJUWE3QkJtb0ZObWd2anFMLTBZZWRwMDg1M05vTlMtaVlucXdRQVJRTmptemcwWmdRMEVaak1DSEc3RjhOVTlrZmRjRFpoMmVQakJWNFdFell4RUQ2UXl2NkU5WlNfVDZJMA?oc=5">관세는 잊어라: 대통령 트럼프 하에서 주식 시장이 폭락에 발생할 수 있는 2가지 다른 이유 - The Motley Fool</a> <span class="p0-desc">관세는 잊어버리세요: 트럼프 대통령 하에서 주식 시장이 폭락 발생할 수 있는 다른 2가지 이유 The Motley Fool</span></li><li><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxQS0ZVTXYxQ24tVUEwOElKaG5GTzgyZllaa2FST1lKcHZZWUg2NU5tWERJdTBUMXFJOEU5elplZVJ5MHpEdTJiUVJQM3R3YmJUYXJjTk1hb010VEhGOHJEeWMwbW91WFBqMi1TLW44S2l3RktVOFlqbzhxbWd6eUxDaUFrNTNqNGtnS3hMeF930gGiAUFVX3lxTE5TMHRwd0FZRlo3MFktTHlyb25TemZKeVBGcjVtMlpuRE8tZTlwaTJzNEo3eXM1anN0YWdzdm9Ja212cGxvdVZZQkhGYnNQQ2tDQ3JWNmVIaFlFaDVONF9aeE5haHVqcXpTR1FlWlBSYUVXNWREZ0hQTFlQeFFRNlhlWlNKWldfX0kxbHRqMnl4bUlLTG5wVWZ0SXo1MFpKb1ZoQQ?oc=5">물가 안정 도와주던 저유가 ‘끝’…다시 고개 드는 한은 금리인상론</a> <span class="p0-desc">한국은행 통화정책 관련 소식입니다. 금리 결정은 채권·부동산·주식 시장 전반에 영향을 미칩니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1oMFR2cTlUX3k1a00yWWFHSlNxM0N0MW53YW5xUjFHRkZRcVhPTjlzSENTbFlObVhVMVlnbkx5Y0l2bUtHdFlMWHZyaC0xRUhvZFNB?oc=5">한국은행 "금리·환율, 펀더멘털과 괴리…필요시 시장안정화 조치"</a> <span class="p0-desc">한국은행 통화정책 관련 소식입니다. 금리 결정은 채권·부동산·주식 시장 전반에 영향을 미칩니다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 오늘 수집된 총 40건 중 텔레그램 20건, 소셜 0건, 정치·경제 20건으로 매크로/금리 및 비트코인 이슈가 주요 화제입니다.

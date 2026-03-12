@@ -15,7 +15,6 @@ description: "2026-03-11 기준 주요 시장 지수 2종, 섹터 11개, 국채 
 
 ## 전체 뉴스 요약
 
-- 2026-03-11 기준 주요 시장 지수 2종, 섹터 11개, 국채 금리 5개 만기, 경제 이벤트 19건(고·중간 중요도), 대형주 실적 발표 2건, IPO 일정 4건을 수집했습니다.
 - - Why Broadcom Stock Has Done What Nvidia Couldn’t After Earnings (Thu, 05 Mar 2026 15:00:00 GMT) - Will Ciena (CIEN) beat estimates again in its next…
 
 

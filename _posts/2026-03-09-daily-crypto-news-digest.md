@@ -35,12 +35,10 @@ description: "2026-03-09 암호화폐 79건: 애널리스트 BTC $63,700 하락 
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxQeHBld2hhdXZrdFJva3kzSEVHZ21sT3hMYTVSSEQ5Yl9mV2NKWFlRZDhJT05VMF8xY1p1MWlSOUw1Z3RIbUh2akJkRFp5Rzh3dEI0c0NndUo3ZzdabGY5SDc3aVRMTElSZ3JtLUl1Q3hvM3owZ1NOa3V3M3hHRUtNcFlKcVF4ZEUzLXRyeElaclRXaEFvZzJ4eDluRVBmdGNQeldGTzNONUNUQmEwdVRIbEtB?oc=5">비트코인 가격은 $63,700 이하로 떨어지면 안 된다고 애널리스트는 경고합니다 - TradingView</a> <span class="p0-desc">$63,700,, Bitcoin 시장 급락 소식입니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxONExYNUdYbTNkZDNCUjBJem1GcVBPZEZ6ZFIxcHZXMEtWa1hYYm5EUnhQNGN2ck9ZaVNkUHFSUi1CQlFlUm5RaXByQ0xfRmJqNHNFb0lncEJQaFVvVm94cUsydW1Jc1ZKSGt3TndmcEllelhzQmppUDVaMElPQ1pEZV9iTHdqbWgxa3JYeGJCWjFWeWtoVjRjcGx4T3p6NUJPVTMzYjBvY0R0QXM?oc=5">비트코인 가격 소식: 유가가 거의 20% 급등함에 따라 BTC가 주가와 함께 급락, - CoinDesk</a> <span class="p0-desc">시장이 20% 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</span></li><li><a href="https://cointelegraph.com/news/crypto-fear-greed-index-extreme-fear?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">암호화폐 공포 탐욕 지수는 다시 '극단적인 공포' 수준으로 떨어졌습니다.</a> <span class="p0-desc">암호화폐 투자 심리는 디지털 자산의 지속적인 하락세를 촉발한 2025년 10월 시장 폭락 이후 계속 하락세를 보였습니다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **79건** 수집
 - 주요 테마: 🟠 비트코인, 🔵 규제/정책, 📈 가격/시장
-- 2026-03-09 암호화폐 시장에서 79건의 뉴스를 분석했습니다. 오늘은 비트코인, 규제/정책, 가격/시장 관련 소식이 주목됩니다.
 - *총 79건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
 
 ## 테마별 주요 뉴스
