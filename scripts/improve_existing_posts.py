@@ -402,7 +402,7 @@ def add_korean_to_keywords(body: str) -> tuple[str, bool]:
     def _replace_keyword(m: re.Match[str]) -> str:
         nonlocal changed
         keyword = m.group(1)
-        rest = m.group(2)  # e.g., "(37회)" or empty
+        rest = m.group(2) or ""  # e.g., "(37회)" or empty
 
         # Skip if already has Korean in parens
         if re.search(r"\([가-힣]+\)", keyword):
@@ -421,6 +421,11 @@ def add_korean_to_keywords(body: str) -> tuple[str, bool]:
         body,
     )
     return body, changed
+
+
+def clean_keyword_none_artifacts(body: str) -> tuple[str, bool]:
+    new_body = re.sub(r"(\*\*[^*]+\*\*)None\s+\(", r"\1 (", body)
+    return new_body, new_body != body
 
 
 def clean_empty_data_sections(body: str) -> tuple[str, bool]:
@@ -563,12 +568,14 @@ def process_post(filepath: Path, dry_run: bool = False) -> dict[str, int]:
     if did_change:
         stats["empty_sections_cleaned"] = 1
 
-    # 7. Remove duplicate italic summaries in theme sections
+    body, did_change = clean_keyword_none_artifacts(body)
+    if did_change:
+        stats["keyword_none_cleaned"] = 1
+
     body, did_change = remove_duplicate_articles_in_themes(body)
     if did_change:
         stats["theme_summary_dedup"] = 1
 
-    # 8. Collapse excessive blank lines
     body, did_change = collapse_blank_lines(body)
     if did_change:
         stats["blank_lines_collapsed"] = 1
@@ -634,6 +641,7 @@ def main() -> None:
             "insight_improved": "고정 인사이트 문구 개선",
             "keywords_translated": "모니터링 키워드 한국어 추가",
             "empty_sections_cleaned": "빈 데이터 섹션 정리",
+            "keyword_none_cleaned": "키워드 None 아티팩트 정리",
             "theme_summary_dedup": "테마별 중복 요약 제거",
             "blank_lines_collapsed": "불필요 빈 줄 축소",
         }
