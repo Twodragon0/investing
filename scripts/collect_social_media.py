@@ -898,9 +898,9 @@ def main():
     # Data collection timestamp footer
     content_parts.append(
         '\n<div class="wm-footer-meta">'
-        f'<span>수집 시각: {now.strftime("%Y-%m-%d %H:%M")} UTC</span>'
-        '<span>소스: Telegram, Reddit, Google News, 소셜 미디어</span>'
-        '</div>'
+        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} UTC</span>"
+        "<span>소스: Telegram, Reddit, Google News, 소셜 미디어</span>"
+        "</div>"
     )
 
     content = "\n".join(content_parts)

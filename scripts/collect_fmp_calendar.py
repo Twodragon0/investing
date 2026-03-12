@@ -367,13 +367,21 @@ def main() -> None:
     # Stat grid
     stat_items = []
     if indices:
-        stat_items.append(f'<div class="stat-item"><div class="stat-value">{len(indices)}</div><div class="stat-label">주요 지수</div></div>')
+        stat_items.append(
+            f'<div class="stat-item"><div class="stat-value">{len(indices)}</div><div class="stat-label">주요 지수</div></div>'
+        )
     if earnings:
-        stat_items.append(f'<div class="stat-item"><div class="stat-value">{len(earnings)}</div><div class="stat-label">실적 발표</div></div>')
+        stat_items.append(
+            f'<div class="stat-item"><div class="stat-value">{len(earnings)}</div><div class="stat-label">실적 발표</div></div>'
+        )
     if economic_events:
-        stat_items.append(f'<div class="stat-item"><div class="stat-value">{len(economic_events)}</div><div class="stat-label">경제 이벤트</div></div>')
+        stat_items.append(
+            f'<div class="stat-item"><div class="stat-value">{len(economic_events)}</div><div class="stat-label">경제 이벤트</div></div>'
+        )
     if ipo_data:
-        stat_items.append(f'<div class="stat-item"><div class="stat-value">{len(ipo_data)}</div><div class="stat-label">IPO 일정</div></div>')
+        stat_items.append(
+            f'<div class="stat-item"><div class="stat-value">{len(ipo_data)}</div><div class="stat-label">IPO 일정</div></div>'
+        )
     if stat_items:
         content_parts.append('<div class="stat-grid">' + "".join(stat_items) + "</div>\n")
 
@@ -395,9 +403,9 @@ def main() -> None:
     )
     content_parts.append(
         '<div class="wm-footer-meta">'
-        f'<span>수집 시각: {now.strftime("%Y-%m-%d %H:%M")} UTC</span>'
-        '<span>소스: Financial Modeling Prep API</span>'
-        '</div>'
+        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} UTC</span>"
+        "<span>소스: Financial Modeling Prep API</span>"
+        "</div>"
     )
 
     content = "\n".join(content_parts)

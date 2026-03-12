@@ -204,8 +204,7 @@ def generate_digest(posts: List[Dict]) -> str:
         '<span class="stat-label">카테고리</span></div>'
     )
     content_parts.append(
-        '<div class="stat-item"><span class="stat-value">7</span>'
-        '<span class="stat-label">분석 일수</span></div>'
+        '<div class="stat-item"><span class="stat-value">7</span><span class="stat-label">분석 일수</span></div>'
     )
     # Top category
     _cat_names_lookup = {

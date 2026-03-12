@@ -847,9 +847,9 @@ def main():
     # Data collection footer
     content_parts.append(
         '\n<div class="wm-footer-meta">'
-        f'<span>수집 시각: {now.strftime("%Y-%m-%d %H:%M")} UTC</span>'
-        '<span>소스: NewsAPI, Yahoo Finance, Google News, Alpha Vantage</span>'
-        '</div>'
+        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} UTC</span>"
+        "<span>소스: NewsAPI, Yahoo Finance, Google News, Alpha Vantage</span>"
+        "</div>"
     )
 
     content = "\n".join(content_parts)

@@ -870,7 +870,7 @@ def main() -> None:
             '<div class="wm-map-card">',
             f'<a href="{WM_MAP_VIEW_URL}" target="_blank" rel="noopener noreferrer" class="wm-map-link">',
             '<div class="wm-map-icon">&#127758;</div>',
-            "<div class=\"wm-map-text\">",
+            '<div class="wm-map-text">',
             "<strong>WorldMonitor 글로벌 리스크 지도</strong>",
             "<span>분쟁, 핵, 제재, 에너지, 기상, 군사 등 7개 레이어 실시간 지도</span>",
             "</div>",

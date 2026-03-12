@@ -722,9 +722,9 @@ def main():
     # Data collection timestamp
     content_parts.append(
         '\n<div class="wm-footer-meta">'
-        f'<span>수집 시각: {now.strftime("%Y-%m-%d %H:%M")} UTC</span>'
-        '<span>소스: SEC, FSC/FSS, Google News, 규제 기관 RSS</span>'
-        '</div>'
+        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} UTC</span>"
+        "<span>소스: SEC, FSC/FSS, Google News, 규제 기관 RSS</span>"
+        "</div>"
     )
 
     content = "\n".join(content_parts)
