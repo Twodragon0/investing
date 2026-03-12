@@ -26,14 +26,10 @@ image: "/assets/images/generated/og-daily-political-trades-report-2026-02-23.png
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong>: <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1tZzl0SVhFYVo0Z3Q3bm9zWGdPdXh1QnVhVXFSNFlVRjZVRmJsLXQ4SFNKdndRdTR1MlpYVE1qZ1U4VnNhRXRadmNnVjFMa2ExRW4tOE5SUk1Hd1JJdm1ZdVVSSW1QaFM3V3ZudFlBY0fSAXRBVV95cUxNMmZIQkJEd1N2Qk9OWm9fSzlVeW1LOTJUdlN3VWpqZHhCZUVpc1lKVEtENnBwZi12YWRrZlE3RjN6T2FYZDRXQm94SHoyRjVURmQzc2JVMEdWYkxjMkhSa3d0OFJqbjEwM05WNFA4UUkzRFJ1dg?oc=5">美 연방대법원 상호관세 무효 판결, 트럼프 대통령 ‘무역법 122조 행정명령’ 서명 - 스포츠한국</a> | <a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxNOW9sdy1iUnVldXpDZTNuenFfUzJ3U0NyZUswbE42SUFQQ3NtVWNMQ19rM09aaUxBZldMcFJWbk1Ea1ZhZmhvSkhxN0JrRmFPb2c3UmVrb003RmRnUHFLbE9VaTdsX1dFc0JCUm04M1dZbWg0UU9tM0tHcm1ESXZJT2RwN1k1OWhVa3RZQzJGSWpwblVaY0hMT0phQkFSRzRDN041ZTFxOGRPNG01dWM1QjVB?oc=5">Fed’s Waller Says March Rate Decision Depends on Labor Market - Bloomberg.com</a></div>
 
 
-
-
-
 ## 전체 뉴스 요약
 
 - 총 **8건** 수집
 - 트럼프 관련 4건의 정책 뉴스가 수집되었습니다. 행정명령 및 관세 정책은 글로벌 시장에 직접적인 영향을 미치고 있습니다.
-- 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
 - 1. Major developments in Trump's trade war - Reuters Major developments in Trump's trade war Reuters
 
 ## 트럼프 행정명령/정책

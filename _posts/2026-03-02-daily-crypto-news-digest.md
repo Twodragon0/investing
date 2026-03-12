@@ -34,14 +34,10 @@ description: "2026-03-02 암호화폐 88건 분석: 이란 보복으로 BTC·ETH
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPY2ljMHFfME43REx1M1F5YXZkOFlXRWFsekpHR1R4SFFENll6VkRfbldDVHBWeUJ4b2tOOWpWLTF5R1U3bWJZS1JpQW5meTNYWndtNVJWTVNVQ3QyRktaZGlMVkpuUUw3VWg1OUZtcXVaWTBzZ3NuS2lqb0g0RjRBV3ZHcGR1Zld5?oc=5">[속보] 비트코인 이더리움 리플 "다시 급락 반전" 국제유가 폭등... 이란 대대적 보복 - 글로벌이코노믹</a> — 시장이 큰 폭으로 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</li><li><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE9YM0FRQ3BoN09Ubi04Z1F0eF81TUFzM0FSbXFhdVRobWhqZmNZaUNNRkU5TzZGWU9pdmdhb3pLV1pNLXJQbkJKZjZiSktZWkdU?oc=5">비트코인 펀딩 비율, -6%로 급락…"'숏 스퀴즈' 가능성" - 블루밍비트</a> — 시장이 6% 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</li><li><a href="https://www.coindesk.com/markets/2026/02/28/crypto-community-fears-iran-choking-oil-supply-and-crashing-markets-but-that-may-be-overblown">Crypto community fear of Iran choking oil supply and crashing markets may be overblown</a> — 시장 급락 소식입니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</li></ul></div>
 
 
-
-
-
 ## 전체 뉴스 요약
 
 - 총 **88건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
-- 2026-03-02 암호화폐 시장에서 88건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 거래소 관련 소식이 주목됩니다.
 - *총 88건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
 
 ## 테마별 주요 뉴스
@@ -175,7 +171,7 @@ OCC 제안에서 스테이블코인 수익률 절차 조항이 해당 규정안 
 
 **가격 언급**: 뉴스 제목에서 17건의 가격 데이터가 포착되었습니다 ($1,000, $7.8, $580, $4.8M, $66k). 구체적 가격대가 언급되는 것은 시장의 가격 민감도가 높다는 신호입니다.
 
-**모니터링 키워드**: **bitcoin**(27회), **ethereum**(3회), **ai**(3회) — BTC 가격 및 네트워크 활동이 시장의 중심 화두입니다.
+**모니터링 키워드**: **bitcoin(비트코인)**(27회), **ethereum(이더리움)**(3회), **ai(인공지능)**(3회) — BTC 가격 및 네트워크 활동이 시장의 중심 화두입니다.
 
 **신규 상장**: 2건의 상장 관련 소식이 포착되었습니다. 신규 상장은 단기 거래량 급증과 가격 변동성을 동반하는 경우가 많습니다.
 

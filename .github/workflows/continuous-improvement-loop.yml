@@ -1,8 +1,8 @@
-name: Improvement Report & Slack Digest
+name: OpenClaw Hourly Improvement Loop
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "0 * * * *"
   workflow_dispatch:
 
 concurrency:
@@ -10,15 +10,36 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   loop-cycle:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+          ref: main
+
+      - name: OpenCode sync - git pull
+        run: bash scripts/opencode_git_pull.sh
+
+      - name: Ralph loop - improve post quality
+        uses: ./.github/actions/python-collect
+        with:
+          script: scripts/improve_existing_posts.py
+          commit-message: 'chore: improve existing post quality'
+          git-add-paths: '_posts/'
+
+      - name: Ultrawork loop - backfill images
+        uses: ./.github/actions/python-collect
+        with:
+          script: scripts/backfill_images.py
+          commit-message: 'chore: backfill post images'
+          git-add-paths: '_posts/ assets/images/generated/'
 
       - name: Setup Python
         uses: actions/setup-python@v6

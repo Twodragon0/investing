@@ -17,7 +17,7 @@ description: "2026-03-09 주식 시장에서 186건의 뉴스를 분석했습니
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">186</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 62</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">리스크 위험</div></div><div class="stat-item"><div class="stat-value">5,172.75</div><div class="stat-label">KOSPI -7.41%</div></div><div class="stat-item"><div class="stat-value">1,087.92</div><div class="stat-label">KOSDAQ -5.48%</div></div></div>
 <div class="alert-box alert-info"><strong>주식 시장 긴급: Monday, Nasdaq, crash - 186건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (62건): 62건의 뉴스에서 코스피, 코스닥, 서킷브레이커 키워드가 부각되고 있습니다.</li><li>📊 <strong>매크로/금리</strong> (16건): 환율, 한은, 조치 이슈가 16건으로 주목받고 있습니다.</li><li>🤖 <strong>AI/기술</strong> (14건): 14건의 뉴스에서 반도체 키워드가 부각되고 있습니다.</li><li>🏛️ <strong>정치/정책</strong> (9건): 대통령, 속보 중심으로 9건의 뉴스가 수집되었습니다.</li></ul></div>
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiswNBVV95cUxOb1FIUk9idDRhWFc2bnBPam5vWVpIRGFWSnJsaGEtcjJubWJTalp6OUNrRTVReFp1WGFjRXVOVjFhVkctSmxwbE8tSXN5SXRpeDR3SHJERFduSjl6Unl0VUlxeWNQTUtvM3RJOVRISjFQQnNQQ0pKb3MtaGE3bnRHVWxGeHY1RS1IYlo0enNSY0l4Z0FQVUxOVnBmV3lONFczSnJ3djBXU3FrSkxxdUhBWnJVdEF1Z2tlQS1YRHlxVnh2V0ZXVG9MS2JWQXljcXI5UC1qOGFrYTlyT2lSNHFGT1A0akl5NmREc1Q5VVpvdFpTb1VlMWJCU1AybGJGUGREVkdvTmcwdllxWHZvSXVXOTZab250S3FXaWVnd3N6SV8tak5MRkpwZ3Y4aklWZG1OMzVCa2d4aThoWENMWEVaOE1aUlNSS0ZBbUdCZXdiQVcxX1BUR1VGMDBmWG03akE2aTZ1czRPUjlDQ1drWVBlMUxkS3VpM2FtNXpIU2pZbmxLbmx1dnlGb2p2YmhRWEV6TXVZZG9pQkVCbjV6cDg0bm5aSS1pbDB6Uzg0LWpSR3A1M1HSAbgDQVVfeXFMTlJPZ1hmN2R2bTVETnpwOXFHMi0xWFVpVEYzc3htYWVTb1ZGTnhOZ25HaFBnSTk2d2hRZ0h4TXZNYThmQ1hfdkpid0VzM0Q3amJhZmVXWnhDZ0VhekxSSnF5STFKNUdiei1NVUV1dW5jb2lxVWRKeUx0QTJkMk9oVDZiTEdzMHVjOUlkeGQ0bU5XUjBWWnd6eG5pSXJLNGhvd0R0enlUR014LU1nd2pwdFhFWEVCT0wxYzZnQnFkcS1mYjM2eWF6dEFzRHVWblhxcExLMXJmV0ZPRjZSdHQ2U2dBb21KNkdBb1pIbjFOcE9ZX2Iwa2xqWk1LbkhQdTY1MnZfY29rWGgtVUZvbDJjaHlaVXlPOG5qTW5KeTg1NjlUd0xPeXpTUTVUcXFURmtWd1NxNEZnVXJ5WXJmMm5kUFpScWVmaEJZeTd6X1E0YWpmY0Q2Yi1vZ2NSWTNjQ3VpbnBhR1JnUmszcnB4YnJIS2lVVmdQdW9wSU54N1ltblNzNmlzT2VYamM4aWRpTWRwdTk5WGR5c0dZYUpSLXIxaFUzOWI3dXFwcVAyWmFHaGY3RTRsNXdpeWo?hl=en-US&gl=US&ceid=US%3Aen">Will US stock market head for big crash on Monday, and will Dow Jones, S&P 500 and Nasdaq stay in red or f</a></li><li><a href="https://news.google.com/read/CBMigwFBVV95cUxOMW1zSk9tbVBpMWZnaWlJN3pYZTE3QmE1UmdCdWxCZi1vX0duS2loUS1ER0pSNHh6SnpVVkg4NS1vODRnSXJad3A0TUFtbmpXSF9PQ2RldXl3ZGZxcm8yRkVIR2x1SVA2Mm9yRzBIZHpwS0F0V3hIRXlkVG9DNkNIS25xVQ?hl=en-US&gl=US&ceid=US%3Aen">Oil Prices Have Skyrocketed 66% Since the Iran War Began -- Is a Stock Market Crash Next?</a></li><li><a href="https://news.google.com/read/CBMiVkFVX3lxTE1yOTlHM21QXzEydzlVWlowYkxkYXVPc01OZjhXNG5uaDVzQ1Q0QjF6VUQ4Q0dva201VVdDOV94YjdWRnRXdGJoMWFMMFl5YTlKOExBRERn?hl=ko&gl=KR&ceid=KR%3Ako">[속보] 코스피, 서킷브레이커 발동…매매 정지</a></li></ul></div>
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiswNBVV95cUxOb1FIUk9idDRhWFc2bnBPam5vWVpIRGFWSnJsaGEtcjJubWJTalp6OUNrRTVReFp1WGFjRXVOVjFhVkctSmxwbE8tSXN5SXRpeDR3SHJERFduSjl6Unl0VUlxeWNQTUtvM3RJOVRISjFQQnNQQ0pKb3MtaGE3bnRHVWxGeHY1RS1IYlo0enNSY0l4Z0FQVUxOVnBmV3lONFczSnJ3djBXU3FrSkxxdUhBWnJVdEF1Z2tlQS1YRHlxVnh2V0ZXVG9MS2JWQXljcXI5UC1qOGFrYTlyT2lSNHFGT1A0akl5NmREc1Q5VVpvdFpTb1VlMWJCU1AybGJGUGREVkdvTmcwdllxWHZvSXVXOTZab250S3FXaWVnd3N6SV8tak5MRkpwZ3Y4aklWZG1OMzVCa2d4aThoWENMWEVaOE1aUlNSS0ZBbUdCZXdiQVcxX1BUR1VGMDBmWG03akE2aTZ1czRPUjlDQ1drWVBlMUxkS3VpM2FtNXpIU2pZbmxLbmx1dnlGb2p2YmhRWEV6TXVZZG9pQkVCbjV6cDg0bm5aSS1pbDB6Uzg0LWpSR3A1M1HSAbgDQVVfeXFMTlJPZ1hmN2R2bTVETnpwOXFHMi0xWFVpVEYzc3htYWVTb1ZGTnhOZ25HaFBnSTk2d2hRZ0h4TXZNYThmQ1hfdkpid0VzM0Q3amJhZmVXWnhDZ0VhekxSSnF5STFKNUdiei1NVUV1dW5jb2lxVWRKeUx0QTJkMk9oVDZiTEdzMHVjOUlkeGQ0bU5XUjBWWnd6eG5pSXJLNGhvd0R0enlUR014LU1nd2pwdFhFWEVCT0wxYzZnQnFkcS1mYjM2eWF6dEFzRHVWblhxcExLMXJmV0ZPRjZSdHQ2U2dBb21KNkdBb1pIbjFOcE9ZX2Iwa2xqWk1LbkhQdTY1MnZfY29rWGgtVUZvbDJjaHlaVXlPOG5qTW5KeTg1NjlUd0xPeXpTUTVUcXFURmtWd1NxNEZnVXJ5WXJmMm5kUFpScWVmaEJZeTd6X1E0YWpmY0Q2Yi1vZ2NSWTNjQ3VpbnBhR1JnUmszcnB4YnJIS2lVVmdQdW9wSU54N1ltblNzNmlzT2VYamM4aWRpTWRwdTk5WGR5c0dZYUpSLXIxaFUzOWI3dXFwcVAyWmFHaGY3RTRsNXdpeWo?hl=en-US&gl=US&ceid=US%3Aen">Will US stock market head for big crash on Monday, and will Dow Jones, S&P 500 and Nasdaq stay in red or f</a> — Will US stock market head for big crash on Monday, and will Dow Jones, S&amp;P 500...</li><li><a href="https://news.google.com/read/CBMigwFBVV95cUxOMW1zSk9tbVBpMWZnaWlJN3pYZTE3QmE1UmdCdWxCZi1vX0duS2loUS1ER0pSNHh6SnpVVkg4NS1vODRnSXJad3A0TUFtbmpXSF9PQ2RldXl3ZGZxcm8yRkVIR2x1SVA2Mm9yRzBIZHpwS0F0V3hIRXlkVG9DNkNIS25xVQ?hl=en-US&gl=US&ceid=US%3Aen">Oil Prices Have Skyrocketed 66% Since the Iran War Began -- Is a Stock Market Crash Next?</a> — Oil Prices Have Skyrocketed 66% Since the Iran War Began -- Is a Stock Market...</li><li><a href="https://news.google.com/read/CBMiVkFVX3lxTE1yOTlHM21QXzEydzlVWlowYkxkYXVPc01OZjhXNG5uaDVzQ1Q0QjF6VUQ4Q0dva201VVdDOV94YjdWRnRXdGJoMWFMMFl5YTlKOExBRERn?hl=ko&gl=KR&ceid=KR%3Ako">[속보] 코스피, 서킷브레이커 발동…매매 정지</a> — 급격한 하락으로 매매거래가 일시 중단되었습니다. 투자 심리 위축과 추가 하방 리스크에 유의해야 합니다.</li></ul></div>
 
 
 ## 전체 뉴스 요약
@@ -63,8 +63,8 @@ description: "2026-03-09 주식 시장에서 186건의 뉴스를 분석했습니
 </div>
 
 <details><summary>그 외 58건 보기</summary><div class="details-content"><ol class="news-overflow-list">
-<li><a href="https://news.google.com/read/CBMigwFBVV95cUxOMW1zSk9tbVBpMWZnaWlJN3pYZTE3QmE1UmdCdWxCZi1vX0duS2loUS1ER0pSNHh6SnpVVkg4NS1vODRnSXJad3A0TUFtbmpXSF9PQ2RldXl3ZGZxcm8yRkVIR2x1SVA2Mm9yRzBIZHpwS0F0V3hIRXlkVG9DNkNIS25xVQ?hl=en-US&gl=US&ceid=US%3Aen">이란 전쟁이 시작된 이후 유가는 66% 급등했습니다. 주식 시장은 폭락 다음인가요?</a></li>
-<li><a href="https://news.google.com/read/CBMiVkFVX3lxTE1yOTlHM21QXzEydzlVWlowYkxkYXVPc01OZjhXNG5uaDVzQ1Q0QjF6VUQ4Q0dva201VVdDOV94YjdWRnRXdGJoMWFMMFl5YTlKOExBRERn?hl=ko&gl=KR&ceid=KR%3Ako">[속보] 코스피, 서킷브레이커 발동…매매 정지</a></li>
+<li><a href="https://news.google.com/read/CBMigwFBVV95cUxOMW1zSk9tbVBpMWZnaWlJN3pYZTE3QmE1UmdCdWxCZi1vX0duS2loUS1ER0pSNHh6SnpVVkg4NS1vODRnSXJad3A0TUFtbmpXSF9PQ2RldXl3ZGZxcm8yRkVIR2x1SVA2Mm9yRzBIZHpwS0F0V3hIRXlkVG9DNkNIS25xVQ?hl=en-US&gl=US&ceid=US%3Aen">이란 전쟁이 시작된 이후 유가는 66% 급등했습니다. 주식 시장은 폭락 다음인가요?</a> — 시장이 66% 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</li>
+<li><a href="https://news.google.com/read/CBMiVkFVX3lxTE1yOTlHM21QXzEydzlVWlowYkxkYXVPc01OZjhXNG5uaDVzQ1Q0QjF6VUQ4Q0dva201VVdDOV94YjdWRnRXdGJoMWFMMFl5YTlKOExBRERn?hl=ko&gl=KR&ceid=KR%3Ako">[속보] 코스피, 서킷브레이커 발동…매매 정지</a> — 급격한 하락으로 매매거래가 일시 중단되었습니다. 투자 심리 위축과 추가 하방 리스크에 유의해야 합니다.</li>
 <li><em>...외 43건</em></li>
 </ol></div></details>
 
@@ -104,8 +104,8 @@ description: "2026-03-09 주식 시장에서 186건의 뉴스를 분석했습니
 </div>
 
 <details><summary>그 외 13건 보기</summary><div class="details-content"><ol class="news-overflow-list">
-<li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBIWUdJUlVzd2JuTEtuWmh1M3pkc0VVeUlRMEp0Z2lBZFRkNUpXa0xLUkhoTTNPLWdPUHFTOHoxNGhRTm1lQzFyTnZLdXYwb0VKc2w3eGcwY25WMFM1OFg0X1pyM0IwZU1CVTBqMWFQTnc?oc=5">한은, 환율 급등에 경계…“필요시 적절한 안정화 조치” - 위키리크스한국</a></li>
-<li><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE50czVxZzBwWXpOWjhhMTB5aWdEeFBQaFMza1o5RXhObkpMbUM0MnZ4cVZ4QTZBUmstOWJpR1pvRDJKdEp3T3BQOGFLOVc5d3ZUTjZj?oc=5">한은 "금리·환율, 과도한 변동성…필요시 시장 안정화 조치"</a></li>
+<li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBIWUdJUlVzd2JuTEtuWmh1M3pkc0VVeUlRMEp0Z2lBZFRkNUpXa0xLUkhoTTNPLWdPUHFTOHoxNGhRTm1lQzFyTnZLdXYwb0VKc2w3eGcwY25WMFM1OFg0X1pyM0IwZU1CVTBqMWFQTnc?oc=5">한은, 환율 급등에 경계…“필요시 적절한 안정화 조치” - 위키리크스한국</a> — 시장 반등 움직임이 포착되었습니다. 기술적 반등인지 추세 전환인지 거래량과 수급 확인이 필요합니다.</li>
+<li><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE50czVxZzBwWXpOWjhhMTB5aWdEeFBQaFMza1o5RXhObkpMbUM0MnZ4cVZ4QTZBUmstOWJpR1pvRDJKdEp3T3BQOGFLOVc5d3ZUTjZj?oc=5">한은 "금리·환율, 과도한 변동성…필요시 시장 안정화 조치"</a> — 한국은행 통화정책 관련 소식입니다. 금리 결정은 채권·부동산·주식 시장 전반에 영향을 미칩니다.</li>
 </ol></div></details>
 
 
@@ -144,8 +144,8 @@ description: "2026-03-09 주식 시장에서 186건의 뉴스를 분석했습니
 </div>
 
 <details><summary>그 외 11건 보기</summary><div class="details-content"><ol class="news-overflow-list">
-<li><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1tOXpEQ0lNWVpQdjdOT2tFdWJaaG9Bdjh1ZURBUXptYkhiNFVyaHdpLXBXRkxndHVQYnUxcTBiMTNYcGhxeW85c0RwbmppQm4wcUMw?oc=5">삼성전자·SK하이닉스, 8%대 급락…유가·美고용 충격에 반도체주 흔들</a></li>
-<li><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE82Q3ViY3Y3YTIxdktWZTEtYjhnMVdfOXZjdzJMVHkxbUZSQXcxT0ZURUVQeUVUd2hJa183LTFfbTBGSU9TOEVPYmNlbmVZckZzREE?oc=5">“반도체株 세일한다”…삼전·하닉 8% 하락에 저가 매수 이어져 [주식 초고수는 지금</a></li>
+<li><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1tOXpEQ0lNWVpQdjdOT2tFdWJaaG9Bdjh1ZURBUXptYkhiNFVyaHdpLXBXRkxndHVQYnUxcTBiMTNYcGhxeW85c0RwbmppQm4wcUMw?oc=5">삼성전자·SK하이닉스, 8%대 급락…유가·美고용 충격에 반도체주 흔들</a> — 시장이 8% 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</li>
+<li><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE82Q3ViY3Y3YTIxdktWZTEtYjhnMVdfOXZjdzJMVHkxbUZSQXcxT0ZURUVQeUVUd2hJa183LTFfbTBGSU9TOEVPYmNlbmVZckZzREE?oc=5">“반도체株 세일한다”…삼전·하닉 8% 하락에 저가 매수 이어져 [주식 초고수는 지금</a> — 반도체 섹터에 대한 매수 기회론이 제기되고 있습니다. 업종 펀더멘탈과 글로벌 수요 동향 확인이 필요합니다.</li>
 </ol></div></details>
 
 
@@ -185,8 +185,8 @@ description: "2026-03-09 주식 시장에서 186건의 뉴스를 분석했습니
 </div>
 
 <details><summary>그 외 6건 보기</summary><div class="details-content"><ol class="news-overflow-list">
-<li><a href="https://www.cnbc.com/2026/03/08/trump-save-america-act-voter-id.html">트럼프은 SAVE America 유권자 ID 법안이 통과될 때까지 입법 봉쇄를 맹세합니다.</a></li>
-<li><a href="https://www.cnbc.com/2026/03/08/china-says-thorough-preparations-needed-ahead-of-trump-xi-meeting.html">중국은 이란 전쟁으로 트럼프-시 회담이 균형을 이루지 못하면서 '철저한 준비'가 필요하다고 말했습니다.</a></li>
+<li><a href="https://www.cnbc.com/2026/03/08/trump-save-america-act-voter-id.html">트럼프은 SAVE America 유권자 ID 법안이 통과될 때까지 입법 봉쇄를 맹세합니다.</a> — 트럼프은 SAVE America 유권자 ID 법안이 통과될 때까지 입법 봉쇄를 맹세합니다.. 주요 키워드: 트럼프은, 유권자, 법안이.</li>
+<li><a href="https://www.cnbc.com/2026/03/08/china-says-thorough-preparations-needed-ahead-of-trump-xi-meeting.html">중국은 이란 전쟁으로 트럼프-시 회담이 균형을 이루지 못하면서 '철저한 준비'가 필요하다고 말했습니다.</a> — 지정학적 리스크가 금융시장에 영향을 미치고 있습니다. 유가·환율·안전자산 흐름을 주시해야 합니다.</li>
 </ol></div></details>
 
 

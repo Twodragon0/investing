@@ -181,7 +181,7 @@ python scripts/generate_daily_summary.py
 | `push-folder-info-to-slack` | 매일 | 레포 상태 Slack 알림 |
 | `ops-10am-digest` | 매일 | 운영 다이제스트 |
 | `classify-workflow-failures` | 실패 시 | CI 실패 자동 분류 |
-| `continuous-improvement-loop` | 매 6h | 개선 리포트 생성 |
+| `continuous-improvement-loop` | 매시간 | OpenClaw 개선 루프 + 리포트 생성 |
 
 ## Project Structure
 

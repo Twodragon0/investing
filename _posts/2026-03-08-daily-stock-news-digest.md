@@ -17,15 +17,13 @@ description: "2026-03-08 주식 시장에서 126건의 뉴스를 분석했습니
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">126</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 40</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">리스크 위험</div></div><div class="stat-item"><div class="stat-value">5,584.87</div><div class="stat-label">KOSPI +0.02%</div></div><div class="stat-item"><div class="stat-value">1,154.67</div><div class="stat-label">KOSDAQ +3.43%</div></div></div>
 <div class="alert-box alert-info"><strong>주식 시장 긴급: Oil Could Crash The S&P 500; Or Send It To 7,500 (SPX) - 126건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (40건): 코스피, 코스닥, 서킷브레이커 이슈가 40건으로 주목받고 있습니다.</li><li>🏛️ <strong>정치/정책</strong> (7건): Trump, war, affordability 이슈가 7건으로 주목받고 있습니다.</li><li>🤖 <strong>AI/기술</strong> (5건): 5건의 뉴스에서 Nvidia, Stocks, Lumentum 키워드가 부각되고 있습니다.</li><li>🟣 <strong>DeFi</strong> (2건): 2건의 뉴스에서 Infrastructure, Millionaire, Increased 키워드가 부각되고 있습니다.</li></ul></div>
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMilgFBVV95cUxOUW5iWUhRZGNaRmpNUEZwOFM4N20tMmN5bXBTQmU0RDNxa29mUFVuNDhRUDhYdzlGZVhWb3RBTHA4a0Y3aUNzMkdwOGNXNV80LUc4eEJNUmY5VzA4RzhTQXRtN0QyMi0zZ1k3R2x3X1o4NzdjUF80TDNERTM3NzVaTzBEYldKU2hEc0xzWHQxbVVXYkNYWmc?hl=en-US&gl=US&ceid=US%3Aen">Oil Could Crash The S&P 500; Or Send It To 7,500 (SPX)</a></li><li><a href="https://news.google.com/read/CBMiswNBVV95cUxOb1FIUk9idDRhWFc2bnBPam5vWVpIRGFWSnJsaGEtcjJubWJTalp6OUNrRTVReFp1WGFjRXVOVjFhVkctSmxwbE8tSXN5SXRpeDR3SHJERFduSjl6Unl0VUlxeWNQTUtvM3RJOVRISjFQQnNQQ0pKb3MtaGE3bnRHVWxGeHY1RS1IYlo0enNSY0l4Z0FQVUxOVnBmV3lONFczSnJ3djBXU3FrSkxxdUhBWnJVdEF1Z2tlQS1YRHlxVnh2V0ZXVG9MS2JWQXljcXI5UC1qOGFrYTlyT2lSNHFGT1A0akl5NmREc1Q5VVpvdFpTb1VlMWJCU1AybGJGUGREVkdvTmcwdllxWHZvSXVXOTZab250S3FXaWVnd3N6SV8tak5MRkpwZ3Y4aklWZG1OMzVCa2d4aThoWENMWEVaOE1aUlNSS0ZBbUdCZXdiQVcxX1BUR1VGMDBmWG03akE2aTZ1czRPUjlDQ1drWVBlMUxkS3VpM2FtNXpIU2pZbmxLbmx1dnlGb2p2YmhRWEV6TXVZZG9pQkVCbjV6cDg0bm5aSS1pbDB6Uzg0LWpSR3A1M1HSAbgDQVVfeXFMTlJPZ1hmN2R2bTVETnpwOXFHMi0xWFVpVEYzc3htYWVTb1ZGTnhOZ25HaFBnSTk2d2hRZ0h4TXZNYThmQ1hfdkpid0VzM0Q3amJhZmVXWnhDZ0VhekxSSnF5STFKNUdiei1NVUV1dW5jb2lxVWRKeUx0QTJkMk9oVDZiTEdzMHVjOUlkeGQ0bU5XUjBWWnd6eG5pSXJLNGhvd0R0enlUR014LU1nd2pwdFhFWEVCT0wxYzZnQnFkcS1mYjM2eWF6dEFzRHVWblhxcExLMXJmV0ZPRjZSdHQ2U2dBb21KNkdBb1pIbjFOcE9ZX2Iwa2xqWk1LbkhQdTY1MnZfY29rWGgtVUZvbDJjaHlaVXlPOG5qTW5KeTg1NjlUd0xPeXpTUTVUcXFURmtWd1NxNEZnVXJ5WXJmMm5kUFpScWVmaEJZeTd6X1E0YWpmY0Q2Yi1vZ2NSWTNjQ3VpbnBhR1JnUmszcnB4YnJIS2lVVmdQdW9wSU54N1ltblNzNmlzT2VYamM4aWRpTWRwdTk5WGR5c0dZYUpSLXIxaFUzOWI3dXFwcVAyWmFHaGY3RTRsNXdpeWo?hl=en-US&gl=US&ceid=US%3Aen">Will US stock market head for big crash on Monday, and will Dow Jones, S&P 500 and Nasdaq stay in red or f</a></li><li><a href="https://news.google.com/read/CBMiVkFVX3lxTFBqT2tyQ2FCSGVWMDc1bl9YSy1odWdSQmNVLS1qbzAtZTBuUDFQejVtakh1LWNIdmc2OXp4R1FreEx5TC02SWJPZGVBQVhSMnJBaG5KMmlR?hl=ko&gl=KR&ceid=KR%3Ako">[속보] '패닉셀' 코스피·코스닥 8%대 폭락…동반 서킷브레이커</a></li></ul></div>
-
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMilgFBVV95cUxOUW5iWUhRZGNaRmpNUEZwOFM4N20tMmN5bXBTQmU0RDNxa29mUFVuNDhRUDhYdzlGZVhWb3RBTHA4a0Y3aUNzMkdwOGNXNV80LUc4eEJNUmY5VzA4RzhTQXRtN0QyMi0zZ1k3R2x3X1o4NzdjUF80TDNERTM3NzVaTzBEYldKU2hEc0xzWHQxbVVXYkNYWmc?hl=en-US&gl=US&ceid=US%3Aen">Oil Could Crash The S&P 500; Or Send It To 7,500 (SPX)</a> — Oil Could Crash The S&amp;P 500; Or Send It To 7,500 (SPX). 급락 배경과 반등 시점을 주시해야 합니다.</li><li><a href="https://news.google.com/read/CBMiswNBVV95cUxOb1FIUk9idDRhWFc2bnBPam5vWVpIRGFWSnJsaGEtcjJubWJTalp6OUNrRTVReFp1WGFjRXVOVjFhVkctSmxwbE8tSXN5SXRpeDR3SHJERFduSjl6Unl0VUlxeWNQTUtvM3RJOVRISjFQQnNQQ0pKb3MtaGE3bnRHVWxGeHY1RS1IYlo0enNSY0l4Z0FQVUxOVnBmV3lONFczSnJ3djBXU3FrSkxxdUhBWnJVdEF1Z2tlQS1YRHlxVnh2V0ZXVG9MS2JWQXljcXI5UC1qOGFrYTlyT2lSNHFGT1A0akl5NmREc1Q5VVpvdFpTb1VlMWJCU1AybGJGUGREVkdvTmcwdllxWHZvSXVXOTZab250S3FXaWVnd3N6SV8tak5MRkpwZ3Y4aklWZG1OMzVCa2d4aThoWENMWEVaOE1aUlNSS0ZBbUdCZXdiQVcxX1BUR1VGMDBmWG03akE2aTZ1czRPUjlDQ1drWVBlMUxkS3VpM2FtNXpIU2pZbmxLbmx1dnlGb2p2YmhRWEV6TXVZZG9pQkVCbjV6cDg0bm5aSS1pbDB6Uzg0LWpSR3A1M1HSAbgDQVVfeXFMTlJPZ1hmN2R2bTVETnpwOXFHMi0xWFVpVEYzc3htYWVTb1ZGTnhOZ25HaFBnSTk2d2hRZ0h4TXZNYThmQ1hfdkpid0VzM0Q3amJhZmVXWnhDZ0VhekxSSnF5STFKNUdiei1NVUV1dW5jb2lxVWRKeUx0QTJkMk9oVDZiTEdzMHVjOUlkeGQ0bU5XUjBWWnd6eG5pSXJLNGhvd0R0enlUR014LU1nd2pwdFhFWEVCT0wxYzZnQnFkcS1mYjM2eWF6dEFzRHVWblhxcExLMXJmV0ZPRjZSdHQ2U2dBb21KNkdBb1pIbjFOcE9ZX2Iwa2xqWk1LbkhQdTY1MnZfY29rWGgtVUZvbDJjaHlaVXlPOG5qTW5KeTg1NjlUd0xPeXpTUTVUcXFURmtWd1NxNEZnVXJ5WXJmMm5kUFpScWVmaEJZeTd6X1E0YWpmY0Q2Yi1vZ2NSWTNjQ3VpbnBhR1JnUmszcnB4YnJIS2lVVmdQdW9wSU54N1ltblNzNmlzT2VYamM4aWRpTWRwdTk5WGR5c0dZYUpSLXIxaFUzOWI3dXFwcVAyWmFHaGY3RTRsNXdpeWo?hl=en-US&gl=US&ceid=US%3Aen">Will US stock market head for big crash on Monday, and will Dow Jones, S&P 500 and Nasdaq stay in red or f</a> — Will US stock market head for big crash on Monday, and will Dow Jones, S&amp;P 500...</li><li><a href="https://news.google.com/read/CBMiVkFVX3lxTFBqT2tyQ2FCSGVWMDc1bl9YSy1odWdSQmNVLS1qbzAtZTBuUDFQejVtakh1LWNIdmc2OXp4R1FreEx5TC02SWJPZGVBQVhSMnJBaG5KMmlR?hl=ko&gl=KR&ceid=KR%3Ako">[속보] '패닉셀' 코스피·코스닥 8%대 폭락…동반 서킷브레이커</a> — 급격한 하락으로 매매거래가 일시 중단되었습니다. 투자 심리 위축과 추가 하방 리스크에 유의해야 합니다.</li></ul></div>
 
 
 ## 전체 뉴스 요약
 
 - KOSPI 5,584.87 (+0.02%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 1,154.67 (+3.43%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- 2026-03-08 주식 시장에서 126건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,584.87(+0.02%), KOSDAQ 1,154.67(+3.43%), USD/KRW 1,482.60(+0.15%).
 - *코스피, 코스닥, 서킷브레이커 이슈가 40건으로 주목받고 있습니다.*
 
 ## 테마별 주요 뉴스
@@ -65,8 +63,8 @@ description: "2026-03-08 주식 시장에서 126건의 뉴스를 분석했습니
 </div>
 
 <details><summary>그 외 36건 보기</summary><div class="details-content"><ol class="news-overflow-list">
-<li><a href="https://news.google.com/read/CBMiswNBVV95cUxOb1FIUk9idDRhWFc2bnBPam5vWVpIRGFWSnJsaGEtcjJubWJTalp6OUNrRTVReFp1WGFjRXVOVjFhVkctSmxwbE8tSXN5SXRpeDR3SHJERFduSjl6Unl0VUlxeWNQTUtvM3RJOVRISjFQQnNQQ0pKb3MtaGE3bnRHVWxGeHY1RS1IYlo0enNSY0l4Z0FQVUxOVnBmV3lONFczSnJ3djBXU3FrSkxxdUhBWnJVdEF1Z2tlQS1YRHlxVnh2V0ZXVG9MS2JWQXljcXI5UC1qOGFrYTlyT2lSNHFGT1A0akl5NmREc1Q5VVpvdFpTb1VlMWJCU1AybGJGUGREVkdvTmcwdllxWHZvSXVXOTZab250S3FXaWVnd3N6SV8tak5MRkpwZ3Y4aklWZG1OMzVCa2d4aThoWENMWEVaOE1aUlNSS0ZBbUdCZXdiQVcxX1BUR1VGMDBmWG03akE2aTZ1czRPUjlDQ1drWVBlMUxkS3VpM2FtNXpIU2pZbmxLbmx1dnlGb2p2YmhRWEV6TXVZZG9pQkVCbjV6cDg0bm5aSS1pbDB6Uzg0LWpSR3A1M1HSAbgDQVVfeXFMTlJPZ1hmN2R2bTVETnpwOXFHMi0xWFVpVEYzc3htYWVTb1ZGTnhOZ25HaFBnSTk2d2hRZ0h4TXZNYThmQ1hfdkpid0VzM0Q3amJhZmVXWnhDZ0VhekxSSnF5STFKNUdiei1NVUV1dW5jb2lxVWRKeUx0QTJkMk9oVDZiTEdzMHVjOUlkeGQ0bU5XUjBWWnd6eG5pSXJLNGhvd0R0enlUR014LU1nd2pwdFhFWEVCT0wxYzZnQnFkcS1mYjM2eWF6dEFzRHVWblhxcExLMXJmV0ZPRjZSdHQ2U2dBb21KNkdBb1pIbjFOcE9ZX2Iwa2xqWk1LbkhQdTY1MnZfY29rWGgtVUZvbDJjaHlaVXlPOG5qTW5KeTg1NjlUd0xPeXpTUTVUcXFURmtWd1NxNEZnVXJ5WXJmMm5kUFpScWVmaEJZeTd6X1E0YWpmY0Q2Yi1vZ2NSWTNjQ3VpbnBhR1JnUmszcnB4YnJIS2lVVmdQdW9wSU54N1ltblNzNmlzT2VYamM4aWRpTWRwdTk5WGR5c0dZYUpSLXIxaFUzOWI3dXFwcVAyWmFHaGY3RTRsNXdpeWo?hl=en-US&gl=US&ceid=US%3Aen">미국 주식 시장은 월요일에 큰 폭락로 향할 것이며 다우존스, S&P 500 및 나스닥은 빨간색 또는 f 상태를 유지할 것입니다.</a></li>
-<li><a href="https://news.google.com/read/CBMiVkFVX3lxTFBqT2tyQ2FCSGVWMDc1bl9YSy1odWdSQmNVLS1qbzAtZTBuUDFQejVtakh1LWNIdmc2OXp4R1FreEx5TC02SWJPZGVBQVhSMnJBaG5KMmlR?hl=ko&gl=KR&ceid=KR%3Ako">[속보] '패닉셀' 코스피·코스닥 8%대 폭락…동반 서킷브레이커</a></li>
+<li><a href="https://news.google.com/read/CBMiswNBVV95cUxOb1FIUk9idDRhWFc2bnBPam5vWVpIRGFWSnJsaGEtcjJubWJTalp6OUNrRTVReFp1WGFjRXVOVjFhVkctSmxwbE8tSXN5SXRpeDR3SHJERFduSjl6Unl0VUlxeWNQTUtvM3RJOVRISjFQQnNQQ0pKb3MtaGE3bnRHVWxGeHY1RS1IYlo0enNSY0l4Z0FQVUxOVnBmV3lONFczSnJ3djBXU3FrSkxxdUhBWnJVdEF1Z2tlQS1YRHlxVnh2V0ZXVG9MS2JWQXljcXI5UC1qOGFrYTlyT2lSNHFGT1A0akl5NmREc1Q5VVpvdFpTb1VlMWJCU1AybGJGUGREVkdvTmcwdllxWHZvSXVXOTZab250S3FXaWVnd3N6SV8tak5MRkpwZ3Y4aklWZG1OMzVCa2d4aThoWENMWEVaOE1aUlNSS0ZBbUdCZXdiQVcxX1BUR1VGMDBmWG03akE2aTZ1czRPUjlDQ1drWVBlMUxkS3VpM2FtNXpIU2pZbmxLbmx1dnlGb2p2YmhRWEV6TXVZZG9pQkVCbjV6cDg0bm5aSS1pbDB6Uzg0LWpSR3A1M1HSAbgDQVVfeXFMTlJPZ1hmN2R2bTVETnpwOXFHMi0xWFVpVEYzc3htYWVTb1ZGTnhOZ25HaFBnSTk2d2hRZ0h4TXZNYThmQ1hfdkpid0VzM0Q3amJhZmVXWnhDZ0VhekxSSnF5STFKNUdiei1NVUV1dW5jb2lxVWRKeUx0QTJkMk9oVDZiTEdzMHVjOUlkeGQ0bU5XUjBWWnd6eG5pSXJLNGhvd0R0enlUR014LU1nd2pwdFhFWEVCT0wxYzZnQnFkcS1mYjM2eWF6dEFzRHVWblhxcExLMXJmV0ZPRjZSdHQ2U2dBb21KNkdBb1pIbjFOcE9ZX2Iwa2xqWk1LbkhQdTY1MnZfY29rWGgtVUZvbDJjaHlaVXlPOG5qTW5KeTg1NjlUd0xPeXpTUTVUcXFURmtWd1NxNEZnVXJ5WXJmMm5kUFpScWVmaEJZeTd6X1E0YWpmY0Q2Yi1vZ2NSWTNjQ3VpbnBhR1JnUmszcnB4YnJIS2lVVmdQdW9wSU54N1ltblNzNmlzT2VYamM4aWRpTWRwdTk5WGR5c0dZYUpSLXIxaFUzOWI3dXFwcVAyWmFHaGY3RTRsNXdpeWo?hl=en-US&gl=US&ceid=US%3Aen">미국 주식 시장은 월요일에 큰 폭락로 향할 것이며 다우존스, S&P 500 및 나스닥은 빨간색 또는 f 상태를 유지할 것입니다.</a> — 시장이 큰 폭으로 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</li>
+<li><a href="https://news.google.com/read/CBMiVkFVX3lxTFBqT2tyQ2FCSGVWMDc1bl9YSy1odWdSQmNVLS1qbzAtZTBuUDFQejVtakh1LWNIdmc2OXp4R1FreEx5TC02SWJPZGVBQVhSMnJBaG5KMmlR?hl=ko&gl=KR&ceid=KR%3Ako">[속보] '패닉셀' 코스피·코스닥 8%대 폭락…동반 서킷브레이커</a> — 급격한 하락으로 매매거래가 일시 중단되었습니다. 투자 심리 위축과 추가 하방 리스크에 유의해야 합니다.</li>
 <li><em>...외 21건</em></li>
 </ol></div></details>
 
@@ -106,8 +104,8 @@ description: "2026-03-08 주식 시장에서 126건의 뉴스를 분석했습니
 </div>
 
 <details><summary>그 외 4건 보기</summary><div class="details-content"><ol class="news-overflow-list">
-<li><a href="https://www.cnbc.com/2026/03/07/canada-boycott-trump-travel-alcohol-economy.html">트럼프의 주권 위협 이후 1년, 캐나다인들은 계속 '팔꿈치를 들어 올리고'</a></li>
-<li><a href="https://www.cnbc.com/2026/03/06/gop-big-beautiful-bill-to-deal-shock-to-the-aca-marketplace.html">공화당의 '큰 아름다운 법안'이 ACA 시장에 '충격'을 전달할 준비가 되어 있다고 보건 정책 전문가들이 밝혔습니다.</a></li>
+<li><a href="https://www.cnbc.com/2026/03/07/canada-boycott-trump-travel-alcohol-economy.html">트럼프의 주권 위협 이후 1년, 캐나다인들은 계속 '팔꿈치를 들어 올리고'</a> — 트럼프의 주권 위협 이후 1년, 캐나다인들은 계속 &#x27;팔꿈치를 들어 올리고&#x27;. 주요 키워드: 트럼프의, 주권, 위협.</li>
+<li><a href="https://www.cnbc.com/2026/03/06/gop-big-beautiful-bill-to-deal-shock-to-the-aca-marketplace.html">공화당의 '큰 아름다운 법안'이 ACA 시장에 '충격'을 전달할 준비가 되어 있다고 보건 정책 전문가들이 밝혔습니다.</a> — 공화당의 &#x27;큰 아름다운 법안&#x27;이 ACA 시장에 &#x27;충격&#x27;을 전달할 준비가 되어 있다고 보건 정책 전문가들이 밝혔습니다.. 주요 키워드:...</li>
 </ol></div></details>
 
 
@@ -146,8 +144,8 @@ description: "2026-03-08 주식 시장에서 126건의 뉴스를 분석했습니
 </div>
 
 <details><summary>그 외 2건 보기</summary><div class="details-content"><ol class="news-overflow-list">
-<li><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxOWE1yQl94N1ZzOVUtaFEwVG42Z0xOQkcxS2F4Z2VPWGxPN1c3eXJwZ0U5RG5JNlRqRlo4bk1iM0I0ZnZQTlJSU3JNQ01xZTdJanZpcXhWTE9fTlZPbGJySkVjRFAzMXd1Z3JpZ2NmeFpfbnNxYlBSTEpBcDdaMHVtcHNfUTlPcGd0WVlOdkZMa1RmUGNwNUNHOUJwNnJGNTMt?oc=5">엔비디아-동점 AI 주식 Vertiv, Lumentum, Coherent가 S&P 500 지수에 합류 - 투자자 비즈니스 Daily</a></li>
-<li><a href="https://www.hankyung.com/article/202603086191i">日반도체 매출 “2040년 40조엔”…최첨단 R&D 거점 조성</a></li>
+<li><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxOWE1yQl94N1ZzOVUtaFEwVG42Z0xOQkcxS2F4Z2VPWGxPN1c3eXJwZ0U5RG5JNlRqRlo4bk1iM0I0ZnZQTlJSU3JNQ01xZTdJanZpcXhWTE9fTlZPbGJySkVjRFAzMXd1Z3JpZ2NmeFpfbnNxYlBSTEpBcDdaMHVtcHNfUTlPcGd0WVlOdkZMa1RmUGNwNUNHOUJwNnJGNTMt?oc=5">엔비디아-동점 AI 주식 Vertiv, Lumentum, Coherent가 S&P 500 지수에 합류 - 투자자 비즈니스 Daily</a> — 엔비디아-동점 AI 주식 Vertiv, Lumentum, Coherent가 S&amp;P 500 지수에 합류 - 투자자 비즈니스 Daily.</li>
+<li><a href="https://www.hankyung.com/article/202603086191i">日반도체 매출 “2040년 40조엔”…최첨단 R&D 거점 조성</a> — 반도체 산업 관련 주요 소식입니다. 한국 증시에서 반도체는 시가총액 비중이 가장 높은 핵심 섹터입니다.</li>
 </ol></div></details>
 
 
@@ -167,7 +165,7 @@ description: "2026-03-08 주식 시장에서 126건의 뉴스를 분석했습니
 </div>
 
 <details><summary>그 외 1건 보기</summary><div class="details-content"><ol class="news-overflow-list">
-<li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxOZ1gxM3VfMkFXU2U5Nk5FZVAzdUEyY3FlM1lTOE5wdXRCZWhUMVN5NzQzS3V1WjRySEVYSDVTUjJQdEZTZFV6bldudHFoSDJZMjhRSnRCWmloT1VkN1dxaHYwNk1VSEpBQmxlTjJ3WE9UMTNaUzI5VndhbWNtQVBKcHloWmd6ZU5yeUhxUVJCSE8weVVMTU1WblFoa1Q0QQ?oc=5">엔비디아을 잊어버리고 대신 이 백만장자 주식을 사야 할까요?</a></li>
+<li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxOZ1gxM3VfMkFXU2U5Nk5FZVAzdUEyY3FlM1lTOE5wdXRCZWhUMVN5NzQzS3V1WjRySEVYSDVTUjJQdEZTZFV6bldudHFoSDJZMjhRSnRCWmloT1VkN1dxaHYwNk1VSEpBQmxlTjJ3WE9UMTNaUzI5VndhbWNtQVBKcHloWmd6ZU5yeUhxUVJCSE8weVVMTU1WblFoa1Q0QQ?oc=5">엔비디아을 잊어버리고 대신 이 백만장자 주식을 사야 할까요?</a> — 엔비디아을 잊어버리고 대신 이 백만장자 주식을 사야 할까요?. 주요 키워드: 엔비디아을, 잊어버리고, 대신.</li>
 </ol></div></details>
 
 
@@ -195,7 +193,6 @@ description: "2026-03-08 주식 시장에서 126건의 뉴스를 분석했습니
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>
-
 
 
 ---

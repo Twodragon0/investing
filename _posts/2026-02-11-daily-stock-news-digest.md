@@ -15,7 +15,6 @@ image: "/assets/images/generated/og-daily-stock-news-digest-2026-02-11.png"
 ## 전체 뉴스 요약
 
 - 총 **120건** 수집
-- 오늘 총 120건의 주식 시장 뉴스가 수집되었습니다. 주요 내용을 정리합니다.
 - - 총 수집 뉴스: 120건
 
 

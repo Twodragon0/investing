@@ -17,16 +17,12 @@ description: "오늘 정치인 거래·정책 분야에서 총 7건의 뉴스가
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">7</div><div class="stat-label">총 수집 건수</div></div><div class="stat-item"><div class="stat-value">1</div><div class="stat-label">의회 거래</div></div><div class="stat-item"><div class="stat-value">1</div><div class="stat-label">트럼프 정책</div></div><div class="stat-item"><div class="stat-value">1</div><div class="stat-label">한국 정치인</div></div><div class="stat-item"><div class="stat-value">4</div><div class="stat-label">중앙은행</div></div></div>
 
-<div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **fed**(4회), **재산**(2회), **trump**(1회), **tariff**(1회), **disclosure**(1회)</div>
-
-
-
+<div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **fed(연방준비제도)**(4회), **재산**(2회), **trump(트럼프)**(1회), **tariff(관세)**(1회), **disclosure**(1회)</div>
 
 
 ## 전체 뉴스 요약
 
 - 트럼프 정책: 1건 (관세·무역 1건). 행정명령 및 관세 정책 변화는 반도체·자동차·에너지 섹터의 변동성을 확대시킵니다.
-- 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
 - 1. 공화당 의원 케빈 헌(Kevin Hern)은 주식 공개가 늦어진 것으로 보입니다. 그의 사무실은 그가 늦었다고 논쟁을 벌인다. - 미국 뉴스 - NOTUS 공화당 의원 케빈 헌이 주식 거래 공개를 지연한 것으로 보이며, 그의 사무실은 이에 대해 반론을 제기하고 있습니다.
 
 ## 미국 의회 거래 동향

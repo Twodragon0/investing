@@ -28,14 +28,10 @@ image: "/assets/images/generated/og-daily-political-trades-report-2026-02-24.png
 <div class=”alert-box alert-urgent”><strong>긴급 알림</strong>: <a href=”https://news.google.com/rss/articles/CBMipgFBVV95cUxOeWZBMEhZaEttRDY4UHAxSmNlanl2ZU9NWnU0b1otQjVZdEFtOHg3RlFmLUR2U0x2NVlzQXNiMFNsZG9mSkxQTWFrajYtbDcwRnhUSWFJN2NVakRKanhISXRIbExodXRxZ1YxQm1WMVdmc1Y1UzBnTDRIRE5lNmZKLWJrMDFtWXZfOG9lcGpkVjlrRU5CczRfa3lNSmxIb19heU00U1dn?oc=5”>Trump’s Executive Order Elevates Glyphosate Debate on Economy and Security - mezha.net</a></div>
 
 
-
-
-
 ## 전체 뉴스 요약
 
 - 총 **25건** 수집
 - 트럼프 관련 8건의 정책 뉴스가 수집되었습니다. 행정명령 및 관세 정책은 글로벌 시장에 직접적인 영향을 미치고 있습니다.
-- 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
 - 1. As Rep. Julia Letlow runs for Senate, late disclosure of 210 stock trades draws scrutiny - NOLA.com Julia Letlow 하원의원, 상원 출마 중 210건 주식 거래 늦은 신고로 논란 -…
 
 ## 미국 의회 거래 동향

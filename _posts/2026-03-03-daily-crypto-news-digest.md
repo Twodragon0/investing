@@ -34,14 +34,10 @@ description: "2026-03-03 암호화폐 111건: 조기 종전 기대로 BTC 6%·ET
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFBYdjVoTDJlZkxrTmNwNUNLQTVVaGRWRW1TYzVQWGVWcXRUQ0pPaHpVNFplTmFmeGV6RGR2TkFFalI1QnRVV0Z1b1Ixb25ObE0?oc=5">조기 종전 기대, 암호화폐 일제 급등…비트 6%-이더 7%↑(종합)</a> — 시장 반등 움직임이 포착되었습니다. 기술적 반등인지 추세 전환인지 거래량과 수급 확인이 필요합니다.</li><li><a href="https://www.coindesk.com/tech/2026/03/02/vitalik-buterin-unveils-plan-to-curb-ethereum-block-builder-centralization">Vitalik Buterin unveils plan to curb Ethereum block builder centralization</a> — 암호화폐 시장 관련 소식입니다. 디지털 자산 가격은 거시경제 환경과 규제 동향에 연동됩니다.</li></ul></div>
 
 
-
-
-
 ## 전체 뉴스 요약
 
 - 총 **111건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
-- 2026-03-03 암호화폐 시장에서 111건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 거래소 관련 소식이 주목됩니다.
 - *총 111건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
 
 ## 테마별 주요 뉴스
@@ -177,7 +173,7 @@ DOJ: Florida cryptocurrency CEO arrested in $328 million fraud scheme wtsp.com
 
 **가격 언급**: 뉴스 제목에서 24건의 가격 데이터가 포착되었습니다 ($69,000, $67,000, $1,000, $1,000, $328). 구체적 가격대가 언급되는 것은 시장의 가격 민감도가 높다는 신호입니다.
 
-**모니터링 키워드**: **bitcoin**(34회), **ethereum**(3회), **ai**(3회) — BTC 가격 및 네트워크 활동이 시장의 중심 화두입니다.
+**모니터링 키워드**: **bitcoin(비트코인)**(34회), **ethereum(이더리움)**(3회), **ai(인공지능)**(3회) — BTC 가격 및 네트워크 활동이 시장의 중심 화두입니다.
 
 **신규 상장**: 2건의 상장 관련 소식이 포착되었습니다. 신규 상장은 단기 거래량 급증과 가격 변동성을 동반하는 경우가 많습니다.
 

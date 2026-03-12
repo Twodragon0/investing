@@ -22,14 +22,10 @@ description: "2026-02-25 주식 시장에서 159건의 뉴스를 분석했습니
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><br><a href="https://news.google.com/read/CBMimAFBVV95cUxON1d1SmxfaHlXMkpSUlA5Y3pDMy1kZ3dxRlF5QzZkb3dlTmlTMmdWY2RWeURoazZXdVpMS0t6ZjI3NmJYTEwyS2pCWDVSdEdHekN4YWZ4WEZudC1JUDBDSnI2ZWotZWpOMlB1NVlQTkJaLW5XQWttRnpUdlEyQkZrZG1tYVlJWVZfaUw5SlJ5aklsTXN6WUdhaA?hl=en-US&gl=US&ceid=US%3Aen">Stock Market Crash? 지금 할 수 있는 최선의 투자 전략</a><br><a href="https://news.google.com/read/CBMiT0FVX3lxTE9FOEJvejJsMkR1TjhQVmIxNTVmTGJVcjJqX0Z5MkdmRXBsYjdLeW5SQnlhNU0xWjBKbUtncWE2dHdhMnN5MzVndk1vc0FYSE0?hl=ko&gl=KR&ceid=KR%3Ako">’워시 쇼크’에 금·은·비트코인 동반 폭락…코스피·코스닥은 이겨낼까</a></div>
 
 
-
-
-
 ## 전체 뉴스 요약
 
 - 한국 증시는 KOSPI 6,121.17 (+5.58%)으로 마감했습니다.
 - 원달러 환율은 1,436.25원으로, 환율 변동이 외국인 투자 심리에 영향을 줄 수 있습니다.
-- 2026-02-25 주식 시장에서 159건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,121.17(+5.58%), KOSDAQ 1,166.64(+1.14%), USD/KRW 1,436.25(-0.82%).
 - *Stock market today: Dow, S&P 500, Nasdaq jump as software leads AI relief rally ahead of Nvidia e...*
 
 ## 테마별 주요 뉴스
