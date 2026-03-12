@@ -43,7 +43,7 @@ from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
 from common.translator import get_display_title
-from common.utils import sanitize_string, truncate_text
+from common.utils import remove_sponsored_text, sanitize_string, truncate_text
 
 try:
     from common.browser import BrowserSession, is_playwright_available
@@ -229,6 +229,48 @@ def _binance_desc_from_title(title: str) -> str:
     if any(kw in title_lower for kw in ["trading pair", "거래쌍"]):
         return "거래쌍 변경 공지"
     return "Binance 거래소 공지사항"
+
+
+_PROMO_TITLE_KEYWORDS = [
+    "price alert",
+    "가격 알림",
+    "share rewards",
+    "보상을 공유",
+    "reward",
+    "에어드롭",
+    "airdrop",
+    "vip loan",
+    "vip 대출",
+    "apr",
+    "yield arena",
+    "수익 창출 아레나",
+    "challenge season",
+    "상품 에디션",
+    "가입하고",
+    "earn",
+    "적립하세요",
+    "perpetual contract",
+    "무기한 계약 출시",
+]
+
+
+def _clean_exchange_title(title: str) -> str:
+    title = remove_sponsored_text(title or "")
+    title = re.sub(r"\s+-\s+(?:Binance|Bitget|Bybit|OKX)\s*$", "", title, flags=re.I)
+    title = re.sub(r"\s+\(\d{4}-\d{2}-\d{2}\)$", "", title)
+    return sanitize_string(title, 300)
+
+
+def _is_exchange_promo_item(item: Dict[str, Any]) -> bool:
+    title = _clean_exchange_title(item.get("title", ""))
+    lowered = title.lower()
+    if any(keyword in lowered for keyword in _PROMO_TITLE_KEYWORDS):
+        return True
+    if title.count("!") >= 2:
+        return True
+    if re.search(r"\b\d+(?:,\d{3})*(?:\.\d+)?\s*(?:usdt|btc|eth|apr|%)\b", lowered):
+        return True
+    return False
 
 
 def _scrape_binance_page(session) -> List[Dict[str, Any]]:
@@ -461,14 +503,15 @@ def main():
     if not all_items:
         logger.warning("No news items collected, skipping crypto news post")
     if all_items and not dedup.is_duplicate_exact(post_a_title, "consolidated", today):
-        # Separate news items from exchange announcements
+        # Separate market-moving news from exchange notices/promotions
         news_rows = []
         exchange_rows = []
+        exchange_promo_rows = []
         source_counter = Counter()
         source_links = []
+        summary_items = []
 
         for item in all_items:
-            title = get_display_title(item)
             source = item.get("source", "unknown")
             link = item.get("link", "")
             source_counter[source] += 1
@@ -478,13 +521,23 @@ def main():
                 source_links.append(item)
 
             if source in ("Binance", "OKX", "Bybit"):
+                cleaned_title = _clean_exchange_title(item.get("title", ""))
+                item["title"] = cleaned_title
+                if _is_exchange_promo_item(item):
+                    exchange_promo_rows.append(item)
+                    continue
                 exchange_rows.append(item)
+                summary_items.append(item)
             else:
                 news_rows.append(item)
+                summary_items.append(item)
+
+        all_items = summary_items
 
         # Limit to top items
         news_rows = news_rows[:15]
-        exchange_rows = exchange_rows[:10]
+        exchange_rows = exchange_rows[:8]
+        exchange_promo_rows = exchange_promo_rows[:6]
 
         # Keyword frequency analysis
         keyword_targets = [
@@ -534,7 +587,9 @@ def main():
 
         summary_points = []
         if exchange_rows:
-            summary_points.append(f"거래소 공지 {len(exchange_rows)}건 포함")
+            summary_points.append(f"시장 영향 가능 거래소 공지 {len(exchange_rows)}건 포함")
+        if exchange_promo_rows:
+            summary_points.append(f"프로모션성 거래소 공지 {len(exchange_promo_rows)}건 제외")
         overall_summary = summarizer.generate_overall_summary_section(
             extra_data={
                 "top_keywords": top_keywords,
@@ -638,9 +693,7 @@ def main():
         if exchange_rows:
             content_parts.append("\n## 거래소 공지사항\n")
             shown_exchange = 0
-            for item in all_items:
-                if item.get("source") not in ("Binance", "OKX", "Bybit"):
-                    continue
+            for item in exchange_rows:
                 title = get_display_title(item)
                 link = item.get("link", "")
                 source = item.get("source", "")
@@ -658,8 +711,20 @@ def main():
                     content_parts.append(f"{source} 거래소 공지사항입니다.")
                 content_parts.append(f"{html_source_tag(source)}\n")
                 shown_exchange += 1
-                if shown_exchange >= 10:
+                if shown_exchange >= 8:
                     break
+
+        if exchange_promo_rows:
+            content_parts.append("\n## 제외된 거래소 프로모션/이벤트\n")
+            content_parts.append("시장 정보 가치가 낮은 거래소 홍보성 공지는 아래처럼 별도 분리했습니다.\n")
+            for item in exchange_promo_rows[:5]:
+                title = get_display_title(item)
+                source = item.get("source", "")
+                link = item.get("link", "")
+                if link:
+                    content_parts.append(f"- {markdown_link(title, link)} ({source})")
+                else:
+                    content_parts.append(f"- {title} ({source})")
 
         # Insight section - data-driven cross-analysis
         content_parts.append("\n## 오늘의 인사이트\n")
