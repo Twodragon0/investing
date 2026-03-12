@@ -3,8 +3,11 @@
 import json
 import logging
 import os
+import re
 import subprocess
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import UTC, datetime, timedelta
@@ -33,18 +36,34 @@ def env_first(*keys: str) -> str:
 
 
 def slack_api(method: str, token: str, data: Dict[str, Any]) -> Dict[str, Any]:
-    payload = urllib.parse.urlencode(data).encode("utf-8")
-    req = urllib.request.Request(
-        f"{SLACK_API_BASE}/{method}",
-        data=payload,
-        headers={
-            "Authorization": f"Bearer {token}",
-            "Content-Type": "application/x-www-form-urlencoded",
-        },
-        method="POST",
-    )
-    with urllib.request.urlopen(req, timeout=20) as res:  # nosec B310 - HTTPS-only hardcoded URL
-        return json.loads(res.read().decode("utf-8"))
+    max_attempts = 3
+    for attempt in range(1, max_attempts + 1):
+        payload = urllib.parse.urlencode(data).encode("utf-8")
+        req = urllib.request.Request(
+            f"{SLACK_API_BASE}/{method}",
+            data=payload,
+            headers={
+                "Authorization": f"Bearer {token}",
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            method="POST",
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=20) as res:  # nosec B310 - HTTPS-only hardcoded URL
+                return json.loads(res.read().decode("utf-8"))
+        except urllib.error.HTTPError as err:
+            if err.code == 429 and attempt < max_attempts:
+                retry_after = int(err.headers.get("Retry-After", "1"))
+                logger.warning("Slack API rate-limited (%s). retry_after=%ss method=%s", err.code, retry_after, method)
+                time.sleep(retry_after)
+                continue
+            raise
+        except urllib.error.URLError:
+            if attempt < max_attempts:
+                time.sleep(1)
+                continue
+            raise
+    return {"ok": False, "error": "unknown_api_error"}
 
 
 def read_frontmatter_value(file_path: Path, key: str) -> str:
@@ -336,12 +355,14 @@ def has_bot_reply(token: str, channel_id: str, thread_ts: str, bot_user_id: str)
 
 
 def should_reply(text: str, bot_user_id: str, alias: str) -> bool:
+    del alias
     lowered = text.lower()
     mention_token = f"<@{bot_user_id}>".lower()
-    has_mention = mention_token in lowered or "ai" in lowered or "openclaw" in lowered
+    has_ai_word = re.search(r"\bai\b", lowered) is not None
+    has_mention = mention_token in lowered or has_ai_word or "openclaw" in lowered or "open claw" in lowered
     if not has_mention:
         return False
-    return any(keyword in lowered for keyword in intent_keywords(alias))
+    return True
 
 
 def fallback_help_text(alias: str) -> str:
@@ -372,7 +393,11 @@ def main() -> int:
         logger.info("Missing Slack token or channel. Skipping mention responder.")
         return 0
 
-    auth = slack_api("auth.test", token, {})
+    try:
+        auth = slack_api("auth.test", token, {})
+    except OSError as err:
+        logger.error("auth.test request failed: %s", err)
+        return 1
     if not auth.get("ok"):
         logger.error("auth.test failed: %s", auth)
         return 1
@@ -384,15 +409,19 @@ def main() -> int:
 
     now = datetime.now(UTC)
     oldest = (now - timedelta(minutes=30)).timestamp()
-    history = slack_api(
-        "conversations.history",
-        token,
-        {
-            "channel": channel_id,
-            "oldest": f"{oldest:.6f}",
-            "limit": 30,
-        },
-    )
+    try:
+        history = slack_api(
+            "conversations.history",
+            token,
+            {
+                "channel": channel_id,
+                "oldest": f"{oldest:.6f}",
+                "limit": 30,
+            },
+        )
+    except OSError as err:
+        logger.error("conversations.history request failed: %s", err)
+        return 1
     if not history.get("ok"):
         logger.error("conversations.history failed: %s", history)
         return 1
@@ -413,20 +442,28 @@ def main() -> int:
             continue
         if not should_reply(text, bot_user_id, alias):
             continue
-        if has_bot_reply(token, channel_id, thread_ts, bot_user_id):
+        try:
+            if has_bot_reply(token, channel_id, thread_ts, bot_user_id):
+                continue
+        except OSError as err:
+            logger.warning("conversations.replies request failed: %s", err)
             continue
 
         reply_text = build_reply_text(alias, text)
 
-        post = slack_api(
-            "chat.postMessage",
-            token,
-            {
-                "channel": channel_id,
-                "thread_ts": thread_ts,
-                "text": reply_text or reply_text_default,
-            },
-        )
+        try:
+            post = slack_api(
+                "chat.postMessage",
+                token,
+                {
+                    "channel": channel_id,
+                    "thread_ts": thread_ts,
+                    "text": reply_text or reply_text_default,
+                },
+            )
+        except OSError as err:
+            logger.warning("chat.postMessage request failed: %s", err)
+            continue
         if post.get("ok"):
             reply_count += 1
         else:

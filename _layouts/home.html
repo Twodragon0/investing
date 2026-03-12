@@ -2,6 +2,20 @@
 layout: default
 ---
 
+{% assign crypto_news_count = site.categories['crypto-news'] | size %}
+{% assign crypto_journal_count = site.categories['crypto-trading-journal'] | size %}
+{% assign stock_news_count = site.categories['stock-news'] | size %}
+{% assign stock_journal_count = site.categories['stock-trading-journal'] | size %}
+{% assign market_analysis_count = site.categories['market-analysis'] | size %}
+{% assign worldmonitor_count = site.categories['worldmonitor'] | size %}
+{% assign security_alerts_count = site.categories['security-alerts'] | size %}
+{% assign regulatory_news_count = site.categories['regulatory-news'] | size %}
+{% assign political_trades_count = site.categories['political-trades'] | size %}
+{% assign social_media_count = site.categories['social-media'] | size %}
+{% assign crypto_group_count = crypto_news_count | plus: crypto_journal_count %}
+{% assign stock_group_count = stock_news_count | plus: stock_journal_count %}
+{% assign analysis_group_count = market_analysis_count | plus: worldmonitor_count %}
+
 <!-- Dashboard Header with Gradient -->
 <section class="dashboard-header" aria-label="대시보드 헤더">
   <div class="dashboard-gradient-bg"></div>
@@ -67,7 +81,7 @@ layout: default
       </svg>
       <div class="stat-content">
         <span class="stat-label">암호화폐</span>
-        <span class="stat-value">{{ site.categories['crypto-news'] | size }}</span>
+        <span class="stat-value">{{ crypto_group_count }}</span>
       </div>
     </div>
     <div class="stat-item">
@@ -77,7 +91,7 @@ layout: default
       </svg>
       <div class="stat-content">
         <span class="stat-label">주식</span>
-        <span class="stat-value">{{ site.categories['stock-news'] | size }}</span>
+        <span class="stat-value">{{ stock_group_count }}</span>
       </div>
     </div>
     <div class="stat-item">
@@ -110,37 +124,37 @@ layout: default
       전체
       <span class="tab-count">{{ site.posts | size }}</span>
     </button>
-    {% assign crypto_posts = site.posts | where_exp: "post", "post.categories[0] contains 'crypto'" %}
+    {% assign crypto_posts = site.posts | where_exp: "post", "post.categories contains 'crypto-news' or post.categories contains 'crypto-trading-journal'" %}
     <button class="posts-tab" role="tab" aria-selected="false" data-category="crypto">
       암호화폐
       <span class="tab-count">{{ crypto_posts | size }}</span>
     </button>
-    {% assign stock_posts = site.posts | where_exp: "post", "post.categories[0] contains 'stock'" %}
+    {% assign stock_posts = site.posts | where_exp: "post", "post.categories contains 'stock-news' or post.categories contains 'stock-trading-journal'" %}
     <button class="posts-tab" role="tab" aria-selected="false" data-category="stock">
       주식
       <span class="tab-count">{{ stock_posts | size }}</span>
     </button>
-    {% assign analysis_posts = site.posts | where_exp: "post", "post.categories[0] contains 'analysis'" %}
+    {% assign analysis_posts = site.posts | where_exp: "post", "post.categories contains 'market-analysis' or post.categories contains 'worldmonitor'" %}
     <button class="posts-tab" role="tab" aria-selected="false" data-category="analysis">
       분석
       <span class="tab-count">{{ analysis_posts | size }}</span>
     </button>
-    {% assign regulatory_posts = site.posts | where_exp: "post", "post.categories[0] contains 'regulatory'" %}
+    {% assign regulatory_posts = site.posts | where_exp: "post", "post.categories contains 'regulatory-news'" %}
     <button class="posts-tab" role="tab" aria-selected="false" data-category="regulatory">
       규제
       <span class="tab-count">{{ regulatory_posts | size }}</span>
     </button>
-    {% assign social_posts = site.posts | where_exp: "post", "post.categories[0] contains 'social'" %}
+    {% assign social_posts = site.posts | where_exp: "post", "post.categories contains 'social-media'" %}
     <button class="posts-tab" role="tab" aria-selected="false" data-category="social">
       소셜
       <span class="tab-count">{{ social_posts | size }}</span>
     </button>
-    {% assign security_posts = site.posts | where_exp: "post", "post.categories[0] contains 'security'" %}
+    {% assign security_posts = site.posts | where_exp: "post", "post.categories contains 'security-alerts'" %}
     <button class="posts-tab" role="tab" aria-selected="false" data-category="security">
       보안
       <span class="tab-count">{{ security_posts | size }}</span>
     </button>
-    {% assign political_posts = site.posts | where_exp: "post", "post.categories[0] contains 'political'" %}
+    {% assign political_posts = site.posts | where_exp: "post", "post.categories contains 'political-trades'" %}
     <button class="posts-tab" role="tab" aria-selected="false" data-category="political">
       정치
       <span class="tab-count">{{ political_posts | size }}</span>
@@ -153,19 +167,19 @@ layout: default
       {% if post.pin %}
         {% assign first_cat = post.categories | first %}
         {% assign cat_type = "other" %}
-        {% if first_cat contains "crypto" %}
+        {% if post.categories contains 'crypto-news' or post.categories contains 'crypto-trading-journal' %}
           {% assign cat_type = "crypto" %}
-        {% elsif first_cat contains "stock" %}
+        {% elsif post.categories contains 'stock-news' or post.categories contains 'stock-trading-journal' %}
           {% assign cat_type = "stock" %}
-        {% elsif first_cat contains "analysis" %}
+        {% elsif post.categories contains 'market-analysis' or post.categories contains 'worldmonitor' %}
           {% assign cat_type = "analysis" %}
-        {% elsif first_cat contains "security" %}
+        {% elsif post.categories contains 'security-alerts' %}
           {% assign cat_type = "security" %}
-        {% elsif first_cat contains "regulatory" %}
+        {% elsif post.categories contains 'regulatory-news' %}
           {% assign cat_type = "regulatory" %}
-        {% elsif first_cat contains "social" %}
+        {% elsif post.categories contains 'social-media' %}
           {% assign cat_type = "social" %}
-        {% elsif first_cat contains "political" %}
+        {% elsif post.categories contains 'political-trades' %}
           {% assign cat_type = "political" %}
         {% endif %}
         <div class="post-item pinned-post" data-cat-type="{{ cat_type }}">
@@ -174,11 +188,10 @@ layout: default
       {% endif %}
     {% endfor %}
     {% comment %} 2단계: 일반 포스트 날짜별 그룹화 출력 {% endcomment %}
-    {% assign unpinned_count = 0 %}
     {% assign prev_date = "" %}
     {% for post in site.posts %}
       {% unless post.pin %}
-        {% if unpinned_count < 30 %}
+        {% if true %}
           {% assign post_date = post.date | date: "%Y-%m-%d" %}
           {% if post_date != prev_date %}
             {% if prev_date != "" %}
@@ -198,25 +211,24 @@ layout: default
           {% endif %}
           {% assign first_cat = post.categories | first %}
           {% assign cat_type = "other" %}
-          {% if first_cat contains "crypto" %}
+          {% if post.categories contains 'crypto-news' or post.categories contains 'crypto-trading-journal' %}
             {% assign cat_type = "crypto" %}
-          {% elsif first_cat contains "stock" %}
+          {% elsif post.categories contains 'stock-news' or post.categories contains 'stock-trading-journal' %}
             {% assign cat_type = "stock" %}
-          {% elsif first_cat contains "analysis" %}
+          {% elsif post.categories contains 'market-analysis' or post.categories contains 'worldmonitor' %}
             {% assign cat_type = "analysis" %}
-          {% elsif first_cat contains "security" %}
+          {% elsif post.categories contains 'security-alerts' %}
             {% assign cat_type = "security" %}
-          {% elsif first_cat contains "regulatory" %}
+          {% elsif post.categories contains 'regulatory-news' %}
             {% assign cat_type = "regulatory" %}
-          {% elsif first_cat contains "social" %}
+          {% elsif post.categories contains 'social-media' %}
             {% assign cat_type = "social" %}
-          {% elsif first_cat contains "political" %}
+          {% elsif post.categories contains 'political-trades' %}
             {% assign cat_type = "political" %}
           {% endif %}
           <div class="post-item" data-cat-type="{{ cat_type }}">
             {% include post-card.html post=post %}
           </div>
-          {% assign unpinned_count = unpinned_count | plus: 1 %}
         {% endif %}
       {% endunless %}
     {% endfor %}
@@ -228,15 +240,6 @@ layout: default
 
 <!-- Category Grid v2 -->
 <section class="category-grid-v2">
-  {% assign crypto_news_count = site.categories['crypto-news'] | size %}
-  {% assign stock_news_count = site.categories['stock-news'] | size %}
-  {% assign crypto_journal_count = site.categories['crypto-trading-journal'] | size %}
-  {% assign stock_journal_count = site.categories['stock-trading-journal'] | size %}
-  {% assign security_alerts_count = site.categories['security-alerts'] | size %}
-  {% assign market_analysis_count = site.categories['market-analysis'] | size %}
-  {% assign regulatory_news_count = site.categories['regulatory-news'] | size %}
-  {% assign political_trades_count = site.categories['political-trades'] | size %}
-  {% assign social_media_count = site.categories['social-media'] | size %}
 
   <div class="section-header">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

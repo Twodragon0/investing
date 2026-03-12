@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Patch oh-my-opencode cached plugin to allow task/tools after upgrades.
+# Patch oh-my-opencode cached plugin to allow selected local tools after upgrades.
 # Targets:
 #   - ~/.cache/opencode/node_modules/oh-my-opencode/dist/index.js
 #   - ~/.bun/install/cache/oh-my-opencode@*/dist/index.js
@@ -38,6 +38,7 @@ for target in "${candidates[@]}"; do
 import sys
 from pathlib import Path
 import re
+import os
 
 path = Path(sys.argv[1])
 text = path.read_text()
@@ -48,18 +49,22 @@ replacements = {
     'LspHover: false': 'LspHover: true',
     'LspCodeActions: false': 'LspCodeActions: true',
     'LspCodeActionResolve: false': 'LspCodeActionResolve: true',
-    '"task_*": false': '"task_*": true',
     'teammate: false': 'teammate: true',
     'todowrite: false': 'todowrite: true',
     'todoread: false': 'todoread: true',
-    'task: "deny"': 'task: "allow"',
 }
+
+enable_task_tools = os.environ.get('ENABLE_OPENCODE_TASK_TOOLS') == '1'
+
+if enable_task_tools:
+    replacements['"task_*": false'] = '"task_*": true'
+    replacements['task: "deny"'] = 'task: "allow"'
 
 for a, b in replacements.items():
     text = text.replace(a, b)
 
 # Best-effort: if task was changed to allow inside the permission block, also allow task_* there.
-if 'task: "allow"' in text and '"task_*": "allow"' not in text:
+if enable_task_tools and 'task: "allow"' in text and '"task_*": "allow"' not in text:
     text = re.sub(
         r'(params\.config\.permission\s*=\s*\{[\s\S]{0,400}?task:\s*"allow")',
         r'\1,\n    "task_*": "allow"',
