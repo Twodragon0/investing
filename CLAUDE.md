@@ -53,6 +53,12 @@ python3 -m ruff check scripts/
 # OpenCode 동기화 (git pull, 중앙 관리자)
 bash /Users/namyongkim/Desktop/.twodragon0/bin/hourly-opencode-git-pull.sh
 
+# 서버 오전 9:10 자동 포스팅/품질 보정 크론 설치
+bash scripts/install_server_morning_cron.sh
+
+# 서버 오전 9:10 자동화 수동 실행
+bash scripts/server_morning_autopost.sh
+
 # 의존성 설치
 pip install -r scripts/requirements.txt
 bundle install
@@ -81,6 +87,8 @@ Slack 연동:
 - `_state/*.json` 파일은 중복 방지 상태이므로 수동 수정 금지
 - `assets/images/generated/`는 30일 이상 된 이미지 자동 정리됨
 - GitHub Actions는 동시성 그룹(`collect-data`)으로 순차 실행
+- 오전 9:10(KST) 자동 포스팅/품질 보정은 서버 크론(`server_morning_autopost.sh`)이 1차 책임
+- `generate-daily-summary.yml`, `generate-market-summary.yml`는 스케줄 대신 수동 실행(`workflow_dispatch`)으로 운영
 
 ## Continuous Improvement Loop
 

@@ -121,6 +121,25 @@ python scripts/generate_market_summary.py
 python scripts/generate_daily_summary.py
 ```
 
+### 2.5 Hybrid Scheduler (GitHub Actions + Server Cron)
+
+GitHub Actions는 분산 수집/검증을 유지하고, 상시 켜진 서버는 오전 9시 10분(KST) 자동 포스팅/품질 보정을 담당하도록 구성할 수 있습니다.
+
+```bash
+# 09:10 KST 자동 포스팅 + 내용/이미지 품질 보정 크론 설치
+bash scripts/install_server_morning_cron.sh
+
+# 수동 1회 실행 테스트
+bash scripts/server_morning_autopost.sh
+```
+
+- 자동화 스크립트: `scripts/server_morning_autopost.sh`
+- 로그 파일: `_state/server-morning-autopost.log`
+- 크론 설치/갱신: `scripts/install_server_morning_cron.sh`
+- 역할 분리:
+  - 서버 크론(09:10 KST): `generate_daily_summary`, `generate_market_summary`, 포스트/이미지 품질 보정
+  - GitHub Actions: 수집기 실행, 보안/품질 검사, 수동 요약 재생성(`workflow_dispatch`)
+
 ### 3. GitHub Secrets (선택)
 
 | 환경변수 | 서비스 | 용도 |
