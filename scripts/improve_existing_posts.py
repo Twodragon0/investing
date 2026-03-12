@@ -424,7 +424,11 @@ def add_korean_to_keywords(body: str) -> tuple[str, bool]:
 
 
 def clean_keyword_none_artifacts(body: str) -> tuple[str, bool]:
-    new_body = re.sub(r"(\*\*[^*]+\*\*)None\s+\(", r"\1 (", body)
+    new_body = body
+    new_body = re.sub(r"(\*\*[^*]+\*\*)None\(", r"\1(", new_body)
+    new_body = re.sub(r"(\*\*[^*]+\*\*)None\s+\(", r"\1 (", new_body)
+    new_body = re.sub(r"(\*\*[^*]+\*\*)None(?=[가-힣])", r"\1", new_body)
+    new_body = re.sub(r"(\*\*[^*]+\*\*)None(?=\s|[.,:;!?])", r"\1", new_body)
     return new_body, new_body != body
 
 
@@ -604,6 +608,12 @@ def main() -> None:
         default=POSTS_DIR,
         help="Path to _posts directory.",
     )
+    parser.add_argument(
+        "--files",
+        nargs="*",
+        default=None,
+        help="Specific post files to process (absolute or relative paths).",
+    )
     args = parser.parse_args()
 
     posts_dir: Path = args.posts_dir
@@ -611,7 +621,21 @@ def main() -> None:
         print(f"Error: Posts directory not found: {posts_dir}", file=sys.stderr)
         sys.exit(1)
 
-    post_files = sorted(posts_dir.glob("*.md"))
+    if args.files:
+        post_files = []
+        for file_arg in args.files:
+            path = Path(file_arg)
+            if not path.is_absolute():
+                direct_path = path.resolve()
+                if direct_path.exists():
+                    path = direct_path
+                else:
+                    path = (posts_dir / path).resolve()
+            if path.exists() and path.suffix == ".md":
+                post_files.append(path)
+        post_files = sorted(set(post_files))
+    else:
+        post_files = sorted(posts_dir.glob("*.md"))
     print(f"Found {len(post_files)} posts in {posts_dir}")
 
     if args.dry_run:

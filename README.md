@@ -19,7 +19,7 @@ DragonQuant Platform
 │  │  Data Intelligence       │─────▶│  Quant Trading Engine        │  │
 │  │                          │      │                              │  │
 │  │  20+ 소스 자동 수집       │      │  14-Component MI Signal     │  │
-│  │  8 Collectors            │      │  6 Technical Indicators     │  │
+│  │  11 Collectors           │      │  6 Technical Indicators     │  │
 │  │  중복 제거 + 감성 분석    │      │  Kelly + CVaR 리스크 제어    │  │
 │  │  Jekyll 사이트 발행       │      │  Upbit/Bithumb 자동매매     │  │
 │  └─────────────────────────┘      └─────────────────────────────┘  │
@@ -32,7 +32,7 @@ DragonQuant Platform
 
 ## Features
 
-### 데이터 수집 (10 Collectors)
+### 데이터 수집 (11 Collectors)
 
 | 수집기 | 주기 | 주요 소스 | 카테고리 |
 |:-------|:----:|:---------|:---------|
@@ -46,6 +46,7 @@ DragonQuant Platform
 | `collect_worldmonitor_news` | 일간 | WorldMonitor RSS (지정학, 에너지) | world-monitor |
 | `collect_fmp_calendar` | 12h | FMP 경제 캘린더/실적 일정, 섹터 퍼포먼스 | market-analysis |
 | `collect_market_indicators` | 평일 2회 | CNN Fear & Greed, VIX/DXY/원자재, 시장 폭/마진 뉴스 | market-analysis |
+| `collect_geopolitical` | 12h | Polymarket 지정학 리스크 시장 데이터 | geopolitical-risk |
 
 ### 콘텐츠 생성 (3 Generators)
 
@@ -82,7 +83,7 @@ DragonQuant Platform
 ┌─────────────────┐  ┌─────────────────┐  ┌──────────────────┐
 │   Collection    │  │   Processing    │  │   Presentation   │
 │                 │  │                 │  │                  │
-│ 10 Collectors   │─▶│  3 Generators   │─▶│  Jekyll Site     │
+│ 11 Collectors   │─▶│  3 Generators   │─▶│  Jekyll Site     │
 │  20+ Sources    │  │  Image Gen      │  │  GitHub Pages    │
 │  Dedup Engine   │  │  Summarizer     │  │  OG/SNS 최적화   │
 │  Enrichment     │  │  OG Image Gen   │  │  9 Categories    │
