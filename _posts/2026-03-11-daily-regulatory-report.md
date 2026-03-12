@@ -27,20 +27,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-03-11 - regulatory-news 뉴
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">30</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 15</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">27</div><div class="stat-label">한국</div></div></div>
 <div class="alert-box alert-info"><strong>규제 긴급: 국힘 "가상자산 거래소 지분제한은 위헌"...여당·정부와 대립각 - 지디넷코리아 - 30건 분석</strong><ul><li>🔵 <strong>규제/정책</strong> (15건): 규제, 가상자산거래소, 금융위원회 이슈가 15건으로 주목받고 있습니다.</li><li>🏦 <strong>거래소</strong> (5건): 5건의 뉴스에서 가상자산거래소, 규제, 지디넷코리아 키워드가 부각되고 있습니다.</li><li>📊 <strong>매크로/금리</strong> (2건): 지디넷코리아, 새도약기금, 지분제한은 이슈가 2건으로 주목받고 있습니다.</li><li>🟣 <strong>DeFi</strong> (1건): 1건의 뉴스에서 금융위원회가, 수용한다는, 아닙니다 키워드가 부각되고 있습니다.</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE1uaFR5Z05vQWJDUktUQ0FscHR6elZtVzNLX0ZLLWdkckFvTTdGal9VOGVIWkhJa21BWnctenJOXzdQTm80d3ppdG0xQ05wT0cwR2xxdjh3?oc=5">국힘 "가상자산 거래소 지분제한은 위헌"...여당·정부와 대립각 - 지디넷코리아</a> <span class="p0-desc">한국은행 통화정책 관련 소식입니다. 금리 결정은 채권·부동산·주식 시장 전반에 영향을 미칩니다.</span></li></ul></div>
-## 전체 뉴스 요약
-
-**긴급**: 국힘 "가상자산 거래소 지분제한은 위헌"...여당·정부와 대립각 - 지디넷코리아  
-총 30건의 뉴스 중 P1 주요 이슈도 10건 확인됩니다.
-
-1. **🔵 규제/정책** (15건): 규제, 가상자산거래소, 금융위원회 이슈가 15건으로 주목받고 있습니다.
-2. **🏦 거래소** (5건): 5건의 뉴스에서 가상자산거래소, 규제, 지디넷코리아 키워드가 부각되고 있습니다.
-3. **📊 매크로/금리** (2건): 지디넷코리아, 새도약기금, 지분제한은 이슈가 2건으로 주목받고 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-**P0 긴급**: 국힘 "가상자산 거래소 지분제한은 위헌"...여당·정부와 대립각 - 지디넷코리아
-**P1 주요**: 10건 확인
-**주요 지역**: 한국 27건, 미국 1건, 아시아 1건
-
 ## 핵심 요약
 
 - **총 수집 건수**: 30건
