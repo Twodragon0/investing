@@ -30,6 +30,13 @@
       {% if first_img %}{% assign og_image = first_img %}{% endif %}
     {% endif %}
   {% endif %}
+  {% if og_image == site.og_image and content contains '![' %}
+    {% assign md_img_split = content | split: '](' %}
+    {% if md_img_split.size > 1 %}
+      {% assign first_md_img = md_img_split[1] | split: ')' | first %}
+      {% if first_md_img and first_md_img contains '/assets/images/' %}{% assign og_image = first_md_img %}{% endif %}
+    {% endif %}
+  {% endif %}
   {% if og_image contains '.svg' %}
     {% assign og_image_png = og_image | replace: '.svg', '.png' %}
     {% assign og_image_og_png = og_image | replace: '.svg', '_og.png' %}
