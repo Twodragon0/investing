@@ -143,48 +143,67 @@ excerpt: "암호화폐 67건, 주식 82건, 규제 25건, 소셜 미디어 7건,
 
 관심 영역별 상세 리포트로 바로 이동할 수 있습니다.
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left;">카테고리</th>
-      <th style="text-align:center;">건수</th>
-      <th style="text-align:left;">리포트 링크</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left;">🪙 암호화폐 뉴스</td>
-      <td style="text-align:center;">67건</td>
-      <td style="text-align:left;"><a href="/crypto-news/2026/02/15/daily-crypto-news-digest/">리포트 보기</a></td>
-    </tr>
-    <tr>
-      <td style="text-align:left;">📈 시장 종합 리포트</td>
-      <td style="text-align:center;">-</td>
-      <td style="text-align:left;"><a href="/market-analysis/2026/02/15/daily-market-report/">리포트 보기</a></td>
-    </tr>
-    <tr>
-      <td style="text-align:left;">정치인 거래</td>
-      <td style="text-align:center;">5건</td>
-      <td style="text-align:left;"><a href="/political-trades/2026/02/15/daily-political-trades-report/">리포트 보기</a></td>
-    </tr>
-    <tr>
-      <td style="text-align:left;">📋 규제 동향</td>
-      <td style="text-align:center;">25건</td>
-      <td style="text-align:left;"><a href="/regulatory-news/2026/02/15/daily-regulatory-report/">리포트 보기</a></td>
-    </tr>
-    <tr>
-      <td style="text-align:left;">💬 소셜 미디어</td>
-      <td style="text-align:center;">7건</td>
-      <td style="text-align:left;"><a href="/crypto-news/2026/02/15/daily-social-media-digest/">리포트 보기</a></td>
-    </tr>
-    <tr>
-      <td style="text-align:left;">주식 시장 뉴스</td>
-      <td style="text-align:center;">82건</td>
-      <td style="text-align:left;"><a href="/stock-news/2026/02/15/daily-stock-news-digest/">리포트 보기</a></td>
-    </tr>
-  </tbody>
-</table>
-
+<div class="report-links-board">
+  <div class="report-links-summary">
+    <div class="report-links-summary-label">Quick Access</div>
+    <div class="report-links-summary-text">지금 확인할 수 있는 세부 리포트 6개를 주제별로 정리했습니다.</div>
+  </div>
+  <div class="report-links-head">
+    <span class="report-links-head-item report-links-head-category">카테고리</span>
+    <span class="report-links-head-item report-links-head-count">건수</span>
+    <span class="report-links-head-item report-links-head-link">리포트 링크</span>
+  </div>
+  <div class="report-links-grid">
+  <div class="report-links-card">
+    <div class="report-links-meta">
+      <div class="report-links-category">🪙 암호화폐 뉴스</div>
+      <div class="report-links-note">가격, 거래소, 온체인 이슈를 빠르게 점검합니다.</div>
+    </div>
+    <div class="report-links-count">67건</div>
+    <div class="report-links-action"><a href="/crypto-news/2026/02/15/daily-crypto-news-digest/">리포트 보기</a></div>
+  </div>
+  <div class="report-links-card">
+    <div class="report-links-meta">
+      <div class="report-links-category">📈 시장 종합 리포트</div>
+      <div class="report-links-note">주요 지수와 자산군 흐름을 한 번에 확인합니다.</div>
+    </div>
+    <div class="report-links-count">-</div>
+    <div class="report-links-action"><a href="/market-analysis/2026/02/15/daily-market-report/">리포트 보기</a></div>
+  </div>
+  <div class="report-links-card">
+    <div class="report-links-meta">
+      <div class="report-links-category">정치인 거래</div>
+      <div class="report-links-note">관련 세부 리포트로 바로 이동합니다.</div>
+    </div>
+    <div class="report-links-count">5건</div>
+    <div class="report-links-action"><a href="/political-trades/2026/02/15/daily-political-trades-report/">리포트 보기</a></div>
+  </div>
+  <div class="report-links-card">
+    <div class="report-links-meta">
+      <div class="report-links-category">📋 규제 동향</div>
+      <div class="report-links-note">정책, 감독기관 발표, 법안 변화를 추적합니다.</div>
+    </div>
+    <div class="report-links-count">25건</div>
+    <div class="report-links-action"><a href="/regulatory-news/2026/02/15/daily-regulatory-report/">리포트 보기</a></div>
+  </div>
+  <div class="report-links-card">
+    <div class="report-links-meta">
+      <div class="report-links-category">💬 소셜 미디어</div>
+      <div class="report-links-note">커뮤니티 심리와 화제 키워드를 압축해 봅니다.</div>
+    </div>
+    <div class="report-links-count">7건</div>
+    <div class="report-links-action"><a href="/crypto-news/2026/02/15/daily-social-media-digest/">리포트 보기</a></div>
+  </div>
+  <div class="report-links-card">
+    <div class="report-links-meta">
+      <div class="report-links-category">주식 시장 뉴스</div>
+      <div class="report-links-note">기업, 지수, 섹터별 재료를 빠르게 추립니다.</div>
+    </div>
+    <div class="report-links-count">82건</div>
+    <div class="report-links-action"><a href="/stock-news/2026/02/15/daily-stock-news-digest/">리포트 보기</a></div>
+  </div>
+  </div>
+</div>
 ---
 
 *본 요약은 자동 수집된 뉴스 데이터를 기반으로 작성되었으며, 투자 조언이 아닙니다.*

@@ -238,48 +238,67 @@ excerpt: "이란 전쟁 확전으로 글로벌 리스크오프 전환 — 원유
 
 관심 영역별 상세 리포트로 바로 이동할 수 있습니다.
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left;">카테고리</th>
-      <th style="text-align:center;">건수</th>
-      <th style="text-align:left;">리포트 링크</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left;">🪙 암호화폐 뉴스</td>
-      <td style="text-align:center;">88건</td>
-      <td style="text-align:left;"><a href="https://investing.2twodragon.com/crypto-news/2026/03/02/daily-crypto-news-digest/">리포트 보기</a></td>
-    </tr>
-    <tr>
-      <td style="text-align:left;">📈 시장 종합 리포트</td>
-      <td style="text-align:center;">-</td>
-      <td style="text-align:left;"><a href="https://investing.2twodragon.com/market-analysis/2026/03/02/daily-market-report/">리포트 보기</a></td>
-    </tr>
-    <tr>
-      <td style="text-align:left;">📋 규제 동향</td>
-      <td style="text-align:center;">21건</td>
-      <td style="text-align:left;"><a href="https://investing.2twodragon.com/regulatory-news/2026/03/02/daily-regulatory-report/">리포트 보기</a></td>
-    </tr>
-    <tr>
-      <td style="text-align:left;">💬 소셜 미디어</td>
-      <td style="text-align:center;">25건</td>
-      <td style="text-align:left;"><a href="https://investing.2twodragon.com/social-media/2026/03/02/daily-social-media-digest/">리포트 보기</a></td>
-    </tr>
-    <tr>
-      <td style="text-align:left;">주식 시장 뉴스</td>
-      <td style="text-align:center;">114건</td>
-      <td style="text-align:left;"><a href="https://investing.2twodragon.com/stock-news/2026/03/02/daily-stock-news-digest/">리포트 보기</a></td>
-    </tr>
-    <tr>
-      <td style="text-align:left;">🌍 월드모니터 브리핑</td>
-      <td style="text-align:center;">20건</td>
-      <td style="text-align:left;"><a href="https://investing.2twodragon.com/market-analysis/2026/03/02/daily-worldmonitor-briefing/">리포트 보기</a></td>
-    </tr>
-  </tbody>
-</table>
-
+<div class="report-links-board">
+  <div class="report-links-summary">
+    <div class="report-links-summary-label">Quick Access</div>
+    <div class="report-links-summary-text">지금 확인할 수 있는 세부 리포트 6개를 주제별로 정리했습니다.</div>
+  </div>
+  <div class="report-links-head">
+    <span class="report-links-head-item report-links-head-category">카테고리</span>
+    <span class="report-links-head-item report-links-head-count">건수</span>
+    <span class="report-links-head-item report-links-head-link">리포트 링크</span>
+  </div>
+  <div class="report-links-grid">
+  <div class="report-links-card">
+    <div class="report-links-meta">
+      <div class="report-links-category">🪙 암호화폐 뉴스</div>
+      <div class="report-links-note">가격, 거래소, 온체인 이슈를 빠르게 점검합니다.</div>
+    </div>
+    <div class="report-links-count">88건</div>
+    <div class="report-links-action"><a href="https://investing.2twodragon.com/crypto-news/2026/03/02/daily-crypto-news-digest/">리포트 보기</a></div>
+  </div>
+  <div class="report-links-card">
+    <div class="report-links-meta">
+      <div class="report-links-category">📈 시장 종합 리포트</div>
+      <div class="report-links-note">주요 지수와 자산군 흐름을 한 번에 확인합니다.</div>
+    </div>
+    <div class="report-links-count">-</div>
+    <div class="report-links-action"><a href="https://investing.2twodragon.com/market-analysis/2026/03/02/daily-market-report/">리포트 보기</a></div>
+  </div>
+  <div class="report-links-card">
+    <div class="report-links-meta">
+      <div class="report-links-category">📋 규제 동향</div>
+      <div class="report-links-note">정책, 감독기관 발표, 법안 변화를 추적합니다.</div>
+    </div>
+    <div class="report-links-count">21건</div>
+    <div class="report-links-action"><a href="https://investing.2twodragon.com/regulatory-news/2026/03/02/daily-regulatory-report/">리포트 보기</a></div>
+  </div>
+  <div class="report-links-card">
+    <div class="report-links-meta">
+      <div class="report-links-category">💬 소셜 미디어</div>
+      <div class="report-links-note">커뮤니티 심리와 화제 키워드를 압축해 봅니다.</div>
+    </div>
+    <div class="report-links-count">25건</div>
+    <div class="report-links-action"><a href="https://investing.2twodragon.com/social-media/2026/03/02/daily-social-media-digest/">리포트 보기</a></div>
+  </div>
+  <div class="report-links-card">
+    <div class="report-links-meta">
+      <div class="report-links-category">주식 시장 뉴스</div>
+      <div class="report-links-note">기업, 지수, 섹터별 재료를 빠르게 추립니다.</div>
+    </div>
+    <div class="report-links-count">114건</div>
+    <div class="report-links-action"><a href="https://investing.2twodragon.com/stock-news/2026/03/02/daily-stock-news-digest/">리포트 보기</a></div>
+  </div>
+  <div class="report-links-card">
+    <div class="report-links-meta">
+      <div class="report-links-category">🌍 월드모니터 브리핑</div>
+      <div class="report-links-note">거시, 지정학, 에너지 변수의 시장 영향을 훑습니다.</div>
+    </div>
+    <div class="report-links-count">20건</div>
+    <div class="report-links-action"><a href="https://investing.2twodragon.com/market-analysis/2026/03/02/daily-worldmonitor-briefing/">리포트 보기</a></div>
+  </div>
+  </div>
+</div>
 ---
 
 *본 요약은 자동 수집된 뉴스 데이터 및 원문 기사 분석을 기반으로 작성되었으며, 투자 조언이 아닙니다.*
