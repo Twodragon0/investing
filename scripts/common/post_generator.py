@@ -164,6 +164,9 @@ def _slugify(text: str, max_length: int = 80) -> str:
 
 
 _HARDCODED_IMG_RE = re.compile(r"!\[([^\]]*)\]\((/assets/images/generated/[^)]+)\)")
+_LIQUID_IMG_RE = re.compile(
+    r"!\[([^\]]*)\]\(\{\{\s*'(/assets/images/generated/[^']+\.png)'\s*\|\s*relative_url\s*\}\}\)"
+)
 
 
 def _normalize_image_paths(content: str) -> str:
@@ -181,6 +184,29 @@ def _normalize_image_paths(content: str) -> str:
         return "![" + alt + "]({{ '" + path + "' | relative_url }})"
 
     return _HARDCODED_IMG_RE.sub(_replace, content)
+
+
+def _wrap_picture_tags(content: str) -> str:
+    """Convert generated PNG markdown images to HTML <picture> tags with WebP.
+
+    Transforms Liquid-form ``![alt]({{ '/assets/images/generated/foo.png' | relative_url }})``
+    into ``<picture><source srcset="..." type="image/webp"><img src="..." alt="..." loading="lazy"></picture>``
+    for server-side WebP-first rendering without JavaScript dependency.
+    """
+
+    def _picture_replace(match: re.Match) -> str:
+        alt = match.group(1)
+        png_path = match.group(2)
+        webp_path = png_path.replace(".png", ".webp")
+        return (
+            "<picture>"
+            "<source srcset=\"{{ '" + webp_path + '\' | relative_url }}" type="image/webp">'
+            "<img src=\"{{ '" + png_path + "' | relative_url }}\" "
+            'alt="' + alt + '" loading="lazy" decoding="async">'
+            "</picture>"
+        )
+
+    return _LIQUID_IMG_RE.sub(_picture_replace, content)
 
 
 def _extract_description(content: str) -> str:
@@ -443,6 +469,8 @@ class PostGenerator:
 
         # Normalize hardcoded image paths in content to Liquid relative_url syntax
         normalized_content = _normalize_image_paths(content.strip())
+        # Convert generated PNG images to <picture> tags with WebP sources
+        normalized_content = _wrap_picture_tags(normalized_content)
 
         # Build content
         post_content = "\n".join(frontmatter_lines) + "\n\n" + normalized_content

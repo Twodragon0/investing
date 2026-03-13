@@ -318,7 +318,7 @@ layout: default
   }
 
   function wrapImage(img) {
-    if (img.closest('figure')) return;
+    if (img.closest('figure') || img.closest('picture')) return;
     var figure = document.createElement('figure');
     figure.className = 'post-figure';
     img.parentNode.insertBefore(figure, img);
