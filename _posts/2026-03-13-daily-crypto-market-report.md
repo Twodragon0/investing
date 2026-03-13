@@ -8,9 +8,9 @@ keywords: "market-report, crypto, top-coins, trending, daily"
 source: "CoinMarketCap"
 source_url: "https://coinmarketcap.com/"
 lang: "ko"
-image: "/assets/images/og-market-analysis.png"
-description: "24시간 변동 +2.45%로 완만한 상승세입니다. 주요 저항선 돌파 여부에 따라 추가 상승 탄력이 결정됩니다. BTC 도미넌스 56.8%로 비트코인 중심 흐름이 지속됩니다. 과거 사이클에서 도미넌스 55% 이상 구간은 알트 시즌 이전 축적기에 해당하는 경우가 많았습니다."
-excerpt: "24시간 변동 +2.45%로 완만한 상승세입니다. 주요 저항선 돌파 여부에 따라 추가 상승 탄력이 결정됩니다. BTC 도미넌스 56.8%로 비트코인 중심 흐름이 지속됩니다.…"
+image: "/assets/images/generated/news-briefing-cmc-2026-03-13.png"
+description: "[CRITICAL] 공포/탐욕 지수 15 (극단적 공포) - BTC $71,131 (+2.5%), 총 시가총액 $2.50T, BTC 도미넌스 56.8%. HYPE +5.67%, SOL +4.62% 상승 주도. 극단적 공포 구간에서 반등 시도 중"
+excerpt: "[CRITICAL] 공포/탐욕 지수 15 (극단적 공포) - BTC $71,131 (+2.5%), 총 시가총액 $2.50T. 극단적 공포 구간에서 반등 시도 중"
 image_alt: "World Liberty Financial USD (USD1) -0.0% 변동 - 시장 분석 뉴스 요약 이미지"
 ---
 

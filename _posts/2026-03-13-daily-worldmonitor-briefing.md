@@ -9,8 +9,8 @@ source: "worldmonitor"
 source_url: "https://worldmonitor.app"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-worldmonitor-2026-03-13.png"
-description: "2026-03-13 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다. 범위: 글로벌 지정학, 금융시장, 에너지 이슈"
-excerpt: "2026-03-13 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다. 범위: 글로벌 지정학, 금융시장, 에너지 이슈"
+description: "[HIGH] 지정학 리스크 높음 - 고중요도 이슈 11건 포착. 이란-이스라엘 군사 충돌 격화, 안보 이슈 55% 차지. 안전자산 선호 강화 가능성 - 20건 분석"
+excerpt: "[HIGH] 지정학 리스크 높음 - 고중요도 이슈 11건. 이란-이스라엘 군사 충돌 격화, 안보 이슈 55% 차지. 안전자산 선호 강화 가능성"
 image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-03-13 - 시장 분석 뉴스 요약 이미지"
 ---
 
