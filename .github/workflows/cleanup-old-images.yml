@@ -32,10 +32,13 @@ jobs:
             age=$(( ($(date +%s) - $(date -r "$f" +%s 2>/dev/null || stat -c %Y "$f" 2>/dev/null || echo 0)) / 86400 ))
             if [ "$age" -gt 30 ]; then
               rm "$f"
+              # Also remove matching WebP file
+              webp="${f%.png}.webp"
+              [ -f "$webp" ] && rm "$webp"
               count=$((count + 1))
             fi
           done
-          echo "Removed $count old images"
+          echo "Removed $count old image pairs (PNG+WebP)"
 
       - name: Commit changes
         run: |

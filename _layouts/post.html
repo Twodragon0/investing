@@ -344,14 +344,17 @@ layout: default
   }
 
   function fallbackSrc(src) {
+    // Normalize: treat .webp same as .png for fallback logic
+    var ext = src.indexOf('.webp') !== -1 ? '.webp' : '.png';
+    var normSrc = src.replace('.webp', '.png');
     var dailyPattern = /news-briefing-daily-(\d{4}-\d{2}-\d{2})\.png/;
-    var matched = src.match(dailyPattern);
+    var matched = normSrc.match(dailyPattern);
     if (matched) {
-      return src.replace('news-briefing-daily-' + matched[1] + '.png', 'news-briefing-' + matched[1] + '.png');
+      return normSrc.replace('news-briefing-daily-' + matched[1] + '.png', 'news-briefing-' + matched[1] + '.png');
     }
     // Try removing date suffix for other generated image patterns
     var datePattern = /(top-coins|market-heatmap|fear-greed|market-snapshot|news-summary|source-distribution|defi-tvl-dashboard|news-briefing)(?:-(?:cmc|coingecko))?-\d{4}-\d{2}-\d{2}\.png/;
-    if (datePattern.test(src)) {
+    if (datePattern.test(normSrc)) {
       // Fall back to category default og image
       var catMatch = document.querySelector('meta[property="article:section"]');
       if (catMatch) {
