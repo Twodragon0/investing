@@ -69,6 +69,70 @@ def html_table(
     return f"<table><thead><tr>{thead_cells}</tr></thead><tbody>{tbody}</tbody></table>"
 
 
+def html_report_links(rows: Iterable[Sequence[object]]) -> str:
+    category_notes = {
+        "암호화폐 뉴스": "가격, 거래소, 온체인 이슈를 빠르게 점검합니다.",
+        "defi tvl 리포트": "체인별 TVL 흐름과 자금 이동을 비교합니다.",
+        "시장 종합 리포트": "주요 지수와 자산군 흐름을 한 번에 확인합니다.",
+        "규제 동향": "정책, 감독기관 발표, 법안 변화를 추적합니다.",
+        "소셜 미디어": "커뮤니티 심리와 화제 키워드를 압축해 봅니다.",
+        "월드모니터 브리핑": "거시, 지정학, 에너지 변수의 시장 영향을 훑습니다.",
+        "경제 캘린더": "핵심 경제 지표 일정과 이벤트 리스크를 체크합니다.",
+        "일일 시장 종합": "당일 자산 흐름과 핵심 포인트를 요약합니다.",
+        "주식 시장 뉴스": "기업, 지수, 섹터별 재료를 빠르게 추립니다.",
+        "소셜 미디어 동향": "투자자 심리와 실시간 반응을 정리합니다.",
+        "블록체인 보안": "해킹, 취약점, 보안 경보를 우선 확인합니다.",
+        "kospi 투자자 수급": "유가증권시장 수급 흐름을 바로 확인합니다.",
+        "kosdaq 투자자 수급": "코스닥 수급과 위험 선호 변화를 체크합니다.",
+    }
+
+    def normalize_category(value: object) -> str:
+        text = str(value or "").strip()
+        text = re.sub(r"^[^\w가-힣A-Za-z]+\s*", "", text)
+        return text.lower()
+
+    cards = []
+    row_count = 0
+    for row in rows:
+        values = list(row)
+        if len(values) != 3:
+            continue
+        category, count, link_html = values
+        note = category_notes.get(normalize_category(category), "관련 세부 리포트로 바로 이동합니다.")
+        row_count += 1
+        cards.extend(
+            [
+                '  <div class="report-links-card">',
+                '    <div class="report-links-meta">',
+                f'      <div class="report-links-category">{category}</div>',
+                f'      <div class="report-links-note">{html_text(note)}</div>',
+                "    </div>",
+                f'    <div class="report-links-count">{html_text(count)}</div>',
+                f'    <div class="report-links-action">{link_html}</div>',
+                "  </div>",
+            ]
+        )
+
+    return "\n".join(
+        [
+            '<div class="report-links-board">',
+            '  <div class="report-links-summary">',
+            '    <div class="report-links-summary-label">Quick Access</div>',
+            f'    <div class="report-links-summary-text">지금 확인할 수 있는 세부 리포트 {row_count}개를 주제별로 정리했습니다.</div>',
+            "  </div>",
+            '  <div class="report-links-head">',
+            '    <span class="report-links-head-item report-links-head-category">카테고리</span>',
+            '    <span class="report-links-head-item report-links-head-count">건수</span>',
+            '    <span class="report-links-head-item report-links-head-link">리포트 링크</span>',
+            "  </div>",
+            '  <div class="report-links-grid">',
+            *cards,
+            "  </div>",
+            "</div>",
+        ]
+    )
+
+
 def html_details_list(summary: str, items: Iterable[str], css_class: str = "details-content") -> str:
     li = "".join(f"<li>{item}</li>" for item in items)
     return f'<details><summary>{html_text(summary)}</summary><div class="{css_class}"><ol>{li}</ol></div></details>'

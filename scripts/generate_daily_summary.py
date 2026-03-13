@@ -26,7 +26,7 @@ from common.config import SITE_URL, get_kst_timezone, setup_logging
 from common.entity_extractor import extract_market_signals, group_related_items
 from common.markdown_utils import (
     _normalize_url,
-    html_table,
+    html_report_links,
     markdown_link,
     markdown_table,
     smart_truncate,
@@ -2242,13 +2242,7 @@ def main():
         display_name = _REPORT_CATEGORY_LABELS.get(name, name)
         report_rows.append([display_name, count_str, f"[리포트 보기]({url})"])
     if report_rows:
-        content_parts.append(
-            html_table(
-                ["카테고리", "건수", "리포트 링크"],
-                report_rows,
-                aligns=["left", "center", "left"],
-            )
-        )
+        content_parts.append(html_report_links(report_rows))
 
     # ═══════════════════════════════════════
     # 9. MARKET SIGNAL ANALYSIS
