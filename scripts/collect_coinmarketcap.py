@@ -722,7 +722,29 @@ def main():
     fear_greed = fetch_fear_greed_index(history_days=1)
 
     # ── Generate high-quality summary post ──
-    title = f"암호화폐 시장 종합 리포트 - {today}"
+    # Build title with top mover coin for better SEO / SNS preview
+    title_suffix = ""
+    if top_coins:
+        _top_movers = sorted(
+            top_coins[:20],
+            key=lambda c: abs(
+                c.get("price_change_percentage_24h")
+                or c.get("quote", {}).get("USD", {}).get("percent_change_24h", 0)
+                or 0
+            ),
+            reverse=True,
+        )
+        if _top_movers:
+            _m = _top_movers[0]
+            _sym = (_m.get("symbol") or "").upper()
+            _ch = (
+                _m.get("price_change_percentage_24h")
+                or _m.get("quote", {}).get("USD", {}).get("percent_change_24h", 0)
+                or 0
+            )
+            if _ch and _sym:
+                title_suffix = f" | {_sym} {_ch:+.1f}%"
+    title = f"암호화폐 시장 종합 리포트 - {today}{title_suffix}"
     filepath = None
 
     if not dedup.is_duplicate_exact(title, source_name, today):
@@ -743,7 +765,7 @@ def main():
                 filename=f"top-coins-cmc-{today}.png",
             )
             if img:
-                image_refs.append(("top-coins-cmc", img))
+                image_refs.append((f"CoinMarketCap Top 코인 순위 ({today})", img))
 
             img = generate_market_heatmap(
                 top_coins,
@@ -752,7 +774,7 @@ def main():
                 filename=f"market-heatmap-cmc-{today}.png",
             )
             if img:
-                image_refs.append(("market-heatmap-cmc", img))
+                image_refs.append((f"암호화폐 시장 히트맵 ({today})", img))
 
             logger.info("Generated %d images for CMC post", len(image_refs))
         except ImportError:
@@ -834,7 +856,7 @@ def main():
             if briefing_img:
                 fn = os.path.basename(briefing_img)
                 web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
-                sections["오늘의 브리핑"] = f"![market-briefing]({web_path})"
+                sections["오늘의 브리핑"] = f"![시장 브리핑 카드]({web_path})"
         except ImportError as e:
             logger.debug("Optional dependency unavailable: %s", e)
         except Exception as e:
@@ -1001,17 +1023,17 @@ def main():
                         coin_sym = coin.get("symbol", "")
                         change = coin.get("quote", {}).get("USD", {}).get("percent_change_24h", 0) or 0
                     if change > 3:
-                        title = f"{coin_name} ({coin_sym}) 상승 {change:+.1f}% 강세"
+                        coin_title = f"{coin_name} ({coin_sym}) 상승 {change:+.1f}% 강세"
                         desc = f"rally surge 상승 강세 {coin_sym}"
                     elif change < -3:
-                        title = f"{coin_name} ({coin_sym}) 하락 {change:+.1f}% 약세"
+                        coin_title = f"{coin_name} ({coin_sym}) 하락 {change:+.1f}% 약세"
                         desc = f"drop fall 하락 약세 {coin_sym}"
                     else:
-                        title = f"{coin_name} ({coin_sym}) {change:+.1f}% 변동"
+                        coin_title = f"{coin_name} ({coin_sym}) {change:+.1f}% 변동"
                         desc = f"{coin_sym} neutral"
                     all_news.append(
                         {
-                            "title": title,
+                            "title": coin_title,
                             "description": desc,
                             "source": source_name,
                             "category": "crypto",

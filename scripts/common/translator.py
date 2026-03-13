@@ -108,6 +108,30 @@ TERM_OVERRIDES: Dict[str, str] = {
     "Bearish": "약세",
     "Rally": "랠리",
     "Crash": "폭락",
+    "Whale": "고래",
+    "Whales": "고래",
+    "Halving": "반감기",
+    "Staking": "스테이킹",
+    "Airdrop": "에어드롭",
+    "Mainnet": "메인넷",
+    "Testnet": "테스트넷",
+    "Layer 2": "레이어2",
+    "Layer-2": "레이어2",
+    # Media names (prevent mistranslation)
+    "Motley Fool": "Motley Fool",
+    "The Motley Fool": "The Motley Fool",
+    "Seeking Alpha": "Seeking Alpha",
+    "CoinDesk": "CoinDesk",
+    "CoinTelegraph": "CoinTelegraph",
+    "Cointelegraph": "CoinTelegraph",
+    "The Block": "The Block",
+    "Decrypt": "Decrypt",
+    "MarketWatch": "MarketWatch",
+    "Barron's": "Barron's",
+    "TheStreet": "TheStreet",
+    "Benzinga": "Benzinga",
+    "Investopedia": "Investopedia",
+    "CoinMetrics": "CoinMetrics",
 }
 
 # Build case-insensitive lookup (key_lower -> (original_key, korean))
@@ -127,8 +151,8 @@ def _cache_key(text: str) -> str:
 
 
 def _load_cache() -> Dict[str, str]:
-    """Load translation cache from disk."""
-    global _cache
+    """Load translation cache from disk, cleaning artifact-contaminated entries."""
+    global _cache, _cache_dirty
     if _cache is not None:
         return _cache
 
@@ -141,6 +165,21 @@ def _load_cache() -> Dict[str, str]:
         except (json.JSONDecodeError, OSError) as e:
             logger.warning("Translation cache load failed: %s", e)
             _cache = {}
+
+    # Clean existing cache entries with known artifacts
+    cleaned = 0
+    keys_to_fix = []
+    for key, value in _cache.items():
+        fixed = _postprocess_translation(value)
+        if fixed != value:
+            keys_to_fix.append((key, fixed))
+    for key, fixed in keys_to_fix:
+        _cache[key] = fixed
+        cleaned += 1
+    if cleaned:
+        _cache_dirty = True
+        logger.info("Cleaned %d cached translations with artifacts", cleaned)
+
     return _cache
 
 
@@ -214,6 +253,128 @@ def _restore_terms(text: str, replacements: list) -> str:
     return result
 
 
+# ---------------------------------------------------------------------------
+# Post-processing: fix Google Translate artifacts
+# ---------------------------------------------------------------------------
+
+# Token-name artifacts that leak into translated text (e.g. "PAIrs", "BrAIn")
+# These occur when \b word-boundary matching fails or from cached old translations
+_TOKEN_ARTIFACT_MAP: Dict[str, str] = {
+    # AI artifacts
+    "PAIrs": "Pairs", "PAIr": "Pair", "pAIrs": "pairs", "pAIr": "pair",
+    "MAIntenance": "Maintenance", "mAIntenance": "maintenance",
+    "MAInnet": "Mainnet", "mAInnet": "mainnet",
+    "BrAIn": "Brain", "brAIn": "brain",
+    "ChAIn": "Chain", "chAIn": "chain",
+    "ChAInlink": "Chainlink",
+    "rAPId": "rapid", "RAPId": "Rapid",
+    "RAIse": "Raise", "rAIse": "raise",
+    "RAIses": "Raises", "rAIses": "raises",
+    "RAIsed": "Raised", "rAIsed": "raised",
+    "gAIn": "gain", "gAIns": "gains", "gAIned": "gained",
+    "ChAIrman": "Chairman", "chAIrman": "chairman",
+    "pAId": "paid", "sAId": "said",
+    "mAIn": "main", "mAIntain": "maintain",
+    "remAIn": "remain", "remAIns": "remains",
+    "contAIn": "contain", "contAIns": "contains",
+    "agAInst": "against", "AgAInst": "Against",
+    "clAIm": "claim", "clAIms": "claims",
+    "fAIl": "fail", "fAIled": "failed",
+    "wAIt": "wait", "wAIting": "waiting",
+    "trAIning": "training", "trAIned": "trained",
+    "explAIn": "explain", "certAIn": "certain",
+    "obtAIn": "obtain", "sustAIn": "sustain",
+    "strAIght": "straight",
+    "AIr": "Air", "aIr": "air",
+    "DAIly": "Daily", "dAIly": "daily",
+    "TakAIchi": "Takaichi",
+    # SOL artifacts
+    "SOLution": "Solution", "SOLutions": "Solutions",
+    "reSOLve": "resolve", "reSOLved": "resolved",
+    "conSOLidate": "consolidate", "conSOLidation": "consolidation",
+    "abSOLute": "absolute", "SOLar": "solar",
+    # XRP/ETH/DOT artifacts
+    "XRPected": "Expected", "ETHical": "Ethical",
+}
+
+# Media/source names that Google Translate incorrectly translates
+_MEDIA_NAME_FIXES: Dict[str, str] = {
+    "가지각색의 바보": "Motley Fool",
+    "잡다한 바보": "Motley Fool",
+    "얼룩덜룩한 바보": "Motley Fool",
+    "알파 추구": "Seeking Alpha",
+    "알파를 추구": "Seeking Alpha",
+    "동전 데스크": "CoinDesk",
+    "동전 텔레그래프": "CoinTelegraph",
+    "동전 전보": "CoinTelegraph",
+    "해독": "Decrypt",
+    "더 블록": "The Block",
+    "야후 재무": "Yahoo Finance",
+    "야후 금융": "Yahoo Finance",
+    "바론의": "Barron's",
+    "배런의": "Barron's",
+    "거리": "TheStreet",
+    "벤징가": "Benzinga",
+    "코인 메트릭스": "CoinMetrics",
+    "코인 메트릭": "CoinMetrics",
+    "디크립트": "Decrypt",
+    "포브스 디지털": "Forbes Digital",
+    "시장 감시": "MarketWatch",
+}
+
+# Awkward Korean patterns from machine translation → natural Korean
+_KOREAN_STYLE_FIXES: list = [
+    # "~의 짧은 붕괴" → "~의 단기 급락"
+    (r"짧은 붕괴", "단기 급락"),
+    # "$X를 넘어섰습니다" is OK, but "$X를 넘어섰다" needs 습니다 ending for news
+    # "~할 수 있습니까" → "~할 수 있을까"
+    (r"할 수 있습니까\??", "할 수 있을까?"),
+    # "~하는 것이 더 나은 암호화폐" → "더 나은 투자 대상"
+    (r"(?:지금\s+)?(?:\$[\d,]+로\s+)?(?:지금\s+)?구매하고\s+(\d+)년\s+동안\s+보유하는\s+것이\s+더\s+나은\s+암호화폐",
+     r"\1년 장기 보유 시 더 유망한 암호화폐"),
+    # "~인가요?" → "~일까?" (more natural for news headlines)
+    (r"(\S+)인가요\?", r"\1일까?"),
+    # Remove trailing "- 나스닥", "- 알파 추구" etc. (source names that leaked)
+    (r"\s*[-–—]\s*(?:나스닥|알파 추구|가지각색의 바보|야후 파이낸스)\s*$", ""),
+    # "~달러 상당의" → "~달러 규모"
+    (r"달러 상당의", "달러 규모"),
+    # "~가 빠져나갔다고 연구원들이 밝혔습니다" → cleaner ending
+    (r"밝혔습니다\.\s*$", "밝혔습니다"),
+    # Double spaces
+    (r"\s{2,}", " "),
+]
+
+
+def _postprocess_translation(text: str) -> str:
+    """Fix common Google Translate artifacts in Korean translations.
+
+    Applied after term restoration, this function:
+    1. Fixes token-name artifacts (PAIrs → Pairs)
+    2. Corrects mistranslated media/source names
+    3. Improves awkward Korean phrasing patterns
+    """
+    import re
+
+    if not text:
+        return text
+
+    # 1. Fix token artifacts (case-sensitive replacements)
+    for wrong, correct in _TOKEN_ARTIFACT_MAP.items():
+        if wrong in text:
+            text = text.replace(wrong, correct)
+
+    # 2. Fix mistranslated media names
+    for wrong, correct in _MEDIA_NAME_FIXES.items():
+        if wrong in text:
+            text = text.replace(wrong, correct)
+
+    # 3. Apply Korean style fixes (regex-based)
+    for pattern, replacement in _KOREAN_STYLE_FIXES:
+        text = re.sub(pattern, replacement, text)
+
+    return text.strip()
+
+
 def translate_to_korean(text: str) -> str:
     """Translate English text to Korean. Returns original on failure.
 
@@ -243,6 +404,8 @@ def translate_to_korean(text: str) -> str:
         if translated:
             # Restore Korean terms from placeholders
             result = _restore_terms(translated, replacements)
+            # Post-process to fix Google Translate artifacts
+            result = _postprocess_translation(result)
 
             # Cache the result
             global _cache_dirty

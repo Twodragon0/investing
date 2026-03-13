@@ -17,7 +17,11 @@ logger = logging.getLogger(__name__)
 
 VERIFY_SSL = get_ssl_verify()
 
-_USER_AGENT = "Mozilla/5.0 (compatible; InvestingBot/1.0)"
+_USER_AGENT = (
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/120.0.0.0 Safari/537.36"
+)
 
 
 # Patterns that indicate the description is noise, not real content
@@ -182,11 +186,31 @@ def _resolve_google_news_url(url: str, timeout: int = 8) -> str:
     return ""
 
 
-_BROWSER_UA = (
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-    "AppleWebKit/537.36 (KHTML, like Gecko) "
-    "Chrome/120.0.0.0 Safari/537.36"
-)
+_BROWSER_UA = _USER_AGENT
+
+
+def _is_valid_image_url(url: str) -> bool:
+    """Check if a URL is likely a valid, useful image (not a placeholder/tracking pixel)."""
+    if not url or not url.startswith("http"):
+        return False
+    url_lower = url.lower()
+    # Reject known tracking pixels and placeholder images
+    _BAD_PATTERNS = [
+        "1x1", "pixel", "tracker", "beacon", "spacer",
+        "placeholder", "default-image", "no-image", "blank.",
+        "gravatar.com/avatar", "wp-content/plugins",
+    ]
+    if any(p in url_lower for p in _BAD_PATTERNS):
+        return False
+    # Reject non-image extensions
+    _BAD_EXTENSIONS = [".gif", ".svg", ".ico", ".webp"]
+    # .gif is often a tracking pixel; .svg/.ico are usually logos
+    if any(url_lower.endswith(ext) for ext in _BAD_EXTENSIONS):
+        # Allow large webp/gif if they have meaningful paths
+        if ".webp" in url_lower or len(url) > 80:
+            return True
+        return False
+    return True
 
 
 def _fetch_og_image(url: str, timeout: int = 8) -> str:
@@ -214,7 +238,7 @@ def _fetch_og_image(url: str, timeout: int = 8) -> str:
             match = _re.search(pattern, head_html, _re.IGNORECASE)
             if match:
                 img_url = match.group(1).strip()
-                if img_url.startswith("http"):
+                if _is_valid_image_url(img_url):
                     return img_url
     except Exception as exc:
         logger.debug("og:image fetch failed for %s: %s", url, exc)
@@ -379,25 +403,71 @@ def fetch_page_metadata(url: str, timeout: int = 8) -> Dict[str, str]:
                 result["description"] = smart_truncate(cleaned, 500)
                 return result
 
-        # 4: Article body paragraphs (more reliable than random <p>)
-        article = soup.find("article") or soup.find(class_=re.compile(r"article|post|entry|content"))
+        # 4a: Try readability-lxml for high-quality article extraction
+        try:
+            from readability import Document
+
+            doc = Document(resp.text)
+            summary_html = doc.summary()
+            summary_soup = BS4(summary_html, "html.parser")
+            paragraphs = []
+            for p in summary_soup.find_all("p"):
+                text = _clean_description(p.get_text(strip=True))
+                if len(text) > 50:
+                    paragraphs.append(text)
+                if len(paragraphs) >= 5:
+                    break
+            if paragraphs:
+                combined = " ".join(paragraphs)
+                result["description"] = smart_truncate(combined, 500)
+                return result
+        except ImportError:
+            pass  # readability-lxml not installed, fall through
+        except Exception as exc:  # noqa: BLE001
+            logger.debug("readability extraction failed for %s: %s", url, exc)
+
+        # 4b: Article body paragraphs (BS4 fallback)
+        # Exclude non-content containers (sidebars, ads, navigation, comments)
+        _EXCLUDE_CLASS_RE = re.compile(
+            r"sidebar|widget|nav|menu|footer|header|comment|social|share|promo|"
+            r"ad-|ads-|advert|sponsor|related|recommend|popup|modal|cookie|banner",
+            re.I,
+        )
+        article = soup.find("article")
+        if not article:
+            # More precise content container matching
+            for tag in soup.find_all(class_=re.compile(r"article[-_]?(body|content|text)|post[-_]?(body|content|text)|entry[-_]?(body|content|text)")):
+                if not _EXCLUDE_CLASS_RE.search(str(tag.get("class", ""))):
+                    article = tag
+                    break
+        if not article:
+            for tag in soup.find_all(class_=re.compile(r"^(article|post|entry|content)$")):
+                if not _EXCLUDE_CLASS_RE.search(str(tag.get("class", ""))):
+                    article = tag
+                    break
         if article:
+            # Remove nested non-content elements before extracting text
+            for noise in article.find_all(class_=_EXCLUDE_CLASS_RE):
+                noise.decompose()
             paragraphs = []
             for p in article.find_all("p"):
                 text = _clean_description(p.get_text(strip=True))
-                if len(text) > 30:
+                if len(text) > 50:
                     paragraphs.append(text)
-                if len(paragraphs) >= 3:
+                if len(paragraphs) >= 5:
                     break
             if paragraphs:
                 combined = " ".join(paragraphs)
                 result["description"] = smart_truncate(combined, 500)
                 return result
 
-        # 5: Fallback to any <p>
+        # 5: Fallback to any <p> (skip short ad-like text)
         for p in soup.find_all("p"):
+            # Skip paragraphs inside non-content containers
+            if p.find_parent(class_=_EXCLUDE_CLASS_RE):
+                continue
             text = _clean_description(p.get_text(strip=True))
-            if len(text) > 30:
+            if len(text) > 50:
                 result["description"] = smart_truncate(text, 500)
                 return result
     except Exception as e:  # noqa: BLE001
@@ -879,17 +949,22 @@ def _analyze_korean_title(title: str) -> str:
 
     if any(kw in title for kw in ["비트코인", "이더리움", "알트코인", "리플"]):
         clean = re.sub(r"\s*[-–—|]\s*\S+$", "", title).strip()
-        return f"{clean[:120]}."
+        pct = re.search(r"(\d+(?:\.\d+)?)\s*%", title)
+        if pct:
+            return f"{clean[:120]}. {pct.group(1)}% 변동에 따른 시장 영향을 주시해야 합니다."
+        return f"{clean[:120]}. 암호화폐 시장 동향과 투자 시사점을 확인하세요."
 
     if any(kw in title for kw in ["디파이", "디지털자산", "가상자산", "코인", "블록체인"]):
         clean = re.sub(r"\s*[-–—|]\s*\S+$", "", title).strip()
-        return f"{clean[:120]}."
+        return f"{clean[:120]}. 디지털 자산 시장의 최신 동향입니다."
 
     if any(kw in title for kw in ["AI", "인공지능", "챗봇", "생성형"]):
-        return "AI·인공지능 관련 소식입니다. AI 산업 성장에 따른 관련주 투자 기회를 점검해 보세요."
+        clean = re.sub(r"\s*[-–—|]\s*\S+$", "", title).strip()
+        return f"{clean[:120]}. AI 산업 성장에 따른 투자 기회를 점검해 보세요."
 
     if any(kw in title for kw in ["2차전지", "배터리", "전기차", "EV"]):
-        return "2차전지·전기차 관련 소식입니다. 글로벌 전기차 수요와 배터리 기술 경쟁이 섹터 성장을 좌우합니다."
+        clean = re.sub(r"\s*[-–—|]\s*\S+$", "", title).strip()
+        return f"{clean[:120]}. 글로벌 전기차 수요와 배터리 기술 경쟁 동향입니다."
 
     if any(kw in title for kw in ["외국인", "기관", "순매수", "순매도", "수급"]):
         return "외국인·기관 수급 동향입니다. 대규모 순매수/순매도는 시장 방향성의 중요한 선행 지표입니다."
@@ -996,13 +1071,15 @@ def _analyze_english_title(title: str, title_lower: str) -> str:
     if any(kw in title_lower for kw in ["gold", "silver", "precious"]):
         return f"{clean_title[:120]}."
 
-    # Default: use cleaned title as description (always better than generic template)
-    # Only use named entities (not prices/numbers) as prefix to avoid awkward patterns
-    # like "$67,000, Bitcoin: ..." or "US, Monday: ..."
+    # Default: use cleaned title with contextual suffix
     _meaningful = [e for e in _named if len(e) > 2]
     if _meaningful:
-        return f"{', '.join(_meaningful[:2])} 관련 소식입니다. {clean_title[:100]}"
-    return clean_title[:150] if len(clean_title) > 15 else title
+        subj = ", ".join(_meaningful[:2])
+        extra = f" ({detail_str})" if detail_str else ""
+        return f"{clean_title[:120]}.{extra} {subj} 관련 시장 동향입니다."
+    if detail_str:
+        return f"{clean_title[:120]}. ({detail_str})"
+    return f"{clean_title[:140]}." if len(clean_title) > 15 else title
 
 
 def generate_synthetic_description(

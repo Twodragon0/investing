@@ -310,7 +310,11 @@ layout: default
   if (!images.length) return;
 
   function toCaption(text) {
-    return String(text || '').replace(/[-_]+/g, ' ').replace(/\s+/g, ' ').trim();
+    text = String(text || '').trim();
+    if (!text) return '';
+    // Skip technical/generated alt text that makes poor captions
+    if (/^(top-coins|market-heatmap|fear-greed|news-briefing|source-dist|defi-tvl)/i.test(text)) return '';
+    return text.replace(/[-_]+/g, ' ').replace(/\s+/g, ' ').trim();
   }
 
   function wrapImage(img) {
@@ -318,7 +322,19 @@ layout: default
     var figure = document.createElement('figure');
     figure.className = 'post-figure';
     img.parentNode.insertBefore(figure, img);
-    figure.appendChild(img);
+    // Wrap in <picture> with WebP source for generated images
+    var src = img.getAttribute('src') || '';
+    if (src.indexOf('/assets/images/generated/') !== -1 && src.indexOf('.png') !== -1) {
+      var picture = document.createElement('picture');
+      var source = document.createElement('source');
+      source.setAttribute('srcset', src.replace('.png', '.webp'));
+      source.setAttribute('type', 'image/webp');
+      picture.appendChild(source);
+      figure.appendChild(picture);
+      picture.appendChild(img);
+    } else {
+      figure.appendChild(img);
+    }
     var alt = toCaption(img.getAttribute('alt'));
     if (alt) {
       var caption = document.createElement('figcaption');
@@ -332,6 +348,16 @@ layout: default
     var matched = src.match(dailyPattern);
     if (matched) {
       return src.replace('news-briefing-daily-' + matched[1] + '.png', 'news-briefing-' + matched[1] + '.png');
+    }
+    // Try removing date suffix for other generated image patterns
+    var datePattern = /(top-coins|market-heatmap|fear-greed|market-snapshot|news-summary|source-distribution|defi-tvl-dashboard|news-briefing)(?:-(?:cmc|coingecko))?-\d{4}-\d{2}-\d{2}\.png/;
+    if (datePattern.test(src)) {
+      // Fall back to category default og image
+      var catMatch = document.querySelector('meta[property="article:section"]');
+      if (catMatch) {
+        var cat = catMatch.getAttribute('content');
+        return '{{ "/" | relative_url }}assets/images/og-' + (cat || 'default') + '.png';
+      }
     }
     return '';
   }

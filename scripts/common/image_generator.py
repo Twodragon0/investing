@@ -298,7 +298,7 @@ COLORS = {
 _DS = {
     "pad_outer": 0.5,  # tight_layout outer padding
     "pad_title": 15,  # title top padding (set_title pad)
-    "dpi": 200,
+    "dpi": 150,
     "footer_size": 8,
     "title_size": 20,
     "subtitle_size": 10,
@@ -432,7 +432,7 @@ def _heatmap_bg_color(change: float, *, extreme=5.0) -> str:
 
 
 def _save_and_close(fig, filepath, *, bg=None):
-    """Shared save-and-close to reduce repetition."""
+    """Shared save-and-close with automatic WebP conversion."""
     bg_color = bg or COLORS["bg"]
     plt.savefig(
         filepath,
@@ -443,6 +443,37 @@ def _save_and_close(fig, filepath, *, bg=None):
         pad_inches=0.15,
     )
     plt.close(fig)
+    # Generate WebP alongside PNG for faster page loads
+    _convert_to_webp(filepath)
+
+
+def _convert_to_webp(png_path: str, quality: int = 80) -> Optional[str]:
+    """Convert a PNG image to WebP format for smaller file sizes.
+
+    Returns the WebP file path on success, None on failure.
+    """
+    try:
+        from PIL import Image
+
+        webp_path = os.path.splitext(png_path)[0] + ".webp"
+        with Image.open(png_path) as img:
+            img.save(webp_path, "WEBP", quality=quality, method=4)
+        png_size = os.path.getsize(png_path)
+        webp_size = os.path.getsize(webp_path)
+        savings = (1 - webp_size / png_size) * 100 if png_size > 0 else 0
+        logger.info(
+            "WebP: %s (%.0f%% smaller: %dKB → %dKB)",
+            os.path.basename(webp_path),
+            savings,
+            png_size // 1024,
+            webp_size // 1024,
+        )
+        return webp_path
+    except ImportError:
+        logger.debug("Pillow not available for WebP conversion")
+    except Exception as exc:
+        logger.debug("WebP conversion failed for %s: %s", png_path, exc)
+    return None
 
 
 # ===================================================================
