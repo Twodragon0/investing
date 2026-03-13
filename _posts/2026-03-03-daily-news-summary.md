@@ -201,15 +201,54 @@ excerpt: "암호화폐 111건, 주식 122건, 보안 2건, 규제 29건, 소셜 
 
 ## 상세 리포트 링크
 
-| 카테고리 | 건수 | 상세 보기 |
-| --- | :---: | --- |
-| 암호화폐 뉴스 | 111건 | [바로가기](https://investing.2twodragon.com/crypto-news/2026/03/03/daily-crypto-news-digest/) |
-| 시장 종합 리포트 | - | [바로가기](https://investing.2twodragon.com/market-analysis/2026/03/03/daily-market-report/) |
-| 규제 동향 | 29건 | [바로가기](https://investing.2twodragon.com/regulatory-news/2026/03/03/daily-regulatory-report/) |
-| 보안 리포트 | 2건 | [바로가기](https://investing.2twodragon.com/security-alerts/2026/03/03/daily-security-report/) |
-| 소셜 미디어 | 35건 | [바로가기](https://investing.2twodragon.com/crypto-news/2026/03/03/daily-social-media-digest/) |
-| 주식 시장 뉴스 | 122건 | [바로가기](https://investing.2twodragon.com/stock-news/2026/03/03/daily-stock-news-digest/) |
-| 월드모니터 브리핑 | 20건 | [바로가기](https://investing.2twodragon.com/market-analysis/2026/03/03/daily-worldmonitor-briefing/) |
+관심 영역별 상세 리포트로 바로 이동할 수 있습니다.
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left;">카테고리</th>
+      <th style="text-align:center;">건수</th>
+      <th style="text-align:left;">리포트 링크</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left;">🪙 암호화폐 뉴스</td>
+      <td style="text-align:center;">111건</td>
+      <td style="text-align:left;"><a href="https://investing.2twodragon.com/crypto-news/2026/03/03/daily-crypto-news-digest/">리포트 보기</a></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">📈 시장 종합 리포트</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;"><a href="https://investing.2twodragon.com/market-analysis/2026/03/03/daily-market-report/">리포트 보기</a></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">📋 규제 동향</td>
+      <td style="text-align:center;">29건</td>
+      <td style="text-align:left;"><a href="https://investing.2twodragon.com/regulatory-news/2026/03/03/daily-regulatory-report/">리포트 보기</a></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">보안 리포트</td>
+      <td style="text-align:center;">2건</td>
+      <td style="text-align:left;"><a href="https://investing.2twodragon.com/security-alerts/2026/03/03/daily-security-report/">리포트 보기</a></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">💬 소셜 미디어</td>
+      <td style="text-align:center;">35건</td>
+      <td style="text-align:left;"><a href="https://investing.2twodragon.com/crypto-news/2026/03/03/daily-social-media-digest/">리포트 보기</a></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">주식 시장 뉴스</td>
+      <td style="text-align:center;">122건</td>
+      <td style="text-align:left;"><a href="https://investing.2twodragon.com/stock-news/2026/03/03/daily-stock-news-digest/">리포트 보기</a></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">🌍 월드모니터 브리핑</td>
+      <td style="text-align:center;">20건</td>
+      <td style="text-align:left;"><a href="https://investing.2twodragon.com/market-analysis/2026/03/03/daily-worldmonitor-briefing/">리포트 보기</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 

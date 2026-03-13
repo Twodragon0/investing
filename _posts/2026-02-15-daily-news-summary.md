@@ -141,14 +141,49 @@ excerpt: "암호화폐 67건, 주식 82건, 규제 25건, 소셜 미디어 7건,
 
 ## 상세 리포트 링크
 
-| 카테고리 | 건수 | 상세 보기 |
-|:---|:---:|:---|
-| 암호화폐 뉴스 | 67건 | [바로가기](/crypto-news/2026/02/15/daily-crypto-news-digest/) |
-| 시장 종합 리포트 | - | [바로가기](/market-analysis/2026/02/15/daily-market-report/) |
-| 정치인 거래 | 5건 | [바로가기](/political-trades/2026/02/15/daily-political-trades-report/) |
-| 규제 동향 | 25건 | [바로가기](/regulatory-news/2026/02/15/daily-regulatory-report/) |
-| 소셜 미디어 | 7건 | [바로가기](/crypto-news/2026/02/15/daily-social-media-digest/) |
-| 주식 시장 뉴스 | 82건 | [바로가기](/stock-news/2026/02/15/daily-stock-news-digest/) |
+관심 영역별 상세 리포트로 바로 이동할 수 있습니다.
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left;">카테고리</th>
+      <th style="text-align:center;">건수</th>
+      <th style="text-align:left;">리포트 링크</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left;">🪙 암호화폐 뉴스</td>
+      <td style="text-align:center;">67건</td>
+      <td style="text-align:left;"><a href="/crypto-news/2026/02/15/daily-crypto-news-digest/">리포트 보기</a></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">📈 시장 종합 리포트</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;"><a href="/market-analysis/2026/02/15/daily-market-report/">리포트 보기</a></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">정치인 거래</td>
+      <td style="text-align:center;">5건</td>
+      <td style="text-align:left;"><a href="/political-trades/2026/02/15/daily-political-trades-report/">리포트 보기</a></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">📋 규제 동향</td>
+      <td style="text-align:center;">25건</td>
+      <td style="text-align:left;"><a href="/regulatory-news/2026/02/15/daily-regulatory-report/">리포트 보기</a></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">💬 소셜 미디어</td>
+      <td style="text-align:center;">7건</td>
+      <td style="text-align:left;"><a href="/crypto-news/2026/02/15/daily-social-media-digest/">리포트 보기</a></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">주식 시장 뉴스</td>
+      <td style="text-align:center;">82건</td>
+      <td style="text-align:left;"><a href="/stock-news/2026/02/15/daily-stock-news-digest/">리포트 보기</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
