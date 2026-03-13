@@ -214,52 +214,75 @@ pin: false
 
 관심 영역별 상세 리포트로 바로 이동할 수 있습니다.
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left;">카테고리</th>
-      <th style="text-align:center;">건수</th>
-      <th style="text-align:left;">리포트 링크</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left;">일일 시장 종합</td>
-      <td style="text-align:center;">-</td>
-      <td style="text-align:left;"><a href="/2026/02/10/daily-market-report.html">리포트 보기</a></td>
-    </tr>
-    <tr>
-      <td style="text-align:left;">주식 시장 뉴스</td>
-      <td style="text-align:center;">120건</td>
-      <td style="text-align:left;"><a href="/2026/02/10/daily-stock-news-digest.html">리포트 보기</a></td>
-    </tr>
-    <tr>
-      <td style="text-align:left;">암호화폐 뉴스</td>
-      <td style="text-align:center;">30건</td>
-      <td style="text-align:left;"><a href="/2026/02/10/daily-crypto-news-digest.html">리포트 보기</a></td>
-    </tr>
-    <tr>
-      <td style="text-align:left;">소셜 미디어 동향</td>
-      <td style="text-align:center;">120건</td>
-      <td style="text-align:left;"><a href="/2026/02/10/daily-social-media-digest.html">리포트 보기</a></td>
-    </tr>
-    <tr>
-      <td style="text-align:left;">블록체인 보안</td>
-      <td style="text-align:center;">45건</td>
-      <td style="text-align:left;"><a href="/2026/02/10/daily-security-report.html">리포트 보기</a></td>
-    </tr>
-    <tr>
-      <td style="text-align:left;">KOSPI 투자자 수급</td>
-      <td style="text-align:center;">-</td>
-      <td style="text-align:left;"><a href="https://finance.naver.com/sise/investorDealTrendDay.naver?bizdate=20260210&sosok=">네이버 금융</a></td>
-    </tr>
-    <tr>
-      <td style="text-align:left;">KOSDAQ 투자자 수급</td>
-      <td style="text-align:center;">-</td>
-      <td style="text-align:left;"><a href="https://finance.naver.com/sise/investorDealTrendDay.naver?bizdate=20260210&sosok=02">네이버 금융</a></td>
-    </tr>
-  </tbody>
-</table>
+<div class="report-links-board">
+  <div class="report-links-summary">
+    <div class="report-links-summary-label">Quick Access</div>
+    <div class="report-links-summary-text">지금 확인할 수 있는 세부 리포트 7개를 주제별로 정리했습니다.</div>
+  </div>
+  <div class="report-links-head">
+    <span class="report-links-head-item report-links-head-category">카테고리</span>
+    <span class="report-links-head-item report-links-head-count">건수</span>
+    <span class="report-links-head-item report-links-head-link">리포트 링크</span>
+  </div>
+  <div class="report-links-grid">
+  <div class="report-links-card">
+    <div class="report-links-meta">
+      <div class="report-links-category">일일 시장 종합</div>
+      <div class="report-links-note">당일 자산 흐름과 핵심 포인트를 요약합니다.</div>
+    </div>
+    <div class="report-links-count">-</div>
+    <div class="report-links-action"><a href="/2026/02/10/daily-market-report.html">리포트 보기</a></div>
+  </div>
+  <div class="report-links-card">
+    <div class="report-links-meta">
+      <div class="report-links-category">주식 시장 뉴스</div>
+      <div class="report-links-note">기업, 지수, 섹터별 재료를 빠르게 추립니다.</div>
+    </div>
+    <div class="report-links-count">120건</div>
+    <div class="report-links-action"><a href="/2026/02/10/daily-stock-news-digest.html">리포트 보기</a></div>
+  </div>
+  <div class="report-links-card">
+    <div class="report-links-meta">
+      <div class="report-links-category">암호화폐 뉴스</div>
+      <div class="report-links-note">가격, 거래소, 온체인 이슈를 빠르게 점검합니다.</div>
+    </div>
+    <div class="report-links-count">30건</div>
+    <div class="report-links-action"><a href="/2026/02/10/daily-crypto-news-digest.html">리포트 보기</a></div>
+  </div>
+  <div class="report-links-card">
+    <div class="report-links-meta">
+      <div class="report-links-category">소셜 미디어 동향</div>
+      <div class="report-links-note">투자자 심리와 실시간 반응을 정리합니다.</div>
+    </div>
+    <div class="report-links-count">120건</div>
+    <div class="report-links-action"><a href="/2026/02/10/daily-social-media-digest.html">리포트 보기</a></div>
+  </div>
+  <div class="report-links-card">
+    <div class="report-links-meta">
+      <div class="report-links-category">블록체인 보안</div>
+      <div class="report-links-note">해킹, 취약점, 보안 경보를 우선 확인합니다.</div>
+    </div>
+    <div class="report-links-count">45건</div>
+    <div class="report-links-action"><a href="/2026/02/10/daily-security-report.html">리포트 보기</a></div>
+  </div>
+  <div class="report-links-card">
+    <div class="report-links-meta">
+      <div class="report-links-category">KOSPI 투자자 수급</div>
+      <div class="report-links-note">유가증권시장 수급 흐름을 바로 확인합니다.</div>
+    </div>
+    <div class="report-links-count">-</div>
+    <div class="report-links-action"><a href="https://finance.naver.com/sise/investorDealTrendDay.naver?bizdate=20260210&sosok=">네이버 금융</a></div>
+  </div>
+  <div class="report-links-card">
+    <div class="report-links-meta">
+      <div class="report-links-category">KOSDAQ 투자자 수급</div>
+      <div class="report-links-note">코스닥 수급과 위험 선호 변화를 체크합니다.</div>
+    </div>
+    <div class="report-links-count">-</div>
+    <div class="report-links-action"><a href="https://finance.naver.com/sise/investorDealTrendDay.naver?bizdate=20260210&sosok=02">네이버 금융</a></div>
+  </div>
+  </div>
+</div>
 ---
 
 > *본 리포트는 자동 수집된 데이터를 기반으로 정리한 것이며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*
