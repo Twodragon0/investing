@@ -340,7 +340,7 @@ def _get_change_color(change: float) -> str:
 
 
 def _draw_rounded_rect(
-    ax, x, y, w, h, *, facecolor, edgecolor="none", linewidth=0, alpha=1.0, transform=None, pad=0.012
+    ax, x, y, w, h, *, facecolor, edgecolor="none", linewidth=0.0, alpha=1.0, transform=None, pad=0.012
 ):
     """Draw a rounded rectangle -- centralised helper."""
     kwargs = {
@@ -373,6 +373,82 @@ def _draw_gradient_bar(ax, x, y, w, h, *, color_start, color_end, steps=20, tran
             kwargs["transform"] = transform
         rect = mpatches.Rectangle((x + i * strip_w, y), strip_w, h, facecolor=c, edgecolor="none", **kwargs)
         ax.add_patch(rect)
+
+
+def _add_market_texture(ax, width: float, height: float, *, accent: Optional[str] = None):
+    """Add subtle ambient texture for premium-looking finance cards."""
+    accent_color = accent or COLORS["accent"]
+
+    glow_specs = [
+        (width * 0.14, height * 0.88, width * 0.16, accent_color, 0.08),
+        (width * 0.88, height * 0.16, width * 0.18, COLORS["cyan"], 0.05),
+        (width * 0.78, height * 0.82, width * 0.12, COLORS["green"], 0.04),
+    ]
+    for cx, cy, radius, color, alpha in glow_specs:
+        glow = mpatches.Circle((cx, cy), radius, facecolor=color, edgecolor="none", alpha=alpha)
+        ax.add_patch(glow)
+
+    for idx in range(7):
+        y = height * (0.16 + idx * 0.11)
+        ax.plot([0.35, width - 0.35], [y, y], color=COLORS["border_highlight"], linewidth=0.6, alpha=0.09)
+
+    for idx in range(6):
+        x = 0.6 + idx * (width - 1.2) / 5
+        ax.plot([x, x], [0.45, height - 0.45], color=COLORS["border_highlight"], linewidth=0.6, alpha=0.06)
+
+
+def _draw_metric_chip(ax, x, y, w, h, *, label: str, value: str, accent: str, value_color: Optional[str] = None):
+    """Draw a compact metric chip with layered background."""
+    _draw_rounded_rect(
+        ax,
+        x,
+        y,
+        w,
+        h,
+        facecolor=COLORS["bg_card"],
+        edgecolor=COLORS["border"],
+        linewidth=0.9,
+        alpha=0.96,
+        pad=0.035,
+    )
+    _draw_gradient_bar(
+        ax,
+        x + 0.03,
+        y + h - 0.1,
+        w - 0.06,
+        0.06,
+        color_start=accent,
+        color_end=COLORS["bg_card"],
+        steps=24,
+        alpha=0.7,
+    )
+    ax.text(
+        x + 0.16,
+        y + h - 0.22,
+        label.upper(),
+        fontsize=8,
+        fontweight="bold",
+        color=COLORS["text_muted"],
+        fontfamily=_FONT_FAMILY,
+        va="top",
+    )
+    ax.text(
+        x + 0.16,
+        y + 0.2,
+        value,
+        fontsize=14,
+        fontweight="bold",
+        color=value_color or COLORS["text"],
+        fontfamily=_FONT_FAMILY,
+        va="bottom",
+    )
+
+
+def _truncate_text(text: str, limit: int) -> str:
+    """Safely truncate text for compact image layouts."""
+    if len(text) <= limit:
+        return text
+    return text[: max(limit - 3, 0)].rstrip() + "..."
 
 
 def _add_footer(ax, text=None, *, use_fig=False, fig=None, y=None):
@@ -1387,138 +1463,281 @@ def generate_market_snapshot_card(
         return None
 
     row_count = len(market_data)
-    # Count section headers (each adds extra vertical space)
     section_count = len({item.get("section", "") for item in market_data if item.get("section")})
-    fig_height = 3.0 + row_count * 0.55 + section_count * 0.45
+    fig_height = 4.8 + row_count * 0.72 + section_count * 0.52
     fig, ax = plt.subplots(figsize=(12, fig_height))
     fig.patch.set_facecolor(COLORS["bg"])
     ax.set_facecolor(COLORS["bg"])
     ax.set_xlim(0, 10)
     ax.set_ylim(0, fig_height)
     ax.axis("off")
+    _add_market_texture(ax, 10, fig_height, accent=COLORS["green"])
+    _draw_rounded_rect(
+        ax,
+        0.16,
+        0.16,
+        9.68,
+        fig_height - 0.32,
+        facecolor="none",
+        edgecolor=COLORS["border_highlight"],
+        linewidth=1.2,
+        alpha=0.6,
+        pad=0.08,
+    )
 
-    # Title
+    header_y = fig_height - 2.1
+    header_h = 1.7
+    _draw_gradient_bar(
+        ax,
+        0.22,
+        header_y,
+        9.56,
+        header_h,
+        color_start="#13334a",
+        color_end="#10202f",
+        steps=48,
+        alpha=0.98,
+    )
+    _draw_rounded_rect(
+        ax,
+        0.22,
+        header_y,
+        9.56,
+        header_h,
+        facecolor="none",
+        edgecolor=COLORS["border_highlight"],
+        linewidth=1.0,
+        pad=0.08,
+    )
+
     ax.text(
-        5,
-        fig_height - 0.5,
-        "Market Snapshot",
-        ha="center",
+        0.55,
+        fig_height - 0.62,
+        "GLOBAL MARKET SNAPSHOT",
+        fontsize=9,
+        fontweight="bold",
+        color=COLORS["cyan"],
+        fontfamily=_FONT_FAMILY,
         va="center",
-        fontsize=_DS["title_size"],
+    )
+    ax.text(
+        0.55,
+        fig_height - 1.08,
+        "US and Korea indices, ETFs, FX and risk tone",
+        fontsize=10,
+        color=COLORS["text_secondary"],
+        fontfamily=_FONT_FAMILY,
+        va="center",
+    )
+    ax.text(
+        0.55,
+        fig_height - 1.55,
+        date_str,
+        fontsize=24,
         fontweight="bold",
         color=COLORS["text"],
         fontfamily=_FONT_FAMILY,
-    )
-    ax.text(
-        5,
-        fig_height - 1.0,
-        f"{date_str} | US & Korean Markets",
-        ha="center",
         va="center",
-        fontsize=_DS["subtitle_size"],
-        color=COLORS["text_secondary"],
-        fontfamily=_FONT_FAMILY,
     )
 
-    # Column headers
-    y_start = fig_height - 1.5
+    parsed_rows = []
+    advancers = 0
+    decliners = 0
+    unchanged = 0
+    best_row = None
+    worst_row = None
+    for item in market_data:
+        change_pct = item.get("change_pct", "N/A")
+        pct_val = None
+        try:
+            pct_val = float(str(change_pct).replace("%", "").replace("+", "").replace(",", ""))
+        except (ValueError, TypeError, AttributeError):
+            pct_val = None
+        if pct_val is None:
+            change_display = str(change_pct)
+            color = COLORS["text_secondary"]
+        else:
+            if pct_val > 0:
+                advancers += 1
+            elif pct_val < 0:
+                decliners += 1
+            else:
+                unchanged += 1
+            color = _get_change_color(pct_val)
+            sign = "+" if pct_val >= 0 else ""
+            raw_change = str(change_pct)
+            change_display = raw_change if raw_change.startswith(("+", "-")) else f"{sign}{raw_change}"
+            if best_row is None or pct_val > best_row["pct_val"]:
+                best_row = {"name": _to_en(item.get("name", "")), "pct_val": pct_val}
+            if worst_row is None or pct_val < worst_row["pct_val"]:
+                worst_row = {"name": _to_en(item.get("name", "")), "pct_val": pct_val}
+        parsed_rows.append(
+            {
+                "section": item.get("section", ""),
+                "name": _to_en(item.get("name", "")),
+                "price": str(item.get("price", "N/A")),
+                "change_display": change_display,
+                "pct_val": pct_val,
+                "color": color,
+            }
+        )
+
+    coverage_label = f"{advancers}/{decliners}/{unchanged}"
+    leader_label = "No signal"
+    leader_color = COLORS["text"]
+    if best_row and worst_row:
+        leader = best_row if abs(best_row["pct_val"]) >= abs(worst_row["pct_val"]) else worst_row
+        leader_label = f"{_truncate_text(leader['name'], 12)} {leader['pct_val']:+.2f}%"
+        leader_color = _get_change_color(leader["pct_val"])
+
+    chip_y = header_y - 0.9
+    chip_w = 2.78
+    chip_gap = 0.22
+    _draw_metric_chip(ax, 0.35, chip_y, chip_w, 0.72, label="Coverage", value=str(row_count), accent=COLORS["cyan"])
+    _draw_metric_chip(
+        ax, 0.35 + chip_w + chip_gap, chip_y, chip_w, 0.72, label="A D U", value=coverage_label, accent=COLORS["green"]
+    )
+    _draw_metric_chip(
+        ax,
+        0.35 + (chip_w + chip_gap) * 2,
+        chip_y,
+        chip_w + 0.3,
+        0.72,
+        label="Leader",
+        value=leader_label,
+        accent=COLORS["blue"],
+        value_color=leader_color,
+    )
+
+    panel_y = chip_y - 0.55
+    panel_h = panel_y - 0.38
+    _draw_rounded_rect(
+        ax,
+        0.22,
+        0.38,
+        9.56,
+        panel_h,
+        facecolor=COLORS["bg_header"],
+        edgecolor=COLORS["border"],
+        linewidth=0.9,
+        alpha=0.97,
+        pad=0.08,
+    )
+
+    y_start = panel_y - 0.28
     ax.text(
-        0.5,
-        y_start,
-        "Index / ETF",
-        fontsize=_DS["header_size"],
-        fontweight="bold",
-        color=COLORS["text_muted"],
-        fontfamily=_FONT_FAMILY,
+        0.55, y_start, "Benchmarks", fontsize=9, fontweight="bold", color=COLORS["text_muted"], fontfamily=_FONT_FAMILY
     )
     ax.text(
-        5.0,
+        5.15,
         y_start,
-        "Price",
-        fontsize=_DS["header_size"],
+        "Last",
+        fontsize=9,
         fontweight="bold",
         color=COLORS["text_muted"],
         fontfamily=_FONT_FAMILY,
         ha="center",
     )
     ax.text(
-        8.0,
+        7.98,
         y_start,
-        "Change",
-        fontsize=_DS["header_size"],
+        "1D",
+        fontsize=9,
         fontweight="bold",
         color=COLORS["text_muted"],
         fontfamily=_FONT_FAMILY,
         ha="center",
     )
-
-    ax.plot([0.3, 9.7], [y_start - 0.2, y_start - 0.2], color=COLORS["border"], linewidth=0.5)
+    ax.text(
+        9.2,
+        y_start,
+        "Bias",
+        fontsize=9,
+        fontweight="bold",
+        color=COLORS["text_muted"],
+        fontfamily=_FONT_FAMILY,
+        ha="center",
+    )
+    ax.plot([0.45, 9.55], [y_start - 0.18, y_start - 0.18], color=COLORS["border"], linewidth=0.8, alpha=0.8)
 
     current_section = None
-    y = y_start - 0.5
+    y = y_start - 0.55
 
-    for i, item in enumerate(market_data):
-        section = item.get("section", "")
+    for item in parsed_rows:
+        section = item["section"]
         if section and section != current_section:
             current_section = section
-            # Section header with accent bar
-            _draw_rounded_rect(ax, 0.3, y - 0.12, 0.12, 0.35, facecolor=COLORS["accent"], pad=0.005)
+            _draw_rounded_rect(ax, 0.45, y - 0.13, 9.1, 0.38, facecolor=COLORS["bg_inner"], alpha=0.55, pad=0.03)
+            _draw_rounded_rect(ax, 0.55, y - 0.08, 0.12, 0.26, facecolor=COLORS["accent"], pad=0.004)
             ax.text(
-                0.6,
+                0.82,
                 y,
                 section,
-                fontsize=10,
+                fontsize=9,
                 fontweight="bold",
                 color=COLORS["accent"],
                 fontfamily=_FONT_FAMILY,
+                va="center",
             )
-            y -= 0.45
+            y -= 0.48
 
-        # Row background
-        if i % 2 == 0:
-            _draw_rounded_rect(ax, 0.3, y - 0.18, 9.4, 0.5, facecolor=COLORS["bg_inner"], alpha=0.5)
-
-        name = _to_en(item.get("name", ""))
-        price = item.get("price", "N/A")
-        change_pct = item.get("change_pct", "N/A")
-
-        # Determine color from change_pct
-        try:
-            pct_val = float(change_pct.replace("%", "").replace("+", ""))
-            color = _get_change_color(pct_val)
-            sign = "+" if pct_val >= 0 else ""
-            change_display = f"{sign}{change_pct}" if not change_pct.startswith(("+", "-")) else change_pct
-        except (ValueError, AttributeError):
-            color = COLORS["text_secondary"]
-            change_display = change_pct
-
-        ax.text(0.5, y, name, fontsize=_DS["body_size"], color=COLORS["text"], fontfamily=_FONT_FAMILY)
-        ax.text(5.0, y, price, fontsize=_DS["body_size"], color=COLORS["text"], fontfamily=_FONT_FAMILY, ha="center")
+        bg_color = (
+            _heatmap_bg_color(item["pct_val"] or 0.0, extreme=2.5) if item["pct_val"] is not None else COLORS["bg_card"]
+        )
+        _draw_rounded_rect(
+            ax,
+            0.45,
+            y - 0.28,
+            9.1,
+            0.62,
+            facecolor=bg_color,
+            edgecolor=COLORS["border"],
+            linewidth=0.6,
+            alpha=0.92,
+            pad=0.03,
+        )
+        ax.text(0.7, y + 0.03, item["name"], fontsize=11.5, color=COLORS["text"], fontfamily=_FONT_FAMILY, va="center")
         ax.text(
-            8.0,
-            y,
-            change_display,
-            fontsize=_DS["body_size"],
-            color=color,
+            5.15,
+            y + 0.03,
+            item["price"],
+            fontsize=11.2,
+            color=COLORS["text"],
+            fontfamily=_FONT_FAMILY,
+            ha="center",
+            va="center",
+        )
+        ax.text(
+            7.98,
+            y + 0.03,
+            item["change_display"],
+            fontsize=11.5,
+            color=item["color"],
             fontfamily=_FONT_FAMILY,
             ha="center",
             fontweight="bold",
+            va="center",
         )
+        bar_x = 8.72
+        bar_y = y - 0.11
+        _draw_rounded_rect(ax, bar_x, bar_y, 0.92, 0.28, facecolor=COLORS["bg_inner"], alpha=0.95, pad=0.01)
+        if item["pct_val"] is not None:
+            magnitude = min(abs(item["pct_val"]) / 3.0, 1.0)
+            fill_w = 0.18 + magnitude * 0.62
+            fill_x = bar_x + 0.46 - fill_w if item["pct_val"] < 0 else bar_x + 0.46
+            _draw_rounded_rect(
+                ax,
+                fill_x,
+                bar_y + 0.03,
+                fill_w,
+                0.22,
+                facecolor=item["color"],
+                alpha=0.8,
+                pad=0.008,
+            )
+        y -= 0.72
 
-        y -= 0.55
-
-    # Footer
-    ax.text(
-        5,
-        0.15,
-        f"{_DS['watermark']} | {date_str}",
-        ha="center",
-        fontsize=_DS["footer_size"],
-        color=COLORS["text_secondary"],
-        fontfamily=_FONT_FAMILY,
-        style="italic",
-        alpha=0.65,
-    )
+    _add_footer(ax, f"{_DS['watermark']} | {date_str} | Market breadth auto-generated", y=0.12)
 
     if not filename:
         filename = f"market-snapshot-{date_str}.png"
@@ -1569,7 +1788,7 @@ def generate_source_distribution_card(
         COLORS["text_secondary"],
     ]
 
-    names = [s["name"] for s in sources]
+    names = [_to_en(str(s["name"])) for s in sources]
     counts = [s["count"] for s in sources]
     total = sum(counts)
     colors = [donut_colors[i % len(donut_colors)] for i in range(len(names))]
@@ -1638,7 +1857,7 @@ def generate_source_distribution_card(
     )
     for text in legend.get_texts():
         text.set_color(COLORS["text"])
-        text.set_fontfamily("monospace")
+        text.set_fontfamily(_FONT_FAMILY)
 
     # Footer
     fig.text(
@@ -1933,8 +2152,8 @@ def generate_news_briefing_card(
     display_themes = themes[:5]
     use_emoji = _HAS_EMOJI_FONT
     has_urgent = urgent_alerts and len(urgent_alerts) > 0
-    urgent_height = 0.9 if has_urgent else 0
-    fig_height = 3.8 + len(display_themes) * 0.75 + urgent_height
+    urgent_height = 1.05 if has_urgent else 0
+    fig_height = 5.0 + len(display_themes) * 0.88 + urgent_height
 
     fig, ax = plt.subplots(figsize=(12, fig_height))
     fig.patch.set_facecolor(COLORS["bg"])
@@ -1942,45 +2161,136 @@ def generate_news_briefing_card(
     ax.set_xlim(0, 10)
     ax.set_ylim(0, fig_height)
     ax.axis("off")
-
-    # --- Header card with gradient background ---
-    header_y = fig_height - 1.8
-    header_h = 1.6
-    # Gradient fill for header
-    _draw_gradient_bar(
-        ax, 0.2, header_y, 9.6, header_h, color_start="#0f1923", color_end="#152238", steps=30, alpha=0.95
-    )
-    # Border for header
+    _add_market_texture(ax, 10, fig_height, accent=COLORS["blue"])
     _draw_rounded_rect(
-        ax, 0.2, header_y, 9.6, header_h, facecolor="none", edgecolor=COLORS["accent"], linewidth=1.5, pad=0.08
+        ax,
+        0.16,
+        0.16,
+        9.68,
+        fig_height - 0.32,
+        facecolor="none",
+        edgecolor=COLORS["border_highlight"],
+        linewidth=1.15,
+        alpha=0.6,
+        pad=0.08,
     )
 
-    # Title
+    header_y = fig_height - 2.3
+    header_h = 1.9
+    _draw_gradient_bar(
+        ax, 0.22, header_y, 9.56, header_h, color_start="#11253d", color_end="#0f1928", steps=44, alpha=0.98
+    )
+    _draw_rounded_rect(
+        ax,
+        0.22,
+        header_y,
+        9.56,
+        header_h,
+        facecolor="none",
+        edgecolor=COLORS["border_highlight"],
+        linewidth=1.0,
+        pad=0.08,
+    )
+
     ax.text(
-        5,
-        fig_height - 0.55,
-        category,
-        ha="center",
+        0.55,
+        fig_height - 0.68,
+        "EDITORIAL NEWS BOARD",
+        fontsize=9,
+        fontweight="bold",
+        color=COLORS["cyan"],
+        fontfamily=_FONT_FAMILY,
         va="center",
-        fontsize=22,
+    )
+    ax.text(
+        0.55,
+        fig_height - 1.06,
+        category,
+        fontsize=23,
         fontweight="bold",
         color=COLORS["text"],
         fontfamily=_FONT_FAMILY,
-    )
-    # Date and count
-    ax.text(
-        5,
-        fig_height - 1.1,
-        f"{date_str}  |  {total_count} articles collected",
-        ha="center",
         va="center",
-        fontsize=_DS["body_size"],
+    )
+    ax.text(
+        0.55,
+        fig_height - 1.48,
+        f"{date_str} | Top narratives, catalysts and priority signals",
+        fontsize=10.5,
         color=COLORS["text_secondary"],
         fontfamily=_FONT_FAMILY,
+        va="center",
     )
 
-    # --- Theme rows ---
-    y_start = fig_height - 2.4
+    theme_count = len(display_themes)
+    keyword_count = sum(len(_filter_en_keywords(theme.get("keywords", []))[:4]) for theme in display_themes)
+    alert_value = str(len(urgent_alerts or []))
+    chip_y = header_y - 0.92
+    chip_w = 2.84
+    chip_gap = 0.2
+    _draw_metric_chip(
+        ax,
+        0.35,
+        chip_y,
+        chip_w,
+        0.72,
+        label="Articles",
+        value=str(total_count or sum(t.get("count", 0) for t in display_themes)),
+        accent=COLORS["blue"],
+    )
+    _draw_metric_chip(
+        ax,
+        0.35 + chip_w + chip_gap,
+        chip_y,
+        chip_w,
+        0.72,
+        label="Themes",
+        value=str(theme_count),
+        accent=COLORS["cyan"],
+    )
+    _draw_metric_chip(
+        ax,
+        0.35 + (chip_w + chip_gap) * 2,
+        chip_y,
+        chip_w + 0.22,
+        0.72,
+        label="Alerts / Tags",
+        value=f"{alert_value} / {keyword_count}",
+        accent=COLORS["orange"] if has_urgent else COLORS["green"],
+        value_color=COLORS["orange"] if has_urgent else COLORS["text"],
+    )
+
+    panel_y = chip_y - 0.6
+    panel_h = panel_y - 0.38
+    _draw_rounded_rect(
+        ax,
+        0.22,
+        0.38,
+        9.56,
+        panel_h,
+        facecolor=COLORS["bg_header"],
+        edgecolor=COLORS["border"],
+        linewidth=0.9,
+        alpha=0.97,
+        pad=0.08,
+    )
+
+    y_start = panel_y - 0.32
+    ax.text(0.55, y_start, "Themes", fontsize=9, fontweight="bold", color=COLORS["text_muted"], fontfamily=_FONT_FAMILY)
+    ax.text(
+        4.58,
+        y_start,
+        "Volume",
+        fontsize=9,
+        fontweight="bold",
+        color=COLORS["text_muted"],
+        fontfamily=_FONT_FAMILY,
+        ha="center",
+    )
+    ax.text(
+        5.35, y_start, "Keywords", fontsize=9, fontweight="bold", color=COLORS["text_muted"], fontfamily=_FONT_FAMILY
+    )
+    ax.plot([0.45, 9.55], [y_start - 0.18, y_start - 0.18], color=COLORS["border"], linewidth=0.8, alpha=0.8)
 
     theme_colors = [
         COLORS["orange"],
@@ -1991,41 +2301,44 @@ def generate_news_briefing_card(
     ]
 
     for i, theme in enumerate(display_themes):
-        y = y_start - i * 0.75
+        y = y_start - 0.58 - i * 0.88
         t_color = theme_colors[i % len(theme_colors)]
 
-        # Row background card
         _draw_rounded_rect(
-            ax, 0.3, y - 0.25, 9.4, 0.65, facecolor=COLORS["bg_card"], edgecolor=COLORS["border"], linewidth=0.5
+            ax,
+            0.45,
+            y - 0.31,
+            9.1,
+            0.72,
+            facecolor=COLORS["bg_card"],
+            edgecolor=COLORS["border"],
+            linewidth=0.7,
+            alpha=0.96,
+            pad=0.03,
         )
+        _draw_rounded_rect(ax, 0.45, y - 0.31, 0.12, 0.72, facecolor=t_color, pad=0.004)
 
-        # Left accent bar
-        _draw_rounded_rect(ax, 0.3, y - 0.25, 0.12, 0.65, facecolor=t_color, pad=0.005)
-
-        # Theme emoji + name
         emoji = theme.get("emoji", "")
         if not use_emoji:
             emoji = ""
         name = _to_en(theme.get("name", ""))
         count = theme.get("count", 0)
         keywords = _filter_en_keywords(theme.get("keywords", []))
-
         ax.text(
-            0.8,
-            y + 0.05,
+            0.75,
+            y + 0.07,
             f"{emoji} {name}".strip(),
-            fontsize=13,
+            fontsize=12.5,
             fontweight="bold",
             color=COLORS["text"],
             fontfamily=_FONT_FAMILY,
             va="center",
         )
 
-        # Count badge with background circle
-        badge_x, badge_y = 4.5, y + 0.05
+        badge_x, badge_y = 4.58, y + 0.07
         badge_circle = mpatches.Circle(
             (badge_x, badge_y),
-            0.2,
+            0.23,
             facecolor=t_color,
             alpha=0.15,
             edgecolor="none",
@@ -2043,30 +2356,64 @@ def generate_news_briefing_card(
             ha="center",
         )
 
-        # Keywords with dot separator
         if keywords:
-            kw_str = " \u00b7 ".join(keywords[:4])
-            ax.text(
-                5.2,
-                y + 0.05,
-                kw_str,
-                fontsize=_DS["small_size"],
-                color=COLORS["text_secondary"],
-                fontfamily=_FONT_FAMILY,
-                va="center",
-            )
+            chip_x = 5.18
+            chip_y_local = y - 0.08
+            for keyword in keywords[:4]:
+                token = _truncate_text(keyword, 14)
+                chip_width = max(0.52, min(0.16 + len(token) * 0.09, 1.55))
+                if chip_x + chip_width > 9.25:
+                    break
+                _draw_rounded_rect(
+                    ax,
+                    chip_x,
+                    chip_y_local,
+                    chip_width,
+                    0.3,
+                    facecolor=COLORS["bg_inner"],
+                    edgecolor=COLORS["border"],
+                    linewidth=0.5,
+                    alpha=0.95,
+                    pad=0.012,
+                )
+                ax.text(
+                    chip_x + 0.08,
+                    y + 0.07,
+                    token,
+                    fontsize=8.7,
+                    color=COLORS["text_secondary"],
+                    fontfamily=_FONT_FAMILY,
+                    va="center",
+                )
+                chip_x += chip_width + 0.1
 
-    # --- Urgent alerts section ---
     if has_urgent:
-        y_urgent = y_start - len(display_themes) * 0.75 - 0.3
-
-        # Urgent box with red glow
+        y_urgent = y_start - 0.58 - len(display_themes) * 0.88 - 0.28
         _draw_rounded_rect(
-            ax, 0.3, y_urgent - 0.35, 9.4, 0.75, facecolor=COLORS["red_dim"], edgecolor=COLORS["red"], linewidth=1.5
+            ax,
+            0.45,
+            y_urgent - 0.38,
+            9.1,
+            0.82,
+            facecolor=COLORS["red_dim"],
+            edgecolor=COLORS["red"],
+            linewidth=1.2,
+            alpha=0.96,
+            pad=0.03,
         )
-
+        _draw_gradient_bar(
+            ax,
+            0.45,
+            y_urgent + 0.25,
+            9.1,
+            0.08,
+            color_start=COLORS["red"],
+            color_end=COLORS["red_dim"],
+            steps=28,
+            alpha=0.5,
+        )
         ax.text(
-            0.8,
+            0.72,
             y_urgent + 0.05,
             "URGENT",
             fontsize=12,
@@ -2079,11 +2426,9 @@ def generate_news_briefing_card(
         alert_text = ""
         if urgent_alerts:
             first_alert = urgent_alerts[0]
-            alert_text = first_alert[:60]
-            if len(first_alert) > 60:
-                alert_text += "..."
+            alert_text = _truncate_text(first_alert, 74)
         ax.text(
-            2.8,
+            2.15,
             y_urgent + 0.05,
             alert_text,
             fontsize=10,
@@ -2092,17 +2437,7 @@ def generate_news_briefing_card(
             va="center",
         )
 
-    # Footer
-    ax.text(
-        5,
-        0.2,
-        f"{_DS['watermark']} | Auto-generated News Briefing",
-        ha="center",
-        fontsize=_DS["footer_size"],
-        color=COLORS["text_muted"],
-        fontfamily=_FONT_FAMILY,
-        style="italic",
-    )
+    _add_footer(ax, f"{_DS['watermark']} | Auto-generated News Briefing | {date_str}", y=0.12)
 
     if not filename:
         filename = f"news-briefing-{date_str}.png"

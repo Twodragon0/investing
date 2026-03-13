@@ -63,6 +63,11 @@ TEXT_MUTED = "#6b7280"
 DIVIDER_COLOR = "#374151"
 
 # ── matplotlib setup ──
+_MPL_AVAILABLE = False
+matplotlib: Any = None
+fm: Any = None
+mpatches: Any = None
+plt: Any = None
 try:
     import matplotlib
 
@@ -73,7 +78,6 @@ try:
 
     _MPL_AVAILABLE = True
 except ImportError:
-    _MPL_AVAILABLE = False
     logger.error("matplotlib is required but not installed")
 
 # ── Font setup (same candidates as image_generator.py) ──
@@ -101,6 +105,7 @@ if _MPL_AVAILABLE:
         logger.warning("No CJK font found, Korean text may not render correctly")
 
     matplotlib.rcParams["font.family"] = [_FONT_FAMILY]
+    matplotlib.rcParams["text.parse_math"] = False
 
 _FK: Dict[str, Any] = {"fontfamily": _FONT_FAMILY} if _MPL_AVAILABLE else {}
 
@@ -177,6 +182,11 @@ def truncate_text(text: str, max_chars: int) -> str:
     return text[: max_chars - 3].rstrip() + "..."
 
 
+def safe_text(text: str) -> str:
+    """Escape characters that matplotlib may interpret as math text."""
+    return text.replace("$", r"\$")
+
+
 def wrap_text(text: str, max_width: int, max_lines: int) -> List[str]:
     """Wrap text into lines with max_width chars, limited to max_lines."""
     lines = textwrap.wrap(text, width=max_width)
@@ -211,8 +221,8 @@ def generate_og_image(
     date_dotted = date_str.replace("-", ".")
 
     # Wrap title and description
-    title_lines = wrap_text(title, max_width=28, max_lines=2)
-    desc_lines = wrap_text(description, max_width=42, max_lines=2) if description else []
+    title_lines = wrap_text(safe_text(title), max_width=28, max_lines=2)
+    desc_lines = wrap_text(safe_text(description), max_width=42, max_lines=2) if description else []
 
     # Create figure: 12x6.3 inches at 100 DPI = 1200x630 px
     fig = plt.figure(figsize=(12, 6.3), dpi=100)
@@ -225,20 +235,68 @@ def generate_og_image(
     bg_rect = mpatches.FancyBboxPatch((0, 0), 1200, 630, boxstyle="square,pad=0", facecolor=BG_COLOR, edgecolor="none")
     ax.add_patch(bg_rect)
 
-    # Accent color bar at top (8px)
+    # Ambient glow and grid texture for premium tone
+    for cx, cy, radius, alpha, color in [
+        (170, 560, 160, 0.10, accent_color),
+        (1080, 110, 190, 0.07, accent_color),
+        (980, 520, 120, 0.04, "#22d3ee"),
+    ]:
+        glow = mpatches.Circle((cx, cy), radius, facecolor=color, edgecolor="none", alpha=alpha)
+        ax.add_patch(glow)
+
+    for y in range(70, 590, 64):
+        ax.plot([48, 1152], [y, y], color="#334155", linewidth=0.8, alpha=0.12)
+    for x in range(80, 1125, 170):
+        ax.plot([x, x], [54, 576], color="#334155", linewidth=0.8, alpha=0.08)
+
+    # Accent color bar at top
     accent_bar = mpatches.FancyBboxPatch(
-        (0, 622), 1200, 8, boxstyle="square,pad=0", facecolor=accent_color, edgecolor="none"
+        (0, 620), 1200, 10, boxstyle="square,pad=0", facecolor=accent_color, edgecolor="none"
     )
     ax.add_patch(accent_bar)
 
-    # Branding: "INVESTING DRAGON"
+    frame = mpatches.FancyBboxPatch(
+        (34, 34),
+        1132,
+        562,
+        boxstyle="round,pad=0.012,rounding_size=24",
+        facecolor="none",
+        edgecolor="#334155",
+        linewidth=1.2,
+        alpha=0.45,
+    )
+    ax.add_patch(frame)
+
+    header_panel = mpatches.FancyBboxPatch(
+        (52, 488),
+        1096,
+        86,
+        boxstyle="round,pad=0.012,rounding_size=22",
+        facecolor="#0f1724",
+        edgecolor="#243447",
+        linewidth=1.0,
+        alpha=0.98,
+    )
+    ax.add_patch(header_panel)
+
+    # Branding
     ax.text(
         60,
         580,
         "INVESTING DRAGON",
         fontsize=14,
-        color=TEXT_MUTED,
+        color="#7dd3fc",
         fontweight="bold",
+        ha="left",
+        va="center",
+        **_FK,
+    )
+    ax.text(
+        60,
+        554,
+        "Market intelligence briefing",
+        fontsize=12,
+        color=TEXT_GRAY,
         ha="left",
         va="center",
         **_FK,
@@ -246,12 +304,12 @@ def generate_og_image(
 
     # Category badge
     badge_text = f"  {category_label}  "
-    badge_x, badge_y = 60, 530
+    badge_x, badge_y = 60, 516
     badge_width = len(badge_text) * 11
     badge_rect = mpatches.FancyBboxPatch(
         (badge_x - 4, badge_y - 14),
         badge_width,
-        28,
+        30,
         boxstyle="round,pad=4",
         facecolor=accent_color,
         edgecolor="none",
@@ -271,13 +329,13 @@ def generate_og_image(
     )
 
     # Title (large, bold, max 2 lines)
-    title_y_start = 460
+    title_y_start = 420
     for i, line in enumerate(title_lines):
         ax.text(
             60,
             title_y_start - i * 50,
             line,
-            fontsize=32,
+            fontsize=34,
             color=TEXT_WHITE,
             fontweight="bold",
             ha="left",
@@ -286,7 +344,7 @@ def generate_og_image(
         )
 
     # Date in Korean format
-    date_y = title_y_start - len(title_lines) * 50 - 10
+    date_y = title_y_start - len(title_lines) * 50 - 6
     ax.text(
         60,
         date_y,
@@ -299,7 +357,7 @@ def generate_og_image(
     )
 
     # Description (smaller, gray, max 2 lines)
-    desc_y_start = date_y - 45
+    desc_y_start = date_y - 46
     for i, line in enumerate(desc_lines):
         ax.text(
             60,
@@ -312,8 +370,28 @@ def generate_og_image(
             **_FK,
         )
 
+    # Insight side panel
+    side_panel = mpatches.FancyBboxPatch(
+        (860, 140),
+        256,
+        278,
+        boxstyle="round,pad=0.012,rounding_size=20",
+        facecolor="#111b2a",
+        edgecolor="#243447",
+        linewidth=1.0,
+        alpha=0.98,
+    )
+    ax.add_patch(side_panel)
+    ax.text(892, 384, "BRIEF", fontsize=11, color=TEXT_MUTED, fontweight="bold", ha="left", va="center", **_FK)
+    ax.text(892, 344, category_label, fontsize=22, color=TEXT_WHITE, fontweight="bold", ha="left", va="center", **_FK)
+    ax.text(892, 308, date_dotted, fontsize=13, color=TEXT_GRAY, ha="left", va="center", **_FK)
+    ax.plot([892, 1084], [284, 284], color="#243447", linewidth=1.0)
+    ax.text(892, 248, "Signal", fontsize=10, color=TEXT_MUTED, fontweight="bold", ha="left", va="center", **_FK)
+    ax.text(892, 220, "High-conviction market context", fontsize=13, color=TEXT_WHITE, ha="left", va="center", **_FK)
+    ax.text(892, 176, "investing.2twodragon.com", fontsize=11, color=TEXT_GRAY, ha="left", va="center", **_FK)
+
     # Divider line
-    divider_y = 70
+    divider_y = 88
     ax.plot(
         [60, 1140],
         [divider_y, divider_y],
@@ -324,7 +402,7 @@ def generate_og_image(
     # Footer: site URL (left) and date (right)
     ax.text(
         60,
-        35,
+        48,
         "investing.2twodragon.com",
         fontsize=13,
         color=TEXT_MUTED,
@@ -334,7 +412,7 @@ def generate_og_image(
     )
     ax.text(
         1140,
-        35,
+        48,
         date_dotted,
         fontsize=13,
         color=TEXT_MUTED,
@@ -344,7 +422,7 @@ def generate_og_image(
     )
 
     # Subtle accent dot in bottom-right area
-    accent_dot = mpatches.Circle((1140, 580), 6, facecolor=accent_color, edgecolor="none", alpha=0.6)
+    accent_dot = mpatches.Circle((1116, 544), 8, facecolor=accent_color, edgecolor="none", alpha=0.7)
     ax.add_patch(accent_dot)
 
     # Save
