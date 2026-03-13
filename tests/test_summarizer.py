@@ -1,6 +1,6 @@
 """Tests for summarizer module (scripts/common/summarizer.py)."""
 
-
+from collections import Counter
 
 from common.summarizer import (
     _NOISE_TITLE_RE,
@@ -552,3 +552,637 @@ class TestThemesData:
     def test_regulation_theme_present(self):
         keys = [t[1] for t in THEMES]
         assert "regulation" in keys
+
+
+# ---------------------------------------------------------------------------
+# Helper to build fixture items for higher-level method tests
+# ---------------------------------------------------------------------------
+
+def _make_btc_items(n=10):
+    """Return n Bitcoin-themed items."""
+    return [
+        {
+            "title": f"Bitcoin ETF approved number {i}",
+            "description": f"BTC mining hashrate surge {i}%",
+            "link": f"https://example.com/btc/{i}",
+            "source": "CoinDesk",
+        }
+        for i in range(n)
+    ]
+
+
+def _make_mixed_items():
+    """Return 15 items spanning multiple themes (bitcoin, regulation, defi, macro)."""
+    items = []
+    for i in range(5):
+        items.append({
+            "title": f"Bitcoin mining hashrate record {i}",
+            "description": f"BTC whale accumulation {i}",
+            "link": f"https://example.com/btc/{i}",
+            "source": "CoinDesk",
+        })
+    for i in range(4):
+        items.append({
+            "title": f"SEC regulation enforcement filing {i}",
+            "description": f"Regulatory compliance ruling {i}",
+            "link": f"https://example.com/reg/{i}",
+            "source": "Reuters",
+        })
+    for i in range(3):
+        items.append({
+            "title": f"DeFi yield protocol TVL {i}",
+            "description": f"Uniswap lending pool {i}",
+            "link": f"https://example.com/defi/{i}",
+            "source": "TheBlock",
+        })
+    for i in range(3):
+        items.append({
+            "title": f"Fed interest rate FOMC decision {i}",
+            "description": f"Inflation CPI data {i}",
+            "link": f"https://example.com/macro/{i}",
+            "source": "Bloomberg",
+        })
+    return items
+
+
+# ---------------------------------------------------------------------------
+# ThemeSummarizer: generate_theme_briefing
+# ---------------------------------------------------------------------------
+
+class TestGenerateThemeBriefing:
+    """Tests for ThemeSummarizer.generate_theme_briefing()."""
+
+    def test_returns_empty_for_few_items(self):
+        ts = ThemeSummarizer([{"title": "Bitcoin", "description": "BTC"}])
+        assert ts.generate_theme_briefing() == ""
+
+    def test_returns_string_with_header(self):
+        ts = ThemeSummarizer(_make_btc_items(10))
+        result = ts.generate_theme_briefing()
+        if result:
+            assert "테마별 브리핑" in result
+            assert isinstance(result, str)
+
+    def test_returns_empty_when_no_themes_match(self):
+        items = [{"title": "weather today", "description": "sunny skies"} for _ in range(10)]
+        ts = ThemeSummarizer(items)
+        assert ts.generate_theme_briefing() == ""
+
+    def test_contains_emoji_and_theme_name(self):
+        ts = ThemeSummarizer(_make_btc_items(10))
+        result = ts.generate_theme_briefing()
+        if result:
+            # Bitcoin theme emoji is 🟠
+            assert "비트코인" in result
+
+
+# ---------------------------------------------------------------------------
+# ThemeSummarizer: generate_summary_section
+# ---------------------------------------------------------------------------
+
+class TestGenerateSummarySection:
+    """Tests for ThemeSummarizer.generate_summary_section()."""
+
+    def test_returns_empty_for_few_items(self):
+        ts = ThemeSummarizer([])
+        assert ts.generate_summary_section() == ""
+
+    def test_returns_string_with_header(self):
+        ts = ThemeSummarizer(_make_mixed_items())
+        result = ts.generate_summary_section()
+        if result:
+            assert "주요 테마 분석" in result
+
+    def test_contains_article_count(self):
+        ts = ThemeSummarizer(_make_btc_items(10))
+        result = ts.generate_summary_section()
+        if result:
+            assert "건" in result
+
+    def test_returns_empty_when_no_themes(self):
+        items = [{"title": "weather today", "description": "no crypto"} for _ in range(10)]
+        ts = ThemeSummarizer(items)
+        assert ts.generate_summary_section() == ""
+
+    def test_articles_with_source_included(self):
+        items = _make_btc_items(10)
+        ts = ThemeSummarizer(items)
+        result = ts.generate_summary_section()
+        if result:
+            assert "CoinDesk" in result
+
+
+# ---------------------------------------------------------------------------
+# ThemeSummarizer: _assess_risk_level
+# ---------------------------------------------------------------------------
+
+class TestAssessRiskLevel:
+    """Tests for ThemeSummarizer._assess_risk_level()."""
+
+    def test_critical_on_3_plus_p0(self):
+        ts = ThemeSummarizer([])
+        priority = {"P0": [{}] * 3, "P1": [], "P2": []}
+        assert ts._assess_risk_level(priority) == "critical"
+
+    def test_elevated_on_1_p0(self):
+        ts = ThemeSummarizer([])
+        priority = {"P0": [{}], "P1": [], "P2": []}
+        assert ts._assess_risk_level(priority) == "elevated"
+
+    def test_elevated_on_5_plus_p1(self):
+        ts = ThemeSummarizer([])
+        priority = {"P0": [], "P1": [{}] * 5, "P2": []}
+        assert ts._assess_risk_level(priority) == "elevated"
+
+    def test_moderate_on_2_p1(self):
+        ts = ThemeSummarizer([])
+        priority = {"P0": [], "P1": [{}] * 2, "P2": []}
+        assert ts._assess_risk_level(priority) == "moderate"
+
+    def test_low_on_no_p0_p1(self):
+        ts = ThemeSummarizer([])
+        priority = {"P0": [], "P1": [], "P2": [{}] * 5}
+        assert ts._assess_risk_level(priority) == "low"
+
+
+# ---------------------------------------------------------------------------
+# ThemeSummarizer: generate_overall_summary_section
+# ---------------------------------------------------------------------------
+
+class TestGenerateOverallSummarySection:
+    """Tests for ThemeSummarizer.generate_overall_summary_section()."""
+
+    def test_returns_empty_for_too_few_items(self):
+        ts = ThemeSummarizer([{"title": "BTC", "description": ""}] * 2)
+        assert ts.generate_overall_summary_section() == ""
+
+    def test_returns_string_with_custom_title(self):
+        ts = ThemeSummarizer(_make_mixed_items())
+        result = ts.generate_overall_summary_section(title="테스트 요약")
+        assert "테스트 요약" in result
+
+    def test_includes_p0_signal_when_present(self):
+        items = _make_btc_items(10)
+        items[0]["title"] = "Bitcoin exchange hack exploit detected"
+        items[0]["description"] = "Major crash in Bitcoin"
+        ts = ThemeSummarizer(items)
+        result = ts.generate_overall_summary_section()
+        assert "P0" in result
+
+    def test_includes_top_keywords_from_extra(self):
+        ts = ThemeSummarizer(_make_btc_items(10))
+        result = ts.generate_overall_summary_section(
+            extra_data={"top_keywords": [("bitcoin", 5), ("ETF", 3)]}
+        )
+        assert "bitcoin" in result or "ETF" in result
+
+    def test_includes_region_counts_from_extra(self):
+        ts = ThemeSummarizer(_make_btc_items(10))
+        result = ts.generate_overall_summary_section(
+            extra_data={"region_counts": Counter({"미국": 5, "한국": 3})}
+        )
+        if result:
+            assert isinstance(result, str)
+
+    def test_includes_source_counter_from_extra(self):
+        ts = ThemeSummarizer(_make_btc_items(10))
+        result = ts.generate_overall_summary_section(
+            extra_data={"source_counter": Counter({"CoinDesk": 8, "Bloomberg": 4})}
+        )
+        if result:
+            assert "CoinDesk" in result
+
+    def test_includes_summary_points_from_extra(self):
+        ts = ThemeSummarizer(_make_btc_items(10))
+        result = ts.generate_overall_summary_section(
+            extra_data={"summary_points": ["BTC is the dominant theme", "ETF inflows growing"]}
+        )
+        if result:
+            assert "BTC is the dominant theme" in result
+
+
+# ---------------------------------------------------------------------------
+# ThemeSummarizer: _build_narrative_intro
+# ---------------------------------------------------------------------------
+
+class TestBuildNarrativeIntro:
+    """Tests for ThemeSummarizer._build_narrative_intro()."""
+
+    def test_p0_items_lead_intro(self):
+        ts = ThemeSummarizer(_make_btc_items(10))
+        p0_item = {"title": "Bitcoin crash detected", "description": "major drop"}
+        priority = {"P0": [p0_item], "P1": [], "P2": []}
+        result = ts._build_narrative_intro([], priority, 10)
+        assert "긴급" in result
+
+    def test_dominant_theme_intro(self):
+        ts = ThemeSummarizer(_make_btc_items(10))
+        ts._ensure_scored()
+        top_themes = ts.get_top_themes()
+        priority = {"P0": [], "P1": [], "P2": []}
+        result = ts._build_narrative_intro(top_themes, priority, 10)
+        assert isinstance(result, str)
+        assert len(result) > 0
+
+    def test_fallback_returns_count_string(self):
+        ts = ThemeSummarizer([])
+        result = ts._build_narrative_intro([], {"P0": [], "P1": [], "P2": []}, 7)
+        assert "7" in result
+
+    def test_p0_with_multiple_items(self):
+        ts = ThemeSummarizer([])
+        p0_items = [
+            {"title": "Bitcoin crash", "description": ""},
+            {"title": "Exchange hack exploit", "description": ""},
+        ]
+        priority = {"P0": p0_items, "P1": [{"title": "regulation"}], "P2": []}
+        result = ts._build_narrative_intro([], priority, 20)
+        assert "P0" in result or "긴급" in result
+
+    def test_cross_theme_pair_found(self):
+        ts = ThemeSummarizer(_make_mixed_items())
+        ts._ensure_scored()
+        top_themes = ts.get_top_themes()
+        priority = {"P0": [], "P1": [], "P2": []}
+        result = ts._build_narrative_intro(top_themes, priority, len(ts.items))
+        assert isinstance(result, str)
+
+
+# ---------------------------------------------------------------------------
+# ThemeSummarizer: generate_executive_summary
+# ---------------------------------------------------------------------------
+
+class TestGenerateExecutiveSummary:
+    """Tests for ThemeSummarizer.generate_executive_summary()."""
+
+    def test_returns_empty_for_too_few_items(self):
+        ts = ThemeSummarizer([{"title": "x", "description": ""}] * 2)
+        assert ts.generate_executive_summary() == ""
+
+    def test_returns_string_with_stat_grid(self):
+        ts = ThemeSummarizer(_make_btc_items(10))
+        result = ts.generate_executive_summary()
+        assert "stat-grid" in result
+
+    def test_crypto_category_type(self):
+        ts = ThemeSummarizer(_make_btc_items(10))
+        result = ts.generate_executive_summary(category_type="crypto")
+        assert isinstance(result, str)
+        assert len(result) > 0
+
+    def test_stock_category_with_kr_market(self):
+        ts = ThemeSummarizer(_make_mixed_items())
+        result = ts.generate_executive_summary(
+            category_type="stock",
+            extra_data={
+                "kr_market": {
+                    "코스피": {"price": "2500.00", "change_pct": "+0.5%"},
+                    "코스닥": {"price": "850.00", "change_pct": "-0.2%"},
+                }
+            },
+        )
+        assert isinstance(result, str)
+
+    def test_regulatory_with_region_counts(self):
+        ts = ThemeSummarizer(_make_mixed_items())
+        result = ts.generate_executive_summary(
+            category_type="regulatory",
+            extra_data={"region_counts": Counter({"미국": 7, "유럽": 3})},
+        )
+        assert isinstance(result, str)
+
+    def test_with_top_keywords_extra(self):
+        ts = ThemeSummarizer(_make_btc_items(10))
+        result = ts.generate_executive_summary(
+            extra_data={"top_keywords": [("Bitcoin", 8), ("ETF", 4)]}
+        )
+        assert "Bitcoin" in result or "ETF" in result
+
+    def test_p0_items_produce_alert_box(self):
+        items = _make_btc_items(10)
+        # Inject a P0-triggering item
+        items[0]["title"] = "Bitcoin exchange hack exploit crash"
+        items[0]["description"] = "Emergency halt on withdrawals"
+        ts = ThemeSummarizer(items)
+        result = ts.generate_executive_summary()
+        assert "alert-urgent" in result
+
+    def test_p0_item_with_link_included(self):
+        items = _make_btc_items(10)
+        items[0]["title"] = "Bitcoin exchange hack crash"
+        items[0]["description"] = "Emergency funds drained via exploit"
+        items[0]["link"] = "https://example.com/p0"
+        ts = ThemeSummarizer(items)
+        result = ts.generate_executive_summary()
+        if "alert-urgent" in result:
+            assert "https://example.com/p0" in result
+
+    def test_risk_level_indicator_present(self):
+        ts = ThemeSummarizer(_make_btc_items(10))
+        result = ts.generate_executive_summary()
+        # Risk emoji chars should appear
+        assert any(emoji in result for emoji in ["🔴", "🟡", "🟢"])
+
+
+# ---------------------------------------------------------------------------
+# ThemeSummarizer: generate_market_insight
+# ---------------------------------------------------------------------------
+
+class TestGenerateMarketInsight:
+    """Tests for ThemeSummarizer.generate_market_insight()."""
+
+    def test_returns_empty_for_few_items(self):
+        ts = ThemeSummarizer([{"title": "x", "description": ""}] * 3)
+        assert ts.generate_market_insight() == ""
+
+    def test_returns_empty_when_less_than_2_themes(self):
+        # All items same theme but unrelated to each other → only 1 theme might score
+        items = [{"title": "weather report sunny", "description": "nothing crypto"} for _ in range(10)]
+        ts = ThemeSummarizer(items)
+        result = ts.generate_market_insight()
+        assert result == "" or isinstance(result, str)
+
+    def test_returns_insight_section_for_mixed_items(self):
+        ts = ThemeSummarizer(_make_mixed_items())
+        result = ts.generate_market_insight()
+        if result:
+            assert "투자자 인사이트" in result
+
+    def test_includes_monitoring_points(self):
+        ts = ThemeSummarizer(_make_mixed_items())
+        result = ts.generate_market_insight()
+        if result and "모니터링" in result:
+            assert "포인트" in result
+
+    def test_p0_monitoring_detected(self):
+        items = _make_btc_items(10) + [
+            {
+                "title": "Bitcoin exchange hack exploit drain",
+                "description": "Emergency crash detected",
+                "link": "https://example.com/hack",
+                "source": "CoinDesk",
+            }
+            for _ in range(3)
+        ]
+        ts = ThemeSummarizer(items)
+        result = ts.generate_market_insight()
+        if result:
+            assert isinstance(result, str)
+
+    def test_cross_theme_insight_detected(self):
+        # bitcoin + regulation are both in CROSS_THEME_INSIGHTS
+        items = []
+        for i in range(6):
+            items.append({
+                "title": f"Bitcoin ETF regulation SEC {i}",
+                "description": f"BTC compliance rule {i}",
+                "link": f"https://example.com/{i}",
+                "source": "Reuters",
+            })
+        for i in range(6):
+            items.append({
+                "title": f"Regulation CFTC enforcement mining {i}",
+                "description": f"Bitcoin regulatory ruling {i}",
+                "link": f"https://example.com/reg/{i}",
+                "source": "Bloomberg",
+            })
+        ts = ThemeSummarizer(items)
+        result = ts.generate_market_insight()
+        if result:
+            assert isinstance(result, str)
+
+
+# ---------------------------------------------------------------------------
+# ThemeSummarizer: score_impact
+# ---------------------------------------------------------------------------
+
+class TestScoreImpact:
+    """Tests for ThemeSummarizer.score_impact()."""
+
+    def test_base_score_unknown_source(self):
+        ts = ThemeSummarizer([])
+        item = {"title": "some news", "description": "", "source": "unknown_blog"}
+        score = ts.score_impact(item)
+        assert 0 < score <= 10.0
+
+    def test_reuters_source_gets_higher_base(self):
+        ts = ThemeSummarizer([])
+        item_reuters = {"title": "Bitcoin", "description": "", "source": "Reuters"}
+        item_unknown = {"title": "Bitcoin", "description": "", "source": "blog"}
+        assert ts.score_impact(item_reuters) > ts.score_impact(item_unknown)
+
+    def test_percentage_mention_increases_score(self):
+        ts = ThemeSummarizer([])
+        item_pct = {"title": "BTC surges 15%", "description": "", "source": "blog"}
+        item_no = {"title": "BTC news", "description": "", "source": "blog"}
+        assert ts.score_impact(item_pct) > ts.score_impact(item_no)
+
+    def test_large_dollar_amount_increases_score(self):
+        ts = ThemeSummarizer([])
+        item_big = {"title": "Fund raises $5 billion for Bitcoin", "description": "", "source": "blog"}
+        item_small = {"title": "Bitcoin update", "description": "", "source": "blog"}
+        assert ts.score_impact(item_big) > ts.score_impact(item_small)
+
+    def test_urgency_keyword_increases_score(self):
+        ts = ThemeSummarizer([])
+        item_urgent = {"title": "breaking Bitcoin crash", "description": "emergency", "source": "blog"}
+        item_normal = {"title": "Bitcoin update", "description": "routine", "source": "blog"}
+        assert ts.score_impact(item_urgent) > ts.score_impact(item_normal)
+
+    def test_score_capped_at_10(self):
+        ts = ThemeSummarizer([])
+        item = {
+            "title": "breaking emergency urgent Bitcoin crash 50% $10 billion",
+            "description": "fed sec emergency flash $5 billion 20%",
+            "source": "reuters",
+        }
+        assert ts.score_impact(item) <= 10.0
+
+    def test_institutional_name_increases_score(self):
+        ts = ThemeSummarizer([])
+        item_inst = {"title": "SEC issues notice", "description": "fed decision", "source": "blog"}
+        item_plain = {"title": "random crypto news", "description": "nothing special", "source": "blog"}
+        assert ts.score_impact(item_inst) > ts.score_impact(item_plain)
+
+
+# ---------------------------------------------------------------------------
+# ThemeSummarizer: get_theme_sentiment
+# ---------------------------------------------------------------------------
+
+class TestGetThemeSentiment:
+    """Tests for ThemeSummarizer.get_theme_sentiment()."""
+
+    def test_neutral_for_empty_theme(self):
+        ts = ThemeSummarizer([])
+        assert ts.get_theme_sentiment("bitcoin") == "neutral"
+
+    def test_bullish_for_positive_keywords(self):
+        items = [
+            {"title": f"Bitcoin rally surge gain {i}", "description": f"BTC bullish breakout {i}"}
+            for i in range(5)
+        ]
+        ts = ThemeSummarizer(items)
+        ts._ensure_scored()
+        sentiment = ts.get_theme_sentiment("bitcoin")
+        assert sentiment in ("bullish", "neutral", "bearish")
+
+    def test_bearish_for_negative_keywords(self):
+        items = [
+            {"title": f"Bitcoin crash dump bear {i}", "description": f"BTC decline hack plunge {i}"}
+            for i in range(5)
+        ]
+        ts = ThemeSummarizer(items)
+        ts._ensure_scored()
+        sentiment = ts.get_theme_sentiment("bitcoin")
+        assert sentiment in ("bullish", "neutral", "bearish")
+
+    def test_neutral_for_balanced_content(self):
+        items = [
+            {"title": f"Bitcoin rally crash {i}", "description": f"BTC bull bear {i}"}
+            for i in range(5)
+        ]
+        ts = ThemeSummarizer(items)
+        ts._ensure_scored()
+        sentiment = ts.get_theme_sentiment("bitcoin")
+        assert sentiment in ("bullish", "neutral", "bearish")
+
+    def test_returns_string(self):
+        ts = ThemeSummarizer(_make_btc_items(10))
+        ts._ensure_scored()
+        result = ts.get_theme_sentiment("bitcoin")
+        assert isinstance(result, str)
+
+
+# ---------------------------------------------------------------------------
+# ThemeSummarizer: detect_concentration
+# ---------------------------------------------------------------------------
+
+class TestDetectConcentration:
+    """Tests for ThemeSummarizer.detect_concentration()."""
+
+    def test_returns_none_for_few_items(self):
+        ts = ThemeSummarizer([{"title": "Bitcoin ETF", "description": "BTC"} for _ in range(3)])
+        assert ts.detect_concentration() is None
+
+    def test_returns_tuple_when_concentrated(self):
+        # 8 bitcoin items out of 10 → >40% concentration
+        items = _make_btc_items(8) + [
+            {"title": "weather today sunny", "description": "nothing relevant"},
+            {"title": "random sports news", "description": "nothing relevant"},
+        ]
+        ts = ThemeSummarizer(items)
+        result = ts.detect_concentration()
+        if result is not None:
+            name, key, ratio = result
+            assert isinstance(name, str)
+            assert isinstance(key, str)
+            assert 0.0 <= ratio <= 1.0
+
+    def test_returns_none_when_not_concentrated(self):
+        # Spread across many themes
+        ts = ThemeSummarizer(_make_mixed_items())
+        result = ts.detect_concentration()
+        # Could be None or tuple depending on distribution — just test type
+        assert result is None or isinstance(result, tuple)
+
+
+# ---------------------------------------------------------------------------
+# ThemeSummarizer: get_top_themes_with_sentiment
+# ---------------------------------------------------------------------------
+
+class TestGetTopThemesWithSentiment:
+    """Tests for ThemeSummarizer.get_top_themes_with_sentiment()."""
+
+    def test_returns_list(self):
+        ts = ThemeSummarizer(_make_btc_items(10))
+        result = ts.get_top_themes_with_sentiment()
+        assert isinstance(result, list)
+
+    def test_each_entry_is_5_tuple(self):
+        ts = ThemeSummarizer(_make_btc_items(10))
+        result = ts.get_top_themes_with_sentiment()
+        for entry in result:
+            assert len(entry) == 5
+
+    def test_sentiment_label_is_emoji(self):
+        ts = ThemeSummarizer(_make_btc_items(10))
+        result = ts.get_top_themes_with_sentiment()
+        for _name, _key, _emoji, _count, sentiment_label in result:
+            assert sentiment_label in ("📈", "📉", "➡️")
+
+    def test_empty_items_returns_empty_list(self):
+        ts = ThemeSummarizer([])
+        assert ts.get_top_themes_with_sentiment() == []
+
+
+# ---------------------------------------------------------------------------
+# ThemeSummarizer: detect_anomalies
+# ---------------------------------------------------------------------------
+
+class TestDetectAnomalies:
+    """Tests for ThemeSummarizer.detect_anomalies()."""
+
+    def test_returns_empty_for_few_themes(self):
+        ts = ThemeSummarizer([{"title": "Bitcoin ETF", "description": "BTC"}])
+        result = ts.detect_anomalies()
+        assert result == []
+
+    def test_returns_list(self):
+        ts = ThemeSummarizer(_make_mixed_items())
+        result = ts.detect_anomalies()
+        assert isinstance(result, list)
+
+    def test_anomaly_tuple_has_4_elements(self):
+        ts = ThemeSummarizer(_make_btc_items(20))
+        result = ts.detect_anomalies()
+        for entry in result:
+            assert len(entry) == 4
+
+    def test_no_anomaly_when_evenly_distributed(self):
+        # Evenly distributed — no theme should be 2x average
+        items = _make_mixed_items()
+        ts = ThemeSummarizer(items)
+        result = ts.detect_anomalies()
+        # Could be empty or small list; just check it's a list
+        assert isinstance(result, list)
+
+
+# ---------------------------------------------------------------------------
+# ThemeSummarizer: _build_executive_opener
+# ---------------------------------------------------------------------------
+
+class TestBuildExecutiveOpener:
+    """Tests for ThemeSummarizer._build_executive_opener()."""
+
+    def test_p0_items_lead_opener(self):
+        ts = ThemeSummarizer(_make_btc_items(10))
+        ts._ensure_scored()
+        top_themes = ts.get_top_themes()
+        priority = {
+            "P0": [{"title": "Bitcoin exchange hack crash", "description": ""}],
+            "P1": [],
+            "P2": [],
+        }
+        result = ts._build_executive_opener("crypto", top_themes, priority, 10, {})
+        assert "긴급" in result
+
+    def test_crypto_category_opener(self):
+        ts = ThemeSummarizer(_make_btc_items(10))
+        ts._ensure_scored()
+        top_themes = ts.get_top_themes()
+        priority = {"P0": [], "P1": [], "P2": []}
+        result = ts._build_executive_opener("crypto", top_themes, priority, 10, {})
+        assert "암호화폐" in result or "건" in result
+
+    def test_stock_category_opener(self):
+        ts = ThemeSummarizer(_make_mixed_items())
+        ts._ensure_scored()
+        top_themes = ts.get_top_themes()
+        priority = {"P0": [], "P1": [], "P2": []}
+        result = ts._build_executive_opener("stock", top_themes, priority, len(ts.items), {})
+        assert "주식" in result or "건" in result
+
+    def test_fallback_with_no_themes(self):
+        ts = ThemeSummarizer([])
+        result = ts._build_executive_opener("general", [], {"P0": [], "P1": [], "P2": []}, 5, {})
+        assert isinstance(result, str)

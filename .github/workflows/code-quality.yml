@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pull-requests: write
 
 concurrency:
@@ -51,7 +51,7 @@ jobs:
             --cov=scripts/common --cov-report=term-missing \
             --cov-report=html:coverage-html \
             --cov-report=json:coverage.json \
-            --cov-fail-under=50
+            --cov-fail-under=60
 
       - name: Upload coverage report
         if: always()
@@ -62,12 +62,12 @@ jobs:
           retention-days: 14
 
       - name: Coverage comment on PR
-        if: github.event_name == 'pull_request'
         uses: py-cov-action/python-coverage-comment-action@v3
         with:
           GITHUB_TOKEN: ${{ github.token }}
           MINIMUM_GREEN: 50
           MINIMUM_ORANGE: 40
+          COVERAGE_DATA_BRANCH: python-coverage-comment-action-data
 
       - name: Run basedpyright type check
         run: python -m basedpyright
