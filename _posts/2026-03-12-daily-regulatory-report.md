@@ -26,18 +26,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-03-12 - regulatory-news 뉴
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">30</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 12</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">23</div><div class="stat-label">한국</div></div></div>
 <div class="alert-box alert-info"><strong>글로벌 규제: SEC, Understanding, Memorandum 관련 30건 수집</strong><ul><li>🔵 <strong>규제/정책</strong> (12건): SEC, Understanding, Memorandum 이슈가 12건으로 주목받고 있습니다.</li><li>🏦 <strong>거래소</strong> (2건): Understanding, Memorandum, Announce 중심으로 2건의 뉴스가 수집되었습니다.</li><li>🏛️ <strong>정치/정책</strong> (3건): 생산적, 디지털자산기본법, 뉴스후플러스 이슈가 3건으로 주목받고 있습니다.</li><li>🟣 <strong>DeFi</strong> (1건): 1건의 뉴스에서 금융위원회가, 수용한다는, 아닙니다 키워드가 부각되고 있습니다.</li></ul></div>
-## 전체 뉴스 요약
-
-총 30건의 뉴스에서 **규제/정책**(12건)과 **거래소**(2건)이 동시에 부각되고 있습니다. 거래소 관련 규제 강화 신호가 감지되고 있으며, 상장/상폐 이슈에 유의해야 합니다
-
-1. **🔵 규제/정책** (12건): SEC, Understanding, Memorandum 이슈가 12건으로 주목받고 있습니다.
-2. **🏦 거래소** (2건): Understanding, Memorandum, Announce 중심으로 2건의 뉴스가 수집되었습니다.
-3. **🏛️ 정치/정책** (3건): 생산적, 디지털자산기본법, 뉴스후플러스 이슈가 3건으로 주목받고 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-**P1 주요**: 7건 확인
-**주요 지역**: 한국 23건, 미국 4건, 유럽 2건
-
 ## 핵심 요약
 
 - **총 수집 건수**: 30건
