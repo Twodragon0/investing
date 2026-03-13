@@ -180,16 +180,59 @@ excerpt: "암호화폐 110건, 주식 139건, 보안 1건, 규제 31건, 소셜 
 
 ## 상세 리포트 링크
 
-| 카테고리 | 건수 | 상세 보기 |
-| --- | :---: | --- |
-| 암호화폐 뉴스 | 110건 | [바로가기](/crypto-news/2026/02/21/daily-crypto-news-digest/) |
-| 시장 종합 리포트 | - | [바로가기](/market-analysis/2026/02/21/daily-market-report/) |
-| 정치인 거래 | 9건 | [바로가기](/political-trades/2026/02/21/daily-political-trades-report/) |
-| 규제 동향 | 31건 | [바로가기](/regulatory-news/2026/02/21/daily-regulatory-report/) |
-| 보안 리포트 | 1건 | [바로가기](/security-alerts/2026/02/21/daily-security-report/) |
-| 소셜 미디어 | 62건 | [바로가기](/crypto-news/2026/02/21/daily-social-media-digest/) |
-| 주식 시장 뉴스 | 139건 | [바로가기](/stock-news/2026/02/21/daily-stock-news-digest/) |
-| 월드모니터 브리핑 | 20건 | [바로가기](/market-analysis/2026/02/21/daily-worldmonitor-briefing/) |
+관심 영역별 상세 리포트로 바로 이동할 수 있습니다.
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left;">카테고리</th>
+      <th style="text-align:center;">건수</th>
+      <th style="text-align:left;">리포트 링크</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left;">🪙 암호화폐 뉴스</td>
+      <td style="text-align:center;">110건</td>
+      <td style="text-align:left;"><a href="/crypto-news/2026/02/21/daily-crypto-news-digest/">리포트 보기</a></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">📈 시장 종합 리포트</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;"><a href="/market-analysis/2026/02/21/daily-market-report/">리포트 보기</a></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">정치인 거래</td>
+      <td style="text-align:center;">9건</td>
+      <td style="text-align:left;"><a href="/political-trades/2026/02/21/daily-political-trades-report/">리포트 보기</a></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">📋 규제 동향</td>
+      <td style="text-align:center;">31건</td>
+      <td style="text-align:left;"><a href="/regulatory-news/2026/02/21/daily-regulatory-report/">리포트 보기</a></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">보안 리포트</td>
+      <td style="text-align:center;">1건</td>
+      <td style="text-align:left;"><a href="/security-alerts/2026/02/21/daily-security-report/">리포트 보기</a></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">💬 소셜 미디어</td>
+      <td style="text-align:center;">62건</td>
+      <td style="text-align:left;"><a href="/crypto-news/2026/02/21/daily-social-media-digest/">리포트 보기</a></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">주식 시장 뉴스</td>
+      <td style="text-align:center;">139건</td>
+      <td style="text-align:left;"><a href="/stock-news/2026/02/21/daily-stock-news-digest/">리포트 보기</a></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">🌍 월드모니터 브리핑</td>
+      <td style="text-align:center;">20건</td>
+      <td style="text-align:left;"><a href="/market-analysis/2026/02/21/daily-worldmonitor-briefing/">리포트 보기</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
