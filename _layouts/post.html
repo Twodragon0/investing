@@ -318,23 +318,13 @@ layout: default
   }
 
   function wrapImage(img) {
-    if (img.closest('figure') || img.closest('picture')) return;
+    if (img.closest('figure')) return;
     var figure = document.createElement('figure');
     figure.className = 'post-figure';
-    img.parentNode.insertBefore(figure, img);
-    // Wrap in <picture> with WebP source for generated images
-    var src = img.getAttribute('src') || '';
-    if (src.indexOf('/assets/images/generated/') !== -1 && src.indexOf('.png') !== -1) {
-      var picture = document.createElement('picture');
-      var source = document.createElement('source');
-      source.setAttribute('srcset', src.replace('.png', '.webp'));
-      source.setAttribute('type', 'image/webp');
-      picture.appendChild(source);
-      figure.appendChild(picture);
-      picture.appendChild(img);
-    } else {
-      figure.appendChild(img);
-    }
+    // If img is inside a <picture>, wrap the whole <picture> in <figure>
+    var target = img.closest('picture') || img;
+    target.parentNode.insertBefore(figure, target);
+    figure.appendChild(target);
     var alt = toCaption(img.getAttribute('alt'));
     if (alt) {
       var caption = document.createElement('figcaption');
