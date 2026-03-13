@@ -196,9 +196,17 @@ def _is_valid_image_url(url: str) -> bool:
     url_lower = url.lower()
     # Reject known tracking pixels and placeholder images
     _BAD_PATTERNS = [
-        "1x1", "pixel", "tracker", "beacon", "spacer",
-        "placeholder", "default-image", "no-image", "blank.",
-        "gravatar.com/avatar", "wp-content/plugins",
+        "1x1",
+        "pixel",
+        "tracker",
+        "beacon",
+        "spacer",
+        "placeholder",
+        "default-image",
+        "no-image",
+        "blank.",
+        "gravatar.com/avatar",
+        "wp-content/plugins",
     ]
     if any(p in url_lower for p in _BAD_PATTERNS):
         return False
@@ -436,7 +444,11 @@ def fetch_page_metadata(url: str, timeout: int = 8) -> Dict[str, str]:
         article = soup.find("article")
         if not article:
             # More precise content container matching
-            for tag in soup.find_all(class_=re.compile(r"article[-_]?(body|content|text)|post[-_]?(body|content|text)|entry[-_]?(body|content|text)")):
+            for tag in soup.find_all(
+                class_=re.compile(
+                    r"article[-_]?(body|content|text)|post[-_]?(body|content|text)|entry[-_]?(body|content|text)"
+                )
+            ):
                 if not _EXCLUDE_CLASS_RE.search(str(tag.get("class", ""))):
                     article = tag
                     break

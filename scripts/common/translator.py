@@ -25,7 +25,7 @@ logger = logging.getLogger(__name__)
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 _CACHE_PATH = _REPO_ROOT / "_state" / "translation_cache.json"
-_MAX_CACHE_ENTRIES = 10_000
+_MAX_CACHE_ENTRIES = 5_000
 _BATCH_SIZE = 5
 _BATCH_DELAY = 0.3  # seconds between batches
 
@@ -180,6 +180,7 @@ def _load_cache() -> Dict[str, str]:
         _cache_dirty = True
         logger.info("Cleaned %d cached translations with artifacts", cleaned)
 
+    logger.info("Translation cache loaded: %d entries", len(_cache))
     return _cache
 
 
@@ -189,11 +190,13 @@ def _save_cache() -> None:
     if not _cache_dirty or _cache is None:
         return
 
-    # Evict oldest entries if over limit
+    # Evict oldest entries if over limit (FIFO order)
     if len(_cache) > _MAX_CACHE_ENTRIES:
+        evict_count = len(_cache) - _MAX_CACHE_ENTRIES
         keys = list(_cache.keys())
-        for k in keys[: len(_cache) - _MAX_CACHE_ENTRIES]:
+        for k in keys[:evict_count]:
             del _cache[k]
+        logger.info("Evicted %d old cache entries (limit: %d)", evict_count, _MAX_CACHE_ENTRIES)
 
     _CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
     try:
@@ -261,40 +264,72 @@ def _restore_terms(text: str, replacements: list) -> str:
 # These occur when \b word-boundary matching fails or from cached old translations
 _TOKEN_ARTIFACT_MAP: Dict[str, str] = {
     # AI artifacts
-    "PAIrs": "Pairs", "PAIr": "Pair", "pAIrs": "pairs", "pAIr": "pair",
-    "MAIntenance": "Maintenance", "mAIntenance": "maintenance",
-    "MAInnet": "Mainnet", "mAInnet": "mainnet",
-    "BrAIn": "Brain", "brAIn": "brain",
-    "ChAIn": "Chain", "chAIn": "chain",
+    "PAIrs": "Pairs",
+    "PAIr": "Pair",
+    "pAIrs": "pairs",
+    "pAIr": "pair",
+    "MAIntenance": "Maintenance",
+    "mAIntenance": "maintenance",
+    "MAInnet": "Mainnet",
+    "mAInnet": "mainnet",
+    "BrAIn": "Brain",
+    "brAIn": "brain",
+    "ChAIn": "Chain",
+    "chAIn": "chain",
     "ChAInlink": "Chainlink",
-    "rAPId": "rapid", "RAPId": "Rapid",
-    "RAIse": "Raise", "rAIse": "raise",
-    "RAIses": "Raises", "rAIses": "raises",
-    "RAIsed": "Raised", "rAIsed": "raised",
-    "gAIn": "gain", "gAIns": "gains", "gAIned": "gained",
-    "ChAIrman": "Chairman", "chAIrman": "chairman",
-    "pAId": "paid", "sAId": "said",
-    "mAIn": "main", "mAIntain": "maintain",
-    "remAIn": "remain", "remAIns": "remains",
-    "contAIn": "contain", "contAIns": "contains",
-    "agAInst": "against", "AgAInst": "Against",
-    "clAIm": "claim", "clAIms": "claims",
-    "fAIl": "fail", "fAIled": "failed",
-    "wAIt": "wait", "wAIting": "waiting",
-    "trAIning": "training", "trAIned": "trained",
-    "explAIn": "explain", "certAIn": "certain",
-    "obtAIn": "obtain", "sustAIn": "sustain",
+    "rAPId": "rapid",
+    "RAPId": "Rapid",
+    "RAIse": "Raise",
+    "rAIse": "raise",
+    "RAIses": "Raises",
+    "rAIses": "raises",
+    "RAIsed": "Raised",
+    "rAIsed": "raised",
+    "gAIn": "gain",
+    "gAIns": "gains",
+    "gAIned": "gained",
+    "ChAIrman": "Chairman",
+    "chAIrman": "chairman",
+    "pAId": "paid",
+    "sAId": "said",
+    "mAIn": "main",
+    "mAIntain": "maintain",
+    "remAIn": "remain",
+    "remAIns": "remains",
+    "contAIn": "contain",
+    "contAIns": "contains",
+    "agAInst": "against",
+    "AgAInst": "Against",
+    "clAIm": "claim",
+    "clAIms": "claims",
+    "fAIl": "fail",
+    "fAIled": "failed",
+    "wAIt": "wait",
+    "wAIting": "waiting",
+    "trAIning": "training",
+    "trAIned": "trained",
+    "explAIn": "explain",
+    "certAIn": "certain",
+    "obtAIn": "obtain",
+    "sustAIn": "sustain",
     "strAIght": "straight",
-    "AIr": "Air", "aIr": "air",
-    "DAIly": "Daily", "dAIly": "daily",
+    "AIr": "Air",
+    "aIr": "air",
+    "DAIly": "Daily",
+    "dAIly": "daily",
     "TakAIchi": "Takaichi",
     # SOL artifacts
-    "SOLution": "Solution", "SOLutions": "Solutions",
-    "reSOLve": "resolve", "reSOLved": "resolved",
-    "conSOLidate": "consolidate", "conSOLidation": "consolidation",
-    "abSOLute": "absolute", "SOLar": "solar",
+    "SOLution": "Solution",
+    "SOLutions": "Solutions",
+    "reSOLve": "resolve",
+    "reSOLved": "resolved",
+    "conSOLidate": "consolidate",
+    "conSOLidation": "consolidation",
+    "abSOLute": "absolute",
+    "SOLar": "solar",
     # XRP/ETH/DOT artifacts
-    "XRPected": "Expected", "ETHical": "Ethical",
+    "XRPected": "Expected",
+    "ETHical": "Ethical",
 }
 
 # Media/source names that Google Translate incorrectly translates
@@ -330,8 +365,10 @@ _KOREAN_STYLE_FIXES: list = [
     # "~할 수 있습니까" → "~할 수 있을까"
     (r"할 수 있습니까\??", "할 수 있을까?"),
     # "~하는 것이 더 나은 암호화폐" → "더 나은 투자 대상"
-    (r"(?:지금\s+)?(?:\$[\d,]+로\s+)?(?:지금\s+)?구매하고\s+(\d+)년\s+동안\s+보유하는\s+것이\s+더\s+나은\s+암호화폐",
-     r"\1년 장기 보유 시 더 유망한 암호화폐"),
+    (
+        r"(?:지금\s+)?(?:\$[\d,]+로\s+)?(?:지금\s+)?구매하고\s+(\d+)년\s+동안\s+보유하는\s+것이\s+더\s+나은\s+암호화폐",
+        r"\1년 장기 보유 시 더 유망한 암호화폐",
+    ),
     # "~인가요?" → "~일까?" (more natural for news headlines)
     (r"(\S+)인가요\?", r"\1일까?"),
     # Remove trailing "- 나스닥", "- 알파 추구" etc. (source names that leaked)
