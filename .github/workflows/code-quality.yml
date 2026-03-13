@@ -50,7 +50,7 @@ jobs:
           python3 -m pytest tests/ -v --tb=short \
             --cov=scripts/common --cov-report=term-missing \
             --cov-report=html:coverage-html \
-            --cov-fail-under=25
+            --cov-fail-under=40
 
       - name: Upload coverage report
         if: always()
