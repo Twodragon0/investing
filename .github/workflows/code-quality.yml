@@ -50,15 +50,24 @@ jobs:
           python3 -m pytest tests/ -v --tb=short \
             --cov=scripts/common --cov-report=term-missing \
             --cov-report=html:coverage-html \
-            --cov-fail-under=40
+            --cov-report=json:coverage.json \
+            --cov-fail-under=50
 
       - name: Upload coverage report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: coverage-html
           path: coverage-html/
           retention-days: 14
+
+      - name: Coverage comment on PR
+        if: github.event_name == 'pull_request'
+        uses: py-cov-action/python-coverage-comment-action@v3
+        with:
+          GITHUB_TOKEN: ${{ github.token }}
+          MINIMUM_GREEN: 50
+          MINIMUM_ORANGE: 40
 
       - name: Run basedpyright type check
         run: python -m basedpyright
