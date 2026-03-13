@@ -1,7 +1,5 @@
 import importlib
 
-import pytest
-
 fmp_api = importlib.import_module("common.fmp_api")
 
 

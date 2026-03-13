@@ -1,15 +1,12 @@
 """Tests for summarizer module (scripts/common/summarizer.py)."""
 
-import re
 
-import pytest
 
 from common.summarizer import (
+    _NOISE_TITLE_RE,
     PRIORITY_KEYWORDS,
     THEMES,
     ThemeSummarizer,
-    _GENERIC_DESC_PATTERNS,
-    _NOISE_TITLE_RE,
     _generate_title_based_desc,
     _is_generic_desc,
     _truncate_sentence,
@@ -538,7 +535,7 @@ class TestThemesData:
             assert len(theme) == 4
 
     def test_each_theme_has_keywords(self):
-        for name, key, emoji, keywords in THEMES:
+        for name, key, _emoji, keywords in THEMES:
             assert isinstance(name, str)
             assert isinstance(key, str)
             assert isinstance(keywords, list)

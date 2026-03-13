@@ -2,8 +2,6 @@
 
 from unittest.mock import MagicMock, patch
 
-import pytest
-
 from common.enrichment import (
     _NOISE_DESC_PATTERNS,
     _analyze_korean_title,
@@ -11,7 +9,6 @@ from common.enrichment import (
     _clean_description,
     _decode_google_news_base64,
     _extract_title_entities,
-    _fetch_og_image,
     _get_source_label,
     _is_valid_image_url,
     _resolve_google_news_url,

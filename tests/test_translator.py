@@ -1,13 +1,24 @@
 """Tests for translator post-processing (scripts/common/translator.py)."""
 
 import hashlib
+import json
+import tempfile
+from pathlib import Path
+from unittest.mock import patch
 
 from common.translator import (
     TERM_OVERRIDES,
     _apply_term_overrides,
     _cache_key,
+    _load_cache,
     _postprocess_translation,
     _restore_terms,
+    _save_cache,
+    get_display_description,
+    get_display_title,
+    save_translation_cache,
+    translate_batch,
+    translate_to_korean,
 )
 
 
@@ -256,3 +267,193 @@ class TestTermOverridesData:
     def test_no_empty_keys(self):
         for k in TERM_OVERRIDES:
             assert k != "", "Empty key found in TERM_OVERRIDES"
+
+
+class TestGetDisplayTitle:
+    """Tests for get_display_title()."""
+
+    def test_returns_ko_title_if_present(self):
+        item = {"title": "Bitcoin news", "title_ko": "비트코인 뉴스"}
+        assert get_display_title(item) == "비트코인 뉴스"
+
+    def test_falls_back_to_title(self):
+        item = {"title": "Bitcoin news", "title_ko": ""}
+        assert get_display_title(item) == "Bitcoin news"
+
+    def test_no_ko_key_returns_title(self):
+        item = {"title": "Bitcoin news"}
+        assert get_display_title(item) == "Bitcoin news"
+
+    def test_empty_item_returns_empty(self):
+        assert get_display_title({}) == ""
+
+
+class TestGetDisplayDescription:
+    """Tests for get_display_description()."""
+
+    def test_returns_ko_description_if_present(self):
+        item = {"description": "Bitcoin news", "description_ko": "비트코인 뉴스 설명"}
+        assert get_display_description(item) == "비트코인 뉴스 설명"
+
+    def test_falls_back_to_description(self):
+        item = {"description": "Bitcoin news", "description_ko": ""}
+        assert get_display_description(item) == "Bitcoin news"
+
+    def test_no_ko_key_returns_description(self):
+        item = {"description": "Some description"}
+        assert get_display_description(item) == "Some description"
+
+    def test_empty_item_returns_empty(self):
+        assert get_display_description({}) == ""
+
+
+class TestTranslateToKorean:
+    """Tests for translate_to_korean() with mocks."""
+
+    def test_empty_string_returned_as_is(self):
+        assert translate_to_korean("") == ""
+        assert translate_to_korean("   ") == "   "
+
+    def test_translation_disabled_returns_original(self):
+        with patch("common.translator.TRANSLATION_ENABLED", False):
+            result = translate_to_korean("Bitcoin rises")
+            assert result == "Bitcoin rises"
+
+    def test_returns_string(self):
+        # With translation disabled, just verify the return type
+        with patch("common.translator.TRANSLATION_ENABLED", False):
+            result = translate_to_korean("Hello world")
+            assert isinstance(result, str)
+
+    def test_cached_result_returned(self):
+        test_text = "test_cached_translation_12345xyz"
+        test_key = _cache_key(test_text)
+        mock_cache = {test_key: "캐시된 번역 결과"}
+        with (
+            patch("common.translator._load_cache", return_value=mock_cache),
+            patch("common.translator.TRANSLATION_ENABLED", True),
+        ):
+            result = translate_to_korean(test_text)
+            assert result == "캐시된 번역 결과"
+
+
+class TestTranslateBatch:
+    """Tests for translate_batch()."""
+
+    def test_empty_list_returns_empty(self):
+        assert translate_batch([]) == []
+
+    def test_translation_disabled_returns_originals(self):
+        with patch("common.translator.TRANSLATION_ENABLED", False):
+            texts = ["Bitcoin", "Ethereum", "Solana"]
+            result = translate_batch(texts)
+            assert result == texts
+
+    def test_returns_list_of_same_length(self):
+        with patch("common.translator.TRANSLATION_ENABLED", False):
+            texts = ["a", "b", "c"]
+            result = translate_batch(texts)
+            assert len(result) == len(texts)
+
+    def test_empty_strings_in_batch_unchanged(self):
+        with patch("common.translator.TRANSLATION_ENABLED", False):
+            texts = ["Bitcoin", "", "Ethereum"]
+            result = translate_batch(texts)
+            assert result[1] == ""
+
+    def test_cached_items_returned_from_cache(self):
+        text = "cached_unique_test_99999"
+        key = _cache_key(text)
+        mock_cache = {key: "캐시결과"}
+        with (
+            patch("common.translator._load_cache", return_value=mock_cache),
+            patch("common.translator.TRANSLATION_ENABLED", True),
+            patch("common.translator._save_cache"),
+        ):
+            result = translate_batch([text])
+            assert result[0] == "캐시결과"
+
+
+class TestLoadCache:
+    """Tests for _load_cache()."""
+
+    def test_returns_dict(self, tmp_path):
+        import common.translator as tr_mod
+        # Reset cache to force reload by pointing to a non-existent path
+        tr_mod._cache = None
+        nonexistent = tmp_path / "nonexistent_cache.json"
+        with patch.object(tr_mod, "_CACHE_PATH", nonexistent):
+            cache = _load_cache()
+        assert isinstance(cache, dict)
+        tr_mod._cache = None  # cleanup
+
+    def test_loads_valid_json_cache(self):
+        import common.translator as tr_mod
+        tr_mod._cache = None
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False, encoding="utf-8") as f:
+            json.dump({"abc123": "번역결과"}, f)
+            tmp_path = Path(f.name)
+
+        with patch.object(tr_mod, "_CACHE_PATH", tmp_path):
+            cache = _load_cache()
+        assert "abc123" in cache
+        tr_mod._cache = None  # cleanup
+        tmp_path.unlink(missing_ok=True)
+
+    def test_returns_empty_on_invalid_json(self):
+        import common.translator as tr_mod
+        tr_mod._cache = None
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False, encoding="utf-8") as f:
+            f.write("not valid json {{{")
+            tmp_path = Path(f.name)
+
+        with patch.object(tr_mod, "_CACHE_PATH", tmp_path):
+            cache = _load_cache()
+        assert isinstance(cache, dict)
+        tr_mod._cache = None  # cleanup
+        tmp_path.unlink(missing_ok=True)
+
+    def test_returns_cached_instance_on_second_call(self):
+        import common.translator as tr_mod
+        # Pre-set cache
+        tr_mod._cache = {"existing": "value"}
+        cache = _load_cache()
+        assert cache is tr_mod._cache
+        tr_mod._cache = None  # cleanup
+
+
+class TestSaveCache:
+    """Tests for _save_cache() and save_translation_cache()."""
+
+    def test_no_op_when_not_dirty(self):
+        import common.translator as tr_mod
+        tr_mod._cache = {"key": "val"}
+        tr_mod._cache_dirty = False
+        # Should do nothing when not dirty
+        _save_cache()  # Should not raise
+
+    def test_saves_to_disk_when_dirty(self):
+        import common.translator as tr_mod
+        with tempfile.TemporaryDirectory() as tmpdir:
+            tmp_path = Path(tmpdir) / "_state" / "test_cache.json"
+            original_cache = tr_mod._cache
+            original_dirty = tr_mod._cache_dirty
+
+            tr_mod._cache = {"test_key": "test_value"}
+            tr_mod._cache_dirty = True
+
+            with patch.object(tr_mod, "_CACHE_PATH", tmp_path):
+                _save_cache()
+
+            assert tmp_path.exists()
+            data = json.loads(tmp_path.read_text(encoding="utf-8"))
+            assert data.get("test_key") == "test_value"
+
+            # Restore
+            tr_mod._cache = original_cache
+            tr_mod._cache_dirty = original_dirty
+
+    def test_save_translation_cache_calls_save(self):
+        with patch("common.translator._save_cache") as mock_save:
+            save_translation_cache()
+            mock_save.assert_called_once()
