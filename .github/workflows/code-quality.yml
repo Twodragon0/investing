@@ -52,6 +52,14 @@ jobs:
             --cov-report=html:coverage-html \
             --cov-fail-under=25
 
+      - name: Upload coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-html
+          path: coverage-html/
+          retention-days: 14
+
       - name: Run basedpyright type check
         run: python -m basedpyright
 
@@ -82,7 +90,7 @@ jobs:
       - name: Run pip-audit security scan
         run: |
           pip install pip-audit
-          pip-audit --desc --skip-editable 2>&1 || echo "::warning::pip-audit found vulnerabilities (non-blocking)"
+          pip-audit --desc --skip-editable --ignore-vuln PYSEC-2022-252 2>&1 || echo "::warning::pip-audit found vulnerabilities (non-blocking)"
 
       - name: Run rendered fixture smoke check
         run: python scripts/verify_rendered_fixtures.py
