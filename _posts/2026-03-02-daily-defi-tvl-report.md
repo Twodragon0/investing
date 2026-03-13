@@ -31,7 +31,7 @@ description: "2026-03-02 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked
 - **이란 분쟁 영향**: 3일 연속 TVL 동일 수치($247.99B) 기록 — API 캐시 또는 시장 관망세 가능성
 
 
-![DeFi TVL Dashboard]({{ '/assets/images/generated/defi-tvl-dashboard-2026-03-02.png' | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/defi-tvl-dashboard-2026-03-02.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/defi-tvl-dashboard-2026-03-02.png' | relative_url }}" alt="DeFi TVL Dashboard" loading="lazy" decoding="async"></picture>
 
 
 ## 상위 20개 프로토콜 TVL 순위

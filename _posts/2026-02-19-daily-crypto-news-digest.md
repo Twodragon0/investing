@@ -35,7 +35,7 @@ description: "2026-02-19 암호화폐 시장에서 111건의 뉴스를 분석했
 <strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMitwFBVV95cUxPNU9uNnQ5ZXk3WDJUaUVXUzdzR1o5ajZUdTFhb3pVdDB4Q3ZOZVdtT2VBTXJkWnhCTmxidy1wcmZzNjF1SHlQWkNGWlBmR1BxRWZoVW1hcGtHc3ZTNXJWYmg4bV9zRjlqOXh4TkJ6UDlwSmx4R05RZXR2cWxiR2ZxOXh2bUk2d3dfNUxWQkZwU3pBYk9JdXBaSDRxUXpLYjRJaGJxRVI1N1lkVTVPUTExQlVoOGdCVlk?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin's Crash Is Putting Crypto Treasury Stocks To The Test</a> — 시장 급락 소식입니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMkJqRVlOMzViU2xQVWV4cW9DaTZzbHdENlFkSnkxeGNqS3kyRWtQU3gtVlZXcld6TmJIQWtYTmlCWlE2UUhpTHlXbzJMY0hsTmZoMVI4VlpmUmVKajk0bGJJcFpiS0FabUVQQkFsZER4aHhtak02RTBCWjM1MHV6NUZReXpjdjlV?oc=5">비트코인 " 곧 10분의 1 토막 추락"  블룸버그 긴급보고서 - 글로벌이코노믹</a> — 디지털 자산·블록체인 관련 소식입니다. 규제 동향과 기술 발전이 시장 방향의 핵심 변수입니다.</li><li><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE4xelltbFhCY2lhUjBwU0VXZENrZG8wY21PRndscU9DZTJPSkJPREhfVVM4b3hRVC1PeDNXSzcyVmVFeVZjSlRDUGRnRmRVOFdQSV9LcnRKYnZFbWRSUmZjM2d5dEQ2Qmloei0yWG5Hb3BEVnBtTnfSAWZBVV95cUxNRjl1Z1dZM0NCcWEzQ0Z4QmhuNW1nblZrOTctZ1R0OHVPN3JCSG83NHRaQ3RvS2ZOUWk2VGVxRWRTeUVOTmRTYXExMzJFSkVWRWpDWTRudHp5NlhGMFAzT1JOQTZDY1E?oc=5">‘폭락’ 비트코인 들어갈까 말까?붕괴 vs 반등 엇갈린 전망 - 동아일보</a> — 시장이 큰 폭으로 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</li></ul></div>
 
 
-![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-19.png' | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/news-briefing-2026-02-19.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-2026-02-19.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
 
 
 ## 전체 뉴스 요약

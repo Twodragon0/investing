@@ -35,7 +35,7 @@ DeFi   █░░░░░░░░░░░░░░░░░     7%  (9건)
 - **수집 출처 수**: 7개
 - **주요 키워드**: bitcoin(24), ai(6), defi(2), ethereum(1), etf(1)
 
-![news-summary]({{ '/assets/images/generated/news-summary-2026-02-12.png' | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/news-summary-2026-02-12.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-summary-2026-02-12.png' | relative_url }}" alt="news-summary" loading="lazy" decoding="async"></picture>
 
 
 ## 카테고리별 주요 뉴스

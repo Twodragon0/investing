@@ -13,13 +13,13 @@ image: "/assets/images/generated/og-daily-crypto-market-report-2026-02-28.png"
 
 ## 시장 시각화
 
-![top-coins-cmc]({{ '/assets/images/generated/top-coins-cmc-2026-02-28.png' | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/top-coins-cmc-2026-02-28.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/top-coins-cmc-2026-02-28.png' | relative_url }}" alt="top-coins-cmc" loading="lazy" decoding="async"></picture>
 
-![market-heatmap-cmc]({{ '/assets/images/generated/market-heatmap-cmc-2026-02-28.png' | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/market-heatmap-cmc-2026-02-28.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-heatmap-cmc-2026-02-28.png' | relative_url }}" alt="market-heatmap-cmc" loading="lazy" decoding="async"></picture>
 
 ## 오늘의 브리핑
 
-![market-briefing]({{ '/assets/images/generated/news-briefing-cmc-2026-02-28.png' | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/news-briefing-cmc-2026-02-28.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-cmc-2026-02-28.png' | relative_url }}" alt="market-briefing" loading="lazy" decoding="async"></picture>
 
 ## 한눈에 보기
 

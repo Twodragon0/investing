@@ -53,7 +53,7 @@ description: "미국-이란 분쟁 확대로 글로벌 증시 폭락. 다우 -80
 *총 143건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
 
 
-![market-snapshot]({{ '/assets/images/generated/market-snapshot-2026-03-06.png' | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-03-06.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-03-06.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
 
 
 ---

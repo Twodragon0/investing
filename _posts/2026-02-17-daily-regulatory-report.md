@@ -38,7 +38,7 @@ description: "전 세계 금융 규제기관의 최신 동향을 정리합니다
 *총 21건 수집*
 
 
-![regulatory-summary]({{ '/assets/images/generated/regulatory-summary-2026-02-17.png' | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/regulatory-summary-2026-02-17.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/regulatory-summary-2026-02-17.png' | relative_url }}" alt="regulatory-summary" loading="lazy" decoding="async"></picture>
 
 
 ---

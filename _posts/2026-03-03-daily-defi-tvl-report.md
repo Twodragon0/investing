@@ -32,7 +32,7 @@ description: "2026-03-03 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked
 2. **체인**: Ethereum이 TVL $54.30B로 체인 생태계를 주도합니다.
 
 
-![DeFi TVL Dashboard]({{ '/assets/images/generated/defi-tvl-dashboard-2026-03-03.png' | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/defi-tvl-dashboard-2026-03-03.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/defi-tvl-dashboard-2026-03-03.png' | relative_url }}" alt="DeFi TVL Dashboard" loading="lazy" decoding="async"></picture>
 
 
 ## 상위 20개 프로토콜 TVL 순위

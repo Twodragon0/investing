@@ -35,7 +35,7 @@ description: "2026-02-15 암호화폐 시장에서 67건의 뉴스를 분석했�
 <strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiiAFBVV95cUxPVUtQQWJPdi1qQVRDcEpCSjcwZVhrM0RoYk5YYmtIN3BnNVVXUFozY0lMb3JFazZyc1YyWWZXckhXUDJxMlpjWGdXYnlaY0IwcS1fbnQ4OTlRUW9FQWlKT2Q5SzV2ell4b3VyS0tOS2tYNU9vVENvNXBNMTdiMnhwNWI1Sk9ON2NN?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin Price Crash Rattles Trump's Crypto Progress. Here's The Upshot For Investors.</a> — 시장 급락 소식입니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</li><li><a href="https://news.google.com/read/CBMijwNBVV95cUxQRkZCRTkwYjZOM29zV2JmYlNlZFZsd3lHQ0RFbFREWjVsa04tV0Q3U1RuMk1DT2NzbDZ4Y2Q5NzU0Rjh2NHpSbVRERmltUER3TVBtX1U0VFgtb0kzNE13Z253SlBnYWx0bzNUbzZBaV91MU00YTdWWUEtNzZCOVl1bzBFazN1VHhlQ3k4RjZTZWZxMVRFcWZLZktjbUhmVWJLd0l0SkVzSkE3OUxhSGRzWC1VaXJuNDhCNW1GSWhKVjIxYnRSdDVTMXRuRm5HV2xESXdQaVZwVUJNaGVZcjh4dTh2ek9OWmRpdVhnSVZXUHotRWhEZnFlWEV5NHh0dTM3S1pKZkRKbmRYQjViS2dWdzd5bFMzYkhmYW1NTV9VUi1Rc21hUzR0TVhNMWtTbnFGMzYwUjFPdXZFbWlyd24zRzRjT3hzUUtqYTg0aDBoR2NPSFVxbGxWZ1hlSXRNQnFxVTJJekN2YUFlSVhGWTBRVUdoVjdMOFNSYTJOUlEzclJyOE40RUFrRjJuaTY3Z0E?hl=en-US&gl=US&ceid=US%3Aen">Crash Course: Vietnam's Crypto Boom Goes Bust</a> — 시장 급락 소식입니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</li></ul></div>
 
 
-![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-15.png' | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/news-briefing-2026-02-15.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-2026-02-15.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
 
 
 ## 전체 뉴스 요약

@@ -33,9 +33,9 @@ excerpt: "암호화폐 107건, 주식 147건, 보안 2건, 규제 38건, 소셜 
 | 소셜 | 37 | Cathie Wood BTC 지지 발언, 고래 온체인 활동 증가 |
 | 정치인 거래 | 18 | 트럼프 관세 정책 영향, 플로리다 금 법정화폐 추진 |
 
-![multi-asset-briefing]({{ "/assets/images/generated/news-briefing-daily-2026-03-04.png" | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/news-briefing-daily-2026-03-04.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-daily-2026-03-04.png' | relative_url }}" alt="multi-asset-briefing" loading="lazy" decoding="async"></picture>
 
-![market-heatmap]({{ '/assets/images/generated/market-heatmap-2026-03-04.png' | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/market-heatmap-2026-03-04.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-heatmap-2026-03-04.png' | relative_url }}" alt="market-heatmap" loading="lazy" decoding="async"></picture>
 
 ## 핵심 브리핑
 

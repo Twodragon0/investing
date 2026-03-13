@@ -31,7 +31,7 @@ description: "2026-02-19 주식 시장에서 147건의 뉴스를 분석했습니
 *총 147건 수집*
 
 
-![market-snapshot]({{ '/assets/images/generated/market-snapshot-2026-02-19.png' | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-02-19.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-02-19.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
 
 
 ---

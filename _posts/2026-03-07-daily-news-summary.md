@@ -33,7 +33,7 @@ excerpt: "암호화폐 120건, 주식 94건, 규제 6건, 소셜 미디어 42건
 | 소셜 | 42 | 2026-03-07 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 소셜 미디어 3건, Reddit 20건, 정치·경제 19건, 총… |
 | 정치인 거래 | 7 | 트럼프 정책: 1건 (관세·무역 1건). 행정명령 및 관세 정책 변화는 반도체·자동차·에너지 섹터의 변동성을 확대시킵니다. |
 
-![multi-asset-briefing]({{ "/assets/images/generated/news-briefing-daily-2026-03-07.png" | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/news-briefing-daily-2026-03-07.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-daily-2026-03-07.png' | relative_url }}" alt="multi-asset-briefing" loading="lazy" decoding="async"></picture>
 
 ## 핵심 브리핑
 

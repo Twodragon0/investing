@@ -32,7 +32,7 @@ description: "2026-03-04 DeFi TVL 현황: 상위 20개 프로토콜 총 $247.99B
 2. **체인**: Ethereum이 TVL $53.39B로 체인 생태계를 주도합니다.
 
 
-![DeFi TVL Dashboard]({{ '/assets/images/generated/defi-tvl-dashboard-2026-03-04.png' | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/defi-tvl-dashboard-2026-03-04.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/defi-tvl-dashboard-2026-03-04.png' | relative_url }}" alt="DeFi TVL Dashboard" loading="lazy" decoding="async"></picture>
 
 
 ## 상위 20개 프로토콜 TVL 순위

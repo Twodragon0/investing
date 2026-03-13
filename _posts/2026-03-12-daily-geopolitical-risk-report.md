@@ -36,7 +36,7 @@ image_alt: "지정학 리스크 리포트 - 2026-03-12 - 글로벌 이슈 뉴스
 </div>
 
 
-![geopolitical-briefing]({{ '/assets/images/generated/news-briefing-geopolitical-2026-03-12.png' | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/news-briefing-geopolitical-2026-03-12.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-geopolitical-2026-03-12.png' | relative_url }}" alt="geopolitical-briefing" loading="lazy" decoding="async"></picture>
 
 ## 1. 예측 시장 동향 (Polymarket)
 

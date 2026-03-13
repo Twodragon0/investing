@@ -35,7 +35,7 @@ description: "2026-02-17 암호화폐 시장에서 109건의 뉴스를 분석했
 <strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMijAFBVV95cUxQbVV0SmFHakNyTnRETnZxRmptSmN0V1Zva21XX1VsZzhSaFZhTkRwcjEydzJVRDBvck00Q1FLU1h4Rzl5VWR0bVNBM0RlbFhVWDAzRGkybmtXaVRpOC1FZjhTMEpRWEJXUWVvdS13Y05rZHVad19IZnpIQWNUSF9zVEFfNXE1REVLZ0hQbQ?hl=en-US&gl=US&ceid=US%3Aen">Veteran analyst warns of shocking Bitcoin crash to $10K</a> — 시장 급락 소식입니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</li></ul></div>
 
 
-![news-briefing]({{ '/assets/images/generated/news-briefing-2026-02-17.png' | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/news-briefing-2026-02-17.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-2026-02-17.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
 
 
 ## 전체 뉴스 요약

@@ -13,13 +13,13 @@ description: "극도의 공포 장세: 공포/탐욕 지수 12으로 Extreme Fea
 
 ## 시장 시각화
 
-![market-heatmap]({{ '/assets/images/generated/market-heatmap-2026-03-08.png' | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/market-heatmap-2026-03-08.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-heatmap-2026-03-08.png' | relative_url }}" alt="market-heatmap" loading="lazy" decoding="async"></picture>
 
-![top-coins]({{ '/assets/images/generated/top-coins-2026-03-08.png' | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/top-coins-2026-03-08.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/top-coins-2026-03-08.png' | relative_url }}" alt="top-coins" loading="lazy" decoding="async"></picture>
 
-![fear-greed]({{ '/assets/images/generated/fear-greed-2026-03-08.png' | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/fear-greed-2026-03-08.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/fear-greed-2026-03-08.png' | relative_url }}" alt="fear-greed" loading="lazy" decoding="async"></picture>
 
-![sector-heatmap]({{ '/assets/images/generated/sector-heatmap-2026-03-08.png' | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/sector-heatmap-2026-03-08.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/sector-heatmap-2026-03-08.png' | relative_url }}" alt="sector-heatmap" loading="lazy" decoding="async"></picture>
 
 ## 오늘의 핵심
 

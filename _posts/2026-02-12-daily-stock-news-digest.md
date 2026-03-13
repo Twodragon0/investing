@@ -32,7 +32,7 @@ DeFi    ░░░░░░░░░░░░░░░░░░     4%  (7건)
 
 *총 160건의 뉴스 수집 완료*
 
-![market-snapshot]({{ '/assets/images/generated/market-snapshot-2026-02-12.png' | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-02-12.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-02-12.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
 
 
 ---

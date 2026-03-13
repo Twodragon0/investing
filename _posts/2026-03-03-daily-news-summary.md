@@ -33,9 +33,9 @@ excerpt: "암호화폐 111건, 주식 122건, 보안 2건, 규제 29건, 소셜 
 | 소셜 | 35 | BTC 강세 속 금·은 급락, Blackrock 4,309 BTC 매수 |
 | 정치인 거래 | - | 수집 대기 |
 
-![multi-asset-briefing]({{ "/assets/images/generated/news-briefing-daily-2026-03-03.png" | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/news-briefing-daily-2026-03-03.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-daily-2026-03-03.png' | relative_url }}" alt="multi-asset-briefing" loading="lazy" decoding="async"></picture>
 
-![market-heatmap]({{ '/assets/images/generated/market-heatmap-2026-03-03.png' | relative_url }})
+<picture><source srcset="{{ '/assets/images/generated/market-heatmap-2026-03-03.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-heatmap-2026-03-03.png' | relative_url }}" alt="market-heatmap" loading="lazy" decoding="async"></picture>
 
 ## 핵심 브리핑
 
