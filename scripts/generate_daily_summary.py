@@ -26,6 +26,7 @@ from common.config import SITE_URL, get_kst_timezone, setup_logging
 from common.entity_extractor import extract_market_signals, group_related_items
 from common.markdown_utils import (
     _normalize_url,
+    html_table,
     markdown_link,
     markdown_table,
     smart_truncate,
@@ -54,6 +55,15 @@ _SOURCE_SUFFIX_RE = re.compile(
     r"\s+-\s+(?:The New York Times|CryptoRank|Winston & Strawn|European Business Magazine|SEC\.gov|BeInCrypto|Bitget)\s*$",
     re.I,
 )
+_REPORT_CATEGORY_LABELS = {
+    "암호화폐 뉴스": "🪙 암호화폐 뉴스",
+    "DeFi TVL 리포트": "🏦 DeFi TVL 리포트",
+    "시장 종합 리포트": "📈 시장 종합 리포트",
+    "규제 동향": "📋 규제 동향",
+    "소셜 미디어": "💬 소셜 미디어",
+    "월드모니터 브리핑": "🌍 월드모니터 브리핑",
+    "경제 캘린더": "🗓 경제 캘린더",
+}
 
 
 def strip_html_tags(text: str) -> str:
@@ -2225,14 +2235,16 @@ def main():
     # ═══════════════════════════════════════
     content_parts.append("---\n")
     content_parts.append("## 상세 리포트 링크\n")
+    content_parts.append("관심 영역별 상세 리포트로 바로 이동할 수 있습니다.\n")
     report_rows = []
     for name, count, url in post_links:
         count_str = f"{count}건" if isinstance(count, int) and count > 0 else "-"
-        report_rows.append([name, count_str, f"[바로가기]({url})"])
+        display_name = _REPORT_CATEGORY_LABELS.get(name, name)
+        report_rows.append([display_name, count_str, f"[리포트 보기]({url})"])
     if report_rows:
         content_parts.append(
-            markdown_table(
-                ["카테고리", "건수", "상세 보기"],
+            html_table(
+                ["카테고리", "건수", "리포트 링크"],
                 report_rows,
                 aligns=["left", "center", "left"],
             )

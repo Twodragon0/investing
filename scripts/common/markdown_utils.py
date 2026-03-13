@@ -42,6 +42,33 @@ def html_text(value: object) -> str:
     return escape(str(value or "").replace("|", "&#124;").strip(), quote=True)
 
 
+def html_table(
+    headers: Sequence[str],
+    rows: Iterable[Sequence[object]],
+    aligns: Optional[Sequence[str]] = None,
+) -> str:
+    align_map = {"left": "left", "center": "center", "right": "right"}
+    if aligns and len(aligns) == len(headers):
+        header_aligns = [align_map.get(a, "left") for a in aligns]
+    else:
+        header_aligns = ["left" for _ in headers]
+
+    thead_cells = "".join(
+        f'<th style="text-align:{align};">{html_text(header)}</th>'
+        for header, align in zip(headers, header_aligns, strict=False)
+    )
+
+    body_rows = []
+    for row in rows:
+        body_cells = "".join(
+            f'<td style="text-align:{align};">{cell}</td>' for cell, align in zip(row, header_aligns, strict=False)
+        )
+        body_rows.append(f"<tr>{body_cells}</tr>")
+
+    tbody = "".join(body_rows)
+    return f"<table><thead><tr>{thead_cells}</tr></thead><tbody>{tbody}</tbody></table>"
+
+
 def html_details_list(summary: str, items: Iterable[str], css_class: str = "details-content") -> str:
     li = "".join(f"<li>{item}</li>" for item in items)
     return f'<details><summary>{html_text(summary)}</summary><div class="{css_class}"><ol>{li}</ol></div></details>'
