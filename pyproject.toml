@@ -57,6 +57,9 @@ known-first-party = ["common"]
 [tool.ruff.format]
 quote-style = "double"
 
+[tool.coverage.run]
+relative_files = true
+
 [tool.basedpyright]
 include = ["scripts"]
 exclude = ["vendor", ".venv", "_site", "node_modules", "dist", "build"]
