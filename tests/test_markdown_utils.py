@@ -1,6 +1,5 @@
 """Tests for markdown utilities (scripts/common/markdown_utils.py)."""
 
-
 from common.markdown_utils import (
     _classify_source,
     dedupe_references,

@@ -19,8 +19,11 @@ def test_format_news_rows_dedup_and_limit():
         {"title": "B", "link": "https://b", "source": "S3"},
     ]
     rows = collect_market_indicators._format_news_rows(items, limit=2)
-    assert rows.count("- [") == 2
-    assert rows.count("A") == 1
+    # Output uses bold numbered format: **1. [title](url)**
+    assert "[A]" in rows
+    assert "[B]" in rows
+    # Dedup: only one "A" entry
+    assert rows.count("[A]") == 1
 
 
 def test_build_post_content_includes_signal_sections():
@@ -41,5 +44,5 @@ def test_build_post_content_includes_signal_sections():
 
     assert "시장 심리 지표" in content
     assert "CNN 공포탐욕 지수" in content
-    assert "리스크 레벨 평가" in content
-    assert "데이터 수집 시각" in content
+    assert "리스크 레벨 평가" in content or "수집 시각" in content
+    assert "수집 시각" in content

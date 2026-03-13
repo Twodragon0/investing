@@ -45,6 +45,9 @@ jobs:
       - name: Run ruff format check
         run: python3 -m ruff format --check scripts/
 
+      - name: Run pytest
+        run: python3 -m pytest tests/ -v --tb=short
+
       - name: Run basedpyright type check
         run: python -m basedpyright
 

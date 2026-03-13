@@ -181,7 +181,11 @@ class TestValidateNewsItem:
         assert validate_news_item(item) is None
 
     def test_description_equals_title_cleared(self):
-        item = {"title": "Bitcoin surges past 100K", "link": "https://example.com", "description": "Bitcoin surges past 100K"}
+        item = {
+            "title": "Bitcoin surges past 100K",
+            "link": "https://example.com",
+            "description": "Bitcoin surges past 100K",
+        }
         result = validate_news_item(item)
         assert result["description"] == ""
 

@@ -1,6 +1,5 @@
 """Tests for RSS fetcher (scripts/common/rss_fetcher.py)."""
 
-
 from common.rss_fetcher import _clean_rss_title, get_feed_health
 
 
