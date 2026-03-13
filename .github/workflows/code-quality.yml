@@ -34,7 +34,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r scripts/requirements.txt ruff yamllint basedpyright
+          pip install -r scripts/requirements.txt ruff yamllint basedpyright pytest pytest-cov
           curl -sSL "https://github.com/rhysd/actionlint/releases/download/v1.7.7/actionlint_1.7.7_linux_amd64.tar.gz" -o /tmp/actionlint.tgz
           tar -xzf /tmp/actionlint.tgz -C /tmp
           install /tmp/actionlint /usr/local/bin/actionlint
@@ -45,8 +45,12 @@ jobs:
       - name: Run ruff format check
         run: python3 -m ruff format --check scripts/
 
-      - name: Run pytest
-        run: python3 -m pytest tests/ -v --tb=short
+      - name: Run pytest with coverage
+        run: |
+          python3 -m pytest tests/ -v --tb=short \
+            --cov=scripts/common --cov-report=term-missing \
+            --cov-report=html:coverage-html \
+            --cov-fail-under=25
 
       - name: Run basedpyright type check
         run: python -m basedpyright
