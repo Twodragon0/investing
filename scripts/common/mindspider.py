@@ -10,7 +10,7 @@ import re
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 
-from scripts.common.config import setup_logging
+from common.config import setup_logging
 
 logger = setup_logging("mindspider")
 
