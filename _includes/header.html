@@ -1,6 +1,6 @@
 <header class="site-header" role="banner">
   <div class="container">
-    <a href="{{ '/' | relative_url }}" class="site-logo">🐉 {{ site.title }}</a>
+    <a href="{{ '/' | relative_url }}" class="site-logo"><span aria-hidden="true">🐉</span> {{ site.title }}</a>
     <nav class="site-nav" id="site-nav" role="navigation" aria-label="메인 네비게이션" data-i18n-aria="main_nav">
       {% for item in site.data.navigation.main %}
         {% if item.children %}
