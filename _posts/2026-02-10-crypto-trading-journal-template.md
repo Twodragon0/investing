@@ -6,6 +6,11 @@ categories: [crypto-trading-journal]
 tags: [trading, crypto, journal, BTC, ETH]
 source: "manual"
 lang: "ko"
+journal_template: true
+journal_pair: "BTC/ETH"
+journal_trade_count_value: 4
+journal_win_rate_value: 75
+journal_realized_pnl_value: 184000
 journal_strategy: "뉴욕 개장 전후로 BTC 추세 추종, ETH는 이벤트 확인 후 지연 진입"
 journal_market_regime: "변동성 확대"
 journal_confidence: "중간"

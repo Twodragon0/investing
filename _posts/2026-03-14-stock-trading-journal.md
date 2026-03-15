@@ -6,6 +6,10 @@ categories: [stock-trading-journal]
 tags: [trading, stock, journal, KOSPI, semiconductors, rotation]
 source: "manual"
 lang: "ko"
+journal_sector: "반도체, 자동차"
+journal_trade_count_value: 4
+journal_win_rate_value: 75
+journal_realized_pnl_value: 168000
 journal_strategy: "Index pullback buy, semiconductor first, avoid weak secondary themes"
 journal_market_regime: "반등 시도"
 journal_confidence: "높음"

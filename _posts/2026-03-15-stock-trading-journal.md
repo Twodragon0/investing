@@ -6,6 +6,10 @@ categories: [stock-trading-journal]
 tags: [trading, stock, journal, KOSPI, semiconductor, defense]
 source: "manual"
 lang: "ko"
+journal_sector: "반도체, 방산"
+journal_trade_count_value: 3
+journal_win_rate_value: 67
+journal_realized_pnl_value: 134000
 journal_strategy: "반도체 대형주 선별 매수, 방산은 단기 추세만 대응"
 journal_market_regime: "반등 시도"
 journal_confidence: "중간"
