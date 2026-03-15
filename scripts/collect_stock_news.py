@@ -851,6 +851,8 @@ def main():
 
     content = "\n".join(content_parts)
 
+    report_permalink = "/stock-news/{}/daily-stock-news-digest/".format(today.replace("-", "/"))
+
     filepath = gen.create_post(
         title=post_title,
         content=content,
@@ -859,6 +861,7 @@ def main():
         source="consolidated",
         lang="ko",
         image=snapshot_image_path,
+        extra_frontmatter={"permalink": report_permalink},
         slug="daily-stock-news-digest",
     )
     if filepath:
