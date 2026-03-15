@@ -6823,6 +6823,39 @@ a:focus-visible {
     }
   }
 
+  // Stat grid light mode
+  .stat-grid .stat-item {
+    background: rgba(240, 243, 246, 0.8);
+    border-color: rgba(208, 215, 222, 0.4);
+
+    .stat-value { color: #0969da; }
+    .stat-label { color: #656d76; }
+  }
+
+  // Alert box light mode
+  .alert-box {
+    &.alert-urgent {
+      background: rgba(207, 34, 46, 0.06);
+      border-color: #cf222e;
+      strong, .alert-title { color: #cf222e; }
+    }
+    &.alert-info {
+      background: rgba(9, 105, 218, 0.06);
+      border-color: #0969da;
+      strong, .alert-title { color: #0969da; }
+    }
+    &.alert-warning {
+      background: rgba(191, 135, 0, 0.06);
+      border-color: #bf8700;
+      strong, .alert-title { color: #9a6700; }
+    }
+  }
+
+  // Theme distribution bars light mode
+  .bar-track {
+    background: rgba(208, 215, 222, 0.3);
+  }
+
   // Price change indicators keep their semantic colors
   .price-up, .change-positive { color: #1a7f37; }
   .price-down, .change-negative { color: #cf222e; }

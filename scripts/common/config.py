@@ -22,8 +22,13 @@ def get_ssl_verify():
     Allows disabling via DISABLE_SSL_VERIFY=true for local dev.
     """
     if os.environ.get("DISABLE_SSL_VERIFY", "").lower() in ("true", "1"):
+        if os.environ.get("CI") or os.environ.get("GITHUB_ACTIONS"):
+            logger.error(
+                "DISABLE_SSL_VERIFY blocked in CI/GitHub Actions environment"
+            )
+            return True
         logger.critical(
-            "SSL verification disabled via DISABLE_SSL_VERIFY — MITM attacks possible. Do NOT use in production/CI."
+            "SSL verification disabled via DISABLE_SSL_VERIFY — MITM attacks possible. Local dev only."
         )
         return False
 
