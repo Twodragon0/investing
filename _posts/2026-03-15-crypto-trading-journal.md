@@ -21,6 +21,7 @@ journal_mistake: "ETH 반등 초입에서 체결 확인 없이 한 번 빠르게
 journal_next_focus: "FOMC 발언 전까지 총 노출 40% 이하를 유지하고, BTC 우세가 꺾이면 알트 비중을 늘리지 않습니다."
 description: "3월 15일 크립토 트레이딩 일지입니다. BTC 중심의 추세 추종과 ETH 확인 매수 전략, 손익과 다음 세션 포인트를 정리했습니다."
 excerpt: "BTC 강세 추종, ETH 확인 매수만 허용한 3월 15일 크립토 트레이딩 일지입니다. 실현 손익, 실수, 다음 세션 포인트를 한눈에 정리했습니다."
+permalink: "/crypto-journal/2026/03/15/crypto-trading-journal/"
 image: "/assets/images/generated/og-crypto-trading-journal-2026-03-15.png"
 image_alt: "Crypto trading journal visual board for March 15, 2026"
 ---
