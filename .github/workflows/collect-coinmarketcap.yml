@@ -29,6 +29,6 @@ jobs:
         uses: ./.github/actions/python-collect
         with:
           script: scripts/collect_coinmarketcap.py
-          install-playwright: 'true'
+          install-playwright: 'false'
           commit-message: 'chore: collect coinmarketcap data'
           git-add-paths: '_posts/ _state/ assets/images/'

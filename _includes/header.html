@@ -40,7 +40,7 @@
         </svg>
       </button>
     </div>
-    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="site-nav"><span aria-hidden="true">☰</span></button>
   </div>
 </header>
 
@@ -48,7 +48,7 @@
 <div class="search-overlay" id="search-overlay">
   <div class="search-overlay-content">
     <div class="search-overlay-header">
-      <input type="text" id="search-input" class="search-overlay-input" placeholder="검색어를 입력하세요..." autocomplete="off" data-baseurl="{{ site.baseurl }}" data-i18n-placeholder="search_placeholder">
+      <input type="text" id="search-input" class="search-overlay-input" placeholder="검색어를 입력하세요..." autocomplete="off" aria-label="사이트 내 검색" data-baseurl="{{ site.baseurl }}" data-i18n-placeholder="search_placeholder">
       <button class="search-overlay-close" aria-label="닫기" data-i18n-aria="close_label">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>

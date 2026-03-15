@@ -399,7 +399,7 @@ def main() -> int:
         logger.error("auth.test request failed: %s", err)
         return 1
     if not auth.get("ok"):
-        logger.error("auth.test failed: %s", auth)
+        logger.error("auth.test failed: error=%s", auth.get("error", "unknown"))
         return 1
 
     bot_user_id = auth.get("user_id", "")
