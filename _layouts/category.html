@@ -53,7 +53,27 @@ layout: default
       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
     </svg>
     <h3>아직 포스트가 없습니다</h3>
-    <p>곧 자동으로 수집됩니다.</p>
+    <p>이 카테고리의 콘텐츠가 곧 추가될 예정입니다.</p>
+    <div class="empty-state-actions">
+      <a href="{{ '/' | relative_url }}" class="error-btn primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        홈으로 돌아가기
+      </a>
+    </div>
+    <div class="empty-state-suggest">
+      <p>다른 카테고리도 둘러보세요</p>
+      <div class="empty-state-cats">
+        {% for cat in site.data.categories %}
+          {% if cat[0] != page.category %}
+          {% assign cat_page_url = cat[1].url | relative_url %}
+          <a href="{{ cat_page_url }}" class="empty-cat-link cat-{{ cat[0] | slugify }}">{{ cat[1].name }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
   </div>
   {% endif %}
 </section>

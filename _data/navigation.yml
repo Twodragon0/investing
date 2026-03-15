@@ -11,6 +11,10 @@ main:
         url: /regulatory-news/
       - title: "정치인 거래"
         url: /political-trades/
+      - title: "소셜 미디어"
+        url: /social-media/
+      - title: "글로벌 모니터"
+        url: /worldmonitor/
   - title: "트레이딩"
     children:
       - title: "크립토 일지"
