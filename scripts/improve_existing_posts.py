@@ -634,7 +634,7 @@ def main() -> None:
             if path.exists() and path.suffix == ".md" and path.is_relative_to(posts_dir):
                 post_files.append(path)
             elif path.exists() and path.suffix == ".md":
-                logger.warning("Skipping file outside posts_dir: %s", path)
+                print(f"Warning: Skipping file outside posts_dir: {path}", file=sys.stderr)
         post_files = sorted(set(post_files))
     else:
         post_files = sorted(posts_dir.glob("*.md"))
