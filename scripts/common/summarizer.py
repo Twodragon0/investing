@@ -1555,8 +1555,8 @@ class ThemeSummarizer:
             import datetime as _dt
 
             today_str = _dt.datetime.now(tz=_dt.UTC).date().isoformat()
-            # Use theme name in seed so different themes get different templates
-            seed = hash((today_str, kw_str))
+            # Use theme_key in seed so different themes get different templates
+            seed = hash((today_str, theme_key, kw_str))
             return templates[seed % len(templates)]
 
         # Strategy 2: Best description snippet from top articles
