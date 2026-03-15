@@ -488,6 +488,18 @@ a {
     border-color: rgba($cat-worldmonitor, 0.25);
     box-shadow: 0 2px 8px rgba($cat-worldmonitor, 0.15);
   }
+  &.cat-devops {
+    background: rgba($cat-devops, 0.15);
+    color: $cat-devops;
+    border-color: rgba($cat-devops, 0.25);
+    box-shadow: 0 2px 8px rgba($cat-devops, 0.15);
+  }
+  &.cat-blockchain {
+    background: rgba($cat-blockchain, 0.15);
+    color: $cat-blockchain;
+    border-color: rgba($cat-blockchain, 0.25);
+    box-shadow: 0 2px 8px rgba($cat-blockchain, 0.15);
+  }
 }
 
 .post-source {
@@ -2681,6 +2693,32 @@ html {
       .cat-badge { background: rgba($cat-political, 0.15); color: $cat-political; }
     }
   }
+
+  &.cat-devops {
+    color: $cat-devops;
+    &::before { background: $cat-devops; }
+    .cat-icon {
+      background: rgba($cat-devops, 0.15);
+      color: $cat-devops;
+    }
+    &:hover {
+      border-color: $cat-devops;
+      .cat-badge { background: rgba($cat-devops, 0.15); color: $cat-devops; }
+    }
+  }
+
+  &.cat-blockchain {
+    color: $cat-blockchain;
+    &::before { background: $cat-blockchain; }
+    .cat-icon {
+      background: rgba($cat-blockchain, 0.15);
+      color: $cat-blockchain;
+    }
+    &:hover {
+      border-color: $cat-blockchain;
+      .cat-badge { background: rgba($cat-blockchain, 0.15); color: $cat-blockchain; }
+    }
+  }
 }
 
 /* Today's Summary - Featured Card */
@@ -2942,6 +2980,14 @@ html {
 
   &.cat-border-worldmonitor {
     border-left: 3px solid $cat-worldmonitor;
+  }
+
+  &.cat-border-devops {
+    border-left: 3px solid $cat-devops;
+  }
+
+  &.cat-border-blockchain {
+    border-left: 3px solid $cat-blockchain;
   }
 }
 
@@ -3229,6 +3275,8 @@ html {
   &.cat-political { background: rgba($cat-political, 0.15); color: $cat-political; }
   &.cat-social { background: rgba($cat-social, 0.15); color: $cat-social; }
   &.cat-worldmonitor { background: rgba($cat-worldmonitor, 0.15); color: $cat-worldmonitor; }
+  &.cat-devops { background: rgba($cat-devops, 0.15); color: $cat-devops; }
+  &.cat-blockchain { background: rgba($cat-blockchain, 0.15); color: $cat-blockchain; }
 }
 
 .search-result-tag {
