@@ -693,12 +693,14 @@ def build_post_content(
     if protocols and chains:
         top_p = protocols[0]
         top_c = chains[0]
+        p_name = top_p.get('name', 'Unknown')
+        c_name = top_c.get('name', 'Unknown')
         content_parts.append(
-            f"1. **프로토콜**: {top_p.get('name', 'Unknown')}이 TVL "
+            f"1. **프로토콜**: {p_name} — TVL "
             f"{_format_tvl(top_p.get('tvl', 0))}로 1위를 유지하고 있습니다."
         )
         content_parts.append(
-            f"2. **체인**: {top_c.get('name', 'Unknown')}이 TVL "
+            f"2. **체인**: {c_name} — TVL "
             f"{_format_tvl(top_c.get('tvl', 0))}로 체인 생태계를 주도합니다."
         )
     content_parts.append("")

@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: collect-data
+  group: collect-worldmonitor-news
   cancel-in-progress: false
 
 jobs:
