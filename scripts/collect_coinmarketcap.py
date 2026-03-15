@@ -14,7 +14,6 @@ import re
 import sys
 import time
 from collections import OrderedDict
-from datetime import UTC, datetime
 from typing import Any, Dict, List, Tuple
 
 import requests
@@ -22,7 +21,7 @@ import requests
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.collector_metrics import log_collection_summary
-from common.config import get_env, get_ssl_verify, setup_logging
+from common.config import get_env, get_kst_now, get_ssl_verify, setup_logging
 from common.crypto_api import (
     fetch_coingecko_global,
     fetch_coingecko_top_coins,
@@ -32,7 +31,7 @@ from common.crypto_api import (
 from common.dedup import DedupEngine
 from common.formatters import fmt_number as _fmt_num
 from common.formatters import fmt_percent as _fmt_pct
-from common.post_generator import PostGenerator
+from common.post_generator import PostGenerator, build_dated_permalink
 from common.utils import request_with_retry
 
 try:
@@ -681,7 +680,7 @@ def main():
             "Using CoinGecko free API (no CMC key) — slug=daily-crypto-market-report is distinct from daily-market-report"
         )
 
-    now = datetime.now(UTC)
+    now = get_kst_now()
     today = now.strftime("%Y-%m-%d")
 
     dedup = DedupEngine("crypto_news_seen.json")
@@ -1163,10 +1162,14 @@ def main():
                 "\n\n".join(f"## {k}\n\n{v}" for k, v in sections.items() if v and v.strip()),
             ),
             date=now,
+            logical_date=today,
             tags=["market-report", "crypto", "top-coins", "trending", "daily"],
             source=source_name,
             source_url="https://coinmarketcap.com/" if "CoinMarketCap" in source_name else "https://www.coingecko.com/",
             lang="ko",
+            extra_frontmatter={
+                "permalink": build_dated_permalink("market-analysis", today, "daily-crypto-market-report")
+            },
             slug="daily-crypto-market-report",
         )
         if filepath:

@@ -20,14 +20,14 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.bettafish_analyzer import BettaFishAnalyzer
 from common.collector_metrics import log_collection_summary
-from common.config import REQUEST_TIMEOUT, get_env, get_ssl_verify, setup_logging
+from common.config import REQUEST_TIMEOUT, get_env, get_kst_now, get_ssl_verify, setup_logging
 from common.dedup import DedupEngine
 from common.enrichment import _STOCK_SOURCE_CONTEXT, enrich_items
 from common.markdown_utils import (
     html_reference_details,
 )
 from common.mindspider import MindSpider
-from common.post_generator import PostGenerator
+from common.post_generator import PostGenerator, build_dated_permalink
 from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
 from common.signal_composer import SignalComposer
 from common.summarizer import ThemeSummarizer
@@ -337,8 +337,8 @@ def main():
     dedup = DedupEngine("stock_news_seen.json")
     gen = PostGenerator("stock-news")
 
-    today = datetime.now(UTC).strftime("%Y-%m-%d")
-    now = datetime.now(UTC)
+    now = get_kst_now()
+    today = now.strftime("%Y-%m-%d")
 
     # Collect from all sources
     browser_items = fetch_google_news_browser_stocks()
@@ -844,19 +844,20 @@ def main():
     # Data collection footer
     content_parts.append(
         '\n<div class="wm-footer-meta">'
-        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} UTC</span>"
+        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} KST</span>"
         "<span>소스: NewsAPI, Yahoo Finance, Google News, Alpha Vantage</span>"
         "</div>"
     )
 
     content = "\n".join(content_parts)
 
-    report_permalink = "/stock-news/{}/daily-stock-news-digest/".format(today.replace("-", "/"))
+    report_permalink = build_dated_permalink("stock-news", today, "daily-stock-news-digest")
 
     filepath = gen.create_post(
         title=post_title,
         content=content,
         date=now,
+        logical_date=today,
         tags=["stock", "market", "daily-digest"],
         source="consolidated",
         lang="ko",
