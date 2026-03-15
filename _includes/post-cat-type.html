@@ -1,13 +1,3 @@
 {% assign first_cat = include.categories | first %}
-{% case first_cat %}
-{% when 'crypto-news', 'crypto-trading-journal' %}crypto
-{% when 'stock-news', 'stock-trading-journal' %}stock
-{% when 'market-analysis', 'worldmonitor' %}analysis
-{% when 'security-alerts' %}security
-{% when 'regulatory-news' %}regulatory
-{% when 'social-media' %}social
-{% when 'political-trades' %}political
-{% when 'devops' %}devops
-{% when 'blockchain' %}blockchain
-{% else %}other
-{% endcase %}
+{% assign category_data = site.data.categories[first_cat] %}
+{{ category_data.cat_type | default: "other" }}
