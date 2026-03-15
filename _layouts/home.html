@@ -12,8 +12,6 @@ layout: default
 {% assign regulatory_news_count = site.categories['regulatory-news'] | size %}
 {% assign political_trades_count = site.categories['political-trades'] | size %}
 {% assign social_media_count = site.categories['social-media'] | size %}
-{% assign devops_count = site.categories['devops'] | size %}
-{% assign blockchain_count = site.categories['blockchain'] | size %}
 {% assign crypto_group_count = crypto_news_count | plus: crypto_journal_count %}
 {% assign stock_group_count = stock_news_count | plus: stock_journal_count %}
 {% assign analysis_group_count = market_analysis_count | plus: worldmonitor_count %}
@@ -124,55 +122,20 @@ layout: default
   <!-- Sort & View Controls -->
   <div class="posts-controls">
     <div class="posts-tabs" role="tablist" aria-label="카테고리 필터">
-      <button class="posts-tab active" role="tab" aria-selected="true" data-category="all">
-        전체
-        <span class="tab-count">{{ site.posts | size }}</span>
-      </button>
-      {% assign crypto_posts = site.posts | where_exp: "post", "post.categories contains 'crypto-news' or post.categories contains 'crypto-trading-journal'" %}
-      <button class="posts-tab" role="tab" aria-selected="false" data-category="crypto">
-        암호화폐
-        <span class="tab-count">{{ crypto_posts | size }}</span>
-      </button>
-      {% assign stock_posts = site.posts | where_exp: "post", "post.categories contains 'stock-news' or post.categories contains 'stock-trading-journal'" %}
-      <button class="posts-tab" role="tab" aria-selected="false" data-category="stock">
-        주식
-        <span class="tab-count">{{ stock_posts | size }}</span>
-      </button>
-      {% assign analysis_posts = site.posts | where_exp: "post", "post.categories contains 'market-analysis' or post.categories contains 'worldmonitor'" %}
-      <button class="posts-tab" role="tab" aria-selected="false" data-category="analysis">
-        분석
-        <span class="tab-count">{{ analysis_posts | size }}</span>
-      </button>
-      {% assign regulatory_posts = site.posts | where_exp: "post", "post.categories contains 'regulatory-news'" %}
-      <button class="posts-tab" role="tab" aria-selected="false" data-category="regulatory">
-        규제
-        <span class="tab-count">{{ regulatory_posts | size }}</span>
-      </button>
-      {% assign social_posts = site.posts | where_exp: "post", "post.categories contains 'social-media'" %}
-      <button class="posts-tab" role="tab" aria-selected="false" data-category="social">
-        소셜
-        <span class="tab-count">{{ social_posts | size }}</span>
-      </button>
-      {% assign devops_posts = site.posts | where_exp: "post", "post.categories contains 'devops'" %}
-      <button class="posts-tab" role="tab" aria-selected="false" data-category="devops">
-        DevOps
-        <span class="tab-count">{{ devops_posts | size }}</span>
-      </button>
-      {% assign blockchain_posts = site.posts | where_exp: "post", "post.categories contains 'blockchain'" %}
-      <button class="posts-tab" role="tab" aria-selected="false" data-category="blockchain">
-        블록체인
-        <span class="tab-count">{{ blockchain_posts | size }}</span>
-      </button>
-      {% assign security_posts = site.posts | where_exp: "post", "post.categories contains 'security-alerts'" %}
-      <button class="posts-tab" role="tab" aria-selected="false" data-category="security">
-        보안
-        <span class="tab-count">{{ security_posts | size }}</span>
-      </button>
-      {% assign political_posts = site.posts | where_exp: "post", "post.categories contains 'political-trades'" %}
-      <button class="posts-tab" role="tab" aria-selected="false" data-category="political">
-        정치
-        <span class="tab-count">{{ political_posts | size }}</span>
-      </button>
+      {% for tab in site.data.home.tabs %}
+        {% assign tab_count = 0 %}
+        {% if tab.cat_type == 'all' %}
+          {% assign tab_count = site.posts | size %}
+        {% else %}
+          {% for cat_key in tab.categories %}
+            {% assign tab_count = tab_count | plus: site.categories[cat_key].size %}
+          {% endfor %}
+        {% endif %}
+        <button class="posts-tab{% if forloop.first %} active{% endif %}" role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" data-category="{{ tab.cat_type }}">
+          {{ tab.label }}
+          <span class="tab-count">{{ tab_count }}</span>
+        </button>
+      {% endfor %}
     </div>
     <div class="posts-sort-view">
       <div class="posts-sort" role="group" aria-label="정렬">
@@ -274,251 +237,28 @@ layout: default
     <h2>카테고리</h2>
   </div>
 
-  <a href="{{ '/crypto-news/' | relative_url }}" class="cat-card cat-crypto">
-    <div class="cat-icon-wrapper">
-      <div class="cat-icon">
+  {% for card in site.data.home.cards %}
+    {% assign card_category = site.data.categories[card.category] %}
+    {% assign card_count = site.categories[card.category] | size %}
+    <a href="{{ card_category.url | relative_url }}" class="cat-card {{ card.class_name }}">
+      <div class="cat-icon-wrapper">
+        <div class="cat-icon">
+          {% include category-icon.html icon=card.icon %}
+        </div>
+      </div>
+      <div class="cat-content">
+        <h3>{{ card_category.name }}</h3>
+        <p>{{ card_category.description }}</p>
+        <span class="cat-badge">{{ card_count }} 포스트</span>
+      </div>
+      <div class="cat-arrow">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10"/>
-          <path d="M12 6v12M9 9h5a2 2 0 1 1 0 4h-5"/>
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
         </svg>
       </div>
-    </div>
-    <div class="cat-content">
-      <h3>암호화폐 뉴스</h3>
-      <p>비트코인, 이더리움 등 실시간 시세 및 글로벌 뉴스</p>
-      <span class="cat-badge">{{ crypto_news_count }} 포스트</span>
-    </div>
-    <div class="cat-arrow">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="5" y1="12" x2="19" y2="12"/>
-        <polyline points="12 5 19 12 12 19"/>
-      </svg>
-    </div>
-  </a>
-
-  <a href="{{ '/stock-news/' | relative_url }}" class="cat-card cat-stock">
-    <div class="cat-icon-wrapper">
-      <div class="cat-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
-          <polyline points="17 6 23 6 23 12"/>
-        </svg>
-      </div>
-    </div>
-    <div class="cat-content">
-      <h3>주식 뉴스</h3>
-      <p>미국·한국 주식 시장 동향 및 종목 분석</p>
-      <span class="cat-badge">{{ stock_news_count }} 포스트</span>
-    </div>
-    <div class="cat-arrow">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="5" y1="12" x2="19" y2="12"/>
-        <polyline points="12 5 19 12 12 19"/>
-      </svg>
-    </div>
-  </a>
-
-  <a href="{{ '/crypto-journal/' | relative_url }}" class="cat-card cat-journal-crypto">
-    <div class="cat-icon-wrapper">
-      <div class="cat-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-          <polyline points="14 2 14 8 20 8"/>
-          <line x1="16" y1="13" x2="8" y2="13"/>
-          <line x1="16" y1="17" x2="8" y2="17"/>
-        </svg>
-      </div>
-    </div>
-    <div class="cat-content">
-      <h3>크립토 트레이딩 일지</h3>
-      <p>일일 암호화폐 매매 기록 및 전략 분석</p>
-      <span class="cat-badge">{{ crypto_journal_count }} 포스트</span>
-    </div>
-    <div class="cat-arrow">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="5" y1="12" x2="19" y2="12"/>
-        <polyline points="12 5 19 12 12 19"/>
-      </svg>
-    </div>
-  </a>
-
-  <a href="{{ '/stock-journal/' | relative_url }}" class="cat-card cat-journal-stock">
-    <div class="cat-icon-wrapper">
-      <div class="cat-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-          <polyline points="14 2 14 8 20 8"/>
-          <path d="M9 15h6M12 12v6"/>
-        </svg>
-      </div>
-    </div>
-    <div class="cat-content">
-      <h3>주식 트레이딩 일지</h3>
-      <p>일일 주식 매매 기록 및 포트폴리오 리뷰</p>
-      <span class="cat-badge">{{ stock_journal_count }} 포스트</span>
-    </div>
-    <div class="cat-arrow">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="5" y1="12" x2="19" y2="12"/>
-        <polyline points="12 5 19 12 12 19"/>
-      </svg>
-    </div>
-  </a>
-
-  <a href="{{ '/security-alerts/' | relative_url }}" class="cat-card cat-security">
-    <div class="cat-icon-wrapper">
-      <div class="cat-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          <path d="M12 8v4M12 16h.01"/>
-        </svg>
-      </div>
-    </div>
-    <div class="cat-content">
-      <h3>보안 알림</h3>
-      <p>블록체인 해킹, 스캠, DeFi 보안 사고 속보</p>
-      <span class="cat-badge">{{ security_alerts_count }} 포스트</span>
-    </div>
-    <div class="cat-arrow">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="5" y1="12" x2="19" y2="12"/>
-        <polyline points="12 5 19 12 12 19"/>
-      </svg>
-    </div>
-  </a>
-
-  <a href="{{ '/market-analysis/' | relative_url }}" class="cat-card cat-analysis">
-    <div class="cat-icon-wrapper">
-      <div class="cat-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="12" y1="20" x2="12" y2="10"/>
-          <line x1="18" y1="20" x2="18" y2="4"/>
-          <line x1="6" y1="20" x2="6" y2="16"/>
-        </svg>
-      </div>
-    </div>
-    <div class="cat-content">
-      <h3>시장 분석</h3>
-      <p>일일·주간 시장 종합 리포트 및 매크로 분석</p>
-      <span class="cat-badge">{{ market_analysis_count }} 포스트</span>
-    </div>
-    <div class="cat-arrow">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="5" y1="12" x2="19" y2="12"/>
-        <polyline points="12 5 19 12 12 19"/>
-      </svg>
-    </div>
-  </a>
-
-  <a href="{{ '/regulatory-news/' | relative_url }}" class="cat-card cat-regulatory">
-    <div class="cat-icon-wrapper">
-      <div class="cat-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
-          <line x1="4" y1="22" x2="4" y2="15"/>
-        </svg>
-      </div>
-    </div>
-    <div class="cat-content">
-      <h3>규제 동향</h3>
-      <p>글로벌 암호화폐·금융 규제 및 정책 변화</p>
-      <span class="cat-badge">{{ regulatory_news_count }} 포스트</span>
-    </div>
-    <div class="cat-arrow">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="5" y1="12" x2="19" y2="12"/>
-        <polyline points="12 5 19 12 12 19"/>
-      </svg>
-    </div>
-  </a>
-
-  <a href="{{ '/political-trades/' | relative_url }}" class="cat-card cat-political">
-    <div class="cat-icon-wrapper">
-      <div class="cat-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/>
-        </svg>
-      </div>
-    </div>
-    <div class="cat-content">
-      <h3>정치인 거래</h3>
-      <p>미국 의회·SEC 내부자 거래, 정책 동향 추적</p>
-      <span class="cat-badge">{{ political_trades_count }} 포스트</span>
-    </div>
-    <div class="cat-arrow">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="5" y1="12" x2="19" y2="12"/>
-        <polyline points="12 5 19 12 12 19"/>
-      </svg>
-    </div>
-  </a>
-
-  <a href="{{ '/social-media/' | relative_url }}" class="cat-card cat-social">
-    <div class="cat-icon-wrapper">
-      <div class="cat-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-        </svg>
-      </div>
-    </div>
-    <div class="cat-content">
-      <h3>소셜 미디어</h3>
-      <p>소셜 미디어 뉴스 및 커뮤니티 동향</p>
-      <span class="cat-badge">{{ social_media_count }} 포스트</span>
-    </div>
-    <div class="cat-arrow">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="5" y1="12" x2="19" y2="12"/>
-        <polyline points="12 5 19 12 12 19"/>
-      </svg>
-    </div>
-  </a>
-
-  <a href="{{ '/devops/' | relative_url }}" class="cat-card cat-devops">
-    <div class="cat-icon-wrapper">
-      <div class="cat-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 1v6"/><path d="m16.24 7.76 4.24-4.24"/><path d="M18 12h5"/><path d="m16.24 16.24 4.24 4.24"/><path d="M12 18v5"/><path d="m7.76 16.24-4.24 4.24"/><path d="M1 12h6"/><path d="m7.76 7.76-4.24-4.24"/><circle cx="12" cy="12" r="3"/>
-        </svg>
-      </div>
-    </div>
-    <div class="cat-content">
-      <h3>DevOps</h3>
-      <p>CI/CD 파이프라인, 인프라 자동화, 배포 전략 및 운영 노하우</p>
-      <span class="cat-badge">{{ devops_count }} 포스트</span>
-    </div>
-    <div class="cat-arrow">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="5" y1="12" x2="19" y2="12"/>
-        <polyline points="12 5 19 12 12 19"/>
-      </svg>
-    </div>
-  </a>
-
-  <a href="{{ '/blockchain/' | relative_url }}" class="cat-card cat-blockchain">
-    <div class="cat-icon-wrapper">
-      <div class="cat-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <rect x="3" y="3" width="7" height="7" rx="1"/>
-          <rect x="14" y="3" width="7" height="7" rx="1"/>
-          <rect x="3" y="14" width="7" height="7" rx="1"/>
-          <rect x="14" y="14" width="7" height="7" rx="1"/>
-          <path d="M10 6.5h4"/><path d="M6.5 10v4"/><path d="M17.5 10v4"/><path d="M10 17.5h4"/>
-        </svg>
-      </div>
-    </div>
-    <div class="cat-content">
-      <h3>블록체인</h3>
-      <p>블록체인 기술, 스마트 컨트랙트, DeFi 프로토콜 심층 분석</p>
-      <span class="cat-badge">{{ blockchain_count }} 포스트</span>
-    </div>
-    <div class="cat-arrow">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="5" y1="12" x2="19" y2="12"/>
-        <polyline points="12 5 19 12 12 19"/>
-      </svg>
-    </div>
-  </a>
+    </a>
+  {% endfor %}
 </section>
 
 <!-- Footer CTA -->
