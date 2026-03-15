@@ -11,7 +11,6 @@ import os
 import sys
 import time
 from collections import Counter
-from datetime import UTC, datetime
 from typing import Any, Dict, List, Optional
 
 import requests
@@ -23,6 +22,7 @@ from common.collector_metrics import log_collection_summary
 from common.config import (
     REQUEST_TIMEOUT,
     USER_AGENT,
+    get_kst_now,
     get_ssl_verify,
     setup_logging,
 )
@@ -34,7 +34,7 @@ from common.markdown_utils import (
     markdown_link,
     markdown_table,
 )
-from common.post_generator import PostGenerator
+from common.post_generator import PostGenerator, build_dated_permalink
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.utils import request_with_retry, sanitize_string, truncate_text
 
@@ -575,8 +575,8 @@ def main() -> None:
     dedup = DedupEngine("geopolitical_seen.json")
     generator = PostGenerator("worldmonitor")
 
-    today = datetime.now(UTC).strftime("%Y-%m-%d")
-    now = datetime.now(UTC)
+    now = get_kst_now()
+    today = now.strftime("%Y-%m-%d")
     post_title = f"지정학 리스크 리포트 - {today}"
 
     # Skip if already generated today
@@ -741,7 +741,7 @@ def main() -> None:
     # Footer
     content_parts.append(
         '\n<div class="wm-footer-meta">'
-        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} UTC</span>"
+        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} KST</span>"
         "<span>소스: Polymarket, GDELT Project, Google News RSS</span>"
         "</div>"
     )
@@ -804,10 +804,14 @@ def main() -> None:
         title=post_title,
         content=content,
         date=now,
+        logical_date=today,
         tags=["geopolitical", "polymarket", "risk", "conflict", "prediction-market"],
         source="geopolitical",
         lang="ko",
         image=briefing_image or "",
+        extra_frontmatter={
+            "permalink": build_dated_permalink("market-analysis", today, "daily-geopolitical-risk-report")
+        },
         slug="daily-geopolitical-risk-report",
     )
 
