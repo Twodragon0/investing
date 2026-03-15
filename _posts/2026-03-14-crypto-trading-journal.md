@@ -6,6 +6,10 @@ categories: [crypto-trading-journal]
 tags: [trading, crypto, journal, BTC, SOL, momentum]
 source: "manual"
 lang: "ko"
+journal_pair: "BTC/SOL"
+journal_trade_count_value: 3
+journal_win_rate_value: 67
+journal_realized_pnl_value: 94000
 journal_strategy: "BTC range scalp, SOL momentum only on volume confirmation"
 journal_market_regime: "변동성 확대"
 journal_confidence: "중간"

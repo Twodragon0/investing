@@ -6,6 +6,11 @@ categories: [stock-trading-journal]
 tags: [trading, stock, journal, KOSPI, S&P500]
 source: "manual"
 lang: "ko"
+journal_template: true
+journal_sector: "반도체"
+journal_trade_count_value: 3
+journal_win_rate_value: 67
+journal_realized_pnl_value: 126000
 journal_strategy: "지수 반등 확인 후 반도체와 방산만 선별 진입, 장 후반에는 비중 축소"
 journal_market_regime: "반등 시도"
 journal_confidence: "중간"
