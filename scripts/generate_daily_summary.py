@@ -2257,7 +2257,6 @@ def main():
 
     content = "\n".join(content_parts)
 
-    # Create post with pin: true
     title = f"일일 뉴스 종합 요약 - {today}"
     slug = "daily-news-summary"
     filename = f"{today}-{slug}.md"
@@ -2291,7 +2290,6 @@ tags: [{", ".join(safe_tags)}]
 keywords: "{keywords}"
 source: "consolidated"
 lang: "ko"{image_line}
-pin: true
 description: "{safe_desc}"
 excerpt: "{counts_str}의 뉴스를 종합 분석한 일일 요약"
 image_alt: "{image_alt}"
