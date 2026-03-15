@@ -1,60 +1,70 @@
 crypto-news:
   name: "암호화폐 뉴스"
   color: "cat-crypto"
+  cat_type: "crypto"
   url: "/crypto-news/"
   description: "비트코인, 이더리움 등 실시간 시세 및 글로벌 뉴스"
 
 stock-news:
   name: "주식 뉴스"
   color: "cat-stock"
+  cat_type: "stock"
   url: "/stock-news/"
   description: "미국·한국 주식 시장 동향 및 종목 분석"
 
 crypto-trading-journal:
   name: "크립토 트레이딩 일지"
   color: "cat-journal"
+  cat_type: "crypto"
   url: "/crypto-journal/"
   description: "일일 암호화폐 매매 기록 및 전략 분석"
 
 stock-trading-journal:
   name: "주식 트레이딩 일지"
   color: "cat-journal"
+  cat_type: "stock"
   url: "/stock-journal/"
   description: "일일 주식 매매 기록 및 포트폴리오 리뷰"
 
 security-alerts:
   name: "보안 알림"
   color: "cat-security"
+  cat_type: "security"
   url: "/security-alerts/"
   description: "블록체인 해킹, 스캠, DeFi 보안 사고 속보"
 
 market-analysis:
   name: "시장 분석"
   color: "cat-analysis"
+  cat_type: "analysis"
   url: "/market-analysis/"
   description: "일일·주간 시장 종합 리포트 및 매크로 분석"
 
 regulatory-news:
   name: "규제 동향"
   color: "cat-regulatory"
+  cat_type: "regulatory"
   url: "/regulatory-news/"
   description: "글로벌 암호화폐·금융 규제 및 정책 변화"
 
 political-trades:
   name: "정치인 거래"
   color: "cat-political"
+  cat_type: "political"
   url: "/political-trades/"
   description: "미국 의회·SEC 내부자 거래, 정책 동향 추적"
 
 social-media:
   name: "소셜 미디어"
   color: "cat-social"
+  cat_type: "social"
   url: "/social-media/"
   description: "소셜 미디어 뉴스 및 커뮤니티 동향"
 
 worldmonitor:
   name: "글로벌 모니터"
   color: "cat-worldmonitor"
+  cat_type: "analysis"
   url: "/worldmonitor/"
   description: "지정학적 리스크, 글로벌 이슈, 국제 정세 모니터링"
 
@@ -67,5 +77,6 @@ devops:
 blockchain:
   name: "블록체인"
   color: "cat-blockchain"
+  cat_type: "blockchain"
   url: "/blockchain/"
   description: "블록체인 기술, 스마트 컨트랙트, DeFi 프로토콜 심층 분석"
