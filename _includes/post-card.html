@@ -5,7 +5,7 @@
 {% assign pc_cat_data = site.data.categories[pc_cat] %}
 {% assign pc_cat_name = pc_cat_data.name | default: pc_cat %}
 
-<a href="{{ post.url | relative_url }}" class="post-card cat-border-{{ pc_cat | slugify }}{% if post.pin %} pinned{% endif %}">
+<a href="{{ post.url | relative_url }}" class="post-card cat-border-{{ pc_cat | slugify }}{% if post.pin %} pinned{% endif %}" data-journal-pair="{{ post.journal_pair | default: '' | escape }}" data-journal-sector="{{ post.journal_sector | default: '' | escape }}" data-journal-confidence="{{ post.journal_confidence | default: '' | escape }}">
   {% if post.image %}
   <div class="post-card-thumb">
     <img src="{{ post.image | relative_url }}" alt="{{ post.title | truncate: 60 }}" loading="lazy" decoding="async" width="400" height="210" onerror="this.style.display='none'">
