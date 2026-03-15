@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: collect-data
+  group: collect-defi-llama
   cancel-in-progress: false
 
 jobs:

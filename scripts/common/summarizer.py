@@ -1542,16 +1542,21 @@ class ThemeSummarizer:
 
             kw_str = ", ".join(display_kw)
 
-            # Use varied templates instead of one fixed pattern
+            # Use varied templates to avoid repetitive phrasing
             templates = [
                 f"{kw_str} 중심으로 {count}건의 뉴스가 수집되었습니다.",
-                f"{kw_str} 이슈가 {count}건으로 주목받고 있습니다.",
-                f"{count}건의 뉴스에서 {kw_str} 키워드가 부각되고 있습니다.",
+                f"{count}건의 뉴스에서 {kw_str} 관련 동향이 포착되었습니다.",
+                f"{kw_str} 관련 {count}건의 소식이 확인되었습니다.",
+                f"{kw_str} 흐름에 {count}건의 뉴스가 집중되고 있습니다.",
+                f"{count}건의 기사에서 {kw_str} 키워드가 부각되고 있습니다.",
+                f"{kw_str} 이슈로 {count}건의 보도가 이어지고 있습니다.",
+                f"{kw_str} 테마에서 {count}건의 뉴스가 감지되었습니다.",
             ]
             import datetime as _dt
 
             today_str = _dt.datetime.now(tz=_dt.UTC).date().isoformat()
-            seed = hash((today_str, count, kw_str))
+            # Use theme name in seed so different themes get different templates
+            seed = hash((today_str, kw_str))
             return templates[seed % len(templates)]
 
         # Strategy 2: Best description snippet from top articles

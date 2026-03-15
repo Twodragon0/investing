@@ -24,9 +24,6 @@ jobs:
           fetch-depth: 0
           ref: main
 
-      - name: OpenCode sync - git pull
-        run: bash scripts/opencode_git_pull.sh
-
       - name: Ralph loop - improve post quality
         uses: ./.github/actions/python-collect
         with:
