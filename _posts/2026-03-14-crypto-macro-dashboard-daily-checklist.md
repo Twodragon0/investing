@@ -8,6 +8,7 @@ keywords: "crypto dashboard checklist, 거시경제 체크리스트, DXY, VIX, 1
 source: "manual-research"
 lang: "ko"
 description: "~/Desktop/crypto 대시보드와 ~/Desktop/investing 포스트를 함께 운영할 때 매일 점검해야 할 거시경제 퀀트 트레이딩 체크리스트입니다."
+image: "/assets/images/generated/news-briefing-crypto-macro-dashboard-daily-checklist-2026-03-14.png"
 excerpt: "장 전, 장 중, 장 마감 후로 나눠 DXY·10Y·VIX·ETF 자금·BTC 도미넌스·포지션 크기를 점검하는 실전 운영 체크리스트"
 pin: false
 ---
