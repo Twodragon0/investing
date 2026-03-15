@@ -2,6 +2,7 @@
 layout: default
 ---
 {% assign cat_posts = site.posts | where_exp: "post", "post.categories contains page.category" %}
+{% assign journal_posts = cat_posts | where_exp: "post", "post.journal_template != true" %}
 
 <section class="category-archive">
   <div class="category-header">
@@ -23,13 +24,13 @@ layout: default
     {% assign is_journal_category = true %}
   {% endif %}
 
-  {% if is_journal_category and cat_posts.size > 0 %}
-  {% assign latest_post = cat_posts.first %}
+  {% if is_journal_category and journal_posts.size > 0 %}
+  {% assign latest_post = journal_posts.first %}
   {% assign latest_result = latest_post.journal_day_result | default: '-' %}
   {% assign latest_trades = latest_post.journal_trade_count | default: '-' %}
   {% assign latest_confidence = latest_post.journal_confidence | default: '-' %}
   {% assign latest_focus = latest_post.journal_next_focus | default: latest_post.excerpt %}
-  {% assign monthly_groups = cat_posts | group_by_exp: 'post', 'post.date | date: "%Y-%m"' %}
+  {% assign monthly_groups = journal_posts | group_by_exp: 'post', 'post.date | date: "%Y-%m"' %}
   <section class="journal-landing-dashboard">
     <div class="dashboard-header journal-dashboard-header">
       <div class="dashboard-gradient-bg"></div>
@@ -95,15 +96,15 @@ layout: default
         <div class="journal-landing-side-card">
           <span class="journal-landing-kicker">Archive Snapshot</span>
           <ul class="journal-landing-stats">
-            <li><strong>{{ cat_posts.size }}</strong><span>Total Journals</span></li>
-            <li><strong>{{ cat_posts | map: 'journal_trade_count' | compact | size }}</strong><span>Tracked Sessions</span></li>
+            <li><strong>{{ journal_posts.size }}</strong><span>Total Journals</span></li>
+            <li><strong>{{ journal_posts | map: 'journal_trade_count' | compact | size }}</strong><span>Tracked Sessions</span></li>
             <li><strong>{{ latest_post.date | date: "%m-%d" }}</strong><span>Latest Session</span></li>
           </ul>
         </div>
         <div class="journal-landing-side-card">
           <span class="journal-landing-kicker">Recent Boards</span>
           <div class="journal-landing-mini-list">
-            {% for post in cat_posts limit: 3 %}
+            {% for post in journal_posts limit: 3 %}
             <a href="{{ post.url | relative_url }}" class="journal-landing-mini-card">
               {% if post.image %}<img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title }}">{% endif %}
               <div>
@@ -130,17 +131,41 @@ layout: default
       <div class="journal-monthly-grid">
         {% for month in monthly_groups limit: 3 %}
         {% assign month_latest = month.items | first %}
+        {% assign month_trade_total = 0 %}
+        {% assign month_win_rate_total = 0 %}
+        {% assign month_win_rate_count = 0 %}
+        {% assign month_realized_total = 0 %}
+        {% for month_post in month.items %}
+          {% assign month_trade_total = month_trade_total | plus: month_post.journal_trade_count_value | default: 0 %}
+          {% if month_post.journal_win_rate_value %}
+            {% assign month_win_rate_total = month_win_rate_total | plus: month_post.journal_win_rate_value %}
+            {% assign month_win_rate_count = month_win_rate_count | plus: 1 %}
+          {% endif %}
+          {% assign month_realized_total = month_realized_total | plus: month_post.journal_realized_pnl_value | default: 0 %}
+        {% endfor %}
+        {% assign average_win_rate = 0 %}
+        {% if month_win_rate_count > 0 %}
+          {% assign average_win_rate = month_win_rate_total | divided_by: month_win_rate_count %}
+        {% endif %}
         <article class="journal-month-card">
           <span class="journal-landing-kicker">{{ month.name }}</span>
           <h3>{{ month.items.size }}개 세션</h3>
           <div class="journal-month-card-grid">
             <div>
-              <span class="journal-summary-label">Latest Result</span>
-              <strong class="journal-summary-value">{{ month_latest.journal_day_result | default: '-' }}</strong>
+              <span class="journal-summary-label">Realized PnL</span>
+              <strong class="journal-summary-value">{{ month_realized_total | prepend: '₩' }}</strong>
             </div>
             <div>
-              <span class="journal-summary-label">Tracked Trades</span>
-              <strong class="journal-summary-value">{{ month.items | map: 'journal_trade_count' | compact | size }}</strong>
+              <span class="journal-summary-label">Avg Win Rate</span>
+              <strong class="journal-summary-value">{{ average_win_rate }}%</strong>
+            </div>
+            <div>
+              <span class="journal-summary-label">Total Trades</span>
+              <strong class="journal-summary-value">{{ month_trade_total }}</strong>
+            </div>
+            <div>
+              <span class="journal-summary-label">Latest Result</span>
+              <strong class="journal-summary-value">{{ month_latest.journal_day_result | default: '-' }}</strong>
             </div>
           </div>
           <p>{{ month_latest.journal_next_focus | default: month_latest.excerpt }}</p>
@@ -160,6 +185,35 @@ layout: default
       </svg>
       <input type="text" id="category-filter" placeholder="이 카테고리 내에서 검색..." aria-label="카테고리 내 검색" />
     </div>
+    {% if is_journal_category %}
+    <div class="category-filter-row">
+      {% if page.category == 'crypto-trading-journal' %}
+      <select id="journal-pair-filter" aria-label="거래 페어 필터">
+        <option value="">전체 페어</option>
+        {% assign pair_values = journal_posts | map: 'journal_pair' | compact | uniq %}
+        {% for pair in pair_values %}
+        <option value="{{ pair }}">{{ pair }}</option>
+        {% endfor %}
+      </select>
+      {% endif %}
+      {% if page.category == 'stock-trading-journal' %}
+      <select id="journal-sector-filter" aria-label="섹터 필터">
+        <option value="">전체 섹터</option>
+        {% assign sector_values = journal_posts | map: 'journal_sector' | compact | uniq %}
+        {% for sector in sector_values %}
+        <option value="{{ sector }}">{{ sector }}</option>
+        {% endfor %}
+      </select>
+      {% endif %}
+      <select id="journal-confidence-filter" aria-label="신뢰도 필터">
+        <option value="">전체 신뢰도</option>
+        {% assign confidence_values = journal_posts | map: 'journal_confidence' | compact | uniq %}
+        {% for confidence in confidence_values %}
+        <option value="{{ confidence }}">{{ confidence }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    {% endif %}
     <div class="category-sort">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <line x1="3" y1="12" x2="21" y2="12"/><polyline points="8 6 3 12 8 18"/>
@@ -221,6 +275,9 @@ layout: default
   var loadMoreBtn = null;
   var limit = 20;
   var shown = 0;
+  var pairFilter = document.getElementById('journal-pair-filter');
+  var sectorFilter = document.getElementById('journal-sector-filter');
+  var confidenceFilter = document.getElementById('journal-confidence-filter');
 
   function updateDateDividers() {
     var children = postsList.children;
@@ -261,6 +318,20 @@ layout: default
     });
   }
 
+  function matchesJournalFilters(post) {
+    var pairValue = pairFilter ? pairFilter.value : '';
+    var sectorValue = sectorFilter ? sectorFilter.value : '';
+    var confidenceValue = confidenceFilter ? confidenceFilter.value : '';
+    var postPair = post.dataset.journalPair || '';
+    var postSector = post.dataset.journalSector || '';
+    var postConfidence = post.dataset.journalConfidence || '';
+
+    if (pairValue && postPair.indexOf(pairValue) === -1) return false;
+    if (sectorValue && postSector.indexOf(sectorValue) === -1) return false;
+    if (confidenceValue && postConfidence !== confidenceValue) return false;
+    return true;
+  }
+
   filterInput.addEventListener('input', function() {
     var query = this.value.toLowerCase().trim();
     var visibleCount = 0;
@@ -285,7 +356,9 @@ layout: default
       var tags = post.querySelectorAll('.tag');
       var tagText = Array.from(tags).map(function(t) { return t.textContent.toLowerCase(); }).join(' ');
 
-      if (query.length === 0 || title.indexOf(query) !== -1 || excerptText.indexOf(query) !== -1 || tagText.indexOf(query) !== -1) {
+      var queryMatch = query.length === 0 || title.indexOf(query) !== -1 || excerptText.indexOf(query) !== -1 || tagText.indexOf(query) !== -1;
+      var journalMatch = matchesJournalFilters(post);
+      if (queryMatch && journalMatch) {
         post.style.display = '';
         visibleCount++;
       } else {
@@ -325,6 +398,16 @@ layout: default
       if (noResults) noResults.remove();
     }
   });
+
+  if (pairFilter) {
+    pairFilter.addEventListener('change', function() { filterInput.dispatchEvent(new Event('input')); });
+  }
+  if (sectorFilter) {
+    sectorFilter.addEventListener('change', function() { filterInput.dispatchEvent(new Event('input')); });
+  }
+  if (confidenceFilter) {
+    confidenceFilter.addEventListener('change', function() { filterInput.dispatchEvent(new Event('input')); });
+  }
 
 // Progressive loading - show first 20 posts
   (function() {

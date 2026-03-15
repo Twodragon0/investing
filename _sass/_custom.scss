@@ -3222,6 +3222,14 @@ html {
     grid-template-columns: 1fr;
   }
 
+  .category-filter-row {
+    width: 100%;
+
+    select {
+      width: 100%;
+    }
+  }
+
   .journal-landing-image-link {
     max-width: 420px;
     margin: 0 auto;
@@ -4944,6 +4952,23 @@ html {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.75rem;
   margin: 1rem 0;
+}
+
+.category-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+
+  select {
+    min-width: 160px;
+    padding: 0.7rem 0.9rem;
+    border-radius: 12px;
+    border: 1px solid rgba($border-color, 0.36);
+    background: rgba($bg-card, 0.88);
+    color: $text-primary;
+    font-size: 0.9rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
 }
 
 .journal-landing-metric {
