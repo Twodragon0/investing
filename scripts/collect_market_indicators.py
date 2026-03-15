@@ -824,6 +824,8 @@ def main() -> None:
         tags.append("fred")
 
     # Generate Jekyll post
+    report_permalink = "/market-analysis/{}/daily-market-indicators/".format(today.replace("-", "/"))
+
     filepath = gen.create_post(
         title=post_title,
         content=content,
@@ -831,6 +833,7 @@ def main() -> None:
         tags=tags,
         source="consolidated",
         lang="ko",
+        extra_frontmatter={"permalink": report_permalink},
         slug="daily-market-indicators",
     )
 
