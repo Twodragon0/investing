@@ -63,6 +63,10 @@ def test_build_journal_performance_section_renders_table_and_notes():
             {
                 "file_date": "2026-03-15",
                 "categories": "[crypto-trading-journal]",
+                "title": "크립토 트레이딩 일지 - 2026-03-15",
+                "excerpt": "BTC 중심 전략과 세션 보드를 정리한 일지입니다.",
+                "image": "/assets/images/generated/og-crypto-trading-journal-2026-03-15.png",
+                "permalink": "/crypto-journal/2026/03/15/crypto-trading-journal/",
                 "journal_strategy": "BTC 추세 추종",
                 "journal_day_result": "+1.4%",
                 "journal_trade_count": "4회",
@@ -77,3 +81,5 @@ def test_build_journal_performance_section_renders_table_and_notes():
     assert "## 트레이딩 일지 성과" in joined
     assert "| 2026-03-15 | 크립토 | BTC 추세 추종 | +1.4% | 4회 | +₩210,000 |" in joined
     assert "베스트 트레이드: BTC 재진입" in joined
+    assert '<a href="/crypto-journal/2026/03/15/crypto-trading-journal/" class="journal-digest-card">' in joined
+    assert 'class="journal-digest-thumb"' in joined

@@ -33,6 +33,9 @@ def parse_post_frontmatter(filepath: str) -> Dict:
         "date": "",
         "categories": "",
         "tags": [],
+        "excerpt": "",
+        "image": "",
+        "permalink": "",
         "journal_strategy": "",
         "journal_market_regime": "",
         "journal_day_result": "",
@@ -64,6 +67,12 @@ def parse_post_frontmatter(filepath: str) -> Dict:
             elif line.startswith("tags:"):
                 tags_value = line.split(":", 1)[1].strip().strip("[]")
                 result["tags"] = [tag.strip().strip('"').strip("'") for tag in tags_value.split(",") if tag.strip()]
+            elif line.startswith("excerpt:"):
+                result["excerpt"] = line.split(":", 1)[1].strip().strip('"').strip("'")
+            elif line.startswith("image:"):
+                result["image"] = line.split(":", 1)[1].strip().strip('"').strip("'")
+            elif line.startswith("permalink:"):
+                result["permalink"] = line.split(":", 1)[1].strip().strip('"').strip("'")
             elif line.startswith("journal_strategy:"):
                 result["journal_strategy"] = line.split(":", 1)[1].strip().strip('"').strip("'")
             elif line.startswith("journal_market_regime:"):
@@ -228,6 +237,29 @@ def build_journal_performance_section(posts: List[Dict]) -> List[str]:
             if post.get("journal_next_focus"):
                 lines.append(f"- 다음 세션 포인트: {post.get('journal_next_focus')}")
             lines.append("")
+
+    lines.append('<div class="journal-digest-grid">')
+    for post in sorted(journal_posts, key=lambda x: x.get("file_date", ""), reverse=True)[:4]:
+        category = post.get("categories", "").strip("[]")
+        journal_name = "크립토 트레이딩 일지" if category == "crypto-trading-journal" else "주식 트레이딩 일지"
+        excerpt = smart_truncate(post.get("excerpt", "") or post.get("journal_next_focus", ""), 120)
+        permalink = post.get("permalink", "") or "#"
+        image = post.get("image", "")
+        lines.append(f'<a href="{permalink}" class="journal-digest-card">')
+        if image:
+            lines.append(f'  <img src="{image}" alt="{post.get("title", journal_name)}" class="journal-digest-thumb">')
+        lines.append('  <div class="journal-digest-body">')
+        lines.append(f'    <span class="journal-digest-kicker">{journal_name}</span>')
+        lines.append(f"    <h4>{post.get('title', journal_name)}</h4>")
+        lines.append(f"    <p>{excerpt}</p>")
+        lines.append('    <div class="journal-digest-meta">')
+        lines.append(f"      <span>{post.get('file_date', '-')}</span>")
+        lines.append(f"      <span>{post.get('journal_day_result', '-')}</span>")
+        lines.append(f"      <span>{post.get('journal_trade_count', '-')}</span>")
+        lines.append("    </div>")
+        lines.append("  </div>")
+        lines.append("</a>")
+    lines.append("</div>")
 
     return lines
 
