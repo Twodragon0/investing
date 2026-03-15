@@ -119,49 +119,77 @@ layout: default
     <h2>최근 포스트</h2>
   </div>
 
-  <div class="posts-tabs" role="tablist" aria-label="카테고리 필터">
-    <button class="posts-tab active" role="tab" aria-selected="true" data-category="all">
-      전체
-      <span class="tab-count">{{ site.posts | size }}</span>
-    </button>
-    {% assign crypto_posts = site.posts | where_exp: "post", "post.categories contains 'crypto-news' or post.categories contains 'crypto-trading-journal'" %}
-    <button class="posts-tab" role="tab" aria-selected="false" data-category="crypto">
-      암호화폐
-      <span class="tab-count">{{ crypto_posts | size }}</span>
-    </button>
-    {% assign stock_posts = site.posts | where_exp: "post", "post.categories contains 'stock-news' or post.categories contains 'stock-trading-journal'" %}
-    <button class="posts-tab" role="tab" aria-selected="false" data-category="stock">
-      주식
-      <span class="tab-count">{{ stock_posts | size }}</span>
-    </button>
-    {% assign analysis_posts = site.posts | where_exp: "post", "post.categories contains 'market-analysis' or post.categories contains 'worldmonitor'" %}
-    <button class="posts-tab" role="tab" aria-selected="false" data-category="analysis">
-      분석
-      <span class="tab-count">{{ analysis_posts | size }}</span>
-    </button>
-    {% assign regulatory_posts = site.posts | where_exp: "post", "post.categories contains 'regulatory-news'" %}
-    <button class="posts-tab" role="tab" aria-selected="false" data-category="regulatory">
-      규제
-      <span class="tab-count">{{ regulatory_posts | size }}</span>
-    </button>
-    {% assign social_posts = site.posts | where_exp: "post", "post.categories contains 'social-media'" %}
-    <button class="posts-tab" role="tab" aria-selected="false" data-category="social">
-      소셜
-      <span class="tab-count">{{ social_posts | size }}</span>
-    </button>
-    {% assign security_posts = site.posts | where_exp: "post", "post.categories contains 'security-alerts'" %}
-    <button class="posts-tab" role="tab" aria-selected="false" data-category="security">
-      보안
-      <span class="tab-count">{{ security_posts | size }}</span>
-    </button>
-    {% assign political_posts = site.posts | where_exp: "post", "post.categories contains 'political-trades'" %}
-    <button class="posts-tab" role="tab" aria-selected="false" data-category="political">
-      정치
-      <span class="tab-count">{{ political_posts | size }}</span>
-    </button>
+  <!-- Sort & View Controls -->
+  <div class="posts-controls">
+    <div class="posts-tabs" role="tablist" aria-label="카테고리 필터">
+      <button class="posts-tab active" role="tab" aria-selected="true" data-category="all">
+        전체
+        <span class="tab-count">{{ site.posts | size }}</span>
+      </button>
+      {% assign crypto_posts = site.posts | where_exp: "post", "post.categories contains 'crypto-news' or post.categories contains 'crypto-trading-journal'" %}
+      <button class="posts-tab" role="tab" aria-selected="false" data-category="crypto">
+        암호화폐
+        <span class="tab-count">{{ crypto_posts | size }}</span>
+      </button>
+      {% assign stock_posts = site.posts | where_exp: "post", "post.categories contains 'stock-news' or post.categories contains 'stock-trading-journal'" %}
+      <button class="posts-tab" role="tab" aria-selected="false" data-category="stock">
+        주식
+        <span class="tab-count">{{ stock_posts | size }}</span>
+      </button>
+      {% assign analysis_posts = site.posts | where_exp: "post", "post.categories contains 'market-analysis' or post.categories contains 'worldmonitor'" %}
+      <button class="posts-tab" role="tab" aria-selected="false" data-category="analysis">
+        분석
+        <span class="tab-count">{{ analysis_posts | size }}</span>
+      </button>
+      {% assign regulatory_posts = site.posts | where_exp: "post", "post.categories contains 'regulatory-news'" %}
+      <button class="posts-tab" role="tab" aria-selected="false" data-category="regulatory">
+        규제
+        <span class="tab-count">{{ regulatory_posts | size }}</span>
+      </button>
+      {% assign social_posts = site.posts | where_exp: "post", "post.categories contains 'social-media'" %}
+      <button class="posts-tab" role="tab" aria-selected="false" data-category="social">
+        소셜
+        <span class="tab-count">{{ social_posts | size }}</span>
+      </button>
+      {% assign security_posts = site.posts | where_exp: "post", "post.categories contains 'security-alerts'" %}
+      <button class="posts-tab" role="tab" aria-selected="false" data-category="security">
+        보안
+        <span class="tab-count">{{ security_posts | size }}</span>
+      </button>
+      {% assign political_posts = site.posts | where_exp: "post", "post.categories contains 'political-trades'" %}
+      <button class="posts-tab" role="tab" aria-selected="false" data-category="political">
+        정치
+        <span class="tab-count">{{ political_posts | size }}</span>
+      </button>
+    </div>
+    <div class="posts-sort-view">
+      <div class="posts-sort" role="group" aria-label="정렬">
+        <button class="sort-btn active" data-sort="recent" aria-pressed="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          최신순
+        </button>
+        <button class="sort-btn" data-sort="popular" aria-pressed="false">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          인기순
+        </button>
+      </div>
+      <div class="view-toggle" role="group" aria-label="뷰 전환">
+        <button class="view-btn active" data-view="card" aria-pressed="true" aria-label="카드뷰">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        </button>
+        <button class="view-btn" data-view="list" aria-pressed="false" aria-label="리스트뷰">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
   </div>
 
-  <div class="posts-tab-content" role="tabpanel">
+  <!-- Visible count indicator -->
+  <div class="posts-count-bar">
+    <span id="posts-visible-count"></span>
+  </div>
+
+  <div class="posts-tab-content" role="tabpanel" id="posts-container">
     {% comment %} 1단계: 고정(pin) 포스트 먼저 출력 {% endcomment %}
     {% for post in site.posts %}
       {% if post.pin %}
@@ -182,7 +210,8 @@ layout: default
         {% elsif post.categories contains 'political-trades' %}
           {% assign cat_type = "political" %}
         {% endif %}
-        <div class="post-item pinned-post" data-cat-type="{{ cat_type }}">
+        {% assign word_count = post.content | number_of_words %}
+        <div class="post-item pinned-post" data-cat-type="{{ cat_type }}" data-words="{{ word_count }}" data-tags="{{ post.tags | size }}" data-has-image="{% if post.image %}1{% else %}0{% endif %}" data-date="{{ post.date | date: '%Y%m%d%H%M' }}">
           {% include post-card.html post=post %}
         </div>
       {% endif %}
@@ -197,8 +226,8 @@ layout: default
             {% if prev_date != "" %}
               </div>
             {% endif %}
-            <div class="date-group">
-              <div class="date-group-header">
+            <div class="date-group" data-date="{{ post_date }}">
+              <div class="date-group-header" role="button" tabindex="0" aria-expanded="true">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <rect x="3" y="4" width="18" height="18" rx="2"/>
                   <line x1="16" y1="2" x2="16" y2="6"/>
@@ -206,6 +235,8 @@ layout: default
                   <line x1="3" y1="10" x2="21" y2="10"/>
                 </svg>
                 <span>{{ post_date }}</span>
+                <span class="date-group-count"></span>
+                <svg class="date-group-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
               </div>
             {% assign prev_date = post_date %}
           {% endif %}
@@ -226,7 +257,8 @@ layout: default
           {% elsif post.categories contains 'political-trades' %}
             {% assign cat_type = "political" %}
           {% endif %}
-          <div class="post-item" data-cat-type="{{ cat_type }}">
+          {% assign word_count = post.content | number_of_words %}
+          <div class="post-item" data-cat-type="{{ cat_type }}" data-words="{{ word_count }}" data-tags="{{ post.tags | size }}" data-has-image="{% if post.image %}1{% else %}0{% endif %}" data-date="{{ post.date | date: '%Y%m%d%H%M' }}">
             {% include post-card.html post=post %}
           </div>
         {% endif %}
@@ -235,6 +267,15 @@ layout: default
     {% if prev_date != "" %}
       </div>
     {% endif %}
+  </div>
+
+  <!-- Load More Button -->
+  <div class="posts-load-more" id="load-more-wrapper">
+    <button id="load-more-btn" class="load-more-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      더보기
+      <span id="load-more-remaining"></span>
+    </button>
   </div>
 </section>
 
@@ -493,38 +534,162 @@ layout: default
     dateEl.textContent = now.toLocaleDateString('ko-KR', options);
   }
 
-  // Tab switching with animation
+  // === Posts Controller ===
+  const POSTS_PER_PAGE = 20;
+  let currentPage = 1;
+  let currentCategory = 'all';
+  let currentSort = 'recent';
+  let currentView = 'card';
+
   const tabs = document.querySelectorAll('.posts-tab');
   const postItems = document.querySelectorAll('.post-item');
   const dateGroups = document.querySelectorAll('.date-group');
+  const container = document.getElementById('posts-container');
+  const loadMoreBtn = document.getElementById('load-more-btn');
+  const loadMoreWrapper = document.getElementById('load-more-wrapper');
+  const loadMoreRemaining = document.getElementById('load-more-remaining');
+  const visibleCountEl = document.getElementById('posts-visible-count');
 
+  function getFilteredItems() {
+    return Array.from(postItems).filter(item => {
+      if (currentCategory === 'all') return true;
+      return item.dataset.catType === currentCategory;
+    });
+  }
+
+  function sortItems(items) {
+    if (currentSort === 'popular') {
+      return items.sort((a, b) => {
+        const pinA = a.classList.contains('pinned-post') ? 1 : 0;
+        const pinB = b.classList.contains('pinned-post') ? 1 : 0;
+        if (pinB !== pinA) return pinB - pinA;
+        const scoreA = (parseInt(a.dataset.words) || 0) + (parseInt(a.dataset.tags) || 0) * 200 + (a.dataset.hasImage === '1' ? 500 : 0);
+        const scoreB = (parseInt(b.dataset.words) || 0) + (parseInt(b.dataset.tags) || 0) * 200 + (b.dataset.hasImage === '1' ? 500 : 0);
+        return scoreB - scoreA;
+      });
+    }
+    return items;
+  }
+
+  function updateVisibility() {
+    const filtered = getFilteredItems();
+    const sorted = sortItems([...filtered]);
+    const maxVisible = currentPage * POSTS_PER_PAGE;
+
+    // Hide all first
+    postItems.forEach(item => { item.style.display = 'none'; item.classList.remove('list-view'); });
+
+    // Show sorted items up to limit
+    sorted.forEach((item, i) => {
+      if (i < maxVisible) {
+        item.style.display = '';
+        if (currentView === 'list') item.classList.add('list-view');
+      }
+    });
+
+    // Date groups visibility
+    dateGroups.forEach(group => {
+      const items = group.querySelectorAll('.post-item');
+      const anyVisible = Array.from(items).some(i => i.style.display !== 'none');
+      group.style.display = anyVisible ? 'flex' : 'none';
+    });
+
+    // Popular mode: hide date group headers (irrelevant when sorted by score)
+    if (currentSort === 'popular') {
+      dateGroups.forEach(g => {
+        const header = g.querySelector('.date-group-header');
+        if (header) header.style.display = 'none';
+      });
+    } else {
+      dateGroups.forEach(g => {
+        const header = g.querySelector('.date-group-header');
+        if (header) header.style.display = '';
+      });
+    }
+
+    // Update count
+    const visibleCount = sorted.filter((_, i) => i < maxVisible).length;
+    const totalCount = filtered.length;
+    if (visibleCountEl) {
+      visibleCountEl.textContent = `${visibleCount} / ${totalCount}건 표시`;
+    }
+
+    // Load more button
+    const remaining = totalCount - maxVisible;
+    if (remaining > 0) {
+      loadMoreWrapper.style.display = '';
+      loadMoreRemaining.textContent = `(${remaining}건 남음)`;
+    } else {
+      loadMoreWrapper.style.display = 'none';
+    }
+
+    // Date group counts
+    dateGroups.forEach(group => {
+      const items = group.querySelectorAll('.post-item');
+      const visCount = Array.from(items).filter(i => i.style.display !== 'none').length;
+      const countEl = group.querySelector('.date-group-count');
+      if (countEl) countEl.textContent = visCount > 0 ? `(${visCount}건)` : '';
+    });
+  }
+
+  // Tab switching
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      const category = tab.dataset.category;
-
-      // Update active tab
+      currentCategory = tab.dataset.category;
+      currentPage = 1;
       tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
       tab.classList.add('active');
       tab.setAttribute('aria-selected', 'true');
-
-      // Filter posts
-      postItems.forEach(item => {
-        if (category === 'all') {
-          item.style.display = '';
-        } else {
-          const match = item.dataset.catType === category;
-          item.style.display = match ? '' : 'none';
-        }
-      });
-
-      // Hide date group headers if all posts inside are hidden
-      dateGroups.forEach(group => {
-        const items = group.querySelectorAll('.post-item');
-        const anyVisible = Array.from(items).some(i => i.style.display !== 'none');
-        group.style.display = anyVisible ? 'flex' : 'none';
-      });
+      updateVisibility();
     });
   });
+
+  // Sort switching
+  document.querySelectorAll('.sort-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentSort = btn.dataset.sort;
+      currentPage = 1;
+      document.querySelectorAll('.sort-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+      updateVisibility();
+    });
+  });
+
+  // View toggle
+  document.querySelectorAll('.view-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentView = btn.dataset.view;
+      document.querySelectorAll('.view-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+      if (container) container.classList.toggle('list-mode', currentView === 'list');
+      updateVisibility();
+    });
+  });
+
+  // Load more
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+      currentPage++;
+      updateVisibility();
+    });
+  }
+
+  // Date group collapse/expand
+  document.querySelectorAll('.date-group-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const group = header.parentElement;
+      const isCollapsed = group.classList.toggle('collapsed');
+      header.setAttribute('aria-expanded', !isCollapsed);
+    });
+    header.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); header.click(); }
+    });
+  });
+
+  // Initial render
+  updateVisibility();
 
   // Scroll to top button
   const scrollToTopBtn = document.getElementById('scroll-to-top');
