@@ -22,7 +22,7 @@ import requests
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.collector_metrics import log_collection_summary
-from common.config import REQUEST_TIMEOUT, get_ssl_verify, setup_logging
+from common.config import REQUEST_TIMEOUT, get_kst_now, get_ssl_verify, setup_logging
 from common.dedup import DedupEngine
 from common.enrichment import _POLITICAL_SOURCE_CONTEXT, enrich_items
 from common.markdown_utils import (
@@ -30,7 +30,7 @@ from common.markdown_utils import (
     html_source_tag,
     markdown_link,
 )
-from common.post_generator import PostGenerator
+from common.post_generator import PostGenerator, build_dated_permalink
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.translator import get_display_title
 from common.utils import request_with_retry
@@ -214,8 +214,8 @@ def main():
     dedup = DedupEngine("political_trades_seen.json")
     gen = PostGenerator("political-trades")
 
-    today = datetime.now(UTC).strftime("%Y-%m-%d")
-    now = datetime.now(UTC)
+    now = get_kst_now()
+    today = now.strftime("%Y-%m-%d")
 
     # Collect from all sources
     congress_items = fetch_congressional_trades()
@@ -718,7 +718,7 @@ def main():
 
     content_parts.append(
         '\n<div class="wm-footer-meta">'
-        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} UTC</span>"
+        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} KST</span>"
         "<span>소스: Capitol Trades, QuiverQuant, SEC EDGAR</span>"
         "</div>"
     )
@@ -775,6 +775,7 @@ def main():
         title=post_title,
         content=content,
         date=now,
+        logical_date=today,
         tags=[
             "political-trades",
             "congress",
@@ -788,7 +789,10 @@ def main():
         lang="ko",
         slug="daily-political-trades-report",
         image=briefing_image or "/assets/images/og-default.png",
-        extra_frontmatter={"excerpt": excerpt_text},
+        extra_frontmatter={
+            "excerpt": excerpt_text,
+            "permalink": build_dated_permalink("political-trades", today, "daily-political-trades-report"),
+        },
     )
     if filepath:
         # Mark individual items as seen
