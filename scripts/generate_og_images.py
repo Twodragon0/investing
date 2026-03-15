@@ -30,6 +30,8 @@ IMAGES_DIR = os.path.join(REPO_ROOT, "assets", "images", "generated")
 CATEGORY_COLORS: Dict[str, str] = {
     "crypto-news": "#f7931a",
     "stock-news": "#4caf50",
+    "crypto-trading-journal": "#14b8a6",
+    "stock-trading-journal": "#22c55e",
     "market-analysis": "#2196f3",
     "regulatory-news": "#00bcd4",
     "social-media": "#e91e63",
@@ -45,6 +47,8 @@ DEFAULT_ACCENT = "#607d8b"
 CATEGORY_LABELS: Dict[str, str] = {
     "crypto-news": "암호화폐",
     "stock-news": "주식",
+    "crypto-trading-journal": "Crypto Trading Journal",
+    "stock-trading-journal": "Stock Trading Journal",
     "market-analysis": "시장분석",
     "regulatory-news": "규제동향",
     "social-media": "소셜미디어",
@@ -132,7 +136,23 @@ def parse_front_matter(filepath: str) -> Optional[Dict[str, str]]:
     fm_text = match.group(1)
     result: Dict[str, str] = {}
 
-    for key in ("title", "date", "description", "image", "categories"):
+    for key in (
+        "title",
+        "date",
+        "description",
+        "excerpt",
+        "image",
+        "permalink",
+        "categories",
+        "journal_market_regime",
+        "journal_confidence",
+        "journal_risk_posture",
+        "journal_day_result",
+        "journal_trade_count",
+        "journal_win_rate",
+        "journal_realized_pnl",
+        "journal_next_focus",
+    ):
         pattern = rf"^{key}:\s*(.+)$"
         m = re.search(pattern, fm_text, re.MULTILINE)
         if m:
@@ -220,22 +240,18 @@ def generate_og_image(
     date_korean = format_date_korean(date_str)
     date_dotted = date_str.replace("-", ".")
 
-    # Wrap title and description
     title_lines = wrap_text(safe_text(title), max_width=28, max_lines=2)
     desc_lines = wrap_text(safe_text(description), max_width=42, max_lines=2) if description else []
 
-    # Create figure: 12x6.3 inches at 100 DPI = 1200x630 px
     fig = plt.figure(figsize=(12, 6.3), dpi=100)
     ax = fig.add_axes((0, 0, 1, 1))
     ax.set_xlim(0, 1200)
     ax.set_ylim(0, 630)
     ax.set_axis_off()
 
-    # Background
     bg_rect = mpatches.FancyBboxPatch((0, 0), 1200, 630, boxstyle="square,pad=0", facecolor=BG_COLOR, edgecolor="none")
     ax.add_patch(bg_rect)
 
-    # Ambient glow and grid texture for premium tone
     for cx, cy, radius, alpha, color in [
         (170, 560, 160, 0.10, accent_color),
         (1080, 110, 190, 0.07, accent_color),
@@ -249,7 +265,6 @@ def generate_og_image(
     for x in range(80, 1125, 170):
         ax.plot([x, x], [54, 576], color="#334155", linewidth=0.8, alpha=0.08)
 
-    # Accent color bar at top
     accent_bar = mpatches.FancyBboxPatch(
         (0, 620), 1200, 10, boxstyle="square,pad=0", facecolor=accent_color, edgecolor="none"
     )
@@ -279,30 +294,9 @@ def generate_og_image(
     )
     ax.add_patch(header_panel)
 
-    # Branding
-    ax.text(
-        60,
-        580,
-        "INVESTING DRAGON",
-        fontsize=14,
-        color="#7dd3fc",
-        fontweight="bold",
-        ha="left",
-        va="center",
-        **_FK,
-    )
-    ax.text(
-        60,
-        554,
-        "Market intelligence briefing",
-        fontsize=12,
-        color=TEXT_GRAY,
-        ha="left",
-        va="center",
-        **_FK,
-    )
+    ax.text(60, 580, "INVESTING DRAGON", fontsize=14, color="#7dd3fc", fontweight="bold", ha="left", va="center", **_FK)
+    ax.text(60, 554, "Market intelligence briefing", fontsize=12, color=TEXT_GRAY, ha="left", va="center", **_FK)
 
-    # Category badge
     badge_text = f"  {category_label}  "
     badge_x, badge_y = 60, 516
     badge_width = len(badge_text) * 11
@@ -328,7 +322,6 @@ def generate_og_image(
         **_FK,
     )
 
-    # Title (large, bold, max 2 lines)
     title_y_start = 420
     for i, line in enumerate(title_lines):
         ax.text(
@@ -343,34 +336,13 @@ def generate_og_image(
             **_FK,
         )
 
-    # Date in Korean format
     date_y = title_y_start - len(title_lines) * 50 - 6
-    ax.text(
-        60,
-        date_y,
-        date_korean,
-        fontsize=15,
-        color=TEXT_GRAY,
-        ha="left",
-        va="center",
-        **_FK,
-    )
+    ax.text(60, date_y, date_korean, fontsize=15, color=TEXT_GRAY, ha="left", va="center", **_FK)
 
-    # Description (smaller, gray, max 2 lines)
     desc_y_start = date_y - 46
     for i, line in enumerate(desc_lines):
-        ax.text(
-            60,
-            desc_y_start - i * 30,
-            line,
-            fontsize=14,
-            color=TEXT_GRAY,
-            ha="left",
-            va="center",
-            **_FK,
-        )
+        ax.text(60, desc_y_start - i * 30, line, fontsize=14, color=TEXT_GRAY, ha="left", va="center", **_FK)
 
-    # Insight side panel
     side_panel = mpatches.FancyBboxPatch(
         (860, 140),
         256,
@@ -390,53 +362,205 @@ def generate_og_image(
     ax.text(892, 220, "High-conviction market context", fontsize=13, color=TEXT_WHITE, ha="left", va="center", **_FK)
     ax.text(892, 176, "investing.2twodragon.com", fontsize=11, color=TEXT_GRAY, ha="left", va="center", **_FK)
 
-    # Divider line
     divider_y = 88
-    ax.plot(
-        [60, 1140],
-        [divider_y, divider_y],
-        color=DIVIDER_COLOR,
-        linewidth=1,
-    )
+    ax.plot([60, 1140], [divider_y, divider_y], color=DIVIDER_COLOR, linewidth=1)
+    ax.text(60, 48, "investing.2twodragon.com", fontsize=13, color=TEXT_MUTED, ha="left", va="center", **_FK)
+    ax.text(1140, 48, date_dotted, fontsize=13, color=TEXT_MUTED, ha="right", va="center", **_FK)
 
-    # Footer: site URL (left) and date (right)
-    ax.text(
-        60,
-        48,
-        "investing.2twodragon.com",
-        fontsize=13,
-        color=TEXT_MUTED,
-        ha="left",
-        va="center",
-        **_FK,
-    )
-    ax.text(
-        1140,
-        48,
-        date_dotted,
-        fontsize=13,
-        color=TEXT_MUTED,
-        ha="right",
-        va="center",
-        **_FK,
-    )
-
-    # Subtle accent dot in bottom-right area
     accent_dot = mpatches.Circle((1116, 544), 8, facecolor=accent_color, edgecolor="none", alpha=0.7)
     ax.add_patch(accent_dot)
 
-    # Save
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     try:
-        fig.savefig(
-            output_path,
-            dpi=100,
-            facecolor=BG_COLOR,
-            edgecolor="none",
-            bbox_inches=None,
-            pad_inches=0,
-        )
+        fig.savefig(output_path, dpi=100, facecolor=BG_COLOR, edgecolor="none", bbox_inches=None, pad_inches=0)
         logger.info("Generated: %s", output_path)
+        return True
+    except OSError as e:
+        logger.error("Failed to save %s: %s", output_path, e)
+        return False
+    finally:
+        plt.close(fig)
+
+
+def _journal_term_to_en(text: str) -> str:
+    mapping = {
+        "변동성 확대": "Volatility Up",
+        "반등 시도": "Rebound Attempt",
+        "중간": "Medium",
+        "높음": "High",
+        "낮음": "Low",
+        "포지션 축소": "Risk Trim",
+        "선별 매수": "Selective Long",
+        "관망": "Wait & See",
+    }
+    return mapping.get(text, text)
+
+
+def generate_trading_journal_og_image(post: Dict[str, str], output_path: str) -> bool:
+    if not _MPL_AVAILABLE:
+        logger.error("matplotlib not available, cannot generate image")
+        return False
+
+    category = post.get("category", "")
+    accent_color = CATEGORY_COLORS.get(category, DEFAULT_ACCENT)
+    board_title = "Crypto Trading Journal" if category == "crypto-trading-journal" else "Stock Trading Journal"
+    subtitle = "Session Board / Execution Review"
+    date_str = post.get("date", "")
+    date_dotted = date_str.replace("-", ".")
+
+    metrics = [
+        ("DAY RESULT", post.get("journal_day_result", "-")),
+        ("TRADES", post.get("journal_trade_count", "-")),
+        ("WIN RATE", post.get("journal_win_rate", "-")),
+        ("REALIZED", post.get("journal_realized_pnl", "-")),
+    ]
+    regime = _journal_term_to_en(post.get("journal_market_regime", "-") or "-")
+    confidence = _journal_term_to_en(post.get("journal_confidence", "-") or "-")
+    risk_posture = _journal_term_to_en(post.get("journal_risk_posture", "-") or "-")
+    next_focus = post.get("journal_next_focus", "Stay disciplined.") or "Stay disciplined."
+    desc = post.get("excerpt") or post.get("description") or "Execution notes, PnL and next session focus."
+    desc_lines = wrap_text(safe_text(desc), max_width=48, max_lines=3)
+
+    fig = plt.figure(figsize=(12, 6.3), dpi=100)
+    ax = fig.add_axes((0, 0, 1, 1))
+    ax.set_xlim(0, 1200)
+    ax.set_ylim(0, 630)
+    ax.set_axis_off()
+
+    bg_rect = mpatches.FancyBboxPatch((0, 0), 1200, 630, boxstyle="square,pad=0", facecolor="#0a0f18", edgecolor="none")
+    ax.add_patch(bg_rect)
+    for cx, cy, radius, alpha, color in [
+        (180, 540, 180, 0.14, accent_color),
+        (1040, 120, 210, 0.1, "#38bdf8"),
+        (980, 510, 120, 0.05, "#ffffff"),
+    ]:
+        ax.add_patch(mpatches.Circle((cx, cy), radius, facecolor=color, edgecolor="none", alpha=alpha))
+
+    for y in range(84, 570, 58):
+        ax.plot([56, 1144], [y, y], color="#203042", linewidth=0.8, alpha=0.14)
+    for x in range(80, 1120, 160):
+        ax.plot([x, x], [60, 580], color="#203042", linewidth=0.7, alpha=0.1)
+
+    ax.add_patch(
+        mpatches.FancyBboxPatch(
+            (40, 40),
+            1120,
+            550,
+            boxstyle="round,pad=0.02,rounding_size=28",
+            facecolor="none",
+            edgecolor="#2a3b4e",
+            linewidth=1.2,
+            alpha=0.55,
+        )
+    )
+    ax.add_patch(
+        mpatches.FancyBboxPatch(
+            (60, 454),
+            1080,
+            108,
+            boxstyle="round,pad=0.03,rounding_size=24",
+            facecolor="#101926",
+            edgecolor="#243447",
+            linewidth=1.0,
+            alpha=0.98,
+        )
+    )
+
+    ax.text(78, 542, "INVESTING DRAGON", fontsize=13, color="#7dd3fc", fontweight="bold", ha="left", va="center", **_FK)
+    ax.text(78, 504, board_title, fontsize=28, color=TEXT_WHITE, fontweight="bold", ha="left", va="center", **_FK)
+    ax.text(78, 474, f"{subtitle}  |  {date_dotted}", fontsize=12, color="#94a3b8", ha="left", va="center", **_FK)
+
+    pill_specs = [
+        (860, 516, 112, 30, f"REGIME {regime}"),
+        (978, 516, 98, 30, f"CONF {confidence}"),
+        (1082, 516, 38, 30, risk_posture[:3].upper()),
+    ]
+    for x, y, w, h, label in pill_specs:
+        ax.add_patch(
+            mpatches.FancyBboxPatch(
+                (x, y),
+                w,
+                h,
+                boxstyle="round,pad=0.25,rounding_size=14",
+                facecolor="#132334",
+                edgecolor="#2a4966",
+                linewidth=0.9,
+            )
+        )
+        ax.text(
+            x + w / 2, y + h / 2, label, fontsize=9, color="#cbd5e1", fontweight="bold", ha="center", va="center", **_FK
+        )
+
+    card_x_positions = [78, 342, 606, 870]
+    for (label, value), x in zip(metrics, card_x_positions, strict=False):
+        ax.add_patch(
+            mpatches.FancyBboxPatch(
+                (x, 350),
+                220,
+                84,
+                boxstyle="round,pad=0.03,rounding_size=18",
+                facecolor="#111b28",
+                edgecolor="#25364a",
+                linewidth=1.0,
+                alpha=0.98,
+            )
+        )
+        ax.text(x + 18, 406, label, fontsize=9, color="#7c8ea5", fontweight="bold", ha="left", va="center", **_FK)
+        ax.text(
+            x + 18,
+            374,
+            value,
+            fontsize=22,
+            color=TEXT_WHITE if label != "DAY RESULT" else accent_color,
+            fontweight="bold",
+            ha="left",
+            va="center",
+            **_FK,
+        )
+
+    ax.add_patch(
+        mpatches.FancyBboxPatch(
+            (78, 120),
+            598,
+            196,
+            boxstyle="round,pad=0.03,rounding_size=22",
+            facecolor="#101926",
+            edgecolor="#243447",
+            linewidth=1.0,
+            alpha=0.98,
+        )
+    )
+    ax.text(
+        102, 286, "SESSION TAKEAWAY", fontsize=10, color="#7c8ea5", fontweight="bold", ha="left", va="center", **_FK
+    )
+    for idx, line in enumerate(desc_lines):
+        ax.text(102, 246 - idx * 30, line, fontsize=15, color="#e2e8f0", ha="left", va="center", **_FK)
+
+    ax.add_patch(
+        mpatches.FancyBboxPatch(
+            (704, 120),
+            436,
+            196,
+            boxstyle="round,pad=0.03,rounding_size=22",
+            facecolor="#111c2a",
+            edgecolor="#243447",
+            linewidth=1.0,
+            alpha=0.98,
+        )
+    )
+    ax.text(728, 286, "NEXT SESSION", fontsize=10, color="#7c8ea5", fontweight="bold", ha="left", va="center", **_FK)
+    next_lines = wrap_text(safe_text(next_focus), max_width=28, max_lines=4)
+    for idx, line in enumerate(next_lines):
+        ax.text(728, 246 - idx * 28, line, fontsize=14, color="#f8fafc", ha="left", va="center", **_FK)
+
+    ax.plot([78, 1122], [92, 92], color=DIVIDER_COLOR, linewidth=1)
+    ax.text(78, 58, "investing.2twodragon.com", fontsize=12, color=TEXT_MUTED, ha="left", va="center", **_FK)
+    ax.text(1122, 58, date_dotted, fontsize=12, color=TEXT_MUTED, ha="right", va="center", **_FK)
+
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    try:
+        fig.savefig(output_path, dpi=100, facecolor="#0a0f18", edgecolor="none", bbox_inches=None, pad_inches=0)
+        logger.info("Generated journal OG: %s", output_path)
         return True
     except OSError as e:
         logger.error("Failed to save %s: %s", output_path, e)
@@ -525,6 +649,16 @@ def collect_posts(
                 "title": fm.get("title", ""),
                 "category": fm.get("categories", ""),
                 "description": fm.get("description", ""),
+                "excerpt": fm.get("excerpt", ""),
+                "permalink": fm.get("permalink", ""),
+                "journal_market_regime": fm.get("journal_market_regime", ""),
+                "journal_confidence": fm.get("journal_confidence", ""),
+                "journal_risk_posture": fm.get("journal_risk_posture", ""),
+                "journal_day_result": fm.get("journal_day_result", ""),
+                "journal_trade_count": fm.get("journal_trade_count", ""),
+                "journal_win_rate": fm.get("journal_win_rate", ""),
+                "journal_realized_pnl": fm.get("journal_realized_pnl", ""),
+                "journal_next_focus": fm.get("journal_next_focus", ""),
             }
         )
 
@@ -593,13 +727,16 @@ def main() -> None:
             skipped += 1
             continue
 
-        ok = generate_og_image(
-            title=post["title"],
-            date_str=post["date"],
-            category=post["category"],
-            description=post["description"],
-            output_path=out_path,
-        )
+        if post["category"] in {"crypto-trading-journal", "stock-trading-journal"}:
+            ok = generate_trading_journal_og_image(post, out_path)
+        else:
+            ok = generate_og_image(
+                title=post["title"],
+                date_str=post["date"],
+                category=post["category"],
+                description=post["description"],
+                output_path=out_path,
+            )
 
         if ok:
             generated += 1
