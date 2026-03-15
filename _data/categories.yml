@@ -68,12 +68,6 @@ worldmonitor:
   url: "/worldmonitor/"
   description: "지정학적 리스크, 글로벌 이슈, 국제 정세 모니터링"
 
-devops:
-  name: "DevOps"
-  color: "cat-devops"
-  url: "/devops/"
-  description: "CI/CD 파이프라인, 인프라 자동화, 배포 전략 및 운영 노하우"
-
 blockchain:
   name: "블록체인"
   color: "cat-blockchain"
