@@ -18,6 +18,12 @@ main:
       - title: "주식 일지"
         url: /stock-journal/
   - title: "분석"
-    url: /market-analysis/
+    children:
+      - title: "시장 분석"
+        url: /market-analysis/
+      - title: "블록체인"
+        url: /blockchain/
+  - title: "DevOps"
+    url: /devops/
   - title: "About"
     url: /about/

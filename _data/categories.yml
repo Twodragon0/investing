@@ -57,3 +57,15 @@ worldmonitor:
   color: "cat-worldmonitor"
   url: "/worldmonitor/"
   description: "지정학적 리스크, 글로벌 이슈, 국제 정세 모니터링"
+
+devops:
+  name: "DevOps"
+  color: "cat-devops"
+  url: "/devops/"
+  description: "CI/CD 파이프라인, 인프라 자동화, 배포 전략 및 운영 노하우"
+
+blockchain:
+  name: "블록체인"
+  color: "cat-blockchain"
+  url: "/blockchain/"
+  description: "블록체인 기술, 스마트 컨트랙트, DeFi 프로토콜 심층 분석"
