@@ -4,6 +4,7 @@ title: "Investing Dragon CI/CD 파이프라인 구조 분석"
 date: 2026-03-15 10:00:00 +0900
 categories: devops
 description: "25개 GitHub Actions 워크플로우로 구성된 자동화 파이프라인의 구조와 운영 방식을 살펴봅니다."
+image: "/assets/images/generated/news-briefing-devops-cicd-pipeline-overview-2026-03-15.png"
 tags:
   - CI/CD
   - GitHub Actions
