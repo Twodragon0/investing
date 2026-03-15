@@ -34,8 +34,6 @@ image: "/assets/images/generated/og-daily-regulatory-report-2026-02-13.png"
 
 *총 30건의 뉴스 수집 완료*
 
-<picture><source srcset="{{ '/assets/images/generated/regulatory-summary-2026-02-13.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/regulatory-summary-2026-02-13.png' | relative_url }}" alt="regulatory-summary" loading="lazy" decoding="async"></picture>
-
 
 ---
 

@@ -64,7 +64,6 @@ BTC는 $67,000 부근에서 횡보 중이며, Fed 의사록의 매파 기조 확
 
 > 11~16위: WBT $50.63 · ADA $0.27(-0.2%) · LEO $8.76(+2.1%) · HYPE $29.49(+3.5%) · XMR $337.16(+2.4%) · LINK $8.62(-0.4%)
 
-<picture><source srcset="{{ '/assets/images/generated/top-coins-2026-02-20.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/top-coins-2026-02-20.png' | relative_url }}" alt="top-coins" loading="lazy" decoding="async"></picture>
 
 ## 트렌딩 코인
 

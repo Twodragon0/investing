@@ -12,13 +12,6 @@ description: "암호화폐 시장이 하락세를 보이고 있습니다. 단기
 
 ## 시장 시각화
 
-<picture><source srcset="{{ '/assets/images/generated/market-heatmap-2026-02-24.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-heatmap-2026-02-24.png' | relative_url }}" alt="market-heatmap" loading="lazy" decoding="async"></picture>
-
-<picture><source srcset="{{ '/assets/images/generated/top-coins-2026-02-24.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/top-coins-2026-02-24.png' | relative_url }}" alt="top-coins" loading="lazy" decoding="async"></picture>
-
-<picture><source srcset="{{ '/assets/images/generated/fear-greed-2026-02-24.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/fear-greed-2026-02-24.png' | relative_url }}" alt="fear-greed" loading="lazy" decoding="async"></picture>
-
-<picture><source srcset="{{ '/assets/images/generated/sector-heatmap-2026-02-24.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/sector-heatmap-2026-02-24.png' | relative_url }}" alt="sector-heatmap" loading="lazy" decoding="async"></picture>
 
 ## 오늘의 핵심
 

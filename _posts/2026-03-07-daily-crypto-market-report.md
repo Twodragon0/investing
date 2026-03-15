@@ -13,13 +13,9 @@ description: "오늘 시가총액 상위 30개 코인을 기준으로 시장을 
 
 ## 시장 시각화
 
-<picture><source srcset="{{ '/assets/images/generated/top-coins-cmc-2026-03-07.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/top-coins-cmc-2026-03-07.png' | relative_url }}" alt="top-coins-cmc" loading="lazy" decoding="async"></picture>
-
-<picture><source srcset="{{ '/assets/images/generated/market-heatmap-cmc-2026-03-07.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-heatmap-cmc-2026-03-07.png' | relative_url }}" alt="market-heatmap-cmc" loading="lazy" decoding="async"></picture>
 
 ## 오늘의 브리핑
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-cmc-2026-03-07.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-cmc-2026-03-07.png' | relative_url }}" alt="market-briefing" loading="lazy" decoding="async"></picture>
 
 ## 한눈에 보기
 

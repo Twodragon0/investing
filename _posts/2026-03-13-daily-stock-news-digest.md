@@ -25,35 +25,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-13 - stock-news 뉴스 요약 
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">183</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 37</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">5,487.24</div><div class="stat-label">KOSPI -1.72%</div></div><div class="stat-item"><div class="stat-value">1,152.96</div><div class="stat-label">KOSDAQ +0.40%</div></div></div>
 <div class="alert-box alert-info"><strong>주식 시장: 코스피, 삼성전자, 코스닥 부각 183건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (37건): 코스피, 삼성전자, 코스닥 이슈가 37건으로 주목받고 있습니다.</li><li>📊 <strong>매크로/금리</strong> (13건): 환율 중심으로 13건의 뉴스가 수집되었습니다.</li><li>🏦 <strong>거래소</strong> (6건): IPO, SoftBank, PayPay 중심으로 6건의 뉴스가 수집되었습니다.</li><li>🏛️ <strong>정치/정책</strong> (8건): Trump, Iran, oil 이슈가 8건으로 주목받고 있습니다.</li></ul></div>
+
 ## 전체 뉴스 요약
 
-총 183건의 뉴스에서 **가격/시장**(37건)과 **매크로/금리**(13건)이 동시에 부각되고 있습니다. 매크로 환경 변화가 위험자산 전반의 가격 움직임을 주도하고 있습니다
-
-1. **📈 가격/시장** (37건): 코스피, 삼성전자, 코스닥 이슈가 37건으로 주목받고 있습니다.
-2. **📊 매크로/금리** (13건): 환율 중심으로 13건의 뉴스가 수집되었습니다.
-3. **🏦 거래소** (6건): IPO, SoftBank, PayPay 중심으로 6건의 뉴스가 수집되었습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-**P1 주요**: 24건 확인
-- 한국 기사 61건, 글로벌 기사 122건 수집
-- 한국 지수: KOSPI 5,487.24(-1.72%), KOSDAQ 1,152.96(+0.40%), USD/KRW 1,498.40(+0.65%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">37건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:35%"></div></div><span class="theme-count">13건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:16%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:22%"></div></div><span class="theme-count">8건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:24%"></div></div><span class="theme-count">9건</span></div>
-</div>
-
-*총 183건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
-
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-03-13.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-03-13.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- 총 **10건** 수집
+- KOSPI 5,487.24 (-1.72%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 1,152.96 (+0.40%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
 
 ## 테마별 주요 뉴스
 

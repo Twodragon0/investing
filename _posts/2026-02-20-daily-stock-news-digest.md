@@ -24,7 +24,6 @@ description: "2026-02-20 주식 시장 100건의 뉴스를 분석한 요약 브�
 <div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:5%"></div></div><span class="theme-count">5건 (5%)</span></div>
 <div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:2%"></div></div><span class="theme-count">2건 (2%)</span></div></div>
 
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-02-20.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-02-20.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
 
 ---
 

@@ -44,7 +44,6 @@ AI/기술  ███████░░░░░░░░░░░    40%  (44건
 - **비트코인** 관련 뉴스에 주목할 필요가 있습니다.
 - **거래소** 관련 뉴스에 주목할 필요가 있습니다.
 
-<picture><source srcset="{{ '/assets/images/generated/news-summary-2026-02-13.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-summary-2026-02-13.png' | relative_url }}" alt="news-summary" loading="lazy" decoding="async"></picture>
 
 ## 카테고리별 주요 뉴스
 

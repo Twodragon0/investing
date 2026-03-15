@@ -16,13 +16,9 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-03-15 | HYPE +3.5% - 시
 
 ## 시장 시각화
 
-<picture><source srcset="{{ '/assets/images/generated/top-coins-cmc-2026-03-15.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/top-coins-cmc-2026-03-15.png' | relative_url }}" alt="CoinMarketCap Top 코인 순위 (2026-03-15)" loading="lazy" decoding="async"></picture>
-
-<picture><source srcset="{{ '/assets/images/generated/market-heatmap-cmc-2026-03-15.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-heatmap-cmc-2026-03-15.png' | relative_url }}" alt="암호화폐 시장 히트맵 (2026-03-15)" loading="lazy" decoding="async"></picture>
 
 ## 오늘의 브리핑
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-cmc-2026-03-15.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-cmc-2026-03-15.png' | relative_url }}" alt="시장 브리핑 카드" loading="lazy" decoding="async"></picture>
 
 ## 한눈에 보기
 
@@ -30,9 +26,12 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-03-15 | HYPE +3.5% - 시
 
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Hyperliquid</strong> (HYPE): +3.49%</li><li>🔴 <strong>Monero</strong> (XMR): -2.22%</li><li>🟢 <strong>TRON</strong> (TRX): +1.48%</li></ul></div>
 
+
 ## 전체 뉴스 요약
 
-오늘 시가총액 상위 **30개** 코인을 기준으로 시장을 분석했습니다. 비트코인은 **$70,957**에서 24시간 +0.24% 상승하며 투자 심리 회복을 견인고 있습니다. 전체 시가총액은 **$2.50T**으로 전일 대비 +0.04% 변동했으며, BTC 도미넌스 56.9%로 비트코인 중심 자금 흐름이 지속입니다. 공포/탐욕 지수는 **15** (Extreme Fear)으로, 극도의 공포 상태로, 역발상 매수 기회를 모색할 시점입니다.
+- 총 **19건** 수집
+- 오늘의 시장 인사이트:
+- 24시간 변동 +0.04%로 완만한 상승세입니다. 주요 저항선 돌파 여부에 따라 추가 상승 탄력이 결정됩니다.
 
 ## 시장 인사이트
 

@@ -37,9 +37,6 @@ description: "2026-02-21 암호화폐 시장에서 110건의 뉴스를 분석했
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9UWWt2NGRwVEhESnNWZ1FRaE1wbk9BTk1Wdll0b3dvdWgzTXZlRWs3Y1dMcmNNam1UanZrbWZaTWM5T3R4cWwtVmtFMGE0TTVUV1VWZ3FR?oc=5">레버리지가 코인 폭락 트리거 됐다 - 중앙일보</a><br><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcEhVTjRnRlo0ZTgtU3RFWmM0UWxieG9rUVNsSGJHbl9Rc3EyWGVoREJ6SWVOZWc1UXRMaHRaaUxxTzRxVDRkbzMtUGZkWWpidDZoMjBxM1dDSXdZYjdJNWZoRlVjS0dTbEJRWklYUE1TVHpmZlRnMlFaMHZBc0JLamthRFFpNG5z?oc=5">비트코인 대규모 구제금융 "백악관 전략 비축 시나리오" 암호화폐 폭락 저지 - 글로벌이코노믹</a><br><a href="https://decrypt.co/358690/australian-executive-cyber-secrets-russia-crypto">Australian Executive Accused of Selling Cyber Secrets to Russia for Crypto</a></div>
 
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-2026-02-21.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-2026-02-21.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
-
 ## 전체 뉴스 요약
 
 - 총 **110건** 수집

@@ -48,9 +48,6 @@ excerpt: "이란 전쟁 확전으로 글로벌 리스크오프 전환 — 원유
 
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-daily-2026-03-02.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-daily-2026-03-02.png' | relative_url }}" alt="multi-asset-briefing" loading="lazy" decoding="async"></picture>
-
-<picture><source srcset="{{ '/assets/images/generated/market-heatmap-2026-03-02.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-heatmap-2026-03-02.png' | relative_url }}" alt="market-heatmap" loading="lazy" decoding="async"></picture>
 
 ---
 

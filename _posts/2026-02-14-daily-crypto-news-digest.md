@@ -63,7 +63,6 @@ DeFi   █░░░░░░░░░░░░░░░░░    10%  (7건)
 - **비트코인** 관련 뉴스에 주목할 필요가 있습니다.
 - **가격/시장** 관련 뉴스에 주목할 필요가 있습니다.
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-2026-02-14.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-2026-02-14.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
 
 ## 테마별 브리핑
 

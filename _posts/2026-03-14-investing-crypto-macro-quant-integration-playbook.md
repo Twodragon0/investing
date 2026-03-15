@@ -17,6 +17,12 @@ pin: false
 > 이 문서는 같은 머신에 있는 `~/Desktop/investing`와 `~/Desktop/crypto`를 **운영 관점에서 연결**해,
 > 뉴스/포스트 생산과 실시간 대시보드 모니터링이 서로 따로 놀지 않도록 만드는 실전 플레이북입니다.
 
+## 전체 뉴스 요약
+
+- - ~/Desktop/investing는 거시경제 해석과 콘텐츠 기록 허브로 사용합니다. - ~/Desktop/crypto는 실시간 대시보드, 백테스트, 시그널 모니터링 허브로 사용합니다. - 두 시스템을 연결해 거시경제 레짐 변화 → 크립토/주식 포지션 관리 → 포스팅/회고…
+- - scripts/collect_market_indicators.py: VIX, DXY, 금리, 공포탐욕 등 리스크 대시보드 생성 - scripts/generate_market_summary.py: FRED 기반 거시경제 지표 + BTC ETF + 퀀트 시그널 요약 -…
+
+
 ## 목표
 
 - `~/Desktop/investing`는 **거시경제 해석과 콘텐츠 기록 허브**로 사용합니다.

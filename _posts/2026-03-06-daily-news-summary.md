@@ -32,7 +32,6 @@ excerpt: "암호화폐 108건, 규제 9건, 소셜 미디어 47건, 월드모니
 | 규제 | 9 | 금융위, 올해 첫 가상자산위원회 개최…은행 중심 스테이블코인·거래소 지분 규제 검토 - 오피니언뉴스 |
 | 소셜 | 47 | 2026-03-06 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 소셜 미디어 2건, 정치·경제 25건, 총… |
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-daily-2026-03-06.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-daily-2026-03-06.png' | relative_url }}" alt="multi-asset-briefing" loading="lazy" decoding="async"></picture>
 
 ## 핵심 브리핑
 

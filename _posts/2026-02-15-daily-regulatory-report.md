@@ -52,8 +52,6 @@ DeFi   ░░░░░░░░░░░░░░░░░░     4%  (1건)
 
 *총 25건의 뉴스 수집 완료*
 
-<picture><source srcset="{{ '/assets/images/generated/regulatory-summary-2026-02-15.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/regulatory-summary-2026-02-15.png' | relative_url }}" alt="regulatory-summary" loading="lazy" decoding="async"></picture>
-
 
 ---
 

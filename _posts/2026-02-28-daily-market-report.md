@@ -12,13 +12,6 @@ description: "2026-02-28 일일 시장 종합 리포트. 공포/탐욕 지수 11
 
 ## 시장 시각화
 
-<picture><source srcset="{{ '/assets/images/generated/market-heatmap-2026-02-28.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-heatmap-2026-02-28.png' | relative_url }}" alt="market-heatmap" loading="lazy" decoding="async"></picture>
-
-<picture><source srcset="{{ '/assets/images/generated/top-coins-2026-02-28.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/top-coins-2026-02-28.png' | relative_url }}" alt="top-coins" loading="lazy" decoding="async"></picture>
-
-<picture><source srcset="{{ '/assets/images/generated/fear-greed-2026-02-28.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/fear-greed-2026-02-28.png' | relative_url }}" alt="fear-greed" loading="lazy" decoding="async"></picture>
-
-<picture><source srcset="{{ '/assets/images/generated/sector-heatmap-2026-02-28.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/sector-heatmap-2026-02-28.png' | relative_url }}" alt="sector-heatmap" loading="lazy" decoding="async"></picture>
 
 ## 오늘의 핵심
 

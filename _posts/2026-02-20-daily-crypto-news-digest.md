@@ -24,7 +24,6 @@ description: "2026-02-20 암호화폐 시장 72건의 뉴스를 분석한 요약
 <div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:15%"></div></div><span class="theme-count">11건 (15%)</span></div>
 <div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:10%"></div></div><span class="theme-count">7건 (10%)</span></div></div>
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-2026-02-20.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-2026-02-20.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
 
 ---
 

@@ -51,8 +51,6 @@ image: "/assets/images/generated/og-daily-social-media-digest-2026-02-13.png"
 ---
 
 
-<picture><source srcset="{{ '/assets/images/generated/source-distribution-2026-02-13.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/source-distribution-2026-02-13.png' | relative_url }}" alt="source-distribution" loading="lazy" decoding="async"></picture>
-
 ## 텔레그램 주요 소식
 
 | # | 내용 | 채널 |

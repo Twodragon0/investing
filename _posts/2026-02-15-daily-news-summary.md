@@ -32,10 +32,6 @@ excerpt: "암호화폐 67건, 주식 82건, 규제 25건, 소셜 미디어 7건,
 | 소셜 | 7 | - 2026-02-15 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 소셜 미디어 1건, 정치·경제 6건, 총 7건이 수집되었습니다. |
 | 정치인 거래 | 5 | 신호 추출 실패 |
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-2026-02-15.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-2026-02-15.png' | relative_url }}" alt="multi-asset-briefing" loading="lazy" decoding="async"></picture>
-
-
-<picture><source srcset="{{ '/assets/images/generated/market-heatmap-2026-02-15.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-heatmap-2026-02-15.png' | relative_url }}" alt="market-heatmap" loading="lazy" decoding="async"></picture>
 
 ## 핵심 브리핑
 

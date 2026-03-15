@@ -26,37 +26,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-14 - stock-news 뉴스 요약 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">163</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📊 12</div><div class="stat-label">매크로/금리</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">5,487.24</div><div class="stat-label">KOSPI -1.72%</div></div><div class="stat-item"><div class="stat-value">1,152.96</div><div class="stat-label">KOSDAQ +0.40%</div></div></div>
 <div class="alert-box alert-info"><strong>주식 시장 긴급: California, rallying, offshore - 163건 분석</strong><ul><li>📊 <strong>매크로/금리</strong> (12건): Fed, GDP, Chosunbiz 이슈가 12건으로 주목받고 있습니다.</li><li>🏛️ <strong>정치/정책</strong> (11건): Trump, oil, Iran 이슈가 11건으로 주목받고 있습니다.</li><li>📈 <strong>가격/시장</strong> (28건): 중동 이슈가 28건으로 주목받고 있습니다.</li><li>🤖 <strong>AI/기술</strong> (7건): 반도체 이슈가 7건으로 주목받고 있습니다.</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://www.marketwatch.com/story/this-little-known-energy-companys-stock-is-rallying-as-trump-invokes-1950-powers-for-offshore-california-drilling-5cb8efa4?mod=mw_rss_topstories">This little-known energy company’s stock is rallying as Trump invokes 1950 powers for offshore California drilling</a> <span class="p0-desc">Trump’s executive order opens the door for Sable Offshore’s production in Southern California.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: This little-known energy company’s stock is rallying as Trump invokes 1950 po...  
-총 163건의 뉴스 중 P1 주요 이슈도 29건 확인됩니다.
-
-1. **📊 매크로/금리** (12건): Fed, GDP, Chosunbiz 이슈가 12건으로 주목받고 있습니다.
-2. **🏛️ 정치/정책** (11건): Trump, oil, Iran 이슈가 11건으로 주목받고 있습니다.
-3. **📈 가격/시장** (28건): 중동 이슈가 28건으로 주목받고 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-**P0 긴급**: This little-known energy company’s stock is rallying as Trum
-**P1 주요**: 29건 확인
-- 한국 기사 50건, 글로벌 기사 113건 수집
-- 한국 지수: KOSPI 5,487.24(-1.72%), KOSDAQ 1,152.96(+0.40%), USD/KRW 1,497.53(+0.59%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:43%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:39%"></div></div><span class="theme-count">11건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:100%"></div></div><span class="theme-count">28건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:25%"></div></div><span class="theme-count">7건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:25%"></div></div><span class="theme-count">7건</span></div>
-</div>
-
-*총 163건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
-
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-03-14.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-03-14.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- 총 **13건** 수집
+- KOSPI 5,487.24 (-1.72%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 1,152.96 (+0.40%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
 
 ## 테마별 주요 뉴스
 

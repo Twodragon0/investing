@@ -13,13 +13,9 @@ image: "/assets/images/generated/og-daily-crypto-market-report-2026-02-27.png"
 
 ## 시장 시각화
 
-<picture><source srcset="{{ '/assets/images/generated/top-coins-cmc-2026-02-27.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/top-coins-cmc-2026-02-27.png' | relative_url }}" alt="top-coins-cmc" loading="lazy" decoding="async"></picture>
-
-<picture><source srcset="{{ '/assets/images/generated/market-heatmap-cmc-2026-02-27.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-heatmap-cmc-2026-02-27.png' | relative_url }}" alt="market-heatmap-cmc" loading="lazy" decoding="async"></picture>
 
 ## 오늘의 브리핑
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-cmc-2026-02-27.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-cmc-2026-02-27.png' | relative_url }}" alt="market-briefing" loading="lazy" decoding="async"></picture>
 
 ## 한눈에 보기
 

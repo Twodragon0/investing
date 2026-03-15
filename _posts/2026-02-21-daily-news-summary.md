@@ -33,9 +33,6 @@ excerpt: "암호화폐 110건, 주식 139건, 보안 1건, 규제 31건, 소셜 
 | 소셜 | 62 | 정치/정책 28건, 매크로/금리 14건, 텔레그램 20건 |
 | 정치인 거래 | 9 | 신호 추출 실패 |
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-daily-2026-02-21.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-daily-2026-02-21.png' | relative_url }}" alt="multi-asset-briefing" loading="lazy" decoding="async"></picture>
-
-<picture><source srcset="{{ '/assets/images/generated/market-heatmap-2026-02-21.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-heatmap-2026-02-21.png' | relative_url }}" alt="market-heatmap" loading="lazy" decoding="async"></picture>
 
 ## 핵심 브리핑
 

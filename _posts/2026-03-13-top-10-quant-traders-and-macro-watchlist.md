@@ -28,6 +28,13 @@ pin: false
 
 ---
 
+
+## 전체 뉴스 요약
+
+- 미국 성장주 모멘텀을 보고 싶다면: David Ryan
+- 고전 차트 + 리스크 관리를 보고 싶다면: Peter Brandt
+- 알고리즘/통계 모델링을 파고들고 싶다면: Ernest P. Chan, Perry Kaufman
+
 ## 미국·글로벌 퀀트/시스템 트레이더 Top 10
 
 <div class="report-links-board">
