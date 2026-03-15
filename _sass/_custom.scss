@@ -3234,6 +3234,33 @@ html {
 
 /* Responsive - Dashboard Homepage */
 @media (max-width: 768px) {
+  .journal-landing-grid,
+  .journal-landing-main-card {
+    grid-template-columns: 1fr;
+  }
+
+  .journal-landing-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .journal-landing-image-link {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .journal-landing-mini-card {
+    grid-template-columns: 72px minmax(0, 1fr);
+
+    img {
+      width: 72px;
+      height: 50px;
+    }
+  }
+
+  .journal-month-card-grid {
+    grid-template-columns: 1fr;
+  }
+
   .dashboard-header {
     flex-direction: column;
     align-items: flex-start;
@@ -4795,6 +4822,299 @@ html {
     font-size: 0.8rem;
     color: $text-secondary;
   }
+}
+
+.journal-digest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.journal-digest-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 16px;
+  background: linear-gradient(145deg, rgba($bg-card, 0.8) 0%, rgba($bg-secondary, 0.62) 100%);
+  border: 1px solid rgba($border-color, 0.45);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba($accent-blue, 0.38);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.22);
+  }
+}
+
+.journal-digest-thumb {
+  width: 100%;
+  aspect-ratio: 1200 / 630;
+  object-fit: cover;
+  border-bottom: 1px solid rgba($border-color, 0.28);
+}
+
+.journal-digest-body {
+  padding: 1rem 1rem 1.1rem;
+
+  h4 {
+    margin: 0.25rem 0 0.55rem;
+    font-size: 1rem;
+    line-height: 1.45;
+    color: $text-primary;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: rgba($text-primary, 0.86);
+  }
+}
+
+.journal-digest-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $accent-blue;
+}
+
+.journal-digest-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.9rem;
+
+  span {
+    padding: 0.28rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: rgba($text-secondary, 0.94);
+    background: rgba($bg-secondary, 0.78);
+    border: 1px solid rgba($border-color, 0.22);
+  }
+}
+
+.journal-landing-dashboard {
+  margin: 0 0 2rem;
+}
+
+.journal-dashboard-header {
+  margin-bottom: 1.2rem;
+
+  &::before {
+    background: linear-gradient(90deg, $cat-journal 0%, $accent-blue 50%, $cat-stock 100%);
+  }
+}
+
+.journal-landing-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.9fr);
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.journal-landing-main-card,
+.journal-landing-side-card {
+  border-radius: 18px;
+  border: 1px solid rgba($border-color, 0.42);
+  background: linear-gradient(145deg, rgba($bg-card, 0.84) 0%, rgba($bg-secondary, 0.64) 100%);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.16);
+}
+
+.journal-landing-main-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.9fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.journal-landing-copy {
+  padding: 0.4rem 0.2rem 0.2rem;
+
+  h2 {
+    margin: 0.3rem 0 0.7rem;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    color: $text-primary;
+  }
+
+  p {
+    margin: 0;
+    color: rgba($text-primary, 0.88);
+    line-height: 1.7;
+  }
+}
+
+.journal-landing-kicker {
+  display: inline-flex;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $accent-blue;
+}
+
+.journal-landing-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.journal-landing-metric {
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  background: rgba($bg-secondary, 0.66);
+  border: 1px solid rgba($border-color, 0.24);
+}
+
+.journal-landing-focus {
+  padding: 0.95rem 1rem;
+  border-radius: 14px;
+  background: rgba($accent-blue, 0.08);
+  border: 1px solid rgba($accent-blue, 0.24);
+
+  p {
+    margin-top: 0.35rem;
+  }
+}
+
+.journal-landing-image-link {
+  display: block;
+}
+
+.journal-landing-image {
+  display: block;
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
+}
+
+.journal-landing-side-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.journal-landing-side-card {
+  padding: 1rem;
+}
+
+.journal-landing-stats {
+  list-style: none;
+  margin: 0.8rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.7rem;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0.9rem;
+    border-radius: 12px;
+    background: rgba($bg-secondary, 0.66);
+    border: 1px solid rgba($border-color, 0.2);
+  }
+
+  strong {
+    font-size: 1.1rem;
+    color: $text-primary;
+  }
+
+  span {
+    font-size: 0.82rem;
+    color: $text-secondary;
+  }
+}
+
+.journal-landing-mini-list {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.8rem;
+}
+
+.journal-landing-mini-card {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: 0.8rem;
+  align-items: center;
+  padding: 0.6rem;
+  border-radius: 14px;
+  background: rgba($bg-secondary, 0.58);
+  border: 1px solid rgba($border-color, 0.2);
+
+  img {
+    width: 88px;
+    height: 58px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  strong {
+    display: block;
+    color: $text-primary;
+    font-size: 0.92rem;
+    line-height: 1.4;
+  }
+
+  span {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.78rem;
+    color: $text-secondary;
+  }
+}
+
+.journal-monthly-panel {
+  margin: 0.2rem 0 1.6rem;
+}
+
+.journal-monthly-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.journal-month-card {
+  padding: 1rem 1.05rem 1.1rem;
+  border-radius: 16px;
+  background: linear-gradient(145deg, rgba($bg-card, 0.8) 0%, rgba($bg-secondary, 0.62) 100%);
+  border: 1px solid rgba($border-color, 0.32);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.14);
+
+  h3 {
+    margin: 0.35rem 0 0.8rem;
+    font-size: 1.15rem;
+    color: $text-primary;
+  }
+
+  p {
+    margin: 0.8rem 0 0;
+    color: rgba($text-primary, 0.86);
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+}
+
+.journal-month-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.journal-month-link {
+  display: inline-flex;
+  margin-top: 0.95rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: $accent-blue;
 }
 
 /* ================================
