@@ -1,0 +1,81 @@
+{% assign first_cat = page.categories | first %}
+{% assign has_summary = false %}
+{% if page.journal_day_result or page.journal_trade_count or page.journal_win_rate or page.journal_realized_pnl or page.journal_unrealized_pnl or page.journal_strategy or page.journal_market_regime or page.journal_confidence or page.journal_risk_posture or page.journal_best_trade or page.journal_mistake or page.journal_next_focus %}
+  {% assign has_summary = true %}
+{% endif %}
+{% if has_summary %}
+<section class="trading-journal-summary trading-journal-summary-{{ first_cat | slugify }}">
+  <div class="trading-journal-summary-header">
+    <div>
+      <div class="summary-label">Trading Journal Snapshot</div>
+      <h2>오늘의 실행 요약</h2>
+    </div>
+    <div class="trading-journal-badges">
+      {% if page.journal_market_regime %}<span class="journal-badge">{{ page.journal_market_regime }}</span>{% endif %}
+      {% if page.journal_confidence %}<span class="journal-badge">신뢰도 {{ page.journal_confidence }}</span>{% endif %}
+      {% if page.journal_risk_posture %}<span class="journal-badge">{{ page.journal_risk_posture }}</span>{% endif %}
+    </div>
+  </div>
+
+  {% if page.journal_strategy or page.journal_market_note %}
+  <div class="trading-journal-summary-lead">
+    {% if page.journal_strategy %}<p><strong>전략:</strong> {{ page.journal_strategy }}</p>{% endif %}
+    {% if page.journal_market_note %}<p><strong>시장 메모:</strong> {{ page.journal_market_note }}</p>{% endif %}
+  </div>
+  {% endif %}
+
+  <div class="trading-journal-summary-grid">
+    {% if page.journal_day_result %}
+    <div class="journal-summary-card journal-summary-card-result">
+      <span class="journal-summary-label">당일 결과</span>
+      <strong class="journal-summary-value">{{ page.journal_day_result }}</strong>
+    </div>
+    {% endif %}
+    {% if page.journal_trade_count %}
+    <div class="journal-summary-card">
+      <span class="journal-summary-label">거래 횟수</span>
+      <strong class="journal-summary-value">{{ page.journal_trade_count }}</strong>
+    </div>
+    {% endif %}
+    {% if page.journal_win_rate %}
+    <div class="journal-summary-card">
+      <span class="journal-summary-label">승률</span>
+      <strong class="journal-summary-value">{{ page.journal_win_rate }}</strong>
+    </div>
+    {% endif %}
+    {% if page.journal_realized_pnl %}
+    <div class="journal-summary-card">
+      <span class="journal-summary-label">실현 손익</span>
+      <strong class="journal-summary-value">{{ page.journal_realized_pnl }}</strong>
+    </div>
+    {% endif %}
+    {% if page.journal_unrealized_pnl %}
+    <div class="journal-summary-card">
+      <span class="journal-summary-label">미실현 손익</span>
+      <strong class="journal-summary-value">{{ page.journal_unrealized_pnl }}</strong>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="trading-journal-summary-notes">
+    {% if page.journal_best_trade %}
+    <div class="journal-note journal-note-positive">
+      <span class="journal-note-label">베스트 트레이드</span>
+      <p>{{ page.journal_best_trade }}</p>
+    </div>
+    {% endif %}
+    {% if page.journal_mistake %}
+    <div class="journal-note journal-note-negative">
+      <span class="journal-note-label">실수 또는 잡음</span>
+      <p>{{ page.journal_mistake }}</p>
+    </div>
+    {% endif %}
+    {% if page.journal_next_focus %}
+    <div class="journal-note journal-note-neutral">
+      <span class="journal-note-label">다음 세션 포인트</span>
+      <p>{{ page.journal_next_focus }}</p>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endif %}

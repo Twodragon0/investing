@@ -648,6 +648,208 @@ a {
     }
   }
 
+  .trading-journal-summary {
+    margin: -0.5rem 0 2.5rem;
+    padding: 1.5rem;
+    border-radius: 18px;
+    border: 1px solid rgba($border-color, 0.38);
+    background: linear-gradient(135deg, rgba($bg-card, 0.92) 0%, rgba($bg-secondary, 0.68) 100%);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
+
+    &.trading-journal-summary-crypto-trading-journal {
+      border-color: rgba($cat-crypto, 0.35);
+      box-shadow: 0 16px 36px rgba($cat-crypto, 0.12);
+    }
+
+    &.trading-journal-summary-stock-trading-journal {
+      border-color: rgba($cat-stock, 0.35);
+      box-shadow: 0 16px 36px rgba($cat-stock, 0.12);
+    }
+  }
+
+  .trading-journal-summary-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+
+    h2 {
+      margin: 0.25rem 0 0;
+      font-size: 1.45rem;
+      line-height: 1.2;
+      border: 0;
+      padding: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .trading-journal-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-end;
+  }
+
+  .journal-badge {
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: rgba($text-primary, 0.92);
+    background: rgba($bg-secondary, 0.78);
+    border: 1px solid rgba($border-color, 0.28);
+  }
+
+  .trading-journal-summary-lead {
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+
+    p {
+      margin: 0;
+      color: rgba($text-primary, 0.9);
+    }
+  }
+
+  .trading-journal-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .journal-summary-card {
+    padding: 1rem;
+    border-radius: 14px;
+    background: rgba($bg-secondary, 0.52);
+    border: 1px solid rgba($border-color, 0.24);
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+
+    &.journal-summary-card-result .journal-summary-value {
+      color: $accent-green;
+    }
+  }
+
+  .journal-summary-label,
+  .journal-note-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba($text-secondary, 0.9);
+  }
+
+  .journal-summary-value {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: $text-primary;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .trading-journal-summary-notes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .trading-journal-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .trading-journal-hero-image {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .journal-note {
+    padding: 1rem 1.1rem;
+    border-radius: 14px;
+    border: 1px solid rgba($border-color, 0.24);
+    background: rgba($bg-secondary, 0.45);
+
+    p {
+      margin: 0.35rem 0 0;
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    &.journal-note-positive {
+      border-color: rgba($accent-green, 0.28);
+      background: rgba($accent-green, 0.08);
+    }
+
+    &.journal-note-negative {
+      border-color: rgba($accent-red, 0.28);
+      background: rgba($accent-red, 0.08);
+    }
+
+    &.journal-note-neutral {
+      border-color: rgba($accent-blue, 0.28);
+      background: rgba($accent-blue, 0.08);
+    }
+  }
+
+  .trading-journal-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+    gap: 1.25rem;
+    align-items: center;
+    margin: 0.5rem 0 2rem;
+  }
+
+  .trading-journal-hero-copy {
+    padding: 1.35rem 1.4rem;
+    border-radius: 18px;
+    background: linear-gradient(145deg, rgba($bg-card, 0.92) 0%, rgba($bg-secondary, 0.7) 100%);
+    border: 1px solid rgba($border-color, 0.32);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.16);
+
+    h2 {
+      margin: 0.3rem 0 0.7rem;
+      padding: 0;
+      border: 0;
+      font-size: 1.55rem;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    p {
+      margin: 0;
+      color: rgba($text-primary, 0.9);
+      line-height: 1.7;
+    }
+  }
+
+  .trading-journal-hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-top: 1rem;
+  }
+
+  .trading-journal-hero-image {
+    margin: 0;
+    padding: 0.85rem;
+    border-radius: 20px;
+    background: linear-gradient(145deg, rgba($bg-card, 0.9) 0%, rgba($bg-secondary, 0.64) 100%);
+    border: 1px solid rgba($border-color, 0.32);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+
+    img {
+      display: block;
+      width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+    }
+  }
+
   .post-content {
     line-height: 1.9;
     margin-bottom: 2.5rem;
