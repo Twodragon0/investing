@@ -22,14 +22,14 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.bettafish_analyzer import BettaFishAnalyzer
 from common.collector_metrics import log_collection_summary
-from common.config import BROWSER_USER_AGENT, REQUEST_TIMEOUT, get_env, get_ssl_verify, setup_logging
+from common.config import BROWSER_USER_AGENT, REQUEST_TIMEOUT, get_env, get_kst_now, get_ssl_verify, setup_logging
 from common.dedup import DedupEngine
 from common.markdown_utils import (
     html_reference_details,
     html_source_tag,
     markdown_link,
 )
-from common.post_generator import PostGenerator
+from common.post_generator import PostGenerator, build_dated_permalink
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.signal_composer import SignalComposer
 from common.utils import request_with_retry
@@ -741,7 +741,7 @@ def build_post_content(
     )
     parts.append(
         '\n<div class="wm-footer-meta">'
-        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} UTC</span>"
+        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} KST</span>"
         "<span>소스: CNN, CBOE, yfinance, FRED</span>"
         "</div>"
     )
@@ -760,7 +760,7 @@ def main() -> None:
     dedup = DedupEngine("market_indicators_seen.json")
     gen = PostGenerator("market-analysis")
 
-    now = datetime.now(UTC)
+    now = get_kst_now()
     today = now.strftime("%Y-%m-%d")
 
     post_title = f"시장 심리 및 리스크 지표 ({today})"
@@ -824,12 +824,13 @@ def main() -> None:
         tags.append("fred")
 
     # Generate Jekyll post
-    report_permalink = "/market-analysis/{}/daily-market-indicators/".format(today.replace("-", "/"))
+    report_permalink = build_dated_permalink("market-analysis", today, "daily-market-indicators")
 
     filepath = gen.create_post(
         title=post_title,
         content=content,
         date=now,
+        logical_date=today,
         tags=tags,
         source="consolidated",
         lang="ko",
