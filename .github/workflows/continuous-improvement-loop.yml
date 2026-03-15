@@ -77,9 +77,10 @@ jobs:
 
       - name: Post loop priorities to Slack thread
         if: steps.slack.outputs.can_post == 'true'
+        env:
+          SLACK_BOT_TOKEN: ${{ steps.slack.outputs.token }}
         run: |
           python3 scripts/post_loop_to_slack.py \
-            --token "${{ steps.slack.outputs.token }}" \
             --channel "${{ steps.slack.outputs.channel }}" \
             --message-path _state/continuous-improvement-loop-slack.txt \
             --marker "[ultrawork-loop]"
@@ -105,9 +106,10 @@ jobs:
 
       - name: Post ops forum to Slack thread
         if: steps.slack_ops.outputs.can_post == 'true'
+        env:
+          SLACK_BOT_TOKEN: ${{ steps.slack_ops.outputs.token }}
         run: |
           python3 scripts/post_loop_to_slack.py \
-            --token "${{ steps.slack_ops.outputs.token }}" \
             --channel "${{ steps.slack_ops.outputs.channel }}" \
             --message-path _state/continuous-improvement-roles/continuous-improvement-loop-ops.txt \
             --marker "[multi-agent-forum]"
@@ -133,9 +135,10 @@ jobs:
 
       - name: Post security forum to Slack thread
         if: steps.slack_security.outputs.can_post == 'true'
+        env:
+          SLACK_BOT_TOKEN: ${{ steps.slack_security.outputs.token }}
         run: |
           python3 scripts/post_loop_to_slack.py \
-            --token "${{ steps.slack_security.outputs.token }}" \
             --channel "${{ steps.slack_security.outputs.channel }}" \
             --message-path _state/continuous-improvement-roles/continuous-improvement-loop-security.txt \
             --marker "[multi-agent-forum]"
@@ -161,9 +164,10 @@ jobs:
 
       - name: Post UI/UX forum to Slack thread
         if: steps.slack_dev.outputs.can_post == 'true'
+        env:
+          SLACK_BOT_TOKEN: ${{ steps.slack_dev.outputs.token }}
         run: |
           python3 scripts/post_loop_to_slack.py \
-            --token "${{ steps.slack_dev.outputs.token }}" \
             --channel "${{ steps.slack_dev.outputs.channel }}" \
             --message-path _state/continuous-improvement-roles/continuous-improvement-loop-uiux.txt \
             --marker "[multi-agent-forum]"
