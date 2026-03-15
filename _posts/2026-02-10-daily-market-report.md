@@ -8,7 +8,6 @@ source: "auto-generated"
 lang: "ko"
 description: "시장 상태: 보합세 - 뚜렷한 방향성 없이 횡보 구간 지속"
 image: "/assets/images/generated/og-daily-market-report-2026-02-10.png"
-pin: true
 ---
 
 ## 한줄 요약

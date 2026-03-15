@@ -8,7 +8,6 @@ source: "consolidated"
 lang: "ko"
 description: "암호화폐 70건, 주식 91건, 소셜 미디어 9건의 뉴스를 종합 분석한 일일 요약입니다."
 image: "/assets/images/generated/og-daily-news-summary-2026-02-14.png"
-pin: true
 excerpt: "암호화폐 70건, 주식 91건, 소셜 미디어 9건의 뉴스를 종합 분석한 일일 요약"
 ---
 
