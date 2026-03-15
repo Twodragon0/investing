@@ -21,6 +21,7 @@ journal_mistake: "2차전지 단기 뉴스에 반응해 계획 없는 추격 진
 journal_next_focus: "환율과 미국 선물 흐름을 먼저 확인하고, 실적 시즌 종목은 장중 추격을 줄입니다."
 description: "3월 15일 주식 트레이딩 일지입니다. 반도체와 방산 중심의 선별 매매, 실현 손익, 다음 세션 체크포인트를 기록했습니다."
 excerpt: "반도체 대형주 선별 매수와 방산 단기 대응으로 정리한 3월 15일 주식 트레이딩 일지입니다. 손익과 다음 세션 포인트를 한눈에 요약했습니다."
+permalink: "/stock-journal/2026/03/15/stock-trading-journal/"
 image: "/assets/images/generated/og-stock-trading-journal-2026-03-15.png"
 image_alt: "Stock trading journal visual board for March 15, 2026"
 ---
