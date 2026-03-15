@@ -612,6 +612,7 @@ def update_post_frontmatter(filepath: str, image_path: str) -> bool:
 
 def collect_posts(
     target_date: Optional[str] = None,
+    allowed_categories: Optional[List[str]] = None,
 ) -> List[Dict[str, str]]:
     """Collect posts from _posts/ directory.
 
@@ -641,13 +642,17 @@ def collect_posts(
             logger.warning("No front matter in %s, skipping", filename)
             continue
 
+        category = fm.get("categories", "")
+        if allowed_categories and category not in allowed_categories:
+            continue
+
         posts.append(
             {
                 "filepath": filepath,
                 "slug": slug_from_filename(filename),
                 "date": file_date,
                 "title": fm.get("title", ""),
-                "category": fm.get("categories", ""),
+                "category": category,
                 "description": fm.get("description", ""),
                 "excerpt": fm.get("excerpt", ""),
                 "permalink": fm.get("permalink", ""),
@@ -699,6 +704,13 @@ def main() -> None:
         action="store_true",
         help="Update each post's image: field to point to the generated OG image",
     )
+    parser.add_argument(
+        "--category",
+        action="append",
+        dest="categories",
+        default=None,
+        help="Restrict generation to specific categories (repeatable)",
+    )
     args = parser.parse_args()
 
     if not args.date and not args.all_posts:
@@ -708,7 +720,7 @@ def main() -> None:
         logger.error("matplotlib is required. Install with: pip install matplotlib")
         return
 
-    posts = collect_posts(target_date=args.date)
+    posts = collect_posts(target_date=args.date, allowed_categories=args.categories)
     if not posts:
         logger.warning("No posts found%s", f" for date {args.date}" if args.date else "")
         return
