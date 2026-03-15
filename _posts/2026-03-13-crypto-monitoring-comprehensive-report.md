@@ -8,6 +8,7 @@ keywords: "crypto, monitoring, fear-greed, market, security, macro"
 source: "crypto-monitoring"
 lang: "ko"
 description: "2026-03-13 크립토 모니터링 종합 리포트. 공포 & 탐욕 지수 15(극심한 공포), BTC $71,131(+2.5%), 총 시가총액 $2.50T, BTC 도미넌스 56.8%. 초기 회복 신호 속 신중한 접근 필요."
+image: "/assets/images/generated/news-briefing-crypto-monitoring-comprehensive-report-2026-03-13.png"
 excerpt: "2026-03-13 크립토 모니터링 종합 리포트. 공포 & 탐욕 지수 15(극심한 공포), BTC $71,131(+2.5%), 총 시가총액 $2.50T."
 ---
 
