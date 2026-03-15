@@ -622,9 +622,6 @@ def main():
             except (ValueError, AttributeError):
                 icon = ""
             content_parts.append(f"| **{name}** | {info['price']} | {icon} {info['change_pct']} |")
-    else:
-        pass
-
     # Market insight - data-driven narrative
     content_parts.append("\n## 시장 인사이트\n")
     insight_lines = []

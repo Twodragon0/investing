@@ -33,6 +33,7 @@ from common.markdown_utils import (
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.translator import get_display_title
+from common.utils import request_with_retry
 
 logger = setup_logging("collect_political_trades")
 
@@ -97,11 +98,11 @@ def fetch_sec_insider_trades() -> List[Dict[str, Any]]:
             "enddt": datetime.now(UTC).strftime("%Y-%m-%d"),
             "forms": "4",
         }
-        resp = requests.get(
+        resp = request_with_retry(
             url,
             params=params,
             timeout=REQUEST_TIMEOUT,
-            verify=VERIFY_SSL,
+            verify_ssl=VERIFY_SSL,
             headers={"User-Agent": "InvestingDragon/1.0 (https://investing.2twodragon.com)"},
         )
         if resp.status_code == 200:

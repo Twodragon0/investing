@@ -97,7 +97,7 @@ runs:
           echo "No new posts for quality improvement"
           exit 0
         fi
-        python scripts/improve_existing_posts.py --files $NEW_POST_FILES
+        echo "$NEW_POST_FILES" | xargs python scripts/improve_existing_posts.py --files
 
     - name: Commit and push
       shell: bash
@@ -153,7 +153,8 @@ runs:
                 esac
               done
               git -c core.editor=true merge --continue 2>/dev/null || \
-                git commit --no-edit 2>/dev/null || true
+                git commit --no-edit 2>/dev/null || \
+                echo "::warning::Conflict resolution commit failed; push may be incomplete"
             }
             echo "Conflict resolved, retrying push..."
           done

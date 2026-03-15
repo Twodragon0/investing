@@ -6859,6 +6859,58 @@ a:focus-visible {
   // Price change indicators keep their semantic colors
   .price-up, .change-positive { color: #1a7f37; }
   .price-down, .change-negative { color: #cf222e; }
+
+  // Dashboard header light mode
+  .dashboard-header {
+    background: linear-gradient(135deg, rgba(246, 248, 250, 0.95) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(240, 243, 246, 0.85) 100%);
+    border-color: rgba(208, 215, 222, 0.7);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  }
+
+  .dashboard-info p {
+    color: #656d76;
+    text-shadow: none;
+  }
+
+  .dashboard-date {
+    background: rgba(246, 248, 250, 0.7);
+    color: #656d76;
+  }
+
+  // Category cards light mode
+  .cat-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(246, 248, 250, 0.9) 100%);
+    border-color: rgba(208, 215, 222, 0.5);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+    &:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(246, 248, 250, 0.95) 100%);
+    }
+
+    .cat-name { color: #24292f; }
+    .cat-count { color: #656d76; }
+  }
+
+  // Posts tabs light mode
+  .posts-tab {
+    background: rgba(246, 248, 250, 0.8);
+    color: #656d76;
+    border-color: rgba(208, 215, 222, 0.4);
+
+    &.active {
+      background: #ffffff;
+      color: #0969da;
+      border-color: #0969da;
+    }
+  }
+
+  // Post tags light mode (override dark-mode hardcoded colors)
+  .post-tags .tag {
+    background: rgba(9, 105, 218, 0.08);
+    color: #0969da;
+    border-color: rgba(9, 105, 218, 0.2);
+  }
 }
 
 /* ================================

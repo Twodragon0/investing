@@ -139,7 +139,10 @@ class DedupEngine:
             existing_date = entry[1] if isinstance(entry, list) and len(entry) > 1 else ""
             # Use stricter threshold for cross-day comparison
             threshold = self.SAME_DAY_THRESHOLD if existing_date == current_date else self.CROSS_DAY_THRESHOLD
-            ratio = SequenceMatcher(None, normalized_title, existing_title).ratio()
+            matcher = SequenceMatcher(None, normalized_title, existing_title)
+            if matcher.quick_ratio() <= threshold:
+                continue
+            ratio = matcher.ratio()
             if ratio > threshold:
                 logger.debug(
                     "Fuzzy duplicate (threshold=%.2f, %s): %.2f '%s' ~ '%s'",
