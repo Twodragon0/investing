@@ -32,6 +32,12 @@ jobs:
           cache: 'pip'
           cache-dependency-path: scripts/requirements.txt
 
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
       - name: Install dependencies
         run: |
           pip install -r scripts/requirements.txt ruff yamllint basedpyright pytest pytest-cov
@@ -106,6 +112,16 @@ jobs:
 
       - name: Validate collector summary log contract
         run: python scripts/validate_collector_summary_contract.py
+
+      - name: Run Jekyll build guard
+        shell: bash
+        run: |
+          set -euo pipefail
+          bundle exec jekyll build 2>&1 | tee jekyll-build.log
+          python scripts/check_jekyll_build.py jekyll-build.log
+
+      - name: Run rendered page smoke test
+        run: python scripts/smoke_test_rendered_pages.py
 
       - name: Run GitHub Actions workflow lint
         id: actionlint
