@@ -15,7 +15,7 @@ import requests
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.collector_metrics import log_collection_summary
-from common.config import REQUEST_TIMEOUT, USER_AGENT, get_ssl_verify, setup_logging
+from common.config import REQUEST_TIMEOUT, USER_AGENT, get_kst_now, get_ssl_verify, setup_logging
 from common.dedup import DedupEngine
 from common.enrichment import _WORLDMONITOR_SOURCE_CONTEXT, enrich_items
 from common.markdown_utils import (
@@ -25,7 +25,7 @@ from common.markdown_utils import (
     markdown_link,
     markdown_table,
 )
-from common.post_generator import PostGenerator
+from common.post_generator import PostGenerator, build_dated_permalink
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.translator import get_display_title
 from common.utils import truncate_text
@@ -633,8 +633,8 @@ def main() -> None:
     dedup = DedupEngine("worldmonitor_news_seen.json")
     generator = PostGenerator("market-analysis")
 
-    today = datetime.now(UTC).strftime("%Y-%m-%d")
-    now = datetime.now(UTC)
+    now = get_kst_now()
+    today = now.strftime("%Y-%m-%d")
     post_title = f"WorldMonitor 글로벌 인텔리전스 브리핑 - {today}"
 
     if dedup.is_duplicate_exact(post_title, "worldmonitor", today):
@@ -898,7 +898,7 @@ def main() -> None:
             "투자 조언이 아닙니다.*",
             "",
             '<div class="wm-footer-meta">',
-            f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} UTC</span>",
+            f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} KST</span>",
             "<span>소스: worldmonitor.app API, finance.worldmonitor.app</span>",
             "</div>",
         ]
@@ -943,11 +943,13 @@ def main() -> None:
         title=post_title,
         content=content,
         date=now,
+        logical_date=today,
         tags=["worldmonitor", "geopolitics", "macro", "daily-digest"],
         source="worldmonitor",
         source_url="https://worldmonitor.app",
         lang="ko",
         image=briefing_image or "/assets/images/og-default.png",
+        extra_frontmatter={"permalink": build_dated_permalink("market-analysis", today, "daily-worldmonitor-briefing")},
         slug="daily-worldmonitor-briefing",
     )
 
