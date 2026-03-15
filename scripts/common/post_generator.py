@@ -8,11 +8,11 @@ import os
 import re
 from datetime import UTC, datetime
 from typing import Dict, List, Optional
-from zoneinfo import ZoneInfo
 
+from common.config import get_kst_now, get_kst_timezone
 from common.markdown_utils import smart_truncate
 
-KST = ZoneInfo("Asia/Seoul")
+KST = get_kst_timezone()
 
 logger = logging.getLogger(__name__)
 
@@ -133,6 +133,22 @@ _DEFAULT_CATEGORY_IMAGES: dict[str, str] = {
     "worldmonitor": "/assets/images/og-worldmonitor.png",
     "security-alerts": "/assets/images/og-security-alerts.png",
 }
+
+
+def _normalize_logical_date(logical_date: Optional[str], date_kst: datetime) -> str:
+    if logical_date:
+        normalized = logical_date.strip()
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", normalized):
+            raise ValueError(f"logical_date must be YYYY-MM-DD, got: {logical_date}")
+        return normalized
+    return date_kst.strftime("%Y-%m-%d")
+
+
+def build_dated_permalink(category: str, logical_date: str, slug: str) -> str:
+    normalized_date = _normalize_logical_date(logical_date, get_kst_now())
+    safe_category = category.strip("/")
+    safe_slug = slug.strip("/")
+    return f"/{safe_category}/{normalized_date.replace('-', '/')}/{safe_slug}/"
 
 
 def _fix_translation_artifacts(text: str) -> str:
@@ -362,6 +378,7 @@ class PostGenerator:
         title: str,
         content: str,
         date: Optional[datetime] = None,
+        logical_date: Optional[str] = None,
         tags: Optional[List[str]] = None,
         source: str = "",
         source_url: str = "",
@@ -384,14 +401,20 @@ class PostGenerator:
         content = html.unescape(content)
 
         if date is None:
-            date = datetime.now(UTC)
+            date = get_kst_now()
+
+        if date.tzinfo is not None:
+            date_kst = date.astimezone(KST)
+        else:
+            date_kst = date.replace(tzinfo=UTC).astimezone(KST)
 
         if slug is None:
             slug = _slugify(title)
         if not slug:
             slug = f"post-{date.strftime('%H%M%S')}"
 
-        filename = f"{date.strftime('%Y-%m-%d')}-{slug}.md"
+        filename_date = _normalize_logical_date(logical_date, date_kst)
+        filename = f"{filename_date}-{slug}.md"
         filepath = os.path.join(POSTS_DIR, filename)
 
         if os.path.exists(filepath):
@@ -400,11 +423,6 @@ class PostGenerator:
 
         # Build frontmatter
         escaped_title = title.replace("\\", "\\\\").replace('"', '\\"')
-        # Convert to KST for frontmatter display (filename keeps original date)
-        if date.tzinfo is not None:
-            date_kst = date.astimezone(KST)
-        else:
-            date_kst = date.replace(tzinfo=UTC).astimezone(KST)
         frontmatter_lines = [
             "---",
             "layout: post",
@@ -491,6 +509,7 @@ class PostGenerator:
         title: str,
         sections: Dict[str, str],
         date: Optional[datetime] = None,
+        logical_date: Optional[str] = None,
         tags: Optional[List[str]] = None,
         image: str = "",
         slug: Optional[str] = None,
@@ -505,6 +524,7 @@ class PostGenerator:
             title=title,
             content=content,
             date=date,
+            logical_date=logical_date,
             tags=tags,
             source="auto-generated",
             image=image,

@@ -2,7 +2,7 @@
 
 import logging
 import os
-from datetime import timedelta, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Optional
 
 try:
@@ -23,13 +23,9 @@ def get_ssl_verify():
     """
     if os.environ.get("DISABLE_SSL_VERIFY", "").lower() in ("true", "1"):
         if os.environ.get("CI") or os.environ.get("GITHUB_ACTIONS"):
-            logger.error(
-                "DISABLE_SSL_VERIFY blocked in CI/GitHub Actions environment"
-            )
+            logger.error("DISABLE_SSL_VERIFY blocked in CI/GitHub Actions environment")
             return True
-        logger.critical(
-            "SSL verification disabled via DISABLE_SSL_VERIFY — MITM attacks possible. Local dev only."
-        )
+        logger.critical("SSL verification disabled via DISABLE_SSL_VERIFY — MITM attacks possible. Local dev only.")
         return False
 
     try:
@@ -130,6 +126,10 @@ def get_kst_timezone():
         except Exception:
             pass
     return timezone(timedelta(hours=9))
+
+
+def get_kst_now() -> datetime:
+    return datetime.now(get_kst_timezone())
 
 
 # ── Shared constants ──
