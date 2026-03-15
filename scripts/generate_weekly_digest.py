@@ -28,7 +28,19 @@ POSTS_DIR = os.path.join(REPO_ROOT, "_posts")
 
 def parse_post_frontmatter(filepath: str) -> Dict:
     """Parse YAML frontmatter from a markdown post file."""
-    result = {"title": "", "date": "", "categories": "", "tags": []}
+    result = {
+        "title": "",
+        "date": "",
+        "categories": "",
+        "tags": [],
+        "journal_strategy": "",
+        "journal_market_regime": "",
+        "journal_day_result": "",
+        "journal_trade_count": "",
+        "journal_realized_pnl": "",
+        "journal_best_trade": "",
+        "journal_next_focus": "",
+    }
     try:
         with open(filepath, encoding="utf-8") as f:
             content = f.read()
@@ -49,6 +61,23 @@ def parse_post_frontmatter(filepath: str) -> Dict:
                 result["date"] = line.split(":", 1)[1].strip()
             elif line.startswith("categories:"):
                 result["categories"] = line.split(":", 1)[1].strip()
+            elif line.startswith("tags:"):
+                tags_value = line.split(":", 1)[1].strip().strip("[]")
+                result["tags"] = [tag.strip().strip('"').strip("'") for tag in tags_value.split(",") if tag.strip()]
+            elif line.startswith("journal_strategy:"):
+                result["journal_strategy"] = line.split(":", 1)[1].strip().strip('"').strip("'")
+            elif line.startswith("journal_market_regime:"):
+                result["journal_market_regime"] = line.split(":", 1)[1].strip().strip('"').strip("'")
+            elif line.startswith("journal_day_result:"):
+                result["journal_day_result"] = line.split(":", 1)[1].strip().strip('"').strip("'")
+            elif line.startswith("journal_trade_count:"):
+                result["journal_trade_count"] = line.split(":", 1)[1].strip().strip('"').strip("'")
+            elif line.startswith("journal_realized_pnl:"):
+                result["journal_realized_pnl"] = line.split(":", 1)[1].strip().strip('"').strip("'")
+            elif line.startswith("journal_best_trade:"):
+                result["journal_best_trade"] = line.split(":", 1)[1].strip().strip('"').strip("'")
+            elif line.startswith("journal_next_focus:"):
+                result["journal_next_focus"] = line.split(":", 1)[1].strip().strip('"').strip("'")
 
         return result
     except Exception as e:
@@ -130,6 +159,77 @@ def extract_key_bullets(body: str, max_bullets: int = 3) -> List[str]:
         bullets.append(first)
 
     return bullets
+
+
+def extract_journal_snapshot(post: Dict) -> List[str]:
+    strategy = post.get("journal_strategy", "").strip()
+    regime = post.get("journal_market_regime", "").strip()
+    day_result = post.get("journal_day_result", "").strip()
+    trade_count = post.get("journal_trade_count", "").strip()
+    realized_pnl = post.get("journal_realized_pnl", "").strip()
+    best_trade = post.get("journal_best_trade", "").strip()
+    next_focus = post.get("journal_next_focus", "").strip()
+
+    snapshot = []
+    if strategy or regime or day_result:
+        parts = []
+        if strategy:
+            parts.append(f"전략: {strategy}")
+        if regime:
+            parts.append(f"시장 상태: {regime}")
+        if day_result:
+            parts.append(f"당일 결과: {day_result}")
+        snapshot.append(" | ".join(parts))
+    if trade_count or realized_pnl:
+        parts = []
+        if trade_count:
+            parts.append(f"거래 횟수: {trade_count}")
+        if realized_pnl:
+            parts.append(f"실현 손익: {realized_pnl}")
+        snapshot.append(" | ".join(parts))
+    if best_trade:
+        snapshot.append(f"베스트 트레이드: {best_trade}")
+    if next_focus:
+        snapshot.append(f"다음 세션 포인트: {next_focus}")
+    return [item for item in snapshot if item]
+
+
+def build_journal_performance_section(posts: List[Dict]) -> List[str]:
+    journal_posts = [
+        post
+        for post in posts
+        if post.get("categories", "").strip("[]") in {"crypto-trading-journal", "stock-trading-journal"}
+    ]
+    if not journal_posts:
+        return []
+
+    lines = ["## 트레이딩 일지 성과\n"]
+    lines.append("| 날짜 | 일지 | 전략 | 결과 | 거래 | 실현 손익 |")
+    lines.append("|------|------|------|------|------|-----------|")
+
+    for post in sorted(journal_posts, key=lambda x: x.get("file_date", ""), reverse=True)[:6]:
+        category = post.get("categories", "").strip("[]")
+        journal_name = "크립토" if category == "crypto-trading-journal" else "주식"
+        strategy = smart_truncate(post.get("journal_strategy", "-") or "-", 30)
+        result = post.get("journal_day_result", "-") or "-"
+        trade_count = post.get("journal_trade_count", "-") or "-"
+        realized = post.get("journal_realized_pnl", "-") or "-"
+        lines.append(
+            f"| {post.get('file_date', '-')} | {journal_name} | {strategy} | {result} | {trade_count} | {realized} |"
+        )
+
+        snapshot = extract_journal_snapshot(post)
+        if snapshot:
+            lines.append(f"- [{post.get('file_date', '-')}] {snapshot[0]}")
+            if len(snapshot) > 1:
+                lines.append(f"- {snapshot[1]}")
+            if post.get("journal_best_trade"):
+                lines.append(f"- 베스트 트레이드: {post.get('journal_best_trade')}")
+            if post.get("journal_next_focus"):
+                lines.append(f"- 다음 세션 포인트: {post.get('journal_next_focus')}")
+            lines.append("")
+
+    return lines
 
 
 def extract_market_data(posts: List[Dict]) -> Dict:
@@ -261,12 +361,19 @@ def generate_digest(posts: List[Dict]) -> str:
         content_parts.extend(overview_lines)
         content_parts.append("")
 
+    journal_lines = build_journal_performance_section(posts)
+    if journal_lines:
+        content_parts.extend(journal_lines)
+        content_parts.append("")
+
     # ── Category Sections with Insights ──
     cat_names = {
         "crypto-news": "암호화폐 뉴스",
         "stock-news": "주식 시장",
         "security-alerts": "보안 알림",
         "market-analysis": "시장 분석",
+        "crypto-trading-journal": "크립토 트레이딩 일지",
+        "stock-trading-journal": "주식 트레이딩 일지",
         "social-media": "소셜 미디어",
         "regulatory-news": "규제 동향",
         "political-trades": "정치인 거래",
@@ -278,7 +385,9 @@ def generate_digest(posts: List[Dict]) -> str:
     cat_order = [
         "market-analysis",
         "crypto-news",
+        "crypto-trading-journal",
         "stock-news",
+        "stock-trading-journal",
         "regulatory-news",
         "security-alerts",
     ]
@@ -300,7 +409,10 @@ def generate_digest(posts: List[Dict]) -> str:
             if insight_count >= max_insights:
                 break
             date = p.get("file_date", "")
-            bullets = extract_key_bullets(p.get("body", ""))
+            if cat in {"crypto-trading-journal", "stock-trading-journal"}:
+                bullets = extract_journal_snapshot(p)
+            else:
+                bullets = extract_key_bullets(p.get("body", ""))
             for b in bullets:
                 if insight_count >= max_insights:
                     break
