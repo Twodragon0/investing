@@ -364,10 +364,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Generate 10AM ops Slack digest")
     parser.add_argument("--repo", default=os.getenv("GITHUB_REPOSITORY", "Twodragon0/investing"))
     parser.add_argument("--github-token", default=os.getenv("GITHUB_TOKEN", ""))
-    parser.add_argument("--slack-token", default=os.getenv("SLACK_BOT_TOKEN", ""))
     parser.add_argument("--slack-channel", default=os.getenv("SLACK_CHANNEL_ID", ""))
     parser.add_argument("--state-file", default="_state/ops-10am-digest-state.json")
     args = parser.parse_args()
+
+    slack_token = os.getenv("SLACK_BOT_TOKEN", "")
 
     now = datetime.now(get_kst_timezone())
     marker = f"[ops-10am-digest:{now.strftime('%Y-%m-%d')}]"
@@ -375,7 +376,7 @@ def main() -> int:
     gh = collect_github_summary(args.repo, args.github_token)
     vercel = collect_vercel_summary()
     oc = collect_openclaw_summary()
-    slack = collect_slack_health(args.slack_token, args.slack_channel)
+    slack = collect_slack_health(slack_token, args.slack_channel)
 
     state_path = Path(args.state_file)
     prev_state = read_state(state_path)
@@ -388,7 +389,7 @@ def main() -> int:
 
     actions = build_actions(gh, vercel, oc, slack)
     message = format_digest(marker, gh, vercel, oc, slack, actions, prev_state, links)
-    post_ok = should_post_today(args.slack_token, args.slack_channel, marker)
+    post_ok = should_post_today(slack_token, args.slack_channel, marker)
 
     current_state = {
         "timestamp": now.isoformat(),

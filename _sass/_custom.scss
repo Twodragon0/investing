@@ -3020,6 +3020,11 @@ html {
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     &::-webkit-scrollbar { display: none; }
+    position: relative;
+
+    // Fade mask to indicate horizontal scroll
+    -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);
+    mask-image: linear-gradient(to right, black 90%, transparent 100%);
   }
 
   .posts-tab {

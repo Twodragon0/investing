@@ -12,6 +12,7 @@ import hashlib
 import json
 import logging
 import os
+import re
 import tempfile
 import time
 from pathlib import Path
@@ -229,7 +230,6 @@ def _apply_term_overrides(text: str) -> tuple:
     # Sort by length (longest first) to avoid partial matches
     sorted_terms = sorted(_TERM_LOOKUP.items(), key=lambda x: len(x[0]), reverse=True)
 
-    import re
 
     for _lower_key, (original, korean) in sorted_terms:
         # Use word boundaries to prevent matching inside other words.
@@ -390,7 +390,6 @@ def _postprocess_translation(text: str) -> str:
     2. Corrects mistranslated media/source names
     3. Improves awkward Korean phrasing patterns
     """
-    import re
 
     if not text:
         return text
