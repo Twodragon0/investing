@@ -8,7 +8,6 @@ source: "consolidated"
 lang: "ko"
 description: "암호화폐 87건, 주식 114건, 규제 21건, 소셜 미디어 29건의 뉴스를 종합 분석한 일일 요약입니다."
 image: "/assets/images/generated/og-daily-news-summary-2026-02-16.png"
-pin: true
 excerpt: "암호화폐 87건, 주식 114건, 규제 21건, 소셜 미디어 29건의 뉴스를 종합 분석한 일일 요약"
 ---
 
