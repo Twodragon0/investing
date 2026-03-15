@@ -36,7 +36,7 @@ from common.markdown_utils import (
 )
 from common.post_generator import PostGenerator
 from common.rss_fetcher import fetch_rss_feeds_concurrent
-from common.utils import sanitize_string, truncate_text
+from common.utils import request_with_retry, sanitize_string, truncate_text
 
 logger = setup_logging("collect_geopolitical")
 
@@ -76,14 +76,13 @@ def fetch_polymarket(limit: int = 20) -> List[Dict[str, Any]]:
             "limit": 50,
         }
         try:
-            resp = requests.get(
+            resp = request_with_retry(
                 url,
                 params=params,
                 timeout=REQUEST_TIMEOUT,
-                verify=VERIFY_SSL,
+                verify_ssl=VERIFY_SSL,
                 headers={"User-Agent": USER_AGENT},
             )
-            resp.raise_for_status()
             data = resp.json()
             markets = data if isinstance(data, list) else data.get("markets", [])
 
@@ -189,14 +188,13 @@ def fetch_gdelt(limit: int = 30) -> List[Dict[str, Any]]:
     items: List[Dict[str, Any]] = []
 
     try:
-        resp = requests.get(
+        resp = request_with_retry(
             url,
             params=params,
             timeout=REQUEST_TIMEOUT,
-            verify=VERIFY_SSL,
+            verify_ssl=VERIFY_SSL,
             headers={"User-Agent": USER_AGENT},
         )
-        resp.raise_for_status()
         data = resp.json()
         articles = data.get("articles", [])
         if not isinstance(articles, list):

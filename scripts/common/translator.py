@@ -444,10 +444,11 @@ def translate_to_korean(text: str) -> str:
             # Post-process to fix Google Translate artifacts
             result = _postprocess_translation(result)
 
-            # Cache the result
+            # Cache the result and flush to disk
             global _cache_dirty
             cache[key] = result
             _cache_dirty = True
+            _save_cache()
 
             return result
     except Exception as e:  # noqa: BLE001
