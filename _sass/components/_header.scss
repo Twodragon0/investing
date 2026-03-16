@@ -1,0 +1,667 @@
+/* ================================
+   HEADER - Modern Sticky Header
+   ================================ */
+.site-header {
+  background: rgba($bg-secondary, 0.96);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid rgba($border-color, 0.6);
+  padding: 0.75rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  box-shadow: 0 1px 0 rgba($border-color, 0.4), 0 4px 16px rgba(0, 0, 0, 0.25);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: space-between;
+  }
+
+  .site-logo {
+    color: $text-primary;
+    font-family: $font-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    white-space: nowrap;
+    letter-spacing: -0.01em;
+    transition: color 0.2s ease;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: $accent-blue;
+      text-decoration: none;
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: var(--focus-ring);
+      border-radius: 6px;
+    }
+  }
+
+  .site-nav {
+    display: flex;
+    gap: 0.15rem;
+    align-items: center;
+
+    .nav-link {
+      color: $text-secondary;
+      padding: 0.6rem 0.875rem;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.15s ease, background 0.15s ease;
+      white-space: nowrap;
+
+      &:hover,
+      &.active {
+        color: $text-primary;
+        background: rgba($bg-card, 0.9);
+        text-decoration: none;
+      }
+
+      &:focus-visible {
+        outline: none;
+        box-shadow: var(--focus-ring);
+      }
+    }
+  }
+
+  .nav-dropdown {
+    position: relative;
+
+    .nav-dropdown-btn {
+      -webkit-appearance: none;
+      appearance: none;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      color: $text-secondary;
+      padding: 0.6rem 0.875rem;
+      min-height: 44px;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: $font-sans;
+      line-height: normal;
+      transition: color 0.15s ease, background 0.15s ease;
+      white-space: nowrap;
+
+      svg {
+        transition: transform 0.2s ease;
+        flex-shrink: 0;
+      }
+
+      &:hover {
+        color: $text-primary;
+        background: rgba($bg-card, 0.9);
+      }
+
+      &:focus-visible {
+        outline: none;
+        box-shadow: var(--focus-ring);
+      }
+    }
+
+    &:hover .nav-dropdown-btn,
+    &.open .nav-dropdown-btn {
+      color: $text-primary;
+      background: rgba($bg-card, 0.9);
+
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    .nav-dropdown-menu {
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 0;
+      min-width: 172px;
+      background: rgba($bg-secondary, 0.99);
+      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba($border-color, 0.6);
+      border-radius: 10px;
+      padding: 4px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-6px) scale(0.98);
+      transform-origin: top left;
+      transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s ease;
+      z-index: 300;
+
+      a {
+        display: flex;
+        align-items: center;
+        min-height: 40px;
+        padding: 0.5rem 0.875rem;
+        color: $text-secondary;
+        font-size: 0.85rem;
+        border-radius: 6px;
+        transition: color 0.15s ease, background 0.15s ease;
+        white-space: nowrap;
+
+        &:hover,
+        &.active {
+          color: $text-primary;
+          background: rgba($bg-card, 0.9);
+          text-decoration: none;
+        }
+
+        &:focus-visible {
+          outline: none;
+          box-shadow: var(--focus-ring);
+        }
+      }
+    }
+
+    &:hover .nav-dropdown-menu,
+    &.open .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: 1px solid rgba($border-color, 0.5);
+    color: $text-primary;
+    font-size: 1.4rem;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease, border-color 0.15s ease;
+
+    &:hover {
+      background: rgba($bg-card, 0.8);
+      border-color: rgba($accent-blue, 0.4);
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: var(--focus-ring);
+    }
+  }
+}
+/* ================================
+   LANGUAGE TOGGLE - Header Dropdown
+   ================================ */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lang-toggle-wrapper {
+  position: relative;
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 0.625rem;
+  background: transparent;
+  border: 1px solid rgba($border-color, 0.45);
+  border-radius: 8px;
+  color: $text-secondary;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  font-family: $font-sans;
+  font-size: inherit;
+  line-height: normal;
+
+  &:hover {
+    background: rgba($bg-card, 0.85);
+    border-color: rgba($accent-blue, 0.5);
+    color: $text-primary;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+  }
+
+  .globe-icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    pointer-events: none;
+  }
+
+  .lang-code {
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+    pointer-events: none;
+  }
+}
+
+.lang-dropdown-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+.lang-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  min-width: 140px;
+  padding: 4px;
+  background: rgba($bg-secondary, 0.98);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba($border-color, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 200;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+.lang-option {
+  -webkit-appearance: none;
+  appearance: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: $text-primary;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.85rem;
+  line-height: normal;
+  transition: all 0.2s ease;
+  text-align: left;
+
+  &:hover {
+    background: rgba($bg-card, 0.8);
+  }
+
+  .lang-flag {
+    flex-shrink: 0;
+    font-size: 1.1em;
+    line-height: 1;
+    min-width: 1.25em;
+    text-align: center;
+  }
+
+  .lang-name {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.lang-ai-badge {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $text-secondary;
+  padding: 4px 10px 2px;
+  opacity: 0.6;
+  text-align: center;
+}
+
+/* ================================
+   SEARCH OVERLAY - Full Screen Search
+   ================================ */
+.search-toggle-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.search-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: 1px solid rgba($border-color, 0.45);
+  border-radius: 8px;
+  color: $text-secondary;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover {
+    background: rgba($bg-card, 0.85);
+    border-color: rgba($accent-blue, 0.5);
+    color: $text-primary;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+.search-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--search-overlay-bg);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.3s ease;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+.search-overlay-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.search-overlay-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.search-overlay-input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  background: rgba($bg-card, 0.9);
+  border: 2px solid rgba($border-color, 0.55);
+  border-radius: 12px;
+  color: $text-primary;
+  font-family: $font-sans;
+  font-size: 1.15rem;
+  font-weight: 500;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    border-color: $accent-blue;
+    box-shadow: 0 0 0 4px rgba($accent-blue, 0.2);
+  }
+
+  &::placeholder {
+    color: rgba($text-secondary, 0.7);
+  }
+}
+
+.search-overlay-close {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  background: rgba($bg-card, 0.85);
+  border: 1px solid rgba($border-color, 0.5);
+  border-radius: 12px;
+  color: $text-secondary;
+  cursor: pointer;
+  font-family: $font-sans;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: rgba($accent-red, 0.12);
+    border-color: rgba($accent-red, 0.45);
+    color: $accent-red;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+  }
+}
+
+.search-results {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.search-result-item {
+  display: block;
+  background: rgba($bg-card, 0.65);
+  border: 1px solid rgba($border-color, 0.5);
+  border-radius: 10px;
+  padding: 1.125rem 1.25rem;
+  transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  text-decoration: none;
+  color: $text-primary;
+
+  &:hover, &:focus-visible {
+    background: rgba($bg-card, 0.9);
+    border-color: rgba($accent-blue, 0.55);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    outline: none;
+  }
+}
+
+.search-result-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+
+  mark {
+    background: rgba($accent-blue, 0.25);
+    color: inherit;
+    padding: 0.1em 0.2em;
+    border-radius: 3px;
+  }
+}
+
+.search-result-item:hover .search-result-title {
+  color: var(--accent-blue);
+}
+
+.search-result-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.search-result-date {
+  color: $text-secondary;
+}
+
+.search-result-cat {
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba($accent-blue, 0.15);
+  color: $accent-blue;
+
+  &.cat-crypto { background: rgba($cat-crypto, 0.15); color: $cat-crypto; }
+  &.cat-stock { background: rgba($cat-stock, 0.15); color: $cat-stock; }
+  &.cat-journal { background: rgba($cat-journal, 0.15); color: $cat-journal; }
+  &.cat-security { background: rgba($cat-security, 0.15); color: $cat-security; }
+  &.cat-analysis { background: rgba($cat-analysis, 0.15); color: $cat-analysis; }
+  &.cat-regulatory { background: rgba($cat-regulatory, 0.15); color: $cat-regulatory; }
+  &.cat-political { background: rgba($cat-political, 0.15); color: $cat-political; }
+  &.cat-social { background: rgba($cat-social, 0.15); color: $cat-social; }
+  &.cat-worldmonitor { background: rgba($cat-worldmonitor, 0.15); color: $cat-worldmonitor; }
+  &.cat-blockchain { background: rgba($cat-blockchain, 0.15); color: $cat-blockchain; }
+}
+
+.search-result-tag {
+  color: $text-secondary;
+  font-size: 0.75rem;
+}
+
+.search-result-snippet {
+  font-size: 0.85rem;
+  color: $text-secondary;
+  line-height: 1.5;
+
+  mark {
+    background: rgba($accent-blue, 0.2);
+    color: var(--text-primary);
+    padding: 0.1em 0.15em;
+    border-radius: 2px;
+  }
+}
+
+.search-result-count {
+  font-size: 0.8rem;
+  color: $text-secondary;
+  padding: 0 0.25rem 0.25rem;
+}
+
+.search-empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: $text-secondary;
+
+  svg {
+    opacity: 0.4;
+    margin-bottom: 1rem;
+  }
+
+  .search-empty-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .search-empty-query {
+    font-size: 0.9rem;
+    opacity: 0.7;
+  }
+}
+/* ================================
+   ENHANCED HEADER
+   ================================ */
+.site-header {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      $accent-blue 25%,
+      $accent-purple 50%,
+      $accent-blue 75%,
+      transparent 100%
+    );
+    opacity: 0.6;
+  }
+}
+
+/* ================================
+   SEARCH OVERLAY
+   ================================ */
+.search-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: 1px solid rgba($border-color, 0.5);
+  border-radius: 8px;
+  color: $text-secondary;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba($bg-card, 0.8);
+    border-color: $accent-blue;
+    color: $text-primary;
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Duplicate search-overlay removed — using definition at line ~2818 */
