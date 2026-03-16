@@ -63,7 +63,7 @@ a {
   transition: all 0.3s ease;
 
   &:hover {
-    color: lighten($accent-blue, 10%);
+    color: #80c0ff;
     text-decoration: none;
   }
 }
@@ -1432,11 +1432,11 @@ a {
       transition: width 0.5s ease;
     }
 
-    .bar-fill-blue { background: linear-gradient(90deg, $accent-blue, lighten($accent-blue, 10%)); }
+    .bar-fill-blue { background: linear-gradient(90deg, $accent-blue, #80c0ff); }
     .bar-fill-orange { background: linear-gradient(90deg, #f7931a, #ffb347); }
-    .bar-fill-purple { background: linear-gradient(90deg, $accent-purple, lighten($accent-purple, 10%)); }
-    .bar-fill-green { background: linear-gradient(90deg, $accent-green, lighten($accent-green, 10%)); }
-    .bar-fill-red { background: linear-gradient(90deg, $accent-red, lighten($accent-red, 10%)); }
+    .bar-fill-purple { background: linear-gradient(90deg, $accent-purple, #d4a8ff); }
+    .bar-fill-green { background: linear-gradient(90deg, $accent-green, #5ee878); }
+    .bar-fill-red { background: linear-gradient(90deg, $accent-red, #fa7d77); }
 
     .theme-count {
       min-width: 80px;
