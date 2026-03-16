@@ -68,6 +68,7 @@ jobs:
           retention-days: 14
 
       - name: Coverage comment on PR
+        if: github.actor != 'dependabot[bot]'
         uses: py-cov-action/python-coverage-comment-action@v3
         with:
           GITHUB_TOKEN: ${{ github.token }}
@@ -197,7 +198,7 @@ jobs:
           fi
 
       - name: Comment actionlint report on PR
-        if: always() && github.event_name == 'pull_request'
+        if: always() && github.event_name == 'pull_request' && github.actor != 'dependabot[bot]'
         uses: actions/github-script@v8
         env:
           ACTIONLINT_SUMMARY_PATH: actionlint-summary.md
