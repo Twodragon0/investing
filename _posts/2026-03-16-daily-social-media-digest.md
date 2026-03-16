@@ -25,35 +25,14 @@ image_alt: "3월 16일 소셜 미디어 대화 주제와 출처 분포를 보여
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">11</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📊 8</div><div class="stat-label">매크로/금리</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div></div>
 <div class="alert-box alert-info"><strong>매크로 이벤트 경계 심리가 소셜 대화를 주도</strong><ul><li>📊 <strong>매크로/금리</strong> (8건): 연준 금리 결정과 중앙은행 메시지, 유가 변수에 관심이 집중됐습니다.</li><li>📈 <strong>가격/시장</strong> (6건): 시장 방향성보다 이벤트 이후 반응을 확인하려는 분위기가 우세했습니다.</li><li>🤖 <strong>AI/기술</strong> (1건): 엔비디아 GTC 등 기술 이벤트는 보조 이슈로 언급됐습니다.</li><li>🏛️ <strong>정치/정책</strong> (1건): 정책 전환과 지정학 리스크가 매크로 담론과 연결됐습니다.</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMi3wFBVV95cUxPa3Y2SE5WRTduLVVMWXJGaDVJejcxSFlpbkc5VFRrMWl5Q3lzbzFfSVhLcU1MMURqOW42akZjcXY4V0c3NUUxSDNGX3JwQzh4U215RTdqTm5jSTRNNzFJamNvMzdUQ3hfM1ZxN2p5U2ZiempLbVFZYW5nZmxNZlJUZHU1R1hNNWlKaFhESU54a25FZ3ppQzRWX1FYd293VS0yQjhRc3Q0N1hoNXRUckk0RFdiTWFNQ1JMWXI4MUlNNnBWQm9JdnFWc09tVXBkZmVOcTlXMFpqWU4tTVl6Zms4?oc=5">이번 주 시장 체크포인트: 연준 금리 결정, Powell 기자회견, Micron·FedEx 실적</a> <span class="p0-desc">이번 주 시장의 핵심 일정이 한 번에 모인 만큼, 이벤트 전후 변동성 확대 가능성을 염두에 둘 필요가 있습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 이번 주 시장의 핵심 체크포인트로 연준 금리 결정, Powell 기자회견, Micron·FedEx 실적이 동시에 부각됐습니다.
-총 11건의 소셜 신호는 대부분 거시 이벤트와 유가, 중앙은행 메시지에 집중됐습니다.
+오늘 수집된 총 11건 중 텔레그램 0건, 소셜 0건, 정치·경제 11건으로 매크로/금리 및 가격/시장 이슈가 주요 화제입니다.
 
-1. **📊 매크로/금리** (8건): 금리 결정과 인플레이션 경로, 유가 급등의 파급효과가 핵심 화두였습니다.
-2. **📈 가격/시장** (6건): 이벤트 이전 포지셔닝과 변동성 확대 가능성에 대한 언급이 많았습니다.
-3. **🤖 AI/기술** (1건): 엔비디아 GTC와 같은 기술 이벤트는 부가 변수로 소화되는 분위기였습니다.
-
-**리스크 수준 [ELEVATED]**: 단일 호재보다 이벤트 조합이 시장 방향을 좌우하는 구간입니다. 일정 전후 변동성 관리가 중요합니다.
-**P0 긴급**: 연준 금리 결정, Powell 기자회견, Micron·FedEx 실적 일정 집중
-- 정치·경제 11건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">8건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:75%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:12%"></div></div><span class="theme-count">1건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:12%"></div></div><span class="theme-count">1건</span></div>
-</div>
-
-*총 11건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
-
-
----
-
-
-<picture><source srcset="{{ '/assets/images/generated/source-distribution-2026-03-16.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/source-distribution-2026-03-16.png' | relative_url }}" alt="3월 16일 소셜 미디어 출처 분포와 핵심 매크로 이슈 요약 이미지" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 매크로/금리, 가격/시장, AI/기술
+- 긴급 알림 1건에 대한 선별 모니터링
 
 ## 정치·경제 동향
 

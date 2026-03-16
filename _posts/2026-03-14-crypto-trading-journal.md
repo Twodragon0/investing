@@ -32,6 +32,11 @@ image_alt: "Crypto trading journal visual board for March 14, 2026"
 
 큰 방향 추종보다는 레인지 대응이 효율적인 세션이었습니다. BTC는 박스 상단 돌파를 기다리기보다 상하단 재시험을 기준으로 짧게 대응했고, SOL은 거래량이 붙을 때만 참여했습니다.
 
+## 전체 뉴스 요약
+
+- - 핵심 시나리오: BTC는 range scalp, SOL은 volume confirmation only - 리스크 예산: 총 노출 30% 이하, 1회 손실 -0.4R, 무계획 추격 금지 - 시장 일치도: 방향보다는 속도와 체결 구간 관리가 중요한 장세라는 판단이 맞았습니다.
+
+
 ## 오늘의 시장 환경
 
 | 지표 | 값 | 해석 |

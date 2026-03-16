@@ -32,6 +32,11 @@ image_alt: "Stock trading journal visual board for March 14, 2026"
 
 시장 전체가 좋아 보였지만 실제로는 반도체와 자동차만 상대적으로 강했습니다. 업종 로테이션 기대를 쫓기보다 거래대금이 붙는 라인만 따라가는 게 더 효율적이었습니다.
 
+## 전체 뉴스 요약
+
+- - 핵심 시나리오: index pullback buy, semiconductor first, weak sectors ignored - 포지션 한도: 종목당 18% 이하, 총 노출 60% 이하, 손절 -1.0% 기준 - 시장 일치도: 지수 반등은 맞았지만 실제 성과는 업종 선택이…
+
+
 ## 오늘의 시장 환경
 
 | 지표 | 값 | 해석 |

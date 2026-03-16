@@ -27,37 +27,12 @@ image_alt: "3월 16일 주식 시장 지수와 뉴스 분포를 요약한 스냅
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">140</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 23</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">리스크 위험</div></div><div class="stat-item"><div class="stat-value">5,487.24</div><div class="stat-label">KOSPI -1.72%</div></div><div class="stat-item"><div class="stat-value">1,152.96</div><div class="stat-label">KOSDAQ +0.40%</div></div></div>
 <div class="alert-box alert-info"><strong>지정학 리스크와 유가 급등 우려가 증시 해석의 중심</strong><ul><li>📈 <strong>가격/시장</strong> (23건): 하이닉스와 유가, 글로벌 증시 변동성 관련 뉴스가 집중됐습니다.</li><li>🤖 <strong>AI/기술</strong> (10건): 반도체와 AI 투자 흐름이 기술주 해석의 핵심 축이었습니다.</li><li>🏛️ <strong>정치/정책</strong> (7건): 대통령 발언과 대외 변수 관련 헤드라인이 이어졌습니다.</li><li>🔵 <strong>규제/정책</strong> (8건): 기관 수급과 제도·거시 변수 뉴스가 함께 증가했습니다.</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFBEbmptT3Uwd3p5dVRobmYtaHB1b0tEV0ZNNWRWbDdEZnNHdFQybGZpTHA5Z3FSbUhjZ0hZUWV4enFWRGVJRHlwa2JucHdIdXhNYUlqWGJCbURjX2gxS0HSAW5BVV95cUxPcHg2RmNxd2JzQ1BUQ09ZWHNVN0pocFZlQUpLblhoWjhhRkc2Z2JfTU8xOExxekJZWGo1aHFNNThBRGRKTzhwS2JNY1VWSXVaamdmV3pIdHE1ZDVyNTRQNWJLZkR5Rks5dVlBRUZYZw?oc=5">삼성전자·하이닉스,미-이란 전쟁에 ′급락′…증권가는 되레 목표가 올렸다 - 알파경제</a> <span class="p0-desc">삼성전자·하이닉스,미-이란 전쟁에 ′급락′…증권가는 되레 목표가 올렸다 알파경제</span></li><li><a href="https://www.cnbc.com/2026/03/14/iran-war-iea-oil-stockpile-spr-strait-hormuz.html">The biggest release of emergency oil stockpiles in history was announced. Why crude may keep rising</a> <span class="p0-desc">Oil prices have surged more than 17% since the International Energy Agency announced the largest rel...</span></li><li><a href="https://www.investing.com/news/economy-news/iea-says-governments-ready-to-release-2717-million-barrels-from-oil-reserves-4561565">IEA says 411.9 million barrels of oil from emergency reserves to be released</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 삼성전자·하이닉스 급락과 국제 유가 급등 우려가 동시에 부각되며 주식 시장 전반의 위험 인식이 높아졌습니다.
-총 140건의 뉴스 가운데 P0 긴급 이슈 3건, P1 주요 이슈 21건이 확인됐습니다.
-
-1. **📈 가격/시장** (23건): 반도체 대형주와 유가 급등이 지수 하락 압력을 키우는 핵심 변수로 떠올랐습니다.
-2. **🤖 AI/기술** (10건): 반도체와 AI 투자 기대는 살아 있지만, 지정학 변수 앞에서는 방어적 해석이 우세했습니다.
-3. **🏛️ 정치/정책** (7건): 대외 변수와 국내 정치 헤드라인이 투자심리에 직접 영향을 줬습니다.
-
-**리스크 수준 [CRITICAL]**: 지정학 리스크, 유가 급등, 금리 변수까지 겹치며 포트폴리오 점검 필요성이 커진 구간입니다.
-**P0 긴급**: 삼성전자·하이닉스 급락, 비축유 방출 발표, 국제 유가 상승 우려
-**P1 주요**: 21건 확인
-- 한국 기사 41건, 글로벌 기사 99건 수집
-- 한국 지수: KOSPI 5,487.24(-1.72%), KOSDAQ 1,152.96(+0.40%), USD/KRW 1,500.91(+0.81%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">23건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:43%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:30%"></div></div><span class="theme-count">7건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:35%"></div></div><span class="theme-count">8건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:17%"></div></div><span class="theme-count">4건</span></div>
-</div>
-
-*총 140건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
-
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-03-16.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-03-16.png' | relative_url }}" alt="3월 16일 한국 주식시장 지수와 주요 이슈를 요약한 스냅샷 이미지" loading="lazy" decoding="async"></picture>
-
-
----
+- 총 **13건** 수집
+- KOSPI 5,487.24 (-1.72%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 1,152.96 (+0.40%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
 
 ## 테마별 주요 뉴스
 

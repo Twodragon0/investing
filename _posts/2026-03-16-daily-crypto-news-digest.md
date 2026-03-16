@@ -35,23 +35,12 @@ image_alt: "3월 16일 암호화폐 핵심 뉴스 분포와 리스크 수준을 
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">85</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 41</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (27회)</div></div></div>
 <div class="alert-box alert-info"><strong>비트코인 주도 장세 속 지정학 리스크 동반</strong><ul><li>🟠 <strong>비트코인</strong> (41건): 가격 반등과 기관 수급 관련 뉴스가 가장 큰 비중을 차지했습니다.</li><li>📈 <strong>가격/시장</strong> (23건): 단기 반등 기대와 저항 구간 점검이 동시에 언급됐습니다.</li><li>🔷 <strong>이더리움</strong> (15건): 이더리움과 XRP 등 대형 알트의 상대 강도 비교가 이어졌습니다.</li><li>🔵 <strong>규제/정책</strong> (12건): 스테이블코인, 채굴, 정책 변수 관련 보도가 함께 늘었습니다.</li></ul></div>
+
 ## 전체 뉴스 요약
 
-총 85건 가운데 **비트코인 관련 뉴스가 41건(48%)** 으로 가장 큰 비중을 차지했습니다. 시장은 여전히 비트코인 중심으로 움직이고 있지만, 지정학 리스크와 규제 뉴스가 함께 늘면서 단순 낙관론보다는 신중한 해석이 필요합니다.
-
-1. **🟠 비트코인** (41건): 비트코인 가격 방어력, 기관 수급, 거시 변수와의 상관관계가 핵심 주제로 떠올랐습니다.
-2. **📈 가격/시장** (23건): 단기 반등 기대와 함께 주요 저항 구간, 거래량 둔화, 변동성 확대 가능성이 같이 언급됐습니다.
-3. **🔷 이더리움** (15건): 이더리움과 주요 알트의 상대 강도, ETF 기대, 순환매 가능성이 함께 부각됐습니다.
-
-**리스크 수준 [ELEVATED]**: 지정학 이슈와 규제 뉴스가 동시에 유입돼 헤드라인에 따른 변동성 확대 가능성이 있습니다.
-**P1 주요**: 6건 확인
-**핵심 키워드**: **bitcoin(비트코인)**, **ethereum(이더리움)**, **ai(인공지능)**, **etf(상장지수펀드)**
-**주요 출처**: Google News(20건), Cointelegraph(15건), CoinDesk(15건)
-- 시장 영향 가능 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-03-16.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-03-16.png' | relative_url }}" alt="3월 16일 암호화폐 핵심 뉴스 브리핑 카드" loading="lazy" decoding="async"></picture>
+- 총 **85건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔷 이더리움
+- *총 85건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
 
 ## 테마별 주요 뉴스
 
