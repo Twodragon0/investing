@@ -134,6 +134,15 @@ _DEFAULT_CATEGORY_IMAGES: dict[str, str] = {
     "security-alerts": "/assets/images/og-security-alerts.png",
 }
 
+_WORDING_REPLACEMENTS: tuple[tuple[str, str], ...] = (
+    ("견인고", "견인하고"),
+    ("시장 영향 가능", "시장 영향 가능성이 있는"),
+    ("실제로 확인해야 합니다.", ""),
+    ("실제로 확인이 필요합니다.", ""),
+    ("..", "."),
+    (" .", "."),
+)
+
 
 def _normalize_logical_date(logical_date: Optional[str], date_kst: datetime) -> str:
     if logical_date:
@@ -162,6 +171,17 @@ def _fix_translation_artifacts(text: str) -> str:
     for wrong, correct in _TOKEN_ARTIFACTS.items():
         text = text.replace(wrong, correct)
     return text
+
+
+def _polish_generated_text(text: str) -> str:
+    if not text:
+        return text
+    for wrong, correct in _WORDING_REPLACEMENTS:
+        text = text.replace(wrong, correct)
+    text = re.sub(r"\s+", " ", text)
+    text = re.sub(r"([.!?]){2,}", r"\1", text)
+    text = re.sub(r"\s+([,.!?])", r"\1", text)
+    return text.strip()
 
 
 def _slugify(text: str, max_length: int = 80) -> str:
@@ -397,8 +417,8 @@ class PostGenerator:
         # Decode HTML entities (e.g. &#x27; → ', &amp; → &) in title and content
         import html
 
-        title = html.unescape(title)
-        content = html.unescape(content)
+        title = _polish_generated_text(html.unescape(title))
+        content = _polish_generated_text(html.unescape(content))
 
         if date is None:
             date = get_kst_now()
@@ -462,28 +482,28 @@ class PostGenerator:
                 desc_text = _build_fallback_description(title, self.category, tags)
                 desc_text = _clean_description(desc_text)
             if desc_text and len(desc_text) >= 80:
-                safe_desc = desc_text.replace('"', "'")
+                safe_desc = _polish_generated_text(desc_text).replace('"', "'")
                 frontmatter_lines.append(f'description: "{safe_desc}"')
 
         # excerpt 자동 생성 (SNS 미리보기용, 짧은 요약)
         if not (extra_frontmatter and "excerpt" in extra_frontmatter):
             excerpt_text = desc_text if desc_text else _extract_description(content)
             if excerpt_text:
-                excerpt_text = smart_truncate(excerpt_text, 100).replace('"', "'")
+                excerpt_text = _polish_generated_text(smart_truncate(excerpt_text, 100)).replace('"', "'")
                 frontmatter_lines.append(f'excerpt: "{excerpt_text}"')
 
         # image_alt 자동 생성 (접근성 + SNS 이미지 설명)
         if not (extra_frontmatter and "image_alt" in extra_frontmatter):
             cat_ko = _CATEGORY_KO.get(self.category, self.category)
             clean_title = re.sub(r"[*_`~]", "", title).strip()
-            image_alt = f"{clean_title} - {cat_ko} 뉴스 요약 이미지"
+            image_alt = _polish_generated_text(f"{clean_title} - {cat_ko} 뉴스 요약 이미지")
             safe_alt = image_alt.replace('"', "'")
             frontmatter_lines.append(f'image_alt: "{safe_alt}"')
 
         frontmatter_lines.append("---")
 
         # Fix translation artifacts (e.g. "gAIn", "GaSOLine") before writing
-        content = _fix_translation_artifacts(content)
+        content = _polish_generated_text(_fix_translation_artifacts(content))
 
         # Normalize hardcoded image paths in content to Liquid relative_url syntax
         normalized_content = _normalize_image_paths(content.strip())
