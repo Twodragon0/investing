@@ -49,7 +49,7 @@ jobs:
 
       - name: Post collection result to Slack
         if: steps.slack.outputs.can_post == 'true'
-        uses: slackapi/slack-github-action@v2.1.1
+        uses: slackapi/slack-github-action@v3.0.1
         with:
           method: chat.postMessage
           token: ${{ steps.slack.outputs.token }}
