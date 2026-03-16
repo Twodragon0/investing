@@ -97,8 +97,15 @@ def _get_combined_ca_bundle(certifi_bundle: str) -> Optional[str]:
 
 
 def get_env(key: str, default: str = "") -> str:
-    """Get environment variable with optional default."""
-    return os.environ.get(key, default)
+    """Get environment variable with optional default.
+
+    Strips leading/trailing whitespace and surrounding quotes to prevent
+    issues with copy-pasted or shell-exported values.
+    """
+    val = os.environ.get(key, default)
+    if val and val != default:
+        val = val.strip().strip("\"'")
+    return val
 
 
 def get_env_bool(key: str, default: bool = False) -> bool:

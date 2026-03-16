@@ -32,7 +32,7 @@ def _normalize(text: str) -> str:
 def _make_hash(title: str, source: str, date_str: str) -> str:
     """Create SHA256 hash ID from normalized title + source + date[:10]."""
     normalized = _normalize(title) + "|" + source + "|" + date_str[:10]
-    return hashlib.sha256(normalized.encode("utf-8")).hexdigest()[:16]
+    return hashlib.sha256(normalized.encode("utf-8")).hexdigest()[:24]
 
 
 class DedupEngine:
@@ -134,7 +134,7 @@ class DedupEngine:
         # Date-aware fuzzy matching against recent titles
         normalized_title = _normalize(title)
         current_date = date_str[:10]
-        for entry in self.titles[-500:]:
+        for entry in self.titles[-1000:]:
             existing_title = entry[0] if isinstance(entry, list) else entry
             existing_date = entry[1] if isinstance(entry, list) and len(entry) > 1 else ""
             # Use stricter threshold for cross-day comparison

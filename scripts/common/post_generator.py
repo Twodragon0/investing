@@ -271,12 +271,14 @@ def _extract_description(content: str) -> str:
                 break
 
     # Filter out boilerplate intro patterns that would create duplication
+    _current_year = str(datetime.now(UTC).year)
+    _prev_year = str(int(_current_year) - 1)
     _BOILERPLATE_STARTS = [
         "총 ",
         "오늘 ",
         "금일 ",
-        "2026-",
-        "2025-",
+        f"{_current_year}-",
+        f"{_prev_year}-",
         "전 세계 ",
         "미국 정치인",
         "소셜 미디어",
@@ -466,6 +468,13 @@ class PostGenerator:
             frontmatter_lines.append(f'lang: "{lang}"')
         if not image:
             image = _DEFAULT_CATEGORY_IMAGES.get(self.category, "/assets/images/og-default.png")
+        # Verify generated image exists on disk; fall back to category default
+        if "/generated/" in image:
+            abs_img = os.path.join(REPO_ROOT, image.lstrip("/"))
+            if not os.path.exists(abs_img):
+                fallback = _DEFAULT_CATEGORY_IMAGES.get(self.category, "/assets/images/og-default.png")
+                logger.warning("Generated image missing: %s -> fallback: %s", image, fallback)
+                image = fallback
         frontmatter_lines.append(f'image: "{image}"')
 
         if extra_frontmatter:
