@@ -2,7 +2,7 @@ name: Collect CoinMarketCap Data
 
 on:
   schedule:
-    - cron: '15 */6 * * *'
+    - cron: '37 */6 * * *'  # Every 6h at :37 (offset to avoid top-of-hour congestion)
   workflow_dispatch:
 
 permissions:

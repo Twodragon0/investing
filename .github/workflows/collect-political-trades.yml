@@ -2,7 +2,7 @@ name: Collect Political Trades
 
 on:
   schedule:
-    - cron: '30 0,13 * * *'  # KST 09:30, 22:30 (morning + US market evening)
+    - cron: '30 22,9 * * *'  # KST 07:30, 18:30 (morning open + afternoon)
   workflow_dispatch:
 
 permissions:

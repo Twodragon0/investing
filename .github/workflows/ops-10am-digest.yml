@@ -2,7 +2,7 @@ name: Ops 10AM Digest
 
 on:
   schedule:
-    - cron: "30 0 * * *"  # 09:30 KST
+    - cron: "0 1 * * *"  # KST 10:00 (after collection workflows settle)
   workflow_dispatch:
 
 permissions:

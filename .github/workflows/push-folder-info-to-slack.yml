@@ -2,7 +2,7 @@ name: Push Folder Info To Slack
 
 on:
   schedule:
-    - cron: '5 1 * * *'
+    - cron: '30 1 * * *'  # KST 10:30 (after digest workflows)
   workflow_dispatch:
 
 permissions:

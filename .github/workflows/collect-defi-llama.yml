@@ -2,7 +2,7 @@ name: Collect DeFi Llama Data
 
 on:
   schedule:
-    - cron: '45 */6 * * *'
+    - cron: '52 */6 * * *'  # Every 6h at :52 (offset to avoid top-of-hour congestion)
   workflow_dispatch:
 
 permissions:

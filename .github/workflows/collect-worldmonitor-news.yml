@@ -2,7 +2,7 @@ name: Collect WorldMonitor News
 
 on:
   schedule:
-    - cron: '30 0 * * *'
+    - cron: '37 21 * * *'  # KST 06:37 (early morning, before main batch)
   workflow_dispatch:
 
 permissions:
