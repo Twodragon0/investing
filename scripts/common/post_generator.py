@@ -257,6 +257,10 @@ def _wrap_picture_tags(content: str) -> str:
 
 def _extract_description(content: str) -> str:
     """Extract first meaningful text line from markdown content for SEO description."""
+    # Strip HTML block elements (stat-grid, alert-box divs) before line-by-line scan
+    content = re.sub(r"<div[^>]*>.*?</div>", " ", content, flags=re.DOTALL)
+    # Re-split on sentence boundaries after div removal to restore scannable lines
+    content = re.sub(r"\s*##\s+", "\n## ", content)
     candidates = []
     for line in content.strip().split("\n"):
         stripped = line.strip()
@@ -301,7 +305,7 @@ def _extract_description(content: str) -> str:
 
     # Try single best candidate first
     desc_text = candidates[0]
-    desc_text = re.sub(r"<[^>]+>", "", desc_text)
+    desc_text = re.sub(r"<[^>]+>", " ", desc_text)
     desc_text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", desc_text)
     desc_text = re.sub(r"[*_`~]", "", desc_text)
     desc_text = re.sub(r"\s+", " ", desc_text).strip()
@@ -311,7 +315,7 @@ def _extract_description(content: str) -> str:
         combined = []
         total = 0
         for c in candidates:
-            c = re.sub(r"<[^>]+>", "", c)
+            c = re.sub(r"<[^>]+>", " ", c)
             c = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", c)
             c = re.sub(r"[*_`~]", "", c)
             c = re.sub(r"\s+", " ", c).strip()
@@ -372,8 +376,8 @@ def _clean_description(desc: str) -> str:
         lambda m: m.group(1) + "~" + m.group(2) + m.group(3) if int(m.group(1)) < int(m.group(2)) else m.group(0),
         desc,
     )
-    # Remove HTML tags
-    desc = re.sub(r"<[^>]+>", "", desc)
+    # Remove HTML tags (replace with space to avoid concatenation artifacts)
+    desc = re.sub(r"<[^>]+>", " ", desc)
     # Remove markdown links but keep link text
     desc = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", desc)
     # Remove markdown formatting characters

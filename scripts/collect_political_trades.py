@@ -313,7 +313,7 @@ def main():
         source_parts.append(f"중앙은행 {cb_count}건")
     sources_str = ", ".join(source_parts) if source_parts else "데이터 없음"
 
-    content_parts.append("미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.\n")
+    content_parts.append("미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.")
 
     # Keyword analysis
     all_texts = " ".join(item.get("title", "") + " " + item.get("description", "") for item in unique_items).lower()
@@ -384,18 +384,18 @@ def main():
             f'<div class="stat-label">중앙은행</div></div>'
         )
 
-    content_parts.append("## 한눈에 보기\n")
-    content_parts.append(f'<div class="stat-grid">{"".join(stat_items)}</div>\n')
+    content_parts.append("## 한눈에 보기")
+    content_parts.append(f'<div class="stat-grid">{"".join(stat_items)}</div>')
 
     # Alert box with top keywords
     if top_keywords:
         kw_text = ", ".join(f"**{kw}**({cnt}회)" for kw, cnt in top_keywords[:5])
         content_parts.append(
-            f'<div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: {kw_text}</div>\n'
+            f'<div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: {kw_text}</div>'
         )
 
     # ── 전체 뉴스 요약 (내러티브 형식) ──
-    content_parts.append("## 전체 뉴스 요약\n")
+    content_parts.append("## 전체 뉴스 요약")
     summary_narrative = []
     summary_narrative.append(
         f"오늘 정치인 거래·정책 분야에서 총 **{total_count}건**의 뉴스가 수집되었습니다. "
@@ -407,7 +407,7 @@ def main():
         title = item.get("title", "")
         highlight = _first_sentence(desc) if desc and desc != title and len(desc) > 20 else title
         summary_narrative.append(
-            f"\n**트럼프 정책** 관련으로는 {highlight} 등의 소식이 포착되었으며, "
+            f"**트럼프 정책** 관련으로는 {highlight} 등의 소식이 포착되었으며, "
             f"행정명령과 관세 정책 변화가 글로벌 시장 심리에 직접적 영향을 미치고 있습니다."
         )
     if congress_count and congress_filtered:
@@ -416,7 +416,7 @@ def main():
         title = item.get("title", "")
         highlight = _first_sentence(desc) if desc and desc != title and len(desc) > 20 else title
         summary_narrative.append(
-            f"\n**미국 의회 거래** 동향에서는 {highlight} 등이 보고되었습니다. "
+            f"**미국 의회 거래** 동향에서는 {highlight} 등이 보고되었습니다. "
             "의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다."
         )
     if cb_count and cb_filtered:
@@ -425,7 +425,7 @@ def main():
         title = item.get("title", "")
         highlight = _first_sentence(desc) if desc and desc != title and len(desc) > 20 else title
         summary_narrative.append(
-            f"\n**중앙은행 정책**에서는 {highlight} 관련 뉴스가 수집되었으며, "
+            f"**중앙은행 정책**에서는 {highlight} 관련 뉴스가 수집되었으며, "
             "금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다."
         )
     if korea_count and korea_filtered:
@@ -433,10 +433,10 @@ def main():
         desc = item.get("description", "").strip()
         title = item.get("title", "")
         highlight = _first_sentence(desc) if desc and desc != title and len(desc) > 20 else title
-        summary_narrative.append(f"\n**한국 정치인** 관련으로는 {highlight} 등의 재산/거래 소식이 수집되었습니다.")
+        summary_narrative.append(f"**한국 정치인** 관련으로는 {highlight} 등의 재산/거래 소식이 수집되었습니다.")
     content_parts.extend(summary_narrative)
 
-    content_parts.append("\n\n---\n")
+    content_parts.append("---")
 
     # Collect source links
     source_links = []
@@ -445,7 +445,7 @@ def main():
         """Add a news card section with descriptions to content_parts."""
         if not items:
             return
-        content_parts.append(f"\n## {section_title}\n")
+        content_parts.append(f"## {section_title}")
         for i, item in enumerate(items[:max_items], 1):
             title = get_display_title(item)
             source = item.get("source", "unknown")
@@ -453,14 +453,14 @@ def main():
             description = (item.get("description_ko") or item.get("description", "")).strip()
             if link:
                 source_links.append(item)
-                content_parts.append(f"**{i}. {markdown_link(title, link)}**")
+                card_lines = [f"**{i}. {markdown_link(title, link)}**"]
             else:
-                content_parts.append(f"**{i}. {title}**")
+                card_lines = [f"**{i}. {title}**"]
             if description and description != title:
                 desc_text = _first_sentence(description)
-                content_parts.append(f"{desc_text}")
-            content_parts.append(f"{html_source_tag(source)}\n")
-        content_parts.append("")
+                card_lines.append(desc_text)
+            card_lines.append(html_source_tag(source))
+            content_parts.append("\n".join(card_lines))
 
     _render_news_cards(congress_filtered, "미국 의회 거래 동향")
     _render_news_cards(trump_filtered, "트럼프 행정명령/정책")
@@ -468,10 +468,10 @@ def main():
     _render_news_cards(korea_filtered, "한국 정치인 재산/거래")
     _render_news_cards(cb_filtered, "중앙은행 정책 동향")
 
-    content_parts.append("---\n")
+    content_parts.append("---")
 
     # ── 정책 영향 분석 (데이터 기반 내러티브) ──
-    content_parts.append("\n## 정책 영향 분석\n")
+    content_parts.append("## 정책 영향 분석")
     analysis_lines = []
 
     # Buy/sell pattern detection from titles
@@ -513,7 +513,7 @@ def main():
         top_stocks = stock_mentions.most_common(5)
         stocks_str = ", ".join(f"**${t}**({c}건)" for t, c in top_stocks)
         analysis_lines.append(
-            f"\n**종목 집중도**: {stocks_str}. "
+            f"**종목 집중도**: {stocks_str}. "
             f"정치인 거래가 특정 종목에 집중되는 것은 "
             f"해당 섹터의 입법·규제 방향에 대한 내부 정보 가능성을 시사합니다."
         )
@@ -554,25 +554,25 @@ def main():
         detail_str = f" ({', '.join(policy_details)})" if policy_details else ""
 
         analysis_lines.append(
-            f"\n**트럼프 정책**: {trump_count}건{detail_str}. "
+            f"**트럼프 정책**: {trump_count}건{detail_str}. "
             "행정명령 및 관세 정책 변화는 반도체·자동차·에너지 섹터의 변동성을 확대시킵니다."
         )
         for item in trump_filtered[:1]:
             desc = (item.get("description_ko") or item.get("description", "")).strip()
             title = get_display_title(item)
             if desc and desc != title and len(desc) > 20:
-                analysis_lines.append(f"\n> **주요 내용**: {_first_sentence(desc)}")
+                analysis_lines.append(f"> **주요 내용**: {_first_sentence(desc)}")
 
     if congress_count:
         analysis_lines.append(
-            f"\n**미국 의회 거래**: {congress_count}건. "
+            f"**미국 의회 거래**: {congress_count}건. "
             "의원들의 거래 패턴은 입법 방향의 간접 신호로 해석됩니다. "
             "특히 대규모 매수는 해당 섹터 지원 법안 발의 가능성과 연결될 수 있습니다."
         )
 
     if korea_count:
         analysis_lines.append(
-            f"\n**한국 정치인**: {korea_count}건. "
+            f"**한국 정치인**: {korea_count}건. "
             "공직자 재산 변동 공개는 부동산·주식 정책 방향의 선행 지표가 될 수 있으며, "
             "국내 규제 환경 변화에 대한 선제적 대응이 필요합니다."
         )
@@ -601,12 +601,12 @@ def main():
             cb_tone = "비둘기파 신호가 우세하여, 유동성 확대 기대감이 형성되고 있습니다."
         else:
             cb_tone = "금리 결정과 통화정책 기조를 면밀히 주시해야 합니다."
-        analysis_lines.append(f"\n**중앙은행 정책**: {cb_count}건. {cb_tone}")
+        analysis_lines.append(f"**중앙은행 정책**: {cb_count}건. {cb_tone}")
         for item in cb_filtered[:1]:
             desc = (item.get("description_ko") or item.get("description", "")).strip()
             title = get_display_title(item)
             if desc and desc != title and len(desc) > 20:
-                analysis_lines.append(f"\n> **주요 내용**: {_first_sentence(desc)}")
+                analysis_lines.append(f"> **주요 내용**: {_first_sentence(desc)}")
 
     # Cross-theme synthesis: combined signals across categories
     active_categories = []
@@ -694,7 +694,7 @@ def main():
                     )
 
         if cross_text:
-            analysis_lines.append(f"\n**복합 정책 신호**: {cross_text}")
+            analysis_lines.append(f"**복합 정책 신호**: {cross_text}")
 
     if not analysis_lines:
         analysis_lines.append("현재 수집된 정치인 거래/정책 데이터가 제한적입니다.")
@@ -717,13 +717,13 @@ def main():
         )
 
     content_parts.append(
-        '\n<div class="wm-footer-meta">'
+        '<div class="wm-footer-meta">'
         f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} KST</span>"
         "<span>소스: Capitol Trades, QuiverQuant, SEC EDGAR</span>"
         "</div>"
     )
 
-    content = "\n".join(content_parts)
+    content = "\n\n".join(content_parts)
 
     # Build excerpt
     excerpt_parts = []

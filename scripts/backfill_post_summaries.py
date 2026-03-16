@@ -1110,12 +1110,14 @@ def process_post(
     rebuilt_body = "\n".join(stripped_lines)
 
     # Skip redundant "전체 뉴스 요약" if post already has a summary section
-    has_existing_summary = any(find_heading_index(stripped_lines, t) != -1 for t in ("오늘의 핵심", "핵심 요약"))
+    has_existing_summary = any(find_heading_index(stripped_lines, t) != -1 for t in ("오늘의 핵심", "핵심 요약", "전체 뉴스 요약"))
+    # Also detect heading embedded inline (single-line body from _polish_generated_text bug)
+    has_inline_summary = any("## 전체 뉴스 요약" in line for line in stripped_lines)
 
     if is_social_media_post(front_data, rebuilt_body):
         summary_lines = build_social_summary(rebuilt_body)
         updated_lines = insert_social_summary(stripped_lines, summary_lines)
-    elif has_existing_summary:
+    elif has_existing_summary or has_inline_summary:
         # Post already has a prominent summary — don't duplicate
         updated_lines = stripped_lines
     else:

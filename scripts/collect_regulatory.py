@@ -219,7 +219,7 @@ def build_region_section(
     """Build a description card section for a region."""
     if not items:
         return []
-    lines = [f"\n## {region_title}\n"]
+    lines = [f"## {region_title}"]
 
     for i, item in enumerate(items[:10], 1):
         title = get_display_title(item)
@@ -229,9 +229,9 @@ def build_region_section(
 
         if link:
             source_links.append(item)
-            lines.append(f"**{i}. {markdown_link(title, link)}**")
+            card_lines = [f"**{i}. {markdown_link(title, link)}**"]
         else:
-            lines.append(f"**{i}. {title}**")
+            card_lines = [f"**{i}. {title}**"]
         if description and description != title:
             # Extract first sentence for clean summary
             desc_text = description
@@ -242,8 +242,9 @@ def build_region_section(
                     break
             else:
                 desc_text = desc_text[:200].rsplit(" ", 1)[0] if len(desc_text) > 200 else desc_text
-            lines.append(desc_text)
-        lines.append(f"{html_source_tag(source)}\n")
+            card_lines.append(desc_text)
+        card_lines.append(html_source_tag(source))
+        lines.append("\n".join(card_lines))
 
     return lines
 
@@ -390,17 +391,18 @@ def main():
     source_links: list = []
 
     content_parts = [
-        f"전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 {len(all_items)}건의 규제 관련 뉴스가 수집되었습니다.\n",
+        f"전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 {len(all_items)}건의 규제 관련 뉴스가 수집되었습니다.",
     ]
 
     # Stat grid - region counts
-    content_parts.append('<div class="stat-grid">')
+    stat_grid_parts = ['<div class="stat-grid">']
     for region, count in region_counts.most_common(4):
-        content_parts.append(
+        stat_grid_parts.append(
             f'<div class="stat-item"><span class="stat-value">{count}</span>'
             f'<span class="stat-label">{region}</span></div>'
         )
-    content_parts.append("</div>\n")
+    stat_grid_parts.append("</div>")
+    content_parts.append("\n".join(stat_grid_parts))
 
     # Executive summary (한눈에 보기)
     exec_summary = summarizer.generate_executive_summary(
@@ -415,35 +417,36 @@ def main():
         content_parts.append(overall_summary)
 
     # Key summary
-    content_parts.append("## 핵심 요약\n")
-    content_parts.append(f"- **총 수집 건수**: {len(all_items)}건")
+    summary_lines = ["## 핵심 요약", f"- **총 수집 건수**: {len(all_items)}건"]
     for region, count in region_counts.most_common():
-        content_parts.append(f"- **{region}**: {count}건")
+        summary_lines.append(f"- **{region}**: {count}건")
+    content_parts.append("\n".join(summary_lines))
 
     # Distribution chart
     dist = summarizer.generate_distribution_chart()
     if dist:
-        content_parts.append(f"\n---\n{dist}")
+        content_parts.append("---")
+        content_parts.append(dist)
 
     # Region sections
-    content_parts.append("\n---")
+    content_parts.append("---")
     content_parts.extend(build_region_section(us_items, "미국 규제 동향", source_links))
-    content_parts.append("\n---")
+    content_parts.append("---")
     content_parts.extend(build_region_section(korea_items, "한국 규제 동향", source_links))
-    content_parts.append("\n---")
+    content_parts.append("---")
     content_parts.extend(build_region_section(asia_items, "아시아 규제 동향", source_links))
-    content_parts.append("\n---")
+    content_parts.append("---")
     content_parts.extend(build_region_section(europe_items, "유럽 규제 동향", source_links))
 
     # Theme summary (custom regulatory analysis with descriptions)
-    content_parts.append("\n---")
+    content_parts.append("---")
     theme_analysis = _build_regulatory_theme_analysis(summarizer, all_items)
     if theme_analysis:
         content_parts.append(theme_analysis)
 
     # Regulatory insight - impact analysis
-    content_parts.append("\n---")
-    content_parts.append("\n## 규제 인사이트\n")
+    content_parts.append("---")
+    content_parts.append("## 규제 인사이트")
     insight_lines = []
 
     # Regulatory keyword analysis for impact assessment
@@ -522,7 +525,7 @@ def main():
             impact_tone = "규제 강화와 시장 개방 신호가 혼재하여, 방향성 확인이 필요한 시점입니다."
         top_impacts = ", ".join(f"**{label}**({cnt}건)" for label, cnt in impact_counter.most_common(4))
         total_items_count = len(all_items)
-        insight_lines.append(f"\n**규제 성격 분석** (총 {total_items_count}건 기준): {top_impacts}. {impact_tone}")
+        insight_lines.append(f"**규제 성격 분석** (총 {total_items_count}건 기준): {top_impacts}. {impact_tone}")
 
     # Region-specific insights with data-driven content extraction
     def _extract_top_topic(items: list, max_len: int = 80) -> str:
@@ -560,7 +563,7 @@ def main():
             us_focus = f"{_REGION_MARKET_IMPACT['미국']}에 직접적 영향을 미치는 규제 변화를 주시해야 합니다."
         top_us = _extract_top_topic(us_items)
         us_topic_note = f" 주요 건: *{top_us}*" if top_us else ""
-        insight_lines.append(f"\n**미국**{agency_str}: {us_focus}{us_topic_note}")
+        insight_lines.append(f"**미국**{agency_str}: {us_focus}{us_topic_note}")
 
     if korea_items:
         fsc_count = sum(1 for i in korea_items if "fsc" in " ".join(i.get("tags", [])))
@@ -575,7 +578,7 @@ def main():
             kr_focus = "금융 규제 전반의 동향이 수집되었으며, 국내 금융시장 제도 변화에 대한 모니터링이 필요합니다."
         top_kr = _extract_top_topic(korea_items)
         kr_topic_note = f" 주요 건: *{top_kr}*" if top_kr else ""
-        insight_lines.append(f"\n**한국**{kr_detail}: {kr_focus}{kr_topic_note}")
+        insight_lines.append(f"**한국**{kr_detail}: {kr_focus}{kr_topic_note}")
 
     if asia_items:
         japan_count = sum(1 for i in asia_items if "japan" in " ".join(i.get("tags", [])))
@@ -592,7 +595,7 @@ def main():
             )
         else:
             asia_focus = "일본 FSA와 싱가포르 MAS의 라이선스 정책이 아태 지역 디지털 자산 허브 경쟁의 핵심 변수입니다."
-        insight_lines.append(f"\n**아시아**: {asia_focus}")
+        insight_lines.append(f"**아시아**: {asia_focus}")
 
     if europe_items:
         mica_count = sum(
@@ -609,7 +612,7 @@ def main():
                 "EU와 UK의 규제 동향이 수집되었으며, "
                 "ESMA/FCA의 투자자 보호 조치가 글로벌 규제 표준 형성에 영향을 미칩니다."
             )
-        insight_lines.append(f"\n**유럽**: {eu_focus}")
+        insight_lines.append(f"**유럽**: {eu_focus}")
 
     # Cross-region regulatory convergence/divergence analysis
     if len(active_regions) >= 2:
@@ -687,7 +690,7 @@ def main():
                     f"**{dominant[0]}** 중심({dominant[1]}건)의 규제 이벤트가 "
                     "다른 지역의 후속 정책에 영향을 줄 수 있습니다."
                 )
-        insight_lines.append(f"\n**지역간 규제 연동**: {cross_text}")
+        insight_lines.append(f"**지역간 규제 연동**: {cross_text}")
 
     if not insight_lines:
         insight_lines.append("현재 수집된 규제 뉴스가 제한적입니다.")
@@ -708,7 +711,7 @@ def main():
                 unique_refs.append(ref)
 
         if unique_refs:
-            content_parts.append("\n## 참고 링크\n")
+            content_parts.append("## 참고 링크")
             content_parts.append(
                 html_reference_details(
                     "참고 링크",
@@ -720,13 +723,13 @@ def main():
 
     # Data collection timestamp
     content_parts.append(
-        '\n<div class="wm-footer-meta">'
+        '<div class="wm-footer-meta">'
         f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} KST</span>"
         "<span>소스: SEC, FSC/FSS, Google News, 규제 기관 RSS</span>"
         "</div>"
     )
 
-    content = "\n".join(content_parts)
+    content = "\n\n".join(content_parts)
 
     # Generate briefing card image
     briefing_image = ""
