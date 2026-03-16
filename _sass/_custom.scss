@@ -1,12 +1,44 @@
 @import "variables";
 
 /* ================================
-   Modern UI/UX Improvements
-   - Enhanced readability
-   - Better card design
-   - Smooth animations
-   - Modern aesthetics
+   Google Fonts - Korean Editorial
    ================================ */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&family=Noto+Serif+KR:wght@600;700;900&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ================================
+   Modern UI/UX Improvements
+   - Korean editorial typography
+   - WCAG AA accessibility
+   - Finance-grade precision design
+   ================================ */
+
+/* Skip to main content - accessibility */
+.skip-to-content {
+  position: fixed;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.75rem 1.5rem;
+  background: $accent-blue;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 0 0 8px 8px;
+  font-size: 0.9rem;
+  transition: top 0.2s ease;
+
+  &:focus {
+    top: 0;
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+  }
+}
+
+/* Global focus-visible ring */
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: 4px;
+}
 
 * {
   box-sizing: border-box;
@@ -15,13 +47,14 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  font-family: $font-sans;
   background-color: var(--bg-primary, $bg-primary);
   color: var(--text-primary, $text-primary);
-  line-height: 1.7;
+  line-height: 1.75;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'kern' 1, 'liga' 1;
 }
 
 a {
@@ -45,57 +78,75 @@ a {
    HEADER - Modern Sticky Header
    ================================ */
 .site-header {
-  background: rgba($bg-secondary, 0.95);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba($border-color, 0.5);
-  padding: 1rem 0;
+  background: rgba($bg-secondary, 0.96);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid rgba($border-color, 0.6);
+  padding: 0.75rem 0;
   position: sticky;
   top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  z-index: 200;
+  box-shadow: 0 1px 0 rgba($border-color, 0.4), 0 4px 16px rgba(0, 0, 0, 0.25);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
 
   .container {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
     justify-content: space-between;
   }
 
   .site-logo {
     color: $text-primary;
+    font-family: $font-serif;
     font-weight: 700;
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     white-space: nowrap;
-    transition: all 0.3s ease;
+    letter-spacing: -0.01em;
+    transition: color 0.2s ease;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
 
     &:hover {
       color: $accent-blue;
-      transform: scale(1.05);
       text-decoration: none;
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: var(--focus-ring);
+      border-radius: 6px;
     }
   }
 
   .site-nav {
     display: flex;
-    gap: 0.25rem;
+    gap: 0.15rem;
     align-items: center;
 
     .nav-link {
       color: $text-secondary;
-      padding: 0.5rem 0.75rem;
+      padding: 0.6rem 0.875rem;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
       border-radius: 8px;
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       font-weight: 500;
-      transition: all 0.3s ease;
+      transition: color 0.15s ease, background 0.15s ease;
       white-space: nowrap;
 
       &:hover,
       &.active {
         color: $text-primary;
-        background: rgba($bg-card, 0.8);
+        background: rgba($bg-card, 0.9);
         text-decoration: none;
+      }
+
+      &:focus-visible {
+        outline: none;
+        box-shadow: var(--focus-ring);
       }
     }
   }
@@ -110,32 +161,39 @@ a {
       align-items: center;
       gap: 0.3rem;
       color: $text-secondary;
-      padding: 0.5rem 0.75rem;
+      padding: 0.6rem 0.875rem;
+      min-height: 44px;
       border-radius: 8px;
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       font-weight: 500;
       background: none;
       border: none;
       cursor: pointer;
-      font-family: inherit;
+      font-family: $font-sans;
       line-height: normal;
-      transition: all 0.3s ease;
+      transition: color 0.15s ease, background 0.15s ease;
       white-space: nowrap;
 
       svg {
         transition: transform 0.2s ease;
+        flex-shrink: 0;
       }
 
       &:hover {
         color: $text-primary;
-        background: rgba($bg-card, 0.8);
+        background: rgba($bg-card, 0.9);
+      }
+
+      &:focus-visible {
+        outline: none;
+        box-shadow: var(--focus-ring);
       }
     }
 
     &:hover .nav-dropdown-btn,
     &.open .nav-dropdown-btn {
       color: $text-primary;
-      background: rgba($bg-card, 0.8);
+      background: rgba($bg-card, 0.9);
 
       svg {
         transform: rotate(180deg);
@@ -144,36 +202,44 @@ a {
 
     .nav-dropdown-menu {
       position: absolute;
-      top: calc(100% + 4px);
+      top: calc(100% + 6px);
       left: 0;
-      min-width: 160px;
-      background: rgba($bg-secondary, 0.98);
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba($border-color, 0.5);
+      min-width: 172px;
+      background: rgba($bg-secondary, 0.99);
+      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba($border-color, 0.6);
       border-radius: 10px;
       padding: 4px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.2);
       opacity: 0;
       visibility: hidden;
-      transform: translateY(-4px);
-      transition: all 0.2s ease;
-      z-index: 200;
+      transform: translateY(-6px) scale(0.98);
+      transform-origin: top left;
+      transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s ease;
+      z-index: 300;
 
       a {
-        display: block;
-        padding: 0.5rem 0.75rem;
+        display: flex;
+        align-items: center;
+        min-height: 40px;
+        padding: 0.5rem 0.875rem;
         color: $text-secondary;
         font-size: 0.85rem;
         border-radius: 6px;
-        transition: all 0.2s ease;
+        transition: color 0.15s ease, background 0.15s ease;
         white-space: nowrap;
 
         &:hover,
         &.active {
           color: $text-primary;
-          background: rgba($bg-card, 0.8);
+          background: rgba($bg-card, 0.9);
           text-decoration: none;
+        }
+
+        &:focus-visible {
+          outline: none;
+          box-shadow: var(--focus-ring);
         }
       }
     }
@@ -182,21 +248,32 @@ a {
     &.open .nav-dropdown-menu {
       opacity: 1;
       visibility: visible;
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
     }
   }
 
   .nav-toggle {
     display: none;
     background: none;
-    border: none;
+    border: 1px solid rgba($border-color, 0.5);
     color: $text-primary;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     cursor: pointer;
-    transition: all 0.3s ease;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease, border-color 0.15s ease;
 
     &:hover {
-      color: $accent-blue;
+      background: rgba($bg-card, 0.8);
+      border-color: rgba($accent-blue, 0.4);
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: var(--focus-ring);
     }
   }
 }
@@ -330,50 +407,51 @@ a {
 }
 
 .post-card {
-  background: linear-gradient(120deg, rgba($bg-card, 0.7) 0%, rgba($bg-secondary, 0.6) 100%);
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba($border-color, 0.6);
-  border-radius: 10px;
-  padding: 1.15rem 1.4rem;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.02);
+  background: rgba($bg-card, 0.75);
+  border: 1px solid rgba($border-color, 0.55);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   position: relative;
   overflow: hidden;
 
+  /* Left accent bar — animated on hover */
   &::before {
     content: '';
     position: absolute;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
-    background: linear-gradient(135deg,
-      rgba($accent-blue, 0.03) 0%,
-      rgba($accent-purple, 0.02) 100%
-    );
+    width: 3px;
+    height: 100%;
+    background: $accent-blue;
     opacity: 0;
-    transition: opacity 0.4s ease;
-    pointer-events: none;
+    transition: opacity 0.2s ease;
+    border-radius: 12px 0 0 12px;
   }
 
   &:hover {
-    transform: translateX(6px) translateY(-2px);
-    border-color: rgba($accent-blue, 0.6);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), 3px 0 14px rgba($accent-blue, 0.1);
-    background: linear-gradient(120deg, rgba($bg-card, 0.85) 0%, rgba($bg-secondary, 0.75) 100%);
+    border-color: rgba($accent-blue, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba($accent-blue, 0.12);
+    background: rgba($bg-card, 0.92);
 
     &::before {
       opacity: 1;
     }
   }
 
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring), 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-color: rgba($accent-blue, 0.6);
+  }
+
   .post-card-meta {
     display: flex;
-    gap: 0.7rem;
+    gap: 0.6rem;
     align-items: center;
-    margin-bottom: 0.5rem;
-    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.78rem;
     flex-wrap: wrap;
   }
 
@@ -388,12 +466,13 @@ a {
   }
 
   h3 {
-    font-size: 1.02rem;
+    font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 0.35rem;
-    line-height: 1.45;
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
     color: $text-primary;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
+    text-wrap: pretty;
   }
 
   &:hover h3 {
@@ -623,29 +702,46 @@ a {
 }
 
 /* ================================
+   KEYFRAMES
+   ================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-live {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.85); }
+}
+
+/* ================================
    POST DETAIL - Better Reading Experience
    ================================ */
 .post-detail {
   max-width: 800px;
   margin: 2rem auto;
-  animation: fadeInUp 0.6s ease-out;
+  animation: fadeInUp 0.45s ease-out both;
 
   .post-header {
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     position: relative;
 
     h1 {
-      font-size: 2.4rem;
-      font-weight: 800;
+      font-family: $font-serif;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 700;
       margin-top: 1rem;
-      line-height: 1.3;
+      line-height: 1.35;
       color: $text-primary;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.015em;
       text-wrap: balance;
-      background: linear-gradient(135deg, $text-primary 0%, rgba($text-primary, 0.85) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      word-break: keep-all;
     }
   }
 
@@ -2487,26 +2583,31 @@ html {
   align-items: center;
   justify-content: center;
   gap: 0.25rem;
-  min-width: 40px;
-  height: 36px;
-  padding: 0 0.5rem;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 0.625rem;
   background: transparent;
-  border: 1px solid rgba($border-color, 0.5);
+  border: 1px solid rgba($border-color, 0.45);
   border-radius: 8px;
   color: $text-secondary;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
   -webkit-appearance: none;
   appearance: none;
   -webkit-tap-highlight-color: transparent;
-  font-family: inherit;
+  font-family: $font-sans;
   font-size: inherit;
   line-height: normal;
 
   &:hover {
-    background: rgba($bg-card, 0.8);
-    border-color: $accent-blue;
+    background: rgba($bg-card, 0.85);
+    border-color: rgba($accent-blue, 0.5);
     color: $text-primary;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
   }
 
   .globe-icon {
@@ -2633,10 +2734,11 @@ html {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  padding: 2rem 2.5rem;
-  margin-bottom: 2.5rem;
-  background: linear-gradient(135deg, rgba($bg-secondary, 0.95) 0%, rgba($bg-card, 0.9) 50%, rgba(darken($bg-card, 2%), 0.85) 100%);
-  border: 1px solid rgba($border-color, 0.7);
+  padding: clamp(1.25rem, 4vw, 2rem) clamp(1.25rem, 4vw, 2.5rem);
+  min-height: 100px;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, rgba($bg-secondary, 0.95) 0%, rgba($bg-card, 0.9) 50%, rgba($bg-card, 0.85) 100%);
+  border: 1px solid rgba($border-color, 0.65);
   border-radius: 16px;
   position: relative;
   overflow: hidden;
@@ -2707,25 +2809,22 @@ html {
 
   .dashboard-info {
     h1 {
-      font-size: 1.55rem;
-      font-weight: 800;
-      margin: 0 0 0.2rem 0;
+      font-family: $font-serif;
+      font-size: clamp(1.2rem, 3vw, 1.55rem);
+      font-weight: 700;
+      margin: 0 0 0.25rem 0;
       color: $text-primary;
-      letter-spacing: -0.02em;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 0 20px rgba($accent-blue, 0.1);
-      background: linear-gradient(135deg, $text-primary 0%, rgba($accent-blue, 0.9) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      position: relative;
+      letter-spacing: -0.015em;
+      line-height: 1.2;
+      word-break: keep-all;
     }
 
     p {
       margin: 0;
       font-size: 0.82rem;
       color: $text-secondary;
-      font-weight: 500;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      font-weight: 400;
+      line-height: 1.5;
     }
   }
 
@@ -3182,17 +3281,33 @@ html {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.25rem;
+    min-height: 44px;
     margin-top: 0.5rem;
     border-bottom: 1px solid rgba($border-color, 0.3);
     color: $text-secondary;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: color 0.15s ease;
+
+    &:hover {
+      color: $text-primary;
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: var(--focus-ring);
+    }
 
     svg {
-      width: 16px;
-      height: 16px;
-      opacity: 0.6;
+      width: 14px;
+      height: 14px;
+      opacity: 0.55;
+      flex-shrink: 0;
     }
   }
 
@@ -3398,19 +3513,25 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   background: transparent;
-  border: 1px solid rgba($border-color, 0.5);
+  border: 1px solid rgba($border-color, 0.45);
   border-radius: 8px;
   color: $text-secondary;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
 
   &:hover {
-    background: rgba($bg-card, 0.8);
-    border-color: $accent-blue;
+    background: rgba($bg-card, 0.85);
+    border-color: rgba($accent-blue, 0.5);
     color: $text-primary;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
   }
 
   svg {
@@ -3458,23 +3579,25 @@ html {
 
 .search-overlay-input {
   flex: 1;
-  padding: 1.25rem 1.5rem;
-  background: rgba($bg-card, 0.8);
-  border: 2px solid rgba($border-color, 0.5);
+  padding: 1rem 1.5rem;
+  background: rgba($bg-card, 0.9);
+  border: 2px solid rgba($border-color, 0.55);
   border-radius: 12px;
   color: $text-primary;
-  font-size: 1.25rem;
+  font-family: $font-sans;
+  font-size: 1.15rem;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 
+  &:focus,
   &:focus-visible {
     outline: none;
     border-color: $accent-blue;
-    box-shadow: 0 0 0 4px rgba($accent-blue, 0.15);
+    box-shadow: 0 0 0 4px rgba($accent-blue, 0.2);
   }
 
   &::placeholder {
-    color: $text-secondary;
+    color: rgba($text-secondary, 0.7);
   }
 }
 
@@ -3483,22 +3606,28 @@ html {
   appearance: none;
   width: 48px;
   height: 48px;
-  background: rgba($bg-card, 0.8);
+  flex-shrink: 0;
+  background: rgba($bg-card, 0.85);
   border: 1px solid rgba($border-color, 0.5);
   border-radius: 12px;
   color: $text-secondary;
   cursor: pointer;
-  font-family: inherit;
+  font-family: $font-sans;
   -webkit-tap-highlight-color: transparent;
-  transition: all 0.3s ease;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
   display: flex;
   align-items: center;
   justify-content: center;
 
   &:hover {
-    background: rgba($bg-card, 1);
-    border-color: $accent-red;
+    background: rgba($accent-red, 0.12);
+    border-color: rgba($accent-red, 0.45);
     color: $accent-red;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
   }
 }
 
@@ -3512,18 +3641,18 @@ html {
 
 .search-result-item {
   display: block;
-  background: rgba($bg-card, 0.6);
+  background: rgba($bg-card, 0.65);
   border: 1px solid rgba($border-color, 0.5);
   border-radius: 10px;
-  padding: 1.25rem;
-  transition: all 0.3s ease;
+  padding: 1.125rem 1.25rem;
+  transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
   text-decoration: none;
   color: $text-primary;
 
-  &:hover, &:focus {
-    background: rgba($bg-card, 0.8);
-    border-color: $accent-blue;
-    transform: translateX(4px);
+  &:hover, &:focus-visible {
+    background: rgba($bg-card, 0.9);
+    border-color: rgba($accent-blue, 0.55);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     outline: none;
   }
 }
@@ -3870,23 +3999,40 @@ html {
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
-        font-size: 0.9rem;
-        transition: all 0.3s ease;
+        font-size: 0.875rem;
+        min-height: 36px;
+        padding: 0.25rem 0;
+        color: $text-secondary;
+        cursor: pointer;
+        transition: color 0.15s ease;
 
         svg {
           flex-shrink: 0;
+          opacity: 0.7;
+          transition: opacity 0.15s ease;
         }
 
         &:hover {
-          transform: translateX(3px);
+          color: $accent-blue;
+          text-decoration: none;
+
+          svg {
+            opacity: 1;
+          }
+        }
+
+        &:focus-visible {
+          outline: none;
+          box-shadow: var(--focus-ring);
+          border-radius: 4px;
         }
       }
     }
   }
 
   .footer-bottom {
-    padding-top: 2rem;
-    border-top: 1px solid rgba($border-color, 0.5);
+    padding-top: 1.75rem;
+    border-top: 1px solid rgba($border-color, 0.4);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -3895,7 +4041,8 @@ html {
 
     p {
       margin: 0;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
+      color: $text-secondary;
     }
   }
 
@@ -4399,18 +4546,24 @@ html {
 .section-header {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  margin-bottom: 1.2rem;
+  gap: 0.5rem;
+  margin-bottom: 1.4rem;
 
   h2 {
     margin: 0;
+    font-family: $font-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: $text-primary;
   }
 
   svg {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     flex-shrink: 0;
-    color: var(--text-secondary);
+    color: var(--accent-blue);
+    opacity: 0.8;
   }
 }
 
@@ -6007,11 +6160,12 @@ main {
   left: 0;
   height: 3px;
   width: 0%;
-  background: linear-gradient(90deg, $accent-blue 0%, $accent-purple 100%);
-  z-index: 99;
+  background: var(--reading-progress);
+  z-index: 201; /* above sticky header */
   transition: width 0.1s linear;
   pointer-events: none;
-  box-shadow: 0 0 10px rgba($accent-blue, 0.5);
+  box-shadow: 0 0 12px rgba($accent-blue, 0.55);
+  border-radius: 0 2px 2px 0;
 }
 
 /* ================================
@@ -6036,9 +6190,15 @@ main {
     cursor: pointer;
     user-select: none;
     transition: background 0.2s ease;
+    min-height: 44px;
 
     &:hover {
       background: rgba($bg-card, 0.5);
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: var(--focus-ring);
     }
   }
 
@@ -6620,30 +6780,41 @@ a:focus-visible {
 
 /* Load More Button */
 .load-more-btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   width: 100%;
-  max-width: 300px;
+  max-width: 320px;
   margin: 2rem auto;
-  padding: 0.85rem 1.5rem;
-  background: rgba($bg-card, 0.8);
-  border: 1px solid rgba($border-color, 0.5);
+  padding: 0.875rem 1.75rem;
+  min-height: 48px;
+  background: rgba($bg-card, 0.85);
+  border: 1px solid rgba($border-color, 0.55);
   border-radius: 12px;
   color: $accent-blue;
-  font-size: 0.95rem;
+  font-family: $font-sans;
+  font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  letter-spacing: 0.01em;
 
   &:hover {
     background: rgba($accent-blue, 0.1);
-    border-color: rgba($accent-blue, 0.4);
-    transform: translateY(-1px);
+    border-color: rgba($accent-blue, 0.45);
+    box-shadow: 0 4px 16px rgba($accent-blue, 0.15);
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
   }
 
   .load-more-count {
     font-weight: 400;
     color: $text-secondary;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
   }
 }
 
@@ -7866,5 +8037,356 @@ a:focus-visible {
     .news-card-num { display: none; }
     .news-card-thumb { display: none; }
     padding: 0.55rem 0.6rem;
+  }
+}
+
+/* ================================
+   DESIGN SYSTEM ENHANCEMENTS
+   Typography, spacing, accessibility
+   ================================ */
+
+/* Post card footer — arrow right-aligned */
+.post-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.875rem;
+  gap: 0.5rem;
+
+  .post-tags {
+    margin-top: 0;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .post-card-arrow {
+    flex-shrink: 0;
+    color: $text-secondary;
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+  }
+}
+
+.post-card:hover .post-card-arrow {
+  opacity: 1;
+  transform: translateX(0);
+  color: $accent-blue;
+}
+
+/* Sort/view button touch targets */
+.sort-btn {
+  min-height: 36px;
+  padding: 0.4rem 0.875rem;
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+  }
+}
+
+.view-btn {
+  min-width: 36px;
+  min-height: 36px;
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+  }
+}
+
+/* Posts tab — touch target and focus */
+.posts-tab {
+  min-height: 40px;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+    border-radius: 8px;
+  }
+}
+
+/* Category archive back-to-home link */
+.back-to-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 40px;
+  padding: 0.25rem 0.75rem 0.25rem 0;
+  font-size: 0.875rem;
+  color: $text-secondary;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: $accent-blue;
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+    border-radius: 4px;
+  }
+
+  svg {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover svg {
+    transform: translateX(-3px);
+  }
+}
+
+/* Category header typography */
+.category-header {
+  .category-title-wrapper h1 {
+    font-family: $font-serif;
+    letter-spacing: -0.02em;
+    word-break: keep-all;
+  }
+}
+
+/* Post header h1 — serif treatment for category archive */
+.category-archive .category-description {
+  line-height: 1.7;
+  color: $text-secondary;
+  max-width: 640px;
+  word-break: keep-all;
+}
+
+/* Post-count badge contrast fix */
+.post-count-badge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  background: rgba($accent-blue, 0.15);
+  color: $accent-blue;
+  border: 1px solid rgba($accent-blue, 0.25);
+  letter-spacing: 0.02em;
+}
+
+[data-theme="light"] .post-count-badge {
+  background: rgba(9, 105, 218, 0.12);
+  color: #0550ae;
+  border-color: rgba(9, 105, 218, 0.25);
+}
+
+/* Related post cards — focus states */
+.related-post-card {
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+    border-radius: 12px;
+  }
+}
+
+/* Post nav links — focus states */
+.post-nav-link {
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+  }
+}
+
+/* Category card — focus state */
+.cat-card {
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+  }
+}
+
+/* Footer CTA button — focus state */
+.cta-button {
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+  }
+}
+
+/* Scroll to top button — focus + touch target */
+.scroll-to-top {
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+  }
+}
+
+/* Share buttons — touch target and focus */
+.share-btn {
+  min-height: 40px;
+  min-width: 80px;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+  }
+}
+
+/* Original source link — focus */
+.post-source-link a {
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+    border-radius: 8px;
+  }
+}
+
+/* ================================
+   RESPONSIVE BREAKPOINT POLISH
+   375px · 768px · 1024px · 1440px
+   ================================ */
+
+/* 375px — smallest phone */
+@media (max-width: 375px) {
+  .site-header .container {
+    gap: 0.5rem;
+  }
+
+  .site-logo {
+    font-size: 1.1rem !important;
+  }
+
+  .nav-actions {
+    gap: 0.25rem;
+  }
+
+  .search-toggle,
+  .lang-toggle,
+  .theme-toggle {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .post-card {
+    padding: 1rem 1.125rem;
+  }
+
+  .dashboard-header {
+    padding: 1rem;
+  }
+
+  .market-stats-bar {
+    padding: 0 0.75rem;
+  }
+
+  .post-detail h1 {
+    font-size: 1.4rem !important;
+  }
+}
+
+/* 768px — tablet */
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .post-detail .post-header h1 {
+    font-size: clamp(1.4rem, 5vw, 1.9rem);
+  }
+
+  .footer-grid {
+    gap: 1.75rem !important;
+  }
+
+  .posts-controls {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .posts-sort-view {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+/* 1024px — small desktop */
+@media (min-width: 1024px) {
+  .post-detail {
+    max-width: 820px;
+  }
+
+  .posts-grid,
+  .posts-tab-content:not(.list-mode) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* Keep date-group headers full-width */
+  .date-group {
+    grid-column: 1 / -1;
+    display: contents;
+  }
+}
+
+/* 1440px — wide desktop */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* ================================
+   PRINT STYLES
+   ================================ */
+@media print {
+  .site-header,
+  .site-footer,
+  .post-toc,
+  .post-nav,
+  .related-posts,
+  .scroll-to-top,
+  .reading-progress,
+  .search-overlay,
+  .posts-controls {
+    display: none !important;
+  }
+
+  .post-detail {
+    max-width: 100%;
+    margin: 0;
+    animation: none;
+  }
+
+  body {
+    font-size: 12pt;
+    color: #000;
+    background: #fff;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  h1, h2, h3 {
+    font-family: Georgia, serif;
+    color: #000;
+  }
+}
+
+/* ================================
+   HIGH CONTRAST MODE
+   ================================ */
+@media (forced-colors: active) {
+  .post-card,
+  .category-card,
+  .stat-item,
+  .related-post-card {
+    border: 2px solid ButtonText;
+  }
+
+  :focus-visible {
+    outline: 3px solid Highlight !important;
+    box-shadow: none !important;
+  }
+
+  .reading-progress {
+    background: Highlight;
   }
 }

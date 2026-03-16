@@ -3,6 +3,7 @@
 Generates _posts/ files with proper frontmatter and content formatting.
 """
 
+import html
 import logging
 import os
 import re
@@ -417,8 +418,6 @@ class PostGenerator:
             return None
 
         # Decode HTML entities (e.g. &#x27; → ', &amp; → &) in title and content
-        import html
-
         title = _polish_generated_text(html.unescape(title))
         content = _polish_generated_text(html.unescape(content))
 
