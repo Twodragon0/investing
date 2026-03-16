@@ -1,15 +1,15 @@
 // Colors - Dark Finance Theme
-$bg-primary: #0d1117;
-$bg-secondary: #161b22;
-$bg-card: #1c2128;
-$text-primary: #e6edf3;
-$text-secondary: #8b949e;
-$accent-green: #3fb950;
+$bg-primary: #0a0e14;
+$bg-secondary: #111620;
+$bg-card: #161c27;
+$text-primary: #e2e8f0;
+$text-secondary: #7d8fa8;
+$accent-green: #34d058;
 $accent-red: #f85149;
-$accent-blue: #58a6ff;
-$accent-orange: #d29922;
-$accent-purple: #bc8cff;
-$border-color: #30363d;
+$accent-blue: #4da6ff;
+$accent-orange: #e3a82b;
+$accent-purple: #c084fc;
+$border-color: #243044;
 
 // Category colors
 $cat-crypto: #f7931a;
@@ -24,8 +24,13 @@ $cat-worldmonitor: #20b2aa;
 $cat-blockchain: #8b5cf6;
 $cat-devops: #4fc3f7;
 
+// Typography
+$font-sans: 'Noto Sans KR', 'Pretendard', -apple-system, 'Helvetica Neue', sans-serif;
+$font-serif: 'Noto Serif KR', 'Georgia', serif;
+$font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+
 // Layout
-$container-width: 1100px;
+$container-width: 1120px;
 $spacing: 1rem;
 $radius: 8px;
 
@@ -59,21 +64,58 @@ $glass-hover: rgba(28, 33, 40, 0.9);
   --accent-orange: #{$accent-orange};
   --accent-purple: #{$accent-purple};
   --border-color: #{$border-color};
-  --shadow-alpha: 0.2;
+  --shadow-alpha: 0.25;
   --glass-bg: #{$glass-bg};
   --glass-border: #{$glass-border};
-  --code-bg: #1a1f29;
-  --blockquote-bg: rgba(88, 166, 255, 0.06);
-  --table-stripe: rgba(22, 27, 34, 0.4);
-  --alert-info-bg: rgba(88, 166, 255, 0.08);
-  --alert-warning-bg: rgba(210, 153, 34, 0.08);
-  --alert-success-bg: rgba(63, 185, 80, 0.08);
-  --alert-danger-bg: rgba(248, 81, 73, 0.08);
-  --search-overlay-bg: rgba(13, 17, 23, 0.92);
-  --reading-progress: linear-gradient(90deg, #58a6ff, #bc8cff);
+  --code-bg: #131926;
+  --blockquote-bg: rgba(77, 166, 255, 0.07);
+  --table-stripe: rgba(17, 22, 32, 0.5);
+  --alert-info-bg: rgba(77, 166, 255, 0.09);
+  --alert-warning-bg: rgba(227, 168, 43, 0.09);
+  --alert-success-bg: rgba(52, 208, 88, 0.09);
+  --alert-danger-bg: rgba(248, 81, 73, 0.09);
+  --search-overlay-bg: rgba(10, 14, 20, 0.94);
+  --reading-progress: linear-gradient(90deg, #4da6ff, #c084fc);
+  --focus-ring: 0 0 0 3px rgba(77, 166, 255, 0.45);
+  --focus-ring-light: 0 0 0 3px rgba(9, 105, 218, 0.35);
+  --font-sans: #{$font-sans};
+  --font-serif: #{$font-serif};
+  --font-mono: #{$font-mono};
 }
 
-// CSS Custom Properties - Light
+// CSS Custom Properties - Light (manual toggle + system preference)
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f0f3f6;
+    --bg-card: #ffffff;
+    --bg-elevated: #f6f8fa;
+    --text-primary: #1f2328;
+    --text-secondary: #59636e;
+    --accent-blue: #0969da;
+    --accent-green: #1a7f37;
+    --accent-red: #cf222e;
+    --accent-orange: #9a6700;
+    --accent-purple: #8250df;
+    --border-color: #d0d7de;
+    --shadow-alpha: 0.1;
+    --shadow-card: 0 2px 8px rgba(31, 35, 40, 0.08), 0 0 1px rgba(31, 35, 40, 0.06);
+    --shadow-card-hover: 0 8px 24px rgba(31, 35, 40, 0.12), 0 2px 6px rgba(31, 35, 40, 0.06);
+    --glass-bg: rgba(255, 255, 255, 0.92);
+    --glass-border: rgba(208, 215, 222, 0.7);
+    --code-bg: #eff2f5;
+    --blockquote-bg: rgba(9, 105, 218, 0.06);
+    --table-stripe: rgba(240, 243, 246, 0.8);
+    --alert-info-bg: rgba(9, 105, 218, 0.08);
+    --alert-warning-bg: rgba(154, 103, 0, 0.08);
+    --alert-success-bg: rgba(26, 127, 55, 0.08);
+    --alert-danger-bg: rgba(207, 34, 46, 0.08);
+    --search-overlay-bg: rgba(255, 255, 255, 0.96);
+    --reading-progress: linear-gradient(90deg, #0969da, #8250df);
+    --focus-ring: 0 0 0 3px rgba(9, 105, 218, 0.35);
+  }
+}
+
 [data-theme="light"] {
   --bg-primary: #ffffff;
   --bg-secondary: #f0f3f6;
@@ -101,4 +143,8 @@ $glass-hover: rgba(28, 33, 40, 0.9);
   --alert-danger-bg: rgba(207, 34, 46, 0.08);
   --search-overlay-bg: rgba(255, 255, 255, 0.96);
   --reading-progress: linear-gradient(90deg, #0969da, #8250df);
+  --focus-ring: 0 0 0 3px rgba(9, 105, 218, 0.35);
+  --font-sans: #{$font-sans};
+  --font-serif: #{$font-serif};
+  --font-mono: #{$font-mono};
 }

@@ -6,10 +6,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32.png' | relative_url }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
   <link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
-  <meta name="theme-color" content="#0d1117" id="meta-theme-color">
-  <style>html{background-color:#0d1117}html[data-theme="light"]{background-color:#ffffff}</style>
+  <meta name="theme-color" content="#0a0e14" id="meta-theme-color">
+  <style>html{background-color:#0a0e14}html[data-theme="light"]{background-color:#ffffff}</style>
   <script>
-    (function(){var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme:light)').matches?'light':'dark';}if(t==='light'){document.documentElement.setAttribute('data-theme','light');document.querySelector('#meta-theme-color')&&document.querySelector('#meta-theme-color').setAttribute('content','#ffffff');}})();
+    (function(){var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme:light)').matches?'light':'dark';}if(t==='light'){document.documentElement.setAttribute('data-theme','light');var m=document.getElementById('meta-theme-color');if(m)m.setAttribute('content','#ffffff');}else{document.documentElement.removeAttribute('data-theme');}})();
   </script>
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -100,6 +100,8 @@
 
   <!-- Canonical & Hreflang -->
   <link rel="canonical" href="{{ og_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
   <link rel="dns-prefetch" href="https://translate.google.com">
   <link rel="dns-prefetch" href="https://translate.googleapis.com">
@@ -139,7 +141,7 @@
         text: '{{ site.url }}',
         width: 120,
         height: 120,
-        colorDark: '#0d1117',
+        colorDark: '#0a0e14',
         colorLight: '#ffffff',
         correctLevel: QRCode.CorrectLevel.M
       });
@@ -197,7 +199,7 @@
         if (metaColor) metaColor.setAttribute('content', '#ffffff');
       } else {
         document.documentElement.removeAttribute('data-theme');
-        if (metaColor) metaColor.setAttribute('content', '#0d1117');
+        if (metaColor) metaColor.setAttribute('content', '#0a0e14');
       }
     }
 
@@ -234,7 +236,7 @@
     script.crossOrigin = 'anonymous';
     script.onload = function() {
       var isDark = document.documentElement.getAttribute('data-theme') !== 'light';
-      mermaid.initialize({ startOnLoad: true, theme: isDark ? 'dark' : 'default', securityLevel: 'loose' });
+      mermaid.initialize({ startOnLoad: true, theme: isDark ? 'dark' : 'default', securityLevel: 'strict' });
     };
     document.head.appendChild(script);
   })();
