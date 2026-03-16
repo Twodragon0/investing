@@ -1,0 +1,69 @@
+tabs:
+  - key: all
+    label: "전체"
+    cat_type: all
+    categories: []
+  - key: crypto
+    label: "암호화폐"
+    cat_type: crypto
+    categories: [crypto-news, crypto-trading-journal]
+  - key: stock
+    label: "주식"
+    cat_type: stock
+    categories: [stock-news, stock-trading-journal]
+  - key: analysis
+    label: "분석"
+    cat_type: analysis
+    categories: [market-analysis, worldmonitor]
+  - key: regulatory
+    label: "규제"
+    cat_type: regulatory
+    categories: [regulatory-news]
+  - key: social
+    label: "소셜"
+    cat_type: social
+    categories: [social-media]
+  - key: blockchain
+    label: "블록체인"
+    cat_type: blockchain
+    categories: [blockchain]
+  - key: security
+    label: "보안"
+    cat_type: security
+    categories: [security-alerts]
+  - key: political
+    label: "정치"
+    cat_type: political
+    categories: [political-trades]
+
+cards:
+  - category: crypto-news
+    class_name: cat-crypto
+    icon: crypto-news
+  - category: stock-news
+    class_name: cat-stock
+    icon: stock-news
+  - category: crypto-trading-journal
+    class_name: cat-journal-crypto
+    icon: crypto-journal
+  - category: stock-trading-journal
+    class_name: cat-journal-stock
+    icon: stock-journal
+  - category: security-alerts
+    class_name: cat-security
+    icon: security-alerts
+  - category: market-analysis
+    class_name: cat-analysis
+    icon: market-analysis
+  - category: regulatory-news
+    class_name: cat-regulatory
+    icon: regulatory-news
+  - category: political-trades
+    class_name: cat-political
+    icon: political-trades
+  - category: social-media
+    class_name: cat-social
+    icon: social-media
+  - category: blockchain
+    class_name: cat-blockchain
+    icon: blockchain

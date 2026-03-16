@@ -32,6 +32,12 @@ jobs:
           cache: 'pip'
           cache-dependency-path: scripts/requirements.txt
 
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
       - name: Install dependencies
         run: |
           pip install -r scripts/requirements.txt ruff yamllint basedpyright pytest pytest-cov
@@ -55,13 +61,22 @@ jobs:
 
       - name: Upload coverage report
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v7
         with:
           name: coverage-html
           path: coverage-html/
           retention-days: 14
 
-      - name: Coverage comment on PR
+      - name: Upload coverage data for comment
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v7
+        with:
+          name: coverage-data
+          path: coverage.json
+          retention-days: 1
+
+      - name: Coverage comment on push
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: py-cov-action/python-coverage-comment-action@v3
         with:
           GITHUB_TOKEN: ${{ github.token }}
@@ -106,6 +121,16 @@ jobs:
 
       - name: Validate collector summary log contract
         run: python scripts/validate_collector_summary_contract.py
+
+      - name: Run Jekyll build guard
+        shell: bash
+        run: |
+          set -euo pipefail
+          bundle exec jekyll build 2>&1 | tee jekyll-build.log
+          python scripts/check_jekyll_build.py jekyll-build.log
+
+      - name: Run rendered page smoke test
+        run: python scripts/smoke_test_rendered_pages.py
 
       - name: Run GitHub Actions workflow lint
         id: actionlint
@@ -181,7 +206,7 @@ jobs:
           fi
 
       - name: Comment actionlint report on PR
-        if: always() && github.event_name == 'pull_request'
+        if: always() && github.event_name == 'pull_request' && github.actor != 'dependabot[bot]'
         uses: actions/github-script@v8
         env:
           ACTIONLINT_SUMMARY_PATH: actionlint-summary.md

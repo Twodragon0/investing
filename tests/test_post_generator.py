@@ -15,6 +15,7 @@ from common.post_generator import (
     _normalize_image_paths,
     _slugify,
     _wrap_picture_tags,
+    build_dated_permalink,
 )
 
 
@@ -491,3 +492,31 @@ class TestPostGeneratorCreatePost:
             content = fh.read()
         assert "## Overview" in content
         assert "## Crypto" in content
+
+    def test_logical_date_controls_filename(self, tmp_path):
+        with patch("common.post_generator.POSTS_DIR", str(tmp_path)):
+            gen = PostGenerator("crypto-news")
+            filepath = gen.create_post(
+                title="Crypto report",
+                content="Useful crypto content for the report body.",
+                date=datetime(2026, 3, 14, 1, 30, 0, tzinfo=UTC),
+                logical_date="2026-03-13",
+                slug="daily-crypto-news-digest",
+            )
+        assert filepath is not None
+        assert filepath.endswith("2026-03-13-daily-crypto-news-digest.md")
+
+
+class TestBuildDatedPermalink:
+    def test_builds_expected_permalink(self):
+        assert (
+            build_dated_permalink("stock-news", "2026-03-13", "daily-stock-news-digest")
+            == "/stock-news/2026/03/13/daily-stock-news-digest/"
+        )
+
+    def test_rejects_invalid_logical_date(self):
+        try:
+            build_dated_permalink("stock-news", "2026/03/13", "daily-stock-news-digest")
+        except ValueError:
+            return
+        raise AssertionError("expected ValueError for invalid logical date")

@@ -27,7 +27,5 @@ main:
         url: /market-analysis/
       - title: "블록체인"
         url: /blockchain/
-  - title: "DevOps"
-    url: /devops/
   - title: "About"
     url: /about/

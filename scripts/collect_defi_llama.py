@@ -11,7 +11,7 @@ import json
 import os
 import sys
 import time
-from datetime import UTC, datetime
+from datetime import datetime
 from typing import Any, Dict, List, Optional, Tuple
 
 import requests
@@ -20,14 +20,14 @@ import requests
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.collector_metrics import log_collection_summary
-from common.config import REQUEST_TIMEOUT, get_ssl_verify, setup_logging
+from common.config import REQUEST_TIMEOUT, get_kst_now, get_ssl_verify, setup_logging
 from common.dedup import DedupEngine
 from common.markdown_utils import (
     html_reference_details,
     markdown_link,
     markdown_table,
 )
-from common.post_generator import PostGenerator
+from common.post_generator import PostGenerator, build_dated_permalink
 from common.utils import request_with_retry
 
 logger = setup_logging("collect_defi_llama")
@@ -693,15 +693,13 @@ def build_post_content(
     if protocols and chains:
         top_p = protocols[0]
         top_c = chains[0]
-        p_name = top_p.get('name', 'Unknown')
-        c_name = top_c.get('name', 'Unknown')
+        p_name = top_p.get("name", "Unknown")
+        c_name = top_c.get("name", "Unknown")
         content_parts.append(
-            f"1. **프로토콜**: {p_name} — TVL "
-            f"{_format_tvl(top_p.get('tvl', 0))}로 1위를 유지하고 있습니다."
+            f"1. **프로토콜**: {p_name} — TVL {_format_tvl(top_p.get('tvl', 0))}로 1위를 유지하고 있습니다."
         )
         content_parts.append(
-            f"2. **체인**: {c_name} — TVL "
-            f"{_format_tvl(top_c.get('tvl', 0))}로 체인 생태계를 주도합니다."
+            f"2. **체인**: {c_name} — TVL {_format_tvl(top_c.get('tvl', 0))}로 체인 생태계를 주도합니다."
         )
     content_parts.append("")
 
@@ -987,7 +985,7 @@ def build_post_content(
     # Footer
     content_parts.append(
         '\n<div class="wm-footer-meta">'
-        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} UTC</span>"
+        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} KST</span>"
         "<span>소스: DeFi Llama (defillama.com)</span>"
         "</div>"
     )
@@ -1003,7 +1001,7 @@ def main():
     dedup = DedupEngine("defi_llama_seen.json")
     gen = PostGenerator("crypto-news")
 
-    now = datetime.now(UTC)
+    now = get_kst_now()
     today = now.strftime("%Y-%m-%d")
 
     post_title = f"DeFi TVL 리포트 - {today}"
@@ -1050,11 +1048,13 @@ def main():
         title=post_title,
         content=content,
         date=now,
+        logical_date=today,
         tags=["defi", "tvl", "crypto", "blockchain", "daily-digest"],
         source="defi-llama",
         source_url="https://defillama.com",
         lang="ko",
         image=image_frontmatter,
+        extra_frontmatter={"permalink": build_dated_permalink("crypto-news", today, "daily-defi-tvl-report")},
         slug="daily-defi-tvl-report",
     )
 

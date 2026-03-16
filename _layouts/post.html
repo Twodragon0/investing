@@ -7,6 +7,10 @@ layout: default
 {% assign first_cat = page.categories | first %}
 {% assign cat_data = site.data.categories[first_cat] %}
 {% assign cat_name = cat_data.name | default: first_cat %}
+{% assign is_trading_journal = false %}
+{% if first_cat == 'crypto-trading-journal' or first_cat == 'stock-trading-journal' %}
+{% assign is_trading_journal = true %}
+{% endif %}
 
 <article class="post-detail" translate="yes">
   <div class="post-breadcrumb">
@@ -54,11 +58,33 @@ layout: default
     {% endif %}
   </header>
 
+  {% if page.image and is_trading_journal %}
+  <section class="trading-journal-hero">
+    <div class="trading-journal-hero-copy">
+      <div class="summary-label">Visual Brief</div>
+      <h2>한눈에 보는 세션 보드</h2>
+      <p>핵심 손익, 리스크 자세, 다음 세션 포인트를 먼저 훑고 상세 기록으로 내려가세요.</p>
+      <div class="trading-journal-hero-tags">
+        {% if page.journal_strategy %}<span class="journal-badge">{{ page.journal_strategy }}</span>{% endif %}
+        {% if page.journal_day_result %}<span class="journal-badge">Result {{ page.journal_day_result }}</span>{% endif %}
+        {% if page.journal_trade_count %}<span class="journal-badge">Trades {{ page.journal_trade_count }}</span>{% endif %}
+      </div>
+    </div>
+    <figure class="summary-image-wrapper trading-journal-hero-image">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}" class="summary-market-image" loading="eager">
+    </figure>
+  </section>
+  {% endif %}
+
   {% if page.excerpt %}
   <section class="post-summary">
     <div class="summary-label" data-i18n="summary">요약</div>
     <p>{{ page.excerpt | strip_html }}</p>
   </section>
+  {% endif %}
+
+  {% if is_trading_journal %}
+  {% include trading-journal-summary.html %}
   {% endif %}
 
   <nav class="post-toc" id="post-toc">

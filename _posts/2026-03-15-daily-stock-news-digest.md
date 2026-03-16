@@ -27,6 +27,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-15 - stock-news 뉴스 요약 
 <div class="alert-box alert-info"><strong>주식 시장 긴급: stockpiles, emergency, biggest - 152건 분석</strong><ul><li>📊 <strong>매크로/금리</strong> (10건): 조선비즈, 중동, 금리 관련 10건의 소식이 확인되었습니다.</li><li>🤖 <strong>AI/기술</strong> (11건): 반도체 중심으로 11건의 뉴스가 수집되었습니다.</li><li>🏛️ <strong>정치/정책</strong> (8건): Trump, Iran, broadcasters 테마에서 8건의 뉴스가 감지되었습니다.</li><li>📈 <strong>가격/시장</strong> (16건): 조선비즈 이슈로 16건의 보도가 이어지고 있습니다.</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://www.cnbc.com/2026/03/14/iran-war-iea-oil-stockpile-spr-strait-hormuz.html">The biggest release of emergency oil stockpiles in history was announced. Why crude may keep rising</a> <span class="p0-desc">Oil prices have surged more than 17% since the International Energy Agency announced the largest rel...</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **9건** 수집

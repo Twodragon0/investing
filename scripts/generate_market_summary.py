@@ -16,7 +16,7 @@ import re
 import sys
 import time
 from collections import OrderedDict
-from datetime import datetime, timedelta
+from datetime import timedelta
 from typing import Any, Dict, List, Optional
 
 import requests
@@ -26,7 +26,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common.config import (
     REQUEST_TIMEOUT,
     get_env,
-    get_kst_timezone,
+    get_kst_now,
     get_ssl_verify,
     setup_logging,
 )
@@ -40,7 +40,7 @@ from common.dedup import DedupEngine
 from common.formatters import fmt_number as _fmt
 from common.formatters import fmt_percent as _pct
 from common.markdown_utils import markdown_link, markdown_table
-from common.post_generator import PostGenerator
+from common.post_generator import PostGenerator, build_dated_permalink
 from common.utils import request_with_retry
 
 logger = setup_logging("generate_market_summary")
@@ -284,7 +284,7 @@ def fetch_fred_indicators(api_key: str) -> Dict[str, Dict[str, Any]]:
     }
     results = {}
 
-    now = datetime.now(get_kst_timezone())
+    now = get_kst_now()
 
     for key, (series_id, label) in indicators.items():
         try:
@@ -1114,8 +1114,7 @@ def main():
 
     alpha_vantage_key = get_env("ALPHA_VANTAGE_API_KEY")
     fred_key = get_env("FRED_API_KEY")
-    kst = get_kst_timezone()
-    now = datetime.now(kst)
+    now = get_kst_now()
     today = now.strftime("%Y-%m-%d")
 
     dedup = DedupEngine("market_summary_seen.json")
@@ -1332,6 +1331,7 @@ def main():
         title=title,
         content=content,
         date=now,
+        logical_date=today,
         tags=[
             "market-summary",
             "daily",
@@ -1345,6 +1345,7 @@ def main():
         source="auto-generated",
         lang="ko",
         image=f"/assets/images/generated/market-heatmap-{today}.png",
+        extra_frontmatter={"permalink": build_dated_permalink("market-analysis", today, "daily-market-report")},
         slug="daily-market-report",
     )
 

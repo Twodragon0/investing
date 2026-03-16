@@ -4,14 +4,17 @@ title: "DeFi 프로토콜 모니터링 자동화 가이드"
 date: 2026-03-15 11:00:00 +0900
 categories: blockchain
 description: "DeFi Llama API를 활용한 TVL 추적과 프로토콜 리스크 모니터링 자동화 방법을 정리합니다."
-tags:
-  - DeFi
-  - TVL
-  - 스마트 컨트랙트
-  - 블록체인
+image: "/assets/images/generated/news-briefing-blockchain-defi-protocol-monitoring-2026-03-15.png"
+tags: 
 ---
 
 ## DeFi 프로토콜 모니터링이 필요한 이유
+
+## 전체 뉴스 요약
+
+- 탈중앙화 금융(DeFi) 시장은 24시간 변동합니다. TVL(Total Value Locked) 변화, 프로토콜 해킹, 유동성 이탈 등을 실시간으로 추적하면 투자 판단에 큰 도움이 됩니다.
+- Investing Dragon 프로젝트에서는 collect_defi_llama.py를 통해 DeFi Llama API에서 데이터를 수집합니다.
+
 
 탈중앙화 금융(DeFi) 시장은 24시간 변동합니다. TVL(Total Value Locked) 변화, 프로토콜 해킹, 유동성 이탈 등을 실시간으로 추적하면 투자 판단에 큰 도움이 됩니다.
 
@@ -43,8 +46,8 @@ Investing Dragon 프로젝트에서는 `collect_defi_llama.py`를 통해 DeFi Ll
 
 2026년 3월 기준 주요 체인 TVL 순위:
 
-1. **Ethereum** — DeFi의 기반. Aave, Uniswap, Lido 등 핵심 프로토콜 집중
-2. **Solana** — 빠른 속도와 낮은 수수료로 DEX 거래량 성장
+1. **Ethereum(이더리움)** — DeFi의 기반. Aave, Uniswap, Lido 등 핵심 프로토콜 집중
+2. **Solana(솔라나)** — 빠른 속도와 낮은 수수료로 DEX 거래량 성장
 3. **BNB Chain** — PancakeSwap 중심의 리테일 DeFi
 4. **Arbitrum** — Ethereum L2 중 가장 큰 TVL
 5. **Base** — Coinbase 지원 L2, 빠른 생태계 확장

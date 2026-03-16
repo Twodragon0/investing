@@ -12,7 +12,6 @@ import re
 import sys
 import time
 from collections import Counter
-from datetime import UTC, datetime
 from typing import Any, Dict, List
 
 import requests
@@ -25,6 +24,7 @@ from common.config import (
     REQUEST_TIMEOUT,
     USER_AGENT,
     get_env,
+    get_kst_now,
     get_ssl_verify,
     setup_logging,
 )
@@ -37,7 +37,7 @@ from common.markdown_utils import (
     markdown_table,
     smart_truncate,
 )
-from common.post_generator import PostGenerator
+from common.post_generator import PostGenerator, build_dated_permalink
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
 from common.translator import get_display_title
@@ -363,8 +363,8 @@ def main():
     dedup = DedupEngine("social_media_seen.json")
     gen = PostGenerator("social-media")  # Social posts go to social-media
 
-    today = datetime.now(UTC).strftime("%Y-%m-%d")
-    now = datetime.now(UTC)
+    now = get_kst_now()
+    today = now.strftime("%Y-%m-%d")
 
     # Collect Telegram messages
     telegram_items = []
@@ -898,7 +898,7 @@ def main():
     # Data collection timestamp footer
     content_parts.append(
         '\n<div class="wm-footer-meta">'
-        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} UTC</span>"
+        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} KST</span>"
         "<span>소스: Telegram, Reddit, Google News, 소셜 미디어</span>"
         "</div>"
     )
@@ -909,6 +909,7 @@ def main():
         title=post_title,
         content=content,
         date=now,
+        logical_date=today,
         tags=[
             "social-media",
             "telegram",
@@ -922,6 +923,7 @@ def main():
         source="consolidated",
         lang="ko",
         image=distribution_image_path,
+        extra_frontmatter={"permalink": build_dated_permalink("social-media", today, "daily-social-media-digest")},
         slug="daily-social-media-digest",
     )
     if filepath:

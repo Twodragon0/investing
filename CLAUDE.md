@@ -51,7 +51,7 @@ python scripts/generate_daily_summary.py
 python3 -m ruff check scripts/
 
 # OpenCode 동기화 (git pull, 중앙 관리자)
-bash /Users/namyongkim/Desktop/.twodragon0/bin/hourly-opencode-git-pull.sh
+bash ~/Desktop/.twodragon0/bin/hourly-opencode-git-pull.sh
 
 # 서버 오전 9:10 자동 포스팅/품질 보정 크론 설치
 bash scripts/install_server_morning_cron.sh
@@ -115,7 +115,7 @@ Slack 연동:
 - **전문**: `_layouts/`, `_includes/`, `_sass/`, `pages/`, `assets/`
 - **핵심**: minima 테마 커스터마이징, 다크 테마, 반응형 디자인
 
-### 3. DevOps Engineer (DevOps 엔지니어)
+### 3. Workflow Automation Engineer (워크플로우 자동화 엔지니어)
 - **담당**: `.github/workflows/`, `.github/actions/`, CI/CD
 - **전문**: GitHub Actions 워크플로우, 크론 스케줄링, 배포 파이프라인
 - **핵심**: 동시성 그룹 관리, 타임아웃 설정, Slack 연동
@@ -136,7 +136,7 @@ Slack 연동:
 ```
 Create an agent team for adding a new data source:
 - Collector Developer: scripts/collect_new_source.py 구현
-- DevOps Engineer: .github/workflows/ 워크플로우 추가
+- Workflow Automation Engineer: .github/workflows/ 워크플로우 추가
 - QA Reviewer: 코드 리뷰 및 보안 검사
 각 팀원이 독립적으로 작업 후 통합하세요.
 ```

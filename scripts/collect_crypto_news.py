@@ -27,6 +27,7 @@ from common.config import (
     REQUEST_TIMEOUT,
     USER_AGENT,
     get_env,
+    get_kst_now,
     get_ssl_verify,
     setup_logging,
 )
@@ -39,7 +40,7 @@ from common.markdown_utils import (
     markdown_table,
     smart_truncate,
 )
-from common.post_generator import PostGenerator
+from common.post_generator import PostGenerator, build_dated_permalink
 from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
 from common.translator import get_display_title
@@ -466,8 +467,8 @@ def main():
     crypto_gen = PostGenerator("crypto-news")
     security_gen = PostGenerator("security-alerts")
 
-    today = datetime.now(UTC).strftime("%Y-%m-%d")
-    now = datetime.now(UTC)
+    now = get_kst_now()
+    today = now.strftime("%Y-%m-%d")
 
     all_items = []
 
@@ -920,7 +921,7 @@ def main():
         # Data collection footer
         content_parts.append(
             '\n<div class="wm-footer-meta">'
-            f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} UTC</span>"
+            f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} KST</span>"
             "<span>소스: CryptoPanic, CoinGecko, Google News, 거래소 RSS</span>"
             "</div>"
         )
@@ -933,10 +934,12 @@ def main():
             title=post_a_title,
             content=content,
             date=now,
+            logical_date=today,
             tags=["crypto", "news", "daily-digest"],
             source="consolidated",
             lang="ko",
             image=briefing_image or "",
+            extra_frontmatter={"permalink": build_dated_permalink("crypto-news", today, "daily-crypto-news-digest")},
             slug="daily-crypto-news-digest",
         )
         if filepath:
@@ -1089,9 +1092,11 @@ def main():
                 title=post_b_title,
                 content=content,
                 date=now,
+            logical_date=today,
                 tags=["security", "hack", "blockchain", "daily-digest"],
                 source="consolidated",
                 lang="ko",
+                extra_frontmatter={"permalink": build_dated_permalink("security-alerts", today, "daily-security-report")},
                 slug="daily-security-report",
             )
             if filepath:

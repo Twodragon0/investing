@@ -4,13 +4,12 @@
 import os
 import sys
 import time
-from datetime import UTC, datetime
 from typing import Any, Dict, List
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.collector_metrics import log_collection_summary
-from common.config import setup_logging
+from common.config import get_kst_now, setup_logging
 from common.dedup import DedupEngine
 from common.fmp_api import (
     fetch_earnings_calendar,
@@ -21,7 +20,7 @@ from common.fmp_api import (
     fetch_treasury_rates,
 )
 from common.markdown_utils import markdown_link
-from common.post_generator import PostGenerator
+from common.post_generator import PostGenerator, build_dated_permalink
 
 logger = setup_logging("collect_fmp_calendar")
 
@@ -293,8 +292,8 @@ def main() -> None:
     dedup = DedupEngine("fmp_calendar_seen.json")
     gen = PostGenerator("market-analysis")
 
-    today = datetime.now(UTC).strftime("%Y-%m-%d")
-    now = datetime.now(UTC)
+    now = get_kst_now()
+    today = now.strftime("%Y-%m-%d")
 
     post_title = f"주요 경제 캘린더 및 실적 일정 ({today})"
 
@@ -403,7 +402,7 @@ def main() -> None:
     )
     content_parts.append(
         '<div class="wm-footer-meta">'
-        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} UTC</span>"
+        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} KST</span>"
         "<span>소스: Financial Modeling Prep API</span>"
         "</div>"
     )
@@ -414,9 +413,11 @@ def main() -> None:
         title=post_title,
         content=content,
         date=now,
+        logical_date=today,
         tags=["market-analysis", "economic-calendar", "earnings", "treasury", "ipo", "fmp"],
         source="fmp",
         lang="ko",
+        extra_frontmatter={"permalink": build_dated_permalink("market-analysis", today, "fmp-economic-calendar")},
         slug="fmp-economic-calendar",
     )
 

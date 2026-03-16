@@ -8,11 +8,11 @@ import os
 import re
 from datetime import UTC, datetime
 from typing import Dict, List, Optional
-from zoneinfo import ZoneInfo
 
+from common.config import get_kst_now, get_kst_timezone
 from common.markdown_utils import smart_truncate
 
-KST = ZoneInfo("Asia/Seoul")
+KST = get_kst_timezone()
 
 logger = logging.getLogger(__name__)
 
@@ -134,6 +134,31 @@ _DEFAULT_CATEGORY_IMAGES: dict[str, str] = {
     "security-alerts": "/assets/images/og-security-alerts.png",
 }
 
+_WORDING_REPLACEMENTS: tuple[tuple[str, str], ...] = (
+    ("견인고", "견인하고"),
+    ("시장 영향 가능", "시장 영향 가능성이 있는"),
+    ("실제로 확인해야 합니다.", ""),
+    ("실제로 확인이 필요합니다.", ""),
+    ("..", "."),
+    (" .", "."),
+)
+
+
+def _normalize_logical_date(logical_date: Optional[str], date_kst: datetime) -> str:
+    if logical_date:
+        normalized = logical_date.strip()
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", normalized):
+            raise ValueError(f"logical_date must be YYYY-MM-DD, got: {logical_date}")
+        return normalized
+    return date_kst.strftime("%Y-%m-%d")
+
+
+def build_dated_permalink(category: str, logical_date: str, slug: str) -> str:
+    normalized_date = _normalize_logical_date(logical_date, get_kst_now())
+    safe_category = category.strip("/")
+    safe_slug = slug.strip("/")
+    return f"/{safe_category}/{normalized_date.replace('-', '/')}/{safe_slug}/"
+
 
 def _fix_translation_artifacts(text: str) -> str:
     """Remove token-name artifacts embedded in ordinary words after translation.
@@ -146,6 +171,17 @@ def _fix_translation_artifacts(text: str) -> str:
     for wrong, correct in _TOKEN_ARTIFACTS.items():
         text = text.replace(wrong, correct)
     return text
+
+
+def _polish_generated_text(text: str) -> str:
+    if not text:
+        return text
+    for wrong, correct in _WORDING_REPLACEMENTS:
+        text = text.replace(wrong, correct)
+    text = re.sub(r"\s+", " ", text)
+    text = re.sub(r"([.!?]){2,}", r"\1", text)
+    text = re.sub(r"\s+([,.!?])", r"\1", text)
+    return text.strip()
 
 
 def _slugify(text: str, max_length: int = 80) -> str:
@@ -364,6 +400,7 @@ class PostGenerator:
         title: str,
         content: str,
         date: Optional[datetime] = None,
+        logical_date: Optional[str] = None,
         tags: Optional[List[str]] = None,
         source: str = "",
         source_url: str = "",
@@ -382,18 +419,24 @@ class PostGenerator:
         # Decode HTML entities (e.g. &#x27; → ', &amp; → &) in title and content
         import html
 
-        title = html.unescape(title)
-        content = html.unescape(content)
+        title = _polish_generated_text(html.unescape(title))
+        content = _polish_generated_text(html.unescape(content))
 
         if date is None:
-            date = datetime.now(UTC)
+            date = get_kst_now()
+
+        if date.tzinfo is not None:
+            date_kst = date.astimezone(KST)
+        else:
+            date_kst = date.replace(tzinfo=UTC).astimezone(KST)
 
         if slug is None:
             slug = _slugify(title)
         if not slug:
             slug = f"post-{date.strftime('%H%M%S')}"
 
-        filename = f"{date.strftime('%Y-%m-%d')}-{slug}.md"
+        filename_date = _normalize_logical_date(logical_date, date_kst)
+        filename = f"{filename_date}-{slug}.md"
         filepath = os.path.join(POSTS_DIR, filename)
 
         if os.path.exists(filepath):
@@ -402,11 +445,6 @@ class PostGenerator:
 
         # Build frontmatter
         escaped_title = title.replace("\\", "\\\\").replace('"', '\\"')
-        # Convert to KST for frontmatter display (filename keeps original date)
-        if date.tzinfo is not None:
-            date_kst = date.astimezone(KST)
-        else:
-            date_kst = date.replace(tzinfo=UTC).astimezone(KST)
         frontmatter_lines = [
             "---",
             "layout: post",
@@ -453,28 +491,28 @@ class PostGenerator:
                 desc_text = _build_fallback_description(title, self.category, tags)
                 desc_text = _clean_description(desc_text)
             if desc_text and len(desc_text) >= 80:
-                safe_desc = desc_text.replace('"', "'")
+                safe_desc = _polish_generated_text(desc_text).replace('"', "'")
                 frontmatter_lines.append(f'description: "{safe_desc}"')
 
         # excerpt 자동 생성 (SNS 미리보기용, 짧은 요약)
         if not (extra_frontmatter and "excerpt" in extra_frontmatter):
             excerpt_text = desc_text if desc_text else _extract_description(content)
             if excerpt_text:
-                excerpt_text = smart_truncate(excerpt_text, 100).replace('"', "'")
+                excerpt_text = _polish_generated_text(smart_truncate(excerpt_text, 100)).replace('"', "'")
                 frontmatter_lines.append(f'excerpt: "{excerpt_text}"')
 
         # image_alt 자동 생성 (접근성 + SNS 이미지 설명)
         if not (extra_frontmatter and "image_alt" in extra_frontmatter):
             cat_ko = _CATEGORY_KO.get(self.category, self.category)
             clean_title = re.sub(r"[*_`~]", "", title).strip()
-            image_alt = f"{clean_title} - {cat_ko} 뉴스 요약 이미지"
+            image_alt = _polish_generated_text(f"{clean_title} - {cat_ko} 뉴스 요약 이미지")
             safe_alt = image_alt.replace('"', "'")
             frontmatter_lines.append(f'image_alt: "{safe_alt}"')
 
         frontmatter_lines.append("---")
 
         # Fix translation artifacts (e.g. "gAIn", "GaSOLine") before writing
-        content = _fix_translation_artifacts(content)
+        content = _polish_generated_text(_fix_translation_artifacts(content))
 
         # Normalize hardcoded image paths in content to Liquid relative_url syntax
         normalized_content = _normalize_image_paths(content.strip())
@@ -500,6 +538,7 @@ class PostGenerator:
         title: str,
         sections: Dict[str, str],
         date: Optional[datetime] = None,
+        logical_date: Optional[str] = None,
         tags: Optional[List[str]] = None,
         image: str = "",
         slug: Optional[str] = None,
@@ -514,6 +553,7 @@ class PostGenerator:
             title=title,
             content=content,
             date=date,
+            logical_date=logical_date,
             tags=tags,
             source="auto-generated",
             image=image,
