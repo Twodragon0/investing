@@ -2,7 +2,7 @@ name: Collect Geopolitical Risk Data
 
 on:
   schedule:
-    - cron: '45 0,12 * * *'  # 09:45, 21:45 KST
+    - cron: '52 21,9 * * *'  # KST 06:52, 18:52 (early morning + afternoon)
   workflow_dispatch:
 
 permissions:

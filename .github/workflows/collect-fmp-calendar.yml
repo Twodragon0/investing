@@ -2,7 +2,7 @@ name: Collect FMP Calendar
 
 on:
   schedule:
-    - cron: '0 */12 * * *'
+    - cron: '45 1,13 * * *'  # KST 10:45, 22:45 (twice daily, after morning collection batch)
   workflow_dispatch:
 
 permissions:
