@@ -4178,7 +4178,7 @@ html {
   border: 2px solid $bg-primary;
 
   &:hover {
-  background: linear-gradient(180deg, lighten($accent-blue, 5%), lighten($accent-purple, 5%));
+  background: linear-gradient(180deg, #6db8ff, #cc9aff);
   }
 }
 
@@ -4371,7 +4371,7 @@ html {
     transition: background 0.3s ease;
 
     &:hover {
-  background: linear-gradient(90deg, lighten($accent-blue, 5%), lighten($accent-purple, 5%));
+  background: linear-gradient(90deg, #6db8ff, #cc9aff);
     }
   }
 }
@@ -4583,7 +4583,7 @@ html {
 
   &:hover {
     gap: 0.75rem;
-    color: lighten($accent-blue, 10%);
+    color: #80c0ff;
   }
 }
 
