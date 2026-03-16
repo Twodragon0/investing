@@ -7,7 +7,7 @@ tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-ban
 keywords: "political-trades, congress, sec, trump, 이재명"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-political-2026-03-13.png"
+image: "/assets/images/og-political-trades.png"
 excerpt: "2026-03-13 정치인 거래·정책 리포트: 의회 거래 1건, SEC 내부자 14건, 중앙은행 5건, 총 20건 수집"
 description: "미국 의회 거래 동향에서는 EXCLUSIVE: Congress Stock Trading Could Be Ending Soon – Expert Says 'People Are Sick Of It' Benzinga 등이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향의 간접…"
 image_alt: "정치인 거래·정책 리포트 - 2026-03-13 - 정치인 거래 뉴스 요약 이미지"

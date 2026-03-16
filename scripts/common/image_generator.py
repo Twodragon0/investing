@@ -6,6 +6,7 @@ Images are saved to assets/images/generated/ for use in Jekyll posts.
 
 import logging
 import os
+import re
 from typing import Any, Dict, List, Optional
 
 logger = logging.getLogger(__name__)
@@ -139,7 +140,6 @@ def _to_en(text: str) -> str:
     if text in _KO_TO_EN:
         return _KO_TO_EN[text]
     # If text contains any Hangul, try partial match or return as-is
-    import re
 
     if re.search(r"[\uac00-\ud7af]", text):
         # Check if it's a known prefix match
@@ -152,7 +152,6 @@ def _to_en(text: str) -> str:
 
 def _filter_en_keywords(keywords: list) -> list:
     """Filter out Korean-only keywords and common noise words, keep meaningful ones."""
-    import re
 
     _NOISE_KEYWORDS = {
         "the",
@@ -260,32 +259,32 @@ def _filter_en_keywords(keywords: list) -> list:
 # Professional dark finance color palette
 # ---------------------------------------------------------------------------
 COLORS = {
-    # Backgrounds -- deeper, richer darks
-    "bg": "#0b1018",
-    "bg_card": "#111820",
-    "bg_inner": "#161d27",
-    "bg_header": "#0f1923",
-    # Text hierarchy
-    "text": "#f0f4fc",
-    "text_secondary": "#8b9bb0",
-    "text_muted": "#4a5568",
-    # Positive / Negative -- higher contrast
-    "green": "#00f07a",
+    # Backgrounds -- aligned with web CSS (_variables.scss)
+    "bg": "#0d1117",
+    "bg_card": "#161b22",
+    "bg_inner": "#1c2128",
+    "bg_header": "#0d1117",
+    # Text hierarchy -- aligned with web CSS
+    "text": "#e6edf3",
+    "text_secondary": "#8b949e",
+    "text_muted": "#484f58",
+    # Positive / Negative -- aligned with web accent colors
+    "green": "#3fb950",
     "green_dim": "#0b3d24",
-    "red": "#ff5263",
+    "red": "#f85149",
     "red_dim": "#3d1420",
-    # Accent colors
-    "blue": "#4da6ff",
-    "orange": "#ffb347",
-    "purple": "#b57bff",
+    # Accent colors -- aligned with web accent colors
+    "blue": "#58a6ff",
+    "orange": "#d29922",
+    "purple": "#bc8cff",
     "cyan": "#22d3ee",
     # Semantic
-    "accent": "#4da6ff",
-    "warning": "#ffb347",
+    "accent": "#58a6ff",
+    "warning": "#d29922",
     "info": "#22d3ee",
-    # Borders & separators
-    "border": "#1e2a3a",
-    "border_highlight": "#2d4a6a",
+    # Borders & separators -- aligned with web border
+    "border": "#30363d",
+    "border_highlight": "#3d4450",
     # Medal colors -- richer metallics
     "gold": "#ffd54f",
     "silver": "#b0bec5",
@@ -298,7 +297,7 @@ COLORS = {
 _DS = {
     "pad_outer": 0.5,  # tight_layout outer padding
     "pad_title": 15,  # title top padding (set_title pad)
-    "dpi": 150,
+    "dpi": 180,
     "footer_size": 8,
     "title_size": 20,
     "subtitle_size": 10,
@@ -841,6 +840,9 @@ def generate_fear_greed_gauge(
     if not _MPL_AVAILABLE:
         return None
 
+    # Clamp value to valid range
+    value = max(0, min(100, int(value)))
+
     _ensure_dir()
 
     fig, ax = plt.subplots(figsize=(8, 6.5))
@@ -1104,6 +1106,16 @@ def generate_market_heatmap(
         return None
 
     display_coins = coins[:20]
+
+    # Calculate dynamic color scale from actual data range (minimum 3.0)
+    _changes = []
+    for c in display_coins:
+        if source == "coingecko":
+            _changes.append(_safe_float(c.get("price_change_percentage_24h", 0)))
+        else:
+            _changes.append(_safe_float(c.get("quote", {}).get("USD", {}).get("percent_change_24h", 0)))
+    max_change = max(max(abs(v) for v in _changes) if _changes else 5.0, 3.0)
+
     fig, ax = plt.subplots(figsize=(14, 8))
     fig.patch.set_facecolor(COLORS["bg"])
     ax.set_facecolor(COLORS["bg"])
@@ -1161,7 +1173,7 @@ def generate_market_heatmap(
             _mcap = quote.get("market_cap", 0) or 0
 
         # Dynamic background color scaling with change magnitude
-        bg_color = _heatmap_bg_color(change, extreme=5.0)
+        bg_color = _heatmap_bg_color(change, extreme=max_change)
 
         # Cell border highlight for large movers
         edge_color = COLORS["border"]

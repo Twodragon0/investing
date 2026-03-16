@@ -520,6 +520,7 @@ a {
   border-radius: 8px 8px 0 0;
   margin: -1.15rem -1.4rem 0.85rem -1.4rem;
   width: calc(100% + 2.8rem);
+  background: var(--bg-secondary);
 
   img {
     width: 100%;
@@ -527,6 +528,51 @@ a {
     object-fit: cover;
     transition: transform 0.3s ease;
     display: block;
+  }
+
+  // 이미지 없는 포스트 카테고리 아이콘 플레이스홀더
+  .thumb-category-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-card) 100%);
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 40%, rgba(88, 166, 255, 0.06) 0%, transparent 60%);
+    }
+
+    .thumb-icon-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+  }
+
+  // 카테고리별 플레이스홀더 배경 그라데이션
+  .cat-bg-crypto-news { background: linear-gradient(135deg, var(--bg-secondary), rgba($cat-crypto, 0.1)); }
+  .cat-bg-stock-news { background: linear-gradient(135deg, var(--bg-secondary), rgba($cat-stock, 0.1)); }
+  .cat-bg-market-analysis { background: linear-gradient(135deg, var(--bg-secondary), rgba($cat-analysis, 0.1)); }
+  .cat-bg-regulatory-news { background: linear-gradient(135deg, var(--bg-secondary), rgba($cat-regulatory, 0.1)); }
+  .cat-bg-political-trades { background: linear-gradient(135deg, var(--bg-secondary), rgba($cat-political, 0.1)); }
+  .cat-bg-social-media { background: linear-gradient(135deg, var(--bg-secondary), rgba($cat-social, 0.1)); }
+  .cat-bg-security-alerts { background: linear-gradient(135deg, var(--bg-secondary), rgba($cat-security, 0.1)); }
+  .cat-bg-worldmonitor { background: linear-gradient(135deg, var(--bg-secondary), rgba($cat-worldmonitor, 0.1)); }
+  .cat-bg-blockchain { background: linear-gradient(135deg, var(--bg-secondary), rgba($cat-blockchain, 0.1)); }
+  .cat-bg-devops { background: linear-gradient(135deg, var(--bg-secondary), rgba($cat-devops, 0.1)); }
+
+  // 이미지 로드 실패 시 폴백
+  &.thumb-fallback {
+    img { display: none; }
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-card) 100%);
   }
 }
 

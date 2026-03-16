@@ -947,7 +947,7 @@ def main() -> None:
         source="worldmonitor",
         source_url="https://worldmonitor.app",
         lang="ko",
-        image=briefing_image or "/assets/images/og-default.png",
+        image=briefing_image or "/assets/images/og-worldmonitor.png",
         slug="daily-worldmonitor-briefing",
     )
 

@@ -787,7 +787,7 @@ def main():
         source="consolidated",
         lang="ko",
         slug="daily-political-trades-report",
-        image=briefing_image or "/assets/images/og-default.png",
+        image=briefing_image or "/assets/images/og-political-trades.png",
         extra_frontmatter={"excerpt": excerpt_text},
     )
     if filepath:
