@@ -46,7 +46,7 @@ jobs:
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
 
       - name: Build with Jekyll
         run: bundle exec jekyll build --config _config.yml,_config_ghpages.yml --baseurl "${{ steps.pages.outputs.base_path }}"
