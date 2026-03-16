@@ -142,6 +142,12 @@ _WORDING_REPLACEMENTS: tuple[tuple[str, str], ...] = (
     ("실제로 확인이 필요합니다.", ""),
     ("..", "."),
     (" .", "."),
+    # Korean subject-particle corrections for proper nouns without 받침 (final consonant).
+    # Names ending in an open syllable (no 받침) must take "가" not "이".
+    ("트럼프이 ", "트럼프가 "),
+    ("트럼프이란", "트럼프가 이란"),
+    ("테슬라이 ", "테슬라가 "),
+    ("메타이 ", "메타가 "),
 )
 
 
@@ -179,7 +185,10 @@ def _polish_generated_text(text: str) -> str:
         return text
     for wrong, correct in _WORDING_REPLACEMENTS:
         text = text.replace(wrong, correct)
-    text = re.sub(r"\s+", " ", text)
+    # Collapse multiple spaces within lines but preserve newlines for markdown structure
+    text = re.sub(r"[^\S\n]+", " ", text)
+    # Collapse 3+ consecutive blank lines into 2
+    text = re.sub(r"\n{4,}", "\n\n\n", text)
     text = re.sub(r"([.!?]){2,}", r"\1", text)
     text = re.sub(r"\s+([,.!?])", r"\1", text)
     return text.strip()
