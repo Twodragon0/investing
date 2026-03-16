@@ -67,8 +67,16 @@ jobs:
           path: coverage-html/
           retention-days: 14
 
-      - name: Coverage comment on PR
-        if: github.actor != 'dependabot[bot]'
+      - name: Upload coverage data for comment
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v7
+        with:
+          name: coverage-data
+          path: coverage.json
+          retention-days: 1
+
+      - name: Coverage comment on push
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: py-cov-action/python-coverage-comment-action@v3
         with:
           GITHUB_TOKEN: ${{ github.token }}
