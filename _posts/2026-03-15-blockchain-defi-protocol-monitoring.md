@@ -10,6 +10,12 @@ tags:
 
 ## DeFi 프로토콜 모니터링이 필요한 이유
 
+## 전체 뉴스 요약
+
+- 탈중앙화 금융(DeFi) 시장은 24시간 변동합니다. TVL(Total Value Locked) 변화, 프로토콜 해킹, 유동성 이탈 등을 실시간으로 추적하면 투자 판단에 큰 도움이 됩니다.
+- Investing Dragon 프로젝트에서는 collect_defi_llama.py를 통해 DeFi Llama API에서 데이터를 수집합니다.
+
+
 탈중앙화 금융(DeFi) 시장은 24시간 변동합니다. TVL(Total Value Locked) 변화, 프로토콜 해킹, 유동성 이탈 등을 실시간으로 추적하면 투자 판단에 큰 도움이 됩니다.
 
 ### 모니터링 핵심 지표

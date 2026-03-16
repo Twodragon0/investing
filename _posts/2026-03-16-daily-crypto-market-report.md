@@ -17,13 +17,9 @@ image_alt: "3월 16일 암호화폐 시장 히트맵과 주요 코인 강약을 
 
 ## 시장 시각화
 
-<picture><source srcset="{{ '/assets/images/generated/top-coins-cmc-2026-03-16.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/top-coins-cmc-2026-03-16.png' | relative_url }}" alt="CoinMarketCap Top 코인 순위 (2026-03-16)" loading="lazy" decoding="async"></picture>
-
-<picture><source srcset="{{ '/assets/images/generated/market-heatmap-cmc-2026-03-16.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-heatmap-cmc-2026-03-16.png' | relative_url }}" alt="암호화폐 시장 히트맵 (2026-03-16)" loading="lazy" decoding="async"></picture>
 
 ## 오늘의 브리핑
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-cmc-2026-03-16.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-cmc-2026-03-16.png' | relative_url }}" alt="시장 브리핑 카드" loading="lazy" decoding="async"></picture>
 
 ## 한눈에 보기
 
@@ -31,9 +27,12 @@ image_alt: "3월 16일 암호화폐 시장 히트맵과 주요 코인 강약을 
 
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Hyperliquid</strong> (HYPE): -2.53%</li><li>🟢 <strong>XRP</strong> (XRP): +1.43%</li><li>🟢 <strong>Chainlink</strong> (LINK): +1.38%</li></ul></div>
 
+
 ## 전체 뉴스 요약
 
-오늘은 시가총액 상위 **30개** 코인을 기준으로 시장의 온도와 수급 방향을 점검했습니다. 비트코인은 **$71,369**에서 24시간 **+0.98%** 반등하며 투자 심리 회복의 중심에 섰고, 전체 시가총액도 **$2.51T**로 전일 대비 **+0.91%** 증가했습니다. 다만 BTC 도미넌스가 **56.9%**까지 올라 비트코인 중심 자금 쏠림이 이어지고 있어, 알트 전반으로 확산되는 강세라고 보기에는 아직 이릅니다. 공포·탐욕 지수는 **15 (Extreme Fear)** 로 극단적 공포 구간에 머물러 있어 단기 반등과 심리 위축이 동시에 나타나는 국면으로 해석할 수 있습니다.
+- 총 **20건** 수집
+- 오늘의 시장 인사이트:
+- 시가총액이 +0.91% 반등했지만 거래량/시가총액 비율은 2.4%에 머물러 있어, 강한 추세 전환보다는 얕은 회복에 가깝습니다. 반등 폭보다 거래량 회복 여부를 함께 확인하는 접근이 필요합니다.
 
 ## 시장 인사이트
 
