@@ -51,7 +51,7 @@ python scripts/generate_daily_summary.py
 python3 -m ruff check scripts/
 
 # OpenCode 동기화 (git pull, 중앙 관리자)
-bash /Users/namyongkim/Desktop/.twodragon0/bin/hourly-opencode-git-pull.sh
+bash ~/Desktop/.twodragon0/bin/hourly-opencode-git-pull.sh
 
 # 서버 오전 9:10 자동 포스팅/품질 보정 크론 설치
 bash scripts/install_server_morning_cron.sh
