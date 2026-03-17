@@ -742,8 +742,8 @@ def generate_top_coins_card(
         ax.text(
             1.0,
             y - 0.18,
-            full_name[:18],
-            fontsize=7,
+            full_name[:16],
+            fontsize=8,
             color=COLORS["text_secondary"],
             fontfamily=_FONT_FAMILY,
         )
@@ -1886,7 +1886,7 @@ def generate_source_distribution_card(
         wedges,
         [f"{n} ({c})" for n, c in zip(names, counts, strict=False)],
         loc="lower center",
-        bbox_to_anchor=(0.5, -0.08),
+        bbox_to_anchor=(0.5, -0.12),
         ncol=min(len(names), 4),
         fontsize=_DS["small_size"],
         frameon=False,
@@ -1898,7 +1898,7 @@ def generate_source_distribution_card(
     # Footer
     fig.text(
         0.5,
-        0.01,
+        -0.02,
         f"{_DS['watermark']} | Auto-generated",
         ha="center",
         fontsize=_DS["footer_size"],
