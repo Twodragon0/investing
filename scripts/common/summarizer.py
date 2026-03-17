@@ -2092,11 +2092,14 @@ class ThemeSummarizer:
                 p0_title = item.get("title_ko") or item.get("title_translated") or item.get("title", "")
                 link = item.get("link", "")
                 desc = (item.get("description_ko") or item.get("description", "")).strip()
-                # Build alert content: title + short description
+                # Build alert content: title + short description (Korean only)
                 desc_part = ""
                 if desc and desc != p0_title and desc != item.get("title", "") and len(desc) > 15:
-                    desc_short = desc[:100] + "..." if len(desc) > 100 else desc
-                    desc_part = f' <span class="p0-desc">{desc_short}</span>'
+                    # Skip descriptions that are mostly English (non-Korean)
+                    korean_chars = sum(1 for c in desc if '\uac00' <= c <= '\ud7a3')
+                    if korean_chars >= len(desc) * 0.3:
+                        desc_short = desc[:100] + "..." if len(desc) > 100 else desc
+                        desc_part = f' <span class="p0-desc">{desc_short}</span>'
                 if link:
                     p0_html_items.append(f'<li><a href="{link}">{p0_title}</a>{desc_part}</li>')
                 else:

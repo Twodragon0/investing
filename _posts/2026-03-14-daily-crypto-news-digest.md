@@ -48,7 +48,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-14 - crypto-news 뉴스 요�
 </div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/read/CBMimAFBVV95cUxPX3hyZjFOUC1xNGNleGJjazFPZEQxUGZBTVBQUjJ6Vm1qd0pjc2hBSE5YUE0zWU5hNHBYR1ZZTE93MEl4V1U0ZEx1U2FxR3F3aFdEYkRpc2gwbHRmdzcxQms0MGJzamJLWXMtNHNNdExYRE5zekZmWFJNWHY2ZmxhQnVIYmpmOEgwbTdQMG8xb2dNUEhZclh5Qw?hl=en-US&gl=US&ceid=US%3Aen">암호화폐 폭락: 가격이 반등하기 전에 구매를 고려할 최고의 코인 2개</a> <span class="p0-desc">Crypto Crash: 2 Top Coins I'd Consider Buying Before Prices Rebound. 급락 배경과 반등 시점을 주시해야 합니다.</span></li>
+<li><a href="https://news.google.com/read/CBMimAFBVV95cUxPX3hyZjFOUC1xNGNleGJjazFPZEQxUGZBTVBQUjJ6Vm1qd0pjc2hBSE5YUE0zWU5hNHBYR1ZZTE93MEl4V1U0ZEx1U2FxR3F3aFdEYkRpc2gwbHRmdzcxQms0MGJzamJLWXMtNHNNdExYRE5zekZmWFJNWHY2ZmxhQnVIYmpmOEgwbTdQMG8xb2dNUEhZclh5Qw?hl=en-US&gl=US&ceid=US%3Aen">암호화폐 폭락: 가격이 반등하기 전에 구매를 고려할 최고의 코인 2개</a></li>
 </ul>
 </div>
 

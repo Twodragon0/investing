@@ -395,7 +395,7 @@ def _build_polymarket_section(markets: List[Dict[str, Any]]) -> List[str]:
 def _build_gdelt_section(articles: List[Dict[str, Any]]) -> List[str]:
     """Build the GDELT news section with tone analysis."""
     if not articles:
-        return []
+        return ["현재 GDELT에서 수집된 지정학 뉴스가 없습니다.\n"]
 
     lines = []
 

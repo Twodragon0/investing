@@ -40,7 +40,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-15 - stock-news 뉴스 요약 
 </div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong>
 <ul>
-<li><a href="https://www.cnbc.com/2026/03/14/iran-war-iea-oil-stockpile-spr-strait-hormuz.html">The biggest release of emergency oil stockpiles in history was announced. Why crude may keep rising</a> <span class="p0-desc">Oil prices have surged more than 17% since the International Energy Agency announced the largest rel...</span></li>
+<li><a href="https://www.cnbc.com/2026/03/14/iran-war-iea-oil-stockpile-spr-strait-hormuz.html">The biggest release of emergency oil stockpiles in history was announced. Why crude may keep rising</a></li>
 </ul>
 </div>
 
