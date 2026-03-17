@@ -41,7 +41,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-17 - stock-news 뉴스 요약 
 </div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNa2RDTVU0TEJXX3BBVE1uczNGaDN3OTR0VFRIX1lQX0ZTMDFIZC1DdXRnei0zNXJ4MGsxT2ZnSzJKYUZKZklKMWg4cDlCOTVPQ2FRTFBfZXVueWVscXFORXA4U1B2d3RuamFvUTR0allPQk0xSkpBdjhyQlVYcFJNZWpOOG8zY0tYRXlySnEyVGV4T1RoUEFQTw?oc=5">Will the Stock Market Crash Under President Trump in 2026? History Says Investors Have Reason to Worry. - The Motley Fool</a> <span class="p0-desc">Will the Stock Market Crash Under President Trump in 2026? History Says Investors Have Reason to Wor.</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNa2RDTVU0TEJXX3BBVE1uczNGaDN3OTR0VFRIX1lQX0ZTMDFIZC1DdXRnei0zNXJ4MGsxT2ZnSzJKYUZKZklKMWg4cDlCOTVPQ2FRTFBfZXVueWVscXFORXA4U1B2d3RuamFvUTR0allPQk0xSkpBdjhyQlVYcFJNZWpOOG8zY0tYRXlySnEyVGV4T1RoUEFQTw?oc=5">Will the Stock Market Crash Under President Trump in 2026? History Says Investors Have Reason to Worry. - The Motley Fool</a></li>
 </ul>
 </div>
 

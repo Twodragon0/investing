@@ -47,7 +47,7 @@ description: "2026-03-10 암호화폐 시장에서 106건의 뉴스를 분석했
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong>
 <ul>
 <li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNVTlCQ0ttU3dkYzFGSUdxeUdaUHNMM0h6dnUxeVdIeTl4TkNQZkYtdXpBcjlQVEkzY01zRWJxRHpKVFFaNnVVNVM1YjRnYzlUM1BLRWx6d1dDNEdXOXk4SkoxbTY4N1h1MU5SLXpnSFJZMFFEc0huZGZfNVZGb0hWcC03MA?oc=5">개발자가 트로이 목마 파일을 작업 장치에 AirDrop한 후 UNC4899가 암호화 회사에 침입했습니다 - 해커 뉴스</a> <span class="p0-desc">개발자가 트로이 목마 파일을 작업 장치에 AirDrop한 후 UNC4899가 암호화 회사에 침입했습니다.</span></li>
-<li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxQaXU1eG11RHRaS3pDb25GQ2liVVBxUG96TVRBZjBxWUw5UkJQWXNRT2RZbTFXMXRCdFhLZmxsYzdGUmV3UzJBazQwdFByLURyV0R5bkVoai0yQURrRnNWWkMwY3hFWmloeDBXUVdJNTBfa0lqbVZuQ2IxcGtUbXh0dm5jZw?oc=5">Clarity Act, 암호화폐에 대한 논쟁 촉발 - Payments Dive</a> <span class="p0-desc">Clarity Act stokes debate on crypto - Payments Dive. 급락 배경과 반등 시점을 주시해야 합니다.</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxQaXU1eG11RHRaS3pDb25GQ2liVVBxUG96TVRBZjBxWUw5UkJQWXNRT2RZbTFXMXRCdFhLZmxsYzdGUmV3UzJBazQwdFByLURyV0R5bkVoai0yQURrRnNWWkMwY3hFWmloeDBXUVdJNTBfa0lqbVZuQ2IxcGtUbXh0dm5jZw?oc=5">Clarity Act, 암호화폐에 대한 논쟁 촉발 - Payments Dive</a></li>
 <li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9wcmtSelRpV1hGOGN5VFQ1Z01FWk44R3E1NmMzVVY4Tk5xVmVJeTFkeHFCQjB5VUdyazlQVDdyVDdHakZVR3VtVXhsMlQ2TERreW5ZQm9IVU9OVk02OWRybW9TUDU3dE5GM0hiZklwWnhtcmM?oc=5">"비트코인, 깊은 약세장 진입…4년 주기 따라 올해 30% 더 폭락한다"</a> <span class="p0-desc">시장이 30% 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</span></li>
 </ul>
 </div>

@@ -42,7 +42,7 @@ image_alt: "3월 16일 주식 시장 지수와 뉴스 분포를 요약한 스냅
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong>
 <ul>
 <li><a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFBEbmptT3Uwd3p5dVRobmYtaHB1b0tEV0ZNNWRWbDdEZnNHdFQybGZpTHA5Z3FSbUhjZ0hZUWV4enFWRGVJRHlwa2JucHdIdXhNYUlqWGJCbURjX2gxS0HSAW5BVV95cUxPcHg2RmNxd2JzQ1BUQ09ZWHNVN0pocFZlQUpLblhoWjhhRkc2Z2JfTU8xOExxekJZWGo1aHFNNThBRGRKTzhwS2JNY1VWSXVaamdmV3pIdHE1ZDVyNTRQNWJLZkR5Rks5dVlBRUZYZw?oc=5">삼성전자·하이닉스,미-이란 전쟁에 ′급락′…증권가는 되레 목표가 올렸다 - 알파경제</a> <span class="p0-desc">삼성전자·하이닉스,미-이란 전쟁에 ′급락′…증권가는 되레 목표가 올렸다 알파경제</span></li>
-<li><a href="https://www.cnbc.com/2026/03/14/iran-war-iea-oil-stockpile-spr-strait-hormuz.html">The biggest release of emergency oil stockpiles in history was announced. Why crude may keep rising</a> <span class="p0-desc">Oil prices have surged more than 17% since the International Energy Agency announced the largest rel...</span></li>
+<li><a href="https://www.cnbc.com/2026/03/14/iran-war-iea-oil-stockpile-spr-strait-hormuz.html">The biggest release of emergency oil stockpiles in history was announced. Why crude may keep rising</a></li>
 <li><a href="https://www.investing.com/news/economy-news/iea-says-governments-ready-to-release-2717-million-barrels-from-oil-reserves-4561565">IEA says 411.9 million barrels of oil from emergency reserves to be released</a></li>
 </ul>
 </div>

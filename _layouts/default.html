@@ -14,7 +14,7 @@
   </script>
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <title>{% if page.title and page.title != site.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
 
   {% assign og_title = page.title | default: site.title | escape %}
   {% assign raw_desc = page.excerpt | default: page.description %}

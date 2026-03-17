@@ -40,7 +40,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-14 - stock-news 뉴스 요약 
 </div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong>
 <ul>
-<li><a href="https://www.marketwatch.com/story/this-little-known-energy-companys-stock-is-rallying-as-trump-invokes-1950-powers-for-offshore-california-drilling-5cb8efa4?mod=mw_rss_topstories">This little-known energy company’s stock is rallying as Trump invokes 1950 powers for offshore California drilling</a> <span class="p0-desc">Trump’s executive order opens the door for Sable Offshore’s production in Southern California.</span></li>
+<li><a href="https://www.marketwatch.com/story/this-little-known-energy-companys-stock-is-rallying-as-trump-invokes-1950-powers-for-offshore-california-drilling-5cb8efa4?mod=mw_rss_topstories">This little-known energy company’s stock is rallying as Trump invokes 1950 powers for offshore California drilling</a></li>
 </ul>
 </div>
 
