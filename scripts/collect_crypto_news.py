@@ -1092,11 +1092,13 @@ def main():
                 title=post_b_title,
                 content=content,
                 date=now,
-            logical_date=today,
+                logical_date=today,
                 tags=["security", "hack", "blockchain", "daily-digest"],
                 source="consolidated",
                 lang="ko",
-                extra_frontmatter={"permalink": build_dated_permalink("security-alerts", today, "daily-security-report")},
+                extra_frontmatter={
+                    "permalink": build_dated_permalink("security-alerts", today, "daily-security-report")
+                },
                 slug="daily-security-report",
             )
             if filepath:

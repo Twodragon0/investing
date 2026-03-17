@@ -1716,7 +1716,11 @@ class ThemeSummarizer:
 
         # Case 1: P0 urgent issues exist — lead with them
         if p0_items:
-            p0_title = p0_items[0].get("title_ko") or p0_items[0].get("title_translated") or p0_items[0].get("title", "긴급 이슈")
+            p0_title = (
+                p0_items[0].get("title_ko")
+                or p0_items[0].get("title_translated")
+                or p0_items[0].get("title", "긴급 이슈")
+            )
             # Truncate long titles
             if len(p0_title) > 80:
                 p0_title = p0_title[:77] + "..."
@@ -1888,7 +1892,9 @@ class ThemeSummarizer:
 
         # If P0 issues exist, lead with the most urgent one
         if p0_items:
-            p0_title = p0_items[0].get("title_ko") or p0_items[0].get("title_translated") or p0_items[0].get("title", "")
+            p0_title = (
+                p0_items[0].get("title_ko") or p0_items[0].get("title_translated") or p0_items[0].get("title", "")
+            )
             if len(p0_title) > 60:
                 # Try to extract key phrase
                 keywords = self._extract_title_keywords(p0_items[:1], max_keywords=3)

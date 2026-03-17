@@ -230,7 +230,6 @@ def _apply_term_overrides(text: str) -> tuple:
     # Sort by length (longest first) to avoid partial matches
     sorted_terms = sorted(_TERM_LOOKUP.items(), key=lambda x: len(x[0]), reverse=True)
 
-
     for _lower_key, (original, korean) in sorted_terms:
         # Use word boundaries to prevent matching inside other words.
         # re.escape handles special chars (e.g. "S&P 500"); \b anchors to

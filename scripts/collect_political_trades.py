@@ -390,9 +390,7 @@ def main():
     # Alert box with top keywords
     if top_keywords:
         kw_text = ", ".join(f"**{kw}**({cnt}회)" for kw, cnt in top_keywords[:5])
-        content_parts.append(
-            f'<div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: {kw_text}</div>'
-        )
+        content_parts.append(f'<div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: {kw_text}</div>')
 
     # ── 전체 뉴스 요약 (내러티브 형식) ──
     content_parts.append("## 전체 뉴스 요약")

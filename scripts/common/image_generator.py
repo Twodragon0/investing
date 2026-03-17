@@ -868,7 +868,7 @@ def generate_fear_greed_gauge(
 
     _ensure_dir()
 
-    fig, ax = plt.subplots(figsize=(8, 6.5))
+    fig, ax = plt.subplots(figsize=(8, 7.0))
     fig.patch.set_facecolor(COLORS["bg"])
     ax.set_facecolor(COLORS["bg"])
     ax.set_xlim(-1.6, 1.6)
@@ -1039,7 +1039,7 @@ def generate_fear_greed_gauge(
     )
 
     # --- Segment labels along the arc ---
-    label_r = r_outer + 0.15
+    label_r = r_outer + 0.22
     zone_labels = [
         (np.pi * 0.875, "Extreme\nFear", COLORS["red"]),
         (np.pi * 0.625, "Fear", COLORS["orange"]),
