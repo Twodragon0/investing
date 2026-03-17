@@ -33,8 +33,20 @@ image_alt: "3월 16일 암호화폐 핵심 뉴스 분포와 리스크 수준을 
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">85</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🟠 41</div><div class="stat-label">비트코인</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (27회)</div></div></div>
-<div class="alert-box alert-info"><strong>비트코인 주도 장세 속 지정학 리스크 동반</strong><ul><li>🟠 <strong>비트코인</strong> (41건): 가격 반등과 기관 수급 관련 뉴스가 가장 큰 비중을 차지했습니다.</li><li>📈 <strong>가격/시장</strong> (23건): 단기 반등 기대와 저항 구간 점검이 동시에 언급됐습니다.</li><li>🔷 <strong>이더리움</strong> (15건): 이더리움과 XRP 등 대형 알트의 상대 강도 비교가 이어졌습니다.</li><li>🔵 <strong>규제/정책</strong> (12건): 스테이블코인, 채굴, 정책 변수 관련 보도가 함께 늘었습니다.</li></ul></div>
+<div class="stat-grid">
+<div class="stat-item"><div class="stat-value">85</div><div class="stat-label">수집 건수</div></div>
+<div class="stat-item"><div class="stat-value">🟠 41</div><div class="stat-label">비트코인</div></div>
+<div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div>
+<div class="stat-item"><div class="stat-value">bitcoin</div><div class="stat-label">핫 키워드 (27회)</div></div>
+</div>
+<div class="alert-box alert-info"><strong>비트코인 주도 장세 속 지정학 리스크 동반</strong>
+<ul>
+<li>🟠 <strong>비트코인</strong> (41건): 가격 반등과 기관 수급 관련 뉴스가 가장 큰 비중을 차지했습니다.</li>
+<li>📈 <strong>가격/시장</strong> (23건): 단기 반등 기대와 저항 구간 점검이 동시에 언급됐습니다.</li>
+<li>🔷 <strong>이더리움</strong> (15건): 이더리움과 XRP 등 대형 알트의 상대 강도 비교가 이어졌습니다.</li>
+<li>🔵 <strong>규제/정책</strong> (12건): 스테이블코인, 채굴, 정책 변수 관련 보도가 함께 늘었습니다.</li>
+</ul>
+</div>
 
 
 ## 전체 뉴스 요약

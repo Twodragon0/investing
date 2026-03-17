@@ -476,7 +476,11 @@ def _generate_worldmonitor_summary(
         risk_level = "안정"
         risk_note = "글로벌 안보 환경이 비교적 안정적인 상황입니다."
 
-    lines.append(f"**지정학 리스크 레벨: {risk_level}** — {risk_note}")
+    lines.append(
+        f'<div class="alert-box alert-warning">\n'
+        f"<strong>지정학 리스크 레벨: {risk_level}</strong> — {risk_note}\n"
+        f"</div>\n"
+    )
 
     # Theme-based analysis
     top_3_themes = theme_counter.most_common(3)
@@ -610,9 +614,9 @@ def _generate_worldmonitor_summary(
     # Key issue highlights (distinct titles from top items)
     high_impact_items = [item for item in issue_items if item.get("impact") == "높음"]
     if high_impact_items:
-        lines.append(f"\n**고중요도 이슈 {len(high_impact_items)}건** 중 주요 건:")
+        lines.append(f"\n### 고중요도 이슈 ({len(high_impact_items)}건)\n")
         seen: set = set()
-        for item in high_impact_items[:3]:
+        for item in high_impact_items[:5]:
             title = item.get("title", "")
             # Strip markdown link formatting for display
             clean_title = re.sub(r"\[?\*\*(.*?)\*\*\]?\(.*?\)", r"\1", title)
@@ -620,7 +624,17 @@ def _generate_worldmonitor_summary(
                 seen.add(clean_title)
                 lines.append(f"- {truncate_text(clean_title, 100)}")
 
-    lines.append(f"\n주요 출처: {top_sources}")
+    # Investor checkpoint
+    lines.append("\n### 투자자 체크포인트\n")
+    if security_count >= 5:
+        lines.append("- **안전자산**: 금·달러·미국채로의 자금 이동 가속 여부 확인")
+    if energy_count >= 1:
+        lines.append("- **에너지**: WTI·브렌트 가격과 에너지 ETF 변동성 주시")
+    if market_count >= 1:
+        lines.append("- **금융시장**: 주요 지수 변동성과 외국인 수급 동향 모니터링")
+    if security_count >= 3:
+        lines.append("- **방산·사이버보안**: 군사적 긴장 확대 시 수혜 섹터 점검")
+    lines.append(f"- **출처**: {top_sources}")
 
     return "\n".join(lines)
 

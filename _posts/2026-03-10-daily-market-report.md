@@ -28,9 +28,24 @@ description: "극도의 공포 장세: 공포/탐욕 지수 13으로 Extreme Fea
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">13</div><div class="stat-label">공포/탐욕 (Extreme Fear)</div></div><div class="stat-item"><div class="stat-value">$2.44T</div><div class="stat-label">글로벌 시총</div></div><div class="stat-item"><div class="stat-value">56.8%</div><div class="stat-label">BTC 도미넌스</div></div><div class="stat-item"><div class="stat-value">+3.25%</div><div class="stat-label">시총 24h 변동</div></div></div>
+<div class="stat-grid">
+<div class="stat-item"><div class="stat-value">13</div><div class="stat-label">공포/탐욕 (Extreme Fear)</div></div>
+<div class="stat-item"><div class="stat-value">$2.44T</div><div class="stat-label">글로벌 시총</div></div>
+<div class="stat-item"><div class="stat-value">56.8%</div><div class="stat-label">BTC 도미넌스</div></div>
+<div class="stat-item"><div class="stat-value">+3.25%</div><div class="stat-label">시총 24h 변동</div></div>
+</div>
 
-<div class="alert-box alert-info"><strong>주요 자산 현황</strong><ul><li><strong>BTC</strong>: $69,175 (+4.20%)</li><li><strong>ETH</strong>: $2,017 (+3.26%)</li><li><strong>KOSPI</strong>: 5,543.01 (+5.98%)</li><li><strong>KOSDAQ</strong>: 1,135.24 (+3.40%)</li><li><strong>USD/KRW 환율</strong>: 1,470.08 (+0.57%)</li><li><strong>금</strong>: $5,144.60 (+0.91%)</li><li><strong>원유</strong>: $85.74 (-25.91%)</li></ul></div>
+<div class="alert-box alert-info"><strong>주요 자산 현황</strong>
+<ul>
+<li><strong>BTC</strong>: $69,175 (+4.20%)</li>
+<li><strong>ETH</strong>: $2,017 (+3.26%)</li>
+<li><strong>KOSPI</strong>: 5,543.01 (+5.98%)</li>
+<li><strong>KOSDAQ</strong>: 1,135.24 (+3.40%)</li>
+<li><strong>USD/KRW 환율</strong>: 1,470.08 (+0.57%)</li>
+<li><strong>금</strong>: $5,144.60 (+0.91%)</li>
+<li><strong>원유</strong>: $85.74 (-25.91%)</li>
+</ul>
+</div>
 
 ## 퀀트 시그널 요약
 

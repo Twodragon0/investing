@@ -16,7 +16,11 @@ image_alt: "지정학 리스크 리포트 - 2026-03-16 - 글로벌 이슈 뉴스
 
 ## 핵심 요약
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">15건</div><div class="stat-label">예측 시장 (Polymarket)</div></div><div class="stat-item"><div class="stat-value">2건</div><div class="stat-label">뉴스 기사</div></div><div class="stat-item"><div class="stat-value">0건</div><div class="stat-label">GDELT 글로벌 분석</div></div></div>
+<div class="stat-grid">
+<div class="stat-item"><div class="stat-value">15건</div><div class="stat-label">예측 시장 (Polymarket)</div></div>
+<div class="stat-item"><div class="stat-value">2건</div><div class="stat-label">뉴스 기사</div></div>
+<div class="stat-item"><div class="stat-value">0건</div><div class="stat-label">GDELT 글로벌 분석</div></div>
+</div>
 
 <div class="alert-box alert-warning"><strong>지정학 리스크 레벨: 주의</strong> — 2026-03-16 기준 2개 소스에서 수집된 지정학적 리스크 데이터를 종합합니다. 예측 시장 15건, 뉴스 기사 2건이 수집되었으며, 주요 테마는 기타입니다.</div>
 

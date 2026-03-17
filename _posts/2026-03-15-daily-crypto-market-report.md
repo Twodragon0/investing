@@ -22,9 +22,20 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-03-15 | HYPE +3.5% - 시
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">$70,957</div><div class="stat-label">BTC (+0.2%)</div></div><div class="stat-item"><div class="stat-value">15</div><div class="stat-label">공포/탐욕 (Extreme Fear)</div></div><div class="stat-item"><div class="stat-value">$2.50T</div><div class="stat-label">총 시가총액</div></div><div class="stat-item"><div class="stat-value">56.9%</div><div class="stat-label">BTC 도미넌스</div></div></div>
+<div class="stat-grid">
+<div class="stat-item"><div class="stat-value">$70,957</div><div class="stat-label">BTC (+0.2%)</div></div>
+<div class="stat-item"><div class="stat-value">15</div><div class="stat-label">공포/탐욕 (Extreme Fear)</div></div>
+<div class="stat-item"><div class="stat-value">$2.50T</div><div class="stat-label">총 시가총액</div></div>
+<div class="stat-item"><div class="stat-value">56.9%</div><div class="stat-label">BTC 도미넌스</div></div>
+</div>
 
-<div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Hyperliquid</strong> (HYPE): +3.49%</li><li>🔴 <strong>Monero</strong> (XMR): -2.22%</li><li>🟢 <strong>TRON</strong> (TRX): +1.48%</li></ul></div>
+<div class="alert-box alert-info"><strong>24시간 주요 변동</strong>
+<ul>
+<li>🟢 <strong>Hyperliquid</strong> (HYPE): +3.49%</li>
+<li>🔴 <strong>Monero</strong> (XMR): -2.22%</li>
+<li>🟢 <strong>TRON</strong> (TRX): +1.48%</li>
+</ul>
+</div>
 
 
 ## 전체 뉴스 요약

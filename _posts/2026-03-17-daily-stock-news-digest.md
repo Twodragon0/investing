@@ -24,9 +24,26 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-17 - stock-news 뉴스 요약 
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">166</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 45</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">5,549.85</div><div class="stat-label">KOSPI +1.14%</div></div><div class="stat-item"><div class="stat-value">1,138.29</div><div class="stat-label">KOSDAQ -1.27%</div></div></div>
-<div class="alert-box alert-info"><strong>주식 시장 긴급: President, History, Reason - 166건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (45건): 삼성전자, 하이닉스, 상승 관련 45건의 소식이 확인되었습니다.</li><li>📊 <strong>매크로/금리</strong> (12건): 환율, 한은, 셈법 이슈로 12건의 보도가 이어지고 있습니다.</li><li>🤖 <strong>AI/기술</strong> (16건): 반도체, 하이닉스, 삼전 이슈로 16건의 보도가 이어지고 있습니다.</li><li>🏛️ <strong>정치/정책</strong> (15건): 15건의 기사에서 대통령, 속보 키워드가 부각되고 있습니다.</li></ul></div>
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNa2RDTVU0TEJXX3BBVE1uczNGaDN3OTR0VFRIX1lQX0ZTMDFIZC1DdXRnei0zNXJ4MGsxT2ZnSzJKYUZKZklKMWg4cDlCOTVPQ2FRTFBfZXVueWVscXFORXA4U1B2d3RuamFvUTR0allPQk0xSkpBdjhyQlVYcFJNZWpOOG8zY0tYRXlySnEyVGV4T1RoUEFQTw?oc=5">Will the Stock Market Crash Under President Trump in 2026? History Says Investors Have Reason to Worry. - The Motley Fool</a> <span class="p0-desc">Will the Stock Market Crash Under President Trump in 2026? History Says Investors Have Reason to Wor.</span></li></ul></div>
+<div class="stat-grid">
+<div class="stat-item"><div class="stat-value">166</div><div class="stat-label">수집 건수</div></div>
+<div class="stat-item"><div class="stat-value">📈 45</div><div class="stat-label">가격/시장</div></div>
+<div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div>
+<div class="stat-item"><div class="stat-value">5,549.85</div><div class="stat-label">KOSPI +1.14%</div></div>
+<div class="stat-item"><div class="stat-value">1,138.29</div><div class="stat-label">KOSDAQ -1.27%</div></div>
+</div>
+<div class="alert-box alert-info"><strong>주식 시장 긴급: President, History, Reason - 166건 분석</strong>
+<ul>
+<li>📈 <strong>가격/시장</strong> (45건): 삼성전자, 하이닉스, 상승 관련 45건의 소식이 확인되었습니다.</li>
+<li>📊 <strong>매크로/금리</strong> (12건): 환율, 한은, 셈법 이슈로 12건의 보도가 이어지고 있습니다.</li>
+<li>🤖 <strong>AI/기술</strong> (16건): 반도체, 하이닉스, 삼전 이슈로 16건의 보도가 이어지고 있습니다.</li>
+<li>🏛️ <strong>정치/정책</strong> (15건): 15건의 기사에서 대통령, 속보 키워드가 부각되고 있습니다.</li>
+</ul>
+</div>
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNa2RDTVU0TEJXX3BBVE1uczNGaDN3OTR0VFRIX1lQX0ZTMDFIZC1DdXRnei0zNXJ4MGsxT2ZnSzJKYUZKZklKMWg4cDlCOTVPQ2FRTFBfZXVueWVscXFORXA4U1B2d3RuamFvUTR0allPQk0xSkpBdjhyQlVYcFJNZWpOOG8zY0tYRXlySnEyVGV4T1RoUEFQTw?oc=5">Will the Stock Market Crash Under President Trump in 2026? History Says Investors Have Reason to Worry. - The Motley Fool</a> <span class="p0-desc">Will the Stock Market Crash Under President Trump in 2026? History Says Investors Have Reason to Wor.</span></li>
+</ul>
+</div>
 
 ## 전체 뉴스 요약
 

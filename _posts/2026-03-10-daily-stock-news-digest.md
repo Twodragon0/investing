@@ -15,9 +15,28 @@ description: "2026-03-10 주식 시장에서 234건의 뉴스를 분석했습니
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">234</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 82</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">리스크 위험</div></div><div class="stat-item"><div class="stat-value">5,526.01</div><div class="stat-label">KOSPI +5.66%</div></div><div class="stat-item"><div class="stat-value">1,142.15</div><div class="stat-label">KOSDAQ +4.03%</div></div></div>
-<div class="alert-box alert-info"><strong>주식 시장 긴급: crashing, Nasdaq, silver - 234건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (82건): 코스닥, 코스피, 서킷브레이커 이슈가 82건으로 주목받고 있습니다.</li><li>📊 <strong>매크로/금리</strong> (21건): 환율, 한은, 조치 중심으로 21건의 뉴스가 수집되었습니다.</li><li>🏛️ <strong>정치/정책</strong> (26건): 26건의 뉴스에서 Trump, Iran, oil 키워드가 부각되고 있습니다.</li><li>🤖 <strong>AI/기술</strong> (9건): 반도체, 삼성전자, 하이닉스 중심으로 9건의 뉴스가 수집되었습니다.</li></ul></div>
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiqAJBVV95cUxON19ES2lGWk1yN0pLUGVSUW91MjFrTmpYcE9xb2k3VEQ5S0piSVJKbTdvWFo4SGN3aG9QRzQ4RkZiNFpUeHhabjRjSmVEVWQ5eTJSUjVsWkc3c2VIRDJVQ2F0cnpxMjFzY09oVkc2c1dTX21OQlJPZVNjSE5VR3ZVS0oydDFnZDU3UnRzdllBeWc1bFFNaF9XQnM3cEdlaTJhVDJvX2k4b1FERUhlLTRVdnRNYTQ2Y2x0NHVpbDFnUlRpUzZtWDUyc2NnSWowU0ZmNjhOUVQwNlFPaVpHWEhXS2w1WmpLdWhEb2xVSkdMLXNCajlMeTI3eTFVb3R2WjZjdHltRmdLejNTLTBWQ0tZbXlnTjdYd29aVno1M213b1VwdlE5MXJvb9IBrgJBVV95cUxQRVpJcHI3LUQtQnd0TU1TaU9fTE5zRU1DY2hQTVBjaEF5Mk5JbXZqLXZzeHJFWnkzMVR1cnM2UXJEYmlOWHZDY1I0ZkFoWV9lQUowY3JnX3A5b0kzZmRtVjRqZURMS1ZTTjAxRWE5X3RjLTVwRTktVWRzSHdjVmVIYndpUnd2TnhNbE1IMENfQ0hCT0VNMWlFMzdwT3BocjNnbVlfUDVsOTNKdFRaX2YxbWZpeU9GVmlEWC03NzFkcHVob3ZoYzhvMUdkbkhvaENSM3RkUDVvcVZPYVRzb19YNVpQazJtbkpIUE9ITjk5WlpESzdqVUNweHRfUUJROEZ0VnBuNHlrVHlhdFUxeVI4Rmp1UzFwVzY1Y1ZiTEZsUUlxd1pTYl9IZV96THBGUQ?hl=en-US&gl=US&ceid=US%3Aen">Why is US stock market crashing again today? Dow, S&P 500 and Nasdaq in deep red as oil and silver surge w</a> — Why is US stock market crashing again today? Dow, S&amp;P 500 and Nasdaq in deep...</li><li><a href="https://news.google.com/read/CBMiVkFVX3lxTE4tV2RTVWtSODhTSFVhb0ZBUFVhR2M4T3N2QjBiR0xkNklWQnFJaUhfbEdzQ1lnOHFKUVIzcGFmNF9meDBQQ0xlaXhEeml1dEVWUEY4aVJR?hl=ko&gl=KR&ceid=KR%3Ako">[속보] 코스피·코스닥 서킷브레이커 발동…20분간 거래 중단</a> — 급격한 하락으로 매매거래가 일시 중단되었습니다. 투자 심리 위축과 추가 하방 리스크에 유의해야 합니다.</li><li><a href="https://news.google.com/read/CBMiVkFVX3lxTFBqT2tyQ2FCSGVWMDc1bl9YSy1odWdSQmNVLS1qbzAtZTBuUDFQejVtakh1LWNIdmc2OXp4R1FreEx5TC02SWJPZGVBQVhSMnJBaG5KMmlR?hl=ko&gl=KR&ceid=KR%3Ako">[속보] '패닉셀' 코스피·코스닥 8%대 폭락…동반 서킷브레이커</a> — 급격한 하락으로 매매거래가 일시 중단되었습니다. 투자 심리 위축과 추가 하방 리스크에 유의해야 합니다.</li></ul></div>
+<div class="stat-grid">
+<div class="stat-item"><div class="stat-value">234</div><div class="stat-label">수집 건수</div></div>
+<div class="stat-item"><div class="stat-value">📈 82</div><div class="stat-label">가격/시장</div></div>
+<div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">리스크 위험</div></div>
+<div class="stat-item"><div class="stat-value">5,526.01</div><div class="stat-label">KOSPI +5.66%</div></div>
+<div class="stat-item"><div class="stat-value">1,142.15</div><div class="stat-label">KOSDAQ +4.03%</div></div>
+</div>
+<div class="alert-box alert-info"><strong>주식 시장 긴급: crashing, Nasdaq, silver - 234건 분석</strong>
+<ul>
+<li>📈 <strong>가격/시장</strong> (82건): 코스닥, 코스피, 서킷브레이커 이슈가 82건으로 주목받고 있습니다.</li>
+<li>📊 <strong>매크로/금리</strong> (21건): 환율, 한은, 조치 중심으로 21건의 뉴스가 수집되었습니다.</li>
+<li>🏛️ <strong>정치/정책</strong> (26건): 26건의 뉴스에서 Trump, Iran, oil 키워드가 부각되고 있습니다.</li>
+<li>🤖 <strong>AI/기술</strong> (9건): 반도체, 삼성전자, 하이닉스 중심으로 9건의 뉴스가 수집되었습니다.</li>
+</ul>
+</div>
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong>
+<ul>
+<li><a href="https://news.google.com/read/CBMiqAJBVV95cUxON19ES2lGWk1yN0pLUGVSUW91MjFrTmpYcE9xb2k3VEQ5S0piSVJKbTdvWFo4SGN3aG9QRzQ4RkZiNFpUeHhabjRjSmVEVWQ5eTJSUjVsWkc3c2VIRDJVQ2F0cnpxMjFzY09oVkc2c1dTX21OQlJPZVNjSE5VR3ZVS0oydDFnZDU3UnRzdllBeWc1bFFNaF9XQnM3cEdlaTJhVDJvX2k4b1FERUhlLTRVdnRNYTQ2Y2x0NHVpbDFnUlRpUzZtWDUyc2NnSWowU0ZmNjhOUVQwNlFPaVpHWEhXS2w1WmpLdWhEb2xVSkdMLXNCajlMeTI3eTFVb3R2WjZjdHltRmdLejNTLTBWQ0tZbXlnTjdYd29aVno1M213b1VwdlE5MXJvb9IBrgJBVV95cUxQRVpJcHI3LUQtQnd0TU1TaU9fTE5zRU1DY2hQTVBjaEF5Mk5JbXZqLXZzeHJFWnkzMVR1cnM2UXJEYmlOWHZDY1I0ZkFoWV9lQUowY3JnX3A5b0kzZmRtVjRqZURMS1ZTTjAxRWE5X3RjLTVwRTktVWRzSHdjVmVIYndpUnd2TnhNbE1IMENfQ0hCT0VNMWlFMzdwT3BocjNnbVlfUDVsOTNKdFRaX2YxbWZpeU9GVmlEWC03NzFkcHVob3ZoYzhvMUdkbkhvaENSM3RkUDVvcVZPYVRzb19YNVpQazJtbkpIUE9ITjk5WlpESzdqVUNweHRfUUJROEZ0VnBuNHlrVHlhdFUxeVI4Rmp1UzFwVzY1Y1ZiTEZsUUlxd1pTYl9IZV96THBGUQ?hl=en-US&gl=US&ceid=US%3Aen">Why is US stock market crashing again today? Dow, S&P 500 and Nasdaq in deep red as oil and silver surge w</a> — Why is US stock market crashing again today? Dow, S&amp;P 500 and Nasdaq in deep...</li>
+<li><a href="https://news.google.com/read/CBMiVkFVX3lxTE4tV2RTVWtSODhTSFVhb0ZBUFVhR2M4T3N2QjBiR0xkNklWQnFJaUhfbEdzQ1lnOHFKUVIzcGFmNF9meDBQQ0xlaXhEeml1dEVWUEY4aVJR?hl=ko&gl=KR&ceid=KR%3Ako">[속보] 코스피·코스닥 서킷브레이커 발동…20분간 거래 중단</a> — 급격한 하락으로 매매거래가 일시 중단되었습니다. 투자 심리 위축과 추가 하방 리스크에 유의해야 합니다.</li>
+<li><a href="https://news.google.com/read/CBMiVkFVX3lxTFBqT2tyQ2FCSGVWMDc1bl9YSy1odWdSQmNVLS1qbzAtZTBuUDFQejVtakh1LWNIdmc2OXp4R1FreEx5TC02SWJPZGVBQVhSMnJBaG5KMmlR?hl=ko&gl=KR&ceid=KR%3Ako">[속보] '패닉셀' 코스피·코스닥 8%대 폭락…동반 서킷브레이커</a> — 급격한 하락으로 매매거래가 일시 중단되었습니다. 투자 심리 위축과 추가 하방 리스크에 유의해야 합니다.</li>
+</ul>
+</div>
 
 
 ## 전체 뉴스 요약

@@ -22,8 +22,20 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-03-14 - regulatory-news 뉴
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">31</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 17</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">27</div><div class="stat-label">한국</div></div></div>
-<div class="alert-box alert-info"><strong>글로벌 규제: 논의, 금감원장, 가상자산 관련 31건 수집</strong><ul><li>🔵 <strong>규제/정책</strong> (17건): 논의, 금감원장, 가상자산 이슈가 17건으로 주목받고 있습니다.</li><li>🏛️ <strong>정치/정책</strong> (2건): 2건의 뉴스에서 생산적, 통신사기피해환급법, 가상자산을 키워드가 부각되고 있습니다.</li><li>🟣 <strong>DeFi</strong> (2건): 금융위원회가 중심으로 2건의 뉴스가 수집되었습니다.</li><li>🏦 <strong>거래소</strong> (4건): 통신사기피해환급법, 선정하였습니다 이슈가 4건으로 주목받고 있습니다.</li></ul></div>
+<div class="stat-grid">
+<div class="stat-item"><div class="stat-value">31</div><div class="stat-label">수집 건수</div></div>
+<div class="stat-item"><div class="stat-value">🔵 17</div><div class="stat-label">규제/정책</div></div>
+<div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div>
+<div class="stat-item"><div class="stat-value">27</div><div class="stat-label">한국</div></div>
+</div>
+<div class="alert-box alert-info"><strong>글로벌 규제: 논의, 금감원장, 가상자산 관련 31건 수집</strong>
+<ul>
+<li>🔵 <strong>규제/정책</strong> (17건): 논의, 금감원장, 가상자산 이슈가 17건으로 주목받고 있습니다.</li>
+<li>🏛️ <strong>정치/정책</strong> (2건): 2건의 뉴스에서 생산적, 통신사기피해환급법, 가상자산을 키워드가 부각되고 있습니다.</li>
+<li>🟣 <strong>DeFi</strong> (2건): 금융위원회가 중심으로 2건의 뉴스가 수집되었습니다.</li>
+<li>🏦 <strong>거래소</strong> (4건): 통신사기피해환급법, 선정하였습니다 이슈가 4건으로 주목받고 있습니다.</li>
+</ul>
+</div>
 ## 핵심 요약
 
 - **총 수집 건수**: 31건

@@ -20,9 +20,20 @@ description: "오늘 시가총액 상위 30개 코인을 기준으로 시장을 
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">$70,384</div><div class="stat-label">BTC (+5.7%)</div></div><div class="stat-item"><div class="stat-value">13</div><div class="stat-label">공포/탐욕 (Extreme Fear)</div></div><div class="stat-item"><div class="stat-value">$2.46T</div><div class="stat-label">총 시가총액</div></div><div class="stat-item"><div class="stat-value">56.9%</div><div class="stat-label">BTC 도미넌스</div></div></div>
+<div class="stat-grid">
+<div class="stat-item"><div class="stat-value">$70,384</div><div class="stat-label">BTC (+5.7%)</div></div>
+<div class="stat-item"><div class="stat-value">13</div><div class="stat-label">공포/탐욕 (Extreme Fear)</div></div>
+<div class="stat-item"><div class="stat-value">$2.46T</div><div class="stat-label">총 시가총액</div></div>
+<div class="stat-item"><div class="stat-value">56.9%</div><div class="stat-label">BTC 도미넌스</div></div>
+</div>
 
-<div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Hyperliquid</strong> (HYPE): +11.52%</li><li>🟢 <strong>Bitcoin</strong> (BTC): +5.75%</li><li>🟢 <strong>Chainlink</strong> (LINK): +5.05%</li></ul></div>
+<div class="alert-box alert-info"><strong>24시간 주요 변동</strong>
+<ul>
+<li>🟢 <strong>Hyperliquid</strong> (HYPE): +11.52%</li>
+<li>🟢 <strong>Bitcoin</strong> (BTC): +5.75%</li>
+<li>🟢 <strong>Chainlink</strong> (LINK): +5.05%</li>
+</ul>
+</div>
 
 
 ## 전체 뉴스 요약

@@ -1577,15 +1577,15 @@ class ThemeSummarizer:
 
             kw_str = ", ".join(display_kw)
 
-            # Use varied templates to avoid repetitive phrasing
+            # Use analytical templates that provide context, not just counts
             templates = [
-                f"{kw_str} 중심으로 {count}건의 뉴스가 수집되었습니다.",
-                f"{count}건의 뉴스에서 {kw_str} 관련 동향이 포착되었습니다.",
-                f"{kw_str} 관련 {count}건의 소식이 확인되었습니다.",
-                f"{kw_str} 흐름에 {count}건의 뉴스가 집중되고 있습니다.",
-                f"{count}건의 기사에서 {kw_str} 키워드가 부각되고 있습니다.",
-                f"{kw_str} 이슈로 {count}건의 보도가 이어지고 있습니다.",
-                f"{kw_str} 테마에서 {count}건의 뉴스가 감지되었습니다.",
+                f"{kw_str} 관련 뉴스가 {count}건으로, 시장 참여자들의 관심이 집중되고 있습니다.",
+                f"{kw_str} 이슈가 {count}건 보도되며 해당 섹터의 단기 변동성 확대 가능성이 있습니다.",
+                f"{kw_str} 관련 {count}건의 보도가 이어지고 있어 관련 포지션 점검이 필요합니다.",
+                f"{kw_str} 중심으로 {count}건의 뉴스가 쏟아지며 투자 심리에 영향을 미치고 있습니다.",
+                f"{count}건의 보도에서 {kw_str} 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다.",
+                f"{kw_str} 이슈가 {count}건 감지되었습니다. 관련 지표와 수급 흐름을 함께 확인하세요.",
+                f"{kw_str} 테마가 {count}건으로 부각되고 있어, 섹터 로테이션 가능성을 점검하세요.",
             ]
             import datetime as _dt
 
@@ -1849,13 +1849,14 @@ class ThemeSummarizer:
 
         # Theme breakdown with keyword-based briefings
         if top_themes:
-            for i, (name, key, emoji, count) in enumerate(top_themes[:3], 1):
+            lines.append("### 테마별 동향\n")
+            for name, key, emoji, count in top_themes[:3]:
                 articles = self._theme_articles.get(key, [])
                 snippet = self._generate_single_theme_briefing(key, articles)
                 if snippet:
-                    lines.append(f"{i}. **{emoji} {name}** ({count}건): {snippet}")
+                    lines.append(f"- **{emoji} {name}** ({count}건): {snippet}")
                 else:
-                    lines.append(f"{i}. **{emoji} {name}** ({count}건)")
+                    lines.append(f"- **{emoji} {name}**: {count}건 수집")
             lines.append("")
 
         # Risk assessment
@@ -1863,52 +1864,63 @@ class ThemeSummarizer:
         if risk_level != "low":
             risk_desc = RISK_LEVELS.get(risk_level, "")
             if risk_desc:
-                lines.append(f"**리스크 수준 [{risk_level.upper()}]**: {risk_desc}")
+                lines.append(f"**리스크 수준 [{risk_level.upper()}]**: {risk_desc}\n")
 
-        # Priority signal with specific titles instead of just counts
+        # Priority signal with specific titles
         p0_items = priority_items.get("P0", [])
         p1_items = priority_items.get("P1", [])
         if p0_items:
-            p0_titles = [
-                (item.get("title_ko") or item.get("title_translated") or item.get("title", ""))[:60]
-                for item in p0_items[:3]
-            ]
-            lines.append(f"**P0 긴급**: {' / '.join(t for t in p0_titles if t)}")
-        if p1_items and len(p1_items) <= 5:
-            p1_titles = [
-                (item.get("title_ko") or item.get("title_translated") or item.get("title", ""))[:50]
-                for item in p1_items[:3]
-            ]
-            lines.append(f"**P1 주요**: {' / '.join(t for t in p1_titles if t)}")
-        elif p1_items:
-            lines.append(f"**P1 주요**: {len(p1_items)}건 확인")
+            lines.append("### 긴급 이슈\n")
+            for item in p0_items[:3]:
+                p0_title = (
+                    item.get("title_ko") or item.get("title_translated") or item.get("title", "")
+                )[:80]
+                if p0_title:
+                    lines.append(f"- {p0_title}")
+            lines.append("")
+        if p1_items:
+            lines.append("### 주요 이슈\n")
+            for item in p1_items[:3]:
+                p1_title = (
+                    item.get("title_ko") or item.get("title_translated") or item.get("title", "")
+                )[:80]
+                if p1_title:
+                    lines.append(f"- {p1_title}")
+            if len(p1_items) > 3:
+                lines.append(f"- 외 {len(p1_items) - 3}건")
+            lines.append("")
 
-        # Top keywords
+        # Investor checkpoint
+        checkpoints = []
         top_keywords = extra.get("top_keywords") or []
         if top_keywords:
-            kw_str = ", ".join(f"**{kw}**" for kw, _ in top_keywords[:5])
-            lines.append(f"**핵심 키워드**: {kw_str}")
+            kw_names = [kw for kw, _ in top_keywords[:3]]
+            checkpoints.append(f"**핫 키워드**: {', '.join(kw_names)}")
 
-        # Additional context
         region_counts = extra.get("region_counts")
         if region_counts:
             regions_str = ", ".join(f"{name} {count}건" for name, count in region_counts.most_common(3))
             if regions_str:
-                lines.append(f"**주요 지역**: {regions_str}")
+                checkpoints.append(f"**주요 지역**: {regions_str}")
 
         source_counter = extra.get("source_counter")
         if source_counter:
             top_sources = source_counter.most_common(3)
             if top_sources:
                 src_str = ", ".join(f"{name}({count}건)" for name, count in top_sources)
-                lines.append(f"**주요 출처**: {src_str}")
+                checkpoints.append(f"**주요 출처**: {src_str}")
 
         summary_points = extra.get("summary_points") or []
         for point in summary_points[:2]:
             if point:
-                lines.append(f"- {point}")
+                checkpoints.append(point)
 
-        lines.append("")
+        if checkpoints:
+            lines.append("### 투자자 체크포인트\n")
+            for cp in checkpoints:
+                lines.append(f"- {cp}")
+            lines.append("")
+
         return "\n".join(lines)
 
     def _build_executive_opener(
@@ -2047,7 +2059,8 @@ class ThemeSummarizer:
                     f'<div class="stat-label">{top_r[0]}</div></div>'
                 )
 
-        lines.append(f'<div class="stat-grid">{"".join(stat_items)}</div>')
+        stat_html = "\n".join(stat_items)
+        lines.append(f'<div class="stat-grid">\n{stat_html}\n</div>')
 
         # Theme briefings — use keyword-extracted briefings
         briefing_items = []
@@ -2067,8 +2080,9 @@ class ThemeSummarizer:
                 briefing_items.append(f"<li>{emoji} <strong>{name}</strong>: {count}건 수집</li>")
 
         if briefing_items:
+            items_html = "\n".join(briefing_items)
             lines.append(
-                f'<div class="alert-box alert-info"><strong>{opener}</strong><ul>{"".join(briefing_items)}</ul></div>'
+                f'<div class="alert-box alert-info">\n<strong>{opener}</strong>\n<ul>\n{items_html}\n</ul>\n</div>'
             )
 
         # P0 urgent alerts as red callout
@@ -2088,10 +2102,11 @@ class ThemeSummarizer:
                 else:
                     p0_html_items.append(f"<li>{p0_title}{desc_part}</li>")
             if p0_html_items:
+                p0_html = "\n".join(p0_html_items)
                 lines.append(
-                    f'<div class="alert-box alert-urgent">'
-                    f"<strong>긴급 알림</strong>"
-                    f"<ul>{''.join(p0_html_items)}</ul></div>"
+                    f'<div class="alert-box alert-urgent">\n'
+                    f"<strong>긴급 알림</strong>\n"
+                    f"<ul>\n{p0_html}\n</ul>\n</div>"
                 )
 
         return "\n".join(lines)

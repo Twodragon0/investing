@@ -17,9 +17,20 @@ image_alt: "3월 16일 암호화폐 시장 히트맵과 주요 코인 강약을 
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">$71,369</div><div class="stat-label">BTC (+1.0%)</div></div><div class="stat-item"><div class="stat-value">15</div><div class="stat-label">공포/탐욕 (Extreme Fear)</div></div><div class="stat-item"><div class="stat-value">$2.51T</div><div class="stat-label">총 시가총액</div></div><div class="stat-item"><div class="stat-value">56.9%</div><div class="stat-label">BTC 도미넌스</div></div></div>
+<div class="stat-grid">
+<div class="stat-item"><div class="stat-value">$71,369</div><div class="stat-label">BTC (+1.0%)</div></div>
+<div class="stat-item"><div class="stat-value">15</div><div class="stat-label">공포/탐욕 (Extreme Fear)</div></div>
+<div class="stat-item"><div class="stat-value">$2.51T</div><div class="stat-label">총 시가총액</div></div>
+<div class="stat-item"><div class="stat-value">56.9%</div><div class="stat-label">BTC 도미넌스</div></div>
+</div>
 
-<div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Hyperliquid</strong> (HYPE): -2.53%</li><li>🟢 <strong>XRP</strong> (XRP): +1.43%</li><li>🟢 <strong>Chainlink</strong> (LINK): +1.38%</li></ul></div>
+<div class="alert-box alert-info"><strong>24시간 주요 변동</strong>
+<ul>
+<li>🔴 <strong>Hyperliquid</strong> (HYPE): -2.53%</li>
+<li>🟢 <strong>XRP</strong> (XRP): +1.43%</li>
+<li>🟢 <strong>Chainlink</strong> (LINK): +1.38%</li>
+</ul>
+</div>
 
 
 ## 전체 뉴스 요약
