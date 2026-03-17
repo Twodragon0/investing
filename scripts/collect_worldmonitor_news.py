@@ -23,7 +23,6 @@ from common.markdown_utils import (
     html_source_tag,
     html_text,
     markdown_link,
-    markdown_table,
 )
 from common.post_generator import PostGenerator, build_dated_permalink
 from common.rss_fetcher import fetch_rss_feeds_concurrent
@@ -783,30 +782,60 @@ def main() -> None:
         ]
     )
     content_parts.extend(theme_rows)
+    # 주요 이슈 - HTML 카드 형태
+    impact_colors = {"높음": "#f85149", "중간": "#d29922", "낮음": "#8b949e"}
+    issue_cards = []
+    for row in rows:
+        idx, title_md, theme, impact, source = row
+        impact_color = impact_colors.get(impact, "#8b949e")
+        issue_cards.append(
+            f'<div class="wm-issue-card">'
+            f'<div class="wm-issue-num">{idx}</div>'
+            f'<div class="wm-issue-body">'
+            f'<div class="wm-issue-title">{title_md}</div>'
+            f'<div class="wm-issue-meta">'
+            f'<span class="wm-issue-theme">{html_text(theme)}</span>'
+            f'<span class="wm-issue-impact" style="color:{impact_color};">{html_text(impact)}</span>'
+            f'<span class="wm-issue-source">{html_text(source)}</span>'
+            f'</div>'
+            f'</div>'
+            f'</div>'
+        )
     content_parts.extend(
         [
             "</div>",
             "",
             "## 주요 이슈",
             "",
-            markdown_table(
-                ["순번", "주요 이슈", "테마", "중요도", "출처"],
-                rows,
-                aligns=["center", "left", "center", "center", "left"],
-            ),
+            '<div class="wm-issue-list">',
+            *issue_cards,
+            '</div>',
         ]
     )
 
+    # 출처 커버리지 - 프로그레스 바 포함 HTML 카드
+    source_cards = []
+    for name, count_str, ratio_str in source_rows:
+        ratio_num = int(ratio_str.replace("%", ""))
+        bar_color = "#58a6ff" if ratio_num >= 50 else "#22d3ee"
+        source_cards.append(
+            f'<div class="wm-source-row">'
+            f'<span class="wm-source-name">{html_text(name)}</span>'
+            f'<span class="wm-source-count">{html_text(count_str)}</span>'
+            f'<div class="wm-source-bar-track">'
+            f'<div class="wm-source-bar-fill" style="width:{ratio_num}%;background:{bar_color};"></div>'
+            f'</div>'
+            f'<span class="wm-source-ratio">{html_text(ratio_str)}</span>'
+            f'</div>'
+        )
     content_parts.extend(
         [
             "",
             "## 출처 커버리지",
             "",
-            markdown_table(
-                ["출처", "건수", "비중"],
-                source_rows,
-                aligns=["left", "right", "right"],
-            ),
+            '<div class="wm-source-coverage">',
+            *source_cards,
+            '</div>',
         ]
     )
 

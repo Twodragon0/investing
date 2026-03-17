@@ -6,6 +6,7 @@ categories: [crypto-trading-journal]
 tags: [trading, crypto, journal, BTC, ETH, risk-management]
 source: "manual"
 lang: "ko"
+journal_mode: "paper"
 journal_pair: "BTC/ETH"
 journal_trade_count_value: 4
 journal_win_rate_value: 75

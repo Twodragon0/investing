@@ -19,6 +19,36 @@ from .markdown_utils import html_source_tag, markdown_link
 logger = logging.getLogger(__name__)
 
 
+_SEVERITY_HIGH_KW = [
+    "crash", "surge", "record", "halt", "warn", "폭락", "급등", "급락",
+    "사상최", "최고치", "최저치", "긴급", "속보", "전쟁", "war", "bomb",
+    "attack", "sanction", "ban", "default", "bankruptcy", "파산",
+    "fraud", "sec ", "fda ", "fed ", "fomc", "금리", "인상", "인하",
+    "breaking", "crisis", "위기",
+]
+_SEVERITY_LOW_KW = [
+    "opinion", "column", "editorial", "인터뷰", "리뷰", "review",
+    "guide", "가이드", "tip", "팁", "예정", "계획",
+]
+
+
+def _classify_news_severity(title: str, description: str = "") -> str:
+    """Classify news severity as high/medium/low based on keywords."""
+    text = (title + " " + description).lower()
+    if any(kw in text for kw in _SEVERITY_HIGH_KW):
+        return "high"
+    if any(kw in text for kw in _SEVERITY_LOW_KW):
+        return "low"
+    return "medium"
+
+
+_SEV_BADGE_HTML = {
+    "high": '<span class="news-severity news-severity-high">HIGH</span>',
+    "medium": '<span class="news-severity news-severity-med">MED</span>',
+    "low": '<span class="news-severity news-severity-low">LOW</span>',
+}
+
+
 def _truncate_sentence(text: str, max_len: int = 300) -> str:
     """Truncate text at the nearest sentence boundary within max_len.
 
@@ -1030,8 +1060,12 @@ class ThemeSummarizer:
                     from html import escape as _esc
 
                     safe_title = _esc(title, quote=True)
+                    severity = _classify_news_severity(
+                        title, description or ""
+                    )
+                    sev_badge = _SEV_BADGE_HTML[severity]
                     card_parts = [
-                        '<div class="news-card-item">',
+                        f'<div class="news-card-item news-sev-{severity}">',
                         f'<div class="news-card-num">{num}</div>',
                     ]
 
@@ -1048,6 +1082,7 @@ class ThemeSummarizer:
                         )
 
                     card_parts.append('<div class="news-card-body">')
+                    card_parts.append(sev_badge)
                     if link:
                         safe_link = _esc(link, quote=True)
                         card_parts.append(

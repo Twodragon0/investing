@@ -541,6 +541,28 @@
     border: 1px solid rgba($border-color, 0.28);
   }
 
+  .journal-mode-badge {
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+  }
+
+  .journal-mode-live {
+    color: #fff;
+    background: linear-gradient(135deg, #16a34a, #15803d);
+    border: 1px solid rgba(22, 163, 74, 0.5);
+    box-shadow: 0 0 8px rgba(22, 163, 74, 0.3);
+  }
+
+  .journal-mode-paper {
+    color: #fff;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    border: 1px solid rgba(37, 99, 235, 0.5);
+    box-shadow: 0 0 8px rgba(37, 99, 235, 0.3);
+  }
+
   .trading-journal-summary-lead {
     display: grid;
     gap: 0.5rem;
@@ -917,6 +939,69 @@
       &.scrolled-end .scroll-hint {
         opacity: 0;
       }
+
+      .table-scroll-btn {
+        display: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 1px solid rgba($border-color, 0.4);
+        background: rgba($bg-primary, 0.92);
+        color: $text-primary;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        transition: opacity 0.2s ease, background 0.2s ease;
+        opacity: 0;
+        padding: 0;
+
+        svg {
+          display: block;
+          margin: auto;
+        }
+
+        &:hover {
+          background: rgba($accent-blue, 0.18);
+          border-color: rgba($accent-blue, 0.5);
+        }
+      }
+
+      .table-scroll-btn-left {
+        left: 6px;
+      }
+
+      .table-scroll-btn-right {
+        right: 6px;
+      }
+
+      &.is-scrollable .table-scroll-btn {
+        display: flex;
+      }
+
+      &.is-scrollable:hover .table-scroll-btn {
+        opacity: 1;
+      }
+
+      &.is-scrollable.scrolled-start .table-scroll-btn-left {
+        opacity: 0 !important;
+        pointer-events: none;
+      }
+
+      &.is-scrollable.scrolled-end .table-scroll-btn-right {
+        opacity: 0 !important;
+        pointer-events: none;
+      }
+
+      @media (max-width: 768px) {
+        .table-scroll-btn {
+          display: none !important;
+        }
+      }
     }
 
     img {
@@ -1096,6 +1181,15 @@
         background: rgba($accent-orange, 0.06);
         strong, .alert-title { color: $accent-orange; }
       }
+
+      .p0-desc {
+        display: block;
+        margin-top: 0.3rem;
+        font-size: 0.85rem;
+        color: $text-secondary;
+        font-style: normal;
+        line-height: 1.5;
+      }
     }
 
     // Theme distribution bars
@@ -1174,6 +1268,89 @@
         color: $text-secondary;
         margin-top: 0.2rem;
       }
+    }
+
+    // FMP news cards (earnings / IPO)
+    .fmp-news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin: 1rem 0;
+    }
+
+    .fmp-news-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.85rem 1rem;
+      background: rgba($bg-secondary, 0.35);
+      border: 1px solid rgba($border-color, 0.25);
+      border-radius: 10px;
+      transition: border-color 0.2s ease, background 0.2s ease;
+
+      &:hover {
+        border-color: rgba($accent-blue, 0.4);
+        background: rgba($bg-secondary, 0.55);
+      }
+    }
+
+    .fmp-news-severity {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 42px;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 0.04em;
+      margin-top: 2px;
+    }
+
+    .fmp-news-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .fmp-news-title {
+      display: block;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: $text-primary;
+      line-height: 1.45;
+      text-decoration: none;
+      word-break: keep-all;
+
+      &:hover {
+        color: $accent-blue;
+        text-decoration: underline;
+      }
+    }
+
+    a.fmp-news-title::after {
+      content: ' ↗';
+      font-size: 0.75rem;
+      color: $text-secondary;
+    }
+
+    .fmp-news-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.35rem;
+      font-size: 0.78rem;
+      color: $text-secondary;
+    }
+
+    .fmp-news-source {
+      font-weight: 600;
+      color: rgba($accent-blue, 0.85);
+    }
+
+    .fmp-news-date {
+      font-variant-numeric: tabular-nums;
     }
 
     // Source tags
@@ -1298,19 +1475,56 @@
         }
       }
 
+      .news-severity {
+        display: inline-block;
+        padding: 0.15rem 0.45rem;
+        border-radius: 4px;
+        font-size: 0.65rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        color: #fff;
+        margin-bottom: 0.3rem;
+        vertical-align: middle;
+      }
+
+      .news-severity-high {
+        background: #f85149;
+      }
+
+      .news-severity-med {
+        background: #d29922;
+      }
+
+      .news-severity-low {
+        background: #8b949e;
+      }
+
       .news-desc {
         margin: 0.3rem 0 0.4rem;
         font-size: 0.88rem;
-        color: $text-secondary;
+        color: rgba($text-primary, 0.75);
         line-height: 1.55;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
       }
 
       .source-tag {
-        margin-top: 0.15rem;
+        margin-top: 0.25rem;
+      }
+
+      // Severity-based left border color
+      &.news-sev-high {
+        border-left-color: #f85149;
+      }
+
+      &.news-sev-medium {
+        border-left-color: #d29922;
+      }
+
+      &.news-sev-low {
+        border-left-color: #8b949e;
       }
     }
 
@@ -1637,6 +1851,137 @@
       span:first-child::before {
         display: none;
       }
+    }
+
+    // WorldMonitor issue cards
+    .wm-issue-list {
+      margin: 1rem 0;
+    }
+
+    .wm-issue-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 0.85rem;
+      margin-bottom: 0.5rem;
+      border-radius: 10px;
+      border: 1px solid rgba($border-color, 0.2);
+      background: rgba($bg-secondary, 0.25);
+      transition: background 0.2s ease, border-color 0.2s ease;
+
+      &:hover {
+        background: rgba($bg-secondary, 0.4);
+        border-color: rgba($accent-blue, 0.3);
+      }
+    }
+
+    .wm-issue-num {
+      flex-shrink: 0;
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba($accent-blue, 0.12);
+      color: $accent-blue;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .wm-issue-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .wm-issue-title {
+      font-size: 0.92rem;
+      line-height: 1.5;
+      color: $text-primary;
+      margin-bottom: 0.35rem;
+
+      a {
+        color: $text-primary;
+        text-decoration: none;
+        &:hover { color: $accent-blue; }
+      }
+    }
+
+    .wm-issue-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+    }
+
+    .wm-issue-theme {
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      background: rgba($accent-blue, 0.1);
+      color: $accent-blue;
+      font-weight: 600;
+    }
+
+    .wm-issue-impact {
+      font-weight: 700;
+    }
+
+    .wm-issue-source {
+      color: rgba($text-primary, 0.5);
+    }
+
+    // WorldMonitor source coverage
+    .wm-source-coverage {
+      margin: 1rem 0;
+      border-radius: 10px;
+      border: 1px solid rgba($border-color, 0.2);
+      background: rgba($bg-secondary, 0.2);
+      overflow: hidden;
+    }
+
+    .wm-source-row {
+      display: grid;
+      grid-template-columns: 1fr auto 120px auto;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.65rem 1rem;
+      border-bottom: 1px solid rgba($border-color, 0.1);
+
+      &:last-child { border-bottom: none; }
+      &:hover { background: rgba($bg-secondary, 0.3); }
+    }
+
+    .wm-source-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: $text-primary;
+    }
+
+    .wm-source-count {
+      font-size: 0.85rem;
+      color: $text-secondary;
+      font-weight: 600;
+    }
+
+    .wm-source-bar-track {
+      height: 8px;
+      background: rgba($border-color, 0.2);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .wm-source-bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.3s ease;
+    }
+
+    .wm-source-ratio {
+      font-size: 0.82rem;
+      color: rgba($text-primary, 0.6);
+      font-weight: 600;
+      text-align: right;
+      min-width: 2.5rem;
     }
 
     // Reference details toggle icon rotation

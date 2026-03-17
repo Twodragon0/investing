@@ -7,6 +7,7 @@ tags: [trading, crypto, journal, BTC, ETH]
 source: "manual"
 lang: "ko"
 journal_template: true
+journal_mode: "paper"
 journal_pair: "BTC/ETH"
 journal_trade_count_value: 4
 journal_win_rate_value: 75

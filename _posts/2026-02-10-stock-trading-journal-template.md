@@ -7,6 +7,7 @@ tags: [trading, stock, journal, KOSPI, S&P500]
 source: "manual"
 lang: "ko"
 journal_template: true
+journal_mode: "paper"
 journal_sector: "반도체"
 journal_trade_count_value: 3
 journal_win_rate_value: 67

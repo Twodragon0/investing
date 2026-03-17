@@ -65,6 +65,7 @@ layout: default
       <h2>한눈에 보는 세션 보드</h2>
       <p>핵심 손익, 리스크 자세, 다음 세션 포인트를 먼저 훑고 상세 기록으로 내려가세요.</p>
       <div class="trading-journal-hero-tags">
+        {% if page.journal_mode == "live" %}<span class="journal-mode-badge journal-mode-live">실전투자</span>{% elsif page.journal_mode == "paper" %}<span class="journal-mode-badge journal-mode-paper">모의투자</span>{% endif %}
         {% if page.journal_strategy %}<span class="journal-badge">{{ page.journal_strategy }}</span>{% endif %}
         {% if page.journal_day_result %}<span class="journal-badge">Result {{ page.journal_day_result }}</span>{% endif %}
         {% if page.journal_trade_count %}<span class="journal-badge">Trades {{ page.journal_trade_count }}</span>{% endif %}
@@ -460,11 +461,32 @@ layout: default
     table.parentNode.insertBefore(wrap, table);
     wrap.appendChild(table);
 
+    var btnLeft = document.createElement('button');
+    btnLeft.className = 'table-scroll-btn table-scroll-btn-left';
+    btnLeft.setAttribute('aria-label', '왼쪽으로 스크롤');
+    btnLeft.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>';
+    wrap.appendChild(btnLeft);
+
+    var btnRight = document.createElement('button');
+    btnRight.className = 'table-scroll-btn table-scroll-btn-right';
+    btnRight.setAttribute('aria-label', '오른쪽으로 스크롤');
+    btnRight.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>';
+    wrap.appendChild(btnRight);
+
+    btnLeft.addEventListener('click', function() {
+      wrap.scrollBy({ left: -200, behavior: 'smooth' });
+    });
+    btnRight.addEventListener('click', function() {
+      wrap.scrollBy({ left: 200, behavior: 'smooth' });
+    });
+
     function update() {
       var scrollable = table.scrollWidth > wrap.clientWidth + 4;
       wrap.classList.toggle('is-scrollable', scrollable);
       if (scrollable) {
+        var atStart = wrap.scrollLeft <= 2;
         var atEnd = wrap.scrollLeft + wrap.clientWidth >= wrap.scrollWidth - 2;
+        wrap.classList.toggle('scrolled-start', atStart);
         wrap.classList.toggle('scrolled-end', atEnd);
         if (!wrap.querySelector('.scroll-hint')) {
           var hint = document.createElement('span');
@@ -473,7 +495,7 @@ layout: default
           wrap.appendChild(hint);
         }
       } else {
-        wrap.classList.remove('scrolled-end');
+        wrap.classList.remove('scrolled-end', 'scrolled-start');
         var existingHint = wrap.querySelector('.scroll-hint');
         if (existingHint) existingHint.remove();
       }

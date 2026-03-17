@@ -7,7 +7,7 @@ tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 keywords: "regulation, sec, cftc, fsc, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-regulatory-2026-03-17.png"
+image: "/assets/images/generated/og-daily-regulatory-report-2026-03-17.png"
 permalink: "/regulatory-news/2026/03/17/daily-regulatory-report/"
 description: "리스크 수준 [ELEVATED]: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "리스크 수준 [ELEVATED]: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요 - Investing Dragon 자동 수집 분석 리포트."

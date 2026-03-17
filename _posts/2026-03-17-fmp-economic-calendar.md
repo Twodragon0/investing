@@ -7,7 +7,7 @@ tags: ["market-analysis", "economic-calendar", "earnings", "treasury", "ipo", "f
 keywords: "market-analysis, economic-calendar, earnings, treasury, ipo"
 source: "fmp"
 lang: "ko"
-image: "/assets/images/og-market-analysis.png"
+image: "/assets/images/generated/og-fmp-economic-calendar-2026-03-17.png"
 permalink: "/market-analysis/2026/03/17/fmp-economic-calendar/"
 description: "2026-03-17 기준 주요 시장 지수 2종, 섹터 11개, 국채 금리 5개 만기, 경제 이벤트 42건(고·중간 중요도), 대형주 실적 발표 3건, IPO 일정 5건을 수집했습니다."
 excerpt: "2026-03-17 기준 주요 시장 지수 2종, 섹터 11개, 국채 금리 5개 만기, 경제 이벤트 42건(고·중간 중요도), 대형주 실적 발표 3건, IPO 일정 5건을…"
@@ -121,12 +121,57 @@ image_alt: "주요 경제 캘린더 및 실적 일정 (2026-03-17) - 시장 분�
 
 ## 🚀 IPO 관련 뉴스
 
-- [SpaceX 2026 IPO: $1.75T Valuation Targets Moon Colony & Orbital AI Data Centers - News and Statistics - IndexBox](https://news.google.com/rss/articles/CBMinAFBVV95cUxNcFNMdUVrREx3Mzk5S2FOdHhEclY4MHA3M1FZLXUwU1Z0UnQwbzhVWlFoWUJvWng0QU5yNmtZNnZVbDEtT09mZm8wUm50Nm44MTNGYlNuWkkweDRqTVFYc0pjMGl2cWtJRlpqWVpZU2hLRGw2VXdIcXNLNDBoU2Z4U2VTTW5yRnFDYXpvOUZaNHJadTdGOF9mTU1uUlo?oc=5) (Mon, 16 Mar 2026 23:08:00 GMT)
-- [Blank-check firm SUMA aims to raise $150M for tech deals - Stock Titan](https://news.google.com/rss/articles/CBMitwFBVV95cUxPRjd1THBMdTNHRTRJR2lLbjZfOWIxY3ZYQXVrbnFJTFM1ejhLYTcxNHVZYkdkWS1IcFM4T2dJd1p6UVAtOHFBaUVkOHRBRUhlS20xTHJXSEVWQXNRYllpTmhheHdNZnFFMnd0d0NKM2FNWVAxa0pMbldiblRaYUd0SU9DYVpKYmU2N2Q3SGJtSVV2SHVlUDJhQzFSOTdkUXp4UjdkeEZQcldRc3MtWVkyYmluaUZKd0k?oc=5) (Tue, 10 Mar 2026 22:30:00 GMT)
-- [Halo Minerals to light up on AIM Market - Mining.com.au](https://news.google.com/rss/articles/CBMib0FVX3lxTFB4MjRfUlgybWVKTG8yM1QzNHl1OW9Rcnp0UU9GSUhuMk1WRThZZEdOTVpJY2xxdlRtWlF0dU1ISnVOektCX3RSZkNKcVdPY21ZRkFDU0hzbEIwUmNsNVVxRFotdEN4bXp1c0lZMzZBWQ?oc=5) (Mon, 16 Mar 2026 20:46:03 GMT)
-- [CMPDI’s IPO Price Band At Rs163-Rs172](https://news.google.com/rss/articles/CBMikgFBVV95cUxNSTM5ZnFTY24zMjktYnMyZVY3a3ZLdkNjVDcwcTAtZ1ZrQm90X1N5bzJ6dWZWWjgwbS0zNVZ4Rl9lenlfQkdXM2JGcE0yb2FndmFJbk1faXdwRTZBUDlvQ3pRVElLVU5NSWNFYmFKLWlGN05MOUVpeUEtT2dsb3JRUnlUc3Ewa0NnMWJOdHUtVGRDUQ?oc=5) (Mon, 16 Mar 2026 10:44:18 GMT)
-- [BLS E-Services Limited Conducts EGM for IPO Proceeds Reallocation on March 16, 2026 - scanx.trade](https://news.google.com/rss/articles/CBMi1gFBVV95cUxOZUJjam5iYmdXQzRJUGtobmEtbFNUNU93b1ZSaDNZNmZwZm9pUDVWaG5yeTBLaDVlR1cxaUdNaWQyNEh5Q3VlemZZeEtzalh5NVZmeG5aQWZVUkVubXlyTG5Rajk0cGZmd1RVZzNINDFiNWFjTzJTcmFqbGljX1Ztd2d3aFpHN0E4RFBCUExJSGNZLTVjWXAwNk9HX1BLSWx0dzZ5akZaU3R0UFRKNGs1THQwNUJFOVNWYnIzMXJCeXYyQnlnVWVBYUxyMDB3d2xsNzMxWjlB?oc=5) (Tue, 17 Mar 2026 03:42:41 GMT)
-
+<div class="fmp-news-list">
+<div class="fmp-news-card">
+  <span class="fmp-news-severity" style="background:#f85149">HIGH</span>
+  <div class="fmp-news-body">
+    <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxNcFNMdUVrREx3Mzk5S2FOdHhEclY4MHA3M1FZLXUwU1Z0UnQwbzhVWlFoWUJvWng0QU5yNmtZNnZVbDEtT09mZm8wUm50Nm44MTNGYlNuWkkweDRqTVFYc0pjMGl2cWtJRlpqWVpZU2hLRGw2VXdIcXNLNDBoU2Z4U2VTTW5yRnFDYXpvOUZaNHJadTdGOF9mTU1uUlo?oc=5" class="fmp-news-title" target="_blank" rel="noopener">SpaceX 2026 IPO: $1.75T Valuation Targets Moon Colony & Orbital AI Data Centers</a>
+    <div class="fmp-news-meta">
+      <span class="fmp-news-source">News and Statistics - IndexBox</span>
+      <span class="fmp-news-date">Mon, 16 Mar 2026 23:08:00 GMT</span>
+    </div>
+  </div>
+</div>
+<div class="fmp-news-card">
+  <span class="fmp-news-severity" style="background:#f85149">HIGH</span>
+  <div class="fmp-news-body">
+    <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPRjd1THBMdTNHRTRJR2lLbjZfOWIxY3ZYQXVrbnFJTFM1ejhLYTcxNHVZYkdkWS1IcFM4T2dJd1p6UVAtOHFBaUVkOHRBRUhlS20xTHJXSEVWQXNRYllpTmhheHdNZnFFMnd0d0NKM2FNWVAxa0pMbldiblRaYUd0SU9DYVpKYmU2N2Q3SGJtSVV2SHVlUDJhQzFSOTdkUXp4UjdkeEZQcldRc3MtWVkyYmluaUZKd0k?oc=5" class="fmp-news-title" target="_blank" rel="noopener">Blank-check firm SUMA aims to raise $150M for tech deals</a>
+    <div class="fmp-news-meta">
+      <span class="fmp-news-source">Stock Titan</span>
+      <span class="fmp-news-date">Tue, 10 Mar 2026 22:30:00 GMT</span>
+    </div>
+  </div>
+</div>
+<div class="fmp-news-card">
+  <span class="fmp-news-severity" style="background:#f85149">HIGH</span>
+  <div class="fmp-news-body">
+    <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFB4MjRfUlgybWVKTG8yM1QzNHl1OW9Rcnp0UU9GSUhuMk1WRThZZEdOTVpJY2xxdlRtWlF0dU1ISnVOektCX3RSZkNKcVdPY21ZRkFDU0hzbEIwUmNsNVVxRFotdEN4bXp1c0lZMzZBWQ?oc=5" class="fmp-news-title" target="_blank" rel="noopener">Halo Minerals to light up on AIM Market</a>
+    <div class="fmp-news-meta">
+      <span class="fmp-news-source">Mining.com.au</span>
+      <span class="fmp-news-date">Mon, 16 Mar 2026 20:46:03 GMT</span>
+    </div>
+  </div>
+</div>
+<div class="fmp-news-card">
+  <span class="fmp-news-severity" style="background:#f85149">HIGH</span>
+  <div class="fmp-news-body">
+    <a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxNSTM5ZnFTY24zMjktYnMyZVY3a3ZLdkNjVDcwcTAtZ1ZrQm90X1N5bzJ6dWZWWjgwbS0zNVZ4Rl9lenlfQkdXM2JGcE0yb2FndmFJbk1faXdwRTZBUDlvQ3pRVElLVU5NSWNFYmFKLWlGN05MOUVpeUEtT2dsb3JRUnlUc3Ewa0NnMWJOdHUtVGRDUQ?oc=5" class="fmp-news-title" target="_blank" rel="noopener">CMPDI's IPO Price Band At Rs163-Rs172</a>
+    <div class="fmp-news-meta">
+      <span class="fmp-news-date">Mon, 16 Mar 2026 10:44:18 GMT</span>
+    </div>
+  </div>
+</div>
+<div class="fmp-news-card">
+  <span class="fmp-news-severity" style="background:#8b949e">LOW</span>
+  <div class="fmp-news-body">
+    <a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxOZUJjam5iYmdXQzRJUGtobmEtbFNUNU93b1ZSaDNZNmZwZm9pUDVWaG5yeTBLaDVlR1cxaUdNaWQyNEh5Q3VlemZZeEtzalh5NVZmeG5aQWZVUkVubXlyTG5Rajk0cGZmd1RVZzNINDFiNWFjTzJTcmFqbGljX1Ztd2d3aFpHN0E4RFBCUExJSGNZLTVjWXAwNk9HX1BLSWx0dzZ5akZaU3R0UFRKNGs1THQwNUJFOVNWYnIzMXJCeXYyQnlnVWVBYUxyMDB3d2xsNzMxWjlB?oc=5" class="fmp-news-title" target="_blank" rel="noopener">BLS E-Services Limited Conducts EGM for IPO Proceeds Reallocation on March 16, 2026</a>
+    <div class="fmp-news-meta">
+      <span class="fmp-news-source">scanx.trade</span>
+      <span class="fmp-news-date">Tue, 17 Mar 2026 03:42:41 GMT</span>
+    </div>
+  </div>
+</div>
+</div>
 
 ---
 

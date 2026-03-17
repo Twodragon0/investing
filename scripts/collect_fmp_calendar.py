@@ -19,7 +19,6 @@ from common.fmp_api import (
     fetch_sector_performance,
     fetch_treasury_rates,
 )
-from common.markdown_utils import markdown_link
 from common.post_generator import PostGenerator, build_dated_permalink
 
 logger = setup_logging("collect_fmp_calendar")
@@ -180,6 +179,72 @@ def _build_treasury_section(rates: List[Dict[str, Any]]) -> str:
     return "\n".join(lines) + "\n"
 
 
+def _classify_severity(title: str, section: str = "") -> str:
+    """Classify news severity based on title keywords."""
+    t = title.lower()
+    high_kw = ["beat", "miss", "surprise", "crash", "surge", "record", "warn",
+               "downgrade", "upgrade", "halt", "delist", "fraud", "sec ", "fda ",
+               "spacex", "ipo", "$1", "billion", "trillion"]
+    if any(kw in t for kw in high_kw):
+        return "high"
+    low_kw = ["egm", "reallocation", "limited", "conducts"]
+    if any(kw in t for kw in low_kw):
+        return "low"
+    return "medium"
+
+
+_SEVERITY_COLORS = {
+    "high": "#f85149",
+    "medium": "#d29922",
+    "low": "#8b949e",
+}
+_SEVERITY_LABELS = {
+    "high": "HIGH",
+    "medium": "MED",
+    "low": "LOW",
+}
+
+
+def _build_news_cards(items: List[Dict[str, Any]], heading: str, icon: str, max_items: int = 15) -> str:
+    """Build HTML news cards for earnings/IPO news with severity badges."""
+    if not items:
+        return ""
+
+    lines = [f"## {icon} {heading}\n", '<div class="fmp-news-list">']
+    for item in items[:max_items]:
+        title = item.get("title", "")
+        link = item.get("link", "")
+        date = item.get("date", "")
+        source = ""
+        if " - " in title:
+            parts = title.rsplit(" - ", 1)
+            title = parts[0].strip()
+            source = parts[1].strip()
+
+        severity = _classify_severity(title, heading)
+        sev_color = _SEVERITY_COLORS[severity]
+        sev_label = _SEVERITY_LABELS[severity]
+
+        lines.append('<div class="fmp-news-card">')
+        lines.append(f'  <span class="fmp-news-severity" style="background:{sev_color}">{sev_label}</span>')
+        lines.append('  <div class="fmp-news-body">')
+        if link:
+            lines.append(f'    <a href="{link}" class="fmp-news-title" target="_blank" rel="noopener">{title}</a>')
+        else:
+            lines.append(f'    <span class="fmp-news-title">{title}</span>')
+        lines.append('    <div class="fmp-news-meta">')
+        if source:
+            lines.append(f'      <span class="fmp-news-source">{source}</span>')
+        if date:
+            lines.append(f'      <span class="fmp-news-date">{date}</span>')
+        lines.append('    </div>')
+        lines.append('  </div>')
+        lines.append('</div>')
+
+    lines.append('</div>\n')
+    return "\n".join(lines)
+
+
 def _build_ipo_section(ipos: List[Dict[str, Any]]) -> str:
     """Build markdown table/list for upcoming IPO calendar."""
     if not ipos:
@@ -188,16 +253,7 @@ def _build_ipo_section(ipos: List[Dict[str, Any]]) -> str:
     is_news = any(ipo.get("is_news_fallback") for ipo in ipos)
 
     if is_news:
-        lines = ["## 🚀 IPO 관련 뉴스\n"]
-        for ipo in ipos[:15]:
-            title = ipo.get("title", "")
-            link = ipo.get("link", "")
-            date = ipo.get("date", "")
-            if link:
-                lines.append(f"- {markdown_link(title, link)} ({date})")
-            else:
-                lines.append(f"- {title} ({date})")
-        return "\n".join(lines) + "\n"
+        return _build_news_cards(ipos, "IPO 관련 뉴스", "🚀")
 
     lines = [
         "## 🚀 IPO 캘린더\n",
@@ -235,18 +291,7 @@ def _build_earnings_section(earnings: List[Dict[str, Any]]) -> str:
     is_news = any(e.get("is_news_fallback") for e in earnings)
 
     if is_news:
-        lines = [
-            "## 💰 실적 관련 뉴스\n",
-        ]
-        for e in earnings[:15]:
-            title = e.get("title", "")
-            link = e.get("link", "")
-            date = e.get("date", "")
-            if link:
-                lines.append(f"- {markdown_link(title, link)} ({date})")
-            else:
-                lines.append(f"- {title} ({date})")
-        return "\n".join(lines) + "\n"
+        return _build_news_cards(earnings, "실적 관련 뉴스", "💰")
 
     sorted_earnings = sorted(earnings, key=lambda x: x.get("date", ""))
 

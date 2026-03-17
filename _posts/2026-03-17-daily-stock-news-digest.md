@@ -7,7 +7,7 @@ tags: ["stock", "market", "daily-digest"]
 keywords: "stock, market, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/market-snapshot-2026-03-17.png"
+image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-17.png"
 permalink: "/stock-news/2026/03/17/daily-stock-news-digest/"
 description: "2026-03-17 주식 시장에서 166건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,549.85(+1.14%), KOSDAQ 1,138.29(-1.27%), USD/KRW 1,493.17(-0.29%)."
 excerpt: "2026-03-17 주식 시장에서 166건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,549.85(+1.14%), KOSDAQ 1,138.29(-1.27%),…"
@@ -41,9 +41,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-17 - stock-news 뉴스 요약 
 *삼성전자, 하이닉스, 상승 관련 45건의 소식이 확인되었습니다.*
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE41eGJ0T3ZySExYOGRCZl9IUmF6YkZva2lQamNfbFZqeGdFZUo5OEZHQ0l6cjZfNzRJNHRuOFVFeVFDOXBvZGZ0VkJpd3FGdmhGVzZNd3dhU3M1MHIyUGtzUC1LWWdDUUNfOU5v?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 오름세로 장 출발 - 한강타임즈</a>
 <p class="news-desc">코스피·코스닥, 오름세로 장 출발 한강타임즈</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
@@ -51,9 +52,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-17 - stock-news 뉴스 요약 
 </div>
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-medium">
 <div class="news-card-num">2</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFBESUt1bEM4bEhvczEzbDY5bzhaTFZPRFNNRlNpN0pWVVFNX010QkZWYlJock5ycTN6ZGJ0MzVJQ24zeFhaeURQNjFjTXVLdnVabzZyZGU1cnZyNU5wNmZEanlJR1ItdUU4V2FMVdIBcEFVX3lxTFBHdWdURExPaHhjNjgwSFZTSTcwWkVWQ2JnNlRjQTd4c0Y0RDl6azI3ajFZQmk5YWxoN0dKcTlQMl9QOGdxX2pTc1Uwa1hsc19wTWtJTjRrUW96THpNUDB0S0diSWdObU1qSWh5ZV9udjY?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">중동 사태에 증시 온도차…코스피 하락·코스닥 선방 - 남도일보</a>
 <p class="news-desc">중동 사태에 증시 온도차…코스피 하락·코스닥 선방 남도일보</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
@@ -61,9 +63,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-17 - stock-news 뉴스 요약 
 </div>
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-medium">
 <div class="news-card-num">3</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1tT1drWkREWHQ5RnJ4NTA1dFp3TFh6RjQ2QTJtLXNiOHdlc2gyYWpwcUxCUmpCZTRwMHBnb2JHMG1aTlBEOWxFcWlNN0J2UHFJMFljRDNRXzJIRUVqUENkd0djOV9US3AwbTV4TUkxNzE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">이란 사태에 15% 빠진 삼성전자·SK하이닉스…"지금이라도 사라"</a>
 <p class="news-desc">이란 사태에 15% 빠진 삼성전자·SK하이닉스…"지금이라도 사라" 연합인포맥스</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
@@ -82,9 +85,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-17 - stock-news 뉴스 요약 
 *환율, 한은, 셈법 이슈로 12건의 보도가 이어지고 있습니다.*
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-high">
 <div class="news-card-num">1</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxNQUVTRTNfdWlDS0pQb0syNGZxNXI4UTduSVVFdy1WQzNhemFHUEFKRDZBZFVlR0V5Wm44ckZ1aEh2THFvY3RiNkVfU21YaTJ3YXpPQUk0Mk9MY0FkRHl5S19tczRBMVI1QjFRNlJ3RXpoMWxyOVgtX3BGSVBTLVBCY3JUYzNGczJleVpYLUE1TWlIaHJjby05T2V3YWUtNm5OaGU2OTZuTUo3dC05M29CbmRsUmRTZWYxX0Q4N29Od0lwQdIBxwFBVV95cUxOTllXTGtIUEFzYkNEVVFLZU1URWllUmJUTjYxYzRTY2RjVlMyTEJYMWc1cDJLYVpibGxNc0ZoVy1vMDZValZqeWVvN1JsVmQ5dEpzWXNac0pTWmVEX05VeHRpYkhjbjgybmN0WElpMXd6d0U5ZXY4MUU0Zkx5RDZYM2ZlUllMRzZhdnFacUR2V0JzUXFiNm53NDdpYmYzcWJCU3NjSnk5aGdWRW5WR3ZrdFFiZDhhdGs2ZkhzbWlpa0FQU25jU2Mw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">오늘 미국 주식 시장: S&P 500 선물은 인플레이션 완화로 금리 인하 희망으로 상승</a>
 <p class="news-desc">오늘 미국 주식 시장: S&P 500 선물은 인플레이션 완화로 금리 인하 희망으로 상승 Simplywall.st</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
@@ -92,9 +96,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-17 - stock-news 뉴스 요약 
 </div>
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-high">
 <div class="news-card-num">2</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE9uQk5INGw4ZjNjUjVnNkVxaFk2ZFl1UGk4aVpFcmFyZWtNVmpFTEw2dWNWX2dZTUZBR1RhTDBZMGpDbUVKYVN0Vzh6dUxtamx3Z1VUTndwTDNjd2U2UWxXWtIBeEFVX3lxTE9SLVRvU3JKcThmSXktS3lNTGh6bDV1RldpU21wUmppTVRoU1otTzUtT2Y4ZTQzT0VQUF9XdDQ2LVlyTjQ5SzJvRFlQUTd1VzItYURtRnE5OElDYTdrNWlQU2lOWFVqUjRrd0NLT3VQUTkyaUgyRWpveA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">'고유가 충격' 1500원 뚫은 환율…한은, 복잡해진 금리 셈법</a>
 <p class="news-desc">'고유가 충격' 1500원 뚫은 환율…한은, 복잡해진 금리 셈법 뉴시스</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
@@ -102,9 +107,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-17 - stock-news 뉴스 요약 
 </div>
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-high">
 <div class="news-card-num">3</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE4ydGZBQldwbkNFX2U4cGdORzZROEYyV2FyWWJWQlhXcDNXcTZjMFhBZlpvMDR5Zm4teUszN0NObW96NjBYclZuQWlPblJVb3ZHRVd2V1kxYzVuRmlpRUxQYzQweTR1VDhtR2c?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">"환율 1500원·유가 100달러"···한은, 기준금리 '동결 vs 인상' 셈법 비상 - 뉴스웨이</a>
 <p class="news-desc">"환율 1500원·유가 100달러"···한은, 기준금리 '동결 vs 인상' 셈법 비상 뉴스웨이</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
@@ -122,9 +128,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-17 - stock-news 뉴스 요약 
 *반도체, 하이닉스, 삼전 이슈로 16건의 보도가 이어지고 있습니다.*
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1ZUU5ya0tWNFVzVDZUeGhieDh5RkhNc2JPVHZTSGRsRlgtaklEaGJmZzFiZUJVSGZoRElrdXp6ZUVPb3ZZVTNUQjY3Y1NzUUVMT1prRzAyMWlxbTYxYkdXcW9RdjltSFXSAWdBVV95cUxNWVFOcmtLVjRVc1Q2VHhoYng4eUZITXNiT1R2U0hkbEZYLWpJRGhiZmcxYmVCVUhmaERJa3V6emVFT292WVUzVEI2N2NTc1FFTE9aa0cwMjFpcW02MWJHV3FvUXY5bUhV?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">“오르는 반도체 주가…지금 삼성전자 사야 할까, 기다려야 할까” - abcn.kr</a>
 <p class="news-desc">“오르는 반도체 주가…지금 삼성전자 사야 할까, 기다려야 할까” abcn.kr</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
@@ -132,9 +139,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-17 - stock-news 뉴스 요약 
 </div>
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-medium">
 <div class="news-card-num">2</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1Jd1E5UWM3OFFnNVlhUE1lTnlMeVhuUmY5NUtaTmpZcm4xZG83VDEydUl0d2pmOUJ3SWxZTEM3Q2VNV3JLUkdtYjhfQnluTjJCOUZXVlplUUE5QdIBVEFVX3lxTFA4TlRKeHQzS08xcHFBOTR2aXM5b0hxUWIxcVcwTjNPVWtjYzQxYm41RzlLb05vRmZYVm13M2stZWN2SXdtQVJndGNHLXdkOFZpZGkzVQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">"결국엔 삼전·닉스".반도체 투톱 가득 담은 'SOL AI반도체TOP2플러스' 나온다</a>
 <p class="news-desc">"결국엔 삼전·닉스".반도체 투톱 가득 담은 'SOL AI반도체TOP2플러스' 나온다 한국경제</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
@@ -142,9 +150,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-17 - stock-news 뉴스 요약 
 </div>
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-medium">
 <div class="news-card-num">3</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFA2dC1hcFdGZ05IRkZwM09zbHJlS2lMbXMwQm1yMHpQdHoxYlFPdWJxS2swbGp5WW9GTE5XWFZGS3lGSGhKZlByLUJMZTRuU2s?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼전·하닉 조정에도…"반도체 호황 지속, 이익전망치 상향"</a>
 <p class="news-desc">삼전·하닉 조정에도…"반도체 호황 지속, 이익전망치 상향" v.daum.net</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
@@ -162,9 +171,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-17 - stock-news 뉴스 요약 
 *15건의 기사에서 대통령, 속보 키워드가 부각되고 있습니다.*
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-high">
 <div class="news-card-num">1</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNa2RDTVU0TEJXX3BBVE1uczNGaDN3OTR0VFRIX1lQX0ZTMDFIZC1DdXRnei0zNXJ4MGsxT2ZnSzJKYUZKZklKMWg4cDlCOTVPQ2FRTFBfZXVueWVscXFORXA4U1B2d3RuamFvUTR0allPQk0xSkpBdjhyQlVYcFJNZWpOOG8zY0tYRXlySnEyVGV4T1RoUEFQTw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">2026년 트럼프 대통령 하에서 주식 시장은 폭락 될까요? 역사는 투자자들이 걱정할 이유가 있다고 말합니다. - The Motley Fool</a>
 <p class="news-desc">2026년 트럼프 대통령 하에서 주식 시장은 폭락 될까요? 역사는 투자자들이 걱정할 이유가 있다고 말합니다. The Motley Fool</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
@@ -172,9 +182,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-17 - stock-news 뉴스 요약 
 </div>
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-medium">
 <div class="news-card-num">2</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/03/15/oil-prices-today-iran-war.html" class="news-title" target="_blank" rel="noopener noreferrer">트럼프가 호르무즈 해협에서 유조선을 보호하도록 동맹국에 압력을 가하면서 유가가 하락합니다.</a>
 <p class="news-desc">JPMorgan에 따르면 미국의 카르그 섬 공격과 트럼프의 이란 석유 기반시설 공격 위협은 전쟁의 급격한 고조를 의미한다고 합니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
@@ -182,9 +193,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-17 - stock-news 뉴스 요약 
 </div>
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-medium">
 <div class="news-card-num">3</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/03/16/susie-wiles-trump-chief-of-staff.html" class="news-title" target="_blank" rel="noopener noreferrer">수지 와일스 백악관 비서실장, '초기 유방암' 진단: 트럼프</a>
 <p class="news-desc">도널드 트럼프 대통령은 와일스가 유방암 치료를 받는 동안 "백악관에서 사실상 풀타임을 보낼 것"이라고 말했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
@@ -202,9 +214,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-17 - stock-news 뉴스 요약 
 *Bitcoin, Limelight, Strategy 흐름에 4건의 뉴스가 집중되고 있습니다.*
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE53WVJoSVdId0pzRWJkbTFmbGFzZVFYcExIYVEwRDhmV1FHb3c5OWMweGVnZkYzenVUYzZLNXhYZ3VoT0U4ZlZZdFlDekxYTjAyZVlPbFR1X2ZybHR6Q3lOd1c5cVFYVDZJ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">'삼성전자 + SK하이닉스'에 베팅… ETF '투톱 전략' 확산</a>
 <p class="news-desc">'삼성전자 + SK하이닉스'에 베팅… ETF '투톱 전략' 확산 mt.co.kr</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
@@ -212,10 +225,11 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-17 - stock-news 뉴스 요약 
 </div>
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-high">
 <div class="news-card-num">2</div>
 <div class="news-card-thumb"><img src="https://media.zenfs.com/en/bloomberg_holding_pen_162/f8611a645a2e0edd88e8b42fc168794f" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
 <div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
 <a href="https://finance.yahoo.com/news/bitcoin-touches-six-week-high-163111641.html" class="news-title" target="_blank" rel="noopener noreferrer">비트코인은 투자자들이 ETF에 몰려들면서 6주 최고치를 기록했습니다.</a>
 <p class="news-desc">비트코인은 여전히 ​​10월에 도달한 최고 기록보다 약 40% 하락했습니다. 두 번째로 큰 암호화폐인 이더리움(Ether)은 8% 상승해 2,302달러를 기록했는데, 이는 비트코인 상승폭의 약 두 배에 해당합니다. 비트코인은 2월 말에 발발한 이란과의 전쟁을 많은 전통적인 자산보다 더 잘 견뎌냈습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
@@ -223,10 +237,11 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-17 - stock-news 뉴스 요약 
 </div>
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-high">
 <div class="news-card-num">3</div>
 <div class="news-card-thumb"><img src="https://images.mktw.net/im-59515002" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
 <div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.marketwatch.com/story/strategys-stock-has-soared-35-off-its-february-low-more-than-doubling-bitcoins-gain-16bcf1cb?mod=mw_rss_topstories" class="news-title" target="_blank" rel="noopener noreferrer">Strategy의 주가는 2월 최저치보다 35% 급등하여 비트코인의 이익이 두 배 이상 증가했습니다.</a>
 <p class="news-desc">Strategy의 마이클 세일러(Michael Saylor) 회장은 Strategy의 주식이 비트코인의 변동성을 증폭시킬 것이라고 말했으며 실제로 그렇게 하고 있습니다.</p>
 <span class="source-tag" data-source-type="finance-media">MarketWatch</span>
