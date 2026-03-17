@@ -4,7 +4,9 @@ from common.markdown_utils import (
     _classify_source,
     dedupe_references,
     escape_table_cell,
+    html_report_links,
     html_source_tag,
+    html_table,
     html_text,
     markdown_link,
     markdown_table,
@@ -140,3 +142,64 @@ class TestDedupeReferences:
         refs = [{"title": "English", "title_ko": "한국어", "link": "https://a.com", "source": "s"}]
         result = dedupe_references(refs)
         assert result[0]["title_ko"] == "한국어"
+
+
+class TestHtmlTable:
+    def test_basic_table(self):
+        result = html_table(["Name", "Value"], [["BTC", "$50K"]])
+        assert "<table>" in result
+        assert "<th" in result
+        assert "BTC" in result
+        assert "$50K" in result
+
+    def test_with_aligns(self):
+        result = html_table(["A", "B"], [["1", "2"]], aligns=["left", "right"])
+        assert "text-align:right" in result
+
+    def test_without_aligns(self):
+        result = html_table(["A"], [["1"]])
+        assert "text-align:left" in result
+
+    def test_multiple_rows(self):
+        result = html_table(["H"], [["r1"], ["r2"], ["r3"]])
+        assert result.count("<tr>") == 4  # 1 header + 3 body
+
+    def test_empty_rows(self):
+        result = html_table(["H"], [])
+        assert "<tbody></tbody>" in result
+
+    def test_mismatched_aligns_defaults_to_left(self):
+        result = html_table(["A", "B"], [["1", "2"]], aligns=["center"])
+        # aligns length != headers length → all default to left
+        assert "text-align:left" in result
+
+
+class TestHtmlReportLinks:
+    def test_basic_report_links(self):
+        rows = [("암호화폐 뉴스", "10건", '<a href="/crypto">보기</a>')]
+        result = html_report_links(rows)
+        assert "report-links-board" in result
+        assert "암호화폐 뉴스" in result
+        assert "10건" in result
+
+    def test_multiple_categories(self):
+        rows = [
+            ("암호화폐 뉴스", "5건", '<a href="/a">보기</a>'),
+            ("규제 동향", "3건", '<a href="/b">보기</a>'),
+        ]
+        result = html_report_links(rows)
+        assert "2개" in result  # summary text
+
+    def test_unknown_category_uses_default_note(self):
+        rows = [("미지의 카테고리", "1건", '<a href="/x">보기</a>')]
+        result = html_report_links(rows)
+        assert "관련 세부 리포트로 바로 이동합니다" in result
+
+    def test_skips_invalid_rows(self):
+        rows = [("only", "two"), ("valid", "3건", '<a href="/x">보기</a>')]
+        result = html_report_links(rows)
+        assert "1개" in result  # only 1 valid row
+
+    def test_empty_rows(self):
+        result = html_report_links([])
+        assert "0개" in result

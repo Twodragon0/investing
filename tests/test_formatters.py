@@ -1,6 +1,8 @@
 """Tests for formatters module (scripts/common/formatters.py)."""
 
-from common.formatters import fmt_number, fmt_percent
+from datetime import UTC, datetime
+
+from common.formatters import fmt_change_icon, fmt_date_kr, fmt_number, fmt_percent
 
 
 class TestFmtNumber:
@@ -122,3 +124,72 @@ class TestFmtPercent:
     def test_two_decimal_places(self):
         result = fmt_percent(1.1)
         assert "+1.10%" in result
+
+
+class TestFmtChangeIcon:
+    """Tests for fmt_change_icon()."""
+
+    def test_empty_string_returns_neutral(self):
+        icon, display = fmt_change_icon("")
+        assert icon == "⚪"
+
+    def test_none_returns_neutral(self):
+        icon, display = fmt_change_icon(None)
+        assert icon == "⚪"
+        assert display == "N/A"
+
+    def test_na_string(self):
+        icon, display = fmt_change_icon("N/A")
+        assert icon == "⚪"
+
+    def test_dash_string(self):
+        icon, display = fmt_change_icon("-")
+        assert icon == "⚪"
+
+    def test_positive_change(self):
+        icon, display = fmt_change_icon("+3.14%")
+        assert icon == "🟢"
+        assert "+3.14%" in display
+
+    def test_negative_change(self):
+        icon, display = fmt_change_icon("-1.50%")
+        assert icon == "🔴"
+        assert "-1.50%" in display
+
+    def test_no_sign_positive(self):
+        icon, display = fmt_change_icon("2.5%")
+        assert icon == "🟢"
+        assert "+2.50%" in display
+
+    def test_zero_change(self):
+        icon, display = fmt_change_icon("0%")
+        assert icon == "🟢"
+        assert "+0.00%" in display
+
+    def test_invalid_string(self):
+        icon, display = fmt_change_icon("abc")
+        assert icon == "⚪"
+        assert display == "abc"
+
+    def test_comma_separated(self):
+        icon, display = fmt_change_icon("+1,234.56%")
+        assert icon == "🟢"
+
+
+class TestFmtDateKr:
+    """Tests for fmt_date_kr()."""
+
+    def test_default_returns_today(self):
+        result = fmt_date_kr()
+        assert "년" in result and "월" in result and "일" in result
+
+    def test_specific_date(self):
+        dt = datetime(2026, 3, 17, tzinfo=UTC)
+        result = fmt_date_kr(dt)
+        assert result == "2026년 03월 17일"
+
+    def test_single_digit_month(self):
+        dt = datetime(2026, 1, 5, tzinfo=UTC)
+        result = fmt_date_kr(dt)
+        assert "01월" in result
+        assert "05일" in result
