@@ -105,8 +105,8 @@ image_alt: "3월 16일 주식 시장 지수와 뉴스 분포를 요약한 스냅
 <div class="news-card-item">
 <div class="news-card-num">1</div>
 <div class="news-card-body">
-<a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxQNUV2ZC1sRVVRNHNHY0g4ZXpEZEdlZlFEUnNmVC01eTRmdzRXZ1NveXJHN2htRmFlcEdQMHRuekV1cXhWamhoR3U4c0pVUURyZWgyNElJakNCNHZqSy1XTnpIVlQ4bVVCMFRyQnpYeFVqSG9kV1M3V09FRENiTDZCVUp5Mlo2RzYxYVN0TGpaTHlra191b19NaEk0aUFNajktVndnQlNuSTNIcFdzR0o5a09NQ01WcnEyMzd6MTln?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">정부는 AI 칩 수출 규칙을 전면적으로 중단합니다: 엔비디아이 다시 성장을 시작할 수 있을까? - 연중무휴 월 스트리트</a>
-<p class="news-desc">정부는 AI 칩 수출 규칙을 전면적으로 중단합니다: 엔비디아이 다시 성장을 시작할 수 있을까? 연중무휴 월스트리트</p>
+<a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxQNUV2ZC1sRVVRNHNHY0g4ZXpEZEdlZlFEUnNmVC01eTRmdzRXZ1NveXJHN2htRmFlcEdQMHRuekV1cXhWamhoR3U4c0pVUURyZWgyNElJakNCNHZqSy1XTnpIVlQ4bVVCMFRyQnpYeFVqSG9kV1M3V09FRENiTDZCVUp5Mlo2RzYxYVN0TGpaTHlra191b19NaEk0aUFNajktVndnQlNuSTNIcFdzR0o5a09NQ01WcnEyMzd6MTln?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">정부는 AI 칩 수출 규칙을 전면적으로 중단합니다: 엔비디아(NVIDIA) 다시 성장을 시작할 수 있을까? - 24/7 Wall Street</a>
+<p class="news-desc">정부는 AI 칩 수출 규칙을 전면적으로 중단합니다: 엔비디아(NVIDIA) 다시 성장을 시작할 수 있을까? 24/7 Wall Street</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
@@ -127,7 +127,7 @@ image_alt: "3월 16일 주식 시장 지수와 뉴스 분포를 요약한 스냅
 <div class="news-card-thumb"><img src="https://media.zenfs.com/en/motleyfool.com/18f806910d27eb63164f636fcc4ae481" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
 <div class="news-card-body">
 <a href="https://finance.yahoo.com/news/got-1-000-heres-artificial-185000002.html" class="news-title" target="_blank" rel="noopener noreferrer">1,000달러 있어요? 내가 먼저 사고 싶은 인공지능(AI) 주식은 다음과 같습니다.</a>
-<p class="news-desc">현재 평가에서는 엔비디아이 잘못될 수 없습니다.</p>
+<p class="news-desc">현재 평가에서는 엔비디아(NVIDIA) 잘못될 수 없습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>
@@ -238,7 +238,7 @@ image_alt: "3월 16일 주식 시장 지수와 뉴스 분포를 요약한 스냅
 <div class="news-card-item">
 <div class="news-card-num">2</div>
 <div class="news-card-body">
-<a href="https://www.cnbc.com/2026/03/15/global-week-ahead-price-pressure-in-the-pipeline.html" class="news-title" target="_blank" rel="noopener noreferrer">글로벌위크 아아</a>
+<a href="https://www.cnbc.com/2026/03/15/global-week-ahead-price-pressure-in-the-pipeline.html" class="news-title" target="_blank" rel="noopener noreferrer">Global Week Ahead: 가격 압박과 파이프라인 이슈</a>
 <p class="news-desc">인플레이션을 통제하는 것은 중앙은행의 중요한 임무가 됩니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>

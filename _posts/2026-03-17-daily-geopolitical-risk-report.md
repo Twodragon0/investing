@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-geopolitical-risk-report-2026-03-17.png"
 permalink: "/market-analysis/2026/03/17/daily-geopolitical-risk-report/"
 description: "2026-03-17 기준 지정학적 리스크 데이터를 2개 소스에서 수집·분석했습니다. 예측 시장 15건, 글로벌 뉴스 분석 0건, 뉴스 3건을 종합합니다."
-excerpt: "2026-03-17 기준 지정학적 리스크 데이터를 2개 소스에서 수집·분석했습니다. 예측 시장 15건, 글로벌 뉴스 분석 0건, 뉴스 3건을 종합합니다."
+excerpt: "2026-03-17 기준 지정학적 리스크 데이터를 2개 소스에서 수집·분석했습니다."
 image_alt: "지정학 리스크 리포트 - 2026-03-17 - 글로벌 이슈 뉴스 요약 이미지"
 ---
 
@@ -34,6 +34,7 @@ image_alt: "지정학 리스크 리포트 - 2026-03-17 - 글로벌 이슈 뉴스
 <div class="stat-item"><span class="stat-value">0</span><span class="stat-label">GDELT 뉴스</span></div>
 <div class="stat-item"><span class="stat-value">3</span><span class="stat-label">뉴스 기사</span></div>
 <div class="stat-item"><span class="stat-value">2</span><span class="stat-label">데이터 소스</span></div>
+</div>
 
 ## 1. 예측 시장 동향 (Polymarket)
 
