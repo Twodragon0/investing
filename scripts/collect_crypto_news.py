@@ -88,7 +88,7 @@ def fetch_cryptopanic(api_key: str, limit: int = 20) -> List[Dict[str, Any]]:
             item_data = {
                 "title": sanitize_string(r.get("title", ""), 300),
                 "description": sanitize_string(
-                    metadata.get("description", r.get("title", "")),
+                    metadata.get("description") or "",
                     500,
                 ),
                 "link": r.get("url", ""),

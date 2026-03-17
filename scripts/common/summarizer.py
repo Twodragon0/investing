@@ -1830,10 +1830,16 @@ class ThemeSummarizer:
         p0_items = priority_items.get("P0", [])
         p1_items = priority_items.get("P1", [])
         if p0_items:
-            p0_titles = [(item.get("title_ko") or item.get("title", ""))[:60] for item in p0_items[:3]]
+            p0_titles = [
+                (item.get("title_ko") or item.get("title_translated") or item.get("title", ""))[:60]
+                for item in p0_items[:3]
+            ]
             lines.append(f"**P0 긴급**: {' / '.join(t for t in p0_titles if t)}")
         if p1_items and len(p1_items) <= 5:
-            p1_titles = [(item.get("title_ko") or item.get("title", ""))[:50] for item in p1_items[:3]]
+            p1_titles = [
+                (item.get("title_ko") or item.get("title_translated") or item.get("title", ""))[:50]
+                for item in p1_items[:3]
+            ]
             lines.append(f"**P1 주요**: {' / '.join(t for t in p1_titles if t)}")
         elif p1_items:
             lines.append(f"**P1 주요**: {len(p1_items)}건 확인")

@@ -51,7 +51,9 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-17 - stock-news 뉴스 요약 
 <div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:9%"></div></div><span class="theme-count">4건</span></div>
 </div>
 
-*총 166건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-03-17.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-03-17.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
+*총 166건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
+
+<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-03-17.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-03-17.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
 
 
 ---

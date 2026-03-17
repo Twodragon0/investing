@@ -137,7 +137,6 @@ _DEFAULT_CATEGORY_IMAGES: dict[str, str] = {
 
 _WORDING_REPLACEMENTS: tuple[tuple[str, str], ...] = (
     ("견인고", "견인하고"),
-    ("시장 영향 가능", "시장 영향 가능성이 있는"),
     ("실제로 확인해야 합니다.", ""),
     ("실제로 확인이 필요합니다.", ""),
     ("..", "."),
@@ -185,6 +184,8 @@ def _polish_generated_text(text: str) -> str:
         return text
     for wrong, correct in _WORDING_REPLACEMENTS:
         text = text.replace(wrong, correct)
+    # Fix incomplete "시장 영향 가능" without already being "가능성이 있는"
+    text = re.sub(r"시장 영향 가능(?!성이 있는)", "시장 영향 가능성이 있는", text)
     # Collapse multiple spaces within lines but preserve newlines for markdown structure
     text = re.sub(r"[^\S\n]+", " ", text)
     # Collapse 3+ consecutive blank lines into 2
@@ -249,7 +250,7 @@ def _wrap_picture_tags(content: str) -> str:
             "<source srcset=\"{{ '" + webp_path + '\' | relative_url }}" type="image/webp">'
             "<img src=\"{{ '" + png_path + "' | relative_url }}\" "
             'alt="' + alt + '" loading="lazy" decoding="async">'
-            "</picture>"
+            "</picture>\n"
         )
 
     return _LIQUID_IMG_RE.sub(_picture_replace, content)

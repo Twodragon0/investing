@@ -132,6 +132,29 @@ _KO_TO_EN = {
     "다우존스": "Dow Jones",
     "다우존스 ETF": "Dow Jones ETF",
     "원/달러": "USD/KRW",
+    # S&P 500 sector ETF names
+    "금융": "Financials",
+    "부동산": "Real Estate",
+    "산업재": "Industrials",
+    "기술": "Technology",
+    "통신": "Communication",
+    "소비재(필수)": "Cons. Staples",
+    "소비재(임의)": "Cons. Discret.",
+    "헬스케어": "Health Care",
+    "에너지": "Energy",
+    "소재": "Materials",
+    "유틸리티": "Utilities",
+    # worldmonitor themes
+    "사회/기타": "Society/Other",
+    "지정학/안보": "Geopolitics/Security",
+    "금융시장": "Financial Markets",
+    "기타 지정학": "Other Geopolitics",
+    # geopolitical
+    "지정학": "Geopolitics",
+    "안보": "Security",
+    "분쟁": "Conflict",
+    "무역": "Trade",
+    "외교": "Diplomacy",
 }
 
 
@@ -297,7 +320,7 @@ COLORS = {
 _DS = {
     "pad_outer": 0.5,  # tight_layout outer padding
     "pad_title": 15,  # title top padding (set_title pad)
-    "dpi": 180,
+    "dpi": 200,
     "footer_size": 8,
     "title_size": 20,
     "subtitle_size": 10,
@@ -522,7 +545,7 @@ def _save_and_close(fig, filepath, *, bg=None):
     _convert_to_webp(filepath)
 
 
-def _convert_to_webp(png_path: str, quality: int = 80) -> Optional[str]:
+def _convert_to_webp(png_path: str, quality: int = 88) -> Optional[str]:
     """Convert a PNG image to WebP format for smaller file sizes.
 
     Returns the WebP file path on success, None on failure.
@@ -532,7 +555,7 @@ def _convert_to_webp(png_path: str, quality: int = 80) -> Optional[str]:
 
         webp_path = os.path.splitext(png_path)[0] + ".webp"
         with Image.open(png_path) as img:
-            img.save(webp_path, "WEBP", quality=quality, method=4)
+            img.save(webp_path, "WEBP", quality=quality, method=6)
         png_size = os.path.getsize(png_path)
         webp_size = os.path.getsize(webp_path)
         savings = (1 - webp_size / png_size) * 100 if png_size > 0 else 0
@@ -1262,10 +1285,11 @@ def generate_market_heatmap(
     legend_x_start = 0.25
     legend_w = 0.50
     n_legend = 40
+    legend_extreme = max_change
     for li in range(n_legend):
         frac = li / (n_legend - 1)
-        pct = -7.0 + 14.0 * frac
-        lc = _heatmap_bg_color(pct, extreme=7.0)
+        pct = -legend_extreme + 2 * legend_extreme * frac
+        lc = _heatmap_bg_color(pct, extreme=legend_extreme)
         strip_w = legend_w / n_legend
         rect = mpatches.Rectangle(
             (legend_x_start + li * strip_w, legend_y),
@@ -1279,7 +1303,7 @@ def generate_market_heatmap(
     ax.text(
         legend_x_start - 0.02,
         legend_y + legend_h / 2,
-        "-7%",
+        f"-{legend_extreme:.0f}%",
         ha="right",
         va="center",
         transform=ax.transAxes,
@@ -1291,7 +1315,7 @@ def generate_market_heatmap(
     ax.text(
         legend_x_start + legend_w + 0.02,
         legend_y + legend_h / 2,
-        "+7%",
+        f"+{legend_extreme:.0f}%",
         ha="left",
         va="center",
         transform=ax.transAxes,

@@ -35,9 +35,9 @@ class TestMakeHash:
         h2 = _make_hash("title B", "source", "2026-03-08")
         assert h1 != h2
 
-    def test_hash_length_16(self):
+    def test_hash_length_24(self):
         h = _make_hash("test", "src", "2026-01-01")
-        assert len(h) == 16
+        assert len(h) == 24
 
     def test_date_truncated_to_10(self):
         h1 = _make_hash("t", "s", "2026-03-08T12:00:00")
