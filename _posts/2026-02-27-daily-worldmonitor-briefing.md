@@ -42,35 +42,249 @@ description: "2026-02-27 기준 WorldMonitor 연계 소스에서 글로벌 이�
 
 ## 주요 이슈
 
-| 순번 | 주요 이슈 | 테마 | 중요도 | 출처 |
-| :---: | --- | :---: | :---: | --- |
-| 1 | [**Netflix ditches deal for Warner Bros. Discovery after Paramount’s offer is deemed superior**](https://www.cnbc.com/2026/02/26/warner-bros-discovery-paramount-skydance-deal-superior-netflix.html) | 지정학/안보 | 높음 | WorldMonitor/CNBC |
-| 2 | [**U.S. and Iran wrap up 'most intense' nuclear talks with no deal — more negotiations ahead**](https://www.cnbc.com/2026/02/27/us-iran-nuclear-talks-oil-middle-east.html) | 지정학/안보 | 높음 | WorldMonitor/CNBC |
-| 3 | [**CNBC's Inside India newsletter: As AI shockwaves hit software firms, what’s in store for India’s IT titans?**](https://www.cnbc.com/2026/02/26/cnbc-inside-india-newsletter-ai-hit-software-firms-india-it.html) | 지정학/안보 | 높음 | WorldMonitor/CNBC |
-| 4 | [**South Korea’s birthrate rises for second year with experts saying ‘echo boomers’ behind boost**](https://www.theguardian.com/world/2026/feb/25/south-korea-birth-rate-increase-rise-echo-boomers) | 금융시장 | 중간 | WorldMonitor/Guardian World |
-| 5 | [**Asia markets open mixed after Wall Street pullback on Nvidia slump**](https://www.cnbc.com/2026/02/27/asia-markets-nikkei-225-kospi-nifty-50.html) | 금융시장 | 중간 | WorldMonitor/CNBC |
-| 6 | [**Japan to deploy missiles to island near Taiwan by 2031, says defence minister**](https://www.theguardian.com/world/2026/feb/25/japan-missiles-yonaguni-island-near-taiwan-2031-defence-minister) | 정책/법률 | 중간 | WorldMonitor/Guardian World |
-| 7 | [**Two women arrested in Uganda for allegedly kissing in public could face life sentence**](https://www.theguardian.com/global-development/2026/feb/26/women-arrested-uganda-kissing-public-lgbtq-laws) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
-| 8 | [**‘A devastating force’: how recent storms turned to tragedies across the western Mediterranean**](https://www.theguardian.com/world/2026/feb/26/recent-mediterranean-storms-tragedies-spain-portugal-morocco) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
-| 9 | [**US accused of ‘shameless exploitation’ over proposed Zambian health aid deal**](https://www.theguardian.com/global-development/2026/feb/25/zambia-us-health-aid-deal-exploitation-mining-concessions-data-sharing-targets) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
-| 10 | [**Cuba vows to fight ‘terrorist aggression’ after attack from US-registered boat**](https://www.theguardian.com/world/2026/feb/26/what-to-know-cuba-boat-attack) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
-| 11 | [**Cuba says it killed heavily armed exiles who attacked from US-registered speedboat**](https://www.theguardian.com/world/2026/feb/25/cuba-says-border-guards-killed-four-gunmen-on-us-registered-speedboat) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
-| 12 | [**Brazilian politician brothers convicted of ordering murder of Rio city councillor**](https://www.theguardian.com/world/2026/feb/25/brazil-politician-brothers-convicted-murder) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
-| 13 | [**Boss of theatre hosting Chinese dance group Shen Yun in Sydney won’t be intimidated by ‘outrageous’ threats**](https://www.theguardian.com/australia-news/2026/feb/27/boss-of-theatre-hosting-chinese-dance-group-shen-yun-in-sydney-wont-be-intimidated-by-outrageous-threats) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
-| 14 | [**Jacinda Ardern living and working in Australia after move from US**](https://www.theguardian.com/world/2026/feb/26/jacinda-ardern-living-in-australia-former-nz-new-zealand-pm) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
-| 15 | [**US man deported from Bali after 11 years in prison for ‘suitcase murder’ of then girlfriend’s mother**](https://www.theguardian.com/world/2026/feb/25/us-man-tommy-schaefer-deported-from-bali-after-11-years-in-prison-for-suitcase-of-then-girlfriends-mother) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
-| 16 | [**Block shares soar 24% as company slashes workforce by nearly half**](https://www.cnbc.com/2026/02/26/block-laying-off-about-4000-employees-nearly-half-of-its-workforce.html) | 사회/기타 | 낮음 | WorldMonitor/CNBC |
-| 17 | [**CoreWeave shares slip 8% as quarterly revenue guidance disappoints**](https://www.cnbc.com/2026/02/26/coreweave-crwv-q4-earnings-report-2025.html) | 사회/기타 | 낮음 | WorldMonitor/CNBC |
-| 18 | [**Anthropic CEO Amodei says Pentagon's threats 'do not change our position' on AI**](https://www.cnbc.com/2026/02/26/anthropic-pentagon-ai-amodei.html) | 사회/기타 | 낮음 | WorldMonitor/CNBC |
-| 19 | [**The 'Great Wealth Transfer': A $3 trillion opportunity for Black business owners is on the horizon**](https://www.cnbc.com/2026/02/26/the-great-wealth-transfer-a-3-trillion-opportunity-for-black-business-owners-is-on-the-horizon.html) | 사회/기타 | 낮음 | WorldMonitor/CNBC |
-| 20 | [**Women’s wealth is expected to boom: Where they are investing and how they can maximize returns**](https://www.cnbc.com/2026/02/26/womens-wealth-is-expected-to-boom-where-they-are-investing-and-how-they-can-maximize-returns.html) | 사회/기타 | 낮음 | WorldMonitor/CNBC |
+<div class="wm-issue-list">
+<div class="wm-issue-card">
+<div class="wm-issue-num">1</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/26/warner-bros-discovery-paramount-skydance-deal-superior-netflix.html" target="_blank" rel="noopener noreferrer"><strong>Netflix ditches deal for Warner Bros. Discovery after Paramount’s offer is deemed superior</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">2</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/27/us-iran-nuclear-talks-oil-middle-east.html" target="_blank" rel="noopener noreferrer"><strong>U.S. and Iran wrap up 'most intense' nuclear talks with no deal — more negotiations ahead</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">3</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/26/cnbc-inside-india-newsletter-ai-hit-software-firms-india-it.html" target="_blank" rel="noopener noreferrer"><strong>CNBC's Inside India newsletter: As AI shockwaves hit software firms, what’s in store for India’s IT titans?</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">4</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/25/south-korea-birth-rate-increase-rise-echo-boomers" target="_blank" rel="noopener noreferrer"><strong>South Korea’s birthrate rises for second year with experts saying ‘echo boomers’ behind boost</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">금융시장</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">5</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/27/asia-markets-nikkei-225-kospi-nifty-50.html" target="_blank" rel="noopener noreferrer"><strong>Asia markets open mixed after Wall Street pullback on Nvidia slump</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">금융시장</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">6</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/25/japan-missiles-yonaguni-island-near-taiwan-2031-defence-minister" target="_blank" rel="noopener noreferrer"><strong>Japan to deploy missiles to island near Taiwan by 2031, says defence minister</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">정책/법률</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">7</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/global-development/2026/feb/26/women-arrested-uganda-kissing-public-lgbtq-laws" target="_blank" rel="noopener noreferrer"><strong>Two women arrested in Uganda for allegedly kissing in public could face life sentence</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">8</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/26/recent-mediterranean-storms-tragedies-spain-portugal-morocco" target="_blank" rel="noopener noreferrer"><strong>‘A devastating force’: how recent storms turned to tragedies across the western Mediterranean</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">9</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/global-development/2026/feb/25/zambia-us-health-aid-deal-exploitation-mining-concessions-data-sharing-targets" target="_blank" rel="noopener noreferrer"><strong>US accused of ‘shameless exploitation’ over proposed Zambian health aid deal</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">10</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/26/what-to-know-cuba-boat-attack" target="_blank" rel="noopener noreferrer"><strong>Cuba vows to fight ‘terrorist aggression’ after attack from US-registered boat</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">11</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/25/cuba-says-border-guards-killed-four-gunmen-on-us-registered-speedboat" target="_blank" rel="noopener noreferrer"><strong>Cuba says it killed heavily armed exiles who attacked from US-registered speedboat</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">12</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/25/brazil-politician-brothers-convicted-murder" target="_blank" rel="noopener noreferrer"><strong>Brazilian politician brothers convicted of ordering murder of Rio city councillor</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">13</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/australia-news/2026/feb/27/boss-of-theatre-hosting-chinese-dance-group-shen-yun-in-sydney-wont-be-intimidated-by-outrageous-threats" target="_blank" rel="noopener noreferrer"><strong>Boss of theatre hosting Chinese dance group Shen Yun in Sydney won’t be intimidated by ‘outrageous’ threats</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">14</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/26/jacinda-ardern-living-in-australia-former-nz-new-zealand-pm" target="_blank" rel="noopener noreferrer"><strong>Jacinda Ardern living and working in Australia after move from US</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">15</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/25/us-man-tommy-schaefer-deported-from-bali-after-11-years-in-prison-for-suitcase-of-then-girlfriends-mother" target="_blank" rel="noopener noreferrer"><strong>US man deported from Bali after 11 years in prison for ‘suitcase murder’ of then girlfriend’s mother</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">16</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/26/block-laying-off-about-4000-employees-nearly-half-of-its-workforce.html" target="_blank" rel="noopener noreferrer"><strong>Block shares soar 24% as company slashes workforce by nearly half</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">17</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/26/coreweave-crwv-q4-earnings-report-2025.html" target="_blank" rel="noopener noreferrer"><strong>CoreWeave shares slip 8% as quarterly revenue guidance disappoints</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">18</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/26/anthropic-pentagon-ai-amodei.html" target="_blank" rel="noopener noreferrer"><strong>Anthropic CEO Amodei says Pentagon's threats 'do not change our position' on AI</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">19</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/26/the-great-wealth-transfer-a-3-trillion-opportunity-for-black-business-owners-is-on-the-horizon.html" target="_blank" rel="noopener noreferrer"><strong>The 'Great Wealth Transfer': A $3 trillion opportunity for Black business owners is on the horizon</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">20</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/26/womens-wealth-is-expected-to-boom-where-they-are-investing-and-how-they-can-maximize-returns.html" target="_blank" rel="noopener noreferrer"><strong>Women’s wealth is expected to boom: Where they are investing and how they can maximize returns</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+</div>
 
 ## 출처 커버리지
 
-| 출처 | 건수 | 비중 |
-| --- | ---: | ---: |
-| WorldMonitor/Guardian World | 11건 | 55% |
-| WorldMonitor/CNBC | 9건 | 45% |
+<div class="wm-source-coverage">
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/Guardian World</span>
+<span class="wm-source-count">11건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:55%;background:#58a6ff;"></div>
+</div>
+<span class="wm-source-ratio">55%</span>
+</div>
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/CNBC</span>
+<span class="wm-source-count">9건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:45%;background:#22d3ee;"></div>
+</div>
+<span class="wm-source-ratio">45%</span>
+</div>
+</div>
 
 ## 원문 링크 묶음
 <div class="wm-reference-summary"><strong>원문 링크 탐색 가이드</strong><p>시장 영향이 높은 이슈를 우선 확인할 수 있도록 출처별 커버리지를 함께 제공합니다.</p></div>

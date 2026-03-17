@@ -33,35 +33,249 @@ image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-02-21.png"
 
 ## 주요 이슈
 
-| 순번 | 주요 이슈 | 테마 | 시장 영향 | 출처 |
-| :---: | --- | :---: | :---: | --- |
-| 1 | [**Trump says he is considering limited military strike on Iran**](https://www.bbc.com/news/articles/cdxzk4gvzp0o?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
-| 2 | [**At least 10 killed in Israeli strikes on Lebanon - state media**](https://www.bbc.com/news/articles/cvg8914dkl0o?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
-| 3 | [**Russia-Ukraine war: List of key events, day 1,458**](https://www.aljazeera.com/news/2026/2/21/russia-ukraine-war-list-of-key-events-day-1458?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 4 | [**US military says it attacked vessel in Pacific Ocean, killing three people**](https://www.aljazeera.com/news/2026/2/21/us-military-says-it-attacked-vessel-in-pacific-ocean-killing-three-people?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 5 | [**US envoy suggests it would be ‘fine’ if Israel expands across Middle East**](https://www.aljazeera.com/news/2026/2/20/us-envoy-suggests-it-would-be-fine-if-israel-expands-across-middle-east?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 6 | [**Trump brings in new 10% tariff as Supreme Court rejects his global import taxes**](https://www.bbc.com/news/articles/cn8146l0n55o?at_medium=RSS&at_campaign=rss) | 정책/법률 | 중간 | WorldMonitor/BBC World |
-| 7 | [**Trump lashes out at Supreme Court justices over tariffs ruling**](https://www.bbc.com/news/articles/cd9g0e7zd8wo?at_medium=RSS&at_campaign=rss) | 정책/법률 | 중간 | WorldMonitor/BBC World |
-| 8 | [**Killing of nationalist student leaves French far left in deep trouble as elections loom**](https://www.bbc.com/news/articles/cnv61zv534eo?at_medium=RSS&at_campaign=rss) | 정책/법률 | 중간 | WorldMonitor/BBC World |
-| 9 | [**Venezuelan opposition politician released after amnesty law passed**](https://www.bbc.com/news/articles/cy57en3590no?at_medium=RSS&at_campaign=rss) | 정책/법률 | 중간 | WorldMonitor/BBC World |
-| 10 | [**Trump, JD Vance vilify ‘lawless’ Supreme Court justices over tariff ruling**](https://www.aljazeera.com/news/2026/2/21/trump-jd-vance-vilify-lawless-supreme-court-justices-over-tariff-ruling?traffic_source=rss) | 정책/법률 | 중간 | WorldMonitor/Al Jazeera |
-| 11 | [**Nasa targets early March to send humans back around the Moon**](https://www.bbc.com/news/articles/c86y1g6wde3o?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 12 | [**Anna Murdoch-Mann, mother of News Corp heir, dies aged 81**](https://www.bbc.com/news/articles/cp8150xj36wo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 13 | [**Austrian climber found guilty after girlfriend froze to death on mountain**](https://www.bbc.com/news/articles/c0k1xkllknmo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 14 | [**Rare prison sentences handed to Cameroon soldiers after killing of 21 civilians**](https://www.bbc.com/news/articles/cev74dywd7eo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 15 | [**French soldier dies after being shot in head during 'game' with other soldiers**](https://www.bbc.com/news/articles/cj4z25gl24eo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 16 | [**Dog trained to illegally dump rubbish, Italian authorities say**](https://www.bbc.com/news/articles/cy57erz57xyo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 17 | [**Asos co-founder dies after Thailand apartment block fall**](https://www.bbc.com/news/articles/ce8w0n061ryo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 18 | [**Mother and infant burnt to death in Indian state over witchcraft allegations**](https://www.bbc.com/news/articles/c98q93gdy3do?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 19 | [**Hamas holds vote to choose new interim leader, source tells BBC**](https://www.bbc.com/news/articles/c23z0kdypm3o?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 20 | [**Twelve Palestine Action activists granted bail**](https://www.aljazeera.com/news/2026/2/20/heads-held-high-12-palestine-action-action-prisoners-granted-bail?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
+<div class="wm-issue-list">
+<div class="wm-issue-card">
+<div class="wm-issue-num">1</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cdxzk4gvzp0o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Trump says he is considering limited military strike on Iran</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">2</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cvg8914dkl0o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>At least 10 killed in Israeli strikes on Lebanon - state media</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">3</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/21/russia-ukraine-war-list-of-key-events-day-1458?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Russia-Ukraine war: List of key events, day 1,458</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">4</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/21/us-military-says-it-attacked-vessel-in-pacific-ocean-killing-three-people?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>US military says it attacked vessel in Pacific Ocean, killing three people</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">5</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/20/us-envoy-suggests-it-would-be-fine-if-israel-expands-across-middle-east?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>US envoy suggests it would be ‘fine’ if Israel expands across Middle East</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">6</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cn8146l0n55o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Trump brings in new 10% tariff as Supreme Court rejects his global import taxes</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">정책/법률</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">7</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cd9g0e7zd8wo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Trump lashes out at Supreme Court justices over tariffs ruling</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">정책/법률</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">8</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cnv61zv534eo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Killing of nationalist student leaves French far left in deep trouble as elections loom</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">정책/법률</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">9</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cy57en3590no?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Venezuelan opposition politician released after amnesty law passed</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">정책/법률</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">10</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/21/trump-jd-vance-vilify-lawless-supreme-court-justices-over-tariff-ruling?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Trump, JD Vance vilify ‘lawless’ Supreme Court justices over tariff ruling</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">정책/법률</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">11</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c86y1g6wde3o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Nasa targets early March to send humans back around the Moon</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">12</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cp8150xj36wo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Anna Murdoch-Mann, mother of News Corp heir, dies aged 81</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">13</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c0k1xkllknmo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Austrian climber found guilty after girlfriend froze to death on mountain</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">14</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cev74dywd7eo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Rare prison sentences handed to Cameroon soldiers after killing of 21 civilians</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">15</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cj4z25gl24eo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>French soldier dies after being shot in head during 'game' with other soldiers</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">16</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cy57erz57xyo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Dog trained to illegally dump rubbish, Italian authorities say</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">17</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/ce8w0n061ryo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Asos co-founder dies after Thailand apartment block fall</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">18</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c98q93gdy3do?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Mother and infant burnt to death in Indian state over witchcraft allegations</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">19</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c23z0kdypm3o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Hamas holds vote to choose new interim leader, source tells BBC</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">20</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/20/heads-held-high-12-palestine-action-action-prisoners-granted-bail?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Twelve Palestine Action activists granted bail</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+</div>
 
 ## 출처 커버리지
 
-| 출처 | 건수 | 비중 |
-| --- | ---: | ---: |
-| WorldMonitor/BBC World | 15건 | 75% |
-| WorldMonitor/Al Jazeera | 5건 | 25% |
+<div class="wm-source-coverage">
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/BBC World</span>
+<span class="wm-source-count">15건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:75%;background:#58a6ff;"></div>
+</div>
+<span class="wm-source-ratio">75%</span>
+</div>
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/Al Jazeera</span>
+<span class="wm-source-count">5건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:25%;background:#22d3ee;"></div>
+</div>
+<span class="wm-source-ratio">25%</span>
+</div>
+</div>
 
 ## 원문 링크 묶음
 <strong>원문 링크 탐색 가이드</strong><p>시장 영향이 높은 이슈를 우선 확인할 수 있도록 출처별 커버리지를 함께 제공합니다.</p></div>

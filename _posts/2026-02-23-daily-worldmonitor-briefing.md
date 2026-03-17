@@ -51,35 +51,249 @@ image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-02-23.png"
 
 ## 주요 이슈
 
-| 순번 | 주요 이슈 | 테마 | 시장 영향 | 출처 |
-| :---: | --- | :---: | :---: | --- |
-| 1 | [**Trump demands Netflix fire Susan Rice as DOJ probes Warner deal**](https://www.cnbc.com/2026/02/22/trump-demands-netflix-fire-susan-rice-as-doj-probes-warner-deal.html) | 지정학/안보 | 높음 | WorldMonitor/CNBC |
-| 2 | [**Russia-Ukraine war: List of key events, day 1,460**](https://www.aljazeera.com/news/2026/2/23/russia-ukraine-war-list-of-key-events-day-1460?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 3 | [**Brazil does not want ‘a new Cold War’, says President Lula**](https://www.aljazeera.com/news/2026/2/22/brazil-does-not-want-a-new-cold-war-says-lula?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 4 | [**South Korea's Kospi hits fresh high as Asian markets brush off Trump's latest tariff moves**](https://www.cnbc.com/2026/02/23/asia-pacific-markets-hang-seng-index-nifty-50-kospi-trump-tariffs-15-percent-supreme-court.html) | 금융시장 | 중간~높음 | WorldMonitor/CNBC |
-| 5 | [**Is private equity the next market crisis? How we got here and what's next**](https://www.cnbc.com/2026/02/22/jim-cramer-looks-at-whether-private-equity-the-next-market-crisis.html) | 금융시장 | 중간~높음 | WorldMonitor/CNBC |
-| 6 | [**The world's largest energy lender has a new head: Here's how it could shape U.S. policy**](https://www.cnbc.com/2026/02/22/the-worlds-largest-energy-lender-has-a-new-head-heres-how-it-could-shape-us-policy.html) | 에너지 | 중간~높음 | WorldMonitor/CNBC |
-| 7 | [**U.S. importers still paying Trump's illegal tariffs even after Supreme Court ruling**](https://www.cnbc.com/2026/02/22/trump-tariffs-ieepa-supreme-court.html) | 정책/법률 | 중간 | WorldMonitor/CNBC |
-| 8 | [**Five key takeaways from the Supreme Court's landmark decision against Trump's tariffs**](https://www.cnbc.com/2026/02/21/supreme-courts-trump-tariff-decision-five-takeaways.html) | 정책/법률 | 중간 | WorldMonitor/CNBC |
-| 9 | [**Bitcoin falls below $65,000 as Trump tariff moves raise uncertainty**](https://www.cnbc.com/2026/02/23/bitcoin-falls-trump-tariffs.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
-| 10 | [**Trump unveils ‘Tech Corps’ to promote American AI abroad**](https://www.cnbc.com/2026/02/23/us-launch-peace-corps-tech-corps-india-export-ai-stack-sovereignty-counter-china.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
-| 11 | [**Armed man killed by authorities trying to enter Trump Mar-a-Lago club**](https://www.cnbc.com/2026/02/22/trump-secret-service-shooting-mar-a-lago.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
-| 12 | [**DHS abruptly reverses suspension of TSA PreCheck**](https://www.cnbc.com/2026/02/22/tsa-airlines-weather-shutdown-blizzard-dhs.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
-| 13 | [**Trump to hike global tariffs to 15% from 10%, 'effective immediately'**](https://www.cnbc.com/2026/02/21/trump-tariffs.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
-| 14 | [**Blizzard snarls air travel along U.S. East Coast as airlines cancel thousands of flights**](https://www.cnbc.com/2026/02/21/blizzard-prompts-airlines-waive-flight-change-fees.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
-| 15 | [**As American Girl turns 40, Mattel grapples with bringing dolls into a new era**](https://www.cnbc.com/2026/02/22/american-girl-40th-anniversary-sales-mattel.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
-| 16 | [**Under mounting toy pressures, Hasbro has a secret sauce that Mattel hasn't matched**](https://www.cnbc.com/2026/02/21/hasbro-vs-mattel-toy-industry-pressures-make-digital-the-star.html) | 사회/기타 | 낮음~중간 | WorldMonitor/CNBC |
-| 17 | [**North Korea’s Kim Jong Un re-elected as chief of Workers’ Party**](https://www.aljazeera.com/news/2026/2/22/north-koreas-kim-jong-un-re-elected-as-chief-of-workers?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
-| 18 | [**White House post after US hockey win over Canada stirs controversy**](https://www.aljazeera.com/news/2026/2/22/white-house-post-after-us-hockey-win-over-canada-stirs-controversy?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
-| 19 | [**Violence erupts in Mexico after killing of drug cartel kingpin ‘El Mencho’**](https://www.aljazeera.com/news/2026/2/22/mexico-announces-killing-of-drug-cartel-kingpin-el-mencho?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
-| 20 | [**What will Trump’s latest sweeping tariffs mean for the world?**](https://www.aljazeera.com/video/inside-story/2026/2/22/what-will-trumps-latest-sweeping-tariffs-mean-for-the-world?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
+<div class="wm-issue-list">
+<div class="wm-issue-card">
+<div class="wm-issue-num">1</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/22/trump-demands-netflix-fire-susan-rice-as-doj-probes-warner-deal.html" target="_blank" rel="noopener noreferrer"><strong>Trump demands Netflix fire Susan Rice as DOJ probes Warner deal</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">2</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/23/russia-ukraine-war-list-of-key-events-day-1460?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Russia-Ukraine war: List of key events, day 1,460</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">3</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/22/brazil-does-not-want-a-new-cold-war-says-lula?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Brazil does not want ‘a new Cold War’, says President Lula</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">4</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/23/asia-pacific-markets-hang-seng-index-nifty-50-kospi-trump-tariffs-15-percent-supreme-court.html" target="_blank" rel="noopener noreferrer"><strong>South Korea's Kospi hits fresh high as Asian markets brush off Trump's latest tariff moves</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">금융시장</span>
+<span class="wm-issue-impact" style="color:#8b949e;">중간~높음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">5</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/22/jim-cramer-looks-at-whether-private-equity-the-next-market-crisis.html" target="_blank" rel="noopener noreferrer"><strong>Is private equity the next market crisis? How we got here and what's next</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">금융시장</span>
+<span class="wm-issue-impact" style="color:#8b949e;">중간~높음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">6</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/22/the-worlds-largest-energy-lender-has-a-new-head-heres-how-it-could-shape-us-policy.html" target="_blank" rel="noopener noreferrer"><strong>The world's largest energy lender has a new head: Here's how it could shape U.S. policy</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">에너지</span>
+<span class="wm-issue-impact" style="color:#8b949e;">중간~높음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">7</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/22/trump-tariffs-ieepa-supreme-court.html" target="_blank" rel="noopener noreferrer"><strong>U.S. importers still paying Trump's illegal tariffs even after Supreme Court ruling</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">정책/법률</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">8</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/21/supreme-courts-trump-tariff-decision-five-takeaways.html" target="_blank" rel="noopener noreferrer"><strong>Five key takeaways from the Supreme Court's landmark decision against Trump's tariffs</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">정책/법률</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">9</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/23/bitcoin-falls-trump-tariffs.html" target="_blank" rel="noopener noreferrer"><strong>Bitcoin falls below $65,000 as Trump tariff moves raise uncertainty</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">10</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/23/us-launch-peace-corps-tech-corps-india-export-ai-stack-sovereignty-counter-china.html" target="_blank" rel="noopener noreferrer"><strong>Trump unveils ‘Tech Corps’ to promote American AI abroad</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">11</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/22/trump-secret-service-shooting-mar-a-lago.html" target="_blank" rel="noopener noreferrer"><strong>Armed man killed by authorities trying to enter Trump Mar-a-Lago club</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">12</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/22/tsa-airlines-weather-shutdown-blizzard-dhs.html" target="_blank" rel="noopener noreferrer"><strong>DHS abruptly reverses suspension of TSA PreCheck</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">13</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/21/trump-tariffs.html" target="_blank" rel="noopener noreferrer"><strong>Trump to hike global tariffs to 15% from 10%, 'effective immediately'</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">14</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/21/blizzard-prompts-airlines-waive-flight-change-fees.html" target="_blank" rel="noopener noreferrer"><strong>Blizzard snarls air travel along U.S. East Coast as airlines cancel thousands of flights</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">15</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/22/american-girl-40th-anniversary-sales-mattel.html" target="_blank" rel="noopener noreferrer"><strong>As American Girl turns 40, Mattel grapples with bringing dolls into a new era</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">16</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/21/hasbro-vs-mattel-toy-industry-pressures-make-digital-the-star.html" target="_blank" rel="noopener noreferrer"><strong>Under mounting toy pressures, Hasbro has a secret sauce that Mattel hasn't matched</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">17</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/22/north-koreas-kim-jong-un-re-elected-as-chief-of-workers?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>North Korea’s Kim Jong Un re-elected as chief of Workers’ Party</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">18</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/22/white-house-post-after-us-hockey-win-over-canada-stirs-controversy?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>White House post after US hockey win over Canada stirs controversy</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">19</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/22/mexico-announces-killing-of-drug-cartel-kingpin-el-mencho?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Violence erupts in Mexico after killing of drug cartel kingpin ‘El Mencho’</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">20</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/video/inside-story/2026/2/22/what-will-trumps-latest-sweeping-tariffs-mean-for-the-world?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>What will Trump’s latest sweeping tariffs mean for the world?</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+</div>
 
 ## 출처 커버리지
 
-| 출처 | 건수 | 비중 |
-| --- | ---: | ---: |
-| WorldMonitor/CNBC | 14건 | 70% |
-| WorldMonitor/Al Jazeera | 6건 | 30% |
+<div class="wm-source-coverage">
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/CNBC</span>
+<span class="wm-source-count">14건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:70%;background:#58a6ff;"></div>
+</div>
+<span class="wm-source-ratio">70%</span>
+</div>
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/Al Jazeera</span>
+<span class="wm-source-count">6건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:30%;background:#22d3ee;"></div>
+</div>
+<span class="wm-source-ratio">30%</span>
+</div>
+</div>
 
 ## 원문 링크 묶음
 <strong>원문 링크 탐색 가이드</strong><p>시장 영향이 높은 이슈를 우선 확인할 수 있도록 출처별 커버리지를 함께 제공합니다.</p></div>
