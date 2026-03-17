@@ -6,6 +6,7 @@ categories: [stock-trading-journal]
 tags: [trading, stock, journal, KOSPI, semiconductors, rotation]
 source: "manual"
 lang: "ko"
+journal_mode: "paper"
 journal_sector: "반도체, 자동차"
 journal_trade_count_value: 4
 journal_win_rate_value: 75

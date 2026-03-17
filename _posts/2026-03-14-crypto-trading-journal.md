@@ -6,6 +6,7 @@ categories: [crypto-trading-journal]
 tags: [trading, crypto, journal, BTC, SOL, momentum]
 source: "manual"
 lang: "ko"
+journal_mode: "paper"
 journal_pair: "BTC/SOL"
 journal_trade_count_value: 3
 journal_win_rate_value: 67

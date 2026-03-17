@@ -6,6 +6,7 @@ categories: [stock-trading-journal]
 tags: [trading, stock, journal, KOSPI, semiconductor, defense]
 source: "manual"
 lang: "ko"
+journal_mode: "paper"
 journal_sector: "반도체, 방산"
 journal_trade_count_value: 3
 journal_win_rate_value: 67

@@ -11,6 +11,7 @@
       <h2>오늘의 실행 요약</h2>
     </div>
     <div class="trading-journal-badges">
+      {% if page.journal_mode == "live" %}<span class="journal-mode-badge journal-mode-live">실전투자</span>{% elsif page.journal_mode == "paper" %}<span class="journal-mode-badge journal-mode-paper">모의투자</span>{% endif %}
       {% if page.journal_market_regime %}<span class="journal-badge">{{ page.journal_market_regime }}</span>{% endif %}
       {% if page.journal_confidence %}<span class="journal-badge">신뢰도 {{ page.journal_confidence }}</span>{% endif %}
       {% if page.journal_risk_posture %}<span class="journal-badge">{{ page.journal_risk_posture }}</span>{% endif %}

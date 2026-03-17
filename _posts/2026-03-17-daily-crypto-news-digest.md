@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-crypto-2026-03-17.png"
+image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-17.png"
 permalink: "/crypto-news/2026/03/17/daily-crypto-news-digest/"
 description: "2026-03-17 암호화폐 시장에서 101건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 이더리움 관련 소식이 주목됩니다. 긴급: 암호화폐 회사 블록필, 거래 일시 중단 후 파산 파일 제출"
 excerpt: "2026-03-17 암호화폐 시장에서 101건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 이더리움 관련 소식이 주목됩니다. 긴급: 암호화폐 회사 블록필, 거래 일시…"
@@ -50,9 +50,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-17 - crypto-news 뉴스 요�
 *비트코인, 암호화폐 이슈로 49건의 보도가 이어지고 있습니다.*
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMipgFBVV95cUxNZTFMdlJxWmo0c1hmXzFOOGZKYktEb3BtRkJlWElBUkVYWHBBV0JQQS03VlBaZnh4XzZnR2gtcmhCNTZHYy1UdUVNUGY3aXQtcE5kZUd3ZVZheklvZGJYci1CcFdQMXBFQnR1NmwwMktoeWNuNnl3X2daNW5lNGdiR2hoWkJvQnU4ampwU2RkRjMzRmJ0TVR6TEY5a1VISkprOU45N253?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 기타 시장이 여전히 부진함에 따라 아시아 지역 상승</a>
 <p class="news-desc">Bitcoin Climbs in Asia as Other Markets Remain Tepid. 상승 지속성을 확인해야 합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
@@ -60,9 +61,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-17 - crypto-news 뉴스 요�
 </div>
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-high">
 <div class="news-card-num">2</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMipgFBVV95cUxQVEt4Rmp1MGpNUVhEUGwtcHFfZ2lnVWdTdEswMjdKYlZfaUZVZ1lqUWRMU0g0Njg3RzhwbVgwZ3BUaDdhcllmUVk3amNDNGNFWURlbXIyOTJqbkJMQ2lVZ3NPUzB0a0pUN2s3X0YxejZrMDVfR29RRkJMbVFrb0x4eFZnU3ZDVHdFZlVpT2lsMDJFTTdjVVFSa2wyeHItVTBkaGhUc05B0gGrAUFVX3lxTE9GT0M4SWdvLVFWYUhOOFZkdGM4WWhwR3FzZ3RhZ2UydlBnVE1tMVQ4NnozTEpGTjNTRXlza2wza0ZVdER4YUgwc1I1U01zcGo1RGdlZVQzMF9BNkZiZE1ueDJVZy1XUmlJalZGNkgwaENjMllhdC1OQ3piRlFOOUo5V3FlRktQcmoxOWFsR1Vha0U0SnAtMUxnUEU4N0tPeFBkZkRvRzhiQk1PNA?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인은 이란 전쟁 발발 이후 S&P 500, 나스닥 복합 및 금을 이겼습니다.</a>
 <p class="news-desc">Bitcoin beat the S&P 500, Nasdaq Composite and gold since the start of the Iran war. 지정학적 리스크가 글로벌 시장 심리에 영향을 주고 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
@@ -70,9 +72,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-17 - crypto-news 뉴스 요�
 </div>
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-high">
 <div class="news-card-num">3</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMivwFBVV95cUxQYXRhTl84VXRNQmEyQUJTNk9Jb2JNZGdoUE5ZdGIwWDlzVU5ZbU9td0ZDaHNYbWtwTFNsVU9BQ1VjQlFvYkdOMnREb0hCUk5mWGxrV3V1NUItMXFVbEFkWEVST3dkeDZJSEtBRXlEbVpjRkljN2MzbWJDLWQtNUltN0pTX2M5SDFydE8yX2ZTaDFMY0plUm5KaVlUbEMyQ1Zib0luZGNtanVJcjZoZ2lxWjlGZ1JrekZsMjdEbzItbw?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">암호화폐 주식 랠리, 이러한 요인으로 인해 비트코인이 2월 최고치로 반등</a>
 <p class="news-desc">암호화폐 주식 랠리, 이러한 요인으로 인해 비트코인이 2월 최고치로 반등했습니다. </p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
@@ -91,9 +94,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-17 - crypto-news 뉴스 요�
 *비트코인, 암호화폐, 일제 흐름에 32건의 뉴스가 집중되고 있습니다.*
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMimAFBVV95cUxQdEx1YXYtRWJ3dVF3M0dwU0Y0NFFiV2FBcWZDRENJelZ4UnAzRnhTNmZFTU9FY0tzVEtrREZLa0VGdmQyY3gwcXJsS1BycWNqZUpNV0ZMaW12TzNMWVZWc3lMWmdvNWNGV3RJZHJ3cU80TEk2RUVjOHRhQkY2LVVKVWVHQmh4NWc5UEZ5WkNOOTFlM0NwTHJLag?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">다음 강세장을 위해 구매할 상위 3개 암호화폐</a>
 <p class="news-desc">다음 강세장을 위해 구매할 상위 3개 암호화폐.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
@@ -101,9 +105,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-17 - crypto-news 뉴스 요�
 </div>
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-medium">
 <div class="news-card-num">2</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMimgNBVV95cUxOQ1oxdFJzUncxWUpVQVNqWU9kT19MZ1RPdXIwRTBUVTZ5b3BxMlJiRkNsOTZ6SlhSTDJ1WjVUTEdhRTJRazB4Ty05SVMybEZhMDNJOFNfLTRTNzhjVjFjYUdHZHh2TEhrYWcyaFFad0dFVmdxekZFZXpoLUpVMHVwckUyMEtRUkpHWGtVeXJvV0F6RW5adUN4ZGdacWR3WmpEUkNSaXBQazY4V00yc3E4VHhQS3ZHUWZWZzZpV1FrSElRS3JTVWduRGV5RjZsRTJrcC15S1dMNkZXUDVINC1FSFdab1RvWmJPUkpYZFFEZEs5MGlXdDl0UkNxc2JPUklhYnZhek00WGZNQlFWeGVzaG1ORXQ5dXFTamhMdUNiZE5IbW1nQU93YWZzTjlFNzlCRFpaUFpVSGtWdEhDam1YN212VlZmNFV2bEphYjNwWUh5RzFmOTNheUhNQU53Tk1RRTFYYklNYlVIZTU3YzlVT3Q5bFp5NzUtSm5LRmFiTm40QVFnbzk2dU1vVXBHZjFkQXAwY19WRkJNdw?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">전략, 기타 암호화폐 주식은 비트코인로 점프합니다. 계속해서 상승할 수 있는 이유</a>
 <p class="news-desc">전략, 기타 암호화폐 주식은 비트코인로 점프합니다. 왜 그들은 계속 상승할 수 있을까?</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
@@ -111,9 +116,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-17 - crypto-news 뉴스 요�
 </div>
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-high">
 <div class="news-card-num">3</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMi1AFBVV95cUxNNHdQTnlXZmVESTRjMmFaMENqeWhuajVqaExubFZRYlFIYWZ6cjBNUUo1S2pTMXN3SGM3d2xobm9PQXBsWG9NVlJDemdaQkNVY3lMV0hSNjhiVUVtYWhOUHNUZ0ItTkZ2WUw5dGZmaEZPTnFXZzJQS2VQVG9QLWtCV1hGYWJ1U0Vhbk9HOFpCQWJTbXBmRy1LTDF6ODlfal9UY2JBSXg3Rjc1QXFzYnRLdWpZSlhoYmE0eUZlQlFyWXNNcWFsTDlqS21PR3RCOUtLNHQ4Vg?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 오늘 가격: 단기 청산으로 인해 $74,000를 넘어 6주 최고치 기록</a>
 <p class="news-desc">비트코인 오늘 가격: 단기 청산이 부양을 제공하면서 $74,000를 넘어 6주 최고치를 기록했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
@@ -134,9 +140,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-17 - crypto-news 뉴스 요�
 *Ethereum, ETH, Bitcoin 흐름에 11건의 뉴스가 집중되고 있습니다.*
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxPQS05bmhzUTBkYldoSmUxM3d6U3g3SzhaZjR5OXJsd1ZQWHo3VlVvWjhhajltTlNkNE1XN2YwR3lvWnNHWmZoV0RBWnFZMmMxdDBNVlFXYXZ3ZGhXMjZkekZLUVgwNmtMc0xZZnQzYjNvczdka1RKVll6YWxfb2FPa09xWjdlOHo1clZ3YVlLeENEZzhLWVN3aw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">7년 장기 보유 시 더 유망한 암호화폐: XRP 대 이더리움 - The Motley Fool</a>
 <p class="news-desc">7년 장기 보유 시 더 유망한 암호화폐: XRP 대 이더리움 The Motley Fool</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
@@ -144,9 +151,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-17 - crypto-news 뉴스 요�
 </div>
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-medium">
 <div class="news-card-num">2</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTFBreDhzWmtKMkNNSTMwTjVvVmd6M1JGU3ZmaHFtMzBHd3dJNElBVWdleFFHd0xicWVFazdSMmhjNnBnV0libTZ4b1E1ajV6aEJQekpUeA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">솔라나 4.3% 상승…비트코인·이더리움 등 코인 시세는</a>
 <p class="news-desc">솔라나 4.3% 상승…비트코인·이더리움 등 코인 시세는. 4.3% 변동에 따른 시장 영향을 주시해야 합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
@@ -154,10 +162,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-17 - crypto-news 뉴스 요�
 </div>
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-medium">
 <div class="news-card-num">3</div>
 <div class="news-card-thumb"><img src="https://cdn.sanity.io/images/s3y3vcno/production/8809137a1448874d16e706bcb41913d518d008d6-3840x2160.png?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
 <div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
 <a href="https://www.coindesk.com/tech/2026/03/16/ethereum-foundation-s-new-mandate-sparks-debate-about-its-role-priorities" class="news-title" target="_blank" rel="noopener noreferrer">이더리움 재단의 새로운 임무로 인해 재단의 역할과 우선순위에 대한 논쟁이 촉발되었습니다</a>
 <p class="news-desc">이 문서는 이더리움 커뮤니티 전체에서 빠르게 논쟁을 촉발시켰으며 지지자들은 이 문서가 네트워크의 핵심 원칙을 강화한다고 말했습니다. 그러나 비평가들은 이 명령이 블록체인에 대한 기관의 관심이 가속화됨에 따라 재단이 뒷자리를 차지할 의도가 있다는 신호라고 주장합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
@@ -175,9 +184,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-17 - crypto-news 뉴스 요�
 *22건의 기사에서 Senate, Canada, Iran 키워드가 부각되고 있습니다.*
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMimwFBVV95cUxPbTdQZkZGUjhUWUVvUGZqWjBVbE5hbDMzZnBnNlF5bFY3SHV3RmNjeFdsc1EyVS04b19uRi15RFpiWkpHSU1PWDdUeWMzTXAwUldoc2VnYWd1TGNxdHZCWC1JQU9DNDc2LW5hSmxOWjJfRlRJUTJUZmM2VHBzMTFKbC00QmNlVnlHTlVyU09BMzc1RmlERDdXYkNuUQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">호주 상원 패널, 암호화폐 규제 프레임워크 지지</a>
 <p class="news-desc">호주 상원 패널은 암호화폐 규제 프레임워크를 지지합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
@@ -185,9 +195,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-17 - crypto-news 뉴스 요�
 </div>
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-medium">
 <div class="news-card-num">2</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxNM0Y0eGM0Y1hUSk9CNFc5VXZETjc4aEM4VU1RSTJGbVdfejRVSlNLQ2ZIRFFkQW1BMTJNeTc1ZkZIaC0tdEh2UW56a0VHeDFOLTFHTnVjZ0tUY1Q3TnhZdFZ6X1RPNm9uU0tjZG10S2xXNmFZTkFJVE0wcWFaYUdVaW94Nnl4MTFjNzRfU0FVV2w4ZVZYWmxj0gGXAUFVX3lxTE5HaWJQYndGYm9uM0RBYnkwX25SYVR3Q3pfMEcyQWVMVWptRExNSlMtV292NVZtXzhfSEdwVHJaU1lkU3ZpZnhJZHhCSVVaZ2UyMXNuQlVOYXhkaDlsNTBMeGFxSndFd19lWGd5T3VZYVotUWdCNVQ5ai1YSl81cDdWWHpLMVJtbWxfWTIxenluSUJSazgxSE0?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">트럼프에 맞춰 아이다호 주의회 의사당에서 디지털 통화 발전을 촉진하는 암호화폐 법안 - Idaho Statesman</a>
 <p class="news-desc">트럼프에 맞춰 아이다호 주 의사당에서 디지털 통화 발전을 촉진하는 암호화폐 법안 Idaho Statesman</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
@@ -195,9 +206,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-17 - crypto-news 뉴스 요�
 </div>
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-medium">
 <div class="news-card-num">3</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxPbTdQZkZGUjhUWUVvUGZqWjBVbE5hbDMzZnBnNlF5bFY3SHV3RmNjeFdsc1EyVS04b19uRi15RFpiWkpHSU1PWDdUeWMzTXAwUldoc2VnYWd1TGNxdHZCWC1JQU9DNDc2LW5hSmxOWjJfRlRJUTJUZmM2VHBzMTFKbC00QmNlVnlHTlVyU09BMzc1RmlERDdXYkNuUQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">호주 상원 패널은 암호화폐 규제 프레임워크를 지지합니다 - CoinDesk</a>
 <p class="news-desc">호주 상원 패널은 암호화폐 규제 프레임워크를 지지합니다 CoinDesk</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
@@ -216,9 +228,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-17 - crypto-news 뉴스 요�
 *비트코인 이슈로 10건의 보도가 이어지고 있습니다.*
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5ESURhdkoxQVRxY0tDUVRCNUtCZDRLcS1IUllRUEhSMGRLZjhSZEdSbHRObWJ5ajRDOHNlbVktY0NHOVY5VFNZRXluVUx6MGlKOE81RjVYX0tNLTVUb2tYctIBeEFVX3lxTE5ScVM0c2VFNWxldFc2Rk13RGhXWEpISTVIczIwWDJOLW5uRU9aamNtSnNwMzNKVzl3d3RHcmNiYmNxajlEWTJFeEtrRWhKTEJwVXJ6R010YnhCcVVjOVY3Tm0zd1RCMVhFbVRZUGN1S3FaR0F2WWMzUw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">1억선 잠잠한 비트코인…전문가 "3분기 반등 온다"</a>
 <p class="news-desc">시장 반등 움직임이 포착되었습니다. 기술적 반등인지 추세 전환인지 거래량과 수급 확인이 필요합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
@@ -226,9 +239,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-17 - crypto-news 뉴스 요�
 </div>
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-high">
 <div class="news-card-num">2</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9jd085cjN3Ymg4NDZBVEY0dVJfSW8yMTVHREQ5TW5HcjdnNktBanZiaGRDMHBvR3RHZ0pxZjVrWTFGTUM4UEFxeWljZjdIdVlWektfbXdwcVFlWks0WnJfWTNnbEpyY00wa0FUblhyRTJpcGM?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">암호화폐株, 중동 위기 속 비트코인 반등에…스트래티지·코인베이스 4%↑ - 마켓인</a>
 <p class="news-desc">시장 반등 움직임이 포착되었습니다. 기술적 반등인지 추세 전환인지 거래량과 수급 확인이 필요합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
@@ -236,9 +250,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-17 - crypto-news 뉴스 요�
 </div>
 
 
-<div class="news-card-item">
+<div class="news-card-item news-sev-high">
 <div class="news-card-num">3</div>
 <div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE1UaW1FS2l1WWN0WXhDb2pYdDZpcTJCOU1wRF95cHFieHV6TldYbi1EWEVRbXVoZENKUnRHMFp5SkZMUlNIZE1aUEFBcVRBajA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">유가 변동성에 암호화폐 일제 랠리, 비트 4%-이더 8% 급등(상보)</a>
 <p class="news-desc">시장 반등 움직임이 포착되었습니다. 기술적 반등인지 추세 전환인지 거래량과 수급 확인이 필요합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
