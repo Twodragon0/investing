@@ -27,19 +27,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-03-17 - regulatory-news 뉴
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">26</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 11</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">23</div><div class="stat-label">한국</div></div></div>
 <div class="alert-box alert-info"><strong>글로벌 규제: 전세사기, 없습니다, 피해자 관련 26건 수집</strong><ul><li>🔵 <strong>규제/정책</strong> (11건): 전세사기, 없습니다, 피해자 중심으로 11건의 뉴스가 수집되었습니다.</li><li>🏦 <strong>거래소</strong> (4건): 중복상장, 통신사기피해환급법, 선정하였습니다 테마에서 4건의 뉴스가 감지되었습니다.</li><li>🏛️ <strong>정치/정책</strong> (3건): 대한, 없습니다, 서울경제 관련 3건의 소식이 확인되었습니다.</li><li>🟣 <strong>DeFi</strong> (1건): 금융위원회가, 수용한다는, 아닙니다 흐름에 1건의 뉴스가 집중되고 있습니다.</li></ul></div>
 
-## 전체 뉴스 요약
-
-총 26건의 뉴스 중 **규제/정책** 관련이 11건(42%)으로 압도적입니다. 규제 동향이 시장 참여자들의 주요 관심사입니다
-
-1. **🔵 규제/정책** (11건): 전세사기, 없습니다, 피해자 중심으로 11건의 뉴스가 수집되었습니다.
-2. **🏦 거래소** (4건): 중복상장, 통신사기피해환급법, 선정하였습니다 테마에서 4건의 뉴스가 감지되었습니다.
-3. **🏛️ 정치/정책** (3건): 대한, 없습니다, 서울경제 관련 3건의 소식이 확인되었습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-**P1 주요**: 10건 확인
-**주요 지역**: 한국 23건, 미국 2건, 유럽 1건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 26건
 - **한국**: 23건

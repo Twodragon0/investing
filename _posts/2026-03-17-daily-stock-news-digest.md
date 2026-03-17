@@ -27,36 +27,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-17 - stock-news 뉴스 요약 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">166</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 45</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">5,549.85</div><div class="stat-label">KOSPI +1.14%</div></div><div class="stat-item"><div class="stat-value">1,138.29</div><div class="stat-label">KOSDAQ -1.27%</div></div></div>
 <div class="alert-box alert-info"><strong>주식 시장 긴급: President, History, Reason - 166건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (45건): 삼성전자, 하이닉스, 상승 관련 45건의 소식이 확인되었습니다.</li><li>📊 <strong>매크로/금리</strong> (12건): 환율, 한은, 셈법 이슈로 12건의 보도가 이어지고 있습니다.</li><li>🤖 <strong>AI/기술</strong> (16건): 반도체, 하이닉스, 삼전 이슈로 16건의 보도가 이어지고 있습니다.</li><li>🏛️ <strong>정치/정책</strong> (15건): 15건의 기사에서 대통령, 속보 키워드가 부각되고 있습니다.</li></ul></div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNa2RDTVU0TEJXX3BBVE1uczNGaDN3OTR0VFRIX1lQX0ZTMDFIZC1DdXRnei0zNXJ4MGsxT2ZnSzJKYUZKZklKMWg4cDlCOTVPQ2FRTFBfZXVueWVscXFORXA4U1B2d3RuamFvUTR0allPQk0xSkpBdjhyQlVYcFJNZWpOOG8zY0tYRXlySnEyVGV4T1RoUEFQTw?oc=5">Will the Stock Market Crash Under President Trump in 2026? History Says Investors Have Reason to Worry. - The Motley Fool</a> <span class="p0-desc">Will the Stock Market Crash Under President Trump in 2026? History Says Investors Have Reason to Wor.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Will the Stock Market Crash Under President Trump in 2026? History Says Inves. 
-총 166건의 뉴스 중 P1 주요 이슈도 29건 확인됩니다.
-
-1. **📈 가격/시장** (45건): 삼성전자, 하이닉스, 상승 관련 45건의 소식이 확인되었습니다.
-2. **📊 매크로/금리** (12건): 환율, 한은, 셈법 이슈로 12건의 보도가 이어지고 있습니다.
-3. **🤖 AI/기술** (16건): 반도체, 하이닉스, 삼전 이슈로 16건의 보도가 이어지고 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-**P0 긴급**: Will the Stock Market Crash Under President Trump in 2026? H
-**P1 주요**: 29건 확인
-- 한국 기사 52건, 글로벌 기사 114건 수집
-- 한국 지수: KOSPI 5,549.85(+1.14%), KOSDAQ 1,138.29(-1.27%), USD/KRW 1,493.17(-0.29%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">45건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:27%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:36%"></div></div><span class="theme-count">16건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:33%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:9%"></div></div><span class="theme-count">4건</span></div>
-</div>
-
-*총 166건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-03-17.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-03-17.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- 총 **9건** 수집
+- KOSPI 5,549.85 (+1.14%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
+- KOSDAQ 1,138.29 (-1.27%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
 
 ## 테마별 주요 뉴스
 
