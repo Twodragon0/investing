@@ -50,35 +50,249 @@ image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-02-25.png"
 
 ## 주요 이슈
 
-| 순번 | 주요 이슈 | 테마 | 시장 영향 | 출처 |
-| :---: | --- | :---: | :---: | --- |
-| 1 | [**US accuses China of ‘massively’ expanding nuclear arsenal amid fears of new arms race**](https://www.theguardian.com/world/2026/feb/24/us-accuses-china-of-massively-expanding-nuclear-arsenal-amid-fears-of-new-arms-race) | 지정학/안보 | 높음 | WorldMonitor/Guardian World |
-| 2 | [**Ukraine remembers its dead as war enters a fifth year**](https://www.bbc.com/news/articles/clyg7r3nd3ko?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
-| 3 | [**Nancy Guthrie's family offers $1m reward to bring home missing mother**](https://www.bbc.com/news/articles/cy4wd11j0evo?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
-| 4 | [**Caribbean leaders call for ‘de-escalation and dialogue’ amid US oil embargo on Cuba**](https://www.theguardian.com/world/2026/feb/25/caricom-summit-2026-caribbean-leaders-us-military-strikes) | 에너지 | 중간~높음 | WorldMonitor/Guardian World |
-| 5 | [**US ambassador to France set for talks with foreign minister after row**](https://www.bbc.com/news/articles/c8d5eg5pl34o?at_medium=RSS&at_campaign=rss) | 정책/법률 | 중간 | WorldMonitor/BBC World |
-| 6 | [**Royal Artillery under fire after denying access to looted Asante treasure**](https://www.theguardian.com/uk-news/2026/feb/24/royal-artillery-access-looted-asante-treasure-ghana) | 사회/기타 | 낮음~중간 | WorldMonitor/Guardian World |
-| 7 | [**Robert Mugabe’s son charged with attempted murder over Johannesburg shooting**](https://www.theguardian.com/world/2026/feb/23/robert-mugabe-son-bellarmine-mugabe-charged-with-crimes) | 사회/기타 | 낮음~중간 | WorldMonitor/Guardian World |
-| 8 | [**Floods and landslides in Brazil kill at least 30 after record rainfall**](https://www.theguardian.com/world/2026/feb/24/floods-landslides-brazil-kill-after-record-rainfall) | 사회/기타 | 낮음~중간 | WorldMonitor/Guardian World |
-| 9 | [**Brazilian politicians accused of ordering murder of Rio councillor go on trial**](https://www.theguardian.com/world/2026/feb/24/brazil-supreme-court-trial-rio-marielle-franco-murder) | 사회/기타 | 낮음~중간 | WorldMonitor/Guardian World |
-| 10 | [**Mexico pledges safety for World Cup after violence erupts from cartel boss’s killing**](https://www.theguardian.com/world/2026/feb/24/sheinbaum-world-cup-visitors-violence-el-mencho) | 사회/기타 | 낮음~중간 | WorldMonitor/Guardian World |
-| 11 | [**Mexican drug cartel boss ‘El Mencho’ tracked through romantic partner**](https://www.theguardian.com/world/2026/feb/23/el-mencho-mexican-drug-cartel-boss-killing-violence) | 사회/기타 | 낮음~중간 | WorldMonitor/Guardian World |
-| 12 | [**Anger over plans to abolish New Zealand’s dedicated environment ministry**](https://www.theguardian.com/world/2026/feb/25/new-zealand-plan-to-abolish-environment-ministry) | 사회/기타 | 낮음~중간 | WorldMonitor/Guardian World |
-| 13 | [**Destitute survivors of south-east Asia’s cyberscam farms an ‘international crisis’**](https://www.theguardian.com/global-development/2026/feb/24/destitute-survivors-of-south-east-asias-cyberscam-farms-an-international-crisis) | 사회/기타 | 낮음~중간 | WorldMonitor/Guardian World |
-| 14 | [**BTS comeback show sells out immediately as 260,000 fans set to descend on Seoul**](https://www.theguardian.com/music/2026/feb/24/bts-comeback-show-sells-out-immediately-as-260000-fans-set-to-descend-on-seoul) | 사회/기타 | 낮음~중간 | WorldMonitor/Guardian World |
-| 15 | [**Duterte at ‘very heart’ of murderous drug crackdowns in Philippines, ICC told**](https://www.theguardian.com/world/2026/feb/23/rodrigo-duterte-drug-war-case-icc-pre-trial-hearing-international-criminal-court-ntwnfb) | 사회/기타 | 낮음~중간 | WorldMonitor/Guardian World |
-| 16 | [**Russian soldiers tell BBC they saw fellow troops executed on commanders' orders**](https://www.bbc.com/news/articles/cz7gw3l395ro?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 17 | [**Mexico hunts 23 inmates sprung from jail during wave of violence**](https://www.bbc.com/news/articles/c07jpx7kkvpo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 18 | [**Floods and landslides in Brazil kill at least 25**](https://www.bbc.com/news/articles/c70k7vjllzeo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 19 | [**Two dead after winter storm hammers the US northeast**](https://www.bbc.com/news/articles/c5yjpx2lgdjo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 20 | [**Japan to deploy missiles on island near Taiwan by 2031**](https://www.bbc.com/news/articles/cd9gj1w2kn1o?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
+<div class="wm-issue-list">
+<div class="wm-issue-card">
+<div class="wm-issue-num">1</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/24/us-accuses-china-of-massively-expanding-nuclear-arsenal-amid-fears-of-new-arms-race" target="_blank" rel="noopener noreferrer"><strong>US accuses China of ‘massively’ expanding nuclear arsenal amid fears of new arms race</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">2</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/clyg7r3nd3ko?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Ukraine remembers its dead as war enters a fifth year</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">3</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cy4wd11j0evo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Nancy Guthrie's family offers $1m reward to bring home missing mother</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">4</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/25/caricom-summit-2026-caribbean-leaders-us-military-strikes" target="_blank" rel="noopener noreferrer"><strong>Caribbean leaders call for ‘de-escalation and dialogue’ amid US oil embargo on Cuba</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">에너지</span>
+<span class="wm-issue-impact" style="color:#8b949e;">중간~높음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">5</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c8d5eg5pl34o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>US ambassador to France set for talks with foreign minister after row</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">정책/법률</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">6</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/uk-news/2026/feb/24/royal-artillery-access-looted-asante-treasure-ghana" target="_blank" rel="noopener noreferrer"><strong>Royal Artillery under fire after denying access to looted Asante treasure</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">7</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/23/robert-mugabe-son-bellarmine-mugabe-charged-with-crimes" target="_blank" rel="noopener noreferrer"><strong>Robert Mugabe’s son charged with attempted murder over Johannesburg shooting</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">8</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/24/floods-landslides-brazil-kill-after-record-rainfall" target="_blank" rel="noopener noreferrer"><strong>Floods and landslides in Brazil kill at least 30 after record rainfall</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">9</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/24/brazil-supreme-court-trial-rio-marielle-franco-murder" target="_blank" rel="noopener noreferrer"><strong>Brazilian politicians accused of ordering murder of Rio councillor go on trial</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">10</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/24/sheinbaum-world-cup-visitors-violence-el-mencho" target="_blank" rel="noopener noreferrer"><strong>Mexico pledges safety for World Cup after violence erupts from cartel boss’s killing</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">11</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/23/el-mencho-mexican-drug-cartel-boss-killing-violence" target="_blank" rel="noopener noreferrer"><strong>Mexican drug cartel boss ‘El Mencho’ tracked through romantic partner</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">12</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/25/new-zealand-plan-to-abolish-environment-ministry" target="_blank" rel="noopener noreferrer"><strong>Anger over plans to abolish New Zealand’s dedicated environment ministry</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">13</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/global-development/2026/feb/24/destitute-survivors-of-south-east-asias-cyberscam-farms-an-international-crisis" target="_blank" rel="noopener noreferrer"><strong>Destitute survivors of south-east Asia’s cyberscam farms an ‘international crisis’</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">14</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/music/2026/feb/24/bts-comeback-show-sells-out-immediately-as-260000-fans-set-to-descend-on-seoul" target="_blank" rel="noopener noreferrer"><strong>BTS comeback show sells out immediately as 260,000 fans set to descend on Seoul</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">15</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/23/rodrigo-duterte-drug-war-case-icc-pre-trial-hearing-international-criminal-court-ntwnfb" target="_blank" rel="noopener noreferrer"><strong>Duterte at ‘very heart’ of murderous drug crackdowns in Philippines, ICC told</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">16</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cz7gw3l395ro?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Russian soldiers tell BBC they saw fellow troops executed on commanders' orders</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">17</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c07jpx7kkvpo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Mexico hunts 23 inmates sprung from jail during wave of violence</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">18</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c70k7vjllzeo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Floods and landslides in Brazil kill at least 25</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">19</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c5yjpx2lgdjo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Two dead after winter storm hammers the US northeast</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">20</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cd9gj1w2kn1o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Japan to deploy missiles on island near Taiwan by 2031</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+</div>
 
 ## 출처 커버리지
 
-| 출처 | 건수 | 비중 |
-| --- | ---: | ---: |
-| WorldMonitor/Guardian World | 12건 | 60% |
-| WorldMonitor/BBC World | 8건 | 40% |
+<div class="wm-source-coverage">
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/Guardian World</span>
+<span class="wm-source-count">12건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:60%;background:#58a6ff;"></div>
+</div>
+<span class="wm-source-ratio">60%</span>
+</div>
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/BBC World</span>
+<span class="wm-source-count">8건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:40%;background:#22d3ee;"></div>
+</div>
+<span class="wm-source-ratio">40%</span>
+</div>
+</div>
 
 ## 원문 링크 묶음
 <strong>원문 링크 탐색 가이드</strong><p>시장 영향이 높은 이슈를 우선 확인할 수 있도록 출처별 커버리지를 함께 제공합니다.</p></div>

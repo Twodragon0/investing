@@ -42,36 +42,257 @@ description: "2026-03-03 WorldMonitor 글로벌 브리핑 20건: 지정학/안�
 
 ## 주요 이슈
 
-| 순번 | 주요 이슈 | 테마 | 중요도 | 출처 |
-| :---: | --- | :---: | :---: | --- |
-| 1 | [**China’s Two Sessions to reveal Xi’s economic and defence plans as military purge casts shadow**](https://www.theguardian.com/world/2026/mar/03/china-two-sessions-president-xi-economy-defence-technology) | 지정학/안보 | 높음 | WorldMonitor/Guardian World |
-| 2 | [**MongoDB’s stock sinks after earnings, signaling more tough times for the software sector**](https://www.marketwatch.com/story/mongodbs-stock-sinks-after-earnings-signaling-more-tough-times-for-the-software-sector-5dd37daa?mod=mw_rss_topstories) | 지정학/안보 | 높음 | WorldMonitor/MarketWatch |
-| 3 | [**Chevron’s stock surges to a record as U.S.-Israeli attacks on Iran spark an oil rally**](https://www.marketwatch.com/story/chevrons-stock-surges-toward-a-record-as-u-s-israeli-attacks-on-iran-spark-an-oil-rally-c6283fd5?mod=mw_rss_topstories) | 지정학/안보 | 높음 | WorldMonitor/MarketWatch |
-| 4 | [**The smartest money moves to make as the Iran conflict rattles markets**](https://www.marketwatch.com/story/the-smartest-money-moves-to-make-as-the-iran-conflict-rattles-markets-d8e57ef3?mod=mw_rss_topstories) | 지정학/안보 | 높음 | WorldMonitor/MarketWatch |
-| 5 | [**Israeli attacks kill dozens of people across Lebanon**](https://www.aljazeera.com/video/newsfeed/2026/3/3/israeli-attacks-kill-dozens-of-people-across-lebanon?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 6 | [**How much could the Iran war cost the US? Here’s what we know**](https://www.aljazeera.com/news/2026/3/3/how-much-could-the-iran-war-cost-the-us-heres-what-we-know?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 7 | [**Golestan Palace majorly damaged in US-Israeli strikes on Tehran**](https://www.aljazeera.com/video/newsfeed/2026/3/3/golestan-palace-majorly-damaged-in-us-israeli-strikes-on-tehran?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 8 | [**Melania Trump chairs UN meeting on children days after Iran school strike**](https://www.aljazeera.com/video/newsfeed/2026/3/3/melania-trump-chairs-un-meeting-on-children-days-after-iran-school-strike?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 9 | [**UN chief calls for ‘way out’ of Iran war**](https://www.aljazeera.com/video/newsfeed/2026/3/3/un-chief-calls-for-way-out-of-iran-war?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 10 | [**US’s Rubio tries to justify attacks on Iran as driven by self-defence**](https://www.aljazeera.com/video/newsfeed/2026/3/3/uss-rubio-tries-to-justify-attacks-on-iran-as-driven-by-self-defence?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 11 | [**SoFi’s stock rises as CEO Anthony Noto reacts to recent selloff with a $1 million purchase**](https://www.marketwatch.com/story/sofis-stock-rises-as-ceo-anthony-noto-reacts-to-recent-selloff-with-a-1-million-purchase-d03ba5b6?mod=mw_rss_topstories) | 금융시장 | 중간 | WorldMonitor/MarketWatch |
-| 12 | [**Here’s what’s worth streaming in March 2026 on Netflix, Hulu, HBO Max and more**](https://www.marketwatch.com/story/heres-whats-worth-streaming-in-march-2026-on-netflix-hulu-hbo-max-and-more-83f5b64d?mod=mw_rss_topstories) | 금융시장 | 중간 | WorldMonitor/MarketWatch |
-| 13 | [**How this under-the-radar U.S. natural-gas exporter could capitalize on a potential shortage in Europe**](https://www.marketwatch.com/story/how-this-under-the-radar-u-s-natural-gas-exporter-could-capitalize-on-a-potential-shortage-in-europe-c6938bab?mod=mw_rss_topstories) | 에너지 | 중간 | WorldMonitor/MarketWatch |
-| 14 | [**Nvidia’s stock is Morgan Stanley’s new top chip pick — replacing Micron**](https://www.marketwatch.com/story/nvidias-stock-is-morgan-stanleys-new-top-chip-pick-replacing-micron-2dfffd2b?mod=mw_rss_topstories) | 금융시장 | 중간 | WorldMonitor/MarketWatch |
-| 15 | [**Shark culls brought in after fatal attack causes division and anger in New Caledonia**](https://www.theguardian.com/world/2026/mar/02/new-caledonia-shark-attack-culling) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
-| 16 | [**Apple launches new iPhone and iPad Air as it gears up for a major AI push**](https://www.marketwatch.com/story/apple-launches-new-iphone-and-ipad-air-as-it-gears-up-for-a-major-ai-push-570b24ae?mod=mw_rss_topstories) | 사회/기타 | 낮음 | WorldMonitor/MarketWatch |
-| 17 | [**‘I don’t earn enough to support us and our baby’: My unemployed husband lost $22,000 trading sports cards. What now?**](https://www.marketwatch.com/story/i-dont-earn-enough-to-support-us-and-our-baby-my-husband-is-unemployed-and-lost-22-000-trading-sports-cards-what-now-200c1438?mod=mw_rss_topstories) | 사회/기타 | 낮음 | WorldMonitor/MarketWatch |
-| 18 | [**EchoStar’s business deemed ‘irrelevant’ as investors focus on future SpaceX stake**](https://www.marketwatch.com/story/echostars-business-deemed-irrelevant-as-investors-focus-on-future-spacex-stake-5a89c0c7?mod=mw_rss_topstories) | 사회/기타 | 낮음 | WorldMonitor/MarketWatch |
-| 19 | [**US Embassy in Saudi capital Riyadh hit by drones, fire reported: Ministry**](https://www.aljazeera.com/news/2026/3/3/us-embassy-in-saudi-capital-riyadh-hit-by-drones-fire-reported-ministry?traffic_source=rss) | 사회/기타 | 낮음 | WorldMonitor/Al Jazeera |
-| 20 | [**US kamikaze drone found on farmland in Iraq**](https://www.aljazeera.com/video/newsfeed/2026/3/3/us-kamikaze-drone-found-on-farmland-in-iraq?traffic_source=rss) | 사회/기타 | 낮음 | WorldMonitor/Al Jazeera |
+<div class="wm-issue-list">
+<div class="wm-issue-card">
+<div class="wm-issue-num">1</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/mar/03/china-two-sessions-president-xi-economy-defence-technology" target="_blank" rel="noopener noreferrer"><strong>China’s Two Sessions to reveal Xi’s economic and defence plans as military purge casts shadow</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">2</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.marketwatch.com/story/mongodbs-stock-sinks-after-earnings-signaling-more-tough-times-for-the-software-sector-5dd37daa?mod=mw_rss_topstories" target="_blank" rel="noopener noreferrer"><strong>MongoDB’s stock sinks after earnings, signaling more tough times for the software sector</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/MarketWatch</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">3</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.marketwatch.com/story/chevrons-stock-surges-toward-a-record-as-u-s-israeli-attacks-on-iran-spark-an-oil-rally-c6283fd5?mod=mw_rss_topstories" target="_blank" rel="noopener noreferrer"><strong>Chevron’s stock surges to a record as U.S.-Israeli attacks on Iran spark an oil rally</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/MarketWatch</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">4</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.marketwatch.com/story/the-smartest-money-moves-to-make-as-the-iran-conflict-rattles-markets-d8e57ef3?mod=mw_rss_topstories" target="_blank" rel="noopener noreferrer"><strong>The smartest money moves to make as the Iran conflict rattles markets</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/MarketWatch</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">5</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/video/newsfeed/2026/3/3/israeli-attacks-kill-dozens-of-people-across-lebanon?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Israeli attacks kill dozens of people across Lebanon</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">6</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/3/3/how-much-could-the-iran-war-cost-the-us-heres-what-we-know?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>How much could the Iran war cost the US? Here’s what we know</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">7</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/video/newsfeed/2026/3/3/golestan-palace-majorly-damaged-in-us-israeli-strikes-on-tehran?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Golestan Palace majorly damaged in US-Israeli strikes on Tehran</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">8</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/video/newsfeed/2026/3/3/melania-trump-chairs-un-meeting-on-children-days-after-iran-school-strike?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Melania Trump chairs UN meeting on children days after Iran school strike</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">9</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/video/newsfeed/2026/3/3/un-chief-calls-for-way-out-of-iran-war?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>UN chief calls for ‘way out’ of Iran war</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">10</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/video/newsfeed/2026/3/3/uss-rubio-tries-to-justify-attacks-on-iran-as-driven-by-self-defence?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>US’s Rubio tries to justify attacks on Iran as driven by self-defence</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">11</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.marketwatch.com/story/sofis-stock-rises-as-ceo-anthony-noto-reacts-to-recent-selloff-with-a-1-million-purchase-d03ba5b6?mod=mw_rss_topstories" target="_blank" rel="noopener noreferrer"><strong>SoFi’s stock rises as CEO Anthony Noto reacts to recent selloff with a $1 million purchase</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">금융시장</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/MarketWatch</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">12</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.marketwatch.com/story/heres-whats-worth-streaming-in-march-2026-on-netflix-hulu-hbo-max-and-more-83f5b64d?mod=mw_rss_topstories" target="_blank" rel="noopener noreferrer"><strong>Here’s what’s worth streaming in March 2026 on Netflix, Hulu, HBO Max and more</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">금융시장</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/MarketWatch</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">13</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.marketwatch.com/story/how-this-under-the-radar-u-s-natural-gas-exporter-could-capitalize-on-a-potential-shortage-in-europe-c6938bab?mod=mw_rss_topstories" target="_blank" rel="noopener noreferrer"><strong>How this under-the-radar U.S. natural-gas exporter could capitalize on a potential shortage in Europe</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">에너지</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/MarketWatch</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">14</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.marketwatch.com/story/nvidias-stock-is-morgan-stanleys-new-top-chip-pick-replacing-micron-2dfffd2b?mod=mw_rss_topstories" target="_blank" rel="noopener noreferrer"><strong>Nvidia’s stock is Morgan Stanley’s new top chip pick — replacing Micron</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">금융시장</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/MarketWatch</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">15</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/mar/02/new-caledonia-shark-attack-culling" target="_blank" rel="noopener noreferrer"><strong>Shark culls brought in after fatal attack causes division and anger in New Caledonia</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">16</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.marketwatch.com/story/apple-launches-new-iphone-and-ipad-air-as-it-gears-up-for-a-major-ai-push-570b24ae?mod=mw_rss_topstories" target="_blank" rel="noopener noreferrer"><strong>Apple launches new iPhone and iPad Air as it gears up for a major AI push</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/MarketWatch</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">17</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.marketwatch.com/story/i-dont-earn-enough-to-support-us-and-our-baby-my-husband-is-unemployed-and-lost-22-000-trading-sports-cards-what-now-200c1438?mod=mw_rss_topstories" target="_blank" rel="noopener noreferrer"><strong>‘I don’t earn enough to support us and our baby’: My unemployed husband lost $22,000 trading sports cards. What now?</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/MarketWatch</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">18</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.marketwatch.com/story/echostars-business-deemed-irrelevant-as-investors-focus-on-future-spacex-stake-5a89c0c7?mod=mw_rss_topstories" target="_blank" rel="noopener noreferrer"><strong>EchoStar’s business deemed ‘irrelevant’ as investors focus on future SpaceX stake</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/MarketWatch</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">19</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/3/3/us-embassy-in-saudi-capital-riyadh-hit-by-drones-fire-reported-ministry?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>US Embassy in Saudi capital Riyadh hit by drones, fire reported: Ministry</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">20</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/video/newsfeed/2026/3/3/us-kamikaze-drone-found-on-farmland-in-iraq?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>US kamikaze drone found on farmland in Iraq</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+</div>
 
 ## 출처 커버리지
 
-| 출처 | 건수 | 비중 |
-| --- | ---: | ---: |
-| WorldMonitor/MarketWatch | 10건 | 50% |
-| WorldMonitor/Al Jazeera | 8건 | 40% |
-| WorldMonitor/Guardian World | 2건 | 10% |
+<div class="wm-source-coverage">
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/MarketWatch</span>
+<span class="wm-source-count">10건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:50%;background:#58a6ff;"></div>
+</div>
+<span class="wm-source-ratio">50%</span>
+</div>
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/Al Jazeera</span>
+<span class="wm-source-count">8건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:40%;background:#22d3ee;"></div>
+</div>
+<span class="wm-source-ratio">40%</span>
+</div>
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/Guardian World</span>
+<span class="wm-source-count">2건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:10%;background:#22d3ee;"></div>
+</div>
+<span class="wm-source-ratio">10%</span>
+</div>
+</div>
 
 ## 원문 링크 묶음
 <div class="wm-reference-summary"><strong>원문 링크 탐색 가이드</strong><p>시장 영향이 높은 이슈를 우선 확인할 수 있도록 출처별 커버리지를 함께 제공합니다.</p></div>

@@ -41,35 +41,249 @@ description: "2026-02-26 기준 WorldMonitor 연계 소스에서 글로벌 이�
 
 ## 주요 이슈
 
-| 순번 | 주요 이슈 | 테마 | 중요도 | 출처 |
-| :---: | --- | :---: | :---: | --- |
-| 1 | [**'Fear is everywhere': BBC reports from Mexican city turned into war zone by drug cartel feud**](https://www.bbc.com/news/articles/cx2g3vmde0eo?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
-| 2 | [**Trump keeps world waiting on his plans for Iran after State of the Union**](https://www.bbc.com/news/articles/cge821xwyz8o?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
-| 3 | [**Caribbean leaders call for ‘de-escalation and dialogue’ amid US oil embargo on Cuba**](https://www.theguardian.com/world/2026/feb/25/caricom-summit-2026-caribbean-leaders-us-military-strikes) | 에너지 | 중간 | WorldMonitor/Guardian World |
-| 4 | [**Watch: BBC on streets of Mexican city gripped by deadly cartel violence**](https://www.bbc.com/news/videos/cqlgz0xk5zyo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음 | WorldMonitor/BBC World |
-| 5 | [**Bill Gates 'took responsibility' over Epstein ties in staff meeting, foundation says**](https://www.bbc.com/news/articles/cnv6rjp468ro?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음 | WorldMonitor/BBC World |
-| 6 | [**Four shot dead on US-registered speedboat were Cuban nationals, Cuba says**](https://www.bbc.com/news/articles/c24drvj8yl2o?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음 | WorldMonitor/BBC World |
-| 7 | [**Six months ago a man accused of killing two officers fled into bushland. Will he ever be found?**](https://www.bbc.com/news/articles/cm280j2jgvyo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음 | WorldMonitor/BBC World |
-| 8 | [**US 'suitcase murderer' deported from Bali after 11 years in jail**](https://www.bbc.com/news/articles/cdxg2r11g35o?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음 | WorldMonitor/BBC World |
-| 9 | [**Spain declassifies files on 1981 attempted coup in effort to dispel conspiracy theories**](https://www.bbc.com/news/articles/ce8w42e152xo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음 | WorldMonitor/BBC World |
-| 10 | [**Politician brothers convicted in Brazil for ordering murder of prominent councillor**](https://www.bbc.com/news/articles/c4g058v3d35o?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음 | WorldMonitor/BBC World |
-| 11 | [**Pope Leo to visit four African countries in April**](https://www.bbc.com/news/articles/cvg1vdgl3ymo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음 | WorldMonitor/BBC World |
-| 12 | [**Swiss bar fire victims to get solidarity payout**](https://www.bbc.com/news/articles/c1e9d6pd9ejo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음 | WorldMonitor/BBC World |
-| 13 | [**Zimbabwe rejects 'lopsided' US health aid deal over data concerns**](https://www.bbc.com/news/articles/cwy6nd3664no?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음 | WorldMonitor/BBC World |
-| 14 | [**Japan to deploy missiles on island near Taiwan by 2031**](https://www.bbc.com/news/articles/cd9gj1w2kn1o?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음 | WorldMonitor/BBC World |
-| 15 | [**Don't break up NewJeans and I'll forgo $18m payout, says ex-K-pop boss**](https://www.bbc.com/news/articles/c98qd17e274o?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음 | WorldMonitor/BBC World |
-| 16 | [**Two charged with murder of Australian grandfather after 'mistaken identity' kidnapping**](https://www.bbc.com/news/articles/cm21zdxzr0ko?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음 | WorldMonitor/BBC World |
-| 17 | [**US accused of ‘shameless exploitation’ over proposed Zambian health aid deal**](https://www.theguardian.com/global-development/2026/feb/25/zambia-us-health-aid-deal-exploitation-mining-concessions-data-sharing-targets) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
-| 18 | [**Royal Artillery under fire after denying access to looted Asante treasure**](https://www.theguardian.com/uk-news/2026/feb/24/royal-artillery-access-looted-asante-treasure-ghana) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
-| 19 | [**Cuba says it killed heavily armed exiles who attacked from US-registered speedboat**](https://www.theguardian.com/world/2026/feb/25/cuba-says-border-guards-killed-four-gunmen-on-us-registered-speedboat) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
-| 20 | [**Brazilian politician brothers convicted of ordering murder of Rio city councillor**](https://www.theguardian.com/world/2026/feb/25/brazil-politician-brothers-convicted-murder) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
+<div class="wm-issue-list">
+<div class="wm-issue-card">
+<div class="wm-issue-num">1</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cx2g3vmde0eo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>'Fear is everywhere': BBC reports from Mexican city turned into war zone by drug cartel feud</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">2</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cge821xwyz8o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Trump keeps world waiting on his plans for Iran after State of the Union</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">3</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/25/caricom-summit-2026-caribbean-leaders-us-military-strikes" target="_blank" rel="noopener noreferrer"><strong>Caribbean leaders call for ‘de-escalation and dialogue’ amid US oil embargo on Cuba</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">에너지</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">4</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/videos/cqlgz0xk5zyo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Watch: BBC on streets of Mexican city gripped by deadly cartel violence</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">5</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cnv6rjp468ro?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Bill Gates 'took responsibility' over Epstein ties in staff meeting, foundation says</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">6</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c24drvj8yl2o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Four shot dead on US-registered speedboat were Cuban nationals, Cuba says</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">7</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cm280j2jgvyo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Six months ago a man accused of killing two officers fled into bushland. Will he ever be found?</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">8</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cdxg2r11g35o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>US 'suitcase murderer' deported from Bali after 11 years in jail</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">9</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/ce8w42e152xo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Spain declassifies files on 1981 attempted coup in effort to dispel conspiracy theories</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">10</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c4g058v3d35o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Politician brothers convicted in Brazil for ordering murder of prominent councillor</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">11</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cvg1vdgl3ymo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Pope Leo to visit four African countries in April</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">12</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c1e9d6pd9ejo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Swiss bar fire victims to get solidarity payout</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">13</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cwy6nd3664no?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Zimbabwe rejects 'lopsided' US health aid deal over data concerns</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">14</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cd9gj1w2kn1o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Japan to deploy missiles on island near Taiwan by 2031</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">15</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c98qd17e274o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Don't break up NewJeans and I'll forgo $18m payout, says ex-K-pop boss</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">16</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cm21zdxzr0ko?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Two charged with murder of Australian grandfather after 'mistaken identity' kidnapping</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">17</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/global-development/2026/feb/25/zambia-us-health-aid-deal-exploitation-mining-concessions-data-sharing-targets" target="_blank" rel="noopener noreferrer"><strong>US accused of ‘shameless exploitation’ over proposed Zambian health aid deal</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">18</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/uk-news/2026/feb/24/royal-artillery-access-looted-asante-treasure-ghana" target="_blank" rel="noopener noreferrer"><strong>Royal Artillery under fire after denying access to looted Asante treasure</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">19</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/25/cuba-says-border-guards-killed-four-gunmen-on-us-registered-speedboat" target="_blank" rel="noopener noreferrer"><strong>Cuba says it killed heavily armed exiles who attacked from US-registered speedboat</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">20</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/25/brazil-politician-brothers-convicted-murder" target="_blank" rel="noopener noreferrer"><strong>Brazilian politician brothers convicted of ordering murder of Rio city councillor</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+</div>
 
 ## 출처 커버리지
 
-| 출처 | 건수 | 비중 |
-| --- | ---: | ---: |
-| WorldMonitor/BBC World | 15건 | 75% |
-| WorldMonitor/Guardian World | 5건 | 25% |
+<div class="wm-source-coverage">
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/BBC World</span>
+<span class="wm-source-count">15건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:75%;background:#58a6ff;"></div>
+</div>
+<span class="wm-source-ratio">75%</span>
+</div>
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/Guardian World</span>
+<span class="wm-source-count">5건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:25%;background:#22d3ee;"></div>
+</div>
+<span class="wm-source-ratio">25%</span>
+</div>
+</div>
 
 ## 원문 링크 묶음
 <div class="wm-reference-summary"><strong>원문 링크 탐색 가이드</strong><p>시장 영향이 높은 이슈를 우선 확인할 수 있도록 출처별 커버리지를 함께 제공합니다.</p></div>

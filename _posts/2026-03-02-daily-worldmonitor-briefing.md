@@ -39,35 +39,249 @@ description: "2026-03-02 WorldMonitor 글로벌 브리핑 20건: 지정학/안�
 
 ## 주요 이슈
 
-| 순번 | 주요 이슈 | 테마 | 중요도 | 출처 |
-| :---: | --- | :---: | :---: | --- |
-| 1 | [**Israel bombs Beirut after Hezbollah fires rockets in Iran war retaliation**](https://www.aljazeera.com/video/newsfeed/2026/3/2/israel-bombs-beirut-after-hezbollah-fires-rockets-in-iran-war-retaliation?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 2 | [**Poll suggests only a quarter of Americans support attacks on Iran**](https://www.aljazeera.com/news/2026/3/2/poll-suggests-only-a-quarter-of-americans-support-attacks-on-iran?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 3 | [**Tehran comes under attack from new round of Israeli strikes**](https://www.aljazeera.com/video/newsfeed/2026/3/2/tehran-comes-under-attack-from-new-round-of-israeli-strikes?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 4 | [**Iraqi police disperse pro-Iran protesters near US embassy**](https://www.aljazeera.com/video/newsfeed/2026/3/2/raqi-police-disperse-pro-iran-protesters-near-us-embassy?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 5 | [**Fury on Pakistan streets, 20 dead, after US-Israel strike kills Khamenei**](https://www.aljazeera.com/news/2026/3/2/fury-on-pakistan-streets-20-dead-after-us-israel-strike-kills-khamenei?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 6 | [**Israel bombs Beirut after Hezbollah launches rocket attack**](https://www.aljazeera.com/news/2026/3/2/israel-bombs-beirut-after-hezbollah-launches-rocket-attack?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 7 | [**Dramatic moment Iran’s retaliatory missile barrage hits Israel**](https://www.aljazeera.com/video/newsfeed/2026/3/2/dramatic-moment-irans-retaliatory-missile-barrage-hits-israel?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 8 | [**UK PM Starmer says US can use UK bases for ‘defensive strikes’ on Iran**](https://www.aljazeera.com/video/newsfeed/2026/3/2/uk-pm-starmer-says-us-can-use-uk-bases-for-defensive-strikes-on-iran?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 9 | [**Iranian ballistic missile strike on West Jerusalem**](https://www.aljazeera.com/video/newsfeed/2026/3/2/iranian-ballistic-missile-strike-on-west-jerusalem?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 10 | [**Trump says likely more US casualties, attacks on Iran will continue**](https://www.aljazeera.com/video/newsfeed/2026/3/2/trump-says-likely-more-us-casualties-attacks-on-iran-will-continue?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 11 | [**Baby and patients evacuated as Israel attacks Tehran hospital**](https://www.aljazeera.com/video/newsfeed/2026/3/2/baby-and-patients-evacuated-as-israel-attacks-tehran-hospital?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 12 | [**Hezbollah promises to confront US, Israel over Khamenei killing**](https://www.aljazeera.com/news/2026/3/2/hezbollah-promises-to-confront-us-israel-over-khamenei-killing?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 13 | [**US, Israel attack Iran live: One killed in Bahrain; Hezbollah fires rockets**](https://www.aljazeera.com/news/liveblog/2026/3/2/us-israel-attack-iran-live?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 14 | [**Spanish Prime Minister condemns war on Iran as breach of international law**](https://www.aljazeera.com/video/newsfeed/2026/3/1/spanish-prime-minister-condemns-war-on-iran-as-breach-of-international-law?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 15 | [**Iran may 'lash out harder' as Khamenei's death puts Tehran on a war footing, leaving the world bracing for what's next**](https://www.cnbc.com/2026/03/01/us-israel-attacks-strikes-iran-retaliate-china-russia-allies.html) | 지정학/안보 | 높음 | WorldMonitor/CNBC |
-| 16 | [**U.S. crude oil jumps more than 8%, topping $72 a barrel on fears of Iran supply disruption**](https://www.cnbc.com/2026/03/01/crude-oil-futures-iran.html) | 지정학/안보 | 높음 | WorldMonitor/CNBC |
-| 17 | [**Asia airline stocks drop while energy shares rise as Iran conflict escalates**](https://www.cnbc.com/2026/03/02/asia-markets-live-trump-iran-oil-prices-nikkei-hang-seng-us-israel-strikes-oil.html) | 지정학/안보 | 높음 | WorldMonitor/CNBC |
-| 18 | [**What travelers need to know after the U.S., Israeli strikes on Iran**](https://www.cnbc.com/2026/03/01/travel-iran-attack-middle-east-flights.html) | 지정학/안보 | 높음 | WorldMonitor/CNBC |
-| 19 | [**Netanyahu vows increasing strikes on Tehran**](https://www.aljazeera.com/video/newsfeed/2026/3/2/netanyahu-vows-increasing-strikes-on-tehran?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 20 | [**Global week ahead: Operation Epic Fury — US-Israel Iran strikes, oil, shipping, markets volatility**](https://www.cnbc.com/2026/03/02/global-week-ahead-operation-epic-fury-us-israel-iran-strikes-oil-shipping-markets-volatility.html) | 지정학/안보 | 높음 | WorldMonitor/CNBC |
+<div class="wm-issue-list">
+<div class="wm-issue-card">
+<div class="wm-issue-num">1</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/video/newsfeed/2026/3/2/israel-bombs-beirut-after-hezbollah-fires-rockets-in-iran-war-retaliation?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Israel bombs Beirut after Hezbollah fires rockets in Iran war retaliation</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">2</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/3/2/poll-suggests-only-a-quarter-of-americans-support-attacks-on-iran?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Poll suggests only a quarter of Americans support attacks on Iran</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">3</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/video/newsfeed/2026/3/2/tehran-comes-under-attack-from-new-round-of-israeli-strikes?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Tehran comes under attack from new round of Israeli strikes</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">4</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/video/newsfeed/2026/3/2/raqi-police-disperse-pro-iran-protesters-near-us-embassy?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Iraqi police disperse pro-Iran protesters near US embassy</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">5</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/3/2/fury-on-pakistan-streets-20-dead-after-us-israel-strike-kills-khamenei?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Fury on Pakistan streets, 20 dead, after US-Israel strike kills Khamenei</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">6</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/3/2/israel-bombs-beirut-after-hezbollah-launches-rocket-attack?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Israel bombs Beirut after Hezbollah launches rocket attack</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">7</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/video/newsfeed/2026/3/2/dramatic-moment-irans-retaliatory-missile-barrage-hits-israel?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Dramatic moment Iran’s retaliatory missile barrage hits Israel</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">8</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/video/newsfeed/2026/3/2/uk-pm-starmer-says-us-can-use-uk-bases-for-defensive-strikes-on-iran?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>UK PM Starmer says US can use UK bases for ‘defensive strikes’ on Iran</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">9</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/video/newsfeed/2026/3/2/iranian-ballistic-missile-strike-on-west-jerusalem?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Iranian ballistic missile strike on West Jerusalem</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">10</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/video/newsfeed/2026/3/2/trump-says-likely-more-us-casualties-attacks-on-iran-will-continue?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Trump says likely more US casualties, attacks on Iran will continue</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">11</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/video/newsfeed/2026/3/2/baby-and-patients-evacuated-as-israel-attacks-tehran-hospital?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Baby and patients evacuated as Israel attacks Tehran hospital</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">12</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/3/2/hezbollah-promises-to-confront-us-israel-over-khamenei-killing?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Hezbollah promises to confront US, Israel over Khamenei killing</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">13</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/liveblog/2026/3/2/us-israel-attack-iran-live?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>US, Israel attack Iran live: One killed in Bahrain; Hezbollah fires rockets</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">14</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/video/newsfeed/2026/3/1/spanish-prime-minister-condemns-war-on-iran-as-breach-of-international-law?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Spanish Prime Minister condemns war on Iran as breach of international law</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">15</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/03/01/us-israel-attacks-strikes-iran-retaliate-china-russia-allies.html" target="_blank" rel="noopener noreferrer"><strong>Iran may 'lash out harder' as Khamenei's death puts Tehran on a war footing, leaving the world bracing for what's next</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">16</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/03/01/crude-oil-futures-iran.html" target="_blank" rel="noopener noreferrer"><strong>U.S. crude oil jumps more than 8%, topping $72 a barrel on fears of Iran supply disruption</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">17</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/03/02/asia-markets-live-trump-iran-oil-prices-nikkei-hang-seng-us-israel-strikes-oil.html" target="_blank" rel="noopener noreferrer"><strong>Asia airline stocks drop while energy shares rise as Iran conflict escalates</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">18</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/03/01/travel-iran-attack-middle-east-flights.html" target="_blank" rel="noopener noreferrer"><strong>What travelers need to know after the U.S., Israeli strikes on Iran</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">19</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/video/newsfeed/2026/3/2/netanyahu-vows-increasing-strikes-on-tehran?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Netanyahu vows increasing strikes on Tehran</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">20</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/03/02/global-week-ahead-operation-epic-fury-us-israel-iran-strikes-oil-shipping-markets-volatility.html" target="_blank" rel="noopener noreferrer"><strong>Global week ahead: Operation Epic Fury — US-Israel Iran strikes, oil, shipping, markets volatility</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+</div>
 
 ## 출처 커버리지
 
-| 출처 | 건수 | 비중 |
-| --- | ---: | ---: |
-| WorldMonitor/Al Jazeera | 15건 | 75% |
-| WorldMonitor/CNBC | 5건 | 25% |
+<div class="wm-source-coverage">
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/Al Jazeera</span>
+<span class="wm-source-count">15건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:75%;background:#58a6ff;"></div>
+</div>
+<span class="wm-source-ratio">75%</span>
+</div>
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/CNBC</span>
+<span class="wm-source-count">5건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:25%;background:#22d3ee;"></div>
+</div>
+<span class="wm-source-ratio">25%</span>
+</div>
+</div>
 
 ## 원문 링크 묶음
 <div class="wm-reference-summary"><strong>원문 링크 탐색 가이드</strong><p>시장 영향이 높은 이슈를 우선 확인할 수 있도록 출처별 커버리지를 함께 제공합니다.</p></div>

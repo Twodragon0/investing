@@ -42,35 +42,249 @@ description: "2026-03-01 WorldMonitor 글로벌 브리핑 20건: 사회/기타 1
 
 ## 주요 이슈
 
-| 순번 | 주요 이슈 | 테마 | 중요도 | 출처 |
-| :---: | --- | :---: | :---: | --- |
-| 1 | [**Ghana says at least 55 of its people killed after Russia ‘lured’ them to fight Ukraine**](https://www.theguardian.com/world/2026/feb/27/ghana-men-killed-fight-russia-ukraine) | 지정학/안보 | 높음 | WorldMonitor/Guardian World |
-| 2 | [**At least 20 killed as cash-laden military cargo plane crashes in Bolivia**](https://www.theguardian.com/world/2026/feb/28/at-least-15-killed-as-cash-laden-military-cargo-plane-crashes-in-bolivia) | 지정학/안보 | 높음 | WorldMonitor/Guardian World |
-| 3 | [**Democrats outraged at US military’s downing of CBP drone near Mexico border**](https://www.theguardian.com/us-news/2026/feb/27/cbp-border-drone-military-democrats) | 지정학/안보 | 높음 | WorldMonitor/Guardian World |
-| 4 | [**How the attack on Iran could impact the global oil market and economy**](https://www.cnbc.com/2026/02/28/iran-us-attack-oil-market-economy.html) | 지정학/안보 | 높음 | WorldMonitor/CNBC |
-| 5 | [**Berkshire Hathaway operating earnings fell nearly 30% in Warren Buffett's final quarter as CEO**](https://www.cnbc.com/2026/02/28/berkshire-hathaway-brka-q4-2025-earnings.html) | 금융시장 | 높음 | WorldMonitor/CNBC |
-| 6 | [**'Bigger ramifications than Venezuela': Markets brace for impact after U.S. strikes Iran**](https://www.cnbc.com/2026/02/28/markets-brace-for-impact-following-us-military-strikes-against-iran.html) | 지정학/안보 | 높음 | WorldMonitor/CNBC |
-| 7 | [**How the 'K-shaped' economy is showing up at two big U.S. gyms**](https://www.cnbc.com/2026/02/28/life-time-planet-fitness-earnings-show-k-shaped-economy.html) | 금융시장 | 중간 | WorldMonitor/CNBC |
-| 8 | [**‘More exploitation, fewer rights’: Argentina braces for sweeping overhaul of labor laws**](https://www.theguardian.com/world/2026/feb/27/argentina-labor-law-overhaul) | 정책/법률 | 중간 | WorldMonitor/Guardian World |
-| 9 | [**Trump said tariffs could someday 'substantially replace' income taxes. What policy experts say**](https://www.cnbc.com/2026/02/27/trump-tariffs-income-taxes.html) | 정책/법률 | 중간 | WorldMonitor/CNBC |
-| 10 | [**Rising anger over ‘lop-sided’ and ‘immoral’ US health funding pacts with African countries**](https://www.theguardian.com/global-development/2026/feb/27/rising-anger-over-lop-sided-immoral-us-health-funding-pacts-africa-countries) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
-| 11 | [**‘Adventurism has had its day’: speedboat shootout leaves Miami’s exiled Cubans bewildered**](https://www.theguardian.com/world/2026/feb/28/miami-exiled-cubans-speedboat-shootout) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
-| 12 | [**Trump suggests US could carry out ‘friendly takeover’ of Cuba**](https://www.theguardian.com/us-news/2026/feb/27/trump-cuba-regime-change) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
-| 13 | [**‘You can’t hide from the invisible’: why Bangkok police make arrests in disguise**](https://www.theguardian.com/world/2026/feb/28/bangkok-police-arrests-in-disguise) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
-| 14 | [**North Korea’s ‘most beloved’ child: what the key congress revealed about Kim Jong-un’s succession plans**](https://www.theguardian.com/world/2026/feb/27/north-korea-kim-jong-un-daughter-ju-ae-succession) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
-| 15 | [**Anthropic's Claude hits No. 1 on Apple's top free apps list after Pentagon rejection**](https://www.cnbc.com/2026/02/28/anthropics-claude-apple-apps.html) | 사회/기타 | 낮음 | WorldMonitor/CNBC |
-| 16 | [**Berkshire CEO Greg Abel vows to keep Buffett's culture of disciplined investing in first annual letter**](https://www.cnbc.com/2026/02/28/berkshire-ceo-abel-vows-to-keep-buffetts-culture-of-disciplined-investing-in-first-annual-letter.html) | 사회/기타 | 낮음 | WorldMonitor/CNBC |
-| 17 | [**Xiaomi launches flagship smartphone as memory price surge threatens sales**](https://www.cnbc.com/2026/02/28/xiaomi-17-and-17-ultra-launch-price-specs.html) | 사회/기타 | 낮음 | WorldMonitor/CNBC |
-| 18 | [**OpenAI strikes deal with Pentagon, hours after rival Anthropic was blacklisted by Trump**](https://www.cnbc.com/2026/02/27/openai-strikes-deal-with-pentagon-hours-after-rival-anthropic-was-blacklisted-by-trump.html) | 사회/기타 | 낮음 | WorldMonitor/CNBC |
-| 19 | [**NASA is sending its first Black and first female astronauts to the moon**](https://www.cnbc.com/2026/02/28/nasa-astronauts-moon-artemis.html) | 사회/기타 | 낮음 | WorldMonitor/CNBC |
-| 20 | [**With free storage at max from Google to Shutterfly to Snap, the price for your memories is rising**](https://www.cnbc.com/2026/02/28/cloud-storage-prices-apple-icloud-google-snap-shutterfly.html) | 사회/기타 | 낮음 | WorldMonitor/CNBC |
+<div class="wm-issue-list">
+<div class="wm-issue-card">
+<div class="wm-issue-num">1</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/27/ghana-men-killed-fight-russia-ukraine" target="_blank" rel="noopener noreferrer"><strong>Ghana says at least 55 of its people killed after Russia ‘lured’ them to fight Ukraine</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">2</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/28/at-least-15-killed-as-cash-laden-military-cargo-plane-crashes-in-bolivia" target="_blank" rel="noopener noreferrer"><strong>At least 20 killed as cash-laden military cargo plane crashes in Bolivia</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">3</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/us-news/2026/feb/27/cbp-border-drone-military-democrats" target="_blank" rel="noopener noreferrer"><strong>Democrats outraged at US military’s downing of CBP drone near Mexico border</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">4</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/28/iran-us-attack-oil-market-economy.html" target="_blank" rel="noopener noreferrer"><strong>How the attack on Iran could impact the global oil market and economy</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">5</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/28/berkshire-hathaway-brka-q4-2025-earnings.html" target="_blank" rel="noopener noreferrer"><strong>Berkshire Hathaway operating earnings fell nearly 30% in Warren Buffett's final quarter as CEO</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">금융시장</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">6</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/28/markets-brace-for-impact-following-us-military-strikes-against-iran.html" target="_blank" rel="noopener noreferrer"><strong>'Bigger ramifications than Venezuela': Markets brace for impact after U.S. strikes Iran</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">7</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/28/life-time-planet-fitness-earnings-show-k-shaped-economy.html" target="_blank" rel="noopener noreferrer"><strong>How the 'K-shaped' economy is showing up at two big U.S. gyms</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">금융시장</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">8</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/27/argentina-labor-law-overhaul" target="_blank" rel="noopener noreferrer"><strong>‘More exploitation, fewer rights’: Argentina braces for sweeping overhaul of labor laws</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">정책/법률</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">9</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/27/trump-tariffs-income-taxes.html" target="_blank" rel="noopener noreferrer"><strong>Trump said tariffs could someday 'substantially replace' income taxes. What policy experts say</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">정책/법률</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">10</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/global-development/2026/feb/27/rising-anger-over-lop-sided-immoral-us-health-funding-pacts-africa-countries" target="_blank" rel="noopener noreferrer"><strong>Rising anger over ‘lop-sided’ and ‘immoral’ US health funding pacts with African countries</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">11</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/28/miami-exiled-cubans-speedboat-shootout" target="_blank" rel="noopener noreferrer"><strong>‘Adventurism has had its day’: speedboat shootout leaves Miami’s exiled Cubans bewildered</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">12</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/us-news/2026/feb/27/trump-cuba-regime-change" target="_blank" rel="noopener noreferrer"><strong>Trump suggests US could carry out ‘friendly takeover’ of Cuba</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">13</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/28/bangkok-police-arrests-in-disguise" target="_blank" rel="noopener noreferrer"><strong>‘You can’t hide from the invisible’: why Bangkok police make arrests in disguise</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">14</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/27/north-korea-kim-jong-un-daughter-ju-ae-succession" target="_blank" rel="noopener noreferrer"><strong>North Korea’s ‘most beloved’ child: what the key congress revealed about Kim Jong-un’s succession plans</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">15</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/28/anthropics-claude-apple-apps.html" target="_blank" rel="noopener noreferrer"><strong>Anthropic's Claude hits No. 1 on Apple's top free apps list after Pentagon rejection</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">16</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/28/berkshire-ceo-abel-vows-to-keep-buffetts-culture-of-disciplined-investing-in-first-annual-letter.html" target="_blank" rel="noopener noreferrer"><strong>Berkshire CEO Greg Abel vows to keep Buffett's culture of disciplined investing in first annual letter</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">17</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/28/xiaomi-17-and-17-ultra-launch-price-specs.html" target="_blank" rel="noopener noreferrer"><strong>Xiaomi launches flagship smartphone as memory price surge threatens sales</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">18</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/27/openai-strikes-deal-with-pentagon-hours-after-rival-anthropic-was-blacklisted-by-trump.html" target="_blank" rel="noopener noreferrer"><strong>OpenAI strikes deal with Pentagon, hours after rival Anthropic was blacklisted by Trump</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">19</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/28/nasa-astronauts-moon-artemis.html" target="_blank" rel="noopener noreferrer"><strong>NASA is sending its first Black and first female astronauts to the moon</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">20</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.cnbc.com/2026/02/28/cloud-storage-prices-apple-icloud-google-snap-shutterfly.html" target="_blank" rel="noopener noreferrer"><strong>With free storage at max from Google to Shutterfly to Snap, the price for your memories is rising</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/CNBC</span>
+</div>
+</div>
+</div>
+</div>
 
 ## 출처 커버리지
 
-| 출처 | 건수 | 비중 |
-| --- | ---: | ---: |
-| WorldMonitor/CNBC | 11건 | 55% |
-| WorldMonitor/Guardian World | 9건 | 45% |
+<div class="wm-source-coverage">
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/CNBC</span>
+<span class="wm-source-count">11건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:55%;background:#58a6ff;"></div>
+</div>
+<span class="wm-source-ratio">55%</span>
+</div>
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/Guardian World</span>
+<span class="wm-source-count">9건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:45%;background:#22d3ee;"></div>
+</div>
+<span class="wm-source-ratio">45%</span>
+</div>
+</div>
 
 ## 원문 링크 묶음
 <div class="wm-reference-summary"><strong>원문 링크 탐색 가이드</strong><p>시장 영향이 높은 이슈를 우선 확인할 수 있도록 출처별 커버리지를 함께 제공합니다.</p></div>

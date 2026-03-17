@@ -38,35 +38,249 @@ image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-02-19.png"
 
 ## 주요 이슈
 
-| 순번 | 주요 이슈 | 테마 | 시장 영향 | 출처 |
-| :---: | --- | :---: | :---: | --- |
-| 1 | [**Hamas is reasserting control in Gaza despite its heavy losses fighting Israel**](https://www.bbc.com/news/articles/c98g1klxnpxo?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
-| 2 | [**US to withdraw troops from Syria as tensions mount with Iran**](https://www.bbc.com/news/articles/c875pey8vy2o?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
-| 3 | [**'Difficult' Russia-Ukraine peace talks end without breakthrough**](https://www.bbc.com/news/articles/c0k1xj0d708o?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
-| 4 | [**Iran security official appears to fire on crowd at cemetery**](https://www.bbc.com/news/articles/cly8q62qe71o?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
-| 5 | [**Turkey's president rejects Israel's recognition of Somaliland**](https://www.bbc.com/news/articles/c0lj0plkg09o?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
-| 6 | [**Russia-Ukraine war: List of key events, day 1,456**](https://www.aljazeera.com/news/2026/2/19/russia-ukraine-war-list-of-key-events-day-1456?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 7 | [**US renews threat of military action as Iran, Russia announce naval drills**](https://www.aljazeera.com/news/2026/2/18/white-house-says-iran-would-be-wise-to-take-deal-amid-military-buildup?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 8 | [**Desperate hunt for breakthrough in Nancy Guthrie case turns to Mexico**](https://www.bbc.com/news/articles/c4gq2k8220go?at_medium=RSS&at_campaign=rss) | 금융시장 | 중간~높음 | WorldMonitor/BBC World |
-| 9 | [**Martial law, protests and a president tried for insurrection: How did South Korea get here?**](https://www.bbc.com/news/videos/c70kw0nrxreo?at_medium=RSS&at_campaign=rss) | 정책/법률 | 중간 | WorldMonitor/BBC World |
-| 10 | [**Billionaire Les Wexner tells US lawmakers he was 'naive' and 'conned' by Epstein**](https://www.bbc.com/news/articles/cy57rrrpvg7o?at_medium=RSS&at_campaign=rss) | 정책/법률 | 중간 | WorldMonitor/BBC World |
-| 11 | [**Advocacy groups sue Trump administration over endangerment finding’s repeal**](https://www.aljazeera.com/news/2026/2/19/advocacy-groups-sue-trump-administration-over-endangerment-findings-repeal?traffic_source=rss) | 정책/법률 | 중간 | WorldMonitor/Al Jazeera |
-| 12 | [**Eight skiers found dead after California avalanche**](https://www.bbc.com/news/articles/cvg19dp4vxgo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 13 | [**Do not give away Diego Garcia, Trump tells UK in fresh attack on Chagos deal**](https://www.bbc.com/news/articles/c309qqyer8yo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 14 | [**Suspected carbon-monoxide leak kills at least 30 miners in Nigeria, witnesses say**](https://www.bbc.com/news/articles/cwyk6nr80kxo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 15 | [**You're never too old, says dancer, 71, cast in Taylor Swift video**](https://www.bbc.com/news/articles/cly23mrv68ro?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 16 | [**Zuckerberg defends Meta in landmark social media addiction trial**](https://www.bbc.com/news/articles/c5y42znjnjvo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 17 | [**Air Force One set for makeover paint job with new colours**](https://www.bbc.com/news/articles/cpd8zx4qdz6o?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 18 | [**Wave of arrests over killing of French nationalist piles pressure on far left**](https://www.bbc.com/news/articles/c62dzgy0q37o?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
-| 19 | [**Peru appoints Jose Maria Balcazar as president after Jose Jeri’s removal**](https://www.aljazeera.com/news/2026/2/19/peru-appoints-new-president-after-jose-jeris-removal?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
-| 20 | [**Venezuela’s Rodriguez, Colombia’s Petro say they will meet ‘soon’**](https://www.aljazeera.com/news/2026/2/19/venezuelas-rodriguez-colombias-petro-say-they-will-meet-soon?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
+<div class="wm-issue-list">
+<div class="wm-issue-card">
+<div class="wm-issue-num">1</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c98g1klxnpxo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Hamas is reasserting control in Gaza despite its heavy losses fighting Israel</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">2</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c875pey8vy2o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>US to withdraw troops from Syria as tensions mount with Iran</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">3</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c0k1xj0d708o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>'Difficult' Russia-Ukraine peace talks end without breakthrough</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">4</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cly8q62qe71o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Iran security official appears to fire on crowd at cemetery</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">5</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c0lj0plkg09o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Turkey's president rejects Israel's recognition of Somaliland</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">6</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/19/russia-ukraine-war-list-of-key-events-day-1456?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Russia-Ukraine war: List of key events, day 1,456</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">7</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/18/white-house-says-iran-would-be-wise-to-take-deal-amid-military-buildup?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>US renews threat of military action as Iran, Russia announce naval drills</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">8</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c4gq2k8220go?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Desperate hunt for breakthrough in Nancy Guthrie case turns to Mexico</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">금융시장</span>
+<span class="wm-issue-impact" style="color:#8b949e;">중간~높음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">9</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/videos/c70kw0nrxreo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Martial law, protests and a president tried for insurrection: How did South Korea get here?</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">정책/법률</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">10</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cy57rrrpvg7o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Billionaire Les Wexner tells US lawmakers he was 'naive' and 'conned' by Epstein</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">정책/법률</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">11</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/19/advocacy-groups-sue-trump-administration-over-endangerment-findings-repeal?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Advocacy groups sue Trump administration over endangerment finding’s repeal</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">정책/법률</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">12</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cvg19dp4vxgo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Eight skiers found dead after California avalanche</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">13</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c309qqyer8yo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Do not give away Diego Garcia, Trump tells UK in fresh attack on Chagos deal</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">14</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cwyk6nr80kxo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Suspected carbon-monoxide leak kills at least 30 miners in Nigeria, witnesses say</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">15</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cly23mrv68ro?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>You're never too old, says dancer, 71, cast in Taylor Swift video</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">16</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c5y42znjnjvo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Zuckerberg defends Meta in landmark social media addiction trial</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">17</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cpd8zx4qdz6o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Air Force One set for makeover paint job with new colours</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">18</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c62dzgy0q37o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Wave of arrests over killing of French nationalist piles pressure on far left</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">19</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/19/peru-appoints-new-president-after-jose-jeris-removal?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Peru appoints Jose Maria Balcazar as president after Jose Jeri’s removal</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">20</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/19/venezuelas-rodriguez-colombias-petro-say-they-will-meet-soon?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Venezuela’s Rodriguez, Colombia’s Petro say they will meet ‘soon’</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+</div>
 
 ## 출처 커버리지
 
-| 출처 | 건수 | 비중 |
-| --- | ---: | ---: |
-| WorldMonitor/BBC World | 15건 | 75% |
-| WorldMonitor/Al Jazeera | 5건 | 25% |
+<div class="wm-source-coverage">
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/BBC World</span>
+<span class="wm-source-count">15건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:75%;background:#58a6ff;"></div>
+</div>
+<span class="wm-source-ratio">75%</span>
+</div>
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/Al Jazeera</span>
+<span class="wm-source-count">5건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:25%;background:#22d3ee;"></div>
+</div>
+<span class="wm-source-ratio">25%</span>
+</div>
+</div>
 
 ## 원문 링크 묶음
 <strong>원문 링크 탐색 가이드</strong><p>시장 영향이 높은 이슈를 우선 확인할 수 있도록 출처별 커버리지를 함께 제공합니다.</p></div>

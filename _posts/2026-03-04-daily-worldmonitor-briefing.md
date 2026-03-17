@@ -42,36 +42,246 @@ description: "2026-03-04 WorldMonitor 20건: 이란 분쟁 VIX 급등·남수단
 
 ## 주요 이슈
 
-| 순번 | 주요 이슈 | 테마 | 중요도 | 출처 |
-| :---: | --- | :---: | :---: | --- |
-| 1 | [**South Sudan risks return to full-blown civil war as violence escalates**](https://www.theguardian.com/world/2026/mar/03/south-sudan-risks-return-civil-war-violence-escalates) | 지정학/안보 | 높음 | WorldMonitor/Guardian World |
-| 2 | [**‘Imperialist undertones’: global south condemns US-Israeli war with Iran**](https://www.theguardian.com/world/2026/mar/03/global-south-condemns-us-israeli-war-with-iran) | 지정학/안보 | 높음 | WorldMonitor/Guardian World |
-| 3 | [**Wall Street’s ‘fear gauge’ is rising as Iran conflict escalates. Here’s what investors should watch.**](https://www.marketwatch.com/story/wall-streets-fear-gauge-is-rising-as-iran-conflict-escalates-heres-what-investors-should-watch-543b5d5c?mod=mw_rss_topstories) | 지정학/안보 | 높음 | WorldMonitor/MarketWatch |
-| 4 | [**Software stocks just quietly trounced chip stocks to a historic extent — but don’t get too excited**](https://www.marketwatch.com/story/software-stocks-just-quietly-trounced-chip-stocks-to-a-historic-extent-but-dont-get-too-excited-5babf59c?mod=mw_rss_topstories) | 금융시장 | 높음 | WorldMonitor/MarketWatch |
-| 5 | [**The stock market’s wild swings are sending a message about the escalating Iran conflict**](https://www.marketwatch.com/story/the-stock-markets-wild-swings-are-sending-a-message-about-the-escalating-iran-conflict-9dc81cac?mod=mw_rss_topstories) | 지정학/안보 | 높음 | WorldMonitor/MarketWatch |
-| 6 | [**Trump threatens to halt trade with Spain over military base access**](https://www.bbc.com/news/articles/c8r1mzd8vygo?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
-| 7 | [**My rude, ungrateful relative gave her lawyer power of attorney — and has lived to regret it. Should I get involved?**](https://www.marketwatch.com/story/my-rude-ungrateful-relative-gave-her-lawyer-power-of-attorney-and-has-lived-to-regret-it-should-i-get-involved-5db8088d?mod=mw_rss_topstories) | 사회/기타 | 낮음 | WorldMonitor/MarketWatch |
-| 8 | [**CrowdStrike gives upbeat earnings outlook as AI raises the stakes around cyberthreats**](https://www.marketwatch.com/story/crowdstrike-gives-upbeat-earnings-outlook-as-ai-raises-the-stakes-around-cyberthreats-087a4b2e?mod=mw_rss_topstories) | 금융시장 | 중간 | WorldMonitor/MarketWatch |
-| 9 | [**Moderna’s stock rallies 8% as deal over a patent dispute clears vaccine pipeline**](https://www.marketwatch.com/story/modernas-stock-rallies-more-than-10-as-deal-over-a-patent-dispute-clears-vaccine-pipeline-d34e6793?mod=mw_rss_topstories) | 금융시장 | 중간 | WorldMonitor/MarketWatch |
-| 10 | [**Gas and oil prices soar and shares tumble on fears conflict could escalate**](https://www.bbc.com/news/articles/cr5lz0vgy52o?at_medium=RSS&at_campaign=rss) | 에너지 | 중간 | WorldMonitor/BBC World |
-| 11 | [**China’s Two Sessions: what are the meetings and why do they matter?**](https://www.theguardian.com/world/2026/mar/04/china-two-sessions-2026-meeting-what-are-they-when-is-it-explainer) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
-| 12 | [**New Zealand coalition votes to make English an official language as critics slam ‘cynical’ bill**](https://www.theguardian.com/world/2026/mar/04/new-zealand-english-official-language-bill) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
-| 13 | [**China calls for vessels in strait of Hormuz to be protected amid soaring shipping costs**](https://www.theguardian.com/business/2026/mar/03/china-calls-protection-vessels-strait-hormuz-amid-soaring-shipping-costs) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
-| 14 | [**More generals purged as delegates gather for China’s Two Sessions event**](https://www.theguardian.com/world/2026/mar/03/china-two-sessions-president-xi-economy-defence-technology) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
-| 15 | [**Trump’s show of force in the Middle East creates a weakness China can exploit**](https://www.theguardian.com/world/2026/mar/03/trump-us-iran-middle-east-china) | 사회/기타 | 낮음 | WorldMonitor/Guardian World |
-| 16 | [**Ross Stores touts ‘very strong start’ for spring shopping, boosting case for a retail rebound**](https://www.marketwatch.com/story/ross-stores-touts-very-strong-start-for-spring-shopping-boosting-case-for-a-retail-rebound-4d8f168b?mod=mw_rss_topstories) | 사회/기타 | 낮음 | WorldMonitor/MarketWatch |
-| ~~17~~ | ~~[My mother will live in her second husband’s house...](https://www.marketwatch.com/story/his-children-might-resent-her-my-widowed-mother-has-a-life-estate-does-that-override-a-prenup-and-will-0e217484?mod=mw_rss_topstories)~~ | 사회/기타 | 낮음 | *개인 재테크 Q&A — 시장 무관* |
-| 18 | [**Here are the U.S. airlines most vulnerable to rising fuel prices**](https://www.marketwatch.com/story/here-are-the-u-s-airlines-most-vulnerable-to-rising-fuel-prices-b3ed82b3?mod=mw_rss_topstories) | 사회/기타 | 낮음 | WorldMonitor/MarketWatch |
-| 19 | [**How Nvidia turned a steal of a deal into its secret weapon**](https://www.marketwatch.com/story/how-nvidia-turned-a-steal-of-a-deal-into-its-secret-weapon-17c2027a?mod=mw_rss_topstories) | 사회/기타 | 낮음 | WorldMonitor/MarketWatch |
-| 20 | [**European allies rush to bolster Cyprus defences after drones target British base**](https://www.bbc.com/news/articles/c4g74npdwnyo?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음 | WorldMonitor/BBC World |
+<div class="wm-issue-list">
+<div class="wm-issue-card">
+<div class="wm-issue-num">1</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/mar/03/south-sudan-risks-return-civil-war-violence-escalates" target="_blank" rel="noopener noreferrer"><strong>South Sudan risks return to full-blown civil war as violence escalates</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">2</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/mar/03/global-south-condemns-us-israeli-war-with-iran" target="_blank" rel="noopener noreferrer"><strong>‘Imperialist undertones’: global south condemns US-Israeli war with Iran</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">3</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.marketwatch.com/story/wall-streets-fear-gauge-is-rising-as-iran-conflict-escalates-heres-what-investors-should-watch-543b5d5c?mod=mw_rss_topstories" target="_blank" rel="noopener noreferrer"><strong>Wall Street’s ‘fear gauge’ is rising as Iran conflict escalates. Here’s what investors should watch.</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/MarketWatch</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">4</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.marketwatch.com/story/software-stocks-just-quietly-trounced-chip-stocks-to-a-historic-extent-but-dont-get-too-excited-5babf59c?mod=mw_rss_topstories" target="_blank" rel="noopener noreferrer"><strong>Software stocks just quietly trounced chip stocks to a historic extent — but don’t get too excited</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">금융시장</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/MarketWatch</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">5</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.marketwatch.com/story/the-stock-markets-wild-swings-are-sending-a-message-about-the-escalating-iran-conflict-9dc81cac?mod=mw_rss_topstories" target="_blank" rel="noopener noreferrer"><strong>The stock market’s wild swings are sending a message about the escalating Iran conflict</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/MarketWatch</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">6</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c8r1mzd8vygo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Trump threatens to halt trade with Spain over military base access</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">7</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.marketwatch.com/story/my-rude-ungrateful-relative-gave-her-lawyer-power-of-attorney-and-has-lived-to-regret-it-should-i-get-involved-5db8088d?mod=mw_rss_topstories" target="_blank" rel="noopener noreferrer"><strong>My rude, ungrateful relative gave her lawyer power of attorney — and has lived to regret it. Should I get involved?</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/MarketWatch</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">8</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.marketwatch.com/story/crowdstrike-gives-upbeat-earnings-outlook-as-ai-raises-the-stakes-around-cyberthreats-087a4b2e?mod=mw_rss_topstories" target="_blank" rel="noopener noreferrer"><strong>CrowdStrike gives upbeat earnings outlook as AI raises the stakes around cyberthreats</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">금융시장</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/MarketWatch</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">9</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.marketwatch.com/story/modernas-stock-rallies-more-than-10-as-deal-over-a-patent-dispute-clears-vaccine-pipeline-d34e6793?mod=mw_rss_topstories" target="_blank" rel="noopener noreferrer"><strong>Moderna’s stock rallies 8% as deal over a patent dispute clears vaccine pipeline</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">금융시장</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/MarketWatch</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">10</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cr5lz0vgy52o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Gas and oil prices soar and shares tumble on fears conflict could escalate</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">에너지</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">11</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/mar/04/china-two-sessions-2026-meeting-what-are-they-when-is-it-explainer" target="_blank" rel="noopener noreferrer"><strong>China’s Two Sessions: what are the meetings and why do they matter?</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">12</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/mar/04/new-zealand-english-official-language-bill" target="_blank" rel="noopener noreferrer"><strong>New Zealand coalition votes to make English an official language as critics slam ‘cynical’ bill</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">13</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/business/2026/mar/03/china-calls-protection-vessels-strait-hormuz-amid-soaring-shipping-costs" target="_blank" rel="noopener noreferrer"><strong>China calls for vessels in strait of Hormuz to be protected amid soaring shipping costs</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">14</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/mar/03/china-two-sessions-president-xi-economy-defence-technology" target="_blank" rel="noopener noreferrer"><strong>More generals purged as delegates gather for China’s Two Sessions event</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">15</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/mar/03/trump-us-iran-middle-east-china" target="_blank" rel="noopener noreferrer"><strong>Trump’s show of force in the Middle East creates a weakness China can exploit</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">16</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.marketwatch.com/story/ross-stores-touts-very-strong-start-for-spring-shopping-boosting-case-for-a-retail-rebound-4d8f168b?mod=mw_rss_topstories" target="_blank" rel="noopener noreferrer"><strong>Ross Stores touts ‘very strong start’ for spring shopping, boosting case for a retail rebound</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/MarketWatch</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">18</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.marketwatch.com/story/here-are-the-u-s-airlines-most-vulnerable-to-rising-fuel-prices-b3ed82b3?mod=mw_rss_topstories" target="_blank" rel="noopener noreferrer"><strong>Here are the U.S. airlines most vulnerable to rising fuel prices</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/MarketWatch</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">19</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.marketwatch.com/story/how-nvidia-turned-a-steal-of-a-deal-into-its-secret-weapon-17c2027a?mod=mw_rss_topstories" target="_blank" rel="noopener noreferrer"><strong>How Nvidia turned a steal of a deal into its secret weapon</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/MarketWatch</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">20</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c4g74npdwnyo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>European allies rush to bolster Cyprus defences after drones target British base</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+</div>
 
 ## 출처 커버리지
 
-| 출처 | 건수 | 비중 |
-| --- | ---: | ---: |
-| WorldMonitor/MarketWatch | 10건 | 50% |
-| WorldMonitor/Guardian World | 7건 | 35% |
-| WorldMonitor/BBC World | 3건 | 15% |
+<div class="wm-source-coverage">
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/MarketWatch</span>
+<span class="wm-source-count">10건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:50%;background:#58a6ff;"></div>
+</div>
+<span class="wm-source-ratio">50%</span>
+</div>
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/Guardian World</span>
+<span class="wm-source-count">7건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:35%;background:#22d3ee;"></div>
+</div>
+<span class="wm-source-ratio">35%</span>
+</div>
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/BBC World</span>
+<span class="wm-source-count">3건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:15%;background:#22d3ee;"></div>
+</div>
+<span class="wm-source-ratio">15%</span>
+</div>
+</div>
 
 ## 원문 링크 묶음
 <div class="wm-reference-summary"><strong>원문 링크 탐색 가이드</strong><p>시장 영향이 높은 이슈를 우선 확인할 수 있도록 출처별 커버리지를 함께 제공합니다.</p></div>

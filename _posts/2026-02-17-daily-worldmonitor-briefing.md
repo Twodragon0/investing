@@ -39,25 +39,139 @@ image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-02-17.png"
 
 ## 주요 이슈
 
-| 순번 | 주요 이슈 | 테마 | 시장 영향 | 출처 |
-| :---: | --- | :---: | :---: | --- |
-| 1 | [**US build-up of warships and fighter jets tracked near Iran**](https://www.bbc.com/news/articles/c1d64p3q2d0o?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
-| 2 | [**Trump's new world order has become real and Europe is having to adjust fast**](https://www.bbc.com/news/articles/cddn002g6qzo?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
-| 3 | [**US-Iran talks live: Second round to begin at Oman’s embassy in Geneva**](https://www.aljazeera.com/news/liveblog/2026/2/17/us-iran-talks-set-to-begin-at-omans-embassy-in-switzerland?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 4 | [**Trump says he will be involved ‘indirectly’ in Iran nuclear talks**](https://www.aljazeera.com/news/2026/2/17/trump-says-he-will-be-involved-indirectly-in-iran-nuclear-talks?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 5 | [**Ukraine's ex-energy minister detained while attempting to leave country**](https://www.bbc.com/news/articles/c4g5380xwqjo?at_medium=RSS&at_campaign=rss) | 지정학/안보 | 높음 | WorldMonitor/BBC World |
-| 6 | [**Judge orders Trump administration to restore Philadelphia slavery exhibit**](https://www.aljazeera.com/news/2026/2/17/judge-orders-trump-administration-to-restore-philadelphia-slavery-exhibit?traffic_source=rss) | 정책/법률 | 중간 | WorldMonitor/Al Jazeera |
-| 7 | [**US attorney general criticised after saying all Epstein files have been released**](https://www.bbc.com/news/articles/cz7genjx9njo?at_medium=RSS&at_campaign=rss) | 정책/법률 | 중간 | WorldMonitor/BBC World |
-| 8 | [**Pressure grows for release of remaining Venezuelan political prisoners**](https://www.bbc.com/news/articles/c62d6pzpw6yo?at_medium=RSS&at_campaign=rss) | 정책/법률 | 중간 | WorldMonitor/BBC World |
-| 9 | [**Navalny's mother says she always knew he was murdered after poison finding**](https://www.bbc.com/news/articles/cq6qg6l31l3o?at_medium=RSS&at_campaign=rss) | 정책/법률 | 중간 | WorldMonitor/BBC World |
-| 10 | [**Kenya strike delays flights at international hub airport**](https://www.bbc.com/news/articles/c363096kd5po?at_medium=RSS&at_campaign=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/BBC World |
+<div class="wm-issue-list">
+<div class="wm-issue-card">
+<div class="wm-issue-num">1</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c1d64p3q2d0o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>US build-up of warships and fighter jets tracked near Iran</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">2</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cddn002g6qzo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Trump's new world order has become real and Europe is having to adjust fast</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">3</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/liveblog/2026/2/17/us-iran-talks-set-to-begin-at-omans-embassy-in-switzerland?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>US-Iran talks live: Second round to begin at Oman’s embassy in Geneva</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">4</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/17/trump-says-he-will-be-involved-indirectly-in-iran-nuclear-talks?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Trump says he will be involved ‘indirectly’ in Iran nuclear talks</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">5</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c4g5380xwqjo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Ukraine's ex-energy minister detained while attempting to leave country</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">6</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/17/judge-orders-trump-administration-to-restore-philadelphia-slavery-exhibit?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Judge orders Trump administration to restore Philadelphia slavery exhibit</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">정책/법률</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">7</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cz7genjx9njo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>US attorney general criticised after saying all Epstein files have been released</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">정책/법률</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">8</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c62d6pzpw6yo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Pressure grows for release of remaining Venezuelan political prisoners</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">정책/법률</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">9</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/cq6qg6l31l3o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Navalny's mother says she always knew he was murdered after poison finding</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">정책/법률</span>
+<span class="wm-issue-impact" style="color:#d29922;">중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">10</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.bbc.com/news/articles/c363096kd5po?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer"><strong>Kenya strike delays flights at international hub airport</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/BBC World</span>
+</div>
+</div>
+</div>
+</div>
 
 ## 출처 커버리지
 
-| 출처 | 건수 | 비중 |
-|------|------|------|
-| WorldMonitor/BBC World | 15건 | 75% |
-| WorldMonitor/Al Jazeera | 5건 | 25% |
+<div class="wm-source-coverage">
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/BBC World</span>
+<span class="wm-source-count">15건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:75%;background:#58a6ff;"></div>
+</div>
+<span class="wm-source-ratio">75%</span>
+</div>
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/Al Jazeera</span>
+<span class="wm-source-count">5건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:25%;background:#22d3ee;"></div>
+</div>
+<span class="wm-source-ratio">25%</span>
+</div>
+</div>
 
 ## 원문 링크 묶음
 <strong>원문 링크 탐색 가이드</strong><p>시장 영향이 높은 이슈를 우선 확인할 수 있도록 출처별 커버리지를 함께 제공합니다.</p></div>

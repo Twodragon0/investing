@@ -49,35 +49,249 @@ image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-02-24.png"
 
 ## 주요 이슈
 
-| 순번 | 주요 이슈 | 테마 | 시장 영향 | 출처 |
-| :---: | --- | :---: | :---: | --- |
-| 1 | [**Russia-Ukraine war: List of key events, day 1,461**](https://www.aljazeera.com/news/2026/2/24/russia-ukraine-war-list-of-key-events-day-1461?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 2 | [**Trump hits out at reports that top general flagged risks of attacking Iran**](https://www.aljazeera.com/news/2026/2/24/trump-hits-out-at-reports-that-top-general-flagged-risks-of-attacking-iran?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 3 | [**Are the US and Iran moving closer to war?**](https://www.aljazeera.com/video/inside-story/2026/2/23/are-the-us-and-iran-moving-closer-to-war?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 4 | [**Slovakia halts emergency power supplies to Ukraine over Russian oil dispute**](https://www.aljazeera.com/news/2026/2/23/slovakia-halts-emergency-power-supplies-to-ukraine-over-russian-oil-dispute?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 5 | [**EU sanctions Russian officials as Hungary blocks funds to Ukraine**](https://www.aljazeera.com/news/2026/2/23/eu-sanctions-russian-officials-as-hungary-blocks-funds-to-ukraine?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 6 | [**Israeli settlers vandalise, torch mosque in occupied West Bank**](https://www.aljazeera.com/video/newsfeed/2026/2/23/israeli-settlers-vandalise-torch-mosque-in-occupied-west-bank?traffic_source=rss) | 지정학/안보 | 높음 | WorldMonitor/Al Jazeera |
-| 7 | [**Lebanon’s tax hikes draw anger from economically frustrated public**](https://www.aljazeera.com/features/2026/2/23/lebanons-tax-hikes-draw-anger-from-economically-frustrated-public?traffic_source=rss) | 금융시장 | 중간~높음 | WorldMonitor/Al Jazeera |
-| 8 | [**Australian PM backs removal of ex-Prince Andrew from succession line**](https://www.aljazeera.com/news/2026/2/24/australian-pm-backs-removal-of-ex-prince-andrew-from-succession-line?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
-| 9 | [**Heavy rains, deadly floods hit southern Peru; thousands seek shelter**](https://www.aljazeera.com/news/2026/2/24/heavy-rains-deadly-floods-hit-southern-peru-thousands-seek-shelter?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
-| 10 | [**Trump set to deliver second term’s first State of the Union: What to expect**](https://www.aljazeera.com/news/2026/2/24/trump-set-to-deliver-second-terms-first-state-of-the-union-what-to-expect?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
-| 11 | [**Trump’s new tariff threats trigger economic uncertainty; trade deals stall**](https://www.aljazeera.com/economy/2026/2/23/trumps-new-tariff-threats-trigger-economic-uncertainty-trade-deals-stall?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
-| 12 | [**Tourette syndrome campaigner shouts slur at BAFTA ceremony**](https://www.aljazeera.com/video/newsfeed/2026/2/23/tourette-syndrome-campaigner-shouts-slur-at-bafta-ceremony?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
-| 13 | [**El Mencho: Mexico officials say 25 soldiers killed after cartel raid**](https://www.aljazeera.com/news/2026/2/23/mexican-officials-say-25-soldiers-killed-in-clashes-following-cartel-raid?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
-| 14 | [**Another US boat strike in Caribbean Sea kills three, Pentagon says**](https://www.aljazeera.com/news/2026/2/23/another-us-boat-strike-in-caribbean-sea-kills-three-pentagon-says?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
-| 15 | [**BBC criticised for nixing ‘Free Palestine’ tribute from BAFTA coverage**](https://www.aljazeera.com/news/2026/2/23/bbc-criticised-for-nixing-free-palestine-tribute-from-bafta-coverage?traffic_source=rss) | 사회/기타 | 낮음~중간 | WorldMonitor/Al Jazeera |
-| 16 | [**Robert Mugabe’s son charged with attempted murder over Johannesburg shooting**](https://www.theguardian.com/world/2026/feb/23/robert-mugabe-son-bellarmine-mugabe-charged-with-crimes) | 사회/기타 | 낮음~중간 | WorldMonitor/Guardian World |
-| 17 | [**Mexican drug cartel boss ‘El Mencho’ tracked through romantic partner**](https://www.theguardian.com/world/2026/feb/23/el-mencho-mexican-drug-cartel-boss-killing-violence) | 사회/기타 | 낮음~중간 | WorldMonitor/Guardian World |
-| 18 | [**Canada seeks answers from OpenAI for failing to alert police after suspending school shooter’s account**](https://www.theguardian.com/world/2026/feb/23/openai-tumber-ridge-shooter-account-suspended) | 사회/기타 | 낮음~중간 | WorldMonitor/Guardian World |
-| 19 | [**Mexico faces uphill battle to appease kingpin Trump after cartel boss’s killing**](https://www.theguardian.com/world/2026/feb/23/mexico-trump-cartel-boss-killing) | 사회/기타 | 낮음~중간 | WorldMonitor/Guardian World |
-| 20 | [**Who was El Mencho, the former police officer who co-founded an ultraviolent cartel in Mexico?**](https://www.theguardian.com/world/2026/feb/23/who-was-el-mencho-drug-cartel-boss-killed-mexico) | 사회/기타 | 낮음~중간 | WorldMonitor/Guardian World |
+<div class="wm-issue-list">
+<div class="wm-issue-card">
+<div class="wm-issue-num">1</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/24/russia-ukraine-war-list-of-key-events-day-1461?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Russia-Ukraine war: List of key events, day 1,461</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">2</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/24/trump-hits-out-at-reports-that-top-general-flagged-risks-of-attacking-iran?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Trump hits out at reports that top general flagged risks of attacking Iran</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">3</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/video/inside-story/2026/2/23/are-the-us-and-iran-moving-closer-to-war?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Are the US and Iran moving closer to war?</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">4</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/23/slovakia-halts-emergency-power-supplies-to-ukraine-over-russian-oil-dispute?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Slovakia halts emergency power supplies to Ukraine over Russian oil dispute</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">5</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/23/eu-sanctions-russian-officials-as-hungary-blocks-funds-to-ukraine?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>EU sanctions Russian officials as Hungary blocks funds to Ukraine</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">6</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/video/newsfeed/2026/2/23/israeli-settlers-vandalise-torch-mosque-in-occupied-west-bank?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Israeli settlers vandalise, torch mosque in occupied West Bank</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">지정학/안보</span>
+<span class="wm-issue-impact" style="color:#f85149;">높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">7</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/features/2026/2/23/lebanons-tax-hikes-draw-anger-from-economically-frustrated-public?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Lebanon’s tax hikes draw anger from economically frustrated public</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">금융시장</span>
+<span class="wm-issue-impact" style="color:#8b949e;">중간~높음</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">8</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/24/australian-pm-backs-removal-of-ex-prince-andrew-from-succession-line?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Australian PM backs removal of ex-Prince Andrew from succession line</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">9</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/24/heavy-rains-deadly-floods-hit-southern-peru-thousands-seek-shelter?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Heavy rains, deadly floods hit southern Peru; thousands seek shelter</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">10</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/24/trump-set-to-deliver-second-terms-first-state-of-the-union-what-to-expect?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Trump set to deliver second term’s first State of the Union: What to expect</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">11</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/economy/2026/2/23/trumps-new-tariff-threats-trigger-economic-uncertainty-trade-deals-stall?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Trump’s new tariff threats trigger economic uncertainty; trade deals stall</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">12</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/video/newsfeed/2026/2/23/tourette-syndrome-campaigner-shouts-slur-at-bafta-ceremony?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Tourette syndrome campaigner shouts slur at BAFTA ceremony</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">13</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/23/mexican-officials-say-25-soldiers-killed-in-clashes-following-cartel-raid?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>El Mencho: Mexico officials say 25 soldiers killed after cartel raid</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">14</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/23/another-us-boat-strike-in-caribbean-sea-kills-three-pentagon-says?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>Another US boat strike in Caribbean Sea kills three, Pentagon says</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">15</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/2/23/bbc-criticised-for-nixing-free-palestine-tribute-from-bafta-coverage?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>BBC criticised for nixing ‘Free Palestine’ tribute from BAFTA coverage</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Al Jazeera</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">16</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/23/robert-mugabe-son-bellarmine-mugabe-charged-with-crimes" target="_blank" rel="noopener noreferrer"><strong>Robert Mugabe’s son charged with attempted murder over Johannesburg shooting</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">17</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/23/el-mencho-mexican-drug-cartel-boss-killing-violence" target="_blank" rel="noopener noreferrer"><strong>Mexican drug cartel boss ‘El Mencho’ tracked through romantic partner</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">18</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/23/openai-tumber-ridge-shooter-account-suspended" target="_blank" rel="noopener noreferrer"><strong>Canada seeks answers from OpenAI for failing to alert police after suspending school shooter’s account</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">19</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/23/mexico-trump-cartel-boss-killing" target="_blank" rel="noopener noreferrer"><strong>Mexico faces uphill battle to appease kingpin Trump after cartel boss’s killing</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+<div class="wm-issue-card">
+<div class="wm-issue-num">20</div>
+<div class="wm-issue-body">
+<div class="wm-issue-title"><a href="https://www.theguardian.com/world/2026/feb/23/who-was-el-mencho-drug-cartel-boss-killed-mexico" target="_blank" rel="noopener noreferrer"><strong>Who was El Mencho, the former police officer who co-founded an ultraviolent cartel in Mexico?</strong></a></div>
+<div class="wm-issue-meta">
+<span class="wm-issue-theme">사회/기타</span>
+<span class="wm-issue-impact" style="color:#8b949e;">낮음~중간</span>
+<span class="wm-issue-source">WorldMonitor/Guardian World</span>
+</div>
+</div>
+</div>
+</div>
 
 ## 출처 커버리지
 
-| 출처 | 건수 | 비중 |
-| --- | ---: | ---: |
-| WorldMonitor/Al Jazeera | 15건 | 75% |
-| WorldMonitor/Guardian World | 5건 | 25% |
+<div class="wm-source-coverage">
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/Al Jazeera</span>
+<span class="wm-source-count">15건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:75%;background:#58a6ff;"></div>
+</div>
+<span class="wm-source-ratio">75%</span>
+</div>
+<div class="wm-source-row">
+<span class="wm-source-name">WorldMonitor/Guardian World</span>
+<span class="wm-source-count">5건</span>
+<div class="wm-source-bar-track">
+<div class="wm-source-bar-fill" style="width:25%;background:#22d3ee;"></div>
+</div>
+<span class="wm-source-ratio">25%</span>
+</div>
+</div>
 
 ## 원문 링크 묶음
 <strong>원문 링크 탐색 가이드</strong><p>시장 영향이 높은 이슈를 우선 확인할 수 있도록 출처별 커버리지를 함께 제공합니다.</p></div>
