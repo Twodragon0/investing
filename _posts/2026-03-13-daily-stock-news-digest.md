@@ -24,8 +24,21 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-13 - stock-news 뉴스 요약 
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">183</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📈 37</div><div class="stat-label">가격/시장</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">5,487.24</div><div class="stat-label">KOSPI -1.72%</div></div><div class="stat-item"><div class="stat-value">1,152.96</div><div class="stat-label">KOSDAQ +0.40%</div></div></div>
-<div class="alert-box alert-info"><strong>주식 시장: 코스피, 삼성전자, 코스닥 부각 183건 분석</strong><ul><li>📈 <strong>가격/시장</strong> (37건): 코스피, 삼성전자, 코스닥 이슈가 37건으로 주목받고 있습니다.</li><li>📊 <strong>매크로/금리</strong> (13건): 환율 중심으로 13건의 뉴스가 수집되었습니다.</li><li>🏦 <strong>거래소</strong> (6건): IPO, SoftBank, PayPay 중심으로 6건의 뉴스가 수집되었습니다.</li><li>🏛️ <strong>정치/정책</strong> (8건): Trump, Iran, oil 이슈가 8건으로 주목받고 있습니다.</li></ul></div>
+<div class="stat-grid">
+<div class="stat-item"><div class="stat-value">183</div><div class="stat-label">수집 건수</div></div>
+<div class="stat-item"><div class="stat-value">📈 37</div><div class="stat-label">가격/시장</div></div>
+<div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div>
+<div class="stat-item"><div class="stat-value">5,487.24</div><div class="stat-label">KOSPI -1.72%</div></div>
+<div class="stat-item"><div class="stat-value">1,152.96</div><div class="stat-label">KOSDAQ +0.40%</div></div>
+</div>
+<div class="alert-box alert-info"><strong>주식 시장: 코스피, 삼성전자, 코스닥 부각 183건 분석</strong>
+<ul>
+<li>📈 <strong>가격/시장</strong> (37건): 코스피, 삼성전자, 코스닥 이슈가 37건으로 주목받고 있습니다.</li>
+<li>📊 <strong>매크로/금리</strong> (13건): 환율 중심으로 13건의 뉴스가 수집되었습니다.</li>
+<li>🏦 <strong>거래소</strong> (6건): IPO, SoftBank, PayPay 중심으로 6건의 뉴스가 수집되었습니다.</li>
+<li>🏛️ <strong>정치/정책</strong> (8건): Trump, Iran, oil 이슈가 8건으로 주목받고 있습니다.</li>
+</ul>
+</div>
 
 
 ## 전체 뉴스 요약

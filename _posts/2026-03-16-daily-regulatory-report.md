@@ -22,9 +22,21 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-03-16 - regulatory-news 뉴
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">21</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🏦 4</div><div class="stat-label">거래소</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">21</div><div class="stat-label">한국</div></div></div>
+<div class="stat-grid">
+<div class="stat-item"><div class="stat-value">21</div><div class="stat-label">수집 건수</div></div>
+<div class="stat-item"><div class="stat-value">🏦 4</div><div class="stat-label">거래소</div></div>
+<div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div>
+<div class="stat-item"><div class="stat-value">21</div><div class="stat-label">한국</div></div>
+</div>
 
-<div class="alert-box alert-info"><strong>글로벌 규제: 중복상장, 통신사기피해환급법, 선정하였습니다 관련 21건 수집</strong><ul><li>🏦 <strong>거래소</strong> (4건): 중복상장, 통신사기피해환급법, 선정하였습니다 테마에서 4건의 뉴스가 감지되었습니다.</li><li>🏛️ <strong>정치/정책</strong> (3건): 3건의 기사에서 대한, 없습니다, 서울경제 키워드가 부각되고 있습니다.</li><li>🔵 <strong>규제/정책</strong> (7건): 7건의 뉴스에서 전세사기, 없습니다, 피해자 관련 동향이 포착되었습니다.</li><li>🟣 <strong>DeFi</strong> (1건): 금융위원회가, 수용한다는, 아닙니다 테마에서 1건의 뉴스가 감지되었습니다.</li></ul></div>
+<div class="alert-box alert-info"><strong>글로벌 규제: 중복상장, 통신사기피해환급법, 선정하였습니다 관련 21건 수집</strong>
+<ul>
+<li>🏦 <strong>거래소</strong> (4건): 중복상장, 통신사기피해환급법, 선정하였습니다 테마에서 4건의 뉴스가 감지되었습니다.</li>
+<li>🏛️ <strong>정치/정책</strong> (3건): 3건의 기사에서 대한, 없습니다, 서울경제 키워드가 부각되고 있습니다.</li>
+<li>🔵 <strong>규제/정책</strong> (7건): 7건의 뉴스에서 전세사기, 없습니다, 피해자 관련 동향이 포착되었습니다.</li>
+<li>🟣 <strong>DeFi</strong> (1건): 금융위원회가, 수용한다는, 아닙니다 테마에서 1건의 뉴스가 감지되었습니다.</li>
+</ul>
+</div>
 
 ## 전체 뉴스 요약 총 21건의 뉴스에서 **거래소**(4건), **정치/정책**(3건)과 **규제/정책**(7건) 순으로 많은 보도가 집중되고 있습니다. 1. **🏦 거래소** (4건): 중복상장, 통신사기피해환급법, 선정하였습니다 테마에서 4건의 뉴스가 감지되었습니다. 2. **🏛️ 정치/정책** (3건): 3건의 기사에서 대한, 없습니다, 서울경제 키워드가 부각되고 있습니다. 3. **🔵 규제/정책** (7건): 7건의 뉴스에서 전세사기, 없습니다, 피해자 관련 동향이 포착되었습니다.
 

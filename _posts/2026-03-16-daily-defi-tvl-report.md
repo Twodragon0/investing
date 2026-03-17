@@ -19,8 +19,19 @@ image_alt: "3월 16일 DeFi TVL 분포와 상위 프로토콜·체인 현황을 
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">$247.99B</div><div class="stat-label">프로토콜 TVL</div></div><div class="stat-item"><div class="stat-value">$91.26B</div><div class="stat-label">체인 TVL</div></div><div class="stat-item"><div class="stat-value">20</div><div class="stat-label">프로토콜 수</div></div><div class="stat-item"><div class="stat-value">15</div><div class="stat-label">체인 수</div></div></div>
-<div class="alert-box alert-info"><strong>DeFi 생태계 $247.99B 규모 분석</strong><ul><li>🏆 <strong>최상위 프로토콜</strong>: Lido — TVL $33.92B (Liquid Staking)</li><li>⛓️ <strong>최상위 체인</strong>: Ethereum — TVL $57.07B (62.5%)</li><li>📊 <strong>최다 카테고리</strong>: 기타 — $80.55B</li></ul></div>
+<div class="stat-grid">
+<div class="stat-item"><div class="stat-value">$247.99B</div><div class="stat-label">프로토콜 TVL</div></div>
+<div class="stat-item"><div class="stat-value">$91.26B</div><div class="stat-label">체인 TVL</div></div>
+<div class="stat-item"><div class="stat-value">20</div><div class="stat-label">프로토콜 수</div></div>
+<div class="stat-item"><div class="stat-value">15</div><div class="stat-label">체인 수</div></div>
+</div>
+<div class="alert-box alert-info"><strong>DeFi 생태계 $247.99B 규모 분석</strong>
+<ul>
+<li>🏆 <strong>최상위 프로토콜</strong>: Lido — TVL $33.92B (Liquid Staking)</li>
+<li>⛓️ <strong>최상위 체인</strong>: Ethereum — TVL $57.07B (62.5%)</li>
+<li>📊 <strong>최다 카테고리</strong>: 기타 — $80.55B</li>
+</ul>
+</div>
 
 
 ## 전체 뉴스 요약

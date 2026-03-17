@@ -24,8 +24,20 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-03-12 - regulatory-news 뉴
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">30</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 12</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">23</div><div class="stat-label">한국</div></div></div>
-<div class="alert-box alert-info"><strong>글로벌 규제: SEC, Understanding, Memorandum 관련 30건 수집</strong><ul><li>🔵 <strong>규제/정책</strong> (12건): SEC, Understanding, Memorandum 이슈가 12건으로 주목받고 있습니다.</li><li>🏦 <strong>거래소</strong> (2건): Understanding, Memorandum, Announce 중심으로 2건의 뉴스가 수집되었습니다.</li><li>🏛️ <strong>정치/정책</strong> (3건): 생산적, 디지털자산기본법, 뉴스후플러스 이슈가 3건으로 주목받고 있습니다.</li><li>🟣 <strong>DeFi</strong> (1건): 1건의 뉴스에서 금융위원회가, 수용한다는, 아닙니다 키워드가 부각되고 있습니다.</li></ul></div>
+<div class="stat-grid">
+<div class="stat-item"><div class="stat-value">30</div><div class="stat-label">수집 건수</div></div>
+<div class="stat-item"><div class="stat-value">🔵 12</div><div class="stat-label">규제/정책</div></div>
+<div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div>
+<div class="stat-item"><div class="stat-value">23</div><div class="stat-label">한국</div></div>
+</div>
+<div class="alert-box alert-info"><strong>글로벌 규제: SEC, Understanding, Memorandum 관련 30건 수집</strong>
+<ul>
+<li>🔵 <strong>규제/정책</strong> (12건): SEC, Understanding, Memorandum 이슈가 12건으로 주목받고 있습니다.</li>
+<li>🏦 <strong>거래소</strong> (2건): Understanding, Memorandum, Announce 중심으로 2건의 뉴스가 수집되었습니다.</li>
+<li>🏛️ <strong>정치/정책</strong> (3건): 생산적, 디지털자산기본법, 뉴스후플러스 이슈가 3건으로 주목받고 있습니다.</li>
+<li>🟣 <strong>DeFi</strong> (1건): 1건의 뉴스에서 금융위원회가, 수용한다는, 아닙니다 키워드가 부각되고 있습니다.</li>
+</ul>
+</div>
 ## 핵심 요약
 
 - **총 수집 건수**: 30건

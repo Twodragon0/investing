@@ -23,9 +23,26 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-14 - stock-news 뉴스 요약 
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">163</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">📊 12</div><div class="stat-label">매크로/금리</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">5,487.24</div><div class="stat-label">KOSPI -1.72%</div></div><div class="stat-item"><div class="stat-value">1,152.96</div><div class="stat-label">KOSDAQ +0.40%</div></div></div>
-<div class="alert-box alert-info"><strong>주식 시장 긴급: California, rallying, offshore - 163건 분석</strong><ul><li>📊 <strong>매크로/금리</strong> (12건): Fed, GDP, Chosunbiz 이슈가 12건으로 주목받고 있습니다.</li><li>🏛️ <strong>정치/정책</strong> (11건): Trump, oil, Iran 이슈가 11건으로 주목받고 있습니다.</li><li>📈 <strong>가격/시장</strong> (28건): 중동 이슈가 28건으로 주목받고 있습니다.</li><li>🤖 <strong>AI/기술</strong> (7건): 반도체 이슈가 7건으로 주목받고 있습니다.</li></ul></div>
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://www.marketwatch.com/story/this-little-known-energy-companys-stock-is-rallying-as-trump-invokes-1950-powers-for-offshore-california-drilling-5cb8efa4?mod=mw_rss_topstories">This little-known energy company’s stock is rallying as Trump invokes 1950 powers for offshore California drilling</a> <span class="p0-desc">Trump’s executive order opens the door for Sable Offshore’s production in Southern California.</span></li></ul></div>
+<div class="stat-grid">
+<div class="stat-item"><div class="stat-value">163</div><div class="stat-label">수집 건수</div></div>
+<div class="stat-item"><div class="stat-value">📊 12</div><div class="stat-label">매크로/금리</div></div>
+<div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div>
+<div class="stat-item"><div class="stat-value">5,487.24</div><div class="stat-label">KOSPI -1.72%</div></div>
+<div class="stat-item"><div class="stat-value">1,152.96</div><div class="stat-label">KOSDAQ +0.40%</div></div>
+</div>
+<div class="alert-box alert-info"><strong>주식 시장 긴급: California, rallying, offshore - 163건 분석</strong>
+<ul>
+<li>📊 <strong>매크로/금리</strong> (12건): Fed, GDP, Chosunbiz 이슈가 12건으로 주목받고 있습니다.</li>
+<li>🏛️ <strong>정치/정책</strong> (11건): Trump, oil, Iran 이슈가 11건으로 주목받고 있습니다.</li>
+<li>📈 <strong>가격/시장</strong> (28건): 중동 이슈가 28건으로 주목받고 있습니다.</li>
+<li>🤖 <strong>AI/기술</strong> (7건): 반도체 이슈가 7건으로 주목받고 있습니다.</li>
+</ul>
+</div>
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong>
+<ul>
+<li><a href="https://www.marketwatch.com/story/this-little-known-energy-companys-stock-is-rallying-as-trump-invokes-1950-powers-for-offshore-california-drilling-5cb8efa4?mod=mw_rss_topstories">This little-known energy company’s stock is rallying as Trump invokes 1950 powers for offshore California drilling</a> <span class="p0-desc">Trump’s executive order opens the door for Sable Offshore’s production in Southern California.</span></li>
+</ul>
+</div>
 
 
 ## 전체 뉴스 요약

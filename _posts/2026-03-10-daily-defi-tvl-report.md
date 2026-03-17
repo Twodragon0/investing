@@ -16,8 +16,19 @@ description: "2026-03-10 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">$247.99B</div><div class="stat-label">프로토콜 TVL</div></div><div class="stat-item"><div class="stat-value">$91.72B</div><div class="stat-label">체인 TVL</div></div><div class="stat-item"><div class="stat-value">20</div><div class="stat-label">프로토콜 수</div></div><div class="stat-item"><div class="stat-value">15</div><div class="stat-label">체인 수</div></div></div>
-<div class="alert-box alert-info"><strong>DeFi 생태계 $247.99B 규모 분석</strong><ul><li>🏆 <strong>최상위 프로토콜</strong>: Lido — TVL $33.92B (Liquid Staking)</li><li>⛓️ <strong>최상위 체인</strong>: Ethereum — TVL $55.47B (60.5%)</li><li>📊 <strong>최다 카테고리</strong>: 기타 — $80.55B</li></ul></div>
+<div class="stat-grid">
+<div class="stat-item"><div class="stat-value">$247.99B</div><div class="stat-label">프로토콜 TVL</div></div>
+<div class="stat-item"><div class="stat-value">$91.72B</div><div class="stat-label">체인 TVL</div></div>
+<div class="stat-item"><div class="stat-value">20</div><div class="stat-label">프로토콜 수</div></div>
+<div class="stat-item"><div class="stat-value">15</div><div class="stat-label">체인 수</div></div>
+</div>
+<div class="alert-box alert-info"><strong>DeFi 생태계 $247.99B 규모 분석</strong>
+<ul>
+<li>🏆 <strong>최상위 프로토콜</strong>: Lido — TVL $33.92B (Liquid Staking)</li>
+<li>⛓️ <strong>최상위 체인</strong>: Ethereum — TVL $55.47B (60.5%)</li>
+<li>📊 <strong>최다 카테고리</strong>: 기타 — $80.55B</li>
+</ul>
+</div>
 
 
 ## 전체 뉴스 요약

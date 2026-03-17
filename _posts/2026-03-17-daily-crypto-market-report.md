@@ -23,9 +23,20 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-03-17 | ETH +10.5% - 시
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">$74,186</div><div class="stat-label">BTC (+3.7%)</div></div><div class="stat-item"><div class="stat-value">23</div><div class="stat-label">공포/탐욕 (Extreme Fear)</div></div><div class="stat-item"><div class="stat-value">$2.62T</div><div class="stat-label">총 시가총액</div></div><div class="stat-item"><div class="stat-value">56.6%</div><div class="stat-label">BTC 도미넌스</div></div></div>
+<div class="stat-grid">
+<div class="stat-item"><div class="stat-value">$74,186</div><div class="stat-label">BTC (+3.7%)</div></div>
+<div class="stat-item"><div class="stat-value">23</div><div class="stat-label">공포/탐욕 (Extreme Fear)</div></div>
+<div class="stat-item"><div class="stat-value">$2.62T</div><div class="stat-label">총 시가총액</div></div>
+<div class="stat-item"><div class="stat-value">56.6%</div><div class="stat-label">BTC 도미넌스</div></div>
+</div>
 
-<div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Ethereum</strong> (ETH): +10.49%</li><li>🟢 <strong>Cardano</strong> (ADA): +9.32%</li><li>🟢 <strong>XRP</strong> (XRP): +8.62%</li></ul></div>
+<div class="alert-box alert-info"><strong>24시간 주요 변동</strong>
+<ul>
+<li>🟢 <strong>Ethereum</strong> (ETH): +10.49%</li>
+<li>🟢 <strong>Cardano</strong> (ADA): +9.32%</li>
+<li>🟢 <strong>XRP</strong> (XRP): +8.62%</li>
+</ul>
+</div>
 
 
 ## 전체 뉴스 요약

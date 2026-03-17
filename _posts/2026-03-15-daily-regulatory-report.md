@@ -22,8 +22,20 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-03-15 - regulatory-news 뉴
 
 ## 한눈에 보기
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">23</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 9</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">22</div><div class="stat-label">한국</div></div></div>
-<div class="alert-box alert-info"><strong>글로벌 규제: 전세사기, 피해자, 논의 관련 23건 수집</strong><ul><li>🔵 <strong>규제/정책</strong> (9건): 9건의 뉴스에서 전세사기, 피해자, 논의 관련 동향이 포착되었습니다.</li><li>🏛️ <strong>정치/정책</strong> (2건): 생산적, 통신사기피해환급법, 가상자산을 이슈로 2건의 보도가 이어지고 있습니다.</li><li>🟣 <strong>DeFi</strong> (2건): 금융위원회가 흐름에 2건의 뉴스가 집중되고 있습니다.</li><li>🤖 <strong>AI/기술</strong> (1건): 세부내용은, 않았습니다, 헤럴드경제 이슈로 1건의 보도가 이어지고 있습니다.</li></ul></div>
+<div class="stat-grid">
+<div class="stat-item"><div class="stat-value">23</div><div class="stat-label">수집 건수</div></div>
+<div class="stat-item"><div class="stat-value">🔵 9</div><div class="stat-label">규제/정책</div></div>
+<div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div>
+<div class="stat-item"><div class="stat-value">22</div><div class="stat-label">한국</div></div>
+</div>
+<div class="alert-box alert-info"><strong>글로벌 규제: 전세사기, 피해자, 논의 관련 23건 수집</strong>
+<ul>
+<li>🔵 <strong>규제/정책</strong> (9건): 9건의 뉴스에서 전세사기, 피해자, 논의 관련 동향이 포착되었습니다.</li>
+<li>🏛️ <strong>정치/정책</strong> (2건): 생산적, 통신사기피해환급법, 가상자산을 이슈로 2건의 보도가 이어지고 있습니다.</li>
+<li>🟣 <strong>DeFi</strong> (2건): 금융위원회가 흐름에 2건의 뉴스가 집중되고 있습니다.</li>
+<li>🤖 <strong>AI/기술</strong> (1건): 세부내용은, 않았습니다, 헤럴드경제 이슈로 1건의 보도가 이어지고 있습니다.</li>
+</ul>
+</div>
 ## 핵심 요약
 
 - **총 수집 건수**: 23건
