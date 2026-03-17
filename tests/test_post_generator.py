@@ -13,6 +13,7 @@ from common.post_generator import (
     _extract_description,
     _fix_translation_artifacts,
     _normalize_image_paths,
+    _polish_generated_text,
     _slugify,
     _wrap_picture_tags,
     build_dated_permalink,
@@ -520,3 +521,42 @@ class TestBuildDatedPermalink:
         except ValueError:
             return
         raise AssertionError("expected ValueError for invalid logical date")
+
+
+class TestPolishGeneratedText:
+    def test_empty_text(self):
+        assert _polish_generated_text("") == ""
+
+    def test_none_text(self):
+        assert _polish_generated_text(None) is None
+
+    def test_fixes_견인고(self):
+        assert "견인하고" in _polish_generated_text("시장을 견인고 있습니다")
+
+    def test_fixes_시장_영향_가능(self):
+        result = _polish_generated_text("시장 영향 가능 합니다")
+        assert "시장 영향 가능성이 있는" in result
+
+    def test_no_double_expansion(self):
+        # Already complete form should NOT be re-expanded
+        result = _polish_generated_text("시장 영향 가능성이 있는 거래소")
+        assert "있는성이 있는" not in result
+        assert "시장 영향 가능성이 있는 거래소" in result
+
+    def test_collapses_multiple_spaces(self):
+        result = _polish_generated_text("hello   world")
+        assert result == "hello world"
+
+    def test_collapses_multiple_blank_lines(self):
+        result = _polish_generated_text("a\n\n\n\n\nb")
+        assert result.count("\n") <= 3
+
+    def test_removes_duplicate_punctuation(self):
+        assert _polish_generated_text("끝..") == "끝."
+
+    def test_removes_space_before_punctuation(self):
+        assert _polish_generated_text("결과 .") == "결과."
+
+    def test_트럼프_particle_fix(self):
+        result = _polish_generated_text("트럼프이 발표했다")
+        assert "트럼프가 발표했다" in result

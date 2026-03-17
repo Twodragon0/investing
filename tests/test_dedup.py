@@ -128,3 +128,65 @@ class TestDedupEngine:
             assert len(eng2.titles) <= 5000
         finally:
             dedup_mod.STATE_DIR = original_state_dir
+
+    def test_old_format_migration(self, tmp_path):
+        """Old format entries (plain strings) should be migrated to [title, date] pairs."""
+        import json
+
+        import common.dedup as dedup_mod
+
+        original_state_dir = dedup_mod.STATE_DIR
+        dedup_mod.STATE_DIR = str(tmp_path)
+        try:
+            state_path = tmp_path / "old_format.json"
+            # Old format: titles as plain strings instead of [title, date] pairs
+            state_path.write_text(
+                json.dumps(
+                    {
+                        "seen": {"abc123": "2026-03-08T00:00:00"},
+                        "titles": ["Old Title One", "Old Title Two"],
+                    }
+                )
+            )
+            eng = DedupEngine("old_format.json")
+            # Should have migrated: each entry becomes [title, fallback_date]
+            assert len(eng.titles) == 2
+            for entry in eng.titles:
+                assert isinstance(entry, list)
+                assert len(entry) == 2
+        finally:
+            dedup_mod.STATE_DIR = original_state_dir
+
+    def test_is_duplicate_exact_empty_title(self, engine):
+        """Empty title should be treated as duplicate in exact mode."""
+        assert engine.is_duplicate_exact("", "src", "2026-03-08") is True
+        assert engine.is_duplicate_exact("   ", "src", "2026-03-08") is True
+
+    def test_pruning_old_entries(self, tmp_path):
+        """Old entries beyond max_age_days should be pruned."""
+        import json
+
+        import common.dedup as dedup_mod
+
+        original_state_dir = dedup_mod.STATE_DIR
+        dedup_mod.STATE_DIR = str(tmp_path)
+        try:
+            state_path = tmp_path / "prune_test.json"
+            # Create state with old entries (timestamp from 2020)
+            state_path.write_text(
+                json.dumps(
+                    {
+                        "seen": {
+                            "old_hash": "2020-01-01T00:00:00",
+                            "new_hash": "2026-03-08T00:00:00",
+                        },
+                        "titles": [["Old", "2020-01-01"], ["New", "2026-03-08"]],
+                    }
+                )
+            )
+            eng = DedupEngine("prune_test.json", max_age_days=30)
+            # Old entry should be pruned
+            assert "old_hash" not in eng.seen
+            assert "new_hash" in eng.seen
+        finally:
+            dedup_mod.STATE_DIR = original_state_dir

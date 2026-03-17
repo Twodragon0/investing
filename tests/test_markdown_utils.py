@@ -4,6 +4,7 @@ from common.markdown_utils import (
     _classify_source,
     dedupe_references,
     escape_table_cell,
+    html_reference_details,
     html_report_links,
     html_source_tag,
     html_table,
@@ -108,6 +109,50 @@ class TestSmartTruncate:
         result = smart_truncate("Bitcoin price surges past milestone today", 25)
         # Should not cut mid-word
         assert not result.rstrip("…").endswith("mil")
+
+    def test_korean_sentence_boundary(self):
+        # Korean text without spaces — should try sentence endings as break points
+        korean = "비트코인이 급등했다." + "이더리움도 상승했다." * 5
+        result = smart_truncate(korean, 30)
+        assert result.endswith("…")
+
+    def test_long_korean_no_spaces(self):
+        # Long Korean without sentence endings — still truncates gracefully
+        korean = "가" * 100
+        result = smart_truncate(korean, 30)
+        assert len(result) <= 31  # 30 + ellipsis
+
+
+class TestHtmlReferenceDetails:
+    def test_basic_output(self):
+        refs = [{"title": "Test Article", "link": "https://example.com", "source": "News"}]
+        result = html_reference_details("참고 링크", refs)
+        assert "<details>" in result
+        assert "Test Article" in result
+
+    def test_empty_references(self):
+        result = html_reference_details("참고", [])
+        assert result == ""
+
+    def test_no_valid_links(self):
+        refs = [{"title": "No Link", "link": "", "source": "s"}]
+        result = html_reference_details("참고", refs)
+        assert result == ""
+
+    def test_with_title_ko(self):
+        refs = [{"title": "English", "title_ko": "한국어 제목", "link": "https://a.com", "source": "s"}]
+        result = html_reference_details("참고", refs)
+        assert "한국어 제목" in result
+
+    def test_open_in_new_tab(self):
+        refs = [{"title": "A", "link": "https://a.com", "source": "s"}]
+        result = html_reference_details("참고", refs, open_in_new_tab=True)
+        assert 'target="_blank"' in result
+
+    def test_include_count(self):
+        refs = [{"title": "A", "link": "https://a.com", "source": "s"}]
+        result = html_reference_details("참고 링크", refs, include_count=True)
+        assert "1건" in result
 
 
 class TestDedupeReferences:
