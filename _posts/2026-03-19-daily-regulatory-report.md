@@ -1,0 +1,292 @@
+---
+layout: post
+title: "글로벌 규제 동향 리포트 - 2026-03-19"
+date: 2026-03-19 07:48:18 +0900
+categories: [regulatory-news]
+tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
+keywords: "regulation, sec, cftc, fsc, daily-digest"
+source: "consolidated"
+lang: "ko"
+image: "/assets/images/generated/news-briefing-regulatory-2026-03-19.png"
+permalink: "/regulatory-news/2026/03/19/daily-regulatory-report/"
+description: "🔵 규제/정책 (23건): 확정된, 등에, 가상자산시장 관련 뉴스 흐름이 강화되고 있어 중장기 영향을 분석해야 합니다 - Investing Dragon 자동 수집 분석 리포트."
+excerpt: "🔵 규제/정책 (23건): 확정된, 등에, 가상자산시장 관련 뉴스 흐름이 강화되고 있어 중장기 영향을 분석해야 합니다 - Investing Dragon 자동 수집 분석 리포트."
+image_alt: "글로벌 규제 동향 리포트 - 2026-03-19 - regulatory-news 뉴스 요약 이미지"
+---
+
+전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 39건의 규제 관련 뉴스가 수집되었습니다.
+
+<div class="stat-grid">
+<div class="stat-item"><span class="stat-value">27</span><span class="stat-label">한국</span></div>
+<div class="stat-item"><span class="stat-value">8</span><span class="stat-label">미국</span></div>
+<div class="stat-item"><span class="stat-value">3</span><span class="stat-label">유럽</span></div>
+<div class="stat-item"><span class="stat-value">1</span><span class="stat-label">아시아</span></div>
+</div>
+
+## 한눈에 보기
+
+<div class="stat-grid">
+<div class="stat-item"><div class="stat-value">39</div><div class="stat-label">수집 건수</div></div>
+<div class="stat-item"><div class="stat-value">🔵 23</div><div class="stat-label">규제/정책</div></div>
+<div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div>
+<div class="stat-item"><div class="stat-value">27</div><div class="stat-label">한국</div></div>
+</div>
+<div class="alert-box alert-info">
+<strong>글로벌 규제: 확정된, 등에, Application 관련 39건 수집</strong>
+<ul>
+<li>🔵 <strong>규제/정책</strong>: 확정된, 등에 주목</li>
+<li>🏦 <strong>거래소</strong>: Exchanges, Bitget 주목</li>
+<li>🏛️ <strong>정치/정책</strong>: Certain, Application 관련 7건</li>
+<li>🤖 <strong>AI/기술</strong>: 과기정통부, 세부내용은 동향 주시</li>
+</ul>
+</div>
+
+## 전체 뉴스 요약
+
+총 39건의 뉴스 중 **규제/정책** 관련이 23건(59%)으로 압도적입니다. 규제/정책 관련 뉴스가 시장의 불확실성을 높이고 있습니다
+
+### 테마별 동향
+
+- **🔵 규제/정책** (23건): 확정된, 등에, 가상자산시장 관련 뉴스 흐름이 강화되고 있어 중장기 영향을 분석해야 합니다.
+- **🏦 거래소** (6건): 중복상장, 단독, 중개 동향이 포트폴리오 전략에 영향을 줄 수 있어 주시가 필요합니다.
+- **🏛️ 정치/정책** (7건): Certain, Application, Securities 중심으로 시장 참여자들의 관심이 집중되고 있습니다.
+
+**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
+
+### 주요 이슈
+
+- 암호화폐 자산 규제: 토큰 안전항
+- 증권거래위원회 17 CFR 파트 231 및 241 [릴리스 번호 33-11412; 34-105020; 파일번호 S7-2026-09] RIN 32
+- “다주택자, 비거주 1주택자 등에 대한 대출 규제는 확정된 바 없습니다” - 3.16일 서울경제 ｢아이 학교‧직장 발령 등 실수요땐 전세대출 
+- 외 5건
+
+### 투자자 체크포인트
+
+- **주요 지역**: 한국 27건, 미국 8건, 유럽 3건
+
+
+## 핵심 요약
+- **총 수집 건수**: 39건
+- **한국**: 27건
+- **미국**: 8건
+- **유럽**: 3건
+- **아시아**: 1건
+
+---
+
+<div class="theme-distribution">
+<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">23건</span></div>
+<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:26%"></div></div><span class="theme-count">6건</span></div>
+<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:30%"></div></div><span class="theme-count">7건</span></div>
+<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:9%"></div></div><span class="theme-count">2건</span></div>
+<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:9%"></div></div><span class="theme-count">2건</span></div>
+</div>
+
+*총 39건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
+
+
+---
+
+## 미국 규제 동향
+
+**1. [암호화폐 자산 규제: 토큰 안전항](https://news.google.com/rss/articles/CBMimwFBVV95cUxNRWU1TzdBS281Y3d1SUpEd3NLRVpyYkFTLUFJZXlMdFFaYlE4cGVwYWVCdm5FT2NyU2h3dElPYVJfWmRrTkFhNmxDdDBVemlneEdlZFRoV25IendIdmdTS2VQZm04Mk5mRkxkZE9oSEw0MEdpVE5TcmZFazhyQkJnY2RpeWg3Z1hmdnBCWS02cEw0M29DbXJ5QUFsYw?oc=5)**
+암호화폐 자산 규제: 토큰 세이프 하버.
+<span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
+
+**2. [SEC 암호화 자산에 대한 연방 증권법 적용을 명확히 합니다.](https://news.google.com/rss/articles/CBMitgFBVV95cUxPbzBHSXFKVENYckZZYWVJNndrV25lWXFDTFBjSWxIS09EVWdONS1TU21tVy1PaS1vQVdCdWFfQzk3ci04akNmMlZmRlZDX2hQUm5MZnUxYklFWHNwUUlIeU9ONzVMNl84UElvUTVmWjhyN3dvdkE4Y3M5TDJ2SzRVM0V5dWNQTzlJLXNvQVJsQkhqd0c4TGxsWUtYX3pGNGNPOEdkNXlqRklzdF9lNHdrTENGenRJQQ?oc=5)**
+SEC Clarifies the Application of Federal Securities Laws to Crypto Assets.
+<span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
+
+**3. [증권거래위원회 17 CFR 파트 231 및 241 \[릴리스 번호 33-11412; 34-105020; 파일번호 S7-2026-09\] RIN 3235-AN5](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1IX21lZXExTlYzZVRiSGthbHhxcHRueEVHS1d5UGtzTUFjWHJSRU5aRmdNRlZuajhXSmRGSHFiU3l0Q1RJQVgwNlpXVVM0Q2Y2VjlreGItUFZfd2JiQkVMTGxoWmhrX2s?oc=5)**
+증권거래위원회 17 CFR 파트 231 및 241 [릴리스 번호 33-11412; 34-105020; 파일번호 S7-2026-09] 린.
+<span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
+
+**4. [특정 유형의 암호화 자산 및 암호화 자산과 관련된 특정 거래에 대한 연방 증권법 적용](https://news.google.com/rss/articles/CBMiXkFVX3lxTE9jWXJHeTRqSmlVLUNFLVRfM0ZUdE5pWS1BUDVHR0RJTjJ5M2UwS3JITHdQMzdGNzRvZzc4RHFTSXdmU3l2UXRneGd1SGNEcmpKNlFYZER5a3pnaV9qbHc?oc=5)**
+특정 유형의 암호화폐 자산 및 암호화폐 A와 관련된 특정 거래에 대한 연방 증권법 적용.
+<span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
+
+**5. [Howey 책의 마지막 장](https://news.google.com/rss/articles/CBMikAFBVV95cUxOYTByZW0wRzU0VTcxTUtrNi1SVW9BbWZ1bTJYZXo5OTMtMFVQYUwxalpPcGZNSWl6cFRqZW5zSE9pcS1YSWtLTE1NZGtsZVBZRno3c3BrWWVUNjlvdkFxaTVOZmt1TXlRckoxQWFsZm9LMmlEQndNMWQzazBlR1R4NDRtOGN0SF9VN2ZNbDFzeWk?oc=5)**
+Howey 책의 마지막 장. 장, 도서 관련 시장 동향입니다.
+<span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
+
+**6. [특정 유형의 암호화 자산 및 암호화 자산과 관련된 특정 거래에 대한 연방 증권법 적용](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9meF9qdktRcGMyYU1SQlB4SWxUUVhGMjNMUUVVazBuaWZONmppRG9BY1VoU1dFbzNpSUEzbUpseTR3ejlmRUE4V0FPWkJxRGdfUlNqRldLeWxIVTlkbDREYVZHOW1iRTQ?oc=5)**
+특정 유형의 암호화폐 자산 및 암호화폐 A와 관련된 특정 거래에 대한 연방 증권법 적용.
+<span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
+
+**7. [CFTC은 SEC에 합류하여 암호화폐 자산에 대한 연방 증권법 적용을 명확히 했습니다.](https://www.cftc.gov/PressRoom/PressReleases/9198-26)**
+CFTC은(는) 오늘 SEC에 합류하여 연방 증권법이 특정 암호화폐 자산 및 암호화폐 자산과 관련된 거래에 어떻게 적용되는지를 명확히 하는 해석을 발표했습니다.
+<span class="source-tag" data-source-type="regulator">CFTC Press Releases</span>
+
+**8. [CFTC 직원은 자체 관리형 암호화 자산 지갑 소프트웨어 제공업체에 아무런 조치도 취하지 않는다는 입장을 발표했습니다.](https://www.cftc.gov/PressRoom/PressReleases/9197-26)**
+CFTC의 시장 참가자 부서는 오늘 자체 관리형 암호화폐 자산 지갑 소프트웨어 개발자인 Phantom Technologies Inc.의 요청에 따라 아무런 조치도 취하지 않는다는 입장을 발표했다고 발표했습니다.
+<span class="source-tag" data-source-type="regulator">CFTC Press Releases</span>
+
+---
+
+## 한국 규제 동향
+
+**1. [위기에 강한, 국민이 믿는 자본시장\] 자본시장 체질개선을 일관되게 추진합니다.](https://www.fsc.go.kr/no010101/86485)**
+*자세한 내용은 첨부파일을 확인해주세요
+<span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
+
+**2. [가상자산시장 시세조종 혐의자 수사기관 고발](https://www.fsc.go.kr/no010101/86484)**
+금융위원회 — 가상자산시장 시세조종 혐의자 수사기관 고발
+<span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
+
+**3. [가상자산시장 시세조종 혐의자 수사기관 고발](https://www.fsc.go.kr/no010101/86483)**
+혁신적 금융, 포용적 금융, 신뢰받는 금융, 금융위원회 입니다.
+<span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
+
+**4. [NH투자증권㈜에 대한 종합금융투자사업자(8조원) 지정](https://www.fsc.go.kr/no010101/86482)**
+혁신적 금융, 포용적 금융, 신뢰받는 금융, 금융위원회 입니다.
+<span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
+
+**5. [사업보고서 등에 대한 조사·감리결과 조치](https://www.fsc.go.kr/no010101/86481)**
+혁신적 금융, 포용적 금융, 신뢰받는 금융, 금융위원회 입니다.
+<span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
+
+**6. [금융위·과기정통부, ‘K-엔비디아’육성 위해 머리 맞댄다.](https://www.fsc.go.kr/no010101/86474)**
+금융위·과기정통부, ‘K-엔비디아’육성 위해 머리 맞댄다.
+<span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
+
+**7. [“금융정보분석원(FIU)과 11개 검사수탁 기관은 자금세탁의 원천 차단을 위해 검사 품질 제고와 검사원 전문성을 더욱 강화해 나가기로 하였습니다.”](https://www.fsc.go.kr/no010101/86473)**
+외국인·기관 수급 동향입니다. 대규모 순매수/순매도는 시장 방향성의 중요한 선행 지표입니다.
+<span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
+
+**8. [이제 사장님 신용대출도 스마트폰으로쉽고 편리하게 갈아탈 수 있습니다](https://www.fsc.go.kr/no010101/86471)**
+이제 사장님 신용대출 도 스마트폰으로 쉽고 편리하게 갈아탈 수 있습니다 - ’ 26.3.18일 부터 개인사업자 신용대출 갈아타기 서비스 개시 - 대환 가능 대출 : 은행권 사업자명의 신용대출 중 운전자금대출 이용불가 대출 : 부동산임대업 대출, 담보‧보증 대출, 연체대출 등 이용가능 시간 : 매 영업일 9:00~16:00 까지 이용 신청방법 :
+<span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
+
+**9. [가상자산사업자 ㈜빗썸 종합검사 결과에 대한 조치 통보](https://www.fsc.go.kr/no010101/86467)**
+가상자산사업자 ㈜빗썸 종합검사 결과에 대한 조치 통보.
+<span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
+
+**10. [질병·사고·날씨 등 생활위험 보장보험에 무상으로 가입하는 ｢상생보험 사업｣을 보험업권이 6개 지방자치단체와 함께 추진합니다. - 5년간 2조원 규모의 보험업권 포용금융 추진계획 발표 -](https://www.fsc.go.kr/no010101/86464)**
+질병·사고·날씨 등 생활위험 보장보험에 무상으로 가입하는 ｢상생보험 사업｣을 보험업권이 6개 지방자치단체와 함께 추진합니다.
+<span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
+
+---
+
+## 아시아 규제 동향
+
+**1. [2026년 싱가포르 최고의 암호화폐 거래소: MAS 라이선스 및 규정 준수 플랫폼 - Bitget](https://news.google.com/rss/articles/CBMiXEFVX3lxTFB3dzMwVjNGN24xQ3JaYV8tUUpWRTJVNHhDMmJPQ0J3Q1ZQVHZNcEtXTUo5Yk41eTEzWHdZYm9PdldrN1dlVWwzcDlubnhrT0pQRU1aajI5QlZROFpu0gFiQVVfeXFMT29iVy1nSDlURFNodWFqTG1ZbFdXTUpRaE1PLTdLVHh1N0RPWDdndTVrcTJCdFZwcEYxclFCa0MycnZwcW1PdkJiSG1VUi00dHVFYmRfcUxESkFzZ05jeDBGaXc?oc=5)**
+2026년 싱가포르 최고의 암호화폐 거래소: MAS 라이선스 및 규정 준수 플랫폼 - Bitget.
+<span class="source-tag" data-source-type="default">MAS Singapore</span>
+
+---
+
+## 유럽 규제 동향
+
+**1. [영국 암호화폐 규정 2026: FCA 승인 성공을 위한 10가지 실용적인 팁 - 자본법](https://news.google.com/rss/articles/CBMirAFBVV95cUxPNW91dmpNbWJOb1pqa2M0RVVxaUFoeFFxZGZSa2ZpLUczXzZ3UUQzb3NXQ2xpOHFoYjE0Y05VY1IxZHBzUE5PSDFLb3lrdWhVU3NidU5pQ3Nrc3BuQnNjNVpNLXpPZUxkd1BMWVRudThyY2VIY3ZjTjMxU05PdHlXNTJURXU3NUVqVzFVQkR3RlBZWWF6UUJBWnZnTkpreVJRMG9hYVVsNEVOZlVm?oc=5)**
+영국 암호화폐 규정 2026: FCA 승인 성공을 위한 10가지 실용적인 팁 - 자본법.
+<span class="source-tag" data-source-type="regulator">UK FCA</span>
+
+**2. [GCEX 그룹의 일부인 GlobalBlock, 영국 고객을 위한 디지털 자산 상품 출시 - Disruption Banking](https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcERxTy1tYWRGamx6cXRYMjBGV3kzY2ZHX1YtbUxFZ3ZOZy05V2dUN0RlQWxHZUZYLWR1Q2pKajRIV1l4TU1TRkZTMFVhakNSNkRIOW5ZYW13UXU0SkVTTDktN202bjI0Tk9yZDlqZ2hjVkdxTHhZOVE3TWl0bHZVZkhKY3A5U19vSzNVbjRKNkF3Y1FwNnFUdlJzXzVfUmpjbnlPUk04R0RVTGVDcGZDT3hqVmtrTFRCdGt0bWY5NVpMdw?oc=5)**
+GCEX 그룹의 일부인 GlobalBlock은 영국 고객을 위한 디지털 자산 서비스인 Disruption Banking을 출시합니다.
+<span class="source-tag" data-source-type="regulator">UK FCA</span>
+
+**3. [영국 최고의 FCA 승인 암호화폐 거래소 2026 가이드 - Bitget](https://news.google.com/rss/articles/CBMitwFBVV95cUxOVDNvdEl3dEVLNG9NcHROVkZvVm9IcFJwaXRrdFlKVUt6N0gyb0xjYVppWF9ELWFfN193djB3VFREMFFWVGJYcGVzS3ljRl9kQzBZMV9UN0E3VlBELU1wdERtam1tSzB6cVRZR2lYclZBZnpvMGJ2X193OTV2WmlUTUFZYXJKcGc2bE4wbUs1ZWpPOGhHUzJkWTQxMmtPYjVSZmtQV2s4ME1XemNtb3VtRF9DT0ZKelXSAbwBQVVfeXFMTkpUcF9ySTFndlhBU2FhRHRwU3c5OThyMy10X0N5bGRaOXRkOTJpdExwaVB0Yy1wUVZnMU1CVDhKd3E3YVZMVXdUdjRfRVAyWU53M29Xc1dKNGJYdktrd2F3Vkk1eDlrZDlScTN6Z1JKVHE5M2V6aXUyY1FqVm9IVnF6Y2lfNWJ0Q18ySVd5aUMyazVwdHQ5M0FoNkRWSWdaQnVGbm5jZGNHeGx1M0dKZHpscHB5Ty1ZM1NEX00?oc=5)**
+영국 최고의 FCA 승인 암호화폐 거래소 2026 가이드 - Bitget.
+<span class="source-tag" data-source-type="regulator">UK FCA</span>
+
+---
+
+
+## 주요 테마 분석
+
+### 🔵 규제/정책 (23건)
+
+전체의 59%로 압도적 비중을 차지합니다. 주요 출처: 금융위원회 보도자료(6건), 한국 금융규제 뉴스(6건), 금융위원회 보도참고(4건). 관련 지역: 한국, 미국, 유럽, 아시아.
+
+**주요 동향:**
+- [암호화폐 자산 규제: 토큰 안전항](https://news.google.com/rss/articles/CBMimwFBVV95cUxNRWU1TzdBS281Y3d1SUpEd3NLRVpyYkFTLUFJZXlMdFFaYlE4cGVwYWVCdm5FT2NyU2h3dElPYVJfWmRrTkFhNmxDdDBVemlneEdlZFRoV25IendIdmdTS2VQZm04Mk5mRkxkZE9oSEw0MEdpVE5TcmZFazhyQkJnY2RpeWg3Z1hmdnBCWS02cEw0M29DbXJ5QUFsYw?oc=5)
+ <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
+ > 암호화폐 자산 규제: 토큰 세이프 하버.
+- [SEC 암호화 자산에 대한 연방 증권법 적용을 명확히 합니다.](https://news.google.com/rss/articles/CBMitgFBVV95cUxPbzBHSXFKVENYckZZYWVJNndrV25lWXFDTFBjSWxIS09EVWdONS1TU21tVy1PaS1vQVdCdWFfQzk3ci04akNmMlZmRlZDX2hQUm5MZnUxYklFWHNwUUlIeU9ONzVMNl84UElvUTVmWjhyN3dvdkE4Y3M5TDJ2SzRVM0V5dWNQTzlJLXNvQVJsQkhqd0c4TGxsWUtYX3pGNGNPOEdkNXlqRklzdF9lNHdrTENGenRJQQ?oc=5)
+ <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
+ > SEC Clarifies the Application of Federal Securities Laws to Crypto Assets.
+- [CFTC은 SEC에 합류하여 암호화폐 자산에 대한 연방 증권법 적용을 명확히 했습니다.](https://www.cftc.gov/PressRoom/PressReleases/9198-26)
+ <span class="source-tag" data-source-type="regulator">CFTC Press Releases</span>
+ > CFTC은(는) 오늘 SEC에 합류하여 연방 증권법이 특정 암호화폐 자산 및 암호화폐 자산과 관련된 거래에 어떻게 적용되는지를 명확히 하는 해석을 발표했습니다.
+
+### 🏦 거래소 (6건)
+
+전체의 15%로 주목할 만한 수치입니다. 주요 출처: 한국 금융규제 뉴스(2건), SEC (Google News)(1건), 금융위원회 보도참고(1건). 관련 지역: 한국, 미국, 아시아, 유럽.
+
+**주요 동향:**
+- [증권거래위원회 17 CFR 파트 231 및 241 [릴리스 번호 33-11412; 34-105020; 파일번호 S7-2026-09] RIN 3235-AN5](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1IX21lZXExTlYzZVRiSGthbHhxcHRueEVHS1d5UGtzTUFjWHJSRU5aRmdNRlZuajhXSmRGSHFiU3l0Q1RJQVgwNlpXVVM0Q2Y2VjlreGItUFZfd2JiQkVMTGxoWmhrX2s?oc=5)
+ <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
+ > 증권거래위원회 17 CFR 파트 231 및 241 [릴리스 번호 33-11412; 34-105020; 파일번호 S7-2026-09] 린.
+- [“중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「[단독] 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86460)
+ <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
+ > “중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「[단독] 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 - 1.
+- ["금융위, 가상자산 거래소 '중개·보관 분리' 구조 검토…국회 보고" - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE5jRy1QYnBmYnc0NG9BRFJray1pdHZXMXBjVEw2ekVOY0Z4SERkbk1lTmdHanJ5Smw0Nl92NENRT1c1N3hSQnRaZXBQalJkQVpN?oc=5)
+ <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
+ > "금융위, 가상자산 거래소 '중개·보관 분리' 구조 검토…국회 보고".
+
+### 🏛️ 정치/정책 (7건)
+
+전체의 18%로 주목할 만한 수치입니다. 주요 출처: SEC (Google News)(3건), 금융위원회 보도참고(2건), 한국 금융규제 뉴스(2건). 관련 지역: 한국, 미국.
+
+**주요 동향:**
+- [SEC 암호화 자산에 대한 연방 증권법 적용을 명확히 합니다.](https://news.google.com/rss/articles/CBMitgFBVV95cUxPbzBHSXFKVENYckZZYWVJNndrV25lWXFDTFBjSWxIS09EVWdONS1TU21tVy1PaS1vQVdCdWFfQzk3ci04akNmMlZmRlZDX2hQUm5MZnUxYklFWHNwUUlIeU9ONzVMNl84UElvUTVmWjhyN3dvdkE4Y3M5TDJ2SzRVM0V5dWNQTzlJLXNvQVJsQkhqd0c4TGxsWUtYX3pGNGNPOEdkNXlqRklzdF9lNHdrTENGenRJQQ?oc=5)
+ <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
+ > SEC Clarifies the Application of Federal Securities Laws to Crypto Assets.
+- [특정 유형의 암호화 자산 및 암호화 자산과 관련된 특정 거래에 대한 연방 증권법 적용](https://news.google.com/rss/articles/CBMiXkFVX3lxTE9jWXJHeTRqSmlVLUNFLVRfM0ZUdE5pWS1BUDVHR0RJTjJ5M2UwS3JITHdQMzdGNzRvZzc4RHFTSXdmU3l2UXRneGd1SGNEcmpKNlFYZER5a3pnaV9qbHc?oc=5)
+ <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
+ > 특정 유형의 암호화폐 자산 및 암호화폐 A와 관련된 특정 거래에 대한 연방 증권법 적용.
+- [“다주택자, 비거주 1주택자 등에 대한 대출 규제는 확정된 바 없습니다” - 3.16일 서울경제 ｢아이 학교‧직장 발령 등 실수요땐 전세대출 추가규제 제외｣ 제하의 기사 등에 대한 정부입장 설명](https://www.fsc.go.kr/no010102/86461)
+ <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
+ > 부동산 시장 관련 소식입니다.
+
+### 🤖 AI/기술 (2건)
+
+주요 출처: 금융위원회 보도자료(1건), 금융위원회 보도참고(1건).
+
+**주요 동향:**
+- [금융위·과기정통부, ‘K-엔비디아’육성 위해 머리 맞댄다.](https://www.fsc.go.kr/no010101/86474)
+ <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
+ > 금융위·과기정통부, ‘K-엔비디아’육성 위해 머리 맞댄다.
+- [‘용인 반도체 클러스터’ 에너지 인프라 사업의 세부내용은 전혀 정해지지 않았습니다. - 헤럴드경제 3.12일자 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86447)
+ <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
+ > 반도체 산업 관련 주요 소식입니다.
+
+### 📊 매크로/금리 (2건)
+
+주요 출처: 금융위원회 보도참고(1건), 한국 금융규제 뉴스(1건).
+
+**주요 동향:**
+- [“다주택자, 비거주 1주택자 등에 대한 대출 규제는 확정된 바 없습니다” - 3.16일 서울경제 ｢아이 학교‧직장 발령 등 실수요땐 전세대출 추가규제 제외｣ 제하의 기사 등에 대한 정부입장 설명](https://www.fsc.go.kr/no010102/86461)
+ <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
+ > 부동산 시장 관련 소식입니다.
+- ["금융위, 원화 스테이블코인 준비자산 '은행 수탁' 허용 검토…국회 보고" - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE9iTXNTdjBNd2RwMmF4QWl2Tm5oTmRpZExrMTJBZTRDMHRyTkFTODJ3OERLbjlRdjdxbGNpMnJBTkpKWFNQcVA4WjdrQVcteFBZ?oc=5)
+ <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
+ > 환율 변동 소식입니다.
+
+
+---
+
+## 규제 인사이트
+
+오늘 미국(8건), 한국(27건), 아시아(1건), 유럽(3건)에서 총 39건의 규제 뉴스가 포착되었으며, **한국**이 가장 활발합니다.
+
+**규제 성격 분석** (총 39건 기준): **라이선스**(1건), **금지**(1건). 뚜렷한 규제 방향성 키워드가 제한적으로 포착되어, 개별 건별 확인이 필요합니다.
+
+**미국** (SEC 6건, CFTC 2건): SEC 중심 규제 활동이 집중되어, 증권성 판단과 거래소 등록 이슈가 시장의 핵심 변수입니다. 주요 건: *암호화폐 자산 규제: 토큰 안전항*
+
+**한국** (금융위 20건 포함): 가상자산 관련 규제가 **7건** 포착되어, 거래소 운영 기준과 이용자 보호 정책 변화를 주시하세요. 주요 건: *위기에 강한, 국민이 믿는 자본시장] 자본시장 체질개선을 일관되게 추진합니다.*
+
+**아시아**: 싱가포르 MAS 관련 1건으로, MAS의 라이선스 정책이 아시아 디지털 자산 허브 경쟁의 방향을 결정짓고 있습니다.
+
+**유럽**: EU와 UK의 규제 동향이 수집되었으며, ESMA/FCA의 투자자 보호 조치가 글로벌 규제 표준 형성에 영향을 미칩니다.
+
+**지역간 규제 연동**: 미국과 한국의 규제 동향이 동시에 움직여, 국내 거래소의 해외 서비스 전략과 한미 규제 정합성이 쟁점이 됩니다. 특히 미국 SEC 판례가 국내 규제 방향에 참고 기준이 됩니다.
+
+
+> *본 규제 동향 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 법률 자문이 아닙니다. 규제 관련 의사결정은 전문가와 상담하시기 바랍니다.*
+
+## 참고 링크
+
+<details><summary>참고 링크 (20건)</summary><div class="details-content"><ol><li><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxNRWU1TzdBS281Y3d1SUpEd3NLRVpyYkFTLUFJZXlMdFFaYlE4cGVwYWVCdm5FT2NyU2h3dElPYVJfWmRrTkFhNmxDdDBVemlneEdlZFRoV25IendIdmdTS2VQZm04Mk5mRkxkZE9oSEw0MEdpVE5TcmZFazhyQkJnY2RpeWg3Z1hmdnBCWS02cEw0M29DbXJ5QUFsYw?oc=5">암호화폐 자산 규제: 토큰 안전항</a> <span class="source-tag" data-source-type="regulator">SEC (Google News)</span></li><li><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxPbzBHSXFKVENYckZZYWVJNndrV25lWXFDTFBjSWxIS09EVWdONS1TU21tVy1PaS1vQVdCdWFfQzk3ci04akNmMlZmRlZDX2hQUm5MZnUxYklFWHNwUUlIeU9ONzVMNl84UElvUTVmWjhyN3dvdkE4Y3M5TDJ2SzRVM0V5dWNQTzlJLXNvQVJsQkhqd0c4TGxsWUtYX3pGNGNPOEdkNXlqRklzdF9lNHdrTENGenRJQQ?oc=5">SEC 암호화 자산에 대한 연방 증권법 적용을 명확히 합니다.</a> <span class="source-tag" data-source-type="regulator">SEC (Google News)</span></li><li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1IX21lZXExTlYzZVRiSGthbHhxcHRueEVHS1d5UGtzTUFjWHJSRU5aRmdNRlZuajhXSmRGSHFiU3l0Q1RJQVgwNlpXVVM0Q2Y2VjlreGItUFZfd2JiQkVMTGxoWmhrX2s?oc=5">증권거래위원회 17 CFR 파트 231 및 241 [릴리스 번호 33-11412; 34-105020; 파일번호 S7-2026-09] RIN…</a> <span class="source-tag" data-source-type="regulator">SEC (Google News)</span></li><li><a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE9jWXJHeTRqSmlVLUNFLVRfM0ZUdE5pWS1BUDVHR0RJTjJ5M2UwS3JITHdQMzdGNzRvZzc4RHFTSXdmU3l2UXRneGd1SGNEcmpKNlFYZER5a3pnaV9qbHc?oc=5">특정 유형의 암호화 자산 및 암호화 자산과 관련된 특정 거래에 대한 연방 증권법 적용</a> <span class="source-tag" data-source-type="regulator">SEC (Google News)</span></li><li><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxOYTByZW0wRzU0VTcxTUtrNi1SVW9BbWZ1bTJYZXo5OTMtMFVQYUwxalpPcGZNSWl6cFRqZW5zSE9pcS1YSWtLTE1NZGtsZVBZRno3c3BrWWVUNjlvdkFxaTVOZmt1TXlRckoxQWFsZm9LMmlEQndNMWQzazBlR1R4NDRtOGN0SF9VN2ZNbDFzeWk?oc=5">Howey 책의 마지막 장</a> <span class="source-tag" data-source-type="regulator">SEC (Google News)</span></li><li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9meF9qdktRcGMyYU1SQlB4SWxUUVhGMjNMUUVVazBuaWZONmppRG9BY1VoU1dFbzNpSUEzbUpseTR3ejlmRUE4V0FPWkJxRGdfUlNqRldLeWxIVTlkbDREYVZHOW1iRTQ?oc=5">특정 유형의 암호화 자산 및 암호화 자산과 관련된 특정 거래에 대한 연방 증권법 적용</a> <span class="source-tag" data-source-type="regulator">SEC (Google News)</span></li><li><a href="https://www.cftc.gov/PressRoom/PressReleases/9198-26">CFTC은 SEC에 합류하여 암호화폐 자산에 대한 연방 증권법 적용을 명확히 했습니다.</a> <span class="source-tag" data-source-type="regulator">CFTC Press Releases</span></li><li><a href="https://www.cftc.gov/PressRoom/PressReleases/9197-26">CFTC 직원은 자체 관리형 암호화 자산 지갑 소프트웨어 제공업체에 아무런 조치도 취하지 않는다는 입장을 발표했습니다.</a> <span class="source-tag" data-source-type="regulator">CFTC Press Releases</span></li><li><a href="https://www.fsc.go.kr/no010101/86485">위기에 강한, 국민이 믿는 자본시장] 자본시장 체질개선을 일관되게 추진합니다.</a> <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span></li><li><a href="https://www.fsc.go.kr/no010101/86484">가상자산시장 시세조종 혐의자 수사기관 고발</a> <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span></li><li><a href="https://www.fsc.go.kr/no010101/86483">가상자산시장 시세조종 혐의자 수사기관 고발</a> <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span></li><li><a href="https://www.fsc.go.kr/no010101/86482">NH투자증권㈜에 대한 종합금융투자사업자(8조원) 지정</a> <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span></li><li><a href="https://www.fsc.go.kr/no010101/86481">사업보고서 등에 대한 조사·감리결과 조치</a> <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span></li><li><a href="https://www.fsc.go.kr/no010101/86474">금융위·과기정통부, ‘K-엔비디아’육성 위해 머리 맞댄다.</a> <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span></li><li><a href="https://www.fsc.go.kr/no010101/86473">“금융정보분석원(FIU)과 11개 검사수탁 기관은 자금세탁의 원천 차단을 위해 검사 품질 제고와 검사원 전문성을 더욱 강화해 나가기로…</a> <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span></li><li><a href="https://www.fsc.go.kr/no010101/86471">이제 사장님 신용대출도 스마트폰으로쉽고 편리하게 갈아탈 수 있습니다</a> <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span></li><li><a href="https://www.fsc.go.kr/no010101/86467">가상자산사업자 ㈜빗썸 종합검사 결과에 대한 조치 통보</a> <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span></li><li><a href="https://www.fsc.go.kr/no010101/86464">질병·사고·날씨 등 생활위험 보장보험에 무상으로 가입하는 ｢상생보험 사업｣을 보험업권이 6개 지방자치단체와 함께 추진합니다.…</a> <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTFB3dzMwVjNGN24xQ3JaYV8tUUpWRTJVNHhDMmJPQ0J3Q1ZQVHZNcEtXTUo5Yk41eTEzWHdZYm9PdldrN1dlVWwzcDlubnhrT0pQRU1aajI5QlZROFpu0gFiQVVfeXFMT29iVy1nSDlURFNodWFqTG1ZbFdXTUpRaE1PLTdLVHh1N0RPWDdndTVrcTJCdFZwcEYxclFCa0MycnZwcW1PdkJiSG1VUi00dHVFYmRfcUxESkFzZ05jeDBGaXc?oc=5">2026년 싱가포르 최고의 암호화폐 거래소: MAS 라이선스 및 규정 준수 플랫폼 - Bitget</a> <span class="source-tag" data-source-type="default">MAS Singapore</span></li><li><a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxPNW91dmpNbWJOb1pqa2M0RVVxaUFoeFFxZGZSa2ZpLUczXzZ3UUQzb3NXQ2xpOHFoYjE0Y05VY1IxZHBzUE5PSDFLb3lrdWhVU3NidU5pQ3Nrc3BuQnNjNVpNLXpPZUxkd1BMWVRudThyY2VIY3ZjTjMxU05PdHlXNTJURXU3NUVqVzFVQkR3RlBZWWF6UUJBWnZnTkpreVJRMG9hYVVsNEVOZlVm?oc=5">영국 암호화폐 규정 2026: FCA 승인 성공을 위한 10가지 실용적인 팁 - 자본법</a> <span class="source-tag" data-source-type="regulator">UK FCA</span></li></ol></div></details>
+
+<div class="wm-footer-meta"><span>수집 시각: 2026-03-19 07:48 KST</span><span>소스: SEC, FSC/FSS, Google News, 규제 기관 RSS</span></div>
