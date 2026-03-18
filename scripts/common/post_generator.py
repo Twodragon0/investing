@@ -142,11 +142,19 @@ _WORDING_REPLACEMENTS: tuple[tuple[str, str], ...] = (
     ("..", "."),
     (" .", "."),
     # Korean subject-particle corrections for proper nouns without 받침 (final consonant).
-    # Names ending in an open syllable (no 받침) must take "가" not "이".
+    # Names ending in an open syllable (no 받침) must take "가/는/를" not "이/은/을".
     ("트럼프이 ", "트럼프가 "),
     ("트럼프이란", "트럼프가 이란"),
+    ("트럼프은 ", "트럼프는 "),
+    ("트럼프을 ", "트럼프를 "),
     ("테슬라이 ", "테슬라가 "),
+    ("테슬라은 ", "테슬라는 "),
     ("메타이 ", "메타가 "),
+    ("메타은 ", "메타는 "),
+    ("엔비디아이 ", "엔비디아가 "),
+    ("엔비디아은 ", "엔비디아는 "),
+    ("시진핑이 ", "시진핑이 "),  # 시진핑 has 받침 — keep "이"
+    ("오바마이 ", "오바마가 "),
 )
 
 

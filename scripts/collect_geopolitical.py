@@ -356,10 +356,19 @@ def _build_polymarket_section(markets: List[Dict[str, Any]]) -> List[str]:
         "선거",
         "금리",
     }
-    filtered_markets = [m for m in markets if any(kw in m.get("title", "").lower() for kw in _GEO_KEYWORDS)]
-    # Fall back to all markets if filter is too aggressive
+    # Exclude sports/entertainment markets explicitly
+    _SPORTS_KEYWORDS = {
+        "nhl", "nba", "nfl", "mlb", "mls", "ufc", "fifa", "premier league",
+        "stanley cup", "super bowl", "world series", "champions league",
+        "playoffs", "mvp", "ballon d'or", "oscar", "grammy", "emmy",
+        "bachelor", "bachelorette", "survivor", "gta vi", "gta 6",
+        "formula 1", "f1", "grand prix", "wimbledon", "olympics",
+    }
+    non_sports = [m for m in markets if not any(kw in m.get("title", "").lower() for kw in _SPORTS_KEYWORDS)]
+    filtered_markets = [m for m in non_sports if any(kw in m.get("title", "").lower() for kw in _GEO_KEYWORDS)]
+    # Fall back to non-sports markets if geo filter is too aggressive
     if len(filtered_markets) < 3:
-        filtered_markets = markets
+        filtered_markets = non_sports if non_sports else markets
 
     lines = []
     rows = []
