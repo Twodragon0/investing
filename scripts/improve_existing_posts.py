@@ -528,6 +528,44 @@ def remove_duplicate_articles_in_themes(body: str) -> tuple[str, bool]:
     return body, changed
 
 
+def fix_translation_artifacts(body: str) -> tuple[str, bool]:
+    """Fix known machine translation artifacts in post body.
+
+    Applies particle corrections, name fixes, and awkward phrasing cleanup.
+    """
+    original = body
+    fixes = [
+        # Particle corrections (names without 받침)
+        ("트럼프은 ", "트럼프는 "),
+        ("트럼프을 ", "트럼프를 "),
+        ("트럼프이 ", "트럼프가 "),
+        ("테슬라은 ", "테슬라는 "),
+        ("테슬라이 ", "테슬라가 "),
+        ("엔비디아은 ", "엔비디아는 "),
+        ("엔비디아이 ", "엔비디아가 "),
+        ("메타은 ", "메타는 "),
+        ("메타이 ", "메타가 "),
+        ("오바마은 ", "오바마는 "),
+        ("오바마이 ", "오바마가 "),
+        # Name mistranslations
+        ("시과의 만남", "시진핑과의 만남"),
+        ("시과의", "시진핑과의"),
+        ("시과 ", "시진핑과 "),
+    ]
+    for wrong, correct in fixes:
+        body = body.replace(wrong, correct)
+
+    # Regex-based fixes
+    body = re.sub(r"무엇을 말했습니까\??", "어떤 입장을 밝혔나?", body)
+    body = re.sub(r"말했습니까\?", "밝혔나?", body)
+    # Inline picture tag separation
+    body = re.sub(r"([^\n>])<picture>", r"\1\n\n<picture>", body)
+    # Double text bug
+    body = re.sub(r"시장 영향 가능성이 있는성이 있는", "시장 영향 가능성이 있는", body)
+
+    return body, body != original
+
+
 # ---------------------------------------------------------------------------
 # Main processing
 # ---------------------------------------------------------------------------
@@ -583,6 +621,11 @@ def process_post(filepath: Path, dry_run: bool = False) -> dict[str, int]:
     body, did_change = collapse_blank_lines(body)
     if did_change:
         stats["blank_lines_collapsed"] = 1
+
+    # 9. Fix translation artifacts (particles, names, phrasing)
+    body, did_change = fix_translation_artifacts(body)
+    if did_change:
+        stats["translation_fixed"] = 1
 
     if not stats:
         return {}
@@ -670,6 +713,7 @@ def main() -> None:
             "keyword_none_cleaned": "키워드 None 아티팩트 정리",
             "theme_summary_dedup": "테마별 중복 요약 제거",
             "blank_lines_collapsed": "불필요 빈 줄 축소",
+            "translation_fixed": "번역 품질 교정 (조사/인명/어미)",
         }
         for key, count in sorted(total_stats.items()):
             label = labels.get(key, key)

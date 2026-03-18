@@ -117,7 +117,7 @@ description: "2026-03-09 주식 시장에서 186건의 뉴스를 분석했습니
 <div class="news-card-item">
 <div class="news-card-num">1</div>
 <div class="news-card-body">
-<a href="https://news.google.com/read/CBMijwFBVV95cUxQWW5JUGVUUkFaSnpOLWZZRHV5ODV1SDFjOE5VX2drTE5uZFc5ZFk3VFhTbW02alN5WmNxaEUzalJ3SjBvY0pGZDVLMDlHRGZiZ0NoLUVvR1dWM2JCN0MzUkJyRW1QX3p5TGtQcWxOT2tLZGs3TXliRWFtd09BSTJueHlLXzFlTVh6WmNYM2lUOA?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">석유 및 가스 주식이 급증하고 있지만 엔비디아은 여전히 ​​S&amp;P 500 에너지 부문의 두 배 가치가 있습니다. 에너지 주식은 저평가되어 있습니까?</a>
+<a href="https://news.google.com/read/CBMijwFBVV95cUxQWW5JUGVUUkFaSnpOLWZZRHV5ODV1SDFjOE5VX2drTE5uZFc5ZFk3VFhTbW02alN5WmNxaEUzalJ3SjBvY0pGZDVLMDlHRGZiZ0NoLUVvR1dWM2JCN0MzUkJyRW1QX3p5TGtQcWxOT2tLZGs3TXliRWFtd09BSTJueHlLXzFlTVh6WmNYM2lUOA?hl=en-US&amp;gl=US&amp;ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">석유 및 가스 주식이 급증하고 있지만 엔비디아는 여전히 ​​S&amp;P 500 에너지 부문의 두 배 가치가 있습니다. 에너지 주식은 저평가되어 있습니까?</a>
 <p class="news-desc">원유 가격 변동 소식입니다. 유가는 인플레이션과 에너지 섹터 수익성의 핵심 변수입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>

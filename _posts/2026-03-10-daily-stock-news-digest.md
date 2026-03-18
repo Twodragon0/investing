@@ -55,7 +55,7 @@ description: "2026-03-10 주식 시장에서 234건의 뉴스를 분석했습니
 <div class="news-card-item">
 <div class="news-card-num">1</div>
 <div class="news-card-body">
-<a href="https://news.google.com/read/CBMixgNBVV95cUxOVkptbldPQTBEbWdpVXdvVjJZOVlUZGgzTC1ENGJaVXZnRktNV1IzeWN0UFdyLTRZUTFQNURhNlotN1EyQVBOb3lWajdrZ0lZcV9KSXFZdmJUcElibkp2NUppTEpURmZ0YVJVM05jd2ZOUDJOWi1Id054bXZxVERPUmJMdklHZVRWNVU2WTd0WF9UYTk2RGptNnVURm9iSkZYQVk1by1HZXhwMXZFMXhKTHlOT21XcDNsMHpsbUhpajZLdnREVlZZX1U5a1otMGYwQXg1SVpZTVI3TFgyN3Bmc3E2ZlNOLVNTaU9sZ2stbjdQMmZMclpXV1RRTU41Wmh5UXNTNkJaRDBIblVEMUVfLVVYalhoMUp0QnMza2pIMk94OHAzVVVkMnZHOFBFNzJwV1ZEQ1lZWmxnZXdxRlA0OC1JSjhKQ3VDR2x1cGRFdkdQQ2JPa3lrWmxJYmpkMnFwUjA2dnlqN0FyNV9IY1hiU2R1WURyUHAxUk0wV3pwVlhZbmx2bDZfMHBHZDNQYVV5YlZ6dFZjNFM5WF9qTklWRWNQS2xjSW5LcnZCZkxwQ0VwWWpHMjQyYldUSlV1c2dqdFpRSEh3?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Stock Market News, 2026년 3월 9일: Dow, S&P 500 및 나스닥은 상승세를 기록하며 트럼프이 이란 전쟁이 곧 끝날 수 있다는 신호를 보낸 후 상당한 반전을 준비합니다. 유가 급등이 사라짐</a>
+<a href="https://news.google.com/read/CBMixgNBVV95cUxOVkptbldPQTBEbWdpVXdvVjJZOVlUZGgzTC1ENGJaVXZnRktNV1IzeWN0UFdyLTRZUTFQNURhNlotN1EyQVBOb3lWajdrZ0lZcV9KSXFZdmJUcElibkp2NUppTEpURmZ0YVJVM05jd2ZOUDJOWi1Id054bXZxVERPUmJMdklHZVRWNVU2WTd0WF9UYTk2RGptNnVURm9iSkZYQVk1by1HZXhwMXZFMXhKTHlOT21XcDNsMHpsbUhpajZLdnREVlZZX1U5a1otMGYwQXg1SVpZTVI3TFgyN3Bmc3E2ZlNOLVNTaU9sZ2stbjdQMmZMclpXV1RRTU41Wmh5UXNTNkJaRDBIblVEMUVfLVVYalhoMUp0QnMza2pIMk94OHAzVVVkMnZHOFBFNzJwV1ZEQ1lZWmxnZXdxRlA0OC1JSjhKQ3VDR2x1cGRFdkdQQ2JPa3lrWmxJYmpkMnFwUjA2dnlqN0FyNV9IY1hiU2R1WURyUHAxUk0wV3pwVlhZbmx2bDZfMHBHZDNQYVV5YlZ6dFZjNFM5WF9qTklWRWNQS2xjSW5LcnZCZkxwQ0VwWWpHMjQyYldUSlV1c2dqdFpRSEh3?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Stock Market News, 2026년 3월 9일: Dow, S&P 500 및 나스닥은 상승세를 기록하며 트럼프가 이란 전쟁이 곧 끝날 수 있다는 신호를 보낸 후 상당한 반전을 준비합니다. 유가 급등이 사라짐</a>
 <p class="news-desc">Stock Market News, 2026년 3월 9일: Dow, S&P 500 및 나스닥은 상승 마감하여 트럼프 신호 이후 상당한 반전을 준비합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
@@ -75,7 +75,7 @@ description: "2026-03-10 주식 시장에서 234건의 뉴스를 분석했습니
 <div class="news-card-item">
 <div class="news-card-num">3</div>
 <div class="news-card-body">
-<a href="https://news.google.com/read/CBMiqgFBVV95cUxOZ21KYW1mM0NURDE2bTVpeUFSZzBHbWg2c2YzMjJkRlpZMng1eFBRZ2RyNUJGd09raXFGTlY2Ql9HbGlSMWpjdFFxOHZ2RndZZkxDTHZ4OEowSEVPakQ2aE1Nclh4eDN6elUwTkdMYVVkMnh3cXJVYy1oekhWSDBZVk9jcktpSWxlV3A4OGxpT0gyck5CS1I0eWM4elQzMGlOcjZMclo3S3pXdw?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">오늘의 시장: 트럼프이 전쟁이 거의 끝났음을 시사한 후 북미 주가지수는 플러스로 상승하고 유가는 하락했습니다.</a>
+<a href="https://news.google.com/read/CBMiqgFBVV95cUxOZ21KYW1mM0NURDE2bTVpeUFSZzBHbWg2c2YzMjJkRlpZMng1eFBRZ2RyNUJGd09raXFGTlY2Ql9HbGlSMWpjdFFxOHZ2RndZZkxDTHZ4OEowSEVPakQ2aE1Nclh4eDN6elUwTkdMYVVkMnh3cXJVYy1oekhWSDBZVk9jcktpSWxlV3A4OGxpT0gyck5CS1I0eWM4elQzMGlOcjZMclo3S3pXdw?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">오늘의 시장: 트럼프가 전쟁이 거의 끝났음을 시사한 후 북미 주가지수는 플러스로 상승하고 유가는 하락했습니다.</a>
 <p class="news-desc">Markets today: North American stock indexes swing positive, oil prices fall, after Trump suggests war nearing end. 유가 변동은 인플레이션과 에너지 섹터에 직접 영향을 미칩니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
@@ -137,8 +137,8 @@ description: "2026-03-10 주식 시장에서 234건의 뉴스를 분석했습니
 <div class="news-card-item">
 <div class="news-card-num">1</div>
 <div class="news-card-body">
-<a href="https://news.google.com/read/CBMid0FVX3lxTE1jZWVOSjdmd0MxR1ZqTGtMX21STEwxMVdfNW1NZklIMFFGejZTQ3AtOXB4SWFwSTBBeTVWNllvMzd6QktndW1kR3hNMmVhdFAwTktwd180Rmg2c1B0NkwyX2M1ald2RFVocGRYQnptY0ZyczJBaGdR0gF8QVVfeXFMTlRmVVlSTGRhSW4wS2RpVVNmOV9STTVYUnlRNHVzcjlvSW5vdVQzSG9kTXFGakFSRm4xcUJPcXRFWmpBUGZIWTVSekpRNndGWGJoM2FtZVJpX1hfWGkxNnRlZWNVU3QtNmlGLTZuQTkwclpzMWg1UzFQb01tUg?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">유가가 하락하고 트럼프이 이란 전쟁이 거의 끝났다는 신호를 보내면서 다우지수는 200포인트 상승하여 와일드 세션을 마감했습니다.</a>
-<p class="news-desc">유가가 하락하고 트럼프이 이란 전쟁이 거의 끝났다는 신호를 보내면서 다우지수는 200포인트 상승하여 와일드 세션을 마감했습니다. 실시간 업데이트. (200포인트)</p>
+<a href="https://news.google.com/read/CBMid0FVX3lxTE1jZWVOSjdmd0MxR1ZqTGtMX21STEwxMVdfNW1NZklIMFFGejZTQ3AtOXB4SWFwSTBBeTVWNllvMzd6QktndW1kR3hNMmVhdFAwTktwd180Rmg2c1B0NkwyX2M1ald2RFVocGRYQnptY0ZyczJBaGdR0gF8QVVfeXFMTlRmVVlSTGRhSW4wS2RpVVNmOV9STTVYUnlRNHVzcjlvSW5vdVQzSG9kTXFGakFSRm4xcUJPcXRFWmpBUGZIWTVSekpRNndGWGJoM2FtZVJpX1hfWGkxNnRlZWNVU3QtNmlGLTZuQTkwclpzMWg1UzFQb01tUg?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">유가가 하락하고 트럼프가 이란 전쟁이 거의 끝났다는 신호를 보내면서 다우지수는 200포인트 상승하여 와일드 세션을 마감했습니다.</a>
+<p class="news-desc">유가가 하락하고 트럼프가 이란 전쟁이 거의 끝났다는 신호를 보내면서 다우지수는 200포인트 상승하여 와일드 세션을 마감했습니다. 실시간 업데이트. (200포인트)</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -147,7 +147,7 @@ description: "2026-03-10 주식 시장에서 234건의 뉴스를 분석했습니
 <div class="news-card-item">
 <div class="news-card-num">2</div>
 <div class="news-card-body">
-<a href="https://news.google.com/read/CBMi7AFBVV95cUxNNXdXdVp0cDA2dVBrdEVxQkZocHZUc0NYV3lJdGg4dVB2WHNYdnVya01qMUg3VTQ0VDV1MVhtSlBmV0FsWlFpUFBuYWM2LUM2OTRCMEYxSE5aa2JBTmlpcUJGdDNGMFRvb3pTVjhHOHBXNFI5MC16RkxSRjEwQ1oxQ1hISzd4dE4yRWJxS3N4WE1lLTFJSWhQNVJSenBSYVROUEpKaGRQNlRPR1dBaWswUlZ1bjVjTXVVMzdNNUhvVEptazJqQVpzeXBXNzlnRWdoSjNlRmxoR3pNYjhTM2h4VVQyZkhBYm9GNVNLYw?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">오늘 주식 시장: 다우, S&P 500, 나스닥이 큰 반등을 보이고, 트럼프이 전쟁이 곧 끝날 수 있다고 말하면서 유가가 급락합니다.</a>
+<a href="https://news.google.com/read/CBMi7AFBVV95cUxNNXdXdVp0cDA2dVBrdEVxQkZocHZUc0NYV3lJdGg4dVB2WHNYdnVya01qMUg3VTQ0VDV1MVhtSlBmV0FsWlFpUFBuYWM2LUM2OTRCMEYxSE5aa2JBTmlpcUJGdDNGMFRvb3pTVjhHOHBXNFI5MC16RkxSRjEwQ1oxQ1hISzd4dE4yRWJxS3N4WE1lLTFJSWhQNVJSenBSYVROUEpKaGRQNlRPR1dBaWswUlZ1bjVjTXVVMzdNNUhvVEptazJqQVpzeXBXNzlnRWdoSjNlRmxoR3pNYjhTM2h4VVQyZkhBYm9GNVNLYw?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">오늘 주식 시장: 다우, S&P 500, 나스닥이 큰 반등을 보이고, 트럼프가 전쟁이 곧 끝날 수 있다고 말하면서 유가가 급락합니다.</a>
 <p class="news-desc">Stock market today: Dow, S&P 500, Nasdaq stage big comeback, oil plummets as Trump says war could be over soon. 유가 변동은 인플레이션과 에너지 섹터에 직접 영향을 미칩니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
@@ -165,7 +165,7 @@ description: "2026-03-10 주식 시장에서 234건의 뉴스를 분석했습니
 
 <details><summary>그 외 19건 보기</summary><div class="details-content"><ol class="news-overflow-list">
 <li><a href="https://news.google.com/read/CBMickFVX3lxTE5xRms3bGZXOGx1LWJhYm9WMmdUZllUMDJPZ1A5aGVvV0hseGVTclM1TGpnMC12enAwcE02Q3dYU20wOXBnZzZRdmFhZlJNNzBaRW9sa2RKX3luNHNxZWhjU3hkYld0VHRTUk5GTmxEcHJfdw?hl=en-US&gl=US&ceid=US%3Aen">트럼프 이후 주식 반등, 이란 전쟁은 '매우 완료'</a> — 시장 반등 움직임이 포착되었습니다. 기술적 반등인지 추세 전환인지 거래량과 수급 확인이 필요합니다.</li>
-<li><a href="https://news.google.com/read/CBMixgNBVV95cUxOVkptbldPQTBEbWdpVXdvVjJZOVlUZGgzTC1ENGJaVXZnRktNV1IzeWN0UFdyLTRZUTFQNURhNlotN1EyQVBOb3lWajdrZ0lZcV9KSXFZdmJUcElibkp2NUppTEpURmZ0YVJVM05jd2ZOUDJOWi1Id054bXZxVERPUmJMdklHZVRWNVU2WTd0WF9UYTk2RGptNnVURm9iSkZYQVk1by1HZXhwMXZFMXhKTHlOT21XcDNsMHpsbUhpajZLdnREVlZZX1U5a1otMGYwQXg1SVpZTVI3TFgyN3Bmc3E2ZlNOLVNTaU9sZ2stbjdQMmZMclpXV1RRTU41Wmh5UXNTNkJaRDBIblVEMUVfLVVYalhoMUp0QnMza2pIMk94OHAzVVVkMnZHOFBFNzJwV1ZEQ1lZWmxnZXdxRlA0OC1JSjhKQ3VDR2x1cGRFdkdQQ2JPa3lrWmxJYmpkMnFwUjA2dnlqN0FyNV9IY1hiU2R1WURyUHAxUk0wV3pwVlhZbmx2bDZfMHBHZDNQYVV5YlZ6dFZjNFM5WF9qTklWRWNQS2xjSW5LcnZCZkxwQ0VwWWpHMjQyYldUSlV1c2dqdFpRSEh3?hl=en-US&gl=US&ceid=US%3Aen">Stock Market News, 2026년 3월 9일: Dow, S&P 500 및 나스닥은 상승세를 기록하며 트럼프이 이란 전쟁이 곧 끝날 수 있다는 신호를 보낸 후 상당한 반전을 준비합니다. 유가 급등이 사라짐</a> — 시장 반등 움직임이 포착되었습니다. 기술적 반등인지 추세 전환인지 거래량과 수급 확인이 필요합니다.</li>
+<li><a href="https://news.google.com/read/CBMixgNBVV95cUxOVkptbldPQTBEbWdpVXdvVjJZOVlUZGgzTC1ENGJaVXZnRktNV1IzeWN0UFdyLTRZUTFQNURhNlotN1EyQVBOb3lWajdrZ0lZcV9KSXFZdmJUcElibkp2NUppTEpURmZ0YVJVM05jd2ZOUDJOWi1Id054bXZxVERPUmJMdklHZVRWNVU2WTd0WF9UYTk2RGptNnVURm9iSkZYQVk1by1HZXhwMXZFMXhKTHlOT21XcDNsMHpsbUhpajZLdnREVlZZX1U5a1otMGYwQXg1SVpZTVI3TFgyN3Bmc3E2ZlNOLVNTaU9sZ2stbjdQMmZMclpXV1RRTU41Wmh5UXNTNkJaRDBIblVEMUVfLVVYalhoMUp0QnMza2pIMk94OHAzVVVkMnZHOFBFNzJwV1ZEQ1lZWmxnZXdxRlA0OC1JSjhKQ3VDR2x1cGRFdkdQQ2JPa3lrWmxJYmpkMnFwUjA2dnlqN0FyNV9IY1hiU2R1WURyUHAxUk0wV3pwVlhZbmx2bDZfMHBHZDNQYVV5YlZ6dFZjNFM5WF9qTklWRWNQS2xjSW5LcnZCZkxwQ0VwWWpHMjQyYldUSlV1c2dqdFpRSEh3?hl=en-US&gl=US&ceid=US%3Aen">Stock Market News, 2026년 3월 9일: Dow, S&P 500 및 나스닥은 상승세를 기록하며 트럼프가 이란 전쟁이 곧 끝날 수 있다는 신호를 보낸 후 상당한 반전을 준비합니다. 유가 급등이 사라짐</a> — 시장 반등 움직임이 포착되었습니다. 기술적 반등인지 추세 전환인지 거래량과 수급 확인이 필요합니다.</li>
 <li><em>...외 4건</em></li>
 </ol></div></details>
 

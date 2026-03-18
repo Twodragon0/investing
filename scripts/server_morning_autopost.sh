@@ -56,6 +56,9 @@ if [[ ${#RECENT_POSTS[@]} -gt 0 ]]; then
   run_py scripts/improve_existing_posts.py --files "${RECENT_POSTS[@]}"
 fi
 
+echo "$LOG_PREFIX clean translation cache"
+run_py scripts/clean_translation_cache.py
+
 run_py scripts/backfill_images.py
 run_py scripts/backfill_post_summaries.py --clean-images-only --zero-image-report _state/zero-byte-images.txt
 run_py scripts/check_recent_post_urls.py --days 2 --limit 60 --report _state/recent-url-quality.txt
