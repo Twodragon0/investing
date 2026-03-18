@@ -171,6 +171,10 @@ def _resolve_google_news_url(url: str, timeout: int = 8) -> str:
             verify=VERIFY_SSL,
         )
         if head_resp.url and "news.google.com" not in head_resp.url:
+            # Check redirected URL for SSRF (redirect chain defense)
+            if is_private_url(head_resp.url):
+                logger.warning("SSRF blocked (redirect): %s -> %s", url[:60], head_resp.url[:80])
+                return ""
             return head_resp.url
     except requests.exceptions.RequestException:
         pass
@@ -189,6 +193,10 @@ def _resolve_google_news_url(url: str, timeout: int = 8) -> str:
         )
         # Check if HTTP redirect resolved to real site
         if resp.url and "news.google.com" not in resp.url:
+            # Check redirected URL for SSRF (redirect chain defense)
+            if is_private_url(resp.url):
+                logger.warning("SSRF blocked (redirect): %s -> %s", url[:60], resp.url[:80])
+                return ""
             return resp.url
         # Try to find canonical or data-url in HTML
         for pattern in [
