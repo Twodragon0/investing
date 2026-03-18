@@ -402,6 +402,11 @@ _KOREAN_STYLE_FIXES: list = [
     # "시과의" → "시진핑과의" (Xi mistranslation)
     (r"시과의", "시진핑과의"),
     (r"시과 ", "시진핑과 "),
+    # Awkward interrogative "무엇을 말했습니까?" → "어떤 입장을 밝혔나?"
+    (r"무엇을 말했습니까\??", "어떤 입장을 밝혔나?"),
+    (r"말했습니까\?", "밝혔나?"),
+    # "그리고 버거는." and similar "And X is/are." direct translation artifacts
+    (r"^그리고 ", ""),  # Remove leading "그리고" (And) from headlines
     # Double spaces
     (r"\s{2,}", " "),
 ]
