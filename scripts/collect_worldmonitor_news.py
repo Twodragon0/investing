@@ -961,10 +961,29 @@ def main() -> None:
             "정책/법률": "📜",
             "사회/기타": "🔔",
         }
+        # Build per-theme keyword lists from issue titles
+        import re as _re
+        from collections import Counter as _Counter
+
+        theme_titles: dict[str, list[str]] = {}
+        for issue in issue_items:
+            t = issue.get("theme", "")
+            title_text = issue.get("title", "")
+            plain = _re.sub(r"\[?\*?\*?([^*\]]+)\*?\*?\]?\([^)]*\)", r"\1", title_text)
+            theme_titles.setdefault(t, []).append(plain)
+
         card_themes = []
         for t_name, t_count in theme_counter.most_common(5):
+            titles = theme_titles.get(t_name, [])
+            word_freq: _Counter = _Counter()
+            for t in titles:
+                tokens = _re.findall(r"[A-Za-z]{3,}", t)
+                for tok in tokens:
+                    if tok.lower() not in {"the", "and", "for", "with", "from", "that", "this", "has", "are"}:
+                        word_freq[tok] += 1
+            top_kws = [w for w, _ in word_freq.most_common(4)]
             card_themes.append(
-                {"name": t_name, "emoji": theme_emojis.get(t_name, "📌"), "count": t_count, "keywords": []}
+                {"name": t_name, "emoji": theme_emojis.get(t_name, "📌"), "count": t_count, "keywords": top_kws}
             )
         if card_themes:
             img = generate_news_briefing_card(

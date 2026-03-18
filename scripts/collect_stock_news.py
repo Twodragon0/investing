@@ -467,6 +467,7 @@ def main():
     exec_summary = summarizer.generate_executive_summary(
         category_type="stock",
         extra_data={"kr_market": kr_market},
+        total_override=len(all_items),
     )
     if exec_summary:
         content_parts.append(exec_summary)
@@ -476,7 +477,10 @@ def main():
         summary_points.append(f"한국 기사 {korean_count}건, 글로벌 기사 {global_count}건 수집")
     if kr_summary_parts:
         summary_points.append(f"한국 지수: {', '.join(kr_summary_parts)}")
-    overall_summary = summarizer.generate_overall_summary_section(extra_data={"summary_points": summary_points})
+    overall_summary = summarizer.generate_overall_summary_section(
+        extra_data={"summary_points": summary_points},
+        total_override=len(all_items),
+    )
     if overall_summary:
         content_parts.append(overall_summary)
 

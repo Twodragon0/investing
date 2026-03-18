@@ -149,12 +149,25 @@ _KO_TO_EN = {
     "지정학/안보": "Geopolitics/Security",
     "금융시장": "Financial Markets",
     "기타 지정학": "Other Geopolitics",
+    "정책/법률": "Policy/Law",
+    "경제/통상": "Economy/Trade",
+    "기술/과학": "Tech/Science",
+    "환경/기후": "Environment/Climate",
+    "보건/의료": "Health/Medical",
+    "문화/사회": "Culture/Society",
     # geopolitical
     "지정학": "Geopolitics",
     "안보": "Security",
     "분쟁": "Conflict",
     "무역": "Trade",
     "외교": "Diplomacy",
+    # common standalone terms
+    "법률": "Law",
+    "정책": "Policy",
+    "경제": "Economy",
+    "통상": "Trade Policy",
+    "기후": "Climate",
+    "과학": "Science",
 }
 
 
@@ -2359,7 +2372,12 @@ def generate_news_briefing_card(
             emoji = ""
         name = _to_en(theme.get("name", ""))
         count = theme.get("count", 0)
-        keywords = _filter_en_keywords(theme.get("keywords", []))
+        raw_keywords = theme.get("keywords", [])
+        keywords = _filter_en_keywords(raw_keywords)
+        # Fallback: derive keywords from translated theme name if none provided
+        if not keywords and name:
+            name_parts = [p.strip() for p in name.replace("/", " ").split() if len(p.strip()) >= 3]
+            keywords = name_parts[:2]
         ax.text(
             0.75,
             y + 0.07,
@@ -2462,6 +2480,8 @@ def generate_news_briefing_card(
         alert_text = ""
         if urgent_alerts:
             first_alert = urgent_alerts[0]
+            # Translate Korean text to English for rendering (prevents tofu □□□)
+            first_alert = _to_en(first_alert)
             alert_text = _truncate_text(first_alert, 74)
         ax.text(
             2.15,
