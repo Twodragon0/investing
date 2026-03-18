@@ -2007,17 +2007,23 @@ class ThemeSummarizer:
         self,
         extra_data: Optional[Dict[str, Any]] = None,
         title: str = "전체 뉴스 요약",
+        total_override: Optional[int] = None,
     ) -> str:
         """Generate a content-aware overall summary section.
 
         Analyzes P0/P1 issues, dominant themes, and cross-theme patterns
         to produce a narrative summary rather than generic count listings.
+
+        Args:
+            total_override: If provided, use this as the total count instead of
+                len(self.items). Useful when the opening paragraph already states
+                a different count (e.g., pre-dedup count).
         """
         if len(self.items) < 3:
             return ""
 
         extra = extra_data or {}
-        total = len(self.items)
+        total = total_override if total_override is not None else len(self.items)
         top_themes = self.get_top_themes()
         priority_items = self.classify_priority()
 
@@ -2156,6 +2162,7 @@ class ThemeSummarizer:
         self,
         category_type: str = "general",
         extra_data: Optional[Dict[str, Any]] = None,
+        total_override: Optional[int] = None,
     ) -> str:
         """Generate an enhanced TL;DR executive summary with HTML components.
 
@@ -2166,6 +2173,7 @@ class ThemeSummarizer:
             category_type: One of "crypto", "stock", "regulatory", "social",
                            "market", "security"
             extra_data: Optional dict with market data, region counts, etc.
+            total_override: If provided, use this as the total count.
 
         Returns:
             Markdown/HTML string with stat grid, briefings, and alerts.
@@ -2175,7 +2183,7 @@ class ThemeSummarizer:
 
         top_themes = self.get_top_themes()
         extra = extra_data or {}
-        total = len(self.items)
+        total = total_override if total_override is not None else len(self.items)
         priority_items = self.classify_priority()
 
         opener = self._build_executive_opener(category_type, top_themes, priority_items, total, extra)
@@ -2246,9 +2254,31 @@ class ThemeSummarizer:
             if not articles:
                 continue
             # Build ultra-short keyword summary for at-a-glance
-            kws = self._extract_title_keywords(articles, max_keywords=3)
+            kws = self._extract_title_keywords(articles, max_keywords=5)
+            # Filter out keywords that match OTHER theme names (prevents wrong attribution)
+            current_theme_name = ""
+            for t_name, t_key, _e, _k in THEMES:
+                if t_key == key:
+                    current_theme_name = t_name.lower()
+                    break
+            filtered_kws = []
+            for kw in kws:
+                kw_lower = kw.lower()
+                if kw_lower in _THEME_NAME_KEYWORDS and kw_lower != key.lower():
+                    if kw_lower not in current_theme_name and kw_lower != key:
+                        continue
+                filtered_kws.append(kw)
+            kws = filtered_kws
             if kws:
-                short_briefing = ", ".join(kws[:2]) + " 주목"
+                import datetime as _dt
+                _seed = hash((_dt.datetime.now(tz=_dt.UTC).date().isoformat(), key, count))
+                _patterns = [
+                    ", ".join(kws[:2]) + " 주목",
+                    ", ".join(kws[:2]) + " 이슈 부각",
+                    ", ".join(kws[:2]) + f" 관련 {count}건",
+                    ", ".join(kws[:2]) + " 동향 주시",
+                ]
+                short_briefing = _patterns[_seed % len(_patterns)]
             else:
                 short_briefing = ""
             if short_briefing:
