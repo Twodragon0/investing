@@ -379,6 +379,7 @@ class TestLoadCache:
 
     def test_returns_dict(self, tmp_path):
         import common.translator as tr_mod
+
         # Reset cache to force reload by pointing to a non-existent path
         tr_mod._cache = None
         nonexistent = tmp_path / "nonexistent_cache.json"
@@ -389,6 +390,7 @@ class TestLoadCache:
 
     def test_loads_valid_json_cache(self):
         import common.translator as tr_mod
+
         tr_mod._cache = None
         with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False, encoding="utf-8") as f:
             json.dump({"abc123": "번역결과"}, f)
@@ -402,6 +404,7 @@ class TestLoadCache:
 
     def test_returns_empty_on_invalid_json(self):
         import common.translator as tr_mod
+
         tr_mod._cache = None
         with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False, encoding="utf-8") as f:
             f.write("not valid json {{{")
@@ -415,6 +418,7 @@ class TestLoadCache:
 
     def test_returns_cached_instance_on_second_call(self):
         import common.translator as tr_mod
+
         # Pre-set cache
         tr_mod._cache = {"existing": "value"}
         cache = _load_cache()
@@ -427,6 +431,7 @@ class TestSaveCache:
 
     def test_no_op_when_not_dirty(self):
         import common.translator as tr_mod
+
         tr_mod._cache = {"key": "val"}
         tr_mod._cache_dirty = False
         # Should do nothing when not dirty
@@ -434,6 +439,7 @@ class TestSaveCache:
 
     def test_saves_to_disk_when_dirty(self):
         import common.translator as tr_mod
+
         with tempfile.TemporaryDirectory() as tmpdir:
             tmp_path = Path(tmpdir) / "_state" / "test_cache.json"
             original_cache = tr_mod._cache
@@ -457,3 +463,401 @@ class TestSaveCache:
         with patch("common.translator._save_cache") as mock_save:
             save_translation_cache()
             mock_save.assert_called_once()
+
+
+# ---------------------------------------------------------------------------
+# Additional tests targeting missed lines
+# ---------------------------------------------------------------------------
+
+
+class TestLoadCacheCleaning:
+    """_load_cache() cache artifact-cleaning logic (lines 176, 178-179, 181-182)."""
+
+    def test_dirty_flag_set_when_artifacts_cleaned(self):
+        """If cached entries have artifacts, _cache_dirty is set to True (line 181)."""
+        import common.translator as tr_mod
+
+        # Provide a cache entry that _postprocess_translation will change
+        # "PAIrs" → "Pairs" is a known artifact fix
+        dirty_cache_data = {"abc123": "PAIrs and SOLution"}
+
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False, encoding="utf-8") as f:
+            json.dump(dirty_cache_data, f)
+            tmp_path = Path(f.name)
+
+        tr_mod._cache = None
+        tr_mod._cache_dirty = False
+        with patch.object(tr_mod, "_CACHE_PATH", tmp_path):
+            cache = tr_mod._load_cache()
+
+        # The artifact should have been cleaned
+        assert cache["abc123"] == "Pairs and Solution"
+        # _cache_dirty should be True after cleaning (line 181)
+        assert tr_mod._cache_dirty is True
+
+        tr_mod._cache = None
+        tr_mod._cache_dirty = False
+        tmp_path.unlink(missing_ok=True)
+
+    def test_cache_entry_value_replaced_after_fix(self):
+        """Fixed value is stored back in cache (lines 178-179)."""
+        import common.translator as tr_mod
+
+        dirty_data = {"key1": "gAIns 상승", "key2": "정상 텍스트"}
+
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False, encoding="utf-8") as f:
+            json.dump(dirty_data, f)
+            tmp_path = Path(f.name)
+
+        tr_mod._cache = None
+        tr_mod._cache_dirty = False
+        with patch.object(tr_mod, "_CACHE_PATH", tmp_path):
+            cache = tr_mod._load_cache()
+
+        assert cache["key1"] == "gains 상승"
+        assert cache["key2"] == "정상 텍스트"  # unchanged entry stays
+
+        tr_mod._cache = None
+        tr_mod._cache_dirty = False
+        tmp_path.unlink(missing_ok=True)
+
+    def test_no_dirty_flag_when_cache_is_clean(self):
+        """_cache_dirty stays False when all cached values are already clean (line 180 NOT taken)."""
+        import common.translator as tr_mod
+
+        clean_data = {"k1": "정상 번역입니다", "k2": "비트코인 상승"}
+
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False, encoding="utf-8") as f:
+            json.dump(clean_data, f)
+            tmp_path = Path(f.name)
+
+        tr_mod._cache = None
+        tr_mod._cache_dirty = False
+        with patch.object(tr_mod, "_CACHE_PATH", tmp_path):
+            tr_mod._load_cache()
+
+        assert tr_mod._cache_dirty is False
+
+        tr_mod._cache = None
+        tmp_path.unlink(missing_ok=True)
+
+
+class TestSaveCacheEviction:
+    """_save_cache() eviction and OSError handling (lines 196-200, 209-210)."""
+
+    def test_eviction_when_over_limit(self):
+        """Oldest entries evicted when cache exceeds _MAX_CACHE_ENTRIES (lines 196-200)."""
+        import common.translator as tr_mod
+
+        original_cache = tr_mod._cache
+        original_dirty = tr_mod._cache_dirty
+        original_max = tr_mod._MAX_CACHE_ENTRIES
+
+        # Build a cache that exceeds the limit by 3
+        limit = 10
+        tr_mod._MAX_CACHE_ENTRIES = limit
+        large_cache = {f"key{i:04d}": f"val{i}" for i in range(limit + 3)}
+        tr_mod._cache = large_cache
+        tr_mod._cache_dirty = True
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            tmp_path = Path(tmpdir) / "_state" / "cache.json"
+            with patch.object(tr_mod, "_CACHE_PATH", tmp_path):
+                tr_mod._save_cache()
+
+            saved = json.loads(tmp_path.read_text(encoding="utf-8"))
+            # After eviction exactly _MAX_CACHE_ENTRIES entries remain
+            assert len(saved) == limit
+            # The first 3 keys (oldest) should be gone
+            assert "key0000" not in saved
+            assert "key0001" not in saved
+            assert "key0002" not in saved
+            # Newer keys survive
+            assert "key0003" in saved
+
+        tr_mod._cache = original_cache
+        tr_mod._cache_dirty = original_dirty
+        tr_mod._MAX_CACHE_ENTRIES = original_max
+
+    def test_oserror_on_save_logged_not_raised(self):
+        """OSError during atomic write is caught and logged, not re-raised (lines 209-210)."""
+        import common.translator as tr_mod
+
+        original_cache = tr_mod._cache
+        original_dirty = tr_mod._cache_dirty
+
+        tr_mod._cache = {"k": "v"}
+        tr_mod._cache_dirty = True
+
+        with (
+            patch("common.translator.tempfile.mkstemp", side_effect=OSError("disk full")),
+            patch("common.translator._CACHE_PATH") as mock_path,
+        ):
+            mock_path.parent.mkdir = lambda **kw: None
+            # Should NOT raise even when mkstemp fails
+            tr_mod._save_cache()
+
+        # _cache_dirty stays True since save failed
+        assert tr_mod._cache_dirty is True
+
+        tr_mod._cache = original_cache
+        tr_mod._cache_dirty = original_dirty
+
+
+class TestTranslateToKoreanDeepTranslator:
+    """translate_to_korean() with deep_translator import path (lines 431-455)."""
+
+    def test_successful_translation_via_deep_translator(self):
+        """Happy path: deep_translator returns a string (lines 431-451)."""
+        import common.translator as tr_mod
+
+        original_cache = tr_mod._cache
+        original_dirty = tr_mod._cache_dirty
+        tr_mod._cache = {}
+        tr_mod._cache_dirty = False
+
+        class MockGoogleTranslator:
+            def __init__(self, source, target):
+                pass
+
+            def translate(self, text):
+                return "모의 번역 결과"
+
+        mock_module = type("deep_translator", (), {"GoogleTranslator": MockGoogleTranslator})
+
+        with (
+            patch("common.translator.TRANSLATION_ENABLED", True),
+            patch.dict("sys.modules", {"deep_translator": mock_module}),
+            patch("common.translator._save_cache"),
+        ):
+            result = tr_mod.translate_to_korean("Bitcoin rises today")
+
+        assert isinstance(result, str)
+        # Should contain the mock translation result (term overrides applied)
+        assert result != ""
+
+        tr_mod._cache = original_cache
+        tr_mod._cache_dirty = original_dirty
+
+    def test_translation_result_cached(self):
+        """Translated result is stored in cache (lines 446-449)."""
+        import common.translator as tr_mod
+
+        original_cache = tr_mod._cache
+        original_dirty = tr_mod._cache_dirty
+        tr_mod._cache = {}
+        tr_mod._cache_dirty = False
+
+        test_text = "unique_translate_cache_test_xyz123"
+
+        class MockGoogleTranslator:
+            def __init__(self, source, target):
+                pass
+
+            def translate(self, text):
+                return "캐시저장테스트"
+
+        mock_module = type("deep_translator", (), {"GoogleTranslator": MockGoogleTranslator})
+
+        with (
+            patch("common.translator.TRANSLATION_ENABLED", True),
+            patch.dict("sys.modules", {"deep_translator": mock_module}),
+            patch("common.translator._save_cache"),
+        ):
+            result = tr_mod.translate_to_korean(test_text)
+
+        assert result == "캐시저장테스트"
+        # Check cache was populated
+        key = tr_mod._cache_key(test_text)
+        assert tr_mod._cache.get(key) == "캐시저장테스트"
+        assert tr_mod._cache_dirty is True
+
+        tr_mod._cache = original_cache
+        tr_mod._cache_dirty = original_dirty
+
+    def test_returns_original_when_translated_is_falsy(self):
+        """If translator returns None/empty, fallback to original text (line 452+)."""
+        import common.translator as tr_mod
+
+        original_cache = tr_mod._cache
+        original_dirty = tr_mod._cache_dirty
+        tr_mod._cache = {}
+        tr_mod._cache_dirty = False
+
+        test_text = "fallback_test_text_abc987"
+
+        class MockGoogleTranslator:
+            def __init__(self, source, target):
+                pass
+
+            def translate(self, text):
+                return None  # simulate empty result
+
+        mock_module = type("deep_translator", (), {"GoogleTranslator": MockGoogleTranslator})
+
+        with (
+            patch("common.translator.TRANSLATION_ENABLED", True),
+            patch.dict("sys.modules", {"deep_translator": mock_module}),
+        ):
+            result = tr_mod.translate_to_korean(test_text)
+
+        assert result == test_text  # fallback to original
+
+        tr_mod._cache = original_cache
+        tr_mod._cache_dirty = original_dirty
+
+    def test_exception_during_translation_returns_original(self):
+        """Exception in deep_translator is caught; returns original text (lines 452-454)."""
+        import common.translator as tr_mod
+
+        original_cache = tr_mod._cache
+        original_dirty = tr_mod._cache_dirty
+        tr_mod._cache = {}
+        tr_mod._cache_dirty = False
+
+        test_text = "exception_fallback_test_text_999"
+
+        class MockGoogleTranslator:
+            def __init__(self, source, target):
+                pass
+
+            def translate(self, text):
+                raise RuntimeError("API error")
+
+        mock_module = type("deep_translator", (), {"GoogleTranslator": MockGoogleTranslator})
+
+        with (
+            patch("common.translator.TRANSLATION_ENABLED", True),
+            patch.dict("sys.modules", {"deep_translator": mock_module}),
+        ):
+            result = tr_mod.translate_to_korean(test_text)
+
+        assert result == test_text
+
+        tr_mod._cache = original_cache
+        tr_mod._cache_dirty = original_dirty
+
+
+class TestTranslateBatchMissedLines:
+    """translate_batch() missed lines: 474, 479, 485-496."""
+
+    def test_empty_string_items_skipped(self):
+        """Empty/whitespace strings are skipped (line 474)."""
+        import common.translator as tr_mod
+
+        with (
+            patch("common.translator.TRANSLATION_ENABLED", True),
+            patch("common.translator._load_cache", return_value={}),
+            patch("common.translator.translate_to_korean", side_effect=lambda t: t),
+            patch("common.translator._save_cache"),
+        ):
+                result = tr_mod.translate_batch(["", "  ", "hello"])
+
+        # Empty entries stay empty
+        assert result[0] == ""
+        assert result[1] == "  "
+        assert result[2] == "hello"
+
+    def test_cached_items_filled_from_cache(self):
+        """Cached texts are resolved from cache, not re-translated (line 477)."""
+        import common.translator as tr_mod
+
+        text = "cached_batch_item"
+        key = tr_mod._cache_key(text)
+        mock_cache = {key: "캐시된배치항목"}
+
+        with (
+            patch("common.translator.TRANSLATION_ENABLED", True),
+            patch("common.translator._load_cache", return_value=mock_cache),
+            patch("common.translator._save_cache"),
+            patch("common.translator.translate_to_korean") as mock_t,
+        ):
+            result = tr_mod.translate_batch([text])
+
+        assert result[0] == "캐시된배치항목"
+        mock_t.assert_not_called()
+
+    def test_uncached_items_appended_to_translate(self):
+        """Non-cached, non-empty texts are appended to to_translate list (line 479)."""
+        import common.translator as tr_mod
+
+        texts = ["first_unique_xyz", "second_unique_xyz"]
+
+        with (
+            patch("common.translator.TRANSLATION_ENABLED", True),
+            patch("common.translator._load_cache", return_value={}),
+            patch("common.translator._save_cache"),
+            patch(
+                "common.translator.translate_to_korean",
+                side_effect=lambda t: f"번역_{t}",
+            ),
+        ):
+            result = tr_mod.translate_batch(texts)
+
+        assert result[0] == "번역_first_unique_xyz"
+        assert result[1] == "번역_second_unique_xyz"
+
+    def test_batch_processing_multiple_batches(self):
+        """Processes items in batches with sleep between batches (lines 485-493)."""
+
+        import common.translator as tr_mod
+
+        # Create more texts than _BATCH_SIZE (5) to trigger multi-batch logic
+        texts = [f"item_{i}" for i in range(7)]
+
+        sleep_calls = []
+
+        def fake_sleep(n):
+            sleep_calls.append(n)
+
+        with (
+            patch("common.translator.TRANSLATION_ENABLED", True),
+            patch("common.translator._load_cache", return_value={}),
+            patch("common.translator._save_cache"),
+            patch(
+                "common.translator.translate_to_korean",
+                side_effect=lambda t: f"번_{t}",
+            ),
+            patch("common.translator.time.sleep", side_effect=fake_sleep),
+        ):
+            result = tr_mod.translate_batch(texts)
+
+        # 7 items / batch_size 5 = 2 batches → 1 sleep between them
+        assert len(sleep_calls) == 1
+        assert len(result) == 7
+        for i, text in enumerate(texts):
+            assert result[i] == f"번_{text}"
+
+    def test_save_cache_called_at_end(self):
+        """_save_cache is called after processing all batches (line 495)."""
+        import common.translator as tr_mod
+
+        with (
+            patch("common.translator.TRANSLATION_ENABLED", True),
+            patch("common.translator._load_cache", return_value={}),
+            patch("common.translator.translate_to_korean", side_effect=lambda t: t),
+            patch("common.translator._save_cache") as mock_save,
+        ):
+            tr_mod.translate_batch(["some_text_abc"])
+
+        mock_save.assert_called_once()
+
+    def test_all_cached_returns_without_translation(self):
+        """If all texts are cached, to_translate is empty and returns early (line 481-482)."""
+        import common.translator as tr_mod
+
+        texts = ["cached_a", "cached_b"]
+        mock_cache = {
+            tr_mod._cache_key("cached_a"): "번역A",
+            tr_mod._cache_key("cached_b"): "번역B",
+        }
+
+        with (
+            patch("common.translator.TRANSLATION_ENABLED", True),
+            patch("common.translator._load_cache", return_value=mock_cache),
+            patch("common.translator.translate_to_korean") as mock_t,
+        ):
+            result = tr_mod.translate_batch(texts)
+
+        assert result == ["번역A", "번역B"]
+        mock_t.assert_not_called()

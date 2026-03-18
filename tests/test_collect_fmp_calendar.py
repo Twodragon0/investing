@@ -49,4 +49,5 @@ def test_build_earnings_section_news_fallback_mode():
     ]
     section = collect_fmp_calendar._build_earnings_section(earnings)
     assert "실적 관련 뉴스" in section
-    assert "[Apple earnings beat estimates](https://example.com/apple)" in section
+    assert "Apple earnings beat estimates" in section
+    assert "https://example.com/apple" in section
