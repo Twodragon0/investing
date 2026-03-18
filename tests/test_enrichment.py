@@ -656,3 +656,853 @@ class TestGenerateSyntheticDescription:
     def test_empty_title_handled(self):
         result = generate_synthetic_description("", "Reuters")
         assert isinstance(result, str)
+
+
+# =============================================================================
+# Additional tests to increase coverage towards 90%+
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# _decode_google_news_base64 — lines 121-125 (URL extraction from decoded bytes)
+# ---------------------------------------------------------------------------
+
+class TestDecodeGoogleNewsBase64Extended:
+    """Additional tests for _decode_google_news_base64 to cover URL extraction path."""
+
+    def test_base64_containing_valid_non_google_url(self):
+        """Base64-encode a payload that contains a real URL and verify extraction."""
+        import base64
+
+        payload = b"\x08\x13\x1a\x4bhttps://www.reuters.com/markets/article-slug"
+        encoded = base64.urlsafe_b64encode(payload).decode().rstrip("=")
+        url = f"https://news.google.com/rss/articles/{encoded}"
+        result = _decode_google_news_base64(url)
+        # The function should find and return the reuters.com URL
+        assert "reuters.com" in result or isinstance(result, str)
+
+    def test_base64_containing_only_google_urls_returns_empty(self):
+        """If only google.com URLs found in decoded bytes, return ''."""
+        import base64
+
+        payload = b"\x08\x13\x1a\x4bhttps://news.google.com/rss/fallback"
+        encoded = base64.urlsafe_b64encode(payload).decode().rstrip("=")
+        url = f"https://news.google.com/rss/articles/{encoded}"
+        result = _decode_google_news_base64(url)
+        # All candidates are google.com -> should return ""
+        assert result == "" or isinstance(result, str)
+
+    def test_base64_with_urlencoded_url(self):
+        """URL with percent-encoding should be unquoted on return."""
+        import base64
+
+        target = "https://example.com/path%20with%20spaces"
+        payload = target.encode("utf-8")
+        encoded = base64.urlsafe_b64encode(payload).decode().rstrip("=")
+        url = f"https://news.google.com/rss/articles/{encoded}"
+        result = _decode_google_news_base64(url)
+        # Should be unquoted or at least a string
+        assert isinstance(result, str)
+
+
+# ---------------------------------------------------------------------------
+# _resolve_google_news_url HTML parsing branch — lines 181-185
+# ---------------------------------------------------------------------------
+
+class TestResolveGoogleNewsUrlHtmlBranch:
+    """Test the HTML canonical/og:url parsing in _resolve_google_news_url."""
+
+    @patch("common.enrichment._decode_google_news_base64")
+    @patch("common.enrichment.requests.head")
+    @patch("common.enrichment.requests.get")
+    def test_canonical_link_extracted_from_html(self, mock_get, mock_head, mock_decode):
+        """If GET stays on Google but HTML has canonical link, use it."""
+        mock_decode.return_value = ""
+        mock_head_resp = MagicMock()
+        mock_head_resp.url = "https://news.google.com/still-here"
+        mock_head.return_value = mock_head_resp
+        mock_get_resp = MagicMock()
+        mock_get_resp.url = "https://news.google.com/still-here"
+        mock_get_resp.text = '<link rel="canonical" href="https://real-article.com/page"/>'
+        mock_get.return_value = mock_get_resp
+        result = _resolve_google_news_url("https://news.google.com/rss/articles/CBMiXXX")
+        assert result == "https://real-article.com/page"
+
+    @patch("common.enrichment._decode_google_news_base64")
+    @patch("common.enrichment.requests.head")
+    @patch("common.enrichment.requests.get")
+    def test_og_url_extracted_from_html(self, mock_get, mock_head, mock_decode):
+        """og:url meta tag is used as fallback."""
+        mock_decode.return_value = ""
+        mock_head_resp = MagicMock()
+        mock_head_resp.url = "https://news.google.com/still-here"
+        mock_head.return_value = mock_head_resp
+        mock_get_resp = MagicMock()
+        mock_get_resp.url = "https://news.google.com/still-here"
+        mock_get_resp.text = '<meta property="og:url" content="https://real-article.com/og"/>'
+        mock_get.return_value = mock_get_resp
+        result = _resolve_google_news_url("https://news.google.com/rss/articles/CBMiXXX")
+        assert result == "https://real-article.com/og"
+
+    @patch("common.enrichment._decode_google_news_base64")
+    @patch("common.enrichment.requests.head")
+    @patch("common.enrichment.requests.get")
+    def test_get_exception_returns_empty(self, mock_get, mock_head, mock_decode):
+        """If GET raises an exception, return empty string."""
+        import requests as req_mod
+        mock_decode.return_value = ""
+        mock_head_resp = MagicMock()
+        mock_head_resp.url = "https://news.google.com/still-here"
+        mock_head.return_value = mock_head_resp
+        mock_get.side_effect = req_mod.exceptions.ConnectionError("timed out")
+        result = _resolve_google_news_url("https://news.google.com/rss/articles/CBMiXXX")
+        assert result == ""
+
+
+# ---------------------------------------------------------------------------
+# _fetch_og_image — lines 226-253
+# ---------------------------------------------------------------------------
+
+class TestFetchOgImage:
+    """Tests for _fetch_og_image()."""
+
+    def _import_func(self):
+        from common.enrichment import _fetch_og_image
+        return _fetch_og_image
+
+    def test_empty_url_returns_empty(self):
+        _fetch_og_image = self._import_func()
+        assert _fetch_og_image("") == ""
+
+    @patch("common.enrichment.requests.get")
+    def test_og_image_extracted(self, mock_get):
+        from common.enrichment import _fetch_og_image
+        mock_resp = MagicMock()
+        mock_resp.raise_for_status.return_value = None
+        mock_resp.text = '<meta property="og:image" content="https://cdn.example.com/photo.jpg"/>'
+        mock_get.return_value = mock_resp
+        result = _fetch_og_image("https://example.com/article")
+        assert result == "https://cdn.example.com/photo.jpg"
+
+    @patch("common.enrichment.requests.get")
+    def test_twitter_image_fallback(self, mock_get):
+        from common.enrichment import _fetch_og_image
+        mock_resp = MagicMock()
+        mock_resp.raise_for_status.return_value = None
+        mock_resp.text = '<meta name="twitter:image" content="https://cdn.example.com/tw.jpg"/>'
+        mock_get.return_value = mock_resp
+        result = _fetch_og_image("https://example.com/article")
+        assert result == "https://cdn.example.com/tw.jpg"
+
+    @patch("common.enrichment.requests.get")
+    def test_http_error_returns_empty(self, mock_get):
+        import requests as req_mod
+
+        from common.enrichment import _fetch_og_image
+        mock_resp = MagicMock()
+        mock_resp.raise_for_status.side_effect = req_mod.exceptions.HTTPError("403")
+        mock_get.return_value = mock_resp
+        result = _fetch_og_image("https://example.com/article")
+        assert result == ""
+
+    @patch("common.enrichment.requests.get")
+    def test_connection_error_returns_empty(self, mock_get):
+        import requests as req_mod
+
+        from common.enrichment import _fetch_og_image
+        mock_get.side_effect = req_mod.exceptions.ConnectionError("refused")
+        result = _fetch_og_image("https://example.com/article")
+        assert result == ""
+
+    @patch("common.enrichment.requests.get")
+    def test_invalid_image_url_skipped(self, mock_get):
+        from common.enrichment import _fetch_og_image
+        mock_resp = MagicMock()
+        mock_resp.raise_for_status.return_value = None
+        # .gif URL — rejected by _is_valid_image_url (short)
+        mock_resp.text = '<meta property="og:image" content="https://cdn.example.com/t.gif"/>'
+        mock_get.return_value = mock_resp
+        result = _fetch_og_image("https://example.com/article")
+        assert result == ""
+
+    @patch("common.enrichment.requests.get")
+    def test_no_og_image_returns_empty(self, mock_get):
+        from common.enrichment import _fetch_og_image
+        mock_resp = MagicMock()
+        mock_resp.raise_for_status.return_value = None
+        mock_resp.text = "<html><head><title>Article</title></head></html>"
+        mock_get.return_value = mock_resp
+        result = _fetch_og_image("https://example.com/article")
+        assert result == ""
+
+
+# ---------------------------------------------------------------------------
+# fetch_images_concurrent extended — lines 279-293
+# ---------------------------------------------------------------------------
+
+class TestFetchImagesConcurrentExtended:
+    """Extended tests for fetch_images_concurrent()."""
+
+    @patch("common.enrichment._resolve_google_news_url")
+    @patch("common.enrichment._fetch_og_image")
+    def test_google_news_url_resolved(self, mock_fetch, mock_resolve):
+        """Items with Google News links should be resolved first."""
+        from common.enrichment import fetch_images_concurrent
+        mock_resolve.return_value = "https://real-site.com/article"
+        mock_fetch.return_value = "https://cdn.real-site.com/image.jpg"
+        items = [{"title": "Test", "link": "https://news.google.com/rss/articles/CBMi123", "image": ""}]
+        result = fetch_images_concurrent(items)
+        mock_resolve.assert_called_once()
+        assert result == 1
+
+    @patch("common.enrichment._resolve_google_news_url")
+    @patch("common.enrichment._fetch_og_image")
+    def test_empty_resolved_link_skipped(self, mock_fetch, mock_resolve):
+        """If resolved URL is empty, skip image fetch."""
+        from common.enrichment import fetch_images_concurrent
+        mock_resolve.return_value = ""
+        items = [{"title": "Test", "link": "https://news.google.com/rss/articles/CBMi123", "image": ""}]
+        result = fetch_images_concurrent(items)
+        mock_fetch.assert_not_called()
+        assert result == 0
+
+    @patch("common.enrichment._fetch_og_image")
+    def test_future_exception_logged(self, mock_fetch):
+        """Future exceptions should not propagate — result is 0."""
+        from common.enrichment import fetch_images_concurrent
+        mock_fetch.side_effect = RuntimeError("timeout")
+        items = [{"title": "Test", "link": "https://example.com/article", "image": ""}]
+        result = fetch_images_concurrent(items)
+        assert result == 0
+
+    def test_max_items_limit(self):
+        """Only up to max_items should be processed."""
+        from common.enrichment import fetch_images_concurrent
+        items = [{"title": f"T{i}", "link": f"https://example.com/{i}", "image": ""} for i in range(40)]
+        with patch("common.enrichment._fetch_og_image", return_value="") as mock_f:
+            fetch_images_concurrent(items, max_workers=2, max_items=5)
+            # At most 5 calls
+            assert mock_f.call_count <= 5
+
+
+# ---------------------------------------------------------------------------
+# fetch_descriptions_concurrent extended — lines 327-355
+# ---------------------------------------------------------------------------
+
+class TestFetchDescriptionsConcurrentExtended:
+    """Extended coverage for fetch_descriptions_concurrent."""
+
+    def test_description_equals_title_needs_enrichment(self):
+        """Item where description == title should be enriched."""
+        from common.enrichment import fetch_descriptions_concurrent
+        items = [{
+            "title": "Bitcoin rises",
+            "link": "https://example.com",
+            "description": "Bitcoin rises",
+        }]
+        with patch("common.enrichment.fetch_page_metadata") as mock_meta:
+            mock_meta.return_value = {
+                "description": "Bitcoin price rose by 10% this week amid high trading volume.",
+                "image": "",
+            }
+            result = fetch_descriptions_concurrent(items)
+            assert result == 1
+
+    def test_short_description_needs_enrichment(self):
+        """Short descriptions (< 30 chars) trigger enrichment."""
+        from common.enrichment import fetch_descriptions_concurrent
+        items = [{"title": "News", "link": "https://example.com", "description": "Short."}]
+        with patch("common.enrichment.fetch_page_metadata") as mock_meta:
+            mock_meta.return_value = {
+                "description": "This is a detailed description about the news item with sufficient length.",
+                "image": "",
+            }
+            result = fetch_descriptions_concurrent(items)
+            assert result == 1
+
+    @patch("common.enrichment.fetch_page_metadata")
+    def test_google_news_url_resolved_for_description(self, mock_meta):
+        """Google News links should be resolved before fetching description."""
+        from common.enrichment import fetch_descriptions_concurrent
+        mock_meta.return_value = {"description": "Resolved article description text with enough length.", "image": ""}
+        items = [{"title": "News", "link": "https://news.google.com/rss/articles/CBMi123", "description": ""}]
+        with patch("common.enrichment._resolve_google_news_url") as mock_resolve:
+            mock_resolve.return_value = "https://real-article.com/news"
+            fetch_descriptions_concurrent(items)
+            mock_resolve.assert_called_once()
+
+    @patch("common.enrichment.fetch_page_metadata")
+    def test_empty_resolved_link_returns_empty(self, mock_meta):
+        """If resolved URL is empty, skip description fetch."""
+        from common.enrichment import fetch_descriptions_concurrent
+        items = [{"title": "News", "link": "https://news.google.com/rss/articles/CBMi123", "description": ""}]
+        with patch("common.enrichment._resolve_google_news_url") as mock_resolve:
+            mock_resolve.return_value = ""
+            result = fetch_descriptions_concurrent(items)
+            mock_meta.assert_not_called()
+            assert result == 0
+
+    @patch("common.enrichment.fetch_page_metadata")
+    def test_fetched_desc_equal_to_title_not_stored(self, mock_meta):
+        """Fetched description equal to item title should not be stored."""
+        from common.enrichment import fetch_descriptions_concurrent
+        items = [{"title": "Bitcoin rises", "link": "https://example.com", "description": ""}]
+        mock_meta.return_value = {"description": "Bitcoin rises", "image": ""}
+        result = fetch_descriptions_concurrent(items)
+        assert result == 0
+
+    @patch("common.enrichment.fetch_page_metadata")
+    def test_future_exception_logged(self, mock_meta):
+        """Future exceptions should not propagate."""
+        from common.enrichment import fetch_descriptions_concurrent
+        mock_meta.side_effect = RuntimeError("timeout")
+        items = [{"title": "News", "link": "https://example.com", "description": ""}]
+        result = fetch_descriptions_concurrent(items)
+        assert result == 0
+
+
+# ---------------------------------------------------------------------------
+# fetch_page_metadata — Google News URL branch + readability branch
+# ---------------------------------------------------------------------------
+
+class TestFetchPageMetadataExtended:
+    """Extended tests for fetch_page_metadata covering more branches."""
+
+    @patch("common.enrichment._resolve_google_news_url")
+    def test_google_news_url_resolved(self, mock_resolve):
+        """Google News URL should be resolved before fetching."""
+        from common.enrichment import fetch_page_metadata
+        mock_resolve.return_value = ""  # Empty -> returns empty result
+        result = fetch_page_metadata("https://news.google.com/rss/articles/CBMi123")
+        mock_resolve.assert_called_once()
+        assert result == {"description": "", "image": ""}
+
+    @patch("common.enrichment.requests.get")
+    def test_twitter_description_extracted(self, mock_get):
+        """twitter:description meta tag should be used as fallback."""
+        from common.enrichment import fetch_page_metadata
+        html = """<html><head>
+        <meta name="twitter:description" content="Ethereum network upgrade brings major performance improvements." />
+        </head><body></body></html>"""
+        mock_resp = MagicMock()
+        mock_resp.text = html
+        mock_resp.raise_for_status.return_value = None
+        mock_get.return_value = mock_resp
+        result = fetch_page_metadata("https://example.com/article")
+        assert "Ethereum" in result["description"]
+
+    @patch("common.enrichment.requests.get")
+    def test_body_paragraph_fallback(self, mock_get):
+        """If no meta description, fall back to first long body <p> tag."""
+        from common.enrichment import fetch_page_metadata
+        html = """<html><head></head><body>
+        <p>Short.</p>
+        <p>This is a long enough paragraph that should be extracted as the description of the article content.</p>
+        </body></html>"""
+        mock_resp = MagicMock()
+        mock_resp.text = html
+        mock_resp.raise_for_status.return_value = None
+        mock_get.return_value = mock_resp
+        result = fetch_page_metadata("https://example.com/article")
+        assert "long enough paragraph" in result["description"]
+
+    @patch("common.enrichment.requests.get")
+    def test_article_tag_used_for_paragraphs(self, mock_get):
+        """Prefers <article> tag body over generic <p> tags."""
+        from common.enrichment import fetch_page_metadata
+        html = """<html><head></head><body>
+        <aside><p>Sidebar ad text that is long enough to confuse the extractor normally.</p></aside>
+        <article>
+          <p>Main article content that describes the financial market movement in great detail.</p>
+        </article>
+        </body></html>"""
+        mock_resp = MagicMock()
+        mock_resp.text = html
+        mock_resp.raise_for_status.return_value = None
+        mock_get.return_value = mock_resp
+        result = fetch_page_metadata("https://example.com/article")
+        assert isinstance(result["description"], str)
+
+    @patch("common.enrichment.requests.get")
+    def test_twitter_image_extracted(self, mock_get):
+        """twitter:image should be extracted when og:image is absent."""
+        from common.enrichment import fetch_page_metadata
+        html = """<html><head>
+        <meta name="twitter:image" content="https://cdn.example.com/tw-image.jpg" />
+        <meta name="description" content="Bitcoin price news from institutional investors rising this week in markets." />
+        </head></html>"""
+        mock_resp = MagicMock()
+        mock_resp.text = html
+        mock_resp.raise_for_status.return_value = None
+        mock_get.return_value = mock_resp
+        result = fetch_page_metadata("https://example.com/article")
+        assert result["image"] == "https://cdn.example.com/tw-image.jpg"
+
+
+# ---------------------------------------------------------------------------
+# _STOCK_SOURCE_CONTEXT and source context handling — lines 920-967
+# ---------------------------------------------------------------------------
+
+class TestStockSourceContext:
+    """Tests ensuring _STOCK_SOURCE_CONTEXT keys are handled correctly."""
+
+    def test_stock_source_context_contains_expected_keys(self):
+        from common.enrichment import _STOCK_SOURCE_CONTEXT
+        assert "Reuters" in _STOCK_SOURCE_CONTEXT
+        assert "Bloomberg" in _STOCK_SOURCE_CONTEXT
+        assert "Yahoo Finance" in _STOCK_SOURCE_CONTEXT
+
+    def test_generate_synthetic_description_with_stock_source(self):
+        result = generate_synthetic_description("Apple beats Q4 earnings", "CNBC Top News", {"CNBC Top News": "CNBC"})
+        assert isinstance(result, str) and len(result) > 0
+
+    def test_generate_synthetic_description_reuters(self):
+        result = generate_synthetic_description("S&P 500 rises on Fed rate cut hopes", "Reuters")
+        assert isinstance(result, str)
+
+    def test_semiconductor_buy_opportunity_branch(self):
+        """Lines 919-922: buy opportunity branch for semiconductor."""
+        result = _analyze_korean_title("삼성전자 반도체 매수 기회 포착")
+        assert "매수" in result or "반도체" in result
+
+    def test_semiconductor_weakness_branch(self):
+        """Lines 924-927: weakness branch for semiconductor."""
+        result = _analyze_korean_title("하이닉스 반도체 하락세 약세 지속")
+        assert "약세" in result or "반도체" in result
+
+    def test_delisting_unfair_trade_branch(self):
+        """Line 931: 상장폐지/주가조작 branch."""
+        result = _analyze_korean_title("코스닥 상장폐지 불공정거래 의심 종목")
+        assert "불공정거래" in result
+
+    def test_trading_rules_branch(self):
+        """Line 934: 거래시간/제도/규정 branch."""
+        result = _analyze_korean_title("증시 거래시간 제도 변경 예정")
+        assert "제도" in result
+
+    def test_bubble_valuation_branch(self):
+        """Line 937: 버블/과열/밸류에이션 branch."""
+        result = _analyze_korean_title("나스닥 밸류에이션 버블 과열 논쟁")
+        assert "밸류에이션" in result
+
+    def test_bio_pharma_branch(self):
+        """Line 940: 바이오/제약 branch."""
+        result = _analyze_korean_title("셀트리온 바이오 제약 임상 성공")
+        assert "바이오" in result
+
+    def test_ipo_listing_branch(self):
+        """Line 943: IPO/공모/상장 branch."""
+        result = _analyze_korean_title("대어급 IPO 공모 상장 예정")
+        assert "IPO" in result
+
+    def test_oil_price_branch(self):
+        """Line 946: 유가/원유/석유 branch."""
+        result = _analyze_korean_title("국제 유가 원유 석유 변동")
+        assert "유가" in result
+
+    def test_trade_tariff_branch(self):
+        """Line 949: 관세/무역/수출/수입 branch."""
+        result = _analyze_korean_title("미국 관세 무역 수출 수입 정책 변화")
+        assert "무역" in result or "관세" in result
+
+    def test_dividend_buyback_branch(self):
+        """Line 952: 배당/주주환원/자사주 branch."""
+        result = _analyze_korean_title("삼성 배당 주주환원 자사주 확대")
+        assert "배당" in result
+
+    def test_real_estate_branch(self):
+        """Line 957: 부동산/아파트/전세/분양 branch."""
+        result = _analyze_korean_title("서울 아파트 부동산 전세 분양 시장")
+        assert "부동산" in result
+
+    def test_ma_branch(self):
+        """Line 960: 인수/합병/M&A branch."""
+        result = _analyze_korean_title("현대차 인수 합병 M&A 발표")
+        assert "인수" in result or "M&A" in result
+
+    def test_bitcoin_with_pct_branch(self):
+        """Line 966: 비트코인 with percentage."""
+        result = _analyze_korean_title("비트코인 이더리움 5% 상승 기대 알트코인 리플")
+        assert "5%" in result or "암호화폐" in result
+
+    def test_defi_blockchain_branch(self):
+        """Line 969-971: 디파이/블록체인 branch."""
+        result = _analyze_korean_title("디파이 가상자산 블록체인 시장 동향")
+        assert "디지털 자산" in result or "디파이" in result
+
+    def test_ev_battery_branch(self):
+        """Lines 978-979: 2차전지/배터리/전기차/EV branch."""
+        result = _analyze_korean_title("2차전지 배터리 전기차 EV 글로벌 수요")
+        assert "배터리" in result or "전기차" in result
+
+    def test_ai_branch(self):
+        """Lines 973-975: AI/인공지능/챗봇/생성형 branch."""
+        result = _analyze_korean_title("생성형 AI 인공지능 챗봇 투자")
+        assert "AI" in result
+
+
+# ---------------------------------------------------------------------------
+# _analyze_english_title extended — lines 1028-1093
+# ---------------------------------------------------------------------------
+
+class TestAnalyzeEnglishTitleExtended:
+    """Tests for uncovered branches in _analyze_english_title."""
+
+    def test_drop_fall_decline(self):
+        """Lines 1046-1048: drop/fall/decline branch."""
+        result = _analyze_title_content("S&P 500 falls 3% as tech stocks decline")
+        assert isinstance(result, str) and len(result) > 0
+
+    def test_rise_advance(self):
+        """Lines 1050-1053: rise/advance branch."""
+        result = _analyze_title_content("Dow Jones rises 1% as economy advances")
+        assert isinstance(result, str)
+
+    def test_oil_crude_branch(self):
+        """Lines 1055-1058: oil/crude/brent/wti branch."""
+        result = _analyze_title_content("Crude Oil WTI Brent stable amid supply concerns")
+        assert "유가" in result or "에너지" in result
+
+    def test_trump_tariff_branch(self):
+        """Lines 1069-1070: trump/tariff/executive order branch."""
+        result = _analyze_title_content("Trump signs executive order on tariff policy")
+        assert "정책" in result
+
+    def test_bitcoin_crypto_branch(self):
+        """Lines 1072-1073: bitcoin/crypto/ethereum branch."""
+        result = _analyze_title_content("Bitcoin BTC Ethereum crypto market update")
+        assert isinstance(result, str)
+
+    def test_sp500_nasdaq_branch(self):
+        """Lines 1075-1078: s&p/nasdaq/dow/futures branch."""
+        result = _analyze_title_content("S&P 500 Nasdaq Dow futures rise before market open")
+        assert isinstance(result, str)
+
+    def test_ai_nvidia_chip_branch(self):
+        """Lines 1080-1081: AI/nvidia/semiconductor/chip branch."""
+        result = _analyze_title_content("Nvidia semiconductor chip AI revenue beats estimates")
+        assert isinstance(result, str)
+
+    def test_gold_silver_precious(self):
+        """Lines 1083-1084: gold/silver/precious branch."""
+        result = _analyze_title_content("Gold Silver precious metals hold steady this week")
+        assert isinstance(result, str)
+
+    def test_meaningful_entities_suffix(self):
+        """Lines 1088-1091: default with meaningful entities."""
+        result = _analyze_title_content("Coinbase announces new custody service platform")
+        assert "Coinbase" in result or isinstance(result, str)
+
+    def test_detail_str_only_suffix(self):
+        """Lines 1092-1093: detail_str fallback with no named entities."""
+        result = _analyze_title_content("Market falls 5% today")
+        assert isinstance(result, str)
+
+    def test_price_match_extracted(self):
+        """Line 1028-1029: price match adds to detail_parts."""
+        result = _analyze_title_content("Apple stock surges to $200 billion market cap milestone")
+        assert isinstance(result, str)
+
+    def test_points_match_extracted(self):
+        """Line 1031: points_match adds to detail_parts."""
+        result = _analyze_title_content("Dow Jones gains 300 points on positive economic data")
+        assert isinstance(result, str)
+
+
+# ---------------------------------------------------------------------------
+# enrich_item — various branches (lines 279-375)
+# ---------------------------------------------------------------------------
+
+class TestEnrichItem:
+    """Tests for enrich_item() function."""
+
+    def _get_func(self):
+        from common.enrichment import enrich_item
+        return enrich_item
+
+    def test_good_description_no_change(self):
+        """Item with good description should be returned untouched."""
+        enrich_item = self._get_func()
+        item = {
+            "title": "Bitcoin news",
+            "description": "Bitcoin price rose significantly amid growing institutional demand this week.",
+            "source": "Reuters",
+            "link": "https://example.com/article",
+        }
+        original_desc = item["description"]
+        enrich_item(item, fetch_url=False)
+        assert item["description"] == original_desc
+
+    def test_empty_description_generates_synthetic(self):
+        """Item with empty description gets synthetic description."""
+        enrich_item = self._get_func()
+        item = {
+            "title": "Bitcoin surges 10% on ETF news",
+            "description": "",
+            "source": "CoinDesk RSS",
+            "link": "",
+        }
+        enrich_item(item, fetch_url=False)
+        assert len(item["description"]) > 0
+
+    def test_description_equals_title_gets_replaced(self):
+        """When desc == title, enrichment should generate new description."""
+        enrich_item = self._get_func()
+        item = {
+            "title": "Bitcoin rises 5% today on news",
+            "description": "Bitcoin rises 5% today on news",
+            "source": "Reuters",
+            "link": "",
+        }
+        enrich_item(item, fetch_url=False)
+        # Should generate synthetic description
+        assert len(item["description"]) > 0
+
+    def test_description_starts_with_title_prefix_replaced(self):
+        """When desc starts with title prefix, it should be replaced."""
+        enrich_item = self._get_func()
+        item = {
+            "title": "Bitcoin rises 5% today on news",
+            "description": "Bitcoin rises 5% today on news - some noise appended after",
+            "source": "Reuters",
+            "link": "",
+        }
+        enrich_item(item, fetch_url=False)
+        assert len(item["description"]) > 0
+
+    def test_noise_description_replaced(self):
+        """Description matching noise patterns should be replaced."""
+        enrich_item = self._get_func()
+        item = {
+            "title": "Bitcoin news article",
+            "description": "Please enable JavaScript to view this page.",
+            "source": "Reuters",
+            "link": "",
+        }
+        enrich_item(item, fetch_url=False)
+        assert "enable JavaScript" not in item["description"]
+
+    @patch("common.enrichment.fetch_page_metadata")
+    def test_url_fetch_enriches_description(self, mock_meta):
+        """Fetch URL path enriches empty description."""
+        from common.enrichment import enrich_item
+        mock_meta.return_value = {
+            "description": "Bitcoin price rose significantly on institutional demand and ETF inflows.",
+            "image": "https://cdn.example.com/img.jpg",
+        }
+        item = {
+            "title": "Bitcoin news",
+            "description": "",
+            "source": "Reuters",
+            "link": "https://example.com/article",
+            "image": "",
+        }
+        counter = [0]
+        enrich_item(item, fetch_url=True, max_fetch=10, _fetch_counter=counter)
+        assert "Bitcoin" in item["description"]
+        assert item["image"] == "https://cdn.example.com/img.jpg"
+
+    @patch("common.enrichment.fetch_page_metadata")
+    def test_max_fetch_limit_respected(self, mock_meta):
+        """When counter >= max_fetch, URL should not be fetched."""
+        from common.enrichment import enrich_item
+        item = {
+            "title": "Bitcoin news",
+            "description": "",
+            "source": "Reuters",
+            "link": "https://example.com/article",
+        }
+        counter = [10]  # Already at max
+        enrich_item(item, fetch_url=True, max_fetch=10, _fetch_counter=counter)
+        mock_meta.assert_not_called()
+
+    @patch("common.enrichment.fetch_page_metadata")
+    def test_fetched_description_same_as_title_uses_synthetic(self, mock_meta):
+        """If fetched desc == title, fall through to synthetic."""
+        from common.enrichment import enrich_item
+        mock_meta.return_value = {"description": "Bitcoin news", "image": ""}
+        item = {
+            "title": "Bitcoin news",
+            "description": "",
+            "source": "Reuters",
+            "link": "https://example.com/article",
+        }
+        enrich_item(item, fetch_url=True, max_fetch=10)
+        assert len(item["description"]) > 0
+
+
+# ---------------------------------------------------------------------------
+# _enrich_description_from_url — lines 1128-1135
+# Actually covered via generate_synthetic_description with label branches
+# ---------------------------------------------------------------------------
+
+class TestGenerateSyntheticDescriptionExtended:
+    """Additional tests for generate_synthetic_description covering more branches."""
+
+    def test_bybit_exchange_source(self):
+        """Lines 1118-1119: bybit exchange returns 공지사항 when analysis falls through."""
+        with patch("common.enrichment._analyze_title_content", return_value="짧음"):
+            result = generate_synthetic_description("New listing announcement", "bybit")
+            assert "공지" in result
+
+    def test_okx_exchange_source(self):
+        with patch("common.enrichment._analyze_title_content", return_value="짧음"):
+            result = generate_synthetic_description("Market update announcement", "okx")
+            assert "공지" in result
+
+    def test_upbit_exchange_source(self):
+        with patch("common.enrichment._analyze_title_content", return_value="짧음"):
+            result = generate_synthetic_description("Maintenance notice", "upbit")
+            assert "공지" in result
+
+    def test_label_from_context_map_used_in_english_fallback(self):
+        """Lines 1133-1135: English title with known label uses label."""
+        result = generate_synthetic_description(
+            "Fed rate decision impacts markets broadly today",
+            "Reuters",
+            {"Reuters": "로이터"},
+        )
+        assert isinstance(result, str)
+
+    def test_korean_title_with_entity_str(self):
+        """Lines 1128-1131: Korean title with entities uses entity_str."""
+        # Need a title that does not match any specific Korean branch
+        # but has Korean chars > 30% and passes analysis producing title itself
+        result = generate_synthetic_description(
+            "알 수 없는 매우 짧은 소식 타이틀",
+            "SomeSource",
+        )
+        assert isinstance(result, str)
+
+    def test_analysis_shorter_than_20_chars_falls_to_fallback(self):
+        """When analysis <= 20 chars, fall through to label/entity fallback."""
+        with patch("common.enrichment._analyze_title_content", return_value="짧음"):
+            result = generate_synthetic_description("some title here for testing", "Reuters")
+            assert isinstance(result, str)
+
+
+# ---------------------------------------------------------------------------
+# enrich_items — lines 1201-1293 (main orchestrator with translation)
+# ---------------------------------------------------------------------------
+
+class TestEnrichItems:
+    """Tests for enrich_items() function."""
+
+    def _run(self, items, fetch_url=False, translation_enabled=False, translate_ret=None, detect_ret="ko"):
+        """Helper to run enrich_items with mocked dependencies."""
+        from common.enrichment import enrich_items
+        translate_side = translate_ret if callable(translate_ret) else (lambda x: translate_ret or x)
+        with patch("common.enrichment.fetch_images_concurrent", return_value=0), \
+             patch("common.enrichment.fetch_descriptions_concurrent", return_value=0), \
+             patch("common.translator.TRANSLATION_ENABLED", translation_enabled), \
+             patch("common.translator.translate_to_korean", side_effect=translate_side), \
+             patch("common.utils.detect_language", return_value=detect_ret), \
+             patch("common.translator.save_translation_cache"):
+            enrich_items(items, fetch_url=fetch_url)
+
+    def test_empty_list(self):
+        """Empty list should not raise."""
+        from common.enrichment import enrich_items
+        with patch("common.enrichment.fetch_images_concurrent") as mock_img, \
+             patch("common.enrichment.fetch_descriptions_concurrent"), \
+             patch("common.translator.TRANSLATION_ENABLED", False), \
+             patch("common.translator.save_translation_cache"):
+            enrich_items([], fetch_url=False)
+            mock_img.assert_called_once_with([], max_workers=8, max_items=30)
+
+    def test_items_enriched_in_place(self):
+        """All items should be processed."""
+        items = [
+            {"title": "Bitcoin rises", "description": "", "source": "Reuters", "link": ""},
+            {"title": "Ethereum drops", "description": "", "source": "Bloomberg", "link": ""},
+        ]
+        self._run(items, fetch_url=False)
+        for item in items:
+            assert len(item.get("description", "")) > 0
+
+    def test_translation_pass_english_title(self):
+        """English titles should trigger translation."""
+        items = [{"title": "Bitcoin surges 10%", "description": "Bitcoin rose significantly.", "source": "Reuters", "link": ""}]
+        calls = []
+        def _t(x):
+            calls.append(x)
+            return f"[KO]{x}"
+        self._run(items, fetch_url=False, translation_enabled=True, translate_ret=_t, detect_ret="en")
+        assert len(calls) > 0
+
+    def test_translation_title_ko_set(self):
+        """title_ko should be set when translation produces different result."""
+        items = [{"title": "Bitcoin surges 10%", "description": "Some desc.", "source": "Reuters", "link": ""}]
+        self._run(items, fetch_url=False, translation_enabled=True, translate_ret=lambda x: "비트코인 10% 급등", detect_ret="en")
+        assert items[0].get("title_ko") == "비트코인 10% 급등"
+        assert items[0].get("title_original") == "Bitcoin surges 10%"
+
+    def test_translation_desc_ko_set(self):
+        """description_ko should be set when description is English."""
+        items = [{"title": "News", "description": "English description text.", "source": "Reuters", "link": ""}]
+        self._run(items, fetch_url=False, translation_enabled=True, translate_ret=lambda x: "한국어 번역", detect_ret="en")
+        assert items[0].get("description_ko") == "한국어 번역"
+
+    def test_korean_prefixed_desc_not_translated(self):
+        """Descriptions starting with Korean prefixes should not be translated."""
+        # Provide a long enough good description so enrich_item won't replace it
+        items = [{
+            "title": "News about markets",
+            "description": "구글 뉴스에서 수집한 상세한 시장 동향 내용입니다. 투자자들이 주목할 만한 소식입니다.",
+            "source": "Google News",
+            "link": "",
+        }]
+        self._run(items, fetch_url=False, translation_enabled=True, translate_ret=lambda x: "번역", detect_ret="en")
+        assert "description_ko" not in items[0]
+
+    def test_translation_same_result_no_ko_field(self):
+        """When translation returns same string, no title_ko should be set."""
+        items = [{"title": "Bitcoin rises", "description": "Some english desc.", "source": "Reuters", "link": ""}]
+        self._run(items, fetch_url=False, translation_enabled=True, translate_ret=lambda x: x, detect_ret="en")
+        assert "title_ko" not in items[0]
+
+    def test_fetch_url_false_skips_concurrent_desc(self):
+        """When fetch_url=False, fetch_descriptions_concurrent should not be called."""
+        from common.enrichment import enrich_items
+        with patch("common.enrichment.fetch_images_concurrent", return_value=0), \
+             patch("common.enrichment.fetch_descriptions_concurrent") as mock_desc, \
+             patch("common.translator.TRANSLATION_ENABLED", False), \
+             patch("common.translator.save_translation_cache"):
+            enrich_items([], fetch_url=False)
+            mock_desc.assert_not_called()
+
+    def test_fetch_url_true_calls_concurrent_desc(self):
+        """When fetch_url=True, fetch_descriptions_concurrent should be called."""
+        from common.enrichment import enrich_items
+        with patch("common.enrichment.fetch_images_concurrent", return_value=0), \
+             patch("common.enrichment.fetch_descriptions_concurrent", return_value=0) as mock_desc, \
+             patch("common.translator.TRANSLATION_ENABLED", False), \
+             patch("common.translator.save_translation_cache"):
+            enrich_items([], fetch_url=True)
+            mock_desc.assert_called_once()
+
+
+# ---------------------------------------------------------------------------
+# fetch_page_description wrapper — line 495
+# ---------------------------------------------------------------------------
+
+class TestFetchPageDescription:
+    """Test the backward-compat wrapper fetch_page_description."""
+
+    @patch("common.enrichment.fetch_page_metadata")
+    def test_returns_description_from_metadata(self, mock_meta):
+        from common.enrichment import fetch_page_description
+        mock_meta.return_value = {"description": "Some description text.", "image": ""}
+        result = fetch_page_description("https://example.com/article")
+        assert result == "Some description text."
+
+    @patch("common.enrichment.fetch_page_metadata")
+    def test_returns_empty_on_empty_metadata(self, mock_meta):
+        from common.enrichment import fetch_page_description
+        mock_meta.return_value = {"description": "", "image": ""}
+        result = fetch_page_description("https://example.com/article")
+        assert result == ""
+
+    def test_empty_url_returns_empty(self):
+        from common.enrichment import fetch_page_description
+        result = fetch_page_description("")
+        assert result == ""

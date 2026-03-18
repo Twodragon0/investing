@@ -284,13 +284,14 @@ def fetch_images_concurrent(
     with ThreadPoolExecutor(max_workers=max_workers) as pool:
         futures = {pool.submit(_fetch_one, idx, item): idx for idx, item in targets}
         for future in as_completed(futures):
+            item_idx = futures[future]
             try:
                 idx, img_url = future.result(timeout=15)
                 if img_url:
                     items[idx]["image"] = img_url
                     fetched += 1
             except Exception as exc:
-                logger.debug("Image fetch failed for item %d: %s", idx, exc)
+                logger.debug("Image fetch failed for item %d: %s", item_idx, exc)
 
     if fetched:
         logger.info("Fetched %d og:images for %d items", fetched, len(targets))
