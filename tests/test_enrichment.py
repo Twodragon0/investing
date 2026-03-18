@@ -1587,7 +1587,8 @@ class TestFetchPageMetadataGoogleNewsResolved:
 
     @patch("common.enrichment.requests.get")
     @patch("common.enrichment._resolve_google_news_url")
-    def test_google_news_resolved_url_used_for_fetch(self, mock_resolve, mock_get):
+    @patch("common.enrichment.is_private_url", return_value=False)
+    def test_google_news_resolved_url_used_for_fetch(self, mock_private, mock_resolve, mock_get):
         """Line 376: resolved URL replaces google news URL for metadata fetch."""
         mock_resolve.return_value = "https://real-article.com/news/story"
         html = """<html><head>

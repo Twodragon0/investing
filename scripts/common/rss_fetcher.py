@@ -14,6 +14,15 @@ from .utils import parse_date, remove_sponsored_text, sanitize_string, truncate_
 
 logger = logging.getLogger(__name__)
 
+
+def is_safe_url(url: str) -> bool:
+    """Validate URL scheme to prevent XSS via javascript:/data: URLs."""
+    try:
+        parsed = urlparse(url)
+        return parsed.scheme in ('http', 'https', '')
+    except Exception:
+        return False
+
 VERIFY_SSL = get_ssl_verify()
 
 # Feed health tracking: {url: {"ok": int, "fail": int, "last_error": str}}
@@ -160,6 +169,11 @@ def fetch_rss_feed(
                 title = remove_sponsored_text(title)
                 title = _clean_rss_title(title)
                 description = remove_sponsored_text(description)
+
+                # Validate link URL scheme to prevent XSS via javascript:/data: URLs
+                if link_val and not is_safe_url(link_val):
+                    logger.warning("RSS %s: blocked unsafe URL scheme: %s", source_name, link_val[:80])
+                    link_val = ""
 
                 # Extract image URL from RSS entry
                 image_url = ""

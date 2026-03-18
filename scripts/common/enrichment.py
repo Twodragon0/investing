@@ -4,9 +4,12 @@ Provides functions to fetch meta descriptions from URLs and generate
 synthetic descriptions when actual content is unavailable.
 """
 
+import ipaddress
 import logging
 import re
+import socket
 from typing import Any, Dict, Optional
+from urllib.parse import urlparse
 
 import requests
 
@@ -14,6 +17,18 @@ from .config import get_ssl_verify
 from .markdown_utils import smart_truncate
 
 logger = logging.getLogger(__name__)
+
+
+def is_private_url(url: str) -> bool:
+    """Check if URL resolves to a private/internal IP address."""
+    try:
+        hostname = urlparse(url).hostname
+        if not hostname:
+            return True
+        ip = socket.gethostbyname(hostname)
+        return ipaddress.ip_address(ip).is_private
+    except Exception:
+        return True  # Block on resolution failure
 
 VERIFY_SSL = get_ssl_verify()
 
@@ -145,6 +160,9 @@ def _resolve_google_news_url(url: str, timeout: int = 8) -> str:
     # 2. Follow HTTP redirects
     try:
         # Try HEAD first (lighter)
+        if is_private_url(url):
+            logger.warning("SSRF blocked: %s resolves to private IP", url[:80])
+            return ""
         head_resp = requests.head(
             url,
             timeout=timeout,
@@ -159,6 +177,9 @@ def _resolve_google_news_url(url: str, timeout: int = 8) -> str:
 
     # 3. Full GET and parse HTML for canonical/og:url
     try:
+        if is_private_url(url):
+            logger.warning("SSRF blocked: %s resolves to private IP", url[:80])
+            return ""
         resp = requests.get(
             url,
             timeout=timeout,
@@ -228,6 +249,9 @@ def _fetch_og_image(url: str, timeout: int = 8) -> str:
     try:
         import re as _re
 
+        if is_private_url(url):
+            logger.warning("SSRF blocked: %s resolves to private IP", url[:80])
+            return ""
         resp = requests.get(
             url,
             timeout=timeout,
@@ -378,6 +402,9 @@ def fetch_page_metadata(url: str, timeout: int = 8) -> Dict[str, str]:
     try:
         from bs4 import BeautifulSoup as BS4
 
+        if is_private_url(url):
+            logger.warning("SSRF blocked: %s resolves to private IP", url[:80])
+            return result
         resp = requests.get(
             url,
             timeout=timeout,
