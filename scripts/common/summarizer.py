@@ -20,15 +20,53 @@ logger = logging.getLogger(__name__)
 
 
 _SEVERITY_HIGH_KW = [
-    "crash", "surge", "record", "halt", "warn", "폭락", "급등", "급락",
-    "사상최", "최고치", "최저치", "긴급", "속보", "전쟁", "war", "bomb",
-    "attack", "sanction", "ban", "default", "bankruptcy", "파산",
-    "fraud", "sec ", "fda ", "fed ", "fomc", "금리", "인상", "인하",
-    "breaking", "crisis", "위기",
+    "crash",
+    "surge",
+    "record",
+    "halt",
+    "warn",
+    "폭락",
+    "급등",
+    "급락",
+    "사상최",
+    "최고치",
+    "최저치",
+    "긴급",
+    "속보",
+    "전쟁",
+    "war",
+    "bomb",
+    "attack",
+    "sanction",
+    "ban",
+    "default",
+    "bankruptcy",
+    "파산",
+    "fraud",
+    "sec ",
+    "fda ",
+    "fed ",
+    "fomc",
+    "금리",
+    "인상",
+    "인하",
+    "breaking",
+    "crisis",
+    "위기",
 ]
 _SEVERITY_LOW_KW = [
-    "opinion", "column", "editorial", "인터뷰", "리뷰", "review",
-    "guide", "가이드", "tip", "팁", "예정", "계획",
+    "opinion",
+    "column",
+    "editorial",
+    "인터뷰",
+    "리뷰",
+    "review",
+    "guide",
+    "가이드",
+    "tip",
+    "팁",
+    "예정",
+    "계획",
 ]
 
 
@@ -618,6 +656,50 @@ TOP_THEMES_COUNT = 5
 ARTICLES_PER_THEME = 5
 BAR_WIDTH = 18
 
+# Build a set of theme names (Korean + English keys) for cross-theme keyword filtering
+_THEME_NAME_KEYWORDS: set = set()
+for _t_name, _t_key, _t_emoji, _t_kws in THEMES:
+    _THEME_NAME_KEYWORDS.add(_t_key.lower())
+    _THEME_NAME_KEYWORDS.add(_t_name.lower())
+    # Add Korean theme names without slash
+    for _part in _t_name.split("/"):
+        _THEME_NAME_KEYWORDS.add(_part.strip().lower())
+
+# Common English finance terms -> Korean translation for keyword display
+_EN_KEYWORD_KO: Dict[str, str] = {
+    "legislation": "법안",
+    "regulation": "규제",
+    "regulatory": "규제",
+    "targets": "목표가",
+    "distribution": "배분",
+    "quarterly": "분기",
+    "counterterrorism": "대테러",
+    "enforcement": "집행",
+    "compliance": "컴플라이언스",
+    "inflation": "인플레이션",
+    "recession": "경기침체",
+    "earnings": "실적",
+    "acquisition": "인수",
+    "merger": "합병",
+    "dividend": "배당",
+    "portfolio": "포트폴리오",
+    "volatility": "변동성",
+    "liquidity": "유동성",
+    "derivatives": "파생상품",
+    "stimulus": "부양책",
+    "sanctions": "제재",
+    "tariff": "관세",
+    "deficit": "적자",
+    "surplus": "흑자",
+    "benchmark": "벤치마크",
+    "rally": "랠리",
+    "correction": "조정",
+    "rebound": "반등",
+    "downturn": "하락세",
+    "surge": "급등",
+    "plunge": "급락",
+}
+
 # Cross-theme analysis patterns: (theme_key_a, theme_key_b) -> list of insight templates
 # Each template should describe what the co-occurrence means for the market.
 CROSS_THEME_INSIGHTS: Dict[Tuple[str, str], List[str]] = {
@@ -1025,10 +1107,10 @@ class ThemeSummarizer:
 
         for name, key, emoji, count in top_themes:
             articles = self._theme_articles.get(key, [])
-            briefing = self._generate_single_theme_briefing(key, articles)
+            subtitle = self._generate_theme_subtitle(key, articles)
             lines.append(f"### {emoji} {name} ({count}건)\n")
-            if briefing:
-                lines.append(f"*{briefing}*\n")
+            if subtitle:
+                lines.append(f"*{subtitle}*\n")
 
             shown = 0
             seen_titles: set = set()
@@ -1060,9 +1142,7 @@ class ThemeSummarizer:
                     from html import escape as _esc
 
                     safe_title = _esc(title, quote=True)
-                    severity = _classify_news_severity(
-                        title, description or ""
-                    )
+                    severity = _classify_news_severity(title, description or "")
                     sev_badge = _SEV_BADGE_HTML[severity]
                     card_parts = [
                         f'<div class="news-card-item news-sev-{severity}">',
@@ -1452,6 +1532,45 @@ class ThemeSummarizer:
         "것이",
         "하는",
         "것을",
+        # Korean sentence endings (appearing as keywords)
+        "없습니다",
+        "있습니다",
+        "아닙니다",
+        "됩니다",
+        "합니다",
+        "입니다",
+        "했습니다",
+        "됐습니다",
+        # Korean postpositions / filler
+        "대한",
+        "따른",
+        "관해",
+        # Korean reporting verbs
+        "선정하였습니다",
+        "수용한다는",
+        "발표했습니다",
+        "밝혔습니다",
+        "전했습니다",
+        "보도했습니다",
+        "보도에",
+        # Korean particles / connectors
+        "것이다",
+        "으로",
+        "에게",
+        # Korean media names (noise in keywords)
+        "서울경제",
+        "한겨레",
+        "한국경제",
+        "뉴시스",
+        "연합뉴스",
+        "조선일보",
+        "중앙일보",
+        "한국일보",
+        "동아일보",
+        "경향신문",
+        "매일경제",
+        "머니투데이",
+        "아시아경제",
     }
 
     _NOISE_ENGLISH = {
@@ -1563,29 +1682,63 @@ class ThemeSummarizer:
             return ""
 
         # Strategy 1: Build keyword-based composite briefing
-        keywords = self._extract_title_keywords(articles, max_keywords=5)
+        keywords = self._extract_title_keywords(articles, max_keywords=7)
+
+        # Filter out keywords that match OTHER theme names (not current theme)
+        filtered_kw = []
+        for kw in keywords:
+            kw_lower = kw.lower()
+            # Skip if keyword matches a theme name/key that isn't the current theme
+            if kw_lower in _THEME_NAME_KEYWORDS and kw_lower != theme_key.lower():
+                # Also allow if it's a substring of the current theme name
+                current_theme_name = ""
+                for t_name, t_key, _e, _k in THEMES:
+                    if t_key == theme_key:
+                        current_theme_name = t_name.lower()
+                        break
+                if kw_lower not in current_theme_name and kw_lower != theme_key:
+                    continue
+            filtered_kw.append(kw)
+        keywords = filtered_kw
+
         if len(keywords) >= 2:
-            count = len(articles)
             # Separate Korean and English keywords for natural phrasing
             kr_kw = [k for k in keywords if re.search(r"[가-힣]", k)]
             en_kw = [k for k in keywords if not re.search(r"[가-힣]", k)]
 
+            # Translate common English keywords to Korean
+            translated_en = []
+            for ek in en_kw:
+                ko = _EN_KEYWORD_KO.get(ek.lower())
+                translated_en.append(ko if ko else ek)
+
             # Build a more natural Korean briefing
-            display_kw = kr_kw[:3] if kr_kw else en_kw[:3]
+            display_kw = kr_kw[:3] if kr_kw else translated_en[:3]
             if not display_kw:
                 display_kw = keywords[:3]
 
             kw_str = ", ".join(display_kw)
 
-            # Use analytical templates that provide context, not just counts
+            # Diverse analytical templates with different angles
             templates = [
-                f"{kw_str} 관련 뉴스가 {count}건으로, 시장 참여자들의 관심이 집중되고 있습니다.",
-                f"{kw_str} 이슈가 {count}건 보도되며 해당 섹터의 단기 변동성 확대 가능성이 있습니다.",
-                f"{kw_str} 관련 {count}건의 보도가 이어지고 있어 관련 포지션 점검이 필요합니다.",
-                f"{kw_str} 중심으로 {count}건의 뉴스가 쏟아지며 투자 심리에 영향을 미치고 있습니다.",
-                f"{count}건의 보도에서 {kw_str} 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다.",
-                f"{kw_str} 이슈가 {count}건 감지되었습니다. 관련 지표와 수급 흐름을 함께 확인하세요.",
-                f"{kw_str} 테마가 {count}건으로 부각되고 있어, 섹터 로테이션 가능성을 점검하세요.",
+                # Trend / momentum
+                f"{kw_str} 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다.",
+                f"{kw_str} 중심의 모멘텀이 형성되고 있어 방향성 확인이 필요합니다.",
+                # Risk assessment
+                f"{kw_str} 이슈가 부각되며 해당 섹터의 단기 변동성 확대 가능성이 있습니다.",
+                f"{kw_str} 관련 불확실성이 커지고 있어 리스크 관리에 유의하세요.",
+                # Sector impact
+                f"{kw_str} 관련 보도가 이어지고 있어 관련 포지션 점검이 필요합니다.",
+                f"{kw_str} 테마가 부각되고 있어 섹터 로테이션 가능성을 점검하세요.",
+                # Market sentiment
+                f"{kw_str} 중심으로 시장 참여자들의 관심이 집중되고 있습니다.",
+                f"{kw_str} 이슈에 대한 시장 반응을 모니터링할 필요가 있습니다.",
+                # Actionable
+                f"{kw_str} 관련 지표와 수급 흐름을 함께 확인하세요.",
+                f"{kw_str} 동향이 포트폴리오 전략에 영향을 줄 수 있어 주시가 필요합니다.",
+                # Analytical
+                f"{kw_str} 관련 뉴스 흐름이 강화되고 있어 중장기 영향을 분석해야 합니다.",
+                f"{kw_str} 이슈가 시장 구조 변화의 신호일 수 있어 심층 분석이 권장됩니다.",
             ]
             import datetime as _dt
 
@@ -1621,6 +1774,33 @@ class ThemeSummarizer:
         if keywords:
             return f"주요 키워드: {', '.join(keywords)}"
 
+        return ""
+
+    def _generate_theme_subtitle(self, theme_key: str, articles: List[Dict[str, Any]]) -> str:
+        """Generate a subtitle from the best article description for theme headings.
+
+        Unlike _generate_single_theme_briefing which uses keyword analysis,
+        this returns a direct description snippet from the top article,
+        giving readers a concrete preview of the most important story.
+        """
+        if not articles:
+            return ""
+
+        for article in articles[:5]:
+            # Prefer Korean description
+            desc = (article.get("description_ko") or article.get("description", "")).strip()
+            title = article.get("title_ko") or article.get("title", "")
+            if not desc or desc == title or len(desc) < 20:
+                continue
+            if _is_generic_desc(desc):
+                continue
+            # Extract first sentence
+            sentences = re.split(r"(?<=[.!?。다요음])\s+", desc)
+            snippet = sentences[0] if sentences else desc
+            if len(snippet) > 120:
+                snippet = snippet[:117].rsplit(" ", 1)[0] + "..."
+            if len(snippet) >= 15:
+                return snippet
         return ""
 
     def generate_theme_briefing(self) -> str:
@@ -1757,8 +1937,8 @@ class ThemeSummarizer:
                 or p0_items[0].get("title", "긴급 이슈")
             )
             # Truncate long titles
-            if len(p0_title) > 80:
-                p0_title = p0_title[:77] + "..."
+            if len(p0_title) > 100:
+                p0_title = p0_title[:97] + "..."
             intro = f"**긴급**: {p0_title}  \n"
             if len(p0_items) > 1:
                 intro += f"외 P0 긴급 이슈 {len(p0_items) - 1}건이 추가 감지되었습니다. "
@@ -1872,18 +2052,14 @@ class ThemeSummarizer:
         if p0_items:
             lines.append("### 긴급 이슈\n")
             for item in p0_items[:3]:
-                p0_title = (
-                    item.get("title_ko") or item.get("title_translated") or item.get("title", "")
-                )[:80]
+                p0_title = (item.get("title_ko") or item.get("title_translated") or item.get("title", ""))[:100]
                 if p0_title:
                     lines.append(f"- {p0_title}")
             lines.append("")
         if p1_items:
             lines.append("### 주요 이슈\n")
             for item in p1_items[:3]:
-                p1_title = (
-                    item.get("title_ko") or item.get("title_translated") or item.get("title", "")
-                )[:80]
+                p1_title = (item.get("title_ko") or item.get("title_translated") or item.get("title", ""))[:80]
                 if p1_title:
                     lines.append(f"- {p1_title}")
             if len(p1_items) > 3:
@@ -1942,10 +2118,10 @@ class ThemeSummarizer:
             p0_title = (
                 p0_items[0].get("title_ko") or p0_items[0].get("title_translated") or p0_items[0].get("title", "")
             )
-            if len(p0_title) > 60:
+            if len(p0_title) > 100:
                 # Try to extract key phrase
                 keywords = self._extract_title_keywords(p0_items[:1], max_keywords=3)
-                p0_title = ", ".join(keywords) if keywords else p0_title[:57] + "..."
+                p0_title = ", ".join(keywords) if keywords else p0_title[:97] + "..."
             prefix = {
                 "crypto": "암호화폐",
                 "stock": "주식 시장",
@@ -2062,20 +2238,25 @@ class ThemeSummarizer:
         stat_html = "\n".join(stat_items)
         lines.append(f'<div class="stat-grid">\n{stat_html}\n</div>')
 
-        # Theme briefings — use keyword-extracted briefings
+        # Theme briefings — ultra-short for at-a-glance box (max ~40 chars)
         briefing_items = []
         _sponsored_re = re.compile(r"\s*[Ss]ponsored\s+by\s+@?\S+.*$", flags=re.MULTILINE)
         for name, key, emoji, count in top_themes[:4]:
             articles = self._theme_articles.get(key, [])
             if not articles:
                 continue
-            # Use improved keyword-based briefing
-            briefing = self._generate_single_theme_briefing(key, articles)
-            if briefing:
-                # Clean sponsored text from briefing
-                briefing = _sponsored_re.sub("", briefing).strip()
-            if briefing:
-                briefing_items.append(f"<li>{emoji} <strong>{name}</strong> ({count}건): {briefing}</li>")
+            # Build ultra-short keyword summary for at-a-glance
+            kws = self._extract_title_keywords(articles, max_keywords=3)
+            if kws:
+                short_briefing = ", ".join(kws[:2]) + " 주목"
+            else:
+                short_briefing = ""
+            if short_briefing:
+                short_briefing = _sponsored_re.sub("", short_briefing).strip()
+            if short_briefing and len(short_briefing) > 40:
+                short_briefing = short_briefing[:37] + "..."
+            if short_briefing:
+                briefing_items.append(f"<li>{emoji} <strong>{name}</strong>: {short_briefing}</li>")
             else:
                 briefing_items.append(f"<li>{emoji} <strong>{name}</strong>: {count}건 수집</li>")
 
@@ -2096,7 +2277,7 @@ class ThemeSummarizer:
                 desc_part = ""
                 if desc and desc != p0_title and desc != item.get("title", "") and len(desc) > 15:
                     # Skip descriptions that are mostly English (non-Korean)
-                    korean_chars = sum(1 for c in desc if '\uac00' <= c <= '\ud7a3')
+                    korean_chars = sum(1 for c in desc if "\uac00" <= c <= "\ud7a3")
                     if korean_chars >= len(desc) * 0.3:
                         desc_short = desc[:100] + "..." if len(desc) > 100 else desc
                         desc_part = f' <span class="p0-desc">{desc_short}</span>'
@@ -2107,9 +2288,7 @@ class ThemeSummarizer:
             if p0_html_items:
                 p0_html = "\n".join(p0_html_items)
                 lines.append(
-                    f'<div class="alert-box alert-urgent">\n'
-                    f"<strong>긴급 알림</strong>\n"
-                    f"<ul>\n{p0_html}\n</ul>\n</div>"
+                    f'<div class="alert-box alert-urgent">\n<strong>긴급 알림</strong>\n<ul>\n{p0_html}\n</ul>\n</div>'
                 )
 
         return "\n".join(lines)
