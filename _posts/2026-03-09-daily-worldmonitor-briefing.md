@@ -123,7 +123,7 @@ description: "2026-03-09 기준 WorldMonitor 연계 소스에서 글로벌 이�
 <div class="wm-issue-card">
 <div class="wm-issue-num">8</div>
 <div class="wm-issue-body">
-<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/3/8/trump-pledges-to-block-legislation-until-us-voter-id-law-passes?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>트럼프은 미국 유권자 ID 법이 통과될 때까지 법안을 차단하겠다고 약속합니다.</strong></a></div>
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/news/2026/3/8/trump-pledges-to-block-legislation-until-us-voter-id-law-passes?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>트럼프는 미국 유권자 ID 법이 통과될 때까지 법안을 차단하겠다고 약속합니다.</strong></a></div>
 <div class="wm-issue-meta">
 <span class="wm-issue-theme">정책/법률</span>
 <span class="wm-issue-impact" style="color:#d29922;">중간</span>
@@ -178,7 +178,7 @@ description: "2026-03-09 기준 WorldMonitor 연계 소스에서 글로벌 이�
 <div class="wm-issue-card">
 <div class="wm-issue-num">13</div>
 <div class="wm-issue-body">
-<div class="wm-issue-title"><a href="https://www.theguardian.com/us-news/2026/mar/07/trump-shield-of-americas-summit" target="_blank" rel="noopener noreferrer"><strong>트럼프은 12명의 라틴 아메리카 지도자들과 함께 'Shield of Americas' 정상회담을 소집합니다.</strong></a></div>
+<div class="wm-issue-title"><a href="https://www.theguardian.com/us-news/2026/mar/07/trump-shield-of-americas-summit" target="_blank" rel="noopener noreferrer"><strong>트럼프는 12명의 라틴 아메리카 지도자들과 함께 'Shield of Americas' 정상회담을 소집합니다.</strong></a></div>
 <div class="wm-issue-meta">
 <span class="wm-issue-theme">사회/기타</span>
 <span class="wm-issue-impact" style="color:#8b949e;">낮음</span>
@@ -295,7 +295,7 @@ description: "2026-03-09 기준 WorldMonitor 연계 소스에서 글로벌 이�
 <li><a href="https://www.theguardian.com/world/2026/mar/08/haiti-immigrant-mexico-tapachula" target="_blank" rel="noopener noreferrer">&#x27;나는 살려고 노력하고 있습니다&#x27;: 멕시코의 아이티인들은 망가진 이민 시스템에도 불구하고 공동체를 추구합니다</a><span class="source-tag" data-source-type="world-media">WorldMonitor/Guardian World</span></li>
 <li><a href="https://www.theguardian.com/world/2026/mar/08/british-columbia-canada-daylight-saving-time" target="_blank" rel="noopener noreferrer">변화의 시기: 브리티시 컬럼비아는 일광 절약 시간제를 영구적으로 유지하기로 결정</a><span class="source-tag" data-source-type="world-media">WorldMonitor/Guardian World</span></li>
 <li><a href="https://www.theguardian.com/world/2026/mar/07/peru-nightclub-bombing" target="_blank" rel="noopener noreferrer">페루 나이트클럽 폭탄 테러, 미성년자 포함 33명 부상</a><span class="source-tag" data-source-type="world-media">WorldMonitor/Guardian World</span></li>
-<li><a href="https://www.theguardian.com/us-news/2026/mar/07/trump-shield-of-americas-summit" target="_blank" rel="noopener noreferrer">트럼프은 12명의 라틴 아메리카 지도자들과 함께 &#x27;Shield of Americas&#x27; 정상회담을 소집합니다.</a><span class="source-tag" data-source-type="world-media">WorldMonitor/Guardian World</span></li>
+<li><a href="https://www.theguardian.com/us-news/2026/mar/07/trump-shield-of-americas-summit" target="_blank" rel="noopener noreferrer">트럼프는 12명의 라틴 아메리카 지도자들과 함께 &#x27;Shield of Americas&#x27; 정상회담을 소집합니다.</a><span class="source-tag" data-source-type="world-media">WorldMonitor/Guardian World</span></li>
 <li><a href="https://www.theguardian.com/us-news/2026/mar/07/deaf-six-year-old-deported-colombia" target="_blank" rel="noopener noreferrer">ICE는 보조 장치를 제공받지 못한 청각 장애 소년을 포함한 가족을 추방합니다</a><span class="source-tag" data-source-type="world-media">WorldMonitor/Guardian World</span></li>
 <li><a href="https://www.theguardian.com/world/2026/mar/09/kasasa-island-japan-china-tension" target="_blank" rel="noopener noreferrer">중국과의 긴장의 중심에 있는 반쯤 버려진 일본 섬</a><span class="source-tag" data-source-type="world-media">WorldMonitor/Guardian World</span></li>
 <li><a href="https://www.theguardian.com/sport/2026/mar/08/emperor-naruhito-watches-ohtani-and-japan-survive-scare-against-australia-at-world-baseball-classic" target="_blank" rel="noopener noreferrer">나루히토 일왕은 오타니와 일본이 월드베이스볼클래식(WBC)에서 호주를 상대로 살아남는 것을 지켜봤다.</a><span class="source-tag" data-source-type="world-media">WorldMonitor/Guardian World</span></li>
@@ -310,7 +310,7 @@ description: "2026-03-09 기준 WorldMonitor 연계 소스에서 글로벌 이�
 <li><a href="https://www.aljazeera.com/news/2026/3/8/marches-for-international-womens-day-denounce-war-abuse-and-oppression?traffic_source=rss" target="_blank" rel="noopener noreferrer">세계 여성의 날 행진, 전쟁과 학대, 억압을 규탄하다</a><span class="source-tag" data-source-type="world-media">WorldMonitor/Al Jazeera</span></li>
 <li><a href="https://www.aljazeera.com/news/2026/3/8/colombia-elects-congress-chooses-presidential-candidates-amid-us-tensions?traffic_source=rss" target="_blank" rel="noopener noreferrer">콜롬비아, 미국의 긴장 속에서 의회 선출, 대통령 후보 선정</a><span class="source-tag" data-source-type="world-media">WorldMonitor/Al Jazeera</span></li>
 <li><a href="https://www.aljazeera.com/news/2026/3/8/thousands-flee-akobo-after-south-sudan-army-issues-forced-evacuation-order?traffic_source=rss" target="_blank" rel="noopener noreferrer">남수단군이 강제 대피 명령을 내린 후 수천 명이 아코보를 탈출</a><span class="source-tag" data-source-type="world-media">WorldMonitor/Al Jazeera</span></li>
-<li><a href="https://www.aljazeera.com/news/2026/3/8/trump-pledges-to-block-legislation-until-us-voter-id-law-passes?traffic_source=rss" target="_blank" rel="noopener noreferrer">트럼프은 미국 유권자 ID 법이 통과될 때까지 법안을 차단하겠다고 약속합니다.</a><span class="source-tag" data-source-type="world-media">WorldMonitor/Al Jazeera</span></li>
+<li><a href="https://www.aljazeera.com/news/2026/3/8/trump-pledges-to-block-legislation-until-us-voter-id-law-passes?traffic_source=rss" target="_blank" rel="noopener noreferrer">트럼프는 미국 유권자 ID 법이 통과될 때까지 법안을 차단하겠다고 약속합니다.</a><span class="source-tag" data-source-type="world-media">WorldMonitor/Al Jazeera</span></li>
 </ol>
 </div></details>
 

@@ -158,7 +158,7 @@ description: "2026-03-10 주식 시장에서 234건의 뉴스를 분석했습니
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMiswFBVV95cUxNaUZlbTRLY2xKQ1dOdlFIRm9tcWdEWXpCMWR0WGZVM3oxTDhmRXU3cW5zRzFZeGJRVzd5Uk9jcXhBQjExQjZMb1V6X05NMHVPampybWJpazVrdDJqbFNFMnYxN3pGRnVtdVdkckFsN01VWVkxdVpDQ2x6b1NBUDhZVG01emRQaVpUZ0pJVzIzZkNVeU42XzdleWRTUmUxazlycTFMeXFFSHJfMVRSUEM2dUtNOA?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">트럼프로 인한 유가 하락은 이란 분쟁이 거의 끝났다는 신호입니다: 시장 마무리</a>
-<p class="news-desc">트럼프은 이란 분쟁이 거의 끝났음을 알리는 신호로 유가 하락: 시장이 마무리되었습니다.</p>
+<p class="news-desc">트럼프는 이란 분쟁이 거의 끝났음을 알리는 신호로 유가 하락: 시장이 마무리되었습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

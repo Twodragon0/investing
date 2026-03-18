@@ -113,7 +113,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-14 - stock-news 뉴스 요약 
 <div class="news-card-num">2</div>
 <div class="news-card-thumb"><img src="https://image.cnbcfm.com/api/v1/image/108275417-17730649142026-03-09t133829z_1021977946_rc211kaxtlru_rtrmadp_0_iran-crisis-oil-kharg.jpeg?v=1773064936&amp;w=1920&amp;h=1080" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
 <div class="news-card-body">
-<a href="https://www.cnbc.com/2026/03/13/trump-says-us-obliterated-military-targets-on-irans-kharg-island-but-didnt-wipe-out-oil-infrastructure.html" class="news-title" target="_blank" rel="noopener noreferrer">트럼프은 미국이 이란 카르그 섬의 군사 목표물을 '제거'했지만 석유 기반 시설을 '제거'하지는 않았다고 밝혔습니다</a>
+<a href="https://www.cnbc.com/2026/03/13/trump-says-us-obliterated-military-targets-on-irans-kharg-island-but-didnt-wipe-out-oil-infrastructure.html" class="news-title" target="_blank" rel="noopener noreferrer">트럼프는 미국이 이란 카르그 섬의 군사 목표물을 '제거'했지만 석유 기반 시설을 '제거'하지는 않았다고 밝혔습니다</a>
 <p class="news-desc">트럼프 대통령은 진실 사회(Truth Social) 게시물에서 미 중부 사령부에 카르그 섬의 군사 목표물을 "제거"하는 폭격을 실시하도록 지시했다고 밝혔습니다</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
@@ -123,7 +123,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-14 - stock-news 뉴스 요약 
 <div class="news-card-item">
 <div class="news-card-num">3</div>
 <div class="news-card-body">
-<a href="https://www.cnbc.com/2026/03/13/trump-iran-war-putin-russia.html" class="news-title" target="_blank" rel="noopener noreferrer">트럼프은 푸틴 대통령이 이란을 돕고 있다고 생각한다고 말했습니다.</a>
+<a href="https://www.cnbc.com/2026/03/13/trump-iran-war-putin-russia.html" class="news-title" target="_blank" rel="noopener noreferrer">트럼프는 푸틴 대통령이 이란을 돕고 있다고 생각한다고 말했습니다.</a>
 <p class="news-desc">러시아 지도자들은 이란이 미국과 이스라엘과 싸우고 있기 때문에 이란과 정보를 공유하지 않을 것이라고 대통령에게 말했다고 스티브 위트코프 특사가 이번 주에 말했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>

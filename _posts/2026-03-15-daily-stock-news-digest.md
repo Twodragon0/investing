@@ -142,7 +142,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-15 - stock-news 뉴스 요약 
 <div class="news-card-num">1</div>
 <div class="news-card-thumb"><img src="https://image.cnbcfm.com/api/v1/image/108275417-17730649142026-03-09t133829z_1021977946_rc211kaxtlru_rtrmadp_0_iran-crisis-oil-kharg.jpeg?v=1773064936&amp;w=1920&amp;h=1080" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
 <div class="news-card-body">
-<a href="https://www.cnbc.com/2026/03/13/trump-says-us-obliterated-military-targets-on-irans-kharg-island-but-didnt-wipe-out-oil-infrastructure.html" class="news-title" target="_blank" rel="noopener noreferrer">이란은 이웃 국가에 대한 보복을 위협하고 있다. 트럼프은 국가들에게 호르무즈 해협 확보를 지원할 것을 촉구합니다.</a>
+<a href="https://www.cnbc.com/2026/03/13/trump-says-us-obliterated-military-targets-on-irans-kharg-island-but-didnt-wipe-out-oil-infrastructure.html" class="news-title" target="_blank" rel="noopener noreferrer">이란은 이웃 국가에 대한 보복을 위협하고 있다. 트럼프는 국가들에게 호르무즈 해협 확보를 지원할 것을 촉구합니다.</a>
 <p class="news-desc">트럼프 대통령은 진실 사회(Truth Social) 게시물에서 미 중부 사령부에 카르그 섬의 군사 목표물을 "제거"하는 폭격을 실시하도록 지시했다고 밝혔습니다</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
@@ -171,7 +171,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-15 - stock-news 뉴스 요약 
 </div>
 
 <details><summary>그 외 5건 보기</summary><div class="details-content"><ol class="news-overflow-list">
-<li><a href="https://www.investing.com/news/commodities-news/trump-calls-for-allies-to-help-secure-strait-of-hormuz-as-iran-vows-to-step-up-retaliation-4561515">트럼프은 이란의 카르그 섬에 대한 추가 공격을 위협하고 호르무즈 해협에서 동맹국을 압박합니다.</a></li>
+<li><a href="https://www.investing.com/news/commodities-news/trump-calls-for-allies-to-help-secure-strait-of-hormuz-as-iran-vows-to-step-up-retaliation-4561515">트럼프는 이란의 카르그 섬에 대한 추가 공격을 위협하고 호르무즈 해협에서 동맹국을 압박합니다.</a></li>
 <li><a href="https://www.investing.com/news/commodities-news/us-china-economic-chiefs-meet-in-paris-to-clear-path-to-trumpxi-summit-4561514">미국과 중국 경제 수장들이 파리에서 만나 트럼프-시 정상회담의 길을 분명히 했습니다.</a></li>
 </ol></div></details>
 

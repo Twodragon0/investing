@@ -104,6 +104,16 @@ TERM_OVERRIDES: Dict[str, str] = {
     # People
     "Trump": "트럼프",
     "Elon Musk": "일론 머스크",
+    "Xi Jinping": "시진핑",
+    "Xi": "시진핑",
+    "Putin": "푸틴",
+    "Zelensky": "젤렌스키",
+    "Biden": "바이든",
+    "Powell": "파월",
+    "Yellen": "옐런",
+    "Newsom": "뉴섬",
+    "Booker": "부커",
+    "Bessent": "베센트",
     # General finance
     "Bullish": "강세",
     "Bearish": "약세",
@@ -376,6 +386,22 @@ _KOREAN_STYLE_FIXES: list = [
     (r"달러 상당의", "달러 규모"),
     # "~가 빠져나갔다고 연구원들이 밝혔습니다" → cleaner ending
     (r"밝혔습니다\.\s*$", "밝혔습니다"),
+    # Korean particle corrections for names without 받침 (final consonant)
+    # 트럼프(no 받침) → 는/가/를, not 은/이/을
+    (r"트럼프은\b", "트럼프는"),
+    (r"트럼프을\b", "트럼프를"),
+    (r"트럼프이\b", "트럼프가"),
+    (r"오바마은\b", "오바마는"),
+    (r"오바마이\b", "오바마가"),
+    (r"테슬라은\b", "테슬라는"),
+    (r"테슬라이\b", "테슬라가"),
+    (r"엔비디아은\b", "엔비디아는"),
+    (r"엔비디아이\b", "엔비디아가"),
+    (r"메타은\b", "메타는"),
+    (r"메타이\b", "메타가"),
+    # "시과의" → "시진핑과의" (Xi mistranslation)
+    (r"시과의", "시진핑과의"),
+    (r"시과 ", "시진핑과 "),
     # Double spaces
     (r"\s{2,}", " "),
 ]

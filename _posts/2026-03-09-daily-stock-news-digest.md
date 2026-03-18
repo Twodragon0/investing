@@ -168,7 +168,7 @@ description: "2026-03-09 주식 시장에서 186건의 뉴스를 분석했습니
 <div class="news-card-item">
 <div class="news-card-num">2</div>
 <div class="news-card-body">
-<a href="https://www.cnbc.com/2026/03/08/crude-oil-prices-today-iran-war.html" class="news-title" target="_blank" rel="noopener noreferrer">석유는 배럴당 110달러 이상 급등합니다. 트럼프은 이란을 물리치기 위해 &#x27;적은 대가&#x27;를 지불해야 한다고 말합니다.</a>
+<a href="https://www.cnbc.com/2026/03/08/crude-oil-prices-today-iran-war.html" class="news-title" target="_blank" rel="noopener noreferrer">석유는 배럴당 110달러 이상 급등합니다. 트럼프는 이란을 물리치기 위해 &#x27;적은 대가&#x27;를 지불해야 한다고 말합니다.</a>
 <p class="news-desc">걸프 아랍 산유국들이 호르무즈 해협을 통해 수출할 수 없어 저장 공간이 부족해 생산량을 줄이고 있다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
@@ -185,7 +185,7 @@ description: "2026-03-09 주식 시장에서 186건의 뉴스를 분석했습니
 </div>
 
 <details><summary>그 외 6건 보기</summary><div class="details-content"><ol class="news-overflow-list">
-<li><a href="https://www.cnbc.com/2026/03/08/trump-save-america-act-voter-id.html">트럼프은 SAVE America 유권자 ID 법안이 통과될 때까지 입법 봉쇄를 맹세합니다.</a> — 트럼프은 SAVE America 유권자 ID 법안이 통과될 때까지 입법 봉쇄를 맹세합니다.. 주요 키워드: 트럼프은, 유권자, 법안이.</li>
+<li><a href="https://www.cnbc.com/2026/03/08/trump-save-america-act-voter-id.html">트럼프는 SAVE America 유권자 ID 법안이 통과될 때까지 입법 봉쇄를 맹세합니다.</a> — 트럼프는 SAVE America 유권자 ID 법안이 통과될 때까지 입법 봉쇄를 맹세합니다.. 주요 키워드: 트럼프는, 유권자, 법안이.</li>
 <li><a href="https://www.cnbc.com/2026/03/08/china-says-thorough-preparations-needed-ahead-of-trump-xi-meeting.html">중국은 이란 전쟁으로 트럼프-시 회담이 균형을 이루지 못하면서 '철저한 준비'가 필요하다고 말했습니다.</a> — 지정학적 리스크가 금융시장에 영향을 미치고 있습니다. 유가·환율·안전자산 흐름을 주시해야 합니다.</li>
 </ol></div></details>
 

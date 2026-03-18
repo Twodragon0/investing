@@ -179,7 +179,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-13 - stock-news 뉴스 요약 
 <div class="news-card-num">1</div>
 <div class="news-card-thumb"><img src="https://i-invdn-com.investing.com/trkd-images/LYNXMPEM2C14C_1200_L.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
 <div class="news-card-body">
-<a href="https://www.investing.com/news/commodities-news/white-house-official-trump-has-said-a-uscuba-deal-could-be-done-easily-4560573" class="news-title" target="_blank" rel="noopener noreferrer">백악관 관계자: 트럼프은 미국-쿠바 거래가 쉽게 이루어질 수 있다고 말했습니다</a>
+<a href="https://www.investing.com/news/commodities-news/white-house-official-trump-has-said-a-uscuba-deal-could-be-done-easily-4560573" class="news-title" target="_blank" rel="noopener noreferrer">백악관 관계자: 트럼프는 미국-쿠바 거래가 쉽게 이루어질 수 있다고 말했습니다</a>
 <p class="news-desc">White House official: Trump has said a US-Cuba deal could be done easily. 정책 변화가 시장에 미치는 영향을 주시해야 합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Investing.com</span>
 </div>
@@ -189,7 +189,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-13 - stock-news 뉴스 요약 
 <div class="news-card-item">
 <div class="news-card-num">2</div>
 <div class="news-card-body">
-<a href="https://www.cnbc.com/2026/03/13/trump-iran-war-putin-russia.html" class="news-title" target="_blank" rel="noopener noreferrer">트럼프은 푸틴 대통령이 이란을 돕고 있다고 생각한다고 말했습니다.</a>
+<a href="https://www.cnbc.com/2026/03/13/trump-iran-war-putin-russia.html" class="news-title" target="_blank" rel="noopener noreferrer">트럼프는 푸틴 대통령이 이란을 돕고 있다고 생각한다고 말했습니다.</a>
 <p class="news-desc">러시아 지도자들은 이란이 미국과 이스라엘과 싸우고 있기 때문에 이란과 정보를 공유하지 않을 것이라고 대통령에게 말했다고 스티브 위트코프 특사가 이번 주에 말했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
@@ -206,7 +206,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-13 - stock-news 뉴스 요약 
 </div>
 
 <details><summary>그 외 5건 보기</summary><div class="details-content"><ol class="news-overflow-list">
-<li><a href="https://www.cnbc.com/2026/03/13/iran-war-oil-trump-drilling.html">트럼프은 이란에서 영감을 받은 석유 위기에서 벗어날 수 없습니다.</a></li>
+<li><a href="https://www.cnbc.com/2026/03/13/iran-war-oil-trump-drilling.html">트럼프는 이란에서 영감을 받은 석유 위기에서 벗어날 수 없습니다.</a></li>
 <li><a href="https://www.cnbc.com/2026/03/13/tariff-dividend-checks-a-new-bill-could-create-a-tax-rebate-program.html">관세 배당 수표의 가능성이 높아졌습니까? 경제학자들은 무게를 두고 있다</a></li>
 </ol></div></details>
 

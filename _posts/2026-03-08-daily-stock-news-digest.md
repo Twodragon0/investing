@@ -87,8 +87,8 @@ description: "2026-03-08 주식 시장에서 126건의 뉴스를 분석했습니
 <div class="news-card-item">
 <div class="news-card-num">2</div>
 <div class="news-card-body">
-<a href="https://www.cnbc.com/2026/03/07/trump-looks-to-turn-attention-to-western-hemisphere-at-least-for-a-moment-at-a-regional-summit.html" class="news-title" target="_blank" rel="noopener noreferrer">트럼프은 라틴 아메리카 지도자들에게 미국이 카르텔과 싸우도록 돕기 위해 군대를 사용할 것을 촉구합니다.</a>
-<p class="news-desc">트럼프은 지역 지도자들이 마약 밀매 카르텔과 다국적 갱단에 맞서 군사적 조치를 취하도록 독려했습니다.</p>
+<a href="https://www.cnbc.com/2026/03/07/trump-looks-to-turn-attention-to-western-hemisphere-at-least-for-a-moment-at-a-regional-summit.html" class="news-title" target="_blank" rel="noopener noreferrer">트럼프는 라틴 아메리카 지도자들에게 미국이 카르텔과 싸우도록 돕기 위해 군대를 사용할 것을 촉구합니다.</a>
+<p class="news-desc">트럼프는 지역 지도자들이 마약 밀매 카르텔과 다국적 갱단에 맞서 군사적 조치를 취하도록 독려했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -97,7 +97,7 @@ description: "2026-03-08 주식 시장에서 126건의 뉴스를 분석했습니
 <div class="news-card-item">
 <div class="news-card-num">3</div>
 <div class="news-card-body">
-<a href="https://www.cnbc.com/2026/03/07/trump-return-of-soldiers-killed-in-war-in-the-middle-east.html" class="news-title" target="_blank" rel="noopener noreferrer">트럼프은 중동 전쟁에서 전사한 군인들이 귀환하는 동안 슬픔에 잠긴 가족들과 합류합니다.</a>
+<a href="https://www.cnbc.com/2026/03/07/trump-return-of-soldiers-killed-in-war-in-the-middle-east.html" class="news-title" target="_blank" rel="noopener noreferrer">트럼프는 중동 전쟁에서 전사한 군인들이 귀환하는 동안 슬픔에 잠긴 가족들과 합류합니다.</a>
 <p class="news-desc">전사한 미군 유해의 송환인 품위 있는 이송은 최고사령관의 가장 암울한 임무 중 하나로 꼽힌다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
