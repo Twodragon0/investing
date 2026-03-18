@@ -46,50 +46,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-18 - stock-news 뉴스 요약 
 <li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxOMU56ZEYtYWdmVzVVOU0yV01zN2l1WGpMNFo5U19Oa1VqNHByMENDSjg2TVpCQ0dnZmdZZHNxeW5mX0dqdWVETWl4TkdfMUVTYjNOQ05rMURBa2VKVmhlYkJhSDRnTTZiSnd1eHZfVlRWb0JweXh1NzhOckxWdm1NYWV6UHVoc3JVcmhnTURjWk1STXIxSDhaSUhLOENtQdIBowFBVV95cUxNcGR2aE00c2pGRjU1VmtNWU1xVXZ1SFVORHVRYlZMOUZPRUZ1T0o0dVJxWXlycUNsVXlxblIycWIxbGw5SlQtYmVsUnRyZ2JzRlJUWTNndHRHNnlvdWJleWJHTmRCaGo2OFMwZlEwcHFlMjYwVGJsTTdVaGFSUnNCVGhrb1hVWXNPUm5nRHhLd0UzN19IcGlRT2pfUWpYWkNMTnVJ?oc=5">Treasury yields drop as investors track lower oil prices and look ahead to Fed rate decision</a></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Treasury yields drop as investors track lower oil prices and look ahead to Fe. 
-총 192건의 뉴스 중 P1 주요 이슈도 29건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (42건): 삼성전자, 하이닉스, 코스피 관련 뉴스가 42건으로, 시장 참여자들의 관심이 집중되고 있습니다.
-- **📊 매크로/금리** (20건): 환율, 한은 이슈가 20건 감지되었습니다. 관련 지표와 수급 흐름을 함께 확인하세요.
-- **🤖 AI/기술** (15건): 반도체, 삼성전자, 하이닉스 관련 뉴스가 15건으로, 시장 참여자들의 관심이 집중되고 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- Treasury yields drop as investors track lower oil prices and look ahead to Fed r
-
-### 주요 이슈
-
-- '삼성전자 + SK하이닉스'에 베팅… ETF '투톱 전략' 확산
-- Neuronetics, Inc. Q4 2025 Earnings Call Summary
-- The Best Tech ETF to Invest $2,000 in Right Now
-- 외 26건
-
-### 투자자 체크포인트
-
-- 한국 기사 67건, 글로벌 기사 125건 수집
-- 한국 지수: KOSPI 5,640.48(+1.63%), KOSDAQ 1,136.94(-0.12%), USD/KRW 1,487.58(-0.18%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">42건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:48%"></div></div><span class="theme-count">20건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:36%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:19%"></div></div><span class="theme-count">8건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:14%"></div></div><span class="theme-count">6건</span></div>
-</div>
-
-*총 192건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-03-18.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-03-18.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- 총 **18건** 수집
+- KOSPI 5,640.48 (+1.63%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 1,136.94 (-0.12%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
 
 ## 테마별 주요 뉴스
 
