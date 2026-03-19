@@ -1,8 +1,5 @@
 {
   "seen": {
-    "56205b8504970163": "2026-02-17T13:58:29.663507+00:00",
-    "b5d192e712b83676": "2026-02-17T13:58:29.663642+00:00",
-    "b16869e571674f23": "2026-02-17T13:58:29.663656+00:00",
     "ebf97921b9e79ca5": "2026-02-18T13:59:32.894711+00:00",
     "04efbe4d008d64b4": "2026-02-18T13:59:32.894736+00:00",
     "b03a4a47974445aa": "2026-02-18T13:59:32.894772+00:00",
@@ -562,7 +559,55 @@
     "104dc0fda82055bcef66a1e6": "2026-03-18T22:57:39",
     "e28c64c929c046b54ffedcdd": "2026-03-18T22:57:39",
     "036c7e3f52d616db5eb24e2f": "2026-03-18T22:57:39",
-    "b9ea0b54a6f1a9a9815e8f11": "2026-03-18T22:57:39"
+    "b9ea0b54a6f1a9a9815e8f11": "2026-03-18T22:57:39",
+    "975c6136f7b8019b75008c3e": "2026-03-19T22:57:33",
+    "741aae75fb2d400d234d1e7e": "2026-03-19T22:57:33",
+    "da1d25513a60040631d753ba": "2026-03-19T22:57:33",
+    "3eec24c1c2c88df2c504cfb1": "2026-03-19T22:57:33",
+    "33ed209e35d34753a718c1f1": "2026-03-19T22:57:33",
+    "bc1122bc03117143d6f89aee": "2026-03-19T22:57:33",
+    "481b732db47efb8750da1453": "2026-03-19T22:57:33",
+    "2c08e29b2168717960d54250": "2026-03-19T22:57:33",
+    "804a3d53cda6f55b55a51d8d": "2026-03-19T22:57:33",
+    "3f82f066a14dae7c4218e154": "2026-03-19T22:57:33",
+    "21925eb8acdcfdac80af4e9d": "2026-03-19T22:57:33",
+    "d3458c2ecc4e46549a49442b": "2026-03-19T22:57:33",
+    "6615eb79150036b11ec07616": "2026-03-19T22:57:33",
+    "bddcb4c21811c534cfb3a7ec": "2026-03-19T22:57:33",
+    "5e4d2d1384b3d0885be336c8": "2026-03-19T22:57:33",
+    "9a4f3bb75b77e547aa561a1e": "2026-03-19T22:57:33",
+    "e17cb66bc478a09558a7e710": "2026-03-19T22:57:33",
+    "998ea2aae23a98669dc18f7f": "2026-03-19T22:57:33",
+    "4f0c0946f649b32cb454f40b": "2026-03-19T22:57:33",
+    "440b64e3e275b07a60379f7f": "2026-03-19T22:57:33",
+    "4aa6231272b9a9940168a4f7": "2026-03-19T22:57:33",
+    "9bf14bbb2997a7fadc0044b3": "2026-03-19T22:57:33",
+    "8715c9ad79f3445e4f01102a": "2026-03-19T22:57:33",
+    "a32db1e0759c0a732eac32e6": "2026-03-19T22:57:33",
+    "073dca74017ba36939804bdf": "2026-03-19T22:57:33",
+    "092f1de660880639042caaec": "2026-03-19T22:57:33",
+    "76bcbf3ca3f010ad80ca7c44": "2026-03-19T22:57:33",
+    "4fb12d92c56bb5f012dbc420": "2026-03-19T22:57:33",
+    "991ed8f4633344241303cc2a": "2026-03-19T22:57:33",
+    "12ed9629c2317d11cb68be98": "2026-03-19T22:57:33",
+    "0111750bda5d582ac67b357e": "2026-03-19T22:57:33",
+    "e7b49fd4f6658ba0c1300585": "2026-03-19T22:57:33",
+    "85219282eeefdd7ddfaf2c06": "2026-03-19T22:57:33",
+    "82c1101d2704ec2b4f012e47": "2026-03-19T22:57:33",
+    "6314e33defa83e8cfd38682b": "2026-03-19T22:57:33",
+    "faedbec48bec393f84277641": "2026-03-19T22:57:33",
+    "94681ec32a8c9da920e3777f": "2026-03-19T22:57:33",
+    "7d5115b207e196cabd05daab": "2026-03-19T22:57:33",
+    "a6d8fe5ea8c52c73ff9c5265": "2026-03-19T22:57:33",
+    "aa9831c81d6b64e0368cef21": "2026-03-19T22:57:33",
+    "ae425841bcb08fded4648512": "2026-03-19T22:57:33",
+    "268f9f9620d095c681b26b66": "2026-03-19T22:57:33",
+    "2985b3daf1608a85205d0e6d": "2026-03-19T22:57:33",
+    "dcf621050cd0cb8714546e82": "2026-03-19T22:57:33",
+    "c1b8f2fc11f05b334c7c50e3": "2026-03-19T22:57:33",
+    "05d0a974da5127a1cc3b822c": "2026-03-19T22:57:33",
+    "79e8dad82fd8b4cebef4a4ee": "2026-03-19T22:57:33",
+    "3940b5ed966d661e326e9ed4": "2026-03-19T22:57:33"
   },
   "titles": [
     [
@@ -2912,6 +2957,202 @@
     [
       "정치인 거래정책 리포트 20260319",
       "2026-03-19"
+    ],
+    [
+      "rep david taylor emerges as one of the biggest stock traders in congress signal ohio",
+      "2026-03-20"
+    ],
+    [
+      "form 4 smart sand inc insider trading activity stock titan",
+      "2026-03-20"
+    ],
+    [
+      "form 4 information services group inc insider trading activity stock titan",
+      "2026-03-20"
+    ],
+    [
+      "alto ingredients alto cco receives 30794share stock award stock titan",
+      "2026-03-20"
+    ],
+    [
+      "form 4 fluence energy inc insider trading activity stock titan",
+      "2026-03-20"
+    ],
+    [
+      "alto ingredients alto coo awarded 35730 common shares stock titan",
+      "2026-03-20"
+    ],
+    [
+      "form 4 jjill inc insider trading activity stock titan",
+      "2026-03-20"
+    ],
+    [
+      "form 4 phreesia inc insider trading activity stock titan",
+      "2026-03-20"
+    ],
+    [
+      "global partners lp nyse glp coo updates insider sales retains 162485 units stock titan",
+      "2026-03-20"
+    ],
+    [
+      "mail holdings entity tied to permian resources pr director sells 512429 shares stock titan",
+      "2026-03-20"
+    ],
+    [
+      "form 4 marriott vacations worldwide corp insider trading activity stock titan",
+      "2026-03-20"
+    ],
+    [
+      "form 4 orasure technologies inc insider trading activity stock titan",
+      "2026-03-20"
+    ],
+    [
+      "noble corp ne cfo preplanned sale totals 150000 a ordinary shares stock titan",
+      "2026-03-20"
+    ],
+    [
+      "cfo stock award at alto ingredients alto adds 35730 shares stock titan",
+      "2026-03-20"
+    ],
+    [
+      "form 4 futurefuel corp insider trading activity stock titan",
+      "2026-03-20"
+    ],
+    [
+      "axon axon director jeri williams sells 157 shares in 10b51 trade stock titan",
+      "2026-03-20"
+    ],
+    [
+      "keysight technologies nyse keys director sells 30000 shares under 10b51 plan stock titan",
+      "2026-03-20"
+    ],
+    [
+      "stoke therapeutics stok cmo sells 14311 shares in planned trades stock titan",
+      "2026-03-20"
+    ],
+    [
+      "cf industries nyse cf vp sells 1500 shares in openmarket trade stock titan",
+      "2026-03-20"
+    ],
+    [
+      "ebay nasdaq ebay svp sells 12978 shares under 10b51 plan stock titan",
+      "2026-03-20"
+    ],
+    [
+      "procept biorobotics nasdaq prct evp completes 5363share planned sale stock titan",
+      "2026-03-20"
+    ],
+    [
+      "venture global counsel sells 5m shares after option exercise 124 vg sec filing form 4 stock titan",
+      "2026-03-20"
+    ],
+    [
+      "curtisswright cw cfo executes 1265share 10b51 stock sale holds 4253 stock titan",
+      "2026-03-20"
+    ],
+    [
+      "watts water wts executive sells 372 shares in preset 10b51 trade stock titan",
+      "2026-03-20"
+    ],
+    [
+      "noble corp nyse ne ceo sells 100000 shares in planned rule 10b51 trade stock titan",
+      "2026-03-20"
+    ],
+    [
+      "medpace nasdaq medp president exercises options sells 31707 shares stock titan",
+      "2026-03-20"
+    ],
+    [
+      "insider sells 15000 shares nasdaq rdnt in form 144 disclosure stock titan",
+      "2026-03-20"
+    ],
+    [
+      "문애리 과기부 이사장 84억원 최고고위공직자 재산공개",
+      "2026-03-20"
+    ],
+    [
+      "경제 포커스 중동 사태에 세 갈래로 나뉜 주요국 기준금리 chosunbiz",
+      "2026-03-20"
+    ],
+    [
+      "연방준비제도가 2연속 금리 동결한 이유 미국이란 전쟁이 우리나라에 줄 영향은 뉴닉",
+      "2026-03-20"
+    ],
+    [
+      "미 연준 중동사태에 금리동결 한은 환율 압박 속 기준금리 결정은 프레스뉴스",
+      "2026-03-20"
+    ],
+    [
+      "monetary policy decisions european central bank",
+      "2026-03-20"
+    ],
+    [
+      "european central bank holds rates steady warns outlook is significantly more uncertain",
+      "2026-03-20"
+    ],
+    [
+      "markets on edge as ecb prepares to set interest rates amid energy price surge",
+      "2026-03-20"
+    ],
+    [
+      "traders shift boe ecb rate bets just hours before decisions",
+      "2026-03-20"
+    ],
+    [
+      "ecb holds interest rates at 2 as energy prices soar financial times",
+      "2026-03-20"
+    ],
+    [
+      "institutional outlook on ecb interest rate decision maintaining the status quo is consensus possibility of future preventive rate hike emerges 富途牛牛",
+      "2026-03-20"
+    ],
+    [
+      "ecb press conference lagarde speaks on policy outlook after leaving key rates unchanged fxstreet",
+      "2026-03-20"
+    ],
+    [
+      "ecb holds rates at 2 as iran war stokes inflation fears euractiv",
+      "2026-03-20"
+    ],
+    [
+      "ecb interest rate decision for march 2026 in euro area is 215 unchanged from its last period the forecast was 215",
+      "2026-03-20"
+    ],
+    [
+      "ecb to hold as it weighs iran wars inflation threat",
+      "2026-03-20"
+    ],
+    [
+      "ecb interest rate decision for march 2026 in euro area is 215 unchanged from its last period the forecast was 215",
+      "2026-03-20"
+    ],
+    [
+      "fed holds rates steady powell vows to stay amid doj probe",
+      "2026-03-20"
+    ],
+    [
+      "fed meeting today powell is watching iran and will stay until successor is confirmed",
+      "2026-03-20"
+    ],
+    [
+      "the fed decides the dot plot speaks what the march fomc means for active traders kraken blog",
+      "2026-03-20"
+    ],
+    [
+      "fed keeps rates on hold powell says he will remain in place until successor confirmed axios",
+      "2026-03-20"
+    ],
+    [
+      "feds interest rate decision march 18 2026 advisor perspectives",
+      "2026-03-20"
+    ],
+    [
+      "news 124 fed decision means higherforlonger costs hotel execs say costar",
+      "2026-03-20"
+    ],
+    [
+      "정치인 거래정책 리포트 20260320",
+      "2026-03-20"
     ]
   ]
 }
