@@ -698,6 +698,23 @@ _EN_KEYWORD_KO: Dict[str, str] = {
     "downturn": "하락세",
     "surge": "급등",
     "plunge": "급락",
+    "securities": "증권",
+    "application": "신청",
+    "approval": "승인",
+    "certain": "특정",
+    "framework": "프레임워크",
+    "stablecoin": "스테이블코인",
+    "cryptocurrency": "암호화폐",
+    "blockchain": "블록체인",
+    "analyst": "애널리스트",
+    "forecast": "전망",
+    "outlook": "전망",
+    "momentum": "모멘텀",
+    "sentiment": "심리",
+    "institutional": "기관",
+    "treasury": "국채",
+    "geopolitical": "지정학",
+    "semiconductor": "반도체",
 }
 
 # Cross-theme analysis patterns: (theme_key_a, theme_key_b) -> list of insight templates
@@ -1731,7 +1748,7 @@ class ThemeSummarizer:
                 f"{kw_str} 관련 보도가 이어지고 있어 관련 포지션 점검이 필요합니다.",
                 f"{kw_str} 테마가 부각되고 있어 섹터 로테이션 가능성을 점검하세요.",
                 # Market sentiment
-                f"{kw_str} 중심으로 시장 참여자들의 관심이 집중되고 있습니다.",
+                f"{kw_str} 중심의 모멘텀이 형성되고 있어 방향성 확인이 필요합니다.",
                 f"{kw_str} 이슈에 대한 시장 반응을 모니터링할 필요가 있습니다.",
                 # Actionable
                 f"{kw_str} 관련 지표와 수급 흐름을 함께 확인하세요.",
