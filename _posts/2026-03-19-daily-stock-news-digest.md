@@ -48,52 +48,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-19 - stock-news 뉴스 요약 
 <li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9IRmcwR2huRTdRalNBZFo3OXktV0pBdk1IelluZkVVeDNRc1haaXFEemhsXzVkYURsMGRRNlZPbUpPZ3BCZU9FM3oydHp3dzRtcVVpTUN2T3dpNEtURnNuNDB4dlhpS1k?oc=5">반도체 급체주의보, 또 코스피 사이드카 발동 - 영남경제</a> <span class="p0-desc">반도체 급체주의보, 또 코스피 사이드카 발동 영남경제</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 코스피 5900선 돌파, '사이드카' 발동 속 5%대 급등 마감 - 프리진경제 
-외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 190건의 뉴스 중 P1 주요 이슈도 37건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (45건): 코스피, 삼성전자, 하이닉스 관련 지표와 수급 흐름을 함께 확인하세요.
-- **📊 매크로/금리** (25건): 환율, 금리 관련 보도가 이어지고 있어 관련 포지션 점검이 필요합니다.
-- **🤖 AI/기술** (12건): 반도체, 코스피, 삼성전자 이슈가 시장 구조 변화의 신호일 수 있어 심층 분석이 권장됩니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 코스피 5900선 돌파, '사이드카' 발동 속 5%대 급등 마감 - 프리진경제
-- Dow Falls Ahead of Fed Rate Decision
-- 반도체 급체주의보, 또 코스피 사이드카 발동 - 영남경제
-
-### 주요 이슈
-
-- Stock Market Today, March 17: Micron Advances Ahead of Earnings as Tight HBM Sup
-- SPDR S&P 500 ETF Trust vs. Vanguard Total World Stock ETF: Which One Is the Bett
-- 美 FOMC 금리 동결 '유력'…고유가·환율 경계감 속 시장 '관망세' - 파이낸셜포스트
-- 외 34건
-
-### 투자자 체크포인트
-
-- 한국 기사 69건, 글로벌 기사 121건 수집
-- 한국 지수: KOSPI 5,925.03(+5.04%), KOSDAQ 1,164.38(+2.41%), USD/KRW 1,501.15(+1.03%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">45건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:56%"></div></div><span class="theme-count">25건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:27%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:16%"></div></div><span class="theme-count">7건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:11%"></div></div><span class="theme-count">5건</span></div>
-</div>
-
-*총 190건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-03-19.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-03-19.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- 총 **18건** 수집
+- KOSPI 5,925.03 (+5.04%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 1,164.38 (+2.41%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
 
 ## 테마별 주요 뉴스
 
