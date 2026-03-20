@@ -20,7 +20,7 @@ layout: default
       </div>
       {% assign today = site.time | date: "%Y-%m-%d" %}
       {% assign today_count = 0 %}
-      {% for post in site.posts %}
+      {% for post in site.posts limit:30 %}
         {% assign post_date = post.date | date: "%Y-%m-%d" %}
         {% if post_date == today %}
           {% assign today_count = today_count | plus: 1 %}
@@ -30,6 +30,18 @@ layout: default
         <span class="reports-stat-value">{{ today_count }}</span>
         <span class="reports-stat-label">오늘 발행</span>
       </div>
+    </div>
+  </div>
+
+  <!-- Charts Section -->
+  <div class="reports-charts">
+    <div class="report-chart-card">
+      <h3 class="report-chart-title">카테고리 분포</h3>
+      <canvas id="category-chart" height="220"></canvas>
+    </div>
+    <div class="report-chart-card">
+      <h3 class="report-chart-title">일별 발행 추이 (30일)</h3>
+      <canvas id="daily-chart" height="220"></canvas>
     </div>
   </div>
 
@@ -48,7 +60,7 @@ layout: default
     <div class="report-search-row">
       <div class="report-search-wrap">
         <svg class="report-search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-        <input type="text" id="report-search" class="report-search" placeholder="리포트 검색...">
+        <input type="text" id="report-search" class="report-search" placeholder="리포트 검색... ( / )">
       </div>
       <div class="report-date-wrap">
         <input type="date" id="report-date-from" class="report-date">
@@ -59,44 +71,8 @@ layout: default
     </div>
   </div>
 
-  <!-- Reports Grid -->
-  <div class="reports-grid" id="reports-grid">
-    {% for post in site.posts %}
-      {% assign cat_slug = post.categories[0] | default: "uncategorized" %}
-      {% assign cat_info = site.data.categories[cat_slug] %}
-      {% assign cat_name = cat_info.name | default: cat_slug %}
-      {% assign cat_color = cat_info.color | default: "cat-stock" %}
-      <a href="{{ post.url | relative_url }}"
-         class="report-card"
-         data-category="{{ cat_slug }}"
-         data-date="{{ post.date | date: '%Y-%m-%d' }}"
-         data-title="{{ post.title | downcase }}"
-         data-desc="{{ post.description | default: post.excerpt | strip_html | truncate: 200 | downcase }}">
-        <div class="report-card-header">
-          <span class="report-category-badge badge-{{ cat_color }}">{{ cat_name }}</span>
-          <time class="report-date-label" datetime="{{ post.date | date_to_xmlschema }}">
-            {{ post.date | date: "%m.%d %H:%M" }}
-          </time>
-        </div>
-        <h3 class="report-title">{{ post.title }}</h3>
-        <p class="report-summary">
-          {{ post.description | default: post.excerpt | strip_html | truncate: 150 }}
-        </p>
-        {% if post.tags.size > 0 %}
-        <div class="report-tags">
-          {% for tag in post.tags limit:4 %}
-            <span class="report-tag">{{ tag }}</span>
-          {% endfor %}
-        </div>
-        {% endif %}
-        <div class="report-card-footer">
-          <span class="report-read-more">자세히 보기
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </span>
-        </div>
-      </a>
-    {% endfor %}
-  </div>
+  <!-- Reports Grid (JS-rendered) -->
+  <div class="reports-grid" id="reports-grid"></div>
 
   <!-- Load More -->
   <div class="reports-load-more" id="reports-load-more">
@@ -105,35 +81,90 @@ layout: default
   </div>
 </section>
 
+<!-- Post data as compact JSON -->
+<script id="reports-data" type="application/json">
+[{% for post in site.posts %}{% assign cat_slug = post.categories[0] | default: "uncategorized" %}{% assign cat_info = site.data.categories[cat_slug] %}{"u":"{{ post.url | relative_url }}","t":{{ post.title | jsonify }},"c":"{{ cat_slug }}","cn":"{{ cat_info.name | default: cat_slug }}","cc":"{{ cat_info.color | default: 'cat-stock' }}","d":"{{ post.date | date: '%Y-%m-%d' }}","dm":"{{ post.date | date: '%m.%d %H:%M' }}","s":{{ post.description | default: post.excerpt | strip_html | truncate: 150 | jsonify }},"img":"{{ post.image | default: '' }}","tags":[{% for tag in post.tags limit:4 %}{{ tag | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}]}{% unless forloop.last %},{% endunless %}{% endfor %}]
+</script>
+
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+
 <script>
 (function() {
-  const PAGE_SIZE = 24;
-  let currentPage = 1;
-  let activeFilter = 'all';
-  let searchQuery = '';
-  let dateFrom = '';
-  let dateTo = '';
+  var BADGE_COLORS = {
+    'cat-crypto': ['rgba(247,147,26,0.15)', '#f7931a'],
+    'cat-stock': ['rgba(88,166,255,0.15)', '#58a6ff'],
+    'cat-journal': ['rgba(63,185,80,0.15)', '#3fb950'],
+    'cat-security': ['rgba(248,81,73,0.15)', '#f85149'],
+    'cat-analysis': ['rgba(188,140,255,0.15)', '#bc8cff'],
+    'cat-regulatory': ['rgba(210,153,34,0.15)', '#d29922'],
+    'cat-political': ['rgba(220,20,60,0.15)', '#dc143c'],
+    'cat-social': ['rgba(29,161,242,0.15)', '#1da1f2'],
+    'cat-worldmonitor': ['rgba(32,178,170,0.15)', '#20b2aa'],
+    'cat-blockchain': ['rgba(139,92,246,0.15)', '#8b5cf6'],
+    'cat-devops': ['rgba(79,195,247,0.15)', '#4fc3f7']
+  };
 
-  const grid = document.getElementById('reports-grid');
-  const cards = Array.from(grid.querySelectorAll('.report-card'));
-  const loadMoreBtn = document.getElementById('load-more-btn');
-  const showingEl = document.getElementById('reports-showing');
-  const searchInput = document.getElementById('report-search');
-  const dateFromInput = document.getElementById('report-date-from');
-  const dateToInput = document.getElementById('report-date-to');
-  const clearBtn = document.getElementById('report-clear');
-  const filterBtns = document.querySelectorAll('.filter-btn');
+  var PAGE_SIZE = 24;
+  var currentPage = 1;
+  var activeFilter = 'all';
+  var searchQuery = '';
+  var dateFrom = '';
+  var dateTo = '';
+
+  var posts = JSON.parse(document.getElementById('reports-data').textContent);
+  var grid = document.getElementById('reports-grid');
+  var loadMoreBtn = document.getElementById('load-more-btn');
+  var showingEl = document.getElementById('reports-showing');
+  var searchInput = document.getElementById('report-search');
+  var dateFromInput = document.getElementById('report-date-from');
+  var dateToInput = document.getElementById('report-date-to');
+  var clearBtn = document.getElementById('report-clear');
+  var filterBtns = document.querySelectorAll('.filter-btn');
+
+  function escapeHtml(s) {
+    var d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
+  }
+
+  function buildCard(p) {
+    var thumbHtml = '';
+    if (p.img) {
+      thumbHtml = '<div class="report-card-thumb"><img src="' + escapeHtml(p.img) + '" alt="" loading="lazy"></div>';
+    }
+    var tagsHtml = '';
+    if (p.tags && p.tags.length) {
+      tagsHtml = '<div class="report-tags">' + p.tags.map(function(t) {
+        return '<span class="report-tag">' + escapeHtml(t) + '</span>';
+      }).join('') + '</div>';
+    }
+    var bc = BADGE_COLORS[p.cc] || ['rgba(88,166,255,0.15)', '#58a6ff'];
+    return '<a href="' + escapeHtml(p.u) + '" class="report-card report-card-visible">' +
+      thumbHtml +
+      '<div class="report-card-body">' +
+      '<div class="report-card-header">' +
+      '<span class="report-category-badge" style="background:' + bc[0] + ';color:' + bc[1] + '">' + escapeHtml(p.cn) + '</span>' +
+      '<time class="report-date-label">' + escapeHtml(p.dm) + '</time>' +
+      '</div>' +
+      '<h3 class="report-title">' + escapeHtml(p.t) + '</h3>' +
+      '<p class="report-summary">' + escapeHtml(p.s) + '</p>' +
+      tagsHtml +
+      '<div class="report-card-footer">' +
+      '<span class="report-read-more">자세히 보기 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>' +
+      '</div></div></a>';
+  }
 
   function getFiltered() {
-    return cards.filter(function(card) {
-      if (activeFilter !== 'all' && card.dataset.category !== activeFilter) return false;
+    return posts.filter(function(p) {
+      if (activeFilter !== 'all' && p.c !== activeFilter) return false;
       if (searchQuery) {
-        var t = card.dataset.title || '';
-        var d = card.dataset.desc || '';
-        if (t.indexOf(searchQuery) === -1 && d.indexOf(searchQuery) === -1) return false;
+        var t = p.t.toLowerCase();
+        var s = (p.s || '').toLowerCase();
+        if (t.indexOf(searchQuery) === -1 && s.indexOf(searchQuery) === -1) return false;
       }
-      if (dateFrom && card.dataset.date < dateFrom) return false;
-      if (dateTo && card.dataset.date > dateTo) return false;
+      if (dateFrom && p.d < dateFrom) return false;
+      if (dateTo && p.d > dateTo) return false;
       return true;
     });
   }
@@ -141,17 +172,10 @@ layout: default
   function render() {
     var filtered = getFiltered();
     var visible = currentPage * PAGE_SIZE;
-    cards.forEach(function(c) { c.style.display = 'none'; c.classList.remove('report-card-visible'); });
-    filtered.forEach(function(c, i) {
-      if (i < visible) {
-        c.style.display = '';
-        requestAnimationFrame(function() {
-          requestAnimationFrame(function() { c.classList.add('report-card-visible'); });
-        });
-      }
-    });
+    var showing = filtered.slice(0, visible);
+    grid.innerHTML = showing.map(buildCard).join('');
     loadMoreBtn.style.display = visible >= filtered.length ? 'none' : '';
-    showingEl.textContent = Math.min(visible, filtered.length) + ' / ' + filtered.length + '건';
+    showingEl.textContent = showing.length + ' / ' + filtered.length + '건';
   }
 
   filterBtns.forEach(function(btn) {
@@ -190,7 +214,6 @@ layout: default
     render();
   });
 
-  // Keyboard shortcut: / to focus search
   document.addEventListener('keydown', function(e) {
     if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
       e.preventDefault();
@@ -199,5 +222,107 @@ layout: default
   });
 
   render();
+
+  // --- Charts ---
+  function initCharts() {
+    if (typeof Chart === 'undefined') return;
+
+    var isDark = !document.documentElement.getAttribute('data-theme') ||
+                  document.documentElement.getAttribute('data-theme') === 'dark';
+    var textColor = isDark ? '#7d8fa8' : '#59636e';
+    var gridColor = isDark ? 'rgba(36,48,68,0.6)' : 'rgba(208,215,222,0.5)';
+
+    Chart.defaults.color = textColor;
+    Chart.defaults.font.family = "'Noto Sans KR', sans-serif";
+
+    // Category distribution
+    var catCounts = {};
+    posts.forEach(function(p) {
+      catCounts[p.cn] = (catCounts[p.cn] || 0) + 1;
+    });
+    var catLabels = Object.keys(catCounts).sort(function(a, b) { return catCounts[b] - catCounts[a]; });
+    var catValues = catLabels.map(function(l) { return catCounts[l]; });
+    var catColors = ['#f7931a','#58a6ff','#3fb950','#f85149','#bc8cff','#d29922','#dc143c','#1da1f2','#20b2aa','#8b5cf6','#4fc3f7'];
+
+    new Chart(document.getElementById('category-chart'), {
+      type: 'doughnut',
+      data: {
+        labels: catLabels,
+        datasets: [{
+          data: catValues,
+          backgroundColor: catColors.slice(0, catLabels.length),
+          borderWidth: 0,
+          hoverOffset: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: '55%',
+        plugins: {
+          legend: { position: 'right', labels: { boxWidth: 12, padding: 8, font: { size: 11 } } }
+        }
+      }
+    });
+
+    // Daily posting trend (last 30 days)
+    var dayCounts = {};
+    var now = new Date();
+    for (var i = 29; i >= 0; i--) {
+      var d = new Date(now);
+      d.setDate(d.getDate() - i);
+      var key = d.toISOString().slice(0, 10);
+      dayCounts[key] = 0;
+    }
+    posts.forEach(function(p) {
+      if (p.d in dayCounts) dayCounts[p.d]++;
+    });
+    var dayLabels = Object.keys(dayCounts);
+    var dayValues = dayLabels.map(function(k) { return dayCounts[k]; });
+    var shortLabels = dayLabels.map(function(k) { return k.slice(5); });
+
+    new Chart(document.getElementById('daily-chart'), {
+      type: 'bar',
+      data: {
+        labels: shortLabels,
+        datasets: [{
+          label: '리포트 수',
+          data: dayValues,
+          backgroundColor: 'rgba(77,166,255,0.5)',
+          borderColor: '#4da6ff',
+          borderWidth: 1,
+          borderRadius: 3,
+          barPercentage: 0.7
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            grid: { display: false },
+            ticks: { maxRotation: 45, font: { size: 9 }, maxTicksLimit: 15 }
+          },
+          y: {
+            beginAtZero: true,
+            grid: { color: gridColor },
+            ticks: { stepSize: 1, font: { size: 10 } }
+          }
+        },
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { title: function(items) { return items[0].label + ' 발행'; } } }
+        }
+      }
+    });
+  }
+
+  // Wait for Chart.js to load
+  if (typeof Chart !== 'undefined') {
+    initCharts();
+  } else {
+    var chartScript = document.querySelector('script[src*="chart.js"]');
+    if (chartScript) chartScript.addEventListener('load', initCharts);
+  }
 })();
 </script>
