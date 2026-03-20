@@ -16,7 +16,7 @@
 | scripts/common/fmp\_api.py            |      248 |        0 |    100% |           |
 | scripts/common/formatters.py          |       30 |        0 |    100% |           |
 | scripts/common/image\_generator.py    |     1031 |       50 |     95% |50-54, 64-65, 79-83, 89-92, 296, 416, 447, 452, 729, 1001, 1050-1059, 1070-1073, 1537-1551, 1897, 2181-2186 |
-| scripts/common/markdown\_utils.py     |      132 |        2 |     98% |   263-264 |
+| scripts/common/markdown\_utils.py     |      155 |       21 |     86% |15-34, 290-291 |
 | scripts/common/mindspider.py          |      377 |        6 |     98% |603, 673-674, 687-688, 990 |
 | scripts/common/post\_generator.py     |      243 |       20 |     92% |330-334, 364, 404, 531, 576, 581, 618-622, 626-628, 672-673 |
 | scripts/common/rss\_fetcher.py        |      146 |       20 |     86% |23-24, 101-105, 143, 168, 176-177, 185, 190, 195-197, 203, 214, 289-290 |
@@ -25,7 +25,7 @@
 | scripts/common/translator.py          |      153 |        0 |    100% |           |
 | scripts/common/utils.py               |      117 |        3 |     97% |     69-71 |
 | scripts/common/worldmonitor\_utils.py |        5 |        0 |    100% |           |
-| **TOTAL**                             | **5424** |  **463** | **91%** |           |
+| **TOTAL**                             | **5447** |  **482** | **91%** |           |
 
 
 ## Setup coverage badge
