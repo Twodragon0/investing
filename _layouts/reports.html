@@ -60,7 +60,7 @@ layout: default
       <button class="filter-btn active" data-filter="all">전체</button>
       <button class="filter-btn" data-filter="_bookmarks" data-color="cat-bookmark">
         <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" stroke="none"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
-        즐겨찾기
+        즐겨찾기 <span class="bookmark-count-badge" id="bookmark-count" style="display:none">0</span>
       </button>
       {% for cat_entry in site.data.categories %}
         {% assign cat_key = cat_entry[0] %}
@@ -157,10 +157,17 @@ layout: default
   // --- Bookmarks ---
   var bookmarks = JSON.parse(localStorage.getItem('report-bookmarks') || '{}');
   function isBookmarked(url) { return !!bookmarks[url]; }
+  function getBookmarkCount() { return Object.keys(bookmarks).length; }
+  function updateBookmarkBadge() {
+    var badge = document.getElementById('bookmark-count');
+    var count = getBookmarkCount();
+    if (badge) { badge.textContent = count; badge.style.display = count > 0 ? '' : 'none'; }
+  }
   function toggleBookmark(url, btn) {
     if (bookmarks[url]) { delete bookmarks[url]; btn.classList.remove('bookmarked'); }
     else { bookmarks[url] = 1; btn.classList.add('bookmarked'); }
     localStorage.setItem('report-bookmarks', JSON.stringify(bookmarks));
+    updateBookmarkBadge();
   }
 
   function relativeTime(dateStr) {
@@ -287,12 +294,33 @@ layout: default
     observer.observe(sentinel);
   }
 
+  // Keyboard navigation
+  var focusedCardIndex = -1;
   document.addEventListener('keydown', function(e) {
     if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
       e.preventDefault();
       searchInput.focus();
+      return;
+    }
+    var cards = grid.querySelectorAll('.report-card');
+    if (!cards.length) return;
+    if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+      e.preventDefault();
+      focusedCardIndex = Math.min(focusedCardIndex + 1, cards.length - 1);
+      cards[focusedCardIndex].focus();
+    } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+      e.preventDefault();
+      focusedCardIndex = Math.max(focusedCardIndex - 1, 0);
+      cards[focusedCardIndex].focus();
+    } else if (e.key === 'Enter' && document.activeElement.classList.contains('report-card')) {
+      // Default link behavior handles this
+    } else if (e.key === 'Escape') {
+      document.activeElement.blur();
+      focusedCardIndex = -1;
     }
   });
+
+  updateBookmarkBadge();
 
   // --- Bookmark click delegation ---
   grid.addEventListener('click', function(e) {
