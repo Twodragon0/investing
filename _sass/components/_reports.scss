@@ -531,6 +531,24 @@
   margin: 0;
 }
 
+// ---------- Search Highlight ----------
+.search-highlight {
+  background: rgba(77, 166, 255, 0.25);
+  color: var(--text-primary);
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+// ---------- Relative Time Badge ----------
+.report-relative-time {
+  font-size: 0.65rem;
+  color: var(--accent-blue);
+  background: rgba(77, 166, 255, 0.08);
+  padding: 0.1rem 0.4rem;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
 // ---------- Light mode adjustments ----------
 [data-theme="light"] {
   .report-card {

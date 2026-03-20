@@ -88,16 +88,20 @@ layout: default
   {% include trading-journal-summary.html %}
   {% endif %}
 
-  <nav class="post-toc" id="post-toc">
-    <div class="toc-header" id="toc-header">
-      <span class="toc-title" data-i18n="toc">목차</span>
-      <svg class="toc-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-    </div>
-    <ol class="toc-list" id="toc-list"></ol>
-  </nav>
+  <div class="post-layout-wrapper">
+    <aside class="post-toc-sidebar" id="post-toc-sidebar">
+      <nav class="post-toc post-toc-sticky" id="post-toc">
+        <div class="toc-header" id="toc-header">
+          <span class="toc-title" data-i18n="toc">목차</span>
+          <svg class="toc-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <ol class="toc-list" id="toc-list"></ol>
+      </nav>
+    </aside>
 
-  <div class="post-content prose-content" translate="yes">
-    {{ content }}
+    <div class="post-content prose-content" translate="yes">
+      {{ content }}
+    </div>
   </div>
 
   <section class="post-engagement">

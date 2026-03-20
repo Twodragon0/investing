@@ -144,6 +144,26 @@ layout: default
     return d.innerHTML;
   }
 
+  function highlightText(html) {
+    if (!searchQuery || searchQuery.length < 2) return html;
+    var escaped = searchQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return html.replace(new RegExp('(' + escaped + ')', 'gi'), '<mark class="search-highlight">$1</mark>');
+  }
+
+  function relativeTime(dateStr) {
+    var now = new Date();
+    var d = new Date(dateStr + 'T00:00:00');
+    var diff = Math.floor((now - d) / (1000 * 60 * 60));
+    if (diff < 1) return '방금 전';
+    if (diff < 24) return diff + '시간 전';
+    var days = Math.floor(diff / 24);
+    if (days === 0) return '오늘';
+    if (days === 1) return '어제';
+    if (days < 7) return days + '일 전';
+    if (days < 30) return Math.floor(days / 7) + '주 전';
+    return Math.floor(days / 30) + '개월 전';
+  }
+
   function buildCard(p) {
     var thumbHtml = '';
     if (p.img) {
@@ -162,9 +182,10 @@ layout: default
       '<div class="report-card-header">' +
       '<span class="report-category-badge" style="background:' + bc[0] + ';color:' + bc[1] + '">' + escapeHtml(p.cn) + '</span>' +
       '<time class="report-date-label">' + escapeHtml(p.dm) + '</time>' +
+      '<span class="report-relative-time">' + relativeTime(p.d) + '</span>' +
       '</div>' +
-      '<h3 class="report-title">' + escapeHtml(p.t) + '</h3>' +
-      '<p class="report-summary">' + escapeHtml(p.s) + '</p>' +
+      '<h3 class="report-title">' + highlightText(escapeHtml(p.t)) + '</h3>' +
+      '<p class="report-summary">' + highlightText(escapeHtml(p.s)) + '</p>' +
       tagsHtml +
       '<div class="report-card-footer">' +
       '<span class="report-read-more">자세히 보기 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>' +
@@ -204,10 +225,15 @@ layout: default
     });
   });
 
+  var _searchTimer;
   searchInput.addEventListener('input', function() {
-    searchQuery = this.value.toLowerCase().trim();
-    currentPage = 1;
-    render();
+    var val = this.value.toLowerCase().trim();
+    clearTimeout(_searchTimer);
+    _searchTimer = setTimeout(function() {
+      searchQuery = val;
+      currentPage = 1;
+      render();
+    }, 300);
   });
 
   dateFromInput.addEventListener('change', function() { dateFrom = this.value; currentPage = 1; render(); });
