@@ -574,6 +574,59 @@ def translate_batch(texts: List[str]) -> List[str]:
     return results
 
 
+_NON_TRANSLATABLE_LINE_RE = re.compile(r"^(?:#{1,6}\s|```|<[^>]+>|\|.*\||!\[.*\]\(|\[.*\]\(|https?://)")
+_LEADING_MARKER_RE = re.compile(r"^(\s*(?:[-*+]\s+|\d+[.)]\s+|>\s+)?)")
+_ENGLISH_SENTENCE_RE = re.compile(r"[A-Za-z][A-Za-z'’-]+")
+
+
+def _should_translate_body_line(line: str) -> bool:
+    stripped = line.strip()
+    if not stripped or _NON_TRANSLATABLE_LINE_RE.match(stripped):
+        return False
+    if "](" in stripped or "<picture" in stripped or "<img" in stripped:
+        return False
+    if re.search(r"[가-힣]", stripped):
+        return False
+    words = _ENGLISH_SENTENCE_RE.findall(stripped)
+    return len(words) >= 4 and len(" ".join(words)) >= 24
+
+
+def translate_untranslated_body(content: str) -> str:
+    """Translate obvious English prose lines in markdown body content.
+
+    Keeps markdown structure intact and only translates English-dominant lines
+    that look like prose, while skipping links, HTML, tables, and image markup.
+    """
+    if not content or not TRANSLATION_ENABLED:
+        return content
+
+    lines = content.splitlines()
+    targets: List[int] = []
+    payloads: List[str] = []
+
+    for idx, line in enumerate(lines):
+        if not _should_translate_body_line(line):
+            continue
+        marker_match = _LEADING_MARKER_RE.match(line)
+        marker = marker_match.group(1) if marker_match else ""
+        payload = line[len(marker) :].strip()
+        if not payload:
+            continue
+        targets.append(idx)
+        payloads.append(payload)
+
+    if not payloads:
+        return content
+
+    translated = translate_batch(payloads)
+    for idx, translated_line in zip(targets, translated, strict=False):
+        marker_match = _LEADING_MARKER_RE.match(lines[idx])
+        marker = marker_match.group(1) if marker_match else ""
+        lines[idx] = f"{marker}{translated_line.strip()}"
+
+    return "\n".join(lines)
+
+
 def get_display_title(item: Dict[str, Any]) -> str:
     """Return Korean title if available, otherwise original title."""
     return item.get("title_ko") or item.get("title", "")

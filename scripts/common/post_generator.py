@@ -658,6 +658,14 @@ class PostGenerator:
 
         # Fix translation artifacts (e.g. "gAIn", "GaSOLine") before writing
         content = _polish_generated_text(_fix_translation_artifacts(content))
+        if lang == "ko":
+            try:
+                from common.translator import translate_untranslated_body
+
+                content = translate_untranslated_body(content)
+            except Exception as exc:  # noqa: BLE001
+                logger.debug("Body post-processing translation skipped: %s", exc)
+            content = _polish_generated_text(_fix_translation_artifacts(content))
 
         # Normalize hardcoded image paths in content to Liquid relative_url syntax
         normalized_content = _normalize_image_paths(content.strip())
