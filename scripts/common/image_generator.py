@@ -1496,18 +1496,39 @@ def generate_market_heatmap(
         # Change -- with sign prefix instead of arrow for clarity
         change_color = _get_change_color(change)
         sign = "+" if change >= 0 else ""
-        ax.text(
-            x + cell_w / 2,
-            y + cell_h * 0.18,
-            f"{sign}{change:.2f}%",
-            ha="center",
-            va="center",
-            transform=ax.transAxes,
-            fontsize=12,
-            fontweight="bold",
-            color=change_color,
-            fontfamily=_FONT_FAMILY,
-        )
+
+        # Sparkline overlay if available
+        spark_data = None
+        if source == "coingecko":
+            spark_data = (coin.get("sparkline_in_7d") or {}).get("price")
+        if spark_data and len(spark_data) >= 10:
+            spark_arr = np.array(spark_data[-48:], dtype=float)
+            smin, smax = spark_arr.min(), spark_arr.max()
+            if smax > smin:
+                spark_norm = (spark_arr - smin) / (smax - smin)
+            else:
+                spark_norm = np.full(len(spark_arr), 0.5)
+            sx = np.linspace(x + 0.01, x + cell_w - 0.01, len(spark_norm))
+            sy_base = y + cell_h * 0.02
+            sy = sy_base + spark_norm * (cell_h * 0.28)
+            ax.plot(sx, sy, color=change_color, linewidth=0.8, alpha=0.5, transform=ax.transAxes, solid_capstyle="round")
+            ax.fill_between(sx, sy_base, sy, color=change_color, alpha=0.06, transform=ax.transAxes)
+            # Change text above sparkline
+            ax.text(
+                x + cell_w / 2,
+                y + cell_h * 0.35,
+                f"{sign}{change:.2f}%",
+                ha="center", va="center", transform=ax.transAxes,
+                fontsize=12, fontweight="bold", color=change_color, fontfamily=_FONT_FAMILY,
+            )
+        else:
+            ax.text(
+                x + cell_w / 2,
+                y + cell_h * 0.18,
+                f"{sign}{change:.2f}%",
+                ha="center", va="center", transform=ax.transAxes,
+                fontsize=12, fontweight="bold", color=change_color, fontfamily=_FONT_FAMILY,
+            )
 
     # Color scale legend at bottom
     legend_y = 0.03

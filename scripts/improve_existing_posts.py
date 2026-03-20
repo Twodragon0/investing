@@ -531,9 +531,20 @@ def remove_duplicate_articles_in_themes(body: str) -> tuple[str, bool]:
 def fix_translation_artifacts(body: str) -> tuple[str, bool]:
     """Fix known machine translation artifacts in post body.
 
-    Applies particle corrections, name fixes, and awkward phrasing cleanup.
+    Applies _MISTRANSLATION_FIXES from post_generator, particle corrections,
+    name fixes, and awkward phrasing cleanup.
     """
     original = body
+
+    # Apply centralized mistranslation dictionary first
+    try:
+        from common.post_generator import _MISTRANSLATION_FIXES
+
+        for wrong, correct in _MISTRANSLATION_FIXES.items():
+            body = body.replace(wrong, correct)
+    except ImportError:
+        pass
+
     fixes = [
         # Particle corrections (names without 받침)
         ("트럼프은 ", "트럼프는 "),
