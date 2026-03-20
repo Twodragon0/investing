@@ -149,7 +149,7 @@ image: "/assets/images/generated/og-daily-crypto-news-digest-2026-02-10.png"
 17. [[현장에서] 실존적 위기에 처한 암호화폐거래소 - 연합인포맥스](https://news.google.com/rss/articles/CBMicEFVX3lxTFBWaGRZLVBsLUJyNllicnhrWWFIWURseHBELWxwSF91RUdEVVk1Mkl6VUpmM0JPa1dQLW45SGhGcHp6RlFzQm1fM05wQkJMX0w0RFJxQmpNSVNMVHNXYVJ0TXp1Z3h4b0t2VkVZXzRVUHU?oc=5)
 18. [비트코인 역대급 레버리지 청산 폭탄 사나에노믹스 "뉴욕증시 암호화폐 엔캐리 환류" - 글로벌이코노믹](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOZ2hOMGJNc3RBSUR0NnlidTdEaEhWb3NkSzl3TGkwaTd1ZzdKcFVFcEZrZHVZM29tX0FCMzVPRUNVdG5oektiY3FEakJnbkVrUXVrWnNxeE9KRy1xcmEtU0xMb0czTHFxLVUxWGdvbUs5MlRIWDZZY0FaV3RfQ3g0MjhmNXZTTWtZ?oc=5)
 19. [비트코인 채굴업체 캉고, 4451 BTC 매각AI 투자 재원 확보 - 디지털투데이](https://news.google.com/rss/articles/CBMic0FVX3lxTE5VeUZjcE5wSmhOZXBwaTY5LVQzcGpDS0FvLVVxVm5sMFcxMnU3LTFqaExyOGIzTkNfakFQbUJDaW1RYThwcWpUZ2V2XzNRaWNYQUJobTN6QzZ3RnFzcGtPVm80bUZraHE2NmhWZVJBNi1INzA?oc=5)
-20. [비트 6만달러 붕괴하면 미정부가 대량 매입한다고? (상보)(https://news.google.com/rss/articles/CBMiWEFVX3lxTE9zYjZhcWc3VmtnTnh4VGRpNWlqNUhEMGwyeTJyUzhLZDV3dnFwZHQ3djlNRUtrMjctN2NMTHo5QlRFdEdmZE9hZUZ3T1ozSVRISEZrSTFKSFY?oc=5)
+20. [비트 6만달러 붕괴하면 미정부가 대량 매입한다고? (https://news.google.com/rss/articles/CBMiWEFVX3lxTE9zYjZhcWc3VmtnTnh4VGRpNWlqNUhEMGwyeTJyUzhLZDV3dnFwZHQ3djlNRUtrMjctN2NMTHo5QlRFdEdmZE9hZUZ3T1ozSVRISEZrSTFKSFY?oc=5)
 
 ---
 

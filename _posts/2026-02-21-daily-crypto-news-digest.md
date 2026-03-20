@@ -72,8 +72,8 @@ description: "2026-02-21 암호화폐 시장에서 110건의 뉴스를 분석했
 Trump Adviser Says Regulatory Clarity Will Unlock 'Trillions of Dollars' Waiting To Enter Crypto Yahoo Finance
 <span class="source-tag">구글 뉴스</span>
 
-**2. [관세 위법, 암호화폐 일제↑ 비트 6.8만달러 회복-리플 1%(상보)(https://news.google.com/rss/articles/CBMiWEFVX3lxTE1CTVZocW83alM0NnhOMWI0RTV3bE9rY3EwQTdaRXR1cHNrSmEybEVnN3ZXaWY3ZDJaZWFtSmFRSU5RV1B5VXJEcFZNM3VfSDlJZnh4MmRod1Y?oc=5)**
-관세 위법, 암호화폐 일제↑ 비트 6.8만달러 회복-리플 1%(상보)
+**2. [관세 위법, 암호화폐 일제↑ 비트 6.8만달러 회복-리플 1%(https://news.google.com/rss/articles/CBMiWEFVX3lxTE1CTVZocW83alM0NnhOMWI0RTV3bE9rY3EwQTdaRXR1cHNrSmEybEVnN3ZXaWY3ZDJaZWFtSmFRSU5RV1B5VXJEcFZNM3VfSDlJZnh4MmRod1Y?oc=5)**
+관세 위법, 암호화폐 일제↑ 비트 6.8만달러 회복-리플 1%
 <span class="source-tag">Google News KR</span>
 
 **3. [비트코인 대규모 구제금융 "백악관 전략 비축 시나리오" 암호화폐 폭락 저지 - 글로벌이코노믹](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcEhVTjRnRlo0ZTgtU3RFWmM0UWxieG9rUVNsSGJHbl9Rc3EyWGVoREJ6SWVOZWc1UXRMaHRaaUxxTzRxVDRkbzMtUGZkWWpidDZoMjBxM1dDSXdZYjdJNWZoRlVjS0dTbEJRWklYUE1TVHpmZlRnMlFaMHZBc0JLamthRFFpNG5z?oc=5)**

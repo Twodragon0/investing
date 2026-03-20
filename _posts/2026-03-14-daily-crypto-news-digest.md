@@ -244,7 +244,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-14 - crypto-news 뉴스 요�
 <div class="news-card-item">
 <div class="news-card-num">2</div>
 <div class="news-card-body">
-<a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE9KUVgyQlRPV3hQRDh3cVFIaW44Smd5THBpZWR3eEd6VGdONVVRUEVQNGtkVkN4QzZaamhmazFNOG4tV3N6N1B6MDNFZzBMc0Y4R2V2TVFpNUk?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">유가 폭등에 피난처 급부상, 암호화폐 일제↑ 비트 3%-리플 4%(상보)</a>
+<a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE9KUVgyQlRPV3hQRDh3cVFIaW44Smd5THBpZWR3eEd6VGdONVVRUEVQNGtkVkN4QzZaamhmazFNOG4tV3N6N1B6MDNFZzBMc0Y4R2V2TVFpNUk?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">유가 폭등에 피난처 급부상, 암호화폐 일제↑ 비트 3%-리플 4%</a>
 <p class="news-desc">시장 반등 움직임이 포착되었습니다. 기술적 반등인지 추세 전환인지 거래량과 수급 확인이 필요합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>

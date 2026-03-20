@@ -6,7 +6,7 @@ categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
-description: "오늘 수집된 총 120건 중 텔레그램 -건, 소셜 -건, 정치·경제 -건으로 다양한 이슈가 주요 화제입니다."
+description: "오늘 수집된 총 120건 중 텔레그램 -건, 소셜 -건, 정치·경제 -건으로 주요 이슈를 정리했습니다."
 image: "/assets/images/generated/og-daily-social-media-digest-2026-02-10.png"
 ---
 
@@ -14,10 +14,10 @@ image: "/assets/images/generated/og-daily-social-media-digest-2026-02-10.png"
 
 ## 전체 뉴스 요약
 
-오늘 수집된 총 120건 중 텔레그램 0건, 소셜 0건, 정치·경제 0건으로 다양한 이슈가 주요 화제입니다.
+오늘 수집된 총 120건 중 텔레그램 0건, 소셜 0건, 정치·경제 0건으로 주요 이슈를 정리했습니다.
 
 **핵심 신호 정리**
-- 주요 테마: 다양한 이슈
+- 주요 테마: 주요 이슈
 - 긴급 알림 없음에 대한 선별 모니터링
 
 

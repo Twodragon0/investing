@@ -78,7 +78,7 @@ description: "2026-03-01 암호화폐 108건 분석. 비트코인 51건(47%) 압
 <details><summary>그 외 25건 보기</summary><div class="details-content">
 <a href="https://news.google.com/read/CBMigAFBVV95cUxPYTBnZmlRcThpWXhOSWxjWVRFbzlWR0lhZHVTSFJ1MV85elJ6WGZnT3pwbE1tX3U4bEY2VnhZVUhuREx1a2V2dldiem5SeC1OeDBBOVloTzQyLUZnMUxwOE9sdVVEMnd0VjdxWmYyRVBNYUl5NUd1NXB2NENhOWxEdA?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin fans latch on to ‘ridiculous’ Jane Street conspiracy to explain price slump</a>
 <a href="https://news.google.com/read/CBMigwFBVV95cUxPSmNjaTFSOV9FaDkycDk2TG5kWEpZT0UyOV9jd05Cb3VzYXlxWmljUkd6NktOOVR4RmFwMXhwc2cyT0g0Vl9zOS02dTJnUWx4M2steDZEXzNQeVNZVnpUbXRWXzFDSlM1aFhtVFllNTNoTXJOWDBMaGZ3YWNnanMzajA5WQ?hl=en-US&gl=US&ceid=US%3Aen">Bitcoin Miner Tied to Trumps Pummeled by Crypto Crash</a>
-<a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5hYndpMmNxQWhNemwxS0FLbkxaakFQTXB6cG1uVm81Y1NhTXFldHZkQmJScnhuazVCZEh6bjItXzFCTjdXVXgxVWxPSG5XRVJkNlZwb2RPY2Y?oc=5">PPI 충격, 암호화폐 일제 하락…비트코인 3%-리플 4%↓(상보)</a>
+<a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5hYndpMmNxQWhNemwxS0FLbkxaakFQTXB6cG1uVm81Y1NhTXFldHZkQmJScnhuazVCZEh6bjItXzFCTjdXVXgxVWxPSG5XRVJkNlZwb2RPY2Y?oc=5">PPI 충격, 암호화폐 일제 하락…비트코인 3%-리플 4%↓</a>
 <em>...외 10건</em>
 </div></details>
 

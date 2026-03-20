@@ -187,7 +187,7 @@ GCEX 그룹의 일부인 GlobalBlock은 영국 고객을 위한 디지털 자산
 
 ### 🏦 거래소 (6건)
 
-전체의 15%로 주목할 만한 수치입니다. 주요 출처: 한국 금융규제 뉴스(2건), SEC (Google News)(1건), 금융위원회 보도참고(1건). 관련 지역: 한국, 미국, 아시아, 유럽.
+전체의 15%로 수치입니다. 주요 출처: 한국 금융규제 뉴스(2건), SEC (Google News)(1건), 금융위원회 보도참고(1건). 관련 지역: 한국, 미국, 아시아, 유럽.
 
 **주요 동향:**
 - [증권거래위원회 17 CFR 파트 231 및 241 [릴리스 번호 33-11412; 34-105020; 파일번호 S7-2026-09] RIN 3235-AN5](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1IX21lZXExTlYzZVRiSGthbHhxcHRueEVHS1d5UGtzTUFjWHJSRU5aRmdNRlZuajhXSmRGSHFiU3l0Q1RJQVgwNlpXVVM0Q2Y2VjlreGItUFZfd2JiQkVMTGxoWmhrX2s?oc=5)
@@ -202,7 +202,7 @@ GCEX 그룹의 일부인 GlobalBlock은 영국 고객을 위한 디지털 자산
 
 ### 🏛️ 정치/정책 (7건)
 
-전체의 18%로 주목할 만한 수치입니다. 주요 출처: SEC (Google News)(3건), 금융위원회 보도참고(2건), 한국 금융규제 뉴스(2건). 관련 지역: 한국, 미국.
+전체의 18%로 수치입니다. 주요 출처: SEC (Google News)(3건), 금융위원회 보도참고(2건), 한국 금융규제 뉴스(2건). 관련 지역: 한국, 미국.
 
 **주요 동향:**
 - [SEC 암호화 자산에 대한 연방 증권법 적용을 명확히 합니다.](https://news.google.com/rss/articles/CBMitgFBVV95cUxPbzBHSXFKVENYckZZYWVJNndrV25lWXFDTFBjSWxIS09EVWdONS1TU21tVy1PaS1vQVdCdWFfQzk3ci04akNmMlZmRlZDX2hQUm5MZnUxYklFWHNwUUlIeU9ONzVMNl84UElvUTVmWjhyN3dvdkE4Y3M5TDJ2SzRVM0V5dWNQTzlJLXNvQVJsQkhqd0c4TGxsWUtYX3pGNGNPOEdkNXlqRklzdF9lNHdrTENGenRJQQ?oc=5)
