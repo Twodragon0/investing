@@ -42,7 +42,9 @@ def _try_resolve_google_news_url(url: str) -> str:
         import requests  # noqa: PLC0415
 
         resp = requests.head(
-            url, allow_redirects=True, timeout=6,
+            url,
+            allow_redirects=True,
+            timeout=6,
             headers={"User-Agent": "Mozilla/5.0 (compatible; InvestBot/1.0)"},
         )
         final = resp.url
