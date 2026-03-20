@@ -667,6 +667,21 @@ for _t_name, _t_key, _t_emoji, _t_kws in THEMES:
 
 # Common English finance terms -> Korean translation for keyword display
 _EN_KEYWORD_KO: Dict[str, str] = {
+    "fed": "연준",
+    "powell": "파월",
+    "trump": "트럼프",
+    "energy": "에너지",
+    "rates": "금리",
+    "rate": "금리",
+    "interest": "금리",
+    "cuts": "인하",
+    "cut": "인하",
+    "holds": "동결",
+    "hold": "동결",
+    "pause": "동결",
+    "bitcoin": "비트코인",
+    "ethereum": "이더리움",
+    "sidecar": "사이드카",
     "legislation": "법안",
     "regulation": "규제",
     "regulatory": "규제",
@@ -1686,6 +1701,37 @@ class ThemeSummarizer:
                 break
         return result
 
+    def _prepare_display_keywords(self, keywords: List[str], max_keywords: int = 3) -> List[str]:
+        display: List[str] = []
+        seen: set = set()
+
+        for keyword in keywords:
+            token = str(keyword).strip().strip(".,:;()[]{}<>\"'")
+            if not token:
+                continue
+
+            lower = token.lower()
+            translated = _EN_KEYWORD_KO.get(lower)
+
+            if re.search(r"[가-힣]", token):
+                candidate = token
+            elif translated:
+                candidate = translated
+            elif token.isupper() or lower in {"btc", "eth", "xrp", "etf", "sec", "cpi", "ppi", "fomc", "ipo", "ai"}:
+                candidate = token.upper()
+            else:
+                continue
+
+            normalized = candidate.lower()
+            if normalized in seen:
+                continue
+            seen.add(normalized)
+            display.append(candidate)
+            if len(display) >= max_keywords:
+                break
+
+        return display
+
     def _generate_single_theme_briefing(self, theme_key: str, articles: List[Dict[str, Any]]) -> str:
         """Generate a keyword-rich 1-line briefing for a single theme.
 
@@ -1719,18 +1765,7 @@ class ThemeSummarizer:
         keywords = filtered_kw
 
         if len(keywords) >= 2:
-            # Separate Korean and English keywords for natural phrasing
-            kr_kw = [k for k in keywords if re.search(r"[가-힣]", k)]
-            en_kw = [k for k in keywords if not re.search(r"[가-힣]", k)]
-
-            # Translate common English keywords to Korean
-            translated_en = []
-            for ek in en_kw:
-                ko = _EN_KEYWORD_KO.get(ek.lower())
-                translated_en.append(ko if ko else ek)
-
-            # Build a more natural Korean briefing
-            display_kw = kr_kw[:3] if kr_kw else translated_en[:3]
+            display_kw = self._prepare_display_keywords(keywords, max_keywords=3)
             if not display_kw:
                 display_kw = keywords[:3]
 
@@ -2093,7 +2128,7 @@ class ThemeSummarizer:
         checkpoints = []
         top_keywords = extra.get("top_keywords") or []
         if top_keywords:
-            kw_names = [kw for kw, _ in top_keywords[:3]]
+            kw_names = self._prepare_display_keywords([kw for kw, _ in top_keywords[:5]], max_keywords=3)
             checkpoints.append(f"**핫 키워드**: {', '.join(kw_names)}")
 
         region_counts = extra.get("region_counts")
@@ -2159,7 +2194,10 @@ class ThemeSummarizer:
         if top_themes:
             dominant_key = top_themes[0][1]
             dominant_articles = self._theme_articles.get(dominant_key, [])
-            top_kws = self._extract_title_keywords(dominant_articles, max_keywords=3)
+            top_kws = self._prepare_display_keywords(
+                self._extract_title_keywords(dominant_articles, max_keywords=5),
+                max_keywords=3,
+            )
             kw_str = ", ".join(top_kws[:3]) if top_kws else top_themes[0][0]
 
             openers = {
@@ -2245,9 +2283,11 @@ class ThemeSummarizer:
                 )
         if extra.get("top_keywords"):
             top_kw = extra["top_keywords"][0]
+            top_kw_label = self._prepare_display_keywords([top_kw[0]], max_keywords=1)
+            top_kw_value = top_kw_label[0] if top_kw_label else top_kw[0]
             stat_items.append(
                 f'<div class="stat-item">'
-                f'<div class="stat-value">{top_kw[0]}</div>'
+                f'<div class="stat-value">{top_kw_value}</div>'
                 f'<div class="stat-label">핫 키워드 ({top_kw[1]}회)</div></div>'
             )
         if category_type == "regulatory" and extra.get("region_counts"):
@@ -2285,9 +2325,10 @@ class ThemeSummarizer:
                     if kw_lower not in current_theme_name and kw_lower != key:
                         continue
                 filtered_kws.append(kw)
-            kws = filtered_kws
+            kws = self._prepare_display_keywords(filtered_kws, max_keywords=3)
             if kws:
                 import datetime as _dt
+
                 _seed = hash((_dt.datetime.now(tz=_dt.UTC).date().isoformat(), key, count))
                 _patterns = [
                     ", ".join(kws[:2]) + " 주목",
