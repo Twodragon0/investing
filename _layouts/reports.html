@@ -58,6 +58,10 @@ layout: default
   <div class="report-controls">
     <div class="report-filters">
       <button class="filter-btn active" data-filter="all">전체</button>
+      <button class="filter-btn" data-filter="_bookmarks" data-color="cat-bookmark">
+        <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" stroke="none"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+        즐겨찾기
+      </button>
       {% for cat_entry in site.data.categories %}
         {% assign cat_key = cat_entry[0] %}
         {% assign cat = cat_entry[1] %}
@@ -150,6 +154,15 @@ layout: default
     return html.replace(new RegExp('(' + escaped + ')', 'gi'), '<mark class="search-highlight">$1</mark>');
   }
 
+  // --- Bookmarks ---
+  var bookmarks = JSON.parse(localStorage.getItem('report-bookmarks') || '{}');
+  function isBookmarked(url) { return !!bookmarks[url]; }
+  function toggleBookmark(url, btn) {
+    if (bookmarks[url]) { delete bookmarks[url]; btn.classList.remove('bookmarked'); }
+    else { bookmarks[url] = 1; btn.classList.add('bookmarked'); }
+    localStorage.setItem('report-bookmarks', JSON.stringify(bookmarks));
+  }
+
   function relativeTime(dateStr) {
     var now = new Date();
     var d = new Date(dateStr + 'T00:00:00');
@@ -176,7 +189,9 @@ layout: default
       }).join('') + '</div>';
     }
     var bc = BADGE_COLORS[p.cc] || ['rgba(88,166,255,0.15)', '#58a6ff'];
+    var bmClass = isBookmarked(p.u) ? ' bookmarked' : '';
     return '<a href="' + escapeHtml(p.u) + '" class="report-card report-card-visible">' +
+      '<button class="report-bookmark' + bmClass + '" data-url="' + escapeHtml(p.u) + '" title="즐겨찾기"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" stroke="none"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>' +
       thumbHtml +
       '<div class="report-card-body">' +
       '<div class="report-card-header">' +
@@ -194,7 +209,8 @@ layout: default
 
   function getFiltered() {
     return posts.filter(function(p) {
-      if (activeFilter !== 'all' && p.c !== activeFilter) return false;
+      if (activeFilter === '_bookmarks' && !isBookmarked(p.u)) return false;
+      if (activeFilter !== 'all' && activeFilter !== '_bookmarks' && p.c !== activeFilter) return false;
       if (searchQuery) {
         var t = p.t.toLowerCase();
         var s = (p.s || '').toLowerCase();
@@ -275,6 +291,17 @@ layout: default
     if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
       e.preventDefault();
       searchInput.focus();
+    }
+  });
+
+  // --- Bookmark click delegation ---
+  grid.addEventListener('click', function(e) {
+    var btn = e.target.closest('.report-bookmark');
+    if (btn) {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleBookmark(btn.dataset.url, btn);
+      if (activeFilter === '_bookmarks') render();
     }
   });
 

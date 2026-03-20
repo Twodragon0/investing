@@ -533,10 +533,33 @@
 
 // ---------- Search Highlight ----------
 .search-highlight {
-  background: rgba(77, 166, 255, 0.25);
+  background: var(--highlight-bg, rgba(77, 166, 255, 0.25));
   color: var(--text-primary);
   border-radius: 2px;
   padding: 0 2px;
+}
+
+// ---------- Bookmark Button ----------
+.report-bookmark {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  color: var(--text-secondary);
+  opacity: 0;
+  transition: opacity 0.2s, color 0.2s, transform 0.15s;
+  z-index: 1;
+
+  &:hover { color: var(--accent-orange); transform: scale(1.15); }
+  &.bookmarked { color: var(--accent-orange); opacity: 1; }
+}
+
+.report-card {
+  position: relative;
+  &:hover .report-bookmark { opacity: 1; }
 }
 
 // ---------- Relative Time Badge ----------
@@ -551,6 +574,8 @@
 
 // ---------- Light mode adjustments ----------
 [data-theme="light"] {
+  --highlight-bg: rgba(9, 105, 218, 0.15);
+
   .report-card {
     box-shadow: var(--shadow-card, 0 2px 8px rgba(0,0,0,0.06));
     &:hover {
@@ -560,6 +585,10 @@
 
   .report-controls {
     box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+
+  .search-highlight {
+    background: rgba(9, 105, 218, 0.18);
   }
 }
 
