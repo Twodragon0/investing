@@ -998,7 +998,7 @@ def generate_top_coins_card(
         bar_x = 6.4
         _draw_rounded_rect(ax, bar_x, y - 0.06, bar_w, 0.12, facecolor=color_24h, alpha=0.35, pad=0.005)
 
-        # --- 7d change with mini bar ---
+        # --- 7d change with sparkline ---
         color_7d = _get_change_color(change_7d)
         arrow_7d = "+" if change_7d >= 0 else ""
         ax.text(
@@ -1010,9 +1010,25 @@ def generate_top_coins_card(
             ha="left",
             fontfamily=_FONT_FAMILY,
         )
-        bar_w_7d = min(abs(change_7d) / 15.0, 1.0) * bar_max_w
-        bar_x_7d = 7.9
-        _draw_rounded_rect(ax, bar_x_7d, y - 0.06, bar_w_7d, 0.12, facecolor=color_7d, alpha=0.3, pad=0.005)
+        # Draw sparkline from CoinGecko 7d price data if available
+        spark_data = None
+        if source == "coingecko":
+            spark_data = (coin.get("sparkline_in_7d") or {}).get("price")
+        if spark_data and len(spark_data) >= 10:
+            spark_arr = np.array(spark_data[-24:], dtype=float)  # Last 24 data points (~1 day intervals)
+            smin, smax = spark_arr.min(), spark_arr.max()
+            if smax > smin:
+                spark_norm = (spark_arr - smin) / (smax - smin)
+            else:
+                spark_norm = np.full(len(spark_arr), 0.5)
+            sx = np.linspace(7.9, 8.7, len(spark_norm))
+            sy = y - 0.15 + spark_norm * 0.3
+            ax.plot(sx, sy, color=color_7d, linewidth=1.2, alpha=0.7, solid_capstyle="round")
+            ax.fill_between(sx, y - 0.15, sy, color=color_7d, alpha=0.08)
+        else:
+            bar_w_7d = min(abs(change_7d) / 15.0, 1.0) * bar_max_w
+            bar_x_7d = 7.9
+            _draw_rounded_rect(ax, bar_x_7d, y - 0.06, bar_w_7d, 0.12, facecolor=color_7d, alpha=0.3, pad=0.005)
 
         # Market cap
         if mcap >= 1_000_000_000_000:

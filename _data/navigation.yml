@@ -28,6 +28,18 @@ main:
       - title: "블록체인"
         url: /blockchain/
   - title: "리포트"
-    url: /reports/
+    children:
+      - title: "전체 리포트"
+        url: /reports/
+      - title: "암호화폐"
+        url: /reports/#crypto-news
+      - title: "주식"
+        url: /reports/#stock-news
+      - title: "글로벌 모니터"
+        url: /reports/#worldmonitor
+      - title: "규제 동향"
+        url: /reports/#regulatory-news
+      - title: "정치인 거래"
+        url: /reports/#political-trades
   - title: "About"
     url: /about/

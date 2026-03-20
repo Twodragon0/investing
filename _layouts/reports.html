@@ -33,6 +33,15 @@ layout: default
     </div>
   </div>
 
+  <!-- Today's Highlights -->
+  <div class="reports-highlights" id="reports-highlights" style="display:none">
+    <h2 class="highlights-title">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      오늘의 하이라이트
+    </h2>
+    <div class="highlights-grid" id="highlights-grid"></div>
+  </div>
+
   <!-- Charts Section -->
   <div class="reports-charts">
     <div class="report-chart-card">
@@ -220,6 +229,28 @@ layout: default
       searchInput.focus();
     }
   });
+
+  // --- Today's Highlights ---
+  (function() {
+    var today = new Date().toISOString().slice(0, 10);
+    var todayPosts = posts.filter(function(p) { return p.d === today; });
+    if (todayPosts.length === 0) return;
+    var container = document.getElementById('reports-highlights');
+    var grid = document.getElementById('highlights-grid');
+    container.style.display = '';
+    var shown = todayPosts.slice(0, 6);
+    grid.innerHTML = shown.map(function(p) {
+      var bc = BADGE_COLORS[p.cc] || ['rgba(88,166,255,0.15)', '#58a6ff'];
+      var thumbHtml = p.img ? '<img class="highlight-thumb" src="' + p.img + '" alt="" loading="lazy">' : '';
+      return '<a href="' + p.u + '" class="highlight-card">' +
+        thumbHtml +
+        '<div class="highlight-body">' +
+        '<span class="report-category-badge" style="background:' + bc[0] + ';color:' + bc[1] + '">' + p.cn + '</span>' +
+        '<h4 class="highlight-title">' + p.t + '</h4>' +
+        '<p class="highlight-summary">' + (p.s || '').slice(0, 80) + '</p>' +
+        '</div></a>';
+    }).join('');
+  })();
 
   // --- Hash-based filter ---
   function applyHash() {
