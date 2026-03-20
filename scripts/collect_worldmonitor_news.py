@@ -801,7 +801,8 @@ def main() -> None:
     issue_cards = []
     for row in rows:
         idx, title_md, theme, impact, source = row
-        impact_color = impact_colors.get(impact, "#8b949e")
+        impact_text = str(impact)
+        impact_color = impact_colors.get(impact_text, "#8b949e")
         issue_cards.append(
             f'<div class="wm-issue-card">'
             f'<div class="wm-issue-num">{idx}</div>'
@@ -809,7 +810,7 @@ def main() -> None:
             f'<div class="wm-issue-title">{title_md}</div>'
             f'<div class="wm-issue-meta">'
             f'<span class="wm-issue-theme">{html_text(theme)}</span>'
-            f'<span class="wm-issue-impact" style="color:{impact_color};">{html_text(impact)}</span>'
+            f'<span class="wm-issue-impact" style="color:{impact_color};">{html_text(impact_text)}</span>'
             f'<span class="wm-issue-source">{html_text(source)}</span>'
             f"</div>"
             f"</div>"
@@ -830,7 +831,8 @@ def main() -> None:
     # 출처 커버리지 - 프로그레스 바 포함 HTML 카드
     source_cards = []
     for name, count_str, ratio_str in source_rows:
-        ratio_num = int(ratio_str.replace("%", ""))
+        ratio_text = str(ratio_str)
+        ratio_num = int(ratio_text.replace("%", ""))
         bar_color = "#58a6ff" if ratio_num >= 50 else "#22d3ee"
         source_cards.append(
             f'<div class="wm-source-row">'
@@ -839,7 +841,7 @@ def main() -> None:
             f'<div class="wm-source-bar-track">'
             f'<div class="wm-source-bar-fill" style="width:{ratio_num}%;background:{bar_color};"></div>'
             f"</div>"
-            f'<span class="wm-source-ratio">{html_text(ratio_str)}</span>'
+            f'<span class="wm-source-ratio">{html_text(ratio_text)}</span>'
             f"</div>"
         )
     content_parts.extend(
