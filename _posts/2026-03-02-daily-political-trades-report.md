@@ -23,7 +23,6 @@ description: "정치인 거래 리포트 내부자 거래 건"
 ## 전체 뉴스 요약
 
 - 거래 패턴: 매수 신호 0건(0%), 매도 신호 2건(100%). 매도 비중이 높아, 리스크 회피 또는 차익 실현 움직임이 감지됩니다.
-- 1. [Form 4] MIDDLEFIELD BANC CORP Insider Trading Activity - Stock Titan [Form 4] MIDDLEFIELD BANC CORP Insider Trading Activity Stock Titan
 
 ## SEC 내부자 거래 (Form 4)
 
