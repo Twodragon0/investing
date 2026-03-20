@@ -1,8 +1,11 @@
 // Service Worker for Investing Dragon - Reports page offline cache
-var CACHE_NAME = 'invest-dragon-v1';
+var CACHE_NAME = 'invest-dragon-v2';
 var CACHE_URLS = [
   '/reports/',
   '/assets/css/style.css',
+  '/assets/js/reports.js',
+  '/assets/js/core.js',
+  '/assets/js/search.js',
   'https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js',
   'https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap'
 ];
