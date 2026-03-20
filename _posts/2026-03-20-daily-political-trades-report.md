@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/news-briefing-political-2026-03-20.png"
 excerpt: "2026-03-20 정치인 거래·정책 리포트: 의회 거래 1건, SEC 내부자 26건, 한국 정치인 1건, 중앙은행 20건, 총 48건 수집"
 permalink: "/political-trades/2026/03/20/daily-political-trades-report/"
-description: "미국 의회 거래 동향에서는 Rep. David Taylor emerges as one of the biggest stock traders in congress Signal Ohio 등이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다."
+description: "미국 의회 거래 동향에서는 등이 보고되었습니다 의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다"
 image_alt: "정치인 거래·정책 리포트 - 2026-03-20 - 정치인 거래 뉴스 요약 이미지"
 ---
 

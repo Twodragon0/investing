@@ -7,7 +7,7 @@ tags: ["market-summary", "daily", "crypto", "stock", "macro", "top-coins", "quan
 source: "auto-generated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-market-report-2026-03-03.png"
-description: "2026-03-03 시장 종합: 공포/탐욕 14(Extreme Fear), BTC $68,360(+2.29%), ETH $2,008(+1.69%), 시총 $2.42T(+1.69%), KOSPI 5,991(-4.63%), 원유 $72.42(+1.56%)."
+description: "일일 시장 종합 리포트 - 2026-03-03"
 ---
 
 ## 시장 시각화

@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/news-briefing-political-2026-03-16.png"
 excerpt: "2026-03-16 정치인 거래·정책 리포트: 의회 거래 1건, 중앙은행 4건, 총 5건 수집"
 permalink: "/political-trades/2026/03/16/daily-political-trades-report/"
-description: "미국 의회 거래 동향에서는 Markwayne Mullin, Trump's Homeland Security Pick, Got Wealthier Stock Trading in Congress The New York Times 등이 보고되었습니다. 중앙은행 금리 결정과 통화정책 기조를..."
+description: "미국 의회 거래 동향에서는 등이 보고되었습니다 중앙은행 금리 결정과 통화정책 기조를"
 image_alt: "정치인 거래·정책 리포트 - 2026-03-16 - 정치인 거래 뉴스 요약 이미지"
 ---
 

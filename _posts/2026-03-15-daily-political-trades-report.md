@@ -9,7 +9,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/og-political-trades.png"
 excerpt: "2026-03-15 정치인 거래·정책 리포트: 의회 거래 1건, SEC 내부자 5건, 중앙은행 2건, 총 8건 수집"
-description: "미국 의회 거래 동향에서는 With boom in prediction markets, some lawmakers worry about how to police themselves NPR 등이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다."
+description: "미국 의회 거래 동향에서는 등이 보고되었습니다 의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다"
 image_alt: "정치인 거래·정책 리포트 - 2026-03-15 - 정치인 거래 뉴스 요약 이미지"
 ---
 

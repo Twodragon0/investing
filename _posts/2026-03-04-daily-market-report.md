@@ -7,7 +7,7 @@ tags: ["market-summary", "daily", "crypto", "stock", "macro", "top-coins", "quan
 source: "auto-generated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-market-report-2026-03-04.png"
-description: "2026-03-04 시장 종합: 공포/탐욕 10(Extreme Fear), BTC $68,058(-0.60%), KOSPI 5,322(-8.67%), KOSDAQ 1,045(-9.22%), 금 $5,187(-3.54%), 원유 $74.99(+3.19%) 분석."
+description: "일일 시장 종합 리포트 - 2026-03-04"
 ---
 
 ## 시장 시각화
