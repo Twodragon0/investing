@@ -319,7 +319,20 @@ def _wrap_picture_tags(content: str) -> str:
 
 
 def _extract_description(content: str) -> str:
-    """Extract first meaningful text line from markdown content for SEO description."""
+    """Extract first meaningful text line from markdown content for SEO description.
+
+    Prioritizes executive opener (긴급/P0 sections) and bold-lead sentences
+    before falling back to generic first-line extraction.
+    """
+    # Try to extract executive opener (bold lead sentence)
+    bold_match = re.search(r"\*\*(.{20,120}?)\*\*", content[:600])
+    if bold_match:
+        lead = bold_match.group(1).strip()
+        lead = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", lead)
+        lead = re.sub(r"[*_`~]", "", lead).strip()
+        if len(lead) >= 30:
+            return smart_truncate(lead, 160)
+
     # Strip HTML block elements (stat-grid, alert-box divs) before line-by-line scan
     content = re.sub(r"<div[^>]*>.*?</div>", " ", content, flags=re.DOTALL)
     # Re-split on sentence boundaries after div removal to restore scannable lines

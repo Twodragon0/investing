@@ -404,6 +404,20 @@ layout: default
     });
   }
 
+  // Chart instance refs for theme sync
+  var chartInstances = [];
+  var _origInitCharts = initCharts;
+  initCharts = function() {
+    // Destroy previous instances before re-creating
+    chartInstances.forEach(function(c) { c.destroy(); });
+    chartInstances = [];
+    _origInitCharts();
+    // Capture new instances
+    Chart.instances && Object.values(Chart.instances).forEach(function(c) {
+      chartInstances.push(c);
+    });
+  };
+
   // Wait for Chart.js to load
   if (typeof Chart !== 'undefined') {
     initCharts();
@@ -411,5 +425,15 @@ layout: default
     var chartScript = document.querySelector('script[src*="chart.js"]');
     if (chartScript) chartScript.addEventListener('load', initCharts);
   }
+
+  // Theme sync: re-render charts when dark/light mode toggles
+  var themeObserver = new MutationObserver(function(mutations) {
+    mutations.forEach(function(m) {
+      if (m.attributeName === 'data-theme' && typeof Chart !== 'undefined') {
+        initCharts();
+      }
+    });
+  });
+  themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 })();
 </script>
