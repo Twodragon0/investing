@@ -223,6 +223,21 @@ layout: default
     render();
   });
 
+  // Infinite scroll with IntersectionObserver
+  if ('IntersectionObserver' in window) {
+    var sentinel = document.createElement('div');
+    sentinel.id = 'scroll-sentinel';
+    sentinel.style.height = '1px';
+    document.getElementById('reports-load-more').appendChild(sentinel);
+    var observer = new IntersectionObserver(function(entries) {
+      if (entries[0].isIntersecting && loadMoreBtn.style.display !== 'none') {
+        currentPage++;
+        render();
+      }
+    }, { rootMargin: '200px' });
+    observer.observe(sentinel);
+  }
+
   document.addEventListener('keydown', function(e) {
     if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
       e.preventDefault();
