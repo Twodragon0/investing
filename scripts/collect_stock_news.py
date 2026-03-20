@@ -317,7 +317,7 @@ def fetch_korean_market_data() -> dict:
                 if price and prev:
                     change = price - prev
                     change_pct = (change / prev) * 100
-                    result_entry = {
+                    result_entry: Dict[str, Any] = {
                         "price": f"{price:,.2f}",
                         "change": f"{change:+,.2f}",
                         "change_pct": f"{change_pct:+.2f}%",
@@ -325,8 +325,12 @@ def fetch_korean_market_data() -> dict:
                     try:
                         hist = ticker.history(period="7d")
                         if hist is not None and len(hist) >= 2:
-                            closes = pd.to_numeric(hist["Close"], errors="coerce").dropna()
-                            result_entry["sparkline_data"] = [float(v) for v in closes.tail(5).values]
+                            close_series = hist["Close"]
+                            if isinstance(close_series, pd.Series):
+                                closes = pd.to_numeric(close_series, errors="coerce")
+                                if isinstance(closes, pd.Series):
+                                    closes = closes.dropna()
+                                    result_entry["sparkline_data"] = [float(v) for v in closes.tail(5).values]
                     except Exception as e:
                         logger.debug("yfinance %s sparkline: %s", symbol, e)
                     results[name] = result_entry
