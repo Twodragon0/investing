@@ -631,6 +631,32 @@
   text-overflow: ellipsis;
 }
 
+// ---------- Share Buttons ----------
+.report-share {
+  display: flex;
+  gap: 0.3rem;
+  margin-left: auto;
+}
+
+.share-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem;
+  color: var(--text-secondary);
+  opacity: 0.5;
+  transition: opacity 0.2s, color 0.2s;
+  border-radius: 4px;
+
+  &:hover {
+    opacity: 1;
+    color: var(--accent-blue);
+  }
+
+  &[data-action="twitter"]:hover { color: #1da1f2; }
+  &[data-action="telegram"]:hover { color: #0088cc; }
+}
+
 // ---------- Keyboard Focus ----------
 .report-card:focus {
   outline: none;
