@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&family=Noto+Serif+KR:wght@600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
   <meta name="theme-color" content="#0a0e14" id="meta-theme-color">
-  <style>html{background-color:#0a0e14}html[data-theme="light"]{background-color:#ffffff}</style>
+  {% include critical-css.html %}
   <!-- Inline: theme flash-prevention must run before first paint to avoid FOUC -->
   <script>
     (function(){var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme:light)').matches?'light':'dark';}if(t==='light'){document.documentElement.setAttribute('data-theme','light');var m=document.getElementById('meta-theme-color');if(m)m.setAttribute('content','#ffffff');}else{document.documentElement.removeAttribute('data-theme');}})();

@@ -1,0 +1,19 @@
+{% assign image_path = include.image | default: '' %}
+{% assign image_alt = include.alt | default: '' %}
+{% assign image_class = include.class | default: '' %}
+{% assign image_loading = include.loading | default: 'lazy' %}
+{% assign image_decoding = include.decoding | default: 'async' %}
+{% assign image_webp = image_path | replace: '.png', '.webp' %}
+{% capture image_attrs %}alt="{{ image_alt }}" loading="{{ image_loading }}" decoding="{{ image_decoding }}"{% if image_class != '' %} class="{{ image_class }}"{% endif %}{% endcapture %}
+{% assign generated_png = false %}
+{% if image_path contains '/assets/images/generated/' and image_path contains '.png' %}
+  {% assign generated_png = true %}
+{% endif %}
+{% if generated_png %}
+<picture>
+  <source srcset="{{ image_webp | relative_url }}" type="image/webp">
+  <img src="{{ image_path | relative_url }}" {{ image_attrs | strip }}>
+</picture>
+{% else %}
+<img src="{{ image_path | relative_url }}" {{ image_attrs | strip }}>
+{% endif %}

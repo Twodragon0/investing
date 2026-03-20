@@ -42,7 +42,9 @@ def _try_resolve_google_news_url(url: str) -> str:
         import requests  # noqa: PLC0415
 
         resp = requests.head(
-            url, allow_redirects=True, timeout=6,
+            url,
+            allow_redirects=True,
+            timeout=6,
             headers={"User-Agent": "Mozilla/5.0 (compatible; InvestBot/1.0)"},
         )
         final = resp.url
@@ -165,7 +167,11 @@ def html_report_links(rows: Iterable[Sequence[object]]) -> str:
             '<div class="report-links-board">',
             '  <div class="report-links-summary">',
             '    <div class="report-links-summary-label">Quick Access</div>',
-            f'    <div class="report-links-summary-text">지금 확인할 수 있는 세부 리포트 {row_count}개를 주제별로 정리했습니다.</div>',
+            (
+                f'    <div class="report-links-summary-text">'
+                f"지금 확인할 수 있는 세부 리포트 {row_count}개를 주제별로 정리했습니다."
+                f"</div>"
+            ),
             "  </div>",
             '  <div class="report-links-head">',
             '    <span class="report-links-head-item report-links-head-category">카테고리</span>',

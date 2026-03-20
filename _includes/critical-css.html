@@ -1,0 +1,95 @@
+<style>
+  html { background-color: #0a0e14; }
+  html[data-theme="light"] { background-color: #ffffff; }
+  body {
+    margin: 0;
+    color: #e6edf3;
+    background: #0a0e14;
+    font-family: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+  }
+  html[data-theme="light"] body {
+    color: #111827;
+    background: #ffffff;
+  }
+  .container {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+  }
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(16px);
+    background: rgba(10, 14, 20, 0.88);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+  }
+  html[data-theme="light"] .site-header {
+    background: rgba(255, 255, 255, 0.92);
+    border-bottom-color: rgba(15, 23, 42, 0.1);
+  }
+  .site-header .container,
+  .post-layout-wrapper,
+  .trading-journal-hero,
+  .journal-landing-main-card {
+    display: block;
+  }
+  .site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 72px;
+  }
+  .site-logo {
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .site-nav,
+  .nav-actions { display: flex; align-items: center; gap: 12px; }
+  .post-detail,
+  .page-content,
+  .journal-landing-hero,
+  .recent-posts-tabbed {
+    padding-top: 24px;
+  }
+  .post-summary,
+  .trading-journal-hero,
+  .journal-landing-main-card {
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    border-radius: 20px;
+    background: rgba(15, 23, 42, 0.42);
+  }
+  html[data-theme="light"] .post-summary,
+  html[data-theme="light"] .trading-journal-hero,
+  html[data-theme="light"] .journal-landing-main-card {
+    background: #f8fafc;
+    border-color: rgba(15, 23, 42, 0.08);
+  }
+  .summary-image-wrapper,
+  .journal-landing-image-link,
+  .journal-landing-mini-card img,
+  .summary-market-image,
+  .journal-landing-image {
+    display: block;
+    width: 100%;
+  }
+  .summary-market-image,
+  .journal-landing-image,
+  .journal-landing-mini-card img {
+    height: auto;
+    border-radius: 18px;
+  }
+  @media (max-width: 768px) {
+    .site-nav,
+    .nav-actions { display: none; }
+    .container { width: min(100% - 24px, 1120px); }
+    .post-detail,
+    .page-content,
+    .journal-landing-hero,
+    .recent-posts-tabbed { padding-top: 16px; }
+  }
+</style>

@@ -1,13 +1,11 @@
 // Service Worker for Investing Dragon - Reports page offline cache
-var CACHE_NAME = 'invest-dragon-v2';
+var CACHE_NAME = 'invest-dragon-v3';
 var CACHE_URLS = [
   '/reports/',
   '/assets/css/style.css',
   '/assets/js/reports.js',
   '/assets/js/core.js',
-  '/assets/js/search.js',
-  'https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js',
-  'https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap'
+  '/assets/js/search.js'
 ];
 
 self.addEventListener('install', function(event) {
@@ -54,8 +52,8 @@ self.addEventListener('fetch', function(event) {
       caches.match(event.request).then(function(cached) {
         return cached || fetch(event.request).then(function(response) {
           if (response.ok && (url.pathname.endsWith('.css') || url.pathname.endsWith('.js'))) {
-            var clone = response.clone();
-            caches.open(CACHE_NAME).then(function(cache) { cache.put(event.request, clone); });
+            const responseClone = response.clone();
+            caches.open(CACHE_NAME).then(function(cache) { cache.put(event.request, responseClone); });
           }
           return response;
         });

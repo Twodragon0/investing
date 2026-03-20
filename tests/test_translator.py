@@ -12,11 +12,13 @@ from common.translator import (
     _cache_key,
     _load_cache,
     _postprocess_translation,
+    _should_translate_body_line,
     _restore_terms,
     _save_cache,
     get_display_description,
     get_display_title,
     save_translation_cache,
+    translate_untranslated_body,
     translate_batch,
     translate_to_korean,
 )
@@ -140,6 +142,35 @@ class TestEdgeCases:
     def test_whitespace_stripped(self):
         result = _postprocess_translation("  텍스트  ")
         assert result == "텍스트"
+
+
+class TestTranslateUntranslatedBody:
+    def test_detects_english_prose_line(self):
+        assert _should_translate_body_line("Bitcoin rises as traders watch ETF approval news closely.")
+
+    def test_skips_markdown_link_line(self):
+        assert not _should_translate_body_line("**1. [Bitcoin rises](https://example.com)**")
+
+    def test_skips_korean_line(self):
+        assert not _should_translate_body_line("비트코인이 ETF 기대감으로 상승했습니다.")
+
+    def test_translates_plain_english_lines_only(self):
+        content = "## 전체 뉴스 요약\n\nBitcoin rises as traders watch ETF approval news closely.\n\n- Market volatility remains elevated after Powell comments.\n\n**1. [Linked title](https://example.com)**"
+        with patch(
+            "common.translator.translate_batch",
+            return_value=[
+                "비트코인이 ETF 승인 기대감으로 상승했습니다.",
+                "시장 변동성은 파월 발언 이후 높은 수준을 유지했습니다.",
+            ],
+        ):
+            result = translate_untranslated_body(content)
+        assert "비트코인이 ETF 승인 기대감으로 상승했습니다." in result
+        assert "- 시장 변동성은 파월 발언 이후 높은 수준을 유지했습니다." in result
+        assert "[Linked title](https://example.com)" in result
+
+    def test_preserves_original_when_no_targets(self):
+        content = "## 전체 뉴스 요약\n\n비트코인이 상승했습니다."
+        assert translate_untranslated_body(content) == content
 
 
 class TestCacheKey:
@@ -751,7 +782,7 @@ class TestTranslateBatchMissedLines:
             patch("common.translator.translate_to_korean", side_effect=lambda t: t),
             patch("common.translator._save_cache"),
         ):
-                result = tr_mod.translate_batch(["", "  ", "hello"])
+            result = tr_mod.translate_batch(["", "  ", "hello"])
 
         # Empty entries stay empty
         assert result[0] == ""
