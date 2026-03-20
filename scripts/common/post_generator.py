@@ -130,10 +130,13 @@ _MISTRANSLATION_FIXES: dict[str, str] = {
     "선전함에": "경고함에",
     "선전했습니다": "경고했습니다",
     "선전하고": "경고하고",
+    "시장을 선전하지만": "시장을 홍보하지만",
+    "선전하는": "홍보하는",
     # "멸종" misused for weakening/elimination
-    "멸종되고": "약화되고",
+    "멸종되고": "와해되고",
     "멸종시키": "제거하",
     "멸종될": "제거될",
+    "'멸종'되고": "'와해'되고",
     # "열:" misused as column header
     "열: ": "칼럼: ",
     # Financial terms commonly mistranslated
@@ -143,7 +146,22 @@ _MISTRANSLATION_FIXES: dict[str, str] = {
     "몽유병에 빠져": "무방비 상태로",
     # Common awkward phrasings
     "돌연 급락": "급락",
-    "상보": "종합",
+    # News wire tags that leak into titles
+    "(상보)": "",
+    "(종합)": "",
+    "(1보)": "",
+    "(2보)": "",
+    "(3보)": "",
+    # AI slop overused words
+    "획기적인 ": "",
+    "혁신적인 ": "",
+    "주목할 만한 수치입니다": "수치입니다",
+    "다양한 이슈가 주요 화제입니다": "주요 이슈를 정리했습니다",
+    "다양한 이슈": "주요 이슈",
+    # "촉진" → more natural alternatives
+    "발전을 촉진하는": "발전을 지원하는",
+    "성장을 촉진": "성장을 견인",
+    "채택을 촉진": "채택을 촉진",
 }
 
 

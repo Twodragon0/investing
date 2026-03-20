@@ -300,6 +300,7 @@ def fetch_korean_market_data() -> dict:
     """Fetch Korean market data (KOSPI, KOSDAQ, USD/KRW) via yfinance."""
     results = {}
     try:
+        import pandas as pd
         import yfinance as yf
 
         symbols = {
@@ -309,17 +310,26 @@ def fetch_korean_market_data() -> dict:
         }
         for symbol, name in symbols.items():
             try:
-                info = yf.Ticker(symbol).fast_info
+                ticker = yf.Ticker(symbol)
+                info = ticker.fast_info
                 price = getattr(info, "last_price", None)
                 prev = getattr(info, "previous_close", None)
                 if price and prev:
                     change = price - prev
                     change_pct = (change / prev) * 100
-                    results[name] = {
+                    result_entry = {
                         "price": f"{price:,.2f}",
                         "change": f"{change:+,.2f}",
                         "change_pct": f"{change_pct:+.2f}%",
                     }
+                    try:
+                        hist = ticker.history(period="7d")
+                        if hist is not None and len(hist) >= 2:
+                            closes = pd.to_numeric(hist["Close"], errors="coerce").dropna()
+                            result_entry["sparkline_data"] = [float(v) for v in closes.tail(5).values]
+                    except Exception as e:
+                        logger.debug("yfinance %s sparkline: %s", symbol, e)
+                    results[name] = result_entry
             except (ValueError, TypeError, AttributeError) as e:
                 logger.warning("yfinance %s: %s", symbol, e)
     except ImportError:
