@@ -27,12 +27,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-19 - stock-news 뉴스 요약 
 <div class="stat-grid">
 <div class="stat-item"><div class="stat-value">190</div><div class="stat-label">수집 건수</div></div>
 <div class="stat-item"><div class="stat-value">📈 45</div><div class="stat-label">가격/시장</div></div>
-<div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">리스크 위험</div></div>
+<div class="stat-item"><div class="stat-value">🔴</div><div class="stat-label">시장 경계</div></div>
 <div class="stat-item"><div class="stat-value">5,925.03</div><div class="stat-label">KOSPI +5.04%</div></div>
 <div class="stat-item"><div class="stat-value">1,164.38</div><div class="stat-label">KOSDAQ +2.41%</div></div>
 </div>
 <div class="alert-box alert-info">
-<strong>주식 시장 긴급: 코스피 5900선 돌파, '사이드카' 발동 속 5%대 급등 마감 - 프리진경제 - 190건 분석</strong>
+<strong>주식 시장 190건을 분석한 결과, 코스피 5900선 돌파와 반도체 강세, 금리 해석이 동시에 부각됐습니다.</strong>
 <ul>
 <li>📈 <strong>가격/시장</strong>: 코스피, 삼성전자 동향 주시</li>
 <li>📊 <strong>매크로/금리</strong>: Fed, Dow 이슈 부각</li>

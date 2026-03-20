@@ -12,8 +12,9 @@ SITE_DIR = os.path.join(REPO_ROOT, "_site")
 TARGETS = [
     {
         "glob": "*daily-worldmonitor-briefing*.md",
-        "must_table": True,
+        "must_table": False,
         "must_details": True,
+        "required_any": [[r"<table", r"wm-issue-list"]],
         "forbid": [r"\|\s*#\s*\|\s*이슈\s*\|", r"\|[—-]{3,}\|[—-]{3,}\|"],
     },
     {
@@ -29,6 +30,26 @@ TARGETS = [
         "forbid": [],
     },
 ]
+
+
+def _validate_target(target: dict, html_path: str, html: str) -> list[str]:
+    failures = []
+
+    if target["must_table"] and "<table" not in html:
+        failures.append(f"missing-table:{html_path}")
+
+    if target["must_details"] and "<details" not in html:
+        failures.append(f"missing-details:{html_path}")
+
+    for pattern in target["forbid"]:
+        if re.search(pattern, html):
+            failures.append(f"forbidden-pattern:{pattern}:{html_path}")
+
+    for pattern_group in target.get("required_any", []):
+        if not any(re.search(pattern, html) for pattern in pattern_group):
+            failures.append(f"missing-required-any:{'|'.join(pattern_group)}:{html_path}")
+
+    return failures
 
 
 def _latest_post(pattern: str) -> str:
@@ -80,15 +101,7 @@ def main() -> int:
         with open(html_path, encoding="utf-8") as f:
             html = f.read()
 
-        if target["must_table"] and "<table" not in html:
-            failures.append(f"missing-table:{html_path}")
-
-        if target["must_details"] and "<details" not in html:
-            failures.append(f"missing-details:{html_path}")
-
-        for pattern in target["forbid"]:
-            if re.search(pattern, html):
-                failures.append(f"forbidden-pattern:{pattern}:{html_path}")
+        failures.extend(_validate_target(target, html_path, html))
 
     if checked == 0:
         print("No target posts found for rendered smoke tests.")

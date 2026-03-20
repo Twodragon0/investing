@@ -9,8 +9,8 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/og-market-analysis.png"
 permalink: "/market-analysis/2026/03/19/daily-market-indicators/"
-description: "2026-03-19 기준 시장 심리·리스크 지표를 8개 소스에서 수집했습니다. 국채 금리 관련 뉴스 (보완): 1. Treasury yields edge lower as investors weigh rising oil price, Iran attacks and looming Fed…"
-excerpt: "2026-03-19 기준 시장 심리·리스크 지표를 8개 소스에서 수집했습니다. 국채 금리 관련 뉴스 (보완): 1. Treasury yields edge lower as…"
+description: "2026-03-19 기준 시장 심리·리스크 지표를 8개 소스에서 점검했습니다. 공포탐욕 지수는 극도의 공포 구간에 머물고 VIX와 달러 강세가 동시에 높아져 단기 변동성 관리가 중요한 구간입니다."
+excerpt: "공포탐욕 지수는 극도의 공포 구간이고 VIX와 달러 강세가 동시에 높아져 단기 변동성 관리가 중요합니다."
 image_alt: "시장 심리 및 리스크 지표 (2026-03-19) - 시장 분석 뉴스 요약 이미지"
 ---
 

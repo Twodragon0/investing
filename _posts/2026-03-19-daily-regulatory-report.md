@@ -9,8 +9,8 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-regulatory-2026-03-19.png"
 permalink: "/regulatory-news/2026/03/19/daily-regulatory-report/"
-description: "🔵 규제/정책 (23건): 확정된, 등에, 가상자산시장 관련 뉴스 흐름이 강화되고 있어 중장기 영향을 분석해야 합니다 - Investing Dragon 자동 수집 분석 리포트."
-excerpt: "🔵 규제/정책 (23건): 확정된, 등에, 가상자산시장 관련 뉴스 흐름이 강화되고 있어 중장기 영향을 분석해야 합니다 - Investing Dragon 자동 수집 분석 리포트."
+description: "3월 19일 글로벌 규제 뉴스 39건을 지역별로 정리했습니다. 한국 금융당국 공지와 미국 SEC·CFTC 해석 발표가 동시에 늘어나며 거래소 규정과 투자자 보호 이슈가 핵심 흐름으로 부각됐습니다."
+excerpt: "글로벌 규제 뉴스 39건을 지역별로 정리했습니다. 한국 금융당국 공지와 미국 SEC·CFTC 해석 발표가 핵심 흐름입니다."
 image_alt: "글로벌 규제 동향 리포트 - 2026-03-19 - regulatory-news 뉴스 요약 이미지"
 ---
 
@@ -32,12 +32,12 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-03-19 - regulatory-news 뉴
 <div class="stat-item"><div class="stat-value">27</div><div class="stat-label">한국</div></div>
 </div>
 <div class="alert-box alert-info">
-<strong>글로벌 규제: 확정된, 등에, Application 관련 39건 수집</strong>
+<strong>글로벌 규제 39건을 집계한 결과, 한국 공지 집중과 미국 해석 발표 확대가 동시에 확인됐습니다.</strong>
 <ul>
-<li>🔵 <strong>규제/정책</strong>: 확정된, 등에 주목</li>
-<li>🏦 <strong>거래소</strong>: Exchanges, Bitget 주목</li>
-<li>🏛️ <strong>정치/정책</strong>: Certain, Application 관련 7건</li>
-<li>🤖 <strong>AI/기술</strong>: 과기정통부, 세부내용은 동향 주시</li>
+<li>🔵 <strong>규제/정책</strong>: SEC·CFTC 해석 발표와 금융위 공지가 비중을 차지했습니다.</li>
+<li>🏦 <strong>거래소</strong>: 거래소 검사, 등록 요건, 운영 기준 관련 이슈가 이어졌습니다.</li>
+<li>🏛️ <strong>정치/정책</strong>: 정부 입장 설명과 제도 정비 기사 비중이 높았습니다.</li>
+<li>🤖 <strong>AI/기술</strong>: 금융·반도체 정책 연계 이슈는 보조 테마로 확인됐습니다.</li>
 </ul>
 </div>
 

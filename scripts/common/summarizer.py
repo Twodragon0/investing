@@ -15,6 +15,7 @@ from collections import Counter
 from typing import Any, Dict, List, Optional, Tuple
 
 from .markdown_utils import html_source_tag, markdown_link
+from .post_generator import _MISTRANSLATION_FIXES
 
 logger = logging.getLogger(__name__)
 
@@ -85,6 +86,13 @@ _SEV_BADGE_HTML = {
     "medium": '<span class="news-severity news-severity-med">MED</span>',
     "low": '<span class="news-severity news-severity-low">LOW</span>',
 }
+
+
+def _fix_mistranslations(text: str) -> str:
+    """Apply mistranslation correction dictionary to text."""
+    for wrong, correct in _MISTRANSLATION_FIXES.items():
+        text = text.replace(wrong, correct)
+    return text
 
 
 def _truncate_sentence(text: str, max_len: int = 300) -> str:
@@ -258,6 +266,13 @@ _GENERIC_DESC_PATTERNS = [
     re.compile(r"^This (?:page|site|website) (?:uses|requires)", re.I),
     re.compile(r"^Loading\.\.\.", re.I),
     re.compile(r"에서 확인하세요\.?\s*$"),
+    re.compile(r"^업데이트[\s:.]", re.I),
+    re.compile(r"관련 소식$"),
+    re.compile(r"^Read more", re.I),
+    re.compile(r"^Click here", re.I),
+    re.compile(r"^Continue reading", re.I),
+    re.compile(r"^This article", re.I),
+    re.compile(r"^The post .+ appeared first", re.I),
 ]
 
 
@@ -1089,7 +1104,7 @@ class ThemeSummarizer:
                 f"</div>"
             )
         lines.append("</div>")
-        lines.append(f"\n*총 {len(self.items)}건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*\n")
+        lines.append("\n*기사는 여러 테마에 중복 집계될 수 있음*\n")
         return "\n".join(lines)
 
     def generate_themed_news_sections(
@@ -1139,10 +1154,10 @@ class ThemeSummarizer:
                 if _NOISE_TITLE_RE.search(orig_title):
                     continue
                 seen_titles.add(orig_title)
-                title = article.get("title_ko") or orig_title
+                title = _fix_mistranslations(article.get("title_ko") or orig_title)
                 link = article.get("link", "")
                 source = article.get("source", "")
-                description = (article.get("description_ko") or article.get("description", "")).strip()
+                description = _fix_mistranslations((article.get("description_ko") or article.get("description", "")).strip())
 
                 # Skip articles already featured in previous themes
                 if shown < featured_count and orig_title in cross_theme_featured:
@@ -1532,6 +1547,11 @@ class ThemeSummarizer:
         "알려진",
         "보도",
         "발표",
+        "설명",
+        "정부입장",
+        "확정된",
+        "바",
+        "검토",
         "것으로",
         "있는",
         "따르면",
@@ -1660,6 +1680,8 @@ class ThemeSummarizer:
             tokens = re.findall(r"\$[\d,.]+[KkMmBb]?%?|[\d,.]+%|[A-Za-z]{3,}|[가-힣]{2,}", title)
             for token in tokens:
                 normalized = token.lower() if re.match(r"[A-Za-z]", token) else token
+                if re.fullmatch(r"[가-힣]{2,}", token):
+                    normalized = re.sub(r"(은|는|이|가|을|를|의|에|와|과|도|만|로|으로)$", "", normalized)
                 if (
                     normalized not in self._STOP_WORDS
                     and normalized not in self._NOISE_ENGLISH
@@ -1668,7 +1690,7 @@ class ThemeSummarizer:
                     # Skip short generic English tokens (1-2 chars)
                     if re.match(r"^[a-z]{1,2}$", normalized):
                         continue
-                    word_counter[token] += 1
+                    word_counter[normalized] += 1
         # Sort by frequency desc, then length desc (prefer specific tokens)
         sorted_words = sorted(
             word_counter.items(),
@@ -1805,8 +1827,8 @@ class ThemeSummarizer:
 
         for article in articles[:5]:
             # Prefer Korean description
-            desc = (article.get("description_ko") or article.get("description", "")).strip()
-            title = article.get("title_ko") or article.get("title", "")
+            desc = _fix_mistranslations((article.get("description_ko") or article.get("description", "")).strip())
+            title = _fix_mistranslations(article.get("title_ko") or article.get("title", ""))
             if not desc or desc == title or len(desc) < 20:
                 continue
             if _is_generic_desc(desc):
@@ -1899,6 +1921,7 @@ class ThemeSummarizer:
                 source = article.get("source", "")
                 desc = article.get("description", "").strip()
 
+                title = _fix_mistranslations(title)
                 if link:
                     lines.append(f"- {markdown_link(title, link)} — {source}")
                 else:
@@ -1906,7 +1929,7 @@ class ThemeSummarizer:
 
                 # Add description excerpt (first sentence, up to 150 chars)
                 if desc and desc != title and len(desc) > 20 and not _is_generic_desc(desc):
-                    desc_short = _truncate_sentence(desc, max_len=150)
+                    desc_short = _fix_mistranslations(_truncate_sentence(desc, max_len=150))
                     if desc_short:
                         lines.append(f"  > {desc_short}")
 
@@ -1948,7 +1971,7 @@ class ThemeSummarizer:
 
         # Case 1: P0 urgent issues exist — lead with them
         if p0_items:
-            p0_title = (
+            p0_title = _fix_mistranslations(
                 p0_items[0].get("title_ko")
                 or p0_items[0].get("title_translated")
                 or p0_items[0].get("title", "긴급 이슈")
@@ -2075,14 +2098,14 @@ class ThemeSummarizer:
         if p0_items:
             lines.append("### 긴급 이슈\n")
             for item in p0_items[:3]:
-                p0_title = (item.get("title_ko") or item.get("title_translated") or item.get("title", ""))[:100]
+                p0_title = _fix_mistranslations(item.get("title_ko") or item.get("title_translated") or item.get("title", ""))[:100]
                 if p0_title:
                     lines.append(f"- {p0_title}")
             lines.append("")
         if p1_items:
             lines.append("### 주요 이슈\n")
             for item in p1_items[:3]:
-                p1_title = (item.get("title_ko") or item.get("title_translated") or item.get("title", ""))[:80]
+                p1_title = _fix_mistranslations(item.get("title_ko") or item.get("title_translated") or item.get("title", ""))[:80]
                 if p1_title:
                     lines.append(f"- {p1_title}")
             if len(p1_items) > 3:
@@ -2222,7 +2245,7 @@ class ThemeSummarizer:
             )
         # Risk level indicator
         risk_labels = {
-            "critical": "위험",
+            "critical": "높음",
             "elevated": "주의",
             "moderate": "보통",
             "low": "안정",
@@ -2230,8 +2253,8 @@ class ThemeSummarizer:
         risk_emoji = {"critical": "🔴", "elevated": "🟡", "moderate": "🟢", "low": "🟢"}
         stat_items.append(
             f'<div class="stat-item">'
-            f'<div class="stat-value">{risk_emoji[risk_level]}</div>'
-            f'<div class="stat-label">리스크 {risk_labels[risk_level]}</div></div>'
+            f'<div class="stat-value">{risk_emoji[risk_level]} {risk_labels[risk_level]}</div>'
+            f'<div class="stat-label">시장 경계</div></div>'
         )
         # Category-specific stats
         if category_type == "stock" and extra.get("kr_market"):
@@ -2288,6 +2311,7 @@ class ThemeSummarizer:
             kws = filtered_kws
             if kws:
                 import datetime as _dt
+
                 _seed = hash((_dt.datetime.now(tz=_dt.UTC).date().isoformat(), key, count))
                 _patterns = [
                     ", ".join(kws[:2]) + " 주목",

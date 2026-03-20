@@ -118,6 +118,34 @@ _TOKEN_ARTIFACTS: dict[str, str] = {
     "anecDOTe": "anecdote",
 }
 
+# ---------------------------------------------------------------------------
+# Mistranslation correction dictionary
+# ---------------------------------------------------------------------------
+
+# Maps commonly mistranslated Korean words to their correct forms in
+# financial/news context. Applied after _TOKEN_ARTIFACTS corrections.
+_MISTRANSLATION_FIXES: dict[str, str] = {
+    # Common verb mistranslations
+    "선전하면서": "경고하면서",
+    "선전함에": "경고함에",
+    "선전했습니다": "경고했습니다",
+    "선전하고": "경고하고",
+    # "멸종" misused for weakening/elimination
+    "멸종되고": "약화되고",
+    "멸종시키": "제거하",
+    "멸종될": "제거될",
+    # "열:" misused as column header
+    "열: ": "칼럼: ",
+    # Financial terms commonly mistranslated
+    "해자가": "경쟁 우위가",
+    "해자를": "경쟁 우위를",
+    # "몽유병" misused for sleepwalking into crisis
+    "몽유병에 빠져": "무방비 상태로",
+    # Common awkward phrasings
+    "돌연 급락": "급락",
+    "상보": "종합",
+}
+
 
 # ---------------------------------------------------------------------------
 # Category default og:image mapping
@@ -181,8 +209,13 @@ def _fix_translation_artifacts(text: str) -> str:
     (e.g. AI, SOL) from being matched inside common words, the restored text
     can contain mixed-case oddities like "gAIn" or "GaSOLine". This function
     corrects those known patterns as a safety net.
+
+    Also applies _MISTRANSLATION_FIXES to correct common Korean financial
+    mistranslations produced during AI translation.
     """
     for wrong, correct in _TOKEN_ARTIFACTS.items():
+        text = text.replace(wrong, correct)
+    for wrong, correct in _MISTRANSLATION_FIXES.items():
         text = text.replace(wrong, correct)
     return text
 
@@ -191,6 +224,9 @@ def _polish_generated_text(text: str) -> str:
     if not text:
         return text
     for wrong, correct in _WORDING_REPLACEMENTS:
+        text = text.replace(wrong, correct)
+    # Apply mistranslation corrections
+    for wrong, correct in _MISTRANSLATION_FIXES.items():
         text = text.replace(wrong, correct)
     # Fix incomplete "시장 영향 가능" without already being "가능성이 있는"
     text = re.sub(r"시장 영향 가능(?!성이 있는)", "시장 영향 가능성이 있는", text)
@@ -275,6 +311,7 @@ def _extract_description(content: str) -> str:
         stripped = line.strip()
         is_list_item = stripped.startswith("- ") and len(stripped) >= 4
         candidate = stripped[2:].strip() if is_list_item else stripped
+        plain_candidate = re.sub(r"[*_`~]", "", candidate).strip()
         if (
             candidate
             and not candidate.startswith("#")
@@ -287,6 +324,8 @@ def _extract_description(content: str) -> str:
             and len(candidate) >= 20
             and not re.match(r"^https?://", candidate)
             and not re.match(r"^\d+[\.\)]\s", candidate)
+            and not plain_candidate.endswith(":")
+            and not re.match(r"^\d{4}-\d{2}-\d{2}\b", plain_candidate)
             and (is_list_item or not stripped.startswith("-"))
         ):
             candidates.append(candidate)
@@ -391,6 +430,15 @@ def _clean_description(desc: str) -> str:
     desc = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", desc)
     # Remove markdown formatting characters
     desc = re.sub(r"[*_`#~]", "", desc)
+    desc = re.sub(r"^[^\w\uAC00-\uD7A3]+", "", desc)
+    # Remove emojis and special unicode symbols (bad for SEO/social previews)
+    desc = re.sub(
+        r"[\U0001F300-\U0001F9FF\U00002702-\U000027B0\U0000FE00-\U0000FE0F"
+        r"\U0001FA00-\U0001FA6F\U0001FA70-\U0001FAFF\U00002600-\U000026FF"
+        r"\U0000200D\U00002640\U00002642]+",
+        " ",
+        desc,
+    )
     # Collapse multiple whitespace
     desc = re.sub(r"\s+", " ", desc).strip()
     # Truncate to 160 chars at sentence boundary

@@ -250,6 +250,16 @@ class TestExtractDescription:
         # "총 " prefix should be filtered and use the second candidate
         assert "비트코인" in result or "총" not in result
 
+    def test_skips_heading_like_line_ending_with_colon(self):
+        content = (
+            "**2026-03-19** 기준 시장 심리 리포트입니다.\n\n"
+            "**국채 금리 관련 뉴스 (보완):**\n\n"
+            "달러 강세와 변동성 확대가 동시에 나타나며 위험자산 선호가 약해졌습니다."
+        )
+        result = _extract_description(content)
+        assert "국채 금리 관련 뉴스" not in result
+        assert "달러 강세" in result
+
 
 class TestDefaultCategoryImages:
     """Tests for _DEFAULT_CATEGORY_IMAGES data."""
@@ -369,6 +379,11 @@ class TestCleanDescription:
     def test_empty_string_returned_as_is(self):
         result = _clean_description("")
         assert result == ""
+
+    def test_leading_emoji_removed(self):
+        result = _clean_description("🔵 규제/정책 관련 뉴스 흐름을 점검합니다.")
+        assert not result.startswith("🔵")
+        assert result.startswith("규제/정책")
 
 
 class TestPostGeneratorCreatePost:

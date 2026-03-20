@@ -32,7 +32,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-18 - stock-news 뉴스 요약 
 <div class="stat-item"><div class="stat-value">1,136.94</div><div class="stat-label">KOSDAQ -0.12%</div></div>
 </div>
 <div class="alert-box alert-info">
-<strong>주식 시장 긴급: Treasury, decision, yields - 192건 분석</strong>
+<strong>주식 시장 192건을 분석한 결과, 금리 결정과 국채금리 해석이 반도체·코스피 흐름과 함께 움직였습니다.</strong>
 <ul>
 <li>📈 <strong>가격/시장</strong> (42건): 삼성전자, 하이닉스, 코스피 관련 뉴스가 42건으로, 시장 참여자들의 관심이 집중되고 있습니다.</li>
 <li>📊 <strong>매크로/금리</strong> (20건): 환율, 한은 이슈가 20건 감지되었습니다. 관련 지표와 수급 흐름을 함께 확인하세요.</li>

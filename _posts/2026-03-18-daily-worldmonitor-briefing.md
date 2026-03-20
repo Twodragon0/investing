@@ -10,8 +10,8 @@ source_url: "https://worldmonitor.app"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-worldmonitor-2026-03-18.png"
 permalink: "/market-analysis/2026/03/18/daily-worldmonitor-briefing/"
-description: "2026-03-18 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다. 범위: 글로벌 지정학, 금융시장, 에너지 이슈"
-excerpt: "2026-03-18 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다. 범위: 글로벌 지정학, 금융시장, 에너지 이슈"
+description: "3월 18일 WorldMonitor 연계 글로벌 뉴스 20건을 정리했습니다. 사회 이슈와 지정학 뉴스 비중이 컸고 BBC World 계열 출처가 가장 많이 인용됐습니다."
+excerpt: "WorldMonitor 연계 글로벌 뉴스 20건을 정리했습니다. 사회 이슈와 지정학 뉴스 비중이 컸습니다."
 image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-03-18 - 시장 분석 뉴스 요약 이미지"
 ---
 
