@@ -1,0 +1,26 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Investing Dragon - 리포트</title>
+    <description>암호화폐·주식 뉴스 자동 수집 및 시장 분석 리포트</description>
+    <link>{{ site.url }}/reports/</link>
+    <atom:link href="{{ site.url }}/reports-feed.xml" rel="self" type="application/rss+xml"/>
+    <language>ko</language>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    {% for post in site.posts limit:30 %}
+    {% assign cat_slug = post.categories[0] | default: "uncategorized" %}
+    {% assign cat_info = site.data.categories[cat_slug] %}
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <link>{{ post.url | absolute_url }}</link>
+      <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <category>{{ cat_info.name | default: cat_slug | xml_escape }}</category>
+      <description>{{ post.description | default: post.excerpt | strip_html | truncate: 200 | xml_escape }}</description>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

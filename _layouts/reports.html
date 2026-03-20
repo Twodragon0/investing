@@ -7,7 +7,11 @@ layout: default
   <div class="reports-header">
     <div class="reports-header-text">
       <h1>리포트</h1>
-      <p class="reports-subtitle">일일 뉴스, 시장 분석, 규제 동향 등 전체 리포트</p>
+      <p class="reports-subtitle">일일 뉴스, 시장 분석, 규제 동향 등 전체 리포트
+        <a href="{{ '/reports-feed.xml' | relative_url }}" class="rss-link" title="RSS 피드">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/></svg>
+        </a>
+      </p>
     </div>
     <div class="reports-stats">
       <div class="reports-stat">
@@ -81,7 +85,24 @@ layout: default
         <input type="date" id="report-date-to" class="report-date">
       </div>
       <button id="report-clear" class="report-clear-btn">초기화</button>
+      <div class="report-view-toggle" role="group" aria-label="뷰 전환">
+        <button class="report-view-btn active" data-view="grid" aria-label="카드뷰">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        </button>
+        <button class="report-view-btn" data-view="list" aria-label="리스트뷰">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+        </button>
+      </div>
     </div>
+  </div>
+
+  <!-- Recently Viewed -->
+  <div class="reports-recent" id="reports-recent" style="display:none">
+    <h3 class="recent-title">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      최근 본 리포트
+    </h3>
+    <div class="recent-list" id="recent-list"></div>
   </div>
 
   <!-- Reports Grid (JS-rendered) -->
@@ -321,6 +342,52 @@ layout: default
   });
 
   updateBookmarkBadge();
+
+  // --- View toggle ---
+  var currentView = 'grid';
+  var viewBtns = document.querySelectorAll('.report-view-btn');
+  viewBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      viewBtns.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      currentView = btn.dataset.view;
+      grid.classList.toggle('reports-list-view', currentView === 'list');
+    });
+  });
+
+  // --- Recently viewed ---
+  var recentHistory = JSON.parse(localStorage.getItem('report-recent') || '[]');
+  function renderRecent() {
+    if (!recentHistory.length) return;
+    var container = document.getElementById('reports-recent');
+    var list = document.getElementById('recent-list');
+    var recentPosts = recentHistory.slice(0, 5).map(function(url) {
+      return posts.find(function(p) { return p.u === url; });
+    }).filter(Boolean);
+    if (!recentPosts.length) return;
+    container.style.display = '';
+    list.innerHTML = recentPosts.map(function(p) {
+      var bc = BADGE_COLORS[p.cc] || ['rgba(88,166,255,0.15)','#58a6ff'];
+      return '<a href="' + p.u + '" class="recent-item">' +
+        '<span class="report-category-badge" style="background:' + bc[0] + ';color:' + bc[1] + '">' + p.cn + '</span>' +
+        '<span class="recent-item-title">' + escapeHtml(p.t) + '</span>' +
+        '<span class="report-relative-time">' + relativeTime(p.d) + '</span></a>';
+    }).join('');
+  }
+  // Track clicks for history
+  grid.addEventListener('click', function(e) {
+    var card = e.target.closest('.report-card');
+    if (card && !e.target.closest('.report-bookmark')) {
+      var url = card.getAttribute('href');
+      if (url) {
+        recentHistory = recentHistory.filter(function(u) { return u !== url; });
+        recentHistory.unshift(url);
+        recentHistory = recentHistory.slice(0, 20);
+        localStorage.setItem('report-recent', JSON.stringify(recentHistory));
+      }
+    }
+  });
+  renderRecent();
 
   // --- Bookmark click delegation ---
   grid.addEventListener('click', function(e) {

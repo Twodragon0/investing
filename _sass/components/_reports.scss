@@ -38,6 +38,15 @@
   color: var(--text-secondary);
   font-size: 0.9rem;
   margin: 0;
+
+  .rss-link {
+    color: var(--accent-orange);
+    margin-left: 0.4rem;
+    vertical-align: middle;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    &:hover { opacity: 1; }
+  }
 }
 
 .reports-stats {
@@ -529,6 +538,97 @@
   font-size: 0.75rem;
   color: var(--text-secondary);
   margin: 0;
+}
+
+// ---------- View Toggle ----------
+.report-view-toggle {
+  display: flex;
+  gap: 0.25rem;
+  margin-left: auto;
+}
+
+.report-view-btn {
+  padding: 0.4rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover { color: var(--accent-blue); border-color: var(--accent-blue); }
+  &.active { background: var(--accent-blue); color: #fff; border-color: var(--accent-blue); }
+}
+
+// ---------- List View ----------
+.reports-list-view {
+  grid-template-columns: 1fr !important;
+
+  .report-card {
+    flex-direction: row;
+    align-items: center;
+
+    .report-card-thumb {
+      width: 80px;
+      height: 60px;
+      flex-shrink: 0;
+      border-radius: 8px;
+    }
+
+    .report-card-body { padding: 0.6rem 1rem; }
+    .report-title { -webkit-line-clamp: 1; font-size: 0.9rem; }
+    .report-summary { -webkit-line-clamp: 1; }
+    .report-tags { display: none; }
+    .report-card-footer { display: none; }
+  }
+}
+
+// ---------- Recently Viewed ----------
+.reports-recent {
+  margin-bottom: 1.25rem;
+}
+
+.recent-title {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 0 0 0.5rem;
+}
+
+.recent-list {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+  scrollbar-width: thin;
+}
+
+.recent-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: border-color 0.2s;
+
+  &:hover { border-color: var(--accent-blue); }
+}
+
+.recent-item-title {
+  font-size: 0.75rem;
+  color: var(--text-primary);
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 // ---------- Keyboard Focus ----------
