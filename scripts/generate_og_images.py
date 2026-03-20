@@ -244,16 +244,28 @@ def _draw_visual_crypto(ax, accent: str) -> None:
         wick_hi = max(o, c) + np.random.randint(8, 22)
         ax.plot([x, x], [cy + wick_lo - 200, cy + wick_hi - 200], color=color, linewidth=1.2, alpha=0.65)
         bar = mpatches.FancyBboxPatch(
-            (x - 8, cy + body_bot - 200), 16, max(body_h, 4),
-            boxstyle="round,pad=1.5", facecolor=color, edgecolor="none", alpha=0.85,
+            (x - 8, cy + body_bot - 200),
+            16,
+            max(body_h, 4),
+            boxstyle="round,pad=1.5",
+            facecolor=color,
+            edgecolor="none",
+            alpha=0.85,
         )
         ax.add_patch(bar)
         # Volume bars at bottom
         vol_h = np.random.randint(10, 40)
-        ax.add_patch(mpatches.FancyBboxPatch(
-            (x - 6, cy - 190), 12, vol_h,
-            boxstyle="round,pad=1", facecolor=color, edgecolor="none", alpha=0.3,
-        ))
+        ax.add_patch(
+            mpatches.FancyBboxPatch(
+                (x - 6, cy - 190),
+                12,
+                vol_h,
+                boxstyle="round,pad=1",
+                facecolor=color,
+                edgecolor="none",
+                alpha=0.3,
+            )
+        )
 
     # Bollinger band area
     xs_line = [cx - 240 + i * 30 for i in range(16)]
@@ -261,15 +273,36 @@ def _draw_visual_crypto(ax, accent: str) -> None:
     upper = [y + 30 for y in mid]
     lower = [y - 30 for y in mid]
     from matplotlib.patches import Polygon
+
     band_verts = list(zip(xs_line, upper, strict=False)) + list(zip(reversed(xs_line), reversed(lower), strict=False))
     ax.add_patch(Polygon(band_verts, closed=True, facecolor=accent, alpha=0.06, edgecolor="none"))
     ax.plot(xs_line, mid, color=accent, linewidth=2, alpha=0.5)
 
     # Bitcoin / ETH text symbols
-    ax.text(cx + 180, cy + 140, "BTC", fontsize=22, color="#f7931a", fontweight="bold",
-            ha="center", va="center", alpha=0.25, **_FK)
-    ax.text(cx - 180, cy + 130, "ETH", fontsize=18, color="#627eea", fontweight="bold",
-            ha="center", va="center", alpha=0.2, **_FK)
+    ax.text(
+        cx + 180,
+        cy + 140,
+        "BTC",
+        fontsize=22,
+        color="#f7931a",
+        fontweight="bold",
+        ha="center",
+        va="center",
+        alpha=0.25,
+        **_FK,
+    )
+    ax.text(
+        cx - 180,
+        cy + 130,
+        "ETH",
+        fontsize=18,
+        color="#627eea",
+        fontweight="bold",
+        ha="center",
+        va="center",
+        alpha=0.2,
+        **_FK,
+    )
 
 
 def _draw_visual_stock(ax, accent: str) -> None:
@@ -289,6 +322,7 @@ def _draw_visual_stock(ax, accent: str) -> None:
 
     # Gradient area fill (multiple layers for depth)
     from matplotlib.patches import Polygon
+
     for alpha_v, y_shift in [(0.15, 0), (0.08, -15), (0.03, -30)]:
         verts = list(zip(xs, ys + y_shift, strict=False)) + [(xs[-1], cy_base), (xs[0], cy_base)]
         ax.add_patch(Polygon(verts, closed=True, facecolor=accent, alpha=alpha_v, edgecolor="none"))
@@ -298,7 +332,7 @@ def _draw_visual_stock(ax, accent: str) -> None:
     # Moving averages
     for window, color, lw in [(10, "#22d3ee", 1.8), (20, "#d29922", 1.3)]:
         ma = np.convolve(ys, np.ones(window) / window, mode="valid")
-        ax.plot(xs[window - 1:], ma, color=color, linewidth=lw, alpha=0.45, linestyle="--")
+        ax.plot(xs[window - 1 :], ma, color=color, linewidth=lw, alpha=0.45, linestyle="--")
     # Highlight last point with glow
     ax.add_patch(mpatches.Circle((xs[-1], ys[-1]), 14, facecolor=accent, edgecolor="none", alpha=0.2))
     ax.add_patch(mpatches.Circle((xs[-1], ys[-1]), 7, facecolor=accent, edgecolor=TEXT_WHITE, linewidth=1.5, alpha=0.9))
@@ -308,19 +342,45 @@ def _draw_visual_stock(ax, accent: str) -> None:
     for i in range(0, 60, 2):
         vol = np.random.randint(8, 35)
         c = "#3fb950" if ys[i] > ys[max(0, i - 1)] else "#f85149"
-        ax.add_patch(mpatches.FancyBboxPatch(
-            (xs[i] - 3, cy_base - 5), 6, vol,
-            boxstyle="round,pad=1", facecolor=c, edgecolor="none", alpha=0.35,
-        ))
+        ax.add_patch(
+            mpatches.FancyBboxPatch(
+                (xs[i] - 3, cy_base - 5),
+                6,
+                vol,
+                boxstyle="round,pad=1",
+                facecolor=c,
+                edgecolor="none",
+                alpha=0.35,
+            )
+        )
 
     # Financial symbols
-    ax.text(cx + 190, cy_base + 340, "$", fontsize=52, color="#3fb950", fontweight="bold",
-            ha="center", va="center", alpha=0.15, **_FK)
-    ax.text(cx - 190, cy_base + 320, "₩", fontsize=38, color=accent, fontweight="bold",
-            ha="center", va="center", alpha=0.12, **_FK)
+    ax.text(
+        cx + 190,
+        cy_base + 340,
+        "$",
+        fontsize=52,
+        color="#3fb950",
+        fontweight="bold",
+        ha="center",
+        va="center",
+        alpha=0.15,
+        **_FK,
+    )
+    ax.text(
+        cx - 190,
+        cy_base + 320,
+        "₩",
+        fontsize=38,
+        color=accent,
+        fontweight="bold",
+        ha="center",
+        va="center",
+        alpha=0.12,
+        **_FK,
+    )
     # Mini KOSPI label
-    ax.text(cx + 140, cy_base + 280, "KOSPI", fontsize=9, color=TEXT_MUTED,
-            ha="center", va="center", alpha=0.4, **_FK)
+    ax.text(cx + 140, cy_base + 280, "KOSPI", fontsize=9, color=TEXT_MUTED, ha="center", va="center", alpha=0.4, **_FK)
 
 
 def _draw_visual_analysis(ax, accent: str) -> None:
@@ -333,13 +393,22 @@ def _draw_visual_analysis(ax, accent: str) -> None:
 
     r_outer, r_inner = 130, 82
     segments = [
-        (0, 72, "#f85149"), (72, 144, "#d29922"), (144, 216, "#8b949e"),
-        (216, 288, "#58a6ff"), (288, 360, "#3fb950"),
+        (0, 72, "#f85149"),
+        (72, 144, "#d29922"),
+        (144, 216, "#8b949e"),
+        (216, 288, "#58a6ff"),
+        (288, 360, "#3fb950"),
     ]
     for start, end, color in segments:
         wedge = mpatches.Wedge(
-            (cx, cy), r_outer, start, end, width=r_outer - r_inner,
-            facecolor=color, edgecolor="none", alpha=0.75,
+            (cx, cy),
+            r_outer,
+            start,
+            end,
+            width=r_outer - r_inner,
+            facecolor=color,
+            edgecolor="none",
+            alpha=0.75,
         )
         ax.add_patch(wedge)
     ax.add_patch(mpatches.Circle((cx, cy), r_inner - 4, facecolor=BG_COLOR, edgecolor="#334155", linewidth=1.5))
@@ -360,8 +429,23 @@ def _draw_visual_analysis(ax, accent: str) -> None:
         ax.add_patch(mpatches.Circle((sx[-1], sy[-1]), 3, facecolor=c, edgecolor="none", alpha=0.8))
 
     # Indicator labels
-    for label, x_off, y_off, c in [("RSI", -170, 150, "#3fb950"), ("MACD", 170, 150, "#f85149"), ("VOL", -170, -60, "#58a6ff")]:
-        ax.text(cx + x_off, cy + y_off, label, fontsize=7, color=c, fontweight="bold", ha="center", va="center", alpha=0.5, **_FK)
+    for label, x_off, y_off, c in [
+        ("RSI", -170, 150, "#3fb950"),
+        ("MACD", 170, 150, "#f85149"),
+        ("VOL", -170, -60, "#58a6ff"),
+    ]:
+        ax.text(
+            cx + x_off,
+            cy + y_off,
+            label,
+            fontsize=7,
+            color=c,
+            fontweight="bold",
+            ha="center",
+            va="center",
+            alpha=0.5,
+            **_FK,
+        )
 
 
 def _draw_visual_regulatory(ax, accent: str) -> None:
@@ -372,62 +456,137 @@ def _draw_visual_regulatory(ax, accent: str) -> None:
 
     # Pillar with gradient effect
     for i in range(5):
-        ax.plot([cx - i * 0.5, cx - i * 0.5], [cy - 130, cy + 110],
-                color="#58a6ff", linewidth=3 - i * 0.4, alpha=0.6 - i * 0.1)
+        ax.plot(
+            [cx - i * 0.5, cx - i * 0.5],
+            [cy - 130, cy + 110],
+            color="#58a6ff",
+            linewidth=3 - i * 0.4,
+            alpha=0.6 - i * 0.1,
+        )
     # Base pedestal
-    ax.add_patch(mpatches.FancyBboxPatch(
-        (cx - 50, cy - 150), 100, 25, boxstyle="round,pad=2",
-        facecolor="#334155", edgecolor=accent, linewidth=1.2, alpha=0.5))
+    ax.add_patch(
+        mpatches.FancyBboxPatch(
+            (cx - 50, cy - 150),
+            100,
+            25,
+            boxstyle="round,pad=2",
+            facecolor="#334155",
+            edgecolor=accent,
+            linewidth=1.2,
+            alpha=0.5,
+        )
+    )
     # Beam with tilt
     beam_tilt = 8
-    ax.plot([cx - 140, cx + 140], [cy + 80 + beam_tilt, cy + 80 - beam_tilt],
-            color=accent, linewidth=4, alpha=0.7)
+    ax.plot([cx - 140, cx + 140], [cy + 80 + beam_tilt, cy + 80 - beam_tilt], color=accent, linewidth=4, alpha=0.7)
     # Left pan (heavier - lower)
     from matplotlib.patches import Polygon
+
     left_xs = [cx - 140, cx - 180, cx - 100]
     left_ys = [cy + 80 + beam_tilt, cy + 20 + beam_tilt, cy + 20 + beam_tilt]
-    ax.add_patch(Polygon(list(zip(left_xs, left_ys, strict=False)), closed=True,
-                         facecolor=accent, alpha=0.25, edgecolor=accent, linewidth=1.2))
+    ax.add_patch(
+        Polygon(
+            list(zip(left_xs, left_ys, strict=False)),
+            closed=True,
+            facecolor=accent,
+            alpha=0.25,
+            edgecolor=accent,
+            linewidth=1.2,
+        )
+    )
     # Document stack on left pan
     for j in range(3):
-        ax.add_patch(mpatches.FancyBboxPatch(
-            (cx - 168 + j * 8, cy - 5 + beam_tilt + j * 12), 56, 18,
-            boxstyle="round,pad=1", facecolor=accent, alpha=0.3 - j * 0.05, edgecolor="none"))
-    ax.text(cx - 140, cy - 15 + beam_tilt, "SEC", fontsize=7, color=accent,
-            fontweight="bold", ha="center", va="center", alpha=0.5, **_FK)
+        ax.add_patch(
+            mpatches.FancyBboxPatch(
+                (cx - 168 + j * 8, cy - 5 + beam_tilt + j * 12),
+                56,
+                18,
+                boxstyle="round,pad=1",
+                facecolor=accent,
+                alpha=0.3 - j * 0.05,
+                edgecolor="none",
+            )
+        )
+    ax.text(
+        cx - 140,
+        cy - 15 + beam_tilt,
+        "SEC",
+        fontsize=7,
+        color=accent,
+        fontweight="bold",
+        ha="center",
+        va="center",
+        alpha=0.5,
+        **_FK,
+    )
     # Right pan
     right_xs = [cx + 140, cx + 100, cx + 180]
     right_ys = [cy + 80 - beam_tilt, cy + 20 - beam_tilt, cy + 20 - beam_tilt]
-    ax.add_patch(Polygon(list(zip(right_xs, right_ys, strict=False)), closed=True,
-                         facecolor="#3fb950", alpha=0.25, edgecolor="#3fb950", linewidth=1.2))
+    ax.add_patch(
+        Polygon(
+            list(zip(right_xs, right_ys, strict=False)),
+            closed=True,
+            facecolor="#3fb950",
+            alpha=0.25,
+            edgecolor="#3fb950",
+            linewidth=1.2,
+        )
+    )
     # Coin stack on right pan
     for j in range(4):
-        ax.add_patch(mpatches.Circle((cx + 140, cy - 10 - beam_tilt + j * 10), 8,
-                                     facecolor="#3fb950", edgecolor="#2ea043", linewidth=0.8, alpha=0.5 - j * 0.08))
-    ax.text(cx + 140, cy - 25 - beam_tilt, "$", fontsize=9, color="#3fb950",
-            fontweight="bold", ha="center", va="center", alpha=0.6, **_FK)
+        ax.add_patch(
+            mpatches.Circle(
+                (cx + 140, cy - 10 - beam_tilt + j * 10),
+                8,
+                facecolor="#3fb950",
+                edgecolor="#2ea043",
+                linewidth=0.8,
+                alpha=0.5 - j * 0.08,
+            )
+        )
+    ax.text(
+        cx + 140,
+        cy - 25 - beam_tilt,
+        "$",
+        fontsize=9,
+        color="#3fb950",
+        fontweight="bold",
+        ha="center",
+        va="center",
+        alpha=0.6,
+        **_FK,
+    )
     # Top circle (fulcrum)
     ax.add_patch(mpatches.Circle((cx, cy + 120), 22, facecolor=accent, edgecolor="none", alpha=0.4))
-    ax.text(cx, cy + 120, "REG", fontsize=6, color=TEXT_WHITE, fontweight="bold",
-            ha="center", va="center", alpha=0.7, **_FK)
+    ax.text(
+        cx, cy + 120, "REG", fontsize=6, color=TEXT_WHITE, fontweight="bold", ha="center", va="center", alpha=0.7, **_FK
+    )
     # Regulation tags
-    tags = [("MiCA", -180, 160, "#22d3ee"), ("KYC", -120, 175, "#bc8cff"),
-            ("AML", 120, 175, "#d29922"), ("FATF", 180, 160, "#f85149")]
+    tags = [
+        ("MiCA", -180, 160, "#22d3ee"),
+        ("KYC", -120, 175, "#bc8cff"),
+        ("AML", 120, 175, "#d29922"),
+        ("FATF", 180, 160, "#f85149"),
+    ]
     for label, xo, yo, c in tags:
-        ax.add_patch(mpatches.FancyBboxPatch(
-            (cx + xo - 18, cy + yo - 8), 36, 16, boxstyle="round,pad=2",
-            facecolor=c, edgecolor="none", alpha=0.2))
-        ax.text(cx + xo, cy + yo, label, fontsize=6, color=c, fontweight="bold",
-                ha="center", va="center", alpha=0.5, **_FK)
+        ax.add_patch(
+            mpatches.FancyBboxPatch(
+                (cx + xo - 18, cy + yo - 8), 36, 16, boxstyle="round,pad=2", facecolor=c, edgecolor="none", alpha=0.2
+            )
+        )
+        ax.text(
+            cx + xo, cy + yo, label, fontsize=6, color=c, fontweight="bold", ha="center", va="center", alpha=0.5, **_FK
+        )
     # Decorative rings
     for r in [160, 185]:
-        ax.add_patch(mpatches.Circle((cx, cy + 40), r, facecolor="none",
-                                     edgecolor=accent, linewidth=0.6, alpha=0.08))
+        ax.add_patch(mpatches.Circle((cx, cy + 40), r, facecolor="none", edgecolor=accent, linewidth=0.6, alpha=0.08))
     # Gavel icon top-right
     ax.plot([cx + 140, cx + 170], [cy + 130, cy + 145], color="#d29922", linewidth=3, alpha=0.4)
-    ax.add_patch(mpatches.FancyBboxPatch(
-        (cx + 160, cy + 138), 28, 14, boxstyle="round,pad=2",
-        facecolor="#d29922", edgecolor="none", alpha=0.35))
+    ax.add_patch(
+        mpatches.FancyBboxPatch(
+            (cx + 160, cy + 138), 28, 14, boxstyle="round,pad=2", facecolor="#d29922", edgecolor="none", alpha=0.35
+        )
+    )
 
 
 def _draw_visual_social(ax, accent: str) -> None:
@@ -439,15 +598,45 @@ def _draw_visual_social(ax, accent: str) -> None:
 
     np.random.seed(3)
     nodes = [(cx + np.random.randint(-180, 180), cy + np.random.randint(-140, 140)) for _ in range(14)]
-    colors = [accent, "#e91e63", "#22d3ee", "#bc8cff", "#3fb950", "#d29922", "#1da1f2",
-              accent, "#e91e63", "#22d3ee", "#bc8cff", "#3fb950", "#d29922", "#1da1f2"]
+    colors = [
+        accent,
+        "#e91e63",
+        "#22d3ee",
+        "#bc8cff",
+        "#3fb950",
+        "#d29922",
+        "#1da1f2",
+        accent,
+        "#e91e63",
+        "#22d3ee",
+        "#bc8cff",
+        "#3fb950",
+        "#d29922",
+        "#1da1f2",
+    ]
     sizes = [24, 18, 15, 22, 14, 16, 20, 12, 19, 13, 17, 15, 11, 16]
-    edges = [(0, 1), (0, 3), (1, 2), (2, 5), (3, 4), (4, 6), (5, 7), (6, 8),
-             (7, 9), (8, 10), (9, 11), (0, 6), (3, 7), (1, 5), (10, 12), (11, 13), (2, 13)]
+    edges = [
+        (0, 1),
+        (0, 3),
+        (1, 2),
+        (2, 5),
+        (3, 4),
+        (4, 6),
+        (5, 7),
+        (6, 8),
+        (7, 9),
+        (8, 10),
+        (9, 11),
+        (0, 6),
+        (3, 7),
+        (1, 5),
+        (10, 12),
+        (11, 13),
+        (2, 13),
+    ]
     for i, j in edges:
         if i < len(nodes) and j < len(nodes):
-            ax.plot([nodes[i][0], nodes[j][0]], [nodes[i][1], nodes[j][1]],
-                    color="#475569", linewidth=1.0, alpha=0.3)
+            ax.plot([nodes[i][0], nodes[j][0]], [nodes[i][1], nodes[j][1]], color="#475569", linewidth=1.0, alpha=0.3)
     for (nx, ny), color, size in zip(nodes, colors, sizes, strict=False):
         ax.add_patch(mpatches.Circle((nx, ny), size + 8, facecolor=color, edgecolor="none", alpha=0.08))
         ax.add_patch(mpatches.Circle((nx, ny), size, facecolor=color, edgecolor="none", alpha=0.7))
@@ -460,8 +649,9 @@ def _draw_visual_social(ax, accent: str) -> None:
 
     # Platform hints
     for label, xo, yo, c in [("X", -160, 160, "#1da1f2"), ("Reddit", 160, 160, "#ff4500")]:
-        ax.text(cx + xo, cy + yo, label, fontsize=9, color=c, fontweight="bold",
-                ha="center", va="center", alpha=0.3, **_FK)
+        ax.text(
+            cx + xo, cy + yo, label, fontsize=9, color=c, fontweight="bold", ha="center", va="center", alpha=0.3, **_FK
+        )
 
 
 def _draw_visual_defi(ax, accent: str) -> None:
@@ -480,18 +670,24 @@ def _draw_visual_defi(ax, accent: str) -> None:
     for rx, ry, r, color, label in ring_specs:
         ax.add_patch(mpatches.Circle((rx, ry), r, facecolor="none", edgecolor=color, linewidth=3, alpha=0.55))
         ax.add_patch(mpatches.Circle((rx, ry), r - 6, facecolor=color, edgecolor="none", alpha=0.06))
-        ax.text(rx, ry, label, fontsize=7, color=color, fontweight="bold",
-                ha="center", va="center", alpha=0.5, **_FK)
+        ax.text(rx, ry, label, fontsize=7, color=color, fontweight="bold", ha="center", va="center", alpha=0.5, **_FK)
     ax.add_patch(mpatches.Circle((cx, cy + 10), 20, facecolor=accent, edgecolor=TEXT_WHITE, linewidth=2, alpha=0.8))
 
     # TVL mini bars
     np.random.seed(13)
     bar_x = cx - 180
     for i, (h, c) in enumerate([(60, accent), (45, "#22d3ee"), (80, "#bc8cff"), (35, "#3fb950"), (55, "#d29922")]):
-        ax.add_patch(mpatches.FancyBboxPatch(
-            (bar_x + i * 22, cy - 170), 16, h,
-            boxstyle="round,pad=1", facecolor=c, edgecolor="none", alpha=0.45,
-        ))
+        ax.add_patch(
+            mpatches.FancyBboxPatch(
+                (bar_x + i * 22, cy - 170),
+                16,
+                h,
+                boxstyle="round,pad=1",
+                facecolor=c,
+                edgecolor="none",
+                alpha=0.45,
+            )
+        )
     ax.text(bar_x + 44, cy - 180, "TVL", fontsize=7, color=TEXT_MUTED, ha="center", va="top", alpha=0.4, **_FK)
 
 
@@ -513,22 +709,51 @@ def _draw_visual_political(ax, accent: str) -> None:
     for i, (buy_h, sell_h) in enumerate(bar_pairs):
         x = start_x + i * (bar_w * 2 + gap)
         # Buy bar (green, upward)
-        ax.add_patch(mpatches.FancyBboxPatch(
-            (x, cy_base), bar_w, buy_h,
-            boxstyle="round,pad=1", facecolor="#3fb950", edgecolor="none", alpha=0.65))
+        ax.add_patch(
+            mpatches.FancyBboxPatch(
+                (x, cy_base), bar_w, buy_h, boxstyle="round,pad=1", facecolor="#3fb950", edgecolor="none", alpha=0.65
+            )
+        )
         # Sell bar (red, downward from baseline)
-        ax.add_patch(mpatches.FancyBboxPatch(
-            (x + bar_w, cy_base + sell_h), bar_w, abs(sell_h),
-            boxstyle="round,pad=1", facecolor="#f85149", edgecolor="none", alpha=0.65))
+        ax.add_patch(
+            mpatches.FancyBboxPatch(
+                (x + bar_w, cy_base + sell_h),
+                bar_w,
+                abs(sell_h),
+                boxstyle="round,pad=1",
+                facecolor="#f85149",
+                edgecolor="none",
+                alpha=0.65,
+            )
+        )
 
     # Baseline
-    ax.plot([start_x - 15, start_x + total_w + 15], [cy_base, cy_base],
-            color="#475569", linewidth=1.5, alpha=0.5)
+    ax.plot([start_x - 15, start_x + total_w + 15], [cy_base, cy_base], color="#475569", linewidth=1.5, alpha=0.5)
     # Labels
-    ax.text(start_x - 20, cy_base + 10, "BUY", fontsize=6, color="#3fb950",
-            fontweight="bold", ha="right", va="center", alpha=0.5, **_FK)
-    ax.text(start_x - 20, cy_base - 10, "SELL", fontsize=6, color="#f85149",
-            fontweight="bold", ha="right", va="center", alpha=0.5, **_FK)
+    ax.text(
+        start_x - 20,
+        cy_base + 10,
+        "BUY",
+        fontsize=6,
+        color="#3fb950",
+        fontweight="bold",
+        ha="right",
+        va="center",
+        alpha=0.5,
+        **_FK,
+    )
+    ax.text(
+        start_x - 20,
+        cy_base - 10,
+        "SELL",
+        fontsize=6,
+        color="#f85149",
+        fontweight="bold",
+        ha="right",
+        va="center",
+        alpha=0.5,
+        **_FK,
+    )
 
     # Capitol dome silhouette (top area)
     dome_cx, dome_cy = cx, cy + 150
@@ -540,22 +765,29 @@ def _draw_visual_political(ax, accent: str) -> None:
     ax.fill_between(dome_x, dome_cy, dome_y, alpha=0.06, color=accent)
     # Pillars
     for px in [-50, -25, 0, 25, 50]:
-        ax.plot([dome_cx + px, dome_cx + px], [dome_cy - 5, dome_cy + 5],
-                color=accent, linewidth=1.5, alpha=0.2)
+        ax.plot([dome_cx + px, dome_cx + px], [dome_cy - 5, dome_cy + 5], color=accent, linewidth=1.5, alpha=0.2)
     # Base
-    ax.plot([dome_cx - 65, dome_cx + 65], [dome_cy - 5, dome_cy - 5],
-            color=accent, linewidth=1.5, alpha=0.25)
+    ax.plot([dome_cx - 65, dome_cx + 65], [dome_cy - 5, dome_cy - 5], color=accent, linewidth=1.5, alpha=0.25)
 
     # Party color indicators
-    tags = [("SEN", -170, 155, "#1e40af"), ("REP", -170, 135, "#dc2626"),
-            ("$VOL", 170, 155, "#d29922"), ("TRADES", 170, 135, "#8b949e")]
+    tags = [
+        ("SEN", -170, 155, "#1e40af"),
+        ("REP", -170, 135, "#dc2626"),
+        ("$VOL", 170, 155, "#d29922"),
+        ("TRADES", 170, 135, "#8b949e"),
+    ]
     for label, xo, yo, c in tags:
-        ax.text(cx + xo, cy + yo, label, fontsize=6, color=c, fontweight="bold",
-                ha="center", va="center", alpha=0.4, **_FK)
+        ax.text(
+            cx + xo, cy + yo, label, fontsize=6, color=c, fontweight="bold", ha="center", va="center", alpha=0.4, **_FK
+        )
 
     # Trend arrow
-    ax.annotate("", xy=(cx + 180, cy_base + 200), xytext=(cx + 180, cy_base + 120),
-                arrowprops=dict(arrowstyle="->", color="#3fb950", lw=1.5, alpha=0.3))
+    ax.annotate(
+        "",
+        xy=(cx + 180, cy_base + 200),
+        xytext=(cx + 180, cy_base + 120),
+        arrowprops=dict(arrowstyle="->", color="#3fb950", lw=1.5, alpha=0.3),
+    )
 
 
 def _draw_visual_world(ax, accent: str) -> None:
@@ -575,25 +807,35 @@ def _draw_visual_world(ax, accent: str) -> None:
         r = 150 * np.cos(np.radians(lat))
         y_off = 150 * np.sin(np.radians(lat)) * 0.4
         if r > 10:
-            arc = Arc((cx, cy + y_off), r * 2, r * 0.4, angle=0, theta1=0, theta2=360,
-                       edgecolor=accent, linewidth=0.8, alpha=0.2)
+            arc = Arc(
+                (cx, cy + y_off),
+                r * 2,
+                r * 0.4,
+                angle=0,
+                theta1=0,
+                theta2=360,
+                edgecolor=accent,
+                linewidth=0.8,
+                alpha=0.2,
+            )
             ax.add_patch(arc)
     # Longitude lines
     for lon in range(0, 180, 30):
-        arc = Arc((cx, cy), 300, 300 * 0.9, angle=lon, theta1=0, theta2=180,
-                   edgecolor=accent, linewidth=0.6, alpha=0.15)
+        arc = Arc(
+            (cx, cy), 300, 300 * 0.9, angle=lon, theta1=0, theta2=180, edgecolor=accent, linewidth=0.6, alpha=0.15
+        )
         ax.add_patch(arc)
 
     # Market hotspots with labels (major financial centers)
     hotspots = [
-        (-80, 40, 12, "#3fb950", "NYSE"),    # New York
-        (-40, 60, 10, "#22d3ee", "LSE"),      # London
-        (60, 55, 10, "#f85149", "SSE"),       # Shanghai
-        (80, 45, 11, "#bc8cff", "KOSPI"),     # Seoul
-        (85, 50, 9, "#d29922", "NIKKEI"),     # Tokyo
-        (-20, 10, 8, "#3fb950", "JSE"),       # Johannesburg
-        (45, 30, 8, "#22d3ee", "BSE"),        # Mumbai
-        (-60, -20, 7, "#d29922", "B3"),       # Sao Paulo
+        (-80, 40, 12, "#3fb950", "NYSE"),  # New York
+        (-40, 60, 10, "#22d3ee", "LSE"),  # London
+        (60, 55, 10, "#f85149", "SSE"),  # Shanghai
+        (80, 45, 11, "#bc8cff", "KOSPI"),  # Seoul
+        (85, 50, 9, "#d29922", "NIKKEI"),  # Tokyo
+        (-20, 10, 8, "#3fb950", "JSE"),  # Johannesburg
+        (45, 30, 8, "#22d3ee", "BSE"),  # Mumbai
+        (-60, -20, 7, "#d29922", "B3"),  # Sao Paulo
     ]
     for angle_deg, dist_pct, size, color, label in hotspots:
         angle = np.radians(angle_deg)
@@ -603,8 +845,18 @@ def _draw_visual_world(ax, accent: str) -> None:
         # Pulse ring
         ax.add_patch(mpatches.Circle((px, py), size + 6, facecolor=color, edgecolor="none", alpha=0.1))
         ax.add_patch(mpatches.Circle((px, py), size, facecolor=color, edgecolor="none", alpha=0.55))
-        ax.text(px, py - size - 5, label, fontsize=5, color=color, fontweight="bold",
-                ha="center", va="top", alpha=0.5, **_FK)
+        ax.text(
+            px,
+            py - size - 5,
+            label,
+            fontsize=5,
+            color=color,
+            fontweight="bold",
+            ha="center",
+            va="top",
+            alpha=0.5,
+            **_FK,
+        )
 
     # Trade route arcs connecting hotspots
     route_pairs = [(0, 1), (1, 2), (2, 3), (3, 4), (0, 7), (1, 5), (2, 6)]
@@ -616,16 +868,24 @@ def _draw_visual_world(ax, accent: str) -> None:
         a2, d2 = np.radians(h2[0]), 150 * h2[1] / 100
         x1, y1 = cx + d1 * np.cos(a1), cy + d1 * np.sin(a1) * 0.7
         x2, y2 = cx + d2 * np.cos(a2), cy + d2 * np.sin(a2) * 0.7
-        ax.annotate("", xy=(x2, y2), xytext=(x1, y1),
-                    arrowprops=dict(arrowstyle="-", color=accent, lw=0.8, alpha=0.15,
-                                    connectionstyle="arc3,rad=0.3"))
+        ax.annotate(
+            "",
+            xy=(x2, y2),
+            xytext=(x1, y1),
+            arrowprops=dict(arrowstyle="-", color=accent, lw=0.8, alpha=0.15, connectionstyle="arc3,rad=0.3"),
+        )
 
     # Global index tickers around the globe
-    tickers = [("S&P", -185, 10, "#3fb950"), ("FTSE", -170, 90, "#22d3ee"),
-               ("DAX", 170, 90, "#d29922"), ("HSI", 185, 10, "#f85149")]
+    tickers = [
+        ("S&P", -185, 10, "#3fb950"),
+        ("FTSE", -170, 90, "#22d3ee"),
+        ("DAX", 170, 90, "#d29922"),
+        ("HSI", 185, 10, "#f85149"),
+    ]
     for label, xo, yo, c in tickers:
-        ax.text(cx + xo, cy + yo, label, fontsize=6, color=c, fontweight="bold",
-                ha="center", va="center", alpha=0.35, **_FK)
+        ax.text(
+            cx + xo, cy + yo, label, fontsize=6, color=c, fontweight="bold", ha="center", va="center", alpha=0.35, **_FK
+        )
 
 
 def _draw_visual_security(ax, accent: str) -> None:
@@ -642,34 +902,55 @@ def _draw_visual_security(ax, accent: str) -> None:
         bx = cx + np.random.randint(-190, 190)
         by = cy + np.random.randint(-170, 170)
         bit = str(np.random.randint(0, 2))
-        ax.text(bx, by, bit, fontsize=6, color=accent, alpha=np.random.uniform(0.05, 0.15),
-                ha="center", va="center", **_FK)
+        ax.text(
+            bx, by, bit, fontsize=6, color=accent, alpha=np.random.uniform(0.05, 0.15), ha="center", va="center", **_FK
+        )
 
     # Shield shape with glow
     shield_pts = [
-        (cx, cy + 165), (cx - 125, cy + 112), (cx - 145, cy - 20),
-        (cx - 82, cy - 105), (cx, cy - 145),
-        (cx + 82, cy - 105), (cx + 145, cy - 20), (cx + 125, cy + 112),
+        (cx, cy + 165),
+        (cx - 125, cy + 112),
+        (cx - 145, cy - 20),
+        (cx - 82, cy - 105),
+        (cx, cy - 145),
+        (cx + 82, cy - 105),
+        (cx + 145, cy - 20),
+        (cx + 125, cy + 112),
     ]
     # Outer glow
     shield_glow = [(x + (x - cx) * 0.08, y + (y - cy) * 0.08) for x, y in shield_pts]
     ax.add_patch(Polygon(shield_glow, closed=True, facecolor=accent, alpha=0.05, edgecolor="none"))
     # Main shield
-    ax.add_patch(Polygon(shield_pts, closed=True, facecolor=accent, alpha=0.12,
-                         edgecolor=accent, linewidth=2.5))
+    ax.add_patch(Polygon(shield_pts, closed=True, facecolor=accent, alpha=0.12, edgecolor=accent, linewidth=2.5))
     # Inner shield
-    inner = [(cx, cy + 125), (cx - 88, cy + 82), (cx - 104, cy - 12),
-             (cx - 58, cy - 74), (cx, cy - 104),
-             (cx + 58, cy - 74), (cx + 104, cy - 12), (cx + 88, cy + 82)]
-    ax.add_patch(Polygon(inner, closed=True, facecolor=accent, alpha=0.08,
-                         edgecolor=accent, linewidth=1.2, linestyle="--"))
+    inner = [
+        (cx, cy + 125),
+        (cx - 88, cy + 82),
+        (cx - 104, cy - 12),
+        (cx - 58, cy - 74),
+        (cx, cy - 104),
+        (cx + 58, cy - 74),
+        (cx + 104, cy - 12),
+        (cx + 88, cy + 82),
+    ]
+    ax.add_patch(
+        Polygon(inner, closed=True, facecolor=accent, alpha=0.08, edgecolor=accent, linewidth=1.2, linestyle="--")
+    )
 
     # Lock icon (shackle + body)
-    ax.add_patch(mpatches.Circle((cx, cy + 32), 28, facecolor="none",
-                                 edgecolor=TEXT_WHITE, linewidth=2.5, alpha=0.6))
-    ax.add_patch(mpatches.FancyBboxPatch(
-        (cx - 38, cy - 42), 76, 55, boxstyle="round,pad=3",
-        facecolor=accent, edgecolor=TEXT_WHITE, linewidth=1.5, alpha=0.5))
+    ax.add_patch(mpatches.Circle((cx, cy + 32), 28, facecolor="none", edgecolor=TEXT_WHITE, linewidth=2.5, alpha=0.6))
+    ax.add_patch(
+        mpatches.FancyBboxPatch(
+            (cx - 38, cy - 42),
+            76,
+            55,
+            boxstyle="round,pad=3",
+            facecolor=accent,
+            edgecolor=TEXT_WHITE,
+            linewidth=1.5,
+            alpha=0.5,
+        )
+    )
     # Keyhole
     ax.add_patch(mpatches.Circle((cx, cy - 18), 8, facecolor=TEXT_WHITE, edgecolor="none", alpha=0.6))
     ax.plot([cx, cx], [cy - 18, cy - 35], color=TEXT_WHITE, linewidth=2.5, alpha=0.5)
@@ -677,25 +958,60 @@ def _draw_visual_security(ax, accent: str) -> None:
     # Threat level indicator (top-right)
     threat_colors = ["#3fb950", "#3fb950", "#d29922", "#d29922", "#f85149"]
     for i, tc in enumerate(threat_colors):
-        ax.add_patch(mpatches.FancyBboxPatch(
-            (cx + 155, cy + 130 - i * 14), 28, 10, boxstyle="round,pad=1",
-            facecolor=tc, edgecolor="none", alpha=0.4 if i < 3 else 0.7))
-    ax.text(cx + 169, cy + 145, "THREAT", fontsize=5, color=TEXT_MUTED,
-            fontweight="bold", ha="center", va="bottom", alpha=0.4, **_FK)
+        ax.add_patch(
+            mpatches.FancyBboxPatch(
+                (cx + 155, cy + 130 - i * 14),
+                28,
+                10,
+                boxstyle="round,pad=1",
+                facecolor=tc,
+                edgecolor="none",
+                alpha=0.4 if i < 3 else 0.7,
+            )
+        )
+    ax.text(
+        cx + 169,
+        cy + 145,
+        "THREAT",
+        fontsize=5,
+        color=TEXT_MUTED,
+        fontweight="bold",
+        ha="center",
+        va="bottom",
+        alpha=0.4,
+        **_FK,
+    )
 
     # Security labels
-    labels = [("2FA", -175, 140, "#3fb950"), ("SSL", -175, 120, "#22d3ee"),
-              ("AUDIT", 175, -80, "#bc8cff"), ("CVE", 175, -100, "#f85149")]
+    labels = [
+        ("2FA", -175, 140, "#3fb950"),
+        ("SSL", -175, 120, "#22d3ee"),
+        ("AUDIT", 175, -80, "#bc8cff"),
+        ("CVE", 175, -100, "#f85149"),
+    ]
     for label, xo, yo, c in labels:
-        ax.add_patch(mpatches.FancyBboxPatch(
-            (cx + xo - 20, cy + yo - 7), 40, 14, boxstyle="round,pad=2",
-            facecolor=c, edgecolor="none", alpha=0.15))
-        ax.text(cx + xo, cy + yo, label, fontsize=6, color=c, fontweight="bold",
-                ha="center", va="center", alpha=0.5, **_FK)
+        ax.add_patch(
+            mpatches.FancyBboxPatch(
+                (cx + xo - 20, cy + yo - 7), 40, 14, boxstyle="round,pad=2", facecolor=c, edgecolor="none", alpha=0.15
+            )
+        )
+        ax.text(
+            cx + xo, cy + yo, label, fontsize=6, color=c, fontweight="bold", ha="center", va="center", alpha=0.5, **_FK
+        )
 
     # Checkmark in shield center-top
-    ax.text(cx, cy + 80, "SECURE", fontsize=7, color=TEXT_WHITE, fontweight="bold",
-            ha="center", va="center", alpha=0.4, **_FK)
+    ax.text(
+        cx,
+        cy + 80,
+        "SECURE",
+        fontsize=7,
+        color=TEXT_WHITE,
+        fontweight="bold",
+        ha="center",
+        va="center",
+        alpha=0.4,
+        **_FK,
+    )
 
 
 def _draw_visual_default(ax, accent: str) -> None:
@@ -707,17 +1023,25 @@ def _draw_visual_default(ax, accent: str) -> None:
     ax.add_patch(mpatches.Circle((cx, cy), 200, facecolor=accent, edgecolor="none", alpha=0.04))
 
     # Dashboard frame
-    ax.add_patch(mpatches.FancyBboxPatch(
-        (cx - 200, cy - 150), 400, 300,
-        boxstyle="round,pad=0.02,rounding_size=20",
-        facecolor="none", edgecolor="#334155", linewidth=1.2, alpha=0.3,
-    ))
+    ax.add_patch(
+        mpatches.FancyBboxPatch(
+            (cx - 200, cy - 150),
+            400,
+            300,
+            boxstyle="round,pad=0.02,rounding_size=20",
+            facecolor="none",
+            edgecolor="#334155",
+            linewidth=1.2,
+            alpha=0.3,
+        )
+    )
 
     # Three sparklines with area fills
     from matplotlib.patches import Polygon
-    for _idx, (y_off, color, label) in enumerate([
-        (85, accent, "S&P"), (0, "#22d3ee", "BTC"), (-85, "#3fb950", "KOSPI")
-    ]):
+
+    for _idx, (y_off, color, label) in enumerate(
+        [(85, accent, "S&P"), (0, "#22d3ee", "BTC"), (-85, "#3fb950", "KOSPI")]
+    ):
         sx = np.linspace(cx - 175, cx + 175, 30)
         sy = cy + y_off + np.cumsum(np.random.randn(30) * 7)
         # Area fill
@@ -726,13 +1050,33 @@ def _draw_visual_default(ax, accent: str) -> None:
         ax.add_patch(Polygon(verts, closed=True, facecolor=color, alpha=0.08, edgecolor="none"))
         ax.plot(sx, sy, color=color, linewidth=2, alpha=0.7)
         ax.add_patch(mpatches.Circle((sx[-1], sy[-1]), 4, facecolor=color, edgecolor="none", alpha=0.8))
-        ax.text(cx - 185, cy + y_off, label, fontsize=7, color=color, fontweight="bold",
-                ha="right", va="center", alpha=0.5, **_FK)
+        ax.text(
+            cx - 185,
+            cy + y_off,
+            label,
+            fontsize=7,
+            color=color,
+            fontweight="bold",
+            ha="right",
+            va="center",
+            alpha=0.5,
+            **_FK,
+        )
 
     # Financial symbols watermark
     ax.text(cx + 170, cy + 140, "📊", fontsize=24, ha="center", va="center", alpha=0.15)
-    ax.text(cx - 170, cy - 120, "$", fontsize=36, color=accent, fontweight="bold",
-            ha="center", va="center", alpha=0.1, **_FK)
+    ax.text(
+        cx - 170,
+        cy - 120,
+        "$",
+        fontsize=36,
+        color=accent,
+        fontweight="bold",
+        ha="center",
+        va="center",
+        alpha=0.1,
+        **_FK,
+    )
 
 
 # Category -> visual drawing function
@@ -800,16 +1144,30 @@ def generate_og_image(
         ax.plot([x, x], [54, 576], color="#334155", linewidth=0.6, alpha=0.05)
 
     # Top accent bar
-    ax.add_patch(mpatches.FancyBboxPatch(
-        (0, 620), 1200, 10, boxstyle="square,pad=0", facecolor=accent_color, edgecolor="none",
-    ))
+    ax.add_patch(
+        mpatches.FancyBboxPatch(
+            (0, 620),
+            1200,
+            10,
+            boxstyle="square,pad=0",
+            facecolor=accent_color,
+            edgecolor="none",
+        )
+    )
 
     # Outer frame
-    ax.add_patch(mpatches.FancyBboxPatch(
-        (34, 34), 1132, 562,
-        boxstyle="round,pad=0.012,rounding_size=24",
-        facecolor="none", edgecolor="#334155", linewidth=1.0, alpha=0.35,
-    ))
+    ax.add_patch(
+        mpatches.FancyBboxPatch(
+            (34, 34),
+            1132,
+            562,
+            boxstyle="round,pad=0.012,rounding_size=24",
+            facecolor="none",
+            edgecolor="#334155",
+            linewidth=1.0,
+            alpha=0.35,
+        )
+    )
 
     # === Visual element (right side) ===
     draw_fn = _CATEGORY_VISUALS.get(category, _draw_visual_default)
@@ -821,16 +1179,31 @@ def generate_og_image(
 
     # Category badge
     badge_width = max(len(category_label) * 12, 80)
-    ax.add_patch(mpatches.FancyBboxPatch(
-        (56, 484), badge_width, 36,
-        boxstyle="round,pad=4", facecolor=accent_color, edgecolor="none", alpha=0.85,
-    ))
-    ax.text(56 + badge_width / 2, 502, category_label, fontsize=14, color=TEXT_WHITE,
-            fontweight="bold", ha="center", va="center", **_FK)
+    ax.add_patch(
+        mpatches.FancyBboxPatch(
+            (56, 484),
+            badge_width,
+            36,
+            boxstyle="round,pad=4",
+            facecolor=accent_color,
+            edgecolor="none",
+            alpha=0.85,
+        )
+    )
+    ax.text(
+        56 + badge_width / 2,
+        502,
+        category_label,
+        fontsize=14,
+        color=TEXT_WHITE,
+        fontweight="bold",
+        ha="center",
+        va="center",
+        **_FK,
+    )
 
     # Title (large, impactful)
-    ax.text(60, 390, title_text, fontsize=30, color=TEXT_WHITE, fontweight="bold",
-            ha="left", va="center", **_FK)
+    ax.text(60, 390, title_text, fontsize=30, color=TEXT_WHITE, fontweight="bold", ha="left", va="center", **_FK)
 
     # Date
     ax.text(60, 340, date_dotted, fontsize=16, color=TEXT_GRAY, ha="left", va="center", **_FK)
@@ -953,8 +1326,13 @@ def generate_trading_journal_og_image(post: Dict[str, str], output_path: str) ->
     if mode_label:
         ax.add_patch(
             mpatches.FancyBboxPatch(
-                (270, 530), 76, 26, boxstyle="round,pad=0,rounding_size=13",
-                facecolor=mode_color, edgecolor="none", alpha=0.95,
+                (270, 530),
+                76,
+                26,
+                boxstyle="round,pad=0,rounding_size=13",
+                facecolor=mode_color,
+                edgecolor="none",
+                alpha=0.95,
             )
         )
         ax.text(308, 543, mode_label, fontsize=11, color="#ffffff", fontweight="bold", ha="center", va="center", **_FK)

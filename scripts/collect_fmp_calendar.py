@@ -182,9 +182,27 @@ def _build_treasury_section(rates: List[Dict[str, Any]]) -> str:
 def _classify_severity(title: str, section: str = "") -> str:
     """Classify news severity based on title keywords."""
     t = title.lower()
-    high_kw = ["beat", "miss", "surprise", "crash", "surge", "record", "warn",
-               "downgrade", "upgrade", "halt", "delist", "fraud", "sec ", "fda ",
-               "spacex", "ipo", "$1", "billion", "trillion"]
+    high_kw = [
+        "beat",
+        "miss",
+        "surprise",
+        "crash",
+        "surge",
+        "record",
+        "warn",
+        "downgrade",
+        "upgrade",
+        "halt",
+        "delist",
+        "fraud",
+        "sec ",
+        "fda ",
+        "spacex",
+        "ipo",
+        "$1",
+        "billion",
+        "trillion",
+    ]
     if any(kw in t for kw in high_kw):
         return "high"
     low_kw = ["egm", "reallocation", "limited", "conducts"]
@@ -237,11 +255,11 @@ def _build_news_cards(items: List[Dict[str, Any]], heading: str, icon: str, max_
             lines.append(f'      <span class="fmp-news-source">{source}</span>')
         if date:
             lines.append(f'      <span class="fmp-news-date">{date}</span>')
-        lines.append('    </div>')
-        lines.append('  </div>')
-        lines.append('</div>')
+        lines.append("    </div>")
+        lines.append("  </div>")
+        lines.append("</div>")
 
-    lines.append('</div>\n')
+    lines.append("</div>\n")
     return "\n".join(lines)
 
 

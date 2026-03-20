@@ -811,9 +811,9 @@ def main() -> None:
             f'<span class="wm-issue-theme">{html_text(theme)}</span>'
             f'<span class="wm-issue-impact" style="color:{impact_color};">{html_text(impact)}</span>'
             f'<span class="wm-issue-source">{html_text(source)}</span>'
-            f'</div>'
-            f'</div>'
-            f'</div>'
+            f"</div>"
+            f"</div>"
+            f"</div>"
         )
     content_parts.extend(
         [
@@ -823,7 +823,7 @@ def main() -> None:
             "",
             '<div class="wm-issue-list">',
             *issue_cards,
-            '</div>',
+            "</div>",
         ]
     )
 
@@ -838,9 +838,9 @@ def main() -> None:
             f'<span class="wm-source-count">{html_text(count_str)}</span>'
             f'<div class="wm-source-bar-track">'
             f'<div class="wm-source-bar-fill" style="width:{ratio_num}%;background:{bar_color};"></div>'
-            f'</div>'
+            f"</div>"
             f'<span class="wm-source-ratio">{html_text(ratio_str)}</span>'
-            f'</div>'
+            f"</div>"
         )
     content_parts.extend(
         [
@@ -849,7 +849,7 @@ def main() -> None:
             "",
             '<div class="wm-source-coverage">',
             *source_cards,
-            '</div>',
+            "</div>",
         ]
     )
 
