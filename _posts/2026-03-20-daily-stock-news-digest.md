@@ -48,52 +48,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-20 - stock-news 뉴스 요약 
 <li><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPaTdCeWFYUFdTREZKZU56Z2dzVTIweWdYUUR5Q0dNUEVCTVJjdjdKNURCZkpzSkcxTEg2Y28wN01QMmY1N2hia0pFM1Z0NF92ZU02Q2lyS1F1Y1JjNDNfcFAwOHQ4OHVFWlV4VzZ6SGtjNk5PTnVXU0JOZGM2bjRrWkVCTFJXS2Q2SmJ2T3N3anhXdEljdXFPYm4tLVVUUVFzWFNwclgzVmpIU1E?oc=5">US Stock Futures Extend Rally Ahead of Fed Rate Decision</a></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 마이크론 시간외 주가 "돌연 급락" …삼성전자 SK하닉 풍향계 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 199건의 뉴스 중 P1 주요 이슈도 38건 확인됩니다.
-
-### 테마별 동향
-
-- **📊 매크로/금리** (35건): 금리, 환율, 동결 이슈가 시장 구조 변화의 신호일 수 있어 심층 분석이 권장됩니다.
-- **📈 가격/시장** (60건): 코스피, 삼성전자, 하이닉스 관련 보도가 이어지고 있어 관련 포지션 점검이 필요합니다.
-- **🤖 AI/기술** (12건): Iran, Micron, 실적 이슈가 부각되며 해당 섹터의 단기 변동성 확대 가능성이 있습니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 마이크론 시간외 주가 "돌연 급락" …삼성전자 SK하닉 풍향계
-- Why US stock market Dow Jones crashes big today: Dow Jones, S&P 500, Nasdaq fall today as gold and s
-- US Stock Futures Extend Rally Ahead of Fed Rate Decision
-
-### 주요 이슈
-
-- Stock Market Today, March 18: Micron Technology Holds Steady as Investors React 
-- 마이크론 실적 서프라이즈, 삼성전자·하이닉스 기대감 높였다 - 오피니언뉴스
-- Should You Buy the Vanguard S&P 500 ETF After the Recent Stock Market Sell-Off? 
-- 외 35건
-
-### 투자자 체크포인트
-
-- 한국 기사 76건, 글로벌 기사 123건 수집
-- 한국 지수: KOSPI 5,763.22(-2.73%), KOSDAQ 1,143.48(-1.79%), USD/KRW 1,493.54(-0.87%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:58%"></div></div><span class="theme-count">35건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:100%"></div></div><span class="theme-count">60건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:20%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:8%"></div></div><span class="theme-count">5건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:7%"></div></div><span class="theme-count">4건</span></div>
-</div>
-
-*총 199건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-03-20.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-03-20.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- 총 **21건** 수집
+- KOSPI 5,763.22 (-2.73%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 1,143.48 (-1.79%).
 
 ## 테마별 주요 뉴스
 
