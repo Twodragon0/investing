@@ -550,6 +550,9 @@ def main():
     if overall_summary:
         content_parts.append(overall_summary)
 
+    top_themes = summarizer.get_top_themes()
+    priority_items = summarizer.classify_priority()
+
     # Theme distribution chart
     dist = summarizer.generate_distribution_chart()
     if dist:
@@ -557,36 +560,56 @@ def main():
 
     content_parts.append("\n---\n")
 
-    # Source distribution image
-    source_dist = []
-    if telegram_items:
-        source_dist.append({"name": "Telegram", "count": len(telegram_items)})
-    if social_items:
-        # Break down social items by source
-        social_counter = Counter(item.get("source", "Other") for item in social_items)
-        for src, cnt in social_counter.most_common():
-            source_dist.append({"name": src, "count": cnt})
-    if reddit_items:
-        source_dist.append({"name": "Reddit", "count": len(reddit_items)})
-    if political_items:
-        source_dist.append({"name": "Politics/Economy", "count": len(political_items)})
-
-    distribution_image_path = ""
+    briefing_image_path = ""
     try:
-        from common.image_generator import generate_source_distribution_card
+        from common.image_generator import generate_news_briefing_card
 
-        if source_dist:
-            img = generate_source_distribution_card(source_dist, today)
+        card_themes = []
+        for t_name, t_key, t_emoji, t_count in top_themes[:4]:
+            t_articles = summarizer._theme_articles.get(t_key, [])
+            t_keywords = []
+            for art in t_articles[:4]:
+                words = re.findall(r"[a-zA-Z가-힣]{4,}", art.get("title", ""))
+                t_keywords.extend(words[:2])
+
+            seen_kw = set()
+            unique_kw = []
+            for kw in t_keywords:
+                lowered = kw.lower()
+                if lowered in seen_kw:
+                    continue
+                seen_kw.add(lowered)
+                unique_kw.append(kw)
+
+            card_themes.append(
+                {
+                    "name": t_name,
+                    "emoji": t_emoji,
+                    "count": t_count,
+                    "keywords": unique_kw[:3],
+                }
+            )
+
+        if card_themes:
+            p0_alerts = [get_display_title(item) for item in priority_items.get("P0", [])[:2]]
+            img = generate_news_briefing_card(
+                card_themes,
+                today,
+                category="Social Market Briefing",
+                total_count=total_count,
+                urgent_alerts=p0_alerts if p0_alerts else None,
+                filename=f"news-briefing-social-{today}.png",
+            )
             if img:
                 fn = os.path.basename(img)
-                distribution_image_path = f"/assets/images/generated/{fn}"
+                briefing_image_path = f"/assets/images/generated/{fn}"
                 web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
-                content_parts.append(f"\n![source-distribution]({web_path})\n")
-                logger.info("Generated source distribution image")
+                content_parts.append(f"\n![news-briefing]({web_path})\n")
+                logger.info("Generated social briefing image")
     except ImportError as e:
         logger.debug("Optional dependency unavailable: %s", e)
     except Exception as e:
-        logger.warning("Source distribution image failed: %s", e)
+        logger.warning("Social briefing image failed: %s", e)
 
     # Telegram section with descriptions (only show if data exists)
     if telegram_items:
@@ -801,7 +824,6 @@ def main():
     trending_words = [(w, c) for w, c in word_counter.most_common(10) if c >= 3]
 
     # Theme-based opening with sentiment
-    top_themes = summarizer.get_top_themes()
     if top_themes:
         theme_str = ", ".join(f"**{t[0]}**" for t in top_themes[:3])
         if bullish_count > bearish_count * 1.5:
@@ -922,7 +944,7 @@ def main():
         ],
         source="consolidated",
         lang="ko",
-        image=distribution_image_path,
+        image=briefing_image_path,
         extra_frontmatter={"permalink": build_dated_permalink("social-media", today, "daily-social-media-digest")},
         slug="daily-social-media-digest",
     )
