@@ -474,7 +474,6 @@ def generate_image_for_post(filepath: str, post_type: str, date_str: str, body: 
             return None
         generate_news_briefing_card = img_mod.generate_news_briefing_card
         generate_news_summary_card = img_mod.generate_news_summary_card
-        generate_source_distribution_card = img_mod.generate_source_distribution_card
     except Exception as exc:
         logger.warning("image_generator not available: %s", exc)
         return None
@@ -500,17 +499,6 @@ def generate_image_for_post(filepath: str, post_type: str, date_str: str, body: 
                 date_str=date_str,
                 filename=filename,
             )
-
-    # Social media -> try source distribution first
-    if post_type == "daily-social-media-digest":
-        sources = extract_source_data(body)
-        if len(sources) >= 2:
-            return generate_source_distribution_card(
-                sources=sources,
-                date_str=date_str,
-                filename=filename,
-            )
-        # Fall through to briefing card
 
     # Default: news briefing card for all other types
     themes = extract_themes(body, post_type)
