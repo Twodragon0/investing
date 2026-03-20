@@ -221,7 +221,35 @@ layout: default
     }
   });
 
-  render();
+  // --- Hash-based filter ---
+  function applyHash() {
+    var hash = location.hash.replace('#', '');
+    if (!hash) return;
+    var matched = false;
+    filterBtns.forEach(function(btn) {
+      if (btn.dataset.filter === hash) {
+        filterBtns.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        activeFilter = hash;
+        matched = true;
+      }
+    });
+    if (matched) { currentPage = 1; render(); }
+  }
+
+  function updateHash() {
+    var h = activeFilter === 'all' ? '' : '#' + activeFilter;
+    history.replaceState(null, '', location.pathname + h);
+  }
+
+  // Override filter click to also update hash
+  filterBtns.forEach(function(btn) {
+    btn.addEventListener('click', updateHash);
+  });
+
+  window.addEventListener('hashchange', function() { applyHash(); });
+  applyHash();
+  if (activeFilter === 'all') render();
 
   // --- Charts ---
   function initCharts() {
@@ -265,53 +293,66 @@ layout: default
       }
     });
 
-    // Daily posting trend (last 30 days)
-    var dayCounts = {};
+    // Daily posting trend - stacked by category (last 30 days)
+    var dayDates = [];
     var now = new Date();
     for (var i = 29; i >= 0; i--) {
       var d = new Date(now);
       d.setDate(d.getDate() - i);
-      var key = d.toISOString().slice(0, 10);
-      dayCounts[key] = 0;
+      dayDates.push(d.toISOString().slice(0, 10));
     }
+    var shortLabels = dayDates.map(function(k) { return k.slice(5); });
+
+    // Build per-category per-day counts
+    var catColorMap = {
+      'cat-crypto': '#f7931a', 'cat-stock': '#58a6ff', 'cat-journal': '#3fb950',
+      'cat-security': '#f85149', 'cat-analysis': '#bc8cff', 'cat-regulatory': '#d29922',
+      'cat-political': '#dc143c', 'cat-social': '#1da1f2', 'cat-worldmonitor': '#20b2aa',
+      'cat-blockchain': '#8b5cf6', 'cat-devops': '#4fc3f7'
+    };
+    var catDayCounts = {};
     posts.forEach(function(p) {
-      if (p.d in dayCounts) dayCounts[p.d]++;
+      if (dayDates.indexOf(p.d) === -1) return;
+      var key = p.cn;
+      if (!catDayCounts[key]) { catDayCounts[key] = { cc: p.cc, counts: {} }; }
+      catDayCounts[key].counts[p.d] = (catDayCounts[key].counts[p.d] || 0) + 1;
     });
-    var dayLabels = Object.keys(dayCounts);
-    var dayValues = dayLabels.map(function(k) { return dayCounts[k]; });
-    var shortLabels = dayLabels.map(function(k) { return k.slice(5); });
+    var stackDatasets = Object.keys(catDayCounts).map(function(cn) {
+      var info = catDayCounts[cn];
+      var color = catColorMap[info.cc] || '#58a6ff';
+      return {
+        label: cn,
+        data: dayDates.map(function(d) { return info.counts[d] || 0; }),
+        backgroundColor: color + 'aa',
+        borderColor: color,
+        borderWidth: 1,
+        borderRadius: 2,
+        barPercentage: 0.8
+      };
+    });
 
     new Chart(document.getElementById('daily-chart'), {
       type: 'bar',
-      data: {
-        labels: shortLabels,
-        datasets: [{
-          label: '리포트 수',
-          data: dayValues,
-          backgroundColor: 'rgba(77,166,255,0.5)',
-          borderColor: '#4da6ff',
-          borderWidth: 1,
-          borderRadius: 3,
-          barPercentage: 0.7
-        }]
-      },
+      data: { labels: shortLabels, datasets: stackDatasets },
       options: {
         responsive: true,
         maintainAspectRatio: false,
         scales: {
           x: {
+            stacked: true,
             grid: { display: false },
             ticks: { maxRotation: 45, font: { size: 9 }, maxTicksLimit: 15 }
           },
           y: {
+            stacked: true,
             beginAtZero: true,
             grid: { color: gridColor },
-            ticks: { stepSize: 1, font: { size: 10 } }
+            ticks: { stepSize: 2, font: { size: 10 } }
           }
         },
         plugins: {
-          legend: { display: false },
-          tooltip: { callbacks: { title: function(items) { return items[0].label + ' 발행'; } } }
+          legend: { position: 'bottom', labels: { boxWidth: 10, padding: 6, font: { size: 9 } } },
+          tooltip: { mode: 'index', intersect: false }
         }
       }
     });
