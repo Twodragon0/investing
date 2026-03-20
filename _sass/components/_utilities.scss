@@ -870,11 +870,11 @@ main {
 // Post layout wrapper for sidebar TOC
 .post-layout-wrapper {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.25rem;
   align-items: flex-start;
   position: relative;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1200px) {
     flex-direction: column;
     gap: 0;
   }
@@ -883,22 +883,23 @@ main {
     flex: 1;
     min-width: 0;
     max-width: 100%;
+    overflow-x: hidden;
   }
 }
 
 .post-toc-sidebar {
-  width: 200px;
+  width: 190px;
   flex-shrink: 0;
   order: -1;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1200px) {
     width: 100%;
     order: 0;
   }
 }
 
 .post-toc-sticky {
-  @media (min-width: 1025px) {
+  @media (min-width: 1201px) {
     position: sticky;
     top: 4.5rem;
     max-height: calc(100vh - 5.5rem);
