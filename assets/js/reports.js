@@ -457,4 +457,61 @@
     });
   });
   themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+  // === Notification Subscription ===
+  var notifyBtn = document.getElementById('report-notify-btn');
+  if (notifyBtn && 'Notification' in window) {
+    var isSubscribed = localStorage.getItem('report-notify') === 'on';
+    function updateNotifyBtn() {
+      var label = notifyBtn.querySelector('[data-i18n]');
+      if (isSubscribed) {
+        notifyBtn.classList.add('notify-active');
+        if (label) label.textContent = label.getAttribute('data-i18n') === 'reports_notify' ? '알림 켜짐' : label.textContent;
+      } else {
+        notifyBtn.classList.remove('notify-active');
+      }
+    }
+    updateNotifyBtn();
+
+    // Check for new posts since last visit
+    if (isSubscribed) {
+      var lastSeen = localStorage.getItem('report-last-seen') || '';
+      var newest = posts.length ? posts[0].d : '';
+      if (lastSeen && newest > lastSeen && Notification.permission === 'granted') {
+        var newCount = posts.filter(function(p) { return p.d > lastSeen; }).length;
+        if (newCount > 0) {
+          new Notification('Investing Dragon', {
+            body: newCount + '건의 새 리포트가 발행되었습니다.',
+            icon: '/assets/images/favicon-192.png',
+            tag: 'new-reports'
+          });
+        }
+      }
+      if (newest) localStorage.setItem('report-last-seen', newest);
+    }
+
+    notifyBtn.addEventListener('click', function() {
+      if (isSubscribed) {
+        isSubscribed = false;
+        localStorage.setItem('report-notify', 'off');
+        updateNotifyBtn();
+        return;
+      }
+      Notification.requestPermission().then(function(perm) {
+        if (perm === 'granted') {
+          isSubscribed = true;
+          localStorage.setItem('report-notify', 'on');
+          var newest = posts.length ? posts[0].d : '';
+          if (newest) localStorage.setItem('report-last-seen', newest);
+          updateNotifyBtn();
+          new Notification('Investing Dragon', {
+            body: '리포트 알림이 활성화되었습니다.',
+            icon: '/assets/images/favicon-192.png'
+          });
+        }
+      });
+    });
+  } else if (notifyBtn) {
+    notifyBtn.style.display = 'none';
+  }
 })();
