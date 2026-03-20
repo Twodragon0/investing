@@ -7,7 +7,7 @@ tags: ["social-media", "telegram", "twitter", "reddit", "politics", "trump", "�
 keywords: "social-media, telegram, twitter, reddit, politics"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/source-distribution-2026-03-19.png"
+image: "/assets/images/generated/news-briefing-social-2026-03-19.png"
 permalink: "/social-media/2026/03/19/daily-social-media-digest/"
 description: "3월 19일 소셜 미디어 동향 33건을 정리했습니다. 연준 금리 결정과 환율, 한국은행 관련 해석이 대화의 중심에 있었습니다."
 excerpt: "소셜 미디어 동향 33건을 정리했습니다. 연준 금리 결정과 환율 해석이 대화의 중심에 있었습니다."
@@ -45,6 +45,7 @@ image_alt: "소셜 미디어 동향 - 2026-03-19 - 소셜 미디어 뉴스 요�
 </ul>
 </div>
 
+<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-03-19.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-03-19.png' | relative_url }}" alt="news-briefing-social" loading="lazy" decoding="async"></picture>
 
 ## 전체 뉴스 요약
 
