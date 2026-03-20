@@ -27,5 +27,7 @@ main:
         url: /market-analysis/
       - title: "블록체인"
         url: /blockchain/
+  - title: "리포트"
+    url: /reports/
   - title: "About"
     url: /about/
