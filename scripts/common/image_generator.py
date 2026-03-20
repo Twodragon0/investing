@@ -2144,10 +2144,22 @@ def generate_source_distribution_card(
         COLORS["text_secondary"],
     ]
 
-    names = [_to_en(str(s["name"])) for s in sources]
-    counts = [s["count"] for s in sources]
+    ranked_sources = sorted(sources, key=lambda s: s.get("count", 0), reverse=True)
+    if len(ranked_sources) > 4:
+        top_sources = ranked_sources[:4]
+        other_count = sum(max(0, int(src.get("count", 0))) for src in ranked_sources[4:])
+        if other_count > 0:
+            top_sources.append({"name": "Other", "count": other_count})
+        ranked_sources = top_sources
+
+    names = [_to_en(str(s["name"])) for s in ranked_sources]
+    counts = [s["count"] for s in ranked_sources]
     total = sum(counts)
     colors = [donut_colors[i % len(donut_colors)] for i in range(len(names))]
+
+    dominant_idx = int(np.argmax(counts)) if counts else 0
+    dominant_name = names[dominant_idx] if names else "N/A"
+    dominant_share = (counts[dominant_idx] / total * 100) if total else 0.0
 
     fig, ax = plt.subplots(figsize=(8, 8))
     fig.patch.set_facecolor(COLORS["bg"])
@@ -2157,9 +2169,9 @@ def generate_source_distribution_card(
         counts,
         labels=None,
         colors=colors,
-        autopct="%1.1f%%",
+        autopct=lambda pct: f"{pct:.0f}%" if pct >= 10 else "",
         startangle=90,
-        pctdistance=0.78,
+        pctdistance=0.76,
         wedgeprops=dict(width=0.4, edgecolor=COLORS["bg"], linewidth=2),
     )
 
@@ -2183,17 +2195,38 @@ def generate_source_distribution_card(
     ax.text(
         0,
         -0.12,
-        "total",
+        "total flow",
         ha="center",
         va="center",
         fontsize=12,
         color=COLORS["text_secondary"],
         fontfamily=_FONT_FAMILY,
     )
+    ax.text(
+        0,
+        -0.31,
+        f"Top {dominant_name}",
+        ha="center",
+        va="center",
+        fontsize=11,
+        color=COLORS["text"],
+        fontfamily=_FONT_FAMILY,
+        fontweight="bold",
+    )
+    ax.text(
+        0,
+        -0.47,
+        f"{dominant_share:.0f}% share",
+        ha="center",
+        va="center",
+        fontsize=10,
+        color=COLORS["text_secondary"],
+        fontfamily=_FONT_FAMILY,
+    )
 
     # Title
     ax.set_title(
-        f"Source Distribution \u2014 {date_str}",
+        f"Social Flow \u2014 {date_str}",
         fontsize=14,
         fontweight="bold",
         color=COLORS["text"],
@@ -2204,7 +2237,7 @@ def generate_source_distribution_card(
     # Legend
     legend = ax.legend(
         wedges,
-        [f"{n} ({c})" for n, c in zip(names, counts, strict=False)],
+        names,
         loc="lower center",
         bbox_to_anchor=(0.5, -0.12),
         ncol=min(len(names), 4),
@@ -2219,7 +2252,7 @@ def generate_source_distribution_card(
     fig.text(
         0.5,
         -0.02,
-        f"{_DS['watermark']} | Auto-generated",
+        f"{_DS['watermark']} | Visual mix",
         ha="center",
         fontsize=_DS["footer_size"],
         color=COLORS["text_muted"],
@@ -2508,10 +2541,11 @@ def generate_news_briefing_card(
         logger.warning("No themes provided for briefing card")
         return None
 
-    display_themes = themes[:5]
+    display_themes = themes[:4]
     has_urgent = urgent_alerts and len(urgent_alerts) > 0
     urgent_height = 1.15 if has_urgent else 0
     n_themes = len(display_themes)
+    total_articles = total_count or sum(max(0, int(t.get("count", 0))) for t in display_themes)
     bar_area_h = max(n_themes * 0.78, 3.2)
     fig_height = 5.2 + bar_area_h + urgent_height
 
@@ -2522,19 +2556,16 @@ def generate_news_briefing_card(
     ax.set_ylim(0, fig_height)
     ax.axis("off")
 
-    # --- Background: category-specific illustration ---
     cat_type = _get_category_bg_drawer(category)
     _draw_category_illustration(ax, cat_type, 0.3, 0.5, 9.4, fig_height - 1.0, alpha=0.05)
     _add_market_texture(ax, 10, fig_height, accent=COLORS["blue"])
 
-    # Outer border
     _draw_rounded_rect(
         ax, 0.16, 0.16, 9.68, fig_height - 0.32,
         facecolor="none", edgecolor=COLORS["border_highlight"],
         linewidth=1.15, alpha=0.6, pad=0.08,
     )
 
-    # --- Header ---
     header_y = fig_height - 2.3
     header_h = 1.9
     _draw_gradient_bar(
@@ -2558,20 +2589,19 @@ def generate_news_briefing_card(
     )
     ax.text(
         0.55, fig_height - 1.48,
-        f"{date_str} | Top narratives, catalysts and priority signals",
+        f"{date_str} | key market signals",
         fontsize=10.5, color=COLORS["text_secondary"],
         fontfamily=_FONT_FAMILY, va="center",
     )
 
-    # --- Metric chips ---
-    computed_total = total_count or sum(t.get("count", 0) for t in display_themes)
+    computed_total = total_articles
     alert_value = str(len(urgent_alerts or []))
     chip_y = header_y - 0.92
     chip_w = 2.84
     chip_gap = 0.2
     _draw_metric_chip(
         ax, 0.35, chip_y, chip_w, 0.72,
-        label="Stories", value=str(computed_total), accent=COLORS["blue"],
+        label="Articles", value=str(total_articles), accent=COLORS["blue"],
     )
     _draw_metric_chip(
         ax, 0.35 + chip_w + chip_gap, chip_y, chip_w, 0.72,
@@ -2580,12 +2610,11 @@ def generate_news_briefing_card(
     _draw_metric_chip(
         ax, 0.35 + (chip_w + chip_gap) * 2, chip_y, chip_w + 0.22, 0.72,
         label="Alerts",
-        value=alert_value if has_urgent else "0",
+        value=alert_value,
         accent=COLORS["orange"] if has_urgent else COLORS["green"],
         value_color=COLORS["orange"] if has_urgent else COLORS["text"],
     )
 
-    # --- Main visual area: Donut (left) + Bars (right) ---
     panel_y = chip_y - 0.6
     panel_h = panel_y - 0.38
     _draw_rounded_rect(
@@ -2599,7 +2628,6 @@ def generate_news_briefing_card(
         COLORS["green"], COLORS["cyan"],
     ]
 
-    # -- Mini donut chart (left side) --
     donut_cx = 2.2
     donut_cy = panel_y - panel_h * 0.45
     donut_r = min(panel_h * 0.32, 1.35)
@@ -2608,12 +2636,10 @@ def generate_news_briefing_card(
         center_value=computed_total,
     )
 
-    # Donut legend (compact, below donut)
     legend_y_start = donut_cy - donut_r - 0.35
     for i, theme in enumerate(display_themes):
         name = _to_en(theme.get("name", ""))
         t_color = theme_colors[i % len(theme_colors)]
-        # Two-column layout for legend
         col = i % 2
         row = i // 2
         lx = 0.55 + col * 1.85
@@ -2626,11 +2652,10 @@ def generate_news_briefing_card(
             fontfamily=_FONT_FAMILY, va="center",
         )
 
-    # -- Horizontal gradient bars (right side) --
     bar_x_start = 4.4
     bar_x_end = 9.4
     bar_max_w = bar_x_end - bar_x_start
-    max_count = max((t.get("count", 0) for t in display_themes), default=1) or 1
+    max_count = max((max(0, int(t.get("count", 0))) for t in display_themes), default=1) or 1
     bars_top = panel_y - 0.45
 
     ax.text(
@@ -2647,69 +2672,43 @@ def generate_news_briefing_card(
         y = bars_top - 0.35 - i * 0.78
         t_color = theme_colors[i % len(theme_colors)]
         name = _to_en(theme.get("name", ""))
-        count = theme.get("count", 0)
-        raw_keywords = theme.get("keywords", [])
-        keywords = _filter_en_keywords(raw_keywords)
-        if not keywords and name:
-            name_parts = [p.strip() for p in name.replace("/", " ").split() if len(p.strip()) >= 3]
-            keywords = name_parts[:2]
+        count = max(0, int(theme.get("count", 0)))
+        share = (count / total_articles * 100) if total_articles else 0.0
 
-        # Theme name
         ax.text(
             bar_x_start, y + 0.18, _truncate_text(name, 20),
             fontsize=11, fontweight="bold", color=COLORS["text"],
             fontfamily=_FONT_FAMILY, va="center",
         )
+        ax.text(
+            bar_x_end - 0.45, y + 0.18, f"{share:.0f}%",
+            fontsize=10.5, fontweight="bold", color=t_color,
+            fontfamily=_FONT_FAMILY, va="center", ha="right",
+        )
 
-        # Keywords chips (small, next to name)
-        kw_x = bar_x_start + 0.12 + len(name) * 0.085
-        kw_x = min(kw_x, bar_x_start + 2.2)
-        for kw in keywords[:2]:
-            token = _truncate_text(kw, 10)
-            tw = max(0.4, len(token) * 0.08 + 0.2)
-            if kw_x + tw > bar_x_end - 1.0:
-                break
-            _draw_rounded_rect(
-                ax, kw_x, y + 0.06, tw, 0.22,
-                facecolor=COLORS["bg_inner"], edgecolor=COLORS["border"],
-                linewidth=0.4, alpha=0.8, pad=0.008,
-            )
-            ax.text(
-                kw_x + 0.06, y + 0.17, token,
-                fontsize=7.5, color=COLORS["text_muted"],
-                fontfamily=_FONT_FAMILY, va="center",
-            )
-            kw_x += tw + 0.08
-
-        # Gradient bar
         bar_y = y - 0.12
         bar_h = 0.22
         bar_w = max(bar_max_w * (count / max_count), 0.3)
-        # Track (background)
         _draw_rounded_rect(
             ax, bar_x_start, bar_y, bar_max_w, bar_h,
             facecolor=COLORS["bg_inner"], alpha=0.5, pad=0.005,
         )
-        # Fill (gradient)
         _draw_gradient_bar(
             ax, bar_x_start, bar_y, bar_w, bar_h,
             color_start=t_color, color_end=COLORS["bg_card"],
             steps=20, alpha=0.85,
         )
-        # Rounded overlay for fill
         _draw_rounded_rect(
             ax, bar_x_start, bar_y, bar_w, bar_h,
             facecolor="none", edgecolor=t_color,
             linewidth=0.8, alpha=0.6, pad=0.005,
         )
-        # Count label at end of bar
         ax.text(
             bar_x_start + bar_w + 0.15, bar_y + bar_h * 0.5,
             str(count), fontsize=11, fontweight="bold",
             color=t_color, fontfamily=_FONT_FAMILY, va="center",
         )
 
-    # --- Urgent alert ---
     if has_urgent:
         y_urgent = 0.7 + urgent_height * 0.3
         _draw_rounded_rect(
@@ -2722,7 +2721,6 @@ def generate_news_briefing_card(
             color_start=COLORS["red"], color_end=COLORS["red_dim"],
             steps=28, alpha=0.5,
         )
-        # Alert icon (triangle)
         tri_cx, tri_cy = 0.85, y_urgent + 0.02
         tri = mpatches.RegularPolygon(
             (tri_cx, tri_cy), 3, radius=0.18,
@@ -2735,23 +2733,23 @@ def generate_news_briefing_card(
             fontfamily=_FONT_FAMILY, va="center", ha="center",
         )
         ax.text(
-            1.25, y_urgent + 0.02, "URGENT",
+            1.25, y_urgent + 0.02, f"ALERT {alert_value}",
             fontsize=11, fontweight="bold", color=COLORS["red"],
             fontfamily=_FONT_FAMILY, va="center",
         )
         alert_text = ""
         if urgent_alerts:
             first_alert = _to_en(urgent_alerts[0])
-            alert_text = _truncate_text(_sanitize_og_text(first_alert), 68)
+            alert_text = _truncate_text(_sanitize_og_text(first_alert), 58)
         ax.text(
             2.55, y_urgent + 0.02, alert_text,
-            fontsize=10, color=COLORS["text"],
+            fontsize=9.8, color=COLORS["text"],
             fontfamily=_FONT_FAMILY, va="center",
         )
 
     _add_footer(
         ax,
-        _sanitize_og_text(f"{_DS['watermark']} | Auto-generated News Briefing | {date_str}"),
+        _sanitize_og_text(f"{_DS['watermark']} | Visual briefing | {date_str}"),
         y=0.08,
     )
 
