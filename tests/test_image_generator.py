@@ -14,6 +14,7 @@ import pytest
 # Helpers: matplotlib/numpy stub so module loads cleanly even if not installed
 # ---------------------------------------------------------------------------
 
+
 def _get_module():
     """Return the image_generator module (already imported or freshly imported)."""
     mod_name = "common.image_generator"
@@ -25,6 +26,7 @@ def _get_module():
 # Import at module level so fixtures can reference it
 try:
     from common import image_generator as ig
+
     _IMPORT_OK = True
 except Exception:
     ig = None  # type: ignore
@@ -37,6 +39,7 @@ pytestmark = pytest.mark.skipif(not _IMPORT_OK, reason="image_generator could no
 # ---------------------------------------------------------------------------
 # 1. _to_en  — Korean → English translation helper
 # ---------------------------------------------------------------------------
+
 
 class TestToEn:
     def test_exact_match_returns_english(self):
@@ -78,6 +81,7 @@ class TestToEn:
 # ---------------------------------------------------------------------------
 # 2. _filter_en_keywords  — Filter noise words, keep meaningful ones
 # ---------------------------------------------------------------------------
+
 
 class TestFilterEnKeywords:
     def test_removes_noise_words(self):
@@ -124,8 +128,30 @@ class TestFilterEnKeywords:
 
 
 # ---------------------------------------------------------------------------
-# 3. _safe_float  — Safely convert value to float
+# 3. _sanitize_og_text  — Remove unsupported glyphs/noisy punctuation
 # ---------------------------------------------------------------------------
+
+
+class TestSanitizeOgText:
+    def test_keeps_ascii_finance_text(self):
+        text = "FOMC decision keeps BTC above 70k"
+        assert ig._sanitize_og_text(text) == text
+
+    def test_removes_emoji_and_box_glyphs(self):
+        result = ig._sanitize_og_text("🚨 FOMC□ alert")
+        assert "🚨" not in result
+        assert "□" not in result
+        assert "FOMC" in result
+
+    def test_collapses_extra_whitespace(self):
+        result = ig._sanitize_og_text("FOMC   alert\n\nBTC")
+        assert "  " not in result
+
+
+# ---------------------------------------------------------------------------
+# 4. _safe_float  — Safely convert value to float
+# ---------------------------------------------------------------------------
+
 
 class TestSafeFloat:
     def test_none_returns_default(self):
@@ -169,6 +195,7 @@ class TestSafeFloat:
 # 4. _get_change_color  — Color based on price change
 # ---------------------------------------------------------------------------
 
+
 class TestGetChangeColor:
     def test_positive_returns_green(self):
         color = ig._get_change_color(1.5)
@@ -199,22 +226,40 @@ class TestGetChangeColor:
 # 5. COLORS  — Color palette constants
 # ---------------------------------------------------------------------------
 
+
 class TestColors:
     def test_required_keys_present(self):
         required = [
-            "bg", "bg_card", "bg_inner", "bg_header",
-            "text", "text_secondary", "text_muted",
-            "green", "green_dim", "red", "red_dim",
-            "blue", "orange", "purple", "cyan",
-            "accent", "warning", "info",
-            "border", "border_highlight",
-            "gold", "silver", "bronze",
+            "bg",
+            "bg_card",
+            "bg_inner",
+            "bg_header",
+            "text",
+            "text_secondary",
+            "text_muted",
+            "green",
+            "green_dim",
+            "red",
+            "red_dim",
+            "blue",
+            "orange",
+            "purple",
+            "cyan",
+            "accent",
+            "warning",
+            "info",
+            "border",
+            "border_highlight",
+            "gold",
+            "silver",
+            "bronze",
         ]
         for key in required:
             assert key in ig.COLORS, f"Missing COLORS key: {key}"
 
     def test_all_values_are_hex_colors(self):
         import re
+
         hex_pattern = re.compile(r"^#[0-9a-fA-F]{6}$")
         for key, val in ig.COLORS.items():
             assert hex_pattern.match(val), f"COLORS[{key!r}] = {val!r} is not a valid hex color"
@@ -236,10 +281,19 @@ class TestColors:
 # 6. _DS  — Design system constants
 # ---------------------------------------------------------------------------
 
+
 class TestDesignSystem:
     def test_required_keys_present(self):
-        required = ["dpi", "footer_size", "title_size", "subtitle_size",
-                    "body_size", "label_size", "row_height", "watermark"]
+        required = [
+            "dpi",
+            "footer_size",
+            "title_size",
+            "subtitle_size",
+            "body_size",
+            "label_size",
+            "row_height",
+            "watermark",
+        ]
         for key in required:
             assert key in ig._DS, f"Missing _DS key: {key}"
 
@@ -260,6 +314,7 @@ class TestDesignSystem:
 # ---------------------------------------------------------------------------
 # 7. _KO_TO_EN  — Translation dictionary structure
 # ---------------------------------------------------------------------------
+
 
 class TestKoToEnDict:
     def test_all_keys_are_strings(self):
@@ -283,6 +338,7 @@ class TestKoToEnDict:
 # ---------------------------------------------------------------------------
 # 8. _convert_to_webp  — PIL-dependent, test graceful degradation
 # ---------------------------------------------------------------------------
+
 
 class TestConvertToWebp:
     def test_returns_none_when_file_not_found(self, tmp_path):
@@ -313,6 +369,7 @@ class TestConvertToWebp:
 # ---------------------------------------------------------------------------
 # 9. generate_* functions  — Return None when matplotlib unavailable
 # ---------------------------------------------------------------------------
+
 
 class TestGenerateFunctionsNoMpl:
     """When _MPL_AVAILABLE is False, all generate_* functions should return None."""
@@ -372,6 +429,7 @@ class TestGenerateFunctionsNoMpl:
 # 10. generate_top_coins_card  — empty coins with MPL available
 # ---------------------------------------------------------------------------
 
+
 class TestGenerateTopCoinsCard:
     def test_empty_coins_returns_none(self):
         """Empty coin list should return None regardless of MPL availability."""
@@ -384,6 +442,7 @@ class TestGenerateTopCoinsCard:
 # ---------------------------------------------------------------------------
 # 11. _heatmap_bg_color  — With MPL available
 # ---------------------------------------------------------------------------
+
 
 class TestHeatmapBgColor:
     def test_positive_change_returns_hex(self):
@@ -420,6 +479,7 @@ class TestHeatmapBgColor:
 # 12. _ensure_dir + _save_and_close  — With MPL, using tmp_path
 # ---------------------------------------------------------------------------
 
+
 class TestEnsureDirAndSave:
     def test_ensure_dir_creates_directory(self, tmp_path, monkeypatch):
         monkeypatch.setattr(ig, "IMAGES_DIR", str(tmp_path / "newdir"))
@@ -433,6 +493,7 @@ class TestEnsureDirAndSave:
 
     def test_save_and_close_creates_png(self, tmp_path):
         import matplotlib.pyplot as plt
+
         fig, ax = plt.subplots(figsize=(4, 3))
         filepath = str(tmp_path / "test_output.png")
         ig._save_and_close(fig, filepath)
@@ -440,6 +501,7 @@ class TestEnsureDirAndSave:
 
     def test_save_and_close_creates_webp(self, tmp_path):
         import matplotlib.pyplot as plt
+
         fig, ax = plt.subplots(figsize=(4, 3))
         filepath = str(tmp_path / "test_output2.png")
         ig._save_and_close(fig, filepath)
@@ -451,9 +513,11 @@ class TestEnsureDirAndSave:
 # 13. _convert_to_webp  — With real PNG file
 # ---------------------------------------------------------------------------
 
+
 class TestConvertToWebpWithPng:
     def test_converts_valid_png(self, tmp_path):
         import matplotlib.pyplot as plt
+
         fig, ax = plt.subplots(figsize=(2, 2))
         png_path = str(tmp_path / "sample.png")
         plt.savefig(png_path, dpi=50)
@@ -471,6 +535,7 @@ class TestConvertToWebpWithPng:
 # ---------------------------------------------------------------------------
 # 14. _truncate_text
 # ---------------------------------------------------------------------------
+
 
 class TestTruncateText:
     def test_short_text_unchanged(self):
@@ -496,19 +561,35 @@ class TestTruncateText:
 # 15. generate_top_coins_card  — With MPL, real data
 # ---------------------------------------------------------------------------
 
+
 class TestGenerateTopCoinsCardWithMpl:
     def test_returns_path_with_valid_coins(self, tmp_path, monkeypatch):
         monkeypatch.setattr(ig, "IMAGES_DIR", str(tmp_path))
         coins = [
-            {"symbol": "BTC", "name": "Bitcoin", "current_price": 50000,
-             "price_change_percentage_24h": 2.5, "price_change_percentage_7d_in_currency": -1.0,
-             "market_cap": 1_000_000_000_000},
-            {"symbol": "ETH", "name": "Ethereum", "current_price": 3000,
-             "price_change_percentage_24h": -1.2, "price_change_percentage_7d_in_currency": 3.0,
-             "market_cap": 400_000_000_000},
-            {"symbol": "BNB", "name": "Binance Coin", "current_price": 400,
-             "price_change_percentage_24h": 0.5, "price_change_percentage_7d_in_currency": 0.0,
-             "market_cap": 60_000_000_000},
+            {
+                "symbol": "BTC",
+                "name": "Bitcoin",
+                "current_price": 50000,
+                "price_change_percentage_24h": 2.5,
+                "price_change_percentage_7d_in_currency": -1.0,
+                "market_cap": 1_000_000_000_000,
+            },
+            {
+                "symbol": "ETH",
+                "name": "Ethereum",
+                "current_price": 3000,
+                "price_change_percentage_24h": -1.2,
+                "price_change_percentage_7d_in_currency": 3.0,
+                "market_cap": 400_000_000_000,
+            },
+            {
+                "symbol": "BNB",
+                "name": "Binance Coin",
+                "current_price": 400,
+                "price_change_percentage_24h": 0.5,
+                "price_change_percentage_7d_in_currency": 0.0,
+                "market_cap": 60_000_000_000,
+            },
         ]
         result = ig.generate_top_coins_card(coins, "2026-01-01")
         assert result is not None
@@ -519,9 +600,14 @@ class TestGenerateTopCoinsCardWithMpl:
     def test_custom_filename(self, tmp_path, monkeypatch):
         monkeypatch.setattr(ig, "IMAGES_DIR", str(tmp_path))
         coins = [
-            {"symbol": "BTC", "name": "Bitcoin", "current_price": 50000,
-             "price_change_percentage_24h": 1.0, "price_change_percentage_7d_in_currency": 2.0,
-             "market_cap": 1_000_000_000_000},
+            {
+                "symbol": "BTC",
+                "name": "Bitcoin",
+                "current_price": 50000,
+                "price_change_percentage_24h": 1.0,
+                "price_change_percentage_7d_in_currency": 2.0,
+                "market_cap": 1_000_000_000_000,
+            },
         ]
         result = ig.generate_top_coins_card(coins, "2026-01-01", filename="custom.png")
         assert result == "/assets/images/generated/custom.png"
@@ -529,9 +615,13 @@ class TestGenerateTopCoinsCardWithMpl:
     def test_cmc_source(self, tmp_path, monkeypatch):
         monkeypatch.setattr(ig, "IMAGES_DIR", str(tmp_path))
         coins = [
-            {"symbol": "BTC", "name": "Bitcoin",
-             "quote": {"USD": {"price": 50000, "percent_change_24h": 1.5,
-                                "percent_change_7d": -0.5, "market_cap": 1e12}}},
+            {
+                "symbol": "BTC",
+                "name": "Bitcoin",
+                "quote": {
+                    "USD": {"price": 50000, "percent_change_24h": 1.5, "percent_change_7d": -0.5, "market_cap": 1e12}
+                },
+            },
         ]
         result = ig.generate_top_coins_card(coins, "2026-01-01", source="cmc")
         assert result is not None
@@ -539,9 +629,14 @@ class TestGenerateTopCoinsCardWithMpl:
     def test_price_formatting_small(self, tmp_path, monkeypatch):
         monkeypatch.setattr(ig, "IMAGES_DIR", str(tmp_path))
         coins = [
-            {"symbol": "DOGE", "name": "Dogecoin", "current_price": 0.005,
-             "price_change_percentage_24h": 10.0, "price_change_percentage_7d_in_currency": 20.0,
-             "market_cap": 1_000_000_000},
+            {
+                "symbol": "DOGE",
+                "name": "Dogecoin",
+                "current_price": 0.005,
+                "price_change_percentage_24h": 10.0,
+                "price_change_percentage_7d_in_currency": 20.0,
+                "market_cap": 1_000_000_000,
+            },
         ]
         result = ig.generate_top_coins_card(coins, "2026-01-02")
         assert result is not None
@@ -549,10 +644,14 @@ class TestGenerateTopCoinsCardWithMpl:
     def test_many_coins_up_to_15(self, tmp_path, monkeypatch):
         monkeypatch.setattr(ig, "IMAGES_DIR", str(tmp_path))
         coins = [
-            {"symbol": f"C{i}", "name": f"Coin{i}", "current_price": 100 + i,
-             "price_change_percentage_24h": float(i - 5),
-             "price_change_percentage_7d_in_currency": float(i - 7),
-             "market_cap": 1_000_000_000 * (20 - i)}
+            {
+                "symbol": f"C{i}",
+                "name": f"Coin{i}",
+                "current_price": 100 + i,
+                "price_change_percentage_24h": float(i - 5),
+                "price_change_percentage_7d_in_currency": float(i - 7),
+                "market_cap": 1_000_000_000 * (20 - i),
+            }
             for i in range(20)
         ]
         result = ig.generate_top_coins_card(coins, "2026-01-03")
@@ -561,9 +660,14 @@ class TestGenerateTopCoinsCardWithMpl:
     def test_mcap_trillion(self, tmp_path, monkeypatch):
         monkeypatch.setattr(ig, "IMAGES_DIR", str(tmp_path))
         coins = [
-            {"symbol": "BTC", "name": "Bitcoin", "current_price": 100000,
-             "price_change_percentage_24h": 0.0, "price_change_percentage_7d_in_currency": 0.0,
-             "market_cap": 2_000_000_000_000},
+            {
+                "symbol": "BTC",
+                "name": "Bitcoin",
+                "current_price": 100000,
+                "price_change_percentage_24h": 0.0,
+                "price_change_percentage_7d_in_currency": 0.0,
+                "market_cap": 2_000_000_000_000,
+            },
         ]
         result = ig.generate_top_coins_card(coins, "2026-01-04")
         assert result is not None
@@ -572,6 +676,7 @@ class TestGenerateTopCoinsCardWithMpl:
 # ---------------------------------------------------------------------------
 # 16. generate_fear_greed_gauge  — With MPL
 # ---------------------------------------------------------------------------
+
 
 class TestGenerateFearGreedGauge:
     def test_neutral_value(self, tmp_path, monkeypatch):
@@ -621,14 +726,13 @@ class TestGenerateFearGreedGauge:
 # 17. generate_market_heatmap  — With MPL
 # ---------------------------------------------------------------------------
 
+
 class TestGenerateMarketHeatmap:
     def test_basic_coingecko(self, tmp_path, monkeypatch):
         monkeypatch.setattr(ig, "IMAGES_DIR", str(tmp_path))
         coins = [
-            {"symbol": "BTC", "current_price": 50000,
-             "price_change_percentage_24h": 2.5, "market_cap": 1e12},
-            {"symbol": "ETH", "current_price": 3000,
-             "price_change_percentage_24h": -1.5, "market_cap": 4e11},
+            {"symbol": "BTC", "current_price": 50000, "price_change_percentage_24h": 2.5, "market_cap": 1e12},
+            {"symbol": "ETH", "current_price": 3000, "price_change_percentage_24h": -1.5, "market_cap": 4e11},
         ]
         result = ig.generate_market_heatmap(coins, "2026-01-01")
         assert result is not None
@@ -642,8 +746,7 @@ class TestGenerateMarketHeatmap:
     def test_cmc_source(self, tmp_path, monkeypatch):
         monkeypatch.setattr(ig, "IMAGES_DIR", str(tmp_path))
         coins = [
-            {"symbol": "BTC",
-             "quote": {"USD": {"price": 50000, "percent_change_24h": 5.0, "market_cap": 1e12}}},
+            {"symbol": "BTC", "quote": {"USD": {"price": 50000, "percent_change_24h": 5.0, "market_cap": 1e12}}},
         ]
         result = ig.generate_market_heatmap(coins, "2026-01-01", source="cmc")
         assert result is not None
@@ -651,8 +754,7 @@ class TestGenerateMarketHeatmap:
     def test_many_coins(self, tmp_path, monkeypatch):
         monkeypatch.setattr(ig, "IMAGES_DIR", str(tmp_path))
         coins = [
-            {"symbol": f"C{i}", "current_price": 100.0,
-             "price_change_percentage_24h": float(i - 10), "market_cap": 1e9}
+            {"symbol": f"C{i}", "current_price": 100.0, "price_change_percentage_24h": float(i - 10), "market_cap": 1e9}
             for i in range(25)
         ]
         result = ig.generate_market_heatmap(coins, "2026-01-01")
@@ -661,8 +763,7 @@ class TestGenerateMarketHeatmap:
     def test_high_change_border_highlight(self, tmp_path, monkeypatch):
         monkeypatch.setattr(ig, "IMAGES_DIR", str(tmp_path))
         coins = [
-            {"symbol": "MOON", "current_price": 0.5,
-             "price_change_percentage_24h": 25.0, "market_cap": 1e8},
+            {"symbol": "MOON", "current_price": 0.5, "price_change_percentage_24h": 25.0, "market_cap": 1e8},
         ]
         result = ig.generate_market_heatmap(coins, "2026-01-01")
         assert result is not None
@@ -671,6 +772,7 @@ class TestGenerateMarketHeatmap:
 # ---------------------------------------------------------------------------
 # 18. generate_news_summary_card  — With MPL
 # ---------------------------------------------------------------------------
+
 
 class TestGenerateNewsSummaryCard:
     def test_basic(self, tmp_path, monkeypatch):
@@ -705,6 +807,7 @@ class TestGenerateNewsSummaryCard:
 # ---------------------------------------------------------------------------
 # 19. generate_market_snapshot_card  — With MPL
 # ---------------------------------------------------------------------------
+
 
 class TestGenerateMarketSnapshotCard:
     def test_basic(self, tmp_path, monkeypatch):
@@ -750,6 +853,7 @@ class TestGenerateMarketSnapshotCard:
 # 20. generate_source_distribution_card  — With MPL
 # ---------------------------------------------------------------------------
 
+
 class TestGenerateSourceDistributionCard:
     def test_basic(self, tmp_path, monkeypatch):
         monkeypatch.setattr(ig, "IMAGES_DIR", str(tmp_path))
@@ -790,6 +894,7 @@ class TestGenerateSourceDistributionCard:
 # 21. generate_sector_heatmap  — With MPL
 # ---------------------------------------------------------------------------
 
+
 class TestGenerateSectorHeatmap:
     def test_basic(self, tmp_path, monkeypatch):
         monkeypatch.setattr(ig, "IMAGES_DIR", str(tmp_path))
@@ -810,8 +915,7 @@ class TestGenerateSectorHeatmap:
     def test_many_sectors(self, tmp_path, monkeypatch):
         monkeypatch.setattr(ig, "IMAGES_DIR", str(tmp_path))
         sector_data = {
-            f"XL{i}": {"name": f"Sector{i}", "price": str(50 + i), "change_pct": float(i - 5)}
-            for i in range(11)
+            f"XL{i}": {"name": f"Sector{i}", "price": str(50 + i), "change_pct": float(i - 5)} for i in range(11)
         }
         result = ig.generate_sector_heatmap(sector_data, "2026-01-01")
         assert result is not None
@@ -844,6 +948,7 @@ class TestGenerateSectorHeatmap:
 # 22. generate_news_briefing_card  — With MPL
 # ---------------------------------------------------------------------------
 
+
 class TestGenerateNewsBriefingCard:
     def _sample_themes(self):
         return [
@@ -866,48 +971,33 @@ class TestGenerateNewsBriefingCard:
     def test_with_urgent_alerts(self, tmp_path, monkeypatch):
         monkeypatch.setattr(ig, "IMAGES_DIR", str(tmp_path))
         result = ig.generate_news_briefing_card(
-            self._sample_themes(), "2026-01-01",
-            urgent_alerts=["BREAKING: Major exchange hacked for $500M"]
+            self._sample_themes(), "2026-01-01", urgent_alerts=["BREAKING: Major exchange hacked for $500M"]
         )
         assert result is not None
 
     def test_with_total_count(self, tmp_path, monkeypatch):
         monkeypatch.setattr(ig, "IMAGES_DIR", str(tmp_path))
-        result = ig.generate_news_briefing_card(
-            self._sample_themes(), "2026-01-01",
-            total_count=100
-        )
+        result = ig.generate_news_briefing_card(self._sample_themes(), "2026-01-01", total_count=100)
         assert result is not None
 
     def test_custom_category(self, tmp_path, monkeypatch):
         monkeypatch.setattr(ig, "IMAGES_DIR", str(tmp_path))
-        result = ig.generate_news_briefing_card(
-            self._sample_themes(), "2026-01-01",
-            category="Crypto News"
-        )
+        result = ig.generate_news_briefing_card(self._sample_themes(), "2026-01-01", category="Crypto News")
         assert result is not None
 
     def test_custom_filename(self, tmp_path, monkeypatch):
         monkeypatch.setattr(ig, "IMAGES_DIR", str(tmp_path))
-        result = ig.generate_news_briefing_card(
-            self._sample_themes(), "2026-01-01", filename="brief.png"
-        )
+        result = ig.generate_news_briefing_card(self._sample_themes(), "2026-01-01", filename="brief.png")
         assert result == "/assets/images/generated/brief.png"
 
     def test_no_urgent_alerts(self, tmp_path, monkeypatch):
         monkeypatch.setattr(ig, "IMAGES_DIR", str(tmp_path))
-        result = ig.generate_news_briefing_card(
-            self._sample_themes(), "2026-01-01",
-            urgent_alerts=None
-        )
+        result = ig.generate_news_briefing_card(self._sample_themes(), "2026-01-01", urgent_alerts=None)
         assert result is not None
 
     def test_many_themes_truncated_to_5(self, tmp_path, monkeypatch):
         monkeypatch.setattr(ig, "IMAGES_DIR", str(tmp_path))
-        themes = [
-            {"name": f"Theme{i}", "emoji": "", "count": 10, "keywords": ["key1", "key2"]}
-            for i in range(8)
-        ]
+        themes = [{"name": f"Theme{i}", "emoji": "", "count": 10, "keywords": ["key1", "key2"]} for i in range(8)]
         result = ig.generate_news_briefing_card(themes, "2026-01-01")
         assert result is not None
 
@@ -915,6 +1005,7 @@ class TestGenerateNewsBriefingCard:
 # ---------------------------------------------------------------------------
 # 23. generate_category_og_image  — With MPL
 # ---------------------------------------------------------------------------
+
 
 class TestGenerateCategoryOgImage:
     def test_known_category(self, tmp_path, monkeypatch):
@@ -945,6 +1036,7 @@ class TestGenerateCategoryOgImage:
 # 24. generate_all_category_og_images  — With MPL
 # ---------------------------------------------------------------------------
 
+
 class TestGenerateAllCategoryOgImages:
     def test_returns_all_categories(self, tmp_path, monkeypatch):
         monkeypatch.setattr(ig, "REPO_ROOT", str(tmp_path))
@@ -959,6 +1051,7 @@ class TestGenerateAllCategoryOgImages:
 # 25. _CATEGORY_OG_CONFIG  — Config structure
 # ---------------------------------------------------------------------------
 
+
 class TestCategoryOgConfig:
     def test_all_entries_have_3_elements(self):
         for cat, config in ig._CATEGORY_OG_CONFIG.items():
@@ -970,6 +1063,7 @@ class TestCategoryOgConfig:
 
     def test_colors_are_hex(self):
         import re
+
         hex_pat = re.compile(r"^#[0-9a-fA-F]{6}$")
         for cat, (_name, _emoji, color) in ig._CATEGORY_OG_CONFIG.items():
             assert hex_pat.match(color), f"Color for {cat!r} is not valid hex: {color!r}"
@@ -984,19 +1078,24 @@ class TestCategoryOgConfig:
 # 26. _safe_float  — with numpy NaN/Inf (numpy available)
 # ---------------------------------------------------------------------------
 
+
 class TestSafeFloatWithNumpy:
     def test_numpy_nan_returns_default(self):
         import numpy as np
+
         assert ig._safe_float(np.nan) == 0.0
 
     def test_numpy_inf_returns_default(self):
         import numpy as np
+
         assert ig._safe_float(np.inf) == 0.0
 
     def test_numpy_neg_inf_returns_default(self):
         import numpy as np
+
         assert ig._safe_float(-np.inf) == 0.0
 
     def test_numpy_float64(self):
         import numpy as np
+
         assert ig._safe_float(np.float64(3.14)) == pytest.approx(3.14)

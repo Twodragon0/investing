@@ -64,6 +64,16 @@ pip install -r scripts/requirements.txt
 bundle install
 ```
 
+## Quick Skill Cheat Sheet
+
+- 기본 진입: `superpowers/using-superpowers`
+- 기능/구조 변경 시작: `superpowers/brainstorming` -> `superpowers/writing-plans`
+- 기능 구현/버그 수정: `superpowers/test-driven-development`
+- 장애/원인 분석: `superpowers/systematic-debugging`
+- 완료 직전 검증: `superpowers/verification-before-completion`
+- 리뷰/마무리: `superpowers/requesting-code-review`, `superpowers/finishing-a-development-branch`
+- 저장소 전용: `site-health-check`, `security-review`, `post-validation`, `cost-audit`, `debug-workflow`, `add-data-source`, `new-collector`, `fix-issue`, `deep-research`
+
 ## Conventions
 
 - Python 스크립트는 `scripts/common/config.py`의 `get_env()`, `setup_logging()` 사용

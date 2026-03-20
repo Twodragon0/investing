@@ -472,6 +472,17 @@ class TestThemeSummarizerGenerators:
         assert "the" not in keywords
         assert "and" not in keywords
 
+    def test_extract_title_keywords_filters_regulatory_boilerplate(self):
+        items = [
+            {"title": "대출 규제는 확정된 바 없습니다 정부입장 설명"},
+            {"title": "거래소 분리 구조 검토 관련 정부입장 설명"},
+        ]
+        ts = ThemeSummarizer(items)
+        keywords = ts._extract_title_keywords(items, max_keywords=6)
+        assert "확정된" not in keywords
+        assert "정부입장" not in keywords
+        assert any(kw in keywords for kw in ["대출", "거래소", "규제"])
+
     def test_extract_title_keywords_empty_articles(self):
         ts = ThemeSummarizer([])
         result = ts._extract_title_keywords([], max_keywords=5)
@@ -896,6 +907,11 @@ class TestGenerateExecutiveSummary:
         result = ts.generate_executive_summary()
         # Risk emoji chars should appear
         assert any(emoji in result for emoji in ["🔴", "🟡", "🟢"])
+
+    def test_risk_stat_uses_market_guard_label(self):
+        ts = ThemeSummarizer(_make_btc_items(10))
+        result = ts.generate_executive_summary()
+        assert "시장 경계" in result
 
 
 # ---------------------------------------------------------------------------

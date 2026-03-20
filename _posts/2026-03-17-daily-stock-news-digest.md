@@ -31,7 +31,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-17 - stock-news 뉴스 요약 
 <div class="stat-item"><div class="stat-value">5,549.85</div><div class="stat-label">KOSPI +1.14%</div></div>
 <div class="stat-item"><div class="stat-value">1,138.29</div><div class="stat-label">KOSDAQ -1.27%</div></div>
 </div>
-<div class="alert-box alert-info"><strong>주식 시장 긴급: President, History, Reason - 166건 분석</strong>
+<div class="alert-box alert-info"><strong>주식 시장 166건을 분석한 결과, 대통령 발언과 반도체·환율 이슈가 함께 부각됐습니다.</strong>
 <ul>
 <li>📈 <strong>가격/시장</strong> (45건): 삼성전자, 하이닉스, 상승 관련 45건의 소식이 확인되었습니다.</li>
 <li>📊 <strong>매크로/금리</strong> (12건): 환율, 한은, 셈법 이슈로 12건의 보도가 이어지고 있습니다.</li>

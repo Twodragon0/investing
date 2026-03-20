@@ -9,8 +9,8 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-regulatory-report-2026-03-17.png"
 permalink: "/regulatory-news/2026/03/17/daily-regulatory-report/"
-description: "리스크 수준 [ELEVATED]: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요 - Investing Dragon 자동 수집 분석 리포트."
-excerpt: "리스크 수준 [ELEVATED]: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요 - Investing Dragon 자동 수집 분석 리포트."
+description: "3월 17일 글로벌 규제 뉴스 26건을 정리했습니다. 한국 금융위 보도자료 비중이 압도적으로 높았고 미국에서는 SEC·CFTC 발표가 제한적으로 확인됐습니다."
+excerpt: "글로벌 규제 뉴스 26건을 정리했습니다. 한국 금융위 보도자료 비중이 높았고 미국 발표는 제한적으로 확인됐습니다."
 image_alt: "글로벌 규제 동향 리포트 - 2026-03-17 - regulatory-news 뉴스 요약 이미지"
 ---
 
@@ -30,12 +30,12 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-03-17 - regulatory-news 뉴
 <div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div>
 <div class="stat-item"><div class="stat-value">23</div><div class="stat-label">한국</div></div>
 </div>
-<div class="alert-box alert-info"><strong>글로벌 규제: 전세사기, 없습니다, 피해자 관련 26건 수집</strong>
+<div class="alert-box alert-info"><strong>글로벌 규제 뉴스 26건 중 한국 금융위 보도자료가 중심을 이뤘고, 미국 발표는 보조 흐름에 머물렀습니다.</strong>
 <ul>
-<li>🔵 <strong>규제/정책</strong> (11건): 전세사기, 없습니다, 피해자 중심으로 11건의 뉴스가 수집되었습니다.</li>
-<li>🏦 <strong>거래소</strong> (4건): 중복상장, 통신사기피해환급법, 선정하였습니다 테마에서 4건의 뉴스가 감지되었습니다.</li>
-<li>🏛️ <strong>정치/정책</strong> (3건): 대한, 없습니다, 서울경제 관련 3건의 소식이 확인되었습니다.</li>
-<li>🟣 <strong>DeFi</strong> (1건): 금융위원회가, 수용한다는, 아닙니다 흐름에 1건의 뉴스가 집중되고 있습니다.</li>
+<li>🔵 <strong>규제/정책</strong> (11건): 금융위 공지와 소비자 보호 관련 정책 기사가 중심이었습니다.</li>
+<li>🏦 <strong>거래소</strong> (4건): 상장 관리와 피해 환급 제도 관련 기사 비중이 높았습니다.</li>
+<li>🏛️ <strong>정치/정책</strong> (3건): 정책 설명과 제도 보완 기사들이 함께 언급됐습니다.</li>
+<li>🟣 <strong>DeFi</strong> (1건): 디지털 자산 제도 수용 범위를 다룬 단발성 이슈가 확인됐습니다.</li>
 </ul>
 </div>
 

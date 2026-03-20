@@ -9,8 +9,8 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-regulatory-2026-03-18.png"
 permalink: "/regulatory-news/2026/03/18/daily-regulatory-report/"
-description: "🔵 규제/정책 (17건): 없습니다, 확정된, 대한 테마가 17건으로 부각되고 있어, 섹터 로테이션 가능성을 점검하세요 - Investing Dragon 자동 수집 분석 리포트."
-excerpt: "🔵 규제/정책 (17건): 없습니다, 확정된, 대한 테마가 17건으로 부각되고 있어, 섹터 로테이션 가능성을 점검하세요 - Investing Dragon 자동 수집 분석 리포트."
+description: "3월 18일 글로벌 규제 뉴스 35건을 점검했습니다. 한국 금융당국 공지 비중이 높았고 미국에서는 SEC와 CFTC 해석 및 규정 정비 이슈가 이어졌습니다."
+excerpt: "글로벌 규제 뉴스 35건을 점검했습니다. 한국 공지 비중이 높았고 미국에서는 SEC·CFTC 이슈가 이어졌습니다."
 image_alt: "글로벌 규제 동향 리포트 - 2026-03-18 - regulatory-news 뉴스 요약 이미지"
 ---
 
@@ -30,12 +30,12 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-03-18 - regulatory-news 뉴
 <div class="stat-item"><div class="stat-value">27</div><div class="stat-label">한국</div></div>
 </div>
 <div class="alert-box alert-info">
-<strong>글로벌 규제: SEC, CFTC, 없습니다 관련 35건 수집</strong>
+<strong>글로벌 규제 뉴스 35건을 집계한 결과, 한국 공지 집중과 미국 규정 정비 이슈가 핵심 흐름이었습니다.</strong>
 <ul>
-<li>🔵 <strong>규제/정책</strong> (17건): 없습니다, 확정된, 대한 테마가 17건으로 부각되고 있어, 섹터 로테이션 가능성을 점검하세요.</li>
-<li>🏦 <strong>거래소</strong> (5건): 중복상장, 단독, 중개 중심으로 5건의 뉴스가 쏟아지며 투자 심리에 영향을 미치고 있습니다.</li>
-<li>🤖 <strong>AI/기술</strong> (2건): 과기정통부, 세부내용은, 않았습니다 테마가 2건으로 부각되고 있어, 섹터 로테이션 가능성을 점검하세요.</li>
-<li>🏛️ <strong>정치/정책</strong> (4건): 대한, 없습니다, 서울경제 관련 4건의 보도가 이어지고 있어 관련 포지션 점검이 필요합니다.</li>
+<li>🔵 <strong>규제/정책</strong> (17건): 금융위·금감원 공지와 SEC 해석 발표가 가장 큰 비중을 차지했습니다.</li>
+<li>🏦 <strong>거래소</strong> (5건): 상장 기준, 중개 규정, 거래소 운영 이슈가 함께 언급됐습니다.</li>
+<li>🤖 <strong>AI/기술</strong> (2건): 기술 정책은 비중이 작았지만 금융·반도체 규제와 맞물려 언급됐습니다.</li>
+<li>🏛️ <strong>정치/정책</strong> (4건): 제도 정비와 정책 설명 기사 비중이 높아 입법 방향 점검이 필요합니다.</li>
 </ul>
 </div>
 

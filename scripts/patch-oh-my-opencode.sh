@@ -10,31 +10,43 @@ set -euo pipefail
 #   scripts/patch-oh-my-opencode.sh
 
 HOME_DIR="${HOME}"
+BACKUP_ROOT="$HOME_DIR/.cache/opencode/patch-backups/oh-my-opencode"
 
 candidates=()
 primary="$HOME_DIR/.cache/opencode/node_modules/oh-my-opencode/dist/index.js"
 if [[ -f "$primary" ]]; then
-  candidates+=("$primary")
+	candidates+=("$primary")
 fi
 
+bun_candidates=()
 for f in "$HOME_DIR"/.bun/install/cache/oh-my-opencode@*/dist/index.js; do
-  if [[ -f "$f" ]]; then
-    candidates+=("$f")
-  fi
+	if [[ -f "$f" ]]; then
+		bun_candidates+=("$f")
+	fi
 done
 
-if [[ ${#candidates[@]} -eq 0 ]]; then
-  echo "No oh-my-opencode cache files found to patch." >&2
-  exit 1
+if [[ ${#bun_candidates[@]} -gt 0 ]]; then
+	latest_bun_target="$({ printf '%s\n' "${bun_candidates[@]}"; } | sort -V | tail -n 1)"
+	if [[ -n "$latest_bun_target" ]]; then
+		candidates+=("$latest_bun_target")
+	fi
 fi
+
+if [[ ${#candidates[@]} -eq 0 ]]; then
+	echo "No oh-my-opencode cache files found to patch." >&2
+	exit 1
+fi
+
+mkdir -p "$BACKUP_ROOT"
 
 patched=0
 already_ok=0
 failed=0
 
 for target in "${candidates[@]}"; do
-  # Use python to do safe, idempotent patching.
-  result=$(python3 - "$target" <<'PY'
+	# Use python to do safe, idempotent patching.
+	if result=$(
+		PATCH_BACKUP_ROOT="$BACKUP_ROOT" python3 - "$target" <<'PY'
 import sys
 from pathlib import Path
 import re
@@ -43,6 +55,20 @@ import os
 path = Path(sys.argv[1])
 text = path.read_text()
 orig = text
+
+required_anchors = [
+    'function applyToolConfig(params)',
+    '"grep_app_*":',
+    'LspHover:',
+    'LspCodeActions:',
+    'LspCodeActionResolve:',
+    'teammate:',
+    'task:',
+]
+
+if not all(anchor in text for anchor in required_anchors):
+    print('UNSUPPORTED_LAYOUT')
+    sys.exit(3)
 
 replacements = {
     '"grep_app_*": false': '"grep_app_*": true',
@@ -72,36 +98,73 @@ if enable_task_tools and 'task: "allow"' in text and '"task_*": "allow"' not in 
         count=1,
     )
 
+expected_present = [
+    '"grep_app_*": true',
+    'LspHover: true',
+    'LspCodeActions: true',
+    'LspCodeActionResolve: true',
+    'teammate: true',
+]
+
+if enable_task_tools:
+    expected_present.extend([
+        '"task_*": true',
+        'task: "allow"',
+    ])
+
+if not all(item in text for item in expected_present):
+    print('VERIFY_FAILED')
+    sys.exit(4)
+
 if text == orig:
-    print("NO_CHANGE")
+    print("NO_CHANGE_VERIFIED")
     sys.exit(0)
+
+backup_root = Path(os.environ['PATCH_BACKUP_ROOT'])
+backup_root.mkdir(parents=True, exist_ok=True)
+target_name = path.parent.parent.name.replace('@', '_at_').replace('/', '_')
+backup_path = backup_root / f"{target_name}-index.js.bak"
+if not backup_path.exists():
+    backup_path.write_text(orig)
 
 path.write_text(text)
 print("PATCHED")
 PY
-  )
+	); then
+		python_status=0
+	else
+		python_status=$?
+	fi
 
-  case "$result" in
-    PATCHED)
-      echo "patched: $target"
-      patched=$((patched+1))
-      ;;
-    NO_CHANGE)
-      echo "no_change: $target"
-      already_ok=$((already_ok+1))
-      ;;
-    *)
-      echo "failed: $target" >&2
-      failed=$((failed+1))
-      ;;
-  esac
+	case "$result" in
+	PATCHED)
+		echo "patched: $target"
+		patched=$((patched + 1))
+		;;
+	NO_CHANGE_VERIFIED)
+		echo "no_change: $target"
+		already_ok=$((already_ok + 1))
+		;;
+	UNSUPPORTED_LAYOUT)
+		echo "unsupported_layout: $target" >&2
+		failed=$((failed + 1))
+		;;
+	VERIFY_FAILED)
+		echo "verify_failed: $target" >&2
+		failed=$((failed + 1))
+		;;
+	*)
+		echo "failed: $target (python_status=${python_status:-unknown}, result=${result:-empty})" >&2
+		failed=$((failed + 1))
+		;;
+	esac
 
 done
 
 if [[ $failed -gt 0 ]]; then
-  exit 2
+	exit 2
 fi
 
 if [[ $patched -eq 0 && $already_ok -gt 0 ]]; then
-  echo "All targets already patched."
+	echo "All targets already patched."
 fi
