@@ -421,8 +421,44 @@ _CATEGORY_KO: dict[str, str] = {
 }
 
 
+_CATEGORY_DESC_TEMPLATES: dict[str, list[str]] = {
+    "crypto-news": [
+        "{title} - 비트코인, 이더리움 등 암호화폐 시장 핵심 동향.{tags}",
+        "오늘의 암호화폐 브리핑: {title}. 시세 변동과 온체인 데이터를 분석합니다.{tags}",
+        "{title}. 크립토 시장 심리와 자금 흐름을 점검합니다.{tags}",
+    ],
+    "stock-news": [
+        "{title} - 미국·한국 주식 시장 동향과 섹터별 분석.{tags}",
+        "오늘의 주식 시장: {title}. 주요 지수와 종목 흐름을 정리합니다.{tags}",
+        "{title}. 매크로 지표와 기업 실적이 시장에 미치는 영향을 살펴봅니다.{tags}",
+    ],
+    "regulatory-news": [
+        "{title} - 글로벌 금융 규제 및 정책 변화 추적.{tags}",
+        "규제 동향 브리핑: {title}. 각국 규제 기관의 최신 결정을 분석합니다.{tags}",
+        "{title}. 규제 환경 변화가 시장에 미칠 영향을 점검합니다.{tags}",
+    ],
+    "worldmonitor": [
+        "{title} - 지정학적 리스크와 글로벌 이슈 모니터링.{tags}",
+        "글로벌 브리핑: {title}. 국제 정세가 금융 시장에 미치는 영향을 분석합니다.{tags}",
+        "{title}. 지정학적 변수와 매크로 리스크를 점검합니다.{tags}",
+    ],
+    "political-trades": [
+        "{title} - 미국 의회 내부자 거래와 정책 동향 추적.{tags}",
+        "정치인 거래 리포트: {title}. 입법 동향과 의원 포트폴리오를 분석합니다.{tags}",
+    ],
+    "social-media": [
+        "{title} - 소셜 미디어 트렌드와 커뮤니티 반응 분석.{tags}",
+        "소셜 브리핑: {title}. 시장 심리와 커뮤니티 동향을 정리합니다.{tags}",
+    ],
+}
+
+
 def _build_fallback_description(title: str, category: str, tags: Optional[List[str]] = None) -> str:
-    """Build a fallback SEO description from title and category when content extraction fails."""
+    """Build a fallback SEO description from title and category.
+
+    Uses category-specific templates for better SEO diversity,
+    falling back to generic templates when no match exists.
+    """
     cat_ko = _CATEGORY_KO.get(category, category)
     tag_str = ""
     if tags and len(tags) >= 2:
@@ -430,6 +466,15 @@ def _build_fallback_description(title: str, category: str, tags: Optional[List[s
 
     # Clean title for description use
     clean_title = re.sub(r"[*_`~]", "", title).strip()
+
+    # Try category-specific template first
+    cat_templates = _CATEGORY_DESC_TEMPLATES.get(category)
+    if cat_templates:
+        seed = hash((datetime.now(UTC).date().isoformat(), title))
+        template = cat_templates[seed % len(cat_templates)]
+        desc = template.format(title=clean_title, tags=tag_str)
+        return smart_truncate(desc, 160)
+
     templates = [
         f"{clean_title} - 최신 {cat_ko} 뉴스와 분석을 확인하세요.{tag_str}",
         f"{cat_ko} 분야 핵심 동향: {clean_title}.{tag_str}",
