@@ -505,7 +505,13 @@ def main():
                 raise KeyError("Close column missing")
             for sym, label in _us_symbols.items():
                 try:
-                    _hist = pd.Series(pd.to_numeric(_df["Close"][sym], errors="coerce")).dropna()
+                    _close_series = _df["Close"][sym]
+                    if not isinstance(_close_series, pd.Series):
+                        continue
+                    _hist = pd.to_numeric(_close_series, errors="coerce")
+                    if not isinstance(_hist, pd.Series):
+                        continue
+                    _hist = _hist.dropna()
                     if len(_hist) >= 2:
                         _price = float(_hist.iloc[-1])
                         _prev = float(_hist.iloc[-2])
