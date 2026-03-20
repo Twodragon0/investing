@@ -9,9 +9,14 @@ def escape_table_cell(value: object) -> str:
 
 
 def _try_resolve_google_news_url(url: str) -> str:
-    """Resolve Google News RSS redirect URLs to actual article URLs (no network)."""
+    """Resolve Google News RSS redirect URLs to actual article URLs.
+
+    Strategy: 1) base64 decode (no network), 2) HTTP HEAD redirect follow.
+    """
     if not url or "news.google.com" not in url:
         return url
+
+    # 1. Try base64 decoding (fast, no network)
     try:
         import base64
         import urllib.parse
@@ -31,6 +36,21 @@ def _try_resolve_google_news_url(url: str) -> str:
                         return resolved
     except Exception:  # noqa: BLE001, S110
         pass
+
+    # 2. HTTP redirect follow (network call, cached per session)
+    try:
+        import requests  # noqa: PLC0415
+
+        resp = requests.head(
+            url, allow_redirects=True, timeout=6,
+            headers={"User-Agent": "Mozilla/5.0 (compatible; InvestBot/1.0)"},
+        )
+        final = resp.url
+        if final and "google.com" not in final and final != url:
+            return final
+    except Exception:  # noqa: BLE001, S110
+        pass
+
     return url
 
 

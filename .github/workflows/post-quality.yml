@@ -47,3 +47,25 @@ jobs:
           if [ "$ISSUES" -gt 50 ]; then
             echo "::warning::High number of quality issues detected: $ISSUES"
           fi
+
+      - name: Detect untranslated English in post bodies
+        run: |
+          echo "=== Checking for untranslated English sentences ==="
+          ISSUES=0
+          for f in $(find _posts -name "*.md" -newer /tmp/quality-report.txt 2>/dev/null || find _posts -name "*.md" | tail -20); do
+            # Skip front matter, check body only
+            BODY=$(sed -n '/^---$/,/^---$/!p' "$f" | sed '1,/^---$/d')
+            # Find lines that are >80% ASCII alpha (likely untranslated)
+            while IFS= read -r line; do
+              TOTAL=$(echo "$line" | tr -cd '[:alpha:]' | wc -c | tr -d ' ')
+              ASCII=$(echo "$line" | tr -cd 'A-Za-z' | wc -c | tr -d ' ')
+              if [ "$TOTAL" -gt 30 ] && [ "$ASCII" -gt 0 ]; then
+                PCT=$((ASCII * 100 / TOTAL))
+                if [ "$PCT" -gt 80 ]; then
+                  echo "::warning file=$f::Untranslated: ${line:0:100}"
+                  ISSUES=$((ISSUES + 1))
+                fi
+              fi
+            done <<< "$BODY"
+          done
+          echo "Untranslated lines found: $ISSUES"
