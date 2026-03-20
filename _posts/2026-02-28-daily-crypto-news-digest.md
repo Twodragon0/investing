@@ -93,8 +93,8 @@ description: "2026-02-28 암호화폐 시장에서 124건의 뉴스를 분석했
 
 *비트코인, 암호화폐, 하락, 충격, 일제*
 
-**1. [엔비디아 충격, 암호화폐 일제 하락…비트 2%-리플 4%↓(상보)(https://news.google.com/rss/articles/CBMiWEFVX3lxTFBXVVllQ3Q3T3YyYWR3ZlY3MmdUMDVHeUM4TXAxNjdyYkNfX282WGQzYWdhWmhDaWFkYzRVeEJhaDRjT1NLREduMy0tSHlLdWFsYzZ0MS1pelM?oc=5)**
-엔비디아 충격, 암호화폐 일제 하락…비트 2%-리플 4%↓(상보)
+**1. [엔비디아 충격, 암호화폐 일제 하락…비트 2%-리플 4%↓(https://news.google.com/rss/articles/CBMiWEFVX3lxTFBXVVllQ3Q3T3YyYWR3ZlY3MmdUMDVHeUM4TXAxNjdyYkNfX282WGQzYWdhWmhDaWFkYzRVeEJhaDRjT1NLREduMy0tSHlLdWFsYzZ0MS1pelM?oc=5)**
+엔비디아 충격, 암호화폐 일제 하락…비트 2%-리플 4%↓
 <span class="source-tag">Google News KR</span>
 
 **2. [비트코인, 반등 주춤하며 6만8천 달러 아래로 하락...5개월 연속 하락세 - Investing.com 한국어](https://news.google.com/rss/articles/CBMic0FVX3lxTE5wZ2hXdXNQdU1NWEpUcDk1M0FWZTRTcG02aGRCbk1TNWxoRmhTSXhCV3E0S3RIUWxTaTlqTWtZZ2Z4WmFlR215LTFqUHpseGtoZGFlQ1dESzY3R1JsVzBYU0pmUU9CWGZSX1dHMUNKQ2dmNWc?oc=5)**

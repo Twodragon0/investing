@@ -85,7 +85,7 @@ description: "2026-02-26 주식 시장에서 168건의 뉴스를 분석했습니
 <span class="source-tag">한국 금리/환율</span>
 
 <details><summary>그 외 14건 보기</summary><div class="details-content">
-<a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE1aMzUwREpyRGR5ZGl1NHZTUUFxRXUzUkVET2N5SXNoSGk1Sm9MbEpXVjhGLU8tY0VOUFJXRERPQkdnSlJPajcxT3VuTW1OQmc?oc=5">불안한 환율·집값에…한은, 기준금리 2.5% '6연속 동결'(종합)</a>
+<a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE1aMzUwREpyRGR5ZGl1NHZTUUFxRXUzUkVET2N5SXNoSGk1Sm9MbEpXVjhGLU8tY0VOUFJXRERPQkdnSlJPajcxT3VuTW1OQmc?oc=5">불안한 환율·집값에…한은, 기준금리 2.5% '6연속 동결'</a>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE8wV1NfVGJESTV4U3BkejFHSm1TQU9zaE9VSnRGMTFHZGlrWFp0ek1iZjQzbWdyN29ORjV2Y0xlOWlXSVFaeG5BR040N3NMdVBKNjd3Z2ROTDBpVHBOdV9nSk1IY2UzaTJJSlE?oc=5">한은, 기준금리 2.50% ‘6회 연속' 동결…1,400원대 환율·집값 상승 부담 - 금융소비자뉴스</a>
 </div></details>
 

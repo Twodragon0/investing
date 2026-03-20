@@ -79,7 +79,7 @@ description: "2026-02-22 암호화폐 시장에서 101건의 뉴스를 분석했
 <span class="source-tag">구글 뉴스</span>
 
 <details><summary>그 외 17건 보기</summary><div class="details-content">
-<a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE1CTVZocW83alM0NnhOMWI0RTV3bE9rY3EwQTdaRXR1cHNrSmEybEVnN3ZXaWY3ZDJaZWFtSmFRSU5RV1B5VXJEcFZNM3VfSDlJZnh4MmRod1Y?oc=5">관세 위법, 암호화폐 일제↑ 비트 6.8만달러 회복-리플 1%(상보) - 뉴스1</a>
+<a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE1CTVZocW83alM0NnhOMWI0RTV3bE9rY3EwQTdaRXR1cHNrSmEybEVnN3ZXaWY3ZDJaZWFtSmFRSU5RV1B5VXJEcFZNM3VfSDlJZnh4MmRod1Y?oc=5">관세 위법, 암호화폐 일제↑ 비트 6.8만달러 회복-리플 1% - 뉴스1</a>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE81Zy05VHNQczl2NnB3bXNlTkxZc2h6S01ZdjYyRG84emNPSERFRHF4YWFmRlVVUkNZOW5vTHBOX29ZRUVyWVFmaE1NNjVYSnNQQVlKQ2F6WDJyamZndVpOZ1FlVjBqU1l3RVFTWXplaE9mbFU?oc=5">트럼프 관세 인상 발표 후 비트코인 하락했다가 회복 By Investing.com - Investing.com 한국어</a>
 <em>...외 2건</em>
 </details>

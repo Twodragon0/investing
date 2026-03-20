@@ -73,8 +73,8 @@ description: "2026-03-02 암호화폐 88건 분석: 이란 보복으로 BTC·ETH
 이란 공습 여파에 비트코인 약세…위험자산 조정 확대
 <span class="source-tag">Google News KR</span>
 
-**3. [하메네이 사망 소식에 암호화폐 일제 상승 반전, 비트 3%↑(상보) - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9jQ1F0a2J6NEJjWGNrMllERFgySC1mUEIxTG05eWpsVGUzcjBqZm50cUxTT1VveS13bjMxRHJ0bTBmTDdsMmZWVGszbGkwVzg?oc=5)**
-하메네이 사망 소식에 암호화폐 일제 상승 반전, 비트 3%↑(상보)
+**3. [하메네이 사망 소식에 암호화폐 일제 상승 반전, 비트 3%↑ - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9jQ1F0a2J6NEJjWGNrMllERFgySC1mUEIxTG05eWpsVGUzcjBqZm50cUxTT1VveS13bjMxRHJ0bTBmTDdsMmZWVGszbGkwVzg?oc=5)**
+하메네이 사망 소식에 암호화폐 일제 상승 반전, 비트 3%↑
 <span class="source-tag">Google News KR</span>
 
 <details><summary>그 외 21건 보기</summary><div class="details-content">

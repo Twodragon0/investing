@@ -167,8 +167,8 @@ United Bankshares (UBSI) director adds 710 phantom stock units at $42.54 Stock T
 [속보] 환율·집값 불안에…한은, 기준금리 6연속 동결 중앙일보
 <span class="source-tag">한국은행 금리결정</span>
 
-**10. [금통위 "기준금리 동결결정 금통위원 7인 만장일치"(종합) - 연합인포맥스](https://news.google.com/rss/articles/CBMicEFVX3lxTFBXOWl4VGs3dXV6UDc3X25ad3FnRF9lOW5VLXdPWGFPZUxqb0VNN3VKVlU3dm51RDh3TlRkdkVKTll6T0t0VDduS29meUdfY1plME1XV1lHc29nRUE0ZW1adEJYMTlQV2FvWVNMMnotOW4?oc=5)**
-금통위 "기준금리 동결결정 금통위원 7인 만장일치"(종합) 연합인포맥스
+**10. [금통위 "기준금리 동결결정 금통위원 7인 만장일치" - 연합인포맥스](https://news.google.com/rss/articles/CBMicEFVX3lxTFBXOWl4VGs3dXV6UDc3X25ad3FnRF9lOW5VLXdPWGFPZUxqb0VNN3VKVlU3dm51RDh3TlRkdkVKTll6T0t0VDduS29meUdfY1plME1XV1lHc29nRUE0ZW1adEJYMTlQV2FvWVNMMnotOW4?oc=5)**
+금통위 "기준금리 동결결정 금통위원 7인 만장일치" 연합인포맥스
 <span class="source-tag">한국은행 금리결정</span>
 
 

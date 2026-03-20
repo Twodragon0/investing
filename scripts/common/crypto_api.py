@@ -23,7 +23,7 @@ def fetch_coingecko_top_coins(limit: int = 30) -> List[Dict[str, Any]]:
             "order": "market_cap_desc",
             "per_page": limit,
             "page": 1,
-            "sparkline": "false",
+            "sparkline": "true",
             "price_change_percentage": "1h,24h,7d",
         }
         resp = request_with_retry(

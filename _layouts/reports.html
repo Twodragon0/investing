@@ -83,7 +83,7 @@ layout: default
 
 <!-- Post data as compact JSON -->
 <script id="reports-data" type="application/json">
-[{% for post in site.posts %}{% assign cat_slug = post.categories[0] | default: "uncategorized" %}{% assign cat_info = site.data.categories[cat_slug] %}{"u":"{{ post.url | relative_url }}","t":{{ post.title | jsonify }},"c":"{{ cat_slug }}","cn":"{{ cat_info.name | default: cat_slug }}","cc":"{{ cat_info.color | default: 'cat-stock' }}","d":"{{ post.date | date: '%Y-%m-%d' }}","dm":"{{ post.date | date: '%m.%d %H:%M' }}","s":{{ post.description | default: post.excerpt | strip_html | truncate: 150 | jsonify }},"img":"{{ post.image | default: '' }}","tags":[{% for tag in post.tags limit:4 %}{{ tag | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}]}{% unless forloop.last %},{% endunless %}{% endfor %}]
+[{% assign report_limit = 300 %}{% for post in site.posts limit:report_limit %}{% assign cat_slug = post.categories[0] | default: "uncategorized" %}{% assign cat_info = site.data.categories[cat_slug] %}{"u":"{{ post.url | relative_url }}","t":{{ post.title | jsonify }},"c":"{{ cat_slug }}","cn":"{{ cat_info.name | default: cat_slug }}","cc":"{{ cat_info.color | default: 'cat-stock' }}","d":"{{ post.date | date: '%Y-%m-%d' }}","dm":"{{ post.date | date: '%m.%d %H:%M' }}","s":{{ post.description | default: post.excerpt | strip_html | truncate: 120 | jsonify }},"img":"{{ post.image | default: '' }}","tags":[{% for tag in post.tags limit:3 %}{{ tag | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}]}{% unless forloop.last %},{% endunless %}{% endfor %}]
 </script>
 
 <!-- Chart.js CDN -->
