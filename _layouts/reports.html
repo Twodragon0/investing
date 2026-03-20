@@ -232,6 +232,11 @@ layout: default
       tagsHtml +
       '<div class="report-card-footer">' +
       '<span class="report-read-more">자세히 보기 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>' +
+      '<span class="report-share" data-url="' + escapeHtml(p.u) + '" data-title="' + escapeHtml(p.t) + '">' +
+      '<button class="share-btn" data-action="copy" title="링크 복사"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>' +
+      '<button class="share-btn" data-action="twitter" title="Twitter"><svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button>' +
+      '<button class="share-btn" data-action="telegram" title="Telegram"><svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0h-.056zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></button>' +
+      '</span>' +
       '</div></div></a>';
   }
 
@@ -389,7 +394,7 @@ layout: default
   });
   renderRecent();
 
-  // --- Bookmark click delegation ---
+  // --- Bookmark + Share click delegation ---
   grid.addEventListener('click', function(e) {
     var btn = e.target.closest('.report-bookmark');
     if (btn) {
@@ -397,6 +402,26 @@ layout: default
       e.stopPropagation();
       toggleBookmark(btn.dataset.url, btn);
       if (activeFilter === '_bookmarks') render();
+      return;
+    }
+    var shareBtn = e.target.closest('.share-btn');
+    if (shareBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      var wrap = shareBtn.closest('.report-share');
+      var url = location.origin + wrap.dataset.url;
+      var title = wrap.dataset.title;
+      var action = shareBtn.dataset.action;
+      if (action === 'copy') {
+        navigator.clipboard.writeText(url).then(function() {
+          shareBtn.title = '복사됨!';
+          setTimeout(function() { shareBtn.title = '링크 복사'; }, 1500);
+        });
+      } else if (action === 'twitter') {
+        window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(title) + '&url=' + encodeURIComponent(url), '_blank', 'width=550,height=420');
+      } else if (action === 'telegram') {
+        window.open('https://t.me/share/url?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(title), '_blank', 'width=550,height=420');
+      }
     }
   });
 

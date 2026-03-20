@@ -1,0 +1,23 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Investing Dragon - 규제 동향</title>
+    <description>글로벌 암호화폐·금융 규제 및 정책 변화</description>
+    <link>{{ site.url }}/reports/#regulatory-news</link>
+    <atom:link href="{{ site.url }}/reports-regulatory-feed.xml" rel="self" type="application/rss+xml"/>
+    <language>ko</language>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    {% for post in site.posts limit:30 %}{% if post.categories[0] == "regulatory-news" %}
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <link>{{ post.url | absolute_url }}</link>
+      <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <description>{{ post.description | default: post.excerpt | strip_html | truncate: 200 | xml_escape }}</description>
+    </item>
+    {% endif %}{% endfor %}
+  </channel>
+</rss>
