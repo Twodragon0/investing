@@ -445,8 +445,7 @@
   if (typeof Chart !== 'undefined') {
     initCharts();
   } else {
-    var chartScript = document.querySelector('script[src*="chart.js"]');
-    if (chartScript) chartScript.addEventListener('load', initCharts);
+    window.addEventListener('chartjs-ready', initCharts);
   }
 
   var themeObserver = new MutationObserver(function(mutations) {

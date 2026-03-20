@@ -304,6 +304,41 @@
   overflow: hidden;
 }
 
+// ---------- Charts Toggle ----------
+.reports-charts-wrapper {
+  margin-bottom: 1.5rem;
+
+  &[open] .charts-toggle svg {
+    transform: rotate(0);
+  }
+
+  &:not([open]) .charts-toggle svg {
+    transform: rotate(-90deg);
+  }
+}
+
+.charts-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 0.5rem 0;
+  list-style: none;
+  user-select: none;
+
+  &::-webkit-details-marker { display: none; }
+
+  svg {
+    transition: transform 0.2s;
+    flex-shrink: 0;
+  }
+
+  &:hover { color: var(--accent-blue); }
+}
+
 // ---------- Charts Section ----------
 .reports-charts {
   display: grid;

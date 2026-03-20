@@ -8,7 +8,7 @@ keywords: "market-analysis, fear-greed, vix, market-breadth, sentiment"
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/og-market-analysis.png"
-description: "2026-03-15 기준 시장 심리·리스크 지표를 8개 소스에서 수집했습니다. 국채 금리 관련 뉴스 (보완): 1. Treasury Yields Snapshot: March 13, 2026 - Advisor Perspectives"
+description: "기준 시장 심리 리스크 지표를 개 소스에서 수집했습니다"
 excerpt: "2026-03-15 기준 시장 심리·리스크 지표를 8개 소스에서 수집했습니다. 국채 금리 관련 뉴스 (보완): 1. Treasury Yields Snapshot: March…"
 image_alt: "시장 심리 및 리스크 지표 (2026-03-15) - 시장 분석 뉴스 요약 이미지"
 ---

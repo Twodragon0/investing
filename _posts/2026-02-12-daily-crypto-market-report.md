@@ -7,7 +7,7 @@ tags: [market-report, crypto, top-coins, trending, daily]
 source: "CoinGecko"
 source_url: "https://www.coingecko.com/"
 lang: "ko"
-description: "공포/탐욕 지수: 5/100 (Extreme Fear)"
+description: "암호화폐 시장 종합 리포트 - 2026-02-12"
 image: "/assets/images/generated/og-daily-crypto-market-report-2026-02-12.png"
 ---
 

@@ -7,7 +7,7 @@ tags: [market-summary, daily, crypto, stock, macro, top-coins, quant, trading]
 source: "auto-generated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-market-report-2026-02-27.png"
-description: "13공포/탐욕 (Extreme Fear)..."
+description: "일일 시장 종합 리포트 - 2026-02-27"
 ---
 
 ## 시장 시각화

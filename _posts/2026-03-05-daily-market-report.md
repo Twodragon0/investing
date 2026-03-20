@@ -7,7 +7,7 @@ tags: ["market-summary", "daily", "crypto", "stock", "macro", "top-coins", "quan
 source: "auto-generated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-market-report-2026-03-05.png"
-description: "2026-03-05 시장 종합: 공포/탐욕 22(Extreme Fear), BTC $72,664(+7.45%), ETH $2,126(+8.80%), 시총 $2.53T(+5.80%), KOSPI 5,526(+6.43%), KOSDAQ 1,107(+10.31%) 급반등."
+description: "일일 시장 종합 리포트 - 2026-03-05"
 ---
 
 ## 시장 시각화

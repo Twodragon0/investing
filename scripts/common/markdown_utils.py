@@ -8,7 +8,54 @@ def escape_table_cell(value: object) -> str:
     return text.replace("|", "\\|")
 
 
+def _try_resolve_google_news_url(url: str) -> str:
+    """Resolve Google News RSS redirect URLs to actual article URLs.
+
+    Strategy: 1) base64 decode (no network), 2) HTTP HEAD redirect follow.
+    """
+    if not url or "news.google.com" not in url:
+        return url
+
+    # 1. Try base64 decoding (fast, no network)
+    try:
+        import base64
+        import urllib.parse
+
+        parsed = urllib.parse.urlparse(url)
+        path = parsed.path
+        for prefix in ("/rss/articles/", "/read/"):
+            if prefix in path:
+                b64_part = path.split(prefix, 1)[1].split("?")[0]
+                padded = b64_part + "=" * (4 - len(b64_part) % 4)
+                decoded = base64.urlsafe_b64decode(padded)
+                text = decoded.decode("utf-8", errors="ignore")
+                match = re.search(r"https?://[^\s\"'<>\x00-\x1f]+", text)
+                if match:
+                    resolved = match.group(0).rstrip(".,;:)")
+                    if "google.com" not in resolved:
+                        return resolved
+    except Exception:  # noqa: BLE001, S110
+        pass
+
+    # 2. HTTP redirect follow (network call, cached per session)
+    try:
+        import requests  # noqa: PLC0415
+
+        resp = requests.head(
+            url, allow_redirects=True, timeout=6,
+            headers={"User-Agent": "Mozilla/5.0 (compatible; InvestBot/1.0)"},
+        )
+        final = resp.url
+        if final and "google.com" not in final and final != url:
+            return final
+    except Exception:  # noqa: BLE001, S110
+        pass
+
+    return url
+
+
 def markdown_link(text: str, url: str) -> str:
+    url = _try_resolve_google_news_url(url)
     safe = escape_table_cell(text).replace("[", "\\[").replace("]", "\\]")
     return f"[{safe}]({url})"
 

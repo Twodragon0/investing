@@ -8,7 +8,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-political-trades-report-2026-03-02.png"
 excerpt: "2026-03-02 정치인 거래·정책 리포트: SEC 내부자 15건, 중앙은행 1건, 총 16건 수집"
-description: "2026-03-02 정치인 거래 리포트: SEC Form 4 내부자 거래 15건(MIDDLEFIELD BANC, Range Resources 등), 중앙은행 1건, 총 16건. 매도 신호 100%, 차익 실현 움직임 포착."
+description: "정치인 거래 리포트 내부자 거래 건"
 ---
 
 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
@@ -23,7 +23,6 @@ description: "2026-03-02 정치인 거래 리포트: SEC Form 4 내부자 거래
 ## 전체 뉴스 요약
 
 - 거래 패턴: 매수 신호 0건(0%), 매도 신호 2건(100%). 매도 비중이 높아, 리스크 회피 또는 차익 실현 움직임이 감지됩니다.
-- 1. [Form 4] MIDDLEFIELD BANC CORP Insider Trading Activity - Stock Titan [Form 4] MIDDLEFIELD BANC CORP Insider Trading Activity Stock Titan
 
 ## SEC 내부자 거래 (Form 4)
 

@@ -30,7 +30,6 @@ image: "/assets/images/generated/og-daily-political-trades-report-2026-02-23.png
 
 - 총 **8건** 수집
 - 트럼프 관련 4건의 정책 뉴스가 수집되었습니다. 행정명령 및 관세 정책은 글로벌 시장에 직접적인 영향을 미치고 있습니다.
-- 1. Major developments in Trump's trade war - Reuters Major developments in Trump's trade war Reuters
 
 ## 트럼프 행정명령/정책
 

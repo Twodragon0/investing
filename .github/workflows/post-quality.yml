@@ -1,0 +1,71 @@
+name: Post Quality Check
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '_posts/**'
+      - 'scripts/improve_existing_posts.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: post-quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: scripts/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run quality audit (dry-run)
+        run: |
+          cd scripts
+          python improve_existing_posts.py --dry-run 2>&1 | tee /tmp/quality-report.txt
+          echo "---"
+          echo "Quality audit complete."
+
+      - name: Check for issues
+        run: |
+          ISSUES=$(grep -c 'would fix\|would change\|would clean' /tmp/quality-report.txt 2>/dev/null || echo 0)
+          echo "Issues found: $ISSUES"
+          if [ "$ISSUES" -gt 50 ]; then
+            echo "::warning::High number of quality issues detected: $ISSUES"
+          fi
+
+      - name: Detect untranslated English in post bodies
+        run: |
+          echo "=== Checking for untranslated English sentences ==="
+          ISSUES=0
+          for f in $(find _posts -name "*.md" -newer /tmp/quality-report.txt 2>/dev/null || find _posts -name "*.md" | tail -20); do
+            # Skip front matter, check body only
+            BODY=$(sed -n '/^---$/,/^---$/!p' "$f" | sed '1,/^---$/d')
+            # Find lines that are >80% ASCII alpha (likely untranslated)
+            while IFS= read -r line; do
+              TOTAL=$(echo "$line" | tr -cd '[:alpha:]' | wc -c | tr -d ' ')
+              ASCII=$(echo "$line" | tr -cd 'A-Za-z' | wc -c | tr -d ' ')
+              if [ "$TOTAL" -gt 30 ] && [ "$ASCII" -gt 0 ]; then
+                PCT=$((ASCII * 100 / TOTAL))
+                if [ "$PCT" -gt 80 ]; then
+                  echo "::warning file=$f::Untranslated: ${line:0:100}"
+                  ISSUES=$((ISSUES + 1))
+                fi
+              fi
+            done <<< "$BODY"
+          done
+          echo "Untranslated lines found: $ISSUES"

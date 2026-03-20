@@ -286,6 +286,43 @@ def remove_intro_duplication_in_summary(body: str) -> tuple[str, bool]:
     return body, changed
 
 
+def remove_summary_article_duplicates(body: str) -> tuple[str, bool]:
+    """Remove summary list items that duplicate numbered article titles below.
+
+    Detects patterns like:
+      - 1. Title text here. - Source Title text here.
+    where the same title appears again in a numbered entry in a later section.
+    Also removes list items with "- N." prefix that repeat themselves internally.
+    """
+    original = body
+    lines = body.split("\n")
+    new_lines = []
+    # Collect all numbered article titles (e.g. "**1. [Title..." or "**1. Title...")
+    article_titles = set()
+    for line in lines:
+        m = re.match(r"\*\*\d+\.\s*(?:\[)?(.{15,80}?)(?:\]|\*)", line)
+        if m:
+            article_titles.add(m.group(1).strip()[:50])
+
+    for line in lines:
+        # Check for "- 1. Title - Source Title" pattern with internal duplication
+        m = re.match(r"^- \d+\.\s+(.+)$", line)
+        if m:
+            content = m.group(1)
+            # Check if first half repeats in second half (internal dup)
+            half = len(content) // 2
+            if half > 20 and content[:half].strip().rstrip(".") in content[half:]:
+                continue
+            # Check if this title already appears as a numbered article
+            clean = re.sub(r"\s*-\s*\S+\s*$", "", content).strip()[:50]
+            if clean and any(clean in t or t in clean for t in article_titles):
+                continue
+        new_lines.append(line)
+
+    result = "\n".join(new_lines)
+    return result, result != original
+
+
 def remove_duplicate_articles_in_insight(body: str) -> tuple[str, bool]:
     """Remove duplicate '주요 기사' lines in '오늘의 인사이트' section."""
     insight_pattern = re.compile(r"^## 오늘의 인사이트\s*$", re.MULTILINE)
@@ -600,6 +637,10 @@ def process_post(filepath: Path, dry_run: bool = False) -> dict[str, int]:
     body, did_change = remove_intro_duplication_in_summary(body)
     if did_change:
         stats["intro_dedup"] = 1
+
+    body, did_change = remove_summary_article_duplicates(body)
+    if did_change:
+        stats["summary_article_dedup"] = 1
 
     # 3. Remove duplicate articles in insight
     body, did_change = remove_duplicate_articles_in_insight(body)
