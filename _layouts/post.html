@@ -59,6 +59,7 @@ layout: default
   </header>
 
   {% if page.image and is_trading_journal %}
+  {% assign hero_image_alt = page.image_alt | default: page.title %}
   <section class="trading-journal-hero">
     <div class="trading-journal-hero-copy">
       <div class="summary-label">Visual Brief</div>
@@ -72,7 +73,7 @@ layout: default
       </div>
     </div>
     <figure class="summary-image-wrapper trading-journal-hero-image">
-      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}" class="summary-market-image" loading="eager">
+      {% include generated-picture.html image=page.image alt=hero_image_alt class="summary-market-image" loading="eager" decoding="sync" %}
     </figure>
   </section>
   {% endif %}

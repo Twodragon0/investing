@@ -86,8 +86,9 @@ layout: default
           {% endif %}
         </div>
         {% if latest_post.image %}
+        {% assign latest_post_image_alt = latest_post.image_alt | default: latest_post.title %}
         <a href="{{ latest_post.url | relative_url }}" class="journal-landing-image-link">
-          <img src="{{ latest_post.image | relative_url }}" alt="{{ latest_post.image_alt | default: latest_post.title }}" class="journal-landing-image">
+          {% include generated-picture.html image=latest_post.image alt=latest_post_image_alt class="journal-landing-image" loading="eager" decoding="sync" %}
         </a>
         {% endif %}
       </article>
@@ -106,7 +107,7 @@ layout: default
           <div class="journal-landing-mini-list">
             {% for post in journal_posts limit: 3 %}
             <a href="{{ post.url | relative_url }}" class="journal-landing-mini-card">
-              {% if post.image %}<img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title }}">{% endif %}
+              {% if post.image %}{% assign journal_image_alt = post.image_alt | default: post.title %}{% include generated-picture.html image=post.image alt=journal_image_alt %}{% endif %}
               <div>
                 <strong>{{ post.title }}</strong>
                 <span>{{ post.date | date: "%Y-%m-%d" }} · {{ post.journal_day_result | default: '-' }}</span>
