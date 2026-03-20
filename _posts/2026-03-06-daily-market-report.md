@@ -7,7 +7,7 @@ tags: ["market-summary", "daily", "crypto", "stock", "macro", "top-coins", "quan
 source: "auto-generated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-market-report-2026-03-06.png"
-description: "2026-03-06 시장 종합: 공포/탐욕 18(Extreme Fear), BTC $70,947(-2.30%), 시총 $2.49T(-1.95%), KOSPI 5,531(-1.87%), 원유 $79.81(+3.23%), Dogecoin -3.11% 하락 분석."
+description: "일일 시장 종합 리포트 - 2026-03-06"
 ---
 
 ## 시장 시각화

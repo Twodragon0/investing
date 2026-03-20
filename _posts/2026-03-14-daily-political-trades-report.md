@@ -9,7 +9,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/og-political-trades.png"
 excerpt: "2026-03-14 정치인 거래·정책 리포트: 의회 거래 2건, SEC 내부자 12건, 중앙은행 8건, 총 22건 수집"
-description: "미국 의회 거래 동향에서는 A retail investor who used 'copy trading' to help grow his portfolio to 7 figures explains his strategy Business Insider 등이 보고되었습니다. 의원들의 주식 거래…"
+description: "미국 의회 거래 동향에서는 등이 보고되었습니다 의원들의 주식 거래"
 image_alt: "정치인 거래·정책 리포트 - 2026-03-14 - 정치인 거래 뉴스 요약 이미지"
 ---
 

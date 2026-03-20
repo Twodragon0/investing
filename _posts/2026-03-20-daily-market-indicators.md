@@ -9,7 +9,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/og-market-analysis.png"
 permalink: "/market-analysis/2026/03/20/daily-market-indicators/"
-description: "2026-03-20 기준 시장 심리·리스크 지표를 8개 소스에서 수집했습니다. Put/Call 비율 관련 뉴스: 1. S&P 500: Are Investors Too Bearish? What Sentiment Signals Say About Stocks Now"
+description: "기준 시장 심리 리스크 지표를 개 소스에서 수집했습니다"
 excerpt: "2026-03-20 기준 시장 심리·리스크 지표를 8개 소스에서 수집했습니다. Put/Call 비율 관련 뉴스: 1. S&P 500: Are Investors Too…"
 image_alt: "시장 심리 및 리스크 지표 (2026-03-20) - 시장 분석 뉴스 요약 이미지"
 ---

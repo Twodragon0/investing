@@ -1,0 +1,49 @@
+name: Post Quality Check
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '_posts/**'
+      - 'scripts/improve_existing_posts.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: post-quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: scripts/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run quality audit (dry-run)
+        run: |
+          cd scripts
+          python improve_existing_posts.py --dry-run 2>&1 | tee /tmp/quality-report.txt
+          echo "---"
+          echo "Quality audit complete."
+
+      - name: Check for issues
+        run: |
+          ISSUES=$(grep -c 'would fix\|would change\|would clean' /tmp/quality-report.txt 2>/dev/null || echo 0)
+          echo "Issues found: $ISSUES"
+          if [ "$ISSUES" -gt 50 ]; then
+            echo "::warning::High number of quality issues detected: $ISSUES"
+          fi

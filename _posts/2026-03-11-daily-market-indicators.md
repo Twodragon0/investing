@@ -8,7 +8,7 @@ keywords: "market-analysis, fear-greed, vix, market-breadth, sentiment"
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/og-market-analysis.png"
-description: "2026-03-11 기준 시장 심리·리스크 지표를 7개 소스에서 수집했습니다. 국채 금리 관련 뉴스 (보완): 1. Oil prices experience roller-coaster movements, while the US Treasury yield curve steepens…"
+description: "기준 시장 심리 리스크 지표를 개 소스에서 수집했습니다"
 excerpt: "2026-03-11 기준 시장 심리·리스크 지표를 7개 소스에서 수집했습니다. 국채 금리 관련 뉴스 (보완): 1. Oil prices experience…"
 image_alt: "시장 심리 및 리스크 지표 (2026-03-11) - 시장 분석 뉴스 요약 이미지"
 ---
