@@ -531,6 +531,29 @@
   margin: 0;
 }
 
+// ---------- Keyboard Focus ----------
+.report-card:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  box-shadow: var(--focus-ring), 0 4px 16px rgba(77, 166, 255, 0.12);
+}
+
+// ---------- Bookmark Count Badge ----------
+.bookmark-count-badge {
+  display: inline-block;
+  background: var(--accent-orange);
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 700;
+  min-width: 16px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  border-radius: 8px;
+  padding: 0 4px;
+  margin-left: 0.25rem;
+}
+
 // ---------- Search Highlight ----------
 .search-highlight {
   background: var(--highlight-bg, rgba(77, 166, 255, 0.25));
