@@ -238,6 +238,28 @@ class TestCategoryRSSFeeds:
         assert "<channel>" in content
 
 
+class TestAccessibility:
+    def test_search_has_aria_label(self, reports_html):
+        assert 'aria-label="리포트 검색"' in reports_html
+
+    def test_filters_have_role(self, reports_html):
+        assert 'role="toolbar"' in reports_html
+        assert 'role="search"' in reports_html
+
+    def test_grid_has_feed_role(self, reports_html):
+        assert 'role="feed"' in reports_html
+
+    def test_date_inputs_have_labels(self, reports_html):
+        assert 'aria-label="시작 날짜"' in reports_html
+        assert 'aria-label="종료 날짜"' in reports_html
+
+    def test_view_toggle_has_group_role(self, reports_html):
+        assert 'role="group"' in reports_html
+
+    def test_cards_have_article_role(self, reports_js):
+        assert 'role="article"' in reports_js
+
+
 class TestExternalJS:
     def test_reports_js_exists(self):
         js_path = os.path.join(SITE_DIR, "assets", "js", "reports.js")

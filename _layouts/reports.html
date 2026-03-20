@@ -59,9 +59,9 @@ layout: default
   </div>
 
   <!-- Filter Controls -->
-  <div class="report-controls">
-    <div class="report-filters">
-      <button class="filter-btn active" data-filter="all">전체</button>
+  <div class="report-controls" role="search" aria-label="리포트 필터">
+    <div class="report-filters" role="toolbar" aria-label="카테고리 필터">
+      <button class="filter-btn active" data-filter="all" aria-pressed="true">전체</button>
       <button class="filter-btn" data-filter="_bookmarks" data-color="cat-bookmark">
         <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" stroke="none"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
         즐겨찾기 <span class="bookmark-count-badge" id="bookmark-count" style="display:none">0</span>
@@ -77,14 +77,14 @@ layout: default
     <div class="report-search-row">
       <div class="report-search-wrap">
         <svg class="report-search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-        <input type="text" id="report-search" class="report-search" placeholder="리포트 검색... ( / )">
+        <input type="text" id="report-search" class="report-search" placeholder="리포트 검색... ( / )" aria-label="리포트 검색">
       </div>
       <div class="report-date-wrap">
-        <input type="date" id="report-date-from" class="report-date">
-        <span class="report-date-sep">~</span>
-        <input type="date" id="report-date-to" class="report-date">
+        <input type="date" id="report-date-from" class="report-date" aria-label="시작 날짜">
+        <span class="report-date-sep" aria-hidden="true">~</span>
+        <input type="date" id="report-date-to" class="report-date" aria-label="종료 날짜">
       </div>
-      <button id="report-clear" class="report-clear-btn">초기화</button>
+      <button id="report-clear" class="report-clear-btn" aria-label="필터 초기화">초기화</button>
       <div class="report-view-toggle" role="group" aria-label="뷰 전환">
         <button class="report-view-btn active" data-view="grid" aria-label="카드뷰">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
@@ -106,7 +106,7 @@ layout: default
   </div>
 
   <!-- Reports Grid (JS-rendered) -->
-  <div class="reports-grid" id="reports-grid">
+  <div class="reports-grid" id="reports-grid" role="feed" aria-label="리포트 목록">
     <div class="skeleton-card"></div>
     <div class="skeleton-card"></div>
     <div class="skeleton-card"></div>

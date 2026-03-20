@@ -100,7 +100,7 @@
     }
     var bc = BADGE_COLORS[p.cc] || ['rgba(88,166,255,0.15)', '#58a6ff'];
     var bmClass = isBookmarked(p.u) ? ' bookmarked' : '';
-    return '<a href="' + escapeHtml(p.u) + '" class="report-card report-card-visible">' +
+    return '<a href="' + escapeHtml(p.u) + '" class="report-card report-card-visible" role="article" aria-label="' + escapeHtml(p.t) + '">' +
       '<button class="report-bookmark' + bmClass + '" data-url="' + escapeHtml(p.u) + '" title="즐겨찾기"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" stroke="none"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>' +
       thumbHtml +
       '<div class="report-card-body">' +
