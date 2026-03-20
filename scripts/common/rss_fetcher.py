@@ -19,9 +19,10 @@ def is_safe_url(url: str) -> bool:
     """Validate URL scheme to prevent XSS via javascript:/data: URLs."""
     try:
         parsed = urlparse(url)
-        return parsed.scheme in ('http', 'https', '')
+        return parsed.scheme in ("http", "https", "")
     except Exception:
         return False
+
 
 VERIFY_SSL = get_ssl_verify()
 

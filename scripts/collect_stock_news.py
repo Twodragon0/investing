@@ -317,7 +317,7 @@ def fetch_korean_market_data() -> dict:
                 if price and prev:
                     change = price - prev
                     change_pct = (change / prev) * 100
-                    result_entry = {
+                    result_entry: Dict[str, Any] = {
                         "price": f"{price:,.2f}",
                         "change": f"{change:+,.2f}",
                         "change_pct": f"{change_pct:+.2f}%",
@@ -325,8 +325,12 @@ def fetch_korean_market_data() -> dict:
                     try:
                         hist = ticker.history(period="7d")
                         if hist is not None and len(hist) >= 2:
-                            closes = pd.to_numeric(hist["Close"], errors="coerce").dropna()
-                            result_entry["sparkline_data"] = [float(v) for v in closes.tail(5).values]
+                            close_series = hist["Close"]
+                            if isinstance(close_series, pd.Series):
+                                closes = pd.to_numeric(close_series, errors="coerce")
+                                if isinstance(closes, pd.Series):
+                                    closes = closes.dropna()
+                                    result_entry["sparkline_data"] = [float(v) for v in closes.tail(5).values]
                     except Exception as e:
                         logger.debug("yfinance %s sparkline: %s", symbol, e)
                     results[name] = result_entry
@@ -515,13 +519,23 @@ def main():
                 raise KeyError("Close column missing")
             for sym, label in _us_symbols.items():
                 try:
-                    _hist = pd.Series(pd.to_numeric(_df["Close"][sym], errors="coerce")).dropna()
+                    _close_series = _df["Close"][sym]
+                    if not isinstance(_close_series, pd.Series):
+                        continue
+                    _hist = pd.to_numeric(_close_series, errors="coerce")
+                    if not isinstance(_hist, pd.Series):
+                        continue
+                    _hist = _hist.dropna()
                     if len(_hist) >= 2:
                         _price = float(_hist.iloc[-1])
                         _prev = float(_hist.iloc[-2])
                         _chg_pct = (_price - _prev) / _prev * 100
                         _sign = "+" if _chg_pct >= 0 else ""
-                        _spark = [float(v) for v in _hist.tail(5).values] if len(_hist) >= 5 else [float(v) for v in _hist.values]
+                        _spark = (
+                            [float(v) for v in _hist.tail(5).values]
+                            if len(_hist) >= 5
+                            else [float(v) for v in _hist.values]
+                        )
                         snapshot_items.append(
                             {
                                 "name": label,
