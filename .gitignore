@@ -41,5 +41,9 @@ worldmonitor_snapshot.md
 *.keystore
 secrets.*
 
+# Test-generated images
+assets/images/generated/test-*
+assets/images/test-*
+
 # Claude local settings (personal)
 .claude/settings.local.json
