@@ -1543,23 +1543,35 @@ def generate_market_heatmap(
             sx = np.linspace(x + 0.01, x + cell_w - 0.01, len(spark_norm))
             sy_base = y + cell_h * 0.02
             sy = sy_base + spark_norm * (cell_h * 0.28)
-            ax.plot(sx, sy, color=change_color, linewidth=0.8, alpha=0.5, transform=ax.transAxes, solid_capstyle="round")
+            ax.plot(
+                sx, sy, color=change_color, linewidth=0.8, alpha=0.5, transform=ax.transAxes, solid_capstyle="round"
+            )
             ax.fill_between(sx, sy_base, sy, color=change_color, alpha=0.06, transform=ax.transAxes)
             # Change text above sparkline
             ax.text(
                 x + cell_w / 2,
                 y + cell_h * 0.35,
                 f"{sign}{change:.2f}%",
-                ha="center", va="center", transform=ax.transAxes,
-                fontsize=12, fontweight="bold", color=change_color, fontfamily=_FONT_FAMILY,
+                ha="center",
+                va="center",
+                transform=ax.transAxes,
+                fontsize=12,
+                fontweight="bold",
+                color=change_color,
+                fontfamily=_FONT_FAMILY,
             )
         else:
             ax.text(
                 x + cell_w / 2,
                 y + cell_h * 0.18,
                 f"{sign}{change:.2f}%",
-                ha="center", va="center", transform=ax.transAxes,
-                fontsize=12, fontweight="bold", color=change_color, fontfamily=_FONT_FAMILY,
+                ha="center",
+                va="center",
+                transform=ax.transAxes,
+                fontsize=12,
+                fontweight="bold",
+                color=change_color,
+                fontfamily=_FONT_FAMILY,
             )
 
     # Color scale legend at bottom
