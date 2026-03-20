@@ -1837,10 +1837,22 @@ def generate_source_distribution_card(
         COLORS["text_secondary"],
     ]
 
-    names = [_to_en(str(s["name"])) for s in sources]
-    counts = [s["count"] for s in sources]
+    ranked_sources = sorted(sources, key=lambda s: s.get("count", 0), reverse=True)
+    if len(ranked_sources) > 4:
+        top_sources = ranked_sources[:4]
+        other_count = sum(max(0, int(src.get("count", 0))) for src in ranked_sources[4:])
+        if other_count > 0:
+            top_sources.append({"name": "Other", "count": other_count})
+        ranked_sources = top_sources
+
+    names = [_to_en(str(s["name"])) for s in ranked_sources]
+    counts = [s["count"] for s in ranked_sources]
     total = sum(counts)
     colors = [donut_colors[i % len(donut_colors)] for i in range(len(names))]
+
+    dominant_idx = int(np.argmax(counts)) if counts else 0
+    dominant_name = names[dominant_idx] if names else "N/A"
+    dominant_share = (counts[dominant_idx] / total * 100) if total else 0.0
 
     fig, ax = plt.subplots(figsize=(8, 8))
     fig.patch.set_facecolor(COLORS["bg"])
@@ -1850,9 +1862,9 @@ def generate_source_distribution_card(
         counts,
         labels=None,
         colors=colors,
-        autopct="%1.1f%%",
+        autopct=lambda pct: f"{pct:.0f}%" if pct >= 10 else "",
         startangle=90,
-        pctdistance=0.78,
+        pctdistance=0.76,
         wedgeprops=dict(width=0.4, edgecolor=COLORS["bg"], linewidth=2),
     )
 
@@ -1876,17 +1888,38 @@ def generate_source_distribution_card(
     ax.text(
         0,
         -0.12,
-        "total",
+        "total flow",
         ha="center",
         va="center",
         fontsize=12,
         color=COLORS["text_secondary"],
         fontfamily=_FONT_FAMILY,
     )
+    ax.text(
+        0,
+        -0.31,
+        f"Top {dominant_name}",
+        ha="center",
+        va="center",
+        fontsize=11,
+        color=COLORS["text"],
+        fontfamily=_FONT_FAMILY,
+        fontweight="bold",
+    )
+    ax.text(
+        0,
+        -0.47,
+        f"{dominant_share:.0f}% share",
+        ha="center",
+        va="center",
+        fontsize=10,
+        color=COLORS["text_secondary"],
+        fontfamily=_FONT_FAMILY,
+    )
 
     # Title
     ax.set_title(
-        f"Source Distribution \u2014 {date_str}",
+        f"Social Flow \u2014 {date_str}",
         fontsize=14,
         fontweight="bold",
         color=COLORS["text"],
@@ -1897,7 +1930,7 @@ def generate_source_distribution_card(
     # Legend
     legend = ax.legend(
         wedges,
-        [f"{n} ({c})" for n, c in zip(names, counts, strict=False)],
+        names,
         loc="lower center",
         bbox_to_anchor=(0.5, -0.12),
         ncol=min(len(names), 4),
@@ -1912,7 +1945,7 @@ def generate_source_distribution_card(
     fig.text(
         0.5,
         -0.02,
-        f"{_DS['watermark']} | Auto-generated",
+        f"{_DS['watermark']} | Visual mix",
         ha="center",
         fontsize=_DS["footer_size"],
         color=COLORS["text_muted"],
@@ -2198,11 +2231,12 @@ def generate_news_briefing_card(
         logger.warning("No themes provided for briefing card")
         return None
 
-    display_themes = themes[:5]
+    display_themes = themes[:4]
     use_emoji = _HAS_EMOJI_FONT
     has_urgent = urgent_alerts and len(urgent_alerts) > 0
     urgent_height = 1.05 if has_urgent else 0
     fig_height = 5.0 + len(display_themes) * 0.88 + urgent_height
+    total_articles = total_count or sum(max(0, int(t.get("count", 0))) for t in display_themes)
 
     fig, ax = plt.subplots(figsize=(12, fig_height))
     fig.patch.set_facecolor(COLORS["bg"])
@@ -2264,7 +2298,7 @@ def generate_news_briefing_card(
     ax.text(
         0.55,
         fig_height - 1.48,
-        f"{date_str} | Top narratives, catalysts and priority signals",
+        f"{date_str} | key market signals",
         fontsize=10.5,
         color=COLORS["text_secondary"],
         fontfamily=_FONT_FAMILY,
@@ -2272,7 +2306,6 @@ def generate_news_briefing_card(
     )
 
     theme_count = len(display_themes)
-    keyword_count = sum(len(_filter_en_keywords(theme.get("keywords", []))[:4]) for theme in display_themes)
     alert_value = str(len(urgent_alerts or []))
     chip_y = header_y - 0.92
     chip_w = 2.84
@@ -2284,7 +2317,7 @@ def generate_news_briefing_card(
         chip_w,
         0.72,
         label="Articles",
-        value=str(total_count or sum(t.get("count", 0) for t in display_themes)),
+        value=str(total_articles),
         accent=COLORS["blue"],
     )
     _draw_metric_chip(
@@ -2303,8 +2336,8 @@ def generate_news_briefing_card(
         chip_y,
         chip_w + 0.22,
         0.72,
-        label="Alerts / Tags",
-        value=f"{alert_value} / {keyword_count}",
+        label="Alerts",
+        value=alert_value,
         accent=COLORS["orange"] if has_urgent else COLORS["green"],
         value_color=COLORS["orange"] if has_urgent else COLORS["text"],
     )
@@ -2327,7 +2360,7 @@ def generate_news_briefing_card(
     y_start = panel_y - 0.32
     ax.text(0.55, y_start, "Themes", fontsize=9, fontweight="bold", color=COLORS["text_muted"], fontfamily=_FONT_FAMILY)
     ax.text(
-        4.58,
+        4.18,
         y_start,
         "Volume",
         fontsize=9,
@@ -2337,7 +2370,14 @@ def generate_news_briefing_card(
         ha="center",
     )
     ax.text(
-        5.35, y_start, "Keywords", fontsize=9, fontweight="bold", color=COLORS["text_muted"], fontfamily=_FONT_FAMILY
+        5.18,
+        y_start,
+        "Share",
+        fontsize=9,
+        fontweight="bold",
+        color=COLORS["text_muted"],
+        fontfamily=_FONT_FAMILY,
+        ha="left",
     )
     ax.plot([0.45, 9.55], [y_start - 0.18, y_start - 0.18], color=COLORS["border"], linewidth=0.8, alpha=0.8)
 
@@ -2371,13 +2411,8 @@ def generate_news_briefing_card(
         if not use_emoji:
             emoji = ""
         name = _to_en(theme.get("name", ""))
-        count = theme.get("count", 0)
-        raw_keywords = theme.get("keywords", [])
-        keywords = _filter_en_keywords(raw_keywords)
-        # Fallback: derive keywords from translated theme name if none provided
-        if not keywords and name:
-            name_parts = [p.strip() for p in name.replace("/", " ").split() if len(p.strip()) >= 3]
-            keywords = name_parts[:2]
+        count = max(0, int(theme.get("count", 0)))
+        share = (count / total_articles * 100) if total_articles else 0.0
         ax.text(
             0.75,
             y + 0.07,
@@ -2389,7 +2424,7 @@ def generate_news_briefing_card(
             va="center",
         )
 
-        badge_x, badge_y = 4.58, y + 0.07
+        badge_x, badge_y = 4.18, y + 0.07
         badge_circle = mpatches.Circle(
             (badge_x, badge_y),
             0.23,
@@ -2410,36 +2445,33 @@ def generate_news_briefing_card(
             ha="center",
         )
 
-        if keywords:
-            chip_x = 5.18
-            chip_y_local = y - 0.08
-            for keyword in keywords[:4]:
-                token = _truncate_text(keyword, 14)
-                chip_width = max(0.52, min(0.16 + len(token) * 0.09, 1.55))
-                if chip_x + chip_width > 9.25:
-                    break
-                _draw_rounded_rect(
-                    ax,
-                    chip_x,
-                    chip_y_local,
-                    chip_width,
-                    0.3,
-                    facecolor=COLORS["bg_inner"],
-                    edgecolor=COLORS["border"],
-                    linewidth=0.5,
-                    alpha=0.95,
-                    pad=0.012,
-                )
-                ax.text(
-                    chip_x + 0.08,
-                    y + 0.07,
-                    token,
-                    fontsize=8.7,
-                    color=COLORS["text_secondary"],
-                    fontfamily=_FONT_FAMILY,
-                    va="center",
-                )
-                chip_x += chip_width + 0.1
+        ax.text(
+            5.18,
+            y + 0.07,
+            f"{share:.0f}%",
+            fontsize=12,
+            fontweight="bold",
+            color=COLORS["text"],
+            fontfamily=_FONT_FAMILY,
+            va="center",
+        )
+        bar_x = 6.05
+        bar_y = y - 0.09
+        bar_w = 3.0
+        _draw_rounded_rect(ax, bar_x, bar_y, bar_w, 0.28, facecolor=COLORS["bg_inner"], alpha=0.96, pad=0.012)
+        fill_w = max(0.18, min(bar_w * (share / 100), bar_w))
+        _draw_rounded_rect(ax, bar_x, bar_y, fill_w, 0.28, facecolor=t_color, alpha=0.9, pad=0.012)
+        ax.text(
+            9.28,
+            y + 0.05,
+            "lead" if i == 0 else "watch",
+            fontsize=8.4,
+            color=t_color if i == 0 else COLORS["text_secondary"],
+            fontfamily=_FONT_FAMILY,
+            fontweight="bold",
+            va="center",
+            ha="right",
+        )
 
     if has_urgent:
         y_urgent = y_start - 0.58 - len(display_themes) * 0.88 - 0.28
@@ -2469,7 +2501,7 @@ def generate_news_briefing_card(
         ax.text(
             0.72,
             y_urgent + 0.05,
-            "URGENT",
+            f"ALERT {alert_value}",
             fontsize=12,
             fontweight="bold",
             color=COLORS["red"],
@@ -2482,18 +2514,18 @@ def generate_news_briefing_card(
             first_alert = urgent_alerts[0]
             # Translate Korean text to English for rendering (prevents tofu □□□)
             first_alert = _to_en(first_alert)
-            alert_text = _truncate_text(first_alert, 74)
+            alert_text = _truncate_text(first_alert, 52)
         ax.text(
-            2.15,
+            2.05,
             y_urgent + 0.05,
             alert_text,
-            fontsize=10,
+            fontsize=9.5,
             color=COLORS["text"],
             fontfamily=_FONT_FAMILY,
             va="center",
         )
 
-    _add_footer(ax, f"{_DS['watermark']} | Auto-generated News Briefing | {date_str}", y=0.12)
+    _add_footer(ax, f"{_DS['watermark']} | Visual briefing | {date_str}", y=0.12)
 
     if not filename:
         filename = f"news-briefing-{date_str}.png"
