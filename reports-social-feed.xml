@@ -1,0 +1,23 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Investing Dragon - 소셜 미디어</title>
+    <description>소셜 미디어 뉴스 및 커뮤니티 동향</description>
+    <link>{{ site.url }}/reports/#social-media</link>
+    <atom:link href="{{ site.url }}/reports-social-feed.xml" rel="self" type="application/rss+xml"/>
+    <language>ko</language>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    {% for post in site.posts limit:30 %}{% if post.categories[0] == "social-media" %}
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <link>{{ post.url | absolute_url }}</link>
+      <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <description>{{ post.description | default: post.excerpt | strip_html | truncate: 200 | xml_escape }}</description>
+    </item>
+    {% endif %}{% endfor %}
+  </channel>
+</rss>
