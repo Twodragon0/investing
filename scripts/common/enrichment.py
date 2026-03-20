@@ -30,6 +30,7 @@ def is_private_url(url: str) -> bool:
     except Exception:
         return True  # Block on resolution failure
 
+
 VERIFY_SSL = get_ssl_verify()
 
 _USER_AGENT = (

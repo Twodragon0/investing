@@ -521,7 +521,11 @@ def main():
                         _prev = float(_hist.iloc[-2])
                         _chg_pct = (_price - _prev) / _prev * 100
                         _sign = "+" if _chg_pct >= 0 else ""
-                        _spark = [float(v) for v in _hist.tail(5).values] if len(_hist) >= 5 else [float(v) for v in _hist.values]
+                        _spark = (
+                            [float(v) for v in _hist.tail(5).values]
+                            if len(_hist) >= 5
+                            else [float(v) for v in _hist.values]
+                        )
                         snapshot_items.append(
                             {
                                 "name": label,

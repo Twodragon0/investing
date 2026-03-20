@@ -1172,7 +1172,9 @@ class ThemeSummarizer:
                 title = _fix_mistranslations(article.get("title_ko") or orig_title)
                 link = article.get("link", "")
                 source = article.get("source", "")
-                description = _fix_mistranslations((article.get("description_ko") or article.get("description", "")).strip())
+                description = _fix_mistranslations(
+                    (article.get("description_ko") or article.get("description", "")).strip()
+                )
 
                 # Skip articles already featured in previous themes
                 if shown < featured_count and orig_title in cross_theme_featured:
@@ -2133,14 +2135,18 @@ class ThemeSummarizer:
         if p0_items:
             lines.append("### 긴급 이슈\n")
             for item in p0_items[:3]:
-                p0_title = _fix_mistranslations(item.get("title_ko") or item.get("title_translated") or item.get("title", ""))[:100]
+                p0_title = _fix_mistranslations(
+                    item.get("title_ko") or item.get("title_translated") or item.get("title", "")
+                )[:100]
                 if p0_title:
                     lines.append(f"- {p0_title}")
             lines.append("")
         if p1_items:
             lines.append("### 주요 이슈\n")
             for item in p1_items[:3]:
-                p1_title = _fix_mistranslations(item.get("title_ko") or item.get("title_translated") or item.get("title", ""))[:80]
+                p1_title = _fix_mistranslations(
+                    item.get("title_ko") or item.get("title_translated") or item.get("title", "")
+                )[:80]
                 if p1_title:
                     lines.append(f"- {p1_title}")
             if len(p1_items) > 3:

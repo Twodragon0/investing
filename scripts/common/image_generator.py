@@ -467,22 +467,36 @@ def _draw_mini_donut(ax, cx, cy, radius, data, colors, *, inner_ratio=0.58, cent
         start_angle = end_angle
     # Inner glow ring
     glow = mpatches.Circle(
-        (cx, cy), radius * inner_ratio + 0.02,
-        facecolor="none", edgecolor=COLORS["border_highlight"],
-        linewidth=0.8, alpha=0.4,
+        (cx, cy),
+        radius * inner_ratio + 0.02,
+        facecolor="none",
+        edgecolor=COLORS["border_highlight"],
+        linewidth=0.8,
+        alpha=0.4,
     )
     ax.add_patch(glow)
     # Center total text (use center_value if provided, else sum)
     display_val = str(center_value) if center_value is not None else str(total)
     ax.text(
-        cx, cy + 0.12, display_val,
-        ha="center", va="center", fontsize=22,
-        fontweight="bold", color=COLORS["text"], fontfamily=_FONT_FAMILY,
+        cx,
+        cy + 0.12,
+        display_val,
+        ha="center",
+        va="center",
+        fontsize=22,
+        fontweight="bold",
+        color=COLORS["text"],
+        fontfamily=_FONT_FAMILY,
     )
     ax.text(
-        cx, cy - 0.18, "stories",
-        ha="center", va="center", fontsize=8,
-        color=COLORS["text_muted"], fontfamily=_FONT_FAMILY,
+        cx,
+        cy - 0.18,
+        "stories",
+        ha="center",
+        va="center",
+        fontsize=8,
+        color=COLORS["text_muted"],
+        fontfamily=_FONT_FAMILY,
     )
 
 
@@ -503,10 +517,14 @@ def _draw_candlestick_bg(ax, x_start, y_start, width, height, *, n=10, alpha=0.0
         ax.plot([x, x], [wick_bottom, wick_top], color=color, linewidth=1.2, alpha=alpha)
         # Body
         rect = mpatches.FancyBboxPatch(
-            (x - body_w / 2, body_y), body_w, body_h,
+            (x - body_w / 2, body_y),
+            body_w,
+            body_h,
             boxstyle="round,pad=0.01",
             facecolor=color if is_bull else COLORS["bg"],
-            edgecolor=color, linewidth=0.8, alpha=alpha * 1.8,
+            edgecolor=color,
+            linewidth=0.8,
+            alpha=alpha * 1.8,
         )
         ax.add_patch(rect)
 
@@ -530,16 +548,24 @@ def _draw_line_chart_bg(ax, x_start, y_start, width, height, *, alpha=0.09):
 def _draw_globe_bg(ax, cx, cy, radius, *, alpha=0.06):
     """Draw subtle decorative globe pattern for world/geopolitical cards."""
     circle = mpatches.Circle(
-        (cx, cy), radius, facecolor="none",
-        edgecolor=COLORS["cyan"], linewidth=1.8, alpha=alpha * 2,
+        (cx, cy),
+        radius,
+        facecolor="none",
+        edgecolor=COLORS["cyan"],
+        linewidth=1.8,
+        alpha=alpha * 2,
     )
     ax.add_patch(circle)
     # Latitude ellipses
     for frac in [0.3, 0.6, 0.9]:
         ellipse = mpatches.Ellipse(
-            (cx, cy), radius * 2, radius * 2 * frac,
-            facecolor="none", edgecolor=COLORS["cyan"],
-            linewidth=0.7, alpha=alpha,
+            (cx, cy),
+            radius * 2,
+            radius * 2 * frac,
+            facecolor="none",
+            edgecolor=COLORS["cyan"],
+            linewidth=0.7,
+            alpha=alpha,
         )
         ax.add_patch(ellipse)
     # Longitude arcs
@@ -562,30 +588,36 @@ def _draw_globe_bg(ax, cx, cy, radius, *, alpha=0.06):
 def _draw_shield_bg(ax, cx, cy, size, *, alpha=0.06):
     """Draw subtle decorative shield pattern for regulatory/security cards."""
     from matplotlib.path import Path
+
     s = size
     verts = [
-        (cx, cy + s * 1.0),       # top
+        (cx, cy + s * 1.0),  # top
         (cx + s * 0.8, cy + s * 0.6),
         (cx + s * 0.8, cy - s * 0.2),
         (cx + s * 0.4, cy - s * 0.7),
-        (cx, cy - s * 1.0),       # bottom
+        (cx, cy - s * 1.0),  # bottom
         (cx - s * 0.4, cy - s * 0.7),
         (cx - s * 0.8, cy - s * 0.2),
         (cx - s * 0.8, cy + s * 0.6),
-        (cx, cy + s * 1.0),       # close
+        (cx, cy + s * 1.0),  # close
     ]
     codes = [Path.MOVETO] + [Path.CURVE3] * 7 + [Path.CLOSEPOLY]
     path = Path(verts, codes)
     patch = mpatches.PathPatch(
-        path, facecolor=COLORS["cyan"], edgecolor=COLORS["cyan"],
-        linewidth=1.5, alpha=alpha,
+        path,
+        facecolor=COLORS["cyan"],
+        edgecolor=COLORS["cyan"],
+        linewidth=1.5,
+        alpha=alpha,
     )
     ax.add_patch(patch)
     # Checkmark inside
     ax.plot(
         [cx - s * 0.25, cx - s * 0.05, cx + s * 0.3],
         [cy, cy - s * 0.25, cy + s * 0.3],
-        color=COLORS["cyan"], linewidth=2.0, alpha=alpha * 3,
+        color=COLORS["cyan"],
+        linewidth=2.0,
+        alpha=alpha * 3,
     )
 
 
@@ -1912,20 +1944,34 @@ def generate_market_snapshot_card(
             ax.add_patch(_wedge)
             _start_angle = _end_angle
         _glow_ring = mpatches.Circle(
-            (_donut_cx, _donut_cy), _donut_r * 0.58 + 0.02,
-            facecolor="none", edgecolor=COLORS["border_highlight"],
-            linewidth=0.6, alpha=0.35,
+            (_donut_cx, _donut_cy),
+            _donut_r * 0.58 + 0.02,
+            facecolor="none",
+            edgecolor=COLORS["border_highlight"],
+            linewidth=0.6,
+            alpha=0.35,
         )
         ax.add_patch(_glow_ring)
         ax.text(
-            _donut_cx, _donut_cy + 0.07, str(_adv_total),
-            ha="center", va="center", fontsize=9, fontweight="bold",
-            color=COLORS["text"], fontfamily=_FONT_FAMILY,
+            _donut_cx,
+            _donut_cy + 0.07,
+            str(_adv_total),
+            ha="center",
+            va="center",
+            fontsize=9,
+            fontweight="bold",
+            color=COLORS["text"],
+            fontfamily=_FONT_FAMILY,
         )
         ax.text(
-            _donut_cx, _donut_cy - 0.14, "mkts",
-            ha="center", va="center", fontsize=6,
-            color=COLORS["text_muted"], fontfamily=_FONT_FAMILY,
+            _donut_cx,
+            _donut_cy - 0.14,
+            "mkts",
+            ha="center",
+            va="center",
+            fontsize=6,
+            color=COLORS["text_muted"],
+            fontfamily=_FONT_FAMILY,
         )
 
     chip_y = header_y - 0.9
@@ -1954,8 +2000,14 @@ def generate_market_snapshot_card(
     _breadth_bar_w = _breadth_bar_x1 - _breadth_bar_x0
     _breadth_bar_h = 0.15
     _draw_rounded_rect(
-        ax, _breadth_bar_x0, _breadth_bar_y, _breadth_bar_w, _breadth_bar_h,
-        facecolor=COLORS["bg_inner"], alpha=0.85, pad=0.02,
+        ax,
+        _breadth_bar_x0,
+        _breadth_bar_y,
+        _breadth_bar_w,
+        _breadth_bar_h,
+        facecolor=COLORS["bg_inner"],
+        alpha=0.85,
+        pad=0.02,
     )
     _adv_dec_total = advancers + decliners
     if _adv_dec_total > 0:
@@ -1963,15 +2015,25 @@ def generate_market_snapshot_card(
         _red_frac = decliners / _adv_dec_total
         if _green_frac > 0:
             _draw_rounded_rect(
-                ax, _breadth_bar_x0, _breadth_bar_y,
-                _breadth_bar_w * _green_frac, _breadth_bar_h,
-                facecolor=COLORS["green"], alpha=0.72, pad=0.01,
+                ax,
+                _breadth_bar_x0,
+                _breadth_bar_y,
+                _breadth_bar_w * _green_frac,
+                _breadth_bar_h,
+                facecolor=COLORS["green"],
+                alpha=0.72,
+                pad=0.01,
             )
         if _red_frac > 0:
             _draw_rounded_rect(
-                ax, _breadth_bar_x0 + _breadth_bar_w * _green_frac, _breadth_bar_y,
-                _breadth_bar_w * _red_frac, _breadth_bar_h,
-                facecolor=COLORS["red"], alpha=0.72, pad=0.01,
+                ax,
+                _breadth_bar_x0 + _breadth_bar_w * _green_frac,
+                _breadth_bar_y,
+                _breadth_bar_w * _red_frac,
+                _breadth_bar_h,
+                facecolor=COLORS["red"],
+                alpha=0.72,
+                pad=0.01,
             )
 
     panel_y = chip_y - 0.55
@@ -2106,7 +2168,9 @@ def generate_market_snapshot_card(
             if _spark_raw and len(_spark_raw) >= 2:
                 _spark_prices = np.array(_spark_raw[-_spark_n:], dtype=float)
                 _smin, _smax = _spark_prices.min(), _spark_prices.max()
-                _spark_vals = ((_spark_prices - _smin) / (_smax - _smin)) if _smax > _smin else np.full(len(_spark_prices), 0.5)
+                _spark_vals = (
+                    ((_spark_prices - _smin) / (_smax - _smin)) if _smax > _smin else np.full(len(_spark_prices), 0.5)
+                )
                 _spark_n = len(_spark_vals)
             else:
                 _spark_seed = abs(hash(item["name"])) % 2**31
@@ -2124,9 +2188,13 @@ def generate_market_snapshot_card(
             _spark_xs = np.linspace(_spark_x0, _spark_x1, _spark_n)
             _spark_ys = _spark_y0 + _spark_vals * (_spark_y1 - _spark_y0)
             ax.plot(
-                _spark_xs, _spark_ys,
-                color=item["color"], linewidth=1.2, alpha=0.4,
-                solid_capstyle="round", solid_joinstyle="round",
+                _spark_xs,
+                _spark_ys,
+                color=item["color"],
+                linewidth=1.2,
+                alpha=0.4,
+                solid_capstyle="round",
+                solid_joinstyle="round",
             )
         y -= 0.72
 
@@ -2598,37 +2666,70 @@ def generate_news_briefing_card(
     _add_market_texture(ax, 10, fig_height, accent=COLORS["blue"])
 
     _draw_rounded_rect(
-        ax, 0.16, 0.16, 9.68, fig_height - 0.32,
-        facecolor="none", edgecolor=COLORS["border_highlight"],
-        linewidth=1.15, alpha=0.6, pad=0.08,
+        ax,
+        0.16,
+        0.16,
+        9.68,
+        fig_height - 0.32,
+        facecolor="none",
+        edgecolor=COLORS["border_highlight"],
+        linewidth=1.15,
+        alpha=0.6,
+        pad=0.08,
     )
 
     header_y = fig_height - 2.3
     header_h = 1.9
     _draw_gradient_bar(
-        ax, 0.22, header_y, 9.56, header_h,
-        color_start="#11253d", color_end="#0f1928", steps=44, alpha=0.98,
+        ax,
+        0.22,
+        header_y,
+        9.56,
+        header_h,
+        color_start="#11253d",
+        color_end="#0f1928",
+        steps=44,
+        alpha=0.98,
     )
     _draw_rounded_rect(
-        ax, 0.22, header_y, 9.56, header_h,
-        facecolor="none", edgecolor=COLORS["border_highlight"],
-        linewidth=1.0, pad=0.08,
+        ax,
+        0.22,
+        header_y,
+        9.56,
+        header_h,
+        facecolor="none",
+        edgecolor=COLORS["border_highlight"],
+        linewidth=1.0,
+        pad=0.08,
     )
     ax.text(
-        0.55, fig_height - 0.68, "MARKET BRIEF",
-        fontsize=9, fontweight="bold", color=COLORS["cyan"],
-        fontfamily=_FONT_FAMILY, va="center",
+        0.55,
+        fig_height - 0.68,
+        "MARKET BRIEF",
+        fontsize=9,
+        fontweight="bold",
+        color=COLORS["cyan"],
+        fontfamily=_FONT_FAMILY,
+        va="center",
     )
     ax.text(
-        0.55, fig_height - 1.06, _sanitize_og_text(category),
-        fontsize=23, fontweight="bold", color=COLORS["text"],
-        fontfamily=_FONT_FAMILY, va="center",
+        0.55,
+        fig_height - 1.06,
+        _sanitize_og_text(category),
+        fontsize=23,
+        fontweight="bold",
+        color=COLORS["text"],
+        fontfamily=_FONT_FAMILY,
+        va="center",
     )
     ax.text(
-        0.55, fig_height - 1.48,
+        0.55,
+        fig_height - 1.48,
         f"{date_str} | key market signals",
-        fontsize=10.5, color=COLORS["text_secondary"],
-        fontfamily=_FONT_FAMILY, va="center",
+        fontsize=10.5,
+        color=COLORS["text_secondary"],
+        fontfamily=_FONT_FAMILY,
+        va="center",
     )
 
     computed_total = total_articles
@@ -2637,15 +2738,31 @@ def generate_news_briefing_card(
     chip_w = 2.84
     chip_gap = 0.2
     _draw_metric_chip(
-        ax, 0.35, chip_y, chip_w, 0.72,
-        label="Articles", value=str(total_articles), accent=COLORS["blue"],
+        ax,
+        0.35,
+        chip_y,
+        chip_w,
+        0.72,
+        label="Articles",
+        value=str(total_articles),
+        accent=COLORS["blue"],
     )
     _draw_metric_chip(
-        ax, 0.35 + chip_w + chip_gap, chip_y, chip_w, 0.72,
-        label="Themes", value=str(n_themes), accent=COLORS["cyan"],
+        ax,
+        0.35 + chip_w + chip_gap,
+        chip_y,
+        chip_w,
+        0.72,
+        label="Themes",
+        value=str(n_themes),
+        accent=COLORS["cyan"],
     )
     _draw_metric_chip(
-        ax, 0.35 + (chip_w + chip_gap) * 2, chip_y, chip_w + 0.22, 0.72,
+        ax,
+        0.35 + (chip_w + chip_gap) * 2,
+        chip_y,
+        chip_w + 0.22,
+        0.72,
         label="Alerts",
         value=alert_value,
         accent=COLORS["orange"] if has_urgent else COLORS["green"],
@@ -2655,21 +2772,36 @@ def generate_news_briefing_card(
     panel_y = chip_y - 0.6
     panel_h = panel_y - 0.38
     _draw_rounded_rect(
-        ax, 0.22, 0.38, 9.56, panel_h,
-        facecolor=COLORS["bg_header"], edgecolor=COLORS["border"],
-        linewidth=0.9, alpha=0.97, pad=0.08,
+        ax,
+        0.22,
+        0.38,
+        9.56,
+        panel_h,
+        facecolor=COLORS["bg_header"],
+        edgecolor=COLORS["border"],
+        linewidth=0.9,
+        alpha=0.97,
+        pad=0.08,
     )
 
     theme_colors = [
-        COLORS["orange"], COLORS["blue"], COLORS["purple"],
-        COLORS["green"], COLORS["cyan"],
+        COLORS["orange"],
+        COLORS["blue"],
+        COLORS["purple"],
+        COLORS["green"],
+        COLORS["cyan"],
     ]
 
     donut_cx = 2.2
     donut_cy = panel_y - panel_h * 0.45
     donut_r = min(panel_h * 0.32, 1.35)
     _draw_mini_donut(
-        ax, donut_cx, donut_cy, donut_r, display_themes, theme_colors,
+        ax,
+        donut_cx,
+        donut_cy,
+        donut_r,
+        display_themes,
+        theme_colors,
         center_value=computed_total,
     )
 
@@ -2684,9 +2816,13 @@ def generate_news_briefing_card(
         dot = mpatches.Circle((lx, ly), 0.06, facecolor=t_color, edgecolor="none", alpha=0.9)
         ax.add_patch(dot)
         ax.text(
-            lx + 0.14, ly, _truncate_text(name, 10),
-            fontsize=7.5, color=COLORS["text_secondary"],
-            fontfamily=_FONT_FAMILY, va="center",
+            lx + 0.14,
+            ly,
+            _truncate_text(name, 10),
+            fontsize=7.5,
+            color=COLORS["text_secondary"],
+            fontfamily=_FONT_FAMILY,
+            va="center",
         )
 
     bar_x_start = 4.4
@@ -2696,13 +2832,20 @@ def generate_news_briefing_card(
     bars_top = panel_y - 0.45
 
     ax.text(
-        bar_x_start, bars_top + 0.25, "Theme Distribution",
-        fontsize=9, fontweight="bold", color=COLORS["text_muted"],
+        bar_x_start,
+        bars_top + 0.25,
+        "Theme Distribution",
+        fontsize=9,
+        fontweight="bold",
+        color=COLORS["text_muted"],
         fontfamily=_FONT_FAMILY,
     )
     ax.plot(
-        [bar_x_start, bar_x_end], [bars_top + 0.08, bars_top + 0.08],
-        color=COLORS["border"], linewidth=0.6, alpha=0.6,
+        [bar_x_start, bar_x_end],
+        [bars_top + 0.08, bars_top + 0.08],
+        color=COLORS["border"],
+        linewidth=0.6,
+        alpha=0.6,
     )
 
     for i, theme in enumerate(display_themes):
@@ -2713,75 +2856,142 @@ def generate_news_briefing_card(
         share = (count / total_articles * 100) if total_articles else 0.0
 
         ax.text(
-            bar_x_start, y + 0.18, _truncate_text(name, 20),
-            fontsize=11, fontweight="bold", color=COLORS["text"],
-            fontfamily=_FONT_FAMILY, va="center",
+            bar_x_start,
+            y + 0.18,
+            _truncate_text(name, 20),
+            fontsize=11,
+            fontweight="bold",
+            color=COLORS["text"],
+            fontfamily=_FONT_FAMILY,
+            va="center",
         )
         ax.text(
-            bar_x_end - 0.45, y + 0.18, f"{share:.0f}%",
-            fontsize=10.5, fontweight="bold", color=t_color,
-            fontfamily=_FONT_FAMILY, va="center", ha="right",
+            bar_x_end - 0.45,
+            y + 0.18,
+            f"{share:.0f}%",
+            fontsize=10.5,
+            fontweight="bold",
+            color=t_color,
+            fontfamily=_FONT_FAMILY,
+            va="center",
+            ha="right",
         )
 
         bar_y = y - 0.12
         bar_h = 0.22
         bar_w = max(bar_max_w * (count / max_count), 0.3)
         _draw_rounded_rect(
-            ax, bar_x_start, bar_y, bar_max_w, bar_h,
-            facecolor=COLORS["bg_inner"], alpha=0.5, pad=0.005,
+            ax,
+            bar_x_start,
+            bar_y,
+            bar_max_w,
+            bar_h,
+            facecolor=COLORS["bg_inner"],
+            alpha=0.5,
+            pad=0.005,
         )
         _draw_gradient_bar(
-            ax, bar_x_start, bar_y, bar_w, bar_h,
-            color_start=t_color, color_end=COLORS["bg_card"],
-            steps=20, alpha=0.85,
+            ax,
+            bar_x_start,
+            bar_y,
+            bar_w,
+            bar_h,
+            color_start=t_color,
+            color_end=COLORS["bg_card"],
+            steps=20,
+            alpha=0.85,
         )
         _draw_rounded_rect(
-            ax, bar_x_start, bar_y, bar_w, bar_h,
-            facecolor="none", edgecolor=t_color,
-            linewidth=0.8, alpha=0.6, pad=0.005,
+            ax,
+            bar_x_start,
+            bar_y,
+            bar_w,
+            bar_h,
+            facecolor="none",
+            edgecolor=t_color,
+            linewidth=0.8,
+            alpha=0.6,
+            pad=0.005,
         )
         ax.text(
-            bar_x_start + bar_w + 0.15, bar_y + bar_h * 0.5,
-            str(count), fontsize=11, fontweight="bold",
-            color=t_color, fontfamily=_FONT_FAMILY, va="center",
+            bar_x_start + bar_w + 0.15,
+            bar_y + bar_h * 0.5,
+            str(count),
+            fontsize=11,
+            fontweight="bold",
+            color=t_color,
+            fontfamily=_FONT_FAMILY,
+            va="center",
         )
 
     if has_urgent:
         y_urgent = 0.7 + urgent_height * 0.3
         _draw_rounded_rect(
-            ax, 0.45, y_urgent - 0.42, 9.1, 0.88,
-            facecolor=COLORS["red_dim"], edgecolor=COLORS["red"],
-            linewidth=1.2, alpha=0.96, pad=0.03,
+            ax,
+            0.45,
+            y_urgent - 0.42,
+            9.1,
+            0.88,
+            facecolor=COLORS["red_dim"],
+            edgecolor=COLORS["red"],
+            linewidth=1.2,
+            alpha=0.96,
+            pad=0.03,
         )
         _draw_gradient_bar(
-            ax, 0.45, y_urgent + 0.28, 9.1, 0.08,
-            color_start=COLORS["red"], color_end=COLORS["red_dim"],
-            steps=28, alpha=0.5,
+            ax,
+            0.45,
+            y_urgent + 0.28,
+            9.1,
+            0.08,
+            color_start=COLORS["red"],
+            color_end=COLORS["red_dim"],
+            steps=28,
+            alpha=0.5,
         )
         tri_cx, tri_cy = 0.85, y_urgent + 0.02
         tri = mpatches.RegularPolygon(
-            (tri_cx, tri_cy), 3, radius=0.18,
-            facecolor=COLORS["red"], edgecolor="none", alpha=0.3,
+            (tri_cx, tri_cy),
+            3,
+            radius=0.18,
+            facecolor=COLORS["red"],
+            edgecolor="none",
+            alpha=0.3,
         )
         ax.add_patch(tri)
         ax.text(
-            tri_cx, tri_cy - 0.02, "!",
-            fontsize=12, fontweight="bold", color=COLORS["red"],
-            fontfamily=_FONT_FAMILY, va="center", ha="center",
+            tri_cx,
+            tri_cy - 0.02,
+            "!",
+            fontsize=12,
+            fontweight="bold",
+            color=COLORS["red"],
+            fontfamily=_FONT_FAMILY,
+            va="center",
+            ha="center",
         )
         ax.text(
-            1.25, y_urgent + 0.02, f"ALERT {alert_value}",
-            fontsize=11, fontweight="bold", color=COLORS["red"],
-            fontfamily=_FONT_FAMILY, va="center",
+            1.25,
+            y_urgent + 0.02,
+            f"ALERT {alert_value}",
+            fontsize=11,
+            fontweight="bold",
+            color=COLORS["red"],
+            fontfamily=_FONT_FAMILY,
+            va="center",
         )
         alert_text = ""
         if urgent_alerts:
             first_alert = _to_en(urgent_alerts[0])
             alert_text = _truncate_text(_sanitize_og_text(first_alert), 58)
         ax.text(
-            2.55, y_urgent + 0.02, alert_text,
-            fontsize=9.8, color=COLORS["text"],
-            fontfamily=_FONT_FAMILY, va="center",
+            2.55,
+            y_urgent + 0.02,
+            alert_text,
+            fontsize=9.8,
+            color=COLORS["text"],
+            fontfamily=_FONT_FAMILY,
+            va="center",
         )
 
     _add_footer(
@@ -2849,9 +3059,15 @@ def generate_category_og_image(
 
     # Background gradient
     _draw_gradient_bar(
-        ax, 0, 0, 12, 6.3,
-        color_start=COLORS["bg"], color_end=COLORS["bg_header"],
-        steps=30, alpha=0.8,
+        ax,
+        0,
+        0,
+        12,
+        6.3,
+        color_start=COLORS["bg"],
+        color_end=COLORS["bg_header"],
+        steps=30,
+        alpha=0.8,
     )
 
     # Category-specific background illustration (large, prominent)
@@ -2870,52 +3086,92 @@ def generate_category_og_image(
 
     # Bottom accent bar (gradient)
     _draw_gradient_bar(
-        ax, 0.5, 0.3, 11, 0.12,
-        color_start=accent, color_end=COLORS["bg"],
-        steps=30, alpha=0.7,
+        ax,
+        0.5,
+        0.3,
+        11,
+        0.12,
+        color_start=accent,
+        color_end=COLORS["bg"],
+        steps=30,
+        alpha=0.7,
     )
 
     # Top accent bar
     _draw_gradient_bar(
-        ax, 0.5, 5.95, 11, 0.08,
-        color_start=COLORS["bg"], color_end=accent,
-        steps=30, alpha=0.5,
+        ax,
+        0.5,
+        5.95,
+        11,
+        0.08,
+        color_start=COLORS["bg"],
+        color_end=accent,
+        steps=30,
+        alpha=0.5,
     )
 
     # Site logo
     ax.text(
-        6, 5.35, "INVESTING DRAGON",
-        ha="center", va="center", fontsize=11,
-        fontweight="bold", color=COLORS["text_muted"],
-        fontfamily=_FONT_FAMILY, alpha=0.8,
+        6,
+        5.35,
+        "INVESTING DRAGON",
+        ha="center",
+        va="center",
+        fontsize=11,
+        fontweight="bold",
+        color=COLORS["text_muted"],
+        fontfamily=_FONT_FAMILY,
+        alpha=0.8,
     )
 
     # Category name (large, with subtle shadow)
     ax.text(
-        6.06, 3.14, cat_name,
-        ha="center", va="center", fontsize=38,
-        fontweight="bold", color="#000000",
-        fontfamily=_FONT_FAMILY, alpha=0.3,
+        6.06,
+        3.14,
+        cat_name,
+        ha="center",
+        va="center",
+        fontsize=38,
+        fontweight="bold",
+        color="#000000",
+        fontfamily=_FONT_FAMILY,
+        alpha=0.3,
     )
     ax.text(
-        6, 3.2, cat_name,
-        ha="center", va="center", fontsize=38,
-        fontweight="bold", color=COLORS["text"],
+        6,
+        3.2,
+        cat_name,
+        ha="center",
+        va="center",
+        fontsize=38,
+        fontweight="bold",
+        color=COLORS["text"],
         fontfamily=_FONT_FAMILY,
     )
 
     # Accent underline below category name
     name_w = len(cat_name) * 0.38
     _draw_rounded_rect(
-        ax, 6 - name_w / 2, 2.45, name_w, 0.08,
-        facecolor=accent, alpha=0.6, pad=0.005,
+        ax,
+        6 - name_w / 2,
+        2.45,
+        name_w,
+        0.08,
+        facecolor=accent,
+        alpha=0.6,
+        pad=0.005,
     )
 
     # Description
     ax.text(
-        6, 1.7, "Crypto and Stock Market Intelligence",
-        ha="center", va="center", fontsize=13,
-        color=COLORS["text_secondary"], fontfamily=_FONT_FAMILY,
+        6,
+        1.7,
+        "Crypto and Stock Market Intelligence",
+        ha="center",
+        va="center",
+        fontsize=13,
+        color=COLORS["text_secondary"],
+        fontfamily=_FONT_FAMILY,
     )
 
     # Decorative accent lines (left and right of logo)
@@ -2924,8 +3180,13 @@ def generate_category_og_image(
     # Small diamond at line ends
     for dx, dy in [(4.25, 4.5), (7.75, 4.5)]:
         diamond = mpatches.RegularPolygon(
-            (dx, dy), 4, radius=0.1, orientation=np.pi / 4,
-            facecolor=accent, edgecolor="none", alpha=0.5,
+            (dx, dy),
+            4,
+            radius=0.1,
+            orientation=np.pi / 4,
+            facecolor=accent,
+            edgecolor="none",
+            alpha=0.5,
         )
         ax.add_patch(diamond)
 
@@ -2935,8 +3196,12 @@ def generate_category_og_image(
 
     plt.tight_layout(pad=0)
     plt.savefig(
-        filepath, dpi=150, facecolor=COLORS["bg"],
-        edgecolor="none", bbox_inches="tight", pad_inches=0,
+        filepath,
+        dpi=150,
+        facecolor=COLORS["bg"],
+        edgecolor="none",
+        bbox_inches="tight",
+        pad_inches=0,
     )
     plt.close(fig)
 
