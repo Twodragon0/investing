@@ -1,37 +1,42 @@
 ---
-description: Investing Dragon news collector and Jekyll site rules
+description: Investing Dragon collector, post, and workflow guardrails
 globs: ["scripts/**/*.py", "_posts/**/*.md", ".github/workflows/**/*.yml"]
 ---
 
-# Python Script Conventions
+# Source Of Truth
 
-- All scripts MUST use `scripts/common/config.py` (`get_env()`, `setup_logging()`)
-- All collectors use `scripts/common/dedup.py` for duplicate prevention
-- API timeout: 15 seconds
-- SSL: certifi-first, `DISABLE_SSL_VERIFY` env override available
-- Logging: Python logging module only, never print()
+- Primary repo workflow and guardrails live in `AGENTS.md`
+- `CLAUDE.md` adds project context and command references
+- `.opencode/README.md` defines OpenCode routing and safety baseline
 
-# Post Format
+# Collector And Script Guardrails
 
-- Auto-generated posts: `_posts/YYYY-MM-DD-title.md`
-- Front matter required: title, date, categories, tags, source
-- State tracking: `_state/*.json` (SHA256 hash + fuzzy match >80%)
-- NEVER manually edit `_state/*.json` files
+- Reuse `scripts/common/config.py` for `get_env()` and `setup_logging()`
+- Reuse `scripts/common/dedup.py` and keep collectors deterministic and idempotent
+- Prefer shared helpers in `scripts/common/` before adding new request or parsing logic
+- Validate external payloads and URLs before processing
+- Keep API timeout at 15 seconds and prefer certifi-first SSL handling
+- Use Python logging only; do not add `print()` debugging
+- Never hardcode secrets, tokens, cookies, or internal URLs
 
-# Jekyll
+# Post And Image Guardrails
 
-- `bundle exec jekyll serve` for local dev
-- Theme: minima (dark finance)
-- Auto-generated images: `assets/images/generated/` (cleaned after 30 days)
+- Auto-generated posts belong in `_posts/YYYY-MM-DD-title.md`
+- Preserve parser-safe front matter and existing post structure unless coordinated with `crypto`
+- Verify required front matter fields for the target post type, permalink uniqueness, and image existence
+- Keep Korean-first operational readability in generated summaries and briefings
+- Generated image filenames must stay English-only under `assets/images/generated/`
+- Never manually edit `_state/*.json`
 
-# Collector Architecture
+# Workflow And Automation Guardrails
 
-- 11 collectors in `scripts/collect_*.py`
-- 5 generators in `scripts/generate_*.py`
-- 17 shared modules in `scripts/common/`
-- Slack mention handler: `scripts/respond_ai_mentions.py`
+- Treat workflow and scheduler edits as production changes
+- Pin GitHub Actions explicitly and keep schedules and concurrency intentional
+- Run the target script once before enabling or changing cron-style automation
+- Prefer existing helpers such as `scripts/opencode_git_pull.sh` for sync automation
 
-# Workflows
+# Verification Shortcuts
 
-- 25 GitHub Actions workflows
-- 2 reusable actions in `.github/actions/`
+- Python collector or shared-module changes: `python3 -m ruff check scripts/`
+- Jekyll or layout-facing changes: `bundle exec jekyll build`
+- Post edits: verify front matter, image references, and parser-contract safety
