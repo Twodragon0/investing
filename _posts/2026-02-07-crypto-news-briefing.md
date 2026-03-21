@@ -14,7 +14,7 @@ image: "/assets/images/generated/og-crypto-news-briefing-2026-02-07.png"
 
 ## 전체 뉴스 요약
 
-- 1. "전략비축은 쌀 때 사는 것"트럼프는 왜 비트코인을 안 사나? (BlockMedia) 2. 빗썸, 비트코인 오지급금융당국 긴급점검 (BlockMedia) 3. NBC 진행자 서배너 거스리 모친 실종⋯비트코인 몸값 의혹 확산 (BlockMedia) 4. [AAS 위클리]…
+- 1. "전략비축은 쌀 때 사는 것"트럼프는 왜 비트코인을 안 사나? (BlockMedia) 2. 빗썸, 비트코인 오지급금융당국 긴급점검 (BlockMedia) 3. NBC 진행자 서배너 거스리 모친 실종⋯비트코인 몸값 의혹 확산 (BlockMedia) 4. [AAS 위클리] 모두가…
 
 
 ## 국내 블록체인 뉴스

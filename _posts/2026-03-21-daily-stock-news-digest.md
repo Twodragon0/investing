@@ -48,52 +48,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-21 - stock-news 뉴스 요약 
 <li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOdTl3QlJESHQ0QjdpVnp1M2ZIZ1NPTXI5NlAyTnIwVVhDS1FmcndhTXlRLXpNRXEyZ1BsRHp2Qk1BZG1oZk5XZm1CbUxHUGRUNTdKdkl1dVN3QkhFVTdGaThzWkRSSW9PTmJvTzFXbnhOVUU5SVc0aUc0NnB6R01rVEs3OXFpZ0Rp?oc=5">마이크론 시간외 주가 "급락" …삼성전자 SK하닉 풍향계</a> <span class="p0-desc">마이크론 시간외 주가 "급락" …삼성전자 SK하닉 풍향계 글로벌이코노믹</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Why US stock market Dow, S&P 500, Nasdaq fall sharply today: Dow, S&P 500, Nasdaq crash again — h. 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 195건의 뉴스 중 P1 주요 이슈도 28건 확인됩니다.
-
-### 테마별 동향
-
-- **📊 매크로/금리** (30건): 금리, 동결, 환율 이슈가 부각되며 해당 섹터의 단기 변동성 확대 가능성이 있습니다.
-- **📈 가격/시장** (42건): 코스피, 코스닥, 한강타임즈 동향이 포트폴리오 전략에 영향을 줄 수 있어 주시가 필요합니다.
-- **🤖 AI/기술** (10건): 전망 관련 지표와 수급 흐름을 함께 확인하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- Why US stock market Dow, S&P 500, Nasdaq fall sharply today: Dow, S&P 500, Nasdaq crash again — here
-- Fed’s Interest Rate Decision: March 18, 2026 - Advisor Perspectives
-- 마이크론 시간외 주가 "급락" …삼성전자 SK하닉 풍향계
-
-### 주요 이슈
-
-- Stock Market Today (LIVE): Nexstar Closes Merger With Tegna; Nvidia CEO Pitches 
-- Should You Buy the Vanguard S&P 500 ETF After the Recent Stock Market Sell-Off? 
-- Stock Market Today, March 18: Micron Technology Holds Steady as Investors React 
-- 외 25건
-
-### 투자자 체크포인트
-
-- 한국 기사 69건, 글로벌 기사 126건 수집
-- 한국 지수: KOSPI 5,781.20(+0.31%), KOSDAQ 1,161.52(+1.58%), USD/KRW 1,503.64(+0.62%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:71%"></div></div><span class="theme-count">30건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:100%"></div></div><span class="theme-count">42건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:24%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:24%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:10%"></div></div><span class="theme-count">4건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-03-21.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-03-21.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- 총 **9건** 수집
+- KOSPI 5,781.20 (+0.31%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
+- KOSDAQ 1,161.52 (+1.58%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
 
 ## 테마별 주요 뉴스
 

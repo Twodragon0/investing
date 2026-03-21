@@ -45,11 +45,10 @@ image_alt: "소셜 미디어 동향 - 2026-03-19 - 소셜 미디어 뉴스 요�
 </ul>
 </div>
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-03-19.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-03-19.png' | relative_url }}" alt="news-briefing-social" loading="lazy" decoding="async"></picture>
 
 ## 전체 뉴스 요약
 
-오늘 수집된 총 33건 중 텔레그램 0건, 소셜 0건, 정치·경제 33건으로 주요 이슈를 정리했습니다.
+오늘 수집된 총 33건 중 텔레그램 0건, 소셜 33건, 정치·경제 33건으로 주요 이슈를 정리했습니다.
 
 **핵심 신호 정리**
 - 주요 테마: 주요 이슈
