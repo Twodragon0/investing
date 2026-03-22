@@ -46,50 +46,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-22 - stock-news 뉴스 요약 
 <li><a href="https://www.cnbc.com/2026/03/21/trump-oil-fed-economy-iran-war.html">Analysis: Trump's unshackled presidency puts him at the center of the economy</a></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Analysis: Trump's unshackled presidency puts him at the center of the economy 
-총 159건의 뉴스 중 P1 주요 이슈도 23건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (25건): 코스피, 코스닥, 한강타임즈 테마가 부각되고 있어 섹터 로테이션 가능성을 점검하세요.
-- **📊 매크로/금리** (11건): 금리, 국채, 채권혼합 이슈가 부각되며 해당 섹터의 단기 변동성 확대 가능성이 있습니다.
-- **🏛️ 정치/정책** (9건): 트럼프 테마가 부각되고 있어 섹터 로테이션 가능성을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 분석: 트럼프의 자유로운 대통령직은 그를 경제의 중심에 두었습니다.
-
-### 주요 이슈
-
-- ETF워치]연금부자 바람 담은 '반도체 투톱 채권혼합' 인기
-- Jim Cramer는 Dollar Tree의 수익이 '견고'하지만 '다소 실망스러운 가이드'라고 말합니다.
-- SEC ETF에 관한 Hester Peirce 위원: '우리는 새로운 상품에 관해 사람들과 협력하고 싶습니다.
-- 외 20건
-
-### 투자자 체크포인트
-
-- 한국 기사 46건, 글로벌 기사 113건 수집
-- 한국 지수: KOSPI 5,781.20(+0.31%), KOSDAQ 1,161.52(+1.58%), USD/KRW 1,504.83(+0.70%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">25건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:44%"></div></div><span class="theme-count">11건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:36%"></div></div><span class="theme-count">9건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:36%"></div></div><span class="theme-count">9건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:28%"></div></div><span class="theme-count">7건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-03-22.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-03-22.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- 총 **13건** 수집
+- KOSPI 5,781.20 (+0.31%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
+- KOSDAQ 1,161.52 (+1.58%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
 
 ## 테마별 주요 뉴스
 
