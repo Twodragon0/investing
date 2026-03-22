@@ -7,6 +7,7 @@ image using the image_generator module, and updates the post frontmatter
 with the new image path.
 """
 
+import argparse
 import importlib.util
 import os
 import re
@@ -149,6 +150,22 @@ EMOJI_MAPS: Dict[str, Dict[str, str]] = {
         "체인": "\U0001f517",
         "유동성": "\U0001f4b0",
     },
+    "fmp-economic-calendar": {
+        "경제": "\U0001f4ca",
+        "실적": "\U0001f4b5",
+        "국채": "\U0001f3e6",
+        "금리": "\U0001f4c8",
+        "IPO": "\U0001f680",
+        "캘린더": "\U0001f4c5",
+    },
+    "daily-market-indicators": {
+        "공포": "\U0001f631",
+        "탐욕": "\U0001f4b0",
+        "변동성": "\U0001f4c9",
+        "달러": "\U0001f4b5",
+        "원유": "\u26fd",
+        "금리": "\U0001f3e6",
+    },
 }
 
 # Category label mapping
@@ -172,6 +189,8 @@ CATEGORY_LABELS: Dict[str, str] = {
     "collected-materials-summary": "Daily News Summary",
     "crypto-trading-journal-template": "Trading Journal",
     "stock-trading-journal-template": "Trading Journal",
+    "fmp-economic-calendar": "Economic Calendar",
+    "daily-market-indicators": "Market Indicators",
 }
 
 # Filename prefix mapping for generated images
@@ -195,6 +214,8 @@ FILENAME_PREFIXES: Dict[str, str] = {
     "collected-materials-summary": "news-briefing-collected",
     "crypto-trading-journal-template": "news-briefing-journal",
     "stock-trading-journal-template": "news-briefing-journal-stock",
+    "fmp-economic-calendar": "news-briefing-calendar",
+    "daily-market-indicators": "news-briefing-indicators",
 }
 
 # Default emoji when no keyword match is found
@@ -260,6 +281,25 @@ def parse_frontmatter(content: str) -> Tuple[Dict[str, str], str]:
             fm[key] = value
 
     return fm, body
+
+
+def needs_image_refresh(filepath: str) -> bool:
+    try:
+        with open(filepath, encoding="utf-8") as f:
+            content = f.read()
+    except OSError:
+        return False
+
+    fm, _ = parse_frontmatter(content)
+    image = (fm.get("image", "") or "").strip()
+    if not image:
+        return True
+
+    generic_prefixes = (
+        "/assets/images/og-",
+        "/assets/images/generated/og-",
+    )
+    return image.startswith(generic_prefixes)
 
 
 def needs_image(filepath: str) -> bool:
@@ -575,33 +615,54 @@ def update_frontmatter_image(filepath: str, image_path: str) -> bool:
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 
-def find_posts_without_images() -> List[str]:
-    """Find all Jekyll posts that need image generation."""
+def collect_target_posts(files: Optional[List[str]] = None, rewrite_og: bool = False) -> List[str]:
     if not os.path.isdir(POSTS_DIR):
         logger.error("Posts directory not found: %s", POSTS_DIR)
         return []
 
+    if files:
+        candidates = []
+        for file_arg in files:
+            filepath = file_arg if os.path.isabs(file_arg) else os.path.join(REPO_ROOT, file_arg)
+            filepath = os.path.abspath(filepath)
+            if os.path.isfile(filepath) and filepath.endswith(".md") and filepath.startswith(POSTS_DIR):
+                candidates.append(filepath)
+        scan_paths = sorted(set(candidates))
+    else:
+        scan_paths = [
+            os.path.join(POSTS_DIR, filename) for filename in sorted(os.listdir(POSTS_DIR)) if filename.endswith(".md")
+        ]
+
     posts = []
-    for filename in sorted(os.listdir(POSTS_DIR)):
-        if not filename.endswith(".md"):
-            continue
-        filepath = os.path.join(POSTS_DIR, filename)
-        if needs_image(filepath):
+    for filepath in scan_paths:
+        if needs_image(filepath) or (rewrite_og and needs_image_refresh(filepath)):
             posts.append(filepath)
 
     return posts
 
 
 def main() -> None:
-    """Backfill images for all posts that lack them."""
+    parser = argparse.ArgumentParser(description="Backfill or refresh generated post images.")
+    parser.add_argument(
+        "--rewrite-og", action="store_true", help="Refresh posts that still use generic OG-style images."
+    )
+    parser.add_argument("--dry-run", action="store_true", help="Show target posts without modifying files.")
+    parser.add_argument("--files", nargs="*", default=None, help="Specific post files to process.")
+    args = parser.parse_args()
+
     os.makedirs(IMAGES_DIR, exist_ok=True)
 
-    posts = find_posts_without_images()
+    posts = collect_target_posts(files=args.files, rewrite_og=args.rewrite_og)
     if not posts:
         logger.info("All posts already have images. Nothing to do.")
         return
 
     logger.info("Found %d posts without images", len(posts))
+
+    if args.dry_run:
+        for filepath in posts:
+            logger.info("[DRY] %s", os.path.basename(filepath))
+        return
 
     success_count = 0
     skip_count = 0

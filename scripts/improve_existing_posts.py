@@ -21,6 +21,24 @@ from pathlib import Path
 
 POSTS_DIR = Path(__file__).resolve().parent.parent / "_posts"
 
+
+def _strip_wrapping_quotes(value: str) -> str:
+    value = value.strip()
+    if len(value) >= 2 and value[0] == value[-1] and value[0] in {'"', "'"}:
+        return value[1:-1].strip()
+    return value
+
+
+def _parse_list_literal(value: str) -> list[str]:
+    value = value.strip()
+    if value.startswith("[") and value.endswith("]"):
+        inner = value[1:-1].strip()
+        if not inner:
+            return []
+        return [_strip_wrapping_quotes(part.strip()) for part in inner.split(",") if part.strip()]
+    return [_strip_wrapping_quotes(value)] if value else []
+
+
 # Theme combination -> contextual insight mapping (at least 15 combos)
 THEME_INSIGHTS: dict[tuple[str, str], str] = {
     ("비트코인", "가격/시장"): (
@@ -212,6 +230,86 @@ def clean_description(fm: dict[str, str]) -> bool:
         fm["description"] = new_desc
         return True
     return False
+
+
+def rebuild_low_quality_metadata(fm: dict[str, str], body: str) -> dict[str, int]:
+    try:
+        from common.markdown_utils import smart_truncate
+        from common.post_generator import _build_fallback_description, _clean_description, _extract_description
+    except ImportError:
+        return {}
+
+    title = _strip_wrapping_quotes(fm.get("title", ""))
+    categories = _parse_list_literal(fm.get("categories", ""))
+    tags = _parse_list_literal(fm.get("tags", ""))
+    category = categories[0] if categories else "market-analysis"
+
+    def _looks_low_quality(text: str) -> bool:
+        cleaned = _strip_wrapping_quotes(text)
+        if not cleaned or len(cleaned) < 55:
+            return True
+        if any(token in cleaned for token in ("http://", "https://", "](", "<div", "<span")):
+            return True
+        ascii_letters = len(re.findall(r"[A-Za-z]", cleaned))
+        hangul_letters = len(re.findall(r"[가-힣]", cleaned))
+        if ascii_letters >= 40 and hangul_letters < 15:
+            return True
+        if cleaned.startswith("긴급:") and ascii_letters > hangul_letters:
+            return True
+        if re.search(r"[—-]\s*[A-Za-z]{1,3}[.]?$", cleaned):
+            return True
+        return False
+
+    stats: dict[str, int] = {}
+    if _looks_low_quality(fm.get("description", "")):
+        rebuilt_desc = _clean_description(_build_fallback_description(title, category, tags))
+        fm["description"] = f'"{rebuilt_desc.replace(chr(34), chr(39))}"'
+        stats["description_rebuilt"] = 1
+
+    if _looks_low_quality(fm.get("excerpt", "")):
+        excerpt_source = _extract_description(body) or _strip_wrapping_quotes(fm.get("description", ""))
+        if not excerpt_source:
+            excerpt_source = _build_fallback_description(title, category, tags)
+        rebuilt_excerpt = smart_truncate(_clean_description(excerpt_source), 100).replace('"', "'")
+        fm["excerpt"] = f'"{rebuilt_excerpt}"'
+        stats["excerpt_rebuilt"] = 1
+
+    return stats
+
+
+def fix_markdown_link_artifacts(body: str) -> tuple[str, bool]:
+    original = body
+    body = re.sub(
+        r"(\*\*\d+\.\s+)\[([^\]\n]+)\]\s([^\n\]]+)\]\(([^)]+)\)\*\*",
+        lambda m: f"{m.group(1)}[{m.group(2)} {m.group(3)}]({m.group(4)})**",
+        body,
+    )
+    body = re.sub(
+        r"(^\s*[-*]\s+)\[([^\]\n]+)\]\s([^\n\]]+)\]\(([^)]+)\)",
+        lambda m: f"{m.group(1)}[{m.group(2)} {m.group(3)}]({m.group(4)})",
+        body,
+        flags=re.MULTILINE,
+    )
+    body = body.replace(r"\]", "]")
+    body = re.sub(r"(\[[^\]\n]{1,120}\])(?=[가-힣A-Za-z\"])", r"\1 ", body)
+    body = re.sub(r"<li><em>\.외\s+(\d+)건</em></li>", r"<li><em>외 \1건</em></li>", body)
+    body = re.sub(r">\.외\s+(\d+)건<", r">외 \1건<", body)
+    return body, body != original
+
+
+def sync_summary_total_count(body: str) -> tuple[str, bool]:
+    original = body
+    stat_match = re.search(
+        r'<div class="stat-value">(\d+)</div><div class="stat-label">수집 건수</div>',
+        body,
+    )
+    total_count = stat_match.group(1) if stat_match else None
+    if not total_count:
+        intro_match = re.search(r"총\s+(\d+)건(?:의 뉴스)?가?\s+(?:수집|분석)", body)
+        total_count = intro_match.group(1) if intro_match else None
+    if total_count:
+        body = re.sub(r"- 총 \*\*\d+건\*\* 수집", f"- 총 **{total_count}건** 수집", body)
+    return body, body != original
 
 
 def remove_intro_duplication_in_summary(body: str) -> tuple[str, bool]:
@@ -633,6 +731,9 @@ def process_post(filepath: Path, dry_run: bool = False) -> dict[str, int]:
     if clean_description(fm):
         stats["description_cleaned"] = 1
 
+    metadata_stats = rebuild_low_quality_metadata(fm, body)
+    stats.update(metadata_stats)
+
     # 2. Remove intro duplication in summary
     body, did_change = remove_intro_duplication_in_summary(body)
     if did_change:
@@ -669,6 +770,14 @@ def process_post(filepath: Path, dry_run: bool = False) -> dict[str, int]:
     body, did_change = remove_duplicate_articles_in_themes(body)
     if did_change:
         stats["theme_summary_dedup"] = 1
+
+    body, did_change = sync_summary_total_count(body)
+    if did_change:
+        stats["summary_total_synced"] = 1
+
+    body, did_change = fix_markdown_link_artifacts(body)
+    if did_change:
+        stats["markdown_fixed"] = 1
 
     body, did_change = collapse_blank_lines(body)
     if did_change:
@@ -757,6 +866,8 @@ def main() -> None:
         print("\nImprovements applied:")
         labels = {
             "description_cleaned": "Description SEO 정리",
+            "description_rebuilt": "저품질 description 재생성",
+            "excerpt_rebuilt": "저품질 excerpt 재생성",
             "intro_dedup": "인트로 중복 제거 (전체 뉴스 요약)",
             "insight_article_dedup": "주요 기사 중복 제거 (인사이트)",
             "insight_improved": "고정 인사이트 문구 개선",
@@ -764,6 +875,8 @@ def main() -> None:
             "empty_sections_cleaned": "빈 데이터 섹션 정리",
             "keyword_none_cleaned": "키워드 None 아티팩트 정리",
             "theme_summary_dedup": "테마별 중복 요약 제거",
+            "summary_total_synced": "요약 수집 건수 동기화",
+            "markdown_fixed": "마크다운 링크/오버플로 아티팩트 정리",
             "blank_lines_collapsed": "불필요 빈 줄 축소",
             "translation_fixed": "번역 품질 교정 (조사/인명/어미)",
         }
