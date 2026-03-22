@@ -26,7 +26,7 @@ journal_best_trade: "반도체 대형주 분할 진입이 가장 안정적으로
 journal_mistake: "정책 기대감만 보고 2차전지 단기 진입을 시도해 손절이 늦었습니다."
 journal_next_focus: "미국 선물 방향과 환율을 먼저 확인하고, 실적 시즌 종목은 장중 추격 진입을 피합니다."
 description: "주식 트레이딩 일지 - 2026-02-10 관련 stock-trading-journal 리포트입니다. 주요 키워드: trading, stock, journal, KOSPI."
-image: "/assets/images/generated/news-briefing-journal-stock-2026-02-10.png"
+image: "/assets/images/generated/og-stock-trading-journal-template-2026-02-10.png"
 excerpt: "주식 트레이딩 일지 작성 가이드입니다. 이 템플릿을 참고하여 일일 매매 기록을 작성하세요. - 핵심 시나리오: 추세 추종 / 실적 플레이 / 이벤트 리스크 관리 중 중심 전략을…"
 ---
 
