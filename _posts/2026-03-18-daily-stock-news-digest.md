@@ -50,7 +50,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-18 - stock-news 뉴스 요약 
 
 ## 전체 뉴스 요약
 
-- 총 **18건** 수집
+- 총 **192건** 수집
 - KOSPI 5,640.48 (+1.63%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 1,136.94 (-0.12%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
 
@@ -96,7 +96,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-18 - stock-news 뉴스 요약 
 <details><summary>그 외 39건 보기</summary><div class="details-content"><ol class="news-overflow-list">
 <li><a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE9POHlGZ25MTW9qX3FNUE1pdlI4dXRMbnh0S2QxLThPMVZ5WlVucHJrV2dwZERBRnVQZ3dMTHZneVZUcDJXNnFZTllFUVF4bGJROU14ZXJ6bWdfemFIUnZBcXE4TjFyQQ?oc=5">코스피, 코스닥 상승, 원·달러 환율 하락 출발 - 일요신문</a></li>
 <li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE9CdEtCU1R5NHpRMDBqVTNTa3lUTHRzeXBaSWFVOS1oTlRQcHliYkUxSFl0Yzc5ZEFOYnIzRi1yRGEyY1JLYXpOWkIyRDQwQlZmNTlMQVRoZXNNY190RXY5OTJlSFVrLXNKOGF3?oc=5">코스피, 상승 마감.코스닥 내림세 마무리 - 한강타임즈</a></li>
-<li><em>.외 24건</em></li>
+<li><em>외 24건</em></li>
 </ol></div></details>
 
 
@@ -140,7 +140,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-18 - stock-news 뉴스 요약 
 <details><summary>그 외 17건 보기</summary><div class="details-content"><ol class="news-overflow-list">
 <li><a href="https://news.google.com/rss/articles/CBMizwFBVV95cUxPcEhBRGtUSWtjVGlINE90SEtWQnFXaDE2eDAxMGRhdS1XMlFYdWowNWNwYW5qblRhcnJCaERtandfZ2NiT3pSUl9SZi1KQzYtUEJ1cXJPR1RzTGV1X2Rvd19wVExzRTJPREV1cW5VWW9oby1FUzRza0RDZG9qM3ZzOG4wUFA5MUs2THlCZkJXZGhaNFBUVVZram5iVFVodFVUNUpIVVNKM2RueUk4N3ZwSUh4Y25FREVKbWE3S1A3YV9rcGxPTzdMNjZYRWR1X2c?oc=5">오늘 주식 시장: 유가가 다시 100달러를 돌파하면서 다우, S&P 500, 나스닥이 상승하고 연준 회의가 시작됩니다 - Yahoo Finance UK</a></li>
 <li><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxQYTRKMnljTFloQUdxbVhjVTQ0NWctVkZjTHV2UUJoZVNBTHc3QmptdDNhemxLQVc1clE2elBISmtpZndkcGllOTdHMloyMVVaclFtMmFzVGFXZHAzS2JXQkk5b0Rxb0tGU05rNmlLVG9pakJXeUtxVE43MFZ3b1ZsMmxBLWJuczhEMjAwaVQ1RkEzWjVEQTdPcHBXaUwyRmIyNjI0UnN4Zw?oc=5">오늘의 주식 시장: 다우, S&P 500 상승, 연준 회의 시작; 드론 이름이 최고치로 치솟다(생중계) - Investor's Business Daily</a></li>
-<li><em>.외 2건</em></li>
+<li><em>외 2건</em></li>
 </ol></div></details>
 
 

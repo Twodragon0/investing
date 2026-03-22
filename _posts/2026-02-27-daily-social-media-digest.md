@@ -6,8 +6,9 @@ categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-social-media-digest-2026-02-27.png"
+image: "/assets/images/generated/news-briefing-social-2026-02-27.png"
 description: "2026-02-27 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 소셜 미디어 1건, 정치·경제 30건, 총 51건이 수집되었습니다."
+excerpt: "주요 테마: 매크로/금리, 정치/정책, 비트코인 긴급 알림 없음에 대한 선별 모니터링 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 **2026-02-27** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 소셜 미디어 1건, 정치·경제 30건, 총 51건이 수집되었습니다.
@@ -115,21 +116,21 @@ PayPal 前 대표, 비트코인을 "세계 최고의 결제 시스템"으로 만
 
 ### 📊 매크로/금리 (17건)
 
-- [[Telegram] Cathie Wood says Bitcoin is "hands down" better than Gold."Bitcoin is a hedge against Both inflation](https://t.me/crypto/3539) — Telegram @crypto
-- [[Telegram] 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
-- [[Telegram] 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://](https://t.me/whale_alert/11524) — Telegram @whale_alert
+- [[Telegram Cathie Wood says Bitcoin is "hands down" better than Gold."Bitcoin is a hedge against Both inflation](https://t.me/crypto/3539) — Telegram @crypto
+- [[Telegram 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
+- [[Telegram 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://](https://t.me/whale_alert/11524) — Telegram @whale_alert
 
 ### 🏛️ 정치/정책 (11건)
 
-- [[Telegram] President Trump says everyone's portfolios are "gaining.""Everybody is up, way up."](https://t.me/crypto/3536) — Telegram @crypto
+- [[Telegram President Trump says everyone's portfolios are "gaining.""Everybody is up, way up."](https://t.me/crypto/3536) — Telegram @crypto
 - [역대 최장 이어진 트럼프 대통령 국정연설…암호화폐 언급은 없어 - BeInCrypto](https://news.google.com/rss/articles/CBMimgFBVV95cUxNMkh2R2RXNnQxcjVYSUhNUjlJTHpRY3ZjRnh0N1lucWdTczkwajI0cTNLcnU1eF92ZW5YWUxuT05JS0xWbmdKMzBMXy0tTXVjdDcwRGwyV0U0ZndMRkU3LTlERkZqWEZGUThhWk1tbnphRzhsUlV1RG9UN3AwR2hEZ0FjMDJadFpYcU5YeWhtaG8tYzdZVlozTk1B?oc=5) — 트럼프 경제정책 KR
 - [Trump announces new retirement plan for non-401(k) workers - thestreet.com](https://news.google.com/rss/articles/CBMingFBVV95cUxOVUtWZTFBRHI1OUJVN3ZGV3kwOFJBcEJHTE1kVmdqOTZXdnhhbmlIbUZfUFc1cUJtUW1xWjRvR2l2Y0ROSVo5RTJSc0VqRFVVYTExeExKcUxLbE4ydXhOcXpQLUxmREZkTFZ1UjZGV1hSOEctbUhpbEhRRHA4ajBCVEoxZ3lnUmZMdTBhLUhoaXAyR3V3X0VxZWlsdnhpdw?oc=5) — Trump Crypto Policy
 
 ### 🟠 비트코인 (10건)
 
-- [[Telegram] A property seller featured on a 2015 episode of Million Dollar Listing New York declined 50,000 Bitc](https://t.me/crypto/3524) — Telegram @crypto
-- [[Telegram] 🇺🇸 Billionaire Grant Cardone says, "#Bitcoin will grind sideways, provide one more chance to buy low](https://t.me/crypto/3525) — Telegram @crypto
-- [[Telegram] Michael Saylor said, “We are making $500 million a day” with Bitcoin and “we may very well be the mo](https://t.me/crypto/3527) — Telegram @crypto
+- [[Telegram A property seller featured on a 2015 episode of Million Dollar Listing New York declined 50,000 Bitc](https://t.me/crypto/3524) — Telegram @crypto
+- [[Telegram 🇺🇸 Billionaire Grant Cardone says, "#Bitcoin will grind sideways, provide one more chance to buy low](https://t.me/crypto/3525) — Telegram @crypto
+- [[Telegram Michael Saylor said, “We are making $500 million a day” with Bitcoin and “we may very well be the mo](https://t.me/crypto/3527) — Telegram @crypto
 
 ### 📈 가격/시장 (16건)
 
@@ -139,9 +140,9 @@ PayPal 前 대표, 비트코인을 "세계 최고의 결제 시스템"으로 만
 
 ### 🏦 거래소 (7건)
 
-- [[Telegram] A property seller featured on a 2015 episode of Million Dollar Listing New York declined 50,000 Bitc](https://t.me/crypto/3524) — Telegram @crypto
-- [[Telegram] 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown walletTx: https://t.co/aNttwwzxno](https://t.me/whale_alert/11520) — Telegram @whale_alert
-- [[Telegram] 33,000 #ETH (6,583,742 USD) transferred from #Bithumb to unknown walletTx: https://t.co/Wam8SjJEzv](https://t.me/whale_alert/11521) — Telegram @whale_alert
+- [[Telegram A property seller featured on a 2015 episode of Million Dollar Listing New York declined 50,000 Bitc](https://t.me/crypto/3524) — Telegram @crypto
+- [[Telegram 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown walletTx: https://t.co/aNttwwzxno](https://t.me/whale_alert/11520) — Telegram @whale_alert
+- [[Telegram 33,000 #ETH (6,583,742 USD) transferred from #Bithumb to unknown walletTx: https://t.co/Wam8SjJEzv](https://t.me/whale_alert/11521) — Telegram @whale_alert
 
 
 ---

@@ -6,7 +6,7 @@ categories: [political-trades]
 tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-trading]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-political-trades-report-2026-02-25.png"
+image: "/assets/images/generated/news-briefing-political-2026-02-25.png"
 description: "2026-02-25 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. 미국 의회 거래 10건, SEC 내부자 거래 15건, 트럼프 정책 3건, 중앙은행 6건, 총 34건이 수집되었습니다."
 excerpt: "미국 의회 Pelosi 주식거래 금지 논의, SEC Form 4 내부자 거래 15건, 트럼프 관세 정책 영향, 한국은행 금리 동결 전망 등 34건 분석"
 ---
@@ -92,7 +92,7 @@ excerpt: "미국 의회 Pelosi 주식거래 금지 논의, SEC Form 4 내부자 
 
 ## SEC 내부자 거래 (Form 4)
 
-**1. [[Form 4] UNITED THERAPEUTICS Corp Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMiugFBVV95cUxPTFBPSXdvVFJEM05YWnpfb2NSYm5TaVRLcGotR1Y0ZEZ0dnNLMUVDLXpEYVpwRi0wazJ3Rmc3VXFBa1puZUw2b3hFYjg3MHJpSGl5SEd6UU9udDZydFJDeF9QeHhOOExHT21pTFhvSlJPVDItWml4QmZybjJjdzZqTHBmdVZFRlZzMFpKN2I1RElmeW9pZnNrTjc5c2x6VGl3emF1Nl9HbU5ITUtlZGI0UVpSWWhEM3A3OUE?oc=5)**
+**1. [[Form 4 UNITED THERAPEUTICS Corp Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMiugFBVV95cUxPTFBPSXdvVFJEM05YWnpfb2NSYm5TaVRLcGotR1Y0ZEZ0dnNLMUVDLXpEYVpwRi0wazJ3Rmc3VXFBa1puZUw2b3hFYjg3MHJpSGl5SEd6UU9udDZydFJDeF9QeHhOOExHT21pTFhvSlJPVDItWml4QmZybjJjdzZqTHBmdVZFRlZzMFpKN2I1RElmeW9pZnNrTjc5c2x6VGl3emF1Nl9HbU5ITUtlZGI0UVpSWWhEM3A3OUE?oc=5)**
 [Form 4] UNITED THERAPEUTICS Corp Insider Trading Activity Stock Titan
 <span class="source-tag">SEC Insider Trading</span>
 
@@ -135,8 +135,8 @@ MSG Sports 관련 신탁이 최초 Form 3 제출
 
 ## 중앙은행 정책 동향
 
-**1. [[경제 오딧세이]한국은행, 기준금리 동결 전망...환율과 집값 변수 - BBS불교방송](https://news.google.com/rss/articles/CBMia0FVX3lxTE0xRlc4MWJzSF9Sek9fYmpOdmhTT1BXNmlmLVU5allZMUlCMmNkSlZyZjFnYzcwREV1LUVLZnF3cXByTlczWHBSa0V4cEM4YnE1dTlpQ2NYY3dlNlZfLVVQSHdXYXZTSFhfZF8w?oc=5)**
-[경제 오딧세이]한국은행, 기준금리 동결 전망...환율과 집값 변수 BBS불교방송
+**1. [[경제 오딧세이 한국은행, 기준금리 동결 전망...환율과 집값 변수 - BBS불교방송](https://news.google.com/rss/articles/CBMia0FVX3lxTE0xRlc4MWJzSF9Sek9fYmpOdmhTT1BXNmlmLVU5allZMUlCMmNkSlZyZjFnYzcwREV1LUVLZnF3cXByTlczWHBSa0V4cEM4YnE1dTlpQ2NYY3dlNlZfLVVQSHdXYXZTSFhfZF8w?oc=5)**
+[경제 오딧세이] 한국은행, 기준금리 동결 전망...환율과 집값 변수 BBS불교방송
 <span class="source-tag">한국은행 금리결정</span>
 
 **2. [한은, 2윌 금통위 기준금리 '동결' 유력…불확실성 속 '성장률' 주목 - 더팩트](https://news.google.com/rss/articles/CBMiWkFVX3lxTE9ZMjRGWkZzczFLMlVBU0FWVUYxX1JybFhqUXFaSDlSX00ybkR3ZmNTcXBWQWdoOGNFQXVHRUFVaHNqd3lCMS1SS0FVWWFabFUyMzZvZUM1c1d4d9IBVEFVX3lxTE9ZM1BhZUxRNEVjZGhza05vOUZRNW9tVF9EWkZETnU4eHFWVkg0bm9DQmliM0JMcGZpeERFODRUdy1UN2N6d3JYUFBTUVpDMVNtdUJ6NQ?oc=5)**
@@ -151,11 +151,11 @@ MSG Sports 관련 신탁이 최초 Form 3 제출
 기준금리 동결은 확실시…시장이 보는 금통위 관전 포인트는? edaily.co.kr
 <span class="source-tag">한국은행 금리결정</span>
 
-**5. [[김남현의 채권 왈가왈부] 매파 금통위와 채권시장 달래기 - 이투데이](https://news.google.com/rss/articles/CBMiVEFVX3lxTE1SZ3prOXdZbUtfaDdQRjVSQ19NZEpUTTAxNERkOUEtZnJzMWc1VmdCVHltd0c1MDZ6QzdTNzk1dDhKcHZLNEJ4ZnhrTFpzSW1mRDRPUg?oc=5)**
+**5. [[김남현의 채권 왈가왈부 매파 금통위와 채권시장 달래기 - 이투데이](https://news.google.com/rss/articles/CBMiVEFVX3lxTE1SZ3prOXdZbUtfaDdQRjVSQ19NZEpUTTAxNERkOUEtZnJzMWc1VmdCVHltd0c1MDZ6QzdTNzk1dDhKcHZLNEJ4ZnhrTFpzSW1mRDRPUg?oc=5)**
 [김남현의 채권 왈가왈부] 매파 금통위와 채권시장 달래기 이투데이
 <span class="source-tag">한국은행 금리결정</span>
 
-**6. [[분석] 2월 금통위, 동결 전망 우세..1월보다 완화 전망 - 알파경제](https://news.google.com/rss/articles/CBMiXkFVX3lxTE0zcnB1ajItNU94Y1pYTjFkeGtlVkZCeW53NkI1a3FjdzZ5QXBSNTFxajE3MzNxV0JfLUxRWXBjekFwdjlFUE9GWmtEV2dydk1FM0Roem1YeGJkb1pzRHfSAW5BVV95cUxQbE1pdFdmSWU0WnRNcXp4amZwWXNxbFR6OXh4QVZwT2FwdDBfcEpsXzFuVDg3OHFoOGVCMC1xVzlpM3Z0RGtTSEtrZ1ZrNnc0OGQyaUFVTlppclJyUTBYRDN0S0RsZ0YwenZvTlZ0UQ?oc=5)**
+**6. [[분석 2월 금통위, 동결 전망 우세..1월보다 완화 전망 - 알파경제](https://news.google.com/rss/articles/CBMiXkFVX3lxTE0zcnB1ajItNU94Y1pYTjFkeGtlVkZCeW53NkI1a3FjdzZ5QXBSNTFxajE3MzNxV0JfLUxRWXBjekFwdjlFUE9GWmtEV2dydk1FM0Roem1YeGJkb1pzRHfSAW5BVV95cUxQbE1pdFdmSWU0WnRNcXp4amZwWXNxbFR6OXh4QVZwT2FwdDBfcEpsXzFuVDg3OHFoOGVCMC1xVzlpM3Z0RGtTSEtrZ1ZrNnc0OGQyaUFVTlppclJyUTBYRDN0S0RsZ0YwenZvTlZ0UQ?oc=5)**
 2월 금통위에서 동결이 전망되나, 1월보다 완화적 전망이 우세한 상황 분석
 <span class="source-tag">한국은행 금리결정</span>
 

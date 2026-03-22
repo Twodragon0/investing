@@ -35,11 +35,11 @@ David Taylor 의원은 Signal Ohio 의회에서 가장 큰 주식 거래자 중 
 
 ## SEC 내부자 거래 (Form 4)
 
-**1. [양식 4\] Smart Sand, Inc. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMiqwFBVV95cUxQU1RfVkVXWDNib2FrOFlSbExJNkY2SWtna1l5LWNSZnYyWUFkRTRJd0xPWW5TbVgzblRPU05Rb0hKSzhwSlJzUEp3RDU2RkExbURoNmRXc2R4YWVLQVpiekpXSjZIYUZoWE44NGU4Z3RPS1hqUUxLVUZHQnNqM21OZGpEQmtlRW5oclA1MzMwVWNBbmFkcHoyTjZBWmRUaVVCNXJ0aW5iVzlPQTA?oc=5)**
+**1. [양식 4 Smart Sand, Inc. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMiqwFBVV95cUxQU1RfVkVXWDNib2FrOFlSbExJNkY2SWtna1l5LWNSZnYyWUFkRTRJd0xPWW5TbVgzblRPU05Rb0hKSzhwSlJzUEp3RDU2RkExbURoNmRXc2R4YWVLQVpiekpXSjZIYUZoWE44NGU4Z3RPS1hqUUxLVUZHQnNqM21OZGpEQmtlRW5oclA1MzMwVWNBbmFkcHoyTjZBWmRUaVVCNXJ0aW5iVzlPQTA?oc=5)**
 [서식 4] (주)스마트샌드 내부자 거래 활동 주식 타이탄
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**2. [양식 4\] Information Services Group Inc. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZkJ2Z3dObzEtdl9Ob2pfRjFNNm1LVVdDdHhtWXI4U2ZTOXBJWUp4Rk84Y2tCRXQ3QUJscUZaN1E5aGVhVWdoaXhsVklMYk9lNXNwRGVVenRDM0k3UWhDVXRvOTVJaWZ0TTRBQXp6bW1fSi14dWtRdFVtb3c2bEpvNFdyMTM2b2I5UHRReXVzY2ZnaHB0TkJJbjZpaG9WMXZsZjM0dEpvZXQ0VWxlcUdDekw5Wk56dmNqWmRNR1VtUlM?oc=5)**
+**2. [양식 4 Information Services Group Inc. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZkJ2Z3dObzEtdl9Ob2pfRjFNNm1LVVdDdHhtWXI4U2ZTOXBJWUp4Rk84Y2tCRXQ3QUJscUZaN1E5aGVhVWdoaXhsVklMYk9lNXNwRGVVenRDM0k3UWhDVXRvOTVJaWZ0TTRBQXp6bW1fSi14dWtRdFVtb3c2bEpvNFdyMTM2b2I5UHRReXVzY2ZnaHB0TkJJbjZpaG9WMXZsZjM0dEpvZXQ0VWxlcUdDekw5Wk56dmNqWmRNR1VtUlM?oc=5)**
 [서식 4] Information Services Group Inc.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
@@ -47,7 +47,7 @@ David Taylor 의원은 Signal Ohio 의회에서 가장 큰 주식 거래자 중 
 Alto Ingredients (ALTO) CCO, 30,794주 주식 보상을 받음 Stock Titan
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**4. [양식 4\] Fluence Energy, Inc. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMisgFBVV95cUxNRktFczFVdElYQmRWaHhvdG1HdHYtT3NqbGRTcTBPNzZsa2dSUUdjSzJza2VXUUlsYzNMSHFmWnlJekdHeWZOMEZCejNxV2pSWXcteFVTSTNmSjVNeDFScnZhVGlCVmZtUlFWTWs4NlZfVExfTGJmMmtBd2h2Y1ZIMWpYZmhKbUIxbVh6c1p1dlduTHNFUzFuc0dSUmVadEpuRHdLc2QxTjlQVGpnMTNfNVpB?oc=5)**
+**4. [양식 4 Fluence Energy, Inc. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMisgFBVV95cUxNRktFczFVdElYQmRWaHhvdG1HdHYtT3NqbGRTcTBPNzZsa2dSUUdjSzJza2VXUUlsYzNMSHFmWnlJekdHeWZOMEZCejNxV2pSWXcteFVTSTNmSjVNeDFScnZhVGlCVmZtUlFWTWs4NlZfVExfTGJmMmtBd2h2Y1ZIMWpYZmhKbUIxbVh6c1p1dlduTHNFUzFuc0dSUmVadEpuRHdLc2QxTjlQVGpnMTNfNVpB?oc=5)**
 [서식 4] Fluence Energy, Inc.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
@@ -55,11 +55,11 @@ Alto Ingredients (ALTO) CCO, 30,794주 주식 보상을 받음 Stock Titan
 Alto Ingredients (ALTO) COO가 보통주 35,730주를 부여 받았습니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**6. [양식 4\] J.Jill, Inc. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMipwFBVV95cUxOWDhIWG5zWDhQbFRMOFJFMWJheXJVNFVKVFRyZ0t2OUwtVW1mVTJ4REl2cy1KZldVcEQ0MXpWdGdxTHdNdWxQSmdFNkF6UGVURnhNd2lyRjd6T1doaWlLcFRBTWpJNWVIZjFWVHcteWc0YkJ3LUZQR2R4elRGOW84bkI0OHRsQkNxMjB1S1NHcXREdU15Y09qbDBjUzhBVlBOZ0xLMXVsQQ?oc=5)**
+**6. [양식 4 J.Jill, Inc. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMipwFBVV95cUxOWDhIWG5zWDhQbFRMOFJFMWJheXJVNFVKVFRyZ0t2OUwtVW1mVTJ4REl2cy1KZldVcEQ0MXpWdGdxTHdNdWxQSmdFNkF6UGVURnhNd2lyRjd6T1doaWlLcFRBTWpJNWVIZjFWVHcteWc0YkJ3LUZQR2R4elRGOW84bkI0OHRsQkNxMjB1S1NHcXREdU15Y09qbDBjUzhBVlBOZ0xLMXVsQQ?oc=5)**
 [서식 4] J.Jill, Inc.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**7. [양식 4\] Phreesia, Inc. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMiqAFBVV95cUxPY1RaYkZhQTkzUVMwT29hZncwSTlYcDRhUTRucnJ3djktSzlXTFZSNEJJY2NtTndQUU9CeXg1RTByWXE3b05WSnl6Y3k4eElzbGR0RmRVQmw4eVEzbVVwcVJpUWRza0UyU0w1LU81LU5KLVNMZmd5MnNvSDZ3WHRyMFJDUGpSWE1rRG9mN2JVNjdXTnJEY0JsX2FCODFLbmM0NThDOTlGek4?oc=5)**
+**7. [양식 4 Phreesia, Inc. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMiqAFBVV95cUxPY1RaYkZhQTkzUVMwT29hZncwSTlYcDRhUTRucnJ3djktSzlXTFZSNEJJY2NtTndQUU9CeXg1RTByWXE3b05WSnl6Y3k4eElzbGR0RmRVQmw4eVEzbVVwcVJpUWRza0UyU0w1LU81LU5KLVNMZmd5MnNvSDZ3WHRyMFJDUGpSWE1rRG9mN2JVNjdXTnJEY0JsX2FCODFLbmM0NThDOTlGek4?oc=5)**
 [서식 4] Phreesia, Inc.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
@@ -71,7 +71,7 @@ GLOBAL PARTNERS LP (NYSE: GLP) COO가 내부 판매를 업데이트하고 162,48
 Permian Resources(PR) 이사와 연계된 Mail Holdings 법인, Stock Titan 주식 512,429주 매각
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**10. [양식 4\] MARRIOTT VACATIONS WORLDWIDE Corp 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMixAFBVV95cUxQYmRvamg3R2pQdkZPQUdEcVNDd3FmcHNyelI2bnROSWtzb18wSEZtTFJqeHF5cFlza0J0M21pNE9pSzNLVUNOTndxQTRTd3plR2g3cWxtaHFPRUs4WGFKLTlkQnVhSlpOVEQ0bkNObHN4Um9XQW1JSFJqaFFUVUhIR3RuRDBENDJyVEJ3cXlQRXBBcGJRVXNnbkNHZEZxbXA3cW1VQ0RabnI5TWFvNFduR2tUdE41cGxhUUlDeFdNbEZCaHg5?oc=5)**
+**10. [양식 4 MARRIOTT VACATIONS WORLDWIDE Corp 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMixAFBVV95cUxQYmRvamg3R2pQdkZPQUdEcVNDd3FmcHNyelI2bnROSWtzb18wSEZtTFJqeHF5cFlza0J0M21pNE9pSzNLVUNOTndxQTRTd3plR2g3cWxtaHFPRUs4WGFKLTlkQnVhSlpOVEQ0bkNObHN4Um9XQW1JSFJqaFFUVUhIR3RuRDBENDJyVEJ3cXlQRXBBcGJRVXNnbkNHZEZxbXA3cW1VQ0RabnI5TWFvNFduR2tUdE41cGxhUUlDeFdNbEZCaHg5?oc=5)**
 [서식 4] MARRIOTT VACATIONS WORLDWIDE Corp 내부자 거래 활동 주식 타이탄
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
@@ -83,7 +83,7 @@ Permian Resources(PR) 이사와 연계된 Mail Holdings 법인, Stock Titan 주�
 
 ## 중앙은행 정책 동향
 
-**1. [경제 포커스\] 중동 사태에 세 갈래로 나뉜 주요국 기준금리 - Chosunbiz](https://news.google.com/rss/articles/CBMihgFBVV95cUxQMjFGN2VLYWlsdmV2N2ltbmxFRGNocUtaN1dZZ25fSGhsNnlZOG1FUFZfSWkzS3hBNWk3bU1VY0JOWkpyOExMTmd5UGhqXzhiUzN5VHM5VjRlTmtrOHFsLWpaRWRMbnBadHBpcHBRT0lsRTR1Y21RTkw0bTZLdjRrSWlPMDQ1dw?oc=5)**
+**1. [경제 포커스 중동 사태에 세 갈래로 나뉜 주요국 기준금리 - Chosunbiz](https://news.google.com/rss/articles/CBMihgFBVV95cUxQMjFGN2VLYWlsdmV2N2ltbmxFRGNocUtaN1dZZ25fSGhsNnlZOG1FUFZfSWkzS3hBNWk3bU1VY0JOWkpyOExMTmd5UGhqXzhiUzN5VHM5VjRlTmtrOHFsLWpaRWRMbnBadHBpcHBRT0lsRTR1Y21RTkw0bTZLdjRrSWlPMDQ1dw?oc=5)**
 [경제 포커스] 중동 사태에 세 갈래로 나뉜 주요국 기준금리 Chosunbiz
 <span class="source-tag" data-source-type="regulator">한국은행 금리결정</span>
 

@@ -6,8 +6,9 @@ categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-social-media-digest-2026-02-28.png"
+image: "/assets/images/generated/news-briefing-social-2026-02-28.png"
 description: "2026-02-28 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. Reddit 20건, 정치·경제 23건, 총 43건이 수집되었습니다."
+excerpt: "주요 테마: 매크로/금리, 정치/정책, 가격/시장 긴급 알림 1건에 대한 선별 모니터링 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 **2026-02-28** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. Reddit 20건, 정치·경제 23건, 총 43건이 수집되었습니다.
@@ -70,7 +71,7 @@ description: "2026-02-28 암호화폐·주식 커뮤니티 소셜 미디어 동�
 **6. [[한국갤럽] 이재명 지지율 64%로 1%p 올라, 긍정 이유 '경제·민생' '부동산'(https://news.google.com/rss/articles/CBMic0FVX3lxTFB6R25Da1dmTHk0am9XVm5vUnhwajhaM2RBT0cwcnFEUHFEeHpTNFFjYWNxX0dEN2J2eGRiRnpnZnhKaVRiTGpabzFCZzMyd01kc3dTM2tlMk5wZF9FN19iTVhzZTlabGNOa3lJTEZ5cUhUSmM?oc=5)**
 <span class="source-tag">이재명 경제정책</span>
 
-**7. [[6·3 포커스]최현덕 남양주시장 예비후보 “이재명 정부가 연 KOSPI 황금기, 남양주 청년과 함께!” - 경기신문](https://news.google.com/rss/articles/CBMiYkFVX3lxTFAtSHhid2xxY0laOGJiYnZvSTNLaHRPVWZVZlpIYkRuV0ZhSlNiWFBJYXRpcUdvbnd1SVJOY3ZzMVFFbXM1NGR6cDRWTVZ5NEs0WXRaVUozTVlzd1VadUpGTkln?oc=5)**
+**7. [[6·3 포커스 최현덕 남양주시장 예비후보 “이재명 정부가 연 KOSPI 황금기, 남양주 청년과 함께!” - 경기신문](https://news.google.com/rss/articles/CBMiYkFVX3lxTFAtSHhid2xxY0laOGJiYnZvSTNLaHRPVWZVZlpIYkRuV0ZhSlNiWFBJYXRpcUdvbnd1SVJOY3ZzMVFFbXM1NGR6cDRWTVZ5NEs0WXRaVUozTVlzd1VadUpGTkln?oc=5)**
 <span class="source-tag">이재명 경제정책</span>
 
 **8. ["살집 하나면 족하다"…이재명 대통령 부동산 정책에 맞장구 친 홍준표(https://news.google.com/rss/articles/CBMiU0FVX3lxTFBlNnRKcERNdXk4aXVJT1R4cnBQLUF4YUZRRXhLeVFpdktQS3FWOFVOaDh4QUsxeXVTcXdGNUFCQlhFdmhnV2hpSFo5cDNSX1FjTXFZ?oc=5)**
@@ -90,33 +91,33 @@ description: "2026-02-28 암호화폐·주식 커뮤니티 소셜 미디어 동�
 
 ### 📊 매크로/금리 (11건)
 
-- [[Reddit] Markets got smacked today: Dow down ~700 points (1.5%) after that scorching PPI print + fresh AI jitters.](https://reddit.com/r/stocks/comments/1rga24e/markets_got_smacked_today_dow_down_700_points_15/) — r/Stocks
+- [[Reddit Markets got smacked today: Dow down ~700 points (1.5%) after that scorching PPI print + fresh AI jitters.](https://reddit.com/r/stocks/comments/1rga24e/markets_got_smacked_today_dow_down_700_points_15/) — r/Stocks
 - [한국은행, 기준금리 6연속 동결…성장률 전망 1.8→2% - 조선일보](https://news.google.com/rss/articles/CBMijgFBVV95cUxQWE1xZFVxNlpYd0lmUHZjdlBjZG9Ud19KOUJmcUcwRFJNUnAyMmlDeklZYmNnZW1mSEdkWGU2Q1RLZHdvVW5wMmxQeVUwd3N6Mms2RDBtU01CazVoRkIwTHlJOFkzTG42SnlJLUhlZjZ5RFFxdjZwVndfcTFERVFfWkkzUWVmZjhvYkxDRkRB0gGiAUFVX3lxTE1PS1JJMVhLRFl4Z2YtYVRtdWxMeGZkQl9xeWRHWURTNVJGSWJPeU1LSlRqMzc0VGx3RG5rYzdjSjdYSjdmQzY1YVFpNG43cG1hZFJXT0EzTUgzSmZBa3NDbEpweUlTWFlxR3NYVmRWbGloejlVdnNpWDZpV2M1YndHMkFFRjRaZWQyQm9DaF85ay0zMmx6V1RfVmYtTzZyVENhQQ?oc=5) — 한국은행 금리정책
 - [코스피 3% 급등 6,300 돌파...한은 6번째 금리 동결 - YTN](https://news.google.com/rss/articles/CBMiXkFVX3lxTE0yQlRTVkM5Zklac29qVHpSdWp6ekxTYUVieGQ2WThWbWc2aDI2eHVCenBsaC1EWDctV1BmWmtPd2NLZXJ6aWp1ajlDdlh3VHJqbzBNR1J5TTIxczhNWEHSAYMBQVVfeXFMT3JCNy1iYTR4Q1BOYXFzR1JxdVdlZjZCMDg1Q1dUb2FxT2xmUGkwanZfSVVoV2E3MDhqeXEtQVhjM1JKNkp0Vk1ESHJzWmdlWGsyMDVjTjJaQXdBUmNTRGh3WEVRa0FOZFdQV2sxOXhRMGxzTlRydHdDNDczbDQ3OTVpSW8?oc=5) — 한국은행 금리정책
 
 ### 🏛️ 정치/정책 (13건)
 
-- [[Reddit] Iranians are Mining Bitcoin for $1,325 with 50x Returns Despite Electricity Shortages](https://reddit.com/r/CryptoCurrency/comments/1rge90w/iranians_are_mining_bitcoin_for_1325_with_50x/) — r/CryptoCurrency
+- [[Reddit Iranians are Mining Bitcoin for $1,325 with 50x Returns Despite Electricity Shortages](https://reddit.com/r/CryptoCurrency/comments/1rge90w/iranians_are_mining_bitcoin_for_1325_with_50x/) — r/CryptoCurrency
 - [Did David Sacks Profit From Trump Crypto Speeches? - Gaming America](https://news.google.com/rss/articles/CBMi1AFBVV95cUxOSk95Z3NjZzRxdUJkZndkLS1faDNqbmh6elItTWxaTlZxWGEtVjNrQlB5bWllOWVQOEZ6Rk5kUEN6WHlDbmpwb2N0dTJySmc1S3VmWE9rbE1oQWxPTV9BeGQ5LWlDQlN4N0VIbEhZQVVMZVVwcFhrcGlVT05JYWJhYU8wQTd2THJYUlp0OWw3TF9HZlc3eVZrUEJTTmdwU1BKazlUbnk0dy0zSjQ0ZmtvSGgxMlpGRU81WlFZR0RfNldfS0F4bmNEX2FuS1FOcGVoZHBEMw?oc=5) — Trump Crypto Policy
 - [Trump announces new retirement plan for non-401(k) workers - thestreet.com](https://news.google.com/rss/articles/CBMingFBVV95cUxOVUtWZTFBRHI1OUJVN3ZGV3kwOFJBcEJHTE1kVmdqOTZXdnhhbmlIbUZfUFc1cUJtUW1xWjRvR2l2Y0ROSVo5RTJSc0VqRFVVYTExeExKcUxLbE4ydXhOcXpQLUxmREZkTFZ1UjZGV1hSOEctbUhpbEhRRHA4ajBCVEoxZ3lnUmZMdTBhLUhoaXAyR3V3X0VxZWlsdnhpdw?oc=5) — Trump Crypto Policy
 
 ### 📈 가격/시장 (15건)
 
-- [[Reddit] Iranians are Mining Bitcoin for $1,325 with 50x Returns Despite Electricity Shortages](https://reddit.com/r/CryptoCurrency/comments/1rge90w/iranians_are_mining_bitcoin_for_1325_with_50x/) — r/CryptoCurrency
-- [[Reddit] Norway’s $2T Sovereign Wealth Fund Books ~$250B Profit in 2025 – Powered by Big Tech &amp; Banking Rally](https://reddit.com/r/stocks/comments/1rg6yw1/norways_2t_sovereign_wealth_fund_books_250b/) — r/Stocks
+- [[Reddit Iranians are Mining Bitcoin for $1,325 with 50x Returns Despite Electricity Shortages](https://reddit.com/r/CryptoCurrency/comments/1rge90w/iranians_are_mining_bitcoin_for_1325_with_50x/) — r/CryptoCurrency
+- [[Reddit Norway’s $2T Sovereign Wealth Fund Books ~$250B Profit in 2025 – Powered by Big Tech &amp; Banking Rally](https://reddit.com/r/stocks/comments/1rg6yw1/norways_2t_sovereign_wealth_fund_books_250b/) — r/Stocks
 - [[한국갤럽] 이재명 지지율 64%로 1%p 올라, 긍정 이유 '경제·민생' '부동산'(https://news.google.com/rss/articles/CBMic0FVX3lxTFB6R25Da1dmTHk0am9XVm5vUnhwajhaM2RBT0cwcnFEUHFEeHpTNFFjYWNxX0dEN2J2eGRiRnpnZnhKaVRiTGpabzFCZzMyd01kc3dTM2tlMk5wZF9FN19iTVhzZTlabGNOa3lJTEZ5cUhUSmM?oc=5) — 이재명 경제정책
 
 ### 🟠 비트코인 (6건)
 
-- [[Reddit] My latest mural just received 20k sats via QR code 🟠 Permissionless patronage in real life. Thank you 🙏🏼](https://reddit.com/r/Bitcoin/comments/1rfdtil/my_latest_mural_just_received_20k_sats_via_qr/) — r/Bitcoin
-- [[Reddit] OG Hodlers who've not sold a fckn Sat in this dump](https://reddit.com/r/Bitcoin/comments/1rg8h0c/og_hodlers_whove_not_sold_a_fckn_sat_in_this_dump/) — r/Bitcoin
-- [[Reddit] Iranians are Mining Bitcoin for $1,325 with 50x Returns Despite Electricity Shortages](https://reddit.com/r/CryptoCurrency/comments/1rge90w/iranians_are_mining_bitcoin_for_1325_with_50x/) — r/CryptoCurrency
+- [[Reddit My latest mural just received 20k sats via QR code 🟠 Permissionless patronage in real life. Thank you 🙏🏼](https://reddit.com/r/Bitcoin/comments/1rfdtil/my_latest_mural_just_received_20k_sats_via_qr/) — r/Bitcoin
+- [[Reddit OG Hodlers who've not sold a fckn Sat in this dump](https://reddit.com/r/Bitcoin/comments/1rg8h0c/og_hodlers_whove_not_sold_a_fckn_sat_in_this_dump/) — r/Bitcoin
+- [[Reddit Iranians are Mining Bitcoin for $1,325 with 50x Returns Despite Electricity Shortages](https://reddit.com/r/CryptoCurrency/comments/1rge90w/iranians_are_mining_bitcoin_for_1325_with_50x/) — r/CryptoCurrency
 
 ### 🤖 AI/기술 (6건)
 
-- [[Reddit] OpenAI Finalizes $110 Billion Funding at $730 Billion Valuation](https://reddit.com/r/wallstreetbets/comments/1rg8k7a/openai_finalizes_110_billion_funding_at_730/) — r/WallStreetBets
-- [[Reddit] OpenAI closes $110 billion funding round with backing from Amazon($50B), Nvidia ($30B), Softbank ($30B)](https://reddit.com/r/stocks/comments/1rg6uug/openai_closes_110_billion_funding_round_with/) — r/Stocks
-- [[Reddit] Nvidia Looks Like a Value Stock Even as Earnings Scream Growth](https://reddit.com/r/stocks/comments/1rg4djd/nvidia_looks_like_a_value_stock_even_as_earnings/) — r/Stocks
+- [[Reddit OpenAI Finalizes $110 Billion Funding at $730 Billion Valuation](https://reddit.com/r/wallstreetbets/comments/1rg8k7a/openai_finalizes_110_billion_funding_at_730/) — r/WallStreetBets
+- [[Reddit OpenAI closes $110 billion funding round with backing from Amazon($50B), Nvidia ($30B), Softbank ($30B)](https://reddit.com/r/stocks/comments/1rg6uug/openai_closes_110_billion_funding_round_with/) — r/Stocks
+- [[Reddit Nvidia Looks Like a Value Stock Even as Earnings Scream Growth](https://reddit.com/r/stocks/comments/1rg4djd/nvidia_looks_like_a_value_stock_even_as_earnings/) — r/Stocks
 
 
 ---

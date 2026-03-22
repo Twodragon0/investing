@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/news-briefing-social-2026-03-19.png"
 permalink: "/social-media/2026/03/19/daily-social-media-digest/"
 description: "3월 19일 소셜 미디어 동향 33건을 정리했습니다. 연준 금리 결정과 환율, 한국은행 관련 해석이 대화의 중심에 있었습니다."
-excerpt: "소셜 미디어 동향 33건을 정리했습니다. 연준 금리 결정과 환율 해석이 대화의 중심에 있었습니다."
+excerpt: "긴급 알림 3건에 대한 선별 모니터링 1. 이재명 대통령 '지정학 리스크 과장…정치권서 부당하게 악용' - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "소셜 미디어 동향 - 2026-03-19 - 소셜 미디어 뉴스 요약 이미지"
 ---
 

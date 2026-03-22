@@ -52,7 +52,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-20 - stock-news 뉴스 요약 
 
 ## 전체 뉴스 요약
 
-- 총 **21건** 수집
+- 총 **199건** 수집
 - KOSPI 5,763.22 (-2.73%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 1,143.48 (-1.79%).
 
@@ -98,7 +98,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-20 - stock-news 뉴스 요약 
 <details><summary>그 외 31건 보기</summary><div class="details-content"><ol class="news-overflow-list">
 <li><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxOOW1ReDlBMmJhNk83M0tZV1RKRHlJTTUtVHo0YXVEN2hNREkzNmZsTElrTG1CbXUzdzhCQmlnNlJZbU52WDdadVNsdDd1dGNpNFFWQVRjYU92eDdVMVVIMklJMV9aenh5eEVPOHNKajBfX2xxVzVYMmhuWTJ4VS1XYUswWWt3SDdFejgwa1dUdW9GTFY5RGZGQjN1UGNJclVGTGdHZWpEcnpTU0JzUkVGaElOUzlHNmpTX1o0NWlLRUVZd3Fy0gHKAUFVX3lxTE1YMVhnN3I5ZlMzc3oyMFkyZkRQMUZ0WGdlaUY4U2x5VUdkZ1NnalJPOWdCUUQ3YS0xN1p2ZTB4RXdZTUZTQnFmbjc4NlpoZ0NfSE45cmIwanJTdGQwd1I5X1FjcXoxNFBPVFJDMzctbDFGSndmWGkwTmJEWjNmRTZpbUF4d28yWkVIcDVISmg3cVhDY1BZWVpaaG9Dd3d5bVAxUTNMX3BoTDZkQUEzY3dKT0J2MzFqcDU3Sk03X3FDYWhqTDRBVWh3SHc?oc=5">오늘 미국 주식 시장: S&P 500 선물은 완고한 인플레이션과 금리 불안으로 미끄러졌습니다.</a></li>
 <li><a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxNYjZSUE96ZzdJdWV0M0hCRUV3X2F2d3NXOFVUdlBLQThSTHQ3ZzNpSTFOR0ctSFZlbFM1MGtVeVBNRXN5WUVRdGI4ZVBjdlBPYzFiendvV05ZbENmOERmOENBU1lHVkRWSFZEMVUtTGdtRkdjeDc3ekhXRElBcVBjWkRmYmxwcXFMeFdVN0xOR0FZTHJUUlNCNzFBNWtNeDFnc0MyQjZfUkduUmhWU19VSUJUME4wM3F0QmdJcm5ZQkJLSUpVcS1hNzc1aDVoTzZmR2x4NEp3?oc=5">한은도 4월 금리 동결 가능성…이란사태로 물가·환율 불안 - 한국무역협회</a></li>
-<li><em>.외 16건</em></li>
+<li><em>외 16건</em></li>
 </ol></div></details>
 
 
@@ -142,7 +142,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-20 - stock-news 뉴스 요약 
 <details><summary>그 외 57건 보기</summary><div class="details-content"><ol class="news-overflow-list">
 <li><a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTFA4LWdlUmZJYy0ydVhtUThXWGRNakxaOEJfakFRNmZMczRtMDhraHVnaGlzY2MtWktqcWNwNDlhVnVldGV3WjM4WA?oc=5">2025년 주식 투자자 1156만명.코스피 ‘삼성전자’ 코스닥 ‘에코프로비엠’</a></li>
 <li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE5wWndkbWlGR2hJb3pxNmJuRXVtZTQ1RFY2Q21icTNTcHp3Q0RDRXBpLUFVLVJiejJkc2xwQVJqZm1iTF9WU1FHVWdVc0ZIWTU0eWk0YTdJaFpIcXpyaEtqalVkUEtKaXc5Q01z?oc=5">코스피·코스닥, 오름세로 장 마감 - 한강타임즈</a></li>
-<li><em>.외 42건</em></li>
+<li><em>외 42건</em></li>
 </ol></div></details>
 
 

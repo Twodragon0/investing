@@ -6,7 +6,7 @@ categories: [political-trades]
 tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-bank", "insider-trading"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-political-trades-report-2026-03-01.png"
+image: "/assets/images/generated/news-briefing-political-2026-03-01.png"
 excerpt: "2026-03-01 정치인 거래·정책 리포트: 의회 거래 1건, SEC 내부자 12건, 중앙은행 1건, 총 14건 수집"
 description: "2026-03-01 정치인 거래 리포트: 의회 거래 1건(Pelosi 내부자 거래 반박), SEC Form 4 내부자 거래 12건, 중앙은행 1건, 총 14건. 매도 신호 100%로 리스크 회피 움직임."
 ---
@@ -33,23 +33,23 @@ Pelosi, Trump의 내부자 거래 관련 신랄한 공격에 반격.
 
 ## SEC 내부자 거래 (Form 4)
 
-**1. [[Form 4] NMI Holdings, Inc. Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMirwFBVV95cUxOanlSSTJ2WFE1M1FkeVhKMUI3dFFzY1FTMXZLNDhBRjVRcXRjVWFnR3JSQUZwVjQ1X2V1TkJXdUFaYjIwOU1GT3NMNVRKeXlxOExRTWpLZVRhQlI5NXFDa24xWmhaX1lzcGlfeWJ1MV9oaHFaWUNkeUFlRGo0aUpHSnItcHdSYzktWGlTUllac040UGpraDlmUFRHWjZsRE9BMEo3S21GbFRDSWRuWEpr?oc=5)**
+**1. [[Form 4 NMI Holdings, Inc. Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMirwFBVV95cUxOanlSSTJ2WFE1M1FkeVhKMUI3dFFzY1FTMXZLNDhBRjVRcXRjVWFnR3JSQUZwVjQ1X2V1TkJXdUFaYjIwOU1GT3NMNVRKeXlxOExRTWpLZVRhQlI5NXFDa24xWmhaX1lzcGlfeWJ1MV9oaHFaWUNkeUFlRGo0aUpHSnItcHdSYzktWGlTUllac040UGpraDlmUFRHWjZsRE9BMEo3S21GbFRDSWRuWEpr?oc=5)**
 [Form 4] NMI Holdings, Inc.
 <span class="source-tag">SEC Insider Trading</span>
 
-**2. [[Form 4] POOL CORP Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMipgFBVV95cUxOektZNnNLLUdIQ3RSMlNJc2lNckJnNjVVZTlQbEZKTFFCZzZXYjVETHJRMlg2X1lJTG5Mc3ZvYzRyTjlvOWZjUTFudy1QeEJNcXVmdjlzMXdKaVRoSDNiZk9PTVJHaktmN2xlOUpHalVrdXV2Zm1KVlVETlJjc0ctQnBpTHkxdHVyWmRCcEhudlNWUmE3Y1lZOHpCMm1JWndJdVVBQWx3?oc=5)**
+**2. [[Form 4 POOL CORP Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMipgFBVV95cUxOektZNnNLLUdIQ3RSMlNJc2lNckJnNjVVZTlQbEZKTFFCZzZXYjVETHJRMlg2X1lJTG5Mc3ZvYzRyTjlvOWZjUTFudy1QeEJNcXVmdjlzMXdKaVRoSDNiZk9PTVJHaktmN2xlOUpHalVrdXV2Zm1KVlVETlJjc0ctQnBpTHkxdHVyWmRCcEhudlNWUmE3Y1lZOHpCMm1JWndJdVVBQWx3?oc=5)**
 [Form 4] POOL CORP Insider Trading Activity Stock Titan
 <span class="source-tag">SEC Insider Trading</span>
 
-**3. [[Form 4] Motorola Solutions, Inc. Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMitgFBVV95cUxNR25seWc2WmNPOVoyYTNxUl93cUMxaHZRdnNvSjk3anpiS3pjaVNZYVZQVmVuQmJQOGVuZ1RUNlFVa3NGWkdhWmlkR19TdVlMZG9aaEpxQlZxX3hZUW1udGhpbkRZVER4eGRBdEN0enZJS1VXUjdNOGhpRGptekJURXBPZHpJNTBlOEMxQWRCZDNKaTYtakpUcWhEUk05RW81NVd0R25qSVhZMVBBaTVLY1F2TWdmQQ?oc=5)**
+**3. [[Form 4 Motorola Solutions, Inc. Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMitgFBVV95cUxNR25seWc2WmNPOVoyYTNxUl93cUMxaHZRdnNvSjk3anpiS3pjaVNZYVZQVmVuQmJQOGVuZ1RUNlFVa3NGWkdhWmlkR19TdVlMZG9aaEpxQlZxX3hZUW1udGhpbkRZVER4eGRBdEN0enZJS1VXUjdNOGhpRGptekJURXBPZHpJNTBlOEMxQWRCZDNKaTYtakpUcWhEUk05RW81NVd0R25qSVhZMVBBaTVLY1F2TWdmQQ?oc=5)**
 [Form 4] Motorola Solutions, Inc.
 <span class="source-tag">SEC Insider Trading</span>
 
-**4. [[Form 4] WESTINGHOUSE AIR BRAKE TECHNOLOGIES CORP Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMiygFBVV95cUxOYWNNSy1YakRRUURVaHk1U2Vlb0Z5c2lpVmtHT0Zfcm9acVFUcWNadDhzOXN4YmFOc09nLWhfVk8tTWp4VUQ3RWhRUTNSUHhnY3M4akJyMEJSZlI2ZGw1QWVFVWlOOUR6UktlWlp4aWhYMDFjZ2tYSU10Q0Z6NkFGZEx4OGdtUExwWms3cVhTMTJlSDU0NmJoT1VkanhwNHZZX05HRHVkRkU4cWdRc0h1WXpPTXduMVlFVUhEbXhhX2ZmYW1yaEJITFRn?oc=5)**
+**4. [[Form 4 WESTINGHOUSE AIR BRAKE TECHNOLOGIES CORP Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMiygFBVV95cUxOYWNNSy1YakRRUURVaHk1U2Vlb0Z5c2lpVmtHT0Zfcm9acVFUcWNadDhzOXN4YmFOc09nLWhfVk8tTWp4VUQ3RWhRUTNSUHhnY3M4akJyMEJSZlI2ZGw1QWVFVWlOOUR6UktlWlp4aWhYMDFjZ2tYSU10Q0Z6NkFGZEx4OGdtUExwWms3cVhTMTJlSDU0NmJoT1VkanhwNHZZX05HRHVkRkU4cWdRc0h1WXpPTXduMVlFVUhEbXhhX2ZmYW1yaEJITFRn?oc=5)**
 [Form 4] WESTINGHOUSE AIR BRAKE TECHNOLOGIES CORP Insider Trading Activity Stock Titan
 <span class="source-tag">SEC Insider Trading</span>
 
-**5. [[Form 4] Axsome Therapeutics, Inc. Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMiuAFBVV95cUxQYmE3VzFERXFQMExFSGJILVdQT2RuREZvTlVpV1NSVDF3SXpkYUdNdHFvbk1SNFV0YTNFYTFhRXNSejhCaGdTQnJNd0FydUN0VnNKXzJiek4zMXh5Z01MM091X0VBVkxSMlVIOXAzQndJQTNXWndfTzlnOWhBTzNaNU15WVB2ZzVKV01VWWRoU0VqSlBiSXFUd09oWlR6YmtiXzRiRm04MDNSbWJrRVVzTHFyUzQ1eTJY?oc=5)**
+**5. [[Form 4 Axsome Therapeutics, Inc. Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMiuAFBVV95cUxQYmE3VzFERXFQMExFSGJILVdQT2RuREZvTlVpV1NSVDF3SXpkYUdNdHFvbk1SNFV0YTNFYTFhRXNSejhCaGdTQnJNd0FydUN0VnNKXzJiek4zMXh5Z01MM091X0VBVkxSMlVIOXAzQndJQTNXWndfTzlnOWhBTzNaNU15WVB2ZzVKV01VWWRoU0VqSlBiSXFUd09oWlR6YmtiXzRiRm04MDNSbWJrRVVzTHFyUzQ1eTJY?oc=5)**
 [Form 4] Axsome Therapeutics, Inc.
 <span class="source-tag">SEC Insider Trading</span>
 
@@ -57,11 +57,11 @@ Pelosi, Trump의 내부자 거래 관련 신랄한 공격에 반격.
 Director Shane D.
 <span class="source-tag">SEC Insider Trading</span>
 
-**7. [[Form 4] iHeartMedia, Inc. Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMisAFBVV95cUxQSFdXVU44a3dGYm5WbGxsNV9Ibk9CbmR0Y2NLY0RnNlZ3R1RhX1dmbFlXcjhPTE92YzUzSzV0Z25leFZoRzR5aWhNaW54d1Y1TnhDcDlSOHZaYzE2eWdsUGV1QlpUSVNPS3pNdEU1MzY2VmYyazZ6WDRzSkkzRkNWMW1teFhUN0pqblhSY3JmbFl1QjlmMVNacFlFbUdDbEhoeElXZHFUU19lZDNEUEIxVg?oc=5)**
+**7. [[Form 4 iHeartMedia, Inc. Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMisAFBVV95cUxQSFdXVU44a3dGYm5WbGxsNV9Ibk9CbmR0Y2NLY0RnNlZ3R1RhX1dmbFlXcjhPTE92YzUzSzV0Z25leFZoRzR5aWhNaW54d1Y1TnhDcDlSOHZaYzE2eWdsUGV1QlpUSVNPS3pNdEU1MzY2VmYyazZ6WDRzSkkzRkNWMW1teFhUN0pqblhSY3JmbFl1QjlmMVNacFlFbUdDbEhoeElXZHFUU19lZDNEUEIxVg?oc=5)**
 [Form 4] iHeartMedia, Inc.
 <span class="source-tag">SEC Insider Trading</span>
 
-**8. [[Form 4] Hercules Capital, Inc. Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMitAFBVV95cUxQazdBZUpQR2ZVaE5wU3VaeU1vZmQyeHNmRHFUTlBhSXVRUWs3S2RKWVZqaGVNUW1LNGJuMFd6bE9pa1M2ZXczMF9tbUhkYU92dXN5bDZPOWZITXVoYVpZMTlRcnc4WUhsQnBTdDVHZU9tTjhuRDNmZkhNS00wQ3B0ekZsNVJvVHR1NUxPUmtwZUYxZDBjVVFGVXhtODNyd0lGM2JUSWdlZUUwcFVNOGZDUXdJUV8?oc=5)**
+**8. [[Form 4 Hercules Capital, Inc. Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMitAFBVV95cUxQazdBZUpQR2ZVaE5wU3VaeU1vZmQyeHNmRHFUTlBhSXVRUWs3S2RKWVZqaGVNUW1LNGJuMFd6bE9pa1M2ZXczMF9tbUhkYU92dXN5bDZPOWZITXVoYVpZMTlRcnc4WUhsQnBTdDVHZU9tTjhuRDNmZkhNS00wQ3B0ekZsNVJvVHR1NUxPUmtwZUYxZDBjVVFGVXhtODNyd0lGM2JUSWdlZUUwcFVNOGZDUXdJUV8?oc=5)**
 [Form 4] Hercules Capital, Inc.
 <span class="source-tag">SEC Insider Trading</span>
 
@@ -69,7 +69,7 @@ Director Shane D.
 Clear Secure (YOU) GC sells 15,533 shares in Rule 10b5-1 trades Stock Titan
 <span class="source-tag">SEC Insider Trading</span>
 
-**10. [[Form 4] Alphatec Holdings, Inc. Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMitgFBVV95cUxNOGhFNGIwUHc5SDAxQjhuelRPR2FuYUhrQU1XUFlaWlZYSWpwdm9ReUJfSHpzRTNiRzRHLWpVNk1uVWJkYUZjSU8xaV8xcW9wS3gxQmdxcjhRcUk0cldpd2JXbmtvQnZsa3c4a0p0NW5GdDMtMUJiaE1oQ1lCWUU5Nm1ZUUVjcjctTUFuZ2dCdUFLbFpmSHl2QXJmUDE5aDg3Y21zaVNoM0g0Vm9Nd0MxSVFIeldHUQ?oc=5)**
+**10. [[Form 4 Alphatec Holdings, Inc. Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMitgFBVV95cUxNOGhFNGIwUHc5SDAxQjhuelRPR2FuYUhrQU1XUFlaWlZYSWpwdm9ReUJfSHpzRTNiRzRHLWpVNk1uVWJkYUZjSU8xaV8xcW9wS3gxQmdxcjhRcUk0cldpd2JXbmtvQnZsa3c4a0p0NW5GdDMtMUJiaE1oQ1lCWUU5Nm1ZUUVjcjctTUFuZ2dCdUFLbFpmSHl2QXJmUDE5aDg3Y21zaVNoM0g0Vm9Nd0MxSVFIeldHUQ?oc=5)**
 [Form 4] Alphatec Holdings, Inc.
 <span class="source-tag">SEC Insider Trading</span>
 

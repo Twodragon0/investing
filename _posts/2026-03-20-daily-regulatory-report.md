@@ -77,7 +77,7 @@ CFTC과 메이저 리그 야구는 오늘 CFTC과 프로 스포츠 리그 간의
 부동산 시장 관련 소식입니다. 금리·정책 변화에 따른 부동산 시장 흐름을 주시해야 합니다.
 <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
 
-**2. [“중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「\[단독\] 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86460)**
+**2. [“중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「\[단독 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86460)**
 “중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「[단독] 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 - 1.
 <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
 
@@ -153,7 +153,7 @@ CFTC과 메이저 리그 야구는 오늘 CFTC과 프로 스포츠 리그 간의
 - [“다주택자, 비거주 1주택자 등에 대한 대출 규제는 확정된 바 없습니다” - 3.16일 서울경제 ｢아이 학교‧직장 발령 등 실수요땐 전세대출 추가규제 제외｣ 제하의 기사 등에 대한 정부입장 설명](https://www.fsc.go.kr/no010102/86461)
  <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
  > 부동산 시장 관련 소식입니다.
-- [“중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「[단독] 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86460)
+- [“중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「[단독 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86460)
  <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
  > “중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「[단독] 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 - 1.
 
@@ -162,13 +162,13 @@ CFTC과 메이저 리그 야구는 오늘 CFTC과 프로 스포츠 리그 간의
 전체의 33%로 높은 비중을 보입니다. 주요 출처: 한국 금융규제 뉴스(3건), Japan FSA(2건), 금융위원회 보도참고(1건). 관련 지역: 한국, 아시아.
 
 **주요 동향:**
-- [“중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「[단독] 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86460)
+- [“중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「[단독 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86460)
  <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
  > “중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「[단독] 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 - 1.
 - [빗썸 비트코인 오지급 여파…금감원, 가상자산 거래소 ‘은행급’ 규제 국회 건의](https://news.google.com/rss/articles/CBMiT0FVX3lxTE1la21OLXJ1Zi1sS05CUjI1UkxzZ0JqSXhQLW9QZ0d1VVYtNmRwcVpHajFpUko2OTFJblVzbllsQ3pUYTZWaHZEY3A5ZWZhS0k?oc=5)
  <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
  > 빗썸 비트코인 오지급 여파…금감원, 가상자산 거래소 ‘은행급’ 규제 국회 건의.
-- [단독] 금감원 "코인 거래소, 은행처럼 감독하겠다" - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE45ZmtRdFpxMTFpODRRS2sta1UweWVJRzJGdm84aDduMmFGeUZYakhVbzNiSGVkTjZpMEh1NHJjYzh5d000RUVRc2ZjWXdYekw3?oc=5)
+- [단독 금감원 "코인 거래소, 은행처럼 감독하겠다" - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE45ZmtRdFpxMTFpODRRS2sta1UweWVJRzJGdm84aDduMmFGeUZYakhVbzNiSGVkTjZpMEh1NHJjYzh5d000RUVRc2ZjWXdYekw3?oc=5)
  <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
  > [단독] 금감원 "코인 거래소, 은행처럼 감독하겠다" 블루밍비트
 
@@ -180,7 +180,7 @@ CFTC과 메이저 리그 야구는 오늘 CFTC과 프로 스포츠 리그 간의
 - [“다주택자, 비거주 1주택자 등에 대한 대출 규제는 확정된 바 없습니다” - 3.16일 서울경제 ｢아이 학교‧직장 발령 등 실수요땐 전세대출 추가규제 제외｣ 제하의 기사 등에 대한 정부입장 설명](https://www.fsc.go.kr/no010102/86461)
  <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
  > 부동산 시장 관련 소식입니다.
-- [“중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「[단독] 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86460)
+- [“중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「[단독 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86460)
  <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
  > “중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「[단독] 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 - 1.
 - [빗썸 비트코인 오지급 여파…금감원, 가상자산 거래소 ‘은행급’ 규제 국회 건의](https://news.google.com/rss/articles/CBMiT0FVX3lxTE1la21OLXJ1Zi1sS05CUjI1UkxzZ0JqSXhQLW9QZ0d1VVYtNmRwcVpHajFpUko2OTFJblVzbllsQ3pUYTZWaHZEY3A5ZWZhS0k?oc=5)

@@ -6,8 +6,9 @@ categories: [stock-news]
 tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-01.png"
+image: "/assets/images/generated/news-briefing-stock-2026-03-01.png"
 description: "2026-03-01 주식 시장에서 119건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,244.13(-1.00%), KOSDAQ 1,192.78(+0.39%), USD/KRW 1,439.23(+0.41%)."
+excerpt: "KOSPI 6,244.13 (-1.00%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다. KOSDAQ 1,192.78 (+0.39%). KOSDAQ이…"
 ---
 
 **2026-03-01** 주식 시장에서 119건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,244.13(-1.00%), KOSDAQ 1,192.78(+0.39%), USD/KRW 1,439.23(+0.41%).

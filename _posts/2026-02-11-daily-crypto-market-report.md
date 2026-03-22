@@ -7,8 +7,9 @@ tags: [market-report, crypto, top-coins, trending, daily]
 source: "CoinGecko"
 source_url: "https://www.coingecko.com/"
 lang: "ko"
-description: "BTC 도미넌스: 56.7% | ETH 도미넌스: 10.0%"
-image: "/assets/images/generated/og-daily-crypto-market-report-2026-02-11.png"
+description: "암호화폐 시장 종합 리포트 - 2026-02-11 관련 시장 분석 리포트입니다. 주요 키워드: market-report, crypto, top-coins, trending."
+image: "/assets/images/generated/news-briefing-cryptomarket-2026-02-11.png"
+excerpt: "총 시가총액: $2.36T ( -2.27%) 24시간 거래량: $113.94B - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 ## 시장 인사이트

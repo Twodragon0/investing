@@ -9,6 +9,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/market-snapshot-2026-03-09.png"
 description: "2026-03-09 주식 시장에서 186건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,172.75(-7.41%), KOSDAQ 1,087.92(-5.48%), USD/KRW 1,493.18(+0.58%)."
+excerpt: "KOSPI 5,172.75 (-7.41%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요."
 ---
 
 **2026-03-09** 주식 시장에서 186건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,172.75(-7.41%), KOSDAQ 1,087.92(-5.48%), USD/KRW 1,493.18(+0.58%).

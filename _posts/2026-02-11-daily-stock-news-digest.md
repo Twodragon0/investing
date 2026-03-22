@@ -6,8 +6,9 @@ categories: [stock-news]
 tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
-description: "오늘 총 120건의 주식 시장 뉴스가 수집되었습니다. 주요 내용을 정리합니다."
-image: "/assets/images/generated/og-daily-stock-news-digest-2026-02-11.png"
+description: "주식 시장 뉴스 종합 - 2026-02-11. 매크로 지표와 기업 실적이 시장에 미치는 영향을 살펴봅니다. 주요 키워드: stock, market, daily-digest."
+image: "/assets/images/generated/news-briefing-stock-2026-02-11.png"
+excerpt: "오늘 총 120건의 주식 시장 뉴스가 수집되었습니다. 주요 내용을 정리합니다 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 오늘 총 120건의 주식 시장 뉴스가 수집되었습니다. 주요 내용을 정리합니다.

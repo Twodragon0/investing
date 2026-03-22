@@ -6,8 +6,9 @@ categories: [regulatory-news]
 tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-regulatory-report-2026-02-28.png"
-description: "전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 33건의 규제 관련 뉴스가 수집되었습니다."
+image: "/assets/images/generated/news-briefing-regulatory-2026-02-28.png"
+description: "글로벌 규제 동향 리포트 - 2026-02-28 - 글로벌 금융 규제 및 정책 변화 추적. 주요 키워드: regulation, sec, cftc, fsc."
+excerpt: "1. SEC Announces Roundtable on Private Markets Valuation As Retail Investor Access Accelerates -…"
 ---
 
 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 33건의 규제 관련 뉴스가 수집되었습니다.
@@ -52,7 +53,7 @@ SEC Announces Roundtable on Private Markets Valuation As Retail Investor Access 
 
 ## 한국 규제 동향
 
-**1. [[금융위 1박2일 현장방문] 벤처 보육프로그램간의 칸막이를 없애 비수도권에 대한 벤처지원을 강화하겠습니다.](https://www.fsc.go.kr/no010101/86351)**
+**1. [[금융위 1박2일 현장방문 벤처 보육프로그램간의 칸막이를 없애 비수도권에 대한 벤처지원을 강화하겠습니다.](https://www.fsc.go.kr/no010101/86351)**
 *자세한 내용은 첨부파일을 확인해주세요
 <span class="source-tag">금융위원회 보도자료</span>
 
@@ -60,7 +61,7 @@ SEC Announces Roundtable on Private Markets Valuation As Retail Investor Access 
 *자세한 내용은 첨부파일을 확인해주세요
 <span class="source-tag">금융위원회 보도자료</span>
 
-**3. [[금융위 1박2일 현장방문]  국민성장펀드가 대구·경북지역의 방산·로봇산업 중심지 도약을 지원합니다.](https://www.fsc.go.kr/no010101/86343)**
+**3. [[금융위 1박2일 현장방문  국민성장펀드가 대구·경북지역의 방산·로봇산업 중심지 도약을 지원합니다.](https://www.fsc.go.kr/no010101/86343)**
 [금융위 1박2일 현장방문] 국민성장펀드가 대구·경북지역의 방산·로봇산업 중심지 도약을 지원합니다.
 <span class="source-tag">금융위원회 보도자료</span>
 
@@ -130,7 +131,7 @@ UK gambling commission considers allowing crypto payments for licensed betting o
 
 - [SEC Announces Roundtable on Private Markets Valuation As Retail Investor Access Accelerates - SEC.gov](https://news.google.com/rss/articles/CBMi0wFBVV95cUxONWJUbVYxcEFTazdrLU5sRXZob2p3V2RWSkpwcGlLS3JQd1U2ZTNsQ19rTUZqNVU4UWhVRGtRckJPaFNXejdTUnpCdUlsbE56ckl5MHhscklYUjhsSWVaby1YVE5pdVctU1Z6RlRDQkJtLW5ZUkJUVTFoQV9yS045ajVJOHdRX1oyNFBNdHdub1dmNTBWOXU5SElVLUJwSzBGcHhtSzU2c3FUbU1pcl9LMU4ydjBYc2RBOUhNT1VWcFF4dlZyQlF3dUduY2RacHktUTEw?oc=5) — SEC (Google News)
 - [CFTC Staff Reissues Staff Letter 25-50 to Add Additional No-Action Position on CPO Delegation Arrangements](https://www.cftc.gov/PressRoom/PressReleases/9186-26) — CFTC Press Releases
-- [[금융위 1박2일 현장방문] 벤처 보육프로그램간의 칸막이를 없애 비수도권에 대한 벤처지원을 강화하겠습니다.](https://www.fsc.go.kr/no010101/86351) — 금융위원회 보도자료
+- [[금융위 1박2일 현장방문 벤처 보육프로그램간의 칸막이를 없애 비수도권에 대한 벤처지원을 강화하겠습니다.](https://www.fsc.go.kr/no010101/86351) — 금융위원회 보도자료
 
 ### 🟠 비트코인 (1건)
 
@@ -142,15 +143,15 @@ UK gambling commission considers allowing crypto payments for licensed betting o
 
 ### 🏛️ 정치/정책 (7건)
 
-- [[금융위 1박2일 현장방문]  국민성장펀드가 대구·경북지역의 방산·로봇산업 중심지 도약을 지원합니다.](https://www.fsc.go.kr/no010101/86343) — 금융위원회 보도자료
+- [[금융위 1박2일 현장방문  국민성장펀드가 대구·경북지역의 방산·로봇산업 중심지 도약을 지원합니다.](https://www.fsc.go.kr/no010101/86343) — 금융위원회 보도자료
 - [차세대 이차전지와 첨단반도체 기술의 초격차 확보와 관련 생태계 강화를 국민성장펀드가 지원합니다.](https://www.fsc.go.kr/no010101/86341) — 금융위원회 보도자료
 - [‘26년 국민성장펀드 간접투자부문(7조원)에 투입되는 재정(4,500억원) 및 자펀드 관리업무를 수행할 재정모펀드 운용사를 선정하였습니다.](https://www.fsc.go.kr/no010101/86340) — 금융위원회 보도자료
 
 ### 📈 가격/시장 (21건)
 
-- [[금융위 1박2일 현장방문] 벤처 보육프로그램간의 칸막이를 없애 비수도권에 대한 벤처지원을 강화하겠습니다.](https://www.fsc.go.kr/no010101/86351) — 금융위원회 보도자료
+- [[금융위 1박2일 현장방문 벤처 보육프로그램간의 칸막이를 없애 비수도권에 대한 벤처지원을 강화하겠습니다.](https://www.fsc.go.kr/no010101/86351) — 금융위원회 보도자료
 - [소상공인·자영업자의 채무상환에서 재기까지 새출발기금이 함께 합니다](https://www.fsc.go.kr/no010101/86349) — 금융위원회 보도자료
-- [[금융위 1박2일 현장방문]  국민성장펀드가 대구·경북지역의 방산·로봇산업 중심지 도약을 지원합니다.](https://www.fsc.go.kr/no010101/86343) — 금융위원회 보도자료
+- [[금융위 1박2일 현장방문  국민성장펀드가 대구·경북지역의 방산·로봇산업 중심지 도약을 지원합니다.](https://www.fsc.go.kr/no010101/86343) — 금융위원회 보도자료
 
 
 ---

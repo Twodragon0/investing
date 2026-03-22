@@ -6,7 +6,7 @@ categories: [political-trades]
 tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-bank", "insider-trading"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-political-trades-report-2026-03-05.png"
+image: "/assets/images/generated/news-briefing-political-2026-03-05.png"
 excerpt: "2026-03-05 정치인 거래·정책 리포트: SEC 내부자 15건, 트럼프 정책 4건, 중앙은행 3건, 총 22건 수집"
 description: "오늘 정치인 거래·정책 분야에서 총 22건의 뉴스가 수집되었습니다. 세부 구성은 SEC 내부자 거래 15건, 트럼프 정책 4건, 중앙은행 3건입니다."
 ---
@@ -49,46 +49,46 @@ description: "오늘 정치인 거래·정책 분야에서 총 22건의 뉴스�
 SEC 내부자 활동에서 PR, NYSE, John 관련 소식을 보도했습니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Activity</span>
 
-**2. [[서식 4] Progyny, Inc. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMiqAFBVV95cUxQLU10UGhIZ2Q0dEItbXNubFRzbGFsUHlyRXE0cVlfclFsOFlyYjZBRC0yVFhHX3dad1JRZTBWQUxkU2EtMWZ5Vnk4a3VsNTd0enVYWnRuQVZkSmJqcnJ3aGlRa002TzNMa0JKSW11U1RhUW1rVVE1WXNZNV84YlY0V1hNUVI3SHFnZlh6R3FIM0N5QWx2Sm81Z0QtRnBqOWx6dXhVUFVHZkQ?oc=5)**
+**2. [[서식 4 Progyny, Inc. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMiqAFBVV95cUxQLU10UGhIZ2Q0dEItbXNubFRzbGFsUHlyRXE0cVlfclFsOFlyYjZBRC0yVFhHX3dad1JRZTBWQUxkU2EtMWZ5Vnk4a3VsNTd0enVYWnRuQVZkSmJqcnJ3aGlRa002TzNMa0JKSW11U1RhUW1rVVE1WXNZNV84YlY0V1hNUVI3SHFnZlh6R3FIM0N5QWx2Sm81Z0QtRnBqOWx6dXhVUFVHZkQ?oc=5)**
 내부자 거래 관련 공시입니다. Form, Progyny (SEC 내부자 거래)
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**3. [[서식 4] AMBARELLA INC 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMiqwFBVV95cUxOa011VG5vV1Y1RGlrSGRVOXcyWFZOX3dqaENRZnhyNWtOMV9pS2RfQ3NZb0pBcjRRMzF5TEZKZ1U1ZmZKMnpvOHdsOTVXX19zVUhrSkdLUE9ZWnlSWWpSdk5xLWQ4X1JVVDQwYzk4RFh3VVdONy05ZEpfUUllaFRTWWc4MUZ0eEFrSHlsWmY3OGZHYUo5dWl0UnNEcW5YajJOcHZjR3BMV0cxYWM?oc=5)**
+**3. [[서식 4 AMBARELLA INC 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMiqwFBVV95cUxOa011VG5vV1Y1RGlrSGRVOXcyWFZOX3dqaENRZnhyNWtOMV9pS2RfQ3NZb0pBcjRRMzF5TEZKZ1U1ZmZKMnpvOHdsOTVXX19zVUhrSkdLUE9ZWnlSWWpSdk5xLWQ4X1JVVDQwYzk4RFh3VVdONy05ZEpfUUllaFRTWWc4MUZ0eEFrSHlsWmY3OGZHYUo5dWl0UnNEcW5YajJOcHZjR3BMV0cxYWM?oc=5)**
 내부자 거래 관련 공시입니다. INC, Form, Insider (SEC 내부자 거래)
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**4. [[서식 4] Live Oak Bancshares, Inc. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMitwFBVV95cUxPNldUVHNmVlQwa0dFNFJTblNaNFVGS3hidVJVS3h3d0x2TjNVTkVWREIwci0xdlRaaFZJSzFlaHcweWJyci1tYm9EbjJlYVJSV0thTnBZYzgyWVpEWUZsVzFkZmdEcjJ0VVIwcDZOWU93TDV6V2d3UkhCTW9nNkRKdUViSFMtVzQzZEJNZ0hMUUxiaTc0WDY1N2M4Qi1DVVVmNGg2aG5fNjlOMUcxdTFQeFFQZFBIcWc?oc=5)**
+**4. [[서식 4 Live Oak Bancshares, Inc. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMitwFBVV95cUxPNldUVHNmVlQwa0dFNFJTblNaNFVGS3hidVJVS3h3d0x2TjNVTkVWREIwci0xdlRaaFZJSzFlaHcweWJyci1tYm9EbjJlYVJSV0thTnBZYzgyWVpEWUZsVzFkZmdEcjJ0VVIwcDZOWU93TDV6V2d3UkhCTW9nNkRKdUViSFMtVzQzZEJNZ0hMUUxiaTc0WDY1N2M4Qi1DVVVmNGg2aG5fNjlOMUcxdTFQeFFQZFBIcWc?oc=5)**
 내부자 거래 관련 공시입니다. Form, Live (SEC 내부자 거래)
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**5. [[서식 4] GENERAL ELECTRIC CO 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMisAFBVV95cUxPb2JKWU5fNUVXdWgtNXREV2h5ZV9Sc3pvQldPYkItZTR5SHFNVFBzazJkQnR3cU81OG5wejg0NDJpQXAycDZuS2JVN0Ztb0czNXZRdFdrQm0yYjU3WGFKSVhONHBwWWpmdnlNN1J6Z0UtUVFIN1Y1clFKRTczYmZsckNCd1JJbVgtOEh1WTd2YmpfdThFc3c4N0RQYS11c1hoeHBLa05GY2U3ZGIzVG5zZg?oc=5)**
+**5. [[서식 4 GENERAL ELECTRIC CO 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMisAFBVV95cUxPb2JKWU5fNUVXdWgtNXREV2h5ZV9Sc3pvQldPYkItZTR5SHFNVFBzazJkQnR3cU81OG5wejg0NDJpQXAycDZuS2JVN0Ztb0czNXZRdFdrQm0yYjU3WGFKSVhONHBwWWpmdnlNN1J6Z0UtUVFIN1Y1clFKRTczYmZsckNCd1JJbVgtOEh1WTd2YmpfdThFc3c4N0RQYS11c1hoeHBLa05GY2U3ZGIzVG5zZg?oc=5)**
 내부자 거래 관련 공시입니다. CO, Form, Insider (SEC 내부자 거래)
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**6. [[서식 4] Toll Brothers, Inc. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMirwFBVV95cUxPU3JaQUJzT3JMS3VndDJ0dkZKX1NTV01fZGY3NUhmYUs0RHdTNzc3aDgwV3NsSGdaZXl4NVhKbnBIVTRoZi1QUjFPRVBneUoxYTNCWVQzMjJZM3NuaHptMjQzelZLUzN0by1SeTV0SnpUTE9lWWFRam1LOUt4dTJfYlNwUDBMdHVZdzJMdHlMSm1qRkVCQlpiSmRWV296VGVja2w4b2xMbUFLQVVrUk1j?oc=5)**
+**6. [[서식 4 Toll Brothers, Inc. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMirwFBVV95cUxPU3JaQUJzT3JMS3VndDJ0dkZKX1NTV01fZGY3NUhmYUs0RHdTNzc3aDgwV3NsSGdaZXl4NVhKbnBIVTRoZi1QUjFPRVBneUoxYTNCWVQzMjJZM3NuaHptMjQzelZLUzN0by1SeTV0SnpUTE9lWWFRam1LOUt4dTJfYlNwUDBMdHVZdzJMdHlMSm1qRkVCQlpiSmRWV296VGVja2w4b2xMbUFLQVVrUk1j?oc=5)**
 내부자 거래 관련 공시입니다. Form, Toll (SEC 내부자 거래)
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**7. [[서식 4] RB GLOBAL INC. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMnBRLVZrVHduSUxIeFpUWnhMbU9nVWlDQ3R3SW5PcXJSNmx2Q1JzSlMxQ2FwMmZrWUZHRzBOeS1YZlhuSERENUszSHRhZVlZeTg0THp6X2F0RUl0Z3JEUi1MSnU3Ym5FVlBIV1l1bU8zNWc5NlNiMDRyMkhSNDE1LWxoUEJJSmhNRHpMalAyX21TeVNWRzFmdUJMaWJpLVdZdXVvaHFmeThKdw?oc=5)**
+**7. [[서식 4 RB GLOBAL INC. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMnBRLVZrVHduSUxIeFpUWnhMbU9nVWlDQ3R3SW5PcXJSNmx2Q1JzSlMxQ2FwMmZrWUZHRzBOeS1YZlhuSERENUszSHRhZVlZeTg0THp6X2F0RUl0Z3JEUi1MSnU3Ym5FVlBIV1l1bU8zNWc5NlNiMDRyMkhSNDE1LWxoUEJJSmhNRHpMalAyX21TeVNWRzFmdUJMaWJpLVdZdXVvaHFmeThKdw?oc=5)**
 내부자 거래 관련 공시입니다. RB, INC, Form (SEC 내부자 거래)
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**8. [[서식 4] Progyny, Inc. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMiqAFBVV95cUxORDhYeU9GUlpyYkg2WHIyb2VaQnFOZzlkakM2Q2VmdUVaNjJlU1FsTnhtTEVsTWpQOTMtZUpScnZxN2pIVm9BSVJndTBMX29CcTZqNXRNWVFpZHlXNzNPOUJnemlocVhBNkNDOTZwNXV4cDJyNUJGbnZEbHp3Q1dHTWh4Rm5pMWJGX25DakN1T3l1cTNMbU9fSmQwNS15Qkw0c0tkTlotNm8?oc=5)**
+**8. [[서식 4 Progyny, Inc. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMiqAFBVV95cUxORDhYeU9GUlpyYkg2WHIyb2VaQnFOZzlkakM2Q2VmdUVaNjJlU1FsTnhtTEVsTWpQOTMtZUpScnZxN2pIVm9BSVJndTBMX29CcTZqNXRNWVFpZHlXNzNPOUJnemlocVhBNkNDOTZwNXV4cDJyNUJGbnZEbHp3Q1dHTWh4Rm5pMWJGX25DakN1T3l1cTNMbU9fSmQwNS15Qkw0c0tkTlotNm8?oc=5)**
 내부자 거래 관련 공시입니다. Form, Progyny (SEC 내부자 거래)
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**9. [[서식 4] CS Disco, Inc. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZkNuNXd4OXNTMjlmZHhPNkFnZXM3ai1oVllJR3JndU5RZkx2b1JkTThxMTNNTVlaQ2JDTEtJRkQtYXYwYXdxd0FyeGhGenJIZUJvN0pJb25CNklfMy1UeWNvNWZXWWVyNUdmRElTb0dzZnBKRVZmLXllOVdvX18tX3FjWWtzaTE0akJHc0Q4M0g3MnpGSmR2VnpXRmpZcFJrRThtT2x4THA?oc=5)**
+**9. [[서식 4 CS Disco, Inc. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZkNuNXd4OXNTMjlmZHhPNkFnZXM3ai1oVllJR3JndU5RZkx2b1JkTThxMTNNTVlaQ2JDTEtJRkQtYXYwYXdxd0FyeGhGenJIZUJvN0pJb25CNklfMy1UeWNvNWZXWWVyNUdmRElTb0dzZnBKRVZmLXllOVdvX18tX3FjWWtzaTE0akJHc0Q4M0g3MnpGSmR2VnpXRmpZcFJrRThtT2x4THA?oc=5)**
 내부자 거래 관련 공시입니다. CS, Form, Disco (SEC 내부자 거래)
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**10. [[서식 4] HUBSPOT INC 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMiqAFBVV95cUxQaHk5bDloSk44bUxOczZDa25rY0YtZnYySW5OZkJ2YmFIdWFPVzQ3QjJxUDdlM09zY1FmOWRpc1JINWVFSFRrUWZrMlZYbTMtbmFTVE5aYVFHR1hhbTIxLUVwRmIzOTdyd3NEQzliX3VaMmZORXo4Wk1PQTEtenloMmRuS2F0SnlhUjJ6RlFncmlIMGtEYjMxMko1YlJlS3Y5eTBMX2daTmU?oc=5)**
+**10. [[서식 4 HUBSPOT INC 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMiqAFBVV95cUxQaHk5bDloSk44bUxOczZDa25rY0YtZnYySW5OZkJ2YmFIdWFPVzQ3QjJxUDdlM09zY1FmOWRpc1JINWVFSFRrUWZrMlZYbTMtbmFTVE5aYVFHR1hhbTIxLUVwRmIzOTdyd3NEQzliX3VaMmZORXo4Wk1PQTEtenloMmRuS2F0SnlhUjJ6RlFncmlIMGtEYjMxMko1YlJlS3Y5eTBMX2daTmU?oc=5)**
 내부자 거래 관련 공시입니다. INC, Form, Insider (SEC 내부자 거래)
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 
 ## 중앙은행 정책 동향
 
-**1. [[문상윤 칼럼] 기준금리 동결로 읽는 부동산 시장 - 매일일보](https://news.google.com/rss/articles/CBMiZEFVX3lxTFBQeGNiOWV1R0kyaWt4emo1MFVlNy1paVBiY2l4TDFta2pyWGhKUDFqOGZPUEF2Ym1jVmNIT1otWU1OelRYSGJQOFZTWURTaVVuckt3OW5mNEdzX0RpNVdhR0dYcjg?oc=5)**
+**1. [[문상윤 칼럼 기준금리 동결로 읽는 부동산 시장 - 매일일보](https://news.google.com/rss/articles/CBMiZEFVX3lxTFBQeGNiOWV1R0kyaWt4emo1MFVlNy1paVBiY2l4TDFta2pyWGhKUDFqOGZPUEF2Ym1jVmNIT1otWU1OelRYSGJQOFZTWURTaVVuckt3OW5mNEdzX0RpNVdhR0dYcjg?oc=5)**
 [문상윤 칼럼] 기준금리 동결로 읽는 부동산 시장 매일일보
 <span class="source-tag" data-source-type="default">한국은행 금리결정</span>
 

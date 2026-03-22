@@ -7,8 +7,9 @@ tags: ["worldmonitor", "geopolitics", "macro", "daily-digest"]
 source: "worldmonitor"
 source_url: "https://worldmonitor.app"
 lang: "ko"
-image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-03-03.png"
-description: "글로벌 브리핑 건 지정학"
+image: "/assets/images/generated/news-briefing-worldmonitor-2026-03-03.png"
+description: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-03-03 - 최신 시장 분석 뉴스와 분석을 확인하세요. 주요 키워드: worldmonitor, geopolitics, macro, daily-digest."
+excerpt: "범위: 글로벌 지정학, 금융시장, 에너지 이슈 주요 출처: WorldMonitor/MarketWatch (10건), WorldMonitor/Al Jazeera (8건),…"
 ---
 
 **2026-03-03** 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다.

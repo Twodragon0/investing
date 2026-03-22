@@ -7,15 +7,16 @@ tags: ["market-analysis", "economic-calendar", "earnings", "treasury", "ipo", "f
 keywords: "market-analysis, economic-calendar, earnings, treasury, ipo"
 source: "fmp"
 lang: "ko"
-image: "/assets/images/og-market-analysis.png"
+image: "/assets/images/generated/news-briefing-calendar-2026-03-11.png"
 description: "2026-03-11 기준 주요 시장 지수 2종, 섹터 11개, 국채 금리 5개 만기, 경제 이벤트 19건(고·중간 중요도), 대형주 실적 발표 2건, IPO 일정 4건을 수집했습니다."
+excerpt: "Why Broadcom Stock Has Done What Nvidia Couldn’t After Earnings (Thu, 05 Mar 2026 15:00:00 GMT) -…"
 ---
 
 **2026-03-11** 기준 주요 시장 지수 2종, 섹터 11개, 국채 금리 5개 만기, 경제 이벤트 19건(고·중간 중요도), 대형주 실적 발표 2건, IPO 일정 4건을 수집했습니다.
 
 ## 전체 뉴스 요약
 
-- - Why Broadcom Stock Has Done What Nvidia Couldn’t After Earnings (Thu, 05 Mar 2026 15:00:00 GMT) - Will Ciena (CIEN) beat estimates again in its next…
+- Why Broadcom Stock Has Done What Nvidia Couldn’t After Earnings (Thu, 05 Mar 2026 15:00:00 GMT) - Will Ciena (CIEN) beat estimates again in its next…
 
 
 ## 📊 주요 시장 지수

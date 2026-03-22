@@ -6,8 +6,9 @@ categories: [regulatory-news]
 tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-regulatory-report-2026-02-19.png"
-description: "전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 26건의 규제 관련 뉴스가 수집되었습니다."
+image: "/assets/images/generated/news-briefing-regulatory-2026-02-19.png"
+description: "글로벌 규제 동향 리포트 - 2026-02-19 - 글로벌 금융 규제 및 정책 변화 추적. 주요 키워드: regulation, sec, cftc, fsc."
+excerpt: "gemi-20260217 - SEC.gov — SEC (Google News) Number Go Down and other Schadenfreude - SEC.gov — SEC…"
 ---
 
 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 26건의 규제 관련 뉴스가 수집되었습니다.

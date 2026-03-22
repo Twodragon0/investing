@@ -6,9 +6,9 @@ categories: [political-trades]
 tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-trading]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-political-trades-report-2026-02-28.png"
+image: "/assets/images/generated/news-briefing-political-2026-02-28.png"
 excerpt: "2026-02-28 정치인 거래·정책 리포트: 의회 거래 1건, SEC 내부자 9건, 중앙은행 2건, 총 12건 수집"
-description: "미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다."
+description: "정치인 거래·정책 리포트 - 2026-02-28 - 미국 의회 내부자 거래와 정책 동향 추적. 주요 키워드: political-trades, congress, sec, trump."
 ---
 
 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
@@ -72,7 +72,7 @@ Air Lease (AL) EVP covers tax withholding with share disposal Stock Titan
 
 ## 중앙은행 정책 동향
 
-**1. [[경제전망] 한국은행 기준금리(2.50%) 6연속 동결..."소비, 투자 등 내수회복 불확실" - 시사캐스트](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5vWkpVRHo1c05Wcml6SXJNLUNEdHdPSEhkUlJDOE5hMDBHWDBvRVI2OUhpNXE2ZDlWcHhmcE5MLTlHVnFZN1NGaFdhWk91c1M0UU52SVhmd1pvemNRZkNLdEtDcmkxSFk?oc=5)**
+**1. [[경제전망 한국은행 기준금리(2.50%) 6연속 동결..."소비, 투자 등 내수회복 불확실" - 시사캐스트](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5vWkpVRHo1c05Wcml6SXJNLUNEdHdPSEhkUlJDOE5hMDBHWDBvRVI2OUhpNXE2ZDlWcHhmcE5MLTlHVnFZN1NGaFdhWk91c1M0UU52SVhmd1pvemNRZkNLdEtDcmkxSFk?oc=5)**
 [경제전망] 한국은행 기준금리(2.50%) 6연속 동결..."소비, 투자 등 내수회복 불확실" 시사캐스트
 <span class="source-tag">한국은행 금리결정</span>
 

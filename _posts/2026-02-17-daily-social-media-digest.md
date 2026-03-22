@@ -6,8 +6,9 @@ categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-social-media-digest-2026-02-17.png"
+image: "/assets/images/generated/news-briefing-social-2026-02-17.png"
 description: "2026-02-17 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 14건, 총 34건이 수집되었습니다."
+excerpt: "주요 테마: 매크로/금리, 정치/정책, 비트코인 긴급 알림 없음에 대한 선별 모니터링 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 **2026-02-17** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 14건, 총 34건이 수집되었습니다.
@@ -83,7 +84,7 @@ The Trump Tariffs Are Having a Noticeable Impact on the Stock Market and It's Ra
 Trump Tariffs Backfired, 130,000 Jobs Added In January And More: This Week In Economy Benzinga
 <span class="source-tag">Trump Economy</span>
 
-**3. [[정책포커스] 이재명 정부에 바라는 정책금융경제(19) 재정의 지속가능성 높이고 맞춤형 지원도 배려해야 - 시사캐스트](https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA2Q1ZhQl9nSmlSQkNZWWxJUWlnOUl3ZVZfa1NhNUgwai1oRV9VV1B6UWczOTJfckd0bHEyS1dPQ3p3VTNHWlBhUGtzTXBrMnZzTDl6NHlWZmhrZFpnWFRoOXA4MFhjbzQ?oc=5)**
+**3. [[정책포커스 이재명 정부에 바라는 정책금융경제(19) 재정의 지속가능성 높이고 맞춤형 지원도 배려해야 - 시사캐스트](https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA2Q1ZhQl9nSmlSQkNZWWxJUWlnOUl3ZVZfa1NhNUgwai1oRV9VV1B6UWczOTJfckd0bHEyS1dPQ3p3VTNHWlBhUGtzTXBrMnZzTDl6NHlWZmhrZFpnWFRoOXA4MFhjbzQ?oc=5)**
 [정책포커스] 이재명 정부에 바라는 정책금융경제(19) 재정의 지속가능성 높이고 맞춤형 지원도 배려해야 시사캐스트
 <span class="source-tag">이재명 경제정책</span>
 
@@ -91,11 +92,11 @@ Trump Tariffs Backfired, 130,000 Jobs Added In January And More: This Week In Ec
 감사원 정책감사 폐지한다는데이재명 정부에선 ‘정치적 감사’ 사라질까
 <span class="source-tag">이재명 경제정책</span>
 
-**5. [정책에 또 정쟁으로? '이재명표 주거'에 누가 돌을 던지나 [왜 지금] > 뉴스 - 지데일리](https://news.google.com/rss/articles/CBMibEFVX3lxTFAyZ1ZkOHd4NkppY1Axb1BKanMySWVhY1Y0Skt0d0pCZGZjS28xTDhhMVZmMlBXMENLOUZXSzlWdm1ibkFyUWVDSXQ0OTh0UE5JTUh0emlkaldmcHd1RkpJcjBzRFlvQVFIaDd0dw?oc=5)**
+**5. [정책에 또 정쟁으로? '이재명표 주거'에 누가 돌을 던지나 [왜 지금 > 뉴스 - 지데일리](https://news.google.com/rss/articles/CBMibEFVX3lxTFAyZ1ZkOHd4NkppY1Axb1BKanMySWVhY1Y0Skt0d0pCZGZjS28xTDhhMVZmMlBXMENLOUZXSzlWdm1ibkFyUWVDSXQ0OTh0UE5JTUh0emlkaldmcHd1RkpJcjBzRFlvQVFIaDd0dw?oc=5)**
 정책에 또 정쟁으로? '이재명표 주거'에 누가 돌을 던지나 [왜 지금] > 뉴스 지데일리
 <span class="source-tag">이재명 경제정책</span>
 
-**6. [[MBC여론조사] 이재명 대통령 국정 지지율 64%‥지방선거 여당 후보 지지도 54% ](https://news.google.com/rss/articles/CBMiT0FVX3lxTE1QRHNQbzhmbEFaV2tWY2lMN2Jqdmk3cEJDdWttZmVDa0VWNzJzdUtHTUJuZkQyNk1JcVlnQnM4LXJrS2FYTmM2aWlyTEI3RjA?oc=5)**
+**6. [[MBC여론조사 이재명 대통령 국정 지지율 64%‥지방선거 여당 후보 지지도 54% ](https://news.google.com/rss/articles/CBMiT0FVX3lxTE1QRHNQbzhmbEFaV2tWY2lMN2Jqdmk3cEJDdWttZmVDa0VWNzJzdUtHTUJuZkQyNk1JcVlnQnM4LXJrS2FYTmM2aWlyTEI3RjA?oc=5)**
 <span class="source-tag">이재명 경제정책</span>
 
 **7. [모건스탠리 “한은, 2월 금통위서 기준금리 동결 전망” - 인더스트리뉴스](https://news.google.com/rss/articles/CBMickFVX3lxTFBSY3N2N1U5b1N6MGVpczB2UDdwSkVEcVhoVVo3X1h6aVBtU0hSeVRER0t2OF9oUFZrdGNBOFlTdUJtR3FCNGdTQkJCTm8zRDg0ZTdFMlhCNnRnby1abXVWNkFWZmVOd0xkSVVRMURNSEJDZw?oc=5)**
@@ -118,33 +119,33 @@ Trump Tariffs Backfired, 130,000 Jobs Added In January And More: This Week In Ec
 
 ### 📊 매크로/금리 (11건)
 
-- [[Telegram] JAMES LAVISH: “The Federal Reserve manipulating the money supply and access to capital has absolutel](https://t.me/crypto/3509) — Telegram @crypto
-- [[Telegram] 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
-- [[Telegram] 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://](https://t.me/whale_alert/11524) — Telegram @whale_alert
+- [[Telegram JAMES LAVISH: “The Federal Reserve manipulating the money supply and access to capital has absolutel](https://t.me/crypto/3509) — Telegram @crypto
+- [[Telegram 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
+- [[Telegram 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://](https://t.me/whale_alert/11524) — Telegram @whale_alert
 
 ### 🏛️ 정치/정책 (7건)
 
-- [[Telegram] President Trump suggested "we might pay off the US $35 trillion debt using cryptocurrency."Sponsored](https://t.me/crypto/3502) — Telegram @crypto
+- [[Telegram President Trump suggested "we might pay off the US $35 trillion debt using cryptocurrency."Sponsored](https://t.me/crypto/3502) — Telegram @crypto
 - [The Trump Tariffs Are Having a Noticeable Impact on the Stock Market and It's Raising a Big Red Flag Right Now - The Motley Fool](https://news.google.com/rss/articles/CBMimAFBVV95cUxOcVBzVUEwZ3dkclJodnJ3T1hpdGxGSGRqVGdQU3lobkZHeElTemtsODdMRXVCRE5MY29ETDNmT2U4VjFDSUNURHAzZFVzbEhQb203RllpamtuWFpSM3c5MjlkOUp2SloycXEwVGF4anZ0eUJWX09tVVZma25mVm0xVmlMalpYbFkyT3kzRHFpeXA1MktNc29NcA?oc=5) — Trump Economy
 - [Trump Tariffs Backfired, 130,000 Jobs Added In January And More: This Week In Economy - Benzinga](https://news.google.com/rss/articles/CBMi5wFBVV95cUxQYXpxSEpBeElZaEQwQmd1U2t3SmlsdUstaDdNa2MxRTF6TG9aSTN2M0F2OEdfQjdQVW1JZ2pGYnRQbzlLX0lzNWowWVgxNFppa2dXQmY3WjRfSTd1Y1g1Sm1KdE1ZYWxyUFFHMkhTOVR2Z3FZOUlMOGVJQmRBTnVEVmkzdW1FZS1GazFaV2dsdzN0VGVfUEpESmxsQjJNX05nMlQ5UmZFVXpRQVFucVhwQzhMRC10WXRtc1RmQzFncVFZUUVKREtLNE1TdXJMVmpPeTJlN1M0a3l5UGlrcWxJR0VnOVdoZDA?oc=5) — Trump Economy
 
 ### 🟠 비트코인 (4건)
 
-- [[Telegram] Binance has purchased another 4,545 Bitcoins valued at $305 million for its “SAFU” fund.Sponsored by](https://t.me/crypto/3499) — Telegram @crypto
-- [[Telegram] Polymarket rolls out an “Up or Down” Bitcoin marketA new BTC prediction market has gone live, settli](https://t.me/crypto/3500) — Telegram @crypto
-- [[Telegram] "why didn’t you buy bitcoin in 2010”me in 2010:Sponsored by @rainbetcom](https://t.me/crypto/3501) — Telegram @crypto
+- [[Telegram Binance has purchased another 4,545 Bitcoins valued at $305 million for its “SAFU” fund.Sponsored by](https://t.me/crypto/3499) — Telegram @crypto
+- [[Telegram Polymarket rolls out an “Up or Down” Bitcoin marketA new BTC prediction market has gone live, settli](https://t.me/crypto/3500) — Telegram @crypto
+- [[Telegram "why didn’t you buy bitcoin in 2010”me in 2010:Sponsored by @rainbetcom](https://t.me/crypto/3501) — Telegram @crypto
 
 ### 🏦 거래소 (6건)
 
-- [[Telegram] Binance has purchased another 4,545 Bitcoins valued at $305 million for its “SAFU” fund.Sponsored by](https://t.me/crypto/3499) — Telegram @crypto
-- [[Telegram] 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown walletTx: https://t.co/aNttwwzxno](https://t.me/whale_alert/11520) — Telegram @whale_alert
-- [[Telegram] 33,000 #ETH (6,583,742 USD) transferred from #Bithumb to unknown walletTx: https://t.co/Wam8SjJEzv](https://t.me/whale_alert/11521) — Telegram @whale_alert
+- [[Telegram Binance has purchased another 4,545 Bitcoins valued at $305 million for its “SAFU” fund.Sponsored by](https://t.me/crypto/3499) — Telegram @crypto
+- [[Telegram 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown walletTx: https://t.co/aNttwwzxno](https://t.me/whale_alert/11520) — Telegram @whale_alert
+- [[Telegram 33,000 #ETH (6,583,742 USD) transferred from #Bithumb to unknown walletTx: https://t.co/Wam8SjJEzv](https://t.me/whale_alert/11521) — Telegram @whale_alert
 
 ### 📈 가격/시장 (12건)
 
-- [[Telegram] Polymarket rolls out an “Up or Down” Bitcoin marketA new BTC prediction market has gone live, settli](https://t.me/crypto/3500) — Telegram @crypto
-- [[Telegram] Michael Saylor's 'Strategy' says it can "withstand a drawdown in Bitcoin's price to $8K and still ha](https://t.me/crypto/3507) — Telegram @crypto
-- [[정책포커스] 이재명 정부에 바라는 정책금융경제(19) 재정의 지속가능성 높이고 맞춤형 지원도 배려해야 - 시사캐스트](https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA2Q1ZhQl9nSmlSQkNZWWxJUWlnOUl3ZVZfa1NhNUgwai1oRV9VV1B6UWczOTJfckd0bHEyS1dPQ3p3VTNHWlBhUGtzTXBrMnZzTDl6NHlWZmhrZFpnWFRoOXA4MFhjbzQ?oc=5) — 이재명 경제정책
+- [[Telegram Polymarket rolls out an “Up or Down” Bitcoin marketA new BTC prediction market has gone live, settli](https://t.me/crypto/3500) — Telegram @crypto
+- [[Telegram Michael Saylor's 'Strategy' says it can "withstand a drawdown in Bitcoin's price to $8K and still ha](https://t.me/crypto/3507) — Telegram @crypto
+- [[정책포커스 이재명 정부에 바라는 정책금융경제(19) 재정의 지속가능성 높이고 맞춤형 지원도 배려해야 - 시사캐스트](https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA2Q1ZhQl9nSmlSQkNZWWxJUWlnOUl3ZVZfa1NhNUgwai1oRV9VV1B6UWczOTJfckd0bHEyS1dPQ3p3VTNHWlBhUGtzTXBrMnZzTDl6NHlWZmhrZFpnWFRoOXA4MFhjbzQ?oc=5) — 이재명 경제정책
 
 
 ---

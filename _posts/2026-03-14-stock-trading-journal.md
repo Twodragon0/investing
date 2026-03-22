@@ -27,7 +27,7 @@ journal_next_focus: "반등 시도는 유지하되 거래대금 없는 업종은
 description: "3월 14일 주식 트레이딩 일지입니다. 반도체 중심의 선별 매수와 업종 로테이션 대응 성과를 기록했습니다."
 excerpt: "반도체 중심의 index pullback buy 전략으로 정리한 3월 14일 주식 트레이딩 일지입니다."
 permalink: "/stock-journal/2026/03/14/stock-trading-journal/"
-image: "/assets/images/generated/og-stock-trading-journal-2026-03-14.png"
+image: "/assets/images/generated/news-briefing-stock-trading-journal-2026-03-14.png"
 image_alt: "Stock trading journal visual board for March 14, 2026"
 ---
 

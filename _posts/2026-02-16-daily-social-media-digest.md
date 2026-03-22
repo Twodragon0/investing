@@ -6,8 +6,9 @@ categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-social-media-digest-2026-02-16.png"
+image: "/assets/images/generated/news-briefing-social-2026-02-16.png"
 description: "2026-02-16 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 9건, 총 29건이 수집되었습니다."
+excerpt: "주요 테마: 매크로/금리, 비트코인, 거래소 긴급 알림 없음에 대한 선별 모니터링 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 **2026-02-16** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 9건, 총 29건이 수집되었습니다.
@@ -115,25 +116,25 @@ Trump Affiliates Bannon and Epshteyn Named in ‘Let’s Go Brandon’ Crypto Co
 
 ### 📊 매크로/금리 (9건)
 
-- [[Telegram] 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
-- [[Telegram] 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://](https://t.me/whale_alert/11524) — Telegram @whale_alert
+- [[Telegram 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
+- [[Telegram 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://](https://t.me/whale_alert/11524) — Telegram @whale_alert
 - [모건스탠리 “한은, 반도체 호조에 성장률 상향금리 2.5% 동결 전망” - 전자신문](https://news.google.com/rss/articles/CBMiTkFVX3lxTE9MNmhPQlZqNHJHZWNJYjRvcU9GUERpNTU4bFFBTExJc0FIUlpWUzJiNWhaMGhuVFhSS3lIcWNVcjZhdk5oTUxHeF9INEVwUQ?oc=5) — 한국은행 금리정책
 
 ### 🟠 비트코인 (4건)
 
-- [[Telegram] Kalshi traders are now betting that Bitcoin could plummet to as low as $48,000 this year.Sponsored b](https://t.me/crypto/3497) — Telegram @crypto
-- [[Telegram] Binance has purchased another 4,545 Bitcoins valued at $305 million for its “SAFU” fund.Sponsored by](https://t.me/crypto/3499) — Telegram @crypto
-- [[Telegram] Polymarket rolls out an “Up or Down” Bitcoin marketA new BTC prediction market has gone live, settli](https://t.me/crypto/3500) — Telegram @crypto
+- [[Telegram Kalshi traders are now betting that Bitcoin could plummet to as low as $48,000 this year.Sponsored b](https://t.me/crypto/3497) — Telegram @crypto
+- [[Telegram Binance has purchased another 4,545 Bitcoins valued at $305 million for its “SAFU” fund.Sponsored by](https://t.me/crypto/3499) — Telegram @crypto
+- [[Telegram Polymarket rolls out an “Up or Down” Bitcoin marketA new BTC prediction market has gone live, settli](https://t.me/crypto/3500) — Telegram @crypto
 
 ### 🏦 거래소 (6건)
 
-- [[Telegram] Binance has purchased another 4,545 Bitcoins valued at $305 million for its “SAFU” fund.Sponsored by](https://t.me/crypto/3499) — Telegram @crypto
-- [[Telegram] 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown walletTx: https://t.co/aNttwwzxno](https://t.me/whale_alert/11520) — Telegram @whale_alert
-- [[Telegram] 33,000 #ETH (6,583,742 USD) transferred from #Bithumb to unknown walletTx: https://t.co/Wam8SjJEzv](https://t.me/whale_alert/11521) — Telegram @whale_alert
+- [[Telegram Binance has purchased another 4,545 Bitcoins valued at $305 million for its “SAFU” fund.Sponsored by](https://t.me/crypto/3499) — Telegram @crypto
+- [[Telegram 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown walletTx: https://t.co/aNttwwzxno](https://t.me/whale_alert/11520) — Telegram @whale_alert
+- [[Telegram 33,000 #ETH (6,583,742 USD) transferred from #Bithumb to unknown walletTx: https://t.co/Wam8SjJEzv](https://t.me/whale_alert/11521) — Telegram @whale_alert
 
 ### 🏛️ 정치/정책 (3건)
 
-- [[Telegram] President Trump suggested "we might pay off the US $35 trillion debt using cryptocurrency."Sponsored](https://t.me/crypto/3502) — Telegram @crypto
+- [[Telegram President Trump suggested "we might pay off the US $35 trillion debt using cryptocurrency."Sponsored](https://t.me/crypto/3502) — Telegram @crypto
 - [Trump Affiliates Bannon and Epshteyn Named in ‘Let’s Go Brandon’ Crypto Coin Lawsuit - Gizmodo](https://news.google.com/rss/articles/CBMisgFBVV95cUxNVHUzMnljV1k1dU9JRlBtOVVfSFN5Ri1CdThSdlJqZVZldHZZNHFZNng3ODR4WDZXd3pLT0JwbFFCVVFrWEU4ekJCMUpVYUtyYjlWV2NKZ3JvbXpjZ1pUUXgxSk9hOGM0XzhlMENrdEd1RWk1dmJfWFFDdXltcEYzOGxCOFFjRVhFY2pCODRkbk9pZG94U0xtYXNXSjJnMmk1ZFRGQXNYdUE5WWJRVEdBTVl3?oc=5) — Trump Crypto Policy
 - [李 대통령 "돈 벌기 위해 집 사 모으는 바람에 온갖 사회문제 야기" - 핀포인트뉴스](https://news.google.com/rss/articles/CBMic0FVX3lxTE9VY2h2Zm90SnBqV3BlQWlyOWlZMHVsRmZwX3hQc1pPVzh2MWd1ODN5WUh5OTNSZzJDYmlNVnQzOE1qY0ZUbUJpS0NjYXZLc0xVd2FHQzVZbW5STkpsSGZLWExJWi1GR0s5bkVxcjdKZFBlaEU?oc=5) — 이재명 경제정책
 

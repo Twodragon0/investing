@@ -6,8 +6,9 @@ categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-social-media-digest-2026-02-14.png"
+image: "/assets/images/generated/news-briefing-social-2026-02-14.png"
 description: "2026-02-14 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 소셜 미디어 1건, 정치·경제 8건, 총 9건이 수집되었습니다."
+excerpt: "주요 키워드: bitcoin(6), trump(4), 이재명(4), ai(4), fed(2) 가장 많이 언급된 키워드는 bitcoin(비트코인)(6회)입니다."
 ---
 
 **2026-02-14** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 소셜 미디어 1건, 정치·경제 8건, 총 9건이 수집되었습니다.
@@ -89,7 +90,7 @@ Bitcoin Whale Alert – Massive $559M BTC Inflow to Binance Sparks Market Volati
 
 ## 정치·경제 동향
 
-**1. [이 대통령 지지율 63% ‘새해 최고치’경제·부동산 정책 영향 [갤럽] - 한겨레](https://news.google.com/rss/articles/CBMidEFVX3lxTE5mNm5tOEQ0NVlIOXRrQzNTSTJnTnd5ZnhwaDV5bkFSb2tVSlBEcDJSMnhVQTE4RndwdWxaX3RzVHdxMUVqb0VVX3JxWFRmWTJtYlJOSXJzbDYwb3c2VzNyX2d2Z3J6U1FVcF80WVVrQjlsVFhp?oc=5)**
+**1. [이 대통령 지지율 63% ‘새해 최고치’경제·부동산 정책 영향 [갤럽 - 한겨레](https://news.google.com/rss/articles/CBMidEFVX3lxTE5mNm5tOEQ0NVlIOXRrQzNTSTJnTnd5ZnhwaDV5bkFSb2tVSlBEcDJSMnhVQTE4RndwdWxaX3RzVHdxMUVqb0VVX3JxWFRmWTJtYlJOSXJzbDYwb3c2VzNyX2d2Z3J6U1FVcF80WVVrQjlsVFhp?oc=5)**
 이 대통령 지지율 63% ‘새해 최고치’경제·부동산 정책 영향 [갤럽] 한겨레
 `출처: 이재명 경제정책`
 
@@ -126,7 +127,7 @@ Trump Affiliates Bannon and Epshteyn Named in ‘Let’s Go Brandon’ Crypto Co
 
 ### 🏛️ 정치/정책 (6건)
 
-- [이 대통령 지지율 63% ‘새해 최고치’경제·부동산 정책 영향 [갤럽] - 한겨레](https://news.google.com/rss/articles/CBMidEFVX3lxTE5mNm5tOEQ0NVlIOXRrQzNTSTJnTnd5ZnhwaDV5bkFSb2tVSlBEcDJSMnhVQTE4RndwdWxaX3RzVHdxMUVqb0VVX3JxWFRmWTJtYlJOSXJzbDYwb3c2VzNyX2d2Z3J6U1FVcF80WVVrQjlsVFhp?oc=5) — 이재명 경제정책
+- [이 대통령 지지율 63% ‘새해 최고치’경제·부동산 정책 영향 [갤럽 - 한겨레](https://news.google.com/rss/articles/CBMidEFVX3lxTE5mNm5tOEQ0NVlIOXRrQzNTSTJnTnd5ZnhwaDV5bkFSb2tVSlBEcDJSMnhVQTE4RndwdWxaX3RzVHdxMUVqb0VVX3JxWFRmWTJtYlJOSXJzbDYwb3c2VzNyX2d2Z3J6U1FVcF80WVVrQjlsVFhp?oc=5) — 이재명 경제정책
 - [국회 경제 대정부질문 이재명 정부 부동산 정책 설전 격화 - 공감신문](https://news.google.com/rss/articles/CBMiaEFVX3lxTE9LV3gyYjV0LU53RWdTMjM4NUh3b09IWjh4cnJSR1VHUmRvOVd4bldJNHBRTjZKbUZhaTFfTTQ4bnFWczFJNElaYWFjQWtaVjlNak56ME1SeDQ4bmtGbVZwalBnMV9FTEY1?oc=5) — 이재명 경제정책
 - [李 대통령 "부동산 시장 정상화 추구할 뿐 집 팔라고 강요하지 않아" - 핀포인트뉴스](https://news.google.com/rss/articles/CBMic0FVX3lxTE5NeVNaM2JVUmIwY1RUNHdZcE9RdGlhdEpwV2p3UUd6dHpHbnZIU1lBaloxc0MwZ0d4bEpPWVllcnB4TmN3anI1ZTVna1pMS05uaUNoVWdRUWVWR1Q0ZEt3RHNrWjVNOGQ4aDZJNE1ERnFwQTA?oc=5) — 이재명 경제정책
 

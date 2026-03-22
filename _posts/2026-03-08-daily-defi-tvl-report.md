@@ -10,6 +10,7 @@ source_url: "https://defillama.com"
 lang: "ko"
 image: "/assets/images/generated/defi-tvl-dashboard-2026-03-08.png"
 description: "2026-03-08 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked, 총 예치 자산) 현황을 정리합니다. 상위 20개 프로토콜의 총 TVL은 $247.99B이며, 상위 15개 체인의 총 TVL은 $90.75B입니다."
+excerpt: "2026-03-08 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked, 총 예치 자산) 현황을 정리합니다. 상위 20개 프로토콜의 총 TVL은"
 ---
 
 **2026-03-08** DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked, 총 예치 자산) 현황을 정리합니다. 상위 20개 프로토콜의 총 TVL은 **$247.99B**이며, 상위 15개 체인의 총 TVL은 **$90.75B**입니다.

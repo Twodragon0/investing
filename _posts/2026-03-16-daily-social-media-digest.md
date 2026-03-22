@@ -68,7 +68,7 @@ image_alt: "3월 16일 소셜 미디어 대화 주제와 출처 분포를 보여
 이번 주 일정과 이벤트가 시장 심리에 어떤 영향을 줄지 점검하는 성격의 기사입니다.
 <span class="source-tag" data-source-type="default">Fed Policy</span>
 
-**5. [미·이란 전쟁발 대인플레이션(GI) 우려…차기 한국은행 총재는\[한상춘의 국제경제 심층읽기\] - 매거진한경](https://news.google.com/rss/articles/CBMibEFVX3lxTE1pOVpsazZTbzNFTThhVkFFOHBaVUxyMXh5R1MxTzI3V0VJTHA5NjBVQWt4azFNQndGcFNGRkJSZGJFUHd4eXp6TEJjNU11S0ZVaTJsbXpJYndLRml3STJ0OGJVWlJQUVNBTGdDMA?oc=5)**
+**5. [미·이란 전쟁발 대인플레이션(GI) 우려…차기 한국은행 총재는\[한상춘의 국제경제 심층읽기 - 매거진한경](https://news.google.com/rss/articles/CBMibEFVX3lxTE1pOVpsazZTbzNFTThhVkFFOHBaVUxyMXh5R1MxTzI3V0VJTHA5NjBVQWt4azFNQndGcFNGRkJSZGJFUHd4eXp6TEJjNU11S0ZVaTJsbXpJYndLRml3STJ0OGJVWlJQUVNBTGdDMA?oc=5)**
 미·이란 전쟁발 대인플레이션(GI) 우려…차기 한국은행 총재는[한상춘의 국제경제 심층읽기] 매거진한경
 <span class="source-tag" data-source-type="regulator">한국은행 금리정책</span>
 
@@ -76,7 +76,7 @@ image_alt: "3월 16일 소셜 미디어 대화 주제와 출처 분포를 보여
 금리 인하 논의에 신중한 한은, 물가·부채·대외 불확실성 강조 브랜드경제신문
 <span class="source-tag" data-source-type="regulator">한국은행 금리정책</span>
 
-**7. [오늘의 경제뉴스\] “이번이 마지막 기회?”…’빚투’ 열풍에 ‘마통’ 대출 러시 - 뉴스버스](https://news.google.com/rss/articles/CBMiaEFVX3lxTE1wTmcydXNySnNyeFlmMEU3RVRKUDVPU0hDeWphS0trVVpLT2lGRkYyRXdQaS03SHlhSnBtLWdfQXlpR1JPdXg2cjlPOEhhQUpRSll1eUxGMGhrbmY0eG9Ndjl1RFNFX044?oc=5)**
+**7. [오늘의 경제뉴스 “이번이 마지막 기회?”…’빚투’ 열풍에 ‘마통’ 대출 러시 - 뉴스버스](https://news.google.com/rss/articles/CBMiaEFVX3lxTE1wTmcydXNySnNyeFlmMEU3RVRKUDVPU0hDeWphS0trVVpLT2lGRkYyRXdQaS03SHlhSnBtLWdfQXlpR1JPdXg2cjlPOEhhQUpRSll1eUxGMGhrbmY0eG9Ndjl1RFNFX044?oc=5)**
 [오늘의 경제뉴스] “이번이 마지막 기회?”…’빚투’ 열풍에 ‘마통’ 대출 러시 뉴스버스
 <span class="source-tag" data-source-type="regulator">한국은행 금리정책</span>
 
@@ -84,11 +84,11 @@ image_alt: "3월 16일 소셜 미디어 대화 주제와 출처 분포를 보여
 유가 급등에도 한은 '신중 대응'…금리 인상 변수는 기대 인플레 뉴시안
 <span class="source-tag" data-source-type="regulator">한국은행 금리정책</span>
 
-**9. [글로벌 경제지표\] 美·日·유럽 중앙은행 금리결정…엔비디아 GTC서 '베라 루빈' 공개](https://news.google.com/rss/articles/CBMiT0FVX3lxTE5PZ2lyM09FaUJKeFV5ZHN3b2JHSDFxeWFSeGhqU2szV3ZsRXljeWF2Z3BxUUhPeXd6bjlLcjJkRDh2dDNDZF9idTNUdHFOMEE?oc=5)**
+**9. [글로벌 경제지표 美·日·유럽 중앙은행 금리결정…엔비디아 GTC서 '베라 루빈' 공개](https://news.google.com/rss/articles/CBMiT0FVX3lxTE5PZ2lyM09FaUJKeFV5ZHN3b2JHSDFxeWFSeGhqU2szV3ZsRXljeWF2Z3BxUUhPeXd6bjlLcjJkRDh2dDNDZF9idTNUdHFOMEE?oc=5)**
 [글로벌 경제지표] 美·日·유럽 중앙은행 금리결정…엔비디아 GTC서 '베라 루빈' 공개 v.daum.net
 <span class="source-tag" data-source-type="regulator">한국은행 금리정책</span>
 
-**10. [국제경제 흐름 읽기\] '유가 100달러' 돌파⋯호르무즈 봉쇄가 흔든 세계 경제 - 포커스온경제](https://news.google.com/rss/articles/CBMiXkFVX3lxTE1sbXo3ZUdGVFZqTVBHSmc5WWFiQU1zYzk3YmZjYmdfM2tMRWNObXNKYTZwaURIVmdHRXU1UllzSzNzall6c2pFcDd1SHJCamxseDdMZV9EcEFjelZVYXc?oc=5)**
+**10. [국제경제 흐름 읽기 '유가 100달러' 돌파⋯호르무즈 봉쇄가 흔든 세계 경제 - 포커스온경제](https://news.google.com/rss/articles/CBMiXkFVX3lxTE1sbXo3ZUdGVFZqTVBHSmc5WWFiQU1zYzk3YmZjYmdfM2tMRWNObXNKYTZwaURIVmdHRXU1UllzSzNzall6c2pFcDd1SHJCamxseDdMZV9EcEFjelZVYXc?oc=5)**
 [국제경제 흐름 읽기] '유가 100달러' 돌파⋯호르무즈 봉쇄가 흔든 세계 경제 포커스온경제
 <span class="source-tag" data-source-type="regulator">한국은행 금리정책</span>
 
@@ -124,7 +124,7 @@ image_alt: "3월 16일 소셜 미디어 대화 주제와 출처 분포를 보여
 
 주요 출처: 한국은행 금리정책(1건).
 
-- [글로벌 경제지표\] 美·日·유럽 중앙은행 금리결정…엔비디아 GTC서 '베라 루빈' 공개](https://news.google.com/rss/articles/CBMiT0FVX3lxTE5PZ2lyM09FaUJKeFV5ZHN3b2JHSDFxeWFSeGhqU2szV3ZsRXljeWF2Z3BxUUhPeXd6bjlLcjJkRDh2dDNDZF9idTNUdHFOMEE?oc=5) — 한국은행 금리정책
+- [글로벌 경제지표 美·日·유럽 중앙은행 금리결정…엔비디아 GTC서 '베라 루빈' 공개](https://news.google.com/rss/articles/CBMiT0FVX3lxTE5PZ2lyM09FaUJKeFV5ZHN3b2JHSDFxeWFSeGhqU2szV3ZsRXljeWF2Z3BxUUhPeXd6bjlLcjJkRDh2dDNDZF9idTNUdHFOMEE?oc=5) — 한국은행 금리정책
   > [글로벌 경제지표] 美·日·유럽 중앙은행 금리결정…엔비디아 GTC서 '베라 루빈' 공개 v.daum.net
 
 ### 🏛️ 정치/정책 (1건)

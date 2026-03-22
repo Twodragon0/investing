@@ -6,8 +6,9 @@ categories: [stock-news]
 tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-stock-news-digest-2026-02-19.png"
+image: "/assets/images/generated/news-briefing-stock-2026-02-19.png"
 description: "2026-02-19 주식 시장에서 147건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,660.70(+2.67%), KOSDAQ 1,156.46(+4.81%), USD/KRW 1,449.88(+0.63%)."
+excerpt: "주요 테마: 가격/시장, AI/기술, 매크로/금리 한국 증시는 KOSPI 5,660.70 (+2.67%)으로 마감했습니다. 원달러 환율은 1,449.88원으로, 환율 변동이…"
 ---
 
 **2026-02-19** 주식 시장에서 147건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,660.70(+2.67%), KOSDAQ 1,156.46(+4.81%), USD/KRW 1,449.88(+0.63%).
@@ -52,7 +53,7 @@ description: "2026-02-19 주식 시장에서 147건의 뉴스를 분석했습니
 **2. [TSX ends at record high as tech stocks rally on both sides of the border](https://news.google.com/read/CBMi2AFBVV95cUxQYU52Mnc5T0F2X1hGTlFJeVVuVmtCSWotMS1kLXJ5c0xlSTFGUlJkTk9tcF9CeTE1M1Y5ZVpWYWpSalZqUjJuWEtKWVpFYVFjcWMtQnRfRGNwVGhyZ3lMRFU5ZzVVUmxZZmJqRW5OcGQ2dkFPcDlHUEZHcjlGQlA0Uzc3cjJ1T2pmZ25xS0ZQalBqeFU2bFZXU1RwVzFNUUhvVDhscDNPSGJ0NEZ4d04zblY0U25LR1RwVVVNV2UzU0ZoUGZ3dllTVmRnMHlWREFBajhjWEIwLWI?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
-**3. [[개장시황] 코스피·코스닥, 연휴 이후 급등 출발](https://news.google.com/read/CBMickFVX3lxTE42Ul9LMUhfRXJaQ09Cel9aSVZmVHJ3bUIyUmZ0UXJVZDlkSGhIb0xnOG9oU29kV09iMFhEUVdNdkM3ckh5M3hmQ2xUOURVSUM5RDVWS25kV1F6dGpJQ181RUItdWdVTDNkOUlLYVh6OFZNUQ?hl=ko&gl=KR&ceid=KR%3Ako)**
+**3. [[개장시황 코스피·코스닥, 연휴 이후 급등 출발](https://news.google.com/read/CBMickFVX3lxTE42Ul9LMUhfRXJaQ09Cel9aSVZmVHJ3bUIyUmZ0UXJVZDlkSGhIb0xnOG9oU29kV09iMFhEUVdNdkM3ckh5M3hmQ2xUOURVSUM5RDVWS25kV1F6dGpJQ181RUItdWdVTDNkOUlLYVh6OFZNUQ?hl=ko&gl=KR&ceid=KR%3Ako)**
 <span class="source-tag">Google News</span>
 
 <details><summary>그 외 42건 보기</summary><div class="details-content">

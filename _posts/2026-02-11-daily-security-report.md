@@ -6,8 +6,9 @@ categories: [security-alerts]
 tags: [security, hack, blockchain, daily-digest]
 source: "consolidated"
 lang: "ko"
-description: "블록체인 보안 관련 뉴스 45건을 정리합니다."
-image: "/assets/images/generated/og-daily-security-report-2026-02-11.png"
+description: "오늘의 보안 브리핑 — 블록체인 보안 리포트 - 2026-02-11. 주요 키워드: security, hack, blockchain, daily-digest."
+image: "/assets/images/generated/news-briefing-security-2026-02-11.png"
+excerpt: "해커, Matcha Meta 사용자로부터 1,350만 달러 탈취 — 보안 사고 공식 인정 - dlnews.com - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 블록체인 보안 관련 뉴스 45건을 정리합니다.

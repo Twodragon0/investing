@@ -7,9 +7,9 @@ tags: ["market-analysis", "fear-greed", "vix", "market-breadth", "sentiment", "f
 keywords: "market-analysis, fear-greed, vix, market-breadth, sentiment"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/og-market-analysis.png"
+image: "/assets/images/generated/news-briefing-indicators-2026-03-21.png"
 permalink: "/market-analysis/2026/03/21/daily-market-indicators/"
-description: "1. S&P 500: Are Investors Too Bearish? What Sentiment Signals Say About Stocks Now"
+description: "오늘의 시장 분석 브리핑 — 시장 심리 및 리스크 지표 (2026-03-21). 주요 키워드: market-analysis, fear-greed, vix, market-breadth."
 excerpt: "1. S&P 500: Are Investors Too Bearish? What Sentiment Signals Say About Stocks Now"
 image_alt: "시장 심리 및 리스크 지표 (2026-03-21) - 시장 분석 뉴스 요약 이미지"
 ---
@@ -79,7 +79,7 @@ image_alt: "시장 심리 및 리스크 지표 (2026-03-21) - 시장 분석 뉴�
 | 10Y-2Y 스프레드 | **0.51%** | +0.0500%p | 2026-03-20 |
 | 하이일드 회사채 스프레드 | **3.27%** | +0.0700%p | 2026-03-19 |
 
-> 🟢 **하이일드 스프레드 해석**: 3.27%p → 정상 (투자자 낙관론 우세) 
+> 🟢 **하이일드 스프레드 해석**: 3.27%p → 정상 (투자자 낙관론 우세)
 > (기준: 정상 <4%, 확대 4~6%, 위기 >6%)
 
 

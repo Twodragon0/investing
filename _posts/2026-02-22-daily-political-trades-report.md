@@ -6,8 +6,9 @@ categories: [political-trades]
 tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-trading]
 source: "consolidated"
 lang: "ko"
-description: "미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다."
-image: "/assets/images/generated/og-daily-political-trades-report-2026-02-22.png"
+description: "정치인 거래 리포트: 정치인 거래·정책 리포트 - 2026-02-22. 입법 동향과 의원 포트폴리오를 분석합니다. 주요 키워드: political-trades, congress, sec, trump."
+image: "/assets/images/generated/news-briefing-political-2026-02-22.png"
+excerpt: "트럼프 관련 9건의 정책 뉴스가 수집되었습니다. 행정명령 및 관세 정책은 글로벌 시장에 직접적인 영향을 미치고 있습니다. 1. 트럼프 '오늘 중으로 10% 글로벌 관세 행정명령…"
 ---
 
 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
@@ -96,8 +97,8 @@ Director Donald Hayward sells Clearfield (CLFD) shares in $32 open-market trade 
 한은, 2월 금통위 '금리 동결' 유력…성장률 전망치는? 뉴시스
 <span class="source-tag">한국은행 금리결정</span>
 
-**3. [[이번주 경제]한은 기준금리 동결 유력…작년 합계출산율 주목(https://news.google.com/rss/articles/CBMiVEFVX3lxTE0xY2c5dFRzSFJIZ2wxTHJRaENsazBzbXBPMUxtSGNLbVM0c1JqSXhxOENSRllsakJ0VV9ZcTc0dXg2Ni1mQnUwblRuWmRQNkRqUGZkMw?oc=5)**
-[이번주 경제]한은 기준금리 동결 유력…작년 합계출산율 주목
+**3. [[이번주 경제] 한은 기준금리 동결 유력…작년 합계출산율 주목(https://news.google.com/rss/articles/CBMiVEFVX3lxTE0xY2c5dFRzSFJIZ2wxTHJRaENsazBzbXBPMUxtSGNLbVM0c1JqSXhxOENSRllsakJ0VV9ZcTc0dXg2Ni1mQnUwblRuWmRQNkRqUGZkMw?oc=5)**
+[이번주 경제] 한은 기준금리 동결 유력…작년 합계출산율 주목
 <span class="source-tag">한국은행 금리결정</span>
 
 **4. [한은, 2월 금통위 '기준금리 동결' 무게…성장률 상향 관측 - 스페셜경제](https://news.google.com/rss/articles/CBMibEFVX3lxTE1nNGRsX21panlCLUtpelVrbzQ3Y241T1kzX195SEdtaGVMM0lsb2hHVUY5SmIzOXdTbEwydzYwejFaWmczdGZ1RVQwLWQwSWFlNk9FM3dyNlpxZzlsV3lwTzJQdVkwN2FwVmVlag?oc=5)**
@@ -108,13 +109,13 @@ Director Donald Hayward sells Clearfield (CLFD) shares in $32 open-market trade 
 금리 6연속 동결 무게…한은, 성장률 전망 올릴까 남도일보
 <span class="source-tag">한국은행 금리결정</span>
 
-**6. [[금통위폴] 전문가 전원 “韓銀, 올해 금리 동결할 것”... 일부는 “내년에 인상” 관측도 - 조선비즈 - Chosunbiz](https://news.google.com/rss/articles/CBMihgFBVV95cUxPc0trLWZmWFZjZ2FzbXM3V1J0eDFGYTctclpPVzU5aXJNUHh5R3RpUXhXeUk3bHkxVzlpX0ZOWTF1dV8yUUxlN3FlaXdXdS1zMlBCWlNRSXZLWV96bGhRZDYxY01pLW5HT3pYTDVBTkhsdFRiUGhnUVdSTzVnR2p5bmcxdUhIZ9IBmgFBVV95cUxOQ0dPZzVBNjJjQUtxM212dUVRdzcyQThUbnRycUhVeGxqcnUtT0RJMk5fYjdabmNUVVBoODdzRU5McWIzLTVKLXdNSlhpUk9wcFpuQnZKbWo1eUowRWhNWW1QUk1kLTlYWURZRl92Zm1Fakd6SEl5dGwxc0NnOGZ1ZmlyT1R0NVJRRm9aMzU2cDdFcXJXRS1Wczh3?oc=5)**
+**6. [[금통위폴 전문가 전원 “韓銀, 올해 금리 동결할 것”... 일부는 “내년에 인상” 관측도 - 조선비즈 - Chosunbiz](https://news.google.com/rss/articles/CBMihgFBVV95cUxPc0trLWZmWFZjZ2FzbXM3V1J0eDFGYTctclpPVzU5aXJNUHh5R3RpUXhXeUk3bHkxVzlpX0ZOWTF1dV8yUUxlN3FlaXdXdS1zMlBCWlNRSXZLWV96bGhRZDYxY01pLW5HT3pYTDVBTkhsdFRiUGhnUVdSTzVnR2p5bmcxdUhIZ9IBmgFBVV95cUxOQ0dPZzVBNjJjQUtxM212dUVRdzcyQThUbnRycUhVeGxqcnUtT0RJMk5fYjdabmNUVVBoODdzRU5McWIzLTVKLXdNSlhpUk9wcFpuQnZKbWo1eUowRWhNWW1QUk1kLTlYWURZRl92Zm1Fakd6SEl5dGwxc0NnOGZ1ZmlyT1R0NVJRRm9aMzU2cDdFcXJXRS1Wczh3?oc=5)**
 <span class="source-tag">한국은행 금리결정</span>
 
 **7. [한은, 올해 성장률 전망치 2.0%까지 높일까 - 한국경제](https://news.google.com/rss/articles/CBMiWkFVX3lxTFBBN3dxS3JDSHR4WUhsZnNNMzM0eDB0ZWpybDFEaUdzclg3VTBTUWhzNWJQNVFUMHVPdWRjSjl4WGIwZGVhUi16VFRCSjVzQ3VjRVQ1Q2MtMGpqQdIBVEFVX3lxTFBST3JySlNZT1RqYURyTHdtQXdpTUlQRWN6cjhPMEpvWnljV0Etd0I2bnlZZnhINGYtVnhuLWl3Rkdfc1lvTXo0T0YtWGxiUFZRQUhiUw?oc=5)**
 <span class="source-tag">한국은행 금리결정</span>
 
-**8. [[위클리 경제스포] 한은, 기준금리 동결 전망...지난해 가계소득도 주목 - 아주경제](https://news.google.com/rss/articles/CBMiWkFVX3lxTE5peUZtQURSZllQdEJPaHVDc1dEMVBHX0Etblkya3cyVVBreHNmc2dsS0xERDhwVnY4UHFyNi11T3JTb2d0LW5LZWhTMy1aM3JiNl91cW5SQVQxUdIBWEFVX3lxTE5MZDhoR05pMlY0aW1hN1J5T2FQZWItdjZHVDVPNVowLVlickd6aFd5ZXpCNVlPRFhTTUd0bHBxT0I2aWM2V3dYUjVJZk51cWhrR05DTElzSk0?oc=5)**
+**8. [[위클리 경제스포 한은, 기준금리 동결 전망...지난해 가계소득도 주목 - 아주경제](https://news.google.com/rss/articles/CBMiWkFVX3lxTE5peUZtQURSZllQdEJPaHVDc1dEMVBHX0Etblkya3cyVVBreHNmc2dsS0xERDhwVnY4UHFyNi11T3JTb2d0LW5LZWhTMy1aM3JiNl91cW5SQVQxUdIBWEFVX3lxTE5MZDhoR05pMlY0aW1hN1J5T2FQZWItdjZHVDVPNVowLVlickd6aFd5ZXpCNVlPRFhTTUd0bHBxT0I2aWM2V3dYUjVJZk51cWhrR05DTElzSk0?oc=5)**
 <span class="source-tag">한국은행 금리결정</span>
 
 **9. [환율·집값 불안에 한은 ‘6연속 금리동결’ 무게…성장률 상향 주목 - 글로벌경제신문](https://news.google.com/rss/articles/CBMibEFVX3lxTE1hMmdpYWZ2cDBxTlpua1RSYm5SVnNnV0VyOFp1Q3p5QzBnR1V6a1NMZVoydzg0ZGY1VDVlaDF5cHVfVno0LXdRY3JEcjUxbzM2ZG1QZ3hQZkZoX3RoSWxBZjA4dE05dXc1cWc1dNIBcEFVX3lxTE5oVzVsbW02Y2IxbkhoQWRuNUE0RWI4LWlFSERDYXQtb3dzRl9jSjg5VmVkTlRrWjNNTnJObHdHNVZIZlJrdzM2Uzg0bVVBdEFJTUdsVVZYRlNUdjZqZHNoNzA3ZUlPUGF1Q1VZYW5xNGY?oc=5)**

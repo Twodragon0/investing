@@ -52,7 +52,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-19 - stock-news 뉴스 요약 
 
 ## 전체 뉴스 요약
 
-- 총 **18건** 수집
+- 총 **190건** 수집
 - KOSPI 5,925.03 (+5.04%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 1,164.38 (+2.41%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
 
@@ -98,7 +98,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-19 - stock-news 뉴스 요약 
 <details><summary>그 외 42건 보기</summary><div class="details-content"><ol class="news-overflow-list">
 <li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9tam9zRGNWQ3hWeWtSOVM1ZzN0eFZkd01ZMHNSZVg2X0xIM0VIT1MtUDRWUi14ZElIZG1iRE83U29tcnI1TlFxdklSYS1mb3Jwcm5zSGx1MC1YTEpuRFluT1R2c2tDLUsxWURnaVJoNmJGalk?oc=5">코스피·코스닥 전 거래일(16일) 주요공시.성호전자 "글로벌테크놀로지 주식 300억원에 취득"</a></li>
 <li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE45WFVSU1ZwVjBOU25tQ1JwaFBhb0hjQmFCRXZmTm9udVNiNll6c0dJUEY3d3ZRNmc3dlQ1VFNLTjZwQXBRX3V1bjFtNjhxX3RUODFKMnVBWmUwUEMzMTVrM3pac2lNeDNsV2fSAW5BVV95cUxNeEpkYzNVZVRrVWRvN00wMmJ3c2FBdG9CRVlWYjhuenlidGNvMUJzWHFZaHhXUUwzZ21fMkYwcldoWUFnQ1lkRUNCZThzQzRFOF9VaVBsVWtmZjZ1WUhyNldBMGxDTVlCS2lDcVhDUQ?oc=5">코스피·코스닥,셀트리온 SK하이닉스 대한조선 미래산업 현대엘리베이터 신성이엔지 그린생명과학 아세아제지 삼현 한라IMS등 17일 주요공시] - 퍼블릭타임스</a></li>
-<li><em>.외 27건</em></li>
+<li><em>외 27건</em></li>
 </ol></div></details>
 
 
@@ -142,7 +142,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-19 - stock-news 뉴스 요약 
 <details><summary>그 외 21건 보기</summary><div class="details-content"><ol class="news-overflow-list">
 <li><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxNYkFLMHE5UHRqMm84RDI2QWFfc1RGTFFkSXJCajJFMjIxSjl2YW9MNW1EcjJuMTdmLXpxMTNlTXk5MEE4MUxSTGYtMlVjQ3ZDREJfSTZHcncwRGVSWDZSdXBiX1RHNk9ZLTR6UG1ESVFwajFpbzMxclA2RXVVbmU4dGpSR05Pa2dOdHNBOWpSTE9sajljLUoyb3ByZmtVazRPaUIxVGlrazh2cm1IdF9KMw?oc=5">연준 회의: 핫 PPI가 이란 전쟁 인플레이션 위험을 가중시킵니다. S&P 500 전표(생방송) - Investor's Business Daily</a></li>
 <li><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxOSUNVQVMyTWdSdlMxLVlLWVJmclA3WjU1S1l2WHhDVnBnQ0hPSWVuSUVJN05lNEVzLU5uTm1nT0F4TG5PSDRjUWtzQWVZLUJMMjdmSmtsTjVmYXE1WWtpRGM1WllZOWhZRUphSFZZMVRVdktYUEdNZW5HWEc1UWVWSmQzOF8zdEZLQVh2cVh6ZTRfT3BMdnc?oc=5">연준 회의를 앞두고 유가 하락으로 주가 상승: 시장 마무리</a></li>
-<li><em>.외 6건</em></li>
+<li><em>외 6건</em></li>
 </ol></div></details>
 
 

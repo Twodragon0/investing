@@ -6,8 +6,9 @@ categories: [security-alerts]
 tags: [security, hack, blockchain, daily-digest]
 source: "consolidated"
 lang: "ko"
-description: "블록체인 보안 뉴스 1건을 요약합니다."
-image: "/assets/images/generated/og-daily-security-report-2026-02-20.png"
+description: "보안 분야 핵심 동향: 블록체인 보안 리포트 - 2026-02-20. 주요 키워드: security, hack, blockchain, daily-digest."
+image: "/assets/images/generated/news-briefing-security-2026-02-20.png"
+excerpt: "블록체인 보안 뉴스 1건을 요약합니다. 암호화폐 해킹 피해 규모가 $34억에 달하는 가운데, AI 에이전트를 활용한 보안 대응이 시험대에 올랐습니다 (Cryptopolitan)."
 ---
 
 블록체인 보안 뉴스 1건을 요약합니다.

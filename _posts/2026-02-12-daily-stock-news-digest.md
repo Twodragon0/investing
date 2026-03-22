@@ -6,8 +6,9 @@ categories: [stock-news]
 tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
-description: "오늘 총 160건의 주식 시장 뉴스가 수집되었습니다. 주요 내용을 정리합니다."
-image: "/assets/images/generated/og-daily-stock-news-digest-2026-02-12.png"
+description: "주식 시장 뉴스 종합 - 2026-02-12 - 미국·한국 주식 시장 동향과 섹터별 분석. 주요 키워드: stock, market, daily-digest."
+image: "/assets/images/generated/news-briefing-stock-2026-02-12.png"
+excerpt: "KOSPI: 5,498.93 ( +2.69%) KOSDAQ: 1,120.19 ( +0.37%) - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 오늘 총 160건의 주식 시장 뉴스가 수집되었습니다. 주요 내용을 정리합니다.

@@ -6,8 +6,9 @@ categories: [regulatory-news]
 tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-regulatory-report-2026-02-27.png"
-description: "전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 34건의 규제 관련 뉴스가 수집되었습니다."
+image: "/assets/images/generated/news-briefing-regulatory-2026-02-27.png"
+description: "글로벌 규제 동향 리포트 - 2026-02-27 - 글로벌 금융 규제 및 정책 변화 추적. 주요 키워드: regulation, sec, cftc, fsc."
+excerpt: "1. CFTC Staff Reissues Staff Letter 25-50 to Add Additional No-Action Position on CPO Delegation…"
 ---
 
 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 34건의 규제 관련 뉴스가 수집되었습니다.
@@ -55,7 +56,7 @@ description: "전 세계 금융 규제기관의 최신 동향을 정리합니다
 *자세한 내용은 첨부파일을 확인해주세요
 <span class="source-tag">금융위원회 보도자료</span>
 
-**2. [[금융위 1박2일 현장방문]  국민성장펀드가 대구·경북지역의 방산·로봇산업 중심지 도약을 지원합니다.](https://www.fsc.go.kr/no010101/86343)**
+**2. [[금융위 1박2일 현장방문  국민성장펀드가 대구·경북지역의 방산·로봇산업 중심지 도약을 지원합니다.](https://www.fsc.go.kr/no010101/86343)**
 [금융위 1박2일 현장방문] 국민성장펀드가 대구·경북지역의 방산·로봇산업 중심지 도약을 지원합니다.
 <span class="source-tag">금융위원회 보도자료</span>
 
@@ -131,7 +132,7 @@ Revolut wins FCA backing for stablecoin testing despite licence limbo Financial 
 
 - [CFTC Staff Reissues Staff Letter 25-50 to Add Additional No-Action Position on CPO Delegation Arrangements](https://www.cftc.gov/PressRoom/PressReleases/9186-26) — CFTC Press Releases
 - [CFTC Enforcement Division Issues Prediction Markets Advisory](https://www.cftc.gov/PressRoom/PressReleases/9185-26) — CFTC Enforcement
-- [[금융위 1박2일 현장방문]  국민성장펀드가 대구·경북지역의 방산·로봇산업 중심지 도약을 지원합니다.](https://www.fsc.go.kr/no010101/86343) — 금융위원회 보도자료
+- [[금융위 1박2일 현장방문  국민성장펀드가 대구·경북지역의 방산·로봇산업 중심지 도약을 지원합니다.](https://www.fsc.go.kr/no010101/86343) — 금융위원회 보도자료
 
 ### 🟠 비트코인 (2건)
 
@@ -146,7 +147,7 @@ Revolut wins FCA backing for stablecoin testing despite licence limbo Financial 
 
 ### 🏛️ 정치/정책 (5건)
 
-- [[금융위 1박2일 현장방문]  국민성장펀드가 대구·경북지역의 방산·로봇산업 중심지 도약을 지원합니다.](https://www.fsc.go.kr/no010101/86343) — 금융위원회 보도자료
+- [[금융위 1박2일 현장방문  국민성장펀드가 대구·경북지역의 방산·로봇산업 중심지 도약을 지원합니다.](https://www.fsc.go.kr/no010101/86343) — 금융위원회 보도자료
 - [차세대 이차전지와 첨단반도체 기술의 초격차 확보와 관련 생태계 강화를 국민성장펀드가 지원합니다.](https://www.fsc.go.kr/no010101/86341) — 금융위원회 보도자료
 - [‘26년 국민성장펀드 간접투자부문(7조원)에 투입되는 재정(4,500억원) 및 자펀드 관리업무를 수행할 재정모펀드 운용사를 선정하였습니다.](https://www.fsc.go.kr/no010101/86340) — 금융위원회 보도자료
 

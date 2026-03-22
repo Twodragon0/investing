@@ -9,6 +9,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-regulatory-2026-03-09.png"
 description: "2026-03-09 전 세계 금융 규제기관의 최신 동향을 정리합니다. SEC, CFTC, FSC 등 주요 기관의 규제 관련 뉴스 24건을 분석했습니다."
+excerpt: "1. 앞으로는 한 번의 신고로 불법추심을 차단하고 피해구제를 받을 수 있게 됩니다. - 불법사금융 근절을 위한 원스톱 종합·전담 지원시스템 관련 현장 간담회 및 유관기관 협약식…"
 ---
 
 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 24건의 규제 관련 뉴스가 수집되었습니다.

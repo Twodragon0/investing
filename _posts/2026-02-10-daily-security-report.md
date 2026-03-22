@@ -6,8 +6,9 @@ categories: [security-alerts]
 tags: [security, hack, blockchain, daily-digest]
 source: "consolidated"
 lang: "ko"
-description: "Balancer, Truebit 등 해킹된 프로토콜에서 즉시 자금 인출"
-image: "/assets/images/generated/og-daily-security-report-2026-02-10.png"
+description: "블록체인 보안 리포트 - 2026-02-10 - 최신 보안 뉴스와 분석을 확인하세요. 주요 키워드: security, hack, blockchain, daily-digest."
+image: "/assets/images/generated/news-briefing-security-2026-02-10.png"
+excerpt: "Critical (3건): ████████████░░░░░░░░ 20% ($368.6M+) High (4건): ████████████████░░░░ 27% (10억+ 다운로드…"
 ---
 
 ## 한줄 요약

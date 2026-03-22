@@ -6,8 +6,9 @@ categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-social-media-digest-2026-02-21.png"
+image: "/assets/images/generated/news-briefing-social-2026-02-21.png"
 description: "2026-02-21 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 소셜 미디어 1건, 정치·경제 41건, 총 62건이 수집되었습니다."
+excerpt: "주요 테마: 정치/정책, 매크로/금리, 비트코인 긴급 알림 1건에 대한 선별 모니터링 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 **2026-02-21** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 소셜 미디어 1건, 정치·경제 41건, 총 62건이 수집되었습니다.
@@ -120,7 +121,7 @@ Supreme Court's reversal of Trump's tariffs could bring 'clarity' thestreet.com
 **8. [野 "이재명 대통령 SNS 선거 개입"與 "정책 홍보일 뿐" 공방 ](https://news.google.com/rss/articles/CBMiT0FVX3lxTE5fU2pDdmJ1X3NUSjhGRzZLQWk2RHg5RXZuNUdEYnotYVhTbHFUSHlqcmQ3b09jMWFycnhBbGljVEtWd2pqOGEtZFVZY1FCeHc?oc=5)**
 <span class="source-tag">이재명 경제정책</span>
 
-**9. [[사설] 미 대법원도 인정한 ‘불법 관세’, 이재명 정부는 대미투자 굴욕합의 전면 폐기하라 - 현장언론 민플러스](https://news.google.com/rss/articles/CBMibkFVX3lxTE5Ic01YbFFpblFKNWFhM2RQbDBSbFZFSDd6TXM4VzZkUnFyRVNyTDl3SzdNRHYtXzBRa1ItcG8wOXNzaUF3dXp5QkJ2SUNnU3gzOW51ZTlqWmo4ZXZfZkNLZ1NsR0FHSl9aSERGZUZ3?oc=5)**
+**9. [[사설 미 대법원도 인정한 ‘불법 관세’, 이재명 정부는 대미투자 굴욕합의 전면 폐기하라 - 현장언론 민플러스](https://news.google.com/rss/articles/CBMibkFVX3lxTE5Ic01YbFFpblFKNWFhM2RQbDBSbFZFSDd6TXM4VzZkUnFyRVNyTDl3SzdNRHYtXzBRa1ItcG8wOXNzaUF3dXp5QkJ2SUNnU3gzOW51ZTlqWmo4ZXZfZkNLZ1NsR0FHSl9aSERGZUZ3?oc=5)**
 <span class="source-tag">이재명 경제정책</span>
 
 **10. [박수영 의원 “이재명 정부, 마이너스 성장 책임져야경제정책 전면 재설계 촉구” - 복지TV부울경방송](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9Rd2FLbmVJME8tbi1YZ3lzN0RwcXhJWEwwdTlqbDM0UWliR3Q3Rkh3cEVMU3dLVkViTmluS2Z6LU5tSHlvczF2YzVfcWVQd29MN3MzMVptdHd1YmdYcE9GUUQxN2EwS00?oc=5)**
@@ -134,33 +135,33 @@ Supreme Court's reversal of Trump's tariffs could bring 'clarity' thestreet.com
 
 ### 🏛️ 정치/정책 (28건)
 
-- [[Telegram] ERIC TRUMP: 은행 서비스 거부가 트럼프 가문을 암호화폐로 이끌었습니다. 은행들은 그들 인생 최대의 실수를 저질렀습니다.](https://t.me/crypto/3517) — Telegram @crypto
+- [[Telegram ERIC TRUMP: 은행 서비스 거부가 트럼프 가문을 암호화폐로 이끌었습니다. 은행들은 그들 인생 최대의 실수를 저질렀습니다.](https://t.me/crypto/3517) — Telegram @crypto
 - [U.S. Supreme Court's decision on Trump's tariffs may not rock crypto — yet - CoinDesk](https://news.google.com/rss/articles/CBMivgFBVV95cUxQV3pnY3NpajhZb0c0QzhXSjl3V0JIcmJ6b0ZaOHhNU0RFWV9PYkFoR1dscWstdWpXNHVkRFFMaV9jWXA0VldueEtVVGpvVzk0Z3UxQ1JXNnNDWktQWDdqNDAzU3JjU0RyQXhpdGo3OXoxLV9GUXk5Nkd5T2ZrUDE4WWlIeEVXaTRqYUVpWjRUaHh3bjRDbEU4blYwTzhaQlA3T0U5aEEyeGZGUUNsMUQ4TW4tTUdTdGQ4WFBJd2xB?oc=5) — Trump Crypto Policy
 - [Bitcoin Rises After Supreme Court Rules Against Trump Tariffs - Yahoo Finance](https://news.google.com/rss/articles/CBMihgFBVV95cUxNZEZ5Mjc2bkp2NGFGRkd6Wlpzam9HZmJydEpRZG1DZ0dsR3FtRUlZMC1mOUwwWWs3R2VyOFpVampjbXotZnVxUDRXZFBuM0JuTDVUSm5qck1zY2I2RFdQRmZwd3IxaFlKaFdUYW5TeFU1SnhyaHhxbUZSa3otN1BGeW1kd0RoQQ?oc=5) — Trump Crypto Policy
 
 ### 📊 매크로/금리 (14건)
 
-- [[Telegram] JAMES LAVISH: “The Federal Reserve manipulating the money supply and access to capital has absolutel](https://t.me/crypto/3509) — Telegram @crypto
-- [[Telegram] 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
-- [[Telegram] 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://](https://t.me/whale_alert/11524) — Telegram @whale_alert
+- [[Telegram JAMES LAVISH: “The Federal Reserve manipulating the money supply and access to capital has absolutel](https://t.me/crypto/3509) — Telegram @crypto
+- [[Telegram 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
+- [[Telegram 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://](https://t.me/whale_alert/11524) — Telegram @whale_alert
 
 ### 🟠 비트코인 (6건)
 
-- [[Telegram] Michael Saylor의 'Strategy'는 "비트코인 가격이 $8,000까지 하락하더라도 부채를 완전히 상환할 충분한 자산을 보유할 수 있다"고 밝혔습니다.](https://t.me/crypto/3507) — Telegram @crypto
-- [[Telegram] Whales sent roughly 57,000 $BTC to exchanges over the past four days, according to recent on-chain d](https://t.me/crypto/3511) — Telegram @crypto
-- [[Telegram] This user is back after making some INSANE predictions in the past that all came true.He is now pred](https://t.me/crypto/3513) — Telegram @crypto
+- [[Telegram Michael Saylor의 'Strategy'는 "비트코인 가격이 $8,000까지 하락하더라도 부채를 완전히 상환할 충분한 자산을 보유할 수 있다"고 밝혔습니다.](https://t.me/crypto/3507) — Telegram @crypto
+- [[Telegram Whales sent roughly 57,000 $BTC to exchanges over the past four days, according to recent on-chain d](https://t.me/crypto/3511) — Telegram @crypto
+- [[Telegram This user is back after making some INSANE predictions in the past that all came true.He is now pred](https://t.me/crypto/3513) — Telegram @crypto
 
 ### 🔵 규제/정책 (4건)
 
-- [[Telegram] CFTC 의장이 암호화폐 규제를 "미래 지향적으로" 만들겠다고 밝혔습니다. "Gary Gensler 2.0이 모든 것을 무너뜨리도록 허용할 수 없습니다."](https://t.me/crypto/3512) — Telegram @crypto
-- [[Telegram] JUST IN: 🇺🇸 CFTC Chair says crypto market structure bill "is on the cusp" of becoming law.Sponsored ](https://t.me/crypto/3514) — Telegram @crypto
+- [[Telegram CFTC 의장이 암호화폐 규제를 "미래 지향적으로" 만들겠다고 밝혔습니다. "Gary Gensler 2.0이 모든 것을 무너뜨리도록 허용할 수 없습니다."](https://t.me/crypto/3512) — Telegram @crypto
+- [[Telegram JUST IN: 🇺🇸 CFTC Chair says crypto market structure bill "is on the cusp" of becoming law.Sponsored ](https://t.me/crypto/3514) — Telegram @crypto
 - [Custodia CEO Caitlin Long Claims Trump Crypto Ventures Complicate US Regulation Talks - Analytics Insight](https://news.google.com/rss/articles/CBMiwAFBVV95cUxOMDUydkQ2LXpkRDFkbEZvY200cm12RmxiaWNJMFBBekxMNWNiNzZ2am92VXdYdjllWkNVQ2d3Q3E2emZTYzdVRG10bFFlNGRfQ2tMdWFpX3VLQ2VXekt2WFBQYkFzcFNJZnJEdlM0YW95UGt4dlhFd3A1eFhFTVFwbkhsczJ4b3ItXzhRRElKRmhlZjV2dU1zbWpJT1RJQXV4dmVfX1pTMVdxaFVZdWFiYmtxejI2NGJGalpzQzF0ZjXSAc4BQVVfeXFMUGhUbG9paGVZNVlJbG9XN1VvQ0QzZ3hNajc4VjRreDd4TU5hWXc4RWFQTktXUWs5VGVBSTFmOV9WZ2RpTzByMmxWcmxxMGMyNlNVakgzTkkxbTl3UE05VG1pd2JfVExXbENsUFdFM04xQzk4VmJpaUlhYTBJcEtsU2lrYjRMNDBtOVp0V0dud1BhSTBpT014RHlZM2RFMVNfRVczVTBuS0dMamwxUFhSc2JfOExkMXNHX0llcGVFdDh2bGRGR2lPck9keVBmM1E?oc=5) — Trump Crypto Policy
 
 ### 🏦 거래소 (8건)
 
-- [[Telegram] Whales sent roughly 57,000 $BTC to exchanges over the past four days, according to recent on-chain d](https://t.me/crypto/3511) — Telegram @crypto
-- [[Telegram] Binance founder CZ predicts Bitcoin will reach between $500,000 and $1,000,000 this cycle.Sponsored ](https://t.me/crypto/3518) — Telegram @crypto
-- [[Telegram] 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown walletTx: https://t.co/aNttwwzxno](https://t.me/whale_alert/11520) — Telegram @whale_alert
+- [[Telegram Whales sent roughly 57,000 $BTC to exchanges over the past four days, according to recent on-chain d](https://t.me/crypto/3511) — Telegram @crypto
+- [[Telegram Binance founder CZ predicts Bitcoin will reach between $500,000 and $1,000,000 this cycle.Sponsored ](https://t.me/crypto/3518) — Telegram @crypto
+- [[Telegram 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown walletTx: https://t.co/aNttwwzxno](https://t.me/whale_alert/11520) — Telegram @whale_alert
 
 
 ---

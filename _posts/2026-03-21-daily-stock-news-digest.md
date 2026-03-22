@@ -9,8 +9,8 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/market-snapshot-2026-03-21.png"
 permalink: "/stock-news/2026/03/21/daily-stock-news-digest/"
-description: "긴급: Why US stock market Dow, S&P 500, Nasdaq fall sharply today: Dow, S&P 500, Nasdaq crash again — h."
-excerpt: "긴급: Why US stock market Dow, S&P 500, Nasdaq fall sharply today: Dow, S&P 500, Nasdaq crash again…"
+description: "오늘의 주식 시장: 주식 시장 뉴스 종합 - 2026-03-21. 주요 지수와 종목 흐름을 정리합니다. 주요 키워드: stock, market, daily-digest."
+excerpt: "KOSPI 5,781.20 (+0.31%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다. KOSDAQ 1,161.52…"
 image_alt: "주식 시장 뉴스 종합 - 2026-03-21 - stock-news 뉴스 요약 이미지"
 ---
 
@@ -52,7 +52,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-21 - stock-news 뉴스 요약 
 
 ## 전체 뉴스 요약
 
-- 총 **9건** 수집
+- 총 **195건** 수집
 - KOSPI 5,781.20 (+0.31%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 1,161.52 (+1.58%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
 
@@ -98,7 +98,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-21 - stock-news 뉴스 요약 
 <details><summary>그 외 26건 보기</summary><div class="details-content"><ol class="news-overflow-list">
 <li><a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxQMU1adnliODAzOEs3X3B2WXZNNkk1YmF2TzNMQk5FakYzMHRIVVZHRW9DVjB1QmdEVjI2Mk11cXdIY3UxdWpWaDFJZk1rdnRjYjlZbzVqMllNX2Y2XzR6WlE1Q0QwRy1rZzdSbnVDMGIzTUM0VTFYSjNISXFsbnpiOWhvTUM2M05jV3BIUE1HMHk2OFZ4ZDlIQjIyOETSAaIBQVVfeXFMUERzQU1aRElhUzdiUXdQWUc1RzhOTEJhcU1aVGw3Yzhra2xFYkcwWVdwU01OUG9ldXl0akdGUHZISkNhQlRjb3dwamtITnpfVVFUSEZXeHBCUDN1eDZTak5tOVJic3BRMXFTYXdadzJKaHNWbnpfMjZZZVNVdFBmSkl6aTBkMmc0aWt3azZSenF0OGJkcE1aRnphY2ZEZlhIcU5n?oc=5">인플레이션 상승에 대한 우려가 심리를 압박하면서 2년 만기 국채 수익률이 급등했습니다.</a></li>
 <li><a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxNYjZSUE96ZzdJdWV0M0hCRUV3X2F2d3NXOFVUdlBLQThSTHQ3ZzNpSTFOR0ctSFZlbFM1MGtVeVBNRXN5WUVRdGI4ZVBjdlBPYzFiendvV05ZbENmOERmOENBU1lHVkRWSFZEMVUtTGdtRkdjeDc3ekhXRElBcVBjWkRmYmxwcXFMeFdVN0xOR0FZTHJUUlNCNzFBNWtNeDFnc0MyQjZfUkduUmhWU19VSUJUME4wM3F0QmdJcm5ZQkJLSUpVcS1hNzc1aDVoTzZmR2x4NEp3?oc=5">한은도 4월 금리 동결 가능성…이란사태로 물가·환율 불안 - 한국무역협회</a></li>
-<li><em>.외 11건</em></li>
+<li><em>외 11건</em></li>
 </ol></div></details>
 
 
@@ -142,7 +142,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-21 - stock-news 뉴스 요약 
 <details><summary>그 외 39건 보기</summary><div class="details-content"><ol class="news-overflow-list">
 <li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFBTMHUxYlBDdm1xd2RPMVdGSjZQR0x0UTFxaFVkYklJYXJfZ0VYb2xCeFVyS0Y1dDFhVmhheVQxYlhSMjczelFieVJJUDNaZHlPOU1rQXhwZjJGZEFnbXh3bkZ3RldyZjFnWEQ0?oc=5">코스피·코스닥, 오름세로 장 출발 - 한강타임즈</a></li>
 <li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE81d0VWenNFN3hMRW1BQ2ZNamJDOXhGX2trWU1VYzdONUwycndiUnVpY3BXX2RvUUxvdmZPekFNWTB1YU9XeXpnZlZMQ2JDdXVoNkhBalZ3cXFkVkJWb1Ria0pvTmlUNzlFRC1DdnUweG_SAXRBVV95cUxNNkZ0bmExazZxVmw1WlI2SFk0VVk4SUdCR29BVkFRdjF6VlhSUndfa1lLWUZwbnNPeVFDS283dk1LNzNtbjg0ZDRxQXk0NnB3dFF2bmx0dVlKSWc5ekpTWVJXQU02YTNIYUxmVUNEREdfTFRoSg?oc=5">‘삼천닥’ 의식했나… 연기금, 올해 코스피 ‘팔고’ 코스닥 ‘사자’</a></li>
-<li><em>.외 24건</em></li>
+<li><em>외 24건</em></li>
 </ol></div></details>
 
 

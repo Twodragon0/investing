@@ -6,8 +6,9 @@ categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-social-media-digest-2026-02-20.png"
-description: "2026-02-20 암호화폐·주식 커뮤니티 소셜 미디어 동향 26건을 요약합니다."
+image: "/assets/images/generated/news-briefing-social-2026-02-20.png"
+description: "소셜 미디어 동향 - 2026-02-20 - 소셜 미디어 트렌드와 커뮤니티 반응 분석. 주요 키워드: social-media, telegram, twitter, reddit."
+excerpt: "긴급 알림 없음에 대한 선별 모니터링 글로벌 금리 정책 관련 소셜 미디어 논의가 지배적입니다 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 **2026-02-20** 암호화폐·주식 커뮤니티 소셜 미디어 동향 26건을 요약합니다.

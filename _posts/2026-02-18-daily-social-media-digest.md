@@ -6,8 +6,9 @@ categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-social-media-digest-2026-02-18.png"
+image: "/assets/images/generated/news-briefing-social-2026-02-18.png"
 description: "2026-02-18 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 16건, 총 36건이 수집되었습니다."
+excerpt: "주요 테마: 정치/정책, 매크로/금리, 비트코인 긴급 알림 없음에 대한 선별 모니터링 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 **2026-02-18** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 16건, 총 36건이 수집되었습니다.
@@ -79,7 +80,7 @@ Polymarket이 “상승 또는 하락” 비트코인 예측 시장을 출시했
 The Trump Tariffs Are Having a Noticeable Impact on the Stock Market and It's Raising a Big Red Flag Right Now The Motley Fool
 <span class="source-tag">Trump Economy</span>
 
-**2. [[정책포커스] 이재명 정부에 바라는 정책금융경제(19) 재정의 지속가능성 높이고 맞춤형 지원도 배려해야 - 시사캐스트](https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA2Q1ZhQl9nSmlSQkNZWWxJUWlnOUl3ZVZfa1NhNUgwai1oRV9VV1B6UWczOTJfckd0bHEyS1dPQ3p3VTNHWlBhUGtzTXBrMnZzTDl6NHlWZmhrZFpnWFRoOXA4MFhjbzQ?oc=5)**
+**2. [[정책포커스 이재명 정부에 바라는 정책금융경제(19) 재정의 지속가능성 높이고 맞춤형 지원도 배려해야 - 시사캐스트](https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA2Q1ZhQl9nSmlSQkNZWWxJUWlnOUl3ZVZfa1NhNUgwai1oRV9VV1B6UWczOTJfckd0bHEyS1dPQ3p3VTNHWlBhUGtzTXBrMnZzTDl6NHlWZmhrZFpnWFRoOXA4MFhjbzQ?oc=5)**
 [정책포커스] 이재명 정부에 바라는 정책금융경제(19) 재정의 지속가능성 높이고 맞춤형 지원도 배려해야 시사캐스트
 <span class="source-tag">이재명 경제정책</span>
 
@@ -91,7 +92,7 @@ The Trump Tariffs Are Having a Noticeable Impact on the Stock Market and It's Ra
 이재명 대통령, 설날에 영화 관람“대한민국 문화의 힘” 포인트데일리
 <span class="source-tag">이재명 경제정책</span>
 
-**5. [[아주사설 &#124; 기본·원칙·상식] 이재명 정부 부동산 정책, 반드시 성공해야 한다 - 아주경제](https://news.google.com/rss/articles/CBMiWkFVX3lxTE8ycHFIWHlGSzYwSkpCNVVJNEVwSTVhUXU2b0M0UW84R1RsR2hEYTBfamlJZ0o5ZkVRcklCWDlwSzJ5M2Q2OXhnNEhzTVJPQmdJMUc2OG9wSjBhd9IBWEFVX3lxTE5QZ3dJUzd4VnRfUVdvOU9kaENyRlJvODhmZmtic3hBYlhOYTNrczJNUjNjcWFCVWkzeEtkVVVhUzJUM2hlRFRhRkpGcWtnTFVSSlp5dDNnS1M?oc=5)**
+**5. [[아주사설 &#124; 기본·원칙·상식 이재명 정부 부동산 정책, 반드시 성공해야 한다 - 아주경제](https://news.google.com/rss/articles/CBMiWkFVX3lxTE8ycHFIWHlGSzYwSkpCNVVJNEVwSTVhUXU2b0M0UW84R1RsR2hEYTBfamlJZ0o5ZkVRcklCWDlwSzJ5M2Q2OXhnNEhzTVJPQmdJMUc2OG9wSjBhd9IBWEFVX3lxTE5QZ3dJUzd4VnRfUVdvOU9kaENyRlJvODhmZmtic3hBYlhOYTNrczJNUjNjcWFCVWkzeEtkVVVhUzJUM2hlRFRhRkpGcWtnTFVSSlp5dDNnS1M?oc=5)**
 [아주사설 &#124; 기본·원칙·상식] 이재명 정부 부동산 정책, 반드시 성공해야 한다 아주경제
 <span class="source-tag">이재명 경제정책</span>
 
@@ -118,33 +119,33 @@ The Trump Tariffs Are Having a Noticeable Impact on the Stock Market and It's Ra
 
 ### 🏛️ 정치/정책 (8건)
 
-- [[Telegram] President Trump suggested "we might pay off the US $35 trillion debt using cryptocurrency."Sponsored](https://t.me/crypto/3502) — Telegram @crypto
+- [[Telegram President Trump suggested "we might pay off the US $35 trillion debt using cryptocurrency."Sponsored](https://t.me/crypto/3502) — Telegram @crypto
 - [The Trump Tariffs Are Having a Noticeable Impact on the Stock Market and It's Raising a Big Red Flag Right Now - The Motley Fool](https://news.google.com/rss/articles/CBMimAFBVV95cUxOcVBzVUEwZ3dkclJodnJ3T1hpdGxGSGRqVGdQU3lobkZHeElTemtsODdMRXVCRE5MY29ETDNmT2U4VjFDSUNURHAzZFVzbEhQb203RllpamtuWFpSM3c5MjlkOUp2SloycXEwVGF4anZ0eUJWX09tVVZma25mVm0xVmlMalpYbFkyT3kzRHFpeXA1MktNc29NcA?oc=5) — Trump Economy
-- [[정책포커스] 이재명 정부에 바라는 정책금융경제(19) 재정의 지속가능성 높이고 맞춤형 지원도 배려해야 - 시사캐스트](https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA2Q1ZhQl9nSmlSQkNZWWxJUWlnOUl3ZVZfa1NhNUgwai1oRV9VV1B6UWczOTJfckd0bHEyS1dPQ3p3VTNHWlBhUGtzTXBrMnZzTDl6NHlWZmhrZFpnWFRoOXA4MFhjbzQ?oc=5) — 이재명 경제정책
+- [[정책포커스 이재명 정부에 바라는 정책금융경제(19) 재정의 지속가능성 높이고 맞춤형 지원도 배려해야 - 시사캐스트](https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA2Q1ZhQl9nSmlSQkNZWWxJUWlnOUl3ZVZfa1NhNUgwai1oRV9VV1B6UWczOTJfckd0bHEyS1dPQ3p3VTNHWlBhUGtzTXBrMnZzTDl6NHlWZmhrZFpnWFRoOXA4MFhjbzQ?oc=5) — 이재명 경제정책
 
 ### 📊 매크로/금리 (9건)
 
-- [[Telegram] JAMES LAVISH: “The Federal Reserve manipulating the money supply and access to capital has absolutel](https://t.me/crypto/3509) — Telegram @crypto
-- [[Telegram] 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
-- [[Telegram] 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://](https://t.me/whale_alert/11524) — Telegram @whale_alert
+- [[Telegram JAMES LAVISH: “The Federal Reserve manipulating the money supply and access to capital has absolutel](https://t.me/crypto/3509) — Telegram @crypto
+- [[Telegram 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
+- [[Telegram 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://](https://t.me/whale_alert/11524) — Telegram @whale_alert
 
 ### 🟠 비트코인 (4건)
 
-- [[Telegram] Polymarket rolls out an “Up or Down” Bitcoin marketA new BTC prediction market has gone live, settli](https://t.me/crypto/3500) — Telegram @crypto
-- [[Telegram] "why didn’t you buy bitcoin in 2010”me in 2010:Sponsored by @rainbetcom](https://t.me/crypto/3501) — Telegram @crypto
-- [[Telegram] Michael Saylor's 'Strategy' says it can "withstand a drawdown in Bitcoin's price to $8K and still ha](https://t.me/crypto/3507) — Telegram @crypto
+- [[Telegram Polymarket rolls out an “Up or Down” Bitcoin marketA new BTC prediction market has gone live, settli](https://t.me/crypto/3500) — Telegram @crypto
+- [[Telegram "why didn’t you buy bitcoin in 2010”me in 2010:Sponsored by @rainbetcom](https://t.me/crypto/3501) — Telegram @crypto
+- [[Telegram Michael Saylor's 'Strategy' says it can "withstand a drawdown in Bitcoin's price to $8K and still ha](https://t.me/crypto/3507) — Telegram @crypto
 
 ### 🏦 거래소 (6건)
 
-- [[Telegram] Whales sent roughly 57,000 $BTC to exchanges over the past four days, according to recent on-chain d](https://t.me/crypto/3511) — Telegram @crypto
-- [[Telegram] 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown walletTx: https://t.co/aNttwwzxno](https://t.me/whale_alert/11520) — Telegram @whale_alert
-- [[Telegram] 33,000 #ETH (6,583,742 USD) transferred from #Bithumb to unknown walletTx: https://t.co/Wam8SjJEzv](https://t.me/whale_alert/11521) — Telegram @whale_alert
+- [[Telegram Whales sent roughly 57,000 $BTC to exchanges over the past four days, according to recent on-chain d](https://t.me/crypto/3511) — Telegram @crypto
+- [[Telegram 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown walletTx: https://t.co/aNttwwzxno](https://t.me/whale_alert/11520) — Telegram @whale_alert
+- [[Telegram 33,000 #ETH (6,583,742 USD) transferred from #Bithumb to unknown walletTx: https://t.co/Wam8SjJEzv](https://t.me/whale_alert/11521) — Telegram @whale_alert
 
 ### 📈 가격/시장 (9건)
 
-- [[Telegram] Polymarket rolls out an “Up or Down” Bitcoin marketA new BTC prediction market has gone live, settli](https://t.me/crypto/3500) — Telegram @crypto
-- [[Telegram] Michael Saylor's 'Strategy' says it can "withstand a drawdown in Bitcoin's price to $8K and still ha](https://t.me/crypto/3507) — Telegram @crypto
-- [[정책포커스] 이재명 정부에 바라는 정책금융경제(19) 재정의 지속가능성 높이고 맞춤형 지원도 배려해야 - 시사캐스트](https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA2Q1ZhQl9nSmlSQkNZWWxJUWlnOUl3ZVZfa1NhNUgwai1oRV9VV1B6UWczOTJfckd0bHEyS1dPQ3p3VTNHWlBhUGtzTXBrMnZzTDl6NHlWZmhrZFpnWFRoOXA4MFhjbzQ?oc=5) — 이재명 경제정책
+- [[Telegram Polymarket rolls out an “Up or Down” Bitcoin marketA new BTC prediction market has gone live, settli](https://t.me/crypto/3500) — Telegram @crypto
+- [[Telegram Michael Saylor's 'Strategy' says it can "withstand a drawdown in Bitcoin's price to $8K and still ha](https://t.me/crypto/3507) — Telegram @crypto
+- [[정책포커스 이재명 정부에 바라는 정책금융경제(19) 재정의 지속가능성 높이고 맞춤형 지원도 배려해야 - 시사캐스트](https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA2Q1ZhQl9nSmlSQkNZWWxJUWlnOUl3ZVZfa1NhNUgwai1oRV9VV1B6UWczOTJfckd0bHEyS1dPQ3p3VTNHWlBhUGtzTXBrMnZzTDl6NHlWZmhrZFpnWFRoOXA4MFhjbzQ?oc=5) — 이재명 경제정책
 
 
 ---

@@ -6,8 +6,9 @@ categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-social-media-digest-2026-02-19.png"
+image: "/assets/images/generated/news-briefing-social-2026-02-19.png"
 description: "2026-02-19 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 18건, 총 38건이 수집되었습니다."
+excerpt: "주요 테마: 매크로/금리, 정치/정책, 가격/시장 긴급 알림 1건에 대한 선별 모니터링 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 **2026-02-19** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 18건, 총 38건이 수집되었습니다.
@@ -86,7 +87,7 @@ President Trump signals final push on US crypto market rules crypto.news
 WLFI Token Jumps 23% Ahead of Crypto Forum at Trump’s Mar-a-Lago FinanceFeeds
 <span class="source-tag">Trump Crypto Policy</span>
 
-**3. [[아주사설 &#124; 기본·원칙·상식] 이재명 정부 부동산 정책, 반드시 성공해야 한다 - 아주경제](https://news.google.com/rss/articles/CBMiWkFVX3lxTE8ycHFIWHlGSzYwSkpCNVVJNEVwSTVhUXU2b0M0UW84R1RsR2hEYTBfamlJZ0o5ZkVRcklCWDlwSzJ5M2Q2OXhnNEhzTVJPQmdJMUc2OG9wSjBhd9IBWEFVX3lxTE5QZ3dJUzd4VnRfUVdvOU9kaENyRlJvODhmZmtic3hBYlhOYTNrczJNUjNjcWFCVWkzeEtkVVVhUzJUM2hlRFRhRkpGcWtnTFVSSlp5dDNnS1M?oc=5)**
+**3. [[아주사설 &#124; 기본·원칙·상식 이재명 정부 부동산 정책, 반드시 성공해야 한다 - 아주경제](https://news.google.com/rss/articles/CBMiWkFVX3lxTE8ycHFIWHlGSzYwSkpCNVVJNEVwSTVhUXU2b0M0UW84R1RsR2hEYTBfamlJZ0o5ZkVRcklCWDlwSzJ5M2Q2OXhnNEhzTVJPQmdJMUc2OG9wSjBhd9IBWEFVX3lxTE5QZ3dJUzd4VnRfUVdvOU9kaENyRlJvODhmZmtic3hBYlhOYTNrczJNUjNjcWFCVWkzeEtkVVVhUzJUM2hlRFRhRkpGcWtnTFVSSlp5dDNnS1M?oc=5)**
 [아주사설 &#124; 기본·원칙·상식] 이재명 정부 부동산 정책, 반드시 성공해야 한다 아주경제
 <span class="source-tag">이재명 경제정책</span>
 
@@ -101,7 +102,7 @@ Stock Market Crash in 2026? Bad News About President Trump's Tariffs and a Warni
 **6. [오늘(19일) 증시 개장 직후 외국인·기관 수급 동향·특정 섹터(반도체, 자동차 등) 분석 - 더페어](https://news.google.com/rss/articles/CBMicEFVX3lxTFAwT05qckFwWjRjckJOcmF4bldCV2ZsdjFmdi1yQ3g2R0lyWkpJWGZxLXNZa3p0SzJjbUdxMDRlazlfV0FaTGtCT2FCdzBva3RRZjhJNmo4VWEtc0l2dEhtOE1mdERWZlJ3LW8wOXJmaDLSAXRBVV95cUxOVnEyVUwxUzlEdjhJeUdKNVpZeUFrWXcwSHcxcm1fa0RrRWxpcVplekhxbWJ3elVtcU1pVVhBbUdWZXlzTDB4S3VKS0JET25QS2hDMTJldnJCN1ExNVVMc1lhZVZZc0I3V0V4S0pWZGhDVF9pYw?oc=5)**
 <span class="source-tag">한국증시 수급</span>
 
-**7. [[경제인사이드] 불확실성에 발목 잡힌 한은, 다음주 ‘6연속 동결’ 전망 - 천지일보](https://news.google.com/rss/articles/CBMiakFVX3lxTE9BbmJjYnowYm5xaFdLR3U4SVhpdC1lZjB3M1hHcGk5RXZwYlpvNVFjaUYtcnlyelVCWW1KQ1RuMlJQU1NTMFZpWUEzVE9rWmNWTk9TSndGWGZMbmNHVUpoeDgzQXlMTk0teFE?oc=5)**
+**7. [[경제인사이드 불확실성에 발목 잡힌 한은, 다음주 ‘6연속 동결’ 전망 - 천지일보](https://news.google.com/rss/articles/CBMiakFVX3lxTE9BbmJjYnowYm5xaFdLR3U4SVhpdC1lZjB3M1hHcGk5RXZwYlpvNVFjaUYtcnlyelVCWW1KQ1RuMlJQU1NTMFZpWUEzVE9rWmNWTk9TSndGWGZMbmNHVUpoeDgzQXlMTk0teFE?oc=5)**
 <span class="source-tag">한국은행 금리정책</span>
 
 **8. [한국은행 "2월 들어 주요 가격변수 변동성 확대" - 신아일보](https://news.google.com/rss/articles/CBMib0FVX3lxTFBNS3ZHaHV1OUI4Z1lwSTYtTGEzb2VpMG84VGJlSDBaeDhFNWJGZDlYS25RTmFzNldwZVpqNlJ0eFN5Z3oyZXB2bVlvTWMzRHgyOE5XdHZOVFQ4VVRxTWJlT1I5dHZ4VlRmZmc5Rm1aNA?oc=5)**
@@ -121,32 +122,32 @@ Stock Market Crash in 2026? Bad News About President Trump's Tariffs and a Warni
 
 ### 📊 매크로/금리 (14건)
 
-- [[Telegram] JAMES LAVISH: “The Federal Reserve manipulating the money supply and access to capital has absolutel](https://t.me/crypto/3509) — Telegram @crypto
-- [[Telegram] 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
-- [[Telegram] 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://](https://t.me/whale_alert/11524) — Telegram @whale_alert
+- [[Telegram JAMES LAVISH: “The Federal Reserve manipulating the money supply and access to capital has absolutel](https://t.me/crypto/3509) — Telegram @crypto
+- [[Telegram 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
+- [[Telegram 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://](https://t.me/whale_alert/11524) — Telegram @whale_alert
 
 ### 🏛️ 정치/정책 (7건)
 
-- [[Telegram] President Trump suggested "we might pay off the US $35 trillion debt using cryptocurrency."Sponsored](https://t.me/crypto/3502) — Telegram @crypto
+- [[Telegram President Trump suggested "we might pay off the US $35 trillion debt using cryptocurrency."Sponsored](https://t.me/crypto/3502) — Telegram @crypto
 - [President Trump signals final push on US crypto market rules - crypto.news](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOLV9ocjZXQkxRbjExSVRodE40Qm95aXA4SGVwT2tmMXFHeFNOR0Z4MmdoRnZYU3d4YTAyTEt3b3Y1eFV2YUVyNUpEYlpCYVdsMFdJc0NnMkJwdmtOaVQ4Tm5DdTJNTzAtTEU4NElZaDljMmROVkYtakotZnp3M2JhT1RMQkpheWxl?oc=5) — Trump Crypto Policy
 - [WLFI Token Jumps 23% Ahead of Crypto Forum at Trump’s Mar-a-Lago - FinanceFeeds](https://news.google.com/rss/articles/CBMikgFBVV95cUxNLUh0VGFYQnRUSTFKUV9WN1RUa2Q5NFVESjR4UGJteXpSTUNFSzk1My1uZ0VqTWw0Mkd3VUkyeWYyaEc3bEd2clgyV05vN3p4QzJaVlVjOHRzRmRpUm9OS1pSdkM2djFSdnhxTUtiWFhzM3Buc3lFZXk2VVBvbHRtNkxVOHRRQTZfbzFRY2RDWnRuUQ?oc=5) — Trump Crypto Policy
 
 ### 📈 가격/시장 (6건)
 
-- [[Telegram] Michael Saylor's 'Strategy' says it can "withstand a drawdown in Bitcoin's price to $8K and still ha](https://t.me/crypto/3507) — Telegram @crypto
+- [[Telegram Michael Saylor's 'Strategy' says it can "withstand a drawdown in Bitcoin's price to $8K and still ha](https://t.me/crypto/3507) — Telegram @crypto
 - [Stock Market Crash in 2026? Bad News About President Trump's Tariffs and a Warning From the Federal Reserve Explain Why It's Possible. - AOL.com](https://news.google.com/rss/articles/CBMie0FVX3lxTE00OUVxOTAyY1NKWVpqdzdLeXR1bVBaS2JYa2hNWHhQcU1MQ2ZoVGZjR0t0WGxtbGM1Z0doTjJBQnZSYkJDVUw0ZHNFTjlSM3FOOG04T1h5UVR6SlM2cTdNYUlvQlhfc0dJdHFrM05XTVptdy1hYjRSWEFzQQ?oc=5) — Trump Economy
 - [美FOMC 신중론에 달러 강세한은 금리결정 변수 확대 - 미디어데일](https://news.google.com/rss/articles/CBMia0FVX3lxTE5EcUs5N2o0T3VNS3JiT3pNNHJBOXBVU1I1MlFha3BPQzJqdU00T182SWdaN2pkR01VTGhwQjlZSzFDVHhFY3YxZFVxN0cwQ2ZCWV9GRlQxYXBsTFRmU1pQVzR1d25HVjVLekI4?oc=5) — 한국은행 금리정책
 
 ### 🔵 규제/정책 (2건)
 
-- [[Telegram] CFTC Chair says they will "future-proof" crypto regulations."We can't allow Gary Gensler 2.0 to come](https://t.me/crypto/3512) — Telegram @crypto
-- [[Telegram] JUST IN: 🇺🇸 CFTC Chair says crypto market structure bill "is on the cusp" of becoming law.Sponsored ](https://t.me/crypto/3514) — Telegram @crypto
+- [[Telegram CFTC Chair says they will "future-proof" crypto regulations."We can't allow Gary Gensler 2.0 to come](https://t.me/crypto/3512) — Telegram @crypto
+- [[Telegram JUST IN: 🇺🇸 CFTC Chair says crypto market structure bill "is on the cusp" of becoming law.Sponsored ](https://t.me/crypto/3514) — Telegram @crypto
 
 ### 🏦 거래소 (6건)
 
-- [[Telegram] Whales sent roughly 57,000 $BTC to exchanges over the past four days, according to recent on-chain d](https://t.me/crypto/3511) — Telegram @crypto
-- [[Telegram] 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown walletTx: https://t.co/aNttwwzxno](https://t.me/whale_alert/11520) — Telegram @whale_alert
-- [[Telegram] 33,000 #ETH (6,583,742 USD) transferred from #Bithumb to unknown walletTx: https://t.co/Wam8SjJEzv](https://t.me/whale_alert/11521) — Telegram @whale_alert
+- [[Telegram Whales sent roughly 57,000 $BTC to exchanges over the past four days, according to recent on-chain d](https://t.me/crypto/3511) — Telegram @crypto
+- [[Telegram 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown walletTx: https://t.co/aNttwwzxno](https://t.me/whale_alert/11520) — Telegram @whale_alert
+- [[Telegram 33,000 #ETH (6,583,742 USD) transferred from #Bithumb to unknown walletTx: https://t.co/Wam8SjJEzv](https://t.me/whale_alert/11521) — Telegram @whale_alert
 
 
 ---

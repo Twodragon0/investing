@@ -6,9 +6,9 @@ categories: [political-trades]
 tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-bank", "insider-trading"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-political-trades-report-2026-03-02.png"
+image: "/assets/images/generated/news-briefing-political-2026-03-02.png"
 excerpt: "2026-03-02 정치인 거래·정책 리포트: SEC 내부자 15건, 중앙은행 1건, 총 16건 수집"
-description: "정치인 거래 리포트 내부자 거래 건"
+description: "정치인 거래 리포트: 정치인 거래·정책 리포트 - 2026-03-02. 입법 동향과 의원 포트폴리오를 분석합니다. 주요 키워드: political-trades, congress, sec, trump."
 ---
 
 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
@@ -26,7 +26,7 @@ description: "정치인 거래 리포트 내부자 거래 건"
 
 ## SEC 내부자 거래 (Form 4)
 
-**1. [[Form 4] MIDDLEFIELD BANC CORP Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMitgFBVV95cUxQeWNnQ2hzOTFGdnVUYzV1WjFaSnhxRjFlTFd4cXpBLTg4QmV0dDRpMWxwX2lCYXJ4cDZYVkdUYkVCcVJUSjhyci1kcm1LaklRanBUU1hMWWloZ0ZxRWxUZjN1bmR1ZldQQV9VWG55bjFUbDlKczZ3UE92LW9UUlBCRjJLOG1aQnRSRUxnRHdnZnlqU05LUnE4U181VHV0a2Npa0d6RW5mTU9jN1VEcVVYeHhwY2cydw?oc=5)**
+**1. [[Form 4 MIDDLEFIELD BANC CORP Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMitgFBVV95cUxQeWNnQ2hzOTFGdnVUYzV1WjFaSnhxRjFlTFd4cXpBLTg4QmV0dDRpMWxwX2lCYXJ4cDZYVkdUYkVCcVJUSjhyci1kcm1LaklRanBUU1hMWWloZ0ZxRWxUZjN1bmR1ZldQQV9VWG55bjFUbDlKczZ3UE92LW9UUlBCRjJLOG1aQnRSRUxnRHdnZnlqU05LUnE4U181VHV0a2Npa0d6RW5mTU9jN1VEcVVYeHhwY2cydw?oc=5)**
 [Form 4] MIDDLEFIELD BANC CORP Insider Trading Activity Stock Titan
 <span class="source-tag">SEC Insider Trading</span>
 

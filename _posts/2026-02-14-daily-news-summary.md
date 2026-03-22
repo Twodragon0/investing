@@ -6,9 +6,9 @@ categories: [market-analysis]
 tags: [일일요약, 암호화폐, 주식, 규제, 소셜미디어, 보안, 정치인거래]
 source: "consolidated"
 lang: "ko"
-description: "암호화폐 70건, 주식 91건, 소셜 미디어 9건의 뉴스를 종합 분석한 일일 요약입니다."
-image: "/assets/images/generated/og-daily-news-summary-2026-02-14.png"
-excerpt: "암호화폐 70건, 주식 91건, 소셜 미디어 9건의 뉴스를 종합 분석한 일일 요약"
+description: "시장 분석 분야 핵심 동향: 일일 뉴스 종합 요약 - 2026-02-14. 주요 키워드: 일일요약, 암호화폐, 주식, 규제 - Investing Dragon 자동 수집 분석 리포트."
+image: "/assets/images/generated/news-briefing-summary-2026-02-14.png"
+excerpt: "비트코인 가격 폭락, 트럼프의 암호화폐 행보에 충격 — 투자자를 위한 시사점 - 금·은·S&P 500·암호화폐, 극도의 공포 속 또다시 동반 폭락 - ‘워시 쇼크’에…"
 ---
 
 > 암호화폐 70건, 주식 91건, 소셜 미디어 9건의 뉴스를 종합 분석한 일일 요약입니다.

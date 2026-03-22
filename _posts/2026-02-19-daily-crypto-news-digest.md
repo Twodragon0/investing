@@ -6,8 +6,9 @@ categories: [crypto-news]
 tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-news-digest-2026-02-19.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-02-19.png"
 description: "2026-02-19 암호화폐 시장에서 111건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 거래소 관련 소식이 주목됩니다."
+excerpt: "2026-02-19 암호화폐 시장에서 111건의 뉴스를 분석했습니다. 오늘은 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 **2026-02-19** 암호화폐 시장에서 111건의 뉴스를 분석했습니다. 오늘은 **비트코인, 가격/시장, 거래소** 관련 소식이 주목됩니다.
@@ -114,7 +115,7 @@ As crypto industry expands, U.S. slashes office examining dirty money safeguards
 **2. [Crypto market drowns in red as bitcoin falls to $68,000, XRP, ETH slide over 5%](https://news.google.com/read/CBMiowFBVV95cUxPMjVkbktCT3VlTElxSWQyU3hHbHYwQ2R4R0pjS0dQU3JvM1I4WFlpS2ZPQmdtVFhyYy1LdWdBWUx3NGh0ckJKU1pncEJhcmNYX1dCYXJRWV9YbkxTOGlhZGtYWDFmYkxWeDhLaE1sTnUya3RtVjNvcVpIZUFKS1d0U0EyVHgxb1o4TU5DZ0kwZU0zSFljaktvSjdfVEF2MHo3dlQ0?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
-**3. [[가상화폐 시세] 비트코인 1억원선 밑으로 하락엑스알피 2100원선, 이더리움 280만원선 거래 - 이코노뉴스](https://news.google.com/rss/articles/CBMib0FVX3lxTFBHRjYwNWhsYktnU3BiMmF0Smd1UUFBd3B3bTVYZkFTa2ZIRzdYYjVrTkFBU3g4bzNJMmp4VG5icm9OU3ptc3ZGVXk2ZTlVVWo4ZHB6Zm9TZ21pclJ6ZjRZRWlTRXE1QUN5dnJsa0RTaw?oc=5)**
+**3. [[가상화폐 시세 비트코인 1억원선 밑으로 하락엑스알피 2100원선, 이더리움 280만원선 거래 - 이코노뉴스](https://news.google.com/rss/articles/CBMib0FVX3lxTFBHRjYwNWhsYktnU3BiMmF0Smd1UUFBd3B3bTVYZkFTa2ZIRzdYYjVrTkFBU3g4bzNJMmp4VG5icm9OU3ptc3ZGVXk2ZTlVVWo4ZHB6Zm9TZ21pclJ6ZjRZRWlTRXE1QUN5dnJsa0RTaw?oc=5)**
 [가상화폐 시세] 비트코인 1억원선 밑으로 하락엑스알피 2100원선, 이더리움 280만원선 거래 이코노뉴스
 <span class="source-tag">Google News KR</span>
 

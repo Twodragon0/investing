@@ -8,8 +8,8 @@ keywords: "market-report, crypto, top-coins, trending, daily, fear-greed, trump,
 source: "CryptoMonitor v3.0"
 source_url: "https://coinmarketcap.com/"
 lang: "ko"
-image: "/assets/images/og-market-analysis.png"
-description: "공포 탐욕 극단적 공포 지속"
+image: "/assets/images/generated/news-briefing-cryptomarket-2026-03-14.png"
+description: "오늘의 시장 분석 브리핑 — 크립토 시장 종합 리포트 - 2026-03-14. 주요 키워드: market-report, crypto, top-coins, trending."
 excerpt: "[CRITICAL] 공포/탐욕 15 극단적 공포 - TRUMP +40.2% 폭등, BTC 도미넌스 58.8%. SolvBTC $2.7M 해킹. Extreme Fear DCA 확대 시점"
 image_alt: "크립토 시장 종합 리포트 - 2026-03-14 - 시장 분석 뉴스 요약 이미지"
 ---

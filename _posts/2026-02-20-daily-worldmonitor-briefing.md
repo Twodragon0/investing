@@ -7,8 +7,9 @@ tags: [worldmonitor, geopolitics, macro, daily-digest]
 source: "worldmonitor"
 source_url: "https://worldmonitor.app"
 lang: "ko"
-description: "2026-02-20 글로벌 뉴스 20건을 정리한 지정학·매크로 브리핑입니다."
-image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-02-20.png"
+description: "오늘의 시장 분석 브리핑 — WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-02-20. 주요 키워드: worldmonitor, geopolitics, macro, daily-digest."
+image: "/assets/images/generated/news-briefing-worldmonitor-2026-02-20.png"
+excerpt: "주요 테마: 사회/기타, 지정학/안보 - 이란 핵 협상 최후통첩: Trump가 이란에 '10일 내 합의하지 않으면 나쁜 일이 일어난다'고 경고. 원유 가격과 안전자산(금)에…"
 ---
 
 **2026-02-20** 글로벌 뉴스 20건을 정리한 지정학·매크로 브리핑입니다.

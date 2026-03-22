@@ -2,12 +2,13 @@
 layout: post
 title: "소셜 미디어 동향 - 2026-03-04"
 date: 2026-03-04 02:32:45 +0900
-categories: [crypto-news]
+categories: [social-media]
 tags: ["social-media", "telegram", "twitter", "reddit", "politics", "trump", "이재명", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-social-media-digest-2026-03-04.png"
+image: "/assets/images/generated/news-briefing-social-2026-03-04.png"
 description: "2026-03-04 소셜 미디어 37건: Cathie Wood 비트코인이 금보다 확실히 낫다 발언(인플레·디플레 헤지), 이재명 싱가포르 경제협력, 텔레그램 20건·정치·경제 17건 수집."
+excerpt: "주요 테마: 정치/정책, 비트코인, 매크로/금리 긴급 알림 1건에 대한 선별 모니터링 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 **2026-03-04** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 17건, 총 37건이 수집되었습니다.
@@ -113,7 +114,7 @@ description: "2026-03-04 소셜 미디어 37건: Cathie Wood 비트코인이 금
 
 전체의 24%로 주요 테마입니다. 주요 출처: 이재명 경제정책(7건), Telegram @crypto(1건), Trump Crypto Policy(1건).
 
-- [[Telegram] 🇺🇸 President Trump said, Unfortunately, in recent years, the US Government sold 10,000s of #Bitcoin...](https://t.me/crypto/3550) — Telegram @crypto
+- [[Telegram 🇺🇸 President Trump said, Unfortunately, in recent years, the US Government sold 10,000s of #Bitcoin...](https://t.me/crypto/3550) — Telegram @crypto
   > 🇺🇸 트럼프 대통령, "불행히도 최근 몇 년간 미국 정부가 수십억 달러 가치의 비트코인 수만 개를 매각했다"고 발언…
 - [이재명 대통령, 싱가포르 타르만 대통령 향해 "인공지능 등 경제 협력" - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTFBadzZzaURwbUFqTDFIcTdWdHU4THJ4bEpfNVVzV0NVYmVlTTRUWVh4VzJOanNxemQ2SW5tMjBMTF9naVlJZGIxXzlNNHFQSFk?oc=5) — 이재명 경제정책
   > 이재명 대통령이 싱가포르 방문에서 AI·전력 등 경제 협력 확대를 제안.
@@ -124,29 +125,29 @@ description: "2026-03-04 소셜 미디어 37건: Cathie Wood 비트코인이 금
 
 전체의 27%로 주요 테마입니다. 주요 출처: Telegram @crypto(10건).
 
-- [[Telegram] Cathie Wood says Bitcoin is "hands down" better than Gold."Bitcoin is a hedge against Both...](https://t.me/crypto/3539) — Telegram @crypto
+- [[Telegram Cathie Wood says Bitcoin is "hands down" better than Gold."Bitcoin is a hedge against Both...](https://t.me/crypto/3539) — Telegram @crypto
   > 캐시 우드, 비트코인이 금보다 "확실히" 낫다고 발언. "비트코인은 인플레이션과 디플레이션 모두에 대한 헤지 수단이다."
-- [[Telegram] MICHAEL SAYLOR: "We're in the business of not selling Bitcoin.""We have a PhD in HODLing."](https://t.me/crypto/3541) — Telegram @crypto
+- [[Telegram MICHAEL SAYLOR: "We're in the business of not selling Bitcoin.""We have a PhD in HODLing."](https://t.me/crypto/3541) — Telegram @crypto
   > 마이클 세일러: "우리는 비트코인을 팔지 않는 사업을 하고 있다." "우리는 HODLing 박사 학위가 있다."
-- [[Telegram] BREAKING :🇺🇸 Blackrock is loading again, they have bought 4,309 BTC worth $296,750,000.This is...](https://t.me/crypto/3542) — Telegram @crypto
+- [[Telegram BREAKING :🇺🇸 Blackrock is loading again, they have bought 4,309 BTC worth $296,750,000.This is...](https://t.me/crypto/3542) — Telegram @crypto
   > 🇺🇸 블랙록, 4,309 BTC(약 $2억9,675만) 추가 매수. 강세 신호🔥
 
 ### 📊 매크로/금리 (10건)
 
 전체의 27%로 주요 테마입니다. 주요 출처: 한국은행 금리정책(5건), Telegram @whale_alert(2건), Fed Policy(2건).
 
-- [[Telegram] Cathie Wood says Bitcoin is "hands down" better than Gold."Bitcoin is a hedge against Both...](https://t.me/crypto/3539) — Telegram @crypto
+- [[Telegram Cathie Wood says Bitcoin is "hands down" better than Gold."Bitcoin is a hedge against Both...](https://t.me/crypto/3539) — Telegram @crypto
   > 캐시 우드, 비트코인이 금보다 "확실히" 낫다고 발언. "비트코인은 인플레이션과 디플레이션 모두에 대한 헤지 수단이다."
-- [[Telegram] 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
+- [[Telegram 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
   > 💵 테더 트레저리에서 6,000만 USDT(약 $5,973만) 신규 발행. Tx: https://t.co/mMr3UVbbjE
-- [[Telegram] 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx:...](https://t.me/whale_alert/11524) — Telegram @whale_alert
+- [[Telegram 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx:...](https://t.me/whale_alert/11524) — Telegram @whale_alert
   > 🚨 테더 트레저리에서 미확인 지갑으로 2,500만 USDT(약 $2,531만) 전송. Tx: https://t.co/8IMl0Zw0DM
 
 ### 📈 가격/시장 (6건)
 
 주요 출처: 한국은행 금리정책(3건), Telegram @crypto(1건), 트럼프 경제정책 KR(1건).
 
-- [[Telegram] BREAKING :🇺🇸 Blackrock is loading again, they have bought 4,309 BTC worth $296,750,000.This is...](https://t.me/crypto/3542) — Telegram @crypto
+- [[Telegram BREAKING :🇺🇸 Blackrock is loading again, they have bought 4,309 BTC worth $296,750,000.This is...](https://t.me/crypto/3542) — Telegram @crypto
   > 🇺🇸 블랙록, 4,309 BTC(약 $2억9,675만) 추가 매수. 강세 신호🔥
 - [암호화폐 강세 속 금·은 급락…트럼프 "빅 웨이브 곧 온다" 경고 - 디지털투데이](https://news.google.com/rss/articles/CBMic0FVX3lxTFBQekdUcHFRUkVFcm9mcFV6c3JaN2tldUhNODZaRXd1OWtKMmFjLXlJRG5mU21BR0EtaHlfM2w4c1NHTGtsR3loN1VINk4yZ0tiMzVGTUF6WUIyaHhNQ2gzdXFQVnlfQnEzd2pDOER3dnlDV00?oc=5) — 트럼프 경제정책 KR
   > 트럼프 "빅 웨이브 곧 온다" 경고. 암호화폐 강세 속 금·은 급락, 자산 재편 신호.
@@ -157,11 +158,11 @@ description: "2026-03-04 소셜 미디어 37건: Cathie Wood 비트코인이 금
 
 주요 출처: Telegram @whale_alert(5건).
 
-- [[Telegram] 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown walletTx: https://t.co/aNttwwzxno](https://t.me/whale_alert/11520) — Telegram @whale_alert
+- [[Telegram 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown walletTx: https://t.co/aNttwwzxno](https://t.me/whale_alert/11520) — Telegram @whale_alert
   > 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown walletTx: https://t.co/aNttwwzxno
-- [[Telegram] 33,000 #ETH (6,583,742 USD) transferred from #Bithumb to unknown walletTx: https://t.co/Wam8SjJEzv](https://t.me/whale_alert/11521) — Telegram @whale_alert
+- [[Telegram 33,000 #ETH (6,583,742 USD) transferred from #Bithumb to unknown walletTx: https://t.co/Wam8SjJEzv](https://t.me/whale_alert/11521) — Telegram @whale_alert
   > 33,000 #ETH (6,583,742 USD) transferred from #Bithumb to unknown walletTx: https://t.co/Wam8SjJEzv
-- [[Telegram] 27,500,000 #XRP (5,734,068 USD) transferred from #Bithumb to unknown walletTx:...](https://t.me/whale_alert/11522) — Telegram @whale_alert
+- [[Telegram 27,500,000 #XRP (5,734,068 USD) transferred from #Bithumb to unknown walletTx:...](https://t.me/whale_alert/11522) — Telegram @whale_alert
   > 27,500,000 #XRP (5,734,068 USD) transferred from #Bithumb to unknown walletTx: https://t.co/M8YTk8vqVX
 
 

@@ -6,8 +6,9 @@ categories: [stock-news]
 tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-stock-news-digest-2026-02-28.png"
+image: "/assets/images/generated/news-briefing-stock-2026-02-28.png"
 description: "2026-02-28 주식 시장에서 104건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,244.13(-1.00%), KOSDAQ 1,192.78(+0.39%), USD/KRW 1,439.23(+0.41%)."
+excerpt: "KOSPI 6,244.13 (-1.00%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다. KOSDAQ 1,192.78 (+0.39%). KOSDAQ이…"
 ---
 
 **2026-02-28** 주식 시장에서 104건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,244.13(-1.00%), KOSDAQ 1,192.78(+0.39%), USD/KRW 1,439.23(+0.41%).
@@ -31,11 +32,11 @@ description: "2026-02-28 주식 시장에서 104건의 뉴스를 분석했습니
 
 *하이닉스, 코스피, 주요공시, 삼성전자, 엔비디아*
 
-**1. [[코스피·코스닥 전 거래일(26일) 주요공시] - 연합뉴스](https://news.google.com/rss/articles/CBMiW0FVX3lxTE05RTk1YlhjUWp6NzhXNmtlalNlZVZqSG80ajlnUy1hOThNVVNPSm8tVm4zaFQ4NjVzSWpybEJuNVkwMEN2V0l6ZEZnUlgwZ2ZNaVJ4ZVpIckJTeHPSAWBBVV95cUxQTWpsR196TnE0MkZWakM5eS1FZURmNEpYdUxYM3FtX2Q0RWUwM0R5Ti1DZmNwZzYwVVFWYUtDSTNKQk1UT0JiYUpCTkFwekEyQzhxVXZJOURwc2dOa3FnTlc?oc=5)**
+**1. [[코스피·코스닥 전 거래일(26일) 주요공시 - 연합뉴스](https://news.google.com/rss/articles/CBMiW0FVX3lxTE05RTk1YlhjUWp6NzhXNmtlalNlZVZqSG80ajlnUy1hOThNVVNPSm8tVm4zaFQ4NjVzSWpybEJuNVkwMEN2V0l6ZEZnUlgwZ2ZNaVJ4ZVpIckJTeHPSAWBBVV95cUxQTWpsR196TnE0MkZWakM5eS1FZURmNEpYdUxYM3FtX2Q0RWUwM0R5Ti1DZmNwZzYwVVFWYUtDSTNKQk1UT0JiYUpCTkFwekEyQzhxVXZJOURwc2dOa3FnTlc?oc=5)**
 [코스피·코스닥 전 거래일(26일) 주요공시] 연합뉴스
 <span class="source-tag">Google News Stocks KR</span>
 
-**2. [[코스피·코스닥,두산 한국금융지주 SKC 삼성E&A 세아제강지주 한국전력 다날 우원개발 신풍제약등 26일 주요공시] - 퍼블릭타임스](https://news.google.com/rss/articles/CBMiakFVX3lxTE9Yam1sRTQwRzFxNkltU19wblB6M0MxZHdRX2tFOF9nM3oyUU9PTkpnbFNsdGhZY1BrbFVVSm42bWQ1R3NhY0t0NU05RlhjeEF4QWJCSm9vZDgxMXgtMzNhMnBWanNKdUxtV0HSAW5BVV95cUxPb3pLQ1I2eXhJdjVaTzRoUWZOU21yR0c2TUJTMUFHZE5JRHZEMW00cFZSNlMzcjJVZThvSDhBbUJrRUdvMXl1dERBRWxzaXExSWNyR2lfeXRxNml1WDJlR3ZXZ0RBMW4wVlZTZDJ3Zw?oc=5)**
+**2. [[코스피·코스닥,두산 한국금융지주 SKC 삼성E&A 세아제강지주 한국전력 다날 우원개발 신풍제약등 26일 주요공시 - 퍼블릭타임스](https://news.google.com/rss/articles/CBMiakFVX3lxTE9Yam1sRTQwRzFxNkltU19wblB6M0MxZHdRX2tFOF9nM3oyUU9PTkpnbFNsdGhZY1BrbFVVSm42bWQ1R3NhY0t0NU05RlhjeEF4QWJCSm9vZDgxMXgtMzNhMnBWanNKdUxtV0HSAW5BVV95cUxPb3pLQ1I2eXhJdjVaTzRoUWZOU21yR0c2TUJTMUFHZE5JRHZEMW00cFZSNlMzcjJVZThvSDhBbUJrRUdvMXl1dERBRWxzaXExSWNyR2lfeXRxNml1WDJlR3ZXZ0RBMW4wVlZTZDJ3Zw?oc=5)**
 [코스피·코스닥,두산 한국금융지주 SKC 삼성E&A 세아제강지주 한국전력 다날 우원개발 신풍제약등 26일 주요공시] 퍼블릭타임스
 <span class="source-tag">Google News Stocks KR</span>
 

@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-17.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-03-17.png"
 permalink: "/crypto-news/2026/03/17/daily-crypto-news-digest/"
 description: "2026-03-17 암호화폐 시장에서 101건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 이더리움 관련 소식이 주목됩니다. 긴급: 암호화폐 회사 블록필, 거래 일시 중단 후 파산 파일 제출"
 excerpt: "2026-03-17 암호화폐 시장에서 101건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 이더리움 관련 소식이 주목됩니다. 긴급: 암호화폐 회사 블록필, 거래 일시…"
@@ -103,7 +103,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-17 - crypto-news 뉴스 요�
 <details><summary>그 외 46건 보기</summary><div class="details-content"><ol class="news-overflow-list">
 <li><a href="https://news.google.com/read/CBMizwFBVV95cUxPRi1BUVZhNVhpQzlvT0pBOThzY0RNcEpSQjFCTi15X2wtdmNDR0xuOGxWWHZJVUg3OUQ5V0ZzRzM5aFF1Q2xUVWFCT1JVWFJTT3l4MEdRSFBROXVXSWFQQVdaZnpfUXpzWkxSelQxY05QVklhNVBTTzJ3OXFmTE5KVWwzZjZJSm5hSU1ZWFlJMWEtRndqempmMEVxb0d0RlktQlQ3WlQ2Zzh0ZEQyMUQwWGxCazQ0ZjBfaTg2cm5RcndocG9DVGhXN1dRc3NCRHc?hl=en-US&gl=US&ceid=US%3Aen">분석가들은 Bitwise CIO Matt Hougan의 100만 달러 비트코인 통화에 대해 의견을 제시합니다.</a></li>
 <li><a href="https://news.google.com/read/CBMiggFBVV95cUxNaHIwZlNkYzRyZWl1SjI2WTZHc0FMZzE3S29kVzBmSEdzSld2ZmphcG5Ncl9Bb2NTcE9FVHdFa25KcUVsV3UtTV9rOVRpWTQ4enoxbDlfUGdSeDI1d1FuNllOZWh5VTl3NGREZHo2U2NxRVBpMnJZUDJFakQ4VWZPTFB3?hl=en-US&gl=US&ceid=US%3Aen">보리스 존슨이 폰지에게 비트코인을 호출한 후 암호화폐 리더들이 반발</a></li>
-<li><em>.외 31건</em></li>
+<li><em>외 31건</em></li>
 </ol></div></details>
 
 
@@ -149,7 +149,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-17 - crypto-news 뉴스 요�
 <li><a href="https://news.google.com/read/CBMivwFBVV95cUxQYXRhTl84VXRNQmEyQUJTNk9Jb2JNZGdoUE5ZdGIwWDlzVU5ZbU9td0ZDaHNYbWtwTFNsVU9BQ1VjQlFvYkdOMnREb0hCUk5mWGxrV3V1NUItMXFVbEFkWEVST3dkeDZJSEtBRXlEbVpjRkljN2MzbWJDLWQtNUltN0pTX2M5SDFydE8yX2ZTaDFMY0plUm5KaVlUbEMyQ1Zib0luZGNtanVJcjZoZ2lxWjlGZ1JrekZsMjdEbzItbw?hl=en-US&gl=US&ceid=US%3Aen">암호화폐 주식 랠리, 이러한 요인으로 인해 비트코인이 2월 최고치로 반등</a></li>
 <li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5ESURhdkoxQVRxY0tDUVRCNUtCZDRLcS1IUllRUEhSMGRLZjhSZEdSbHRObWJ5ajRDOHNlbVktY0NHOVY5VFNZRXluVUx6MGlKOE81RjVYX0tNLTVUb2tYctIBeEFVX3lxTE5ScVM0c2VFNWxldFc2Rk13RGhXWEpISTVIczIwWDJOLW5uRU9aamNtSnNwMzNKVzl3d3RHcmNiYmNxajlEWTJFeEtrRWhKTEJwVXJ6R010YnhCcVVjOVY3Tm0zd1RCMVhFbVRZUGN1S3FaR0F2WWMzUw?oc=5">1억선 잠잠한 비트코인…전문가 "3분기 반등 온다"</a></li>
 <li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9jd085cjN3Ymg4NDZBVEY0dVJfSW8yMTVHREQ5TW5HcjdnNktBanZiaGRDMHBvR3RHZ0pxZjVrWTFGTUM4UEFxeWljZjdIdVlWektfbXdwcVFlWks0WnJfWTNnbEpyY00wa0FUblhyRTJpcGM?oc=5">암호화폐株, 중동 위기 속 비트코인 반등에…스트래티지·코인베이스 4%↑ - 마켓인</a></li>
-<li><em>.외 14건</em></li>
+<li><em>외 14건</em></li>
 </ol></div></details>
 
 
@@ -237,7 +237,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-17 - crypto-news 뉴스 요�
 <details><summary>그 외 19건 보기</summary><div class="details-content"><ol class="news-overflow-list">
 <li><a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxPdm9QblVXZURLeDNEZjZ0RkJONlRrbzlmbUtFV290NDhJcWcxOHQ5ZVJxTV9vUk4zM3diWHhWWkZoQVRHT3FtRngyUWR1NkFSd0oyWEFCRXRYUldZcmc2NDdFNFhJSzRSd3dPSHE5c1g3VF85ZnRGLWllR3lvVzdSa0JfWXRvdll2M094ZzRvLVNEbVFBQWNvWjdEdFg5REl0VVljNk9tVTFzOENrWk9iMzZKV09lam83T0RlLU15d3NueHl5Rnh6SDh5OGh4d9IB0wFBVV95cUxNcWZyQjlWTWZpdUl4b1E3VUJDdTVWTzlDWDljNXdlRy05dlp1Nm1EaU5tRU5laUU0a1UtbGpfeUU2YjhKdkd3NC05Znhpb0xmUV9rTGdZekZrVDl5azU0WjFKN1gtdWdRcm1weGFhMU9jX08wWlZiaTllZlk4ZjNrNzhydXZ1UDlXdTE2dEJyaGJiU0Y4Z3FDZEptcXJPTzl6aU12QnVYRzdyMnFVd1dUTDh3djBKUEpHN05pc3U3MkI0UDc3T3BwRkJuVEV0Y1Q2MkUw?oc=5">이란 베팅 테스트로 Polymarket이 1,140억 달러 예측 시장의 거의 55%를 차지 CFTC 단속 - 금융계 거물들</a></li>
 <li><a href="https://www.coindesk.com/business/2026/03/16/bitmine-buys-60-999-ether-as-tom-lee-touts-crypto-strength-amid-iran-war">Tom Lee가 이란 전쟁 중에 암호화폐의 강점을 경고하면서 Bitmine은 60,999 이더를 구입했습니다.</a></li>
-<li><em>.외 4건</em></li>
+<li><em>외 4건</em></li>
 </ol></div></details>
 
 

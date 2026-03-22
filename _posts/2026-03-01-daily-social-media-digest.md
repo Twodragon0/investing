@@ -6,8 +6,9 @@ categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-social-media-digest-2026-03-01.png"
+image: "/assets/images/generated/news-briefing-social-2026-03-01.png"
 description: "2026-03-01 소셜 미디어 27건: PayPal 전 대표 비트코인 결제 시스템 헌신 선언, Blackrock BTC $117M 매도, Trump 포트폴리오 상승 발언. 텔레그램 20건, 정치·경제 7건."
+excerpt: "주요 테마: 비트코인, 매크로/금리, 정치/정책 긴급 알림 없음에 대한 선별 모니터링 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 **2026-03-01** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 7건, 총 27건이 수집되었습니다.
@@ -83,7 +84,7 @@ Trump의 관세와 감세: 가장 큰 혜택을 받는 사람은?
 **6. [이란 공습, Fed 금리 인하 가능성 더욱 낮출 수도 - Barron's](https://news.google.com/rss/articles/CBMi-wJBVV95cUxNYW5nZ0pUUmtyeGlNeWNma19PSC1UYUttRlhUTDZKRkxIRWxwRThPREw5MDJXMml4X0twejlua2ZkcE00MjFBWUQ3c1FvUDdIenBHSEM0LVhWRnBWMUNRT2xkYWs4WkZXUGl3MmE2SThEb1hmVzZ3dG9ES2tXR2RfT3FLckk0N2RhbHNzektqa0VKNGR3MU1zRUJENlNYcHhWak9HMFhydENFYWtDVGZnMEd5ZTZ4cmlvVE9MNVNWanY3b21FQWl6WnlNa18zazBfOE5HRlRvYVd5XzM4UFNzVFVqb1hKbmU2TmlZdkVnMkJBV251emJsMFY4ZXJCM3h6YVhXbm4xUTFNQmRya095eUp1QnVCamhvTGxvQlZNN0tNdW5LeUY3b0J6bklwb0c1dW16a2N2MWc1aXBSamxKRmljblhuYm45RzBOd0Z2QUhMVExSMnhWbUtzdF8zTGJNSU45OHRzNjRlT2RyejU1ZFAxQ0Z6Rjd0RVV3?oc=5)**
 <span class="source-tag">Fed Policy</span>
 
-**7. [Philly Fed 총재, 정치적 압력과 금리 — Lancaster에 의미하는 것 [Q&A] - LancasterOnline](https://news.google.com/rss/articles/CBMingJBVV95cUxOdk0tQ1lCU3g5T2plazAyUHBjb3BiWGxpQ1NvLVFtVEZOcmZzOEF2SzBiekpxREdvRzExNDZxQTRfM2l5b1MtRW13dmdJa3NuYnBYTU45OEdBd3puZ0dpdmhPd3E4bFVkUzllWThkU3dOR2VBc1FtTEx1ZFNnVTY3UUJTTjFBbEV0MmY0UUNqS3ZmdUdlaGlWbEVKc2FsZUpUdDFjU2Z4aEF0dTdlamRQSWRyR0lwdVl0WXhWYkNjbFVIRkkxZ0hsZV95Wl9HM1E1LWx2blNLeTdnTnY5cWgtTzl5QkZ1QW95MVFvblhMT29oUXBVTGQyQ3l0NlZSaklfWDVIcVEyV2JfLUFuTV81RS1pMnJLclowRUNsZGRB?oc=5)**
+**7. [Philly Fed 총재, 정치적 압력과 금리 — Lancaster에 의미하는 것 [Q&A - LancasterOnline](https://news.google.com/rss/articles/CBMingJBVV95cUxOdk0tQ1lCU3g5T2plazAyUHBjb3BiWGxpQ1NvLVFtVEZOcmZzOEF2SzBiekpxREdvRzExNDZxQTRfM2l5b1MtRW13dmdJa3NuYnBYTU45OEdBd3puZ0dpdmhPd3E4bFVkUzllWThkU3dOR2VBc1FtTEx1ZFNnVTY3UUJTTjFBbEV0MmY0UUNqS3ZmdUdlaGlWbEVKc2FsZUpUdDFjU2Z4aEF0dTdlamRQSWRyR0lwdVl0WXhWYkNjbFVIRkkxZ0hsZV95Wl9HM1E1LWx2blNLeTdnTnY5cWgtTzl5QkZ1QW95MVFvblhMT29oUXBVTGQyQ3l0NlZSaklfWDVIcVEyV2JfLUFuTV81RS1pMnJLclowRUNsZGRB?oc=5)**
 <span class="source-tag">Fed Policy</span>
 
 
@@ -94,31 +95,31 @@ Trump의 관세와 감세: 가장 큰 혜택을 받는 사람은?
 
 ### 🟠 비트코인 (9건)
 
-- [[텔레그램] PayPal 전 대표, #Bitcoin을 "세계 최고의 결제 시스템"으로 만드는 데 인생 헌신하겠다 발언](https://t.me/crypto/3532) — Telegram @crypto
-- [[텔레그램] Blackrock ETF, 비트코인 $117,440,000 매도](https://t.me/crypto/3534) — Telegram @crypto
-- [[텔레그램] 억만장자 Tim Draper, 비트코인이 달러 패권 무너뜨리며 $250K→$1M→$10M 도달할 것이라 예고](https://t.me/crypto/3537) — Telegram @crypto
+- [[텔레그램 PayPal 전 대표, #Bitcoin을 "세계 최고의 결제 시스템"으로 만드는 데 인생 헌신하겠다 발언](https://t.me/crypto/3532) — Telegram @crypto
+- [[텔레그램 Blackrock ETF, 비트코인 $117,440,000 매도](https://t.me/crypto/3534) — Telegram @crypto
+- [[텔레그램 억만장자 Tim Draper, 비트코인이 달러 패권 무너뜨리며 $250K→$1M→$10M 도달할 것이라 예고](https://t.me/crypto/3537) — Telegram @crypto
 
 ### 📊 매크로/금리 (6건)
 
-- [[텔레그램] Cathie Wood, 비트코인이 금보다 "압도적으로" 낫다고 발언 — "인플레이션 양면 모두에 대한 헤지"](https://t.me/crypto/3539) — Telegram @crypto
-- [[Telegram] 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
-- [[Telegram] 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://](https://t.me/whale_alert/11524) — Telegram @whale_alert
+- [[텔레그램 Cathie Wood, 비트코인이 금보다 "압도적으로" 낫다고 발언 — "인플레이션 양면 모두에 대한 헤지"](https://t.me/crypto/3539) — Telegram @crypto
+- [[Telegram 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
+- [[Telegram 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://](https://t.me/whale_alert/11524) — Telegram @whale_alert
 
 ### 🏛️ 정치/정책 (6건)
 
-- [[텔레그램] Trump 대통령, 모든 사람의 포트폴리오가 "오르고 있다"고 발언 — "모두 올랐다, 훨씬"](https://t.me/crypto/3536) — Telegram @crypto
+- [[텔레그램 Trump 대통령, 모든 사람의 포트폴리오가 "오르고 있다"고 발언 — "모두 올랐다, 훨씬"](https://t.me/crypto/3536) — Telegram @crypto
 - [“살집 하나면 족하다”…이재명 대통령 부동산 정책에 맞장구 친 홍준표 - v.daum.net](https://news.google.com/rss/articles/CBMiRkFVX3lxTE40V3U0TkZMWlhCRzlhTVNYQ0E2dEQtdDhqcnJCaEhaRGo2LUVCNUNBNUNuLVVZMnNycjlIazN4TS0tV0lHMmc?oc=5) — 이재명 경제정책
 - [[시사쇼]'이재명 신세력' '뉴이재명'은 누구인가 - 아시아경제 - campaigns.do](https://news.google.com/rss/articles/CBMiS0FVX3lxTE1zOUFYTkpvNzBmbVNPdGh3LTRqSVAtM1gyM1JabEtJVHhhRlozV0ZweWVlMXhuMkw0Zl81OVVYQTM5U0VJdy0tWW5OOA?oc=5) — 이재명 경제정책
 
 ### 🏦 거래소 (5건)
 
-- [[Telegram] 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown walletTx: https://t.co/aNttwwzxno](https://t.me/whale_alert/11520) — Telegram @whale_alert
-- [[Telegram] 33,000 #ETH (6,583,742 USD) transferred from #Bithumb to unknown walletTx: https://t.co/Wam8SjJEzv](https://t.me/whale_alert/11521) — Telegram @whale_alert
-- [[Telegram] 27,500,000 #XRP (5,734,068 USD) transferred from #Bithumb to unknown walletTx: https://t.co/M8YTk8vq](https://t.me/whale_alert/11522) — Telegram @whale_alert
+- [[Telegram 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown walletTx: https://t.co/aNttwwzxno](https://t.me/whale_alert/11520) — Telegram @whale_alert
+- [[Telegram 33,000 #ETH (6,583,742 USD) transferred from #Bithumb to unknown walletTx: https://t.co/Wam8SjJEzv](https://t.me/whale_alert/11521) — Telegram @whale_alert
+- [[Telegram 27,500,000 #XRP (5,734,068 USD) transferred from #Bithumb to unknown walletTx: https://t.co/M8YTk8vq](https://t.me/whale_alert/11522) — Telegram @whale_alert
 
 ### 🔷 이더리움 (1건)
 
-- [[Telegram] 33,000 #ETH (6,583,742 USD) transferred from #Bithumb to unknown walletTx: https://t.co/Wam8SjJEzv](https://t.me/whale_alert/11521) — Telegram @whale_alert
+- [[Telegram 33,000 #ETH (6,583,742 USD) transferred from #Bithumb to unknown walletTx: https://t.co/Wam8SjJEzv](https://t.me/whale_alert/11521) — Telegram @whale_alert
 
 
 ---

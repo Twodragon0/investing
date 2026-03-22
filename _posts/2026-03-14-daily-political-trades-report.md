@@ -7,9 +7,9 @@ tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-ban
 keywords: "political-trades, congress, sec, trump, 이재명"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/og-political-trades.png"
+image: "/assets/images/generated/news-briefing-political-2026-03-14.png"
 excerpt: "2026-03-14 정치인 거래·정책 리포트: 의회 거래 2건, SEC 내부자 12건, 중앙은행 8건, 총 22건 수집"
-description: "미국 의회 거래 동향에서는 등이 보고되었습니다 의원들의 주식 거래"
+description: "정치인 거래·정책 리포트 - 2026-03-14 - 미국 의회 내부자 거래와 정책 동향 추적. 주요 키워드: political-trades, congress, sec, trump."
 image_alt: "정치인 거래·정책 리포트 - 2026-03-14 - 정치인 거래 뉴스 요약 이미지"
 ---
 
@@ -49,15 +49,15 @@ Pelosi 너머 — 최고 주식 추천을 위해 따라야 할 의회 의원 3�
 Life Time Group(LTH) EVP Javaheri가 주식을 매각하고 세금 원천징수를 보고합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**2. [양식 4\] QuantumScape Corp 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMirwFBVV95cUxNeUZzdkw5RzhXandDY1RzdW5Pbjk3YUx2Rm5mNEhOVzQ2RTcwRWNRZTMxZ2wyQjkwZ3lnM0FCOGxzTUIxQVd5bDJ6RkdBRHZrWUdwTVhOWUgxNWFWREhUMmdoeWl4TkpsVEZBNDI0aGpCaTVMLWhCUzR0dWl4SDFiN0ZmUDJrSlpXa3pFT3JNUTBNdGhuQ2pPS084NlQ3eURYX25VZjZnNHlnZExXbm5n?oc=5)**
+**2. [양식 4 QuantumScape Corp 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMirwFBVV95cUxNeUZzdkw5RzhXandDY1RzdW5Pbjk3YUx2Rm5mNEhOVzQ2RTcwRWNRZTMxZ2wyQjkwZ3lnM0FCOGxzTUIxQVd5bDJ6RkdBRHZrWUdwTVhOWUgxNWFWREhUMmdoeWl4TkpsVEZBNDI0aGpCaTVMLWhCUzR0dWl4SDFiN0ZmUDJrSlpXa3pFT3JNUTBNdGhuQ2pPS084NlQ3eURYX25VZjZnNHlnZExXbm5n?oc=5)**
 [서식 4] QuantumScape Corp 내부자 거래 활동 주식 타이탄
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**3. [양식 4\] Teads Holding Co. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMirwFBVV95cUxPLURjTVNsb0tKek9HSE5ON0hydEUyVFprRlRxMmY5X1c2RF9VYW9Wd1lZV3EzSGNtcDhqdVB2dk9MTHZwTWVlU0ZaUGVQYVFrVnFPN0dzc0Z3Mi1yV3pnaXBRTVd3Q2I4QTNFbDlaVnplYlVUWnFPd0pVRGhaVDJmbUV2aEY1NFpSLW9WNzdFRldlaEZXQ0picEc0TEwtNWNkcXBadEYtUmRraS1FWjBn?oc=5)**
+**3. [양식 4 Teads Holding Co. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMirwFBVV95cUxPLURjTVNsb0tKek9HSE5ON0hydEUyVFprRlRxMmY5X1c2RF9VYW9Wd1lZV3EzSGNtcDhqdVB2dk9MTHZwTWVlU0ZaUGVQYVFrVnFPN0dzc0Z3Mi1yV3pnaXBRTVd3Q2I4QTNFbDlaVnplYlVUWnFPd0pVRGhaVDJmbUV2aEY1NFpSLW9WNzdFRldlaEZXQ0picEc0TEwtNWNkcXBadEYtUmRraS1FWjBn?oc=5)**
 [서식 4] Teads Holding Co.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**4. [양식 4\] UNIVERSAL HEALTH SERVICES INC 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMivwFBVV95cUxQd0FMMXZNYnRKRk1iem1TcllnZnJVRXJlYTh5MDdEYk1RNnVacmg3SjRsRENOUVVUY0pNYUU0UnhLT1QxR2ozYTU2NHU3U0V4ZFlORS1BN2ZnU2MxR1Q5RWlnTUJzaG0xVGRjU3RzT2pkY2JiM1B6cGZWWWF1eEl2djRyQmxtMEFUWmMtdXNzTEZFMGpRaVRKSWc4cVczQnBDUnpkTG0yRWp4alU4Zk01d3ZPNTdkSDJwSlRtYm1uWQ?oc=5)**
+**4. [양식 4 UNIVERSAL HEALTH SERVICES INC 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMivwFBVV95cUxQd0FMMXZNYnRKRk1iem1TcllnZnJVRXJlYTh5MDdEYk1RNnVacmg3SjRsRENOUVVUY0pNYUU0UnhLT1QxR2ozYTU2NHU3U0V4ZFlORS1BN2ZnU2MxR1Q5RWlnTUJzaG0xVGRjU3RzT2pkY2JiM1B6cGZWWWF1eEl2djRyQmxtMEFUWmMtdXNzTEZFMGpRaVRKSWc4cVczQnBDUnpkTG0yRWp4alU4Zk01d3ZPNTdkSDJwSlRtYm1uWQ?oc=5)**
 [서식 4] UNIVERSAL HEALTH SERVICES INC 내부자 거래 활동 주식 타이탄
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
@@ -65,7 +65,7 @@ Life Time Group(LTH) EVP Javaheri가 주식을 매각하고 세금 원천징수�
 ADV(Advantage Solutions) 이사, 클래스 A 주식 16,759주 Titan 주식 매입
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**6. [양식 4\] INFINITY NATURAL RESOURCES, INC. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZHgwYkdFWWtQdHNWVnlqcmMtYVNRdEhUeE84VTBKdkpoc0JFWklJY0ZwYUtnT2plOUg5MGg2a1N6b2NkM2d0VkExTm5NMlpGNXRkaE9JQXB6NEd4dkpodzVVSzlTbmlfbFk1Z0pCekpKazB5eGVPY3haTF9XdWw0LUxOcHEyR3dKVVl6SUxsMExiYjRGWlowRkVXMk5GaUNVMTAxaF9MSkpaQVd4Z0Zkclp1QjdQTkZ0Mjk2dUZBdjY?oc=5)**
+**6. [양식 4 INFINITY NATURAL RESOURCES, INC. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZHgwYkdFWWtQdHNWVnlqcmMtYVNRdEhUeE84VTBKdkpoc0JFWklJY0ZwYUtnT2plOUg5MGg2a1N6b2NkM2d0VkExTm5NMlpGNXRkaE9JQXB6NEd4dkpodzVVSzlTbmlfbFk1Z0pCekpKazB5eGVPY3haTF9XdWw0LUxOcHEyR3dKVVl6SUxsMExiYjRGWlowRkVXMk5GaUNVMTAxaF9MSkpaQVd4Z0Zkclp1QjdQTkZ0Mjk2dUZBdjY?oc=5)**
 [서식 4] INFINITY NATURAL RESOURCES, INC.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
@@ -73,7 +73,7 @@ ADV(Advantage Solutions) 이사, 클래스 A 주식 16,759주 Titan 주식 매�
 Dave & Buster(PLAY) 이사가 연기된 RSU 상을 받았습니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**8. [양식 4\] Sphere Entertainment Co. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMiuAFBVV95cUxQOWpyZjh2T1J4NF81UVIyMFdxeXB1WlJZRWhmZ2kwbGpLaGd4TFFqZ2Z4ZHB1ZDdrSFNLanA5T0F5RWZZRW01dzJQQzR5UTVoMkF2SFFFekNqZU9aNmlZWVBhOWxrLVRWalpGVkZBYW1GSmxOZjBSOGpQSXJYS1hIOTJ6ODBuMHgxRHVYMHQxMURSam9WXzJ1Nm55Wk9IbF9JVV9OOTRrT25GcGN5aTVGTXkxUXRQWlAw?oc=5)**
+**8. [양식 4 Sphere Entertainment Co. 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMiuAFBVV95cUxQOWpyZjh2T1J4NF81UVIyMFdxeXB1WlJZRWhmZ2kwbGpLaGd4TFFqZ2Z4ZHB1ZDdrSFNLanA5T0F5RWZZRW01dzJQQzR5UTVoMkF2SFFFekNqZU9aNmlZWVBhOWxrLVRWalpGVkZBYW1GSmxOZjBSOGpQSXJYS1hIOTJ6ODBuMHgxRHVYMHQxMURSam9WXzJ1Nm55Wk9IbF9JVV9OOTRrT25GcGN5aTVGTXkxUXRQWlAw?oc=5)**
 [서식 4] Sphere Entertainment Co.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
@@ -81,7 +81,7 @@ Dave & Buster(PLAY) 이사가 연기된 RSU 상을 받았습니다.
 Warby Parker(NYSE: WRBY) 이사는 25,000주를 매각하고 대규모 지분을 보유합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**10. [양식 4\] CORE MOLDING TECHNOLOGIES INC 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMivwFBVV95cUxPUWdxNVN2d2JNd0NFaXJRSTJOVE1qVjV0dHZUVnlYd1Zha3RoOXJabV9ReHptNURSU1lXSlMwMHh5NUFseUJvUUducFlxUGwxVWNzNzJVb0xEaGhobXVocWw3Zk1nMWpLM2ZtdGRlel9vUm9YbTVZandmcnE3T0VsWFkxa2FYOHRvVmkwanFCNUMtaVBPbXdNOUxKazdnWERCU1VadXRSZG56cVpWV0xYNnM1MklsM2ZqdHI1Nk9IOA?oc=5)**
+**10. [양식 4 CORE MOLDING TECHNOLOGIES INC 내부자 거래 활동 - 주식 타이탄](https://news.google.com/rss/articles/CBMivwFBVV95cUxPUWdxNVN2d2JNd0NFaXJRSTJOVE1qVjV0dHZUVnlYd1Zha3RoOXJabV9ReHptNURSU1lXSlMwMHh5NUFseUJvUUducFlxUGwxVWNzNzJVb0xEaGhobXVocWw3Zk1nMWpLM2ZtdGRlel9vUm9YbTVZandmcnE3T0VsWFkxa2FYOHRvVmkwanFCNUMtaVBPbXdNOUxKazdnWERCU1VadXRSZG56cVpWV0xYNnM1MklsM2ZqdHI1Nk9IOA?oc=5)**
 [서식 4] CORE MOLDING TECHNOLOGIES INC 내부자 거래 활동 주식 타이탄
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 

@@ -6,8 +6,9 @@ categories: [crypto-news]
 tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-news-digest-2026-02-27.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-02-27.png"
 description: "2026-02-27 암호화폐 시장에서 111건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 거래소 관련 소식이 주목됩니다."
+excerpt: "2026-02-27 암호화폐 시장에서 111건의 뉴스를 분석했습니다. 오늘은 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 **2026-02-27** 암호화폐 시장에서 111건의 뉴스를 분석했습니다. 오늘은 **비트코인, 가격/시장, 거래소** 관련 소식이 주목됩니다.
@@ -125,7 +126,7 @@ description: "2026-02-27 암호화폐 시장에서 111건의 뉴스를 분석했
 
 *예측 시장 사용자들이 비트코인과 이더리움의 단기 가격 움직임에 대해 더 낙관적이 되고 있지만, 암호화폐 시장은 여전히 공포 구간에 머물러 있습니다.*
 
-**1. [[가상화폐 시세] 비트코인 9700만원대…엑스알피 2000원선, 이더리움 290만원선 거래 - 이코노뉴스](https://news.google.com/rss/articles/CBMib0FVX3lxTE0wdG45XzZJdHJ2Y3NWUm5yck5uazJ0Uk10bGFBRGZJTUc5UXVYdlMyanpyTVYxMWM2dWxXd3FiZFFuX3BqVHVXdk5jbjhvSjY2TjVPYTdoTlBaaHBHUHNQYkFtb1lVaVFsWUdhZy1pSQ?oc=5)**
+**1. [[가상화폐 시세 비트코인 9700만원대…엑스알피 2000원선, 이더리움 290만원선 거래 - 이코노뉴스](https://news.google.com/rss/articles/CBMib0FVX3lxTE0wdG45XzZJdHJ2Y3NWUm5yck5uazJ0Uk10bGFBRGZJTUc5UXVYdlMyanpyTVYxMWM2dWxXd3FiZFFuX3BqVHVXdk5jbjhvSjY2TjVPYTdoTlBaaHBHUHNQYkFtb1lVaVFsWUdhZy1pSQ?oc=5)**
 [가상화폐 시세] 비트코인 9700만원대…엑스알피 2000원선, 이더리움 290만원선 거래 이코노뉴스
 <span class="source-tag">Google News KR</span>
 

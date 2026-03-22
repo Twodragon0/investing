@@ -7,8 +7,9 @@ tags: ["worldmonitor", "geopolitics", "macro", "daily-digest"]
 source: "worldmonitor"
 source_url: "https://worldmonitor.app"
 lang: "ko"
-image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-03-05.png"
+image: "/assets/images/generated/news-briefing-worldmonitor-2026-03-05.png"
 description: "2026-03-05 WorldMonitor 20건: 미국-이란 전쟁 격화로 호르무즈 해협 유조선 전세 급등, 지정학/안보 8건·금융시장 5건·사회/기타 6건 분석. MarketWatch·Al Jazeera 주요 출처."
+excerpt: "범위: 글로벌 지정학, 금융시장, 에너지 이슈 주요 출처: WorldMonitor/MarketWatch (10건), WorldMonitor/Al Jazeera (10건)"
 ---
 
 **2026-03-05** 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다.

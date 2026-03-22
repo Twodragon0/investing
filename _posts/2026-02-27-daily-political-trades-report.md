@@ -6,9 +6,9 @@ categories: [political-trades]
 tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-trading]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-political-trades-report-2026-02-27.png"
+image: "/assets/images/generated/news-briefing-political-2026-02-27.png"
 excerpt: "2026-02-27 정치인 거래·정책 리포트: SEC 내부자 14건, 한국 정치인 4건, 중앙은행 2건, 총 20건 수집"
-description: "미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다."
+description: "정치인 거래·정책 리포트 - 2026-02-27 - 미국 의회 내부자 거래와 정책 동향 추적. 주요 키워드: political-trades, congress, sec, trump."
 ---
 
 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
@@ -39,7 +39,7 @@ Penske Automotive (PAG) 사장, 2027~2030년 베스팅 조건부 주식 9,987주
 GEO Group (GEO) SVP, 제한 주식 및 성과 주식 30,000주 수여 - Stock Titan
 <span class="source-tag">SEC Insider Trading</span>
 
-**4. [[Form 4] OCEANEERING INTERNATIONAL INC Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMivwFBVV95cUxONW9LME9GdHpNaHF2R01vNWN4MXg3Y1dQX0I3MWFNazV3QVJhUWJSVlBZaUFmZE9MWExVYVdXWW9IRHpWdjNvWFZYTVZtdnN3UndzaE9OZnIxWG9FRThuMXE0MXM2S1ptWmpoYUdPcjFrcFRteGlpcXF2UDBpSGUzOW9faUJhendqd09yclgtNTVrNGVRZTJOQ2hFZjVjMmRkNENmRkxFTDRjcUlLUVhQQkVENWpFUFNEbUZIU1plUQ?oc=5)**
+**4. [[Form 4 OCEANEERING INTERNATIONAL INC Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMivwFBVV95cUxONW9LME9GdHpNaHF2R01vNWN4MXg3Y1dQX0I3MWFNazV3QVJhUWJSVlBZaUFmZE9MWExVYVdXWW9IRHpWdjNvWFZYTVZtdnN3UndzaE9OZnIxWG9FRThuMXE0MXM2S1ptWmpoYUdPcjFrcFRteGlpcXF2UDBpSGUzOW9faUJhendqd09yclgtNTVrNGVRZTJOQ2hFZjVjMmRkNENmRkxFTDRjcUlLUVhQQkVENWpFUFNEbUZIU1plUQ?oc=5)**
 [Form 4] OCEANEERING INTERNATIONAL INC Insider Trading Activity Stock Titan
 <span class="source-tag">SEC Insider Trading</span>
 
@@ -93,7 +93,7 @@ Tenet Healthcare (NYSE: THC) CFO Sun Park converts 3,800 RSUs into stock Stock T
 금리 내리기도, 올리기도…'역대 최장기' 금리 동결 이어가나 뉴시스
 <span class="source-tag">한국은행 금리결정</span>
 
-**2. [[0226주요일정] 한국은행, 금융통화위원회 개최…기준금리 결정 예정 등 By 인포스탁데일리 - Investing.com 한국어](https://news.google.com/rss/articles/CBMicEFVX3lxTE9EUEZ1TUdESEpoX2VvWk55Y2xmMXNIb2lvOHFyU0Z5bjZnak1COW1ya0hoTmR4Z0FHa3RXcHFTQ0pkaVFrcEMzU3VjcTFYTGxSeGwxNVM3dlZJWnBoRXQ1dkd4dk56N2dQV0ZBWi0taVk?oc=5)**
+**2. [[0226주요일정 한국은행, 금융통화위원회 개최…기준금리 결정 예정 등 By 인포스탁데일리 - Investing.com 한국어](https://news.google.com/rss/articles/CBMicEFVX3lxTE9EUEZ1TUdESEpoX2VvWk55Y2xmMXNIb2lvOHFyU0Z5bjZnak1COW1ya0hoTmR4Z0FHa3RXcHFTQ0pkaVFrcEMzU3VjcTFYTGxSeGwxNVM3dlZJWnBoRXQ1dkd4dk56N2dQV0ZBWi0taVk?oc=5)**
 [0226주요일정] 한국은행, 금융통화위원회 개최…기준금리 결정 예정 등 By 인포스탁데일리 Investing.com 한국어
 <span class="source-tag">한국은행 금리결정</span>
 

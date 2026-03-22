@@ -6,7 +6,7 @@ categories: [political-trades]
 tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-bank", "insider-trading"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-political-trades-report-2026-03-03.png"
+image: "/assets/images/generated/news-briefing-political-2026-03-03.png"
 excerpt: "2026-03-03 정치인 거래·정책 리포트: SEC 내부자 18건, 트럼프 정책 2건, 중앙은행 1건, 총 21건 수집"
 description: "오늘 정치인 거래·정책 분야에서 총 21건의 뉴스가 수집되었습니다. 세부 구성은 SEC 내부자 거래 18건, 트럼프 정책 2건, 중앙은행 1건입니다."
 ---
@@ -49,7 +49,7 @@ Waste Management (NYSE: WM) insider David Reed sells 307 shares in two transacti
 Insider sells 69,794 Scorpio Tankers shares (STNG) via Citigroup Stock Titan
 <span class="source-tag">SEC Insider Activity</span>
 
-**4. [[Form 4] Matador Resources Co Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMitAFBVV95cUxPZmRubWp4dzlzeHFPXy0yNG5Jc2I1aVVLblduN0ZIQlk4Sl9vVGRZdVNXanlLTk9kbjFJQjE5VFRNczdoVW9sZkVDWUJYOXRRU1hBbWJGUlgyX0JWMW9KbnlNRFlGWTZzSnUxQUY2OGRiZTdEMUFQVGdVc2cwcE5NV21kTjZ0RnJBaHAwakJGZ2JDXzNYY1hMMmp3ZDZaM3gyQTNUTzI5bHFNWHlUX2JDdzc5V00?oc=5)**
+**4. [[Form 4 Matador Resources Co Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMitAFBVV95cUxPZmRubWp4dzlzeHFPXy0yNG5Jc2I1aVVLblduN0ZIQlk4Sl9vVGRZdVNXanlLTk9kbjFJQjE5VFRNczdoVW9sZkVDWUJYOXRRU1hBbWJGUlgyX0JWMW9KbnlNRFlGWTZzSnUxQUY2OGRiZTdEMUFQVGdVc2cwcE5NV21kTjZ0RnJBaHAwakJGZ2JDXzNYY1hMMmp3ZDZaM3gyQTNUTzI5bHFNWHlUX2JDdzc5V00?oc=5)**
 [Form 4] Matador Resources Co Insider Trading Activity Stock Titan
 <span class="source-tag">SEC Insider Trading</span>
 
@@ -61,7 +61,7 @@ Keysight Technologies (KEYS) SVP reports sale of 1,000 shares Stock Titan
 ProKidney (PROK) grants CLO Todd Girolamo 600,000 stock options Stock Titan
 <span class="source-tag">SEC Insider Trading</span>
 
-**7. [[Form 4] Workday, Inc. Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMiqAFBVV95cUxQeTZBMHBKVkloamw4SkJ3SVR6ZllkWVE5Z3R4Zi1sX0FwbjczZWFEaDFqek5zR25WOUVRaU5EUlpJaVF2VzB1RnNyZXRwUE1OZEJ5WTFMbFBkMGJXZjFnQ2RDWDY1WHoxV180SWhFS18yS1M3LXFTRFYxNUhZWElLZ3pLVWlZUXhQcUg3Y2daWEZIaTdoVThQcW4xdEFFV2pKWVFRSGtYOVQ?oc=5)**
+**7. [[Form 4 Workday, Inc. Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMiqAFBVV95cUxQeTZBMHBKVkloamw4SkJ3SVR6ZllkWVE5Z3R4Zi1sX0FwbjczZWFEaDFqek5zR25WOUVRaU5EUlpJaVF2VzB1RnNyZXRwUE1OZEJ5WTFMbFBkMGJXZjFnQ2RDWDY1WHoxV180SWhFS18yS1M3LXFTRFYxNUhZWElLZ3pLVWlZUXhQcUg3Y2daWEZIaTdoVThQcW4xdEFFV2pKWVFRSGtYOVQ?oc=5)**
 [Form 4] Workday, Inc.
 <span class="source-tag">SEC Insider Trading</span>
 
@@ -69,7 +69,7 @@ ProKidney (PROK) grants CLO Todd Girolamo 600,000 stock options Stock Titan
 Lexicon Pharmaceuticals (LXRX) SVP converts RSUs, withholds shares for tax Stock Titan
 <span class="source-tag">SEC Insider Trading</span>
 
-**9. [[Form 4] PLUMAS BANCORP Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMirAFBVV95cUxQcS1Nb28wTDFOV1RmeC1VWFo4bWpHZTRCRlR3NWJqYmRfaEcwaHZLN3lKbTBWVy10b3NFQ0dySGZ6MVhhRHR2ekY1a21sbWNSWUVlazBXQTMyY28wcm0zMjB0WWNLd3JVdnNReEkzRjNBQU5DVE05eU9NZWlVWFVYZldkWW5LUGlpWlFGelpTUnBZYkNrTzZsYkNFRTBadUJhS1VpbGhpOHFOM1c5?oc=5)**
+**9. [[Form 4 PLUMAS BANCORP Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMirAFBVV95cUxQcS1Nb28wTDFOV1RmeC1VWFo4bWpHZTRCRlR3NWJqYmRfaEcwaHZLN3lKbTBWVy10b3NFQ0dySGZ6MVhhRHR2ekY1a21sbWNSWUVlazBXQTMyY28wcm0zMjB0WWNLd3JVdnNReEkzRjNBQU5DVE05eU9NZWlVWFVYZldkWW5LUGlpWlFGelpTUnBZYkNrTzZsYkNFRTBadUJhS1VpbGhpOHFOM1c5?oc=5)**
 [Form 4] PLUMAS BANCORP Insider Trading Activity Stock Titan
 <span class="source-tag">SEC Insider Trading</span>
 

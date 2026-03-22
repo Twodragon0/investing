@@ -7,7 +7,8 @@ tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, dail
 source: "consolidated"
 lang: "ko"
 description: "2026-02-13 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 19건, 총 39건이 수집되었습니다."
-image: "/assets/images/generated/og-daily-social-media-digest-2026-02-13.png"
+image: "/assets/images/generated/news-briefing-social-2026-02-13.png"
+excerpt: "주요 키워드: ai(16), bitcoin(15), trump(6), 이재명(4), fed(2) 긴급 알림 없음에 대한 선별 모니터링 - Investing Dragon 자동…"
 ---
 
 **2026-02-13** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 19건, 총 39건이 수집되었습니다.
@@ -87,7 +88,7 @@ image: "/assets/images/generated/og-daily-social-media-digest-2026-02-13.png"
 | 12 | [**FOMC 동결·日 재정 우려···1월 국채 금리↑ - 더리포트**](https://news.google.com/rss/articles/CBMibkFVX3lxTE03dFo0OFFwQWVfb3U1TE04aEFkRXNSNnkzODRldzk5TXFWRGJLWWIta3NOdVdBRzhqNnBHcjJOZkVuZU1ZZkIwQ2ZrWUtubV9HY0dNUmpFak85TEM0SkhqdkhvTnMzNzNKVGVpNGVR?oc=5) | 한국은행 금리정책 |
 | 13 | [**한은 “3년물 금리 높은 수준장기금리 쏠림·과도한 움직임 면밀 대응” - 서울경제**](https://news.google.com/rss/articles/CBMiZkFVX3lxTE96dE1EYjBIdWVlZGxxTVJrYzRaTWNndkNzZUppcHdMZlIydWotQ2ZXX0tRZ2JnM2IxOUpUTndqb2hPdkdtbFN1eHhHN0FfZWZzYzJQcURpdEozYjhucmtscnFLbDdqUQ?oc=5) | 한국은행 금리정책 |
 | 14 | [**코스피 5354 마감외국인·기관 매수에 5300선 안착 - 스트레이트뉴스**](https://news.google.com/rss/articles/CBMic0FVX3lxTFBicHZmM0RIYjlkWENMbzhUd244SEt3RlhyWUpES0RHMHU4Yy1Gd1BxZjE1MmQ1azNzZ19yVmhvVjNKYVBNYTRyTFRnQzkyaDZrQVkzUHhma1JFcjYyRkFBc0lGZDExZVNmcmYwNWFYdG5MSmfSAXdBVV95cUxNWFFIM1l4VHdENFE1b2puUGgzNzM3amplaUZYVFZhQ09lM05TdWtPRHdfQUZDcjdnc0tQM09JOHNuckpmTWRUV1ljZ0x5YU95X0hsaHdpZVdnOTBJNno0aGNDN3ctY2JYakhlLUg4T193Z1lXZVdxWQ?oc=5) | 한국증시 수급 |
-| 15 | [**[오늘증시]코스피, 외국인·기관 '쌍끌이 매수'에 5500선 첫 돌파삼성전자 18만 원 눈앞 - Queen 이코노미퀸**](https://news.google.com/rss/articles/CBMiaEFVX3lxTE9jUFk0a2l6UUpjakpfWGw0SFdJS2NxT2N6Z09rLXI2N2taXzdlbXlBSzRnVndOdE9JLVdGTWNUUzU0OFZDRWhYSXZvaTVnU1R6WWFQNkxpNG9ncnEtZmdQNHFBSy1WbVB0?oc=5) | 한국증시 수급 |
+| 15 | [**[오늘증시] 코스피, 외국인·기관 '쌍끌이 매수'에 5500선 첫 돌파삼성전자 18만 원 눈앞 - Queen 이코노미퀸**](https://news.google.com/rss/articles/CBMiaEFVX3lxTE9jUFk0a2l6UUpjakpfWGw0SFdJS2NxT2N6Z09rLXI2N2taXzdlbXlBSzRnVndOdE9JLVdGTWNUUzU0OFZDRWhYSXZvaTVnU1R6WWFQNkxpNG9ncnEtZmdQNHFBSy1WbVB0?oc=5) | 한국증시 수급 |
 
 ---
 
@@ -96,33 +97,33 @@ image: "/assets/images/generated/og-daily-social-media-digest-2026-02-13.png"
 
 ### 📊 매크로/금리 (10건)
 
-- [[Telegram] 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
-- [[Telegram] 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://](https://t.me/whale_alert/11524) — Telegram @whale_alert
+- [[Telegram 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
+- [[Telegram 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://](https://t.me/whale_alert/11524) — Telegram @whale_alert
 - [증시 활성화는 A+물가 안정·부동산 세금정책은 '숙제'(https://news.google.com/rss/articles/CBMiU0FVX3lxTE9tang5WWJyN2R5TGtheHNoSzhlV1BhYXNGQ1NXREtuYnVWT2hvNUVHWmduSlQ1WXMwTWJsZ0hJblVyc1NHdzFTdTJsTFVQZGNYbzVJ?oc=5) — 이재명 경제정책
 
 ### 📈 가격/시장 (15건)
 
-- [[Telegram] Polymarket rolls out an “Up or Down” Bitcoin marketA new BTC prediction market has gone live, settli](https://t.me/crypto/3500) — Telegram @crypto
+- [[Telegram Polymarket rolls out an “Up or Down” Bitcoin marketA new BTC prediction market has gone live, settli](https://t.me/crypto/3500) — Telegram @crypto
 - [증시 활성화는 A+물가 안정·부동산 세금정책은 '숙제'(https://news.google.com/rss/articles/CBMiU0FVX3lxTE9tang5WWJyN2R5TGtheHNoSzhlV1BhYXNGQ1NXREtuYnVWT2hvNUVHWmduSlQ1WXMwTWJsZ0hJblVyc1NHdzFTdTJsTFVQZGNYbzVJ?oc=5) — 이재명 경제정책
 - [李 대통령, 다주택자 대출연장 제한 시사"금융 혜택 문제 있어" - 핀포인트뉴스](https://news.google.com/rss/articles/CBMic0FVX3lxTE15V2RNRlZFOV9keGpWdm9iM2t5bjNWTkVCc1N5djc1NTNKaVZsWmUzNEFFeTl5UGxJZml0bVkxNlFDX0dOWGRxeW1KWUhkZVJwSi1aUTlhZmlzZE1mRkFpZFNGY2tXSDFLQkhtR1NTVDd1NWM?oc=5) — 이재명 경제정책
 
 ### 🟠 비트코인 (7건)
 
-- [[Telegram] ⚠️ $5.2 billion in shorts at risk$BTC hitting $80K would liquidate more than $5.3B in Bitcoin shorts](https://t.me/crypto/3490) — Telegram @crypto
-- [[Telegram] He bought $30 of Bitcoin every day using a DCA strategy and, after 7 years, 10 months, and 12 days, ](https://t.me/crypto/3491) — Telegram @crypto
-- [[Telegram] In 2011, someone bought 10,000 Bitcoin for $7,805 at $0.78 and 14 years later sold it for $1.09 bill](https://t.me/crypto/3492) — Telegram @crypto
+- [[Telegram ⚠️ $5.2 billion in shorts at risk$BTC hitting $80K would liquidate more than $5.3B in Bitcoin shorts](https://t.me/crypto/3490) — Telegram @crypto
+- [[Telegram He bought $30 of Bitcoin every day using a DCA strategy and, after 7 years, 10 months, and 12 days, ](https://t.me/crypto/3491) — Telegram @crypto
+- [[Telegram In 2011, someone bought 10,000 Bitcoin for $7,805 at $0.78 and 14 years later sold it for $1.09 bill](https://t.me/crypto/3492) — Telegram @crypto
 
 ### 🏛️ 정치/정책 (7건)
 
-- [[Telegram] REMINDER: Trump's White House meeting on the Crypto Market Structure Bill will happen today.Sponsore](https://t.me/crypto/3494) — Telegram @crypto
+- [[Telegram REMINDER: Trump's White House meeting on the Crypto Market Structure Bill will happen today.Sponsore](https://t.me/crypto/3494) — Telegram @crypto
 - ['Clock is ticking': crypto bill's 2026 fate hinges on Trump and stablecoin yields - The Block](https://news.google.com/rss/articles/CBMirgFBVV95cUxQOGx4RWF3MGdfYWp0cEttYUJxTDJOckpWM29RNFJaWEpGSmNRellLbTdDY2RjQ29wcktvTEZOSl9pZHVfb2JGOWJHaTBwLTA1eWZyYlN4WHhUUWhMb3BtUC1nT090YWJhdjFUNmNESkJDUGZ3SU8wVkxKYXFTU1VmdEZsSXlwWjgwOHlOejBjaXYxbTZxem9ubXQ1M2VPbE9qNk0tRUJaX0t4TEdtOVE?oc=5) — Trump Crypto Policy
 - [Explained: The growing personal ties between crypto and Trump &#124; TRENDING - The Hill](https://news.google.com/rss/articles/CBMiqAFBVV95cUxOR0x3NmZzbUxESDVBQ3pvejZ2X3VMUEhBM2VmaEpOTWJtT0xMYVNvaDJ0VDN2eUFhMjVuRmpNcy1rSGNpbHhJTHdIMGxKSXA2Und4SWpqTlBNdVpFOExMVzFPa3Y5djJQRWNTMnpwX29UWFIzeWJiTERzdzl0ajBTUkVmUG9OaXZ2c0FuajY4Um5IcVVBTXNsRjZmWVNkdHNwclExWXZlb2w?oc=5) — Trump Crypto Policy
 
 ### 🏦 거래소 (6건)
 
-- [[Telegram] Binance has purchased another 4,545 Bitcoins valued at $305 million for its “SAFU” fund.Sponsored by](https://t.me/crypto/3499) — Telegram @crypto
-- [[Telegram] 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown walletTx: https://t.co/aNttwwzxno](https://t.me/whale_alert/11520) — Telegram @whale_alert
-- [[Telegram] 33,000 #ETH (6,583,742 USD) transferred from #Bithumb to unknown walletTx: https://t.co/Wam8SjJEzv](https://t.me/whale_alert/11521) — Telegram @whale_alert
+- [[Telegram Binance has purchased another 4,545 Bitcoins valued at $305 million for its “SAFU” fund.Sponsored by](https://t.me/crypto/3499) — Telegram @crypto
+- [[Telegram 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown walletTx: https://t.co/aNttwwzxno](https://t.me/whale_alert/11520) — Telegram @whale_alert
+- [[Telegram 33,000 #ETH (6,583,742 USD) transferred from #Bithumb to unknown walletTx: https://t.co/Wam8SjJEzv](https://t.me/whale_alert/11521) — Telegram @whale_alert
 
 
 ---

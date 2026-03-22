@@ -7,7 +7,8 @@ tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, dail
 source: "consolidated"
 lang: "ko"
 description: "오늘의 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 소셜 미디어 45건, Reddit 0건, 정치·경제 135건 총 200건이 수집되었습니다."
-image: "/assets/images/generated/og-daily-social-media-digest-2026-02-12.png"
+image: "/assets/images/generated/news-briefing-social-2026-02-12.png"
+excerpt: "오늘의 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 소셜 미디어 45건, Reddit 0건, 정치·경제 135건 총 200건이 수집되었습니다."
 ---
 
 오늘의 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 소셜 미디어 45건, Reddit 0건, 정치·경제 135건 총 200건이 수집되었습니다.
@@ -115,7 +116,7 @@ image: "/assets/images/generated/og-daily-social-media-digest-2026-02-12.png"
 
 ### 🏛️ 정치/정책 (62건)
 
-- [[Telegram] REMINDER: Trump's White House meeting on the Crypto Market Structure Bill will happen today. Sponsor](https://t.me/crypto/3494) — Telegram @crypto
+- [[Telegram REMINDER: Trump's White House meeting on the Crypto Market Structure Bill will happen today. Sponsor](https://t.me/crypto/3494) — Telegram @crypto
 - [I’m a Crypto Expert: 5 Trump Policy Impacts Likely To Hit Your 2026 Holdings - Yahoo Finance](https://news.google.com/rss/articles/CBMieEFVX3lxTFBzTVo3enRLRmYxeUo2OVpQaUUyUGxtVHc3cG1DX1c3OWFQeW1tM2xnNDlhYk85anpmdWdmeVRWcjUyOVM5MGFXcERaaEVqY0VxTFNiQ09jYlJPRUZ5VldNNVVMd0kzZG94TTNHbzluMDhzYTAyRFBpVg?oc=5) — Trump Crypto Policy
 - [Explained: The growing personal ties between crypto and Trump | TRENDING - The Hill](https://news.google.com/rss/articles/CBMiqAFBVV95cUxOR0x3NmZzbUxESDVBQ3pvejZ2X3VMUEhBM2VmaEpOTWJtT0xMYVNvaDJ0VDN2eUFhMjVuRmpNcy1rSGNpbHhJTHdIMGxKSXA2Und4SWpqTlBNdVpFOExMVzFPa3Y5djJQRWNTMnpwX29UWFIzeWJiTERzdzl0ajBTUkVmUG9OaXZ2c0FuajY4Um5IcVVBTXNsRjZmWVNkdHNwclExWXZlb2w?oc=5) — Trump Crypto Policy
 
@@ -127,9 +128,9 @@ image: "/assets/images/generated/og-daily-social-media-digest-2026-02-12.png"
 
 ### 🟠 비트코인 (15건)
 
-- [[Telegram] Told my grandpa to buy bitcoin at $126k Sponsored by @rainbetcom](https://t.me/crypto/3487) — Telegram @crypto
-- [[Telegram] BlackRock clients just bought $231.6M in Bitcoin ETF, the largest in weeks. This also breaks a 2-day](https://t.me/crypto/3488) — Telegram @crypto
-- [[Telegram] ⚠️ $5.2 billion in shorts at risk $BTC hitting $80K would liquidate more than $5.3B in Bitcoin short](https://t.me/crypto/3490) — Telegram @crypto
+- [[Telegram Told my grandpa to buy bitcoin at $126k Sponsored by @rainbetcom](https://t.me/crypto/3487) — Telegram @crypto
+- [[Telegram BlackRock clients just bought $231.6M in Bitcoin ETF, the largest in weeks. This also breaks a 2-day](https://t.me/crypto/3488) — Telegram @crypto
+- [[Telegram ⚠️ $5.2 billion in shorts at risk $BTC hitting $80K would liquidate more than $5.3B in Bitcoin short](https://t.me/crypto/3490) — Telegram @crypto
 
 ### 📈 가격/시장 (22건)
 
@@ -139,9 +140,9 @@ image: "/assets/images/generated/og-daily-social-media-digest-2026-02-12.png"
 
 ### 🏦 거래소 (9건)
 
-- [[Telegram] 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown wallet Tx: https://t.co/aNttwwzxn](https://t.me/whale_alert/11520) — Telegram @whale_alert
-- [[Telegram] 33,000 #ETH (6,583,742 USD) transferred from #Bithumb to unknown wallet Tx: https://t.co/Wam8SjJEzv](https://t.me/whale_alert/11521) — Telegram @whale_alert
-- [[Telegram] 27,500,000 #XRP (5,734,068 USD) transferred from #Bithumb to unknown wallet Tx: https://t.co/M8YTk8v](https://t.me/whale_alert/11522) — Telegram @whale_alert
+- [[Telegram 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown wallet Tx: https://t.co/aNttwwzxn](https://t.me/whale_alert/11520) — Telegram @whale_alert
+- [[Telegram 33,000 #ETH (6,583,742 USD) transferred from #Bithumb to unknown wallet Tx: https://t.co/Wam8SjJEzv](https://t.me/whale_alert/11521) — Telegram @whale_alert
+- [[Telegram 27,500,000 #XRP (5,734,068 USD) transferred from #Bithumb to unknown wallet Tx: https://t.co/M8YTk8v](https://t.me/whale_alert/11522) — Telegram @whale_alert
 
 
 ---

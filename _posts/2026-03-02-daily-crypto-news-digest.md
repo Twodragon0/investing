@@ -6,8 +6,9 @@ categories: [crypto-news]
 tags: ["crypto", "news", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-02.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-03-02.png"
 description: "2026-03-02 암호화폐 88건 분석: 이란 보복으로 BTC·ETH·XRP 재차 급락, 비트코인 펀딩 비율 -6% 숏 스퀴즈 가능성. 비트코인 39건, 가격/시장 24건, 거래소 11건."
+excerpt: "2026-03-02 암호화폐 시장에서 88건의 뉴스를 분석했습니다. 오늘은 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 **2026-03-02** 암호화폐 시장에서 88건의 뉴스를 분석했습니다. 오늘은 **비트코인, 가격/시장, 거래소** 관련 소식이 주목됩니다.
@@ -116,7 +117,7 @@ description: "2026-03-02 암호화폐 88건 분석: 이란 보복으로 BTC·ETH
 **2. [이란 공습 후 비트코인·이더리움 ‘강한 상승’, 그러나 각 주(州) 재정 파장 대비](https://news.google.com/read/CBMihwFBVV95cUxPZ2VFN3ZWd3hBRGhZbTA4ZlRDSXdsVDZDOFcxNlRFU3pXSENOZ01ZTi14bFdMdEJjVzNnaHJoV2hfTUYxd1U0QWczQWZHME1OTGVjeXplS1VhZ05yVXc0TVJLcDRSVE9oQzBackpGT2t6NDNLNWRaVVYzZmF3YnhqS2dybDJtbjg?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
-**3. [[속보] 비트코인 이더리움 리플 "다시 급락 반전" 국제유가 폭등... 이란 대대적 보복 - 글로벌이코노믹](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPY2ljMHFfME43REx1M1F5YXZkOFlXRWFsekpHR1R4SFFENll6VkRfbldDVHBWeUJ4b2tOOWpWLTF5R1U3bWJZS1JpQW5meTNYWndtNVJWTVNVQ3QyRktaZGlMVkpuUUw3VWg1OUZtcXVaWTBzZ3NuS2lqb0g0RjRBV3ZHcGR1Zld5?oc=5)**
+**3. [[속보 비트코인 이더리움 리플 "다시 급락 반전" 국제유가 폭등... 이란 대대적 보복 - 글로벌이코노믹](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPY2ljMHFfME43REx1M1F5YXZkOFlXRWFsekpHR1R4SFFENll6VkRfbldDVHBWeUJ4b2tOOWpWLTF5R1U3bWJZS1JpQW5meTNYWndtNVJWTVNVQ3QyRktaZGlMVkpuUUw3VWg1OUZtcXVaWTBzZ3NuS2lqb0g0RjRBV3ZHcGR1Zld5?oc=5)**
 [속보] 비트코인 이더리움 리플 "다시 급락 반전" 국제유가 폭등...
 <span class="source-tag">Google News KR</span>
 

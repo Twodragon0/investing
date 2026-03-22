@@ -6,9 +6,10 @@ categories: [market-analysis]
 tags: [일일요약, 암호화폐, 주식, 규제, 소셜미디어, 보안]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-news-summary-2026-02-13.png"
+image: "/assets/images/generated/news-briefing-summary-2026-02-13.png"
 description: "암호화폐 111건, 주식 158건, 보안 1건, 규제 30건, 소셜 미디어 39건의 뉴스를 종합 분석한 일일 요약입니다."
 pin: false
+excerpt: "극도의 공포 구간에서 분할 매수 고려 (BTC $67,605 수준) AI 공포 완화 여부 모니터링 (기술주 변동성 주시) 금요일 CPI 발표 주목 (인플레이션 지표가 시장…"
 ---
 
 > 암호화폐 111건, 주식 158건, 보안 1건, 규제 30건, 소셜 미디어 39건의 뉴스를 종합 분석한 일일 요약입니다.

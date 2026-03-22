@@ -6,8 +6,9 @@ categories: [market-analysis]
 tags: [market-summary, daily, crypto, stock, macro, top-coins]
 source: "auto-generated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-market-report-2026-02-14.png"
-description: "암호화폐 시장이 보합세를 보이고 있습니다. 뚜렷한 방향성 없이 횡보 구간이 이어지고 있습니다."
+image: "/assets/images/generated/news-briefing-market-2026-02-14.png"
+description: "일일 시장 종합 리포트 - 2026-02-14 관련 시장 분석 리포트입니다. 주요 키워드: market-summary, daily, crypto, stock."
+excerpt: "KOSPI: 5,507.01 (-15.26, -0.28%) KOSDAQ: 1,106.08 (-19.91, -1.77%) USD/KRW 환율: 1,440.90 (-0.61,…"
 ---
 
 ## 오늘의 핵심

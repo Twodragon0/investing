@@ -7,7 +7,7 @@ tags: ["stock", "market", "daily-digest"]
 keywords: "stock, market, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-17.png"
+image: "/assets/images/generated/news-briefing-stock-2026-03-17.png"
 permalink: "/stock-news/2026/03/17/daily-stock-news-digest/"
 description: "2026-03-17 주식 시장에서 166건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,549.85(+1.14%), KOSDAQ 1,138.29(-1.27%), USD/KRW 1,493.17(-0.29%)."
 excerpt: "2026-03-17 주식 시장에서 166건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,549.85(+1.14%), KOSDAQ 1,138.29(-1.27%),…"
@@ -48,7 +48,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-17 - stock-news 뉴스 요약 
 
 ## 전체 뉴스 요약
 
-- 총 **9건** 수집
+- 총 **166건** 수집
 - KOSPI 5,549.85 (+1.14%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 1,138.29 (-1.27%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
 
@@ -94,7 +94,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-17 - stock-news 뉴스 요약 
 <details><summary>그 외 42건 보기</summary><div class="details-content"><ol class="news-overflow-list">
 <li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1ZUU5ya0tWNFVzVDZUeGhieDh5RkhNc2JPVHZTSGRsRlgtaklEaGJmZzFiZUJVSGZoRElrdXp6ZUVPb3ZZVTNUQjY3Y1NzUUVMT1prRzAyMWlxbTYxYkdXcW9RdjltSFXSAWdBVV95cUxNWVFOcmtLVjRVc1Q2VHhoYng4eUZITXNiT1R2U0hkbEZYLWpJRGhiZmcxYmVCVUhmaERJa3V6emVFT292WVUzVEI2N2NTc1FFTE9aa0cwMjFpcW02MWJHV3FvUXY5bUhV?oc=5">“오르는 반도체 주가…지금 삼성전자 사야 할까, 기다려야 할까” - abcn.kr</a></li>
 <li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQTWFDQUNQRHJCbGc0TjhvX2h3enltOUhNblZTMWNEZ1JtTnluVnV4c3R1Vkg0REx3SzdXQ09HRENIdnBMSEdOVjc3UDRqaXJNMGN2SndtdHB6UC1wVV82dmt2Y0sycXdGZGt1OVBMV2owZmIzcGJsSjl3dGdJRk9NdmRQbV9VQ016?oc=5">특징주] 삼성전자·SK하이닉스, 증권가 목표주가 줄상향에 '상승'</a></li>
-<li><em>.외 27건</em></li>
+<li><em>외 27건</em></li>
 </ol></div></details>
 
 

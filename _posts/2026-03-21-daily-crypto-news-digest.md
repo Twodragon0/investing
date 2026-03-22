@@ -105,7 +105,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-21 - crypto-news 뉴스 요�
 <details><summary>그 외 47건 보기</summary><div class="details-content"><ol class="news-overflow-list">
 <li><a href="https://news.google.com/read/CBMiwwFBVV95cUxPVTJUZno2VHo5RXdlSjRsYTBBVHpfY25vbnYzSmpIdDRCN1RKdW9mR1RuSC1OUVd5SXJqZWZWZVB3LVM0N0RsVjZINDROSWJOa0NHQzNjNXZxNUVzY09xamRqNlJxeFVvOXk2R3hNVXRGQ094d1NBSEZORktJbzBhUXBNQ2I1ZFhUUTF6Qms1M0JkNUYxOFJqeU5RWXJuQllXYUg4VElDUjlPR1RubTJXS2Vnc2ZzOEJoR0tLbFZzNTlLcVU?hl=en-US&gl=US&ceid=US%3Aen">비트코인 장기 장기 정책이 자산 전체에 영향을 미치면서 가격이 $70,000 하락합니다.</a></li>
 <li><a href="https://news.google.com/read/CBMiswFBVV95cUxPT3FtbVYtNkpwYkVxLVdMSUxCcHl3a2tOLTExN3lnNnpvREVtSEVFNVFnWTk3YV96ZzliZ1ZUZWx1c1BOWjZhQVd2MDVxZVF0Q1piUlRDOFBGbjNFdDlKQ2hTcWU2TnN3cm1XZlZFanJGZFF4aFVCVS1MYmhlb3hpMnROUHpIMzA2WXd0SUJ1WnhSVzhnTk1MT2s0aHlIQ19pdi16Z1B3TTdEUlUzNkZKY0hhWQ?hl=en-US&gl=US&ceid=US%3Aen">비트코인 이란 분쟁이 확대됨에 따라 6주 최고치에서 후퇴</a></li>
-<li><em>.외 32건</em></li>
+<li><em>외 32건</em></li>
 </ol></div></details>
 
 
@@ -148,7 +148,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-21 - crypto-news 뉴스 요�
 <li><a href="https://news.google.com/read/CBMi0gFBVV95cUxPQW15ZXBSTXFJVVF2QXBXaU9ZYUtFSlNyczh2azljVTRHUG9kcEtVdXpUYkZ0cnlwOE9jcVJRNGVNTy1TRWxMeV9MRnZ2eklTZldaQjhxcTdNZTRyUjdxOXBBcThZQ0F5TjNWeFFDYnAzY3c5M0JzeFBFb3JMWVlPcGZDUGNGU04zTEUwQmxIX1hlMTNJc1pkQ3FVVVFpRDBKT1hQNUdHamJ3c3dsMWlxMGozX0hTOTUtMlp2eTlLZjdHNm5iNVBLOE1ldGxFX2RCN0E?hl=en-US&gl=US&ceid=US%3Aen">비트코인 오늘 가격: 유가 급락 후 $71,000 근처에서 안정, 매파적 연준</a></li>
 <li><a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxQRzVvNUpvNkZiSGhBTlhOSVVJTFpHeGtUWHRNVGVxOTZ0TXlEVDB2LUZVSGVTdndNRnRmU2N1bVYzaVpKNEYwTkwwSy02YktuZU1CYUp5VV9QQmMyYnV2VzQ5MUQ5Uk9Ocm9oQTFKUGIwUUt5SDk3Mm1qdzdZUVc5b040OG9fZWViNnNz?oc=5">금리 인하 희망이 약화되면서 암호화폐 주가 급락 (BTC-USD:Cryptocurrency)</a></li>
 <li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFBGZEktVW9SSWZWaFE3c2FFWGFieDVOXzZuMWVYRTJaazJxQV91WUdMMUxkYk1GM21rdG5kQ3BqczZ3XzhRVEozd2JtVUlBaURHNjBobUpxMnlaVENjanVzS0l1RVB1c2tu?oc=5">2026년 3월 20일 이더리움의 현재 가격 - Fortune</a></li>
-<li><em>.외 11건</em></li>
+<li><em>외 11건</em></li>
 </ol></div></details>
 
 
@@ -235,7 +235,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-21 - crypto-news 뉴스 요�
 <li><a href="https://news.google.com/read/CBMilwFBVV95cUxNQ1JOYnFacTh2TlVsa2FubHNqdGl0d29EWXlSOWVOa0NHaE5VT25oeGtLc1k4YmpkM280SkNPUGg0OHk4SDd6T3hzaHV1bHlIdWVmQnRScG5VN1BGMG1aYWlTUzNwT3VRblItVE5IbE5oRkUyZXUyMHVfOHBTUlo4RDZQcVBWZGgtRUV6ZnFGMk5PVW9RbnpN?hl=en-US&gl=US&ceid=US%3Aen">XRP 뉴스: SEC은 비트코인과 함께 디지털 상품으로 분류되었습니다. - XRP 가격의 의미</a></li>
 <li><a href="https://decrypt.co/361870/kentucky-senate-strip-hardware-wallet-provision-crypto-bill">켄터키 상원, 암호화폐 법안에서 하드웨어 지갑 제공 중단 촉구</a></li>
 <li><a href="https://decrypt.co/361819/fake-fbi-crypto-tokens-used-threaten-tron-users-authorities-warn">가짜 FBI 암호화 토큰이 트론 사용자를 위협하는 데 사용되고 있다고 당국이 경고했습니다.</a></li>
-<li><em>.외 2건</em></li>
+<li><em>외 2건</em></li>
 </ol></div></details>
 
 

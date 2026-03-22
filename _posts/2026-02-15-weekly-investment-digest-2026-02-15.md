@@ -7,7 +7,8 @@ tags: [weekly-digest, summary, market-analysis]
 source: "auto-generated"
 lang: "ko"
 description: "이번 주 (02월 08일 ~ 02월 15일) 투자 시장의 주요 동향과 핵심 이슈를 종합 분석합니다."
-image: "/assets/images/generated/og-weekly-investment-digest-2026-02-15-2026-02-15.png"
+image: "/assets/images/generated/news-summary-weekly-2026-02-15.png"
+excerpt: "이번 주 (02월 08일 02월 15일) 투자 시장의 주요 동향과 핵심 이슈를 종합 분석합니다. 긴급 알림 1건에 대한 선별 모니터링 - Investing Dragon 자동…"
 ---
 
 이번 주 (02월 08일 ~ 02월 15일) 투자 시장의 주요 동향과 핵심 이슈를 종합 분석합니다.

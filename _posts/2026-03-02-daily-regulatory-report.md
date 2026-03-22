@@ -6,8 +6,9 @@ categories: [regulatory-news]
 tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-regulatory-report-2026-03-02.png"
+image: "/assets/images/generated/news-briefing-regulatory-2026-03-02.png"
 description: "2026-03-02 글로벌 규제 21건: 한국 20건(벤처지원 칸막이 제거·보이스피싱·국민성장펀드 운용사), SEC 비공개시장 라운드테이블, 단일종목 레버리지 ETF 세부방안 검토 중."
+excerpt: "1. Private Markets Roundtable - SEC.gov Private Markets Roundtable SEC.gov 1. [[금융위 1박2일 현장방문] 벤처…"
 ---
 
 2026-03-02 SEC 비공개 시장 라운드테이블, 금융위 국민성장펀드 등 글로벌 규제 동향 21건 분석.
@@ -47,7 +48,7 @@ Private Markets Roundtable SEC.gov
 
 ## 한국 규제 동향
 
-**1. [[금융위 1박2일 현장방문] 벤처 보육프로그램간의 칸막이를 없애 비수도권에 대한 벤처지원을 강화하겠습니다.](https://www.fsc.go.kr/no010101/86351)**
+**1. [[금융위 1박2일 현장방문 벤처 보육프로그램간의 칸막이를 없애 비수도권에 대한 벤처지원을 강화하겠습니다.](https://www.fsc.go.kr/no010101/86351)**
 *자세한 내용은 첨부파일을 확인해주세요
 <span class="source-tag">금융위원회 보도자료</span>
 
@@ -55,7 +56,7 @@ Private Markets Roundtable SEC.gov
 *자세한 내용은 첨부파일을 확인해주세요
 <span class="source-tag">금융위원회 보도자료</span>
 
-**3. [[금융위 1박2일 현장방문]  국민성장펀드가 대구·경북지역의 방산·로봇산업 중심지 도약을 지원합니다.](https://www.fsc.go.kr/no010101/86343)**
+**3. [[금융위 1박2일 현장방문  국민성장펀드가 대구·경북지역의 방산·로봇산업 중심지 도약을 지원합니다.](https://www.fsc.go.kr/no010101/86343)**
 [금융위 1박2일 현장방문] 국민성장펀드가 대구·경북지역의 방산·로봇산업 중심지 도약을 지원합니다.
 <span class="source-tag">금융위원회 보도자료</span>
 
@@ -90,8 +91,8 @@ Private Markets Roundtable SEC.gov
 ### 🔵 규제/정책 (15건)
 
 - [Private Markets Roundtable - SEC.gov](https://news.google.com/rss/articles/CBMie0FVX3lxTFA4RFJmV0U2eVJfOWxMVWplRFdIZHVKMkxSaEU1UGZaaTFyb2ZTY1RWbmdjdXNKVmJpaFl1Z05XcWUyU0FZVDQ2c2ZVanlLdGFxZ29jdDg4VHZld1FpN0tKeG4xV2cwdjhkb2VyRkRDYnNvSUo0UmhmOGxvZw?oc=5) — SEC (Google News)
-- [[금융위 1박2일 현장방문] 벤처 보육프로그램간의 칸막이를 없애 비수도권에 대한 벤처지원을 강화하겠습니다.](https://www.fsc.go.kr/no010101/86351) — 금융위원회 보도자료
-- [[금융위 1박2일 현장방문]  국민성장펀드가 대구·경북지역의 방산·로봇산업 중심지 도약을 지원합니다.](https://www.fsc.go.kr/no010101/86343) — 금융위원회 보도자료
+- [[금융위 1박2일 현장방문 벤처 보육프로그램간의 칸막이를 없애 비수도권에 대한 벤처지원을 강화하겠습니다.](https://www.fsc.go.kr/no010101/86351) — 금융위원회 보도자료
+- [[금융위 1박2일 현장방문  국민성장펀드가 대구·경북지역의 방산·로봇산업 중심지 도약을 지원합니다.](https://www.fsc.go.kr/no010101/86343) — 금융위원회 보도자료
 
 ### 🟠 비트코인 (1건)
 
@@ -103,7 +104,7 @@ Private Markets Roundtable SEC.gov
 
 ### 🏛️ 정치/정책 (7건)
 
-- [[금융위 1박2일 현장방문]  국민성장펀드가 대구·경북지역의 방산·로봇산업 중심지 도약을 지원합니다.](https://www.fsc.go.kr/no010101/86343) — 금융위원회 보도자료
+- [[금융위 1박2일 현장방문  국민성장펀드가 대구·경북지역의 방산·로봇산업 중심지 도약을 지원합니다.](https://www.fsc.go.kr/no010101/86343) — 금융위원회 보도자료
 - [차세대 이차전지와 첨단반도체 기술의 초격차 확보와 관련 생태계 강화를 국민성장펀드가 지원합니다.](https://www.fsc.go.kr/no010101/86341) — 금융위원회 보도자료
 - [‘26년 국민성장펀드 간접투자부문(7조원)에 투입되는 재정(4,500억원) 및 자펀드 관리업무를 수행할 재정모펀드 운용사를 선정하였습니다.](https://www.fsc.go.kr/no010101/86340) — 금융위원회 보도자료
 

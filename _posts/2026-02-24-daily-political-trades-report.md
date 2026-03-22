@@ -7,7 +7,8 @@ tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-
 source: "consolidated"
 lang: "ko"
 description: "2026-02-24 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. 미국 의회 거래 2건, SEC 내부자 거래 12건, 트럼프 정책 8건, 중앙은행 3건, 총 25건이 수집되었습니다."
-image: "/assets/images/generated/og-daily-political-trades-report-2026-02-24.png"
+image: "/assets/images/generated/news-briefing-political-2026-02-24.png"
+excerpt: "트럼프 관련 8건의 정책 뉴스가 수집되었습니다. 행정명령 및 관세 정책은 글로벌 시장에 직접적인 영향을 미치고 있습니다. 1. As Rep. Julia Letlow runs…"
 ---
 
 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
@@ -121,7 +122,7 @@ Travelers (TRV) EVP Daniel Yin exercises stock options and withholds shares for 
 “환율·집값 여전히 리스크”···한은, 2월 금통위 기준금리 동결 전망에 무게 By 투데이코리아 Investing.com 한국어
 <span class="source-tag">한국은행 금리결정</span>
 
-**2. [[기준금리 D-2] "내릴 기미가 없다"…금리 '6연속 동결' 예상, 청년들에겐 '희망 고문' - 데일리팝](https://news.google.com/rss/articles/CBMiaEFVX3lxTE02WmVRb2JuUGdXWUtqRnpXYzRQakswMkF2ZUhCUWpXUEdGdi0zQjVfeVJmUnRKZS11Z3JPSm4wSFI0TTlaQXRhMHlEY2c4TkNqSFhPLUw4Z3dQWGhobVBWaG9tYmdfOUlC?oc=5)**
+**2. [[기준금리 D-2 "내릴 기미가 없다"…금리 '6연속 동결' 예상, 청년들에겐 '희망 고문' - 데일리팝](https://news.google.com/rss/articles/CBMiaEFVX3lxTE02WmVRb2JuUGdXWUtqRnpXYzRQakswMkF2ZUhCUWpXUEdGdi0zQjVfeVJmUnRKZS11Z3JPSm4wSFI0TTlaQXRhMHlEY2c4TkNqSFhPLUw4Z3dQWGhobVBWaG9tYmdfOUlC?oc=5)**
 [기준금리 D-2] "내릴 기미가 없다"…금리 '6연속 동결' 예상, 청년들에겐 '희망 고문' 데일리팝
 <span class="source-tag">한국은행 금리결정</span>
 

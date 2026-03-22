@@ -6,8 +6,9 @@ categories: [political-trades]
 tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-trading]
 source: "consolidated"
 lang: "ko"
-description: "미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다."
-image: "/assets/images/generated/og-daily-political-trades-report-2026-02-21.png"
+description: "정치인 거래 리포트: 정치인 거래·정책 리포트 - 2026-02-21. 입법 동향과 의원 포트폴리오를 분석합니다. 주요 키워드: political-trades, congress, sec, trump."
+image: "/assets/images/generated/news-briefing-political-2026-02-21.png"
+excerpt: "주요 테마: 정치/정책, 매크로/금리, 가격/시장 트럼프 관련 32건의 정책 뉴스가 수집되었습니다. 행정명령 및 관세 정책은 글로벌 시장에 직접적인 영향을 미치고 있습니다."
 ---
 
 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
@@ -73,7 +74,7 @@ Nancy Pelosi, Brad Gerstner Pile Into The Same 5 Stocks — What Do They See Com
 트럼프, ‘상호관세 종료’ 행정명령대법원 판결 이행 헤럴드경제
 <span class="source-tag">트럼프 행정명령 KR</span>
 
-**5. [[속보] 트럼프 대통령 "모든 나라에 대한 10% 관세 행정명령 방금 서명" - 한스경제](https://news.google.com/rss/articles/CBMia0FVX3lxTE9qa2tQY016S3Z6S3kyd0F2QU9RbWNkeWV1VkxKMjRlXzYzaWMzaUhvSEhVdDV2cTN6N0ZadTMxU0Z5d0xzX1UxNzBIdnRKZWhDUGxCUll6Z0t1YmRzYTVrbjFBd2NUaU9EdHR3?oc=5)**
+**5. [[속보 트럼프 대통령 "모든 나라에 대한 10% 관세 행정명령 방금 서명" - 한스경제](https://news.google.com/rss/articles/CBMia0FVX3lxTE9qa2tQY016S3Z6S3kyd0F2QU9RbWNkeWV1VkxKMjRlXzYzaWMzaUhvSEhVdDV2cTN6N0ZadTMxU0Z5d0xzX1UxNzBIdnRKZWhDUGxCUll6Z0t1YmRzYTVrbjFBd2NUaU9EdHR3?oc=5)**
 [속보] 트럼프 대통령 "모든 나라에 대한 10% 관세 행정명령 방금 서명" 한스경제
 <span class="source-tag">트럼프 행정명령 KR</span>
 
@@ -133,7 +134,7 @@ Albemarle (ALB) director converts deferred phantom stock into common shares Stoc
 
 ## 중앙은행 정책 동향
 
-**1. [[다음주 경제] 한은 기준금리 결정지난해 출산율 올랐나 - 연합뉴스 한민족센터](https://news.google.com/rss/articles/CBMic0FVX3lxTE1lNC1IdGM0SXBkaC1ZRWN3ZFplaFNoX0xsYWtBSVFKaEw0cE4xVE9hcXJLLUtkMkJ2ZnJQUXE3bGM1VWdQVEhVamk2ZEFWMWUzT3p6UHRoZTBpSUh4QjQtb3RDNXZORWxCQXp6Tk1Fa1k3MTg?oc=5)**
+**1. [[다음주 경제 한은 기준금리 결정지난해 출산율 올랐나 - 연합뉴스 한민족센터](https://news.google.com/rss/articles/CBMic0FVX3lxTE1lNC1IdGM0SXBkaC1ZRWN3ZFplaFNoX0xsYWtBSVFKaEw0cE4xVE9hcXJLLUtkMkJ2ZnJQUXE3bGM1VWdQVEhVamk2ZEFWMWUzT3p6UHRoZTBpSUh4QjQtb3RDNXZORWxCQXp6Tk1Fa1k3MTg?oc=5)**
 [다음주 경제] 한은 기준금리 결정지난해 출산율 올랐나 연합뉴스 한민족센터
 <span class="source-tag">한국은행 금리결정</span>
 
@@ -141,11 +142,11 @@ Albemarle (ALB) director converts deferred phantom stock into common shares Stoc
 '금통위 D-5' 금리 동결 우세"성장률 0.1~0.2%p 상향 가능성" 데일리안
 <span class="source-tag">한국은행 금리결정</span>
 
-**3. [[김남현의 채권썰] 관세 판결 후폭풍·금통위·이란 공습 눈치보기 - 이투데이](https://news.google.com/rss/articles/CBMiVEFVX3lxTE04bTA5NGd4WFB0NTBSYjlWckFuSjd3VC1IeFR5V3U1enJpYUtjeXpzaWZMb05aM2NsUWxpUERKLVJSZjNVYzlrU3JkQjRmLTh6ZGI2NQ?oc=5)**
+**3. [[김남현의 채권썰 관세 판결 후폭풍·금통위·이란 공습 눈치보기 - 이투데이](https://news.google.com/rss/articles/CBMiVEFVX3lxTE04bTA5NGd4WFB0NTBSYjlWckFuSjd3VC1IeFR5V3U1enJpYUtjeXpzaWZMb05aM2NsUWxpUERKLVJSZjNVYzlrU3JkQjRmLTh6ZGI2NQ?oc=5)**
 [김남현의 채권썰] 관세 판결 후폭풍·금통위·이란 공습 눈치보기 이투데이
 <span class="source-tag">한국은행 금리결정</span>
 
-**4. [[다음주 경제] 한은 기준금리 결정 작년 출산율 올랐나 - 글로벌경제신문](https://news.google.com/rss/articles/CBMibEFVX3lxTFB0Wlk0R1lTUk13eHBuOTd3bHlFRHhSdUtmRGFpR0dKQUlJdlJQb2ZnNXo3TVE0M0hMNVhvUTFrQU1wN0t5cWc0a01vTUF5YVlUNFBXems3OGhDSmtnQWVDcDJTYU5KOTJwYTNrTdIBcEFVX3lxTE0tOFJyZVlVdElqeUFOdi1mdFV6ZjVUOTNRRG1XWGpTWWotREZYWHpBY0FBckhyclRWWmx2MURjRk9tcTBjZzN5NEplLUZhcXZBNko3ckdmdDhva3RpcDBnU2lGendlZjRKQjFMeGcxZ0g?oc=5)**
+**4. [[다음주 경제 한은 기준금리 결정 작년 출산율 올랐나 - 글로벌경제신문](https://news.google.com/rss/articles/CBMibEFVX3lxTFB0Wlk0R1lTUk13eHBuOTd3bHlFRHhSdUtmRGFpR0dKQUlJdlJQb2ZnNXo3TVE0M0hMNVhvUTFrQU1wN0t5cWc0a01vTUF5YVlUNFBXems3OGhDSmtnQWVDcDJTYU5KOTJwYTNrTdIBcEFVX3lxTE0tOFJyZVlVdElqeUFOdi1mdFV6ZjVUOTNRRG1XWGpTWWotREZYWHpBY0FBckhyclRWWmx2MURjRk9tcTBjZzN5NEplLUZhcXZBNko3ckdmdDhva3RpcDBnU2lGendlZjRKQjFMeGcxZ0g?oc=5)**
 [다음주 경제] 한은 기준금리 결정 작년 출산율 올랐나 글로벌경제신문
 <span class="source-tag">한국은행 금리결정</span>
 
@@ -153,16 +154,16 @@ Albemarle (ALB) director converts deferred phantom stock into common shares Stoc
 '6천 포인트 눈앞' 코스피, 美관세 변수 넘어설까금통위 금리결정도 '주목' ER 이코노믹리뷰
 <span class="source-tag">한국은행 금리결정</span>
 
-**6. [6회 연속 금리 동결 이어가나올해 2월 금통위 주시[한은 미리보기] - edaily.co.kr](https://news.google.com/rss/articles/CBMigAFBVV95cUxOdElPb1ZCc1hJdVg2Uy1SdFBVV2lOR29yaFVfLTZhSndaWDhQbFdObzNVTzd0M1EtYWZhMlc2aGpRY0JqOFdoU21KZi12bnFpZmNuU1R6cTdyWnd4MUFhY0tuX0dwSDlFRHpBMGpSek02eUR2cXV3NlJZb0h0NGNOLQ?oc=5)**
+**6. [6회 연속 금리 동결 이어가나올해 2월 금통위 주시[한은 미리보기 - edaily.co.kr](https://news.google.com/rss/articles/CBMigAFBVV95cUxOdElPb1ZCc1hJdVg2Uy1SdFBVV2lOR29yaFVfLTZhSndaWDhQbFdObzNVTzd0M1EtYWZhMlc2aGpRY0JqOFdoU21KZi12bnFpZmNuU1R6cTdyWnd4MUFhY0tuX0dwSDlFRHpBMGpSek02eUR2cXV3NlJZb0h0NGNOLQ?oc=5)**
 <span class="source-tag">한국은행 금리결정</span>
 
-**7. [[다음주경제] 한은 금리 결정·출산율·가계소득 지표 발표경제지표 ‘집중 공개’ - 산경투데이](https://news.google.com/rss/articles/CBMicEFVX3lxTE84dVg4cXBEc2d4azdDdXlPRFBGLV9DWUo1YlZtcjROUXZMWVZMamlHWS1aenY1YUQ3QTh5VkZmYzE1WXdVOU5rY1gxMjFmTmlFQWU2bndCeFJrckhubnlfR2lSemlzZ0N0QkdZTmR1YmHSAXRBVV95cUxNblktRnV1WjZwb3ZPUm5jdXp0TjNGVFZFeFBUZjY1QUFxLXMzU0FvUjRHNUo3dFp0MkpPT3JXdnd5ZjNjdUVlSGFBcWJkSVZYRHlpSWFZUkV3R1A2WDZDVV9VVl9nZzdjRkRzTkZ5QTFhTlNPeA?oc=5)**
+**7. [[다음주경제 한은 금리 결정·출산율·가계소득 지표 발표경제지표 ‘집중 공개’ - 산경투데이](https://news.google.com/rss/articles/CBMicEFVX3lxTE84dVg4cXBEc2d4azdDdXlPRFBGLV9DWUo1YlZtcjROUXZMWVZMamlHWS1aenY1YUQ3QTh5VkZmYzE1WXdVOU5rY1gxMjFmTmlFQWU2bndCeFJrckhubnlfR2lSemlzZ0N0QkdZTmR1YmHSAXRBVV95cUxNblktRnV1WjZwb3ZPUm5jdXp0TjNGVFZFeFBUZjY1QUFxLXMzU0FvUjRHNUo3dFp0MkpPT3JXdnd5ZjNjdUVlSGFBcWJkSVZYRHlpSWFZUkV3R1A2WDZDVV9VVl9nZzdjRkRzTkZ5QTFhTlNPeA?oc=5)**
 <span class="source-tag">한국은행 금리결정</span>
 
 **8. [다음주 한국은행 금통위 개최기준금리 6연속 동결 '유력' - 뉴스웍스](https://news.google.com/rss/articles/CBMib0FVX3lxTFBRc3lwX3RKa2FmclE2M1ppQktXRU82Z2hDUGFnSmoyY0RsYjB5Uy01WndMTkptRmFfMUV1TXUzUXlwWHFiVUdqNVp5Vi12VkdYUVgwd0JmRmtDbVRoNWxSRWZMd1VhVkp2RkRYNkZmMNIBc0FVX3lxTFB6MWV5YnFlOGZIUDZXaTEtbnp4RDdiX2ZFX2dDWWlLTmR0UHVraGhlcVlNd0dGdy1LY3FMdVFVallRdDlsYkNlUER5X01LNnVQZ0pkVl9fc2RJd1UyVzl3YlAxSmRiMUVXWm1yT1d5Yi1RM3M?oc=5)**
 <span class="source-tag">한국은행 금리결정</span>
 
-**9. [[박수진의 머니워치] 증권·보험주 상승세기준금리 동결 전망 - 뉴스워치](https://news.google.com/rss/articles/CBMiaEFVX3lxTE1HYTVMU2Y0bEluVWxNbG0xMFZzajBoMUhYbnpDUzNhOExfSU9uQzNmcTlaLWpUeXZvWnRqWkk0WlFzcFZiXy1rcWFJWllJS1g1dWNVaFBuR2pReXRwRG1rbW5vWUxSbENE?oc=5)**
+**9. [[박수진의 머니워치 증권·보험주 상승세기준금리 동결 전망 - 뉴스워치](https://news.google.com/rss/articles/CBMiaEFVX3lxTE1HYTVMU2Y0bEluVWxNbG0xMFZzajBoMUhYbnpDUzNhOExfSU9uQzNmcTlaLWpUeXZvWnRqWkk0WlFzcFZiXy1rcWFJWllJS1g1dWNVaFBuR2pReXRwRG1rbW5vWUxSbENE?oc=5)**
 <span class="source-tag">한국은행 금리결정</span>
 
 

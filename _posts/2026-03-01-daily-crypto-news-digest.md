@@ -6,8 +6,9 @@ categories: [crypto-news]
 tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-01.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-03-01.png"
 description: "2026-03-01 암호화폐 108건 분석. 비트코인 51건(47%) 압도적, BTC 트럼프 채굴사 충격·Jane Street 음모론 화제. 가격/시장 28건, AI/기술 10건, 핫 키워드 bitcoin(31회)."
+excerpt: "2026-03-01 암호화폐 시장에서 108건의 뉴스를 분석했습니다. 오늘은 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 **2026-03-01** 암호화폐 시장에서 108건의 뉴스를 분석했습니다. 오늘은 **비트코인, 가격/시장, AI/기술** 관련 소식이 주목됩니다.
@@ -136,7 +137,7 @@ description: "2026-03-01 암호화폐 108건 분석. 비트코인 51건(47%) 압
 $5,000으로 영구 보유할 더 나은 암호화폐: XRP vs. Ethereum
 <span class="source-tag">Google News EN</span>
 
-**2. [[가상화폐 시세] 비트코인 9700만원대 유지…엑스알피 2000원선, 이더리움 280만원선 거래 - 이코노뉴스](https://news.google.com/rss/articles/CBMib0FVX3lxTE1wV3otVEFYbldQYjY3bkRlZjd3eC14dy1BQVNEdU9xX1J1X2VKT1dNT0dXNjBzM1NoN0d2Z0YxZUg5cmxqcHN4bldTckhEcE1fc3VKb3FPcU5BbEI0RjFGV3RMelU2VDRVSVVwNXZIcw?oc=5)**
+**2. [[가상화폐 시세 비트코인 9700만원대 유지…엑스알피 2000원선, 이더리움 280만원선 거래 - 이코노뉴스](https://news.google.com/rss/articles/CBMib0FVX3lxTE1wV3otVEFYbldQYjY3bkRlZjd3eC14dy1BQVNEdU9xX1J1X2VKT1dNT0dXNjBzM1NoN0d2Z0YxZUg5cmxqcHN4bldTckhEcE1fc3VKb3FPcU5BbEI0RjFGV3RMelU2VDRVSVVwNXZIcw?oc=5)**
 [가상화폐 시세] 비트코인 9700만원대 유지…엑스알피 2000원선, 이더리움 280만원선 거래 이코노뉴스
 <span class="source-tag">Google News KR</span>
 

@@ -7,8 +7,9 @@ tags: [market-report, crypto, top-coins, trending, daily]
 source: "CoinGecko"
 source_url: "https://www.coingecko.com/"
 lang: "ko"
-description: "암호화폐 시장 종합 리포트 - 2026-02-12"
-image: "/assets/images/generated/og-daily-crypto-market-report-2026-02-12.png"
+description: "암호화폐 시장 종합 리포트 - 2026-02-12 관련 시장 분석 리포트입니다. 주요 키워드: market-report, crypto, top-coins, trending."
+image: "/assets/images/generated/news-briefing-cryptomarket-2026-02-12.png"
+excerpt: "비트코인: $67,356 (24h -1.20% 하락) 공포/탐욕 지수: 5/100 (Extreme Fear) 암호화폐 시장은 현재 소폭 하락세를 보이고 있습니다. 단기 조정…"
 ---
 
 ## 시장 시각화

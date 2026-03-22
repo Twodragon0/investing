@@ -6,8 +6,9 @@ categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-social-media-digest-2026-02-23.png"
+image: "/assets/images/generated/news-briefing-social-2026-02-23.png"
 description: "2026-02-23 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 소셜 미디어 2건, 정치·경제 19건, 총 41건이 수집되었습니다."
+excerpt: "주요 테마: 정치/정책, 매크로/금리, 비트코인 긴급 알림 1건에 대한 선별 모니터링 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 **2026-02-23** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 소셜 미디어 2건, 정치·경제 19건, 총 41건이 수집되었습니다.
@@ -80,7 +81,7 @@ USDT 대규모 이전으로 시장 충격: 바이낸스로의 2억 달러 고래
 
 ## 정치·경제 동향
 
-**1. [[오늘 주요 경제·암호화폐 일정] 美 12월 공장수주 外 - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE5ZTUFlWGY3ckZReGRVLWFQdEplYWZvNHpBdWtOMkVLRjQtV2wxcDRJQzAyZGVVOTZ3Rko1dUFzaTdsMzBTdnZLb0dtRlB4cXpV?oc=5)**
+**1. [[오늘 주요 경제·암호화폐 일정 美 12월 공장수주 外 - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE5ZTUFlWGY3ckZReGRVLWFQdEplYWZvNHpBdWtOMkVLRjQtV2wxcDRJQzAyZGVVOTZ3Rko1dUFzaTdsMzBTdnZLb0dtRlB4cXpV?oc=5)**
 [오늘 주요 경제·암호화폐 일정] 美 12월 공장수주 外 블루밍비트
 <span class="source-tag">트럼프 경제정책 KR</span>
 
@@ -88,7 +89,7 @@ USDT 대규모 이전으로 시장 충격: 바이낸스로의 2억 달러 고래
 이거 혹시 시그널? 트럼프 일가, 마러라고서 크립토 세력 과시 이유는[나우,어스]
 <span class="source-tag">트럼프 경제정책 KR</span>
 
-**3. [[한주간 주요 경제·암호화폐 일정] 도널드 트럼프 미국 대통령 국정연설 外 - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE5ockxSd25VbWNOOGN5WnpIa0tTTWQ4cEg0T1Awa3gyaFdrT0hvRU5xeG5SRzVQbkFXMkVnQnBZNzNDVWdISFFqbmxxVEdjQ1hh?oc=5)**
+**3. [[한주간 주요 경제·암호화폐 일정 도널드 트럼프 미국 대통령 국정연설 外 - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE5ockxSd25VbWNOOGN5WnpIa0tTTWQ4cEg0T1Awa3gyaFdrT0hvRU5xeG5SRzVQbkFXMkVnQnBZNzNDVWdISFFqbmxxVEdjQ1hh?oc=5)**
 [한주간 주요 경제·암호화폐 일정] 도널드 트럼프 미국 대통령 국정연설 外 블루밍비트
 <span class="source-tag">트럼프 경제정책 KR</span>
 
@@ -106,7 +107,7 @@ Trump’s Trade Gamble Will Continue, Despite Supreme Court Rebuke The New York 
 **7. [10% becomes 15%: How stock market may react to Trump’s tariff shift on Monday - The Economic Times](https://news.google.com/rss/articles/CBMi-wFBVV95cUxPNFJFOGFlMi1oME5wMUd0QWFyMHRqNUxhTVdSbHJ0SW96SEtHdVpUSWM3ZU4wWmNSZExlaUR2ZkJQZXlzR0owbDFQX3pNSlBBZVY3UHBtUExocFNpS1dTS1p6b3BpdFNwcXJUTkRyWHFHcWJKUVQ0NWRRbHRvT2JqZThoZmhEeUhwdWwzRnZIOW00MnFSUFNkcWRxalpqVW1vNXdoV1oyRXNqTnhaYlRYbkYwOFZVSi1DNDIybnVFbmR0X3dhZEdxclZ0Vk5xWmdHTzg3VDJyM0dpNjFSMVVaM0RlT0hEeFV5YUxiTlFWSFFobXlqVHBoWHZZa9IBgAJBVV95cUxPUVhVdXFsQmZNVkowY2w0TU0zS0VNLWp3UHlQOTdzUm1YSy1URjRMbWhleWVOaWhJQmVJZVNFYl9xU2lTRkpzdHgxTmNmcUNxdjBKeURKWGdzV3luMXY3TDZ5bXhENXA3UXF2UVc2aDNKZUJiWThiQTFRNkRIa2ZxNTItWDZOSnBjOWhlU0dLTzlzdDEtN3dUNnlUSDNwZ3VSNjRSclpicGtMcnJfNjh6bTdZT2dzc2NqR2t6ZVBlSDRFZk93ZFhPQ3N6WlVBME5BVUROVXM0TC0xbEFGVUNwNGJzMDJmOXJhYnhLM0dxa2RjelVpMUYzcDJrZGwwXzdw?oc=5)**
 <span class="source-tag">Trump Economy</span>
 
-**8. [[기획특집] 이재명 「국민주권정부」 ⑦ 경제정책 라인, 경제정책 - 르몽드 디플로마티크](https://news.google.com/rss/articles/CBMiaEFVX3lxTE9UcGdPV0taUWtfU1lwRXZPVnY1NTdldHQyN3lkOEJYU0ZoY1pGNzRhVnh6QWpLUU5NRXVsZ2JjLXdvNXdZVmRQTjJsbzAxaXE1TmlKSWxvLVFEbmhraklTblNuS0lFUU44?oc=5)**
+**8. [[기획특집 이재명 「국민주권정부」 ⑦ 경제정책 라인, 경제정책 - 르몽드 디플로마티크](https://news.google.com/rss/articles/CBMiaEFVX3lxTE9UcGdPV0taUWtfU1lwRXZPVnY1NTdldHQyN3lkOEJYU0ZoY1pGNzRhVnh6QWpLUU5NRXVsZ2JjLXdvNXdZVmRQTjJsbzAxaXE1TmlKSWxvLVFEbmhraklTblNuS0lFUU44?oc=5)**
 <span class="source-tag">이재명 경제정책</span>
 
 **9. [이차전지로 향한 외국인·기관 수급…美 상호관세 위법 판결 영향은? - 매일신문](https://news.google.com/rss/articles/CBMiYkFVX3lxTE5STFNnMU5XYklEY3hoTVJDUVkxNm9YdzM0VDIxa3R0bUFqYTNrSjRicXo2RGlOeGtsbHNGN0M3NlNRTHk3Rk1tUDJOazdlNkZqYm5yeFZVckswQ0RhOHgzOUVB?oc=5)**
@@ -123,33 +124,33 @@ Trump’s Trade Gamble Will Continue, Despite Supreme Court Rebuke The New York 
 
 ### 🏛️ 정치/정책 (8건)
 
-- [[Telegram] ERIC TRUMP: Being de-banked pushed Trump family towards crypto." The banks made the biggest mistake ](https://t.me/crypto/3517) — Telegram @crypto
-- [[한주간 주요 경제·암호화폐 일정] 도널드 트럼프 미국 대통령 국정연설 外 - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE5ockxSd25VbWNOOGN5WnpIa0tTTWQ4cEg0T1Awa3gyaFdrT0hvRU5xeG5SRzVQbkFXMkVnQnBZNzNDVWdISFFqbmxxVEdjQ1hh?oc=5) — 트럼프 경제정책 KR
+- [[Telegram ERIC TRUMP: Being de-banked pushed Trump family towards crypto." The banks made the biggest mistake ](https://t.me/crypto/3517) — Telegram @crypto
+- [[한주간 주요 경제·암호화폐 일정 도널드 트럼프 미국 대통령 국정연설 外 - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE5ockxSd25VbWNOOGN5WnpIa0tTTWQ4cEg0T1Awa3gyaFdrT0hvRU5xeG5SRzVQbkFXMkVnQnBZNzNDVWdISFFqbmxxVEdjQ1hh?oc=5) — 트럼프 경제정책 KR
 - [S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates - CNBC](https://news.google.com/rss/articles/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?oc=5) — Trump Economy
 
 ### 📊 매크로/금리 (9건)
 
-- [[Telegram] 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
-- [[Telegram] 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://](https://t.me/whale_alert/11524) — Telegram @whale_alert
-- [[이번주 경제]한은 기준금리 동결 유력…작년 합계출산율 주목(https://news.google.com/rss/articles/CBMiVEFVX3lxTE0xY2c5dFRzSFJIZ2wxTHJRaENsazBzbXBPMUxtSGNLbVM0c1JqSXhxOENSRllsakJ0VV9ZcTc0dXg2Ni1mQnUwblRuWmRQNkRqUGZkMw?oc=5) — 한국은행 금리정책
+- [[Telegram 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
+- [[Telegram 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://](https://t.me/whale_alert/11524) — Telegram @whale_alert
+- [[이번주 경제] 한은 기준금리 동결 유력…작년 합계출산율 주목(https://news.google.com/rss/articles/CBMiVEFVX3lxTE0xY2c5dFRzSFJIZ2wxTHJRaENsazBzbXBPMUxtSGNLbVM0c1JqSXhxOENSRllsakJ0VV9ZcTc0dXg2Ni1mQnUwblRuWmRQNkRqUGZkMw?oc=5) — 한국은행 금리정책
 
 ### 🟠 비트코인 (7건)
 
-- [[Telegram] This user is back after making some INSANE predictions in the past that all came true.He is now pred](https://t.me/crypto/3513) — Telegram @crypto
-- [[Telegram] Binance founder CZ predicts Bitcoin will reach between $500,000 and $1,000,000 this cycle.Sponsored ](https://t.me/crypto/3518) — Telegram @crypto
-- [[Telegram] Stefan Thomas has over $600,000,000 worth of #Bitcoin stored on a IronKey USB and only has two attem](https://t.me/crypto/3520) — Telegram @crypto
+- [[Telegram This user is back after making some INSANE predictions in the past that all came true.He is now pred](https://t.me/crypto/3513) — Telegram @crypto
+- [[Telegram Binance founder CZ predicts Bitcoin will reach between $500,000 and $1,000,000 this cycle.Sponsored ](https://t.me/crypto/3518) — Telegram @crypto
+- [[Telegram Stefan Thomas has over $600,000,000 worth of #Bitcoin stored on a IronKey USB and only has two attem](https://t.me/crypto/3520) — Telegram @crypto
 
 ### 🏦 거래소 (8건)
 
-- [[Telegram] Binance founder CZ predicts Bitcoin will reach between $500,000 and $1,000,000 this cycle.Sponsored ](https://t.me/crypto/3518) — Telegram @crypto
-- [[Telegram] A property seller featured on a 2015 episode of Million Dollar Listing New York declined 50,000 Bitc](https://t.me/crypto/3524) — Telegram @crypto
-- [[Telegram] 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown walletTx: https://t.co/aNttwwzxno](https://t.me/whale_alert/11520) — Telegram @whale_alert
+- [[Telegram Binance founder CZ predicts Bitcoin will reach between $500,000 and $1,000,000 this cycle.Sponsored ](https://t.me/crypto/3518) — Telegram @crypto
+- [[Telegram A property seller featured on a 2015 episode of Million Dollar Listing New York declined 50,000 Bitc](https://t.me/crypto/3524) — Telegram @crypto
+- [[Telegram 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown walletTx: https://t.co/aNttwwzxno](https://t.me/whale_alert/11520) — Telegram @whale_alert
 
 ### 🔵 규제/정책 (4건)
 
-- [[Telegram] CFTC Chair says they will "future-proof" crypto regulations."We can't allow Gary Gensler 2.0 to come](https://t.me/crypto/3512) — Telegram @crypto
-- [[Telegram] JUST IN: 🇺🇸 CFTC Chair says crypto market structure bill "is on the cusp" of becoming law.Sponsored ](https://t.me/crypto/3514) — Telegram @crypto
-- [[Telegram] Stefan Thomas has over $600,000,000 worth of #Bitcoin stored on a IronKey USB and only has two attem](https://t.me/crypto/3520) — Telegram @crypto
+- [[Telegram CFTC Chair says they will "future-proof" crypto regulations."We can't allow Gary Gensler 2.0 to come](https://t.me/crypto/3512) — Telegram @crypto
+- [[Telegram JUST IN: 🇺🇸 CFTC Chair says crypto market structure bill "is on the cusp" of becoming law.Sponsored ](https://t.me/crypto/3514) — Telegram @crypto
+- [[Telegram Stefan Thomas has over $600,000,000 worth of #Bitcoin stored on a IronKey USB and only has two attem](https://t.me/crypto/3520) — Telegram @crypto
 
 
 ---

@@ -6,8 +6,9 @@ categories: [stock-news]
 tags: ["stock", "market", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-02.png"
+image: "/assets/images/generated/news-briefing-stock-2026-03-02.png"
 description: "2026-03-02 주식 시장에서 114건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,244.13(-1.00%), KOSDAQ 1,192.78(+0.39%), USD/KRW 1,451.24(+0.83%)."
+excerpt: "KOSPI 6,244.13 (-1.00%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다. KOSDAQ 1,192.78 (+0.39%). KOSDAQ이…"
 ---
 
 **2026-03-02** 주식 시장에서 114건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,244.13(-1.00%), KOSDAQ 1,192.78(+0.39%), USD/KRW 1,451.24(+0.83%).
@@ -110,10 +111,10 @@ Struggling to Pick Artificial Intelligence (AI) Stocks? You're Not Alone -- Try 
 **1. [Dow closes more than 500 points lower after hot inflation report, mounting concerns about AI impact](https://news.google.com/read/CBMid0FVX3lxTE1md19zMWZDRkdXWXJPR2pEb2EyZGszb2lIelFjMlhaZi0tM2ttb3V5MzBTYmFpVmE3Y0xWcm05S0liRVA0ei1Qdko2dGZNNkd4M1ZNQzZGYzJpRzUxUkRPcmhOTTVuRkRaUkoxNmRZZmtpLTJ5YXh30gF8QVVfeXFMUHk0X3VvR0ZXUzRxUURDcEt5UG1yRThzNFZJMHZ1ZEVsWk01N1M2RU5ZcGp2MXEyTmNHLUg4aDlPNnE1ZGlVaHdtR0psVFMwSlhBYjMtelRycGtNNnFEay11eXlURnNGM3pyODFzeV9LMmpxU3dJMVJXV3JIWA?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
-**2. [[코스피·코스닥지수] 미국 뉴욕증시 다우존스·S&P500·나스닥지수 하락…AI산업 불확실성·美도매물가 급등 등 영향](https://news.google.com/read/CBMicEFVX3lxTFBULVk2NVRkbFYtWWlQX0VyUGliUzFtTUE4WWgyNXpTbVpveEd6SjZrS0szNU1JbnJreFlEdERqTFc4NWFtRjlLLVFiZkV6bGFlblVCb2hfOWxCME16VDNkZzZodm41Zms4b1FyM1FLLU0?hl=ko&gl=KR&ceid=KR%3Ako)**
+**2. [[코스피·코스닥지수 미국 뉴욕증시 다우존스·S&P500·나스닥지수 하락…AI산업 불확실성·美도매물가 급등 등 영향](https://news.google.com/read/CBMicEFVX3lxTFBULVk2NVRkbFYtWWlQX0VyUGliUzFtTUE4WWgyNXpTbVpveEd6SjZrS0szNU1JbnJreFlEdERqTFc4NWFtRjlLLVFiZkV6bGFlblVCb2hfOWxCME16VDNkZzZodm41Zms4b1FyM1FLLU0?hl=ko&gl=KR&ceid=KR%3Ako)**
 <span class="source-tag">Google News</span>
 
-**3. [[코스피·코스닥지수] 미국 뉴욕증시 다우존스·S&P500·나스닥지수 하락…AI산업 불확실성·美도매물가 급등 등 영향 - 한국강사신문](https://news.google.com/rss/articles/CBMicEFVX3lxTFBULVk2NVRkbFYtWWlQX0VyUGliUzFtTUE4WWgyNXpTbVpveEd6SjZrS0szNU1JbnJreFlEdERqTFc4NWFtRjlLLVFiZkV6bGFlblVCb2hfOWxCME16VDNkZzZodm41Zms4b1FyM1FLLU0?oc=5)**
+**3. [[코스피·코스닥지수 미국 뉴욕증시 다우존스·S&P500·나스닥지수 하락…AI산업 불확실성·美도매물가 급등 등 영향 - 한국강사신문](https://news.google.com/rss/articles/CBMicEFVX3lxTFBULVk2NVRkbFYtWWlQX0VyUGliUzFtTUE4WWgyNXpTbVpveEd6SjZrS0szNU1JbnJreFlEdERqTFc4NWFtRjlLLVFiZkV6bGFlblVCb2hfOWxCME16VDNkZzZodm41Zms4b1FyM1FLLU0?oc=5)**
 [코스피·코스닥지수] 미국 뉴욕증시 다우존스·S&P500·나스닥지수 하락…AI산업 불확실성·美도매물가 급등 등 영향
 <span class="source-tag">Google News Stocks KR</span>
 

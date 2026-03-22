@@ -2,12 +2,13 @@
 layout: post
 title: "소셜 미디어 동향 - 2026-03-06"
 date: 2026-03-06 03:29:29 +0900
-categories: [crypto-news]
+categories: [social-media]
 tags: ["social-media", "telegram", "twitter", "reddit", "politics", "trump", "이재명", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-social-media-digest-2026-03-06.png"
+image: "/assets/images/generated/news-briefing-social-2026-03-06.png"
 description: "2026-03-06 소셜 미디어 47건: 정치/정책 23건(49%) 압도적, 비트코인 15건, 매크로/금리 11건. Trump·이재명 정책 이슈 집중. 텔레그램 20건·소셜 2건·정치·경제 25건 수집."
+excerpt: "주요 테마: 정치/정책, 비트코인, 매크로/금리 긴급 알림 없음에 대한 선별 모니터링 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 **2026-03-06** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 소셜 미디어 2건, 정치·경제 25건, 총 47건이 수집되었습니다.
@@ -28,35 +29,35 @@ description: "2026-03-06 소셜 미디어 47건: 정치/정책 23건(49%) 압도
 
 ## 텔레그램 주요 소식
 
-**1. [[텔레그램] 예를 들어, 여전히 비트코인을(를) 법정화폐로 판매하지 않는다면](https://t.me/crypto/3545)**
+**1. [[텔레그램 예를 들어, 여전히 비트코인을(를) 법정화폐로 판매하지 않는다면](https://t.me/crypto/3545)**
 예를 들어, 여전히 비트코인을 법정화폐로 판매하지 않을 경우
 <span class="source-tag" data-source-type="default">Telegram @crypto</span>
 
-**2. [[텔레그램] 🇮🇷 비트코인이 이란 최고 지도자 하메네이의 사망 발표 후 $68,000 회복](https://t.me/crypto/3546)**
+**2. [[텔레그램 🇮🇷 비트코인이 이란 최고 지도자 하메네이의 사망 발표 후 $68,000 회복](https://t.me/crypto/3546)**
 🇮🇷 비트코인이 이란 최고 지도자 하메네이의 사망을 발표한 후 $68,000를 회복했습니다.
 <span class="source-tag" data-source-type="default">Telegram @crypto</span>
 
-**3. [[텔레그램] Ledger에 따르면 2.3M - 3.7M 비트코인이 영구적으로 손실되었습니다. 이는 전체의 최소 11%를 의미합니다.](https://t.me/crypto/3548)**
+**3. [[텔레그램 Ledger에 따르면 2.3M - 3.7M 비트코인이 영구적으로 손실되었습니다. 이는 전체의 최소 11%를 의미합니다.](https://t.me/crypto/3548)**
 Ledger에 따르면 2.3M - 3.7M 비트코인은 영구적으로 손실됩니다. 이는 전체 공급량의 최소 11%가 영원히 사라진다는 의미입니다 🤯
 <span class="source-tag" data-source-type="default">Telegram @crypto</span>
 
-**4. [[텔레그램] 🇺🇸 트럼프 대통령은 말했습니다, 안타깝게도 최근 몇 년 동안 미국 정부는 #비트코인 10,000개를...](https://t.me/crypto/3550)**
+**4. [[텔레그램 🇺🇸 트럼프 대통령은 말했습니다, 안타깝게도 최근 몇 년 동안 미국 정부는 #비트코인 10,000개를...](https://t.me/crypto/3550)**
 🇺🇸 트럼프 대통령은 말했습니다, 불행하게도 최근 몇 년 동안 미국 정부는 수십억 달러의 가치가 있는 #비트코인 10,000개를 판매했습니다. 오늘부터 미국은 모든 비트코인er가 잘 알고 있는 규칙인 "절대 비트코인을 판매하지 마세요"라는 규칙을 따를 것입니다.
 <span class="source-tag" data-source-type="default">Telegram @crypto</span>
 
-**5. [[텔레그램] 비트코인은 전쟁을 감당할 수 없게 만듭니다.](https://t.me/crypto/3551)**
+**5. [[텔레그램 비트코인은 전쟁을 감당할 수 없게 만듭니다.](https://t.me/crypto/3551)**
 비트코인은 전쟁을 감당할 수 없게 만듭니다.
 <span class="source-tag" data-source-type="default">Telegram @crypto</span>
 
-**6. [[텔레그램] 5년 후 비트코인이 100만 달러이고 아무도 당신의 말을 듣지 않을 때](https://t.me/crypto/3552)**
+**6. [[텔레그램 5년 후 비트코인이 100만 달러이고 아무도 당신의 말을 듣지 않을 때](https://t.me/crypto/3552)**
 지금으로부터 5년 후 비트코인이 백만 달러이고 아무도 당신의 말을 듣지 않을 때
 <span class="source-tag" data-source-type="default">Telegram @crypto</span>
 
-**7. [[텔레그램] 속보 :🇺🇸 Blackrock ETF은 비트코인에 $264,520,000를 구매했습니다. 대규모 유입이 다가오고 있습니다 🔥](https://t.me/crypto/3553)**
+**7. [[텔레그램 속보 :🇺🇸 Blackrock ETF은 비트코인에 $264,520,000를 구매했습니다. 대규모 유입이 다가오고 있습니다 🔥](https://t.me/crypto/3553)**
 속보 :🇺🇸 Blackrock ETF은 비트코인에 $264,520,000를 구매했습니다. 대규모 유입이 다가오고 있습니다 🔥
 <span class="source-tag" data-source-type="default">Telegram @crypto</span>
 
-**8. [[텔레그램] 비트코인이 $72,000를 넘어 한 달 최고치를 경신했습니다.](https://t.me/crypto/3555)**
+**8. [[텔레그램 비트코인이 $72,000를 넘어 한 달 최고치를 경신했습니다.](https://t.me/crypto/3555)**
 비트코인은 $72,000를 넘어 1개월 최고치를 경신했습니다.
 <span class="source-tag" data-source-type="default">Telegram @crypto</span>
 
@@ -80,11 +81,11 @@ Ledger에 따르면 2.3M - 3.7M 비트코인은 영구적으로 손실됩니다.
 
 ## 정치·경제 동향
 
-**1. [비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지-[美증시 특징주] - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9OY1hwcktwa1JpaTBIdzdZRmF4alMxbW1WUDN0azdyVk1TdUhXNGpsdzJHTnB5bDBUaG1VSzg5XzVGXzROZmZGX3VFdmpXaGM?oc=5)**
+**1. [비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지-[美증시 특징주 - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9OY1hwcktwa1JpaTBIdzdZRmF4alMxbW1WUDN0azdyVk1TdUhXNGpsdzJHTnB5bDBUaG1VSzg5XzVGXzROZmZGX3VFdmpXaGM?oc=5)**
 비트코인 관련 주요 소식입니다. 비트코인, 반등, 트럼프 등 핵심 내용을 트럼프 경제정책에서 보도했습니다.
 <span class="source-tag" data-source-type="default">트럼프 경제정책 KR</span>
 
-**2. [[오늘의 비트코인] 트럼프, 암호화폐 법안 지지…7만2000달러 돌파 - 네이트](https://news.google.com/rss/articles/CBMiU0FVX3lxTFBJcEJkLW9nbWZoMU9DRnlVUEdkSDBhZTlVVW45Z24wMXVDRDlOQUF2MWV4OGQ4dVBVUTluQ0p6TkpmS2dtMklxR3RJeW1PdnctS0p3?oc=5)**
+**2. [[오늘의 비트코인 트럼프, 암호화폐 법안 지지…7만2000달러 돌파 - 네이트](https://news.google.com/rss/articles/CBMiU0FVX3lxTFBJcEJkLW9nbWZoMU9DRnlVUEdkSDBhZTlVVW45Z24wMXVDRDlOQUF2MWV4OGQ4dVBVUTluQ0p6TkpmS2dtMklxR3RJeW1PdnctS0p3?oc=5)**
 비트코인 관련 주요 소식입니다. 오늘의, 비트코인, 트럼프 등 핵심 내용을 트럼프 경제정책에서 보도했습니다.
 <span class="source-tag" data-source-type="default">트럼프 경제정책 KR</span>
 
@@ -96,11 +97,11 @@ Ledger에 따르면 2.3M - 3.7M 비트코인은 영구적으로 손실됩니다.
 이재명 경제정책에서 65%, 이재명, 대통령 관련 소식을 보도했습니다.
 <span class="source-tag" data-source-type="default">이재명 경제정책</span>
 
-**5. [[일요서울TV] 17년 만의 '환율 1500원'... 이재명 경제 정책의 '민낯' - ilyoseoul.co.kr](https://news.google.com/rss/articles/CBMib0FVX3lxTE5VczFZQTFtWEJYMFljdzNuekpmd3oxY01zUmlOemFYcFdSRmJVOUdZcjJWemQ5bzkzOVlEcHZCSlFQMEtqcmRNTjNkanBzVEJSRlA0emVyZWJJejdDSUJtaEVKa0VBZ1JjVVhMaGV5WQ?oc=5)**
+**5. [[일요서울TV 17년 만의 '환율 1500원'... 이재명 경제 정책의 '민낯' - ilyoseoul.co.kr](https://news.google.com/rss/articles/CBMib0FVX3lxTE5VczFZQTFtWEJYMFljdzNuekpmd3oxY01zUmlOemFYcFdSRmJVOUdZcjJWemQ5bzkzOVlEcHZCSlFQMEtqcmRNTjNkanBzVEJSRlA0emVyZWJJejdDSUJtaEVKa0VBZ1JjVVhMaGV5WQ?oc=5)**
 이재명 경제정책에서 일요서울, 만의, 환율 관련 소식을 보도했습니다.
 <span class="source-tag" data-source-type="default">이재명 경제정책</span>
 
-**6. [[한국갤럽] 이재명 지지율 65%로 1%p 올라, 긍정 이유 '경제·민생' '부동산' - 비즈니스포스트](https://news.google.com/rss/articles/CBMic0FVX3lxTE1VU1JrSVM4YWJRSE1fZzBqTldvMGpXN1hQQi1rTGhudEpyMk1IWWlVeFZTMFlHTDh2alljbFZZN19zcGo4QnFuSnpva3YyUVNUOFd3S0ZkeC1vN0NMQkVRSkg1RzR1T0t2SGdLSUN1eEVrZzA?oc=5)**
+**6. [[한국갤럽 이재명 지지율 65%로 1%p 올라, 긍정 이유 '경제·민생' '부동산' - 비즈니스포스트](https://news.google.com/rss/articles/CBMic0FVX3lxTE1VU1JrSVM4YWJRSE1fZzBqTldvMGpXN1hQQi1rTGhudEpyMk1IWWlVeFZTMFlHTDh2alljbFZZN19zcGo4QnFuSnpva3YyUVNUOFd3S0ZkeC1vN0NMQkVRSkg1RzR1T0t2SGdLSUN1eEVrZzA?oc=5)**
 이재명 경제정책에서 65%, 1%, 한국갤럽 관련 소식을 보도했습니다.
 <span class="source-tag" data-source-type="default">이재명 경제정책</span>
 
@@ -130,55 +131,55 @@ Ledger에 따르면 2.3M - 3.7M 비트코인은 영구적으로 손실됩니다.
 
 전체의 49%로 가장 높은 비중을 차지합니다. 주요 출처: 이재명 경제정책(6건), Trump Crypto Policy(4건), 한국은행 금리정책(4건).
 
-- [[텔레그램] 🇺🇸 트럼프 대통령은 말했습니다, 불행히도 최근 몇 년 동안 미국 정부는 수십억 달러 가치의 #비트코인 10,000개를...](https://t.me/crypto/3550) — Telegram @crypto
+- [[텔레그램 🇺🇸 트럼프 대통령은 말했습니다, 불행히도 최근 몇 년 동안 미국 정부는 수십억 달러 가치의 #비트코인 10,000개를...](https://t.me/crypto/3550) — Telegram @crypto
   > 🇺🇸 트럼프 대통령은 말했습니다, 불행히도 최근 몇 년 동안 미국 정부는 수십억 달러 가치의 #비트코인 10,000개를 판매했습니다...
-- [비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지-[美증시 특징주] - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9OY1hwcktwa1JpaTBIdzdZRmF4alMxbW1WUDN0azdyVk1TdUhXNGpsdzJHTnB5bDBUaG1VSzg5XzVGXzROZmZGX3VFdmpXaGM?oc=5) — 트럼프 경제정책 KR
+- [비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지-[美증시 특징주 - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9OY1hwcktwa1JpaTBIdzdZRmF4alMxbW1WUDN0azdyVk1TdUhXNGpsdzJHTnB5bDBUaG1VSzg5XzVGXzROZmZGX3VFdmpXaGM?oc=5) — 트럼프 경제정책 KR
   > 비트코인 관련 주요 소식입니다. 비트코인, 반등, 트럼프 등 핵심 내용을 트럼프 경제정책에서 보도했습니다.
-- [[오늘의 비트코인] 트럼프, 암호화폐 법안 지지…7만2000달러 돌파 - 네이트](https://news.google.com/rss/articles/CBMiU0FVX3lxTFBJcEJkLW9nbWZoMU9DRnlVUEdkSDBhZTlVVW45Z24wMXVDRDlOQUF2MWV4OGQ4dVBVUTluQ0p6TkpmS2dtMklxR3RJeW1PdnctS0p3?oc=5) — 트럼프 경제정책 KR
+- [[오늘의 비트코인 트럼프, 암호화폐 법안 지지…7만2000달러 돌파 - 네이트](https://news.google.com/rss/articles/CBMiU0FVX3lxTFBJcEJkLW9nbWZoMU9DRnlVUEdkSDBhZTlVVW45Z24wMXVDRDlOQUF2MWV4OGQ4dVBVUTluQ0p6TkpmS2dtMklxR3RJeW1PdnctS0p3?oc=5) — 트럼프 경제정책 KR
   > 비트코인 관련 주요 소식입니다. 오늘의, 비트코인, 트럼프 등 핵심 내용을 트럼프 경제정책에서 보도했습니다.
 
 ### 🟠 비트코인 (15건)
 
 전체의 32%로 주요 테마입니다. 주요 출처: Telegram @crypto(10건), 트럼프 경제정책 KR(3건), Whale & On-chain(1건).
 
-- [[텔레그램] 예를 들어, 여전히 비트코인을 법정화폐로 판매하지 않는다면](https://t.me/crypto/3545) — Telegram @crypto
+- [[텔레그램 예를 들어, 여전히 비트코인을 법정화폐로 판매하지 않는다면](https://t.me/crypto/3545) — Telegram @crypto
   > 예를 들어, 여전히 비트코인을 법정화폐로 판매하지 않는다면
-- [[텔레그램] 🇮🇷 비트코인이 이란 최고 지도자 하메네이 사망 발표 후 $68,000 회복](https://t.me/crypto/3546) — Telegram @crypto
+- [[텔레그램 🇮🇷 비트코인이 이란 최고 지도자 하메네이 사망 발표 후 $68,000 회복](https://t.me/crypto/3546) — Telegram @crypto
   > 🇮🇷 비트코인이 이란 최고 지도자 하메네이 사망 발표 후 $68,000 회복
-- [[텔레그램] Ledger에 따르면 2.3M - 3.7M 비트코인이 영구 손실...](https://t.me/crypto/3548) — Telegram @crypto
+- [[텔레그램 Ledger에 따르면 2.3M - 3.7M 비트코인이 영구 손실...](https://t.me/crypto/3548) — Telegram @crypto
   > Ledger에 따르면 2.3M - 3.7M 비트코인이 영구적으로 손실되었습니다. 이는 전체 공급량의 최소 11%가 영원히 사라진다는 의미입니다 🤯
 
 ### 📊 매크로/금리 (11건)
 
 전체의 23%로 주요 테마입니다. 주요 출처: 한국은행 금리정책(5건), Telegram @whale_alert(2건), 이재명 경제정책(2건).
 
-- [[텔레그램] 💵 💵 💵 💵 💵 💵 Tether Treasury에서 6,000만 USDT(59,732,218 달러) 발행](https://t.me/whale_alert/11523) — Telegram @whale_alert
+- [[텔레그램 💵 💵 💵 💵 💵 💵 Tether Treasury에서 6,000만 USDT(59,732,218 달러) 발행](https://t.me/whale_alert/11523) — Telegram @whale_alert
   > 💵 💵 💵 💵 💵 💵 Tether Treasury에서 6,000만 USDT(59,732,218 달러) 발행. Tx: https://t.co/mMr3UVbbjE
-- [[텔레그램] 🚨 🚨 Tether Treasury에서 알 수 없는 지갑으로 2,500만 USDT 전송](https://t.me/whale_alert/11524) — Telegram @whale_alert
+- [[텔레그램 🚨 🚨 Tether Treasury에서 알 수 없는 지갑으로 2,500만 USDT 전송](https://t.me/whale_alert/11524) — Telegram @whale_alert
   > 🚨 🚨 Tether Treasury에서 알 수 없는 지갑으로 2,500만 USDT(25,313,496 달러) 전송. Tx: https://t.co/8IMl0Zw0DM
-- [[일요서울TV] 17년 만의 '환율 1500원'... 이재명 경제 정책의 '민낯' - ilyoseoul.co.kr](https://news.google.com/rss/articles/CBMib0FVX3lxTE5VczFZQTFtWEJYMFljdzNuekpmd3oxY01zUmlOemFYcFdSRmJVOUdZcjJWemQ5bzkzOVlEcHZCSlFQMEtqcmRNTjNkanBzVEJSRlA0emVyZWJJejdDSUJtaEVKa0VBZ1JjVVhMaGV5WQ?oc=5) — 이재명 경제정책
+- [[일요서울TV 17년 만의 '환율 1500원'... 이재명 경제 정책의 '민낯' - ilyoseoul.co.kr](https://news.google.com/rss/articles/CBMib0FVX3lxTE5VczFZQTFtWEJYMFljdzNuekpmd3oxY01zUmlOemFYcFdSRmJVOUdZcjJWemQ5bzkzOVlEcHZCSlFQMEtqcmRNTjNkanBzVEJSRlA0emVyZWJJejdDSUJtaEVKa0VBZ1JjVVhMaGV5WQ?oc=5) — 이재명 경제정책
   > 이재명 경제정책에서 일요서울, 만의, 환율 관련 소식을 보도했습니다.
 
 ### 📈 가격/시장 (16건)
 
 전체의 34%로 주요 테마입니다. 주요 출처: 한국은행 금리정책(5건), 트럼프 경제정책 KR(3건), 이재명 경제정책(2건).
 
-- [[텔레그램] 속보: 🇺🇸 BlackRock ETF가 비트코인 $306,250,000 매입. 초강세 🔥](https://t.me/crypto/3558) — Telegram @crypto
+- [[텔레그램 속보: 🇺🇸 BlackRock ETF가 비트코인 $306,250,000 매입. 초강세 🔥](https://t.me/crypto/3558) — Telegram @crypto
   > 속보: 🇺🇸 BlackRock ETF가 비트코인 $306,250,000 매입. 초강세 🔥
 - [암호화폐 고래 경고: 2026년 대규모 거래 및 시장 동향 추적 - Bitget](https://news.google.com/rss/articles/CBMiZEFVX3lxTE1Kc2J4SnRyVGdCU0Vib3FCdk9jc3cyN0pqdXZGcUNnZDJ2d1Z5YnZqc3R4R0JyUlphemR4TkJZN2FIYk9zTjUwMDFENXRyRFN2SjVZWmZvYUVCbTFXRVBhYTVkNEvSAWRBVV95cUxNSnNieEp0clRnQlNFYm9xQnZPY3N3MjdKanV2RnFDZ2QydndWeWJ2anN0eEdCclJaYXpkeE5CWTdhSGJPc041MDAxRDV0ckRTdko1WVpmb2FFQm0xV0VQYWE1ZDRL?oc=5) — Whale & On-chain
   > 대규모 자금 이동이 감지되었습니다. Crypto, Whale (고래·온체인 분석)
-- [비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지-[美증시 특징주] - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9OY1hwcktwa1JpaTBIdzdZRmF4alMxbW1WUDN0azdyVk1TdUhXNGpsdzJHTnB5bDBUaG1VSzg5XzVGXzROZmZGX3VFdmpXaGM?oc=5) — 트럼프 경제정책 KR
+- [비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지-[美증시 특징주 - v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9OY1hwcktwa1JpaTBIdzdZRmF4alMxbW1WUDN0azdyVk1TdUhXNGpsdzJHTnB5bDBUaG1VSzg5XzVGXzROZmZGX3VFdmpXaGM?oc=5) — 트럼프 경제정책 KR
   > 비트코인 관련 주요 소식입니다. 비트코인, 반등, 트럼프 등 핵심 내용을 트럼프 경제정책에서 보도했습니다.
 
 ### 🏦 거래소 (8건)
 
 주요 출처: Telegram @whale_alert(5건), Google News Social EN(1건), Whale & On-chain(1건).
 
-- [[텔레그램] 370,000 LINK(1,510,265 달러) 빗썸에서 알 수 없는 지갑으로 전송](https://t.me/whale_alert/11520) — Telegram @whale_alert
+- [[텔레그램 370,000 LINK(1,510,265 달러) 빗썸에서 알 수 없는 지갑으로 전송](https://t.me/whale_alert/11520) — Telegram @whale_alert
   > 370,000 LINK(1,510,265 달러) 빗썸에서 알 수 없는 지갑으로 전송. Tx: https://t.co/aNttwwzxno
-- [[텔레그램] 33,000 ETH(6,583,742 달러) 빗썸에서 알 수 없는 지갑으로 전송](https://t.me/whale_alert/11521) — Telegram @whale_alert
+- [[텔레그램 33,000 ETH(6,583,742 달러) 빗썸에서 알 수 없는 지갑으로 전송](https://t.me/whale_alert/11521) — Telegram @whale_alert
   > 33,000 ETH(6,583,742 달러) 빗썸에서 알 수 없는 지갑으로 전송. Tx: https://t.co/Wam8SjJEzv
-- [[텔레그램] 27,500,000 XRP(5,734,068 달러) 빗썸에서 알 수 없는 지갑으로 전송](https://t.me/whale_alert/11522) — Telegram @whale_alert
+- [[텔레그램 27,500,000 XRP(5,734,068 달러) 빗썸에서 알 수 없는 지갑으로 전송](https://t.me/whale_alert/11522) — Telegram @whale_alert
   > 27,500,000 XRP(5,734,068 달러) 빗썸에서 알 수 없는 지갑으로 전송. Tx: https://t.co/M8YTk8vqVX
 
 

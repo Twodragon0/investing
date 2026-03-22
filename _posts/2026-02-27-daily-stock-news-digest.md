@@ -6,8 +6,9 @@ categories: [stock-news]
 tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-stock-news-digest-2026-02-27.png"
+image: "/assets/images/generated/news-briefing-stock-2026-02-27.png"
 description: "2026-02-27 주식 시장에서 162건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,265.29(-0.14%), KOSDAQ 1,195.47(+0.67%), USD/KRW 1,433.46(+0.01%)."
+excerpt: "한국 증시는 KOSPI 6,265.29 (-0.14%) 하락하며, 투자 심리가 위축되는 모습입니다. KOSDAQ은 1,195.47 (+0.67%)를 기록했습니다."
 ---
 
 **2026-02-27** 주식 시장에서 162건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,265.29(-0.14%), KOSDAQ 1,195.47(+0.67%), USD/KRW 1,433.46(+0.01%).
@@ -95,7 +96,7 @@ S&P 500 하락 마감 후 주식 선물 미끄러짐, 도매 인플레이션 지
 **1. [Stock Market Under the Trump Administration](https://news.google.com/read/CBMingFBVV95cUxPcUowVHR1VXAzd0Zfamw1MkVSejFsRGo1bkdGdHhjNVBZVFdwU3VpcE5neGJOeWl6RmdQVkFsYlcxNEVTRGg3WHNYSGR1d1BpTjV4T2NqdWdER3ZtQ0RVbU40WTcyRXRaTEM5bFZteVlYNE5EYkM1M1BaR0lYTGlUeFlTeDhVMzRaWFFqZEZhcGc3RFJoZy1qZy1mTGViQQ?hl=en-US&gl=US&ceid=US%3Aen)**
 <span class="source-tag">Google News</span>
 
-**2. [[개장시황] 美관세 불확실성·AI 우려에…코스피·코스닥, 상승 출발 후 약세 전환](https://news.google.com/read/CBMiWkFVX3lxTE1QNWVLTUVSNmUwT21TNTZ0cHR5Zy1BMkM1YWJDUmd3amdPTjNWTm03eEdyTXVvV0JfN1ZyZEtuQlpQUzJxeTBnOE9KQUZ4amlKYk84Unkyc3ZLQdIBWEFVX3lxTFAtMmJTRlEwTVB0Ql9YMm80UHNqR3dVaE96QmRvUmFUcng3SFR1bFZUaEUzLVJpVExPUVZ3YzBpcXZuUkVtNW9PcUxsdExjaGwtMkJWVzNLMHE?hl=ko&gl=KR&ceid=KR%3Ako)**
+**2. [[개장시황 美관세 불확실성·AI 우려에…코스피·코스닥, 상승 출발 후 약세 전환](https://news.google.com/read/CBMiWkFVX3lxTE1QNWVLTUVSNmUwT21TNTZ0cHR5Zy1BMkM1YWJDUmd3amdPTjNWTm03eEdyTXVvV0JfN1ZyZEtuQlpQUzJxeTBnOE9KQUZ4amlKYk84Unkyc3ZLQdIBWEFVX3lxTFAtMmJTRlEwTVB0Ql9YMm80UHNqR3dVaE96QmRvUmFUcng3SFR1bFZUaEUzLVJpVExPUVZ3YzBpcXZuUkVtNW9PcUxsdExjaGwtMkJWVzNLMHE?hl=ko&gl=KR&ceid=KR%3Ako)**
 <span class="source-tag">Google News</span>
 
 **3. [한국은행, 올해 성장률 1.8→2.0% 상향…관세 누른 '반도체' - 톱데일리](https://news.google.com/rss/articles/CBMiUEFVX3lxTFB1SHk5bkdDZkxlaXN4RVRhRmJ3WFBoWkE0YUM5X21ER2dXZjBWZ3hfdkVSaGtDM0s3RGFHcXF1Y1g4cV8xSEl5VnlCUXNzcEJD?oc=5)**

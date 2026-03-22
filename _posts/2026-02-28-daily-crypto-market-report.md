@@ -8,7 +8,8 @@ source: "CoinMarketCap"
 source_url: "https://coinmarketcap.com/"
 lang: "ko"
 description: "2026-02-28 암호화폐 시장 종합 리포트. (API 데이터 수집 오류로 가격 정보가 불완전합니다)"
-image: "/assets/images/generated/og-daily-crypto-market-report-2026-02-28.png"
+image: "/assets/images/generated/news-briefing-cryptomarket-2026-02-28.png"
+excerpt: "24시간 변동 -2.20%로 소폭 조정 구간입니다. 기술적 지지선에서의 매수세 유입 여부를 확인해야 합니다. 24시간 변동 -2.20%로 소폭 조정 구간입니다. 기술적…"
 ---
 
 ## 시장 시각화

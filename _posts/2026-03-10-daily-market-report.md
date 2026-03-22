@@ -9,6 +9,7 @@ source: "auto-generated"
 lang: "ko"
 image: "/assets/images/generated/market-heatmap-2026-03-10.png"
 description: "극도의 공포 장세: 공포/탐욕 지수 13으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 612개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다."
+excerpt: "극도의 공포 장세: 공포/탐욕 지수 13으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 612개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수…"
 ---
 
 ## 시장 시각화

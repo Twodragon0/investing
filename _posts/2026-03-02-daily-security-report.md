@@ -6,8 +6,9 @@ categories: [security-alerts]
 tags: ["security", "hack", "blockchain", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-security-report-2026-03-02.png"
+image: "/assets/images/generated/news-briefing-security-2026-03-02.png"
 description: "2026년 2월 블록체인 해킹 피해액 CertiK 기준 $26.5M, Immunefi 기준 $37.7M으로 2025년 3월 이후 최저치. 스마트 컨트랙트 감사 강화와 멀티시그 보급이 주요 원인으로 분석."
+excerpt: "블록체인 보안 관련 뉴스 3건을 정리합니다. 2월 해킹 피해액: $26.5M$37.7M (2025년 3월 이후 최저) 트렌드: 보안 인프라 강화로 피해 규모 지속 감소"
 ---
 
 블록체인 보안 관련 뉴스 3건을 정리합니다.

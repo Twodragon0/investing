@@ -7,7 +7,8 @@ tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-
 source: "consolidated"
 lang: "ko"
 description: "2026-02-19 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. 미국 의회 거래 1건, SEC 내부자 거래 3건, 중앙은행 13건, 총 17건이 수집되었습니다."
-image: "/assets/images/generated/og-daily-political-trades-report-2026-02-19.png"
+image: "/assets/images/generated/news-briefing-political-2026-02-19.png"
+excerpt: "주요 테마: 매크로/금리, 가격/시장, AI/기술 미국 의회 거래 1건이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향을 예측하는 참고 자료가 될 수 있습니다."
 ---
 
 **2026-02-19** 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. 미국 의회 거래 1건, SEC 내부자 거래 3건, 중앙은행 13건, 총 17건이 수집되었습니다.
@@ -73,7 +74,7 @@ JPM Insider Trading: 6 Executives Sell $5.6M in JPMorgan Chase Stock Feb 19 Meyk
 환율 불안에 금리 인하 제동한은, 이번에도 동결 유력 mt.co.kr
 <span class="source-tag">한국은행 금리결정</span>
 
-**4. [[경제인사이드] 불확실성에 발목 잡힌 한은, 다음주 ‘6연속 동결’ 전망 - 천지일보](https://news.google.com/rss/articles/CBMiakFVX3lxTE9BbmJjYnowYm5xaFdLR3U4SVhpdC1lZjB3M1hHcGk5RXZwYlpvNVFjaUYtcnlyelVCWW1KQ1RuMlJQU1NTMFZpWUEzVE9rWmNWTk9TSndGWGZMbmNHVUpoeDgzQXlMTk0teFE?oc=5)**
+**4. [[경제인사이드 불확실성에 발목 잡힌 한은, 다음주 ‘6연속 동결’ 전망 - 천지일보](https://news.google.com/rss/articles/CBMiakFVX3lxTE9BbmJjYnowYm5xaFdLR3U4SVhpdC1lZjB3M1hHcGk5RXZwYlpvNVFjaUYtcnlyelVCWW1KQ1RuMlJQU1NTMFZpWUEzVE9rWmNWTk9TSndGWGZMbmNHVUpoeDgzQXlMTk0teFE?oc=5)**
 [경제인사이드] 불확실성에 발목 잡힌 한은, 다음주 ‘6연속 동결’ 전망 천지일보
 <span class="source-tag">한국은행 금리결정</span>
 
@@ -81,7 +82,7 @@ JPM Insider Trading: 6 Executives Sell $5.6M in JPMorgan Chase Stock Feb 19 Meyk
 한은, 2월 금리동결 가닥성장률 상향 여부 주목 대한경제
 <span class="source-tag">한국은행 금리결정</span>
 
-**6. [전문가 10명 중 9명 "2월도 기준금리 동결 예상연말까지 변동 없을 것" [금통위폴] - 이투데이](https://news.google.com/rss/articles/CBMibkFVX3lxTE5UY2tIdWdpRjRZcFZTaHo0Tkc0NXQ0cDlsa0xOUkI3cy1ORWw1RTFxRjZObEtHZElULU1KWUtVMFoyNW1Na3JZNkktWDlaWlIySUVHRVZHcXRNQmprLWdDWVpkUEFnYzJMbzVoV2JR?oc=5)**
+**6. [전문가 10명 중 9명 "2월도 기준금리 동결 예상연말까지 변동 없을 것" [금통위폴 - 이투데이](https://news.google.com/rss/articles/CBMibkFVX3lxTE5UY2tIdWdpRjRZcFZTaHo0Tkc0NXQ0cDlsa0xOUkI3cy1ORWw1RTFxRjZObEtHZElULU1KWUtVMFoyNW1Na3JZNkktWDlaWlIySUVHRVZHcXRNQmprLWdDWVpkUEFnYzJMbzVoV2JR?oc=5)**
 <span class="source-tag">한국은행 금리결정</span>
 
 **7. [Fed officials split on where interest rates should go, minutes say - CNBC](https://news.google.com/rss/articles/CBMibkFVX3lxTE9PSDdsTXhUOVpjWWFVTlAtOVA1V2Y1c0xqWWdqcldDajdxTjdvVmZnVGl6RHg4cFJIQ2QtMXhXMmREeGUzNjQwODhtOEhrYUJHVEE3azZlNHY5SUxIMVcxZG1aMFMyRmZBN3BGSGpn0gFzQVVfeXFMTm9yMU5Fcm1aYnhTX01tNDdfcjNiaGNUREh4NTJqaXdraG5VOWpCZ3BRcWVLWGtJeXhwejdBVnB4WjhjUTgzVHAxRkd4dHZfM0VRaElqaFpaQUxsR09yd2ZrQ0NWcDByY2R6ZFZRbEVXRm1BVQ?oc=5)**

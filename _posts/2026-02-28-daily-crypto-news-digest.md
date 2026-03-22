@@ -6,8 +6,9 @@ categories: [crypto-news]
 tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-news-digest-2026-02-28.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-02-28.png"
 description: "2026-02-28 암호화폐 시장에서 124건의 뉴스를 분석했습니다. 오늘은 비트코인, 거래소, 가격/시장 관련 소식이 주목됩니다."
+excerpt: "2026-02-28 암호화폐 시장에서 124건의 뉴스를 분석했습니다. 오늘은 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 **2026-02-28** 암호화폐 시장에서 124건의 뉴스를 분석했습니다. 오늘은 **비트코인, 거래소, 가격/시장** 관련 소식이 주목됩니다.
@@ -126,7 +127,7 @@ description: "2026-02-28 암호화폐 시장에서 124건의 뉴스를 분석했
 5,000달러로 장기 보유할 암호화폐: XRP vs. 이더리움 - 어느 쪽이 더 나은 선택인가?
 <span class="source-tag">구글 뉴스</span>
 
-**3. [엔비디아 훈풍에 비트코인 반등…이더리움 매도압력 완화·엑스알피 수급 개선 [이수현의 코인레이더] - 한국경제](https://news.google.com/rss/articles/CBMiWkFVX3lxTE50TnFGWGd0ci1GZS0zS1FRM0d1MFJJaDZFWkJZUndMYjJVaUtfWGRzZkI5ODVXNEpCVjA3SGJ1SGc0QkZBWUwwWmpjX0xzLUdrZ1hTTWlNMXJNQdIBVEFVX3lxTE1YOXlIY0FyN1F3N2RxMHo1eGdWbmdSbDE4SmpFRVhaNFQ5Qm9hY1ZKOTBkR2daUXk3RFg1am9ZMUJ1bjBmVE1jQnlDdjBDeG1aTUhXTQ?oc=5)**
+**3. [엔비디아 훈풍에 비트코인 반등…이더리움 매도압력 완화·엑스알피 수급 개선 [이수현의 코인레이더 - 한국경제](https://news.google.com/rss/articles/CBMiWkFVX3lxTE50TnFGWGd0ci1GZS0zS1FRM0d1MFJJaDZFWkJZUndMYjJVaUtfWGRzZkI5ODVXNEpCVjA3SGJ1SGc0QkZBWUwwWmpjX0xzLUdrZ1hTTWlNMXJNQdIBVEFVX3lxTE1YOXlIY0FyN1F3N2RxMHo1eGdWbmdSbDE4SmpFRVhaNFQ5Qm9hY1ZKOTBkR2daUXk3RFg1am9ZMUJ1bjBmVE1jQnlDdjBDeG1aTUhXTQ?oc=5)**
 엔비디아 훈풍에 비트코인 반등…이더리움 매도압력 완화·엑스알피 수급 개선 [이수현의 코인레이더] 한국경제
 <span class="source-tag">Google News KR</span>
 

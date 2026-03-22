@@ -6,8 +6,9 @@ categories: crypto-news
 tags: [뉴스, 암호화폐, 블록체인, 시장분석, 규제]
 source: "Crypto Monitoring System"
 lang: ko
-description: "블록체인 업계 뉴스 브리핑: 최신 개발, 규제 동향, 시장 소식을 전해드립니다."
-image: "/assets/images/generated/og-crypto-news-briefing-2026-02-07.png"
+description: "오늘의 암호화폐 브리핑: 암호화폐 뉴스 브리핑 - 2026년 02월 07일. 시세 변동과 온체인 데이터를 분석합니다. 주요 키워드: 뉴스, 암호화폐, 블록체인, 시장분석."
+image: "/assets/images/generated/news-briefing-crypto-2026-02-07.png"
+excerpt: "전략비축은 쌀 때 사는 것'트럼프는 왜 비트코인을 안 사나? - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 블록체인 업계 뉴스 브리핑: 최신 개발, 규제 동향, 시장 소식을 전해드립니다.

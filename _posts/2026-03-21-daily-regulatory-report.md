@@ -85,7 +85,7 @@ CFTC과 메이저 리그 야구는 오늘 CFTC과 프로 스포츠 리그 간의
 빗썸 오지급 사태 후폭풍…금감원, 가상자산 거래소 '은행급 규제' 추진 - 폴리뉴스 Polinews.
 <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
 
-**2. [단독\] 금감원 "코인 거래소, 은행처럼 감독하겠다" - TradingView](https://news.google.com/rss/articles/CBMickFVX3lxTE1UaDU4UXBiV3Q3WjdNZzdFcktsNWx4YTFwN3piRWtoMVRjdU9NN2Nid3dEVWZoZnZjOXdaQzZCQ1V3aUdMUnB0bjBSTGc5bmt5YVFnZC10YWVBdjRHTzFkd1NvZUI4ODltMlk3M1hiNldNQQ?oc=5)**
+**2. [단독 금감원 "코인 거래소, 은행처럼 감독하겠다" - TradingView](https://news.google.com/rss/articles/CBMickFVX3lxTE1UaDU4UXBiV3Q3WjdNZzdFcktsNWx4YTFwN3piRWtoMVRjdU9NN2Nid3dEVWZoZnZjOXdaQzZCQ1V3aUdMUnB0bjBSTGc5bmt5YVFnZC10YWVBdjRHTzFkd1NvZUI4ODltMlk3M1hiNldNQQ?oc=5)**
 [단독] 금감원 "코인 거래소, 은행처럼 감독하겠다" TradingView
 <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
 
@@ -97,7 +97,7 @@ CFTC과 메이저 리그 야구는 오늘 CFTC과 프로 스포츠 리그 간의
 금감원, '가상자산 2단계 입법 5가지 건의' 국회 전달.
 <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
 
-**5. [칼럼\] 거래소 법인 계좌, 법인이 아닌 거래소를 규제하라 - 블록체인투데이](https://news.google.com/rss/articles/CBMidkFVX3lxTE9Wb1JYcFRGRHZ4M0phaWRoZjg1TEFrZWE0MG5IRkJpaUpFMGRUNUp1NEcyOWZfWEljeWZZTEVQNzRHY1hfWEtmZWdMTEhxMVNrdFRWdDZxaWc4dmRHOUY3QlZLeXIyZG5UZVhBckg0M1VUaVlSaXc?oc=5)**
+**5. [칼럼 거래소 법인 계좌, 법인이 아닌 거래소를 규제하라 - 블록체인투데이](https://news.google.com/rss/articles/CBMidkFVX3lxTE9Wb1JYcFRGRHZ4M0phaWRoZjg1TEFrZWE0MG5IRkJpaUpFMGRUNUp1NEcyOWZfWEljeWZZTEVQNzRHY1hfWEtmZWdMTEhxMVNrdFRWdDZxaWc4dmRHOUY3QlZLeXIyZG5UZVhBckg0M1VUaVlSaXc?oc=5)**
 [칼럼] 거래소 법인 계좌, 법인이 아닌 거래소를 규제하라 블록체인투데이
 <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
 
@@ -149,7 +149,7 @@ CFTC과 메이저 리그 야구는 오늘 CFTC과 프로 스포츠 리그 간의
 - [빗썸 오지급 사태 후폭풍…금감원, 가상자산 거래소 '은행급 규제' 추진 - 폴리뉴스 Polinews](https://news.google.com/rss/articles/CBMickFVX3lxTE00eWdGeU9FSkEyVFhZZXNzVlNrQmdMZmI5WU5kQkJmcV9QMHJYZlozNzZYZ3oycUpMRkNkYk5RendDeGdEUExuOEZieXJYVHpFak9OTmtNXzhza2dwSlNhb25aSkh4TFM1S3lzZWZ4a0lKd9IBckFVX3lxTE00eWdGeU9FSkEyVFhZZXNzVlNrQmdMZmI5WU5kQkJmcV9QMHJYZlozNzZYZ3oycUpMRkNkYk5RendDeGdEUExuOEZieXJYVHpFak9OTmtNXzhza2dwSlNhb25aSkh4TFM1S3lzZWZ4a0lKdw?oc=5)
  <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
  > 빗썸 오지급 사태 후폭풍…금감원, 가상자산 거래소 '은행급 규제' 추진 - 폴리뉴스 Polinews.
-- [단독] 금감원 "코인 거래소, 은행처럼 감독하겠다" - TradingView](https://news.google.com/rss/articles/CBMickFVX3lxTE1UaDU4UXBiV3Q3WjdNZzdFcktsNWx4YTFwN3piRWtoMVRjdU9NN2Nid3dEVWZoZnZjOXdaQzZCQ1V3aUdMUnB0bjBSTGc5bmt5YVFnZC10YWVBdjRHTzFkd1NvZUI4ODltMlk3M1hiNldNQQ?oc=5)
+- [단독 금감원 "코인 거래소, 은행처럼 감독하겠다" - TradingView](https://news.google.com/rss/articles/CBMickFVX3lxTE1UaDU4UXBiV3Q3WjdNZzdFcktsNWx4YTFwN3piRWtoMVRjdU9NN2Nid3dEVWZoZnZjOXdaQzZCQ1V3aUdMUnB0bjBSTGc5bmt5YVFnZC10YWVBdjRHTzFkd1NvZUI4ODltMlk3M1hiNldNQQ?oc=5)
  <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
  > [단독] 금감원 "코인 거래소, 은행처럼 감독하겠다" TradingView
 - [빗썸 비트코인 오지급 여파…금감원, 가상자산 거래소 ‘은행급’ 규제 국회 건의](https://news.google.com/rss/articles/CBMiUkFVX3lxTE9qanJOLTF0MUJvamYzLXQ4ZjhrZ25iek12OEgwZmJrMFhuUVJnandYN2dDZzRGSWhwV1Nkd2ZmSHEtaHAwZVR6b2Z0OFgzazZVSGc?oc=5)

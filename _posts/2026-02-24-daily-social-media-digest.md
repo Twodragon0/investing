@@ -6,8 +6,9 @@ categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-social-media-digest-2026-02-24.png"
+image: "/assets/images/generated/news-briefing-social-2026-02-24.png"
 description: "2026-02-24 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 소셜 미디어 1건, 정치·경제 25건, 총 46건이 수집되었습니다."
+excerpt: "주요 테마: 정치/정책, 매크로/금리, 비트코인 긴급 알림 1건에 대한 선별 모니터링 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 **2026-02-24** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 소셜 미디어 1건, 정치·경제 25건, 총 46건이 수집되었습니다.
@@ -76,11 +77,11 @@ USDC 신규 발행: 고래 경보 2억 5천만 스테이블코인 생성으로 �
 
 ## 정치·경제 동향
 
-**1. [[오늘 주요 경제·암호화폐 일정] 도널드 트럼프 미국 대통령 국정연설 外 - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE5aWTBtY3BGMUtyWVFwbi1YOHBkeGZXRzJBTF9teFFnX1RydUNQTmY1bWozd195LXZXOTR2TExLUl9oZmxod3Z5QzJYblltOVJi?oc=5)**
+**1. [[오늘 주요 경제·암호화폐 일정 도널드 트럼프 미국 대통령 국정연설 外 - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE5aWTBtY3BGMUtyWVFwbi1YOHBkeGZXRzJBTF9teFFnX1RydUNQTmY1bWozd195LXZXOTR2TExLUl9oZmxod3Z5QzJYblltOVJi?oc=5)**
 [오늘 주요 경제·암호화폐 일정] 도널드 트럼프 미국 대통령 국정연설 外 블루밍비트
 <span class="source-tag">트럼프 경제정책 KR</span>
 
-**2. [[한주간 주요 경제·암호화폐 일정] 도널드 트럼프 미국 대통령 국정연설 外 - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE5ockxSd25VbWNOOGN5WnpIa0tTTWQ4cEg0T1Awa3gyaFdrT0hvRU5xeG5SRzVQbkFXMkVnQnBZNzNDVWdISFFqbmxxVEdjQ1hh?oc=5)**
+**2. [[한주간 주요 경제·암호화폐 일정 도널드 트럼프 미국 대통령 국정연설 外 - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE5ockxSd25VbWNOOGN5WnpIa0tTTWQ4cEg0T1Awa3gyaFdrT0hvRU5xeG5SRzVQbkFXMkVnQnBZNzNDVWdISFFqbmxxVEdjQ1hh?oc=5)**
 [한주간 주요 경제·암호화폐 일정] 도널드 트럼프 미국 대통령 국정연설 外 블루밍비트
 <span class="source-tag">트럼프 경제정책 KR</span>
 
@@ -105,7 +106,7 @@ Here’s the latest on Donald Trump and the crypto market Binance
 **8. [Stock Markets Sink: Trump Tariff Uncertainty Strikes Again? - tastylive](https://news.google.com/rss/articles/CBMivgFBVV95cUxQQS1OUjdiN3psRW9rXzJWbjVTRm02UmJvVUVEZGJpcnM3aVhzdGhQaFRyd1hWSjRKZlRZTWhraXl3cG84YmtXLVhxWVBNZzZzbm9ncFk5UFRmaUdRV19acDdfT3YwVUQ1U1R0TFlnU0liV1plWE55dXZFVzVsbG5GMGo1c3FqakZzQ190LXpfWGI5azcwSzNOSVJhYkJGMWwyeUdVQkx4ajZsb0tfY1pGWXhFZ09GUWR2Z2xYRkxn?oc=5)**
 <span class="source-tag">Trump Economy</span>
 
-**9. [[기획특집] 이재명 「국민주권정부」 ⑦ 경제정책 라인, 경제정책 - 르몽드 디플로마티크](https://news.google.com/rss/articles/CBMiakFVX3lxTFBJMElCUmF5dzU5ZXdRLVV2Q2t0Y0F0VTA5ejdoSzQ5YWNjcHh5OEFDWlFLcHhKMmY4RG5RYml1YTV0ZDg4bHFPUW50aWZ6SWxic3hLTjBPU1o0aV93QkJaNWI4QS1hRmNHUEE?oc=5)**
+**9. [[기획특집 이재명 「국민주권정부」 ⑦ 경제정책 라인, 경제정책 - 르몽드 디플로마티크](https://news.google.com/rss/articles/CBMiakFVX3lxTFBJMElCUmF5dzU5ZXdRLVV2Q2t0Y0F0VTA5ejdoSzQ5YWNjcHh5OEFDWlFLcHhKMmY4RG5RYml1YTV0ZDg4bHFPUW50aWZ6SWxic3hLTjBPU1o0aV93QkJaNWI4QS1hRmNHUEE?oc=5)**
 <span class="source-tag">이재명 경제정책</span>
 
 **10. [이재명·장동혁 부동산 설전…李대통령의 정책 실패 탓 ](https://news.google.com/rss/articles/CBMiT0FVX3lxTE03aUI2cmJoVDZOalg4ay0xRjYxaUlJMmhtNEp4dGxOamk5YjhmdVlJWjFCQkNVQUNsU1dfQWFsWDJTVWNEM1dXNlNjZm9kV3M?oc=5)**
@@ -119,32 +120,32 @@ Here’s the latest on Donald Trump and the crypto market Binance
 
 ### 🏛️ 정치/정책 (14건)
 
-- [[Telegram] ERIC TRUMP: Being de-banked pushed Trump family towards crypto." The banks made the biggest mistake ](https://t.me/crypto/3517) — Telegram @crypto
-- [[오늘 주요 경제·암호화폐 일정] 도널드 트럼프 미국 대통령 국정연설 外 - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE5aWTBtY3BGMUtyWVFwbi1YOHBkeGZXRzJBTF9teFFnX1RydUNQTmY1bWozd195LXZXOTR2TExLUl9oZmxod3Z5QzJYblltOVJi?oc=5) — 트럼프 경제정책 KR
-- [[한주간 주요 경제·암호화폐 일정] 도널드 트럼프 미국 대통령 국정연설 外 - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE5ockxSd25VbWNOOGN5WnpIa0tTTWQ4cEg0T1Awa3gyaFdrT0hvRU5xeG5SRzVQbkFXMkVnQnBZNzNDVWdISFFqbmxxVEdjQ1hh?oc=5) — 트럼프 경제정책 KR
+- [[Telegram ERIC TRUMP: Being de-banked pushed Trump family towards crypto." The banks made the biggest mistake ](https://t.me/crypto/3517) — Telegram @crypto
+- [[오늘 주요 경제·암호화폐 일정 도널드 트럼프 미국 대통령 국정연설 外 - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE5aWTBtY3BGMUtyWVFwbi1YOHBkeGZXRzJBTF9teFFnX1RydUNQTmY1bWozd195LXZXOTR2TExLUl9oZmxod3Z5QzJYblltOVJi?oc=5) — 트럼프 경제정책 KR
+- [[한주간 주요 경제·암호화폐 일정 도널드 트럼프 미국 대통령 국정연설 外 - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE5ockxSd25VbWNOOGN5WnpIa0tTTWQ4cEg0T1Awa3gyaFdrT0hvRU5xeG5SRzVQbkFXMkVnQnBZNzNDVWdISFFqbmxxVEdjQ1hh?oc=5) — 트럼프 경제정책 KR
 
 ### 📊 매크로/금리 (12건)
 
-- [[Telegram] 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
-- [[Telegram] 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://](https://t.me/whale_alert/11524) — Telegram @whale_alert
+- [[Telegram 💵 💵 💵 💵 💵 💵 60,000,000 #USDT (59,732,218 USD) minted at Tether TreasuryTx: https://t.co/mMr3UVbbjE](https://t.me/whale_alert/11523) — Telegram @whale_alert
+- [[Telegram 🚨 🚨 25,000,000 #USDT (25,313,496 USD) transferred from Tether Treasury to unknown walletTx: https://](https://t.me/whale_alert/11524) — Telegram @whale_alert
 - [로이터 "한국은행 올해 금리 2.5%로 동결 전망", 환율과 부동산 리스크 고려(https://news.google.com/rss/articles/CBMic0FVX3lxTE9zU2xsSWtUZDVid2dXOVhaenpWVzltZlh5SE9hXzQ5eXFHS1NsVGZyQ2IydFZsZTBDblNIYmxGVHVnZjVWRTZ2Q3V2Vjc3M0M5cm1jekJXSUtEOV9TTHJPTTlpRXZ3cGdZSWpCdl9ab0pKMkU?oc=5) — 한국은행 금리정책
 
 ### 🟠 비트코인 (8건)
 
-- [[Telegram] Binance founder CZ predicts Bitcoin will reach between $500,000 and $1,000,000 this cycle.Sponsored ](https://t.me/crypto/3518) — Telegram @crypto
-- [[Telegram] Stefan Thomas has over $600,000,000 worth of #Bitcoin stored on a IronKey USB and only has two attem](https://t.me/crypto/3520) — Telegram @crypto
-- [[Telegram] Peter Schiff said $126,000 was the final all-time high for #Bitcoin.Sponsored by @rainbetcom](https://t.me/crypto/3522) — Telegram @crypto
+- [[Telegram Binance founder CZ predicts Bitcoin will reach between $500,000 and $1,000,000 this cycle.Sponsored ](https://t.me/crypto/3518) — Telegram @crypto
+- [[Telegram Stefan Thomas has over $600,000,000 worth of #Bitcoin stored on a IronKey USB and only has two attem](https://t.me/crypto/3520) — Telegram @crypto
+- [[Telegram Peter Schiff said $126,000 was the final all-time high for #Bitcoin.Sponsored by @rainbetcom](https://t.me/crypto/3522) — Telegram @crypto
 
 ### 🏦 거래소 (9건)
 
-- [[Telegram] Binance founder CZ predicts Bitcoin will reach between $500,000 and $1,000,000 this cycle.Sponsored ](https://t.me/crypto/3518) — Telegram @crypto
-- [[Telegram] A property seller featured on a 2015 episode of Million Dollar Listing New York declined 50,000 Bitc](https://t.me/crypto/3524) — Telegram @crypto
-- [[Telegram] 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown walletTx: https://t.co/aNttwwzxno](https://t.me/whale_alert/11520) — Telegram @whale_alert
+- [[Telegram Binance founder CZ predicts Bitcoin will reach between $500,000 and $1,000,000 this cycle.Sponsored ](https://t.me/crypto/3518) — Telegram @crypto
+- [[Telegram A property seller featured on a 2015 episode of Million Dollar Listing New York declined 50,000 Bitc](https://t.me/crypto/3524) — Telegram @crypto
+- [[Telegram 370,000 #LINK (1,510,265 USD) transferred from #Bithumb to unknown walletTx: https://t.co/aNttwwzxno](https://t.me/whale_alert/11520) — Telegram @whale_alert
 
 ### 🔵 규제/정책 (2건)
 
-- [[Telegram] JUST IN: 🇺🇸 CFTC Chair says crypto market structure bill "is on the cusp" of becoming law.Sponsored ](https://t.me/crypto/3514) — Telegram @crypto
-- [[Telegram] 🇺🇸 Billionaire Grant Cardone says, "#Bitcoin will grind sideways, provide one more chance to buy low](https://t.me/crypto/3525) — Telegram @crypto
+- [[Telegram JUST IN: 🇺🇸 CFTC Chair says crypto market structure bill "is on the cusp" of becoming law.Sponsored ](https://t.me/crypto/3514) — Telegram @crypto
+- [[Telegram 🇺🇸 Billionaire Grant Cardone says, "#Bitcoin will grind sideways, provide one more chance to buy low](https://t.me/crypto/3525) — Telegram @crypto
 
 
 ---
