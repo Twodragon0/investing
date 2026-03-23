@@ -140,6 +140,16 @@ Slack 연동:
 - **전문**: ruff 린팅, pip-audit, API 키 노출 방지, OWASP 검사
 - **핵심**: `.github/workflows/code-quality.yml`, `.github/workflows/dependency-check.yml`
 
+### 6. Architect (시스템 아키텍트)
+- **담당**: 수집 파이프라인 설계, Jekyll 통합, 워크플로우 자동화 아키텍처
+- **전문**: 11개 수집기 데이터 흐름, `scripts/common/` 모듈 설계, GitHub Actions 구조
+- **핵심 파일**: `scripts/common/config.py`, `scripts/common/dedup.py`
+
+### 7. Test Engineer (테스트 엔지니어)
+- **담당**: 수집기 테스트, dedup 검증, Jekyll 빌드 유효성
+- **전문**: pytest, API 모킹, 한국어 텍스트 처리 테스트, 멱등성 검증
+- **핵심**: `scripts/` 모듈 단위 테스트
+
 ## Team Usage Examples
 
 ### 새 데이터 소스 추가
