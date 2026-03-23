@@ -34,7 +34,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
       - name: Classify failure type
         id: classify
@@ -126,7 +126,7 @@ jobs:
 
       - name: Create issue for code failures
         if: steps.classify_final.outputs.final_classification == 'code' && steps.rerun.outputs.rerun != 'true'
-        uses: actions/github-script@v8
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
         with:
           script: |
             const run = context.payload.workflow_run;
@@ -194,7 +194,7 @@ jobs:
 
       - name: Post classified failure to Slack
         if: steps.slack.outputs.can_post == 'true'
-        uses: slackapi/slack-github-action@v3.0.1
+        uses: slackapi/slack-github-action@af78098f536edbc4de71162a307590698245be95 # v3.0.1
         with:
           method: chat.postMessage
           token: ${{ steps.slack.outputs.token }}
