@@ -46,50 +46,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-23 - stock-news 뉴스 요약 
 <li><a href="https://www.marketwatch.com/story/americans-are-about-to-get-a-crash-course-in-the-global-economy-higher-prices-are-coming-for-pineapples-plastic-chocolate-and-berries-0be67162?mod=mw_rss_topstories">Americans are about to get a crash course in the global economy: Higher prices are coming for pineapples, plastic, chocolate and berries</a></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Americans are about to get a crash course in the global economy: Higher prices are coming for pin. 
-총 118건의 뉴스 중 P1 주요 이슈도 20건 확인됩니다.
-
-### 테마별 동향
-
-- **📊 매크로/금리** (13건): 환율, 인플레이션, 원대 이슈에 대한 시장 반응을 모니터링할 필요가 있습니다.
-- **📈 가격/시장** (23건): 환율, 인플레이션, 원대 테마가 부각되고 있어 섹터 로테이션 가능성을 점검하세요.
-- **🏛️ 정치/정책** (11건): 트럼프 관련 뉴스 흐름이 강화되고 있어 중장기 영향을 분석해야 합니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 미국인들은 세계 경제에서 폭락 과정을 겪게 될 것입니다: 파인애플 가격이 상승할 것입니다.
-
-### 주요 이슈
-
-- 韓증시에 드리운 '버블' 그림자…곳곳서 나오는 증시과열 경고음
-- 주식시장은 인공지능(AI)에 대한 경고 신호를 보내고 있는가?
-- ETF워치]연금부자 바람 담은 '반도체 투톱 채권혼합' 인기
-- 외 17건
-
-### 투자자 체크포인트
-
-- 한국 기사 27건, 글로벌 기사 91건 수집
-- 한국 지수: KOSPI 5,781.20(+0.31%), KOSDAQ 1,161.52(+1.58%), USD/KRW 1,504.83(+0.70%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:57%"></div></div><span class="theme-count">13건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:100%"></div></div><span class="theme-count">23건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:48%"></div></div><span class="theme-count">11건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:26%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:22%"></div></div><span class="theme-count">5건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-03-23.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-03-23.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- 총 **118건** 수집
+- KOSPI 5,781.20 (+0.31%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
+- KOSDAQ 1,161.52 (+1.58%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
 
 ## 테마별 주요 뉴스
 
