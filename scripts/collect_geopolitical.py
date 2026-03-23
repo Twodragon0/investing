@@ -152,21 +152,38 @@ def _parse_float(value: Any) -> Optional[float]:
 
 
 def _parse_probability(outcomes: List[Any], prices: List[Any]) -> str:
-    """Parse outcome prices into a readable probability string."""
+    """Parse outcome prices into a readable probability string.
+
+    For binary markets (Yes/No), show the dominant outcome with percentage.
+    For multi-outcome, show top 2 outcomes.
+    """
     if not outcomes or not prices:
         return "N/A"
 
-    parts = []
-    for i, outcome in enumerate(outcomes[:3]):
+    parsed = []
+    for i, outcome in enumerate(outcomes[:4]):
         if i < len(prices):
             prob = _parse_float(prices[i])
             if prob is not None:
-                # Polymarket prices are 0-1 (probability) or 0-100 (cents)
                 if prob > 1:
                     prob = prob / 100
-                parts.append(f"{outcome}: {prob:.0%}")
+                label = str(outcome).strip()
+                parsed.append((label, prob))
 
-    return " / ".join(parts) if parts else "N/A"
+    if not parsed:
+        return "N/A"
+
+    # Binary market: show dominant side clearly
+    if len(parsed) == 2 and {p[0].lower() for p in parsed} <= {"yes", "no"}:
+        yes_prob = next((p for lbl, p in parsed if lbl.lower() == "yes"), 0)
+        if yes_prob >= 0.5:
+            return f"🟢 Yes {yes_prob:.0%}"
+        return f"🔴 No {1 - yes_prob:.0%}"
+
+    # Multi-outcome: show top 2
+    parsed.sort(key=lambda x: x[1], reverse=True)
+    parts = [f"{label} {prob:.0%}" for label, prob in parsed[:2]]
+    return " / ".join(parts)
 
 
 def fetch_gdelt(limit: int = 30) -> List[Dict[str, Any]]:
@@ -387,11 +404,25 @@ def _build_polymarket_section(markets: List[Dict[str, Any]]) -> List[str]:
         "wimbledon",
         "olympics",
     }
-    non_sports = [m for m in markets if not any(kw in m.get("title", "").lower() for kw in _SPORTS_KEYWORDS)]
-    filtered_markets = [m for m in non_sports if any(kw in m.get("title", "").lower() for kw in _GEO_KEYWORDS)]
-    # Fall back to non-sports markets if geo filter is too aggressive
+    _ENTERTAINMENT_KEYWORDS = _SPORTS_KEYWORDS | {
+        "gta vi",
+        "gta 6",
+        "jesus christ",
+        "netflix",
+        "spotify",
+        "movie",
+        "album",
+        "tv show",
+        "reality tv",
+        "celebrity",
+    }
+    non_entertainment = [
+        m for m in markets if not any(kw in m.get("title", "").lower() for kw in _ENTERTAINMENT_KEYWORDS)
+    ]
+    filtered_markets = [m for m in non_entertainment if any(kw in m.get("title", "").lower() for kw in _GEO_KEYWORDS)]
+    # Fall back to non-entertainment markets if geo filter is too aggressive
     if len(filtered_markets) < 3:
-        filtered_markets = non_sports if non_sports else markets
+        filtered_markets = non_entertainment if non_entertainment else markets
 
     lines = []
     rows = []
@@ -413,12 +444,18 @@ def _build_polymarket_section(markets: List[Dict[str, Any]]) -> List[str]:
         )
     )
 
-    # Summary stats
+    # Summary stats as stat-grid (cleaner than blockquote table)
     total_volume = sum(m.get("volume", 0) for m in markets)
     lines.append(
-        f"\n> 총 {len(markets)}개 예측 시장 | "
-        f"합산 거래량: ${total_volume:,.0f} | "
-        f"출처: [Polymarket](https://polymarket.com)\n"
+        '\n<div class="stat-grid">'
+        f'<div class="stat-item"><span class="stat-value">{len(filtered_markets)}</span>'
+        f'<span class="stat-label">분석 대상</span></div>'
+        f'<div class="stat-item"><span class="stat-value">${total_volume:,.0f}</span>'
+        f'<span class="stat-label">합산 거래량</span></div>'
+        f'<div class="stat-item"><span class="stat-value">'
+        f'<a href="https://polymarket.com" target="_blank" rel="noopener noreferrer">Polymarket</a></span>'
+        f'<span class="stat-label">출처</span></div>'
+        "</div>\n"
     )
 
     return lines
