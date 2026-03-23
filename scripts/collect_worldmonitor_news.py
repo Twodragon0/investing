@@ -704,10 +704,18 @@ def main() -> None:
         impact = impact_label(theme)
 
         title = get_display_title(item) or orig_title
+        safe_title = html_text(title)
         display_title = markdown_link(f"**{title}**", link) if link else f"**{escape_table_cell(title)}**"
+        # HTML <a> version for use inside HTML card blocks (markdown doesn't render in HTML divs)
+        html_title = (
+            f'<a href="{link}" target="_blank" rel="noopener noreferrer"><strong>{safe_title}</strong></a>'
+            if link
+            else f"<strong>{safe_title}</strong>"
+        )
         issue_items.append(
             {
                 "title": display_title,
+                "html_title": html_title,
                 "theme": theme,
                 "impact": impact,
                 "source": source,
@@ -731,6 +739,7 @@ def main() -> None:
                 entry["theme"],
                 entry["impact"],
                 entry["source"],
+                entry.get("html_title", entry["title"]),
             ]
         )
 
@@ -800,14 +809,15 @@ def main() -> None:
     impact_colors = {"높음": "#f85149", "중간": "#d29922", "낮음": "#8b949e"}
     issue_cards = []
     for row in rows:
-        idx, title_md, theme, impact, source = row
+        idx, title_md, theme, impact, source = row[:5]
+        html_title_str = row[5] if len(row) > 5 else title_md
         impact_text = str(impact)
         impact_color = impact_colors.get(impact_text, "#8b949e")
         issue_cards.append(
             f'<div class="wm-issue-card">'
             f'<div class="wm-issue-num">{idx}</div>'
             f'<div class="wm-issue-body">'
-            f'<div class="wm-issue-title">{title_md}</div>'
+            f'<div class="wm-issue-title">{html_title_str}</div>'
             f'<div class="wm-issue-meta">'
             f'<span class="wm-issue-theme">{html_text(theme)}</span>'
             f'<span class="wm-issue-impact" style="color:{impact_color};">{html_text(impact_text)}</span>'
