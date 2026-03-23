@@ -73,7 +73,7 @@ CFTC의 시장 참가자 부서와 청산 및 위험 부서는 오늘 암호화 
 증시 제도 변경 관련 소식입니다. 거래 환경 변화에 따른 투자 전략 조정이 필요할 수 있습니다.
 <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
 
-**2. [“쪼개기 상장시 모회사 주주 우선배정 비율은 확정된 바 없습니다.” - 3.19일 한국경제 「\[단독\] 금융위 ‘쪼개기 상장’시 모회사 주주 우선배정은 15%만 해야｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86498)**
+**2. [“쪼개기 상장시 모회사 주주 우선배정 비율은 확정된 바 없습니다.” - 3.19일 한국경제 「\[단독\ 금융위 ‘쪼개기 상장’시 모회사 주주 우선배정은 15%만 해야｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86498)**
 IPO·신규 상장 관련 소식입니다. 공모가 대비 시장 평가와 수급 동향을 주시하세요.
 <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
 
@@ -81,7 +81,7 @@ IPO·신규 상장 관련 소식입니다. 공모가 대비 시장 평가와 수
 부동산 시장 관련 소식입니다. 금리·정책 변화에 따른 부동산 시장 흐름을 주시해야 합니다.
 <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
 
-**4. [“중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「\[단독\] 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86460)**
+**4. [“중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「\[단독\ 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86460)**
 “중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「[단독] 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 - 1.
 <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
 
@@ -129,7 +129,7 @@ IPO·신규 상장 관련 소식입니다. 공모가 대비 시장 평가와 수
 - [“금융위원회는 일반주주 보호를 위한 제도개선을 흔들림 없이, 확고하게 추진하고 있습니다.” - 신주우선배정 및 의무공개매수 제도와 관련한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86503)
  <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
  > 증시 제도 변경 관련 소식입니다.
-- [“쪼개기 상장시 모회사 주주 우선배정 비율은 확정된 바 없습니다.” - 3.19일 한국경제 「[단독] 금융위 ‘쪼개기 상장’시 모회사 주주 우선배정은 15%만 해야｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86498)
+- [“쪼개기 상장시 모회사 주주 우선배정 비율은 확정된 바 없습니다.” - 3.19일 한국경제 「[단독 금융위 ‘쪼개기 상장’시 모회사 주주 우선배정은 15%만 해야｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86498)
  <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
  > IPO·신규 상장 관련 소식입니다.
 
@@ -138,10 +138,10 @@ IPO·신규 상장 관련 소식입니다. 공모가 대비 시장 평가와 수
 전체의 31%로 높은 비중을 보입니다. 주요 출처: 금융위원회 보도참고(2건), 한국 금융규제 뉴스(2건).
 
 **주요 동향:**
-- [“쪼개기 상장시 모회사 주주 우선배정 비율은 확정된 바 없습니다.” - 3.19일 한국경제 「[단독] 금융위 ‘쪼개기 상장’시 모회사 주주 우선배정은 15%만 해야｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86498)
+- [“쪼개기 상장시 모회사 주주 우선배정 비율은 확정된 바 없습니다.” - 3.19일 한국경제 「[단독 금융위 ‘쪼개기 상장’시 모회사 주주 우선배정은 15%만 해야｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86498)
  <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
  > IPO·신규 상장 관련 소식입니다.
-- [“중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「[단독] 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86460)
+- [“중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「[단독 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86460)
  <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
  > “중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「[단독] 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 - 1.
 - [빗썸 오지급 사태 후폭풍…금감원, 가상자산 거래소 '은행급 규제' 추진 - 폴리뉴스 Polinews](https://news.google.com/rss/articles/CBMickFVX3lxTE00eWdGeU9FSkEyVFhZZXNzVlNrQmdMZmI5WU5kQkJmcV9QMHJYZlozNzZYZ3oycUpMRkNkYk5RendDeGdEUExuOEZieXJYVHpFak9OTmtNXzhza2dwSlNhb25aSkh4TFM1S3lzZWZ4a0lKd9IBckFVX3lxTE00eWdGeU9FSkEyVFhZZXNzVlNrQmdMZmI5WU5kQkJmcV9QMHJYZlozNzZYZ3oycUpMRkNkYk5RendDeGdEUExuOEZieXJYVHpFak9OTmtNXzhza2dwSlNhb25aSkh4TFM1S3lzZWZ4a0lKdw?oc=5)
@@ -156,7 +156,7 @@ IPO·신규 상장 관련 소식입니다. 공모가 대비 시장 평가와 수
 - [“다주택자, 비거주 1주택자 등에 대한 대출 규제는 확정된 바 없습니다” - 3.16일 서울경제 ｢아이 학교‧직장 발령 등 실수요땐 전세대출 추가규제 제외｣ 제하의 기사 등에 대한 정부입장 설명](https://www.fsc.go.kr/no010102/86461)
  <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
  > 부동산 시장 관련 소식입니다.
-- [“중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「[단독] 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86460)
+- [“중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「[단독 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86460)
  <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
  > “중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「[단독] 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 - 1.
 - [금감원, "가상자산거래소 은행 수준의 검사·제재권 필요"…국회에 2단계 입법 건의 - 더퍼블릭](https://news.google.com/rss/articles/CBMia0FVX3lxTE1YOWFQMF85b2NrSGRJS2JLa1BCWkRUbkZzOVNMTDdrN3NISXJwcDUybkNtQ3Y2Xzd6N0xySGRkN0RDSVFZdmJldlpkY0o3QUZSYTFrUU5LQ094TEVVX3JEWW5WNDBxNGlId3J3?oc=5)

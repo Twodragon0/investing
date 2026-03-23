@@ -134,7 +134,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-23 - crypto-news 뉴스 요�
 <details><summary>그 외 34건 보기</summary><div class="details-content"><ol class="news-overflow-list">
 <li><a href="https://news.google.com/read/CBMikwFBVV95cUxPVml3RjB3U18zdERoanl5R2g4YmNPanU1MHhCUlAzMklxNEQxdE9LTGMwa0prbTFxajktMEZ1b2plME40TEtzT0tLTFBmd0lUWUl5LTFpdXFXOVhGajZKMGZ3NjFWZkYxZ00xTzVjTGJnc013SG84TlBjelpfT3dWUnBQbml5dkdEUEI3b0tYSUpCR0E?hl=en-US&gl=US&ceid=US%3Aen">이란 분쟁으로 위험 선호도가 흔들리면서 암호화폐 하락 (BTC-USD:Cryptocurrency)</a></li>
 <li><a href="https://news.google.com/read/CBMie0FVX3lxTE96VnNhOXdWTXpWdEM2emVzYllzQ2RkVlUyXzVVYl9JbEJobFRXc2JfcGdhOFlLTlFYWmVCbWs5cHpKbnhOQmtzb0x3WE1BcHp2M0d2MWEwME02dkwxbkFkeXBBNTc5aThJMUNScEY3Zm5jZ0VmUUFHSFNGVQ?hl=en-US&gl=US&ceid=US%3Aen">비트코인은 양자 준비에 대한 도전에 부응하고 있습니다</a></li>
-<li><em>.외 19건</em></li>
+<li><em>외 19건</em></li>
 </ol></div></details>
 
 
@@ -176,7 +176,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-23 - crypto-news 뉴스 요�
 <li><a href="https://news.google.com/read/CBMi4AFBVV95cUxPZHdoQnJzS0UxcGJNaEFlZ1RVRC1TOXF5eF9OQWozR3VCM2d4d1VZRkhEV21iT2xCYlRpQ3lQcEZ5YWRwbFlVTFZZdG9icS1IQzRQUFFoaERGQjV4UVp0YVBQeDVkU2tlbTdTbFZ0dVIyTW5NUXlkUHNOSWxZWHhOZk9zTEVLZU1LQWthMXJEWkN1UngySDBXMk1fMnJBQkF6TlZYNFBaNTh6WUZNV1R6Qk4zSXI2dHY5MGVmV1dUM000cElReEFoVmFZd1RMYjF4aGtmeERzUFlhMWx1NW1UbA?hl=en-US&gl=US&ceid=US%3Aen">비트코인 가격 뉴스: 비트코인 초기 보유자 2명이 BTC에 1억 1700만 달러를 매도했지만 고래은 기록적인 속도로 하락세를 매수하고 있습니다.</a></li>
 <li><a href="https://news.google.com/read/CBMilwFBVV95cUxQT0lROGxNWjlYbExTaFpja3FVV1Axek96RkFtZ21LR29veXBkdzlBUFZYWFFqeTgxZU9nQ3d4SlpxclQybklxR2ZUMzl6VVRQN3hnTkZqaWM0aU1VR0d0RWFGUWF6enpxNzVpbGtwdjRoVUxkajlPZkRqWDh4akxBSU1ybHg2REMyLUozOFFnMkRsdWxuSThn?hl=en-US&gl=US&ceid=US%3Aen">전문 분석가에 따르면 1,300% 이상 상승하기 전에 구매해야 할 암호화폐 1위</a></li>
 <li><a href="https://news.google.com/read/CBMiigFBVV95cUxNZjhHMFRrZ1otVHU3cGVtSXJSTVgyeWFzOXFyUlFFSDRxaFJoclJPR0hPdzR0SGlIWVh1VWo0VW5vWXZQZnB4a3B3ZGozUm5KZW1OT0QwaUtKNzNGMHI2V1hqaTNLdVFlM0ZvZ1J5V3lUMFhBUVNfMTBMSXh0RUlPXy1hLVNQRTdMZlE?hl=en-US&gl=US&ceid=US%3Aen">로맨스 사기로부터 자신을 보호하세요</a></li>
-<li><em>.외 13건</em></li>
+<li><em>외 13건</em></li>
 </ol></div></details>
 
 

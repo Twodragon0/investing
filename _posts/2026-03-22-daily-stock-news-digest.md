@@ -49,7 +49,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-22 - stock-news 뉴스 요약 
 
 ## 전체 뉴스 요약
 
-- 총 **13건** 수집
+- 총 **159건** 수집
 - KOSPI 5,781.20 (+0.31%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 1,161.52 (+1.58%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
 
@@ -57,7 +57,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-22 - stock-news 뉴스 요약 
 
 ### 📈 가격/시장 (25건)
 
-*[ETF워치]연금부자 바람 담은 '반도체 투톱 채권혼합' 인기 v.daum.net*
+*[ETF워치] 연금부자 바람 담은 '반도체 투톱 채권혼합' 인기 v.daum.net*
 
 
 <div class="news-card-item news-sev-medium">
@@ -65,7 +65,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-22 - stock-news 뉴스 요약 
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE4xN3BjRHJkdndmSXlwRExMR3lNM3dKYjcxQ0hYSFRDdGlFMExWUTN1dVNuSU1aTWgwRjc0cmlwRndzeXdkMlRaZ1ZJNXNqY1E?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">ETF워치]연금부자 바람 담은 '반도체 투톱 채권혼합' 인기</a>
-<p class="news-desc">[ETF워치]연금부자 바람 담은 '반도체 투톱 채권혼합' 인기 v.daum.net</p>
+<p class="news-desc">[ETF워치] 연금부자 바람 담은 '반도체 투톱 채권혼합' 인기 v.daum.net</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -95,7 +95,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-22 - stock-news 뉴스 요약 
 <details><summary>그 외 22건 보기</summary><div class="details-content"><ol class="news-overflow-list">
 <li><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxPRjcxOWk4dTh2QjFKaVZCZkJhaFJ4NjhvZjFJSWlZRkFGNlhOa2hXaTdHYVl4enIxbFBsLVV5WkdwMFhPOV83d3Nja3lGU09lRDVLR1VQRFdPa1lCMjdicmJSZGx6Y0gtdDV2R2FNRHotTC16UHdtQzhPUy1EeGViN2Vhb2d0TkkwV1FleHdIQWFVZw?oc=5">JP Morgan, 2026년 남은 기간 동안 S&P 500 가격 목표 재설정</a></li>
 <li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE1QSWE5Q3ZmQzJRZHRISTVNRlA4Yko3LXdpTDU3a1ljcXB0bGtpVDVkdlhERThJaXZYVWVIdk9MQTA1eGFmNmJLaUhrMkxrOExlX0F5cTZtYzdHdHRTVm1TaWhBWFhuM3c2N0E?oc=5">20일 코스피·코스닥 동반 상승, 공매도는 거래대금 감소 - 중기이코노미</a></li>
-<li><em>.외 7건</em></li>
+<li><em>외 7건</em></li>
 </ol></div></details>
 
 

@@ -104,7 +104,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-22 - crypto-news 뉴스 요�
 <details><summary>그 외 42건 보기</summary><div class="details-content"><ol class="news-overflow-list">
 <li><a href="https://news.google.com/read/CBMiwwFBVV95cUxNVk5qN0ZfVmtBVld2TXdZZWlBS2loWF9nVVBuT1ZBOXRCWDEzQklOQjFxby11QjgzZnhrZ21kcC1tZ1h6blcyUHZrWTRtWTFpajUxbVByWnhlbGRObXRnLUx5dExSM2w2Yk1sM2Z0M183cVhkSnR1dlNvUGpLTjd3ck9kdW50SmhzY0FKb0pOTnp2VmJOUWxHU3NNWWg4Y1ljbDB4UHRia0t4NFE1dkNwZnYwallxc291bXh4NlAxS0tvZWM?hl=en-US&gl=US&ceid=US%3Aen">비트코인은 예상보다 높은 인플레이션 데이터로 인해 압력을 받고 있습니다: CNBC Crypto World</a></li>
 <li><a href="https://news.google.com/read/CBMi0gFBVV95cUxPQW15ZXBSTXFJVVF2QXBXaU9ZYUtFSlNyczh2azljVTRHUG9kcEtVdXpUYkZ0cnlwOE9jcVJRNGVNTy1TRWxMeV9MRnZ2eklTZldaQjhxcTdNZTRyUjdxOXBBcThZQ0F5TjNWeFFDYnAzY3c5M0JzeFBFb3JMWVlPcGZDUGNGU04zTEUwQmxIX1hlMTNJc1pkQ3FVVVFpRDBKT1hQNUdHamJ3c3dsMWlxMGozX0hTOTUtMlp2eTlLZjdHNm5iNVBLOE1ldGxFX2RCN0E?hl=en-US&gl=US&ceid=US%3Aen">비트코인은 $70,000 이상을 유지하지만 이란 전쟁이 시작된 이후 처음으로 주간 손실을 기록합니다.</a></li>
-<li><em>.외 27건</em></li>
+<li><em>외 27건</em></li>
 </ol></div></details>
 
 
@@ -150,7 +150,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-22 - crypto-news 뉴스 요�
 <li><a href="https://news.google.com/read/CBMizAFBVV95cUxQWHQzU0xUVS1qTDl4RDNGWDBfTm14dDd3RWswby1LbDFTREpnTmdMQTNIaW5ZLUQ1dDZheFgwbVRMNFpmU3VyVXplWVVfN2N5RFp3QzNEZHBfNFE1RERnMHZ6LVIzOWhmZmQtdGc5OGJYaF9ZVXRRMnVPODhLczZKdkhEbEVENlcwejBaa0Y1WExXM2V6VEZ2QkJ3VXpFV0QwSVJGcHZZVkRYZU5EWktvQkV3a29zMHlHN2ppOWhMRzBZaVI3MHZwdWs3Wnk?hl=en-US&gl=US&ceid=US%3Aen">비트코인 가격 예측: ChatGPT에 2026년 12월 31일까지 비트코인의 가치가 얼마인지 물었습니다.</a></li>
 <li><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxNbnRaZE5YLUlSRE1vMTRPVlk2MnFPTXgxdFQtaGo5LWZfN0lnU2NQV3hNa2VGTzBqTEdXVjlJY0RTSnB6YkI1YzdtczFKR21BODJjSko3QnNINGtHeHlzOVh4MHpYdm9BYW9aRHc5aHFSX0EwMTI3NXZXcnVyNWw2U3dMRGdwRE5rTng4ZmNMZGtBWk1nUUp3Szc1N2Q5SFU?oc=5">내가 Canton Network(암호화폐:CC-USD)에서 더욱 강세이 된 이유</a></li>
 <li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE9vWEZPWEdpMFlGNHdJeW9mYkFqRklFVFNIMEJTWjZpcURjWnVPS2JPcDB4dVU5aTBua3JlQVNzSWVCZFpDejJkQ2RldjBFTm8?oc=5">"증권 아니라 상품" 암호화폐 랠리, 비트 7.1만달러 회복</a></li>
-<li><em>.외 11건</em></li>
+<li><em>외 11건</em></li>
 </ol></div></details>
 
 

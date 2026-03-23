@@ -95,7 +95,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-23 - stock-news 뉴스 요약 
 
 ### 📊 매크로/금리 (13건)
 
-*[ETF워치]연금부자 바람 담은 '반도체 투톱 채권혼합' 인기 v.daum.net*
+*[ETF워치] 연금부자 바람 담은 '반도체 투톱 채권혼합' 인기 v.daum.net*
 
 
 <div class="news-card-item news-sev-medium">
@@ -103,7 +103,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-23 - stock-news 뉴스 요약 
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE4xN3BjRHJkdndmSXlwRExMR3lNM3dKYjcxQ0hYSFRDdGlFMExWUTN1dVNuSU1aTWgwRjc0cmlwRndzeXdkMlRaZ1ZJNXNqY1E?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">ETF워치]연금부자 바람 담은 '반도체 투톱 채권혼합' 인기</a>
-<p class="news-desc">[ETF워치]연금부자 바람 담은 '반도체 투톱 채권혼합' 인기 v.daum.net</p>
+<p class="news-desc">[ETF워치] 연금부자 바람 담은 '반도체 투톱 채권혼합' 인기 v.daum.net</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -174,7 +174,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-23 - stock-news 뉴스 요약 
 <li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE4xN3BjRHJkdndmSXlwRExMR3lNM3dKYjcxQ0hYSFRDdGlFMExWUTN1dVNuSU1aTWgwRjc0cmlwRndzeXdkMlRaZ1ZJNXNqY1E?oc=5">ETF워치]연금부자 바람 담은 '반도체 투톱 채권혼합' 인기</a></li>
 <li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE1BTzNVbkZXdWRGNFB6VDZvUWxTdnpjSUpSX2JjeDVUa1RuODg2dmMzVWRCaURHUGJNa2o1d2ZiZ0FQZXE5WWVwOVNaVkRZSTNWdnc3NUhfMXhwZ2hGbUxiVHJoYlFkaHdUZ3NUbU9FQ0Q4b1g4?oc=5">환율 1500원대 고착에…한은, 금리결정 ‘딜레마’ - 대한경제</a></li>
 <li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE5lSFZPVWstck5oZTJoNmVLd0EyY05YNTFtM2NxcURNVFQ2V1p0aDI4bTNISE4zSjBuRzdDamQ3bS1TdUF4ZGlYT1VzTVFZdEpTX0h2ZUM0RUhiYkFmQ0VWWXhQOWI?oc=5">환율 고공행진 등 중동발 불확실성 확대.금리 인상 가능성 고개 - 매일일보</a></li>
-<li><em>.외 5건</em></li>
+<li><em>외 5건</em></li>
 </ol></div></details>
 
 
