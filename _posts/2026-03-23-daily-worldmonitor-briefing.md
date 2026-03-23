@@ -10,8 +10,8 @@ source_url: "https://worldmonitor.app"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-worldmonitor-2026-03-23.png"
 permalink: "/market-analysis/2026/03/23/daily-worldmonitor-briefing/"
-description: "범위: 글로벌 지정학, 금융시장, 에너지 이슈 주요 출처: WorldMonitor/Al Jazeera (15건), WorldMonitor/CNBC (5건)"
-excerpt: "범위: 글로벌 지정학, 금융시장, 에너지 이슈 주요 출처: WorldMonitor/Al Jazeera (15건), WorldMonitor/CNBC (5건)"
+description: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-03-23 - 최신 시장 분석 뉴스와 분석을 확인하세요. 주요 키워드: worldmonitor, geopolitics, macro, daily-digest."
+excerpt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-03-23 - 최신 시장 분석 뉴스와 분석을 확인하세요. 주요 키워드: worldmonitor, geopoliti..."
 image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-03-23 - 시장 분석 뉴스 요약 이미지"
 ---
 

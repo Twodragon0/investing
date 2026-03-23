@@ -2207,7 +2207,10 @@ class ThemeSummarizer:
             )
             if len(p0_title) > 100:
                 # Try to extract key phrase
-                keywords = self._extract_title_keywords(p0_items[:1], max_keywords=3)
+                keywords = self._prepare_display_keywords(
+                    self._extract_title_keywords(p0_items[:1], max_keywords=5),
+                    max_keywords=3,
+                )
                 p0_title = ", ".join(keywords) if keywords else p0_title[:97] + "..."
             prefix = {
                 "crypto": "암호화폐",

@@ -9,7 +9,7 @@ source_url: "https://defillama.com"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-defi-2026-02-20.png"
 description: "2026-02-20 기준 DeFi 전체 TVL은 $247.99B 규모입니다. Liquid Staking과 Lending이 전체의 34%를 차지하며 시장을 주도하고, Ethereum이 60.1% 점유율로 압도적 1위를 유지하는 가운데 Hyperliquid L1 같은 신흥 체인이..."
-excerpt: "Liquid Staking이 시장의 핵심 인프라로 자리잡음: Lido($33.92B)와 Binance staked ETH($11.15B)를 합산하면 Liquid Staking…"
+excerpt: "DeFi TVL 리포트 - 2026-02-20 - 최신 암호화폐 뉴스와 분석을 확인하세요. 주요 키워드: defi, tvl, crypto, blockchain."
 ---
 
 **2026-02-20** 기준 DeFi 전체 TVL은 **$247.99B** 규모입니다. Liquid Staking과 Lending이 전체의 34%를 차지하며 시장을 주도하고, Ethereum이 60.1% 점유율로 압도적 1위를 유지하는 가운데 Hyperliquid L1 같은 신흥 체인이 상위권에 진입하고 있습니다.

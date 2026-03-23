@@ -8,7 +8,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-regulatory-2026-02-27.png"
 description: "글로벌 규제 동향 리포트 - 2026-02-27 - 글로벌 금융 규제 및 정책 변화 추적. 주요 키워드: regulation, sec, cftc, fsc."
-excerpt: "1. CFTC Staff Reissues Staff Letter 25-50 to Add Additional No-Action Position on CPO Delegation…"
+excerpt: "글로벌 규제 동향 리포트 - 2026-02-27 - 최신 regulatory-news 뉴스와 분석을 확인하세요. 주요 키워드: regulation, sec, cftc, fsc."
 ---
 
 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 34건의 규제 관련 뉴스가 수집되었습니다.

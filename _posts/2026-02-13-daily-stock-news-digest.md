@@ -8,7 +8,7 @@ source: "consolidated"
 lang: "ko"
 description: "2026-02-13 주식 시장에서 158건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,540.66(+0.66%), KOSDAQ 1,106.73(-1.27%), USD/KRW 1,441.98(+0.03%)."
 image: "/assets/images/generated/news-briefing-stock-2026-02-13.png"
-excerpt: "KOSPI: 5,540.66 ( +0.66%) KOSDAQ: 1,106.73 ( -1.27%) USD/KRW: 1,441.98 ( +0.03%)"
+excerpt: "주식 시장 뉴스 종합 - 2026-02-13 - 최신 주식 시장 뉴스와 분석을 확인하세요. 주요 키워드: stock, market, daily-digest."
 ---
 
 **2026-02-13** 주식 시장에서 158건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,540.66(+0.66%), KOSDAQ 1,106.73(-1.27%), USD/KRW 1,441.98(+0.03%).

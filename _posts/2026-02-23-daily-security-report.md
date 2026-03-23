@@ -8,7 +8,7 @@ source: "consolidated"
 lang: "ko"
 description: "블록체인 보안 리포트 - 2026-02-23 관련 보안 리포트입니다. 주요 키워드: security, hack, blockchain, daily-digest."
 image: "/assets/images/generated/news-briefing-security-2026-02-23.png"
-excerpt: "블록체인 보안 관련 뉴스 2건을 정리합니다. 1. IoTeX Bridge Hacked In Private Key Exploit - Attacker Bridges Stolen…"
+excerpt: "블록체인 보안 리포트 - 2026-02-23 - 최신 보안 뉴스와 분석을 확인하세요. 주요 키워드: security, hack, blockchain, daily-digest."
 ---
 
 블록체인 보안 관련 뉴스 2건을 정리합니다.

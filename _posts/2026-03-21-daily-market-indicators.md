@@ -9,8 +9,8 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-indicators-2026-03-21.png"
 permalink: "/market-analysis/2026/03/21/daily-market-indicators/"
-description: "오늘의 시장 분석 브리핑 — 시장 심리 및 리스크 지표 (2026-03-21). 주요 키워드: market-analysis, fear-greed, vix, market-breadth."
-excerpt: "1. S&P 500: Are Investors Too Bearish? What Sentiment Signals Say About Stocks Now"
+description: "시장 심리 및 리스크 지표 (2026-03-21) - 최신 시장 분석 뉴스와 분석을 확인하세요. 주요 키워드: market-analysis, fear-greed, vix, market-breadth."
+excerpt: "시장 심리 및 리스크 지표 (2026-03-21) - 최신 시장 분석 뉴스와 분석을 확인하세요. 주요 키워드: market-analysis, fear-greed, vix, m..."
 image_alt: "시장 심리 및 리스크 지표 (2026-03-21) - 시장 분석 뉴스 요약 이미지"
 ---
 

@@ -8,7 +8,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-regulatory-2026-02-18.png"
 description: "글로벌 규제 동향 리포트 - 2026-02-18 - 글로벌 금융 규제 및 정책 변화 추적. 주요 키워드: regulation, sec, cftc, fsc."
-excerpt: "gemi-20260217 - SEC.gov — SEC (Google News) iset20260213s1.htm - SEC.gov — SEC (Google News)"
+excerpt: "글로벌 규제 동향 리포트 - 2026-02-18 - 최신 regulatory-news 뉴스와 분석을 확인하세요. 주요 키워드: regulation, sec, cftc, fsc."
 ---
 
 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 27건의 규제 관련 뉴스가 수집되었습니다.

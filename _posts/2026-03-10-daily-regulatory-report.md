@@ -9,7 +9,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-regulatory-2026-03-10.png"
 description: "전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 31건의 규제 관련 뉴스가 수집되었습니다. 긴급: 긴급 금융시장상황 점검회의 개최 외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 31건의 뉴스 중 P1 주요 이슈도 11건 확인됩니다."
-excerpt: "1. CFTC, Marc H. Sielski를 전무 이사로 발표 상품선물거래위원회(Commodity Futures Trading Commission)는 오늘 Marc H."
+excerpt: "글로벌 규제 동향 리포트 - 2026-03-10 - 최신 regulatory-news 뉴스와 분석을 확인하세요. 주요 키워드: regulation, sec, cftc, fsc."
 ---
 
 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 31건의 규제 관련 뉴스가 수집되었습니다.

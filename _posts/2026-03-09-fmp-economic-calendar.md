@@ -9,7 +9,7 @@ source: "fmp"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-calendar-2026-03-09.png"
 description: "2026-03-09 FMP 기준 SPY -1.31%·VIX 30.81(+4.48%), 경제 이벤트 18건 수집. 섹터별 소재 +0.34% 유일 상승, 에너지·IT 하락. CIEN·대형주 실적 발표 2건 포함."
-excerpt: "Will Ciena (CIEN) Beat Estimates Again in Its Next Earnings Report? (Tue, 03 Mar 2026 17:10:02…"
+excerpt: "주요 경제 캘린더 및 실적 일정 (2026-03-09) - 최신 시장 분석 뉴스와 분석을 확인하세요. 주요 키워드: market-analysis, economic-calend..."
 ---
 
 **2026-03-09** 기준 주요 시장 지수 2종, 섹터 11개, 경제 이벤트 18건(고·중간 중요도), 대형주 실적 발표 2건을 수집했습니다.

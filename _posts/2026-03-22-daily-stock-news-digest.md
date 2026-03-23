@@ -9,8 +9,8 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/market-snapshot-2026-03-22.png"
 permalink: "/stock-news/2026/03/22/daily-stock-news-digest/"
-description: "긴급: Analysis: Trump's unshackled presidency puts him at the center of the economy"
-excerpt: "긴급: Analysis: Trump's unshackled presidency puts him at the center of the economy"
+description: "주식 시장 뉴스 종합 - 2026-03-22 - 최신 주식 시장 뉴스와 분석을 확인하세요. 주요 키워드: stock, market, daily-digest."
+excerpt: "주식 시장 뉴스 종합 - 2026-03-22 - 최신 주식 시장 뉴스와 분석을 확인하세요. 주요 키워드: stock, market, daily-digest."
 image_alt: "주식 시장 뉴스 종합 - 2026-03-22 - stock-news 뉴스 요약 이미지"
 ---
 

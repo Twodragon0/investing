@@ -8,7 +8,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-security-2026-03-04.png"
 description: "2026-03-04 블록체인 보안: 2월 해킹 피해 $26.5M으로 감소 추세이나, 가짜 VC 접촉 통한 ClickFix 취약점 악용 신종 공격 포착. 온체인 보안 개선·사회공학 공격 경계 필요."
-excerpt: "블록체인 보안 관련 뉴스 2건을 정리합니다. 1. Crypto Hacks Drop to $26.5M in February, Lowest Since March 2025 -…"
+excerpt: "블록체인 보안 리포트 - 2026-03-04 - 최신 보안 뉴스와 분석을 확인하세요. 주요 키워드: security, hack, blockchain, daily-digest."
 ---
 
 블록체인 보안 관련 뉴스 2건을 정리합니다.

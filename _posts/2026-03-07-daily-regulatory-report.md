@@ -8,7 +8,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-regulatory-2026-03-07.png"
 description: "2026-03-07 글로벌 규제 6건: 유럽 FCA 암호자산 규제 3건, 아시아 2건, 미국 1건. 규제/정책 5건(cryptoassets·FCA·Cryptoasset 키워드 부각), 리스크 보통 수준 평가."
-excerpt: "1. CFTC Chairman Selig, 수석 고문 Brigitte Weyls의 퇴임 발표 상품선물거래위원회(Commodity Futures Trading…"
+excerpt: "글로벌 규제 동향 리포트 - 2026-03-07 - 최신 regulatory-news 뉴스와 분석을 확인하세요. 주요 키워드: regulation, sec, cftc, fsc."
 ---
 
 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 6건의 규제 관련 뉴스가 수집되었습니다.

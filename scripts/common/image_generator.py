@@ -178,8 +178,8 @@ def _to_en(text: str) -> str:
     # If text contains any Hangul, try partial match or return as-is
 
     if re.search(r"[\uac00-\ud7af]", text):
-        # Check if it's a known prefix match
-        for ko, en in _KO_TO_EN.items():
+        # Longest match first to avoid partial replacements
+        for ko, en in sorted(_KO_TO_EN.items(), key=lambda x: len(x[0]), reverse=True):
             if ko in text:
                 return text.replace(ko, en)
         return text
@@ -310,13 +310,13 @@ COLORS = {
     "bg_header": "#0d1117",
     # Text hierarchy -- aligned with web CSS
     "text": "#e6edf3",
-    "text_secondary": "#8b949e",
+    "text_secondary": "#9da5ae",
     "text_muted": "#484f58",
     # Positive / Negative -- aligned with web accent colors
     "green": "#3fb950",
     "green_dim": "#0b3d24",
     "red": "#f85149",
-    "red_dim": "#3d1420",
+    "red_dim": "#4a1c2d",
     # Accent colors -- aligned with web accent colors
     "blue": "#58a6ff",
     "orange": "#d29922",
@@ -785,10 +785,24 @@ def _save_and_close(fig, filepath, *, bg=None):
         edgecolor="none",
         bbox_inches="tight",
         pad_inches=0.15,
+        metadata={"Software": _DS["watermark"]},
     )
     plt.close(fig)
+    # Optimize PNG file size via Pillow re-save
+    _optimize_png(filepath)
     # Generate WebP alongside PNG for faster page loads
     _convert_to_webp(filepath)
+
+
+def _optimize_png(png_path: str) -> None:
+    """Re-save PNG with Pillow optimize flag to reduce file size."""
+    try:
+        from PIL import Image
+
+        with Image.open(png_path) as img:
+            img.save(png_path, "PNG", optimize=True)
+    except Exception:  # noqa: BLE001, S110
+        pass  # optimization is best-effort
 
 
 def _convert_to_webp(png_path: str, quality: int = 88) -> Optional[str]:
@@ -3209,13 +3223,14 @@ def generate_category_og_image(
     plt.tight_layout(pad=0)
     plt.savefig(
         filepath,
-        dpi=150,
+        dpi=_DS["dpi"],
         facecolor=COLORS["bg"],
         edgecolor="none",
         bbox_inches="tight",
         pad_inches=0,
     )
     plt.close(fig)
+    _convert_to_webp(filepath)
 
     logger.info("Generated category OG image: %s", filename)
     return f"/assets/images/{filename}"

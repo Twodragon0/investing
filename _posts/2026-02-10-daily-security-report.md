@@ -8,7 +8,7 @@ source: "consolidated"
 lang: "ko"
 description: "블록체인 보안 리포트 - 2026-02-10 - 최신 보안 뉴스와 분석을 확인하세요. 주요 키워드: security, hack, blockchain, daily-digest."
 image: "/assets/images/generated/news-briefing-security-2026-02-10.png"
-excerpt: "Critical (3건): ████████████░░░░░░░░ 20% ($368.6M+) High (4건): ████████████████░░░░ 27% (10억+ 다운로드…"
+excerpt: "블록체인 보안 리포트 - 2026-02-10 - 최신 보안 뉴스와 분석을 확인하세요. 주요 키워드: security, hack, blockchain, daily-digest."
 ---
 
 ## 한줄 요약

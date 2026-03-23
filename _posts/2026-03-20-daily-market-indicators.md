@@ -9,7 +9,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-indicators-2026-03-20.png"
 permalink: "/market-analysis/2026/03/20/daily-market-indicators/"
-description: "시장 분석 분야 핵심 동향: 시장 심리 및 리스크 지표 (2026-03-20). 주요 키워드: market-analysis, fear-greed, vix, market-breadth."
+description: "시장 심리 및 리스크 지표 (2026-03-20) - 최신 시장 분석 뉴스와 분석을 확인하세요. 주요 키워드: market-analysis, fear-greed, vix, market-breadth."
 excerpt: "2026-03-20 기준 시장 심리·리스크 지표를 8개 소스에서 수집했습니다. Put/Call 비율 관련 뉴스: 1. S&P 500: Are Investors Too…"
 image_alt: "시장 심리 및 리스크 지표 (2026-03-20) - 시장 분석 뉴스 요약 이미지"
 ---

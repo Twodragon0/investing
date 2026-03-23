@@ -453,6 +453,17 @@ _CATEGORY_DESC_TEMPLATES: dict[str, list[str]] = {
 }
 
 
+def _is_mostly_english(text: str) -> bool:
+    """Return True if text is predominantly English (>60% ASCII letters)."""
+    if not text:
+        return False
+    alpha_chars = [c for c in text if c.isalpha()]
+    if not alpha_chars:
+        return False
+    ascii_count = sum(1 for c in alpha_chars if ord(c) < 128)
+    return ascii_count / len(alpha_chars) > 0.6
+
+
 def _build_fallback_description(title: str, category: str, tags: Optional[List[str]] = None) -> str:
     """Build a fallback SEO description from title and category.
 
@@ -629,9 +640,20 @@ class PostGenerator:
 
         # description 자동 생성 (SEO용, 80-200자)
         desc_text = ""
-        if not (extra_frontmatter and "description" in extra_frontmatter):
-            desc_text = _extract_description(content)
-            desc_text = _clean_description(desc_text)
+        has_desc = extra_frontmatter and (
+            "description" in extra_frontmatter or "description_ko" in extra_frontmatter
+        )
+        if not has_desc:
+            # description_ko가 있으면 우선 사용
+            if extra_frontmatter and extra_frontmatter.get("description_ko"):
+                desc_text = _clean_description(str(extra_frontmatter["description_ko"]))
+            else:
+                desc_text = _extract_description(content)
+                desc_text = _clean_description(desc_text)
+                # Detect predominantly English description and use Korean fallback
+                if desc_text and _is_mostly_english(desc_text):
+                    desc_text = _build_fallback_description(title, self.category, tags)
+                    desc_text = _clean_description(desc_text)
             if not desc_text or len(desc_text) < 80:
                 desc_text = _build_fallback_description(title, self.category, tags)
                 desc_text = _clean_description(desc_text)
@@ -642,6 +664,8 @@ class PostGenerator:
         # excerpt 자동 생성 (SNS 미리보기용, 짧은 요약)
         if not (extra_frontmatter and "excerpt" in extra_frontmatter):
             excerpt_text = desc_text if desc_text else _extract_description(content)
+            if excerpt_text and _is_mostly_english(excerpt_text):
+                excerpt_text = _build_fallback_description(title, self.category, tags)
             if excerpt_text:
                 excerpt_text = _polish_generated_text(smart_truncate(excerpt_text, 100)).replace('"', "'")
                 frontmatter_lines.append(f'excerpt: "{excerpt_text}"')
@@ -699,7 +723,11 @@ class PostGenerator:
         """Create a summary post with multiple sections (e.g., market summary)."""
         content_parts = []
         for section_title, section_content in sections.items():
-            content_parts.append(f"## {section_title}\n\n{section_content}")
+            stripped = section_content.strip()
+            if stripped.startswith("## "):
+                content_parts.append(stripped)
+            else:
+                content_parts.append(f"## {section_title}\n\n{stripped}")
 
         content = "\n\n".join(content_parts)
         return self.create_post(

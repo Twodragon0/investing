@@ -332,8 +332,23 @@ def main():
         "disclosure",
         "재산",
     ]
+    _KW_KO = {
+        "trump": "트럼프",
+        "pelosi": "펠로시",
+        "congress": "의회",
+        "sec": "SEC",
+        "fed": "연준",
+        "tariff": "관세",
+        "executive order": "행정명령",
+        "insider": "내부자",
+        "disclosure": "공시",
+    }
     keyword_hits = {kw: len(re.findall(re.escape(kw), all_texts, re.IGNORECASE)) for kw in keyword_targets}
-    top_keywords = [(kw, cnt) for kw, cnt in sorted(keyword_hits.items(), key=lambda x: -x[1]) if cnt > 0]
+    top_keywords = [
+        (_KW_KO.get(kw, kw), cnt)
+        for kw, cnt in sorted(keyword_hits.items(), key=lambda x: -x[1])
+        if cnt > 0
+    ]
 
     # Helper: extract first sentence from text
     def _first_sentence(text: str, max_len: int = 200) -> str:
@@ -763,7 +778,10 @@ def main():
             )
             if img:
                 briefing_image = img
-                logger.info("Generated political trades briefing card")
+                fn = os.path.basename(img)
+                web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
+                content = f"![news-briefing-political]({web_path})\n\n{content}"
+                logger.info("Generated political trades briefing card: %s", img)
     except ImportError:
         pass
     except Exception as e:

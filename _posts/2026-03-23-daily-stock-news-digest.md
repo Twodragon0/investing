@@ -9,8 +9,8 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/market-snapshot-2026-03-23.png"
 permalink: "/stock-news/2026/03/23/daily-stock-news-digest/"
-description: "긴급: Americans are about to get a crash course in the global economy: Higher prices are coming for pin."
-excerpt: "긴급: Americans are about to get a crash course in the global economy: Higher prices are coming for…"
+description: "주식 시장 뉴스 종합 - 2026-03-23 - 최신 주식 시장 뉴스와 분석을 확인하세요. 주요 키워드: stock, market, daily-digest."
+excerpt: "주식 시장 뉴스 종합 - 2026-03-23 - 최신 주식 시장 뉴스와 분석을 확인하세요. 주요 키워드: stock, market, daily-digest."
 image_alt: "주식 시장 뉴스 종합 - 2026-03-23 - stock-news 뉴스 요약 이미지"
 ---
 
