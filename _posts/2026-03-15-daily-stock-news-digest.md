@@ -30,7 +30,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-15 - stock-news 뉴스 요약 
 <div class="stat-item"><div class="stat-value">5,487.24</div><div class="stat-label">KOSPI -1.72%</div></div>
 <div class="stat-item"><div class="stat-value">1,152.96</div><div class="stat-label">KOSDAQ +0.40%</div></div>
 </div>
-<div class="alert-box alert-info"><strong>주식 시장 긴급: stockpiles, emergency, biggest - 152건 분석</strong>
+<div class="alert-box alert-info"><strong>주식 시장 긴급: 최대 - 152건 분석</strong>
 <ul>
 <li>📊 <strong>매크로/금리</strong> (10건): 조선비즈, 중동, 금리 관련 10건의 소식이 확인되었습니다.</li>
 <li>🤖 <strong>AI/기술</strong> (11건): 반도체 중심으로 11건의 뉴스가 수집되었습니다.</li>

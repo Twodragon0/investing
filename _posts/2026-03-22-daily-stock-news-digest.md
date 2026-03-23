@@ -32,7 +32,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-22 - stock-news 뉴스 요약 
 <div class="stat-item"><div class="stat-value">1,161.52</div><div class="stat-label">KOSDAQ +1.58%</div></div>
 </div>
 <div class="alert-box alert-info">
-<strong>주식 시장 긴급: Analysis: Trump's unshackled presidency puts him at the center of the economy - 159건 분석</strong>
+<strong>주식 시장 긴급: 트럼프 경제 정책 분석 - 159건 분석</strong>
 <ul>
 <li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 이슈 부각</li>
 <li>📊 <strong>매크로/금리</strong>: 금리, 국채 동향 주시</li>

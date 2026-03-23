@@ -9,7 +9,9 @@ and generates markdown summary sections including:
 No LLM or external dependencies required.
 """
 
+import json
 import logging
+import os
 import re
 from collections import Counter
 from typing import Any, Dict, List, Optional, Tuple
@@ -680,127 +682,20 @@ for _t_name, _t_key, _t_emoji, _t_kws in THEMES:
     for _part in _t_name.split("/"):
         _THEME_NAME_KEYWORDS.add(_part.strip().lower())
 
+
 # Common English finance terms -> Korean translation for keyword display
-_EN_KEYWORD_KO: Dict[str, str] = {
-    "fed": "연준",
-    "powell": "파월",
-    "trump": "트럼프",
-    "energy": "에너지",
-    "rates": "금리",
-    "rate": "금리",
-    "interest": "금리",
-    "cuts": "인하",
-    "cut": "인하",
-    "holds": "동결",
-    "hold": "동결",
-    "pause": "동결",
-    "bitcoin": "비트코인",
-    "ethereum": "이더리움",
-    "sidecar": "사이드카",
-    "legislation": "법안",
-    "regulation": "규제",
-    "regulatory": "규제",
-    "targets": "목표가",
-    "distribution": "배분",
-    "quarterly": "분기",
-    "counterterrorism": "대테러",
-    "enforcement": "집행",
-    "compliance": "컴플라이언스",
-    "inflation": "인플레이션",
-    "recession": "경기침체",
-    "earnings": "실적",
-    "acquisition": "인수",
-    "merger": "합병",
-    "dividend": "배당",
-    "portfolio": "포트폴리오",
-    "volatility": "변동성",
-    "liquidity": "유동성",
-    "derivatives": "파생상품",
-    "stimulus": "부양책",
-    "sanctions": "제재",
-    "tariff": "관세",
-    "deficit": "적자",
-    "surplus": "흑자",
-    "benchmark": "벤치마크",
-    "rally": "랠리",
-    "correction": "조정",
-    "rebound": "반등",
-    "downturn": "하락세",
-    "surge": "급등",
-    "plunge": "급락",
-    "securities": "증권",
-    "application": "신청",
-    "approval": "승인",
-    "certain": "특정",
-    "framework": "프레임워크",
-    "stablecoin": "스테이블코인",
-    "cryptocurrency": "암호화폐",
-    "blockchain": "블록체인",
-    "analyst": "애널리스트",
-    "forecast": "전망",
-    "outlook": "전망",
-    "momentum": "모멘텀",
-    "sentiment": "심리",
-    "institutional": "기관",
-    "treasury": "국채",
-    "geopolitical": "지정학",
-    "semiconductor": "반도체",
-    # Market / trading
-    "market": "시장",
-    "crash": "폭락",
-    "breakout": "돌파",
-    "selloff": "매도세",
-    "bearish": "약세",
-    "bullish": "강세",
-    "hedge": "헤지",
-    "default": "디폴트",
-    "yield": "수익률",
-    "bond": "채권",
-    "equity": "주식",
-    "futures": "선물",
-    "options": "옵션",
-    "etf": "ETF",
-    "index": "지수",
-    "ipo": "IPO",
-    "buyback": "자사주매입",
-    "insider": "내부자",
-    "disclosure": "공시",
-    # Policy / politics
-    "congress": "의회",
-    "senate": "상원",
-    "pelosi": "펠로시",
-    "biden": "바이든",
-    "election": "선거",
-    "bipartisan": "초당적",
-    "executive": "행정",
-    "subsidy": "보조금",
-    "trade": "무역",
-    "embargo": "금수조치",
-    "ceasefire": "휴전",
-    "nato": "NATO",
-    # Crypto
-    "altcoin": "알트코인",
-    "defi": "디파이",
-    "nft": "NFT",
-    "mining": "채굴",
-    "halving": "반감기",
-    "whale": "고래",
-    "airdrop": "에어드롭",
-    "solana": "솔라나",
-    "ripple": "리플",
-    "cardano": "카르다노",
-    # Tech / macro
-    "nvidia": "엔비디아",
-    "apple": "애플",
-    "google": "구글",
-    "microsoft": "마이크로소프트",
-    "gdp": "GDP",
-    "unemployment": "실업률",
-    "consumer": "소비자",
-    "manufacturing": "제조업",
-    "supply": "공급",
-    "demand": "수요",
-}
+def _load_en_keyword_ko() -> Dict[str, str]:
+    """Load English-to-Korean keyword dictionary from external JSON."""
+    json_path = os.path.join(os.path.dirname(__file__), "en_keyword_ko.json")
+    try:
+        with open(json_path, encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        logger.warning("en_keyword_ko.json not found, using empty dict")
+        return {}
+
+
+_EN_KEYWORD_KO: Dict[str, str] = _load_en_keyword_ko()
 
 # Cross-theme analysis patterns: (theme_key_a, theme_key_b) -> list of insight templates
 # Each template should describe what the co-occurrence means for the market.

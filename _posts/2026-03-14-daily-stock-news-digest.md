@@ -30,7 +30,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-14 - stock-news 뉴스 요약 
 <div class="stat-item"><div class="stat-value">5,487.24</div><div class="stat-label">KOSPI -1.72%</div></div>
 <div class="stat-item"><div class="stat-value">1,152.96</div><div class="stat-label">KOSDAQ +0.40%</div></div>
 </div>
-<div class="alert-box alert-info"><strong>주식 시장 긴급: California, rallying, offshore - 163건 분석</strong>
+<div class="alert-box alert-info"><strong>주식 시장 긴급: 캘리포니아, 랠리, 역외 - 163건 분석</strong>
 <ul>
 <li>📊 <strong>매크로/금리</strong> (12건): Fed, GDP, Chosunbiz 이슈가 12건으로 주목받고 있습니다.</li>
 <li>🏛️ <strong>정치/정책</strong> (11건): Trump, oil, Iran 이슈가 11건으로 주목받고 있습니다.</li>
