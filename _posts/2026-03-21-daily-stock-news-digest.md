@@ -32,7 +32,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-21 - stock-news 뉴스 요약 
 <div class="stat-item"><div class="stat-value">1,161.52</div><div class="stat-label">KOSDAQ +1.58%</div></div>
 </div>
 <div class="alert-box alert-info">
-<strong>주식 시장 긴급: nasdaq, dow, economic - 195건 분석</strong>
+<strong>주식 시장 긴급: NASDAQ - 195건 분석</strong>
 <ul>
 <li>📊 <strong>매크로/금리</strong>: 금리, 동결 관련 30건</li>
 <li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 동향 주시</li>

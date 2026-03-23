@@ -32,7 +32,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-23 - stock-news 뉴스 요약 
 <div class="stat-item"><div class="stat-value">1,161.52</div><div class="stat-label">KOSDAQ +1.58%</div></div>
 </div>
 <div class="alert-box alert-info">
-<strong>주식 시장 긴급: pineapples, americans, chocolate - 118건 분석</strong>
+<strong>주식 시장 긴급: 파인애플, 미국인, 초콜릿 - 118건 분석</strong>
 <ul>
 <li>📊 <strong>매크로/금리</strong>: 환율, 인플레이션 이슈 부각</li>
 <li>📈 <strong>가격/시장</strong>: 환율, 인플레이션 이슈 부각</li>

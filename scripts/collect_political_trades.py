@@ -345,9 +345,7 @@ def main():
     }
     keyword_hits = {kw: len(re.findall(re.escape(kw), all_texts, re.IGNORECASE)) for kw in keyword_targets}
     top_keywords = [
-        (_KW_KO.get(kw, kw), cnt)
-        for kw, cnt in sorted(keyword_hits.items(), key=lambda x: -x[1])
-        if cnt > 0
+        (_KW_KO.get(kw, kw), cnt) for kw, cnt in sorted(keyword_hits.items(), key=lambda x: -x[1]) if cnt > 0
     ]
 
     # Helper: extract first sentence from text

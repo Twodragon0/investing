@@ -640,9 +640,7 @@ class PostGenerator:
 
         # description 자동 생성 (SEO용, 80-200자)
         desc_text = ""
-        has_desc = extra_frontmatter and (
-            "description" in extra_frontmatter or "description_ko" in extra_frontmatter
-        )
+        has_desc = extra_frontmatter and ("description" in extra_frontmatter or "description_ko" in extra_frontmatter)
         if not has_desc:
             # description_ko가 있으면 우선 사용
             if extra_frontmatter and extra_frontmatter.get("description_ko"):
