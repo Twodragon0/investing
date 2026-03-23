@@ -108,6 +108,36 @@ jobs:
           print(f'Translation quality check: {errors} issue(s) found')
           "
 
+      - name: Check untranslated keywords in dictionary
+        run: |
+          python3 -c "
+          import json, re, glob, os
+          from collections import Counter
+
+          dict_path = 'scripts/common/en_keyword_ko.json'
+          with open(dict_path) as f:
+              known = set(json.load(f).keys())
+
+          # Scan recent posts for English keywords not in dictionary
+          missing = Counter()
+          for fp in sorted(glob.glob('_posts/2026-03-*.md'))[-30:]:
+              with open(fp) as f:
+                  body = f.read()
+              for m in re.finditer(r'<strong>[^<]*긴급:\s*([^<]+?)\s*-\s*\d+건', body):
+                  for word in re.split(r'[,\s]+', m.group(1)):
+                      w = word.strip('.,()[]').lower()
+                      if len(w) > 3 and w.isascii() and w.isalpha() and w not in known:
+                          missing[w] += 1
+
+          if missing:
+              print(f'::notice::Untranslated keywords found ({len(missing)}):')
+              for kw, cnt in missing.most_common(10):
+                  print(f'  {kw} ({cnt}x)')
+              print('Add these to scripts/common/en_keyword_ko.json')
+          else:
+              print('All alert keywords have translations')
+          "
+
       - name: Run basedpyright type check
         run: python -m basedpyright
 

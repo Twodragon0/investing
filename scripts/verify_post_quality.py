@@ -61,16 +61,12 @@ def check_post(filepath: str) -> list[str]:
             issues.append(f"[P1] Missing image: {img_path}")
 
     # 4. Alert-box English keywords (긴급: pattern)
-    for m in re.finditer(
-        r"<strong>[^<]*긴급:\s*([^<]+?)\s*-\s*\d+건[^<]*</strong>", body
-    ):
+    for m in re.finditer(r"<strong>[^<]*긴급:\s*([^<]+?)\s*-\s*\d+건[^<]*</strong>", body):
         kw_part = m.group(1)
         if _en_ratio(kw_part) > 0.5:
             # Skip if only acronyms (NASDAQ, BTC, etc.)
             words = [w.strip(".,") for w in kw_part.split(",")]
-            has_real_english = any(
-                len(w) > 5 and not w.isupper() and _en_ratio(w) > 0.8 for w in words
-            )
+            has_real_english = any(len(w) > 5 and not w.isupper() and _en_ratio(w) > 0.8 for w in words)
             if has_real_english:
                 issues.append(f"[P1] English alert keywords: {kw_part[:60]}")
 
@@ -87,9 +83,7 @@ def check_post(filepath: str) -> list[str]:
 def main():
     parser = argparse.ArgumentParser(description="Verify post quality")
     parser.add_argument("--date", help="Check posts for specific date (YYYY-MM-DD)")
-    parser.add_argument(
-        "--days", type=int, default=1, help="Check posts for last N days (default: 1)"
-    )
+    parser.add_argument("--days", type=int, default=1, help="Check posts for last N days (default: 1)")
     args = parser.parse_args()
 
     repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -122,7 +116,7 @@ def main():
             else:
                 print(f"  {fname}: ✓")
 
-    print(f"\n{'='*50}")
+    print(f"\n{'=' * 50}")
     print(f"Total: {total_posts} posts, {total_issues} issues")
 
     return 1 if total_issues > 0 else 0

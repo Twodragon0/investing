@@ -59,6 +59,9 @@ fi
 echo "$LOG_PREFIX clean translation cache"
 run_py scripts/clean_translation_cache.py
 
+echo "$LOG_PREFIX verify post translation quality"
+run_py scripts/verify_post_quality.py --days 2 || echo "$LOG_PREFIX post quality issues found (non-blocking)"
+
 run_py scripts/backfill_images.py
 run_py scripts/backfill_post_summaries.py --clean-images-only --zero-image-report _state/zero-byte-images.txt
 run_py scripts/check_recent_post_urls.py --days 2 --limit 60 --report _state/recent-url-quality.txt
