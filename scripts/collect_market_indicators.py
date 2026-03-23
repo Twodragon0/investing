@@ -22,7 +22,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.bettafish_analyzer import BettaFishAnalyzer
 from common.collector_metrics import log_collection_summary
-from common.config import BROWSER_USER_AGENT, REQUEST_TIMEOUT, get_env, get_kst_now, get_ssl_verify, setup_logging
+from common.config import BROWSER_USER_AGENT, REQUEST_TIMEOUT, get_env, get_kst_now, get_verify_ssl, setup_logging
 from common.dedup import DedupEngine
 from common.markdown_utils import (
     html_reference_details,
@@ -36,7 +36,7 @@ from common.utils import request_with_retry
 
 logger = setup_logging("collect_market_indicators")
 
-VERIFY_SSL = get_ssl_verify()
+VERIFY_SSL = get_verify_ssl()
 
 # ── Constants ──────────────────────────────────────────────────────────────────
 CNN_FEAR_GREED_URL = "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"

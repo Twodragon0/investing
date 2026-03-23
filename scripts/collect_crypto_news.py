@@ -28,7 +28,7 @@ from common.config import (
     USER_AGENT,
     get_env,
     get_kst_now,
-    get_ssl_verify,
+    get_verify_ssl,
     setup_logging,
 )
 from common.dedup import DedupEngine
@@ -62,7 +62,7 @@ except ImportError:
 
 logger = setup_logging("collect_crypto_news")
 
-VERIFY_SSL = get_ssl_verify()
+VERIFY_SSL = get_verify_ssl()
 
 
 def fetch_cryptopanic(api_key: str, limit: int = 20) -> List[Dict[str, Any]]:

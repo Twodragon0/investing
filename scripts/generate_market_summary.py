@@ -27,7 +27,7 @@ from common.config import (
     REQUEST_TIMEOUT,
     get_env,
     get_kst_now,
-    get_ssl_verify,
+    get_verify_ssl,
     setup_logging,
 )
 from common.crypto_api import (
@@ -45,7 +45,7 @@ from common.utils import request_with_retry
 
 logger = setup_logging("generate_market_summary")
 
-VERIFY_SSL = get_ssl_verify()
+VERIFY_SSL = get_verify_ssl()
 
 STABLECOIN_SYMBOLS = {
     "usdt",

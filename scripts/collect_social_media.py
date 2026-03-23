@@ -25,7 +25,7 @@ from common.config import (
     USER_AGENT,
     get_env,
     get_kst_now,
-    get_ssl_verify,
+    get_verify_ssl,
     setup_logging,
 )
 from common.dedup import DedupEngine
@@ -59,7 +59,7 @@ except ImportError:
 
 logger = setup_logging("collect_social_media")
 
-VERIFY_SSL = get_ssl_verify()
+VERIFY_SSL = get_verify_ssl()
 
 
 def _parse_telegram_items(channel: str, messages, limit: int) -> List[Dict[str, Any]]:

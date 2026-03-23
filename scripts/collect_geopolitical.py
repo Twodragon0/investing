@@ -23,7 +23,7 @@ from common.config import (
     REQUEST_TIMEOUT,
     USER_AGENT,
     get_kst_now,
-    get_ssl_verify,
+    get_verify_ssl,
     setup_logging,
 )
 from common.dedup import DedupEngine
@@ -40,7 +40,7 @@ from common.utils import request_with_retry, sanitize_string, truncate_text
 
 logger = setup_logging("collect_geopolitical")
 
-VERIFY_SSL = get_ssl_verify()
+VERIFY_SSL = get_verify_ssl()
 
 _GEO_SOURCE_CONTEXT: Dict[str, Dict[str, Any]] = {
     "polymarket.com": {"name": "Polymarket", "tags": ["prediction-market"]},

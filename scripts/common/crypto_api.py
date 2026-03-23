@@ -5,12 +5,12 @@ from typing import Any, Dict, List
 
 import requests
 
-from .config import USER_AGENT, get_ssl_verify
+from .config import USER_AGENT, get_verify_ssl
 from .utils import request_with_retry
 
 logger = logging.getLogger(__name__)
 
-VERIFY_SSL = get_ssl_verify()
+VERIFY_SSL = get_verify_ssl()
 REQUEST_TIMEOUT = 20  # CoinGecko/Fear&Greed API는 응답이 느려 기본값(15)보다 길게 설정
 
 

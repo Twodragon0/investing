@@ -20,7 +20,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.bettafish_analyzer import BettaFishAnalyzer
 from common.collector_metrics import log_collection_summary
-from common.config import REQUEST_TIMEOUT, get_env, get_kst_now, get_ssl_verify, setup_logging
+from common.config import REQUEST_TIMEOUT, get_env, get_kst_now, get_verify_ssl, setup_logging
 from common.dedup import DedupEngine
 from common.enrichment import _STOCK_SOURCE_CONTEXT, enrich_items
 from common.markdown_utils import (
@@ -49,7 +49,7 @@ except ImportError:
 
 logger = setup_logging("collect_stock_news")
 
-VERIFY_SSL = get_ssl_verify()
+VERIFY_SSL = get_verify_ssl()
 
 
 def fetch_google_news_browser_stocks(limit: int = 20) -> List[Dict[str, Any]]:

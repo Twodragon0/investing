@@ -140,6 +140,19 @@ def get_kst_now() -> datetime:
 
 
 # ── Shared constants ──
+
+# Lazy-cached SSL verification setting (avoids repeated keychain lookups)
+_verify_ssl_cache = None
+
+
+def get_verify_ssl():
+    """Return cached SSL verification value (lazy singleton)."""
+    global _verify_ssl_cache  # noqa: PLW0603
+    if _verify_ssl_cache is None:
+        _verify_ssl_cache = get_ssl_verify()
+    return _verify_ssl_cache
+
+
 SITE_URL = "https://investing.2twodragon.com"
 REQUEST_TIMEOUT = 15
 USER_AGENT = "Mozilla/5.0 (compatible; InvestingDragon/1.0)"

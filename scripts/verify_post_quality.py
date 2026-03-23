@@ -15,7 +15,7 @@ import glob
 import os
 import re
 import sys
-from datetime import datetime, timedelta
+from datetime import UTC, datetime, timedelta
 
 
 def _en_ratio(text: str) -> float:
@@ -29,7 +29,6 @@ def _en_ratio(text: str) -> float:
 def check_post(filepath: str) -> list[str]:
     """Check a single post for quality issues. Returns list of issue descriptions."""
     issues = []
-    fname = os.path.basename(filepath)
 
     with open(filepath, encoding="utf-8") as f:
         content = f.read()
@@ -91,7 +90,7 @@ def main():
     if args.date:
         dates = [args.date]
     else:
-        today = datetime.now()
+        today = datetime.now(tz=UTC)
         dates = [(today - timedelta(days=i)).strftime("%Y-%m-%d") for i in range(args.days)]
 
     total_issues = 0

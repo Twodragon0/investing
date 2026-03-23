@@ -13,7 +13,7 @@ from urllib.parse import urlparse
 
 import requests
 
-from .config import get_ssl_verify
+from .config import get_verify_ssl
 from .markdown_utils import smart_truncate
 
 logger = logging.getLogger(__name__)
@@ -31,7 +31,7 @@ def is_private_url(url: str) -> bool:
         return True  # Block on resolution failure
 
 
-VERIFY_SSL = get_ssl_verify()
+VERIFY_SSL = get_verify_ssl()
 
 _USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -57,8 +57,8 @@ _NOISE_DESC_PATTERNS = [
 ]
 
 
-def _clean_description(text: str) -> str:
-    """Clean extracted description text for quality."""
+def _clean_meta_description(text: str) -> str:
+    """Clean extracted meta description text for quality."""
     text = text.strip()
     # Remove common site-wide boilerplate prefixes
     for noise in [
@@ -443,7 +443,7 @@ def fetch_page_metadata(url: str, timeout: int = 8) -> Dict[str, str]:
         ]:
             meta = soup.find("meta", attrs={attr_key: attr_val})
             content = str(meta.get("content", "")) if meta else ""
-            cleaned = _clean_description(content)
+            cleaned = _clean_meta_description(content)
             if cleaned and len(cleaned) > 20:
                 result["description"] = smart_truncate(cleaned, 500)
                 return result
@@ -457,7 +457,7 @@ def fetch_page_metadata(url: str, timeout: int = 8) -> Dict[str, str]:
             summary_soup = BS4(summary_html, "html.parser")
             paragraphs = []
             for p in summary_soup.find_all("p"):
-                text = _clean_description(p.get_text(strip=True))
+                text = _clean_meta_description(p.get_text(strip=True))
                 if len(text) > 50:
                     paragraphs.append(text)
                 if len(paragraphs) >= 5:
@@ -500,7 +500,7 @@ def fetch_page_metadata(url: str, timeout: int = 8) -> Dict[str, str]:
                 noise.decompose()
             paragraphs = []
             for p in article.find_all("p"):
-                text = _clean_description(p.get_text(strip=True))
+                text = _clean_meta_description(p.get_text(strip=True))
                 if len(text) > 50:
                     paragraphs.append(text)
                 if len(paragraphs) >= 5:
@@ -515,7 +515,7 @@ def fetch_page_metadata(url: str, timeout: int = 8) -> Dict[str, str]:
             # Skip paragraphs inside non-content containers
             if p.find_parent(class_=_EXCLUDE_CLASS_RE):
                 continue
-            text = _clean_description(p.get_text(strip=True))
+            text = _clean_meta_description(p.get_text(strip=True))
             if len(text) > 50:
                 result["description"] = smart_truncate(text, 500)
                 return result

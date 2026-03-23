@@ -38,13 +38,6 @@ jobs:
           commit-message: 'chore: backfill post images'
           git-add-paths: '_posts/ assets/images/generated/'
 
-      - name: Setup Python
-        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
-        with:
-          python-version: "3.11"
-          cache: 'pip'
-          cache-dependency-path: scripts/requirements.txt
-
       - name: Run ultraworker-sisyphus loop cycle
         run: |
           python3 scripts/continuous_improvement_loop.py \

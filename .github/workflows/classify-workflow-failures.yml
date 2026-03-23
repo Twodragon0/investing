@@ -11,10 +11,17 @@ on:
       - Collect Political Trades
       - Collect CoinMarketCap Data
       - Collect WorldMonitor News
+      - Collect FMP Calendar
+      - Collect Market Indicators
+      - Collect Geopolitical Risk Data
       - Generate Daily Summary
       - Generate Market Summary
       - Weekly Digest
+      - Ops 10AM Digest
+      - Backfill Post Summaries
       - Deploy Jekyll to GitHub Pages
+      - Site Health Check
+      - Security Scan
       - Code Quality
     types: [completed]
 

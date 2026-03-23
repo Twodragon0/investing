@@ -21,7 +21,7 @@ import requests
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.collector_metrics import log_collection_summary
-from common.config import get_env, get_kst_now, get_ssl_verify, setup_logging
+from common.config import get_env, get_kst_now, get_verify_ssl, setup_logging
 from common.crypto_api import (
     fetch_coingecko_global,
     fetch_coingecko_top_coins,
@@ -54,7 +54,7 @@ except ImportError:
 
 logger = setup_logging("collect_coinmarketcap")
 
-VERIFY_SSL = get_ssl_verify()
+VERIFY_SSL = get_verify_ssl()
 REQUEST_TIMEOUT = 20  # CMC/CoinGecko API는 응답이 느려 기본값(15)보다 길게 설정
 
 

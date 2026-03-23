@@ -12,12 +12,12 @@ from typing import Any, Dict, List
 
 import requests
 
-from .config import USER_AGENT, get_env, get_ssl_verify
+from .config import USER_AGENT, get_env, get_verify_ssl
 from .utils import request_with_retry
 
 logger = logging.getLogger(__name__)
 
-VERIFY_SSL = get_ssl_verify()
+VERIFY_SSL = get_verify_ssl()
 REQUEST_TIMEOUT = 15
 
 _FMP_STABLE = "https://financialmodelingprep.com/stable"

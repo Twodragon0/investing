@@ -243,9 +243,6 @@ def _polish_generated_text(text: str) -> str:
         return text
     for wrong, correct in _WORDING_REPLACEMENTS:
         text = text.replace(wrong, correct)
-    # Apply mistranslation corrections
-    for wrong, correct in _MISTRANSLATION_FIXES.items():
-        text = text.replace(wrong, correct)
     # Fix incomplete "시장 영향 가능" without already being "가능성이 있는"
     text = re.sub(r"시장 영향 가능(?!성이 있는)", "시장 영향 가능성이 있는", text)
     # Collapse multiple spaces within lines but preserve newlines for markdown structure

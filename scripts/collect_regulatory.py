@@ -18,7 +18,7 @@ from typing import Any, Dict, List, Tuple
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.collector_metrics import log_collection_summary
-from common.config import get_kst_now, get_ssl_verify, setup_logging
+from common.config import get_kst_now, get_verify_ssl, setup_logging
 from common.dedup import DedupEngine
 from common.enrichment import enrich_items, fetch_page_description
 from common.markdown_utils import (
@@ -32,7 +32,7 @@ from common.summarizer import ThemeSummarizer
 from common.translator import get_display_title
 
 logger = setup_logging("collect_regulatory")
-VERIFY_SSL = get_ssl_verify()
+VERIFY_SSL = get_verify_ssl()
 
 
 # Feed definitions: (url, source_name, tags, region)

@@ -9,7 +9,7 @@ from urllib.parse import parse_qs, unquote, urlparse
 import requests
 from bs4 import BeautifulSoup
 
-from .config import REQUEST_TIMEOUT, USER_AGENT, get_ssl_verify
+from .config import REQUEST_TIMEOUT, USER_AGENT, get_verify_ssl
 from .utils import parse_date, remove_sponsored_text, sanitize_string, truncate_sentence
 
 logger = logging.getLogger(__name__)
@@ -24,7 +24,7 @@ def is_safe_url(url: str) -> bool:
         return False
 
 
-VERIFY_SSL = get_ssl_verify()
+VERIFY_SSL = get_verify_ssl()
 
 # Feed health tracking: {url: {"ok": int, "fail": int, "last_error": str}}
 _feed_health: Dict[str, Dict[str, Any]] = {}

@@ -15,7 +15,7 @@ import requests
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.collector_metrics import log_collection_summary
-from common.config import REQUEST_TIMEOUT, USER_AGENT, get_kst_now, get_ssl_verify, setup_logging
+from common.config import REQUEST_TIMEOUT, USER_AGENT, get_kst_now, get_verify_ssl, setup_logging
 from common.dedup import DedupEngine
 from common.enrichment import _WORLDMONITOR_SOURCE_CONTEXT, enrich_items
 from common.markdown_utils import (
@@ -118,7 +118,7 @@ def _post_worldmonitor(path: str, payload: Optional[Dict[str, Any]] = None) -> D
             url,
             json=payload or {},
             timeout=REQUEST_TIMEOUT,
-            verify=get_ssl_verify(),
+            verify=get_verify_ssl(),
             headers={"User-Agent": USER_AGENT},
         )
         resp.raise_for_status()

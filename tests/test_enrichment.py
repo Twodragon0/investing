@@ -6,7 +6,7 @@ from common.enrichment import (
     _NOISE_DESC_PATTERNS,
     _analyze_korean_title,
     _analyze_title_content,
-    _clean_description,
+    _clean_meta_description,
     _decode_google_news_base64,
     _extract_title_entities,
     _get_source_label,
@@ -72,72 +72,72 @@ class TestCleanDescription:
     """Validate description text cleaning."""
 
     def test_strips_whitespace(self):
-        assert _clean_description("  hello world  ") == "hello world"
+        assert _clean_meta_description("  hello world  ") == "hello world"
 
     def test_removes_boilerplate_prefixes(self):
-        result = _clean_description("Sign up for our newsletter to get the latest news")
+        result = _clean_meta_description("Sign up for our newsletter to get the latest news")
         assert not result.startswith("Sign up")
 
     def test_removes_html_entities(self):
-        result = _clean_description("Bitcoin &amp; Ethereum rise &gt; 10%")
+        result = _clean_meta_description("Bitcoin &amp; Ethereum rise &gt; 10%")
         assert "&amp;" not in result or "Bitcoin" in result
 
     def test_empty_string(self):
-        assert _clean_description("") == ""
+        assert _clean_meta_description("") == ""
 
     def test_normal_description_unchanged(self):
         text = "Bitcoin surged 5% today amid growing institutional interest"
-        result = _clean_description(text)
+        result = _clean_meta_description(text)
         assert "Bitcoin" in result
         assert "5%" in result
 
     def test_short_text_preserved(self):
-        result = _clean_description("Price up")
+        result = _clean_meta_description("Price up")
         assert result == "Price up"
 
     def test_removes_subscribe_prefix(self):
-        assert _clean_description("Subscribe to our newsletter") == ""
+        assert _clean_meta_description("Subscribe to our newsletter") == ""
 
     def test_removes_get_the_latest_prefix(self):
-        assert _clean_description("Get the latest news from us") == ""
+        assert _clean_meta_description("Get the latest news from us") == ""
 
     def test_removes_read_more_suffix(self):
-        result = _clean_description("Bitcoin price is rising. Read more")
+        result = _clean_meta_description("Bitcoin price is rising. Read more")
         assert "Read more" not in result
 
     def test_removes_continue_reading_suffix(self):
-        result = _clean_description("Market analysis update. Continue reading...")
+        result = _clean_meta_description("Market analysis update. Continue reading...")
         assert "Continue reading" not in result
 
     def test_removes_korean_read_more_suffix(self):
-        result = _clean_description("비트코인 가격 상승 중. 더 보기")
+        result = _clean_meta_description("비트코인 가격 상승 중. 더 보기")
         assert "더 보기" not in result
 
     def test_removes_korean_boilerplate_prefix(self):
-        assert _clean_description("무단전재 및 재배포 금지 본 기사는") == ""
+        assert _clean_meta_description("무단전재 및 재배포 금지 본 기사는") == ""
 
     def test_noise_pattern_access_denied(self):
-        assert _clean_description("Access denied. Please login.") == ""
+        assert _clean_meta_description("Access denied. Please login.") == ""
 
     def test_noise_pattern_403(self):
-        assert _clean_description("403 Forbidden - This page is restricted.") == ""
+        assert _clean_meta_description("403 Forbidden - This page is restricted.") == ""
 
     def test_noise_pattern_we_use_cookies(self):
-        assert _clean_description("We use cookies to enhance your experience.") == ""
+        assert _clean_meta_description("We use cookies to enhance your experience.") == ""
 
     def test_noise_pattern_javascript_required(self):
-        assert _clean_description("Please enable JavaScript to view this page.") == ""
+        assert _clean_meta_description("Please enable JavaScript to view this page.") == ""
 
     def test_collapses_whitespace(self):
-        result = _clean_description("Bitcoin   price    is    rising")
+        result = _clean_meta_description("Bitcoin   price    is    rising")
         assert "  " not in result
 
     def test_removes_english_source_suffix(self):
-        result = _clean_description("Bitcoin price hits record high - Reuters")
+        result = _clean_meta_description("Bitcoin price hits record high - Reuters")
         assert "Reuters" not in result
 
     def test_removes_korean_source_suffix(self):
-        result = _clean_description("비트코인 가격 급등 연합뉴스")
+        result = _clean_meta_description("비트코인 가격 급등 연합뉴스")
         assert "연합뉴스" not in result
 
 
