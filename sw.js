@@ -1,5 +1,5 @@
 // Service Worker for Investing Dragon - Reports page offline cache
-var CACHE_NAME = 'invest-dragon-v3';
+var CACHE_NAME = 'invest-dragon-v4';
 var CACHE_URLS = [
   '/reports/',
   '/assets/css/style.css',
@@ -30,8 +30,14 @@ self.addEventListener('activate', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-  // Network-first for HTML pages, cache-first for static assets
   var url = new URL(event.request.url);
+
+  // Skip cross-origin requests (Google Fonts, CDNs, analytics) to avoid CSP issues
+  if (url.origin !== self.location.origin) {
+    return;
+  }
+
+  // Network-first for HTML pages, cache-first for static assets
   var isPage = event.request.mode === 'navigate' ||
                (event.request.method === 'GET' && event.request.headers.get('accept').indexOf('text/html') !== -1);
 

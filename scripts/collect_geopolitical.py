@@ -328,10 +328,13 @@ def _risk_level_from_theme(theme: str) -> str:
     return "낮음"
 
 
-def _build_polymarket_section(markets: List[Dict[str, Any]]) -> List[str]:
-    """Build the Polymarket prediction market section of the post."""
+def _build_polymarket_section(markets: List[Dict[str, Any]]) -> tuple:
+    """Build the Polymarket prediction market section of the post.
+
+    Returns (lines, filtered_markets) tuple.
+    """
     if not markets:
-        return []
+        return [], []
 
     # Filter out entertainment/sports/gaming markets — only keep geopolitical/financial
     _GEO_KEYWORDS = {
@@ -420,9 +423,9 @@ def _build_polymarket_section(markets: List[Dict[str, Any]]) -> List[str]:
         m for m in markets if not any(kw in m.get("title", "").lower() for kw in _ENTERTAINMENT_KEYWORDS)
     ]
     filtered_markets = [m for m in non_entertainment if any(kw in m.get("title", "").lower() for kw in _GEO_KEYWORDS)]
-    # Fall back to non-entertainment markets if geo filter is too aggressive
-    if len(filtered_markets) < 3:
-        filtered_markets = non_entertainment if non_entertainment else markets
+    # Fall back to non-entertainment only (never re-include entertainment/sports)
+    if len(filtered_markets) < 3 and non_entertainment:
+        filtered_markets = non_entertainment
 
     lines = []
     rows = []
@@ -436,13 +439,16 @@ def _build_polymarket_section(markets: List[Dict[str, Any]]) -> List[str]:
         question_cell = markdown_link(f"**{question}**", link) if link else f"**{question}**"
         rows.append((i, question_cell, probability, volume_str))
 
-    lines.append(
-        markdown_table(
-            ["#", "이벤트 질문", "예측 확률", "거래량"],
-            rows,
-            aligns=["center", "left", "center", "right"],
+    if rows:
+        lines.append(
+            markdown_table(
+                ["#", "이벤트 질문", "예측 확률", "거래량"],
+                rows,
+                aligns=["center", "left", "center", "right"],
+            )
         )
-    )
+    else:
+        lines.append("현재 지정학 관련 활성 예측 마켓이 없습니다.\n")
 
     # Summary stats as stat-grid (cleaner than blockquote table)
     total_volume = sum(m.get("volume", 0) for m in markets)
@@ -458,7 +464,7 @@ def _build_polymarket_section(markets: List[Dict[str, Any]]) -> List[str]:
         "</div>\n"
     )
 
-    return lines
+    return lines, filtered_markets
 
 
 def _build_gdelt_section(articles: List[Dict[str, Any]]) -> List[str]:
@@ -775,7 +781,8 @@ def main() -> None:
         "글로벌 예측 시장 Polymarket에서 지정학·정치 이벤트에 대한 집단지성 확률을 확인합니다. "
         "거래량이 많을수록 시장 참여자의 신뢰도가 높습니다.\n"
     )
-    content_parts.extend(_build_polymarket_section(markets))
+    polymarket_lines, polymarket_filtered = _build_polymarket_section(markets)
+    content_parts.extend(polymarket_lines)
 
     # Section 2: GDELT geopolitical news
     content_parts.append("## 2. 주요 지정학 뉴스 (GDELT)\n")
@@ -792,7 +799,7 @@ def main() -> None:
 
     # Section 4: Risk analysis
     content_parts.append("## 4. 리스크 분석\n")
-    content_parts.extend(_generate_risk_analysis(markets, gdelt_articles, google_news_items, today))
+    content_parts.extend(_generate_risk_analysis(polymarket_filtered, gdelt_articles, google_news_items, today))
 
     # References
     all_link_items = [item for item in (google_news_items + gdelt_articles) if item.get("link")]
