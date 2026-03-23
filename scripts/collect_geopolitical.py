@@ -51,7 +51,20 @@ _GEO_SOURCE_CONTEXT: Dict[str, Dict[str, Any]] = {
 _POLYMARKET_MIN_VOLUME = 10_000
 
 # Geopolitical keywords to filter Polymarket markets
-_POLYMARKET_GEO_TAGS = ["geopolitics", "politics", "elections", "ukraine", "middle-east", "nato"]
+_POLYMARKET_GEO_TAGS = [
+    "geopolitics",
+    "politics",
+    "elections",
+    "ukraine",
+    "middle-east",
+    "nato",
+    "economics",
+    "finance",
+    "crypto",
+    "china",
+    "iran",
+    "trade",
+]
 
 # GDELT API query for geopolitical risk events
 _GDELT_QUERY = "geopolitical+risk+OR+military+conflict+OR+sanctions+OR+war+OR+coup+OR+nuclear"
