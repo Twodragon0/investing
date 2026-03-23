@@ -84,6 +84,30 @@ jobs:
           MINIMUM_ORANGE: 40
           COVERAGE_DATA_BRANCH: python-coverage-comment-action-data
 
+      - name: Check post translation quality
+        run: |
+          python3 -c "
+          import glob, re, sys
+          errors = 0
+          for f in sorted(glob.glob('_posts/2026-*.md')):
+              with open(f) as fh:
+                  content = fh.read()
+              m = re.search(r'^description:\s*\"(.+?)\"', content, re.M)
+              if not m:
+                  continue
+              desc = m.group(1)
+              alpha = [c for c in desc if c.isalpha()]
+              if not alpha:
+                  continue
+              en_ratio = sum(1 for c in alpha if ord(c) < 128) / len(alpha)
+              if en_ratio > 0.7:
+                  print(f'::warning file={f}::Description is {en_ratio:.0%} English: {desc[:80]}')
+                  errors += 1
+          if errors:
+              print(f'::warning::{errors} post(s) have predominantly English descriptions')
+          print(f'Translation quality check: {errors} issue(s) found')
+          "
+
       - name: Run basedpyright type check
         run: python -m basedpyright
 
