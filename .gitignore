@@ -47,3 +47,11 @@ assets/images/test-*
 
 # Claude local settings (personal)
 .claude/settings.local.json
+
+# OMC / temp / coverage
+.omc-config.json
+.tmp/
+.coverage
+scripts/.coverage
+coverage-html/
+coverage.json
