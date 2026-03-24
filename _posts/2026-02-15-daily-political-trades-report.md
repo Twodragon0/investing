@@ -7,8 +7,10 @@ tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-
 source: "consolidated"
 lang: "ko"
 description: "2026-02-15 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. SEC 내부자 거래 2건, 트럼프 정책 3건, 총 5건이 수집되었습니다."
-image: "/assets/images/generated/news-briefing-political-2026-02-15.png"
+image: "/assets/images/generated/og-daily-political-trades-report-2026-02-15.png"
 excerpt: "주요 테마: 규제/정책, 정치/정책 트럼프 관련 3건의 정책 뉴스가 수집되었습니다. 행정명령 및 관세 정책은 글로벌 시장에 직접적인 영향을 미치고 있습니다."
+image_alt: "정치인 거래·정책 리포트 - 2026-02-15 - political-trades 뉴스 요약 이미지"
+permalink: "/political-trades/2026/02/15/daily-political-trades-report/"
 ---
 
 **2026-02-15** 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. SEC 내부자 거래 2건, 트럼프 정책 3건, 총 5건이 수집되었습니다.

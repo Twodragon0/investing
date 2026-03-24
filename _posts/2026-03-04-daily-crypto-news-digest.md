@@ -6,9 +6,11 @@ categories: [crypto-news]
 tags: ["crypto", "news", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-crypto-2026-03-04.png"
+image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-04.png"
 description: "2026-03-04 암호화폐 107건: 비트코인 55건(51%) 압도적, Bitcoin 핫 키워드 40회. 이란·규제 이슈 중심으로 가격/시장 23건, 규제/정책 15건, 이더리움 11건 분석."
 excerpt: "2026-03-04 암호화폐 시장에서 107건의 뉴스를 분석했습니다. 오늘은 - Investing Dragon 자동 수집 분석 리포트."
+image_alt: "암호화폐 뉴스 브리핑 - 2026-03-04 - crypto-news 뉴스 요약 이미지"
+permalink: "/crypto-news/2026/03/04/daily-crypto-news-digest/"
 ---
 
 **2026-03-04** 암호화폐 시장에서 107건의 뉴스를 분석했습니다. 오늘은 **비트코인, 가격/시장, 규제/정책** 관련 소식이 주목됩니다.

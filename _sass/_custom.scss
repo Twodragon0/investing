@@ -1,15 +1,15 @@
-@import "variables";
+@use "variables" as *;
 
 /* Google Fonts loaded via <link> in default.html for performance */
 
 /* Component imports */
-@import "components/layout";
-@import "components/header";
-@import "components/post";
-@import "components/stats";
-@import "components/alerts";
-@import "components/tables";
-@import "components/footer";
-@import "components/journal";
-@import "components/reports";
-@import "components/utilities";
+@use "components/layout";
+@use "components/header";
+@use "components/post";
+@use "components/stats";
+@use "components/alerts";
+@use "components/tables";
+@use "components/footer";
+@use "components/journal";
+@use "components/reports";
+@use "components/utilities";

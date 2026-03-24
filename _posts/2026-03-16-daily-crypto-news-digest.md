@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-crypto-2026-03-16.png"
+image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-16.png"
 permalink: "/crypto-news/2026/03/16/daily-crypto-news-digest/"
 description: "3월 16일 암호화폐 뉴스 85건을 분석했습니다. 비트코인, 가격 흐름, 이더리움 이슈가 중심이었고 지정학 리스크와 규제 뉴스가 함께 시장 심리를 흔들었습니다."
 excerpt: "3월 16일 암호화폐 뉴스 85건을 분석했습니다. 비트코인과 가격 흐름, 이더리움 이슈가 중심이었고 지정학 리스크가 투자심리를 자극했습니다."

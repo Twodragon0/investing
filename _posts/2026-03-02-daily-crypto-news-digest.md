@@ -6,9 +6,11 @@ categories: [crypto-news]
 tags: ["crypto", "news", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-crypto-2026-03-02.png"
+image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-02.png"
 description: "2026-03-02 암호화폐 88건 분석: 이란 보복으로 BTC·ETH·XRP 재차 급락, 비트코인 펀딩 비율 -6% 숏 스퀴즈 가능성. 비트코인 39건, 가격/시장 24건, 거래소 11건."
 excerpt: "2026-03-02 암호화폐 시장에서 88건의 뉴스를 분석했습니다. 오늘은 - Investing Dragon 자동 수집 분석 리포트."
+image_alt: "암호화폐 뉴스 브리핑 - 2026-03-02 - crypto-news 뉴스 요약 이미지"
+permalink: "/crypto-news/2026/03/02/daily-crypto-news-digest/"
 ---
 
 **2026-03-02** 암호화폐 시장에서 88건의 뉴스를 분석했습니다. 오늘은 **비트코인, 가격/시장, 거래소** 관련 소식이 주목됩니다.

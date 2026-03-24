@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-crypto-2026-03-24.png"
+image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-24.png"
 permalink: "/crypto-news/2026/03/24/daily-crypto-news-digest/"
 description: "암호화폐 뉴스 브리핑 - 2026-03-24 - 비트코인, 이더리움 등 암호화폐 시장 핵심 동향. 주요 키워드: crypto, news, daily-digest."
 excerpt: "암호화폐 뉴스 브리핑 - 2026-03-24 - 비트코인, 이더리움 등 암호화폐 시장 핵심 동향. 주요 키워드: crypto, news, daily-digest."

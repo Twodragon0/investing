@@ -7,8 +7,10 @@ tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
 description: "주식 시장 뉴스 종합 - 2026-02-12 - 미국·한국 주식 시장 동향과 섹터별 분석. 주요 키워드: stock, market, daily-digest."
-image: "/assets/images/generated/news-briefing-stock-2026-02-12.png"
+image: "/assets/images/generated/og-daily-stock-news-digest-2026-02-12.png"
 excerpt: "주식 시장 뉴스 종합 - 2026-02-12 - 최신 주식 시장 뉴스와 분석을 확인하세요. 주요 키워드: stock, market, daily-digest."
+image_alt: "주식 시장 뉴스 종합 - 2026-02-12 - stock-news 뉴스 요약 이미지"
+permalink: "/stock-news/2026/02/12/daily-stock-news-digest/"
 ---
 
 오늘 총 160건의 주식 시장 뉴스가 수집되었습니다. 주요 내용을 정리합니다.

@@ -7,8 +7,10 @@ tags: [market-summary, daily, crypto, stock, macro, top-coins]
 source: "auto-generated"
 lang: "ko"
 description: "암호화폐 시장이 소폭 상승세를 이어가고 있습니다. 안정적인 흐름 속에서 점진적 회복이 진행 중입니다."
-image: "/assets/images/generated/news-briefing-market-2026-02-08.png"
+image: "/assets/images/generated/og-daily-market-report-2026-02-08.png"
 excerpt: "암호화폐 시장이 소폭 상승세를 이어가고 있습니다. 안정적인 흐름 속에서 점진적 회복이 진행 중입니다. BTC 도미넌스가 57.1%로 높은 수준입니다. 비트코인 중심의 자금…"
+image_alt: "일일 시장 종합 리포트 - 2026-02-08 - market-analysis 뉴스 요약 이미지"
+permalink: "/market-analysis/2026/02/08/daily-market-report/"
 ---
 
 ## 시장 시각화

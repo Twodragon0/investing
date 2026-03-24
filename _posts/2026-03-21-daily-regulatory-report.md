@@ -7,7 +7,7 @@ tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 keywords: "regulation, sec, cftc, fsc, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-regulatory-2026-03-21.png"
+image: "/assets/images/generated/og-daily-regulatory-report-2026-03-21.png"
 permalink: "/regulatory-news/2026/03/21/daily-regulatory-report/"
 description: "규제/정책 (11건): 금감원, 가상자산, 오지급 중심의 모멘텀이 형성되고 있어 방향성 확인이 필요합니다 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "규제/정책 (11건): 금감원, 가상자산, 오지급 중심의 모멘텀이 형성되고 있어 방향성 확인이 필요합니다 - Investing Dragon 자동 수집 분석 리포트."

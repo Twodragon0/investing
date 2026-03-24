@@ -7,10 +7,11 @@ tags: ["weekly-digest", "summary", "market-analysis"]
 keywords: "weekly-digest, summary, market-analysis"
 source: "auto-generated"
 lang: "ko"
-image: "/assets/images/og-market-analysis.png"
+image: "/assets/images/generated/og-weekly-investment-digest-2026-03-23-2026-03-23.png"
 description: "이번 주 (03월 16일 03월 23일) 투자 시장의 주요 동향과 핵심 이슈를 종합 분석합니다. [2026-03-16] 전략: BTC 레인지 하단 매수, SOL 모멘텀 추종 — 모의투자로 신규 전략 검증 병행 | 시장 상태: 횡보 수렴 | 당일 결과: +1.1%"
 excerpt: "이번 주 (03월 16일 03월 23일) 투자 시장의 주요 동향과 핵심 이슈를 종합 분석합니다. [2026-03-16] 전략: BTC 레인지 하단 매수, SOL 모멘텀 추종 —…"
 image_alt: "주간 투자 다이제스트 - 2026년 03월 23일 - 시장 분석 뉴스 요약 이미지"
+permalink: "/market-analysis/2026/03/23/weekly-investment-digest-2026-03-23/"
 ---
 
 이번 주 (03월 16일 ~ 03월 23일) 투자 시장의 주요 동향과 핵심 이슈를 종합 분석합니다.

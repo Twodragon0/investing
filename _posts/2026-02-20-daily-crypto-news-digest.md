@@ -6,9 +6,11 @@ categories: [crypto-news]
 tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-crypto-2026-02-20.png"
+image: "/assets/images/generated/og-daily-crypto-news-digest-2026-02-20.png"
 description: "오늘의 암호화폐 브리핑: 암호화폐 뉴스 브리핑 - 2026-02-20. 시세 변동과 온체인 데이터를 분석합니다. 주요 키워드: crypto, news, daily-digest."
 excerpt: "주요 테마: 비트코인, 가격/시장, 매크로/금리 BTC는 $67,262 부근에서 횡보 중이며, Fed 의사록 매파 기조 확인 후 한때 $66,000을 붕괴했으나 빠르게…"
+image_alt: "암호화폐 뉴스 브리핑 - 2026-02-20 - crypto-news 뉴스 요약 이미지"
+permalink: "/crypto-news/2026/02/20/daily-crypto-news-digest/"
 ---
 
 **2026-02-20** 암호화폐 시장 72건의 뉴스를 분석한 요약 브리핑입니다.

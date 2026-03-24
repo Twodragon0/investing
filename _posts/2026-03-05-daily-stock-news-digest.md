@@ -6,9 +6,11 @@ categories: [stock-news]
 tags: ["stock", "market", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-stock-2026-03-05.png"
+image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-05.png"
 description: "KOSPI +8.13%(5,614), KOSDAQ +11.33%(1,117) 급등 반등. 미중동 유가 급등, 다우 238p 상승. 173건 분석."
 excerpt: "KOSPI 5,614.49 (+8.13%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다. KOSDAQ 1,117.23…"
+image_alt: "주식 시장 뉴스 종합 - 2026-03-05 - stock-news 뉴스 요약 이미지"
+permalink: "/stock-news/2026/03/05/daily-stock-news-digest/"
 ---
 
 **2026-03-05** 주식 시장에서 173건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,614.49(+8.13%), KOSDAQ 1,117.23(+11.33%), USD/KRW 1,464.58(+0.19%).

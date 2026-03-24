@@ -7,7 +7,7 @@ tags: ["market-analysis", "fear-greed", "vix", "market-breadth", "sentiment"]
 keywords: "market-analysis, fear-greed, vix, market-breadth, sentiment"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-indicators-2026-03-13.png"
+image: "/assets/images/generated/og-daily-market-indicators-2026-03-13.png"
 permalink: "/market-analysis/2026/03/13/daily-market-indicators/"
 description: "시장 심리 및 리스크 지표 (2026-03-13) - 최신 시장 분석 뉴스와 분석을 확인하세요. 주요 키워드: market-analysis, fear-greed, vix, market-breadth."
 excerpt: "2026-03-13 기준 시장 심리·리스크 지표를 7개 소스에서 수집했습니다. 1. 10-year Treasury yield moves lower after…"

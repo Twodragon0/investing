@@ -6,9 +6,11 @@ categories: [market-analysis]
 tags: [market-summary, daily, crypto, stock, macro, top-coins, quant, trading]
 source: "auto-generated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-market-2026-02-24.png"
+image: "/assets/images/generated/og-daily-market-report-2026-02-24.png"
 description: "암호화폐 시장이 하락세를 보이고 있습니다. 단기 조정 가능성을 염두에 두고 리스크 관리가 필요합니다."
 excerpt: "극도의 공포 장세: 공포/탐욕 지수 8으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 612개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수…"
+image_alt: "일일 시장 종합 리포트 - 2026-02-24 - market-analysis 뉴스 요약 이미지"
+permalink: "/market-analysis/2026/02/24/daily-market-report/"
 ---
 
 ## 시장 시각화

@@ -7,11 +7,12 @@ tags: [macro, quant, crypto, dashboard, workflow, playbook]
 keywords: "거시경제 퀀트 트레이딩, crypto dashboard, investing 연계, 매크로 시그널, 리스크 관리"
 source: "manual-research"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-investing-crypto-playbook-2026-03-14.png"
+image: "/assets/images/generated/og-investing-crypto-macro-quant-integration-playbook-2026-03-14.png"
 image_alt: "investing-crypto 연계 거시경제 퀀트 트레이딩 운영 플레이북 대표 이미지"
 description: "~/Desktop/investing의 뉴스·매크로 포스팅과 ~/Desktop/crypto의 대시보드 모니터링을 연결해 주식·크립토 거시경제 퀀트 트레이딩을 개선하는 운영 플레이북입니다."
 excerpt: "investing 포스트 파이프라인과 crypto-monitoring 대시보드를 연결해 매크로 레짐 판정, 포지션 조절, 알림, 회고 루프를 구성하는 방법"
 pin: false
+permalink: "/market-analysis/2026/03/14/investing-crypto-macro-quant-integration-playbook/"
 ---
 
 > 이 문서는 같은 머신에 있는 `~/Desktop/investing`와 `~/Desktop/crypto`를 **운영 관점에서 연결**해,

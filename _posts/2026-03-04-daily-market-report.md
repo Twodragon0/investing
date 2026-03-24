@@ -6,9 +6,11 @@ categories: [market-analysis]
 tags: ["market-summary", "daily", "crypto", "stock", "macro", "top-coins", "quant", "trading"]
 source: "auto-generated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-market-2026-03-04.png"
+image: "/assets/images/generated/og-daily-market-report-2026-03-04.png"
 description: "시장 분석 분야 핵심 동향: 일일 시장 종합 리포트 - 2026-03-04. 주요 키워드: market-summary, daily, crypto, stock."
 excerpt: "극도의 공포 장세: 공포/탐욕 지수 10으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 612개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수…"
+image_alt: "일일 시장 종합 리포트 - 2026-03-04 - market-analysis 뉴스 요약 이미지"
+permalink: "/market-analysis/2026/03/04/daily-market-report/"
 ---
 
 ## 시장 시각화

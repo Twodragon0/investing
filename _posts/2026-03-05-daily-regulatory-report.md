@@ -6,9 +6,11 @@ categories: [regulatory-news]
 tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-regulatory-2026-03-05.png"
+image: "/assets/images/generated/og-daily-regulatory-report-2026-03-05.png"
 description: "2026-03-05 글로벌 규제 14건: 금융위 가상자산위원회 개최·디지털자산기본법 정부안 윤곽, 가상자산거래소 지분 제한 규제, 코스피 폭락에 스테이블코인법 난항. 한국 9건 포함."
 excerpt: "1. 비공개 시장 원탁회의 SEC가 비공개 시장 관련 원탁회의를 개최하여 규제 방향을 논의했습니다 - Investing Dragon 자동 수집 분석 리포트."
+image_alt: "글로벌 규제 동향 리포트 - 2026-03-05 - regulatory-news 뉴스 요약 이미지"
+permalink: "/regulatory-news/2026/03/05/daily-regulatory-report/"
 ---
 
 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 14건의 규제 관련 뉴스가 수집되었습니다.

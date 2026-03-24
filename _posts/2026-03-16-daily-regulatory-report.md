@@ -7,7 +7,7 @@ tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 keywords: "regulation, sec, cftc, fsc, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-regulatory-2026-03-16.png"
+image: "/assets/images/generated/og-daily-regulatory-report-2026-03-16.png"
 permalink: "/regulatory-news/2026/03/16/daily-regulatory-report/"
 description: "리스크 수준 [ELEVATED]: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요. 자본시장특별사법경찰 집무규칙 규정변경예고 증시 제도 변경 관련 소식입니다. 거래 환경 변화에 따른 투자 전략 조정이 필요할 수 있습니다."
 excerpt: "리스크 수준 [ELEVATED]: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요. 자본시장특별사법경찰 집무규칙 규정변경예고 증시 제도 변경 관련 소식입니다."

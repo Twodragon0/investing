@@ -2,14 +2,14 @@
 layout: post
 title: "DeFi TVL 리포트 - 2026-03-17"
 date: 2026-03-17 04:44:55 +0900
-categories: [crypto-news]
+categories: [defi]
 tags: ["defi", "tvl", "crypto", "blockchain", "daily-digest"]
 keywords: "defi, tvl, crypto, blockchain, daily-digest"
 source: "defi-llama"
 source_url: "https://defillama.com"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-defi-2026-03-17.png"
-permalink: "/crypto-news/2026/03/17/daily-defi-tvl-report/"
+image: "/assets/images/generated/og-daily-defi-tvl-report-2026-03-17.png"
+permalink: "/defi/2026/03/17/daily-defi-tvl-report/"
 description: "2026-03-17 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked, 총 예치 자산) 현황을 정리합니다. 상위 20개 프로토콜의 총 TVL은 $247.99B이며, 상위 15개 체인의 총 TVL은 $94.82B입니다."
 excerpt: "2026-03-17 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked, 총 예치 자산) 현황을 정리합니다. 상위 20개 프로토콜의 총 TVL은…"
 image_alt: "DeFi TVL 리포트 - 2026-03-17 - crypto-news 뉴스 요약 이미지"

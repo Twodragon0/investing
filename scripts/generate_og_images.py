@@ -13,6 +13,13 @@ import re
 import textwrap
 from typing import Any, Dict, List, Optional
 
+try:
+    from PIL import Image as PILImage
+
+    _PIL_AVAILABLE = True
+except ImportError:
+    _PIL_AVAILABLE = False
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(name)s] %(levelname)s: %(message)s",
@@ -39,6 +46,8 @@ CATEGORY_COLORS: Dict[str, str] = {
     "political-trades": "#ff5722",
     "worldmonitor": "#009688",
     "security": "#f44336",
+    "security-alerts": "#f44336",
+    "geopolitical": "#ff6f00",
     "daily-summary": "#ffc107",
 }
 DEFAULT_ACCENT = "#607d8b"
@@ -56,6 +65,8 @@ CATEGORY_LABELS: Dict[str, str] = {
     "political-trades": "정치거래",
     "worldmonitor": "글로벌",
     "security": "보안",
+    "security-alerts": "보안",
+    "geopolitical": "지정학",
     "daily-summary": "일일요약",
 }
 
@@ -112,6 +123,21 @@ if _MPL_AVAILABLE:
     matplotlib.rcParams["text.parse_math"] = False
 
 _FK: Dict[str, Any] = {"fontfamily": _FONT_FAMILY} if _MPL_AVAILABLE else {}
+
+
+def _convert_to_webp(png_path: str, quality: int = 85) -> bool:
+    """Convert a PNG file to WebP format alongside the original."""
+    if not _PIL_AVAILABLE:
+        return False
+    webp_path = re.sub(r"\.png$", ".webp", png_path)
+    try:
+        with PILImage.open(png_path) as img:
+            img.save(webp_path, "WEBP", quality=quality, method=4)
+        logger.info("Converted to WebP: %s", webp_path)
+        return True
+    except (OSError, ValueError) as e:
+        logger.warning("WebP conversion failed for %s: %s", png_path, e)
+        return False
 
 
 # ── YAML front matter parser ──
@@ -1079,6 +1105,59 @@ def _draw_visual_default(ax, accent: str) -> None:
     )
 
 
+def _draw_visual_geopolitical(ax, accent: str) -> None:
+    """Draw geopolitical risk visual with radar chart and risk zones."""
+    import numpy as np
+
+    cx, cy = 920, 310
+    ax.add_patch(mpatches.Circle((cx, cy), 200, facecolor=accent, edgecolor="none", alpha=0.04))
+
+    # Radar/hexagon shape for multi-factor risk
+    n_axes = 6
+    angles = np.linspace(0, 2 * np.pi, n_axes, endpoint=False)
+    r_max = 130
+    # Concentric rings
+    for r_frac in [0.33, 0.66, 1.0]:
+        r = r_max * r_frac
+        pts = [(cx + r * np.cos(a), cy + r * np.sin(a)) for a in angles]
+        pts.append(pts[0])
+        xs, ys = zip(*pts, strict=False)
+        ax.plot(xs, ys, color=accent, linewidth=0.8, alpha=0.2)
+    # Axis lines
+    for a in angles:
+        ax.plot(
+            [cx, cx + r_max * np.cos(a)],
+            [cy, cy + r_max * np.sin(a)],
+            color="#475569", linewidth=0.7, alpha=0.25,
+        )
+    # Risk polygon fill
+    np.random.seed(77)
+    risk_vals = [0.5, 0.8, 0.6, 0.9, 0.4, 0.7]
+    from matplotlib.patches import Polygon
+    risk_pts = [(cx + r_max * v * np.cos(a), cy + r_max * v * np.sin(a)) for v, a in zip(risk_vals, angles, strict=False)]
+    ax.add_patch(Polygon(risk_pts, closed=True, facecolor=accent, alpha=0.15, edgecolor=accent, linewidth=2))
+    # Risk dots
+    for (rx, ry), v in zip(risk_pts, risk_vals, strict=False):
+        c = "#f85149" if v > 0.7 else "#d29922" if v > 0.5 else "#3fb950"
+        ax.add_patch(mpatches.Circle((rx, ry), 6, facecolor=c, edgecolor="none", alpha=0.8))
+
+    # Axis labels
+    risk_labels = ["TRADE", "CONFLICT", "SANCTION", "ENERGY", "POLICY", "ALLIANCE"]
+    for label, a in zip(risk_labels, angles, strict=False):
+        lx = cx + (r_max + 22) * np.cos(a)
+        ly = cy + (r_max + 22) * np.sin(a)
+        ax.text(lx, ly, label, fontsize=6, color=TEXT_MUTED, fontweight="bold", ha="center", va="center", alpha=0.45, **_FK)
+
+    # Alert badge
+    ax.add_patch(
+        mpatches.FancyBboxPatch(
+            (cx + 140, cy + 140), 50, 20, boxstyle="round,pad=2",
+            facecolor="#f85149", edgecolor="none", alpha=0.7,
+        )
+    )
+    ax.text(cx + 165, cy + 150, "ALERT", fontsize=7, color=TEXT_WHITE, fontweight="bold", ha="center", va="center", alpha=0.9, **_FK)
+
+
 # Category -> visual drawing function
 _CATEGORY_VISUALS = {
     "crypto-news": _draw_visual_crypto,
@@ -1090,6 +1169,8 @@ _CATEGORY_VISUALS = {
     "political-trades": _draw_visual_political,
     "worldmonitor": _draw_visual_world,
     "security": _draw_visual_security,
+    "security-alerts": _draw_visual_security,
+    "geopolitical": _draw_visual_geopolitical,
     "daily-summary": _draw_visual_default,
 }
 
@@ -1116,8 +1197,11 @@ def generate_og_image(
     category_label = CATEGORY_LABELS.get(category, category)
     date_dotted = date_str.replace("-", ".")
 
-    # Single-line title, truncated for impact
-    title_text = truncate_text(safe_text(title), 36)
+    # Multi-line title support (up to 2 lines, 24 chars per line for Korean)
+    title_lines = wrap_text(safe_text(title), max_width=24, max_lines=2)
+    # Description lines (up to 2 lines below title)
+    desc_text = description if description else ""
+    desc_lines = wrap_text(safe_text(desc_text), max_width=30, max_lines=2) if desc_text else []
 
     fig = plt.figure(figsize=(12, 6.3), dpi=100)
     ax = fig.add_axes((0, 0, 1, 1))
@@ -1173,7 +1257,7 @@ def generate_og_image(
     draw_fn = _CATEGORY_VISUALS.get(category, _draw_visual_default)
     draw_fn(ax, accent_color)
 
-    # === Left side: minimal text ===
+    # === Left side: rich text layout ===
     # Brand
     ax.text(60, 560, "INVESTING DRAGON", fontsize=13, color="#7dd3fc", fontweight="bold", ha="left", va="center", **_FK)
 
@@ -1202,14 +1286,30 @@ def generate_og_image(
         **_FK,
     )
 
-    # Title (large, impactful)
-    ax.text(60, 390, title_text, fontsize=30, color=TEXT_WHITE, fontweight="bold", ha="left", va="center", **_FK)
+    # Title (multi-line, large)
+    title_y = 410
+    for idx, line in enumerate(title_lines):
+        ax.text(
+            60, title_y - idx * 40, line,
+            fontsize=28, color=TEXT_WHITE, fontweight="bold", ha="left", va="center", **_FK,
+        )
 
     # Date
-    ax.text(60, 340, date_dotted, fontsize=16, color=TEXT_GRAY, ha="left", va="center", **_FK)
+    date_y = title_y - len(title_lines) * 40 - 10
+    ax.text(60, date_y, date_dotted, fontsize=14, color=TEXT_GRAY, ha="left", va="center", **_FK)
+
+    # Description (2 lines below date)
+    if desc_lines:
+        desc_start_y = date_y - 35
+        for idx, line in enumerate(desc_lines):
+            ax.text(
+                60, desc_start_y - idx * 24, line,
+                fontsize=12, color=TEXT_MUTED, ha="left", va="center", **_FK,
+            )
 
     # Vertical accent line
-    ax.plot([56, 56], [320, 510], color=accent_color, linewidth=3, alpha=0.5)
+    accent_line_bottom = date_y - 35 - len(desc_lines) * 24 if desc_lines else date_y - 20
+    ax.plot([56, 56], [max(accent_line_bottom, 200), 510], color=accent_color, linewidth=3, alpha=0.5)
 
     # Footer
     ax.plot([60, 1140], [88, 88], color=DIVIDER_COLOR, linewidth=0.8)
@@ -1220,6 +1320,7 @@ def generate_og_image(
     try:
         fig.savefig(output_path, dpi=100, facecolor=BG_COLOR, edgecolor="none", bbox_inches=None, pad_inches=0)
         logger.info("Generated: %s", output_path)
+        _convert_to_webp(output_path)
         return True
     except OSError as e:
         logger.error("Failed to save %s: %s", output_path, e)
@@ -1428,6 +1529,7 @@ def generate_trading_journal_og_image(post: Dict[str, str], output_path: str) ->
     try:
         fig.savefig(output_path, dpi=100, facecolor="#0a0f18", edgecolor="none", bbox_inches=None, pad_inches=0)
         logger.info("Generated journal OG: %s", output_path)
+        _convert_to_webp(output_path)
         return True
     except OSError as e:
         logger.error("Failed to save %s: %s", output_path, e)

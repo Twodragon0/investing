@@ -2,14 +2,14 @@
 layout: post
 title: "DeFi TVL 리포트 - 2026-03-16"
 date: 2026-03-16 04:17:22 +0900
-categories: [crypto-news]
+categories: [defi]
 tags: ["defi", "tvl", "crypto", "blockchain", "daily-digest"]
 keywords: "defi, tvl, crypto, blockchain, daily-digest"
 source: "defi-llama"
 source_url: "https://defillama.com"
 lang: "ko"
-image: "/assets/images/generated/defi-tvl-dashboard-2026-03-16.png"
-permalink: "/crypto-news/2026/03/16/daily-defi-tvl-report/"
+image: "/assets/images/generated/og-daily-defi-tvl-report-2026-03-16.png"
+permalink: "/defi/2026/03/16/daily-defi-tvl-report/"
 description: "3월 16일 DeFi Llama 기준 TVL 흐름을 정리했습니다. 상위 20개 프로토콜 TVL은 2,479.9억 달러, 상위 15개 체인 TVL은 912.6억 달러로 이더리움 우위가 이어졌습니다."
 excerpt: "3월 16일 DeFi Llama 기준 TVL 흐름을 정리했습니다. 프로토콜 TVL 2,479.9억 달러, 체인 TVL 912.6억 달러로 이더리움 중심 구조가 유지됐습니다."
 image_alt: "3월 16일 DeFi TVL 분포와 상위 프로토콜·체인 현황을 보여주는 대시보드 이미지"

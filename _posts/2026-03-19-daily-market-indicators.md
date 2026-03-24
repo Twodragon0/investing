@@ -7,7 +7,7 @@ tags: ["market-analysis", "fear-greed", "vix", "market-breadth", "sentiment", "f
 keywords: "market-analysis, fear-greed, vix, market-breadth, sentiment"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-indicators-2026-03-19.png"
+image: "/assets/images/generated/og-daily-market-indicators-2026-03-19.png"
 permalink: "/market-analysis/2026/03/19/daily-market-indicators/"
 description: "2026-03-19 기준 시장 심리·리스크 지표를 8개 소스에서 점검했습니다. 공포탐욕 지수는 극도의 공포 구간에 머물고 VIX와 달러 강세가 동시에 높아져 단기 변동성 관리가 중요한 구간입니다."
 excerpt: "공포탐욕 지수는 극도의 공포 구간이고 VIX와 달러 강세가 동시에 높아져 단기 변동성 관리가 중요합니다."

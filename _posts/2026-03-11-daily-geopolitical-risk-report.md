@@ -7,10 +7,11 @@ tags: ["geopolitical", "polymarket", "risk", "conflict", "prediction-market"]
 keywords: "geopolitical, polymarket, risk, conflict, prediction-market"
 source: "geopolitical"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-geopolitical-2026-03-11.png"
+image: "/assets/images/generated/og-daily-geopolitical-risk-report-2026-03-11.png"
 description: "2026-03-11 기준 지정학적 리스크 데이터를 2개 소스에서 수집·분석했습니다. 예측 시장 15건, 글로벌 뉴스 분석 0건, 뉴스 6건을 종합합니다."
 excerpt: "지정학 리스크 리포트 - 2026-03-11 - 최신 글로벌 뉴스와 분석을 확인하세요. 주요 키워드: geopolitical, polymarket, risk, conflict."
 image_alt: "지정학 리스크 리포트 - 2026-03-11 - 글로벌 이슈 뉴스 요약 이미지"
+permalink: "/worldmonitor/2026/03/11/daily-geopolitical-risk-report/"
 ---
 
 **2026-03-11** 기준 지정학적 리스크 데이터를 2개 소스에서 수집·분석했습니다. 예측 시장 15건, 글로벌 뉴스 분석 0건, 뉴스 6건을 종합합니다.

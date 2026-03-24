@@ -28,6 +28,8 @@ journal_next_focus: "미국 CPI 발표 전에는 노출을 줄이고, BTC 도미
 description: "크립토 트레이딩 일지 - 2026-02-10 - 최신 crypto-trading-journal 뉴스와 분석을 확인하세요. 주요 키워드: trading, crypto, journal, BTC."
 image: "/assets/images/generated/og-crypto-trading-journal-template-2026-02-10.png"
 excerpt: "크립토 트레이딩 일지 작성 가이드입니다. 이 템플릿을 참고하여 일일 매매 기록을 작성하세요. - 관심 시나리오: 돌파 추종 / 눌림 재진입 / 이벤트 관망 중 무엇이었는지…"
+image_alt: "크립토 트레이딩 일지 - 2026-02-10 - crypto-trading-journal 뉴스 요약 이미지"
+permalink: "/crypto-journal/2026/02/10/crypto-trading-journal-template/"
 ---
 
 크립토 트레이딩 일지 작성 가이드입니다. 이 템플릿을 참고하여 일일 매매 기록을 작성하세요.

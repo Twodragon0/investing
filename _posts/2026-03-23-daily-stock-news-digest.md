@@ -7,7 +7,7 @@ tags: ["stock", "market", "daily-digest"]
 keywords: "stock, market, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/market-snapshot-2026-03-23.png"
+image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-23.png"
 permalink: "/stock-news/2026/03/23/daily-stock-news-digest/"
 description: "주식 시장 뉴스 종합 - 2026-03-23 - 최신 주식 시장 뉴스와 분석을 확인하세요. 주요 키워드: stock, market, daily-digest."
 excerpt: "주식 시장 뉴스 종합 - 2026-03-23 - 최신 주식 시장 뉴스와 분석을 확인하세요. 주요 키워드: stock, market, daily-digest."

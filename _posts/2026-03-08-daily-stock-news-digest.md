@@ -7,9 +7,11 @@ tags: ["stock", "market", "daily-digest"]
 keywords: "stock, market, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/market-snapshot-2026-03-08.png"
+image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-08.png"
 description: "2026-03-08 주식 시장에서 126건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,584.87(+0.02%), KOSDAQ 1,154.67(+3.43%), USD/KRW 1,482.60(+0.15%)."
 excerpt: "KOSPI 5,584.87 (+0.02%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다. KOSDAQ 1,154.67…"
+image_alt: "주식 시장 뉴스 종합 - 2026-03-08 - stock-news 뉴스 요약 이미지"
+permalink: "/stock-news/2026/03/08/daily-stock-news-digest/"
 ---
 
 **2026-03-08** 주식 시장에서 126건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,584.87(+0.02%), KOSDAQ 1,154.67(+3.43%), USD/KRW 1,482.60(+0.15%).

@@ -30,4 +30,4 @@ jobs:
         with:
           script: scripts/collect_market_indicators.py
           commit-message: 'chore: collect market indicators'
-          git-add-paths: '_posts/ _state/'
+          git-add-paths: '_posts/ _state/ assets/images/'

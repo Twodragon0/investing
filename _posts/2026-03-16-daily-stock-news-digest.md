@@ -7,7 +7,7 @@ tags: ["stock", "market", "daily-digest"]
 keywords: "stock, market, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/market-snapshot-2026-03-16.png"
+image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-16.png"
 permalink: "/stock-news/2026/03/16/daily-stock-news-digest/"
 description: "3월 16일 주식 시장 뉴스 140건을 분석했습니다. 지정학 리스크와 유가 급등 우려로 KOSPI는 하락했고, 반도체와 정책 뉴스가 시장 해석의 중심에 섰습니다."
 excerpt: "3월 16일 주식 시장 뉴스 140건을 분석했습니다. 지정학 리스크와 유가 변수 속에서 반도체, 정책, 가격 흐름 관련 뉴스가 핵심 이슈였습니다."

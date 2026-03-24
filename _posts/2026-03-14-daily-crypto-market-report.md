@@ -8,10 +8,11 @@ keywords: "market-report, crypto, top-coins, trending, daily, fear-greed, trump,
 source: "CryptoMonitor v3.0"
 source_url: "https://coinmarketcap.com/"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-cryptomarket-2026-03-14.png"
+image: "/assets/images/generated/og-daily-crypto-market-report-2026-03-14.png"
 description: "오늘의 시장 분석 브리핑 — 크립토 시장 종합 리포트 - 2026-03-14. 주요 키워드: market-report, crypto, top-coins, trending."
 excerpt: "크립토 시장 종합 리포트 - 2026-03-14 - 최신 시장 분석 뉴스와 분석을 확인하세요. 주요 키워드: market-report, crypto, top-coins, tr..."
 image_alt: "크립토 시장 종합 리포트 - 2026-03-14 - 시장 분석 뉴스 요약 이미지"
+permalink: "/market-analysis/2026/03/14/daily-crypto-market-report/"
 ---
 
 **2026-03-14** 크립토 모니터 v3.0 기반 시장, 뉴스, 보안, 경제지표, 내부자거래 데이터를 종합 분석했습니다.

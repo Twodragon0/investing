@@ -31,4 +31,4 @@ jobs:
         with:
           script: scripts/collect_fmp_calendar.py
           commit-message: 'chore: collect FMP calendar'
-          git-add-paths: '_posts/ _state/'
+          git-add-paths: '_posts/ _state/ assets/images/'

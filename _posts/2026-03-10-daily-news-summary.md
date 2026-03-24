@@ -6,9 +6,11 @@ categories: [market-analysis]
 tags: ["일일요약", "암호화폐", "주식", "규제", "소셜미디어", "보안", "정치인거래", "월드모니터"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-daily-2026-03-10.png"
+image: "/assets/images/generated/og-daily-news-summary-2026-03-10.png"
 description: "2026-03-10 총 437건 뉴스 종합: P0 긴급 3건·P1 주요 6건, 리스크 高. KOSPI 서킷브레이커 발동, 공포/탐욕 지수 13(극도의 공포). 정책/규제·지정학·금리 3대 테마 주도."
 excerpt: "암호화폐 106건, 주식 234건, 규제 31건, 소셜 미디어 43건, 월드모니터 20건, 정치인 거래 3건의 뉴스를 종합 분석한 일일 요약"
+image_alt: "일일 뉴스 종합 요약 - 2026-03-10 - market-analysis 뉴스 요약 이미지"
+permalink: "/market-analysis/2026/03/10/daily-news-summary/"
 ---
 
 > 암호화폐 106건, 주식 234건, 규제 31건, 소셜 미디어 43건, 월드모니터 20건, 정치인 거래 3건의 뉴스를 종합 분석한 일일 요약입니다.

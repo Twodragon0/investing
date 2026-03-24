@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-crypto-2026-03-22.png"
+image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-22.png"
 permalink: "/crypto-news/2026/03/22/daily-crypto-news-digest/"
 description: "암호화폐 뉴스 브리핑 - 2026-03-22. 크립토 시장 심리와 자금 흐름을 점검합니다. 주요 키워드: crypto, news, daily-digest."
 excerpt: "암호화폐 뉴스 브리핑 - 2026-03-22. 크립토 시장 심리와 자금 흐름을 점검합니다. 주요 키워드: crypto, news, daily-digest."

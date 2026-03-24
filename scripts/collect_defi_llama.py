@@ -999,7 +999,7 @@ def main():
     started_at = time.monotonic()
 
     dedup = DedupEngine("defi_llama_seen.json")
-    gen = PostGenerator("crypto-news")
+    gen = PostGenerator("defi")
 
     now = get_kst_now()
     today = now.strftime("%Y-%m-%d")
@@ -1054,7 +1054,7 @@ def main():
         source_url="https://defillama.com",
         lang="ko",
         image=image_frontmatter,
-        extra_frontmatter={"permalink": build_dated_permalink("crypto-news", today, "daily-defi-tvl-report")},
+        extra_frontmatter={"permalink": build_dated_permalink("defi", today, "daily-defi-tvl-report")},
         slug="daily-defi-tvl-report",
     )
 

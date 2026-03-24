@@ -7,7 +7,7 @@ tags: ["stock", "market", "daily-digest"]
 keywords: "stock, market, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/market-snapshot-2026-03-21.png"
+image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-21.png"
 permalink: "/stock-news/2026/03/21/daily-stock-news-digest/"
 description: "오늘의 주식 시장: 주식 시장 뉴스 종합 - 2026-03-21. 주요 지수와 종목 흐름을 정리합니다. 주요 키워드: stock, market, daily-digest."
 excerpt: "KOSPI 5,781.20 (+0.31%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다. KOSDAQ 1,161.52…"

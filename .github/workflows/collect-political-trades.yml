@@ -28,4 +28,4 @@ jobs:
         with:
           script: scripts/collect_political_trades.py
           commit-message: 'chore: collect political trades'
-          git-add-paths: '_posts/ _state/'
+          git-add-paths: '_posts/ _state/ assets/images/'

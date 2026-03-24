@@ -7,7 +7,7 @@ tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 keywords: "regulation, sec, cftc, fsc, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-regulatory-2026-03-23.png"
+image: "/assets/images/generated/og-daily-regulatory-report-2026-03-23.png"
 permalink: "/regulatory-news/2026/03/23/daily-regulatory-report/"
 description: "거래소 (3건): 우선배정, 중복상장, 쪼개기 동향이 포트폴리오 전략에 영향을 줄 수 있어 주시가 필요합니다 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "거래소 (3건): 우선배정, 중복상장, 쪼개기 동향이 포트폴리오 전략에 영향을 줄 수 있어 주시가 필요합니다 - Investing Dragon 자동 수집 분석 리포트."

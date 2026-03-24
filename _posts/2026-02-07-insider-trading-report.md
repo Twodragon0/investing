@@ -7,8 +7,10 @@ tags: [내부자거래, SEC, Form4, 임원매수, 스마트머니]
 source: "Crypto Monitoring System"
 lang: ko
 description: "기업 내부자 거래 리포트 - 2026년 02월 07일 - 미국·한국 주식 시장 동향과 섹터별 분석. 주요 키워드: 내부자거래, SEC, Form4, 임원매수."
-image: "/assets/images/generated/news-briefing-insider-2026-02-07.png"
+image: "/assets/images/generated/og-insider-trading-report-2026-02-07.png"
 excerpt: "스마트 머니 추적: 기업 내부자들의 최근 거래 활동을 통해 시장 신호를 파악합니다. - 전체 거래: 8건 - 매수 거래: 6건 - 매도 거래: 2건"
+image_alt: "기업 내부자 거래 리포트 - 2026년 02월 07일 - stock-news 뉴스 요약 이미지"
+permalink: "/stock-news/2026/02/07/insider-trading-report/"
 ---
 
 스마트 머니 추적: 기업 내부자들의 최근 거래 활동을 통해 시장 신호를 파악합니다.

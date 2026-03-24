@@ -7,9 +7,11 @@ tags: ["weekly-digest", "summary", "market-analysis"]
 keywords: "weekly-digest, summary, market-analysis"
 source: "auto-generated"
 lang: "ko"
-image: "/assets/images/generated/news-summary-weekly-2026-03-09.png"
+image: "/assets/images/generated/og-weekly-investment-digest-2026-03-09-2026-03-09.png"
 description: "03월 02일~09일 주간 요약: BTC $66,327~$72,748 박스권, 공포탐욕 10→12 Extreme Fear. KOSPI -7.41% 서킷브레이커 발동, 75건 포스트·7개 카테고리 분석."
 excerpt: "이번 주 (03월 02일 03월 09일) 투자 시장의 주요 동향과 핵심 이슈를 종합 분석합니다. 카테고리: market-analysis 28건, crypto-news 17건,…"
+image_alt: "주간 투자 다이제스트 - 2026년 03월 09일 - market-analysis 뉴스 요약 이미지"
+permalink: "/market-analysis/2026/03/09/weekly-investment-digest-2026-03-09/"
 ---
 
 이번 주 (03월 02일 ~ 03월 09일) 투자 시장의 주요 동향과 핵심 이슈를 종합 분석합니다.

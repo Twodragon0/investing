@@ -7,9 +7,11 @@ tags: ["market-analysis", "fear-greed", "vix", "market-breadth", "sentiment", "f
 keywords: "market-analysis, fear-greed, vix, market-breadth, sentiment"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-indicators-2026-03-10.png"
+image: "/assets/images/generated/og-daily-market-indicators-2026-03-10.png"
 description: "시장 심리 및 리스크 지표 (2026-03-10) 관련 시장 분석 리포트입니다. 주요 키워드: market-analysis, fear-greed, vix, market-breadth."
 excerpt: "시장 심리 및 리스크 지표 (2026-03-10) - 최신 시장 분석 뉴스와 분석을 확인하세요. 주요 키워드: market-analysis, fear-greed, vix, m..."
+image_alt: "시장 심리 및 리스크 지표 (2026-03-10) - market-analysis 뉴스 요약 이미지"
+permalink: "/market-analysis/2026/03/10/daily-market-indicators/"
 ---
 
 **2026-03-10** 기준 시장 심리·리스크 지표를 7개 소스에서 수집했습니다.

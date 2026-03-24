@@ -7,7 +7,7 @@ tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 keywords: "regulation, sec, cftc, fsc, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-regulatory-2026-03-17.png"
+image: "/assets/images/generated/og-daily-regulatory-report-2026-03-17.png"
 permalink: "/regulatory-news/2026/03/17/daily-regulatory-report/"
 description: "3월 17일 글로벌 규제 뉴스 26건을 정리했습니다. 한국 금융위 보도자료 비중이 압도적으로 높았고 미국에서는 SEC·CFTC 발표가 제한적으로 확인됐습니다."
 excerpt: "글로벌 규제 뉴스 26건을 정리했습니다. 한국 금융위 보도자료 비중이 높았고 미국 발표는 제한적으로 확인됐습니다."

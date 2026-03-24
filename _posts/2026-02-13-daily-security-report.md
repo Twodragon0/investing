@@ -7,8 +7,10 @@ tags: [security, hack, blockchain, daily-digest]
 source: "consolidated"
 lang: "ko"
 description: "오늘의 보안 브리핑 — 블록체인 보안 리포트 - 2026-02-13. 주요 키워드: security, hack, blockchain, daily-digest."
-image: "/assets/images/generated/news-briefing-security-2026-02-13.png"
+image: "/assets/images/generated/og-daily-security-report-2026-02-13.png"
 excerpt: "블록체인 보안 리포트 - 2026-02-13 - 최신 보안 뉴스와 분석을 확인하세요. 주요 키워드: security, hack, blockchain, daily-digest."
+image_alt: "블록체인 보안 리포트 - 2026-02-13 - security-alerts 뉴스 요약 이미지"
+permalink: "/security-alerts/2026/02/13/daily-security-report/"
 ---
 
 블록체인 보안 관련 뉴스 1건을 정리합니다.

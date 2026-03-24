@@ -7,7 +7,7 @@ tags: ["market-analysis", "economic-calendar", "earnings", "treasury", "ipo", "f
 keywords: "market-analysis, economic-calendar, earnings, treasury, ipo"
 source: "fmp"
 lang: "ko"
-image: "/assets/images/og-market-analysis.png"
+image: "/assets/images/generated/og-fmp-economic-calendar-2026-03-23.png"
 permalink: "/market-analysis/2026/03/23/fmp-economic-calendar/"
 description: "시장 분석 분야 핵심 동향: 주요 경제 캘린더 및 실적 일정 (2026-03-23). 주요 키워드: market-analysis, economic-calendar, earnings, treasury."
 excerpt: "시장 분석 분야 핵심 동향: 주요 경제 캘린더 및 실적 일정 (2026-03-23). 주요 키워드: market-analysis, economic-calendar,…"

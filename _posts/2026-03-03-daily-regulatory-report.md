@@ -6,9 +6,11 @@ categories: [regulatory-news]
 tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-regulatory-2026-03-03.png"
+image: "/assets/images/generated/og-daily-regulatory-report-2026-03-03.png"
 description: "2026-03-03 글로벌 규제 29건: 금융위 중동사태 긴급 금융시장점검회의 개최, CFTC 인사 3건 발표, 한국 21건·미국 5건 포함. 규제/정책 22건·정치/정책 10건 중심 분석."
 excerpt: "1. 중동 상황 관련 긴급 금융시장상황점검회의 개최 금융위원회가 중동 상황 악화에 따른 금융시장 영향을 점검하기 위해 긴급 회의를 개최했습니다."
+image_alt: "글로벌 규제 동향 리포트 - 2026-03-03 - regulatory-news 뉴스 요약 이미지"
+permalink: "/regulatory-news/2026/03/03/daily-regulatory-report/"
 ---
 
 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 29건의 규제 관련 뉴스가 수집되었습니다.

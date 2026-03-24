@@ -7,9 +7,11 @@ tags: ["market-report", "crypto", "top-coins", "trending", "daily"]
 source: "CoinMarketCap"
 source_url: "https://coinmarketcap.com/"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-cryptomarket-2026-03-05.png"
+image: "/assets/images/generated/og-daily-crypto-market-report-2026-03-05.png"
 description: "오늘 시가총액 상위 30개 코인을 기준으로 시장을 분석했습니다. 비트코인은 $72,748에서 24시간 +6.72% 상승하며 투자 심리 회복을 견인하고 있습니다. 전체 시가총액은 $2.53T으로 전일 대비 +5.77% 변동했으며, BTC 도미넌스 57.4%로 비트코인 중심 자금 흐름이…"
 excerpt: "24시간 시가총액 변동 +5.77%로 강한 상승 랠리가 진행 중입니다. FOMO(Fear of Missing Out) 심리가 작동할 수 있으나, 급등 후 단기 조정 가능성도…"
+image_alt: "암호화폐 시장 종합 리포트 - 2026-03-05 - market-analysis 뉴스 요약 이미지"
+permalink: "/market-analysis/2026/03/05/daily-crypto-market-report/"
 ---
 
 ## 시장 시각화

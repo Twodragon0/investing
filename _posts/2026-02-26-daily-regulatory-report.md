@@ -6,9 +6,11 @@ categories: [regulatory-news]
 tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-regulatory-2026-02-26.png"
+image: "/assets/images/generated/og-daily-regulatory-report-2026-02-26.png"
 description: "규제 동향 브리핑: 글로벌 규제 동향 리포트 - 2026-02-26. 각국 규제 기관의 최신 결정을 분석합니다. 주요 키워드: regulation, sec, cftc, fsc."
 excerpt: "글로벌 규제 동향 리포트 - 2026-02-26 - 최신 regulatory-news 뉴스와 분석을 확인하세요. 주요 키워드: regulation, sec, cftc, fsc."
+image_alt: "글로벌 규제 동향 리포트 - 2026-02-26 - regulatory-news 뉴스 요약 이미지"
+permalink: "/regulatory-news/2026/02/26/daily-regulatory-report/"
 ---
 
 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 34건의 규제 관련 뉴스가 수집되었습니다.

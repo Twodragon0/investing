@@ -1,7 +1,7 @@
 ---
 name: investing-lead
 description: Lead agent for investing project. Coordinates collector development, content pipeline, and deployment workflows.
-tools: Read, Grep, Glob, Bash, Agent
+tools: Read, Grep, Glob, Bash, Write, Edit, Agent
 model: opus
 memory: user
 vibe: strategic-commander

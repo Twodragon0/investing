@@ -6,9 +6,11 @@ categories: [stock-news]
 tags: ["stock", "market", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-stock-2026-03-04.png"
+image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-04.png"
 description: "KOSPI -7.62%, KOSDAQ -8.68% 급락. 이란 분쟁 확대에 따른 글로벌 증시 폭락, 유가 급등, 반도체 투톱 삼성전자·SK하이닉스 붕괴 등 147건 분석."
 excerpt: "KOSPI 5,384.06 (-7.62%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요."
+image_alt: "주식 시장 뉴스 종합 - 2026-03-04 - stock-news 뉴스 요약 이미지"
+permalink: "/stock-news/2026/03/04/daily-stock-news-digest/"
 ---
 
 **2026-03-04** 주식 시장에서 147건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,384.06(-7.62%), KOSDAQ 1,051.52(-8.68%), USD/KRW 1,481.07(-0.31%).

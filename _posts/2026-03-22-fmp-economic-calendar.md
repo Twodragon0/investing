@@ -7,7 +7,7 @@ tags: ["market-analysis", "economic-calendar", "earnings", "treasury", "ipo", "f
 keywords: "market-analysis, economic-calendar, earnings, treasury, ipo"
 source: "fmp"
 lang: "ko"
-image: "/assets/images/og-market-analysis.png"
+image: "/assets/images/generated/og-fmp-economic-calendar-2026-03-22.png"
 permalink: "/market-analysis/2026/03/22/fmp-economic-calendar/"
 description: "주요 경제 캘린더 및 실적 일정 (2026-03-22) - 최신 시장 분석 뉴스와 분석을 확인하세요. 주요 키워드: market-analysis, economic-calendar, earnings, treasury."
 excerpt: "오늘의 시장 분석 브리핑 — 주요 경제 캘린더 및 실적 일정 (2026-03-22). 주요 키워드: market-analysis, economic-calendar,…"

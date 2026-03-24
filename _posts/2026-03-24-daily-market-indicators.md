@@ -7,7 +7,7 @@ tags: ["market-analysis", "fear-greed", "vix", "market-breadth", "sentiment", "f
 keywords: "market-analysis, fear-greed, vix, market-breadth, sentiment"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/og-market-analysis.png"
+image: "/assets/images/generated/og-daily-market-indicators-2026-03-24.png"
 permalink: "/market-analysis/2026/03/24/daily-market-indicators/"
 description: "시장 분석 분야 핵심 동향: 시장 심리 및 리스크 지표 (2026-03-24). 주요 키워드: market-analysis, fear-greed, vix, market-breadth."
 excerpt: "시장 분석 분야 핵심 동향: 시장 심리 및 리스크 지표 (2026-03-24). 주요 키워드: market-analysis, fear-greed, vix,…"

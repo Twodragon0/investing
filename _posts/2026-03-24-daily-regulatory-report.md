@@ -7,7 +7,7 @@ tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 keywords: "regulation, sec, cftc, fsc, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-regulatory-2026-03-24.png"
+image: "/assets/images/generated/og-daily-regulatory-report-2026-03-24.png"
 permalink: "/regulatory-news/2026/03/24/daily-regulatory-report/"
 description: "규제/정책 (3건): 지분제한, 단독, 규제 이슈에 대한 시장 반응을 모니터링할 필요가 있습니다 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "규제/정책 (3건): 지분제한, 단독, 규제 이슈에 대한 시장 반응을 모니터링할 필요가 있습니다 - Investing Dragon 자동 수집 분석 리포트."

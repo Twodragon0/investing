@@ -6,9 +6,11 @@ categories: [market-analysis]
 tags: ["일일요약", "암호화폐", "주식", "규제", "소셜미디어", "보안", "정치인거래", "월드모니터"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-summary-2026-03-02.png"
+image: "/assets/images/generated/og-daily-news-summary-2026-03-02.png"
 description: "이란 전쟁 확전으로 글로벌 리스크오프 전환 — 원유 +8%, BTC $66.8K, 공포지수 10, KOSPI -1%. 268건 일일 종합 분석."
 excerpt: "이란 전쟁 확전으로 글로벌 리스크오프 전환 — 원유 +8%, BTC $66.8K, 공포지수 10, KOSPI -1%. 268건 종합 분석."
+image_alt: "일일 뉴스 종합 요약 - 2026-03-02 - market-analysis 뉴스 요약 이미지"
+permalink: "/market-analysis/2026/03/02/daily-news-summary/"
 ---
 
 > **2026년 3월 2일** — 미-이스라엘의 이란 공습으로 하메네이 사망, 헤즈볼라 보복 로켓 발사 등 중동 전면전 리스크가 급격히 부상했습니다. 원유가 8% 이상 급등하고, 주요 주가지수 선물이 하락하며 **글로벌 리스크오프** 장세가 전개되고 있습니다.

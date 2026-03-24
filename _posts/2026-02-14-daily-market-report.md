@@ -6,9 +6,11 @@ categories: [market-analysis]
 tags: [market-summary, daily, crypto, stock, macro, top-coins]
 source: "auto-generated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-market-2026-02-14.png"
+image: "/assets/images/generated/og-daily-market-report-2026-02-14.png"
 description: "일일 시장 종합 리포트 - 2026-02-14 관련 시장 분석 리포트입니다. 주요 키워드: market-summary, daily, crypto, stock."
 excerpt: "일일 시장 종합 리포트 - 2026-02-14 - 최신 시장 분석 뉴스와 분석을 확인하세요. 주요 키워드: market-summary, daily, crypto, stock."
+image_alt: "일일 시장 종합 리포트 - 2026-02-14 - market-analysis 뉴스 요약 이미지"
+permalink: "/market-analysis/2026/02/14/daily-market-report/"
 ---
 
 ## 오늘의 핵심

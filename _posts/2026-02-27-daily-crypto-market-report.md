@@ -8,8 +8,10 @@ source: "CoinMarketCap"
 source_url: "https://coinmarketcap.com/"
 lang: "ko"
 description: "2026-02-27 암호화폐 시장 종합 리포트. BTC $65,905 (-3.3%). 시가총액 상위 30개 코인 분석."
-image: "/assets/images/generated/news-briefing-cryptomarket-2026-02-27.png"
+image: "/assets/images/generated/og-daily-crypto-market-report-2026-02-27.png"
 excerpt: "암호화폐 시장은 현재 소폭 하락세를 보이고 있습니다. 단기 조정 구간으로 판단됩니다. 암호화폐 시장은 현재 소폭 하락세를 보이고 있습니다. 단기 조정 구간으로 판단됩니다."
+image_alt: "암호화폐 시장 종합 리포트 - 2026-02-27 - market-analysis 뉴스 요약 이미지"
+permalink: "/market-analysis/2026/02/27/daily-crypto-market-report/"
 ---
 
 ## 시장 시각화

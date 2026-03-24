@@ -6,9 +6,11 @@ categories: [stock-news]
 tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-stock-2026-02-27.png"
+image: "/assets/images/generated/og-daily-stock-news-digest-2026-02-27.png"
 description: "2026-02-27 주식 시장에서 162건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,265.29(-0.14%), KOSDAQ 1,195.47(+0.67%), USD/KRW 1,433.46(+0.01%)."
 excerpt: "한국 증시는 KOSPI 6,265.29 (-0.14%) 하락하며, 투자 심리가 위축되는 모습입니다. KOSDAQ은 1,195.47 (+0.67%)를 기록했습니다."
+image_alt: "주식 시장 뉴스 종합 - 2026-02-27 - stock-news 뉴스 요약 이미지"
+permalink: "/stock-news/2026/02/27/daily-stock-news-digest/"
 ---
 
 **2026-02-27** 주식 시장에서 162건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,265.29(-0.14%), KOSDAQ 1,195.47(+0.67%), USD/KRW 1,433.46(+0.01%).

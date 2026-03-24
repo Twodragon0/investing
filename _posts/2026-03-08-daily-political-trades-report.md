@@ -7,9 +7,11 @@ tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-ban
 keywords: "political-trades, congress, sec, trump, 이재명"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-political-2026-03-08.png"
+image: "/assets/images/generated/og-daily-political-trades-report-2026-03-08.png"
 excerpt: "2026-03-08 정치인 거래·정책 리포트: 의회 거래 2건, 트럼프 정책 2건, 중앙은행 1건, 총 5건 수집"
 description: "2026-03-08 미국 의회 거래 2건, 트럼프 정책 2건, 중앙은행 동향 1건 등 총 5건의 정치인 거래·정책 변동을 분석한 일일 리포트입니다."
+image_alt: "정치인 거래·정책 리포트 - 2026-03-08 - political-trades 뉴스 요약 이미지"
+permalink: "/political-trades/2026/03/08/daily-political-trades-report/"
 ---
 
 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.

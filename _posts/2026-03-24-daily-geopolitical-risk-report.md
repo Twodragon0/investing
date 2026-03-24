@@ -7,7 +7,7 @@ tags: ["geopolitical", "polymarket", "risk", "conflict", "prediction-market"]
 keywords: "geopolitical, polymarket, risk, conflict, prediction-market"
 source: "geopolitical"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-geopolitical-2026-03-24.png"
+image: "/assets/images/generated/og-daily-geopolitical-risk-report-2026-03-24.png"
 permalink: "/market-analysis/2026/03/24/daily-geopolitical-risk-report/"
 description: "글로벌 예측 시장 Polymarket에서 지정학·정치 이벤트에 대한 집단지성 확률을 확인합니다. 거래량이 많을수록 시장 참여자의 신뢰도가 높습니다."
 excerpt: "글로벌 예측 시장 Polymarket에서 지정학·정치 이벤트에 대한 집단지성 확률을 확인합니다. 거래량이 많을수록 시장 참여자의 신뢰도가 높습니다."

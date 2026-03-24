@@ -7,9 +7,11 @@ tags: ["worldmonitor", "geopolitics", "macro", "daily-digest"]
 source: "worldmonitor"
 source_url: "https://worldmonitor.app"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-worldmonitor-2026-03-04.png"
+image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-03-04.png"
 description: "2026-03-04 WorldMonitor 20건: 이란 분쟁 VIX 급등·남수단 내전 위기·트럼프 스페인 무역 중단 위협으로 지정학 리스크 심화. 사회/기타 50%, 지정학/안보 25%, 금융시장 20%."
 excerpt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-03-04 - 최신 시장 분석 뉴스와 분석을 확인하세요. 주요 키워드: worldmonitor, geopoliti..."
+image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-03-04 - market-analysis 뉴스 요약 이미지"
+permalink: "/market-analysis/2026/03/04/daily-worldmonitor-briefing/"
 ---
 
 **2026-03-04** 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다.

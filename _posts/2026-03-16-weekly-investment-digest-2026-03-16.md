@@ -7,10 +7,11 @@ tags: ["weekly-digest", "summary", "market-analysis"]
 keywords: "weekly-digest, summary, market-analysis"
 source: "auto-generated"
 lang: "ko"
-image: "/assets/images/generated/news-summary-weekly-2026-03-16.png"
+image: "/assets/images/generated/og-weekly-investment-digest-2026-03-16-2026-03-16.png"
 description: "이번 주 (03월 09일 03월 16일) 투자 시장의 주요 동향과 핵심 이슈를 종합 분석합니다. [2026-03-15] 전략: BTC 강세 추종, ETH는 확인 매수만 허용 | 시장 상태: 변동성 확대 | 당일 결과: +1.4%"
 excerpt: "이번 주 (03월 09일 03월 16일) 투자 시장의 주요 동향과 핵심 이슈를 종합 분석합니다. [2026-03-15] 전략: BTC 강세 추종, ETH는 확인 매수만 허용 |…"
 image_alt: "주간 투자 다이제스트 - 2026년 03월 16일 - 시장 분석 뉴스 요약 이미지"
+permalink: "/market-analysis/2026/03/16/weekly-investment-digest-2026-03-16/"
 ---
 
 이번 주 (03월 09일 ~ 03월 16일) 투자 시장의 주요 동향과 핵심 이슈를 종합 분석합니다.

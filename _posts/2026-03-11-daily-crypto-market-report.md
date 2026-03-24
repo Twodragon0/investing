@@ -8,10 +8,11 @@ keywords: "market-report, crypto, top-coins, trending, daily"
 source: "CoinMarketCap"
 source_url: "https://coinmarketcap.com/"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-cryptomarket-2026-03-11.png"
+image: "/assets/images/generated/og-daily-crypto-market-report-2026-03-11.png"
 description: "24시간 변동 -0.51%로 소폭 조정 구간입니다. 기술적 지지선에서의 매수세 유입 여부를 확인해야 합니다. BTC 도미넌스 57.0%로 비트코인 중심 흐름이 지속됩니다. 과거 사이클에서 도미넌스 55% 이상 구간은 알트 시즌 이전 축적기에 해당하는 경우가 많았습니다."
 excerpt: "24시간 변동 -0.51%로 소폭 조정 구간입니다. 기술적 지지선에서의 매수세 유입 여부를 확인해야 합니다. BTC 도미넌스 57.0%로 비트코인 중심 흐름이 지속됩니다. 과거…"
 image_alt: "World Liberty Financial USD (USD1) -0.0% 변동 - 시장 분석 뉴스 요약 이미지"
+permalink: "/market-analysis/2026/03/11/daily-crypto-market-report/"
 ---
 
 ## 시장 시각화

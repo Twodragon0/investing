@@ -7,8 +7,10 @@ tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
 description: "글로벌 시장: 다우지수 50000 돌파 후 기술주 중심 2일 연속 반등, 변동성 확대 국면 2. 한국 시장: 코스피 5000 돌파하며 역사적 고점 경신, 코스닥 1000선 회복 3. 리스크 요인: 중국의 미국채..."
-image: "/assets/images/generated/news-briefing-stock-2026-02-10.png"
+image: "/assets/images/generated/og-daily-stock-news-digest-2026-02-10.png"
 excerpt: "주식 시장 뉴스 종합 - 2026-02-10 - 최신 주식 시장 뉴스와 분석을 확인하세요. 주요 키워드: stock, market, daily-digest."
+image_alt: "주식 시장 뉴스 종합 - 2026-02-10 - stock-news 뉴스 요약 이미지"
+permalink: "/stock-news/2026/02/10/daily-stock-news-digest/"
 ---
 
 ## 한줄 요약

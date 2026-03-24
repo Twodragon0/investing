@@ -8,8 +8,10 @@ keywords: "crypto, monitoring, fear-greed, upbit, security, macro, trading"
 source: "crypto-monitoring"
 lang: "ko"
 description: "2026-03-15 크립토 모니터링 종합 리포트. 공포 & 탐욕 지수 15(극심한 공포), BTC 도미넌스 58.8%, Upbit 거래량 9,588억원. 보안 사고 10건, 거시경제 트렌드 3건 분석."
-image: "/assets/images/generated/news-briefing-crypto-monitoring-comprehensive-report-2026-03-15.png"
+image: "/assets/images/generated/og-crypto-monitoring-comprehensive-report-2026-03-15.png"
 excerpt: "2026-03-15 크립토 모니터링 종합 리포트. 공포 & 탐욕 지수 15(극심한 공포), BTC 도미넌스 58.8%, Upbit 거래량 9,588억원."
+image_alt: "크립토 모니터링 종합 리포트 - 2026-03-15 - crypto-news 뉴스 요약 이미지"
+permalink: "/crypto-news/2026/03/15/crypto-monitoring-comprehensive-report/"
 ---
 
 **2026-03-15** 크립토 모니터링 시스템에서 수집한 시장 심리, 한국 거래소 시세, 보안 사고, 거시경제 지표를 종합 분석합니다.

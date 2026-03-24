@@ -6,9 +6,11 @@ categories: [social-media]
 tags: ["social-media", "telegram", "twitter", "reddit", "politics", "trump", "이재명", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-social-2026-03-05.png"
+image: "/assets/images/generated/og-daily-social-media-digest-2026-03-05.png"
 description: "BlackRock 4,309 BTC($2.97억) 매수, 트럼프 암호화폐 법안 지지, 코스피 폭락 후 100조 시장안정 프로그램 가동. 46건 분석."
 excerpt: "주요 테마: 정치/정책, 매크로/금리, 비트코인 긴급 알림 1건에 대한 선별 모니터링 - Investing Dragon 자동 수집 분석 리포트."
+image_alt: "소셜 미디어 동향 - 2026-03-05 - social-media 뉴스 요약 이미지"
+permalink: "/social-media/2026/03/05/daily-social-media-digest/"
 ---
 
 **2026-03-05** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 26건, 총 46건이 수집되었습니다.
