@@ -58,7 +58,7 @@ jobs:
             --cov=common --cov-report=term-missing \
             --cov-report=html:../coverage-html \
             --cov-report=json:../coverage.json \
-            --cov-fail-under=15
+            --cov-fail-under=20
 
       - name: Upload coverage report
         if: always()
