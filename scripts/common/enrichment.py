@@ -619,288 +619,99 @@ def _get_source_label(source: str, context_map: Dict[str, str]) -> str:
     return context_map.get(source, source)
 
 
-def _extract_title_entities(title: str) -> list:
-    """Extract meaningful entities (names, tickers, numbers) from title."""
-    entities = []
-    # Tickers and crypto symbols (e.g., BTC, ETH, AAPL)
-    tickers = re.findall(r"\b[A-Z]{2,5}\b", title)
-    # Price/percentage values (e.g., $90K, 5.3%, $100B)
-    values = re.findall(r"\$[\d,.]+[KkMmBbTt]?|\d+(?:\.\d+)?%", title)
-    # Korean entities (2+ chars)
-    kr_entities = re.findall(r"[가-힣]{2,}", title)
-    # Proper nouns (capitalized words, not common English)
-    _COMMON = {
-        "The",
-        "And",
-        "For",
-        "With",
-        "Has",
-        "Are",
-        "Its",
-        "But",
-        "How",
-        "Why",
-        "What",
-        "New",
-        "All",
-        "Can",
-        "Now",
-        "Get",
-        "Set",
-        "May",
-        "Not",
-        "Other",
-        "Others",
-        "Another",
-        "Being",
-        "Having",
-        "Doing",
-        "Becomes",
-        "Become",
-        "Getting",
-        "Going",
-        "Coming",
-        "Making",
-        "Says",
-        "Said",
-        "Warns",
-        "Faces",
-        "Shows",
-        "Finds",
-        "Takes",
-        "Gives",
-        "Looks",
-        "Tells",
-        "Seems",
-        "Turns",
-        "Leads",
-        "Holds",
-        "Spikes",
-        "Spike",
-        "Surges",
-        "Surge",
-        "Drops",
-        "Drop",
-        "Falls",
-        "First",
-        "Last",
-        "Next",
-        "After",
-        "Before",
-        "During",
-        "Under",
-        "Over",
-        "About",
-        "Every",
-        "Where",
-        "Which",
-        "While",
-        "Their",
-        "These",
-        "Those",
-        "Could",
-        "Would",
-        "Should",
-        "Might",
-        "Still",
-        "Just",
-        "Also",
-        "More",
-        "Most",
-        "Some",
-        "Much",
-        "Many",
-        "Each",
-        "Only",
-        "Even",
-        "Very",
-        "Here",
-        "There",
-        "Then",
-        "Than",
-        "Into",
-        "From",
-        "This",
-        "That",
-        "Been",
-        "Were",
-        "Will",
-        "Your",
-        "They",
-        "Them",
-        "Such",
-        "Like",
-        "Near",
-        "Amid",
-        "Ahead",
-        "Along",
-        "Among",
-        "Above",
-        "Below",
-        "Behind",
-        "Between",
-        "Through",
-        "Against",
-        "Within",
-        "Without",
-        "Across",
-        "Inside",
-        "Global",
-        "World",
-        "Major",
-        "Latest",
-        "Breaking",
-        "Live",
-        "Watch",
-        "Alert",
-        "Update",
-        "Report",
-        "Check",
-        "Shares",
-        "Stock",
-        "Stocks",
-        "Market",
-        "Markets",
-        "Price",
-        "Prices",
-        "Trade",
-        "Trades",
-        "Trading",
-        "Company",
-        "Companies",
-        "Industry",
-        "Million",
-        "Billion",
-        "Trillion",
-        "Today",
-        "Yesterday",
-        "Tomorrow",
-        "Year",
-        "Week",
-        "Month",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday",
-        "Better",
-        "Bigger",
-        "Lower",
-        "Higher",
-        "Early",
-        "Late",
-        "Huge",
-        "Massive",
-        "Record",
-        "Rising",
-        "Falling",
-        "Since",
-        "Until",
-        "Whether",
-        "Biggest",
-        "Worst",
-        "Best",
-        "Headed",
-        "Heads",
-        "Keep",
-        "Keeps",
-        "Stayed",
-        "Stays",
-        "Stay",
-        "Worse",
-        "Linked",
-        "Issues",
-        "Issue",
-        "Based",
-        "Using",
-        "Asked",
-        "Asking",
-        "Called",
-        "Calls",
-        "Named",
-        "Known",
-        "Seen",
-        "Taken",
-        "Given",
-        "Several",
-        "Certain",
-        "Entire",
-        "Recent",
-        "Little",
-        "Large",
-        "Small",
-        "Long",
-        "Short",
-        "Full",
-        "Half",
-        "Wants",
-        "Needs",
-        "Tries",
-        "Three",
-        "Four",
-        "Five",
-    }
-    _NOISE_TICKERS = {
-        "CEO",
-        "IPO",
-        "SEC",
-        "FED",
-        "GDP",
-        "CPI",
-        "ETF",
-        "AI",
-        "US",
-        "UK",
-        "EU",
-        "USD",
-        "FOR",
-        "THE",
-        "ARE",
-        "HAS",
-        "NOT",
-        "BUT",
-        "ALL",
-        "CAN",
-        "NOW",
-        "HOW",
-        "NEW",
-        "CBS",
-        "FBI",
-        "GOP",
-        "DHS",
-        "RFK",
-        "ITS",
-        "WAS",
-        "HIS",
-        "HER",
-        "WHO",
-        "MAY",
-        "BIG",
-        "TOP",
-        "TWO",
-        "OUR",
-        "SAY",
-        "ANY",
-        "FEW",
-        "RED",
-    }
-    tickers = [t for t in tickers if t not in _NOISE_TICKERS]
-    proper = [w for w in re.findall(r"\b[A-Z][a-z]{2,}\b", title) if w not in _COMMON]
+# ---------------------------------------------------------------------------
+# Entity extraction constants
+# ---------------------------------------------------------------------------
 
-    entities.extend(values)
-    entities.extend(tickers[:2])
-    entities.extend(proper[:2])
-    entities.extend(kr_entities[:3])
-    # Deduplicate while preserving order
-    seen = set()
+# Common English words that should not be treated as proper-noun entities
+_COMMON_WORDS = {
+    "The", "And", "For", "With", "Has", "Are", "Its", "But", "How", "Why",
+    "What", "New", "All", "Can", "Now", "Get", "Set", "May", "Not",
+    "Other", "Others", "Another", "Being", "Having", "Doing",
+    "Becomes", "Become", "Getting", "Going", "Coming", "Making",
+    "Says", "Said", "Warns", "Faces", "Shows", "Finds", "Takes", "Gives",
+    "Looks", "Tells", "Seems", "Turns", "Leads", "Holds",
+    "Spikes", "Spike", "Surges", "Surge", "Drops", "Drop", "Falls",
+    "First", "Last", "Next", "After", "Before", "During",
+    "Under", "Over", "About", "Every", "Where", "Which", "While",
+    "Their", "These", "Those", "Could", "Would", "Should", "Might",
+    "Still", "Just", "Also", "More", "Most", "Some", "Much", "Many",
+    "Each", "Only", "Even", "Very", "Here", "There", "Then", "Than",
+    "Into", "From", "This", "That", "Been", "Were", "Will",
+    "Your", "They", "Them", "Such", "Like", "Near", "Amid",
+    "Ahead", "Along", "Among", "Above", "Below", "Behind",
+    "Between", "Through", "Against", "Within", "Without", "Across", "Inside",
+    "Global", "World", "Major", "Latest", "Breaking", "Live", "Watch",
+    "Alert", "Update", "Report", "Check",
+    "Shares", "Stock", "Stocks", "Market", "Markets",
+    "Price", "Prices", "Trade", "Trades", "Trading",
+    "Company", "Companies", "Industry",
+    "Million", "Billion", "Trillion",
+    "Today", "Yesterday", "Tomorrow", "Year", "Week", "Month",
+    "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",
+    "Better", "Bigger", "Lower", "Higher", "Early", "Late",
+    "Huge", "Massive", "Record", "Rising", "Falling",
+    "Since", "Until", "Whether",
+    "Biggest", "Worst", "Best",
+    "Headed", "Heads", "Keep", "Keeps", "Stayed", "Stays", "Stay", "Worse",
+    "Linked", "Issues", "Issue", "Based", "Using",
+    "Asked", "Asking", "Called", "Calls", "Named", "Known",
+    "Seen", "Taken", "Given",
+    "Several", "Certain", "Entire", "Recent",
+    "Little", "Large", "Small", "Long", "Short", "Full", "Half",
+    "Wants", "Needs", "Tries",
+    "Three", "Four", "Five",
+}
+
+# Uppercase sequences that look like tickers but are not meaningful financial symbols
+_NOISE_TICKER_SYMBOLS = {
+    "CEO", "IPO", "SEC", "FED", "GDP", "CPI", "ETF",
+    "AI", "US", "UK", "EU", "USD",
+    "FOR", "THE", "ARE", "HAS", "NOT", "BUT", "ALL", "CAN", "NOW",
+    "HOW", "NEW", "CBS", "FBI", "GOP", "DHS", "RFK",
+    "ITS", "WAS", "HIS", "HER", "WHO", "MAY",
+    "BIG", "TOP", "TWO", "OUR", "SAY", "ANY", "FEW", "RED",
+}
+
+
+def _extract_raw_patterns(title: str) -> tuple:
+    """Run regex extractions on title and return (tickers, values, proper, kr_entities)."""
+    tickers = re.findall(r"\b[A-Z]{2,5}\b", title)
+    values = re.findall(r"\$[\d,.]+[KkMmBbTt]?|\d+(?:\.\d+)?%", title)
+    kr_entities = re.findall(r"[가-힣]{2,}", title)
+    proper = re.findall(r"\b[A-Z][a-z]{2,}\b", title)
+    return tickers, values, proper, kr_entities
+
+
+def _filter_entities(tickers: list, proper: list) -> tuple:
+    """Filter noise from ticker and proper-noun lists."""
+    clean_tickers = [t for t in tickers if t not in _NOISE_TICKER_SYMBOLS]
+    clean_proper = [w for w in proper if w not in _COMMON_WORDS]
+    return clean_tickers, clean_proper
+
+
+def _dedup_entities(entities: list) -> list:
+    """Deduplicate entity list while preserving insertion order (case-insensitive)."""
+    seen: set = set()
     deduped = []
     for e in entities:
         if e.lower() not in seen:
             seen.add(e.lower())
             deduped.append(e)
     return deduped
+
+
+def _extract_title_entities(title: str) -> list:
+    """Extract meaningful entities (names, tickers, numbers) from title."""
+    tickers, values, proper, kr_entities = _extract_raw_patterns(title)
+    tickers, proper = _filter_entities(tickers, proper)
+
+    entities: list = []
+    entities.extend(values)
+    entities.extend(tickers[:2])
+    entities.extend(proper[:2])
+    entities.extend(kr_entities[:3])
+    return _dedup_entities(entities)
 
 
 def _analyze_title_content(title: str) -> str:
