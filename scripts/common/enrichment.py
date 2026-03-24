@@ -1050,6 +1050,36 @@ def generate_synthetic_description(
     return clean_title[:150] if len(clean_title) > 15 else title
 
 
+def _fetch_and_parse_page(url: str) -> Dict[str, str]:
+    """Fetch a URL and return parsed metadata (description + image).
+
+    Thin wrapper around :func:`fetch_page_metadata` that isolates the
+    HTTP fetch + HTML parsing step for use inside :func:`enrich_item`.
+    """
+    return fetch_page_metadata(url)
+
+
+def _clean_html_content(text: str) -> str:
+    """Clean HTML entities and normalize whitespace in a fetched description."""
+    text = re.sub(r"&#?\w+;", " ", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
+
+
+def _generate_synthetic_description(
+    item: Dict[str, Any],
+    context_map: Optional[Dict[str, str]],
+) -> str:
+    """Generate a synthetic description for an item from its title and source.
+
+    Delegates to :func:`generate_synthetic_description` using the item's
+    ``title`` and ``source`` fields.
+    """
+    title = item.get("title", "")
+    source = item.get("source", "")
+    return generate_synthetic_description(title, source, context_map)
+
+
 def enrich_item(
     item: Dict[str, Any],
     context_map: Optional[Dict[str, str]] = None,
@@ -1074,7 +1104,6 @@ def enrich_item(
     """
     title = item.get("title", "")
     desc = item.get("description", "").strip()
-    source = item.get("source", "")
     link = item.get("link", "")
 
     # Check if existing description is actually good
@@ -1095,13 +1124,10 @@ def enrich_item(
         counter = _fetch_counter or [0]
         if counter[0] < max_fetch:
             counter[0] += 1
-            metadata = fetch_page_metadata(link)
+            metadata = _fetch_and_parse_page(link)
             fetched = metadata.get("description", "")
             if fetched and fetched != title and len(fetched) > 20:
-                # Clean HTML entities and normalize whitespace
-                fetched = re.sub(r"&#?\w+;", " ", fetched)
-                fetched = re.sub(r"\s+", " ", fetched).strip()
-                item["description"] = fetched
+                item["description"] = _clean_html_content(fetched)
             # Extract og:image if not already set from RSS
             if not item.get("image") and metadata.get("image"):
                 item["image"] = metadata["image"]
@@ -1109,7 +1135,7 @@ def enrich_item(
                 return
 
     # Generate synthetic description
-    item["description"] = generate_synthetic_description(title, source, context_map)
+    item["description"] = _generate_synthetic_description(item, context_map)
 
 
 def enrich_items(
