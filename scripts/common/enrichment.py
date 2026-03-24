@@ -787,9 +787,51 @@ def _analyze_title_content(title: str) -> str:
     return _analyze_english_title(title_stripped, title_lower)
 
 
+# ---------------------------------------------------------------------------
+# Keyword -> fixed description mapping for Korean title analysis.
+# Each entry is (keywords, description_string). Categories that require
+# dynamic content (pct extraction, clean title) are handled inline below.
+# ---------------------------------------------------------------------------
+_KOREAN_TITLE_CATEGORIES: Dict[str, str] = {
+    # Surge / rebound
+    "급등|폭등|반등": "시장 반등 움직임이 포착되었습니다. 기술적 반등인지 추세 전환인지 거래량과 수급 확인이 필요합니다.",
+    # Geopolitical risk
+    "전쟁|분쟁|군사|이란|중동": "지정학적 리스크가 금융시장에 영향을 미치고 있습니다. 유가·환율·안전자산 흐름을 주시해야 합니다.",
+    # Monetary policy
+    "금리|금통위|한은|한국은행": "한국은행 통화정책 관련 소식입니다. 금리 결정은 채권·부동산·주식 시장 전반에 영향을 미칩니다.",
+    # FX
+    "환율|원달러|원화": "환율 변동 소식입니다. 원화 약세는 수입 물가 상승과 외국인 매도 압력으로 이어질 수 있습니다.",
+    # Market fraud / delisting
+    "상장폐지|주가조작|불공정거래": "불공정거래 적발 소식입니다. 투자 시 기업 실체와 거래 패턴 검증의 중요성을 재확인시킵니다.",
+    # Market rules
+    "거래시간|제도|규정": "증시 제도 변경 관련 소식입니다. 거래 환경 변화에 따른 투자 전략 조정이 필요할 수 있습니다.",
+    # Valuation bubble
+    "버블|과열|밸류에이션": "시장 밸류에이션 논쟁이 이어지고 있습니다. 펀더멘탈 대비 가격 수준 점검이 필요한 시점입니다.",
+    # Bio / pharma
+    "바이오|제약": "바이오·제약 섹터 관련 소식입니다. 임상 결과와 규제 승인 여부가 주가 변동의 핵심 변수입니다.",
+    # IPO / listing
+    "IPO|공모|상장": "IPO·신규 상장 관련 소식입니다. 공모가 대비 시장 평가와 수급 동향을 주시하세요.",
+    # Oil / energy
+    "유가|원유|석유": "유가 변동 소식입니다. 원유 가격은 인플레이션·교역조건·에너지 섹터에 직접적 영향을 미칩니다.",
+    # Trade / tariffs
+    "관세|무역|수출|수입": "통상·무역 정책 관련 소식입니다. 글로벌 공급망과 수출 기업 실적에 영향을 줄 수 있습니다.",
+    # Dividends / buybacks
+    "배당|주주환원|자사주": "배당·주주환원 정책 관련 소식입니다. 배당 수익률과 자사주 매입 규모가 주가에 긍정적 영향을 줄 수 있습니다.",
+    # Real estate
+    "부동산|아파트|전세|분양": "부동산 시장 관련 소식입니다. 금리·정책 변화에 따른 부동산 시장 흐름을 주시해야 합니다.",
+    # M&A
+    "인수|합병|M&A": "기업 인수·합병(M&A) 관련 소식입니다. 인수 프리미엄과 시너지 효과가 양사 주가에 영향을 줍니다.",
+}
+
+# Pre-compiled keyword sets derived from _KOREAN_TITLE_CATEGORIES for O(1) lookup
+_KOREAN_TITLE_KW_SETS: list = [
+    (frozenset(k.split("|")), v) for k, v in _KOREAN_TITLE_CATEGORIES.items()
+]
+
+
 def _analyze_korean_title(title: str) -> str:
     """Analyze a Korean news title and generate contextual description."""
-    # Circuit breaker / market crash
+    # Circuit breaker / market crash (needs sub-check for 매수)
     if any(kw in title for kw in ["서킷브레이커", "사이드카"]):
         if "매수" in title:
             return (
@@ -798,6 +840,7 @@ def _analyze_korean_title(title: str) -> str:
             )
         return "급격한 하락으로 매매거래가 일시 중단되었습니다. 투자 심리 위축과 추가 하방 리스크에 유의해야 합니다."
 
+    # Crash / panic (needs pct extraction)
     if any(kw in title for kw in ["폭락", "급락", "패닉"]):
         pct = re.search(r"(\d+(?:\.\d+)?)\s*%", title)
         pct_str = f" {pct.group(1)}% " if pct else " 큰 폭으로 "
@@ -806,18 +849,7 @@ def _analyze_korean_title(title: str) -> str:
             "패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다."
         )
 
-    if any(kw in title for kw in ["급등", "폭등", "반등"]):
-        return "시장 반등 움직임이 포착되었습니다. 기술적 반등인지 추세 전환인지 거래량과 수급 확인이 필요합니다."
-
-    if any(kw in title for kw in ["전쟁", "분쟁", "군사", "이란", "중동"]):
-        return "지정학적 리스크가 금융시장에 영향을 미치고 있습니다. 유가·환율·안전자산 흐름을 주시해야 합니다."
-
-    if any(kw in title for kw in ["금리", "금통위", "한은", "한국은행"]):
-        return "한국은행 통화정책 관련 소식입니다. 금리 결정은 채권·부동산·주식 시장 전반에 영향을 미칩니다."
-
-    if any(kw in title for kw in ["환율", "원달러", "원화"]):
-        return "환율 변동 소식입니다. 원화 약세는 수입 물가 상승과 외국인 매도 압력으로 이어질 수 있습니다."
-
+    # Semiconductor (needs sub-checks for buy / sell signals)
     if any(kw in title for kw in ["삼성전자", "하이닉스", "반도체"]):
         if any(kw in title for kw in ["매수", "기회", "긍정"]):
             return (
@@ -830,38 +862,12 @@ def _analyze_korean_title(title: str) -> str:
             )
         return "반도체 산업 관련 주요 소식입니다. 한국 증시에서 반도체는 시가총액 비중이 가장 높은 핵심 섹터입니다."
 
-    if any(kw in title for kw in ["상장폐지", "주가조작", "불공정거래"]):
-        return "불공정거래 적발 소식입니다. 투자 시 기업 실체와 거래 패턴 검증의 중요성을 재확인시킵니다."
+    # Fixed-response categories via dict table
+    for kw_set, description in _KOREAN_TITLE_KW_SETS:
+        if any(kw in title for kw in kw_set):
+            return description
 
-    if any(kw in title for kw in ["거래시간", "제도", "규정"]):
-        return "증시 제도 변경 관련 소식입니다. 거래 환경 변화에 따른 투자 전략 조정이 필요할 수 있습니다."
-
-    if any(kw in title for kw in ["버블", "과열", "밸류에이션"]):
-        return "시장 밸류에이션 논쟁이 이어지고 있습니다. 펀더멘탈 대비 가격 수준 점검이 필요한 시점입니다."
-
-    if any(kw in title for kw in ["바이오", "제약"]):
-        return "바이오·제약 섹터 관련 소식입니다. 임상 결과와 규제 승인 여부가 주가 변동의 핵심 변수입니다."
-
-    if any(kw in title for kw in ["IPO", "공모", "상장"]):
-        return "IPO·신규 상장 관련 소식입니다. 공모가 대비 시장 평가와 수급 동향을 주시하세요."
-
-    if any(kw in title for kw in ["유가", "원유", "석유"]):
-        return "유가 변동 소식입니다. 원유 가격은 인플레이션·교역조건·에너지 섹터에 직접적 영향을 미칩니다."
-
-    if any(kw in title for kw in ["관세", "무역", "수출", "수입"]):
-        return "통상·무역 정책 관련 소식입니다. 글로벌 공급망과 수출 기업 실적에 영향을 줄 수 있습니다."
-
-    if any(kw in title for kw in ["배당", "주주환원", "자사주"]):
-        return (
-            "배당·주주환원 정책 관련 소식입니다. 배당 수익률과 자사주 매입 규모가 주가에 긍정적 영향을 줄 수 있습니다."
-        )
-
-    if any(kw in title for kw in ["부동산", "아파트", "전세", "분양"]):
-        return "부동산 시장 관련 소식입니다. 금리·정책 변화에 따른 부동산 시장 흐름을 주시해야 합니다."
-
-    if any(kw in title for kw in ["인수", "합병", "M&A"]):
-        return "기업 인수·합병(M&A) 관련 소식입니다. 인수 프리미엄과 시너지 효과가 양사 주가에 영향을 줍니다."
-
+    # Crypto majors (needs clean title + optional pct)
     if any(kw in title for kw in ["비트코인", "이더리움", "알트코인", "리플"]):
         clean = re.sub(r"\s*[-–—|]\s*\S+$", "", title).strip()
         pct = re.search(r"(\d+(?:\.\d+)?)\s*%", title)
@@ -869,21 +875,26 @@ def _analyze_korean_title(title: str) -> str:
             return f"{clean[:120]}. {pct.group(1)}% 변동에 따른 시장 영향을 주시해야 합니다."
         return f"{clean[:120]}. 암호화폐 시장 동향과 투자 시사점을 확인하세요."
 
+    # DeFi / digital assets (needs clean title)
     if any(kw in title for kw in ["디파이", "디지털자산", "가상자산", "코인", "블록체인"]):
         clean = re.sub(r"\s*[-–—|]\s*\S+$", "", title).strip()
         return f"{clean[:120]}. 디지털 자산 시장의 최신 동향입니다."
 
+    # AI / tech (needs clean title)
     if any(kw in title for kw in ["AI", "인공지능", "챗봇", "생성형"]):
         clean = re.sub(r"\s*[-–—|]\s*\S+$", "", title).strip()
         return f"{clean[:120]}. AI 산업 성장에 따른 투자 기회를 점검해 보세요."
 
+    # EV / battery (needs clean title)
     if any(kw in title for kw in ["2차전지", "배터리", "전기차", "EV"]):
         clean = re.sub(r"\s*[-–—|]\s*\S+$", "", title).strip()
         return f"{clean[:120]}. 글로벌 전기차 수요와 배터리 기술 경쟁 동향입니다."
 
+    # Foreign / institutional flow
     if any(kw in title for kw in ["외국인", "기관", "순매수", "순매도", "수급"]):
         return "외국인·기관 수급 동향입니다. 대규모 순매수/순매도는 시장 방향성의 중요한 선행 지표입니다."
 
+    # Earnings
     if any(kw in title for kw in ["실적", "어닝", "매출", "영업이익"]):
         return "기업 실적 관련 소식입니다. 실적 서프라이즈 여부와 컨센서스 대비 결과가 주가 방향을 결정합니다."
 
