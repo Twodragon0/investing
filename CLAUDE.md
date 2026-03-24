@@ -150,30 +150,56 @@ Slack 연동:
 - **전문**: pytest, API 모킹, 한국어 텍스트 처리 테스트, 멱등성 검증
 - **핵심**: `scripts/` 모듈 단위 테스트
 
-## Team Usage Examples
+### Agent Responsibilities
 
-### 새 데이터 소스 추가
+| Agent | Primary Files | Key Tools |
+|-------|--------------|-----------|
+| `investing-lead` | All — coordination role | Read, Grep, Glob, Bash, Agent |
+| `architect` | scripts/common/config.py, scripts/common/dedup.py | Read, Grep, Glob, Bash |
+| `data-pipeline-lead` | scripts/collect_*.py, scripts/common/ | Read, Grep, Glob, Bash |
+| `collector-reviewer` | scripts/collect_*.py, scripts/common/ | Read, Grep, Glob, Bash |
+| `content-pipeline` | scripts/generate_*.py, scripts/common/summarizer.py | Read, Grep, Glob, Bash, Edit, Write |
+| `workflow-optimizer` | .github/workflows/, .github/actions/ | Read, Grep, Glob, Bash, Edit, Write |
+| `workflow-debugger` | .github/workflows/ | Read, Grep, Glob, Bash |
+| `jekyll-checker` | _layouts/, _includes/, _sass/, pages/ | Read, Grep, Glob, Bash |
+| `test-engineer` | scripts/ unit tests | Read, Write, Edit, Bash, Grep, Glob |
+
+## Multi-Agent Workflow Patterns
+
+#### New Data Source Addition
 ```
-Create an agent team for adding a new data source:
-- Collector Developer: scripts/collect_new_source.py 구현
-- Workflow Automation Engineer: .github/workflows/ 워크플로우 추가
-- QA Reviewer: 코드 리뷰 및 보안 검사
-각 팀원이 독립적으로 작업 후 통합하세요.
+1. investing-lead    → 데이터 소스 분석 및 영향 평가
+2. Parallel:
+   - data-pipeline-lead → collect_*.py 구현
+   - workflow-optimizer  → GitHub Actions 워크플로우 추가
+   - test-engineer       → 테스트 작성 (TDD)
+3. collector-reviewer    → 코드 리뷰 및 중복 방지 검증
+4. architect             → 아키텍처 적합성 확인
 ```
 
-### 사이트 리디자인
+#### Daily Summary Pipeline
 ```
-Create an agent team for site redesign:
-- Frontend Developer: 레이아웃과 스타일 수정
-- Content Generator: 새 레이아웃에 맞는 포스트 템플릿 업데이트
-- QA Reviewer: 반응형 디자인 및 접근성 검증
+1. content-pipeline   → generate_daily_summary.py 수정
+2. jekyll-checker      → 포스트 템플릿 검증
+3. test-engineer       → 요약 출력 검증
+4. workflow-optimizer  → 워크플로우 스케줄 조정
 ```
 
-### 버그 조사
+#### Site Redesign
 ```
-Create an agent team to investigate the bug:
-- 3명의 팀원이 서로 다른 가설을 검증
-- 서로의 이론을 반박하며 근본 원인을 찾으세요
+1. architect           → 레이아웃 구조 설계
+2. Parallel:
+   - jekyll-checker    → 템플릿/스타일 구현
+   - content-pipeline  → 포스트 템플릿 업데이트
+3. test-engineer       → 반응형/접근성 검증
+```
+
+#### Bug Investigation
+```
+1. workflow-debugger   → CI/워크플로우 로그 분석
+2. data-pipeline-lead  → 수집기 데이터 흐름 추적
+3. test-engineer       → 재현 테스트 작성
+4. investing-lead      → 근본 원인 판정 및 수정 지시
 ```
 
 ## Team Rules
