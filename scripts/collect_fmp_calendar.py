@@ -471,6 +471,38 @@ def main() -> None:
     )
 
     content = "\n".join(content_parts)
+    briefing_image_path = ""
+
+    try:
+        from common.image_generator import generate_news_briefing_card
+
+        card_themes = []
+        for name, emoji, count in [
+            ("주요 시장 지수", "📊", len(indices)),
+            ("미국 국채 금리", "🏦", len(treasury_rates)),
+            ("섹터 퍼포먼스", "🏭", len(sectors)),
+            ("주요 경제 이벤트", "📅", len(economic_events)),
+            ("실적 발표", "💵", len(earnings)),
+            ("IPO 일정", "🚀", len(ipo_data)),
+        ]:
+            if count > 0:
+                card_themes.append({"name": name, "emoji": emoji, "count": count, "keywords": []})
+
+        if card_themes:
+            img = generate_news_briefing_card(
+                card_themes[:4],
+                today,
+                category="Economic Calendar",
+                total_count=total_items,
+                filename=f"news-briefing-calendar-{today}.png",
+            )
+            if img:
+                fn = os.path.basename(img)
+                briefing_image_path = f"/assets/images/generated/{fn}"
+    except ImportError as exc:
+        logger.debug("Optional dependency unavailable: %s", exc)
+    except Exception as exc:
+        logger.warning("Economic calendar briefing image failed: %s", exc)
 
     filepath = gen.create_post(
         title=post_title,
@@ -480,6 +512,7 @@ def main() -> None:
         tags=["market-analysis", "economic-calendar", "earnings", "treasury", "ipo", "fmp"],
         source="fmp",
         lang="ko",
+        image=briefing_image_path,
         extra_frontmatter={"permalink": build_dated_permalink("market-analysis", today, "fmp-economic-calendar")},
         slug="fmp-economic-calendar",
     )

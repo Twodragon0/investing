@@ -171,15 +171,53 @@ _MISTRANSLATION_FIXES: dict[str, str] = {
 
 _DEFAULT_CATEGORY_IMAGES: dict[str, str] = {
     "crypto": "/assets/images/og-crypto.png",
+    "crypto-news": "/assets/images/og-crypto.png",
     "stock": "/assets/images/og-stock.png",
+    "stock-news": "/assets/images/og-stock.png",
     "market-analysis": "/assets/images/og-market-analysis.png",
     "social-media": "/assets/images/og-social-media.png",
     "regulatory": "/assets/images/og-regulatory.png",
+    "regulatory-news": "/assets/images/og-regulatory.png",
     "defi": "/assets/images/og-defi.png",
     "political-trades": "/assets/images/og-political-trades.png",
     "worldmonitor": "/assets/images/og-worldmonitor.png",
     "security-alerts": "/assets/images/og-security-alerts.png",
 }
+
+
+def _default_category_image(category: str) -> str:
+    fallback = _DEFAULT_CATEGORY_IMAGES.get(category)
+    if fallback:
+        return fallback
+    logger.warning("Unknown post category for default image: %s", category)
+    return "/assets/images/og-default.png"
+
+
+def _resolve_post_image(image: str, category: str) -> str:
+    if not image:
+        return _default_category_image(category)
+
+    if not image.startswith("/assets/images/"):
+        logger.warning("Unexpected image path outside assets/images: %s", image)
+        return _default_category_image(category)
+
+    if "/generated/" not in image:
+        return image
+
+    if not image.endswith((".png", ".webp", ".jpg", ".jpeg", ".svg")):
+        logger.warning("Unexpected generated image extension: %s", image)
+        return _default_category_image(category)
+
+    abs_img = os.path.join(REPO_ROOT, image.lstrip("/"))
+    if not os.path.exists(abs_img):
+        logger.warning("Generated image missing: %s", image)
+        return _default_category_image(category)
+    if os.path.getsize(abs_img) <= 0:
+        logger.warning("Generated image empty: %s", image)
+        return _default_category_image(category)
+
+    return image
+
 
 _WORDING_REPLACEMENTS: tuple[tuple[str, str], ...] = (
     ("견인고", "견인하고"),
@@ -290,6 +328,38 @@ def _normalize_image_paths(content: str) -> str:
         return "![" + alt + "]({{ '" + path + "' | relative_url }})"
 
     return _HARDCODED_IMG_RE.sub(_replace, content)
+
+
+def _normalize_generated_body(content: str) -> str:
+    content = re.sub(
+        r"(\*\*\d+\.\s+)\[([^\]\n]+)\]\s([^\n\]]+)\]\(([^)]+)\)\*\*",
+        lambda m: f"{m.group(1)}[{m.group(2)} {m.group(3)}]({m.group(4)})**",
+        content,
+    )
+    content = re.sub(
+        r"(^\s*[-*]\s+)\[([^\]\n]+)\]\s([^\n\]]+)\]\(([^)]+)\)",
+        lambda m: f"{m.group(1)}[{m.group(2)} {m.group(3)}]({m.group(4)})",
+        content,
+        flags=re.MULTILINE,
+    )
+    content = content.replace(r"\]", "]")
+    content = re.sub(r"(\[[^\]\n]{1,120}\])(?=[가-힣A-Za-z\"])", r"\1 ", content)
+    content = re.sub(r"<li><em>\.외\s+(\d+)건</em></li>", r"<li><em>외 \1건</em></li>", content)
+    content = re.sub(r">\.외\s+(\d+)건<", r">외 \1건<", content)
+    content = re.sub(r"(^\s*[-*])\s+-\s+", r"\1 ", content, flags=re.MULTILINE)
+
+    stat_match = re.search(
+        r'<div class="stat-value">(\d+)</div><div class="stat-label">수집 건수</div>',
+        content,
+    )
+    total_count = stat_match.group(1) if stat_match else None
+    if not total_count:
+        intro_match = re.search(r"총\s+(\d+)건(?:의 뉴스)?가?\s+(?:수집|분석)", content)
+        total_count = intro_match.group(1) if intro_match else None
+    if total_count:
+        content = re.sub(r"- 총 \*\*\d+건\*\* 수집", f"- 총 **{total_count}건** 수집", content)
+
+    return content
 
 
 def _wrap_picture_tags(content: str) -> str:
@@ -407,10 +477,13 @@ def _extract_description(content: str) -> str:
 # Category Korean names for fallback descriptions
 _CATEGORY_KO: dict[str, str] = {
     "crypto": "암호화폐",
+    "crypto-news": "암호화폐",
     "stock": "주식",
+    "stock-news": "주식",
     "market-analysis": "시장 분석",
     "social-media": "소셜 미디어",
     "regulatory": "규제",
+    "regulatory-news": "규제",
     "defi": "DeFi",
     "political-trades": "정치인 거래",
     "worldmonitor": "글로벌 이슈",
@@ -574,6 +647,7 @@ class PostGenerator:
         # Decode HTML entities (e.g. &#x27; → ', &amp; → &) in title and content
         title = _polish_generated_text(html.unescape(title))
         content = _polish_generated_text(html.unescape(content))
+        content = _normalize_generated_body(content)
 
         if date is None:
             date = get_kst_now()
@@ -619,15 +693,7 @@ class PostGenerator:
             frontmatter_lines.append(f'source_url: "{source_url}"')
         if lang:
             frontmatter_lines.append(f'lang: "{lang}"')
-        if not image:
-            image = _DEFAULT_CATEGORY_IMAGES.get(self.category, "/assets/images/og-default.png")
-        # Verify generated image exists on disk; fall back to category default
-        if "/generated/" in image:
-            abs_img = os.path.join(REPO_ROOT, image.lstrip("/"))
-            if not os.path.exists(abs_img):
-                fallback = _DEFAULT_CATEGORY_IMAGES.get(self.category, "/assets/images/og-default.png")
-                logger.warning("Generated image missing: %s -> fallback: %s", image, fallback)
-                image = fallback
+        image = _resolve_post_image(image, self.category)
         frontmatter_lines.append(f'image: "{image}"')
 
         if extra_frontmatter:
@@ -686,7 +752,6 @@ class PostGenerator:
                 logger.debug("Body post-processing translation skipped: %s", exc)
             content = _polish_generated_text(_fix_translation_artifacts(content))
 
-        # Normalize hardcoded image paths in content to Liquid relative_url syntax
         normalized_content = _normalize_image_paths(content.strip())
         # Convert generated PNG images to <picture> tags with WebP sources
         normalized_content = _wrap_picture_tags(normalized_content)

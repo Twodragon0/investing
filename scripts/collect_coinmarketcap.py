@@ -748,6 +748,7 @@ def main():
 
     if not dedup.is_duplicate_exact(title, source_name, today):
         sections = OrderedDict()
+        frontmatter_image = ""
 
         # 0. Generate images
         image_refs = []
@@ -774,6 +775,7 @@ def main():
             )
             if img:
                 image_refs.append((f"암호화폐 시장 히트맵 ({today})", img))
+                frontmatter_image = f"/assets/images/generated/{os.path.basename(img)}"
 
             logger.info("Generated %d images for CMC post", len(image_refs))
         except ImportError:
@@ -854,6 +856,7 @@ def main():
             )
             if briefing_img:
                 fn = os.path.basename(briefing_img)
+                frontmatter_image = f"/assets/images/generated/{fn}"
                 web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
                 sections["오늘의 브리핑"] = f"![시장 브리핑 카드]({web_path})"
         except ImportError as e:
@@ -1167,6 +1170,7 @@ def main():
             source=source_name,
             source_url="https://coinmarketcap.com/" if "CoinMarketCap" in source_name else "https://www.coingecko.com/",
             lang="ko",
+            image=frontmatter_image,
             extra_frontmatter={
                 "permalink": build_dated_permalink("market-analysis", today, "daily-crypto-market-report")
             },

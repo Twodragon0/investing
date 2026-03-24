@@ -464,7 +464,7 @@ def build_post_content(
     margin_news: List[Dict[str, Any]],
     today: str,
     now: datetime,
-    fred_data: Dict[str, Any] = None,
+    fred_data: Optional[Dict[str, Any]] = None,
 ) -> str:
     """Build full markdown content for the market indicators post."""
     if fred_data is None:
@@ -825,6 +825,76 @@ def main() -> None:
 
     # Generate Jekyll post
     report_permalink = build_dated_permalink("market-analysis", today, "daily-market-indicators")
+    briefing_image_path = ""
+    preview_source_count = sum(
+        [
+            1 if cnn_fg else 0,
+            len(market_data),
+            1 if treasury_news else 0,
+            1 if put_call_news else 0,
+            1 if breadth_news else 0,
+            1 if margin_news else 0,
+            1 if fred_data else 0,
+        ]
+    )
+
+    try:
+        from common.image_generator import generate_news_briefing_card
+
+        card_themes = []
+        if cnn_fg:
+            card_themes.append(
+                {
+                    "name": "공포탐욕",
+                    "emoji": "😨" if cnn_fg.get("score", 50) < 50 else "💰",
+                    "count": 1,
+                    "keywords": [_rating_to_korean(cnn_fg.get("rating", ""))],
+                }
+            )
+        if market_data.get("VIX"):
+            card_themes.append(
+                {
+                    "name": "VIX",
+                    "emoji": "📉",
+                    "count": 1,
+                    "keywords": [market_data["VIX"]["price_fmt"]],
+                }
+            )
+        if market_data.get("DXY"):
+            card_themes.append(
+                {
+                    "name": "달러 인덱스",
+                    "emoji": "💵",
+                    "count": 1,
+                    "keywords": [market_data["DXY"]["price_fmt"]],
+                }
+            )
+
+        news_total = len(treasury_news) + len(put_call_news) + len(breadth_news) + len(margin_news)
+        if news_total:
+            card_themes.append(
+                {
+                    "name": "리스크 뉴스",
+                    "emoji": "⚠️",
+                    "count": news_total,
+                    "keywords": [],
+                }
+            )
+
+        if card_themes:
+            img = generate_news_briefing_card(
+                card_themes[:4],
+                today,
+                category="Market Indicators",
+                total_count=max(preview_source_count, len(card_themes)),
+                filename=f"news-briefing-indicators-{today}.png",
+            )
+            if img:
+                briefing_image_path = f"/assets/images/generated/{os.path.basename(img)}"
+    except ImportError as exc:
+        logger.debug("Optional dependency unavailable: %s", exc)
+    except Exception as exc:
+        logger.warning("Market indicators briefing image failed: %s", exc)
 
     filepath = gen.create_post(
         title=post_title,
@@ -834,6 +904,7 @@ def main() -> None:
         tags=tags,
         source="consolidated",
         lang="ko",
+        image=briefing_image_path,
         extra_frontmatter={"permalink": report_permalink},
         slug="daily-market-indicators",
     )
