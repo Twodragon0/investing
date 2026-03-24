@@ -393,6 +393,132 @@ def fetch_descriptions_concurrent(
     return fetched
 
 
+_EXCLUDE_CLASS_RE = re.compile(
+    r"sidebar|widget|nav|menu|footer|header|comment|social|share|promo|"
+    r"ad-|ads-|advert|sponsor|related|recommend|popup|modal|cookie|banner",
+    re.I,
+)
+
+
+def _extract_og_metadata(soup: Any) -> Dict[str, str]:
+    """Extract Open Graph / twitter meta tags from a parsed page.
+
+    Returns a dict with ``image`` (may be empty) and ``description`` (may be empty).
+    """
+    from bs4 import BeautifulSoup as BS4  # noqa: F401 – type hint only
+
+    result: Dict[str, str] = {"description": "", "image": ""}
+
+    # og:image / twitter:image
+    for img_attr_key, img_attr_val in [
+        ("property", "og:image"),
+        ("name", "twitter:image"),
+    ]:
+        meta = soup.find("meta", attrs={img_attr_key: img_attr_val})
+        if meta:
+            img_url = str(meta.get("content", "")).strip()
+            if img_url and img_url.startswith("http"):
+                result["image"] = img_url
+                break
+
+    # meta description / og:description / twitter:description
+    for attr_key, attr_val in [
+        ("name", "description"),
+        ("property", "og:description"),
+        ("name", "twitter:description"),
+    ]:
+        meta = soup.find("meta", attrs={attr_key: attr_val})
+        content = str(meta.get("content", "")) if meta else ""
+        cleaned = _clean_meta_description(content)
+        if cleaned and len(cleaned) > 20:
+            result["description"] = smart_truncate(cleaned, 500)
+            break
+
+    return result
+
+
+def _extract_via_readability(html: str, url: str) -> str:
+    """Extract article text using readability-lxml (best quality).
+
+    Returns a non-empty description string on success, or empty string if
+    readability is not installed or extraction fails.
+    """
+    from bs4 import BeautifulSoup as BS4
+
+    try:
+        from readability import Document
+
+        doc = Document(html)
+        summary_html = doc.summary()
+        summary_soup = BS4(summary_html, "html.parser")
+        paragraphs = []
+        for p in summary_soup.find_all("p"):
+            text = _clean_meta_description(p.get_text(strip=True))
+            if len(text) > 50:
+                paragraphs.append(text)
+            if len(paragraphs) >= 5:
+                break
+        if paragraphs:
+            return smart_truncate(" ".join(paragraphs), 500)
+    except ImportError:
+        pass  # readability-lxml not installed, fall through
+    except Exception as exc:  # noqa: BLE001
+        logger.debug("readability extraction failed for %s: %s", url, exc)
+    return ""
+
+
+def _extract_via_bs4_article(soup: Any) -> str:
+    """Extract article text from BeautifulSoup <article> or article-class containers.
+
+    Returns a non-empty description string on success, or empty string if no
+    suitable article container is found.
+    """
+    article = soup.find("article")
+    if not article:
+        for tag in soup.find_all(
+            class_=re.compile(
+                r"article[-_]?(body|content|text)|post[-_]?(body|content|text)|entry[-_]?(body|content|text)"
+            )
+        ):
+            if not _EXCLUDE_CLASS_RE.search(str(tag.get("class", ""))):
+                article = tag
+                break
+    if not article:
+        for tag in soup.find_all(class_=re.compile(r"^(article|post|entry|content)$")):
+            if not _EXCLUDE_CLASS_RE.search(str(tag.get("class", ""))):
+                article = tag
+                break
+    if not article:
+        return ""
+
+    for noise in article.find_all(class_=_EXCLUDE_CLASS_RE):
+        noise.decompose()
+    paragraphs = []
+    for p in article.find_all("p"):
+        text = _clean_meta_description(p.get_text(strip=True))
+        if len(text) > 50:
+            paragraphs.append(text)
+        if len(paragraphs) >= 5:
+            break
+    if paragraphs:
+        return smart_truncate(" ".join(paragraphs), 500)
+    return ""
+
+
+def _extract_via_paragraphs(soup: Any) -> str:
+    """Fallback: extract the first substantial <p> not inside a noise container.
+
+    Returns a non-empty description string on success, or empty string if none found.
+    """
+    for p in soup.find_all("p"):
+        if p.find_parent(class_=_EXCLUDE_CLASS_RE):
+            continue
+        text = _clean_meta_description(p.get_text(strip=True))
+        if len(text) > 50:
+            return smart_truncate(text, 500)
+    return ""
+
+
 def fetch_page_metadata(url: str, timeout: int = 8) -> Dict[str, str]:
     """Fetch meta description and og:image from a URL page (best-effort).
 
@@ -423,102 +549,31 @@ def fetch_page_metadata(url: str, timeout: int = 8) -> Dict[str, str]:
         resp.raise_for_status()
         soup = BS4(resp.text, "html.parser")
 
-        # Extract og:image / twitter:image
-        for img_attr_key, img_attr_val in [
-            ("property", "og:image"),
-            ("name", "twitter:image"),
-        ]:
-            meta = soup.find("meta", attrs={img_attr_key: img_attr_val})
-            if meta:
-                img_url = str(meta.get("content", "")).strip()
-                if img_url and img_url.startswith("http"):
-                    result["image"] = img_url
-                    break
+        # Extract OG metadata (image + meta description tags)
+        og = _extract_og_metadata(soup)
+        result["image"] = og["image"]
+        if og["description"]:
+            result["description"] = og["description"]
+            return result
 
-        # 1-3: Meta description tags
-        for attr_key, attr_val in [
-            ("name", "description"),
-            ("property", "og:description"),
-            ("name", "twitter:description"),
-        ]:
-            meta = soup.find("meta", attrs={attr_key: attr_val})
-            content = str(meta.get("content", "")) if meta else ""
-            cleaned = _clean_meta_description(content)
-            if cleaned and len(cleaned) > 20:
-                result["description"] = smart_truncate(cleaned, 500)
-                return result
+        # Try readability-lxml for high-quality article extraction
+        desc = _extract_via_readability(resp.text, url)
+        if desc:
+            result["description"] = desc
+            return result
 
-        # 4a: Try readability-lxml for high-quality article extraction
-        try:
-            from readability import Document
+        # Article body paragraphs (BS4 fallback)
+        desc = _extract_via_bs4_article(soup)
+        if desc:
+            result["description"] = desc
+            return result
 
-            doc = Document(resp.text)
-            summary_html = doc.summary()
-            summary_soup = BS4(summary_html, "html.parser")
-            paragraphs = []
-            for p in summary_soup.find_all("p"):
-                text = _clean_meta_description(p.get_text(strip=True))
-                if len(text) > 50:
-                    paragraphs.append(text)
-                if len(paragraphs) >= 5:
-                    break
-            if paragraphs:
-                combined = " ".join(paragraphs)
-                result["description"] = smart_truncate(combined, 500)
-                return result
-        except ImportError:
-            pass  # readability-lxml not installed, fall through
-        except Exception as exc:  # noqa: BLE001
-            logger.debug("readability extraction failed for %s: %s", url, exc)
+        # Last resort: any substantial <p> not in noise containers
+        desc = _extract_via_paragraphs(soup)
+        if desc:
+            result["description"] = desc
+            return result
 
-        # 4b: Article body paragraphs (BS4 fallback)
-        # Exclude non-content containers (sidebars, ads, navigation, comments)
-        _EXCLUDE_CLASS_RE = re.compile(
-            r"sidebar|widget|nav|menu|footer|header|comment|social|share|promo|"
-            r"ad-|ads-|advert|sponsor|related|recommend|popup|modal|cookie|banner",
-            re.I,
-        )
-        article = soup.find("article")
-        if not article:
-            # More precise content container matching
-            for tag in soup.find_all(
-                class_=re.compile(
-                    r"article[-_]?(body|content|text)|post[-_]?(body|content|text)|entry[-_]?(body|content|text)"
-                )
-            ):
-                if not _EXCLUDE_CLASS_RE.search(str(tag.get("class", ""))):
-                    article = tag
-                    break
-        if not article:
-            for tag in soup.find_all(class_=re.compile(r"^(article|post|entry|content)$")):
-                if not _EXCLUDE_CLASS_RE.search(str(tag.get("class", ""))):
-                    article = tag
-                    break
-        if article:
-            # Remove nested non-content elements before extracting text
-            for noise in article.find_all(class_=_EXCLUDE_CLASS_RE):
-                noise.decompose()
-            paragraphs = []
-            for p in article.find_all("p"):
-                text = _clean_meta_description(p.get_text(strip=True))
-                if len(text) > 50:
-                    paragraphs.append(text)
-                if len(paragraphs) >= 5:
-                    break
-            if paragraphs:
-                combined = " ".join(paragraphs)
-                result["description"] = smart_truncate(combined, 500)
-                return result
-
-        # 5: Fallback to any <p> (skip short ad-like text)
-        for p in soup.find_all("p"):
-            # Skip paragraphs inside non-content containers
-            if p.find_parent(class_=_EXCLUDE_CLASS_RE):
-                continue
-            text = _clean_meta_description(p.get_text(strip=True))
-            if len(text) > 50:
-                result["description"] = smart_truncate(text, 500)
-                return result
     except Exception as e:  # noqa: BLE001
         logger.debug("Failed to fetch metadata from %s: %s", url, e)
     return result
