@@ -8,10 +8,11 @@ keywords: "geopolitical, polymarket, risk, conflict, prediction-market"
 source: "geopolitical"
 lang: "ko"
 image: "/assets/images/generated/og-daily-geopolitical-risk-report-2026-03-23.png"
+image: "/assets/images/generated/news-briefing-geopolitical-2026-03-23.webp"
 permalink: "/market-analysis/2026/03/23/daily-geopolitical-risk-report/"
-description: "글로벌 예측 시장 Polymarket에서 지정학·정치 이벤트에 대한 집단지성 확률을 확인합니다. 거래량이 많을수록 시장 참여자의 신뢰도가 높습니다."
-excerpt: "글로벌 예측 시장 Polymarket에서 지정학·정치 이벤트에 대한 집단지성 확률을 확인합니다. 거래량이 많을수록 시장 참여자의 신뢰도가 높습니다."
-image_alt: "지정학 리스크 리포트 - 2026-03-23 - 글로벌 이슈 뉴스 요약 이미지"
+description: "지정학 리스크 리포트: 2026-03-23 기준 Polymarket 예측 시장과 주요 글로벌 리스크 이벤트 확률을 함께 점검합니다."
+excerpt: "Polymarket 예측 시장과 주요 글로벌 리스크 이벤트 확률을 함께 점검한 2026-03-23 지정학 리포트입니다."
+image_alt: "지정학 리스크 리포트 대표 브리핑 이미지"
 ---
 
 **2026-03-23** 기준 지정학적 리스크 데이터를 2개 소스에서 수집·분석했습니다. 예측 시장 15건, 글로벌 뉴스 분석 0건, 뉴스 1건을 종합합니다.

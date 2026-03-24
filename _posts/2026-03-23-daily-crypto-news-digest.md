@@ -8,10 +8,11 @@ keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-23.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-03-23.webp"
 permalink: "/crypto-news/2026/03/23/daily-crypto-news-digest/"
-description: "암호화폐 뉴스 브리핑 - 2026-03-23 - 비트코인, 이더리움 등 암호화폐 시장 핵심 동향. 주요 키워드: crypto, news, daily-digest."
-excerpt: "암호화폐 뉴스 브리핑 - 2026-03-23 - 비트코인, 이더리움 등 암호화폐 시장 핵심 동향. 주요 키워드: crypto, news, daily-digest."
-image_alt: "암호화폐 뉴스 브리핑 - 2026-03-23 - crypto-news 뉴스 요약 이미지"
+description: "암호화폐 뉴스 브리핑: 2026-03-23 기준 비트코인 약세와 정책 변수, 주요 알트코인 변동성을 중심으로 핵심 뉴스를 정리했습니다."
+excerpt: "비트코인 약세와 정책 변수, 주요 알트코인 변동성을 중심으로 2026-03-23 암호화폐 핵심 뉴스를 정리한 브리핑입니다."
+image_alt: "암호화폐 뉴스 브리핑 대표 이미지"
 ---
 
 **2026-03-23** 암호화폐 시장에서 80건의 뉴스를 분석했습니다. 오늘은 **비트코인, 가격/시장, 정치/정책** 관련 소식이 주목됩니다.

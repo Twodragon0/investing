@@ -8,10 +8,11 @@ keywords: "social-media, telegram, twitter, reddit, politics"
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-social-media-digest-2026-03-23.png"
+image: "/assets/images/generated/news-briefing-social-2026-03-23.webp"
 permalink: "/social-media/2026/03/23/daily-social-media-digest/"
-description: "정치/정책 (13건): 이재명, 트럼프, 부동산 관련 보도가 이어지고 있어 관련 포지션 점검이 필요합니다. 매크로/금리 (7건): 금리, 신현송, 총재 이슈에 대한 시장 반응을 모니터링할 필요가 있습니다."
-excerpt: "정치/정책 (13건): 이재명, 트럼프, 부동산 관련 보도가 이어지고 있어 관련 포지션 점검이 필요합니다. 매크로/금리 (7건): 금리, 신현송, 총재 이슈에 대한 시장 반응을…"
-image_alt: "소셜 미디어 동향 - 2026-03-23 - 소셜 미디어 뉴스 요약 이미지"
+description: "소셜 미디어 동향: 2026-03-23 기준 정치·정책 이슈와 금리 관련 여론 흐름, 비트코인 반응을 중심으로 주요 소셜 담론을 정리했습니다."
+excerpt: "정치·정책 이슈와 금리 관련 여론 흐름, 비트코인 반응을 중심으로 2026-03-23 주요 소셜 담론을 정리한 브리핑입니다."
+image_alt: "소셜 미디어 동향 대표 브리핑 이미지"
 ---
 
 **2026-03-23** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 정치·경제 22건, 총 22건이 수집되었습니다.
