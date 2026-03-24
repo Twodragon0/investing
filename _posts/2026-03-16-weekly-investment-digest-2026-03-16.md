@@ -61,7 +61,6 @@ image_alt: "주간 투자 다이제스트 - 2026년 03월 16일 - 시장 분석 
 
 <div class="journal-digest-grid">
 <a href="/crypto-journal/2026/03/15/crypto-trading-journal/" class="journal-digest-card">
-  <img src="/assets/images/generated/og-crypto-trading-journal-2026-03-15.png" alt="크립토 트레이딩 일지 - 2026-03-15" class="journal-digest-thumb">
   <div class="journal-digest-body">
     <span class="journal-digest-kicker">크립토 트레이딩 일지</span>
     <h4>크립토 트레이딩 일지 - 2026-03-15</h4>
@@ -74,7 +73,6 @@ image_alt: "주간 투자 다이제스트 - 2026년 03월 16일 - 시장 분석 
   </div>
 </a>
 <a href="/stock-journal/2026/03/15/stock-trading-journal/" class="journal-digest-card">
-  <img src="/assets/images/generated/og-stock-trading-journal-2026-03-15.png" alt="주식 트레이딩 일지 - 2026-03-15" class="journal-digest-thumb">
   <div class="journal-digest-body">
     <span class="journal-digest-kicker">주식 트레이딩 일지</span>
     <h4>주식 트레이딩 일지 - 2026-03-15</h4>
@@ -87,7 +85,6 @@ image_alt: "주간 투자 다이제스트 - 2026년 03월 16일 - 시장 분석 
   </div>
 </a>
 <a href="/crypto-journal/2026/03/14/crypto-trading-journal/" class="journal-digest-card">
-  <img src="/assets/images/generated/og-crypto-trading-journal-2026-03-14.png" alt="크립토 트레이딩 일지 - 2026-03-14" class="journal-digest-thumb">
   <div class="journal-digest-body">
     <span class="journal-digest-kicker">크립토 트레이딩 일지</span>
     <h4>크립토 트레이딩 일지 - 2026-03-14</h4>
@@ -100,7 +97,6 @@ image_alt: "주간 투자 다이제스트 - 2026년 03월 16일 - 시장 분석 
   </div>
 </a>
 <a href="/stock-journal/2026/03/14/stock-trading-journal/" class="journal-digest-card">
-  <img src="/assets/images/generated/og-stock-trading-journal-2026-03-14.png" alt="주식 트레이딩 일지 - 2026-03-14" class="journal-digest-thumb">
   <div class="journal-digest-body">
     <span class="journal-digest-kicker">주식 트레이딩 일지</span>
     <h4>주식 트레이딩 일지 - 2026-03-14</h4>

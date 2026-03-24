@@ -48,52 +48,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-24 - stock-news 뉴스 요약 
 <li><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTFBjWkpYaVJyRlNIcTV5akswT3hHTnNkbExhN1BqZXI2YUExbXBvRjJXZEpvbDdRSC1IZ0d4Um0wTUdOS1FEZ09tZUlfMmk5NWlQcUIyaHFiYm03T3EySHYw?oc=5">삼성전자·SK하이닉스, 중동 긴장 고조에 동반 급락 - 증권플러스</a> <span class="p0-desc">삼성전자·SK하이닉스, 중동 긴장 고조에 동반 급락 증권플러스</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 1% 초고수, ‘급락’ 하이닉스·삼성전자 집중 매수 [주식 초고수는 지금] - 서울경제신문 
-외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 155건의 뉴스 중 P1 주요 이슈도 24건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (37건): 삼성전자, 급락, 하이닉스 중심의 모멘텀이 형성되고 있어 방향성 확인이 필요합니다.
-- **📊 매크로/금리** (13건): 환율, 금리, 중동발 동향이 포트폴리오 전략에 영향을 줄 수 있어 주시가 필요합니다.
-- **🏛️ 정치/정책** (19건): 트럼프 동향이 포트폴리오 전략에 영향을 줄 수 있어 주시가 필요합니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 1% 초고수, ‘급락’ 하이닉스·삼성전자 집중 매수 [주식 초고수는 지금] - 서울경제신문
-- 특징주] 삼성전자·SK하이닉스, 중동 긴장 고조에 동반 급락 - 조선비즈 - Chosunbiz
-- 삼성전자·SK하이닉스, 중동 긴장 고조에 동반 급락 - 증권플러스
-
-### 주요 이슈
-
-- 韓증시에 드리운 '버블' 그림자…곳곳서 나오는 증시과열 경고음
-- 주식시장은 12개월 동안 보지 못한 경고를 발령했습니다. 역사는 인베를 말한다
-- 주식 시장 매도 기간 동안 iShares 코어 S&P 500 ETF을 구매해야 합니까? 그
-- 외 21건
-
-### 투자자 체크포인트
-
-- 한국 기사 62건, 글로벌 기사 93건 수집
-- 한국 지수: KOSPI 5,405.75(-6.49%), KOSDAQ 1,096.89(-5.56%), USD/KRW 1,485.90(-1.26%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">37건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:35%"></div></div><span class="theme-count">13건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:51%"></div></div><span class="theme-count">19건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:24%"></div></div><span class="theme-count">9건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:8%"></div></div><span class="theme-count">3건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-03-24.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-03-24.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- 총 **155건** 수집
+- KOSPI 5,405.75 (-6.49%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 1,096.89 (-5.56%).
 
 ## 테마별 주요 뉴스
 
