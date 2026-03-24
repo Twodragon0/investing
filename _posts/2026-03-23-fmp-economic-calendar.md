@@ -9,9 +9,9 @@ source: "fmp"
 lang: "ko"
 image: "/assets/images/generated/og-fmp-economic-calendar-2026-03-23.png"
 permalink: "/market-analysis/2026/03/23/fmp-economic-calendar/"
-description: "시장 분석 분야 핵심 동향: 주요 경제 캘린더 및 실적 일정 (2026-03-23). 주요 키워드: market-analysis, economic-calendar, earnings, treasury."
-excerpt: "시장 분석 분야 핵심 동향: 주요 경제 캘린더 및 실적 일정 (2026-03-23). 주요 키워드: market-analysis, economic-calendar,…"
-image_alt: "주요 경제 캘린더 및 실적 일정 (2026-03-23) - 시장 분석 뉴스 요약 이미지"
+description: "주요 경제 캘린더 및 실적 일정: 2026-03-23 기준 핵심 경제 이벤트, 국채 금리, 실적 발표와 IPO 일정을 함께 정리했습니다."
+excerpt: "핵심 경제 이벤트, 국채 금리, 실적 발표와 IPO 일정을 함께 정리한 2026-03-23 경제 캘린더 브리핑입니다."
+image_alt: "주요 경제 캘린더 및 실적 일정 대표 이미지"
 ---
 
 **2026-03-23** 기준 주요 시장 지수 2종, 섹터 11개, 국채 금리 5개 만기, 경제 이벤트 19건(고·중간 중요도), 대형주 실적 발표 6건, IPO 일정 10건을 수집했습니다.
