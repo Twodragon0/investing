@@ -42,7 +42,6 @@ image_alt: "글로벌 규제 동향 리포트 대표 브리핑 이미지"
 - **한국**: 4건
 
 
-
 ## 한국 규제 동향
 
 **1. [단독 가상자산거래소 대주주 지분제한, ‘금융위 2단계 입법 연구용역’엔 없었다](https://news.google.com/rss/articles/CBMiUkFVX3lxTFBGaW85dzRoalUyTG9iM3VVNzZFc3g1bVNLV09qRm1ramR2Vzk0UlN5RmZBTm16UDVSSUFuTk5RNGl4WmJEYnpKQ2NabjJfOTRkd2c?oc=5)**
@@ -60,8 +59,6 @@ image_alt: "글로벌 규제 동향 리포트 대표 브리핑 이미지"
 **4. [단독 가상자산시장에도 ‘전자공시’…코인 평가·자문업도 자본시장 수준 규제 유력](https://news.google.com/rss/articles/CBMiUkFVX3lxTE0zUWx2SktkbzNucEJzWXhMRDczUGdOS0gxN09XUTczaUhRdDh5MjJZODJwRURzQ2R1WlplckpPZGJVUFV4UUVmTEFJRDJ1bFdCd3c?oc=5)**
 [단독] 가상자산시장에도 ‘전자공시’…코인 평가·자문업도 자본시장 수준 규제 유력 매일경제
 <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
-
-
 
 
 ## 주요 테마 분석

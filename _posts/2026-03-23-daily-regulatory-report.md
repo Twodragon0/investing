@@ -8,7 +8,6 @@ keywords: "regulation, sec, cftc, fsc, daily-digest"
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-regulatory-report-2026-03-23.png"
-image: "/assets/images/generated/news-briefing-regulatory-2026-03-23.webp"
 permalink: "/regulatory-news/2026/03/23/daily-regulatory-report/"
 description: "글로벌 규제 동향 리포트: 2026-03-23 기준 금융위의 우선배정, 중복상장, 가상자산 규제 관련 입장과 핵심 규제 이슈 11건을 정리했습니다."
 excerpt: "금융위의 우선배정, 중복상장, 가상자산 규제 관련 입장과 2026-03-23 핵심 규제 이슈 11건을 정리한 리포트입니다."
@@ -56,15 +55,13 @@ image_alt: "글로벌 규제 동향 리포트 대표 브리핑 이미지"
 *기사는 여러 테마에 중복 집계될 수 있음*
 
 
-
-
 ## 한국 규제 동향
 
 **1. [“금융위원회는 일반주주 보호를 위한 제도개선을 흔들림 없이, 확고하게 추진하고 있습니다.” - 신주우선배정 및 의무공개매수 제도와 관련한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86503)**
 증시 제도 변경 관련 소식입니다. 거래 환경 변화에 따른 투자 전략 조정이 필요할 수 있습니다.
 <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
 
-**2. [“쪼개기 상장시 모회사 주주 우선배정 비율은 확정된 바 없습니다.” - 3.19일 한국경제 「[단독] 금융위 ‘쪼개기 상장’시 모회사 주주 우선배정은 15%만 해야｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86498)**
+**2. [“쪼개기 상장시 모회사 주주 우선배정 비율은 확정된 바 없습니다.” - 3.19일 한국경제 「[단독 금융위 ‘쪼개기 상장’시 모회사 주주 우선배정은 15%만 해야｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86498)**
 IPO·신규 상장 관련 소식입니다. 공모가 대비 시장 평가와 수급 동향을 주시하세요.
 <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
 
@@ -72,7 +69,7 @@ IPO·신규 상장 관련 소식입니다. 공모가 대비 시장 평가와 수
 부동산 시장 관련 소식입니다. 금리·정책 변화에 따른 부동산 시장 흐름을 주시해야 합니다.
 <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
 
-**4. [“중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「[단독] 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86460)**
+**4. [“중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「[단독 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 -](https://www.fsc.go.kr/no010102/86460)**
 “중복상장 제도개선 방안은 확정된 바 없습니다.” - 3.15일 서울경제 「[단독] 대기업 중복상장 사실상 전면금지｣ 제하의 기사에 대한 정부입장 설명 - 1.
 <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
 
