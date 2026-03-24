@@ -1399,23 +1399,33 @@ def _build_snapshot_table(
     ]
 
 
-def main():
-    """Generate daily news summary with priority-based structure."""
-    logger.info("=== Generating daily news summary ===")
+def _load_today_posts(
+    today: str,
+) -> Tuple[
+    Dict[str, Optional[Dict[str, Any]]],
+    List[Tuple[str, Any, str]],
+    Optional[Dict[str, Any]],
+    List[Optional[Dict[str, Any]]],
+]:
+    """Load and categorize all posts for *today*.
 
-    today = datetime.now(get_kst_timezone()).strftime("%Y-%m-%d")
-
-    # Find all posts for today
+    Returns
+    -------
+    summary_map : dict
+        Keys: crypto, stock, market, regulatory, social, worldmonitor, political.
+    post_links : list[(name, count, url)]
+    security_summary : dict | None
+    all_summaries : list
+        Flat list of per-category summaries (excluding market).
+    """
     pattern = os.path.join(POSTS_DIR, f"{today}-*.md")
     today_posts = sorted(glob.glob(pattern))
 
     if not today_posts:
-        logger.warning("No posts found for today (%s), skipping summary", today)
-        return
+        return {}, [], None, []
 
     logger.info("Found %d posts for %s", len(today_posts), today)
 
-    # Read and categorize posts
     crypto_summary = None
     stock_summary = None
     security_summary = None
@@ -1425,7 +1435,7 @@ def main():
     worldmonitor_summary = None
     political_summary = None
 
-    post_links = []
+    post_links: List[Tuple[str, Any, str]] = []
 
     for filepath in today_posts:
         filename = os.path.basename(filepath)
@@ -1493,25 +1503,6 @@ def main():
             fmp_url = get_post_url(filepath, today, "market-analysis")
             post_links.append(("경제 캘린더", fmp_count or "-", fmp_url))
 
-    # Calculate total count
-    all_summaries = [
-        crypto_summary,
-        stock_summary,
-        security_summary,
-        regulatory_summary,
-        social_summary,
-        worldmonitor_summary,
-        political_summary,
-    ]
-    total_count = sum(s["count"] for s in all_summaries if s and s.get("count"))
-
-    # Priority classification
-    all_news_items = _collect_all_news_items(all_summaries)
-    priority_items = {"P0": [], "P1": [], "P2": []}
-    if all_news_items:
-        summarizer = ThemeSummarizer(all_news_items)
-        priority_items = summarizer.classify_priority()
-
     summary_map = {
         "crypto": crypto_summary,
         "stock": stock_summary,
@@ -1522,26 +1513,68 @@ def main():
         "political": political_summary,
     }
 
+    all_summaries = [
+        crypto_summary,
+        stock_summary,
+        security_summary,
+        regulatory_summary,
+        social_summary,
+        worldmonitor_summary,
+        political_summary,
+    ]
+
+    return summary_map, post_links, security_summary, all_summaries
+
+
+def _classify_and_analyze(
+    all_summaries: List[Optional[Dict[str, Any]]],
+    summary_map: Dict[str, Optional[Dict[str, Any]]],
+) -> Dict[str, Any]:
+    """Run priority classification and theme analysis.
+
+    Returns dict with keys: priority_items, theme_payload, urgent_alerts,
+    total_count, all_news_items, summarizer.
+    """
+    total_count = sum(s["count"] for s in all_summaries if s and s.get("count"))
+
+    all_news_items = _collect_all_news_items(all_summaries)
+    priority_items: Dict[str, list] = {"P0": [], "P1": [], "P2": []}
+    summarizer = None
+    if all_news_items:
+        summarizer = ThemeSummarizer(all_news_items)
+        priority_items = summarizer.classify_priority()
+
     theme_payload = _to_theme_payload(summary_map)
     urgent_alerts = [_strip_markdown_link(get_display_title(x)) for x in priority_items.get("P0", [])]
 
-    briefing_image = None
-    try:
-        from common.image_generator import generate_news_briefing_card
+    return {
+        "priority_items": priority_items,
+        "theme_payload": theme_payload,
+        "urgent_alerts": urgent_alerts,
+        "total_count": total_count,
+        "all_news_items": all_news_items,
+        "summarizer": summarizer,
+    }
 
-        briefing_image = generate_news_briefing_card(
-            themes=theme_payload,
-            date_str=today,
-            category="Multi-Asset Daily Briefing",
-            total_count=total_count,
-            urgent_alerts=[x for x in urgent_alerts if x],
-            filename=f"news-briefing-daily-{today}.png",
-        )
-    except Exception as e:
-        logger.warning("Failed to generate daily briefing image: %s", e)
 
-    # Build summary content
-    content_parts = []
+def _build_overview_section(
+    total_count: int,
+    priority_items: Dict[str, list],
+    theme_payload: list,
+    summary_map: Dict[str, Optional[Dict[str, Any]]],
+    security_summary: Optional[Dict[str, Any]],
+    counts_str: str,
+    sentiment: Dict[str, Any],
+) -> List[str]:
+    """Build the opening overview section (counts, risk level, narrative)."""
+    crypto_summary = summary_map.get("crypto")
+    stock_summary = summary_map.get("stock")
+    regulatory_summary = summary_map.get("regulatory")
+    social_summary = summary_map.get("social")
+    worldmonitor_summary = summary_map.get("worldmonitor")
+    political_summary = summary_map.get("political")
+
+    content_parts: List[str] = []
 
     # Opening with counts
     count_parts = []
@@ -1560,13 +1593,15 @@ def main():
     if political_summary and political_summary["count"]:
         count_parts.append(f"정치인 거래 {political_summary['count']}건")
 
-    counts_str = ", ".join(count_parts) if count_parts else "뉴스"
+    # NOTE: counts_str is built externally and passed in for consistency with
+    # _write_summary_post which also needs it.  The count_parts here are only
+    # used to regenerate the same string; we intentionally ignore them so the
+    # caller-provided counts_str is authoritative.
     content_parts.append(f"> {counts_str}의 뉴스를 종합 분석한 일일 요약입니다.\n")
 
     # Calculate risk level
     p0_count = len(priority_items.get("P0", []))
-    sentiment_for_risk = _analyze_sentiment(all_summaries)
-    neg_ratio = 100 - sentiment_for_risk.get("ratio", 50)
+    neg_ratio = 100 - sentiment.get("ratio", 50)
     if p0_count >= 3 or neg_ratio >= 70:
         risk_level, risk_emoji = "높음", "🔴"
     elif p0_count >= 1 or neg_ratio >= 55:
@@ -1611,6 +1646,32 @@ def main():
             signal_parts.append(f"P1 주요 {p1_count}건")
         content_parts.append(f"**핵심 신호**: {', '.join(signal_parts)}이 포착되었습니다.")
     content_parts.append("")
+
+    return content_parts
+
+
+def _build_briefing_section(
+    all_summaries: List[Optional[Dict[str, Any]]],
+    all_news_items: list,
+    summary_map: Dict[str, Optional[Dict[str, Any]]],
+    theme_payload: list,
+    sentiment: Dict[str, Any],
+    today: str,
+    briefing_image: Optional[str],
+    priority_items: Dict[str, list],
+    summarizer: Any,
+) -> List[str]:
+    """Build dashboard, executive briefing, themes, and risk memo sections."""
+    crypto_summary = summary_map.get("crypto")
+    stock_summary = summary_map.get("stock")
+    regulatory_summary = summary_map.get("regulatory")
+    social_summary = summary_map.get("social")
+    worldmonitor_summary = summary_map.get("worldmonitor")
+    political_summary = summary_map.get("political")
+
+    total_count = sum(s["count"] for s in all_summaries if s and s.get("count"))
+
+    content_parts: List[str] = []
 
     content_parts.append("## 종합 대시보드\n")
     content_parts.extend(
@@ -1667,7 +1728,6 @@ def main():
             content_parts.append(f"> **이상 탐지**: {a_desc}\n")
 
     # 3. Sentiment snapshot
-    sentiment = _analyze_sentiment(all_summaries)
     active_categories = sum(1 for s in all_summaries if s and s.get("count", 0) > 0)
     content_parts.append(
         f"**시장 심리**: {sentiment['tone']} "
@@ -1873,6 +1933,28 @@ def main():
                 f"공포 구간 매수 기회 여부를 점검할 수 있습니다."
             )
         content_parts.append("")
+
+    return content_parts
+
+
+def _build_priority_and_category_sections(
+    priority_items: Dict[str, list],
+    market_summary: Optional[Dict[str, Any]],
+    security_summary: Optional[Dict[str, Any]],
+    summary_map: Dict[str, Optional[Dict[str, Any]]],
+    post_links: List[Tuple[str, Any, str]],
+    all_news_items: list,
+) -> List[str]:
+    """Build P0 alerts, market overview, indicators, cross-asset, political watch,
+    P1 news, category summaries, P2, report links, and signal analysis sections."""
+    crypto_summary = summary_map.get("crypto")
+    stock_summary = summary_map.get("stock")
+    regulatory_summary = summary_map.get("regulatory")
+    social_summary = summary_map.get("social")
+    worldmonitor_summary = summary_map.get("worldmonitor")
+    political_summary = summary_map.get("political")
+
+    content_parts: List[str] = []
 
     # ═══════════════════════════════════════
     # 1. URGENT ALERTS (P0)
@@ -2255,8 +2337,17 @@ def main():
     content_parts.append("\n---\n")
     content_parts.append("*본 요약은 자동 수집된 뉴스 데이터를 기반으로 작성되었으며, 투자 조언이 아닙니다.*")
 
-    content = "\n".join(content_parts)
+    return content_parts
 
+
+def _write_summary_post(
+    today: str,
+    content: str,
+    total_count: int,
+    counts_str: str,
+    briefing_image: Optional[str],
+) -> str:
+    """Write the summary post file and return the filepath."""
     title = f"일일 뉴스 종합 요약 - {today}"
     slug = "daily-news-summary"
     filename = f"{today}-{slug}.md"
@@ -2301,6 +2392,111 @@ image_alt: "{image_alt}"
         f.write(post_content)
 
     logger.info("Created daily summary: %s (total %d news items)", filepath, total_count)
+    return filepath
+
+
+def main():
+    """Generate daily news summary with priority-based structure."""
+    logger.info("=== Generating daily news summary ===")
+
+    today = datetime.now(get_kst_timezone()).strftime("%Y-%m-%d")
+
+    # Find all posts for today
+    pattern = os.path.join(POSTS_DIR, f"{today}-*.md")
+    today_posts = sorted(glob.glob(pattern))
+
+    if not today_posts:
+        logger.warning("No posts found for today (%s), skipping summary", today)
+        return
+
+    # 1. Load and categorize posts
+    summary_map, post_links, security_summary, all_summaries = _load_today_posts(today)
+    if not summary_map:
+        logger.warning("No posts found for today (%s), skipping summary", today)
+        return
+
+    # 2. Classify priorities and analyze themes
+    analysis = _classify_and_analyze(all_summaries, summary_map)
+    priority_items = analysis["priority_items"]
+    theme_payload = analysis["theme_payload"]
+    urgent_alerts = analysis["urgent_alerts"]
+    total_count = analysis["total_count"]
+    all_news_items = analysis["all_news_items"]
+    summarizer = analysis["summarizer"]
+
+    # 3. Generate briefing image
+    briefing_image = None
+    try:
+        from common.image_generator import generate_news_briefing_card
+
+        briefing_image = generate_news_briefing_card(
+            themes=theme_payload,
+            date_str=today,
+            category="Multi-Asset Daily Briefing",
+            total_count=total_count,
+            urgent_alerts=[x for x in urgent_alerts if x],
+            filename=f"news-briefing-daily-{today}.png",
+        )
+    except Exception as e:
+        logger.warning("Failed to generate daily briefing image: %s", e)
+
+    # 4. Build counts_str (needed by overview and write)
+    count_parts = []
+    crypto_summary = summary_map.get("crypto")
+    stock_summary = summary_map.get("stock")
+    regulatory_summary = summary_map.get("regulatory")
+    social_summary = summary_map.get("social")
+    worldmonitor_summary = summary_map.get("worldmonitor")
+    political_summary = summary_map.get("political")
+    if crypto_summary and crypto_summary["count"]:
+        count_parts.append(f"암호화폐 {crypto_summary['count']}건")
+    if stock_summary and stock_summary["count"]:
+        count_parts.append(f"주식 {stock_summary['count']}건")
+    if security_summary and security_summary["count"]:
+        count_parts.append(f"보안 {security_summary['count']}건")
+    if regulatory_summary and regulatory_summary["count"]:
+        count_parts.append(f"규제 {regulatory_summary['count']}건")
+    if social_summary and social_summary["count"]:
+        count_parts.append(f"소셜 미디어 {social_summary['count']}건")
+    if worldmonitor_summary and worldmonitor_summary["count"]:
+        count_parts.append(f"월드모니터 {worldmonitor_summary['count']}건")
+    if political_summary and political_summary["count"]:
+        count_parts.append(f"정치인 거래 {political_summary['count']}건")
+    counts_str = ", ".join(count_parts) if count_parts else "뉴스"
+
+    # 5. Compute sentiment once (used by overview and briefing)
+    sentiment = _analyze_sentiment(all_summaries)
+
+    # 6. Build content sections
+    content_parts: List[str] = []
+
+    content_parts.extend(
+        _build_overview_section(
+            total_count, priority_items, theme_payload,
+            summary_map, security_summary, counts_str, sentiment,
+        )
+    )
+
+    content_parts.extend(
+        _build_briefing_section(
+            all_summaries, all_news_items, summary_map,
+            theme_payload, sentiment, today, briefing_image,
+            priority_items, summarizer,
+        )
+    )
+
+    market_summary = summary_map.get("market")
+    content_parts.extend(
+        _build_priority_and_category_sections(
+            priority_items, market_summary, security_summary,
+            summary_map, post_links, all_news_items,
+        )
+    )
+
+    # 7. Write the post
+    content = "\n".join(content_parts)
+    _write_summary_post(today, content, total_count, counts_str, briefing_image)
+
     logger.info("=== Daily summary generation complete ===")
 
 
