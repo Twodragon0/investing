@@ -9,9 +9,9 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-regulatory-report-2026-03-24.png"
 permalink: "/regulatory-news/2026/03/24/daily-regulatory-report/"
-description: "규제/정책 (3건): 지분제한, 단독, 규제 이슈에 대한 시장 반응을 모니터링할 필요가 있습니다 - Investing Dragon 자동 수집 분석 리포트."
-excerpt: "규제/정책 (3건): 지분제한, 단독, 규제 이슈에 대한 시장 반응을 모니터링할 필요가 있습니다 - Investing Dragon 자동 수집 분석 리포트."
-image_alt: "글로벌 규제 동향 리포트 - 2026-03-24 - regulatory-news 뉴스 요약 이미지"
+description: "글로벌 규제 동향 리포트: 2026-03-24 기준 한국 가상자산 거래소 지분 제한과 전자공시 규제 논의를 중심으로 핵심 규제 이슈 4건을 정리했습니다."
+excerpt: "한국 가상자산 거래소 지분 제한과 전자공시 규제 논의를 중심으로 2026-03-24 핵심 규제 이슈 4건을 정리한 리포트입니다."
+image_alt: "글로벌 규제 동향 리포트 대표 브리핑 이미지"
 ---
 
 전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 4건의 규제 관련 뉴스가 수집되었습니다.
@@ -41,13 +41,11 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-03-24 - regulatory-news 뉴
 - **총 수집 건수**: 4건
 - **한국**: 4건
 
----
 
----
 
 ## 한국 규제 동향
 
-**1. [단독\ 가상자산거래소 대주주 지분제한, ‘금융위 2단계 입법 연구용역’엔 없었다](https://news.google.com/rss/articles/CBMiUkFVX3lxTFBGaW85dzRoalUyTG9iM3VVNzZFc3g1bVNLV09qRm1ramR2Vzk0UlN5RmZBTm16UDVSSUFuTk5RNGl4WmJEYnpKQ2NabjJfOTRkd2c?oc=5)**
+**1. [단독 가상자산거래소 대주주 지분제한, ‘금융위 2단계 입법 연구용역’엔 없었다](https://news.google.com/rss/articles/CBMiUkFVX3lxTFBGaW85dzRoalUyTG9iM3VVNzZFc3g1bVNLV09qRm1ramR2Vzk0UlN5RmZBTm16UDVSSUFuTk5RNGl4WmJEYnpKQ2NabjJfOTRkd2c?oc=5)**
 [단독] 가상자산거래소 대주주 지분제한, ‘금융위 2단계 입법 연구용역’엔 없었다 매일경제
 <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
 
@@ -55,19 +53,15 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-03-24 - regulatory-news 뉴
 "가상자산 거래소 대주주 지분 제한, 2단계 입법 초기 설계엔 포함 안돼".
 <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
 
-**3. [거래소 지분제한 파장\ 가상자산 2단계법, 지분 규제 논란에 표류 - 딜사이트](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9rZ1l5RVpDbnV0bW5vRENlS1U2Vm9mMm9Wdm83QVA5VUQxTTV5eDZpd210WmZFalZpM3A2NHpEa3hzeUNlRHN0eGZqUUVCVU0?oc=5)**
+**3. [거래소 지분제한 파장 가상자산 2단계법, 지분 규제 논란에 표류 - 딜사이트](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9rZ1l5RVpDbnV0bW5vRENlS1U2Vm9mMm9Wdm83QVA5VUQxTTV5eDZpd210WmZFalZpM3A2NHpEa3hzeUNlRHN0eGZqUUVCVU0?oc=5)**
 [거래소 지분제한 파장] 가상자산 2단계법, 지분 규제 논란에 표류 딜사이트
 <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
 
-**4. [단독\ 가상자산시장에도 ‘전자공시’…코인 평가·자문업도 자본시장 수준 규제 유력](https://news.google.com/rss/articles/CBMiUkFVX3lxTE0zUWx2SktkbzNucEJzWXhMRDczUGdOS0gxN09XUTczaUhRdDh5MjJZODJwRURzQ2R1WlplckpPZGJVUFV4UUVmTEFJRDJ1bFdCd3c?oc=5)**
+**4. [단독 가상자산시장에도 ‘전자공시’…코인 평가·자문업도 자본시장 수준 규제 유력](https://news.google.com/rss/articles/CBMiUkFVX3lxTE0zUWx2SktkbzNucEJzWXhMRDczUGdOS0gxN09XUTczaUhRdDh5MjJZODJwRURzQ2R1WlplckpPZGJVUFV4UUVmTEFJRDJ1bFdCd3c?oc=5)**
 [단독] 가상자산시장에도 ‘전자공시’…코인 평가·자문업도 자본시장 수준 규제 유력 매일경제
 <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
 
----
 
----
-
----
 
 
 ## 주요 테마 분석

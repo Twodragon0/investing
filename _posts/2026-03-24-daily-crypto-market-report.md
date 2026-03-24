@@ -9,10 +9,11 @@ source: "CoinMarketCap"
 source_url: "https://coinmarketcap.com/"
 lang: "ko"
 image: "/assets/images/generated/og-daily-crypto-market-report-2026-03-24.png"
+image: "/assets/images/generated/news-briefing-cmc-2026-03-24.png"
 permalink: "/market-analysis/2026/03/24/daily-crypto-market-report/"
-description: "24시간 변동 +3.40%로 뚜렷한 강세입니다. 거래량이 동반된 상승이라면 추세 지속 신호로 해석할 수 있습니다. BTC 도미넌스 56.6%로 비트코인 중심 흐름이 지속됩니다. 과거 사이클에서 도미넌스 55% 이상 구간은 알트 시즌 이전 축적기에 해당하는 경우가 많았습니다."
-excerpt: "24시간 변동 +3.40%로 뚜렷한 강세입니다. 거래량이 동반된 상승이라면 추세 지속 신호로 해석할 수 있습니다. BTC 도미넌스 56.6%로 비트코인 중심 흐름이 지속됩니다.…"
-image_alt: "암호화폐 시장 종합 리포트 - 2026-03-24 | SOL +5.6% - 시장 분석 뉴스 요약 이미지"
+description: "암호화폐 시장 종합 리포트: 2026-03-24 기준 상위 30개 코인 흐름을 점검합니다. SOL 강세, BTC 도미넌스 56.6%, 공포·탐욕 8을 중심으로 시장 심리와 자금 흐름을 정리했습니다."
+excerpt: "2026-03-24 기준 상위 30개 코인 흐름과 SOL 강세, BTC 도미넌스 56.6%, 공포·탐욕 8을 함께 점검한 시장 리포트입니다."
+image_alt: "암호화폐 시장 종합 리포트 대표 브리핑 이미지"
 ---
 
 ## 시장 시각화
