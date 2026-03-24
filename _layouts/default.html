@@ -10,6 +10,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&family=Noto+Serif+KR:wght@600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
   <meta name="theme-color" content="#0a0e14" id="meta-theme-color">
+  {% if page.image %}
+  {% assign preload_webp = page.image | replace: '.png', '.webp' %}
+  {% if page.image contains '/assets/images/generated/' %}
+  <link rel="preload" as="image" type="image/webp" href="{{ preload_webp | relative_url }}">
+  {% endif %}
+  {% endif %}
   {% include critical-css.html %}
   <!-- Inline: theme flash-prevention must run before first paint to avoid FOUC -->
   <script>

@@ -57,7 +57,8 @@ jobs:
           python3 -m pytest tests/ -v --tb=short \
             --cov=common --cov-report=term-missing \
             --cov-report=html:../coverage-html \
-            --cov-report=json:../coverage.json || true
+            --cov-report=json:../coverage.json \
+            --cov-fail-under=10
 
       - name: Upload coverage report
         if: always()
