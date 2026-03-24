@@ -907,12 +907,40 @@ def _analyze_korean_title(title: str) -> str:
     return clean[:150] if len(clean) > 15 else title
 
 
+# ---------------------------------------------------------------------------
+# Keyword -> fixed suffix mapping for English title analysis.
+# Each entry is (keywords, suffix_string). Categories that require dynamic
+# content (detail_str injection, extra logic) are handled inline in the
+# function body below.
+# ---------------------------------------------------------------------------
+_ENGLISH_TITLE_CATEGORIES: Dict[str, str] = {
+    # Geopolitical risk
+    "iran|war|conflict|military|attack": "지정학적 리스크가 글로벌 시장 심리에 영향을 주고 있습니다.",
+    # Earnings
+    "earning|revenue|profit|guidance|beat|miss": "실적 결과가 향후 주가 방향을 결정합니다.",
+    # Fed / monetary policy
+    "fed|fomc|powell|rate cut|rate hike": "연준 정책은 글로벌 자산 배분의 핵심 변수입니다.",
+    # Trump / policy
+    "trump|white house|executive order|tariff": "정책 변화가 시장에 미치는 영향을 주시해야 합니다.",
+    # Crypto majors — no suffix (title alone)
+    "bitcoin|btc|crypto|ethereum|altcoin": "",
+    # AI / semiconductors — no suffix (title alone)
+    "ai |artificial intelligence|nvidia|semiconductor|chip": "",
+    # Precious metals — no suffix (title alone)
+    "gold|silver|precious": "",
+}
+
+# Pre-compiled keyword sets derived from _ENGLISH_TITLE_CATEGORIES for O(1) lookup
+_ENGLISH_TITLE_KW_SETS: list = [
+    (frozenset(k.split("|")), v) for k, v in _ENGLISH_TITLE_CATEGORIES.items()
+]
+
+
 def _analyze_english_title(title: str, title_lower: str) -> str:
     """Analyze an English news title and generate a specific Korean description."""
     _subj = _extract_title_entities(title)
     # Use only named entities (not raw numbers/prices) for the subject prefix
     _named = [e for e in _subj if not re.match(r"^[\d$,.%+\-]+$", e)]
-    _subj_str = ", ".join(_named[:3]) if _named else ""
 
     # Extract numbers/percentages/prices from title for specificity
     pct_match = re.search(r"(\d[\d,.]*)\s*%", title)
@@ -946,6 +974,8 @@ def _analyze_english_title(title: str, title_lower: str) -> str:
     detail_str = ", ".join(detail_parts)
 
     # Determine event category and add specific context
+
+    # --- Dynamic categories: inject detail_str into result ---
     if any(kw in title_lower for kw in ["crash", "plunge", "tumble", "sink", "slump", "dive"]):
         base = clean_title[:120]
         extra = f" ({detail_str})" if detail_str else ""
@@ -971,31 +1001,15 @@ def _analyze_english_title(title: str, title_lower: str) -> str:
         extra = f" ({detail_str})" if detail_str else ""
         return f"{base}.{extra} 유가 변동은 인플레이션과 에너지 섹터에 직접 영향을 미칩니다."
 
-    if any(kw in title_lower for kw in ["iran", "war", "conflict", "military", "attack"]):
-        return f"{clean_title[:120]}. 지정학적 리스크가 글로벌 시장 심리에 영향을 주고 있습니다."
-
-    if any(kw in title_lower for kw in ["earning", "revenue", "profit", "guidance", "beat", "miss"]):
-        return f"{clean_title[:120]}. 실적 결과가 향후 주가 방향을 결정합니다."
-
-    if any(kw in title_lower for kw in ["fed", "fomc", "powell", "rate cut", "rate hike"]):
-        return f"{clean_title[:120]}. 연준 정책은 글로벌 자산 배분의 핵심 변수입니다."
-
-    if any(kw in title_lower for kw in ["trump", "white house", "executive order", "tariff"]):
-        return f"{clean_title[:120]}. 정책 변화가 시장에 미치는 영향을 주시해야 합니다."
-
-    if any(kw in title_lower for kw in ["bitcoin", "btc", "crypto", "ethereum", "altcoin"]):
-        return f"{clean_title[:120]}."
-
     if any(kw in title_lower for kw in ["s&p", "nasdaq", "dow", "futures", "stock market"]):
         base = clean_title[:120]
         extra = f" ({detail_str})" if detail_str else ""
         return f"{base}.{extra}"
 
-    if any(kw in title_lower for kw in ["ai ", "artificial intelligence", "nvidia", "semiconductor", "chip"]):
-        return f"{clean_title[:120]}."
-
-    if any(kw in title_lower for kw in ["gold", "silver", "precious"]):
-        return f"{clean_title[:120]}."
+    # --- Fixed-suffix categories via dict table ---
+    for kw_set, suffix in _ENGLISH_TITLE_KW_SETS:
+        if any(kw in title_lower for kw in kw_set):
+            return f"{clean_title[:120]}." if not suffix else f"{clean_title[:120]}. {suffix}"
 
     # Default: use cleaned title with contextual suffix
     _meaningful = [e for e in _named if len(e) > 2]
