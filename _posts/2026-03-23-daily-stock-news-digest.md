@@ -8,10 +8,11 @@ keywords: "stock, market, daily-digest"
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-23.png"
+image: "/assets/images/generated/market-snapshot-2026-03-23.webp"
 permalink: "/stock-news/2026/03/23/daily-stock-news-digest/"
-description: "주식 시장 뉴스 종합 - 2026-03-23 - 최신 주식 시장 뉴스와 분석을 확인하세요. 주요 키워드: stock, market, daily-digest."
-excerpt: "주식 시장 뉴스 종합 - 2026-03-23 - 최신 주식 시장 뉴스와 분석을 확인하세요. 주요 키워드: stock, market, daily-digest."
-image_alt: "주식 시장 뉴스 종합 - 2026-03-23 - stock-news 뉴스 요약 이미지"
+description: "주식 시장 뉴스 종합: 2026-03-23 기준 한국 증시 상승 흐름과 AI·반도체 관련 강세를 중심으로 118건의 핵심 뉴스를 정리했습니다."
+excerpt: "한국 증시 상승 흐름과 AI·반도체 관련 강세를 중심으로 2026-03-23 주식 시장 핵심 뉴스 118건을 정리한 브리핑입니다."
+image_alt: "주식 시장 뉴스 종합 대표 스냅샷 이미지"
 ---
 
 **2026-03-23** 주식 시장에서 118건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,781.20(+0.31%), KOSDAQ 1,161.52(+1.58%), USD/KRW 1,504.83(+0.70%).

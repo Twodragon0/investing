@@ -9,10 +9,11 @@ source: "CoinMarketCap"
 source_url: "https://coinmarketcap.com/"
 lang: "ko"
 image: "/assets/images/generated/og-daily-crypto-market-report-2026-03-23.png"
+image: "/assets/images/generated/news-briefing-cmc-2026-03-23.png"
 permalink: "/market-analysis/2026/03/23/daily-crypto-market-report/"
-description: "24시간 변동 -2.36%로 소폭 조정 구간입니다. 기술적 지지선에서의 매수세 유입 여부를 확인해야 합니다. BTC 도미넌스 56.3%로 비트코인 중심 흐름이 지속됩니다. 과거 사이클에서 도미넌스 55% 이상 구간은 알트 시즌 이전 축적기에 해당하는 경우가 많았습니다."
-excerpt: "24시간 변동 -2.36%로 소폭 조정 구간입니다. 기술적 지지선에서의 매수세 유입 여부를 확인해야 합니다. BTC 도미넌스 56.3%로 비트코인 중심 흐름이 지속됩니다. 과거…"
-image_alt: "암호화폐 시장 종합 리포트 - 2026-03-23 | HYPE -5.4% - 시장 분석 뉴스 요약 이미지"
+description: "암호화폐 시장 종합 리포트: 2026-03-23 기준 상위 30개 코인 흐름을 점검합니다. HYPE 약세, BTC 도미넌스 56.3%, 공포·탐욕 10을 중심으로 시장 심리와 자금 흐름을 정리했습니다."
+excerpt: "2026-03-23 기준 상위 30개 코인 흐름과 HYPE 약세, BTC 도미넌스 56.3%, 공포·탐욕 10을 함께 점검한 시장 리포트입니다."
+image_alt: "암호화폐 시장 종합 리포트 대표 브리핑 이미지"
 ---
 
 ## 시장 시각화
