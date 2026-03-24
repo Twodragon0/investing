@@ -107,6 +107,27 @@ This repository is the data intelligence layer for DragonQuant. It collects mark
 - If a post references an OG image, generate or verify that asset before commit.
 - Breaking schema changes require synchronized updates in the `crypto` repository.
 
+## Project Agents (`.claude/agents/`)
+
+| Agent File | Model | Role |
+|-----------|-------|------|
+| `investing-lead.md` | opus | 프로젝트 리드, 전체 조율, 작업 분배 |
+| `architect.md` | opus | 수집 파이프라인 설계, Jekyll 통합 아키텍처 |
+| `data-pipeline-lead.md` | sonnet | 수집기 개발 리드, API 연동 |
+| `collector-reviewer.md` | sonnet | 수집기 코드 리뷰, 중복 방지 검증 |
+| `content-pipeline.md` | sonnet | 요약/분석 생성, 이미지 생성 |
+| `workflow-optimizer.md` | sonnet | GitHub Actions 워크플로우 최적화 |
+| `workflow-debugger.md` | sonnet | CI/워크플로우 디버깅 |
+| `jekyll-checker.md` | haiku | Jekyll 빌드 검증, 템플릿/스타일 |
+| `test-engineer.md` | sonnet | 수집기 테스트, dedup 검증, 멱등성 |
+
+### Multi-Agent Workflow Patterns
+
+- **데이터 소스 추가**: investing-lead → data-pipeline-lead + workflow-optimizer + test-engineer (병렬) → collector-reviewer → architect
+- **일일 요약 파이프라인**: content-pipeline → jekyll-checker → test-engineer → workflow-optimizer
+- **사이트 리디자인**: architect → jekyll-checker + content-pipeline (병렬) → test-engineer
+- **버그 조사**: workflow-debugger → data-pipeline-lead → test-engineer → investing-lead
+
 ## Delivery Checklist
 
 - Inspect current git state before edits.
