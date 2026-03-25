@@ -162,6 +162,27 @@ _MISTRANSLATION_FIXES: dict[str, str] = {
     "발전을 촉진하는": "발전을 지원하는",
     "성장을 촉진": "성장을 견인",
     "채택을 촉진": "채택을 촉진",
+    # 직역체: "선전한" in news context = "주장한/발표한"
+    "선전한 후": "주장한 후",
+    "을 선전": "을 주장",
+    # 조사 오류: 받침 없는 이름 + 으로
+    "트럼프으로": "트럼프와",
+    # 띄어쓰기 오류
+    "미국과이란": "미국과 이란",
+    # 직역체: "unkillable" → "격추 불가능한"
+    "죽일 수 없는": "격추 불가능한",
+    # 직역체: 어색한 명사구
+    "이더리움 눈 ": "이더리움, ",
+    # 직역체: 어색한 강조 반복
+    "매우 매우 ": "매우 ",
+    # 조사 오류: "강세이 된" → "강세를 보인"
+    "강세이 된": "강세를 보인",
+    "강세이 ": "강세를 ",
+    # 어색한 직역체: 의문형 기사 제목
+    "잊어버리고 대신": "대신",
+    # 어색한 직역: "반등 시간을 그리워"
+    "시간을 그리워해야": "시점을 기다려야",
+    "시간을 그리워": "시점을 기다려야",
 }
 
 
@@ -493,32 +514,40 @@ _CATEGORY_KO: dict[str, str] = {
 
 _CATEGORY_DESC_TEMPLATES: dict[str, list[str]] = {
     "crypto-news": [
-        "{title} - 비트코인, 이더리움 등 암호화폐 시장 핵심 동향.{tags}",
-        "오늘의 암호화폐 브리핑: {title}. 시세 변동과 온체인 데이터를 분석합니다.{tags}",
-        "{title}. 크립토 시장 심리와 자금 흐름을 점검합니다.{tags}",
+        "{title} — 비트코인·이더리움 시세 변동과 온체인 데이터를 분석합니다.",
+        "오늘의 암호화폐 브리핑: {title}. 크립토 시장 심리와 자금 흐름을 점검합니다.",
+        "{title}. 주요 코인 가격 동향과 거래량 변화를 정리합니다.",
     ],
     "stock-news": [
-        "{title} - 미국·한국 주식 시장 동향과 섹터별 분석.{tags}",
-        "오늘의 주식 시장: {title}. 주요 지수와 종목 흐름을 정리합니다.{tags}",
-        "{title}. 매크로 지표와 기업 실적이 시장에 미치는 영향을 살펴봅니다.{tags}",
+        "{title} — 미국·한국 주식 시장 동향과 섹터별 투자 포인트를 분석합니다.",
+        "오늘의 주식 시장: {title}. 주요 지수 흐름과 종목 이슈를 정리합니다.",
+        "{title}. 매크로 지표와 기업 실적이 투자 전략에 미치는 영향을 살펴봅니다.",
     ],
     "regulatory-news": [
-        "{title} - 글로벌 금융 규제 및 정책 변화 추적.{tags}",
-        "규제 동향 브리핑: {title}. 각국 규제 기관의 최신 결정을 분석합니다.{tags}",
-        "{title}. 규제 환경 변화가 시장에 미칠 영향을 점검합니다.{tags}",
+        "{title} — 글로벌 금융 규제 변화와 시장 영향을 분석합니다.",
+        "규제 동향 브리핑: {title}. 각국 규제 기관의 최신 결정을 정리합니다.",
+        "{title}. 규제 환경 변화가 투자 전략에 미칠 영향을 점검합니다.",
     ],
     "worldmonitor": [
-        "{title} - 지정학적 리스크와 글로벌 이슈 모니터링.{tags}",
-        "글로벌 브리핑: {title}. 국제 정세가 금융 시장에 미치는 영향을 분석합니다.{tags}",
-        "{title}. 지정학적 변수와 매크로 리스크를 점검합니다.{tags}",
+        "{title} — 지정학적 리스크와 글로벌 안보 이슈를 모니터링합니다.",
+        "글로벌 브리핑: {title}. 국제 정세가 금융 시장에 미치는 영향을 분석합니다.",
+        "{title}. 지정학적 변수와 매크로 리스크 요인을 점검합니다.",
     ],
     "political-trades": [
-        "{title} - 미국 의회 내부자 거래와 정책 동향 추적.{tags}",
-        "정치인 거래 리포트: {title}. 입법 동향과 의원 포트폴리오를 분석합니다.{tags}",
+        "{title} — 미국 의회 내부자 거래와 정책 연관성을 분석합니다.",
+        "정치인 거래 리포트: {title}. 입법 동향과 의원 포트폴리오 변화를 추적합니다.",
     ],
     "social-media": [
-        "{title} - 소셜 미디어 트렌드와 커뮤니티 반응 분석.{tags}",
-        "소셜 브리핑: {title}. 시장 심리와 커뮤니티 동향을 정리합니다.{tags}",
+        "{title} — 소셜 미디어 트렌드와 시장 심리를 분석합니다.",
+        "소셜 브리핑: {title}. 커뮤니티 반응과 투자 심리 변화를 정리합니다.",
+    ],
+    "market-analysis": [
+        "{title} — 시장 전반의 흐름과 크로스에셋 투자 시사점을 분석합니다.",
+        "시장 분석 브리핑: {title}. 주요 자산군의 상관관계와 방향성을 점검합니다.",
+    ],
+    "security-alerts": [
+        "{title} — 사이버 보안 위협과 취약점 대응 현황을 정리합니다.",
+        "보안 알림: {title}. 주요 보안 사고와 시장 신뢰에 미칠 영향을 분석합니다.",
     ],
 }
 
@@ -541,26 +570,25 @@ def _build_fallback_description(title: str, category: str, tags: Optional[List[s
     falling back to generic templates when no match exists.
     """
     cat_ko = _CATEGORY_KO.get(category, category)
-    tag_str = ""
-    if tags and len(tags) >= 2:
-        tag_str = f" 주요 키워드: {', '.join(tags[:4])}."
 
     # Clean title for description use
     clean_title = re.sub(r"[*_`~]", "", title).strip()
+    # Remove date suffix from title if present (e.g., "- 2026-03-25")
+    clean_title = re.sub(r"\s*[-–]\s*\d{4}-\d{2}-\d{2}\s*$", "", clean_title).strip()
 
     # Try category-specific template first
     cat_templates = _CATEGORY_DESC_TEMPLATES.get(category)
     if cat_templates:
         seed = hash((datetime.now(UTC).date().isoformat(), title))
         template = cat_templates[seed % len(cat_templates)]
-        desc = template.format(title=clean_title, tags=tag_str)
+        desc = template.format(title=clean_title)
         return smart_truncate(desc, 160)
 
     templates = [
-        f"{clean_title} - 최신 {cat_ko} 뉴스와 분석을 확인하세요.{tag_str}",
-        f"{cat_ko} 분야 핵심 동향: {clean_title}.{tag_str}",
-        f"오늘의 {cat_ko} 브리핑 — {clean_title}.{tag_str}",
-        f"{clean_title} 관련 {cat_ko} 리포트입니다.{tag_str}",
+        f"{clean_title} — 최신 {cat_ko} 뉴스와 투자 포인트를 정리합니다.",
+        f"{cat_ko} 핵심 동향: {clean_title}. 시장 영향과 대응 전략을 확인하세요.",
+        f"오늘의 {cat_ko} 브리핑 — {clean_title}. 주요 이슈와 투자 시사점을 분석합니다.",
+        f"{clean_title} — {cat_ko} 시장에 미칠 영향을 점검합니다.",
     ]
     seed = hash((datetime.now(UTC).date().isoformat(), title))
     desc = templates[seed % len(templates)]

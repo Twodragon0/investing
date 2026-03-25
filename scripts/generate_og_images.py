@@ -1203,7 +1203,7 @@ def generate_og_image(
     desc_text = description if description else ""
     desc_lines = wrap_text(safe_text(desc_text), max_width=30, max_lines=2) if desc_text else []
 
-    fig = plt.figure(figsize=(12, 6.3), dpi=100)
+    fig = plt.figure(figsize=(12, 6.3), dpi=150)
     ax = fig.add_axes((0, 0, 1, 1))
     ax.set_xlim(0, 1200)
     ax.set_ylim(0, 630)
@@ -1318,9 +1318,9 @@ def generate_og_image(
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     try:
-        fig.savefig(output_path, dpi=100, facecolor=BG_COLOR, edgecolor="none", bbox_inches=None, pad_inches=0)
+        fig.savefig(output_path, dpi=150, facecolor=BG_COLOR, edgecolor="none", bbox_inches=None, pad_inches=0)
         logger.info("Generated: %s", output_path)
-        _convert_to_webp(output_path)
+        _convert_to_webp(output_path, quality=88)
         return True
     except OSError as e:
         logger.error("Failed to save %s: %s", output_path, e)
@@ -1368,7 +1368,7 @@ def generate_trading_journal_og_image(post: Dict[str, str], output_path: str) ->
     desc = post.get("excerpt") or post.get("description") or "Execution notes, PnL and next session focus."
     desc_lines = wrap_text(safe_text(desc), max_width=48, max_lines=3)
 
-    fig = plt.figure(figsize=(12, 6.3), dpi=100)
+    fig = plt.figure(figsize=(12, 6.3), dpi=150)
     ax = fig.add_axes((0, 0, 1, 1))
     ax.set_xlim(0, 1200)
     ax.set_ylim(0, 630)
@@ -1527,9 +1527,9 @@ def generate_trading_journal_og_image(post: Dict[str, str], output_path: str) ->
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     try:
-        fig.savefig(output_path, dpi=100, facecolor="#0a0f18", edgecolor="none", bbox_inches=None, pad_inches=0)
+        fig.savefig(output_path, dpi=150, facecolor="#0a0f18", edgecolor="none", bbox_inches=None, pad_inches=0)
         logger.info("Generated journal OG: %s", output_path)
-        _convert_to_webp(output_path)
+        _convert_to_webp(output_path, quality=88)
         return True
     except OSError as e:
         logger.error("Failed to save %s: %s", output_path, e)

@@ -214,6 +214,8 @@ def clean_description(fm: dict[str, str]) -> bool:
     inner = re.sub(r"^>\s*", "", inner)
     # Remove markdown bold
     inner = re.sub(r"\*\*([^*]+)\*\*", r"\1", inner)
+    # Remove trailing raw tag strings (e.g., "주요 키워드: crypto, news, daily-digest.")
+    inner = re.sub(r"\s*주요 키워드:[\s\w,.-]+\.?\s*$", "", inner)
     # Collapse whitespace
     inner = re.sub(r"\s+", " ", inner).strip()
 
@@ -249,6 +251,9 @@ def rebuild_low_quality_metadata(fm: dict[str, str], body: str) -> dict[str, int
         if not cleaned or len(cleaned) < 55:
             return True
         if any(token in cleaned for token in ("http://", "https://", "](", "<div", "<span")):
+            return True
+        # Raw tag strings leaking into description
+        if "주요 키워드:" in cleaned:
             return True
         ascii_letters = len(re.findall(r"[A-Za-z]", cleaned))
         hangul_letters = len(re.findall(r"[가-힣]", cleaned))
@@ -778,6 +783,13 @@ def process_post(filepath: Path, dry_run: bool = False) -> dict[str, int]:
     body, did_change = fix_markdown_link_artifacts(body)
     if did_change:
         stats["markdown_fixed"] = 1
+
+    # Remove "주요 키워드: ..." tails from body text (HTML and markdown)
+    _body_before = body
+    body = re.sub(r"\.\s*주요 키워드:[^<\n]{3,80}\.", ".", body)
+    body = re.sub(r"\s*주요 키워드:[^<\n]{3,80}\.?(?=</)", "", body)
+    if body != _body_before:
+        stats["body_keyword_tail_cleaned"] = 1
 
     body, did_change = collapse_blank_lines(body)
     if did_change:
