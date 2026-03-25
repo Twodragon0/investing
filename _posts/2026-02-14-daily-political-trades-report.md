@@ -8,7 +8,7 @@ source: "consolidated"
 lang: "ko"
 description: "2026-02-14 정치인 거래·재산 공개·정책 동향을 종합 분석합니다. 미국 의회 거래 1건, SEC 내부자 거래 5건, 트럼프 정책 6건, 총 12건이 수집되었습니다."
 image: "/assets/images/generated/og-daily-political-trades-report-2026-02-14.png"
-excerpt: "정치인 거래·정책 리포트 - 2026-02-14 - 최신 정치인 거래 뉴스와 분석을 확인하세요. 주요 키워드: political-trades, congress, sec, tr..."
+excerpt: "주요 키워드: sec(10), trump(8), tariff(6), congress(4), 행정명령(2) 규제/정책 ███████░░░░░░░░░░░ 42% (5건)"
 image_alt: "정치인 거래·정책 리포트 - 2026-02-14 - political-trades 뉴스 요약 이미지"
 permalink: "/political-trades/2026/02/14/daily-political-trades-report/"
 ---

@@ -7,7 +7,7 @@ tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-regulatory-report-2026-02-24.png"
-description: "글로벌 규제 동향 리포트 - 2026-02-24. 규제 환경 변화가 시장에 미칠 영향을 점검합니다. 주요 키워드: regulation, sec, cftc, fsc."
+description: "글로벌 규제 동향 리포트 - 2026-02-24. 규제 환경 변화가 시장에 미칠 영향을 점검합니다."
 excerpt: "2026년 2월 24일 기준으로 총 32건의 글로벌 금융 규제 뉴스가 수집되었습니다. 이 중 한국 금융위원회 관련 소식이 30건으로 대부분을 차지하며, 미국 CFTC에서 1건,…"
 image_alt: "글로벌 규제 동향 리포트 - 2026-02-24 - regulatory-news 뉴스 요약 이미지"
 permalink: "/regulatory-news/2026/02/24/daily-regulatory-report/"

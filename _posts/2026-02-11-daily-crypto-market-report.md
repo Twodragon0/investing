@@ -7,7 +7,7 @@ tags: [market-report, crypto, top-coins, trending, daily]
 source: "CoinGecko"
 source_url: "https://www.coingecko.com/"
 lang: "ko"
-description: "암호화폐 시장 종합 리포트 - 2026-02-11 관련 시장 분석 리포트입니다. 주요 키워드: market-report, crypto, top-coins, trending."
+description: "시장 분석 브리핑: 암호화폐 시장 종합 리포트. 주요 자산군의 상관관계와 방향성을 점검합니다 - Investing Dragon 자동 수집 분석 리포트."
 image: "/assets/images/generated/og-daily-crypto-market-report-2026-02-11.png"
 excerpt: "총 시가총액: $2.36T ( -2.27%) 24시간 거래량: $113.94B - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "암호화폐 시장 종합 리포트 - 2026-02-11 - market-analysis 뉴스 요약 이미지"

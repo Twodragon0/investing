@@ -7,7 +7,7 @@ tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-regulatory-report-2026-02-16.png"
-description: "글로벌 규제 동향 리포트 - 2026-02-16. 규제 환경 변화가 시장에 미칠 영향을 점검합니다. 주요 키워드: regulation, sec, cftc, fsc."
+description: "글로벌 규제 동향 리포트 - 2026-02-16. 규제 환경 변화가 시장에 미칠 영향을 점검합니다."
 excerpt: "수익증권 장외거래중개업(조각투자 장외거래소)예비인가금융위원회 정례회의(‘26.2.13.) 의결 시장에서는 신탁수익증권 투자와 투자계약증권 투자를 조각투자로 인식,금번 인가는…"
 image_alt: "글로벌 규제 동향 리포트 - 2026-02-16 - regulatory-news 뉴스 요약 이미지"
 permalink: "/regulatory-news/2026/02/16/daily-regulatory-report/"

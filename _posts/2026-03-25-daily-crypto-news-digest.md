@@ -9,8 +9,8 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-25.png"
 permalink: "/crypto-news/2026/03/25/daily-crypto-news-digest/"
-description: "오늘의 암호화폐 브리핑: 암호화폐 뉴스 브리핑 - 2026-03-25. 시세 변동과 온체인 데이터를 분석합니다. 주요 키워드: crypto, news, daily-digest."
-excerpt: "오늘의 암호화폐 브리핑: 암호화폐 뉴스 브리핑 - 2026-03-25. 시세 변동과 온체인 데이터를 분석합니다. 주요 키워드: crypto, news, daily-digest."
+description: "오늘의 암호화폐 브리핑: 암호화폐 뉴스 브리핑 - 2026-03-25. 시세 변동과 온체인 데이터를 분석합니다."
+excerpt: "2026-03-25 암호화폐 시장에서 103건의 뉴스를 분석했습니다. 오늘은 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "암호화폐 뉴스 브리핑 - 2026-03-25 - 암호화폐 뉴스 요약 이미지"
 ---
 
@@ -51,7 +51,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-25 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent">
 <strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/read/CBMiugFBVV95cUxQRzU5eGhMS2Y4clhtWmdyMW5RbVoxWUJFYTBZbjJzT3FmNzFXNXhhaThEdTh0bENNZThpWGFpRGRxMTM0cThCSURoVWZINTFWLV8wcmlTTFlfQmk1UTlocUpLanIwVDVadU1IanlfT2hTTVpZbDdXVng2eXhuWW02UkxmbHBDenlBd0ZIRGp4NmV0U0FBVFFNeG5LQTluZ0FId3Q3ckk1TFE0blp3Q2tzRGw0OVUxTlllWkE?hl=en-US&gl=US&ceid=US%3Aen">비트코인은 번스타인 분석가들이 토큰이 '바닥을 친 것 같다'고 말하면서 70,000달러 아래로 떨어졌습니다.</a> <span class="p0-desc">Bernstein 분석가들이 토큰이 '바닥을 본 것 같다'고 말하면서 비트코인은 $70,000 아래로 떨어졌습니다. ($70,000) 급락 배경과 반등 시간을 그리워해야 합니다.</span></li>
+<li><a href="https://news.google.com/read/CBMiugFBVV95cUxQRzU5eGhMS2Y4clhtWmdyMW5RbVoxWUJFYTBZbjJzT3FmNzFXNXhhaThEdTh0bENNZThpWGFpRGRxMTM0cThCSURoVWZINTFWLV8wcmlTTFlfQmk1UTlocUpLanIwVDVadU1IanlfT2hTTVpZbDdXVng2eXhuWW02UkxmbHBDenlBd0ZIRGp4NmV0U0FBVFFNeG5LQTluZ0FId3Q3ckk1TFE0blp3Q2tzRGw0OVUxTlllWkE?hl=en-US&gl=US&ceid=US%3Aen">비트코인은 번스타인 분석가들이 토큰이 '바닥을 친 것 같다'고 말하면서 70,000달러 아래로 떨어졌습니다.</a> <span class="p0-desc">Bernstein 분석가들이 토큰이 '바닥을 본 것 같다'고 말하면서 비트코인은 $70,000 아래로 떨어졌습니다. ($70,000) 급락 배경과 반등 시점을 기다려야 합니다.</span></li>
 <li><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE9WSzlqNEM1RDNjbDJWNzRRV0VJeU5NQ1Z6eTFvY2pWTVhydUYtM1pmRnlQSm9FdzZTR0RNa0hacXNWSXdnZjZlaDIzY0tXTWRoSlU4NEhkaGMyQ2dFQThNaGlUbmlsTFRnVzFHdVE0U1VLS0lvSDh2dlFSWmU?oc=5">해커는 가짜 이력서를 사용하여 기업 자격 증명을 훔치고 암호화 채굴기를 배포합니다 - 해커 뉴스</a> <span class="p0-desc">해커는 가짜 이력서를 사용하여 기업 자격 증명을 훔치고 암호화폐 채굴기를 배포합니다. 해커 뉴스</span></li>
 <li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQMWlHX3Q3SjE5OVVaTmd1NDl0Ti0ybWdWNTV6NHNsLThJczhqOW5tbmxLLTYwSmh5UjJ1V3Y1VkZLOEFYT0s4MU9qbXgxRnEyTWVtZ1VtR3kwNmJCYTBRNmRud1JXNmhWOUhiM0dPUnhPOEpjd1ptb20tOEY4X0h0SXhEc0RZZTQt?oc=5">암호화폐 하루 230억 달러 증발했다.비트코인·알트코인 급락에 시장 ‘울상’</a> <span class="p0-desc">시장이 큰 폭으로 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</span></li>
 </ul>

@@ -159,7 +159,7 @@ image_alt: "3월 16일 주식 시장 지수와 뉴스 분포를 요약한 스냅
 <div class="news-card-thumb"><img src="https://img.hankyung.com/photo/202603/02.22579247.1.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
 <div class="news-card-body">
 <a href="https://www.hankyung.com/article/2026031523937" class="news-title" target="_blank" rel="noopener noreferrer">속보] 李대통령, 與초선 만찬서 "당정 협력 유지해 개혁과제 해결"</a>
-<p class="news-desc">속보] 李대통령, 與초선 만찬서 "당정 협력 유지해 개혁과제 해결". 주요 키워드: 속보, 대통령, 초선.</p>
+<p class="news-desc">속보] 李대통령, 與초선 만찬서 "당정 협력 유지해 개혁과제 해결".</p>
 <span class="source-tag" data-source-type="kr-media">한국경제</span>
 </div>
 </div>

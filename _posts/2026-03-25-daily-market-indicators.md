@@ -9,8 +9,8 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-market-indicators-2026-03-25.png"
 permalink: "/market-analysis/2026/03/25/daily-market-indicators/"
-description: "시장 심리 및 리스크 지표 (2026-03-25) - 최신 시장 분석 뉴스와 분석을 확인하세요. 주요 키워드: market-analysis, fear-greed, vix, market-breadth."
-excerpt: "시장 심리 및 리스크 지표 (2026-03-25) - 최신 시장 분석 뉴스와 분석을 확인하세요. 주요 키워드: market-analysis, fear-greed, vix,…"
+description: "시장 심리 및 리스크 지표 (2026-03-25) — 시장 전반의 흐름과 크로스에셋 투자 시사점을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
+excerpt: "1. $685M in Bitcoin Put Options Signals Rising Market Fear - Coinfomania 1. 10-year Treasury yield…"
 image_alt: "시장 심리 및 리스크 지표 (2026-03-25) - 시장 분석 뉴스 요약 이미지"
 ---
 

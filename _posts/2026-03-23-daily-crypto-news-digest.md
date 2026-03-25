@@ -8,7 +8,6 @@ keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-23.png"
-image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-23.png"
 permalink: "/crypto-news/2026/03/23/daily-crypto-news-digest/"
 description: "암호화폐 뉴스 브리핑: 2026-03-23 기준 비트코인 약세와 정책 변수, 주요 알트코인 변동성을 중심으로 핵심 뉴스를 정리했습니다."
 excerpt: "비트코인 약세와 정책 변수, 주요 알트코인 변동성을 중심으로 2026-03-23 암호화폐 핵심 뉴스를 정리한 브리핑입니다."
@@ -283,7 +282,7 @@ image_alt: "암호화폐 뉴스 브리핑 대표 이미지"
 
 <details><summary>그 외 3건 보기</summary><div class="details-content"><ol class="news-overflow-list">
 <li><a href="https://news.google.com/read/CBMivgFBVV95cUxPOWlkUE5Vcmo5aU5WYlppQjVUdFBGNk1zZE8xUXB0MHhURThjbW96SUZ6cVVYZUpyeWZLVlN1SlM1ZXNlcThTZThkUjZrdUN6MXRfeTRmMmV0OUE0OU1WS00xUWVWN09sSzdwX3d4RFVZUDFLNHpmX0VjUlpuRUJtYnhCTnhzMHAxSUttT0s5aC1mNWx4T2tMbWRocC1zQVRRSlo2NGFCZ01xZ2RQNEtOd1BZdmpfY0Fuc0Nyazdn?hl=en-US&gl=US&ceid=US%3Aen">비트코인은 불안한 시장에서 이더리움, XRP, 도지코인 테스트 지원으로 $70,000를 방어합니다.</a></li>
-<li><a href="https://cointelegraph.com/news/ethereum-25-rally-richest-eth-whale-return-profitable?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">이더리움 눈 25% 랠리 가장 부유한 사람 ETH 고래 '수익성 있는 상태'로 복귀</a></li>
+<li><a href="https://cointelegraph.com/news/ethereum-25-rally-richest-eth-whale-return-profitable?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">이더리움, 25% 랠리 가장 부유한 사람 ETH 고래 '수익성 있는 상태'로 복귀</a></li>
 <li><a href="https://www.coindesk.com/tech/2026/03/22/ethereum-faces-make-or-break-moment-in-high-stakes-balancing-act-as-scaling-quantum-and-ai-pressures-mount">이더리움은 스케일링, 양자 및 AI 압력 증가로 작용하는 고위험 균형 조정에서 성패의 순간에 직면합니다.</a></li>
 </ol></div></details>
 

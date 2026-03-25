@@ -9,7 +9,7 @@ lang: "ko"
 description: "한줄 요약: 미국 기술주 반등 속 다우 50,000 신기록, 국내 코스피 5,300선 유지 - 암호화폐는 트럼프 정책 불확실성 + DeFi 해킹으로 변동성 확대"
 image: "/assets/images/generated/og-collected-materials-summary-2026-02-10.png"
 pin: false
-excerpt: "Daily Digest - 2026-02-10 (월) - 최신 시장 분석 뉴스와 분석을 확인하세요. 주요 키워드: summary, daily-digest, market-ana..."
+excerpt: "S&P 500 | $6,964.82 | +32.52 | - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "Daily Digest - 2026-02-10 (월) - market-analysis 뉴스 요약 이미지"
 permalink: "/market-analysis/2026/02/10/collected-materials-summary/"
 ---

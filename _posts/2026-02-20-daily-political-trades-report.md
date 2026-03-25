@@ -6,7 +6,7 @@ categories: [political-trades]
 tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-trading]
 source: "consolidated"
 lang: "ko"
-description: "정치인 거래 리포트: 정치인 거래·정책 리포트 - 2026-02-20. 입법 동향과 의원 포트폴리오를 분석합니다. 주요 키워드: political-trades, congress, sec, trump."
+description: "정치인 거래 리포트: 정치인 거래·정책 리포트 - 2026-02-20. 입법 동향과 의원 포트폴리오를 분석합니다."
 image: "/assets/images/generated/og-daily-political-trades-report-2026-02-20.png"
 excerpt: "주요 테마: 매크로/금리, 정치/정책, AI/기술 Nvidia 매도 패턴 포착: 한 의원이 2022년부터 매년 Nvidia 주식을 매도해, 결과적으로 631% 수익을 놓친…"
 image_alt: "정치인 거래·정책 리포트 - 2026-02-20 - political-trades 뉴스 요약 이미지"

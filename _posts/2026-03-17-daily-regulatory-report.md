@@ -91,7 +91,7 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-03-17 - regulatory-news 뉴
 <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
 
 **5. [금융위원장, SC그룹 회장 면담](https://www.fsc.go.kr/no010101/86456)**
-금융위원장, SC그룹 회장 면담. 주요 키워드: 금융위원장, 그룹, 회장.
+금융위원장, SC그룹 회장 면담.
 <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
 
 **6. [2026년 「국민참여형 국민성장펀드」의 자금 모집을 담당할 공모펀드 운용사를 선정하였습니다.](https://www.fsc.go.kr/no010101/86454)**

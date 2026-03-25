@@ -9,7 +9,7 @@ source_url: "https://worldmonitor.app"
 lang: "ko"
 image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-03-06.png"
 description: "2026-03-06 WorldMonitor 글로벌 브리핑 20건: 지정학/안보 11건(55%), 사회/기타 8건(40%), 정책/법률 1건. Al Jazeera 15건·Guardian World 5건 출처로 중동 안보 이슈 집중."
-excerpt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-03-06 - 최신 시장 분석 뉴스와 분석을 확인하세요. 주요 키워드: worldmonitor, geopoliti..."
+excerpt: "범위: 글로벌 지정학, 금융시장, 에너지 이슈 주요 출처: WorldMonitor/Al Jazeera (15건), WorldMonitor/Guardian World (5건)"
 image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-03-06 - market-analysis 뉴스 요약 이미지"
 permalink: "/market-analysis/2026/03/06/daily-worldmonitor-briefing/"
 ---

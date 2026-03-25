@@ -9,7 +9,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-regulatory-report-2026-03-10.png"
 description: "전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 31건의 규제 관련 뉴스가 수집되었습니다. 긴급: 긴급 금융시장상황 점검회의 개최 외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 31건의 뉴스 중 P1 주요 이슈도 11건 확인됩니다."
-excerpt: "글로벌 규제 동향 리포트 - 2026-03-10 - 최신 regulatory-news 뉴스와 분석을 확인하세요. 주요 키워드: regulation, sec, cftc, fsc."
+excerpt: "1. CFTC, Marc H. Sielski를 전무 이사로 발표 상품선물거래위원회(Commodity Futures Trading Commission)는 오늘 Marc H."
 image_alt: "글로벌 규제 동향 리포트 - 2026-03-10 - regulatory-news 뉴스 요약 이미지"
 permalink: "/regulatory-news/2026/03/10/daily-regulatory-report/"
 ---
@@ -34,7 +34,7 @@ permalink: "/regulatory-news/2026/03/10/daily-regulatory-report/"
 </div>
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong>
 <ul>
-<li><a href="https://www.fsc.go.kr/no010101/86378">긴급 금융시장상황 점검회의 개최</a> <span class="p0-desc">긴급 금융시장상황 점검회의 개최. 주요 키워드: 긴급, 금융시장상황, 점검회의.</span></li>
+<li><a href="https://www.fsc.go.kr/no010101/86378">긴급 금융시장상황 점검회의 개최</a> <span class="p0-desc">긴급 금융시장상황 점검회의 개최.</span></li>
 <li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE1uaFR5Z05vQWJDUktUQ0FscHR6elZtVzNLX0ZLLWdkckFvTTdGal9VOGVIWkhJa21BWnctenJOXzdQTm80d3ppdG0xQ05wT0cwR2xxdjh3?oc=5">국힘 "가상자산 거래소 지분제한은 위헌"...여당·정부와 대립각 - 지디넷코리아</a> <span class="p0-desc">한국은행 통화정책 관련 소식입니다. 금리 결정은 채권·부동산·주식 시장 전반에 영향을 미칩니다.</span></li>
 </ul>
 </div>
@@ -106,7 +106,7 @@ permalink: "/regulatory-news/2026/03/10/daily-regulatory-report/"
 <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
 
 **10. [긴급 금융시장상황 점검회의 개최](https://www.fsc.go.kr/no010101/86378)**
-긴급 금융시장상황 점검회의 개최. 주요 키워드: 긴급, 금융시장상황, 점검회의.
+긴급 금융시장상황 점검회의 개최.
 <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
 
 

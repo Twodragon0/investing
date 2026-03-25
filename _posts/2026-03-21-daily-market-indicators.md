@@ -9,8 +9,8 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-market-indicators-2026-03-21.png"
 permalink: "/market-analysis/2026/03/21/daily-market-indicators/"
-description: "시장 심리 및 리스크 지표 (2026-03-21) - 최신 시장 분석 뉴스와 분석을 확인하세요. 주요 키워드: market-analysis, fear-greed, vix, market-breadth."
-excerpt: "시장 심리 및 리스크 지표 (2026-03-21) - 최신 시장 분석 뉴스와 분석을 확인하세요. 주요 키워드: market-analysis, fear-greed, vix, m..."
+description: "시장 심리 및 리스크 지표 (2026-03-21) — 시장 전반의 흐름과 크로스에셋 투자 시사점을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
+excerpt: "1. S&P 500: Are Investors Too Bearish? What Sentiment Signals Say About Stocks Now"
 image_alt: "시장 심리 및 리스크 지표 (2026-03-21) - 시장 분석 뉴스 요약 이미지"
 ---
 

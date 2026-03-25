@@ -107,8 +107,8 @@ permalink: "/stock-news/2026/03/08/daily-stock-news-digest/"
 </div>
 
 <details><summary>그 외 4건 보기</summary><div class="details-content"><ol class="news-overflow-list">
-<li><a href="https://www.cnbc.com/2026/03/07/canada-boycott-trump-travel-alcohol-economy.html">트럼프의 주권 위협 이후 1년, 캐나다인들은 계속 '팔꿈치를 들어 올리고'</a> — 트럼프의 주권 위협 이후 1년, 캐나다인들은 계속 &#x27;팔꿈치를 들어 올리고&#x27;. 주요 키워드: 트럼프의, 주권, 위협.</li>
-<li><a href="https://www.cnbc.com/2026/03/06/gop-big-beautiful-bill-to-deal-shock-to-the-aca-marketplace.html">공화당의 '큰 아름다운 법안'이 ACA 시장에 '충격'을 전달할 준비가 되어 있다고 보건 정책 전문가들이 밝혔습니다.</a> — 공화당의 &#x27;큰 아름다운 법안&#x27;이 ACA 시장에 &#x27;충격&#x27;을 전달할 준비가 되어 있다고 보건 정책 전문가들이 밝혔습니다.. 주요 키워드:...</li>
+<li><a href="https://www.cnbc.com/2026/03/07/canada-boycott-trump-travel-alcohol-economy.html">트럼프의 주권 위협 이후 1년, 캐나다인들은 계속 '팔꿈치를 들어 올리고'</a> — 트럼프의 주권 위협 이후 1년, 캐나다인들은 계속 &#x27;팔꿈치를 들어 올리고&#x27;.</li>
+<li><a href="https://www.cnbc.com/2026/03/06/gop-big-beautiful-bill-to-deal-shock-to-the-aca-marketplace.html">공화당의 '큰 아름다운 법안'이 ACA 시장에 '충격'을 전달할 준비가 되어 있다고 보건 정책 전문가들이 밝혔습니다.</a> — 공화당의 &#x27;큰 아름다운 법안&#x27;이 ACA 시장에 &#x27;충격&#x27;을 전달할 준비가 되어 있다고 보건 정책 전문가들이 밝혔습니다..</li>
 </ol></div></details>
 
 
@@ -130,7 +130,7 @@ permalink: "/stock-news/2026/03/08/daily-stock-news-digest/"
 <div class="news-card-item">
 <div class="news-card-num">2</div>
 <div class="news-card-body">
-<a href="https://news.google.com/rss/articles/CBMingFBVV95cUxOZ1gxM3VfMkFXU2U5Nk5FZVAzdUEyY3FlM1lTOE5wdXRCZWhUMVN5NzQzS3V1WjRySEVYSDVTUjJQdEZTZFV6bldudHFoSDJZMjhRSnRCWmloT1VkN1dxaHYwNk1VSEpBQmxlTjJ3WE9UMTNaUzI5VndhbWNtQVBKcHloWmd6ZU5yeUhxUVJCSE8weVVMTU1WblFoa1Q0QQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">엔비디아을 잊어버리고 대신 이 백만장자 주식을 사야 할까요?</a>
+<a href="https://news.google.com/rss/articles/CBMingFBVV95cUxOZ1gxM3VfMkFXU2U5Nk5FZVAzdUEyY3FlM1lTOE5wdXRCZWhUMVN5NzQzS3V1WjRySEVYSDVTUjJQdEZTZFV6bldudHFoSDJZMjhRSnRCWmloT1VkN1dxaHYwNk1VSEpBQmxlTjJ3WE9UMTNaUzI5VndhbWNtQVBKcHloWmd6ZU5yeUhxUVJCSE8weVVMTU1WblFoa1Q0QQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">엔비디아을 대신 이 백만장자 주식을 사야 할까요?</a>
 <p class="news-desc">AI·기술 섹터 관련 소식입니다. AI 산업의 성장세와 규제 동향이 관련주 투자에 핵심 변수입니다.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
@@ -168,7 +168,7 @@ permalink: "/stock-news/2026/03/08/daily-stock-news-digest/"
 </div>
 
 <details><summary>그 외 1건 보기</summary><div class="details-content"><ol class="news-overflow-list">
-<li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxOZ1gxM3VfMkFXU2U5Nk5FZVAzdUEyY3FlM1lTOE5wdXRCZWhUMVN5NzQzS3V1WjRySEVYSDVTUjJQdEZTZFV6bldudHFoSDJZMjhRSnRCWmloT1VkN1dxaHYwNk1VSEpBQmxlTjJ3WE9UMTNaUzI5VndhbWNtQVBKcHloWmd6ZU5yeUhxUVJCSE8weVVMTU1WblFoa1Q0QQ?oc=5">엔비디아을 잊어버리고 대신 이 백만장자 주식을 사야 할까요?</a> — 엔비디아을 잊어버리고 대신 이 백만장자 주식을 사야 할까요?. 주요 키워드: 엔비디아을, 잊어버리고, 대신.</li>
+<li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxOZ1gxM3VfMkFXU2U5Nk5FZVAzdUEyY3FlM1lTOE5wdXRCZWhUMVN5NzQzS3V1WjRySEVYSDVTUjJQdEZTZFV6bldudHFoSDJZMjhRSnRCWmloT1VkN1dxaHYwNk1VSEpBQmxlTjJ3WE9UMTNaUzI5VndhbWNtQVBKcHloWmd6ZU5yeUhxUVJCSE8weVVMTU1WblFoa1Q0QQ?oc=5">엔비디아을 대신 이 백만장자 주식을 사야 할까요?</a> — 엔비디아을 대신 이 백만장자 주식을 사야 할까요?.</li>
 </ol></div></details>
 
 

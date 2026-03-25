@@ -9,7 +9,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-political-trades-report-2026-03-13.png"
 excerpt: "2026-03-13 정치인 거래·정책 리포트: 의회 거래 1건, SEC 내부자 14건, 중앙은행 5건, 총 20건 수집"
-description: "정치인 거래 리포트: 정치인 거래·정책 리포트 - 2026-03-13. 입법 동향과 의원 포트폴리오를 분석합니다. 주요 키워드: political-trades, congress, sec, trump."
+description: "정치인 거래 리포트: 정치인 거래·정책 리포트 - 2026-03-13. 입법 동향과 의원 포트폴리오를 분석합니다."
 image_alt: "정치인 거래·정책 리포트 - 2026-03-13 - 정치인 거래 뉴스 요약 이미지"
 permalink: "/political-trades/2026/03/13/daily-political-trades-report/"
 ---

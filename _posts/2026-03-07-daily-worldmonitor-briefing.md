@@ -9,7 +9,7 @@ source_url: "https://worldmonitor.app"
 lang: "ko"
 image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-03-07.png"
 description: "2026-03-07 WorldMonitor 글로벌 브리핑 20건: 지정학/안보·사회/기타·정책/법률 4개 테마, 안보 이슈 9건. Al Jazeera 15건·Guardian World 5건 출처로 중동 및 글로벌 이슈 분석."
-excerpt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-03-07 - 최신 시장 분석 뉴스와 분석을 확인하세요. 주요 키워드: worldmonitor, geopoliti..."
+excerpt: "범위: 글로벌 지정학, 금융시장, 에너지 이슈 주요 출처: WorldMonitor/Al Jazeera (15건), WorldMonitor/Guardian World (5건)"
 image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-03-07 - market-analysis 뉴스 요약 이미지"
 permalink: "/market-analysis/2026/03/07/daily-worldmonitor-briefing/"
 ---
@@ -104,7 +104,7 @@ permalink: "/market-analysis/2026/03/07/daily-worldmonitor-briefing/"
 <div class="wm-issue-card">
 <div class="wm-issue-num">6</div>
 <div class="wm-issue-body">
-<div class="wm-issue-title"><a href="https://www.aljazeera.com/economy/2026/3/7/iran-war-is-latest-threat-to-a-global-economy-rattled-by-trump?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>이란 전쟁은 트럼프으로 인해 흔들리는 세계 경제에 대한 최신 위협입니다.</strong></a></div>
+<div class="wm-issue-title"><a href="https://www.aljazeera.com/economy/2026/3/7/iran-war-is-latest-threat-to-a-global-economy-rattled-by-trump?traffic_source=rss" target="_blank" rel="noopener noreferrer"><strong>이란 전쟁은 트럼프와 인해 흔들리는 세계 경제에 대한 최신 위협입니다.</strong></a></div>
 <div class="wm-issue-meta">
 <span class="wm-issue-theme">지정학/안보</span>
 <span class="wm-issue-impact" style="color:#f85149;">높음</span>
@@ -299,7 +299,7 @@ permalink: "/market-analysis/2026/03/07/daily-worldmonitor-briefing/"
 <li><a href="https://www.aljazeera.com/opinions/2026/3/7/wake-up-before-its-too-late-oppose-the-unjust-cruel-war-on-iran?traffic_source=rss" target="_blank" rel="noopener noreferrer">너무 늦기 전에 일어나세요: 이란에 대한 부당하고 잔인한 전쟁에 반대하세요</a><span class="source-tag" data-source-type="world-media">WorldMonitor/Al Jazeera</span></li>
 <li><a href="https://www.aljazeera.com/video/newsfeed/2026/3/7/we-stand-with-israel-germanys-friedrich-merz-scolds-protester?traffic_source=rss" target="_blank" rel="noopener noreferrer">&#x27;우리는 이스라엘 편이다&#x27;: 독일의 프리드리히 메르츠(Friedrich Merz)가 시위자를 꾸짖다</a><span class="source-tag" data-source-type="world-media">WorldMonitor/Al Jazeera</span></li>
 <li><a href="https://www.aljazeera.com/opinions/2026/3/7/irans-strikes-on-the-gulf-burning-the-bridges-of-good-neighbourliness?traffic_source=rss" target="_blank" rel="noopener noreferrer">이란의 걸프만 공격: 선린의 다리 불태우기</a><span class="source-tag" data-source-type="world-media">WorldMonitor/Al Jazeera</span></li>
-<li><a href="https://www.aljazeera.com/economy/2026/3/7/iran-war-is-latest-threat-to-a-global-economy-rattled-by-trump?traffic_source=rss" target="_blank" rel="noopener noreferrer">이란 전쟁은 트럼프으로 인해 흔들리는 세계 경제에 대한 최신 위협입니다.</a><span class="source-tag" data-source-type="world-media">WorldMonitor/Al Jazeera</span></li>
+<li><a href="https://www.aljazeera.com/economy/2026/3/7/iran-war-is-latest-threat-to-a-global-economy-rattled-by-trump?traffic_source=rss" target="_blank" rel="noopener noreferrer">이란 전쟁은 트럼프와 인해 흔들리는 세계 경제에 대한 최신 위협입니다.</a><span class="source-tag" data-source-type="world-media">WorldMonitor/Al Jazeera</span></li>
 <li><a href="https://www.aljazeera.com/news/2026/3/7/cuba-announces-fifth-death-after-shootout-with-florida-tagged-speedboat?traffic_source=rss" target="_blank" rel="noopener noreferrer">쿠바, 플로리다 태그 쾌속정 총격전 후 다섯 번째 사망 발표</a><span class="source-tag" data-source-type="world-media">WorldMonitor/Al Jazeera</span></li>
 <li><a href="https://www.aljazeera.com/news/liveblog/2026/3/7/iran-war-live-trump-says-no-deal-with-iran-until-unconditional-surrender?traffic_source=rss" target="_blank" rel="noopener noreferrer">이란 전쟁 생방송: 트럼프는 &#x27;무조건 항복&#x27; 전까지 이란과 협상하지 않겠다고 밝혔습니다.</a><span class="source-tag" data-source-type="world-media">WorldMonitor/Al Jazeera</span></li>
 <li><a href="https://www.aljazeera.com/news/2026/3/6/cuba-closes-quito-embassy-after-ecuadors-daniel-noboa-expels-its-diplomats?traffic_source=rss" target="_blank" rel="noopener noreferrer">쿠바, 에콰도르 다니엘 노보아 외교관 추방 후 키토 대사관 폐쇄</a><span class="source-tag" data-source-type="world-media">WorldMonitor/Al Jazeera</span></li>

@@ -7,7 +7,7 @@ tags: [worldmonitor, geopolitics, macro, daily-digest]
 source: "worldmonitor"
 source_url: "https://worldmonitor.app"
 lang: "ko"
-description: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-02-20 - 최신 시장 분석 뉴스와 분석을 확인하세요. 주요 키워드: worldmonitor, geopolitics, macro, daily-digest."
+description: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-02-20 - 최신 시장 분석 뉴스와 분석을 확인하세요."
 image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-02-20.png"
 excerpt: "주요 테마: 사회/기타, 지정학/안보 - 이란 핵 협상 최후통첩: Trump가 이란에 '10일 내 합의하지 않으면 나쁜 일이 일어난다'고 경고. 원유 가격과 안전자산(금)에…"
 image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-02-20 - market-analysis 뉴스 요약 이미지"

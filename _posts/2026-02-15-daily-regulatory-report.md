@@ -7,7 +7,7 @@ tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-regulatory-report-2026-02-15.png"
-description: "글로벌 규제 동향 리포트 - 2026-02-15. 규제 환경 변화가 시장에 미칠 영향을 점검합니다. 주요 키워드: regulation, sec, cftc, fsc."
+description: "글로벌 규제 동향 리포트 - 2026-02-15. 규제 환경 변화가 시장에 미칠 영향을 점검합니다."
 excerpt: "규제/정책 ████████████░░░░░░ 72% (18건) 거래소 ████░░░░░░░░░░░░░░ 24% (6건) - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "글로벌 규제 동향 리포트 - 2026-02-15 - regulatory-news 뉴스 요약 이미지"
 permalink: "/regulatory-news/2026/02/15/daily-regulatory-report/"

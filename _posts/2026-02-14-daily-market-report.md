@@ -7,8 +7,8 @@ tags: [market-summary, daily, crypto, stock, macro, top-coins]
 source: "auto-generated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-market-report-2026-02-14.png"
-description: "일일 시장 종합 리포트 - 2026-02-14 관련 시장 분석 리포트입니다. 주요 키워드: market-summary, daily, crypto, stock."
-excerpt: "일일 시장 종합 리포트 - 2026-02-14 - 최신 시장 분석 뉴스와 분석을 확인하세요. 주요 키워드: market-summary, daily, crypto, stock."
+description: "시장 분석 브리핑: 일일 시장 종합 리포트. 주요 자산군의 상관관계와 방향성을 점검합니다 - Investing Dragon 자동 수집 분석 리포트."
+excerpt: "KOSPI: 5,507.01 (-15.26, -0.28%) KOSDAQ: 1,106.08 (-19.91, -1.77%) USD/KRW 환율: 1,440.90 (-0.61,…"
 image_alt: "일일 시장 종합 리포트 - 2026-02-14 - market-analysis 뉴스 요약 이미지"
 permalink: "/market-analysis/2026/02/14/daily-market-report/"
 ---

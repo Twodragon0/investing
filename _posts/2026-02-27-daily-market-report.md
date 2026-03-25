@@ -7,7 +7,7 @@ tags: [market-summary, daily, crypto, stock, macro, top-coins, quant, trading]
 source: "auto-generated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-market-report-2026-02-27.png"
-description: "일일 시장 종합 리포트 - 2026-02-27 - 최신 시장 분석 뉴스와 분석을 확인하세요. 주요 키워드: market-summary, daily, crypto, stock."
+description: "시장 분석 브리핑: 일일 시장 종합 리포트. 주요 자산군의 상관관계와 방향성을 점검합니다 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "극도의 공포 장세: 공포/탐욕 지수 13으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 612개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수…"
 image_alt: "일일 시장 종합 리포트 - 2026-02-27 - market-analysis 뉴스 요약 이미지"
 permalink: "/market-analysis/2026/02/27/daily-market-report/"

@@ -105,11 +105,11 @@ IPO·신규 상장 관련 소식입니다. 공모가 대비 시장 평가와 수
 <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
 
 **7. [금융시장 리스크 점검회의 개최](https://www.fsc.go.kr/no010101/86434)**
-금융시장 리스크 점검회의 개최. 주요 키워드: 금융시장, 리스크, 점검회의.
+금융시장 리스크 점검회의 개최.
 <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
 
 **8. [신임 신용보증기금 이사장 임명 제청](https://www.fsc.go.kr/no010101/86432)**
-신임 신용보증기금 이사장 임명 제청. 주요 키워드: 신임, 신용보증기금, 이사장.
+신임 신용보증기금 이사장 임명 제청.
 <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
 
 **9. [국민성장펀드에 참여하는 금융기관에 대해면책을 부여하여 투자의 걸림돌을 제거하고생산적 부문으로 자금전환을 가속화하겠습니다.](https://www.fsc.go.kr/no010101/86427)**

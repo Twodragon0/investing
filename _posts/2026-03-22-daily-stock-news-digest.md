@@ -9,8 +9,8 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-22.png"
 permalink: "/stock-news/2026/03/22/daily-stock-news-digest/"
-description: "주식 시장 뉴스 종합 - 2026-03-22 - 최신 주식 시장 뉴스와 분석을 확인하세요. 주요 키워드: stock, market, daily-digest."
-excerpt: "주식 시장 뉴스 종합 - 2026-03-22 - 최신 주식 시장 뉴스와 분석을 확인하세요. 주요 키워드: stock, market, daily-digest."
+description: "주식 시장 뉴스 종합. 매크로 지표와 기업 실적이 투자 전략에 미치는 영향을 살펴봅니다 - Investing Dragon 자동 수집 분석 리포트."
+excerpt: "KOSPI 5,781.20 (+0.31%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다. KOSDAQ 1,161.52…"
 image_alt: "주식 시장 뉴스 종합 - 2026-03-22 - stock-news 뉴스 요약 이미지"
 ---
 

@@ -8,7 +8,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-regulatory-report-2026-03-01.png"
 description: "2026-03-01 글로벌 규제 28건: 한국 21건(벤처지원·보이스피싱 대응·새출발기금), SEC 비공개시장 라운드테이블, 규제/정책 18건·정치/정책 7건 중심으로 분석."
-excerpt: "글로벌 규제 동향 리포트 - 2026-03-01 - 최신 regulatory-news 뉴스와 분석을 확인하세요. 주요 키워드: regulation, sec, cftc, fsc."
+excerpt: "1. Private Markets Roundtable - SEC.gov Private Markets Roundtable SEC.gov - Investing Dragon 자동…"
 image_alt: "글로벌 규제 동향 리포트 - 2026-03-01 - regulatory-news 뉴스 요약 이미지"
 permalink: "/regulatory-news/2026/03/01/daily-regulatory-report/"
 ---

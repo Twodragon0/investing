@@ -7,8 +7,8 @@ tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-regulatory-report-2026-02-28.png"
-description: "글로벌 규제 동향 리포트 - 2026-02-28 - 글로벌 금융 규제 및 정책 변화 추적. 주요 키워드: regulation, sec, cftc, fsc."
-excerpt: "글로벌 규제 동향 리포트 - 2026-02-28 - 최신 regulatory-news 뉴스와 분석을 확인하세요. 주요 키워드: regulation, sec, cftc, fsc."
+description: "글로벌 규제 동향 리포트. 규제 환경 변화가 투자 전략에 미칠 영향을 점검합니다 - Investing Dragon 자동 수집 분석 리포트."
+excerpt: "1. SEC Announces Roundtable on Private Markets Valuation As Retail Investor Access Accelerates -…"
 image_alt: "글로벌 규제 동향 리포트 - 2026-02-28 - regulatory-news 뉴스 요약 이미지"
 permalink: "/regulatory-news/2026/02/28/daily-regulatory-report/"
 ---

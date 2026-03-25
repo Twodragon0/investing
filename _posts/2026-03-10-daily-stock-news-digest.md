@@ -250,7 +250,7 @@ permalink: "/stock-news/2026/03/10/daily-stock-news-digest/"
 
 <details><summary>그 외 2건 보기</summary><div class="details-content"><ol class="news-overflow-list">
 <li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPaVZVQXBLaWJRNTg1LXhYMFhSX2tSTllsc2dDVVliSUQ4U2Qwd2NnZTRjcXVLQ1ZVNzVxRE5PUl9nS0xWLVhmNnVpTGtMYUlTcWhBZFMtdmRmQzJTNWZic2JFYk5ESkp0SW45cjdMZnRBc284UzV1R3dKbTBnYl9CYzAyMFlBa0RM0gGcAUFVX3lxTE1oVTA0eXJGdU95UlliQTlkeDJ1Q0RCZFBncE9WMUxGSnBOS2VqblRaWVdrODBWVUdMSzk2SHgwRF9NbFpKS3FTWjBnbDFaQnFLaFhjN005dWFNcV9qbXAyd2pLcUYzNGhUVVNHekdwWmh2dzdjam5QUFc0OFd0ZGZtSmlWSE1lT0RSa1c5TEw3ODctV29XT3lueW04aA?oc=5">증시 급락하는데 거래소 먹통…‘원유 ETF’ 거래 정지 - 조선비즈 - Chosunbiz</a> — 시장이 큰 폭으로 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</li>
-<li><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxPTDF0X3BvZ0FocDZLZFUyVk1IUHh1eV9Fdmp3Q3pXaldJQVE0allmNU9JWlFYUFJ5a01QQzFxczhwN3RYREtYQXZqTVdZVEZZNWhiSW1KSllSVFdSV1drZ0pNM0c3T3dSaGxCNmNxR3lTaE9lZFVsbnlBWFBDY2ltRzNqZnJncVhuUU1yQUYwTk0yV0VOVlBXUndxeDliaVVWYkhCemNDaUJNTTM2a0diaXlBdXFyS2luT2c?oc=5">Coeur Mining의 옵션 활동 디코딩: 큰 그림은 무엇입니까?</a> — Coeur Mining의 옵션 활동 디코딩: 큰 그림은 무엇입니까?. 주요 키워드: 옵션, 활동, 디코딩.</li>
+<li><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxPTDF0X3BvZ0FocDZLZFUyVk1IUHh1eV9Fdmp3Q3pXaldJQVE0allmNU9JWlFYUFJ5a01QQzFxczhwN3RYREtYQXZqTVdZVEZZNWhiSW1KSllSVFdSV1drZ0pNM0c3T3dSaGxCNmNxR3lTaE9lZFVsbnlBWFBDY2ltRzNqZnJncVhuUU1yQUYwTk0yV0VOVlBXUndxeDliaVVWYkhCemNDaUJNTTM2a0diaXlBdXFyS2luT2c?oc=5">Coeur Mining의 옵션 활동 디코딩: 큰 그림은 무엇입니까?</a> — Coeur Mining의 옵션 활동 디코딩: 큰 그림은 무엇입니까?.</li>
 </ol></div></details>
 
 

@@ -176,7 +176,7 @@ permalink: "/crypto-news/2026/03/11/daily-crypto-news-digest/"
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE03dXhnSlNMdXF3VDF1M3h3aVlIQ1dOcTZzQnhVdm1ybkxYUVlJSkExVXhtRU9kdC1oYnNwTHd6WmtYZHlvY0RFYnlld0IyY3gySE1YOHhpVnk3VWM2ZHF3NVZ4clZpU3Vfb2c?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">금감원, '62만 BTC 오지급' 빗썸 검사 종료···제재 수위 곧 확정 - 서울파이낸스</a>
-<p class="news-desc">금감원, '62만 BTC 오지급' 빗썸 검사 종료···제재 수위 곧 확정. 주요 키워드: 금감원, 오지급, 빗썸.</p>
+<p class="news-desc">금감원, '62만 BTC 오지급' 빗썸 검사 종료···제재 수위 곧 확정.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

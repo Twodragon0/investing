@@ -7,8 +7,8 @@ tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-regulatory-report-2026-02-21.png"
-description: "글로벌 규제 동향 리포트 - 2026-02-21. 규제 환경 변화가 시장에 미칠 영향을 점검합니다. 주요 키워드: regulation, sec, cftc, fsc."
-excerpt: "글로벌 규제 동향 리포트 - 2026-02-21 - 최신 regulatory-news 뉴스와 분석을 확인하세요. 주요 키워드: regulation, sec, cftc, fsc."
+description: "글로벌 규제 동향 리포트 - 2026-02-21. 규제 환경 변화가 시장에 미칠 영향을 점검합니다."
+excerpt: "Cutting by Two Would Do - SEC.gov — SEC (Google News) 금융위원회 인사 보도(팀장급) — 금융위원회 보도자료"
 image_alt: "글로벌 규제 동향 리포트 - 2026-02-21 - regulatory-news 뉴스 요약 이미지"
 permalink: "/regulatory-news/2026/02/21/daily-regulatory-report/"
 ---

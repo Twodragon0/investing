@@ -6,7 +6,7 @@ categories: market-analysis
 tags: [경제지표, 거시경제, 인플레이션, GDP, 고용, 금값, 유가]
 source: "Crypto Monitoring System"
 lang: ko
-description: "시장 분석 분야 핵심 동향: 경제 지표 리포트 - 2026년 02월 07일. 주요 키워드: 경제지표, 거시경제, 인플레이션, GDP - Investing Dragon 자동 수집 분석 리포트."
+description: "경제 지표 리포트 - 2026년 02월 07일 — 시장 전반의 흐름과 크로스에셋 투자 시사점을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
 image: "/assets/images/generated/og-economic-indicators-report-2026-02-07.png"
 excerpt: "거시경제 리포트: GDP, 인플레이션, 고용지표를 중심으로 경제 흐름을 분석합니다. Inflation Cooling: 인플레이션 둔화 추세 Job Market Stable:…"
 image_alt: "경제 지표 리포트 - 2026년 02월 07일 - market-analysis 뉴스 요약 이미지"

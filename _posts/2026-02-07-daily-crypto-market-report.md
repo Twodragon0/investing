@@ -6,7 +6,7 @@ categories: market-analysis
 tags: [암호화폐, 시장분석, 투자, 블록체인, BTC, ETH]
 source: "Crypto Monitoring System"
 lang: ko
-description: "오늘의 시장 분석 브리핑 — 암호화폐 시장 리포트 - 2026년 02월 07일. 주요 키워드: 암호화폐, 시장분석, 투자, 블록체인 - Investing Dragon 자동 수집 분석 리포트."
+description: "암호화폐 시장 리포트 - 2026년 02월 07일 — 시장 전반의 흐름과 크로스에셋 투자 시사점을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
 image: "/assets/images/generated/og-daily-crypto-market-report-2026-02-07.png"
 excerpt: "암호화폐 시장 업데이트: 최근 24시간 동안의 주요 움직임과 인기 토큰들을 확인해보세요. - BTCUSDT: +5.7% - ETHUSDT: +7.6% - XRPUSDT:…"
 image_alt: "암호화폐 시장 리포트 - 2026년 02월 07일 - market-analysis 뉴스 요약 이미지"

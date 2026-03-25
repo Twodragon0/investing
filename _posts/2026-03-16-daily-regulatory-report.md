@@ -70,7 +70,7 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-03-16 - regulatory-news 뉴
 
 **2. [’26년 1분기 혁신금융서비스 지정 정기신청 개시](https://www.fsc.go.kr/no010101/86458)** ’26년 1분기 혁신금융서비스 지정 정기신청 개시. <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
 
-**3. [금융위원장, SC그룹 회장 면담](https://www.fsc.go.kr/no010101/86456)** 금융위원장, SC그룹 회장 면담. 주요 키워드: 금융위원장, 그룹, 회장. <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
+**3. [금융위원장, SC그룹 회장 면담](https://www.fsc.go.kr/no010101/86456)** 금융위원장, SC그룹 회장 면담. <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
 
 **4. [2026년 「국민참여형 국민성장펀드」의 자금 모집을 담당할 공모펀드 운용사를 선정하였습니다.](https://www.fsc.go.kr/no010101/86454)** IPO·신규 상장 관련 소식입니다. 공모가 대비 시장 평가와 수급 동향을 주시하세요. <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
 
@@ -84,7 +84,7 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-03-16 - regulatory-news 뉴
 
 **9. [2026년 2월 가계대출 동향(잠정)](https://www.fsc.go.kr/no010101/86437)** 2026년 2월 가계대출 동향 (잠정) ▴ ’26.2월 全금융권 가계대출 은 +2.9조원 증가 하여 전월 (+1.4조원) 대 비 증가폭 확대 및 전년 동월 (+4.2조원) 대비 감소 * 증감액(조원) : (‘25.8월)+4.7 (9월)+1.1 (10월)+4.9 (11월)+4.4 (12월)△1.2 (‘26.1월)+1.4 (2월 )+2.9 1 2026년 2월 <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
 
-**10. [금융시장 리스크 점검회의 개최](https://www.fsc.go.kr/no010101/86434)** 금융시장 리스크 점검회의 개최. 주요 키워드: 금융시장, 리스크, 점검회의. <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
+**10. [금융시장 리스크 점검회의 개최](https://www.fsc.go.kr/no010101/86434)** 금융시장 리스크 점검회의 개최. <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
 
 ---
 
