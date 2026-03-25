@@ -134,12 +134,18 @@ jobs:
       - name: Create issue for code failures
         if: steps.classify_final.outputs.final_classification == 'code' && steps.rerun.outputs.rerun != 'true'
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        env:
+          EVIDENCE_SNIPPET: ${{ steps.classify.outputs.evidence_snippet }}
+          RAW_CLASSIFICATION: ${{ steps.classify.outputs.classification }}
+          FINAL_CLASSIFICATION: ${{ steps.classify_final.outputs.final_classification }}
+          ESCALATED: ${{ steps.classify_final.outputs.escalated }}
         with:
           script: |
             const run = context.payload.workflow_run;
             const headSha = (run.head_sha || '').slice(0, 12);
             const dedupeKey = `workflow=${run.name}|run=${run.run_number}|sha=${headSha}`;
             const title = `CI code failure: ${run.name} #${run.run_number} (${headSha || 'no-sha'})`;
+            const evidence = process.env.EVIDENCE_SNIPPET || 'no evidence captured';
             const body = [
               '## Automated failure classification',
               '',
@@ -149,13 +155,13 @@ jobs:
               `- Head SHA: ${run.head_sha || 'N/A'}`,
               `- Dedupe Key: ${dedupeKey}`,
               `- Conclusion: ${run.conclusion}`,
-              `- Classification (raw): ${{ steps.classify.outputs.classification }}`,
-              `- Classification (final): ${{ steps.classify_final.outputs.final_classification }}`,
-              `- Escalated from network: ${{ steps.classify_final.outputs.escalated }}`,
+              `- Classification (raw): ${process.env.RAW_CLASSIFICATION}`,
+              `- Classification (final): ${process.env.FINAL_CLASSIFICATION}`,
+              `- Escalated from network: ${process.env.ESCALATED}`,
               '',
               '### Classifier evidence',
               '```text',
-              `${{ steps.classify.outputs.evidence_snippet }}`,
+              evidence,
               '```',
               '',
               'Action: investigate code or configuration changes in this run.'
