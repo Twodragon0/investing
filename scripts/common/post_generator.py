@@ -412,13 +412,27 @@ def _extract_description(content: str) -> str:
     Prioritizes executive opener (긴급/P0 sections) and bold-lead sentences
     before falling back to generic first-line extraction.
     """
-    # Try to extract executive opener (bold lead sentence)
+    # Try theme summary first (### 테마별 동향 section) for richer SEO descriptions
+    theme_match = re.search(r"### 테마별 동향\n+((?:- .+\n?){1,3})", content)
+    if theme_match:
+        theme_lines = theme_match.group(1).strip().split("\n")
+        parts = []
+        for tl in theme_lines[:2]:
+            clean = re.sub(r"[*_`~]", "", tl.lstrip("- ")).strip()
+            if clean and len(clean) >= 15:
+                parts.append(clean)
+        if parts:
+            combined = " ".join(parts)
+            return smart_truncate(combined, 160)
+
+    # Try to extract executive opener (bold lead sentence), skip "긴급:" patterns
     bold_match = re.search(r"\*\*(.{20,120}?)\*\*", content[:600])
     if bold_match:
         lead = bold_match.group(1).strip()
         lead = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", lead)
         lead = re.sub(r"[*_`~]", "", lead).strip()
-        if len(lead) >= 30:
+        # Skip "긴급:" leads — they are redundant with alert boxes
+        if len(lead) >= 30 and not lead.startswith("긴급"):
             return smart_truncate(lead, 160)
 
     # Strip HTML block elements (stat-grid, alert-box divs) before line-by-line scan
