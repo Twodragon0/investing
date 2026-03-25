@@ -8,7 +8,6 @@ keywords: "market-analysis, fear-greed, vix, market-breadth, sentiment"
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-market-indicators-2026-03-23.png"
-image: "/assets/images/generated/og-daily-market-indicators-2026-03-23.png"
 permalink: "/market-analysis/2026/03/23/daily-market-indicators/"
 description: "시장 심리 및 리스크 지표 리포트: 2026-03-23 기준 공포·탐욕 18.6, VIX 24.53, DXY 98.99와 금리 흐름을 함께 점검합니다."
 excerpt: "공포·탐욕 18.6, VIX 24.53, DXY 98.99와 금리 흐름을 함께 본 2026-03-23 시장 리스크 점검 리포트입니다."
@@ -21,8 +20,6 @@ image_alt: "시장 심리 및 리스크 지표 대표 스냅샷 이미지"
 
 - 국채 금리 관련 뉴스 (보완):
 
-
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">18.6</div><div class="stat-label">공포탐욕 (extreme fear)</div></div><div class="stat-item"><div class="stat-value">24.53</div><div class="stat-label">VIX</div></div><div class="stat-item"><div class="stat-value">98.99</div><div class="stat-label">DXY</div></div><div class="stat-item"><div class="stat-value">4,487.20</div><div class="stat-label">금</div></div></div>
 
 ## 🌡️ 시장 심리 지표
 

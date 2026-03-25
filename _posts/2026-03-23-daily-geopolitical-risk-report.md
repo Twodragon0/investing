@@ -8,7 +8,6 @@ keywords: "geopolitical, polymarket, risk, conflict, prediction-market"
 source: "geopolitical"
 lang: "ko"
 image: "/assets/images/generated/og-daily-geopolitical-risk-report-2026-03-23.png"
-image: "/assets/images/generated/og-daily-geopolitical-risk-report-2026-03-23.png"
 permalink: "/market-analysis/2026/03/23/daily-geopolitical-risk-report/"
 description: "지정학 리스크 리포트: 2026-03-23 기준 Polymarket 예측 시장과 주요 글로벌 리스크 이벤트 확률을 함께 점검합니다."
 excerpt: "Polymarket 예측 시장과 주요 글로벌 리스크 이벤트 확률을 함께 점검한 2026-03-23 지정학 리포트입니다."
@@ -21,20 +20,6 @@ image_alt: "지정학 리스크 리포트 대표 브리핑 이미지"
 
 - 총 **1건** 수집
 - 글로벌 예측 시장 Polymarket에서 지정학·정치 이벤트에 대한 집단지성 확률을 확인합니다. 거래량이 많을수록 시장 참여자의 신뢰도가 높습니다.
-
-
-<div class="alert-box alert-warning"><strong>지정학 리스크 스냅샷</strong><ul>
-<li>Polymarket 예측 시장: <strong>15건</strong></li>
-<li>GDELT 글로벌 뉴스: <strong>0건</strong></li>
-<li>뉴스 기사: <strong>1건</strong></li>
-<li>주요 테마: <strong>기타 지정학</strong></li>
-</ul></div>
-
-<div class="stat-grid">
-<div class="stat-item"><span class="stat-value">15</span><span class="stat-label">Polymarket</span></div>
-<div class="stat-item"><span class="stat-value">0</span><span class="stat-label">GDELT 뉴스</span></div>
-<div class="stat-item"><span class="stat-value">1</span><span class="stat-label">뉴스 기사</span></div>
-<div class="stat-item"><span class="stat-value">2</span><span class="stat-label">데이터 소스</span></div>
 
 
 ## 1. 예측 시장 동향 (Polymarket)
