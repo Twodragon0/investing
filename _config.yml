@@ -27,7 +27,7 @@ plugins:
 
 # Feed Settings
 feed:
-  path: atom.xml
+  path: feed.xml
   posts_limit: 30
   excerpt_only: false
 
