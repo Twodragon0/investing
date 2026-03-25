@@ -48,6 +48,10 @@ defaults:
       lang: "ko"
 
 markdown: kramdown
+
+sass:
+  quiet_deps: true
+  style: compressed
 kramdown:
   input: GFM
   syntax_highlighter: rouge
