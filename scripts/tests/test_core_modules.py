@@ -603,6 +603,110 @@ class TestGetEnv:
         os.environ.pop(key, None)
         assert get_env(key) == ""
 
+
+# ---------------------------------------------------------------------------
+# translator module tests
+# ---------------------------------------------------------------------------
+
+
+class TestTermOverrides:
+    """Tests for financial term override protection."""
+
+    def test_sec_terms_in_overrides(self):
+        from common.translator import TERM_OVERRIDES
+        assert "Stock Titan" in TERM_OVERRIDES
+        assert "Form 4" in TERM_OVERRIDES
+        assert "Form 4/A" in TERM_OVERRIDES
+        assert "Form 10-K" in TERM_OVERRIDES
+        assert "Form 8-K" in TERM_OVERRIDES
+
+    def test_sec_terms_preserved_as_is(self):
+        from common.translator import TERM_OVERRIDES
+        assert TERM_OVERRIDES["Stock Titan"] == "Stock Titan"
+        assert TERM_OVERRIDES["Form 4"] == "Form 4"
+        assert TERM_OVERRIDES["Form 4/A"] == "Form 4/A"
+
+    def test_insider_trading_translated(self):
+        from common.translator import TERM_OVERRIDES
+        assert TERM_OVERRIDES["Insider Trading"] == "내부자 거래"
+
+    def test_crypto_terms_present(self):
+        from common.translator import TERM_OVERRIDES
+        assert TERM_OVERRIDES["Bitcoin"] == "비트코인"
+        assert TERM_OVERRIDES["Ethereum"] == "이더리움"
+        assert TERM_OVERRIDES["DeFi"] == "디파이"
+
+    def test_abbreviations_kept_as_is(self):
+        from common.translator import TERM_OVERRIDES
+        for abbr in ("ETF", "NFT", "BTC", "ETH", "SEC", "CFTC", "IPO", "GDP"):
+            assert TERM_OVERRIDES[abbr] == abbr
+
+
+class TestApplyTermOverrides:
+    """Tests for placeholder-based term protection."""
+
+    def test_replaces_known_terms(self):
+        from common.translator import _apply_term_overrides
+        text = "Bitcoin ETF approved by SEC"
+        modified, replacements = _apply_term_overrides(text)
+        assert "Bitcoin" not in modified
+        assert "ETF" not in modified
+        assert "SEC" not in modified
+        assert len(replacements) >= 3
+
+    def test_restore_terms(self):
+        from common.translator import _apply_term_overrides, _restore_terms
+        text = "Stock Titan reports Form 4 filing"
+        modified, replacements = _apply_term_overrides(text)
+        restored = _restore_terms(modified, replacements)
+        assert "Stock Titan" in restored
+        assert "Form 4" in restored
+
+    def test_word_boundary_prevents_partial_match(self):
+        from common.translator import _apply_term_overrides
+        text = "The chairman explained the maintenance gains"
+        modified, _ = _apply_term_overrides(text)
+        # "AI" should NOT match inside "chairman", "maintenance", "gains"
+        assert "chairman" in modified.lower() or "__TERM" not in modified.lower().replace("__term", "")
+
+
+class TestPostprocessTranslation:
+    """Tests for Google Translate artifact fixes."""
+
+    def test_fixes_media_name_mistranslation(self):
+        from common.translator import _postprocess_translation
+        assert _postprocess_translation("재고 타이탄") == "Stock Titan"
+        assert _postprocess_translation("주식 타이탄") == "Stock Titan"
+        assert _postprocess_translation("내부자 무역") == "내부자 거래"
+
+    def test_fixes_token_artifacts(self):
+        from common.translator import _postprocess_translation
+        assert "Pairs" in _postprocess_translation("PAIrs of tokens")
+        assert "maintain" in _postprocess_translation("mAIntain the price")
+        assert "against" in _postprocess_translation("agAInst the trend")
+
+    def test_fixes_motley_fool(self):
+        from common.translator import _postprocess_translation
+        assert _postprocess_translation("가지각색의 바보") == "Motley Fool"
+        assert _postprocess_translation("잡다한 바보") == "Motley Fool"
+
+    def test_fixes_seeking_alpha(self):
+        from common.translator import _postprocess_translation
+        assert _postprocess_translation("알파 추구") == "Seeking Alpha"
+
+    def test_empty_string(self):
+        from common.translator import _postprocess_translation
+        assert _postprocess_translation("") == ""
+
+    def test_no_artifacts_unchanged(self):
+        from common.translator import _postprocess_translation
+        text = "비트코인이 신고가를 경신했습니다"
+        assert _postprocess_translation(text) == text
+
+    def test_double_spaces_removed(self):
+        from common.translator import _postprocess_translation
+        assert "  " not in _postprocess_translation("비트코인  가격이  상승")
+
     def test_returns_env_var_when_set(self):
         from common.config import get_env
         key = "TEST_INVESTING_KEY_ABC"
