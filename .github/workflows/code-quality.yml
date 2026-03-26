@@ -60,6 +60,10 @@ jobs:
             --cov-report=json:../coverage.json \
             --cov-fail-under=20
 
+      - name: Run root tests
+        run: |
+          PYTHONPATH=scripts python3 -m pytest tests/ -v --tb=short
+
       - name: Upload coverage report
         if: always()
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7
