@@ -32,7 +32,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-26 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">1,159.55</div><div class="stat-label">KOSDAQ +3.40%</div></div>
 </div>
 <div class="alert-box alert-info">
-<strong>주식 시장 긴급: Oil Theft Is Burning a Billion-Dollar Hole in the West Texas Economy - 187건 분석</strong>
+<strong>주식 시장 긴급: 석유 절도, 서부 텍사스 경제에 수십억 달러 타격 - 187건 분석</strong>
 <ul>
 <li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 이슈 부각</li>
 <li>🤖 <strong>AI/기술</strong>: 옵션, 엔비디아 주목</li>
@@ -43,12 +43,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-26 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent">
 <strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxOeVlqM0pOMHROZE5xeWNONEFwbkVzclNwQWNyLVQwc3gxVlp4d1dpRXpNdGR4WVZmc2REdEJyZzlYQWxXQWlsTjIyWUc1Z2ZMNjloRUJFbzhaMEdiNkdnWFNBdjFGZ0xuTERTOVJNOGRYRHl4S1gyTDdiR3JoNFNVMnNJZnFjaHpLZ1p6Q1YtTjEyOWJxV1FJWW1XV2dENDd3eEZBYVVlM29ucTRLbkkwZFJ2Qkg?oc=5">Oil Theft Is Burning a Billion-Dollar Hole in the West Texas Economy</a></li>
+<li><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxOeVlqM0pOMHROZE5xeWNONEFwbkVzclNwQWNyLVQwc3gxVlp4d1dpRXpNdGR4WVZmc2REdEJyZzlYQWxXQWlsTjIyWUc1Z2ZMNjloRUJFbzhaMEdiNkdnWFNBdjFGZ0xuTERTOVJNOGRYRHl4S1gyTDdiR3JoNFNVMnNJZnFjaHpLZ1p6Q1YtTjEyOWJxV1FJWW1XV2dENDd3eEZBYVVlM29ucTRLbkkwZFJ2Qkg?oc=5">석유 절도, 서부 텍사스 경제에 수십억 달러 타격 (Oil Theft Is Burning a Billion-Dollar Hole in the West Texas Economy)</a></li>
 </ul>
 </div>
 ## 전체 뉴스 요약
 
-**긴급**: Oil Theft Is Burning a Billion-Dollar Hole in the West Texas Economy 
+**긴급**: 석유 절도, 서부 텍사스 경제에 수십억 달러 타격 
 총 187건의 뉴스 중 P1 주요 이슈도 30건 확인됩니다.
 
 ### 테마별 동향

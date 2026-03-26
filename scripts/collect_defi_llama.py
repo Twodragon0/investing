@@ -234,6 +234,7 @@ def generate_tvl_chart_image(
             _MPL_AVAILABLE,
             COLORS,
             IMAGES_DIR,
+            _convert_to_webp,
             _ensure_dir,
         )
 
@@ -601,6 +602,9 @@ def generate_tvl_chart_image(
         )
         plt.close(fig)
 
+        # Generate WebP version for smaller file size
+        _convert_to_webp(filepath)
+
         logger.info("Generated DeFi TVL dashboard: %s", filename)
         return f"/assets/images/generated/{filename}"
 
@@ -703,10 +707,16 @@ def build_post_content(
         )
     content_parts.append("")
 
-    # Chart image
+    # Chart image (with WebP fallback via <picture> tag)
     if chart_path:
-        web_path = "{{ '" + chart_path + "' | relative_url }}"
-        content_parts.append(f"\n![DeFi TVL Dashboard]({web_path})\n")
+        webp_path = chart_path.replace(".png", ".webp")
+        png_url = "{{ '" + chart_path + "' | relative_url }}"
+        webp_url = "{{ '" + webp_path + "' | relative_url }}"
+        content_parts.append(
+            f'\n<picture><source srcset="{webp_url}" type="image/webp">'
+            f'<img src="{png_url}" alt="DeFi TVL Dashboard" loading="lazy" decoding="async">'
+            f"</picture>\n"
+        )
 
     # ── Section 1: Top Protocols ──
     content_parts.append(f"\n## 상위 {len(protocols)}개 프로토콜 TVL 순위\n")

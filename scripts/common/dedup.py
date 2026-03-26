@@ -35,6 +35,17 @@ def _make_hash(title: str, source: str, date_str: str) -> str:
     return hashlib.sha256(normalized.encode("utf-8")).hexdigest()[:24]
 
 
+def _normalize_url(url: str) -> str:
+    """Normalize URL for dedup: strip tracking params and fragments."""
+    if not url:
+        return ""
+    # Remove common tracking parameters and fragments
+    url = re.sub(r"[?#].*$", "", url.strip())
+    # Remove trailing slash
+    url = url.rstrip("/")
+    return url.lower()
+
+
 class DedupEngine:
     """Deduplication engine with JSON state persistence."""
 
@@ -46,6 +57,7 @@ class DedupEngine:
         self.max_age_days = max_age_days
         self.seen: Dict[str, str] = {}  # hash -> timestamp
         self.titles: List[List[str]] = []  # [[normalized_title, date_str], ...]
+        self.seen_urls: Dict[str, str] = {}  # normalized_url -> timestamp
         self._load()
 
     def _load(self) -> None:
@@ -79,11 +91,13 @@ class DedupEngine:
                         fallback_date,
                     )
                 self.titles = converted
+                self.seen_urls = data.get("seen_urls", {})
                 self._prune()
             except (json.JSONDecodeError, KeyError, OSError):
                 logger.warning("Corrupt state file %s, resetting", self.state_path)
                 self.seen = {}
                 self.titles = []
+                self.seen_urls = {}
 
     def _prune(self) -> None:
         """Remove entries older than max_age_days."""
@@ -92,6 +106,11 @@ class DedupEngine:
         if len(pruned) < len(self.seen):
             logger.info("Pruned %d old entries from dedup state", len(self.seen) - len(pruned))
         self.seen = pruned
+        # Prune old URLs
+        pruned_urls = {k: v for k, v in self.seen_urls.items() if v >= cutoff}
+        if len(pruned_urls) < len(self.seen_urls):
+            logger.info("Pruned %d old URL entries", len(self.seen_urls) - len(pruned_urls))
+        self.seen_urls = pruned_urls
         # Keep titles list manageable
         self.titles = self.titles[-(5000):]
 
@@ -102,7 +121,7 @@ class DedupEngine:
         try:
             with open(tmp_path, "w", encoding="utf-8") as f:
                 json.dump(
-                    {"seen": self.seen, "titles": self.titles},
+                    {"seen": self.seen, "titles": self.titles, "seen_urls": self.seen_urls},
                     f,
                     ensure_ascii=False,
                     indent=2,
@@ -116,15 +135,23 @@ class DedupEngine:
             except OSError:
                 pass
 
-    def is_duplicate(self, title: str, source: str, date_str: str) -> bool:
+    def is_duplicate(self, title: str, source: str, date_str: str, url: str = "") -> bool:
         """Check if a news item is a duplicate.
 
-        Uses exact hash match first, then date-aware fuzzy title matching:
+        Uses URL match first (catches same article from different source tags),
+        then exact hash match, then date-aware fuzzy title matching:
         - Same-day comparisons use 0.80 threshold (catch rephrased duplicates)
         - Cross-day comparisons use 0.95 threshold (only catch near-identical titles)
         """
         if not title or not title.strip():
             return True
+
+        # URL-based dedup: same URL from different source tags
+        if url:
+            norm_url = _normalize_url(url)
+            if norm_url and norm_url in self.seen_urls:
+                logger.debug("URL duplicate: %s (source: %s)", url[:80], source)
+                return True
 
         # Exact hash check
         h = _make_hash(title, source, date_str)
@@ -168,8 +195,13 @@ class DedupEngine:
         h = _make_hash(title, source, date_str)
         return h in self.seen
 
-    def mark_seen(self, title: str, source: str, date_str: str) -> None:
+    def mark_seen(self, title: str, source: str, date_str: str, url: str = "") -> None:
         """Mark a news item as seen."""
         h = _make_hash(title, source, date_str)
-        self.seen[h] = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%S")
+        now_str = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%S")
+        self.seen[h] = now_str
         self.titles.append([_normalize(title), date_str[:10]])
+        if url:
+            norm_url = _normalize_url(url)
+            if norm_url:
+                self.seen_urls[norm_url] = now_str

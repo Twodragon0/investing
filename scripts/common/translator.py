@@ -87,6 +87,18 @@ TERM_OVERRIDES: Dict[str, str] = {
     "Bank of Japan": "일본은행",
     "People's Bank of China": "중국인민은행",
     "World Bank": "세계은행",
+    # SEC filing terms (keep as-is to prevent mistranslation)
+    "Stock Titan": "Stock Titan",
+    "Form 4": "Form 4",
+    "Form 4/A": "Form 4/A",
+    "Form 3": "Form 3",
+    "Form 13F": "Form 13F",
+    "Form 8-K": "Form 8-K",
+    "Form 10-K": "Form 10-K",
+    "Form 10-Q": "Form 10-Q",
+    "Form S-1": "Form S-1",
+    "Insider Trading": "내부자 거래",
+    "insider trading": "내부자 거래",
     # Terms to keep as-is
     "ETF": "ETF",
     "NFT": "NFT",
@@ -411,6 +423,11 @@ _MEDIA_NAME_FIXES: Dict[str, str] = {
     "디크립트": "Decrypt",
     "포브스 디지털": "Forbes Digital",
     "시장 감시": "MarketWatch",
+    # SEC filing source names
+    "재고 타이탄": "Stock Titan",
+    "주식 타이탄": "Stock Titan",
+    "스톡 타이탄": "Stock Titan",
+    "내부자 무역": "내부자 거래",
 }
 
 # Awkward Korean patterns from machine translation → natural Korean
