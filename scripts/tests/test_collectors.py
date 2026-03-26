@@ -524,7 +524,7 @@ class TestFmpApiRequestTimeout:
 
     def test_request_timeout_imported_from_config(self):
         # fmp_api imports REQUEST_TIMEOUT from config at module level
-        import importlib
+        import importlib.util
 
         from common.config import REQUEST_TIMEOUT as config_timeout
         from common.fmp_api import fetch_economic_calendar  # noqa: F401 — trigger module import
