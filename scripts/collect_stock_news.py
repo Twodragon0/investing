@@ -21,7 +21,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common.bettafish_analyzer import BettaFishAnalyzer
 from common.collector_metrics import log_collection_summary
 from common.config import REQUEST_TIMEOUT, get_env, get_kst_now, get_verify_ssl, setup_logging
-from common.dedup import DedupEngine
+from common.dedup import DedupEngine, deduplicate_by_url
 from common.enrichment import _STOCK_SOURCE_CONTEXT, enrich_items
 from common.markdown_utils import (
     html_reference_details,
@@ -600,6 +600,7 @@ def main():
 
     # Enrich all items with descriptions before themed sections
     enrich_items(all_items, context_map=_STOCK_SOURCE_CONTEXT, max_fetch=40)
+    all_items = deduplicate_by_url(all_items)
 
     # Themed news sections with description cards
     content_parts.append("\n---\n")

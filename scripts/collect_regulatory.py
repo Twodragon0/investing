@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.collector_metrics import log_collection_summary
 from common.config import get_kst_now, get_verify_ssl, setup_logging
-from common.dedup import DedupEngine
+from common.dedup import DedupEngine, deduplicate_by_url
 from common.enrichment import enrich_items, fetch_page_description
 from common.markdown_utils import (
     html_reference_details,
@@ -360,6 +360,7 @@ def main():
 
     # Translation pass — descriptions already enriched by _enrich_item()
     enrich_items(all_items, context_map=_SOURCE_CONTEXT, fetch_url=False)
+    all_items = deduplicate_by_url(all_items)
 
     summarizer = ThemeSummarizer(all_items)
 

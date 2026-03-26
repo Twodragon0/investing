@@ -28,7 +28,7 @@ from common.config import (
     get_verify_ssl,
     setup_logging,
 )
-from common.dedup import DedupEngine
+from common.dedup import DedupEngine, deduplicate_by_url
 from common.enrichment import _SOCIAL_SOURCE_CONTEXT, enrich_items
 from common.markdown_utils import (
     html_reference_details,
@@ -428,6 +428,9 @@ def main():
     enrich_items(social_items, context_map=_SOCIAL_SOURCE_CONTEXT, fetch_url=True, max_fetch=25)
     enrich_items(reddit_items, context_map=_SOCIAL_SOURCE_CONTEXT, fetch_url=False)
     enrich_items(political_items, context_map=_SOCIAL_SOURCE_CONTEXT, fetch_url=True, max_fetch=25)
+    # URL dedup across all sources
+    social_items = deduplicate_by_url(social_items)
+    political_items = deduplicate_by_url(political_items)
     logger.info(
         "Enrichment complete: telegram=%d, social=%d, reddit=%d, political=%d",
         len(telegram_items),

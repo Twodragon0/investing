@@ -31,7 +31,7 @@ from common.config import (
     get_verify_ssl,
     setup_logging,
 )
-from common.dedup import DedupEngine
+from common.dedup import DedupEngine, deduplicate_by_url
 from common.enrichment import _CRYPTO_SOURCE_CONTEXT, enrich_items
 from common.markdown_utils import (
     html_reference_details,
@@ -489,12 +489,14 @@ def main():
 
     # Enrich remaining items (RSS, CryptoPanic, Google News browser)
     enrich_items(all_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=True, max_fetch=30)
+    all_items = deduplicate_by_url(all_items)
 
     # Security news from multiple sources -> security-alerts category
     rekt_items = fetch_rekt_news()
     google_security_items = fetch_google_news_security()
     enrich_items(rekt_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=False)
     enrich_items(google_security_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=True, max_fetch=15)
+    google_security_items = deduplicate_by_url(google_security_items)
 
     created_count = 0
 

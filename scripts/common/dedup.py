@@ -205,3 +205,27 @@ class DedupEngine:
             norm_url = _normalize_url(url)
             if norm_url:
                 self.seen_urls[norm_url] = now_str
+
+
+def deduplicate_by_url(items: List[Dict], url_key: str = "link") -> List[Dict]:
+    """Remove duplicate items sharing the same URL within a collection run.
+
+    Keeps the first occurrence. Items without a URL are always kept.
+    This is meant for in-session dedup before building a post, not
+    cross-session (use DedupEngine for that).
+    """
+    seen: set = set()
+    unique: List[Dict] = []
+    removed = 0
+    for item in items:
+        url = item.get(url_key, "")
+        if url:
+            norm = _normalize_url(url)
+            if norm in seen:
+                removed += 1
+                continue
+            seen.add(norm)
+        unique.append(item)
+    if removed:
+        logger.info("URL dedup removed %d duplicate items (%d → %d)", removed, len(items), len(unique))
+    return unique
