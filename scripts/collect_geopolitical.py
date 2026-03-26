@@ -26,7 +26,7 @@ from common.config import (
     get_verify_ssl,
     setup_logging,
 )
-from common.dedup import DedupEngine
+from common.dedup import DedupEngine, deduplicate_by_url
 from common.enrichment import enrich_items
 from common.markdown_utils import (
     html_reference_details,
@@ -705,6 +705,7 @@ def main() -> None:
     # Enrich Google News items for descriptions
     if google_news_items:
         enrich_items(google_news_items, _GEO_SOURCE_CONTEXT, fetch_url=False)
+        google_news_items = deduplicate_by_url(google_news_items)
 
     # Count total items across sources
     total_items = len(markets) + len(gdelt_articles) + len(google_news_items)

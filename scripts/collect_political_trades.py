@@ -23,7 +23,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.collector_metrics import log_collection_summary
 from common.config import REQUEST_TIMEOUT, get_kst_now, get_verify_ssl, setup_logging
-from common.dedup import DedupEngine
+from common.dedup import DedupEngine, deduplicate_by_url
 from common.enrichment import _POLITICAL_SOURCE_CONTEXT, enrich_items
 from common.markdown_utils import (
     html_reference_details,
@@ -252,17 +252,12 @@ def main():
     all_items = congress_items + sec_items + trump_items + korea_items + central_bank_items
     pre_dedup_count = len(all_items)
 
-    # Deduplicate individual items (by title+source AND by URL)
-    unique_items = []
-    seen_links: set[str] = set()
-    for item in all_items:
-        link = item.get("link", "").split("?")[0].rstrip("/")  # normalize URL
-        if link and link in seen_links:
-            continue
-        if not dedup.is_duplicate(item.get("title", ""), item.get("source", ""), today):
-            unique_items.append(item)
-            if link:
-                seen_links.add(link)
+    # Deduplicate individual items (by URL, then by title+source)
+    all_items = deduplicate_by_url(all_items)
+    unique_items = [
+        item for item in all_items
+        if not dedup.is_duplicate(item.get("title", ""), item.get("source", ""), today)
+    ]
 
     total_count = len(unique_items)
     logger.info(
