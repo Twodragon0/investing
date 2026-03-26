@@ -375,3 +375,128 @@ class TestBettaFishAnalyzerIntegration:
         outlook = analyzer.generate_brief_outlook(report)
         assert isinstance(outlook, str)
         assert len(outlook) > 0
+
+    def test_analyze_vix_spike_scenario(self):
+        """VIX 급등 시나리오: 고공포 환경."""
+        from common.bettafish_analyzer import BettaFishAnalyzer
+
+        macro = {"vix": 35.0, "us10y": 4.8, "us10y_trend": "rising", "dxy": 106.0}
+        analyzer = BettaFishAnalyzer()
+        report = analyzer.analyze(macro_data=macro)
+        assert report.verdict in ("강세", "약세", "중립", "혼조")
+        # High VIX + high rates should produce risk factors
+        assert len(report.risk_factors) > 0 or "리스크" in report.synthesis.lower() or "위험" in report.synthesis
+
+    def test_analyze_low_rate_bullish_scenario(self):
+        """저금리 환경: 위험자산 우호적."""
+        from common.bettafish_analyzer import BettaFishAnalyzer
+
+        macro = {"vix": 12.0, "us10y": 2.5, "us10y_trend": "falling", "dxy": 95.0, "fed_rate": 2.0}
+        analyzer = BettaFishAnalyzer()
+        report = analyzer.analyze(macro_data=macro)
+        assert report.verdict in ("강세", "약세", "중립", "혼조")
+        assert len(report.macro_narrative) > 10
+
+    def test_analyze_strong_dollar_scenario(self):
+        """강달러 환경: DXY 106+."""
+        from common.bettafish_analyzer import BettaFishAnalyzer
+
+        macro = {"dxy": 108.0, "dxy_trend": "rising", "vix": 20.0, "us10y": 4.0}
+        analyzer = BettaFishAnalyzer()
+        report = analyzer.analyze(macro_data=macro)
+        assert report.verdict in ("강세", "약세", "중립", "혼조")
+
+    def test_analyze_full_inputs(self):
+        """모든 입력이 있는 풀 분석."""
+        from common.bettafish_analyzer import BettaFishAnalyzer
+
+        macro = {"vix": 22.0, "us10y": 3.8, "dxy": 101.0, "fed_rate": 3.5}
+        keywords = [
+            {"keyword": "bitcoin", "count": 20, "sentiment": 0.5},
+            {"keyword": "halving", "count": 8, "sentiment": 0.9},
+            {"keyword": "regulation", "count": 12, "sentiment": -0.4},
+            {"keyword": "crash", "count": 3, "sentiment": -0.8},
+        ]
+        analyzer = BettaFishAnalyzer()
+        report = analyzer.analyze(keywords=keywords, macro_data=macro)
+        assert report.verdict in ("강세", "약세", "중립", "혼조")
+        assert report.confidence in ("low", "medium", "high")
+        assert len(report.chapters) > 0
+        assert len(report.synthesis) > 20
+
+    def test_report_markdown_with_chapters(self):
+        """챕터가 있는 리포트의 마크다운 생성."""
+        from common.bettafish_analyzer import BettaFishAnalyzer
+
+        macro = {"vix": 25.0, "us10y": 4.2, "dxy": 103.0}
+        analyzer = BettaFishAnalyzer()
+        report = analyzer.analyze(macro_data=macro)
+        md = analyzer.generate_report_markdown(report)
+        assert "## 멀티 관점 시장 분석" in md
+        assert "종합 의견" in md
+        assert "최종 판정" in md
+        if report.chapters:
+            assert "###" in md
+
+    def test_report_markdown_risk_and_opportunities(self):
+        """리스크/기회 요인이 마크다운에 포함되는지 확인."""
+        from common.bettafish_analyzer import AnalysisReport, BettaFishAnalyzer
+
+        analyzer = BettaFishAnalyzer()
+        report = AnalysisReport(
+            data_narrative="데이터 분석",
+            sentiment_narrative="심리 분석",
+            macro_narrative="매크로 분석",
+            synthesis="종합 분석 내용입니다.",
+            risk_factors=["고금리 지속", "VIX 급등"],
+            opportunities=["AI 섹터 성장", "비트코인 반감기"],
+            verdict="혼조",
+            confidence="medium",
+            chapters=[],
+            timestamp="2026-03-26T12:00:00Z",
+        )
+        md = analyzer.generate_report_markdown(report)
+        assert "고금리 지속" in md
+        assert "AI 섹터 성장" in md
+        assert "리스크 요인" in md
+        assert "기회 요인" in md
+
+    def test_brief_outlook_with_risks_and_opps(self):
+        """리스크+기회 모두 있을 때 brief outlook 형식."""
+        from common.bettafish_analyzer import AnalysisReport, BettaFishAnalyzer
+
+        analyzer = BettaFishAnalyzer()
+        report = AnalysisReport(
+            data_narrative="",
+            sentiment_narrative="",
+            macro_narrative="",
+            synthesis="시장 혼조세가 지속되고 있습니다.",
+            risk_factors=["인플레이션"],
+            opportunities=["ETF 승인"],
+            verdict="혼조",
+            confidence="low",
+            chapters=[],
+        )
+        outlook = analyzer.generate_brief_outlook(report)
+        assert "리스크" in outlook
+        assert "기회" in outlook
+
+    def test_brief_outlook_risks_only(self):
+        """리스크만 있을 때 brief outlook."""
+        from common.bettafish_analyzer import AnalysisReport, BettaFishAnalyzer
+
+        analyzer = BettaFishAnalyzer()
+        report = AnalysisReport(
+            data_narrative="",
+            sentiment_narrative="",
+            macro_narrative="",
+            synthesis="약세 압력이 지속됩니다.",
+            risk_factors=["금리 인상", "달러 강세"],
+            opportunities=[],
+            verdict="약세",
+            confidence="high",
+            chapters=[],
+        )
+        outlook = analyzer.generate_brief_outlook(report)
+        assert "리스크" in outlook
+        assert "기회" not in outlook
