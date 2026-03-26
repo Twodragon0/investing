@@ -16,7 +16,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.collector_metrics import log_collection_summary
 from common.config import REQUEST_TIMEOUT, USER_AGENT, get_kst_now, get_verify_ssl, setup_logging
-from common.dedup import DedupEngine
+from common.dedup import DedupEngine, deduplicate_by_url
 from common.enrichment import _WORLDMONITOR_SOURCE_CONTEXT, enrich_items
 from common.markdown_utils import (
     escape_table_cell,
@@ -680,6 +680,7 @@ def main() -> None:
         return
 
     enrich_items(items, context_map=_WORLDMONITOR_SOURCE_CONTEXT, max_fetch=20)
+    items = deduplicate_by_url(items)
 
     source_counter: Counter = Counter()
     theme_counter: Counter = Counter()

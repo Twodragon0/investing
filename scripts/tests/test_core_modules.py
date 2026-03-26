@@ -223,6 +223,101 @@ class TestDedupEngineMarkSeen:
             assert engine2.is_duplicate_exact("Persistent title", "src", "2024-01-15") is True
 
 
+class TestDedupEngineUrlDedup:
+    """Tests for URL-based deduplication."""
+
+    def test_url_duplicate_different_source(self, tmp_path):
+        import common.dedup as dedup_mod
+        with patch.object(dedup_mod, "STATE_DIR", str(tmp_path)):
+            from common.dedup import DedupEngine
+            engine = DedupEngine("test_state.json")
+            engine.mark_seen("Article A", "src1", "2024-01-15", url="https://example.com/article")
+            assert engine.is_duplicate("Article A", "src2", "2024-01-15", url="https://example.com/article") is True
+
+    def test_url_duplicate_with_tracking_params(self, tmp_path):
+        import common.dedup as dedup_mod
+        with patch.object(dedup_mod, "STATE_DIR", str(tmp_path)):
+            from common.dedup import DedupEngine
+            engine = DedupEngine("test_state.json")
+            engine.mark_seen("Article", "src1", "2024-01-15", url="https://example.com/art?utm=1")
+            assert engine.is_duplicate("Article", "src2", "2024-01-15", url="https://example.com/art?ref=2") is True
+
+    def test_different_url_not_duplicate(self, tmp_path):
+        import common.dedup as dedup_mod
+        with patch.object(dedup_mod, "STATE_DIR", str(tmp_path)):
+            from common.dedup import DedupEngine
+            engine = DedupEngine("test_state.json")
+            engine.mark_seen("Article", "src1", "2024-01-15", url="https://example.com/art1")
+            assert engine.is_duplicate("Other Article", "src2", "2024-01-15", url="https://example.com/art2") is False
+
+    def test_no_url_falls_back_to_title(self, tmp_path):
+        import common.dedup as dedup_mod
+        with patch.object(dedup_mod, "STATE_DIR", str(tmp_path)):
+            from common.dedup import DedupEngine
+            engine = DedupEngine("test_state.json")
+            engine.mark_seen("Unique Article", "src1", "2024-01-15")
+            assert engine.is_duplicate("Unique Article", "src1", "2024-01-15") is True
+            assert engine.is_duplicate("Different Article", "src1", "2024-01-15") is False
+
+    def test_url_persists_after_save_reload(self, tmp_path):
+        import common.dedup as dedup_mod
+        with patch.object(dedup_mod, "STATE_DIR", str(tmp_path)):
+            from common.dedup import DedupEngine
+            engine = DedupEngine("url_persist.json")
+            engine.mark_seen("Art", "src", "2024-01-15", url="https://example.com/x")
+            engine.save()
+            engine2 = DedupEngine("url_persist.json")
+            assert engine2.is_duplicate("Art", "src2", "2024-01-15", url="https://example.com/x") is True
+
+
+class TestDeduplicateByUrl:
+    """Tests for the deduplicate_by_url utility function."""
+
+    def test_removes_duplicate_urls(self):
+        from common.dedup import deduplicate_by_url
+        items = [
+            {"title": "A", "link": "https://example.com/1"},
+            {"title": "B", "link": "https://example.com/2"},
+            {"title": "A copy", "link": "https://example.com/1"},
+        ]
+        result = deduplicate_by_url(items)
+        assert len(result) == 2
+        assert result[0]["title"] == "A"
+        assert result[1]["title"] == "B"
+
+    def test_keeps_items_without_url(self):
+        from common.dedup import deduplicate_by_url
+        items = [
+            {"title": "A", "link": ""},
+            {"title": "B"},
+            {"title": "C", "link": "https://example.com/1"},
+        ]
+        result = deduplicate_by_url(items)
+        assert len(result) == 3
+
+    def test_normalizes_tracking_params(self):
+        from common.dedup import deduplicate_by_url
+        items = [
+            {"title": "A", "link": "https://example.com/art?utm=1"},
+            {"title": "B", "link": "https://example.com/art?ref=2"},
+        ]
+        result = deduplicate_by_url(items)
+        assert len(result) == 1
+
+    def test_empty_list(self):
+        from common.dedup import deduplicate_by_url
+        assert deduplicate_by_url([]) == []
+
+    def test_custom_url_key(self):
+        from common.dedup import deduplicate_by_url
+        items = [
+            {"title": "A", "url": "https://example.com/1"},
+            {"title": "B", "url": "https://example.com/1"},
+        ]
+        result = deduplicate_by_url(items, url_key="url")
+        assert len(result) == 1
+
+
 # ---------------------------------------------------------------------------
 # post_generator module tests
 # ---------------------------------------------------------------------------
