@@ -529,7 +529,9 @@ class TestFmpApiRequestTimeout:
         from common.config import REQUEST_TIMEOUT as config_timeout
         from common.fmp_api import fetch_economic_calendar  # noqa: F401 — trigger module import
 
-        source = importlib.util.find_spec("common.fmp_api").origin
+        spec = importlib.util.find_spec("common.fmp_api")
+        assert spec is not None and spec.origin is not None
+        source = spec.origin
         with open(source, encoding="utf-8") as f:
             src = f.read()
         assert "from .config import" in src

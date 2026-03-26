@@ -533,6 +533,7 @@ class TestParseDate:
 
     def test_timezone_aware(self):
         dt = parse_date("2025-01-15T10:30:00Z")
+        assert dt is not None
         assert dt.tzinfo is not None
 
 
