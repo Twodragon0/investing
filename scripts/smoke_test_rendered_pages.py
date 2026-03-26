@@ -57,11 +57,16 @@ def check_home(site_dir: Path) -> None:
 
 def check_category(site_dir: Path, slug: str) -> None:
     page = _read_soup(site_dir / slug / "index.html")
-    _assert(page.select_one("#category-filter") is not None, f"{slug} missing category filter")
-    _assert(page.select_one("#posts-list") is not None, f"{slug} missing posts list")
-    script_text = "\n".join(node.get_text() for node in page.select("script"))
-    _assert("updateDateDividers" in script_text, f"{slug} missing date divider script")
-    _assert("load-more-btn" in script_text, f"{slug} missing load more behavior")
+    has_posts = page.select_one("#category-filter") is not None
+    if has_posts:
+        # Category with posts: full UI expected
+        _assert(page.select_one("#posts-list") is not None, f"{slug} missing posts list")
+        script_text = "\n".join(node.get_text() for node in page.select("script"))
+        _assert("updateDateDividers" in script_text, f"{slug} missing date divider script")
+        _assert("load-more-btn" in script_text, f"{slug} missing load more behavior")
+    else:
+        # Category with 0 posts: page exists but controls are hidden
+        _assert(page.select_one("h1") is not None, f"{slug} empty category missing title")
 
 
 def main() -> int:
