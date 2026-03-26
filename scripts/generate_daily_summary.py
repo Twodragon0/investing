@@ -2472,24 +2472,39 @@ def main():
 
     content_parts.extend(
         _build_overview_section(
-            total_count, priority_items, theme_payload,
-            summary_map, security_summary, counts_str, sentiment,
+            total_count,
+            priority_items,
+            theme_payload,
+            summary_map,
+            security_summary,
+            counts_str,
+            sentiment,
         )
     )
 
     content_parts.extend(
         _build_briefing_section(
-            all_summaries, all_news_items, summary_map,
-            theme_payload, sentiment, today, briefing_image,
-            priority_items, summarizer,
+            all_summaries,
+            all_news_items,
+            summary_map,
+            theme_payload,
+            sentiment,
+            today,
+            briefing_image,
+            priority_items,
+            summarizer,
         )
     )
 
     market_summary = summary_map.get("market")
     content_parts.extend(
         _build_priority_and_category_sections(
-            priority_items, market_summary, security_summary,
-            summary_map, post_links, all_news_items,
+            priority_items,
+            market_summary,
+            security_summary,
+            summary_map,
+            post_links,
+            all_news_items,
         )
     )
 

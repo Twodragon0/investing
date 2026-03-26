@@ -14,6 +14,7 @@ if _SCRIPTS_DIR not in sys.path:
 # Helpers
 # ---------------------------------------------------------------------------
 
+
 def _make_item(title="", description="", source="", link="", **kwargs):
     item = {"title": title, "description": description, "source": source, "link": link}
     item.update(kwargs)
@@ -31,9 +32,11 @@ def _make_items_with_theme(theme_keyword, count=10, extra_count=0):
 # _truncate_sentence
 # ---------------------------------------------------------------------------
 
+
 class TestTruncateSentenceExtended:
     def _fn(self, text, max_len=300):
         from common.summarizer import _truncate_sentence
+
         return _truncate_sentence(text, max_len)
 
     def test_none_length_text_returns_empty(self):
@@ -110,9 +113,11 @@ class TestTruncateSentenceExtended:
 # _classify_news_severity
 # ---------------------------------------------------------------------------
 
+
 class TestClassifyNewsSeverityExtended:
     def _fn(self, title, description=""):
         from common.summarizer import _classify_news_severity
+
         return _classify_news_severity(title, description)
 
     def test_surge_is_high(self):
@@ -220,9 +225,11 @@ class TestClassifyNewsSeverityExtended:
 # _is_generic_desc edge cases
 # ---------------------------------------------------------------------------
 
+
 class TestIsGenericDescEdgeCases:
     def _fn(self, desc):
         from common.summarizer import _is_generic_desc
+
         return _is_generic_desc(desc)
 
     def test_leading_whitespace_stripped(self):
@@ -267,9 +274,11 @@ class TestIsGenericDescEdgeCases:
 # ThemeSummarizer.detect_concentration
 # ---------------------------------------------------------------------------
 
+
 class TestDetectConcentration:
     def _make_summarizer(self, items):
         from common.summarizer import ThemeSummarizer
+
         return ThemeSummarizer(items)
 
     def test_returns_none_for_fewer_than_5_items(self):
@@ -341,9 +350,11 @@ class TestDetectConcentration:
 # ThemeSummarizer.detect_anomalies
 # ---------------------------------------------------------------------------
 
+
 class TestDetectAnomalies:
     def _make_summarizer(self, items):
         from common.summarizer import ThemeSummarizer
+
         return ThemeSummarizer(items)
 
     def test_returns_empty_for_fewer_than_3_themes(self):
@@ -412,9 +423,11 @@ class TestDetectAnomalies:
 # ThemeSummarizer.generate_distribution_chart
 # ---------------------------------------------------------------------------
 
+
 class TestGenerateDistributionChart:
     def _make_summarizer(self, items):
         from common.summarizer import ThemeSummarizer
+
         return ThemeSummarizer(items)
 
     def test_returns_empty_for_fewer_than_5_items(self):
@@ -463,10 +476,9 @@ class TestGenerateDistributionChart:
         assert isinstance(result, str)
 
     def test_multiple_themes_produce_multiple_rows(self):
-        items = (
-            [_make_item(title=f"bitcoin btc halving {i}") for i in range(5)]
-            + [_make_item(title=f"ethereum layer2 rollup {i}") for i in range(5)]
-        )
+        items = [_make_item(title=f"bitcoin btc halving {i}") for i in range(5)] + [
+            _make_item(title=f"ethereum layer2 rollup {i}") for i in range(5)
+        ]
         s = self._make_summarizer(items)
         result = s.generate_distribution_chart()
         if result:
@@ -477,9 +489,11 @@ class TestGenerateDistributionChart:
 # ThemeSummarizer.generate_themed_news_sections
 # ---------------------------------------------------------------------------
 
+
 class TestGenerateThemedNewsSections:
     def _make_summarizer(self, items):
         from common.summarizer import ThemeSummarizer
+
         return ThemeSummarizer(items)
 
     def test_returns_empty_for_fewer_than_5_items(self):
@@ -520,24 +534,30 @@ class TestGenerateThemedNewsSections:
             assert "bitcoin" in result.lower() or "btc" in result.lower()
 
     def test_news_card_item_present(self):
-        items = [_make_item(
-            title=f"bitcoin btc halving {i}",
-            description="Bitcoin's halving event approaches." * 2,
-            link=f"https://example.com/{i}",
-            source="CoinDesk",
-        ) for i in range(10)]
+        items = [
+            _make_item(
+                title=f"bitcoin btc halving {i}",
+                description="Bitcoin's halving event approaches." * 2,
+                link=f"https://example.com/{i}",
+                source="CoinDesk",
+            )
+            for i in range(10)
+        ]
         s = self._make_summarizer(items)
         result = s.generate_themed_news_sections()
         if result:
             assert "news-card-item" in result
 
     def test_source_tag_present_when_source_provided(self):
-        items = [_make_item(
-            title=f"bitcoin btc {i}",
-            description="Bitcoin hits new all-time high today." * 3,
-            source="Reuters",
-            link=f"https://reuters.com/{i}",
-        ) for i in range(10)]
+        items = [
+            _make_item(
+                title=f"bitcoin btc {i}",
+                description="Bitcoin hits new all-time high today." * 3,
+                source="Reuters",
+                link=f"https://reuters.com/{i}",
+            )
+            for i in range(10)
+        ]
         s = self._make_summarizer(items)
         result = s.generate_themed_news_sections()
         if result:
@@ -551,11 +571,14 @@ class TestGenerateThemedNewsSections:
         assert isinstance(result, str)
 
     def test_generic_desc_not_shown_as_card_body(self):
-        items = [_make_item(
-            title=f"bitcoin btc {i}",
-            description="Read more about this topic on our website.",
-            link=f"https://example.com/{i}",
-        ) for i in range(10)]
+        items = [
+            _make_item(
+                title=f"bitcoin btc {i}",
+                description="Read more about this topic on our website.",
+                link=f"https://example.com/{i}",
+            )
+            for i in range(10)
+        ]
         s = self._make_summarizer(items)
         result = s.generate_themed_news_sections()
         # Generic desc should not be output verbatim as a news-desc paragraph
@@ -576,9 +599,11 @@ class TestGenerateThemedNewsSections:
 # ThemeSummarizer.classify_priority — additional coverage
 # ---------------------------------------------------------------------------
 
+
 class TestClassifyPriorityExtended:
     def _make_summarizer(self, items):
         from common.summarizer import ThemeSummarizer
+
         return ThemeSummarizer(items)
 
     def test_rug_pull_is_p0(self):

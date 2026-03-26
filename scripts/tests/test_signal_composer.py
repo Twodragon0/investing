@@ -31,6 +31,7 @@ from common.signal_composer import (  # noqa: E402
 # Helper factories
 # ---------------------------------------------------------------------------
 
+
 def _full_signals():
     """A complete set of all supported signal keys."""
     return {
@@ -57,6 +58,7 @@ def _make_signal_result(name="테스트", normalized=0.5, verdict="중립", weig
 # ===========================================================================
 # Module-level helper functions
 # ===========================================================================
+
 
 class TestScoreToVerdict:
     def test_bullish_at_threshold(self):
@@ -144,6 +146,7 @@ class TestVerdictWithIcon:
 # SignalComposer.__init__ and weight initialization
 # ===========================================================================
 
+
 class TestSignalComposerInit:
     def test_default_weights_sum_to_one(self):
         composer = SignalComposer()
@@ -167,6 +170,7 @@ class TestSignalComposerInit:
 # ===========================================================================
 # SignalComposer.compose_signals — empty / missing data
 # ===========================================================================
+
 
 class TestComposeSignalsEmpty:
     def test_empty_dict_returns_default(self):
@@ -193,6 +197,7 @@ class TestComposeSignalsEmpty:
 # ===========================================================================
 # SignalComposer.compose_signals — single signal inputs
 # ===========================================================================
+
 
 class TestComposeSignalsSingle:
     def test_fear_greed_high_score_is_bullish(self):
@@ -221,6 +226,7 @@ class TestComposeSignalsSingle:
 # ===========================================================================
 # SignalComposer.compose_signals — full signal set
 # ===========================================================================
+
 
 class TestComposeSignalsFull:
     def test_returns_composite_result(self):
@@ -297,6 +303,7 @@ class TestComposeSignalsFull:
 # ===========================================================================
 # Individual signal processors (_process_*)
 # ===========================================================================
+
 
 class TestProcessFearGreed:
     def setup_method(self):
@@ -510,6 +517,7 @@ class TestProcessTechnical:
 # _normalize_signal
 # ===========================================================================
 
+
 class TestNormalizeSignal:
     def setup_method(self):
         self.composer = SignalComposer()
@@ -561,6 +569,7 @@ class TestNormalizeSignal:
 # _renormalize_weights
 # ===========================================================================
 
+
 class TestRenormalizeWeights:
     def setup_method(self):
         self.composer = SignalComposer()
@@ -592,6 +601,7 @@ class TestRenormalizeWeights:
 # ===========================================================================
 # _calculate_weighted_score
 # ===========================================================================
+
 
 class TestCalculateWeightedScore:
     def setup_method(self):
@@ -635,6 +645,7 @@ class TestCalculateWeightedScore:
 # _determine_verdict
 # ===========================================================================
 
+
 class TestDetermineVerdict:
     def setup_method(self):
         self.composer = SignalComposer()
@@ -670,6 +681,7 @@ class TestDetermineVerdict:
 # ===========================================================================
 # _calculate_confidence
 # ===========================================================================
+
 
 class TestCalculateConfidence:
     def setup_method(self):
@@ -719,6 +731,7 @@ class TestCalculateConfidence:
 # ===========================================================================
 # _generate_scenarios
 # ===========================================================================
+
 
 class TestGenerateScenarios:
     def setup_method(self):
@@ -775,6 +788,7 @@ class TestGenerateScenarios:
 # analyze_stance
 # ===========================================================================
 
+
 class TestAnalyzeStance:
     def setup_method(self):
         self.composer = SignalComposer()
@@ -809,9 +823,7 @@ class TestAnalyzeStance:
         assert len(stance.observers) == 3
 
     def test_empty_signals_neutral(self):
-        result = CompositeResult(
-            score=50.0, verdict="중립", confidence="low", confidence_label="낮음"
-        )
+        result = CompositeResult(score=50.0, verdict="중립", confidence="low", confidence_label="낮음")
         stance = self.composer.analyze_stance(result)
         assert stance.dominant_stance == "neutral"
         assert stance.consensus_ratio == 0.0
@@ -832,12 +844,15 @@ class TestAnalyzeStance:
 # generate_outlook_markdown
 # ===========================================================================
 
+
 class TestGenerateOutlookMarkdown:
     def setup_method(self):
         self.composer = SignalComposer()
 
     def _make_composite(self, score=55.0, verdict="강세"):
-        sr = _make_signal_result(name="공포·탐욕 지수", raw_display="70 (탐욕)", normalized=0.7, weight=1.0, trend_arrow="↑")
+        sr = _make_signal_result(
+            name="공포·탐욕 지수", raw_display="70 (탐욕)", normalized=0.7, weight=1.0, trend_arrow="↑"
+        )
         scenario = ScenarioResult(label="강세", emoji="🟢", probability=40, description="테스트")
         return CompositeResult(
             score=score,
@@ -883,6 +898,7 @@ class TestGenerateOutlookMarkdown:
 # generate_prediction_markdown
 # ===========================================================================
 
+
 class TestGeneratePredictionMarkdown:
     def setup_method(self):
         self.composer = SignalComposer()
@@ -922,6 +938,7 @@ class TestGeneratePredictionMarkdown:
 # Module-level convenience functions
 # ===========================================================================
 
+
 class TestModuleLevelFunctions:
     def test_compose_signals_convenience(self):
         result = compose_signals({"fear_greed": {"value": 70}})
@@ -955,6 +972,7 @@ class TestModuleLevelFunctions:
 # ===========================================================================
 # DataClass field defaults and structure
 # ===========================================================================
+
 
 class TestDataClasses:
     def test_signal_result_fields(self):

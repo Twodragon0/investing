@@ -254,12 +254,14 @@ class TestExtractMarketSignals:
     def test_dominant_themes_sorted_by_count(self):
         from common.entity_extractor import extract_market_signals
 
-        items = self._make_items([
-            "rate cut expected",
-            "rate hike fears",
-            "inflation CPI data",
-            "Fed rate decision",
-        ])
+        items = self._make_items(
+            [
+                "rate cut expected",
+                "rate hike fears",
+                "inflation CPI data",
+                "Fed rate decision",
+            ]
+        )
         result = extract_market_signals(items)
         themes = result["dominant_themes"]
         assert len(themes) > 0
@@ -272,11 +274,13 @@ class TestExtractMarketSignals:
     def test_dominant_themes_capped_at_five(self):
         from common.entity_extractor import extract_market_signals
 
-        items = self._make_items([
-            "rate cut inflation AI chip semiconductor ETF",
-            "IPO earnings hack regulation tariff",
-            "BTC ETH rate cut inflation AI",
-        ])
+        items = self._make_items(
+            [
+                "rate cut inflation AI chip semiconductor ETF",
+                "IPO earnings hack regulation tariff",
+                "BTC ETH rate cut inflation AI",
+            ]
+        )
         result = extract_market_signals(items)
         assert len(result["dominant_themes"]) <= 5
 
@@ -338,11 +342,13 @@ class TestGroupRelatedItems:
     def test_bitcoin_items_grouped_together(self):
         from common.entity_extractor import group_related_items
 
-        items = self._make_items([
-            "Bitcoin BTC price hits 100k",
-            "BTC whale moves coins",
-            "Ethereum drops today",
-        ])
+        items = self._make_items(
+            [
+                "Bitcoin BTC price hits 100k",
+                "BTC whale moves coins",
+                "Ethereum drops today",
+            ]
+        )
         result = group_related_items(items)
         # The two BTC items should share a group
         btc_group = None
@@ -357,20 +363,24 @@ class TestGroupRelatedItems:
     def test_group_label_bitcoin_korean(self):
         from common.entity_extractor import group_related_items
 
-        items = self._make_items([
-            "Bitcoin rallies above 90k",
-            "BTC ETF approved by SEC",
-        ])
+        items = self._make_items(
+            [
+                "Bitcoin rallies above 90k",
+                "BTC ETF approved by SEC",
+            ]
+        )
         result = group_related_items(items)
         assert "비트코인(BTC)" in result
 
     def test_group_label_nvidia_korean(self):
         from common.entity_extractor import group_related_items
 
-        items = self._make_items([
-            "Nvidia NVDA beats earnings",
-            "NVDA stock hits new high",
-        ])
+        items = self._make_items(
+            [
+                "Nvidia NVDA beats earnings",
+                "NVDA stock hits new high",
+            ]
+        )
         result = group_related_items(items)
         assert "엔비디아(NVDA)" in result
 
@@ -404,12 +414,14 @@ class TestGroupRelatedItems:
     def test_all_items_accounted_for(self):
         from common.entity_extractor import group_related_items
 
-        items = self._make_items([
-            "BTC rally",
-            "BTC correction",
-            "ETH upgrade",
-            "weather news",
-        ])
+        items = self._make_items(
+            [
+                "BTC rally",
+                "BTC correction",
+                "ETH upgrade",
+                "weather news",
+            ]
+        )
         result = group_related_items(items)
         total = sum(len(v) for v in result.values())
         assert total == len(items)
@@ -417,12 +429,14 @@ class TestGroupRelatedItems:
     def test_no_item_in_multiple_groups(self):
         from common.entity_extractor import group_related_items
 
-        items = self._make_items([
-            "BTC Bitcoin rally",
-            "BTC price drop",
-            "ETH Ethereum upgrade",
-            "ETH staking reward",
-        ])
+        items = self._make_items(
+            [
+                "BTC Bitcoin rally",
+                "BTC price drop",
+                "ETH Ethereum upgrade",
+                "ETH staking reward",
+            ]
+        )
         result = group_related_items(items)
         # Collect all item objects across groups
         all_seen = []

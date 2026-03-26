@@ -47,6 +47,7 @@ _EMPTY_RSS_XML = """<?xml version="1.0" encoding="UTF-8"?>
 # Helper: build a mock HTTP response
 # ---------------------------------------------------------------------------
 
+
 def _make_response(text: str, status_code: int = 200) -> MagicMock:
     resp = MagicMock()
     resp.status_code = status_code
@@ -54,15 +55,15 @@ def _make_response(text: str, status_code: int = 200) -> MagicMock:
     resp.raise_for_status = MagicMock()
     if status_code >= 400:
         import requests
-        resp.raise_for_status.side_effect = requests.exceptions.HTTPError(
-            f"{status_code} Error", response=resp
-        )
+
+        resp.raise_for_status.side_effect = requests.exceptions.HTTPError(f"{status_code} Error", response=resp)
     return resp
 
 
 # ---------------------------------------------------------------------------
 # rss_fetcher tests
 # ---------------------------------------------------------------------------
+
 
 class TestFetchRssFeed:
     """Tests for rss_fetcher.fetch_rss_feed()."""
@@ -219,14 +220,12 @@ class TestFetchRssFeed:
 # crypto_api tests
 # ---------------------------------------------------------------------------
 
+
 class TestFetchCoingeckoTopCoins:
     """Tests for crypto_api.fetch_coingecko_top_coins()."""
 
     def _make_coins_response(self, count: int = 3) -> MagicMock:
-        coins = [
-            {"id": f"coin-{i}", "symbol": f"c{i}", "current_price": 100 * i}
-            for i in range(1, count + 1)
-        ]
+        coins = [{"id": f"coin-{i}", "symbol": f"c{i}", "current_price": 100 * i} for i in range(1, count + 1)]
         resp = MagicMock()
         resp.json.return_value = coins
         return resp
@@ -366,12 +365,14 @@ class TestCryptoApiRequestTimeout:
 
     def test_request_timeout_is_20(self):
         from common.crypto_api import REQUEST_TIMEOUT
+
         assert REQUEST_TIMEOUT == 20
 
 
 # ---------------------------------------------------------------------------
 # fmp_api tests
 # ---------------------------------------------------------------------------
+
 
 class TestFetchEconomicCalendar:
     """Tests for fmp_api.fetch_economic_calendar()."""
@@ -403,8 +404,10 @@ class TestFetchEconomicCalendar:
     def test_returns_high_and_medium_events_only(self):
         from common.fmp_api import fetch_economic_calendar
 
-        with patch("common.fmp_api.get_env", return_value="fake-key"), \
-             patch("common.fmp_api.request_with_retry") as mock_req:
+        with (
+            patch("common.fmp_api.get_env", return_value="fake-key"),
+            patch("common.fmp_api.request_with_retry") as mock_req,
+        ):
             mock_req.return_value = self._make_fmp_response()
             events = fetch_economic_calendar()
 
@@ -414,8 +417,10 @@ class TestFetchEconomicCalendar:
     def test_event_fields_present(self):
         from common.fmp_api import fetch_economic_calendar
 
-        with patch("common.fmp_api.get_env", return_value="fake-key"), \
-             patch("common.fmp_api.request_with_retry") as mock_req:
+        with (
+            patch("common.fmp_api.get_env", return_value="fake-key"),
+            patch("common.fmp_api.request_with_retry") as mock_req,
+        ):
             mock_req.return_value = self._make_fmp_response()
             events = fetch_economic_calendar()
 
@@ -445,8 +450,7 @@ class TestFetchEconomicCalendar:
             }
         ]
 
-        with patch("common.fmp_api.get_env", return_value=""), \
-             patch("common.fmp_api.request_with_retry") as mock_req:
+        with patch("common.fmp_api.get_env", return_value=""), patch("common.fmp_api.request_with_retry") as mock_req:
             mock_req.return_value = forex_resp
             events = fetch_economic_calendar()
 
@@ -479,8 +483,10 @@ class TestFetchEconomicCalendar:
                 raise req_lib.exceptions.ConnectionError("FMP unavailable")
             return forex_resp
 
-        with patch("common.fmp_api.get_env", return_value="fake-key"), \
-             patch("common.fmp_api.request_with_retry", side_effect=_side_effect):
+        with (
+            patch("common.fmp_api.get_env", return_value="fake-key"),
+            patch("common.fmp_api.request_with_retry", side_effect=_side_effect),
+        ):
             events = fetch_economic_calendar()
 
         assert isinstance(events, list)
@@ -502,8 +508,10 @@ class TestFetchEconomicCalendar:
                 return empty_resp
             return forex_resp
 
-        with patch("common.fmp_api.get_env", return_value="fake-key"), \
-             patch("common.fmp_api.request_with_retry", side_effect=_side_effect):
+        with (
+            patch("common.fmp_api.get_env", return_value="fake-key"),
+            patch("common.fmp_api.request_with_retry", side_effect=_side_effect),
+        ):
             events = fetch_economic_calendar()
 
         # Empty FMP list triggers fallback — two calls total expected
@@ -520,6 +528,7 @@ class TestFmpApiRequestTimeout:
 
         from common.config import REQUEST_TIMEOUT as config_timeout
         from common.fmp_api import fetch_economic_calendar  # noqa: F401 — trigger module import
+
         source = importlib.util.find_spec("common.fmp_api").origin
         with open(source, encoding="utf-8") as f:
             src = f.read()
@@ -532,6 +541,7 @@ class TestFmpApiRequestTimeout:
 # ---------------------------------------------------------------------------
 # collector_metrics tests
 # ---------------------------------------------------------------------------
+
 
 class TestLogCollectionSummary:
     """Tests for collector_metrics.log_collection_summary()."""

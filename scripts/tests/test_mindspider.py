@@ -28,6 +28,7 @@ from common.mindspider import (  # noqa: E402
 # Fixtures / helpers
 # ---------------------------------------------------------------------------
 
+
 def _make_item(title="", description="", category="crypto", source="TestSource"):
     return {"title": title, "description": description, "category": category, "source": source}
 
@@ -57,6 +58,7 @@ CRYPTO_ENTITY_ITEMS = [
 # Data classes
 # ---------------------------------------------------------------------------
 
+
 class TestFinancialEntity:
     def test_fields_accessible(self):
         e = FinancialEntity(name="SEC", entity_type="Regulator", mentions=3, sentiment_bias=0.1, stance="observer")
@@ -73,15 +75,22 @@ class TestFinancialEntity:
         assert len(e.related_entities) == 0
 
     def test_related_entities_custom(self):
-        e = FinancialEntity(name="SEC", entity_type="Regulator", mentions=2, sentiment_bias=-0.5, stance="opposing",
-                            related_entities=["코인베이스", "바이낸스"])
+        e = FinancialEntity(
+            name="SEC",
+            entity_type="Regulator",
+            mentions=2,
+            sentiment_bias=-0.5,
+            stance="opposing",
+            related_entities=["코인베이스", "바이낸스"],
+        )
         assert "코인베이스" in e.related_entities
 
 
 class TestEntityRelation:
     def test_fields_accessible(self):
-        r = EntityRelation(source="SEC", target="코인베이스", relation_type="REGULATES",
-                           fact="SEC sues Coinbase", sentiment=-0.5)
+        r = EntityRelation(
+            source="SEC", target="코인베이스", relation_type="REGULATES", fact="SEC sues Coinbase", sentiment=-0.5
+        )
         assert r.source == "SEC"
         assert r.target == "코인베이스"
         assert r.relation_type == "REGULATES"
@@ -91,23 +100,30 @@ class TestEntityRelation:
 
 class TestTopicCluster:
     def test_fields_accessible(self):
-        tc = TopicCluster(topic_name="비트코인 급등", keywords=["비트코인", "급등"],
-                          news_count=3, sentiment_score=0.8,
-                          representative_title="BTC hits record", summary="Crypto rally")
+        tc = TopicCluster(
+            topic_name="비트코인 급등",
+            keywords=["비트코인", "급등"],
+            news_count=3,
+            sentiment_score=0.8,
+            representative_title="BTC hits record",
+            summary="Crypto rally",
+        )
         assert tc.topic_name == "비트코인 급등"
         assert tc.news_count == 3
         assert tc.sentiment_score == 0.8
         assert tc.news_items == []
 
     def test_news_items_default_empty(self):
-        tc = TopicCluster(topic_name="test", keywords=[], news_count=0,
-                          sentiment_score=0.0, representative_title="", summary="")
+        tc = TopicCluster(
+            topic_name="test", keywords=[], news_count=0, sentiment_score=0.0, representative_title="", summary=""
+        )
         assert isinstance(tc.news_items, list)
 
 
 # ---------------------------------------------------------------------------
 # MindSpider._tokenize
 # ---------------------------------------------------------------------------
+
 
 class TestTokenize:
     def setup_method(self):
@@ -177,6 +193,7 @@ class TestTokenize:
 # MindSpider._tokenize_items
 # ---------------------------------------------------------------------------
 
+
 class TestTokenizeItems:
     def setup_method(self):
         self.spider = MindSpider()
@@ -207,6 +224,7 @@ class TestTokenizeItems:
 # MindSpider._compute_tfidf
 # ---------------------------------------------------------------------------
 
+
 class TestComputeTfidf:
     def setup_method(self):
         self.spider = MindSpider()
@@ -230,6 +248,7 @@ class TestComputeTfidf:
         docs = [["bitcoin", "rally"], ["bitcoin", "crash"], ["bitcoin", "surge"]]
         self.spider._compute_tfidf(docs)
         import math as _math
+
         n = 3
         # bitcoin df=3 → idf = log(3/4)+1
         idf_bitcoin = _math.log(n / (3 + 1)) + 1
@@ -246,6 +265,7 @@ class TestComputeTfidf:
         # aa df=2, bb df=1 → idf(bb) > idf(aa)
         # tf(aa)=2/4=0.5, tf(bb)=1/4=0.25 → but idf difference large enough
         import math as _math
+
         n = 2
         idf_aa = _math.log(n / (2 + 1)) + 1
         idf_bb = _math.log(n / (1 + 1)) + 1
@@ -273,6 +293,7 @@ class TestComputeTfidf:
 # MindSpider._get_token_sentiment
 # ---------------------------------------------------------------------------
 
+
 class TestGetTokenSentiment:
     def setup_method(self):
         self.spider = MindSpider()
@@ -299,6 +320,7 @@ class TestGetTokenSentiment:
 # ---------------------------------------------------------------------------
 # MindSpider._score_sentiment
 # ---------------------------------------------------------------------------
+
 
 class TestScoreSentiment:
     def setup_method(self):
@@ -345,6 +367,7 @@ class TestScoreSentiment:
 # MindSpider._sentiment_label
 # ---------------------------------------------------------------------------
 
+
 class TestSentimentLabel:
     def setup_method(self):
         self.spider = MindSpider()
@@ -378,6 +401,7 @@ class TestSentimentLabel:
 # ---------------------------------------------------------------------------
 # MindSpider.extract_keywords
 # ---------------------------------------------------------------------------
+
 
 class TestExtractKeywords:
     def setup_method(self):
@@ -455,6 +479,7 @@ class TestExtractKeywords:
 # MindSpider.cluster_topics
 # ---------------------------------------------------------------------------
 
+
 class TestClusterTopics:
     def setup_method(self):
         self.spider = MindSpider()
@@ -514,6 +539,7 @@ class TestClusterTopics:
 # MindSpider.generate_topic_summary
 # ---------------------------------------------------------------------------
 
+
 class TestGenerateTopicSummary:
     def setup_method(self):
         self.spider = MindSpider()
@@ -547,8 +573,9 @@ class TestGenerateTopicSummary:
         assert "관련 기사" in md
 
     def test_single_cluster_with_no_keywords(self):
-        tc = TopicCluster(topic_name="기타", keywords=[], news_count=1,
-                          sentiment_score=0.0, representative_title="t", summary="s")
+        tc = TopicCluster(
+            topic_name="기타", keywords=[], news_count=1, sentiment_score=0.0, representative_title="t", summary="s"
+        )
         md = self.spider.generate_topic_summary([tc])
         assert "기타" in md
         # no keyword line when keywords is empty
@@ -558,6 +585,7 @@ class TestGenerateTopicSummary:
 # ---------------------------------------------------------------------------
 # MindSpider.detect_market_signals
 # ---------------------------------------------------------------------------
+
 
 class TestDetectMarketSignals:
     def setup_method(self):
@@ -575,8 +603,15 @@ class TestDetectMarketSignals:
 
     def test_returns_required_keys(self):
         result = self.spider.detect_market_signals(BULLISH_ITEMS)
-        for key in ("bullish_keywords", "bearish_keywords", "trending",
-                    "overall_sentiment", "sentiment_score", "bullish_count", "bearish_count"):
+        for key in (
+            "bullish_keywords",
+            "bearish_keywords",
+            "trending",
+            "overall_sentiment",
+            "sentiment_score",
+            "bullish_count",
+            "bearish_count",
+        ):
             assert key in result
 
     def test_bullish_items_produce_bullish_sentiment(self):
@@ -629,6 +664,7 @@ class TestDetectMarketSignals:
 # MindSpider._build_entity_lookup
 # ---------------------------------------------------------------------------
 
+
 class TestBuildEntityLookup:
     def setup_method(self):
         self.spider = MindSpider()
@@ -658,6 +694,7 @@ class TestBuildEntityLookup:
 # ---------------------------------------------------------------------------
 # MindSpider._scan_text_for_entities
 # ---------------------------------------------------------------------------
+
 
 class TestScanTextForEntities:
     def setup_method(self):
@@ -693,6 +730,7 @@ class TestScanTextForEntities:
 # ---------------------------------------------------------------------------
 # MindSpider.extract_entities
 # ---------------------------------------------------------------------------
+
 
 class TestExtractEntities:
     def setup_method(self):
@@ -755,6 +793,7 @@ class TestExtractEntities:
 # ---------------------------------------------------------------------------
 # MindSpider.detect_relations
 # ---------------------------------------------------------------------------
+
 
 class TestDetectRelations:
     def setup_method(self):
@@ -831,6 +870,7 @@ class TestDetectRelations:
 # MindSpider.generate_entity_report
 # ---------------------------------------------------------------------------
 
+
 class TestGenerateEntityReport:
     def setup_method(self):
         self.spider = MindSpider()
@@ -867,7 +907,9 @@ class TestGenerateEntityReport:
         result = self.spider.generate_entity_report(entities, [], top_n=2)
         # check table has at most 2 data rows (plus header rows)
         # count lines with "| " that are not separator lines
-        data_rows = [line for line in result.splitlines() if line.startswith("|") and "---" not in line and "엔티티" not in line]
+        data_rows = [
+            line for line in result.splitlines() if line.startswith("|") and "---" not in line and "엔티티" not in line
+        ]
         assert len(data_rows) <= 2
 
     def test_no_relations_no_relations_section(self):
@@ -880,6 +922,7 @@ class TestGenerateEntityReport:
 # MindSpider internal helpers
 # ---------------------------------------------------------------------------
 
+
 class TestFindBestSeed:
     def setup_method(self):
         self.spider = MindSpider()
@@ -890,9 +933,9 @@ class TestFindBestSeed:
 
     def test_picks_most_overlapping(self):
         doc_sets = [
-            {"bitcoin", "rally", "surge"},   # 0: overlaps heavily with 1
-            {"bitcoin", "rally", "crash"},   # 1: overlaps heavily with 0
-            {"weather", "sunny", "day"},     # 2: no overlap
+            {"bitcoin", "rally", "surge"},  # 0: overlaps heavily with 1
+            {"bitcoin", "rally", "crash"},  # 1: overlaps heavily with 0
+            {"weather", "sunny", "day"},  # 2: no overlap
         ]
         seed = self.spider._find_best_seed([0, 1, 2], doc_sets)
         assert seed in (0, 1)  # both overlap equally with each other
@@ -954,6 +997,7 @@ class TestBuildSummary:
 # analyze_news convenience function
 # ---------------------------------------------------------------------------
 
+
 class TestAnalyzeNews:
     def test_empty_returns_empty_collections(self):
         result = analyze_news([])
@@ -964,8 +1008,15 @@ class TestAnalyzeNews:
 
     def test_returns_all_keys_with_entities(self):
         result = analyze_news(CRYPTO_ENTITY_ITEMS, include_entities=True)
-        for key in ("keywords", "clusters", "topic_summary_md", "market_signals",
-                    "entities", "relations", "entity_report_md"):
+        for key in (
+            "keywords",
+            "clusters",
+            "topic_summary_md",
+            "market_signals",
+            "entities",
+            "relations",
+            "entity_report_md",
+        ):
             assert key in result
 
     def test_returns_keys_without_entities(self):
@@ -1019,6 +1070,7 @@ class TestAnalyzeNews:
 # ---------------------------------------------------------------------------
 # Edge cases / boundary conditions
 # ---------------------------------------------------------------------------
+
 
 class TestEdgeCases:
     def setup_method(self):

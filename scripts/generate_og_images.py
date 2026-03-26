@@ -1128,13 +1128,18 @@ def _draw_visual_geopolitical(ax, accent: str) -> None:
         ax.plot(
             [cx, cx + r_max * np.cos(a)],
             [cy, cy + r_max * np.sin(a)],
-            color="#475569", linewidth=0.7, alpha=0.25,
+            color="#475569",
+            linewidth=0.7,
+            alpha=0.25,
         )
     # Risk polygon fill
     np.random.seed(77)
     risk_vals = [0.5, 0.8, 0.6, 0.9, 0.4, 0.7]
     from matplotlib.patches import Polygon
-    risk_pts = [(cx + r_max * v * np.cos(a), cy + r_max * v * np.sin(a)) for v, a in zip(risk_vals, angles, strict=False)]
+
+    risk_pts = [
+        (cx + r_max * v * np.cos(a), cy + r_max * v * np.sin(a)) for v, a in zip(risk_vals, angles, strict=False)
+    ]
     ax.add_patch(Polygon(risk_pts, closed=True, facecolor=accent, alpha=0.15, edgecolor=accent, linewidth=2))
     # Risk dots
     for (rx, ry), v in zip(risk_pts, risk_vals, strict=False):
@@ -1146,16 +1151,34 @@ def _draw_visual_geopolitical(ax, accent: str) -> None:
     for label, a in zip(risk_labels, angles, strict=False):
         lx = cx + (r_max + 22) * np.cos(a)
         ly = cy + (r_max + 22) * np.sin(a)
-        ax.text(lx, ly, label, fontsize=6, color=TEXT_MUTED, fontweight="bold", ha="center", va="center", alpha=0.45, **_FK)
+        ax.text(
+            lx, ly, label, fontsize=6, color=TEXT_MUTED, fontweight="bold", ha="center", va="center", alpha=0.45, **_FK
+        )
 
     # Alert badge
     ax.add_patch(
         mpatches.FancyBboxPatch(
-            (cx + 140, cy + 140), 50, 20, boxstyle="round,pad=2",
-            facecolor="#f85149", edgecolor="none", alpha=0.7,
+            (cx + 140, cy + 140),
+            50,
+            20,
+            boxstyle="round,pad=2",
+            facecolor="#f85149",
+            edgecolor="none",
+            alpha=0.7,
         )
     )
-    ax.text(cx + 165, cy + 150, "ALERT", fontsize=7, color=TEXT_WHITE, fontweight="bold", ha="center", va="center", alpha=0.9, **_FK)
+    ax.text(
+        cx + 165,
+        cy + 150,
+        "ALERT",
+        fontsize=7,
+        color=TEXT_WHITE,
+        fontweight="bold",
+        ha="center",
+        va="center",
+        alpha=0.9,
+        **_FK,
+    )
 
 
 # Category -> visual drawing function
@@ -1290,8 +1313,15 @@ def generate_og_image(
     title_y = 410
     for idx, line in enumerate(title_lines):
         ax.text(
-            60, title_y - idx * 40, line,
-            fontsize=28, color=TEXT_WHITE, fontweight="bold", ha="left", va="center", **_FK,
+            60,
+            title_y - idx * 40,
+            line,
+            fontsize=28,
+            color=TEXT_WHITE,
+            fontweight="bold",
+            ha="left",
+            va="center",
+            **_FK,
         )
 
     # Date
@@ -1303,8 +1333,14 @@ def generate_og_image(
         desc_start_y = date_y - 35
         for idx, line in enumerate(desc_lines):
             ax.text(
-                60, desc_start_y - idx * 24, line,
-                fontsize=12, color=TEXT_MUTED, ha="left", va="center", **_FK,
+                60,
+                desc_start_y - idx * 24,
+                line,
+                fontsize=12,
+                color=TEXT_MUTED,
+                ha="left",
+                va="center",
+                **_FK,
             )
 
     # Vertical accent line

@@ -255,8 +255,7 @@ def main():
     # Deduplicate individual items (by URL, then by title+source)
     all_items = deduplicate_by_url(all_items)
     unique_items = [
-        item for item in all_items
-        if not dedup.is_duplicate(item.get("title", ""), item.get("source", ""), today)
+        item for item in all_items if not dedup.is_duplicate(item.get("title", ""), item.get("source", ""), today)
     ]
 
     total_count = len(unique_items)

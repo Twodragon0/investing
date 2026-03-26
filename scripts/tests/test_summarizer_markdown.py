@@ -22,6 +22,7 @@ class TestIsGenericDesc:
 
     def _fn(self, desc):
         from common.summarizer import _is_generic_desc
+
         return _is_generic_desc(desc)
 
     # --- generic descriptions that should return True ---
@@ -140,6 +141,7 @@ class TestClassifyPriority:
 
     def _make_summarizer(self, items):
         from common.summarizer import ThemeSummarizer
+
         return ThemeSummarizer(items)
 
     def test_p0_crash_keyword(self):
@@ -253,6 +255,7 @@ class TestTruncateSentence:
 
     def _fn(self, text, max_len=300):
         from common.summarizer import _truncate_sentence
+
         return _truncate_sentence(text, max_len)
 
     def test_short_text_returned_as_is(self):
@@ -292,6 +295,7 @@ class TestClassifyNewsSeverity:
 
     def _fn(self, title, description=""):
         from common.summarizer import _classify_news_severity
+
         return _classify_news_severity(title, description)
 
     def test_crash_is_high(self):
@@ -326,6 +330,7 @@ class TestMarkdownTable:
 
     def _fn(self, headers, rows, aligns=None):
         from common.markdown_utils import markdown_table
+
         return markdown_table(headers, rows, aligns)
 
     def test_basic_table_structure(self):
@@ -385,6 +390,7 @@ class TestMarkdownLink:
 
     def _fn(self, text, url):
         from common.markdown_utils import markdown_link
+
         return markdown_link(text, url)
 
     def test_basic_link(self):
@@ -415,6 +421,7 @@ class TestSmartTruncate:
 
     def _fn(self, text, max_len):
         from common.markdown_utils import smart_truncate
+
         return smart_truncate(text, max_len)
 
     def test_short_text_unchanged(self):
@@ -455,6 +462,7 @@ class TestHtmlReportLinks:
 
     def _fn(self, rows):
         from common.markdown_utils import html_report_links
+
         return html_report_links(rows)
 
     def test_output_contains_wrapper_div(self):
@@ -507,6 +515,7 @@ class TestNormalizeUrl:
 
     def _fn(self, url):
         from common.markdown_utils import _normalize_url
+
         return _normalize_url(url)
 
     def test_google_news_read_url_normalized(self):
@@ -543,6 +552,7 @@ class TestEscapeTableCell:
 
     def _fn(self, value):
         from common.markdown_utils import escape_table_cell
+
         return escape_table_cell(value)
 
     def test_plain_string(self):
@@ -569,6 +579,7 @@ class TestDedupeReferences:
 
     def _fn(self, refs, limit=None):
         from common.markdown_utils import dedupe_references
+
         return dedupe_references(refs, limit=limit)
 
     def test_deduplicates_same_url(self):

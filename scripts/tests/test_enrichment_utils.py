@@ -213,6 +213,7 @@ class TestAnalyzeKoreanTitle:
 class TestExtractOgMetadata:
     def _make_soup(self, html: str):
         from bs4 import BeautifulSoup
+
         return BeautifulSoup(html, "html.parser")
 
     def test_og_description(self):
@@ -223,23 +224,17 @@ class TestExtractOgMetadata:
         assert "Bitcoin" in result["description"]
 
     def test_og_image(self):
-        soup = self._make_soup(
-            '<meta property="og:image" content="https://example.com/image.jpg">'
-        )
+        soup = self._make_soup('<meta property="og:image" content="https://example.com/image.jpg">')
         result = _extract_og_metadata(soup)
         assert result["image"] == "https://example.com/image.jpg"
 
     def test_twitter_image(self):
-        soup = self._make_soup(
-            '<meta name="twitter:image" content="https://example.com/twitter.jpg">'
-        )
+        soup = self._make_soup('<meta name="twitter:image" content="https://example.com/twitter.jpg">')
         result = _extract_og_metadata(soup)
         assert result["image"] == "https://example.com/twitter.jpg"
 
     def test_name_description(self):
-        soup = self._make_soup(
-            '<meta name="description" content="This is a news article about markets and trading.">'
-        )
+        soup = self._make_soup('<meta name="description" content="This is a news article about markets and trading.">')
         result = _extract_og_metadata(soup)
         assert "markets" in result["description"]
 
@@ -250,24 +245,18 @@ class TestExtractOgMetadata:
         assert result["image"] == ""
 
     def test_noise_description_rejected(self):
-        soup = self._make_soup(
-            '<meta name="description" content="Please enable JavaScript to view this site.">'
-        )
+        soup = self._make_soup('<meta name="description" content="Please enable JavaScript to view this site.">')
         result = _extract_og_metadata(soup)
         assert result["description"] == ""
 
     def test_short_description_rejected(self):
         # Content under 20 chars should not be returned
-        soup = self._make_soup(
-            '<meta property="og:description" content="Short">'
-        )
+        soup = self._make_soup('<meta property="og:description" content="Short">')
         result = _extract_og_metadata(soup)
         assert result["description"] == ""
 
     def test_image_not_http_rejected(self):
-        soup = self._make_soup(
-            '<meta property="og:image" content="/relative/path/image.jpg">'
-        )
+        soup = self._make_soup('<meta property="og:image" content="/relative/path/image.jpg">')
         result = _extract_og_metadata(soup)
         assert result["image"] == ""
 
@@ -275,6 +264,7 @@ class TestExtractOgMetadata:
 class TestExtractViaParagraphs:
     def _make_soup(self, html: str):
         from bs4 import BeautifulSoup
+
         return BeautifulSoup(html, "html.parser")
 
     def test_returns_first_substantial_paragraph(self):
@@ -289,10 +279,10 @@ class TestExtractViaParagraphs:
 
     def test_skips_noise_containers(self):
         soup = self._make_soup(
-            '<html><body>'
+            "<html><body>"
             '<div class="sidebar"><p>This paragraph is inside a sidebar and has enough text to be long.</p></div>'
-            '<p>This is the real article paragraph with substantial content for extraction testing purposes.</p>'
-            '</body></html>'
+            "<p>This is the real article paragraph with substantial content for extraction testing purposes.</p>"
+            "</body></html>"
         )
         result = _extract_via_paragraphs(soup)
         assert "real article" in result
@@ -303,9 +293,7 @@ class TestExtractViaParagraphs:
         assert result == ""
 
     def test_only_short_paragraphs(self):
-        soup = self._make_soup(
-            "<html><body><p>Too short.</p><p>Also short.</p></body></html>"
-        )
+        soup = self._make_soup("<html><body><p>Too short.</p><p>Also short.</p></body></html>")
         result = _extract_via_paragraphs(soup)
         assert result == ""
 
