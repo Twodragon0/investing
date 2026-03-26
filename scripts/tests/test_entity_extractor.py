@@ -346,7 +346,7 @@ class TestGroupRelatedItems:
         result = group_related_items(items)
         # The two BTC items should share a group
         btc_group = None
-        for label, group_items in result.items():
+        for _label, group_items in result.items():
             titles = [i["title"] for i in group_items]
             if any("BTC" in t for t in titles):
                 btc_group = group_items

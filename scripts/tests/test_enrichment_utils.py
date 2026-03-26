@@ -314,7 +314,7 @@ class TestExtractViaParagraphs:
 # formatters.py tests
 # ---------------------------------------------------------------------------
 
-from common.formatters import fmt_change_icon, fmt_date_kr, fmt_number, fmt_percent
+from common.formatters import fmt_change_icon, fmt_date_kr, fmt_number, fmt_percent  # noqa: E402
 
 
 class TestFmtChangeIcon:
@@ -443,7 +443,7 @@ class TestFmtPercent:
 # utils.py tests
 # ---------------------------------------------------------------------------
 
-from common.utils import (
+from common.utils import (  # noqa: E402
     detect_language,
     parse_date,
     remove_sponsored_text,

@@ -386,7 +386,7 @@ class TestDetectAnomalies:
         )
         s = self._make_summarizer(items)
         result = s.detect_anomalies()
-        for name, key, count, desc in result:
+        for name, _key, _count, desc in result:
             assert name in desc
 
     def test_no_anomaly_for_balanced_distribution(self):

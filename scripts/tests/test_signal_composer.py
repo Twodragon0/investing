@@ -12,7 +12,7 @@ _SCRIPTS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 if _SCRIPTS_DIR not in sys.path:
     sys.path.insert(0, _SCRIPTS_DIR)
 
-from common.signal_composer import (
+from common.signal_composer import (  # noqa: E402
     CompositeResult,
     ScenarioResult,
     SignalComposer,

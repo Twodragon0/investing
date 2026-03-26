@@ -12,7 +12,7 @@ _SCRIPTS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 if _SCRIPTS_DIR not in sys.path:
     sys.path.insert(0, _SCRIPTS_DIR)
 
-from common.mindspider import (
+from common.mindspider import (  # noqa: E402
     BEARISH_KEYWORDS_EN,
     BEARISH_KEYWORDS_KO,
     BULLISH_KEYWORDS_EN,
@@ -228,7 +228,7 @@ class TestComputeTfidf:
         # TF-IDF score comparison depends on the product. Verify IDF direction
         # by checking the raw formula rather than comparing final scores.
         docs = [["bitcoin", "rally"], ["bitcoin", "crash"], ["bitcoin", "surge"]]
-        scores = self.spider._compute_tfidf(docs)
+        self.spider._compute_tfidf(docs)
         import math as _math
         n = 3
         # bitcoin df=3 → idf = log(3/4)+1
@@ -242,7 +242,7 @@ class TestComputeTfidf:
         # "aa" appears in both docs; "bb" appears in only the first.
         # With equal TF contribution, bb should score higher than aa.
         docs = [["aa", "bb"], ["aa", "cc"]]
-        scores = self.spider._compute_tfidf(docs)
+        self.spider._compute_tfidf(docs)
         # aa df=2, bb df=1 → idf(bb) > idf(aa)
         # tf(aa)=2/4=0.5, tf(bb)=1/4=0.25 → but idf difference large enough
         import math as _math
@@ -867,7 +867,7 @@ class TestGenerateEntityReport:
         result = self.spider.generate_entity_report(entities, [], top_n=2)
         # check table has at most 2 data rows (plus header rows)
         # count lines with "| " that are not separator lines
-        data_rows = [l for l in result.splitlines() if l.startswith("|") and "---" not in l and "엔티티" not in l]
+        data_rows = [line for line in result.splitlines() if line.startswith("|") and "---" not in line and "엔티티" not in line]
         assert len(data_rows) <= 2
 
     def test_no_relations_no_relations_section(self):
