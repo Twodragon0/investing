@@ -51,18 +51,27 @@ jobs:
       - name: Run ruff format check
         run: python3 -m ruff format --check scripts/
 
-      - name: Run pytest with coverage
+      - name: Run scripts/tests with coverage
         run: |
           cd scripts
           python3 -m pytest tests/ -v --tb=short \
-            --cov=common --cov-report=term-missing \
-            --cov-report=html:../coverage-html \
-            --cov-report=json:../coverage.json \
-            --cov-fail-under=20
+            --cov=common --cov-report= \
+            --cov-config=../pyproject.toml
+          mv .coverage ../.coverage.scripts
 
-      - name: Run root tests
+      - name: Run root tests with coverage
         run: |
-          PYTHONPATH=scripts python3 -m pytest tests/ -v --tb=short
+          PYTHONPATH=scripts python3 -m pytest tests/ -v --tb=short \
+            --cov=scripts/common --cov-report= \
+            --cov-config=pyproject.toml
+          mv .coverage .coverage.root
+
+      - name: Combine coverage and report
+        run: |
+          python3 -m coverage combine
+          python3 -m coverage report --fail-under=50
+          python3 -m coverage html -d coverage-html
+          python3 -m coverage json -o coverage.json
 
       - name: Upload coverage report
         if: always()
