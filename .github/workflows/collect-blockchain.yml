@@ -1,0 +1,33 @@
+name: Collect Blockchain Metrics
+
+on:
+  schedule:
+    - cron: '10 0 * * *'  # 09:10 KST daily (offset from other collectors)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect-blockchain
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+
+      - name: Collect blockchain network metrics
+        uses: ./.github/actions/python-collect
+        with:
+          script: scripts/collect_blockchain.py
+          commit-message: 'chore: collect blockchain metrics'
+          git-add-paths: '_posts/ _state/'
+        env:
+          ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
