@@ -14,7 +14,7 @@ import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common.blockchain_api import fetch_btc_stats, fetch_eth_stats, fetch_l2_summary
+from common.blockchain_api import fetch_btc_stats, fetch_eth_stats, fetch_l2_summary, fetch_upgrade_news
 from common.collector_metrics import log_collection_summary
 from common.config import get_kst_now, setup_logging
 from common.dedup import DedupEngine
@@ -67,6 +67,7 @@ def build_report_content(
     eth: dict,
     today: str,
     l2_projects: list | None = None,
+    upgrade_news: list | None = None,
 ) -> tuple[str, str, str]:
     """Build markdown report content from collected data.
 
@@ -165,6 +166,20 @@ def build_report_content(
         parts.append("")
         parts.append(f"> L2Beat 기준 상위 {len(l2_rows)}개 L2 네트워크의 TVL 현황입니다.\n")
 
+    # ── Upgrade News Section ──
+    news = upgrade_news or []
+    if news:
+        parts.append("## 주요 네트워크 업데이트\n")
+        for item in news[:5]:
+            title = item.get("title", "").strip()
+            link = item.get("link", "")
+            source = item.get("source_name", item.get("source", ""))
+            if title and link:
+                parts.append(f"- [{title}]({link}) — {source}")
+            elif title:
+                parts.append(f"- {title} — {source}")
+        parts.append("")
+
     # ── Summary stats ──
     stat_items = []
     if btc:
@@ -254,6 +269,7 @@ def main() -> int:
     btc = fetch_btc_stats()
     eth = fetch_eth_stats()
     l2_projects = fetch_l2_summary()
+    upgrade_news = fetch_upgrade_news()
 
     if not btc and not eth:
         logger.warning("No blockchain data collected, skipping post")
@@ -270,7 +286,7 @@ def main() -> int:
     source_count = (1 if btc else 0) + (1 if eth else 0) + (1 if l2_projects else 0)
 
     # Build report
-    content, description, excerpt = build_report_content(btc, eth, today, l2_projects)
+    content, description, excerpt = build_report_content(btc, eth, today, l2_projects, upgrade_news)
 
     # Create post
     permalink = build_dated_permalink("blockchain", today, "daily-blockchain-network-report")

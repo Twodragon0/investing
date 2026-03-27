@@ -203,3 +203,40 @@ def fetch_l2_summary() -> List[Dict[str, Any]]:
     except Exception as e:
         logger.warning("L2Beat fetch failed: %s", e)
         return []
+
+
+# ---------------------------------------------------------------------------
+# Network Upgrade News — RSS feeds (Phase 3)
+# ---------------------------------------------------------------------------
+
+_UPGRADE_RSS_FEEDS: List[Dict[str, str]] = [
+    {
+        "url": "https://blog.ethereum.org/feed.xml",
+        "name": "Ethereum Blog",
+        "tags": "ethereum,upgrade",
+    },
+    {
+        "url": "https://github.com/bitcoin/bitcoin/releases.atom",
+        "name": "Bitcoin Core Releases",
+        "tags": "bitcoin,upgrade",
+    },
+]
+
+
+def fetch_upgrade_news() -> List[Dict[str, Any]]:
+    """Fetch blockchain network upgrade news from RSS feeds.
+
+    Returns list of news items with title, link, source, published date.
+    Empty list on failure.
+    """
+    try:
+        from common.rss_fetcher import fetch_rss_feeds_concurrent
+
+        items = fetch_rss_feeds_concurrent(_UPGRADE_RSS_FEEDS)
+        # Keep only recent items (title must exist)
+        filtered = [item for item in items if item.get("title", "").strip()]
+        logger.info("Upgrade news: fetched %d items from %d feeds", len(filtered), len(_UPGRADE_RSS_FEEDS))
+        return filtered[:10]  # Limit to 10 most recent
+    except Exception as e:
+        logger.warning("Upgrade news fetch failed: %s", e)
+        return []
