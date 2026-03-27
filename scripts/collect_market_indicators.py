@@ -32,6 +32,7 @@ from common.markdown_utils import (
 from common.post_generator import PostGenerator, build_dated_permalink
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.signal_composer import SignalComposer
+from common.signal_tracker import SignalTracker
 from common.utils import request_with_retry
 
 logger = setup_logging("collect_market_indicators")
@@ -131,6 +132,30 @@ def fetch_yfinance_market_data() -> Dict[str, Any]:
     except ImportError:
         logger.warning("yfinance not installed, skipping market price data")
     return results
+
+
+def fetch_btc_price() -> Optional[float]:
+    """BTC-USD 현재 가격을 yfinance로 조회한다.
+
+    Returns:
+        BTC 가격(USD) 또는 조회 실패 시 None.
+    """
+    try:
+        import yfinance as yf
+
+        ticker = yf.Ticker("BTC-USD")
+        price = getattr(ticker.fast_info, "last_price", None)
+        if price is not None:
+            logger.info("BTC-USD 가격: $%.2f", price)
+            return float(price)
+        logger.warning("BTC-USD: last_price 없음")
+        return None
+    except ImportError:
+        logger.warning("yfinance 미설치, BTC 가격 조회 생략")
+        return None
+    except Exception as e:
+        logger.warning("BTC 가격 조회 실패: %s", e)
+        return None
 
 
 def fetch_treasury_yield_news() -> List[Dict[str, Any]]:
@@ -465,6 +490,7 @@ def build_post_content(
     today: str,
     now: datetime,
     fred_data: Optional[Dict[str, Any]] = None,
+    accuracy_summary: str = "",
 ) -> str:
     """Build full markdown content for the market indicators post."""
     if fred_data is None:
@@ -710,6 +736,10 @@ def build_post_content(
     except Exception as exc:
         logger.warning("시장 전망 분석 생성 실패 (기존 기능에 영향 없음): %s", exc)
 
+    # ── 신호 예측 정확도 이력 ─────────────────────────────────────────────────
+    if accuracy_summary:
+        parts.append("\n" + accuracy_summary + "\n")
+
     # ── Disclaimer ────────────────────────────────────────────────────────────
     parts.append("\n---\n")
     parts.append(
@@ -807,6 +837,44 @@ def main() -> None:
         dedup.save()
         return
 
+    # ── 신호 추적: SignalComposer 실행 + SignalTracker 기록 ──────────────────
+    accuracy_summary = ""
+    try:
+        signals: Dict[str, Any] = {}
+        if cnn_fg:
+            signals["fear_greed"] = {"value": cnn_fg.get("score", 50), "label": cnn_fg.get("rating", "")}
+        vix_data = market_data.get("VIX")
+        if vix_data:
+            vix_chg = vix_data.get("change_pct", 0)
+            signals["vix"] = {
+                "value": vix_data.get("price", 20),
+                "trend": "rising" if vix_chg > 0 else ("falling" if vix_chg < 0 else "stable"),
+            }
+        macro: Dict[str, Any] = {}
+        dxy_data = market_data.get("DXY")
+        if dxy_data:
+            macro["dxy"] = dxy_data.get("price", 100)
+        if fred_data:
+            us10y = fred_data.get("GS10", {}).get("value")
+            if us10y:
+                macro["us10y"] = us10y
+            fed_rate = fred_data.get("FEDFUNDS", {}).get("value")
+            if fed_rate:
+                macro["fed_rate"] = fed_rate
+        if macro:
+            signals["macro"] = macro
+
+        if signals:
+            btc_price = fetch_btc_price()
+            composer = SignalComposer()
+            composite_result = composer.compose_signals(signals)
+            tracker = SignalTracker()
+            tracker.record(composite_result, btc_price=btc_price, date=today)
+            accuracy_summary = tracker.format_accuracy_summary(lookback_days=30)
+            logger.info("SignalTracker 기록 완료 (score=%.1f verdict=%s)", composite_result.score, composite_result.verdict)
+    except Exception as exc:
+        logger.warning("SignalTracker 기록 실패 (기존 기능에 영향 없음): %s", exc)
+
     # Build post content
     content = build_post_content(
         cnn_fg=cnn_fg,
@@ -818,6 +886,7 @@ def main() -> None:
         today=today,
         now=now,
         fred_data=fred_data,
+        accuracy_summary=accuracy_summary,
     )
 
     # Build tags list

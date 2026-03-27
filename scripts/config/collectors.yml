@@ -1,0 +1,277 @@
+# ==============================================================================
+# 수집기 설정 파일 (collectors.yml)
+# 모든 collect_*.py 스크립트의 하드코딩된 상수를 중앙에서 관리합니다.
+#
+# 구조:
+#   global:        모든 수집기에 공통으로 적용되는 기본값
+#   <collector>:   수집기별 설정 (global 기본값을 덮어씁니다)
+#
+# 수정 시 유의사항:
+#   - URL 변경 시 실제 API 엔드포인트가 유효한지 반드시 확인하세요
+#   - limits 값은 양의 정수여야 합니다
+#   - thresholds 값은 0.0~1.0 또는 명시된 범위 내에서 설정하세요
+# ==============================================================================
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 공통 기본값 (모든 수집기에 적용)
+# ──────────────────────────────────────────────────────────────────────────────
+global:
+  # HTTP 요청 타임아웃 (초)
+  request_timeout: 15
+  # 퍼지 매칭 최소 점수 (0~100, 중복 판정 임계값)
+  fuzzy_match_threshold: 80
+  # SSL 인증서 검증 활성화 여부 (DISABLE_SSL_VERIFY 환경변수로 재정의 가능)
+  ssl_verify: true
+  # 중복 제거 창 (일)
+  dedup_window_days: 7
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# CoinMarketCap / CoinGecko 수집기
+# ──────────────────────────────────────────────────────────────────────────────
+coinmarketcap:
+  # CoinMarketCap API 엔드포인트 (pro-api, API 키 필요)
+  urls:
+    cmc_listings: "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
+    cmc_trending: "https://pro-api.coinmarketcap.com/v1/cryptocurrency/trending/latest"
+    cmc_gainers_losers: "https://pro-api.coinmarketcap.com/v1/cryptocurrency/trending/gainers-losers"
+    cmc_site: "https://coinmarketcap.com/"
+    coingecko_site: "https://www.coingecko.com/"
+  limits:
+    # 상위 코인 조회 수
+    top_coins: 30
+    # 트렌딩 코인 조회 수
+    trending_coins: 10
+    # 상승/하락 코인 조회 수
+    gainers_losers: 10
+    # 테이블에 표시할 최대 코인 수
+    display_top_coins: 20
+    # 상승/하락 표시 최대 수
+    display_gainers_losers: 5
+  # CMC/CoinGecko API는 응답이 느려 기본값(15)보다 길게 설정
+  request_timeout: 20
+  state_file: "coinmarketcap_posts.json"
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# DeFi Llama 수집기
+# ──────────────────────────────────────────────────────────────────────────────
+defi_llama:
+  # DeFi Llama 공개 API (API 키 불필요)
+  urls:
+    base: "https://api.llama.fi"
+    protocols_endpoint: "/v2/protocols"
+    chains_endpoint: "/v2/chains"
+    site: "https://defillama.com"
+    protocol_page: "https://defillama.com/protocol/{slug}"
+    chains_page: "https://defillama.com/chains"
+    api_docs: "https://defillama.com/docs/api"
+  limits:
+    # 상위 프로토콜 수 (TVL 기준)
+    top_protocols: 20
+    # 상위 체인 수 (TVL 기준)
+    top_chains: 15
+  thresholds:
+    # TVL이 이 일수 동안 동일하면 데이터 staleness 경고
+    tvl_stale_days: 3
+  state_file: "defi_llama_posts.json"
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 암호화폐 뉴스 수집기
+# ──────────────────────────────────────────────────────────────────────────────
+crypto_news:
+  urls:
+    # CryptoPanic API (API 키 선택적)
+    cryptopanic: "https://cryptopanic.com/api/v1/posts/"
+    # 주요 크립토 미디어 RSS 피드
+    rss_coindesk: "https://www.coindesk.com/arc/outboundfeeds/rss"
+    rss_cointelegraph: "https://cointelegraph.com/rss"
+    rss_decrypt: "https://decrypt.co/feed"
+    rss_bitcoin_magazine: "https://bitcoinmagazine.com/.rss/full/"
+    rss_theblock: "https://www.theblock.co/rss"
+    rss_rekt_news: "https://rekt.news/rss/feed.xml"
+    # Google News RSS (영어/한국어)
+    google_news_crypto_en: "https://news.google.com/rss/search?q=cryptocurrency&hl=en-US&gl=US&ceid=US:en"
+    google_news_crypto_kr: "https://news.google.com/rss/search?q=암호화폐+비트코인&hl=ko&gl=KR&ceid=KR:ko"
+    # 보안 관련 Google News RSS
+    google_news_security_en: "https://news.google.com/rss/search?q=blockchain+hack+exploit+security&hl=en-US&gl=US&ceid=US:en"
+    google_news_defi_security: "https://news.google.com/rss/search?q=crypto+hack+DeFi+exploit&hl=en-US&gl=US&ceid=US:en"
+    google_news_security_kr: "https://news.google.com/rss/search?q=블록체인+해킹+보안+취약점&hl=ko&gl=KR&ceid=KR:ko"
+    # Google News 브라우저 스크래핑용 검색 URL
+    google_news_browser: "https://news.google.com/search?q=cryptocurrency+bitcoin&hl=en-US&gl=US&ceid=US:en"
+    # Binance 공지사항
+    binance_announcement: "https://www.binance.com/en/support/announcement"
+    binance_api: "https://www.binance.com/bapi/composite/v1/public/cms/article/list/query"
+    binance_base: "https://www.binance.com"
+  limits:
+    # CryptoPanic 최대 아이템 수
+    cryptopanic_items: 20
+    # Google News 브라우저 최대 아이템 수
+    google_news_browser_items: 20
+  categories:
+    # 보안 관련 뉴스 카테고리 오버라이드
+    security: "security-alerts"
+  state_file: "crypto_news_posts.json"
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 주식 뉴스 수집기
+# ──────────────────────────────────────────────────────────────────────────────
+stock_news:
+  urls:
+    # 주요 주식 미디어 RSS 피드
+    rss_cnbc: "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114"
+    rss_marketwatch: "https://feeds.marketwatch.com/marketwatch/topstories/"
+    rss_hankyung: "https://www.hankyung.com/feed/all-news"
+    rss_maeil: "https://file.mk.co.kr/news/rss/rss_30000001.xml"
+    rss_chosun: "https://news.google.com/rss/search?q=site:biz.chosun.com+주식&hl=ko&gl=KR&ceid=KR:ko"
+    rss_investing: "https://www.investing.com/rss/news.rss"
+    rss_seekingalpha: "https://seekingalpha.com/market_currents.xml"
+    rss_bloomberg: "https://news.google.com/rss/search?q=site:bloomberg.com+markets+economy&hl=en-US&gl=US&ceid=US:en"
+    rss_ft: "https://news.google.com/rss/search?q=site:ft.com+markets+economy&hl=en-US&gl=US&ceid=US:en"
+    rss_sedaily: "https://www.sedaily.com/RSS/Economy"
+    rss_edaily: "https://rss.edaily.co.kr/edaily_stock.xml"
+    rss_yahoo_finance: "https://finance.yahoo.com/news/rssindex"
+    # Google News RSS 심층 분석 피드
+    google_news_spx: "https://news.google.com/rss/search?q=stock+market+S%26P+500&hl=en-US&gl=US&ceid=US:en"
+    google_news_kospi: "https://news.google.com/rss/search?q=주식+코스피+코스닥&hl=ko&gl=KR&ceid=KR:ko"
+    # Alpha Vantage API
+    alpha_vantage_api: "https://www.alphavantage.co/query"
+    yahoo_quote_base: "https://finance.yahoo.com/quote/{symbol}"
+  state_file: "stock_news_posts.json"
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 지정학 리스크 수집기
+# ──────────────────────────────────────────────────────────────────────────────
+geopolitical:
+  urls:
+    polymarket_api: "https://gamma-api.polymarket.com/markets"
+    polymarket_site: "https://polymarket.com"
+    polymarket_event: "https://polymarket.com/event/{slug}"
+    gdelt_api: "https://api.gdeltproject.org/api/v2/doc/doc"
+    # Google News RSS (지정학 관련)
+    google_news_geo_en: "https://news.google.com/rss/search?q=geopolitical+risk+investment&hl=en&gl=US&ceid=US:en"
+    google_news_conflict: "https://news.google.com/rss/search?q=military+conflict+sanctions+war&hl=en&gl=US&ceid=US:en"
+    google_news_geo_kr: "https://news.google.com/rss/search?q=지정학+리스크+투자&hl=ko&gl=KR&ceid=KR:ko"
+  limits:
+    # Polymarket 최대 마켓 수
+    polymarket_markets: 20
+    # 각 태그별 최대 조회 수
+    polymarket_per_tag: 50
+  thresholds:
+    # Polymarket 최소 거래량 (USD) - 이 이하는 필터링
+    polymarket_min_volume: 10000
+  # GDELT API 쿼리 문자열
+  gdelt_query: "geopolitical+risk+OR+military+conflict+OR+sanctions+OR+war+OR+coup+OR+nuclear"
+  state_file: "geopolitical_posts.json"
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 시장 지표 수집기
+# ──────────────────────────────────────────────────────────────────────────────
+market_indicators:
+  urls:
+    cnn_fear_greed: "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"
+    cnn_fear_greed_referer: "https://www.cnn.com/markets/fear-and-greed"
+    cnn_origin: "https://www.cnn.com"
+    fred_api: "https://api.stlouisfed.org/fred/series/observations"
+    # Google News RSS (시장 지표 관련)
+    google_news_treasury_10y: "https://news.google.com/rss/search?q=%2210-year+treasury+yield%22&hl=en-US&gl=US&ceid=US:en"
+    google_news_treasury_2y: "https://news.google.com/rss/search?q=%222-year+treasury+yield%22&hl=en-US&gl=US&ceid=US:en"
+  state_file: "market_indicators_posts.json"
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 규제 뉴스 수집기
+# ──────────────────────────────────────────────────────────────────────────────
+regulatory:
+  urls:
+    # 규제 기관 RSS 피드
+    rss_sec_crypto: "https://news.google.com/rss/search?q=site:sec.gov+crypto+OR+digital+asset&hl=en-US&gl=US&ceid=US:en"
+    rss_cftc_gp: "https://www.cftc.gov/RSS/RSSGP/rssgp.xml"
+    rss_cftc_enf: "https://www.cftc.gov/RSS/RSSENF/rssenf.xml"
+    rss_fed: "https://www.federalreserve.gov/feeds/press_all.xml"
+    rss_fsc_0111: "https://www.fsc.go.kr/about/fsc_bbs_rss/?fid=0111"
+    rss_fsc_0112: "https://www.fsc.go.kr/about/fsc_bbs_rss/?fid=0112"
+    rss_fsc_google: "https://news.google.com/rss/search?q=금융위원회+가상자산+규제&hl=ko&gl=KR&ceid=KR:ko"
+    rss_fsa_japan: "https://www.fsa.go.jp/fsaEnNewsList_rss2.xml"
+    rss_mas_singapore: "https://news.google.com/rss/search?q=MAS+Singapore+crypto+regulation&hl=en-US&gl=US&ceid=US:en"
+    rss_esma: "https://news.google.com/rss/search?q=ESMA+crypto+MiCA+regulation&hl=en-US&gl=US&ceid=US:en"
+    rss_fca_uk: "https://news.google.com/rss/search?q=FCA+UK+crypto+regulation&hl=en-US&gl=US&ceid=US:en"
+  state_file: "regulatory_posts.json"
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 정치인 주식 거래 수집기
+# ──────────────────────────────────────────────────────────────────────────────
+political_trades:
+  urls:
+    # Google News RSS (미국 의원 주식 거래)
+    google_news_congress_trading: "https://news.google.com/rss/search?q=congressional+stock+trading+disclosure&hl=en-US&gl=US&ceid=US:en"
+    google_news_pelosi: "https://news.google.com/rss/search?q=Pelosi+stock+trades+congress&hl=en-US&gl=US&ceid=US:en"
+    google_news_senator: "https://news.google.com/rss/search?q=senator+stock+trading+disclosure&hl=en-US&gl=US&ceid=US:en"
+    google_news_kr_trades: "https://news.google.com/rss/search?q=미국+의원+주식+거래&hl=ko&gl=KR&ceid=KR:ko"
+    # SEC EDGAR 내부자 거래
+    google_news_sec_insider: "https://news.google.com/rss/search?q=SEC+insider+trading+Form+4+filing&hl=en-US&gl=US&ceid=US:en"
+    sec_efts: "https://efts.sec.gov/LATEST/search-index"
+    sec_edgar_company: "https://www.sec.gov/cgi-bin/browse-edgar"
+  state_file: "political_trades_posts.json"
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 소셜 미디어 수집기
+# ──────────────────────────────────────────────────────────────────────────────
+social_media:
+  urls:
+    # Twitter/X API v2
+    twitter_search: "https://api.twitter.com/2/tweets/search/recent"
+    # Reddit API
+    reddit_hot: "https://www.reddit.com/r/{subreddit}/hot.json?limit={limit}"
+    # Telegram 채널 (공개 채널)
+    telegram_channel: "https://t.me/s/{channel}"
+    # Google News RSS (소셜 미디어 관련)
+    google_news_crypto_twitter: "https://news.google.com/rss/search?q=crypto+twitter+sentiment&hl=en-US&gl=US&ceid=US:en"
+    google_news_crypto_social_kr: "https://news.google.com/rss/search?q=암호화폐+커뮤니티+SNS&hl=ko&gl=KR&ceid=KR:ko"
+  state_file: "social_media_posts.json"
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# WorldMonitor 뉴스 수집기
+# ──────────────────────────────────────────────────────────────────────────────
+worldmonitor_news:
+  urls:
+    # WorldMonitor 프록시 및 베이스 URL
+    wm_proxy: "https://worldmonitor.app/api/rss-proxy?url="
+    wm_finance_base: "https://finance.worldmonitor.app"
+    wm_map_view: "https://finance.worldmonitor.app/?lat=20.0000&lon=0.0000&zoom=1.00&view=global&theme=dark"
+    # WorldMonitor를 통해 접근하는 주요 RSS 피드
+    rss_bbc: "https://feeds.bbci.co.uk/news/world/rss.xml"
+    rss_guardian: "https://www.theguardian.com/world/rss"
+    rss_aljazeera: "https://www.aljazeera.com/xml/rss/all.xml"
+    rss_cnbc: "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114"
+    rss_marketwatch: "https://feeds.marketwatch.com/marketwatch/topstories/"
+    rss_ft: "https://www.ft.com/rss/home"
+    wm_site: "https://worldmonitor.app"
+  state_file: "worldmonitor_news_posts.json"
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# FMP 경제 캘린더 수집기
+# ──────────────────────────────────────────────────────────────────────────────
+fmp_calendar:
+  # 추적할 주요 지수 심볼
+  index_symbols:
+    - "SPY"
+    - "QQQ"
+    - "DIA"
+    - "^VIX"
+  state_file: "fmp_calendar_posts.json"
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 블록체인 네트워크 지표 수집기
+# ──────────────────────────────────────────────────────────────────────────────
+blockchain:
+  state_file: "blockchain_posts.json"

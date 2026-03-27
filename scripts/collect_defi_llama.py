@@ -19,6 +19,7 @@ import requests
 # Add scripts directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common.collector_config import get_collector_config, get_limit, get_threshold
 from common.collector_metrics import log_collection_summary
 from common.config import REQUEST_TIMEOUT, get_kst_now, get_verify_ssl, setup_logging
 from common.dedup import DedupEngine
@@ -33,10 +34,12 @@ from common.utils import request_with_retry
 logger = setup_logging("collect_defi_llama")
 
 VERIFY_SSL = get_verify_ssl()
-BASE_URL = "https://api.llama.fi"
+# collectors.yml에서 설정 로드 (없으면 하드코딩 기본값으로 폴백)
+_defi_cfg = get_collector_config("defi_llama")
+BASE_URL = _defi_cfg.get("urls", {}).get("base", "https://api.llama.fi")
 
-TOP_PROTOCOLS_LIMIT = 20
-TOP_CHAINS_LIMIT = 15
+TOP_PROTOCOLS_LIMIT = get_limit("defi_llama", "top_protocols", 20)
+TOP_CHAINS_LIMIT = get_limit("defi_llama", "top_chains", 15)
 
 
 def _format_tvl(tvl: float) -> str:
@@ -103,7 +106,7 @@ def _korean_ro(word: str) -> str:
 
 _REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 _TVL_HISTORY_PATH = os.path.join(_REPO_ROOT, "_state", "defi_tvl_history.json")
-_TVL_STALE_DAYS = 3  # warn if total TVL unchanged for this many days
+_TVL_STALE_DAYS = int(get_threshold("defi_llama", "tvl_stale_days", 3.0))  # warn if total TVL unchanged for this many days
 
 
 def _load_tvl_history() -> List[Dict[str, Any]]:

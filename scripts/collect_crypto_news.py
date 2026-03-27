@@ -15,13 +15,14 @@ import sys
 import time
 from collections import Counter
 from datetime import UTC, datetime
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 import requests
 
 # Add scripts directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common.collector_config import get_collector_config, get_limit, get_url
 from common.collector_metrics import log_collection_summary
 from common.config import (
     REQUEST_TIMEOUT,
@@ -63,15 +64,20 @@ except ImportError:
 logger = setup_logging("collect_crypto_news")
 
 VERIFY_SSL = get_verify_ssl()
+# collectors.yml에서 설정 로드
+_crypto_cfg = get_collector_config("crypto_news")
 
 
-def fetch_cryptopanic(api_key: str, limit: int = 20) -> List[Dict[str, Any]]:
+def fetch_cryptopanic(api_key: str, limit: Optional[int] = None) -> List[Dict[str, Any]]:
     """Fetch hot news from CryptoPanic API."""
     if not api_key:
         logger.info("CryptoPanic API key not set, skipping")
         return []
 
-    url = "https://cryptopanic.com/api/v1/posts/"
+    # limit 기본값: collectors.yml > 하드코딩 기본값(20)
+    if limit is None:
+        limit = get_limit("crypto_news", "cryptopanic_items", 20)
+    url = get_url("crypto_news", "cryptopanic", "https://cryptopanic.com/api/v1/posts/")
     params = {"auth_token": api_key, "public": "true", "filter": "hot", "kind": "news"}
 
     try:
@@ -108,7 +114,7 @@ def fetch_cryptopanic(api_key: str, limit: int = 20) -> List[Dict[str, Any]]:
         return []
 
 
-def fetch_google_news_browser(limit: int = 20) -> List[Dict[str, Any]]:
+def fetch_google_news_browser(limit: Optional[int] = None) -> List[Dict[str, Any]]:
     """Fetch crypto news via Google News browser scraping (replaces NewsAPI).
 
     Falls back to empty list if Playwright is unavailable.
@@ -122,7 +128,10 @@ def fetch_google_news_browser(limit: int = 20) -> List[Dict[str, Any]]:
     if BrowserSession is None:
         return []
 
-    search_url = "https://news.google.com/search?q=cryptocurrency+bitcoin&hl=en-US&gl=US&ceid=US:en"
+    # limit 기본값: collectors.yml > 하드코딩 기본값(20)
+    if limit is None:
+        limit = get_limit("crypto_news", "google_news_browser_items", 20)
+    search_url = get_url("crypto_news", "google_news_browser", "https://news.google.com/search?q=cryptocurrency+bitcoin&hl=en-US&gl=US&ceid=US:en")
     items: List[Dict[str, Any]] = []
 
     try:
@@ -141,14 +150,14 @@ def fetch_crypto_rss_feeds() -> List[Dict[str, Any]]:
     """Fetch news from major crypto media RSS feeds (concurrent)."""
     feeds = [
         (
-            "https://www.coindesk.com/arc/outboundfeeds/rss",
+            get_url("crypto_news", "rss_coindesk", "https://www.coindesk.com/arc/outboundfeeds/rss"),
             "CoinDesk",
             ["crypto", "coindesk"],
         ),
-        ("https://cointelegraph.com/rss", "Cointelegraph", ["crypto", "cointelegraph"]),
-        ("https://decrypt.co/feed", "Decrypt", ["crypto", "decrypt"]),
+        (get_url("crypto_news", "rss_cointelegraph", "https://cointelegraph.com/rss"), "Cointelegraph", ["crypto", "cointelegraph"]),
+        (get_url("crypto_news", "rss_decrypt", "https://decrypt.co/feed"), "Decrypt", ["crypto", "decrypt"]),
         (
-            "https://bitcoinmagazine.com/.rss/full/",
+            get_url("crypto_news", "rss_bitcoin_magazine", "https://bitcoinmagazine.com/.rss/full/"),
             "Bitcoin Magazine",
             ["crypto", "bitcoin"],
         ),
@@ -158,7 +167,7 @@ def fetch_crypto_rss_feeds() -> List[Dict[str, Any]]:
     try:
         all_items.extend(
             fetch_rss_feed(
-                "https://www.theblock.co/rss",
+                get_url("crypto_news", "rss_theblock", "https://www.theblock.co/rss"),
                 "The Block",
                 ["crypto", "theblock"],
             )
@@ -172,12 +181,12 @@ def fetch_google_news_crypto() -> List[Dict[str, Any]]:
     """Fetch crypto news from Google News RSS (English + Korean, concurrent)."""
     feeds = [
         (
-            "https://news.google.com/rss/search?q=cryptocurrency&hl=en-US&gl=US&ceid=US:en",
+            get_url("crypto_news", "google_news_crypto_en", "https://news.google.com/rss/search?q=cryptocurrency&hl=en-US&gl=US&ceid=US:en"),
             "Google News EN",
             ["crypto", "english"],
         ),
         (
-            "https://news.google.com/rss/search?q=암호화폐+비트코인&hl=ko&gl=KR&ceid=KR:ko",
+            get_url("crypto_news", "google_news_crypto_kr", "https://news.google.com/rss/search?q=암호화폐+비트코인&hl=ko&gl=KR&ceid=KR:ko"),
             "Google News KR",
             ["crypto", "korean", "비트코인"],
         ),
@@ -187,26 +196,28 @@ def fetch_google_news_crypto() -> List[Dict[str, Any]]:
 
 def fetch_google_news_security() -> List[Dict[str, Any]]:
     """Fetch blockchain security news from Google News RSS (concurrent)."""
+    # 보안 카테고리 오버라이드 값을 설정 파일에서 로드
+    security_category = _crypto_cfg.get("categories", {}).get("security", "security-alerts")
     feeds = [
         (
-            "https://news.google.com/rss/search?q=blockchain+hack+exploit+security&hl=en-US&gl=US&ceid=US:en",
+            get_url("crypto_news", "google_news_security_en", "https://news.google.com/rss/search?q=blockchain+hack+exploit+security&hl=en-US&gl=US&ceid=US:en"),
             "Blockchain Security EN",
             ["security", "hack", "english"],
         ),
         (
-            "https://news.google.com/rss/search?q=crypto+hack+DeFi+exploit&hl=en-US&gl=US&ceid=US:en",
+            get_url("crypto_news", "google_news_defi_security", "https://news.google.com/rss/search?q=crypto+hack+DeFi+exploit&hl=en-US&gl=US&ceid=US:en"),
             "DeFi Security EN",
             ["security", "defi", "exploit"],
         ),
         (
-            "https://news.google.com/rss/search?q=블록체인+해킹+보안+취약점&hl=ko&gl=KR&ceid=KR:ko",
+            get_url("crypto_news", "google_news_security_kr", "https://news.google.com/rss/search?q=블록체인+해킹+보안+취약점&hl=ko&gl=KR&ceid=KR:ko"),
             "블록체인 보안 KR",
             ["security", "hack", "korean"],
         ),
     ]
     all_items = fetch_rss_feeds_concurrent(feeds)
     for item in all_items:
-        item["category_override"] = "security-alerts"
+        item["category_override"] = security_category
     return all_items
 
 
@@ -279,7 +290,7 @@ def _scrape_binance_page(session) -> List[Dict[str, Any]]:
     items: List[Dict[str, Any]] = []
     seen_titles: set = set()
     session.navigate(
-        "https://www.binance.com/en/support/announcement",
+        get_url("crypto_news", "binance_announcement", "https://www.binance.com/en/support/announcement"),
         wait_until="domcontentloaded",
         wait_ms=5000,
     )
@@ -301,7 +312,7 @@ def _scrape_binance_page(session) -> List[Dict[str, Any]]:
                 continue
             seen_titles.add(title)
             if href and not href.startswith("http"):
-                href = "https://www.binance.com" + href
+                href = get_url("crypto_news", "binance_base", "https://www.binance.com") + href
             if "/detail/" not in href:
                 continue
             items.append(
@@ -341,7 +352,7 @@ def _fetch_binance_bapi() -> List[Dict[str, Any]]:
     """Fetch Binance announcements via BAPI (legacy fallback)."""
     items: List[Dict[str, Any]] = []
     try:
-        url = "https://www.binance.com/bapi/composite/v1/public/cms/article/list/query"
+        url = get_url("crypto_news", "binance_api", "https://www.binance.com/bapi/composite/v1/public/cms/article/list/query")
         params = {"type": 1, "pageNo": 1, "pageSize": 10}
         resp = requests.get(
             url,
@@ -365,10 +376,11 @@ def _fetch_binance_bapi() -> List[Dict[str, Any]]:
                         except (ValueError, OSError):
                             pass
                     code = article.get("code", "")
+                    _binance_base = get_url("crypto_news", "binance_base", "https://www.binance.com")
                     link = (
-                        f"https://www.binance.com/en/support/announcement/detail/{code}"
+                        f"{_binance_base}/en/support/announcement/detail/{code}"
                         if code
-                        else "https://www.binance.com/en/support/announcement"
+                        else get_url("crypto_news", "binance_announcement", "https://www.binance.com/en/support/announcement")
                     )
                     items.append(
                         {
@@ -403,7 +415,7 @@ def fetch_rekt_news(limit: int = 10) -> List[Dict[str, Any]]:
 
     try:
         rss_items = fetch_rss_feed(
-            "https://rekt.news/rss/feed.xml",
+            get_url("crypto_news", "rss_rekt_news", "https://rekt.news/rss/feed.xml"),
             "Rekt News",
             ["security", "hack", "rekt"],
         )
@@ -435,7 +447,7 @@ def _fetch_browser_sources() -> tuple:
             # Google News
             try:
                 session.navigate(
-                    "https://news.google.com/search?q=cryptocurrency+bitcoin&hl=en-US&gl=US&ceid=US:en",
+                    get_url("crypto_news", "google_news_browser", "https://news.google.com/search?q=cryptocurrency+bitcoin&hl=en-US&gl=US&ceid=US:en"),
                     wait_until="domcontentloaded",
                     wait_ms=3000,
                 )

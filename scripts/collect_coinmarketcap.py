@@ -20,6 +20,7 @@ import requests
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common.collector_config import get_collector_config, get_limit, get_url
 from common.collector_metrics import log_collection_summary
 from common.config import get_env, get_kst_now, get_verify_ssl, setup_logging
 from common.crypto_api import (
@@ -55,7 +56,9 @@ except ImportError:
 logger = setup_logging("collect_coinmarketcap")
 
 VERIFY_SSL = get_verify_ssl()
-REQUEST_TIMEOUT = 20  # CMC/CoinGecko API는 응답이 느려 기본값(15)보다 길게 설정
+# collectors.yml에서 타임아웃 로드 (기본값: 20초, CMC/CoinGecko는 응답이 느림)
+_cmc_cfg = get_collector_config("coinmarketcap")
+REQUEST_TIMEOUT = int(_cmc_cfg.get("request_timeout", 20))
 
 
 # ──────────────────────────────────────────────
@@ -69,7 +72,7 @@ def fetch_cmc_top_coins(api_key: str, limit: int = 30) -> List[Dict[str, Any]]:
         return []
 
     try:
-        url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
+        url = get_url("coinmarketcap", "cmc_listings", "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest")
         headers = {"X-CMC_PRO_API_KEY": api_key, "Accept": "application/json"}
         params = {
             "start": "1",
@@ -99,9 +102,9 @@ def fetch_cmc_trending(api_key: str) -> List[Dict[str, Any]]:
         return []
 
     try:
-        url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/trending/latest"
+        url = get_url("coinmarketcap", "cmc_trending", "https://pro-api.coinmarketcap.com/v1/cryptocurrency/trending/latest")
         headers = {"X-CMC_PRO_API_KEY": api_key, "Accept": "application/json"}
-        params = {"limit": "10", "convert": "USD"}
+        params = {"limit": str(get_limit("coinmarketcap", "trending_coins", 10)), "convert": "USD"}
         resp = request_with_retry(
             url,
             params=params,
@@ -124,9 +127,9 @@ def fetch_cmc_gainers_losers(api_key: str) -> Tuple[List[Dict], List[Dict]]:
         return [], []
 
     try:
-        url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/trending/gainers-losers"
+        url = get_url("coinmarketcap", "cmc_gainers_losers", "https://pro-api.coinmarketcap.com/v1/cryptocurrency/trending/gainers-losers")
         headers = {"X-CMC_PRO_API_KEY": api_key, "Accept": "application/json"}
-        params = {"limit": "10", "convert": "USD", "time_period": "24h"}
+        params = {"limit": str(get_limit("coinmarketcap", "gainers_losers", 10)), "convert": "USD", "time_period": "24h"}
         resp = request_with_retry(
             url,
             params=params,
@@ -590,7 +593,7 @@ def fetch_cmc_browser_fallback(limit: int = 20) -> List[Dict[str, Any]]:
     try:
         with BrowserSession(timeout=30_000) as session:
             session.navigate(
-                "https://coinmarketcap.com/",
+                get_url("coinmarketcap", "cmc_site", "https://coinmarketcap.com/"),
                 wait_until="domcontentloaded",
                 wait_ms=5000,
             )
@@ -1168,7 +1171,7 @@ def main():
             logical_date=today,
             tags=["market-report", "crypto", "top-coins", "trending", "daily"],
             source=source_name,
-            source_url="https://coinmarketcap.com/" if "CoinMarketCap" in source_name else "https://www.coingecko.com/",
+            source_url=get_url("coinmarketcap", "cmc_site", "https://coinmarketcap.com/") if "CoinMarketCap" in source_name else get_url("coinmarketcap", "coingecko_site", "https://www.coingecko.com/"),
             lang="ko",
             image=frontmatter_image,
             extra_frontmatter={
