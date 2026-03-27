@@ -115,11 +115,11 @@ def build_report_content(
 
         eth_rows = []
         if eth.get("gas_safe"):
-            eth_rows.append(["가스 가격 (Safe)", f"{eth['gas_safe']} Gwei"])
+            eth_rows.append(["가스 가격 (Safe)", f"{float(eth['gas_safe']):.2f} Gwei"])
         if eth.get("gas_propose"):
-            eth_rows.append(["가스 가격 (Standard)", f"{eth['gas_propose']} Gwei"])
+            eth_rows.append(["가스 가격 (Standard)", f"{float(eth['gas_propose']):.2f} Gwei"])
         if eth.get("gas_fast"):
-            eth_rows.append(["가스 가격 (Fast)", f"{eth['gas_fast']} Gwei"])
+            eth_rows.append(["가스 가격 (Fast)", f"{float(eth['gas_fast']):.2f} Gwei"])
         if eth.get("eth_supply"):
             supply_m = eth["eth_supply"] / 1e6
             eth_rows.append(["총 공급량", f"{supply_m:.2f}M ETH"])
@@ -159,7 +159,7 @@ def build_report_content(
         )
     if eth and eth.get("gas_propose"):
         stat_items.append(
-            f'<div class="stat-item"><div class="stat-value">{eth["gas_propose"]} Gwei</div>'
+            f'<div class="stat-item"><div class="stat-value">{float(eth["gas_propose"]):.2f} Gwei</div>'
             f'<div class="stat-label">ETH 가스 (Standard)</div></div>'
         )
     if eth and eth.get("eth_supply"):
@@ -195,7 +195,7 @@ def build_report_content(
             f"일일 트랜잭션 {_fmt_number(btc.get('n_tx', 0))}건"
         )
     if eth and eth.get("gas_propose"):
-        desc_parts.append(f"ETH 가스 {eth['gas_propose']} Gwei")
+        desc_parts.append(f"ETH 가스 {float(eth['gas_propose']):.2f} Gwei")
     description = ". ".join(desc_parts) if desc_parts else "블록체인 네트워크 일일 리포트"
     excerpt = description[:200] + "…" if len(description) > 200 else description
 
