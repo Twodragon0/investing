@@ -585,7 +585,9 @@ def build_post_content(
             dxy_note = "달러 강세 구간 — 신흥국 자금 이탈 및 원자재 가격 하락 압력."
         elif dxy_price > 100:
             dxy_note = "달러 중립~강세 — 글로벌 자산 배분에 주의가 필요합니다."
-        elif dxy_price > 95:
+        elif dxy_price > 97:
+            dxy_note = "달러 보합세 — 방향성 확인이 필요한 구간입니다."
+        elif dxy_price > 92:
             dxy_note = "달러 약세 전환 — 신흥국 시장 및 원자재에 긍정적."
         else:
             dxy_note = "달러 약세 — 위험자산 선호 심리 강화 환경."

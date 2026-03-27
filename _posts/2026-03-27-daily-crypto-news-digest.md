@@ -52,7 +52,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-27 - 암호화폐 뉴스 요
 <strong>긴급 알림</strong>
 <ul>
 <li><a href="https://news.google.com/read/CBMimAFBVV95cUxQcVpMYlFWS2I5dnF2bkpfN2Z6b3ZjbXlQVmc4UHh4SGhnY29yTHk2TDl6OTN3b25uVHB5YkR3VkxDNFY0M3BBdkdMVUJ6SWxDMkg4YzdkRU1yQjRaeUdVdlNyTzF0cjNoVWJRS2hUUkdINWJiX0FNS3p3ZmF2NnlNRzNYbk5XeExoc1hZZktaU3JOczA4VENjNg?hl=en-US&gl=US&ceid=US%3Aen">"현금화"에 초점: 북한의 암호화폐 도난에 맞서는 한 가지 방법</a> <span class="p0-desc">"현금화"에 초점: 북한의 암호화폐 도난을 방지하는 한 가지 방법.</span></li>
-<li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQcVpMYlFWS2I5dnF2bkpfN2Z6b3ZjbXlQVmc4UHh4SGhnY29yTHk2TDl6OTN3b25uVHB5YkR3VkxDNFY0M3BBdkdMVUJ6SWxDMkg4YzdkRU1yQjRaeUdVdlNyTzF0cjNoVWJRS2hUUkdINWJiX0FNS3p3ZmF2NnlNRzNYbk5XeExoc1hZZktaU3JOczA4VENjNg?oc=5">"현금화"에 초점: 북한의 암호화폐 도용을 퇴치하는 한 가지 방법 - 38 North</a> <span class="p0-desc">"현금화"에 초점: 북한의 암호화폐 도난을 방지하는 한 가지 방법 38 North</span></li>
 <li><a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxPMk1TOFp1amFzRWNDQjFSRU13aVM2MTlJWEJNcWJBbmF2eUlVSHIzc2ZNNDNUbUsyalVudVpNLXFHdzFnTkdma2lEZ0cycmd4RjVmTXpONzVZNk9zZnpNcUpfWTBDcHJmY1ZaaE1KTmlwWVpncGZqR1lFb25ZYUFTbmdtUFEzYnc?oc=5">암호화폐 시장, ‘패닉’에 폭락 계속.비트코인·XRP는 “역전 신호 찾았다"</a> <span class="p0-desc">시장이 큰 폭으로 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</span></li>
 </ul>
 </div>
