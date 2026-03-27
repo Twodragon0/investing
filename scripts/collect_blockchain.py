@@ -14,7 +14,7 @@ import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common.blockchain_api import fetch_btc_stats, fetch_eth_stats
+from common.blockchain_api import fetch_btc_stats, fetch_eth_stats, fetch_l2_summary
 from common.collector_metrics import log_collection_summary
 from common.config import get_kst_now, setup_logging
 from common.dedup import DedupEngine
@@ -66,6 +66,7 @@ def build_report_content(
     btc: dict,
     eth: dict,
     today: str,
+    l2_projects: list | None = None,
 ) -> tuple[str, str, str]:
     """Build markdown report content from collected data.
 
@@ -145,6 +146,24 @@ def build_report_content(
         parts.append(
             "*ETH 네트워크 데이터를 가져올 수 없습니다. `ETHERSCAN_API_KEY` 환경변수를 설정하면 상세 데이터를 확인할 수 있습니다.*\n"
         )
+
+    # ── L2 Section ──
+    l2 = l2_projects or []
+    if l2:
+        stats_collected += 1
+        parts.append("## Layer 2 네트워크 활동\n")
+
+        l2_rows = []
+        for proj in l2[:8]:
+            tvl = proj.get("tvl", 0)
+            tvl_str = _fmt_usd(tvl) if tvl else "N/A"
+            stage = proj.get("stage", "")
+            stage_str = stage if isinstance(stage, str) else str(stage)
+            l2_rows.append([proj.get("name", ""), tvl_str, stage_str])
+
+        parts.append(markdown_table(["네트워크", "TVL", "Stage"], l2_rows))
+        parts.append("")
+        parts.append(f"> L2Beat 기준 상위 {len(l2_rows)}개 L2 네트워크의 TVL 현황입니다.\n")
 
     # ── Summary stats ──
     stat_items = []
@@ -234,6 +253,7 @@ def main() -> int:
     # Collect data from APIs
     btc = fetch_btc_stats()
     eth = fetch_eth_stats()
+    l2_projects = fetch_l2_summary()
 
     if not btc and not eth:
         logger.warning("No blockchain data collected, skipping post")
@@ -247,10 +267,10 @@ def main() -> int:
         )
         return 0
 
-    source_count = (1 if btc else 0) + (1 if eth else 0)
+    source_count = (1 if btc else 0) + (1 if eth else 0) + (1 if l2_projects else 0)
 
     # Build report
-    content, description, excerpt = build_report_content(btc, eth, today)
+    content, description, excerpt = build_report_content(btc, eth, today, l2_projects)
 
     # Create post
     permalink = build_dated_permalink("blockchain", today, "daily-blockchain-network-report")

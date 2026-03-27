@@ -636,7 +636,9 @@ def _draw_pulse_line(ax, x_start, y_center, width, *, alpha=0.1):
 def _get_category_bg_drawer(category: str):
     """Return the appropriate background illustration drawer for a category."""
     cat_lower = category.lower()
-    if any(k in cat_lower for k in ["crypto", "bitcoin", "defi", "coin"]):
+    if any(k in cat_lower for k in ["blockchain"]) or any(
+        k in cat_lower for k in ["crypto", "bitcoin", "defi", "coin"]
+    ):
         return "crypto"
     elif any(k in cat_lower for k in ["stock", "market snapshot", "sector"]):
         return "stock"
