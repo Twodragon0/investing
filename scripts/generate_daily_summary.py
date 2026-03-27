@@ -1502,6 +1502,11 @@ def _load_today_posts(
             fmp_count = count_news_items(fmp_post["content"])
             fmp_url = get_post_url(filepath, today, "market-analysis")
             post_links.append(("경제 캘린더", fmp_count or "-", fmp_url))
+        elif "blockchain-network-report" in slug:
+            blockchain_post = read_post_content(filepath)
+            blockchain_count = count_news_items(blockchain_post["content"])
+            blockchain_url = get_post_url(filepath, today, "blockchain")
+            post_links.append(("블록체인 네트워크", blockchain_count or "-", blockchain_url))
 
     summary_map = {
         "crypto": crypto_summary,
