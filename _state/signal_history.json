@@ -1,0 +1,15 @@
+[
+  {
+    "date": "2026-03-28",
+    "composite_score": 25.8,
+    "verdict": "약세",
+    "confidence": "medium",
+    "signal_scores": {
+      "공포·탐욕 지수": 0.102,
+      "VIX 변동성": 0.2483,
+      "매크로": 0.6652
+    },
+    "btc_price": 65993.1640625,
+    "recorded_at": "2026-03-27T22:35:42Z"
+  }
+]
