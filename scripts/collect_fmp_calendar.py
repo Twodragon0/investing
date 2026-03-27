@@ -8,6 +8,7 @@ from typing import Any, Dict, List
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common.collector_config import get_collector_config
 from common.collector_metrics import log_collection_summary
 from common.config import get_kst_now, setup_logging
 from common.dedup import DedupEngine
@@ -23,7 +24,9 @@ from common.post_generator import PostGenerator, build_dated_permalink
 
 logger = setup_logging("collect_fmp_calendar")
 
-_INDEX_SYMBOLS = ["SPY", "QQQ", "DIA", "^VIX"]
+# collectors.yml에서 설정 로드
+_fmp_cfg = get_collector_config("fmp_calendar")
+_INDEX_SYMBOLS: List[str] = list(_fmp_cfg.get("index_symbols", ["SPY", "QQQ", "DIA", "^VIX"]))
 
 _IMPACT_EMOJI = {
     "High": "🔴",

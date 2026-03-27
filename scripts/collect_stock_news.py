@@ -19,6 +19,7 @@ import requests
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.bettafish_analyzer import BettaFishAnalyzer
+from common.collector_config import get_collector_config, get_url
 from common.collector_metrics import log_collection_summary
 from common.config import REQUEST_TIMEOUT, get_env, get_kst_now, get_verify_ssl, setup_logging
 from common.dedup import DedupEngine, deduplicate_by_url
@@ -50,6 +51,8 @@ except ImportError:
 logger = setup_logging("collect_stock_news")
 
 VERIFY_SSL = get_verify_ssl()
+# collectors.yml에서 설정 로드
+_stock_cfg = get_collector_config("stock_news")
 
 
 def fetch_google_news_browser_stocks(limit: int = 20) -> List[Dict[str, Any]]:
@@ -99,63 +102,63 @@ def fetch_financial_rss_feeds() -> List[Dict[str, Any]]:
     """Fetch news from major financial media RSS feeds (concurrent)."""
     feeds = [
         (
-            "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114",
+            get_url("stock_news", "rss_cnbc", "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114"),
             "CNBC Top News",
             ["stock", "cnbc"],
         ),
         (
-            "https://feeds.marketwatch.com/marketwatch/topstories/",
+            get_url("stock_news", "rss_marketwatch", "https://feeds.marketwatch.com/marketwatch/topstories/"),
             "MarketWatch",
             ["stock", "marketwatch"],
         ),
         (
-            "https://www.hankyung.com/feed/all-news",
+            get_url("stock_news", "rss_hankyung", "https://www.hankyung.com/feed/all-news"),
             "한국경제",
             ["stock", "korean", "한경"],
         ),
         (
-            "https://file.mk.co.kr/news/rss/rss_30000001.xml",
+            get_url("stock_news", "rss_maeil", "https://file.mk.co.kr/news/rss/rss_30000001.xml"),
             "매일경제",
             ["stock", "korean", "매경"],
         ),
         (
-            "https://news.google.com/rss/search?q=site:biz.chosun.com+%EC%A3%BC%EC%8B%9D&hl=ko&gl=KR&ceid=KR:ko",
+            get_url("stock_news", "rss_chosun", "https://news.google.com/rss/search?q=site:biz.chosun.com+%EC%A3%BC%EC%8B%9D&hl=ko&gl=KR&ceid=KR:ko"),
             "조선비즈",
             ["stock", "korean", "조선비즈"],
         ),
         # Investing.com RSS
         (
-            "https://www.investing.com/rss/news.rss",
+            get_url("stock_news", "rss_investing", "https://www.investing.com/rss/news.rss"),
             "Investing.com",
             ["stock", "investing.com"],
         ),
         # Seeking Alpha
         (
-            "https://seekingalpha.com/market_currents.xml",
+            get_url("stock_news", "rss_seekingalpha", "https://seekingalpha.com/market_currents.xml"),
             "Seeking Alpha",
             ["stock", "seeking-alpha"],
         ),
         # Bloomberg (via Google News proxy)
         (
-            "https://news.google.com/rss/search?q=site:bloomberg.com+markets+economy&hl=en-US&gl=US&ceid=US:en",
+            get_url("stock_news", "rss_bloomberg", "https://news.google.com/rss/search?q=site:bloomberg.com+markets+economy&hl=en-US&gl=US&ceid=US:en"),
             "Bloomberg via Google",
             ["stock", "bloomberg"],
         ),
         # Financial Times (via Google News proxy)
         (
-            "https://news.google.com/rss/search?q=site:ft.com+markets+economy&hl=en-US&gl=US&ceid=US:en",
+            get_url("stock_news", "rss_ft", "https://news.google.com/rss/search?q=site:ft.com+markets+economy&hl=en-US&gl=US&ceid=US:en"),
             "FT via Google",
             ["stock", "ft"],
         ),
         # 서울경제
         (
-            "https://www.sedaily.com/RSS/Economy",
+            get_url("stock_news", "rss_sedaily", "https://www.sedaily.com/RSS/Economy"),
             "서울경제",
             ["stock", "korean", "서울경제"],
         ),
         # 이데일리 증권
         (
-            "https://rss.edaily.co.kr/edaily_stock.xml",
+            get_url("stock_news", "rss_edaily", "https://rss.edaily.co.kr/edaily_stock.xml"),
             "이데일리 증권",
             ["stock", "korean", "이데일리"],
         ),
@@ -199,7 +202,7 @@ def fetch_google_news_stocks() -> List[Dict[str, Any]]:
     """Fetch stock news from Google News RSS (concurrent)."""
     feeds = [
         (
-            "https://news.google.com/rss/search?q=stock+market+S%26P+500&hl=en-US&gl=US&ceid=US:en",
+            get_url("stock_news", "google_news_spx", "https://news.google.com/rss/search?q=stock+market+S%26P+500&hl=en-US&gl=US&ceid=US:en"),
             "Google News Stocks EN",
             ["stock", "market", "english"],
         ),
@@ -214,7 +217,7 @@ def fetch_google_news_stocks() -> List[Dict[str, Any]]:
             ["stock", "fed", "bond"],
         ),
         (
-            "https://news.google.com/rss/search?q=주식+코스피+코스닥&hl=ko&gl=KR&ceid=KR:ko",
+            get_url("stock_news", "google_news_kospi", "https://news.google.com/rss/search?q=주식+코스피+코스닥&hl=ko&gl=KR&ceid=KR:ko"),
             "Google News Stocks KR",
             ["stock", "kospi", "korean"],
         ),
@@ -241,7 +244,7 @@ def fetch_yahoo_finance_rss() -> List[Dict[str, Any]]:
     """Fetch from Yahoo Finance RSS feeds."""
     feeds = [
         (
-            "https://finance.yahoo.com/news/rssindex",
+            get_url("stock_news", "rss_yahoo_finance", "https://finance.yahoo.com/news/rssindex"),
             "Yahoo Finance",
             ["stock", "finance"],
         ),
@@ -263,7 +266,7 @@ def fetch_alpha_vantage_snapshot(api_key: str) -> List[Dict[str, Any]]:
 
     for symbol, name in symbols.items():
         try:
-            url = "https://www.alphavantage.co/query"
+            url = get_url("stock_news", "alpha_vantage_api", "https://www.alphavantage.co/query")
             params = {
                 "function": "GLOBAL_QUOTE",
                 "symbol": symbol,

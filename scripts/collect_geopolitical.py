@@ -18,6 +18,7 @@ import requests
 # Add scripts directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common.collector_config import get_collector_config, get_limit, get_threshold, get_url
 from common.collector_metrics import log_collection_summary
 from common.config import (
     REQUEST_TIMEOUT,
@@ -41,6 +42,8 @@ from common.utils import request_with_retry, sanitize_string, truncate_text
 logger = setup_logging("collect_geopolitical")
 
 VERIFY_SSL = get_verify_ssl()
+# collectors.yml에서 설정 로드
+_geo_cfg = get_collector_config("geopolitical")
 
 _GEO_SOURCE_CONTEXT: Dict[str, Dict[str, Any]] = {
     "polymarket.com": {"name": "Polymarket", "tags": ["prediction-market"]},
@@ -48,7 +51,7 @@ _GEO_SOURCE_CONTEXT: Dict[str, Dict[str, Any]] = {
 }
 
 # Minimum volume (USD) for Polymarket markets to include
-_POLYMARKET_MIN_VOLUME = 10_000
+_POLYMARKET_MIN_VOLUME = get_threshold("geopolitical", "polymarket_min_volume", 10_000)
 
 # Geopolitical keywords to filter Polymarket markets
 _POLYMARKET_GEO_TAGS = [
@@ -67,26 +70,28 @@ _POLYMARKET_GEO_TAGS = [
 ]
 
 # GDELT API query for geopolitical risk events
-_GDELT_QUERY = "geopolitical+risk+OR+military+conflict+OR+sanctions+OR+war+OR+coup+OR+nuclear"
+_GDELT_QUERY = _geo_cfg.get("gdelt_query", "geopolitical+risk+OR+military+conflict+OR+sanctions+OR+war+OR+coup+OR+nuclear")
 
 
-def fetch_polymarket(limit: int = 20) -> List[Dict[str, Any]]:
+def fetch_polymarket(limit: Optional[int] = None) -> List[Dict[str, Any]]:
     """Fetch active prediction markets related to geopolitics from Polymarket.
 
     Uses the public gamma-api.polymarket.com endpoint (no auth required).
     Filters for markets with volume > _POLYMARKET_MIN_VOLUME.
     """
+    if limit is None:
+        limit = get_limit("geopolitical", "polymarket_markets", 20)
     items: List[Dict[str, Any]] = []
 
     for tag in _POLYMARKET_GEO_TAGS:
         if len(items) >= limit:
             break
-        url = "https://gamma-api.polymarket.com/markets"
+        url = get_url("geopolitical", "polymarket_api", "https://gamma-api.polymarket.com/markets")
         params = {
             "tag": tag,
             "active": "true",
             "closed": "false",
-            "limit": 50,
+            "limit": get_limit("geopolitical", "polymarket_per_tag", 50),
         }
         try:
             resp = request_with_retry(
@@ -205,7 +210,7 @@ def fetch_gdelt(limit: int = 30) -> List[Dict[str, Any]]:
     Uses the free GDELT DOC 2.0 API (no auth required).
     Returns articles with tone sentiment scores.
     """
-    url = "https://api.gdeltproject.org/api/v2/doc/doc"
+    url = get_url("geopolitical", "gdelt_api", "https://api.gdeltproject.org/api/v2/doc/doc")
     params = {
         "query": _GDELT_QUERY,
         "mode": "ArtList",
@@ -292,17 +297,17 @@ def fetch_google_news_geopolitical() -> List[Dict[str, Any]]:
     """Fetch geopolitical risk news from Google News RSS (English + Korean)."""
     feeds = [
         (
-            "https://news.google.com/rss/search?q=geopolitical+risk+investment&hl=en&gl=US&ceid=US:en",
+            get_url("geopolitical", "google_news_geo_en", "https://news.google.com/rss/search?q=geopolitical+risk+investment&hl=en&gl=US&ceid=US:en"),
             "Google News EN (Geopolitical)",
             ["geopolitical", "risk", "english"],
         ),
         (
-            "https://news.google.com/rss/search?q=military+conflict+sanctions+war&hl=en&gl=US&ceid=US:en",
+            get_url("geopolitical", "google_news_conflict", "https://news.google.com/rss/search?q=military+conflict+sanctions+war&hl=en&gl=US&ceid=US:en"),
             "Google News EN (Conflict)",
             ["geopolitical", "conflict", "english"],
         ),
         (
-            "https://news.google.com/rss/search?q=%EC%A7%80%EC%A0%95%ED%95%99+%EB%A6%AC%EC%8A%A4%ED%81%AC+%ED%88%AC%EC%9E%90&hl=ko&gl=KR&ceid=KR:ko",
+            get_url("geopolitical", "google_news_geo_kr", "https://news.google.com/rss/search?q=%EC%A7%80%EC%A0%95%ED%95%99+%EB%A6%AC%EC%8A%A4%ED%81%AC+%ED%88%AC%EC%9E%90&hl=ko&gl=KR&ceid=KR:ko"),
             "Google News KR (지정학)",
             ["geopolitical", "risk", "korean"],
         ),

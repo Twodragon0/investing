@@ -21,6 +21,7 @@ import requests
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common.collector_config import get_collector_config, get_url
 from common.collector_metrics import log_collection_summary
 from common.config import REQUEST_TIMEOUT, get_kst_now, get_verify_ssl, setup_logging
 from common.dedup import DedupEngine, deduplicate_by_url
@@ -38,28 +39,30 @@ from common.utils import request_with_retry
 logger = setup_logging("collect_political_trades")
 
 VERIFY_SSL = get_verify_ssl()
+# collectors.yml에서 설정 로드
+_political_cfg = get_collector_config("political_trades")
 
 
 def fetch_congressional_trades() -> List[Dict[str, Any]]:
     """Fetch US congressional stock trading news via Google News RSS."""
     feeds = [
         (
-            "https://news.google.com/rss/search?q=congressional+stock+trading+disclosure&hl=en-US&gl=US&ceid=US:en",
+            get_url("political_trades", "google_news_congress_trading", "https://news.google.com/rss/search?q=congressional+stock+trading+disclosure&hl=en-US&gl=US&ceid=US:en"),
             "Congressional Trades EN",
             ["political-trades", "congress", "us"],
         ),
         (
-            "https://news.google.com/rss/search?q=Pelosi+stock+trades+congress&hl=en-US&gl=US&ceid=US:en",
+            get_url("political_trades", "google_news_pelosi", "https://news.google.com/rss/search?q=Pelosi+stock+trades+congress&hl=en-US&gl=US&ceid=US:en"),
             "Pelosi Trades",
             ["political-trades", "pelosi", "congress"],
         ),
         (
-            "https://news.google.com/rss/search?q=senator+stock+trading+disclosure&hl=en-US&gl=US&ceid=US:en",
+            get_url("political_trades", "google_news_senator", "https://news.google.com/rss/search?q=senator+stock+trading+disclosure&hl=en-US&gl=US&ceid=US:en"),
             "Senator Trades",
             ["political-trades", "senate", "us"],
         ),
         (
-            "https://news.google.com/rss/search?q=미국+의원+주식+거래&hl=ko&gl=KR&ceid=KR:ko",
+            get_url("political_trades", "google_news_kr_trades", "https://news.google.com/rss/search?q=미국+의원+주식+거래&hl=ko&gl=KR&ceid=KR:ko"),
             "미국 의회 거래 KR",
             ["political-trades", "congress", "korean"],
         ),
@@ -71,7 +74,7 @@ def fetch_sec_insider_trades() -> List[Dict[str, Any]]:
     """Fetch SEC insider trading / Form 4 news."""
     feeds = [
         (
-            "https://news.google.com/rss/search?q=SEC+insider+trading+Form+4+filing&hl=en-US&gl=US&ceid=US:en",
+            get_url("political_trades", "google_news_sec_insider", "https://news.google.com/rss/search?q=SEC+insider+trading+Form+4+filing&hl=en-US&gl=US&ceid=US:en"),
             "SEC Insider Trading",
             ["political-trades", "sec", "insider"],
         ),
@@ -90,7 +93,7 @@ def fetch_sec_insider_trades() -> List[Dict[str, Any]]:
 
     # Also try EDGAR Full-Text Search API for recent Form 4 filings
     try:
-        url = "https://efts.sec.gov/LATEST/search-index"
+        url = get_url("political_trades", "sec_efts", "https://efts.sec.gov/LATEST/search-index")
         params = {
             "q": "Form 4",
             "dateRange": "custom",
@@ -117,7 +120,7 @@ def fetch_sec_insider_trades() -> List[Dict[str, Any]]:
                     {
                         "title": f"[SEC Form {form_type}] {entity}",
                         "description": f"SEC Form {form_type} filing by {entity} on {filed}",
-                        "link": f"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company={entity}&type=4&dateb=&owner=include&count=10",
+                        "link": f"{get_url('political_trades', 'sec_edgar_company', 'https://www.sec.gov/cgi-bin/browse-edgar')}?action=getcompany&company={entity}&type=4&dateb=&owner=include&count=10",
                         "published": filed,
                         "source": "SEC EDGAR",
                         "tags": ["political-trades", "sec", "form4", "insider"],

@@ -14,6 +14,7 @@ import requests
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common.collector_config import get_collector_config, get_url
 from common.collector_metrics import log_collection_summary
 from common.config import REQUEST_TIMEOUT, USER_AGENT, get_kst_now, get_verify_ssl, setup_logging
 from common.dedup import DedupEngine, deduplicate_by_url
@@ -31,14 +32,15 @@ from common.utils import truncate_text
 from common.worldmonitor_utils import worldmonitor_sort_key
 
 logger = setup_logging("collect_worldmonitor_news")
+# collectors.yml에서 설정 로드
+_wm_cfg = get_collector_config("worldmonitor_news")
 
-WM_PROXY = "https://worldmonitor.app/api/rss-proxy?url="
-WM_FINANCE_BASE = "https://finance.worldmonitor.app"
-WM_MAP_VIEW_URL = (
-    "https://finance.worldmonitor.app/?lat=20.0000&lon=0.0000&zoom=1.00&"
-    "view=global&timeRange=7d&layers=conflicts%2Cbases%2Chotspots%2C"
-    "nuclear%2Csanctions%2Cweather%2Ceconomic%2Cwaterways%2Coutages%2C"
-    "military%2Cnatural"
+WM_PROXY = get_url("worldmonitor_news", "wm_proxy", "https://worldmonitor.app/api/rss-proxy?url=")
+WM_FINANCE_BASE = get_url("worldmonitor_news", "wm_finance_base", "https://finance.worldmonitor.app")
+WM_MAP_VIEW_URL = get_url(
+    "worldmonitor_news",
+    "wm_map_view",
+    "https://finance.worldmonitor.app/?lat=20.0000&lon=0.0000&zoom=1.00&view=global&theme=dark",
 )
 
 
@@ -359,40 +361,40 @@ def build_map_snapshot_section(snapshot: Dict[str, Any]) -> List[str]:
 def fetch_worldmonitor_feeds() -> List[Dict[str, Any]]:
     feeds = [
         (
-            wm_url("https://feeds.bbci.co.uk/news/world/rss.xml"),
+            wm_url(get_url("worldmonitor_news", "rss_bbc", "https://feeds.bbci.co.uk/news/world/rss.xml")),
             "WorldMonitor/BBC World",
             ["worldmonitor", "geopolitics"],
             15,
             48,
             {
                 "fallback_urls": [
-                    "https://feeds.bbci.co.uk/news/world/rss.xml",
+                    get_url("worldmonitor_news", "rss_bbc", "https://feeds.bbci.co.uk/news/world/rss.xml"),
                     "https://news.google.com/rss/search?q=site:bbc.com+world+news+when:2d&hl=en-US&gl=US&ceid=US:en",
                 ]
             },
         ),
         (
-            wm_url("https://www.theguardian.com/world/rss"),
+            wm_url(get_url("worldmonitor_news", "rss_guardian", "https://www.theguardian.com/world/rss")),
             "WorldMonitor/Guardian World",
             ["worldmonitor", "geopolitics"],
             15,
             48,
         ),
         (
-            wm_url("https://www.aljazeera.com/xml/rss/all.xml"),
+            wm_url(get_url("worldmonitor_news", "rss_aljazeera", "https://www.aljazeera.com/xml/rss/all.xml")),
             "WorldMonitor/Al Jazeera",
             ["worldmonitor", "middleeast"],
             15,
             48,
             {
                 "fallback_urls": [
-                    "https://www.aljazeera.com/xml/rss/all.xml",
+                    get_url("worldmonitor_news", "rss_aljazeera", "https://www.aljazeera.com/xml/rss/all.xml"),
                     "https://news.google.com/rss/search?q=site:aljazeera.com+when:2d&hl=en-US&gl=US&ceid=US:en",
                 ]
             },
         ),
         (
-            wm_url("https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114"),
+            wm_url(get_url("worldmonitor_news", "rss_cnbc", "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114")),
             "WorldMonitor/CNBC",
             ["worldmonitor", "markets"],
             15,
@@ -405,27 +407,27 @@ def fetch_worldmonitor_feeds() -> List[Dict[str, Any]]:
             },
         ),
         (
-            wm_url("https://feeds.marketwatch.com/marketwatch/topstories/"),
+            wm_url(get_url("worldmonitor_news", "rss_marketwatch", "https://feeds.marketwatch.com/marketwatch/topstories/")),
             "WorldMonitor/MarketWatch",
             ["worldmonitor", "markets"],
             15,
             48,
             {
                 "fallback_urls": [
-                    "https://feeds.marketwatch.com/marketwatch/topstories/",
+                    get_url("worldmonitor_news", "rss_marketwatch", "https://feeds.marketwatch.com/marketwatch/topstories/"),
                     "https://news.google.com/rss/search?q=site:marketwatch.com+markets+when:2d&hl=en-US&gl=US&ceid=US:en",
                 ]
             },
         ),
         (
-            wm_url("https://www.ft.com/rss/home"),
+            wm_url(get_url("worldmonitor_news", "rss_ft", "https://www.ft.com/rss/home")),
             "WorldMonitor/Financial Times",
             ["worldmonitor", "markets"],
             15,
             48,
             {
                 "fallback_urls": [
-                    "https://www.ft.com/rss/home",
+                    get_url("worldmonitor_news", "rss_ft", "https://www.ft.com/rss/home"),
                     "https://news.google.com/rss/search?q=site:ft.com+markets+when:2d&hl=en-US&gl=US&ceid=US:en",
                 ]
             },
@@ -1021,7 +1023,7 @@ def main() -> None:
         logical_date=today,
         tags=["worldmonitor", "geopolitics", "macro", "daily-digest"],
         source="worldmonitor",
-        source_url="https://worldmonitor.app",
+        source_url=get_url("worldmonitor_news", "wm_site", "https://worldmonitor.app"),
         lang="ko",
         image=briefing_image or "/assets/images/og-worldmonitor.png",
         extra_frontmatter={"permalink": build_dated_permalink("market-analysis", today, "daily-worldmonitor-briefing")},

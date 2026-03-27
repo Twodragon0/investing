@@ -17,6 +17,7 @@ from typing import Any, Dict, List, Tuple
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common.collector_config import get_collector_config, get_url
 from common.collector_metrics import log_collection_summary
 from common.config import get_kst_now, get_verify_ssl, setup_logging
 from common.dedup import DedupEngine, deduplicate_by_url
@@ -33,27 +34,29 @@ from common.translator import get_display_title
 
 logger = setup_logging("collect_regulatory")
 VERIFY_SSL = get_verify_ssl()
+# collectors.yml에서 설정 로드
+_reg_cfg = get_collector_config("regulatory")
 
 
 # Feed definitions: (url, source_name, tags, region)
 US_FEEDS: List[Tuple[str, str, List[str]]] = [
     (
-        "https://news.google.com/rss/search?q=site:sec.gov+crypto+OR+digital+asset&hl=en-US&gl=US&ceid=US:en",
+        get_url("regulatory", "rss_sec_crypto", "https://news.google.com/rss/search?q=site:sec.gov+crypto+OR+digital+asset&hl=en-US&gl=US&ceid=US:en"),
         "SEC (Google News)",
         ["regulation", "sec", "us"],
     ),
     (
-        "https://www.cftc.gov/RSS/RSSGP/rssgp.xml",
+        get_url("regulatory", "rss_cftc_gp", "https://www.cftc.gov/RSS/RSSGP/rssgp.xml"),
         "CFTC Press Releases",
         ["regulation", "cftc", "us"],
     ),
     (
-        "https://www.cftc.gov/RSS/RSSENF/rssenf.xml",
+        get_url("regulatory", "rss_cftc_enf", "https://www.cftc.gov/RSS/RSSENF/rssenf.xml"),
         "CFTC Enforcement",
         ["regulation", "cftc", "enforcement", "us"],
     ),
     (
-        "https://www.federalreserve.gov/feeds/press_all.xml",
+        get_url("regulatory", "rss_fed", "https://www.federalreserve.gov/feeds/press_all.xml"),
         "Federal Reserve",
         ["regulation", "fed", "us"],
     ),
@@ -61,17 +64,17 @@ US_FEEDS: List[Tuple[str, str, List[str]]] = [
 
 KOREA_FEEDS: List[Tuple[str, str, List[str]]] = [
     (
-        "https://www.fsc.go.kr/about/fsc_bbs_rss/?fid=0111",
+        get_url("regulatory", "rss_fsc_0111", "https://www.fsc.go.kr/about/fsc_bbs_rss/?fid=0111"),
         "금융위원회 보도자료",
         ["regulation", "fsc", "korea"],
     ),
     (
-        "https://www.fsc.go.kr/about/fsc_bbs_rss/?fid=0112",
+        get_url("regulatory", "rss_fsc_0112", "https://www.fsc.go.kr/about/fsc_bbs_rss/?fid=0112"),
         "금융위원회 보도참고",
         ["regulation", "fsc", "korea"],
     ),
     (
-        "https://news.google.com/rss/search?q=금융위원회+가상자산+규제&hl=ko&gl=KR&ceid=KR:ko",
+        get_url("regulatory", "rss_fsc_google", "https://news.google.com/rss/search?q=금융위원회+가상자산+규제&hl=ko&gl=KR&ceid=KR:ko"),
         "한국 금융규제 뉴스",
         ["regulation", "korea", "가상자산"],
     ),
@@ -79,12 +82,12 @@ KOREA_FEEDS: List[Tuple[str, str, List[str]]] = [
 
 ASIA_FEEDS: List[Tuple[str, str, List[str]]] = [
     (
-        "https://www.fsa.go.jp/fsaEnNewsList_rss2.xml",
+        get_url("regulatory", "rss_fsa_japan", "https://www.fsa.go.jp/fsaEnNewsList_rss2.xml"),
         "Japan FSA",
         ["regulation", "japan", "fsa"],
     ),
     (
-        "https://news.google.com/rss/search?q=MAS+Singapore+crypto+regulation&hl=en-US&gl=US&ceid=US:en",
+        get_url("regulatory", "rss_mas_singapore", "https://news.google.com/rss/search?q=MAS+Singapore+crypto+regulation&hl=en-US&gl=US&ceid=US:en"),
         "MAS Singapore",
         ["regulation", "singapore", "mas"],
     ),
@@ -92,12 +95,12 @@ ASIA_FEEDS: List[Tuple[str, str, List[str]]] = [
 
 EUROPE_FEEDS: List[Tuple[str, str, List[str]]] = [
     (
-        "https://news.google.com/rss/search?q=ESMA+crypto+MiCA+regulation&hl=en-US&gl=US&ceid=US:en",
+        get_url("regulatory", "rss_esma", "https://news.google.com/rss/search?q=ESMA+crypto+MiCA+regulation&hl=en-US&gl=US&ceid=US:en"),
         "EU ESMA",
         ["regulation", "eu", "esma", "mica"],
     ),
     (
-        "https://news.google.com/rss/search?q=FCA+UK+crypto+regulation&hl=en-US&gl=US&ceid=US:en",
+        get_url("regulatory", "rss_fca_uk", "https://news.google.com/rss/search?q=FCA+UK+crypto+regulation&hl=en-US&gl=US&ceid=US:en"),
         "UK FCA",
         ["regulation", "uk", "fca"],
     ),

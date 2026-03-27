@@ -21,6 +21,7 @@ import requests
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.bettafish_analyzer import BettaFishAnalyzer
+from common.collector_config import get_collector_config, get_url
 from common.collector_metrics import log_collection_summary
 from common.config import BROWSER_USER_AGENT, REQUEST_TIMEOUT, get_env, get_kst_now, get_verify_ssl, setup_logging
 from common.dedup import DedupEngine
@@ -38,14 +39,16 @@ from common.utils import request_with_retry
 logger = setup_logging("collect_market_indicators")
 
 VERIFY_SSL = get_verify_ssl()
+# collectors.yml에서 설정 로드
+_mi_cfg = get_collector_config("market_indicators")
 
 # ── Constants ──────────────────────────────────────────────────────────────────
-CNN_FEAR_GREED_URL = "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"
+CNN_FEAR_GREED_URL = get_url("market_indicators", "cnn_fear_greed", "https://production.dataviz.cnn.io/index/fearandgreed/graphdata")
 CNN_HEADERS = {
     "User-Agent": BROWSER_USER_AGENT,
     "Accept": "application/json, text/plain, */*",
-    "Referer": "https://www.cnn.com/markets/fear-and-greed",
-    "Origin": "https://www.cnn.com",
+    "Referer": get_url("market_indicators", "cnn_fear_greed_referer", "https://www.cnn.com/markets/fear-and-greed"),
+    "Origin": get_url("market_indicators", "cnn_origin", "https://www.cnn.com"),
 }
 
 
@@ -162,12 +165,12 @@ def fetch_treasury_yield_news() -> List[Dict[str, Any]]:
     """Fetch treasury yield news via Google News RSS (concurrent)."""
     feeds = [
         (
-            "https://news.google.com/rss/search?q=%2210-year+treasury+yield%22&hl=en-US&gl=US&ceid=US:en",
+            get_url("market_indicators", "google_news_treasury_10y", "https://news.google.com/rss/search?q=%2210-year+treasury+yield%22&hl=en-US&gl=US&ceid=US:en"),
             "10Y Treasury Yield",
             ["treasury", "10y", "yield"],
         ),
         (
-            "https://news.google.com/rss/search?q=%222-year+treasury+yield%22&hl=en-US&gl=US&ceid=US:en",
+            get_url("market_indicators", "google_news_treasury_2y", "https://news.google.com/rss/search?q=%222-year+treasury+yield%22&hl=en-US&gl=US&ceid=US:en"),
             "2Y Treasury Yield",
             ["treasury", "2y", "yield"],
         ),
@@ -274,7 +277,7 @@ def fetch_fred_indicators(api_key: str) -> Dict[str, Any]:
     ]
 
     obs_start = (datetime.now(UTC) - timedelta(days=60)).strftime("%Y-%m-%d")
-    base_url = "https://api.stlouisfed.org/fred/series/observations"
+    base_url = get_url("market_indicators", "fred_api", "https://api.stlouisfed.org/fred/series/observations")
     results: Dict[str, Any] = {}
 
     for series_id, label in series_config:

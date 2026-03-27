@@ -19,6 +19,7 @@ from bs4 import BeautifulSoup
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common.collector_config import get_collector_config, get_url
 from common.collector_metrics import log_collection_summary
 from common.config import (
     REQUEST_TIMEOUT,
@@ -60,6 +61,8 @@ except ImportError:
 logger = setup_logging("collect_social_media")
 
 VERIFY_SSL = get_verify_ssl()
+# collectors.yml에서 설정 로드
+_social_cfg = get_collector_config("social_media")
 
 
 def _parse_telegram_items(channel: str, messages, limit: int) -> List[Dict[str, Any]]:
@@ -129,7 +132,7 @@ def _fetch_telegram_browser(channels: List[str], limit: int = 10) -> Dict[str, L
             for channel in channels:
                 try:
                     session.navigate(
-                        f"https://t.me/s/{channel}",
+                        get_url("social_media", "telegram_channel", "https://t.me/s/{channel}").format(channel=channel),
                         wait_until="domcontentloaded",
                         wait_ms=2000,
                     )
@@ -152,7 +155,7 @@ def _fetch_telegram_browser(channels: List[str], limit: int = 10) -> Dict[str, L
 
 def fetch_telegram_channel(channel: str, limit: int = 10) -> List[Dict[str, Any]]:
     """Scrape public Telegram channel messages via t.me/s/ preview (requests fallback)."""
-    url = f"https://t.me/s/{channel}"
+    url = get_url("social_media", "telegram_channel", "https://t.me/s/{channel}").format(channel=channel)
     try:
         resp = requests.get(
             url,
@@ -177,7 +180,7 @@ def fetch_twitter_search(bearer_token: str, query: str, limit: int = 10) -> List
         logger.info("Twitter Bearer Token not set, skipping")
         return []
 
-    url = "https://api.twitter.com/2/tweets/search/recent"
+    url = get_url("social_media", "twitter_search", "https://api.twitter.com/2/tweets/search/recent")
     headers = {"Authorization": f"Bearer {bearer_token}"}
     params = {
         "query": query,
@@ -235,8 +238,9 @@ def fetch_reddit_posts(limit: int = 10) -> List[Dict[str, Any]]:
         ("defi", "r/DeFi", 20),
     ]
     all_items = []
+    _reddit_hot_tpl = get_url("social_media", "reddit_hot", "https://www.reddit.com/r/{subreddit}/hot.json?limit={limit}")
     for sub, display_name, min_score in subreddits:
-        url = f"https://www.reddit.com/r/{sub}/hot.json?limit={limit}"
+        url = _reddit_hot_tpl.format(subreddit=sub, limit=limit)
         try:
             resp = request_with_retry(
                 url,
@@ -283,12 +287,12 @@ def fetch_google_news_social() -> List[Dict[str, Any]]:
     """Google News RSS fallback for social/crypto influencer content (concurrent)."""
     feeds = [
         (
-            "https://news.google.com/rss/search?q=crypto+twitter+sentiment&hl=en-US&gl=US&ceid=US:en",
+            get_url("social_media", "google_news_crypto_twitter", "https://news.google.com/rss/search?q=crypto+twitter+sentiment&hl=en-US&gl=US&ceid=US:en"),
             "Google News Social EN",
             ["social-media", "sentiment"],
         ),
         (
-            "https://news.google.com/rss/search?q=암호화폐+커뮤니티+SNS&hl=ko&gl=KR&ceid=KR:ko",
+            get_url("social_media", "google_news_crypto_social_kr", "https://news.google.com/rss/search?q=암호화폐+커뮤니티+SNS&hl=ko&gl=KR&ceid=KR:ko"),
             "Google News Social KR",
             ["social-media", "korean"],
         ),

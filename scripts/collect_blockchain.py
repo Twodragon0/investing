@@ -15,6 +15,7 @@ import time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.blockchain_api import fetch_btc_stats, fetch_eth_stats, fetch_l2_summary, fetch_upgrade_news
+from common.collector_config import get_collector_config
 from common.collector_metrics import log_collection_summary
 from common.config import get_kst_now, setup_logging
 from common.dedup import DedupEngine
@@ -22,6 +23,8 @@ from common.markdown_utils import markdown_table
 from common.post_generator import PostGenerator, build_dated_permalink
 
 logger = setup_logging("collect_blockchain")
+# collectors.yml에서 설정 로드
+_blockchain_cfg = get_collector_config("blockchain")
 
 
 # ---------------------------------------------------------------------------
