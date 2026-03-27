@@ -6,7 +6,7 @@
 |-------------------------------------- | -------: | -------: | ------: | --------: |
 | scripts/common/\_\_init\_\_.py        |       17 |        6 |     65% |     30-36 |
 | scripts/common/bettafish\_analyzer.py |      646 |       68 |     89% |341-347, 357, 359, 361, 416, 425-427, 432-433, 438-439, 445, 449, 451, 578, 630, 881-888, 901-903, 907, 913-926, 932-934, 937-938, 953, 961-962, 996-997, 1056, 1058, 1060, 1062, 1160, 1272, 1274, 1278, 1436, 1580-1581, 1610, 1620, 1625 |
-| scripts/common/blockchain\_api.py     |       84 |       84 |      0% |    10-205 |
+| scripts/common/blockchain\_api.py     |       95 |       10 |     89% |97, 232-242 |
 | scripts/common/browser.py             |      124 |        0 |    100% |           |
 | scripts/common/collector\_metrics.py  |       14 |        0 |    100% |           |
 | scripts/common/config.py              |       82 |       32 |     61% |10-11, 36-38, 44-46, 56-96, 133-135 |
@@ -26,7 +26,7 @@
 | scripts/common/translator.py          |      190 |        2 |     99% |  618, 631 |
 | scripts/common/utils.py               |      117 |        3 |     97% |     69-71 |
 | scripts/common/worldmonitor\_utils.py |        5 |        0 |    100% |           |
-| **TOTAL**                             | **5720** |  **461** | **92%** |           |
+| **TOTAL**                             | **5731** |  **387** | **93%** |           |
 
 
 ## Setup coverage badge
