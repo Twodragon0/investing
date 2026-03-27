@@ -56,41 +56,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-27 - 암호화폐 뉴스 요
 <li><a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxPMk1TOFp1amFzRWNDQjFSRU13aVM2MTlJWEJNcWJBbmF2eUlVSHIzc2ZNNDNUbUsyalVudVpNLXFHdzFnTkdma2lEZ0cycmd4RjVmTXpONzVZNk9zZnpNcUpfWTBDcHJmY1ZaaE1KTmlwWVpncGZqR1lFb25ZYUFTbmdtUFEzYnc?oc=5">암호화폐 시장, ‘패닉’에 폭락 계속.비트코인·XRP는 “역전 신호 찾았다"</a> <span class="p0-desc">시장이 큰 폭으로 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: "현금화"에 초점: 북한의 암호화폐 도난에 맞서는 한 가지 방법 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 106건의 뉴스 중 P1 주요 이슈도 15건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (56건): 비트코인, 채굴 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **📈 가격/시장** (33건): 달러, 암호화폐, 이란 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🏦 거래소** (12건): coinbase, backed, fannie 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- "현금화"에 초점: 북한의 암호화폐 도난에 맞서는 한 가지 방법
-- "현금화"에 초점: 북한의 암호화폐 도용을 퇴치하는 한 가지 방법 - 38 North
-- 암호화폐 시장, ‘패닉’에 폭락 계속.비트코인·XRP는 “역전 신호 찾았다"
-
-### 주요 이슈
-
-- SEC은 암호화폐 규정에 큰 변화를 가져왔습니다. 그러면 비트코인을 $1,000로 구매하게 됩니까?
-- Circle Falls, 비트코인 ETF 급증
-- 영국, 캄보디아 기반 사기 센터 및 암호화폐 플랫폼 제재
-- 외 12건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, ETF, AI
-- **주요 출처**: Google News(20건), CoinDesk(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-03-27.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-03-27.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
