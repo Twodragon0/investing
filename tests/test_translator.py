@@ -12,15 +12,15 @@ from common.translator import (
     _cache_key,
     _load_cache,
     _postprocess_translation,
-    _should_translate_body_line,
     _restore_terms,
     _save_cache,
+    _should_translate_body_line,
     get_display_description,
     get_display_title,
     save_translation_cache,
-    translate_untranslated_body,
     translate_batch,
     translate_to_korean,
+    translate_untranslated_body,
 )
 
 

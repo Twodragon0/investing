@@ -8,14 +8,9 @@ Coverage targets (miss lines):
   952, 997-1005, 1027, 1032, 1037, 1042
 """
 
-import os
-import sys
-
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-
 import pytest
 
-from scripts.common.signal_composer import (
+from common.signal_composer import (
     _DEFAULT_WEIGHTS,
     CompositeResult,
     ScenarioResult,

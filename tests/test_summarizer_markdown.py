@@ -1,16 +1,5 @@
 """Unit tests for summarizer.py and markdown_utils.py."""
 
-import os
-import sys
-
-# ---------------------------------------------------------------------------
-# sys.path: make `scripts/` importable as a package root so that
-# `from common.xxx import ...` works the same way the collector scripts do.
-# ---------------------------------------------------------------------------
-_SCRIPTS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-if _SCRIPTS_DIR not in sys.path:
-    sys.path.insert(0, _SCRIPTS_DIR)
-
 
 # ===========================================================================
 # summarizer.py tests

@@ -27,7 +27,7 @@ import pytest
 # collector_config 모듈을 __init__.py 없이 직접 로드
 # ---------------------------------------------------------------------------
 
-_SCRIPTS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+_SCRIPTS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "scripts"))
 _CC_PATH = os.path.join(_SCRIPTS_DIR, "common", "collector_config.py")
 
 

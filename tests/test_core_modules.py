@@ -6,15 +6,6 @@ from datetime import UTC, datetime
 from unittest.mock import MagicMock, patch
 
 # ---------------------------------------------------------------------------
-# sys.path: make `scripts/` importable as a package root so that
-# `from common.xxx import ...` works the same way the collector scripts do.
-# ---------------------------------------------------------------------------
-_SCRIPTS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-if _SCRIPTS_DIR not in sys.path:
-    sys.path.insert(0, _SCRIPTS_DIR)
-
-
-# ---------------------------------------------------------------------------
 # dedup module helpers
 # ---------------------------------------------------------------------------
 
