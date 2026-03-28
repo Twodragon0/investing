@@ -526,7 +526,7 @@ def fetch_images_concurrent(
 def fetch_descriptions_concurrent(
     items: list,
     max_workers: int = 6,
-    max_items: int = 50,
+    max_items: int = 80,
 ) -> int:
     """Fetch descriptions for items with missing/synthetic descriptions using concurrent threads.
 
@@ -1559,10 +1559,13 @@ def enrich_item(
     fetch_link = link
     if original_url and "news.google.com" not in original_url:
         fetch_link = original_url
+    # Title-duplicate descriptions get priority fetch (bypass max_fetch budget)
+    is_title_dup = bool(desc) and _is_desc_duplicate_of_title(desc, title)
     if fetch_url and fetch_link:
         counter = _fetch_counter or [0]
-        if counter[0] < max_fetch:
-            counter[0] += 1
+        if counter[0] < max_fetch or is_title_dup:
+            if not is_title_dup:
+                counter[0] += 1
             metadata = _fetch_and_parse_page(fetch_link)
             fetched = metadata.get("description", "")
             if fetched and fetched != title and len(fetched) > 20:
@@ -1592,7 +1595,15 @@ def enrich_items(
     Original fields are never modified to preserve dedup safety.
     """
     counter = [0]
-    for item in items:
+    # Prioritize items whose description duplicates the title — these benefit
+    # most from URL fetching and should consume the max_fetch budget first.
+    items_priority = sorted(
+        items,
+        key=lambda x: 0 if _is_desc_duplicate_of_title(
+            x.get("description", "").strip(), x.get("title", ""),
+        ) else 1,
+    )
+    for item in items_priority:
         enrich_item(
             item,
             context_map=context_map,
@@ -1606,7 +1617,7 @@ def enrich_items(
 
     # --- Description enrichment pass (concurrent fetch for synthetic descriptions) ---
     if fetch_url:
-        fetch_descriptions_concurrent(items, max_workers=6, max_items=50)
+        fetch_descriptions_concurrent(items, max_workers=6, max_items=80)
 
     # --- Translation pass (after all enrichment is done) ---
     from .translator import (

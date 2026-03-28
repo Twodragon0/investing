@@ -1,0 +1,44 @@
+name: Description Quality Check
+
+on:
+  workflow_run:
+    workflows: ["Collect Crypto News", "Collect Stock News"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      days:
+        description: 'Number of days to check'
+        default: '1'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: description-quality-check
+  cancel-in-progress: true
+
+jobs:
+  quality-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+
+      - name: Setup Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: '3.12'
+
+      - name: Check description quality
+        run: |
+          python scripts/check_description_quality.py \
+            --days ${{ inputs.days || '1' }} \
+            --format text
+
+      - name: Post summary
+        if: always()
+        run: |
+          python scripts/check_description_quality.py \
+            --days ${{ inputs.days || '1' }} \
+            --format markdown >> "$GITHUB_STEP_SUMMARY"
