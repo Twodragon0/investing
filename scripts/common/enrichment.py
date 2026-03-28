@@ -351,14 +351,28 @@ def fetch_descriptions_concurrent(
         "투자 판단 시",
         "면밀히 분석해야 합니다",
         "함께 고려해야 합니다",
+        "주시해야 합니다",
+        "확인하세요",
+        "관련 시장 동향입니다",
+        "관련 세부 내용은",
+        "관련 변경사항을",
+        "시장 심리와 가격",
+        "투자 시사점을",
+        "관련 소식입니다",
+        "거래소 공지사항",
+        "산업 동향",
     ]
 
     def _needs_enrichment(item: dict) -> bool:
+        # Check _synthetic flag first (primary signal)
+        if item.get("_synthetic"):
+            return True
         desc = item.get("description", "").strip()
         if not desc or len(desc) < 30:
             return True
-        if desc == item.get("title", ""):
+        if _is_desc_duplicate_of_title(desc, item.get("title", "")):
             return True
+        # Fallback: marker-based detection for backward compatibility
         return any(marker in desc for marker in _SYNTHETIC_MARKERS)
 
     targets = [(i, item) for i, item in enumerate(items) if _needs_enrichment(item) and item.get("link")][:max_items]
@@ -384,6 +398,7 @@ def fetch_descriptions_concurrent(
                 idx, desc = future.result(timeout=15)
                 if desc and len(desc) > 30 and desc != items[idx].get("title", ""):
                     items[idx]["description"] = desc
+                    items[idx].pop("_synthetic", None)
                     fetched += 1
             except Exception as exc:
                 logger.debug("Description fetch failed for item %d: %s", futures[future], exc)
@@ -431,7 +446,7 @@ def _extract_og_metadata(soup: Any) -> Dict[str, str]:
         content = str(meta.get("content", "")) if meta else ""
         cleaned = _clean_meta_description(content)
         if cleaned and len(cleaned) > 20:
-            result["description"] = smart_truncate(cleaned, 500)
+            result["description"] = smart_truncate(cleaned, 1000)
             break
 
     return result
@@ -459,7 +474,7 @@ def _extract_via_readability(html: str, url: str) -> str:
             if len(paragraphs) >= 5:
                 break
         if paragraphs:
-            return smart_truncate(" ".join(paragraphs), 500)
+            return smart_truncate(" ".join(paragraphs), 1000)
     except ImportError:
         pass  # readability-lxml not installed, fall through
     except Exception as exc:  # noqa: BLE001
@@ -501,7 +516,7 @@ def _extract_via_bs4_article(soup: Any) -> str:
         if len(paragraphs) >= 5:
             break
     if paragraphs:
-        return smart_truncate(" ".join(paragraphs), 500)
+        return smart_truncate(" ".join(paragraphs), 1000)
     return ""
 
 
@@ -515,7 +530,7 @@ def _extract_via_paragraphs(soup: Any) -> str:
             continue
         text = _clean_meta_description(p.get_text(strip=True))
         if len(text) > 50:
-            return smart_truncate(text, 500)
+            return smart_truncate(text, 1000)
     return ""
 
 
@@ -1005,33 +1020,33 @@ def _analyze_title_content(title: str) -> str:
 # ---------------------------------------------------------------------------
 _KOREAN_TITLE_CATEGORIES: Dict[str, str] = {
     # Surge / rebound
-    "급등|폭등|반등": "시장 반등 움직임이 포착되었습니다. 기술적 반등인지 추세 전환인지 거래량과 수급 확인이 필요합니다.",
+    "급등|폭등|반등": "시장 반등 관련 보도.",
     # Geopolitical risk
-    "전쟁|분쟁|군사|이란|중동": "지정학적 리스크가 금융시장에 영향을 미치고 있습니다. 유가·환율·안전자산 흐름을 주시해야 합니다.",
+    "전쟁|분쟁|군사|이란|중동": "지정학적 리스크 관련 보도.",
     # Monetary policy
-    "금리|금통위|한은|한국은행": "한국은행 통화정책 관련 소식입니다. 금리 결정은 채권·부동산·주식 시장 전반에 영향을 미칩니다.",
+    "금리|금통위|한은|한국은행": "한국은행 통화정책 관련 보도.",
     # FX
-    "환율|원달러|원화": "환율 변동 소식입니다. 원화 약세는 수입 물가 상승과 외국인 매도 압력으로 이어질 수 있습니다.",
+    "환율|원달러|원화": "환율 변동 관련 보도.",
     # Market fraud / delisting
-    "상장폐지|주가조작|불공정거래": "불공정거래 적발 소식입니다. 투자 시 기업 실체와 거래 패턴 검증의 중요성을 재확인시킵니다.",
+    "상장폐지|주가조작|불공정거래": "불공정거래 관련 보도.",
     # Market rules
-    "거래시간|제도|규정": "증시 제도 변경 관련 소식입니다. 거래 환경 변화에 따른 투자 전략 조정이 필요할 수 있습니다.",
+    "거래시간|제도|규정": "증시 제도 변경 관련 보도.",
     # Valuation bubble
-    "버블|과열|밸류에이션": "시장 밸류에이션 논쟁이 이어지고 있습니다. 펀더멘탈 대비 가격 수준 점검이 필요한 시점입니다.",
+    "버블|과열|밸류에이션": "시장 밸류에이션 관련 보도.",
     # Bio / pharma
-    "바이오|제약": "바이오·제약 섹터 관련 소식입니다. 임상 결과와 규제 승인 여부가 주가 변동의 핵심 변수입니다.",
+    "바이오|제약": "바이오·제약 섹터 관련 보도.",
     # IPO / listing
-    "IPO|공모|상장": "IPO·신규 상장 관련 소식입니다. 공모가 대비 시장 평가와 수급 동향을 주시하세요.",
+    "IPO|공모|상장": "IPO·신규 상장 관련 보도.",
     # Oil / energy
-    "유가|원유|석유": "유가 변동 소식입니다. 원유 가격은 인플레이션·교역조건·에너지 섹터에 직접적 영향을 미칩니다.",
+    "유가|원유|석유": "유가 변동 관련 보도.",
     # Trade / tariffs
-    "관세|무역|수출|수입": "통상·무역 정책 관련 소식입니다. 글로벌 공급망과 수출 기업 실적에 영향을 줄 수 있습니다.",
+    "관세|무역|수출|수입": "통상·무역 정책 관련 보도.",
     # Dividends / buybacks
-    "배당|주주환원|자사주": "배당·주주환원 정책 관련 소식입니다. 배당 수익률과 자사주 매입 규모가 주가에 긍정적 영향을 줄 수 있습니다.",
+    "배당|주주환원|자사주": "배당·주주환원 정책 관련 보도.",
     # Real estate
-    "부동산|아파트|전세|분양": "부동산 시장 관련 소식입니다. 금리·정책 변화에 따른 부동산 시장 흐름을 주시해야 합니다.",
+    "부동산|아파트|전세|분양": "부동산 시장 관련 보도.",
     # M&A
-    "인수|합병|M&A": "기업 인수·합병(M&A) 관련 소식입니다. 인수 프리미엄과 시너지 효과가 양사 주가에 영향을 줍니다.",
+    "인수|합병|M&A": "기업 인수·합병(M&A) 관련 보도.",
 }
 
 # Pre-compiled keyword sets derived from _KOREAN_TITLE_CATEGORIES for O(1) lookup
@@ -1039,80 +1054,70 @@ _KOREAN_TITLE_KW_SETS: list = [(frozenset(k.split("|")), v) for k, v in _KOREAN_
 
 
 def _analyze_korean_title(title: str) -> str:
-    """Analyze a Korean news title and generate contextual description."""
-    # Circuit breaker / market crash (needs sub-check for 매수)
+    """Analyze a Korean news title and generate a fact-based description.
+
+    Produces clean, factual descriptions based on the title content
+    rather than speculative or template-heavy commentary.
+    """
+    clean = re.sub(r"\s*[-–—|]\s*\S+$", "", title).strip()
+    pct = re.search(r"(\d+(?:\.\d+)?)\s*%", title)
+    amount = re.search(r"(\d[\d,.]*)\s*(?:억|조|만|원|달러)", title)
+    kr_entities = re.findall(r"[가-힣]{2,}", title)[:3]
+
+    # Build context suffix from extracted data
+    context_parts = []
+    if pct:
+        context_parts.append(f"{pct.group(1)}% 변동")
+    if amount:
+        context_parts.append(f"{amount.group(0)}")
+    context_suffix = f" ({', '.join(context_parts)})" if context_parts else ""
+
+    # Circuit breaker / market crash
     if any(kw in title for kw in ["서킷브레이커", "사이드카"]):
-        if "매수" in title:
-            return (
-                "급락 이후 반등 과정에서 매수 사이드카가 발동되었습니다. "
-                "변동성 확대 장세에서 저점 매수세 유입 신호입니다."
-            )
-        return "급격한 하락으로 매매거래가 일시 중단되었습니다. 투자 심리 위축과 추가 하방 리스크에 유의해야 합니다."
+        trigger = "매수 사이드카" if "매수" in title else "서킷브레이커/사이드카"
+        return f"{clean[:120]}. {trigger} 발동{context_suffix}."
 
-    # Crash / panic (needs pct extraction)
+    # Crash / panic
     if any(kw in title for kw in ["폭락", "급락", "패닉"]):
-        pct = re.search(r"(\d+(?:\.\d+)?)\s*%", title)
-        pct_str = f" {pct.group(1)}% " if pct else " 큰 폭으로 "
-        return (
-            f"시장이{pct_str}급락하며 투매 양상이 나타났습니다. "
-            "패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다."
-        )
+        return f"{clean[:120]}.{context_suffix} 급락 관련 보도."
 
-    # Semiconductor (needs sub-checks for buy / sell signals)
+    # Semiconductor
     if any(kw in title for kw in ["삼성전자", "하이닉스", "반도체"]):
-        if any(kw in title for kw in ["매수", "기회", "긍정"]):
-            return (
-                "반도체 섹터에 대한 매수 기회론이 제기되고 있습니다. "
-                "업종 펀더멘탈과 글로벌 수요 동향 확인이 필요합니다."
-            )
-        if any(kw in title for kw in ["하락", "흔들", "약세"]):
-            return (
-                "반도체주가 외부 리스크로 약세를 보이고 있습니다. 섹터 하락이 일시적인지 구조적인지 판단이 중요합니다."
-            )
-        return "반도체 산업 관련 주요 소식입니다. 한국 증시에서 반도체는 시가총액 비중이 가장 높은 핵심 섹터입니다."
+        return f"{clean[:120]}.{context_suffix} 반도체 섹터 보도."
 
     # Fixed-response categories via dict table
-    for kw_set, description in _KOREAN_TITLE_KW_SETS:
+    for kw_set, category_label in _KOREAN_TITLE_KW_SETS:
         if any(kw in title for kw in kw_set):
-            return description
+            return f"{clean[:120]}.{context_suffix} {category_label}"
 
-    # Crypto majors (needs clean title + optional pct)
+    # Crypto majors
     if any(kw in title for kw in ["비트코인", "이더리움", "알트코인", "리플"]):
-        clean = re.sub(r"\s*[-–—|]\s*\S+$", "", title).strip()
-        pct = re.search(r"(\d+(?:\.\d+)?)\s*%", title)
-        if pct:
-            return f"{clean[:120]}. {pct.group(1)}% 변동에 따른 시장 영향을 주시해야 합니다."
-        return f"{clean[:120]}. 암호화폐 시장 동향과 투자 시사점을 확인하세요."
+        return f"{clean[:120]}.{context_suffix} 암호화폐 시장 보도."
 
-    # DeFi / digital assets (needs clean title)
+    # DeFi / digital assets
     if any(kw in title for kw in ["디파이", "디지털자산", "가상자산", "코인", "블록체인"]):
-        clean = re.sub(r"\s*[-–—|]\s*\S+$", "", title).strip()
-        return f"{clean[:120]}. 디지털 자산 시장의 최신 동향입니다."
+        return f"{clean[:120]}.{context_suffix} 디지털 자산 보도."
 
-    # AI / tech (needs clean title)
+    # AI / tech
     if any(kw in title for kw in ["AI", "인공지능", "챗봇", "생성형"]):
-        clean = re.sub(r"\s*[-–—|]\s*\S+$", "", title).strip()
-        return f"{clean[:120]}. AI 산업 성장에 따른 투자 기회를 점검해 보세요."
+        return f"{clean[:120]}.{context_suffix} AI 산업 보도."
 
-    # EV / battery (needs clean title)
+    # EV / battery
     if any(kw in title for kw in ["2차전지", "배터리", "전기차", "EV"]):
-        clean = re.sub(r"\s*[-–—|]\s*\S+$", "", title).strip()
-        return f"{clean[:120]}. 글로벌 전기차 수요와 배터리 기술 경쟁 동향입니다."
+        return f"{clean[:120]}.{context_suffix} 전기차·배터리 보도."
 
     # Foreign / institutional flow
     if any(kw in title for kw in ["외국인", "기관", "순매수", "순매도", "수급"]):
-        return "외국인·기관 수급 동향입니다. 대규모 순매수/순매도는 시장 방향성의 중요한 선행 지표입니다."
+        return f"{clean[:120]}.{context_suffix} 수급 동향 보도."
 
     # Earnings
     if any(kw in title for kw in ["실적", "어닝", "매출", "영업이익"]):
-        return "기업 실적 관련 소식입니다. 실적 서프라이즈 여부와 컨센서스 대비 결과가 주가 방향을 결정합니다."
+        return f"{clean[:120]}.{context_suffix} 기업 실적 보도."
 
-    # Fallback: extract key nouns from title
-    nouns = re.findall(r"[가-힣]{2,}", title)[:3]
-    # Default: use title core as description
-    clean = re.sub(r"\s*[-–—|]\s*\S+$", "", title).strip()
-    if nouns:
-        return f"{clean[:120]}. 주요 키워드: {', '.join(nouns[:3])}."
+    # Fallback: use clean title + entity context
+    if kr_entities:
+        entity_str = ", ".join(kr_entities[:3])
+        return f"{clean[:120]}.{context_suffix} 주요 키워드: {entity_str}."
     return clean[:150] if len(clean) > 15 else title
 
 
@@ -1124,13 +1129,13 @@ def _analyze_korean_title(title: str) -> str:
 # ---------------------------------------------------------------------------
 _ENGLISH_TITLE_CATEGORIES: Dict[str, str] = {
     # Geopolitical risk
-    "iran|war|conflict|military|attack": "지정학적 리스크가 글로벌 시장 심리에 영향을 주고 있습니다.",
+    "iran|war|conflict|military|attack": "지정학 관련 보도.",
     # Earnings
-    "earning|revenue|profit|guidance|beat|miss": "실적 결과가 향후 주가 방향을 결정합니다.",
+    "earning|revenue|profit|guidance|beat|miss": "기업 실적 관련 보도.",
     # Fed / monetary policy
-    "fed|fomc|powell|rate cut|rate hike": "연준 정책은 글로벌 자산 배분의 핵심 변수입니다.",
+    "fed|fomc|powell|rate cut|rate hike": "연준 통화정책 관련 보도.",
     # Trump / policy
-    "trump|white house|executive order|tariff": "정책 변화가 시장에 미치는 영향을 주시해야 합니다.",
+    "trump|white house|executive order|tariff": "정책 관련 보도.",
     # Crypto majors — no suffix (title alone)
     "bitcoin|btc|crypto|ethereum|altcoin": "",
     # AI / semiconductors — no suffix (title alone)
@@ -1182,50 +1187,40 @@ def _analyze_english_title(title: str, title_lower: str) -> str:
 
     # Determine event category and add specific context
 
+    # Build extra context from extracted numbers
+    extra = f" ({detail_str})" if detail_str else ""
+
     # --- Dynamic categories: inject detail_str into result ---
     if any(kw in title_lower for kw in ["crash", "plunge", "tumble", "sink", "slump", "dive"]):
-        base = clean_title[:120]
-        extra = f" ({detail_str})" if detail_str else ""
-        return f"{base}.{extra} 급락 배경과 반등 시점을 주시해야 합니다."
+        return f"{clean_title[:120]}.{extra} 급락 관련 보도."
 
     if any(kw in title_lower for kw in ["rally", "surge", "soar", "jump", "climb", "gain"]):
-        base = clean_title[:120]
-        extra = f" ({detail_str})" if detail_str else ""
-        return f"{base}.{extra} 상승 지속성을 확인해야 합니다."
+        return f"{clean_title[:120]}.{extra} 상승 관련 보도."
 
     if any(kw in title_lower for kw in ["drop", "fall ", "decline", "down ", "lower", "slip"]):
-        base = clean_title[:120]
-        extra = f" ({detail_str})" if detail_str else ""
-        return f"{base}.{extra}"
+        return f"{clean_title[:120]}.{extra}"
 
     if any(kw in title_lower for kw in ["rise", "up ", "higher", "advance"]):
-        base = clean_title[:120]
-        extra = f" ({detail_str})" if detail_str else ""
-        return f"{base}.{extra}"
+        return f"{clean_title[:120]}.{extra}"
 
     if any(kw in title_lower for kw in ["oil", "crude", "brent", "wti"]):
-        base = clean_title[:120]
-        extra = f" ({detail_str})" if detail_str else ""
-        return f"{base}.{extra} 유가 변동은 인플레이션과 에너지 섹터에 직접 영향을 미칩니다."
+        return f"{clean_title[:120]}.{extra} 유가 관련 보도."
 
     if any(kw in title_lower for kw in ["s&p", "nasdaq", "dow", "futures", "stock market"]):
-        base = clean_title[:120]
-        extra = f" ({detail_str})" if detail_str else ""
-        return f"{base}.{extra}"
+        return f"{clean_title[:120]}.{extra}"
 
     # --- Fixed-suffix categories via dict table ---
     for kw_set, suffix in _ENGLISH_TITLE_KW_SETS:
         if any(kw in title_lower for kw in kw_set):
-            return f"{clean_title[:120]}." if not suffix else f"{clean_title[:120]}. {suffix}"
+            return f"{clean_title[:120]}.{extra}" if not suffix else f"{clean_title[:120]}.{extra} {suffix}"
 
-    # Default: use cleaned title with contextual suffix
+    # Default: use cleaned title with entity context
     _meaningful = [e for e in _named if len(e) > 2]
     if _meaningful:
         subj = ", ".join(_meaningful[:2])
-        extra = f" ({detail_str})" if detail_str else ""
-        return f"{clean_title[:120]}.{extra} {subj} 관련 시장 동향입니다."
+        return f"{clean_title[:120]}.{extra} {subj} 관련 보도."
     if detail_str:
-        return f"{clean_title[:120]}. ({detail_str})"
+        return f"{clean_title[:120]}.{extra}"
     return f"{clean_title[:140]}." if len(clean_title) > 15 else title
 
 
@@ -1251,7 +1246,7 @@ def generate_synthetic_description(
 
     # Exchange-specific fallback
     if any(kw in source.lower() for kw in ["binance", "bybit", "okx", "upbit"]):
-        return f"{label} 공지 — " + (f"{entity_str} 관련 변경사항을 확인하세요." if entity_str else "상세 내용은 원문을 참고하세요.")
+        return f"{label} 공지. " + (f"{entity_str} 관련." if entity_str else f"{title[:80]}.")
 
     # Build a title-condensed description instead of boilerplate
     # Clean trailing source names from the title
@@ -1259,15 +1254,14 @@ def generate_synthetic_description(
     # For Korean titles, extract a condensed version
     kr_chars = len(re.findall(r"[가-힣]", clean_title))
     if kr_chars > len(clean_title) * 0.3:
-        # Korean: use title core + entities for context
         core = clean_title[:80] if len(clean_title) > 80 else clean_title
         if entity_str:
-            return f"{core}. {entity_str} 관련 세부 내용은 원문을 참고하세요."
-        return f"{core}. 관련 세부 동향과 시장 반응을 확인하세요."
+            return f"{core}. {entity_str} 관련 보도."
+        return f"{core}."
 
     # English: use cleaned title with source context
     if label and label != source:
-        return f"{label} 보도입니다. {clean_title[:100]}"
+        return f"{label} 보도. {clean_title[:100]}"
     return clean_title[:150] if len(clean_title) > 15 else title
 
 
@@ -1285,6 +1279,47 @@ def _clean_html_content(text: str) -> str:
     text = re.sub(r"&#?\w+;", " ", text)
     text = re.sub(r"\s+", " ", text).strip()
     return text
+
+
+def _is_desc_duplicate_of_title(desc: str, title: str) -> bool:
+    """Return True if desc is essentially a duplicate of title (no extra info).
+
+    Checks:
+    - Normalized text equality (lowercase, stripped punctuation/whitespace)
+    - desc contains >= 80% of title characters
+    - desc length < 1.3x title length (insufficient additional info)
+    - Word-token Jaccard similarity > 0.7
+    """
+    if not desc or not title:
+        return False
+
+    # Normalize: lowercase, remove punctuation and whitespace
+    _norm_re = re.compile(r"[\s\W]+")
+    norm_desc = _norm_re.sub("", desc.lower())
+    norm_title = _norm_re.sub("", title.lower())
+
+    # Exact normalized match
+    if norm_desc == norm_title:
+        return True
+
+    # desc contains >= 80% of title
+    if norm_title and len(norm_title) > 5:
+        overlap = sum(1 for c in norm_title if c in norm_desc)
+        if overlap >= len(norm_title) * 0.8:
+            # Also check if desc is short relative to title
+            if len(norm_desc) < len(norm_title) * 1.3:
+                return True
+
+    # Word-token Jaccard similarity
+    desc_tokens = set(desc.lower().split())
+    title_tokens = set(title.lower().split())
+    if desc_tokens and title_tokens:
+        intersection = desc_tokens & title_tokens
+        union = desc_tokens | title_tokens
+        if union and len(intersection) / len(union) > 0.7:
+            return True
+
+    return False
 
 
 def _generate_synthetic_description(
@@ -1331,7 +1366,7 @@ def enrich_item(
     if desc and len(desc) > 20:
         # Reject if desc is just title with source appended (RSS artifact)
         # e.g. "Article Title Here sourcename.com"
-        if desc == title:
+        if _is_desc_duplicate_of_title(desc, title):
             pass  # fall through to enrichment
         elif title and desc.startswith(title[:30]):
             pass  # description is title prefix + noise
@@ -1349,14 +1384,16 @@ def enrich_item(
             fetched = metadata.get("description", "")
             if fetched and fetched != title and len(fetched) > 20:
                 item["description"] = _clean_html_content(fetched)
+                item.pop("_synthetic", None)
             # Extract og:image if not already set from RSS
             if not item.get("image") and metadata.get("image"):
                 item["image"] = metadata["image"]
-            if item.get("description") and len(item["description"]) > 20:
+            if item.get("description") and len(item["description"]) > 20 and not item.get("_synthetic"):
                 return
 
     # Generate synthetic description
     item["description"] = _generate_synthetic_description(item, context_map)
+    item["_synthetic"] = True
 
 
 def enrich_items(

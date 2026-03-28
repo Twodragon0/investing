@@ -156,7 +156,7 @@ def fetch_rss_feed(
                     # Remove trailing whitespace/dots artifacts
                     cleaned_desc = re.sub(r"\s*\.{2,}\s*$", "", cleaned_desc)
                     cleaned_desc = re.sub(r"\s+", " ", cleaned_desc).strip()
-                    description = truncate_sentence(sanitize_string(cleaned_desc, 800), 500)
+                    description = truncate_sentence(sanitize_string(cleaned_desc, 1500), 1000)
 
                 published_str = date_el.get_text(strip=True) if date_el else ""
 

@@ -285,6 +285,22 @@ _GENERIC_DESC_PATTERNS = [
     re.compile(r"^Continue reading", re.I),
     re.compile(r"^This article", re.I),
     re.compile(r"^The post .+ appeared first", re.I),
+    # Synced with enrichment.py _SYNTHETIC_MARKERS
+    re.compile(r"주시해야 합니다\.?\s*$"),
+    re.compile(r"확인하세요\.?\s*$"),
+    re.compile(r"관련 시장 동향입니다\.?\s*$"),
+    re.compile(r"관련 세부 내용은"),
+    re.compile(r"관련 변경사항을"),
+    re.compile(r"시장 심리와 가격"),
+    re.compile(r"투자 시사점을"),
+    re.compile(r"관련 소식입니다\.?\s*$"),
+    re.compile(r"거래소 공지사항"),
+    re.compile(r"산업 동향"),
+    re.compile(r"면밀히 분석해야 합니다"),
+    re.compile(r"함께 고려해야 합니다"),
+    re.compile(r"투자 판단 시"),
+    re.compile(r"관련 시장 뉴스입니다"),
+    re.compile(r"원문 기사의 세부 내용을 확인하세요"),
 ]
 
 
