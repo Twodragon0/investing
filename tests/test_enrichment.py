@@ -2,6 +2,8 @@
 
 from unittest.mock import MagicMock, patch
 
+import pytest
+
 from common.enrichment import (
     _NOISE_DESC_PATTERNS,
     _analyze_korean_title,
@@ -10,6 +12,8 @@ from common.enrichment import (
     _decode_google_news_base64,
     _extract_title_entities,
     _get_source_label,
+    _is_desc_duplicate_of_title,
+    _is_site_boilerplate,
     _is_valid_image_url,
     _resolve_google_news_url,
     fetch_descriptions_concurrent,
@@ -2013,3 +2017,161 @@ class TestFetchPageMetadataRemainingLines:
             result = fetch_page_metadata("https://example.com/article")
         # Sidebar <p> skipped (line 481), real <p> used
         assert "Real standalone paragraph" in result["description"] or isinstance(result["description"], str)
+
+
+# =============================================================================
+# _is_site_boilerplate
+# =============================================================================
+
+
+class TestIsSiteBoilerplate:
+    """Tests for _is_site_boilerplate()."""
+
+    # ------------------------------------------------------------------
+    # True (boilerplate) cases
+    # ------------------------------------------------------------------
+
+    @pytest.mark.parametrize("desc", [
+        # Phrase-matched: "투자 통찰력과 개인 금융"
+        "The Motley Fool은 25년 넘게 수백만 명의 사람들에게 투자 통찰력과 개인 금융을 제공해 왔습니다.",
+        # Phrase-matched: "투자 커뮤니티"
+        "세계 최대 투자 커뮤니티인 Seeking Alpha에 참여하세요.",
+        # Phrase-matched: "cnbc international"
+        "CNBC International은 비즈니스, 기술, 중국, 무역, 유가, 중동 및 시장에 관한 뉴스를 제공하는 세계적인 리더입니다.",
+        # Phrase-matched: "뉴스의 리더입니다"
+        "분석, 비디오 및 실시간 가격 업데이트가 포함된 암호화폐, 비트코인, 이더리움, XRP, 블록체인, 디파이, 디지털 금융 및 웹 3.0 뉴스의 리더입니다.",
+        # Short generic — length < 35, no article-specific tokens
+        "전 세계 시장에 대한 뉴스 및 분석.",
+        # Phrase-matched: "비즈니스포스트"
+        "비즈니스포스트 BUSINESSPOST 인물중심 기업인 프로파일 경제미디어",
+        # Phrase-matched: "우리의 목적은 세상을" + "더 스마트하고, 더 행복하고"
+        "우리의 목적은 세상을 더 스마트하고, 더 행복하고, 더 풍요롭게 만드는 것입니다.",
+    ])
+    def test_returns_true_for_boilerplate(self, desc: str):
+        assert _is_site_boilerplate(desc) is True
+
+    # ------------------------------------------------------------------
+    # False (real article content) cases
+    # ------------------------------------------------------------------
+
+    @pytest.mark.parametrize("desc", [
+        # Contains specific numbers and named financial figures
+        "벌금은 524명의 개인 투자자가 필요한 보호 조치 없이 고위험 파생상품 거래로 600만 달러의 손실을 입었다는 바이낸스의 인정에 따른 것입니다.",
+        # Contains specific dollar amount and company name
+        "뉴욕 증권 거래소의 모회사는 예측 시장의 미래에 대한 투자를 확고히 하여 총 투자 금액을 거의 20억 달러에 달하고 있습니다.",
+        # Contains price and liquidation amount
+        "비트코인이 $67,000 아래로 급락하면서 24시간 동안 $2억 이상의 롱 포지션이 청산되었습니다.",
+        # Contains company names and specific percentage
+        "삼성전자·SK하이닉스, 한 달 새 주가 20% 급락…반도체 '슈퍼사이클' 끝난 건가",
+        # Contains specific time reference and index movement
+        "장기 금리 상승에 대한 우려로 금요일 지수는 주중 최저치로 하락했습니다.",
+    ])
+    def test_returns_false_for_article_content(self, desc: str):
+        assert _is_site_boilerplate(desc) is False
+
+    # ------------------------------------------------------------------
+    # Edge cases
+    # ------------------------------------------------------------------
+
+    def test_empty_string_returns_false(self):
+        assert _is_site_boilerplate("") is False
+
+    def test_very_short_string_without_tokens_returns_true(self):
+        # Under 35 chars, no article-specific token -> boilerplate
+        assert _is_site_boilerplate("뉴스 및 분석.") is True
+
+    def test_very_short_string_with_ticker_returns_false(self):
+        # Under 35 chars BUT contains an acronym token (BTC)
+        assert _is_site_boilerplate("BTC 급락") is False
+
+    def test_very_short_string_with_number_returns_false(self):
+        # Under 35 chars BUT contains a number with unit
+        assert _is_site_boilerplate("지수 5% 하락") is False
+
+
+# =============================================================================
+# _is_desc_duplicate_of_title
+# =============================================================================
+
+class TestIsDescDuplicateOfTitle:
+    """Tests for _is_desc_duplicate_of_title()."""
+
+    # ------------------------------------------------------------------
+    # True (duplicate) cases
+    # ------------------------------------------------------------------
+
+    def test_exact_match_returns_true(self):
+        title = "비트코인 가격 급등세 지속"
+        assert _is_desc_duplicate_of_title(title, title) is True
+
+    def test_source_suffix_appended_returns_true(self):
+        title = "Fed signals rate cut in September"
+        desc = title + " Reuters"
+        assert _is_desc_duplicate_of_title(desc, title) is True
+
+    def test_punctuation_difference_returns_true(self):
+        title = "Bitcoin price hits $90000"
+        desc = "Bitcoin price hits $90,000."
+        assert _is_desc_duplicate_of_title(desc, title) is True
+
+    def test_trailing_whitespace_difference_returns_true(self):
+        title = "이더리움 업그레이드 완료"
+        desc = "이더리움 업그레이드 완료   "
+        assert _is_desc_duplicate_of_title(desc, title) is True
+
+    def test_slightly_shorter_desc_returns_true(self):
+        title = "Bitcoin surges past 90000 on institutional demand and ETF inflows"
+        # Remove a few trailing words — still highly similar and shorter than 1.3x
+        desc = "Bitcoin surges past 90000 on institutional demand"
+        assert _is_desc_duplicate_of_title(desc, title) is True
+
+    # ------------------------------------------------------------------
+    # False (not duplicate) cases
+    # ------------------------------------------------------------------
+
+    def test_completely_different_content_returns_false(self):
+        title = "비트코인 가격 급등"
+        desc = "규제 당국이 바이낸스에 5억 달러 벌금을 부과했다고 발표했습니다."
+        assert _is_desc_duplicate_of_title(desc, title) is False
+
+    def test_desc_with_substantial_extra_info_returns_false(self):
+        title = "SEC investigates Binance"
+        desc = (
+            "SEC investigates Binance as part of a broader crackdown on crypto exchanges, "
+            "including allegations of market manipulation and unlicensed trading activity in the US."
+        )
+        # desc is well over 1.3x the length of title and adds unique content
+        assert _is_desc_duplicate_of_title(desc, title) is False
+
+    def test_short_title_long_desc_returns_false(self):
+        title = "Bitcoin falls"
+        desc = (
+            "Bitcoin fell sharply below $60,000 on Friday as macroeconomic fears "
+            "resurfaced following hotter-than-expected US inflation data released earlier in the day."
+        )
+        assert _is_desc_duplicate_of_title(desc, title) is False
+
+    # ------------------------------------------------------------------
+    # Edge / boundary cases
+    # ------------------------------------------------------------------
+
+    def test_empty_desc_returns_false(self):
+        assert _is_desc_duplicate_of_title("", "비트코인 급등") is False
+
+    def test_empty_title_returns_false(self):
+        assert _is_desc_duplicate_of_title("비트코인 급등", "") is False
+
+    def test_both_empty_returns_false(self):
+        assert _is_desc_duplicate_of_title("", "") is False
+
+    def test_very_short_title_not_triggered_by_jaccard(self):
+        # union < 4 tokens → Jaccard branch skipped
+        title = "Bitcoin"
+        desc = "Bitcoin"
+        # Exact normalized match → True regardless
+        assert _is_desc_duplicate_of_title(desc, title) is True
+
+    def test_different_language_content_returns_false(self):
+        title = "비트코인 가격 분석"
+        desc = "The Federal Reserve hinted at another rate cut during the next FOMC meeting scheduled for May."
+        assert _is_desc_duplicate_of_title(desc, title) is False
