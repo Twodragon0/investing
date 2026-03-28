@@ -782,6 +782,22 @@ def main():
     except Exception as e:
         logger.warning("Political trades briefing card failed: %s", e)
 
+    _desc_parts = []
+    if congress_count:
+        _desc_parts.append(f"의회 거래 {congress_count}건")
+    if sec_count:
+        _desc_parts.append(f"SEC 내부자 {sec_count}건")
+    if trump_count:
+        _desc_parts.append(f"트럼프 정책 {trump_count}건")
+    if korea_count:
+        _desc_parts.append(f"한국 정치인 {korea_count}건")
+    if cb_count:
+        _desc_parts.append(f"중앙은행 {cb_count}건")
+    _desc_ko = f"정치인 거래·정책 동향 {total_count}건 수집. "
+    if _desc_parts:
+        _desc_ko += f"{', '.join(_desc_parts)}. "
+    _desc_ko += "의회·SEC 내부자 거래 및 정책 이벤트를 모니터링합니다."
+
     filepath = gen.create_post(
         title=post_title,
         content=content,
@@ -803,6 +819,7 @@ def main():
         extra_frontmatter={
             "excerpt": excerpt_text,
             "permalink": build_dated_permalink("political-trades", today, "daily-political-trades-report"),
+            "description_ko": _desc_ko,
         },
     )
     if filepath:

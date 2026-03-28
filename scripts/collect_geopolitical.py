@@ -894,6 +894,12 @@ def main() -> None:
     except Exception as e:
         logger.warning("Geopolitical briefing card generation failed: %s", e)
 
+    _top_geo_themes = [t[0] for t in theme_counter.most_common(3)] if theme_counter else []
+    _desc_ko = f"지정학적 리스크 {total_items}건 수집. "
+    if _top_geo_themes:
+        _desc_ko += f"주요 테마: {', '.join(_top_geo_themes)}. "
+    _desc_ko += f"Polymarket·GDELT·뉴스 {source_count}개 소스에서 분쟁·제재·무역 리스크를 분석합니다."
+
     # Create post
     filepath = generator.create_post(
         title=post_title,
@@ -905,7 +911,8 @@ def main() -> None:
         lang="ko",
         image=briefing_image or "",
         extra_frontmatter={
-            "permalink": build_dated_permalink("market-analysis", today, "daily-geopolitical-risk-report")
+            "permalink": build_dated_permalink("market-analysis", today, "daily-geopolitical-risk-report"),
+            "description_ko": _desc_ko,
         },
         slug="daily-geopolitical-risk-report",
     )

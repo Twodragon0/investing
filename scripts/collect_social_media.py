@@ -934,6 +934,12 @@ def main():
 
     content = "\n".join(content_parts)
 
+    _top_social_themes = [t[0] for t in top_themes[:3]] if top_themes else []
+    _desc_ko = f"소셜 미디어 동향 {total_count}건 수집. "
+    if _top_social_themes:
+        _desc_ko += f"주요 테마: {', '.join(_top_social_themes)}. "
+    _desc_ko += f"텔레그램·트위터·레딧·정치뉴스 {len({item.get('source', '') for item in all_theme_items if item.get('source')})}개 소스를 종합합니다."
+
     filepath = gen.create_post(
         title=post_title,
         content=content,
@@ -952,7 +958,10 @@ def main():
         source="consolidated",
         lang="ko",
         image=briefing_image_path,
-        extra_frontmatter={"permalink": build_dated_permalink("social-media", today, "daily-social-media-digest")},
+        extra_frontmatter={
+            "permalink": build_dated_permalink("social-media", today, "daily-social-media-digest"),
+            "description_ko": _desc_ko,
+        },
         slug="daily-social-media-digest",
     )
     if filepath:

@@ -974,6 +974,12 @@ def main():
 
         content = "\n".join(content_parts)
 
+        _top_crypto_sources = [name for name, _ in source_counter.most_common(3)]
+        _desc_ko_a = f"크립토 뉴스 {len(all_items)}건 수집. "
+        if _top_crypto_sources:
+            _desc_ko_a += f"주요 출처: {', '.join(_top_crypto_sources)}. "
+        _desc_ko_a += "CryptoPanic·CoinGecko·거래소 RSS 기반 암호화폐 시장 동향을 정리합니다."
+
         filepath = crypto_gen.create_post(
             title=post_a_title,
             content=content,
@@ -983,7 +989,10 @@ def main():
             source="consolidated",
             lang="ko",
             image=briefing_image or "",
-            extra_frontmatter={"permalink": build_dated_permalink("crypto-news", today, "daily-crypto-news-digest")},
+            extra_frontmatter={
+                "permalink": build_dated_permalink("crypto-news", today, "daily-crypto-news-digest"),
+                "description_ko": _desc_ko_a,
+            },
             slug="daily-crypto-news-digest",
         )
         if filepath:

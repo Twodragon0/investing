@@ -767,6 +767,12 @@ def main():
     except Exception as e:
         logger.warning("Regulatory briefing card failed: %s", e)
 
+    _top_themes = [t[0] for t in summarizer.get_top_themes()[:3]] if summarizer.get_top_themes() else []
+    _desc_ko = f"글로벌 규제 동향 {len(all_items)}건 수집. "
+    if _top_themes:
+        _desc_ko += f"주요 테마: {', '.join(_top_themes)}. "
+    _desc_ko += "미국·한국·아시아·유럽 규제 기관 동향을 분석합니다."
+
     filepath = gen.create_post(
         title=post_title,
         content=content,
@@ -776,7 +782,10 @@ def main():
         source="consolidated",
         lang="ko",
         image=briefing_image or "/assets/images/og-regulatory.png",
-        extra_frontmatter={"permalink": build_dated_permalink("regulatory-news", today, "daily-regulatory-report")},
+        extra_frontmatter={
+            "permalink": build_dated_permalink("regulatory-news", today, "daily-regulatory-report"),
+            "description_ko": _desc_ko,
+        },
         slug="daily-regulatory-report",
     )
     if filepath:

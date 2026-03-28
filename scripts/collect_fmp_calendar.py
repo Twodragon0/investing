@@ -507,6 +507,20 @@ def main() -> None:
     except Exception as exc:
         logger.warning("Economic calendar briefing image failed: %s", exc)
 
+    _desc_parts_fmp = []
+    if indices:
+        _desc_parts_fmp.append(f"시장 지수 {len(indices)}개")
+    if earnings:
+        _desc_parts_fmp.append(f"실적 발표 {len(earnings)}건")
+    if economic_events:
+        _desc_parts_fmp.append(f"경제 이벤트 {len(economic_events)}건")
+    if ipo_data:
+        _desc_parts_fmp.append(f"IPO {len(ipo_data)}건")
+    _desc_ko = f"경제 캘린더 {total_items}건 수집. "
+    if _desc_parts_fmp:
+        _desc_ko += f"{', '.join(_desc_parts_fmp)} 포함. "
+    _desc_ko += "FMP API 기반 주요 경제 이벤트·실적·국채 금리를 정리합니다."
+
     filepath = gen.create_post(
         title=post_title,
         content=content,
@@ -516,7 +530,10 @@ def main() -> None:
         source="fmp",
         lang="ko",
         image=briefing_image_path,
-        extra_frontmatter={"permalink": build_dated_permalink("market-analysis", today, "fmp-economic-calendar")},
+        extra_frontmatter={
+            "permalink": build_dated_permalink("market-analysis", today, "fmp-economic-calendar"),
+            "description_ko": _desc_ko,
+        },
         slug="fmp-economic-calendar",
     )
 

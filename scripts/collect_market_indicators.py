@@ -970,6 +970,19 @@ def main() -> None:
     except Exception as exc:
         logger.warning("Market indicators briefing image failed: %s", exc)
 
+    _desc_parts_mi = []
+    if cnn_fg:
+        _rating_ko = _rating_to_korean(cnn_fg.get("rating", ""))
+        _desc_parts_mi.append(f"공포탐욕지수 {cnn_fg.get('score', '')}({_rating_ko})")
+    if market_data.get("VIX"):
+        _desc_parts_mi.append(f"VIX {market_data['VIX'].get('price_fmt', '')}")
+    if market_data.get("DXY"):
+        _desc_parts_mi.append(f"달러지수 {market_data['DXY'].get('price_fmt', '')}")
+    _desc_ko = f"시장 지표 {preview_source_count}개 소스 수집. "
+    if _desc_parts_mi:
+        _desc_ko += f"{', '.join(_desc_parts_mi)}. "
+    _desc_ko += "공포탐욕지수·VIX·국채금리 등 핵심 시장 센티먼트 지표를 분석합니다."
+
     filepath = gen.create_post(
         title=post_title,
         content=content,
@@ -979,7 +992,10 @@ def main() -> None:
         source="consolidated",
         lang="ko",
         image=briefing_image_path,
-        extra_frontmatter={"permalink": report_permalink},
+        extra_frontmatter={
+            "permalink": report_permalink,
+            "description_ko": _desc_ko,
+        },
         slug="daily-market-indicators",
     )
 

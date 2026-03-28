@@ -299,6 +299,18 @@ def main() -> int:
     if eth:
         tags.append("ethereum")
 
+    _desc_parts_bc = []
+    if btc:
+        _desc_parts_bc.append("BTC 네트워크 지표")
+    if eth:
+        _desc_parts_bc.append("ETH 네트워크 지표")
+    if l2_projects:
+        _desc_parts_bc.append(f"L2 프로젝트 {len(l2_projects)}개")
+    _desc_ko = f"블록체인 네트워크 통계 {source_count}개 소스 수집. "
+    if _desc_parts_bc:
+        _desc_ko += f"{', '.join(_desc_parts_bc)} 포함. "
+    _desc_ko += "온체인 데이터 기반 네트워크 건전성 및 활동 지표를 분석합니다."
+
     post_path = gen.create_post(
         title=post_title,
         content=content,
@@ -310,6 +322,7 @@ def main() -> int:
             "permalink": permalink,
             "description": description,
             "excerpt": excerpt,
+            "description_ko": _desc_ko,
         },
     )
 
