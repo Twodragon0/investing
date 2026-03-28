@@ -11,8 +11,9 @@ lang: "ko"
 image: "/assets/images/og-defi.png"
 permalink: "/defi/2026/03/29/daily-defi-yields-report/"
 description_ko: "DeFi 수익률 리포트: TVL $1M 이상 풀 2107개 기준. 스테이블코인 TOP APY 124.3% (curve-dex), 전체 평균 APY 24.4%. 스테이블코인·ETH·BTC 카테고리별 최고 수익률 프로토콜을 분석합니다."
-excerpt: "DeFi 리포트: DeFi 수익률 리포트. 주요 프로토콜 수익률과 리스크 지표를 점검합니다."
+excerpt: "2026-03-29 DeFi Llama Yields API 기준 주요 DeFi 수익률(APY) 현황을 정리합니다. TVL $1M 이상, APY 0"
 image_alt: "DeFi 수익률 리포트 - 2026-03-29 - DeFi 뉴스 요약 이미지"
+description: "DeFi 수익률 리포트. 탈중앙 금융 생태계의 성장성과 위험 요인을 정리합니다 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 **2026-03-29** DeFi Llama Yields API 기준 주요 DeFi 수익률(APY) 현황을 정리합니다. TVL $1M 이상, APY 0.1% 이상 풀 **2107개** 기준이며, 스테이블코인·ETH·BTC 카테고리별 상위 수익률과 전체 TOP TVL 풀을 포함합니다.
