@@ -25,6 +25,87 @@ _gnews_url_cache: Dict[str, str] = {}
 # Pre-compiled regex for text normalization (used in duplicate detection)
 _NORM_RE = re.compile(r"[\s\W]+")
 
+# Site-level boilerplate patterns — descriptions that describe the site, not the article
+_SITE_BOILERPLATE_PATTERNS = [
+    # English patterns: site self-descriptions
+    re.compile(r"(?:the )?(?:world'?s?|global) (?:leading|largest|premier|#1)\b", re.I),
+    re.compile(r"(?:join|subscribe to|sign up for) (?:the )?(?:world'?s|our)\b", re.I),
+    re.compile(
+        r"(?:providing|delivers?|offers?) .{0,40}(?:news|analysis|insights|information)"
+        r" .{0,40}(?:since|for over|for \d+)",
+        re.I,
+    ),
+    re.compile(r"^(?:the )?(?:latest|breaking|live|real-time) (?:news|updates?|prices?)\b", re.I),
+    # Korean patterns: translated site descriptions
+    re.compile(r"(?:세계 최대|글로벌 리더|세계적인 리더)", re.I),
+    re.compile(r"(?:에 참여하세요|구독하세요|가입하세요)$", re.I),
+    re.compile(r"\d+년 (?:넘게|이상) .{0,40}(?:제공|서비스)", re.I),
+]
+
+# Known site boilerplate phrases (case-insensitive substring match)
+_SITE_BOILERPLATE_PHRASES = [
+    "motley fool",
+    "seeking alpha",
+    "cnbc international",
+    "investopedia",
+    "yahoo finance",
+    "bloomberg",
+    "coindesk is",
+    "cointelegraph is",
+    "decrypt is",
+    "뉴스의 리더입니다",
+    "뉴스를 제공하는",
+    "투자 통찰력과 개인 금융",
+    "투자 커뮤니티",
+    "프리미엄 뉴스를 제공",
+]
+
+# Regex to detect at least one article-specific token (proper noun, number, date)
+# NOTE: Intentionally avoids matching generic Korean phrases to prevent false negatives.
+_ARTICLE_SPECIFIC_RE = re.compile(
+    r"(?:[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)"  # Two+ consecutive title-case words (proper noun)
+    r"|(?:\b[A-Z]{2,}\b)"                   # Acronym / ticker (SEC, ETF, BTC, XRP, etc.)
+    r"|(?:\b\d{4}\b)"                        # 4-digit year
+    r"|(?:\b\d+[\.,]\d+)"                    # Number with decimal/comma (e.g. price, %)
+    r"|(?:\$|€|£|₩|¥)\s*\d"                 # Currency + digit
+    r"|(?:\d+\s*(?:%|억|만|조|달러|원|위안))"  # Number with unit
+    r"|(?:월|년|일)\s*\d"                     # Korean date fragments
+)
+
+
+def _is_site_boilerplate(desc: str) -> bool:
+    """Return True if description appears to be a site-level description, not article content.
+
+    Checks against known boilerplate phrases, regex patterns for site self-descriptions,
+    and short generic descriptions lacking article-specific tokens.
+    """
+    if not desc:
+        return False
+
+    lower = desc.lower()
+
+    # 1. Known site boilerplate phrases
+    for phrase in _SITE_BOILERPLATE_PHRASES:
+        if phrase.lower() in lower:
+            logger.debug("Boilerplate phrase matched (%r): %r", phrase, desc[:80])
+            return True
+
+    # 2. Regex patterns for site self-descriptions
+    for pattern in _SITE_BOILERPLATE_PATTERNS:
+        if pattern.search(desc):
+            logger.debug("Boilerplate pattern matched: %r", desc[:80])
+            return True
+
+    # 3. Very short descriptions without any article-specific tokens
+    # Threshold kept low (35) to catch pure site taglines ("전 세계 시장에 대한 뉴스 및 분석.")
+    # while preserving medium-length Korean sentences that lack numbers/acronyms.
+    if len(desc) < 35 and not _ARTICLE_SPECIFIC_RE.search(desc):
+        logger.debug("Short generic description (no specific tokens): %r", desc[:80])
+        return True
+
+    return False
+
+
 # Module-level synthetic markers for consistent detection across functions
 _SYNTHETIC_MARKERS = [
     "관련 소식입니다",
@@ -135,6 +216,9 @@ def _clean_meta_description(text: str) -> str:
     text = re.sub(r"\s+[a-z][a-z0-9-]*\.[a-z]{2,6}$", "", text)
     # Collapse whitespace
     text = re.sub(r"\s+", " ", text).strip()
+    # Final boilerplate guard — reject site-level descriptions
+    if _is_site_boilerplate(text):
+        return ""
     return text
 
 
@@ -525,7 +609,7 @@ def _extract_og_metadata(soup: Any) -> Dict[str, str]:
         meta = soup.find("meta", attrs={attr_key: attr_val})
         content = str(meta.get("content", "")) if meta else ""
         cleaned = _clean_meta_description(content)
-        if cleaned and len(cleaned) > 20:
+        if cleaned and len(cleaned) > 20 and not _is_site_boilerplate(cleaned):
             result["description"] = smart_truncate(cleaned, 1000)
             break
 
