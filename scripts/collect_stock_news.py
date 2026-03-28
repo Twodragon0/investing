@@ -887,6 +887,18 @@ def main():
 
     report_permalink = build_dated_permalink("stock-news", today, "daily-stock-news-digest")
 
+    # Build explicit description_ko from market data for rich SEO excerpt
+    if kr_summary_parts:
+        _desc_ko = (
+            f"{today} 주식 시장: {', '.join(kr_summary_parts)}. "
+            f"총 {len(all_items)}건의 뉴스에서 주요 동향과 투자 포인트를 정리합니다."
+        )
+    else:
+        _desc_ko = (
+            f"{today} 주식 시장 뉴스 종합 — 총 {len(all_items)}건의 글로벌·한국 기사에서 "
+            "주요 동향과 투자 포인트를 정리합니다."
+        )
+
     filepath = gen.create_post(
         title=post_title,
         content=content,
@@ -896,7 +908,7 @@ def main():
         source="consolidated",
         lang="ko",
         image=snapshot_image_path,
-        extra_frontmatter={"permalink": report_permalink},
+        extra_frontmatter={"permalink": report_permalink, "description_ko": _desc_ko},
         slug="daily-stock-news-digest",
     )
     if filepath:

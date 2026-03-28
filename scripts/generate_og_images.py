@@ -49,6 +49,7 @@ CATEGORY_COLORS: Dict[str, str] = {
     "security-alerts": "#f44336",
     "geopolitical": "#ff6f00",
     "daily-summary": "#ffc107",
+    "blockchain": "#627eea",
 }
 DEFAULT_ACCENT = "#607d8b"
 
@@ -68,6 +69,7 @@ CATEGORY_LABELS: Dict[str, str] = {
     "security-alerts": "보안",
     "geopolitical": "지정학",
     "daily-summary": "일일요약",
+    "blockchain": "블록체인",
 }
 
 # ── Theme colors ──
@@ -1040,69 +1042,186 @@ def _draw_visual_security(ax, accent: str) -> None:
     )
 
 
+def _draw_visual_blockchain(ax, accent: str) -> None:
+    """Draw blockchain network visual with connected blocks and hash patterns."""
+    import numpy as np
+
+    cx, cy = 920, 310
+    np.random.seed(42)
+    ax.add_patch(mpatches.Circle((cx, cy), 200, facecolor=accent, edgecolor="none", alpha=0.04))
+
+    # Draw chain of 5 blocks connected by lines
+    block_positions = [(cx - 160, cy + 80), (cx - 60, cy + 80), (cx + 40, cy + 80),
+                       (cx + 140, cy + 80), (cx + 240, cy + 80)]
+
+    # Connection lines between blocks
+    for i in range(len(block_positions) - 1):
+        x1, y1 = block_positions[i]
+        x2, y2 = block_positions[i + 1]
+        ax.plot([x1 + 35, x2 - 5], [y1, y2], color=accent, linewidth=2.5, alpha=0.6)
+
+    # Draw blocks
+    for i, (bx, by) in enumerate(block_positions):
+        alpha = 0.9 - i * 0.12
+        ax.add_patch(
+            mpatches.FancyBboxPatch(
+                (bx - 5, by - 22), 40, 44,
+                boxstyle="round,pad=4",
+                facecolor="#161b22", edgecolor=accent, linewidth=1.8, alpha=alpha,
+            )
+        )
+        ax.text(bx + 15, by + 8, f"#{i + 1}", fontsize=8, color=TEXT_GRAY,
+                ha="center", va="center", fontweight="bold", **_FK)
+        # Hash pattern inside block
+        ax.text(bx + 15, by - 8, "0x" + format(np.random.randint(0, 0xFFFF), '04x'),
+                fontsize=5, color=accent, ha="center", va="center", alpha=0.5, **_FK)
+
+    # Network nodes below blocks
+    node_colors = ["#3fb950", "#f7931a", "#627eea", "#e91e63", "#22d3ee", "#7c4dff"]
+    node_positions = [(cx - 120, cy - 60), (cx, cy - 80), (cx + 120, cy - 60),
+                      (cx - 60, cy - 130), (cx + 60, cy - 130), (cx + 180, cy - 100)]
+
+    # Network edges
+    edges = [(0, 1), (1, 2), (0, 3), (1, 4), (2, 5), (3, 4), (4, 5)]
+    for a, b in edges:
+        x1, y1 = node_positions[a]
+        x2, y2 = node_positions[b]
+        ax.plot([x1, x2], [y1, y2], color="#334155", linewidth=1.2, alpha=0.4)
+
+    for i, (nx, ny) in enumerate(node_positions):
+        size = np.random.randint(8, 16)
+        ax.add_patch(mpatches.Circle((nx, ny), size, facecolor=node_colors[i % len(node_colors)],
+                                     edgecolor="none", alpha=0.7))
+
+    # Labels
+    for label, x_off, y_off, c in [
+        ("BTC", -120, 160, "#f7931a"), ("ETH", 120, 160, "#627eea"),
+        ("HASH", 0, -160, accent),
+    ]:
+        ax.text(cx + x_off, cy + y_off, label, fontsize=8, color=c,
+                fontweight="bold", ha="center", va="center", alpha=0.5, **_FK)
+
+
+def _draw_visual_economic_calendar(ax, accent: str) -> None:
+    """Draw economic calendar visual with event timeline and importance indicators."""
+    import numpy as np
+
+    cx, cy = 920, 310
+    np.random.seed(7)
+    ax.add_patch(mpatches.Circle((cx, cy), 200, facecolor=accent, edgecolor="none", alpha=0.04))
+
+    # Calendar grid (4x3)
+    grid_x, grid_y = cx - 150, cy + 50
+    cell_w, cell_h = 65, 45
+    for row in range(3):
+        for col in range(4):
+            x = grid_x + col * (cell_w + 8)
+            y = grid_y - row * (cell_h + 8)
+            alpha = 0.15 + np.random.random() * 0.25
+            color = ["#3fb950", "#f85149", "#d29922", "#58a6ff"][np.random.randint(0, 4)]
+            ax.add_patch(
+                mpatches.FancyBboxPatch(
+                    (x, y), cell_w, cell_h,
+                    boxstyle="round,pad=3",
+                    facecolor=color, edgecolor="none", alpha=alpha,
+                )
+            )
+            # Day number
+            day = row * 4 + col + 1
+            ax.text(x + cell_w / 2, y + cell_h / 2, str(day),
+                    fontsize=11, color=TEXT_WHITE, ha="center", va="center",
+                    fontweight="bold", alpha=0.7, **_FK)
+
+    # Importance indicator bars on the right
+    bar_x = cx + 160
+    for i, (label, h, color) in enumerate([
+        ("HIGH", 55, "#f85149"), ("MED", 40, "#d29922"), ("LOW", 25, "#3fb950"),
+    ]):
+        bar_y = cy + 90 - i * 75
+        ax.add_patch(
+            mpatches.FancyBboxPatch(
+                (bar_x, bar_y), 28, h,
+                boxstyle="round,pad=2",
+                facecolor=color, edgecolor="none", alpha=0.7,
+            )
+        )
+        ax.text(bar_x + 14, bar_y - 12, label, fontsize=6, color=color,
+                ha="center", va="center", fontweight="bold", alpha=0.6, **_FK)
+
+    # Timeline arrow at bottom
+    ax.annotate("", xy=(cx + 200, cy - 140), xytext=(cx - 200, cy - 140),
+                arrowprops=dict(arrowstyle="-|>", color=accent, lw=2))
+    for i in range(6):
+        tx = cx - 170 + i * 72
+        ax.add_patch(mpatches.Circle((tx, cy - 140), 4, facecolor=accent, edgecolor="none", alpha=0.8))
+        ax.plot([tx, tx], [cy - 140, cy - 120 + np.random.randint(-15, 15)],
+                color=accent, linewidth=1.5, alpha=0.4)
+
+    # Labels
+    ax.text(cx - 150, cy + 150, "ECON", fontsize=9, color=accent,
+            fontweight="bold", ha="left", va="center", alpha=0.5, **_FK)
+    ax.text(cx + 150, cy + 150, "CAL", fontsize=9, color="#d29922",
+            fontweight="bold", ha="right", va="center", alpha=0.5, **_FK)
+
+
 def _draw_visual_default(ax, accent: str) -> None:
-    """Draw a rich dashboard with multiple mini-charts and financial symbols."""
+    """Draw a daily summary dashboard with market overview heat tiles and performance bars."""
     import numpy as np
 
     cx, cy = 920, 310
     np.random.seed(5)
     ax.add_patch(mpatches.Circle((cx, cy), 200, facecolor=accent, edgecolor="none", alpha=0.04))
 
-    # Dashboard frame
-    ax.add_patch(
-        mpatches.FancyBboxPatch(
-            (cx - 200, cy - 150),
-            400,
-            300,
-            boxstyle="round,pad=0.02,rounding_size=20",
-            facecolor="none",
-            edgecolor="#334155",
-            linewidth=1.2,
-            alpha=0.3,
+    # Market heatmap grid (3x4 tiles)
+    tile_colors = ["#3fb950", "#f85149", "#3fb950", "#d29922",
+                   "#f85149", "#3fb950", "#58a6ff", "#f85149",
+                   "#d29922", "#3fb950", "#f85149", "#3fb950"]
+    tile_labels = ["BTC", "ETH", "SOL", "XRP",
+                   "AAPL", "TSLA", "NVDA", "MSFT",
+                   "KOSPI", "S&P", "GOLD", "OIL"]
+    tile_w, tile_h = 62, 50
+    for i in range(12):
+        row, col = divmod(i, 4)
+        x = cx - 145 + col * (tile_w + 8)
+        y = cy + 75 - row * (tile_h + 8)
+        intensity = 0.15 + np.random.random() * 0.35
+        ax.add_patch(
+            mpatches.FancyBboxPatch(
+                (x, y), tile_w, tile_h,
+                boxstyle="round,pad=3",
+                facecolor=tile_colors[i], edgecolor="none", alpha=intensity,
+            )
         )
-    )
+        ax.text(x + tile_w / 2, y + tile_h / 2 + 5, tile_labels[i],
+                fontsize=7, color=TEXT_WHITE, ha="center", va="center",
+                fontweight="bold", alpha=0.8, **_FK)
+        # Mini change indicator
+        change = np.random.uniform(-5, 5)
+        sign = "+" if change > 0 else ""
+        ax.text(x + tile_w / 2, y + tile_h / 2 - 10, f"{sign}{change:.1f}%",
+                fontsize=5, color=tile_colors[i], ha="center", va="center",
+                alpha=0.6, **_FK)
 
-    # Three sparklines with area fills
-    from matplotlib.patches import Polygon
+    # Sentiment bar at bottom
+    bar_y = cy - 120
+    bar_w = 280
+    for ratio, color in [(0.45, "#3fb950"), (0.30, "#8b949e"), (0.25, "#f85149")]:
+        w = bar_w * ratio
+        ax.add_patch(mpatches.FancyBboxPatch(
+            (cx - 140, bar_y), w, 18,
+            boxstyle="round,pad=2", facecolor=color, edgecolor="none", alpha=0.65,
+        ))
+        ax.text(cx - 140 + w / 2, bar_y + 9, f"{int(ratio * 100)}%",
+                fontsize=6, color=TEXT_WHITE, ha="center", va="center",
+                fontweight="bold", **_FK)
+    ax.text(cx - 140, bar_y - 14, "BULLISH", fontsize=6, color="#3fb950",
+            ha="left", va="center", alpha=0.5, **_FK)
+    ax.text(cx + 140, bar_y - 14, "BEARISH", fontsize=6, color="#f85149",
+            ha="right", va="center", alpha=0.5, **_FK)
 
-    for _idx, (y_off, color, label) in enumerate(
-        [(85, accent, "S&P"), (0, "#22d3ee", "BTC"), (-85, "#3fb950", "KOSPI")]
-    ):
-        sx = np.linspace(cx - 175, cx + 175, 30)
-        sy = cy + y_off + np.cumsum(np.random.randn(30) * 7)
-        # Area fill
-        base_y = cy + y_off - 25
-        verts = list(zip(sx, sy, strict=False)) + [(sx[-1], base_y), (sx[0], base_y)]
-        ax.add_patch(Polygon(verts, closed=True, facecolor=color, alpha=0.08, edgecolor="none"))
-        ax.plot(sx, sy, color=color, linewidth=2, alpha=0.7)
-        ax.add_patch(mpatches.Circle((sx[-1], sy[-1]), 4, facecolor=color, edgecolor="none", alpha=0.8))
-        ax.text(
-            cx - 185,
-            cy + y_off,
-            label,
-            fontsize=7,
-            color=color,
-            fontweight="bold",
-            ha="right",
-            va="center",
-            alpha=0.5,
-            **_FK,
-        )
-
-    # Financial symbols watermark
-    ax.text(cx + 170, cy + 140, "📊", fontsize=24, ha="center", va="center", alpha=0.15)
-    ax.text(
-        cx - 170,
-        cy - 120,
-        "$",
-        fontsize=36,
-        color=accent,
-        fontweight="bold",
-        ha="center",
-        va="center",
-        alpha=0.1,
-        **_FK,
-    )
+    # Date frame
+    ax.text(cx, cy + 155, "DAILY OVERVIEW", fontsize=9, color=accent,
+            fontweight="bold", ha="center", va="center", alpha=0.6, **_FK)
 
 
 def _draw_visual_geopolitical(ax, accent: str) -> None:
@@ -1195,6 +1314,7 @@ _CATEGORY_VISUALS = {
     "security-alerts": _draw_visual_security,
     "geopolitical": _draw_visual_geopolitical,
     "daily-summary": _draw_visual_default,
+    "blockchain": _draw_visual_blockchain,
 }
 
 
@@ -1277,7 +1397,18 @@ def generate_og_image(
     )
 
     # === Visual element (right side) ===
-    draw_fn = _CATEGORY_VISUALS.get(category, _draw_visual_default)
+    # Slug-based visual override for posts sharing the same category
+    _SLUG_VISUAL_OVERRIDES = {
+        "fmp-economic-calendar": _draw_visual_economic_calendar,
+        "blockchain-network": _draw_visual_blockchain,
+    }
+    slug = os.path.basename(output_path).replace(".png", "").replace(".webp", "")
+    for slug_key, visual_fn in _SLUG_VISUAL_OVERRIDES.items():
+        if slug_key in slug:
+            draw_fn = visual_fn
+            break
+    else:
+        draw_fn = _CATEGORY_VISUALS.get(category, _draw_visual_default)
     draw_fn(ax, accent_color)
 
     # === Left side: rich text layout ===

@@ -426,6 +426,18 @@ def _extract_description(content: str) -> str:
             combined = " ".join(parts)
             return smart_truncate(combined, 160)
 
+    # Prefer data-driven sentences with numbers/percentages for richer SEO
+    data_match = re.search(
+        r"(?:^|\n)\s*\**([^#\n|<>]{25,160}?\d+[\d,.]*%?[^#\n|<>]{0,80}?)[.\n]",
+        content[:1500],
+    )
+    if data_match:
+        lead = data_match.group(1).strip()
+        lead = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", lead)
+        lead = re.sub(r"[*_`~]", "", lead).strip()
+        if len(lead) >= 30 and not lead.startswith("긴급") and re.search(r"\d", lead):
+            return smart_truncate(lead, 160)
+
     # Try to extract executive opener (bold lead sentence), skip "긴급:" patterns
     bold_match = re.search(r"\*\*(.{20,120}?)\*\*", content[:600])
     if bold_match:
@@ -521,6 +533,9 @@ _CATEGORY_KO: dict[str, str] = {
     "regulatory": "규제",
     "regulatory-news": "규제",
     "defi": "DeFi",
+    "blockchain": "블록체인",
+    "geopolitical": "지정학",
+    "daily-summary": "일일요약",
     "political-trades": "정치인 거래",
     "worldmonitor": "글로벌 이슈",
     "security-alerts": "보안",
@@ -563,6 +578,16 @@ _CATEGORY_DESC_TEMPLATES: dict[str, list[str]] = {
     "security-alerts": [
         "{title} — 사이버 보안 위협과 취약점 대응 현황을 정리합니다.",
         "보안 알림: {title}. 주요 보안 사고와 시장 신뢰에 미칠 영향을 분석합니다.",
+    ],
+    "defi": [
+        "{title} — DeFi 프로토콜 TVL 변동과 유동성 흐름을 분석합니다.",
+        "DeFi 리포트: {title}. 주요 프로토콜 수익률과 리스크 지표를 점검합니다.",
+        "{title}. 탈중앙 금융 생태계의 성장성과 위험 요인을 정리합니다.",
+    ],
+    "blockchain": [
+        "{title} — 블록체인 네트워크 해시레이트와 온체인 활동을 분석합니다.",
+        "블록체인 리포트: {title}. 네트워크 건전성과 트랜잭션 동향을 점검합니다.",
+        "{title}. 주요 체인별 가스비·활성 주소·TPS 지표를 정리합니다.",
     ],
 }
 
