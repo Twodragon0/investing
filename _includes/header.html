@@ -59,63 +59,68 @@
   </div>
 </div>
 
-<script>
+<script defer>
 // Mobile nav toggle
-document.querySelector('.nav-toggle').addEventListener('click', function() {
-  document.querySelector('.site-nav').classList.toggle('active');
-});
+document.addEventListener('DOMContentLoaded', function() {
+  var navToggle = document.querySelector('.nav-toggle');
+  if (navToggle) {
+    navToggle.addEventListener('click', function() {
+      document.querySelector('.site-nav').classList.toggle('active');
+    });
+  }
 
-// Mobile dropdown toggles
-document.querySelectorAll('.nav-dropdown-btn').forEach(function(btn) {
-  btn.addEventListener('click', function(e) {
-    if (window.innerWidth <= 768) {
-      e.preventDefault();
-      e.stopPropagation();
-      this.closest('.nav-dropdown').classList.toggle('open');
-      btn.setAttribute('aria-expanded', btn.closest('.nav-dropdown').classList.contains('open'));
+  // Mobile dropdown toggles
+  document.querySelectorAll('.nav-dropdown-btn').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        e.stopPropagation();
+        this.closest('.nav-dropdown').classList.toggle('open');
+        btn.setAttribute('aria-expanded', btn.closest('.nav-dropdown').classList.contains('open'));
+      }
+    });
+  });
+
+  // Close dropdowns on outside click
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-dropdown')) {
+      document.querySelectorAll('.nav-dropdown.open').forEach(function(d) { d.classList.remove('open'); });
     }
   });
-});
 
-// Close dropdowns on outside click
-document.addEventListener('click', function(e) {
-  if (!e.target.closest('.nav-dropdown')) {
-    document.querySelectorAll('.nav-dropdown.open').forEach(function(d) { d.classList.remove('open'); });
+  // Search overlay toggle
+  var searchToggle = document.querySelector('.search-toggle');
+  var searchOverlay = document.getElementById('search-overlay');
+  var searchClose = document.querySelector('.search-overlay-close');
+  var searchInput = document.getElementById('search-input');
+
+  if (searchToggle && searchOverlay) {
+    searchToggle.addEventListener('click', function() {
+      searchOverlay.classList.add('active');
+      setTimeout(function() { searchInput.focus(); }, 100);
+    });
+
+    searchClose.addEventListener('click', function() {
+      searchOverlay.classList.remove('active');
+      searchInput.value = '';
+      document.getElementById('search-results').textContent = '';
+    });
+
+    searchOverlay.addEventListener('click', function(e) {
+      if (e.target === searchOverlay) {
+        searchOverlay.classList.remove('active');
+        searchInput.value = '';
+        document.getElementById('search-results').textContent = '';
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && searchOverlay.classList.contains('active')) {
+        searchOverlay.classList.remove('active');
+        searchInput.value = '';
+        document.getElementById('search-results').textContent = '';
+      }
+    });
   }
 });
-
-// Search overlay toggle
-var searchToggle = document.querySelector('.search-toggle');
-var searchOverlay = document.getElementById('search-overlay');
-var searchClose = document.querySelector('.search-overlay-close');
-var searchInput = document.getElementById('search-input');
-
-if (searchToggle && searchOverlay) {
-  searchToggle.addEventListener('click', function() {
-    searchOverlay.classList.add('active');
-    setTimeout(function() { searchInput.focus(); }, 100);
-  });
-
-  searchClose.addEventListener('click', function() {
-    searchOverlay.classList.remove('active');
-    searchInput.value = '';
-    document.getElementById('search-results').textContent = '';
-  });
-
-  searchOverlay.addEventListener('click', function(e) {
-    if (e.target === searchOverlay) {
-      searchOverlay.classList.remove('active');
-      searchInput.value = '';
-      document.getElementById('search-results').textContent = '';
-    }
-  });
-
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && searchOverlay.classList.contains('active')) {
-      searchOverlay.classList.remove('active');
-      searchInput.value = '';
-      document.getElementById('search-results').textContent = '';
-    }
-  });
-}
 </script>

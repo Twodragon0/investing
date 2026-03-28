@@ -73,7 +73,7 @@ layout: default
       </div>
     </div>
     <figure class="summary-image-wrapper trading-journal-hero-image">
-      {% include generated-picture.html image=page.image alt=hero_image_alt class="summary-market-image" loading="eager" decoding="sync" %}
+      {% include generated-picture.html image=page.image alt=hero_image_alt class="summary-market-image" loading="eager" decoding="sync" fetchpriority="high" %}
     </figure>
   </section>
   {% endif %}

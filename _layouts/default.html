@@ -13,7 +13,7 @@
   {% if page.image %}
   {% assign preload_webp = page.image | replace: '.png', '.webp' %}
   {% if page.image contains '/assets/images/generated/' %}
-  <link rel="preload" as="image" type="image/webp" href="{{ preload_webp | relative_url }}">
+  <link rel="preload" as="image" type="image/webp" href="{{ preload_webp | relative_url }}" fetchpriority="high">
   {% endif %}
   {% endif %}
   {% include critical-css.html %}
@@ -110,8 +110,6 @@
 
   <!-- Canonical & Hreflang -->
   <link rel="canonical" href="{{ og_url }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
   <link rel="dns-prefetch" href="https://translate.google.com">
   <link rel="dns-prefetch" href="https://translate.googleapis.com">
@@ -139,8 +137,18 @@
   {% include footer.html %}
   <script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/core.js' | relative_url }}" defer></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js" integrity="sha256-xUHvBjJ4hahBW8qN9gceFBibSFUzbe9PNttUvehITzY=" crossorigin="anonymous"></script>
   <script src="{{ '/assets/js/extras.js' | relative_url }}" defer></script>
+  <script>
+    // QRCode를 footer-qrcode 요소가 있는 페이지에서만 로드
+    if (document.getElementById('footer-qrcode')) {
+      var qrScript = document.createElement('script');
+      qrScript.src = 'https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js';
+      qrScript.integrity = 'sha256-xUHvBjJ4hahBW8qN9gceFBibSFUzbe9PNttUvehITzY=';
+      qrScript.crossOrigin = 'anonymous';
+      qrScript.defer = true;
+      document.head.appendChild(qrScript);
+    }
+  </script>
   {% if jekyll.environment == "production" %}
   <script defer src="/_vercel/insights/script.js"></script>
   <script defer src="/_vercel/speed-insights/script.js"></script>

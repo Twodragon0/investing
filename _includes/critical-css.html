@@ -92,4 +92,9 @@
     .journal-landing-hero,
     .recent-posts-tabbed { padding-top: 16px; }
   }
+  /* CLS 방지: 이미지에 aspect-ratio 예약 */
+  img { height: auto; }
+  picture img { width: 100%; height: auto; }
+  .post-card-img { width: 100%; aspect-ratio: 1200 / 630; object-fit: cover; }
+  .summary-market-image { width: 100%; aspect-ratio: 1200 / 630; object-fit: cover; }
 </style>
