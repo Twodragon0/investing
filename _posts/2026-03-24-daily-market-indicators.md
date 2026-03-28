@@ -7,7 +7,7 @@ tags: ["market-analysis", "fear-greed", "vix", "market-breadth", "sentiment", "f
 keywords: "market-analysis, fear-greed, vix, market-breadth, sentiment"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/market-snapshot-2026-03-24.png"
+image: "/assets/images/generated/og-daily-market-indicators-2026-03-24.png"
 permalink: "/market-analysis/2026/03/24/daily-market-indicators/"
 description: "시장 심리 및 리스크 지표 리포트: 2026-03-24 기준 공포·탐욕 16.1, VIX 26.15, DXY 99.15와 국채 금리 흐름을 함께 점검합니다."
 excerpt: "공포·탐욕 16.1, VIX 26.15, DXY 99.15와 국채 금리 흐름을 함께 본 2026-03-24 시장 리스크 점검 리포트입니다."

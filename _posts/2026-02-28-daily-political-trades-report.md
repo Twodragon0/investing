@@ -8,7 +8,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-political-trades-report-2026-02-28.png"
 excerpt: "2026-02-28 정치인 거래·정책 리포트: 의회 거래 1건, SEC 내부자 9건, 중앙은행 2건, 총 12건 수집"
-description: "Pelosi Slams Trump’s Brutal Insider Trading Jab moneywise.com"
+description: "정치인 거래 리포트: 정치인 거래·정책 리포트. 입법 동향과 의원 포트폴리오 변화를 추적합니다 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "정치인 거래·정책 리포트 - 2026-02-28 - political-trades 뉴스 요약 이미지"
 permalink: "/political-trades/2026/02/28/daily-political-trades-report/"
 ---

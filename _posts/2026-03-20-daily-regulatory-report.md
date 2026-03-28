@@ -9,7 +9,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-regulatory-report-2026-03-20.png"
 permalink: "/regulatory-news/2026/03/20/daily-regulatory-report/"
-description: "전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 21건의 규제 관련 뉴스가 수집되었습니다."
+description: "글로벌 규제 동향 리포트 — 글로벌 금융 규제 변화와 시장 영향을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "🔵 규제/정책 (14건): 금감원, 확정된, 감독하겠다 관련 불확실성이 커지고 있어 리스크 관리에 유의하세요 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "글로벌 규제 동향 리포트 - 2026-03-20 - regulatory-news 뉴스 요약 이미지"
 ---
