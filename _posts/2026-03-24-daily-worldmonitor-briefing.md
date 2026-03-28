@@ -10,7 +10,7 @@ source_url: "https://worldmonitor.app"
 lang: "ko"
 image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-03-24.png"
 permalink: "/market-analysis/2026/03/24/daily-worldmonitor-briefing/"
-description: "오늘의 시장 분석 브리핑 — WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-03-24."
+description: "2026-03-24 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다."
 excerpt: "범위: 글로벌 지정학, 금융시장, 에너지 이슈 주요 출처: WorldMonitor/Al Jazeera (15건), WorldMonitor/Guardian World (4건),…"
 image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-03-24 - 시장 분석 뉴스 요약 이미지"
 ---

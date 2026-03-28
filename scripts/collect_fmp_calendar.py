@@ -532,6 +532,7 @@ def main() -> None:
         image=briefing_image_path,
         extra_frontmatter={
             "permalink": build_dated_permalink("market-analysis", today, "fmp-economic-calendar"),
+            "description": _desc_ko,
             "description_ko": _desc_ko,
         },
         slug="fmp-economic-calendar",

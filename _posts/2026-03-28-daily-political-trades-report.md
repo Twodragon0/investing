@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-political-trades-report-2026-03-28.png"
 excerpt: "2026-03-28 정치인 거래·정책 리포트: 의회 거래 2건, SEC 내부자 15건, 한국 정치인 7건, 총 24건 수집"
 permalink: "/political-trades/2026/03/28/daily-political-trades-report/"
-description: "정치인 거래 리포트: 정치인 거래·정책 리포트. 입법 동향과 의원 포트폴리오 변화를 추적합니다 - Investing Dragon 자동 수집 분석 리포트."
+description: "수잔 콜린스(Susan Collins)가 연방 투명성법을 위반하여 NOTUS 작성을 도왔습니다 — 미국 뉴스"
 image_alt: "정치인 거래·정책 리포트 - 2026-03-28 - 정치인 거래 뉴스 요약 이미지"
 ---
 

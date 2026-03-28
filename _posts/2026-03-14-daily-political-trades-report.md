@@ -9,7 +9,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-political-trades-report-2026-03-14.png"
 excerpt: "2026-03-14 정치인 거래·정책 리포트: 의회 거래 2건, SEC 내부자 12건, 중앙은행 8건, 총 22건 수집"
-description: "정치인 거래 리포트: 정치인 거래·정책 리포트. 입법 동향과 의원 포트폴리오 변화를 추적합니다 - Investing Dragon 자동 수집 분석 리포트."
+description: "자신의 포트폴리오를 7자릿수로 성장시키기 위해 '카피 트레이딩'을 활용한 개인 투자자가 자신의 전략을 설명합니다."
 image_alt: "정치인 거래·정책 리포트 - 2026-03-14 - 정치인 거래 뉴스 요약 이미지"
 permalink: "/political-trades/2026/03/14/daily-political-trades-report/"
 ---

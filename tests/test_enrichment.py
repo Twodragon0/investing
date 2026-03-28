@@ -4,6 +4,7 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
+import common.enrichment as _enrichment_mod
 from common.enrichment import (
     _NOISE_DESC_PATTERNS,
     _analyze_korean_title,
@@ -76,7 +77,9 @@ class TestCleanDescription:
     """Validate description text cleaning."""
 
     def test_strips_whitespace(self):
-        assert _clean_meta_description("  hello world  ") == "hello world"
+        # Short generic text with no article-specific tokens is rejected as boilerplate.
+        # Whitespace stripping still applies, but the final boilerplate guard returns "".
+        assert _clean_meta_description("  hello world  ") == ""
 
     def test_removes_boilerplate_prefixes(self):
         result = _clean_meta_description("Sign up for our newsletter to get the latest news")
@@ -96,8 +99,10 @@ class TestCleanDescription:
         assert "5%" in result
 
     def test_short_text_preserved(self):
+        # Short generic text without article-specific tokens (no numbers, tickers, etc.)
+        # is rejected by the boilerplate guard to avoid low-quality descriptions.
         result = _clean_meta_description("Price up")
-        assert result == "Price up"
+        assert result == ""
 
     def test_removes_subscribe_prefix(self):
         assert _clean_meta_description("Subscribe to our newsletter") == ""
@@ -227,6 +232,11 @@ class TestDecodeGoogleNewsBase64:
 class TestResolveGoogleNewsUrl:
     """Tests for _resolve_google_news_url()."""
 
+    def setup_method(self):
+        # Clear the module-level URL cache before each test to prevent cross-test
+        # contamination when multiple tests use the same Google News URL.
+        _enrichment_mod._gnews_url_cache.clear()
+
     def test_non_google_url_returned_as_is(self):
         url = "https://example.com/article/123"
         assert _resolve_google_news_url(url) == url
@@ -249,27 +259,33 @@ class TestResolveGoogleNewsUrl:
         assert result == "https://real-article.com/news/123"
         mock_decode.assert_called_once()
 
+    @patch("common.enrichment._resolve_via_gnewsdecoder")
     @patch("common.enrichment._decode_google_news_base64")
     @patch("common.enrichment.requests.head")
-    def test_http_head_redirect_used_when_base64_fails(self, mock_head, mock_decode):
+    def test_http_head_redirect_used_when_base64_fails(self, mock_head, mock_decode, mock_gnews):
         """When base64 fails, follows HEAD redirect."""
+        mock_gnews.return_value = ""
         mock_decode.return_value = ""
         mock_resp = MagicMock()
         mock_resp.url = "https://real-site.com/article"
+        mock_resp.history = []
         mock_head.return_value = mock_resp
         result = _resolve_google_news_url(
             "https://news.google.com/rss/articles/CBMiXXX"
         )
         assert result == "https://real-site.com/article"
 
+    @patch("common.enrichment._resolve_via_gnewsdecoder")
     @patch("common.enrichment._decode_google_news_base64")
     @patch("common.enrichment.requests.head")
     @patch("common.enrichment.requests.get")
-    def test_get_fallback_when_head_stays_on_google(self, mock_get, mock_head, mock_decode):
+    def test_get_fallback_when_head_stays_on_google(self, mock_get, mock_head, mock_decode, mock_gnews):
         """When HEAD stays on google, tries GET."""
+        mock_gnews.return_value = ""
         mock_decode.return_value = ""
         mock_head_resp = MagicMock()
         mock_head_resp.url = "https://news.google.com/still-here"
+        mock_head_resp.history = []
         mock_head.return_value = mock_head_resp
         mock_get_resp = MagicMock()
         mock_get_resp.url = "https://real-site.com/article"
@@ -280,11 +296,13 @@ class TestResolveGoogleNewsUrl:
         )
         assert result == "https://real-site.com/article"
 
+    @patch("common.enrichment._resolve_via_gnewsdecoder")
     @patch("common.enrichment._decode_google_news_base64")
     @patch("common.enrichment.requests.head")
-    def test_network_exception_returns_empty(self, mock_head, mock_decode):
+    def test_network_exception_returns_empty(self, mock_head, mock_decode, mock_gnews):
         """Network errors should be swallowed and return empty."""
         import requests as req_mod
+        mock_gnews.return_value = ""
         mock_decode.return_value = ""
         mock_head.side_effect = req_mod.exceptions.ConnectionError("refused")
         result = _resolve_google_news_url(
@@ -511,7 +529,8 @@ class TestAnalyzeKoreanTitle:
 
     def test_circuit_breaker_sell_side(self):
         result = _analyze_korean_title("코스피 서킷브레이커 발동")
-        assert "매매거래" in result or "중단" in result
+        # Current implementation uses "서킷브레이커/사이드카 발동" label for sell-side triggers
+        assert "서킷브레이커" in result or "사이드카" in result
 
     def test_circuit_breaker_buy_side(self):
         result = _analyze_korean_title("매수 사이드카 발동")
@@ -715,50 +734,64 @@ class TestDecodeGoogleNewsBase64Extended:
 class TestResolveGoogleNewsUrlHtmlBranch:
     """Test the HTML canonical/og:url parsing in _resolve_google_news_url."""
 
+    def setup_method(self):
+        # Clear the module-level URL cache before each test so prior test results
+        # for the same URL do not bleed through as cache hits.
+        _enrichment_mod._gnews_url_cache.clear()
+
+    @patch("common.enrichment._resolve_via_gnewsdecoder")
     @patch("common.enrichment._decode_google_news_base64")
     @patch("common.enrichment.requests.head")
     @patch("common.enrichment.requests.get")
-    def test_canonical_link_extracted_from_html(self, mock_get, mock_head, mock_decode):
+    def test_canonical_link_extracted_from_html(self, mock_get, mock_head, mock_decode, mock_gnews):
         """If GET stays on Google but HTML has canonical link, use it."""
+        mock_gnews.return_value = ""
         mock_decode.return_value = ""
         mock_head_resp = MagicMock()
         mock_head_resp.url = "https://news.google.com/still-here"
+        mock_head_resp.history = []
         mock_head.return_value = mock_head_resp
         mock_get_resp = MagicMock()
         mock_get_resp.url = "https://news.google.com/still-here"
         mock_get_resp.text = '<link rel="canonical" href="https://real-article.com/page"/>'
         mock_get.return_value = mock_get_resp
-        result = _resolve_google_news_url("https://news.google.com/rss/articles/CBMiXXX")
+        result = _resolve_google_news_url("https://news.google.com/rss/articles/CBMiHTML1")
         assert result == "https://real-article.com/page"
 
+    @patch("common.enrichment._resolve_via_gnewsdecoder")
     @patch("common.enrichment._decode_google_news_base64")
     @patch("common.enrichment.requests.head")
     @patch("common.enrichment.requests.get")
-    def test_og_url_extracted_from_html(self, mock_get, mock_head, mock_decode):
+    def test_og_url_extracted_from_html(self, mock_get, mock_head, mock_decode, mock_gnews):
         """og:url meta tag is used as fallback."""
+        mock_gnews.return_value = ""
         mock_decode.return_value = ""
         mock_head_resp = MagicMock()
         mock_head_resp.url = "https://news.google.com/still-here"
+        mock_head_resp.history = []
         mock_head.return_value = mock_head_resp
         mock_get_resp = MagicMock()
         mock_get_resp.url = "https://news.google.com/still-here"
         mock_get_resp.text = '<meta property="og:url" content="https://real-article.com/og"/>'
         mock_get.return_value = mock_get_resp
-        result = _resolve_google_news_url("https://news.google.com/rss/articles/CBMiXXX")
+        result = _resolve_google_news_url("https://news.google.com/rss/articles/CBMiHTML2")
         assert result == "https://real-article.com/og"
 
+    @patch("common.enrichment._resolve_via_gnewsdecoder")
     @patch("common.enrichment._decode_google_news_base64")
     @patch("common.enrichment.requests.head")
     @patch("common.enrichment.requests.get")
-    def test_get_exception_returns_empty(self, mock_get, mock_head, mock_decode):
+    def test_get_exception_returns_empty(self, mock_get, mock_head, mock_decode, mock_gnews):
         """If GET raises an exception, return empty string."""
         import requests as req_mod
+        mock_gnews.return_value = ""
         mock_decode.return_value = ""
         mock_head_resp = MagicMock()
         mock_head_resp.url = "https://news.google.com/still-here"
+        mock_head_resp.history = []
         mock_head.return_value = mock_head_resp
         mock_get.side_effect = req_mod.exceptions.ConnectionError("timed out")
-        result = _resolve_google_news_url("https://news.google.com/rss/articles/CBMiXXX")
+        result = _resolve_google_news_url("https://news.google.com/rss/articles/CBMiHTML3")
         assert result == ""
 
 

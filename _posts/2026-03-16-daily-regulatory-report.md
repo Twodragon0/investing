@@ -9,7 +9,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-regulatory-report-2026-03-16.png"
 permalink: "/regulatory-news/2026/03/16/daily-regulatory-report/"
-description: "리스크 수준 [ELEVATED]: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요. 자본시장특별사법경찰 집무규칙 규정변경예고 증시 제도 변경 관련 소식입니다. 거래 환경 변화에 따른 투자 전략 조정이 필요할 수 있습니다."
+description: "전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 21건의 규제 관련 뉴스가 수집되었습니다."
 excerpt: "리스크 수준 [ELEVATED]: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요. 자본시장특별사법경찰 집무규칙 규정변경예고 증시 제도 변경 관련 소식입니다."
 image_alt: "글로벌 규제 동향 리포트 - 2026-03-16 - regulatory-news 뉴스 요약 이미지"
 ---

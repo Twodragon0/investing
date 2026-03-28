@@ -9,8 +9,8 @@ source: "fmp"
 lang: "ko"
 image: "/assets/images/generated/og-fmp-economic-calendar-2026-03-28.png"
 permalink: "/market-analysis/2026/03/28/fmp-economic-calendar/"
-description: "주요 경제 캘린더 및 실적 일정 (2026-03-28) — 시장 전반의 흐름과 크로스에셋 투자 시사점을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
-excerpt: "주요 경제 캘린더 및 실적 일정 (2026-03-28) — 시장 전반의 흐름과 크로스에셋 투자 시사점을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
+description: "경제 캘린더 52건 수집. 시장 지수 2개, 실적 발표 1건, 경제 이벤트 22건, IPO 11건 포함. FMP API 기반 주요 경제 이벤트·실적·국채 금리를 정리합니다."
+excerpt: "경제 캘린더 52건 수집. 시장 지수 2개, 실적 발표 1건, 경제 이벤트 22건, IPO 11건 포함. FMP API 기반 주요 경제 이벤트·실적·국채 금리를 정리합니다."
 image_alt: "주요 경제 캘린더 및 실적 일정 (2026-03-28) - 시장 분석 뉴스 요약 이미지"
 ---
 
