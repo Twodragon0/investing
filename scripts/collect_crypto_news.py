@@ -131,7 +131,11 @@ def fetch_google_news_browser(limit: Optional[int] = None) -> List[Dict[str, Any
     # limit 기본값: collectors.yml > 하드코딩 기본값(20)
     if limit is None:
         limit = get_limit("crypto_news", "google_news_browser_items", 20)
-    search_url = get_url("crypto_news", "google_news_browser", "https://news.google.com/search?q=cryptocurrency+bitcoin&hl=en-US&gl=US&ceid=US:en")
+    search_url = get_url(
+        "crypto_news",
+        "google_news_browser",
+        "https://news.google.com/search?q=cryptocurrency+bitcoin&hl=en-US&gl=US&ceid=US:en",
+    )
     items: List[Dict[str, Any]] = []
 
     try:
@@ -154,7 +158,11 @@ def fetch_crypto_rss_feeds() -> List[Dict[str, Any]]:
             "CoinDesk",
             ["crypto", "coindesk"],
         ),
-        (get_url("crypto_news", "rss_cointelegraph", "https://cointelegraph.com/rss"), "Cointelegraph", ["crypto", "cointelegraph"]),
+        (
+            get_url("crypto_news", "rss_cointelegraph", "https://cointelegraph.com/rss"),
+            "Cointelegraph",
+            ["crypto", "cointelegraph"],
+        ),
         (get_url("crypto_news", "rss_decrypt", "https://decrypt.co/feed"), "Decrypt", ["crypto", "decrypt"]),
         (
             get_url("crypto_news", "rss_bitcoin_magazine", "https://bitcoinmagazine.com/.rss/full/"),
@@ -181,12 +189,20 @@ def fetch_google_news_crypto() -> List[Dict[str, Any]]:
     """Fetch crypto news from Google News RSS (English + Korean, concurrent)."""
     feeds = [
         (
-            get_url("crypto_news", "google_news_crypto_en", "https://news.google.com/rss/search?q=cryptocurrency&hl=en-US&gl=US&ceid=US:en"),
+            get_url(
+                "crypto_news",
+                "google_news_crypto_en",
+                "https://news.google.com/rss/search?q=cryptocurrency&hl=en-US&gl=US&ceid=US:en",
+            ),
             "Google News EN",
             ["crypto", "english"],
         ),
         (
-            get_url("crypto_news", "google_news_crypto_kr", "https://news.google.com/rss/search?q=암호화폐+비트코인&hl=ko&gl=KR&ceid=KR:ko"),
+            get_url(
+                "crypto_news",
+                "google_news_crypto_kr",
+                "https://news.google.com/rss/search?q=암호화폐+비트코인&hl=ko&gl=KR&ceid=KR:ko",
+            ),
             "Google News KR",
             ["crypto", "korean", "비트코인"],
         ),
@@ -200,17 +216,29 @@ def fetch_google_news_security() -> List[Dict[str, Any]]:
     security_category = _crypto_cfg.get("categories", {}).get("security", "security-alerts")
     feeds = [
         (
-            get_url("crypto_news", "google_news_security_en", "https://news.google.com/rss/search?q=blockchain+hack+exploit+security&hl=en-US&gl=US&ceid=US:en"),
+            get_url(
+                "crypto_news",
+                "google_news_security_en",
+                "https://news.google.com/rss/search?q=blockchain+hack+exploit+security&hl=en-US&gl=US&ceid=US:en",
+            ),
             "Blockchain Security EN",
             ["security", "hack", "english"],
         ),
         (
-            get_url("crypto_news", "google_news_defi_security", "https://news.google.com/rss/search?q=crypto+hack+DeFi+exploit&hl=en-US&gl=US&ceid=US:en"),
+            get_url(
+                "crypto_news",
+                "google_news_defi_security",
+                "https://news.google.com/rss/search?q=crypto+hack+DeFi+exploit&hl=en-US&gl=US&ceid=US:en",
+            ),
             "DeFi Security EN",
             ["security", "defi", "exploit"],
         ),
         (
-            get_url("crypto_news", "google_news_security_kr", "https://news.google.com/rss/search?q=블록체인+해킹+보안+취약점&hl=ko&gl=KR&ceid=KR:ko"),
+            get_url(
+                "crypto_news",
+                "google_news_security_kr",
+                "https://news.google.com/rss/search?q=블록체인+해킹+보안+취약점&hl=ko&gl=KR&ceid=KR:ko",
+            ),
             "블록체인 보안 KR",
             ["security", "hack", "korean"],
         ),
@@ -352,7 +380,9 @@ def _fetch_binance_bapi() -> List[Dict[str, Any]]:
     """Fetch Binance announcements via BAPI (legacy fallback)."""
     items: List[Dict[str, Any]] = []
     try:
-        url = get_url("crypto_news", "binance_api", "https://www.binance.com/bapi/composite/v1/public/cms/article/list/query")
+        url = get_url(
+            "crypto_news", "binance_api", "https://www.binance.com/bapi/composite/v1/public/cms/article/list/query"
+        )
         params = {"type": 1, "pageNo": 1, "pageSize": 10}
         resp = requests.get(
             url,
@@ -380,7 +410,9 @@ def _fetch_binance_bapi() -> List[Dict[str, Any]]:
                     link = (
                         f"{_binance_base}/en/support/announcement/detail/{code}"
                         if code
-                        else get_url("crypto_news", "binance_announcement", "https://www.binance.com/en/support/announcement")
+                        else get_url(
+                            "crypto_news", "binance_announcement", "https://www.binance.com/en/support/announcement"
+                        )
                     )
                     items.append(
                         {
@@ -434,9 +466,8 @@ def _score_security_severity(title: str, description: str = "") -> str:
     """Score security incident severity based on keywords."""
     text = (title + " " + description).lower()
     # Critical / High: large amounts, major attack verbs, bridge exploits
-    if any(kw in text for kw in ["billion", "exploit", "hack", "drain", "bridge",
-                                   "10억", "해킹", "유출", "탈취"]):
-        amount_match = re.search(r'\$?([\d,.]+)\s*(?:million|billion|백만|억)', text)
+    if any(kw in text for kw in ["billion", "exploit", "hack", "drain", "bridge", "10억", "해킹", "유출", "탈취"]):
+        amount_match = re.search(r"\$?([\d,.]+)\s*(?:million|billion|백만|억)", text)
         if amount_match:
             return "🔴 CRITICAL"
         return "🟠 HIGH"
@@ -462,7 +493,11 @@ def _fetch_browser_sources() -> tuple:
             # Google News
             try:
                 session.navigate(
-                    get_url("crypto_news", "google_news_browser", "https://news.google.com/search?q=cryptocurrency+bitcoin&hl=en-US&gl=US&ceid=US:en"),
+                    get_url(
+                        "crypto_news",
+                        "google_news_browser",
+                        "https://news.google.com/search?q=cryptocurrency+bitcoin&hl=en-US&gl=US&ceid=US:en",
+                    ),
                     wait_until="domcontentloaded",
                     wait_ms=3000,
                 )
@@ -527,11 +562,13 @@ def main():
 
     # Filter already-seen security items (cross-day dedup per individual item)
     rekt_items = [
-        item for item in rekt_items
+        item
+        for item in rekt_items
         if not dedup.is_duplicate(item["title"], item.get("source", "rekt"), today, item.get("link", ""))
     ]
     google_security_items = [
-        item for item in google_security_items
+        item
+        for item in google_security_items
         if not dedup.is_duplicate(item["title"], item.get("source", "google"), today, item.get("link", ""))
     ]
     logger.info(
@@ -1002,9 +1039,9 @@ def main():
 
     # ── Post B: security report (Rekt News + Google Security News) ──
     all_security_items = rekt_items + google_security_items
-    if len(all_security_items) < 2:
+    if len(all_security_items) < 1:
         logger.info(
-            "보안 뉴스가 %d건으로 최소 기준(2건) 미달, 포스트 생성 스킵",
+            "보안 뉴스가 %d건으로 최소 기준(1건) 미달, 포스트 생성 스킵",
             len(all_security_items),
         )
     else:
