@@ -33,7 +33,7 @@ jobs:
           cache-dependency-path: scripts/requirements.txt
 
       - name: Setup Ruby
-        uses: ruby/setup-ruby@32110d4e311bd8996b2a82bf2a43b714ccc91777 # v1
+        uses: ruby/setup-ruby@3ff19f5e2baf30647122352b96108b1fbe250c64 # v1.299.0
         with:
           ruby-version: '3.2'
           bundler-cache: true
