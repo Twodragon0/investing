@@ -257,6 +257,10 @@ def fetch_fred_indicators(api_key: str) -> Dict[str, Any]:
         FEDFUNDS - Federal Funds Rate
         T10Y2Y  - 10Y-2Y Treasury Spread
         BAMLH0A0HYM2 - ICE BofA High Yield Corporate Spread
+        UNRATE  - Unemployment Rate
+        ICSA    - Weekly Initial Jobless Claims
+        MORTGAGE30US - 30-Year Fixed Mortgage Rate
+        CPIAUCSL - Consumer Price Index
 
     Returns dict keyed by series_id with label, value, date, change, series_id fields.
     Returns empty dict if no API key or all fetches fail.
@@ -274,6 +278,10 @@ def fetch_fred_indicators(api_key: str) -> Dict[str, Any]:
         ("FEDFUNDS", "연방기금금리"),
         ("T10Y2Y", "10Y-2Y 스프레드"),
         ("BAMLH0A0HYM2", "하이일드 회사채 스프레드"),
+        ("UNRATE", "실업률"),
+        ("ICSA", "주간 실업수당 청구건수"),
+        ("MORTGAGE30US", "30년 고정 모기지 금리"),
+        ("CPIAUCSL", "소비자물가지수(CPI)"),
     ]
 
     obs_start = (datetime.now(UTC) - timedelta(days=60)).strftime("%Y-%m-%d")
@@ -426,7 +434,14 @@ def _build_fred_section(fred_data: Dict[str, Any]) -> str:
     lines.append("| 지표 | 현재값 | 변동 | 기준일 |")
     lines.append("|------|--------|------|--------|")
 
-    for series_id in ["DGS10", "DGS2", "DGS30", "FEDFUNDS", "T10Y2Y", "BAMLH0A0HYM2"]:
+    _FRED_DISPLAY_ORDER = [
+        "DGS10", "DGS2", "DGS30", "FEDFUNDS", "T10Y2Y", "BAMLH0A0HYM2",
+        "UNRATE", "ICSA", "MORTGAGE30US", "CPIAUCSL",
+    ]
+    # 단위가 %가 아닌 시리즈
+    _NON_PCT_SERIES = {"ICSA", "CPIAUCSL"}
+
+    for series_id in _FRED_DISPLAY_ORDER:
         d = fred_data.get(series_id)
         if d is None:
             continue
@@ -436,11 +451,21 @@ def _build_fred_section(fred_data: Dict[str, Any]) -> str:
         change = d["change"]
 
         # Format value
-        value_str = f"{value:.2f}%"
+        if series_id == "ICSA":
+            value_str = f"{value:,.0f}건"
+        elif series_id == "CPIAUCSL":
+            value_str = f"{value:,.1f}"
+        else:
+            value_str = f"{value:.2f}%"
 
         # Format change
         if change is not None:
-            change_str = f"{change:+.4f}%p"
+            if series_id == "ICSA":
+                change_str = f"{change:+,.0f}건"
+            elif series_id == "CPIAUCSL":
+                change_str = f"{change:+.1f}"
+            else:
+                change_str = f"{change:+.4f}%p"
         else:
             change_str = "—"
 
@@ -475,6 +500,38 @@ def _build_fred_section(fred_data: Dict[str, Any]) -> str:
             f"> {hy_icon} **하이일드 스프레드 해석**: {hy_val:.2f}%p → {hy_interp}  \n"
             "> (기준: 정상 <4%, 확대 4~6%, 위기 >6%)"
         )
+        lines.append("")
+
+    # Unemployment rate interpretation
+    unrate = fred_data.get("UNRATE")
+    if unrate is not None:
+        ur_val = unrate["value"]
+        if ur_val < 4.0:
+            ur_interp = "완전고용 수준 (경기 호조)"
+            ur_icon = "🟢"
+        elif ur_val < 6.0:
+            ur_interp = "보통 (경기 둔화 신호 주시)"
+            ur_icon = "🟡"
+        else:
+            ur_interp = "고실업 (경기 침체 우려)"
+            ur_icon = "🔴"
+        lines.append(
+            f"> {ur_icon} **실업률 해석**: {ur_val:.1f}% → {ur_interp}  \n"
+            "> (기준: 완전고용 <4%, 보통 4~6%, 고실업 >6%)"
+        )
+        lines.append("")
+
+    # Mortgage rate context
+    mortgage = fred_data.get("MORTGAGE30US")
+    if mortgage is not None:
+        mr_val = mortgage["value"]
+        if mr_val < 5.0:
+            mr_interp = "저금리 (주택 시장 호조)"
+        elif mr_val < 7.0:
+            mr_interp = "중립 (주택 수요 적정)"
+        else:
+            mr_interp = "고금리 (주택 시장 냉각)"
+        lines.append(f"> 🏠 **모기지 금리**: {mr_val:.2f}% → {mr_interp}")
         lines.append("")
 
     return "\n".join(lines)
