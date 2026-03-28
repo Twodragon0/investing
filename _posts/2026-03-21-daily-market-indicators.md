@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-market-indicators-2026-03-21.png"
 permalink: "/market-analysis/2026/03/21/daily-market-indicators/"
 description: "시장 심리 및 리스크 지표 (2026-03-21) — 시장 전반의 흐름과 크로스에셋 투자 시사점을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
-excerpt: "1. S&P 500: Are Investors Too Bearish? What Sentiment Signals Say About Stocks Now"
+excerpt: "2026-03-21 기준 시장 심리·리스크 지표를 8개 소스에서 수집했습니다 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "시장 심리 및 리스크 지표 (2026-03-21) - 시장 분석 뉴스 요약 이미지"
 ---
 

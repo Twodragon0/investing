@@ -8,7 +8,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-regulatory-report-2026-03-02.png"
 description: "2026-03-02 글로벌 규제 21건: 한국 20건(벤처지원 칸막이 제거·보이스피싱·국민성장펀드 운용사), SEC 비공개시장 라운드테이블, 단일종목 레버리지 ETF 세부방안 검토 중."
-excerpt: "1. Private Markets Roundtable - SEC.gov Private Markets Roundtable SEC.gov 1. [금융위 1박2일 현장방문 벤처…"
+excerpt: "2026-03-02 SEC 비공개 시장 라운드테이블, 금융위 국민성장펀드 등 글로벌 규제 동향 21건 분석 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "글로벌 규제 동향 리포트 - 2026-03-02 - regulatory-news 뉴스 요약 이미지"
 permalink: "/regulatory-news/2026/03/02/daily-regulatory-report/"
 ---

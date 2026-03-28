@@ -9,7 +9,7 @@ source: "fmp"
 lang: "ko"
 image: "/assets/images/generated/og-fmp-economic-calendar-2026-03-10.png"
 description: "주요 경제 캘린더 및 실적 일정 (2026-03-10) - 최신 시장 분석 뉴스와 분석을 확인하세요."
-excerpt: "Will Ciena (CIEN) Beat Estimates Again in Its Next Earnings Report? (Tue, 03 Mar 2026 17:10:02…"
+excerpt: "2026-03-10 기준 주요 시장 지수 2종, 섹터 11개, 경제 이벤트 19건(고·중간 중요도), 대형주 실적 발표 4건을 수집했습니다 - Investing Dragon…"
 image_alt: "주요 경제 캘린더 및 실적 일정 (2026-03-10) - market-analysis 뉴스 요약 이미지"
 permalink: "/market-analysis/2026/03/10/fmp-economic-calendar/"
 ---

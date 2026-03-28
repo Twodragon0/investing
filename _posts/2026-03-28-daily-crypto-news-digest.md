@@ -12,6 +12,7 @@ permalink: "/crypto-news/2026/03/28/daily-crypto-news-digest/"
 description_ko: "크립토 뉴스 108건 수집. 주요 출처: Binance, Decrypt, CoinDesk. CryptoPanic·CoinGecko·거래소 RSS 기반 암호화폐 시장 동향을 정리합니다."
 excerpt: "🟠 비트코인 (48건): 비트코인, 암호화폐, 보유자들 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요. 🏦 거래소 (25건): 선물 이슈가 시장 구조…"
 image_alt: "암호화폐 뉴스 브리핑 - 2026-03-28 - 암호화폐 뉴스 요약 이미지"
+description: "암호화폐 뉴스 브리핑. 주요 코인 가격 동향과 거래량 변화를 정리합니다 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 **2026-03-28** 암호화폐 시장에서 108건의 뉴스를 분석했습니다. 오늘은 **비트코인, 거래소, 가격/시장** 관련 소식이 주목됩니다.
@@ -87,7 +88,9 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-28 - 암호화폐 뉴스 요
 - **핫 키워드**: 비트코인, AI, ETF
 - **주요 출처**: Binance(40건), Decrypt(15건), CoinDesk(15건)
 - 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-03-28.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-03-28.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
+- 프로모션성 거래소 공지 6건 제외
+
+<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-03-28.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-03-28.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
 
 
 ## 테마별 주요 뉴스
@@ -184,9 +187,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-28 - 암호화폐 뉴스 요
 
 
 ### 📈 가격/시장 (26건)
-
-*암호화폐株, 비트코인 급락 여파…동반 약세 마켓인*
-
 
 <div class="news-card-item news-sev-high">
 <div class="news-card-num">1</div>
@@ -373,7 +373,7 @@ XAUT 거래 토너먼트: 거래하여 최대 200개의 XAUT 토큰 바우처를
 
 **가격 언급**: 뉴스 제목에서 16건의 가격 데이터가 포착되었습니다 ($66M, $1,000, $1.6, $6.9M, $67K). 구체적 가격대가 언급되는 것은 시장의 가격 민감도가 높다는 신호입니다.
 
-**모니터링 키워드**: **bitcoin**(29회), **ai**(7회), **etf**(4회) — BTC 가격 및 네트워크 활동이 시장의 중심 화두입니다.
+**모니터링 키워드**: **bitcoin(비트코인)**(29회), **ai(인공지능)**(7회), **etf(상장지수펀드)**(4회) — BTC 가격 및 네트워크 활동이 시장의 중심 화두입니다.
 
 **신규 상장**: 2건의 상장 관련 소식이 포착되었습니다. 신규 상장은 단기 거래량 급증과 가격 변동성을 동반하는 경우가 많습니다.
 

@@ -8,7 +8,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-regulatory-report-2026-02-18.png"
 description: "글로벌 규제 동향 리포트 — 글로벌 금융 규제 변화와 시장 영향을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
-excerpt: "gemi-20260217 - SEC.gov — SEC (Google News) iset20260213s1.htm - SEC.gov — SEC (Google News)"
+excerpt: "전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 27건의 규제 관련 뉴스가 수집되었습니다 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "글로벌 규제 동향 리포트 - 2026-02-18 - regulatory-news 뉴스 요약 이미지"
 permalink: "/regulatory-news/2026/02/18/daily-regulatory-report/"
 ---

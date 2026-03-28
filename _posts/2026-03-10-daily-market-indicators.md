@@ -9,7 +9,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-market-indicators-2026-03-10.png"
 description: "시장 분석 브리핑: 시장 심리 및 리스크 지표 (2026-03-10). 주요 자산군의 상관관계와 방향성을 점검합니다 - Investing Dragon 자동 수집 분석 리포트."
-excerpt: "Oil prices experience roller-coaster movements, while the US Treasury yield curve steepens…"
+excerpt: "2026-03-10 기준 시장 심리·리스크 지표를 7개 소스에서 수집했습니다 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "시장 심리 및 리스크 지표 (2026-03-10) - market-analysis 뉴스 요약 이미지"
 permalink: "/market-analysis/2026/03/10/daily-market-indicators/"
 ---

@@ -8,7 +8,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-regulatory-report-2026-02-25.png"
 description: "글로벌 규제 동향 리포트 - 2026-02-25. 규제 환경 변화가 시장에 미칠 영향을 점검합니다."
-excerpt: "WisdomTree Digital Trust, et al. - SEC.gov — SEC (Google News) - Investing Dragon 자동 수집 분석 리포트."
+excerpt: "전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 36건의 규제 관련 뉴스가 수집되었습니다 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "글로벌 규제 동향 리포트 - 2026-02-25 - regulatory-news 뉴스 요약 이미지"
 permalink: "/regulatory-news/2026/02/25/daily-regulatory-report/"
 ---

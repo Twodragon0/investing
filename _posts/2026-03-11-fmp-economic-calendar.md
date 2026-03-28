@@ -9,7 +9,7 @@ source: "fmp"
 lang: "ko"
 image: "/assets/images/generated/og-fmp-economic-calendar-2026-03-11.png"
 description: "2026-03-11 기준 주요 시장 지수 2종, 섹터 11개, 국채 금리 5개 만기, 경제 이벤트 19건(고·중간 중요도), 대형주 실적 발표 2건, IPO 일정 4건을 수집했습니다."
-excerpt: "Why Broadcom Stock Has Done What Nvidia Couldn’t After Earnings (Thu, 05 Mar 2026 15:00:00 GMT) -…"
+excerpt: "2026-03-11 기준 주요 시장 지수 2종, 섹터 11개, 국채 금리 5개 만기, 경제 이벤트 19건(고·중간 중요도), 대형주 실적 발표 2건, IPO 일정 4건을…"
 image_alt: "주요 경제 캘린더 및 실적 일정 (2026-03-11) - market-analysis 뉴스 요약 이미지"
 permalink: "/market-analysis/2026/03/11/fmp-economic-calendar/"
 ---

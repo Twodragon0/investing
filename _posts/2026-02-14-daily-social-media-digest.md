@@ -8,7 +8,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-social-media-digest-2026-02-14.png"
 description: "2026-02-14 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 소셜 미디어 1건, 정치·경제 8건, 총 9건이 수집되었습니다."
-excerpt: "주요 키워드: bitcoin(6), trump(4), 이재명(4), ai(4), fed(2) 가장 많이 언급된 키워드는 bitcoin(비트코인)(6회)입니다."
+excerpt: "2026-02-14 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 소셜 미디어 1건, 정치·경제 8건, 총 9건이 수집되었습니다 - Investing Dragon 자동…"
 image_alt: "소셜 미디어 동향 - 2026-02-14 - social-media 뉴스 요약 이미지"
 permalink: "/social-media/2026/02/14/daily-social-media-digest/"
 ---

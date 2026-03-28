@@ -9,7 +9,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-market-indicators-2026-03-09.png"
 description: "2026-03-09 시장 심리 지표: CNN 공포탐욕 27.2(공포), VIX 25.50, 금 $5,135·DXY 98.73 달러 약세. 국채 금리 스태그플레이션 우려 확산, 시장 폭 데이터 부재로 소수 종목 주도 랠리 경계."
-excerpt: "10-year Treasury yield falls as oil reverses spike (10Y Treasury Yield) US 10-Year Treasury Yield…"
+excerpt: "2026-03-09 기준 시장 심리·리스크 지표를 6개 소스에서 수집했습니다 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "시장 심리 및 리스크 지표 (2026-03-09) - market-analysis 뉴스 요약 이미지"
 permalink: "/market-analysis/2026/03/09/daily-market-indicators/"
 ---

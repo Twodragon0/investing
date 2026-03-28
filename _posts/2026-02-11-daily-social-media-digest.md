@@ -8,7 +8,7 @@ source: "consolidated"
 lang: "ko"
 description: "오늘의 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 10건, 소셜 미디어 30건, Reddit 0건, 정치·경제 90건 총 130건이 수집되었습니다."
 image: "/assets/images/generated/og-daily-social-media-digest-2026-02-11.png"
-excerpt: "BREAKING: Binance SAFU Fund has just bought another 3,600 Bitcoin worth $233.4 million. Sponsored by"
+excerpt: "오늘의 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 10건, 소셜 미디어 30건, Reddit 0건, 정치·경제 90건 총 130건이 수집되었습니다"
 image_alt: "소셜 미디어 동향 - 2026-02-11 - social-media 뉴스 요약 이미지"
 permalink: "/social-media/2026/02/11/daily-social-media-digest/"
 ---
