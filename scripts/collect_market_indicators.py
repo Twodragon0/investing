@@ -43,7 +43,9 @@ VERIFY_SSL = get_verify_ssl()
 _mi_cfg = get_collector_config("market_indicators")
 
 # ── Constants ──────────────────────────────────────────────────────────────────
-CNN_FEAR_GREED_URL = get_url("market_indicators", "cnn_fear_greed", "https://production.dataviz.cnn.io/index/fearandgreed/graphdata")
+CNN_FEAR_GREED_URL = get_url(
+    "market_indicators", "cnn_fear_greed", "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"
+)
 CNN_HEADERS = {
     "User-Agent": BROWSER_USER_AGENT,
     "Accept": "application/json, text/plain, */*",
@@ -165,12 +167,20 @@ def fetch_treasury_yield_news() -> List[Dict[str, Any]]:
     """Fetch treasury yield news via Google News RSS (concurrent)."""
     feeds = [
         (
-            get_url("market_indicators", "google_news_treasury_10y", "https://news.google.com/rss/search?q=%2210-year+treasury+yield%22&hl=en-US&gl=US&ceid=US:en"),
+            get_url(
+                "market_indicators",
+                "google_news_treasury_10y",
+                "https://news.google.com/rss/search?q=%2210-year+treasury+yield%22&hl=en-US&gl=US&ceid=US:en",
+            ),
             "10Y Treasury Yield",
             ["treasury", "10y", "yield"],
         ),
         (
-            get_url("market_indicators", "google_news_treasury_2y", "https://news.google.com/rss/search?q=%222-year+treasury+yield%22&hl=en-US&gl=US&ceid=US:en"),
+            get_url(
+                "market_indicators",
+                "google_news_treasury_2y",
+                "https://news.google.com/rss/search?q=%222-year+treasury+yield%22&hl=en-US&gl=US&ceid=US:en",
+            ),
             "2Y Treasury Yield",
             ["treasury", "2y", "yield"],
         ),
@@ -435,8 +445,16 @@ def _build_fred_section(fred_data: Dict[str, Any]) -> str:
     lines.append("|------|--------|------|--------|")
 
     _FRED_DISPLAY_ORDER = [
-        "DGS10", "DGS2", "DGS30", "FEDFUNDS", "T10Y2Y", "BAMLH0A0HYM2",
-        "UNRATE", "ICSA", "MORTGAGE30US", "CPIAUCSL",
+        "DGS10",
+        "DGS2",
+        "DGS30",
+        "FEDFUNDS",
+        "T10Y2Y",
+        "BAMLH0A0HYM2",
+        "UNRATE",
+        "ICSA",
+        "MORTGAGE30US",
+        "CPIAUCSL",
     ]
     # 단위가 %가 아닌 시리즈
     _NON_PCT_SERIES = {"ICSA", "CPIAUCSL"}
@@ -516,8 +534,7 @@ def _build_fred_section(fred_data: Dict[str, Any]) -> str:
             ur_interp = "고실업 (경기 침체 우려)"
             ur_icon = "🔴"
         lines.append(
-            f"> {ur_icon} **실업률 해석**: {ur_val:.1f}% → {ur_interp}  \n"
-            "> (기준: 완전고용 <4%, 보통 4~6%, 고실업 >6%)"
+            f"> {ur_icon} **실업률 해석**: {ur_val:.1f}% → {ur_interp}  \n> (기준: 완전고용 <4%, 보통 4~6%, 고실업 >6%)"
         )
         lines.append("")
 
@@ -931,7 +948,9 @@ def main() -> None:
             tracker = SignalTracker()
             tracker.record(composite_result, btc_price=btc_price, date=today)
             accuracy_summary = tracker.format_accuracy_summary(lookback_days=30)
-            logger.info("SignalTracker 기록 완료 (score=%.1f verdict=%s)", composite_result.score, composite_result.verdict)
+            logger.info(
+                "SignalTracker 기록 완료 (score=%.1f verdict=%s)", composite_result.score, composite_result.verdict
+            )
     except Exception as exc:
         logger.warning("SignalTracker 기록 실패 (기존 기능에 영향 없음): %s", exc)
 

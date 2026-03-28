@@ -176,9 +176,7 @@ def build_post_content(
     overall_pools = categories["overall"]
 
     total_pools = len(all_pools)
-    avg_apy = (
-        sum(p.get("apy") or 0 for p in all_pools) / total_pools if total_pools > 0 else 0
-    )
+    avg_apy = sum(p.get("apy") or 0 for p in all_pools) / total_pools if total_pools > 0 else 0
     max_apy_pool = max(all_pools, key=lambda x: x.get("apy") or 0) if all_pools else None
     max_apy_project = (max_apy_pool.get("project") or "Unknown") if max_apy_pool else "Unknown"
     max_apy_val = (max_apy_pool.get("apy") or 0) if max_apy_pool else 0
@@ -245,9 +243,7 @@ def build_post_content(
 
     # ── Section 4: 전체 TOP TVL 수익률 ──
     content_parts.append(f"\n## 전체 TOP {len(overall_pools)} 수익률 (TVL 기준)\n")
-    content_parts.append(
-        "TVL 기준 상위 풀 목록입니다. 유동성이 크고 검증된 프로토콜 위주로 정렬됩니다.\n"
-    )
+    content_parts.append("TVL 기준 상위 풀 목록입니다. 유동성이 크고 검증된 프로토콜 위주로 정렬됩니다.\n")
     if overall_pools:
         content_parts.append(_build_pool_table(overall_pools))
     else:
@@ -368,12 +364,8 @@ def main():
     content = build_post_content(categories, pools, today, now)
 
     # Data-driven description
-    top_stable_project = (
-        categories["stablecoin"][0].get("project", "") if categories["stablecoin"] else ""
-    )
-    top_stable_apy = (
-        categories["stablecoin"][0].get("apy", 0) if categories["stablecoin"] else 0
-    )
+    top_stable_project = categories["stablecoin"][0].get("project", "") if categories["stablecoin"] else ""
+    top_stable_apy = categories["stablecoin"][0].get("apy", 0) if categories["stablecoin"] else 0
     avg_apy = sum(p.get("apy") or 0 for p in pools) / len(pools) if pools else 0
 
     _desc_ko = (

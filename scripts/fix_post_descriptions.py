@@ -110,21 +110,21 @@ _ARTICLE_SPECIFIC_RE = re.compile(
 _NORM_RE = re.compile(r"[\s\W]+")
 
 # Front matter regexes
-_DESC_RE = re.compile(r'^description:\s*(.+)$', re.MULTILINE)
-_DESC_KO_RE = re.compile(r'^description_ko:\s*(.+)$', re.MULTILINE)
-_TITLE_RE = re.compile(r'^title:\s*(.+)$', re.MULTILINE)
-_DATE_RE = re.compile(r'^date:\s*(\d{4}-\d{2}-\d{2})', re.MULTILINE)
+_DESC_RE = re.compile(r"^description:\s*(.+)$", re.MULTILINE)
+_DESC_KO_RE = re.compile(r"^description_ko:\s*(.+)$", re.MULTILINE)
+_TITLE_RE = re.compile(r"^title:\s*(.+)$", re.MULTILINE)
+_DATE_RE = re.compile(r"^date:\s*(\d{4}-\d{2}-\d{2})", re.MULTILINE)
 
 # Body content patterns — ordered by preference
 _NEWS_DESC_RE = re.compile(r'<p\s+class="(?:news-desc|n|p-desc|article-desc)"[^>]*>([^<]{40,})</p>', re.I)
-_STRONG_TEXT_RE = re.compile(r'\*\*(.{40,200}?)\*\*')
-_LEAD_LINE_RE = re.compile(r'^(\*\*[^*\n]{10,}\*\*[^\n]{10,}|[^*#\-\|<>\[\]{}\n]{50,300})$', re.MULTILINE)
-_PLAIN_TEXT_RE = re.compile(r'^([^#\-\*\|<>\[\]{}\n]{50,300})$', re.MULTILINE)
+_STRONG_TEXT_RE = re.compile(r"\*\*(.{40,200}?)\*\*")
+_LEAD_LINE_RE = re.compile(r"^(\*\*[^*\n]{10,}\*\*[^\n]{10,}|[^*#\-\|<>\[\]{}\n]{50,300})$", re.MULTILINE)
+_PLAIN_TEXT_RE = re.compile(r"^([^#\-\*\|<>\[\]{}\n]{50,300})$", re.MULTILINE)
 
 # Worldmonitor alert-box patterns
-_WM_TOTAL_RE = re.compile(r'총 수집:\s*<strong>(\d+)건</strong>')
-_WM_THEME_RE = re.compile(r'핵심 테마:\s*<strong>([^<]+)</strong>')
-_WM_SOURCE_RE = re.compile(r'집중 출처:\s*<strong>([^<]+)</strong>')
+_WM_TOTAL_RE = re.compile(r"총 수집:\s*<strong>(\d+)건</strong>")
+_WM_THEME_RE = re.compile(r"핵심 테마:\s*<strong>([^<]+)</strong>")
+_WM_SOURCE_RE = re.compile(r"집중 출처:\s*<strong>([^<]+)</strong>")
 _WM_SOURCE_FIELD_RE = re.compile(r'^source:\s*"?worldmonitor"?', re.MULTILINE)
 
 
@@ -132,8 +132,9 @@ _WM_SOURCE_FIELD_RE = re.compile(r'^source:\s*"?worldmonitor"?', re.MULTILINE)
 # Detection helpers
 # ---------------------------------------------------------------------------
 
+
 def _strip_quotes(s: str) -> str:
-    return s.strip().strip('"\'')
+    return s.strip().strip("\"'")
 
 
 def _is_boilerplate(desc: str) -> bool:
@@ -177,6 +178,7 @@ def _is_bad_description(desc: str, title: str) -> bool:
 # Front matter parsing
 # ---------------------------------------------------------------------------
 
+
 def _parse_front_matter(text: str) -> tuple[int, int]:
     """Return (start, end) byte offsets of content inside --- delimiters.
 
@@ -200,6 +202,7 @@ def _get_field(text: str, field_re: re.Pattern) -> str:
 # ---------------------------------------------------------------------------
 # Body content extraction
 # ---------------------------------------------------------------------------
+
 
 def _extract_worldmonitor_desc(text: str) -> str:
     """Extract data-driven description from worldmonitor alert-box HTML."""
@@ -231,7 +234,7 @@ def _extract_body_candidate(text: str) -> str:
         if end_idx == -1:
             body = text
         else:
-            body = text[end_idx + 4:]
+            body = text[end_idx + 4 :]
 
     # 1. Try <p class="news-desc"> or similar HTML paragraphs
     m = _NEWS_DESC_RE.search(body)
@@ -242,7 +245,7 @@ def _extract_body_candidate(text: str) -> str:
 
     # 2. Try lead line (mixed bold+plain, e.g. "**2026-03-27** 기준 ... 20건을 정리했습니다.")
     for m in _LEAD_LINE_RE.finditer(body):
-        candidate = re.sub(r'\*\*', '', m.group(1)).strip()
+        candidate = re.sub(r"\*\*", "", m.group(1)).strip()
         if any(skip in candidate for skip in ["---", "layout:", "permalink:"]):
             continue
         if len(candidate) >= 50 and not _is_boilerplate(candidate):
@@ -282,6 +285,7 @@ def _truncate(s: str, max_len: int) -> str:
 # Description replacement (regex-based, preserves front matter format)
 # ---------------------------------------------------------------------------
 
+
 def _replace_description_in_text(content: str, new_desc: str) -> str:
     """Replace the description field value in front matter, preserving formatting."""
     # Escape special regex chars in the replacement
@@ -305,6 +309,7 @@ def _replace_description_in_text(content: str, new_desc: str) -> str:
 # ---------------------------------------------------------------------------
 # Post scanning and fixing
 # ---------------------------------------------------------------------------
+
 
 def _post_date_from_text(text: str) -> date | None:
     m = _DATE_RE.search(text)
@@ -379,6 +384,7 @@ def collect_posts(posts_dir: Path, days: int) -> list[dict]:
 # ---------------------------------------------------------------------------
 # Output formatters
 # ---------------------------------------------------------------------------
+
 
 def _pct(count: int, total: int) -> str:
     if total == 0:
@@ -468,6 +474,7 @@ def _format_markdown(posts: list[dict], applied: bool, dry_run: bool) -> str:
 # Apply fixes
 # ---------------------------------------------------------------------------
 
+
 def apply_fixes(posts: list[dict]) -> int:
     """Write fixed descriptions to files. Returns count of files modified."""
     count = 0
@@ -485,10 +492,9 @@ def apply_fixes(posts: list[dict]) -> int:
 # CLI
 # ---------------------------------------------------------------------------
 
+
 def main() -> int:
-    parser = argparse.ArgumentParser(
-        description="Fix boilerplate/generic descriptions in Jekyll posts."
-    )
+    parser = argparse.ArgumentParser(description="Fix boilerplate/generic descriptions in Jekyll posts.")
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument(
         "--days",
