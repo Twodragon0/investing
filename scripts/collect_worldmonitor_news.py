@@ -1016,6 +1016,13 @@ def main() -> None:
     except Exception as e:
         logger.warning("Worldmonitor briefing card failed: %s", e)
 
+    # Data-driven description
+    _top_themes = [t[0] for t in theme_counter.most_common(3)] if theme_counter else []
+    _desc_ko = f"글로벌 이슈 {total_items}건 수집. "
+    if _top_themes:
+        _desc_ko += f"주요 테마: {', '.join(_top_themes)}. "
+    _desc_ko += f"출처 {len(source_counter)}개에서 지정학·에너지·금융 동향을 모니터링합니다."
+
     filepath = generator.create_post(
         title=post_title,
         content=content,
@@ -1026,7 +1033,10 @@ def main() -> None:
         source_url=get_url("worldmonitor_news", "wm_site", "https://worldmonitor.app"),
         lang="ko",
         image=briefing_image or "/assets/images/og-worldmonitor.png",
-        extra_frontmatter={"permalink": build_dated_permalink("market-analysis", today, "daily-worldmonitor-briefing")},
+        extra_frontmatter={
+            "permalink": build_dated_permalink("market-analysis", today, "daily-worldmonitor-briefing"),
+            "description_ko": _desc_ko,
+        },
         slug="daily-worldmonitor-briefing",
     )
 

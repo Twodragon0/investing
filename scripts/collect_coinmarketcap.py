@@ -1160,6 +1160,23 @@ def main():
             sections["24시간 최대 상승 (Top 20 기준)"] = g_table
             sections["24시간 최대 하락 (Top 20 기준)"] = l_table
 
+        # Data-driven description
+        _fg_val = fear_greed.get("value", "N/A") if fear_greed else "N/A"
+        _fg_label = fear_greed.get("classification", "") if fear_greed else ""
+        _btc = next((c for c in top_coins if (c.get("symbol") or "").lower() == "btc"), None)
+        if _btc:
+            _btc_price = _btc.get("current_price", 0) if cmc_source == "coingecko" else (_btc.get("quote", {}).get("USD", {}).get("price", 0) or 0)
+            _btc_ch24 = _btc.get("price_change_percentage_24h", 0) if cmc_source == "coingecko" else (_btc.get("quote", {}).get("USD", {}).get("percent_change_24h", 0) or 0)
+            _desc_ko = f"BTC ${_btc_price:,.0f} (24h {_btc_ch24:+.1f}%)"
+        else:
+            _desc_ko = "크립토 시장 리포트"
+        if _fg_val != "N/A":
+            _desc_ko += f". 공포·탐욕 지수: {_fg_val}/100 ({_fg_label})"
+        _btc_dom = global_data.get("market_cap_percentage", {}).get("btc", 0) if global_data else 0
+        if _btc_dom:
+            _desc_ko += f", BTC 도미넌스 {_btc_dom:.1f}%"
+        _desc_ko += f". 상위 {len(top_coins)}개 코인 분석."
+
         filepath = gen_analysis.create_post(
             title=title,
             content=re.sub(
@@ -1175,7 +1192,8 @@ def main():
             lang="ko",
             image=frontmatter_image,
             extra_frontmatter={
-                "permalink": build_dated_permalink("market-analysis", today, "daily-crypto-market-report")
+                "permalink": build_dated_permalink("market-analysis", today, "daily-crypto-market-report"),
+                "description_ko": _desc_ko,
             },
             slug="daily-crypto-market-report",
         )

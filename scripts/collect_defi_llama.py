@@ -1055,6 +1055,13 @@ def main():
     # Build post content
     content = build_post_content(protocols, chains, today, now, chart_path)
 
+    # Data-driven description
+    _top3 = ", ".join(p.get("name", "") for p in protocols[:3]) if protocols else ""
+    _desc_ko = f"DeFi 프로토콜 {len(protocols)}개, 블록체인 {len(chains)}개 기준 TVL 현황. "
+    if _top3:
+        _desc_ko += f"상위: {_top3}. "
+    _desc_ko += "프로토콜별 예치 자산과 체인 점유율을 분석합니다."
+
     # Create post
     image_frontmatter = chart_path if chart_path else ""
     filepath = gen.create_post(
@@ -1067,7 +1074,10 @@ def main():
         source_url="https://defillama.com",
         lang="ko",
         image=image_frontmatter,
-        extra_frontmatter={"permalink": build_dated_permalink("defi", today, "daily-defi-tvl-report")},
+        extra_frontmatter={
+            "permalink": build_dated_permalink("defi", today, "daily-defi-tvl-report"),
+            "description_ko": _desc_ko,
+        },
         slug="daily-defi-tvl-report",
     )
 

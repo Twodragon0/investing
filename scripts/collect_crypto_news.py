@@ -430,6 +430,21 @@ def fetch_rekt_news(limit: int = 10) -> List[Dict[str, Any]]:
     return items
 
 
+def _score_security_severity(title: str, description: str = "") -> str:
+    """Score security incident severity based on keywords."""
+    text = (title + " " + description).lower()
+    # Critical / High: large amounts, major attack verbs, bridge exploits
+    if any(kw in text for kw in ["billion", "exploit", "hack", "drain", "bridge",
+                                   "10억", "해킹", "유출", "탈취"]):
+        amount_match = re.search(r'\$?([\d,.]+)\s*(?:million|billion|백만|억)', text)
+        if amount_match:
+            return "🔴 CRITICAL"
+        return "🟠 HIGH"
+    if any(kw in text for kw in ["vulnerability", "bug", "patch", "취약점", "버그", "패치"]):
+        return "🟡 MEDIUM"
+    return "🟢 LOW"
+
+
 def _fetch_browser_sources() -> tuple:
     """Fetch Google News and Binance in a single browser session."""
     google_items: List[Dict[str, Any]] = []
@@ -509,6 +524,21 @@ def main():
     enrich_items(rekt_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=False)
     enrich_items(google_security_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=True, max_fetch=15)
     google_security_items = deduplicate_by_url(google_security_items)
+
+    # Filter already-seen security items (cross-day dedup per individual item)
+    rekt_items = [
+        item for item in rekt_items
+        if not dedup.is_duplicate(item["title"], item.get("source", "rekt"), today, item.get("link", ""))
+    ]
+    google_security_items = [
+        item for item in google_security_items
+        if not dedup.is_duplicate(item["title"], item.get("source", "google"), today, item.get("link", ""))
+    ]
+    logger.info(
+        "Security items after dedup: rekt=%d, google=%d",
+        len(rekt_items),
+        len(google_security_items),
+    )
 
     created_count = 0
 
@@ -1033,8 +1063,9 @@ def main():
                     if technique != "N/A":
                         technique_counter[technique] += 1
 
+                    severity = _score_security_severity(item["title"], desc)
                     project_cell = markdown_link(project, link) if link else project
-                    incident_rows.append((project_cell, funds_lost, technique))
+                    incident_rows.append((f"{severity} {project_cell}", funds_lost, technique))
                     if link:
                         security_links.append(
                             {
@@ -1045,7 +1076,7 @@ def main():
                         )
 
                 if incident_rows:
-                    content_parts.append(markdown_table(["프로젝트", "피해 규모", "공격 유형"], incident_rows))
+                    content_parts.append(markdown_table(["심각도 / 프로젝트", "피해 규모", "공격 유형"], incident_rows))
 
             # Google Security News section with descriptions
             if google_security_items:
@@ -1055,11 +1086,12 @@ def main():
                     link = item.get("link", "")
                     source = item.get("source", "")
                     description = (item.get("description_ko") or item.get("description", "")).strip()
+                    severity = _score_security_severity(title, description)
                     if link:
-                        content_parts.append(f"**{i}. {markdown_link(title, link)}**")
+                        content_parts.append(f"**{i}. {severity} {markdown_link(title, link)}**")
                         security_links.append(item)
                     else:
-                        content_parts.append(f"**{i}. {title}**")
+                        content_parts.append(f"**{i}. {severity} {title}**")
                     if description and description != title:
                         desc_text = smart_truncate(description, 150)
                         content_parts.append(f"{desc_text}")
