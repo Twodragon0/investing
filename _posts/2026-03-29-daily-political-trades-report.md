@@ -11,6 +11,7 @@ image: "/assets/images/generated/og-daily-political-trades-report-2026-03-29.png
 excerpt: "2026-03-29 정치인 거래·정책 리포트: 의회 거래 1건, SEC 내부자 8건, 총 9건 수집"
 permalink: "/political-trades/2026/03/29/daily-political-trades-report/"
 description_ko: "정치인 거래·정책 동향 9건 수집. 의회 거래 1건, SEC 내부자 8건. 의회·SEC 내부자 거래 및 정책 이벤트를 모니터링합니다."
+description: "정치인 거래·정책 동향 9건 수집. 의회 거래 1건, SEC 내부자 8건. 의회·SEC 내부자 거래 및 정책 이벤트를 모니터링합니다."
 image_alt: "정치인 거래·정책 리포트 - 2026-03-29 - 정치인 거래 뉴스 요약 이미지"
 ---
 

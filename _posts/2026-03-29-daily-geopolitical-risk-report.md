@@ -10,6 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-geopolitical-risk-report-2026-03-29.png"
 permalink: "/market-analysis/2026/03/29/daily-geopolitical-risk-report/"
 description_ko: "지정학적 리스크 20건 수집. 주요 테마: 기타 지정학, 군사/분쟁. Polymarket·GDELT·뉴스 2개 소스에서 분쟁·제재·무역 리스크를 분석합니다."
+description: "지정학적 리스크 20건 수집. 주요 테마: 기타 지정학, 군사/분쟁. Polymarket·GDELT·뉴스 2개 소스에서 분쟁·제재·무역 리스크를 분석합니다."
 excerpt: "2026-03-29 기준 지정학적 리스크 데이터를 2개 소스에서 수집·분석했습니다"
 image_alt: "지정학 리스크 리포트 - 2026-03-29 - 글로벌 이슈 뉴스 요약 이미지"
 ---

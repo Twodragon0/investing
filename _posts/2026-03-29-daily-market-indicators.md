@@ -10,6 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-market-indicators-2026-03-29.png"
 permalink: "/market-analysis/2026/03/29/daily-market-indicators/"
 description_ko: "시장 지표 7개 소스 수집. 공포탐욕지수 10.2(extreme fear), VIX 31.05, 달러지수 100.15. 공포탐욕지수·VIX·국채금리 등 핵심 시장 센티먼트 지표를 분석합니다."
+description: "시장 지표 7개 소스 수집. 공포탐욕지수 10.2(extreme fear), VIX 31.05, 달러지수 100.15. 공포탐욕지수·VIX·국채금리 등 핵심 시장 센티먼트 지표를 분석합니다."
 excerpt: "2026-03-29 기준 시장 심리·리스크 지표를 7개 소스에서 수집했습니다"
 image_alt: "시장 심리 및 리스크 지표 (2026-03-29) - 시장 분석 뉴스 요약 이미지"
 ---

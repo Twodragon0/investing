@@ -10,6 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-social-media-digest-2026-03-29.png"
 permalink: "/social-media/2026/03/29/daily-social-media-digest/"
 description_ko: "소셜 미디어 동향 41건 수집. 주요 테마: 정치/정책, 가격/시장, 비트코인. 텔레그램·트위터·레딧·정치뉴스 11개 소스를 종합합니다."
+description: "소셜 미디어 동향 41건 수집. 주요 테마: 정치/정책, 가격/시장, 비트코인. 텔레그램·트위터·레딧·정치뉴스 11개 소스를 종합합니다."
 excerpt: "🏛️ 정치/정책 (14건): 트럼프, 이재명, 한국갤럽 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요. 📈 가격/시장 (12건): 이재명, 조정 시장 흐름이…"
 image_alt: "소셜 미디어 동향 - 2026-03-29 - 소셜 미디어 뉴스 요약 이미지"
 ---

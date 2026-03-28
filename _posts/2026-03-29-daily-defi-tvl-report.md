@@ -11,6 +11,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-defi-tvl-report-2026-03-29.png"
 permalink: "/defi/2026/03/29/daily-defi-tvl-report/"
 description_ko: "DeFi 프로토콜 20개, 블록체인 15개 기준 TVL 현황. 상위: Lido, AAVE, AAVE V3. 프로토콜별 예치 자산과 체인 점유율을 분석합니다."
+description: "DeFi 프로토콜 20개, 블록체인 15개 기준 TVL 현황. 상위: Lido, AAVE, AAVE V3. 프로토콜별 예치 자산과 체인 점유율을 분석합니다."
 excerpt: "2026-03-29 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked, 총 예치 자산) 현황을 정리합니다. 상위 20개 프로토콜의 총 TVL은…"
 image_alt: "DeFi TVL 리포트 - 2026-03-29 - DeFi 뉴스 요약 이미지"
 ---

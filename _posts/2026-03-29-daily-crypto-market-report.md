@@ -11,6 +11,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-crypto-market-report-2026-03-29.png"
 permalink: "/market-analysis/2026/03/29/daily-crypto-market-report/"
 description_ko: "BTC $66,985 (24h +0.9%). 공포·탐욕 지수: 12/100 (Extreme Fear), BTC 도미넌스 56.0%. 상위 30개 코인 분석."
+description: "BTC $66,985 (24h +0.9%). 공포·탐욕 지수: 12/100 (Extreme Fear), BTC 도미넌스 56.0%. 상위 30개 코인 분석."
 excerpt: "오늘 시가총액 상위 30개 코인을 기준으로 시장을 분석했습니다. 비트코인은 $66,985에서 24시간 +0"
 image_alt: "암호화폐 시장 종합 리포트 - 2026-03-29 | DOGE +4.9% - 시장 분석 뉴스 요약 이미지"
 ---
