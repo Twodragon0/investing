@@ -1251,7 +1251,7 @@ def generate_synthetic_description(
 
     # Exchange-specific fallback
     if any(kw in source.lower() for kw in ["binance", "bybit", "okx", "upbit"]):
-        return f"{label} 공지사항입니다." + (f" ({entity_str})" if entity_str else "")
+        return f"{label} 공지 — " + (f"{entity_str} 관련 변경사항을 확인하세요." if entity_str else "상세 내용은 원문을 참고하세요.")
 
     # Build a title-condensed description instead of boilerplate
     # Clean trailing source names from the title
@@ -1263,7 +1263,7 @@ def generate_synthetic_description(
         core = clean_title[:80] if len(clean_title) > 80 else clean_title
         if entity_str:
             return f"{core}. {entity_str} 관련 세부 내용은 원문을 참고하세요."
-        return f"{core}. 원문에서 상세 내용을 확인하세요."
+        return f"{core}. 관련 세부 동향과 시장 반응을 확인하세요."
 
     # English: use cleaned title with source context
     if label and label != source:

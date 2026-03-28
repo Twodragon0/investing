@@ -1221,7 +1221,7 @@ def generate_og_image(
     date_dotted = date_str.replace("-", ".")
 
     # Multi-line title support (up to 2 lines, 24 chars per line for Korean)
-    title_lines = wrap_text(safe_text(title), max_width=24, max_lines=2)
+    title_lines = wrap_text(safe_text(title), max_width=22, max_lines=2)
     # Description lines (up to 2 lines below title)
     desc_text = description if description else ""
     desc_lines = wrap_text(safe_text(desc_text), max_width=30, max_lines=2) if desc_text else []
@@ -1336,8 +1336,8 @@ def generate_og_image(
                 60,
                 desc_start_y - idx * 24,
                 line,
-                fontsize=12,
-                color=TEXT_MUTED,
+                fontsize=13,
+                color=TEXT_GRAY,
                 ha="left",
                 va="center",
                 **_FK,
@@ -1349,14 +1349,14 @@ def generate_og_image(
 
     # Footer
     ax.plot([60, 1140], [88, 88], color=DIVIDER_COLOR, linewidth=0.8)
-    ax.text(60, 48, "investing.2twodragon.com", fontsize=12, color=TEXT_MUTED, ha="left", va="center", **_FK)
-    ax.text(1140, 48, date_dotted, fontsize=12, color=TEXT_MUTED, ha="right", va="center", **_FK)
+    ax.text(60, 48, "investing.2twodragon.com", fontsize=12, color=TEXT_GRAY, ha="left", va="center", **_FK)
+    ax.text(1140, 48, date_dotted, fontsize=12, color=TEXT_GRAY, ha="right", va="center", **_FK)
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     try:
         fig.savefig(output_path, dpi=150, facecolor=BG_COLOR, edgecolor="none", bbox_inches=None, pad_inches=0)
         logger.info("Generated: %s", output_path)
-        _convert_to_webp(output_path, quality=88)
+        _convert_to_webp(output_path, quality=82)
         return True
     except OSError as e:
         logger.error("Failed to save %s: %s", output_path, e)

@@ -177,6 +177,16 @@ def _generate_title_based_desc(title: str, theme_key: str) -> str:
         "ai_tech": "AI 기술 혁신이 산업 전반의 투자 기회를 창출합니다.",
         "politics": "정치적 결정이 시장 불확실성의 핵심 변수로 작용합니다.",
         "security": "보안 사고는 시장 신뢰도와 자산 가격에 즉각적 영향을 줍니다.",
+        "stock_market": "주요 종목의 실적과 밸류에이션 변화를 분석하세요.",
+        "earnings": "실적 발표가 해당 섹터 전반에 미치는 파급 효과를 주목하세요.",
+        "trade_war": "무역 갈등이 공급망과 환율에 미치는 영향을 확인하세요.",
+        "energy": "에너지 가격 변동이 인플레이션과 소비에 미치는 연쇄 효과를 주시하세요.",
+        "real_estate": "부동산 시장의 금리 민감도와 수급 변화를 분석하세요.",
+        "labor": "고용 지표가 연준 정책 결정에 미치는 신호를 확인하세요.",
+        "geopolitical": "지정학적 리스크가 안전자산 선호도에 미치는 영향을 분석하세요.",
+        "cbdc": "중앙은행 디지털 화폐 정책이 기존 금융 시스템에 미치는 변화를 주시하세요.",
+        "mining": "채굴 난이도와 해시레이트 변화가 네트워크 보안에 미치는 영향입니다.",
+        "stablecoin": "스테이블코인 유통량 변화가 시장 유동성의 선행 지표로 작용합니다.",
     }
 
     # Extract key entities from title for specificity
@@ -243,7 +253,7 @@ def _generate_title_based_desc(title: str, theme_key: str) -> str:
     if len(clean) > 120:
         clean = clean[:117] + "..."
 
-    ctx = _THEME_CONTEXT.get(theme_key, "관련 소식입니다.")
+    ctx = _THEME_CONTEXT.get(theme_key, "시장 참여자들이 주목하는 소식입니다.")
     if entity_str:
         return f"{clean}. {entity_str} — {ctx}"
     return f"{clean}. {ctx}"

@@ -398,6 +398,35 @@ _TOKEN_ARTIFACT_MAP: Dict[str, str] = {
     # XRP/ETH/DOT artifacts
     "XRPected": "Expected",
     "ETHical": "Ethical",
+    # Additional AI artifacts (compound words)
+    "entertAIn": "entertain",
+    "entertAIns": "entertains",
+    "entertAInment": "entertainment",
+    "complAIn": "complain",
+    "complAInt": "complaint",
+    "complAIns": "complains",
+    "portrAIt": "portrait",
+    "curtAIn": "curtain",
+    "mountAIn": "mountain",
+    "fountAIn": "fountain",
+    "captAIn": "captain",
+    "certAInly": "certainly",
+    "villAIn": "villain",
+    "bargAIn": "bargain",
+    "domAIn": "domain",
+    "remAIning": "remaining",
+    "remAInder": "remainder",
+    "mAInstream": "mainstream",
+    "mAInly": "mainly",
+    "contAIner": "container",
+    "contAIning": "containing",
+    "detAIl": "detail",
+    "detAIls": "details",
+    "retAIl": "retail",
+    "retAIler": "retailer",
+    # DOT artifacts
+    "DOTted": "Dotted",
+    "anecDOTe": "anecdote",
 }
 
 # Media/source names that Google Translate incorrectly translates
@@ -428,6 +457,14 @@ _MEDIA_NAME_FIXES: Dict[str, str] = {
     "주식 타이탄": "Stock Titan",
     "스톡 타이탄": "Stock Titan",
     "내부자 무역": "내부자 거래",
+    "투자자의 비즈니스 일간지": "Investor's Business Daily",
+    "비즈니스 인사이더": "Business Insider",
+    "월스트리트 저널": "Wall Street Journal",
+    "뉴욕 타임스": "New York Times",
+    "뉴욕 타임즈": "New York Times",
+    "로이터": "Reuters",
+    "더 가디언": "The Guardian",
+    "인베스토피디아": "Investopedia",
 }
 
 # Awkward Korean patterns from machine translation → natural Korean
@@ -463,6 +500,17 @@ _KOREAN_STYLE_FIXES: list = [
     (r"엔비디아이\b", "엔비디아가"),
     (r"메타은\b", "메타는"),
     (r"메타이\b", "메타가"),
+    # Additional names without 받침 → correct particles
+    (r"카르다노은\b", "카르다노는"),
+    (r"카르다노이\b", "카르다노가"),
+    (r"솔라나은\b", "솔라나는"),
+    (r"솔라나이\b", "솔라나가"),
+    (r"아발란체은\b", "아발란체는"),
+    (r"아발란체이\b", "아발란체가"),
+    (r"코인베이스은\b", "코인베이스는"),
+    (r"코인베이스이\b", "코인베이스가"),
+    (r"바이낸스은\b", "바이낸스는"),
+    (r"바이낸스이\b", "바이낸스가"),
     # "시과의" → "시진핑과의" (Xi mistranslation)
     (r"시과의", "시진핑과의"),
     (r"시과 ", "시진핑과 "),

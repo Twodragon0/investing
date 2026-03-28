@@ -311,7 +311,7 @@ COLORS = {
     # Text hierarchy -- aligned with web CSS
     "text": "#e6edf3",
     "text_secondary": "#9da5ae",
-    "text_muted": "#484f58",
+    "text_muted": "#6e7681",
     # Positive / Negative -- aligned with web accent colors
     "green": "#3fb950",
     "green_dim": "#0b3d24",
@@ -341,7 +341,7 @@ COLORS = {
 _DS = {
     "pad_outer": 0.5,  # tight_layout outer padding
     "pad_title": 15,  # title top padding (set_title pad)
-    "dpi": 200,
+    "dpi": 150,
     "footer_size": 8,
     "title_size": 20,
     "subtitle_size": 10,
@@ -737,7 +737,7 @@ def _add_footer(ax, text=None, *, use_fig=False, fig=None, y=None):
             color=COLORS["text_secondary"],
             fontfamily=_FONT_FAMILY,
             style="italic",
-            alpha=0.65,
+            alpha=0.80,
         )
     else:
         y_pos = y if y is not None else 0.01
@@ -752,7 +752,7 @@ def _add_footer(ax, text=None, *, use_fig=False, fig=None, y=None):
             color=COLORS["text_secondary"],
             fontfamily=_FONT_FAMILY,
             style="italic",
-            alpha=0.65,
+            alpha=0.80,
         )
 
 
@@ -817,7 +817,7 @@ def _convert_to_webp(png_path: str, quality: int = 88) -> Optional[str]:
 
         webp_path = os.path.splitext(png_path)[0] + ".webp"
         with Image.open(png_path) as img:
-            img.save(webp_path, "WEBP", quality=quality, method=6)
+            img.save(webp_path, "WEBP", quality=quality, method=4)
         png_size = os.path.getsize(png_path)
         webp_size = os.path.getsize(webp_path)
         savings = (1 - webp_size / png_size) * 100 if png_size > 0 else 0
