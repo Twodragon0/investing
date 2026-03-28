@@ -47,22 +47,38 @@ def fetch_congressional_trades() -> List[Dict[str, Any]]:
     """Fetch US congressional stock trading news via Google News RSS."""
     feeds = [
         (
-            get_url("political_trades", "google_news_congress_trading", "https://news.google.com/rss/search?q=congressional+stock+trading+disclosure&hl=en-US&gl=US&ceid=US:en"),
+            get_url(
+                "political_trades",
+                "google_news_congress_trading",
+                "https://news.google.com/rss/search?q=congressional+stock+trading+disclosure&hl=en-US&gl=US&ceid=US:en",
+            ),
             "Congressional Trades EN",
             ["political-trades", "congress", "us"],
         ),
         (
-            get_url("political_trades", "google_news_pelosi", "https://news.google.com/rss/search?q=Pelosi+stock+trades+congress&hl=en-US&gl=US&ceid=US:en"),
+            get_url(
+                "political_trades",
+                "google_news_pelosi",
+                "https://news.google.com/rss/search?q=Pelosi+stock+trades+congress&hl=en-US&gl=US&ceid=US:en",
+            ),
             "Pelosi Trades",
             ["political-trades", "pelosi", "congress"],
         ),
         (
-            get_url("political_trades", "google_news_senator", "https://news.google.com/rss/search?q=senator+stock+trading+disclosure&hl=en-US&gl=US&ceid=US:en"),
+            get_url(
+                "political_trades",
+                "google_news_senator",
+                "https://news.google.com/rss/search?q=senator+stock+trading+disclosure&hl=en-US&gl=US&ceid=US:en",
+            ),
             "Senator Trades",
             ["political-trades", "senate", "us"],
         ),
         (
-            get_url("political_trades", "google_news_kr_trades", "https://news.google.com/rss/search?q=미국+의원+주식+거래&hl=ko&gl=KR&ceid=KR:ko"),
+            get_url(
+                "political_trades",
+                "google_news_kr_trades",
+                "https://news.google.com/rss/search?q=미국+의원+주식+거래&hl=ko&gl=KR&ceid=KR:ko",
+            ),
             "미국 의회 거래 KR",
             ["political-trades", "congress", "korean"],
         ),
@@ -74,7 +90,11 @@ def fetch_sec_insider_trades() -> List[Dict[str, Any]]:
     """Fetch SEC insider trading / Form 4 news."""
     feeds = [
         (
-            get_url("political_trades", "google_news_sec_insider", "https://news.google.com/rss/search?q=SEC+insider+trading+Form+4+filing&hl=en-US&gl=US&ceid=US:en"),
+            get_url(
+                "political_trades",
+                "google_news_sec_insider",
+                "https://news.google.com/rss/search?q=SEC+insider+trading+Form+4+filing&hl=en-US&gl=US&ceid=US:en",
+            ),
             "SEC Insider Trading",
             ["political-trades", "sec", "insider"],
         ),

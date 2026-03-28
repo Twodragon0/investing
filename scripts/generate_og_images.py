@@ -1051,8 +1051,13 @@ def _draw_visual_blockchain(ax, accent: str) -> None:
     ax.add_patch(mpatches.Circle((cx, cy), 200, facecolor=accent, edgecolor="none", alpha=0.04))
 
     # Draw chain of 5 blocks connected by lines
-    block_positions = [(cx - 160, cy + 80), (cx - 60, cy + 80), (cx + 40, cy + 80),
-                       (cx + 140, cy + 80), (cx + 240, cy + 80)]
+    block_positions = [
+        (cx - 160, cy + 80),
+        (cx - 60, cy + 80),
+        (cx + 40, cy + 80),
+        (cx + 140, cy + 80),
+        (cx + 240, cy + 80),
+    ]
 
     # Connection lines between blocks
     for i in range(len(block_positions) - 1):
@@ -1065,21 +1070,50 @@ def _draw_visual_blockchain(ax, accent: str) -> None:
         alpha = 0.9 - i * 0.12
         ax.add_patch(
             mpatches.FancyBboxPatch(
-                (bx - 5, by - 22), 40, 44,
+                (bx - 5, by - 22),
+                40,
+                44,
                 boxstyle="round,pad=4",
-                facecolor="#161b22", edgecolor=accent, linewidth=1.8, alpha=alpha,
+                facecolor="#161b22",
+                edgecolor=accent,
+                linewidth=1.8,
+                alpha=alpha,
             )
         )
-        ax.text(bx + 15, by + 8, f"#{i + 1}", fontsize=8, color=TEXT_GRAY,
-                ha="center", va="center", fontweight="bold", **_FK)
+        ax.text(
+            bx + 15,
+            by + 8,
+            f"#{i + 1}",
+            fontsize=8,
+            color=TEXT_GRAY,
+            ha="center",
+            va="center",
+            fontweight="bold",
+            **_FK,
+        )
         # Hash pattern inside block
-        ax.text(bx + 15, by - 8, "0x" + format(np.random.randint(0, 0xFFFF), '04x'),
-                fontsize=5, color=accent, ha="center", va="center", alpha=0.5, **_FK)
+        ax.text(
+            bx + 15,
+            by - 8,
+            "0x" + format(np.random.randint(0, 0xFFFF), "04x"),
+            fontsize=5,
+            color=accent,
+            ha="center",
+            va="center",
+            alpha=0.5,
+            **_FK,
+        )
 
     # Network nodes below blocks
     node_colors = ["#3fb950", "#f7931a", "#627eea", "#e91e63", "#22d3ee", "#7c4dff"]
-    node_positions = [(cx - 120, cy - 60), (cx, cy - 80), (cx + 120, cy - 60),
-                      (cx - 60, cy - 130), (cx + 60, cy - 130), (cx + 180, cy - 100)]
+    node_positions = [
+        (cx - 120, cy - 60),
+        (cx, cy - 80),
+        (cx + 120, cy - 60),
+        (cx - 60, cy - 130),
+        (cx + 60, cy - 130),
+        (cx + 180, cy - 100),
+    ]
 
     # Network edges
     edges = [(0, 1), (1, 2), (0, 3), (1, 4), (2, 5), (3, 4), (4, 5)]
@@ -1090,16 +1124,28 @@ def _draw_visual_blockchain(ax, accent: str) -> None:
 
     for i, (nx, ny) in enumerate(node_positions):
         size = np.random.randint(8, 16)
-        ax.add_patch(mpatches.Circle((nx, ny), size, facecolor=node_colors[i % len(node_colors)],
-                                     edgecolor="none", alpha=0.7))
+        ax.add_patch(
+            mpatches.Circle((nx, ny), size, facecolor=node_colors[i % len(node_colors)], edgecolor="none", alpha=0.7)
+        )
 
     # Labels
     for label, x_off, y_off, c in [
-        ("BTC", -120, 160, "#f7931a"), ("ETH", 120, 160, "#627eea"),
+        ("BTC", -120, 160, "#f7931a"),
+        ("ETH", 120, 160, "#627eea"),
         ("HASH", 0, -160, accent),
     ]:
-        ax.text(cx + x_off, cy + y_off, label, fontsize=8, color=c,
-                fontweight="bold", ha="center", va="center", alpha=0.5, **_FK)
+        ax.text(
+            cx + x_off,
+            cy + y_off,
+            label,
+            fontsize=8,
+            color=c,
+            fontweight="bold",
+            ha="center",
+            va="center",
+            alpha=0.5,
+            **_FK,
+        )
 
 
 def _draw_visual_economic_calendar(ax, accent: str) -> None:
@@ -1121,47 +1167,98 @@ def _draw_visual_economic_calendar(ax, accent: str) -> None:
             color = ["#3fb950", "#f85149", "#d29922", "#58a6ff"][np.random.randint(0, 4)]
             ax.add_patch(
                 mpatches.FancyBboxPatch(
-                    (x, y), cell_w, cell_h,
+                    (x, y),
+                    cell_w,
+                    cell_h,
                     boxstyle="round,pad=3",
-                    facecolor=color, edgecolor="none", alpha=alpha,
+                    facecolor=color,
+                    edgecolor="none",
+                    alpha=alpha,
                 )
             )
             # Day number
             day = row * 4 + col + 1
-            ax.text(x + cell_w / 2, y + cell_h / 2, str(day),
-                    fontsize=11, color=TEXT_WHITE, ha="center", va="center",
-                    fontweight="bold", alpha=0.7, **_FK)
+            ax.text(
+                x + cell_w / 2,
+                y + cell_h / 2,
+                str(day),
+                fontsize=11,
+                color=TEXT_WHITE,
+                ha="center",
+                va="center",
+                fontweight="bold",
+                alpha=0.7,
+                **_FK,
+            )
 
     # Importance indicator bars on the right
     bar_x = cx + 160
-    for i, (label, h, color) in enumerate([
-        ("HIGH", 55, "#f85149"), ("MED", 40, "#d29922"), ("LOW", 25, "#3fb950"),
-    ]):
+    for i, (label, h, color) in enumerate(
+        [
+            ("HIGH", 55, "#f85149"),
+            ("MED", 40, "#d29922"),
+            ("LOW", 25, "#3fb950"),
+        ]
+    ):
         bar_y = cy + 90 - i * 75
         ax.add_patch(
             mpatches.FancyBboxPatch(
-                (bar_x, bar_y), 28, h,
+                (bar_x, bar_y),
+                28,
+                h,
                 boxstyle="round,pad=2",
-                facecolor=color, edgecolor="none", alpha=0.7,
+                facecolor=color,
+                edgecolor="none",
+                alpha=0.7,
             )
         )
-        ax.text(bar_x + 14, bar_y - 12, label, fontsize=6, color=color,
-                ha="center", va="center", fontweight="bold", alpha=0.6, **_FK)
+        ax.text(
+            bar_x + 14,
+            bar_y - 12,
+            label,
+            fontsize=6,
+            color=color,
+            ha="center",
+            va="center",
+            fontweight="bold",
+            alpha=0.6,
+            **_FK,
+        )
 
     # Timeline arrow at bottom
-    ax.annotate("", xy=(cx + 200, cy - 140), xytext=(cx - 200, cy - 140),
-                arrowprops=dict(arrowstyle="-|>", color=accent, lw=2))
+    ax.annotate(
+        "", xy=(cx + 200, cy - 140), xytext=(cx - 200, cy - 140), arrowprops=dict(arrowstyle="-|>", color=accent, lw=2)
+    )
     for i in range(6):
         tx = cx - 170 + i * 72
         ax.add_patch(mpatches.Circle((tx, cy - 140), 4, facecolor=accent, edgecolor="none", alpha=0.8))
-        ax.plot([tx, tx], [cy - 140, cy - 120 + np.random.randint(-15, 15)],
-                color=accent, linewidth=1.5, alpha=0.4)
+        ax.plot([tx, tx], [cy - 140, cy - 120 + np.random.randint(-15, 15)], color=accent, linewidth=1.5, alpha=0.4)
 
     # Labels
-    ax.text(cx - 150, cy + 150, "ECON", fontsize=9, color=accent,
-            fontweight="bold", ha="left", va="center", alpha=0.5, **_FK)
-    ax.text(cx + 150, cy + 150, "CAL", fontsize=9, color="#d29922",
-            fontweight="bold", ha="right", va="center", alpha=0.5, **_FK)
+    ax.text(
+        cx - 150,
+        cy + 150,
+        "ECON",
+        fontsize=9,
+        color=accent,
+        fontweight="bold",
+        ha="left",
+        va="center",
+        alpha=0.5,
+        **_FK,
+    )
+    ax.text(
+        cx + 150,
+        cy + 150,
+        "CAL",
+        fontsize=9,
+        color="#d29922",
+        fontweight="bold",
+        ha="right",
+        va="center",
+        alpha=0.5,
+        **_FK,
+    )
 
 
 def _draw_visual_default(ax, accent: str) -> None:
@@ -1173,12 +1270,21 @@ def _draw_visual_default(ax, accent: str) -> None:
     ax.add_patch(mpatches.Circle((cx, cy), 200, facecolor=accent, edgecolor="none", alpha=0.04))
 
     # Market heatmap grid (3x4 tiles)
-    tile_colors = ["#3fb950", "#f85149", "#3fb950", "#d29922",
-                   "#f85149", "#3fb950", "#58a6ff", "#f85149",
-                   "#d29922", "#3fb950", "#f85149", "#3fb950"]
-    tile_labels = ["BTC", "ETH", "SOL", "XRP",
-                   "AAPL", "TSLA", "NVDA", "MSFT",
-                   "KOSPI", "S&P", "GOLD", "OIL"]
+    tile_colors = [
+        "#3fb950",
+        "#f85149",
+        "#3fb950",
+        "#d29922",
+        "#f85149",
+        "#3fb950",
+        "#58a6ff",
+        "#f85149",
+        "#d29922",
+        "#3fb950",
+        "#f85149",
+        "#3fb950",
+    ]
+    tile_labels = ["BTC", "ETH", "SOL", "XRP", "AAPL", "TSLA", "NVDA", "MSFT", "KOSPI", "S&P", "GOLD", "OIL"]
     tile_w, tile_h = 62, 50
     for i in range(12):
         row, col = divmod(i, 4)
@@ -1187,41 +1293,85 @@ def _draw_visual_default(ax, accent: str) -> None:
         intensity = 0.15 + np.random.random() * 0.35
         ax.add_patch(
             mpatches.FancyBboxPatch(
-                (x, y), tile_w, tile_h,
+                (x, y),
+                tile_w,
+                tile_h,
                 boxstyle="round,pad=3",
-                facecolor=tile_colors[i], edgecolor="none", alpha=intensity,
+                facecolor=tile_colors[i],
+                edgecolor="none",
+                alpha=intensity,
             )
         )
-        ax.text(x + tile_w / 2, y + tile_h / 2 + 5, tile_labels[i],
-                fontsize=7, color=TEXT_WHITE, ha="center", va="center",
-                fontweight="bold", alpha=0.8, **_FK)
+        ax.text(
+            x + tile_w / 2,
+            y + tile_h / 2 + 5,
+            tile_labels[i],
+            fontsize=7,
+            color=TEXT_WHITE,
+            ha="center",
+            va="center",
+            fontweight="bold",
+            alpha=0.8,
+            **_FK,
+        )
         # Mini change indicator
         change = np.random.uniform(-5, 5)
         sign = "+" if change > 0 else ""
-        ax.text(x + tile_w / 2, y + tile_h / 2 - 10, f"{sign}{change:.1f}%",
-                fontsize=5, color=tile_colors[i], ha="center", va="center",
-                alpha=0.6, **_FK)
+        ax.text(
+            x + tile_w / 2,
+            y + tile_h / 2 - 10,
+            f"{sign}{change:.1f}%",
+            fontsize=5,
+            color=tile_colors[i],
+            ha="center",
+            va="center",
+            alpha=0.6,
+            **_FK,
+        )
 
     # Sentiment bar at bottom
     bar_y = cy - 120
     bar_w = 280
     for ratio, color in [(0.45, "#3fb950"), (0.30, "#8b949e"), (0.25, "#f85149")]:
         w = bar_w * ratio
-        ax.add_patch(mpatches.FancyBboxPatch(
-            (cx - 140, bar_y), w, 18,
-            boxstyle="round,pad=2", facecolor=color, edgecolor="none", alpha=0.65,
-        ))
-        ax.text(cx - 140 + w / 2, bar_y + 9, f"{int(ratio * 100)}%",
-                fontsize=6, color=TEXT_WHITE, ha="center", va="center",
-                fontweight="bold", **_FK)
-    ax.text(cx - 140, bar_y - 14, "BULLISH", fontsize=6, color="#3fb950",
-            ha="left", va="center", alpha=0.5, **_FK)
-    ax.text(cx + 140, bar_y - 14, "BEARISH", fontsize=6, color="#f85149",
-            ha="right", va="center", alpha=0.5, **_FK)
+        ax.add_patch(
+            mpatches.FancyBboxPatch(
+                (cx - 140, bar_y),
+                w,
+                18,
+                boxstyle="round,pad=2",
+                facecolor=color,
+                edgecolor="none",
+                alpha=0.65,
+            )
+        )
+        ax.text(
+            cx - 140 + w / 2,
+            bar_y + 9,
+            f"{int(ratio * 100)}%",
+            fontsize=6,
+            color=TEXT_WHITE,
+            ha="center",
+            va="center",
+            fontweight="bold",
+            **_FK,
+        )
+    ax.text(cx - 140, bar_y - 14, "BULLISH", fontsize=6, color="#3fb950", ha="left", va="center", alpha=0.5, **_FK)
+    ax.text(cx + 140, bar_y - 14, "BEARISH", fontsize=6, color="#f85149", ha="right", va="center", alpha=0.5, **_FK)
 
     # Date frame
-    ax.text(cx, cy + 155, "DAILY OVERVIEW", fontsize=9, color=accent,
-            fontweight="bold", ha="center", va="center", alpha=0.6, **_FK)
+    ax.text(
+        cx,
+        cy + 155,
+        "DAILY OVERVIEW",
+        fontsize=9,
+        color=accent,
+        fontweight="bold",
+        ha="center",
+        va="center",
+        alpha=0.6,
+        **_FK,
+    )
 
 
 def _draw_visual_geopolitical(ax, accent: str) -> None:

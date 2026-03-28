@@ -72,7 +72,9 @@ def fetch_cmc_top_coins(api_key: str, limit: int = 30) -> List[Dict[str, Any]]:
         return []
 
     try:
-        url = get_url("coinmarketcap", "cmc_listings", "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest")
+        url = get_url(
+            "coinmarketcap", "cmc_listings", "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
+        )
         headers = {"X-CMC_PRO_API_KEY": api_key, "Accept": "application/json"}
         params = {
             "start": "1",
@@ -102,7 +104,9 @@ def fetch_cmc_trending(api_key: str) -> List[Dict[str, Any]]:
         return []
 
     try:
-        url = get_url("coinmarketcap", "cmc_trending", "https://pro-api.coinmarketcap.com/v1/cryptocurrency/trending/latest")
+        url = get_url(
+            "coinmarketcap", "cmc_trending", "https://pro-api.coinmarketcap.com/v1/cryptocurrency/trending/latest"
+        )
         headers = {"X-CMC_PRO_API_KEY": api_key, "Accept": "application/json"}
         params = {"limit": str(get_limit("coinmarketcap", "trending_coins", 10)), "convert": "USD"}
         resp = request_with_retry(
@@ -127,9 +131,17 @@ def fetch_cmc_gainers_losers(api_key: str) -> Tuple[List[Dict], List[Dict]]:
         return [], []
 
     try:
-        url = get_url("coinmarketcap", "cmc_gainers_losers", "https://pro-api.coinmarketcap.com/v1/cryptocurrency/trending/gainers-losers")
+        url = get_url(
+            "coinmarketcap",
+            "cmc_gainers_losers",
+            "https://pro-api.coinmarketcap.com/v1/cryptocurrency/trending/gainers-losers",
+        )
         headers = {"X-CMC_PRO_API_KEY": api_key, "Accept": "application/json"}
-        params = {"limit": str(get_limit("coinmarketcap", "gainers_losers", 10)), "convert": "USD", "time_period": "24h"}
+        params = {
+            "limit": str(get_limit("coinmarketcap", "gainers_losers", 10)),
+            "convert": "USD",
+            "time_period": "24h",
+        }
         resp = request_with_retry(
             url,
             params=params,
@@ -1165,8 +1177,16 @@ def main():
         _fg_label = fear_greed.get("classification", "") if fear_greed else ""
         _btc = next((c for c in top_coins if (c.get("symbol") or "").lower() == "btc"), None)
         if _btc:
-            _btc_price = _btc.get("current_price", 0) if cmc_source == "coingecko" else (_btc.get("quote", {}).get("USD", {}).get("price", 0) or 0)
-            _btc_ch24 = _btc.get("price_change_percentage_24h", 0) if cmc_source == "coingecko" else (_btc.get("quote", {}).get("USD", {}).get("percent_change_24h", 0) or 0)
+            _btc_price = (
+                _btc.get("current_price", 0)
+                if cmc_source == "coingecko"
+                else (_btc.get("quote", {}).get("USD", {}).get("price", 0) or 0)
+            )
+            _btc_ch24 = (
+                _btc.get("price_change_percentage_24h", 0)
+                if cmc_source == "coingecko"
+                else (_btc.get("quote", {}).get("USD", {}).get("percent_change_24h", 0) or 0)
+            )
             _desc_ko = f"BTC ${_btc_price:,.0f} (24h {_btc_ch24:+.1f}%)"
         else:
             _desc_ko = "크립토 시장 리포트"
@@ -1188,7 +1208,9 @@ def main():
             logical_date=today,
             tags=["market-report", "crypto", "top-coins", "trending", "daily"],
             source=source_name,
-            source_url=get_url("coinmarketcap", "cmc_site", "https://coinmarketcap.com/") if "CoinMarketCap" in source_name else get_url("coinmarketcap", "coingecko_site", "https://www.coingecko.com/"),
+            source_url=get_url("coinmarketcap", "cmc_site", "https://coinmarketcap.com/")
+            if "CoinMarketCap" in source_name
+            else get_url("coinmarketcap", "coingecko_site", "https://www.coingecko.com/"),
             lang="ko",
             image=frontmatter_image,
             extra_frontmatter={

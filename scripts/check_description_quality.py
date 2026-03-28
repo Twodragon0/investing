@@ -102,7 +102,7 @@ _NORM_RE = re.compile(r"[\s\W]+")
 _DESC_KO_RE = re.compile(r'^description_ko:\s*["\']?(.+?)["\']?\s*$', re.MULTILINE)
 _DESC_RE = re.compile(r'^description:\s*["\']?(.+?)["\']?\s*$', re.MULTILINE)
 _TITLE_RE = re.compile(r'^title:\s*["\']?(.+?)["\']?\s*$', re.MULTILINE)
-_DATE_RE = re.compile(r'^date:\s*(\d{4}-\d{2}-\d{2})', re.MULTILINE)
+_DATE_RE = re.compile(r"^date:\s*(\d{4}-\d{2}-\d{2})", re.MULTILINE)
 
 
 def _is_boilerplate(desc: str) -> bool:
@@ -148,14 +148,14 @@ def _extract_front_matter(text: str) -> tuple[str, str]:
     title = ""
     m = _DESC_KO_RE.search(text)
     if m:
-        desc = m.group(1).strip('"\'')
+        desc = m.group(1).strip("\"'")
     else:
         m = _DESC_RE.search(text)
         if m:
-            desc = m.group(1).strip('"\'')
+            desc = m.group(1).strip("\"'")
     m = _TITLE_RE.search(text)
     if m:
-        title = m.group(1).strip('"\'')
+        title = m.group(1).strip("\"'")
     return desc, title
 
 
@@ -299,9 +299,7 @@ def format_markdown(stats: dict, days: int) -> str:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(
-        description="Check post description quality and report boilerplate ratio."
-    )
+    parser = argparse.ArgumentParser(description="Check post description quality and report boilerplate ratio.")
     parser.add_argument(
         "--days",
         type=int,

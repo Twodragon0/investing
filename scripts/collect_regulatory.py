@@ -41,7 +41,11 @@ _reg_cfg = get_collector_config("regulatory")
 # Feed definitions: (url, source_name, tags, region)
 US_FEEDS: List[Tuple[str, str, List[str]]] = [
     (
-        get_url("regulatory", "rss_sec_crypto", "https://news.google.com/rss/search?q=site:sec.gov+crypto+OR+digital+asset&hl=en-US&gl=US&ceid=US:en"),
+        get_url(
+            "regulatory",
+            "rss_sec_crypto",
+            "https://news.google.com/rss/search?q=site:sec.gov+crypto+OR+digital+asset&hl=en-US&gl=US&ceid=US:en",
+        ),
         "SEC (Google News)",
         ["regulation", "sec", "us"],
     ),
@@ -74,7 +78,11 @@ KOREA_FEEDS: List[Tuple[str, str, List[str]]] = [
         ["regulation", "fsc", "korea"],
     ),
     (
-        get_url("regulatory", "rss_fsc_google", "https://news.google.com/rss/search?q=금융위원회+가상자산+규제&hl=ko&gl=KR&ceid=KR:ko"),
+        get_url(
+            "regulatory",
+            "rss_fsc_google",
+            "https://news.google.com/rss/search?q=금융위원회+가상자산+규제&hl=ko&gl=KR&ceid=KR:ko",
+        ),
         "한국 금융규제 뉴스",
         ["regulation", "korea", "가상자산"],
     ),
@@ -87,7 +95,11 @@ ASIA_FEEDS: List[Tuple[str, str, List[str]]] = [
         ["regulation", "japan", "fsa"],
     ),
     (
-        get_url("regulatory", "rss_mas_singapore", "https://news.google.com/rss/search?q=MAS+Singapore+crypto+regulation&hl=en-US&gl=US&ceid=US:en"),
+        get_url(
+            "regulatory",
+            "rss_mas_singapore",
+            "https://news.google.com/rss/search?q=MAS+Singapore+crypto+regulation&hl=en-US&gl=US&ceid=US:en",
+        ),
         "MAS Singapore",
         ["regulation", "singapore", "mas"],
     ),
@@ -95,12 +107,20 @@ ASIA_FEEDS: List[Tuple[str, str, List[str]]] = [
 
 EUROPE_FEEDS: List[Tuple[str, str, List[str]]] = [
     (
-        get_url("regulatory", "rss_esma", "https://news.google.com/rss/search?q=ESMA+crypto+MiCA+regulation&hl=en-US&gl=US&ceid=US:en"),
+        get_url(
+            "regulatory",
+            "rss_esma",
+            "https://news.google.com/rss/search?q=ESMA+crypto+MiCA+regulation&hl=en-US&gl=US&ceid=US:en",
+        ),
         "EU ESMA",
         ["regulation", "eu", "esma", "mica"],
     ),
     (
-        get_url("regulatory", "rss_fca_uk", "https://news.google.com/rss/search?q=FCA+UK+crypto+regulation&hl=en-US&gl=US&ceid=US:en"),
+        get_url(
+            "regulatory",
+            "rss_fca_uk",
+            "https://news.google.com/rss/search?q=FCA+UK+crypto+regulation&hl=en-US&gl=US&ceid=US:en",
+        ),
         "UK FCA",
         ["regulation", "uk", "fca"],
     ),

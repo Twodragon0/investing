@@ -106,7 +106,9 @@ def _korean_ro(word: str) -> str:
 
 _REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 _TVL_HISTORY_PATH = os.path.join(_REPO_ROOT, "_state", "defi_tvl_history.json")
-_TVL_STALE_DAYS = int(get_threshold("defi_llama", "tvl_stale_days", 3.0))  # warn if total TVL unchanged for this many days
+_TVL_STALE_DAYS = int(
+    get_threshold("defi_llama", "tvl_stale_days", 3.0)
+)  # warn if total TVL unchanged for this many days
 
 
 def _load_tvl_history() -> List[Dict[str, Any]]:

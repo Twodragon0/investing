@@ -102,7 +102,11 @@ def fetch_financial_rss_feeds() -> List[Dict[str, Any]]:
     """Fetch news from major financial media RSS feeds (concurrent)."""
     feeds = [
         (
-            get_url("stock_news", "rss_cnbc", "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114"),
+            get_url(
+                "stock_news",
+                "rss_cnbc",
+                "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114",
+            ),
             "CNBC Top News",
             ["stock", "cnbc"],
         ),
@@ -122,7 +126,11 @@ def fetch_financial_rss_feeds() -> List[Dict[str, Any]]:
             ["stock", "korean", "매경"],
         ),
         (
-            get_url("stock_news", "rss_chosun", "https://news.google.com/rss/search?q=site:biz.chosun.com+%EC%A3%BC%EC%8B%9D&hl=ko&gl=KR&ceid=KR:ko"),
+            get_url(
+                "stock_news",
+                "rss_chosun",
+                "https://news.google.com/rss/search?q=site:biz.chosun.com+%EC%A3%BC%EC%8B%9D&hl=ko&gl=KR&ceid=KR:ko",
+            ),
             "조선비즈",
             ["stock", "korean", "조선비즈"],
         ),
@@ -140,13 +148,21 @@ def fetch_financial_rss_feeds() -> List[Dict[str, Any]]:
         ),
         # Bloomberg (via Google News proxy)
         (
-            get_url("stock_news", "rss_bloomberg", "https://news.google.com/rss/search?q=site:bloomberg.com+markets+economy&hl=en-US&gl=US&ceid=US:en"),
+            get_url(
+                "stock_news",
+                "rss_bloomberg",
+                "https://news.google.com/rss/search?q=site:bloomberg.com+markets+economy&hl=en-US&gl=US&ceid=US:en",
+            ),
             "Bloomberg via Google",
             ["stock", "bloomberg"],
         ),
         # Financial Times (via Google News proxy)
         (
-            get_url("stock_news", "rss_ft", "https://news.google.com/rss/search?q=site:ft.com+markets+economy&hl=en-US&gl=US&ceid=US:en"),
+            get_url(
+                "stock_news",
+                "rss_ft",
+                "https://news.google.com/rss/search?q=site:ft.com+markets+economy&hl=en-US&gl=US&ceid=US:en",
+            ),
             "FT via Google",
             ["stock", "ft"],
         ),
@@ -202,7 +218,11 @@ def fetch_google_news_stocks() -> List[Dict[str, Any]]:
     """Fetch stock news from Google News RSS (concurrent)."""
     feeds = [
         (
-            get_url("stock_news", "google_news_spx", "https://news.google.com/rss/search?q=stock+market+S%26P+500&hl=en-US&gl=US&ceid=US:en"),
+            get_url(
+                "stock_news",
+                "google_news_spx",
+                "https://news.google.com/rss/search?q=stock+market+S%26P+500&hl=en-US&gl=US&ceid=US:en",
+            ),
             "Google News Stocks EN",
             ["stock", "market", "english"],
         ),
@@ -217,7 +237,11 @@ def fetch_google_news_stocks() -> List[Dict[str, Any]]:
             ["stock", "fed", "bond"],
         ),
         (
-            get_url("stock_news", "google_news_kospi", "https://news.google.com/rss/search?q=주식+코스피+코스닥&hl=ko&gl=KR&ceid=KR:ko"),
+            get_url(
+                "stock_news",
+                "google_news_kospi",
+                "https://news.google.com/rss/search?q=주식+코스피+코스닥&hl=ko&gl=KR&ceid=KR:ko",
+            ),
             "Google News Stocks KR",
             ["stock", "kospi", "korean"],
         ),

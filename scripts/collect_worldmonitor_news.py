@@ -394,7 +394,13 @@ def fetch_worldmonitor_feeds() -> List[Dict[str, Any]]:
             },
         ),
         (
-            wm_url(get_url("worldmonitor_news", "rss_cnbc", "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114")),
+            wm_url(
+                get_url(
+                    "worldmonitor_news",
+                    "rss_cnbc",
+                    "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114",
+                )
+            ),
             "WorldMonitor/CNBC",
             ["worldmonitor", "markets"],
             15,
@@ -407,14 +413,18 @@ def fetch_worldmonitor_feeds() -> List[Dict[str, Any]]:
             },
         ),
         (
-            wm_url(get_url("worldmonitor_news", "rss_marketwatch", "https://feeds.marketwatch.com/marketwatch/topstories/")),
+            wm_url(
+                get_url("worldmonitor_news", "rss_marketwatch", "https://feeds.marketwatch.com/marketwatch/topstories/")
+            ),
             "WorldMonitor/MarketWatch",
             ["worldmonitor", "markets"],
             15,
             48,
             {
                 "fallback_urls": [
-                    get_url("worldmonitor_news", "rss_marketwatch", "https://feeds.marketwatch.com/marketwatch/topstories/"),
+                    get_url(
+                        "worldmonitor_news", "rss_marketwatch", "https://feeds.marketwatch.com/marketwatch/topstories/"
+                    ),
                     "https://news.google.com/rss/search?q=site:marketwatch.com+markets+when:2d&hl=en-US&gl=US&ceid=US:en",
                 ]
             },

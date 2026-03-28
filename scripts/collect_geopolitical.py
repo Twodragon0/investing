@@ -70,7 +70,9 @@ _POLYMARKET_GEO_TAGS = [
 ]
 
 # GDELT API query for geopolitical risk events
-_GDELT_QUERY = _geo_cfg.get("gdelt_query", "geopolitical+risk+OR+military+conflict+OR+sanctions+OR+war+OR+coup+OR+nuclear")
+_GDELT_QUERY = _geo_cfg.get(
+    "gdelt_query", "geopolitical+risk+OR+military+conflict+OR+sanctions+OR+war+OR+coup+OR+nuclear"
+)
 
 
 def fetch_polymarket(limit: Optional[int] = None) -> List[Dict[str, Any]]:
@@ -297,17 +299,29 @@ def fetch_google_news_geopolitical() -> List[Dict[str, Any]]:
     """Fetch geopolitical risk news from Google News RSS (English + Korean)."""
     feeds = [
         (
-            get_url("geopolitical", "google_news_geo_en", "https://news.google.com/rss/search?q=geopolitical+risk+investment&hl=en&gl=US&ceid=US:en"),
+            get_url(
+                "geopolitical",
+                "google_news_geo_en",
+                "https://news.google.com/rss/search?q=geopolitical+risk+investment&hl=en&gl=US&ceid=US:en",
+            ),
             "Google News EN (Geopolitical)",
             ["geopolitical", "risk", "english"],
         ),
         (
-            get_url("geopolitical", "google_news_conflict", "https://news.google.com/rss/search?q=military+conflict+sanctions+war&hl=en&gl=US&ceid=US:en"),
+            get_url(
+                "geopolitical",
+                "google_news_conflict",
+                "https://news.google.com/rss/search?q=military+conflict+sanctions+war&hl=en&gl=US&ceid=US:en",
+            ),
             "Google News EN (Conflict)",
             ["geopolitical", "conflict", "english"],
         ),
         (
-            get_url("geopolitical", "google_news_geo_kr", "https://news.google.com/rss/search?q=%EC%A7%80%EC%A0%95%ED%95%99+%EB%A6%AC%EC%8A%A4%ED%81%AC+%ED%88%AC%EC%9E%90&hl=ko&gl=KR&ceid=KR:ko"),
+            get_url(
+                "geopolitical",
+                "google_news_geo_kr",
+                "https://news.google.com/rss/search?q=%EC%A7%80%EC%A0%95%ED%95%99+%EB%A6%AC%EC%8A%A4%ED%81%AC+%ED%88%AC%EC%9E%90&hl=ko&gl=KR&ceid=KR:ko",
+            ),
             "Google News KR (지정학)",
             ["geopolitical", "risk", "korean"],
         ),

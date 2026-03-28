@@ -238,7 +238,9 @@ def fetch_reddit_posts(limit: int = 10) -> List[Dict[str, Any]]:
         ("defi", "r/DeFi", 20),
     ]
     all_items = []
-    _reddit_hot_tpl = get_url("social_media", "reddit_hot", "https://www.reddit.com/r/{subreddit}/hot.json?limit={limit}")
+    _reddit_hot_tpl = get_url(
+        "social_media", "reddit_hot", "https://www.reddit.com/r/{subreddit}/hot.json?limit={limit}"
+    )
     for sub, display_name, min_score in subreddits:
         url = _reddit_hot_tpl.format(subreddit=sub, limit=limit)
         try:
@@ -287,12 +289,20 @@ def fetch_google_news_social() -> List[Dict[str, Any]]:
     """Google News RSS fallback for social/crypto influencer content (concurrent)."""
     feeds = [
         (
-            get_url("social_media", "google_news_crypto_twitter", "https://news.google.com/rss/search?q=crypto+twitter+sentiment&hl=en-US&gl=US&ceid=US:en"),
+            get_url(
+                "social_media",
+                "google_news_crypto_twitter",
+                "https://news.google.com/rss/search?q=crypto+twitter+sentiment&hl=en-US&gl=US&ceid=US:en",
+            ),
             "Google News Social EN",
             ["social-media", "sentiment"],
         ),
         (
-            get_url("social_media", "google_news_crypto_social_kr", "https://news.google.com/rss/search?q=암호화폐+커뮤니티+SNS&hl=ko&gl=KR&ceid=KR:ko"),
+            get_url(
+                "social_media",
+                "google_news_crypto_social_kr",
+                "https://news.google.com/rss/search?q=암호화폐+커뮤니티+SNS&hl=ko&gl=KR&ceid=KR:ko",
+            ),
             "Google News Social KR",
             ["social-media", "korean"],
         ),

@@ -80,12 +80,12 @@ _SITE_BOILERPLATE_PHRASES = [
 # NOTE: Intentionally avoids matching generic Korean phrases to prevent false negatives.
 _ARTICLE_SPECIFIC_RE = re.compile(
     r"(?:[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)"  # Two+ consecutive title-case words (proper noun)
-    r"|(?:\b[A-Z]{2,}\b)"                   # Acronym / ticker (SEC, ETF, BTC, XRP, etc.)
-    r"|(?:\b\d{4}\b)"                        # 4-digit year
-    r"|(?:\b\d+[\.,]\d+)"                    # Number with decimal/comma (e.g. price, %)
-    r"|(?:\$|€|£|₩|¥)\s*\d"                 # Currency + digit
+    r"|(?:\b[A-Z]{2,}\b)"  # Acronym / ticker (SEC, ETF, BTC, XRP, etc.)
+    r"|(?:\b\d{4}\b)"  # 4-digit year
+    r"|(?:\b\d+[\.,]\d+)"  # Number with decimal/comma (e.g. price, %)
+    r"|(?:\$|€|£|₩|¥)\s*\d"  # Currency + digit
     r"|(?:\d+\s*(?:%|억|만|조|달러|원|위안))"  # Number with unit
-    r"|(?:월|년|일)\s*\d"                     # Korean date fragments
+    r"|(?:월|년|일)\s*\d"  # Korean date fragments
 )
 
 
@@ -1599,9 +1599,14 @@ def enrich_items(
     # most from URL fetching and should consume the max_fetch budget first.
     items_priority = sorted(
         items,
-        key=lambda x: 0 if _is_desc_duplicate_of_title(
-            x.get("description", "").strip(), x.get("title", ""),
-        ) else 1,
+        key=lambda x: (
+            0
+            if _is_desc_duplicate_of_title(
+                x.get("description", "").strip(),
+                x.get("title", ""),
+            )
+            else 1
+        ),
     )
     for item in items_priority:
         enrich_item(
