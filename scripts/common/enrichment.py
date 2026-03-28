@@ -58,6 +58,22 @@ _SITE_BOILERPLATE_PHRASES = [
     "투자 통찰력과 개인 금융",
     "투자 커뮤니티",
     "프리미엄 뉴스를 제공",
+    "businesspost",
+    "비즈니스포스트",
+    "인물중심 기업인 프로파일",
+    "경제미디어 경제신문",
+    "올인원 플랫폼입니다",
+    "포트폴리오를 개선하고",
+    "개인 금융 뉴스 및 비즈니스 예측",
+    "선두주자입니다",
+    "우리의 목적은 세상을",
+    "더 스마트하고, 더 행복하고",
+    "simply wall st",
+    "kiplinger",
+    "tipranks",
+    "stock analysis",
+    "관련 광고",
+    "포트폴리오 업데이트 보고서",
 ]
 
 # Regex to detect at least one article-specific token (proper noun, number, date)
