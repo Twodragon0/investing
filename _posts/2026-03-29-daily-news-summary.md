@@ -321,7 +321,7 @@ image: "/assets/images/generated/og-daily-news-summary-2026-03-29.png"
 - ‘트럼프 AI·암호화폐 차르’ 데이비드 색스 물러난다
 - 트럼프는 David Sacks를 기술 자문위원회의 공동 의장으로 임명하여 AI, 암호화 역할을 확장합니다
 
-**AI** (2건 연관)
+**AI(인공지능)** (2건 연관)
 - \[Reddit\ 5 Straight Red Months For Bitcoin - One More And Its An ATH
 - \[Reddit\ Microsoft Set for Worst Quarter Since 2008 as AI Takes Two Bites
 

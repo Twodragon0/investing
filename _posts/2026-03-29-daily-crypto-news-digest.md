@@ -188,9 +188,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-29 - 암호화폐 뉴스 요
 
 ### 📈 가격/시장 (30건)
 
-*[기본 없는 디지탈자산기본법] "여기선 이 논리, 저기선 저 논리"…디지털자산기본법, 조문 체계부터 흔들*
-
-
 <div class="news-card-item news-sev-high">
 <div class="news-card-num">1</div>
 <div class="news-card-thumb"><img src="https://image.news1.kr/system/resource/news1_www/images/common/logo_news1_1200x630.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
@@ -382,7 +379,7 @@ XAUT 거래 토너먼트: 거래하여 최대 200개의 XAUT 토큰 바우처를
 
 **가격 언급**: 뉴스 제목에서 12건의 가격 데이터가 포착되었습니다 ($17, $600, $300, $1.6, $6.9M). 구체적 가격대가 언급되는 것은 시장의 가격 민감도가 높다는 신호입니다.
 
-**모니터링 키워드**: **bitcoin**(21회), **ai**(8회), **etf**(4회) — BTC 가격 및 네트워크 활동이 시장의 중심 화두입니다.
+**모니터링 키워드**: **bitcoin(비트코인)**(21회), **ai(인공지능)**(8회), **etf(상장지수펀드)**(4회) — BTC 가격 및 네트워크 활동이 시장의 중심 화두입니다.
 
 **신규 상장**: 2건의 상장 관련 소식이 포착되었습니다. 신규 상장은 단기 거래량 급증과 가격 변동성을 동반하는 경우가 많습니다.
 
