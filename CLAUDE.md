@@ -83,6 +83,45 @@ bundle install
 - API 타임아웃: 15초 (`REQUEST_TIMEOUT`)
 - SSL 인증서: certifi 우선, `DISABLE_SSL_VERIFY` 환경변수로 비활성화 가능
 
+## Description Quality Pipeline
+
+수집기에서 생성되는 포스트의 description 품질을 관리하는 파이프라인:
+
+```
+RSS/API → enrichment → translation → post_generator
+          ↓
+    1. URL 콘텐츠 추출 (og:desc → readability → bs4 → paragraph)
+    2. boilerplate 필터 (_is_site_boilerplate)
+    3. 제목 중복 감지 (_is_desc_duplicate_of_title)
+    4. 합성 설명 생성 (팩트 기반, _synthetic 플래그)
+    5. concurrent re-fetch (80개, title-dup 우선)
+```
+
+핵심 파일:
+- `scripts/common/enrichment.py` — 콘텐츠 추출, boilerplate 필터, 중복 감지
+- `scripts/common/rss_fetcher.py` — RSS description 추출 (1000자)
+- `scripts/common/summarizer.py` — _GENERIC_DESC_PATTERNS 동기화
+- `scripts/check_description_quality.py` — 포스트 품질 측정 (CI 연동)
+- `scripts/fix_post_descriptions.py` — 과거 포스트 일괄 보정
+- `.github/workflows/description-quality-check.yml` — 자동 품질 리포트
+
+품질 기준:
+- 목표: 실제 콘텐츠 비율 > 90%
+- 경고: boilerplate > 30%
+- 실패: boilerplate > 50%
+
+명령어:
+```bash
+# 품질 측정
+python scripts/check_description_quality.py --days 7
+
+# 과거 포스트 보정 (dry-run)
+python scripts/fix_post_descriptions.py --days 30
+
+# 실제 적용
+python scripts/fix_post_descriptions.py --days 30 --apply
+```
+
 ## Environment Variables
 
 뉴스 API (선택, 없으면 graceful degradation):

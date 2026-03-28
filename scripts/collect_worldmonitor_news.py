@@ -964,6 +964,16 @@ def main() -> None:
 
     content = "\n".join(content_parts)
 
+    # Build per-theme plain-text title index (used for description + image card)
+    import re as _re
+
+    theme_titles: dict[str, list[str]] = {}
+    for _issue in issue_items:
+        _t = _issue.get("theme", "")
+        _title_text = _issue.get("title", "")
+        _plain = _re.sub(r"\[?\*?\*?([^*\]]+)\*?\*?\]?\([^)]*\)", r"\1", _title_text)
+        theme_titles.setdefault(_t, []).append(_plain)
+
     # Generate briefing card image
     briefing_image = ""
     try:
@@ -976,16 +986,7 @@ def main() -> None:
             "정책/법률": "📜",
             "사회/기타": "🔔",
         }
-        # Build per-theme keyword lists from issue titles
-        import re as _re
         from collections import Counter as _Counter
-
-        theme_titles: dict[str, list[str]] = {}
-        for issue in issue_items:
-            t = issue.get("theme", "")
-            title_text = issue.get("title", "")
-            plain = _re.sub(r"\[?\*?\*?([^*\]]+)\*?\*?\]?\([^)]*\)", r"\1", title_text)
-            theme_titles.setdefault(t, []).append(plain)
 
         card_themes = []
         for t_name, t_count in theme_counter.most_common(5):
@@ -1016,12 +1017,26 @@ def main() -> None:
     except Exception as e:
         logger.warning("Worldmonitor briefing card failed: %s", e)
 
-    # Data-driven description
+    # Data-driven description — title과 차별화된 구체적 설명
     _top_themes = [t[0] for t in theme_counter.most_common(3)] if theme_counter else []
-    _desc_ko = f"글로벌 이슈 {total_items}건 수집. "
+    # 상위 테마별 대표 뉴스 제목 1~2개 추출 (theme_titles는 이미지 카드 생성 블록에서 구성)
+    _headline_titles: list[str] = []
+    try:
+        for _t in theme_counter.most_common(2):
+            _t_titles = theme_titles.get(_t[0], [])
+            if _t_titles:
+                _clean = _t_titles[0][:40].rstrip()
+                if _clean and _clean not in _headline_titles:
+                    _headline_titles.append(_clean)
+    except Exception as exc:
+        logger.debug("headline title extraction failed: %s", exc)
+
+    _desc_ko = f"글로벌 {total_items}건 수집. "
     if _top_themes:
-        _desc_ko += f"주요 테마: {', '.join(_top_themes)}. "
-    _desc_ko += f"출처 {len(source_counter)}개에서 지정학·에너지·금융 동향을 모니터링합니다."
+        _desc_ko += f"{', '.join(_top_themes)} 등 주요 테마 분석. "
+    if _headline_titles:
+        _desc_ko += f"{'; '.join(_headline_titles)} 등 핵심 이슈 포함. "
+    _desc_ko += f"GDELT·Polymarket 등 {len(source_counter)}개 소스 기반 지정학·에너지·금융 동향."
 
     filepath = generator.create_post(
         title=post_title,
@@ -1035,6 +1050,7 @@ def main() -> None:
         image=briefing_image or "/assets/images/og-worldmonitor.png",
         extra_frontmatter={
             "permalink": build_dated_permalink("market-analysis", today, "daily-worldmonitor-briefing"),
+            "description": _desc_ko,
             "description_ko": _desc_ko,
         },
         slug="daily-worldmonitor-briefing",

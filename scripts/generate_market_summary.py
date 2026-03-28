@@ -1327,6 +1327,27 @@ def main():
     # 연속 빈줄을 최대 2줄로 정리
     content = re.sub(r"\n{3,}", "\n\n", content)
 
+    # Build data-driven description
+    desc_parts = [f"{today} 시장 종합:"]
+    if kr_market:
+        kospi = kr_market.get("KOSPI")
+        if kospi:
+            desc_parts.append(f"KOSPI {kospi['price']}({kospi['change_pct']})")
+    if top_coins:
+        btc = next((c for c in top_coins if c.get("symbol", "").upper() == "BTC"), None)
+        if btc:
+            btc_price = btc.get("current_price", 0)
+            btc_ch = btc.get("price_change_percentage_24h", 0) or 0
+            desc_parts.append(f"BTC ${btc_price:,.0f}({btc_ch:+.1f}%)")
+    if fear_greed:
+        fg_val = fear_greed.get("value", "")
+        fg_class = fear_greed.get("classification", "")
+        desc_parts.append(f"공포탐욕지수 {fg_val}({fg_class})")
+    if global_data:
+        mcap_ch = global_data.get("market_cap_change_percentage_24h_usd", 0)
+        desc_parts.append(f"시총 24h {mcap_ch:+.1f}%")
+    post_description = ". ".join(desc_parts) + "."
+
     filepath = gen.create_post(
         title=title,
         content=content,
@@ -1345,7 +1366,10 @@ def main():
         source="auto-generated",
         lang="ko",
         image=f"/assets/images/generated/market-heatmap-{today}.png",
-        extra_frontmatter={"permalink": build_dated_permalink("market-analysis", today, "daily-market-report")},
+        extra_frontmatter={
+            "permalink": build_dated_permalink("market-analysis", today, "daily-market-report"),
+            "description": post_description,
+        },
         slug="daily-market-report",
     )
 

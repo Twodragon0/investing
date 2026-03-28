@@ -7,7 +7,7 @@ tags: ["market-summary", "daily", "crypto", "stock", "macro", "top-coins", "quan
 source: "auto-generated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-market-report-2026-03-03.png"
-description: "일일 시장 종합 리포트 — 시장 전반의 흐름과 크로스에셋 투자 시사점을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
+description: "2026-03-03 시장 종합: KOSPI 5,992(-4.6%). BTC $68,360(+2.3%). 공포탐욕지수 14(Extreme Fear). 시총 24h +1.7%. Hyperliquid +2.9% 급등."
 excerpt: "극도의 공포 장세: 공포/탐욕 지수 14으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 612개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수…"
 image_alt: "일일 시장 종합 리포트 - 2026-03-03 - market-analysis 뉴스 요약 이미지"
 permalink: "/market-analysis/2026/03/03/daily-market-report/"
