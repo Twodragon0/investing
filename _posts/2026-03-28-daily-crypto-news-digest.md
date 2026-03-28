@@ -56,41 +56,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-28 - 암호화폐 뉴스 요
 <li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE5lRjdOdjJwdnI1T01KcjB3dFNVWUhSb0ItZUJtUkREc1F6VnJkUVI5cGhVLU95c1M4TVM4bXdsOFA4V096d1JraXFIWE1LN2w2aDloWEw2amM4NE9jUEZldXFRSVZGWFRZRGhucXV3?oc=5">비트코인 횡보 속 카이버네트워크 15% 급등.온톨로지·노미나 급락</a> <span class="p0-desc">시장이 15% 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 암호화폐株, 비트코인 급락 여파…동반 약세 - 마켓인 
-외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 106건의 뉴스 중 P1 주요 이슈도 15건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (55건): 비트코인, BTC 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **📈 가격/시장** (25건): 달러, 암호화폐 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🏦 거래소** (13건): $6.9M 관련 지표와 수급 흐름을 함께 확인하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 암호화폐株, 비트코인 급락 여파…동반 약세 - 마켓인
-- 美금리 인상 우려, 암호화폐 일제↓ 비트 3%-이더 4%
-- 비트코인 횡보 속 카이버네트워크 15% 급등.온톨로지·노미나 급락
-
-### 주요 이슈
-
-- 영국, 캄보디아 기반 사기 센터 및 암호화폐 플랫폼 제재
-- 비영리단체는 암호화폐 문제에 직면해 있습니다. 사무엘 프렌치
-- 영국, 캄보디아 기반 사기 센터 및 암호화폐 플랫폼 제재
-- 외 12건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Decrypt(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 4건 포함
-- 프로모션성 거래소 공지 1건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-03-28.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-03-28.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
