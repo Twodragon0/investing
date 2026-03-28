@@ -10,6 +10,9 @@ lang: "ko"
 image: "/assets/images/generated/og-weekly-investment-digest-2026-03-29-2026-03-29.png"
 description: "주간 투자 다이제스트 - 2026년 03월 29일 — 시장 전반의 흐름과 크로스에셋 투자 시사점을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "주간 투자 다이제스트 - 2026년 03월 29일 — 시장 전반의 흐름과 크로스에셋 투자 시사점을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
+image: "/assets/images/og-market-analysis.png"
+description: "BTC $66,985 극도의 공포(12) 구간 진입, KOSPI 5,438(-0.40%), 99건 포스트 종합. 암호화폐·주식·지정학 주간 핵심 동향 분석."
+excerpt: "BTC $66,985 극도의 공포(12) 구간 진입, KOSPI 5,438(-0.40%), 99건 포스트 종합. 암호화폐·주식·지정학 주간 핵심 동향 분석."
 image_alt: "주간 투자 다이제스트 - 2026년 03월 29일 - 시장 분석 뉴스 요약 이미지"
 ---
 
