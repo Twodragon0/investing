@@ -10,7 +10,7 @@ source_url: "https://worldmonitor.app"
 lang: "ko"
 image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-03-27.png"
 permalink: "/market-analysis/2026/03/27/daily-worldmonitor-briefing/"
-description: "2026-03-27 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다."
+description: "글로벌 20건 수집. 사회/기타, 지정학/안보, 정책/법률 등 주요 테마 분석. WorldMonitor/Al Jazeera 등 소스 기반 지정학·에너지·금융 동향."
 excerpt: "WorldMonitor 글로벌 인텔리전스 브리핑 — 시장 전반의 흐름과 크로스에셋 투자 시사점을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-03-27 - 시장 분석 뉴스 요약 이미지"
 ---

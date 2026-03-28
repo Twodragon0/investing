@@ -10,7 +10,7 @@ source_url: "https://worldmonitor.app"
 lang: "ko"
 image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-03-21.png"
 permalink: "/market-analysis/2026/03/21/daily-worldmonitor-briefing/"
-description: "2026-03-21 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다."
+description: "글로벌 20건 수집. 사회/기타, 지정학/안보, 에너지 등 주요 테마 분석. WorldMonitor/Guardian World 등 소스 기반 지정학·에너지·금융 동향."
 excerpt: "범위: 글로벌 지정학, 금융시장, 에너지 이슈 주요 출처: WorldMonitor/Guardian World (14건), WorldMonitor/CNBC (6건)"
 image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-03-21 - 시장 분석 뉴스 요약 이미지"
 ---

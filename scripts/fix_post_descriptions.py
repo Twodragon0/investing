@@ -121,6 +121,12 @@ _STRONG_TEXT_RE = re.compile(r'\*\*(.{40,200}?)\*\*')
 _LEAD_LINE_RE = re.compile(r'^(\*\*[^*\n]{10,}\*\*[^\n]{10,}|[^*#\-\|<>\[\]{}\n]{50,300})$', re.MULTILINE)
 _PLAIN_TEXT_RE = re.compile(r'^([^#\-\*\|<>\[\]{}\n]{50,300})$', re.MULTILINE)
 
+# Worldmonitor alert-box patterns
+_WM_TOTAL_RE = re.compile(r'총 수집:\s*<strong>(\d+)건</strong>')
+_WM_THEME_RE = re.compile(r'핵심 테마:\s*<strong>([^<]+)</strong>')
+_WM_SOURCE_RE = re.compile(r'집중 출처:\s*<strong>([^<]+)</strong>')
+_WM_SOURCE_FIELD_RE = re.compile(r'^source:\s*"?worldmonitor"?', re.MULTILINE)
+
 
 # ---------------------------------------------------------------------------
 # Detection helpers
@@ -194,6 +200,26 @@ def _get_field(text: str, field_re: re.Pattern) -> str:
 # ---------------------------------------------------------------------------
 # Body content extraction
 # ---------------------------------------------------------------------------
+
+def _extract_worldmonitor_desc(text: str) -> str:
+    """Extract data-driven description from worldmonitor alert-box HTML."""
+    if not _WM_SOURCE_FIELD_RE.search(text):
+        return ""
+    total_m = _WM_TOTAL_RE.search(text)
+    theme_m = _WM_THEME_RE.search(text)
+    source_m = _WM_SOURCE_RE.search(text)
+    if not (total_m and theme_m):
+        return ""
+    total = total_m.group(1)
+    themes = theme_m.group(1).strip()
+    source = source_m.group(1).strip() if source_m else ""
+    desc = f"글로벌 {total}건 수집. {themes} 등 주요 테마 분석. "
+    if source:
+        desc += f"{source} 등 소스 기반 지정학·에너지·금융 동향."
+    else:
+        desc += "GDELT·Polymarket 등 소스 기반 지정학·에너지·금융 동향."
+    return desc
+
 
 def _extract_body_candidate(text: str) -> str:
     """Extract first meaningful description candidate from post body."""
@@ -305,8 +331,13 @@ def _analyze_post(file_path: Path) -> dict:
     replacement_source = ""
 
     if needs_fix:
+        # Priority 0: worldmonitor-specific extraction from alert-box HTML
+        wm_desc = _extract_worldmonitor_desc(content)
+        if wm_desc and not _is_bad_description(wm_desc, title):
+            replacement = wm_desc
+            replacement_source = "worldmonitor_alert"
         # Priority 1: description_ko if it's good quality
-        if description_ko and not _is_bad_description(description_ko, title):
+        elif description_ko and not _is_bad_description(description_ko, title):
             replacement = description_ko
             replacement_source = "description_ko"
         else:

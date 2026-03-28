@@ -11,7 +11,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-03-23.png"
 image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-03-23.png"
 permalink: "/market-analysis/2026/03/23/daily-worldmonitor-briefing/"
-description: "2026-03-23 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다."
+description: "글로벌 20건 수집. 지정학/안보, 사회/기타, 정책/법률 등 주요 테마 분석. WorldMonitor/Al Jazeera 등 소스 기반 지정학·에너지·금융 동향."
 excerpt: "지정학과 거시 변수, 글로벌 자산시장 리스크 신호를 함께 정리한 2026-03-23 WorldMonitor 브리핑입니다."
 image_alt: "WorldMonitor 글로벌 인텔리전스 대표 브리핑 이미지"
 ---

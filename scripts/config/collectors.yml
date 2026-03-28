@@ -271,6 +271,32 @@ fmp_calendar:
 
 
 # ──────────────────────────────────────────────────────────────────────────────
+# DeFi Yields 수집기
+# ──────────────────────────────────────────────────────────────────────────────
+defi_yields:
+  # DeFi Llama Yields 공개 API (API 키 불필요)
+  urls:
+    base: "https://yields.llama.fi"
+    pools_endpoint: "/pools"
+    site: "https://defillama.com/yields"
+  limits:
+    # 스테이블코인 수익률 상위 수
+    top_stablecoin: 10
+    # ETH 수익률 상위 수
+    top_eth: 10
+    # BTC 수익률 상위 수
+    top_btc: 10
+    # 전체 TVL 기준 상위 수
+    top_overall: 15
+  thresholds:
+    # 최소 TVL (USD) - 이 미만은 필터링
+    min_tvl: 1000000
+    # 최소 APY (%) - 이 미만은 필터링
+    min_apy: 0.1
+  state_file: "defi_yields_posts.json"
+
+
+# ──────────────────────────────────────────────────────────────────────────────
 # 블록체인 네트워크 지표 수집기
 # ──────────────────────────────────────────────────────────────────────────────
 blockchain:

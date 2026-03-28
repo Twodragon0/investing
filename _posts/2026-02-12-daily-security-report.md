@@ -6,7 +6,7 @@ categories: [security-alerts]
 tags: [security, hack, blockchain, daily-digest]
 source: "consolidated"
 lang: "ko"
-description: "블록체인 보안 리포트 — 사이버 보안 위협과 취약점 대응 현황을 정리합니다 - Investing Dragon 자동 수집 분석 리포트."
+description: "블록체인 보안 관련 뉴스 45건이 수집되어 업계 보안 이슈에 대한 관심이 높은 상태입니다."
 image: "/assets/images/generated/og-daily-security-report-2026-02-12.png"
 excerpt: "A16z Crypto wants DeFi to ditch ‘code is law’ for ‘spec is law’ to combat $649m exploit problem -…"
 image_alt: "블록체인 보안 리포트 - 2026-02-12 - security-alerts 뉴스 요약 이미지"
