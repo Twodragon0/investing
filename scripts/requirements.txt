@@ -10,3 +10,4 @@ Pillow>=12.1.1
 numpy~=2.4.3
 playwright~=1.58
 deep-translator==1.11.4
+googlenewsdecoder>=0.1.2

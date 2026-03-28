@@ -8,6 +8,7 @@ import ipaddress
 import logging
 import re
 import socket
+from difflib import SequenceMatcher
 from typing import Any, Dict, Optional
 from urllib.parse import urlparse
 
@@ -17,6 +18,36 @@ from .config import get_verify_ssl
 from .markdown_utils import smart_truncate
 
 logger = logging.getLogger(__name__)
+
+# Cache for resolved Google News URLs to avoid redundant lookups
+_gnews_url_cache: Dict[str, str] = {}
+
+# Pre-compiled regex for text normalization (used in duplicate detection)
+_NORM_RE = re.compile(r"[\s\W]+")
+
+# Module-level synthetic markers for consistent detection across functions
+_SYNTHETIC_MARKERS = [
+    "관련 소식입니다",
+    "관련 시장 뉴스입니다",
+    "원문에서 세부 내용을 확인하세요",
+    "원문 기사의 세부 내용을 확인하세요",
+    "투자 판단 시",
+    "면밀히 분석해야 합니다",
+    "함께 고려해야 합니다",
+    "주시해야 합니다",
+    "확인하세요",
+    "관련 시장 동향입니다",
+    "관련 세부 내용은",
+    "관련 변경사항을",
+    "시장 심리와 가격",
+    "투자 시사점을",
+    "거래소 공지사항",
+    "산업 동향",
+    "관련 보도.",
+    "섹터 보도.",
+    "산업 보도.",
+    "시장 보도.",
+]
 
 
 def is_private_url(url: str) -> bool:
@@ -117,8 +148,8 @@ def _decode_google_news_base64(url: str) -> str:
     import urllib.parse
 
     try:
-        # Extract the base64 segment after /articles/
-        match = re.search(r"/rss/articles/([A-Za-z0-9_-]+)", url)
+        # Extract the base64 segment after /articles/ or /read/
+        match = re.search(r"(?:/rss/articles/|/read/)([A-Za-z0-9_-]+)", url)
         if not match:
             return ""
         encoded = match.group(1)
@@ -145,22 +176,48 @@ def _resolve_google_news_url(url: str, timeout: int = 8) -> str:
     """Follow Google News redirect to get the real article URL.
 
     Strategy:
-    1. Try base64 decoding of the RSS article path (fastest, no network).
-    2. Follow HTTP redirects with ``requests.head`` then ``requests.get``.
-    3. Parse HTML for canonical/og:url if still on Google domain.
+    1. Return cached result if available.
+    2. Try base64 decoding of the RSS article path (fastest, no network).
+    3. Follow HTTP redirects with ``requests.head`` (max 3 hops) then ``requests.get``.
+    4. Parse HTML for canonical/og:url if still on Google domain.
+
+    Handles both ``/rss/articles/CBMi...`` and ``/read/CBMi...`` URL formats.
     """
     if not url or "news.google.com" not in url:
         return url
 
+    # Check cache first
+    if url in _gnews_url_cache:
+        return _gnews_url_cache[url]
+
+    resolved = _resolve_google_news_url_inner(url, timeout)
+    _gnews_url_cache[url] = resolved
+    return resolved
+
+
+def _resolve_google_news_url_inner(url: str, timeout: int = 8) -> str:
+    """Inner implementation for Google News URL resolution (uncached)."""
     # 1. Try base64 decoding (no network call needed)
     decoded = _decode_google_news_base64(url)
     if decoded:
         logger.debug("Google News base64 decoded: %s -> %s", url[:60], decoded[:80])
         return decoded
 
-    # 2. Follow HTTP redirects
+    # Normalize /read/ URLs to /rss/articles/ and retry base64
+    if "/read/" in url:
+        rss_url = url.replace("/read/", "/rss/articles/")
+        decoded = _decode_google_news_base64(rss_url)
+        if decoded:
+            logger.debug("Google News /read/ base64 decoded: %s -> %s", url[:60], decoded[:80])
+            return decoded
+
+    # 2. Try googlenewsdecoder (handles newer protobuf-encoded URLs)
+    resolved = _resolve_via_gnewsdecoder(url)
+    if resolved:
+        return resolved
+
+    # 3. Follow HTTP redirects via HEAD (max 3 hops)
     try:
-        # Try HEAD first (lighter)
         if is_private_url(url):
             logger.warning("SSRF blocked: %s resolves to private IP", url[:80])
             return ""
@@ -171,16 +228,25 @@ def _resolve_google_news_url(url: str, timeout: int = 8) -> str:
             headers={"User-Agent": _BROWSER_UA},
             verify=VERIFY_SSL,
         )
-        if head_resp.url and "news.google.com" not in head_resp.url:
-            # Check redirected URL for SSRF (redirect chain defense)
-            if is_private_url(head_resp.url):
-                logger.warning("SSRF blocked (redirect): %s -> %s", url[:60], head_resp.url[:80])
+        final_url = head_resp.url or ""
+        if final_url and "news.google.com" not in final_url:
+            if is_private_url(final_url):
+                logger.warning("SSRF blocked (redirect): %s -> %s", url[:60], final_url[:80])
                 return ""
-            return head_resp.url
+            logger.debug("Google News HEAD redirect: %s -> %s", url[:60], final_url[:80])
+            return final_url
+        # Check intermediate redirect hops (up to 3)
+        if hasattr(head_resp, "history") and head_resp.history:
+            for hop in head_resp.history[-3:]:
+                hop_loc = hop.headers.get("Location", "")
+                if hop_loc and "news.google.com" not in hop_loc and hop_loc.startswith("http"):
+                    if not is_private_url(hop_loc):
+                        logger.debug("Google News hop redirect: %s -> %s", url[:60], hop_loc[:80])
+                        return hop_loc
     except requests.exceptions.RequestException:
         pass
 
-    # 3. Full GET and parse HTML for canonical/og:url
+    # 4. Full GET and parse HTML for canonical/og:url
     try:
         if is_private_url(url):
             logger.warning("SSRF blocked: %s resolves to private IP", url[:80])
@@ -192,9 +258,7 @@ def _resolve_google_news_url(url: str, timeout: int = 8) -> str:
             headers={"User-Agent": _BROWSER_UA},
             verify=VERIFY_SSL,
         )
-        # Check if HTTP redirect resolved to real site
         if resp.url and "news.google.com" not in resp.url:
-            # Check redirected URL for SSRF (redirect chain defense)
             if is_private_url(resp.url):
                 logger.warning("SSRF blocked (redirect): %s -> %s", url[:60], resp.url[:80])
                 return ""
@@ -213,6 +277,31 @@ def _resolve_google_news_url(url: str, timeout: int = 8) -> str:
                     return found
     except requests.exceptions.RequestException:
         pass
+    return ""
+
+
+def _resolve_via_gnewsdecoder(url: str) -> str:
+    """Resolve Google News URL using googlenewsdecoder library.
+
+    This handles the newer protobuf-encoded URLs (2024+) that cannot be
+    decoded via simple base64. Falls back gracefully if the library is
+    unavailable or decoding fails.
+    """
+    try:
+        from googlenewsdecoder import gnewsdecoder
+
+        result = gnewsdecoder(url)
+        if result and result.get("status") and result.get("decoded_url"):
+            decoded_url = result["decoded_url"]
+            if is_private_url(decoded_url):
+                logger.warning("SSRF blocked (gnewsdecoder): %s -> %s", url[:60], decoded_url[:80])
+                return ""
+            logger.debug("Google News gnewsdecoder: %s -> %s", url[:60], decoded_url[:80])
+            return decoded_url
+    except ImportError:
+        logger.debug("googlenewsdecoder not installed, skipping")
+    except Exception as exc:  # noqa: BLE001
+        logger.debug("gnewsdecoder failed for %s: %s", url[:60], exc)
     return ""
 
 
@@ -307,8 +396,11 @@ def fetch_images_concurrent(
 
     def _fetch_one(idx: int, item: dict) -> tuple:
         link = item["link"]
-        # Resolve Google News redirects
-        if "news.google.com" in link:
+        # Prefer original_url (pre-resolved from RSS <source url="">) over Google News URL
+        original_url = item.get("original_url", "")
+        if original_url and "news.google.com" not in original_url:
+            link = original_url
+        elif "news.google.com" in link:
             link = _resolve_google_news_url(link)
         if not link:
             return idx, ""
@@ -343,26 +435,6 @@ def fetch_descriptions_concurrent(
     """
     from concurrent.futures import ThreadPoolExecutor, as_completed
 
-    _SYNTHETIC_MARKERS = [
-        "관련 소식입니다",
-        "관련 시장 뉴스입니다",
-        "원문에서 세부 내용을 확인하세요",
-        "원문 기사의 세부 내용을 확인하세요",
-        "투자 판단 시",
-        "면밀히 분석해야 합니다",
-        "함께 고려해야 합니다",
-        "주시해야 합니다",
-        "확인하세요",
-        "관련 시장 동향입니다",
-        "관련 세부 내용은",
-        "관련 변경사항을",
-        "시장 심리와 가격",
-        "투자 시사점을",
-        "관련 소식입니다",
-        "거래소 공지사항",
-        "산업 동향",
-    ]
-
     def _needs_enrichment(item: dict) -> bool:
         # Check _synthetic flag first (primary signal)
         if item.get("_synthetic"):
@@ -384,7 +456,11 @@ def fetch_descriptions_concurrent(
 
     def _fetch_one(idx: int, item: dict) -> tuple:
         link = item.get("link", "")
-        if "news.google.com" in link:
+        # Prefer original_url (pre-resolved from RSS <source url="">) over Google News URL
+        original_url = item.get("original_url", "")
+        if original_url and "news.google.com" not in original_url:
+            link = original_url
+        elif "news.google.com" in link:
             link = _resolve_google_news_url(link)
         if not link:
             return idx, ""
@@ -396,7 +472,7 @@ def fetch_descriptions_concurrent(
         for future in as_completed(futures):
             try:
                 idx, desc = future.result(timeout=15)
-                if desc and len(desc) > 30 and desc != items[idx].get("title", ""):
+                if desc and len(desc) > 30 and not _is_desc_duplicate_of_title(desc, items[idx].get("title", "")):
                     items[idx]["description"] = desc
                     items[idx].pop("_synthetic", None)
                     fetched += 1
@@ -437,10 +513,14 @@ def _extract_og_metadata(soup: Any) -> Dict[str, str]:
                 break
 
     # meta description / og:description / twitter:description
+    # Prioritize og:description (most reliable), then standard description,
+    # then twitter:description. Korean news sites often use og:description
+    # and/or <meta name="description"> with good article summaries.
     for attr_key, attr_val in [
-        ("name", "description"),
         ("property", "og:description"),
+        ("name", "description"),
         ("name", "twitter:description"),
+        ("property", "twitter:description"),
     ]:
         meta = soup.find("meta", attrs={attr_key: attr_val})
         content = str(meta.get("content", "")) if meta else ""
@@ -1294,29 +1374,27 @@ def _is_desc_duplicate_of_title(desc: str, title: str) -> bool:
         return False
 
     # Normalize: lowercase, remove punctuation and whitespace
-    _norm_re = re.compile(r"[\s\W]+")
-    norm_desc = _norm_re.sub("", desc.lower())
-    norm_title = _norm_re.sub("", title.lower())
+    norm_desc = _NORM_RE.sub("", desc.lower())
+    norm_title = _NORM_RE.sub("", title.lower())
 
     # Exact normalized match
     if norm_desc == norm_title:
         return True
 
-    # desc contains >= 80% of title
+    # Sequence-based similarity: catches near-duplicates without false positives
+    # from bag-of-characters approach
     if norm_title and len(norm_title) > 5:
-        overlap = sum(1 for c in norm_title if c in norm_desc)
-        if overlap >= len(norm_title) * 0.8:
-            # Also check if desc is short relative to title
-            if len(norm_desc) < len(norm_title) * 1.3:
-                return True
+        ratio = SequenceMatcher(None, norm_desc, norm_title).ratio()
+        if ratio > 0.8 and len(norm_desc) < len(norm_title) * 1.3:
+            return True
 
-    # Word-token Jaccard similarity
+    # Word-token Jaccard similarity (skip for very short titles to avoid noise)
     desc_tokens = set(desc.lower().split())
     title_tokens = set(title.lower().split())
-    if desc_tokens and title_tokens:
+    union = desc_tokens | title_tokens
+    if len(union) >= 4:
         intersection = desc_tokens & title_tokens
-        union = desc_tokens | title_tokens
-        if union and len(intersection) / len(union) > 0.7:
+        if len(intersection) / len(union) > 0.7:
             return True
 
     return False
@@ -1376,11 +1454,16 @@ def enrich_item(
             return  # already has a good description
 
     # Try fetching from URL (including Google News URLs via resolution)
-    if fetch_url and link:
+    # Prefer original_url if available (pre-resolved from RSS <source url="">)
+    original_url = item.get("original_url", "")
+    fetch_link = link
+    if original_url and "news.google.com" not in original_url:
+        fetch_link = original_url
+    if fetch_url and fetch_link:
         counter = _fetch_counter or [0]
         if counter[0] < max_fetch:
             counter[0] += 1
-            metadata = _fetch_and_parse_page(link)
+            metadata = _fetch_and_parse_page(fetch_link)
             fetched = metadata.get("description", "")
             if fetched and fetched != title and len(fetched) > 20:
                 item["description"] = _clean_html_content(fetched)

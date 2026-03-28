@@ -301,6 +301,11 @@ _GENERIC_DESC_PATTERNS = [
     re.compile(r"투자 판단 시"),
     re.compile(r"관련 시장 뉴스입니다"),
     re.compile(r"원문 기사의 세부 내용을 확인하세요"),
+    # New-style synthetic descriptions (fact-based with "보도" suffix)
+    re.compile(r"관련 보도\.?\s*$"),
+    re.compile(r"섹터 보도\.?\s*$"),
+    re.compile(r"산업 보도\.?\s*$"),
+    re.compile(r"시장 보도\.?\s*$"),
 ]
 
 

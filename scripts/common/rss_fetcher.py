@@ -202,6 +202,14 @@ def fetch_rss_feed(
                     if img_match:
                         image_url = img_match.group(1)
 
+                # Extract original URL from <source url=""> (Google News RSS preserves it)
+                original_url = ""
+                source_el = entry.find("source")
+                if source_el and source_el.get("url"):
+                    candidate_orig = source_el["url"].strip()
+                    if candidate_orig and is_safe_url(candidate_orig):
+                        original_url = candidate_orig
+
                 item_data = {
                     "title": title,
                     "description": description,
@@ -210,6 +218,8 @@ def fetch_rss_feed(
                     "source": source_name,
                     "tags": tags,
                 }
+                if original_url:
+                    item_data["original_url"] = original_url
                 if image_url:
                     item_data["image"] = image_url
 
