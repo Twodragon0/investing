@@ -49,52 +49,12 @@ description: "주식 시장 뉴스 종합. 매크로 지표와 기업 실적이 
 <li><a href="https://www.cnbc.com/2026/03/27/dhs-tsa-shutdown-congress.html">TSA funding update: House GOP spikes DHS funding proposal, extending shutdown that's caused airport delays</a></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 삼성전자·SK하이닉스, 한 달 새 주가 20% 급락…반도체 '슈퍼사이클' 끝난 건가 
-외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 176건의 뉴스 중 P1 주요 이슈도 21건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (41건): 조정, 삼성전자, 하이닉스 가격 변동 (41건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (13건): 인플레이션, 금리, 조선비즈 매크로 변수 (13건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🏛️ 정치/정책** (8건): 트럼프 정치 이슈 (8건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 삼성전자·SK하이닉스, 한 달 새 주가 20% 급락…반도체 '슈퍼사이클' 끝난 건가
-- Stock Market News, 2026년 3월 27일: Dow는 790포인트를 넘어 조정 S&P 500 및 Na를 입력합니다.
-- TSA 자금 업데이트: 하원 GOP가 DHS 자금 제안을 급증시켜 공항 폐쇄를 연장했습니다.
-
-### 주요 이슈
-
-- The Vanguard S&P 500 성장 ETF이 M을 이길 수 있는 티켓이 될 수 있는 이유는 다음과 같습니다.
-- 오늘, 3월 27일 주식 시장: 엔비디아는 가치 평가가 S&P 500 아래로 떨어지면서 하락했습니다.
-- 주식시장은 닷컴 버블 이후 처음으로 경고 신호를 보냈습니다.
-- 외 18건
-
-### 투자자 체크포인트
-
-- 한국 기사 54건, 글로벌 기사 122건 수집
-- 한국 지수: KOSPI 5,438.87(-0.40%), KOSDAQ 1,141.51(+0.43%), USD/KRW 1,508.36(-0.05%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">41건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:32%"></div></div><span class="theme-count">13건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:20%"></div></div><span class="theme-count">8건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:12%"></div></div><span class="theme-count">5건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:20%"></div></div><span class="theme-count">8건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-03-28.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-03-28.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- 총 **176건** 수집
+- KOSPI 5,438.87 (-0.40%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
+- KOSDAQ 1,141.51 (+0.43%).
 
 ## 테마별 주요 뉴스
 
