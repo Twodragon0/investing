@@ -7,7 +7,7 @@ tags: ["market-analysis", "fear-greed", "vix", "market-breadth", "sentiment"]
 keywords: "market-analysis, fear-greed, vix, market-breadth, sentiment"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-market-indicators-2026-03-13.png"
+image: "/assets/images/generated/news-briefing-indicators-2026-03-13.png"
 permalink: "/market-analysis/2026/03/13/daily-market-indicators/"
 description: "시장 폭(Market Breadth)은 전체 종목 중 상승 종목의 비율로 추세의 신뢰도를 평가합니다. 지수가 오르더라도 소수 종목만 상승하면 건강하지 못한 랠리일 수 있습니다."
 excerpt: "2026-03-13 기준 시장 심리·리스크 지표를 7개 소스에서 수집했습니다. 1. 10-year Treasury yield moves lower after…"

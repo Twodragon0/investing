@@ -7,7 +7,7 @@ tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, dail
 source: "consolidated"
 lang: "ko"
 description: "2026-02-13 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 19건, 총 39건이 수집되었습니다."
-image: "/assets/images/generated/og-daily-social-media-digest-2026-02-13.png"
+image: "/assets/images/generated/news-briefing-social-2026-02-13.png"
 excerpt: "2026-02-13 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 19건, 총 39건이 수집되었습니다 - Investing Dragon…"
 image_alt: "소셜 미디어 동향 - 2026-02-13 - social-media 뉴스 요약 이미지"
 permalink: "/social-media/2026/02/13/daily-social-media-digest/"

@@ -7,7 +7,7 @@ tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 keywords: "regulation, sec, cftc, fsc, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-regulatory-report-2026-03-25.png"
+image: "/assets/images/generated/news-briefing-regulatory-2026-03-25.png"
 permalink: "/regulatory-news/2026/03/25/daily-regulatory-report/"
 description: "글로벌 규제 동향 리포트 — 글로벌 금융 규제 변화와 시장 영향을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "거래소 (5건): 가상자산, 거래소, 지분 이슈가 부각되며 해당 섹터의 단기 변동성 확대 가능성이 있습니다 - Investing Dragon 자동 수집 분석 리포트."

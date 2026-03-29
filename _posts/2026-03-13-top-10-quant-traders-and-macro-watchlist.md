@@ -7,7 +7,7 @@ tags: [top10, quant, systematic-trading, macro, crypto, stock, twitter, x]
 keywords: "퀀트 트레이더, 시스템 트레이딩, 거시경제, 비트코인, 미국 주식, X, 트위터"
 source: "manual-research"
 lang: "ko"
-image: "/assets/images/generated/og-top-10-quant-traders-and-macro-watchlist-2026-03-13.png"
+image: "/assets/images/generated/news-briefing-top-10-quant-traders-and-macro-watchlist-2026-03-13.png"
 image_alt: "미국·글로벌 퀀트/시스템 트레이더 Top 10과 거시경제 체크리스트 대표 이미지"
 description: "데이비드 라이언을 포함해 공개적으로 참고할 만한 미국·글로벌 시스템/퀀트/매크로 트레이더 10명과, 주식·크립토 시장을 볼 때 확인해야 할 거시경제 Top 10을 정리했습니다."
 excerpt: "공개 채널에서 추적 가능한 시스템/퀀트/매크로 트레이더 10명과, 주식·크립토 공통 거시 변수 10가지를 한 번에 정리한 가이드"

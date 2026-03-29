@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-23.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-03-23.png"
 permalink: "/crypto-news/2026/03/23/daily-crypto-news-digest/"
 description: "암호화폐 뉴스 브리핑: 2026-03-23 기준 비트코인 약세와 정책 변수, 주요 알트코인 변동성을 중심으로 핵심 뉴스를 정리했습니다."
 excerpt: "비트코인 약세와 정책 변수, 주요 알트코인 변동성을 중심으로 2026-03-23 암호화폐 핵심 뉴스를 정리한 브리핑입니다."

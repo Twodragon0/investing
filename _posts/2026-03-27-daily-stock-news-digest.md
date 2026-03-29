@@ -7,7 +7,7 @@ tags: ["stock", "market", "daily-digest"]
 keywords: "stock, market, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-27.png"
+image: "/assets/images/generated/news-briefing-stock-2026-03-27.png"
 permalink: "/stock-news/2026/03/27/daily-stock-news-digest/"
 description: "가격/시장 (29건): 코스피, 코스닥, 삼성전자 가격 변동 (29건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요. 매크로/금리 (10건): 인플레이션, 환율, 금리 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요."
 excerpt: "가격/시장 (29건): 코스피, 코스닥, 삼성전자 가격 변동 (29건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요. 매크로/금리 (10건): 인플레이션, 환율,…"

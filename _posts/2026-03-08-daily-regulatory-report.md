@@ -7,7 +7,7 @@ tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 keywords: "regulation, sec, cftc, fsc, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-regulatory-report-2026-03-08.png"
+image: "/assets/images/generated/news-briefing-regulatory-2026-03-08.png"
 description: "글로벌 규제 동향 리포트 — 글로벌 금융 규제 변화와 시장 영향을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "1. CFTC Selig 회장, Brigitte Weyls 수석 고문의 퇴임 발표 상품선물거래위원회(Commodity Futures Trading Commission) 위원장인…"
 image_alt: "글로벌 규제 동향 리포트 - 2026-03-08 - regulatory-news 뉴스 요약 이미지"

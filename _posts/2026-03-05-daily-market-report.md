@@ -6,7 +6,7 @@ categories: [market-analysis]
 tags: ["market-summary", "daily", "crypto", "stock", "macro", "top-coins", "quant", "trading"]
 source: "auto-generated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-market-report-2026-03-05.png"
+image: "/assets/images/generated/news-briefing-market-2026-03-05.png"
 description: "시장 분석 브리핑: 일일 시장 종합 리포트. 주요 자산군의 상관관계와 방향성을 점검합니다 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "극도 공포 장세: 공포/탐욕 지수 22로 Extreme Fear 구간입니다. 시장 심리가 위축되어 있으나 점진적 회복 가능성이 있습니다. 비트코인 $72,664 상승: 24h…"
 image_alt: "일일 시장 종합 리포트 - 2026-03-05 - market-analysis 뉴스 요약 이미지"

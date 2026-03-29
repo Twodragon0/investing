@@ -7,7 +7,7 @@ tags: [security, hack, blockchain, daily-digest]
 source: "consolidated"
 lang: "ko"
 description: "AI 기반 보안 에이전트는 스마트 컨트랙트 취약점 탐지, 이상 거래 패턴 감지, 실시간 위협 대응 등에 활용되고 있으며, 해킹 피해 규모가 지속적으로 증가함에 따라 그 중요성이 부각되고 있습니다."
-image: "/assets/images/generated/og-daily-security-report-2026-02-20.png"
+image: "/assets/images/generated/news-briefing-security-2026-02-20.png"
 excerpt: "블록체인 보안 뉴스 1건을 요약합니다. 암호화폐 해킹 피해 규모가 $34억에 달하는 가운데, AI 에이전트를 활용한 보안 대응이 시험대에 올랐습니다 (Cryptopolitan)."
 image_alt: "블록체인 보안 리포트 - 2026-02-20 - security-alerts 뉴스 요약 이미지"
 permalink: "/security-alerts/2026/02/20/daily-security-report/"

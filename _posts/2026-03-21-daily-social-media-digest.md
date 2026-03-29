@@ -7,7 +7,7 @@ tags: ["social-media", "telegram", "twitter", "reddit", "politics", "trump", "�
 keywords: "social-media, telegram, twitter, reddit, politics"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-social-media-digest-2026-03-21.png"
+image: "/assets/images/generated/news-briefing-social-2026-03-21.png"
 permalink: "/social-media/2026/03/21/daily-social-media-digest/"
 description: "긴급: 연준의 이자율 결정: 2026년 3월 18일 - Advisor Perspectives 외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 31건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다."
 excerpt: "긴급: 연준의 이자율 결정: 2026년 3월 18일 - Advisor Perspectives 외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 31건의 뉴스 중 긴급 이슈를…"

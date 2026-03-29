@@ -6,7 +6,7 @@ categories: [stock-news]
 tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-stock-news-digest-2026-02-20.png"
+image: "/assets/images/generated/news-briefing-stock-2026-02-20.png"
 description: "오늘의 주식 시장: 주식 시장 뉴스 종합 - 2026-02-20. 주요 지수와 종목 흐름을 정리합니다."
 excerpt: "주요 테마: 가격/시장, AI/기술, 매크로/금리 S&P 500(-0.28%), 다우(-0.54%), 나스닥(-0.31%) 모두 하락 마감했습니다. 미국-이란 긴장 고조로…"
 image_alt: "주식 시장 뉴스 종합 - 2026-02-20 - stock-news 뉴스 요약 이미지"

@@ -7,7 +7,7 @@ tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-ban
 keywords: "political-trades, congress, sec, trump, 이재명"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-political-trades-report-2026-03-21.png"
+image: "/assets/images/generated/news-briefing-political-2026-03-21.png"
 excerpt: "2026-03-21 정치인 거래·정책 리포트: SEC 내부자 26건, 한국 정치인 2건, 중앙은행 8건, 총 36건 수집"
 permalink: "/political-trades/2026/03/21/daily-political-trades-report/"
 description: "정치인 거래 리포트: 정치인 거래·정책 리포트 - 2026-03-21. 미국 의회 거래 공시와 중앙은행 정책 흐름을 함께 점검합니다."

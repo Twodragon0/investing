@@ -7,7 +7,7 @@ tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-security-report-2026-03-27.png"
+image: "/assets/images/generated/news-briefing-security-2026-03-27.png"
 permalink: "/security-alerts/2026/03/27/daily-security-report/"
 description: "블록체인 보안 관련 뉴스 2건을 정리합니다. 1. 주요 암호화폐 회사, 1억 1600만 달러 해킹 후 폐쇄 발표 주요 암호화폐 회사, 1억 1600만 달러 해킹 후 폐쇄 발표 TheStreet.com"
 excerpt: "블록체인 보안 관련 뉴스 2건을 정리합니다. 1. 주요 암호화폐 회사, 1억 1600만 달러 해킹 후 폐쇄 발표 주요 암호화폐 회사, 1억 1600만 달러 해킹 후 폐쇄 발표…"

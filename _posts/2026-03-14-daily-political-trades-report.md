@@ -7,7 +7,7 @@ tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-ban
 keywords: "political-trades, congress, sec, trump, 이재명"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-political-trades-report-2026-03-14.png"
+image: "/assets/images/generated/news-briefing-political-2026-03-14.png"
 excerpt: "2026-03-14 정치인 거래·정책 리포트: 의회 거래 2건, SEC 내부자 12건, 중앙은행 8건, 총 22건 수집"
 description: "자신의 포트폴리오를 7자릿수로 성장시키기 위해 '카피 트레이딩'을 활용한 개인 투자자가 자신의 전략을 설명합니다."
 image_alt: "정치인 거래·정책 리포트 - 2026-03-14 - 정치인 거래 뉴스 요약 이미지"

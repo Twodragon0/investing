@@ -8,7 +8,7 @@ keywords: "market-report, crypto, top-coins, trending, daily, fear-greed, trump,
 source: "CryptoMonitor v3.0"
 source_url: "https://coinmarketcap.com/"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-market-report-2026-03-14.png"
+image: "/assets/images/generated/news-briefing-cryptomarket-2026-03-14.png"
 description: "2026-03-14 크립토 모니터 v3.0 기반 시장, 뉴스, 보안, 경제지표, 내부자거래 데이터를 종합 분석했습니다."
 excerpt: "Upbit KRW 마켓 총 거래량: 9,588.9억 Upbit KRW 마켓 총 거래량: 9,588.9억 BTC 도미넌스: 58.75% (ETH 10.52%)"
 image_alt: "크립토 시장 종합 리포트 - 2026-03-14 - 시장 분석 뉴스 요약 이미지"

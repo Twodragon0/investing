@@ -7,7 +7,7 @@ tags: [political-trades, congress, sec, trump, 이재명, central-bank, insider-
 source: "consolidated"
 lang: "ko"
 description: "정치인 거래 리포트: 정치인 거래·정책 리포트 - 2026-02-21. 입법 동향과 의원 포트폴리오를 분석합니다."
-image: "/assets/images/generated/og-daily-political-trades-report-2026-02-21.png"
+image: "/assets/images/generated/news-briefing-political-2026-02-21.png"
 excerpt: "주요 테마: 정치/정책, 매크로/금리, 가격/시장 트럼프 관련 32건의 정책 뉴스가 수집되었습니다. 행정명령 및 관세 정책은 글로벌 시장에 직접적인 영향을 미치고 있습니다."
 image_alt: "정치인 거래·정책 리포트 - 2026-02-21 - political-trades 뉴스 요약 이미지"
 permalink: "/political-trades/2026/02/21/daily-political-trades-report/"

@@ -7,7 +7,7 @@ tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-ban
 keywords: "political-trades, congress, sec, trump, 이재명"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-political-trades-report-2026-03-22.png"
+image: "/assets/images/generated/news-briefing-political-2026-03-22.png"
 excerpt: "2026-03-22 정치인 거래·정책 리포트: 의회 거래 1건, SEC 내부자 9건, 중앙은행 1건, 총 11건 수집"
 permalink: "/political-trades/2026/03/22/daily-political-trades-report/"
 description: "미국 의회 거래 동향에서는 If you can’t beat them, copy them: the investors betting on the U.S. 등이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다."

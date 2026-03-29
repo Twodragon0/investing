@@ -7,7 +7,7 @@ tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-ban
 keywords: "political-trades, congress, sec, trump, 이재명"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-political-trades-report-2026-03-28.png"
+image: "/assets/images/generated/news-briefing-political-2026-03-28.png"
 excerpt: "2026-03-28 정치인 거래·정책 리포트: 의회 거래 2건, SEC 내부자 15건, 한국 정치인 7건, 총 24건 수집"
 permalink: "/political-trades/2026/03/28/daily-political-trades-report/"
 description: "수잔 콜린스(Susan Collins)가 연방 투명성법을 위반하여 NOTUS 작성을 도왔습니다 — 미국 뉴스"

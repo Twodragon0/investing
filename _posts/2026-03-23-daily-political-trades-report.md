@@ -7,7 +7,7 @@ tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-ban
 keywords: "political-trades, congress, sec, trump, 이재명"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-political-trades-report-2026-03-23.png"
+image: "/assets/images/generated/news-briefing-political-2026-03-23.png"
 excerpt: "중앙은행 정책에서는 환율 1500원대 고착에…한은, 금리결정 ‘딜레마’ 대한경제 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다."
 permalink: "/political-trades/2026/03/23/daily-political-trades-report/"
 description: "중앙은행 정책에서는 환율 1500원대 고착에…한은, 금리결정 ‘딜레마’ 대한경제 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다."

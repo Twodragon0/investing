@@ -6,7 +6,7 @@ categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-social-media-digest-2026-03-01.png"
+image: "/assets/images/generated/news-briefing-social-2026-03-01.png"
 description: "2026-03-01 소셜 미디어 27건: PayPal 전 대표 비트코인 결제 시스템 헌신 선언, Blackrock BTC $117M 매도, Trump 포트폴리오 상승 발언. 텔레그램 20건, 정치·경제 7건."
 excerpt: "주요 테마: 비트코인, 매크로/금리, 정치/정책 긴급 알림 없음에 대한 선별 모니터링 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "소셜 미디어 동향 - 2026-03-01 - social-media 뉴스 요약 이미지"

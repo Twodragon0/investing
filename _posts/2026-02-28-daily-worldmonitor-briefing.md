@@ -7,7 +7,7 @@ tags: [worldmonitor, geopolitics, macro, daily-digest]
 source: "worldmonitor"
 source_url: "https://worldmonitor.app"
 lang: "ko"
-image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-02-28.png"
+image: "/assets/images/generated/news-briefing-worldmonitor-2026-02-28.png"
 description: "글로벌 20건 수집. 사회/기타, 지정학/안보, 정책/법률 등 주요 테마 분석. WorldMonitor/Al Jazeera 등 소스 기반 지정학·에너지·금융 동향."
 excerpt: "범위: 글로벌 지정학, 금융시장, 에너지 이슈 주요 출처: WorldMonitor/Al Jazeera (15건), WorldMonitor/Guardian World (5건)"
 image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-02-28 - market-analysis 뉴스 요약 이미지"

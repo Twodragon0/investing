@@ -7,7 +7,7 @@ tags: [market-summary, daily, crypto, stock, macro, top-coins]
 source: "auto-generated"
 lang: "ko"
 description: "일일 시장 종합 리포트 — 시장 전반의 흐름과 크로스에셋 투자 시사점을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
-image: "/assets/images/generated/og-daily-market-report-2026-02-10.png"
+image: "/assets/images/generated/news-briefing-market-2026-02-10.png"
 excerpt: "시장 상태: 보합세 - 뚜렷한 방향성 없이 횡보 구간 지속 BTC 도미넌스: 매우 낮은 수준 (0.0%) 알트코인으로 자금 이동 활발 → 알트 시즌 진입 가능성 주목"
 image_alt: "일일 시장 종합 리포트 - 2026-02-10 - market-analysis 뉴스 요약 이미지"
 permalink: "/market-analysis/2026/02/10/daily-market-report/"

@@ -6,7 +6,7 @@ categories: [market-analysis]
 tags: ["일일요약", "암호화폐", "주식", "규제", "소셜미디어", "보안", "정치인거래", "월드모니터"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-news-summary-2026-03-09.png"
+image: "/assets/images/generated/news-briefing-summary-2026-03-09.png"
 description: "2026-03-09 암호화폐 79건, 주식 186건, 규제 24건, 소셜 미디어 40건, 월드모니터 20건 등 총 349건의 뉴스를 종합 분석한 일일 투자 요약입니다."
 excerpt: "암호화폐 79건, 주식 186건, 규제 24건, 소셜 미디어 40건, 월드모니터 20건의 뉴스를 종합 분석한 일일 요약"
 image_alt: "일일 뉴스 종합 요약 - 2026-03-09 - market-analysis 뉴스 요약 이미지"

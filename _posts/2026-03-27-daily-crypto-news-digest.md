@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-27.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-03-27.png"
 permalink: "/crypto-news/2026/03/27/daily-crypto-news-digest/"
 description: "비트코인 (56건): 비트코인, 채굴 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요. 가격/시장 (33건): 달러, 암호화폐, 이란 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요."
 excerpt: "비트코인 (56건): 비트코인, 채굴 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요. 가격/시장 (33건): 달러, 암호화폐, 이란 시장 흐름이 활발하며,…"

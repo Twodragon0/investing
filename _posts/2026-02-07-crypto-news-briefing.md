@@ -7,7 +7,7 @@ tags: [뉴스, 암호화폐, 블록체인, 시장분석, 규제]
 source: "Crypto Monitoring System"
 lang: ko
 description: "오늘의 암호화폐 브리핑: 암호화폐 뉴스 브리핑 - 2026년 02월 07일. 시세 변동과 온체인 데이터를 분석합니다."
-image: "/assets/images/generated/og-crypto-news-briefing-2026-02-07.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-02-07.png"
 excerpt: "전략비축은 쌀 때 사는 것'트럼프는 왜 비트코인을 안 사나? - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "암호화폐 뉴스 브리핑 - 2026년 02월 07일 - crypto-news 뉴스 요약 이미지"
 permalink: "/crypto-news/2026/02/07/crypto-news-briefing/"

@@ -6,7 +6,7 @@ categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-social-media-digest-2026-02-27.png"
+image: "/assets/images/generated/news-briefing-social-2026-02-27.png"
 description: "2026-02-27 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 소셜 미디어 1건, 정치·경제 30건, 총 51건이 수집되었습니다."
 excerpt: "주요 테마: 매크로/금리, 정치/정책, 비트코인 긴급 알림 없음에 대한 선별 모니터링 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "소셜 미디어 동향 - 2026-02-27 - social-media 뉴스 요약 이미지"

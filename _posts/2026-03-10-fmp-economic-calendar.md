@@ -7,7 +7,7 @@ tags: ["market-analysis", "economic-calendar", "earnings", "fmp"]
 keywords: "market-analysis, economic-calendar, earnings, fmp"
 source: "fmp"
 lang: "ko"
-image: "/assets/images/generated/og-fmp-economic-calendar-2026-03-10.png"
+image: "/assets/images/generated/news-briefing-calendar-2026-03-10.png"
 description: "2026-03-10 기준 주요 시장 지수 2종, 섹터 11개, 경제 이벤트 19건(고·중간 중요도), 대형주 실적 발표 4건을 수집했습니다."
 excerpt: "2026-03-10 기준 주요 시장 지수 2종, 섹터 11개, 경제 이벤트 19건(고·중간 중요도), 대형주 실적 발표 4건을 수집했습니다 - Investing Dragon…"
 image_alt: "주요 경제 캘린더 및 실적 일정 (2026-03-10) - market-analysis 뉴스 요약 이미지"

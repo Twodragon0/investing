@@ -7,7 +7,7 @@ tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
 description: "규제 동향 브리핑: 글로벌 규제 동향 리포트 - 2026-02-13. 각국 규제 기관의 최신 결정을 분석합니다."
-image: "/assets/images/generated/og-daily-regulatory-report-2026-02-13.png"
+image: "/assets/images/generated/news-briefing-regulatory-2026-02-13.png"
 excerpt: "규제/정책 ████████████░░░░░░ 70% (21건) 거래소 ████░░░░░░░░░░░░░░ 23% (7건) - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "글로벌 규제 동향 리포트 - 2026-02-13 - regulatory-news 뉴스 요약 이미지"
 permalink: "/regulatory-news/2026/02/13/daily-regulatory-report/"

@@ -6,7 +6,7 @@ categories: [social-media]
 tags: [social-media, telegram, twitter, reddit, politics, trump, 이재명, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-social-media-digest-2026-02-20.png"
+image: "/assets/images/generated/news-briefing-social-2026-02-20.png"
 description: "오늘 수집된 총 0건 중 텔레그램 0건, 소셜 0건, 정치·경제 0건으로 주요 이슈를 정리했습니다."
 excerpt: "긴급 알림 없음에 대한 선별 모니터링 글로벌 금리 정책 관련 소셜 미디어 논의가 지배적입니다 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "소셜 미디어 동향 - 2026-02-20 - social-media 뉴스 요약 이미지"

@@ -7,7 +7,7 @@ tags: [보안, 블록체인, 해킹, 스마트컨트랙트, DeFi]
 source: "Crypto Monitoring System"
 lang: ko
 description: "블록체인 보안 리포트 - 2026년 02월 07일 — 사이버 보안 위협과 취약점 대응 현황을 정리합니다 - Investing Dragon 자동 수집 분석 리포트."
-image: "/assets/images/generated/og-blockchain-security-report-2026-02-07.png"
+image: "/assets/images/generated/news-briefing-security-2026-02-07.png"
 excerpt: "스마트 컨트랙트 보안 동향: 최신 보안 패턴과 위협 요소들을 살펴봅니다. 총 수집된 보안 사고: 10건 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "블록체인 보안 리포트 - 2026년 02월 07일 - security-alerts 뉴스 요약 이미지"
 permalink: "/security-alerts/2026/02/07/blockchain-security-report/"

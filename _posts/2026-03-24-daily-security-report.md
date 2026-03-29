@@ -7,7 +7,7 @@ tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-security-report-2026-03-24.png"
+image: "/assets/images/generated/news-briefing-security-2026-03-24.png"
 permalink: "/security-alerts/2026/03/24/daily-security-report/"
 description: "블록체인 보안 관련 뉴스 2건을 정리합니다. 1. 돈이 없어도 암호화폐 해킹이 끝나지 않고 계속되는 이유 - CryptoRank 돈이 없어도 암호화폐 해킹이 끝나지 않고 계속되는 이유 CryptoRank"
 excerpt: "블록체인 보안 관련 뉴스 2건을 정리합니다. 1. 돈이 없어도 암호화폐 해킹이 끝나지 않고 계속되는 이유 - CryptoRank 돈이 없어도 암호화폐 해킹이 끝나지 않고…"

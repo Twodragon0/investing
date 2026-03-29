@@ -7,7 +7,7 @@ tags: ["stock", "market", "daily-digest"]
 keywords: "stock, market, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-10.png"
+image: "/assets/images/generated/news-briefing-stock-2026-03-10.png"
 description: "2026-03-10 주식 시장에서 234건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,526.01(+5.66%), KOSDAQ 1,142.15(+4.03%), USD/KRW 1,470.08(+0.57%)."
 excerpt: "KOSPI 5,526.01 (+5.66%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다. KOSDAQ 1,142.15…"
 image_alt: "주식 시장 뉴스 종합 - 2026-03-10 - stock-news 뉴스 요약 이미지"

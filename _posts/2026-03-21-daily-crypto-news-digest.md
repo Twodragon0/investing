@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-21.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-03-21.png"
 permalink: "/crypto-news/2026/03/21/daily-crypto-news-digest/"
 description: "오늘의 암호화폐 브리핑: 암호화폐 뉴스 브리핑 - 2026-03-21. 시세 변동과 온체인 데이터를 분석합니다."
 excerpt: "2026-03-21 암호화폐 시장에서 100건의 뉴스를 분석했습니다. 오늘은 - Investing Dragon 자동 수집 분석 리포트."

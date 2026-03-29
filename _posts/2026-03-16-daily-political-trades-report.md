@@ -7,7 +7,7 @@ tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-ban
 keywords: "political-trades, congress, sec, trump, 이재명"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-political-trades-report-2026-03-16.png"
+image: "/assets/images/generated/news-briefing-political-2026-03-16.png"
 excerpt: "미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다 - Investing Dragon 자동 수집 분석 리포트."
 permalink: "/political-trades/2026/03/16/daily-political-trades-report/"
 description: "정치인 거래 리포트: 정치인 거래·정책 리포트 - 2026-03-16. 입법 동향과 의원 포트폴리오를 분석합니다."

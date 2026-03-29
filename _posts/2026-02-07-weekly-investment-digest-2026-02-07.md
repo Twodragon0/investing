@@ -7,7 +7,7 @@ tags: [weekly-digest, summary, market-analysis]
 source: "auto-generated"
 lang: "ko"
 description: "주간 투자 다이제스트 - 2026년 02월 07일 — 시장 전반의 흐름과 크로스에셋 투자 시사점을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
-image: "/assets/images/generated/og-weekly-investment-digest-2026-02-07-2026-02-07.png"
+image: "/assets/images/generated/news-summary-weekly-2026-02-07.png"
 excerpt: "이번 주 (01월 31일 02월 07일) 투자 관련 뉴스와 시장 분석을 종합 정리합니다. - 총 포스트 수: 8건 - 카테고리: 4개 - 기간: 01월 31일 02월 07일"
 image_alt: "주간 투자 다이제스트 - 2026년 02월 07일 - market-analysis 뉴스 요약 이미지"
 permalink: "/market-analysis/2026/02/07/weekly-investment-digest-2026-02-07/"

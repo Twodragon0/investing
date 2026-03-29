@@ -7,7 +7,7 @@ tags: ["stock", "market", "daily-digest"]
 keywords: "stock, market, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-26.png"
+image: "/assets/images/generated/news-briefing-stock-2026-03-26.png"
 permalink: "/stock-news/2026/03/26/daily-stock-news-digest/"
 description: "가격/시장 (38건): 코스피, 코스닥, 출발 가격 변동 (38건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요. AI/기술 (15건): 옵션, 엔비디아, 반도체 기술 이슈 (15건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요."
 excerpt: "가격/시장 (38건): 코스피, 코스닥, 출발 가격 변동 (38건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요. AI/기술 (15건): 옵션, 엔비디아, 반도체…"

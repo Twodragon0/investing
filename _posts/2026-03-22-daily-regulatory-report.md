@@ -7,7 +7,7 @@ tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 keywords: "regulation, sec, cftc, fsc, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-regulatory-report-2026-03-22.png"
+image: "/assets/images/generated/news-briefing-regulatory-2026-03-22.png"
 permalink: "/regulatory-news/2026/03/22/daily-regulatory-report/"
 description: "글로벌 규제 동향 리포트. 규제 환경 변화가 투자 전략에 미칠 영향을 점검합니다 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "규제/정책 (7건): 제하, 기사, 제도개선 이슈가 시장 구조 변화의 신호일 수 있어 심층 분석이 권장됩니다 - Investing Dragon 자동 수집 분석 리포트."

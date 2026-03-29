@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-20.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-03-20.png"
 permalink: "/crypto-news/2026/03/20/daily-crypto-news-digest/"
 description: "2026-03-20 암호화폐 시장에서 102건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 매크로/금리 관련 소식이 주목됩니다. 긴급: 비상 선언법으로 인디애나주에서 암호화폐 ATM 사용 중단 — 약 800대 제외"
 excerpt: "2026-03-20 암호화폐 시장에서 102건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 매크로/금리 관련 소식이 주목됩니다. 긴급: 비상 선언법으로 인디애나주에서…"

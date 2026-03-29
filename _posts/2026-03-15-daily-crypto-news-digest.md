@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-15.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-03-15.png"
 description: "2026-03-15 암호화폐 시장에서 97건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 규제/정책 관련 소식이 주목됩니다. 리스크 수준 [ELEVATED]: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요."
 excerpt: "2026-03-15 암호화폐 시장에서 97건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 규제/정책 관련 소식이 주목됩니다. 리스크 수준 [ELEVATED]: 주요…"
 image_alt: "암호화폐 뉴스 브리핑 - 2026-03-15 - crypto-news 뉴스 요약 이미지"

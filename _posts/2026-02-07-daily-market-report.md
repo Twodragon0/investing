@@ -7,7 +7,7 @@ tags: [market-summary, daily, crypto, stock, macro, top-coins]
 source: "auto-generated"
 lang: "ko"
 description: "극도의 공포 장세: 공포/탐욕 지수 6으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수 기회로 평가됩니다."
-image: "/assets/images/generated/og-daily-market-report-2026-02-07.png"
+image: "/assets/images/generated/news-briefing-market-2026-02-07.png"
 excerpt: "극도의 공포 장세: 공포/탐욕 지수 6으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 612개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수…"
 image_alt: "일일 시장 종합 리포트 - 2026-02-07 - market-analysis 뉴스 요약 이미지"
 permalink: "/market-analysis/2026/02/07/daily-market-report/"

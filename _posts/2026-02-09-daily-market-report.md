@@ -7,7 +7,7 @@ tags: [market-summary, daily, crypto, stock, macro, top-coins]
 source: "auto-generated"
 lang: "ko"
 description: "암호화폐 시장이 하락세를 보이고 있습니다. 단기 조정 가능성을 염두에 두고 리스크 관리가 필요합니다."
-image: "/assets/images/generated/og-daily-market-report-2026-02-09.png"
+image: "/assets/images/generated/news-briefing-market-2026-02-09.png"
 excerpt: "Hyperliquid (+1.15%), 가장 큰 하락은 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "일일 시장 종합 리포트 - 2026-02-09 - market-analysis 뉴스 요약 이미지"
 permalink: "/market-analysis/2026/02/09/daily-market-report/"

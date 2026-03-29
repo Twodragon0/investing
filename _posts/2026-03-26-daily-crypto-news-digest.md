@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-26.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-03-26.png"
 permalink: "/crypto-news/2026/03/26/daily-crypto-news-digest/"
 description: "비트코인 (39건): 비트코인, 속보, 스테이블코인 관련 (39건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다. 가격/시장 (23건): 암호화폐, BTC, 속보 가격 변동 (23건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요."
 excerpt: "비트코인 (39건): 비트코인, 속보, 스테이블코인 관련 (39건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다. 가격/시장 (23건): 암호화폐, BTC, 속보 가격…"

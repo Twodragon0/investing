@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-17.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-03-17.png"
 permalink: "/crypto-news/2026/03/17/daily-crypto-news-digest/"
 description: "2026-03-17 암호화폐 시장에서 101건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 이더리움 관련 소식이 주목됩니다. 긴급: 암호화폐 회사 블록필, 거래 일시 중단 후 파산 파일 제출"
 excerpt: "2026-03-17 암호화폐 시장에서 101건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 이더리움 관련 소식이 주목됩니다. 긴급: 암호화폐 회사 블록필, 거래 일시…"

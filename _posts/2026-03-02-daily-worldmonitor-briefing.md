@@ -7,7 +7,7 @@ tags: ["worldmonitor", "geopolitics", "macro", "daily-digest"]
 source: "worldmonitor"
 source_url: "https://worldmonitor.app"
 lang: "ko"
-image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-03-02.png"
+image: "/assets/images/generated/news-briefing-worldmonitor-2026-03-02.png"
 description: "2026-03-02 WorldMonitor 글로벌 브리핑 20건: 지정학/안보 100%(이란 보복 전면전 확대, 하메네이 사망 여파). Al Jazeera 15건, CNBC 5건. 호르무즈 해협 위기 집중."
 excerpt: "범위: 글로벌 지정학, 금융시장, 에너지 이슈 주요 출처: WorldMonitor/Al Jazeera (15건), WorldMonitor/CNBC (5건)"
 image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-03-02 - market-analysis 뉴스 요약 이미지"

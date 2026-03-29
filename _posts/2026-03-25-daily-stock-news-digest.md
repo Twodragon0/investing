@@ -7,7 +7,7 @@ tags: ["stock", "market", "daily-digest"]
 keywords: "stock, market, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-25.png"
+image: "/assets/images/generated/news-briefing-stock-2026-03-25.png"
 permalink: "/stock-news/2026/03/25/daily-stock-news-digest/"
 description: "긴급: 1% 초고수, ‘급락’ 하이닉스·삼성전자 집중 매수 [주식 초고수는 지금] - 서울경제신문 외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 187건의 뉴스 중 P1 주요 이슈도 26건 확인됩니다."
 excerpt: "긴급: 1% 초고수, ‘급락’ 하이닉스·삼성전자 집중 매수 [주식 초고수는 지금] - 서울경제신문 외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 187건의 뉴스 중 P1…"

@@ -6,7 +6,7 @@ categories: [social-media]
 tags: ["social-media", "telegram", "twitter", "reddit", "politics", "trump", "이재명", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-social-media-digest-2026-03-04.png"
+image: "/assets/images/generated/news-briefing-social-2026-03-04.png"
 description: "2026-03-04 소셜 미디어 37건: Cathie Wood 비트코인이 금보다 확실히 낫다 발언(인플레·디플레 헤지), 이재명 싱가포르 경제협력, 텔레그램 20건·정치·경제 17건 수집."
 excerpt: "주요 테마: 정치/정책, 비트코인, 매크로/금리 긴급 알림 1건에 대한 선별 모니터링 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "소셜 미디어 동향 - 2026-03-04 - social-media 뉴스 요약 이미지"

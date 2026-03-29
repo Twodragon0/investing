@@ -7,7 +7,7 @@ tags: ["market-analysis", "economic-calendar", "earnings", "treasury", "ipo", "f
 keywords: "market-analysis, economic-calendar, earnings, treasury, ipo"
 source: "fmp"
 lang: "ko"
-image: "/assets/images/generated/og-fmp-economic-calendar-2026-03-23.png"
+image: "/assets/images/generated/news-briefing-calendar-2026-03-23.png"
 permalink: "/market-analysis/2026/03/23/fmp-economic-calendar/"
 description: "주요 경제 캘린더 및 실적 일정: 2026-03-23 기준 핵심 경제 이벤트, 국채 금리, 실적 발표와 IPO 일정을 함께 정리했습니다."
 excerpt: "핵심 경제 이벤트, 국채 금리, 실적 발표와 IPO 일정을 함께 정리한 2026-03-23 경제 캘린더 브리핑입니다."

@@ -7,7 +7,7 @@ tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 keywords: "regulation, sec, cftc, fsc, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-regulatory-report-2026-03-27.png"
+image: "/assets/images/generated/news-briefing-regulatory-2026-03-27.png"
 permalink: "/regulatory-news/2026/03/27/daily-regulatory-report/"
 description: "규제/정책 (8건): 제하, 기사, 규제 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요. 거래소 (3건): 우선배정, 중복상장, 쪼개기 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다."
 excerpt: "규제/정책 (8건): 제하, 기사, 규제 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요. 거래소 (3건): 우선배정, 중복상장, 쪼개기 흐름이 두드러지며, 추세…"

@@ -7,7 +7,7 @@ tags: ["market-report", "crypto", "top-coins", "trending", "daily"]
 source: "CoinMarketCap"
 source_url: "https://coinmarketcap.com/"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-market-report-2026-03-03.png"
+image: "/assets/images/generated/news-briefing-cryptomarket-2026-03-03.png"
 description: "오늘 시가총액 상위 30개 코인을 기준으로 시장을 분석했습니다. 비트코인은 $68,352에서 24시간 +2.72% 상승하며 투자 심리 회복을 견인하고 있습니다. 전체 시가총액은 $2.42T으로 전일 대비 +1.73% 변동했으며, BTC 도미넌스 56.6%로 비트코인 중심 자금 흐름이…"
 excerpt: "24시간 변동 +1.73%로 완만한 상승세입니다. 주요 저항선 돌파 여부에 따라 추가 상승 탄력이 결정됩니다. 24시간 변동 +1.73%로 완만한 상승세입니다. 주요 저항선…"
 image_alt: "암호화폐 시장 종합 리포트 - 2026-03-03 - market-analysis 뉴스 요약 이미지"

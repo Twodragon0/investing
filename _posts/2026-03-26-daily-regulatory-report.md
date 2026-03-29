@@ -7,7 +7,7 @@ tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 keywords: "regulation, sec, cftc, fsc, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-regulatory-report-2026-03-26.png"
+image: "/assets/images/generated/news-briefing-regulatory-2026-03-26.png"
 permalink: "/regulatory-news/2026/03/26/daily-regulatory-report/"
 description: "규제/정책 (6건): 스테이블코인, 규제 규제 움직임 (6건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다. 거래소 (1건): 금융당국, 가상자산, 넘으면 관련 불확실성이 커지고 있어 리스크 관리에 유의하세요."
 excerpt: "규제/정책 (6건): 스테이블코인, 규제 규제 움직임 (6건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다. 거래소 (1건): 금융당국, 가상자산, 넘으면 관련…"

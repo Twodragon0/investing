@@ -28,7 +28,7 @@ journal_trading_mode: "mixed"
 description: "3월 16일 주식 트레이딩 일지입니다. 반도체 실전 매매와 바이오 모의투자 이벤트 전략 검증을 병행한 기록입니다."
 excerpt: "이 일지는 실전 매매와 모의투자를 구분하여 기록합니다 - Investing Dragon 자동 수집 분석 리포트."
 permalink: "/stock-journal/2026/03/16/stock-trading-journal/"
-image: "/assets/images/generated/og-stock-trading-journal-2026-03-16.png"
+image: "/assets/images/generated/news-briefing-stock-trading-journal-2026-03-16.png"
 image_alt: "Stock trading journal visual board for March 16, 2026"
 ---
 

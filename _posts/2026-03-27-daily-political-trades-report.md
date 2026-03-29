@@ -7,7 +7,7 @@ tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-ban
 keywords: "political-trades, congress, sec, trump, 이재명"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-political-trades-report-2026-03-27.png"
+image: "/assets/images/generated/news-briefing-political-2026-03-27.png"
 excerpt: "2026-03-27 정치인 거래·정책 리포트: 의회 거래 3건, SEC 내부자 11건, 한국 정치인 24건, 중앙은행 1건, 총 39건 수집"
 permalink: "/political-trades/2026/03/27/daily-political-trades-report/"
 description: "미국 의회 거래 동향에서는 트럼프 연루로 혼란 가중되는 가운데, 미국 입법자들 증권 토큰화 탐구 CoinDesk 등이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다."

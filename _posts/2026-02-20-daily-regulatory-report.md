@@ -6,7 +6,7 @@ categories: [regulatory-news]
 tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-regulatory-report-2026-02-20.png"
+image: "/assets/images/generated/news-briefing-regulatory-2026-02-20.png"
 description: "규제 동향 브리핑: 글로벌 규제 동향 리포트 - 2026-02-20. 각국 규제 기관의 최신 결정을 분석합니다."
 excerpt: "주요 테마: 규제/정책, 거래소 - SEC(미국증권거래위원회): 펀드 포트폴리오 보유 보고 부담 완화를 위한 개정안을 제안했습니다. 기관 투자자들의 보고 의무가 간소화될…"
 image_alt: "글로벌 규제 동향 리포트 - 2026-02-20 - regulatory-news 뉴스 요약 이미지"

@@ -7,7 +7,7 @@ tags: ["market-analysis", "economic-calendar", "earnings", "treasury", "ipo", "f
 keywords: "market-analysis, economic-calendar, earnings, treasury, ipo"
 source: "fmp"
 lang: "ko"
-image: "/assets/images/generated/og-fmp-economic-calendar-2026-03-13.png"
+image: "/assets/images/generated/news-briefing-calendar-2026-03-13.png"
 description: "[HIGH] VIX 27.29 (+12.63%) 급등 - S&P500 -1.52% 하락. 경제 이벤트 20건(고·중간 중요도), 실적 발표 2건, IPO 10건. 변동성 확대 구간 진입, 리스크 관리 필요"
 excerpt: "[HIGH] VIX 27.29 (+12.63%) 급등, S&P500 -1.52% 하락. 경제 이벤트 20건, 변동성 확대 구간 진입, 리스크 관리 필요"
 image_alt: "주요 경제 캘린더 및 실적 일정 (2026-03-13) - 시장 분석 뉴스 요약 이미지"

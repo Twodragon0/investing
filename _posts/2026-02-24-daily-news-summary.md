@@ -6,7 +6,7 @@ categories: [market-analysis]
 tags: [일일요약, 암호화폐, 주식, 규제, 소셜미디어, 보안, 정치인거래, 월드모니터]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-news-summary-2026-02-24.png"
+image: "/assets/images/generated/news-briefing-summary-2026-02-24.png"
 description: "일일 뉴스 종합 요약 — 시장 전반의 흐름과 크로스에셋 투자 시사점을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "주요 테마: 정책/규제, 환율/달러, 금리/유동성 암호화폐: 113건. 핵심 테마는 비트코인(53), 가격/시장(27), 거래소(13)이며 변동성 확대 헤드라인이 우세합니다."
 image_alt: "일일 뉴스 종합 요약 - 2026-02-24 - market-analysis 뉴스 요약 이미지"

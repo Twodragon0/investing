@@ -6,7 +6,7 @@ categories: [stock-news]
 tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-stock-news-digest-2026-02-22.png"
+image: "/assets/images/generated/news-briefing-stock-2026-02-22.png"
 description: "2026-02-22 주식 시장에서 131건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,808.53(+2.31%), KOSDAQ 1,154.00(-0.58%), USD/KRW 1,447.75(-0.05%)."
 excerpt: "한국 증시는 KOSPI 5,808.53 (+2.31%)으로 마감했습니다. 원달러 환율은 1,447.75원으로, 환율 변동이 외국인 투자 심리에 영향을 줄 수 있습니다."
 image_alt: "주식 시장 뉴스 종합 - 2026-02-22 - stock-news 뉴스 요약 이미지"
