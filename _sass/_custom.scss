@@ -1,6 +1,7 @@
 @use "variables" as *;
 
-/* Google Fonts loaded via <link> in default.html for performance */
+/* 셀프호스팅 웹폰트 (Google Fonts 외부 요청 제거) */
+@use "fonts";
 
 /* Component imports */
 @use "components/layout";
