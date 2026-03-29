@@ -7,7 +7,7 @@ tags: [security, hack, blockchain, daily-digest]
 source: "consolidated"
 lang: "ko"
 description: "해커, Matcha Meta 사용자로부터 1,350만 달러 탈취 — 보안 사고 공식 인정 - dlnews.com"
-image: "/assets/images/generated/news-briefing-security-2026-02-11.png"
+image: "/assets/images/generated/og-daily-security-report-2026-02-11.png"
 excerpt: "해커, Matcha Meta 사용자로부터 1,350만 달러 탈취 — 보안 사고 공식 인정 - dlnews.com - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "블록체인 보안 리포트 - 2026-02-11 - security-alerts 뉴스 요약 이미지"
 permalink: "/security-alerts/2026/02/11/daily-security-report/"
