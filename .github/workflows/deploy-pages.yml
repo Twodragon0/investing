@@ -48,10 +48,25 @@ jobs:
         id: pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d  # v6.0.0
 
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020  # v4
+        with:
+          node-version: '20'
+
       - name: Build with Jekyll
         run: bundle exec jekyll build --config _config.yml,_config_ghpages.yml
         env:
           JEKYLL_ENV: production
+
+      - name: PurgeCSS  # 미사용 CSS 제거 (실패해도 빌드 계속)
+        continue-on-error: true
+        run: |
+          npx --yes purgecss \
+            --config purgecss.config.js \
+            --css '_site/**/*.css' \
+            --output _site/assets/css/ \
+          && echo "PurgeCSS 완료" \
+          || echo "[경고] PurgeCSS 실패 — 원본 CSS 유지"
 
       - name: Rendered markdown smoke test
         run: python3 scripts/verify_rendered_posts.py
