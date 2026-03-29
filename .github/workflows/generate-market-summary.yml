@@ -21,7 +21,7 @@ jobs:
       CMC_API_KEY: ${{ secrets.CMC_API_KEY }}
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 1
@@ -55,10 +55,10 @@ jobs:
 
       - name: Post market summary notification to Slack
         if: steps.slack.outputs.can_post == 'true'
-        uses: slackapi/slack-github-action@af78098f536edbc4de71162a307590698245be95 # v3.0.1
+        uses: slackapi/slack-github-action@af78098f536edbc4de71162a307590698245be95  # v3.0.1
         with:
           method: chat.postMessage
           token: ${{ steps.slack.outputs.token }}
           payload: |
             channel: "${{ steps.slack.outputs.channel }}"
-            text: ":chart_with_upwards_trend: *Daily Market Summary* generated (run #${{ github.run_number }}) — https://investing.2twodragon.com/market-analysis/"
+            text: ":chart_with_upwards_trend: *Daily Market Summary* generated (run  #${{ github.run_number }}) — https://investing.2twodragon.com/market-analysis/"

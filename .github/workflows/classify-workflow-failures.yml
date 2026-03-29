@@ -41,7 +41,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
 
       - name: Classify failure type
         id: classify
@@ -133,7 +133,7 @@ jobs:
 
       - name: Create issue for code failures
         if: steps.classify_final.outputs.final_classification == 'code' && steps.rerun.outputs.rerun != 'true'
-        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd  # v8
         env:
           EVIDENCE_SNIPPET: ${{ steps.classify.outputs.evidence_snippet }}
           RAW_CLASSIFICATION: ${{ steps.classify.outputs.classification }}
@@ -144,7 +144,7 @@ jobs:
             const run = context.payload.workflow_run;
             const headSha = (run.head_sha || '').slice(0, 12);
             const dedupeKey = `workflow=${run.name}|run=${run.run_number}|sha=${headSha}`;
-            const title = `CI code failure: ${run.name} #${run.run_number} (${headSha || 'no-sha'})`;
+            const title = `CI code failure: ${run.name}  #${run.run_number} (${headSha || 'no-sha'})`;
             const evidence = process.env.EVIDENCE_SNIPPET || 'no evidence captured';
             const body = [
               '## Automated failure classification',
@@ -207,14 +207,14 @@ jobs:
 
       - name: Post classified failure to Slack
         if: steps.slack.outputs.can_post == 'true'
-        uses: slackapi/slack-github-action@af78098f536edbc4de71162a307590698245be95 # v3.0.1
+        uses: slackapi/slack-github-action@af78098f536edbc4de71162a307590698245be95  # v3.0.1
         with:
           method: chat.postMessage
           token: ${{ steps.slack.outputs.token }}
           payload: |
             channel: "${{ steps.slack.outputs.channel }}"
             text: |
-              :rotating_light: *CI Failure: ${{ github.event.workflow_run.name }}* #${{ github.event.workflow_run.run_number }}
+              :rotating_light: *CI Failure: ${{ github.event.workflow_run.name }}*  #${{ github.event.workflow_run.run_number }}
               • Classification: `${{ steps.classify_final.outputs.final_classification }}` (raw: `${{ steps.classify.outputs.classification }}`)
               • Escalated: ${{ steps.classify_final.outputs.escalated }}  |  Retried: ${{ steps.rerun.outputs.rerun || 'false' }}
               • Run: ${{ github.event.workflow_run.html_url }}
