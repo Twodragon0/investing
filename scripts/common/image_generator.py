@@ -794,6 +794,8 @@ def _save_and_close(fig, filepath, *, bg=None):
     _optimize_png(filepath)
     # Generate WebP alongside PNG for faster page loads
     _convert_to_webp(filepath)
+    # Generate AVIF alongside PNG for maximum compression (graceful degradation)
+    _convert_to_avif(filepath)
 
 
 def _optimize_png(png_path: str) -> None:
@@ -833,6 +835,36 @@ def _convert_to_webp(png_path: str, quality: int = 88) -> Optional[str]:
         logger.debug("Pillow not available for WebP conversion")
     except Exception as exc:
         logger.debug("WebP conversion failed for %s: %s", png_path, exc)
+    return None
+
+
+def _convert_to_avif(png_path: str, quality: int = 50) -> Optional[str]:
+    """Convert a PNG image to AVIF format for smaller file sizes.
+
+    Returns the AVIF file path on success, None on failure.
+    AVIF 저장 실패 시 경고만 출력하고 에러는 발생시키지 않음.
+    """
+    try:
+        from PIL import Image
+
+        avif_path = os.path.splitext(png_path)[0] + ".avif"
+        with Image.open(png_path) as img:
+            img.save(avif_path, "AVIF", quality=quality)
+        png_size = os.path.getsize(png_path)
+        avif_size = os.path.getsize(avif_path)
+        savings = (1 - avif_size / png_size) * 100 if png_size > 0 else 0
+        logger.info(
+            "AVIF: %s (%.0f%% smaller: %dKB → %dKB)",
+            os.path.basename(avif_path),
+            savings,
+            png_size // 1024,
+            avif_size // 1024,
+        )
+        return avif_path
+    except ImportError:
+        logger.debug("Pillow not available for AVIF conversion")
+    except Exception as exc:
+        logger.warning("AVIF conversion failed for %s: %s", os.path.basename(png_path), exc)
     return None
 
 
@@ -3233,6 +3265,7 @@ def generate_category_og_image(
     )
     plt.close(fig)
     _convert_to_webp(filepath)
+    _convert_to_avif(filepath)
 
     logger.info("Generated category OG image: %s", filename)
     return f"/assets/images/{filename}"
