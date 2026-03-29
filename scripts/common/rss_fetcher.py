@@ -206,7 +206,8 @@ def fetch_rss_feed(
                 original_url = ""
                 source_el = entry.find("source")
                 if source_el and source_el.get("url"):
-                    candidate_orig = source_el["url"].strip()
+                    raw_url = source_el["url"]
+                    candidate_orig = str(raw_url).strip()
                     if candidate_orig and is_safe_url(candidate_orig):
                         original_url = candidate_orig
 
