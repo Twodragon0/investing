@@ -7,7 +7,7 @@ tags: ["market-summary", "daily", "crypto", "stock", "macro", "top-coins", "quan
 keywords: "market-summary, daily, crypto, stock, macro"
 source: "auto-generated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-market-report-2026-03-29.png"
+image: "/assets/images/generated/news-briefing-market-2026-03-29.png"
 permalink: "/market-analysis/2026/03/29/daily-market-report/"
 description: "2026-03-29 시장 종합:. KOSPI 5,438.87(-0.40%). BTC $67,000(+1.7%). 공포탐욕지수 12(Extreme Fear). 시총 24h +1.5%."
 excerpt: "극도의 공포 장세: 공포/탐욕 지수 12으로 Extreme Fear 구간 진입 - Investing Dragon 자동 수집 분석 리포트."

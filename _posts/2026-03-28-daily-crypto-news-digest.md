@@ -12,7 +12,7 @@ permalink: "/crypto-news/2026/03/28/daily-crypto-news-digest/"
 description_ko: "크립토 뉴스 108건 수집. 주요 출처: Binance, CoinDesk, Decrypt. CryptoPanic·CoinGecko·거래소 RSS 기반 암호화폐 시장 동향을 정리합니다."
 excerpt: "🟠 비트코인 (49건): 비트코인, 암호화폐, 보유자들 관련 (49건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다. 🏦 거래소 (25건): 선물 관련 불확실성이 커지고…"
 image_alt: "암호화폐 뉴스 브리핑 - 2026-03-28 - 암호화폐 뉴스 요약 이미지"
-description: "오늘의 암호화폐 브리핑: 암호화폐 뉴스 브리핑. 크립토 시장 심리와 자금 흐름을 점검합니다 - Investing Dragon 자동 수집 분석 리포트."
+description: "크립토 뉴스 108건 수집. 주요 출처: Binance, CoinDesk, Decrypt. CryptoPanic·CoinGecko·거래소 RSS 기반 암호화폐 시장 동향을 정리합니다."
 ---
 
 **2026-03-28** 암호화폐 시장에서 108건의 뉴스를 분석했습니다. 오늘은 **비트코인, 거래소, 가격/시장** 관련 소식이 주목됩니다.

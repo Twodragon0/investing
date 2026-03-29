@@ -13,7 +13,7 @@ permalink: "/market-analysis/2026/03/28/daily-worldmonitor-briefing/"
 description_ko: "글로벌 이슈 20건 수집. 주요 테마: 사회/기타, 지정학/안보, 에너지. 출처 2개에서 지정학·에너지·금융 동향을 모니터링합니다."
 excerpt: "2026-03-28 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다"
 image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-03-28 - 시장 분석 뉴스 요약 이미지"
-description: "시장 분석 브리핑: WorldMonitor 글로벌 인텔리전스 브리핑. 주요 자산군의 상관관계와 방향성을 점검합니다 - Investing Dragon 자동 수집 분석 리포트."
+description: "글로벌 20건 수집. 사회/기타, 지정학/안보, 에너지 등 주요 테마 분석. WorldMonitor/Al Jazeera 등 소스 기반 지정학·에너지·금융 동향."
 ---
 
 **2026-03-28** 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다.

@@ -7,7 +7,7 @@ tags: ["weekly-digest", "summary", "market-analysis"]
 keywords: "weekly-digest, summary, market-analysis"
 source: "auto-generated"
 lang: "ko"
-image: "/assets/images/generated/og-weekly-investment-digest-2026-03-29-2026-03-29.png"
+image: "/assets/images/generated/news-summary-weekly-2026-03-29.png"
 description: "BTC $66,985 극도의 공포(12) 구간 진입, KOSPI 5,438(-0.40%), 99건 포스트 종합. 암호화폐·주식·지정학 주간 핵심 동향 분석."
 excerpt: "BTC $66,985 극도의 공포(12) 구간 진입, KOSPI 5,438(-0.40%), 99건 포스트 종합. 암호화폐·주식·지정학 주간 핵심 동향 분석."
 image_alt: "주간 투자 다이제스트 - 2026년 03월 29일 - 시장 분석 뉴스 요약 이미지"
