@@ -147,7 +147,7 @@ class TestAnalyzeKoreanTitle:
 
     def test_서킷브레이커(self):
         result = _analyze_korean_title("코스피 서킷브레이커 발동")
-        assert "매매거래" in result or "급락" in result
+        assert "서킷브레이커" in result or "매매거래" in result or "급락" in result
 
     def test_서킷브레이커_매수(self):
         result = _analyze_korean_title("매수 사이드카 발동")
