@@ -1,4 +1,5 @@
 <style>
+  @font-face { font-family: 'Noto Sans KR'; font-display: swap; src: local('Noto Sans KR'); }
   html { background-color: #0a0e14; }
   html[data-theme="light"] { background-color: #ffffff; }
   body {
@@ -97,4 +98,21 @@
   picture img { width: 100%; height: auto; }
   .post-card-img { width: 100%; aspect-ratio: 1200 / 630; object-fit: cover; }
   .summary-market-image { width: 100%; aspect-ratio: 1200 / 630; object-fit: cover; }
+  /* content-visibility: off-screen 섹션 렌더링 지연으로 초기 페이지 로드 가속 */
+  .category-grid-v2,
+  .footer-cta,
+  .related-posts,
+  .post-nav {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 300px;
+  }
+  /* 포스트 카드 thumb 영역 최소 높이 예약으로 CLS 방지 */
+  .post-card-thumb {
+    min-height: 0;
+    overflow: hidden;
+  }
+  /* date-group 렌더링 containment */
+  .date-group {
+    contain: layout;
+  }
 </style>

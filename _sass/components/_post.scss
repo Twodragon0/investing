@@ -136,6 +136,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   position: relative;
   overflow: hidden;
+  contain: layout style;
 
   /* Left accent bar — animated on hover */
   &::before {

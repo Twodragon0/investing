@@ -278,6 +278,7 @@ a {
     background: linear-gradient(90deg, $cat-crypto 0%, $cat-stock 25%, $cat-journal 50%, $cat-security 75%, $cat-analysis 100%);
     background-size: 200% 100%;
     animation: gradientShift 8s ease infinite;
+    will-change: background-position;
   }
 
   &::after {
@@ -295,6 +296,7 @@ a {
       transparent 100%
     );
     animation: shimmer 6s ease-in-out infinite;
+    will-change: transform;
     pointer-events: none;
   }
 

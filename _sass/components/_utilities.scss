@@ -469,6 +469,7 @@ html {
   border-radius: 50%;
   animation: pulse-anim 2s ease-in-out infinite;
   box-shadow: 0 0 0 0 rgba($accent-green, 0.7);
+  will-change: box-shadow;
 }
 
 @keyframes pulse-anim {

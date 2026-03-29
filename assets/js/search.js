@@ -5,11 +5,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var posts = [];
   var baseurl = searchInput.dataset.baseurl || '';
+  var searchIndexLoaded = false;
+  var searchIndexLoading = false;
 
-  fetch(baseurl + '/search.json')
-    .then(function(r) { return r.json(); })
-    .then(function(data) { posts = data; })
-    .catch(function() { /* search index not available */ });
+  // search.json은 검색 오버레이가 처음 열릴 때만 fetch (초기 로드 비용 절감)
+  function ensureSearchIndex(callback) {
+    if (searchIndexLoaded) { if (callback) callback(); return; }
+    if (searchIndexLoading) {
+      var timer = setInterval(function() {
+        if (searchIndexLoaded) { clearInterval(timer); if (callback) callback(); }
+      }, 50);
+      return;
+    }
+    searchIndexLoading = true;
+    fetch(baseurl + '/search.json')
+      .then(function(r) { return r.json(); })
+      .then(function(data) { posts = data; searchIndexLoaded = true; if (callback) callback(); })
+      .catch(function() { searchIndexLoaded = true; if (callback) callback(); });
+  }
+
+  // 검색 오버레이 열릴 때 인덱스 로드
+  var searchToggle = document.querySelector('.search-toggle');
+  if (searchToggle) {
+    searchToggle.addEventListener('click', function() { ensureSearchIndex(); }, { once: true });
+  }
 
   function t(key) {
     return (typeof window.__t === 'function') ? window.__t(key) : key;
@@ -82,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
   searchInput.addEventListener('input', function() {
     clearTimeout(debounceTimer);
     debounceTimer = setTimeout(function() {
-      performSearch();
+      ensureSearchIndex(performSearch);
     }, 200);
   });
 
