@@ -7,7 +7,7 @@ tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 keywords: "regulation, sec, cftc, fsc, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-regulatory-2026-03-24.png"
+image: "/assets/images/generated/og-daily-regulatory-report-2026-03-24.png"
 permalink: "/regulatory-news/2026/03/24/daily-regulatory-report/"
 description: "글로벌 규제 동향 리포트: 2026-03-24 기준 한국 가상자산 거래소 지분 제한과 전자공시 규제 논의를 중심으로 핵심 규제 이슈 4건을 정리했습니다."
 excerpt: "한국 가상자산 거래소 지분 제한과 전자공시 규제 논의를 중심으로 2026-03-24 핵심 규제 이슈 4건을 정리한 리포트입니다."

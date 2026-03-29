@@ -7,7 +7,7 @@ tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-ban
 keywords: "political-trades, congress, sec, trump, 이재명"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-political-2026-03-24.png"
+image: "/assets/images/generated/og-daily-political-trades-report-2026-03-24.png"
 excerpt: "2026-03-24 정치인 거래·정책 리포트: SEC 내부자 15건, 중앙은행 2건, 총 17건 수집"
 permalink: "/political-trades/2026/03/24/daily-political-trades-report/"
 description: "중앙은행 정책에서는 매파 기류 속 ‘신현송 변수’…한은 기준금리 결정 ‘분수령’ 에너지경제신문 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다."
