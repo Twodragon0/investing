@@ -14,10 +14,10 @@ import requests
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common.base_collector import BaseCollector
 from common.collector_config import get_collector_config, get_url
-from common.collector_metrics import log_collection_summary
-from common.config import REQUEST_TIMEOUT, USER_AGENT, get_kst_now, get_verify_ssl, setup_logging
-from common.dedup import DedupEngine, deduplicate_by_url
+from common.config import REQUEST_TIMEOUT, USER_AGENT, get_verify_ssl
+from common.dedup import deduplicate_by_url
 from common.enrichment import _WORLDMONITOR_SOURCE_CONTEXT, enrich_items
 from common.markdown_utils import (
     escape_table_cell,
@@ -25,13 +25,12 @@ from common.markdown_utils import (
     html_text,
     markdown_link,
 )
-from common.post_generator import PostGenerator, build_dated_permalink
+from common.post_generator import build_dated_permalink
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.translator import get_display_title
 from common.utils import truncate_text
 from common.worldmonitor_utils import worldmonitor_sort_key
 
-logger = setup_logging("collect_worldmonitor_news")
 # collectors.yml에서 설정 로드
 _wm_cfg = get_collector_config("worldmonitor_news")
 
@@ -115,6 +114,7 @@ def wm_url(source_url: str) -> str:
 
 def _post_worldmonitor(path: str, payload: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
     url = f"{WM_FINANCE_BASE}{path}"
+    logger = __import__("logging").getLogger(__name__)
     try:
         resp = requests.post(
             url,
@@ -651,442 +651,433 @@ def _generate_worldmonitor_summary(
     return "\n".join(lines)
 
 
-def main() -> None:
-    logger.info("=== Starting worldmonitor feed collection ===")
-    started_at = time.monotonic()
+class WorldMonitorCollector(BaseCollector):
+    """WorldMonitor 글로벌 인텔리전스 브리핑 수집기."""
 
-    dedup = DedupEngine("worldmonitor_news_seen.json")
-    generator = PostGenerator("market-analysis")
+    name = "worldmonitor_news"
+    category = "market-analysis"
+    state_file = "worldmonitor_news_seen.json"
 
-    now = get_kst_now()
-    today = now.strftime("%Y-%m-%d")
-    post_title = f"WorldMonitor 글로벌 인텔리전스 브리핑 - {today}"
+    def fetch(self) -> List[Dict[str, Any]]:
+        """WorldMonitor RSS 피드에서 뉴스를 수집합니다."""
+        return fetch_worldmonitor_feeds()
 
-    if dedup.is_duplicate_exact(post_title, "worldmonitor", today):
-        logger.info("WorldMonitor post already exists, skipping")
-        log_collection_summary(
-            logger,
-            collector="collect_worldmonitor_news",
-            source_count=0,
-            unique_items=0,
-            post_created=0,
-            started_at=started_at,
-            extras={"status": "duplicate"},
-        )
-        dedup.save()
-        return
+    def process(self, items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """콘텐츠 보강 및 URL 기반 중복 제거."""
+        enrich_items(items, context_map=_WORLDMONITOR_SOURCE_CONTEXT, max_fetch=20)
+        return deduplicate_by_url(items)
 
-    items = fetch_worldmonitor_feeds()
-    if not items:
-        logger.warning("No worldmonitor items collected, skipping post")
-        log_collection_summary(
-            logger,
-            collector="collect_worldmonitor_news",
-            source_count=0,
-            unique_items=0,
-            post_created=0,
-            started_at=started_at,
-            extras={"status": "empty"},
-        )
-        dedup.save()
-        return
+    def build_content(self, items: List[Dict[str, Any]]) -> str:
+        """마크다운 포스트 본문을 생성합니다."""
+        # run()에서 직접 콘텐츠를 빌드하므로 여기서는 빈 문자열 반환
+        return ""
 
-    enrich_items(items, context_map=_WORLDMONITOR_SOURCE_CONTEXT, max_fetch=20)
-    items = deduplicate_by_url(items)
+    def run(self) -> None:
+        """메인 실행 파이프라인 — WorldMonitor 브리핑 포스트 생성."""
+        self.logger.info("=== Starting worldmonitor feed collection ===")
+        self._started_at = time.monotonic()
 
-    source_counter: Counter = Counter()
-    theme_counter: Counter = Counter()
-    rows: List[List[object]] = []
-    issue_items: List[Dict[str, str]] = []
-    source_rows: List[List[object]] = []
-    ref_items: List[Dict[str, str]] = []
+        post_title = f"WorldMonitor 글로벌 인텔리전스 브리핑 - {self.today}"
 
-    for item in items:
-        if len(issue_items) >= 20:
-            break
+        if self.is_duplicate_exact(post_title, "worldmonitor"):
+            self.logger.info("WorldMonitor post already exists, skipping")
+            self.save_state()
+            self.log_summary([], extras={"status": "duplicate"})
+            return
 
-        orig_title = item.get("title", "").strip()
-        link = item.get("link", "").strip()
-        source = item.get("source", "unknown").strip()
-        if not orig_title:
-            continue
+        items = self.fetch()
+        if not items:
+            self.logger.warning("No worldmonitor items collected, skipping post")
+            self.save_state()
+            self.log_summary([], extras={"status": "empty"})
+            return
 
-        source_counter[source] += 1
-        theme = classify_theme(orig_title)
-        theme_counter[theme] += 1
-        impact = impact_label(theme)
+        items = self.process(items)
 
-        title = get_display_title(item) or orig_title
-        safe_title = html_text(title)
-        display_title = markdown_link(f"**{title}**", link) if link else f"**{escape_table_cell(title)}**"
-        # HTML <a> version for use inside HTML card blocks (markdown doesn't render in HTML divs)
-        html_title = (
-            f'<a href="{link}" target="_blank" rel="noopener noreferrer"><strong>{safe_title}</strong></a>'
-            if link
-            else f"<strong>{safe_title}</strong>"
-        )
-        issue_items.append(
-            {
-                "title": display_title,
-                "html_title": html_title,
-                "theme": theme,
-                "impact": impact,
-                "source": source,
-                "link": link,
-            }
-        )
-        if link:
-            ref_items.append(item)
+        source_counter: Counter = Counter()
+        theme_counter: Counter = Counter()
+        rows: List[List[object]] = []
+        issue_items: List[Dict[str, str]] = []
+        source_rows: List[List[object]] = []
+        ref_items: List[Dict[str, str]] = []
 
-    def _sort_key(entry: Dict[str, str]) -> tuple:
-        return worldmonitor_sort_key(
-            entry.get("impact", ""),
-            entry.get("theme", ""),
-        )
+        for item in items:
+            if len(issue_items) >= 20:
+                break
 
-    for idx, entry in enumerate(sorted(issue_items, key=_sort_key), 1):
-        rows.append(
+            orig_title = item.get("title", "").strip()
+            link = item.get("link", "").strip()
+            source = item.get("source", "unknown").strip()
+            if not orig_title:
+                continue
+
+            source_counter[source] += 1
+            theme = classify_theme(orig_title)
+            theme_counter[theme] += 1
+            impact = impact_label(theme)
+
+            title = get_display_title(item) or orig_title
+            safe_title = html_text(title)
+            display_title = markdown_link(f"**{title}**", link) if link else f"**{escape_table_cell(title)}**"
+            # HTML <a> version for use inside HTML card blocks (markdown doesn't render in HTML divs)
+            html_title = (
+                f'<a href="{link}" target="_blank" rel="noopener noreferrer"><strong>{safe_title}</strong></a>'
+                if link
+                else f"<strong>{safe_title}</strong>"
+            )
+            issue_items.append(
+                {
+                    "title": display_title,
+                    "html_title": html_title,
+                    "theme": theme,
+                    "impact": impact,
+                    "source": source,
+                    "link": link,
+                }
+            )
+            if link:
+                ref_items.append(item)
+
+        def _sort_key(entry: Dict[str, str]) -> tuple:
+            return worldmonitor_sort_key(
+                entry.get("impact", ""),
+                entry.get("theme", ""),
+            )
+
+        for idx, entry in enumerate(sorted(issue_items, key=_sort_key), 1):
+            rows.append(
+                [
+                    idx,
+                    entry["title"],
+                    entry["theme"],
+                    entry["impact"],
+                    entry["source"],
+                    entry.get("html_title", entry["title"]),
+                ]
+            )
+
+        total_items = len(rows)
+        top_sources = ", ".join(f"{name} ({count}건)" for name, count in source_counter.most_common(5))
+
+        for name, count in source_counter.most_common(6):
+            ratio = (count / max(total_items, 1)) * 100
+            source_rows.append([name, f"{count}건", f"{ratio:.0f}%"])
+
+        theme_rows = []
+        for theme, count in theme_counter.most_common(5):
+            ratio = (count / max(total_items, 1)) * 100
+            width = max(8, min(100, int(ratio)))
+            theme_rows.append(
+                '<div class="theme-row">'
+                f'<span class="theme-label">{theme}</span>'
+                '<div class="bar-track">'
+                f'<div class="bar-fill bar-fill-blue" style="width:{width}%"></div>'
+                "</div>"
+                f'<span class="theme-count">{count}건 ({ratio:.0f}%)</span>'
+                "</div>"
+            )
+
+        content_parts = [
+            f"**{self.today}** 기준 WorldMonitor 연계 소스에서 "
+            f"글로벌 이벤트/시장/에너지 관련 뉴스 {total_items}건을 정리했습니다.",
+            "",
+            '<div class="alert-box alert-info"><strong>오늘의 글로벌 리스크 스냅샷</strong><ul>',
+            f"<li>총 수집: <strong>{total_items}건</strong></li>",
+            f"<li>핵심 테마: <strong>{', '.join(t for t, _ in theme_counter.most_common(3))}</strong></li>",
+            f"<li>집중 출처: <strong>{source_counter.most_common(1)[0][0] if source_counter else 'N/A'}</strong></li>",
+            "</ul></div>",
+            "",
+            "## 핵심 요약",
+            f"- 수집 건수: **{total_items}건**",
+            "- 범위: 글로벌 지정학, 금융시장, 에너지 이슈",
+            f"- 주요 출처: {top_sources}",
+            "",
+        ]
+
+        map_snapshot = fetch_worldmonitor_map_snapshot(days=7)
+        content_parts.extend(build_map_snapshot_section(map_snapshot))
+        content_parts.extend(
             [
-                idx,
-                entry["title"],
-                entry["theme"],
-                entry["impact"],
-                entry["source"],
-                entry.get("html_title", entry["title"]),
+                "",
+                "## 전체 뉴스 요약",
+                _generate_worldmonitor_summary(theme_counter, total_items, top_sources, issue_items),
+                "",
+                "## 테마별 현황",
+                '<div class="stat-grid">',
+                f'<div class="stat-item"><div class="stat-value">{total_items}</div>'
+                '<div class="stat-label">총 이슈</div></div>',
+                f'<div class="stat-item"><div class="stat-value">{len(theme_counter)}</div>'
+                '<div class="stat-label">테마 수</div></div>',
+                f'<div class="stat-item"><div class="stat-value">{len(source_counter)}</div>'
+                '<div class="stat-label">출처 수</div></div>',
+                f'<div class="stat-item"><div class="stat-value">{theme_counter.get("지정학/안보", 0)}</div>'
+                '<div class="stat-label">안보 이슈</div></div>',
+                "</div>",
+                "",
+                '<div class="theme-distribution">',
+            ]
+        )
+        content_parts.extend(theme_rows)
+        # 주요 이슈 - HTML 카드 형태
+        impact_colors = {"높음": "#f85149", "중간": "#d29922", "낮음": "#8b949e"}
+        issue_cards = []
+        for row in rows:
+            idx, title_md, theme, impact, source = row[:5]
+            html_title_str = row[5] if len(row) > 5 else title_md
+            impact_text = str(impact)
+            impact_color = impact_colors.get(impact_text, "#8b949e")
+            issue_cards.append(
+                f'<div class="wm-issue-card">'
+                f'<div class="wm-issue-num">{idx}</div>'
+                f'<div class="wm-issue-body">'
+                f'<div class="wm-issue-title">{html_title_str}</div>'
+                f'<div class="wm-issue-meta">'
+                f'<span class="wm-issue-theme">{html_text(theme)}</span>'
+                f'<span class="wm-issue-impact" style="color:{impact_color};">{html_text(impact_text)}</span>'
+                f'<span class="wm-issue-source">{html_text(source)}</span>'
+                f"</div>"
+                f"</div>"
+                f"</div>"
+            )
+        content_parts.extend(
+            [
+                "</div>",
+                "",
+                "## 주요 이슈",
+                "",
+                '<div class="wm-issue-list">',
+                *issue_cards,
+                "</div>",
             ]
         )
 
-    total_items = len(rows)
-    top_sources = ", ".join(f"{name} ({count}건)" for name, count in source_counter.most_common(5))
-
-    for name, count in source_counter.most_common(6):
-        ratio = (count / max(total_items, 1)) * 100
-        source_rows.append([name, f"{count}건", f"{ratio:.0f}%"])
-
-    theme_rows = []
-    for theme, count in theme_counter.most_common(5):
-        ratio = (count / max(total_items, 1)) * 100
-        width = max(8, min(100, int(ratio)))
-        theme_rows.append(
-            '<div class="theme-row">'
-            f'<span class="theme-label">{theme}</span>'
-            '<div class="bar-track">'
-            f'<div class="bar-fill bar-fill-blue" style="width:{width}%"></div>'
-            "</div>"
-            f'<span class="theme-count">{count}건 ({ratio:.0f}%)</span>'
-            "</div>"
-        )
-
-    content_parts = [
-        f"**{today}** 기준 WorldMonitor 연계 소스에서 "
-        f"글로벌 이벤트/시장/에너지 관련 뉴스 {total_items}건을 정리했습니다.",
-        "",
-        '<div class="alert-box alert-info"><strong>오늘의 글로벌 리스크 스냅샷</strong><ul>',
-        f"<li>총 수집: <strong>{total_items}건</strong></li>",
-        f"<li>핵심 테마: <strong>{', '.join(t for t, _ in theme_counter.most_common(3))}</strong></li>",
-        f"<li>집중 출처: <strong>{source_counter.most_common(1)[0][0] if source_counter else 'N/A'}</strong></li>",
-        "</ul></div>",
-        "",
-        "## 핵심 요약",
-        f"- 수집 건수: **{total_items}건**",
-        "- 범위: 글로벌 지정학, 금융시장, 에너지 이슈",
-        f"- 주요 출처: {top_sources}",
-        "",
-    ]
-
-    map_snapshot = fetch_worldmonitor_map_snapshot(days=7)
-    content_parts.extend(build_map_snapshot_section(map_snapshot))
-    content_parts.extend(
-        [
-            "",
-            "## 전체 뉴스 요약",
-            _generate_worldmonitor_summary(theme_counter, total_items, top_sources, issue_items),
-            "",
-            "## 테마별 현황",
-            '<div class="stat-grid">',
-            f'<div class="stat-item"><div class="stat-value">{total_items}</div>'
-            '<div class="stat-label">총 이슈</div></div>',
-            f'<div class="stat-item"><div class="stat-value">{len(theme_counter)}</div>'
-            '<div class="stat-label">테마 수</div></div>',
-            f'<div class="stat-item"><div class="stat-value">{len(source_counter)}</div>'
-            '<div class="stat-label">출처 수</div></div>',
-            f'<div class="stat-item"><div class="stat-value">{theme_counter.get("지정학/안보", 0)}</div>'
-            '<div class="stat-label">안보 이슈</div></div>',
-            "</div>",
-            "",
-            '<div class="theme-distribution">',
-        ]
-    )
-    content_parts.extend(theme_rows)
-    # 주요 이슈 - HTML 카드 형태
-    impact_colors = {"높음": "#f85149", "중간": "#d29922", "낮음": "#8b949e"}
-    issue_cards = []
-    for row in rows:
-        idx, title_md, theme, impact, source = row[:5]
-        html_title_str = row[5] if len(row) > 5 else title_md
-        impact_text = str(impact)
-        impact_color = impact_colors.get(impact_text, "#8b949e")
-        issue_cards.append(
-            f'<div class="wm-issue-card">'
-            f'<div class="wm-issue-num">{idx}</div>'
-            f'<div class="wm-issue-body">'
-            f'<div class="wm-issue-title">{html_title_str}</div>'
-            f'<div class="wm-issue-meta">'
-            f'<span class="wm-issue-theme">{html_text(theme)}</span>'
-            f'<span class="wm-issue-impact" style="color:{impact_color};">{html_text(impact_text)}</span>'
-            f'<span class="wm-issue-source">{html_text(source)}</span>'
-            f"</div>"
-            f"</div>"
-            f"</div>"
-        )
-    content_parts.extend(
-        [
-            "</div>",
-            "",
-            "## 주요 이슈",
-            "",
-            '<div class="wm-issue-list">',
-            *issue_cards,
-            "</div>",
-        ]
-    )
-
-    # 출처 커버리지 - 프로그레스 바 포함 HTML 카드
-    source_cards = []
-    for name, count_str, ratio_str in source_rows:
-        ratio_text = str(ratio_str)
-        ratio_num = int(ratio_text.replace("%", ""))
-        bar_color = "#58a6ff" if ratio_num >= 50 else "#22d3ee"
-        source_cards.append(
-            f'<div class="wm-source-row">'
-            f'<span class="wm-source-name">{html_text(name)}</span>'
-            f'<span class="wm-source-count">{html_text(count_str)}</span>'
-            f'<div class="wm-source-bar-track">'
-            f'<div class="wm-source-bar-fill" style="width:{ratio_num}%;background:{bar_color};"></div>'
-            f"</div>"
-            f'<span class="wm-source-ratio">{html_text(ratio_text)}</span>'
-            f"</div>"
-        )
-    content_parts.extend(
-        [
-            "",
-            "## 출처 커버리지",
-            "",
-            '<div class="wm-source-coverage">',
-            *source_cards,
-            "</div>",
-        ]
-    )
-
-    if ref_items:
-        content_parts.extend(["", "## 원문 링크 묶음"])
-        seen = set()
-        unique_refs = []
-        for ref in ref_items[:20]:
-            link = ref["link"]
-            if link in seen:
-                continue
-            seen.add(link)
-            unique_refs.append(ref)
-
-        content_parts.append(
-            '<div class="wm-reference-summary">'
-            "<strong>원문 링크 탐색 가이드</strong>"
-            f"<p>{len(unique_refs)}건의 원문을 출처별로 정리했습니다. "
-            "시장 영향이 높은 이슈를 우선 확인하세요.</p>"
-            "</div>"
-        )
-
-        source_pills = []
-        for source, count in Counter(ref["source"] for ref in unique_refs).most_common(6):
-            source_pills.append(html_source_tag(f"{source} · {count}건"))
-        if source_pills:
-            content_parts.append('<div class="wm-reference-pills">' + " ".join(source_pills) + "</div>")
-
-        detail_lines = [
-            f'<details class="wm-reference-details">'
-            f'<summary><span class="ref-toggle-icon">&#9654;</span> '
-            f"전체 원문 <strong>{len(unique_refs)}건</strong> 보기</summary>"
-            '<div class="details-content">',
-            '<ol class="wm-reference-list">',
-        ]
-        for ref in unique_refs:
-            link = html_text(ref["link"])
-            raw_title = ref.get("title_ko") or ref.get("title", "")
-            title = html_text(raw_title[:110])
-            source = html_text(ref["source"])
-            detail_lines.append(
-                "<li>"
-                f'<a href="{link}" target="_blank" rel="noopener noreferrer">{title}</a>'
-                f"{html_source_tag(source)}"
-                "</li>"
+        # 출처 커버리지 - 프로그레스 바 포함 HTML 카드
+        source_cards = []
+        for name, count_str, ratio_str in source_rows:
+            ratio_text = str(ratio_str)
+            ratio_num = int(ratio_text.replace("%", ""))
+            bar_color = "#58a6ff" if ratio_num >= 50 else "#22d3ee"
+            source_cards.append(
+                f'<div class="wm-source-row">'
+                f'<span class="wm-source-name">{html_text(name)}</span>'
+                f'<span class="wm-source-count">{html_text(count_str)}</span>'
+                f'<div class="wm-source-bar-track">'
+                f'<div class="wm-source-bar-fill" style="width:{ratio_num}%;background:{bar_color};"></div>'
+                f"</div>"
+                f'<span class="wm-source-ratio">{html_text(ratio_text)}</span>'
+                f"</div>"
             )
-        detail_lines.extend(["</ol>", "</div></details>"])
-        content_parts.append("\n".join(detail_lines))
-    else:
-        content_parts.extend(["", "## 원문 링크 묶음"])
-        content_parts.append(
-            '<details class="wm-reference-details"><summary>전체 원문 0건</summary>'
-            '<div class="details-content"><p>수집된 원문 링크가 없습니다.</p></div>'
-            "</details>"
+        content_parts.extend(
+            [
+                "",
+                "## 출처 커버리지",
+                "",
+                '<div class="wm-source-coverage">',
+                *source_cards,
+                "</div>",
+            ]
         )
 
-    content_parts.extend(
-        [
-            "",
-            "## 글로벌 리스크 지도",
-            '<div class="wm-map-card">',
-            f'<a href="{WM_MAP_VIEW_URL}" target="_blank" rel="noopener noreferrer" class="wm-map-link">',
-            '<div class="wm-map-icon">&#127758;</div>',
-            '<div class="wm-map-text">',
-            "<strong>WorldMonitor 글로벌 리스크 지도</strong>",
-            "<span>분쟁, 핵, 제재, 에너지, 기상, 군사 등 7개 레이어 실시간 지도</span>",
-            "</div>",
-            '<div class="wm-map-arrow">&#8594;</div>',
-            "</a>",
-            "</div>",
-            "",
-            "## 읽는 방법",
-            '<div class="wm-reading-guide">',
-            '<div class="guide-item guide-high">'
-            "<strong>지정학/안보</strong>"
-            "<span>금/원유/방산/안전자산 변동성과 동시 확인</span>"
-            "</div>",
-            '<div class="guide-item guide-mid">'
-            "<strong>에너지</strong>"
-            "<span>원유/가스 가격과 인플레이션 민감 섹터 연동 점검</span>"
-            "</div>",
-            '<div class="guide-item guide-mid">'
-            "<strong>정책/법률</strong>"
-            "<span>규제 발표 시 섹터별 이벤트 드리븐 리스크 점검</span>"
-            "</div>",
-            "</div>",
-            "",
-            "> *본 브리핑은 worldmonitor.app RSS proxy를 통해 자동 수집된 데이터를 기반으로 하며, "
-            "투자 조언이 아닙니다.*",
-            "",
-            '<div class="wm-footer-meta">',
-            f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} KST</span>",
-            "<span>소스: worldmonitor.app API, finance.worldmonitor.app</span>",
-            "</div>",
-        ]
-    )
+        if ref_items:
+            content_parts.extend(["", "## 원문 링크 묶음"])
+            seen = set()
+            unique_refs = []
+            for ref in ref_items[:20]:
+                link = ref["link"]
+                if link in seen:
+                    continue
+                seen.add(link)
+                unique_refs.append(ref)
 
-    content = "\n".join(content_parts)
-
-    # Build per-theme plain-text title index (used for description + image card)
-    import re as _re
-
-    theme_titles: dict[str, list[str]] = {}
-    for _issue in issue_items:
-        _t = _issue.get("theme", "")
-        _title_text = _issue.get("title", "")
-        _plain = _re.sub(r"\[?\*?\*?([^*\]]+)\*?\*?\]?\([^)]*\)", r"\1", _title_text)
-        theme_titles.setdefault(_t, []).append(_plain)
-
-    # Generate briefing card image
-    briefing_image = ""
-    try:
-        from common.image_generator import generate_news_briefing_card
-
-        theme_emojis = {
-            "지정학/안보": "🌍",
-            "에너지": "⛽",
-            "금융시장": "📈",
-            "정책/법률": "📜",
-            "사회/기타": "🔔",
-        }
-        from collections import Counter as _Counter
-
-        card_themes = []
-        for t_name, t_count in theme_counter.most_common(5):
-            titles = theme_titles.get(t_name, [])
-            word_freq: _Counter = _Counter()
-            for t in titles:
-                tokens = _re.findall(r"[A-Za-z]{3,}", t)
-                for tok in tokens:
-                    if tok.lower() not in {"the", "and", "for", "with", "from", "that", "this", "has", "are"}:
-                        word_freq[tok] += 1
-            top_kws = [w for w, _ in word_freq.most_common(4)]
-            card_themes.append(
-                {"name": t_name, "emoji": theme_emojis.get(t_name, "📌"), "count": t_count, "keywords": top_kws}
+            content_parts.append(
+                '<div class="wm-reference-summary">'
+                "<strong>원문 링크 탐색 가이드</strong>"
+                f"<p>{len(unique_refs)}건의 원문을 출처별로 정리했습니다. "
+                "시장 영향이 높은 이슈를 우선 확인하세요.</p>"
+                "</div>"
             )
-        if card_themes:
-            img = generate_news_briefing_card(
-                card_themes,
-                today,
-                category="WorldMonitor Briefing",
-                total_count=total_items,
-                filename=f"news-briefing-worldmonitor-{today}.png",
+
+            source_pills = []
+            for source, count in Counter(ref["source"] for ref in unique_refs).most_common(6):
+                source_pills.append(html_source_tag(f"{source} · {count}건"))
+            if source_pills:
+                content_parts.append('<div class="wm-reference-pills">' + " ".join(source_pills) + "</div>")
+
+            detail_lines = [
+                f'<details class="wm-reference-details">'
+                f'<summary><span class="ref-toggle-icon">&#9654;</span> '
+                f"전체 원문 <strong>{len(unique_refs)}건</strong> 보기</summary>"
+                '<div class="details-content">',
+                '<ol class="wm-reference-list">',
+            ]
+            for ref in unique_refs:
+                link = html_text(ref["link"])
+                raw_title = ref.get("title_ko") or ref.get("title", "")
+                title = html_text(raw_title[:110])
+                source = html_text(ref["source"])
+                detail_lines.append(
+                    "<li>"
+                    f'<a href="{link}" target="_blank" rel="noopener noreferrer">{title}</a>'
+                    f"{html_source_tag(source)}"
+                    "</li>"
+                )
+            detail_lines.extend(["</ol>", "</div></details>"])
+            content_parts.append("\n".join(detail_lines))
+        else:
+            content_parts.extend(["", "## 원문 링크 묶음"])
+            content_parts.append(
+                '<details class="wm-reference-details"><summary>전체 원문 0건</summary>'
+                '<div class="details-content"><p>수집된 원문 링크가 없습니다.</p></div>'
+                "</details>"
             )
-            if img:
-                briefing_image = img
-                logger.info("Generated worldmonitor briefing card")
-    except ImportError:
-        pass
-    except Exception as e:
-        logger.warning("Worldmonitor briefing card failed: %s", e)
 
-    # Data-driven description — title과 차별화된 구체적 설명
-    _top_themes = [t[0] for t in theme_counter.most_common(3)] if theme_counter else []
-    # 상위 테마별 대표 뉴스 제목 1~2개 추출 (theme_titles는 이미지 카드 생성 블록에서 구성)
-    _headline_titles: list[str] = []
-    try:
-        for _t in theme_counter.most_common(2):
-            _t_titles = theme_titles.get(_t[0], [])
-            if _t_titles:
-                _clean = _t_titles[0][:40].rstrip()
-                if _clean and _clean not in _headline_titles:
-                    _headline_titles.append(_clean)
-    except Exception as exc:
-        logger.debug("headline title extraction failed: %s", exc)
+        content_parts.extend(
+            [
+                "",
+                "## 글로벌 리스크 지도",
+                '<div class="wm-map-card">',
+                f'<a href="{WM_MAP_VIEW_URL}" target="_blank" rel="noopener noreferrer" class="wm-map-link">',
+                '<div class="wm-map-icon">&#127758;</div>',
+                '<div class="wm-map-text">',
+                "<strong>WorldMonitor 글로벌 리스크 지도</strong>",
+                "<span>분쟁, 핵, 제재, 에너지, 기상, 군사 등 7개 레이어 실시간 지도</span>",
+                "</div>",
+                '<div class="wm-map-arrow">&#8594;</div>',
+                "</a>",
+                "</div>",
+                "",
+                "## 읽는 방법",
+                '<div class="wm-reading-guide">',
+                '<div class="guide-item guide-high">'
+                "<strong>지정학/안보</strong>"
+                "<span>금/원유/방산/안전자산 변동성과 동시 확인</span>"
+                "</div>",
+                '<div class="guide-item guide-mid">'
+                "<strong>에너지</strong>"
+                "<span>원유/가스 가격과 인플레이션 민감 섹터 연동 점검</span>"
+                "</div>",
+                '<div class="guide-item guide-mid">'
+                "<strong>정책/법률</strong>"
+                "<span>규제 발표 시 섹터별 이벤트 드리븐 리스크 점검</span>"
+                "</div>",
+                "</div>",
+                "",
+                "> *본 브리핑은 worldmonitor.app RSS proxy를 통해 자동 수집된 데이터를 기반으로 하며, "
+                "투자 조언이 아닙니다.*",
+                "",
+                '<div class="wm-footer-meta">',
+                f"<span>수집 시각: {self.now.strftime('%Y-%m-%d %H:%M')} KST</span>",
+                "<span>소스: worldmonitor.app API, finance.worldmonitor.app</span>",
+                "</div>",
+            ]
+        )
 
-    _desc_ko = f"글로벌 {total_items}건 수집. "
-    if _top_themes:
-        _desc_ko += f"{', '.join(_top_themes)} 등 주요 테마 분석. "
-    if _headline_titles:
-        _desc_ko += f"{'; '.join(_headline_titles)} 등 핵심 이슈 포함. "
-    _desc_ko += f"GDELT·Polymarket 등 {len(source_counter)}개 소스 기반 지정학·에너지·금융 동향."
+        content = "\n".join(content_parts)
 
-    filepath = generator.create_post(
-        title=post_title,
-        content=content,
-        date=now,
-        logical_date=today,
-        tags=["worldmonitor", "geopolitics", "macro", "daily-digest"],
-        source="worldmonitor",
-        source_url=get_url("worldmonitor_news", "wm_site", "https://worldmonitor.app"),
-        lang="ko",
-        image=briefing_image or "/assets/images/og-worldmonitor.png",
-        extra_frontmatter={
-            "permalink": build_dated_permalink("market-analysis", today, "daily-worldmonitor-briefing"),
-            "description": _desc_ko,
-            "description_ko": _desc_ko,
-        },
-        slug="daily-worldmonitor-briefing",
-    )
+        # Build per-theme plain-text title index (used for description + image card)
+        theme_titles: dict[str, list[str]] = {}
+        for _issue in issue_items:
+            _t = _issue.get("theme", "")
+            _title_text = _issue.get("title", "")
+            _plain = re.sub(r"\[?\*?\*?([^*\]]+)\*?\*?\]?\([^)]*\)", r"\1", _title_text)
+            theme_titles.setdefault(_t, []).append(_plain)
 
-    if filepath:
-        dedup.mark_seen(post_title, "worldmonitor", today)
-        logger.info("Created worldmonitor briefing: %s", filepath)
+        # Generate briefing card image
+        briefing_image = ""
+        try:
+            from common.image_generator import generate_news_briefing_card
 
-    dedup.save()
-    logger.info("=== Worldmonitor feed collection complete ===")
-    unique_count = len(
-        {
-            f"{item.get('title', '')}|{item.get('source', '')}|{item.get('link', '')}"
-            for item in items
-            if item.get("title")
-        }
-    )
-    log_collection_summary(
-        logger,
-        collector="collect_worldmonitor_news",
-        source_count=len(source_counter),
-        unique_items=unique_count,
-        post_created=1 if filepath else 0,
-        started_at=started_at,
-    )
+            theme_emojis = {
+                "지정학/안보": "🌍",
+                "에너지": "⛽",
+                "금융시장": "📈",
+                "정책/법률": "📜",
+                "사회/기타": "🔔",
+            }
+
+            card_themes = []
+            for t_name, t_count in theme_counter.most_common(5):
+                titles = theme_titles.get(t_name, [])
+                word_freq: Counter = Counter()
+                for t in titles:
+                    tokens = re.findall(r"[A-Za-z]{3,}", t)
+                    for tok in tokens:
+                        if tok.lower() not in {"the", "and", "for", "with", "from", "that", "this", "has", "are"}:
+                            word_freq[tok] += 1
+                top_kws = [w for w, _ in word_freq.most_common(4)]
+                card_themes.append(
+                    {"name": t_name, "emoji": theme_emojis.get(t_name, "📌"), "count": t_count, "keywords": top_kws}
+                )
+            if card_themes:
+                img = generate_news_briefing_card(
+                    card_themes,
+                    self.today,
+                    category="WorldMonitor Briefing",
+                    total_count=total_items,
+                    filename=f"news-briefing-worldmonitor-{self.today}.png",
+                )
+                if img:
+                    briefing_image = img
+                    self.logger.info("Generated worldmonitor briefing card")
+        except ImportError:
+            pass
+        except Exception as e:
+            self.logger.warning("Worldmonitor briefing card failed: %s", e)
+
+        # Data-driven description
+        _top_themes = [t[0] for t in theme_counter.most_common(3)] if theme_counter else []
+        _headline_titles: list[str] = []
+        try:
+            for _t in theme_counter.most_common(2):
+                _t_titles = theme_titles.get(_t[0], [])
+                if _t_titles:
+                    _clean = _t_titles[0][:40].rstrip()
+                    if _clean and _clean not in _headline_titles:
+                        _headline_titles.append(_clean)
+        except Exception as exc:
+            self.logger.debug("headline title extraction failed: %s", exc)
+
+        _desc_ko = f"글로벌 {total_items}건 수집. "
+        if _top_themes:
+            _desc_ko += f"{', '.join(_top_themes)} 등 주요 테마 분석. "
+        if _headline_titles:
+            _desc_ko += f"{'; '.join(_headline_titles)} 등 핵심 이슈 포함. "
+        _desc_ko += f"GDELT·Polymarket 등 {len(source_counter)}개 소스 기반 지정학·에너지·금융 동향."
+
+        wm_site_url = get_url("worldmonitor_news", "wm_site", "https://worldmonitor.app")
+
+        filepath = self.post_gen.create_post(
+            title=post_title,
+            content=content,
+            date=self.now,
+            logical_date=self.today,
+            tags=["worldmonitor", "geopolitics", "macro", "daily-digest"],
+            source="worldmonitor",
+            source_url=wm_site_url,
+            lang="ko",
+            image=briefing_image or "/assets/images/og-worldmonitor.png",
+            extra_frontmatter={
+                "permalink": build_dated_permalink("market-analysis", self.today, "daily-worldmonitor-briefing"),
+                "description": _desc_ko,
+                "description_ko": _desc_ko,
+            },
+            slug="daily-worldmonitor-briefing",
+        )
+
+        if filepath:
+            self._created_count += 1
+            self.mark_seen(post_title, "worldmonitor")
+            self.logger.info("Created worldmonitor briefing: %s", filepath)
+
+        self.save_state()
+        self.logger.info("=== Worldmonitor feed collection complete ===")
+        self.log_summary(items)
+
+
+def main() -> None:
+    """Main collection routine — worldmonitor daily briefing post."""
+    collector = WorldMonitorCollector()
+    collector.run()
 
 
 if __name__ == "__main__":

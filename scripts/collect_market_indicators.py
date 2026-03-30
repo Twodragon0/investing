@@ -20,23 +20,20 @@ import requests
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common.base_collector import BaseCollector
 from common.bettafish_analyzer import BettaFishAnalyzer
 from common.collector_config import get_collector_config, get_url
-from common.collector_metrics import log_collection_summary
-from common.config import BROWSER_USER_AGENT, REQUEST_TIMEOUT, get_env, get_kst_now, get_verify_ssl, setup_logging
-from common.dedup import DedupEngine
+from common.config import BROWSER_USER_AGENT, REQUEST_TIMEOUT, get_env, get_verify_ssl
 from common.markdown_utils import (
     html_reference_details,
     html_source_tag,
     markdown_link,
 )
-from common.post_generator import PostGenerator, build_dated_permalink
+from common.post_generator import build_dated_permalink
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.signal_composer import SignalComposer
 from common.signal_tracker import SignalTracker
 from common.utils import request_with_retry
-
-logger = setup_logging("collect_market_indicators")
 
 VERIFY_SSL = get_verify_ssl()
 # collectors.yml에서 설정 로드
@@ -76,7 +73,8 @@ def fetch_cnn_fear_greed() -> Dict[str, Any]:
         prev_score = fg.get("previous_close")
 
         if score is None:
-            logger.warning("CNN Fear & Greed: 'score' field missing in response")
+            _logger = __import__("logging").getLogger(__name__)
+            _logger.warning("CNN Fear & Greed: 'score' field missing in response")
             return {}
 
         result: Dict[str, Any] = {
@@ -87,13 +85,16 @@ def fetch_cnn_fear_greed() -> Dict[str, Any]:
             result["prev_score"] = round(float(prev_score), 1)
             result["change"] = round(float(score) - float(prev_score), 1)
 
-        logger.info("CNN Fear & Greed: score=%.1f rating=%s", result["score"], rating)
+        _logger = __import__("logging").getLogger(__name__)
+        _logger.info("CNN Fear & Greed: score=%.1f rating=%s", result["score"], rating)
         return result
     except requests.exceptions.RequestException as e:
-        logger.warning("CNN Fear & Greed fetch failed: %s", e)
+        _logger = __import__("logging").getLogger(__name__)
+        _logger.warning("CNN Fear & Greed fetch failed: %s", e)
         return {}
     except (ValueError, KeyError, TypeError) as e:
-        logger.warning("CNN Fear & Greed parse error: %s", e)
+        _logger = __import__("logging").getLogger(__name__)
+        _logger.warning("CNN Fear & Greed parse error: %s", e)
         return {}
 
 
@@ -102,6 +103,7 @@ def fetch_yfinance_market_data() -> Dict[str, Any]:
 
     Returns dict keyed by asset name with price, change, change_pct.
     """
+    logger = __import__("logging").getLogger(__name__)
     results: Dict[str, Any] = {}
     try:
         import yfinance as yf
@@ -145,6 +147,7 @@ def fetch_btc_price() -> Optional[float]:
     Returns:
         BTC 가격(USD) 또는 조회 실패 시 None.
     """
+    logger = __import__("logging").getLogger(__name__)
     try:
         import yfinance as yf
 
@@ -191,6 +194,7 @@ def fetch_treasury_yield_news() -> List[Dict[str, Any]]:
         ),
     ]
     items = fetch_rss_feeds_concurrent(feeds)
+    logger = __import__("logging").getLogger(__name__)
     logger.info("Treasury yield news: %d items", len(items))
     return items
 
@@ -210,6 +214,7 @@ def fetch_put_call_ratio_news() -> List[Dict[str, Any]]:
         ),
     ]
     items = fetch_rss_feeds_concurrent(feeds)
+    logger = __import__("logging").getLogger(__name__)
     logger.info("Put/Call ratio news: %d items", len(items))
     return items
 
@@ -229,6 +234,7 @@ def fetch_margin_debt_news() -> List[Dict[str, Any]]:
         ),
     ]
     items = fetch_rss_feeds_concurrent(feeds)
+    logger = __import__("logging").getLogger(__name__)
     logger.info("Margin debt news: %d items", len(items))
     return items
 
@@ -253,6 +259,7 @@ def fetch_market_breadth_news() -> List[Dict[str, Any]]:
         ),
     ]
     items = fetch_rss_feeds_concurrent(feeds)
+    logger = __import__("logging").getLogger(__name__)
     logger.info("Market breadth news: %d items", len(items))
     return items
 
@@ -275,6 +282,7 @@ def fetch_fred_indicators(api_key: str) -> Dict[str, Any]:
     Returns dict keyed by series_id with label, value, date, change, series_id fields.
     Returns empty dict if no API key or all fetches fail.
     """
+    logger = __import__("logging").getLogger(__name__)
     if not api_key:
         logger.info("FRED_API_KEY not set, skipping FRED data fetch")
         return {}
@@ -456,8 +464,6 @@ def _build_fred_section(fred_data: Dict[str, Any]) -> str:
         "MORTGAGE30US",
         "CPIAUCSL",
     ]
-    # 단위가 %가 아닌 시리즈
-    _NON_PCT_SERIES = {"ICSA", "CPIAUCSL"}
 
     for series_id in _FRED_DISPLAY_ORDER:
         d = fred_data.get(series_id)
@@ -811,7 +817,8 @@ def build_post_content(
                 parts.append("\n### 멀티 관점 요약\n")
                 parts.append(brief + "\n")
     except Exception as exc:
-        logger.warning("시장 전망 분석 생성 실패 (기존 기능에 영향 없음): %s", exc)
+        _logger = __import__("logging").getLogger(__name__)
+        _logger.warning("시장 전망 분석 생성 실패 (기존 기능에 영향 없음): %s", exc)
 
     # ── 신호 예측 정확도 이력 ─────────────────────────────────────────────────
     if accuracy_summary:
@@ -858,247 +865,244 @@ def build_post_content(
     return "\n".join(parts)
 
 
+# ── Collector class ──────────────────────────────────────────────────────────
+
+
+class MarketIndicatorsCollector(BaseCollector):
+    """시장 심리 및 리스크 지표 수집기."""
+
+    name = "market_indicators"
+    category = "market-analysis"
+    state_file = "market_indicators_seen.json"
+
+    def fetch(self) -> List[Dict[str, Any]]:
+        """모든 데이터 소스에서 지표를 수집합니다."""
+        fred_key = get_env("FRED_API_KEY")
+        self._cnn_fg = fetch_cnn_fear_greed()
+        self._market_data = fetch_yfinance_market_data()
+        self._fred_data = fetch_fred_indicators(fred_key)
+        self._treasury_news = fetch_treasury_yield_news()
+        self._put_call_news = fetch_put_call_ratio_news()
+        self._breadth_news = fetch_market_breadth_news()
+        self._margin_news = fetch_margin_debt_news()
+
+        # 뉴스 항목을 반환 (파이프라인 호환)
+        return self._treasury_news + self._put_call_news + self._breadth_news + self._margin_news
+
+    def process(self, items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """뉴스 항목을 그대로 반환합니다."""
+        return items
+
+    def build_content(self, items: List[Dict[str, Any]]) -> str:
+        """마크다운 포스트 본문을 생성합니다."""
+        return build_post_content(
+            cnn_fg=self._cnn_fg,
+            market_data=self._market_data,
+            treasury_news=self._treasury_news,
+            put_call_news=self._put_call_news,
+            breadth_news=self._breadth_news,
+            margin_news=self._margin_news,
+            today=self.today,
+            now=self.now,
+            fred_data=self._fred_data,
+            accuracy_summary=self._accuracy_summary,
+        )
+
+    def run(self) -> None:
+        """메인 실행 파이프라인 — 시장 지표 포스트 생성."""
+        self.logger.info("=== Starting market indicators collection ===")
+        self._started_at = time.monotonic()
+
+        post_title = f"시장 심리 및 리스크 지표 ({self.today})"
+
+        # Early exit if already generated today
+        if self.is_duplicate_exact(post_title, "consolidated"):
+            self.logger.info("Market indicators post already exists for %s, skipping", self.today)
+            self.save_state()
+            self.log_summary([])
+            return
+
+        # Fetch all data sources (news fetches run concurrently internally)
+        all_news_items = self.fetch()
+        has_any_data = self._cnn_fg or self._market_data or self._fred_data or all_news_items
+
+        if not has_any_data:
+            self.logger.warning("No data collected from any source, skipping post creation")
+            self.save_state()
+            self.log_summary([])
+            return
+
+        # ── 신호 추적: SignalComposer 실행 + SignalTracker 기록 ──────────────────
+        self._accuracy_summary = ""
+        try:
+            signals: Dict[str, Any] = {}
+            if self._cnn_fg:
+                signals["fear_greed"] = {
+                    "value": self._cnn_fg.get("score", 50),
+                    "label": self._cnn_fg.get("rating", ""),
+                }
+            vix_data = self._market_data.get("VIX")
+            if vix_data:
+                vix_chg = vix_data.get("change_pct", 0)
+                signals["vix"] = {
+                    "value": vix_data.get("price", 20),
+                    "trend": "rising" if vix_chg > 0 else ("falling" if vix_chg < 0 else "stable"),
+                }
+            macro: Dict[str, Any] = {}
+            dxy_data = self._market_data.get("DXY")
+            if dxy_data:
+                macro["dxy"] = dxy_data.get("price", 100)
+            if self._fred_data:
+                us10y = self._fred_data.get("GS10", {}).get("value")
+                if us10y:
+                    macro["us10y"] = us10y
+                fed_rate = self._fred_data.get("FEDFUNDS", {}).get("value")
+                if fed_rate:
+                    macro["fed_rate"] = fed_rate
+            if macro:
+                signals["macro"] = macro
+
+            if signals:
+                btc_price = fetch_btc_price()
+                composer = SignalComposer()
+                composite_result = composer.compose_signals(signals)
+                tracker = SignalTracker()
+                tracker.record(composite_result, btc_price=btc_price, date=self.today)
+                self._accuracy_summary = tracker.format_accuracy_summary(lookback_days=30)
+                self.logger.info(
+                    "SignalTracker 기록 완료 (score=%.1f verdict=%s)",
+                    composite_result.score,
+                    composite_result.verdict,
+                )
+        except Exception as exc:
+            self.logger.warning("SignalTracker 기록 실패 (기존 기능에 영향 없음): %s", exc)
+
+        # Build post content
+        content = self.build_content(all_news_items)
+
+        # Build tags list
+        tags = ["market-analysis", "fear-greed", "vix", "market-breadth", "sentiment"]
+        if self._fred_data:
+            tags.append("fred")
+
+        # Generate Jekyll post
+        report_permalink = build_dated_permalink("market-analysis", self.today, "daily-market-indicators")
+        briefing_image_path = ""
+        preview_source_count = sum(
+            [
+                1 if self._cnn_fg else 0,
+                len(self._market_data),
+                1 if self._treasury_news else 0,
+                1 if self._put_call_news else 0,
+                1 if self._breadth_news else 0,
+                1 if self._margin_news else 0,
+                1 if self._fred_data else 0,
+            ]
+        )
+
+        try:
+            from common.image_generator import generate_news_briefing_card
+
+            card_themes = []
+            if self._cnn_fg:
+                card_themes.append(
+                    {
+                        "name": "공포탐욕",
+                        "emoji": "😨" if self._cnn_fg.get("score", 50) < 50 else "💰",
+                        "count": 1,
+                        "keywords": [_rating_to_korean(self._cnn_fg.get("rating", ""))],
+                    }
+                )
+            if self._market_data.get("VIX"):
+                card_themes.append(
+                    {
+                        "name": "VIX",
+                        "emoji": "📉",
+                        "count": 1,
+                        "keywords": [self._market_data["VIX"]["price_fmt"]],
+                    }
+                )
+            if self._market_data.get("DXY"):
+                card_themes.append(
+                    {
+                        "name": "달러 인덱스",
+                        "emoji": "💵",
+                        "count": 1,
+                        "keywords": [self._market_data["DXY"]["price_fmt"]],
+                    }
+                )
+
+            news_total = (
+                len(self._treasury_news) + len(self._put_call_news)
+                + len(self._breadth_news) + len(self._margin_news)
+            )
+            if news_total:
+                card_themes.append(
+                    {
+                        "name": "리스크 뉴스",
+                        "emoji": "⚠️",
+                        "count": news_total,
+                        "keywords": [],
+                    }
+                )
+
+            if card_themes:
+                img = generate_news_briefing_card(
+                    card_themes[:4],
+                    self.today,
+                    category="Market Indicators",
+                    total_count=max(preview_source_count, len(card_themes)),
+                    filename=f"news-briefing-indicators-{self.today}.png",
+                )
+                if img:
+                    briefing_image_path = f"/assets/images/generated/{os.path.basename(img)}"
+        except ImportError as exc:
+            self.logger.debug("Optional dependency unavailable: %s", exc)
+        except Exception as exc:
+            self.logger.warning("Market indicators briefing image failed: %s", exc)
+
+        _desc_parts_mi = []
+        if self._cnn_fg:
+            _rating_ko = _rating_to_korean(self._cnn_fg.get("rating", ""))
+            _desc_parts_mi.append(f"공포탐욕지수 {self._cnn_fg.get('score', '')}({_rating_ko})")
+        if self._market_data.get("VIX"):
+            _desc_parts_mi.append(f"VIX {self._market_data['VIX'].get('price_fmt', '')}")
+        if self._market_data.get("DXY"):
+            _desc_parts_mi.append(f"달러지수 {self._market_data['DXY'].get('price_fmt', '')}")
+        _desc_ko = f"시장 지표 {preview_source_count}개 소스 수집. "
+        if _desc_parts_mi:
+            _desc_ko += f"{', '.join(_desc_parts_mi)}. "
+        _desc_ko += "공포탐욕지수·VIX·국채금리 등 핵심 시장 센티먼트 지표를 분석합니다."
+
+        filepath = self.create_post(
+            title=post_title,
+            content=content,
+            tags=tags,
+            source="consolidated",
+            image=briefing_image_path,
+            extra_frontmatter={
+                "permalink": report_permalink,
+                "description_ko": _desc_ko,
+            },
+            slug="daily-market-indicators",
+        )
+
+        if filepath:
+            self.mark_seen(post_title, "consolidated")
+            self.logger.info("Created market indicators post: %s", filepath)
+
+        self.save_state()
+        self.logger.info("=== Market indicators collection complete ===")
+        self.log_summary(all_news_items)
+
+
 # ── Main ───────────────────────────────────────────────────────────────────────
 
 
 def main() -> None:
     """Main collection routine — consolidated market indicators post."""
-    logger.info("=== Starting market indicators collection ===")
-    started_at = time.monotonic()
-
-    dedup = DedupEngine("market_indicators_seen.json")
-    gen = PostGenerator("market-analysis")
-
-    now = get_kst_now()
-    today = now.strftime("%Y-%m-%d")
-
-    post_title = f"시장 심리 및 리스크 지표 ({today})"
-
-    # Early exit if already generated today
-    if dedup.is_duplicate_exact(post_title, "consolidated", today):
-        logger.info("Market indicators post already exists for %s, skipping", today)
-        log_collection_summary(
-            logger,
-            collector="collect_market_indicators",
-            source_count=0,
-            unique_items=0,
-            post_created=0,
-            started_at=started_at,
-        )
-        dedup.save()
-        return
-
-    # Fetch all data sources (news fetches run concurrently internally)
-    fred_key = get_env("FRED_API_KEY")
-    cnn_fg = fetch_cnn_fear_greed()
-    market_data = fetch_yfinance_market_data()
-    fred_data = fetch_fred_indicators(fred_key)
-    treasury_news = fetch_treasury_yield_news()
-    put_call_news = fetch_put_call_ratio_news()
-    breadth_news = fetch_market_breadth_news()
-    margin_news = fetch_margin_debt_news()
-
-    all_news_items = treasury_news + put_call_news + breadth_news + margin_news
-    has_any_data = cnn_fg or market_data or fred_data or all_news_items
-
-    if not has_any_data:
-        logger.warning("No data collected from any source, skipping post creation")
-        log_collection_summary(
-            logger,
-            collector="collect_market_indicators",
-            source_count=0,
-            unique_items=0,
-            post_created=0,
-            started_at=started_at,
-        )
-        dedup.save()
-        return
-
-    # ── 신호 추적: SignalComposer 실행 + SignalTracker 기록 ──────────────────
-    accuracy_summary = ""
-    try:
-        signals: Dict[str, Any] = {}
-        if cnn_fg:
-            signals["fear_greed"] = {"value": cnn_fg.get("score", 50), "label": cnn_fg.get("rating", "")}
-        vix_data = market_data.get("VIX")
-        if vix_data:
-            vix_chg = vix_data.get("change_pct", 0)
-            signals["vix"] = {
-                "value": vix_data.get("price", 20),
-                "trend": "rising" if vix_chg > 0 else ("falling" if vix_chg < 0 else "stable"),
-            }
-        macro: Dict[str, Any] = {}
-        dxy_data = market_data.get("DXY")
-        if dxy_data:
-            macro["dxy"] = dxy_data.get("price", 100)
-        if fred_data:
-            us10y = fred_data.get("GS10", {}).get("value")
-            if us10y:
-                macro["us10y"] = us10y
-            fed_rate = fred_data.get("FEDFUNDS", {}).get("value")
-            if fed_rate:
-                macro["fed_rate"] = fed_rate
-        if macro:
-            signals["macro"] = macro
-
-        if signals:
-            btc_price = fetch_btc_price()
-            composer = SignalComposer()
-            composite_result = composer.compose_signals(signals)
-            tracker = SignalTracker()
-            tracker.record(composite_result, btc_price=btc_price, date=today)
-            accuracy_summary = tracker.format_accuracy_summary(lookback_days=30)
-            logger.info(
-                "SignalTracker 기록 완료 (score=%.1f verdict=%s)", composite_result.score, composite_result.verdict
-            )
-    except Exception as exc:
-        logger.warning("SignalTracker 기록 실패 (기존 기능에 영향 없음): %s", exc)
-
-    # Build post content
-    content = build_post_content(
-        cnn_fg=cnn_fg,
-        market_data=market_data,
-        treasury_news=treasury_news,
-        put_call_news=put_call_news,
-        breadth_news=breadth_news,
-        margin_news=margin_news,
-        today=today,
-        now=now,
-        fred_data=fred_data,
-        accuracy_summary=accuracy_summary,
-    )
-
-    # Build tags list
-    tags = ["market-analysis", "fear-greed", "vix", "market-breadth", "sentiment"]
-    if fred_data:
-        tags.append("fred")
-
-    # Generate Jekyll post
-    report_permalink = build_dated_permalink("market-analysis", today, "daily-market-indicators")
-    briefing_image_path = ""
-    preview_source_count = sum(
-        [
-            1 if cnn_fg else 0,
-            len(market_data),
-            1 if treasury_news else 0,
-            1 if put_call_news else 0,
-            1 if breadth_news else 0,
-            1 if margin_news else 0,
-            1 if fred_data else 0,
-        ]
-    )
-
-    try:
-        from common.image_generator import generate_news_briefing_card
-
-        card_themes = []
-        if cnn_fg:
-            card_themes.append(
-                {
-                    "name": "공포탐욕",
-                    "emoji": "😨" if cnn_fg.get("score", 50) < 50 else "💰",
-                    "count": 1,
-                    "keywords": [_rating_to_korean(cnn_fg.get("rating", ""))],
-                }
-            )
-        if market_data.get("VIX"):
-            card_themes.append(
-                {
-                    "name": "VIX",
-                    "emoji": "📉",
-                    "count": 1,
-                    "keywords": [market_data["VIX"]["price_fmt"]],
-                }
-            )
-        if market_data.get("DXY"):
-            card_themes.append(
-                {
-                    "name": "달러 인덱스",
-                    "emoji": "💵",
-                    "count": 1,
-                    "keywords": [market_data["DXY"]["price_fmt"]],
-                }
-            )
-
-        news_total = len(treasury_news) + len(put_call_news) + len(breadth_news) + len(margin_news)
-        if news_total:
-            card_themes.append(
-                {
-                    "name": "리스크 뉴스",
-                    "emoji": "⚠️",
-                    "count": news_total,
-                    "keywords": [],
-                }
-            )
-
-        if card_themes:
-            img = generate_news_briefing_card(
-                card_themes[:4],
-                today,
-                category="Market Indicators",
-                total_count=max(preview_source_count, len(card_themes)),
-                filename=f"news-briefing-indicators-{today}.png",
-            )
-            if img:
-                briefing_image_path = f"/assets/images/generated/{os.path.basename(img)}"
-    except ImportError as exc:
-        logger.debug("Optional dependency unavailable: %s", exc)
-    except Exception as exc:
-        logger.warning("Market indicators briefing image failed: %s", exc)
-
-    _desc_parts_mi = []
-    if cnn_fg:
-        _rating_ko = _rating_to_korean(cnn_fg.get("rating", ""))
-        _desc_parts_mi.append(f"공포탐욕지수 {cnn_fg.get('score', '')}({_rating_ko})")
-    if market_data.get("VIX"):
-        _desc_parts_mi.append(f"VIX {market_data['VIX'].get('price_fmt', '')}")
-    if market_data.get("DXY"):
-        _desc_parts_mi.append(f"달러지수 {market_data['DXY'].get('price_fmt', '')}")
-    _desc_ko = f"시장 지표 {preview_source_count}개 소스 수집. "
-    if _desc_parts_mi:
-        _desc_ko += f"{', '.join(_desc_parts_mi)}. "
-    _desc_ko += "공포탐욕지수·VIX·국채금리 등 핵심 시장 센티먼트 지표를 분석합니다."
-
-    filepath = gen.create_post(
-        title=post_title,
-        content=content,
-        date=now,
-        logical_date=today,
-        tags=tags,
-        source="consolidated",
-        lang="ko",
-        image=briefing_image_path,
-        extra_frontmatter={
-            "permalink": report_permalink,
-            "description_ko": _desc_ko,
-        },
-        slug="daily-market-indicators",
-    )
-
-    post_created = 0
-    if filepath:
-        dedup.mark_seen(post_title, "consolidated", today)
-        logger.info("Created market indicators post: %s", filepath)
-        post_created = 1
-
-    dedup.save()
-    logger.info("=== Market indicators collection complete ===")
-
-    unique_items = len(
-        {f"{item.get('title', '')}|{item.get('link', '')}" for item in all_news_items if item.get("title")}
-    )
-    source_count = len([x for x in [cnn_fg, market_data, fred_data] if x]) + len(
-        {item.get("source", "") for item in all_news_items if item.get("source")}
-    )
-
-    log_collection_summary(
-        logger,
-        collector="collect_market_indicators",
-        source_count=source_count,
-        unique_items=unique_items,
-        post_created=post_created,
-        started_at=started_at,
-    )
+    collector = MarketIndicatorsCollector()
+    collector.run()
 
 
 if __name__ == "__main__":

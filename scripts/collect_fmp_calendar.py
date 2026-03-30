@@ -3,15 +3,12 @@
 
 import os
 import sys
-import time
 from typing import Any, Dict, List
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common.base_collector import BaseCollector
 from common.collector_config import get_collector_config
-from common.collector_metrics import log_collection_summary
-from common.config import get_kst_now, setup_logging
-from common.dedup import DedupEngine
 from common.fmp_api import (
     fetch_earnings_calendar,
     fetch_economic_calendar,
@@ -20,9 +17,7 @@ from common.fmp_api import (
     fetch_sector_performance,
     fetch_treasury_rates,
 )
-from common.post_generator import PostGenerator, build_dated_permalink
-
-logger = setup_logging("collect_fmp_calendar")
+from common.post_generator import build_dated_permalink
 
 # collectors.yml에서 설정 로드
 _fmp_cfg = get_collector_config("fmp_calendar")
@@ -350,211 +345,239 @@ def _build_earnings_section(earnings: List[Dict[str, Any]]) -> str:
     return "\n".join(lines) + "\n"
 
 
+class FmpCalendarCollector(BaseCollector):
+    """FMP 경제 캘린더 및 실적 일정 수집기."""
+
+    name = "fmp_calendar"
+    category = "market-analysis"
+    state_file = "fmp_calendar_seen.json"
+
+    def fetch(self) -> List[Dict[str, Any]]:
+        """FMP API에서 모든 데이터를 수집합니다."""
+        self.logger.info("Fetching market index data for %s", _INDEX_SYMBOLS)
+        indices = []
+        for symbol in _INDEX_SYMBOLS:
+            quote = fetch_market_index_data(symbol)
+            if quote:
+                indices.append(quote)
+
+        self.logger.info("Fetching sector performance")
+        sectors = fetch_sector_performance()
+
+        self.logger.info("Fetching economic calendar (30 days ahead)")
+        economic_events = fetch_economic_calendar(days_ahead=30)
+
+        self.logger.info("Fetching earnings calendar (7 days ahead)")
+        earnings = fetch_earnings_calendar(days_ahead=7)
+
+        self.logger.info("Fetching US Treasury rates")
+        treasury_rates = fetch_treasury_rates()
+
+        self.logger.info("Fetching IPO calendar (30 days ahead)")
+        ipo_data = fetch_ipo_calendar(days_ahead=30)
+
+        # 데이터를 인스턴스에 저장 (build_content에서 사용)
+        self._indices = indices
+        self._sectors = sectors
+        self._economic_events = economic_events
+        self._earnings = earnings
+        self._treasury_rates = treasury_rates
+        self._ipo_data = ipo_data
+
+        # 모든 항목을 합산하여 반환 (파이프라인 호환)
+        all_items: List[Dict[str, Any]] = []
+        for idx in indices:
+            all_items.append({"title": idx.get("symbol", ""), "source": "fmp_index", "type": "index", **idx})
+        for s in sectors:
+            all_items.append({"title": s.get("sector", ""), "source": "fmp_sector", "type": "sector", **s})
+        for e in economic_events:
+            all_items.append({"title": e.get("event", ""), "source": "fmp_economic", "type": "economic", **e})
+        for e in earnings:
+            all_items.append({"title": e.get("symbol", ""), "source": "fmp_earnings", "type": "earnings", **e})
+        for r in treasury_rates:
+            all_items.append({"title": r.get("maturity", ""), "source": "fmp_treasury", "type": "treasury", **r})
+        for i in ipo_data:
+            all_items.append({"title": i.get("company", ""), "source": "fmp_ipo", "type": "ipo", **i})
+        return all_items
+
+    def process(self, items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """FMP 데이터는 별도 필터링 없이 그대로 반환합니다."""
+        return items
+
+    def build_content(self, items: List[Dict[str, Any]]) -> str:
+        """마크다운 포스트 본문을 생성합니다."""
+        indices = self._indices
+        sectors = self._sectors
+        economic_events = self._economic_events
+        earnings = self._earnings
+        treasury_rates = self._treasury_rates
+        ipo_data = self._ipo_data
+
+        content_parts: List[str] = []
+
+        # Opening summary
+        content_parts.append(
+            f"**{self.today}** 기준 주요 시장 지수 {len(indices)}종, "
+            f"섹터 {len(sectors)}개, "
+            f"국채 금리 {len(treasury_rates)}개 만기, "
+            f"경제 이벤트 {len(economic_events)}건(고·중간 중요도), "
+            f"대형주 실적 발표 {len(earnings)}건, "
+            f"IPO 일정 {len(ipo_data)}건을 수집했습니다.\n"
+        )
+
+        # Stat grid
+        stat_items = []
+        if indices:
+            stat_items.append(
+                f'<div class="stat-item"><div class="stat-value">{len(indices)}</div><div class="stat-label">주요 지수</div></div>'
+            )
+        if earnings:
+            stat_items.append(
+                f'<div class="stat-item"><div class="stat-value">{len(earnings)}</div><div class="stat-label">실적 발표</div></div>'
+            )
+        if economic_events:
+            stat_items.append(
+                f'<div class="stat-item"><div class="stat-value">{len(economic_events)}</div><div class="stat-label">경제 이벤트</div></div>'
+            )
+        if ipo_data:
+            stat_items.append(
+                f'<div class="stat-item"><div class="stat-value">{len(ipo_data)}</div><div class="stat-label">IPO 일정</div></div>'
+            )
+        if stat_items:
+            content_parts.append('<div class="stat-grid">' + "".join(stat_items) + "</div>\n")
+
+        content_parts.append(_build_index_section(indices))
+        content_parts.append("\n---\n")
+        content_parts.append(_build_treasury_section(treasury_rates))
+        content_parts.append("\n---\n")
+        content_parts.append(_build_sector_section(sectors))
+        content_parts.append("\n---\n")
+        content_parts.append(_build_economic_section(economic_events))
+        content_parts.append("\n---\n")
+        content_parts.append(_build_earnings_section(earnings))
+        content_parts.append("\n---\n")
+        content_parts.append(_build_ipo_section(ipo_data))
+        content_parts.append("\n---\n")
+        content_parts.append(
+            "> *본 캘린더는 Financial Modeling Prep API에서 자동 수집된 데이터이며, "
+            "투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*\n"
+        )
+        content_parts.append(
+            '<div class="wm-footer-meta">'
+            f"<span>수집 시각: {self.now.strftime('%Y-%m-%d %H:%M')} KST</span>"
+            "<span>소스: Financial Modeling Prep API</span>"
+            "</div>"
+        )
+
+        return "\n".join(content_parts)
+
+    def run(self) -> None:
+        """메인 실행 파이프라인 — FMP 경제 캘린더 포스트 생성."""
+        import time
+
+        self.logger.info("=== Starting FMP calendar collection ===")
+        self._started_at = time.monotonic()
+
+        post_title = f"주요 경제 캘린더 및 실적 일정 ({self.today})"
+
+        if self.is_duplicate_exact(post_title, "fmp_calendar"):
+            self.logger.info("FMP calendar post already exists for today, skipping")
+            self.save_state()
+            self.log_summary([])
+            return
+
+        # Fetch all data
+        items = self.fetch()
+
+        if not items:
+            self.logger.warning("No FMP data collected — FMP_API_KEY may not be set or API is unavailable")
+            self.save_state()
+            self.log_summary([])
+            return
+
+        content = self.build_content(items)
+        total_items = len(items)
+
+        indices = self._indices
+        sectors = self._sectors
+        economic_events = self._economic_events
+        earnings = self._earnings
+        treasury_rates = self._treasury_rates
+        ipo_data = self._ipo_data
+
+        briefing_image_path = ""
+        try:
+            from common.image_generator import generate_news_briefing_card
+
+            card_themes = []
+            for name, emoji, count in [
+                ("주요 시장 지수", "📊", len(indices)),
+                ("미국 국채 금리", "🏦", len(treasury_rates)),
+                ("섹터 퍼포먼스", "🏭", len(sectors)),
+                ("주요 경제 이벤트", "📅", len(economic_events)),
+                ("실적 발표", "💵", len(earnings)),
+                ("IPO 일정", "🚀", len(ipo_data)),
+            ]:
+                if count > 0:
+                    card_themes.append({"name": name, "emoji": emoji, "count": count, "keywords": []})
+
+            if card_themes:
+                img = generate_news_briefing_card(
+                    card_themes[:4],
+                    self.today,
+                    category="Economic Calendar",
+                    total_count=total_items,
+                    filename=f"news-briefing-calendar-{self.today}.png",
+                )
+                if img:
+                    fn = os.path.basename(img)
+                    briefing_image_path = f"/assets/images/generated/{fn}"
+        except ImportError as exc:
+            self.logger.debug("Optional dependency unavailable: %s", exc)
+        except Exception as exc:
+            self.logger.warning("Economic calendar briefing image failed: %s", exc)
+
+        _desc_parts_fmp = []
+        if indices:
+            _desc_parts_fmp.append(f"시장 지수 {len(indices)}개")
+        if earnings:
+            _desc_parts_fmp.append(f"실적 발표 {len(earnings)}건")
+        if economic_events:
+            _desc_parts_fmp.append(f"경제 이벤트 {len(economic_events)}건")
+        if ipo_data:
+            _desc_parts_fmp.append(f"IPO {len(ipo_data)}건")
+        _desc_ko = f"경제 캘린더 {total_items}건 수집. "
+        if _desc_parts_fmp:
+            _desc_ko += f"{', '.join(_desc_parts_fmp)} 포함. "
+        _desc_ko += "FMP API 기반 주요 경제 이벤트·실적·국채 금리를 정리합니다."
+
+        filepath = self.create_post(
+            title=post_title,
+            content=content,
+            tags=["market-analysis", "economic-calendar", "earnings", "treasury", "ipo", "fmp"],
+            source="fmp",
+            image=briefing_image_path,
+            extra_frontmatter={
+                "permalink": build_dated_permalink("market-analysis", self.today, "fmp-economic-calendar"),
+                "description": _desc_ko,
+                "description_ko": _desc_ko,
+            },
+            slug="fmp-economic-calendar",
+        )
+
+        if filepath:
+            self.mark_seen(post_title, "fmp_calendar")
+            self.logger.info("Created FMP calendar post: %s", filepath)
+
+        self.save_state()
+        self.logger.info("=== FMP calendar collection complete ===")
+        self.log_summary(items)
+
+
 def main() -> None:
     """Main collection routine — consolidated FMP calendar post."""
-    logger.info("=== Starting FMP calendar collection ===")
-    started_at = time.monotonic()
-
-    dedup = DedupEngine("fmp_calendar_seen.json")
-    gen = PostGenerator("market-analysis")
-
-    now = get_kst_now()
-    today = now.strftime("%Y-%m-%d")
-
-    post_title = f"주요 경제 캘린더 및 실적 일정 ({today})"
-
-    if dedup.is_duplicate_exact(post_title, "fmp_calendar", today):
-        logger.info("FMP calendar post already exists for today, skipping")
-        log_collection_summary(
-            logger,
-            collector="collect_fmp_calendar",
-            source_count=0,
-            unique_items=0,
-            post_created=0,
-            started_at=started_at,
-        )
-        dedup.save()
-        return
-
-    # Fetch all data
-    logger.info("Fetching market index data for %s", _INDEX_SYMBOLS)
-    indices = []
-    for symbol in _INDEX_SYMBOLS:
-        quote = fetch_market_index_data(symbol)
-        if quote:
-            indices.append(quote)
-
-    logger.info("Fetching sector performance")
-    sectors = fetch_sector_performance()
-
-    logger.info("Fetching economic calendar (30 days ahead)")
-    economic_events = fetch_economic_calendar(days_ahead=30)
-
-    logger.info("Fetching earnings calendar (7 days ahead)")
-    earnings = fetch_earnings_calendar(days_ahead=7)
-
-    logger.info("Fetching US Treasury rates")
-    treasury_rates = fetch_treasury_rates()
-
-    logger.info("Fetching IPO calendar (30 days ahead)")
-    ipo_data = fetch_ipo_calendar(days_ahead=30)
-
-    total_items = (
-        len(indices) + len(sectors) + len(economic_events) + len(earnings) + len(treasury_rates) + len(ipo_data)
-    )
-
-    if total_items == 0:
-        logger.warning("No FMP data collected — FMP_API_KEY may not be set or API is unavailable")
-        log_collection_summary(
-            logger,
-            collector="collect_fmp_calendar",
-            source_count=0,
-            unique_items=0,
-            post_created=0,
-            started_at=started_at,
-        )
-        dedup.save()
-        return
-
-    # Build post content
-    content_parts: List[str] = []
-
-    # Opening summary
-    content_parts.append(
-        f"**{today}** 기준 주요 시장 지수 {len(indices)}종, "
-        f"섹터 {len(sectors)}개, "
-        f"국채 금리 {len(treasury_rates)}개 만기, "
-        f"경제 이벤트 {len(economic_events)}건(고·중간 중요도), "
-        f"대형주 실적 발표 {len(earnings)}건, "
-        f"IPO 일정 {len(ipo_data)}건을 수집했습니다.\n"
-    )
-
-    # Stat grid
-    stat_items = []
-    if indices:
-        stat_items.append(
-            f'<div class="stat-item"><div class="stat-value">{len(indices)}</div><div class="stat-label">주요 지수</div></div>'
-        )
-    if earnings:
-        stat_items.append(
-            f'<div class="stat-item"><div class="stat-value">{len(earnings)}</div><div class="stat-label">실적 발표</div></div>'
-        )
-    if economic_events:
-        stat_items.append(
-            f'<div class="stat-item"><div class="stat-value">{len(economic_events)}</div><div class="stat-label">경제 이벤트</div></div>'
-        )
-    if ipo_data:
-        stat_items.append(
-            f'<div class="stat-item"><div class="stat-value">{len(ipo_data)}</div><div class="stat-label">IPO 일정</div></div>'
-        )
-    if stat_items:
-        content_parts.append('<div class="stat-grid">' + "".join(stat_items) + "</div>\n")
-
-    content_parts.append(_build_index_section(indices))
-    content_parts.append("\n---\n")
-    content_parts.append(_build_treasury_section(treasury_rates))
-    content_parts.append("\n---\n")
-    content_parts.append(_build_sector_section(sectors))
-    content_parts.append("\n---\n")
-    content_parts.append(_build_economic_section(economic_events))
-    content_parts.append("\n---\n")
-    content_parts.append(_build_earnings_section(earnings))
-    content_parts.append("\n---\n")
-    content_parts.append(_build_ipo_section(ipo_data))
-    content_parts.append("\n---\n")
-    content_parts.append(
-        "> *본 캘린더는 Financial Modeling Prep API에서 자동 수집된 데이터이며, "
-        "투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*\n"
-    )
-    content_parts.append(
-        '<div class="wm-footer-meta">'
-        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} KST</span>"
-        "<span>소스: Financial Modeling Prep API</span>"
-        "</div>"
-    )
-
-    content = "\n".join(content_parts)
-    briefing_image_path = ""
-
-    try:
-        from common.image_generator import generate_news_briefing_card
-
-        card_themes = []
-        for name, emoji, count in [
-            ("주요 시장 지수", "📊", len(indices)),
-            ("미국 국채 금리", "🏦", len(treasury_rates)),
-            ("섹터 퍼포먼스", "🏭", len(sectors)),
-            ("주요 경제 이벤트", "📅", len(economic_events)),
-            ("실적 발표", "💵", len(earnings)),
-            ("IPO 일정", "🚀", len(ipo_data)),
-        ]:
-            if count > 0:
-                card_themes.append({"name": name, "emoji": emoji, "count": count, "keywords": []})
-
-        if card_themes:
-            img = generate_news_briefing_card(
-                card_themes[:4],
-                today,
-                category="Economic Calendar",
-                total_count=total_items,
-                filename=f"news-briefing-calendar-{today}.png",
-            )
-            if img:
-                fn = os.path.basename(img)
-                briefing_image_path = f"/assets/images/generated/{fn}"
-    except ImportError as exc:
-        logger.debug("Optional dependency unavailable: %s", exc)
-    except Exception as exc:
-        logger.warning("Economic calendar briefing image failed: %s", exc)
-
-    _desc_parts_fmp = []
-    if indices:
-        _desc_parts_fmp.append(f"시장 지수 {len(indices)}개")
-    if earnings:
-        _desc_parts_fmp.append(f"실적 발표 {len(earnings)}건")
-    if economic_events:
-        _desc_parts_fmp.append(f"경제 이벤트 {len(economic_events)}건")
-    if ipo_data:
-        _desc_parts_fmp.append(f"IPO {len(ipo_data)}건")
-    _desc_ko = f"경제 캘린더 {total_items}건 수집. "
-    if _desc_parts_fmp:
-        _desc_ko += f"{', '.join(_desc_parts_fmp)} 포함. "
-    _desc_ko += "FMP API 기반 주요 경제 이벤트·실적·국채 금리를 정리합니다."
-
-    filepath = gen.create_post(
-        title=post_title,
-        content=content,
-        date=now,
-        logical_date=today,
-        tags=["market-analysis", "economic-calendar", "earnings", "treasury", "ipo", "fmp"],
-        source="fmp",
-        lang="ko",
-        image=briefing_image_path,
-        extra_frontmatter={
-            "permalink": build_dated_permalink("market-analysis", today, "fmp-economic-calendar"),
-            "description": _desc_ko,
-            "description_ko": _desc_ko,
-        },
-        slug="fmp-economic-calendar",
-    )
-
-    post_created = 0
-    if filepath:
-        dedup.mark_seen(post_title, "fmp_calendar", today)
-        logger.info("Created FMP calendar post: %s", filepath)
-        post_created = 1
-
-    dedup.save()
-    logger.info("=== FMP calendar collection complete ===")
-
-    log_collection_summary(
-        logger,
-        collector="collect_fmp_calendar",
-        source_count=6,  # indices, sectors, treasury, economic, earnings, ipo
-        unique_items=total_items,
-        post_created=post_created,
-        started_at=started_at,
-    )
+    collector = FmpCalendarCollector()
+    collector.run()
 
 
 if __name__ == "__main__":
