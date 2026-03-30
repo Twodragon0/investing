@@ -18,17 +18,17 @@ import requests
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common.base_collector import BaseCollector
 from common.bettafish_analyzer import BettaFishAnalyzer
 from common.collector_config import get_collector_config, get_url
-from common.collector_metrics import log_collection_summary
-from common.config import REQUEST_TIMEOUT, get_env, get_kst_now, get_verify_ssl, setup_logging
-from common.dedup import DedupEngine, deduplicate_by_url
+from common.config import REQUEST_TIMEOUT, get_env, get_verify_ssl, setup_logging
+from common.dedup import deduplicate_by_url
 from common.enrichment import _STOCK_SOURCE_CONTEXT, enrich_items
 from common.markdown_utils import (
     html_reference_details,
 )
 from common.mindspider import MindSpider
-from common.post_generator import PostGenerator, build_dated_permalink
+from common.post_generator import build_dated_permalink
 from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
 from common.signal_composer import SignalComposer
 from common.summarizer import ThemeSummarizer
@@ -368,595 +368,583 @@ def fetch_korean_market_data() -> dict:
     return results
 
 
-def main():
-    """Main collection routine - consolidated post."""
-    logger.info("=== Starting stock news collection ===")
-    started_at = time.monotonic()
+class StockNewsCollector(BaseCollector):
+    """주식 시장 뉴스 수집기.
 
-    alpha_vantage_key = get_env("ALPHA_VANTAGE_API_KEY")
+    Google News, Yahoo Finance, Alpha Vantage, 금융 미디어 RSS 등
+    다양한 소스에서 뉴스를 수집하고 종합 포스트를 생성합니다.
+    """
 
-    dedup = DedupEngine("stock_news_seen.json")
-    gen = PostGenerator("stock-news")
+    name = "stock_news"
+    category = "stock-news"
+    state_file = "stock_news_seen.json"
 
-    now = get_kst_now()
-    today = now.strftime("%Y-%m-%d")
+    def fetch(self) -> List[Dict[str, Any]]:
+        """모든 소스에서 뉴스 항목을 수집합니다."""
+        alpha_vantage_key = get_env("ALPHA_VANTAGE_API_KEY")
 
-    # Collect from all sources
-    browser_items = fetch_google_news_browser_stocks()
-    google_items = fetch_google_news_stocks()
-    yahoo_items = fetch_yahoo_finance_rss()
-    alpha_items = fetch_alpha_vantage_snapshot(alpha_vantage_key)
+        browser_items = fetch_google_news_browser_stocks()
+        google_items = fetch_google_news_stocks()
+        yahoo_items = fetch_yahoo_finance_rss()
+        alpha_items = fetch_alpha_vantage_snapshot(alpha_vantage_key)
+        financial_rss_items = fetch_financial_rss_feeds()
+        sector_items = fetch_sector_rotation_feeds()
 
-    financial_rss_items = fetch_financial_rss_feeds()
-    sector_items = fetch_sector_rotation_feeds()
-    all_items = browser_items + google_items + yahoo_items + alpha_items + financial_rss_items + sector_items
+        return browser_items + google_items + yahoo_items + alpha_items + financial_rss_items + sector_items
 
-    # Fetch Korean market data
-    kr_market = fetch_korean_market_data()
+    def process(self, items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """URL 기반 중복 제거."""
+        return deduplicate_by_url(items)
 
-    if not all_items:
-        logger.warning("No news items collected, skipping stock news post")
-        log_collection_summary(
-            logger,
-            collector="collect_stock_news",
-            source_count=0,
-            unique_items=0,
-            post_created=0,
-            started_at=started_at,
-        )
-        dedup.save()
-        return
+    def build_content(self, items: List[Dict[str, Any]]) -> str:
+        """주식 뉴스 포스트 본문을 생성합니다."""
+        # run()에서 직접 처리하므로 여기서는 빈 문자열 반환
+        return ""
 
-    # ── Consolidated stock news post ──
-    post_title = f"주식 시장 뉴스 종합 - {today}"
+    def run(self) -> None:
+        """메인 실행 파이프라인 — 종합 주식 뉴스 포스트 생성."""
+        self.logger.info("=== Starting stock news collection ===")
+        self._started_at = time.monotonic()
 
-    if dedup.is_duplicate_exact(post_title, "consolidated", today):
-        logger.info("Consolidated stock post already exists, skipping")
-        unique_count = len(
-            {
-                f"{item.get('title', '')}|{item.get('source', '')}|{item.get('link', '')}"
-                for item in all_items
-                if item.get("title")
-            }
-        )
-        source_count = len({item.get("source", "") for item in all_items if item.get("source")})
-        log_collection_summary(
-            logger,
-            collector="collect_stock_news",
-            source_count=source_count,
-            unique_items=unique_count,
-            post_created=0,
-            started_at=started_at,
-        )
-        dedup.save()
-        return
+        today = self.today
+        now = self.now
 
-    # Separate global vs Korean news using detect_language
-    global_rows = []
-    korean_rows = []
-    alpha_vantage_rows = []
-    source_links = []
+        all_items = self.fetch()
 
-    for item in all_items:
-        title = item["title"]
-        source = item.get("source", "unknown")
-        link = item.get("link", "")
+        # Fetch Korean market data
+        kr_market = fetch_korean_market_data()
 
-        if source == "Alpha Vantage":
-            alpha_vantage_rows.append(item)
-            continue
+        if not all_items:
+            self.logger.warning("No news items collected, skipping stock news post")
+            self.save_state()
+            self.log_summary([])
+            return
 
-        # Collect links for references section
-        if link:
-            source_links.append({"title": title, "link": link, "source": source})
+        # ── Consolidated stock news post ──
+        post_title = f"주식 시장 뉴스 종합 - {today}"
 
-        lang = detect_language(title)
-        if lang == "ko":
-            if link:
-                korean_rows.append(f"| {len(korean_rows) + 1} | [**{title}**]({link}) | {source} |")
-            else:
-                korean_rows.append(f"| {len(korean_rows) + 1} | **{title}** | {source} |")
-        else:
-            if link:
-                global_rows.append(f"| {len(global_rows) + 1} | [**{title}**]({link}) | {source} |")
-            else:
-                global_rows.append(f"| {len(global_rows) + 1} | **{title}** | {source} |")
+        if self.is_duplicate_exact(post_title, "consolidated"):
+            self.logger.info("Consolidated stock post already exists, skipping")
+            self.save_state()
+            self.log_summary(all_items)
+            return
 
-    global_count = len(global_rows)
-    korean_count = len(korean_rows)
+        # Separate global vs Korean news using detect_language
+        global_rows = []
+        korean_rows = []
+        alpha_vantage_rows = []
+        source_links = []
 
-    # Limit to top items
-    global_rows = global_rows[:15]
-    korean_rows = korean_rows[:10]
-
-    # Data-driven opening with Korean market summary
-    opening_parts = [f"**{today}** 주식 시장에서 {len(all_items)}건의 뉴스를 분석했습니다."]
-    kr_summary_parts = []
-    for name, info in kr_market.items():
-        kr_summary_parts.append(f"{name} {info['price']}({info['change_pct']})")
-    if kr_summary_parts:
-        opening_parts.append(f"한국 시장: {', '.join(kr_summary_parts)}.")
-    content_parts = [" ".join(opening_parts) + "\n"]
-
-    # Stat grid - market snapshot
-    content_parts.append('<div class="stat-grid">')
-    if kr_market:
-        for name, info in list(kr_market.items())[:4]:
-            content_parts.append(
-                f'<div class="stat-item"><span class="stat-value">{info["price"]}</span>'
-                f'<span class="stat-label">{name} ({info["change_pct"]})</span></div>'
-            )
-    else:
-        content_parts.append(
-            f'<div class="stat-item"><span class="stat-value">{len(all_items)}</span>'
-            '<span class="stat-label">수집 뉴스</span></div>'
-        )
-        content_parts.append(
-            f'<div class="stat-item"><span class="stat-value">{global_count}</span>'
-            '<span class="stat-label">글로벌</span></div>'
-        )
-        content_parts.append(
-            f'<div class="stat-item"><span class="stat-value">{korean_count}</span>'
-            '<span class="stat-label">한국</span></div>'
-        )
-    content_parts.append("</div>\n")
-
-    # Create summarizer
-    summarizer = ThemeSummarizer(all_items)
-
-    # Executive summary (한눈에 보기)
-    exec_summary = summarizer.generate_executive_summary(
-        category_type="stock",
-        extra_data={"kr_market": kr_market},
-        total_override=len(all_items),
-    )
-    if exec_summary:
-        content_parts.append(exec_summary)
-
-    summary_points = []
-    if korean_count or global_count:
-        summary_points.append(f"한국 기사 {korean_count}건, 글로벌 기사 {global_count}건 수집")
-    if kr_summary_parts:
-        summary_points.append(f"한국 지수: {', '.join(kr_summary_parts)}")
-    overall_summary = summarizer.generate_overall_summary_section(
-        extra_data={"summary_points": summary_points},
-        total_override=len(all_items),
-    )
-    if overall_summary:
-        content_parts.append(overall_summary)
-
-    # Theme distribution chart
-    chart = summarizer.generate_distribution_chart()
-    if chart:
-        content_parts.append("\n" + chart)
-
-    # Image — market snapshot card
-    snapshot_items = []
-    # US data from Alpha Vantage
-    if not alpha_vantage_rows:
-        try:
-            import yfinance as yf
-
-            _us_symbols = {"^GSPC": "S&P 500", "^IXIC": "NASDAQ", "^DJI": "다우존스", "^VIX": "VIX"}
-            import pandas as pd
-
-            _tickers = yf.download(list(_us_symbols.keys()), period="7d", progress=False, auto_adjust=True)
-            _df = pd.DataFrame(_tickers)
-            if "Close" not in _df.columns:
-                raise KeyError("Close column missing")
-            for sym, label in _us_symbols.items():
-                try:
-                    _close_series = _df["Close"][sym]
-                    if not isinstance(_close_series, pd.Series):
-                        continue
-                    _hist = pd.to_numeric(_close_series, errors="coerce")
-                    if not isinstance(_hist, pd.Series):
-                        continue
-                    _hist = _hist.dropna()
-                    if len(_hist) >= 2:
-                        _price = float(_hist.iloc[-1])
-                        _prev = float(_hist.iloc[-2])
-                        _chg_pct = (_price - _prev) / _prev * 100
-                        _sign = "+" if _chg_pct >= 0 else ""
-                        _spark = (
-                            [float(v) for v in _hist.tail(5).values]
-                            if len(_hist) >= 5
-                            else [float(v) for v in _hist.values]
-                        )
-                        snapshot_items.append(
-                            {
-                                "name": label,
-                                "price": f"{_price:,.2f}",
-                                "change_pct": f"{_sign}{_chg_pct:.2f}%",
-                                "section": "US Market",
-                                "sparkline_data": _spark,
-                            }
-                        )
-                except (ValueError, TypeError, IndexError, KeyError) as exc:
-                    logger.debug("yfinance symbol %s parse error: %s", sym, exc)
-        except ImportError:
-            logger.debug("yfinance not available for US market fallback")
-        except Exception as e:
-            logger.warning("yfinance US market fallback failed: %s", e)
-    for item in alpha_vantage_rows:
-        desc = item.get("description", "")
-        # Parse "Name (SYM) - Price: $X, Change: Y (Z%)"
-        try:
-            price_part = desc.split("Price:")[1].split(",")[0].strip() if "Price:" in desc else "N/A"
-            change_part = ""
-            if "(" in desc and desc.endswith(")"):
-                change_part = desc.rsplit("(", 1)[1].rstrip(")")
-        except (IndexError, ValueError):
-            price_part = "N/A"
-            change_part = "N/A"
-        snapshot_items.append(
-            {
-                "name": item["title"].split(":")[0].strip() if ":" in item["title"] else item["title"],
-                "price": price_part,
-                "change_pct": change_part or "N/A",
-                "section": "US Market",
-            }
-        )
-    # Korean data
-    for name, info in kr_market.items():
-        snapshot_items.append(
-            {
-                "name": name,
-                "price": info["price"],
-                "change_pct": info["change_pct"],
-                "section": "Korean Market",
-            }
-        )
-
-    snapshot_image_path = ""
-    try:
-        from common.image_generator import generate_market_snapshot_card
-
-        if snapshot_items:
-            img = generate_market_snapshot_card(snapshot_items, today)
-            if img:
-                fn = os.path.basename(img)
-                snapshot_image_path = f"/assets/images/generated/{fn}"
-                web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
-                content_parts.append(f"\n![market-snapshot]({web_path})\n")
-                logger.info("Generated market snapshot image")
-    except ImportError as e:
-        logger.debug("Optional dependency unavailable: %s", e)
-    except Exception as e:
-        logger.warning("Market snapshot image failed: %s", e)
-
-    # Enrich all items with descriptions before themed sections
-    enrich_items(all_items, context_map=_STOCK_SOURCE_CONTEXT, max_fetch=40)
-    all_items = deduplicate_by_url(all_items)
-
-    # Themed news sections with description cards
-    content_parts.append("\n---\n")
-    themed = summarizer.generate_themed_news_sections()
-    if themed:
-        content_parts.append(themed)
-        content_parts.append("\n---\n")
-
-    # Market data snapshot table (improved with emoji direction + Korean data)
-    content_parts.append("\n## 시장 데이터 스냅샷\n")
-    has_market_data = alpha_vantage_rows or kr_market
-    if has_market_data:
-        content_parts.append("| 지수/ETF | 가격 | 변동률 |")
-        content_parts.append("|----------|------|--------|")
-        for item in alpha_vantage_rows:
-            title_short = item["title"].split(":")[0].strip() if ":" in item["title"] else item["title"]
-            desc = item.get("description", "")
-            # Extract change_pct
-            change_pct = "N/A"
-            if "(" in desc and desc.endswith(")"):
-                change_pct = desc.rsplit("(", 1)[1].rstrip(")")
-            try:
-                pval = float(change_pct.replace("%", "").replace("+", ""))
-                icon = "🟢" if pval >= 0 else "🔴"
-                change_display = f"{icon} {change_pct}"
-            except (ValueError, AttributeError):
-                change_display = change_pct
-            price_str = "N/A"
-            if "Price:" in desc:
-                try:
-                    price_str = desc.split("Price:")[1].split(",")[0].strip()
-                except IndexError:
-                    pass
+        for item in all_items:
+            title = item["title"]
+            source = item.get("source", "unknown")
             link = item.get("link", "")
+
+            if source == "Alpha Vantage":
+                alpha_vantage_rows.append(item)
+                continue
+
+            # Collect links for references section
             if link:
-                content_parts.append(f"| [**{title_short}**]({link}) | {price_str} | {change_display} |")
-                source_links.append(
-                    {
-                        "title": item["title"],
-                        "link": link,
-                        "source": item.get("source", ""),
-                    }
-                )
+                source_links.append({"title": title, "link": link, "source": source})
+
+            lang = detect_language(title)
+            if lang == "ko":
+                if link:
+                    korean_rows.append(f"| {len(korean_rows) + 1} | [**{title}**]({link}) | {source} |")
+                else:
+                    korean_rows.append(f"| {len(korean_rows) + 1} | **{title}** | {source} |")
             else:
-                content_parts.append(f"| **{title_short}** | {price_str} | {change_display} |")
+                if link:
+                    global_rows.append(f"| {len(global_rows) + 1} | [**{title}**]({link}) | {source} |")
+                else:
+                    global_rows.append(f"| {len(global_rows) + 1} | **{title}** | {source} |")
+
+        global_count = len(global_rows)
+        korean_count = len(korean_rows)
+
+        # Limit to top items
+        global_rows = global_rows[:15]
+        korean_rows = korean_rows[:10]
+
+        # Data-driven opening with Korean market summary
+        opening_parts = [f"**{today}** 주식 시장에서 {len(all_items)}건의 뉴스를 분석했습니다."]
+        kr_summary_parts = []
         for name, info in kr_market.items():
-            try:
-                pval = float(info["change_pct"].replace("%", "").replace("+", ""))
-                icon = "🟢" if pval >= 0 else "🔴"
-            except (ValueError, AttributeError):
-                icon = ""
-            content_parts.append(f"| **{name}** | {info['price']} | {icon} {info['change_pct']} |")
-    # Market insight - data-driven narrative
-    content_parts.append("\n## 시장 인사이트\n")
-    insight_lines = []
-    kospi = kr_market.get("KOSPI")
-    kosdaq = kr_market.get("KOSDAQ")
-    usdkrw = kr_market.get("USD/KRW")
+            kr_summary_parts.append(f"{name} {info['price']}({info['change_pct']})")
+        if kr_summary_parts:
+            opening_parts.append(f"한국 시장: {', '.join(kr_summary_parts)}.")
+        content_parts = [" ".join(opening_parts) + "\n"]
 
-    # Korean market narrative with sector-level detail
-    if kospi:
-        try:
-            pval = float(kospi["change_pct"].replace("%", "").replace("+", ""))
-        except (ValueError, AttributeError):
-            pval = 0.0
-
-        if pval > 1.5:
-            kr_mood = "강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다."
-        elif pval > 0:
-            kr_mood = "소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다."
-        elif pval > -1.5:
-            kr_mood = "소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다."
+        # Stat grid - market snapshot
+        content_parts.append('<div class="stat-grid">')
+        if kr_market:
+            for name, info in list(kr_market.items())[:4]:
+                content_parts.append(
+                    f'<div class="stat-item"><span class="stat-value">{info["price"]}</span>'
+                    f'<span class="stat-label">{name} ({info["change_pct"]})</span></div>'
+                )
         else:
-            kr_mood = "뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요."
+            content_parts.append(
+                f'<div class="stat-item"><span class="stat-value">{len(all_items)}</span>'
+                '<span class="stat-label">수집 뉴스</span></div>'
+            )
+            content_parts.append(
+                f'<div class="stat-item"><span class="stat-value">{global_count}</span>'
+                '<span class="stat-label">글로벌</span></div>'
+            )
+            content_parts.append(
+                f'<div class="stat-item"><span class="stat-value">{korean_count}</span>'
+                '<span class="stat-label">한국</span></div>'
+            )
+        content_parts.append("</div>\n")
 
-        insight_lines.append(f"KOSPI **{kospi['price']}** ({kospi['change_pct']}): {kr_mood}")
+        # Create summarizer
+        summarizer = ThemeSummarizer(all_items)
 
-    if kosdaq:
-        try:
-            kq_val = float(kosdaq["change_pct"].replace("%", "").replace("+", ""))
-        except (ValueError, AttributeError):
-            kq_val = 0.0
-        kq_note = ""
-        if kospi:
+        # Executive summary (한눈에 보기)
+        exec_summary = summarizer.generate_executive_summary(
+            category_type="stock",
+            extra_data={"kr_market": kr_market},
+            total_override=len(all_items),
+        )
+        if exec_summary:
+            content_parts.append(exec_summary)
+
+        summary_points = []
+        if korean_count or global_count:
+            summary_points.append(f"한국 기사 {korean_count}건, 글로벌 기사 {global_count}건 수집")
+        if kr_summary_parts:
+            summary_points.append(f"한국 지수: {', '.join(kr_summary_parts)}")
+        overall_summary = summarizer.generate_overall_summary_section(
+            extra_data={"summary_points": summary_points},
+            total_override=len(all_items),
+        )
+        if overall_summary:
+            content_parts.append(overall_summary)
+
+        # Theme distribution chart
+        chart = summarizer.generate_distribution_chart()
+        if chart:
+            content_parts.append("\n" + chart)
+
+        # Image — market snapshot card
+        snapshot_items = []
+        # US data from Alpha Vantage
+        if not alpha_vantage_rows:
             try:
-                kp_val = float(kospi["change_pct"].replace("%", "").replace("+", ""))
-                gap = kq_val - kp_val
-                if gap > 1.0:
-                    kq_note = " KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다."
-                elif gap < -1.0:
-                    kq_note = " KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다."
-            except (ValueError, AttributeError):
-                pass
-        insight_lines.append(f"KOSDAQ **{kosdaq['price']}** ({kosdaq['change_pct']}).{kq_note}")
+                import yfinance as yf
 
-    if usdkrw:
-        try:
-            usd_price = float(usdkrw["price"].replace(",", ""))
-        except (ValueError, AttributeError):
-            usd_price = 0
-        if usd_price > 1400:
-            fx_note = "1,400원 이상의 고환율 구간으로, 수입 원가 상승과 외국인 매도 압력이 우려됩니다."
-        elif usd_price > 1350:
-            fx_note = "1,350원대로, 수출 기업에 유리하나 환율 변동성이 커질 수 있습니다."
-        elif usd_price > 1300:
-            fx_note = "1,300원대로 비교적 안정적이며, 외국인 자금 유입에 긍정적 환경입니다."
-        else:
-            fx_note = "원화 강세 구간으로, 내수주에 유리하고 수출주는 환차손에 유의해야 합니다."
-        insight_lines.append(f"\n**원달러 환율**: **{usdkrw['price']}**원 ({usdkrw['change_pct']}). {fx_note}")
+                _us_symbols = {"^GSPC": "S&P 500", "^IXIC": "NASDAQ", "^DJI": "다우존스", "^VIX": "VIX"}
+                import pandas as pd
 
-    # US market narrative with direction analysis
-    if alpha_vantage_rows:
-        us_up = 0
-        us_down = 0
+                _tickers = yf.download(list(_us_symbols.keys()), period="7d", progress=False, auto_adjust=True)
+                _df = pd.DataFrame(_tickers)
+                if "Close" not in _df.columns:
+                    raise KeyError("Close column missing")
+                for sym, label in _us_symbols.items():
+                    try:
+                        _close_series = _df["Close"][sym]
+                        if not isinstance(_close_series, pd.Series):
+                            continue
+                        _hist = pd.to_numeric(_close_series, errors="coerce")
+                        if not isinstance(_hist, pd.Series):
+                            continue
+                        _hist = _hist.dropna()
+                        if len(_hist) >= 2:
+                            _price = float(_hist.iloc[-1])
+                            _prev = float(_hist.iloc[-2])
+                            _chg_pct = (_price - _prev) / _prev * 100
+                            _sign = "+" if _chg_pct >= 0 else ""
+                            _spark = (
+                                [float(v) for v in _hist.tail(5).values]
+                                if len(_hist) >= 5
+                                else [float(v) for v in _hist.values]
+                            )
+                            snapshot_items.append(
+                                {
+                                    "name": label,
+                                    "price": f"{_price:,.2f}",
+                                    "change_pct": f"{_sign}{_chg_pct:.2f}%",
+                                    "section": "US Market",
+                                    "sparkline_data": _spark,
+                                }
+                            )
+                    except (ValueError, TypeError, IndexError, KeyError) as exc:
+                        self.logger.debug("yfinance symbol %s parse error: %s", sym, exc)
+            except ImportError:
+                self.logger.debug("yfinance not available for US market fallback")
+            except Exception as e:
+                self.logger.warning("yfinance US market fallback failed: %s", e)
         for item in alpha_vantage_rows:
             desc = item.get("description", "")
-            if "(" in desc and desc.endswith(")"):
-                try:
-                    chg = desc.rsplit("(", 1)[1].rstrip(")")
-                    chg_val = float(chg.replace("%", "").replace("+", ""))
-                    if chg_val >= 0:
-                        us_up += 1
-                    else:
-                        us_down += 1
-                except (ValueError, IndexError):
-                    pass
-        if us_up > us_down:
-            us_mood = "미국 주요 지수가 전반적 상승세로, 한국 증시 야간 선물에 긍정적 영향이 예상됩니다."
-        elif us_down > us_up:
-            us_mood = "미국 지수가 하락 흐름을 보여, 다음 거래일 아시아 시장 개장에 부담이 될 수 있습니다."
-        else:
-            us_mood = "미국 시장이 혼조세로, 섹터별 차별화된 흐름이 나타나고 있습니다."
-        insight_lines.append(f"\n**미국 시장**: ETF {len(alpha_vantage_rows)}종 데이터 수집. {us_mood}")
-
-    # Sector flow from news themes
-    top_themes = summarizer.get_top_themes()
-    if top_themes:
-        _THEME_SECTOR_MAP = {
-            "AI/기술": "반도체·IT 섹터",
-            "매크로/금리": "금융·은행 섹터",
-            "가격/시장": "시장 전반",
-            "규제/정책": "금융·핀테크 섹터",
-            "정치/정책": "방산·건설·에너지 섹터",
-            "DeFi": "블록체인·크립토 관련주",
-            "비트코인": "크립토 관련주",
-            "이더리움": "블록체인 관련주",
-            "에너지": "에너지·유틸리티 섹터",
-        }
-        sector_notes = []
-        for t_name, _t_key, _t_emoji, t_count in top_themes[:3]:
-            sector = _THEME_SECTOR_MAP.get(t_name)
-            if sector:
-                sector_notes.append(f"**{t_name}**({t_count}건) → {sector}")
-        if sector_notes:
-            insight_lines.append(
-                f"\n**섹터별 흐름**: {'; '.join(sector_notes)}. "
-                f"뉴스 테마와 연관된 섹터의 거래량·수급 변화를 확인하세요."
+            # Parse "Name (SYM) - Price: $X, Change: Y (Z%)"
+            try:
+                price_part = desc.split("Price:")[1].split(",")[0].strip() if "Price:" in desc else "N/A"
+                change_part = ""
+                if "(" in desc and desc.endswith(")"):
+                    change_part = desc.rsplit("(", 1)[1].rstrip(")")
+            except (IndexError, ValueError):
+                price_part = "N/A"
+                change_part = "N/A"
+            snapshot_items.append(
+                {
+                    "name": item["title"].split(":")[0].strip() if ":" in item["title"] else item["title"],
+                    "price": price_part,
+                    "change_pct": change_part or "N/A",
+                    "section": "US Market",
+                }
+            )
+        # Korean data
+        for name, info in kr_market.items():
+            snapshot_items.append(
+                {
+                    "name": name,
+                    "price": info["price"],
+                    "change_pct": info["change_pct"],
+                    "section": "Korean Market",
+                }
             )
 
-    if not insight_lines:
-        insight_lines.append("현재 시장 데이터를 충분히 수집하지 못했습니다. API 제한 또는 휴장일일 수 있습니다.")
-    insight_lines.append("")
-    insight_lines.append(
-        "> *본 시장 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, "
-        "투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
-    )
-    content_parts.extend(insight_lines)
+        snapshot_image_path = ""
+        try:
+            from common.image_generator import generate_market_snapshot_card
 
-    # ── MiroFish-inspired Market Outlook ──
-    try:
-        signals: dict = {}
+            if snapshot_items:
+                img = generate_market_snapshot_card(snapshot_items, today)
+                if img:
+                    fn = os.path.basename(img)
+                    snapshot_image_path = f"/assets/images/generated/{fn}"
+                    web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
+                    content_parts.append(f"\n![market-snapshot]({web_path})\n")
+                    self.logger.info("Generated market snapshot image")
+        except ImportError as e:
+            self.logger.debug("Optional dependency unavailable: %s", e)
+        except Exception as e:
+            self.logger.warning("Market snapshot image failed: %s", e)
 
-        # Momentum from Korean market and Alpha Vantage ETF data
-        momentum: dict = {}
+        # Enrich all items with descriptions before themed sections
+        enrich_items(all_items, context_map=_STOCK_SOURCE_CONTEXT, max_fetch=40)
+        all_items = deduplicate_by_url(all_items)
+
+        # Themed news sections with description cards
+        content_parts.append("\n---\n")
+        themed = summarizer.generate_themed_news_sections()
+        if themed:
+            content_parts.append(themed)
+            content_parts.append("\n---\n")
+
+        # Market data snapshot table (improved with emoji direction + Korean data)
+        content_parts.append("\n## 시장 데이터 스냅샷\n")
+        has_market_data = alpha_vantage_rows or kr_market
+        if has_market_data:
+            content_parts.append("| 지수/ETF | 가격 | 변동률 |")
+            content_parts.append("|----------|------|--------|")
+            for item in alpha_vantage_rows:
+                title_short = item["title"].split(":")[0].strip() if ":" in item["title"] else item["title"]
+                desc = item.get("description", "")
+                # Extract change_pct
+                change_pct = "N/A"
+                if "(" in desc and desc.endswith(")"):
+                    change_pct = desc.rsplit("(", 1)[1].rstrip(")")
+                try:
+                    pval = float(change_pct.replace("%", "").replace("+", ""))
+                    icon = "🟢" if pval >= 0 else "🔴"
+                    change_display = f"{icon} {change_pct}"
+                except (ValueError, AttributeError):
+                    change_display = change_pct
+                price_str = "N/A"
+                if "Price:" in desc:
+                    try:
+                        price_str = desc.split("Price:")[1].split(",")[0].strip()
+                    except IndexError:
+                        pass
+                link = item.get("link", "")
+                if link:
+                    content_parts.append(f"| [**{title_short}**]({link}) | {price_str} | {change_display} |")
+                    source_links.append(
+                        {
+                            "title": item["title"],
+                            "link": link,
+                            "source": item.get("source", ""),
+                        }
+                    )
+                else:
+                    content_parts.append(f"| **{title_short}** | {price_str} | {change_display} |")
+            for name, info in kr_market.items():
+                try:
+                    pval = float(info["change_pct"].replace("%", "").replace("+", ""))
+                    icon = "🟢" if pval >= 0 else "🔴"
+                except (ValueError, AttributeError):
+                    icon = ""
+                content_parts.append(f"| **{name}** | {info['price']} | {icon} {info['change_pct']} |")
+        # Market insight - data-driven narrative
+        content_parts.append("\n## 시장 인사이트\n")
+        insight_lines = []
+        kospi = kr_market.get("KOSPI")
+        kosdaq = kr_market.get("KOSDAQ")
+        usdkrw = kr_market.get("USD/KRW")
+
+        # Korean market narrative with sector-level detail
         if kospi:
             try:
-                kospi_pct = float(kospi["change_pct"].replace("%", "").replace("+", ""))
-                momentum["sp500_5d"] = kospi_pct  # use KOSPI as proxy for momentum signal
+                pval = float(kospi["change_pct"].replace("%", "").replace("+", ""))
             except (ValueError, AttributeError):
-                pass
+                pval = 0.0
+
+            if pval > 1.5:
+                kr_mood = "강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다."
+            elif pval > 0:
+                kr_mood = "소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다."
+            elif pval > -1.5:
+                kr_mood = "소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다."
+            else:
+                kr_mood = "뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요."
+
+            insight_lines.append(f"KOSPI **{kospi['price']}** ({kospi['change_pct']}): {kr_mood}")
+
+        if kosdaq:
+            try:
+                kq_val = float(kosdaq["change_pct"].replace("%", "").replace("+", ""))
+            except (ValueError, AttributeError):
+                kq_val = 0.0
+            kq_note = ""
+            if kospi:
+                try:
+                    kp_val = float(kospi["change_pct"].replace("%", "").replace("+", ""))
+                    gap = kq_val - kp_val
+                    if gap > 1.0:
+                        kq_note = " KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다."
+                    elif gap < -1.0:
+                        kq_note = " KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다."
+                except (ValueError, AttributeError):
+                    pass
+            insight_lines.append(f"KOSDAQ **{kosdaq['price']}** ({kosdaq['change_pct']}).{kq_note}")
+
+        if usdkrw:
+            try:
+                usd_price = float(usdkrw["price"].replace(",", ""))
+            except (ValueError, AttributeError):
+                usd_price = 0
+            if usd_price > 1400:
+                fx_note = "1,400원 이상의 고환율 구간으로, 수입 원가 상승과 외국인 매도 압력이 우려됩니다."
+            elif usd_price > 1350:
+                fx_note = "1,350원대로, 수출 기업에 유리하나 환율 변동성이 커질 수 있습니다."
+            elif usd_price > 1300:
+                fx_note = "1,300원대로 비교적 안정적이며, 외국인 자금 유입에 긍정적 환경입니다."
+            else:
+                fx_note = "원화 강세 구간으로, 내수주에 유리하고 수출주는 환차손에 유의해야 합니다."
+            insight_lines.append(f"\n**원달러 환율**: **{usdkrw['price']}**원 ({usdkrw['change_pct']}). {fx_note}")
+
+        # US market narrative with direction analysis
         if alpha_vantage_rows:
-            etf_pcts = []
-            for _item in alpha_vantage_rows:
-                _desc = _item.get("description", "")
-                if "(" in _desc and _desc.endswith(")"):
+            us_up = 0
+            us_down = 0
+            for item in alpha_vantage_rows:
+                desc = item.get("description", "")
+                if "(" in desc and desc.endswith(")"):
                     try:
-                        _chg = _desc.rsplit("(", 1)[1].rstrip(")")
-                        etf_pcts.append(float(_chg.replace("%", "").replace("+", "")))
+                        chg = desc.rsplit("(", 1)[1].rstrip(")")
+                        chg_val = float(chg.replace("%", "").replace("+", ""))
+                        if chg_val >= 0:
+                            us_up += 1
+                        else:
+                            us_down += 1
                     except (ValueError, IndexError):
                         pass
-            if etf_pcts:
-                import statistics
+            if us_up > us_down:
+                us_mood = "미국 주요 지수가 전반적 상승세로, 한국 증시 야간 선물에 긍정적 영향이 예상됩니다."
+            elif us_down > us_up:
+                us_mood = "미국 지수가 하락 흐름을 보여, 다음 거래일 아시아 시장 개장에 부담이 될 수 있습니다."
+            else:
+                us_mood = "미국 시장이 혼조세로, 섹터별 차별화된 흐름이 나타나고 있습니다."
+            insight_lines.append(f"\n**미국 시장**: ETF {len(alpha_vantage_rows)}종 데이터 수집. {us_mood}")
 
-                momentum["sp500_5d"] = statistics.mean(etf_pcts)
-        if momentum:
-            signals["momentum"] = momentum
+        # Sector flow from news themes
+        top_themes = summarizer.get_top_themes()
+        if top_themes:
+            _THEME_SECTOR_MAP = {
+                "AI/기술": "반도체·IT 섹터",
+                "매크로/금리": "금융·은행 섹터",
+                "가격/시장": "시장 전반",
+                "규제/정책": "금융·핀테크 섹터",
+                "정치/정책": "방산·건설·에너지 섹터",
+                "DeFi": "블록체인·크립토 관련주",
+                "비트코인": "크립토 관련주",
+                "이더리움": "블록체인 관련주",
+                "에너지": "에너지·유틸리티 섹터",
+            }
+            sector_notes = []
+            for t_name, _t_key, _t_emoji, t_count in top_themes[:3]:
+                sector = _THEME_SECTOR_MAP.get(t_name)
+                if sector:
+                    sector_notes.append(f"**{t_name}**({t_count}건) → {sector}")
+            if sector_notes:
+                insight_lines.append(
+                    f"\n**섹터별 흐름**: {'; '.join(sector_notes)}. "
+                    f"뉴스 테마와 연관된 섹터의 거래량·수급 변화를 확인하세요."
+                )
 
-        # Sentiment from collected news titles
-        if all_items:
-            _bullish_kws = {"상승", "강세", "rally", "surge", "bull", "급등", "호재", "반등"}
-            _bearish_kws = {"하락", "약세", "crash", "bear", "dump", "급락", "폭락", "위기"}
-            _positive = sum(1 for _a in all_items if any(kw in _a.get("title", "").lower() for kw in _bullish_kws))
-            _negative = sum(1 for _a in all_items if any(kw in _a.get("title", "").lower() for kw in _bearish_kws))
-            _total = _positive + _negative
-            _score = (_positive - _negative) / _total if _total > 0 else 0.0
-            signals["sentiment"] = {"score": _score, "positive": _positive, "negative": _negative}
+        if not insight_lines:
+            insight_lines.append("현재 시장 데이터를 충분히 수집하지 못했습니다. API 제한 또는 휴장일일 수 있습니다.")
+        insight_lines.append("")
+        insight_lines.append(
+            "> *본 시장 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, "
+            "투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
+        )
+        content_parts.extend(insight_lines)
 
-        if signals:
-            composer = SignalComposer()
-            result = composer.compose_signals(signals)
-            stance = composer.analyze_stance(result)
-            content_parts.append("\n" + composer.generate_prediction_markdown(result, stance))
+        # ── MiroFish-inspired Market Outlook ──
+        try:
+            signals: dict = {}
 
-            # MindSpider topic analysis
+            # Momentum from Korean market and Alpha Vantage ETF data
+            momentum: dict = {}
+            if kospi:
+                try:
+                    kospi_pct = float(kospi["change_pct"].replace("%", "").replace("+", ""))
+                    momentum["sp500_5d"] = kospi_pct  # use KOSPI as proxy for momentum signal
+                except (ValueError, AttributeError):
+                    pass
+            if alpha_vantage_rows:
+                etf_pcts = []
+                for _item in alpha_vantage_rows:
+                    _desc = _item.get("description", "")
+                    if "(" in _desc and _desc.endswith(")"):
+                        try:
+                            _chg = _desc.rsplit("(", 1)[1].rstrip(")")
+                            etf_pcts.append(float(_chg.replace("%", "").replace("+", "")))
+                        except (ValueError, IndexError):
+                            pass
+                if etf_pcts:
+                    import statistics
+
+                    momentum["sp500_5d"] = statistics.mean(etf_pcts)
+            if momentum:
+                signals["momentum"] = momentum
+
+            # Sentiment from collected news titles
             if all_items:
-                spider = MindSpider()
-                news_items_for_spider = [
-                    {
-                        "title": _a.get("title", ""),
-                        "description": _a.get("description", ""),
-                        "source": _a.get("source", ""),
-                        "category": "stock",
-                        "date": now.strftime("%Y-%m-%d"),
-                    }
-                    for _a in all_items
-                    if _a.get("title")
-                ]
-                if news_items_for_spider:
-                    clusters = spider.cluster_topics(news_items_for_spider, max_topics=3)
-                    topic_md = spider.generate_topic_summary(clusters)
-                    if topic_md:
-                        content_parts.append("\n" + topic_md)
+                _bullish_kws = {"상승", "강세", "rally", "surge", "bull", "급등", "호재", "반등"}
+                _bearish_kws = {"하락", "약세", "crash", "bear", "dump", "급락", "폭락", "위기"}
+                _positive = sum(1 for _a in all_items if any(kw in _a.get("title", "").lower() for kw in _bullish_kws))
+                _negative = sum(1 for _a in all_items if any(kw in _a.get("title", "").lower() for kw in _bearish_kws))
+                _total = _positive + _negative
+                _score = (_positive - _negative) / _total if _total > 0 else 0.0
+                signals["sentiment"] = {"score": _score, "positive": _positive, "negative": _negative}
 
-                    # BettaFish brief outlook
-                    extracted_keywords = spider.extract_keywords(news_items_for_spider, top_n=10)
-                    analyzer = BettaFishAnalyzer()
-                    bf_report = analyzer.analyze(
-                        composite_result=result,
-                        topic_clusters=clusters,
-                        keywords=extracted_keywords,
-                    )
-                    brief = analyzer.generate_brief_outlook(bf_report)
-                    if brief:
-                        content_parts.append("\n### 멀티 관점 요약\n")
-                        content_parts.append(brief)
+            if signals:
+                composer = SignalComposer()
+                result = composer.compose_signals(signals)
+                stance = composer.analyze_stance(result)
+                content_parts.append("\n" + composer.generate_prediction_markdown(result, stance))
 
-                    # Entity analysis
-                    news_items = news_items_for_spider
-                    if news_items:
-                        entities = spider.extract_entities(news_items)
-                        if entities:
-                            relations = spider.detect_relations(news_items, entities)
-                            entity_report = spider.generate_entity_report(entities, relations)
-                            if entity_report:
-                                content_parts.append("\n" + entity_report)
-    except Exception as exc:
-        logger.warning("시장 전망 생성 실패: %s", exc)
+                # MindSpider topic analysis
+                if all_items:
+                    spider = MindSpider()
+                    news_items_for_spider = [
+                        {
+                            "title": _a.get("title", ""),
+                            "description": _a.get("description", ""),
+                            "source": _a.get("source", ""),
+                            "category": "stock",
+                            "date": now.strftime("%Y-%m-%d"),
+                        }
+                        for _a in all_items
+                        if _a.get("title")
+                    ]
+                    if news_items_for_spider:
+                        clusters = spider.cluster_topics(news_items_for_spider, max_topics=3)
+                        topic_md = spider.generate_topic_summary(clusters)
+                        if topic_md:
+                            content_parts.append("\n" + topic_md)
 
-    content_parts.append("\n---\n")
+                        # BettaFish brief outlook
+                        extracted_keywords = spider.extract_keywords(news_items_for_spider, top_n=10)
+                        analyzer = BettaFishAnalyzer()
+                        bf_report = analyzer.analyze(
+                            composite_result=result,
+                            topic_clusters=clusters,
+                            keywords=extracted_keywords,
+                        )
+                        brief = analyzer.generate_brief_outlook(bf_report)
+                        if brief:
+                            content_parts.append("\n### 멀티 관점 요약\n")
+                            content_parts.append(brief)
 
-    # References section (collapsible)
-    if source_links:
-        content_parts.append(
-            html_reference_details(
-                "참고 링크",
-                source_links,
-                limit=15,
-                title_max_len=80,
+                        # Entity analysis
+                        news_items = news_items_for_spider
+                        if news_items:
+                            entities = spider.extract_entities(news_items)
+                            if entities:
+                                relations = spider.detect_relations(news_items, entities)
+                                entity_report = spider.generate_entity_report(entities, relations)
+                                if entity_report:
+                                    content_parts.append("\n" + entity_report)
+        except Exception as exc:
+            self.logger.warning("시장 전망 생성 실패: %s", exc)
+
+        content_parts.append("\n---\n")
+
+        # References section (collapsible)
+        if source_links:
+            content_parts.append(
+                html_reference_details(
+                    "참고 링크",
+                    source_links,
+                    limit=15,
+                    title_max_len=80,
+                )
             )
+
+        # Data collection footer
+        content_parts.append(
+            '\n<div class="wm-footer-meta">'
+            f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} KST</span>"
+            "<span>소스: NewsAPI, Yahoo Finance, Google News, Alpha Vantage</span>"
+            "</div>"
         )
 
-    # Data collection footer
-    content_parts.append(
-        '\n<div class="wm-footer-meta">'
-        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} KST</span>"
-        "<span>소스: NewsAPI, Yahoo Finance, Google News, Alpha Vantage</span>"
-        "</div>"
-    )
+        content = "\n".join(content_parts)
 
-    content = "\n".join(content_parts)
+        report_permalink = build_dated_permalink("stock-news", today, "daily-stock-news-digest")
 
-    report_permalink = build_dated_permalink("stock-news", today, "daily-stock-news-digest")
+        # Build explicit description_ko from market data for rich SEO excerpt
+        if kr_summary_parts:
+            _desc_ko = (
+                f"{today} 주식 시장: {', '.join(kr_summary_parts)}. "
+                f"총 {len(all_items)}건의 뉴스에서 주요 동향과 투자 포인트를 정리합니다."
+            )
+        else:
+            _desc_ko = (
+                f"{today} 주식 시장 뉴스 종합 — 총 {len(all_items)}건의 글로벌·한국 기사에서 "
+                "주요 동향과 투자 포인트를 정리합니다."
+            )
 
-    # Build explicit description_ko from market data for rich SEO excerpt
-    if kr_summary_parts:
-        _desc_ko = (
-            f"{today} 주식 시장: {', '.join(kr_summary_parts)}. "
-            f"총 {len(all_items)}건의 뉴스에서 주요 동향과 투자 포인트를 정리합니다."
+        filepath = self.create_post(
+            title=post_title,
+            content=content,
+            tags=["stock", "market", "daily-digest"],
+            source="consolidated",
+            image=snapshot_image_path,
+            extra_frontmatter={"permalink": report_permalink, "description_ko": _desc_ko},
+            slug="daily-stock-news-digest",
         )
-    else:
-        _desc_ko = (
-            f"{today} 주식 시장 뉴스 종합 — 총 {len(all_items)}건의 글로벌·한국 기사에서 "
-            "주요 동향과 투자 포인트를 정리합니다."
+        if filepath:
+            self.mark_seen(post_title, "consolidated")
+            self.logger.info("Created consolidated stock news post: %s", filepath)
+
+        self.save_state()
+        self.logger.info(
+            "=== Stock news collection complete: %d posts created ===",
+            self._created_count,
         )
+        self.log_summary(all_items)
 
-    filepath = gen.create_post(
-        title=post_title,
-        content=content,
-        date=now,
-        logical_date=today,
-        tags=["stock", "market", "daily-digest"],
-        source="consolidated",
-        lang="ko",
-        image=snapshot_image_path,
-        extra_frontmatter={"permalink": report_permalink, "description_ko": _desc_ko},
-        slug="daily-stock-news-digest",
-    )
-    if filepath:
-        dedup.mark_seen(post_title, "consolidated", today)
-        logger.info("Created consolidated stock news post: %s", filepath)
 
-    dedup.save()
-    logger.info("=== Stock news collection complete ===")
-    unique_count = len(
-        {
-            f"{item.get('title', '')}|{item.get('source', '')}|{item.get('link', '')}"
-            for item in all_items
-            if item.get("title")
-        }
-    )
-    source_count = len({item.get("source", "") for item in all_items if item.get("source")})
-    log_collection_summary(
-        logger,
-        collector="collect_stock_news",
-        source_count=source_count,
-        unique_items=unique_count,
-        post_created=1 if filepath else 0,
-        started_at=started_at,
-    )
+def main():
+    """Main collection routine - consolidated post."""
+    StockNewsCollector().run()
 
 
 if __name__ == "__main__":
