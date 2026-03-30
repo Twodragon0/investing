@@ -12,13 +12,28 @@ var CACHE_URLS = [
   '/assets/js/search.js'
 ];
 
+var FONT_URLS = [
+  '/assets/fonts/noto-sans-kr-400-korean.woff2',
+  '/assets/fonts/noto-sans-kr-400-latin.woff2',
+  '/assets/fonts/noto-sans-kr-700-korean.woff2',
+  '/assets/fonts/noto-sans-kr-700-latin.woff2',
+  '/assets/fonts/noto-serif-kr-700-korean.woff2',
+  '/assets/fonts/noto-serif-kr-700-latin.woff2',
+  '/assets/fonts/jetbrains-mono-400-latin.woff2'
+];
+
 var KNOWN_CACHES = [CACHE_NAME, FONTS_CACHE, IMAGES_CACHE];
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(function(cache) {
-      return cache.addAll(CACHE_URLS);
-    })
+    Promise.all([
+      caches.open(CACHE_NAME).then(function(cache) {
+        return cache.addAll(CACHE_URLS);
+      }),
+      caches.open(FONTS_CACHE).then(function(cache) {
+        return cache.addAll(FONT_URLS);
+      })
+    ])
   );
   self.skipWaiting();
 });
