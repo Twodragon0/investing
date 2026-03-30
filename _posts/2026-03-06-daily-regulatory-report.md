@@ -7,7 +7,7 @@ tags: ["regulation", "stablecoin", "digital-asset-basic-act", "fca", "fsc", "vir
 keywords: "디지털자산기본법, 스테이블코인, 가상자산위원회, 금융위, FCA, HTX, 크라켄, 거래소지분제한, 무과실손해배상, 시장조성자, 원화스테이블코인"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-regulatory-2026-03-06.png"
+image: "/assets/images/generated/og-daily-regulatory-report-2026-03-06.png"
 description: "금융위가 10개월 만에 가상자산위원회를 열고 스테이블코인 은행 중심 발행, 거래소 지분 15~20% 제한, 무과실 손해배상 등을 논의했습니다. FCA는 HTX에 사상 첫 암호화폐 집행 조치를 취했고, 크라켄은 연준 마스터 계좌를 확보했습니다."
 excerpt: "금융위원회가 지난해 5월 이후 10개월 만에 가상자산위원회를 소집하며 디지털자산기본법의 핵심 쟁점을 공개 논의했습니다. 스테이블코인 발행 구조, 거래소 대주주 지분 제한,…"
 image_alt: "글로벌 규제 동향 리포트 - 2026-03-06 - regulatory-news 뉴스 요약 이미지"

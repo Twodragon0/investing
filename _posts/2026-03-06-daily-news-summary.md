@@ -6,7 +6,7 @@ categories: [market-analysis]
 tags: ["일일요약", "암호화폐", "주식", "규제", "소셜미디어", "보안", "정치인거래", "월드모니터"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-summary-2026-03-06.png"
+image: "/assets/images/generated/og-daily-news-summary-2026-03-06.png"
 description: "2026-03-06 일일 종합: 암호화폐 108건(BTC $70K대 조정), 규제 9건(금융위 첫 가상자산위원회·스테이블코인 검토), 소셜 미디어 47건, 월드모니터 20건 글로벌 이슈 분석."
 excerpt: "암호화폐 108건, 규제 9건, 소셜 미디어 47건, 월드모니터 20건의 뉴스를 종합 분석한 일일 요약"
 image_alt: "일일 뉴스 종합 요약 - 2026-03-06 - market-analysis 뉴스 요약 이미지"

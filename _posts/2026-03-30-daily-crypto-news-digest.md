@@ -57,41 +57,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-30 - 암호화폐 뉴스 요
 <li><a href="https://cointelegraph.com/news/potential-bitcoin-crash-below-dollar60k-may-delay-recovery-to-2027-data?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">$60,000 미만의 잠재적인 비트코인 폭락은 2027년까지 복구를 지연시킬 수 있습니다: 데이터</a> <span class="p0-desc">비트코인의 사상 최고치 복귀는 현재 하락폭이 얼마나 깊게 확장되는지에 따라 달라질 수 있으며 역사적으로 하락폭이 깊어지면 회복 시간이 길어집니다.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 암호화폐株, 비트코인 급락 여파…동반 약세 - 마켓인 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 82건의 뉴스 중 P1 주요 이슈도 11건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (38건): 비트코인 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (32건): 암호화폐 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🔷 이더리움** (15건): 이더리움 생태계 동향 (15건) — 가스비·TVL 변화를 함께 확인하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 암호화폐株, 비트코인 급락 여파…동반 약세 - 마켓인
-- 암호화폐 일제 급락…비트코인 5%↓ 6.6만달러 붕괴
-- $60,000 미만의 잠재적인 비트코인 폭락은 2027년까지 복구를 지연시킬 수 있습니다: 데이터
-
-### 주요 이슈
-
-- 영국, 캄보디아 기반 사기 센터 및 암호화폐 플랫폼 제재
-- SEC 및 CFTC은 연방 증권법에 따른 암호화폐 자산 분류에 관한 랜드마크 공동 지침을 발행합니다.
-- 루마니아에서는 암호화폐가 합법적일까? 법률, 규정, 세금(2026)
-- 외 8건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Google News KR(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 4건 포함
-- 프로모션성 거래소 공지 1건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-03-30.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-03-30.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔷 이더리움
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
