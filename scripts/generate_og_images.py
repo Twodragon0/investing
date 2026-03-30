@@ -142,6 +142,21 @@ def _convert_to_webp(png_path: str, quality: int = 85) -> bool:
         return False
 
 
+def _convert_to_avif(png_path: str, quality: int = 50) -> bool:
+    """Convert a PNG file to AVIF format alongside the original."""
+    if not _PIL_AVAILABLE:
+        return False
+    avif_path = re.sub(r"\.png$", ".avif", png_path)
+    try:
+        with PILImage.open(png_path) as img:
+            img.save(avif_path, "AVIF", quality=quality)
+        logger.info("Converted to AVIF: %s", avif_path)
+        return True
+    except (OSError, ValueError) as e:
+        logger.warning("AVIF conversion failed for %s: %s", png_path, e)
+        return False
+
+
 # ── YAML front matter parser ──
 
 
@@ -1638,6 +1653,7 @@ def generate_og_image(
         fig.savefig(output_path, dpi=150, facecolor=BG_COLOR, edgecolor="none", bbox_inches=None, pad_inches=0)
         logger.info("Generated: %s", output_path)
         _convert_to_webp(output_path, quality=82)
+        _convert_to_avif(output_path)
         return True
     except OSError as e:
         logger.error("Failed to save %s: %s", output_path, e)
@@ -1847,6 +1863,7 @@ def generate_trading_journal_og_image(post: Dict[str, str], output_path: str) ->
         fig.savefig(output_path, dpi=150, facecolor="#0a0f18", edgecolor="none", bbox_inches=None, pad_inches=0)
         logger.info("Generated journal OG: %s", output_path)
         _convert_to_webp(output_path, quality=88)
+        _convert_to_avif(output_path)
         return True
     except OSError as e:
         logger.error("Failed to save %s: %s", output_path, e)
