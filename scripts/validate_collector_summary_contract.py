@@ -37,7 +37,7 @@ def _find_calls(tree: ast.AST) -> List[ast.Call]:
                 isinstance(fn, ast.Name)
                 and fn.id == "log_collection_summary"
                 or isinstance(fn, ast.Attribute)
-                and fn.attr == "log_collection_summary"
+                and fn.attr in ("log_collection_summary", "log_summary")
             ):
                 calls.append(node)
     return calls
@@ -55,6 +55,11 @@ def _validate_file(path: Path) -> List[str]:
 
     valid_call = False
     for call in calls:
+        fn = call.func
+        # BaseCollector.log_summary() handles kwargs internally
+        if isinstance(fn, ast.Attribute) and fn.attr == "log_summary":
+            valid_call = True
+            break
         kwargs = {kw.arg for kw in call.keywords if kw.arg}
         if REQUIRED_KWARGS.issubset(kwargs):
             valid_call = True
