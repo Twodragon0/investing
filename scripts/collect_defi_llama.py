@@ -19,16 +19,15 @@ import requests
 # Add scripts directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common.base_collector import BaseCollector
 from common.collector_config import get_collector_config, get_limit, get_threshold
-from common.collector_metrics import log_collection_summary
-from common.config import REQUEST_TIMEOUT, get_kst_now, get_verify_ssl, setup_logging
-from common.dedup import DedupEngine
+from common.config import REQUEST_TIMEOUT, get_verify_ssl, setup_logging
 from common.markdown_utils import (
     html_reference_details,
     markdown_link,
     markdown_table,
 )
-from common.post_generator import PostGenerator, build_dated_permalink
+from common.post_generator import build_dated_permalink
 from common.utils import request_with_retry
 
 logger = setup_logging("collect_defi_llama")
@@ -1008,99 +1007,125 @@ def build_post_content(
     return "\n".join(content_parts)
 
 
+# ---------------------------------------------------------------------------
+# BaseCollector subclass
+# ---------------------------------------------------------------------------
+
+
+class DefiLlamaCollector(BaseCollector):
+    """DeFi Llama TVL 데이터 수집기."""
+
+    name = "defi_llama"
+    category = "defi"
+    state_file = "defi_llama_seen.json"
+
+    def fetch(self) -> List[Dict[str, Any]]:
+        """DeFi Llama에서 프로토콜 및 체인 데이터를 수집합니다."""
+        protocols = fetch_protocols()
+        chains = fetch_chains()
+        if not protocols and not chains:
+            return []
+        return [{"protocols": protocols, "chains": chains}]
+
+    def process(self, items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """이미 정제된 API 데이터이므로 그대로 반환합니다."""
+        return items
+
+    def build_content(self, items: List[Dict[str, Any]]) -> str:
+        """마크다운 포스트 본문을 생성합니다."""
+        if not items:
+            return ""
+        data = items[0]
+        return build_post_content(
+            data.get("protocols", []),
+            data.get("chains", []),
+            self.today,
+            self.now,
+            None,
+        )
+
+    def run(self) -> None:
+        """커스텀 파이프라인 — 차트 이미지 생성 + 단일 일일 리포트."""
+        self.logger.info("=== Starting DeFi Llama TVL collection ===")
+        self._started_at = time.monotonic()
+
+        post_title = f"DeFi TVL 리포트 - {self.today}"
+
+        # Early duplicate check
+        if self.is_duplicate_exact(post_title, "defi-llama"):
+            self.logger.info("Post already created today, skipping: %s", post_title)
+            self.log_summary([])
+            return
+
+        # Fetch data
+        protocols = fetch_protocols()
+        chains = fetch_chains()
+
+        if not protocols and not chains:
+            self.logger.warning("No data collected from DeFi Llama, skipping post creation")
+            self.log_summary([])
+            return
+
+        # Generate chart image
+        chart_path = generate_tvl_chart_image(protocols, chains, self.today)
+
+        # Build post content
+        content = build_post_content(protocols, chains, self.today, self.now, chart_path)
+
+        # Data-driven description
+        _top3 = ", ".join(p.get("name", "") for p in protocols[:3]) if protocols else ""
+        _desc_ko = f"DeFi 프로토콜 {len(protocols)}개, 블록체인 {len(chains)}개 기준 TVL 현황. "
+        if _top3:
+            _desc_ko += f"상위: {_top3}. "
+        _desc_ko += "프로토콜별 예치 자산과 체인 점유율을 분석합니다."
+
+        # Create post
+        image_frontmatter = chart_path if chart_path else ""
+        filepath = self.create_post(
+            title=post_title,
+            content=content,
+            tags=["defi", "tvl", "crypto", "blockchain", "daily-digest"],
+            source="defi-llama",
+            image=image_frontmatter,
+            extra_frontmatter={
+                "permalink": build_dated_permalink("defi", self.today, "daily-defi-tvl-report"),
+                "description_ko": _desc_ko,
+            },
+            slug="daily-defi-tvl-report",
+        )
+
+        if filepath:
+            self.mark_seen(post_title, "defi-llama")
+            self.logger.info("Created DeFi TVL report post: %s", filepath)
+
+        self.save_state()
+
+        # Build items for log_summary
+        items: List[Dict[str, Any]] = []
+        for p in protocols:
+            items.append({"title": p.get("name", ""), "source": "DeFi Llama"})
+        for c in chains:
+            items.append({"title": c.get("name", ""), "source": "DeFi Llama"})
+
+        self.logger.info(
+            "=== DeFi Llama collection complete: %d posts created ===",
+            self._created_count,
+        )
+        self.log_summary(
+            items,
+            extras={"protocols": len(protocols), "chains": len(chains)},
+        )
+
+
+# ---------------------------------------------------------------------------
+# Main (하위 호환성)
+# ---------------------------------------------------------------------------
+
+
 def main():
     """Main collection routine for DeFi Llama TVL data."""
-    logger.info("=== Starting DeFi Llama TVL collection ===")
-    started_at = time.monotonic()
-
-    dedup = DedupEngine("defi_llama_seen.json")
-    gen = PostGenerator("defi")
-
-    now = get_kst_now()
-    today = now.strftime("%Y-%m-%d")
-
-    post_title = f"DeFi TVL 리포트 - {today}"
-    created_count = 0
-
-    # Early duplicate check
-    if dedup.is_duplicate_exact(post_title, "defi-llama", today):
-        logger.info("Post already created today, skipping: %s", post_title)
-        log_collection_summary(
-            logger,
-            collector="collect_defi_llama",
-            source_count=0,
-            unique_items=0,
-            post_created=0,
-            started_at=started_at,
-        )
-        return
-
-    # Fetch data
-    protocols = fetch_protocols()
-    chains = fetch_chains()
-
-    if not protocols and not chains:
-        logger.warning("No data collected from DeFi Llama, skipping post creation")
-        log_collection_summary(
-            logger,
-            collector="collect_defi_llama",
-            source_count=2,
-            unique_items=0,
-            post_created=0,
-            started_at=started_at,
-        )
-        return
-
-    # Generate chart image
-    chart_path = generate_tvl_chart_image(protocols, chains, today)
-
-    # Build post content
-    content = build_post_content(protocols, chains, today, now, chart_path)
-
-    # Data-driven description
-    _top3 = ", ".join(p.get("name", "") for p in protocols[:3]) if protocols else ""
-    _desc_ko = f"DeFi 프로토콜 {len(protocols)}개, 블록체인 {len(chains)}개 기준 TVL 현황. "
-    if _top3:
-        _desc_ko += f"상위: {_top3}. "
-    _desc_ko += "프로토콜별 예치 자산과 체인 점유율을 분석합니다."
-
-    # Create post
-    image_frontmatter = chart_path if chart_path else ""
-    filepath = gen.create_post(
-        title=post_title,
-        content=content,
-        date=now,
-        logical_date=today,
-        tags=["defi", "tvl", "crypto", "blockchain", "daily-digest"],
-        source="defi-llama",
-        source_url="https://defillama.com",
-        lang="ko",
-        image=image_frontmatter,
-        extra_frontmatter={
-            "permalink": build_dated_permalink("defi", today, "daily-defi-tvl-report"),
-            "description_ko": _desc_ko,
-        },
-        slug="daily-defi-tvl-report",
-    )
-
-    if filepath:
-        dedup.mark_seen(post_title, "defi-llama", today)
-        created_count += 1
-        logger.info("Created DeFi TVL report post: %s", filepath)
-
-    dedup.save()
-
-    unique_items = len(protocols) + len(chains)
-    logger.info("=== DeFi Llama collection complete: %d posts created ===", created_count)
-    log_collection_summary(
-        logger,
-        collector="collect_defi_llama",
-        source_count=2,
-        unique_items=unique_items,
-        post_created=created_count,
-        started_at=started_at,
-        extras={"protocols": len(protocols), "chains": len(chains)},
-    )
+    collector = DefiLlamaCollector()
+    collector.run()
 
 
 if __name__ == "__main__":

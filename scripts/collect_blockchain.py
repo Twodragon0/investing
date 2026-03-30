@@ -11,21 +11,19 @@ Generates a single daily post in the ``blockchain`` category.
 import os
 import sys
 import time
+from typing import Any, Dict, List
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common.blockchain_api import fetch_btc_stats, fetch_eth_stats, fetch_l2_summary, fetch_upgrade_news
-from common.collector_config import get_collector_config
-from common.collector_metrics import log_collection_summary
-from common.config import get_kst_now, setup_logging
-from common.dedup import DedupEngine
+from common.base_collector import BaseCollector
+from common.blockchain_api import (
+    fetch_btc_stats,
+    fetch_eth_stats,
+    fetch_l2_summary,
+    fetch_upgrade_news,
+)
 from common.markdown_utils import markdown_table
-from common.post_generator import PostGenerator, build_dated_permalink
-
-logger = setup_logging("collect_blockchain")
-# collectors.yml에서 설정 로드
-_blockchain_cfg = get_collector_config("blockchain")
-
+from common.post_generator import build_dated_permalink
 
 # ---------------------------------------------------------------------------
 # Formatting helpers
@@ -240,111 +238,146 @@ def build_report_content(
 
 
 # ---------------------------------------------------------------------------
-# Main
+# BaseCollector subclass
+# ---------------------------------------------------------------------------
+
+
+class BlockchainCollector(BaseCollector):
+    """블록체인 네트워크 메트릭 수집기."""
+
+    name = "blockchain"
+    category = "blockchain"
+    state_file = "blockchain_seen.json"
+
+    def fetch(self) -> List[Dict[str, Any]]:
+        """BTC/ETH/L2 데이터를 수집합니다."""
+        btc = fetch_btc_stats()
+        eth = fetch_eth_stats()
+        l2_projects = fetch_l2_summary()
+        upgrade_news = fetch_upgrade_news()
+
+        # 데이터를 단일 리스트로 래핑 (파이프라인 호환)
+        items: List[Dict[str, Any]] = []
+        if btc or eth:
+            items.append({
+                "title": f"블록체인 네트워크 리포트 - {self.today}",
+                "source": "blockchain-metrics",
+                "btc": btc,
+                "eth": eth,
+                "l2_projects": l2_projects,
+                "upgrade_news": upgrade_news,
+            })
+        return items
+
+    def process(self, items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """이미 정제된 API 데이터이므로 그대로 반환합니다."""
+        return items
+
+    def build_content(self, items: List[Dict[str, Any]]) -> str:
+        """마크다운 리포트 본문을 생성합니다."""
+        if not items:
+            return ""
+        data = items[0]
+        content, _desc, _excerpt = build_report_content(
+            data.get("btc", {}),
+            data.get("eth", {}),
+            self.today,
+            data.get("l2_projects"),
+            data.get("upgrade_news"),
+        )
+        return content
+
+    def run(self) -> None:
+        """커스텀 파이프라인 — 단일 일일 리포트 생성."""
+        self.logger.info("=== Starting %s collection ===", self.name)
+        self._started_at = time.monotonic()
+
+        post_title = f"블록체인 네트워크 리포트 - {self.today}"
+
+        if self.is_duplicate_exact(post_title, "blockchain-metrics"):
+            self.logger.info("Blockchain report already exists for %s, skipping", self.today)
+            self.log_summary([])
+            return
+
+        # Collect data from APIs
+        btc = fetch_btc_stats()
+        eth = fetch_eth_stats()
+        l2_projects = fetch_l2_summary()
+        upgrade_news = fetch_upgrade_news()
+
+        if not btc and not eth:
+            self.logger.warning("No blockchain data collected, skipping post")
+            self.log_summary([])
+            return
+
+        source_count = (1 if btc else 0) + (1 if eth else 0) + (1 if l2_projects else 0)
+
+        # Build report
+        content, description, excerpt = build_report_content(btc, eth, self.today, l2_projects, upgrade_news)
+
+        # Create post
+        permalink = build_dated_permalink("blockchain", self.today, "daily-blockchain-network-report")
+        tags = ["blockchain", "on-chain", "network-stats", "daily"]
+        if btc:
+            tags.append("bitcoin")
+        if eth:
+            tags.append("ethereum")
+
+        _desc_parts_bc = []
+        if btc:
+            _desc_parts_bc.append("BTC 네트워크 지표")
+        if eth:
+            _desc_parts_bc.append("ETH 네트워크 지표")
+        if l2_projects:
+            _desc_parts_bc.append(f"L2 프로젝트 {len(l2_projects)}개")
+        _desc_ko = f"블록체인 네트워크 통계 {source_count}개 소스 수집. "
+        if _desc_parts_bc:
+            _desc_ko += f"{', '.join(_desc_parts_bc)} 포함. "
+        _desc_ko += "온체인 데이터 기반 네트워크 건전성 및 활동 지표를 분석합니다."
+
+        post_path = self.create_post(
+            title=post_title,
+            content=content,
+            tags=tags,
+            source="blockchain-metrics",
+            slug="daily-blockchain-network-report",
+            extra_frontmatter={
+                "permalink": permalink,
+                "description": description,
+                "excerpt": excerpt,
+                "description_ko": _desc_ko,
+            },
+        )
+
+        if post_path:
+            self.mark_seen(post_title, "blockchain-metrics")
+            self.logger.info("Created blockchain report: %s", post_path)
+        else:
+            self.logger.warning("Failed to create blockchain report post")
+
+        self.save_state()
+
+        # Build items list for log_summary
+        items: List[Dict[str, Any]] = []
+        if btc:
+            items.append({"title": "BTC stats", "source": "Blockchain.com"})
+        if eth:
+            items.append({"title": "ETH stats", "source": "Etherscan"})
+        if l2_projects:
+            items.append({"title": "L2 summary", "source": "L2Beat"})
+
+        self.logger.info("=== Blockchain Network Report Collection Complete ===")
+        self.log_summary(items)
+
+
+# ---------------------------------------------------------------------------
+# Main (하위 호환성)
 # ---------------------------------------------------------------------------
 
 
 def main() -> int:
-    started_at = time.time()
-    now = get_kst_now()
-    today = now.strftime("%Y-%m-%d")
-
-    logger.info("=== Blockchain Network Report Collection Start (%s) ===", today)
-
-    dedup = DedupEngine("blockchain_seen.json")
-    gen = PostGenerator("blockchain")
-
-    post_title = f"블록체인 네트워크 리포트 - {today}"
-
-    if dedup.is_duplicate_exact(post_title, "blockchain-metrics", today):
-        logger.info("Blockchain report already exists for %s, skipping", today)
-        log_collection_summary(
-            logger,
-            collector="collect_blockchain",
-            source_count=0,
-            unique_items=0,
-            post_created=0,
-            started_at=started_at,
-        )
-        return 0
-
-    # Collect data from APIs
-    btc = fetch_btc_stats()
-    eth = fetch_eth_stats()
-    l2_projects = fetch_l2_summary()
-    upgrade_news = fetch_upgrade_news()
-
-    if not btc and not eth:
-        logger.warning("No blockchain data collected, skipping post")
-        log_collection_summary(
-            logger,
-            collector="collect_blockchain",
-            source_count=0,
-            unique_items=0,
-            post_created=0,
-            started_at=started_at,
-        )
-        return 0
-
-    source_count = (1 if btc else 0) + (1 if eth else 0) + (1 if l2_projects else 0)
-
-    # Build report
-    content, description, excerpt = build_report_content(btc, eth, today, l2_projects, upgrade_news)
-
-    # Create post
-    permalink = build_dated_permalink("blockchain", today, "daily-blockchain-network-report")
-    tags = ["blockchain", "on-chain", "network-stats", "daily"]
-    if btc:
-        tags.append("bitcoin")
-    if eth:
-        tags.append("ethereum")
-
-    _desc_parts_bc = []
-    if btc:
-        _desc_parts_bc.append("BTC 네트워크 지표")
-    if eth:
-        _desc_parts_bc.append("ETH 네트워크 지표")
-    if l2_projects:
-        _desc_parts_bc.append(f"L2 프로젝트 {len(l2_projects)}개")
-    _desc_ko = f"블록체인 네트워크 통계 {source_count}개 소스 수집. "
-    if _desc_parts_bc:
-        _desc_ko += f"{', '.join(_desc_parts_bc)} 포함. "
-    _desc_ko += "온체인 데이터 기반 네트워크 건전성 및 활동 지표를 분석합니다."
-
-    post_path = gen.create_post(
-        title=post_title,
-        content=content,
-        date=now,
-        tags=tags,
-        source="blockchain-metrics",
-        slug="daily-blockchain-network-report",
-        extra_frontmatter={
-            "permalink": permalink,
-            "description": description,
-            "excerpt": excerpt,
-            "description_ko": _desc_ko,
-        },
-    )
-
-    created = 0
-    if post_path:
-        created = 1
-        dedup.mark_seen(post_title, "blockchain-metrics", today)
-        dedup.save()
-        logger.info("Created blockchain report: %s", post_path)
-    else:
-        logger.warning("Failed to create blockchain report post")
-
-    log_collection_summary(
-        logger,
-        collector="collect_blockchain",
-        source_count=source_count,
-        unique_items=source_count,
-        post_created=created,
-        started_at=started_at,
-    )
-
-    logger.info("=== Blockchain Network Report Collection Complete ===")
+    collector = BlockchainCollector()
+    collector.run()
     return 0
 
 
