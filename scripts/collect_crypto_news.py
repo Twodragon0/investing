@@ -585,7 +585,8 @@ class CryptoNewsCollector(BaseCollector):
 
     def build_content(self, items: List[Dict[str, Any]]) -> str:
         """암호화폐 뉴스 브리핑 포스트 본문을 생성합니다."""
-        return self._build_crypto_content(items)
+        content, _image = self._build_crypto_content(items)
+        return content
 
     def run(self) -> None:
         """메인 실행 파이프라인 — 크립토 뉴스 + 보안 리포트 두 개 포스트 생성."""
