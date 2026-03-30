@@ -34,6 +34,7 @@ from common.markdown_utils import (
 from common.post_generator import POSTS_DIR
 from common.summarizer import ThemeSummarizer
 from common.translator import get_display_title, translate_to_korean
+from common.utils import SOURCE_SUFFIX_RE as _SOURCE_SUFFIX_RE
 
 logger = setup_logging("generate_daily_summary")
 
@@ -51,10 +52,6 @@ _SUMMARY_KEYWORD_LABELS = {
     "usd/krw": "원/달러",
     "dxy": "달러인덱스",
 }
-_SOURCE_SUFFIX_RE = re.compile(
-    r"\s+-\s+(?:The New York Times|CryptoRank|Winston & Strawn|European Business Magazine|SEC\.gov|BeInCrypto|Bitget)\s*$",
-    re.I,
-)
 _REPORT_CATEGORY_LABELS = {
     "암호화폐 뉴스": "🪙 암호화폐 뉴스",
     "DeFi TVL 리포트": "🏦 DeFi TVL 리포트",

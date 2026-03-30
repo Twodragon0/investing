@@ -13,6 +13,38 @@ import requests
 logger = logging.getLogger(__name__)
 
 
+# Common source suffixes to strip from news titles (shared across collectors and summaries)
+SOURCE_SUFFIX_RE = re.compile(
+    r"\s*[-–—|]\s*(?:"
+    # English media
+    r"Reuters|Bloomberg|CNBC|CNN|BBC|AP\s*(?:News)?|Forbes|WSJ"
+    r"|Yahoo\s*Finance|MarketWatch|The\s*(?:Block|Verge|Guardian)"
+    r"|CBS\s*(?:News|뉴스)?|NBC\s*News|ABC\s*News|Fox\s*(?:News|Business)"
+    r"|Variety|Barron'?s|Motley\s*Fool|Nasdaq"
+    r"|Investing\.com|Seeking\s*Alpha|Benzinga|TheStreet"
+    # Korean media
+    r"|디지털투데이|연합인포맥스|펜앤마이크|네이트|복지TV\S*"
+    r"|이코노믹리뷰|매일경제|한국경제|조선일보|중앙일보"
+    r"|경향신문|한겨레|이데일리|뉴시스|아시아경제"
+    r"|서울경제|인포스탁데일리|이투데이|국제신문|부산일보"
+    r"|뉴스1|노컷뉴스|SBS뉴스|MBC뉴스|KBS뉴스"
+    r"|JTBC|채널A|TV조선|연합뉴스|파이낸셜뉴스"
+    r"|헤럴드경제|머니투데이|더팩트|데일리안|뉴데일리"
+    r"|오마이뉴스|프레시안|시사저널|공감신문|브레이크뉴스"
+    r"|한국글로벌뉴스|핀포인트뉴스|글로벌이코노믹|비즈니스포스트|토큰포스트|블록미디어|코인데스크코리아|디센터"
+    r"|전자신문|ZDNet\s*Korea|IT조선|디지털데일리|바이라인네트워크"
+    r"|BBS불교방송|ER\s*이코노믹리뷰"
+    # Additional sources from daily summary
+    r"|The New York Times|CryptoRank|Winston & Strawn|European Business Magazine|SEC\.gov|BeInCrypto|Bitget"
+    # Domain suffixes
+    r"|v\.daum\.net|gukjenews\.com|ilyoseoul\.co\.kr"
+    r"|ir\.edaily\.co\.kr|simplywall\.st"
+    r"|[a-z][a-z0-9-]*\.(?:com|co\.kr|net|org|io)"
+    r")\s*$",
+    re.IGNORECASE,
+)
+
+
 def sanitize_string(text: str, max_length: int = 1000) -> str:
     """Sanitize string input to prevent injection and limit length."""
     if not isinstance(text, str):
@@ -126,6 +158,9 @@ def truncate_sentence(text: str, max_length: int = 300) -> str:
         "됐다. ",
         "였다. ",
         "합니다. ",
+        "했습니다. ",
+        "겠습니다. ",
+        "봅니다. ",
         ". ",
         "。",
         "! ",
@@ -137,6 +172,17 @@ def truncate_sentence(text: str, max_length: int = 300) -> str:
             return truncated[: last_sep + len(sep)].strip()
     # Fall back to word boundary
     return truncate_text(text, max_length)
+
+
+# Pre-compiled patterns for filtering noise titles (SEC forms, addresses, system pages)
+_NOISE_TITLE_PATTERNS = [
+    re.compile(r"^(?:Washington,?\s*DC\s*\d+)", re.IGNORECASE),
+    re.compile(r"^(?:10-[KQ](?:\s|$))", re.IGNORECASE),
+    re.compile(r"^(?:Form\s+\d)", re.IGNORECASE),
+    re.compile(r"^(?:SEC\.gov\s*-?\s*SEC\.gov)", re.IGNORECASE),
+    re.compile(r"^(?:EDGAR\s)", re.IGNORECASE),
+    re.compile(r"^(?:AMENDMENT NO\.)", re.IGNORECASE),
+]
 
 
 def validate_news_item(item: dict) -> Optional[dict]:
@@ -157,16 +203,8 @@ def validate_news_item(item: dict) -> Optional[dict]:
         return None
 
     # Filter noise titles (SEC forms, addresses, system pages)
-    _NOISE_TITLE_PATTERNS = [
-        r"^(?:Washington,?\s*DC\s*\d+)",
-        r"^(?:10-[KQ](?:\s|$))",
-        r"^(?:Form\s+\d)",
-        r"^(?:SEC\.gov\s*-?\s*SEC\.gov)",
-        r"^(?:EDGAR\s)",
-        r"^(?:AMENDMENT NO\.)",
-    ]
     for pattern in _NOISE_TITLE_PATTERNS:
-        if re.match(pattern, title, re.IGNORECASE):
+        if pattern.match(title):
             logger.debug("Skipping noise title: %r", title[:50])
             return None
 

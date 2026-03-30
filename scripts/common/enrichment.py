@@ -407,34 +407,35 @@ def _resolve_via_gnewsdecoder(url: str) -> str:
 
 _BROWSER_UA = _USER_AGENT
 
+# Tracking pixels and placeholder image URL patterns
+_BAD_IMAGE_PATTERNS = [
+    "1x1",
+    "pixel",
+    "tracker",
+    "beacon",
+    "spacer",
+    "placeholder",
+    "default-image",
+    "no-image",
+    "blank.",
+    "gravatar.com/avatar",
+    "wp-content/plugins",
+]
+# Non-image file extensions to reject (.gif is often a tracking pixel; .svg/.ico are usually logos)
+# Note: .webp is intentionally excluded — webp images are valid content images
+_BAD_IMAGE_EXTENSIONS = [".gif", ".svg", ".ico"]
+
 
 def _is_valid_image_url(url: str) -> bool:
     """Check if a URL is likely a valid, useful image (not a placeholder/tracking pixel)."""
     if not url or not url.startswith("http"):
         return False
     url_lower = url.lower()
-    # Reject known tracking pixels and placeholder images
-    _BAD_PATTERNS = [
-        "1x1",
-        "pixel",
-        "tracker",
-        "beacon",
-        "spacer",
-        "placeholder",
-        "default-image",
-        "no-image",
-        "blank.",
-        "gravatar.com/avatar",
-        "wp-content/plugins",
-    ]
-    if any(p in url_lower for p in _BAD_PATTERNS):
+    if any(p in url_lower for p in _BAD_IMAGE_PATTERNS):
         return False
-    # Reject non-image extensions
-    _BAD_EXTENSIONS = [".gif", ".svg", ".ico", ".webp"]
-    # .gif is often a tracking pixel; .svg/.ico are usually logos
-    if any(url_lower.endswith(ext) for ext in _BAD_EXTENSIONS):
-        # Allow large webp/gif if they have meaningful paths
-        if ".webp" in url_lower or len(url) > 80:
+    if any(url_lower.endswith(ext) for ext in _BAD_IMAGE_EXTENSIONS):
+        # Allow large gif if it has a meaningful path length
+        if len(url) > 80:
             return True
         return False
     return True
@@ -445,8 +446,6 @@ def _fetch_og_image(url: str, timeout: int = 8) -> str:
     if not url:
         return ""
     try:
-        import re as _re
-
         if is_private_url(url):
             logger.warning("SSRF blocked: %s resolves to private IP", url[:80])
             return ""
@@ -465,7 +464,7 @@ def _fetch_og_image(url: str, timeout: int = 8) -> str:
             r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)',
             r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']twitter:image',
         ]:
-            match = _re.search(pattern, head_html, _re.IGNORECASE)
+            match = re.search(pattern, head_html, re.IGNORECASE)
             if match:
                 img_url = match.group(1).strip()
                 if _is_valid_image_url(img_url):

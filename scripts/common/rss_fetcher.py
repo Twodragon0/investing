@@ -10,6 +10,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from .config import REQUEST_TIMEOUT, USER_AGENT, get_verify_ssl
+from .utils import SOURCE_SUFFIX_RE as _SOURCE_SUFFIX_RE
 from .utils import parse_date, remove_sponsored_text, sanitize_string, truncate_sentence
 
 logger = logging.getLogger(__name__)
@@ -34,35 +35,6 @@ def get_feed_health() -> Dict[str, Dict[str, Any]]:
     """Return a copy of the feed health stats."""
     return dict(_feed_health)
 
-
-# Common source suffixes to strip from RSS titles
-_SOURCE_SUFFIX_RE = re.compile(
-    r"\s*[-–—|]\s*(?:"
-    # English media
-    r"Reuters|Bloomberg|CNBC|CNN|BBC|AP\s*(?:News)?|Forbes|WSJ"
-    r"|Yahoo\s*Finance|MarketWatch|The\s*(?:Block|Verge|Guardian)"
-    r"|CBS\s*(?:News|뉴스)?|NBC\s*News|ABC\s*News|Fox\s*(?:News|Business)"
-    r"|Variety|Barron'?s|Motley\s*Fool|Nasdaq"
-    r"|Investing\.com|Seeking\s*Alpha|Benzinga|TheStreet"
-    # Korean media
-    r"|디지털투데이|연합인포맥스|펜앤마이크|네이트|복지TV\S*"
-    r"|이코노믹리뷰|매일경제|한국경제|조선일보|중앙일보"
-    r"|경향신문|한겨레|이데일리|뉴시스|아시아경제"
-    r"|서울경제|인포스탁데일리|이투데이|국제신문|부산일보"
-    r"|뉴스1|노컷뉴스|SBS뉴스|MBC뉴스|KBS뉴스"
-    r"|JTBC|채널A|TV조선|연합뉴스|파이낸셜뉴스"
-    r"|헤럴드경제|머니투데이|더팩트|데일리안|뉴데일리"
-    r"|오마이뉴스|프레시안|시사저널|공감신문|브레이크뉴스"
-    r"|한국글로벌뉴스|핀포인트뉴스|글로벌이코노믹|비즈니스포스트|토큰포스트|블록미디어|코인데스크코리아|디센터"
-    r"|전자신문|ZDNet\s*Korea|IT조선|디지털데일리|바이라인네트워크"
-    r"|BBS불교방송|ER\s*이코노믹리뷰"
-    # Domain suffixes
-    r"|v\.daum\.net|gukjenews\.com|ilyoseoul\.co\.kr"
-    r"|ir\.edaily\.co\.kr|simplywall\.st"
-    r"|[a-z][a-z0-9-]*\.(?:com|co\.kr|net|org|io)"
-    r")\s*$",
-    re.IGNORECASE,
-)
 
 
 def _clean_rss_title(title: str) -> str:

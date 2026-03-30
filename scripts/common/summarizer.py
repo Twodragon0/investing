@@ -18,6 +18,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 from .markdown_utils import html_source_tag, markdown_link
 from .post_generator import _MISTRANSLATION_FIXES
+from .utils import truncate_sentence as _truncate_sentence_util
 
 logger = logging.getLogger(__name__)
 
@@ -100,8 +101,8 @@ def _fix_mistranslations(text: str) -> str:
 def _truncate_sentence(text: str, max_len: int = 300) -> str:
     """Truncate text at the nearest sentence boundary within max_len.
 
-    Handles Korean sentence endings (다., 요., 음., 됩니다.)
-    as well as English (. ) and Japanese (。) boundaries.
+    Uses forward-search strategy to find the first complete sentence,
+    unlike utils.truncate_sentence which uses backward-search.
     Returns empty string if text is too short to be useful.
     """
     text = text.strip()
@@ -110,25 +111,10 @@ def _truncate_sentence(text: str, max_len: int = 300) -> str:
     if len(text) <= max_len:
         return text
 
-    # Korean and English sentence-ending patterns
     _SENTENCE_ENDS = [
-        "다. ",
-        "요. ",
-        "음. ",
-        "됩니다. ",
-        "입니다. ",
-        "습니다. ",
-        "했다. ",
-        "됐다. ",
-        "였다. ",
-        "합니다. ",
-        "했습니다. ",
-        "겠습니다. ",
-        "봅니다. ",
-        "。",
-        ". ",
-        "! ",
-        "? ",
+        "다. ", "요. ", "음. ", "됩니다. ", "입니다. ", "습니다. ",
+        "했다. ", "됐다. ", "였다. ", "합니다. ", "했습니다. ",
+        "겠습니다. ", "봅니다. ", "。", ". ", "! ", "? ",
     ]
     best_idx = -1
     for sep in _SENTENCE_ENDS:
@@ -140,15 +126,7 @@ def _truncate_sentence(text: str, max_len: int = 300) -> str:
 
     if best_idx > 20:
         return text[:best_idx].strip()
-
-    # No sentence boundary found — cut at word/character boundary
-    truncated = text[:max_len]
-    # Try space-based word boundary first
-    space_idx = truncated.rfind(" ", max_len // 2)
-    if space_idx > max_len // 2:
-        return truncated[:space_idx].strip() + "..."
-    # For CJK text without spaces, cut at max_len
-    return truncated.strip() + "..."
+    return _truncate_sentence_util(text, max_length=max_len)
 
 
 def _generate_title_based_desc(title: str, theme_key: str) -> str:
