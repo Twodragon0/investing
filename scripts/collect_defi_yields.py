@@ -9,7 +9,6 @@ Sources:
 import os
 import sys
 import time
-from datetime import datetime
 from typing import Any, Dict, List
 
 import requests
@@ -17,17 +16,13 @@ import requests
 # Add scripts directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common.base_collector import BaseCollector
 from common.collector_config import get_collector_config, get_limit, get_threshold
-from common.collector_metrics import log_collection_summary
-from common.config import REQUEST_TIMEOUT, get_kst_now, get_verify_ssl, setup_logging
-from common.dedup import DedupEngine
+from common.config import REQUEST_TIMEOUT
 from common.markdown_utils import html_reference_details, markdown_link, markdown_table
-from common.post_generator import PostGenerator, build_dated_permalink
+from common.post_generator import build_dated_permalink
 from common.utils import request_with_retry
 
-logger = setup_logging("collect_defi_yields")
-
-VERIFY_SSL = get_verify_ssl()
 # collectors.yml에서 설정 로드 (없으면 하드코딩 기본값으로 폴백)
 _yields_cfg = get_collector_config("defi_yields")
 BASE_URL = _yields_cfg.get("urls", {}).get("base", "https://yields.llama.fi")
@@ -54,7 +49,7 @@ def _format_tvl(tvl: float) -> str:
     return f"${tvl:.0f}"
 
 
-def fetch_pools() -> List[Dict[str, Any]]:
+def fetch_pools(verify_ssl: bool = True) -> List[Dict[str, Any]]:
     """Fetch all yield pools from DeFi Llama Yields API.
 
     Returns list of dicts with keys: pool, chain, project, symbol, tvlUsd, apy,
@@ -62,7 +57,7 @@ def fetch_pools() -> List[Dict[str, Any]]:
     """
     url = f"{BASE_URL}{POOLS_ENDPOINT}"
     try:
-        resp = request_with_retry(url, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL)
+        resp = request_with_retry(url, timeout=REQUEST_TIMEOUT, verify_ssl=verify_ssl)
         data = resp.json()
 
         # API returns {"status": "success", "data": [...]}
@@ -71,20 +66,15 @@ def fetch_pools() -> List[Dict[str, Any]]:
         elif isinstance(data, list):
             pools = data
         else:
-            logger.warning("Unexpected pools response type: %s", type(data))
             return []
 
         if not isinstance(pools, list):
-            logger.warning("Unexpected pools data type: %s", type(pools))
             return []
 
-        logger.info("DeFi Yields API: fetched %d raw pools", len(pools))
         return pools
-    except requests.exceptions.RequestException as e:
-        logger.warning("DeFi Yields pools fetch failed: %s", e)
+    except requests.exceptions.RequestException:
         return []
-    except (ValueError, KeyError) as e:
-        logger.warning("DeFi Yields pools parse failed: %s", e)
+    except (ValueError, KeyError):
         return []
 
 
@@ -165,7 +155,7 @@ def build_post_content(
     categories: Dict[str, List[Dict[str, Any]]],
     all_pools: List[Dict[str, Any]],
     today: str,
-    now: datetime,
+    now,
 ) -> str:
     """Build the Jekyll post markdown content."""
     content_parts = []
@@ -299,123 +289,138 @@ def build_post_content(
     return "\n".join(content_parts)
 
 
+class DefiYieldsCollector(BaseCollector):
+    """DeFi 수익률 수집기.
+
+    DeFi Llama Yields API에서 풀 데이터를 수집하고
+    카테고리별 APY 리포트를 생성합니다.
+    """
+
+    name = "defi_yields"
+    category = "defi"
+    state_file = "defi_yields_seen.json"
+
+    def fetch(self) -> List[Dict[str, Any]]:
+        """DeFi Llama에서 풀 데이터를 가져옵니다."""
+        raw_pools = fetch_pools(verify_ssl=self.verify_ssl)
+        self.logger.info("DeFi Yields API: fetched %d raw pools", len(raw_pools))
+        return raw_pools
+
+    def process(self, items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """TVL/APY 기준으로 풀을 필터링합니다."""
+        pools = _filter_pools(items)
+        self.logger.info(
+            "DeFi Yields: %d pools after filtering (raw: %d)", len(pools), len(items)
+        )
+        return pools
+
+    def build_content(self, items: List[Dict[str, Any]]) -> str:
+        """카테고리별 수익률 리포트 본문을 생성합니다."""
+        categories = categorize_pools(items)
+        return build_post_content(categories, items, self.today, self.now)
+
+    def build_title(self, items: List[Dict[str, Any]]) -> str:
+        """포스트 제목을 생성합니다."""
+        return f"DeFi 수익률 리포트 - {self.today}"
+
+    def default_tags(self) -> List[str]:
+        """기본 태그 목록을 반환합니다."""
+        return ["defi", "yield", "apy", "crypto", "daily-digest"]
+
+    def run(self) -> None:
+        """메인 실행 파이프라인 — 중복 검사 후 리포트 생성."""
+        self.logger.info("=== Starting %s collection ===", self.name)
+        self._started_at = time.monotonic()
+
+        post_title = self.build_title([])
+
+        # Early duplicate check
+        if self.is_duplicate_exact(post_title, "defi-yields"):
+            self.logger.info("Post already created today, skipping: %s", post_title)
+            self.save_state()
+            self.log_summary([])
+            return
+
+        # Fetch and process
+        raw_pools = self.fetch()
+
+        if not raw_pools:
+            self.logger.warning("No yield pools collected from DeFi Llama, skipping post creation")
+            self.save_state()
+            self.log_summary([], extras={"raw_pools": 0, "filtered_pools": 0})
+            return
+
+        pools = self.process(raw_pools)
+
+        # Categorize
+        categories = categorize_pools(pools)
+        stablecoin_count = len(categories["stablecoin"])
+        eth_count = len(categories["eth"])
+        btc_count = len(categories["btc"])
+
+        self.logger.info(
+            "DeFi Yields categories: stablecoin=%d, eth=%d, btc=%d, overall=%d",
+            stablecoin_count,
+            eth_count,
+            btc_count,
+            len(categories["overall"]),
+        )
+
+        # Build post content
+        content = build_post_content(categories, pools, self.today, self.now)
+
+        # Data-driven description
+        top_stable_project = categories["stablecoin"][0].get("project", "") if categories["stablecoin"] else ""
+        top_stable_apy = categories["stablecoin"][0].get("apy", 0) if categories["stablecoin"] else 0
+        avg_apy = sum(p.get("apy") or 0 for p in pools) / len(pools) if pools else 0
+
+        _desc_ko = (
+            f"DeFi 수익률 리포트: TVL $1M 이상 풀 {len(pools)}개 기준. "
+            f"스테이블코인 TOP APY {top_stable_apy:.1f}% ({top_stable_project}), "
+            f"전체 평균 APY {avg_apy:.1f}%. "
+            "스테이블코인·ETH·BTC 카테고리별 최고 수익률 프로토콜을 분석합니다."
+        )
+
+        # Create post via PostGenerator directly (need source_url param)
+        filepath = self.post_gen.create_post(
+            title=post_title,
+            content=content,
+            date=self.now,
+            logical_date=self.today,
+            tags=self.default_tags(),
+            source="defi-yields",
+            source_url=SITE_URL,
+            lang="ko",
+            extra_frontmatter={
+                "permalink": build_dated_permalink("defi", self.today, "daily-defi-yields-report"),
+                "description_ko": _desc_ko,
+            },
+            slug="daily-defi-yields-report",
+        )
+
+        if filepath:
+            self._created_count += 1
+            self.mark_seen(post_title, "defi-yields")
+            self.logger.info("Created DeFi Yields report post: %s", filepath)
+
+        self.save_state()
+        self.logger.info("=== DeFi Yields collection complete: %d posts created ===", self._created_count)
+        self.log_summary(
+            pools,
+            extras={
+                "raw_pools": len(raw_pools),
+                "filtered_pools": len(pools),
+                "stablecoin": stablecoin_count,
+                "eth": eth_count,
+                "btc": btc_count,
+            },
+        )
+
+
 def main():
     """Main collection routine for DeFi yields data."""
-    logger.info("=== Starting DeFi Yields collection ===")
-    started_at = time.monotonic()
-
-    dedup = DedupEngine("defi_yields_seen.json")
-    gen = PostGenerator("defi")
-
-    now = get_kst_now()
-    today = now.strftime("%Y-%m-%d")
-
-    post_title = f"DeFi 수익률 리포트 - {today}"
-    created_count = 0
-
-    # Early duplicate check
-    if dedup.is_duplicate_exact(post_title, "defi-yields", today):
-        logger.info("Post already created today, skipping: %s", post_title)
-        log_collection_summary(
-            logger,
-            collector="collect_defi_yields",
-            source_count=0,
-            unique_items=0,
-            post_created=0,
-            started_at=started_at,
-        )
-        return
-
-    # Fetch data
-    raw_pools = fetch_pools()
-
-    if not raw_pools:
-        logger.warning("No yield pools collected from DeFi Llama, skipping post creation")
-        log_collection_summary(
-            logger,
-            collector="collect_defi_yields",
-            source_count=1,
-            unique_items=0,
-            post_created=0,
-            started_at=started_at,
-        )
-        return
-
-    # Filter by TVL and APY thresholds
-    pools = _filter_pools(raw_pools)
-    logger.info("DeFi Yields: %d pools after filtering (raw: %d)", len(pools), len(raw_pools))
-
-    # Categorize
-    categories = categorize_pools(pools)
-    stablecoin_count = len(categories["stablecoin"])
-    eth_count = len(categories["eth"])
-    btc_count = len(categories["btc"])
-    overall_count = len(categories["overall"])
-
-    logger.info(
-        "DeFi Yields categories: stablecoin=%d, eth=%d, btc=%d, overall=%d",
-        stablecoin_count,
-        eth_count,
-        btc_count,
-        overall_count,
-    )
-
-    # Build post content
-    content = build_post_content(categories, pools, today, now)
-
-    # Data-driven description
-    top_stable_project = categories["stablecoin"][0].get("project", "") if categories["stablecoin"] else ""
-    top_stable_apy = categories["stablecoin"][0].get("apy", 0) if categories["stablecoin"] else 0
-    avg_apy = sum(p.get("apy") or 0 for p in pools) / len(pools) if pools else 0
-
-    _desc_ko = (
-        f"DeFi 수익률 리포트: TVL $1M 이상 풀 {len(pools)}개 기준. "
-        f"스테이블코인 TOP APY {top_stable_apy:.1f}% ({top_stable_project}), "
-        f"전체 평균 APY {avg_apy:.1f}%. "
-        "스테이블코인·ETH·BTC 카테고리별 최고 수익률 프로토콜을 분석합니다."
-    )
-
-    # Create post
-    filepath = gen.create_post(
-        title=post_title,
-        content=content,
-        date=now,
-        logical_date=today,
-        tags=["defi", "yield", "apy", "crypto", "daily-digest"],
-        source="defi-yields",
-        source_url=SITE_URL,
-        lang="ko",
-        extra_frontmatter={
-            "permalink": build_dated_permalink("defi", today, "daily-defi-yields-report"),
-            "description_ko": _desc_ko,
-        },
-        slug="daily-defi-yields-report",
-    )
-
-    if filepath:
-        dedup.mark_seen(post_title, "defi-yields", today)
-        created_count += 1
-        logger.info("Created DeFi Yields report post: %s", filepath)
-
-    dedup.save()
-
-    unique_items = len(pools)
-    logger.info("=== DeFi Yields collection complete: %d posts created ===", created_count)
-    log_collection_summary(
-        logger,
-        collector="collect_defi_yields",
-        source_count=1,
-        unique_items=unique_items,
-        post_created=created_count,
-        started_at=started_at,
-        extras={
-            "raw_pools": len(raw_pools),
-            "filtered_pools": len(pools),
-            "stablecoin": stablecoin_count,
-            "eth": eth_count,
-            "btc": btc_count,
-        },
-    )
+    collector = DefiYieldsCollector()
+    collector.run()
 
 
 if __name__ == "__main__":

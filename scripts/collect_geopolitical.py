@@ -18,16 +18,13 @@ import requests
 # Add scripts directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common.base_collector import BaseCollector
 from common.collector_config import get_collector_config, get_limit, get_threshold, get_url
-from common.collector_metrics import log_collection_summary
 from common.config import (
     REQUEST_TIMEOUT,
     USER_AGENT,
-    get_kst_now,
-    get_verify_ssl,
-    setup_logging,
 )
-from common.dedup import DedupEngine, deduplicate_by_url
+from common.dedup import deduplicate_by_url
 from common.enrichment import enrich_items
 from common.markdown_utils import (
     html_reference_details,
@@ -35,13 +32,10 @@ from common.markdown_utils import (
     markdown_link,
     markdown_table,
 )
-from common.post_generator import PostGenerator, build_dated_permalink
+from common.post_generator import build_dated_permalink
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.utils import request_with_retry, sanitize_string, truncate_text
 
-logger = setup_logging("collect_geopolitical")
-
-VERIFY_SSL = get_verify_ssl()
 # collectors.yml에서 설정 로드
 _geo_cfg = get_collector_config("geopolitical")
 
@@ -75,7 +69,7 @@ _GDELT_QUERY = _geo_cfg.get(
 )
 
 
-def fetch_polymarket(limit: Optional[int] = None) -> List[Dict[str, Any]]:
+def fetch_polymarket(limit: Optional[int] = None, verify_ssl: bool = True) -> List[Dict[str, Any]]:
     """Fetch active prediction markets related to geopolitics from Polymarket.
 
     Uses the public gamma-api.polymarket.com endpoint (no auth required).
@@ -100,7 +94,7 @@ def fetch_polymarket(limit: Optional[int] = None) -> List[Dict[str, Any]]:
                 url,
                 params=params,
                 timeout=REQUEST_TIMEOUT,
-                verify_ssl=VERIFY_SSL,
+                verify_ssl=verify_ssl,
                 headers={"User-Agent": USER_AGENT},
             )
             data = resp.json()
@@ -149,12 +143,10 @@ def fetch_polymarket(limit: Optional[int] = None) -> List[Dict[str, Any]]:
                     }
                 )
 
-            logger.info("Polymarket tag=%s: fetched %d valid markets", tag, len(items))
-
-        except requests.exceptions.RequestException as e:
-            logger.warning("Polymarket tag=%s fetch failed: %s", tag, e)
-        except (ValueError, KeyError) as e:
-            logger.warning("Polymarket tag=%s parse error: %s", tag, e)
+        except requests.exceptions.RequestException:
+            pass
+        except (ValueError, KeyError):
+            pass
 
     # Sort by volume descending, limit results
     items.sort(key=lambda x: x.get("volume", 0), reverse=True)
@@ -206,7 +198,7 @@ def _parse_probability(outcomes: List[Any], prices: List[Any]) -> str:
     return " / ".join(parts)
 
 
-def fetch_gdelt(limit: int = 30) -> List[Dict[str, Any]]:
+def fetch_gdelt(limit: int = 30, verify_ssl: bool = True) -> List[Dict[str, Any]]:
     """Fetch recent geopolitical news from GDELT API with tone analysis.
 
     Uses the free GDELT DOC 2.0 API (no auth required).
@@ -229,13 +221,12 @@ def fetch_gdelt(limit: int = 30) -> List[Dict[str, Any]]:
             url,
             params=params,
             timeout=REQUEST_TIMEOUT,
-            verify_ssl=VERIFY_SSL,
+            verify_ssl=verify_ssl,
             headers={"User-Agent": USER_AGENT},
         )
         data = resp.json()
         articles = data.get("articles", [])
         if not isinstance(articles, list):
-            logger.warning("GDELT: unexpected response format")
             return []
 
         for article in articles[:limit]:
@@ -266,12 +257,10 @@ def fetch_gdelt(limit: int = 30) -> List[Dict[str, Any]]:
                 }
             )
 
-        logger.info("GDELT: fetched %d articles", len(items))
-
-    except requests.exceptions.RequestException as e:
-        logger.warning("GDELT fetch failed: %s", e)
-    except (ValueError, KeyError) as e:
-        logger.warning("GDELT parse error: %s", e)
+    except requests.exceptions.RequestException:
+        pass
+    except (ValueError, KeyError):
+        pass
 
     return items
 
@@ -674,297 +663,328 @@ def _generate_risk_analysis(
     return lines
 
 
+class GeopoliticalCollector(BaseCollector):
+    """지정학 리스크 수집기.
+
+    Polymarket, GDELT, Google News에서 지정학 리스크 데이터를
+    수집하고 종합 리포트를 생성합니다.
+    """
+
+    name = "geopolitical"
+    category = "worldmonitor"
+    state_file = "geopolitical_seen.json"
+
+    def fetch(self) -> List[Dict[str, Any]]:
+        """모든 소스에서 지정학 데이터를 수집합니다."""
+        # Collect from all sources (continue if any fail)
+        markets: List[Dict[str, Any]] = []
+        gdelt_articles: List[Dict[str, Any]] = []
+        google_news_items: List[Dict[str, Any]] = []
+
+        try:
+            markets = fetch_polymarket(limit=15, verify_ssl=self.verify_ssl)
+        except Exception as e:
+            self.logger.warning("Polymarket collection failed entirely: %s", e)
+
+        try:
+            gdelt_articles = fetch_gdelt(limit=30, verify_ssl=self.verify_ssl)
+        except Exception as e:
+            self.logger.warning("GDELT collection failed entirely: %s", e)
+
+        try:
+            google_news_items = fetch_google_news_geopolitical()
+        except Exception as e:
+            self.logger.warning("Google News collection failed entirely: %s", e)
+
+        # Enrich Google News items for descriptions
+        if google_news_items:
+            enrich_items(google_news_items, _GEO_SOURCE_CONTEXT, fetch_url=False)
+            google_news_items = deduplicate_by_url(google_news_items)
+
+        # Tag items by source for later retrieval
+        for m in markets:
+            m["_geo_source"] = "polymarket"
+        for a in gdelt_articles:
+            a["_geo_source"] = "gdelt"
+        for n in google_news_items:
+            n["_geo_source"] = "google_news"
+
+        return markets + gdelt_articles + google_news_items
+
+    def process(self, items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """수집된 항목을 그대로 반환합니다 (소스별 처리는 run()에서)."""
+        return items
+
+    def build_content(self, items: List[Dict[str, Any]]) -> str:
+        """지정학 리스크 리포트 본문을 생성합니다."""
+        # Split items back by source
+        markets = [i for i in items if i.get("_geo_source") == "polymarket"]
+        gdelt_articles = [i for i in items if i.get("_geo_source") == "gdelt"]
+        google_news_items = [i for i in items if i.get("_geo_source") == "google_news"]
+        return self._build_full_content(markets, gdelt_articles, google_news_items)
+
+    def build_title(self, items: List[Dict[str, Any]]) -> str:
+        """포스트 제목을 생성합니다."""
+        return f"지정학 리스크 리포트 - {self.today}"
+
+    def default_tags(self) -> List[str]:
+        """기본 태그 목록을 반환합니다."""
+        return ["geopolitical", "polymarket", "risk", "conflict", "prediction-market"]
+
+    def run(self) -> None:
+        """메인 실행 파이프라인 — 다중 소스 수집 후 리포트 생성."""
+        self.logger.info("=== Starting geopolitical risk data collection ===")
+        self._started_at = time.monotonic()
+
+        post_title = self.build_title([])
+
+        # Skip if already generated today
+        if self.is_duplicate_exact(post_title, "geopolitical"):
+            self.logger.info("Geopolitical report already exists for today, skipping")
+            self.save_state()
+            self.log_summary([], extras={"status": "duplicate"})
+            return
+
+        # Fetch all items
+        all_items = self.fetch()
+
+        # Split by source
+        markets = [i for i in all_items if i.get("_geo_source") == "polymarket"]
+        gdelt_articles = [i for i in all_items if i.get("_geo_source") == "gdelt"]
+        google_news_items = [i for i in all_items if i.get("_geo_source") == "google_news"]
+
+        total_items = len(all_items)
+
+        if total_items < 3:
+            self.logger.warning(
+                "Insufficient data collected (%d items total), skipping post generation",
+                total_items,
+            )
+            self.save_state()
+            self.log_summary(
+                all_items,
+                extras={"status": "insufficient_data", "total_items": total_items},
+            )
+            return
+
+        self.logger.info(
+            "Collected: Polymarket=%d, GDELT=%d, GoogleNews=%d",
+            len(markets),
+            len(gdelt_articles),
+            len(google_news_items),
+        )
+
+        # Build content
+        content = self._build_full_content(markets, gdelt_articles, google_news_items)
+
+        # Generate briefing image
+        briefing_image = ""
+        theme_counter: Counter = Counter()
+        for item in google_news_items + gdelt_articles:
+            theme = _classify_geo_theme(item.get("title", ""))
+            theme_counter[theme] += 1
+
+        try:
+            from common.image_generator import generate_news_briefing_card
+
+            card_themes = []
+            for theme_name, count in theme_counter.most_common(5):
+                theme_emojis = {
+                    "군사/분쟁": "⚔️",
+                    "핵/WMD": "☢️",
+                    "제재/경제압박": "🚫",
+                    "선거/정치": "🗳️",
+                    "무역/공급망": "🔗",
+                    "에너지/자원": "⛽",
+                    "외교/협상": "🤝",
+                    "기타 지정학": "🌍",
+                }
+                card_themes.append(
+                    {
+                        "name": theme_name,
+                        "emoji": theme_emojis.get(theme_name, "🌍"),
+                        "count": count,
+                        "keywords": [],
+                    }
+                )
+
+            if card_themes:
+                img = generate_news_briefing_card(
+                    card_themes,
+                    self.today,
+                    category="Geopolitical Risk Report",
+                    total_count=total_items,
+                    filename=f"news-briefing-geopolitical-{self.today}.png",
+                )
+                if img:
+                    briefing_image = img
+                    fn = os.path.basename(img)
+                    web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
+                    content_parts_with_img = content.split("## 1.")
+                    if len(content_parts_with_img) > 1:
+                        content = (
+                            content_parts_with_img[0]
+                            + f"\n![geopolitical-briefing]({web_path})\n\n## 1."
+                            + content_parts_with_img[1]
+                        )
+                    self.logger.info("Generated geopolitical briefing card: %s", img)
+        except ImportError as e:
+            self.logger.debug("Optional dependency unavailable: %s", e)
+        except Exception as e:
+            self.logger.warning("Geopolitical briefing card generation failed: %s", e)
+
+        _top_geo_themes = [t[0] for t in theme_counter.most_common(3)] if theme_counter else []
+        _desc_ko = f"지정학적 리스크 {total_items}건 수집. "
+        if _top_geo_themes:
+            _desc_ko += f"주요 테마: {', '.join(_top_geo_themes)}. "
+        source_count = sum(
+            [
+                1 if markets else 0,
+                1 if gdelt_articles else 0,
+                1 if google_news_items else 0,
+            ]
+        )
+        _desc_ko += f"Polymarket·GDELT·뉴스 {source_count}개 소스에서 분쟁·제재·무역 리스크를 분석합니다."
+
+        # Create post
+        filepath = self.create_post(
+            title=post_title,
+            content=content,
+            tags=self.default_tags(),
+            source="geopolitical",
+            image=briefing_image or "",
+            extra_frontmatter={
+                "permalink": build_dated_permalink("market-analysis", self.today, "daily-geopolitical-risk-report"),
+                "description_ko": _desc_ko,
+            },
+            slug="daily-geopolitical-risk-report",
+        )
+
+        if filepath:
+            self.mark_seen(post_title, "geopolitical")
+            self.logger.info("Created geopolitical risk report: %s", filepath)
+        else:
+            self.logger.warning("Failed to create geopolitical risk report post")
+
+        self.save_state()
+        self.log_summary(all_items)
+        self.logger.info("=== Geopolitical risk collection complete: %d posts created ===", self._created_count)
+
+    def _build_full_content(
+        self,
+        markets: List[Dict[str, Any]],
+        gdelt_articles: List[Dict[str, Any]],
+        google_news_items: List[Dict[str, Any]],
+    ) -> str:
+        """지정학 리스크 리포트 전체 본문을 생성합니다."""
+        content_parts: List[str] = []
+
+        # Header summary
+        source_count = sum(
+            [
+                1 if markets else 0,
+                1 if gdelt_articles else 0,
+                1 if google_news_items else 0,
+            ]
+        )
+        content_parts.append(
+            f"**{self.today}** 기준 지정학적 리스크 데이터를 {source_count}개 소스에서 수집·분석했습니다. "
+            f"예측 시장 {len(markets)}건, 글로벌 뉴스 분석 {len(gdelt_articles)}건, "
+            f"뉴스 {len(google_news_items)}건을 종합합니다.\n"
+        )
+
+        # Alert box
+        theme_counter: Counter = Counter()
+        for item in google_news_items + gdelt_articles:
+            theme = _classify_geo_theme(item.get("title", ""))
+            theme_counter[theme] += 1
+
+        top_theme = theme_counter.most_common(1)[0][0] if theme_counter else "N/A"
+        content_parts.extend(
+            [
+                '<div class="alert-box alert-warning"><strong>지정학 리스크 스냅샷</strong><ul>',
+                f"<li>Polymarket 예측 시장: <strong>{len(markets)}건</strong></li>",
+                f"<li>GDELT 글로벌 뉴스: <strong>{len(gdelt_articles)}건</strong></li>",
+                f"<li>뉴스 기사: <strong>{len(google_news_items)}건</strong></li>",
+                f"<li>주요 테마: <strong>{top_theme}</strong></li>",
+                "</ul></div>\n",
+            ]
+        )
+
+        # Stat grid - source counts at a glance
+        content_parts.append('<div class="stat-grid">')
+        content_parts.append(
+            f'<div class="stat-item"><span class="stat-value">{len(markets)}</span>'
+            '<span class="stat-label">Polymarket</span></div>'
+        )
+        content_parts.append(
+            f'<div class="stat-item"><span class="stat-value">{len(gdelt_articles)}</span>'
+            '<span class="stat-label">GDELT 뉴스</span></div>'
+        )
+        content_parts.append(
+            f'<div class="stat-item"><span class="stat-value">{len(google_news_items)}</span>'
+            '<span class="stat-label">뉴스 기사</span></div>'
+        )
+        content_parts.append(
+            f'<div class="stat-item"><span class="stat-value">{source_count}</span>'
+            '<span class="stat-label">데이터 소스</span></div>'
+        )
+        content_parts.append("</div>\n")
+
+        # Section 1: Polymarket prediction markets
+        content_parts.append("## 1. 예측 시장 동향 (Polymarket)\n")
+        content_parts.append(
+            "글로벌 예측 시장 Polymarket에서 지정학·정치 이벤트에 대한 집단지성 확률을 확인합니다. "
+            "거래량이 많을수록 시장 참여자의 신뢰도가 높습니다.\n"
+        )
+        polymarket_lines, polymarket_filtered = _build_polymarket_section(markets)
+        content_parts.extend(polymarket_lines)
+
+        # Section 2: GDELT geopolitical news
+        content_parts.append("## 2. 주요 지정학 뉴스 (GDELT)\n")
+        content_parts.append(
+            "GDELT(글로벌 사건·언어·음색 데이터베이스)에서 최신 지정학 관련 기사와 "
+            "감성 분석 점수를 제공합니다. 음수 톤은 부정적 보도를 의미합니다.\n"
+        )
+        content_parts.extend(_build_gdelt_section(gdelt_articles))
+
+        # Section 3: Google News (geopolitical investment news)
+        content_parts.append("## 3. 투자 관점 지정학 뉴스 (Google News)\n")
+        content_parts.append("투자자 관점에서 주목해야 할 지정학 리스크 뉴스를 수집·분류했습니다.\n")
+        content_parts.extend(_build_news_section(google_news_items))
+
+        # Section 4: Risk analysis
+        content_parts.append("## 4. 리스크 분석\n")
+        content_parts.extend(_generate_risk_analysis(polymarket_filtered, gdelt_articles, google_news_items, self.today))
+
+        # References
+        all_link_items = [item for item in (google_news_items + gdelt_articles) if item.get("link")]
+        if all_link_items:
+            content_parts.append("\n---\n")
+            content_parts.append(
+                html_reference_details(
+                    "참고 링크",
+                    all_link_items,
+                    limit=15,
+                    title_max_len=80,
+                )
+            )
+
+        # Footer
+        content_parts.append(
+            '\n<div class="wm-footer-meta">'
+            f"<span>수집 시각: {self.now.strftime('%Y-%m-%d %H:%M')} KST</span>"
+            "<span>소스: Polymarket, GDELT Project, Google News RSS</span>"
+            "</div>"
+        )
+
+        return "\n".join(content_parts)
+
+
 def main() -> None:
     """Main collection routine for geopolitical risk data."""
-    logger.info("=== Starting geopolitical risk data collection ===")
-    started_at = time.monotonic()
-
-    dedup = DedupEngine("geopolitical_seen.json")
-    generator = PostGenerator("worldmonitor")
-
-    now = get_kst_now()
-    today = now.strftime("%Y-%m-%d")
-    post_title = f"지정학 리스크 리포트 - {today}"
-
-    # Skip if already generated today
-    if dedup.is_duplicate_exact(post_title, "geopolitical", today):
-        logger.info("Geopolitical report already exists for today, skipping")
-        log_collection_summary(
-            logger,
-            collector="collect_geopolitical",
-            source_count=0,
-            unique_items=0,
-            post_created=0,
-            started_at=started_at,
-            extras={"status": "duplicate"},
-        )
-        dedup.save()
-        return
-
-    # Collect from all sources (continue if any fail)
-    markets: List[Dict[str, Any]] = []
-    gdelt_articles: List[Dict[str, Any]] = []
-    google_news_items: List[Dict[str, Any]] = []
-
-    try:
-        markets = fetch_polymarket(limit=15)
-    except Exception as e:
-        logger.warning("Polymarket collection failed entirely: %s", e)
-
-    try:
-        gdelt_articles = fetch_gdelt(limit=30)
-    except Exception as e:
-        logger.warning("GDELT collection failed entirely: %s", e)
-
-    try:
-        google_news_items = fetch_google_news_geopolitical()
-    except Exception as e:
-        logger.warning("Google News collection failed entirely: %s", e)
-
-    # Enrich Google News items for descriptions
-    if google_news_items:
-        enrich_items(google_news_items, _GEO_SOURCE_CONTEXT, fetch_url=False)
-        google_news_items = deduplicate_by_url(google_news_items)
-
-    # Count total items across sources
-    total_items = len(markets) + len(gdelt_articles) + len(google_news_items)
-
-    if total_items < 3:
-        logger.warning(
-            "Insufficient data collected (%d items total), skipping post generation",
-            total_items,
-        )
-        log_collection_summary(
-            logger,
-            collector="collect_geopolitical",
-            source_count=3,
-            unique_items=total_items,
-            post_created=0,
-            started_at=started_at,
-            extras={"status": "insufficient_data", "total_items": total_items},
-        )
-        dedup.save()
-        return
-
-    logger.info(
-        "Collected: Polymarket=%d, GDELT=%d, GoogleNews=%d",
-        len(markets),
-        len(gdelt_articles),
-        len(google_news_items),
-    )
-
-    # Build post content
-    content_parts: List[str] = []
-
-    # Header summary
-    source_count = sum(
-        [
-            1 if markets else 0,
-            1 if gdelt_articles else 0,
-            1 if google_news_items else 0,
-        ]
-    )
-    content_parts.append(
-        f"**{today}** 기준 지정학적 리스크 데이터를 {source_count}개 소스에서 수집·분석했습니다. "
-        f"예측 시장 {len(markets)}건, 글로벌 뉴스 분석 {len(gdelt_articles)}건, "
-        f"뉴스 {len(google_news_items)}건을 종합합니다.\n"
-    )
-
-    # Alert box
-    theme_counter: Counter = Counter()
-    for item in google_news_items + gdelt_articles:
-        theme = _classify_geo_theme(item.get("title", ""))
-        theme_counter[theme] += 1
-
-    top_theme = theme_counter.most_common(1)[0][0] if theme_counter else "N/A"
-    content_parts.extend(
-        [
-            '<div class="alert-box alert-warning"><strong>지정학 리스크 스냅샷</strong><ul>',
-            f"<li>Polymarket 예측 시장: <strong>{len(markets)}건</strong></li>",
-            f"<li>GDELT 글로벌 뉴스: <strong>{len(gdelt_articles)}건</strong></li>",
-            f"<li>뉴스 기사: <strong>{len(google_news_items)}건</strong></li>",
-            f"<li>주요 테마: <strong>{top_theme}</strong></li>",
-            "</ul></div>\n",
-        ]
-    )
-
-    # Stat grid - source counts at a glance
-    content_parts.append('<div class="stat-grid">')
-    content_parts.append(
-        f'<div class="stat-item"><span class="stat-value">{len(markets)}</span>'
-        '<span class="stat-label">Polymarket</span></div>'
-    )
-    content_parts.append(
-        f'<div class="stat-item"><span class="stat-value">{len(gdelt_articles)}</span>'
-        '<span class="stat-label">GDELT 뉴스</span></div>'
-    )
-    content_parts.append(
-        f'<div class="stat-item"><span class="stat-value">{len(google_news_items)}</span>'
-        '<span class="stat-label">뉴스 기사</span></div>'
-    )
-    content_parts.append(
-        f'<div class="stat-item"><span class="stat-value">{source_count}</span>'
-        '<span class="stat-label">데이터 소스</span></div>'
-    )
-    content_parts.append("</div>\n")
-
-    # Section 1: Polymarket prediction markets
-    content_parts.append("## 1. 예측 시장 동향 (Polymarket)\n")
-    content_parts.append(
-        "글로벌 예측 시장 Polymarket에서 지정학·정치 이벤트에 대한 집단지성 확률을 확인합니다. "
-        "거래량이 많을수록 시장 참여자의 신뢰도가 높습니다.\n"
-    )
-    polymarket_lines, polymarket_filtered = _build_polymarket_section(markets)
-    content_parts.extend(polymarket_lines)
-
-    # Section 2: GDELT geopolitical news
-    content_parts.append("## 2. 주요 지정학 뉴스 (GDELT)\n")
-    content_parts.append(
-        "GDELT(글로벌 사건·언어·음색 데이터베이스)에서 최신 지정학 관련 기사와 "
-        "감성 분석 점수를 제공합니다. 음수 톤은 부정적 보도를 의미합니다.\n"
-    )
-    content_parts.extend(_build_gdelt_section(gdelt_articles))
-
-    # Section 3: Google News (geopolitical investment news)
-    content_parts.append("## 3. 투자 관점 지정학 뉴스 (Google News)\n")
-    content_parts.append("투자자 관점에서 주목해야 할 지정학 리스크 뉴스를 수집·분류했습니다.\n")
-    content_parts.extend(_build_news_section(google_news_items))
-
-    # Section 4: Risk analysis
-    content_parts.append("## 4. 리스크 분석\n")
-    content_parts.extend(_generate_risk_analysis(polymarket_filtered, gdelt_articles, google_news_items, today))
-
-    # References
-    all_link_items = [item for item in (google_news_items + gdelt_articles) if item.get("link")]
-    if all_link_items:
-        content_parts.append("\n---\n")
-        content_parts.append(
-            html_reference_details(
-                "참고 링크",
-                all_link_items,
-                limit=15,
-                title_max_len=80,
-            )
-        )
-
-    # Footer
-    content_parts.append(
-        '\n<div class="wm-footer-meta">'
-        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} KST</span>"
-        "<span>소스: Polymarket, GDELT Project, Google News RSS</span>"
-        "</div>"
-    )
-
-    content = "\n".join(content_parts)
-
-    # Generate briefing image
-    briefing_image = ""
-    try:
-        from common.image_generator import generate_news_briefing_card
-
-        card_themes = []
-        for theme_name, count in theme_counter.most_common(5):
-            theme_emojis = {
-                "군사/분쟁": "⚔️",
-                "핵/WMD": "☢️",
-                "제재/경제압박": "🚫",
-                "선거/정치": "🗳️",
-                "무역/공급망": "🔗",
-                "에너지/자원": "⛽",
-                "외교/협상": "🤝",
-                "기타 지정학": "🌍",
-            }
-            card_themes.append(
-                {
-                    "name": theme_name,
-                    "emoji": theme_emojis.get(theme_name, "🌍"),
-                    "count": count,
-                    "keywords": [],
-                }
-            )
-
-        if card_themes:
-            img = generate_news_briefing_card(
-                card_themes,
-                today,
-                category="Geopolitical Risk Report",
-                total_count=total_items,
-                filename=f"news-briefing-geopolitical-{today}.png",
-            )
-            if img:
-                briefing_image = img
-                fn = os.path.basename(img)
-                web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
-                content_parts_with_img = content.split("## 1.")
-                if len(content_parts_with_img) > 1:
-                    content = (
-                        content_parts_with_img[0]
-                        + f"\n![geopolitical-briefing]({web_path})\n\n## 1."
-                        + content_parts_with_img[1]
-                    )
-                logger.info("Generated geopolitical briefing card: %s", img)
-    except ImportError as e:
-        logger.debug("Optional dependency unavailable: %s", e)
-    except Exception as e:
-        logger.warning("Geopolitical briefing card generation failed: %s", e)
-
-    _top_geo_themes = [t[0] for t in theme_counter.most_common(3)] if theme_counter else []
-    _desc_ko = f"지정학적 리스크 {total_items}건 수집. "
-    if _top_geo_themes:
-        _desc_ko += f"주요 테마: {', '.join(_top_geo_themes)}. "
-    _desc_ko += f"Polymarket·GDELT·뉴스 {source_count}개 소스에서 분쟁·제재·무역 리스크를 분석합니다."
-
-    # Create post
-    filepath = generator.create_post(
-        title=post_title,
-        content=content,
-        date=now,
-        logical_date=today,
-        tags=["geopolitical", "polymarket", "risk", "conflict", "prediction-market"],
-        source="geopolitical",
-        lang="ko",
-        image=briefing_image or "",
-        extra_frontmatter={
-            "permalink": build_dated_permalink("market-analysis", today, "daily-geopolitical-risk-report"),
-            "description_ko": _desc_ko,
-        },
-        slug="daily-geopolitical-risk-report",
-    )
-
-    created_count = 0
-    if filepath:
-        dedup.mark_seen(post_title, "geopolitical", today)
-        created_count = 1
-        logger.info("Created geopolitical risk report: %s", filepath)
-    else:
-        logger.warning("Failed to create geopolitical risk report post")
-
-    dedup.save()
-
-    unique_items = len(
-        {
-            f"{item.get('title', '')}|{item.get('source', '')}|{item.get('link', '')}"
-            for item in (markets + gdelt_articles + google_news_items)
-            if item.get("title")
-        }
-    )
-    source_names = set()
-    if markets:
-        source_names.add("Polymarket")
-    if gdelt_articles:
-        source_names.add("GDELT")
-    if google_news_items:
-        source_names.add("Google News")
-
-    log_collection_summary(
-        logger,
-        collector="collect_geopolitical",
-        source_count=len(source_names),
-        unique_items=unique_items,
-        post_created=created_count,
-        started_at=started_at,
-    )
-    logger.info("=== Geopolitical risk collection complete: %d posts created ===", created_count)
+    collector = GeopoliticalCollector()
+    collector.run()
 
 
 if __name__ == "__main__":
