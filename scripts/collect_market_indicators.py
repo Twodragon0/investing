@@ -1033,8 +1033,7 @@ class MarketIndicatorsCollector(BaseCollector):
                 )
 
             news_total = (
-                len(self._treasury_news) + len(self._put_call_news)
-                + len(self._breadth_news) + len(self._margin_news)
+                len(self._treasury_news) + len(self._put_call_news) + len(self._breadth_news) + len(self._margin_news)
             )
             if news_total:
                 card_themes.append(

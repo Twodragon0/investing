@@ -911,7 +911,9 @@ class SocialMediaCollector(BaseCollector):
                 r_title = get_display_title(top_reddit).replace("[Reddit] ", "")
                 r_score = top_reddit.get("score", 0)
                 reddit_highlight = f" 최고 인기 글: *{r_title[:70]}* (↑{r_score})"
-            trend_lines.append(f"\n**Reddit**: {len(reddit_items)}건 수집, 평균 스코어 {avg_score:.0f}.{reddit_highlight}")
+            trend_lines.append(
+                f"\n**Reddit**: {len(reddit_items)}건 수집, 평균 스코어 {avg_score:.0f}.{reddit_highlight}"
+            )
 
         if not trend_lines:
             trend_lines.append("현재 수집된 소셜 데이터가 제한적입니다.")

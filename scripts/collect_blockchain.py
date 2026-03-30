@@ -259,14 +259,16 @@ class BlockchainCollector(BaseCollector):
         # 데이터를 단일 리스트로 래핑 (파이프라인 호환)
         items: List[Dict[str, Any]] = []
         if btc or eth:
-            items.append({
-                "title": f"블록체인 네트워크 리포트 - {self.today}",
-                "source": "blockchain-metrics",
-                "btc": btc,
-                "eth": eth,
-                "l2_projects": l2_projects,
-                "upgrade_news": upgrade_news,
-            })
+            items.append(
+                {
+                    "title": f"블록체인 네트워크 리포트 - {self.today}",
+                    "source": "blockchain-metrics",
+                    "btc": btc,
+                    "eth": eth,
+                    "l2_projects": l2_projects,
+                    "upgrade_news": upgrade_news,
+                }
+            )
         return items
 
     def process(self, items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:

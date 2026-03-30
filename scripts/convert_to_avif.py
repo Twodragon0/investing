@@ -17,9 +17,7 @@ from common.config import setup_logging  # noqa: E402
 
 logger = setup_logging("convert_to_avif")
 
-IMAGES_DIR = os.path.join(
-    os.path.dirname(__file__), "..", "assets", "images", "generated"
-)
+IMAGES_DIR = os.path.join(os.path.dirname(__file__), "..", "assets", "images", "generated")
 
 
 def convert_png_to_avif(png_path: str, quality: int, dry_run: bool) -> bool:
@@ -63,9 +61,7 @@ def convert_png_to_avif(png_path: str, quality: int, dry_run: bool) -> bool:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="PNG → AVIF 일괄 변환 (assets/images/generated/)"
-    )
+    parser = argparse.ArgumentParser(description="PNG → AVIF 일괄 변환 (assets/images/generated/)")
     parser.add_argument(
         "--dry-run",
         action="store_true",
@@ -84,11 +80,7 @@ def main() -> None:
         logger.error("이미지 디렉토리를 찾을 수 없습니다: %s", images_dir)
         sys.exit(1)
 
-    png_files = sorted(
-        os.path.join(images_dir, f)
-        for f in os.listdir(images_dir)
-        if f.lower().endswith(".png")
-    )
+    png_files = sorted(os.path.join(images_dir, f) for f in os.listdir(images_dir) if f.lower().endswith(".png"))
 
     if not png_files:
         logger.info("변환할 PNG 파일이 없습니다: %s", images_dir)

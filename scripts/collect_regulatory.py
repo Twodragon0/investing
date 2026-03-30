@@ -550,9 +550,7 @@ class RegulatoryCollector(BaseCollector):
             if matched_total < 3:
                 impact_tone = "뚜렷한 규제 방향성 키워드가 제한적으로 포착되어, 개별 건별 확인이 필요합니다."
             elif enforce_count > enable_count:
-                impact_tone = (
-                    "집행·제재 성격의 규제가 우세하여, 관련 프로젝트 및 거래소의 컴플라이언스 리스크가 상승하고 있습니다."
-                )
+                impact_tone = "집행·제재 성격의 규제가 우세하여, 관련 프로젝트 및 거래소의 컴플라이언스 리스크가 상승하고 있습니다."
             elif enable_count > enforce_count:
                 impact_tone = (
                     "승인·라이선스 등 시장 참여 확대 방향의 규제가 부각되어, 제도권 진입 기대감이 형성되고 있습니다."
@@ -603,7 +601,9 @@ class RegulatoryCollector(BaseCollector):
 
         if korea_items:
             fsc_count = sum(1 for i in korea_items if "fsc" in " ".join(i.get("tags", [])))
-            va_count = sum(1 for i in korea_items if "가상자산" in (i.get("title", "") + " " + i.get("description", "")))
+            va_count = sum(
+                1 for i in korea_items if "가상자산" in (i.get("title", "") + " " + i.get("description", ""))
+            )
             kr_detail = f" (금융위 {fsc_count}건 포함)" if fsc_count else ""
             if va_count > 0:
                 kr_focus = (
@@ -630,7 +630,9 @@ class RegulatoryCollector(BaseCollector):
                     "아시아 디지털 자산 허브 경쟁의 방향을 결정짓고 있습니다."
                 )
             else:
-                asia_focus = "일본 FSA와 싱가포르 MAS의 라이선스 정책이 아태 지역 디지털 자산 허브 경쟁의 핵심 변수입니다."
+                asia_focus = (
+                    "일본 FSA와 싱가포르 MAS의 라이선스 정책이 아태 지역 디지털 자산 허브 경쟁의 핵심 변수입니다."
+                )
             insight_lines.append(f"**아시아**: {asia_focus}")
 
         if europe_items:

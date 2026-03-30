@@ -36,7 +36,6 @@ def get_feed_health() -> Dict[str, Dict[str, Any]]:
     return dict(_feed_health)
 
 
-
 def _clean_rss_title(title: str) -> str:
     """Remove trailing source names and decorative markers from RSS titles."""
     cleaned = _SOURCE_SUFFIX_RE.sub("", title).strip()

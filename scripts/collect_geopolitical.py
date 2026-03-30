@@ -955,7 +955,9 @@ class GeopoliticalCollector(BaseCollector):
 
         # Section 4: Risk analysis
         content_parts.append("## 4. 리스크 분석\n")
-        content_parts.extend(_generate_risk_analysis(polymarket_filtered, gdelt_articles, google_news_items, self.today))
+        content_parts.extend(
+            _generate_risk_analysis(polymarket_filtered, gdelt_articles, google_news_items, self.today)
+        )
 
         # References
         all_link_items = [item for item in (google_news_items + gdelt_articles) if item.get("link")]

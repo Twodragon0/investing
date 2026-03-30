@@ -261,9 +261,7 @@ class PoliticalTradesCollector(BaseCollector):
         unique_items = [
             item
             for item in items
-            if not self.is_duplicate(
-                item.get("title", ""), item.get("source", ""), item.get("link", "")
-            )
+            if not self.is_duplicate(item.get("title", ""), item.get("source", ""), item.get("link", ""))
         ]
         enrich_items(unique_items, context_map=_POLITICAL_SOURCE_CONTEXT, max_fetch=20)
         return unique_items
@@ -410,9 +408,7 @@ class PoliticalTradesCollector(BaseCollector):
             image=briefing_image or "/assets/images/og-political-trades.png",
             extra_frontmatter={
                 "excerpt": excerpt_text,
-                "permalink": build_dated_permalink(
-                    "political-trades", self.today, "daily-political-trades-report"
-                ),
+                "permalink": build_dated_permalink("political-trades", self.today, "daily-political-trades-report"),
                 "description_ko": _desc_ko,
             },
         )
@@ -460,9 +456,7 @@ class PoliticalTradesCollector(BaseCollector):
         content_parts.append("미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.")
 
         # Keyword analysis
-        all_texts = " ".join(
-            item.get("title", "") + " " + item.get("description", "") for item in unique_items
-        ).lower()
+        all_texts = " ".join(item.get("title", "") + " " + item.get("description", "") for item in unique_items).lower()
         keyword_targets = [
             "trump",
             "pelosi",
@@ -489,13 +483,9 @@ class PoliticalTradesCollector(BaseCollector):
             "insider": "내부자",
             "disclosure": "공시",
         }
-        keyword_hits = {
-            kw: len(re.findall(re.escape(kw), all_texts, re.IGNORECASE)) for kw in keyword_targets
-        }
+        keyword_hits = {kw: len(re.findall(re.escape(kw), all_texts, re.IGNORECASE)) for kw in keyword_targets}
         top_keywords = [
-            (_KW_KO.get(kw, kw), cnt)
-            for kw, cnt in sorted(keyword_hits.items(), key=lambda x: -x[1])
-            if cnt > 0
+            (_KW_KO.get(kw, kw), cnt) for kw, cnt in sorted(keyword_hits.items(), key=lambda x: -x[1]) if cnt > 0
         ]
 
         # Filter unique items by category for sections
@@ -587,9 +577,7 @@ class PoliticalTradesCollector(BaseCollector):
             desc = item.get("description", "").strip()
             title = item.get("title", "")
             highlight = _first_sentence(desc) if desc and desc != title and len(desc) > 20 else title
-            summary_narrative.append(
-                f"**한국 정치인** 관련으로는 {highlight} 등의 재산/거래 소식이 수집되었습니다."
-            )
+            summary_narrative.append(f"**한국 정치인** 관련으로는 {highlight} 등의 재산/거래 소식이 수집되었습니다.")
         content_parts.extend(summary_narrative)
 
         content_parts.append("---")
@@ -645,9 +633,7 @@ class PoliticalTradesCollector(BaseCollector):
             if any(kw in text for kw in _SELL_KW):
                 sell_signals += 1
             # Extract stock ticker mentions (e.g., $AAPL, NVDA, MSFT)
-            tickers = re.findall(
-                r"\$([A-Z]{2,5})\b", item.get("title", "") + " " + item.get("description", "")
-            )
+            tickers = re.findall(r"\$([A-Z]{2,5})\b", item.get("title", "") + " " + item.get("description", ""))
             for ticker in tickers:
                 stock_mentions[ticker] += 1
 
@@ -656,7 +642,9 @@ class PoliticalTradesCollector(BaseCollector):
             total_trades = buy_signals + sell_signals
             buy_pct = buy_signals / max(total_trades, 1) * 100
             if buy_signals > sell_signals * 1.5:
-                pattern_note = "매수 비중이 압도적으로 높아, 정치인들이 시장에 대해 낙관적 시각을 갖고 있음을 시사합니다."
+                pattern_note = (
+                    "매수 비중이 압도적으로 높아, 정치인들이 시장에 대해 낙관적 시각을 갖고 있음을 시사합니다."
+                )
             elif sell_signals > buy_signals * 1.5:
                 pattern_note = "매도 비중이 높아, 리스크 회피 또는 차익 실현 움직임이 감지됩니다."
             else:

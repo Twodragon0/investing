@@ -1238,9 +1238,7 @@ class CoinMarketCapCollector(BaseCollector):
 
         # Build items for log_summary
         items: List[Dict[str, Any]] = [
-            {"title": c.get("name", ""), "source": source_name}
-            for c in top_coins
-            if c.get("name")
+            {"title": c.get("name", ""), "source": source_name} for c in top_coins if c.get("name")
         ]
         self.log_summary(items, extras={"source": source_name})
 

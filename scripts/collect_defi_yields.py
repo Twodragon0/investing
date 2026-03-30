@@ -309,9 +309,7 @@ class DefiYieldsCollector(BaseCollector):
     def process(self, items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """TVL/APY 기준으로 풀을 필터링합니다."""
         pools = _filter_pools(items)
-        self.logger.info(
-            "DeFi Yields: %d pools after filtering (raw: %d)", len(pools), len(items)
-        )
+        self.logger.info("DeFi Yields: %d pools after filtering (raw: %d)", len(pools), len(items))
         return pools
 
     def build_content(self, items: List[Dict[str, Any]]) -> str:

@@ -167,9 +167,7 @@ class BaseCollector(ABC):
                 if item.get("title")
             }
         )
-        source_count = len(
-            {item.get("source", "") for item in items if item.get("source")}
-        )
+        source_count = len({item.get("source", "") for item in items if item.get("source")})
         log_collection_summary(
             self.logger,
             collector=f"collect_{self.name}",

@@ -606,9 +606,7 @@ class CryptoNewsCollector(BaseCollector):
             content, briefing_image = self._build_crypto_content(all_items)
 
             _top_crypto_sources = [
-                name for name, _ in Counter(
-                    item.get("source", "unknown") for item in all_items
-                ).most_common(3)
+                name for name, _ in Counter(item.get("source", "unknown") for item in all_items).most_common(3)
             ]
             _desc_ko_a = f"크립토 뉴스 {len(all_items)}건 수집. "
             if _top_crypto_sources:
@@ -642,9 +640,7 @@ class CryptoNewsCollector(BaseCollector):
             post_b_title = f"블록체인 보안 리포트 - {self.today}"
 
             if not self.is_duplicate_exact(post_b_title, "consolidated"):
-                content = self._build_security_content(
-                    all_security_items, rekt_items, google_security_items
-                )
+                content = self._build_security_content(all_security_items, rekt_items, google_security_items)
 
                 filepath = self.create_post(
                     title=post_b_title,
@@ -652,9 +648,7 @@ class CryptoNewsCollector(BaseCollector):
                     tags=["security", "hack", "blockchain", "daily-digest"],
                     source="consolidated",
                     extra_frontmatter={
-                        "permalink": build_dated_permalink(
-                            "security-alerts", self.today, "daily-security-report"
-                        )
+                        "permalink": build_dated_permalink("security-alerts", self.today, "daily-security-report")
                     },
                     slug="daily-security-report",
                     post_gen=self.security_gen,
@@ -673,9 +667,7 @@ class CryptoNewsCollector(BaseCollector):
         all_collected_items = all_items + all_security_items
         self.log_summary(all_collected_items)
 
-    def _build_crypto_content(
-        self, all_items: List[Dict[str, Any]]
-    ) -> tuple:
+    def _build_crypto_content(self, all_items: List[Dict[str, Any]]) -> tuple:
         """암호화폐 뉴스 브리핑 본문을 생성합니다.
 
         Returns:
@@ -909,7 +901,9 @@ class CryptoNewsCollector(BaseCollector):
 
         # Insight section - data-driven cross-analysis
         content_parts.append("\n## 오늘의 인사이트\n")
-        insight_lines = self._build_insight_lines(all_items, top_themes, top_keywords, summarizer, source_counter, exchange_rows)
+        insight_lines = self._build_insight_lines(
+            all_items, top_themes, top_keywords, summarizer, source_counter, exchange_rows
+        )
         content_parts.extend(insight_lines)
 
         # References section (top 10 only) - collapsible

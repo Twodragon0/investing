@@ -699,7 +699,9 @@ class StockNewsCollector(BaseCollector):
             elif pval > -1.5:
                 kr_mood = "소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다."
             else:
-                kr_mood = "뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요."
+                kr_mood = (
+                    "뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요."
+                )
 
             insight_lines.append(f"KOSPI **{kospi['price']}** ({kospi['change_pct']}): {kr_mood}")
 
