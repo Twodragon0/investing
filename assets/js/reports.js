@@ -52,8 +52,8 @@
 
   function highlightText(html) {
     if (!searchQuery || searchQuery.length < 2) return html;
-    var escaped = searchQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    return html.replace(new RegExp('(' + escaped + ')', 'gi'), '<mark class="search-highlight">$1</mark>');
+    var escapedQuery = escapeHtml(searchQuery).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return html.replace(new RegExp('(' + escapedQuery + ')', 'gi'), '<mark class="search-highlight">$1</mark>');
   }
 
   function relativeTime(dateStr) {
@@ -251,8 +251,8 @@
     container.style.display = '';
     list.innerHTML = recentPosts.map(function(p) {
       var bc = BADGE_COLORS[p.cc] || ['rgba(88,166,255,0.15)','#58a6ff'];
-      return '<a href="' + p.u + '" class="recent-item">' +
-        '<span class="report-category-badge" style="background:' + bc[0] + ';color:' + bc[1] + '">' + p.cn + '</span>' +
+      return '<a href="' + escapeHtml(p.u) + '" class="recent-item">' +
+        '<span class="report-category-badge" style="background:' + escapeHtml(bc[0]) + ';color:' + escapeHtml(bc[1]) + '">' + escapeHtml(p.cn) + '</span>' +
         '<span class="recent-item-title">' + escapeHtml(p.t) + '</span>' +
         '<span class="report-relative-time">' + relativeTime(p.d) + '</span></a>';
     }).join('');
@@ -314,13 +314,13 @@
     var shown = todayPosts.slice(0, 6);
     hlGrid.innerHTML = shown.map(function(p) {
       var bc = BADGE_COLORS[p.cc] || ['rgba(88,166,255,0.15)', '#58a6ff'];
-      var thumbHtml = p.img ? '<img class="highlight-thumb" src="' + p.img + '" alt="" loading="lazy">' : '';
-      return '<a href="' + p.u + '" class="highlight-card">' +
+      var thumbHtml = p.img ? '<img class="highlight-thumb" src="' + escapeHtml(p.img) + '" alt="" loading="lazy">' : '';
+      return '<a href="' + escapeHtml(p.u) + '" class="highlight-card">' +
         thumbHtml +
         '<div class="highlight-body">' +
-        '<span class="report-category-badge" style="background:' + bc[0] + ';color:' + bc[1] + '">' + p.cn + '</span>' +
-        '<h4 class="highlight-title">' + p.t + '</h4>' +
-        '<p class="highlight-summary">' + (p.s || '').slice(0, 80) + '</p>' +
+        '<span class="report-category-badge" style="background:' + escapeHtml(bc[0]) + ';color:' + escapeHtml(bc[1]) + '">' + escapeHtml(p.cn) + '</span>' +
+        '<h4 class="highlight-title">' + escapeHtml(p.t) + '</h4>' +
+        '<p class="highlight-summary">' + escapeHtml((p.s || '').slice(0, 80)) + '</p>' +
         '</div></a>';
     }).join('');
   })();
