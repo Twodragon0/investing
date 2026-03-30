@@ -22,17 +22,16 @@ import requests
 # Add scripts directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common.base_collector import BaseCollector
 from common.collector_config import get_collector_config, get_limit, get_url
-from common.collector_metrics import log_collection_summary
 from common.config import (
     REQUEST_TIMEOUT,
     USER_AGENT,
     get_env,
-    get_kst_now,
     get_verify_ssl,
     setup_logging,
 )
-from common.dedup import DedupEngine, deduplicate_by_url
+from common.dedup import deduplicate_by_url
 from common.enrichment import _CRYPTO_SOURCE_CONTEXT, enrich_items
 from common.markdown_utils import (
     html_reference_details,
@@ -518,80 +517,180 @@ def _fetch_browser_sources() -> tuple:
     return google_items, binance_items
 
 
-def main():
-    """Main collection routine - consolidated posts."""
-    logger.info("=== Starting crypto news collection ===")
-    started_at = time.monotonic()
+class CryptoNewsCollector(BaseCollector):
+    """암호화폐 뉴스 수집기.
 
-    cryptopanic_key = get_env("CRYPTOPANIC_API_KEY")
+    CryptoPanic, Google News, RSS 피드, 거래소 공지, Rekt News 등
+    다양한 소스에서 뉴스를 수집하고 두 개의 포스트를 생성합니다:
+    - 암호화폐 뉴스 브리핑 (crypto-news)
+    - 블록체인 보안 리포트 (security-alerts)
+    """
 
-    dedup = DedupEngine("crypto_news_seen.json")
-    crypto_gen = PostGenerator("crypto-news")
-    security_gen = PostGenerator("security-alerts")
+    name = "crypto_news"
+    category = "crypto-news"
+    state_file = "crypto_news_seen.json"
 
-    now = get_kst_now()
-    today = now.strftime("%Y-%m-%d")
+    def __init__(self) -> None:
+        super().__init__()
+        self.security_gen = PostGenerator("security-alerts")
 
-    all_items = []
+    def fetch(self) -> List[Dict[str, Any]]:
+        """모든 소스에서 뉴스 항목을 수집합니다."""
+        cryptopanic_key = get_env("CRYPTOPANIC_API_KEY")
+        all_items: List[Dict[str, Any]] = []
 
-    # Collect from all sources
-    all_items.extend(fetch_cryptopanic(cryptopanic_key))
+        all_items.extend(fetch_cryptopanic(cryptopanic_key))
 
-    # Use combined browser session for Google News and Binance
-    browser_google, browser_binance = _fetch_browser_sources()
-    all_items.extend(browser_google)
+        browser_google, browser_binance = _fetch_browser_sources()
+        all_items.extend(browser_google)
 
-    all_items.extend(fetch_google_news_crypto())
-    all_items.extend(fetch_crypto_rss_feeds())
+        all_items.extend(fetch_google_news_crypto())
+        all_items.extend(fetch_crypto_rss_feeds())
 
-    # Exchange: browser items first, BAPI fallback
-    exchange_items = browser_binance if browser_binance else _fetch_binance_bapi()
-    enrich_items(exchange_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=True, max_fetch=30)
-    all_items.extend(exchange_items)
+        exchange_items = browser_binance if browser_binance else _fetch_binance_bapi()
+        enrich_items(exchange_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=True, max_fetch=30)
+        all_items.extend(exchange_items)
 
-    # Enrich remaining items (RSS, CryptoPanic, Google News browser)
-    enrich_items(all_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=True, max_fetch=30)
-    all_items = deduplicate_by_url(all_items)
+        enrich_items(all_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=True, max_fetch=30)
+        return all_items
 
-    # Security news from multiple sources -> security-alerts category
-    rekt_items = fetch_rekt_news()
-    google_security_items = fetch_google_news_security()
-    enrich_items(rekt_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=False)
-    enrich_items(google_security_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=True, max_fetch=15)
-    google_security_items = deduplicate_by_url(google_security_items)
+    def fetch_security(self) -> tuple:
+        """보안 관련 뉴스를 별도로 수집합니다."""
+        rekt_items = fetch_rekt_news()
+        google_security_items = fetch_google_news_security()
+        enrich_items(rekt_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=False)
+        enrich_items(google_security_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=True, max_fetch=15)
+        google_security_items = deduplicate_by_url(google_security_items)
 
-    # Filter already-seen security items (cross-day dedup per individual item)
-    rekt_items = [
-        item
-        for item in rekt_items
-        if not dedup.is_duplicate(item["title"], item.get("source", "rekt"), today, item.get("link", ""))
-    ]
-    google_security_items = [
-        item
-        for item in google_security_items
-        if not dedup.is_duplicate(item["title"], item.get("source", "google"), today, item.get("link", ""))
-    ]
-    logger.info(
-        "Security items after dedup: rekt=%d, google=%d",
-        len(rekt_items),
-        len(google_security_items),
-    )
+        rekt_items = [
+            item
+            for item in rekt_items
+            if not self.is_duplicate(item["title"], item.get("source", "rekt"), item.get("link", ""))
+        ]
+        google_security_items = [
+            item
+            for item in google_security_items
+            if not self.is_duplicate(item["title"], item.get("source", "google"), item.get("link", ""))
+        ]
+        self.logger.info(
+            "Security items after dedup: rekt=%d, google=%d",
+            len(rekt_items),
+            len(google_security_items),
+        )
+        return rekt_items, google_security_items
 
-    created_count = 0
+    def process(self, items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """URL 기반 중복 제거."""
+        return deduplicate_by_url(items)
 
-    # ── Post A: consolidated crypto news briefing ──
-    post_a_title = f"암호화폐 뉴스 브리핑 - {today}"
+    def build_content(self, items: List[Dict[str, Any]]) -> str:
+        """암호화폐 뉴스 브리핑 포스트 본문을 생성합니다."""
+        return self._build_crypto_content(items)
 
-    if not all_items:
-        logger.warning("No news items collected, skipping crypto news post")
-    if all_items and not dedup.is_duplicate_exact(post_a_title, "consolidated", today):
+    def run(self) -> None:
+        """메인 실행 파이프라인 — 크립토 뉴스 + 보안 리포트 두 개 포스트 생성."""
+        self.logger.info("=== Starting crypto news collection ===")
+        self._started_at = time.monotonic()
+
+        all_items = self.fetch()
+        all_items = self.process(all_items)
+
+        rekt_items, google_security_items = self.fetch_security()
+
+        # ── Post A: consolidated crypto news briefing ──
+        post_a_title = f"암호화폐 뉴스 브리핑 - {self.today}"
+
+        if not all_items:
+            self.logger.warning("No news items collected, skipping crypto news post")
+        if all_items and not self.is_duplicate_exact(post_a_title, "consolidated"):
+            content, briefing_image = self._build_crypto_content(all_items)
+
+            _top_crypto_sources = [
+                name for name, _ in Counter(
+                    item.get("source", "unknown") for item in all_items
+                ).most_common(3)
+            ]
+            _desc_ko_a = f"크립토 뉴스 {len(all_items)}건 수집. "
+            if _top_crypto_sources:
+                _desc_ko_a += f"주요 출처: {', '.join(_top_crypto_sources)}. "
+            _desc_ko_a += "CryptoPanic·CoinGecko·거래소 RSS 기반 암호화폐 시장 동향을 정리합니다."
+
+            filepath = self.create_post(
+                title=post_a_title,
+                content=content,
+                tags=["crypto", "news", "daily-digest"],
+                source="consolidated",
+                image=briefing_image or "",
+                extra_frontmatter={
+                    "permalink": build_dated_permalink("crypto-news", self.today, "daily-crypto-news-digest"),
+                    "description_ko": _desc_ko_a,
+                },
+                slug="daily-crypto-news-digest",
+            )
+            if filepath:
+                self.mark_seen(post_a_title, "consolidated")
+                self.logger.info("Created consolidated crypto news post: %s", filepath)
+
+        # ── Post B: security report (Rekt News + Google Security News) ──
+        all_security_items = rekt_items + google_security_items
+        if len(all_security_items) < 1:
+            self.logger.info(
+                "보안 뉴스가 %d건으로 최소 기준(1건) 미달, 포스트 생성 스킵",
+                len(all_security_items),
+            )
+        else:
+            post_b_title = f"블록체인 보안 리포트 - {self.today}"
+
+            if not self.is_duplicate_exact(post_b_title, "consolidated"):
+                content = self._build_security_content(
+                    all_security_items, rekt_items, google_security_items
+                )
+
+                filepath = self.create_post(
+                    title=post_b_title,
+                    content=content,
+                    tags=["security", "hack", "blockchain", "daily-digest"],
+                    source="consolidated",
+                    extra_frontmatter={
+                        "permalink": build_dated_permalink(
+                            "security-alerts", self.today, "daily-security-report"
+                        )
+                    },
+                    slug="daily-security-report",
+                    post_gen=self.security_gen,
+                )
+                if filepath:
+                    self.mark_seen(post_b_title, "consolidated")
+                    self.logger.info("Created security report post: %s", filepath)
+
+        # Save dedup state
+        self.save_state()
+
+        self.logger.info(
+            "=== Crypto news collection complete: %d posts created ===",
+            self._created_count,
+        )
+        all_collected_items = all_items + all_security_items
+        self.log_summary(all_collected_items)
+
+    def _build_crypto_content(
+        self, all_items: List[Dict[str, Any]]
+    ) -> tuple:
+        """암호화폐 뉴스 브리핑 본문을 생성합니다.
+
+        Returns:
+            (content, briefing_image) 튜플.
+        """
+        today = self.today
+        now = self.now
+
         # Separate market-moving news from exchange notices/promotions
-        news_rows = []
-        exchange_rows = []
-        exchange_promo_rows = []
-        source_counter = Counter()
-        source_links = []
-        summary_items = []
+        news_rows: List[Dict[str, Any]] = []
+        exchange_rows: List[Dict[str, Any]] = []
+        exchange_promo_rows: List[Dict[str, Any]] = []
+        source_counter: Counter = Counter()
+        source_links: List[Dict[str, Any]] = []
+        summary_items: List[Dict[str, Any]] = []
 
         for item in all_items:
             source = item.get("source", "unknown")
@@ -697,7 +796,7 @@ def main():
                     words = re.findall(r"[a-zA-Z가-힣]{4,}", art.get("title", ""))
                     t_keywords.extend(words[:2])
                 # Deduplicate
-                seen_kw = set()
+                seen_kw: set = set()
                 unique_kw = []
                 for kw in t_keywords:
                     if kw.lower() not in seen_kw:
@@ -729,11 +828,11 @@ def main():
                 fn = os.path.basename(img)
                 web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
                 content_parts.append(f"\n![news-briefing]({web_path})\n")
-                logger.info("Generated news briefing card")
+                self.logger.info("Generated news briefing card")
         except ImportError as e:
-            logger.debug("Optional dependency unavailable: %s", e)
+            self.logger.debug("Optional dependency unavailable: %s", e)
         except Exception as e:
-            logger.warning("News briefing card failed: %s", e)
+            self.logger.warning("News briefing card failed: %s", e)
 
         if not briefing_image:
             try:
@@ -746,11 +845,11 @@ def main():
                     fn = os.path.basename(summary_img)
                     web_path = "{{ '/assets/images/generated/" + fn + "' | relative_url }}"
                     content_parts.append(f"\n![news-summary]({web_path})\n")
-                    logger.info("Generated news summary card")
+                    self.logger.info("Generated news summary card")
             except ImportError as e:
-                logger.debug("Optional dependency unavailable: %s", e)
+                self.logger.debug("Optional dependency unavailable: %s", e)
             except Exception as e:
-                logger.warning("News summary card failed: %s", e)
+                self.logger.warning("News summary card failed: %s", e)
 
         # Main news - theme-based sections with description cards
         themed_sections = summarizer.generate_themed_news_sections()
@@ -810,12 +909,50 @@ def main():
 
         # Insight section - data-driven cross-analysis
         content_parts.append("\n## 오늘의 인사이트\n")
-        insight_lines = []
+        insight_lines = self._build_insight_lines(all_items, top_themes, top_keywords, summarizer, source_counter, exchange_rows)
+        content_parts.extend(insight_lines)
+
+        # References section (top 10 only) - collapsible
+        if source_links:
+            content_parts.append("\n---\n")
+            content_parts.append(
+                html_reference_details(
+                    "참고 링크",
+                    source_links,
+                    limit=10,
+                    title_max_len=80,
+                )
+            )
+
+        # Data collection footer
+        content_parts.append(
+            '\n<div class="wm-footer-meta">'
+            f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} KST</span>"
+            "<span>소스: CryptoPanic, CoinGecko, Google News, 거래소 RSS</span>"
+            "</div>"
+        )
+        top_sources_str = ", ".join(f"{name} ({count}건)" for name, count in source_counter.most_common(5))
+        content_parts.append(f"**수집 출처**: {top_sources_str}")
+
+        content = "\n".join(content_parts)
+        return content, briefing_image
+
+    def _build_insight_lines(
+        self,
+        all_items: List[Dict[str, Any]],
+        top_themes: list,
+        top_keywords: list,
+        summarizer: ThemeSummarizer,
+        source_counter: Counter,
+        exchange_rows: List[Dict[str, Any]],
+    ) -> List[str]:
+        """인사이트 섹션 라인을 생성합니다."""
+        insight_lines: List[str] = []
 
         # Extract price mentions from titles for concrete analysis
-        price_mentions = []
-        listing_mentions = []
-        delisting_mentions = []
+        price_mentions: List[str] = []
+        listing_mentions: List[str] = []
+        delisting_mentions: List[str] = []
         for item in all_items:
             title_lower = item.get("title", "").lower()
             # Extract BTC/ETH price references
@@ -985,240 +1122,152 @@ def main():
             "> *본 뉴스 브리핑은 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. "
             "모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
         )
-        content_parts.extend(insight_lines)
+        return insight_lines
 
-        # References section (top 10 only) - collapsible
-        if source_links:
-            content_parts.append("\n---\n")
+    def _build_security_content(
+        self,
+        all_security_items: List[Dict[str, Any]],
+        rekt_items: List[Dict[str, Any]],
+        google_security_items: List[Dict[str, Any]],
+    ) -> str:
+        """블록체인 보안 리포트 본문을 생성합니다."""
+        content_parts = [f"블록체인 보안 관련 뉴스 {len(all_security_items)}건을 정리합니다.\n"]
+        security_links: List[Dict[str, Any]] = []
+
+        security_summarizer = ThemeSummarizer(all_security_items)
+        summary_points = []
+        if rekt_items or google_security_items:
+            summary_points.append(f"Rekt News {len(rekt_items)}건, 보안 뉴스 {len(google_security_items)}건")
+        overall_summary = security_summarizer.generate_overall_summary_section(
+            extra_data={"summary_points": summary_points}
+        )
+        if overall_summary:
+            content_parts.append(overall_summary)
+
+        # Key summary for security
+        content_parts.append("## 핵심 요약\n")
+        content_parts.append(f"- **보안 사고/뉴스**: 총 {len(all_security_items)}건")
+        if rekt_items:
+            content_parts.append(f"- **Rekt News 사고**: {len(rekt_items)}건")
+            # Sum up funds lost where parseable
+            total_funds = 0
+            for item in rekt_items:
+                desc = item.get("description", "")
+                if "Funds Lost:" in desc:
+                    try:
+                        raw = desc.split("Funds Lost:")[1].split("|")[0].strip()
+                        raw = raw.replace("$", "").replace(",", "").strip()
+                        total_funds += float(raw)
+                    except (IndexError, ValueError):
+                        pass
+            if total_funds > 0:
+                content_parts.append(f"- **총 피해 규모 (추정)**: ${total_funds:,.0f}")
+        if google_security_items:
+            content_parts.append(f"- **보안 관련 뉴스**: {len(google_security_items)}건")
+
+        technique_counter: Counter = Counter()
+
+        # Rekt News section (structured incidents)
+        if rekt_items:
+            content_parts.append("\n## 보안 사고 현황\n")
+            incident_rows = []
+            for item in rekt_items:
+                desc = item.get("description", "")
+                project = item["title"].replace("[Security] ", "")
+                link = item.get("link", "")
+                funds_lost = "N/A"
+                technique = "N/A"
+
+                if "Funds Lost:" in desc:
+                    try:
+                        funds_lost = desc.split("Funds Lost:")[1].split("|")[0].strip()
+                    except IndexError:
+                        pass
+                if "Technique:" in desc:
+                    try:
+                        technique = desc.split("Technique:")[1].strip()
+                    except IndexError:
+                        pass
+
+                if technique != "N/A":
+                    technique_counter[technique] += 1
+
+                severity = _score_security_severity(item["title"], desc)
+                project_cell = markdown_link(project, link) if link else project
+                incident_rows.append((f"{severity} {project_cell}", funds_lost, technique))
+                if link:
+                    security_links.append(
+                        {
+                            "title": item["title"],
+                            "link": link,
+                            "source": item.get("source", ""),
+                        }
+                    )
+
+            if incident_rows:
+                content_parts.append(markdown_table(["심각도 / 프로젝트", "피해 규모", "공격 유형"], incident_rows))
+
+        # Google Security News section with descriptions
+        if google_security_items:
+            content_parts.append("\n## 보안 관련 뉴스\n")
+            for i, item in enumerate(google_security_items[:10], 1):
+                title = get_display_title(item)
+                link = item.get("link", "")
+                source = item.get("source", "")
+                description = (item.get("description_ko") or item.get("description", "")).strip()
+                severity = _score_security_severity(title, description)
+                if link:
+                    content_parts.append(f"**{i}. {severity} {markdown_link(title, link)}**")
+                    security_links.append(item)
+                else:
+                    content_parts.append(f"**{i}. {severity} {title}**")
+                if description and description != title:
+                    desc_text = smart_truncate(description, 150)
+                    content_parts.append(f"{desc_text}")
+                content_parts.append(f"{html_source_tag(source)}\n")
+
+        # Security insight
+        content_parts.append("\n## 보안 인사이트\n")
+        sec_insight_lines = []
+        if rekt_items:
+            sec_insight_lines.append(f"최근 보안 사고 {len(rekt_items)}건이 보고되었습니다.")
+            if technique_counter:
+                top_tech = technique_counter.most_common(3)
+                tech_str = ", ".join(f"{t}({c}건)" for t, c in top_tech)
+                sec_insight_lines.append(f"주요 공격 유형: {tech_str}.")
+        if google_security_items:
+            sec_insight_lines.append(
+                f"블록체인 보안 관련 뉴스 {len(google_security_items)}건이 수집되어 "
+                "업계 보안 이슈에 대한 관심이 높은 상태입니다."
+            )
+        if not sec_insight_lines:
+            sec_insight_lines.append("현재 특이할 만한 보안 사고가 보고되지 않았습니다.")
+        sec_insight_lines.append("")
+        sec_insight_lines.append(
+            "> *본 보안 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. "
+            "모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
+        )
+        content_parts.extend(sec_insight_lines)
+
+        # References
+        if security_links:
+            content_parts.append("\n## 참고 링크\n")
             content_parts.append(
                 html_reference_details(
                     "참고 링크",
-                    source_links,
-                    limit=10,
+                    security_links,
+                    limit=20,
                     title_max_len=80,
                 )
             )
 
-        # Data collection footer
-        content_parts.append(
-            '\n<div class="wm-footer-meta">'
-            f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} KST</span>"
-            "<span>소스: CryptoPanic, CoinGecko, Google News, 거래소 RSS</span>"
-            "</div>"
-        )
-        top_sources_str = ", ".join(f"{name} ({count}건)" for name, count in source_counter.most_common(5))
-        content_parts.append(f"**수집 출처**: {top_sources_str}")
+        return "\n".join(content_parts)
 
-        content = "\n".join(content_parts)
 
-        _top_crypto_sources = [name for name, _ in source_counter.most_common(3)]
-        _desc_ko_a = f"크립토 뉴스 {len(all_items)}건 수집. "
-        if _top_crypto_sources:
-            _desc_ko_a += f"주요 출처: {', '.join(_top_crypto_sources)}. "
-        _desc_ko_a += "CryptoPanic·CoinGecko·거래소 RSS 기반 암호화폐 시장 동향을 정리합니다."
-
-        filepath = crypto_gen.create_post(
-            title=post_a_title,
-            content=content,
-            date=now,
-            logical_date=today,
-            tags=["crypto", "news", "daily-digest"],
-            source="consolidated",
-            lang="ko",
-            image=briefing_image or "",
-            extra_frontmatter={
-                "permalink": build_dated_permalink("crypto-news", today, "daily-crypto-news-digest"),
-                "description_ko": _desc_ko_a,
-            },
-            slug="daily-crypto-news-digest",
-        )
-        if filepath:
-            dedup.mark_seen(post_a_title, "consolidated", today)
-            created_count += 1
-            logger.info("Created consolidated crypto news post: %s", filepath)
-
-    # ── Post B: security report (Rekt News + Google Security News) ──
-    all_security_items = rekt_items + google_security_items
-    if len(all_security_items) < 1:
-        logger.info(
-            "보안 뉴스가 %d건으로 최소 기준(1건) 미달, 포스트 생성 스킵",
-            len(all_security_items),
-        )
-    else:
-        post_b_title = f"블록체인 보안 리포트 - {today}"
-
-        if not dedup.is_duplicate_exact(post_b_title, "consolidated", today):
-            content_parts = [f"블록체인 보안 관련 뉴스 {len(all_security_items)}건을 정리합니다.\n"]
-            security_links = []
-
-            security_summarizer = ThemeSummarizer(all_security_items)
-            summary_points = []
-            if rekt_items or google_security_items:
-                summary_points.append(f"Rekt News {len(rekt_items)}건, 보안 뉴스 {len(google_security_items)}건")
-            overall_summary = security_summarizer.generate_overall_summary_section(
-                extra_data={"summary_points": summary_points}
-            )
-            if overall_summary:
-                content_parts.append(overall_summary)
-
-            # Key summary for security
-            content_parts.append("## 핵심 요약\n")
-            content_parts.append(f"- **보안 사고/뉴스**: 총 {len(all_security_items)}건")
-            if rekt_items:
-                content_parts.append(f"- **Rekt News 사고**: {len(rekt_items)}건")
-                # Sum up funds lost where parseable
-                total_funds = 0
-                for item in rekt_items:
-                    desc = item.get("description", "")
-                    if "Funds Lost:" in desc:
-                        try:
-                            raw = desc.split("Funds Lost:")[1].split("|")[0].strip()
-                            raw = raw.replace("$", "").replace(",", "").strip()
-                            total_funds += float(raw)
-                        except (IndexError, ValueError):
-                            pass
-                if total_funds > 0:
-                    content_parts.append(f"- **총 피해 규모 (추정)**: ${total_funds:,.0f}")
-            if google_security_items:
-                content_parts.append(f"- **보안 관련 뉴스**: {len(google_security_items)}건")
-
-            technique_counter = Counter()
-
-            # Rekt News section (structured incidents)
-            if rekt_items:
-                content_parts.append("\n## 보안 사고 현황\n")
-                incident_rows = []
-                for item in rekt_items:
-                    desc = item.get("description", "")
-                    project = item["title"].replace("[Security] ", "")
-                    link = item.get("link", "")
-                    funds_lost = "N/A"
-                    technique = "N/A"
-
-                    if "Funds Lost:" in desc:
-                        try:
-                            funds_lost = desc.split("Funds Lost:")[1].split("|")[0].strip()
-                        except IndexError:
-                            pass
-                    if "Technique:" in desc:
-                        try:
-                            technique = desc.split("Technique:")[1].strip()
-                        except IndexError:
-                            pass
-
-                    if technique != "N/A":
-                        technique_counter[technique] += 1
-
-                    severity = _score_security_severity(item["title"], desc)
-                    project_cell = markdown_link(project, link) if link else project
-                    incident_rows.append((f"{severity} {project_cell}", funds_lost, technique))
-                    if link:
-                        security_links.append(
-                            {
-                                "title": item["title"],
-                                "link": link,
-                                "source": item.get("source", ""),
-                            }
-                        )
-
-                if incident_rows:
-                    content_parts.append(markdown_table(["심각도 / 프로젝트", "피해 규모", "공격 유형"], incident_rows))
-
-            # Google Security News section with descriptions
-            if google_security_items:
-                content_parts.append("\n## 보안 관련 뉴스\n")
-                for i, item in enumerate(google_security_items[:10], 1):
-                    title = get_display_title(item)
-                    link = item.get("link", "")
-                    source = item.get("source", "")
-                    description = (item.get("description_ko") or item.get("description", "")).strip()
-                    severity = _score_security_severity(title, description)
-                    if link:
-                        content_parts.append(f"**{i}. {severity} {markdown_link(title, link)}**")
-                        security_links.append(item)
-                    else:
-                        content_parts.append(f"**{i}. {severity} {title}**")
-                    if description and description != title:
-                        desc_text = smart_truncate(description, 150)
-                        content_parts.append(f"{desc_text}")
-                    content_parts.append(f"{html_source_tag(source)}\n")
-
-            # Security insight
-            content_parts.append("\n## 보안 인사이트\n")
-            sec_insight_lines = []
-            if rekt_items:
-                sec_insight_lines.append(f"최근 보안 사고 {len(rekt_items)}건이 보고되었습니다.")
-                if technique_counter:
-                    top_tech = technique_counter.most_common(3)
-                    tech_str = ", ".join(f"{t}({c}건)" for t, c in top_tech)
-                    sec_insight_lines.append(f"주요 공격 유형: {tech_str}.")
-            if google_security_items:
-                sec_insight_lines.append(
-                    f"블록체인 보안 관련 뉴스 {len(google_security_items)}건이 수집되어 "
-                    "업계 보안 이슈에 대한 관심이 높은 상태입니다."
-                )
-            if not sec_insight_lines:
-                sec_insight_lines.append("현재 특이할 만한 보안 사고가 보고되지 않았습니다.")
-            sec_insight_lines.append("")
-            sec_insight_lines.append(
-                "> *본 보안 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. "
-                "모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
-            )
-            content_parts.extend(sec_insight_lines)
-
-            # References
-            if security_links:
-                content_parts.append("\n## 참고 링크\n")
-                content_parts.append(
-                    html_reference_details(
-                        "참고 링크",
-                        security_links,
-                        limit=20,
-                        title_max_len=80,
-                    )
-                )
-
-            content = "\n".join(content_parts)
-
-            filepath = security_gen.create_post(
-                title=post_b_title,
-                content=content,
-                date=now,
-                logical_date=today,
-                tags=["security", "hack", "blockchain", "daily-digest"],
-                source="consolidated",
-                lang="ko",
-                extra_frontmatter={
-                    "permalink": build_dated_permalink("security-alerts", today, "daily-security-report")
-                },
-                slug="daily-security-report",
-            )
-            if filepath:
-                dedup.mark_seen(post_b_title, "consolidated", today)
-                created_count += 1
-                logger.info("Created security report post: %s", filepath)
-
-    # Save dedup state
-    dedup.save()
-
-    logger.info("=== Crypto news collection complete: %d posts created ===", created_count)
-    all_collected_items = all_items + all_security_items
-    unique_items = len(
-        {
-            f"{item.get('title', '')}|{item.get('source', '')}|{item.get('link', '')}"
-            for item in all_collected_items
-            if item.get("title")
-        }
-    )
-    source_count = len({item.get("source", "") for item in all_collected_items if item.get("source")})
-    log_collection_summary(
-        logger,
-        collector="collect_crypto_news",
-        source_count=source_count,
-        unique_items=unique_items,
-        post_created=created_count,
-        started_at=started_at,
-    )
+def main():
+    """Main entry point — backward compatible."""
+    collector = CryptoNewsCollector()
+    collector.run()
 
 
 if __name__ == "__main__":

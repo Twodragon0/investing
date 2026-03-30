@@ -1,5 +1,6 @@
 """Common utilities for Investing Dragon news collectors."""
 
+from .base_collector import BaseCollector
 from .config import get_env, get_env_bool
 from .crypto_api import (
     fetch_coingecko_global,
@@ -37,6 +38,7 @@ except ImportError:
 
 
 __all__ = [
+    "BaseCollector",
     "get_env",
     "get_env_bool",
     "DedupEngine",
