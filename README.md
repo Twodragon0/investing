@@ -26,7 +26,7 @@
 | scripts/common/image\_generator/og.py           |       59 |        0 |    100% |           |
 | scripts/common/markdown\_utils.py               |      163 |       29 |     82% |20-56, 316-317 |
 | scripts/common/mindspider.py                    |      377 |        6 |     98% |603, 673-674, 687-688, 990 |
-| scripts/common/post\_generator.py               |      318 |       51 |     84% |214-215, 223-224, 229-241, 382, 419-427, 435-439, 444-449, 479, 519, 598, 601, 680, 726, 731, 768-770, 778, 819-820, 832-833, 856 |
+| scripts/common/post\_generator.py               |      318 |       52 |     84% |214-215, 223-224, 229-241, 382, 419-427, 435-439, 444-449, 479, 519, 598, 601, 680, 726, 731, 768-770, 778, 797, 819-820, 832-833, 856 |
 | scripts/common/rss\_fetcher.py                  |      155 |       25 |     84% |24-25, 72-76, 114, 139, 147-148, 156, 161, 166-168, 174, 180-183, 194, 196, 271-272 |
 | scripts/common/signal\_composer.py              |      477 |        2 |     99% |   870-871 |
 | scripts/common/signal\_tracker.py               |      202 |       13 |     94% |118-123, 199-201, 255, 316-317, 378-379 |
@@ -34,7 +34,7 @@
 | scripts/common/translator.py                    |      190 |        2 |     99% |  666, 679 |
 | scripts/common/utils.py                         |      118 |        3 |     97% |   101-103 |
 | scripts/common/worldmonitor\_utils.py           |        5 |        0 |    100% |           |
-| **TOTAL**                                       | **6247** |  **415** | **93%** |           |
+| **TOTAL**                                       | **6247** |  **416** | **93%** |           |
 
 
 ## Setup coverage badge
