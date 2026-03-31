@@ -51,6 +51,10 @@ a {
   text-decoration: none;
   transition: all 0.3s ease;
 
+  &:visited {
+    color: $accent-blue;
+  }
+
   &:hover {
     color: #80c0ff;
     text-decoration: none;
