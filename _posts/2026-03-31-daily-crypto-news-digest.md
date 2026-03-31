@@ -57,41 +57,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-31 - 암호화폐 뉴스 요
 <li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSDdnSktRdzdjMnpwWXd6T0FNaUkxUG1aWHA2RDVWTzJnd1RfNXhyOHI3SFAyVWhvaW1jMGNxd2pmenQzb1g1VDd5OEVRSjRoMklTWVpUS3ZFYmcxNl9VVWZrWEFiTERLLUtla3QzV2dDakhDb1ViWjdkQ0tTa25IcWFmZkdreHY5?oc=5">암호화폐 시장 '극심한 공포' 확산…비트코인·이더리움·XRP 동반 급락</a> <span class="p0-desc">암호화폐 시장 '극심한 공포' 확산…비트코인·이더리움·XRP 동반 급락 글로벌이코노믹</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 비트코인 가격(BTC)은 새로운 Anthropic 모델 유출로 인해 소프트웨어 주식과 함께 하락합니다. 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 86건의 뉴스 중 P1 주요 이슈도 9건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (41건): 비트코인, XRP 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **📈 가격/시장** (30건): 암호화폐, 개월 가격 변동 (30건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🔷 이더리움** (21건): 이더리움, XRP, 암호화폐 네트워크 업데이트와 L2 확장이 가격에 미칠 영향을 주시하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 비트코인 가격(BTC)은 새로운 Anthropic 모델 유출로 인해 소프트웨어 주식과 함께 하락합니다.
-- 암호화폐가 충돌하는 이유는 무엇입니까? 비트코인, XRP, 이더리움 및 솔라나가 이번 주에 모두 종료됩니다.
-- 암호화폐 시장 '극심한 공포' 확산…비트코인·이더리움·XRP 동반 급락
-
-### 주요 이슈
-
-- SEC 및 CFTC은 연방 증권법에 따른 암호화폐 자산 분류에 관한 랜드마크 공동 지침을 발행합니다.
-- 손목아지? 골드만 “비트코인 3개월 뒤 상승장”
-- 트럼프 Brothers' American 비트코인은 IPO 이후 주가가 최저 가격으로 떨어지면서 BTC 이정표를 기록합니다.
-- 외 6건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, AI
-- **주요 출처**: Google News(20건), CoinDesk(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-03-31.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-03-31.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔷 이더리움
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
