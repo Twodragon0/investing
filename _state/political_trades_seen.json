@@ -1,20 +1,5 @@
 {
   "seen": {
-    "490aae36579c875e": "2026-03-01T13:55:24.938796+00:00",
-    "a182d74bd6801d8b": "2026-03-01T13:55:24.938861+00:00",
-    "ede476b3329dd0e5": "2026-03-01T13:55:24.938893+00:00",
-    "010157540f897dfc": "2026-03-01T13:55:24.938917+00:00",
-    "9ae624013b44ad75": "2026-03-01T13:55:24.938941+00:00",
-    "819b4f828ed211e6": "2026-03-01T13:55:24.938968+00:00",
-    "3e00f80d320b3186": "2026-03-01T13:55:24.938995+00:00",
-    "88151b9fd479716b": "2026-03-01T13:55:24.939022+00:00",
-    "4e759843a9530627": "2026-03-01T13:55:24.939047+00:00",
-    "0a1e21eea26f9a58": "2026-03-01T13:55:24.939072+00:00",
-    "74ad68be3f40b182": "2026-03-01T13:55:24.939098+00:00",
-    "f8fcee7e91c52f60": "2026-03-01T13:55:24.939125+00:00",
-    "1b27728f38a7435d": "2026-03-01T13:55:24.939149+00:00",
-    "752b308e248edbaa": "2026-03-01T13:55:24.939174+00:00",
-    "fc1816e6afacc0a3": "2026-03-01T13:55:24.939199+00:00",
     "0c90c5b6e21aceb7": "2026-03-02T14:13:15.010234+00:00",
     "3f96bde32b3df38e": "2026-03-02T14:13:15.010279+00:00",
     "ee7ef7ea67b0a4e9": "2026-03-02T14:13:15.010313+00:00",
@@ -582,7 +567,27 @@
     "58b62f43731a6ac48a8aedd1": "2026-03-30T23:04:25",
     "555c0ab9f63caab69b584b3d": "2026-03-30T23:04:25",
     "65b300baa341cb2a3750b9e4": "2026-03-30T23:04:25",
-    "67dbd6400760585c5994f8e8": "2026-03-30T23:04:25"
+    "67dbd6400760585c5994f8e8": "2026-03-30T23:04:25",
+    "6b2a5c113dd158b407d833f9": "2026-03-31T22:59:38",
+    "8774a8d12d923d9dd5a4dc56": "2026-03-31T22:59:38",
+    "58701291254b08433e2eb5d3": "2026-03-31T22:59:38",
+    "402e4e00e126edfc11cedb3e": "2026-03-31T22:59:38",
+    "f0fed8c2ad90d094fd08f5d2": "2026-03-31T22:59:38",
+    "d7e69632cfd333b6545d48be": "2026-03-31T22:59:38",
+    "2d713ac2048876551a99ded7": "2026-03-31T22:59:38",
+    "04178b74bf6a3f568c134b28": "2026-03-31T22:59:38",
+    "b85116f9b94653063706ecf0": "2026-03-31T22:59:38",
+    "2d025ec1f3b72344c6862370": "2026-03-31T22:59:38",
+    "b07f2c84d6efa0635a2561f1": "2026-03-31T22:59:38",
+    "fa090587adeac1436a2a3115": "2026-03-31T22:59:38",
+    "c45d718dd45461bca2d45b2e": "2026-03-31T22:59:38",
+    "acd1c11750530e7d1d963524": "2026-03-31T22:59:38",
+    "5dabcfe9e59a7875e10434bf": "2026-03-31T22:59:38",
+    "e4cb2b89e25dd68914b23c1e": "2026-03-31T22:59:38",
+    "6cc0b45a8a12279f09c91b08": "2026-03-31T22:59:38",
+    "7bf79cbcf86e79cf981b1cab": "2026-03-31T22:59:38",
+    "65cf33774209745af08c7f42": "2026-03-31T22:59:38",
+    "80fdfd5c897172ad2a05be5c": "2026-03-31T22:59:38"
   },
   "titles": [
     [
@@ -4084,6 +4089,94 @@
     [
       "정치인 거래정책 리포트 20260331",
       "2026-03-31"
+    ],
+    [
+      "kss nyse insider sells 2646 shares restricted stock vests stock titan",
+      "2026-04-01"
+    ],
+    [
+      "form 4 evercommerce inc insider trading activity stock titan",
+      "2026-04-01"
+    ],
+    [
+      "form 4 enersys insider trading activity stock titan",
+      "2026-04-01"
+    ],
+    [
+      "form 4 champion homes inc insider trading activity stock titan",
+      "2026-04-01"
+    ],
+    [
+      "form 4 universal insurance holdings inc insider trading activity stock titan",
+      "2026-04-01"
+    ],
+    [
+      "form 4 thermo fisher scientific inc insider trading activity stock titan",
+      "2026-04-01"
+    ],
+    [
+      "form 4 bridgewater bancshares inc insider trading activity stock titan",
+      "2026-04-01"
+    ],
+    [
+      "form 4 bridgewater bancshares inc insider trading activity stock titan",
+      "2026-04-01"
+    ],
+    [
+      "campbells nyse cpb director receives 1925share stock grant stock titan",
+      "2026-04-01"
+    ],
+    [
+      "velocity financial vel legal chief sells 14840 shares retains 98994 stock titan",
+      "2026-04-01"
+    ],
+    [
+      "southern company so executive kimberly greene sells 25000 common shares stock titan",
+      "2026-04-01"
+    ],
+    [
+      "form 4 palladyne ai corp insider trading activity stock titan",
+      "2026-04-01"
+    ],
+    [
+      "c3ai ai directors taxdriven sale and matched buy 3509 remitted stock titan",
+      "2026-04-01"
+    ],
+    [
+      "rezolute rzlt cfo adds 10000 shares in openmarket purchase stock titan",
+      "2026-04-01"
+    ],
+    [
+      "form 4 enersys insider trading activity stock titan",
+      "2026-04-01"
+    ],
+    [
+      "as trump rolls back protections governor newsom signs firstofitskind executive order to strengthen ai protections and responsible use california state portal 124 cagov",
+      "2026-04-01"
+    ],
+    [
+      "liberation day one year review how tariffs handcuffed us farmers and manufacturers national taxpayers union",
+      "2026-04-01"
+    ],
+    [
+      "us labor department proposes opening 401k plans to crypto to implement trump order",
+      "2026-04-01"
+    ],
+    [
+      "동대문구 선출직 공직자 평균 재산 15억 3367만 원 동대문신문",
+      "2026-04-01"
+    ],
+    [
+      "trump fed pick kevin warsh could shake up the central bank with his family fight model",
+      "2026-04-01"
+    ],
+    [
+      "fed chief powell says risks to economy suggest rates could go lower or higher",
+      "2026-04-01"
+    ],
+    [
+      "정치인 거래정책 리포트 20260401",
+      "2026-04-01"
     ]
   ],
   "seen_urls": {}
