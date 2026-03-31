@@ -175,6 +175,11 @@
     margin-bottom: 0.6rem;
     font-size: 0.78rem;
     flex-wrap: wrap;
+    color: $text-secondary;
+
+    time, span {
+      color: inherit;
+    }
   }
 
   display: block;

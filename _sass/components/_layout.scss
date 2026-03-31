@@ -1,6 +1,6 @@
 @use "../variables" as *;
 /* Skip to main content - accessibility */
-.skip-to-content {
+a.skip-to-content {
   position: fixed;
   top: -100%;
   left: 1rem;
@@ -8,6 +8,7 @@
   padding: 0.75rem 1.5rem;
   background: $accent-blue;
   color: #fff;
+  text-decoration: none;
   font-weight: 700;
   border-radius: 0 0 8px 8px;
   font-size: 0.9rem;
@@ -15,6 +16,7 @@
 
   &:focus {
     top: 0;
+    color: #fff;
     outline: 3px solid #fff;
     outline-offset: 2px;
   }
