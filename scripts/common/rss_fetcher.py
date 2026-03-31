@@ -15,6 +15,9 @@ from .utils import parse_date, remove_sponsored_text, sanitize_string, truncate_
 
 logger = logging.getLogger(__name__)
 
+_GOOGLE_NEWS_HOSTS = {"news.google.com"}
+_GOOGLE_NEWS_REDIRECT_QUERY_KEYS = ("url", "u", "q")
+
 
 def is_safe_url(url: str) -> bool:
     """Validate URL scheme to prevent XSS via javascript:/data: URLs."""
@@ -23,6 +26,78 @@ def is_safe_url(url: str) -> bool:
         return parsed.scheme in ("http", "https", "")
     except Exception:
         return False
+
+
+def _decode_url_candidate(raw: str, max_rounds: int = 2) -> str:
+    """Decode percent-encoded URL candidate safely."""
+    candidate = (raw or "").strip()
+    for _ in range(max_rounds):
+        decoded = unquote(candidate).strip()
+        if decoded == candidate:
+            break
+        candidate = decoded
+    return candidate
+
+
+def _extract_google_redirect_query_url(url: str) -> str:
+    """Extract origin URL from common Google redirect query params."""
+    parsed = urlparse(url)
+    query = parse_qs(parsed.query)
+    for key in _GOOGLE_NEWS_REDIRECT_QUERY_KEYS:
+        raw_val = query.get(key, [""])[0]
+        candidate = _decode_url_candidate(raw_val)
+        if candidate and is_safe_url(candidate):
+            parsed_candidate = urlparse(candidate)
+            if parsed_candidate.scheme in ("http", "https"):
+                return candidate
+    return ""
+
+
+def _resolve_google_news_url(url: str) -> str:
+    """Resolve Google News redirect URL to source URL with safe fallbacks."""
+    if not url or not is_safe_url(url):
+        return ""
+
+    parsed = urlparse(url)
+    if parsed.netloc not in _GOOGLE_NEWS_HOSTS:
+        return ""
+
+    query_url = _extract_google_redirect_query_url(url)
+    if query_url:
+        return query_url
+
+    resolve_timeout = min(REQUEST_TIMEOUT, 5)
+    candidate = url
+    for _ in range(2):
+        try:
+            resp = requests.get(
+                candidate,
+                timeout=resolve_timeout,
+                verify=VERIFY_SSL,
+                headers={"User-Agent": USER_AGENT},
+                allow_redirects=False,
+                stream=True,
+            )
+            location = resp.headers.get("Location", "").strip()
+            resp.close()
+            if not location:
+                return ""
+            decoded = _decode_url_candidate(location)
+            if not decoded or not is_safe_url(decoded):
+                return ""
+            parsed_decoded = urlparse(decoded)
+            if parsed_decoded.scheme in ("http", "https") and parsed_decoded.netloc not in _GOOGLE_NEWS_HOSTS:
+                return decoded
+            if parsed_decoded.netloc in _GOOGLE_NEWS_HOSTS:
+                nested = _extract_google_redirect_query_url(decoded)
+                if nested:
+                    return nested
+                candidate = decoded
+                continue
+            return ""
+        except requests.exceptions.RequestException:
+            return ""
+    return ""
 
 
 VERIFY_SSL = get_verify_ssl()
@@ -181,6 +256,12 @@ def fetch_rss_feed(
                     candidate_orig = str(raw_url).strip()
                     if candidate_orig and is_safe_url(candidate_orig):
                         original_url = candidate_orig
+
+                if link_val and urlparse(link_val).netloc in _GOOGLE_NEWS_HOSTS:
+                    resolved_google_url = _resolve_google_news_url(link_val)
+                    if resolved_google_url:
+                        original_url = original_url or resolved_google_url
+                        link_val = resolved_google_url
 
                 item_data = {
                     "title": title,

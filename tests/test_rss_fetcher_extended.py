@@ -65,6 +65,21 @@ ATOM_FEED = """<?xml version="1.0"?>
 </feed>"""
 
 
+def _rss_with_link(link: str) -> str:
+    return f"""<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>Test Feed</title>
+    <item>
+      <title>Google feed article title for redirect resolver test</title>
+      <link>{link}</link>
+      <description>Google News redirect test item.</description>
+      <pubDate>Thu, 01 Jan 2099 10:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>"""
+
+
 class TestFetchRssFeed:
     """Tests for fetch_rss_feed() with mocked HTTP."""
 
@@ -187,6 +202,93 @@ class TestFetchRssFeed:
             fallback_urls=["https://fallback.com/feed.rss"],
         )
         assert len(items) == 1
+
+    @patch("common.rss_fetcher.requests.get")
+    def test_google_news_query_url_resolved_without_extra_request(self, mock_get):
+        google_link = "https://news.google.com/rss/articles/CBMi?url=https%3A%2F%2Forigin.example%2Fstory"
+        mock_resp = MagicMock()
+        mock_resp.text = _rss_with_link(google_link)
+        mock_resp.raise_for_status.return_value = None
+        mock_get.return_value = mock_resp
+
+        items = fetch_rss_feed("https://example.com/feed.rss", "Source", [])
+        assert len(items) == 1
+        assert items[0]["link"] == "https://origin.example/story"
+        assert items[0]["original_url"] == "https://origin.example/story"
+        assert mock_get.call_count == 1
+
+    @patch("common.rss_fetcher.requests.get")
+    def test_google_news_redirect_location_resolved(self, mock_get):
+        google_link = "https://news.google.com/rss/articles/CBMiTest?oc=5"
+
+        feed_resp = MagicMock()
+        feed_resp.text = _rss_with_link(google_link)
+        feed_resp.raise_for_status.return_value = None
+
+        redirect_resp = MagicMock()
+        redirect_resp.headers = {"Location": "https://origin.example/final-story"}
+
+        def side_effect(url, **kwargs):
+            if url == "https://example.com/feed.rss":
+                return feed_resp
+            if url == google_link and kwargs.get("allow_redirects") is False:
+                return redirect_resp
+            raise AssertionError(f"Unexpected URL call: {url}")
+
+        mock_get.side_effect = side_effect
+
+        items = fetch_rss_feed("https://example.com/feed.rss", "Source", [])
+        assert len(items) == 1
+        assert items[0]["link"] == "https://origin.example/final-story"
+        assert items[0]["original_url"] == "https://origin.example/final-story"
+
+    @patch("common.rss_fetcher.requests.get")
+    def test_google_news_resolve_rejects_unsafe_redirect_scheme(self, mock_get):
+        google_link = "https://news.google.com/rss/articles/CBMiUnsafe?oc=5"
+
+        feed_resp = MagicMock()
+        feed_resp.text = _rss_with_link(google_link)
+        feed_resp.raise_for_status.return_value = None
+
+        redirect_resp = MagicMock()
+        redirect_resp.headers = {"Location": "javascript:alert(1)"}
+
+        def side_effect(url, **kwargs):
+            if url == "https://example.com/feed.rss":
+                return feed_resp
+            if url == google_link and kwargs.get("allow_redirects") is False:
+                return redirect_resp
+            raise AssertionError(f"Unexpected URL call: {url}")
+
+        mock_get.side_effect = side_effect
+
+        items = fetch_rss_feed("https://example.com/feed.rss", "Source", [])
+        assert len(items) == 1
+        assert items[0]["link"] == google_link
+        assert "original_url" not in items[0]
+
+    @patch("common.rss_fetcher.requests.get")
+    def test_google_news_resolve_failure_keeps_original_link(self, mock_get):
+        import requests as req
+
+        google_link = "https://news.google.com/rss/articles/CBMiTimeout?oc=5"
+
+        feed_resp = MagicMock()
+        feed_resp.text = _rss_with_link(google_link)
+        feed_resp.raise_for_status.return_value = None
+
+        def side_effect(url, **kwargs):
+            if url == "https://example.com/feed.rss":
+                return feed_resp
+            if url == google_link and kwargs.get("allow_redirects") is False:
+                raise req.exceptions.Timeout("resolver timeout")
+            raise AssertionError(f"Unexpected URL call: {url}")
+
+        mock_get.side_effect = side_effect
+
+        items = fetch_rss_feed("https://example.com/feed.rss", "Source", [])
+        assert len(items) == 1
+        assert items[0]["link"] == google_link
 
 
 class TestFetchRssFeedsConcurrent:

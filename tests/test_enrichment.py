@@ -14,6 +14,7 @@ from common.enrichment import (
     _extract_title_entities,
     _get_source_label,
     _is_desc_duplicate_of_title,
+    _is_title_related_description,
     _is_site_boilerplate,
     _is_valid_image_url,
     _resolve_google_news_url,
@@ -148,6 +149,26 @@ class TestCleanDescription:
     def test_removes_korean_source_suffix(self):
         result = _clean_meta_description("비트코인 가격 급등 연합뉴스")
         assert "연합뉴스" not in result
+
+    def test_removes_legal_boilerplate_fragment(self):
+        result = _clean_meta_description("This material may not be published, broadcast, rewritten or redistributed.")
+        assert result == ""
+
+    def test_removes_low_information_fragment(self):
+        result = _clean_meta_description("Latest market update")
+        assert result == ""
+
+
+class TestTitleRelevanceValidation:
+    def test_related_description_returns_true(self):
+        title = "Bitcoin jumps 10% after ETF approval"
+        desc = "Bitcoin climbed 10% after spot ETF approval drove strong inflows."
+        assert _is_title_related_description(title, desc) is True
+
+    def test_unrelated_description_returns_false(self):
+        title = "Bitcoin jumps 10% after ETF approval"
+        desc = "Apple unveils new iPhone lineup at annual developer event."
+        assert _is_title_related_description(title, desc) is False
 
 
 class TestNoiseDescPatterns:
@@ -355,6 +376,19 @@ class TestFetchPageMetadata:
         mock_get.return_value = mock_resp
         result = fetch_page_metadata("https://example.com/article")
         assert "Ethereum" in result["description"]
+
+    @patch("common.enrichment.is_private_url", return_value=False)
+    @patch("common.enrichment.requests.get")
+    def test_irrelevant_meta_description_rejected_with_title(self, mock_get, _mock_private):
+        html = """<html><head>
+        <meta name="description" content="Apple unveils new iPhone lineup at annual event." />
+        </head><body></body></html>"""
+        mock_resp = MagicMock()
+        mock_resp.text = html
+        mock_resp.raise_for_status.return_value = None
+        mock_get.return_value = mock_resp
+        result = fetch_page_metadata("https://example.com/article", title="Bitcoin ETF approval drives market rally")
+        assert result["description"] == ""
 
     @patch("common.enrichment.requests.get")
     def test_og_image_extracted(self, mock_get):

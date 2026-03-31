@@ -184,6 +184,22 @@ _NOISE_DESC_PATTERNS = [
     re.compile(r"^FORM\s+\d", re.I),
 ]
 
+# Boilerplate/legal/syndication snippets often found in low-quality meta tags
+_BOILERPLATE_FRAGMENT_PATTERNS = [
+    re.compile(r"\ball rights reserved\b", re.I),
+    re.compile(r"\bcopyright\b", re.I),
+    re.compile(r"\bsyndicat(?:ed|ion)\b", re.I),
+    re.compile(r"\bthis material may not be published\b", re.I),
+    re.compile(r"\breproduction (?:without|in whole or in part)\b", re.I),
+    re.compile(r"\bfor informational purposes only\b", re.I),
+    re.compile(r"\bnot investment advice\b", re.I),
+    re.compile(r"\bterms of use\b", re.I),
+    re.compile(r"\bprivacy policy\b", re.I),
+    re.compile(r"무단전재", re.I),
+    re.compile(r"재배포", re.I),
+    re.compile(r"저작권자", re.I),
+]
+
 
 def _clean_meta_description(text: str) -> str:
     """Clean extracted meta description text for quality."""
@@ -208,6 +224,10 @@ def _clean_meta_description(text: str) -> str:
             return ""
     # Reject noise patterns (JS required, 403, etc.)
     for pattern in _NOISE_DESC_PATTERNS:
+        if pattern.search(text):
+            return ""
+    # Reject legal/syndication boilerplate fragments
+    for pattern in _BOILERPLATE_FRAGMENT_PATTERNS:
         if pattern.search(text):
             return ""
     # Remove trailing "Read more..." / "Continue reading..."
@@ -235,7 +255,55 @@ def _clean_meta_description(text: str) -> str:
     # Final boilerplate guard — reject site-level descriptions
     if _is_site_boilerplate(text):
         return ""
+    if _is_low_information_fragment(text):
+        return ""
     return text
+
+
+def _extract_overlap_keywords(title: str, text: str) -> tuple[set, set]:
+    """Extract normalized keyword sets from title and text for relevance scoring."""
+    title_tokens = set(re.findall(r"[A-Za-z0-9$%]{3,}|[가-힣]{2,}", title.lower()))
+    text_tokens = set(re.findall(r"[A-Za-z0-9$%]{3,}|[가-힣]{2,}", text.lower()))
+    return title_tokens, text_tokens
+
+
+def _is_low_information_fragment(desc: str) -> bool:
+    """Return True for short, generic, low-information fragments."""
+    if not desc:
+        return True
+    if len(desc) < 25:
+        generic_tokens = {"news", "update", "latest", "market", "story", "기사", "속보", "뉴스", "보도"}
+        token_count = len(re.findall(r"[A-Za-z]+|[가-힣]+", desc.lower()))
+        has_specific = bool(_ARTICLE_SPECIFIC_RE.search(desc))
+        has_generic = any(tok in desc.lower() for tok in generic_tokens)
+        if token_count <= 6 and (has_generic or not has_specific):
+            return True
+    return False
+
+
+def _is_title_related_description(title: str, desc: str) -> bool:
+    """Return True if description appears related to title content."""
+    if not title or not desc:
+        return True
+    # Backward-compatible: do not aggressively reject when title itself is weak.
+    if len(title.strip()) < 18:
+        return True
+    if _is_desc_duplicate_of_title(desc, title):
+        return True
+
+    title_tokens, desc_tokens = _extract_overlap_keywords(title, desc)
+    if not title_tokens or not desc_tokens:
+        return True
+
+    if title_tokens & desc_tokens:
+        return True
+
+    title_entities = {e.lower() for e in _extract_title_entities(title)}
+    if len(title_entities) < 2 and len(title_tokens) < 3:
+        return True
+    if title_entities and not (title_entities & desc_tokens):
+        return False
+    return True
 
 
 def _decode_google_news_base64(url: str) -> str:
@@ -563,7 +631,7 @@ def fetch_descriptions_concurrent(
             link = _resolve_google_news_url(link)
         if not link:
             return idx, ""
-        metadata = fetch_page_metadata(link)
+        metadata = fetch_page_metadata(link, title=item.get("title", ""))
         return idx, metadata.get("description", "")
 
     with ThreadPoolExecutor(max_workers=max_workers) as pool:
@@ -571,7 +639,12 @@ def fetch_descriptions_concurrent(
         for future in as_completed(futures):
             try:
                 idx, desc = future.result(timeout=15)
-                if desc and len(desc) > 30 and not _is_desc_duplicate_of_title(desc, items[idx].get("title", "")):
+                if (
+                    desc
+                    and len(desc) > 30
+                    and not _is_desc_duplicate_of_title(desc, items[idx].get("title", ""))
+                    and _is_title_related_description(items[idx].get("title", ""), desc)
+                ):
                     items[idx]["description"] = desc
                     items[idx].pop("_synthetic", None)
                     fetched += 1
@@ -590,7 +663,7 @@ _EXCLUDE_CLASS_RE = re.compile(
 )
 
 
-def _extract_og_metadata(soup: Any) -> Dict[str, str]:
+def _extract_og_metadata(soup: Any, title: str = "") -> Dict[str, str]:
     """Extract Open Graph / twitter meta tags from a parsed page.
 
     Returns a dict with ``image`` (may be empty) and ``description`` (may be empty).
@@ -624,7 +697,12 @@ def _extract_og_metadata(soup: Any) -> Dict[str, str]:
         meta = soup.find("meta", attrs={attr_key: attr_val})
         content = str(meta.get("content", "")) if meta else ""
         cleaned = _clean_meta_description(content)
-        if cleaned and len(cleaned) > 20 and not _is_site_boilerplate(cleaned):
+        if (
+            cleaned
+            and len(cleaned) > 20
+            and not _is_site_boilerplate(cleaned)
+            and _is_title_related_description(title, cleaned)
+        ):
             result["description"] = smart_truncate(cleaned, 1000)
             break
 
@@ -713,7 +791,7 @@ def _extract_via_paragraphs(soup: Any) -> str:
     return ""
 
 
-def fetch_page_metadata(url: str, timeout: int = 8) -> Dict[str, str]:
+def fetch_page_metadata(url: str, timeout: int = 8, title: str = "") -> Dict[str, str]:
     """Fetch meta description and og:image from a URL page (best-effort).
 
     Returns a dict with keys ``description`` and ``image`` (empty strings on failure).
@@ -744,7 +822,7 @@ def fetch_page_metadata(url: str, timeout: int = 8) -> Dict[str, str]:
         soup = BS4(resp.text, "html.parser")
 
         # Extract OG metadata (image + meta description tags)
-        og = _extract_og_metadata(soup)
+        og = _extract_og_metadata(soup, title=title)
         result["image"] = og["image"]
         if og["description"]:
             result["description"] = og["description"]
@@ -753,19 +831,28 @@ def fetch_page_metadata(url: str, timeout: int = 8) -> Dict[str, str]:
         # Try readability-lxml for high-quality article extraction
         desc = _extract_via_readability(resp.text, url)
         if desc:
-            result["description"] = desc
+            if _is_title_related_description(title, desc):
+                result["description"] = desc
+            else:
+                logger.debug("Rejected readability description as unrelated to title")
             return result
 
         # Article body paragraphs (BS4 fallback)
         desc = _extract_via_bs4_article(soup)
         if desc:
-            result["description"] = desc
+            if _is_title_related_description(title, desc):
+                result["description"] = desc
+            else:
+                logger.debug("Rejected article-body description as unrelated to title")
             return result
 
         # Last resort: any substantial <p> not in noise containers
         desc = _extract_via_paragraphs(soup)
         if desc:
-            result["description"] = desc
+            if _is_title_related_description(title, desc):
+                result["description"] = desc
+            else:
+                logger.debug("Rejected paragraph description as unrelated to title")
             return result
 
     except Exception as e:  # noqa: BLE001
@@ -778,7 +865,7 @@ def fetch_page_description(url: str, timeout: int = 8) -> str:
 
     Wrapper around :func:`fetch_page_metadata` for backward compatibility.
     """
-    return fetch_page_metadata(url, timeout).get("description", "")
+    return fetch_page_metadata(url, timeout=timeout).get("description", "")
 
 
 # ---------------------------------------------------------------------------
@@ -1444,13 +1531,13 @@ def generate_synthetic_description(
     return clean_title[:150] if len(clean_title) > 15 else title
 
 
-def _fetch_and_parse_page(url: str) -> Dict[str, str]:
+def _fetch_and_parse_page(url: str, title: str = "") -> Dict[str, str]:
     """Fetch a URL and return parsed metadata (description + image).
 
     Thin wrapper around :func:`fetch_page_metadata` that isolates the
     HTTP fetch + HTML parsing step for use inside :func:`enrich_item`.
     """
-    return fetch_page_metadata(url)
+    return fetch_page_metadata(url, title=title)
 
 
 def _clean_html_content(text: str) -> str:
@@ -1565,9 +1652,14 @@ def enrich_item(
         if counter[0] < max_fetch or is_title_dup:
             if not is_title_dup:
                 counter[0] += 1
-            metadata = _fetch_and_parse_page(fetch_link)
+            metadata = _fetch_and_parse_page(fetch_link, title=title)
             fetched = metadata.get("description", "")
-            if fetched and fetched != title and len(fetched) > 20:
+            if (
+                fetched
+                and fetched != title
+                and len(fetched) > 20
+                and _is_title_related_description(title, fetched)
+            ):
                 item["description"] = _clean_html_content(fetched)
                 item.pop("_synthetic", None)
             # Extract og:image if not already set from RSS

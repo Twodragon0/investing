@@ -472,7 +472,8 @@ def _build_polymarket_section(markets: List[Dict[str, Any]]) -> tuple:
         lines.append("현재 지정학 관련 활성 예측 마켓이 없습니다.\n")
 
     # Summary stats as stat-grid (cleaner than blockquote table)
-    total_volume = sum(m.get("volume", 0) for m in markets)
+    # Keep displayed stats aligned to the same filtered market set shown in table.
+    total_volume = sum(m.get("volume", 0) for m in filtered_markets)
     lines.append(
         '\n<div class="stat-grid">'
         f'<div class="stat-item"><span class="stat-value">{len(filtered_markets)}</span>'
