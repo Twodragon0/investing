@@ -475,6 +475,96 @@ def _score_security_severity(title: str, description: str = "") -> str:
     return "🟢 LOW"
 
 
+# ── Security relevance filter keywords ──
+_SECURITY_RELEVANCE_KW = [
+    "hack",
+    "exploit",
+    "vulnerability",
+    "breach",
+    "stolen",
+    "attack",
+    "scam",
+    "phishing",
+    "rug pull",
+    "malware",
+    "ransomware",
+    "drain",
+    "compromise",
+    "fraud",
+    "theft",
+    "heist",
+    "bug bounty",
+    "patch",
+    "해킹",
+    "취약점",
+    "탈취",
+    "피해",
+    "사기",
+    "피싱",
+    "악용",
+    "유출",
+    "공격",
+    "보안",
+    "익스플로잇",
+    "러그풀",
+]
+
+
+def _is_security_relevant(item: Dict[str, Any]) -> bool:
+    """기사가 보안과 관련 있는지 키워드 기반으로 판별합니다."""
+    title = item.get("title", "").lower()
+    desc = (item.get("description_ko") or item.get("description", "")).lower()
+    text = title + " " + desc
+    return any(kw in text for kw in _SECURITY_RELEVANCE_KW)
+
+
+def _extract_security_summary_from_title(title: str) -> str:
+    """title에서 보안 관련 핵심 정보를 요약문으로 변환합니다."""
+    if not title:
+        return ""
+    # 제목 자체가 충분히 설명적이면 그대로 사용
+    summary = title.strip()
+    # 출처 태그 제거 (e.g., "- CoinDesk", "| The Block")
+    summary = re.sub(r"\s*[-|]\s*[A-Z][\w\s.]+$", "", summary).strip()
+    if len(summary) > 10:
+        return summary
+    return ""
+
+
+def _build_security_description(
+    rekt_items: List[Dict[str, Any]],
+    google_security_items: List[Dict[str, Any]],
+) -> str:
+    """보안 포스트의 동적 description_ko를 생성합니다."""
+    parts: List[str] = []
+
+    # Rekt 사고에서 대표 사건 추출
+    if rekt_items:
+        top = rekt_items[0]
+        project = top["title"].replace("[Security] ", "")
+        desc = top.get("description", "")
+        funds = ""
+        if "Funds Lost:" in desc:
+            try:
+                funds = desc.split("Funds Lost:")[1].split("|")[0].strip()
+            except IndexError:
+                pass
+        if funds:
+            parts.append(f"{project} {funds} 피해 발생")
+        else:
+            parts.append(f"{project} 보안 사고 보고")
+
+    # Google 보안 뉴스 대표 사건
+    if google_security_items and not parts:
+        top_title = get_display_title(google_security_items[0])
+        parts.append(smart_truncate(top_title, 60))
+
+    total = len(rekt_items) + len(google_security_items)
+    parts.append(f"블록체인 보안 뉴스 {total}건 분석")
+
+    return ". ".join(parts) + "."
+
+
 def _fetch_browser_sources() -> tuple:
     """Fetch Google News and Binance in a single browser session."""
     google_items: List[Dict[str, Any]] = []
@@ -572,6 +662,18 @@ class CryptoNewsCollector(BaseCollector):
             for item in google_security_items
             if not self.is_duplicate(item["title"], item.get("source", "google"), item.get("link", ""))
         ]
+
+        # 보안 무관 기사 필터링 (Google Security News만 — Rekt News는 이미 보안 전문)
+        pre_filter = len(google_security_items)
+        google_security_items = [item for item in google_security_items if _is_security_relevant(item)]
+        if pre_filter != len(google_security_items):
+            self.logger.info(
+                "Security relevance filter: %d -> %d (removed %d irrelevant)",
+                pre_filter,
+                len(google_security_items),
+                pre_filter - len(google_security_items),
+            )
+
         self.logger.info(
             "Security items after dedup: rekt=%d, google=%d",
             len(rekt_items),
@@ -642,6 +744,7 @@ class CryptoNewsCollector(BaseCollector):
 
             if not self.is_duplicate_exact(post_b_title, "consolidated"):
                 content = self._build_security_content(all_security_items, rekt_items, google_security_items)
+                _desc_ko_b = _build_security_description(rekt_items, google_security_items)
 
                 filepath = self.create_post(
                     title=post_b_title,
@@ -649,7 +752,8 @@ class CryptoNewsCollector(BaseCollector):
                     tags=["security", "hack", "blockchain", "daily-digest"],
                     source="consolidated",
                     extra_frontmatter={
-                        "permalink": build_dated_permalink("security-alerts", self.today, "daily-security-report")
+                        "permalink": build_dated_permalink("security-alerts", self.today, "daily-security-report"),
+                        "description_ko": _desc_ko_b,
                     },
                     slug="daily-security-report",
                     post_gen=self.security_gen,
@@ -1139,22 +1243,23 @@ class CryptoNewsCollector(BaseCollector):
         if overall_summary:
             content_parts.append(overall_summary)
 
+        # Sum up funds lost where parseable (hoisted for insight section)
+        total_funds = 0
+        for item in rekt_items:
+            desc = item.get("description", "")
+            if "Funds Lost:" in desc:
+                try:
+                    raw = desc.split("Funds Lost:")[1].split("|")[0].strip()
+                    raw = raw.replace("$", "").replace(",", "").strip()
+                    total_funds += float(raw)
+                except (IndexError, ValueError):
+                    pass
+
         # Key summary for security
         content_parts.append("## 핵심 요약\n")
         content_parts.append(f"- **보안 사고/뉴스**: 총 {len(all_security_items)}건")
         if rekt_items:
             content_parts.append(f"- **Rekt News 사고**: {len(rekt_items)}건")
-            # Sum up funds lost where parseable
-            total_funds = 0
-            for item in rekt_items:
-                desc = item.get("description", "")
-                if "Funds Lost:" in desc:
-                    try:
-                        raw = desc.split("Funds Lost:")[1].split("|")[0].strip()
-                        raw = raw.replace("$", "").replace(",", "").strip()
-                        total_funds += float(raw)
-                    except (IndexError, ValueError):
-                        pass
             if total_funds > 0:
                 content_parts.append(f"- **총 피해 규모 (추정)**: ${total_funds:,.0f}")
         if google_security_items:
@@ -1211,30 +1316,63 @@ class CryptoNewsCollector(BaseCollector):
                 source = item.get("source", "")
                 description = (item.get("description_ko") or item.get("description", "")).strip()
                 severity = _score_security_severity(title, description)
+
+                # description이 generic/boilerplate이면 title에서 핵심 정보 추출
+                if not description or description == title or len(description) < 20:
+                    description = _extract_security_summary_from_title(title)
+
                 if link:
-                    content_parts.append(f"**{i}. {severity} {markdown_link(title, link)}**")
+                    content_parts.append(f"**{i}. [{severity}] {markdown_link(title, link)}**")
                     security_links.append(item)
                 else:
-                    content_parts.append(f"**{i}. {severity} {title}**")
+                    content_parts.append(f"**{i}. [{severity}] {title}**")
                 if description and description != title:
                     desc_text = smart_truncate(description, 150)
-                    content_parts.append(f"{desc_text}")
+                    content_parts.append(f"> {desc_text}")
                 content_parts.append(f"{html_source_tag(source)}\n")
 
-        # Security insight
+        # Security insight — 패턴 분석 기반
         content_parts.append("\n## 보안 인사이트\n")
         sec_insight_lines = []
+
+        # 심각도 분류 통계
+        severity_counts: Counter = Counter()
+        for item in all_security_items:
+            title = item.get("title", "")
+            desc = (item.get("description_ko") or item.get("description", "")).strip()
+            sev = _score_security_severity(title, desc)
+            if "CRITICAL" in sev:
+                severity_counts["CRITICAL"] += 1
+            elif "HIGH" in sev:
+                severity_counts["HIGH"] += 1
+            elif "MEDIUM" in sev:
+                severity_counts["MEDIUM"] += 1
+            else:
+                severity_counts["LOW"] += 1
+
+        if severity_counts:
+            sev_parts = []
+            for level in ["CRITICAL", "HIGH", "MEDIUM", "LOW"]:
+                if severity_counts[level] > 0:
+                    sev_parts.append(f"{level} {severity_counts[level]}건")
+            sec_insight_lines.append(f"**심각도 분류**: {', '.join(sev_parts)}")
+
         if rekt_items:
-            sec_insight_lines.append(f"최근 보안 사고 {len(rekt_items)}건이 보고되었습니다.")
+            sec_insight_lines.append(f"\n최근 보안 사고 {len(rekt_items)}건이 보고되었습니다.")
             if technique_counter:
                 top_tech = technique_counter.most_common(3)
                 tech_str = ", ".join(f"{t}({c}건)" for t, c in top_tech)
                 sec_insight_lines.append(f"주요 공격 유형: {tech_str}.")
+            if total_funds > 0:
+                sec_insight_lines.append(f"총 피해 규모는 **${total_funds:,.0f}**으로 추정됩니다.")
+
         if google_security_items:
-            sec_insight_lines.append(
-                f"블록체인 보안 관련 뉴스 {len(google_security_items)}건이 수집되어 "
-                "업계 보안 이슈에 대한 관심이 높은 상태입니다."
-            )
+            sec_insight_lines.append(f"\n블록체인 보안 관련 뉴스 {len(google_security_items)}건이 수집되었습니다.")
+            # 대표 뉴스 하이라이트
+            top_google = google_security_items[0]
+            top_title = get_display_title(top_google)
+            sec_insight_lines.append(f"주요 이슈: {smart_truncate(top_title, 80)}.")
+
         if not sec_insight_lines:
             sec_insight_lines.append("현재 특이할 만한 보안 사고가 보고되지 않았습니다.")
         sec_insight_lines.append("")
