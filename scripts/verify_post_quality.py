@@ -20,7 +20,12 @@ from datetime import UTC, datetime, timedelta
 
 def _en_ratio(text: str) -> float:
     """Return ratio of English alphabetic characters."""
-    alpha = [c for c in text if c.isalpha()]
+    normalized = re.sub(
+        r"\b(?:KOSPI|KOSDAQ|NASDAQ|USD/KRW|EUR/USD|S&P|BTC|ETH|ETF|IPO|[A-Z]{2,}(?:/[A-Z]{2,})?)\b",
+        " ",
+        text,
+    )
+    alpha = [c for c in normalized if c.isalpha()]
     if not alpha:
         return 0.0
     return sum(1 for c in alpha if ord(c) < 128) / len(alpha)

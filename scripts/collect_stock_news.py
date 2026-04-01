@@ -19,7 +19,6 @@ import requests
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.base_collector import BaseCollector
-from common.bettafish_analyzer import BettaFishAnalyzer
 from common.collector_config import get_collector_config, get_url
 from common.config import REQUEST_TIMEOUT, get_env, get_verify_ssl, setup_logging
 from common.dedup import deduplicate_by_url
@@ -27,7 +26,6 @@ from common.enrichment import _STOCK_SOURCE_CONTEXT, enrich_items
 from common.markdown_utils import (
     html_reference_details,
 )
-from common.mindspider import MindSpider
 from common.post_generator import build_dated_permalink
 from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
 from common.signal_composer import SignalComposer
@@ -841,48 +839,6 @@ class StockNewsCollector(BaseCollector):
                 stance = composer.analyze_stance(result)
                 content_parts.append("\n" + composer.generate_prediction_markdown(result, stance))
 
-                # MindSpider topic analysis
-                if all_items:
-                    spider = MindSpider()
-                    news_items_for_spider = [
-                        {
-                            "title": _a.get("title", ""),
-                            "description": _a.get("description", ""),
-                            "source": _a.get("source", ""),
-                            "category": "stock",
-                            "date": now.strftime("%Y-%m-%d"),
-                        }
-                        for _a in all_items
-                        if _a.get("title")
-                    ]
-                    if news_items_for_spider:
-                        clusters = spider.cluster_topics(news_items_for_spider, max_topics=3)
-                        topic_md = spider.generate_topic_summary(clusters)
-                        if topic_md:
-                            content_parts.append("\n" + topic_md)
-
-                        # BettaFish brief outlook
-                        extracted_keywords = spider.extract_keywords(news_items_for_spider, top_n=10)
-                        analyzer = BettaFishAnalyzer()
-                        bf_report = analyzer.analyze(
-                            composite_result=result,
-                            topic_clusters=clusters,
-                            keywords=extracted_keywords,
-                        )
-                        brief = analyzer.generate_brief_outlook(bf_report)
-                        if brief:
-                            content_parts.append("\n### 멀티 관점 요약\n")
-                            content_parts.append(brief)
-
-                        # Entity analysis
-                        news_items = news_items_for_spider
-                        if news_items:
-                            entities = spider.extract_entities(news_items)
-                            if entities:
-                                relations = spider.detect_relations(news_items, entities)
-                                entity_report = spider.generate_entity_report(entities, relations)
-                                if entity_report:
-                                    content_parts.append("\n" + entity_report)
         except Exception as exc:
             self.logger.warning("시장 전망 생성 실패: %s", exc)
 
