@@ -56,40 +56,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-01 - 암호화폐 뉴스 요
 <li><a href="https://cointelegraph.com/news/singapore-court-curve-dispute-resupply-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">싱가포르 괴롭힘 법원에서 Resupply 착취 토지에 대한 암호화폐 분쟁</a> <span class="p0-desc">싱가포르 법원은 OneKey 창립자 Wang Lei와 X 사용자에게 2025 Resupply 익스플로잇에 대한 분쟁과 관련된 위협 또는 명예 훼손 주장을 중단하라고 명령했습니다.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 미국, 5300만 달러 규모 우라늄 금융 악용 배후 해커 기소 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 106건의 뉴스 중 P1 주요 이슈도 8건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (46건): 비트코인, 구글, 골드만삭스 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (22건): 골드만삭스 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🤖 AI/기술** (18건): 구글 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 미국, 5300만 달러 규모 우라늄 금융 악용 배후 해커 기소
-- 싱가포르 괴롭힘 법원에서 Resupply 착취 토지에 대한 암호화폐 분쟁
-
-### 주요 이슈
-
-- 비트코인은 ETF 유출 속에서도 꾸준한 유지
-- 러시아의 제재 위반 암호화폐 제국 - 외교 정책
-- 중동 확전 조짐·ETF 심사 지연·규제 변수 동시에…암호화폐 시장 5대 리스크
-- 외 5건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, AI
-- **주요 출처**: Google News(20건), Google News KR(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-04-01.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-04-01.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🤖 AI/기술
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
