@@ -7,11 +7,11 @@ tags: ["stock", "market", "daily-digest"]
 keywords: "stock, market, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-31.png"
+image: "/assets/images/generated/market-snapshot-2026-03-31.png"
 permalink: "/stock-news/2026/03/31/daily-stock-news-digest/"
-description_ko: "2026-03-31 주식 시장: KOSPI 5,277.30(-2.97%), KOSDAQ 1,107.05(-3.02%), USD/KRW 1,517.45(+0.62%). 총 140건의 뉴스에서 주요 동향과 투자 포인트를 정리합니다."
-description: "2026-03-31 주식 시장: KOSPI 5,277.30(-2.97%), KOSDAQ 1,107.05(-3.02%), USD/KRW 1,517.45(+0.62%). 총 140건의 뉴스에서 주요 동향과 투자 포인트를 정리합니다."
-excerpt: "2026-03-31 주식 시장: KOSPI 5,277.30(-2.97%), KOSDAQ 1,107.05(-3.02%), USD/KRW 1,517.45(+0.62%). 총…"
+description_ko: "2026-03-31 한국 증시는 코스피 5,277.30(-2.97%), 코스닥 1,107.05(-3.02%), 원/달러 1,517.45원을 기록했고 140건의 뉴스를 바탕으로 변동성 확대 구간의 핵심 이슈를 정리했습니다."
+description: "2026-03-31 한국 증시는 코스피 5,277.30(-2.97%), 코스닥 1,107.05(-3.02%), 원/달러 1,517.45원을 기록했고 140건의 뉴스를 바탕으로 변동성 확대 구간의 핵심 이슈를 정리했습니다."
+excerpt: "코스피 5,277.30(-2.97%), 코스닥 1,107.05(-3.02%), 원/달러 1,517.45원 기준으로 140건의 뉴스를 정리한 변동성 점검 브리핑입니다."
 image_alt: "주식 시장 뉴스 종합 - 2026-03-31 - 주식 뉴스 요약 이미지"
 ---
 
@@ -303,82 +303,6 @@ KOSDAQ **1,107.05** (-3.02%).
 **섹터별 흐름**: **가격/시장**(44건) → 시장 전반; **매크로/금리**(16건) → 금융·은행 섹터; **AI/기술**(14건) → 반도체·IT 섹터. 뉴스 테마와 연관된 섹터의 거래량·수급 변화를 확인하세요.
 
 > *본 시장 리포트는 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*
-
-## 시장 전망 분석
-
-| 지표 | 현재값 | 신호 | 가중치 |
-|------|--------|------|--------|
-| 시장 심리 | +0.37 | 강세 | 50% |
-| 모멘텀 | S&P -3.0% | 중립 | 50% |
-
-**종합 점수**: 59/100 (📈 강세)
-**신뢰도**: 높음 (2/2 지표 일치)
-
-### 시장 참여자 입장 분석
-- **강세 진영**: 시장 심리 (+0.37)
-- **약세 진영**: 없음
-- **관망**: 모멘텀 (S&P -3.0%)
-- **지배 입장**: 강세 (50% 합의)
-
-### 시나리오 분석
-- 🟢 **강세 시나리오** (40%): 공포·탐욕 지수(N/A) 반등 시 위험자산 선호 회복, VIX(N/A) 안정화되며 기술적 저항선 돌파 가능
- - *촉매*: 연준 비둘기파 발언
- - *시간 프레임*: 단기 1-3일 내 확인 가능
- - *저항선*: 현재가 +5~8%
-- 🟡 **기본 시나리오** (45%): 현 심리 수준(59점) 유지, 모멘텀(S&P -3.0%) 방향 확인 후 점진적 포지션 조정 권장
- - *시간 프레임*: 중기 1-2주 횡보 예상
-- 🔴 **약세 시나리오** (15%): VIX(N/A) 추가 상승 및 매크로 압박 지속 시 추가 조정 가능, 공포·탐욕(N/A) 극공포 구간 진입 주의
- - *촉매*: VIX 30 돌파
- - *시간 프레임*: 중기 1-2주 내 약세 전환 가능성
- - *지지선*: 현재가 -3~5%
-
-> ⚠️ 본 분석은 알고리즘 기반 자동 생성이며, 투자 조언이 아닙니다.
-
-## 주요 토픽 분석
-
-### 1. 경제 기업 (관련 기사 10건, 긍정적)
-경제 · 기업 · 글로벌 관련 뉴스 10건이 감지되었습니다. 주요 출처: 조선비즈. 시장 분위기: 긍정적.
-**관련 키워드**: 경제, 기업, 글로벌, chosunbiz, 조선비즈는, 국내
-
-### 2. powers war (관련 기사 7건, 긍정적)
-powers · war · week 관련 뉴스 7건이 감지되었습니다. 주요 출처: Google News Stocks EN, Earnings Momentum, Yahoo Finance. 시장 분위기: 긍정적.
-**관련 키워드**: powers, war, week, iran, rounds, fourth
-
-### 3. job number (관련 기사 2건, 긍정적)
-job · number · labor 관련 뉴스 2건이 감지되었습니다. 주요 출처: Yahoo Finance. 시장 분위기: 긍정적.
-**관련 키워드**: job, number, labor, report, remain, creation
-
-
-### 멀티 관점 요약
-
-📈 **시장 판정**: 강세 (신뢰도 보통)
-✅ 주요 기회: 시장 심리 · 경제 기업 · powers war
-데이터 분석 관점은 강세, 심리 분석은 강세, 매크로 환경은 중립를 나타내며, 가중 종합 판단은 강세입니다.
-
-### 핵심 엔티티 네트워크
-
-| 엔티티 | 유형 | 언급 | 감성 | 입장 |
-|--------|------|------|------|------|
-| 트럼프 | 인물 | 13회 | +0.20 | 긍정 |
-| 연준 | 규제기관 | 8회 | +0.71 | 긍정 |
-| Bloomberg | 미디어 | 4회 | -1.00 | 부정 |
-| 엔비디아 | 자산 | 4회 | +1.00 | 긍정 |
-| 구글 | 자산 | 3회 | -1.00 | 부정 |
-| 재무부 | 규제기관 | 2회 | +0.50 | 긍정 |
-| 비트코인 | 자산 | 2회 | +0.00 | 중립 |
-| CNBC | 미디어 | 1회 | +0.00 | 중립 |
-| 마이클 세일러 | 인물 | 1회 | +0.00 | 중립 |
-| 메타 | 자산 | 1회 | +1.00 | 긍정 |
-
-**주요 관계:**
-- JP모건 --[영향]--> Bloomberg (-1.00): "JPMorgan, Pimco Say Bond Market Is Underestimating Slowdown Risk"
-- 연준 --[영향]--> 트럼프 (+0.50): "Treasuries extend rally as Fed's Powell downplays tariff inflation impact"
-- 연준 --[영향]--> 재무부 (+0.50): "Treasuries extend rally as Fed's Powell downplays tariff inflation impact"
-- 트럼프 --[영향]--> 재무부 (+0.50): "Treasuries extend rally as Fed's Powell downplays tariff inflation impact"
-- 연준 --[영향]--> CNBC (+0.00): "Dow jumps 200 points as fears of Fed rate hike ease: Live updates"
-- 비트코인 --[영향]--> 트럼프 (+0.00): "Trump Brothers' American Bitcoin Hits BTC Milestone as Stock Falls to Lowest Price Since IPO"
-- 비트코인 --[투자]--> 마이클 세일러 (+0.00): "Strategy skips a week of bitcoin purchases for the first time this year"
-
 
 ---
 

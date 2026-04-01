@@ -8,6 +8,7 @@ with the new image path.
 """
 
 import argparse
+import importlib
 import importlib.util
 import os
 import re
@@ -191,6 +192,7 @@ CATEGORY_LABELS: Dict[str, str] = {
     "stock-trading-journal-template": "Trading Journal",
     "fmp-economic-calendar": "Economic Calendar",
     "daily-market-indicators": "Market Indicators",
+    "daily-geopolitical-risk-report": "Geopolitical Risk Report",
 }
 
 # Filename prefix mapping for generated images
@@ -216,6 +218,16 @@ FILENAME_PREFIXES: Dict[str, str] = {
     "stock-trading-journal-template": "news-briefing-journal-stock",
     "fmp-economic-calendar": "news-briefing-calendar",
     "daily-market-indicators": "news-briefing-indicators",
+    "daily-geopolitical-risk-report": "news-briefing-geopolitical",
+}
+
+FALLBACK_PREFIXES: Dict[str, List[str]] = {
+    "daily-blockchain-network-report": ["news-briefing-crypto"],
+    "daily-crypto-market-report": ["market-heatmap-cmc", "top-coins-cmc"],
+    "daily-defi-tvl-report": ["defi-tvl-dashboard"],
+    "daily-defi-yields-report": ["defi-tvl-dashboard"],
+    "daily-security-report": ["news-briefing-crypto"],
+    "daily-stock-news-digest": ["market-snapshot"],
 }
 
 # Default emoji when no keyword match is found
@@ -484,16 +496,21 @@ _IMG_GEN_LOADED = False
 
 
 def _load_image_generator():
-    """Load image_generator module directly, bypassing common/__init__.py."""
     global _IMG_GEN_MOD, _IMG_GEN_LOADED
     if _IMG_GEN_LOADED:
         return _IMG_GEN_MOD
     _IMG_GEN_LOADED = True
     try:
-        img_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "common", "image_generator.py")
-        spec = importlib.util.spec_from_file_location("image_generator", img_path)
+        package_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "common", "image_generator")
+        init_path = os.path.join(package_dir, "__init__.py")
+        spec = importlib.util.spec_from_file_location(
+            "image_generator",
+            init_path,
+            submodule_search_locations=[package_dir],
+        )
         assert spec is not None and spec.loader is not None
         mod = importlib.util.module_from_spec(spec)
+        sys.modules[spec.name] = mod
         spec.loader.exec_module(mod)
         _IMG_GEN_MOD = mod
         return mod
@@ -526,6 +543,13 @@ def generate_image_for_post(filepath: str, post_type: str, date_str: str, body: 
     if os.path.exists(disk_path):
         logger.info("Image already exists on disk: %s", filename)
         return f"/assets/images/generated/{filename}"
+
+    for fallback_prefix in FALLBACK_PREFIXES.get(post_type, []):
+        fallback_filename = f"{fallback_prefix}-{date_str}.png"
+        fallback_path = os.path.join(IMAGES_DIR, fallback_filename)
+        if os.path.exists(fallback_path):
+            logger.info("Using fallback image on disk: %s", fallback_filename)
+            return f"/assets/images/generated/{fallback_filename}"
 
     category = CATEGORY_LABELS.get(post_type, "Daily Briefing")
     total_count = extract_total_count(body)
