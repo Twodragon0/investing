@@ -159,7 +159,15 @@ def is_private_url(url: str) -> bool:
         return True  # Block on resolution failure
 
 
-VERIFY_SSL = get_verify_ssl()
+_VERIFY_SSL: Optional = None
+
+
+def _get_verify_ssl():
+    global _VERIFY_SSL
+    if _VERIFY_SSL is None:
+        _VERIFY_SSL = get_verify_ssl()
+    return _VERIFY_SSL
+
 
 _USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -394,7 +402,7 @@ def _resolve_google_news_url_inner(url: str, timeout: int = 8) -> str:
             timeout=timeout,
             allow_redirects=True,
             headers={"User-Agent": _BROWSER_UA},
-            verify=VERIFY_SSL,
+            verify=_get_verify_ssl(),
         )
         final_url = head_resp.url or ""
         if final_url and "news.google.com" not in final_url:
@@ -424,7 +432,7 @@ def _resolve_google_news_url_inner(url: str, timeout: int = 8) -> str:
             timeout=timeout,
             allow_redirects=True,
             headers={"User-Agent": _BROWSER_UA},
-            verify=VERIFY_SSL,
+            verify=_get_verify_ssl(),
         )
         if resp.url and "news.google.com" not in resp.url:
             if is_private_url(resp.url):
@@ -521,7 +529,7 @@ def _fetch_og_image(url: str, timeout: int = 8) -> str:
             url,
             timeout=timeout,
             headers={"User-Agent": _BROWSER_UA},
-            verify=VERIFY_SSL,
+            verify=_get_verify_ssl(),
         )
         resp.raise_for_status()
         # Search in first 30KB of HTML for og:image via regex (faster than BS4)
@@ -816,7 +824,7 @@ def fetch_page_metadata(url: str, timeout: int = 8, title: str = "") -> Dict[str
             url,
             timeout=timeout,
             headers={"User-Agent": _USER_AGENT},
-            verify=VERIFY_SSL,
+            verify=_get_verify_ssl(),
         )
         resp.raise_for_status()
         soup = BS4(resp.text, "html.parser")
@@ -1648,7 +1656,16 @@ def enrich_item(
     # Title-duplicate descriptions get priority fetch (bypass max_fetch budget)
     is_title_dup = bool(desc) and _is_desc_duplicate_of_title(desc, title)
     if fetch_url and fetch_link:
-        counter = _fetch_counter or [0]
+        if _fetch_counter is None:
+            if max_fetch != 10:
+                logger.debug(
+                    "enrich_item: max_fetch=%d set but no _fetch_counter provided; "
+                    "rate limiting is per-call only (counter resets each invocation).",
+                    max_fetch,
+                )
+            counter = [0]
+        else:
+            counter = _fetch_counter
         if counter[0] < max_fetch or is_title_dup:
             if not is_title_dup:
                 counter[0] += 1

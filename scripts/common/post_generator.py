@@ -644,9 +644,12 @@ def _clean_description(desc: str) -> str:
     - Pads to at least 80 chars if too short
     """
     # Fix concatenated number artifacts (e.g. "612개월" → "6~12개월")
+    # Only match 2-3 digit numbers where first digit < second group (realistic ranges)
     desc = re.sub(
-        r"(?<!\d)([1-9])(\d{1,2})(개월|년|일|시간)",
-        lambda m: m.group(1) + "~" + m.group(2) + m.group(3) if int(m.group(1)) < int(m.group(2)) else m.group(0),
+        r"(?<!\d)(?<![A-Za-z가-힣])([1-9])(\d{1,2})(개월|년|일|시간)",
+        lambda m: m.group(1) + "~" + m.group(2) + m.group(3)
+        if int(m.group(1)) < int(m.group(2)) and int(m.group(2)) <= 31
+        else m.group(0),
         desc,
     )
     # Remove HTML tags (replace with space to avoid concatenation artifacts)
@@ -752,13 +755,15 @@ class PostGenerator:
             safe_tags = [f'"{t.replace(chr(34), chr(92) + chr(34))}"' for t in tags[:10]]
             frontmatter_lines.append(f"tags: [{', '.join(safe_tags)}]")
             # tags 기반으로 keywords 생성 (SEO용)
-            keywords = ", ".join(tags[:5])
+            keywords = ", ".join(tags[:5]).replace('"', '\\"').replace("\n", " ")
             frontmatter_lines.append(f'keywords: "{keywords}"')
 
         if source:
-            frontmatter_lines.append(f'source: "{source}"')
+            safe_source = source.replace('"', '\\"').replace("\n", " ")
+            frontmatter_lines.append(f'source: "{safe_source}"')
         if source_url:
-            frontmatter_lines.append(f'source_url: "{source_url}"')
+            safe_url = source_url.replace('"', '\\"').replace("\n", "")
+            frontmatter_lines.append(f'source_url: "{safe_url}"')
         if lang:
             frontmatter_lines.append(f'lang: "{lang}"')
         image = _resolve_post_image(image, self.category)

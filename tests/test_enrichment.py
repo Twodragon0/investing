@@ -1638,7 +1638,7 @@ class TestNeedsEnrichmentDescEqualsTitle:
     def test_desc_equals_title_triggers_fetch(self, mock_meta):
         """When desc exactly equals title, enrichment is needed (line 328)."""
         mock_meta.return_value = {
-            "description": "Enriched description with plenty of content about markets.",
+            "description": "Bitcoin surges sharply as the SEC approves spot ETF applications this week, sparking rally.",
             "image": "",
         }
         title = "Bitcoin surges on ETF approval news this week"

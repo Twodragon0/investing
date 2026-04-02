@@ -22,7 +22,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 # common/__init__.py which pulls in heavy dependencies (bs4, requests, etc.)
 _config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "common", "config.py")
 _spec = importlib.util.spec_from_file_location("common_config", _config_path)
-assert _spec is not None and _spec.loader is not None
+if _spec is None or _spec.loader is None:
+    raise ImportError(f"Cannot load config module from {_config_path}")
 _config_mod = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_config_mod)
 setup_logging = _config_mod.setup_logging
@@ -316,8 +317,11 @@ def needs_image_refresh(filepath: str) -> bool:
 
 def needs_image(filepath: str) -> bool:
     """Check if a post needs an image generated."""
-    with open(filepath, encoding="utf-8") as f:
-        content = f.read()
+    try:
+        with open(filepath, encoding="utf-8") as f:
+            content = f.read()
+    except OSError:
+        return False
 
     fm, _ = parse_frontmatter(content)
     img = fm.get("image", "")
@@ -501,14 +505,27 @@ def _load_image_generator():
         return _IMG_GEN_MOD
     _IMG_GEN_LOADED = True
     try:
-        package_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "common", "image_generator")
-        init_path = os.path.join(package_dir, "__init__.py")
-        spec = importlib.util.spec_from_file_location(
-            "image_generator",
-            init_path,
-            submodule_search_locations=[package_dir],
-        )
-        assert spec is not None and spec.loader is not None
+        common_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "common")
+
+        pkg_init = os.path.join(common_dir, "image_generator", "__init__.py")
+        if os.path.exists(pkg_init):
+            spec = importlib.util.spec_from_file_location(
+                "common.image_generator",
+                pkg_init,
+                submodule_search_locations=[os.path.join(common_dir, "image_generator")],
+            )
+            if spec is None or spec.loader is None:
+                raise ImportError(f"Cannot load image_generator package from {pkg_init}")
+            mod = importlib.util.module_from_spec(spec)
+            sys.modules[spec.name] = mod
+            spec.loader.exec_module(mod)
+            _IMG_GEN_MOD = mod
+            return mod
+
+        legacy_path = os.path.join(common_dir, "image_generator.py")
+        spec = importlib.util.spec_from_file_location("image_generator", legacy_path)
+        if spec is None or spec.loader is None:
+            raise ImportError(f"Cannot load image_generator module from {legacy_path}")
         mod = importlib.util.module_from_spec(spec)
         sys.modules[spec.name] = mod
         spec.loader.exec_module(mod)
