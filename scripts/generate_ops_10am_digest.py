@@ -365,17 +365,17 @@ def write_github_outputs(payload: Dict[str, str]) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Generate 10AM ops Slack digest")
     parser.add_argument("--repo", default=os.getenv("GITHUB_REPOSITORY", "Twodragon0/investing"))
-    parser.add_argument("--github-token", default=os.getenv("GITHUB_TOKEN", ""))
     parser.add_argument("--slack-channel", default=os.getenv("SLACK_CHANNEL_ID", ""))
     parser.add_argument("--state-file", default="_state/ops-10am-digest-state.json")
     args = parser.parse_args()
 
+    github_token = os.getenv("GITHUB_TOKEN", "")
     slack_token = os.getenv("SLACK_BOT_TOKEN", "")
 
     now = datetime.now(get_kst_timezone())
     marker = f"[ops-10am-digest:{now.strftime('%Y-%m-%d')}]"
 
-    gh = collect_github_summary(args.repo, args.github_token)
+    gh = collect_github_summary(args.repo, github_token)
     vercel = collect_vercel_summary()
     oc = collect_openclaw_summary()
     slack = collect_slack_health(slack_token, args.slack_channel)
