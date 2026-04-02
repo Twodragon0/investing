@@ -54,13 +54,14 @@ def _get_combined_ca_bundle(certifi_bundle: str) -> Optional[str]:
     Returns path to combined bundle, or None if not needed.
     """
     import shutil
+    import stat
     import subprocess
-
-    combined_path = os.path.join(os.path.dirname(certifi_bundle), "combined_ca.pem")
-
-    # Return cached combined bundle if it exists and is recent (< 1 day)
+    import tempfile
     import time
 
+    combined_path = os.path.join(tempfile.gettempdir(), "investing_combined_ca.pem")
+
+    # Return cached combined bundle if it exists and is recent (< 1 day)
     if os.path.exists(combined_path):
         age = time.time() - os.path.getmtime(combined_path)
         if age < 86400:
@@ -89,6 +90,7 @@ def _get_combined_ca_bundle(certifi_bundle: str) -> Optional[str]:
             f.write("\n# Zscaler proxy CA from macOS system keychain\n")
             f.write(result.stdout)
 
+        os.chmod(combined_path, stat.S_IRUSR | stat.S_IWUSR)  # 0o600
         logger.info("Created combined CA bundle with Zscaler proxy cert")
         return combined_path
     except Exception as e:
