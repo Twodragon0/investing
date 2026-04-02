@@ -55,38 +55,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-02 - 암호화폐 뉴스 요
 <li><a href="https://www.coindesk.com/markets/2026/04/01/bitcoin-s-crashes-are-shrinking-and-wall-street-is-starting-to-notice">비트코인의 충돌이 줄어들고 있으며 월스트리트이 알아차리기 시작했습니다.</a> <span class="p0-desc">Bloomberg 분석가 Mike McGlone은 암호화폐 거품은 끝났고 비트코인은 여전히 ​​10,000달러를 다시 방문할 수 있다고 주장하기 때문에 모든 분석가가 추가 하락이.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 비트코인의 충돌이 줄어들고 있으며 월스트리트이 알아차리기 시작했습니다. 
-총 102건의 뉴스 중 P1 주요 이슈도 11건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (49건): 비트코인, 구글 관련 (49건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (20건): 암호화폐 가격 변동 (20건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🤖 AI/기술** (13건): 구글 기술 이슈 (13건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 비트코인의 충돌이 줄어들고 있으며 월스트리트이 알아차리기 시작했습니다.
-
-### 주요 이슈
-
-- 마감일 도착: Maine 비트코인 ATM 사기 피해자는 여전히 합의금을 청구할 수 있습니다.
-- 이더리움은 기록적인 가격보다 60% 낮은 가격에 거래되고 있습니다. Ether ETF가 비트코인 펀드를 '우월'할 수 있는 이유는 다음과 같습니
-- 비트코인은 ETF 유출 속에서도 꾸준한 유지
-- 외 8건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, ETF
-- **주요 출처**: Google News(20건), Decrypt(15건), CoinDesk(15건)
-- 프로모션성 거래소 공지 5건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-04-02.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-04-02.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🤖 AI/기술
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
