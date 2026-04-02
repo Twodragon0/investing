@@ -88,6 +88,8 @@ class BrowserSession:
         *wait_ms* — additional milliseconds to wait after the page event
         (useful for JS-rendered content).
         """
+        if not url.startswith(("http://", "https://")):
+            raise ValueError(f"navigate() blocked non-http URL scheme: {url[:80]}")
         self._page.goto(url, wait_until=wait_until)
         if wait_ms > 0:
             self._page.wait_for_timeout(wait_ms)

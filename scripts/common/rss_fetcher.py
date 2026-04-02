@@ -148,12 +148,24 @@ def fetch_rss_feed(
         if original:
             decoded = unquote(original)
             if decoded and decoded not in candidates:
-                candidates.append(decoded)
+                # Lazy import to avoid circular imports
+                from .enrichment import is_private_url as _is_private_url
+
+                if _is_private_url(decoded):
+                    logger.warning("RSS SSRF blocked worldmonitor proxy URL: %s", decoded[:80])
+                else:
+                    candidates.append(decoded)
 
     last_error: Optional[str] = None
 
     for idx, candidate_url in enumerate(candidates, start=1):
         try:
+            # Lazy import to avoid circular imports
+            from .enrichment import is_private_url as _is_private_url
+
+            if _is_private_url(candidate_url):
+                logger.warning("RSS SSRF blocked private-IP candidate URL: %s", candidate_url[:80])
+                continue
             resp = requests.get(
                 candidate_url,
                 timeout=REQUEST_TIMEOUT,
@@ -228,25 +240,41 @@ def fetch_rss_feed(
                 # BS4 xml parser may strip namespace prefix → try both
                 media = entry.find("media:content") or entry.find("content", attrs={"url": True})
                 if media and media.get("url"):
-                    image_url = media["url"]
+                    _u = media["url"]
+                    if str(_u).startswith(("http://", "https://")):
+                        image_url = _u
+                    else:
+                        logger.debug("RSS image blocked unsafe scheme (media:content): %s", str(_u)[:80])
                 # 2. media:thumbnail
                 if not image_url:
                     thumb = entry.find("media:thumbnail") or entry.find("thumbnail", attrs={"url": True})
                     if thumb and thumb.get("url"):
-                        image_url = thumb["url"]
+                        _u = thumb["url"]
+                        if str(_u).startswith(("http://", "https://")):
+                            image_url = _u
+                        else:
+                            logger.debug("RSS image blocked unsafe scheme (media:thumbnail): %s", str(_u)[:80])
                 # 3. enclosure (podcast/media feeds)
                 if not image_url:
                     enclosure = entry.find("enclosure")
                     if enclosure and enclosure.get("url"):
                         enc_type = str(enclosure.get("type", "") or "")
                         if enc_type.startswith("image/") or enc_type == "":
-                            image_url = enclosure["url"]
+                            _u = enclosure["url"]
+                            if str(_u).startswith(("http://", "https://")):
+                                image_url = _u
+                            else:
+                                logger.debug("RSS image blocked unsafe scheme (enclosure): %s", str(_u)[:80])
                 # 4. Embedded <img> in description HTML
                 if not image_url and desc_el:
                     raw_html = str(desc_el)
                     img_match = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', raw_html)
                     if img_match:
-                        image_url = img_match.group(1)
+                        _u = img_match.group(1)
+                        if _u.startswith(("http://", "https://")):
+                            image_url = _u
+                        else:
+                            logger.debug("RSS image blocked unsafe scheme (img src): %s", _u[:80])
 
                 # Extract original URL from <source url=""> (Google News RSS preserves it)
                 original_url = ""
@@ -257,7 +285,7 @@ def fetch_rss_feed(
                     if candidate_orig and is_safe_url(candidate_orig):
                         original_url = candidate_orig
 
-                if link_val and urlparse(link_val).netloc in _GOOGLE_NEWS_HOSTS:
+                if link_val and urlparse(str(link_val)).netloc in _GOOGLE_NEWS_HOSTS:
                     resolved_google_url = _resolve_google_news_url(link_val)
                     if resolved_google_url:
                         original_url = original_url or resolved_google_url
