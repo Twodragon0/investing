@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for scripts/common/bettafish_analyzer.py: 90%</title>
+    <title>Coverage for scripts/common/bettafish_analyzer.py: 89%</title>
     <link rel="icon" sizes="32x32" href="favicon_32_cb_c827f16f.png">
     <link rel="stylesheet" href="style_cb_9ff733b0.css" type="text/css">
     <script src="coverage_html_cb_dd2e7eb5.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>scripts&#8201;/&#8201;common&#8201;/&#8201;bettafish_analyzer.py</b>:
-            <span class="pc_cov">90%</span>
+            <span class="pc_cov">89%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -55,8 +55,8 @@
         </aside>
         <h2>
             <span class="text">646 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">584<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">62<span class="text"> missing</span></button>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">578<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">68<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
@@ -64,8 +64,8 @@
             <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
             <a id="nextFileLink" class="nav" href="z_71968377c4619f9c_blockchain_api_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.13.1">coverage.py v7.13.1</a>,
-            created at 2026-03-31 09:16 +0000
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.13.5">coverage.py v7.13.5</a>,
+            created at 2026-04-02 09:33 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -420,12 +420,12 @@
     <p class="run"><span class="n"><a id="t338" href="#t338">338</a></span><span class="t">        <span class="nam">n_clusters</span> <span class="op">=</span> <span class="nam">len</span><span class="op">(</span><span class="nam">clusters</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t339" href="#t339">339</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t340" href="#t340">340</a></span><span class="t">        <span class="key">for</span> <span class="nam">cluster</span> <span class="key">in</span> <span class="nam">clusters</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t341" href="#t341">341</a></span><span class="t">            <span class="nam">topic_name</span> <span class="op">=</span> <span class="nam">getattr</span><span class="op">(</span><span class="nam">cluster</span><span class="op">,</span> <span class="str">"topic_name"</span><span class="op">,</span> <span class="str">""</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t342" href="#t342">342</a></span><span class="t">            <span class="nam">sentiment</span> <span class="op">=</span> <span class="nam">getattr</span><span class="op">(</span><span class="nam">cluster</span><span class="op">,</span> <span class="str">"sentiment_score"</span><span class="op">,</span> <span class="num">0.0</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t343" href="#t343">343</a></span><span class="t">            <span class="nam">total_score</span> <span class="op">+=</span> <span class="nam">sentiment</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t344" href="#t344">344</a></span><span class="t">            <span class="key">if</span> <span class="nam">sentiment</span> <span class="op">></span> <span class="num">0.05</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t341" href="#t341">341</a></span><span class="t">            <span class="nam">topic_name</span> <span class="op">=</span> <span class="nam">getattr</span><span class="op">(</span><span class="nam">cluster</span><span class="op">,</span> <span class="str">"topic_name"</span><span class="op">,</span> <span class="str">""</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t342" href="#t342">342</a></span><span class="t">            <span class="nam">sentiment</span> <span class="op">=</span> <span class="nam">getattr</span><span class="op">(</span><span class="nam">cluster</span><span class="op">,</span> <span class="str">"sentiment_score"</span><span class="op">,</span> <span class="num">0.0</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t343" href="#t343">343</a></span><span class="t">            <span class="nam">total_score</span> <span class="op">+=</span> <span class="nam">sentiment</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t344" href="#t344">344</a></span><span class="t">            <span class="key">if</span> <span class="nam">sentiment</span> <span class="op">></span> <span class="num">0.05</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t345" href="#t345">345</a></span><span class="t">                <span class="nam">positive_topics</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">topic_name</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t346" href="#t346">346</a></span><span class="t">            <span class="key">elif</span> <span class="nam">sentiment</span> <span class="op">&lt;</span> <span class="op">-</span><span class="num">0.05</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t346" href="#t346">346</a></span><span class="t">            <span class="key">elif</span> <span class="nam">sentiment</span> <span class="op">&lt;</span> <span class="op">-</span><span class="num">0.05</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t347" href="#t347">347</a></span><span class="t">                <span class="nam">negative_topics</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">topic_name</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t348" href="#t348">348</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t349" href="#t349">349</a></span><span class="t">        <span class="nam">avg_sentiment</span> <span class="op">=</span> <span class="nam">total_score</span> <span class="op">/</span> <span class="nam">n_clusters</span> <span class="key">if</span> <span class="nam">n_clusters</span> <span class="op">></span> <span class="num">0</span> <span class="key">else</span> <span class="num">0.0</span>&nbsp;</span><span class="r"></span></p>
@@ -495,10 +495,10 @@
     <p class="run"><span class="n"><a id="t413" href="#t413">413</a></span><span class="t">        <span class="nam">neg_n</span> <span class="op">=</span> <span class="nam">len</span><span class="op">(</span><span class="nam">negative_topics</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t414" href="#t414">414</a></span><span class="t">        <span class="nam">sentiment_sign</span> <span class="op">=</span> <span class="str">"+"</span> <span class="key">if</span> <span class="nam">avg_sentiment</span> <span class="op">>=</span> <span class="num">0</span> <span class="key">else</span> <span class="str">""</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t415" href="#t415">415</a></span><span class="t">        <span class="key">if</span> <span class="nam">n_clusters</span> <span class="op">></span> <span class="num">0</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t416" href="#t416">416</a></span><span class="t">            <span class="nam">lines</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t417" href="#t417">417</a></span><span class="t">                <span class="fst">f"</span><span class="fst">&#51452;&#50836; &#53664;&#54589; </span><span class="op">{</span><span class="nam">n_clusters</span><span class="op">}</span><span class="fst">&#44060; &#51473; &#44557;&#51221; </span><span class="op">{</span><span class="nam">pos_n</span><span class="op">}</span><span class="fst">&#44148;, &#48512;&#51221; </span><span class="op">{</span><span class="nam">neg_n</span><span class="op">}</span><span class="fst">&#44148;&#51060; &#44048;&#51648;&#46104;&#50612; </span><span class="fst">"</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t418" href="#t418">418</a></span><span class="t">                <span class="fst">f"</span><span class="fst">&#51204;&#52404; &#49900;&#47532; &#51216;&#49688;&#44032; </span><span class="op">{</span><span class="nam">sentiment_sign</span><span class="op">}</span><span class="op">{</span><span class="nam">avg_sentiment</span><span class="op">:</span><span class="fst">.2f</span><span class="op">}</span><span class="fst">(</span><span class="op">{</span><span class="nam">verdict</span><span class="op">}</span><span class="fst">)&#51012; &#44592;&#47197;&#54664;&#49845;&#45768;&#45796;.</span><span class="fst">"</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t419" href="#t419">419</a></span><span class="t">            <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t416" href="#t416">416</a></span><span class="t">            <span class="nam">lines</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis mis2 show_mis"><span class="n"><a id="t417" href="#t417">417</a></span><span class="t">                <span class="fst">f"</span><span class="fst">&#51452;&#50836; &#53664;&#54589; </span><span class="op">{</span><span class="nam">n_clusters</span><span class="op">}</span><span class="fst">&#44060; &#51473; &#44557;&#51221; </span><span class="op">{</span><span class="nam">pos_n</span><span class="op">}</span><span class="fst">&#44148;, &#48512;&#51221; </span><span class="op">{</span><span class="nam">neg_n</span><span class="op">}</span><span class="fst">&#44148;&#51060; &#44048;&#51648;&#46104;&#50612; </span><span class="fst">"</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis mis2 show_mis"><span class="n"><a id="t418" href="#t418">418</a></span><span class="t">                <span class="fst">f"</span><span class="fst">&#51204;&#52404; &#49900;&#47532; &#51216;&#49688;&#44032; </span><span class="op">{</span><span class="nam">sentiment_sign</span><span class="op">}</span><span class="op">{</span><span class="nam">avg_sentiment</span><span class="op">:</span><span class="fst">.2f</span><span class="op">}</span><span class="fst">(</span><span class="op">{</span><span class="nam">verdict</span><span class="op">}</span><span class="fst">)&#51012; &#44592;&#47197;&#54664;&#49845;&#45768;&#45796;.</span><span class="fst">"</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis mis2 show_mis"><span class="n"><a id="t419" href="#t419">419</a></span><span class="t">            <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t420" href="#t420">420</a></span><span class="t">        <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t421" href="#t421">421</a></span><span class="t">            <span class="nam">lines</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="str">"&#53664;&#54589; &#53364;&#47084;&#49828;&#53552; &#45936;&#51060;&#53552; &#50630;&#51060; &#53412;&#50892;&#46300; &#44592;&#48152;&#51004;&#47196;&#47564; &#49900;&#47532;&#47484; &#48516;&#49437;&#54633;&#45768;&#45796;."</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t422" href="#t422">422</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -1713,8 +1713,8 @@
             <a class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
             <a class="nav" href="z_71968377c4619f9c_blockchain_api_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.13.1">coverage.py v7.13.1</a>,
-            created at 2026-03-31 09:16 +0000
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.13.5">coverage.py v7.13.5</a>,
+            created at 2026-04-02 09:33 +0000
         </p>
     </div>
 </footer>
