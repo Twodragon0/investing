@@ -163,7 +163,7 @@ def is_private_url(url: str) -> bool:
         return True  # Block on other unexpected errors
 
 
-_VERIFY_SSL: Optional = None
+_VERIFY_SSL: Optional[object] = None
 
 
 def _get_verify_ssl():
