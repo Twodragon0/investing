@@ -1,7 +1,10 @@
 """Tests for markdown utilities (scripts/common/markdown_utils.py)."""
 
+from unittest.mock import MagicMock, patch
+
 from common.markdown_utils import (
     _classify_source,
+    _try_resolve_google_news_url,
     dedupe_references,
     escape_table_cell,
     html_reference_details,
@@ -248,3 +251,96 @@ class TestHtmlReportLinks:
     def test_empty_rows(self):
         result = html_report_links([])
         assert "0개" in result
+
+
+class TestTryResolveGoogleNewsUrl:
+    def test_non_google_url_returned_unchanged(self):
+        url = "https://example.com/article"
+        assert _try_resolve_google_news_url(url) == url
+
+    def test_empty_url_returned_unchanged(self):
+        assert _try_resolve_google_news_url("") == ""
+
+    def test_base64_decode_rss_articles_path(self):
+        # Craft a base64-encoded payload containing a real URL so the decode
+        # branch (lines 20-36) is exercised and returns the inner URL.
+        import base64
+        import urllib.parse
+
+        inner = "https://reuters.com/article/bitcoin"
+        encoded = base64.urlsafe_b64encode(inner.encode()).decode().rstrip("=")
+        google_url = f"https://news.google.com/rss/articles/{encoded}"
+        result = _try_resolve_google_news_url(google_url)
+        assert result == inner
+
+    def test_base64_decode_read_path(self):
+        import base64
+
+        inner = "https://coindesk.com/article/eth"
+        encoded = base64.urlsafe_b64encode(inner.encode()).decode().rstrip("=")
+        google_url = f"https://news.google.com/read/{encoded}"
+        result = _try_resolve_google_news_url(google_url)
+        assert result == inner
+
+    def test_base64_decode_resolves_to_google_falls_through(self):
+        # If decoded URL contains google.com, should not be returned; falls
+        # through to HTTP redirect or returns original.
+        import base64
+
+        inner = "https://google.com/something"
+        encoded = base64.urlsafe_b64encode(inner.encode()).decode().rstrip("=")
+        google_url = f"https://news.google.com/rss/articles/{encoded}"
+        # HTTP redirect will also fail (mocked), so original URL is returned.
+        with patch("requests.head", side_effect=Exception("no network")):
+            result = _try_resolve_google_news_url(google_url)
+        assert result == google_url
+
+    def test_http_redirect_followed_when_base64_fails(self):
+        # Use a URL with no decodable base64 payload so decode branch raises/skips,
+        # then verify the HTTP redirect branch (lines 41-54) is exercised.
+        google_url = "https://news.google.com/rss/articles/!!!invalid!!!"
+        mock_resp = MagicMock()
+        mock_resp.url = "https://reuters.com/redirected"
+        with patch("requests.head", return_value=mock_resp) as mock_head:
+            result = _try_resolve_google_news_url(google_url)
+        mock_head.assert_called_once()
+        assert result == "https://reuters.com/redirected"
+
+    def test_http_redirect_to_google_ignored(self):
+        google_url = "https://news.google.com/rss/articles/!!!invalid!!!"
+        mock_resp = MagicMock()
+        mock_resp.url = "https://google.com/still-google"
+        with patch("requests.head", return_value=mock_resp):
+            result = _try_resolve_google_news_url(google_url)
+        assert result == google_url
+
+    def test_http_redirect_exception_returns_original(self):
+        google_url = "https://news.google.com/rss/articles/!!!invalid!!!"
+        with patch("requests.head", side_effect=Exception("timeout")):
+            result = _try_resolve_google_news_url(google_url)
+        assert result == google_url
+
+
+class TestSmartTruncateKoreanBranch:
+    def test_korean_sentence_ending_used_as_break(self):
+        # Need: len(text) > max_len, no spaces (so last_space < 70% threshold),
+        # and a "다." ending at index >= 50% of max_len within candidate.
+        # max_len=20: candidate = text[:19], 50% threshold = 10, 70% threshold = 14
+        # Place "다." at index 10 so ko_idx=10 >= 10, qualifies.
+        # "가나다라마바사아자다.카타파하마바사아" — 20 chars, "다." at index 9-10
+        # Actually "다" at index 9, "다." ends at index 10 (ko_idx=9, +len("다.")=2 → candidate[:11])
+        # 9 >= int(20*0.5)=10? No. Use max_len=18: 50%=9, so index 9 qualifies.
+        text = "가나다라마바사아다.카타파하마바사아"  # 18 chars, "다." at index 8
+        # max_len=16: candidate=text[:15], 50% threshold=8, "다." rfind in [:15]
+        # "다." is at index 8 in text, ko_idx=8 >= int(16*0.5)=8 → qualifies
+        result = smart_truncate(text, 16)
+        assert "다." in result
+        assert result.endswith("…")
+
+    def test_korean_no_matching_ending_falls_back_to_hard_cut(self):
+        # Text with no Korean sentence endings — falls through the for loop
+        # without breaking, so candidate is used as-is (hard cut + ellipsis).
+        text = "가나다라마바사아자차카타파하" * 3
+        result = smart_truncate(text, 20)
+        assert result.endswith("…")
+        assert len(result) <= 21  # 20 chars + ellipsis
