@@ -11,7 +11,7 @@
 | scripts/common/browser.py                       |      126 |        1 |     99% |        92 |
 | scripts/common/collector\_config.py             |       75 |       11 |     85% |26-28, 100-101, 136-138, 156-158 |
 | scripts/common/collector\_metrics.py            |       14 |        0 |    100% |           |
-| scripts/common/config.py                        |       82 |       32 |     61% |10-11, 36-38, 44-46, 56-96, 133-135 |
+| scripts/common/config.py                        |       85 |       35 |     59% |10-11, 36-38, 44-46, 56-98, 135-137 |
 | scripts/common/crypto\_api.py                   |       57 |        0 |    100% |           |
 | scripts/common/dedup.py                         |      144 |       10 |     93% |41, 77-78, 112, 130-136 |
 | scripts/common/enrichment.py                    |      665 |       68 |     90% |111-112, 156, 162-163, 287-292, 304, 308, 315, 318, 371, 388-392, 397, 402-403, 414-415, 420-425, 432-433, 443-444, 470-485, 519, 530-531, 551-552, 584, 644, 792, 828-829, 852, 861, 870, 1353, 1599, 1662, 1668 |
@@ -34,7 +34,7 @@
 | scripts/common/translator.py                    |      190 |        2 |     99% |  666, 679 |
 | scripts/common/utils.py                         |      118 |        3 |     97% |   101-103 |
 | scripts/common/worldmonitor\_utils.py           |        5 |        0 |    100% |           |
-| **TOTAL**                                       | **6388** |  **393** | **94%** |           |
+| **TOTAL**                                       | **6391** |  **396** | **94%** |           |
 
 
 ## Setup coverage badge
