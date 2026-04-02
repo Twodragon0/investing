@@ -53,7 +53,9 @@
   function highlightText(html) {
     if (!searchQuery || searchQuery.length < 2) return html;
     var escapedQuery = escapeHtml(searchQuery).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    return html.replace(new RegExp('(' + escapedQuery + ')', 'gi'), '<mark class="search-highlight">$1</mark>');
+    return html.replace(new RegExp('(' + escapedQuery + ')', 'gi'), function(_, m) {
+      return '<mark class="search-highlight">' + m + '</mark>';
+    });
   }
 
   function relativeTime(dateStr) {

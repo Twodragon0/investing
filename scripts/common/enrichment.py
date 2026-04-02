@@ -7,7 +7,6 @@ synthetic descriptions when actual content is unavailable.
 import ipaddress
 import logging
 import re
-import socket
 from difflib import SequenceMatcher
 from typing import Any, Dict, Optional
 from urllib.parse import urlparse
@@ -149,14 +148,19 @@ _SYNTHETIC_MARKERS = [
 
 def is_private_url(url: str) -> bool:
     """Check if URL resolves to a private/internal IP address."""
+    import socket as _socket
+
     try:
         hostname = urlparse(url).hostname
         if not hostname:
             return True
-        ip = socket.gethostbyname(hostname)
+        ip = _socket.gethostbyname(hostname)
         return ipaddress.ip_address(ip).is_private
+    except _socket.gaierror:
+        # DNS resolution failed — hostname doesn't exist, cannot be a private IP
+        return False
     except Exception:
-        return True  # Block on resolution failure
+        return True  # Block on other unexpected errors
 
 
 _VERIFY_SSL: Optional = None
@@ -543,6 +547,9 @@ def _fetch_og_image(url: str, timeout: int = 8) -> str:
             match = re.search(pattern, head_html, re.IGNORECASE)
             if match:
                 img_url = match.group(1).strip()
+                if not img_url.startswith(("http://", "https://")):
+                    logger.debug("og:image blocked unsafe scheme: %s", img_url[:80])
+                    continue
                 if _is_valid_image_url(img_url):
                     return img_url
     except Exception as exc:
@@ -1671,12 +1678,7 @@ def enrich_item(
                 counter[0] += 1
             metadata = _fetch_and_parse_page(fetch_link, title=title)
             fetched = metadata.get("description", "")
-            if (
-                fetched
-                and fetched != title
-                and len(fetched) > 20
-                and _is_title_related_description(title, fetched)
-            ):
+            if fetched and fetched != title and len(fetched) > 20 and _is_title_related_description(title, fetched):
                 item["description"] = _clean_html_content(fetched)
                 item.pop("_synthetic", None)
             # Extract og:image if not already set from RSS

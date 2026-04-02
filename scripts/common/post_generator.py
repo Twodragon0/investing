@@ -647,9 +647,11 @@ def _clean_description(desc: str) -> str:
     # Only match 2-3 digit numbers where first digit < second group (realistic ranges)
     desc = re.sub(
         r"(?<!\d)(?<![A-Za-z가-힣])([1-9])(\d{1,2})(개월|년|일|시간)",
-        lambda m: m.group(1) + "~" + m.group(2) + m.group(3)
-        if int(m.group(1)) < int(m.group(2)) and int(m.group(2)) <= 31
-        else m.group(0),
+        lambda m: (
+            m.group(1) + "~" + m.group(2) + m.group(3)
+            if int(m.group(1)) < int(m.group(2)) and int(m.group(2)) <= 31
+            else m.group(0)
+        ),
         desc,
     )
     # Remove HTML tags (replace with space to avoid concatenation artifacts)
