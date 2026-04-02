@@ -1,27 +1,5 @@
 {
   "seen": {
-    "0d4cb88d6e3c438d": "2026-03-03T14:11:07",
-    "41caa0604a9b3e30": "2026-03-03T14:11:07",
-    "c3cd3047d5ee4ff0": "2026-03-03T14:11:07",
-    "275b4e8db2d2328e": "2026-03-03T14:11:07",
-    "c8bfc4c5572d9887": "2026-03-03T14:11:07",
-    "69fad935e17262d5": "2026-03-03T14:11:07",
-    "91430e3a9402f6bf": "2026-03-03T14:11:07",
-    "da7514de152f4b5e": "2026-03-03T14:11:07",
-    "af115b445987f825": "2026-03-03T14:11:07",
-    "331a8e24ebbafaee": "2026-03-03T14:11:07",
-    "f37eb0a15d8013f8": "2026-03-03T14:11:07",
-    "a10c8cb0104c061b": "2026-03-03T14:11:07",
-    "cc0a0eb18afa5a1c": "2026-03-03T14:11:07",
-    "bb55c3e132aa7008": "2026-03-03T14:11:07",
-    "b0858f873c5f68e7": "2026-03-03T14:11:07",
-    "86a30be9498783eb": "2026-03-03T14:11:07",
-    "477f4b9a8a71e380": "2026-03-03T14:11:07",
-    "8a48a2e2414c1260": "2026-03-03T14:11:07",
-    "761729c0e8ea79fc": "2026-03-03T14:11:07",
-    "faf57f4113ae0184": "2026-03-03T14:11:07",
-    "47eb2c34a9e1a1dd": "2026-03-03T14:11:07",
-    "b7a0ca38559312a8": "2026-03-03T14:11:07",
     "c37115442db61497": "2026-03-04T02:27:12",
     "abece595a00af11c": "2026-03-04T02:27:12",
     "fd83e72fe40a1ca2": "2026-03-04T02:27:12",
@@ -592,7 +570,38 @@
     "61e59de67e5c94fbf38b7833": "2026-04-01T23:06:14",
     "09b090576f96d07fef30a48a": "2026-04-01T23:06:14",
     "e624e6615fffd38206bdc7a1": "2026-04-01T23:06:14",
-    "f732b9b7d134014adcd964b8": "2026-04-01T23:06:14"
+    "f732b9b7d134014adcd964b8": "2026-04-01T23:06:14",
+    "68f8e991acc152839a2659d9": "2026-04-02T23:01:33",
+    "f0cbb4b2a2f2a516f2b39c92": "2026-04-02T23:01:33",
+    "d6a5b9288bd02a3b8ca9f200": "2026-04-02T23:01:33",
+    "581c29afe137c0bd076515c3": "2026-04-02T23:01:33",
+    "19ab2ad31bed9350e3530948": "2026-04-02T23:01:33",
+    "71675037437c35342b1948bb": "2026-04-02T23:01:33",
+    "538acbd8dd442d523abbe4c9": "2026-04-02T23:01:33",
+    "88158a870731c978432279dc": "2026-04-02T23:01:33",
+    "ccd0d524939b4904c0dff853": "2026-04-02T23:01:33",
+    "a57375910fc943be2e3b1724": "2026-04-02T23:01:33",
+    "5d8a2aa526f4a11fe1cf2444": "2026-04-02T23:01:33",
+    "a2598aba0ff584d3bd02cb19": "2026-04-02T23:01:33",
+    "20d8b130225ae02ec7e44bd6": "2026-04-02T23:01:33",
+    "1619ae40a6f5473eb2fb3893": "2026-04-02T23:01:33",
+    "b5b4f053e4edb311a4fd7888": "2026-04-02T23:01:33",
+    "c5fe5949545629cb45c609c2": "2026-04-02T23:01:33",
+    "510ded8bb6db69d2a727dd2f": "2026-04-02T23:01:33",
+    "01b2282995c951d0004d4ad9": "2026-04-02T23:01:33",
+    "39e3b20d5e0bb3b1dcfb36a1": "2026-04-02T23:01:33",
+    "d73d55ecbfc15b9574785f61": "2026-04-02T23:01:33",
+    "f8686ac4c2d278c84d0aaf75": "2026-04-02T23:01:33",
+    "270bdc47f5f901f1b4d9f68f": "2026-04-02T23:01:33",
+    "aec86a1b90aa210c3d277b00": "2026-04-02T23:01:33",
+    "7413ee06508eb202afeee8fe": "2026-04-02T23:01:33",
+    "2cd0e7ee41c508f0a49783e1": "2026-04-02T23:01:33",
+    "b055907bd574771d4d0e0abf": "2026-04-02T23:01:33",
+    "0ecb760699dd2e517ea3997b": "2026-04-02T23:01:33",
+    "4750dd96a47d53be4c645ddb": "2026-04-02T23:01:33",
+    "17a5f0aa8f444e28dc6de7de": "2026-04-02T23:01:33",
+    "6ce2c04e507c608f813c651a": "2026-04-02T23:01:33",
+    "cee2778bf8d1fd5cdea9efdf": "2026-04-02T23:01:33"
   },
   "titles": [
     [
@@ -4274,6 +4283,138 @@
     [
       "정치인 거래정책 리포트 20260402",
       "2026-04-02"
+    ],
+    [
+      "insider sales at yelp nyse yelp craig saldanha reports three 1200share dispositions stock titan",
+      "2026-04-03"
+    ],
+    [
+      "form 4 post holdings inc insider trading activity stock titan",
+      "2026-04-03"
+    ],
+    [
+      "form 4 first merchants corp insider trading activity stock titan",
+      "2026-04-03"
+    ],
+    [
+      "form 4 first merchants corp insider trading activity stock titan",
+      "2026-04-03"
+    ],
+    [
+      "form 4 universal display corp pa insider trading activity stock titan",
+      "2026-04-03"
+    ],
+    [
+      "form 4 take two interactive software inc insider trading activity stock titan",
+      "2026-04-03"
+    ],
+    [
+      "form 4 mgm resorts international insider trading activity stock titan",
+      "2026-04-03"
+    ],
+    [
+      "form 4 solana co insider trading activity stock titan",
+      "2026-04-03"
+    ],
+    [
+      "merit medical nasdaq mmsi director fred lampropoulos files form 4 with no trades stock titan",
+      "2026-04-03"
+    ],
+    [
+      "form 4 chart industries inc insider trading activity stock titan",
+      "2026-04-03"
+    ],
+    [
+      "form 4 twfg inc insider trading activity stock titan",
+      "2026-04-03"
+    ],
+    [
+      "form 4 clevelandcliffs inc insider trading activity stock titan",
+      "2026-04-03"
+    ],
+    [
+      "form 4 universal display corp pa insider trading activity stock titan",
+      "2026-04-03"
+    ],
+    [
+      "form 4 entegris inc insider trading activity stock titan",
+      "2026-04-03"
+    ],
+    [
+      "form 4 senseonics holdings inc insider trading activity stock titan",
+      "2026-04-03"
+    ],
+    [
+      "form 4 nuvalent inc insider trading activity stock titan",
+      "2026-04-03"
+    ],
+    [
+      "trump slaps 100 tariff on some pharmaceutical drugs via executive order",
+      "2026-04-03"
+    ],
+    [
+      "trump signs order imposing 100 percent tariff on brand name drugs the hill",
+      "2026-04-03"
+    ],
+    [
+      "a liberation day ultimatum for trump news article independent institute",
+      "2026-04-03"
+    ],
+    [
+      "trump signs order threatening up to 100 tariffs on pharmaceuticals france 24",
+      "2026-04-03"
+    ],
+    [
+      "trump revamps metal and pharmaceutical tariffs",
+      "2026-04-03"
+    ],
+    [
+      "gretchen whitmer signs executive order for tariff refunds wnem",
+      "2026-04-03"
+    ],
+    [
+      "trump sets 100 drug tariffs on companies that havent lowered prices",
+      "2026-04-03"
+    ],
+    [
+      "a year after liberation day what did trumps tariffs achieve",
+      "2026-04-03"
+    ],
+    [
+      "white house trade rep greer speaks after tariff eos signed by president trump cspan",
+      "2026-04-03"
+    ],
+    [
+      "trump signs order to put 100 tariffs on drugs countries without pharma trade deals endpoints news",
+      "2026-04-03"
+    ],
+    [
+      "liberation day led to trade deals a year of missed opportunities",
+      "2026-04-03"
+    ],
+    [
+      "trumps mercurial constantly changing import taxes took american businesses on a wild ride reason magazine",
+      "2026-04-03"
+    ],
+    [
+      "trump imposes 100 per cent tariff on australian drugs but with caveats smhcomau",
+      "2026-04-03"
+    ],
+    [
+      "양산 선출직 공직자 재산 보유 순위는 양산신문",
+      "2026-04-03"
+    ],
+    [
+      "고위공직자 재산공개정점식 국회의원 83억 5천 최을석 의장 16억 3천 순 고성미래신문",
+      "2026-04-03"
+    ],
+    [
+      "전문가들 4월 기준금리 동결 한 목소리하반기 전망엔 절반이 인상 가능성 금통위폴 supplekr",
+      "2026-04-03"
+    ],
+    [
+      "정치인 거래정책 리포트 20260403",
+      "2026-04-03"
     ]
   ],
   "seen_urls": {}
