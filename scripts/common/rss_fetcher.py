@@ -285,7 +285,7 @@ def fetch_rss_feed(
                     if candidate_orig and is_safe_url(candidate_orig):
                         original_url = candidate_orig
 
-                if link_val and urlparse(link_val).netloc in _GOOGLE_NEWS_HOSTS:
+                if link_val and urlparse(str(link_val)).netloc in _GOOGLE_NEWS_HOSTS:
                     resolved_google_url = _resolve_google_news_url(link_val)
                     if resolved_google_url:
                         original_url = original_url or resolved_google_url
