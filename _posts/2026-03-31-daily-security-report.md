@@ -7,7 +7,7 @@ tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-security-report-2026-03-31.png"
+image: "/assets/images/generated/news-briefing-security-2026-03-31.png"
 permalink: "/security-alerts/2026/03/31/daily-security-report/"
 description: "보안 알림: 블록체인 보안 리포트. 주요 보안 사고와 시장 신뢰에 미칠 영향을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "1. HIGH [우라늄 금융 해킹: 미국 검찰, 5400만 달러 디파이 악용 혐의로 기소 - MEXC](https://news - Investing Dragon 자동 수집 분석…"

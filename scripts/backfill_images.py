@@ -490,8 +490,25 @@ def _load_image_generator():
         return _IMG_GEN_MOD
     _IMG_GEN_LOADED = True
     try:
-        img_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "common", "image_generator.py")
-        spec = importlib.util.spec_from_file_location("image_generator", img_path)
+        common_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "common")
+
+        # New layout: scripts/common/image_generator/__init__.py (package)
+        pkg_init = os.path.join(common_dir, "image_generator", "__init__.py")
+        if os.path.exists(pkg_init):
+            spec = importlib.util.spec_from_file_location(
+                "common.image_generator",
+                pkg_init,
+                submodule_search_locations=[os.path.join(common_dir, "image_generator")],
+            )
+            assert spec is not None and spec.loader is not None
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            _IMG_GEN_MOD = mod
+            return mod
+
+        # Legacy layout: scripts/common/image_generator.py (module)
+        legacy_path = os.path.join(common_dir, "image_generator.py")
+        spec = importlib.util.spec_from_file_location("image_generator", legacy_path)
         assert spec is not None and spec.loader is not None
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
