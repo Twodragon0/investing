@@ -6,6 +6,7 @@ Sources:
   - GET /pools - All yield pools with APY data (pool, chain, project, symbol, tvlUsd, apy, etc.)
 """
 
+import logging
 import os
 import sys
 import time
@@ -22,6 +23,8 @@ from common.config import REQUEST_TIMEOUT
 from common.markdown_utils import html_reference_details, markdown_link, markdown_table
 from common.post_generator import build_dated_permalink
 from common.utils import request_with_retry
+
+_log = logging.getLogger(__name__)
 
 # collectors.yml에서 설정 로드 (없으면 하드코딩 기본값으로 폴백)
 _yields_cfg = get_collector_config("defi_yields")
@@ -72,9 +75,11 @@ def fetch_pools(verify_ssl: bool = True) -> List[Dict[str, Any]]:
             return []
 
         return pools
-    except requests.exceptions.RequestException:
+    except requests.exceptions.RequestException as e:
+        _log.warning("DeFi yields API request failed: %s", e)
         return []
-    except (ValueError, KeyError):
+    except (ValueError, KeyError) as e:
+        _log.warning("DeFi yields API parse error: %s", e)
         return []
 
 

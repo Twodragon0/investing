@@ -9,6 +9,7 @@ Sources:
 - Central bank policy decisions (Google News RSS)
 """
 
+import logging
 import os
 import re
 import sys
@@ -35,6 +36,8 @@ from common.post_generator import build_dated_permalink
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.translator import get_display_title
 from common.utils import request_with_retry
+
+_log = logging.getLogger(__name__)
 
 # collectors.yml에서 설정 로드
 _political_cfg = get_collector_config("political_trades")
@@ -143,8 +146,8 @@ def fetch_sec_insider_trades(verify_ssl: bool = True) -> List[Dict[str, Any]]:
                         "tags": ["political-trades", "sec", "form4", "insider"],
                     }
                 )
-    except (requests.exceptions.RequestException, ValueError, KeyError):
-        pass
+    except (requests.exceptions.RequestException, ValueError, KeyError) as e:
+        _log.warning("SEC EDGAR request failed: %s", e)
 
     return items
 
