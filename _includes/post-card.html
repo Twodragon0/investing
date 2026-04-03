@@ -16,7 +16,58 @@
     {% endif %}
     {% else %}
     <div class="thumb-category-icon cat-bg-{{ pc_cat | slugify }}">
-      <span class="thumb-icon-label">{{ pc_cat_name | truncate: 10, "" }}</span>
+      {% case pc_cat %}
+      {% when 'crypto-news' %}
+      <svg class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+        <text x="20" y="26" text-anchor="middle" font-size="18" font-weight="700" fill="currentColor" opacity="0.55">₿</text>
+      </svg>
+      {% when 'stock-news' %}
+      <svg class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polyline points="6,30 14,18 20,24 28,12 34,16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+      </svg>
+      {% when 'regulatory-news' %}
+      <svg class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="8" width="20" height="26" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+        <line x1="14" y1="15" x2="26" y2="15" stroke="currentColor" stroke-width="1.2" opacity="0.55"/>
+        <line x1="14" y1="20" x2="26" y2="20" stroke="currentColor" stroke-width="1.2" opacity="0.55"/>
+        <line x1="14" y1="25" x2="20" y2="25" stroke="currentColor" stroke-width="1.2" opacity="0.55"/>
+      </svg>
+      {% when 'political-trades' %}
+      <svg class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 8 L34 34 H6 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" opacity="0.4"/>
+        <line x1="20" y1="16" x2="20" y2="26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+        <circle cx="20" cy="29" r="1.2" fill="currentColor" opacity="0.55"/>
+      </svg>
+      {% when 'security-alerts' %}
+      <svg class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 6 L32 11 V21 C32 28 20 35 20 35 C20 35 8 28 8 21 V11 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" opacity="0.4"/>
+        <line x1="20" y1="16" x2="20" y2="23" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.55"/>
+        <circle cx="20" cy="27" r="1.2" fill="currentColor" opacity="0.55"/>
+      </svg>
+      {% when 'worldmonitor' %}
+      <svg class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+        <ellipse cx="20" cy="20" rx="6" ry="14" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+        <line x1="6" y1="20" x2="34" y2="20" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+        <line x1="8" y1="14" x2="32" y2="14" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+        <line x1="8" y1="26" x2="32" y2="26" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+      </svg>
+      {% when 'blockchain' %}
+      <svg class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="6" y="14" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
+        <rect x="24" y="14" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
+        <rect x="15" y="26" width="10" height="8" rx="2" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
+        <line x1="16" y1="19" x2="24" y2="19" stroke="currentColor" stroke-width="1.2" opacity="0.45"/>
+        <line x1="20" y1="24" x2="20" y2="26" stroke="currentColor" stroke-width="1.2" opacity="0.45"/>
+      </svg>
+      {% else %}
+      <svg class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+        <polyline points="13,20 18,25 27,15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+      </svg>
+      {% endcase %}
+      <span class="thumb-icon-label">{{ pc_cat_name | truncate: 12, "" }}</span>
     </div>
     {% endif %}
   </div>
@@ -34,9 +85,9 @@
   </div>
   <h3>{{ post.title }}</h3>
   {% if post.description and post.description != "" %}
-    <p class="post-excerpt">{{ post.description | truncate: 150 }}</p>
+    <p class="post-excerpt">{{ post.description | truncate: 220 }}</p>
   {% elsif post.excerpt %}
-    <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+    <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 220 }}</p>
   {% endif %}
   <div class="post-card-footer">
     {% if post.tags.size > 0 %}

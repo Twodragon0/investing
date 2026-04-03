@@ -125,6 +125,36 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+
+  // Grid layout: 2-column on wide viewports when cards have images
+  &.posts-list--grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.25rem;
+    align-items: start;
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// On the homepage / index, auto-switch to 2-col grid when viewport is wide
+@media (min-width: 900px) {
+  .recent-posts .posts-list,
+  .posts-grid .posts-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    align-items: start;
+  }
+}
+
+@media (min-width: 1060px) {
+  .recent-posts .posts-list,
+  .posts-grid .posts-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .post-card {
@@ -151,6 +181,27 @@
     transition: opacity 0.2s ease;
     border-radius: 12px 0 0 12px;
   }
+
+  /* Category-specific accent bar colors */
+  &.cat-border-crypto-news::before          { background: $cat-crypto; }
+  &.cat-border-stock-news::before           { background: $cat-stock; }
+  &.cat-border-crypto-trading-journal::before,
+  &.cat-border-stock-trading-journal::before { background: $cat-journal; }
+  &.cat-border-security-alerts::before      { background: $cat-security; }
+  &.cat-border-market-analysis::before      { background: $cat-analysis; }
+  &.cat-border-regulatory-news::before      { background: $cat-regulatory; }
+  &.cat-border-political-trades::before     { background: $cat-political; }
+  &.cat-border-social-media::before         { background: $cat-social; }
+  &.cat-border-worldmonitor::before         { background: $cat-worldmonitor; }
+  &.cat-border-blockchain::before           { background: $cat-blockchain; }
+
+  /* Category-specific hover border glow */
+  &.cat-border-crypto-news:hover            { border-color: rgba($cat-crypto, 0.45); box-shadow: 0 4px 20px rgba(0,0,0,0.22), 0 0 0 1px rgba($cat-crypto, 0.12); }
+  &.cat-border-stock-news:hover             { border-color: rgba($cat-stock, 0.45); box-shadow: 0 4px 20px rgba(0,0,0,0.22), 0 0 0 1px rgba($cat-stock, 0.12); }
+  &.cat-border-security-alerts:hover        { border-color: rgba($cat-security, 0.45); box-shadow: 0 4px 20px rgba(0,0,0,0.22), 0 0 0 1px rgba($cat-security, 0.12); }
+  &.cat-border-regulatory-news:hover        { border-color: rgba($cat-regulatory, 0.45); box-shadow: 0 4px 20px rgba(0,0,0,0.22), 0 0 0 1px rgba($cat-regulatory, 0.12); }
+  &.cat-border-worldmonitor:hover           { border-color: rgba($cat-worldmonitor, 0.45); box-shadow: 0 4px 20px rgba(0,0,0,0.22), 0 0 0 1px rgba($cat-worldmonitor, 0.12); }
+  &.cat-border-blockchain:hover             { border-color: rgba($cat-blockchain, 0.45); box-shadow: 0 4px 20px rgba(0,0,0,0.22), 0 0 0 1px rgba($cat-blockchain, 0.12); }
 
   &:hover {
     border-color: rgba($accent-blue, 0.5);
@@ -208,8 +259,13 @@
 
   .post-excerpt {
     color: $text-secondary;
-    font-size: 0.85rem;
-    line-height: 1.55;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 0.25rem;
   }
 
   .post-desc-hint {
@@ -315,7 +371,7 @@
 
 // 포스트 카드 썸네일
 .post-card-thumb {
-  height: 160px;
+  height: 190px;
   overflow: hidden;
   border-radius: 8px 8px 0 0;
   margin: -1.15rem -1.4rem 0.85rem -1.4rem;
@@ -326,7 +382,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.35s ease;
     display: block;
   }
 
@@ -335,8 +391,10 @@
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 0.5rem;
     background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-card) 100%);
     position: relative;
 
@@ -345,17 +403,40 @@
       position: absolute;
       inset: 0;
       background: radial-gradient(circle at 30% 40%, rgba(88, 166, 255, 0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .thumb-icon-svg {
+      width: 44px;
+      height: 44px;
+      color: var(--text-secondary);
+      position: relative;
+      z-index: 1;
+      flex-shrink: 0;
     }
 
     .thumb-icon-label {
-      font-size: 0.85rem;
+      font-size: 0.72rem;
       font-weight: 600;
       color: var(--text-secondary);
-      letter-spacing: 0.05em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      opacity: 0.7;
+      opacity: 0.6;
+      position: relative;
+      z-index: 1;
     }
   }
+
+  // Category icon color tinting
+  .cat-bg-crypto-news .thumb-icon-svg        { color: $cat-crypto; }
+  .cat-bg-stock-news .thumb-icon-svg         { color: $cat-stock; }
+  .cat-bg-regulatory-news .thumb-icon-svg    { color: $cat-regulatory; }
+  .cat-bg-political-trades .thumb-icon-svg   { color: $cat-political; }
+  .cat-bg-security-alerts .thumb-icon-svg    { color: $cat-security; }
+  .cat-bg-worldmonitor .thumb-icon-svg       { color: $cat-worldmonitor; }
+  .cat-bg-blockchain .thumb-icon-svg         { color: $cat-blockchain; }
+  .cat-bg-market-analysis .thumb-icon-svg    { color: $cat-analysis; }
+  .cat-bg-social-media .thumb-icon-svg       { color: $cat-social; }
 
   // 카테고리별 플레이스홀더 배경 그라데이션
   .cat-bg-crypto-news { background: linear-gradient(135deg, var(--bg-secondary), rgba($cat-crypto, 0.1)); }
@@ -382,7 +463,7 @@
 
 @media (max-width: 480px) {
   .post-card-thumb {
-    height: 120px;
+    height: 140px;
   }
 }
 
@@ -425,6 +506,35 @@
 
   &:hover {
     background: rgba(77, 166, 255, 0.2);
+  }
+}
+
+/* ================================
+   POST HERO IMAGE - Non-journal posts
+   ================================ */
+.post-hero-image {
+  margin: 0 0 2.5rem;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 1200 / 630;
+  background: var(--bg-secondary);
+  border: 1px solid rgba($border-color, 0.35);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+
+  picture,
+  .post-hero-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.4s ease;
+  }
+
+  &:hover picture img,
+  &:hover .post-hero-img {
+    transform: scale(1.02);
   }
 }
 
@@ -1408,21 +1518,21 @@
     // News card item (featured articles)
     .news-card-item {
       display: flex;
-      gap: 0.75rem;
+      gap: 0.85rem;
       align-items: flex-start;
-      padding: 0.85rem 1rem;
-      margin: 0.5rem 0;
-      border-radius: 10px;
-      background: rgba($bg-secondary, 0.25);
+      padding: 1rem 1.1rem;
+      margin: 0.6rem 0;
+      border-radius: 12px;
+      background: rgba($bg-secondary, 0.22);
       border: 1px solid rgba($border-color, 0.2);
       border-left: 3px solid transparent;
       transition: all 0.25s ease;
 
       &:hover {
-        background: rgba($bg-secondary, 0.4);
+        background: rgba($bg-secondary, 0.42);
         border-left-color: $accent-blue;
         transform: translateX(4px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
       }
 
       .news-card-num {
@@ -1442,18 +1552,24 @@
 
       .news-card-thumb {
         flex-shrink: 0;
-        width: 80px;
-        height: 56px;
-        border-radius: 6px;
+        width: 110px;
+        height: 74px;
+        border-radius: 8px;
         overflow: hidden;
         background: rgba($bg-secondary, 0.4);
+        border: 1px solid rgba($border-color, 0.15);
 
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
           display: block;
+          transition: transform 0.3s ease;
         }
+      }
+
+      &:hover .news-card-thumb img {
+        transform: scale(1.05);
       }
 
       .news-card-body {
@@ -1464,11 +1580,12 @@
       .news-title {
         display: inline-block;
         font-weight: 600;
-        font-size: 0.95rem;
+        font-size: 0.98rem;
         color: $text-primary;
-        line-height: 1.45;
+        line-height: 1.5;
         text-decoration: none;
         transition: color 0.2s ease;
+        word-break: keep-all;
 
         &:hover {
           color: $accent-blue;
@@ -1484,13 +1601,13 @@
 
       .news-severity {
         display: inline-block;
-        padding: 0.15rem 0.45rem;
-        border-radius: 4px;
-        font-size: 0.65rem;
+        padding: 0.2rem 0.5rem;
+        border-radius: 5px;
+        font-size: 0.68rem;
         font-weight: 800;
         letter-spacing: 0.04em;
         color: #fff;
-        margin-bottom: 0.3rem;
+        margin-bottom: 0.35rem;
         vertical-align: middle;
       }
 
@@ -1507,14 +1624,15 @@
       }
 
       .news-desc {
-        margin: 0.3rem 0 0.4rem;
-        font-size: 0.88rem;
-        color: rgba($text-primary, 0.75);
-        line-height: 1.55;
+        margin: 0.4rem 0 0.5rem;
+        font-size: 0.9rem;
+        color: rgba($text-primary, 0.78);
+        line-height: 1.6;
         display: -webkit-box;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
         overflow: hidden;
+        word-break: keep-all;
       }
 
       .source-tag {
@@ -1868,19 +1986,20 @@
     .wm-issue-card {
       display: flex;
       align-items: flex-start;
-      gap: 0.75rem;
-      padding: 0.85rem 1rem;
-      margin-bottom: 0.5rem;
-      border-radius: 10px;
-      border: 1px solid rgba($border-color, 0.2);
-      border-left: 3px solid rgba($border-color, 0.3);
-      background: rgba($bg-secondary, 0.25);
-      transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+      gap: 0.85rem;
+      padding: 1rem 1.15rem;
+      margin-bottom: 0.6rem;
+      border-radius: 12px;
+      border: 1px solid rgba($border-color, 0.22);
+      border-left: 4px solid rgba($border-color, 0.3);
+      background: rgba($bg-secondary, 0.2);
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 
       &:hover {
-        background: rgba($bg-secondary, 0.45);
-        border-color: rgba($accent-blue, 0.3);
-        transform: translateX(2px);
+        background: rgba($bg-secondary, 0.42);
+        border-color: rgba($accent-blue, 0.35);
+        transform: translateX(3px);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
       }
 
       // Impact-based left border color
@@ -1897,8 +2016,8 @@
 
     .wm-issue-num {
       flex-shrink: 0;
-      width: 2rem;
-      height: 2rem;
+      width: 2.2rem;
+      height: 2.2rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1906,7 +2025,7 @@
       background: rgba($accent-blue, 0.12);
       color: $accent-blue;
       font-weight: 700;
-      font-size: 0.85rem;
+      font-size: 0.88rem;
     }
 
     .wm-issue-body {
@@ -1915,14 +2034,16 @@
     }
 
     .wm-issue-title {
-      font-size: 0.92rem;
-      line-height: 1.5;
+      font-size: 0.98rem;
+      line-height: 1.55;
       color: $text-primary;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.45rem;
+      word-break: keep-all;
 
       a {
         color: $text-primary;
         text-decoration: none;
+        transition: color 0.2s ease;
         &:hover { color: $accent-blue; }
       }
     }
@@ -1930,12 +2051,13 @@
     .wm-issue-meta {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
-      font-size: 0.78rem;
+      gap: 0.55rem;
+      font-size: 0.8rem;
+      align-items: center;
     }
 
     .wm-issue-theme {
-      padding: 0.18rem 0.55rem;
+      padding: 0.22rem 0.6rem;
       border-radius: 6px;
       background: rgba($accent-blue, 0.1);
       color: $accent-blue;
@@ -1945,9 +2067,9 @@
 
     .wm-issue-impact {
       font-weight: 700;
-      padding: 0.18rem 0.45rem;
+      padding: 0.22rem 0.5rem;
       border-radius: 6px;
-      font-size: 0.75rem;
+      font-size: 0.78rem;
 
       &[style*="#f85149"] {
         background: rgba(#f85149, 0.12);
@@ -1961,8 +2083,8 @@
     }
 
     .wm-issue-source {
-      color: rgba($text-primary, 0.45);
-      font-size: 0.75rem;
+      color: rgba($text-primary, 0.5);
+      font-size: 0.78rem;
     }
 
     // WorldMonitor source coverage
@@ -2421,6 +2543,109 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
+}
+
+.related-post-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba($bg-card, 0.7);
+  border: 1px solid rgba($border-color, 0.45);
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color $transition-fast, box-shadow $transition-fast, transform $transition-fast;
+
+  &:hover {
+    border-color: rgba($accent-blue, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .related-post-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 7;
+    overflow: hidden;
+    background: var(--bg-secondary);
+    flex-shrink: 0;
+
+    picture,
+    .related-post-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform $transition-normal;
+    }
+
+    &--placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-card) 100%);
+
+      .related-thumb-label {
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--text-secondary);
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &:hover .related-post-thumb picture,
+  &:hover .related-post-img {
+    transform: scale(1.04);
+  }
+
+  .related-post-body {
+    padding: 0.85rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    flex: 1;
+  }
+
+  .related-post-category {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.45;
+    color: $text-primary;
+    margin: 0.1rem 0 0.2rem;
+  }
+
+  &:hover h4 {
+    color: $accent-blue;
+  }
+
+  .related-post-excerpt {
+    font-size: 0.78rem;
+    color: $text-secondary;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  time {
+    font-size: 0.72rem;
+    color: $text-secondary;
+    margin-top: auto;
+    padding-top: 0.4rem;
+  }
 }
 /* ================================
    LATEST NEWS SECTION
