@@ -238,6 +238,7 @@ def generate_tvl_chart_image(
             _MPL_AVAILABLE,
             COLORS,
             IMAGES_DIR,
+            _convert_to_avif,
             _convert_to_webp,
             _ensure_dir,
         )
@@ -606,8 +607,9 @@ def generate_tvl_chart_image(
         )
         plt.close(fig)
 
-        # Generate WebP version for smaller file size
+        # Generate WebP and AVIF versions for smaller file size
         _convert_to_webp(filepath)
+        _convert_to_avif(filepath)
 
         logger.info("Generated DeFi TVL dashboard: %s", filename)
         return f"/assets/images/generated/{filename}"

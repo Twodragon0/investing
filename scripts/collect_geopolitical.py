@@ -7,6 +7,7 @@ Sources:
 - Google News RSS (English + Korean): geopolitical risk investment news
 """
 
+import logging
 import os
 import sys
 import time
@@ -35,6 +36,8 @@ from common.markdown_utils import (
 from common.post_generator import build_dated_permalink
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.utils import request_with_retry, sanitize_string, truncate_text
+
+_log = logging.getLogger(__name__)
 
 # collectors.yml에서 설정 로드
 _geo_cfg = get_collector_config("geopolitical")
@@ -143,10 +146,10 @@ def fetch_polymarket(limit: Optional[int] = None, verify_ssl: bool = True) -> Li
                     }
                 )
 
-        except requests.exceptions.RequestException:
-            pass
-        except (ValueError, KeyError):
-            pass
+        except requests.exceptions.RequestException as e:
+            _log.warning("Polymarket request failed for tag '%s': %s", tag, e)
+        except (ValueError, KeyError) as e:
+            _log.warning("Polymarket parse error for tag '%s': %s", tag, e)
 
     # Sort by volume descending, limit results
     items.sort(key=lambda x: x.get("volume", 0), reverse=True)
@@ -257,10 +260,10 @@ def fetch_gdelt(limit: int = 30, verify_ssl: bool = True) -> List[Dict[str, Any]
                 }
             )
 
-    except requests.exceptions.RequestException:
-        pass
-    except (ValueError, KeyError):
-        pass
+    except requests.exceptions.RequestException as e:
+        _log.warning("GDELT request failed: %s", e)
+    except (ValueError, KeyError) as e:
+        _log.warning("GDELT parse error: %s", e)
 
     return items
 
@@ -444,9 +447,9 @@ def _build_polymarket_section(markets: List[Dict[str, Any]]) -> tuple:
         m for m in markets if not any(kw in m.get("title", "").lower() for kw in _ENTERTAINMENT_KEYWORDS)
     ]
     filtered_markets = [m for m in non_entertainment if any(kw in m.get("title", "").lower() for kw in _GEO_KEYWORDS)]
-    # Fall back to non-entertainment only (never re-include entertainment/sports)
-    if len(filtered_markets) < 3 and non_entertainment:
-        filtered_markets = non_entertainment
+    # Fall back to non-entertainment if available, otherwise full market list as last resort
+    if len(filtered_markets) < 3:
+        filtered_markets = non_entertainment if non_entertainment else markets
 
     lines = []
     rows = []
