@@ -108,10 +108,18 @@
     content-visibility: auto;
     contain-intrinsic-size: auto 300px;
   }
-  /* 포스트 카드 thumb 영역 최소 높이 예약으로 CLS 방지 */
+  /* 포스트 카드 thumb 영역 높이 예약으로 CLS 방지 및 논블로킹 CSS 대응 */
   .post-card-thumb {
-    min-height: 0;
+    height: 160px;
     overflow: hidden;
+  }
+  .post-card-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @media (max-width: 480px) {
+    .post-card-thumb { height: 120px; }
   }
   /* date-group 렌더링 containment */
   .date-group {
