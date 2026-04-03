@@ -2415,6 +2415,86 @@
     text-align: left;
   }
 }
+
+/* ================================
+   MOBILE 640px - Grid collapse
+   ================================ */
+@media (max-width: 640px) {
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .post-detail .trading-journal-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .post-detail .trading-journal-hero-image {
+    max-width: 100%;
+  }
+}
+
+/* ================================
+   MOBILE 480px - Compact layout
+   ================================ */
+@media (max-width: 480px) {
+  .post-card .post-excerpt {
+    -webkit-line-clamp: 3;
+  }
+
+  .post-card-thumb {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .post-detail .post-content .news-card-item .news-card-thumb {
+    width: 72px;
+    height: 48px;
+  }
+
+  .post-detail .post-content .news-card-item:hover,
+  .post-detail .post-content .wm-issue-card:hover {
+    transform: none;
+  }
+
+  .post-detail .trading-journal-summary-notes {
+    grid-template-columns: 1fr;
+  }
+
+  .post-detail .post-content .wm-issue-card {
+    padding: 0.75rem 0.85rem;
+    gap: 0.6rem;
+  }
+
+  .post-detail .post-content .wm-issue-num {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 0.78rem;
+  }
+}
+
+/* ================================
+   MOBILE 375px - Narrow devices
+   ================================ */
+@media (max-width: 375px) {
+  .post-card {
+    padding: 1rem 1rem;
+  }
+
+  .post-card-thumb {
+    margin: -0.9rem -0.9rem 0.75rem -0.9rem;
+    width: calc(100% + 1.8rem);
+  }
+
+  .post-detail .post-content .news-card-item .news-card-thumb {
+    display: none;
+  }
+
+  .post-detail .post-content .wm-source-row {
+    grid-template-columns: 1fr auto;
+    .wm-source-bar-track { display: none; }
+  }
+}
+
 /* ================================
    POST BREADCRUMB
    ================================ */
