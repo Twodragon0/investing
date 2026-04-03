@@ -6,7 +6,7 @@
   "outputDirectory": "_site",
   "regions": ["icn1"],
   "trailingSlash": true,
-  "ignoreCommand": "",
+  "ignoreCommand": "if [ \"$VERCEL_GIT_COMMIT_REF\" != \"main\" ]; then exit 0; fi; exit 1",
   "redirects": [
     {
       "source": "/investing/:path*",
