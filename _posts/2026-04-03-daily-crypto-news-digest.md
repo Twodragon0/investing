@@ -57,41 +57,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-03 - 암호화폐 뉴스 요
 <li><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE1wRDNya3E1aWZPT3ljR0RxZHpmUldPYTUyaFZGUjVpWkVTUFMwd2w4eXA2d1Jmc211TE5jSzNZcktmdWpMUVltZVpEZ2s0RmRzb3c?oc=5">“비트코인을 왜 안전하다고 하죠?”…빠르면 3년내 해킹 가능하다는 구글 - 매일경제 마켓</a> <span class="p0-desc">“비트코인을 왜 안전하다고 하죠?”…빠르면 3년내 해킹 가능하다는 구글 매일경제 마켓</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: De-Fi 플랫폼 Drift가 해킹으로 수백만 달러의 암호화폐를 도난당한 후 입출금을 중단했습니다. 
-외 P0 긴급 이슈 6건이 추가 감지되었습니다. 총 100건의 뉴스 중 P1 주요 이슈도 19건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (40건): 비트코인, 트럼프, 구글 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **🏦 거래소** (19건): 승인 이슈가 부각되며 해당 섹터의 단기 변동성 확대 가능성이 있습니다.
-- **🔴 보안/해킹** (11건): 솔라나 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- De-Fi 플랫폼 Drift가 해킹으로 수백만 달러의 암호화폐를 도난당한 후 입출금을 중단했습니다.
-- 5,300만 달러 규모의 암호화폐 해킹으로 Rockville Man이 기소되다 - The MoCo Show -
-- “비트코인을 왜 안전하다고 하죠?”…빠르면 3년내 해킹 가능하다는 구글 - 매일경제 마켓
-
-### 주요 이슈
-
-- 비트코인 3월 턴어라운드 이후 ETF, 새로운 암호화폐 SPAC 출시
-- 마감일 도착: Maine 비트코인 ATM 사기 피해자는 여전히 합의금을 청구할 수 있습니다.
-- 암호화폐 시장 업데이트: CoinShares, SPAC 거래를 통해 나스닥 데뷔
-- 외 16건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Decrypt(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-04-03.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-04-03.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 🔴 보안/해킹
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
