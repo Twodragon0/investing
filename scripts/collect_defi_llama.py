@@ -238,9 +238,8 @@ def generate_tvl_chart_image(
             _MPL_AVAILABLE,
             COLORS,
             IMAGES_DIR,
-            _convert_to_avif,
-            _convert_to_webp,
             _ensure_dir,
+            _save_and_close,
         )
 
         if not _MPL_AVAILABLE:
@@ -598,18 +597,7 @@ def generate_tvl_chart_image(
         filepath = os.path.join(IMAGES_DIR, filename)
 
         plt.tight_layout(pad=0.5)
-        plt.savefig(
-            filepath,
-            dpi=150,
-            facecolor=COLORS["bg"],
-            edgecolor="none",
-            bbox_inches="tight",
-        )
-        plt.close(fig)
-
-        # Generate WebP and AVIF versions for smaller file size
-        _convert_to_webp(filepath)
-        _convert_to_avif(filepath)
+        _save_and_close(fig, filepath)
 
         logger.info("Generated DeFi TVL dashboard: %s", filename)
         return f"/assets/images/generated/{filename}"
