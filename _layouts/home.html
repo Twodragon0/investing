@@ -167,7 +167,7 @@ layout: default
   <div class="posts-tab-content" role="tabpanel" id="posts-container">
     {% comment %} 1단계: 고정(pin) 포스트 먼저 출력 {% endcomment %}
     {% assign first_card_rendered = false %}
-    {% for post in site.posts %}
+    {% for post in site.posts limit:40 %}
       {% if post.pin %}
         {% capture cat_type %}{% include post-cat-type.html categories=post.categories %}{% endcapture %}
         {% assign cat_type = cat_type | strip %}
@@ -177,9 +177,9 @@ layout: default
         </div>
       {% endif %}
     {% endfor %}
-    {% comment %} 2단계: 일반 포스트 날짜별 그룹화 출력 {% endcomment %}
+    {% comment %} 2단계: 일반 포스트 날짜별 그룹화 출력 (최근 40개만 서버 렌더링) {% endcomment %}
     {% assign prev_date = "" %}
-    {% for post in site.posts %}
+    {% for post in site.posts limit:40 %}
       {% unless post.pin %}
         {% if true %}
           {% assign post_date = post.date | date: "%Y-%m-%d" %}
