@@ -57,41 +57,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-04 - 암호화폐 뉴스 요
 <li><a href="https://news.google.com/read/CBMipwJBVV95cUxNTlBpa3hQM0N1X1ZkQUlwUnNSMTcxQXFnRGo2by1JbTdKR003TG5QWGZNR3RDei1Kc1dJb1phdTZ3eFh3SlBmY1M3M3pGVFRQWUkxMTlRdTRwMnpEdzZwX2RmYlJEU2tpdmRWVjRRbkFXWXQ1aWtHT2FqalpMTkYyeXVzLUF1S3hPOFN2WTBLa3V2b05EeEp4c2hfQWpibnNlSWhuOFhpTEstT1p0Vk1jNWZPVE5OQzhRZWQ1UVFEVG0xSTBqdlRnY2N6UVVlbDVQQ1pZUG8zbGpRUkJDQXdNNmY3UU5jRUdZczNrcHExN3ZsUXc4UU9kc2VfRkhZckhOTDNaSklld2paaDctRUN3Nm9VSVRwR1BncjVTdVVSN2VDSzhCdFBV?hl=en-US&gl=US&ceid=US%3Aen">암호화폐 플랫폼 드리프트(Drift)는 총 2억 7천만 달러 규모의 해킹으로 피해를 입었습니다. 회사는 피해 통제 모드에 들어가 입출금을 중단했습니다.</a> <span class="p0-desc">솔라나에서 가장 큰 오픈 소스 무기한 선물 거래소라고 주장하는 드리프트 프로토콜(Drift Protocol)이 방금 사이버 공격을 받았습니다. 플랫폼은 itsX 계정을 통해 이로.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 해커들이 분산 금융 암호화폐 거래소 Drift에서 2억 8천만 달러를 훔쳤습니다. 
-외 P0 긴급 이슈 14건이 추가 감지되었습니다. 총 101건의 뉴스 중 P1 주요 이슈도 9건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (47건): 비트코인, 양자 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **🔴 보안/해킹** (22건): drift, withdrawals, platform 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **📈 가격/시장** (24건): 암호화폐, 시세, 코인 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 해커들이 분산 금융 암호화폐 거래소 Drift에서 2억 8천만 달러를 훔쳤습니다.
-- De-Fi 플랫폼 Drift가 해킹으로 수백만 달러의 암호화폐를 도난당한 후 입출금을 중단했습니다.
-- 암호화폐 플랫폼 드리프트(Drift)는 총 2억 7천만 달러 규모의 해킹으로 피해를 입었습니다. 회사는 피해 통제 모드에 들어가 입출금을 중단했습니다.
-
-### 주요 이슈
-
-- 비트코인 3월 턴어라운드 이후 ETF, 새로운 암호화폐 SPAC 출시
-- 암호화폐 시장 업데이트: CoinShares, SPAC 거래를 통해 나스닥 데뷔
-- 비트코인 현물 ETF, 5개월 만에 순유입 전환…투자심리 회복 조짐 - 지디넷코리아
-- 외 6건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, AI
-- **주요 출처**: Google News(20건), Decrypt(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 1건 포함
-- 프로모션성 거래소 공지 4건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-04-04.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-04-04.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 🔴 보안/해킹, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
