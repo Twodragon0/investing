@@ -337,8 +337,14 @@ def fetch_korean_market_data() -> dict:
             try:
                 ticker = yf.Ticker(symbol)
                 info = ticker.fast_info
-                price = getattr(info, "last_price", None)
-                prev = getattr(info, "previous_close", None)
+                try:
+                    price = info.last_price
+                except (KeyError, AttributeError, Exception):
+                    price = None
+                try:
+                    prev = info.previous_close
+                except (KeyError, AttributeError, Exception):
+                    prev = None
                 if price and prev:
                     change = price - prev
                     change_pct = (change / prev) * 100
