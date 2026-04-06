@@ -57,41 +57,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-06 - 암호화폐 뉴스 요
 <li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE9OTlV6clQtQWNETFJkb0FqSXZvTU9vMThuR09wbTdpUE5OZlRyb3JGZjRKSlpad0lvQjdsVjFLRG9mUGV6QThBN0x2TDM2STFBbkUxc2VjYkpIQdIBVEFVX3lxTE9MQkxXT2gtdnRhVVBmc1k5MEtZeWxMUTBQQWtBVHhieEhudGdsQ3FhN2MzZ1l6b0YyY24tOTBLRFlRckpnSDJJdzNYYVJPQlRJYWpqQw?oc=5">트럼프 강경 발언에 또 무너진 비트코인</a> <span class="p0-desc">결국 ‘통행료 엔딩’인 걸까요. 미국·이스라엘과 이란의 전쟁에 인질이 된 호르무즈 해협 이야기입니다.2일(현지시간) 이란 국영통신사 IRNA는 이란과 오만이 호르무즈 해협을 공동으.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Cathie Wood는 50% 비트코인 폭락에 대해 잔인한 반응을 보였습니다. 
-외 P0 긴급 이슈 8건이 추가 감지되었습니다. 총 74건의 뉴스 중 P1 주요 이슈도 6건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (41건): 비트코인, 불확실성, 지속 관련 (41건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (18건): 암호화폐, BTC, 불확실성 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🔴 보안/해킹** (12건): security, quantum, drift 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- Cathie Wood는 50% 비트코인 폭락에 대해 잔인한 반응을 보였습니다.
-- 해커들이 분산 금융 암호화폐 거래소 Drift에서 2억 8천만 달러를 훔쳤습니다.
-- 트럼프 강경 발언에 또 무너진 비트코인
-
-### 주요 이슈
-
-- 암호화폐 시장 업데이트: CoinShares, SPAC 거래를 통해 나스닥 데뷔
-- 암호화폐 거래의 위험 관리란 무엇입니까? 2026년 가이드
-- 오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다
-- 외 3건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Cointelegraph(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 1건 포함
-- 프로모션성 거래소 공지 4건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-04-06.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-04-06.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔴 보안/해킹
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
