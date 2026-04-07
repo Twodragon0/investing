@@ -6,18 +6,37 @@
 {% assign image_fetchpriority = include.fetchpriority | default: '' %}
 {% assign image_width = include.width | default: '1200' %}
 {% assign image_height = include.height | default: '630' %}
-{% assign image_webp = image_path | replace: '.png', '.webp' %}
-{% assign image_avif = image_path | replace: '.png', '.avif' %}
 {% capture image_attrs %}alt="{{ image_alt }}" loading="{{ image_loading }}" decoding="{{ image_decoding }}" width="{{ image_width }}" height="{{ image_height }}"{% if image_fetchpriority != '' %} fetchpriority="{{ image_fetchpriority }}"{% endif %}{% if image_class != '' %} class="{{ image_class }}"{% endif %}{% endcapture %}
-{% assign generated_png = false %}
-{% if image_path contains '/assets/images/generated/' and image_path contains '.png' %}
-  {% assign generated_png = true %}
+
+{% assign _is_generated = false %}
+{% if image_path contains '/assets/images/generated/' %}
+  {% assign _is_generated = true %}
 {% endif %}
-{% if generated_png %}
+
+{% if _is_generated %}
+  {% comment %}Derive WebP and AVIF paths regardless of source extension{% endcomment %}
+  {% if image_path contains '.png' %}
+    {% assign image_base = image_path | remove: '.png' %}
+  {% elsif image_path contains '.jpg' %}
+    {% assign image_base = image_path | remove: '.jpg' %}
+  {% elsif image_path contains '.jpeg' %}
+    {% assign image_base = image_path | remove: '.jpeg' %}
+  {% elsif image_path contains '.webp' %}
+    {% assign image_base = image_path | remove: '.webp' %}
+  {% else %}
+    {% assign image_base = image_path %}
+  {% endif %}
+  {% assign image_avif = image_base | append: '.avif' %}
+  {% assign image_webp = image_base | append: '.webp' %}
+  {% unless image_path contains '.png' %}
+    {% assign image_path_png = image_base | append: '.png' %}
+  {% else %}
+    {% assign image_path_png = image_path %}
+  {% endunless %}
 <picture>
   <source srcset="{{ image_avif | relative_url }}" type="image/avif">
   <source srcset="{{ image_webp | relative_url }}" type="image/webp">
-  <img src="{{ image_path | relative_url }}" {{ image_attrs | strip }}>
+  <img src="{{ image_path_png | relative_url }}" {{ image_attrs | strip }}>
 </picture>
 {% else %}
 <img src="{{ image_path | relative_url }}" {{ image_attrs | strip }}>

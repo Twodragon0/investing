@@ -58,8 +58,9 @@ layout: default
     {% endif %}
   </header>
 
-  {% if page.image and is_trading_journal %}
+  {% if page.image %}
   {% assign hero_image_alt = page.image_alt | default: page.title %}
+  {% if is_trading_journal %}
   <section class="trading-journal-hero">
     <div class="trading-journal-hero-copy">
       <div class="summary-label">Visual Brief</div>
@@ -76,6 +77,11 @@ layout: default
       {% include generated-picture.html image=page.image alt=hero_image_alt class="summary-market-image" loading="eager" decoding="sync" fetchpriority="high" %}
     </figure>
   </section>
+  {% else %}
+  <figure class="post-hero-image">
+    {% include generated-picture.html image=page.image alt=hero_image_alt class="post-hero-img" loading="eager" decoding="sync" fetchpriority="high" %}
+  </figure>
+  {% endif %}
   {% endif %}
 
   {% if page.excerpt %}
@@ -208,9 +214,23 @@ layout: default
       {% assign rel_cat_data = site.data.categories[rel_cat] %}
       {% assign rel_cat_name = rel_cat_data.name | default: rel_cat %}
       <a href="{{ matched_post.url | relative_url }}" class="related-post-card">
-        <span class="related-post-category cat-{{ rel_cat | slugify }}">{{ rel_cat_name }}</span>
-        <h4>{{ matched_post.title | truncate: 60 }}</h4>
-        <time datetime="{{ matched_post.date | date_to_xmlschema }}">{{ matched_post.date | date: "%Y-%m-%d" }}</time>
+        {% if matched_post.image %}
+        <div class="related-post-thumb">
+          {% include generated-picture.html image=matched_post.image alt=matched_post.title class="related-post-img" loading="lazy" decoding="async" %}
+        </div>
+        {% else %}
+        <div class="related-post-thumb related-post-thumb--placeholder cat-bg-{{ rel_cat | slugify }}">
+          <span class="related-thumb-label">{{ rel_cat_name | truncate: 8, "" }}</span>
+        </div>
+        {% endif %}
+        <div class="related-post-body">
+          <span class="related-post-category cat-{{ rel_cat | slugify }}">{{ rel_cat_name }}</span>
+          <h4>{{ matched_post.title | truncate: 65 }}</h4>
+          {% if matched_post.description and matched_post.description != "" %}
+          <p class="related-post-excerpt">{{ matched_post.description | truncate: 90 }}</p>
+          {% endif %}
+          <time datetime="{{ matched_post.date | date_to_xmlschema }}">{{ matched_post.date | date: "%Y-%m-%d" }}</time>
+        </div>
       </a>
       {% assign related_count = related_count | plus: 1 %}
       {% endif %}

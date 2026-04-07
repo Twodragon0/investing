@@ -12,8 +12,10 @@
   <link rel="preload" href="/assets/fonts/jetbrains-mono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <meta name="theme-color" content="#0a0e14" id="meta-theme-color">
   {% if page.image %}
-  {% assign preload_webp = page.image | replace: '.png', '.webp' %}
   {% if page.image contains '/assets/images/generated/' %}
+  {% assign preload_avif = page.image | replace: '.png', '.avif' | replace: '.jpg', '.avif' | replace: '.jpeg', '.avif' %}
+  {% assign preload_webp = page.image | replace: '.png', '.webp' | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' %}
+  <link rel="preload" as="image" type="image/avif" href="{{ preload_avif | relative_url }}" fetchpriority="high">
   <link rel="preload" as="image" type="image/webp" href="{{ preload_webp | relative_url }}" fetchpriority="high">
   {% endif %}
   {% endif %}
@@ -33,7 +35,14 @@
   {% assign og_url = page.url | absolute_url %}
 
   <!-- OG Image: page.image → content first image → site default, SVG→PNG fallback -->
-  {% assign og_image = page.image | default: site.og_image %}
+  <!-- Normalize generated images to PNG for OG (crawlers reject AVIF/WebP) -->
+  {% assign _raw_page_image = page.image %}
+  {% if _raw_page_image contains '/assets/images/generated/' %}
+    {% unless _raw_page_image contains '.png' %}
+      {% assign _raw_page_image = _raw_page_image | replace: '.webp', '.png' | replace: '.avif', '.png' | replace: '.jpg', '.png' | replace: '.jpeg', '.png' %}
+    {% endunless %}
+  {% endif %}
+  {% assign og_image = _raw_page_image | default: site.og_image %}
   {% if og_image == site.og_image and content contains '<img' %}
     {% assign img_split = content | split: 'src="' %}
     {% if img_split.size > 1 %}

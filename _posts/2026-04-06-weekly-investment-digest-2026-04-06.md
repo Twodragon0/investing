@@ -10,6 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-weekly-investment-digest-2026-04-06-2026-04-06.png"
 description: "BTC $67,425, 극도의 공포(12), KOSPI 5,377.30+2.74%, 108건 분석 주간 다이제스트. 시장 분석 29건, DeFi 16건, 블록체인 8건"
 excerpt: "이번 주 (03월 30일 04월 06일) 투자 시장의 주요 동향과 핵심 이슈를 종합 분석합니다. 기간: 03월 30일 04월 06일"
+permalink: "/market-analysis/2026/04/06/weekly-investment-digest/"
 image_alt: "주간 투자 다이제스트 - 2026년 04월 06일 - 시장 분석 뉴스 요약 이미지"
 ---
 
