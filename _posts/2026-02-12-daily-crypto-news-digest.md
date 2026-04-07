@@ -7,7 +7,7 @@ tags: [crypto, news, daily-digest]
 source: "consolidated"
 lang: "ko"
 description: "오늘의 암호화폐 브리핑: 암호화폐 뉴스 브리핑 - 2026-02-12. 시세 변동과 온체인 데이터를 분석합니다."
-image: "/assets/images/generated/news-briefing-crypto-2026-02-12.png"
+image: "/assets/images/generated/og-daily-crypto-news-digest-2026-02-12.png"
 excerpt: "비트코인 ██████░░░░░░░░░░░░ 35% (44건) 거래소 ████░░░░░░░░░░░░░░ 26% (33건) - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "암호화폐 뉴스 브리핑 - 2026-02-12 - crypto-news 뉴스 요약 이미지"
 permalink: "/crypto-news/2026/02/12/daily-crypto-news-digest/"
