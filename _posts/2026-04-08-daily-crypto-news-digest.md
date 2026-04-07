@@ -11,7 +11,7 @@ image: "/assets/images/generated/news-briefing-crypto-2026-04-08.png"
 permalink: "/crypto-news/2026/04/08/daily-crypto-news-digest/"
 description_ko: "크립토 뉴스 106건 수집. 주요 출처: Google News, Google News KR, Decrypt. CryptoPanic·CoinGecko·거래소 RSS 기반 암호화폐 시장 동향을 정리합니다."
 description: "크립토 뉴스 106건 수집. 주요 출처: Google News, Google News KR, Decrypt. CryptoPanic·CoinGecko·거래소 RSS 기반 암호화폐 시장 동향을 정리합니다."
-excerpt: "오늘의 암호화폐 브리핑: 암호화폐 뉴스 브리핑. 크립토 시장 심리와 자금 흐름을 점검합니다."
+excerpt: "비트코인 (48건): 비트코인 관련 (48건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다. 가격/시장 (30건): 돌파, 상승, 달러 가격 변동 (30건) — 거래량…"
 image_alt: "암호화폐 뉴스 브리핑 - 2026-04-08 - 암호화폐 뉴스 요약 이미지"
 ---
 
@@ -88,7 +88,9 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-08 - 암호화폐 뉴스 요
 - **핫 키워드**: 비트코인, 이더리움, AI
 - **주요 출처**: Google News(20건), Google News KR(15건), Decrypt(15건)
 - 시장 영향 가능성이 있는 거래소 공지 4건 포함
-- 프로모션성 거래소 공지 1건 제외<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-04-08.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-04-08.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
+- 프로모션성 거래소 공지 1건 제외
+
+<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-04-08.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-04-08.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
 
 
 ## 테마별 주요 뉴스
@@ -360,7 +362,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-08 - 암호화폐 뉴스 요
 
 **가격 언급**: 뉴스 제목에서 28건의 가격 데이터가 포착되었습니다 ($224, $70,000, $70,000, $69k, $14.5). 구체적 가격대가 언급되는 것은 시장의 가격 민감도가 높다는 신호입니다.
 
-**모니터링 키워드**: **bitcoin**(33회), **ethereum**(6회), **ai**(5회) — BTC 가격 및 네트워크 활동이 시장의 중심 화두입니다.
+**모니터링 키워드**: **bitcoin(비트코인)**(33회), **ethereum(이더리움)**(6회), **ai(인공지능)**(5회) — BTC 가격 및 네트워크 활동이 시장의 중심 화두입니다.
 
 **상장폐지 주의**: 1건의 상장폐지 관련 소식이 있습니다. 보유 자산 점검이 필요합니다.
 
