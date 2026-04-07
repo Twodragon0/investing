@@ -214,6 +214,24 @@ _TERM_LOOKUP: Dict[str, tuple] = {k.lower(): (k, v) for k, v in TERM_OVERRIDES.i
 _cache: Optional[Dict[str, str]] = None
 _cache_dirty = False
 
+# Regex matching 3+ consecutive Latin-1 extended characters (U+00C0–U+00FF).
+# A run of these in text that should be Korean/English strongly indicates
+# mojibake (e.g. Latin-1 bytes re-decoded as UTF-8).
+_MOJIBAKE_RE = re.compile(r"[\u00c0-\u00ff]{3,}")
+
+
+def _is_mojibake(text: str) -> bool:
+    """Return True if *text* looks like mojibake (corrupted encoding).
+
+    Heuristic: a sequence of 3 or more characters from the Latin-1 extended
+    block (U+00C0–U+00FF) inside a string that is supposed to be Korean or
+    English is a reliable indicator that Latin-1 bytes were misinterpreted as
+    UTF-8.  Legitimate Korean text never contains such runs.
+    """
+    if not text:
+        return False
+    return bool(_MOJIBAKE_RE.search(text))
+
 
 def _cache_key(text: str) -> str:
     """SHA256 hash of text for cache key."""
@@ -236,7 +254,18 @@ def _load_cache() -> Dict[str, str]:
             logger.warning("Translation cache load failed: %s", e)
             _cache = {}
 
-    # Clean existing cache entries with known artifacts
+    # Remove mojibake-corrupted entries before any further processing.
+    mojibake_keys = [k for k, v in _cache.items() if _is_mojibake(v)]
+    for k in mojibake_keys:
+        del _cache[k]
+    if mojibake_keys:
+        _cache_dirty = True
+        logger.warning(
+            "Removed %d mojibake-corrupted entries from translation cache",
+            len(mojibake_keys),
+        )
+
+    # Clean remaining entries with known translation artifacts.
     cleaned = 0
     keys_to_fix = []
     for key, value in _cache.items():
@@ -267,6 +296,16 @@ def _save_cache() -> None:
         for k in keys[:evict_count]:
             del _cache[k]
         logger.info("Evicted %d old cache entries (limit: %d)", evict_count, _MAX_CACHE_ENTRIES)
+
+    # Strip any mojibake entries that may have been inserted this session.
+    bad_keys = [k for k, v in _cache.items() if _is_mojibake(v)]
+    for k in bad_keys:
+        del _cache[k]
+    if bad_keys:
+        logger.warning(
+            "Skipped saving %d mojibake-corrupted entries from translation cache",
+            len(bad_keys),
+        )
 
     _CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
     try:

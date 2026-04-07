@@ -15,12 +15,6 @@ excerpt: "BTC $67,342 (24h +0.8%). 공포·탐욕 지수: 11/100 (Extreme Fear),
 image_alt: "암호화폐 시장 종합 리포트 - 2026-04-05 | XMR +1.9% - 시장 분석 뉴스 요약 이미지"
 ---
 
-## 시장 시각화
-
-
-## 오늘의 브리핑
-
-
 ## 한눈에 보기
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">$67,342</div><div class="stat-label">BTC (+0.8%)</div></div><div class="stat-item"><div class="stat-value">11</div><div class="stat-label">공포/탐욕 (Extreme Fear)</div></div><div class="stat-item"><div class="stat-value">$2.40T</div><div class="stat-label">총 시가총액</div></div><div class="stat-item"><div class="stat-value">56.2%</div><div class="stat-label">BTC 도미넌스</div></div></div>

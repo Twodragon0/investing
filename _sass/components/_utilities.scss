@@ -2044,6 +2044,14 @@ a:focus-visible {
   .news-overflow-list li {
     &:hover { background: rgba(9, 105, 218, 0.04); }
     &::before { color: var(--text-secondary); }
+
+    &.overflow-preview .overflow-thumb {
+      background: rgba(208, 215, 222, 0.3);
+    }
+
+    &.overflow-preview .overflow-source {
+      color: var(--text-secondary);
+    }
   }
 
   // Footer
@@ -2548,6 +2556,13 @@ a:focus-visible {
   .post-content .news-overflow-list li {
     padding: 0.35rem 0.5rem 0.35rem 1.8rem;
     font-size: 0.85rem;
+
+    &.overflow-preview {
+      padding-left: 1.8rem;
+      gap: 0.5rem;
+
+      .overflow-thumb { width: 52px; height: 36px; }
+    }
   }
 }
 
@@ -2556,6 +2571,10 @@ a:focus-visible {
     .news-card-num { display: none; }
     .news-card-thumb { display: none; }
     padding: 0.55rem 0.6rem;
+  }
+
+  .post-content .news-overflow-list li.overflow-preview {
+    .overflow-thumb { display: none; }
   }
 }
 

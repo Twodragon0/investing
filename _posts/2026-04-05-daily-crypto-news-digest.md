@@ -53,7 +53,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-05 - 암호화폐 뉴스 요
 <strong>긴급 알림</strong>
 <ul>
 <li><a href="https://news.google.com/read/CBMihAFBVV95cUxPRGJJaU8yYjdCYkwwTFAyWU9PUFVUY0NDY2g2MVBBWkdyVjVndG1vMTJLT1FzNFdGcEszTF9JYTgwbjdpSlhJR25FVEpFTDlmanFfVVMwTnNvVm9mQlBYeGdSMlVzU2R6QlhIaURTQnAzNE9aSFVVbVA5czU0SmVzMXpVb2M?hl=en-US&gl=US&ceid=US%3Aen">해커들이 분산 금융 암호화폐 거래소 Drift에서 2억 8천만 달러를 훔쳤습니다.</a> <span class="p0-desc">해커들은 분산 금융 암호화폐 거래소 Drift에서 2억 8천만 달러를 훔쳤습니다. (2억 8천만 달러)</span></li>
-<li><a href="https://news.google.com/read/CBMixwFBVV95cUxNY19HNnl2Y0xvbU95Vnp2V1hjY1gtSkJ2UjhiWGxrQlp6c2puYkZ6SzlqM2g2WHNvSWtQVTkyVWJuUE0tdTFYMTZIOWF1N191TnVhczdvTzJvYWhVWGlPS1FuZC02SWxaV0dkS2gxRnhRaXBnRjJGTjdPeWR1dTFSZUZpQ1FOLVFsTTNqZ3NTbVVIYWJhQW14TVdmV0xuV3RGRW9XWVRjc0loUFdXTTM1ODgxQlRkNi1qTVVSQ3VYQkZWNU1uTkcw?hl=en-US&gl=US&ceid=US%3Aen">비트코인이 $68,000 아래로 떨어지면 폭락이 $60,000 아래로 떨어질 위험이 높아지는 이유는 다음과 같습니다.</a> <span class="p0-desc">$68,000 미만의 음의 감마 영역은 자체 강화 매도를 촉발하여 대규모 폭락로 이어질 수 있습니다.</span></li>
+<li><a href="https://news.google.com/read/CBMixwFBVV95cUxNY19HNnl2Y0xvbU95Vnp2V1hjY1gtSkJ2UjhiWGxrQlp6c2puYkZ6SzlqM2g2WHNvSWtQVTkyVWJuUE0tdTFYMTZIOWF1N191TnVhczdvTzJvYWhVWGlPS1FuZC02SWxaV0dkS2gxRnhRaXBnRjJGTjdPeWR1dTFSZUZpQ1FOLVFsTTNqZ3NTbVVIYWJhQW14TVdmV0xuV3RGRW9XWVRjc0loUFdXTTM1ODgxQlRkNi1qTVVSQ3VYQkZWNU1uTkcw?hl=en-US&gl=US&ceid=US%3Aen">비트코인이 $68,000 아래로 떨어지면 폭락이 $60,000 아래로 떨어질 위험이 높아지는 이유는 다음과 같습니다.</a> <span class="p0-desc">$68,000 미만의 음의 감마 영역은 자체 강화 매도를 촉발하여 대규모 폭락으로 이어질 수 있습니다.</span></li>
 <li><a href="https://news.google.com/rss/articles/CBMipwJBVV95cUxNTlBpa3hQM0N1X1ZkQUlwUnNSMTcxQXFnRGo2by1JbTdKR003TG5QWGZNR3RDei1Kc1dJb1phdTZ3eFh3SlBmY1M3M3pGVFRQWUkxMTlRdTRwMnpEdzZwX2RmYlJEU2tpdmRWVjRRbkFXWXQ1aWtHT2FqalpMTkYyeXVzLUF1S3hPOFN2WTBLa3V2b05EeEp4c2hfQWpibnNlSWhuOFhpTEstT1p0Vk1jNWZPVE5OQzhRZWQ1UVFEVG0xSTBqdlRnY2N6UVVlbDVQQ1pZUG8zbGpRUkJDQXdNNmY3UU5jRUdZczNrcHExN3ZsUXc4UU9kc2VfRkhZckhOTDNaSklld2paaDctRUN3Nm9VSVRwR1BncjVTdVVSN2VDSzhCdFBV?oc=5">암호화폐 플랫폼 드리프트(Drift)는 총 2억 7천만 달러 규모의 해킹으로 피해를 입었습니다. 회사는 피해 통제 모드에 들어가 입출금을 중단했습니다. - Tom's Hardware</a> <span class="p0-desc">Tom's Hardware는 최고의 하드웨어를 구매하고 놀고, 만들고, 작업할 수 있는 최고의 PC를 구축하는 데 도움을 드립니다.</span></li>
 </ul>
 </div>
@@ -124,7 +124,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMixwFBVV95cUxNY19HNnl2Y0xvbU95Vnp2V1hjY1gtSkJ2UjhiWGxrQlp6c2puYkZ6SzlqM2g2WHNvSWtQVTkyVWJuUE0tdTFYMTZIOWF1N191TnVhczdvTzJvYWhVWGlPS1FuZC02SWxaV0dkS2gxRnhRaXBnRjJGTjdPeWR1dTFSZUZpQ1FOLVFsTTNqZ3NTbVVIYWJhQW14TVdmV0xuV3RGRW9XWVRjc0loUFdXTTM1ODgxQlRkNi1qTVVSQ3VYQkZWNU1uTkcw?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인이 $68,000 아래로 떨어지면 폭락이 $60,000 아래로 떨어질 위험이 높아지는 이유는 다음과 같습니다.</a>
-<p class="news-desc">$68,000 미만의 음의 감마 영역은 자체 강화 매도를 촉발하여 대규모 폭락로 이어질 수 있습니다.</p>
+<p class="news-desc">$68,000 미만의 음의 감마 영역은 자체 강화 매도를 촉발하여 대규모 폭락으로 이어질 수 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

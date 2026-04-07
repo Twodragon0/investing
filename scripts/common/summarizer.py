@@ -143,6 +143,57 @@ def _truncate_sentence(text: str, max_len: int = 300) -> str:
     return _truncate_sentence_util(text, max_length=max_len)
 
 
+# Logo/icon URL patterns that indicate a site branding image rather than article content
+_LOGO_URL_PATTERNS = [
+    "/logo/",
+    "/logos/",
+    "/favicon",
+    "/icon/",
+    "/icons/",
+    "default-logo",
+    "snslogo",
+    "snslogotrans",
+    "-logo.",
+    "_logo.",
+    "logo%20",       # encoded "logo " (e.g. "logo%20217x217")
+    "256x256",
+    "128x128",
+    "64x64",
+    "32x32",
+    "16x16",
+]
+
+
+def _is_logo_url(url: str) -> bool:
+    """Return True if *url* looks like a site logo or icon rather than an article image.
+
+    Matches paths that contain known logo/favicon patterns or icon dimensions.
+    """
+    if not url:
+        return False
+    url_lower = url.lower()
+    return any(pattern in url_lower for pattern in _LOGO_URL_PATTERNS)
+
+
+def _favicon_url(link: str) -> str:
+    """Return a Google Favicon API URL for the domain of *link*.
+
+    Falls back to empty string if the link cannot be parsed.
+    """
+    if not link:
+        return ""
+    try:
+        from urllib.parse import urlparse
+
+        parsed = urlparse(link)
+        domain = parsed.netloc or parsed.hostname or ""
+        if domain:
+            return f"https://www.google.com/s2/favicons?domain={domain}&sz=64"
+    except Exception:  # noqa: S110
+        return ""
+    return ""
+
+
 def _generate_title_based_desc(title: str, theme_key: str) -> str:
     """Generate a short analytical description from the news title and theme.
 
@@ -304,6 +355,29 @@ _GENERIC_DESC_PATTERNS = [
 def _is_generic_desc(desc: str) -> bool:
     """Return True if description is a generic/synthetic placeholder with no real info."""
     return any(p.search(desc.strip()) for p in _GENERIC_DESC_PATTERNS)
+
+
+# Known site boilerplate phrases that leak through translation
+_BOILERPLATE_DESC_PHRASES = [
+    "우리의 목적은 세상을",
+    "더 스마트하고, 더 행복하고",
+    "깊이있는 인터뷰와 칼럼",
+    "뉴스 제공.",
+    "포트폴리오를 개선하고",
+    "개인 금융 뉴스 및 비즈니스",
+    "올인원 플랫폼입니다",
+    "선두주자입니다",
+    "motley fool",
+    "seeking alpha",
+]
+
+
+def _is_boilerplate_desc(desc: str) -> bool:
+    """Return True if description is site-level boilerplate, not article content."""
+    if not desc:
+        return False
+    lower = desc.lower()
+    return any(phrase in lower for phrase in _BOILERPLATE_DESC_PHRASES)
 
 
 # Noise title patterns to filter out (e.g., SEC page addresses, form names)
@@ -1152,10 +1226,12 @@ class ThemeSummarizer:
                 # Skip articles already featured in previous themes
                 if shown < featured_count and orig_title in cross_theme_featured:
                     # Demote to remaining links instead
-                    if link:
-                        remaining_links.append(f'<a href="{link}">{title}</a>')
-                    else:
-                        remaining_links.append(title)
+                    remaining_links.append({
+                        "title": title,
+                        "link": link,
+                        "image": article.get("image", ""),
+                        "source": article.get("source", ""),
+                    })
                     continue
 
                 if shown < featured_count:
@@ -1171,9 +1247,9 @@ class ThemeSummarizer:
                         f'<div class="news-card-num">{num}</div>',
                     ]
 
-                    # Add thumbnail if image available
+                    # Add thumbnail if image available and not a site logo/icon
                     image_url = article.get("image", "")
-                    if image_url:
+                    if image_url and not _is_logo_url(image_url):
                         safe_img = _esc(image_url, quote=True)
                         onerr = "this.parentElement.style.display='none'"
                         card_parts.append(
@@ -1182,6 +1258,15 @@ class ThemeSummarizer:
                             f' onerror="{onerr}">'
                             f"</div>"
                         )
+                    elif link:
+                        fav = _favicon_url(link)
+                        if fav:
+                            safe_fav = _esc(fav, quote=True)
+                            card_parts.append(
+                                f'<div class="news-card-thumb news-card-thumb--favicon">'
+                                f'<img src="{safe_fav}" alt="" loading="lazy">'
+                                f"</div>"
+                            )
 
                     card_parts.append('<div class="news-card-body">')
                     card_parts.append(sev_badge)
@@ -1196,9 +1281,11 @@ class ThemeSummarizer:
                         card_parts.append(f'<span class="news-title">{safe_title}</span>')
 
                     if description and description != title and not _is_generic_desc(description):
-                        desc_text = _truncate_sentence(description, max_len=300)
-                        if desc_text:
-                            card_parts.append(f'<p class="news-desc">{_esc(desc_text, quote=True)}</p>')
+                        # Additional boilerplate check for translated descriptions
+                        if not _is_boilerplate_desc(description):
+                            desc_text = _truncate_sentence(description, max_len=300)
+                            if desc_text:
+                                card_parts.append(f'<p class="news-desc">{_esc(desc_text, quote=True)}</p>')
                     else:
                         # Fallback: generate analytical description from title
                         fallback_desc = _generate_title_based_desc(orig_title, key)
@@ -1215,10 +1302,12 @@ class ThemeSummarizer:
                     lines.append("")  # blank line after HTML block
                     cross_theme_featured.add(orig_title)
                 else:
-                    if link:
-                        remaining_links.append(f'<a href="{link}">{title}</a>')
-                    else:
-                        remaining_links.append(title)
+                    remaining_links.append({
+                        "title": title,
+                        "link": link,
+                        "image": article.get("image", ""),
+                        "source": article.get("source", ""),
+                    })
 
                 shown += 1
                 if shown >= max_articles:
@@ -1227,12 +1316,58 @@ class ThemeSummarizer:
             overflow = len([a for a in articles if a.get("title") and a["title"] not in seen_titles])
             remaining_count = len(remaining_links) + overflow
             if remaining_links:
+                from html import escape as _esc
+
                 lines.append(
                     f"<details><summary>그 외 {remaining_count}건 보기</summary>"
                     f'<div class="details-content"><ol class="news-overflow-list">'
                 )
-                for link_html in remaining_links[:15]:
-                    lines.append(f"<li>{link_html}</li>")
+                for item in remaining_links[:15]:
+                    if isinstance(item, dict):
+                        t = _esc(item.get("title", ""), quote=True)
+                        lnk = item.get("link", "")
+                        img = item.get("image", "")
+                        src = item.get("source", "")
+                        thumb_html = ""
+                        if img and not _is_logo_url(img):
+                            safe_img = _esc(img, quote=True)
+                            onerr = "this.parentElement.style.display='none'"
+                            thumb_html = (
+                                f'<span class="overflow-thumb">'
+                                f'<img src="{safe_img}" alt="" loading="lazy"'
+                                f" onerror=\"{onerr}\"></span>"
+                            )
+                        elif lnk:
+                            fav = _favicon_url(lnk)
+                            if fav:
+                                safe_fav = _esc(fav, quote=True)
+                                thumb_html = (
+                                    f'<span class="overflow-thumb overflow-thumb--favicon">'
+                                    f'<img src="{safe_fav}" alt="" loading="lazy">'
+                                    f"</span>"
+                                )
+                        src_html = ""
+                        if src:
+                            src_html = f'<span class="overflow-source">{_esc(src, quote=True)}</span>'
+                        if lnk:
+                            safe_link = _esc(lnk, quote=True)
+                            lines.append(
+                                f'<li class="overflow-preview">'
+                                f'{thumb_html}'
+                                f'<span class="overflow-body">'
+                                f'<a href="{safe_link}" target="_blank" rel="noopener noreferrer">{t}</a>'
+                                f'{src_html}</span></li>'
+                            )
+                        else:
+                            lines.append(
+                                f'<li class="overflow-preview">'
+                                f'{thumb_html}'
+                                f'<span class="overflow-body">'
+                                f'<span>{t}</span>'
+                                f'{src_html}</span></li>'
+                            )
+                    else:
+                        lines.append(f"<li>{item}</li>")
                 if remaining_count > 15:
                     lines.append(f"<li><em>...외 {remaining_count - 15}건</em></li>")
                 lines.append("</ol></div></details>\n")
@@ -1913,7 +2048,8 @@ class ThemeSummarizer:
         for name, key, emoji, _count in top_themes:
             articles = self._theme_articles.get(key, [])
             briefing = self._generate_single_theme_briefing(key, articles)
-            if briefing:
+            # Validate briefing is not circular (repeated theme name)
+            if briefing and briefing.strip() != name and len(briefing.strip()) > len(name):
                 lines.append(f"- {emoji} **{name}**: {briefing}")
                 has_content = True
 
@@ -1947,9 +2083,11 @@ class ThemeSummarizer:
             # Analysis sentence with ratio and source breakdown
             analysis_parts = []
             if ratio > 0.4:
-                analysis_parts.append(f"전체의 {ratio:.0%}로 가장 높은 비중을 차지합니다.")
+                analysis_parts.append(f"전체의 {ratio:.0%}로 압도적 비중을 차지합니다.")
             elif ratio > 0.2:
                 analysis_parts.append(f"전체의 {ratio:.0%}로 주요 테마입니다.")
+            else:
+                analysis_parts.append(f"전체의 {ratio:.0%}입니다.")
 
             source_counts: Counter = Counter(a.get("source", "") for a in articles if a.get("source"))
             if source_counts:
@@ -2373,6 +2511,8 @@ class ThemeSummarizer:
                         continue
                 filtered_kws.append(kw)
             kws = self._prepare_display_keywords(filtered_kws, max_keywords=3)
+            # Filter out meaningless short keywords (< 2 chars for Korean, < 3 for others)
+            kws = [kw for kw in kws if len(kw) >= 2 and kw not in ("기사", "제하", "관련")]
             if kws:
                 import datetime as _dt
 

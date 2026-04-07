@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+vendor/
+.venv/
+__pycache__/
+*.pyc
+
+# Build
+dist/
+build/
+.next/
+out/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Jekyll blog + Python scripts specific
+_site/
+.jekyll-cache/
+.sass-cache/
+*.csv
+data/

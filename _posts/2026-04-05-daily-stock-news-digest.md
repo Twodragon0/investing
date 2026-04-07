@@ -185,7 +185,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxQQTNBUll3bTdpWWRtdVB0UmRDRzhla0VaY1h4Q2tyOHlmbXM1eXZDd0tzd2RRYi01UXZfMnlvOW1fcDJfM0hETDZxa3ZXUldwb2YyeElsRlp3anlqVzJDV29IaGhtelZRam9VSnBRaE9waDQzeW5YdjN3X0RqZXgwQUZhSlFwa2ozZmEtOUxKaS1LOGoyOHc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">S&P 500은 지난달 5% 하락했지만 이 슈퍼 반도체 주식이 매도세를 꺾은 이유는 다음과 같습니다. - The Motley Fool</a>
-<p class="news-desc">우리의 목적은 세상을 더 스마트하고, 더 행복하고, 더 풍요롭게 만드는 것입니다.</p>
+<p class="news-desc">S&P 500 하락에도 불구하고 반도체 주식이 매도세를 견딘 이유를 분석합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -219,7 +219,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxPWENtUnkxdVhkdlB4bXRHdHZ0dmxxVGR0N3FnNjZpT0w2d1J2dHluTmxmejhOZW9aRHNqRzR4T1B5WE1tMEJ3WlkzeW43bUpSOTQwX0VpOFp1TjBxcUcwbXNPZUNsZDBLTlIteTh5a3ZxVnV2eW9zQXhVR0M5REN4ZGNoV1hKYjUyVWFNNmc1Z3Z3Q2xIaDdSRA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">S&P 500은 중간선거를 앞두고 정정을 향하고 있나요? 역사에 따르면 11월 이전에 일어날 일과 다음에 일어날 일은 다음과 같습니다. - The Motley Fool</a>
-<p class="news-desc">우리의 목적은 세상을 더 스마트하고, 더 행복하고, 더 풍요롭게 만드는 것입니다.</p>
+<p class="news-desc">S&P 500의 중간선거 전 조정 가능성과 역사적 패턴을 분석합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>

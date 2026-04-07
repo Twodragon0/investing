@@ -3,7 +3,7 @@
 
 Scans _posts/ for recent posts, extracts description_ko front matter fields,
 and classifies each as: real content, title repeat, or boilerplate.
-Exits with code 1 if boilerplate ratio exceeds 50%.
+Exits with code 1 if boilerplate ratio exceeds 30%.
 """
 
 import argparse
@@ -11,6 +11,15 @@ import re
 import sys
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
+
+# Try to import shared boilerplate detectors from common modules.
+# Falls back to None if PYTHONPATH is not set (standalone mode).
+try:
+    from common.enrichment import _is_site_boilerplate as _enrichment_boilerplate  # noqa: PLC2701
+    from common.summarizer import _is_boilerplate_desc as _summarizer_boilerplate  # noqa: PLC2701
+except ImportError:
+    _enrichment_boilerplate = None  # type: ignore[assignment]
+    _summarizer_boilerplate = None  # type: ignore[assignment]
 
 # ---------------------------------------------------------------------------
 # Boilerplate detection — mirrors enrichment.py patterns (standalone copy)
@@ -121,6 +130,57 @@ def _is_boilerplate(desc: str) -> bool:
             return True
     if len(desc) < 35 and not _ARTICLE_SPECIFIC_RE.search(desc):
         return True
+    # Also delegate to shared detectors when available
+    if _enrichment_boilerplate is not None and _enrichment_boilerplate(desc):
+        return True
+    if _summarizer_boilerplate is not None and _summarizer_boilerplate(desc):
+        return True
+    return False
+
+
+# ---------------------------------------------------------------------------
+# Translation quality detection
+# ---------------------------------------------------------------------------
+
+# Mojibake: 3+ consecutive Latin-1 supplement chars (U+00C0–U+00FF) that
+# result from treating UTF-8 bytes as Latin-1.
+_MOJIBAKE_RE = re.compile(r"[\u00c0-\u00ff]{3,}")
+
+# Source-domain noise appended to Korean text (common MT artifact).
+_DOMAIN_SUFFIX_RE = re.compile(
+    r"[\uac00-\ud7a3][^.!?]*\s+(?:morningstar\.com|yahoo|reuters|bloomberg"
+    r"|cnbc|marketwatch|seekingalpha|ft\.com|wsj\.com|investing\.com"
+    r"|coindesk|cointelegraph|decrypt|theblock)\s*[.!?]?\s*$",
+    re.I,
+)
+
+# Korean sentences ending with a bare Korean media brand (MT source leak).
+_SOURCE_LEAK_RE = re.compile(
+    r"[\uac00-\ud7a3][^.!?]{5,}\s+"
+    r"(?:야후|디지털투데이|연합뉴스|뉴시스|아이뉴스|지디넷|테크크런치|포브스)\s*[.!?]?\s*$"
+)
+
+# Mixed-language: Korean sentence body with a trailing English-only phrase
+# that looks like an untranslated fragment (≥4 consecutive ASCII word chars
+# after Korean text, not a proper noun or ticker).
+_MIXED_LANG_RE = re.compile(
+    r"[\uac00-\ud7a3].{10,}\s+([a-z]{4,}(?:\s+[a-z]{4,}){1,})\s*[.!?]?\s*$",
+    re.I,
+)
+
+
+def _has_translation_issue(desc: str) -> bool:
+    """Return True if desc shows signs of poor machine translation quality."""
+    if not desc:
+        return False
+    if _MOJIBAKE_RE.search(desc):
+        return True
+    if _DOMAIN_SUFFIX_RE.search(desc):
+        return True
+    if _SOURCE_LEAK_RE.search(desc):
+        return True
+    if _MIXED_LANG_RE.search(desc):
+        return True
     return False
 
 
@@ -198,6 +258,7 @@ def classify_posts(posts: list[dict]) -> dict:
     title_repeat_items = []
     real_items = []
     no_desc_items = []
+    translation_issue_items = []
 
     for p in posts:
         desc = p["description"]
@@ -211,6 +272,10 @@ def classify_posts(posts: list[dict]) -> dict:
             title_repeat_items.append(p)
         else:
             real_items.append(p)
+        # Translation check is independent — a desc can be real content but
+        # still have translation quality issues.
+        if desc and _has_translation_issue(desc):
+            translation_issue_items.append(p)
 
     return {
         "total": total,
@@ -218,6 +283,7 @@ def classify_posts(posts: list[dict]) -> dict:
         "boilerplate": boilerplate_items,
         "title_repeat": title_repeat_items,
         "real": real_items,
+        "translation_issues": translation_issue_items,
     }
 
 
@@ -234,13 +300,15 @@ def format_text(stats: dict, days: int) -> str:
     bp_count = len(stats["boilerplate"])
     tr_count = len(stats["title_repeat"])
     nd_count = len(stats["no_desc"])
+    ti_count = len(stats["translation_issues"])
 
     lines = [
         f"Description Quality Report (last {days} day(s))",
         f"  Posts scanned   : {total}",
         f"  Real content    : {real_count} ({_pct(real_count, total)})",
         f"  Title repeat    : {tr_count} ({_pct(tr_count, total)})",
-        f"  Boilerplate     : {bp_count} ({_pct(bp_count, total)})",
+        f"  Boilerplate desc: {bp_count} ({_pct(bp_count, total)})",
+        f"  Translation issues: {ti_count} ({_pct(ti_count, total)})",
         f"  No description  : {nd_count} ({_pct(nd_count, total)})",
     ]
     if stats["boilerplate"]:
@@ -253,6 +321,11 @@ def format_text(stats: dict, days: int) -> str:
         lines.append("Title-repeat posts:")
         for p in stats["title_repeat"]:
             lines.append(f"  - {p['file']}: {p['description'][:80]}")
+    if stats["translation_issues"]:
+        lines.append("")
+        lines.append("Translation-issue posts:")
+        for p in stats["translation_issues"]:
+            lines.append(f"  - {p['file']}: {p['description'][:80]}")
     return "\n".join(lines)
 
 
@@ -263,6 +336,7 @@ def format_markdown(stats: dict, days: int) -> str:
     bp_count = len(stats["boilerplate"])
     tr_count = len(stats["title_repeat"])
     nd_count = len(stats["no_desc"])
+    ti_count = len(stats["translation_issues"])
 
     bp_pct = bp_count / total * 100 if total else 0
     status_icon = "✅" if bp_pct < 30 else ("⚠️" if bp_pct < 50 else "❌")
@@ -276,6 +350,7 @@ def format_markdown(stats: dict, days: int) -> str:
         f"| 실제 콘텐츠 | {real_count} | {_pct(real_count, total)} |",
         f"| 제목 반복 | {tr_count} | {_pct(tr_count, total)} |",
         f"| Boilerplate | {bp_count} | {_pct(bp_count, total)} |",
+        f"| 번역 품질 이슈 | {ti_count} | {_pct(ti_count, total)} |",
         f"| description 없음 | {nd_count} | {_pct(nd_count, total)} |",
     ]
 
@@ -293,6 +368,11 @@ def format_markdown(stats: dict, days: int) -> str:
     if stats["title_repeat"]:
         lines += ["", "### 제목 반복 포스트"]
         for p in stats["title_repeat"]:
+            lines.append(f"- `{p['file']}`: {p['description'][:100]}")
+
+    if stats["translation_issues"]:
+        lines += ["", "### 번역 품질 이슈 포스트"]
+        for p in stats["translation_issues"]:
             lines.append(f"- `{p['file']}`: {p['description'][:100]}")
 
     return "\n".join(lines)
@@ -349,8 +429,8 @@ def main() -> int:
             file=sys.stderr,
         )
 
-    # Exit 1 only when boilerplate exceeds 50%
-    if bp_pct > 50:
+    # Exit 1 when boilerplate exceeds 30%
+    if bp_pct > 30:
         return 1
     return 0
 
