@@ -68,7 +68,7 @@ _POLYMARKET_GEO_TAGS = [
 
 # GDELT API query for geopolitical risk events
 _GDELT_QUERY = _geo_cfg.get(
-    "gdelt_query", "geopolitical risk OR military conflict OR sanctions OR war OR coup OR nuclear"
+    "gdelt_query", "(geopolitical risk OR military conflict OR sanctions OR war OR coup OR nuclear)"
 )
 
 

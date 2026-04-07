@@ -164,7 +164,7 @@ geopolitical:
     # Polymarket 최소 거래량 (USD) - 이 이하는 필터링
     polymarket_min_volume: 10000
   # GDELT API 쿼리 문자열
-  gdelt_query: "geopolitical risk OR military conflict OR sanctions OR war OR coup OR nuclear"
+  gdelt_query: "(geopolitical risk OR military conflict OR sanctions OR war OR coup OR nuclear)"
   state_file: "geopolitical_posts.json"
 
 
