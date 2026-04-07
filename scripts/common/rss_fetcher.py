@@ -173,6 +173,10 @@ def fetch_rss_feed(
                 headers={"User-Agent": USER_AGENT},
             )
             resp.raise_for_status()
+            # Force UTF-8 for feeds that don't declare charset properly
+            # (e.g. Google News Korean RSS returns UTF-8 but headers may say ISO-8859-1)
+            if resp.encoding and resp.encoding.lower() in ("iso-8859-1", "latin-1", "ascii"):
+                resp.encoding = "utf-8"
             soup = BeautifulSoup(resp.text, "xml")
 
             items = []

@@ -68,7 +68,7 @@ _POLYMARKET_GEO_TAGS = [
 
 # GDELT API query for geopolitical risk events
 _GDELT_QUERY = _geo_cfg.get(
-    "gdelt_query", "geopolitical+risk+OR+military+conflict+OR+sanctions+OR+war+OR+coup+OR+nuclear"
+    "gdelt_query", "geopolitical risk OR military conflict OR sanctions OR war OR coup OR nuclear"
 )
 
 
@@ -219,11 +219,13 @@ def fetch_gdelt(limit: int = 30, verify_ssl: bool = True) -> List[Dict[str, Any]
 
     items: List[Dict[str, Any]] = []
 
+    # GDELT API is slow (~20s); use a longer timeout than the global 15s default
+    gdelt_timeout = max(REQUEST_TIMEOUT, 45)
     try:
         resp = request_with_retry(
             url,
             params=params,
-            timeout=REQUEST_TIMEOUT,
+            timeout=gdelt_timeout,
             verify_ssl=verify_ssl,
             headers={"User-Agent": USER_AGENT},
         )
@@ -303,7 +305,7 @@ def fetch_google_news_geopolitical() -> List[Dict[str, Any]]:
             get_url(
                 "geopolitical",
                 "google_news_conflict",
-                "https://news.google.com/rss/search?q=military+conflict+sanctions+war&hl=en&gl=US&ceid=US:en",
+                "https://news.google.com/rss/search?q=war+sanctions+ceasefire+conflict+when:3d&hl=en&gl=US&ceid=US:en",
             ),
             "Google News EN (Conflict)",
             ["geopolitical", "conflict", "english"],
@@ -447,9 +449,10 @@ def _build_polymarket_section(markets: List[Dict[str, Any]]) -> tuple:
         m for m in markets if not any(kw in m.get("title", "").lower() for kw in _ENTERTAINMENT_KEYWORDS)
     ]
     filtered_markets = [m for m in non_entertainment if any(kw in m.get("title", "").lower() for kw in _GEO_KEYWORDS)]
-    # Fall back to non-entertainment if available, otherwise full market list as last resort
-    if len(filtered_markets) < 3:
-        filtered_markets = non_entertainment if non_entertainment else markets
+    # Fall back to non-entertainment if geo-filtered set is too small.
+    # Never fall back to full markets list — sports/entertainment must stay excluded.
+    if len(filtered_markets) < 3 and non_entertainment:
+        filtered_markets = non_entertainment
 
     lines = []
     rows = []
