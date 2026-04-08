@@ -242,7 +242,7 @@ Hour Loop (HOUR) SVP receives 1,600-share stock compensation grant Stock Titan
 “금리 동결은 이번까지?”.총재 교체 앞두고 커지는 ‘인상’ 신호 ekn.kr
 <span class="source-tag" data-source-type="regulator">한국은행 금리결정</span>
 
-**2. [기획] 한국은행, 기준금리 전쟁 리스크에 ‘인하보다 동결’ 무게 - M이코노미뉴스](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9ibDVOYVI3bUpyaFljVFhLUHdSa3p2SUJBT25rUzRsNnNDUElJcU1uQ2NhcFFMeGM0akN1N05rLTkwX292UlU2UTJyZFRZMGd1SGFOZFZxNWRvdE43WWtpTWpvOWZlajg?oc=5)**
+**2. [기획 한국은행, 기준금리 전쟁 리스크에 ‘인하보다 동결’ 무게 - M이코노미뉴스](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9ibDVOYVI3bUpyaFljVFhLUHdSa3p2SUJBT25rUzRsNnNDUElJcU1uQ2NhcFFMeGM0akN1N05rLTkwX292UlU2UTJyZFRZMGd1SGFOZFZxNWRvdE43WWtpTWpvOWZlajg?oc=5)**
 [기획] 한국은행, 기준금리 전쟁 리스크에 ‘인하보다 동결’ 무게 M이코노미뉴스
 <span class="source-tag" data-source-type="regulator">한국은행 금리결정</span>
 

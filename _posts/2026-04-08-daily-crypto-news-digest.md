@@ -466,7 +466,9 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-08 - 암호화폐 뉴스 요
 - **핫 키워드**: 비트코인, ETF, 이더리움
 - **주요 출처**: Google News(20건), Decrypt(15건), CoinDesk(15건)
 - 시장 영향 가능성이 있는 거래소 공지 4건 포함
-- 프로모션성 거래소 공지 1건 제외<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-04-08.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-04-08.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
+- 프로모션성 거래소 공지 1건 제외
+
+<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-04-08.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-04-08.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
 
 
 ## 테마별 주요 뉴스
@@ -728,7 +730,7 @@ Binance Introduces Spot Price Range Execution Rule (PRER). PRER, Binance 관련 
 
 **가격 언급**: 뉴스 제목에서 22건의 가격 데이터가 포착되었습니다 ($70,000, $14.5, $70K, $11.4, $11.4). 구체적 가격대가 언급되는 것은 시장의 가격 민감도가 높다는 신호입니다.
 
-**모니터링 키워드**: **bitcoin**(27회), **etf**(4회), **ethereum**(3회) — BTC 가격 및 네트워크 활동이 시장의 중심 화두입니다.
+**모니터링 키워드**: **bitcoin(비트코인)**(27회), **etf(상장지수펀드)**(4회), **ethereum(이더리움)**(3회) — BTC 가격 및 네트워크 활동이 시장의 중심 화두입니다.
 
 **상장폐지 주의**: 1건의 상장폐지 관련 소식이 있습니다. 보유 자산 점검이 필요합니다.
 
