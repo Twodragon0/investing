@@ -36,24 +36,32 @@ def find_root_thread_ts(messages: List[Dict[str, Any]], marker: str) -> Optional
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--token",
-        default=None,
-        help="Slack token (prefer SLACK_BOT_TOKEN env var)",
-    )
     parser.add_argument("--channel", required=True)
     parser.add_argument("--message-path", required=True)
     parser.add_argument("--marker", default="[ultrawork-loop]")
     parser.add_argument("--history-limit", type=int, default=50)
     args = parser.parse_args()
 
-    # Prefer env var over CLI arg to avoid token exposure in process list
-    token = args.token or os.environ.get("SLACK_BOT_TOKEN", "")
+    token = os.environ.get("SLACK_BOT_TOKEN", "")
     if not token:
-        print("No Slack token: set SLACK_BOT_TOKEN env var or pass --token")
+        print("Error: SLACK_BOT_TOKEN environment variable is not set")
         return 1
 
-    message = Path(args.message_path).read_text(encoding="utf-8").strip()
+    # Path traversal protection: resolve and validate against allowed directories
+    message_path = Path(args.message_path).resolve()
+    project_root = Path(__file__).resolve().parent.parent
+    omc_dir = project_root / ".omc"
+    if ".." in Path(args.message_path).parts or not (
+        message_path.is_relative_to(project_root) or message_path.is_relative_to(omc_dir)
+    ):
+        print(f"Error: --message-path must be within the project root or .omc/ directory: {message_path}")
+        return 1
+
+    raw = message_path.read_bytes()
+    if len(raw) > 3000:
+        print(f"Error: message file exceeds 3000-byte limit ({len(raw)} bytes)")
+        return 1
+    message = raw.decode("utf-8").strip()
     if not message:
         print("Loop message is empty, skipping Slack post.")
         return 0

@@ -415,33 +415,47 @@ def _resolve_google_news_url_inner(url: str, timeout: int = 8) -> str:
     if resolved:
         return resolved
 
-    # 3. Follow HTTP redirects via HEAD (max 3 hops)
+    # 3. Follow HTTP redirects via HEAD manually (max 5 hops), checking each hop
     try:
         if is_private_url(url):
             logger.warning("SSRF blocked: %s resolves to private IP", url[:80])
             return ""
-        head_resp = requests.head(
-            url,
-            timeout=timeout,
-            allow_redirects=True,
-            headers={"User-Agent": _BROWSER_UA},
-            verify=_get_verify_ssl(),
-        )
-        final_url = head_resp.url or ""
-        if final_url and "news.google.com" not in final_url:
-            if is_private_url(final_url):
-                logger.warning("SSRF blocked (redirect): %s -> %s", url[:60], final_url[:80])
-                return ""
-            logger.debug("Google News HEAD redirect: %s -> %s", url[:60], final_url[:80])
-            return final_url
-        # Check intermediate redirect hops (up to 3)
-        if hasattr(head_resp, "history") and head_resp.history:
-            for hop in head_resp.history[-3:]:
-                hop_loc = hop.headers.get("Location", "")
-                if hop_loc and "news.google.com" not in hop_loc and hop_loc.startswith("http"):
-                    if not is_private_url(hop_loc):
-                        logger.debug("Google News hop redirect: %s -> %s", url[:60], hop_loc[:80])
-                        return hop_loc
+        current_url = url
+        max_hops = 5
+        for _hop in range(max_hops):
+            head_resp = requests.head(
+                current_url,
+                timeout=timeout,
+                allow_redirects=False,
+                headers={"User-Agent": _BROWSER_UA},
+                verify=_get_verify_ssl(),
+            )
+            if head_resp.status_code in (301, 302, 303, 307, 308):
+                location = head_resp.headers.get("Location", "")
+                if not location:
+                    break
+                # Resolve relative redirects
+                if not location.startswith("http"):
+                    from urllib.parse import urljoin
+
+                    location = urljoin(current_url, location)
+                if is_private_url(location):
+                    logger.warning("SSRF blocked (redirect hop): %s -> %s", current_url[:60], location[:80])
+                    return ""
+                if "news.google.com" not in location:
+                    logger.debug("Google News HEAD redirect: %s -> %s", url[:60], location[:80])
+                    return location
+                current_url = location
+            else:
+                # No redirect; use final URL if not on Google domain
+                final_url = head_resp.url or current_url
+                if final_url and "news.google.com" not in final_url:
+                    if is_private_url(final_url):
+                        logger.warning("SSRF blocked (redirect): %s -> %s", url[:60], final_url[:80])
+                        return ""
+                    logger.debug("Google News HEAD resolved: %s -> %s", url[:60], final_url[:80])
+                    return final_url
+                break
     except requests.exceptions.RequestException:
         pass
 
