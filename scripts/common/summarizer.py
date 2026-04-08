@@ -155,7 +155,7 @@ _LOGO_URL_PATTERNS = [
     "snslogotrans",
     "-logo.",
     "_logo.",
-    "logo%20",       # encoded "logo " (e.g. "logo%20217x217")
+    "logo%20",  # encoded "logo " (e.g. "logo%20217x217")
     "256x256",
     "128x128",
     "64x64",
@@ -1226,12 +1226,14 @@ class ThemeSummarizer:
                 # Skip articles already featured in previous themes
                 if shown < featured_count and orig_title in cross_theme_featured:
                     # Demote to remaining links instead
-                    remaining_links.append({
-                        "title": title,
-                        "link": link,
-                        "image": article.get("image", ""),
-                        "source": article.get("source", ""),
-                    })
+                    remaining_links.append(
+                        {
+                            "title": title,
+                            "link": link,
+                            "image": article.get("image", ""),
+                            "source": article.get("source", ""),
+                        }
+                    )
                     continue
 
                 if shown < featured_count:
@@ -1302,12 +1304,14 @@ class ThemeSummarizer:
                     lines.append("")  # blank line after HTML block
                     cross_theme_featured.add(orig_title)
                 else:
-                    remaining_links.append({
-                        "title": title,
-                        "link": link,
-                        "image": article.get("image", ""),
-                        "source": article.get("source", ""),
-                    })
+                    remaining_links.append(
+                        {
+                            "title": title,
+                            "link": link,
+                            "image": article.get("image", ""),
+                            "source": article.get("source", ""),
+                        }
+                    )
 
                 shown += 1
                 if shown >= max_articles:
@@ -1335,7 +1339,7 @@ class ThemeSummarizer:
                             thumb_html = (
                                 f'<span class="overflow-thumb">'
                                 f'<img src="{safe_img}" alt="" loading="lazy"'
-                                f" onerror=\"{onerr}\"></span>"
+                                f' onerror="{onerr}"></span>'
                             )
                         elif lnk:
                             fav = _favicon_url(lnk)
@@ -1353,18 +1357,18 @@ class ThemeSummarizer:
                             safe_link = _esc(lnk, quote=True)
                             lines.append(
                                 f'<li class="overflow-preview">'
-                                f'{thumb_html}'
+                                f"{thumb_html}"
                                 f'<span class="overflow-body">'
                                 f'<a href="{safe_link}" target="_blank" rel="noopener noreferrer">{t}</a>'
-                                f'{src_html}</span></li>'
+                                f"{src_html}</span></li>"
                             )
                         else:
                             lines.append(
                                 f'<li class="overflow-preview">'
-                                f'{thumb_html}'
+                                f"{thumb_html}"
                                 f'<span class="overflow-body">'
-                                f'<span>{t}</span>'
-                                f'{src_html}</span></li>'
+                                f"<span>{t}</span>"
+                                f"{src_html}</span></li>"
                             )
                     else:
                         lines.append(f"<li>{item}</li>")
