@@ -57,42 +57,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-08 - 암호화폐 뉴스 요
 <li><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5RNi1tcUdEUXJvRXBjT0VCS1VhZE9VRm42V3ktcTl0UTFyU1duQ2lVM25xT1lDRUx4ZV9DRUNIS25neE9Wa2lSYUl6V280U2ZjYkxhcVctVzA?oc=5">양자컴 비트코인 해킹하는 데 9분이면 충분…존립 기반 무너진다</a> <span class="p0-desc">양자컴 비트코인 해킹하는 데 9분이면 충분…존립 기반 무너진다 뉴스1</span></li>
 </ul>
 </div>
-## 전체 뉴스 요약
-
-**긴급**: '1달러를 투자하지 않겠습니다'—Hayes, 25만 달러 이전에 6만 달러 비트코인 폭락 경고 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 105건의 뉴스 중 P1 주요 이슈도 15건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (48건): 비트코인 관련 (48건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (30건): 돌파, 상승, 달러 가격 변동 (30건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏦 거래소** (9건): binance, adds, reaffirms 이슈가 부각되며 해당 섹터의 단기 변동성 확대 가능성이 있습니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- '1달러를 투자하지 않겠습니다'—Hayes, 25만 달러 이전에 6만 달러 비트코인 폭락 경고
-- 북한이 미국 기업을 해킹한 혐의로 복구하는 데 '수개월' 걸릴 수 있음 - SlashGear
-- 양자컴 비트코인 해킹하는 데 9분이면 충분…존립 기반 무너진다
-
-### 주요 이슈
-
-- 코인 시황] 비트코인, 7만달러 재도전에도 박스권…ETF 4.7억달러 유입에 기관 매집 부각
-- XRP ETF가 비트코인을 앞지르며 암호화폐 자금이 하락세 이후 반등했습니다.
-- 비트코인 ETF는 2월 이후 최대 하루 동안 4억 7100만 달러를 추가했습니다.
-- 외 12건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, AI
-- **주요 출처**: Google News(20건), Google News KR(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 4건 포함
-- 프로모션성 거래소 공지 1건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-04-08.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-04-08.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
-
 ## 테마별 주요 뉴스
 
 ### 🟠 비트코인 (48건)
@@ -467,8 +431,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-08 - 암호화폐 뉴스 요
 - **주요 출처**: Google News(20건), Decrypt(15건), CoinDesk(15건)
 - 시장 영향 가능성이 있는 거래소 공지 4건 포함
 - 프로모션성 거래소 공지 1건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-04-08.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-04-08.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
 
 
 ## 테마별 주요 뉴스
