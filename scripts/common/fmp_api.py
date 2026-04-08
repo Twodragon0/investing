@@ -356,7 +356,7 @@ def _fetch_sector_etf_fallback() -> List[Dict[str, Any]]:
             if price and prev:
                 change_pct = ((price - prev) / prev) * 100
                 sectors.append({"sector": sector, "change_pct": f"{change_pct:.2f}%"})
-        except (ValueError, TypeError, AttributeError) as e:
+        except (ValueError, TypeError, AttributeError, KeyError) as e:
             logger.warning("yfinance %s: %s", symbol, e)
 
     sectors.sort(key=lambda s: float(str(s.get("change_pct", "0")).replace("%", "")), reverse=True)
@@ -453,7 +453,7 @@ def _fetch_treasury_yfinance_fallback() -> List[Dict[str, Any]]:
                     "change_pct": round(change_pct, 4) if change_pct is not None else None,
                 }
             )
-        except (ValueError, TypeError, AttributeError) as e:
+        except (ValueError, TypeError, AttributeError, KeyError) as e:
             logger.warning("yfinance treasury %s: %s", symbol, e)
 
     # Sort by maturity order

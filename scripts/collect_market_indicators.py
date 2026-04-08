@@ -134,6 +134,13 @@ def fetch_yfinance_market_data() -> Dict[str, Any]:
                     logger.info("yfinance %s (%s): %.2f (%+.2f%%)", name, symbol, price, change_pct)
                 else:
                     logger.warning("yfinance %s: missing price or prev_close", symbol)
+            except KeyError as e:
+                logger.warning(
+                    "yfinance %s (%s): incomplete API response (missing key: %s), skipping",
+                    name,
+                    symbol,
+                    e,
+                )
             except (ValueError, TypeError, AttributeError) as e:
                 logger.warning("yfinance %s (%s): %s", name, symbol, e)
     except ImportError:
