@@ -1,7 +1,9 @@
 """Shared RSS feed fetcher used by multiple collection scripts."""
 
+import ipaddress
 import logging
 import re
+import socket
 from datetime import UTC, datetime, timedelta
 from typing import Any, Dict, List, Optional
 from urllib.parse import parse_qs, unquote, urlparse
@@ -24,6 +26,43 @@ def is_safe_url(url: str) -> bool:
     try:
         parsed = urlparse(url)
         return parsed.scheme in ("http", "https", "")
+    except Exception:
+        return False
+
+
+def is_private_url(url: str) -> bool:
+    try:
+        parsed = urlparse(url)
+        hostname = parsed.hostname
+        if not hostname:
+            return True
+        if hostname.lower() in {"localhost", "localhost.localdomain"}:
+            return True
+        addresses = socket.getaddrinfo(hostname, None, proto=socket.IPPROTO_TCP)
+        if not addresses:
+            return True
+        for _family, _socktype, _proto, _canonname, sockaddr in addresses:
+            ip = ipaddress.ip_address(sockaddr[0])
+            if any(
+                [
+                    ip.is_private,
+                    ip.is_loopback,
+                    ip.is_link_local,
+                    ip.is_multicast,
+                    ip.is_unspecified,
+                    getattr(ip, "is_reserved", False),
+                ]
+            ):
+                return True
+        return False
+    except Exception:
+        return True
+
+
+def is_http_image_url(url: str) -> bool:
+    try:
+        parsed = urlparse((url or "").strip())
+        return parsed.scheme in ("http", "https") and bool(parsed.netloc)
     except Exception:
         return False
 
@@ -55,7 +94,7 @@ def _extract_google_redirect_query_url(url: str) -> str:
 
 def _resolve_google_news_url(url: str) -> str:
     """Resolve Google News redirect URL to source URL with safe fallbacks."""
-    if not url or not is_safe_url(url):
+    if not url or not is_safe_url(url) or is_private_url(url):
         return ""
 
     parsed = urlparse(url)
@@ -70,6 +109,8 @@ def _resolve_google_news_url(url: str) -> str:
     candidate = url
     for _ in range(2):
         try:
+            if is_private_url(candidate):
+                return ""
             resp = requests.get(
                 candidate,
                 timeout=resolve_timeout,
@@ -86,7 +127,11 @@ def _resolve_google_news_url(url: str) -> str:
             if not decoded or not is_safe_url(decoded):
                 return ""
             parsed_decoded = urlparse(decoded)
-            if parsed_decoded.scheme in ("http", "https") and parsed_decoded.netloc not in _GOOGLE_NEWS_HOSTS:
+            if (
+                parsed_decoded.scheme in ("http", "https")
+                and parsed_decoded.netloc not in _GOOGLE_NEWS_HOSTS
+                and not is_private_url(decoded)
+            ):
                 return decoded
             if parsed_decoded.netloc in _GOOGLE_NEWS_HOSTS:
                 nested = _extract_google_redirect_query_url(decoded)
@@ -160,12 +205,8 @@ def fetch_rss_feed(
 
     for idx, candidate_url in enumerate(candidates, start=1):
         try:
-            # Lazy import to avoid circular imports
-            from .enrichment import is_private_url as _is_private_url
-
-            if _is_private_url(candidate_url):
-                logger.warning("RSS SSRF blocked private-IP candidate URL: %s", candidate_url[:80])
-                continue
+            if is_private_url(candidate_url):
+                raise requests.exceptions.RequestException("private URL blocked")
             resp = requests.get(
                 candidate_url,
                 timeout=REQUEST_TIMEOUT,
@@ -305,6 +346,10 @@ def fetch_rss_feed(
                 }
                 if original_url:
                     item_data["original_url"] = original_url
+                if image_url and not is_http_image_url(image_url):
+                    logger.warning("RSS %s: blocked non-http image URL: %s", source_name, image_url[:80])
+                    image_url = ""
+
                 if image_url:
                     item_data["image"] = image_url
 
