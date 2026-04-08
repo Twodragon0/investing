@@ -1,5 +1,7 @@
 """Tests for dedup engine (scripts/common/dedup.py)."""
 
+from datetime import UTC
+
 import pytest
 
 from common.dedup import DedupEngine, _make_hash, _normalize
@@ -165,22 +167,25 @@ class TestDedupEngine:
     def test_pruning_old_entries(self, tmp_path):
         """Old entries beyond max_age_days should be pruned."""
         import json
+        from datetime import datetime, timedelta
 
         import common.dedup as dedup_mod
 
         original_state_dir = dedup_mod.STATE_DIR
         dedup_mod.STATE_DIR = str(tmp_path)
         try:
+            now = datetime.now(UTC)
+            old_ts = (now - timedelta(days=365)).strftime("%Y-%m-%dT%H:%M:%S")
+            new_ts = (now - timedelta(days=1)).strftime("%Y-%m-%dT%H:%M:%S")
             state_path = tmp_path / "prune_test.json"
-            # Create state with old entries (timestamp from 2020)
             state_path.write_text(
                 json.dumps(
                     {
                         "seen": {
-                            "old_hash": "2020-01-01T00:00:00",
-                            "new_hash": "2026-03-08T00:00:00",
+                            "old_hash": old_ts,
+                            "new_hash": new_ts,
                         },
-                        "titles": [["Old", "2020-01-01"], ["New", "2026-03-08"]],
+                        "titles": [["Old", old_ts[:10]], ["New", new_ts[:10]]],
                     }
                 )
             )

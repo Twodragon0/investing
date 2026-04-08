@@ -186,8 +186,9 @@ class TestFetchRssFeed:
         assert len(items) == 1
         assert "ETH" in items[0]["title"]
 
+    @patch("common.rss_fetcher.is_private_url", return_value=False)
     @patch("common.rss_fetcher.requests.get")
-    def test_fallback_url_used_on_error(self, mock_get):
+    def test_fallback_url_used_on_error(self, mock_get, _mock_private):
         import requests as req
 
         fallback_rss = RSS_MINIMAL
@@ -224,8 +225,9 @@ class TestFetchRssFeed:
         assert items[0]["original_url"] == "https://origin.example/story"
         assert mock_get.call_count == 1
 
+    @patch("common.rss_fetcher.is_private_url", return_value=False)
     @patch("common.rss_fetcher.requests.get")
-    def test_google_news_redirect_location_resolved(self, mock_get):
+    def test_google_news_redirect_location_resolved(self, mock_get, _mock_private):
         google_link = "https://news.google.com/rss/articles/CBMiTest?oc=5"
 
         feed_resp = MagicMock()
@@ -422,21 +424,18 @@ class TestDecodeUrlCandidate:
 
     def test_already_decoded_breaks_early(self):
         """If the string doesn't change after unquote, loop breaks (line 38)."""
-        from common.rss_fetcher import _decode_url_candidate
 
         plain = "https://example.com/path"
         result = _decode_url_candidate(plain)
         assert result == plain
 
     def test_percent_encoded_decoded(self):
-        from common.rss_fetcher import _decode_url_candidate
 
         encoded = "https%3A%2F%2Fexample.com%2Fpath"
         result = _decode_url_candidate(encoded)
         assert result == "https://example.com/path"
 
     def test_empty_string_returns_empty(self):
-        from common.rss_fetcher import _decode_url_candidate
 
         assert _decode_url_candidate("") == ""
 
@@ -516,8 +515,10 @@ class TestResolveGoogleNewsUrl:
 class TestFetchRssFeedUncoveredBranches:
     """Covers remaining uncovered branches in fetch_rss_feed."""
 
+    @patch("common.enrichment.is_private_url", return_value=False)
+    @patch("common.rss_fetcher.is_private_url", return_value=False)
     @patch("common.rss_fetcher.requests.get")
-    def test_worldmonitor_proxy_url_adds_decoded_candidate(self, mock_get):
+    def test_worldmonitor_proxy_url_adds_decoded_candidate(self, mock_get, _mock_private, _mock_enrich_private):
         """Covers lines 147-151: worldmonitor proxy adds decoded URL to candidates."""
         import requests as req
 
