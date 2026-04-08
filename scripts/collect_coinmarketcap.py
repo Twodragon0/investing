@@ -1132,7 +1132,7 @@ class CoinMarketCapCollector(BaseCollector):
 
             # 4. Fear & Greed
             if fear_greed:
-                value = fear_greed.get("value", 0)
+                value = int(fear_greed.get("value", 0) or 0)
                 classification = fear_greed.get("classification", "N/A")
                 bar = "█" * (value // 5) + "░" * (20 - value // 5)
                 sections["공포/탐욕 지수"] = f"**{value}/100** — {classification}\n\n`[{bar}]`"

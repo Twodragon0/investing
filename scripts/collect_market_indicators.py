@@ -801,7 +801,7 @@ def build_post_content(
         if dxy:
             macro["dxy"] = dxy.get("price", 100)
         if fred_data:
-            us10y = fred_data.get("GS10", {}).get("value")
+            us10y = fred_data.get("DGS10", {}).get("value")
             if us10y:
                 macro["us10y"] = us10y
             fed_rate = fred_data.get("FEDFUNDS", {}).get("value")
@@ -960,7 +960,7 @@ class MarketIndicatorsCollector(BaseCollector):
             if dxy_data:
                 macro["dxy"] = dxy_data.get("price", 100)
             if self._fred_data:
-                us10y = self._fred_data.get("GS10", {}).get("value")
+                us10y = self._fred_data.get("DGS10", {}).get("value")
                 if us10y:
                     macro["us10y"] = us10y
                 fed_rate = self._fred_data.get("FEDFUNDS", {}).get("value")

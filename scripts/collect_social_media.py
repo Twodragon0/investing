@@ -251,7 +251,7 @@ def fetch_reddit_posts(limit: int = 10) -> List[Dict[str, Any]]:
             )
             data = resp.json()
             sub_count = 0
-            for post in data.get("data", {}).get("children", [])[:limit]:
+            for post in (data.get("data") or {}).get("children", [])[:limit]:
                 pd = post.get("data", {})
                 title = sanitize_string(pd.get("title", ""), 300)
                 if not title or pd.get("stickied"):
