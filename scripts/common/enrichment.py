@@ -7,6 +7,7 @@ synthetic descriptions when actual content is unavailable.
 import ipaddress
 import logging
 import re
+import socket
 from difflib import SequenceMatcher
 from typing import Any, Dict, Optional
 from urllib.parse import urlparse
@@ -148,16 +149,29 @@ _SYNTHETIC_MARKERS = [
 
 def is_private_url(url: str) -> bool:
     """Check if URL resolves to a private/internal IP address."""
-    import socket as _socket
-
     try:
-        hostname = urlparse(url).hostname
+        parsed = urlparse(url)
+        hostname = parsed.hostname
         if not hostname:
             return True
-        ip = _socket.gethostbyname(hostname)
-        return ipaddress.ip_address(ip).is_private
-    except _socket.gaierror:
-        # DNS resolution failed — hostname doesn't exist, cannot be a private IP
+        if hostname.lower() in {"localhost", "localhost.localdomain"}:
+            return True
+        addresses = socket.getaddrinfo(hostname, None, proto=socket.IPPROTO_TCP)
+        if not addresses:
+            return True
+        for _family, _socktype, _proto, _canonname, sockaddr in addresses:
+            ip = ipaddress.ip_address(sockaddr[0])
+            if any(
+                [
+                    ip.is_private,
+                    ip.is_loopback,
+                    ip.is_link_local,
+                    ip.is_multicast,
+                    ip.is_unspecified,
+                    getattr(ip, "is_reserved", False),
+                ]
+            ):
+                return True
         return False
     except Exception:
         return True  # Block on other unexpected errors
@@ -171,6 +185,11 @@ def _get_verify_ssl():
     if _VERIFY_SSL is None:
         _VERIFY_SSL = get_verify_ssl()
     return _VERIFY_SSL
+
+
+def _has_http_image_scheme(url: str) -> bool:
+    parsed = urlparse((url or "").strip())
+    return parsed.scheme in ("http", "https") and bool(parsed.netloc)
 
 
 _USER_AGENT = (
@@ -508,7 +527,7 @@ _BAD_IMAGE_EXTENSIONS = [".gif", ".svg", ".ico"]
 
 def _is_valid_image_url(url: str) -> bool:
     """Check if a URL is likely a valid, useful image (not a placeholder/tracking pixel)."""
-    if not url or not url.startswith("http"):
+    if not _has_http_image_scheme(url):
         return False
     url_lower = url.lower()
     if any(p in url_lower for p in _BAD_IMAGE_PATTERNS):
@@ -695,7 +714,7 @@ def _extract_og_metadata(soup: Any, title: str = "") -> Dict[str, str]:
         meta = soup.find("meta", attrs={img_attr_key: img_attr_val})
         if meta:
             img_url = str(meta.get("content", "")).strip()
-            if img_url and img_url.startswith("http"):
+            if _is_valid_image_url(img_url):
                 result["image"] = img_url
                 break
 

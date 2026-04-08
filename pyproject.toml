@@ -60,6 +60,9 @@ quote-style = "double"
 [tool.coverage.run]
 relative_files = true
 
+[tool.pytest.ini_options]
+addopts = "--cov=scripts --cov-fail-under=90"
+
 [tool.basedpyright]
 include = ["scripts"]
 exclude = ["vendor", ".venv", "_site", "node_modules", "dist", "build"]
