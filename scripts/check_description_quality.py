@@ -246,6 +246,7 @@ def collect_posts(posts_dir: Path, days: int) -> list[dict]:
                 "date": post_date,
                 "description": desc,
                 "title": title,
+                "body": text,
             }
         )
     return results
@@ -259,6 +260,8 @@ def classify_posts(posts: list[dict]) -> dict:
     real_items = []
     no_desc_items = []
     translation_issue_items = []
+
+    mojibake_items: list[dict] = []
 
     for p in posts:
         desc = p["description"]
@@ -276,6 +279,10 @@ def classify_posts(posts: list[dict]) -> dict:
         # still have translation quality issues.
         if desc and _has_translation_issue(desc):
             translation_issue_items.append(p)
+        # Full-body mojibake scan — checks entire post content, not just description
+        body = p.get("body", "")
+        if body and _MOJIBAKE_RE.search(body):
+            mojibake_items.append(p)
 
     return {
         "total": total,
@@ -284,6 +291,7 @@ def classify_posts(posts: list[dict]) -> dict:
         "title_repeat": title_repeat_items,
         "real": real_items,
         "translation_issues": translation_issue_items,
+        "mojibake": mojibake_items,
     }
 
 
@@ -301,6 +309,7 @@ def format_text(stats: dict, days: int) -> str:
     tr_count = len(stats["title_repeat"])
     nd_count = len(stats["no_desc"])
     ti_count = len(stats["translation_issues"])
+    mj_count = len(stats["mojibake"])
 
     lines = [
         f"Description Quality Report (last {days} day(s))",
@@ -309,6 +318,7 @@ def format_text(stats: dict, days: int) -> str:
         f"  Title repeat    : {tr_count} ({_pct(tr_count, total)})",
         f"  Boilerplate desc: {bp_count} ({_pct(bp_count, total)})",
         f"  Translation issues: {ti_count} ({_pct(ti_count, total)})",
+        f"  Mojibake (body) : {mj_count} ({_pct(mj_count, total)})",
         f"  No description  : {nd_count} ({_pct(nd_count, total)})",
     ]
     if stats["boilerplate"]:
@@ -326,6 +336,11 @@ def format_text(stats: dict, days: int) -> str:
         lines.append("Translation-issue posts:")
         for p in stats["translation_issues"]:
             lines.append(f"  - {p['file']}: {p['description'][:80]}")
+    if stats["mojibake"]:
+        lines.append("")
+        lines.append("Mojibake (encoding corruption) posts:")
+        for p in stats["mojibake"]:
+            lines.append(f"  - {p['file']}")
     return "\n".join(lines)
 
 
@@ -337,9 +352,12 @@ def format_markdown(stats: dict, days: int) -> str:
     tr_count = len(stats["title_repeat"])
     nd_count = len(stats["no_desc"])
     ti_count = len(stats["translation_issues"])
+    mj_count = len(stats["mojibake"])
 
     bp_pct = bp_count / total * 100 if total else 0
     status_icon = "✅" if bp_pct < 30 else ("⚠️" if bp_pct < 50 else "❌")
+    if mj_count > 0:
+        status_icon = "❌"
 
     lines = [
         f"## {status_icon} Description Quality Report (last {days} day(s))",
@@ -351,6 +369,7 @@ def format_markdown(stats: dict, days: int) -> str:
         f"| 제목 반복 | {tr_count} | {_pct(tr_count, total)} |",
         f"| Boilerplate | {bp_count} | {_pct(bp_count, total)} |",
         f"| 번역 품질 이슈 | {ti_count} | {_pct(ti_count, total)} |",
+        f"| Mojibake (인코딩) | {mj_count} | {_pct(mj_count, total)} |",
         f"| description 없음 | {nd_count} | {_pct(nd_count, total)} |",
     ]
 
@@ -429,8 +448,11 @@ def main() -> int:
             file=sys.stderr,
         )
 
-    # Exit 1 when boilerplate exceeds 30%
+    # Exit 1 when boilerplate exceeds 30% or any mojibake found
     if bp_pct > 30:
+        return 1
+    if len(stats["mojibake"]) > 0:
+        print("ERROR: mojibake (encoding corruption) detected in post body", file=sys.stderr)
         return 1
     return 0
 
