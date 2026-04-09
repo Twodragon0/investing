@@ -356,7 +356,7 @@ def _draw_visual_crypto(ax, accent: str) -> None:
     )
 
 
-def _draw_visual_stock(ax, accent: str) -> None:
+def _draw_visual_stock(ax, accent: str, data: Optional[Dict] = None) -> None:
     """Draw rich area chart with multiple indicators and financial symbols."""
     import numpy as np
 
@@ -431,10 +431,15 @@ def _draw_visual_stock(ax, accent: str) -> None:
         **_FK,
     )
     # Mini KOSPI label
-    ax.text(cx + 140, cy_base + 280, "KOSPI", fontsize=9, color=TEXT_MUTED, ha="center", va="center", alpha=0.4, **_FK)
+    kospi_label = "KOSPI"
+    if data and data.get("kospi"):
+        kospi_label = f"KOSPI {data['kospi']}"
+    ax.text(
+        cx + 140, cy_base + 280, kospi_label, fontsize=9, color=TEXT_MUTED, ha="center", va="center", alpha=0.4, **_FK
+    )
 
 
-def _draw_visual_analysis(ax, accent: str) -> None:
+def _draw_visual_analysis(ax, accent: str, data: Optional[Dict] = None) -> None:
     """Draw donut gauge with mini charts and indicator labels."""
     import numpy as np
 
@@ -463,12 +468,27 @@ def _draw_visual_analysis(ax, accent: str) -> None:
         )
         ax.add_patch(wedge)
     ax.add_patch(mpatches.Circle((cx, cy), r_inner - 4, facecolor=BG_COLOR, edgecolor="#334155", linewidth=1.5))
-    angle = np.radians(223)
+    # Use real Fear & Greed score if available, else fall back to hardcoded 62
+    fg_score = data.get("fear_greed", 62.0) if data else 62.0
+    # Map score 0-100 to gauge angle: 0 → 0°, 100 → 360° but gauge runs 0–360
+    # Original hardcoded was 223° for score 62 → linear mapping: angle = score * 3.6
+    gauge_angle_deg = fg_score * 3.6
+    angle = np.radians(gauge_angle_deg)
     nx = cx + (r_inner + 20) * np.cos(angle)
     ny = cy + (r_inner + 20) * np.sin(angle)
     ax.annotate("", xy=(nx, ny), xytext=(cx, cy), arrowprops=dict(arrowstyle="-|>", color=TEXT_WHITE, lw=2.2))
     ax.add_patch(mpatches.Circle((cx, cy), 8, facecolor=TEXT_WHITE, edgecolor=BG_COLOR, linewidth=2))
-    ax.text(cx, cy - 20, "62", fontsize=30, color=TEXT_WHITE, fontweight="bold", ha="center", va="center", **_FK)
+    ax.text(
+        cx,
+        cy - 20,
+        str(int(fg_score)),
+        fontsize=30,
+        color=TEXT_WHITE,
+        fontweight="bold",
+        ha="center",
+        va="center",
+        **_FK,
+    )
     ax.text(cx, cy - 48, "/ 100", fontsize=10, color=TEXT_MUTED, ha="center", va="center", **_FK)
 
     # Mini sparklines around gauge
@@ -1681,7 +1701,29 @@ def generate_og_image(
             break
     else:
         draw_fn = _CATEGORY_VISUALS.get(category, _draw_visual_default)
-    draw_fn(ax, accent_color)
+
+    # Extract dynamic data for visual functions from description
+    visual_data: Dict[str, Any] = {}
+    if description:
+        fg_match = re.search(
+            r"(?:공포[·.]?탐욕|[Ff]ear.*[Gg]reed)[^:]*[:：]?\s*(\d+(?:\.\d+)?)\s*/?\s*100",
+            description,
+        )
+        if fg_match:
+            visual_data["fear_greed"] = float(fg_match.group(1))
+        kospi_match = re.search(r"KOSPI\s*([\d,.]+)", description)
+        if kospi_match:
+            visual_data["kospi"] = kospi_match.group(1)
+        btc_match = re.search(r"BTC\s*\$?([\d,]+)", description)
+        if btc_match:
+            visual_data["btc_price"] = btc_match.group(1)
+
+    import inspect
+
+    if "data" in inspect.signature(draw_fn).parameters:
+        draw_fn(ax, accent_color, data=visual_data)
+    else:
+        draw_fn(ax, accent_color)
 
     # === Data chips overlay (dynamic metrics from description) ===
     metrics = _extract_metrics(description)
