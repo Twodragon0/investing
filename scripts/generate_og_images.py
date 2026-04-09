@@ -36,22 +36,22 @@ IMAGES_DIR = os.path.join(REPO_ROOT, "assets", "images", "generated")
 # ── Category colors ──
 CATEGORY_COLORS: Dict[str, str] = {
     "crypto-news": "#f7931a",
-    "stock-news": "#4caf50",
+    "stock-news": "#10b981",
     "crypto-trading-journal": "#14b8a6",
     "stock-trading-journal": "#22c55e",
-    "market-analysis": "#2196f3",
-    "regulatory-news": "#00bcd4",
-    "social-media": "#e91e63",
-    "defi": "#7c4dff",
-    "political-trades": "#ff5722",
-    "worldmonitor": "#009688",
-    "security": "#f44336",
-    "security-alerts": "#f44336",
-    "geopolitical": "#ff6f00",
-    "daily-summary": "#ffc107",
-    "blockchain": "#627eea",
+    "market-analysis": "#3b82f6",
+    "regulatory-news": "#06b6d4",
+    "social-media": "#f43f5e",
+    "defi": "#8b5cf6",
+    "political-trades": "#f97316",
+    "worldmonitor": "#14b8a6",
+    "security": "#ef4444",
+    "security-alerts": "#ef4444",
+    "geopolitical": "#f59e0b",
+    "daily-summary": "#eab308",
+    "blockchain": "#6366f1",
 }
-DEFAULT_ACCENT = "#607d8b"
+DEFAULT_ACCENT = "#64748b"
 
 # ── Category display names ──
 CATEGORY_LABELS: Dict[str, str] = {
@@ -72,12 +72,12 @@ CATEGORY_LABELS: Dict[str, str] = {
     "blockchain": "블록체인",
 }
 
-# ── Theme colors ──
-BG_COLOR = "#1a1f2e"
-TEXT_WHITE = "#ffffff"
-TEXT_GRAY = "#9ca3af"
+# ── Theme colors (aligned with scripts/common/image_generator/base.py) ──
+BG_COLOR = "#0d1117"
+TEXT_WHITE = "#e6edf3"
+TEXT_GRAY = "#9da5ae"
 TEXT_MUTED = "#6b7280"
-DIVIDER_COLOR = "#374151"
+DIVIDER_COLOR = "#30363d"
 
 # ── matplotlib setup ──
 _MPL_AVAILABLE = False
@@ -271,7 +271,7 @@ def _draw_visual_crypto(ax, accent: str) -> None:
     np.random.seed(42)
     cx, cy = 920, 310
     # Background glow layers
-    ax.add_patch(mpatches.Circle((cx, cy), 200, facecolor=accent, edgecolor="none", alpha=0.05))
+    ax.add_patch(mpatches.Circle((cx, cy), 240, facecolor=accent, edgecolor="none", alpha=0.08))
     ax.add_patch(mpatches.Circle((cx - 60, cy + 60), 120, facecolor="#f7931a", edgecolor="none", alpha=0.04))
 
     # Candlestick bars (16 bars for richer chart)
@@ -495,7 +495,7 @@ def _draw_visual_regulatory(ax, accent: str) -> None:
     """Draw balance scale with document icons, gavel, and regulation tags."""
 
     cx, cy = 920, 310
-    ax.add_patch(mpatches.Circle((cx, cy), 200, facecolor=accent, edgecolor="none", alpha=0.04))
+    ax.add_patch(mpatches.Circle((cx, cy), 240, facecolor=accent, edgecolor="none", alpha=0.07))
 
     # Pillar with gradient effect
     for i in range(5):
@@ -637,7 +637,7 @@ def _draw_visual_social(ax, accent: str) -> None:
     import numpy as np
 
     cx, cy = 920, 310
-    ax.add_patch(mpatches.Circle((cx, cy), 200, facecolor=accent, edgecolor="none", alpha=0.04))
+    ax.add_patch(mpatches.Circle((cx, cy), 240, facecolor=accent, edgecolor="none", alpha=0.07))
 
     np.random.seed(3)
     nodes = [(cx + np.random.randint(-180, 180), cy + np.random.randint(-140, 140)) for _ in range(14)]
@@ -702,7 +702,7 @@ def _draw_visual_defi(ax, accent: str) -> None:
     import numpy as np
 
     cx, cy = 920, 310
-    ax.add_patch(mpatches.Circle((cx, cy), 200, facecolor=accent, edgecolor="none", alpha=0.04))
+    ax.add_patch(mpatches.Circle((cx, cy), 240, facecolor=accent, edgecolor="none", alpha=0.07))
 
     ring_specs = [
         (cx - 80, cy + 50, 65, accent, "AAVE"),
@@ -739,7 +739,7 @@ def _draw_visual_political(ax, accent: str) -> None:
     import numpy as np
 
     cx, cy = 920, 310
-    ax.add_patch(mpatches.Circle((cx, cy), 200, facecolor=accent, edgecolor="none", alpha=0.04))
+    ax.add_patch(mpatches.Circle((cx, cy), 240, facecolor=accent, edgecolor="none", alpha=0.07))
 
     cy_base = 160
     # Buy/sell paired bars (political insider trades)
@@ -937,7 +937,7 @@ def _draw_visual_security(ax, accent: str) -> None:
     from matplotlib.patches import Polygon
 
     cx, cy = 920, 310
-    ax.add_patch(mpatches.Circle((cx, cy), 200, facecolor=accent, edgecolor="none", alpha=0.04))
+    ax.add_patch(mpatches.Circle((cx, cy), 240, facecolor=accent, edgecolor="none", alpha=0.07))
 
     # Binary rain background
     np.random.seed(42)
@@ -1063,15 +1063,15 @@ def _draw_visual_blockchain(ax, accent: str) -> None:
 
     cx, cy = 920, 310
     np.random.seed(42)
-    ax.add_patch(mpatches.Circle((cx, cy), 200, facecolor=accent, edgecolor="none", alpha=0.04))
+    ax.add_patch(mpatches.Circle((cx, cy), 240, facecolor=accent, edgecolor="none", alpha=0.07))
 
-    # Draw chain of 5 blocks connected by lines
+    # Draw chain of 5 blocks connected by lines (shifted left to avoid clipping)
     block_positions = [
-        (cx - 160, cy + 80),
-        (cx - 60, cy + 80),
-        (cx + 40, cy + 80),
-        (cx + 140, cy + 80),
-        (cx + 240, cy + 80),
+        (cx - 180, cy + 80),
+        (cx - 90, cy + 80),
+        (cx, cy + 80),
+        (cx + 90, cy + 80),
+        (cx + 180, cy + 80),
     ]
 
     # Connection lines between blocks
@@ -1119,15 +1119,15 @@ def _draw_visual_blockchain(ax, accent: str) -> None:
             **_FK,
         )
 
-    # Network nodes below blocks
+    # Network nodes below blocks (centered within visual area)
     node_colors = ["#3fb950", "#f7931a", "#627eea", "#e91e63", "#22d3ee", "#7c4dff"]
     node_positions = [
-        (cx - 120, cy - 60),
-        (cx, cy - 80),
-        (cx + 120, cy - 60),
-        (cx - 60, cy - 130),
-        (cx + 60, cy - 130),
-        (cx + 180, cy - 100),
+        (cx - 140, cy - 60),
+        (cx - 20, cy - 80),
+        (cx + 100, cy - 60),
+        (cx - 80, cy - 130),
+        (cx + 40, cy - 130),
+        (cx + 160, cy - 100),
     ]
 
     # Network edges
@@ -1169,7 +1169,7 @@ def _draw_visual_economic_calendar(ax, accent: str) -> None:
 
     cx, cy = 920, 310
     np.random.seed(7)
-    ax.add_patch(mpatches.Circle((cx, cy), 200, facecolor=accent, edgecolor="none", alpha=0.04))
+    ax.add_patch(mpatches.Circle((cx, cy), 240, facecolor=accent, edgecolor="none", alpha=0.07))
 
     # Calendar grid (4x3)
     grid_x, grid_y = cx - 150, cy + 50
@@ -1282,7 +1282,7 @@ def _draw_visual_default(ax, accent: str) -> None:
 
     cx, cy = 920, 310
     np.random.seed(5)
-    ax.add_patch(mpatches.Circle((cx, cy), 200, facecolor=accent, edgecolor="none", alpha=0.04))
+    ax.add_patch(mpatches.Circle((cx, cy), 240, facecolor=accent, edgecolor="none", alpha=0.07))
 
     # Market heatmap grid (3x4 tiles)
     tile_colors = [
@@ -1394,7 +1394,7 @@ def _draw_visual_geopolitical(ax, accent: str) -> None:
     import numpy as np
 
     cx, cy = 920, 310
-    ax.add_patch(mpatches.Circle((cx, cy), 200, facecolor=accent, edgecolor="none", alpha=0.04))
+    ax.add_patch(mpatches.Circle((cx, cy), 240, facecolor=accent, edgecolor="none", alpha=0.07))
 
     # Radar/hexagon shape for multi-factor risk
     n_axes = 6
@@ -1465,6 +1465,88 @@ def _draw_visual_geopolitical(ax, accent: str) -> None:
     )
 
 
+def _extract_metrics(description: str) -> List[tuple]:
+    """Extract key metrics from post description for data overlay.
+
+    Returns list of (label, value, color) tuples, max 3 items.
+    """
+    metrics: List[tuple] = []
+    if not description:
+        return metrics
+
+    # BTC price
+    m = re.search(r"BTC\s*\$?([\d,]+)", description)
+    if m:
+        metrics.append(("BTC", f"${m.group(1)}", "#f7931a"))
+
+    # Fear & Greed
+    m = re.search(r"(?:공포[·.]?탐욕|Fear.*Greed)[^:]*[:：]?\s*(\d+(?:\.\d+)?)\s*/?\s*100", description)
+    if m:
+        val = float(m.group(1))
+        color = "#ef4444" if val < 30 else "#eab308" if val < 60 else "#10b981"
+        metrics.append(("F&G", f"{m.group(1)}", color))
+
+    # KOSPI
+    m = re.search(r"KOSPI\s*([\d,.]+)\s*\(([^)]+)\)", description)
+    if m:
+        change = m.group(2)
+        color = "#10b981" if "+" in change else "#ef4444"
+        metrics.append(("KOSPI", f"{m.group(1)}", color))
+
+    # VIX
+    m = re.search(r"VIX\s*([\d.]+)", description)
+    if m:
+        val = float(m.group(1))
+        color = "#ef4444" if val > 25 else "#eab308" if val > 18 else "#10b981"
+        metrics.append(("VIX", m.group(1), color))
+
+    # DXY / dollar index
+    m = re.search(r"(?:달러지수|DXY)\s*([\d.]+)", description)
+    if m:
+        metrics.append(("DXY", m.group(1), "#3b82f6"))
+
+    # News count
+    m = re.search(r"(\d+)건\s*수집", description)
+    if m:
+        metrics.append(("NEWS", f"{m.group(1)}건", "#8b5cf6"))
+
+    return metrics[:3]
+
+
+def _draw_data_chips(ax, metrics: List[tuple], accent: str) -> None:
+    """Draw data metric chips at the bottom-right of the visual area."""
+    if not metrics:
+        return
+    chip_y = 120
+    chip_x_start = 780
+    chip_spacing = 140
+
+    for i, (label, value, color) in enumerate(metrics):
+        x = chip_x_start + i * chip_spacing
+        # Chip background
+        ax.add_patch(
+            mpatches.FancyBboxPatch(
+                (x, chip_y - 15),
+                120,
+                42,
+                boxstyle="round,pad=4",
+                facecolor=color,
+                edgecolor="none",
+                alpha=0.15,
+            )
+        )
+        # Label
+        ax.text(
+            x + 60, chip_y + 16, label, fontsize=7, color=color,
+            fontweight="bold", ha="center", va="center", alpha=0.7, **_FK,
+        )
+        # Value
+        ax.text(
+            x + 60, chip_y - 2, value, fontsize=12, color=TEXT_WHITE,
+            fontweight="bold", ha="center", va="center", **_FK,
+        )
+
+
 # Category -> visual drawing function
 _CATEGORY_VISUALS = {
     "crypto-news": _draw_visual_crypto,
@@ -1505,11 +1587,11 @@ def generate_og_image(
     category_label = CATEGORY_LABELS.get(category, category)
     date_dotted = date_str.replace("-", ".")
 
-    # Multi-line title support (up to 2 lines, 24 chars per line for Korean)
-    title_lines = wrap_text(safe_text(title), max_width=22, max_lines=2)
+    # Multi-line title support (up to 2 lines, wider for Korean readability)
+    title_lines = wrap_text(safe_text(title), max_width=26, max_lines=2)
     # Description lines (up to 2 lines below title)
     desc_text = description if description else ""
-    desc_lines = wrap_text(safe_text(desc_text), max_width=30, max_lines=2) if desc_text else []
+    desc_lines = wrap_text(safe_text(desc_text), max_width=34, max_lines=2) if desc_text else []
 
     fig = plt.figure(figsize=(12, 6.3), dpi=150)
     ax = fig.add_axes((0, 0, 1, 1))
@@ -1521,11 +1603,12 @@ def generate_og_image(
     bg_rect = mpatches.FancyBboxPatch((0, 0), 1200, 630, boxstyle="square,pad=0", facecolor=BG_COLOR, edgecolor="none")
     ax.add_patch(bg_rect)
 
-    # Ambient glows
+    # Ambient glows (enhanced for SNS impact)
     for cx, cy, radius, alpha, color in [
-        (160, 520, 200, 0.08, accent_color),
-        (900, 300, 280, 0.05, accent_color),
-        (1050, 520, 140, 0.03, "#22d3ee"),
+        (160, 520, 240, 0.12, accent_color),
+        (900, 300, 320, 0.08, accent_color),
+        (1050, 520, 180, 0.05, "#22d3ee"),
+        (600, 315, 400, 0.03, accent_color),
     ]:
         ax.add_patch(mpatches.Circle((cx, cy), radius, facecolor=color, edgecolor="none", alpha=alpha))
 
@@ -1566,6 +1649,7 @@ def generate_og_image(
     _SLUG_VISUAL_OVERRIDES = {
         "fmp-economic-calendar": _draw_visual_economic_calendar,
         "blockchain-network": _draw_visual_blockchain,
+        "geopolitical": _draw_visual_geopolitical,
     }
     slug = os.path.basename(output_path).replace(".png", "").replace(".webp", "")
     for slug_key, visual_fn in _SLUG_VISUAL_OVERRIDES.items():
@@ -1576,15 +1660,21 @@ def generate_og_image(
         draw_fn = _CATEGORY_VISUALS.get(category, _draw_visual_default)
     draw_fn(ax, accent_color)
 
-    # === Left side: rich text layout ===
+    # === Data chips overlay (dynamic metrics from description) ===
+    metrics = _extract_metrics(description)
+    _draw_data_chips(ax, metrics, accent_color)
+
+    # === Left side: rich text layout (Safe Zone 80px for SNS preview) ===
+    LM = 80  # left margin (safe zone for KakaoTalk/Twitter)
+
     # Brand
-    ax.text(60, 560, "INVESTING DRAGON", fontsize=13, color="#7dd3fc", fontweight="bold", ha="left", va="center", **_FK)
+    ax.text(LM, 560, "INVESTING DRAGON", fontsize=13, color="#7dd3fc", fontweight="bold", ha="left", va="center", **_FK)
 
     # Category badge
     badge_width = max(len(category_label) * 12, 80)
     ax.add_patch(
         mpatches.FancyBboxPatch(
-            (56, 484),
+            (LM - 4, 484),
             badge_width,
             36,
             boxstyle="round,pad=4",
@@ -1594,7 +1684,7 @@ def generate_og_image(
         )
     )
     ax.text(
-        56 + badge_width / 2,
+        LM - 4 + badge_width / 2,
         502,
         category_label,
         fontsize=14,
@@ -1605,14 +1695,14 @@ def generate_og_image(
         **_FK,
     )
 
-    # Title (multi-line, large)
+    # Title (multi-line, large - 32pt for SNS impact)
     title_y = 410
     for idx, line in enumerate(title_lines):
         ax.text(
-            60,
-            title_y - idx * 40,
+            LM,
+            title_y - idx * 46,
             line,
-            fontsize=28,
+            fontsize=32,
             color=TEXT_WHITE,
             fontweight="bold",
             ha="left",
@@ -1621,31 +1711,32 @@ def generate_og_image(
         )
 
     # Date
-    date_y = title_y - len(title_lines) * 40 - 10
-    ax.text(60, date_y, date_dotted, fontsize=14, color=TEXT_GRAY, ha="left", va="center", **_FK)
+    date_y = title_y - len(title_lines) * 46 - 10
+    ax.text(LM, date_y, date_dotted, fontsize=14, color=TEXT_GRAY, ha="left", va="center", **_FK)
 
-    # Description (2 lines below date)
+    # Description (2 lines below date, alpha=0.7 for visual hierarchy)
     if desc_lines:
         desc_start_y = date_y - 35
         for idx, line in enumerate(desc_lines):
             ax.text(
-                60,
+                LM,
                 desc_start_y - idx * 24,
                 line,
                 fontsize=13,
                 color=TEXT_GRAY,
                 ha="left",
                 va="center",
+                alpha=0.7,
                 **_FK,
             )
 
     # Vertical accent line
     accent_line_bottom = date_y - 35 - len(desc_lines) * 24 if desc_lines else date_y - 20
-    ax.plot([56, 56], [max(accent_line_bottom, 200), 510], color=accent_color, linewidth=3, alpha=0.5)
+    ax.plot([LM - 4, LM - 4], [max(accent_line_bottom, 200), 510], color=accent_color, linewidth=3, alpha=0.5)
 
     # Footer
-    ax.plot([60, 1140], [88, 88], color=DIVIDER_COLOR, linewidth=0.8)
-    ax.text(60, 48, "investing.2twodragon.com", fontsize=12, color=TEXT_GRAY, ha="left", va="center", **_FK)
+    ax.plot([LM, 1140], [88, 88], color=DIVIDER_COLOR, linewidth=0.8)
+    ax.text(LM, 48, "investing.2twodragon.com", fontsize=12, color=TEXT_GRAY, ha="left", va="center", **_FK)
     ax.text(1140, 48, date_dotted, fontsize=12, color=TEXT_GRAY, ha="right", va="center", **_FK)
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
@@ -1707,7 +1798,7 @@ def generate_trading_journal_og_image(post: Dict[str, str], output_path: str) ->
     ax.set_ylim(0, 630)
     ax.set_axis_off()
 
-    bg_rect = mpatches.FancyBboxPatch((0, 0), 1200, 630, boxstyle="square,pad=0", facecolor="#0a0f18", edgecolor="none")
+    bg_rect = mpatches.FancyBboxPatch((0, 0), 1200, 630, boxstyle="square,pad=0", facecolor=BG_COLOR, edgecolor="none")
     ax.add_patch(bg_rect)
     for cx, cy, radius, alpha, color in [
         (180, 540, 180, 0.14, accent_color),
@@ -1860,7 +1951,7 @@ def generate_trading_journal_og_image(post: Dict[str, str], output_path: str) ->
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     try:
-        fig.savefig(output_path, dpi=150, facecolor="#0a0f18", edgecolor="none", bbox_inches=None, pad_inches=0)
+        fig.savefig(output_path, dpi=150, facecolor=BG_COLOR, edgecolor="none", bbox_inches=None, pad_inches=0)
         logger.info("Generated journal OG: %s", output_path)
         _convert_to_webp(output_path, quality=88)
         _convert_to_avif(output_path)
