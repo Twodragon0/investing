@@ -2138,6 +2138,45 @@ def og_image_url(slug: str, date_str: str) -> str:
     return f"/assets/images/generated/og-{slug}-{date_str}.png"
 
 
+def thumb_image_path(slug: str, date_str: str) -> str:
+    """Build the output path for a thumbnail image."""
+    return os.path.join(IMAGES_DIR, f"thumb-{slug}-{date_str}.png")
+
+
+def thumb_image_url(slug: str, date_str: str) -> str:
+    """Build the Jekyll-relative URL for a thumbnail image."""
+    return f"/assets/images/generated/thumb-{slug}-{date_str}.png"
+
+
+def generate_thumbnail(png_path: str) -> bool:
+    """Generate a 600x315 thumbnail from an existing OG image PNG.
+
+    Saves as thumb-{same-name}.png in the same directory, then converts
+    to WebP and AVIF using _convert_formats_parallel.
+    """
+    if not _PIL_AVAILABLE:
+        logger.warning("Pillow not available; cannot generate thumbnail for %s", png_path)
+        return False
+    if not os.path.exists(png_path):
+        logger.warning("Source OG image not found: %s", png_path)
+        return False
+
+    basename = os.path.basename(png_path)
+    thumb_name = f"thumb-{basename}"
+    thumb_path = os.path.join(os.path.dirname(png_path), thumb_name)
+
+    try:
+        with PILImage.open(png_path) as img:
+            thumb = img.resize((600, 315), PILImage.LANCZOS)
+            thumb.save(thumb_path, "PNG")
+        logger.info("Thumbnail saved: %s", thumb_path)
+        _convert_formats_parallel(thumb_path)
+        return True
+    except (OSError, ValueError) as e:
+        logger.warning("Thumbnail generation failed for %s: %s", png_path, e)
+        return False
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Generate OG images (1200x630) for Jekyll posts")
     parser.add_argument(
@@ -2169,14 +2208,15 @@ def main() -> None:
         default=None,
         help="Restrict generation to specific categories (repeatable)",
     )
+    parser.add_argument(
+        "--thumbnails-only",
+        action="store_true",
+        help="Only regenerate thumbnails from existing OG images",
+    )
     args = parser.parse_args()
 
     if not args.date and not args.all_posts:
         parser.error("Specify --date DATE or --all")
-
-    if not _MPL_AVAILABLE:
-        logger.error("matplotlib is required. Install with: pip install matplotlib")
-        return
 
     posts = collect_posts(target_date=args.date, allowed_categories=args.categories)
     if not posts:
@@ -2184,6 +2224,20 @@ def main() -> None:
         return
 
     logger.info("Found %d post(s) to process", len(posts))
+
+    # --thumbnails-only: resize existing OG images without re-rendering charts
+    if args.thumbnails_only:
+        thumbs = 0
+        for post in posts:
+            og_path = og_image_path(post["slug"], post["date"])
+            if generate_thumbnail(og_path):
+                thumbs += 1
+        logger.info("Done: %d thumbnail(s) generated", thumbs)
+        return
+
+    if not _MPL_AVAILABLE:
+        logger.error("matplotlib is required. Install with: pip install matplotlib")
+        return
 
     generated = 0
     skipped = 0
@@ -2210,6 +2264,8 @@ def main() -> None:
 
         if ok:
             generated += 1
+            # Generate card thumbnail
+            generate_thumbnail(out_path)
             if args.update_frontmatter:
                 url = og_image_url(post["slug"], post["date"])
                 if update_post_frontmatter(post["filepath"], url):
