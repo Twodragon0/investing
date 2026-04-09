@@ -1537,13 +1537,28 @@ def _draw_data_chips(ax, metrics: List[tuple], accent: str) -> None:
         )
         # Label
         ax.text(
-            x + 60, chip_y + 16, label, fontsize=7, color=color,
-            fontweight="bold", ha="center", va="center", alpha=0.7, **_FK,
+            x + 60,
+            chip_y + 16,
+            label,
+            fontsize=7,
+            color=color,
+            fontweight="bold",
+            ha="center",
+            va="center",
+            alpha=0.7,
+            **_FK,
         )
         # Value
         ax.text(
-            x + 60, chip_y - 2, value, fontsize=12, color=TEXT_WHITE,
-            fontweight="bold", ha="center", va="center", **_FK,
+            x + 60,
+            chip_y - 2,
+            value,
+            fontsize=12,
+            color=TEXT_WHITE,
+            fontweight="bold",
+            ha="center",
+            va="center",
+            **_FK,
         )
 
 
