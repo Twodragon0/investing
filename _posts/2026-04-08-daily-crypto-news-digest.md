@@ -57,6 +57,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-08 - 암호화폐 뉴스 요
 <li><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5RNi1tcUdEUXJvRXBjT0VCS1VhZE9VRm42V3ktcTl0UTFyU1duQ2lVM25xT1lDRUx4ZV9DRUNIS25neE9Wa2lSYUl6V280U2ZjYkxhcVctVzA?oc=5">양자컴 비트코인 해킹하는 데 9분이면 충분…존립 기반 무너진다</a> <span class="p0-desc">양자컴 비트코인 해킹하는 데 9분이면 충분…존립 기반 무너진다 뉴스1</span></li>
 </ul>
 </div>
+
+## 전체 뉴스 요약
+
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
+
 ## 테마별 주요 뉴스
 
 ### 🟠 비트코인 (48건)
@@ -399,40 +405,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-08 - 암호화폐 뉴스 요
 <li><a href="https://www.coindesk.com/business/2026/04/07/defi-yields-are-crashing-so-hard-that-they-can-t-compete-with-a-traditional-savings-account">DeFi yields are crashing so hard that they can't compete with a traditional savings account</a></li>
 </ul>
 </div>
-## 전체 뉴스 요약
-
-**긴급**: Solana Exchange Stabble Warns Users to Pull Liquidity After North Korean Hacker Scare 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 104건의 뉴스 중 P1 주요 이슈도 14건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (46건): 비트코인, 트럼프, XRP 관련 (46건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (35건): 달러 가격 변동 (35건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏛️ 정치/정책** (16건): 트럼프, 휴전 정치 이슈 (16건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- Solana Exchange Stabble Warns Users to Pull Liquidity After North Korean Hacker Scare
-- Solana Foundation to Help Secure DeFi Protocols Following $285 Million Drift Hack
-- DeFi yields are crashing so hard that they can't compete with a traditional savings account
-
-### 주요 이슈
-
-- Bitcoin, Ethereum, XRP, Dogecoin Rally Amid Trump's Fiery Iran Warning: Analyst
-- 코인 시황] 비트코인, 7만달러 재도전에도 박스권… ETF 4.7억달러 유입에 기관 매집 부각 - 뉴스핌
-- 막판 협상 타결 기대, 암호화폐도 일제 상승 전환
-- 외 11건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, ETF, 이더리움
-- **주요 출처**: Google News(20건), Decrypt(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 4건 포함
-- 프로모션성 거래소 공지 1건 제외
-
-
 ## 테마별 주요 뉴스
 
 ### 🟠 비트코인 (46건)
