@@ -8,11 +8,11 @@
 <a href="{{ post.url | relative_url }}" class="post-card cat-border-{{ pc_cat | slugify }}{% if post.pin %} pinned{% endif %}" data-journal-pair="{{ post.journal_pair | default: '' | escape }}" data-journal-sector="{{ post.journal_sector | default: '' | escape }}" data-journal-confidence="{{ post.journal_confidence | default: '' | escape }}">
   <div class="post-card-thumb">
     {% if post.image %}
-    {% assign card_loading = include.fetchpriority | default: '' | size | plus: 0 %}
+    {% assign thumb_image = post.image | replace: '/og-', '/thumb-og-' %}
     {% if include.fetchpriority == 'high' %}
-    {% include generated-picture.html image=post.image alt=post.title class="post-card-img" loading="eager" decoding="sync" fetchpriority="high" %}
+    {% include generated-picture.html image=thumb_image alt=post.title class="post-card-img" loading="eager" decoding="sync" fetchpriority="high" width="600" height="315" %}
     {% else %}
-    {% include generated-picture.html image=post.image alt=post.title class="post-card-img" loading="lazy" decoding="async" %}
+    {% include generated-picture.html image=thumb_image alt=post.title class="post-card-img" loading="lazy" decoding="async" width="600" height="315" %}
     {% endif %}
     {% else %}
     <div class="thumb-category-icon cat-bg-{{ pc_cat | slugify }}">
@@ -89,9 +89,17 @@
   </div>
   <h3>{{ post.title }}</h3>
   {% if post.description and post.description != "" %}
-    <p class="post-excerpt">{{ post.description | truncate: 220 }}</p>
+    {% assign desc_parts = post.description | split: ". " %}
+    {% if desc_parts.size > 1 %}
+      <p class="post-excerpt">
+        <small class="excerpt-summary">{{ desc_parts[0] | truncate: 60 }}.</small>
+        {{ desc_parts | shift | join: ". " | truncate: 100 }}
+      </p>
+    {% else %}
+      <p class="post-excerpt">{{ post.description | truncate: 140 }}</p>
+    {% endif %}
   {% elsif post.excerpt %}
-    <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 220 }}</p>
+    <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
   {% endif %}
   <div class="post-card-footer">
     {% if post.tags.size > 0 %}

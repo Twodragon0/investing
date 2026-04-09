@@ -262,10 +262,18 @@
     font-size: 0.88rem;
     line-height: 1.65;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     margin-bottom: 0.25rem;
+
+    .excerpt-summary {
+      display: block;
+      font-size: 0.75rem;
+      color: $text-muted;
+      margin-bottom: 0.2rem;
+      line-height: 1.4;
+    }
   }
 
   .post-desc-hint {
@@ -369,9 +377,9 @@
   font-weight: 600;
 }
 
-// 포스트 카드 썸네일
+// 포스트 카드 썸네일 (600x315 thumbnail for performance)
 .post-card-thumb {
-  height: 190px;
+  height: 160px;
   overflow: hidden;
   border-radius: 8px 8px 0 0;
   margin: -1.15rem -1.4rem 0.85rem -1.4rem;
@@ -382,6 +390,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    aspect-ratio: 600 / 315;
     transition: transform 0.35s ease;
     display: block;
   }
