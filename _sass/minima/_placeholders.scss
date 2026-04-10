@@ -1,0 +1,11 @@
+@use "config" as *;
+
+%vertical-rhythm {
+  margin-bottom: $spacing-unit * 0.5;
+}
+
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

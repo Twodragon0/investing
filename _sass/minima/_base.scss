@@ -1,4 +1,6 @@
 @use "sass:color";
+@use "config" as *;
+@use "placeholders" as *;
 
 /**
  * Reset some basic elements
@@ -191,17 +193,6 @@ pre {
     padding-right: $spacing-unit * 0.5;
     padding-left: $spacing-unit * 0.5;
   }
-}
-
-
-
-/**
- * Clearfix
- */
-%clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 
