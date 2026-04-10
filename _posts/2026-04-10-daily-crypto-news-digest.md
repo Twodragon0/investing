@@ -57,41 +57,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-10 - 암호화폐 뉴스 요
 <li><a href="https://news.google.com/read/CBMinAFBVV95cUxPdm5PUTMwT0wwUTBfaXpsYzJjTnEwNXZkTDFveHlTZ1J3ZHhva1N2d2JlTlZmV2U1bkgzb19BRkFfSXR1NmRyZUp3eWJsRWpMY1RrWnBNaGR0UXM3dlZkQ3JwLWZvSDlYSUJlNDhlbnljMy1Kelo0NHBROVJGd213X3pZTmxBUzNXUGlhRjlhckhEVldPckdrMWwzenM?hl=en-US&gl=US&ceid=US%3Aen">도난당한 소셜 미디어 계정을 사용하는 해커와 관련된 암호화폐 사기가 증가하고 있습니다.</a> <span class="p0-desc">해커들은 소셜 미디어 사기를 이용해 사람들이 가짜 암호화폐 링크를 클릭하도록 속이고 있습니다.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 모건스탠리은 가격 폭락으로 보유자들을 뒤흔들면서 비트코인 ETF 데뷔 
-외 P0 긴급 이슈 10건이 추가 감지되었습니다. 총 106건의 뉴스 중 P1 주요 이슈도 12건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (54건): 비트코인 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (28건): 암호화폐, 이란, 통행료 가격 변동 (28건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏦 거래소** (17건): 스테이블코인, 변동성 관련 지표와 수급 흐름을 함께 확인하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 모건스탠리은 가격 폭락으로 보유자들을 뒤흔들면서 비트코인 ETF 데뷔
-- Donald 트럼프의 수십억 달러 비트코인 폭발 노출
-- 도난당한 소셜 미디어 계정을 사용하는 해커와 관련된 암호화폐 사기가 증가하고 있습니다.
-
-### 주요 이슈
-
-- 비트코인, 솔라나 이란이 호르무즈 해협 통과 통행료를 암호화폐로 부과하려고 함에 따라 급증
-- 이란의 암호화폐 유조선 통행료는 제재를 위반하는 무역 네트워크의 최신 단계입니다.
-- 거대 암호화폐 ATM 비트코인 Depot, 사이버 공격으로 360만 달러 도난 신고
-- 외 9건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, ETF
-- **주요 출처**: Google News(20건), Google News EN(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-04-10.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-04-10.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
