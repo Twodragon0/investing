@@ -1721,7 +1721,7 @@ def generate_og_image(
     import inspect
 
     if "data" in inspect.signature(draw_fn).parameters:
-        draw_fn(ax, accent_color, data=visual_data)
+        draw_fn(ax, accent_color, data=visual_data)  # pyright: ignore[reportCallIssue]
     else:
         draw_fn(ax, accent_color)
 
@@ -2167,7 +2167,7 @@ def generate_thumbnail(png_path: str) -> bool:
 
     try:
         with PILImage.open(png_path) as img:
-            thumb = img.resize((600, 315), PILImage.LANCZOS)
+            thumb = img.resize((600, 315), PILImage.Resampling.LANCZOS)
             thumb.save(thumb_path, "PNG")
         logger.info("Thumbnail saved: %s", thumb_path)
         _convert_formats_parallel(thumb_path)
