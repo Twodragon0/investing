@@ -55,3 +55,6 @@ assets/images/test-*
 scripts/.coverage
 coverage-html/
 coverage.json
+
+# Sass build artifacts (stale)
+_sass/_site/
