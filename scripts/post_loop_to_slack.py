@@ -3,12 +3,31 @@
 import argparse
 import json
 import os
+import re
 import urllib.parse
 import urllib.request
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 SLACK_API_BASE = "https://slack.com/api"
+MAX_MESSAGE_BYTES = 3000
+
+
+def _sanitize_message(raw: str) -> str:
+    """Sanitize message content before posting to Slack.
+
+    - Strips ASCII control characters (except tab 0x09, LF 0x0A, CR 0x0D)
+    - Enforces MAX_MESSAGE_BYTES size limit (truncates with ellipsis)
+    """
+    # Strip control characters except tab (0x09), LF (0x0A), CR (0x0D)
+    cleaned = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]", "", raw)
+    # Enforce size limit (byte-wise, not char-wise)
+    encoded = cleaned.encode("utf-8")
+    if len(encoded) > MAX_MESSAGE_BYTES:
+        # Truncate to leave room for the ellipsis suffix, decode safely
+        truncated = encoded[: MAX_MESSAGE_BYTES - 20].decode("utf-8", errors="ignore")
+        cleaned = truncated + "\n...(truncated)"
+    return cleaned
 
 
 def slack_api(method: str, token: str, payload: Dict[str, Any]) -> Dict[str, Any]:
@@ -57,11 +76,8 @@ def main() -> int:
         print(f"Error: --message-path must be within the project root or .omc/ directory: {message_path}")
         return 1
 
-    raw = message_path.read_bytes()
-    if len(raw) > 3000:
-        print(f"Error: message file exceeds 3000-byte limit ({len(raw)} bytes)")
-        return 1
-    message = raw.decode("utf-8").strip()
+    raw_text = message_path.read_text(encoding="utf-8").strip()
+    message = _sanitize_message(raw_text)
     if not message:
         print("Loop message is empty, skipping Slack post.")
         return 0

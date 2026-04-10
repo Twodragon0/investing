@@ -25,6 +25,7 @@ ROOT = Path(__file__).resolve().parents[1]
 POSTS_DIR = ROOT / "_posts"
 SLACK_API_BASE = "https://slack.com/api"
 CHANNEL_ALIASES = ("ops", "dev", "security", "openclaw", "investing")
+MAX_REPLIES_PER_RUN = 3
 
 
 def env_first(*keys: str) -> str:
@@ -358,11 +359,16 @@ def should_reply(text: str, bot_user_id: str, alias: str) -> bool:
     del alias
     lowered = text.lower()
     mention_token = f"<@{bot_user_id}>".lower()
-    has_ai_word = re.search(r"\bai\b", lowered) is not None
-    has_mention = mention_token in lowered or has_ai_word or "openclaw" in lowered or "open claw" in lowered
-    if not has_mention:
-        return False
-    return True
+    # Explicit bot mention — highest confidence
+    if mention_token in lowered:
+        return True
+    # Uppercase "AI" as a whole word (intentional abbreviation, not substring)
+    if re.search(r"\bAI\b", text) is not None:
+        return True
+    # Named-bot keywords with a question mark signal an intent to ask
+    if ("openclaw" in lowered or "open claw" in lowered) and "?" in text:
+        return True
+    return False
 
 
 def fallback_help_text(alias: str) -> str:
@@ -432,6 +438,9 @@ def main() -> int:
 
     reply_count = 0
     for message in messages_sorted:
+        if reply_count >= MAX_REPLIES_PER_RUN:
+            logger.info("Reply cap reached (%d), stopping.", MAX_REPLIES_PER_RUN)
+            break
         if message.get("subtype"):
             continue
         if message.get("user") == bot_user_id:

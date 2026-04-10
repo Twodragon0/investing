@@ -273,10 +273,31 @@ def _normalize_logical_date(logical_date: Optional[str], date_kst: datetime) -> 
     return date_kst.strftime("%Y-%m-%d")
 
 
+def _safe_path_component(s: str) -> str:
+    """Validate and sanitize a path component for use in permalinks.
+
+    Raises ValueError if the input cannot be sanitized to a valid component.
+    """
+    if not s:
+        raise ValueError("Path component cannot be empty")
+    # Lowercase, strip, remove outer slashes
+    s = s.lower().strip().strip("/")
+    # Reject traversal sequences
+    if ".." in s or "\x00" in s:
+        raise ValueError(f"Invalid path component: {s!r}")
+    # Whitelist: alphanumeric, hyphens, underscores — replace others with hyphen
+    s = re.sub(r"[^a-z0-9_-]", "-", s)
+    # Collapse multiple hyphens
+    s = re.sub(r"-+", "-", s).strip("-")
+    if not s:
+        raise ValueError("Path component empty after sanitization")
+    return s
+
+
 def build_dated_permalink(category: str, logical_date: str, slug: str) -> str:
     normalized_date = _normalize_logical_date(logical_date, get_kst_now())
-    safe_category = category.strip("/")
-    safe_slug = slug.strip("/")
+    safe_category = _safe_path_component(category)
+    safe_slug = _safe_path_component(slug)
     return f"/{safe_category}/{normalized_date.replace('-', '/')}/{safe_slug}/"
 
 
