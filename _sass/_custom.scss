@@ -1,16 +1,16 @@
-@import "variables";
+@use "variables" as *;
 
 /* 셀프호스팅 웹폰트 (Google Fonts 외부 요청 제거) */
-@import "fonts";
+@use "fonts";
 
 /* Component imports */
-@import "components/layout";
-@import "components/header";
-@import "components/post";
-@import "components/stats";
-@import "components/alerts";
-@import "components/tables";
-@import "components/footer";
-@import "components/journal";
-@import "components/reports";
-@import "components/utilities";
+@use "components/layout";
+@use "components/header";
+@use "components/post";
+@use "components/stats";
+@use "components/alerts";
+@use "components/tables";
+@use "components/footer";
+@use "components/journal";
+@use "components/reports";
+@use "components/utilities";

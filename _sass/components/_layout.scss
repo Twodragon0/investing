@@ -1,4 +1,4 @@
-@import "../variables";
+@use "../variables" as *;
 /* Skip to main content - accessibility */
 a.skip-to-content {
   position: fixed;
