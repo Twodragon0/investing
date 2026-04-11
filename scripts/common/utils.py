@@ -1,17 +1,18 @@
 """Utility functions for news collectors."""
 
 import email.utils
-import functools
 import ipaddress
 import logging
 import re
 import socket
 import time
 from datetime import UTC, datetime
+from threading import Lock
 from typing import Optional, Union
 from urllib.parse import urlparse
 
 import requests
+from cachetools import TTLCache, cached
 
 logger = logging.getLogger(__name__)
 
@@ -100,16 +101,26 @@ def _is_non_public_ip(ip: ipaddress._BaseAddress) -> bool:
     )
 
 
-@functools.lru_cache(maxsize=256)
+# Thread-safe TTL cache for DNS resolution results.
+# - maxsize=256: bounded memory for long-running processes
+# - ttl=300s (5 min): short enough to re-validate DNS rebinding attacks after
+#   cache expiry, long enough to avoid flood-resolving during a single
+#   collection run. Previous implementation used functools.lru_cache which
+#   cached for process lifetime — unsafe for DNS rebinding defense.
+_dns_cache: "TTLCache[str, Optional[tuple]]" = TTLCache(maxsize=256, ttl=300)
+_dns_cache_lock = Lock()
+
+
+@cached(cache=_dns_cache, lock=_dns_cache_lock)
 def _resolve_hostname_ips(hostname: str) -> Optional[tuple]:
     """Resolve *hostname* to a tuple of IP address strings via getaddrinfo.
 
-    Results are cached for the process lifetime (lru_cache).  In practice the
-    collector processes restart frequently enough that stale entries are not a
-    concern; the cache is primarily a guard against repeated lookups for the
-    same hostname within a single collection run.
+    Results are cached in a TTLCache for 5 minutes (process-wide, thread-safe).
+    After expiry the hostname is re-resolved, making time-of-check/time-of-use
+    DNS rebinding windows bounded by the TTL rather than process lifetime.
 
     Returns a tuple of IP strings on success, or None on any resolution error.
+    Callers should treat None as fail-closed and deny the request.
     """
     try:
         infos = socket.getaddrinfo(hostname, None)
