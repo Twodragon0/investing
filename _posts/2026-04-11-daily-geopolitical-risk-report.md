@@ -17,6 +17,12 @@ image_alt: "지정학 리스크 리포트 - 2026-04-11 - 글로벌 이슈 뉴스
 
 **2026-04-11** 기준 지정학적 리스크 데이터를 3개 소스에서 수집·분석했습니다. 예측 시장 15건, 글로벌 뉴스 분석 30건, 뉴스 4건을 종합합니다.
 
+## 전체 뉴스 요약
+
+- 총 **4건** 수집
+- 글로벌 예측 시장 Polymarket에서 지정학·정치 이벤트에 대한 집단지성 확률을 확인합니다. 거래량이 많을수록 시장 참여자의 신뢰도가 높습니다.
+
+
 <div class="alert-box alert-warning"><strong>지정학 리스크 스냅샷</strong><ul>
 <li>Polymarket 예측 시장: <strong>15건</strong></li>
 <li>GDELT 글로벌 뉴스: <strong>30건</strong></li>
@@ -29,7 +35,6 @@ image_alt: "지정학 리스크 리포트 - 2026-04-11 - 글로벌 이슈 뉴스
 <div class="stat-item"><span class="stat-value">30</span><span class="stat-label">GDELT 뉴스</span></div>
 <div class="stat-item"><span class="stat-value">4</span><span class="stat-label">뉴스 기사</span></div>
 <div class="stat-item"><span class="stat-value">3</span><span class="stat-label">데이터 소스</span></div>
-</div><picture><source srcset="{{ '/assets/images/generated/news-briefing-geopolitical-2026-04-11.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-geopolitical-2026-04-11.png' | relative_url }}" alt="geopolitical-briefing" loading="lazy" decoding="async"></picture>
 
 
 ## 1. 예측 시장 동향 (Polymarket)

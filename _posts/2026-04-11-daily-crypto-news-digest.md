@@ -57,41 +57,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-11 - 암호화폐 뉴스 요
 <li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxOVGt5dzRQY0djV3VpM3ZHRXJXd1E2OWplVXZmV0tkLUxWRWZoNlh5M2IxcmJfQTZaRVdVWVExMXpYd1RVY1c1ZHpwTUczcWdfSzlzaTV2aF9WcGxDT1NUdU5WSklGZUhVbWg0M3YtM0dZaVhqc3hiYXVKT2pWMi11bDVYbjJ4MWhNS0ZXWg?oc=5">양자 컴퓨터가 비트코인을 해킹한다고? 현실은 "21 = 7 × 3"이 전부입니다 - 네이버 프리미엄콘텐츠</a> <span class="p0-desc">양자 컴퓨터가 비트코인을 해킹한다고? 현실은 "21 = 7 × 3"이 전부입니다 네이버 프리미엄콘텐츠</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 비트코인은 에너지 위기로 인해 폭락이 0이 될 수 있다고 경제학자는 경고합니다. 
-외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 103건의 뉴스 중 P1 주요 이슈도 14건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (55건): 비트코인 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **📈 가격/시장** (30건): 암호화폐, 에너지, CPI 가격 변동 (30건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏦 거래소** (15건): IPO 관련 불확실성이 커지고 있어 리스크 관리에 유의하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 비트코인은 에너지 위기로 인해 폭락이 0이 될 수 있다고 경제학자는 경고합니다.
-- 비트코인은 에너지 위기로 인해 폭락이 0이 될 수 있다고 경제학자는 경고합니다.
-- 양자 컴퓨터가 비트코인을 해킹한다고? 현실은 "21 = 7 × 3"이 전부입니다 - 네이버 프리미엄콘텐츠
-
-### 주요 이슈
-
-- 비트코인, 솔라나 이란이 호르무즈 해협 통과 통행료를 암호화폐로 부과하려고 함에 따라 급증
-- 비트코인 비즈니스: 이란과 미국은 암호화폐에 대해 합의하고 있나요?
-- 비트코인 가격 뉴스: BTC은 초기 손실을 반전하고 중동 희망으로 $72,000 이상 상승
-- 외 11건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Google News KR(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-04-11.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-04-11.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
