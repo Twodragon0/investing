@@ -7,7 +7,7 @@ tags: [regulation, sec, cftc, fsc, daily-digest]
 source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-regulatory-2026-02-23.png"
-description: "전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 23건의 규제 관련 뉴스가 수집되었습니다."
+description: "규제 동향 브리핑: 글로벌 규제 동향 리포트. 각국 규제 기관의 최신 결정을 정리합니다 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "2026년 2월 23일 금융 규제 동향은 한국 금융위원회 중심으로 23건이 수집되었습니다. 규제/정책 17건이 주를 이루며, 다주택자·임대사업자 대출 만기연장 관련 긴급…"
 image_alt: "글로벌 규제 동향 리포트 - 2026-02-23 - regulatory-news 뉴스 요약 이미지"
 permalink: "/regulatory-news/2026/02/23/daily-regulatory-report/"

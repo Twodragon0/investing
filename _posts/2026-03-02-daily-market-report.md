@@ -7,7 +7,7 @@ tags: ["market-summary", "daily", "crypto", "stock", "macro", "top-coins", "quan
 source: "auto-generated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-market-2026-03-02.png"
-description: "극도의 공포 장세 공포/탐욕 지수 10으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12…; 비트코인 $66,847 하락 24h 기준 -1.08% 변동, 주간 +3.74% 상승; 시가총액 $2.38T으로 하락 전일 대비 -1.14%. BTC 도미넌스 56.2%로 비트코인 중심 자금 흐름 지속."
+description: "극도의 공포 장세 공포/탐욕 지수 10으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 6~12…; 비트코인 $66,847 하락 24h 기준 -1.08% 변동, 주간 +3.74% 상승; 시가총액 $2.38T으로 하락 전일 대비 -1.14%. BTC 도미넌스..."
 excerpt: "극도의 공포 장세: 공포/탐욕 지수 10으로 Extreme Fear 구간 진입. 역사적으로 이 수준은 612개월 내 강력한 반등의 선행 지표였으며, 장기 투자자에게 분할 매수…"
 image_alt: "일일 시장 종합 리포트 - 2026-03-02 - market-analysis 뉴스 요약 이미지"
 permalink: "/market-analysis/2026/03/02/daily-market-report/"

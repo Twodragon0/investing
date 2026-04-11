@@ -7,7 +7,7 @@ tags: [market-report, crypto, top-coins, trending, daily]
 source: "CoinGecko"
 source_url: "https://www.coingecko.com/"
 lang: "ko"
-description: "BTC 도미넌스가 56.8%로 높은 수준이며, 비트코인 중심의 시장 흐름이 지속되고 있습니다."
+description: "암호화폐 시장 종합 리포트 — 시장 전반의 흐름과 크로스에셋 투자 시사점을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
 image: "/assets/images/generated/og-daily-crypto-market-report-2026-02-12.png"
 excerpt: "비트코인: $67,356 (24h -1.20% 하락) 공포/탐욕 지수: 5/100 (Extreme Fear) 암호화폐 시장은 현재 소폭 하락세를 보이고 있습니다. 단기 조정…"
 image_alt: "암호화폐 시장 종합 리포트 - 2026-02-12 - market-analysis 뉴스 요약 이미지"

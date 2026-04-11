@@ -7,7 +7,7 @@ tags: ["market-summary", "daily", "crypto", "stock", "macro", "top-coins", "quan
 source: "auto-generated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-market-2026-03-05.png"
-description: "극도 공포 장세 공포/탐욕 지수 22로 Extreme Fear 구간입니다. 시장 심리가 위축되어 있으나 점…; 비트코인 $72,664 상승 24h 기준 +7.45% 변동, 주간 +6.53% 상승; 시가총액 $2.53T으로 회복 전일 대비 +5.80%. BTC 도미넌스 57.4%로 비트코인 중심 자금 흐름 지속."
+description: "극도 공포 장세 공포/탐욕 지수 22로 Extreme Fear 구간입니다. 시장 심리가 위축되어 있으나 점…; 비트코인 $72,664 상승 24h 기준 +7.45% 변동, 주간 +6.53% 상승; 시가총액 $2.53T으로 회복 전일 대비 +5.80%. BTC 도미넌스 57.4%로..."
 excerpt: "극도 공포 장세: 공포/탐욕 지수 22로 Extreme Fear 구간입니다. 시장 심리가 위축되어 있으나 점진적 회복 가능성이 있습니다. 비트코인 $72,664 상승: 24h…"
 image_alt: "일일 시장 종합 리포트 - 2026-03-05 - market-analysis 뉴스 요약 이미지"
 permalink: "/market-analysis/2026/03/05/daily-market-report/"
