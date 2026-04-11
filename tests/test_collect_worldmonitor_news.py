@@ -107,6 +107,7 @@ def test_collector_run_no_network(tmp_path, monkeypatch):
     monkeypatch.setattr(mod, "enrich_items", lambda items, *a, **kw: None)
 
     from common import post_generator as pg_mod
+
     monkeypatch.setattr(pg_mod, "POSTS_DIR", str(tmp_path))
 
     collector = mod.WorldMonitorCollector()
@@ -132,6 +133,7 @@ def test_dedup_idempotent_worldmonitor(tmp_path, monkeypatch):
     monkeypatch.setattr(mod, "enrich_items", lambda items, *a, **kw: None)
 
     from common import post_generator as pg_mod
+
     monkeypatch.setattr(pg_mod, "POSTS_DIR", str(tmp_path))
 
     c1 = mod.WorldMonitorCollector()

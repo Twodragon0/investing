@@ -75,7 +75,7 @@ class TestFilterControls:
         assert 'id="report-clear"' in reports_html
 
     def test_has_bookmark_filter(self, reports_html):
-        assert '_bookmarks' in reports_html
+        assert "_bookmarks" in reports_html
 
 
 class TestSearchFeatures:
@@ -284,6 +284,7 @@ class TestJSONData:
     def test_json_data_is_array(self, reports_html):
         # JSON block exists and starts with array bracket
         import json
+
         start = reports_html.find('type="application/json">')
         assert start > 0
         start = reports_html.find("[", start)

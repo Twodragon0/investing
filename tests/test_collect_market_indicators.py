@@ -102,7 +102,13 @@ def test_build_fred_section_returns_empty_for_empty_data():
 
 def test_build_fred_section_yield_curve_inversion_warning():
     fred_data = {
-        "T10Y2Y": {"label": "10Y-2Y 스프레드", "value": -0.5, "date": "2026-04-11", "change": -0.1, "series_id": "T10Y2Y"},
+        "T10Y2Y": {
+            "label": "10Y-2Y 스프레드",
+            "value": -0.5,
+            "date": "2026-04-11",
+            "change": -0.1,
+            "series_id": "T10Y2Y",
+        },
     }
     result = collect_market_indicators._build_fred_section(fred_data)
     assert "역전" in result or "장단기" in result
@@ -111,14 +117,26 @@ def test_build_fred_section_yield_curve_inversion_warning():
 def test_build_fred_section_hy_spread_levels():
     # Below 4% -> 낙관론
     fred_low = {
-        "BAMLH0A0HYM2": {"label": "HY스프레드", "value": 3.0, "date": "2026-04-11", "change": 0.0, "series_id": "BAMLH0A0HYM2"},
+        "BAMLH0A0HYM2": {
+            "label": "HY스프레드",
+            "value": 3.0,
+            "date": "2026-04-11",
+            "change": 0.0,
+            "series_id": "BAMLH0A0HYM2",
+        },
     }
     result_low = collect_market_indicators._build_fred_section(fred_low)
     assert "낙관론" in result_low
 
     # Above 6% -> 위기
     fred_high = {
-        "BAMLH0A0HYM2": {"label": "HY스프레드", "value": 7.0, "date": "2026-04-11", "change": 0.5, "series_id": "BAMLH0A0HYM2"},
+        "BAMLH0A0HYM2": {
+            "label": "HY스프레드",
+            "value": 7.0,
+            "date": "2026-04-11",
+            "change": 0.5,
+            "series_id": "BAMLH0A0HYM2",
+        },
     }
     result_high = collect_market_indicators._build_fred_section(fred_high)
     assert "위기" in result_high

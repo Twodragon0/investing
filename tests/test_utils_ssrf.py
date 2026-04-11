@@ -29,17 +29,20 @@ from common.utils import is_private_url_target
 # Autouse fixture: clear lru_cache on the DNS resolver if it exists
 # ---------------------------------------------------------------------------
 
+
 @pytest.fixture(autouse=True)
 def clear_dns_cache():
     """Clear the DNS resolution cache before every test."""
     try:
         from common.utils import _resolve_hostname_ips
+
         _resolve_hostname_ips.cache_clear()
     except AttributeError:
         pass  # Cache not present yet (pre-implementation); no-op
     yield
     try:
         from common.utils import _resolve_hostname_ips
+
         _resolve_hostname_ips.cache_clear()
     except AttributeError:
         pass
@@ -48,6 +51,7 @@ def clear_dns_cache():
 # ---------------------------------------------------------------------------
 # Helper: build a fake getaddrinfo return value for a given IP string
 # ---------------------------------------------------------------------------
+
 
 def _fake_getaddrinfo(ip_str):
     """Return a list mimicking socket.getaddrinfo() output for one IP."""
@@ -59,6 +63,7 @@ def _fake_getaddrinfo(ip_str):
 # ---------------------------------------------------------------------------
 # 1. Literal private / loopback / link-local IPv4
 # ---------------------------------------------------------------------------
+
 
 class TestLiteralPrivateIPv4:
     def test_blocks_loopback_127(self):
@@ -87,6 +92,7 @@ class TestLiteralPrivateIPv4:
 # 2. Literal private / loopback IPv6
 # ---------------------------------------------------------------------------
 
+
 class TestLiteralPrivateIPv6:
     def test_blocks_ipv6_loopback(self):
         assert is_private_url_target("http://[::1]/admin") is True
@@ -109,6 +115,7 @@ class TestLiteralPrivateIPv6:
 # ---------------------------------------------------------------------------
 # 3. Encoded IP representations
 # ---------------------------------------------------------------------------
+
 
 class TestEncodedIPs:
     def test_blocks_hex_encoded_loopback(self):
@@ -136,6 +143,7 @@ class TestEncodedIPs:
 # 4. Single-label hostnames (internal service discovery)
 # ---------------------------------------------------------------------------
 
+
 class TestSingleLabelHostnames:
     def test_blocks_redis(self):
         assert is_private_url_target("http://redis:6379/") is True
@@ -153,6 +161,7 @@ class TestSingleLabelHostnames:
 # ---------------------------------------------------------------------------
 # 5. Private hostname literals and suffixes
 # ---------------------------------------------------------------------------
+
 
 class TestPrivateHostnamesAndSuffixes:
     def test_blocks_localhost_localdomain(self):
@@ -178,6 +187,7 @@ class TestPrivateHostnamesAndSuffixes:
 # 6. DNS-rebinding helper suffixes
 # ---------------------------------------------------------------------------
 
+
 class TestDnsRebindingSuffixes:
     def test_blocks_nip_io_private_ip(self):
         assert is_private_url_target("https://127-0-0-1.nip.io/") is True
@@ -201,6 +211,7 @@ class TestDnsRebindingSuffixes:
 # ---------------------------------------------------------------------------
 # 7. DNS resolution check — RED until implementation adds getaddrinfo call
 # ---------------------------------------------------------------------------
+
 
 class TestDnsResolutionPrivateIp:
     """These tests mock socket.getaddrinfo to simulate an attacker domain
@@ -255,6 +266,7 @@ class TestDnsResolutionPrivateIp:
 # 8. Fail-closed: getaddrinfo raises OSError
 # ---------------------------------------------------------------------------
 
+
 class TestDnsResolutionFailClosed:
     """When DNS resolution fails, the guard must fail-closed (return True)."""
 
@@ -274,6 +286,7 @@ class TestDnsResolutionFailClosed:
 # ---------------------------------------------------------------------------
 # 9. Public domains must pass (false-positive prevention)
 # ---------------------------------------------------------------------------
+
 
 class TestPublicDomainAllowed:
     """Public domains resolving to public IPs must NOT be blocked.
@@ -306,6 +319,7 @@ class TestPublicDomainAllowed:
 # ---------------------------------------------------------------------------
 # 10. Edge cases: malformed URLs
 # ---------------------------------------------------------------------------
+
 
 class TestMalformedUrls:
     def test_empty_string_blocked(self):

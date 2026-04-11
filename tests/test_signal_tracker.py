@@ -401,8 +401,13 @@ class TestFormatAccuracySummary:
                 "date": "2026-03-27",
                 "composite_score": 70.0,
                 "verdict": "강세",
-                "accuracy": {"predicted_verdict": "강세", "predicted_score": 70.0, "correct": True,
-                             "actual_direction": "상승", "actual_price_change_pct": 2.5},
+                "accuracy": {
+                    "predicted_verdict": "강세",
+                    "predicted_score": 70.0,
+                    "correct": True,
+                    "actual_direction": "상승",
+                    "actual_price_change_pct": 2.5,
+                },
             },
         ]
         summary = tracker.format_accuracy_summary()

@@ -207,8 +207,7 @@ def collect_sentry_summary(org: str, project: str, token: str) -> SentrySummary:
 
     try:
         payload = sentry_api(
-            f"/projects/{urllib.parse.quote(org)}/{urllib.parse.quote(project)}/issues/"
-            "?query=is%3Aunresolved&limit=20",
+            f"/projects/{urllib.parse.quote(org)}/{urllib.parse.quote(project)}/issues/?query=is%3Aunresolved&limit=20",
             token,
         )
     except (urllib.error.URLError, json.JSONDecodeError):

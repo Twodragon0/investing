@@ -145,7 +145,11 @@ def test_build_report_content_l2_section():
 def test_build_report_content_upgrade_news_section():
     mod = importlib.import_module("collect_blockchain")
     news = [
-        {"title": "Ethereum Pectra upgrade", "link": "https://blog.ethereum.org/pectra", "source_name": "Ethereum Blog"},
+        {
+            "title": "Ethereum Pectra upgrade",
+            "link": "https://blog.ethereum.org/pectra",
+            "source_name": "Ethereum Blog",
+        },
     ]
     content, _desc, _exc = mod.build_report_content({}, {}, "2026-04-11", upgrade_news=news)
     assert "주요 네트워크 업데이트" in content

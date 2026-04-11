@@ -50,7 +50,7 @@ jobs:
           cache-dependency-path: scripts/requirements.txt
 
       - name: Install Python dependencies
-        run: pip install pytest
+        run: pip install pytest pytest-cov
 
       - name: Build Jekyll site
         run: bundle exec jekyll build

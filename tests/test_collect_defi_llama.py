@@ -82,6 +82,7 @@ def test_build_post_content_empty_data():
 def test_fetch_protocols_returns_empty_on_request_error():
     mod = importlib.import_module("collect_defi_llama")
     import requests
+
     # Patch the name as it exists in the collect_defi_llama module namespace
     with patch("collect_defi_llama.request_with_retry", side_effect=requests.exceptions.ConnectionError("offline")):
         result = mod.fetch_protocols()
@@ -91,6 +92,7 @@ def test_fetch_protocols_returns_empty_on_request_error():
 def test_fetch_chains_returns_empty_on_request_error():
     mod = importlib.import_module("collect_defi_llama")
     import requests
+
     with patch("collect_defi_llama.request_with_retry", side_effect=requests.exceptions.ConnectionError("offline")):
         result = mod.fetch_chains()
     assert result == []
@@ -105,6 +107,7 @@ def test_collector_run_no_network(tmp_path, monkeypatch):
     monkeypatch.setattr(mod, "generate_tvl_chart_image", lambda *a, **kw: None)
 
     from common import post_generator as pg_mod
+
     monkeypatch.setattr(pg_mod, "POSTS_DIR", str(tmp_path))
 
     collector = mod.DefiLlamaCollector()
@@ -129,6 +132,7 @@ def test_dedup_idempotent_defi_llama(tmp_path, monkeypatch):
     monkeypatch.setattr(mod, "_check_tvl_staleness", lambda *a, **kw: None)
 
     from common import post_generator as pg_mod
+
     monkeypatch.setattr(pg_mod, "POSTS_DIR", str(tmp_path))
 
     c1 = mod.DefiLlamaCollector()

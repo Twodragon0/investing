@@ -92,8 +92,14 @@ def test_generate_market_insight_returns_string():
         "market_cap_change_percentage_24h_usd": 1.2,
     }
     coins = [
-        {"name": "Bitcoin", "symbol": "btc", "current_price": 85000, "price_change_percentage_24h": 1.2,
-         "price_change_percentage_7d_in_currency": 3.0, "market_cap": 1.7e12},
+        {
+            "name": "Bitcoin",
+            "symbol": "btc",
+            "current_price": 85000,
+            "price_change_percentage_24h": 1.2,
+            "price_change_percentage_7d_in_currency": 3.0,
+            "market_cap": 1.7e12,
+        },
     ]
     fear_greed = {"value": 45, "classification": "Fear"}
     result = mod.generate_market_insight(global_data, coins, fear_greed)
@@ -141,6 +147,7 @@ def test_collector_run_no_network(tmp_path, monkeypatch):
     # Suppress image generation
     try:
         import common.image_generator as ig
+
         monkeypatch.setattr(ig, "generate_top_coins_card", lambda *a, **kw: None)
         monkeypatch.setattr(ig, "generate_market_heatmap", lambda *a, **kw: None)
         monkeypatch.setattr(ig, "generate_news_briefing_card", lambda *a, **kw: None)
@@ -148,6 +155,7 @@ def test_collector_run_no_network(tmp_path, monkeypatch):
         pass
 
     from common import post_generator as pg_mod
+
     monkeypatch.setattr(pg_mod, "POSTS_DIR", str(tmp_path))
 
     collector = mod.CoinMarketCapCollector()
@@ -159,7 +167,9 @@ def test_dedup_idempotent_coinmarketcap(tmp_path, monkeypatch):
     mod = importlib.import_module("collect_coinmarketcap")
 
     fake_coin = {
-        "name": "Bitcoin", "symbol": "btc", "current_price": 85000,
+        "name": "Bitcoin",
+        "symbol": "btc",
+        "current_price": 85000,
         "price_change_percentage_24h": 1.5,
         "price_change_percentage_7d_in_currency": 3.0,
         "market_cap": 1_700_000_000_000,
@@ -176,6 +186,7 @@ def test_dedup_idempotent_coinmarketcap(tmp_path, monkeypatch):
 
     try:
         import common.image_generator as ig
+
         monkeypatch.setattr(ig, "generate_top_coins_card", lambda *a, **kw: None)
         monkeypatch.setattr(ig, "generate_market_heatmap", lambda *a, **kw: None)
         monkeypatch.setattr(ig, "generate_news_briefing_card", lambda *a, **kw: None)
@@ -183,6 +194,7 @@ def test_dedup_idempotent_coinmarketcap(tmp_path, monkeypatch):
         pass
 
     from common import post_generator as pg_mod
+
     monkeypatch.setattr(pg_mod, "POSTS_DIR", str(tmp_path))
 
     c1 = mod.CoinMarketCapCollector()

@@ -160,6 +160,7 @@ class TestFetchRssFeed:
     @patch("common.rss_fetcher.requests.get")
     def test_network_error_returns_empty(self, mock_get):
         import requests as req
+
         mock_get.side_effect = req.exceptions.ConnectionError("refused")
 
         items = fetch_rss_feed("https://example.com/feed.rss", "Source", [])
@@ -168,6 +169,7 @@ class TestFetchRssFeed:
     @patch("common.rss_fetcher.requests.get")
     def test_http_error_returns_empty(self, mock_get):
         import requests as req
+
         mock_resp = MagicMock()
         mock_resp.raise_for_status.side_effect = req.exceptions.HTTPError("503")
         mock_get.return_value = mock_resp

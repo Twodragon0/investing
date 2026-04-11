@@ -79,6 +79,7 @@ def test_fetch_twitter_search_skips_when_no_token():
 def test_fetch_telegram_channel_handles_request_error():
     mod = importlib.import_module("collect_social_media")
     import requests
+
     with patch("requests.get", side_effect=requests.exceptions.ConnectionError("offline")):
         result = mod.fetch_telegram_channel("cryptonews")
     assert result == []
@@ -123,6 +124,7 @@ def test_collector_run_no_network(tmp_path, monkeypatch):
     monkeypatch.setattr(mod, "enrich_items", lambda items, *a, **kw: None)
 
     from common import post_generator as pg_mod
+
     monkeypatch.setattr(pg_mod, "POSTS_DIR", str(tmp_path))
 
     collector = mod.SocialMediaCollector()
@@ -153,6 +155,7 @@ def test_dedup_idempotent_social(tmp_path, monkeypatch):
     monkeypatch.setattr(mod, "enrich_items", lambda items, *a, **kw: None)
 
     from common import post_generator as pg_mod
+
     monkeypatch.setattr(pg_mod, "POSTS_DIR", str(tmp_path))
 
     c1 = mod.SocialMediaCollector()
