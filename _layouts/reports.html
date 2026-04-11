@@ -11,8 +11,8 @@ layout: default
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "{{ page.title | default: '리포트' }}",
-  "description": "{{ page.description }}",
+  "name": {{ page.title | default: '리포트' | jsonify }},
+  "description": {{ page.description | default: '' | jsonify }},
   "url": "{{ page.url | absolute_url }}",
   "publisher": {
     "@type": "Organization",

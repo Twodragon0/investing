@@ -2,7 +2,7 @@ name: Collect Blockchain Metrics
 
 on:
   schedule:
-    - cron: '10 0 * * *'  # 09:10 KST daily (offset from other collectors)
+    - cron: '20 0 * * *'  # 09:20 KST daily (offset to avoid server cron 09:10 KST conflict)
   workflow_dispatch:
 
 permissions:

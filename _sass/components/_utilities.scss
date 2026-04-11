@@ -1339,7 +1339,7 @@ a:focus-visible {
   }
 }
 
-/* Reduced motion support */
+/* Reduced motion support — WCAG 2.3.3 */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -1347,6 +1347,20 @@ a:focus-visible {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Fully disable known infinite decorative animations (gradient/shimmer/glow)
+     for users who have requested reduced motion. */
+  .dashboard-gradient-bg,
+  .dashboard-header::before,
+  .dashboard-header::after,
+  .market-pulse .pulse-dot,
+  .footer-cta::before,
+  .footer-cta::after,
+  .cta-button::before {
+    animation: none !important;
+    background-position: 0 0 !important;
   }
 }
 /* ================================

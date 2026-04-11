@@ -7,10 +7,10 @@ layout: default
 <section class="category-archive">
   <div class="category-header">
     <div class="category-title-wrapper">
-      <h1>{{ page.title }}</h1>
+      <h1>{{ page.title | escape }}</h1>
       <span class="post-count-badge">{{ cat_posts.size }}개 포스트</span>
     </div>
-    <p class="category-description">{{ page.description }}</p>
+    <p class="category-description">{{ page.description | escape }}</p>
     <a href="{{ '/' | relative_url }}" class="back-to-home">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
@@ -44,8 +44,8 @@ layout: default
             </svg>
           </div>
           <div class="dashboard-info">
-            <h1>{{ page.title }}</h1>
-            <p>{{ page.description }}</p>
+            <h1>{{ page.title | escape }}</h1>
+            <p>{{ page.description | escape }}</p>
           </div>
         </div>
         <div class="dashboard-status">
@@ -62,8 +62,8 @@ layout: default
       <article class="journal-landing-main-card">
         <div class="journal-landing-copy">
           <span class="journal-landing-kicker">Latest Session Board</span>
-          <h2>{{ latest_post.title }}</h2>
-          <p>{{ latest_post.excerpt | default: latest_post.description }}</p>
+          <h2>{{ latest_post.title | escape }}</h2>
+          <p>{{ latest_post.excerpt | default: latest_post.description | strip_html | escape }}</p>
           <div class="journal-landing-metrics">
             <div class="journal-landing-metric">
               <span class="journal-summary-label">Day Result</span>
@@ -81,7 +81,7 @@ layout: default
           {% if latest_focus %}
           <div class="journal-landing-focus">
             <span class="journal-note-label">Next Session Focus</span>
-            <p>{{ latest_focus }}</p>
+            <p>{{ latest_focus | strip_html | escape }}</p>
           </div>
           {% endif %}
         </div>
@@ -109,8 +109,8 @@ layout: default
             <a href="{{ post.url | relative_url }}" class="journal-landing-mini-card">
               {% if post.image %}{% assign journal_image_alt = post.image_alt | default: post.title %}{% include generated-picture.html image=post.image alt=journal_image_alt %}{% endif %}
               <div>
-                <strong>{{ post.title }}</strong>
-                <span>{{ post.date | date: "%Y-%m-%d" }} · {{ post.journal_day_result | default: '-' }}</span>
+                <strong>{{ post.title | escape }}</strong>
+                <span>{{ post.date | date: "%Y-%m-%d" }} · {{ post.journal_day_result | default: '-' | escape }}</span>
               </div>
             </a>
             {% endfor %}
@@ -169,7 +169,7 @@ layout: default
               <strong class="journal-summary-value">{{ month_latest.journal_day_result | default: '-' }}</strong>
             </div>
           </div>
-          <p>{{ month_latest.journal_next_focus | default: month_latest.excerpt }}</p>
+          <p>{{ month_latest.journal_next_focus | default: month_latest.excerpt | strip_html | escape }}</p>
           <a href="{{ month_latest.url | relative_url }}" class="journal-month-link">최근 세션 보기</a>
         </article>
         {% endfor %}

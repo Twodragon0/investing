@@ -77,9 +77,9 @@
   </div>
   <div class="post-card-meta">
     {% if post.pin %}<span class="pin-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M16 12V4h1V2H7v2h1v8l-2 2v2h5.2v6h1.6v-6H18v-2l-2-2z"/></svg> TOP</span>{% endif %}
-    <span class="post-category cat-{{ pc_cat | slugify }}">{{ pc_cat_name }}</span>
+    <span class="post-category cat-{{ pc_cat | slugify }}">{{ pc_cat_name | escape }}</span>
     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-    {% if post.source %}<span class="post-source">{{ post.source }}</span>{% endif %}
+    {% if post.source %}<span class="post-source">{{ post.source | escape }}</span>{% endif %}
     <span class="post-reading-time">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
@@ -87,25 +87,25 @@
       {{ reading_time }}분
     </span>
   </div>
-  <h3>{{ post.title }}</h3>
+  <h3>{{ post.title | escape }}</h3>
   {% if post.description and post.description != "" %}
-    {% assign desc_parts = post.description | split: ". " %}
+    {% assign desc_parts = post.description | strip_html | split: ". " %}
     {% if desc_parts.size > 1 %}
       <p class="post-excerpt">
-        <small class="excerpt-summary">{{ desc_parts[0] | truncate: 60 }}.</small>
-        {{ desc_parts | shift | join: ". " | truncate: 100 }}
+        <small class="excerpt-summary">{{ desc_parts[0] | truncate: 60 | escape }}.</small>
+        {{ desc_parts | shift | join: ". " | truncate: 100 | escape }}
       </p>
     {% else %}
-      <p class="post-excerpt">{{ post.description | truncate: 140 }}</p>
+      <p class="post-excerpt">{{ post.description | strip_html | truncate: 140 | escape }}</p>
     {% endif %}
   {% elsif post.excerpt %}
-    <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+    <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 140 | escape }}</p>
   {% endif %}
   <div class="post-card-footer">
     {% if post.tags.size > 0 %}
     <div class="post-tags">
       {% for tag in post.tags limit:3 %}
-      <span class="tag">{{ tag }}</span>
+      <span class="tag">{{ tag | escape }}</span>
       {% endfor %}
     </div>
     {% endif %}

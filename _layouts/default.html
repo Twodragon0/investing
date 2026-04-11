@@ -26,7 +26,7 @@
   </script>
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>{% if page.title and page.title != site.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <title>{% if page.title and page.title != site.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
 
   {% assign og_title = page.title | default: site.title | escape %}
   {% assign raw_desc = page.excerpt | default: page.description %}
@@ -70,7 +70,7 @@
   <!-- SEO -->
   <meta name="description" content="{{ og_desc }}">
   {% assign meta_keywords = page.keywords | default: page.tags %}
-  {% if meta_keywords %}<meta name="keywords" content="{{ meta_keywords | join: ', ' }}">{% endif %}
+  {% if meta_keywords %}<meta name="keywords" content="{{ meta_keywords | join: ', ' | escape }}">{% endif %}
   <meta name="author" content="{{ site.social.name | default: 'Investing Dragon' }}">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
@@ -97,9 +97,9 @@
   <meta property="article:modified_time" content="{{ page.last_modified_at | date_to_xmlschema }}">
   {% endif %}
   {% assign first_cat = page.categories | first %}
-  {% if first_cat %}<meta property="article:section" content="{{ first_cat }}">{% endif %}
+  {% if first_cat %}<meta property="article:section" content="{{ first_cat | escape }}">{% endif %}
   {% if page.tags %}{% for tag in page.tags limit:5 %}
-  <meta property="article:tag" content="{{ tag }}">{% endfor %}{% endif %}
+  <meta property="article:tag" content="{{ tag | escape }}">{% endfor %}{% endif %}
   {% endif %}
 
   <!-- KakaoTalk -->

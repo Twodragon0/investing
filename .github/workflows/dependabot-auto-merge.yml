@@ -4,7 +4,7 @@ on:
   pull_request:
 
 permissions:
-  contents: write
+  contents: read
   pull-requests: write
 
 jobs:
@@ -19,15 +19,15 @@ jobs:
         with:
           github-token: ${{ github.token }}
 
-      - name: Auto-approve dependabot PR
-        if: steps.metadata.outputs.update-type != 'version-update:semver-major'
+      - name: Auto-approve dependabot PR (patch only)
+        if: steps.metadata.outputs.update-type == 'version-update:semver-patch'
         run: gh pr review "$PR_URL" --approve
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ github.token }}
 
-      - name: Enable auto-merge
-        if: steps.metadata.outputs.update-type != 'version-update:semver-major'
+      - name: Enable auto-merge (patch only)
+        if: steps.metadata.outputs.update-type == 'version-update:semver-patch'
         run: gh pr merge "$PR_URL" --auto --merge
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
