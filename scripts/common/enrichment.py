@@ -15,6 +15,7 @@ from urllib.parse import urlparse
 import requests
 
 from .config import get_verify_ssl
+from .encoding_guard import force_utf8_if_mislabelled, sanitize_mojibake
 from .markdown_utils import smart_truncate
 
 logger = logging.getLogger(__name__)
@@ -569,6 +570,7 @@ def _fetch_og_image(url: str, timeout: int = 8) -> str:
             verify=_get_verify_ssl(),
         )
         resp.raise_for_status()
+        force_utf8_if_mislabelled(resp)
         # Search in first 30KB of HTML for og:image via regex (faster than BS4)
         head_html = resp.text[:30_000]
         for pattern in [
@@ -867,17 +869,20 @@ def fetch_page_metadata(url: str, timeout: int = 8, title: str = "") -> Dict[str
             verify=_get_verify_ssl(),
         )
         resp.raise_for_status()
+        force_utf8_if_mislabelled(resp)
         soup = BS4(resp.text, "html.parser")
 
         # Extract OG metadata (image + meta description tags)
         og = _extract_og_metadata(soup, title=title)
         result["image"] = og["image"]
         if og["description"]:
-            result["description"] = og["description"]
-            return result
+            cleaned = sanitize_mojibake(og["description"])
+            if cleaned:
+                result["description"] = cleaned
+                return result
 
         # Try readability-lxml for high-quality article extraction
-        desc = _extract_via_readability(resp.text, url)
+        desc = sanitize_mojibake(_extract_via_readability(resp.text, url))
         if desc:
             if _is_title_related_description(title, desc):
                 result["description"] = desc
@@ -886,7 +891,7 @@ def fetch_page_metadata(url: str, timeout: int = 8, title: str = "") -> Dict[str
             return result
 
         # Article body paragraphs (BS4 fallback)
-        desc = _extract_via_bs4_article(soup)
+        desc = sanitize_mojibake(_extract_via_bs4_article(soup))
         if desc:
             if _is_title_related_description(title, desc):
                 result["description"] = desc
@@ -895,7 +900,7 @@ def fetch_page_metadata(url: str, timeout: int = 8, title: str = "") -> Dict[str
             return result
 
         # Last resort: any substantial <p> not in noise containers
-        desc = _extract_via_paragraphs(soup)
+        desc = sanitize_mojibake(_extract_via_paragraphs(soup))
         if desc:
             if _is_title_related_description(title, desc):
                 result["description"] = desc

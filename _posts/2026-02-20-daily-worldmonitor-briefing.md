@@ -7,7 +7,7 @@ tags: [worldmonitor, geopolitics, macro, daily-digest]
 source: "worldmonitor"
 source_url: "https://worldmonitor.app"
 lang: "ko"
-description: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-02-20 - 최신 시장 분석 뉴스와 분석을 확인하세요."
+description: "이란 핵 협상 최후통첩 — Trump가 이란에 10일 내 합의 압박; 베네수엘라 경제 위기 — IMF가 경제·인도적 상황을 매우 취약으로 경고; 미국 12월 무역적자 사상 최대 수준으로 확대, 관세 정책 실효성에 의문."
 image: "/assets/images/generated/news-briefing-worldmonitor-2026-02-20.png"
 excerpt: "주요 테마: 사회/기타, 지정학/안보 - 이란 핵 협상 최후통첩: Trump가 이란에 '10일 내 합의하지 않으면 나쁜 일이 일어난다'고 경고. 원유 가격과 안전자산(금)에…"
 image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-02-20 - market-analysis 뉴스 요약 이미지"

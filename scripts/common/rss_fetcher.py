@@ -12,6 +12,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from .config import REQUEST_TIMEOUT, USER_AGENT, get_verify_ssl
+from .encoding_guard import force_utf8_if_mislabelled, sanitize_mojibake
 from .utils import SOURCE_SUFFIX_RE as _SOURCE_SUFFIX_RE
 from .utils import parse_date, remove_sponsored_text, sanitize_string, truncate_sentence
 
@@ -19,6 +20,10 @@ logger = logging.getLogger(__name__)
 
 _GOOGLE_NEWS_HOSTS = {"news.google.com"}
 _GOOGLE_NEWS_REDIRECT_QUERY_KEYS = ("url", "u", "q")
+
+# Legacy alias retained so existing callers and tests that import
+# ``_sanitize_mojibake`` from this module keep working.
+_sanitize_mojibake = sanitize_mojibake
 
 
 def is_safe_url(url: str) -> bool:
@@ -216,8 +221,7 @@ def fetch_rss_feed(
             resp.raise_for_status()
             # Force UTF-8 for feeds that don't declare charset properly
             # (e.g. Google News Korean RSS returns UTF-8 but headers may say ISO-8859-1)
-            if resp.encoding and resp.encoding.lower() in ("iso-8859-1", "latin-1", "ascii"):
-                resp.encoding = "utf-8"
+            force_utf8_if_mislabelled(resp)
             soup = BeautifulSoup(resp.text, "xml")
 
             items = []
@@ -259,6 +263,9 @@ def fetch_rss_feed(
                     # Remove trailing whitespace/dots artifacts
                     cleaned_desc = re.sub(r"\s*\.{2,}\s*$", "", cleaned_desc)
                     cleaned_desc = re.sub(r"\s+", " ", cleaned_desc).strip()
+                    # Drop/recover mojibake before length truncation so downstream
+                    # enrichment can fall back to synthetic descriptions.
+                    cleaned_desc = _sanitize_mojibake(cleaned_desc)
                     description = truncate_sentence(sanitize_string(cleaned_desc, 1500), 1000)
 
                 published_str = date_el.get_text(strip=True) if date_el else ""

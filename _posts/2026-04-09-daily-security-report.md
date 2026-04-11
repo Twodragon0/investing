@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-security-report-2026-04-09.png"
 permalink: "/security-alerts/2026/04/09/daily-security-report/"
 description_ko: "올해의 가장 큰 디파이 악용은 '무료 음료' 때문에 시작되었을 수 있습니다: 보고서 - Stocktwits. 블록체인 보안 뉴스 1건 분석."
-description: "올해의 가장 큰 디파이 악용은 '무료 음료' 때문에 시작되었을 수 있습니다: 보고서 - Stocktwits. 블록체인 보안 뉴스 1건 분석 - Investing Dragon 자동 수집 분석 리포트."
+description: "올해의 가장 큰 디파이 악용은 '무료 음료' 때문에 시작되었을 수 있습니다: 보고서 - Stocktwits. 블록체인 보안 뉴스 1건 분석."
 excerpt: "올해의 가장 큰 디파이 악용은 '무료 음료' 때문에 시작되었을 수 있습니다: 보고서 - Stocktwits. 블록체인 보안 뉴스 1건 분석 - Investing Dragon…"
 image_alt: "블록체인 보안 리포트 - 2026-04-09 - 보안 뉴스 요약 이미지"
 ---

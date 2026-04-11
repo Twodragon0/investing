@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-regulatory-report-2026-04-07.png"
 permalink: "/regulatory-news/2026/04/07/daily-regulatory-report/"
 description_ko: "글로벌 규제 동향 19건 수집. 주요 테마: 규제/정책, 거래소, 정치/정책. 미국·한국·아시아·유럽 규제 기관 동향을 분석합니다."
-description: "글로벌 규제 동향 19건 수집. 주요 테마: 규제/정책, 거래소, 정치/정책. 미국·한국·아시아·유럽 규제 기관 동향을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
+description: "글로벌 규제 동향 19건 수집. 주요 테마: 규제/정책, 거래소, 정치/정책. 미국·한국·아시아·유럽 규제 기관 동향을 분석합니다."
 excerpt: "글로벌 규제 동향 19건 수집. 주요 테마: 규제/정책, 거래소, 정치/정책. 미국·한국·아시아·유럽 규제 기관 동향을 분석합니다 - Investing Dragon 자동 수집…"
 image_alt: "글로벌 규제 동향 리포트 - 2026-04-07 - 규제 뉴스 요약 이미지"
 ---

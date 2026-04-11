@@ -7,7 +7,7 @@ tags: [worldmonitor, geopolitics, macro, daily-digest]
 source: "worldmonitor"
 source_url: "https://worldmonitor.app"
 lang: "ko"
-description: "2026-02-17 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다."
+description: "중동·유럽·아시아 지정학 이슈 20건을 에너지·안보·무역 3개 축으로 묶어 2월 17일 기준 거시 리스크를 분석."
 image: "/assets/images/generated/news-briefing-worldmonitor-2026-02-17.png"
 excerpt: "범위: 글로벌 지정학, 금융시장, 에너지 이슈 주요 출처: WorldMonitor/BBC World (15건), WorldMonitor/Al Jazeera (5건)"
 image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-02-17 - market-analysis 뉴스 요약 이미지"

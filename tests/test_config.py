@@ -68,7 +68,14 @@ class TestGetSslVerify:
             result = get_ssl_verify()
             assert result is True
 
-    def test_disabled_non_ci_returns_false(self):
+    def test_disabled_non_ci_without_ack_fails_closed(self):
+        """DISABLE_SSL_VERIFY without the MITM ack must keep SSL enabled.
+
+        Reflects the hardened behaviour introduced in config.py: the var
+        alone is no longer sufficient — the caller must also provide TTY,
+        non-CI env, non-root UID, and DISABLE_SSL_VERIFY_ACK=yes-i-understand-mitm.
+        Anything short of that returns True (verification ENABLED, fail-closed).
+        """
         from common.config import get_ssl_verify
 
         env = {"DISABLE_SSL_VERIFY": "true"}
@@ -76,8 +83,10 @@ class TestGetSslVerify:
             # Ensure CI vars are not set
             os.environ.pop("CI", None)
             os.environ.pop("GITHUB_ACTIONS", None)
+            os.environ.pop("DISABLE_SSL_VERIFY_ACK", None)
             result = get_ssl_verify()
-            assert result is False
+            # Fail-closed: missing ack keeps SSL verification ENABLED.
+            assert result is True
 
     def test_enabled_returns_path_or_true(self):
         from common.config import get_ssl_verify

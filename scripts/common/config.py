@@ -50,8 +50,7 @@ def get_ssl_verify():
     if os.environ.get("DISABLE_SSL_VERIFY", "").lower() in ("true", "1"):
         if not _is_interactive_local_dev():
             logger.error(
-                "DISABLE_SSL_VERIFY refused: not in interactive local dev context. "
-                "SSL verification remains ENABLED."
+                "DISABLE_SSL_VERIFY refused: not in interactive local dev context. SSL verification remains ENABLED."
             )
             return True
         ack = os.environ.get("DISABLE_SSL_VERIFY_ACK", "")
@@ -63,8 +62,7 @@ def get_ssl_verify():
             )
             return True
         logger.critical(
-            "SSL verification DISABLED — LOCAL INTERACTIVE DEV ONLY. "
-            "All HTTPS traffic is now MITM-vulnerable."
+            "SSL verification DISABLED — LOCAL INTERACTIVE DEV ONLY. All HTTPS traffic is now MITM-vulnerable."
         )
         return False
 

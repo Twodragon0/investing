@@ -6,7 +6,7 @@ categories: [security-alerts]
 tags: [security, hack, blockchain, daily-digest]
 source: "consolidated"
 lang: "ko"
-description: "블록체인 보안 리포트 — 사이버 보안 위협과 취약점 대응 현황을 정리합니다 - Investing Dragon 자동 수집 분석 리포트."
+description: "Lending protocols are becoming the target of DeFi exploits - Cryptopolitan"
 image: "/assets/images/generated/news-briefing-security-2026-02-13.png"
 excerpt: "Lending protocols are becoming the target of DeFi exploits - Cryptopolitan - Investing Dragon 자동…"
 image_alt: "블록체인 보안 리포트 - 2026-02-13 - security-alerts 뉴스 요약 이미지"

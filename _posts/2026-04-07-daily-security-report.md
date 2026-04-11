@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-security-report-2026-04-07.png"
 permalink: "/security-alerts/2026/04/07/daily-security-report/"
 description_ko: "AI은 해킹을 더 저렴하고 쉽게 만들어 암호화폐 보안을 파괴하고 있다고 Ledger CTO는 경고합니다.…. 블록체인 보안 뉴스 4건 분석."
-description: "AI은 해킹을 더 저렴하고 쉽게 만들어 암호화폐 보안을 파괴하고 있다고 Ledger CTO는 경고합니다.…. 블록체인 보안 뉴스 4건 분석 - Investing Dragon 자동 수집 분석 리포트."
+description: "AI은 해킹을 더 저렴하고 쉽게 만들어 암호화폐 보안을 파괴하고 있다고 Ledger CTO는 경고합니다.…. 블록체인 보안 뉴스 4건 분석."
 excerpt: "AI은 해킹을 더 저렴하고 쉽게 만들어 암호화폐 보안을 파괴하고 있다고 Ledger CTO는 경고합니다.…. 블록체인 보안 뉴스 4건 분석 - Investing Dragon…"
 image_alt: "블록체인 보안 리포트 - 2026-04-07 - 보안 뉴스 요약 이미지"
 ---
