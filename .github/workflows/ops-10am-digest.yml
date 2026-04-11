@@ -28,6 +28,9 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r scripts/requirements.txt
 
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+
       - name: Restore digest state cache
         uses: actions/cache/restore@668228422ae6a00e4ad889ee87cd7109ec5666a7  # v5
         with:
@@ -62,6 +65,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
           SLACK_BOT_TOKEN: ${{ steps.slack.outputs.token }}
           SLACK_CHANNEL_ID: ${{ steps.slack.outputs.channel }}
         run: |

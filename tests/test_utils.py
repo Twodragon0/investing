@@ -7,6 +7,7 @@ import pytest
 
 from common.utils import (
     detect_language,
+    is_private_url_target,
     parse_date,
     remove_sponsored_text,
     request_with_retry,
@@ -62,6 +63,24 @@ class TestValidateUrl:
         from unittest.mock import patch
         with patch("common.utils.urlparse", side_effect=ValueError("bad")):
             assert validate_url("https://example.com") is False
+
+
+class TestIsPrivateUrlTarget:
+    def test_blocks_literal_private_ip(self):
+        assert is_private_url_target("http://127.0.0.1/admin") is True
+        assert is_private_url_target("http://10.0.0.5/internal") is True
+
+    def test_blocks_localhost_and_single_label_hosts(self):
+        assert is_private_url_target("http://localhost:4000") is True
+        assert is_private_url_target("http://redis:6379") is True
+
+    def test_blocks_internal_and_rebinding_suffixes(self):
+        assert is_private_url_target("https://metadata.google.internal/path") is True
+        assert is_private_url_target("https://127-0-0-1.nip.io/path") is True
+
+    def test_allows_normal_public_domains(self):
+        assert is_private_url_target("https://example.com/feed.rss") is False
+        assert is_private_url_target("https://news.google.com/rss/articles/CBMi") is False
 
 
 class TestSlugify:

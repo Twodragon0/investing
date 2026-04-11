@@ -1,6 +1,7 @@
 """Utility functions for news collectors."""
 
 import email.utils
+import ipaddress
 import logging
 import re
 import time
@@ -11,6 +12,27 @@ from urllib.parse import urlparse
 import requests
 
 logger = logging.getLogger(__name__)
+
+_PRIVATE_HOSTNAMES = {
+    "localhost",
+    "localhost.localdomain",
+    "metadata.google.internal",
+}
+_PRIVATE_HOST_SUFFIXES = (
+    ".internal",
+    ".local",
+    ".localdomain",
+    ".localhost",
+    ".home",
+    ".lan",
+)
+_DNS_REBIND_HOST_SUFFIXES = (
+    ".nip.io",
+    ".xip.io",
+    ".sslip.io",
+    ".localtest.me",
+    ".lvh.me",
+)
 
 
 # Common source suffixes to strip from news titles (shared across collectors and summaries)
@@ -61,6 +83,57 @@ def validate_url(url: str) -> bool:
         return all([result.scheme in ("http", "https"), result.netloc])
     except Exception:
         return False
+
+
+def _is_non_public_ip(ip: ipaddress._BaseAddress) -> bool:
+    return any(
+        [
+            ip.is_private,
+            ip.is_loopback,
+            ip.is_link_local,
+            ip.is_multicast,
+            ip.is_unspecified,
+            getattr(ip, "is_reserved", False),
+        ]
+    )
+
+
+def is_private_url_target(url: str) -> bool:
+    """Best-effort SSRF guard for URL targets.
+
+    Blocks obvious internal targets:
+    - localhost and common internal host suffixes
+    - DNS-rebinding helper domains that map arbitrary IPs
+    - literal private/loopback/link-local IP addresses
+    - single-label hostnames such as ``redis`` or ``minio``
+
+    It intentionally does not DNS-resolve arbitrary public-looking hostnames.
+    The previous DNS-based approach produced false positives in CI/sandbox
+    environments and blocked normal public URLs like ``example.com``.
+    """
+    try:
+        parsed = urlparse(url)
+        hostname = (parsed.hostname or "").strip().rstrip(".").lower()
+    except Exception:
+        return True
+
+    if not hostname:
+        return True
+    if hostname in _PRIVATE_HOSTNAMES:
+        return True
+    if any(hostname.endswith(suffix) for suffix in (*_PRIVATE_HOST_SUFFIXES, *_DNS_REBIND_HOST_SUFFIXES)):
+        return True
+
+    try:
+        return _is_non_public_ip(ipaddress.ip_address(hostname))
+    except ValueError:
+        pass
+
+    # Single-label names usually indicate internal service discovery targets.
+    if "." not in hostname:
+        return True
+
+    return False
 
 
 def slugify(text: str, max_length: int = 80) -> str:

@@ -17,6 +17,7 @@ from common.config import get_kst_timezone
 
 GITHUB_API_BASE = "https://api.github.com"
 SLACK_API_BASE = "https://slack.com/api"
+SENTRY_API_BASE = "https://sentry.io/api/0"
 
 
 @dataclass
@@ -49,6 +50,13 @@ class SlackHealth:
     detail: str
 
 
+@dataclass
+class SentrySummary:
+    status: str
+    unresolved_count: int
+    issue_link: str
+
+
 def run_cmd(command: List[str]) -> Tuple[bool, str]:
     try:
         completed = subprocess.run(
@@ -69,6 +77,14 @@ def github_api(repo: str, token: str) -> Dict[str, Any]:
     req.add_header("Accept", "application/vnd.github+json")
     if token:
         req.add_header("Authorization", f"Bearer {token}")
+    with urllib.request.urlopen(req, timeout=20) as response:  # nosec B310 - HTTPS-only hardcoded URL
+        return json.loads(response.read().decode("utf-8"))
+
+
+def sentry_api(path: str, token: str) -> Any:
+    req = urllib.request.Request(f"{SENTRY_API_BASE}{path}")
+    req.add_header("Authorization", f"Bearer {token}")
+    req.add_header("Accept", "application/json")
     with urllib.request.urlopen(req, timeout=20) as response:  # nosec B310 - HTTPS-only hardcoded URL
         return json.loads(response.read().decode("utf-8"))
 
@@ -180,6 +196,32 @@ def collect_vercel_summary() -> VercelSummary:
     )
 
 
+def collect_sentry_summary(org: str, project: str, token: str) -> SentrySummary:
+    if not token or not org or not project:
+        return SentrySummary(status="UNAVAILABLE", unresolved_count=-1, issue_link="")
+
+    issue_link = (
+        f"https://sentry.io/organizations/{urllib.parse.quote(org)}/issues/"
+        f"?project={urllib.parse.quote(project)}&query=is%3Aunresolved"
+    )
+
+    try:
+        payload = sentry_api(
+            f"/projects/{urllib.parse.quote(org)}/{urllib.parse.quote(project)}/issues/"
+            "?query=is%3Aunresolved&limit=20",
+            token,
+        )
+    except (urllib.error.URLError, json.JSONDecodeError):
+        return SentrySummary(status="UNKNOWN", unresolved_count=-1, issue_link=issue_link)
+
+    if not isinstance(payload, list):
+        return SentrySummary(status="UNKNOWN", unresolved_count=-1, issue_link=issue_link)
+
+    unresolved_count = len(payload)
+    status = "OPEN" if unresolved_count > 0 else "CLEAR"
+    return SentrySummary(status=status, unresolved_count=unresolved_count, issue_link=issue_link)
+
+
 def collect_openclaw_summary() -> OpenClawSummary:
     gateway_ok, gateway_out = run_cmd(["openclaw", "gateway", "status"])
     models_ok, models_out = run_cmd(["openclaw", "models", "status"])
@@ -288,12 +330,20 @@ def write_state(path: Path, payload: Dict[str, Any]) -> None:
     os.replace(str(tmp), str(path))
 
 
-def build_actions(gh: GitHubSummary, vercel: VercelSummary, oc: OpenClawSummary, slack: SlackHealth) -> List[str]:
+def build_actions(
+    gh: GitHubSummary,
+    vercel: VercelSummary,
+    sentry: SentrySummary,
+    oc: OpenClawSummary,
+    slack: SlackHealth,
+) -> List[str]:
     actions: List[str] = []
     if gh.failure_count_24h > 0:
         actions.append("@ops | 10:30 | GitHub 실패 워크플로우 원인 확인")
     if vercel.recent3_failure_rate != "UNAVAILABLE" and vercel.recent3_failure_rate != "0/3":
         actions.append("@ops | 10:30 | Vercel 최근 배포/로그 점검")
+    if sentry.status == "OPEN":
+        actions.append("@security | 10:40 | Sentry 미해결 이슈 우선 분류")
     if oc.fallback_degraded_or_missing > 0 or oc.auth_issue_count > 0:
         actions.append("@ai | 11:00 | OpenClaw fallback provider auth 재검증")
     if slack.status != "READY":
@@ -307,6 +357,7 @@ def format_digest(
     marker: str,
     gh: GitHubSummary,
     vercel: VercelSummary,
+    sentry: SentrySummary,
     oc: OpenClawSummary,
     slack: SlackHealth,
     actions: List[str],
@@ -314,9 +365,11 @@ def format_digest(
     links: List[str],
 ) -> str:
     gh_count = "N/A" if gh.failure_count_24h < 0 else str(gh.failure_count_24h)
+    sentry_count = "N/A" if sentry.unresolved_count < 0 else str(sentry.unresolved_count)
     p0_line = (
         f"P0: GH 실패 {gh_count}건 | Vercel {vercel.production_state}"
-        f" (errors:{vercel.error_logs_found}) | OpenClaw Runtime {oc.runtime}, RPC {oc.rpc_probe}"
+        f" (errors:{vercel.error_logs_found}) | Sentry {sentry.status}"
+        f" (unresolved:{sentry_count}) | OpenClaw Runtime {oc.runtime}, RPC {oc.rpc_probe}"
         f" | Slack {slack.status}"
     )
 
@@ -371,12 +424,16 @@ def main() -> int:
 
     github_token = os.getenv("GITHUB_TOKEN", "")
     slack_token = os.getenv("SLACK_BOT_TOKEN", "")
+    sentry_token = os.getenv("SENTRY_AUTH_TOKEN", "")
+    sentry_org = os.getenv("SENTRY_ORG", "")
+    sentry_project = os.getenv("SENTRY_PROJECT", "")
 
     now = datetime.now(get_kst_timezone())
     marker = f"[ops-10am-digest:{now.strftime('%Y-%m-%d')}]"
 
     gh = collect_github_summary(args.repo, github_token)
     vercel = collect_vercel_summary()
+    sentry = collect_sentry_summary(sentry_org, sentry_project, sentry_token)
     oc = collect_openclaw_summary()
     slack = collect_slack_health(slack_token, args.slack_channel)
 
@@ -387,10 +444,12 @@ def main() -> int:
     links.extend(gh.latest_failure_links)
     if vercel.recent_deploy_link:
         links.append(vercel.recent_deploy_link)
+    if sentry.issue_link:
+        links.append(sentry.issue_link)
     links.append("https://docs.openclaw.ai/cli/models")
 
-    actions = build_actions(gh, vercel, oc, slack)
-    message = format_digest(marker, gh, vercel, oc, slack, actions, prev_state, links)
+    actions = build_actions(gh, vercel, sentry, oc, slack)
+    message = format_digest(marker, gh, vercel, sentry, oc, slack, actions, prev_state, links)
     post_ok = should_post_today(slack_token, args.slack_channel, marker)
 
     current_state = {

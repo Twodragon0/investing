@@ -1,9 +1,7 @@
 """Shared RSS feed fetcher used by multiple collection scripts."""
 
-import ipaddress
 import logging
 import re
-import socket
 from datetime import UTC, datetime, timedelta
 from typing import Any, Dict, List, Optional
 from urllib.parse import parse_qs, unquote, urlparse
@@ -14,7 +12,7 @@ from bs4 import BeautifulSoup
 from .config import REQUEST_TIMEOUT, USER_AGENT, get_verify_ssl
 from .encoding_guard import force_utf8_if_mislabelled, sanitize_mojibake
 from .utils import SOURCE_SUFFIX_RE as _SOURCE_SUFFIX_RE
-from .utils import parse_date, remove_sponsored_text, sanitize_string, truncate_sentence
+from .utils import is_private_url_target, parse_date, remove_sponsored_text, sanitize_string, truncate_sentence
 
 logger = logging.getLogger(__name__)
 
@@ -36,32 +34,7 @@ def is_safe_url(url: str) -> bool:
 
 
 def is_private_url(url: str) -> bool:
-    try:
-        parsed = urlparse(url)
-        hostname = parsed.hostname
-        if not hostname:
-            return True
-        if hostname.lower() in {"localhost", "localhost.localdomain"}:
-            return True
-        addresses = socket.getaddrinfo(hostname, None, proto=socket.IPPROTO_TCP)
-        if not addresses:
-            return True
-        for _family, _socktype, _proto, _canonname, sockaddr in addresses:
-            ip = ipaddress.ip_address(sockaddr[0])
-            if any(
-                [
-                    ip.is_private,
-                    ip.is_loopback,
-                    ip.is_link_local,
-                    ip.is_multicast,
-                    ip.is_unspecified,
-                    getattr(ip, "is_reserved", False),
-                ]
-            ):
-                return True
-        return False
-    except Exception:
-        return True
+    return is_private_url_target(url)
 
 
 def is_http_image_url(url: str) -> bool:

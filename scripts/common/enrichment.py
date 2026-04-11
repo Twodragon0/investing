@@ -4,10 +4,8 @@ Provides functions to fetch meta descriptions from URLs and generate
 synthetic descriptions when actual content is unavailable.
 """
 
-import ipaddress
 import logging
 import re
-import socket
 from difflib import SequenceMatcher
 from typing import Any, Dict, Optional
 from urllib.parse import urlparse
@@ -17,6 +15,7 @@ import requests
 from .config import get_verify_ssl
 from .encoding_guard import force_utf8_if_mislabelled, sanitize_mojibake
 from .markdown_utils import smart_truncate
+from .utils import is_private_url_target
 
 logger = logging.getLogger(__name__)
 
@@ -149,33 +148,8 @@ _SYNTHETIC_MARKERS = [
 
 
 def is_private_url(url: str) -> bool:
-    """Check if URL resolves to a private/internal IP address."""
-    try:
-        parsed = urlparse(url)
-        hostname = parsed.hostname
-        if not hostname:
-            return True
-        if hostname.lower() in {"localhost", "localhost.localdomain"}:
-            return True
-        addresses = socket.getaddrinfo(hostname, None, proto=socket.IPPROTO_TCP)
-        if not addresses:
-            return True
-        for _family, _socktype, _proto, _canonname, sockaddr in addresses:
-            ip = ipaddress.ip_address(sockaddr[0])
-            if any(
-                [
-                    ip.is_private,
-                    ip.is_loopback,
-                    ip.is_link_local,
-                    ip.is_multicast,
-                    ip.is_unspecified,
-                    getattr(ip, "is_reserved", False),
-                ]
-            ):
-                return True
-        return False
-    except Exception:
-        return True  # Block on other unexpected errors
+    """Check if URL points to an obvious private/internal target."""
+    return is_private_url_target(url)
 
 
 _VERIFY_SSL: Optional[object] = None
