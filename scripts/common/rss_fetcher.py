@@ -46,9 +46,7 @@ def _sanitize_mojibake(text: str) -> str:
         recovered = text.encode("latin-1", errors="strict").decode("utf-8", errors="strict")
     except (UnicodeEncodeError, UnicodeDecodeError):
         recovered = None
-    if recovered and any(
-        0xAC00 <= ord(c) <= 0xD7A3 or 0x4E00 <= ord(c) <= 0x9FFF for c in recovered
-    ):
+    if recovered and any(0xAC00 <= ord(c) <= 0xD7A3 or 0x4E00 <= ord(c) <= 0x9FFF for c in recovered):
         return recovered
     # Unrecoverable — if mojibake pattern is still present, drop the text.
     if _MOJIBAKE_RE.search(text):
