@@ -1,9 +1,11 @@
 """Utility functions for news collectors."""
 
 import email.utils
+import functools
 import ipaddress
 import logging
 import re
+import socket
 import time
 from datetime import UTC, datetime
 from typing import Optional, Union
@@ -98,18 +100,45 @@ def _is_non_public_ip(ip: ipaddress._BaseAddress) -> bool:
     )
 
 
+@functools.lru_cache(maxsize=256)
+def _resolve_hostname_ips(hostname: str) -> Optional[tuple]:
+    """Resolve *hostname* to a tuple of IP address strings via getaddrinfo.
+
+    Results are cached for the process lifetime (lru_cache).  In practice the
+    collector processes restart frequently enough that stale entries are not a
+    concern; the cache is primarily a guard against repeated lookups for the
+    same hostname within a single collection run.
+
+    Returns a tuple of IP strings on success, or None on any resolution error.
+    """
+    try:
+        infos = socket.getaddrinfo(hostname, None)
+        return tuple(info[4][0] for info in infos)
+    except OSError:
+        return None
+
+
 def is_private_url_target(url: str) -> bool:
     """Best-effort SSRF guard for URL targets.
 
-    Blocks obvious internal targets:
+    Blocks:
     - localhost and common internal host suffixes
-    - DNS-rebinding helper domains that map arbitrary IPs
-    - literal private/loopback/link-local IP addresses
+    - DNS-rebinding helper domains that embed arbitrary IPs
+    - literal private/loopback/link-local IP addresses (IPv4 and IPv6)
     - single-label hostnames such as ``redis`` or ``minio``
+    - hostnames whose DNS A/AAAA records resolve to a private/restricted IP
 
-    It intentionally does not DNS-resolve arbitrary public-looking hostnames.
-    The previous DNS-based approach produced false positives in CI/sandbox
-    environments and blocked normal public URLs like ``example.com``.
+    The DNS-resolution step uses ``socket.getaddrinfo`` and applies
+    ``_is_non_public_ip`` to every resolved address.  If resolution fails for
+    any reason (NXDOMAIN, timeout, network unavailable) the function fails
+    **closed** and returns ``True`` to deny the request.  This is conservative
+    but necessary: an attacker who can influence DNS can also cause transient
+    failures.
+
+    Note on CI environments: the ``@lru_cache`` on ``_resolve_hostname_ips``
+    can be cleared in tests via ``_resolve_hostname_ips.cache_clear()`` and
+    ``socket.getaddrinfo`` can be mocked with ``unittest.mock.patch`` to avoid
+    real network calls.
     """
     try:
         parsed = urlparse(url)
@@ -132,6 +161,27 @@ def is_private_url_target(url: str) -> bool:
     # Single-label names usually indicate internal service discovery targets.
     if "." not in hostname:
         return True
+
+    # DNS-resolution check: resolve hostname and inspect each returned IP.
+    # Fail-closed: if resolution fails for any reason, block the URL.
+    resolved = _resolve_hostname_ips(hostname)
+    if resolved is None:
+        logger.warning("SSRF guard: DNS resolution failed for %r — blocking (fail-closed)", hostname)
+        return True
+
+    for ip_str in resolved:
+        try:
+            if _is_non_public_ip(ipaddress.ip_address(ip_str)):
+                logger.warning(
+                    "SSRF guard: hostname %r resolved to non-public IP %r — blocking",
+                    hostname,
+                    ip_str,
+                )
+                return True
+        except ValueError:
+            # Unparseable address string — fail closed for this entry.
+            logger.warning("SSRF guard: unparseable resolved address %r for %r — blocking", ip_str, hostname)
+            return True
 
     return False
 
