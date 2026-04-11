@@ -127,7 +127,7 @@ def _fetch_telegram_browser(channels: List[str], limit: int = 10) -> Dict[str, L
         return results
 
     try:
-        with BrowserSession(timeout=30_000) as session:
+        with BrowserSession() as session:
             for channel in channels:
                 try:
                     session.navigate(

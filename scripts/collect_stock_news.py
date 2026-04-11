@@ -81,7 +81,7 @@ def fetch_google_news_browser_stocks(limit: int = 20) -> List[Dict[str, Any]]:
     all_items: List[Dict[str, Any]] = []
 
     try:
-        with BrowserSession(timeout=30_000) as session:
+        with BrowserSession() as session:
             for search_url, tags in search_configs:
                 try:
                     session.navigate(search_url, wait_until="domcontentloaded", wait_ms=3000)

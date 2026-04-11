@@ -603,7 +603,7 @@ def fetch_cmc_browser_fallback(limit: int = 20) -> List[Dict[str, Any]]:
 
     items: List[Dict[str, Any]] = []
     try:
-        with BrowserSession(timeout=30_000) as session:
+        with BrowserSession() as session:
             session.navigate(
                 get_url("coinmarketcap", "cmc_site", "https://coinmarketcap.com/"),
                 wait_until="domcontentloaded",
