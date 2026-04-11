@@ -46,10 +46,10 @@ jobs:
           install /tmp/actionlint /usr/local/bin/actionlint
 
       - name: Run ruff linter (with security rules)
-        run: python3 -m ruff check scripts/ --output-format=github
+        run: python3 -m ruff check scripts/ tests/ --output-format=github
 
       - name: Run ruff format check
-        run: python3 -m ruff format --check scripts/
+        run: python3 -m ruff format --check scripts/ tests/
 
       - name: Run tests with coverage
         run: |

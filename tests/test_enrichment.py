@@ -14,8 +14,8 @@ from common.enrichment import (
     _extract_title_entities,
     _get_source_label,
     _is_desc_duplicate_of_title,
-    _is_title_related_description,
     _is_site_boilerplate,
+    _is_title_related_description,
     _is_valid_image_url,
     _resolve_google_news_url,
     fetch_descriptions_concurrent,
@@ -379,7 +379,7 @@ class TestFetchPageMetadata:
 
     @patch("common.enrichment.is_private_url", return_value=False)
     @patch("common.enrichment.requests.get")
-    def test_irrelevant_meta_description_rejected_with_title(self, mock_get, _mock_private):
+    def test_irrelevant_meta_description_rejected_with_title(self, mock_get, _mock_private):  # noqa: PT019
         html = """<html><head>
         <meta name="description" content="Apple unveils new iPhone lineup at annual event." />
         </head><body></body></html>"""
