@@ -3,7 +3,7 @@
 import importlib
 import os
 import sys
-from unittest.mock import MagicMock, patch
+from unittest.mock import patch
 
 SCRIPTS_DIR = os.path.join(os.path.dirname(__file__), "..", "scripts")
 if SCRIPTS_DIR not in sys.path:
@@ -91,21 +91,9 @@ def test_fetch_telegram_channel_handles_request_error():
 
 
 def test_fetch_google_news_social_returns_list():
+    """Mocks common.rss_fetcher functions in collector namespace — no network."""
     mod = importlib.import_module("collect_social_media")
-    entry = MagicMock()
-    entry.title = "Crypto twitter sentiment bullish"
-    entry.link = "https://example.com/social"
-    entry.published = ""
-    entry.summary = "desc"
-    entry.get = lambda k, d="": d
-
-    feed = MagicMock()
-    feed.bozo = False
-    feed.entries = [entry]
-    feed.feed = MagicMock()
-    feed.feed.get = lambda k, d="": d
-
-    with patch("feedparser.parse", return_value=feed):
+    with patch.object(mod, "fetch_rss_feeds_concurrent", return_value=[]):
         result = mod.fetch_google_news_social()
     assert isinstance(result, list)
 

@@ -55,17 +55,23 @@ def test_fetch_google_news_browser_stocks_skips_when_playwright_unavailable():
 
 
 def test_fetch_financial_rss_feeds_returns_list():
+    """Mocks common.rss_fetcher functions in collector namespace — no network."""
     mod = importlib.import_module("collect_stock_news")
-    mock_feed = _mock_feedparser_result("CNBC Market Top Story", "https://cnbc.com/story")
-    with patch("feedparser.parse", return_value=mock_feed):
+    with (
+        patch.object(mod, "fetch_rss_feeds_concurrent", return_value=[]),
+        patch.object(mod, "fetch_rss_feed", return_value=[]),
+    ):
         result = mod.fetch_financial_rss_feeds()
     assert isinstance(result, list)
 
 
 def test_fetch_yahoo_finance_rss_returns_list():
+    """Mocks common.rss_fetcher functions in collector namespace — no network."""
     mod = importlib.import_module("collect_stock_news")
-    mock_feed = _mock_feedparser_result("Yahoo Finance Market News", "https://finance.yahoo.com/news/item")
-    with patch("feedparser.parse", return_value=mock_feed):
+    with (
+        patch.object(mod, "fetch_rss_feeds_concurrent", return_value=[]),
+        patch.object(mod, "fetch_rss_feed", return_value=[]),
+    ):
         result = mod.fetch_yahoo_finance_rss()
     assert isinstance(result, list)
 

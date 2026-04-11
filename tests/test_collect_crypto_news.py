@@ -111,10 +111,16 @@ def test_fetch_cryptopanic_handles_request_error():
 
 
 def test_fetch_crypto_rss_feeds_returns_list(tmp_path):
-    """fetch_crypto_rss_feeds mocks feedparser to avoid network calls."""
+    """fetch_crypto_rss_feeds returns a list when RSS fetchers are mocked empty.
+
+    Patches common.rss_fetcher entry points at the collector's module
+    namespace (where they're imported into) so no real network calls.
+    """
     mod = importlib.import_module("collect_crypto_news")
-    mock_feed = _mock_feedparser_result("Bitcoin ETF approved", "https://coindesk.com/btc-etf")
-    with patch("feedparser.parse", return_value=mock_feed):
+    with (
+        patch.object(mod, "fetch_rss_feeds_concurrent", return_value=[]),
+        patch.object(mod, "fetch_rss_feed", return_value=[]),
+    ):
         result = mod.fetch_crypto_rss_feeds()
     assert isinstance(result, list)
 
