@@ -12,6 +12,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from .config import REQUEST_TIMEOUT, USER_AGENT, get_verify_ssl
+from .encoding_guard import force_utf8_if_mislabelled, sanitize_mojibake
 from .utils import SOURCE_SUFFIX_RE as _SOURCE_SUFFIX_RE
 from .utils import parse_date, remove_sponsored_text, sanitize_string, truncate_sentence
 
@@ -20,39 +21,9 @@ logger = logging.getLogger(__name__)
 _GOOGLE_NEWS_HOSTS = {"news.google.com"}
 _GOOGLE_NEWS_REDIRECT_QUERY_KEYS = ("url", "u", "q")
 
-# Mojibake detector: runs of Latin-1 supplement + C1 control chars
-# (U+0080–U+00FF) that indicate UTF-8 bytes were misinterpreted as
-# Latin-1/CP1252 somewhere upstream. Legitimate Korean text never contains
-# such runs; accented European text rarely exceeds 2 consecutive such chars.
-_MOJIBAKE_RE = re.compile(r"[\u0080-\u00ff]{3,}")
-
-
-def _sanitize_mojibake(text: str) -> str:
-    """Return cleaned text, attempting Latin-1 → UTF-8 recovery when possible.
-
-    Strategy:
-    1. Round-trip recover: re-encode as Latin-1 and decode as UTF-8. If the
-       recovered text contains Hangul or CJK characters, return it.
-    2. If recovery fails AND the text still has a long mojibake run, drop
-       the description so downstream synthetic fallback can take over.
-    """
-    if not text:
-        return text
-    # Fast path: no high-byte chars → nothing to recover.
-    if not any(0x80 <= ord(c) <= 0xFF for c in text):
-        return text
-    # Attempt round-trip recovery: UTF-8 bytes misinterpreted as Latin-1.
-    try:
-        recovered = text.encode("latin-1", errors="strict").decode("utf-8", errors="strict")
-    except (UnicodeEncodeError, UnicodeDecodeError):
-        recovered = None
-    if recovered and any(0xAC00 <= ord(c) <= 0xD7A3 or 0x4E00 <= ord(c) <= 0x9FFF for c in recovered):
-        return recovered
-    # Unrecoverable — if mojibake pattern is still present, drop the text.
-    if _MOJIBAKE_RE.search(text):
-        logger.warning("RSS description dropped due to unrecoverable mojibake")
-        return ""
-    return text
+# Legacy alias retained so existing callers and tests that import
+# ``_sanitize_mojibake`` from this module keep working.
+_sanitize_mojibake = sanitize_mojibake
 
 
 def is_safe_url(url: str) -> bool:
@@ -250,8 +221,7 @@ def fetch_rss_feed(
             resp.raise_for_status()
             # Force UTF-8 for feeds that don't declare charset properly
             # (e.g. Google News Korean RSS returns UTF-8 but headers may say ISO-8859-1)
-            if resp.encoding and resp.encoding.lower() in ("iso-8859-1", "latin-1", "ascii"):
-                resp.encoding = "utf-8"
+            force_utf8_if_mislabelled(resp)
             soup = BeautifulSoup(resp.text, "xml")
 
             items = []

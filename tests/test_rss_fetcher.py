@@ -36,10 +36,7 @@ class TestSanitizeMojibake:
         # The exact string that leaked into the 2026-04-11 political trades
         # post. Contains a U+03BC (μ) char that breaks strict Latin-1 encoding,
         # so recovery is impossible — the description must be dropped.
-        corrupted = (
-            "ì£¼ëì ê¸°ì ììì ì íê³ ì¸ìì ë³μìíë¥¼ ìí´ "
-            "ì²ì£¼êμê° ì¤ë¦½í ê°í¨ë¦ ì¬íì»¤ë®¤ëì¼ì´ì ë§¤ì²´ CPBC"
-        )
+        corrupted = "ì£¼ëì ê¸°ì ììì ì íê³ ì¸ìì ë³μìíë¥¼ ìí´ ì²ì£¼êμê° ì¤ë¦½í ê°í¨ë¦ ì¬íì»¤ë®¤ëì¼ì´ì ë§¤ì²´ CPBC"
         assert _sanitize_mojibake(corrupted) == ""
 
     def test_french_accents_not_false_positive(self):
