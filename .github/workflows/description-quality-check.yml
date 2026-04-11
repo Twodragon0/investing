@@ -8,7 +8,7 @@ on:
     inputs:
       days:
         description: 'Number of days to check'
-        default: '1'
+        default: '7'
 
 permissions:
   contents: read
@@ -33,12 +33,12 @@ jobs:
       - name: Check description quality
         run: |
           python scripts/check_description_quality.py \
-            --days ${{ inputs.days || '1' }} \
+            --days ${{ inputs.days || '7' }} \
             --format text
 
       - name: Post summary
         if: always()
         run: |
           python scripts/check_description_quality.py \
-            --days ${{ inputs.days || '1' }} \
+            --days ${{ inputs.days || '7' }} \
             --format markdown >> "$GITHUB_STEP_SUMMARY"

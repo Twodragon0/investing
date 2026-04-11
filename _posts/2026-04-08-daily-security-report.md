@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-security-report-2026-04-08.png"
 permalink: "/security-alerts/2026/04/08/daily-security-report/"
 description_ko: "암호화폐 해킹 뉴스: 드리프트 프로토콜은 6개월 설정 후 2억 8천만 달러 손실 - The Coin…. 블록체인 보안 뉴스 2건 분석."
-description: "암호화폐 해킹 뉴스: 드리프트 프로토콜은 6개월 설정 후 2억 8천만 달러 손실 - The Coin…. 블록체인 보안 뉴스 2건 분석 - Investing Dragon 자동 수집 분석 리포트."
+description: "암호화폐 해킹 뉴스: 드리프트 프로토콜은 6개월 설정 후 2억 8천만 달러 손실 - The Coin…. 블록체인 보안 뉴스 2건 분석."
 excerpt: "암호화폐 해킹 뉴스: 드리프트 프로토콜은 6개월 설정 후 2억 8천만 달러 손실 - The Coin…. 블록체인 보안 뉴스 2건 분석 - Investing Dragon 자동…"
 image_alt: "블록체인 보안 리포트 - 2026-04-08 - 보안 뉴스 요약 이미지"
 ---

@@ -20,6 +20,42 @@ logger = logging.getLogger(__name__)
 _GOOGLE_NEWS_HOSTS = {"news.google.com"}
 _GOOGLE_NEWS_REDIRECT_QUERY_KEYS = ("url", "u", "q")
 
+# Mojibake detector: runs of Latin-1 supplement + C1 control chars
+# (U+0080–U+00FF) that indicate UTF-8 bytes were misinterpreted as
+# Latin-1/CP1252 somewhere upstream. Legitimate Korean text never contains
+# such runs; accented European text rarely exceeds 2 consecutive such chars.
+_MOJIBAKE_RE = re.compile(r"[\u0080-\u00ff]{3,}")
+
+
+def _sanitize_mojibake(text: str) -> str:
+    """Return cleaned text, attempting Latin-1 → UTF-8 recovery when possible.
+
+    Strategy:
+    1. Round-trip recover: re-encode as Latin-1 and decode as UTF-8. If the
+       recovered text contains Hangul or CJK characters, return it.
+    2. If recovery fails AND the text still has a long mojibake run, drop
+       the description so downstream synthetic fallback can take over.
+    """
+    if not text:
+        return text
+    # Fast path: no high-byte chars → nothing to recover.
+    if not any(0x80 <= ord(c) <= 0xFF for c in text):
+        return text
+    # Attempt round-trip recovery: UTF-8 bytes misinterpreted as Latin-1.
+    try:
+        recovered = text.encode("latin-1", errors="strict").decode("utf-8", errors="strict")
+    except (UnicodeEncodeError, UnicodeDecodeError):
+        recovered = None
+    if recovered and any(
+        0xAC00 <= ord(c) <= 0xD7A3 or 0x4E00 <= ord(c) <= 0x9FFF for c in recovered
+    ):
+        return recovered
+    # Unrecoverable — if mojibake pattern is still present, drop the text.
+    if _MOJIBAKE_RE.search(text):
+        logger.warning("RSS description dropped due to unrecoverable mojibake")
+        return ""
+    return text
+
 
 def is_safe_url(url: str) -> bool:
     """Validate URL scheme to prevent XSS via javascript:/data: URLs."""
@@ -259,6 +295,9 @@ def fetch_rss_feed(
                     # Remove trailing whitespace/dots artifacts
                     cleaned_desc = re.sub(r"\s*\.{2,}\s*$", "", cleaned_desc)
                     cleaned_desc = re.sub(r"\s+", " ", cleaned_desc).strip()
+                    # Drop/recover mojibake before length truncation so downstream
+                    # enrichment can fall back to synthetic descriptions.
+                    cleaned_desc = _sanitize_mojibake(cleaned_desc)
                     description = truncate_sentence(sanitize_string(cleaned_desc, 1500), 1000)
 
                 published_str = date_el.get_text(strip=True) if date_el else ""

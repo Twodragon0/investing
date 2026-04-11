@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-security-report-2026-04-04.png"
 permalink: "/security-alerts/2026/04/04/daily-security-report/"
 description_ko: "솔라나 기반 디파이 프로젝트 드리프트로 인해 2억 8,500만 달러 규모의 악용 피해 발생. 블록체인 보안 뉴스 13건 분석."
-description: "솔라나 기반 디파이 프로젝트 드리프트로 인해 2억 8,500만 달러 규모의 악용 피해 발생. 블록체인 보안 뉴스 13건 분석 - Investing Dragon 자동 수집 분석 리포트."
+description: "솔라나 기반 디파이 프로젝트 드리프트로 인해 2억 8,500만 달러 규모의 악용 피해 발생. 블록체인 보안 뉴스 13건 분석."
 excerpt: "솔라나 기반 디파이 프로젝트 드리프트로 인해 2억 8,500만 달러 규모의 악용 피해 발생. 블록체인 보안 뉴스 13건 분석 - Investing Dragon 자동 수집 분석…"
 image_alt: "블록체인 보안 리포트 - 2026-04-04 - 보안 뉴스 요약 이미지"
 ---

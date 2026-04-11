@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-social-media-digest-2026-04-08.png"
 permalink: "/social-media/2026/04/08/daily-social-media-digest/"
 description_ko: "소셜 미디어 동향 28건 수집. 주요 테마: 매크로/금리, 정치/정책, 가격/시장. 텔레그램·트위터·레딧·정치뉴스 6개 소스를 종합합니다."
-description: "소셜 미디어 동향 28건 수집. 주요 테마: 매크로/금리, 정치/정책, 가격/시장. 텔레그램·트위터·레딧·정치뉴스 6개 소스를 종합합니다 - Investing Dragon 자동 수집 분석 리포트."
+description: "소셜 미디어 동향 28건 수집. 주요 테마: 매크로/금리, 정치/정책, 가격/시장. 텔레그램·트위터·레딧·정치뉴스 6개 소스를 종합합니다."
 excerpt: "소셜 미디어 동향 28건 수집. 주요 테마: 매크로/금리, 정치/정책, 가격/시장. 텔레그램·트위터·레딧·정치뉴스 6개 소스를 종합합니다 - Investing Dragon 자동…"
 image_alt: "소셜 미디어 동향 - 2026-04-08 - 소셜 미디어 뉴스 요약 이미지"
 ---

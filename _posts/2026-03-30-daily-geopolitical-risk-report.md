@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-geopolitical-risk-report-2026-03-30.png"
 permalink: "/market-analysis/2026/03/30/daily-geopolitical-risk-report/"
 description_ko: "지정학적 리스크 15건 수집. Polymarket·GDELT·뉴스 1개 소스에서 분쟁·제재·무역 리스크를 분석합니다."
-description: "지정학적 리스크 15건 수집. Polymarket·GDELT·뉴스 1개 소스에서 분쟁·제재·무역 리스크를 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
+description: "지정학적 리스크 15건 수집. Polymarket·GDELT·뉴스 1개 소스에서 분쟁·제재·무역 리스크를 분석합니다."
 excerpt: "지정학적 리스크 15건 수집. Polymarket·GDELT·뉴스 1개 소스에서 분쟁·제재·무역 리스크를 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "지정학 리스크 리포트 - 2026-03-30 - 글로벌 이슈 뉴스 요약 이미지"
 ---

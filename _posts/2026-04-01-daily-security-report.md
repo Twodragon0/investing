@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/news-briefing-crypto-2026-04-01.png"
 permalink: "/security-alerts/2026/04/01/daily-security-report/"
 description_ko: "5,400만 달러 디파이 악용 혐의로 기소된 우라늄 금융 해커, 30년 징역형 선고. 블록체인 보안 뉴스 5건 분석."
-description: "5,400만 달러 디파이 악용 혐의로 기소된 우라늄 금융 해커, 30년 징역형 선고. 블록체인 보안 뉴스 5건 분석 - Investing Dragon 자동 수집 분석 리포트."
+description: "5,400만 달러 디파이 악용 혐의로 기소된 우라늄 금융 해커, 30년 징역형 선고. 블록체인 보안 뉴스 5건 분석."
 excerpt: "5,400만 달러 디파이 악용 혐의로 기소된 우라늄 금융 해커, 30년 징역형 선고. 블록체인 보안 뉴스 5건 분석 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "블록체인 보안 리포트 - 2026-04-01 - 보안 뉴스 요약 이미지"
 ---

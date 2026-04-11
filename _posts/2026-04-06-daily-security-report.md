@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-security-report-2026-04-06.png"
 permalink: "/security-alerts/2026/04/06/daily-security-report/"
 description_ko: "드리프트 프로토콜 해킹 설명: 6개월 간의 사회 공학으로 인해 2억 8500만 달러 솔라나 디파이 악용…. 블록체인 보안 뉴스 4건 분석."
-description: "드리프트 프로토콜 해킹 설명: 6개월 간의 사회 공학으로 인해 2억 8500만 달러 솔라나 디파이 악용…. 블록체인 보안 뉴스 4건 분석 - Investing Dragon 자동 수집 분석 리포트."
+description: "드리프트 프로토콜 해킹 설명: 6개월 간의 사회 공학으로 인해 2억 8500만 달러 솔라나 디파이 악용…. 블록체인 보안 뉴스 4건 분석."
 excerpt: "드리프트 프로토콜 해킹 설명: 6개월 간의 사회 공학으로 인해 2억 8500만 달러 솔라나 디파이 악용…. 블록체인 보안 뉴스 4건 분석 - Investing Dragon 자동…"
 image_alt: "블록체인 보안 리포트 - 2026-04-06 - 보안 뉴스 요약 이미지"
 ---
