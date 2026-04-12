@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for scripts/collect_political_trades.py: 84%</title>
+    <title>Coverage for scripts/collect_political_trades.py: 86%</title>
     <link rel="icon" sizes="32x32" href="favicon_32_cb_c827f16f.png">
     <link rel="stylesheet" href="style_cb_9ff733b0.css" type="text/css">
     <script src="coverage_html_cb_dd2e7eb5.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>scripts&#8201;/&#8201;collect_political_trades.py</b>:
-            <span class="pc_cov">84%</span>
+            <span class="pc_cov">86%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -55,8 +55,8 @@
         </aside>
         <h2>
             <span class="text">375 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">315<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">60<span class="text"> missing</span></button>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">321<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">54<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_de1a740d5dc98ffd_collect_regulatory_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.13.5">coverage.py v7.13.5</a>,
-            created at 2026-04-11 07:56 +0000
+            created at 2026-04-12 00:31 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -316,7 +316,7 @@
     <p class="run"><span class="n"><a id="t234" href="#t234">234</a></span><span class="t">        <span class="nam">idx</span> <span class="op">=</span> <span class="nam">text</span><span class="op">.</span><span class="nam">find</span><span class="op">(</span><span class="nam">sep</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t235" href="#t235">235</a></span><span class="t">        <span class="key">if</span> <span class="num">15</span> <span class="op">&lt;</span> <span class="nam">idx</span> <span class="op">&lt;</span> <span class="nam">max_len</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t236" href="#t236">236</a></span><span class="t">            <span class="key">return</span> <span class="nam">text</span><span class="op">[</span><span class="op">:</span> <span class="nam">idx</span> <span class="op">+</span> <span class="nam">len</span><span class="op">(</span><span class="nam">sep</span><span class="op">)</span><span class="op">]</span><span class="op">.</span><span class="nam">strip</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t237" href="#t237">237</a></span><span class="t">    <span class="key">return</span> <span class="nam">text</span><span class="op">[</span><span class="op">:</span><span class="nam">max_len</span><span class="op">]</span><span class="op">.</span><span class="nam">rsplit</span><span class="op">(</span><span class="str">" "</span><span class="op">,</span> <span class="num">1</span><span class="op">)</span><span class="op">[</span><span class="num">0</span><span class="op">]</span> <span class="key">if</span> <span class="nam">len</span><span class="op">(</span><span class="nam">text</span><span class="op">)</span> <span class="op">></span> <span class="nam">max_len</span> <span class="key">else</span> <span class="nam">text</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t237" href="#t237">237</a></span><span class="t">    <span class="key">return</span> <span class="nam">text</span><span class="op">[</span><span class="op">:</span><span class="nam">max_len</span><span class="op">]</span><span class="op">.</span><span class="nam">rsplit</span><span class="op">(</span><span class="str">" "</span><span class="op">,</span> <span class="num">1</span><span class="op">)</span><span class="op">[</span><span class="num">0</span><span class="op">]</span> <span class="key">if</span> <span class="nam">len</span><span class="op">(</span><span class="nam">text</span><span class="op">)</span> <span class="op">></span> <span class="nam">max_len</span> <span class="key">else</span> <span class="nam">text</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t238" href="#t238">238</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t239" href="#t239">239</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t240" href="#t240">240</a></span><span class="t"><span class="key">class</span> <span class="nam">PoliticalTradesCollector</span><span class="op">(</span><span class="nam">BaseCollector</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -379,11 +379,11 @@
     <p class="run"><span class="n"><a id="t297" href="#t297">297</a></span><span class="t">        <span class="nam">post_title</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">build_title</span><span class="op">(</span><span class="op">[</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t298" href="#t298">298</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t299" href="#t299">299</a></span><span class="t">        <span class="key">if</span> <span class="nam">self</span><span class="op">.</span><span class="nam">is_duplicate_exact</span><span class="op">(</span><span class="nam">post_title</span><span class="op">,</span> <span class="str">"consolidated"</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t300" href="#t300">300</a></span><span class="t">            <span class="nam">self</span><span class="op">.</span><span class="nam">logger</span><span class="op">.</span><span class="nam">info</span><span class="op">(</span><span class="str">"Political trades post already exists, skipping"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t301" href="#t301">301</a></span><span class="t">            <span class="nam">all_items</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">fetch</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t302" href="#t302">302</a></span><span class="t">            <span class="nam">self</span><span class="op">.</span><span class="nam">save_state</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t303" href="#t303">303</a></span><span class="t">            <span class="nam">self</span><span class="op">.</span><span class="nam">log_summary</span><span class="op">(</span><span class="nam">all_items</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t304" href="#t304">304</a></span><span class="t">            <span class="key">return</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t300" href="#t300">300</a></span><span class="t">            <span class="nam">self</span><span class="op">.</span><span class="nam">logger</span><span class="op">.</span><span class="nam">info</span><span class="op">(</span><span class="str">"Political trades post already exists, skipping"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t301" href="#t301">301</a></span><span class="t">            <span class="nam">all_items</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">fetch</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t302" href="#t302">302</a></span><span class="t">            <span class="nam">self</span><span class="op">.</span><span class="nam">save_state</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t303" href="#t303">303</a></span><span class="t">            <span class="nam">self</span><span class="op">.</span><span class="nam">log_summary</span><span class="op">(</span><span class="nam">all_items</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t304" href="#t304">304</a></span><span class="t">            <span class="key">return</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t305" href="#t305">305</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t306" href="#t306">306</a></span><span class="t">        <span class="nam">all_items</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">fetch</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t307" href="#t307">307</a></span><span class="t">        <span class="nam">pre_dedup_count</span> <span class="op">=</span> <span class="nam">len</span><span class="op">(</span><span class="nam">all_items</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -974,7 +974,7 @@
             <a class="nav" href="z_de1a740d5dc98ffd_collect_regulatory_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.13.5">coverage.py v7.13.5</a>,
-            created at 2026-04-11 07:56 +0000
+            created at 2026-04-12 00:31 +0000
         </p>
     </div>
 </footer>
