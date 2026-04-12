@@ -9,7 +9,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/news-briefing-regulatory-2026-03-25.png"
 permalink: "/regulatory-news/2026/03/25/daily-regulatory-report/"
-description: "전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 20건의 규제 관련 뉴스가 수집되었습니다."
+description: "규제 동향 브리핑: 글로벌 규제 동향 리포트. 각국 규제 기관의 최신 결정을 정리합니다 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "거래소 (5건): 가상자산, 거래소, 지분 이슈가 부각되며 해당 섹터의 단기 변동성 확대 가능성이 있습니다 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "글로벌 규제 동향 리포트 - 2026-03-25 - 규제 뉴스 요약 이미지"
 ---
