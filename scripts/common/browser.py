@@ -8,6 +8,8 @@ Falls back gracefully when Playwright is not installed — callers should use
 import logging
 from typing import Any, Dict, List, Optional
 
+from .config import BROWSER_TIMEOUT_MS
+
 logger = logging.getLogger(__name__)
 
 
@@ -29,11 +31,15 @@ class BrowserSession:
         with BrowserSession() as session:
             session.navigate("https://example.com")
             text = session.extract_text("h1")
+
+    The ``timeout`` default pulls from :data:`common.config.BROWSER_TIMEOUT_MS`
+    (30s). Override only when a specific site genuinely needs a different
+    wait budget; do not hardcode the literal in call sites.
     """
 
-    def __init__(self, headless: bool = True, timeout: int = 30_000) -> None:
+    def __init__(self, headless: bool = True, timeout: Optional[int] = None) -> None:
         self._headless = headless
-        self._timeout = timeout
+        self._timeout = timeout if timeout is not None else BROWSER_TIMEOUT_MS
         self._pw: Any = None
         self._browser: Any = None
         self._context: Any = None
@@ -49,6 +55,11 @@ class BrowserSession:
             headless=self._headless,
             args=[
                 "--disable-blink-features=AutomationControlled",
+                # --no-sandbox is required on GitHub Actions ubuntu-latest runners
+                # where Chromium cannot create user namespaces. Safe here because
+                # runners are ephemeral, single-purpose, and isolated; browser
+                # only navigates known public URLs already gated by
+                # is_private_url_target() in common.utils.
                 "--no-sandbox",
             ],
         )

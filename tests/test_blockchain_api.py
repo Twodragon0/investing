@@ -227,8 +227,7 @@ class TestFetchL2Summary:
         from common.blockchain_api import fetch_l2_summary
 
         projects = [
-            {"name": f"L2-{i}", "slug": f"l2-{i}", "tvl": {"value": 1000000 * i}, "stage": ""}
-            for i in range(20)
+            {"name": f"L2-{i}", "slug": f"l2-{i}", "tvl": {"value": 1000000 * i}, "stage": ""} for i in range(20)
         ]
         mock_data = {"data": {"projects": projects}}
 
@@ -264,8 +263,20 @@ class TestBuildReportContent:
     def test_btc_and_eth(self):
         from collect_blockchain import build_report_content
 
-        btc = {"hash_rate_ehs": 500.0, "difficulty": 1e14, "n_tx": 400000, "block_time_min": 10.0, "blocks_total": 900000}
-        eth = {"gas_safe": "5", "gas_propose": "8", "gas_fast": "12", "eth_supply": 120500000.0, "eth_price_usd": 2100.0}
+        btc = {
+            "hash_rate_ehs": 500.0,
+            "difficulty": 1e14,
+            "n_tx": 400000,
+            "block_time_min": 10.0,
+            "blocks_total": 900000,
+        }
+        eth = {
+            "gas_safe": "5",
+            "gas_propose": "8",
+            "gas_fast": "12",
+            "eth_supply": 120500000.0,
+            "eth_price_usd": 2100.0,
+        }
         content, desc, excerpt = build_report_content(btc, eth, "2026-03-27")
         assert "Ethereum 네트워크 현황" in content
         assert "8.00 Gwei" in content
@@ -274,7 +285,13 @@ class TestBuildReportContent:
     def test_with_l2_projects(self):
         from collect_blockchain import build_report_content
 
-        btc = {"hash_rate_ehs": 500.0, "difficulty": 1e14, "n_tx": 400000, "block_time_min": 10.0, "blocks_total": 900000}
+        btc = {
+            "hash_rate_ehs": 500.0,
+            "difficulty": 1e14,
+            "n_tx": 400000,
+            "block_time_min": 10.0,
+            "blocks_total": 900000,
+        }
         l2 = [
             {"name": "Arbitrum One", "tvl": 18500000000, "stage": "Stage 1"},
             {"name": "Base", "tvl": 12100000000, "stage": "Stage 0"},
@@ -294,14 +311,26 @@ class TestBuildReportContent:
     def test_fast_block_time_insight(self):
         from collect_blockchain import build_report_content
 
-        btc = {"hash_rate_ehs": 1000.0, "difficulty": 1e14, "n_tx": 500000, "block_time_min": 7.5, "blocks_total": 950000}
+        btc = {
+            "hash_rate_ehs": 1000.0,
+            "difficulty": 1e14,
+            "n_tx": 500000,
+            "block_time_min": 7.5,
+            "blocks_total": 950000,
+        }
         content, _, _ = build_report_content(btc, {}, "2026-03-27")
         assert "목표(10분)보다 빠르며" in content
 
     def test_slow_block_time_insight(self):
         from collect_blockchain import build_report_content
 
-        btc = {"hash_rate_ehs": 800.0, "difficulty": 1e14, "n_tx": 500000, "block_time_min": 12.0, "blocks_total": 950000}
+        btc = {
+            "hash_rate_ehs": 800.0,
+            "difficulty": 1e14,
+            "n_tx": 500000,
+            "block_time_min": 12.0,
+            "blocks_total": 950000,
+        }
         content, _, _ = build_report_content(btc, {}, "2026-03-27")
         assert "목표(10분)보다 느리며" in content
 

@@ -4,12 +4,15 @@ import email.utils
 import ipaddress
 import logging
 import re
+import socket
 import time
 from datetime import UTC, datetime
+from threading import Lock
 from typing import Optional, Union
 from urllib.parse import urlparse
 
 import requests
+from cachetools import TTLCache, cached
 
 logger = logging.getLogger(__name__)
 
@@ -85,7 +88,9 @@ def validate_url(url: str) -> bool:
         return False
 
 
-def _is_non_public_ip(ip: ipaddress._BaseAddress) -> bool:
+def _is_non_public_ip(
+    ip: "ipaddress.IPv4Address | ipaddress.IPv6Address",
+) -> bool:
     return any(
         [
             ip.is_private,
@@ -98,18 +103,55 @@ def _is_non_public_ip(ip: ipaddress._BaseAddress) -> bool:
     )
 
 
+# Thread-safe TTL cache for DNS resolution results.
+# - maxsize=256: bounded memory for long-running processes
+# - ttl=300s (5 min): short enough to re-validate DNS rebinding attacks after
+#   cache expiry, long enough to avoid flood-resolving during a single
+#   collection run. Previous implementation used functools.lru_cache which
+#   cached for process lifetime — unsafe for DNS rebinding defense.
+_dns_cache: "TTLCache[str, Optional[tuple]]" = TTLCache(maxsize=256, ttl=300)
+_dns_cache_lock = Lock()
+
+
+@cached(cache=_dns_cache, lock=_dns_cache_lock)
+def _resolve_hostname_ips(hostname: str) -> Optional[tuple]:
+    """Resolve *hostname* to a tuple of IP address strings via getaddrinfo.
+
+    Results are cached in a TTLCache for 5 minutes (process-wide, thread-safe).
+    After expiry the hostname is re-resolved, making time-of-check/time-of-use
+    DNS rebinding windows bounded by the TTL rather than process lifetime.
+
+    Returns a tuple of IP strings on success, or None on any resolution error.
+    Callers should treat None as fail-closed and deny the request.
+    """
+    try:
+        infos = socket.getaddrinfo(hostname, None)
+        return tuple(info[4][0] for info in infos)
+    except OSError:
+        return None
+
+
 def is_private_url_target(url: str) -> bool:
     """Best-effort SSRF guard for URL targets.
 
-    Blocks obvious internal targets:
+    Blocks:
     - localhost and common internal host suffixes
-    - DNS-rebinding helper domains that map arbitrary IPs
-    - literal private/loopback/link-local IP addresses
+    - DNS-rebinding helper domains that embed arbitrary IPs
+    - literal private/loopback/link-local IP addresses (IPv4 and IPv6)
     - single-label hostnames such as ``redis`` or ``minio``
+    - hostnames whose DNS A/AAAA records resolve to a private/restricted IP
 
-    It intentionally does not DNS-resolve arbitrary public-looking hostnames.
-    The previous DNS-based approach produced false positives in CI/sandbox
-    environments and blocked normal public URLs like ``example.com``.
+    The DNS-resolution step uses ``socket.getaddrinfo`` and applies
+    ``_is_non_public_ip`` to every resolved address.  If resolution fails for
+    any reason (NXDOMAIN, timeout, network unavailable) the function fails
+    **closed** and returns ``True`` to deny the request.  This is conservative
+    but necessary: an attacker who can influence DNS can also cause transient
+    failures.
+
+    Note on CI environments: the ``@lru_cache`` on ``_resolve_hostname_ips``
+    can be cleared in tests via ``_resolve_hostname_ips.cache_clear()`` and
+    ``socket.getaddrinfo`` can be mocked with ``unittest.mock.patch`` to avoid
+    real network calls.
     """
     try:
         parsed = urlparse(url)
@@ -132,6 +174,27 @@ def is_private_url_target(url: str) -> bool:
     # Single-label names usually indicate internal service discovery targets.
     if "." not in hostname:
         return True
+
+    # DNS-resolution check: resolve hostname and inspect each returned IP.
+    # Fail-closed: if resolution fails for any reason, block the URL.
+    resolved = _resolve_hostname_ips(hostname)
+    if resolved is None:
+        logger.warning("SSRF guard: DNS resolution failed for %r — blocking (fail-closed)", hostname)
+        return True
+
+    for ip_str in resolved:
+        try:
+            if _is_non_public_ip(ipaddress.ip_address(ip_str)):
+                logger.warning(
+                    "SSRF guard: hostname %r resolved to non-public IP %r — blocking",
+                    hostname,
+                    ip_str,
+                )
+                return True
+        except ValueError:
+            # Unparseable address string — fail closed for this entry.
+            logger.warning("SSRF guard: unparseable resolved address %r for %r — blocking", ip_str, hostname)
+            return True
 
     return False
 

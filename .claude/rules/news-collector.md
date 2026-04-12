@@ -15,7 +15,8 @@ globs: ["scripts/**/*.py", "_posts/**/*.md", ".github/workflows/**/*.yml"]
 - Reuse `scripts/common/dedup.py` and keep collectors deterministic and idempotent
 - Prefer shared helpers in `scripts/common/` before adding new request or parsing logic
 - Validate external payloads and URLs before processing
-- Keep API timeout at 15 seconds and prefer certifi-first SSL handling
+- Keep HTTP API timeout at 15 seconds (`config.REQUEST_TIMEOUT`) and prefer certifi-first SSL handling
+- For Playwright `BrowserSession`, use the default (no explicit `timeout=`) — it pulls from `config.BROWSER_TIMEOUT_MS` (30s). The longer budget is an intentional exemption for JS-rendered pages; do not hardcode the literal in call sites
 - Use Python logging only; do not add `print()` debugging
 - Never hardcode secrets, tokens, cookies, or internal URLs
 

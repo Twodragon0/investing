@@ -147,8 +147,8 @@
       a {
         display: flex;
         align-items: center;
-        min-height: 40px;
-        padding: 0.5rem 0.875rem;
+        min-height: 44px;  // WCAG 2.5.5 AAA touch target
+        padding: 0.625rem 0.875rem;
         color: $text-secondary;
         font-size: 0.85rem;
         border-radius: 6px;

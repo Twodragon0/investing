@@ -207,6 +207,12 @@ def get_verify_ssl():
 
 SITE_URL = "https://investing.2twodragon.com"
 REQUEST_TIMEOUT = 15
+# Playwright/Chromium wait timeout in milliseconds. Intentionally higher than
+# REQUEST_TIMEOUT because JS-rendered pages need DOMContentLoaded + network
+# idle + render frames to complete. Do not lower without testing on
+# JS-heavy sites (Twitter/X, CoinMarketCap). Collectors should import this
+# and pass it to BrowserSession rather than hardcoding the literal.
+BROWSER_TIMEOUT_MS = 30_000
 USER_AGENT = "Mozilla/5.0 (compatible; InvestingDragon/1.0)"
 BROWSER_USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "

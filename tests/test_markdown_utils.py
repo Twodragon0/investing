@@ -265,7 +265,6 @@ class TestTryResolveGoogleNewsUrl:
         # Craft a base64-encoded payload containing a real URL so the decode
         # branch (lines 20-36) is exercised and returns the inner URL.
         import base64
-        import urllib.parse
 
         inner = "https://reuters.com/article/bitcoin"
         encoded = base64.urlsafe_b64encode(inner.encode()).decode().rstrip("=")

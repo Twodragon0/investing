@@ -248,8 +248,8 @@ layout: default
         </div>
       </div>
       <div class="cat-content">
-        <h3>{{ card_category.name }}</h3>
-        <p>{{ card_category.description }}</p>
+        <h3>{{ card_category.name | escape }}</h3>
+        <p>{{ card_category.description | escape }}</p>
         <span class="cat-badge">{{ card_count }} 포스트</span>
       </div>
       <div class="cat-arrow">

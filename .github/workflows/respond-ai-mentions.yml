@@ -2,7 +2,7 @@ name: Respond AI Mentions
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "0 * * * *"  # Hourly (was */30 — halved Actions minute usage)
   workflow_dispatch:
 
 permissions:

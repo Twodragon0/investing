@@ -61,6 +61,7 @@ class TestValidateUrl:
     def test_exception_handled_returns_false(self):
         """urlparse exception path returns False."""
         from unittest.mock import patch
+
         with patch("common.utils.urlparse", side_effect=ValueError("bad")):
             assert validate_url("https://example.com") is False
 
@@ -253,6 +254,7 @@ class TestRequestWithRetry:
     @patch("common.utils.requests.get")
     def test_retries_on_network_error(self, mock_get):
         import requests as req
+
         good_resp = MagicMock()
         good_resp.raise_for_status.return_value = None
         mock_get.side_effect = [
@@ -268,6 +270,7 @@ class TestRequestWithRetry:
     @patch("common.utils.requests.get")
     def test_raises_after_all_retries_exhausted(self, mock_get):
         import requests as req
+
         mock_get.side_effect = req.exceptions.ConnectionError("refused")
 
         with patch("common.utils.time.sleep"), pytest.raises(req.exceptions.ConnectionError):
@@ -276,6 +279,7 @@ class TestRequestWithRetry:
     @patch("common.utils.requests.get")
     def test_no_retry_on_404(self, mock_get):
         import requests as req
+
         err_resp = MagicMock()
         err_resp.status_code = 404
         exc = req.exceptions.HTTPError("404")

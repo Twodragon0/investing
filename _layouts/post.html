@@ -20,7 +20,7 @@ layout: default
   </div>
 
   <header class="post-header">
-    <h1 translate="yes">{{ page.title }}</h1>
+    <h1 translate="yes">{{ page.title | escape }}</h1>
     <div class="post-meta-enhanced">
       <span class="post-meta-item">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -38,21 +38,21 @@ layout: default
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/>
         </svg>
-        <span class="post-category cat-{{ first_cat | slugify }}">{{ cat_name }}</span>
+        <span class="post-category cat-{{ first_cat | slugify }}">{{ cat_name | escape }}</span>
       </span>
       {% if page.source %}
       <span class="post-meta-item">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
         </svg>
-        <span class="post-source">{{ page.source }}</span>
+        <span class="post-source">{{ page.source | escape }}</span>
       </span>
       {% endif %}
     </div>
     {% if page.tags.size > 0 %}
     <div class="post-tags">
       {% for tag in page.tags %}
-      <span class="tag">{{ tag }}</span>
+      <span class="tag">{{ tag | escape }}</span>
       {% endfor %}
     </div>
     {% endif %}
@@ -68,9 +68,9 @@ layout: default
       <p>핵심 손익, 리스크 자세, 다음 세션 포인트를 먼저 훑고 상세 기록으로 내려가세요.</p>
       <div class="trading-journal-hero-tags">
         {% if page.journal_mode == "live" %}<span class="journal-mode-badge journal-mode-live">실전투자</span>{% elsif page.journal_mode == "paper" %}<span class="journal-mode-badge journal-mode-paper">모의투자</span>{% endif %}
-        {% if page.journal_strategy %}<span class="journal-badge">{{ page.journal_strategy }}</span>{% endif %}
-        {% if page.journal_day_result %}<span class="journal-badge">Result {{ page.journal_day_result }}</span>{% endif %}
-        {% if page.journal_trade_count %}<span class="journal-badge">Trades {{ page.journal_trade_count }}</span>{% endif %}
+        {% if page.journal_strategy %}<span class="journal-badge">{{ page.journal_strategy | escape }}</span>{% endif %}
+        {% if page.journal_day_result %}<span class="journal-badge">Result {{ page.journal_day_result | escape }}</span>{% endif %}
+        {% if page.journal_trade_count %}<span class="journal-badge">Trades {{ page.journal_trade_count | escape }}</span>{% endif %}
       </div>
     </div>
     <figure class="summary-image-wrapper trading-journal-hero-image">
@@ -220,14 +220,14 @@ layout: default
         </div>
         {% else %}
         <div class="related-post-thumb related-post-thumb--placeholder cat-bg-{{ rel_cat | slugify }}">
-          <span class="related-thumb-label">{{ rel_cat_name | truncate: 8, "" }}</span>
+          <span class="related-thumb-label">{{ rel_cat_name | truncate: 8, "" | escape }}</span>
         </div>
         {% endif %}
         <div class="related-post-body">
-          <span class="related-post-category cat-{{ rel_cat | slugify }}">{{ rel_cat_name }}</span>
-          <h4>{{ matched_post.title | truncate: 65 }}</h4>
+          <span class="related-post-category cat-{{ rel_cat | slugify }}">{{ rel_cat_name | escape }}</span>
+          <h4>{{ matched_post.title | truncate: 65 | escape }}</h4>
           {% if matched_post.description and matched_post.description != "" %}
-          <p class="related-post-excerpt">{{ matched_post.description | truncate: 90 }}</p>
+          <p class="related-post-excerpt">{{ matched_post.description | strip_html | truncate: 90 | escape }}</p>
           {% endif %}
           <time datetime="{{ matched_post.date | date_to_xmlschema }}">{{ matched_post.date | date: "%Y-%m-%d" }}</time>
         </div>
@@ -243,13 +243,13 @@ layout: default
     {% if page.previous %}
     <a href="{{ page.previous.url | relative_url }}" class="post-nav-link prev">
       <span class="post-nav-label" data-i18n="prev_post">이전 포스트</span>
-      <span class="post-nav-title">{{ page.previous.title | truncate: 50 }}</span>
+      <span class="post-nav-title">{{ page.previous.title | truncate: 50 | escape }}</span>
     </a>
     {% endif %}
     {% if page.next %}
     <a href="{{ page.next.url | relative_url }}" class="post-nav-link next">
       <span class="post-nav-label" data-i18n="next_post">다음 포스트</span>
-      <span class="post-nav-title">{{ page.next.title | truncate: 50 }}</span>
+      <span class="post-nav-title">{{ page.next.title | truncate: 50 | escape }}</span>
     </a>
     {% endif %}
   </nav>

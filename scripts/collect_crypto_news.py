@@ -138,7 +138,7 @@ def fetch_google_news_browser(limit: Optional[int] = None) -> List[Dict[str, Any
     items: List[Dict[str, Any]] = []
 
     try:
-        with BrowserSession(timeout=30_000) as session:
+        with BrowserSession() as session:
             session.navigate(search_url, wait_until="domcontentloaded", wait_ms=3000)
             items = extract_google_news_links(session, limit, ["crypto", "news"])
 
@@ -366,7 +366,7 @@ def _fetch_binance_browser() -> List[Dict[str, Any]]:
         return []
 
     try:
-        with BrowserSession(timeout=30_000) as session:
+        with BrowserSession() as session:
             items = _scrape_binance_page(session)
         logger.info("Binance Browser: fetched %d announcements", len(items))
     except Exception as e:
@@ -578,7 +578,7 @@ def _fetch_browser_sources() -> tuple:
         return google_items, binance_items
 
     try:
-        with BrowserSession(timeout=30_000) as session:
+        with BrowserSession() as session:
             # Google News
             try:
                 session.navigate(

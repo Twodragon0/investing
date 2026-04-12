@@ -50,7 +50,7 @@ jobs:
           cache-dependency-path: scripts/requirements.txt
 
       - name: Install Python dependencies
-        run: pip install pytest
+        run: pip install pytest pytest-cov
 
       - name: Build Jekyll site
         run: bundle exec jekyll build
@@ -66,4 +66,8 @@ jobs:
           done
 
       - name: Run E2E tests
-        run: python -m pytest tests/test_reports_page.py -v
+        # --no-cov: reports-e2e only runs test_reports_page.py which doesn't
+        # touch scripts/ modules, so the pyproject.toml global --cov-fail-under=45
+        # gate would always fail. Coverage is enforced in the `quality` workflow
+        # which runs the full tests/ suite.
+        run: python -m pytest tests/test_reports_page.py -v --no-cov

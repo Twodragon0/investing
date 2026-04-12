@@ -36,6 +36,7 @@ class TestFetchCoingeckoTopCoins:
     @patch("common.crypto_api.request_with_retry")
     def test_network_error_returns_empty(self, mock_req):
         import requests as req
+
         mock_req.side_effect = req.exceptions.ConnectionError("refused")
 
         result = fetch_coingecko_top_coins()
@@ -44,6 +45,7 @@ class TestFetchCoingeckoTopCoins:
     @patch("common.crypto_api.request_with_retry")
     def test_request_exception_returns_empty(self, mock_req):
         import requests as req
+
         mock_req.side_effect = req.exceptions.Timeout("timed out")
 
         result = fetch_coingecko_top_coins()
@@ -65,9 +67,7 @@ class TestFetchCoingeckoTrending:
     @patch("common.crypto_api.request_with_retry")
     def test_returns_coins_list(self, mock_req):
         mock_resp = MagicMock()
-        mock_resp.json.return_value = {
-            "coins": [{"item": {"id": "pepe", "symbol": "PEPE"}}]
-        }
+        mock_resp.json.return_value = {"coins": [{"item": {"id": "pepe", "symbol": "PEPE"}}]}
         mock_req.return_value = mock_resp
 
         result = fetch_coingecko_trending()
@@ -86,6 +86,7 @@ class TestFetchCoingeckoTrending:
     @patch("common.crypto_api.request_with_retry")
     def test_network_error_returns_empty(self, mock_req):
         import requests as req
+
         mock_req.side_effect = req.exceptions.ConnectionError("refused")
 
         result = fetch_coingecko_trending()
@@ -128,6 +129,7 @@ class TestFetchCoingeckoGlobal:
     @patch("common.crypto_api.request_with_retry")
     def test_network_error_returns_empty(self, mock_req):
         import requests as req
+
         mock_req.side_effect = req.exceptions.ConnectionError("refused")
 
         result = fetch_coingecko_global()
@@ -136,6 +138,7 @@ class TestFetchCoingeckoGlobal:
     @patch("common.crypto_api.request_with_retry")
     def test_timeout_returns_empty(self, mock_req):
         import requests as req
+
         mock_req.side_effect = req.exceptions.Timeout("timed out")
 
         result = fetch_coingecko_global()
@@ -148,9 +151,7 @@ class TestFetchFearGreedIndex:
     @patch("common.crypto_api.request_with_retry")
     def test_returns_current_value(self, mock_req):
         mock_resp = MagicMock()
-        mock_resp.json.return_value = {
-            "data": [{"value": "75", "value_classification": "Greed"}]
-        }
+        mock_resp.json.return_value = {"data": [{"value": "75", "value_classification": "Greed"}]}
         mock_req.return_value = mock_resp
 
         result = fetch_fear_greed_index()
@@ -176,9 +177,7 @@ class TestFetchFearGreedIndex:
     @patch("common.crypto_api.request_with_retry")
     def test_single_entry_no_prev(self, mock_req):
         mock_resp = MagicMock()
-        mock_resp.json.return_value = {
-            "data": [{"value": "50", "value_classification": "Neutral"}]
-        }
+        mock_resp.json.return_value = {"data": [{"value": "50", "value_classification": "Neutral"}]}
         mock_req.return_value = mock_resp
 
         result = fetch_fear_greed_index()
@@ -196,6 +195,7 @@ class TestFetchFearGreedIndex:
     @patch("common.crypto_api.request_with_retry")
     def test_network_error_returns_empty(self, mock_req):
         import requests as req
+
         mock_req.side_effect = req.exceptions.ConnectionError("refused")
 
         result = fetch_fear_greed_index()
@@ -204,9 +204,7 @@ class TestFetchFearGreedIndex:
     @patch("common.crypto_api.request_with_retry")
     def test_value_is_int(self, mock_req):
         mock_resp = MagicMock()
-        mock_resp.json.return_value = {
-            "data": [{"value": "42", "value_classification": "Fear"}]
-        }
+        mock_resp.json.return_value = {"data": [{"value": "42", "value_classification": "Fear"}]}
         mock_req.return_value = mock_resp
 
         result = fetch_fear_greed_index()

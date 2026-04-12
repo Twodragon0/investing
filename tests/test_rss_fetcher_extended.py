@@ -160,6 +160,7 @@ class TestFetchRssFeed:
     @patch("common.rss_fetcher.requests.get")
     def test_network_error_returns_empty(self, mock_get):
         import requests as req
+
         mock_get.side_effect = req.exceptions.ConnectionError("refused")
 
         items = fetch_rss_feed("https://example.com/feed.rss", "Source", [])
@@ -168,6 +169,7 @@ class TestFetchRssFeed:
     @patch("common.rss_fetcher.requests.get")
     def test_http_error_returns_empty(self, mock_get):
         import requests as req
+
         mock_resp = MagicMock()
         mock_resp.raise_for_status.side_effect = req.exceptions.HTTPError("503")
         mock_get.return_value = mock_resp
@@ -188,7 +190,7 @@ class TestFetchRssFeed:
 
     @patch("common.rss_fetcher.is_private_url", return_value=False)
     @patch("common.rss_fetcher.requests.get")
-    def test_fallback_url_used_on_error(self, mock_get, _mock_private):
+    def test_fallback_url_used_on_error(self, mock_get, _mock_private):  # noqa: PT019
         import requests as req
 
         fallback_rss = RSS_MINIMAL
@@ -227,7 +229,7 @@ class TestFetchRssFeed:
 
     @patch("common.rss_fetcher.is_private_url", return_value=False)
     @patch("common.rss_fetcher.requests.get")
-    def test_google_news_redirect_location_resolved(self, mock_get, _mock_private):
+    def test_google_news_redirect_location_resolved(self, mock_get, _mock_private):  # noqa: PT019
         google_link = "https://news.google.com/rss/articles/CBMiTest?oc=5"
 
         feed_resp = MagicMock()
@@ -349,9 +351,7 @@ class TestFetchRssFeedsConcurrent:
         bad_future = Future()
         bad_future.set_exception(TimeoutError("timed out"))
 
-        import concurrent.futures as cf_module
-
-        real_tpe = cf_module.ThreadPoolExecutor
+        import concurrent.futures as cf_module  # noqa: F401
 
         class _FakePool:
             def __init__(self, *a, **kw):
@@ -366,9 +366,11 @@ class TestFetchRssFeedsConcurrent:
             def submit(self, fn, arg):
                 return bad_future
 
-        with patch("concurrent.futures.ThreadPoolExecutor", _FakePool):
-            with patch("concurrent.futures.as_completed", return_value=[bad_future]):
-                result = fetch_rss_feeds_concurrent([("https://a.com/feed", "A", ["tag"])])
+        with (
+            patch("concurrent.futures.ThreadPoolExecutor", _FakePool),
+            patch("concurrent.futures.as_completed", return_value=[bad_future]),
+        ):
+            result = fetch_rss_feeds_concurrent([("https://a.com/feed", "A", ["tag"])])
 
         assert result == []
 
@@ -518,7 +520,7 @@ class TestFetchRssFeedUncoveredBranches:
     @patch("common.enrichment.is_private_url", return_value=False)
     @patch("common.rss_fetcher.is_private_url", return_value=False)
     @patch("common.rss_fetcher.requests.get")
-    def test_worldmonitor_proxy_url_adds_decoded_candidate(self, mock_get, _mock_private, _mock_enrich_private):
+    def test_worldmonitor_proxy_url_adds_decoded_candidate(self, mock_get, _mock_private, _mock_enrich_private):  # noqa: PT019
         """Covers lines 147-151: worldmonitor proxy adds decoded URL to candidates."""
         import requests as req
 

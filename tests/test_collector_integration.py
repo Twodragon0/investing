@@ -1130,7 +1130,10 @@ class TestRegulatoryCollectorIntegration:
             patch("collect_regulatory.enrich_items"),
             patch("collect_regulatory.deduplicate_by_url", side_effect=lambda rows: rows),
             patch("collect_regulatory.ThemeSummarizer", summarizer_cls),
-            patch("collect_regulatory.build_region_section", side_effect=lambda items, title, links: [f"## {title}", f"{len(items)}건"]),
+            patch(
+                "collect_regulatory.build_region_section",
+                side_effect=lambda items, title, links: [f"## {title}", f"{len(items)}건"],
+            ),
             patch("collect_regulatory._build_regulatory_theme_analysis", return_value="## 규제 테마 분석\n내용"),
         ):
             collector.run()
@@ -1171,7 +1174,9 @@ class TestPoliticalTradesCollectorIntegration:
         trump = [self._sample_political_item("Trump executive order signals tariff review", "Reuters", ["trump"], 3)]
         korea = [self._sample_political_item("이재명 재산 공개 업데이트", "연합뉴스", ["korea"], 4)]
         central_bank = [
-            self._sample_political_item("Federal Reserve rate decision due this week", "Federal Reserve", ["central-bank"], 5)
+            self._sample_political_item(
+                "Federal Reserve rate decision due this week", "Federal Reserve", ["central-bank"], 5
+            )
         ]
 
         with _base_collector_patches(dedup=dedup, post_gen=post_gen):
