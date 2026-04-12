@@ -88,7 +88,9 @@ def validate_url(url: str) -> bool:
         return False
 
 
-def _is_non_public_ip(ip: ipaddress._BaseAddress) -> bool:
+def _is_non_public_ip(
+    ip: "ipaddress.IPv4Address | ipaddress.IPv6Address",
+) -> bool:
     return any(
         [
             ip.is_private,
