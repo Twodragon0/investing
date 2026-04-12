@@ -330,3 +330,56 @@ class TestMalformedUrls:
 
     def test_just_scheme_blocked(self):
         assert is_private_url_target("http://") is True
+
+
+# ---------------------------------------------------------------------------
+# 11. dns_cache_snapshot observability helper
+# ---------------------------------------------------------------------------
+
+
+class TestDnsCacheSnapshot:
+    """Guardrails for dns_cache_snapshot() used by collector observability."""
+
+    def _clear(self):
+        from common.utils import _dns_cache, _dns_cache_lock
+
+        with _dns_cache_lock:
+            _dns_cache.clear()
+
+    def test_schema_and_defaults(self):
+        from common.utils import dns_cache_snapshot
+
+        self._clear()
+        snap = dns_cache_snapshot()
+        assert set(snap.keys()) == {
+            "dns_cache_size",
+            "dns_cache_maxsize",
+            "dns_cache_ttl_seconds",
+        }
+        assert snap["dns_cache_size"] == 0
+        assert snap["dns_cache_maxsize"] == 256
+        assert snap["dns_cache_ttl_seconds"] == 300
+
+    def test_size_reflects_cache_population(self):
+        from common.utils import dns_cache_snapshot, is_private_url_target
+
+        self._clear()
+        with patch("socket.getaddrinfo", return_value=_fake_getaddrinfo("8.8.8.8")):
+            is_private_url_target("https://example.com/")
+
+        snap = dns_cache_snapshot()
+        assert snap["dns_cache_size"] >= 1
+        assert snap["dns_cache_size"] <= snap["dns_cache_maxsize"]
+
+    def test_types_are_jsonable(self):
+        """Snapshot must be log/JSON friendly — no cachetools internals leak."""
+        import json
+
+        from common.utils import dns_cache_snapshot
+
+        self._clear()
+        snap = dns_cache_snapshot()
+        # json.dumps raises TypeError on non-serializable values
+        json.dumps(snap)
+        for v in snap.values():
+            assert isinstance(v, int)

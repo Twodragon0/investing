@@ -131,6 +131,33 @@ def _resolve_hostname_ips(hostname: str) -> Optional[tuple]:
         return None
 
 
+def dns_cache_snapshot() -> dict:
+    """Return a point-in-time snapshot of the DNS SSRF guard cache.
+
+    Intended for collector observability: log this dict (or inject into
+    ``log_collection_summary`` extras) at the end of a collection run to
+    track whether ``maxsize`` is saturated.
+
+    Returns a dict with keys:
+    - ``dns_cache_size``: number of entries currently cached (thread-safe read).
+    - ``dns_cache_maxsize``: configured cache capacity.
+    - ``dns_cache_ttl_seconds``: configured entry TTL.
+
+    Tuning guidance based on repeated snapshots:
+    - Sustained ``size < maxsize * 0.2`` over many runs → current sizing may
+      be over-provisioned but the memory cost is negligible; no action needed.
+    - Sustained ``size >= maxsize * 0.8`` → consider raising ``maxsize`` so
+      legitimate upstreams are not churned out within a single collection run.
+    """
+    with _dns_cache_lock:
+        size = len(_dns_cache)
+    return {
+        "dns_cache_size": size,
+        "dns_cache_maxsize": _dns_cache.maxsize,
+        "dns_cache_ttl_seconds": int(_dns_cache.ttl),
+    }
+
+
 def is_private_url_target(url: str) -> bool:
     """Best-effort SSRF guard for URL targets.
 
