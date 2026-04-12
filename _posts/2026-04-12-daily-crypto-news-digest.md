@@ -56,40 +56,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-12 - 암호화폐 뉴스 요
 <li><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxNeW1pR0VyYUVVeV9CNDRjbjBneVFxYl9ySGhkZGpJaHZ2Y0xJUG56T3BsSV9GTElIWGktTUgtZ1U2V1pTY2NzNXJSaENrQlJnMzRJUmJ2QlczLW93NGpZNkpPYnkxMzVWQ3h1SjZRY0E2RzBXajBKVVR3TWU2Q1hMa0E4aGtjMDlTak9wNWZRejBoVERTVU1hTlNOVUVfdHBuLVpzV1Y4cnI?oc=5">비트코인은 에너지 위기로 인해 폭락이 0이 될 수 있다고 경제학자는 경고합니다.</a> <span class="p0-desc">비트코인은 에너지 위기로 인해 폭락이 0이 될 수 있다고 경제학자는 TheStreet.com에 경고합니다.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 비트코인은 에너지 위기로 인해 폭락이 0이 될 수 있다고 경제학자는 경고합니다. 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 98건의 뉴스 중 P1 주요 이슈도 16건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (45건): 비트코인, 에너지, 폭락 관련 (45건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (22건): 암호화폐, 달러, 에너지 가격 변동 (22건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏦 거래소** (9건): IPO 관련 불확실성이 커지고 있어 리스크 관리에 유의하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 비트코인은 에너지 위기로 인해 폭락이 0이 될 수 있다고 경제학자는 경고합니다.
-- 비트코인은 에너지 위기로 인해 폭락이 0이 될 수 있다고 경제학자는 경고합니다.
-
-### 주요 이슈
-
-- 이란은 호르무즈 해협의 유조선에게 암호화폐로 통행료를 요구하고 있다: 지금까지 우리가 알고 있는 것
-- 비트코인은 중동 지정학적 구호로 73,000달러를 기록하고 ETF 유입액은 3억 5천만 달러에 이릅니다.
-- 이란의 암호화폐 유조선 통행료는 제재를 위반하는 무역 네트워크의 최신 단계입니다.
-- 외 13건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, ETF
-- **주요 출처**: Google News(20건), Decrypt(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-04-12.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-04-12.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
