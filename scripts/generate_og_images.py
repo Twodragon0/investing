@@ -102,8 +102,9 @@ except ImportError:
 _FONT_FAMILY = "monospace"
 _FONT_BOLD_PATH: Optional[str] = None
 
-if _MPL_AVAILABLE:
-    _korean_font_candidates = [
+def _discover_cjk_fonts() -> List[str]:
+    """Return CJK font paths: static candidates + dynamic discovery."""
+    candidates = [
         "/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc",
         "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
         "/usr/share/fonts/truetype/noto/NotoSansKR-Regular.ttf",
@@ -111,6 +112,39 @@ if _MPL_AVAILABLE:
         "/Library/Fonts/Arial Unicode.ttf",
         "/System/Library/Fonts/Supplemental/AppleGothic.ttf",
     ]
+    # Dynamic discovery for Ubuntu 24.04+ where paths may differ
+    import glob as _gl
+    import subprocess
+
+    for pattern in [
+        "/usr/share/fonts/**/NotoSansCJK*.*",
+        "/usr/share/fonts/**/NotoSans*KR*.*",
+        "/usr/share/fonts/**/Noto*CJK*.*",
+    ]:
+        candidates.extend(_gl.glob(pattern, recursive=True))
+    # fc-list fallback
+    try:
+        _result = subprocess.run(
+            ["fc-list", ":lang=ko", "-f", "%{file}\n"],
+            capture_output=True, text=True, timeout=5,
+        )
+        for _line in _result.stdout.strip().split("\n"):
+            if _line and os.path.exists(_line):
+                candidates.append(_line)
+    except Exception as exc:
+        logger.debug("fc-list fallback failed: %s", exc)
+    # deduplicate while preserving order
+    seen: set = set()
+    unique: List[str] = []
+    for c in candidates:
+        if c not in seen:
+            seen.add(c)
+            unique.append(c)
+    return unique
+
+
+if _MPL_AVAILABLE:
+    _korean_font_candidates = _discover_cjk_fonts()
     for _fp in _korean_font_candidates:
         if os.path.exists(_fp):
             fm.fontManager.addfont(_fp)

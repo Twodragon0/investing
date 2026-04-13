@@ -36,6 +36,12 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
+      - name: Install CJK fonts
+        run: |
+          if ! fc-list :lang=ko | grep -q .; then
+            sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk >/dev/null 2>&1
+          fi
+
       - name: Generate journal OG images
         run: |
           python scripts/generate_og_images.py --all --force --update-frontmatter \
