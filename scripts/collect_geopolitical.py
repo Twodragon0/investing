@@ -42,6 +42,78 @@ _log = logging.getLogger(__name__)
 # collectors.yml에서 설정 로드
 _geo_cfg = get_collector_config("geopolitical")
 
+
+def _load_keyword_filters() -> tuple:
+    """collectors.yml의 keywords 섹션에서 필터 키워드를 로드합니다.
+
+    로드 실패 또는 키워드 섹션 누락 시 하드코딩 기본값으로 fallback합니다.
+    Returns:
+        (geo_keywords, entertainment_keywords) — 각각 frozenset
+    """
+    _GEO_KEYWORDS_DEFAULT = frozenset({
+        "war", "conflict", "election", "president", "congress", "senate",
+        "sanction", "tariff", "trade", "nuclear", "military", "nato",
+        "china", "russia", "iran", "israel", "ukraine", "taiwan",
+        "fed", "rate", "inflation", "recession", "gdp", "economy",
+        "oil", "energy", "opec", "bitcoin", "crypto", "regulation",
+        "trump", "biden", "政", "전쟁", "제재", "선거", "금리",
+        "missile", "ceasefire", "diplomacy", "diplomatic", "summit", "coup",
+        "protest", "uprising", "embargo", "export", "import", "supply chain",
+        "chip", "semiconductor", "treasury", "dollar", "currency", "debt",
+        "deficit", "budget", "interest", "cpi", "pce", "unemployment", "jobs",
+        "fed fund", "quantitative", "geopolit", "geopolitical",
+        "alliance", "axis", "treaty", "agreement", "bilateral", "multilateral",
+        "un security", "united nations", "imf", "world bank", "g7", "g20",
+        "brics", "north korea", "south korea", "pakistan", "india", "europe",
+        "eu ", "european union", "middle east", "africa", "latin america",
+        "south china", "red sea", "strait", "blockade", "invasion", "occupation",
+        "refugee", "humanitarian", "wmd", "ballistic", "hypersonic",
+        "drone", "cyber", "hack", "espionage",
+    })
+    _ENTERTAINMENT_KEYWORDS_DEFAULT = frozenset({
+        "nhl", "nba", "nfl", "mlb", "mls", "ufc", "fifa", "premier league",
+        "stanley cup", "super bowl", "world series", "champions league",
+        "championship", "playoffs", "playoff", "mvp", "ballon d'or",
+        "oscar", "grammy", "emmy", "bachelor", "bachelorette", "survivor",
+        "gta vi", "gta 6", "formula 1", " f1 ", "grand prix", "wimbledon",
+        "olympics", "nba finals", "nhl finals", "stanley", "lakers", "celtics",
+        "knicks", "warriors", "spurs", "clippers", "heat", "bulls", "nets",
+        "pacers", "cavaliers", "nuggets", "timberwolves", "thunder", "suns",
+        "mavericks", "rockets", "grizzlies", "pelicans", "hawks", "hornets",
+        "magic", "wizards", "bucks", "raptors", "sixers", "pistons",
+        "jesus christ", "netflix", "spotify", "movie", "album", "tv show",
+        "reality tv", "celebrity", "box office", "billboard", "esport",
+        "e-sport", "video game", "game release", "season finale", "world cup soccer",
+    })
+
+    kw_cfg = _geo_cfg.get("keywords", {})
+    if not isinstance(kw_cfg, dict):
+        _log.debug("collectors.yml: geopolitical.keywords 섹션 없음, 기본값 사용")
+        return _GEO_KEYWORDS_DEFAULT, _ENTERTAINMENT_KEYWORDS_DEFAULT
+
+    geo_raw = kw_cfg.get("geo_keywords")
+    ent_raw = kw_cfg.get("entertainment_keywords")
+
+    if isinstance(geo_raw, list) and geo_raw:
+        geo = frozenset(geo_raw)
+        _log.debug("collectors.yml에서 geo_keywords %d개 로드", len(geo))
+    else:
+        _log.debug("collectors.yml: geo_keywords 누락 또는 빈 값, 기본값 사용")
+        geo = _GEO_KEYWORDS_DEFAULT
+
+    if isinstance(ent_raw, list) and ent_raw:
+        ent = frozenset(ent_raw)
+        _log.debug("collectors.yml에서 entertainment_keywords %d개 로드", len(ent))
+    else:
+        _log.debug("collectors.yml: entertainment_keywords 누락 또는 빈 값, 기본값 사용")
+        ent = _ENTERTAINMENT_KEYWORDS_DEFAULT
+
+    return geo, ent
+
+
+# 모듈 import 시 1회 로드 (YAML → fallback 자동)
+_GEO_KEYWORDS, _ENTERTAINMENT_KEYWORDS = _load_keyword_filters()
+
 _GEO_SOURCE_CONTEXT: Dict[str, Dict[str, Any]] = {
     "polymarket.com": {"name": "Polymarket", "tags": ["prediction-market"]},
     "gdeltproject.org": {"name": "GDELT", "tags": ["geopolitical", "data"]},
@@ -363,192 +435,7 @@ def _build_polymarket_section(markets: List[Dict[str, Any]]) -> tuple:
         return [], []
 
     # Filter out entertainment/sports/gaming markets — only keep geopolitical/financial
-    _GEO_KEYWORDS = {
-        "war",
-        "conflict",
-        "election",
-        "president",
-        "congress",
-        "senate",
-        "sanction",
-        "tariff",
-        "trade",
-        "nuclear",
-        "military",
-        "nato",
-        "china",
-        "russia",
-        "iran",
-        "israel",
-        "ukraine",
-        "taiwan",
-        "fed",
-        "rate",
-        "inflation",
-        "recession",
-        "gdp",
-        "economy",
-        "oil",
-        "energy",
-        "opec",
-        "bitcoin",
-        "crypto",
-        "regulation",
-        "trump",
-        "biden",
-        "政",
-        "전쟁",
-        "제재",
-        "선거",
-        "금리",
-        # Extended geopolitical/financial keywords
-        "missile",
-        "ceasefire",
-        "diplomacy",
-        "diplomatic",
-        "summit",
-        "coup",
-        "protest",
-        "uprising",
-        "embargo",
-        "export",
-        "import",
-        "supply chain",
-        "chip",
-        "semiconductor",
-        "treasury",
-        "dollar",
-        "currency",
-        "debt",
-        "deficit",
-        "budget",
-        "interest",
-        "cpi",
-        "pce",
-        "unemployment",
-        "jobs",
-        "fed fund",
-        "quantitative",
-        "geopolit",
-        "geopolitical",
-        "alliance",
-        "axis",
-        "treaty",
-        "agreement",
-        "bilateral",
-        "multilateral",
-        "un security",
-        "united nations",
-        "imf",
-        "world bank",
-        "g7",
-        "g20",
-        "brics",
-        "north korea",
-        "south korea",
-        "pakistan",
-        "india",
-        "europe",
-        "eu ",
-        "european union",
-        "middle east",
-        "africa",
-        "latin america",
-        "south china",
-        "red sea",
-        "strait",
-        "blockade",
-        "invasion",
-        "occupation",
-        "refugee",
-        "humanitarian",
-        "wmd",
-        "ballistic",
-        "hypersonic",
-        "drone",
-        "cyber",
-        "hack",
-        "espionage",
-    }
-    # Exclude sports/entertainment markets explicitly
-    _ENTERTAINMENT_KEYWORDS = {
-        "nhl",
-        "nba",
-        "nfl",
-        "mlb",
-        "mls",
-        "ufc",
-        "fifa",
-        "premier league",
-        "stanley cup",
-        "super bowl",
-        "world series",
-        "champions league",
-        "championship",
-        "playoffs",
-        "playoff",
-        "mvp",
-        "ballon d'or",
-        "oscar",
-        "grammy",
-        "emmy",
-        "bachelor",
-        "bachelorette",
-        "survivor",
-        "gta vi",
-        "gta 6",
-        "formula 1",
-        " f1 ",
-        "grand prix",
-        "wimbledon",
-        "olympics",
-        "nba finals",
-        "nhl finals",
-        "stanley",
-        "lakers",
-        "celtics",
-        "knicks",
-        "warriors",
-        "spurs",
-        "clippers",
-        "heat",
-        "bulls",
-        "nets",
-        "pacers",
-        "cavaliers",
-        "nuggets",
-        "timberwolves",
-        "thunder",
-        "suns",
-        "mavericks",
-        "rockets",
-        "grizzlies",
-        "pelicans",
-        "hawks",
-        "hornets",
-        "magic",
-        "wizards",
-        "bucks",
-        "raptors",
-        "sixers",
-        "pistons",
-        "jesus christ",
-        "netflix",
-        "spotify",
-        "movie",
-        "album",
-        "tv show",
-        "reality tv",
-        "celebrity",
-        "box office",
-        "billboard",
-        "esport",
-        "e-sport",
-        "video game",
-        "game release",
-        "season finale",
-        "world cup soccer",
-    }
+    # (키워드는 모듈 레벨 _GEO_KEYWORDS / _ENTERTAINMENT_KEYWORDS 사용 — collectors.yml에서 로드)
     # Geo-keyword filtered set only — no non_entertainment fallback to avoid sports bleed
     filtered_markets = [
         m
