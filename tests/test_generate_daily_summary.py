@@ -1194,3 +1194,775 @@ class TestRelationRows:
         rows = gds._relation_rows(s_map)
         for row in rows:
             assert len(row) == 4  # (left_name, right_name, score, note)
+
+
+# ---------------------------------------------------------------------------
+# _load_today_posts
+# ---------------------------------------------------------------------------
+
+class TestLoadTodayPosts:
+    """Tests for _load_today_posts using tmp_path stubs instead of real _posts/."""
+
+    def _write_post(self, directory, filename: str, content: str):
+        p = directory / filename
+        p.write_text(content, encoding="utf-8")
+        return p
+
+    def test_returns_empty_when_no_posts(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(gds, "POSTS_DIR", str(tmp_path))
+        result = gds._load_today_posts("2099-01-01")
+        summary_map, post_links, security_summary, all_summaries = result
+        assert summary_map == {}
+        assert post_links == []
+        assert security_summary is None
+        assert all_summaries == []
+
+    def test_loads_crypto_post(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(gds, "POSTS_DIR", str(tmp_path))
+        today = "2099-02-01"
+        self._write_post(
+            tmp_path,
+            f"{today}-crypto-news-digest.md",
+            "---\ntitle: 암호화폐 뉴스\ncategory: crypto\n---\n"
+            "## 핵심 요약\n- BTC 급등\n오늘 10건의 뉴스가 수집되었습니다.",
+        )
+        summary_map, post_links, _, all_summaries = gds._load_today_posts(today)
+        assert summary_map.get("crypto") is not None
+        assert summary_map["crypto"]["type"] == "crypto"
+        assert summary_map["crypto"]["count"] == 10
+        assert any("암호화폐" in name for name, _, _ in post_links)
+
+    def test_loads_stock_post(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(gds, "POSTS_DIR", str(tmp_path))
+        today = "2099-02-02"
+        self._write_post(
+            tmp_path,
+            f"{today}-stock-news-digest.md",
+            "---\ntitle: 주식 뉴스\n---\n"
+            "KOSPI 2500 상승.\n총 수집 건수: 5건",
+        )
+        summary_map, post_links, _, _ = gds._load_today_posts(today)
+        assert summary_map.get("stock") is not None
+        assert any("주식" in name for name, _, _ in post_links)
+
+    def test_loads_security_post(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(gds, "POSTS_DIR", str(tmp_path))
+        today = "2099-02-03"
+        self._write_post(
+            tmp_path,
+            f"{today}-security-report.md",
+            "---\ntitle: 보안 리포트\n---\n"
+            "## 보안 사고 현황\n| H1 | H2 | H3 |\n|---|---|---|\n| A | B | C |\n"
+            "오늘 3건의 뉴스가 수집되었습니다.",
+        )
+        summary_map, post_links, security_summary, _ = gds._load_today_posts(today)
+        assert security_summary is not None
+        assert security_summary["type"] == "security"
+        assert any("보안" in name for name, _, _ in post_links)
+
+    def test_loads_regulatory_post(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(gds, "POSTS_DIR", str(tmp_path))
+        today = "2099-02-04"
+        self._write_post(
+            tmp_path,
+            f"{today}-regulatory-report.md",
+            "---\ntitle: 규제 동향\n---\n"
+            "## 핵심 요약\n- SEC 조사\n오늘 7건의 뉴스가 수집되었습니다.",
+        )
+        summary_map, _, _, _ = gds._load_today_posts(today)
+        assert summary_map.get("regulatory") is not None
+        assert summary_map["regulatory"]["type"] == "regulatory"
+
+    def test_loads_social_post(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(gds, "POSTS_DIR", str(tmp_path))
+        today = "2099-02-05"
+        self._write_post(
+            tmp_path,
+            f"{today}-social-media-digest.md",
+            "---\ntitle: 소셜 미디어\n---\n"
+            "## 핵심 요약\n- BTC 트위터 급증\n총 8건을 수집했습니다.",
+        )
+        summary_map, _, _, _ = gds._load_today_posts(today)
+        assert summary_map.get("social") is not None
+        assert summary_map["social"]["type"] == "social"
+
+    def test_loads_political_post(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(gds, "POSTS_DIR", str(tmp_path))
+        today = "2099-02-06"
+        self._write_post(
+            tmp_path,
+            f"{today}-political-trades-report.md",
+            "---\ntitle: 정치인 거래\n---\n"
+            "## 핵심 요약\n- 펠로시 매수\n오늘 4건의 뉴스가 수집되었습니다.",
+        )
+        summary_map, _, _, _ = gds._load_today_posts(today)
+        assert summary_map.get("political") is not None
+        assert summary_map["political"]["type"] == "political"
+
+    def test_loads_worldmonitor_post(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(gds, "POSTS_DIR", str(tmp_path))
+        today = "2099-02-07"
+        self._write_post(
+            tmp_path,
+            f"{today}-worldmonitor-briefing.md",
+            "---\ntitle: 월드모니터 브리핑\n---\n"
+            "## 핵심 요약\n- 글로벌 이슈\n수집 건수: **20건**",
+        )
+        summary_map, post_links, _, _ = gds._load_today_posts(today)
+        assert summary_map.get("worldmonitor") is not None
+        assert any("월드모니터" in name for name, _, _ in post_links)
+
+    def test_skips_daily_news_summary_post(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(gds, "POSTS_DIR", str(tmp_path))
+        today = "2099-02-08"
+        self._write_post(
+            tmp_path,
+            f"{today}-daily-news-summary.md",
+            "---\ntitle: 일일 요약\n---\n이미 생성된 요약입니다.",
+        )
+        summary_map, post_links, _, all_summaries = gds._load_today_posts(today)
+        # daily-news-summary should be ignored — nothing should be loaded
+        assert all(v is None for v in summary_map.values())
+        assert post_links == []
+
+    def test_all_summaries_flat_list(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(gds, "POSTS_DIR", str(tmp_path))
+        today = "2099-02-09"
+        self._write_post(
+            tmp_path,
+            f"{today}-crypto-news-digest.md",
+            "---\ntitle: 암호화폐 뉴스\n---\n오늘 10건의 뉴스가 수집되었습니다.",
+        )
+        _, _, _, all_summaries = gds._load_today_posts(today)
+        # all_summaries should be a flat list (may contain None for absent categories)
+        assert isinstance(all_summaries, list)
+        assert len(all_summaries) == 7  # always 7 slots
+
+
+# ---------------------------------------------------------------------------
+# _write_summary_post
+# ---------------------------------------------------------------------------
+
+class TestWriteSummaryPost:
+    """Tests for _write_summary_post using tmp_path."""
+
+    def test_creates_file_with_correct_name(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(gds, "POSTS_DIR", str(tmp_path))
+        today = "2099-03-01"
+        filepath = gds._write_summary_post(today, "본문 내용입니다.", 42, "암호화폐 42건", None)
+        assert os.path.exists(filepath)
+        assert f"{today}-daily-news-summary.md" in filepath
+
+    def test_file_contains_frontmatter(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(gds, "POSTS_DIR", str(tmp_path))
+        today = "2099-03-02"
+        gds._write_summary_post(today, "본문.", 10, "뉴스 10건", None)
+        content = (tmp_path / f"{today}-daily-news-summary.md").read_text(encoding="utf-8")
+        assert "layout: post" in content
+        assert f'title: "일일 뉴스 종합 요약 - {today}"' in content
+        assert "categories: [market-analysis]" in content
+
+    def test_file_contains_body_content(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(gds, "POSTS_DIR", str(tmp_path))
+        today = "2099-03-03"
+        body = "## 오늘의 핵심\n- 비트코인 급등"
+        gds._write_summary_post(today, body, 5, "뉴스 5건", None)
+        content = (tmp_path / f"{today}-daily-news-summary.md").read_text(encoding="utf-8")
+        assert "## 오늘의 핵심" in content
+        assert "비트코인 급등" in content
+
+    def test_description_contains_counts_str(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(gds, "POSTS_DIR", str(tmp_path))
+        today = "2099-03-04"
+        counts_str = "암호화폐 30건, 주식 20건"
+        gds._write_summary_post(today, "본문.", 50, counts_str, None)
+        content = (tmp_path / f"{today}-daily-news-summary.md").read_text(encoding="utf-8")
+        assert counts_str in content
+
+    def test_returns_filepath_string(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(gds, "POSTS_DIR", str(tmp_path))
+        result = gds._write_summary_post("2099-03-05", "내용.", 0, "뉴스", None)
+        assert isinstance(result, str)
+        assert result.endswith(".md")
+
+    def test_lang_ko_in_frontmatter(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(gds, "POSTS_DIR", str(tmp_path))
+        today = "2099-03-06"
+        gds._write_summary_post(today, "내용.", 1, "뉴스 1건", None)
+        content = (tmp_path / f"{today}-daily-news-summary.md").read_text(encoding="utf-8")
+        assert 'lang: "ko"' in content
+
+    def test_source_consolidated_in_frontmatter(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(gds, "POSTS_DIR", str(tmp_path))
+        today = "2099-03-07"
+        gds._write_summary_post(today, "내용.", 1, "뉴스 1건", None)
+        content = (tmp_path / f"{today}-daily-news-summary.md").read_text(encoding="utf-8")
+        assert 'source: "consolidated"' in content
+
+    def test_image_line_absent_when_no_briefing_image(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(gds, "POSTS_DIR", str(tmp_path))
+        today = "2099-03-08"
+        gds._write_summary_post(today, "내용.", 0, "뉴스", None)
+        content = (tmp_path / f"{today}-daily-news-summary.md").read_text(encoding="utf-8")
+        assert "\nimage:" not in content
+
+
+# ---------------------------------------------------------------------------
+# _build_briefing_section
+# ---------------------------------------------------------------------------
+
+class TestBuildBriefingSection:
+    """Tests for _build_briefing_section with mocked ThemeSummarizer."""
+
+    def _make_sentiment(self, ratio=50):
+        return {
+            "tone": "중립",
+            "positive": ratio,
+            "negative": 100 - ratio,
+            "ratio": ratio,
+            "pos_examples": [],
+            "neg_examples": [],
+        }
+
+    def _make_crypto_summary(self, count=10, highlights=None):
+        return {
+            "type": "crypto",
+            "title": "암호화폐 뉴스",
+            "count": count,
+            "highlights": highlights or ["- BTC 상승"],
+            "key_summary": highlights or ["- BTC 상승"],
+            "content": "BTC 상승 소식이 있습니다.",
+            "themes": [("금리/유동성", 5)],
+            "url": "https://example.com/crypto",
+        }
+
+    def _make_summary_map(self, crypto_summary=None):
+        return {
+            "crypto": crypto_summary,
+            "stock": None,
+            "regulatory": None,
+            "social": None,
+            "worldmonitor": None,
+            "political": None,
+        }
+
+    def _make_mock_summarizer(self, concentration=None, anomalies=None):
+        from unittest.mock import MagicMock
+        mock = MagicMock()
+        mock.detect_concentration.return_value = concentration
+        mock.detect_anomalies.return_value = anomalies or []
+        return mock
+
+    def test_returns_list_of_strings(self):
+        mock_summ = self._make_mock_summarizer()
+        result = gds._build_briefing_section(
+            all_summaries=[],
+            all_news_items=[],
+            summary_map=self._make_summary_map(),
+            theme_payload=[],
+            sentiment=self._make_sentiment(),
+            today="2099-04-01",
+            briefing_image=None,
+            priority_items={"P0": [], "P1": [], "P2": []},
+            summarizer=mock_summ,
+        )
+        assert isinstance(result, list)
+        assert all(isinstance(line, str) for line in result)
+
+    def test_includes_dashboard_heading(self):
+        mock_summ = self._make_mock_summarizer()
+        result = gds._build_briefing_section(
+            all_summaries=[],
+            all_news_items=[],
+            summary_map=self._make_summary_map(),
+            theme_payload=[],
+            sentiment=self._make_sentiment(),
+            today="2099-04-02",
+            briefing_image=None,
+            priority_items={"P0": [], "P1": [], "P2": []},
+            summarizer=mock_summ,
+        )
+        combined = "\n".join(result)
+        assert "종합 대시보드" in combined
+
+    def test_includes_briefing_heading(self):
+        mock_summ = self._make_mock_summarizer()
+        result = gds._build_briefing_section(
+            all_summaries=[],
+            all_news_items=[],
+            summary_map=self._make_summary_map(),
+            theme_payload=[],
+            sentiment=self._make_sentiment(),
+            today="2099-04-03",
+            briefing_image=None,
+            priority_items={"P0": [], "P1": [], "P2": []},
+            summarizer=mock_summ,
+        )
+        combined = "\n".join(result)
+        assert "핵심 브리핑" in combined
+
+    def test_concentration_warning_when_detect_concentration_returns_value(self):
+        mock_summ = self._make_mock_summarizer(concentration=("금리/유동성", "interest", 0.45))
+        news_items = [{"title": "금리 뉴스", "link": "https://ex.com", "type": "crypto"}]
+        result = gds._build_briefing_section(
+            all_summaries=[],
+            all_news_items=news_items,
+            summary_map=self._make_summary_map(),
+            theme_payload=[],
+            sentiment=self._make_sentiment(),
+            today="2099-04-04",
+            briefing_image=None,
+            priority_items={"P0": [], "P1": [], "P2": []},
+            summarizer=mock_summ,
+        )
+        combined = "\n".join(result)
+        assert "집중도 경고" in combined
+        assert "45%" in combined
+
+    def test_anomaly_line_when_detect_anomalies_returns_value(self):
+        anomalies = [("리스크 이벤트", "risk", 8, "이상 급등 패턴이 감지되었습니다.")]
+        mock_summ = self._make_mock_summarizer(anomalies=anomalies)
+        news_items = [{"title": "리스크 뉴스", "link": "https://ex.com", "type": "crypto"}]
+        result = gds._build_briefing_section(
+            all_summaries=[],
+            all_news_items=news_items,
+            summary_map=self._make_summary_map(),
+            theme_payload=[],
+            sentiment=self._make_sentiment(),
+            today="2099-04-05",
+            briefing_image=None,
+            priority_items={"P0": [], "P1": [], "P2": []},
+            summarizer=mock_summ,
+        )
+        combined = "\n".join(result)
+        assert "이상 탐지" in combined
+        assert "이상 급등 패턴" in combined
+
+    def test_sentiment_line_present(self):
+        mock_summ = self._make_mock_summarizer()
+        sentiment = self._make_sentiment(ratio=70)
+        result = gds._build_briefing_section(
+            all_summaries=[],
+            all_news_items=[],
+            summary_map=self._make_summary_map(),
+            theme_payload=[],
+            sentiment=sentiment,
+            today="2099-04-06",
+            briefing_image=None,
+            priority_items={"P0": [], "P1": [], "P2": []},
+            summarizer=mock_summ,
+        )
+        combined = "\n".join(result)
+        assert "시장 심리" in combined
+        assert "70%" in combined
+
+    def test_pos_neg_examples_rendered_when_present(self):
+        mock_summ = self._make_mock_summarizer()
+        sentiment = {
+            "tone": "긍정 우세",
+            "positive": 7,
+            "negative": 3,
+            "ratio": 70,
+            "pos_examples": ["BTC 급등"],
+            "neg_examples": ["ETH 하락"],
+        }
+        result = gds._build_briefing_section(
+            all_summaries=[],
+            all_news_items=[],
+            summary_map=self._make_summary_map(),
+            theme_payload=[],
+            sentiment=sentiment,
+            today="2099-04-07",
+            briefing_image=None,
+            priority_items={"P0": [], "P1": [], "P2": []},
+            summarizer=mock_summ,
+        )
+        combined = "\n".join(result)
+        assert "긍정 신호" in combined
+        assert "주의 신호" in combined
+
+    def test_category_briefing_line_for_crypto(self):
+        mock_summ = self._make_mock_summarizer()
+        crypto = self._make_crypto_summary(count=15)
+        result = gds._build_briefing_section(
+            all_summaries=[crypto],
+            all_news_items=[],
+            summary_map=self._make_summary_map(crypto_summary=crypto),
+            theme_payload=[],
+            sentiment=self._make_sentiment(),
+            today="2099-04-08",
+            briefing_image=None,
+            priority_items={"P0": [], "P1": [], "P2": []},
+            summarizer=mock_summ,
+        )
+        combined = "\n".join(result)
+        assert "암호화폐" in combined
+        assert "15건" in combined
+
+    def test_detect_concentration_not_called_when_no_news_items(self):
+        mock_summ = self._make_mock_summarizer()
+        gds._build_briefing_section(
+            all_summaries=[],
+            all_news_items=[],
+            summary_map=self._make_summary_map(),
+            theme_payload=[],
+            sentiment=self._make_sentiment(),
+            today="2099-04-09",
+            briefing_image=None,
+            priority_items={"P0": [], "P1": [], "P2": []},
+            summarizer=mock_summ,
+        )
+        mock_summ.detect_concentration.assert_not_called()
+
+    def test_cross_topics_shown_when_multiple_summaries(self):
+        mock_summ = self._make_mock_summarizer()
+        crypto = {
+            "type": "crypto",
+            "title": "암호화폐",
+            "count": 10,
+            "highlights": [],
+            "key_summary": [],
+            "content": "금리 연준 fed fomc 금리인상",
+            "themes": [],
+            "url": "#",
+        }
+        stock = {
+            "type": "stock",
+            "title": "주식",
+            "count": 10,
+            "highlights": [],
+            "key_summary": [],
+            "content": "금리 연준 fed fomc 금리인상",
+            "themes": [],
+            "url": "#",
+        }
+        result = gds._build_briefing_section(
+            all_summaries=[crypto, stock],
+            all_news_items=[],
+            summary_map={"crypto": crypto, "stock": stock, "regulatory": None, "social": None, "worldmonitor": None, "political": None},
+            theme_payload=[],
+            sentiment=self._make_sentiment(),
+            today="2099-04-10",
+            briefing_image=None,
+            priority_items={"P0": [], "P1": [], "P2": []},
+            summarizer=mock_summ,
+        )
+        combined = "\n".join(result)
+        assert "교차 테마" in combined
+
+    def test_theme_snapshot_table_rendered_with_theme_payload(self):
+        mock_summ = self._make_mock_summarizer()
+        theme_payload = [
+            {"name": "금리/유동성", "emoji": "💰", "count": 25, "keywords": ["금리", "연준"]},
+            {"name": "정책/규제", "emoji": "📋", "count": 10, "keywords": ["sec", "etf"]},
+        ]
+        result = gds._build_briefing_section(
+            all_summaries=[],
+            all_news_items=[],
+            summary_map=self._make_summary_map(),
+            theme_payload=theme_payload,
+            sentiment=self._make_sentiment(),
+            today="2099-04-11",
+            briefing_image=None,
+            priority_items={"P0": [], "P1": [], "P2": []},
+            summarizer=mock_summ,
+        )
+        combined = "\n".join(result)
+        assert "테마 스냅샷" in combined
+        assert "금리/유동성" in combined
+
+
+# ---------------------------------------------------------------------------
+# _build_priority_and_category_sections
+# ---------------------------------------------------------------------------
+
+class TestBuildPriorityAndCategorySections:
+    """Tests for _build_priority_and_category_sections."""
+
+    def _make_summary_map(
+        self,
+        crypto=None,
+        stock=None,
+        regulatory=None,
+        social=None,
+        worldmonitor=None,
+        political=None,
+    ):
+        return {
+            "crypto": crypto,
+            "stock": stock,
+            "regulatory": regulatory,
+            "social": social,
+            "worldmonitor": worldmonitor,
+            "political": political,
+        }
+
+    def _crypto(self, count=10):
+        return {
+            "type": "crypto",
+            "count": count,
+            "highlights": ["- BTC 상승"],
+            "key_summary": [],
+            "content": "BTC 상승. [Bitcoin ETF approval confirmed today](https://ex.com)",
+            "themes": [("금리/유동성", 5)],
+            "url": "https://example.com/crypto",
+        }
+
+    def _stock(self, count=5):
+        return {
+            "type": "stock",
+            "count": count,
+            "highlights": ["- KOSPI 상승"],
+            "key_summary": [],
+            "market_data": ["KOSPI 2500 상승"],
+            "content": "KOSPI 2500 상승.",
+            "themes": [],
+            "url": "https://example.com/stock",
+        }
+
+    def _political(self, count=3):
+        return {
+            "type": "political",
+            "count": count,
+            "highlights": ["- 펠로시 매수"],
+            "key_summary": ["- 주요 거래 정보"],
+            "content": "펠로시 매수.",
+            "themes": [],
+            "url": "https://example.com/political",
+        }
+
+    def _security(self, count=2):
+        return {
+            "type": "security",
+            "count": count,
+            "highlights": [],
+            "key_summary": [],
+            "incidents": ["| DeFi | $1M | 해킹 |"],
+            "content": "보안 사고 발생.",
+            "themes": [],
+            "url": "https://example.com/security",
+        }
+
+    def test_returns_list_of_strings(self):
+        result = gds._build_priority_and_category_sections(
+            priority_items={"P0": [], "P1": [], "P2": []},
+            market_summary=None,
+            security_summary=None,
+            summary_map=self._make_summary_map(),
+            post_links=[],
+            all_news_items=[],
+        )
+        assert isinstance(result, list)
+        assert all(isinstance(line, str) for line in result)
+
+    def test_p0_section_rendered_when_p0_items_present(self):
+        p0_item = {
+            "title": "비트코인 거래소 해킹 사고 발생 긴급",
+            "description": "대형 거래소 해킹으로 수억 달러 피해 발생",
+            "link": "https://example.com/hack",
+            "type": "crypto",
+        }
+        result = gds._build_priority_and_category_sections(
+            priority_items={"P0": [p0_item], "P1": [], "P2": []},
+            market_summary=None,
+            security_summary=None,
+            summary_map=self._make_summary_map(),
+            post_links=[],
+            all_news_items=[],
+        )
+        combined = "\n".join(result)
+        assert "긴급 알림" in combined
+
+    def test_p1_section_rendered_when_p1_items_present(self):
+        p1_item = {
+            "title": "비트코인 ETF 최종 승인 결정 발표",
+            "description": "SEC가 비트코인 현물 ETF를 승인했습니다.",
+            "link": "https://example.com/etf",
+            "type": "crypto",
+        }
+        result = gds._build_priority_and_category_sections(
+            priority_items={"P0": [], "P1": [p1_item], "P2": []},
+            market_summary=None,
+            security_summary=None,
+            summary_map=self._make_summary_map(),
+            post_links=[],
+            all_news_items=[],
+        )
+        combined = "\n".join(result)
+        assert "중요 뉴스" in combined
+
+    def test_p2_section_rendered_when_p2_items_present(self):
+        p2_item = {
+            "title": "이더리움 개발자 컨퍼런스 개최 예정 안내",
+            "link": "https://example.com/eth",
+            "type": "crypto",
+        }
+        result = gds._build_priority_and_category_sections(
+            priority_items={"P0": [], "P1": [], "P2": [p2_item]},
+            market_summary=None,
+            security_summary=None,
+            summary_map=self._make_summary_map(),
+            post_links=[],
+            all_news_items=[],
+        )
+        combined = "\n".join(result)
+        assert "주목할 소식" in combined
+
+    def test_category_summary_section_always_present(self):
+        result = gds._build_priority_and_category_sections(
+            priority_items={"P0": [], "P1": [], "P2": []},
+            market_summary=None,
+            security_summary=None,
+            summary_map=self._make_summary_map(),
+            post_links=[],
+            all_news_items=[],
+        )
+        combined = "\n".join(result)
+        assert "카테고리별 요약" in combined
+
+    def test_crypto_section_shows_count_and_link(self):
+        result = gds._build_priority_and_category_sections(
+            priority_items={"P0": [], "P1": [], "P2": []},
+            market_summary=None,
+            security_summary=None,
+            summary_map=self._make_summary_map(crypto=self._crypto(count=12)),
+            post_links=[],
+            all_news_items=[],
+        )
+        combined = "\n".join(result)
+        assert "암호화폐 뉴스" in combined
+        assert "12건" in combined
+        assert "상세 보기" in combined
+
+    def test_stock_section_shows_market_data(self):
+        result = gds._build_priority_and_category_sections(
+            priority_items={"P0": [], "P1": [], "P2": []},
+            market_summary=None,
+            security_summary=None,
+            summary_map=self._make_summary_map(stock=self._stock(count=8)),
+            post_links=[],
+            all_news_items=[],
+        )
+        combined = "\n".join(result)
+        assert "주식 시장 뉴스" in combined
+        assert "KOSPI" in combined
+
+    def test_political_watch_section_shown_when_political_summary_present(self):
+        result = gds._build_priority_and_category_sections(
+            priority_items={"P0": [], "P1": [], "P2": []},
+            market_summary=None,
+            security_summary=None,
+            summary_map=self._make_summary_map(political=self._political()),
+            post_links=[],
+            all_news_items=[],
+        )
+        combined = "\n".join(result)
+        assert "정치인 워치" in combined
+
+    def test_security_section_shown_when_security_summary_present(self):
+        result = gds._build_priority_and_category_sections(
+            priority_items={"P0": [], "P1": [], "P2": []},
+            market_summary=None,
+            security_summary=self._security(),
+            summary_map=self._make_summary_map(),
+            post_links=[],
+            all_news_items=[],
+        )
+        combined = "\n".join(result)
+        assert "보안 리포트" in combined
+
+    def test_report_links_section_always_present(self):
+        result = gds._build_priority_and_category_sections(
+            priority_items={"P0": [], "P1": [], "P2": []},
+            market_summary=None,
+            security_summary=None,
+            summary_map=self._make_summary_map(),
+            post_links=[("암호화폐 뉴스", 10, "https://example.com/crypto")],
+            all_news_items=[],
+        )
+        combined = "\n".join(result)
+        assert "상세 리포트 링크" in combined
+
+    def test_post_links_rendered_in_report_section(self):
+        post_links = [
+            ("암호화폐 뉴스", 10, "https://example.com/crypto"),
+            ("주식 시장 뉴스", 5, "https://example.com/stock"),
+        ]
+        result = gds._build_priority_and_category_sections(
+            priority_items={"P0": [], "P1": [], "P2": []},
+            market_summary=None,
+            security_summary=None,
+            summary_map=self._make_summary_map(),
+            post_links=post_links,
+            all_news_items=[],
+        )
+        combined = "\n".join(result)
+        assert "암호화폐 뉴스" in combined or "🪙" in combined
+
+    def test_disclaimer_line_present(self):
+        result = gds._build_priority_and_category_sections(
+            priority_items={"P0": [], "P1": [], "P2": []},
+            market_summary=None,
+            security_summary=None,
+            summary_map=self._make_summary_map(),
+            post_links=[],
+            all_news_items=[],
+        )
+        combined = "\n".join(result)
+        assert "투자 조언" in combined
+
+    def test_market_overview_section_shown_when_market_summary_present(self):
+        market_summary = {
+            "type": "market",
+            "count": 5,
+            "highlights": ["- 코스피 +1.5%"],
+            "exec_summary": [],
+            "indicator_rows": [],
+            "yield_section": "",
+            "content": "코스피 상승.",
+            "url": "https://example.com/market",
+        }
+        result = gds._build_priority_and_category_sections(
+            priority_items={"P0": [], "P1": [], "P2": []},
+            market_summary=market_summary,
+            security_summary=None,
+            summary_map=self._make_summary_map(),
+            post_links=[],
+            all_news_items=[],
+        )
+        combined = "\n".join(result)
+        assert "시장 개요" in combined
+        assert "코스피" in combined
+
+    def test_cross_asset_section_present_when_multiple_summaries(self):
+        result = gds._build_priority_and_category_sections(
+            priority_items={"P0": [], "P1": [], "P2": []},
+            market_summary=None,
+            security_summary=None,
+            summary_map=self._make_summary_map(
+                crypto=self._crypto(), stock=self._stock()
+            ),
+            post_links=[],
+            all_news_items=[],
+        )
+        combined = "\n".join(result)
+        assert "교차자산 연관성" in combined
+
+    def test_p0_noise_title_filtered_out(self):
+        p0_noise = {"title": "가격 알림: BTC/USDT", "link": "https://ex.com", "type": "crypto"}
+        p0_real = {
+            "title": "비트코인 거래소 해킹 사고 발생 긴급",
+            "description": "긴급 사고 발생",
+            "link": "https://ex.com/real",
+            "type": "crypto",
+        }
+        result = gds._build_priority_and_category_sections(
+            priority_items={"P0": [p0_noise, p0_real], "P1": [], "P2": []},
+            market_summary=None,
+            security_summary=None,
+            summary_map=self._make_summary_map(),
+            post_links=[],
+            all_news_items=[],
+        )
+        combined = "\n".join(result)
+        assert "가격 알림" not in combined

@@ -993,3 +993,700 @@ class TestCalculateYieldSpreadEdgeCases:
         result = gms.calculate_yield_spread(fred_data)
         assert result["inverted"] is True
         assert result["spread"] < 0
+
+
+# ---------------------------------------------------------------------------
+# fetch_us_market_data — Alpha Vantage path (mocked HTTP)
+# ---------------------------------------------------------------------------
+
+class TestFetchUsMarketDataAlphaVantage:
+    """Tests for the Alpha Vantage branch of fetch_us_market_data."""
+
+    def _av_response(self, symbol, price, change, change_pct, volume):
+        return {
+            "Global Quote": {
+                "01. symbol": symbol,
+                "05. price": price,
+                "06. volume": volume,
+                "09. change": change,
+                "10. change percent": change_pct,
+            }
+        }
+
+    def test_parses_spy_quote_from_alpha_vantage(self, monkeypatch):
+        import requests as _requests
+
+        mock_resp = type("R", (), {
+            "raise_for_status": lambda self: None,
+            "json": lambda self: self._data,
+            "_data": self._av_response("SPY", "500.00", "+5.00", "+1.01%", "50000000"),
+        })()
+
+        monkeypatch.setattr(_requests, "get", lambda *a, **kw: mock_resp)
+
+        # Also stub yfinance so the fallback/crypto branch doesn't try the network
+        import sys
+        yf_stub = type("yf", (), {
+            "Ticker": lambda sym: type("T", (), {
+                "fast_info": type("FI", (), {"last_price": None, "previous_close": None})()
+            })()
+        })()
+        monkeypatch.setitem(sys.modules, "yfinance", yf_stub)
+
+        result = gms.fetch_us_market_data("FAKE_KEY")
+        assert "SPY" in result
+        assert result["SPY"]["price"] == "500.00"
+        assert result["SPY"]["change"] == "+5.00"
+        assert result["SPY"]["volume"] == "50000000"
+
+    def test_missing_price_field_skips_symbol(self, monkeypatch):
+        import requests as _requests
+
+        # Global Quote present but no '05. price'
+        mock_resp = type("R", (), {
+            "raise_for_status": lambda self: None,
+            "json": lambda self: {"Global Quote": {}},
+        })()
+        monkeypatch.setattr(_requests, "get", lambda *a, **kw: mock_resp)
+
+        import sys
+        yf_stub = type("yf", (), {
+            "Ticker": lambda sym: type("T", (), {
+                "fast_info": type("FI", (), {"last_price": None, "previous_close": None})()
+            })()
+        })()
+        monkeypatch.setitem(sys.modules, "yfinance", yf_stub)
+
+        result = gms.fetch_us_market_data("FAKE_KEY")
+        assert "SPY" not in result
+
+    def test_network_error_skips_symbol_and_continues(self, monkeypatch):
+        import requests as _requests
+
+        call_count = {"n": 0}
+
+        def fake_get(*a, **kw):
+            call_count["n"] += 1
+            raise _requests.exceptions.ConnectionError("timeout")
+
+        monkeypatch.setattr(_requests, "get", fake_get)
+
+        import sys
+        yf_stub = type("yf", (), {
+            "Ticker": lambda sym: type("T", (), {
+                "fast_info": type("FI", (), {"last_price": None, "previous_close": None})()
+            })()
+        })()
+        monkeypatch.setitem(sys.modules, "yfinance", yf_stub)
+
+        # Should not raise; returns partial (possibly empty) dict
+        result = gms.fetch_us_market_data("FAKE_KEY")
+        assert isinstance(result, dict)
+
+    def test_no_api_key_skips_alpha_vantage_calls(self, monkeypatch):
+        import requests as _requests
+
+        called = {"n": 0}
+
+        def fake_get(*a, **kw):
+            called["n"] += 1
+            return type("R", (), {
+                "raise_for_status": lambda self: None,
+                "json": lambda self: {},
+            })()
+
+        monkeypatch.setattr(_requests, "get", fake_get)
+
+        import sys
+        yf_stub = type("yf", (), {
+            "Ticker": lambda sym: type("T", (), {
+                "fast_info": type("FI", (), {"last_price": None, "previous_close": None})()
+            })()
+        })()
+        monkeypatch.setitem(sys.modules, "yfinance", yf_stub)
+
+        gms.fetch_us_market_data("")
+        assert called["n"] == 0
+
+
+# ---------------------------------------------------------------------------
+# fetch_us_market_data — yfinance crypto-related stocks branch
+# ---------------------------------------------------------------------------
+
+class TestFetchUsMarketDataYfinance:
+    """Tests for yfinance-based crypto stock fetching (COIN, MSTR, IBIT)."""
+
+    def _make_yf_stub(self, price, prev_close):
+        fast_info = type("FI", (), {
+            "last_price": price,
+            "previous_close": prev_close,
+        })()
+        ticker = type("T", (), {"fast_info": fast_info})()
+        return type("yf", (), {"Ticker": staticmethod(lambda sym: ticker)})()
+
+    def test_parses_coin_stock_data(self, monkeypatch):
+        import sys
+
+        import requests as _requests
+
+        # No API key → skip AV; patch yfinance
+        monkeypatch.setattr(_requests, "get", lambda *a, **kw: (_ for _ in ()).throw(Exception("no-call")))
+        monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(230.50, 225.00))
+
+        result = gms.fetch_us_market_data("")
+        # COIN, MSTR, IBIT all use same price/prev — all should be present
+        assert "COIN" in result
+        assert result["COIN"]["price"] == "230.50"
+        # change = 230.50 - 225.00 = +5.50
+        assert "+5.50" in result["COIN"]["change"]
+
+    def test_change_pct_calculated_correctly(self, monkeypatch):
+        import sys
+
+        import requests as _requests
+
+        monkeypatch.setattr(_requests, "get", lambda *a, **kw: (_ for _ in ()).throw(Exception("no-call")))
+        monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(110.0, 100.0))
+
+        result = gms.fetch_us_market_data("")
+        assert "COIN" in result
+        # (110 - 100) / 100 * 100 = +10.00%
+        assert "+10.00%" in result["COIN"]["change_pct"]
+
+    def test_none_price_skips_symbol(self, monkeypatch):
+        import sys
+
+        import requests as _requests
+
+        monkeypatch.setattr(_requests, "get", lambda *a, **kw: (_ for _ in ()).throw(Exception("no-call")))
+        monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(None, 100.0))
+
+        result = gms.fetch_us_market_data("")
+        # Neither COIN, MSTR, nor IBIT should be in results when price is None
+        assert "COIN" not in result
+        assert "MSTR" not in result
+        assert "IBIT" not in result
+
+    def test_yfinance_import_error_returns_empty(self, monkeypatch):
+        import sys
+
+        import requests as _requests
+
+        monkeypatch.setattr(_requests, "get", lambda *a, **kw: (_ for _ in ()).throw(Exception("no-call")))
+        # Remove yfinance entirely
+        monkeypatch.setitem(sys.modules, "yfinance", None)
+
+        result = gms.fetch_us_market_data("")
+        assert isinstance(result, dict)
+
+
+# ---------------------------------------------------------------------------
+# fetch_korean_market — yfinance branch
+# ---------------------------------------------------------------------------
+
+class TestFetchKoreanMarket:
+
+    def _make_yf_stub(self, price, prev):
+        fi = type("FI", (), {"last_price": price, "previous_close": prev})()
+        ticker = type("T", (), {"fast_info": fi})()
+        return type("yf", (), {"Ticker": staticmethod(lambda sym: ticker)})()
+
+    def test_parses_kospi_data(self, monkeypatch):
+        import sys
+        monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(2500.0, 2450.0))
+
+        result = gms.fetch_korean_market()
+        assert "KOSPI" in result
+        assert result["KOSPI"]["price"] == "2,500.00"
+
+    def test_change_and_pct_calculated(self, monkeypatch):
+        import sys
+        monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(2500.0, 2450.0))
+
+        result = gms.fetch_korean_market()
+        # change = 2500 - 2450 = +50
+        assert "+50.00" in result["KOSPI"]["change"]
+        # pct = 50/2450 * 100 ≈ +2.04%
+        assert "+" in result["KOSPI"]["change_pct"]
+
+    def test_returns_all_three_symbols(self, monkeypatch):
+        import sys
+        monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(1000.0, 990.0))
+
+        result = gms.fetch_korean_market()
+        # ^KS11 → KOSPI, ^KQ11 → KOSDAQ, KRW=X → USD/KRW 환율
+        assert "KOSPI" in result
+        assert "KOSDAQ" in result
+        assert "USD/KRW 환율" in result
+
+    def test_none_price_skips_symbol(self, monkeypatch):
+        import sys
+        monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(None, 1000.0))
+
+        result = gms.fetch_korean_market()
+        assert result == {}
+
+    def test_yfinance_import_error_returns_empty(self, monkeypatch):
+        import sys
+        monkeypatch.setitem(sys.modules, "yfinance", None)
+
+        result = gms.fetch_korean_market()
+        assert result == {}
+
+    def test_ticker_exception_skips_and_continues(self, monkeypatch):
+        import sys
+
+        call_count = {"n": 0}
+
+        class BrokenFI:
+            @property
+            def last_price(self):
+                raise RuntimeError("yf error")
+            previous_close = 1000.0
+
+        class BrokenTicker:
+            fast_info = BrokenFI()
+
+        yf_stub = type("yf", (), {"Ticker": staticmethod(lambda sym: BrokenTicker())})()
+        monkeypatch.setitem(sys.modules, "yfinance", yf_stub)
+
+        result = gms.fetch_korean_market()
+        assert isinstance(result, dict)
+
+
+# ---------------------------------------------------------------------------
+# fetch_commodity_data — yfinance branch
+# ---------------------------------------------------------------------------
+
+class TestFetchCommodityData:
+
+    def _make_yf_stub(self, price, prev):
+        fi = type("FI", (), {"last_price": price, "previous_close": prev})()
+        ticker = type("T", (), {"fast_info": fi})()
+        return type("yf", (), {"Ticker": staticmethod(lambda sym: ticker)})()
+
+    def test_parses_gold_data(self, monkeypatch):
+        import sys
+        monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(1950.0, 1940.0))
+
+        result = gms.fetch_commodity_data()
+        assert "금 (Gold)" in result
+        assert result["금 (Gold)"]["price"] == "1,950.00"
+
+    def test_returns_all_four_commodities(self, monkeypatch):
+        import sys
+        monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(100.0, 98.0))
+
+        result = gms.fetch_commodity_data()
+        assert "금 (Gold)" in result
+        assert "원유 (WTI)" in result
+        assert "천연가스" in result
+        assert "달러 인덱스 (DXY)" in result
+
+    def test_change_pct_sign_positive(self, monkeypatch):
+        import sys
+        monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(100.0, 98.0))
+
+        result = gms.fetch_commodity_data()
+        # (100 - 98) / 98 * 100 ≈ +2.04%
+        assert "+" in result["금 (Gold)"]["change_pct"]
+
+    def test_change_pct_sign_negative(self, monkeypatch):
+        import sys
+        monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(95.0, 100.0))
+
+        result = gms.fetch_commodity_data()
+        assert "-" in result["금 (Gold)"]["change_pct"]
+
+    def test_none_price_skips_commodity(self, monkeypatch):
+        import sys
+        monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(None, 100.0))
+
+        result = gms.fetch_commodity_data()
+        assert result == {}
+
+    def test_yfinance_import_error_returns_empty(self, monkeypatch):
+        import sys
+        monkeypatch.setitem(sys.modules, "yfinance", None)
+
+        result = gms.fetch_commodity_data()
+        assert result == {}
+
+
+# ---------------------------------------------------------------------------
+# fetch_fred_indicators — mocked HTTP via request_with_retry
+# ---------------------------------------------------------------------------
+
+class TestFetchFredIndicators:
+
+    def _obs(self, value, date="2024-01-15", prev_value="4.50", prev_date="2023-12-15"):
+        return {
+            "observations": [
+                {"value": str(value), "date": date},
+                {"value": prev_value, "date": prev_date},
+            ]
+        }
+
+    def test_no_api_key_returns_empty(self):
+        result = gms.fetch_fred_indicators("")
+        assert result == {}
+
+    def test_parses_fed_rate_observation(self, monkeypatch):
+        mock_resp = type("R", (), {"json": lambda self: self._data})()
+        mock_resp._data = self._obs("5.25", prev_value="5.00")
+
+        import scripts.generate_market_summary as _gms
+        monkeypatch.setattr(_gms, "request_with_retry", lambda *a, **kw: mock_resp)
+
+        result = gms.fetch_fred_indicators("FAKE_KEY")
+        assert "FED_RATE" in result
+        assert result["FED_RATE"]["value"] == 5.25
+        assert result["FED_RATE"]["label"] == "연방기금금리"
+
+    def test_change_calculated_from_two_observations(self, monkeypatch):
+        mock_resp = type("R", (), {"json": lambda self: self._data})()
+        mock_resp._data = self._obs("5.25", prev_value="5.00")
+
+        import scripts.generate_market_summary as _gms
+        monkeypatch.setattr(_gms, "request_with_retry", lambda *a, **kw: mock_resp)
+
+        result = gms.fetch_fred_indicators("FAKE_KEY")
+        assert abs(result["FED_RATE"]["change"] - 0.25) < 0.001
+
+    def test_dot_value_skips_observation(self, monkeypatch):
+        # FRED returns "." for missing data
+        mock_resp = type("R", (), {"json": lambda self: self._data})()
+        mock_resp._data = {"observations": [{"value": ".", "date": "2024-01-15"}]}
+
+        import scripts.generate_market_summary as _gms
+        monkeypatch.setattr(_gms, "request_with_retry", lambda *a, **kw: mock_resp)
+
+        result = gms.fetch_fred_indicators("FAKE_KEY")
+        assert "FED_RATE" not in result
+
+    def test_single_observation_change_is_none(self, monkeypatch):
+        mock_resp = type("R", (), {"json": lambda self: self._data})()
+        mock_resp._data = {"observations": [{"value": "5.25", "date": "2024-01-15"}]}
+
+        import scripts.generate_market_summary as _gms
+        monkeypatch.setattr(_gms, "request_with_retry", lambda *a, **kw: mock_resp)
+
+        result = gms.fetch_fred_indicators("FAKE_KEY")
+        assert result["FED_RATE"]["change"] is None
+
+    def test_exception_skips_indicator_and_continues(self, monkeypatch):
+        import scripts.generate_market_summary as _gms
+
+        call_count = {"n": 0}
+
+        def failing_retry(*a, **kw):
+            call_count["n"] += 1
+            raise RuntimeError("network error")
+
+        monkeypatch.setattr(_gms, "request_with_retry", failing_retry)
+
+        result = gms.fetch_fred_indicators("FAKE_KEY")
+        assert isinstance(result, dict)
+        # Should have attempted all 11 indicators
+        assert call_count["n"] == 11
+
+    def test_date_stored_from_observation(self, monkeypatch):
+        mock_resp = type("R", (), {"json": lambda self: self._data})()
+        mock_resp._data = self._obs("4.00", date="2024-03-01")
+
+        import scripts.generate_market_summary as _gms
+        monkeypatch.setattr(_gms, "request_with_retry", lambda *a, **kw: mock_resp)
+
+        result = gms.fetch_fred_indicators("FAKE_KEY")
+        assert result["FED_RATE"]["date"] == "2024-03-01"
+
+    def test_prev_dot_value_change_is_none(self, monkeypatch):
+        mock_resp = type("R", (), {"json": lambda self: self._data})()
+        mock_resp._data = {
+            "observations": [
+                {"value": "5.25", "date": "2024-01-15"},
+                {"value": ".", "date": "2023-12-15"},
+            ]
+        }
+
+        import scripts.generate_market_summary as _gms
+        monkeypatch.setattr(_gms, "request_with_retry", lambda *a, **kw: mock_resp)
+
+        result = gms.fetch_fred_indicators("FAKE_KEY")
+        assert result["FED_RATE"]["change"] is None
+
+
+# ---------------------------------------------------------------------------
+# fetch_sector_performance — yfinance branch
+# ---------------------------------------------------------------------------
+
+class TestFetchSectorPerformance:
+
+    def _make_yf_stub(self, price, prev):
+        fi = type("FI", (), {"last_price": price, "previous_close": prev})()
+        ticker = type("T", (), {"fast_info": fi})()
+        return type("yf", (), {"Ticker": staticmethod(lambda sym: ticker)})()
+
+    def test_returns_sector_data_with_name(self, monkeypatch):
+        import sys
+        monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(200.0, 195.0))
+
+        result = gms.fetch_sector_performance()
+        assert "XLK" in result
+        assert result["XLK"]["name"] == "기술 (Technology)"
+
+    def test_returns_all_11_sectors(self, monkeypatch):
+        import sys
+        monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(100.0, 99.0))
+
+        result = gms.fetch_sector_performance()
+        expected = {"XLK", "XLF", "XLE", "XLV", "XLI", "XLC", "XLP", "XLY", "XLU", "XLRE", "XLB"}
+        assert expected == set(result.keys())
+
+    def test_change_pct_is_float(self, monkeypatch):
+        import sys
+        monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(110.0, 100.0))
+
+        result = gms.fetch_sector_performance()
+        assert isinstance(result["XLK"]["change_pct"], float)
+        assert abs(result["XLK"]["change_pct"] - 10.0) < 0.01
+
+    def test_price_formatted_as_string(self, monkeypatch):
+        import sys
+        monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(199.50, 198.0))
+
+        result = gms.fetch_sector_performance()
+        assert result["XLK"]["price"] == "199.50"
+
+    def test_none_price_skips_sector(self, monkeypatch):
+        import sys
+        monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(None, 100.0))
+
+        result = gms.fetch_sector_performance()
+        assert result == {}
+
+    def test_yfinance_import_error_returns_empty(self, monkeypatch):
+        import sys
+        monkeypatch.setitem(sys.modules, "yfinance", None)
+
+        result = gms.fetch_sector_performance()
+        assert result == {}
+
+
+# ---------------------------------------------------------------------------
+# fetch_btc_etf_data — yfinance + rss_fetcher branch
+# ---------------------------------------------------------------------------
+
+def _patch_rss_fetcher(monkeypatch, return_value):
+    """Patch fetch_rss_feeds_concurrent on the module that gms resolves at call time.
+
+    gms inserts scripts/ onto sys.path then does:
+        from common.rss_fetcher import fetch_rss_feeds_concurrent
+    so the live module is sys.modules["common.rss_fetcher"].
+    """
+    _rss = sys.modules["common.rss_fetcher"]
+    monkeypatch.setattr(_rss, "fetch_rss_feeds_concurrent", lambda feeds: return_value)
+
+
+def _patch_rss_fetcher_capture(monkeypatch):
+    """Patch and return a capture dict that records the feeds argument."""
+    _rss = sys.modules["common.rss_fetcher"]
+    captured = {}
+
+    def fake_rss(feeds):
+        captured["feeds"] = feeds
+        return []
+
+    monkeypatch.setattr(_rss, "fetch_rss_feeds_concurrent", fake_rss)
+    return captured
+
+
+class TestFetchBtcEtfData:
+
+    def _make_yf_stub(self, price, prev):
+        fi = type("FI", (), {"last_price": price, "previous_close": prev})()
+        ticker = type("T", (), {"fast_info": fi})()
+        return type("yf", (), {"Ticker": staticmethod(lambda sym: ticker)})()
+
+    def _patch_rss(self, monkeypatch, return_value):
+        _patch_rss_fetcher(monkeypatch, return_value)
+
+    def test_returns_etfs_and_news_keys(self, monkeypatch):
+        import sys
+        monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(35.0, 34.0))
+        self._patch_rss(monkeypatch, [])
+
+        result = gms.fetch_btc_etf_data()
+        assert "etfs" in result
+        assert "news" in result
+
+    def test_parses_ibit_price(self, monkeypatch):
+        import sys
+        monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(35.50, 34.00))
+        self._patch_rss(monkeypatch, [])
+
+        result = gms.fetch_btc_etf_data()
+        assert "IBIT" in result["etfs"]
+        assert result["etfs"]["IBIT"]["price"] == "35.50"
+
+    def test_parses_all_three_etfs(self, monkeypatch):
+        import sys
+        monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(30.0, 29.0))
+        self._patch_rss(monkeypatch, [])
+
+        result = gms.fetch_btc_etf_data()
+        assert "IBIT" in result["etfs"]
+        assert "FBTC" in result["etfs"]
+        assert "GBTC" in result["etfs"]
+
+    def test_change_pct_formatted_with_sign(self, monkeypatch):
+        import sys
+        monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(110.0, 100.0))
+        self._patch_rss(monkeypatch, [])
+
+        result = gms.fetch_btc_etf_data()
+        assert result["etfs"]["IBIT"]["change_pct"] == "+10.00%"
+
+    def test_news_items_from_rss_included(self, monkeypatch):
+        import sys
+        news = [{"title": "Bitcoin ETF 자금 유입", "link": "https://example.com"}]
+        monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(None, 30.0))
+        self._patch_rss(monkeypatch, news)
+
+        result = gms.fetch_btc_etf_data()
+        assert result["news"] == news
+
+    def test_none_price_skips_etf(self, monkeypatch):
+        import sys
+        monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(None, 30.0))
+        self._patch_rss(monkeypatch, [])
+
+        result = gms.fetch_btc_etf_data()
+        assert result["etfs"] == {}
+
+    def test_yfinance_import_error_etfs_empty(self, monkeypatch):
+        import sys
+        monkeypatch.setitem(sys.modules, "yfinance", None)
+        self._patch_rss(monkeypatch, [])
+
+        result = gms.fetch_btc_etf_data()
+        assert result["etfs"] == {}
+
+
+# ---------------------------------------------------------------------------
+# fetch_whale_trades — rss_fetcher branch
+# ---------------------------------------------------------------------------
+
+class TestFetchWhaleTrades:
+
+    def test_returns_list(self, monkeypatch):
+        _patch_rss_fetcher(monkeypatch, [])
+        result = gms.fetch_whale_trades()
+        assert isinstance(result, list)
+
+    def test_passes_three_feeds_to_rss(self, monkeypatch):
+        captured = _patch_rss_fetcher_capture(monkeypatch)
+        gms.fetch_whale_trades()
+        assert len(captured["feeds"]) == 3
+
+    def test_returns_news_items_from_rss(self, monkeypatch):
+        items = [
+            {"title": "1000 BTC moved", "link": "https://whale-alert.io/1"},
+            {"title": "500 ETH moved", "link": "https://whale-alert.io/2"},
+        ]
+        _patch_rss_fetcher(monkeypatch, items)
+        result = gms.fetch_whale_trades()
+        assert result == items
+
+    def test_feeds_contain_whale_alert_url(self, monkeypatch):
+        captured = _patch_rss_fetcher_capture(monkeypatch)
+        gms.fetch_whale_trades()
+        all_urls = [f[0] for f in captured["feeds"]]
+        assert any("whale" in url.lower() for url in all_urls)
+
+    def test_feeds_include_korean_language_feed(self, monkeypatch):
+        captured = _patch_rss_fetcher_capture(monkeypatch)
+        gms.fetch_whale_trades()
+        tags_lists = [f[2] for f in captured["feeds"]]
+        assert any("korean" in tags for tags in tags_lists)
+
+
+# ---------------------------------------------------------------------------
+# fetch_us_market_data — yfinance fallback for AV symbols (^GSPC etc.)
+# ---------------------------------------------------------------------------
+
+class TestFetchUsMarketDataYfinanceFallback:
+    """Covers the yfinance fallback path for AV symbols when AV returns < 3 results."""
+
+    def test_yfinance_fallback_fills_spy_when_av_incomplete(self, monkeypatch):
+        import sys
+
+        import requests as _requests
+
+        # AV returns empty Global Quote → no SPY from AV
+        empty_resp = type("R", (), {
+            "raise_for_status": lambda self: None,
+            "json": lambda self: {"Global Quote": {}},
+        })()
+        monkeypatch.setattr(_requests, "get", lambda *a, **kw: empty_resp)
+
+        # yfinance returns valid data for ^GSPC → should fill SPY
+        call_log = []
+
+        def ticker_factory(sym):
+            call_log.append(sym)
+            if sym in ("^GSPC", "^IXIC", "^DJI", "^VIX"):
+                fi = type("FI", (), {"last_price": 5000.0, "previous_close": 4950.0})()
+            else:
+                fi = type("FI", (), {"last_price": 100.0, "previous_close": 99.0})()
+            return type("T", (), {"fast_info": fi})()
+
+        yf_stub = type("yf", (), {"Ticker": staticmethod(ticker_factory)})()
+        monkeypatch.setitem(sys.modules, "yfinance", yf_stub)
+
+        result = gms.fetch_us_market_data("FAKE_KEY")
+        assert "SPY" in result
+        assert result["SPY"]["price"] == "5,000.00"
+
+    def test_fallback_skips_already_fetched_symbols(self, monkeypatch):
+        """If SPY was already fetched from AV, yfinance fallback should not overwrite it."""
+        import sys
+
+        import requests as _requests
+
+        # AV returns valid SPY only
+        call_count = {"n": 0}
+
+        def fake_get(url, params=None, **kw):
+            sym = (params or {}).get("symbol", "")
+            call_count["n"] += 1
+            if sym == "SPY":
+                return type("R", (), {
+                    "raise_for_status": lambda self: None,
+                    "json": lambda self: {"Global Quote": {
+                        "05. price": "499.00",
+                        "09. change": "+1.00",
+                        "10. change percent": "+0.20%",
+                        "06. volume": "1000",
+                    }},
+                })()
+            return type("R", (), {
+                "raise_for_status": lambda self: None,
+                "json": lambda self: {"Global Quote": {}},
+            })()
+
+        monkeypatch.setattr(_requests, "get", fake_get)
+
+        yf_ticker_calls = []
+
+        def ticker_factory(sym):
+            yf_ticker_calls.append(sym)
+            fi = type("FI", (), {"last_price": 9999.0, "previous_close": 1.0})()
+            return type("T", (), {"fast_info": fi})()
+
+        yf_stub = type("yf", (), {"Ticker": staticmethod(ticker_factory)})()
+        monkeypatch.setitem(sys.modules, "yfinance", yf_stub)
+
+        result = gms.fetch_us_market_data("FAKE_KEY")
+        # SPY came from AV; yfinance fallback must not overwrite it
+        assert result.get("SPY", {}).get("price") == "499.00"
