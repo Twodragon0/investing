@@ -1447,7 +1447,6 @@ class TestBuildBriefingSection:
         }
 
     def _make_mock_summarizer(self, concentration=None, anomalies=None):
-        from unittest.mock import MagicMock
         mock = MagicMock()
         mock.detect_concentration.return_value = concentration
         mock.detect_anomalies.return_value = anomalies or []
@@ -1966,3 +1965,162 @@ class TestBuildPriorityAndCategorySections:
         )
         combined = "\n".join(result)
         assert "가격 알림" not in combined
+
+
+# ---------------------------------------------------------------------------
+# main() integration smoke tests
+# ---------------------------------------------------------------------------
+
+import datetime as _dt
+from unittest.mock import MagicMock, patch
+
+
+def _fake_kst_now_factory(date_str):
+    """Return a datetime object whose strftime('%Y-%m-%d') == date_str."""
+    year, month, day = map(int, date_str.split("-"))
+    return _dt.datetime(year, month, day, 9, 0, 0, tzinfo=_dt.UTC)
+
+
+class TestMainIntegration:
+    """Integration smoke tests for main() — all external I/O is mocked."""
+
+    TODAY = "2026-01-15"
+
+    def _write_crypto_post(self, tmp_path):
+        """Write a minimal crypto-news-digest post using TODAY as filename date."""
+        (tmp_path / f"{self.TODAY}-crypto-news-digest.md").write_text(
+            "---\ntitle: 암호화폐 뉴스\ncategory: crypto\n---\n"
+            "## 핵심 요약\n- 비트코인 상승\n- 이더리움 하락\n\n"
+            "오늘 5건의 뉴스가 수집되었습니다.\n",
+            encoding="utf-8",
+        )
+
+    def _patch_posts_dir(self, monkeypatch, posts_dir):
+        """Redirect POSTS_DIR inside gds module so glob finds tmp_path posts."""
+        monkeypatch.setattr(gds, "POSTS_DIR", posts_dir)
+
+    def _patch_datetime(self, monkeypatch):
+        """Make datetime.now() in gds return a fixed date matching TODAY."""
+        fake_now = _fake_kst_now_factory(self.TODAY)
+        real_datetime = _dt.datetime
+
+        class _FakeDatetime(_dt.datetime):
+            @classmethod
+            def now(cls, tz=None):
+                return fake_now.replace(tzinfo=tz) if tz else fake_now
+
+        monkeypatch.setattr(gds, "datetime", _FakeDatetime)
+
+    def test_creates_post_file_with_required_frontmatter_keys(self, tmp_path, monkeypatch):
+        """main() writes a post file containing all required front-matter keys."""
+        self._write_crypto_post(tmp_path)
+        posts_dir = str(tmp_path)
+        self._patch_posts_dir(monkeypatch, posts_dir)
+        self._patch_datetime(monkeypatch)
+        monkeypatch.setattr(gds, "_resolve_frontmatter_image", lambda *a, **kw: None)
+
+        with patch(
+            "scripts.generate_daily_summary.generate_news_briefing_card",
+            return_value=None,
+            create=True,
+        ):
+            gds.main()
+
+        import glob as _glob
+
+        written = _glob.glob(f"{posts_dir}/{self.TODAY}-daily-news-summary.md")
+        assert written, "daily-news-summary post file must be created"
+
+        content = open(written[0], encoding="utf-8").read()
+        for key in ("layout", "title", "categories", "tags", "description"):
+            assert f"{key}:" in content, f"front matter must contain '{key}:'"
+
+    def test_no_posts_today_returns_early_without_writing(self, tmp_path, monkeypatch):
+        """main() exits early when no posts exist for today — no file is created."""
+        posts_dir = str(tmp_path)
+        self._patch_posts_dir(monkeypatch, posts_dir)
+        self._patch_datetime(monkeypatch)
+
+        gds.main()
+
+        import glob as _glob
+
+        written = _glob.glob(f"{posts_dir}/*daily-news-summary*.md")
+        assert not written, "no summary file should be written when no source posts exist"
+
+    def test_only_crypto_posts_produce_valid_summary(self, tmp_path, monkeypatch):
+        """main() creates a valid summary when only crypto posts are available."""
+        self._write_crypto_post(tmp_path)
+        posts_dir = str(tmp_path)
+        self._patch_posts_dir(monkeypatch, posts_dir)
+        self._patch_datetime(monkeypatch)
+        monkeypatch.setattr(gds, "_resolve_frontmatter_image", lambda *a, **kw: None)
+
+        with patch(
+            "scripts.generate_daily_summary.generate_news_briefing_card",
+            return_value=None,
+            create=True,
+        ):
+            gds.main()
+
+        import glob as _glob
+
+        written = _glob.glob(f"{posts_dir}/{self.TODAY}-daily-news-summary.md")
+        assert written
+        content = open(written[0], encoding="utf-8").read()
+        assert "암호화폐" in content or "crypto" in content.lower()
+
+    def test_summary_post_contains_today_date(self, tmp_path, monkeypatch):
+        """The generated summary post filename and content contain today's date."""
+        self._write_crypto_post(tmp_path)
+        posts_dir = str(tmp_path)
+        self._patch_posts_dir(monkeypatch, posts_dir)
+        self._patch_datetime(monkeypatch)
+        monkeypatch.setattr(gds, "_resolve_frontmatter_image", lambda *a, **kw: None)
+
+        with patch(
+            "scripts.generate_daily_summary.generate_news_briefing_card",
+            return_value=None,
+            create=True,
+        ):
+            gds.main()
+
+        import glob as _glob
+
+        written = _glob.glob(f"{posts_dir}/{self.TODAY}-daily-news-summary.md")
+        assert written
+        content = open(written[0], encoding="utf-8").read()
+        assert self.TODAY in content
+
+    def test_multiple_category_posts_all_written_to_summary(self, tmp_path, monkeypatch):
+        """main() handles multiple category posts and writes a combined summary."""
+        posts_dir = str(tmp_path)
+        # crypto post
+        (tmp_path / f"{self.TODAY}-crypto-news-digest.md").write_text(
+            "---\ntitle: 암호화폐 뉴스\ncategory: crypto\n---\n"
+            "## 핵심 요약\n- 비트코인 상승\n\n오늘 3건의 뉴스가 수집되었습니다.\n",
+            encoding="utf-8",
+        )
+        # stock post
+        (tmp_path / f"{self.TODAY}-stock-news-digest.md").write_text(
+            "---\ntitle: 주식 뉴스\ncategory: stock\n---\n"
+            "## 핵심 요약\n- 삼성 실적 발표\n\n오늘 2건의 뉴스가 수집되었습니다.\n",
+            encoding="utf-8",
+        )
+        self._patch_posts_dir(monkeypatch, posts_dir)
+        self._patch_datetime(monkeypatch)
+        monkeypatch.setattr(gds, "_resolve_frontmatter_image", lambda *a, **kw: None)
+
+        with patch(
+            "scripts.generate_daily_summary.generate_news_briefing_card",
+            return_value=None,
+            create=True,
+        ):
+            gds.main()
+
+        import glob as _glob
+
+        written = _glob.glob(f"{posts_dir}/{self.TODAY}-daily-news-summary.md")
+        assert written
+        content = open(written[0], encoding="utf-8").read()
+        assert "layout: post" in content
