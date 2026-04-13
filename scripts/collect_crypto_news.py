@@ -608,10 +608,16 @@ def _build_security_description(
     rekt_items: List[Dict[str, Any]],
     google_security_items: List[Dict[str, Any]],
 ) -> str:
-    """보안 포스트의 동적 description_ko를 생성합니다."""
+    """보안 포스트의 동적 description_ko를 생성합니다.
+
+    Rekt 항목은 ``Funds Lost:`` 메타데이터가 있는 실제 해킹 사건일 때만 대표
+    문구로 사용합니다. 메타데이터가 없는 항목(일반 분석/오피니언 아티클 등)은
+    제목을 그대로 description에 노출하면 영문 헤드라인이 한국어 description을
+    오염시켜 검색/UX 품질이 떨어지므로, Google 보안 뉴스 fallback으로 위임합니다.
+    """
     parts: List[str] = []
 
-    # Rekt 사고에서 대표 사건 추출
+    # Rekt 사고: Funds Lost 메타데이터가 있는 실제 해킹만 노출.
     if rekt_items:
         top = rekt_items[0]
         project = top["title"].replace("[Security] ", "")
@@ -624,10 +630,10 @@ def _build_security_description(
                 pass
         if funds:
             parts.append(f"{project} {funds} 피해 발생")
-        else:
-            parts.append(f"{project} 보안 사고 보고")
+        # No else: rekt 항목에 funds 메타데이터가 없으면 일반 기사일 수 있어
+        # 제목(종종 영문)을 그대로 노출하지 않고 Google fallback으로 넘어간다.
 
-    # Google 보안 뉴스 대표 사건
+    # Google 보안 뉴스 대표 사건 — rekt에 실제 사건이 없을 때만 fallback.
     if google_security_items and not parts:
         top_title = get_display_title(google_security_items[0])
         parts.append(smart_truncate(top_title, 60))
