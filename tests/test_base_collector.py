@@ -763,6 +763,93 @@ class TestSaveState:
 
 
 # ---------------------------------------------------------------------------
+# TestEntertainmentFilterMetrics — record_entertainment_filtered + log_summary
+# ---------------------------------------------------------------------------
+
+
+class TestEntertainmentFilterMetrics:
+    """record_entertainment_filtered() accumulates count and log_summary includes it."""
+
+    def test_initial_count_is_zero(self):
+        with _patched_constructor():
+            Cls = _make_collector_class()
+            collector = Cls()
+        assert collector._entertainment_filtered_count == 0
+
+    def test_record_increments_count(self):
+        with _patched_constructor():
+            Cls = _make_collector_class()
+            collector = Cls()
+        collector.record_entertainment_filtered(5)
+        assert collector._entertainment_filtered_count == 5
+
+    def test_record_accumulates_across_calls(self):
+        with _patched_constructor():
+            Cls = _make_collector_class()
+            collector = Cls()
+        collector.record_entertainment_filtered(3)
+        collector.record_entertainment_filtered(7)
+        assert collector._entertainment_filtered_count == 10
+
+    def test_record_ignores_negative_values(self):
+        with _patched_constructor():
+            Cls = _make_collector_class()
+            collector = Cls()
+        collector.record_entertainment_filtered(-5)
+        assert collector._entertainment_filtered_count == 0
+
+    def test_log_summary_includes_filter_count_in_extras(self):
+        items = [{"title": "A", "source": "S", "link": "http://x.com/1"}]
+        with _patched_constructor():
+            Cls = _make_collector_class()
+            collector = Cls()
+        collector.record_entertainment_filtered(4)
+
+        with patch("common.base_collector.log_collection_summary") as mock_log:
+            collector.log_summary(items)
+            kwargs = mock_log.call_args[1]
+            assert kwargs["extras"]["entertainment_filtered_count"] == 4
+
+    def test_log_summary_includes_filter_rate_in_extras(self):
+        # 4 filtered, 1 unique → total=5, rate=80%
+        items = [{"title": "A", "source": "S", "link": "http://x.com/1"}]
+        with _patched_constructor():
+            Cls = _make_collector_class()
+            collector = Cls()
+        collector.record_entertainment_filtered(4)
+
+        with patch("common.base_collector.log_collection_summary") as mock_log:
+            collector.log_summary(items)
+            kwargs = mock_log.call_args[1]
+            assert kwargs["extras"]["entertainment_filter_rate"] == "80.0%"
+
+    def test_log_summary_no_extras_when_no_filter(self):
+        """필터가 없으면 extras에 filter 키가 없어야 함."""
+        items = [{"title": "A", "source": "S", "link": "http://x.com/1"}]
+        with _patched_constructor():
+            Cls = _make_collector_class()
+            collector = Cls()
+
+        with patch("common.base_collector.log_collection_summary") as mock_log:
+            collector.log_summary(items)
+            kwargs = mock_log.call_args[1]
+            assert kwargs.get("extras") is None or "entertainment_filtered_count" not in (kwargs.get("extras") or {})
+
+    def test_log_summary_merges_with_existing_extras(self):
+        items = [{"title": "A", "source": "S", "link": "http://x.com/1"}]
+        with _patched_constructor():
+            Cls = _make_collector_class()
+            collector = Cls()
+        collector.record_entertainment_filtered(2)
+
+        with patch("common.base_collector.log_collection_summary") as mock_log:
+            collector.log_summary(items, extras={"api_calls": 5})
+            kwargs = mock_log.call_args[1]
+            assert kwargs["extras"]["api_calls"] == 5
+            assert kwargs["extras"]["entertainment_filtered_count"] == 2
+
+
+# ---------------------------------------------------------------------------
 # TestErrorHandling — graceful failure
 # ---------------------------------------------------------------------------
 

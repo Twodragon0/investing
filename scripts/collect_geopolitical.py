@@ -25,6 +25,7 @@ from common.config import (
     REQUEST_TIMEOUT,
     USER_AGENT,
 )
+from common.content_filters import load_entertainment_keywords
 from common.dedup import deduplicate_by_url
 from common.enrichment import enrich_items
 from common.markdown_utils import (
@@ -43,12 +44,12 @@ _log = logging.getLogger(__name__)
 _geo_cfg = get_collector_config("geopolitical")
 
 
-def _load_keyword_filters() -> tuple:
-    """collectors.yml의 keywords 섹션에서 필터 키워드를 로드합니다.
+def _load_geo_keywords() -> frozenset:
+    """collectors.yml의 geopolitical.keywords.geo_keywords를 로드합니다.
 
     로드 실패 또는 키워드 섹션 누락 시 하드코딩 기본값으로 fallback합니다.
     Returns:
-        (geo_keywords, entertainment_keywords) — 각각 frozenset
+        geo_keywords — frozenset
     """
     _GEO_KEYWORDS_DEFAULT = frozenset({
         "war", "conflict", "election", "president", "congress", "senate",
@@ -70,49 +71,24 @@ def _load_keyword_filters() -> tuple:
         "refugee", "humanitarian", "wmd", "ballistic", "hypersonic",
         "drone", "cyber", "hack", "espionage",
     })
-    _ENTERTAINMENT_KEYWORDS_DEFAULT = frozenset({
-        "nhl", "nba", "nfl", "mlb", "mls", "ufc", "fifa", "premier league",
-        "stanley cup", "super bowl", "world series", "champions league",
-        "championship", "playoffs", "playoff", "mvp", "ballon d'or",
-        "oscar", "grammy", "emmy", "bachelor", "bachelorette", "survivor",
-        "gta vi", "gta 6", "formula 1", " f1 ", "grand prix", "wimbledon",
-        "olympics", "nba finals", "nhl finals", "stanley", "lakers", "celtics",
-        "knicks", "warriors", "spurs", "clippers", "heat", "bulls", "nets",
-        "pacers", "cavaliers", "nuggets", "timberwolves", "thunder", "suns",
-        "mavericks", "rockets", "grizzlies", "pelicans", "hawks", "hornets",
-        "magic", "wizards", "bucks", "raptors", "sixers", "pistons",
-        "jesus christ", "netflix", "spotify", "movie", "album", "tv show",
-        "reality tv", "celebrity", "box office", "billboard", "esport",
-        "e-sport", "video game", "game release", "season finale", "world cup soccer",
-    })
 
     kw_cfg = _geo_cfg.get("keywords", {})
     if not isinstance(kw_cfg, dict):
         _log.debug("collectors.yml: geopolitical.keywords 섹션 없음, 기본값 사용")
-        return _GEO_KEYWORDS_DEFAULT, _ENTERTAINMENT_KEYWORDS_DEFAULT
+        return _GEO_KEYWORDS_DEFAULT
 
     geo_raw = kw_cfg.get("geo_keywords")
-    ent_raw = kw_cfg.get("entertainment_keywords")
-
     if isinstance(geo_raw, list) and geo_raw:
-        geo = frozenset(geo_raw)
-        _log.debug("collectors.yml에서 geo_keywords %d개 로드", len(geo))
-    else:
-        _log.debug("collectors.yml: geo_keywords 누락 또는 빈 값, 기본값 사용")
-        geo = _GEO_KEYWORDS_DEFAULT
+        _log.debug("collectors.yml에서 geo_keywords %d개 로드", len(geo_raw))
+        return frozenset(geo_raw)
 
-    if isinstance(ent_raw, list) and ent_raw:
-        ent = frozenset(ent_raw)
-        _log.debug("collectors.yml에서 entertainment_keywords %d개 로드", len(ent))
-    else:
-        _log.debug("collectors.yml: entertainment_keywords 누락 또는 빈 값, 기본값 사용")
-        ent = _ENTERTAINMENT_KEYWORDS_DEFAULT
-
-    return geo, ent
+    _log.debug("collectors.yml: geo_keywords 누락 또는 빈 값, 기본값 사용")
+    return _GEO_KEYWORDS_DEFAULT
 
 
 # 모듈 import 시 1회 로드 (YAML → fallback 자동)
-_GEO_KEYWORDS, _ENTERTAINMENT_KEYWORDS = _load_keyword_filters()
+_GEO_KEYWORDS = _load_geo_keywords()
+_ENTERTAINMENT_KEYWORDS = load_entertainment_keywords("geopolitical")
 
 _GEO_SOURCE_CONTEXT: Dict[str, Dict[str, Any]] = {
     "polymarket.com": {"name": "Polymarket", "tags": ["prediction-market"]},
@@ -945,6 +921,9 @@ class GeopoliticalCollector(BaseCollector):
             "거래량이 많을수록 시장 참여자의 신뢰도가 높습니다.\n"
         )
         polymarket_lines, polymarket_filtered = _build_polymarket_section(markets)
+        ent_filtered = len(markets) - len(polymarket_filtered)
+        if ent_filtered > 0:
+            self.record_entertainment_filtered(ent_filtered)
         content_parts.extend(polymarket_lines)
 
         # Section 2: GDELT geopolitical news

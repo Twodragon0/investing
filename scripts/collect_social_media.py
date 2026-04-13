@@ -546,6 +546,7 @@ class SocialMediaCollector(BaseCollector):
                 filtered_total,
                 *after_counts,
             )
+            self.record_entertainment_filtered(filtered_total)
 
         # ── Consolidated social media post ──
         post_title = f"소셜 미디어 동향 - {today}"

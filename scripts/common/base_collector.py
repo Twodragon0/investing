@@ -77,6 +77,7 @@ class BaseCollector(ABC):
         self.today: str = self.now.strftime("%Y-%m-%d")
         self._started_at: float = 0.0
         self._created_count: int = 0
+        self._entertainment_filtered_count: int = 0
 
     # ── 추상 메서드 ──
 
@@ -149,6 +150,10 @@ class BaseCollector(ABC):
             self._created_count += 1
         return filepath
 
+    def record_entertainment_filtered(self, count: int) -> None:
+        """엔터테인먼트 필터로 제거된 아이템 수를 누적합니다."""
+        self._entertainment_filtered_count += max(0, count)
+
     def save_state(self) -> None:
         """중복 방지 상태를 디스크에 저장합니다."""
         self.dedup.save()
@@ -168,6 +173,12 @@ class BaseCollector(ABC):
             }
         )
         source_count = len({item.get("source", "") for item in items if item.get("source")})
+        merged_extras: Dict[str, Any] = dict(extras) if extras else {}
+        if self._entertainment_filtered_count > 0:
+            total = unique_items + self._entertainment_filtered_count
+            rate = self._entertainment_filtered_count / total * 100 if total > 0 else 0.0
+            merged_extras["entertainment_filtered_count"] = self._entertainment_filtered_count
+            merged_extras["entertainment_filter_rate"] = f"{rate:.1f}%"
         log_collection_summary(
             self.logger,
             collector=f"collect_{self.name}",
@@ -175,7 +186,7 @@ class BaseCollector(ABC):
             unique_items=unique_items,
             post_created=self._created_count,
             started_at=self._started_at,
-            extras=extras,
+            extras=merged_extras if merged_extras else None,
         )
 
     def run(self) -> None:

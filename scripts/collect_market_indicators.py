@@ -97,17 +97,20 @@ def _is_entertainment(title: str) -> bool:
     return any(kw in text for kw in _ENTERTAINMENT_KEYWORDS)
 
 
-def _filter_rss_items(items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+def _filter_rss_items(items: List[Dict[str, Any]]) -> tuple:
     """Google News RSS 아이템에서 엔터테인먼트/스포츠 콘텐츠를 제거합니다.
 
     API 기반 데이터(CNN, yfinance, FRED)에는 적용하지 않습니다.
+
+    Returns:
+        (filtered_items, removed_count) 튜플
     """
     _logger = __import__("logging").getLogger(__name__)
     filtered = [item for item in items if not _is_entertainment(item.get("title", ""))]
     removed = len(items) - len(filtered)
     if removed:
         _logger.debug("엔터테인먼트 필터: %d개 항목 제거 (전체 %d개)", removed, len(items))
-    return filtered
+    return filtered, removed
 
 
 # ── Constants ──────────────────────────────────────────────────────────────────
@@ -244,8 +247,12 @@ def fetch_btc_price() -> Optional[float]:
         return None
 
 
-def fetch_treasury_yield_news() -> List[Dict[str, Any]]:
-    """Fetch treasury yield news via Google News RSS (concurrent)."""
+def fetch_treasury_yield_news() -> tuple:
+    """Fetch treasury yield news via Google News RSS (concurrent).
+
+    Returns:
+        (items, entertainment_removed) 튜플
+    """
     feeds = [
         (
             get_url(
@@ -271,14 +278,18 @@ def fetch_treasury_yield_news() -> List[Dict[str, Any]]:
             ["treasury", "yield-curve"],
         ),
     ]
-    items = _filter_rss_items(fetch_rss_feeds_concurrent(feeds))
+    items, removed = _filter_rss_items(fetch_rss_feeds_concurrent(feeds))
     logger = __import__("logging").getLogger(__name__)
     logger.info("Treasury yield news: %d items", len(items))
-    return items
+    return items, removed
 
 
-def fetch_put_call_ratio_news() -> List[Dict[str, Any]]:
-    """Fetch put/call ratio news via Google News RSS (concurrent)."""
+def fetch_put_call_ratio_news() -> tuple:
+    """Fetch put/call ratio news via Google News RSS (concurrent).
+
+    Returns:
+        (items, entertainment_removed) 튜플
+    """
     feeds = [
         (
             "https://news.google.com/rss/search?q=%22put+call+ratio%22+cboe&hl=en-US&gl=US&ceid=US:en",
@@ -291,14 +302,18 @@ def fetch_put_call_ratio_news() -> List[Dict[str, Any]]:
             ["put-call", "options", "sentiment"],
         ),
     ]
-    items = _filter_rss_items(fetch_rss_feeds_concurrent(feeds))
+    items, removed = _filter_rss_items(fetch_rss_feeds_concurrent(feeds))
     logger = __import__("logging").getLogger(__name__)
     logger.info("Put/Call ratio news: %d items", len(items))
-    return items
+    return items, removed
 
 
-def fetch_margin_debt_news() -> List[Dict[str, Any]]:
-    """Fetch margin debt indicator news via Google News RSS (concurrent)."""
+def fetch_margin_debt_news() -> tuple:
+    """Fetch margin debt indicator news via Google News RSS (concurrent).
+
+    Returns:
+        (items, entertainment_removed) 튜플
+    """
     feeds = [
         (
             "https://news.google.com/rss/search?q=%22margin+debt%22+OR+%22margin+lending%22+NYSE&hl=en-US&gl=US&ceid=US:en",
@@ -311,14 +326,18 @@ def fetch_margin_debt_news() -> List[Dict[str, Any]]:
             ["margin-call", "liquidation", "risk"],
         ),
     ]
-    items = _filter_rss_items(fetch_rss_feeds_concurrent(feeds))
+    items, removed = _filter_rss_items(fetch_rss_feeds_concurrent(feeds))
     logger = __import__("logging").getLogger(__name__)
     logger.info("Margin debt news: %d items", len(items))
-    return items
+    return items, removed
 
 
-def fetch_market_breadth_news() -> List[Dict[str, Any]]:
-    """Fetch market breadth news (advances/declines, breadth indicators) via Google News RSS."""
+def fetch_market_breadth_news() -> tuple:
+    """Fetch market breadth news (advances/declines, breadth indicators) via Google News RSS.
+
+    Returns:
+        (items, entertainment_removed) 튜플
+    """
     feeds = [
         (
             "https://news.google.com/rss/search?q=S%26P+500+advances+declines+market+breadth&hl=en-US&gl=US&ceid=US:en",
@@ -336,10 +355,10 @@ def fetch_market_breadth_news() -> List[Dict[str, Any]]:
             ["breadth", "mcclellan", "oscillator"],
         ),
     ]
-    items = _filter_rss_items(fetch_rss_feeds_concurrent(feeds))
+    items, removed = _filter_rss_items(fetch_rss_feeds_concurrent(feeds))
     logger = __import__("logging").getLogger(__name__)
     logger.info("Market breadth news: %d items", len(items))
-    return items
+    return items, removed
 
 
 def fetch_fred_indicators(api_key: str) -> Dict[str, Any]:
@@ -959,10 +978,11 @@ class MarketIndicatorsCollector(BaseCollector):
         self._cnn_fg = fetch_cnn_fear_greed()
         self._market_data = fetch_yfinance_market_data()
         self._fred_data = fetch_fred_indicators(fred_key)
-        self._treasury_news = fetch_treasury_yield_news()
-        self._put_call_news = fetch_put_call_ratio_news()
-        self._breadth_news = fetch_market_breadth_news()
-        self._margin_news = fetch_margin_debt_news()
+        self._treasury_news, _r1 = fetch_treasury_yield_news()
+        self._put_call_news, _r2 = fetch_put_call_ratio_news()
+        self._breadth_news, _r3 = fetch_market_breadth_news()
+        self._margin_news, _r4 = fetch_margin_debt_news()
+        self.record_entertainment_filtered(_r1 + _r2 + _r3 + _r4)
 
         # 뉴스 항목을 반환 (파이프라인 호환)
         return self._treasury_news + self._put_call_news + self._breadth_news + self._margin_news

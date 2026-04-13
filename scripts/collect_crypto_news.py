@@ -184,8 +184,12 @@ def fetch_crypto_rss_feeds() -> List[Dict[str, Any]]:
     return all_items
 
 
-def fetch_google_news_crypto() -> List[Dict[str, Any]]:
-    """Fetch crypto news from Google News RSS (English + Korean, concurrent)."""
+def fetch_google_news_crypto() -> tuple:
+    """Fetch crypto news from Google News RSS (English + Korean, concurrent).
+
+    Returns:
+        (items, entertainment_removed) 튜플
+    """
     feeds = [
         (
             get_url(
@@ -212,7 +216,7 @@ def fetch_google_news_crypto() -> List[Dict[str, Any]]:
     filtered = before - len(items)
     if filtered:
         logger.info("Google News: 엔터테인먼트/스포츠 아이템 %d개 필터링됨", filtered)
-    return items
+    return items, filtered
 
 
 def fetch_google_news_security() -> List[Dict[str, Any]]:
@@ -703,7 +707,9 @@ class CryptoNewsCollector(BaseCollector):
         browser_google, browser_binance = _fetch_browser_sources()
         all_items.extend(browser_google)
 
-        all_items.extend(fetch_google_news_crypto())
+        google_news_items, _ent_removed = fetch_google_news_crypto()
+        all_items.extend(google_news_items)
+        self.record_entertainment_filtered(_ent_removed)
         all_items.extend(fetch_crypto_rss_feeds())
 
         exchange_items = browser_binance if browser_binance else _fetch_binance_bapi()

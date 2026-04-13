@@ -132,7 +132,7 @@ def test_collector_run_no_network(tmp_path, monkeypatch):
     # Patch all network-touching methods on the collector class
     monkeypatch.setattr(mod, "fetch_cryptopanic", lambda *a, **kw: [])
     monkeypatch.setattr(mod, "_fetch_browser_sources", lambda: ([], []))
-    monkeypatch.setattr(mod, "fetch_google_news_crypto", list)
+    monkeypatch.setattr(mod, "fetch_google_news_crypto", lambda: ([], 0))
     monkeypatch.setattr(mod, "fetch_crypto_rss_feeds", list)
     monkeypatch.setattr(mod, "_fetch_binance_bapi", list)
     monkeypatch.setattr(mod, "fetch_rekt_news", lambda *a, **kw: [])
@@ -163,7 +163,7 @@ def test_dedup_idempotent_crypto(tmp_path, monkeypatch):
 
     monkeypatch.setattr(mod, "fetch_cryptopanic", lambda *a, **kw: [fake_item])
     monkeypatch.setattr(mod, "_fetch_browser_sources", lambda: ([], []))
-    monkeypatch.setattr(mod, "fetch_google_news_crypto", list)
+    monkeypatch.setattr(mod, "fetch_google_news_crypto", lambda: ([], 0))
     monkeypatch.setattr(mod, "fetch_crypto_rss_feeds", list)
     monkeypatch.setattr(mod, "_fetch_binance_bapi", list)
     monkeypatch.setattr(mod, "fetch_rekt_news", lambda *a, **kw: [])
@@ -244,7 +244,7 @@ def test_fetch_google_news_crypto_filters_entertainment(monkeypatch):
     ]
     monkeypatch.setattr(mod, "fetch_rss_feeds_concurrent", lambda feeds: fake_items)
 
-    result = mod.fetch_google_news_crypto()
+    result, _removed = mod.fetch_google_news_crypto()
     titles = [item["title"] for item in result]
     assert "Bitcoin price analysis weekly roundup" in titles
     assert "Super Bowl halftime show performances ranked" not in titles

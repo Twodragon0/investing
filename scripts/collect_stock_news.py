@@ -483,6 +483,7 @@ class StockNewsCollector(BaseCollector):
         filtered = before - len(items)
         if filtered:
             self.logger.info("엔터테인먼트/스포츠 필터: %d건 제거 (전체 %d건)", filtered, before)
+            self.record_entertainment_filtered(filtered)
         return deduplicate_by_url(items)
 
     def build_content(self, items: List[Dict[str, Any]]) -> str:

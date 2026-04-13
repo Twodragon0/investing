@@ -321,6 +321,7 @@ class PoliticalTradesCollector(BaseCollector):
         filtered_count = before_filter - len(unique_items)
         if filtered_count:
             self.logger.info("Entertainment filter removed %d items", filtered_count)
+            self.record_entertainment_filtered(filtered_count)
 
         enrich_items(unique_items, context_map=_POLITICAL_SOURCE_CONTEXT, max_fetch=20)
         return unique_items

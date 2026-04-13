@@ -202,10 +202,10 @@ def test_main_runs_with_mocked_network(tmp_path, monkeypatch):
     monkeypatch.setattr(mod, "fetch_cnn_fear_greed", dict)
     monkeypatch.setattr(mod, "fetch_yfinance_market_data", dict)
     monkeypatch.setattr(mod, "fetch_fred_indicators", lambda _key: {})
-    monkeypatch.setattr(mod, "fetch_treasury_yield_news", list)
-    monkeypatch.setattr(mod, "fetch_put_call_ratio_news", list)
-    monkeypatch.setattr(mod, "fetch_market_breadth_news", list)
-    monkeypatch.setattr(mod, "fetch_margin_debt_news", list)
+    monkeypatch.setattr(mod, "fetch_treasury_yield_news", lambda: ([], 0))
+    monkeypatch.setattr(mod, "fetch_put_call_ratio_news", lambda: ([], 0))
+    monkeypatch.setattr(mod, "fetch_market_breadth_news", lambda: ([], 0))
+    monkeypatch.setattr(mod, "fetch_margin_debt_news", lambda: ([], 0))
     monkeypatch.setattr(mod, "fetch_btc_price", lambda: None)
 
     _patch_mi_isolation(monkeypatch, tmp_path)
@@ -231,11 +231,11 @@ def test_main_runs_with_full_mocked_data(tmp_path, monkeypatch):
     monkeypatch.setattr(
         mod,
         "fetch_treasury_yield_news",
-        lambda: [{"title": "Yield rises", "link": "https://t", "source": "GN"}],
+        lambda: ([{"title": "Yield rises", "link": "https://t", "source": "GN"}], 0),
     )
-    monkeypatch.setattr(mod, "fetch_put_call_ratio_news", list)
-    monkeypatch.setattr(mod, "fetch_market_breadth_news", list)
-    monkeypatch.setattr(mod, "fetch_margin_debt_news", list)
+    monkeypatch.setattr(mod, "fetch_put_call_ratio_news", lambda: ([], 0))
+    monkeypatch.setattr(mod, "fetch_market_breadth_news", lambda: ([], 0))
+    monkeypatch.setattr(mod, "fetch_margin_debt_news", lambda: ([], 0))
     monkeypatch.setattr(mod, "fetch_btc_price", lambda: None)
 
     _patch_mi_isolation(monkeypatch, tmp_path)
@@ -290,7 +290,7 @@ def test_filter_rss_items_removes_entertainment():
         {"title": "Grammy awards top performances", "link": "https://d", "source": "Billboard"},
         {"title": "Market breadth weakens on NYSE", "link": "https://e", "source": "Bloomberg"},
     ]
-    filtered = collect_market_indicators._filter_rss_items(items)
+    filtered, removed = collect_market_indicators._filter_rss_items(items)
     titles = [i["title"] for i in filtered]
     assert "Treasury yield hits 4.8%" in titles
     assert "Put/call ratio signals fear" in titles
@@ -298,11 +298,14 @@ def test_filter_rss_items_removes_entertainment():
     assert "NBA Finals: Lakers vs Celtics game 5" not in titles
     assert "Grammy awards top performances" not in titles
     assert len(filtered) == 3
+    assert removed == 2
 
 
 def test_filter_rss_items_empty_list():
     """빈 리스트 입력 시 빈 리스트를 반환해야 합니다."""
-    assert collect_market_indicators._filter_rss_items([]) == []
+    filtered, removed = collect_market_indicators._filter_rss_items([])
+    assert filtered == []
+    assert removed == 0
 
 
 def test_filter_rss_items_all_pass():
@@ -311,7 +314,9 @@ def test_filter_rss_items_all_pass():
         {"title": "Yield curve inverts again", "link": "https://a", "source": "FT"},
         {"title": "VIX spikes to 35 on recession fears", "link": "https://b", "source": "CBOE"},
     ]
-    assert collect_market_indicators._filter_rss_items(items) == items
+    filtered, removed = collect_market_indicators._filter_rss_items(items)
+    assert filtered == items
+    assert removed == 0
 
 
 def test_entertainment_keywords_set_not_empty():
@@ -332,10 +337,10 @@ def test_dedup_idempotent_market_indicators(tmp_path, monkeypatch):
         },
     )
     monkeypatch.setattr(mod, "fetch_fred_indicators", lambda _key: {})
-    monkeypatch.setattr(mod, "fetch_treasury_yield_news", list)
-    monkeypatch.setattr(mod, "fetch_put_call_ratio_news", list)
-    monkeypatch.setattr(mod, "fetch_market_breadth_news", list)
-    monkeypatch.setattr(mod, "fetch_margin_debt_news", list)
+    monkeypatch.setattr(mod, "fetch_treasury_yield_news", lambda: ([], 0))
+    monkeypatch.setattr(mod, "fetch_put_call_ratio_news", lambda: ([], 0))
+    monkeypatch.setattr(mod, "fetch_market_breadth_news", lambda: ([], 0))
+    monkeypatch.setattr(mod, "fetch_margin_debt_news", lambda: ([], 0))
     monkeypatch.setattr(mod, "fetch_btc_price", lambda: None)
 
     _patch_mi_isolation(monkeypatch, tmp_path)
