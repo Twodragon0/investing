@@ -1690,3 +1690,157 @@ class TestFetchUsMarketDataYfinanceFallback:
         result = gms.fetch_us_market_data("FAKE_KEY")
         # SPY came from AV; yfinance fallback must not overwrite it
         assert result.get("SPY", {}).get("price") == "499.00"
+
+
+# ---------------------------------------------------------------------------
+# main() integration smoke tests
+# ---------------------------------------------------------------------------
+
+import re as _re
+from contextlib import contextmanager
+from unittest.mock import MagicMock, patch
+
+_GMS = "scripts.generate_market_summary"
+
+# Fetch functions that live directly on the gms module (not sub-attributes)
+_FETCH_PATCHES = {
+    f"{_GMS}.fetch_coingecko_top_coins": [
+        {
+            "symbol": "BTC",
+            "current_price": 95000,
+            "price_change_percentage_24h": 1.5,
+            "market_cap": 1_800_000_000_000,
+        },
+        {
+            "symbol": "ETH",
+            "current_price": 3500,
+            "price_change_percentage_24h": -0.5,
+            "market_cap": 420_000_000_000,
+        },
+    ],
+    f"{_GMS}.fetch_coingecko_global": {
+        "total_market_cap": {"usd": 2_500_000_000_000},
+        "market_cap_percentage": {"btc": 55.0},
+        "market_cap_change_percentage_24h_usd": 1.2,
+    },
+    f"{_GMS}.fetch_coingecko_trending": [],
+    f"{_GMS}.fetch_fear_greed_index": {"value": 65, "classification": "Greed"},
+    f"{_GMS}.fetch_us_market_data": {},
+    f"{_GMS}.fetch_korean_market": {
+        "KOSPI": {"price": "2500.00", "change": "+25.00", "change_pct": "+1.00%"}
+    },
+    f"{_GMS}.fetch_commodity_data": {},
+    f"{_GMS}.fetch_fred_indicators": {},
+    f"{_GMS}.fetch_sector_performance": {},
+    f"{_GMS}.fetch_btc_etf_data": {},
+    f"{_GMS}.fetch_whale_trades": [],
+    # time.sleep lives on the imported `time` module; patch via stdlib
+    "time.sleep": None,
+}
+
+_EMPTY_FETCH_PATCHES = {
+    k: ([] if any(x in k for x in ("coins", "whale", "trending")) else {})
+    for k in _FETCH_PATCHES
+}
+_EMPTY_FETCH_PATCHES["time.sleep"] = None
+
+
+@contextmanager
+def _apply_fetch_patches(overrides=None):
+    """Start all fetch patches, yield, then stop them."""
+    targets = dict(_FETCH_PATCHES)
+    if overrides:
+        targets.update(overrides)
+    active = []
+    try:
+        for target, retval in targets.items():
+            p = patch(target, return_value=retval)
+            p.start()
+            active.append(p)
+        yield
+    finally:
+        for p in active:
+            p.stop()
+
+
+class TestMainIntegration:
+    """Integration smoke tests for main() — all network I/O is mocked."""
+
+    def _mock_gen(self, tmp_path, filename="post.md"):
+        m = MagicMock()
+        m.create_post.return_value = str(tmp_path / filename)
+        return m
+
+    def _mock_dedup(self, is_dup=False):
+        m = MagicMock()
+        m.is_duplicate_exact.return_value = is_dup
+        return m
+
+    def test_create_post_is_called_with_title_and_tags(self, tmp_path):
+        """main() calls PostGenerator.create_post with title and tags arguments."""
+        mock_gen = self._mock_gen(tmp_path)
+        mock_dedup = self._mock_dedup()
+
+        with _apply_fetch_patches(), \
+             patch(f"{_GMS}.PostGenerator", return_value=mock_gen), \
+             patch(f"{_GMS}.DedupEngine", return_value=mock_dedup):
+            gms.main()
+
+        mock_gen.create_post.assert_called_once()
+        kw = mock_gen.create_post.call_args.kwargs
+        assert "title" in kw, "create_post must receive a 'title' kwarg"
+        assert "tags" in kw, "create_post must receive a 'tags' kwarg"
+        assert isinstance(kw["tags"], list)
+
+    def test_dedup_engine_checked_before_writing(self, tmp_path):
+        """main() calls is_duplicate_exact and save on DedupEngine."""
+        mock_gen = self._mock_gen(tmp_path)
+        mock_dedup = self._mock_dedup()
+
+        with _apply_fetch_patches(), \
+             patch(f"{_GMS}.PostGenerator", return_value=mock_gen), \
+             patch(f"{_GMS}.DedupEngine", return_value=mock_dedup):
+            gms.main()
+
+        mock_dedup.is_duplicate_exact.assert_called_once()
+        mock_dedup.save.assert_called()
+
+    def test_duplicate_detected_skips_post_creation(self, tmp_path):
+        """main() skips PostGenerator.create_post when DedupEngine reports a duplicate."""
+        mock_gen = self._mock_gen(tmp_path)
+        mock_dedup = self._mock_dedup(is_dup=True)
+
+        with _apply_fetch_patches(), \
+             patch(f"{_GMS}.PostGenerator", return_value=mock_gen), \
+             patch(f"{_GMS}.DedupEngine", return_value=mock_dedup):
+            gms.main()
+
+        mock_gen.create_post.assert_not_called()
+        mock_dedup.save.assert_called()
+
+    def test_empty_data_sources_completes_without_error(self, tmp_path):
+        """main() does not raise when all fetch functions return empty collections."""
+        mock_gen = self._mock_gen(tmp_path)
+        mock_dedup = self._mock_dedup()
+
+        with _apply_fetch_patches(overrides=_EMPTY_FETCH_PATCHES), \
+             patch(f"{_GMS}.PostGenerator", return_value=mock_gen), \
+             patch(f"{_GMS}.DedupEngine", return_value=mock_dedup):
+            gms.main()  # must not raise
+
+    def test_post_description_contains_date(self, tmp_path):
+        """The extra_frontmatter description passed to create_post contains a date string."""
+        mock_gen = self._mock_gen(tmp_path)
+        mock_dedup = self._mock_dedup()
+
+        with _apply_fetch_patches(), \
+             patch(f"{_GMS}.PostGenerator", return_value=mock_gen), \
+             patch(f"{_GMS}.DedupEngine", return_value=mock_dedup):
+            gms.main()
+
+        mock_gen.create_post.assert_called_once()
+        extra_fm = mock_gen.create_post.call_args.kwargs.get("extra_frontmatter", {})
+        desc = extra_fm.get("description", "")
+        assert _re.search(r"\d{4}-\d{2}-\d{2}", desc), (
+            f"description must contain a YYYY-MM-DD date, got: {desc!r}"
+        )

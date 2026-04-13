@@ -319,6 +319,17 @@ class TestTryResolveGoogleNewsUrl:
             result = _try_resolve_google_news_url(google_url)
         assert result == google_url
 
+    def test_base64_decode_exception_falls_through_to_http(self):
+        # Trigger the except-branch (lines 37-38) by making base64 decode raise,
+        # then have HTTP redirect also fail so the original URL is returned.
+        import base64 as _base64
+
+        google_url = "https://news.google.com/rss/articles/CBMiSOMEARTICLE"
+        with patch.object(_base64, "urlsafe_b64decode", side_effect=ValueError("bad padding")):
+            with patch("requests.head", side_effect=Exception("no network")):
+                result = _try_resolve_google_news_url(google_url)
+        assert result == google_url
+
 
 class TestSmartTruncateKoreanBranch:
     def test_korean_sentence_ending_used_as_break(self):
