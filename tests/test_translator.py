@@ -97,6 +97,40 @@ class TestMediaNameFixes:
         assert "가지각색" not in result
 
 
+class TestEuropeanNumberFormat:
+    """European-style number formatting fixes (BTC$71.018,21 → BTC $71,018.21)."""
+
+    def test_ticker_prefix_basic(self):
+        # "BTC$71.018,21 및" → "BTC $71,018.21 및"
+        result = _postprocess_translation("BTC$71.018,21 및")
+        assert result == "BTC $71,018.21 및"
+
+    def test_ticker_prefix_eth(self):
+        # ETH ticker variant
+        result = _postprocess_translation("ETH$3.456,78")
+        assert result == "ETH $3,456.78"
+
+    def test_no_ticker_prefix(self):
+        # Standalone "$71.018,21" without ticker prefix
+        result = _postprocess_translation("가격은 $71.018,21 수준입니다")
+        assert result == "가격은 $71,018.21 수준입니다"
+
+    def test_no_ticker_prefix_standalone(self):
+        # Standalone at end of string
+        result = _postprocess_translation("총액: $1.234,56")
+        assert result == "총액: $1,234.56"
+
+    def test_already_us_format_unchanged(self):
+        # Already correct US format must not be double-converted
+        result = _postprocess_translation("가격 $71,018.21 확인")
+        assert result == "가격 $71,018.21 확인"
+
+    def test_ticker_five_chars(self):
+        # Up to 5-char ticker (e.g. MATIC)
+        result = _postprocess_translation("MATIC$2.345,67")
+        assert result == "MATIC $2,345.67"
+
+
 class TestKoreanStyleFixes:
     """Awkward Korean patterns from machine translation."""
 

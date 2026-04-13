@@ -52,7 +52,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-13 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent">
 <strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/read/CBMingFBVV95cUxNYWltNldmRFdJSFdIZmQtVFhsdjhxb2JhOVhVT0FZRDBTemtIdmhaeDJqM3VUWkhXZkRoT3c3VER3MGZPQ3BmVUxVRXJRMDBWMVlnd1BJNUhLd2xSNEtjdDZnNU5yZzVOcXNoZ0R1THAzN2RyUjJfUkx2MmttY2VoTzBpSFVLRUtpbThCMEowSno1N0xxNGY0T1JlYVRPUQ?hl=en-US&gl=US&ceid=US%3Aen">이란, 호르무즈 해협을 비트코인 유료 부스로 전환: 암호화폐가 다시 10만 달러를 기록할 것인가?</a> <span class="p0-desc">비트코인(CRYPTO:BTC)은(는) 최근에 난폭한 상황을 겪었습니다. 10월에는 126,198달러라는 사상 최고치를 기록했고 2월 초에는 약 60,000달러까지 폭락했습니다. 글.</span></li>
+<li><a href="https://news.google.com/read/CBMingFBVV95cUxNYWltNldmRFdJSFdIZmQtVFhsdjhxb2JhOVhVT0FZRDBTemtIdmhaeDJqM3VUWkhXZkRoT3c3VER3MGZPQ3BmVUxVRXJRMDBWMVlnd1BJNUhLd2xSNEtjdDZnNU5yZzVOcXNoZ0R1THAzN2RyUjJfUkx2MmttY2VoTzBpSFVLRUtpbThCMEowSno1N0xxNGY0T1JlYVRPUQ?hl=en-US&gl=US&ceid=US%3Aen">이란, 호르무즈 해협을 비트코인 유료 부스로 전환: 암호화폐가 다시 10만 달러를 기록할 것인가?</a> <span class="p0-desc">비트코인(CRYPTO:BTC)은(는) 최근에 난폭한 상황을 겪었습니다. 10월에는 126,198달러라는 사상 최고치를 기록했고 2월 초에는 약 60,000달러까지 폭락했습니다.</span></li>
 <li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTFA0LTJTTHBZVDhnLWY2bGJyYUd6X3JDQl9zYVdCeUl4UHdqLVpvRnpPX0Z2WlRpWWtYN0wzU1Z5ZW4zLWpNR2ViTUtlMS1yRjFDc29CU0ZUekE5R3ZSUDhiX3JjX1k?oc=5">암호화폐 ATM `비트코인 디포` 54억 해킹…북한 연계성은 "아직"</a> <span class="p0-desc">암호화폐 ATM `비트코인 디포` 54억 해킹…북한 연계성은 "아직" 디지털데일리</span></li>
 <li><a href="https://cointelegraph.com/news/trump-backlash-crypto-tokens-crash?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">트럼프 미국 대통령은 트럼프에 연결된 토큰 폭락으로 인해 다시 반발에 직면합니다.</a> <span class="p0-desc">민주당 국회의원과 암호화폐 투자자들은 트럼프에 의해 시작되거나 이와 관련된 암호화폐 프로젝트를 사기 및 정치적 부패로 규정했습니다.</span></li>
 </ul>
@@ -135,7 +135,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMiygFBVV95cUxNWFVPWGJGMGxkV0o3S1BEc3N3YkcyaTJja1E2UnAtZC16dWtyRHhUR21zXzNXSFRScEc1Ql9BMDBUOFMxVXNsaE9oYUloVGFwMGozdlFHWjljUWVvYktycjFKMUEtUHQyd3NoWjFoZ04tTmpKb1ZILThxUDlDaUNQMloxLVZYOVFQaThXV3UzVXFEeklOVDhDblRSTzJRXzhGb3BQRzQ0bkxTem5kVGwyem1IcDkxenZkdWRQdnpYRENybTlwUEtWd2tR?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">BTC, ETH, XRP은 미국과 이란의 협상이 전쟁 해결에 도달하지 못하면서 무너졌습니다.</a>
-<p class="news-desc">비트코인BTC$71.018,21 및 기타 주요 암호화폐는 J.D. 밴스 부통령이 미국과 이란 협상가가 연장된 휴전에 합의하지 못했다고 발표한 지 몇 시간 만에 토요일 저녁 미국에서 약 2% 하락했습니다.</p>
+<p class="news-desc">비트코인 BTC $71,018.21 및 기타 주요 암호화폐는 J.D. 밴스 부통령이 미국과 이란 협상가가 연장된 휴전에 합의하지 못했다고 발표한 지 몇 시간 만에 토요일 저녁 미국에서 약 2% 하락했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -208,7 +208,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-13 - 암호화폐 뉴스 요
 
 ### 🔷 이더리움 (10건)
 
-*비트코인BTC$71.018,21 및 기타 주요*
+*비트코인 BTC $71,018.21 및 기타 주요*
 
 
 <div class="news-card-item news-sev-medium">

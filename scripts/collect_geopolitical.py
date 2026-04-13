@@ -401,9 +401,77 @@ def _build_polymarket_section(markets: List[Dict[str, Any]]) -> tuple:
         "제재",
         "선거",
         "금리",
+        # Extended geopolitical/financial keywords
+        "missile",
+        "ceasefire",
+        "diplomacy",
+        "diplomatic",
+        "summit",
+        "coup",
+        "protest",
+        "uprising",
+        "embargo",
+        "export",
+        "import",
+        "supply chain",
+        "chip",
+        "semiconductor",
+        "treasury",
+        "dollar",
+        "currency",
+        "debt",
+        "deficit",
+        "budget",
+        "interest",
+        "cpi",
+        "pce",
+        "unemployment",
+        "jobs",
+        "fed fund",
+        "quantitative",
+        "geopolit",
+        "geopolitical",
+        "alliance",
+        "axis",
+        "treaty",
+        "agreement",
+        "bilateral",
+        "multilateral",
+        "un security",
+        "united nations",
+        "imf",
+        "world bank",
+        "g7",
+        "g20",
+        "brics",
+        "north korea",
+        "south korea",
+        "pakistan",
+        "india",
+        "europe",
+        "eu ",
+        "european union",
+        "middle east",
+        "africa",
+        "latin america",
+        "south china",
+        "red sea",
+        "strait",
+        "blockade",
+        "invasion",
+        "occupation",
+        "refugee",
+        "humanitarian",
+        "wmd",
+        "ballistic",
+        "hypersonic",
+        "drone",
+        "cyber",
+        "hack",
+        "espionage",
     }
     # Exclude sports/entertainment markets explicitly
-    _SPORTS_KEYWORDS = {
+    _ENTERTAINMENT_KEYWORDS = {
         "nhl",
         "nba",
         "nfl",
@@ -416,7 +484,9 @@ def _build_polymarket_section(markets: List[Dict[str, Any]]) -> tuple:
         "super bowl",
         "world series",
         "champions league",
+        "championship",
         "playoffs",
+        "playoff",
         "mvp",
         "ballon d'or",
         "oscar",
@@ -428,14 +498,40 @@ def _build_polymarket_section(markets: List[Dict[str, Any]]) -> tuple:
         "gta vi",
         "gta 6",
         "formula 1",
-        "f1",
+        " f1 ",
         "grand prix",
         "wimbledon",
         "olympics",
-    }
-    _ENTERTAINMENT_KEYWORDS = _SPORTS_KEYWORDS | {
-        "gta vi",
-        "gta 6",
+        "nba finals",
+        "nhl finals",
+        "stanley",
+        "lakers",
+        "celtics",
+        "knicks",
+        "warriors",
+        "spurs",
+        "clippers",
+        "heat",
+        "bulls",
+        "nets",
+        "pacers",
+        "cavaliers",
+        "nuggets",
+        "timberwolves",
+        "thunder",
+        "suns",
+        "mavericks",
+        "rockets",
+        "grizzlies",
+        "pelicans",
+        "hawks",
+        "hornets",
+        "magic",
+        "wizards",
+        "bucks",
+        "raptors",
+        "sixers",
+        "pistons",
         "jesus christ",
         "netflix",
         "spotify",
@@ -444,15 +540,22 @@ def _build_polymarket_section(markets: List[Dict[str, Any]]) -> tuple:
         "tv show",
         "reality tv",
         "celebrity",
+        "box office",
+        "billboard",
+        "esport",
+        "e-sport",
+        "video game",
+        "game release",
+        "season finale",
+        "world cup soccer",
     }
-    non_entertainment = [
-        m for m in markets if not any(kw in m.get("title", "").lower() for kw in _ENTERTAINMENT_KEYWORDS)
+    # Geo-keyword filtered set only — no non_entertainment fallback to avoid sports bleed
+    filtered_markets = [
+        m
+        for m in markets
+        if not any(kw in m.get("title", "").lower() for kw in _ENTERTAINMENT_KEYWORDS)
+        and any(kw in m.get("title", "").lower() for kw in _GEO_KEYWORDS)
     ]
-    filtered_markets = [m for m in non_entertainment if any(kw in m.get("title", "").lower() for kw in _GEO_KEYWORDS)]
-    # Fall back to non-entertainment if geo-filtered set is too small.
-    # Never fall back to full markets list — sports/entertainment must stay excluded.
-    if len(filtered_markets) < 3 and non_entertainment:
-        filtered_markets = non_entertainment
 
     lines = []
     rows = []
@@ -477,20 +580,30 @@ def _build_polymarket_section(markets: List[Dict[str, Any]]) -> tuple:
     else:
         lines.append("현재 지정학 관련 활성 예측 마켓이 없습니다.\n")
 
-    # Summary stats as stat-grid (cleaner than blockquote table)
-    # Keep displayed stats aligned to the same filtered market set shown in table.
-    total_volume = sum(m.get("volume", 0) for m in filtered_markets)
-    lines.append(
-        '\n<div class="stat-grid">'
-        f'<div class="stat-item"><span class="stat-value">{len(filtered_markets)}</span>'
-        f'<span class="stat-label">분석 대상</span></div>'
-        f'<div class="stat-item"><span class="stat-value">${total_volume:,.0f}</span>'
-        f'<span class="stat-label">합산 거래량</span></div>'
-        f'<div class="stat-item"><span class="stat-value">'
-        f'<a href="https://polymarket.com" target="_blank" rel="noopener noreferrer">Polymarket</a></span>'
-        f'<span class="stat-label">출처</span></div>'
-        "</div>\n"
-    )
+    # Summary stats: only render when there are markets to show.
+    if filtered_markets:
+        total_volume = sum(m.get("volume", 0) for m in filtered_markets)
+        lines.append(
+            '\n<div class="stat-grid">'
+            f'<div class="stat-item"><span class="stat-value">{len(filtered_markets)}</span>'
+            f'<span class="stat-label">분석 대상</span></div>'
+            f'<div class="stat-item"><span class="stat-value">${total_volume:,.0f}</span>'
+            f'<span class="stat-label">합산 거래량</span></div>'
+            f'<div class="stat-item"><span class="stat-value">'
+            f'<a href="https://polymarket.com" target="_blank" rel="noopener noreferrer">Polymarket</a></span>'
+            f'<span class="stat-label">출처</span></div>'
+            "</div>\n"
+        )
+    else:
+        lines.append(
+            '\n<div class="stat-grid">'
+            '<div class="stat-item"><span class="stat-value">-</span>'
+            '<span class="stat-label">분석 대상</span></div>'
+            '<div class="stat-item"><span class="stat-value">'
+            '<a href="https://polymarket.com" target="_blank" rel="noopener noreferrer">Polymarket</a></span>'
+            '<span class="stat-label">출처</span></div>'
+            "</div>\n"
+        )
 
     return lines, filtered_markets
 

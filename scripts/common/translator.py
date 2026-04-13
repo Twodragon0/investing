@@ -558,6 +558,11 @@ _KOREAN_STYLE_FIXES: list = [
     (r"말했습니까\?", "밝혔나?"),
     # "그리고 버거는." and similar "And X is/are." direct translation artifacts
     (r"^그리고 ", ""),  # Remove leading "그리고" (And) from headlines
+    # Fix European-style number formatting artifact from Google Translate:
+    # e.g. "BTC$71.018,21" → "BTC $71,018.21" (dots=thousands, comma=decimal → US format)
+    (r"([A-Z]{2,5})\$(\d{1,3})\.(\d{3}),(\d{2})\b", r"\1 $\2,\3.\4"),
+    # Same pattern without ticker prefix: "$71.018,21" → "$71,018.21"
+    (r"\$(\d{1,3})\.(\d{3}),(\d{2})\b", r"$\1,\2.\3"),
     # Double spaces
     (r"\s{2,}", " "),
 ]
