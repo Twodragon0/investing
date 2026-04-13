@@ -250,6 +250,75 @@ def test_main_runs_with_full_mocked_data(tmp_path, monkeypatch):
 # ── Dedup idempotency ────────────────────────────────────────────────────────
 
 
+# ── Entertainment filter ─────────────────────────────────────────────────────
+
+
+def test_is_entertainment_sports_keywords():
+    """스포츠 키워드가 포함된 제목은 True를 반환해야 합니다."""
+    assert collect_market_indicators._is_entertainment("NBA Finals 2026: Heat vs Celtics")
+    assert collect_market_indicators._is_entertainment("NHL Stanley Cup playoffs preview")
+    assert collect_market_indicators._is_entertainment("NFL Super Bowl odds this week")
+    assert collect_market_indicators._is_entertainment("FIFA World Cup Soccer schedule")
+    assert collect_market_indicators._is_entertainment("MLB World Series highlights")
+
+
+def test_is_entertainment_media_keywords():
+    """엔터테인먼트 키워드가 포함된 제목은 True를 반환해야 합니다."""
+    assert collect_market_indicators._is_entertainment("Netflix Q1 earnings beat estimates")
+    assert collect_market_indicators._is_entertainment("Grammy awards ceremony live stream")
+    assert collect_market_indicators._is_entertainment("GTA 6 release date announced")
+    assert collect_market_indicators._is_entertainment("New movie box office record")
+    assert collect_market_indicators._is_entertainment("Celebrity scandal hits tabloids")
+
+
+def test_is_entertainment_market_news_not_filtered():
+    """금융/시장 관련 제목은 False를 반환해야 합니다."""
+    assert not collect_market_indicators._is_entertainment("10-year treasury yield rises to 4.5%")
+    assert not collect_market_indicators._is_entertainment("Fed raises interest rates by 25bps")
+    assert not collect_market_indicators._is_entertainment("S&P 500 advances decline market breadth")
+    assert not collect_market_indicators._is_entertainment("Put/call ratio spikes on CBOE")
+    assert not collect_market_indicators._is_entertainment("Margin debt elevated at NYSE")
+    assert not collect_market_indicators._is_entertainment("DXY dollar index weakens")
+
+
+def test_filter_rss_items_removes_entertainment():
+    """_filter_rss_items는 엔터테인먼트 항목을 제거하고 금융 항목은 유지해야 합니다."""
+    items = [
+        {"title": "Treasury yield hits 4.8%", "link": "https://a", "source": "Reuters"},
+        {"title": "NBA Finals: Lakers vs Celtics game 5", "link": "https://b", "source": "ESPN"},
+        {"title": "Put/call ratio signals fear", "link": "https://c", "source": "CBOE"},
+        {"title": "Grammy awards top performances", "link": "https://d", "source": "Billboard"},
+        {"title": "Market breadth weakens on NYSE", "link": "https://e", "source": "Bloomberg"},
+    ]
+    filtered = collect_market_indicators._filter_rss_items(items)
+    titles = [i["title"] for i in filtered]
+    assert "Treasury yield hits 4.8%" in titles
+    assert "Put/call ratio signals fear" in titles
+    assert "Market breadth weakens on NYSE" in titles
+    assert "NBA Finals: Lakers vs Celtics game 5" not in titles
+    assert "Grammy awards top performances" not in titles
+    assert len(filtered) == 3
+
+
+def test_filter_rss_items_empty_list():
+    """빈 리스트 입력 시 빈 리스트를 반환해야 합니다."""
+    assert collect_market_indicators._filter_rss_items([]) == []
+
+
+def test_filter_rss_items_all_pass():
+    """금융 뉴스만 있으면 모두 통과해야 합니다."""
+    items = [
+        {"title": "Yield curve inverts again", "link": "https://a", "source": "FT"},
+        {"title": "VIX spikes to 35 on recession fears", "link": "https://b", "source": "CBOE"},
+    ]
+    assert collect_market_indicators._filter_rss_items(items) == items
+
+
+def test_entertainment_keywords_set_not_empty():
+    """_ENTERTAINMENT_KEYWORDS 세트는 비어있지 않아야 합니다."""
+    assert len(collect_market_indicators._ENTERTAINMENT_KEYWORDS) >= 30
+
+
 def test_dedup_idempotent_market_indicators(tmp_path, monkeypatch):
     """Running MarketIndicatorsCollector twice with same data creates no extra posts."""
     mod = collect_market_indicators

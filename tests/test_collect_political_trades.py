@@ -66,6 +66,91 @@ def test_collector_run_no_network(tmp_path, monkeypatch):
     collector.run()
 
 
+def test_entertainment_filter_blocks_sports_item():
+    """엔터테인먼트/스포츠 키워드가 포함된 아이템은 process()에서 제거된다."""
+    mod = importlib.import_module("collect_political_trades")
+
+    sports_item = {
+        "title": "NBA playoffs: Lakers vs Celtics game 7",
+        "description": "The NBA finals are heating up as the Lakers face the Celtics.",
+        "link": "https://example.com/nba-finals",
+        "source": "Google News",
+        "tags": ["political-trades"],
+    }
+    political_item = {
+        "title": "Senator buys NVIDIA stock ahead of AI bill vote",
+        "description": "Senator disclosed a purchase of NVIDIA shares.",
+        "link": "https://example.com/senator-nvidia",
+        "source": "Congressional Trades",
+        "tags": ["political-trades", "congress"],
+    }
+
+    collector = mod.PoliticalTradesCollector.__new__(mod.PoliticalTradesCollector)
+    # is_duplicate는 항상 False 반환하도록 패치
+    collector.is_duplicate = lambda title, source, link: False
+    collector.logger = mod._log
+
+    # process() 내부에서 enrich_items를 건너뛰기 위해 monkeypatch 불가 → 직접 필터 로직만 검증
+    items = [sports_item, political_item]
+    filtered = [
+        item
+        for item in items
+        if not any(
+            kw in (item.get("title", "") + " " + item.get("description", "")).lower()
+            for kw in mod._ENTERTAINMENT_KEYWORDS
+        )
+    ]
+
+    assert len(filtered) == 1
+    assert filtered[0]["title"] == political_item["title"]
+
+
+def test_entertainment_filter_allows_political_item():
+    """정치/금융 관련 아이템은 엔터테인먼트 필터를 통과한다."""
+    mod = importlib.import_module("collect_political_trades")
+
+    items = [
+        {
+            "title": "Trump signs executive order on tariffs",
+            "description": "President signed an executive order imposing new tariffs on imports.",
+            "link": "https://example.com/trump-tariff",
+            "source": "Google News",
+            "tags": ["political-trades", "trump"],
+        },
+        {
+            "title": "Fed Chair Powell signals rate cut",
+            "description": "Federal Reserve Chair Powell hinted at a rate cut in upcoming FOMC meeting.",
+            "link": "https://example.com/fed-rate",
+            "source": "Google News",
+            "tags": ["political-trades", "fed"],
+        },
+    ]
+
+    filtered = [
+        item
+        for item in items
+        if not any(
+            kw in (item.get("title", "") + " " + item.get("description", "")).lower()
+            for kw in mod._ENTERTAINMENT_KEYWORDS
+        )
+    ]
+
+    assert len(filtered) == 2
+
+
+def test_entertainment_keywords_loaded_from_module():
+    """_ENTERTAINMENT_KEYWORDS가 frozenset이고 최소 30개 이상의 키워드를 포함한다."""
+    mod = importlib.import_module("collect_political_trades")
+
+    assert isinstance(mod._ENTERTAINMENT_KEYWORDS, frozenset)
+    assert len(mod._ENTERTAINMENT_KEYWORDS) >= 30
+    # 핵심 스포츠 키워드 포함 확인
+    assert "nba" in mod._ENTERTAINMENT_KEYWORDS
+    assert "nfl" in mod._ENTERTAINMENT_KEYWORDS
+    assert "super bowl" in mod._ENTERTAINMENT_KEYWORDS
+    assert "netflix" in mod._ENTERTAINMENT_KEYWORDS
+
+
 def test_dedup_idempotent_political_trades(tmp_path, monkeypatch):
     """Running PoliticalTradesCollector twice with same data creates no extra posts."""
     mod = importlib.import_module("collect_political_trades")

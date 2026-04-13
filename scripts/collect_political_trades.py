@@ -43,6 +43,47 @@ _log = logging.getLogger(__name__)
 _political_cfg = get_collector_config("political_trades")
 
 
+def _load_keyword_filters() -> frozenset:
+    """collectors.yml의 keywords.entertainment_keywords 섹션에서 필터를 로드합니다.
+
+    로드 실패 또는 키워드 누락 시 하드코딩 기본값으로 fallback합니다.
+    Returns:
+        entertainment_keywords — frozenset
+    """
+    _ENTERTAINMENT_KEYWORDS_DEFAULT = frozenset({
+        "nhl", "nba", "nfl", "mlb", "mls", "ufc", "fifa", "premier league",
+        "stanley cup", "super bowl", "world series", "champions league",
+        "championship", "playoffs", "playoff", "mvp", "ballon d'or",
+        "oscar", "grammy", "emmy", "bachelor", "bachelorette", "survivor",
+        "gta vi", "gta 6", "formula 1", " f1 ", "grand prix", "wimbledon",
+        "olympics", "nba finals", "nhl finals", "stanley", "lakers", "celtics",
+        "knicks", "warriors", "spurs", "clippers", "heat", "bulls", "nets",
+        "pacers", "cavaliers", "nuggets", "timberwolves", "thunder", "suns",
+        "mavericks", "rockets", "grizzlies", "pelicans", "hawks", "hornets",
+        "magic", "wizards", "bucks", "raptors", "sixers", "pistons",
+        "netflix", "spotify", "movie", "album", "tv show",
+        "reality tv", "celebrity", "box office", "billboard", "esport",
+        "e-sport", "video game", "game release", "season finale", "world cup soccer",
+    })
+
+    kw_cfg = _political_cfg.get("keywords", {})
+    if not isinstance(kw_cfg, dict):
+        _log.debug("collectors.yml: political_trades.keywords 섹션 없음, 기본값 사용")
+        return _ENTERTAINMENT_KEYWORDS_DEFAULT
+
+    ent_raw = kw_cfg.get("entertainment_keywords")
+    if isinstance(ent_raw, list) and ent_raw:
+        _log.debug("collectors.yml에서 entertainment_keywords %d개 로드", len(ent_raw))
+        return frozenset(ent_raw)
+
+    _log.debug("collectors.yml: entertainment_keywords 누락 또는 빈 값, 기본값 사용")
+    return _ENTERTAINMENT_KEYWORDS_DEFAULT
+
+
+# 모듈 import 시 1회 로드 (YAML → fallback 자동)
+_ENTERTAINMENT_KEYWORDS = _load_keyword_filters()
+
+
 def fetch_congressional_trades() -> List[Dict[str, Any]]:
     """Fetch US congressional stock trading news via Google News RSS."""
     feeds = [
@@ -259,13 +300,28 @@ class PoliticalTradesCollector(BaseCollector):
         return congress_items + sec_items + trump_items + korea_items + central_bank_items
 
     def process(self, items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """URL/제목 기반 중복 제거 및 enrichment."""
+        """URL/제목 기반 중복 제거, 엔터테인먼트/스포츠 필터 적용, enrichment."""
         items = deduplicate_by_url(items)
         unique_items = [
             item
             for item in items
             if not self.is_duplicate(item.get("title", ""), item.get("source", ""), item.get("link", ""))
         ]
+
+        # 엔터테인먼트·스포츠 콘텐츠 필터 (Google News RSS 오염 방지)
+        before_filter = len(unique_items)
+        unique_items = [
+            item
+            for item in unique_items
+            if not any(
+                kw in (item.get("title", "") + " " + item.get("description", "")).lower()
+                for kw in _ENTERTAINMENT_KEYWORDS
+            )
+        ]
+        filtered_count = before_filter - len(unique_items)
+        if filtered_count:
+            self.logger.info("Entertainment filter removed %d items", filtered_count)
+
         enrich_items(unique_items, context_map=_POLITICAL_SOURCE_CONTEXT, max_fetch=20)
         return unique_items
 

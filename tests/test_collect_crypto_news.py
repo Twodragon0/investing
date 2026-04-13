@@ -189,3 +189,62 @@ def test_dedup_idempotent_crypto(tmp_path, monkeypatch):
     assert len(posts_after_second) == len(posts_after_first), (
         "Second run should not create additional posts for same content"
     )
+
+
+# ---------------------------------------------------------------------------
+# Entertainment filter tests
+# ---------------------------------------------------------------------------
+
+
+def test_is_entertainment_item_blocks_pure_sports():
+    """순수 스포츠 기사는 필터링되어야 합니다."""
+    mod = importlib.import_module("collect_crypto_news")
+    item = {"title": "NBA Finals: Lakers vs Celtics Game 7 Preview", "description": ""}
+    assert mod._is_entertainment_item(item) is True
+
+
+def test_is_entertainment_item_blocks_pure_entertainment():
+    """순수 엔터테인먼트 기사는 필터링되어야 합니다."""
+    mod = importlib.import_module("collect_crypto_news")
+    item = {"title": "Grammy Awards 2026: Best Album nominees revealed", "description": ""}
+    assert mod._is_entertainment_item(item) is True
+
+
+def test_is_entertainment_item_passes_crypto_gaming():
+    """NFT game 등 크립토 맥락이 있으면 필터링하지 않습니다."""
+    mod = importlib.import_module("collect_crypto_news")
+    item = {
+        "title": "Axie Infinity NFT game token surges 30%",
+        "description": "Play-to-earn blockchain game",
+    }
+    assert mod._is_entertainment_item(item) is False
+
+
+def test_is_entertainment_item_passes_crypto_news():
+    """일반 크립토 뉴스는 필터링하지 않습니다."""
+    mod = importlib.import_module("collect_crypto_news")
+    item = {"title": "Bitcoin ETF sees record inflows as BTC hits new high", "description": ""}
+    assert mod._is_entertainment_item(item) is False
+
+
+def test_is_entertainment_item_passes_non_entertainment():
+    """엔터/스포츠 키워드 없는 일반 기사는 필터링하지 않습니다."""
+    mod = importlib.import_module("collect_crypto_news")
+    item = {"title": "Federal Reserve signals rate cuts ahead", "description": ""}
+    assert mod._is_entertainment_item(item) is False
+
+
+def test_fetch_google_news_crypto_filters_entertainment(monkeypatch):
+    """fetch_google_news_crypto가 엔터테인먼트 아이템을 필터링합니다."""
+    mod = importlib.import_module("collect_crypto_news")
+
+    fake_items = [
+        {"title": "Bitcoin price analysis weekly roundup", "description": "", "source": "Google News EN"},
+        {"title": "Super Bowl halftime show performances ranked", "description": "", "source": "Google News EN"},
+    ]
+    monkeypatch.setattr(mod, "fetch_rss_feeds_concurrent", lambda feeds: fake_items)
+
+    result = mod.fetch_google_news_crypto()
+    titles = [item["title"] for item in result]
+    assert "Bitcoin price analysis weekly roundup" in titles
+    assert "Super Bowl halftime show performances ranked" not in titles

@@ -64,6 +64,64 @@ VERIFY_SSL = get_verify_ssl()
 _social_cfg = get_collector_config("social_media")
 
 
+# ---------------------------------------------------------------------------
+# 엔터테인먼트/스포츠 필터 (금융·투자와 무관한 콘텐츠 제외)
+# ---------------------------------------------------------------------------
+
+_ENTERTAINMENT_KEYWORDS_DEFAULT = frozenset({
+    # 북미 스포츠 리그
+    "nba", "nhl", "nfl", "mlb", "mls", "ufc",
+    # 국제 스포츠
+    "fifa", "premier league", "champions league", "la liga", "serie a", "bundesliga",
+    "world cup soccer", "olympics", "wimbledon", "grand prix", "formula 1", " f1 ",
+    # 개별 이벤트/시즌
+    "stanley cup", "super bowl", "world series", "nba finals", "nhl finals",
+    "championship", "playoffs", "playoff", "mvp", "ballon d'or",
+    # NBA 팀명
+    "lakers", "celtics", "knicks", "warriors", "spurs", "clippers",
+    "heat", "bulls", "nets", "pacers", "cavaliers", "nuggets",
+    "timberwolves", "thunder", "suns", "mavericks", "rockets",
+    "grizzlies", "pelicans", "hawks", "hornets", "magic", "wizards",
+    "bucks", "raptors", "sixers", "pistons",
+    # 연예·미디어
+    "oscar", "grammy", "emmy", "golden globe",
+    "netflix", "spotify", "disney+", "hulu", "hbo",
+    "celebrity", "movie", "album", "box office", "billboard",
+    "reality tv", "tv show", "season finale", "bachelor", "bachelorette", "survivor",
+    # 게임
+    "gta vi", "gta 6", "esport", "e-sport", "video game", "game release",
+})
+
+
+def _load_entertainment_filter() -> frozenset:
+    """collectors.yml의 social_media.keywords.entertainment_keywords를 로드합니다.
+
+    로드 실패 또는 섹션 누락 시 하드코딩 기본값으로 fallback합니다.
+    """
+    kw_cfg = _social_cfg.get("keywords", {})
+    if not isinstance(kw_cfg, dict):
+        logger.debug("collectors.yml: social_media.keywords 섹션 없음, 기본값 사용")
+        return _ENTERTAINMENT_KEYWORDS_DEFAULT
+
+    ent_raw = kw_cfg.get("entertainment_keywords")
+    if isinstance(ent_raw, list) and ent_raw:
+        logger.debug("collectors.yml에서 entertainment_keywords %d개 로드", len(ent_raw))
+        return frozenset(ent_raw)
+
+    logger.debug("collectors.yml: social_media.entertainment_keywords 누락, 기본값 사용")
+    return _ENTERTAINMENT_KEYWORDS_DEFAULT
+
+
+# 모듈 import 시 1회 로드
+_ENTERTAINMENT_KEYWORDS = _load_entertainment_filter()
+
+
+def _is_entertainment(item: Dict[str, Any]) -> bool:
+    """title + description에 엔터테인먼트/스포츠 키워드가 포함되면 True."""
+    text = (item.get("title", "") + " " + item.get("description", "")).lower()
+    return any(kw in text for kw in _ENTERTAINMENT_KEYWORDS)
+
+
 def _parse_telegram_items(channel: str, messages, limit: int) -> List[Dict[str, Any]]:
     """Parse Telegram message elements (shared between Playwright and BS4 paths)."""
     items: List[Dict[str, Any]] = []
@@ -473,6 +531,21 @@ class SocialMediaCollector(BaseCollector):
             len(reddit_items),
             len(political_items),
         )
+
+        # ── 엔터테인먼트/스포츠 필터 — post 생성 전 적용 ──
+        before_counts = (len(telegram_items), len(social_items), len(reddit_items), len(political_items))
+        telegram_items = [i for i in telegram_items if not _is_entertainment(i)]
+        social_items = [i for i in social_items if not _is_entertainment(i)]
+        reddit_items = [i for i in reddit_items if not _is_entertainment(i)]
+        political_items = [i for i in political_items if not _is_entertainment(i)]
+        after_counts = (len(telegram_items), len(social_items), len(reddit_items), len(political_items))
+        filtered_total = sum(b - a for b, a in zip(before_counts, after_counts, strict=False))
+        if filtered_total:
+            self.logger.info(
+                "Entertainment filter removed %d items: telegram=%d, social=%d, reddit=%d, political=%d",
+                filtered_total,
+                *after_counts,
+            )
 
         # ── Consolidated social media post ──
         post_title = f"소셜 미디어 동향 - {today}"

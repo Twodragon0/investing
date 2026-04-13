@@ -39,6 +39,77 @@ VERIFY_SSL = get_verify_ssl()
 # collectors.yml에서 설정 로드
 _mi_cfg = get_collector_config("market_indicators")
 
+
+# ── Entertainment filter ───────────────────────────────────────────────────────
+
+
+def _load_entertainment_keywords() -> frozenset:
+    """collectors.yml의 keywords.entertainment_keywords에서 필터 키워드를 로드합니다.
+
+    로드 실패 또는 섹션 누락 시 하드코딩 기본값으로 fallback합니다.
+    Returns:
+        entertainment_keywords — frozenset
+    """
+    _ENTERTAINMENT_KEYWORDS_DEFAULT = frozenset({
+        "nhl", "nba", "nfl", "mlb", "mls", "ufc", "fifa", "premier league",
+        "stanley cup", "super bowl", "world series", "champions league",
+        "championship", "playoffs", "playoff", "mvp", "ballon d'or",
+        "oscar", "grammy", "emmy", "bachelor", "bachelorette", "survivor",
+        "gta vi", "gta 6", "gta v", "formula 1", " f1 ", "grand prix", "wimbledon",
+        "olympics", "nba finals", "nhl finals", "lakers", "celtics", "knicks",
+        "warriors", "spurs", "clippers", "heat", "bulls", "nets", "pacers",
+        "cavaliers", "nuggets", "timberwolves", "thunder", "suns", "mavericks",
+        "rockets", "grizzlies", "pelicans", "hawks", "hornets", "magic",
+        "wizards", "bucks", "raptors", "sixers", "pistons",
+        "netflix", "spotify", "movie", "album", "tv show", "reality tv",
+        "celebrity", "box office", "billboard", "esport", "e-sport",
+        "video game", "game release", "season finale", "world cup soccer",
+    })
+
+    _logger = __import__("logging").getLogger(__name__)
+    kw_cfg = _mi_cfg.get("keywords", {})
+    if not isinstance(kw_cfg, dict):
+        _logger.debug("collectors.yml: market_indicators.keywords 섹션 없음, 기본값 사용")
+        return _ENTERTAINMENT_KEYWORDS_DEFAULT
+
+    ent_raw = kw_cfg.get("entertainment_keywords")
+    if isinstance(ent_raw, list) and ent_raw:
+        _logger.debug("collectors.yml에서 entertainment_keywords %d개 로드", len(ent_raw))
+        return frozenset(ent_raw)
+
+    _logger.debug("collectors.yml: entertainment_keywords 누락 또는 빈 값, 기본값 사용")
+    return _ENTERTAINMENT_KEYWORDS_DEFAULT
+
+
+# 모듈 import 시 1회 로드 (YAML → fallback 자동)
+_ENTERTAINMENT_KEYWORDS = _load_entertainment_keywords()
+
+
+def _is_entertainment(title: str) -> bool:
+    """제목이 엔터테인먼트/스포츠 콘텐츠인지 확인합니다 (Google News RSS 전용 필터).
+
+    Args:
+        title: 뉴스 제목 문자열
+    Returns:
+        True이면 필터 대상 (제외해야 할 항목)
+    """
+    text = title.lower()
+    return any(kw in text for kw in _ENTERTAINMENT_KEYWORDS)
+
+
+def _filter_rss_items(items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Google News RSS 아이템에서 엔터테인먼트/스포츠 콘텐츠를 제거합니다.
+
+    API 기반 데이터(CNN, yfinance, FRED)에는 적용하지 않습니다.
+    """
+    _logger = __import__("logging").getLogger(__name__)
+    filtered = [item for item in items if not _is_entertainment(item.get("title", ""))]
+    removed = len(items) - len(filtered)
+    if removed:
+        _logger.debug("엔터테인먼트 필터: %d개 항목 제거 (전체 %d개)", removed, len(items))
+    return filtered
+
+
 # ── Constants ──────────────────────────────────────────────────────────────────
 CNN_FEAR_GREED_URL = get_url(
     "market_indicators", "cnn_fear_greed", "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"
@@ -200,7 +271,7 @@ def fetch_treasury_yield_news() -> List[Dict[str, Any]]:
             ["treasury", "yield-curve"],
         ),
     ]
-    items = fetch_rss_feeds_concurrent(feeds)
+    items = _filter_rss_items(fetch_rss_feeds_concurrent(feeds))
     logger = __import__("logging").getLogger(__name__)
     logger.info("Treasury yield news: %d items", len(items))
     return items
@@ -220,7 +291,7 @@ def fetch_put_call_ratio_news() -> List[Dict[str, Any]]:
             ["put-call", "options", "sentiment"],
         ),
     ]
-    items = fetch_rss_feeds_concurrent(feeds)
+    items = _filter_rss_items(fetch_rss_feeds_concurrent(feeds))
     logger = __import__("logging").getLogger(__name__)
     logger.info("Put/Call ratio news: %d items", len(items))
     return items
@@ -240,7 +311,7 @@ def fetch_margin_debt_news() -> List[Dict[str, Any]]:
             ["margin-call", "liquidation", "risk"],
         ),
     ]
-    items = fetch_rss_feeds_concurrent(feeds)
+    items = _filter_rss_items(fetch_rss_feeds_concurrent(feeds))
     logger = __import__("logging").getLogger(__name__)
     logger.info("Margin debt news: %d items", len(items))
     return items
@@ -265,7 +336,7 @@ def fetch_market_breadth_news() -> List[Dict[str, Any]]:
             ["breadth", "mcclellan", "oscillator"],
         ),
     ]
-    items = fetch_rss_feeds_concurrent(feeds)
+    items = _filter_rss_items(fetch_rss_feeds_concurrent(feeds))
     logger = __import__("logging").getLogger(__name__)
     logger.info("Market breadth news: %d items", len(items))
     return items

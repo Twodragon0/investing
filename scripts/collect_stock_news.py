@@ -53,6 +53,86 @@ VERIFY_SSL = get_verify_ssl()
 _stock_cfg = get_collector_config("stock_news")
 
 
+def _load_entertainment_filter() -> frozenset:
+    """collectors.yml의 stock_news.keywords.entertainment_keywords를 로드합니다.
+
+    로드 실패 또는 누락 시 하드코딩 기본값으로 fallback합니다.
+    Returns:
+        frozenset — 소문자 키워드 집합 (순수 스포츠 이벤트 중심)
+    """
+    _DEFAULT = frozenset({
+        # 스포츠 이벤트 — 리그명/대회명 (상장사 실적 아닌 경기 결과)
+        "nba finals",
+        "stanley cup",
+        "super bowl",
+        "world series",
+        "champions league final",
+        "championship game",
+        "playoffs",
+        "nfl draft",
+        "nba draft",
+        "mlb playoffs",
+        # 스포츠 행위/기록
+        "touchdown",
+        "home run",
+        "slam dunk",
+        "penalty kick",
+        "hat trick",
+        "mvp award",
+        "draft pick",
+        "trade deadline nba",
+        "trade deadline nhl",
+        "trade deadline nfl",
+        "free agency nba",
+        "free agency nfl",
+        "signing bonus nfl",
+        "signing bonus nba",
+        # 팀/선수 중심 (투자와 무관한 스포츠 맥락)
+        "lakers",
+        "celtics",
+        "knicks",
+        "warriors",
+        "yankees",
+        "dodgers",
+        "patriots",
+        "cowboys",
+        # 순수 엔터테인먼트 이벤트
+        "oscar",
+        "grammy",
+        "emmy",
+        "box office",
+        "season finale",
+        "reality tv",
+        "gta vi",
+        "gta 6",
+        "wimbledon",
+        "grand prix winner",
+    })
+
+    kw_cfg = _stock_cfg.get("keywords", {})
+    if not isinstance(kw_cfg, dict):
+        logger.debug("collectors.yml: stock_news.keywords 섹션 없음, 기본값 사용")
+        return _DEFAULT
+
+    ent_raw = kw_cfg.get("entertainment_keywords")
+    if isinstance(ent_raw, list) and ent_raw:
+        logger.debug("collectors.yml에서 stock_news.entertainment_keywords %d개 로드", len(ent_raw))
+        return frozenset(ent_raw)
+
+    logger.debug("collectors.yml: stock_news.entertainment_keywords 누락 또는 빈 값, 기본값 사용")
+    return _DEFAULT
+
+
+# 모듈 import 시 1회 로드 (YAML → fallback 자동)
+_ENTERTAINMENT_KEYWORDS = _load_entertainment_filter()
+
+
+def _is_entertainment(item: Dict[str, Any]) -> bool:
+    """title + description에 엔터테인먼트/스포츠 이벤트 키워드가 포함되면 True."""
+    text = (item.get("title", "") + " " + item.get("description", "")).lower()
+    return any(kw in text for kw in _ENTERTAINMENT_KEYWORDS)
+
+
 def fetch_google_news_browser_stocks(limit: int = 20) -> List[Dict[str, Any]]:
     """Fetch stock news via Google News browser scraping (replaces NewsAPI).
 
@@ -397,7 +477,12 @@ class StockNewsCollector(BaseCollector):
         return browser_items + google_items + yahoo_items + alpha_items + financial_rss_items + sector_items
 
     def process(self, items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """URL 기반 중복 제거."""
+        """엔터테인먼트/스포츠 이벤트 필터 적용 후 URL 기반 중복 제거."""
+        before = len(items)
+        items = [item for item in items if not _is_entertainment(item)]
+        filtered = before - len(items)
+        if filtered:
+            self.logger.info("엔터테인먼트/스포츠 필터: %d건 제거 (전체 %d건)", filtered, before)
         return deduplicate_by_url(items)
 
     def build_content(self, items: List[Dict[str, Any]]) -> str:
