@@ -18,6 +18,11 @@ image_alt: "DeFi 수익률 리포트 - 2026-04-14 - DeFi 뉴스 요약 이미지
 
 **2026-04-14** DeFi Llama Yields API 기준 주요 DeFi 수익률(APY) 현황을 정리합니다. TVL $1M 이상, APY 0.1% 이상 풀 **2114개** 기준이며, 스테이블코인·ETH·BTC 카테고리별 상위 수익률과 전체 TOP TVL 풀을 포함합니다.
 
+## 전체 뉴스 요약
+
+- USDC, USDT, DAI 등 스테이블코인 기반 풀을 APY 기준으로 정렬한 결과입니다. 원금 가치 보존을 원하는 투자자에게 적합합니다.
+
+
 <div class="alert-box alert-info"><strong>DeFi 수익률 요약 (2026-04-14)</strong><ul><li>📊 <strong>총 풀 수</strong>: 2,114개 (TVL $1M↑, APY 0.1%↑)</li><li>📈 <strong>평균 APY</strong>: 22.65%</li><li>🏆 <strong>최고 APY 프로토콜</strong>: blackhole-clmm — 15442.76%</li><li>💵 <strong>스테이블코인 TOP</strong>: morpho-v1 (CSYUSDC) — 4946.40%</li></ul></div>
 
 ## 스테이블코인 수익률 TOP 10
