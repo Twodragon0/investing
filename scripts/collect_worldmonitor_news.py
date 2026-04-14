@@ -17,6 +17,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common.base_collector import BaseCollector
 from common.collector_config import get_collector_config, get_url
 from common.config import REQUEST_TIMEOUT, USER_AGENT, get_verify_ssl
+from common.content_filters import filter_entertainment, load_entertainment_keywords
 from common.dedup import deduplicate_by_url
 from common.enrichment import _WORLDMONITOR_SOURCE_CONTEXT, enrich_items
 from common.markdown_utils import (
@@ -33,6 +34,9 @@ from common.worldmonitor_utils import worldmonitor_sort_key
 
 # collectors.yml에서 설정 로드
 _wm_cfg = get_collector_config("worldmonitor_news")
+
+# 엔터테인먼트/스포츠 필터 키워드 1회 로딩
+_ENTERTAINMENT_KEYWORDS = load_entertainment_keywords("worldmonitor_news")
 
 WM_PROXY = get_url("worldmonitor_news", "wm_proxy", "https://worldmonitor.app/api/rss-proxy?url=")
 WM_FINANCE_BASE = get_url("worldmonitor_news", "wm_finance_base", "https://finance.worldmonitor.app")
@@ -665,6 +669,11 @@ class WorldMonitorCollector(BaseCollector):
     def process(self, items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """콘텐츠 보강 및 URL 기반 중복 제거."""
         enrich_items(items, context_map=_WORLDMONITOR_SOURCE_CONTEXT, max_fetch=20)
+        before = len(items)
+        items = filter_entertainment(items, _ENTERTAINMENT_KEYWORDS, self.logger)
+        ent_removed = before - len(items)
+        if ent_removed:
+            self.record_entertainment_filtered(ent_removed)
         return deduplicate_by_url(items)
 
     def build_content(self, items: List[Dict[str, Any]]) -> str:

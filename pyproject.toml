@@ -61,7 +61,7 @@ quote-style = "double"
 relative_files = true
 
 [tool.pytest.ini_options]
-addopts = "--cov=scripts --cov-fail-under=45"
+addopts = "--cov=scripts --cov-fail-under=55"
 
 [tool.basedpyright]
 include = ["scripts"]
