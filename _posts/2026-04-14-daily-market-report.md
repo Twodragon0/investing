@@ -10,11 +10,13 @@ lang: "ko"
 image: "/assets/images/generated/market-heatmap-2026-04-14.png"
 permalink: "/market-analysis/2026/04/14/daily-market-report/"
 description: "2026-04-14 시장 종합:. KOSPI 5,967.75(+2.74%). BTC $74,762(+5.7%). 공포탐욕지수 21(Extreme Fear). 시총 24h +5.0%."
-excerpt: "- 극도의 공포 장세: 공포/탐욕 지수 21으로 Extreme Fear 구간 진입"
+excerpt: "극도의 공포 장세: 공포/탐욕 지수 21으로 Extreme Fear 구간 진입 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "일일 시장 종합 리포트 - 2026-04-14 - 시장 분석 뉴스 요약 이미지"
 ---
 
-## 시장 시각화<picture><source srcset="{{ '/assets/images/generated/market-heatmap-2026-04-14.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-heatmap-2026-04-14.png' | relative_url }}" alt="market-heatmap" loading="lazy" decoding="async"></picture>
+## 시장 시각화
+
+<picture><source srcset="{{ '/assets/images/generated/market-heatmap-2026-04-14.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-heatmap-2026-04-14.png' | relative_url }}" alt="market-heatmap" loading="lazy" decoding="async"></picture>
 <picture><source srcset="{{ '/assets/images/generated/top-coins-2026-04-14.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/top-coins-2026-04-14.png' | relative_url }}" alt="top-coins" loading="lazy" decoding="async"></picture>
 <picture><source srcset="{{ '/assets/images/generated/fear-greed-2026-04-14.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/fear-greed-2026-04-14.png' | relative_url }}" alt="fear-greed" loading="lazy" decoding="async"></picture>
 <picture><source srcset="{{ '/assets/images/generated/sector-heatmap-2026-04-14.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/sector-heatmap-2026-04-14.png' | relative_url }}" alt="sector-heatmap" loading="lazy" decoding="async"></picture>
@@ -53,7 +55,7 @@ BTC 도미넌스가 **57.2%**로 높은 수준입니다. 비트코인 중심의 
 
 공포/탐욕 지수는 **21** (Extreme Fear)으로, 극도의 공포 상태입니다. 역사적으로 이 구간은 장기 투자자에게 매수 기회가 되어 왔습니다.
 
-Top 20 중 가장 큰 상승은 **Ethereum** (+9.16%), 가장 큰 하락은 **TRON** (-0.18%)입니다.
+Top 20 중 가장 큰 상승은 **Ethereum(이더리움)** (+9.16%), 가장 큰 하락은 **TRON** (-0.18%)입니다.
 
 미국 시장에서 S&P 500은 **+1.02%** 변동을 보였습니다.
 
@@ -79,13 +81,13 @@ Top 20 중 가장 큰 상승은 **Ethereum** (+9.16%), 가장 큰 하락은 **TR
 
 | # | 코인 | 가격 (USD) | 24h | 7d | 시가총액 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | **Bitcoin** (BTC) | $74,762.00 | 🟢 +5.68% | 🟢 +8.95% | $1.50T |
-| 2 | **Ethereum** (ETH) | $2,391.14 | 🟢 +9.16% | 🟢 +13.66% | $288.45B |
+| 1 | **Bitcoin(비트코인)** (BTC) | $74,762.00 | 🟢 +5.68% | 🟢 +8.95% | $1.50T |
+| 2 | **Ethereum(이더리움)** (ETH) | $2,391.14 | 🟢 +9.16% | 🟢 +13.66% | $288.45B |
 | 3 | **Tether** (USDT) | $1.00 | 🟢 +0.03% | 🟢 +0.04% | $184.74B |
-| 4 | **XRP** (XRP) | $1.37 | 🟢 +3.48% | 🟢 +4.63% | $84.37B |
+| 4 | **XRP(리플)** (XRP) | $1.37 | 🟢 +3.48% | 🟢 +4.63% | $84.37B |
 | 5 | **BNB** (BNB) | $618.57 | 🟢 +3.57% | 🟢 +3.25% | $84.35B |
 | 6 | **USDC** (USDC) | $0.999762 | 🔴 -0.01% | 🔴 -0.02% | $78.73B |
-| 7 | **Solana** (SOL) | $86.11 | 🟢 +5.06% | 🟢 +7.84% | $49.52B |
+| 7 | **Solana(솔라나)** (SOL) | $86.11 | 🟢 +5.06% | 🟢 +7.84% | $49.52B |
 | 8 | **TRON** (TRX) | $0.321425 | 🔴 -0.18% | 🟢 +1.65% | $30.47B |
 | 9 | **Figure Heloc** (FIGR_HELOC) | $1.03 | 🟢 +0.72% | 🟢 +0.73% | $17.09B |
 | 10 | **Dogecoin** (DOGE) | $0.094515 | 🟢 +3.81% | 🟢 +4.29% | $14.56B |
@@ -118,11 +120,11 @@ Top 20 중 가장 큰 상승은 **Ethereum** (+9.16%), 가장 큰 하락은 **TR
 
 | 코인 | 가격 | 24h 변동 |
 | --- | --- | --- |
-| **Ethereum** (ETH) | $2,391.14 | 🟢 +9.16% |
+| **Ethereum(이더리움)** (ETH) | $2,391.14 | 🟢 +9.16% |
 | **Hyperliquid** (HYPE) | $44.91 | 🟢 +8.06% |
 | **Rain** (RAIN) | $0.008057 | 🟢 +5.87% |
 | **WhiteBIT Coin** (WBT) | $54.98 | 🟢 +5.84% |
-| **Bitcoin** (BTC) | $74,762.00 | 🟢 +5.68% |
+| **Bitcoin(비트코인)** (BTC) | $74,762.00 | 🟢 +5.68% |
 
 ### 📉 Top 5 하락
 
