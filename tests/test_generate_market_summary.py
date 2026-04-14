@@ -1,7 +1,10 @@
 """Tests for generate_market_summary.py — pure formatting/calculation functions."""
 
 import os
+import re as _re
 import sys
+from contextlib import contextmanager
+from unittest.mock import MagicMock, patch
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
@@ -1236,8 +1239,6 @@ class TestFetchKoreanMarket:
     def test_ticker_exception_skips_and_continues(self, monkeypatch):
         import sys
 
-        call_count = {"n": 0}
-
         class BrokenFI:
             @property
             def last_price(self):
@@ -1695,10 +1696,6 @@ class TestFetchUsMarketDataYfinanceFallback:
 # ---------------------------------------------------------------------------
 # main() integration smoke tests
 # ---------------------------------------------------------------------------
-
-import re as _re
-from contextlib import contextmanager
-from unittest.mock import MagicMock, patch
 
 _GMS = "scripts.generate_market_summary"
 

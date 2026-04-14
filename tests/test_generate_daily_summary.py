@@ -1,7 +1,9 @@
 """Tests for generate_daily_summary.py — pure utility functions (no I/O)."""
 
+import datetime as _dt
 import os
 import sys
+from unittest.mock import MagicMock, patch
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
@@ -1971,10 +1973,6 @@ class TestBuildPriorityAndCategorySections:
 # main() integration smoke tests
 # ---------------------------------------------------------------------------
 
-import datetime as _dt
-from unittest.mock import MagicMock, patch
-
-
 def _fake_kst_now_factory(date_str):
     """Return a datetime object whose strftime('%Y-%m-%d') == date_str."""
     year, month, day = map(int, date_str.split("-"))
@@ -2002,7 +2000,6 @@ class TestMainIntegration:
     def _patch_datetime(self, monkeypatch):
         """Make datetime.now() in gds return a fixed date matching TODAY."""
         fake_now = _fake_kst_now_factory(self.TODAY)
-        real_datetime = _dt.datetime
 
         class _FakeDatetime(_dt.datetime):
             @classmethod
@@ -2031,7 +2028,8 @@ class TestMainIntegration:
         written = _glob.glob(f"{posts_dir}/{self.TODAY}-daily-news-summary.md")
         assert written, "daily-news-summary post file must be created"
 
-        content = open(written[0], encoding="utf-8").read()
+        with open(written[0], encoding="utf-8") as f:
+            content = f.read()
         for key in ("layout", "title", "categories", "tags", "description"):
             assert f"{key}:" in content, f"front matter must contain '{key}:'"
 
@@ -2067,7 +2065,8 @@ class TestMainIntegration:
 
         written = _glob.glob(f"{posts_dir}/{self.TODAY}-daily-news-summary.md")
         assert written
-        content = open(written[0], encoding="utf-8").read()
+        with open(written[0], encoding="utf-8") as f:
+            content = f.read()
         assert "암호화폐" in content or "crypto" in content.lower()
 
     def test_summary_post_contains_today_date(self, tmp_path, monkeypatch):
@@ -2089,7 +2088,8 @@ class TestMainIntegration:
 
         written = _glob.glob(f"{posts_dir}/{self.TODAY}-daily-news-summary.md")
         assert written
-        content = open(written[0], encoding="utf-8").read()
+        with open(written[0], encoding="utf-8") as f:
+            content = f.read()
         assert self.TODAY in content
 
     def test_multiple_category_posts_all_written_to_summary(self, tmp_path, monkeypatch):
@@ -2122,5 +2122,6 @@ class TestMainIntegration:
 
         written = _glob.glob(f"{posts_dir}/{self.TODAY}-daily-news-summary.md")
         assert written
-        content = open(written[0], encoding="utf-8").read()
+        with open(written[0], encoding="utf-8") as f:
+            content = f.read()
         assert "layout: post" in content
