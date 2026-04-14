@@ -1,0 +1,36 @@
+name: Check Post Images
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '_posts/**'
+      - 'assets/images/generated/**'
+      - 'scripts/check_post_images.py'
+  pull_request:
+    branches: [main]
+    paths:
+      - '_posts/**'
+      - 'assets/images/generated/**'
+      - 'scripts/check_post_images.py'
+  workflow_dispatch:
+
+concurrency:
+  group: check-post-images-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check-images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
+
+      - name: Setup Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0
+        with:
+          python-version: '3.11'
+
+      - name: Check post image references
+        run: python scripts/check_post_images.py
