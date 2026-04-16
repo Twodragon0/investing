@@ -1,40 +1,5 @@
 {
   "seen": {
-    "92d5d23eee24fa1e8af870fb": "2026-03-17T23:00:56",
-    "0da947903bdade8c56faa14b": "2026-03-17T23:00:56",
-    "1161cfac5b40207753b06fc4": "2026-03-17T23:00:56",
-    "d303f0a982900b771ac2b426": "2026-03-17T23:00:56",
-    "55a1c7a2622197fce0792d27": "2026-03-17T23:00:56",
-    "2a3f57950d71a73a66391502": "2026-03-17T23:00:56",
-    "3ffa0c17a413914c1052ee1f": "2026-03-17T23:00:56",
-    "db10595270b430d4b1685036": "2026-03-17T23:00:56",
-    "20e9901213ac6902cb7926cc": "2026-03-17T23:00:56",
-    "3b95c0f09daa9682213f1ba3": "2026-03-17T23:00:56",
-    "7eba40ed3a3c543d7e5ac6e4": "2026-03-17T23:00:56",
-    "42c72ec29ed65c86b63a599b": "2026-03-17T23:00:56",
-    "d05a0d41bf92af43b6164d40": "2026-03-17T23:00:56",
-    "40be44d02faabce9c5b80f35": "2026-03-17T23:00:56",
-    "81e8f72374982b00a9f360d5": "2026-03-17T23:00:56",
-    "8a11868ef3ef7559f172def2": "2026-03-17T23:00:56",
-    "7ba71e152b1557572bc744ea": "2026-03-17T23:00:56",
-    "5ded43d7b9171a513f84242a": "2026-03-17T23:00:56",
-    "b834f09cd7a76a3c42beb82f": "2026-03-17T23:00:56",
-    "739fe754c7a16ece13020bc4": "2026-03-17T23:00:56",
-    "dbbb1ad6ed7b55da8b5f6e76": "2026-03-17T23:00:56",
-    "0a54d17bf9ec56e9398a5c90": "2026-03-17T23:00:56",
-    "c0efc570e3f81647dbb09e98": "2026-03-17T23:00:56",
-    "46b033218c73b0664518fe6b": "2026-03-17T23:00:56",
-    "e3a594ca3a4ea673138a1912": "2026-03-17T23:00:56",
-    "7cdeb67ef417eb7a5cea6cd1": "2026-03-17T23:00:56",
-    "041b376bba1cdaffe3c62c3a": "2026-03-17T23:00:56",
-    "b5e16f9c3f620024fbd71c16": "2026-03-17T23:00:56",
-    "433e4dc03885473ee1733287": "2026-03-17T23:00:56",
-    "d8715b39a1c4feaa34f06b48": "2026-03-17T23:00:56",
-    "606e67a5c65d5f575268f0c5": "2026-03-17T23:00:56",
-    "99c8de70df85d290418af111": "2026-03-17T23:00:56",
-    "c879997244e803f0f0ea3100": "2026-03-17T23:00:56",
-    "015ef1d8809e5490ce26433b": "2026-03-17T23:00:56",
-    "72cd96c035220e2269de1f04": "2026-03-17T23:00:56",
     "a4154405c19d798495068dc3": "2026-03-18T22:57:39",
     "79d223a44e65357b5873add3": "2026-03-18T22:57:39",
     "5dfbcde1bf54b919031c17cb": "2026-03-18T22:57:39",
@@ -696,7 +661,26 @@
     "73f7000f01fe70bbfc777deb": "2026-04-15T23:10:42",
     "0d4f52d621be548522241414": "2026-04-15T23:10:42",
     "d3dc4bbfd1ce11456419152a": "2026-04-15T23:10:42",
-    "7f97a715da5c77b491f62c29": "2026-04-15T23:10:42"
+    "7f97a715da5c77b491f62c29": "2026-04-15T23:10:42",
+    "f8b253320286b10310e62b1b": "2026-04-16T23:10:03",
+    "d658961c08632d26fceef003": "2026-04-16T23:10:03",
+    "736c7cfd06c096804ac9e27b": "2026-04-16T23:10:03",
+    "00c1a1c82a46e8fdd28b2459": "2026-04-16T23:10:03",
+    "327b53383be2b6130746a7a9": "2026-04-16T23:10:03",
+    "80f6163452e3efc78c86b663": "2026-04-16T23:10:03",
+    "146ecc703c1e74777751cf1d": "2026-04-16T23:10:03",
+    "5e3fe036b9feab85cc5cc6fb": "2026-04-16T23:10:03",
+    "41b04b4d130b99ab9214c571": "2026-04-16T23:10:03",
+    "93397355b82292f09cefdd94": "2026-04-16T23:10:03",
+    "a06e36fc6cced02f9aecaa79": "2026-04-16T23:10:03",
+    "4d64b0c98f844fc8ec402d0e": "2026-04-16T23:10:03",
+    "bfcb08733fe4de3f675eb612": "2026-04-16T23:10:03",
+    "50062dd87764fe2a71d16ee8": "2026-04-16T23:10:03",
+    "e5d92f5608b92f357cae1ec3": "2026-04-16T23:10:03",
+    "2b11f3d0c6171928d7cb42c2": "2026-04-16T23:10:03",
+    "b66ddc08b234e156714e4a68": "2026-04-16T23:10:03",
+    "0eabe41db929d46dee615a1a": "2026-04-16T23:10:03",
+    "1e782834ee5abcb1c6be8659": "2026-04-16T23:10:03"
   },
   "titles": [
     [
@@ -5650,6 +5634,90 @@
     [
       "정치인 거래정책 리포트 20260416",
       "2026-04-16"
+    ],
+    [
+      "ionq stock trade by greg steube should raise some flags says tracker made popular by nancy pelosis st",
+      "2026-04-17"
+    ],
+    [
+      "form 4 beta technologies inc insider trading activity stock titan",
+      "2026-04-17"
+    ],
+    [
+      "energy fuels uuuu ceo mark chalmers files form 4 with no trades stock titan",
+      "2026-04-17"
+    ],
+    [
+      "form 4 pony ai inc insider trading activity stock titan",
+      "2026-04-17"
+    ],
+    [
+      "form 4 encompass health corp insider trading activity stock titan",
+      "2026-04-17"
+    ],
+    [
+      "form 4 verisign incca insider trading activity stock titan",
+      "2026-04-17"
+    ],
+    [
+      "form 4 td synnex corp insider trading activity stock titan",
+      "2026-04-17"
+    ],
+    [
+      "form 4 beta technologies inc insider trading activity stock titan",
+      "2026-04-17"
+    ],
+    [
+      "form 4 td synnex corp insider trading activity stock titan",
+      "2026-04-17"
+    ],
+    [
+      "mongodb mdb director merriman sells 12000 shares in rule 10b51 trades stock titan",
+      "2026-04-17"
+    ],
+    [
+      "form 4 sophia genetics sa insider trading activity stock titan",
+      "2026-04-17"
+    ],
+    [
+      "bruker brkr evp mark munch sells 2000 shares after option exercise stock titan",
+      "2026-04-17"
+    ],
+    [
+      "form 4 banco santander brasil sa insider trading activity stock titan",
+      "2026-04-17"
+    ],
+    [
+      "there is nothing new about trumps economic populism oped eurasia review",
+      "2026-04-17"
+    ],
+    [
+      "us pharma tariffs and mfn become law after april 2 update clinical leader",
+      "2026-04-17"
+    ],
+    [
+      "ecbs nagel no rate decision commitment yet maintains waitandsee approach crypto briefing",
+      "2026-04-17"
+    ],
+    [
+      "신현송 한은 총재 후보 청문회 마무리통화정책과 금리 결정 주목 스페셜경제",
+      "2026-04-17"
+    ],
+    [
+      "cleveland fed president hammack expects interest rates to stay on hold for a good while",
+      "2026-04-17"
+    ],
+    [
+      "iran war puts us companies in waitandsee mode fed report says",
+      "2026-04-17"
+    ],
+    [
+      "fed beige book energy costs surge amid iran war rate cut odds decrease crypto briefing",
+      "2026-04-17"
+    ],
+    [
+      "정치인 거래정책 리포트 20260417",
+      "2026-04-17"
     ]
   ],
   "seen_urls": {}
