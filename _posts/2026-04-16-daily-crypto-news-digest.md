@@ -56,40 +56,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-16 - 암호화폐 뉴스 요
 <li><a href="https://www.coindesk.com/business/2026/04/15/bitcoin-developer-jameson-lopp-says-it-s-better-to-freeze-5-6-million-btc-than-let-hackers-have-them">비트코인 개발자 Jameson Lopp는 560만 BTC을 동결하는 것이 해커에게 맡기는 것보다 낫다고 말합니다.</a> <span class="p0-desc">Lopp은 양자 컴퓨팅이 공격자에게 휴면 코인을 확보할 수 있는 능력을 제공한다면 휴면 코인이 시스템적 위험을 초래할 수 있다고 말하며 점점 커지는 "동결 여부" 논쟁을 심화시킵니.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Anthropic의 Mythos는 비트코인을(를) 위협하지 않습니다. 실제 AI 위험은 암호화폐 거래소에 있습니다 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 106건의 뉴스 중 P1 주요 이슈도 15건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (52건): 비트코인, ETF 관련 (52건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (20건): 달러, 부상 가격 변동 (20건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🟣 DeFi** (15건): management, lawmaker, regulate 탈중앙 금융 이슈가 부각되며 유동성 풀 리밸런싱 여부에 주목하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- Anthropic의 Mythos는 비트코인을(를) 위협하지 않습니다. 실제 AI 위험은 암호화폐 거래소에 있습니다
-- 비트코인 개발자 Jameson Lopp는 560만 BTC을 동결하는 것이 해커에게 맡기는 것보다 낫다고 말합니다.
-
-### 주요 이슈
-
-- 대부분의 투자자가 완전히 무시하는 암호화폐의 가장 큰 위험
-- 골드만삭스은 한 애널리스트가 '부머 캔디'라고 부르는 제품으로 비트코인 ETF에 깜짝 뛰어들었습니다.
-- 첫 번째 비트코인 ETF 제품에 대한 골드만삭스 파일
-- 외 12건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Google News EN(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-04-16.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-04-16.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🟣 DeFi
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
