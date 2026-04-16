@@ -926,3 +926,187 @@ class TestTranslateBatchMissedLines:
 
         assert result == ["번역A", "번역B"]
         mock_t.assert_not_called()
+
+
+# ---------------------------------------------------------------------------
+# Tests targeting the final 8 missing lines
+# ---------------------------------------------------------------------------
+
+
+class TestIsMojibakeEmptyPath:
+    """_is_mojibake() returns False for empty/None input (line 232)."""
+
+    def test_empty_string_returns_false(self):
+        from common.translator import _is_mojibake
+
+        assert _is_mojibake("") is False
+
+    def test_none_returns_false(self):
+        from common.translator import _is_mojibake
+
+        assert _is_mojibake(None) is False
+
+    def test_clean_korean_returns_false(self):
+        from common.translator import _is_mojibake
+
+        assert _is_mojibake("비트코인 상승") is False
+
+    def test_latin1_run_returns_true(self):
+        from common.translator import _is_mojibake
+
+        # Three consecutive Latin-1 extended chars (U+00C0–U+00FF)
+        assert _is_mojibake("\u00c0\u00c1\u00c2") is True
+
+
+class TestLoadCacheMojibakeRemoval:
+    """_load_cache() removes mojibake-corrupted entries (lines 260, 262-263)."""
+
+    def test_mojibake_entries_removed_from_cache(self):
+        import common.translator as tr_mod
+
+        # Value containing 3+ Latin-1 extended chars = mojibake
+        mojibake_value = "\u00c0\u00c1\u00c2 corrupted"
+        dirty_data = {
+            "good_key": "정상 번역",
+            "bad_key": mojibake_value,
+        }
+
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=".json", delete=False, encoding="utf-8"
+        ) as f:
+            json.dump(dirty_data, f)
+            tmp_path = Path(f.name)
+
+        tr_mod._cache = None
+        tr_mod._cache_dirty = False
+        with patch.object(tr_mod, "_CACHE_PATH", tmp_path):
+            cache = tr_mod._load_cache()
+
+        assert "bad_key" not in cache
+        assert "good_key" in cache
+        assert tr_mod._cache_dirty is True
+
+        tr_mod._cache = None
+        tr_mod._cache_dirty = False
+        tmp_path.unlink(missing_ok=True)
+
+    def test_no_mojibake_dirty_flag_stays_false(self):
+        import common.translator as tr_mod
+
+        clean_data = {"k1": "정상", "k2": "번역"}
+
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=".json", delete=False, encoding="utf-8"
+        ) as f:
+            json.dump(clean_data, f)
+            tmp_path = Path(f.name)
+
+        tr_mod._cache = None
+        tr_mod._cache_dirty = False
+        with patch.object(tr_mod, "_CACHE_PATH", tmp_path):
+            tr_mod._load_cache()
+
+        # No mojibake, no artifact fixes → dirty flag stays False
+        assert tr_mod._cache_dirty is False
+
+        tr_mod._cache = None
+        tmp_path.unlink(missing_ok=True)
+
+
+class TestSaveCacheMojibakeStripping:
+    """_save_cache() strips mojibake entries inserted this session (lines 303, 305)."""
+
+    def test_mojibake_entries_not_written_to_disk(self):
+        import common.translator as tr_mod
+
+        original_cache = tr_mod._cache
+        original_dirty = tr_mod._cache_dirty
+
+        mojibake_value = "\u00c0\u00c1\u00c2 bad value"
+        tr_mod._cache = {
+            "good_key": "정상값",
+            "bad_key": mojibake_value,
+        }
+        tr_mod._cache_dirty = True
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            tmp_path = Path(tmpdir) / "_state" / "cache.json"
+            with patch.object(tr_mod, "_CACHE_PATH", tmp_path):
+                tr_mod._save_cache()
+
+            saved = json.loads(tmp_path.read_text(encoding="utf-8"))
+            assert "bad_key" not in saved
+            assert "good_key" in saved
+            assert saved["good_key"] == "정상값"
+
+        tr_mod._cache = original_cache
+        tr_mod._cache_dirty = original_dirty
+
+    def test_all_mojibake_cache_writes_empty_dict(self):
+        import common.translator as tr_mod
+
+        original_cache = tr_mod._cache
+        original_dirty = tr_mod._cache_dirty
+
+        tr_mod._cache = {
+            "k1": "\u00c0\u00c1\u00c2\u00c3",
+            "k2": "\u00d0\u00d1\u00d2\u00d3",
+        }
+        tr_mod._cache_dirty = True
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            tmp_path = Path(tmpdir) / "_state" / "cache.json"
+            with patch.object(tr_mod, "_CACHE_PATH", tmp_path):
+                tr_mod._save_cache()
+
+            saved = json.loads(tmp_path.read_text(encoding="utf-8"))
+            assert saved == {}
+
+        tr_mod._cache = original_cache
+        tr_mod._cache_dirty = original_dirty
+
+
+class TestTranslateUntranslatedBodyDisabledAndEmptyPayload:
+    """translate_untranslated_body() disabled path (line 710) and empty payload skip (line 723)."""
+
+    def test_returns_content_unchanged_when_disabled(self):
+        from common.translator import translate_untranslated_body
+
+        content = "Bitcoin rises as traders watch ETF approval news closely."
+        with patch("common.translator.TRANSLATION_ENABLED", False):
+            result = translate_untranslated_body(content)
+        assert result == content
+
+    def test_returns_empty_string_unchanged_when_disabled(self):
+        from common.translator import translate_untranslated_body
+
+        with patch("common.translator.TRANSLATION_ENABLED", False):
+            result = translate_untranslated_body("")
+        assert result == ""
+
+    def test_line_with_only_marker_skipped(self):
+        """A list marker line whose payload is empty after stripping is skipped (line 723).
+
+        _LEADING_MARKER_RE is patched to consume the full line so that the
+        payload becomes empty — the only way to reach the dead branch given
+        that _should_translate_body_line already requires 4+ English words.
+        """
+        import re
+
+        import common.translator as tr_mod
+
+        # A regex that matches the ENTIRE line (greedy .*) forces payload == ""
+        greedy_re = re.compile(r"^(.*)")
+
+        content = "Bitcoin rises as traders watch market sentiment and price movements today."
+        with (
+            patch("common.translator.TRANSLATION_ENABLED", True),
+            patch.object(tr_mod, "_LEADING_MARKER_RE", greedy_re),
+            patch("common.translator.translate_batch") as mock_batch,
+        ):
+            result = translate_untranslated_body(content)
+
+        # translate_batch must NOT have been called — payload was empty, line skipped
+        mock_batch.assert_not_called()
+        # Content is returned unchanged (no payloads collected → early return)
+        assert result == content
