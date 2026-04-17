@@ -56,40 +56,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-17 - 암호화폐 뉴스 요
 <li><a href="https://www.coindesk.com/business/2026/04/16/drift-gets-usd148-million-funding-from-tether-and-partners-as-it-replaces-circle-stablecoin-with-usdt-after-massive-exploit">Drift는 대규모 악용 이후 Circle 스테이블코인을 USDT로 대체하면서 테더 및 파트너로부터 1억 4,800만 달러의 자금을 지원받습니다.</a> <span class="p0-desc">이 돈은 이번 달에 2억 7천만 달러 이상의 고객 자산이 악용된 후 Drift가 사용자 자금을 회수하는 데 사용될 것이며 솔라나에 USDT 기반 영구 DEX로 프로토콜을 다시 시작.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 오전 회의록: 비트코인 개발자가 새로운 양자 솔루션을 제안함 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 102건의 뉴스 중 P1 주요 이슈도 13건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (51건): 비트코인 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (20건): 알트코인 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🔵 규제/정책** (22건): 규제, 스테이블코인 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 오전 회의록: 비트코인 개발자가 새로운 양자 솔루션을 제안함
-- Drift는 대규모 악용 이후 Circle 스테이블코인을 USDT로 대체하면서 테더 및 파트너로부터 1억 4,800만 달러의 자금을 지원받습니다.
-
-### 주요 이슈
-
-- 골드만삭스은 한 애널리스트가 '부머 캔디'라고 부르는 제품으로 비트코인 ETF에 깜짝 뛰어들었습니다.
-- 첫 번째 비트코인 ETF 제품에 대한 골드만삭스 파일
-- 골드만삭스은 새로운 비트코인 ETF에 대한 SEC 승인을 구합니다.
-- 외 10건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Decrypt(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-04-17.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-04-17.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
