@@ -311,7 +311,28 @@
       "공포·탐욕 지수": 0.3,
       "VIX 변동성": 0.45
     },
-    "btc_price": null,
-    "recorded_at": "2026-04-16T02:18:58Z"
+    "btc_price": 74103.9609375,
+    "recorded_at": "2026-04-15T15:07:01Z",
+    "accuracy": {
+      "predicted_verdict": "강세",
+      "predicted_score": 65.7,
+      "actual_price_change_pct": 0.3055,
+      "actual_direction": "보합",
+      "correct": false,
+      "evaluated_at": "2026-04-16T15:28:32Z"
+    }
+  },
+  {
+    "date": "2026-04-17",
+    "composite_score": 64.6,
+    "verdict": "강세",
+    "confidence": "high",
+    "signal_scores": {
+      "공포·탐욕 지수": 0.618,
+      "VIX 변동성": 0.6627,
+      "매크로": 0.6829
+    },
+    "btc_price": 74330.3515625,
+    "recorded_at": "2026-04-16T15:28:32Z"
   }
 ]
