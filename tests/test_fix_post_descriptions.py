@@ -1,12 +1,45 @@
-"""Tests for scripts/fix_post_descriptions.py — pure functions only."""
+"""tests/test_fix_post_descriptions.py — fix_post_descriptions 단위 테스트."""
 
-import os
 import sys
+from datetime import UTC, date, datetime, timedelta
+from pathlib import Path
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+import fix_post_descriptions as fpd
+
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
 
 
-import scripts.fix_post_descriptions as fpd
+def _make_post(tmp_path: Path, name: str, content: str) -> Path:
+    p = tmp_path / name
+    p.write_text(content, encoding="utf-8")
+    return p
+
+
+def _post_content(
+    title: str = "Test Title",
+    description: str = "The Federal Reserve raised rates by 50bps in April 2026 amid inflation concerns.",
+    description_ko: str = "",
+    date_str: str = "2026-04-17",
+    source: str = "",
+    body: str = "",
+) -> str:
+    lines = [
+        "---",
+        f"title: {title}",
+        f'description: "{description}"',
+        f"date: {date_str}",
+    ]
+    if description_ko:
+        lines.append(f'description_ko: "{description_ko}"')
+    if source:
+        lines.append(f"source: {source}")
+    lines.append("---")
+    if body:
+        lines.append(body)
+    return "\n".join(lines) + "\n"
+
 
 # ---------------------------------------------------------------------------
 # _strip_quotes
@@ -46,7 +79,6 @@ class TestIsBoilerplate:
         assert fpd._is_boilerplate("coindesk is the leading crypto news site") is True
 
     def test_short_desc_no_specifics_is_boilerplate(self):
-        # Less than 35 chars with no article-specific content
         assert fpd._is_boilerplate("짧은 내용") is True
 
     def test_synthetic_marker_detected(self):
@@ -90,7 +122,6 @@ class TestIsTitleRepeat:
         assert fpd._is_title_repeat("Bitcoin ETF Approval Today", "") is False
 
     def test_different_content_not_repeat(self):
-        # Use texts with no shared characters to guarantee no overlap
         desc = "가나다라마바사아자차카타파하"
         title = "qwerty uiop asdfghjkl zxcvbnm"
         assert fpd._is_title_repeat(desc, title) is False
@@ -98,7 +129,6 @@ class TestIsTitleRepeat:
     def test_near_duplicate_is_repeat(self):
         title = "비트코인 ETF 승인 소식"
         desc = "비트코인 ETF 승인 소식이 전해졌습니다"
-        # desc is very similar to title
         assert fpd._is_title_repeat(desc, title) is True
 
 
@@ -181,9 +211,8 @@ class TestTruncate:
     def test_truncates_at_sentence_boundary(self):
         s = "First sentence. " + "x" * 200
         result = fpd._truncate(s, 50)
-        # _truncate breaks at "." — result may include trailing space or ellipsis
         assert "First sentence" in result
-        assert len(result) <= 53  # allow for "…" suffix
+        assert len(result) <= 53
 
     def test_truncates_with_ellipsis_when_no_boundary(self):
         s = "a" * 300
@@ -199,6 +228,10 @@ class TestTruncate:
         s = "Is this right? " + "z" * 200
         result = fpd._truncate(s, 20)
         assert "?" in result
+
+    def test_exact_length_unchanged(self):
+        s = "a" * 50
+        assert fpd._truncate(s, 50) == s
 
 
 # ---------------------------------------------------------------------------
@@ -230,6 +263,11 @@ class TestReplaceDescriptionInText:
         content = self._make_post("Old desc.")
         result = fpd._replace_description_in_text(content, "New desc.")
         assert "Body content here." in result
+
+    def test_old_value_removed(self):
+        content = self._make_post("Old boilerplate text.")
+        result = fpd._replace_description_in_text(content, "New good text.")
+        assert "Old boilerplate text." not in result
 
 
 # ---------------------------------------------------------------------------
@@ -315,6 +353,15 @@ class TestExtractBodyCandidate:
         result = fpd._extract_body_candidate(content)
         assert "비트코인" in result
 
+    def test_skips_lines_with_http(self):
+        content = (
+            "---\ntitle: Links\n---\n"
+            "https://example.com/some-very-long-url-that-could-fool-the-extractor\n"
+            "The actual content about Bitcoin reaching new highs due to institutional demand globally in 2026.\n"
+        )
+        result = fpd._extract_body_candidate(content)
+        assert "http" not in result
+
 
 # ---------------------------------------------------------------------------
 # _pct
@@ -382,6 +429,19 @@ class TestFormatText:
         assert "Total scanned" in result
         assert "0" in result
 
+    def test_unfixable_section_shown(self):
+        posts = [
+            {
+                "file": type("F", (), {"name": "2026-01-01-bad.md"})(),
+                "needs_fix": True,
+                "replacement": "",
+                "replacement_source": "",
+                "description": "Old boilerplate text.",
+            }
+        ]
+        result = fpd._format_text(posts, applied=False, dry_run=True)
+        assert "Unfixable" in result
+
 
 # ---------------------------------------------------------------------------
 # _format_markdown
@@ -412,9 +472,13 @@ class TestFormatMarkdown:
         result = fpd._format_markdown(self._make_posts(needs_fix=False), applied=False, dry_run=True)
         assert "✅" in result
 
-    def test_unfixable_shows_warning(self):
+    def test_unfixable_shows_warning_icon(self):
         result = fpd._format_markdown(self._make_posts(has_replacement=False), applied=False, dry_run=True)
-        assert isinstance(result, str)
+        assert "❌" in result
+
+    def test_fixable_shown_in_markdown(self):
+        result = fpd._format_markdown(self._make_posts(), applied=False, dry_run=True)
+        assert "2026-01-01-test.md" in result
 
 
 # ---------------------------------------------------------------------------
@@ -438,6 +502,329 @@ class TestPostDateFromText:
         text = "---\ndate: not-a-date\n---\nBody"
         result = fpd._post_date_from_text(text)
         assert result is None
+
+
+# ---------------------------------------------------------------------------
+# _analyze_post
+# ---------------------------------------------------------------------------
+
+
+class TestAnalyzePost:
+    def test_good_description_no_fix_needed(self, tmp_path):
+        content = _post_content(
+            title="Fed Rate Decision 2026",
+            description="The Federal Reserve raised rates by 50bps in April 2026 amid inflation concerns.",
+        )
+        p = _make_post(tmp_path, "2026-04-17-fed.md", content)
+        result = fpd._analyze_post(p)
+        assert result["needs_fix"] is False
+        assert result["replacement"] == ""
+
+    def test_boilerplate_description_triggers_fix(self, tmp_path):
+        content = _post_content(
+            title="Motley Fool Weekly",
+            description="Motley Fool provides investment advice and stock recommendations.",
+        )
+        p = _make_post(tmp_path, "2026-04-17-motley.md", content)
+        result = fpd._analyze_post(p)
+        assert result["needs_fix"] is True
+
+    def test_uses_description_ko_as_replacement(self, tmp_path):
+        ko_desc = "비트코인 ETF 승인 후 BTC 가격이 2026년 4월 95,000달러에 도달했습니다."
+        content = _post_content(
+            title="BTC ATH",
+            description="관련 소식입니다",
+            description_ko=ko_desc,
+        )
+        p = _make_post(tmp_path, "2026-04-17-btc.md", content)
+        result = fpd._analyze_post(p)
+        assert result["needs_fix"] is True
+        assert result["replacement"] == ko_desc
+        assert result["replacement_source"] == "description_ko"
+
+    def test_uses_body_extract_when_no_ko(self, tmp_path):
+        body = (
+            "Bitcoin reached $100,000 in April 2026 following institutional "
+            "adoption by major Wall Street firms including BlackRock and Fidelity."
+        )
+        content = _post_content(
+            title="Bitcoin ATH",
+            description="관련 소식입니다",
+            body=body,
+        )
+        p = _make_post(tmp_path, "2026-04-17-btc2.md", content)
+        result = fpd._analyze_post(p)
+        assert result["needs_fix"] is True
+        assert result["replacement_source"] == "body_extract"
+
+    def test_worldmonitor_source_uses_alert_box(self, tmp_path):
+        content = (
+            "---\n"
+            "title: WorldMonitor Daily\n"
+            'description: "관련 소식입니다"\n'
+            "date: 2026-04-17\n"
+            'source: "worldmonitor"\n'
+            "---\n"
+            "총 수집: <strong>63건</strong> "
+            "핵심 테마: <strong>에너지·지정학</strong> "
+            "집중 출처: <strong>Reuters·AP</strong>\n"
+        )
+        p = _make_post(tmp_path, "2026-04-17-wm.md", content)
+        result = fpd._analyze_post(p)
+        assert result["needs_fix"] is True
+        assert result["replacement_source"] == "worldmonitor_alert"
+
+    def test_returns_dict_with_expected_keys(self, tmp_path):
+        content = _post_content()
+        p = _make_post(tmp_path, "2026-04-17-keys.md", content)
+        result = fpd._analyze_post(p)
+        for key in ("file", "date", "title", "description", "needs_fix", "replacement", "replacement_source", "content"):
+            assert key in result
+
+    def test_date_parsed_from_post(self, tmp_path):
+        content = _post_content(date_str="2026-04-17")
+        p = _make_post(tmp_path, "2026-04-17-dated.md", content)
+        result = fpd._analyze_post(p)
+        assert result["date"] == date(2026, 4, 17)
+
+
+# ---------------------------------------------------------------------------
+# collect_posts
+# ---------------------------------------------------------------------------
+
+
+class TestCollectPosts:
+    def test_collects_recent_post(self, tmp_path):
+        today = datetime.now(tz=UTC).date().isoformat()
+        content = _post_content(date_str=today)
+        _make_post(tmp_path, f"{today}-recent.md", content)
+        results = fpd.collect_posts(tmp_path, days=7)
+        assert len(results) == 1
+
+    def test_excludes_old_post(self, tmp_path):
+        old_date = (datetime.now(tz=UTC).date() - timedelta(days=60)).isoformat()
+        content = _post_content(date_str=old_date)
+        _make_post(tmp_path, f"{old_date}-old.md", content)
+        results = fpd.collect_posts(tmp_path, days=7)
+        assert len(results) == 0
+
+    def test_excludes_post_without_date(self, tmp_path):
+        content = "---\ntitle: No Date\ndescription: some desc\n---\nbody\n"
+        _make_post(tmp_path, "2026-04-17-nodate.md", content)
+        results = fpd.collect_posts(tmp_path, days=7)
+        assert len(results) == 0
+
+    def test_empty_dir_returns_empty_list(self, tmp_path):
+        results = fpd.collect_posts(tmp_path, days=7)
+        assert results == []
+
+    def test_collects_multiple_posts(self, tmp_path):
+        today = datetime.now(tz=UTC).date().isoformat()
+        yesterday = (datetime.now(tz=UTC).date() - timedelta(days=1)).isoformat()
+        _make_post(tmp_path, f"{today}-a.md", _post_content(date_str=today))
+        _make_post(tmp_path, f"{yesterday}-b.md", _post_content(date_str=yesterday))
+        results = fpd.collect_posts(tmp_path, days=7)
+        assert len(results) == 2
+
+
+# ---------------------------------------------------------------------------
+# apply_fixes
+# ---------------------------------------------------------------------------
+
+
+class TestApplyFixes:
+    def test_fixes_are_written_to_file(self, tmp_path):
+        content = '---\ntitle: Test Post\ndescription: "Motley Fool provides analysis"\ndate: 2026-04-17\n---\nbody\n'
+        p = _make_post(tmp_path, "2026-04-17-fix.md", content)
+        posts = [
+            {
+                "file": p,
+                "needs_fix": True,
+                "replacement": "Bitcoin reached $95,000 after ETF approval in 2026.",
+                "replacement_source": "description_ko",
+                "content": content,
+            }
+        ]
+        count = fpd.apply_fixes(posts)
+        assert count == 1
+        updated = p.read_text(encoding="utf-8")
+        assert "Bitcoin reached" in updated
+
+    def test_no_fix_when_needs_fix_false(self, tmp_path):
+        content = _post_content()
+        p = _make_post(tmp_path, "2026-04-17-noop.md", content)
+        original = p.read_text(encoding="utf-8")
+        posts = [
+            {
+                "file": p,
+                "needs_fix": False,
+                "replacement": "Some replacement",
+                "replacement_source": "body_extract",
+                "content": content,
+            }
+        ]
+        count = fpd.apply_fixes(posts)
+        assert count == 0
+        assert p.read_text(encoding="utf-8") == original
+
+    def test_no_fix_when_no_replacement(self, tmp_path):
+        content = _post_content()
+        p = _make_post(tmp_path, "2026-04-17-noreplace.md", content)
+        original = p.read_text(encoding="utf-8")
+        posts = [
+            {
+                "file": p,
+                "needs_fix": True,
+                "replacement": "",
+                "replacement_source": "",
+                "content": content,
+            }
+        ]
+        count = fpd.apply_fixes(posts)
+        assert count == 0
+        assert p.read_text(encoding="utf-8") == original
+
+    def test_returns_zero_for_empty_list(self):
+        assert fpd.apply_fixes([]) == 0
+
+    def test_multiple_files_count(self, tmp_path):
+        def make_fixable(name):
+            c = '---\ntitle: T\ndescription: "관련 소식입니다"\ndate: 2026-04-17\n---\nbody\n'
+            path = _make_post(tmp_path, name, c)
+            return {"file": path, "needs_fix": True, "replacement": "Good replacement text here.", "replacement_source": "ko", "content": c}
+
+        posts = [make_fixable("2026-04-17-a.md"), make_fixable("2026-04-17-b.md")]
+        count = fpd.apply_fixes(posts)
+        assert count == 2
+
+
+# ---------------------------------------------------------------------------
+# main — CLI integration
+# ---------------------------------------------------------------------------
+
+
+class TestMain:
+    def _make_posts_dir(self, tmp_path: Path) -> Path:
+        posts_dir = tmp_path / "_posts"
+        posts_dir.mkdir()
+        return posts_dir
+
+    def test_dry_run_does_not_modify_file(self, tmp_path, monkeypatch):
+        posts_dir = self._make_posts_dir(tmp_path)
+        today = datetime.now(tz=UTC).date().isoformat()
+        content = (
+            "---\ntitle: Test\n"
+            'description: "관련 소식입니다"\n'
+            f"date: {today}\n---\nbody\n"
+        )
+        p = posts_dir / f"{today}-test.md"
+        p.write_text(content, encoding="utf-8")
+        original = p.read_text(encoding="utf-8")
+
+        monkeypatch.setattr(
+            sys, "argv",
+            ["fix_post_descriptions.py", "--days", "7", "--posts-dir", str(posts_dir)],
+        )
+        result = fpd.main()
+        assert result == 0
+        assert p.read_text(encoding="utf-8") == original
+
+    def test_apply_modifies_boilerplate_file(self, tmp_path, monkeypatch):
+        posts_dir = self._make_posts_dir(tmp_path)
+        today = datetime.now(tz=UTC).date().isoformat()
+        ko_desc = "비트코인 ETF 승인 후 BTC 가격이 2026년 4월에 상승하였습니다."
+        content = (
+            "---\ntitle: BTC\n"
+            'description: "관련 소식입니다"\n'
+            f'description_ko: "{ko_desc}"\n'
+            f"date: {today}\n---\nbody\n"
+        )
+        p = posts_dir / f"{today}-btc.md"
+        p.write_text(content, encoding="utf-8")
+
+        monkeypatch.setattr(
+            sys, "argv",
+            ["fix_post_descriptions.py", "--days", "7", "--apply", "--posts-dir", str(posts_dir)],
+        )
+        result = fpd.main()
+        assert result == 0
+        updated = p.read_text(encoding="utf-8")
+        assert ko_desc in updated
+
+    def test_missing_posts_dir_returns_2(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(
+            sys, "argv",
+            ["fix_post_descriptions.py", "--posts-dir", str(tmp_path / "nonexistent")],
+        )
+        result = fpd.main()
+        assert result == 2
+
+    def test_empty_posts_dir_returns_0(self, tmp_path, monkeypatch, capsys):
+        posts_dir = self._make_posts_dir(tmp_path)
+        monkeypatch.setattr(
+            sys, "argv",
+            ["fix_post_descriptions.py", "--days", "7", "--posts-dir", str(posts_dir)],
+        )
+        result = fpd.main()
+        assert result == 0
+
+    def test_markdown_format_flag(self, tmp_path, monkeypatch, capsys):
+        posts_dir = self._make_posts_dir(tmp_path)
+        today = datetime.now(tz=UTC).date().isoformat()
+        content = _post_content(date_str=today)
+        (posts_dir / f"{today}-test.md").write_text(content, encoding="utf-8")
+
+        monkeypatch.setattr(
+            sys, "argv",
+            [
+                "fix_post_descriptions.py",
+                "--days", "7",
+                "--format", "markdown",
+                "--posts-dir", str(posts_dir),
+            ],
+        )
+        result = fpd.main()
+        assert result == 0
+        out = capsys.readouterr().out
+        assert "| Category |" in out
+
+    def test_single_file_mode(self, tmp_path, monkeypatch, capsys):
+        posts_dir = self._make_posts_dir(tmp_path)
+        today = datetime.now(tz=UTC).date().isoformat()
+        content = _post_content(date_str=today)
+        p = tmp_path / f"{today}-single.md"
+        p.write_text(content, encoding="utf-8")
+
+        monkeypatch.setattr(
+            sys, "argv",
+            ["fix_post_descriptions.py", "--file", str(p), "--posts-dir", str(posts_dir)],
+        )
+        result = fpd.main()
+        assert result == 0
+
+    def test_single_file_missing_returns_2(self, tmp_path, monkeypatch):
+        posts_dir = self._make_posts_dir(tmp_path)
+        missing = tmp_path / "nonexistent.md"
+        monkeypatch.setattr(
+            sys, "argv",
+            ["fix_post_descriptions.py", "--file", str(missing), "--posts-dir", str(posts_dir)],
+        )
+        result = fpd.main()
+        assert result == 2
+
+    def test_text_format_output_has_scanned(self, tmp_path, monkeypatch, capsys):
+        posts_dir = self._make_posts_dir(tmp_path)
+        today = datetime.now(tz=UTC).date().isoformat()
+        content = _post_content(date_str=today)
+        (posts_dir / f"{today}-test.md").write_text(content, encoding="utf-8")
+
+        monkeypatch.setattr(
+            sys, "argv",
+            ["fix_post_descriptions.py", "--days", "7", "--posts-dir", str(posts_dir)],
+        )
+        fpd.main()
+        out = capsys.readouterr().out
+        assert "Total scanned" in out
 
 
 # ---------------------------------------------------------------------------
