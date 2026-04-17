@@ -51,6 +51,7 @@ assets/images/test-*
 # OMC / temp / coverage
 .omc-config.json
 .tmp/
+/.tmp
 .coverage
 scripts/.coverage
 coverage-html/
