@@ -58,6 +58,8 @@ class DedupEngine:
         self.seen: Dict[str, str] = {}  # hash -> timestamp
         self.titles: List[List[str]] = []  # [[normalized_title, date_str], ...]
         self.seen_urls: Dict[str, str] = {}  # normalized_url -> timestamp
+        self._checked = 0
+        self._duplicates = 0
         self._load()
 
     def _load(self) -> None:
@@ -135,6 +137,15 @@ class DedupEngine:
             except OSError:
                 pass
 
+    def log_stats(self) -> None:
+        """Log dedup statistics for the current session."""
+        if self._checked:
+            kept = self._checked - self._duplicates
+            logger.info(
+                "Dedup stats: checked %d, removed %d duplicates, kept %d items",
+                self._checked, self._duplicates, kept,
+            )
+
     def is_duplicate(self, title: str, source: str, date_str: str, url: str = "") -> bool:
         """Check if a news item is a duplicate.
 
@@ -145,17 +156,20 @@ class DedupEngine:
         """
         if not title or not title.strip():
             return True
+        self._checked += 1
 
         # URL-based dedup: same URL from different source tags
         if url:
             norm_url = _normalize_url(url)
             if norm_url and norm_url in self.seen_urls:
                 logger.debug("URL duplicate: %s (source: %s)", url[:80], source)
+                self._duplicates += 1
                 return True
 
         # Exact hash check
         h = _make_hash(title, source, date_str)
         if h in self.seen:
+            self._duplicates += 1
             return True
 
         # Date-aware fuzzy matching against recent titles
@@ -179,6 +193,7 @@ class DedupEngine:
                     title[:50],
                     existing_title[:50],
                 )
+                self._duplicates += 1
                 return True
 
         return False
