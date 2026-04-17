@@ -1,33 +1,5 @@
 {
   "seen": {
-    "a4154405c19d798495068dc3": "2026-03-18T22:57:39",
-    "79d223a44e65357b5873add3": "2026-03-18T22:57:39",
-    "5dfbcde1bf54b919031c17cb": "2026-03-18T22:57:39",
-    "2528c290db4a0fcc4f09cba0": "2026-03-18T22:57:39",
-    "11f5f481fd2d1449d8d190e5": "2026-03-18T22:57:39",
-    "fb62f263d2f7c310b535a21e": "2026-03-18T22:57:39",
-    "f6b6544e2da6aa4dc3600cee": "2026-03-18T22:57:39",
-    "1db0daf2f1b6dd4edaa6d3cf": "2026-03-18T22:57:39",
-    "fc7b3a7130d22965dae5e053": "2026-03-18T22:57:39",
-    "ba7df2c1a7605700fa5008c4": "2026-03-18T22:57:39",
-    "93386b35887d1dd41466b329": "2026-03-18T22:57:39",
-    "6e029f8abfdbbf01ed19c9da": "2026-03-18T22:57:39",
-    "705ec995250b811086cba747": "2026-03-18T22:57:39",
-    "ed2953a6a3267b00dd2018f6": "2026-03-18T22:57:39",
-    "a8a5683104f2447c8a888981": "2026-03-18T22:57:39",
-    "c559f1d55da57e7ff0650656": "2026-03-18T22:57:39",
-    "b392fbd2dffb34e0f19e4673": "2026-03-18T22:57:39",
-    "49816c9948fb523b4a31e354": "2026-03-18T22:57:39",
-    "a9e96f9f2c3fc6de89d95ffe": "2026-03-18T22:57:39",
-    "19b9ce61a136e736b1fe38e0": "2026-03-18T22:57:39",
-    "aeadd5a5b1f1d1987dbf74d4": "2026-03-18T22:57:39",
-    "f04ed9ac19609975267b1bc5": "2026-03-18T22:57:39",
-    "15c481d6fc5edffcf617719e": "2026-03-18T22:57:39",
-    "c8742ac412aa6d06a2217bbd": "2026-03-18T22:57:39",
-    "104dc0fda82055bcef66a1e6": "2026-03-18T22:57:39",
-    "e28c64c929c046b54ffedcdd": "2026-03-18T22:57:39",
-    "036c7e3f52d616db5eb24e2f": "2026-03-18T22:57:39",
-    "b9ea0b54a6f1a9a9815e8f11": "2026-03-18T22:57:39",
     "975c6136f7b8019b75008c3e": "2026-03-19T22:57:33",
     "741aae75fb2d400d234d1e7e": "2026-03-19T22:57:33",
     "da1d25513a60040631d753ba": "2026-03-19T22:57:33",
@@ -600,7 +572,29 @@
     "333d207c5fc250cf9f97e1df": "2026-04-12T23:03:26",
     "0f8a8adf31339b8ae0fa07e7": "2026-04-12T23:03:26",
     "92e3a3571332eeb76f1ffd68": "2026-04-17T14:39:49",
-    "1e782834ee5abcb1c6be8659": "2026-04-17T14:39:49"
+    "1e782834ee5abcb1c6be8659": "2026-04-17T14:39:49",
+    "552439e583a3d14bc207d693": "2026-04-17T23:09:22",
+    "26e30773c3608f67cf2173fb": "2026-04-17T23:09:22",
+    "28c48a349b2081b63036f6fd": "2026-04-17T23:09:22",
+    "8836cbd7765bf103dc4be4a7": "2026-04-17T23:09:22",
+    "574a9847f9aef20458a03dbd": "2026-04-17T23:09:22",
+    "93aa6cab1905b795ad3594bd": "2026-04-17T23:09:22",
+    "d4bcecb72021ccfea80362c2": "2026-04-17T23:09:22",
+    "a81525d406762a81a63a07c6": "2026-04-17T23:09:22",
+    "d00130aa64c6a7ae0acae4cb": "2026-04-17T23:09:22",
+    "2cf7df181185f9454f0f4fd7": "2026-04-17T23:09:22",
+    "ce4d47a404df166189fd8537": "2026-04-17T23:09:22",
+    "bae5bc84150492dff34db251": "2026-04-17T23:09:22",
+    "8e33bc439a157a0c2017dccc": "2026-04-17T23:09:22",
+    "c70b81470429e37896ae16a0": "2026-04-17T23:09:22",
+    "75fffae1c58ba6b98fee4f71": "2026-04-17T23:09:22",
+    "80430c9d067b3950dcc15a21": "2026-04-17T23:09:22",
+    "17b3ce5bdcf23a6d7fb95cbd": "2026-04-17T23:09:22",
+    "b1f2a9a6ac28829c1cc5248c": "2026-04-17T23:09:22",
+    "1fc814373bd68d7020e400e0": "2026-04-17T23:09:22",
+    "5a28d07261e687788ff7ff2f": "2026-04-17T23:09:22",
+    "b9438758868cd754851d6733": "2026-04-17T23:09:22",
+    "dcc26fc522b7a3c8db5fc297": "2026-04-17T23:09:22"
   },
   "titles": [
     [
@@ -5302,6 +5296,94 @@
     [
       "정치인 거래정책 리포트 20260417",
       "2026-04-17"
+    ],
+    [
+      "congress trade representative jennifer l mcclellan just disclosed new stock trades quiver quantitative",
+      "2026-04-18"
+    ],
+    [
+      "green bay newcomer tony wied churns through 13 million in february stock trades hoodline",
+      "2026-04-18"
+    ],
+    [
+      "arlo nyse arlo insider 10b51 sells 179419 shares and other trades stock titan",
+      "2026-04-18"
+    ],
+    [
+      "insider sells 33438 shares at asp isotopes inc nasdaq aspi form 144 stock titan",
+      "2026-04-18"
+    ],
+    [
+      "form 4 international seaways inc insider trading activity stock titan",
+      "2026-04-18"
+    ],
+    [
+      "form 4 palomar holdings inc insider trading activity stock titan",
+      "2026-04-18"
+    ],
+    [
+      "form 4 amplitude inc insider trading activity stock titan",
+      "2026-04-18"
+    ],
+    [
+      "form 4 ensign group inc insider trading activity stock titan",
+      "2026-04-18"
+    ],
+    [
+      "form 4 adecoagro sa insider trading activity stock titan",
+      "2026-04-18"
+    ],
+    [
+      "form 4 arhaus inc insider trading activity stock titan",
+      "2026-04-18"
+    ],
+    [
+      "form 4 keros therapeutics inc insider trading activity stock titan",
+      "2026-04-18"
+    ],
+    [
+      "form 4 health in tech inc insider trading activity stock titan",
+      "2026-04-18"
+    ],
+    [
+      "director at adecoagro agro receives 5814share equity grant now holds 9938 stock titan",
+      "2026-04-18"
+    ],
+    [
+      "maplebear cart ceo chris rogers awarded 376405 rsus holdings top 10m shares stock titan",
+      "2026-04-18"
+    ],
+    [
+      "adecoagro agro director awarded 5814 common shares raising holdings to 9938 stock titan",
+      "2026-04-18"
+    ],
+    [
+      "banks will have to collect citizenship data trump administration says fox 13 tampa bay",
+      "2026-04-18"
+    ],
+    [
+      "there is nothing new about trumps economic populism oped eurasia review",
+      "2026-04-18"
+    ],
+    [
+      "fomc interest rate decisions and cryptocurrency how fed policy is shaping crypto banks and global liquidity in 2026 kucoin",
+      "2026-04-18"
+    ],
+    [
+      "ecb keeps markets guessing on rates with two weeks to go warns of layer cake of shocks",
+      "2026-04-18"
+    ],
+    [
+      "ecbs demarco signals uncertainty in april rate decision amid middle east tensions crypto briefing",
+      "2026-04-18"
+    ],
+    [
+      "ecbs nagel no rate decision commitment yet maintains waitandsee approach crypto briefing",
+      "2026-04-18"
+    ],
+    [
+      "정치인 거래정책 리포트 20260418",
+      "2026-04-18"
     ]
   ],
   "seen_urls": {}
