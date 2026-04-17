@@ -304,15 +304,14 @@
   },
   {
     "date": "2026-04-16",
-    "composite_score": 65.7,
-    "verdict": "강세",
+    "composite_score": 36.7,
+    "verdict": "약세",
     "confidence": "high",
     "signal_scores": {
-      "공포·탐욕 지수": 0.543,
-      "VIX 변동성": 0.7877,
-      "매크로": 0.6786
+      "공포·탐욕 지수": 0.3,
+      "VIX 변동성": 0.45
     },
-    "btc_price": 74103.9609375,
-    "recorded_at": "2026-04-15T15:07:01Z"
+    "btc_price": null,
+    "recorded_at": "2026-04-16T02:18:58Z"
   }
 ]
