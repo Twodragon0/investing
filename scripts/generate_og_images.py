@@ -102,6 +102,7 @@ except ImportError:
 _FONT_FAMILY = "monospace"
 _FONT_BOLD_PATH: Optional[str] = None
 
+
 def _discover_cjk_fonts() -> List[str]:
     """Return CJK font paths: static candidates + dynamic discovery."""
     candidates = [
@@ -126,7 +127,9 @@ def _discover_cjk_fonts() -> List[str]:
     try:
         _result = subprocess.run(
             ["fc-list", ":lang=ko", "-f", "%{file}\n"],
-            capture_output=True, text=True, timeout=5,
+            capture_output=True,
+            text=True,
+            timeout=5,
         )
         for _line in _result.stdout.strip().split("\n"):
             if _line and os.path.exists(_line):
