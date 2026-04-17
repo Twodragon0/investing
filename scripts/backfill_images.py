@@ -324,7 +324,7 @@ def needs_image(filepath: str) -> bool:
         return False
 
     fm, _ = parse_frontmatter(content)
-    img = fm.get("image", "")
+    img = (fm.get("image", "") or "").strip()
 
     # No image field at all
     if not img:
@@ -333,6 +333,12 @@ def needs_image(filepath: str) -> bool:
     # Placeholder default image
     if img == "/assets/images/og-default.png":
         return True
+
+    # Frontmatter references a file that doesn't exist on disk
+    if img.startswith("/"):
+        disk_path = os.path.join(REPO_ROOT, img.lstrip("/"))
+        if not os.path.exists(disk_path):
+            return True
 
     return False
 

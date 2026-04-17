@@ -13,6 +13,9 @@ on:
       - '_posts/**'
       - 'assets/images/generated/**'
       - 'scripts/check_post_images.py'
+  schedule:
+    # Nightly drift check at 18:30 UTC (03:30 KST)
+    - cron: '30 18 * * *'
   workflow_dispatch:
 
 concurrency:

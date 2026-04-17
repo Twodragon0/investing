@@ -55,6 +55,17 @@ def check_image_exists(image_url: str) -> list[str]:
             if not os.path.exists(variant_path):
                 missing.append(os.path.relpath(variant_path, REPO_ROOT))
 
+        # post-card.html derives thumbnails by replacing '/og-' with '/thumb-og-'.
+        # Verify those thumbnail variants exist for og-* images.
+        if "/og-" in image_url:
+            thumb_url = image_url.replace("/og-", "/thumb-og-", 1)
+            thumb_abs = os.path.join(REPO_ROOT, thumb_url.lstrip("/"))
+            thumb_base, _ = os.path.splitext(thumb_abs)
+            for thumb_ext in (os.path.splitext(thumb_abs)[1], ".webp", ".avif"):
+                thumb_variant = thumb_base + thumb_ext
+                if not os.path.exists(thumb_variant):
+                    missing.append(os.path.relpath(thumb_variant, REPO_ROOT))
+
     return missing
 
 
