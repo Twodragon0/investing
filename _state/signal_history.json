@@ -257,54 +257,11 @@
       "공포·탐욕 지수": 0.3,
       "VIX 변동성": 0.45
     },
-    "btc_price": 70756.75105500016,
-    "recorded_at": "2026-04-13T14:52:47Z",
-    "backfilled_at": "2026-04-17T06:39:12Z"
+    "btc_price": null,
+    "recorded_at": "2026-04-13T14:52:47Z"
   },
   {
-    "date": "2026-04-14",
-    "composite_score": 58.0,
-    "verdict": "강세",
-    "confidence": "high",
-    "signal_scores": {
-      "공포·탐욕 지수": 0.411,
-      "VIX 변동성": 0.746,
-      "매크로": 0.6721
-    },
-    "btc_price": 74225.328125,
-    "recorded_at": "2026-04-13T22:46:17Z",
-    "accuracy": {
-      "predicted_verdict": "강세",
-      "predicted_score": 58.0,
-      "actual_price_change_pct": 0.748,
-      "actual_direction": "보합",
-      "correct": false,
-      "evaluated_at": "2026-04-14T15:16:08Z"
-    }
-  },
-  {
-    "date": "2026-04-15",
-    "composite_score": 61.4,
-    "verdict": "강세",
-    "confidence": "high",
-    "signal_scores": {
-      "공포·탐욕 지수": 0.463,
-      "VIX 변동성": 0.7717,
-      "매크로": 0.6775
-    },
-    "btc_price": 74780.546875,
-    "recorded_at": "2026-04-14T15:16:08Z",
-    "accuracy": {
-      "predicted_verdict": "강세",
-      "predicted_score": 61.4,
-      "actual_price_change_pct": -0.9048,
-      "actual_direction": "보합",
-      "correct": false,
-      "evaluated_at": "2026-04-15T15:07:01Z"
-    }
-  },
-  {
-    "date": "2026-04-16",
+    "date": "2026-04-17",
     "composite_score": 36.7,
     "verdict": "약세",
     "confidence": "high",
@@ -312,28 +269,7 @@
       "공포·탐욕 지수": 0.3,
       "VIX 변동성": 0.45
     },
-    "btc_price": 74103.9609375,
-    "recorded_at": "2026-04-15T15:07:01Z",
-    "accuracy": {
-      "predicted_verdict": "강세",
-      "predicted_score": 65.7,
-      "actual_price_change_pct": 0.3055,
-      "actual_direction": "보합",
-      "correct": false,
-      "evaluated_at": "2026-04-16T15:28:32Z"
-    }
-  },
-  {
-    "date": "2026-04-17",
-    "composite_score": 64.6,
-    "verdict": "강세",
-    "confidence": "high",
-    "signal_scores": {
-      "공포·탐욕 지수": 0.618,
-      "VIX 변동성": 0.6627,
-      "매크로": 0.6829
-    },
-    "btc_price": 74330.3515625,
-    "recorded_at": "2026-04-16T15:28:32Z"
+    "btc_price": null,
+    "recorded_at": "2026-04-17T14:39:45Z"
   }
 ]

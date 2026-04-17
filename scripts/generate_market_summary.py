@@ -1320,6 +1320,7 @@ def main():
 
     if dedup.is_duplicate_exact(title, "auto-generated", today):
         logger.info("Market summary already exists for today, skipping")
+        dedup.log_stats()
         dedup.save()
         return
 
@@ -1379,6 +1380,7 @@ def main():
     else:
         logger.info("Market summary not updated (already exists or no content changes)")
 
+    dedup.log_stats()
     dedup.save()
 
     logger.info("=== Enhanced market summary generation complete ===")
