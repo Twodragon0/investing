@@ -206,9 +206,13 @@ class DedupEngine:
         """
         if not title or not title.strip():
             return True
+        self._checked += 1
 
         h = _make_hash(title, source, date_str)
-        return h in self.seen
+        if h in self.seen:
+            self._duplicates += 1
+            return True
+        return False
 
     def mark_seen(self, title: str, source: str, date_str: str, url: str = "") -> None:
         """Mark a news item as seen."""

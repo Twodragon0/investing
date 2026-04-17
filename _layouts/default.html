@@ -14,9 +14,7 @@
   {% if page.image %}
   {% if page.image contains '/assets/images/generated/' %}
   {% assign preload_avif = page.image | replace: '.png', '.avif' | replace: '.jpg', '.avif' | replace: '.jpeg', '.avif' %}
-  {% assign preload_webp = page.image | replace: '.png', '.webp' | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' %}
   <link rel="preload" as="image" type="image/avif" href="{{ preload_avif | relative_url }}" fetchpriority="high">
-  <link rel="preload" as="image" type="image/webp" href="{{ preload_webp | relative_url }}" fetchpriority="high">
   {% endif %}
   {% endif %}
   {% include critical-css.html %}
