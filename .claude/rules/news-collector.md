@@ -28,6 +28,7 @@ globs: ["scripts/**/*.py", "_posts/**/*.md", ".github/workflows/**/*.yml"]
 - Keep Korean-first operational readability in generated summaries and briefings
 - Generated image filenames must stay English-only under `assets/images/generated/`
 - Never manually edit `_state/*.json`
+- PWA manifest and hero-image preload rules: see `docs/pwa-guidelines.md` (manifest icons 32/192/512 only, apple-touch-icon via HTML `<link>`, single-format AVIF preload)
 
 # Workflow And Automation Guardrails
 
