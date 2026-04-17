@@ -56,5 +56,11 @@ scripts/.coverage
 coverage-html/
 coverage.json
 
+# Tool runtime state (not project assets)
+.opencode/
+.omx/
+state/
+.claude/scheduled_tasks.lock
+
 # Sass build artifacts (stale)
 _sass/_site/
