@@ -2173,13 +2173,16 @@ def og_image_url(slug: str, date_str: str) -> str:
 
 
 def thumb_image_path(slug: str, date_str: str) -> str:
-    """Build the output path for a thumbnail image."""
-    return os.path.join(IMAGES_DIR, f"thumb-{slug}-{date_str}.png")
+    """Build the output path for a thumbnail image.
+
+    Mirrors generate_thumbnail()'s naming: thumb- prefix on the og image basename.
+    """
+    return os.path.join(IMAGES_DIR, f"thumb-og-{slug}-{date_str}.png")
 
 
 def thumb_image_url(slug: str, date_str: str) -> str:
     """Build the Jekyll-relative URL for a thumbnail image."""
-    return f"/assets/images/generated/thumb-{slug}-{date_str}.png"
+    return f"/assets/images/generated/thumb-og-{slug}-{date_str}.png"
 
 
 def generate_thumbnail(png_path: str) -> bool:
@@ -2279,10 +2282,19 @@ def main() -> None:
 
     for post in posts:
         out_path = og_image_path(post["slug"], post["date"])
+        thumb_path = thumb_image_path(post["slug"], post["date"])
+        og_exists = os.path.exists(out_path)
+        thumb_exists = os.path.exists(thumb_path)
 
-        if os.path.exists(out_path) and not args.force:
+        if og_exists and thumb_exists and not args.force:
             logger.debug("Exists, skipping: %s", out_path)
             skipped += 1
+            continue
+
+        if og_exists and not args.force:
+            # Backfill missing thumbnail without regenerating the og image.
+            generate_thumbnail(out_path)
+            generated += 1
             continue
 
         if post["category"] in {"crypto-trading-journal", "stock-trading-journal"}:
