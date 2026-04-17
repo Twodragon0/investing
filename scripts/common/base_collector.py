@@ -156,6 +156,7 @@ class BaseCollector(ABC):
 
     def save_state(self) -> None:
         """중복 방지 상태를 디스크에 저장합니다."""
+        self.dedup.log_stats()
         self.dedup.save()
 
     def log_summary(
