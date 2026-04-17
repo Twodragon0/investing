@@ -161,8 +161,14 @@ def get_env(key: str, default: str = "") -> str:
 
 
 def get_env_bool(key: str, default: bool = False) -> bool:
-    """Get boolean environment variable."""
+    """Get boolean environment variable.
+
+    Strips whitespace and surrounding quotes for parity with get_env().
+    """
     val = os.environ.get(key, "")
+    if not val:
+        return default
+    val = val.strip().strip("\"'")
     if not val:
         return default
     return val.lower() in ("true", "1", "yes")
@@ -206,13 +212,13 @@ def get_verify_ssl():
 
 
 SITE_URL = "https://investing.2twodragon.com"
-REQUEST_TIMEOUT = 15
+REQUEST_TIMEOUT = int(os.environ.get("REQUEST_TIMEOUT", "15"))
 # Playwright/Chromium wait timeout in milliseconds. Intentionally higher than
 # REQUEST_TIMEOUT because JS-rendered pages need DOMContentLoaded + network
 # idle + render frames to complete. Do not lower without testing on
 # JS-heavy sites (Twitter/X, CoinMarketCap). Collectors should import this
 # and pass it to BrowserSession rather than hardcoding the literal.
-BROWSER_TIMEOUT_MS = 30_000
+BROWSER_TIMEOUT_MS = int(os.environ.get("BROWSER_TIMEOUT_MS", "30000"))
 USER_AGENT = "Mozilla/5.0 (compatible; InvestingDragon/1.0)"
 BROWSER_USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
