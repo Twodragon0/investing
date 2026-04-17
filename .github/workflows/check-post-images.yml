@@ -14,9 +14,12 @@ on:
       - 'assets/images/generated/**'
       - 'scripts/check_post_images.py'
   schedule:
-    # Nightly drift check at 18:30 UTC (03:30 KST)
+    # Nightly drift check + auto-heal at 18:30 UTC (03:30 KST)
     - cron: '30 18 * * *'
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 concurrency:
   group: check-post-images-${{ github.ref }}
@@ -25,15 +28,93 @@ concurrency:
 jobs:
   check-images:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
 
       - name: Setup Python
         uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0
         with:
           python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: scripts/requirements.txt
 
       - name: Check post image references
+        id: initial_check
+        continue-on-error: true
         run: python scripts/check_post_images.py
+
+      - name: Decide on auto-heal
+        id: gate
+        run: |
+          if [ "${{ steps.initial_check.outcome }}" = "success" ]; then
+            echo "needs_heal=false" >> "$GITHUB_OUTPUT"
+            echo "All images valid; no heal required."
+            exit 0
+          fi
+          case "${{ github.event_name }}" in
+            schedule|workflow_dispatch)
+              echo "needs_heal=true" >> "$GITHUB_OUTPUT"
+              echo "Missing images detected on ${{ github.event_name }} run; will attempt auto-heal." ;;
+            *)
+              echo "Missing images detected on ${{ github.event_name }} run; failing without auto-heal."
+              exit 1 ;;
+          esac
+
+      - name: Install dependencies
+        if: steps.gate.outputs.needs_heal == 'true'
+        run: pip install -r scripts/requirements.txt
+
+      - name: Install CJK fonts
+        if: steps.gate.outputs.needs_heal == 'true'
+        run: |
+          if ! fc-list :lang=ko | grep -q .; then
+            sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk >/dev/null 2>&1
+          fi
+
+      - name: Backfill missing post images
+        if: steps.gate.outputs.needs_heal == 'true'
+        run: python scripts/backfill_images.py
+
+      - name: Regenerate missing thumbnails
+        if: steps.gate.outputs.needs_heal == 'true'
+        run: python scripts/generate_og_images.py --all --thumbnails-only
+
+      - name: Re-verify image integrity
+        if: steps.gate.outputs.needs_heal == 'true'
+        run: python scripts/check_post_images.py
+
+      - name: Commit and push recovered images
+        if: steps.gate.outputs.needs_heal == 'true'
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch --no-tags origin main
+
+          git add assets/images/generated/ _posts/
+
+          if git diff --staged --quiet; then
+            echo "No file changes after auto-heal; skipping commit."
+            exit 0
+          fi
+
+          git commit -m "chore(images): nightly auto-heal $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          MAX_RETRIES=5
+          for i in $(seq 1 $MAX_RETRIES); do
+            echo "=== Push attempt $i/$MAX_RETRIES ==="
+            if git push origin main 2>&1; then
+              echo "Push succeeded"
+              exit 0
+            fi
+            echo "Push failed, syncing with remote..."
+            DELAY=$((i * 3 + RANDOM % 5))
+            sleep $DELAY
+            git pull --rebase origin main 2>&1 || git rebase --abort 2>/dev/null || true
+          done
+          echo "::error::All $MAX_RETRIES push attempts failed"
+          exit 1
