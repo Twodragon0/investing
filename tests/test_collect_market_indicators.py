@@ -182,10 +182,20 @@ def _patch_mi_isolation(monkeypatch, tmp_path):
     """Patch POSTS_DIR and dedup STATE_DIR to tmp_path for full isolation."""
     from common import dedup as dedup_mod
     from common import post_generator as pg_mod
+    from common.signal_tracker import SignalTracker
 
     state_dir = str(tmp_path / "_state")
     monkeypatch.setattr(pg_mod, "POSTS_DIR", str(tmp_path))
     monkeypatch.setattr(dedup_mod, "STATE_DIR", state_dir)
+
+    # SignalTracker의 기본 히스토리 경로가 실제 _state/signal_history.json을
+    # 가리키는 문제를 차단한다 — 테스트가 실제 상태 파일을 오염시키지 않도록 격리.
+    history_path = str(tmp_path / "_state" / "signal_history.json")
+
+    def _tracker_factory(history_path: str = history_path) -> SignalTracker:
+        return SignalTracker(history_path=history_path)
+
+    monkeypatch.setattr(collect_market_indicators, "SignalTracker", _tracker_factory)
 
     import contextlib
 
@@ -355,3 +365,58 @@ def test_dedup_idempotent_market_indicators(tmp_path, monkeypatch):
     posts_after_second = list(tmp_path.glob("*.md"))
 
     assert len(posts_after_second) == len(posts_after_first)
+
+
+def test_fetch_btc_price_falls_back_when_yfinance_fails(monkeypatch):
+    """yfinance가 None을 반환하면 CoinGecko로 폴백되어야 한다."""
+    mod = collect_market_indicators
+
+    monkeypatch.setattr(mod, "_fetch_btc_price_yfinance", lambda: None)
+    monkeypatch.setattr(mod, "_fetch_btc_price_coingecko", lambda: 70000.0)
+    monkeypatch.setattr(mod, "_fetch_btc_price_blockchain_com", lambda: 70500.0)
+
+    assert mod.fetch_btc_price() == 70000.0
+
+
+def test_fetch_btc_price_falls_back_to_blockchain_when_first_two_fail(monkeypatch):
+    """yfinance와 CoinGecko 모두 실패하면 Blockchain.com이 사용된다."""
+    mod = collect_market_indicators
+
+    monkeypatch.setattr(mod, "_fetch_btc_price_yfinance", lambda: None)
+    monkeypatch.setattr(mod, "_fetch_btc_price_coingecko", lambda: None)
+    monkeypatch.setattr(mod, "_fetch_btc_price_blockchain_com", lambda: 71234.5)
+
+    assert mod.fetch_btc_price() == 71234.5
+
+
+def test_fetch_btc_price_returns_none_when_all_providers_fail(monkeypatch):
+    """모든 공급자가 실패하면 None을 반환한다 (기존 동작 유지)."""
+    mod = collect_market_indicators
+
+    monkeypatch.setattr(mod, "_fetch_btc_price_yfinance", lambda: None)
+    monkeypatch.setattr(mod, "_fetch_btc_price_coingecko", lambda: None)
+    monkeypatch.setattr(mod, "_fetch_btc_price_blockchain_com", lambda: None)
+
+    assert mod.fetch_btc_price() is None
+
+
+def test_fetch_btc_price_prefers_yfinance(monkeypatch):
+    """yfinance가 유효한 값을 반환하면 후속 공급자는 호출되지 않는다."""
+    mod = collect_market_indicators
+
+    calls = {"coingecko": 0, "blockchain": 0}
+
+    def _cg():
+        calls["coingecko"] += 1
+        return 70000.0
+
+    def _bc():
+        calls["blockchain"] += 1
+        return 70500.0
+
+    monkeypatch.setattr(mod, "_fetch_btc_price_yfinance", lambda: 74500.0)
+    monkeypatch.setattr(mod, "_fetch_btc_price_coingecko", _cg)
+    monkeypatch.setattr(mod, "_fetch_btc_price_blockchain_com", _bc)
+
+    assert mod.fetch_btc_price() == 74500.0
+    assert calls == {"coingecko": 0, "blockchain": 0}

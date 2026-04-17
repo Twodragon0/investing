@@ -222,29 +222,83 @@ def fetch_yfinance_market_data() -> Dict[str, Any]:
     return results
 
 
-def fetch_btc_price() -> Optional[float]:
-    """BTC-USD 현재 가격을 yfinance로 조회한다.
-
-    Returns:
-        BTC 가격(USD) 또는 조회 실패 시 None.
-    """
+def _fetch_btc_price_yfinance() -> Optional[float]:
+    """yfinance BTC-USD last_price. 실패 시 None."""
     logger = __import__("logging").getLogger(__name__)
     try:
         import yfinance as yf
 
         ticker = yf.Ticker("BTC-USD")
         price = getattr(ticker.fast_info, "last_price", None)
-        if price is not None:
-            logger.info("BTC-USD 가격: $%.2f", price)
+        if price:
             return float(price)
-        logger.warning("BTC-USD: last_price 없음")
         return None
     except ImportError:
-        logger.warning("yfinance 미설치, BTC 가격 조회 생략")
+        logger.debug("yfinance 미설치")
         return None
     except Exception as e:
-        logger.warning("BTC 가격 조회 실패: %s", e)
+        logger.debug("yfinance 조회 실패: %s", e)
         return None
+
+
+def _fetch_btc_price_coingecko() -> Optional[float]:
+    """CoinGecko 공개 simple price 엔드포인트. 실패 시 None."""
+    logger = __import__("logging").getLogger(__name__)
+    try:
+        resp = request_with_retry(
+            "https://api.coingecko.com/api/v3/simple/price",
+            params={"ids": "bitcoin", "vs_currencies": "usd"},
+            timeout=REQUEST_TIMEOUT,
+            verify_ssl=VERIFY_SSL,
+        )
+        data = resp.json()
+        price = data.get("bitcoin", {}).get("usd")
+        if price and price > 0:
+            return float(price)
+        return None
+    except Exception as e:
+        logger.debug("CoinGecko 조회 실패: %s", e)
+        return None
+
+
+def _fetch_btc_price_blockchain_com() -> Optional[float]:
+    """Blockchain.com stats의 market_price_usd. 실패 시 None."""
+    logger = __import__("logging").getLogger(__name__)
+    try:
+        from common.blockchain_api import fetch_btc_stats
+
+        stats = fetch_btc_stats()
+        price = stats.get("market_price_usd") if stats else None
+        if price and price > 0:
+            return float(price)
+        return None
+    except Exception as e:
+        logger.debug("Blockchain.com 조회 실패: %s", e)
+        return None
+
+
+def fetch_btc_price() -> Optional[float]:
+    """BTC-USD 현재 가격을 다중 공급자 폴백으로 조회한다.
+
+    공급자 순서: yfinance → CoinGecko → Blockchain.com.
+    단일 공급자 장애로 signal_history.btc_price가 null이 되던 문제를 해결한다.
+
+    Returns:
+        BTC 가격(USD) 또는 모든 공급자 실패 시 None.
+    """
+    logger = __import__("logging").getLogger(__name__)
+    providers = (
+        ("yfinance", _fetch_btc_price_yfinance),
+        ("coingecko", _fetch_btc_price_coingecko),
+        ("blockchain.com", _fetch_btc_price_blockchain_com),
+    )
+    for name, fn in providers:
+        price = fn()
+        if price is not None:
+            logger.info("BTC-USD 가격: $%.2f (source=%s)", price, name)
+            return price
+    logger.warning("BTC 가격 조회 실패: 모든 공급자에서 응답 없음")
+    return None
 
 
 def fetch_treasury_yield_news() -> tuple:
