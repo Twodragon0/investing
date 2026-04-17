@@ -68,29 +68,97 @@ _social_cfg = get_collector_config("social_media")
 # 엔터테인먼트/스포츠 필터 (금융·투자와 무관한 콘텐츠 제외)
 # ---------------------------------------------------------------------------
 
-_ENTERTAINMENT_KEYWORDS_DEFAULT = frozenset({
-    # 북미 스포츠 리그
-    "nba", "nhl", "nfl", "mlb", "mls", "ufc",
-    # 국제 스포츠
-    "fifa", "premier league", "champions league", "la liga", "serie a", "bundesliga",
-    "world cup soccer", "olympics", "wimbledon", "grand prix", "formula 1", " f1 ",
-    # 개별 이벤트/시즌
-    "stanley cup", "super bowl", "world series", "nba finals", "nhl finals",
-    "championship", "playoffs", "playoff", "mvp", "ballon d'or",
-    # NBA 팀명
-    "lakers", "celtics", "knicks", "warriors", "spurs", "clippers",
-    "heat", "bulls", "nets", "pacers", "cavaliers", "nuggets",
-    "timberwolves", "thunder", "suns", "mavericks", "rockets",
-    "grizzlies", "pelicans", "hawks", "hornets", "magic", "wizards",
-    "bucks", "raptors", "sixers", "pistons",
-    # 연예·미디어
-    "oscar", "grammy", "emmy", "golden globe",
-    "netflix", "spotify", "disney+", "hulu", "hbo",
-    "celebrity", "movie", "album", "box office", "billboard",
-    "reality tv", "tv show", "season finale", "bachelor", "bachelorette", "survivor",
-    # 게임
-    "gta vi", "gta 6", "esport", "e-sport", "video game", "game release",
-})
+_ENTERTAINMENT_KEYWORDS_DEFAULT = frozenset(
+    {
+        # 북미 스포츠 리그
+        "nba",
+        "nhl",
+        "nfl",
+        "mlb",
+        "mls",
+        "ufc",
+        # 국제 스포츠
+        "fifa",
+        "premier league",
+        "champions league",
+        "la liga",
+        "serie a",
+        "bundesliga",
+        "world cup soccer",
+        "olympics",
+        "wimbledon",
+        "grand prix",
+        "formula 1",
+        " f1 ",
+        # 개별 이벤트/시즌
+        "stanley cup",
+        "super bowl",
+        "world series",
+        "nba finals",
+        "nhl finals",
+        "championship",
+        "playoffs",
+        "playoff",
+        "mvp",
+        "ballon d'or",
+        # NBA 팀명
+        "lakers",
+        "celtics",
+        "knicks",
+        "warriors",
+        "spurs",
+        "clippers",
+        "heat",
+        "bulls",
+        "nets",
+        "pacers",
+        "cavaliers",
+        "nuggets",
+        "timberwolves",
+        "thunder",
+        "suns",
+        "mavericks",
+        "rockets",
+        "grizzlies",
+        "pelicans",
+        "hawks",
+        "hornets",
+        "magic",
+        "wizards",
+        "bucks",
+        "raptors",
+        "sixers",
+        "pistons",
+        # 연예·미디어
+        "oscar",
+        "grammy",
+        "emmy",
+        "golden globe",
+        "netflix",
+        "spotify",
+        "disney+",
+        "hulu",
+        "hbo",
+        "celebrity",
+        "movie",
+        "album",
+        "box office",
+        "billboard",
+        "reality tv",
+        "tv show",
+        "season finale",
+        "bachelor",
+        "bachelorette",
+        "survivor",
+        # 게임
+        "gta vi",
+        "gta 6",
+        "esport",
+        "e-sport",
+        "video game",
+        "game release",
+    }
+)
 
 
 def _load_entertainment_filter() -> frozenset:

@@ -971,9 +971,7 @@ class TestLoadCacheMojibakeRemoval:
             "bad_key": mojibake_value,
         }
 
-        with tempfile.NamedTemporaryFile(
-            mode="w", suffix=".json", delete=False, encoding="utf-8"
-        ) as f:
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False, encoding="utf-8") as f:
             json.dump(dirty_data, f)
             tmp_path = Path(f.name)
 
@@ -995,9 +993,7 @@ class TestLoadCacheMojibakeRemoval:
 
         clean_data = {"k1": "정상", "k2": "번역"}
 
-        with tempfile.NamedTemporaryFile(
-            mode="w", suffix=".json", delete=False, encoding="utf-8"
-        ) as f:
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False, encoding="utf-8") as f:
             json.dump(clean_data, f)
             tmp_path = Path(f.name)
 

@@ -30,9 +30,7 @@ except Exception:
     og = None  # type: ignore
     _IMPORT_OK = False
 
-pytestmark = pytest.mark.skipif(
-    not _IMPORT_OK, reason="generate_og_images could not be imported"
-)
+pytestmark = pytest.mark.skipif(not _IMPORT_OK, reason="generate_og_images could not be imported")
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -148,9 +146,7 @@ class TestThumbnailsOnlyBranch:
         mock_gen_thumb.assert_called_once_with(expected_og_path)
         mock_gen_og.assert_not_called()
 
-    def test_thumbnails_only_with_force_does_not_call_generate_og_image(
-        self, tmp_path, monkeypatch
-    ):
+    def test_thumbnails_only_with_force_does_not_call_generate_og_image(self, tmp_path, monkeypatch):
         """--thumbnails-only + --force 조합: generate_og_image는 여전히 미호출."""
         monkeypatch.setattr(og, "IMAGES_DIR", str(tmp_path))
 
@@ -209,9 +205,7 @@ class TestUpdateFrontmatterBranch:
 
         mock_update_fm.assert_called_once_with(FAKE_POST["filepath"], expected_url)
 
-    def test_og_exists_skip_branch_does_not_call_update_post_frontmatter(
-        self, tmp_path, monkeypatch
-    ):
+    def test_og_exists_skip_branch_does_not_call_update_post_frontmatter(self, tmp_path, monkeypatch):
         """og + thumb 모두 존재 (skip 분기): update_post_frontmatter 미호출."""
         monkeypatch.setattr(og, "IMAGES_DIR", str(tmp_path))
 
@@ -263,9 +257,7 @@ class TestUpdateFrontmatterBranch:
         # backfill 분기 (line 2294-2298)는 update_post_frontmatter를 호출하지 않는다
         mock_update_fm.assert_not_called()
 
-    def test_update_frontmatter_returns_false_does_not_increment_updated(
-        self, tmp_path, monkeypatch
-    ):
+    def test_update_frontmatter_returns_false_does_not_increment_updated(self, tmp_path, monkeypatch):
         """update_post_frontmatter가 False 반환 시 updated 카운트 증가하지 않음."""
         monkeypatch.setattr(og, "IMAGES_DIR", str(tmp_path))
         # og 및 thumb 미존재 → 새 생성 분기

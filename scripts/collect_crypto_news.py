@@ -529,27 +529,71 @@ def _load_entertainment_keywords() -> frozenset:
 
     누락 또는 로드 실패 시 하드코딩 기본값으로 fallback합니다.
     """
-    _DEFAULT = frozenset({
-        # 미국 프로스포츠 리그
-        "nba", "nfl", "mlb", "nhl", "mls", "ufc",
-        # 국제 스포츠
-        "fifa", "premier league", "champions league", "la liga", "bundesliga",
-        "serie a", "ligue 1", "world cup soccer", "wimbledon", "grand prix",
-        "formula 1", " f1 ", "olympics", "paralympics",
-        # 주요 스포츠 이벤트
-        "super bowl", "world series", "stanley cup", "nba finals",
-        "masters tournament", "us open tennis", "french open", "australian open",
-        # NBA 팀명 (순수 스포츠 문맥)
-        "lakers", "celtics", "knicks", "warriors", "bulls", "heat",
-        # 시상식 / 엔터테인먼트 행사
-        "oscar", "grammy", "emmy", "golden globe", "bafta", "cannes",
-        # 미디어 / 팝컬처
-        "box office", "movie release", "album release", "billboard chart",
-        "netflix show", "reality tv", "celebrity gossip", "celebrity drama",
-        "taylor swift concert", "met gala",
-        # 게임 (crypto-gaming 제외 — 순수 게임 출시/이슈)
-        "gta vi", "gta 6", "game release", "season finale",
-    })
+    _DEFAULT = frozenset(
+        {
+            # 미국 프로스포츠 리그
+            "nba",
+            "nfl",
+            "mlb",
+            "nhl",
+            "mls",
+            "ufc",
+            # 국제 스포츠
+            "fifa",
+            "premier league",
+            "champions league",
+            "la liga",
+            "bundesliga",
+            "serie a",
+            "ligue 1",
+            "world cup soccer",
+            "wimbledon",
+            "grand prix",
+            "formula 1",
+            " f1 ",
+            "olympics",
+            "paralympics",
+            # 주요 스포츠 이벤트
+            "super bowl",
+            "world series",
+            "stanley cup",
+            "nba finals",
+            "masters tournament",
+            "us open tennis",
+            "french open",
+            "australian open",
+            # NBA 팀명 (순수 스포츠 문맥)
+            "lakers",
+            "celtics",
+            "knicks",
+            "warriors",
+            "bulls",
+            "heat",
+            # 시상식 / 엔터테인먼트 행사
+            "oscar",
+            "grammy",
+            "emmy",
+            "golden globe",
+            "bafta",
+            "cannes",
+            # 미디어 / 팝컬처
+            "box office",
+            "movie release",
+            "album release",
+            "billboard chart",
+            "netflix show",
+            "reality tv",
+            "celebrity gossip",
+            "celebrity drama",
+            "taylor swift concert",
+            "met gala",
+            # 게임 (crypto-gaming 제외 — 순수 게임 출시/이슈)
+            "gta vi",
+            "gta 6",
+            "game release",
+            "season finale",
+        }
+    )
     kw_cfg = _crypto_cfg.get("keywords", {})
     if not isinstance(kw_cfg, dict):
         logger.debug("collectors.yml: crypto_news.keywords 섹션 없음, 기본값 사용")
@@ -575,8 +619,21 @@ def _is_entertainment_item(item: Dict[str, Any]) -> bool:
     text = title + " " + desc
 
     # 크립토 맥락이 있으면 필터 제외 (crypto-gaming 등 보존)
-    _CRYPTO_CONTEXT_KW = ("crypto", "bitcoin", "btc", "ethereum", "eth", "nft", "defi",
-                          "blockchain", "web3", "token", "coin", "wallet", "dex")
+    _CRYPTO_CONTEXT_KW = (
+        "crypto",
+        "bitcoin",
+        "btc",
+        "ethereum",
+        "eth",
+        "nft",
+        "defi",
+        "blockchain",
+        "web3",
+        "token",
+        "coin",
+        "wallet",
+        "dex",
+    )
     if any(kw in text for kw in _CRYPTO_CONTEXT_KW):
         return False
 

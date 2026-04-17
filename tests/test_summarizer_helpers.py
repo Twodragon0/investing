@@ -117,6 +117,7 @@ class TestFixMistranslations:
     def test_applies_corrections(self):
         # Import the corrections dict to find a real entry to test
         from scripts.common.post_generator import _MISTRANSLATION_FIXES
+
         if _MISTRANSLATION_FIXES:
             wrong, correct = next(iter(_MISTRANSLATION_FIXES.items()))
             result = _fix_mistranslations(f"prefix {wrong} suffix")

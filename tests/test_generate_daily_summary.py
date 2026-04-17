@@ -14,6 +14,7 @@ import scripts.generate_daily_summary as gds
 # strip_html_tags
 # ---------------------------------------------------------------------------
 
+
 class TestStripHtmlTags:
     def test_removes_inline_tags(self):
         assert gds.strip_html_tags("<b>hello</b>") == "hello"
@@ -48,6 +49,7 @@ class TestStripHtmlTags:
 # _is_similar_title
 # ---------------------------------------------------------------------------
 
+
 class TestIsSimilarTitle:
     def test_identical_titles(self):
         assert gds._is_similar_title("bitcoin rises today", "bitcoin rises today") is True
@@ -69,6 +71,7 @@ class TestIsSimilarTitle:
 # ---------------------------------------------------------------------------
 # read_post_content
 # ---------------------------------------------------------------------------
+
 
 class TestReadPostContent:
     def test_missing_file(self, tmp_path):
@@ -108,6 +111,7 @@ class TestReadPostContent:
 # extract_section
 # ---------------------------------------------------------------------------
 
+
 class TestExtractSection:
     def test_extracts_section(self):
         content = "## 핵심 요약\n내용1\n내용2\n\n## 다른 섹션\n다른 내용"
@@ -126,6 +130,7 @@ class TestExtractSection:
 # ---------------------------------------------------------------------------
 # extract_bullet_points
 # ---------------------------------------------------------------------------
+
 
 class TestExtractBulletPoints:
     def test_extracts_bullets(self):
@@ -147,6 +152,7 @@ class TestExtractBulletPoints:
 # extract_table_rows
 # ---------------------------------------------------------------------------
 
+
 class TestExtractTableRows:
     def test_extracts_rows(self):
         content = "## 테이블\n| 헤더1 | 헤더2 |\n|---|---|\n| 값1 | 값2 |\n| 값3 | 값4 |"
@@ -167,6 +173,7 @@ class TestExtractTableRows:
 # ---------------------------------------------------------------------------
 # count_news_items
 # ---------------------------------------------------------------------------
+
 
 class TestCountNewsItems:
     def test_pattern_n_gun(self):
@@ -190,6 +197,7 @@ class TestCountNewsItems:
 # _extract_highlights
 # ---------------------------------------------------------------------------
 
+
 class TestExtractHighlights:
     def test_bullet_from_section(self):
         content = "## 핵심 요약\n- 비트코인 급등\n- 이더리움 하락"
@@ -208,6 +216,7 @@ class TestExtractHighlights:
 # ---------------------------------------------------------------------------
 # summarize_crypto_post
 # ---------------------------------------------------------------------------
+
 
 class TestSummarizeCryptoPost:
     def _make_post(self, content: str, title: str = "암호화폐 뉴스") -> dict:
@@ -231,6 +240,7 @@ class TestSummarizeCryptoPost:
 # summarize_stock_post
 # ---------------------------------------------------------------------------
 
+
 class TestSummarizeStockPost:
     def test_basic(self):
         post = {"frontmatter": {"title": "주식 뉴스"}, "content": "KOSPI 2500 상승. 5건의 뉴스."}
@@ -242,6 +252,7 @@ class TestSummarizeStockPost:
 # ---------------------------------------------------------------------------
 # get_post_url
 # ---------------------------------------------------------------------------
+
 
 class TestGetPostUrl:
     def test_basic_url_construction(self):
@@ -256,6 +267,7 @@ class TestGetPostUrl:
 # ---------------------------------------------------------------------------
 # _strip_markdown_link
 # ---------------------------------------------------------------------------
+
 
 class TestStripMarkdownLink:
     def test_strips_link(self):
@@ -272,6 +284,7 @@ class TestStripMarkdownLink:
 # ---------------------------------------------------------------------------
 # _is_noise_title
 # ---------------------------------------------------------------------------
+
 
 class TestIsNoiseTitle:
     def test_price_alert_noise(self):
@@ -296,6 +309,7 @@ class TestIsNoiseTitle:
 # ---------------------------------------------------------------------------
 # _clean_bullet_text / _clean_headline
 # ---------------------------------------------------------------------------
+
 
 class TestCleanBulletText:
     def test_strips_leading_dash(self):
@@ -329,6 +343,7 @@ class TestCleanHeadline:
 # _looks_english_heavy
 # ---------------------------------------------------------------------------
 
+
 class TestLooksEnglishHeavy:
     def test_english_text(self):
         assert gds._looks_english_heavy("Bitcoin surges amid market volatility today") is True
@@ -346,6 +361,7 @@ class TestLooksEnglishHeavy:
 # _coverage_warnings
 # ---------------------------------------------------------------------------
 
+
 class TestCoverageWarnings:
     def test_empty_summaries(self):
         result = gds._coverage_warnings({})
@@ -360,6 +376,7 @@ class TestCoverageWarnings:
 # ---------------------------------------------------------------------------
 # _render_generated_image
 # ---------------------------------------------------------------------------
+
 
 class TestRenderGeneratedImage:
     def test_nonexistent_file(self):
@@ -380,6 +397,7 @@ class TestRenderGeneratedImage:
 # ---------------------------------------------------------------------------
 # summarize_security_post
 # ---------------------------------------------------------------------------
+
 
 class TestSummarizeSecurityPost:
     def _make_post(self, content: str, title: str = "보안 리포트") -> dict:
@@ -410,6 +428,7 @@ class TestSummarizeSecurityPost:
 # summarize_regulatory_post
 # ---------------------------------------------------------------------------
 
+
 class TestSummarizeRegulatoryPost:
     def _make_post(self, content: str, title: str = "규제 동향") -> dict:
         return {"frontmatter": {"title": title}, "content": content}
@@ -430,6 +449,7 @@ class TestSummarizeRegulatoryPost:
 # ---------------------------------------------------------------------------
 # summarize_social_post
 # ---------------------------------------------------------------------------
+
 
 class TestSummarizeSocialPost:
     def _make_post(self, content: str, title: str = "소셜 미디어") -> dict:
@@ -452,6 +472,7 @@ class TestSummarizeSocialPost:
 # summarize_market_post
 # ---------------------------------------------------------------------------
 
+
 class TestSummarizeMarketPost:
     def _make_post(self, content: str, title: str = "시장 종합 리포트") -> dict:
         return {"frontmatter": {"title": title}, "content": content}
@@ -472,12 +493,7 @@ class TestSummarizeMarketPost:
         assert len(result["exec_summary"]) == 2
 
     def test_indicator_rows_extracted(self):
-        content = (
-            "## 매크로 경제 지표\n"
-            "| 지표 | 현재 | 변동 |\n"
-            "|---|---|---|\n"
-            "| CPI | 3.2% | +0.1% |\n"
-        )
+        content = "## 매크로 경제 지표\n| 지표 | 현재 | 변동 |\n|---|---|---|\n| CPI | 3.2% | +0.1% |\n"
         post = self._make_post(content)
         result = gds.summarize_market_post(post)
         assert len(result["indicator_rows"]) == 1
@@ -493,6 +509,7 @@ class TestSummarizeMarketPost:
 # ---------------------------------------------------------------------------
 # summarize_worldmonitor_post
 # ---------------------------------------------------------------------------
+
 
 class TestSummarizeWorldmonitorPost:
     def _make_post(self, content: str, title: str = "월드모니터 브리핑") -> dict:
@@ -517,10 +534,7 @@ class TestSummarizeWorldmonitorPost:
         assert result["count"] == 15
 
     def test_strips_theme_distribution_html(self):
-        content = (
-            "## 핵심\n- 항목1\n"
-            '<div class="theme-distribution">테마블록</div>'
-        )
+        content = '## 핵심\n- 항목1\n<div class="theme-distribution">테마블록</div>'
         post = self._make_post(content)
         result = gds.summarize_worldmonitor_post(post)
         assert "theme-distribution" not in result["content"]
@@ -535,6 +549,7 @@ class TestSummarizeWorldmonitorPost:
 # ---------------------------------------------------------------------------
 # summarize_political_post
 # ---------------------------------------------------------------------------
+
 
 class TestSummarizePoliticalPost:
     def _make_post(self, content: str, title: str = "정치인 거래") -> dict:
@@ -576,6 +591,7 @@ class TestSummarizePoliticalPost:
 # _extract_bold_lines
 # ---------------------------------------------------------------------------
 
+
 class TestExtractBoldLines:
     def test_extracts_bold_colon_lines(self):
         content = "## 섹션\n**제목**: 내용\n**다른 제목**: 다른 내용"
@@ -602,6 +618,7 @@ class TestExtractBoldLines:
 # ---------------------------------------------------------------------------
 # _analyze_sentiment
 # ---------------------------------------------------------------------------
+
 
 class TestAnalyzeSentiment:
     def _make_summary(self, content: str) -> dict:
@@ -650,6 +667,7 @@ class TestAnalyzeSentiment:
 # _extract_key_figures
 # ---------------------------------------------------------------------------
 
+
 class TestExtractKeyFigures:
     def test_kospi_with_percent(self):
         content = "KOSPI 2500.00(+1.23%)"
@@ -693,6 +711,7 @@ class TestExtractKeyFigures:
 # _topic_hits
 # ---------------------------------------------------------------------------
 
+
 class TestTopicHits:
     def test_returns_empty_for_none(self):
         result = gds._topic_hits(None)
@@ -735,6 +754,7 @@ class TestTopicHits:
 # _find_shared_topics_across_categories
 # ---------------------------------------------------------------------------
 
+
 class TestFindSharedTopicsAcrossCategories:
     def test_returns_list(self):
         result = gds._find_shared_topics_across_categories([])
@@ -776,6 +796,7 @@ class TestFindSharedTopicsAcrossCategories:
 # _best_non_noise_title
 # ---------------------------------------------------------------------------
 
+
 class TestBestNonNoiseTitle:
     def test_returns_first_valid(self):
         titles = ["DEF14A", "Bitcoin ETF approval clears regulatory hurdle today"]
@@ -801,6 +822,7 @@ class TestBestNonNoiseTitle:
 # _summary_keywords_for_korean
 # ---------------------------------------------------------------------------
 
+
 class TestSummaryKeywordsForKorean:
     def test_known_keyword_mapped(self):
         result = gds._summary_keywords_for_korean(["sec"])
@@ -822,6 +844,7 @@ class TestSummaryKeywordsForKorean:
 # ---------------------------------------------------------------------------
 # _to_theme_payload
 # ---------------------------------------------------------------------------
+
 
 class TestToThemePayload:
     def test_empty_summaries_returns_empty(self):
@@ -863,6 +886,7 @@ class TestToThemePayload:
 # ---------------------------------------------------------------------------
 # _extract_category_data_points
 # ---------------------------------------------------------------------------
+
 
 class TestExtractCategoryDataPoints:
     def test_none_returns_empty_structure(self):
@@ -919,6 +943,7 @@ class TestExtractCategoryDataPoints:
 # _collect_all_news_items
 # ---------------------------------------------------------------------------
 
+
 class TestCollectAllNewsItems:
     def test_empty_summaries_returns_empty(self):
         assert gds._collect_all_news_items([]) == []
@@ -970,6 +995,7 @@ class TestCollectAllNewsItems:
 # ---------------------------------------------------------------------------
 # _build_snapshot_table
 # ---------------------------------------------------------------------------
+
 
 class TestBuildSnapshotTable:
     def _make_summary(self, stype: str, count: int, highlights=None, market_data=None) -> dict:
@@ -1029,6 +1055,7 @@ class TestBuildSnapshotTable:
 # _resolve_frontmatter_image
 # ---------------------------------------------------------------------------
 
+
 class TestResolveFrontmatterImage:
     def test_returns_provided_image(self):
         result = gds._resolve_frontmatter_image("2024-01-01", "/assets/images/test.png")
@@ -1048,18 +1075,26 @@ class TestResolveFrontmatterImage:
 # _build_overview_section
 # ---------------------------------------------------------------------------
 
+
 class TestBuildOverviewSection:
     def _make_summary_map(self, crypto_count=0, stock_count=0):
         summaries = {}
         if crypto_count:
             summaries["crypto"] = {
-                "type": "crypto", "count": crypto_count,
-                "highlights": [], "key_summary": [], "content": "",
+                "type": "crypto",
+                "count": crypto_count,
+                "highlights": [],
+                "key_summary": [],
+                "content": "",
             }
         if stock_count:
             summaries["stock"] = {
-                "type": "stock", "count": stock_count,
-                "highlights": [], "key_summary": [], "market_data": [], "content": "",
+                "type": "stock",
+                "count": stock_count,
+                "highlights": [],
+                "key_summary": [],
+                "market_data": [],
+                "content": "",
             }
         summaries.setdefault("crypto", None)
         summaries.setdefault("stock", None)
@@ -1081,17 +1116,20 @@ class TestBuildOverviewSection:
 
     def test_returns_list(self):
         result = gds._build_overview_section(
-            0, {"P0": [], "P1": [], "P2": []}, [],
-            self._make_summary_map(), None, "뉴스", self._base_sentiment()
+            0, {"P0": [], "P1": [], "P2": []}, [], self._make_summary_map(), None, "뉴스", self._base_sentiment()
         )
         assert isinstance(result, list)
         assert len(result) > 0
 
     def test_counts_str_in_output(self):
         result = gds._build_overview_section(
-            50, {"P0": [], "P1": [], "P2": []}, [],
+            50,
+            {"P0": [], "P1": [], "P2": []},
+            [],
             self._make_summary_map(crypto_count=30, stock_count=20),
-            None, "암호화폐 30건, 주식 20건", self._base_sentiment()
+            None,
+            "암호화폐 30건, 주식 20건",
+            self._base_sentiment(),
         )
         combined = "\n".join(result)
         assert "암호화폐 30건, 주식 20건" in combined
@@ -1099,16 +1137,20 @@ class TestBuildOverviewSection:
     def test_risk_level_높음_when_many_p0(self):
         priority_items = {"P0": [{"title": f"긴급{i}"} for i in range(5)], "P1": [], "P2": []}
         result = gds._build_overview_section(
-            10, priority_items, [],
-            self._make_summary_map(), None, "뉴스", self._base_sentiment(ratio=20)
+            10, priority_items, [], self._make_summary_map(), None, "뉴스", self._base_sentiment(ratio=20)
         )
         combined = "\n".join(result)
         assert "높음" in combined
 
     def test_risk_level_안정_when_no_p0(self):
         result = gds._build_overview_section(
-            10, {"P0": [], "P1": [], "P2": []}, [],
-            self._make_summary_map(), None, "뉴스", self._base_sentiment(ratio=60)
+            10,
+            {"P0": [], "P1": [], "P2": []},
+            [],
+            self._make_summary_map(),
+            None,
+            "뉴스",
+            self._base_sentiment(ratio=60),
         )
         combined = "\n".join(result)
         assert "안정" in combined
@@ -1120,9 +1162,13 @@ class TestBuildOverviewSection:
             {"name": "정책/규제", "emoji": "📋", "count": 10, "keywords": ["sec", "etf"]},
         ]
         result = gds._build_overview_section(
-            100, {"P0": [], "P1": [], "P2": []}, themes,
+            100,
+            {"P0": [], "P1": [], "P2": []},
+            themes,
             self._make_summary_map(crypto_count=60, stock_count=40),
-            None, "암호화폐 60건, 주식 40건", self._base_sentiment()
+            None,
+            "암호화폐 60건, 주식 40건",
+            self._base_sentiment(),
         )
         combined = "\n".join(result)
         assert "3가지 흐름" in combined
@@ -1134,8 +1180,7 @@ class TestBuildOverviewSection:
             "P2": [],
         }
         result = gds._build_overview_section(
-            10, priority_items, [],
-            self._make_summary_map(), None, "뉴스", self._base_sentiment()
+            10, priority_items, [], self._make_summary_map(), None, "뉴스", self._base_sentiment()
         )
         combined = "\n".join(result)
         assert "핵심 신호" in combined
@@ -1144,6 +1189,7 @@ class TestBuildOverviewSection:
 # ---------------------------------------------------------------------------
 # _relation_rows
 # ---------------------------------------------------------------------------
+
 
 class TestRelationRows:
     def _make_summary(self, content: str) -> dict:
@@ -1182,9 +1228,7 @@ class TestRelationRows:
             "stock": self._make_summary(shared_content),
         }
         rows = gds._relation_rows(s_map)
-        crypto_stock = next(
-            (r for r in rows if "암호화폐" in r[0] and "주식" in r[1]), None
-        )
+        crypto_stock = next((r for r in rows if "암호화폐" in r[0] and "주식" in r[1]), None)
         assert crypto_stock is not None
         assert crypto_stock[2] > 0
 
@@ -1201,6 +1245,7 @@ class TestRelationRows:
 # ---------------------------------------------------------------------------
 # _load_today_posts
 # ---------------------------------------------------------------------------
+
 
 class TestLoadTodayPosts:
     """Tests for _load_today_posts using tmp_path stubs instead of real _posts/."""
@@ -1240,8 +1285,7 @@ class TestLoadTodayPosts:
         self._write_post(
             tmp_path,
             f"{today}-stock-news-digest.md",
-            "---\ntitle: 주식 뉴스\n---\n"
-            "KOSPI 2500 상승.\n총 수집 건수: 5건",
+            "---\ntitle: 주식 뉴스\n---\nKOSPI 2500 상승.\n총 수집 건수: 5건",
         )
         summary_map, post_links, _, _ = gds._load_today_posts(today)
         assert summary_map.get("stock") is not None
@@ -1268,8 +1312,7 @@ class TestLoadTodayPosts:
         self._write_post(
             tmp_path,
             f"{today}-regulatory-report.md",
-            "---\ntitle: 규제 동향\n---\n"
-            "## 핵심 요약\n- SEC 조사\n오늘 7건의 뉴스가 수집되었습니다.",
+            "---\ntitle: 규제 동향\n---\n## 핵심 요약\n- SEC 조사\n오늘 7건의 뉴스가 수집되었습니다.",
         )
         summary_map, _, _, _ = gds._load_today_posts(today)
         assert summary_map.get("regulatory") is not None
@@ -1281,8 +1324,7 @@ class TestLoadTodayPosts:
         self._write_post(
             tmp_path,
             f"{today}-social-media-digest.md",
-            "---\ntitle: 소셜 미디어\n---\n"
-            "## 핵심 요약\n- BTC 트위터 급증\n총 8건을 수집했습니다.",
+            "---\ntitle: 소셜 미디어\n---\n## 핵심 요약\n- BTC 트위터 급증\n총 8건을 수집했습니다.",
         )
         summary_map, _, _, _ = gds._load_today_posts(today)
         assert summary_map.get("social") is not None
@@ -1294,8 +1336,7 @@ class TestLoadTodayPosts:
         self._write_post(
             tmp_path,
             f"{today}-political-trades-report.md",
-            "---\ntitle: 정치인 거래\n---\n"
-            "## 핵심 요약\n- 펠로시 매수\n오늘 4건의 뉴스가 수집되었습니다.",
+            "---\ntitle: 정치인 거래\n---\n## 핵심 요약\n- 펠로시 매수\n오늘 4건의 뉴스가 수집되었습니다.",
         )
         summary_map, _, _, _ = gds._load_today_posts(today)
         assert summary_map.get("political") is not None
@@ -1307,8 +1348,7 @@ class TestLoadTodayPosts:
         self._write_post(
             tmp_path,
             f"{today}-worldmonitor-briefing.md",
-            "---\ntitle: 월드모니터 브리핑\n---\n"
-            "## 핵심 요약\n- 글로벌 이슈\n수집 건수: **20건**",
+            "---\ntitle: 월드모니터 브리핑\n---\n## 핵심 요약\n- 글로벌 이슈\n수집 건수: **20건**",
         )
         summary_map, post_links, _, _ = gds._load_today_posts(today)
         assert summary_map.get("worldmonitor") is not None
@@ -1344,6 +1384,7 @@ class TestLoadTodayPosts:
 # ---------------------------------------------------------------------------
 # _write_summary_post
 # ---------------------------------------------------------------------------
+
 
 class TestWriteSummaryPost:
     """Tests for _write_summary_post using tmp_path."""
@@ -1412,6 +1453,7 @@ class TestWriteSummaryPost:
 # ---------------------------------------------------------------------------
 # _build_briefing_section
 # ---------------------------------------------------------------------------
+
 
 class TestBuildBriefingSection:
     """Tests for _build_briefing_section with mocked ThemeSummarizer."""
@@ -1640,7 +1682,14 @@ class TestBuildBriefingSection:
         result = gds._build_briefing_section(
             all_summaries=[crypto, stock],
             all_news_items=[],
-            summary_map={"crypto": crypto, "stock": stock, "regulatory": None, "social": None, "worldmonitor": None, "political": None},
+            summary_map={
+                "crypto": crypto,
+                "stock": stock,
+                "regulatory": None,
+                "social": None,
+                "worldmonitor": None,
+                "political": None,
+            },
             theme_payload=[],
             sentiment=self._make_sentiment(),
             today="2099-04-10",
@@ -1676,6 +1725,7 @@ class TestBuildBriefingSection:
 # ---------------------------------------------------------------------------
 # _build_priority_and_category_sections
 # ---------------------------------------------------------------------------
+
 
 class TestBuildPriorityAndCategorySections:
     """Tests for _build_priority_and_category_sections."""
@@ -1940,9 +1990,7 @@ class TestBuildPriorityAndCategorySections:
             priority_items={"P0": [], "P1": [], "P2": []},
             market_summary=None,
             security_summary=None,
-            summary_map=self._make_summary_map(
-                crypto=self._crypto(), stock=self._stock()
-            ),
+            summary_map=self._make_summary_map(crypto=self._crypto(), stock=self._stock()),
             post_links=[],
             all_news_items=[],
         )
@@ -1972,6 +2020,7 @@ class TestBuildPriorityAndCategorySections:
 # ---------------------------------------------------------------------------
 # main() integration smoke tests
 # ---------------------------------------------------------------------------
+
 
 def _fake_kst_now_factory(date_str):
     """Return a datetime object whose strftime('%Y-%m-%d') == date_str."""

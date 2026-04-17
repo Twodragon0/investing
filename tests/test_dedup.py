@@ -315,12 +315,20 @@ class TestDedupEngine:
         """URL seen in seen_urls should trigger duplicate detection (lines 151-154)."""
         engine.mark_seen("Article with URL", "src", "2026-01-01", url="https://example.com/article?utm_source=x")
         # Same URL (tracking param stripped) from different source/title
-        assert engine.is_duplicate("Totally Different Title", "other", "2026-01-01", url="https://example.com/article") is True
+        assert (
+            engine.is_duplicate("Totally Different Title", "other", "2026-01-01", url="https://example.com/article")
+            is True
+        )
 
     def test_url_dedup_different_url_not_duplicate(self, engine):
         """Different URLs should not trigger URL-based duplicate detection."""
         engine.mark_seen("Bitcoin rally continues", "src", "2026-01-01", url="https://example.com/bitcoin-rally")
-        assert engine.is_duplicate("Ethereum upgrade announced", "src", "2026-01-01", url="https://example.com/ethereum-upgrade") is False
+        assert (
+            engine.is_duplicate(
+                "Ethereum upgrade announced", "src", "2026-01-01", url="https://example.com/ethereum-upgrade"
+            )
+            is False
+        )
 
     def test_mark_seen_with_url_stores_normalized_url(self, engine):
         """mark_seen with URL should store normalized URL in seen_urls (lines 205-207)."""

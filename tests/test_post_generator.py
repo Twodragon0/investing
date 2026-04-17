@@ -721,10 +721,7 @@ class TestNormalizeGeneratedBody:
     """Tests for _normalize_generated_body() — total_count replacement branch (line 403)."""
 
     def test_total_count_from_stat_div_updates_bullet(self):
-        content = (
-            '<div class="stat-value">42</div><div class="stat-label">수집 건수</div>\n'
-            "- 총 **10건** 수집\n"
-        )
+        content = '<div class="stat-value">42</div><div class="stat-label">수집 건수</div>\n- 총 **10건** 수집\n'
         result = _normalize_generated_body(content)
         assert "- 총 **42건** 수집" in result
 
@@ -784,20 +781,13 @@ class TestExtractDescriptionAdvanced:
 
     def test_bold_lead_긴급_prefix_skipped(self):
         # Bold leads starting with "긴급" should be skipped
-        content = (
-            "**긴급: 비트코인 급등 알림.**\n\n"
-            "시장 전문가들은 이번 상승이 단기 과열일 수 있다고 경고했습니다."
-        )
+        content = "**긴급: 비트코인 급등 알림.**\n\n시장 전문가들은 이번 상승이 단기 과열일 수 있다고 경고했습니다."
         result = _extract_description(content)
         assert "긴급" not in result or "전문가" in result
 
     def test_all_boilerplate_falls_back_to_original_candidates(self):
         # All candidates start with boilerplate prefixes — should fall back to originals
-        content = (
-            "총 5건의 뉴스가 있습니다.\n"
-            "오늘 시장은 혼조세를 보였습니다.\n"
-            "금일 주요 이슈를 정리합니다.\n"
-        )
+        content = "총 5건의 뉴스가 있습니다.\n오늘 시장은 혼조세를 보였습니다.\n금일 주요 이슈를 정리합니다.\n"
         result = _extract_description(content)
         # Falls back to original candidates — any of them is acceptable
         assert isinstance(result, str)
@@ -916,7 +906,9 @@ class TestCreatePostAdvancedBranches:
             filepath = gen.create_post(
                 title="Description KO test post",
                 content="Content here.",
-                extra_frontmatter={"description_ko": "비트코인 가격이 오늘 크게 상승하며 시장 전체에 긍정적인 영향을 미쳤습니다."},
+                extra_frontmatter={
+                    "description_ko": "비트코인 가격이 오늘 크게 상승하며 시장 전체에 긍정적인 영향을 미쳤습니다."
+                },
             )
         assert filepath is not None
         with open(filepath) as fh:
@@ -944,8 +936,13 @@ class TestCreatePostAdvancedBranches:
 
         # Inject a fake common.translator module whose function raises
         fake_mod = types.ModuleType("common.translator")
-        fake_mod.translate_untranslated_body = lambda text: (_ for _ in ()).throw(RuntimeError("translation service unavailable"))
-        with patch("common.post_generator.POSTS_DIR", str(tmp_path)), patch.dict(sys.modules, {"common.translator": fake_mod}):
+        fake_mod.translate_untranslated_body = lambda text: (_ for _ in ()).throw(
+            RuntimeError("translation service unavailable")
+        )
+        with (
+            patch("common.post_generator.POSTS_DIR", str(tmp_path)),
+            patch.dict(sys.modules, {"common.translator": fake_mod}),
+        ):
             gen = PostGenerator("crypto")
             result = gen.create_post(
                 title="Translator exception test post",
@@ -1108,10 +1105,7 @@ class TestExtractDescriptionDataMatchBranch:
     def test_data_match_lead_too_short_falls_through_to_bold(self):
         # Sentence with a number but < 30 chars after cleanup — data path fires but falls through.
         # Bold sentence is long enough to be returned instead.
-        content = (
-            "x 5%.\n\n"
-            "**연방준비제도가 기준금리를 0.25% 인하하며 완화적 기조로 전환했습니다.**\n"
-        )
+        content = "x 5%.\n\n**연방준비제도가 기준금리를 0.25% 인하하며 완화적 기조로 전환했습니다.**\n"
         result = _extract_description(content)
         assert "연방준비제도" in result
 

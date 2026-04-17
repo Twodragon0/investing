@@ -18,6 +18,7 @@ from scripts.common.content_filters import (
 # _DEFAULT_ENTERTAINMENT_KEYWORDS
 # ---------------------------------------------------------------------------
 
+
 class TestDefaultKeywords:
     def test_nba_in_defaults(self):
         assert "nba" in _DEFAULT_ENTERTAINMENT_KEYWORDS
@@ -39,6 +40,7 @@ class TestDefaultKeywords:
 # ---------------------------------------------------------------------------
 # load_entertainment_keywords
 # ---------------------------------------------------------------------------
+
 
 class TestLoadEntertainmentKeywords:
     def test_fallback_on_exception(self):
@@ -87,6 +89,7 @@ class TestLoadEntertainmentKeywords:
 # is_entertainment
 # ---------------------------------------------------------------------------
 
+
 class TestIsEntertainment:
     def test_nba_in_title(self):
         item = {"title": "NBA Finals Game 7 tonight", "description": ""}
@@ -133,6 +136,7 @@ class TestIsEntertainment:
 # filter_entertainment
 # ---------------------------------------------------------------------------
 
+
 class TestFilterEntertainment:
     def test_filters_entertainment_items(self):
         items = [
@@ -175,6 +179,7 @@ class TestFilterEntertainment:
 
     def test_with_logger(self):
         import logging
+
         logger = logging.getLogger("test")
         items = [{"title": "NBA game", "description": ""}]
         result = filter_entertainment(items, logger=logger)
@@ -182,6 +187,7 @@ class TestFilterEntertainment:
 
     def test_count_reduction_logged(self, caplog):
         import logging
+
         items = [
             {"title": "NFL playoffs", "description": ""},
             {"title": "Ethereum news", "description": ""},

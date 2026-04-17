@@ -60,54 +60,56 @@ def _load_entertainment_filter() -> frozenset:
     Returns:
         frozenset — 소문자 키워드 집합 (순수 스포츠 이벤트 중심)
     """
-    _DEFAULT = frozenset({
-        # 스포츠 이벤트 — 리그명/대회명 (상장사 실적 아닌 경기 결과)
-        "nba finals",
-        "stanley cup",
-        "super bowl",
-        "world series",
-        "champions league final",
-        "championship game",
-        "playoffs",
-        "nfl draft",
-        "nba draft",
-        "mlb playoffs",
-        # 스포츠 행위/기록
-        "touchdown",
-        "home run",
-        "slam dunk",
-        "penalty kick",
-        "hat trick",
-        "mvp award",
-        "draft pick",
-        "trade deadline nba",
-        "trade deadline nhl",
-        "trade deadline nfl",
-        "free agency nba",
-        "free agency nfl",
-        "signing bonus nfl",
-        "signing bonus nba",
-        # 팀/선수 중심 (투자와 무관한 스포츠 맥락)
-        "lakers",
-        "celtics",
-        "knicks",
-        "warriors",
-        "yankees",
-        "dodgers",
-        "patriots",
-        "cowboys",
-        # 순수 엔터테인먼트 이벤트
-        "oscar",
-        "grammy",
-        "emmy",
-        "box office",
-        "season finale",
-        "reality tv",
-        "gta vi",
-        "gta 6",
-        "wimbledon",
-        "grand prix winner",
-    })
+    _DEFAULT = frozenset(
+        {
+            # 스포츠 이벤트 — 리그명/대회명 (상장사 실적 아닌 경기 결과)
+            "nba finals",
+            "stanley cup",
+            "super bowl",
+            "world series",
+            "champions league final",
+            "championship game",
+            "playoffs",
+            "nfl draft",
+            "nba draft",
+            "mlb playoffs",
+            # 스포츠 행위/기록
+            "touchdown",
+            "home run",
+            "slam dunk",
+            "penalty kick",
+            "hat trick",
+            "mvp award",
+            "draft pick",
+            "trade deadline nba",
+            "trade deadline nhl",
+            "trade deadline nfl",
+            "free agency nba",
+            "free agency nfl",
+            "signing bonus nfl",
+            "signing bonus nba",
+            # 팀/선수 중심 (투자와 무관한 스포츠 맥락)
+            "lakers",
+            "celtics",
+            "knicks",
+            "warriors",
+            "yankees",
+            "dodgers",
+            "patriots",
+            "cowboys",
+            # 순수 엔터테인먼트 이벤트
+            "oscar",
+            "grammy",
+            "emmy",
+            "box office",
+            "season finale",
+            "reality tv",
+            "gta vi",
+            "gta 6",
+            "wimbledon",
+            "grand prix winner",
+        }
+    )
 
     kw_cfg = _stock_cfg.get("keywords", {})
     if not isinstance(kw_cfg, dict):

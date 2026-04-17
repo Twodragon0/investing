@@ -24,7 +24,7 @@ class TestStripWrappingQuotes:
         assert iep._strip_wrapping_quotes("hello") == "hello"
 
     def test_mismatched_quotes_unchanged(self):
-        assert iep._strip_wrapping_quotes('"hello\'') == '"hello\''
+        assert iep._strip_wrapping_quotes("\"hello'") == "\"hello'"
 
     def test_empty_string(self):
         assert iep._strip_wrapping_quotes("") == ""
@@ -226,10 +226,7 @@ class TestSyncSummaryTotalCount:
         assert changed is False
 
     def test_updates_bullet_count_from_stat(self):
-        body = (
-            '<div class="stat-value">42</div><div class="stat-label">수집 건수</div>\n'
-            "- 총 **10건** 수집"
-        )
+        body = '<div class="stat-value">42</div><div class="stat-label">수집 건수</div>\n- 총 **10건** 수집'
         result, changed = iep.sync_summary_total_count(body)
         assert changed is True
         assert "- 총 **42건** 수집" in result
@@ -241,10 +238,7 @@ class TestSyncSummaryTotalCount:
         assert "**25건**" in result
 
     def test_already_correct_count_no_change(self):
-        body = (
-            '<div class="stat-value">10</div><div class="stat-label">수집 건수</div>\n'
-            "- 총 **10건** 수집"
-        )
+        body = '<div class="stat-value">10</div><div class="stat-label">수집 건수</div>\n- 총 **10건** 수집'
         result, changed = iep.sync_summary_total_count(body)
         assert changed is False
 
@@ -327,24 +321,14 @@ class TestRemoveDuplicateArticlesInInsight:
         assert result.count("Bitcoin ETF 승인") == 1
 
     def test_unique_articles_preserved(self):
-        body = (
-            "## 오늘의 인사이트\n"
-            "- 주요 기사: *Bitcoin ETF*\n"
-            "- 주요 기사: *Ethereum upgrade*\n"
-        )
+        body = "## 오늘의 인사이트\n- 주요 기사: *Bitcoin ETF*\n- 주요 기사: *Ethereum upgrade*\n"
         result, changed = iep.remove_duplicate_articles_in_insight(body)
         assert changed is False
         assert "Bitcoin ETF" in result
         assert "Ethereum upgrade" in result
 
     def test_insight_section_stops_at_next_heading(self):
-        body = (
-            "## 오늘의 인사이트\n"
-            "- 주요 기사: *A*\n"
-            "- 주요 기사: *A*\n"
-            "## 다음 섹션\n"
-            "- 주요 기사: *A*\n"
-        )
+        body = "## 오늘의 인사이트\n- 주요 기사: *A*\n- 주요 기사: *A*\n## 다음 섹션\n- 주요 기사: *A*\n"
         result, changed = iep.remove_duplicate_articles_in_insight(body)
         # The duplicate inside insight should be removed, but outside preserved
         assert "## 다음 섹션" in result
@@ -450,7 +434,7 @@ class TestKeywordKoData:
     def test_all_values_korean(self):
         for eng, kor in iep.KEYWORD_KO.items():
             # Korean chars should be present in values
-            assert any("\uAC00" <= c <= "\uD7A3" for c in kor), f"{eng} value is not Korean: {kor}"
+            assert any("\uac00" <= c <= "\ud7a3" for c in kor), f"{eng} value is not Korean: {kor}"
 
 
 # ---------------------------------------------------------------------------

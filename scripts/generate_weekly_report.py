@@ -95,22 +95,28 @@ def git_stats(week_start: datetime, week_end: datetime) -> Dict[str, int]:
     since = week_start.strftime("%Y-%m-%d")
     until = (week_end + timedelta(seconds=1)).strftime("%Y-%m-%d")
 
-    log_output = _run([
-        "git", "log",
-        f"--since={since}",
-        f"--until={until}",
-        "--shortstat",
-        "--no-merges",
-        "--format=",
-    ])
+    log_output = _run(
+        [
+            "git",
+            "log",
+            f"--since={since}",
+            f"--until={until}",
+            "--shortstat",
+            "--no-merges",
+            "--format=",
+        ]
+    )
 
-    commits_output = _run([
-        "git", "log",
-        f"--since={since}",
-        f"--until={until}",
-        "--no-merges",
-        "--oneline",
-    ])
+    commits_output = _run(
+        [
+            "git",
+            "log",
+            f"--since={since}",
+            f"--until={until}",
+            "--no-merges",
+            "--oneline",
+        ]
+    )
 
     commit_count = len([line for line in commits_output.splitlines() if line.strip()])
 
@@ -143,13 +149,16 @@ def merged_prs(week_start: datetime, week_end: datetime) -> List[str]:
     since = week_start.strftime("%Y-%m-%d")
     until = (week_end + timedelta(seconds=1)).strftime("%Y-%m-%d")
 
-    output = _run([
-        "git", "log",
-        f"--since={since}",
-        f"--until={until}",
-        "--merges",
-        "--format=%s",
-    ])
+    output = _run(
+        [
+            "git",
+            "log",
+            f"--since={since}",
+            f"--until={until}",
+            "--merges",
+            "--format=%s",
+        ]
+    )
 
     prs = []
     for line in output.splitlines():
@@ -304,9 +313,7 @@ def build_report(
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(
-        description="Generate weekly performance report for the investing project."
-    )
+    parser = argparse.ArgumentParser(description="Generate weekly performance report for the investing project.")
     parser.add_argument(
         "--week-offset",
         type=int,

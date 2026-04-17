@@ -12,6 +12,7 @@ import scripts.backfill_post_summaries as bps
 # _get_front_list
 # ---------------------------------------------------------------------------
 
+
 class TestGetFrontList:
     def test_list_value(self):
         front = {"tags": ["crypto", "bitcoin"]}
@@ -37,6 +38,7 @@ class TestGetFrontList:
 # _get_front_date
 # ---------------------------------------------------------------------------
 
+
 class TestGetFrontDate:
     def test_iso_date(self):
         assert bps._get_front_date({"date": "2024-01-15 09:00:00"}) == "2024-01-15"
@@ -54,6 +56,7 @@ class TestGetFrontDate:
 # ---------------------------------------------------------------------------
 # split_frontmatter
 # ---------------------------------------------------------------------------
+
 
 class TestSplitFrontmatter:
     def test_valid_post(self):
@@ -82,6 +85,7 @@ class TestSplitFrontmatter:
 # parse_frontmatter
 # ---------------------------------------------------------------------------
 
+
 class TestParseFrontmatter:
     def test_basic_parsing(self):
         fm = '---\ntitle: "테스트 포스트"\ncategory: crypto\n---\n'
@@ -90,7 +94,7 @@ class TestParseFrontmatter:
         assert result["category"] == "crypto"
 
     def test_list_value(self):
-        fm = '---\ntags: [bitcoin, ethereum]\n---\n'
+        fm = "---\ntags: [bitcoin, ethereum]\n---\n"
         result = bps.parse_frontmatter(fm)
         assert "bitcoin" in result["tags"]
         assert "ethereum" in result["tags"]
@@ -108,6 +112,7 @@ class TestParseFrontmatter:
 # ---------------------------------------------------------------------------
 # clean_text
 # ---------------------------------------------------------------------------
+
 
 class TestCleanText:
     def test_removes_bold(self):
@@ -134,6 +139,7 @@ class TestCleanText:
 # ---------------------------------------------------------------------------
 # is_noise_text
 # ---------------------------------------------------------------------------
+
 
 class TestIsNoiseText:
     def test_empty_string(self):
@@ -162,6 +168,7 @@ class TestIsNoiseText:
 # normalize_title
 # ---------------------------------------------------------------------------
 
+
 class TestNormalizeTitle:
     def test_removes_numbering(self):
         result = bps.normalize_title("1. 비트코인 뉴스")
@@ -187,6 +194,7 @@ class TestNormalizeTitle:
 # normalize_summary
 # ---------------------------------------------------------------------------
 
+
 class TestNormalizeSummary:
     def test_single_sentence(self):
         result = bps.normalize_summary("비트코인이 급등했습니다.")
@@ -208,6 +216,7 @@ class TestNormalizeSummary:
 # _shorten_title_for_summary
 # ---------------------------------------------------------------------------
 
+
 class TestShortenTitleForSummary:
     def test_short_title_unchanged(self):
         title = "짧은 제목"
@@ -227,6 +236,7 @@ class TestShortenTitleForSummary:
 # ---------------------------------------------------------------------------
 # summarize_from_title
 # ---------------------------------------------------------------------------
+
 
 class TestSummarizeFromTitle:
     def test_bitcoin_title(self):
@@ -250,6 +260,7 @@ class TestSummarizeFromTitle:
 # ---------------------------------------------------------------------------
 # extract_links
 # ---------------------------------------------------------------------------
+
 
 class TestExtractLinks:
     def test_markdown_link(self):
@@ -277,6 +288,7 @@ class TestExtractLinks:
 # find_heading_index
 # ---------------------------------------------------------------------------
 
+
 class TestFindHeadingIndex:
     def test_finds_heading(self):
         lines = ["## 전체 뉴스 요약", "내용1", "## 다른 섹션"]
@@ -290,6 +302,7 @@ class TestFindHeadingIndex:
 # ---------------------------------------------------------------------------
 # find_section_end
 # ---------------------------------------------------------------------------
+
 
 class TestFindSectionEnd:
     def test_finds_next_heading(self):
@@ -307,6 +320,7 @@ class TestFindSectionEnd:
 # extract_total_count
 # ---------------------------------------------------------------------------
 
+
 class TestExtractTotalCount:
     def test_finds_count(self):
         body = "총 42건의 뉴스가 수집되었습니다."
@@ -321,6 +335,7 @@ class TestExtractTotalCount:
 # ---------------------------------------------------------------------------
 # has_urgent_alert
 # ---------------------------------------------------------------------------
+
 
 class TestHasUrgentAlert:
     def test_with_urgent_label(self):
@@ -341,6 +356,7 @@ class TestHasUrgentAlert:
 # ---------------------------------------------------------------------------
 # is_social_media_post
 # ---------------------------------------------------------------------------
+
 
 class TestIsSocialMediaPost:
     def test_social_media_tag(self):
@@ -369,6 +385,7 @@ class TestIsSocialMediaPost:
 # _trim_sentence
 # ---------------------------------------------------------------------------
 
+
 class TestTrimSentence:
     def test_short_sentence(self):
         result = bps._trim_sentence("짧은 문장입니다.", limit=110)
@@ -386,6 +403,7 @@ class TestTrimSentence:
 # ---------------------------------------------------------------------------
 # remove_missing_local_images
 # ---------------------------------------------------------------------------
+
 
 class TestRemoveMissingLocalImages:
     def test_keeps_external_images(self):
@@ -408,6 +426,7 @@ class TestRemoveMissingLocalImages:
 # ---------------------------------------------------------------------------
 # remove_existing_summary
 # ---------------------------------------------------------------------------
+
 
 class TestRemoveExistingSummary:
     def test_no_summary_to_remove(self):

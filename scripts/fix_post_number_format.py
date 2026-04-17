@@ -40,9 +40,7 @@ def _post_mtime(path: Path) -> datetime:
 def scan_posts(posts_dir: Path, days: int) -> list[Path]:
     """mtime 기준 최근 N일 내 .md 파일 목록 반환."""
     cutoff = datetime.now(tz=UTC) - timedelta(days=days)
-    return sorted(
-        p for p in posts_dir.glob("*.md") if _post_mtime(p) >= cutoff
-    )
+    return sorted(p for p in posts_dir.glob("*.md") if _post_mtime(p) >= cutoff)
 
 
 def main() -> int:

@@ -10,8 +10,10 @@ from scripts.collect_worldmonitor_news import WorldMonitorCollector
 
 
 def _make_items(*titles):
-    return [{"title": t, "description": "", "link": f"https://example.com/{i}", "source": "test"}
-            for i, t in enumerate(titles)]
+    return [
+        {"title": t, "description": "", "link": f"https://example.com/{i}", "source": "test"}
+        for i, t in enumerate(titles)
+    ]
 
 
 class TestWorldMonitorCollectorFilter:
@@ -36,8 +38,10 @@ class TestWorldMonitorCollectorFilter:
             "Federal Reserve raises interest rates",
             "NFL playoff results",
         )
-        with patch("scripts.collect_worldmonitor_news.enrich_items"), \
-             patch("scripts.collect_worldmonitor_news.deduplicate_by_url", side_effect=lambda x: x):
+        with (
+            patch("scripts.collect_worldmonitor_news.enrich_items"),
+            patch("scripts.collect_worldmonitor_news.deduplicate_by_url", side_effect=lambda x: x),
+        ):
             result = collector.process(items)
 
         titles = [i["title"] for i in result]
@@ -52,8 +56,10 @@ class TestWorldMonitorCollectorFilter:
             "Ukraine ceasefire negotiations stall",
             "Federal Reserve holds rates steady",
         )
-        with patch("scripts.collect_worldmonitor_news.enrich_items"), \
-             patch("scripts.collect_worldmonitor_news.deduplicate_by_url", side_effect=lambda x: x):
+        with (
+            patch("scripts.collect_worldmonitor_news.enrich_items"),
+            patch("scripts.collect_worldmonitor_news.deduplicate_by_url", side_effect=lambda x: x),
+        ):
             result = collector.process(items)
 
         assert len(result) == 3
@@ -64,8 +70,10 @@ class TestWorldMonitorCollectorFilter:
             "Grammy awards ceremony recap",
             "Bitcoin ETF approved by SEC",
         )
-        with patch("scripts.collect_worldmonitor_news.enrich_items"), \
-             patch("scripts.collect_worldmonitor_news.deduplicate_by_url", side_effect=lambda x: x):
+        with (
+            patch("scripts.collect_worldmonitor_news.enrich_items"),
+            patch("scripts.collect_worldmonitor_news.deduplicate_by_url", side_effect=lambda x: x),
+        ):
             collector.process(items)
 
         assert collector._entertainment_filtered_count == 1

@@ -242,9 +242,9 @@ class TestExtractWorldmonitorDesc:
         return (
             f'---\nsource: "worldmonitor"\n---\n'
             f'<div class="alert-box">'
-            f'총 수집: <strong>{total}건</strong> '
-            f'핵심 테마: <strong>{themes}</strong> '
-            f'집중 출처: <strong>{source}</strong>'
+            f"총 수집: <strong>{total}건</strong> "
+            f"핵심 테마: <strong>{themes}</strong> "
+            f"집중 출처: <strong>{source}</strong>"
             f"</div>"
         )
 
@@ -270,11 +270,7 @@ class TestExtractWorldmonitorDesc:
         assert "Reuters" in result
 
     def test_no_source_field_uses_gdelt_fallback(self):
-        content = (
-            '---\nsource: "worldmonitor"\n---\n'
-            '총 수집: <strong>10건</strong> '
-            '핵심 테마: <strong>에너지</strong>'
-        )
+        content = '---\nsource: "worldmonitor"\n---\n총 수집: <strong>10건</strong> 핵심 테마: <strong>에너지</strong>'
         result = fpd._extract_worldmonitor_desc(content)
         assert "GDELT" in result
 
@@ -287,7 +283,7 @@ class TestExtractWorldmonitorDesc:
 class TestExtractBodyCandidate:
     def test_extracts_news_desc_paragraph(self):
         content = (
-            '---\ntitle: Test\n---\n'
+            "---\ntitle: Test\n---\n"
             '<p class="news-desc">Bitcoin surged 10% today amid strong institutional demand and positive ETF news flow.</p>'
         )
         result = fpd._extract_body_candidate(content)

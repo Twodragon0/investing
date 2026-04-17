@@ -132,13 +132,7 @@ class TestExtractSection:
 class TestExtractBulletPoints:
     def _body(self):
         return (
-            "## 주요 뉴스\n"
-            "- 비트코인 상승\n"
-            "- 이더리움 보합\n"
-            "- 리플 하락\n"
-            "- 솔라나 급등\n"
-            "- BNB 횡보\n"
-            "- 도지코인 급락\n"
+            "## 주요 뉴스\n- 비트코인 상승\n- 이더리움 보합\n- 리플 하락\n- 솔라나 급등\n- BNB 횡보\n- 도지코인 급락\n"
         )
 
     def test_extracts_bullets(self):
@@ -166,14 +160,7 @@ class TestExtractBulletPoints:
 
 class TestExtractTableRows:
     def _body(self):
-        return (
-            "## 테이블\n"
-            "| 이름 | 값 |\n"
-            "|---|---|\n"
-            "| 비트코인 | 100 |\n"
-            "| 이더리움 | 200 |\n"
-            "| 리플 | 300 |\n"
-        )
+        return "## 테이블\n| 이름 | 값 |\n|---|---|\n| 비트코인 | 100 |\n| 이더리움 | 200 |\n| 리플 | 300 |\n"
 
     def test_extracts_data_rows(self):
         result = gds.extract_table_rows(self._body(), "테이블")

@@ -325,7 +325,10 @@ class TestTryResolveGoogleNewsUrl:
         import base64 as _base64
 
         google_url = "https://news.google.com/rss/articles/CBMiSOMEARTICLE"
-        with patch.object(_base64, "urlsafe_b64decode", side_effect=ValueError("bad padding")), patch("requests.head", side_effect=Exception("no network")):
+        with (
+            patch.object(_base64, "urlsafe_b64decode", side_effect=ValueError("bad padding")),
+            patch("requests.head", side_effect=Exception("no network")),
+        ):
             result = _try_resolve_google_news_url(google_url)
         assert result == google_url
 

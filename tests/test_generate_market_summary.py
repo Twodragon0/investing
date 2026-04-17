@@ -15,6 +15,7 @@ import scripts.generate_market_summary as gms
 # format_commodity_data
 # ---------------------------------------------------------------------------
 
+
 class TestFormatCommodityData:
     def test_empty_data_returns_fallback(self):
         result = gms.format_commodity_data({})
@@ -45,6 +46,7 @@ class TestFormatCommodityData:
 # ---------------------------------------------------------------------------
 # calculate_yield_spread
 # ---------------------------------------------------------------------------
+
 
 class TestCalculateYieldSpread:
     def test_uses_t10y2y_directly(self):
@@ -84,6 +86,7 @@ class TestCalculateYieldSpread:
 # format_yield_spread
 # ---------------------------------------------------------------------------
 
+
 class TestFormatYieldSpread:
     def test_empty_returns_fallback(self):
         result = gms.format_yield_spread({})
@@ -106,6 +109,7 @@ class TestFormatYieldSpread:
 # ---------------------------------------------------------------------------
 # format_sector_performance
 # ---------------------------------------------------------------------------
+
 
 class TestFormatSectorPerformance:
     def test_empty_returns_fallback(self):
@@ -135,6 +139,7 @@ class TestFormatSectorPerformance:
 # ---------------------------------------------------------------------------
 # format_btc_etf
 # ---------------------------------------------------------------------------
+
 
 class TestFormatBtcEtf:
     def test_no_data_returns_fallback(self):
@@ -172,6 +177,7 @@ class TestFormatBtcEtf:
 # format_whale_trades
 # ---------------------------------------------------------------------------
 
+
 class TestFormatWhaleTrades:
     def test_empty_returns_fallback(self):
         result = gms.format_whale_trades([])
@@ -196,10 +202,7 @@ class TestFormatWhaleTrades:
         assert result.count("same.com") <= 1
 
     def test_max_10_items(self):
-        items = [
-            {"title": f"거래 {i}", "source": "WA", "link": f"https://example{i}.com"}
-            for i in range(20)
-        ]
+        items = [{"title": f"거래 {i}", "source": "WA", "link": f"https://example{i}.com"} for i in range(20)]
         result = gms.format_whale_trades(items)
         # Table should have at most 10 data rows
         row_count = result.count("거래 ")
@@ -209,6 +212,7 @@ class TestFormatWhaleTrades:
 # ---------------------------------------------------------------------------
 # format_global_overview
 # ---------------------------------------------------------------------------
+
 
 class TestFormatGlobalOverview:
     def test_no_data_returns_fallback(self):
@@ -243,6 +247,7 @@ class TestFormatGlobalOverview:
 # format_top_coins
 # ---------------------------------------------------------------------------
 
+
 class TestFormatTopCoins:
     def test_empty_returns_fallback(self):
         result = gms.format_top_coins([])
@@ -269,6 +274,7 @@ class TestFormatTopCoins:
 # format_trending
 # ---------------------------------------------------------------------------
 
+
 class TestFormatTrending:
     def test_empty_returns_fallback(self):
         result = gms.format_trending([])
@@ -285,6 +291,7 @@ class TestFormatTrending:
 # ---------------------------------------------------------------------------
 # generate_quant_signals
 # ---------------------------------------------------------------------------
+
 
 class TestGenerateQuantSignals:
     def test_empty_inputs(self):
@@ -316,6 +323,7 @@ class TestGenerateQuantSignals:
 # STABLECOIN_SYMBOLS constant
 # ---------------------------------------------------------------------------
 
+
 class TestStablecoinSymbols:
     def test_usdt_in_set(self):
         assert "usdt" in gms.STABLECOIN_SYMBOLS
@@ -330,6 +338,7 @@ class TestStablecoinSymbols:
 # ---------------------------------------------------------------------------
 # format_us_market
 # ---------------------------------------------------------------------------
+
 
 class TestFormatUsMarket:
     def test_empty_data_returns_fallback(self):
@@ -404,6 +413,7 @@ class TestFormatUsMarket:
 # format_korean_market
 # ---------------------------------------------------------------------------
 
+
 class TestFormatKoreanMarket:
     def test_empty_data_returns_fallback(self):
         result = gms.format_korean_market({})
@@ -411,31 +421,23 @@ class TestFormatKoreanMarket:
         assert "KOSPI" in result
 
     def test_formats_kospi(self):
-        data = {
-            "KOSPI": {"price": "2500.00", "change": "+20.00", "change_pct": "+0.81%"}
-        }
+        data = {"KOSPI": {"price": "2500.00", "change": "+20.00", "change_pct": "+0.81%"}}
         result = gms.format_korean_market(data)
         assert "KOSPI" in result
         assert "2500.00" in result
 
     def test_positive_change_shows_green_icon(self):
-        data = {
-            "KOSPI": {"price": "2500.00", "change": "+20.00", "change_pct": "+0.81%"}
-        }
+        data = {"KOSPI": {"price": "2500.00", "change": "+20.00", "change_pct": "+0.81%"}}
         result = gms.format_korean_market(data)
         assert "🟢" in result
 
     def test_negative_change_shows_red_icon(self):
-        data = {
-            "KOSDAQ": {"price": "800.00", "change": "-5.00", "change_pct": "-0.62%"}
-        }
+        data = {"KOSDAQ": {"price": "800.00", "change": "-5.00", "change_pct": "-0.62%"}}
         result = gms.format_korean_market(data)
         assert "🔴" in result
 
     def test_invalid_change_pct_no_crash(self):
-        data = {
-            "KOSPI": {"price": "N/A", "change": "N/A", "change_pct": "N/A"}
-        }
+        data = {"KOSPI": {"price": "N/A", "change": "N/A", "change_pct": "N/A"}}
         result = gms.format_korean_market(data)
         assert "KOSPI" in result
 
@@ -454,6 +456,7 @@ class TestFormatKoreanMarket:
 # ---------------------------------------------------------------------------
 # format_macro
 # ---------------------------------------------------------------------------
+
 
 class TestFormatMacro:
     def test_empty_no_api_key_explains_missing_key(self):
@@ -542,6 +545,7 @@ class TestFormatMacro:
 # format_gainers_losers
 # ---------------------------------------------------------------------------
 
+
 class TestFormatGainersLosers:
     def _make_coin(self, symbol, name, price, ch24):
         return {
@@ -599,6 +603,7 @@ class TestFormatGainersLosers:
 # format_trending (content, not just isinstance)
 # ---------------------------------------------------------------------------
 
+
 class TestFormatTrendingContent:
     def test_empty_returns_no_data_message(self):
         result = gms.format_trending([])
@@ -616,10 +621,7 @@ class TestFormatTrendingContent:
         assert "#5" in result
 
     def test_max_7_coins_shown(self):
-        coins = [
-            {"item": {"name": f"Coin{i}", "symbol": f"C{i}", "market_cap_rank": i}}
-            for i in range(1, 15)
-        ]
+        coins = [{"item": {"name": f"Coin{i}", "symbol": f"C{i}", "market_cap_rank": i}} for i in range(1, 15)]
         result = gms.format_trending(coins)
         # Coin8 through Coin14 should not appear (only top 7 shown)
         assert "Coin8" not in result
@@ -634,6 +636,7 @@ class TestFormatTrendingContent:
 # ---------------------------------------------------------------------------
 # generate_quant_signals (content verification)
 # ---------------------------------------------------------------------------
+
 
 class TestGenerateQuantSignalsContent:
     def _btc(self, ch24, ch7d):
@@ -702,6 +705,7 @@ class TestGenerateQuantSignalsContent:
 # ---------------------------------------------------------------------------
 # generate_key_highlights
 # ---------------------------------------------------------------------------
+
 
 class TestGenerateKeyHighlights:
     def _btc_coin(self, price, ch24, ch7d):
@@ -776,23 +780,17 @@ class TestGenerateKeyHighlights:
         assert "약화" in result
 
     def test_korean_market_bullet_present(self):
-        kr_market = {
-            "KOSPI": {"price": "2500.00", "change": "+10.00", "change_pct": "+0.40%"}
-        }
+        kr_market = {"KOSPI": {"price": "2500.00", "change": "+10.00", "change_pct": "+0.40%"}}
         result = gms.generate_key_highlights({}, [], {}, kr_market)
         assert "KOSPI" in result
 
     def test_commodity_gold_bullet_present(self):
-        commodity = {
-            "금 (Gold)": {"price": "1950.00", "change": "+10.00", "change_pct": "+0.52%"}
-        }
+        commodity = {"금 (Gold)": {"price": "1950.00", "change": "+10.00", "change_pct": "+0.52%"}}
         result = gms.generate_key_highlights({}, [], {}, {}, commodity_data=commodity)
         assert "금" in result
 
     def test_commodity_oil_bullet_present(self):
-        commodity = {
-            "원유 (WTI)": {"price": "78.00", "change": "-0.50", "change_pct": "-0.64%"}
-        }
+        commodity = {"원유 (WTI)": {"price": "78.00", "change": "-0.50", "change_pct": "-0.64%"}}
         result = gms.generate_key_highlights({}, [], {}, {}, commodity_data=commodity)
         assert "원유" in result
 
@@ -819,6 +817,7 @@ class TestGenerateKeyHighlights:
 # ---------------------------------------------------------------------------
 # generate_insight
 # ---------------------------------------------------------------------------
+
 
 class TestGenerateInsight:
     def _global(self, mcap_change, btc_dom):
@@ -901,16 +900,12 @@ class TestGenerateInsight:
         assert "글로벌" in result or "대폭 변동" in result
 
     def test_kospi_included_when_kr_market_present(self):
-        kr_market = {
-            "KOSPI": {"price": "2500.00", "change": "+10.00", "change_pct": "+0.40%"}
-        }
+        kr_market = {"KOSPI": {"price": "2500.00", "change": "+10.00", "change_pct": "+0.40%"}}
         result = gms.generate_insight(self._global(0.0, 50), [], {}, {}, kr_market)
         assert "KOSPI" in result
 
     def test_usdkrw_included_when_present(self):
-        kr_market = {
-            "USD/KRW 환율": {"price": "1320.00", "change": "+2.00", "change_pct": "+0.15%"}
-        }
+        kr_market = {"USD/KRW 환율": {"price": "1320.00", "change": "+2.00", "change_pct": "+0.15%"}}
         result = gms.generate_insight(self._global(0.0, 50), [], {}, {}, kr_market)
         assert "1320.00" in result or "환율" in result
 
@@ -927,6 +922,7 @@ class TestGenerateInsight:
 # ---------------------------------------------------------------------------
 # format_top_coins (additional coverage)
 # ---------------------------------------------------------------------------
+
 
 class TestFormatTopCoinsExtra:
     def _coin(self, symbol, name, price, ch24=0.0, ch7d=0.0, mcap=1_000_000_000):
@@ -971,6 +967,7 @@ class TestFormatTopCoinsExtra:
 # calculate_yield_spread (edge cases)
 # ---------------------------------------------------------------------------
 
+
 class TestCalculateYieldSpreadEdgeCases:
     def test_only_10y_yield_no_2y_returns_empty(self):
         # Manual fallback requires both yields; only one present → empty dict
@@ -1002,6 +999,7 @@ class TestCalculateYieldSpreadEdgeCases:
 # fetch_us_market_data — Alpha Vantage path (mocked HTTP)
 # ---------------------------------------------------------------------------
 
+
 class TestFetchUsMarketDataAlphaVantage:
     """Tests for the Alpha Vantage branch of fetch_us_market_data."""
 
@@ -1019,21 +1017,30 @@ class TestFetchUsMarketDataAlphaVantage:
     def test_parses_spy_quote_from_alpha_vantage(self, monkeypatch):
         import requests as _requests
 
-        mock_resp = type("R", (), {
-            "raise_for_status": lambda self: None,
-            "json": lambda self: self._data,
-            "_data": self._av_response("SPY", "500.00", "+5.00", "+1.01%", "50000000"),
-        })()
+        mock_resp = type(
+            "R",
+            (),
+            {
+                "raise_for_status": lambda self: None,
+                "json": lambda self: self._data,
+                "_data": self._av_response("SPY", "500.00", "+5.00", "+1.01%", "50000000"),
+            },
+        )()
 
         monkeypatch.setattr(_requests, "get", lambda *a, **kw: mock_resp)
 
         # Also stub yfinance so the fallback/crypto branch doesn't try the network
         import sys
-        yf_stub = type("yf", (), {
-            "Ticker": lambda sym: type("T", (), {
-                "fast_info": type("FI", (), {"last_price": None, "previous_close": None})()
-            })()
-        })()
+
+        yf_stub = type(
+            "yf",
+            (),
+            {
+                "Ticker": lambda sym: type(
+                    "T", (), {"fast_info": type("FI", (), {"last_price": None, "previous_close": None})()}
+                )()
+            },
+        )()
         monkeypatch.setitem(sys.modules, "yfinance", yf_stub)
 
         result = gms.fetch_us_market_data("FAKE_KEY")
@@ -1046,18 +1053,27 @@ class TestFetchUsMarketDataAlphaVantage:
         import requests as _requests
 
         # Global Quote present but no '05. price'
-        mock_resp = type("R", (), {
-            "raise_for_status": lambda self: None,
-            "json": lambda self: {"Global Quote": {}},
-        })()
+        mock_resp = type(
+            "R",
+            (),
+            {
+                "raise_for_status": lambda self: None,
+                "json": lambda self: {"Global Quote": {}},
+            },
+        )()
         monkeypatch.setattr(_requests, "get", lambda *a, **kw: mock_resp)
 
         import sys
-        yf_stub = type("yf", (), {
-            "Ticker": lambda sym: type("T", (), {
-                "fast_info": type("FI", (), {"last_price": None, "previous_close": None})()
-            })()
-        })()
+
+        yf_stub = type(
+            "yf",
+            (),
+            {
+                "Ticker": lambda sym: type(
+                    "T", (), {"fast_info": type("FI", (), {"last_price": None, "previous_close": None})()}
+                )()
+            },
+        )()
         monkeypatch.setitem(sys.modules, "yfinance", yf_stub)
 
         result = gms.fetch_us_market_data("FAKE_KEY")
@@ -1075,11 +1091,16 @@ class TestFetchUsMarketDataAlphaVantage:
         monkeypatch.setattr(_requests, "get", fake_get)
 
         import sys
-        yf_stub = type("yf", (), {
-            "Ticker": lambda sym: type("T", (), {
-                "fast_info": type("FI", (), {"last_price": None, "previous_close": None})()
-            })()
-        })()
+
+        yf_stub = type(
+            "yf",
+            (),
+            {
+                "Ticker": lambda sym: type(
+                    "T", (), {"fast_info": type("FI", (), {"last_price": None, "previous_close": None})()}
+                )()
+            },
+        )()
         monkeypatch.setitem(sys.modules, "yfinance", yf_stub)
 
         # Should not raise; returns partial (possibly empty) dict
@@ -1093,19 +1114,28 @@ class TestFetchUsMarketDataAlphaVantage:
 
         def fake_get(*a, **kw):
             called["n"] += 1
-            return type("R", (), {
-                "raise_for_status": lambda self: None,
-                "json": lambda self: {},
-            })()
+            return type(
+                "R",
+                (),
+                {
+                    "raise_for_status": lambda self: None,
+                    "json": lambda self: {},
+                },
+            )()
 
         monkeypatch.setattr(_requests, "get", fake_get)
 
         import sys
-        yf_stub = type("yf", (), {
-            "Ticker": lambda sym: type("T", (), {
-                "fast_info": type("FI", (), {"last_price": None, "previous_close": None})()
-            })()
-        })()
+
+        yf_stub = type(
+            "yf",
+            (),
+            {
+                "Ticker": lambda sym: type(
+                    "T", (), {"fast_info": type("FI", (), {"last_price": None, "previous_close": None})()}
+                )()
+            },
+        )()
         monkeypatch.setitem(sys.modules, "yfinance", yf_stub)
 
         gms.fetch_us_market_data("")
@@ -1116,14 +1146,19 @@ class TestFetchUsMarketDataAlphaVantage:
 # fetch_us_market_data — yfinance crypto-related stocks branch
 # ---------------------------------------------------------------------------
 
+
 class TestFetchUsMarketDataYfinance:
     """Tests for yfinance-based crypto stock fetching (COIN, MSTR, IBIT)."""
 
     def _make_yf_stub(self, price, prev_close):
-        fast_info = type("FI", (), {
-            "last_price": price,
-            "previous_close": prev_close,
-        })()
+        fast_info = type(
+            "FI",
+            (),
+            {
+                "last_price": price,
+                "previous_close": prev_close,
+            },
+        )()
         ticker = type("T", (), {"fast_info": fast_info})()
         return type("yf", (), {"Ticker": staticmethod(lambda sym: ticker)})()
 
@@ -1187,8 +1222,8 @@ class TestFetchUsMarketDataYfinance:
 # fetch_korean_market — yfinance branch
 # ---------------------------------------------------------------------------
 
-class TestFetchKoreanMarket:
 
+class TestFetchKoreanMarket:
     def _make_yf_stub(self, price, prev):
         fi = type("FI", (), {"last_price": price, "previous_close": prev})()
         ticker = type("T", (), {"fast_info": fi})()
@@ -1196,6 +1231,7 @@ class TestFetchKoreanMarket:
 
     def test_parses_kospi_data(self, monkeypatch):
         import sys
+
         monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(2500.0, 2450.0))
 
         result = gms.fetch_korean_market()
@@ -1204,6 +1240,7 @@ class TestFetchKoreanMarket:
 
     def test_change_and_pct_calculated(self, monkeypatch):
         import sys
+
         monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(2500.0, 2450.0))
 
         result = gms.fetch_korean_market()
@@ -1214,6 +1251,7 @@ class TestFetchKoreanMarket:
 
     def test_returns_all_three_symbols(self, monkeypatch):
         import sys
+
         monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(1000.0, 990.0))
 
         result = gms.fetch_korean_market()
@@ -1224,6 +1262,7 @@ class TestFetchKoreanMarket:
 
     def test_none_price_skips_symbol(self, monkeypatch):
         import sys
+
         monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(None, 1000.0))
 
         result = gms.fetch_korean_market()
@@ -1231,6 +1270,7 @@ class TestFetchKoreanMarket:
 
     def test_yfinance_import_error_returns_empty(self, monkeypatch):
         import sys
+
         monkeypatch.setitem(sys.modules, "yfinance", None)
 
         result = gms.fetch_korean_market()
@@ -1243,6 +1283,7 @@ class TestFetchKoreanMarket:
             @property
             def last_price(self):
                 raise RuntimeError("yf error")
+
             previous_close = 1000.0
 
         class BrokenTicker:
@@ -1259,8 +1300,8 @@ class TestFetchKoreanMarket:
 # fetch_commodity_data — yfinance branch
 # ---------------------------------------------------------------------------
 
-class TestFetchCommodityData:
 
+class TestFetchCommodityData:
     def _make_yf_stub(self, price, prev):
         fi = type("FI", (), {"last_price": price, "previous_close": prev})()
         ticker = type("T", (), {"fast_info": fi})()
@@ -1268,6 +1309,7 @@ class TestFetchCommodityData:
 
     def test_parses_gold_data(self, monkeypatch):
         import sys
+
         monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(1950.0, 1940.0))
 
         result = gms.fetch_commodity_data()
@@ -1276,6 +1318,7 @@ class TestFetchCommodityData:
 
     def test_returns_all_four_commodities(self, monkeypatch):
         import sys
+
         monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(100.0, 98.0))
 
         result = gms.fetch_commodity_data()
@@ -1286,6 +1329,7 @@ class TestFetchCommodityData:
 
     def test_change_pct_sign_positive(self, monkeypatch):
         import sys
+
         monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(100.0, 98.0))
 
         result = gms.fetch_commodity_data()
@@ -1294,6 +1338,7 @@ class TestFetchCommodityData:
 
     def test_change_pct_sign_negative(self, monkeypatch):
         import sys
+
         monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(95.0, 100.0))
 
         result = gms.fetch_commodity_data()
@@ -1301,6 +1346,7 @@ class TestFetchCommodityData:
 
     def test_none_price_skips_commodity(self, monkeypatch):
         import sys
+
         monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(None, 100.0))
 
         result = gms.fetch_commodity_data()
@@ -1308,6 +1354,7 @@ class TestFetchCommodityData:
 
     def test_yfinance_import_error_returns_empty(self, monkeypatch):
         import sys
+
         monkeypatch.setitem(sys.modules, "yfinance", None)
 
         result = gms.fetch_commodity_data()
@@ -1318,8 +1365,8 @@ class TestFetchCommodityData:
 # fetch_fred_indicators — mocked HTTP via request_with_retry
 # ---------------------------------------------------------------------------
 
-class TestFetchFredIndicators:
 
+class TestFetchFredIndicators:
     def _obs(self, value, date="2024-01-15", prev_value="4.50", prev_date="2023-12-15"):
         return {
             "observations": [
@@ -1337,6 +1384,7 @@ class TestFetchFredIndicators:
         mock_resp._data = self._obs("5.25", prev_value="5.00")
 
         import scripts.generate_market_summary as _gms
+
         monkeypatch.setattr(_gms, "request_with_retry", lambda *a, **kw: mock_resp)
 
         result = gms.fetch_fred_indicators("FAKE_KEY")
@@ -1349,6 +1397,7 @@ class TestFetchFredIndicators:
         mock_resp._data = self._obs("5.25", prev_value="5.00")
 
         import scripts.generate_market_summary as _gms
+
         monkeypatch.setattr(_gms, "request_with_retry", lambda *a, **kw: mock_resp)
 
         result = gms.fetch_fred_indicators("FAKE_KEY")
@@ -1360,6 +1409,7 @@ class TestFetchFredIndicators:
         mock_resp._data = {"observations": [{"value": ".", "date": "2024-01-15"}]}
 
         import scripts.generate_market_summary as _gms
+
         monkeypatch.setattr(_gms, "request_with_retry", lambda *a, **kw: mock_resp)
 
         result = gms.fetch_fred_indicators("FAKE_KEY")
@@ -1370,6 +1420,7 @@ class TestFetchFredIndicators:
         mock_resp._data = {"observations": [{"value": "5.25", "date": "2024-01-15"}]}
 
         import scripts.generate_market_summary as _gms
+
         monkeypatch.setattr(_gms, "request_with_retry", lambda *a, **kw: mock_resp)
 
         result = gms.fetch_fred_indicators("FAKE_KEY")
@@ -1396,6 +1447,7 @@ class TestFetchFredIndicators:
         mock_resp._data = self._obs("4.00", date="2024-03-01")
 
         import scripts.generate_market_summary as _gms
+
         monkeypatch.setattr(_gms, "request_with_retry", lambda *a, **kw: mock_resp)
 
         result = gms.fetch_fred_indicators("FAKE_KEY")
@@ -1411,6 +1463,7 @@ class TestFetchFredIndicators:
         }
 
         import scripts.generate_market_summary as _gms
+
         monkeypatch.setattr(_gms, "request_with_retry", lambda *a, **kw: mock_resp)
 
         result = gms.fetch_fred_indicators("FAKE_KEY")
@@ -1421,8 +1474,8 @@ class TestFetchFredIndicators:
 # fetch_sector_performance — yfinance branch
 # ---------------------------------------------------------------------------
 
-class TestFetchSectorPerformance:
 
+class TestFetchSectorPerformance:
     def _make_yf_stub(self, price, prev):
         fi = type("FI", (), {"last_price": price, "previous_close": prev})()
         ticker = type("T", (), {"fast_info": fi})()
@@ -1430,6 +1483,7 @@ class TestFetchSectorPerformance:
 
     def test_returns_sector_data_with_name(self, monkeypatch):
         import sys
+
         monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(200.0, 195.0))
 
         result = gms.fetch_sector_performance()
@@ -1438,6 +1492,7 @@ class TestFetchSectorPerformance:
 
     def test_returns_all_11_sectors(self, monkeypatch):
         import sys
+
         monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(100.0, 99.0))
 
         result = gms.fetch_sector_performance()
@@ -1446,6 +1501,7 @@ class TestFetchSectorPerformance:
 
     def test_change_pct_is_float(self, monkeypatch):
         import sys
+
         monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(110.0, 100.0))
 
         result = gms.fetch_sector_performance()
@@ -1454,6 +1510,7 @@ class TestFetchSectorPerformance:
 
     def test_price_formatted_as_string(self, monkeypatch):
         import sys
+
         monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(199.50, 198.0))
 
         result = gms.fetch_sector_performance()
@@ -1461,6 +1518,7 @@ class TestFetchSectorPerformance:
 
     def test_none_price_skips_sector(self, monkeypatch):
         import sys
+
         monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(None, 100.0))
 
         result = gms.fetch_sector_performance()
@@ -1468,6 +1526,7 @@ class TestFetchSectorPerformance:
 
     def test_yfinance_import_error_returns_empty(self, monkeypatch):
         import sys
+
         monkeypatch.setitem(sys.modules, "yfinance", None)
 
         result = gms.fetch_sector_performance()
@@ -1477,6 +1536,7 @@ class TestFetchSectorPerformance:
 # ---------------------------------------------------------------------------
 # fetch_btc_etf_data — yfinance + rss_fetcher branch
 # ---------------------------------------------------------------------------
+
 
 def _patch_rss_fetcher(monkeypatch, return_value):
     """Patch fetch_rss_feeds_concurrent on the module that gms resolves at call time.
@@ -1503,7 +1563,6 @@ def _patch_rss_fetcher_capture(monkeypatch):
 
 
 class TestFetchBtcEtfData:
-
     def _make_yf_stub(self, price, prev):
         fi = type("FI", (), {"last_price": price, "previous_close": prev})()
         ticker = type("T", (), {"fast_info": fi})()
@@ -1514,6 +1573,7 @@ class TestFetchBtcEtfData:
 
     def test_returns_etfs_and_news_keys(self, monkeypatch):
         import sys
+
         monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(35.0, 34.0))
         self._patch_rss(monkeypatch, [])
 
@@ -1523,6 +1583,7 @@ class TestFetchBtcEtfData:
 
     def test_parses_ibit_price(self, monkeypatch):
         import sys
+
         monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(35.50, 34.00))
         self._patch_rss(monkeypatch, [])
 
@@ -1532,6 +1593,7 @@ class TestFetchBtcEtfData:
 
     def test_parses_all_three_etfs(self, monkeypatch):
         import sys
+
         monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(30.0, 29.0))
         self._patch_rss(monkeypatch, [])
 
@@ -1542,6 +1604,7 @@ class TestFetchBtcEtfData:
 
     def test_change_pct_formatted_with_sign(self, monkeypatch):
         import sys
+
         monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(110.0, 100.0))
         self._patch_rss(monkeypatch, [])
 
@@ -1550,6 +1613,7 @@ class TestFetchBtcEtfData:
 
     def test_news_items_from_rss_included(self, monkeypatch):
         import sys
+
         news = [{"title": "Bitcoin ETF 자금 유입", "link": "https://example.com"}]
         monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(None, 30.0))
         self._patch_rss(monkeypatch, news)
@@ -1559,6 +1623,7 @@ class TestFetchBtcEtfData:
 
     def test_none_price_skips_etf(self, monkeypatch):
         import sys
+
         monkeypatch.setitem(sys.modules, "yfinance", self._make_yf_stub(None, 30.0))
         self._patch_rss(monkeypatch, [])
 
@@ -1567,6 +1632,7 @@ class TestFetchBtcEtfData:
 
     def test_yfinance_import_error_etfs_empty(self, monkeypatch):
         import sys
+
         monkeypatch.setitem(sys.modules, "yfinance", None)
         self._patch_rss(monkeypatch, [])
 
@@ -1578,8 +1644,8 @@ class TestFetchBtcEtfData:
 # fetch_whale_trades — rss_fetcher branch
 # ---------------------------------------------------------------------------
 
-class TestFetchWhaleTrades:
 
+class TestFetchWhaleTrades:
     def test_returns_list(self, monkeypatch):
         _patch_rss_fetcher(monkeypatch, [])
         result = gms.fetch_whale_trades()
@@ -1616,6 +1682,7 @@ class TestFetchWhaleTrades:
 # fetch_us_market_data — yfinance fallback for AV symbols (^GSPC etc.)
 # ---------------------------------------------------------------------------
 
+
 class TestFetchUsMarketDataYfinanceFallback:
     """Covers the yfinance fallback path for AV symbols when AV returns < 3 results."""
 
@@ -1625,10 +1692,14 @@ class TestFetchUsMarketDataYfinanceFallback:
         import requests as _requests
 
         # AV returns empty Global Quote → no SPY from AV
-        empty_resp = type("R", (), {
-            "raise_for_status": lambda self: None,
-            "json": lambda self: {"Global Quote": {}},
-        })()
+        empty_resp = type(
+            "R",
+            (),
+            {
+                "raise_for_status": lambda self: None,
+                "json": lambda self: {"Global Quote": {}},
+            },
+        )()
         monkeypatch.setattr(_requests, "get", lambda *a, **kw: empty_resp)
 
         # yfinance returns valid data for ^GSPC → should fill SPY
@@ -1662,19 +1733,29 @@ class TestFetchUsMarketDataYfinanceFallback:
             sym = (params or {}).get("symbol", "")
             call_count["n"] += 1
             if sym == "SPY":
-                return type("R", (), {
+                return type(
+                    "R",
+                    (),
+                    {
+                        "raise_for_status": lambda self: None,
+                        "json": lambda self: {
+                            "Global Quote": {
+                                "05. price": "499.00",
+                                "09. change": "+1.00",
+                                "10. change percent": "+0.20%",
+                                "06. volume": "1000",
+                            }
+                        },
+                    },
+                )()
+            return type(
+                "R",
+                (),
+                {
                     "raise_for_status": lambda self: None,
-                    "json": lambda self: {"Global Quote": {
-                        "05. price": "499.00",
-                        "09. change": "+1.00",
-                        "10. change percent": "+0.20%",
-                        "06. volume": "1000",
-                    }},
-                })()
-            return type("R", (), {
-                "raise_for_status": lambda self: None,
-                "json": lambda self: {"Global Quote": {}},
-            })()
+                    "json": lambda self: {"Global Quote": {}},
+                },
+            )()
 
         monkeypatch.setattr(_requests, "get", fake_get)
 
@@ -1723,9 +1804,7 @@ _FETCH_PATCHES = {
     f"{_GMS}.fetch_coingecko_trending": [],
     f"{_GMS}.fetch_fear_greed_index": {"value": 65, "classification": "Greed"},
     f"{_GMS}.fetch_us_market_data": {},
-    f"{_GMS}.fetch_korean_market": {
-        "KOSPI": {"price": "2500.00", "change": "+25.00", "change_pct": "+1.00%"}
-    },
+    f"{_GMS}.fetch_korean_market": {"KOSPI": {"price": "2500.00", "change": "+25.00", "change_pct": "+1.00%"}},
     f"{_GMS}.fetch_commodity_data": {},
     f"{_GMS}.fetch_fred_indicators": {},
     f"{_GMS}.fetch_sector_performance": {},
@@ -1735,10 +1814,7 @@ _FETCH_PATCHES = {
     "time.sleep": None,
 }
 
-_EMPTY_FETCH_PATCHES = {
-    k: ([] if any(x in k for x in ("coins", "whale", "trending")) else {})
-    for k in _FETCH_PATCHES
-}
+_EMPTY_FETCH_PATCHES = {k: ([] if any(x in k for x in ("coins", "whale", "trending")) else {}) for k in _FETCH_PATCHES}
 _EMPTY_FETCH_PATCHES["time.sleep"] = None
 
 
@@ -1778,9 +1854,11 @@ class TestMainIntegration:
         mock_gen = self._mock_gen(tmp_path)
         mock_dedup = self._mock_dedup()
 
-        with _apply_fetch_patches(), \
-             patch(f"{_GMS}.PostGenerator", return_value=mock_gen), \
-             patch(f"{_GMS}.DedupEngine", return_value=mock_dedup):
+        with (
+            _apply_fetch_patches(),
+            patch(f"{_GMS}.PostGenerator", return_value=mock_gen),
+            patch(f"{_GMS}.DedupEngine", return_value=mock_dedup),
+        ):
             gms.main()
 
         mock_gen.create_post.assert_called_once()
@@ -1794,9 +1872,11 @@ class TestMainIntegration:
         mock_gen = self._mock_gen(tmp_path)
         mock_dedup = self._mock_dedup()
 
-        with _apply_fetch_patches(), \
-             patch(f"{_GMS}.PostGenerator", return_value=mock_gen), \
-             patch(f"{_GMS}.DedupEngine", return_value=mock_dedup):
+        with (
+            _apply_fetch_patches(),
+            patch(f"{_GMS}.PostGenerator", return_value=mock_gen),
+            patch(f"{_GMS}.DedupEngine", return_value=mock_dedup),
+        ):
             gms.main()
 
         mock_dedup.is_duplicate_exact.assert_called_once()
@@ -1807,9 +1887,11 @@ class TestMainIntegration:
         mock_gen = self._mock_gen(tmp_path)
         mock_dedup = self._mock_dedup(is_dup=True)
 
-        with _apply_fetch_patches(), \
-             patch(f"{_GMS}.PostGenerator", return_value=mock_gen), \
-             patch(f"{_GMS}.DedupEngine", return_value=mock_dedup):
+        with (
+            _apply_fetch_patches(),
+            patch(f"{_GMS}.PostGenerator", return_value=mock_gen),
+            patch(f"{_GMS}.DedupEngine", return_value=mock_dedup),
+        ):
             gms.main()
 
         mock_gen.create_post.assert_not_called()
@@ -1820,9 +1902,11 @@ class TestMainIntegration:
         mock_gen = self._mock_gen(tmp_path)
         mock_dedup = self._mock_dedup()
 
-        with _apply_fetch_patches(overrides=_EMPTY_FETCH_PATCHES), \
-             patch(f"{_GMS}.PostGenerator", return_value=mock_gen), \
-             patch(f"{_GMS}.DedupEngine", return_value=mock_dedup):
+        with (
+            _apply_fetch_patches(overrides=_EMPTY_FETCH_PATCHES),
+            patch(f"{_GMS}.PostGenerator", return_value=mock_gen),
+            patch(f"{_GMS}.DedupEngine", return_value=mock_dedup),
+        ):
             gms.main()  # must not raise
 
     def test_post_description_contains_date(self, tmp_path):
@@ -1830,14 +1914,14 @@ class TestMainIntegration:
         mock_gen = self._mock_gen(tmp_path)
         mock_dedup = self._mock_dedup()
 
-        with _apply_fetch_patches(), \
-             patch(f"{_GMS}.PostGenerator", return_value=mock_gen), \
-             patch(f"{_GMS}.DedupEngine", return_value=mock_dedup):
+        with (
+            _apply_fetch_patches(),
+            patch(f"{_GMS}.PostGenerator", return_value=mock_gen),
+            patch(f"{_GMS}.DedupEngine", return_value=mock_dedup),
+        ):
             gms.main()
 
         mock_gen.create_post.assert_called_once()
         extra_fm = mock_gen.create_post.call_args.kwargs.get("extra_frontmatter", {})
         desc = extra_fm.get("description", "")
-        assert _re.search(r"\d{4}-\d{2}-\d{2}", desc), (
-            f"description must contain a YYYY-MM-DD date, got: {desc!r}"
-        )
+        assert _re.search(r"\d{4}-\d{2}-\d{2}", desc), f"description must contain a YYYY-MM-DD date, got: {desc!r}"
