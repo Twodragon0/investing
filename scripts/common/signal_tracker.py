@@ -6,13 +6,14 @@ SignalComposer의 CompositeResult를 _state/signal_history.json에 기록하고,
 
 from __future__ import annotations
 
-import json
 import os
 from dataclasses import asdict, dataclass, field
 from datetime import UTC, datetime, timedelta
+from pathlib import Path
 from typing import TYPE_CHECKING, Any, Dict, List, Optional
 
 from .config import setup_logging
+from .time_series_state import TimeSeriesSchema, TimeSeriesStore
 
 if TYPE_CHECKING:
     from .signal_composer import CompositeResult
@@ -26,6 +27,20 @@ _HISTORY_FILE = os.path.join(_STATE_DIR, "signal_history.json")
 
 # 히스토리 보존 기간 (일)
 _MAX_AGE_DAYS = 365
+
+# ── TimeSeriesStore 스키마 및 인스턴스 ──────────────────────────────────────────
+
+_SIGNAL_SCHEMA = TimeSeriesSchema(
+    required_fields=["date"],  # btc_price는 nullable이므로 required에 포함 안 함
+    numeric_fields={},  # btc_price bound는 두지 않음 (null 허용)
+    date_field="date",
+    date_format="%Y-%m-%d",
+    max_entries=365,  # 1년 히스토리
+    allow_null_fields=["btc_price"],
+    extra_fields_allowed=True,  # accuracy 중첩 필드 허용
+)
+
+_SIGNAL_STORE = TimeSeriesStore(Path(_HISTORY_FILE), _SIGNAL_SCHEMA, logger)
 
 
 # ── 데이터 클래스 ────────────────────────────────────────────────────────────
@@ -91,36 +106,22 @@ class AccuracyReport:
 
 
 def _load_history(path: str) -> List[Dict[str, Any]]:
-    """히스토리 JSON 파일을 로드한다. 오류 시 빈 리스트 반환."""
-    if not os.path.exists(path):
-        return []
-    try:
-        with open(path, encoding="utf-8") as f:
-            data = json.load(f)
-        if isinstance(data, list):
-            return data
-        logger.warning("signal_history.json 형식 오류: 리스트가 아님, 초기화")
-        return []
-    except (json.JSONDecodeError, OSError) as e:
-        logger.warning("signal_history.json 로드 실패: %s", e)
-        return []
+    """히스토리 JSON 파일을 로드한다. 오류 시 빈 리스트 반환.
+
+    TimeSeriesStore.load()에 위임한다. 기존 호출자 호환성을 위해 유지.
+    """
+    store = TimeSeriesStore(Path(path), _SIGNAL_SCHEMA, logger)
+    return store.load(validate=False)
 
 
 def _save_history(path: str, entries: List[Dict[str, Any]]) -> None:
-    """히스토리를 원자적 쓰기(os.replace)로 저장한다."""
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    tmp_path = path + ".tmp"
-    try:
-        with open(tmp_path, "w", encoding="utf-8") as f:
-            json.dump(entries, f, ensure_ascii=False, indent=2)
-        os.replace(tmp_path, path)
-        logger.debug("signal_history.json 저장 완료 (%d 항목)", len(entries))
-    except OSError as e:
-        logger.warning("signal_history.json 저장 실패: %s", e)
-        try:
-            os.remove(tmp_path)
-        except OSError:
-            pass
+    """히스토리를 원자적 쓰기(os.replace)로 저장한다.
+
+    TimeSeriesStore._write_atomic()에 위임한다. 기존 호출자 호환성을 위해 유지.
+    """
+    store = TimeSeriesStore(Path(path), _SIGNAL_SCHEMA, logger)
+    store._write_atomic(entries)
+    logger.debug("signal_history.json 저장 완료 (%d 항목)", len(entries))
 
 
 def _prune_old_entries(entries: List[Dict[str, Any]], max_age_days: int = _MAX_AGE_DAYS) -> List[Dict[str, Any]]:
@@ -172,7 +173,8 @@ class SignalTracker:
             history_path: 히스토리 JSON 파일 경로. 기본값은 _state/signal_history.json.
         """
         self._path = history_path
-        self._entries: List[Dict[str, Any]] = _load_history(self._path)
+        self._store = TimeSeriesStore(Path(history_path), _SIGNAL_SCHEMA, logger)
+        self._entries: List[Dict[str, Any]] = self._store.load(validate=False)
         logger.debug("SignalTracker 초기화: %d개 항목 로드", len(self._entries))
 
     # ── 퍼블릭 API ──────────────────────────────────────────────────────────
@@ -231,8 +233,8 @@ class SignalTracker:
         # 오래된 항목 정리
         self._entries = _prune_old_entries(self._entries)
 
-        # 원자적 저장
-        _save_history(self._path, self._entries)
+        # 원자적 저장 (TimeSeriesStore 위임)
+        self._store._write_atomic(self._entries)
         logger.info("신호 기록 완료: date=%s score=%.1f verdict=%s", date, result.score, result.verdict)
         return snapshot
 
