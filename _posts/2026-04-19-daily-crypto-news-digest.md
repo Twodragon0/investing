@@ -57,41 +57,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-19 - 암호화폐 뉴스 요
 <li><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTFBENlg1MEV4eVZNaEZrQjFGY0p4QXp0c1FUbURvWVR0WXFuU18wdWpnY0hXU0lVdDB6eE5sOUhHLTE2MkxJc1prZ1h2MHhIemNDNVJ6ZHlMNjU?oc=5">이란 호르무즈 해협 개방, 암호화폐 일제↑ 비트 3%-리플 2%</a> <span class="p0-desc">도널드 트럼프 미국 대통령은 18일(현지시간) 이란이 다시 호르무즈 해협을 통제하려 하지만 미국을 협박할 수는 없다고 주장하면서 "오늘이 끝날 때쯤에는 어떤 정보를 갖게 될 것"이.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: O.C. Guy는 비트코인이 '여전히 폰지 사기'라고 말합니다. 
-외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 102건의 뉴스 중 P1 주요 이슈도 12건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (53건): 비트코인, BTC 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **📈 가격/시장** (29건): 암호화폐, 호르무즈, 이란 가격 변동 (29건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🔵 규제/정책** (19건): bitnomial, strategy, acquire 규제 움직임 (19건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- O.C. Guy는 비트코인이 '여전히 폰지 사기'라고 말합니다.
-- 매사추세츠 AG: 암호화폐 세계에서 안전을 유지하는 방법 | 의견
-- 이란 호르무즈 해협 개방, 암호화폐 일제↑ 비트 3%-리플 2%
-
-### 주요 이슈
-
-- '비트코인 구매'—일론 머스크의 '대규모' 미국 달러 경고로 암호화폐 가격 예측이 촉발됨
-- 호르무즈 해협의 암호화폐 통행료는 비트코인이 위기 상황에서도 번성하는 이유를 보여줍니다.
-- UBestmall LIMITED, 완전히 업그레이드된 2026년 플랫폼 출시, 암호화폐 쇼핑 혁명 선도 -markets.businessinsid
-- 외 9건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Decrypt(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-04-19.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-04-19.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
