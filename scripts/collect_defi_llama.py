@@ -7,7 +7,6 @@ Sources:
   - GET /v2/chains - Chain TVL data (name, tvl, tokenSymbol)
 """
 
-import json
 import os
 import sys
 import time
@@ -28,6 +27,7 @@ from common.markdown_utils import (
     markdown_table,
 )
 from common.post_generator import build_dated_permalink
+from common.time_series_state import Bounds, TimeSeriesSchema, TimeSeriesStore
 from common.utils import request_with_retry
 
 logger = setup_logging("collect_defi_llama")
@@ -109,61 +109,48 @@ _TVL_STALE_DAYS = int(
     get_threshold("defi_llama", "tvl_stale_days", 3.0)
 )  # warn if total TVL unchanged for this many days
 
-
-def _load_tvl_history() -> List[Dict[str, Any]]:
-    """Load TVL history from state file."""
-    if not os.path.exists(_TVL_HISTORY_PATH):
-        return []
-    try:
-        with open(_TVL_HISTORY_PATH, encoding="utf-8") as f:
-            data = json.load(f)
-        if isinstance(data, list):
-            return data
-    except (json.JSONDecodeError, OSError):
-        pass
-    return []
+_TVL_SCHEMA = TimeSeriesSchema(
+    required_fields=["date", "total_tvl"],
+    numeric_fields={"total_tvl": Bounds(min_exclusive=0)},
+    date_field="date",
+    max_entries=30,
+)
 
 
-def _save_tvl_history(history: List[Dict[str, Any]]) -> None:
-    """Persist TVL history (keep last 30 entries)."""
-    os.makedirs(os.path.dirname(_TVL_HISTORY_PATH), exist_ok=True)
-    tmp = _TVL_HISTORY_PATH + ".tmp"
-    try:
-        with open(tmp, "w", encoding="utf-8") as f:
-            json.dump(history[-30:], f, ensure_ascii=False, indent=2)
-        os.replace(tmp, _TVL_HISTORY_PATH)
-    except OSError as e:
-        logger.warning("Failed to save TVL history: %s", e)
+def _compute_staleness_warning(history: List[Dict[str, Any]], stale_days: int) -> Optional[str]:
+    """Return a warning string if TVL has been identical for stale_days or more.
+
+    Returns None if there are fewer than stale_days entries or values differ.
+    """
+    if len(history) < stale_days:
+        return None
+    recent = sorted(history, key=lambda e: e.get("date", ""), reverse=True)[:stale_days]
+    unique_values = {e.get("total_tvl") for e in recent}
+    if len(unique_values) == 1:
+        total_tvl = next(iter(unique_values))
+        dates_str = ", ".join(e["date"] for e in sorted(recent, key=lambda e: e["date"]))
+        return (
+            f"> **데이터 캐시 경고**: 최근 {stale_days}일({dates_str}) 동안 "
+            f"총 TVL이 동일한 값({_format_tvl(total_tvl)})으로 기록되었습니다. "
+            "DeFi Llama API 데이터가 캐시되어 있을 수 있으니 참고 바랍니다.\n"
+        )
+    return None
 
 
 def _check_tvl_staleness(protocols: List[Dict[str, Any]], today: str) -> Optional[str]:
     """Check if total protocol TVL has been identical for _TVL_STALE_DAYS or more.
 
     Returns a warning string if data appears cached/stale, otherwise None.
+    Uses TimeSeriesStore to enforce schema (blocks total_tvl=0 and unsorted dates).
     """
     total_tvl = round(sum(p.get("tvl", 0) or 0 for p in protocols), 2)
-    history = _load_tvl_history()
-
-    # Update history with today's value
-    # Avoid duplicate entries for the same date
-    history = [e for e in history if e.get("date") != today]
-    history.append({"date": today, "total_tvl": total_tvl})
-    _save_tvl_history(history)
-
-    if len(history) < _TVL_STALE_DAYS:
+    store = TimeSeriesStore(_TVL_HISTORY_PATH, _TVL_SCHEMA, logger)
+    result = store.append({"date": today, "total_tvl": total_tvl}, on_invalid="skip")
+    if not result.ok:
+        logger.warning("TVL 기록 스킵: %s", result.reason)
         return None
-
-    # Check last _TVL_STALE_DAYS entries for identical TVL
-    recent = sorted(history, key=lambda e: e.get("date", ""), reverse=True)[:_TVL_STALE_DAYS]
-    unique_values = {e.get("total_tvl") for e in recent}
-    if len(unique_values) == 1:
-        dates_str = ", ".join(e["date"] for e in sorted(recent, key=lambda e: e["date"]))
-        return (
-            f"> **데이터 캐시 경고**: 최근 {_TVL_STALE_DAYS}일({dates_str}) 동안 "
-            f"총 TVL이 동일한 값({_format_tvl(total_tvl)})으로 기록되었습니다. "
-            "DeFi Llama API 데이터가 캐시되어 있을 수 있으니 참고 바랍니다.\n"
-        )
-    return None
+    history = store.load(validate=False)
+    return _compute_staleness_warning(history, _TVL_STALE_DAYS)
 
 
 def fetch_protocols() -> List[Dict[str, Any]]:
