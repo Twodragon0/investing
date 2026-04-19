@@ -24,6 +24,12 @@ jobs:
           fetch-depth: 0
           ref: main
 
+      - name: Time-series state dry-run check (non-blocking)
+        # signal_history.json은 signal_tracker 자체 스키마로 append-time 검증됨
+        continue-on-error: true
+        run: |
+          python3 scripts/common/time_series_state.py --fix _state/defi_tvl_history.json
+
       - name: Ralph loop - improve post quality
         uses: ./.github/actions/python-collect
         with:

@@ -174,6 +174,12 @@ jobs:
           pip install pip-audit
           pip-audit --desc --skip-editable --ignore-vuln PYSEC-2022-252 2>&1 || echo "::warning::pip-audit found vulnerabilities (non-blocking)"
 
+      - name: Validate time-series state files
+        # signal_history.json은 signal_tracker가 자체 스키마(btc_price nullable,
+        # accuracy nested)로 append-time 검증하므로 generic CLI 체크에서 제외.
+        run: |
+          python3 scripts/common/time_series_state.py --check _state/defi_tvl_history.json
+
       - name: Run rendered fixture smoke check
         run: python scripts/verify_rendered_fixtures.py
 
