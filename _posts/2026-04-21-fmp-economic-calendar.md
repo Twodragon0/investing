@@ -1,0 +1,281 @@
+---
+layout: post
+title: "주요 경제 캘린더 및 실적 일정 (2026-04-21)"
+date: 2026-04-21 00:07:27 +0900
+categories: [market-analysis]
+tags: ["market-analysis", "economic-calendar", "earnings", "treasury", "ipo", "fmp"]
+keywords: "market-analysis, economic-calendar, earnings, treasury, ipo"
+source: "fmp"
+lang: "ko"
+image: "/assets/images/generated/og-fmp-economic-calendar-2026-04-21.png"
+permalink: "/market-analysis/2026/04/21/fmp-economic-calendar/"
+description: "경제 캘린더 69건 수집. 시장 지수 2개, 실적 발표 20건, 경제 이벤트 28건, IPO 3건 포함. FMP API 기반 주요 경제 이벤트·실적·국채 금리를 정리합니다."
+excerpt: "2026-04-21 기준 주요 시장 지수 2종, 섹터 11개, 국채 금리 5개 만기, 경제 이벤트 28건(고·중간 중요도), 대형주 실적 발표 20건, IPO 일정 3건을…"
+image_alt: "주요 경제 캘린더 및 실적 일정 (2026-04-21) - 시장 분석 뉴스 요약 이미지"
+---
+
+**2026-04-21** 기준 주요 시장 지수 2종, 섹터 11개, 국채 금리 5개 만기, 경제 이벤트 28건(고·중간 중요도), 대형주 실적 발표 20건, IPO 일정 3건을 수집했습니다.
+
+<div class="stat-grid"><div class="stat-item"><div class="stat-value">2</div><div class="stat-label">주요 지수</div></div><div class="stat-item"><div class="stat-value">20</div><div class="stat-label">실적 발표</div></div><div class="stat-item"><div class="stat-value">28</div><div class="stat-label">경제 이벤트</div></div><div class="stat-item"><div class="stat-value">3</div><div class="stat-label">IPO 일정</div></div></div>
+
+## 📊 주요 시장 지수
+
+| 심볼 | 이름 | 현재가 | 변동 | 변동률 | 고가 | 저가 |
+|------|------|--------|------|--------|------|------|
+| **SPY** | State Street SPDR S&P 500 ETF Trust | 706.19 | -3.95 | 🔴 -0.56% | 709.91 | 706.18 |
+| **^VIX** | CBOE Volatility Index | 19.76 | 2.28 | 🟢 +13.04% | 19.99 | 18.77 |
+
+
+---
+
+## 🏦 미국 국채 금리
+
+| 만기 | 금리 (%) | 변동 (bp) | 변동률 |
+|------|----------|-----------|--------|
+| 3개월 | 3.700 | - | - |
+| 2년 | 3.710 | - | - |
+| 5년 | 3.840 | - | - |
+| 10년 | 4.260 | - | - |
+| 30년 | 4.880 | - | - |
+
+
+---
+
+## 🏭 섹터 퍼포먼스
+
+| 섹터 | 변동률 |
+|------|--------|
+| 에너지 | 🟢 +1.21% |
+| 소재 | 🟢 +0.88% |
+| 금융 | 🟢 +0.34% |
+| 유틸리티 | 🟢 +0.25% |
+| 필수소비재 | 🟢 +0.22% |
+| 부동산 | 🟢 +0.20% |
+| 산업재 | 🔴 -0.14% |
+| 헬스케어 | 🔴 -0.37% |
+| 통신서비스 | 🔴 -0.42% |
+| 기술 | 🔴 -0.77% |
+| 경기소비재 | 🔴 -1.32% |
+
+
+---
+
+## 📅 주요 경제 이벤트
+
+| 날짜 | 국가 | 이벤트 | 중요도 | 예측 | 이전 | 실제 |
+|------|------|--------|--------|------|------|------|
+| 2026-04-20T08:30:00-04:00 | CAD | **CPI m/m** | 🔴 High | 1.1% | 0.5% | - |
+| 2026-04-20T08:30:00-04:00 | CAD | **Median CPI y/y** | 🔴 High | 2.4% | 2.3% | - |
+| 2026-04-20T08:30:00-04:00 | CAD | **Trimmed CPI y/y** | 🔴 High | 2.3% | 2.3% | - |
+| 2026-04-20T18:45:00-04:00 | NZD | **CPI q/q** | 🔴 High | 0.8% | 0.6% | - |
+| 2026-04-21T02:00:00-04:00 | GBP | **Claimant Count Change** | 🔴 High | 21.4K | 24.7K | - |
+| 2026-04-21T08:30:00-04:00 | USD | **Core Retail Sales m/m** | 🔴 High | 1.3% | 0.5% | - |
+| 2026-04-21T08:30:00-04:00 | USD | **Retail Sales m/m** | 🔴 High | 1.4% | 0.6% | - |
+| 2026-04-21T10:00:00-04:00 | USD | **Fed Chairman-Designate Warsh Testifies** | 🔴 High | - | - | - |
+| 2026-04-22T02:00:00-04:00 | GBP | **CPI y/y** | 🔴 High | 3.3% | 3.0% | - |
+| 2026-04-23T03:30:00-04:00 | EUR | **German Flash Manufacturing PMI** | 🔴 High | 51.3 | 51.7 | - |
+| 2026-04-23T03:30:00-04:00 | EUR | **German Flash Services PMI** | 🔴 High | 50.4 | 51.2 | - |
+| 2026-04-23T04:30:00-04:00 | GBP | **Flash Manufacturing PMI** | 🔴 High | 50.2 | 51.4 | - |
+| 2026-04-23T04:30:00-04:00 | GBP | **Flash Services PMI** | 🔴 High | 50.0 | 51.2 | - |
+| 2026-04-24T02:00:00-04:00 | GBP | **Retail Sales m/m** | 🔴 High | 0.1% | -0.4% | - |
+| 2026-04-20T08:30:00-04:00 | CAD | **Common CPI y/y** | 🟡 Medium | 2.6% | 2.4% | - |
+| 2026-04-20T12:40:00-04:00 | EUR | **ECB President Lagarde Speaks** | 🟡 Medium | - | - | - |
+| 2026-04-21T02:00:00-04:00 | GBP | **Average Earnings Index 3m/y** | 🟡 Medium | 3.6% | 3.9% | - |
+| 2026-04-21T10:00:00-04:00 | USD | **Pending Home Sales m/m** | 🟡 Medium | 0.0% | 1.8% | - |
+| 2026-04-22T13:30:00-04:00 | EUR | **ECB President Lagarde Speaks** | 🟡 Medium | - | - | - |
+| 2026-04-23T03:15:00-04:00 | EUR | **French Flash Manufacturing PMI** | 🟡 Medium | 49.5 | 50.2 | - |
+| 2026-04-23T03:15:00-04:00 | EUR | **French Flash Services PMI** | 🟡 Medium | 48.5 | 48.3 | - |
+| 2026-04-23T08:30:00-04:00 | USD | **Unemployment Claims** | 🟡 Medium | 210K | 207K | - |
+| 2026-04-23T09:45:00-04:00 | USD | **Flash Manufacturing PMI** | 🟡 Medium | 52.5 | 52.4 | - |
+| 2026-04-23T09:45:00-04:00 | USD | **Flash Services PMI** | 🟡 Medium | 50.1 | 51.1 | - |
+| 2026-04-24T04:00:00-04:00 | CHF | **SNB Chairman Schlegel Speaks** | 🟡 Medium | - | - | - |
+| 2026-04-24T08:30:00-04:00 | CAD | **Core Retail Sales m/m** | 🟡 Medium | 0.8% | 0.8% | - |
+| 2026-04-24T08:30:00-04:00 | CAD | **Retail Sales m/m** | 🟡 Medium | 0.9% | 1.1% | - |
+| 2026-04-24T10:00:00-04:00 | USD | **Revised UoM Consumer Sentiment** | 🟡 Medium | 48.4 | 47.6 | - |
+
+
+---
+
+## 💰 실적 관련 뉴스
+
+<div class="fmp-news-list">
+<div class="fmp-news-card">
+ <span class="fmp-news-severity" style="background:#f85149">HIGH</span>
+ <div class="fmp-news-body">
+ <a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxNWHBvQWYzajFXMndRWEg4NVJ5bVM1UV9zbk52aW9pWDM2QUFpVnlLeWJIQUZMSGJ1T1JZVHl1M1VOMmMxSzlMUXVFbmNNNUpmUGZ5ZndxTDJKajNmOHRHVWZXa2VLVDE0VThCanJNejdiYm9ZQXd3YXVHcDJycUJlX2c0ZVdJZWRpb2g5S3NYcmpldlFYSzFCczNrbw?oc=5" class="fmp-news-title" target="_blank" rel="noopener">Will Fair Isaac (FICO) Beat Estimates Again in Its Next Earnings Report?</a>
+ <div class="fmp-news-meta">
+ <span class="fmp-news-date">Fri, 17 Apr 2026 16:10:02 GMT</span>
+ </div>
+ </div>
+</div>
+<div class="fmp-news-card">
+ <span class="fmp-news-severity" style="background:#f85149">HIGH</span>
+ <div class="fmp-news-body">
+ <a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE5kVnRzaTBFSTMya2gtMFUwd1JFZTFBRUdsS2dndTQzdzN4TkJzbzgzTHpRaHBIU2dUZnkwSUh1Wjk2SW52NmhqN3Itc0ptNHpYRzkycWxyeUdiQzQxYW1EY05KZUU0NFlVcFVtcXVYdXBkQ0RxQVFqcV9n?oc=5" class="fmp-news-title" target="_blank" rel="noopener">Will W.W. Grainger (GWW) Beat Estimates Again in Its Next Earnings Report?</a>
+ <div class="fmp-news-meta">
+ <span class="fmp-news-source">Yahoo Finance UK</span>
+ <span class="fmp-news-date">Fri, 17 Apr 2026 16:10:03 GMT</span>
+ </div>
+ </div>
+</div>
+<div class="fmp-news-card">
+ <span class="fmp-news-severity" style="background:#f85149">HIGH</span>
+ <div class="fmp-news-body">
+ <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxNQ1FFX0NkSUxoc2R0OGRLcTdNcW9taExTTTlIaU1CYXRPZVQyZW5JVi1QRG82cGQtYjk0WDJqS21QcUxDSDlmN3JaMmZ4bTZhQlJhTWdRc0FFU2c2SThtTEdVN3lGZElxbkNEdlZYT3VKaUY3WFpLSUVOWVc3Tk1xOWdyR0lwZWotNm5JYUFSaEZ0MkRiM0x6OGxlOF9POXc?oc=5" class="fmp-news-title" target="_blank" rel="noopener">Will BILL Holdings (BILL) Beat Estimates Again in Its Next Earnings Report?</a>
+ <div class="fmp-news-meta">
+ <span class="fmp-news-date">Fri, 17 Apr 2026 16:10:03 GMT</span>
+ </div>
+ </div>
+</div>
+<div class="fmp-news-card">
+ <span class="fmp-news-severity" style="background:#f85149">HIGH</span>
+ <div class="fmp-news-body">
+ <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxNYmU4LUpCTmg0MGlLRmY3X3oxUTB3eWJTdEdCTTdiV1dwWDh4MWtjQkhYeU9IZ09pQmFWc0pGb0I3RUxQcFBIbHNHSmFoWWVqaWpyVndkSzh3LThVWjVPTU9WYWZLQWlYajdrQ1hiUHp2c3FBYXR4MThNQS1Kak94MUhfemhkS0FZaFFFYjYwM0dFQmZ4QTlub2Jkd3RNQ2d0QWc?oc=5" class="fmp-news-title" target="_blank" rel="noopener">Will Hilton Worldwide (HLT) Beat Estimates Again in Its Next Earnings Report?</a>
+ <div class="fmp-news-meta">
+ <span class="fmp-news-date">Fri, 17 Apr 2026 16:10:04 GMT</span>
+ </div>
+ </div>
+</div>
+<div class="fmp-news-card">
+ <span class="fmp-news-severity" style="background:#f85149">HIGH</span>
+ <div class="fmp-news-body">
+ <a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxQc042b250RzljRlZIa05sTTJkaUswUklZUEh1T0xyR1VvUTU1bzZaYnRHbnZuRG1aMV9KSVQ3c2tqYlJxbE9PbzR2M0dZZVF1OVRWWkNYMkVRSWZLOHJoOEtRamlmcjNwdF96MWE0LTNjbTF6b3oyUUlHNEc5Nko5N3BXbElZbUJoTHpfa3gtakZOWkRSdmhQRHhmcndSdjgt?oc=5" class="fmp-news-title" target="_blank" rel="noopener">Will Western Digital (WDC) Beat Estimates Again in Its Next Earnings Report?</a>
+ <div class="fmp-news-meta">
+ <span class="fmp-news-date">Thu, 16 Apr 2026 16:10:02 GMT</span>
+ </div>
+ </div>
+</div>
+<div class="fmp-news-card">
+ <span class="fmp-news-severity" style="background:#f85149">HIGH</span>
+ <div class="fmp-news-body">
+ <a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxPM0tTR3h4RVVSYjRUc080UFRWNzdXMzdSSUQtMnpxeEdKRmo1Vm9VQVFnWnloa1lRRVRIRkc5Q0JNdGF6NXNRWXEtaTJ6eHVDcERyX1NRSFFKMnRTaVVLcFBDUVZITG5GQ2N5OXctWkVMcHhoN05qWjRQTFBzV2ZxdHZqTWk1TTBkNXhSTTJUaElCYnE4Z0xmUk5SZw?oc=5" class="fmp-news-title" target="_blank" rel="noopener">Will Agco (AGCO) Beat Estimates Again in Its Next Earnings Report?</a>
+ <div class="fmp-news-meta">
+ <span class="fmp-news-date">Fri, 17 Apr 2026 16:10:03 GMT</span>
+ </div>
+ </div>
+</div>
+<div class="fmp-news-card">
+ <span class="fmp-news-severity" style="background:#f85149">HIGH</span>
+ <div class="fmp-news-body">
+ <a href="https://news.google.com/rss/articles/CBMingFBVV95cUxOSjA3VjBoQXItU2RYenI1ZjdlMGZ2QjFsNTBnRTJ6ai1xZWdZcHJuSDFxeENmSTJTM3oyMGo1UDlHSmU0QlpjQ00tZk5ZaGJMMjFTTmhTcmNGNmM1Tm5EQkYzVXpTcUNjSjhtVjRRTkx0OG5MOF8xeDhaUVoyeENHTVFnNjJTVXdQTlNmU1B5QXBOVzh4WWdhSVFZYnNmdw?oc=5" class="fmp-news-title" target="_blank" rel="noopener">Will GXO Logistics (GXO) Beat Estimates Again in Its Next Earnings Report?</a>
+ <div class="fmp-news-meta">
+ <span class="fmp-news-date">Fri, 17 Apr 2026 16:10:03 GMT</span>
+ </div>
+ </div>
+</div>
+<div class="fmp-news-card">
+ <span class="fmp-news-severity" style="background:#f85149">HIGH</span>
+ <div class="fmp-news-body">
+ <a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxOdEZhcXZ3dENxYVFzVzBEY0RwZzVvb3ZyRTk4SHZxa1N5ZE5vUGhqVk5IdTFIbUFzNk15WkpGN05iU0tiSHp1TEx3dDQwMUIyellWaGJzdkJISWo4MFQ2QWhTTWtVdm1nZnRHdjFrTnlIMUpNaU51OVNZbVZoekU4OG5PSE5naE0wekNrckZ2UXpwUWxoa1VWT3EwZkZFTnV2VXgyTkUxY3ZCdw?oc=5" class="fmp-news-title" target="_blank" rel="noopener">Will International Seaways (INSW) Beat Estimates Again in Its Next Earnings Report?</a>
+ <div class="fmp-news-meta">
+ <span class="fmp-news-date">Fri, 17 Apr 2026 16:10:03 GMT</span>
+ </div>
+ </div>
+</div>
+<div class="fmp-news-card">
+ <span class="fmp-news-severity" style="background:#f85149">HIGH</span>
+ <div class="fmp-news-body">
+ <a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxPMmJLRXppbE1kdGpCdHlDRTNLNFpIU3FqYm9tWWZMQTBodFZhOWFxUElVSWdDeU15aU15ZHhCRjh3ZnMwTUNoRzNFMTlBdXlHcy1ZdDVIRlV2TTJxSnZGUzhWVmR2bW93azB2eGJmZXV2VDVoRGtybGRIWmV6TV9MT0pNVG1mTGpRR0hfQ243ckNuZ3ZfR3RHdWhzVnlqLTNB?oc=5" class="fmp-news-title" target="_blank" rel="noopener">Will MasterCard (MA) Beat Estimates Again in Its Next Earnings Report?</a>
+ <div class="fmp-news-meta">
+ <span class="fmp-news-date">Thu, 16 Apr 2026 16:10:02 GMT</span>
+ </div>
+ </div>
+</div>
+<div class="fmp-news-card">
+ <span class="fmp-news-severity" style="background:#f85149">HIGH</span>
+ <div class="fmp-news-body">
+ <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxPemZBdVJnWGYtT1Y2SHNVZ3hUWUJJRWJpRmxPY2JzQXZrZ1ZkcnVoakJ2bldzWTE2cFVmZ3ZHYWg0X2hsSmlqYTRqeFJZUzg2SVZYNnFvbXZKdm1UejJmUEgyaDhVZkh4T1FRaUwzS0VYTTZOZ21ydWtXb0pOei1VOE16cWJvWF81b0dBZFZ2T0p1WWZaMC0zUnk5Y0xiR3JUYnc?oc=5" class="fmp-news-title" target="_blank" rel="noopener">Will Victory Capital (VCTR) Beat Estimates Again in Its Next Earnings Report?</a>
+ <div class="fmp-news-meta">
+ <span class="fmp-news-date">Thu, 16 Apr 2026 16:10:03 GMT</span>
+ </div>
+ </div>
+</div>
+<div class="fmp-news-card">
+ <span class="fmp-news-severity" style="background:#f85149">HIGH</span>
+ <div class="fmp-news-body">
+ <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxNVG5odElXcXBQWHFOTG9Tc2lBY1otd0ZDRC1vMGRCZW9YS255Y193WkxxaXpNUFdQUzFEVXlpaUFZWjh4MnYzOGVSMHhlTWV6ckFJZHBkX2NwZlI1N1dsdldCLVoyM29QWjFMXzlZT2Z6SG9vS0ZRaDlOMnlBbXZMNUJGcXJXcUxwZDhyYm1jZU5hNlhXWkVuMDlBWDJMT095dEE?oc=5" class="fmp-news-title" target="_blank" rel="noopener">Will Churchill Downs (CHDN) Beat Estimates Again in Its Next Earnings Report?</a>
+ <div class="fmp-news-meta">
+ <span class="fmp-news-date">Thu, 16 Apr 2026 16:10:03 GMT</span>
+ </div>
+ </div>
+</div>
+<div class="fmp-news-card">
+ <span class="fmp-news-severity" style="background:#f85149">HIGH</span>
+ <div class="fmp-news-body">
+ <a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxOQnFIcmtrdXgtZk9tZjh4aDBvZDZLU3E4NmxEd2JGdlpZSklzdDA5ZnMtRlZRbjBxU19BRkpTVDRITEx2MGZ5RE9JMEdGbWp4VTRkSnV0aWRXeXNhM3NYQ0ZESTh6SGxZYWx6ZTRyX1plUzg3SHpSNW5SakdjMEQ4S3FMbVpiZ1U1TWViU1hCWWVwVHRBeXJscWc3Mk9XcFA0?oc=5" class="fmp-news-title" target="_blank" rel="noopener">Will Exelixis (EXEL) Beat Estimates Again in Its Next Earnings Report?</a>
+ <div class="fmp-news-meta">
+ <span class="fmp-news-date">Thu, 16 Apr 2026 16:10:03 GMT</span>
+ </div>
+ </div>
+</div>
+<div class="fmp-news-card">
+ <span class="fmp-news-severity" style="background:#f85149">HIGH</span>
+ <div class="fmp-news-body">
+ <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxNSnZpd19zRGpCXzZCalRQT2lHb0lGcU9hLUhNYzRCSmp1TmRESWRqUDVLYzJwMTAzbEdoaGstS18xRWdEZ29QVUl0cE80SHBNYnp5cUxaTFpmUVQ4RXNMNzRzNjJmQjROMW1GYzlMZE83cDNLX0tUSFRLZ2JBNXItOE40bjVjOG56US1GM0UwUVMzM29HOTlTcFJ4cUk?oc=5" class="fmp-news-title" target="_blank" rel="noopener">Will Exelon (EXC) Beat Estimates Again in Its Next Earnings Report?</a>
+ <div class="fmp-news-meta">
+ <span class="fmp-news-date">Thu, 16 Apr 2026 16:10:03 GMT</span>
+ </div>
+ </div>
+</div>
+<div class="fmp-news-card">
+ <span class="fmp-news-severity" style="background:#f85149">HIGH</span>
+ <div class="fmp-news-body">
+ <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxQNnFaQ3lTbk9fOHByRzZDeWVMbDVJblQ4S1dpeXp4SWtjbFlLTnlvWDVvZmZ2UWdSTTk2X29TRTgzMWpaODZnSjdoZXBSbGctZ1VBUlhIZ3VyV2xwd3lvLVhVTERlbWdhY2FEUkI0clhmM2hoX3didUtQWC03bGVqeTJKblZ5QW81bS1JWlNhQWVUazVUMlUwY1ZvaHU?oc=5" class="fmp-news-title" target="_blank" rel="noopener">Will Axis Capital (AXS) Beat Estimates Again in Its Next Earnings Report?</a>
+ <div class="fmp-news-meta">
+ <span class="fmp-news-date">Thu, 16 Apr 2026 16:10:03 GMT</span>
+ </div>
+ </div>
+</div>
+<div class="fmp-news-card">
+ <span class="fmp-news-severity" style="background:#f85149">HIGH</span>
+ <div class="fmp-news-body">
+ <a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxQMW5GRWNPRV9RLWhoQmxqd25pVFFZUmVDVklQcUZDYWdseTFaRWFDc0xvUjBfNndCdVJWOTl6UEkzTHpzS0h1LTl6c3pXbGh2RUxZcmdpeFE2b2lLNWFPN3o3VjhuZXJueURMVkhBejY5bnJWdFJOTTdLZFM3TWhDcDFXa3lQTTlxTVRlR2Y5eXZ2ejJUZHNJSnFJaw?oc=5" class="fmp-news-title" target="_blank" rel="noopener">Will Atmos (ATO) Beat Estimates Again in Its Next Earnings Report?</a>
+ <div class="fmp-news-meta">
+ <span class="fmp-news-date">Thu, 16 Apr 2026 16:10:02 GMT</span>
+ </div>
+ </div>
+</div>
+</div>
+
+
+---
+
+## 🚀 IPO 관련 뉴스
+
+<div class="fmp-news-list">
+<div class="fmp-news-card">
+ <span class="fmp-news-severity" style="background:#f85149">HIGH</span>
+ <div class="fmp-news-body">
+ <a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxPX1lPWThPczRnWWRhMVBlYl83NzJRTXFianVnRXJhMHV1R0JmYjNhcjV5bF90a1JwUV9rX1RYS3FwU3ZZN3YwbWVIVm9ZeEVQczNfaDlFb3NnOUJRRENULURUWGNxQW1nMVhmQW1qei1vYlExcHRCXzF0cDRpLUs3dGd2WmFFV2FoX1pEdU92UWRqVnBiRW9aQ05BSllkSUJFWl93MlZEM3RTNXFnaDJ4d0Y1X3lDZHNZWmVZdzlmbWZkcVQ3TVNVQ01rWmI?oc=5" class="fmp-news-title" target="_blank" rel="noopener">Exit ready: What the 2026 Initial Public Offering (IPO) market demands of every Chief Financial Officer (CFO)</a>
+ <div class="fmp-news-meta">
+ <span class="fmp-news-source">Specialist Risk Group</span>
+ <span class="fmp-news-date">Thu, 16 Apr 2026 08:48:18 GMT</span>
+ </div>
+ </div>
+</div>
+<div class="fmp-news-card">
+ <span class="fmp-news-severity" style="background:#f85149">HIGH</span>
+ <div class="fmp-news-body">
+ <a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxQczlBX3l2WmM2LW5VOVhrZXpwTWpQZEJnSi1vdk9KTVJHZVVaaVZJY21qRWdnZ3ZoeU9ucEV2bXZFc2dyRlByc2otUWJKbFB4bXRvZzJBU3J3dFZ1cno2eTBhd0VZRmtnZ0FoUnYzME1PSnhaQUYxQ1ZpanVUMEZ1RnV3VTZRU3Zta0ljRWtoUjM2Z0lfUTBaYi1jR2pEMkVkQzlUc0Rkelo5azFfOC1hMU53RFc0VzZuRUhkbA?oc=5" class="fmp-news-title" target="_blank" rel="noopener">Exclusive: SpaceX lays out IPO details, targets early June roadshow, sources say</a>
+ <div class="fmp-news-meta">
+ <span class="fmp-news-date">Tue, 14 Apr 2026 07:00:00 GMT</span>
+ </div>
+ </div>
+</div>
+<div class="fmp-news-card">
+ <span class="fmp-news-severity" style="background:#f85149">HIGH</span>
+ <div class="fmp-news-body">
+ <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE9peXNmQm5LczVrMDhEeUhUQnFfakxLYXk3bGg3NnItUkdKUDVIbFl4by1BcFd4LU5KLWNJNmh0dktfRDZGdkNteXREa1B0MWpSTEwxcGJHOEdYaS1CM3JobjdqTGxaYWlhc2kxMDVMQdIBdEFVX3lxTFBzUTJ3bEZLc0pUVGpyY1Y0Z19vZnNmSlpMZVoyRUZaUHlLbzlzbFk3azRFTlcya3ZQNnRzU3VGNG5wZmRqaTJxb2kwV1dYLVFfOHNTbHJKU3VXcllHVmczZGpqZ01tV3liYmsyY0gxcWlpQV9C?oc=5" class="fmp-news-title" target="_blank" rel="noopener">AI chipmaker Cerebras files to go public after scrapping IPO plans last year</a>
+ <div class="fmp-news-meta">
+ <span class="fmp-news-date">Fri, 17 Apr 2026 17:23:59 GMT</span>
+ </div>
+ </div>
+</div>
+</div>
+
+
+---
+
+> *본 캘린더는 Financial Modeling Prep API에서 자동 수집된 데이터이며, 투자 조언이 아닙니다. 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*
+
+<div class="wm-footer-meta"><span>수집 시각: 2026-04-21 00:07 KST</span><span>소스: Financial Modeling Prep API</span></div>
