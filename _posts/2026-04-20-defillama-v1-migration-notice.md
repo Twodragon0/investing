@@ -7,7 +7,7 @@ tags: ["notice", "defi-llama", "tvl"]
 keywords: "notice, defi-llama, tvl, migration"
 source: "자체 공지"
 lang: "ko"
-image: "/assets/images/generated/og-daily-defi-tvl-report-2026-04-20.png"
+image: "/assets/images/generated/og-defillama-v1-migration-notice-2026-04-20.png"
 permalink: "/defi/2026/04/20/defillama-v1-migration-notice/"
 description: "DeFi TVL 수집을 DefiLlama /v2/protocols → /protocols (v1)로 전환합니다. CEX 필터링 유지하에 실시간 업데이트를 보장하며, 기존 일일 리포트의 수치가 v1 집계로 조정됩니다."
 image_alt: "DeFi TVL 공지 - 집계 기준 변경"
