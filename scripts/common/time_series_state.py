@@ -116,9 +116,7 @@ class TimeSeriesStore:
 
     def __init__(self, path: Path, schema: TimeSeriesSchema, logger=None) -> None:
         if schema.date_field not in schema.required_fields:
-            raise ValueError(
-                f"date_field '{schema.date_field}' must be in required_fields"
-            )
+            raise ValueError(f"date_field '{schema.date_field}' must be in required_fields")
         self._path = Path(path)
         self._schema = schema
         self._logger = logger
@@ -434,9 +432,7 @@ def _make_generic_schema(records: list[dict]) -> TimeSeriesSchema:
         return TimeSeriesSchema(required_fields=["date"], numeric_fields={})
     sample = records[0]
     numeric_fields = {
-        k: Bounds(min_exclusive=0)
-        for k, v in sample.items()
-        if k != "date" and isinstance(v, (int, float))
+        k: Bounds(min_exclusive=0) for k, v in sample.items() if k != "date" and isinstance(v, (int, float))
     }
     return TimeSeriesSchema(
         required_fields=list(sample.keys()),

@@ -578,7 +578,16 @@ class TestAnalyzePost:
         content = _post_content()
         p = _make_post(tmp_path, "2026-04-17-keys.md", content)
         result = fpd._analyze_post(p)
-        for key in ("file", "date", "title", "description", "needs_fix", "replacement", "replacement_source", "content"):
+        for key in (
+            "file",
+            "date",
+            "title",
+            "description",
+            "needs_fix",
+            "replacement",
+            "replacement_source",
+            "content",
+        ):
             assert key in result
 
     def test_date_parsed_from_post(self, tmp_path):
@@ -691,7 +700,13 @@ class TestApplyFixes:
         def make_fixable(name):
             c = '---\ntitle: T\ndescription: "관련 소식입니다"\ndate: 2026-04-17\n---\nbody\n'
             path = _make_post(tmp_path, name, c)
-            return {"file": path, "needs_fix": True, "replacement": "Good replacement text here.", "replacement_source": "ko", "content": c}
+            return {
+                "file": path,
+                "needs_fix": True,
+                "replacement": "Good replacement text here.",
+                "replacement_source": "ko",
+                "content": c,
+            }
 
         posts = [make_fixable("2026-04-17-a.md"), make_fixable("2026-04-17-b.md")]
         count = fpd.apply_fixes(posts)
@@ -712,17 +727,14 @@ class TestMain:
     def test_dry_run_does_not_modify_file(self, tmp_path, monkeypatch):
         posts_dir = self._make_posts_dir(tmp_path)
         today = datetime.now(tz=UTC).date().isoformat()
-        content = (
-            "---\ntitle: Test\n"
-            'description: "관련 소식입니다"\n'
-            f"date: {today}\n---\nbody\n"
-        )
+        content = f'---\ntitle: Test\ndescription: "관련 소식입니다"\ndate: {today}\n---\nbody\n'
         p = posts_dir / f"{today}-test.md"
         p.write_text(content, encoding="utf-8")
         original = p.read_text(encoding="utf-8")
 
         monkeypatch.setattr(
-            sys, "argv",
+            sys,
+            "argv",
             ["fix_post_descriptions.py", "--days", "7", "--posts-dir", str(posts_dir)],
         )
         result = fpd.main()
@@ -734,16 +746,14 @@ class TestMain:
         today = datetime.now(tz=UTC).date().isoformat()
         ko_desc = "비트코인 ETF 승인 후 BTC 가격이 2026년 4월에 상승하였습니다."
         content = (
-            "---\ntitle: BTC\n"
-            'description: "관련 소식입니다"\n'
-            f'description_ko: "{ko_desc}"\n'
-            f"date: {today}\n---\nbody\n"
+            f'---\ntitle: BTC\ndescription: "관련 소식입니다"\ndescription_ko: "{ko_desc}"\ndate: {today}\n---\nbody\n'
         )
         p = posts_dir / f"{today}-btc.md"
         p.write_text(content, encoding="utf-8")
 
         monkeypatch.setattr(
-            sys, "argv",
+            sys,
+            "argv",
             ["fix_post_descriptions.py", "--days", "7", "--apply", "--posts-dir", str(posts_dir)],
         )
         result = fpd.main()
@@ -753,7 +763,8 @@ class TestMain:
 
     def test_missing_posts_dir_returns_2(self, tmp_path, monkeypatch):
         monkeypatch.setattr(
-            sys, "argv",
+            sys,
+            "argv",
             ["fix_post_descriptions.py", "--posts-dir", str(tmp_path / "nonexistent")],
         )
         result = fpd.main()
@@ -762,7 +773,8 @@ class TestMain:
     def test_empty_posts_dir_returns_0(self, tmp_path, monkeypatch, capsys):
         posts_dir = self._make_posts_dir(tmp_path)
         monkeypatch.setattr(
-            sys, "argv",
+            sys,
+            "argv",
             ["fix_post_descriptions.py", "--days", "7", "--posts-dir", str(posts_dir)],
         )
         result = fpd.main()
@@ -775,12 +787,16 @@ class TestMain:
         (posts_dir / f"{today}-test.md").write_text(content, encoding="utf-8")
 
         monkeypatch.setattr(
-            sys, "argv",
+            sys,
+            "argv",
             [
                 "fix_post_descriptions.py",
-                "--days", "7",
-                "--format", "markdown",
-                "--posts-dir", str(posts_dir),
+                "--days",
+                "7",
+                "--format",
+                "markdown",
+                "--posts-dir",
+                str(posts_dir),
             ],
         )
         result = fpd.main()
@@ -796,7 +812,8 @@ class TestMain:
         p.write_text(content, encoding="utf-8")
 
         monkeypatch.setattr(
-            sys, "argv",
+            sys,
+            "argv",
             ["fix_post_descriptions.py", "--file", str(p), "--posts-dir", str(posts_dir)],
         )
         result = fpd.main()
@@ -806,7 +823,8 @@ class TestMain:
         posts_dir = self._make_posts_dir(tmp_path)
         missing = tmp_path / "nonexistent.md"
         monkeypatch.setattr(
-            sys, "argv",
+            sys,
+            "argv",
             ["fix_post_descriptions.py", "--file", str(missing), "--posts-dir", str(posts_dir)],
         )
         result = fpd.main()
@@ -819,7 +837,8 @@ class TestMain:
         (posts_dir / f"{today}-test.md").write_text(content, encoding="utf-8")
 
         monkeypatch.setattr(
-            sys, "argv",
+            sys,
+            "argv",
             ["fix_post_descriptions.py", "--days", "7", "--posts-dir", str(posts_dir)],
         )
         fpd.main()

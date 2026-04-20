@@ -472,9 +472,7 @@ class TestCLI:
             {"date": "2026-04-10", "total_tvl": 100.0},
         ]
         write_records(path, records)
-        monkeypatch.setattr(
-            sys, "argv", ["time_series_state", "--fix", str(path), "--apply"]
-        )
+        monkeypatch.setattr(sys, "argv", ["time_series_state", "--fix", str(path), "--apply"])
         result = main()
         assert result == 0
         data = json.loads(path.read_text())

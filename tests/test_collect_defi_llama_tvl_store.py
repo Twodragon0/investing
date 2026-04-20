@@ -128,8 +128,7 @@ class TestMaxEntries:
         monkeypatch.setattr(mod, "_TVL_HISTORY_PATH", str(tvl_path))
         # 30개 기존 항목
         existing = [
-            {"date": f"2026-0{1 + i // 31:01d}-{(i % 28) + 1:02d}", "total_tvl": float(100 + i)}
-            for i in range(30)
+            {"date": f"2026-0{1 + i // 31:01d}-{(i % 28) + 1:02d}", "total_tvl": float(100 + i)} for i in range(30)
         ]
         # 날짜 겹침 없이 단순하게 구성
         existing = [{"date": f"2026-01-{i + 1:02d}", "total_tvl": float(100 + i)} for i in range(30)]

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""DeFi TVL 히스토리 정제 스크립트.
+"""DeFi TVL 히스토리 정제 스크립트 (TimeSeriesStore CLI 래퍼).
 
 _state/defi_tvl_history.json에서:
   - total_tvl <= 0 항목 제거
   - date 기준 오름차순 정렬
-  - 동일 date 중복 시 비-0 값(또는 나중 값) 우선 유지
+  - 동일 date 중복 시 나중 값 우선 유지
 
 Usage:
     python scripts/fix_defi_tvl_history.py           # dry-run (기본)
@@ -19,8 +19,14 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 from common.config import setup_logging
+from common.time_series_state import Bounds, TimeSeriesSchema, TimeSeriesStore
 
 HISTORY_PATH = Path(__file__).parent.parent / "_state" / "defi_tvl_history.json"
+
+_SCHEMA = TimeSeriesSchema(
+    required_fields=["date", "total_tvl"],
+    numeric_fields={"total_tvl": Bounds(min_exclusive=0)},
+)
 
 
 def load_history(path: Path) -> list[dict]:
@@ -61,9 +67,7 @@ def save_history(path: Path, records: list[dict]) -> None:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(
-        description="DeFi TVL 히스토리 정제 (zero 제거 + 정렬 + 중복 해소)"
-    )
+    parser = argparse.ArgumentParser(description="DeFi TVL 히스토리 정제 (zero 제거 + 정렬 + 중복 해소)")
     parser.add_argument(
         "--apply",
         action="store_true",
@@ -100,12 +104,11 @@ def main() -> int:
         return 0
 
     if args.apply:
-        save_history(target, cleaned)
+        store = TimeSeriesStore(target, _SCHEMA, logger)
+        store.compact()
         logger.info("저장 완료: %s", target)
     else:
-        logger.info(
-            "[dry-run] 실제 저장 생략. --apply 플래그로 적용 가능."
-        )
+        logger.info("[dry-run] 실제 저장 생략. --apply 플래그로 적용 가능.")
 
     return 0
 

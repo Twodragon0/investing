@@ -143,7 +143,9 @@ class DedupEngine:
             kept = self._checked - self._duplicates
             logger.info(
                 "Dedup stats: checked %d, removed %d duplicates, kept %d items",
-                self._checked, self._duplicates, kept,
+                self._checked,
+                self._duplicates,
+                kept,
             )
 
     def is_duplicate(self, title: str, source: str, date_str: str, url: str = "") -> bool:

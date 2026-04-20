@@ -133,9 +133,7 @@ class TestMain:
 
     def test_apply_removes_zero_and_sorts(self, tmp_path, monkeypatch):
         path = self._make_dirty_file(tmp_path)
-        monkeypatch.setattr(
-            sys, "argv", ["fix_defi_tvl_history.py", "--apply", "--path", str(path)]
-        )
+        monkeypatch.setattr(sys, "argv", ["fix_defi_tvl_history.py", "--apply", "--path", str(path)])
         result = fdh.main()
         assert result == 0
         data = json.loads(path.read_text(encoding="utf-8"))
@@ -145,9 +143,7 @@ class TestMain:
 
     def test_returns_one_for_missing_file(self, tmp_path, monkeypatch):
         missing = tmp_path / "nonexistent.json"
-        monkeypatch.setattr(
-            sys, "argv", ["fix_defi_tvl_history.py", "--path", str(missing)]
-        )
+        monkeypatch.setattr(sys, "argv", ["fix_defi_tvl_history.py", "--path", str(missing)])
         result = fdh.main()
         assert result == 1
 
@@ -155,8 +151,6 @@ class TestMain:
         records = [{"date": "2026-04-10", "total_tvl": 100.0}]
         path = tmp_path / "history.json"
         path.write_text(json.dumps(records, indent=2) + "\n", encoding="utf-8")
-        monkeypatch.setattr(
-            sys, "argv", ["fix_defi_tvl_history.py", "--path", str(path)]
-        )
+        monkeypatch.setattr(sys, "argv", ["fix_defi_tvl_history.py", "--path", str(path)])
         result = fdh.main()
         assert result == 0
