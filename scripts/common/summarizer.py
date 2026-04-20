@@ -1055,6 +1055,7 @@ class ThemeSummarizer:
         self._theme_scores: Dict[str, int] = {}
         self._theme_articles: Dict[str, List[Dict[str, Any]]] = {}
         self._scored = False
+        self._last_risk_verdict = None
 
     def _ensure_scored(self):
         """Score themes lazily on first access."""
@@ -2171,18 +2172,26 @@ class ThemeSummarizer:
         return "\n".join(lines)
 
     def _assess_risk_level(self, priority_items: Dict[str, List[Dict[str, Any]]]) -> str:
-        """Assess market risk level based on P0/P1 issue counts."""
-        p0_count = len(priority_items.get("P0", []))
-        p1_count = len(priority_items.get("P1", []))
-        if p0_count >= 3:
-            return "critical"
-        if p0_count >= 1:
-            return "elevated"
-        if p1_count >= 5:
-            return "elevated"
-        if p1_count >= 2:
-            return "moderate"
-        return "low"
+        """Assess market risk level using weighted impact scoring via risk_classifier.
+
+        Delegates to classify_risk() for score-based verdict, stores the verdict
+        in self._last_risk_verdict for top_items access by callers.
+        """
+        from .risk_classifier import classify_risk  # lazy import
+
+        verdict = classify_risk(
+            items=self.items,
+            priority_items=priority_items,
+        )
+        self._last_risk_verdict = verdict
+        if logger:
+            logger.info(
+                "risk_level=%s mean_top3=%.2f rules=%s",
+                verdict.level,
+                verdict.aggregate_mean,
+                verdict.rule_trace,
+            )
+        return verdict.level
 
     def _build_narrative_intro(
         self,

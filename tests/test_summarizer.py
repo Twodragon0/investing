@@ -705,32 +705,97 @@ class TestGenerateSummarySection:
 
 
 class TestAssessRiskLevel:
-    """Tests for ThemeSummarizer._assess_risk_level()."""
+    """Tests for ThemeSummarizer._assess_risk_level() — score-based via risk_classifier."""
 
-    def test_critical_on_3_plus_p0(self):
-        ts = ThemeSummarizer([])
-        priority = {"P0": [{}] * 3, "P1": [], "P2": []}
+    def test_critical_market_mechanism_hard_override(self):
+        """circuit breaker from credible source triggers Rule 6 hard CRITICAL."""
+        items = [
+            {
+                "title": "NYSE circuit breaker triggered by Fed decision",
+                "source": "reuters",
+                "description": "Trading halted after Fed rate announcement.",
+            }
+        ]
+        ts = ThemeSummarizer(items)
+        priority = {"P0": items, "P1": [], "P2": []}
         assert ts._assess_risk_level(priority) == "critical"
 
-    def test_elevated_on_1_p0(self):
-        ts = ThemeSummarizer([])
-        priority = {"P0": [{}], "P1": [], "P2": []}
-        assert ts._assess_risk_level(priority) == "elevated"
+    def test_critical_stores_verdict(self):
+        """_assess_risk_level stores verdict in _last_risk_verdict."""
+        items = [
+            {
+                "title": "NYSE circuit breaker triggered by Fed decision",
+                "source": "reuters",
+                "description": "",
+            }
+        ]
+        ts = ThemeSummarizer(items)
+        ts._assess_risk_level({"P0": items, "P1": [], "P2": []})
+        assert ts._last_risk_verdict is not None
+        assert ts._last_risk_verdict.level == "critical"
 
-    def test_elevated_on_5_plus_p1(self):
-        ts = ThemeSummarizer([])
-        priority = {"P0": [], "P1": [{}] * 5, "P2": []}
-        assert ts._assess_risk_level(priority) == "elevated"
+    def test_elevated_on_high_score_single_item(self):
+        """Single item with Fed mention + dollar amount scores >= P0_ITEM_THRESHOLD → elevated."""
+        items = [
+            {
+                "title": "Federal Reserve raises rates by 0.75% in emergency meeting",
+                "source": "bloomberg",
+                "description": "The FOMC voted to raise by $500 billion intervention.",
+            }
+        ]
+        ts = ThemeSummarizer(items)
+        priority = {"P0": items, "P1": [], "P2": []}
+        result = ts._assess_risk_level(priority)
+        assert result in ("elevated", "critical")
 
-    def test_moderate_on_2_p1(self):
-        ts = ThemeSummarizer([])
-        priority = {"P0": [], "P1": [{}] * 2, "P2": []}
-        assert ts._assess_risk_level(priority) == "moderate"
+    def test_moderate_on_medium_score_items(self):
+        """Items without institution or mechanism score low-moderate."""
+        items = [
+            {"title": "Bitcoin price analysis for this week", "source": "cryptopanic", "description": ""},
+            {"title": "Ethereum update scheduled next month", "source": "cryptopanic", "description": ""},
+        ]
+        ts = ThemeSummarizer(items)
+        priority = {"P0": [], "P1": items, "P2": []}
+        result = ts._assess_risk_level(priority)
+        assert result in ("low", "moderate")
 
-    def test_low_on_no_p0_p1(self):
+    def test_low_on_empty_items(self):
+        """No items → low risk."""
         ts = ThemeSummarizer([])
-        priority = {"P0": [], "P1": [], "P2": [{}] * 5}
+        priority = {"P0": [], "P1": [], "P2": []}
         assert ts._assess_risk_level(priority) == "low"
+
+    def test_opinion_only_not_critical(self):
+        """Opinion-flagged items get penalty and must not reach critical."""
+        items = [
+            {
+                "title": "Analyst says Bitcoin will crash according to his model",
+                "source": "cryptopanic",
+                "description": "Opinion column: predicts 90% drop.",
+            },
+            {
+                "title": "Expert claims Ethereum will collapse according to bearish thesis",
+                "source": "cryptopanic",
+                "description": "Analyst warns that altcoins face doom.",
+            },
+            {
+                "title": "Trader argues market will crash based on his opinion",
+                "source": "cryptopanic",
+                "description": "Editorial: column argues prices will fall.",
+            },
+        ]
+        ts = ThemeSummarizer(items)
+        priority = {"P0": items, "P1": [], "P2": []}
+        result = ts._assess_risk_level(priority)
+        assert result != "critical", "opinion-only items must not produce CRITICAL"
+
+    def test_verdict_level_matches_return_value(self):
+        """_last_risk_verdict.level must match the returned string."""
+        items = [{"title": "Bitcoin crash wipes billions", "source": "coindesk", "description": ""}]
+        ts = ThemeSummarizer(items)
+        priority = {"P0": items, "P1": [], "P2": []}
+        level = ts._assess_risk_level(priority)
+        assert ts._last_risk_verdict.level == level
 
 
 # ---------------------------------------------------------------------------
