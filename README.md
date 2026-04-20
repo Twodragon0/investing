@@ -6,6 +6,7 @@
 |-------------------------------------------------- | -------: | -------: | ------: | --------: |
 | scripts/backfill\_images.py                       |      317 |      317 |      0% |    10-760 |
 | scripts/backfill\_post\_summaries.py              |      831 |      518 |     38% |116, 118, 146, 204, 213, 215, 217, 219, 221, 223, 225, 227, 229, 231, 246, 248, 250, 252, 254, 256, 258, 260, 311, 313, 315, 317, 319, 321, 323, 325, 354, 356, 358, 360, 384, 396-398, 400, 402, 405-412, 420, 427-453, 472-485, 489-510, 514-543, 571-603, 607-632, 642, 654-665, 669-676, 680-685, 696-719, 723-761, 765-784, 788-807, 815, 819, 836-837, 845, 849, 852, 857-905, 909-923, 935-939, 943-947, 951-960, 964-986, 990-1016, 1025-1078, 1087-1137, 1141-1211, 1215 |
+| scripts/backfill\_signal\_history\_accuracy.py    |       84 |        7 |     92% |30, 161-164, 171, 210 |
 | scripts/backfill\_signal\_history\_btc\_price.py  |      181 |      181 |      0% |    11-347 |
 | scripts/check\_description\_quality.py            |      217 |       17 |     92% |20-22, 135, 137, 183, 194, 199, 228-229, 388-390, 393-395, 461 |
 | scripts/check\_jekyll\_build.py                   |       19 |        1 |     95% |        28 |
@@ -49,7 +50,7 @@
 | scripts/common/image\_generator/og.py             |       59 |        0 |    100% |           |
 | scripts/common/markdown\_utils.py                 |      163 |        0 |    100% |           |
 | scripts/common/mindspider.py                      |      377 |        6 |     98% |603, 673-674, 687-688, 990 |
-| scripts/common/post\_generator.py                 |      331 |        7 |     98% |456-460, 860-861 |
+| scripts/common/post\_generator.py                 |      331 |        8 |     98% |456-460, 825, 860-861 |
 | scripts/common/rss\_fetcher.py                    |      249 |       12 |     95% |44-45, 80, 91, 178, 187, 272, 281, 292, 302, 330-331 |
 | scripts/common/signal\_composer.py                |      477 |        2 |     99% |   870-871 |
 | scripts/common/signal\_tracker.py                 |      186 |        6 |     97% |201-203, 318-319, 380-381 |
@@ -78,7 +79,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **19941** | **6500** | **67%** |           |
+| **TOTAL**                                         | **20025** | **6508** | **68%** |           |
 
 
 ## Setup coverage badge
