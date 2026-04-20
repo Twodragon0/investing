@@ -43,6 +43,10 @@ BASE_URL = _defi_cfg.get("urls", {}).get("base", "https://api.llama.fi")
 TOP_PROTOCOLS_LIMIT = get_limit("defi_llama", "top_protocols", 20)
 TOP_CHAINS_LIMIT = get_limit("defi_llama", "top_chains", 15)
 
+# 2026-04-20: /v2/protocols(스테일 $247.99B) → /protocols v1(실시간) 전환 시점
+# 이 날짜 이전 데이터와 이후 데이터는 집계 기준이 달라 시계열 비교 시 불연속 발생
+V1_MIGRATION_DATE = "2026-04-20"
+
 
 def _format_tvl(tvl: float) -> str:
     """Format TVL value as human-readable string."""
@@ -577,6 +581,19 @@ def generate_tvl_chart_image(
                 ha="center",
                 fontfamily=_FONT_FAMILY,
             )
+
+        # v1 전환 annotation (footer 위)
+        ax.text(
+            7,
+            0.55,
+            f"※ {V1_MIGRATION_DATE} 이후: DefiLlama v1 실시간 집계 기준 (이전: v2 스테일 $247.99B 고정)",
+            ha="center",
+            fontsize=7,
+            color=COLORS["text_secondary"],
+            fontfamily=_FONT_FAMILY,
+            style="italic",
+            alpha=0.75,
+        )
 
         # Footer
         ax.text(

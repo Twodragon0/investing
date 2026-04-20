@@ -186,3 +186,70 @@ def test_dedup_idempotent_defi_llama(tmp_path, monkeypatch):
     posts_after_second = list(tmp_path.glob("*.md"))
 
     assert len(posts_after_second) == len(posts_after_first)
+
+
+# ---------------------------------------------------------------------------
+# V1_MIGRATION_DATE annotation tests
+# ---------------------------------------------------------------------------
+
+
+def test_v1_migration_date_constant_exists():
+    """V1_MIGRATION_DATE 상수가 모듈에 정의되어 있어야 한다."""
+    mod = importlib.import_module("collect_defi_llama")
+    assert hasattr(mod, "V1_MIGRATION_DATE"), "V1_MIGRATION_DATE 상수가 없습니다"
+    assert mod.V1_MIGRATION_DATE == "2026-04-20"
+
+
+def test_generate_tvl_chart_annotation_text(monkeypatch):
+    """generate_tvl_chart_image()가 V1_MIGRATION_DATE annotation 텍스트를 차트에 추가해야 한다."""
+    import importlib.util
+
+    import pytest
+
+    mod = importlib.import_module("collect_defi_llama")
+
+    if importlib.util.find_spec("matplotlib") is None:
+        pytest.skip("matplotlib not available")
+
+    import matplotlib.pyplot as _plt
+
+    import common.image_generator as _ig
+
+    protocols = [{"name": "Lido", "tvl": 20_000_000_000, "category": "Liquid Staking", "symbol": "LDO", "mcap": 1e9}]
+    chains = [{"name": "Ethereum", "tvl": 55_000_000_000, "tokenSymbol": "ETH"}]
+
+    texts_seen = []
+
+    class _CapturingAxes:
+        """ax.text 호출 결과를 수집하는 래퍼."""
+
+        def __init__(self, real_ax):
+            self._ax = real_ax
+
+        def __getattr__(self, name):
+            if name == "text":
+
+                def _text(*args, **kwargs):
+                    if args:
+                        texts_seen.append(str(args[2]) if len(args) > 2 else "")
+                    return self._ax.text(*args, **kwargs)
+
+                return _text
+            return getattr(self._ax, name)
+
+    _orig_subplots = _plt.subplots
+
+    def _mock_subplots(*args, **kwargs):
+        real_fig, real_ax = _orig_subplots(*args, **kwargs)
+        return real_fig, _CapturingAxes(real_ax)
+
+    monkeypatch.setattr(_plt, "subplots", _mock_subplots)
+    monkeypatch.setattr(_ig, "_save_and_close", lambda *a, **kw: None)
+
+    mod.generate_tvl_chart_image(protocols, chains, "2026-04-21")
+
+    migration_label = mod.V1_MIGRATION_DATE
+    found = any(migration_label in t for t in texts_seen)
+    assert found, (
+        f"차트 텍스트에서 V1_MIGRATION_DATE({migration_label})를 찾을 수 없습니다. 수집된 텍스트: {texts_seen}"
+    )
