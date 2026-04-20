@@ -328,10 +328,10 @@ WEIGHTS = {
     "amount":             2.0,
     "institution":        1.5,
     "market_mechanism":   2.5,          # 최상위 가중
-    "opinion_penalty":   -3.0,
+    "opinion_penalty":   -2.0,          # Phase 2 조정: -3.0→-2.0 (says-류 마커 과잉 차감 완화)
     "entertainment_penalty": -4.0,
-    "sentiment_pos_penalty": -1.5,
-    "sentiment_neg_bonus":  +0.5,
+    "sentiment_pos_penalty": -1.0,      # Phase 2 조정: -1.5→-1.0 (긍정 가격 뉴스 덜 억제)
+    "sentiment_neg_bonus":  +1.0,       # Phase 2 조정: +0.5→+1.0 (해킹/폭락/소송 신호 강화)
 }
 
 # Threshold (데이터 기반 튜닝; 5-4 참조)

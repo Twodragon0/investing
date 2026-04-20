@@ -31,10 +31,10 @@ WEIGHTS: dict[str, Any] = {
     "amount": 2.0,
     "institution": 1.5,
     "market_mechanism": 2.5,
-    "opinion_penalty": -3.0,
+    "opinion_penalty": -2.0,  # relaxed from -3.0: "says"-type markers are common in titles
     "entertainment_penalty": -4.0,
-    "sentiment_pos_penalty": -1.5,
-    "sentiment_neg_bonus": 0.5,
+    "sentiment_pos_penalty": -1.0,  # relaxed from -1.5: positive crypto news less aggressively dampened
+    "sentiment_neg_bonus": 1.0,  # raised from +0.5: strengthen signal for hack/crash/lawsuit items
 }
 
 # Source type → base weight mapping (6-type from markdown_utils._SOURCE_RULES)
