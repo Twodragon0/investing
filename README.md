@@ -50,7 +50,8 @@
 | scripts/common/image\_generator/og.py             |       59 |        0 |    100% |           |
 | scripts/common/markdown\_utils.py                 |      163 |        0 |    100% |           |
 | scripts/common/mindspider.py                      |      377 |        6 |     98% |603, 673-674, 687-688, 990 |
-| scripts/common/post\_generator.py                 |      333 |        7 |     98% |456-460, 863-864 |
+| scripts/common/post\_generator.py                 |      333 |        8 |     98% |456-460, 828, 863-864 |
+| scripts/common/risk\_classifier.py                |      177 |       13 |     93% |297-298, 320, 358, 396-400, 543-544, 546-547 |
 | scripts/common/rss\_fetcher.py                    |      249 |       12 |     95% |44-45, 80, 91, 178, 187, 272, 281, 292, 302, 330-331 |
 | scripts/common/signal\_composer.py                |      482 |        2 |     99% |   872-873 |
 | scripts/common/signal\_tracker.py                 |      186 |        6 |     97% |201-203, 318-319, 380-381 |
@@ -79,7 +80,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **20048** | **6420** | **68%** |           |
+| **TOTAL**                                         | **20225** | **6434** | **68%** |           |
 
 
 ## Setup coverage badge
