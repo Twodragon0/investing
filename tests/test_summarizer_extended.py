@@ -675,3 +675,146 @@ class TestClassifyPriorityExtended:
         items = [_make_item(title=f"bitcoin btc {i}") for i in range(100)]
         result = self._make_summarizer(items).classify_priority()
         assert "P0" in result and "P1" in result and "P2" in result
+
+
+# ---------------------------------------------------------------------------
+# classify_priority — word-boundary matching & dedup (A/B/C changes)
+# ---------------------------------------------------------------------------
+
+
+class TestClassifyPriorityWordBoundary:
+    def _make_summarizer(self, items):
+        from common.summarizer import ThemeSummarizer
+
+        return ThemeSummarizer(items)
+
+    # --- A: Word-boundary prevents false substring matches ---
+
+    def test_p0_word_boundary_prevents_false_match_crashed(self):
+        """'crashed' should NOT match P0 keyword 'crash' via \b boundary."""
+        items = [_make_item(title="Car crashed into traffic on highway")]
+        result = self._make_summarizer(items).classify_priority()
+        assert len(result["P0"]) == 0, "'crashed' must not trigger P0 'crash' match"
+
+    def test_p0_word_boundary_prevents_false_match_hacker(self):
+        """'hacker' should NOT match P0 keyword 'hack'."""
+        items = [_make_item(title="Ethical hacker wins bug bounty award")]
+        result = self._make_summarizer(items).classify_priority()
+        assert len(result["P0"]) == 0, "'hacker' must not trigger P0 'hack' match"
+
+    def test_p0_exact_word_crash_matches(self):
+        """Exact word 'crash' must still match."""
+        items = [_make_item(title="Bitcoin crash wipes out billions")]
+        result = self._make_summarizer(items).classify_priority()
+        assert len(result["P0"]) == 1
+
+    def test_p0_exact_word_hack_matches(self):
+        """Exact word 'hack' must still match."""
+        items = [_make_item(title="Exchange hack confirmed: $100M stolen")]
+        result = self._make_summarizer(items).classify_priority()
+        assert len(result["P0"]) == 1
+
+    def test_p0_executive_order_not_split_matched(self):
+        """'executive order' as multi-word phrase must match correctly."""
+        items = [_make_item(title="New executive order targets crypto")]
+        result = self._make_summarizer(items).classify_priority()
+        assert len(result["P0"]) == 1
+
+    def test_p1_etf_word_boundary(self):
+        """'etf' must match as whole word, not inside 'etfs' suffix variant check."""
+        items = [_make_item(title="Bitcoin ETF sees record inflows")]
+        result = self._make_summarizer(items).classify_priority()
+        assert len(result["P1"]) == 1
+
+    def test_p2_launch_not_relaunched(self):
+        """'relaunched' contains 'launch' but word boundary should prevent match."""
+        items = [_make_item(title="Project relaunched after shutdown")]
+        result = self._make_summarizer(items).classify_priority()
+        assert len(result["P2"]) == 0, "'relaunched' must not trigger P2 'launch'"
+
+    def test_p2_launch_word_exact(self):
+        """Exact word 'launch' still matches P2."""
+        items = [_make_item(title="DeFi protocol launch scheduled for Q3")]
+        result = self._make_summarizer(items).classify_priority()
+        assert len(result["P2"]) == 1
+
+    # --- B: Title counted once (no double-counting via title_original) ---
+
+    def test_p0_title_translation_not_double_counted(self):
+        """Item with same concept in title and title_original must appear only once in P0."""
+        items = [
+            _make_item(
+                title="Bitcoin crash detected",
+                title_original="Bitcoin crash detected",
+                description="",
+            )
+        ]
+        result = self._make_summarizer(items).classify_priority()
+        assert len(result["P0"]) == 1
+
+    def test_p0_title_takes_precedence_over_title_original(self):
+        """When title is present, title_original is not used for matching text."""
+        # title has no P0 keyword; title_original has 'crash' — with the fix,
+        # title_original is ignored when title is present, so no P0 match.
+        items = [
+            _make_item(
+                title="Market update: prices stable",
+                title_original="Market crash causes panic",
+                description="",
+            )
+        ]
+        result = self._make_summarizer(items).classify_priority()
+        assert len(result["P0"]) == 0, "title_original must not be checked when title is present"
+
+    def test_p0_title_original_used_when_title_empty(self):
+        """When title is empty string, title_original is used as fallback."""
+        items = [
+            {
+                "title": "",
+                "title_original": "Exchange hack confirmed",
+                "description": "",
+            }
+        ]
+        result = self._make_summarizer(items).classify_priority()
+        assert len(result["P0"]) == 1
+
+    # --- C: Identical title dedup within a priority bucket ---
+
+    def test_classify_priority_dedups_identical_titles_p0(self):
+        """Two items with identical title must produce only one entry in P0."""
+        duplicate_title = "Flash crash wipes out crypto markets"
+        items = [
+            _make_item(title=duplicate_title),
+            _make_item(title=duplicate_title),
+        ]
+        result = self._make_summarizer(items).classify_priority()
+        assert len(result["P0"]) == 1, "Identical P0 titles must be deduplicated"
+
+    def test_classify_priority_dedups_case_insensitive(self):
+        """Dedup is case-insensitive: 'CRASH...' and 'crash...' are the same title."""
+        items = [
+            _make_item(title="Bitcoin Crash Confirmed"),
+            _make_item(title="bitcoin crash confirmed"),
+        ]
+        result = self._make_summarizer(items).classify_priority()
+        assert len(result["P0"]) == 1
+
+    def test_classify_priority_different_titles_both_kept(self):
+        """Two distinct P0 items with different titles are both kept."""
+        items = [
+            _make_item(title="Bitcoin crash wipes billions"),
+            _make_item(title="Exchange hack loses funds"),
+        ]
+        result = self._make_summarizer(items).classify_priority()
+        assert len(result["P0"]) == 2
+
+    def test_classify_priority_dedup_does_not_affect_lower_priority(self):
+        """Dedup applies per-bucket: same title in P0 doesn't eat a P2-only item."""
+        items = [
+            _make_item(title="Bitcoin crash wipes billions"),
+            _make_item(title="Bitcoin crash wipes billions"),
+            _make_item(title="DeFi protocol launch scheduled"),
+        ]
+        result = self._make_summarizer(items).classify_priority()
+        assert len(result["P0"]) == 1
+        assert len(result["P2"]) == 1

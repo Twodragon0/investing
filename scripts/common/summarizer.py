@@ -1025,6 +1025,28 @@ PRIORITY_KEYWORDS: Dict[str, List[str]] = {
 }
 
 
+def _make_keyword_pattern(keywords: list) -> re.Pattern:
+    """Compile a regex that matches each keyword at word boundaries.
+
+    English keywords use ``\\b`` anchors; Korean/mixed keywords use
+    negative look-around assertions so that a match is only valid when not
+    immediately surrounded by Korean or ASCII letters.
+    """
+    parts = []
+    for kw in keywords:
+        escaped = re.escape(kw)
+        if re.match(r"^[a-zA-Z]", kw):
+            parts.append(r"\b" + escaped + r"\b")
+        else:
+            parts.append(r"(?<![가-힣a-zA-Z])" + escaped + r"(?![가-힣a-zA-Z])")
+    return re.compile("|".join(parts), re.IGNORECASE)
+
+
+_P0_RE = _make_keyword_pattern(PRIORITY_KEYWORDS["P0"])
+_P1_RE = _make_keyword_pattern(PRIORITY_KEYWORDS["P1"])
+_P2_RE = _make_keyword_pattern(PRIORITY_KEYWORDS["P2"])
+
+
 class ThemeSummarizer:
     """Classify news items into themes and generate markdown summary sections."""
 
@@ -1106,23 +1128,36 @@ class ThemeSummarizer:
         """Classify items into priority buckets (P0, P1, P2).
 
         Returns dict with keys "P0", "P1", "P2" mapping to lists of items.
-        Items are matched by keyword presence in title + description.
+        Items are matched using word-boundary regex patterns to reduce false
+        positives from substring matches (e.g. "crashed" matching "crash").
         Each item is assigned to only its highest priority bucket.
+        Title is counted once: translated title takes precedence over original
+        to avoid double-counting the same keyword from both fields.
+        Identical titles (case-insensitive) are deduplicated within each bucket.
         """
         result: Dict[str, List[Dict[str, Any]]] = {"P0": [], "P1": [], "P2": []}
         assigned: set = set()
+        seen_titles: Dict[str, set] = {"P0": set(), "P1": set(), "P2": set()}
 
-        for priority in ["P0", "P1", "P2"]:
-            keywords = PRIORITY_KEYWORDS[priority]
+        for priority, pattern in [("P0", _P0_RE), ("P1", _P1_RE), ("P2", _P2_RE)]:
             for idx, item in enumerate(self.items):
                 if idx in assigned:
                     continue
-                text = (
-                    item.get("title", "") + " " + item.get("title_original", "") + " " + item.get("description", "")
-                ).lower()
-                if any(kw in text for kw in keywords):
+                # Use translated title when available, fall back to original;
+                # count it once to avoid inflating keyword hits via both fields.
+                title = item.get("title") or item.get("title_original") or ""
+                description = item.get("description") or ""
+                text = (title + " " + description).lower()
+                if pattern.search(text):
+                    # Deduplicate identical titles within the same bucket
+                    title_key = title.strip().lower()
+                    if title_key and title_key in seen_titles[priority]:
+                        assigned.add(idx)
+                        continue
                     result[priority].append(item)
                     assigned.add(idx)
+                    if title_key:
+                        seen_titles[priority].add(title_key)
 
         return result
 
