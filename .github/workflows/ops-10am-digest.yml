@@ -32,7 +32,7 @@ jobs:
         run: npm install -g vercel
 
       - name: Restore digest state cache
-        uses: actions/cache/restore@668228422ae6a00e4ad889ee87cd7109ec5666a7  # v5
+        uses: actions/cache/restore@27d5ce7f107fe9357f9df03efb73ab90386fccae  # v5
         with:
           path: _state/ops-10am-digest-state.json
           key: ops-10am-digest-state-${{ github.run_id }}
@@ -95,7 +95,7 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Save digest state cache
-        uses: actions/cache/save@668228422ae6a00e4ad889ee87cd7109ec5666a7  # v5
+        uses: actions/cache/save@27d5ce7f107fe9357f9df03efb73ab90386fccae  # v5
         if: always()
         with:
           path: _state/ops-10am-digest-state.json
