@@ -332,14 +332,15 @@ class SignalComposer:
         lines.append("")
 
         # 신호 테이블
-        lines.append("| 지표 | 현재값 | 신호 | 가중치 |")
-        lines.append("|------|--------|------|--------|")
+        lines.append("| 지표 | 기간 | 현재값 | 신호 | 가중치 |")
+        lines.append("|------|------|--------|------|--------|")
         for sr in result.signal_results:
             weight_pct = f"{sr.weight * 100:.0f}%"
             display = sr.raw_display
             if sr.trend_arrow:
                 display = f"{display} {sr.trend_arrow}"
-            lines.append(f"| {sr.name} | {display} | {sr.verdict} | {weight_pct} |")
+            period = _signal_period_label(sr.name)
+            lines.append(f"| {sr.name} | {period} | {display} | {sr.verdict} | {weight_pct} |")
 
         lines.append("")
 
@@ -413,14 +414,15 @@ class SignalComposer:
         lines.append("")
 
         # 신호 테이블
-        lines.append("| 지표 | 현재값 | 신호 | 가중치 |")
-        lines.append("|------|--------|------|--------|")
+        lines.append("| 지표 | 기간 | 현재값 | 신호 | 가중치 |")
+        lines.append("|------|------|--------|------|--------|")
         for sr in result.signal_results:
             weight_pct = f"{sr.weight * 100:.0f}%"
             display = sr.raw_display
             if sr.trend_arrow:
                 display = f"{display} {sr.trend_arrow}"
-            lines.append(f"| {sr.name} | {display} | {sr.verdict} | {weight_pct} |")
+            period = _signal_period_label(sr.name)
+            lines.append(f"| {sr.name} | {period} | {display} | {sr.verdict} | {weight_pct} |")
 
         lines.append("")
 
@@ -576,19 +578,19 @@ class SignalComposer:
         display_parts: List[str] = []
 
         field_labels = {
-            "btc_7d": "BTC",
-            "eth_7d": "ETH",
-            "sp500_5d": "S&P",
-            "btc_24h": "BTC",
-            "eth_24h": "ETH",
+            "btc_7d": ("BTC", "7d"),
+            "eth_7d": ("ETH", "7d"),
+            "sp500_5d": ("S&P", "5d"),
+            "btc_24h": ("BTC", "24h"),
+            "eth_24h": ("ETH", "24h"),
         }
 
-        for field_key, label in field_labels.items():
+        for field_key, (label, period) in field_labels.items():
             val = data.get(field_key)
             if val is not None:
                 pct_values.append(float(val))
                 sign = "+" if float(val) >= 0 else ""
-                display_parts.append(f"{label} {sign}{float(val):.1f}%")
+                display_parts.append(f"{label} {sign}{float(val):.1f}%({period})")
 
         # 직접 제공된 평균값
         avg_val = data.get("avg")
@@ -970,6 +972,19 @@ class SignalComposer:
 
 
 # ── 모듈 수준 헬퍼 함수 ────────────────────────────────────────────────────
+
+
+def _signal_period_label(signal_name: str) -> str:
+    """신호 이름에 해당하는 시간 프레임 라벨을 반환한다."""
+    mapping = {
+        "공포·탐욕 지수": "현재",
+        "VIX 변동성": "현재",
+        "시장 심리": "24h",
+        "모멘텀": "7d",
+        "매크로": "현재",
+        "기술적 지표": "현재",
+    }
+    return mapping.get(signal_name, "현재")
 
 
 def _score_to_verdict(normalized: float) -> str:

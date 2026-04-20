@@ -1925,3 +1925,74 @@ class TestMainIntegration:
         extra_fm = mock_gen.create_post.call_args.kwargs.get("extra_frontmatter", {})
         desc = extra_fm.get("description", "")
         assert _re.search(r"\d{4}-\d{2}-\d{2}", desc), f"description must contain a YYYY-MM-DD date, got: {desc!r}"
+
+
+# ---------------------------------------------------------------------------
+# 시간 프레임 라벨 검증 (time-frame label regression tests)
+# ---------------------------------------------------------------------------
+
+
+class TestMomentumPeriodLabel:
+    """모멘텀 raw_display에 기간 라벨이 포함되는지 검증."""
+
+    def test_momentum_7d_label_in_raw_display(self):
+        """btc_7d/eth_7d 입력 시 raw_display에 '7d' 라벨이 포함돼야 한다."""
+        from scripts.common.signal_composer import SignalComposer
+
+        composer = SignalComposer()
+        result = composer.compose_signals(
+            {
+                "momentum": {
+                    "btc_7d": 5.3,
+                    "eth_7d": 4.2,
+                }
+            }
+        )
+        momentum_sr = next(sr for sr in result.signal_results if sr.name == "모멘텀")
+        assert "7d" in momentum_sr.raw_display, f"raw_display should contain '7d', got: {momentum_sr.raw_display!r}"
+
+    def test_momentum_24h_label_in_raw_display(self):
+        """btc_24h/eth_24h 입력 시 raw_display에 '24h' 라벨이 포함돼야 한다."""
+        from scripts.common.signal_composer import SignalComposer
+
+        composer = SignalComposer()
+        result = composer.compose_signals(
+            {
+                "momentum": {
+                    "btc_24h": -1.0,
+                    "eth_24h": -2.0,
+                }
+            }
+        )
+        momentum_sr = next(sr for sr in result.signal_results if sr.name == "모멘텀")
+        assert "24h" in momentum_sr.raw_display, f"raw_display should contain '24h', got: {momentum_sr.raw_display!r}"
+
+
+class TestSignalTablePeriodColumn:
+    """generate_outlook_markdown / generate_prediction_markdown 테이블에 '기간' 컬럼 존재 검증."""
+
+    def _make_result(self):
+        from scripts.common.signal_composer import SignalComposer
+
+        composer = SignalComposer()
+        return composer.compose_signals(
+            {
+                "fear_greed": {"value": 27, "label": "Fear"},
+                "momentum": {"btc_7d": 5.3, "eth_7d": 4.2},
+            }
+        )
+
+    def test_outlook_markdown_has_period_column_header(self):
+        from scripts.common.signal_composer import SignalComposer
+
+        result = self._make_result()
+        md = SignalComposer().generate_outlook_markdown(result)
+        assert "| 기간 |" in md, f"'| 기간 |' header not found in:\n{md}"
+
+    def test_prediction_markdown_has_period_column_header(self):
+        from scripts.common.signal_composer import SignalComposer, analyze_stance
+
+        result = self._make_result()
+        stance = analyze_stance(result)
+        md = SignalComposer().generate_prediction_markdown(result, stance)
+        assert "| 기간 |" in md, f"'| 기간 |' header not found in:\n{md}"

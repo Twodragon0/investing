@@ -616,13 +616,13 @@ def format_global_overview(global_data: Dict, fear_greed: Dict) -> str:
 
         parts.append(
             markdown_table(
-                ["지표", "값"],
+                ["지표", "기간", "값"],
                 [
-                    ["총 시가총액", f"{_fmt(total_mcap)} ({_pct(mcap_change)})"],
-                    ["24시간 거래량", _fmt(total_vol)],
-                    ["BTC 도미넌스", f"{btc_dom:.1f}%"],
-                    ["ETH 도미넌스", f"{eth_dom:.1f}%"],
-                    ["활성 코인 수", f"{active:,}개"],
+                    ["총 시가총액", "24h", f"{_fmt(total_mcap)} ({_pct(mcap_change)})"],
+                    ["24시간 거래량", "24h", _fmt(total_vol)],
+                    ["BTC 도미넌스", "현재", f"{btc_dom:.1f}%"],
+                    ["ETH 도미넌스", "현재", f"{eth_dom:.1f}%"],
+                    ["활성 코인 수", "현재", f"{active:,}개"],
                 ],
             )
         )
