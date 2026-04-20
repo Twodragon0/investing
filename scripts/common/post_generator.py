@@ -794,6 +794,9 @@ class PostGenerator:
 
         if extra_frontmatter:
             for key, value in extra_frontmatter.items():
+                # description_ko는 description 생성 소스로만 사용 — front-matter에 직접 출력하지 않음
+                if key == "description_ko":
+                    continue
                 safe_value = str(value).replace('"', '\\"').replace("\n", " ")
                 frontmatter_lines.append(f'{key}: "{safe_value}"')
 

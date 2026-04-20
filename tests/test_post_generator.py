@@ -907,13 +907,41 @@ class TestCreatePostAdvancedBranches:
                 title="Description KO test post",
                 content="Content here.",
                 extra_frontmatter={
-                    "description_ko": "비트코인 가격이 오늘 크게 상승하며 시장 전체에 긍정적인 영향을 미쳤습니다."
+                    "description_ko": (
+                        "비트코인 가격이 오늘 크게 상승하며 시장 전체에 긍정적인 영향을 미쳤습니다. "
+                        "주요 거래소에서 거래량도 급증했으며 기관 투자자들의 매수세가 두드러졌습니다."
+                    )
                 },
             )
         assert filepath is not None
         with open(filepath) as fh:
             content = fh.read()
         assert "비트코인 가격이" in content
+
+    def test_description_ko_not_written_to_frontmatter(self, tmp_path):
+        """description_ko must NOT appear as a front-matter field in generated posts.
+
+        It is consumed internally as the source for 'description' and must not
+        be emitted as a separate duplicate field.
+        """
+        _desc_ko = (
+            "비트코인 가격이 오늘 크게 상승하며 시장 전체에 긍정적인 영향을 미쳤습니다. "
+            "주요 거래소에서 거래량도 급증했으며 기관 투자자들의 매수세가 두드러졌습니다."
+        )
+        with patch("common.post_generator.POSTS_DIR", str(tmp_path)):
+            gen = PostGenerator("crypto")
+            filepath = gen.create_post(
+                title="No description_ko field test post",
+                content="Content here.",
+                extra_frontmatter={"description_ko": _desc_ko},
+            )
+        assert filepath is not None
+        with open(filepath) as fh:
+            raw = fh.read()
+        # description_ko must not appear as a front-matter key
+        assert "description_ko:" not in raw
+        # The value should still be present via the 'description' field
+        assert "비트코인 가격이" in raw
 
     def test_mostly_english_excerpt_triggers_fallback(self, tmp_path):
         """When extracted excerpt is mostly English, fallback description is used (line 825)."""
