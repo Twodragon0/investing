@@ -405,6 +405,76 @@ def _downgrade_one(level: str) -> str:
     return {"critical": "elevated", "elevated": "moderate", "moderate": "low", "low": "low"}[level]
 ```
 
+### 5-5-A. Rule 6 확장안 — security exploit + amount 편입
+
+#### 동기
+
+Phase 4 fixture `tp_hack_with_amount.json` ($280M Drift Protocol exploit + 500억원 브리지 해킹 + $75M DeFi loss, reuters/bloomberg/coindesk) 실측 **elevated** (mean_top3=5.00). 직관적으로는 CRITICAL이어야 하지만 `_MARKET_MECHANISM`에 `hack`/`exploit`이 없어 Rule 6 미발동. `CRITICAL_MEAN_TOP_3=6.0` 도달도 어려움.
+
+반면 `scripts/collect_crypto_news.py:474-485` `_score_security_severity`는 `(exploit|hack|drain + $xxx)` 결합으로 이미 CRITICAL 판정. **동일 문제를 해결한 reference가 저장소 내 존재**.
+
+#### 옵션 비교 요약
+
+| 옵션 | 요지 | 평가 |
+|------|------|------|
+| 1. `_MARKET_MECHANISM`에 hack/exploit 직접 추가 | 1줄 변경 | **기각** — 의미론 붕괴, 금액 결합 없이 "hack 방어 가이드" FP 폭증, 점수 +2.5 인플레이션 |
+| **2. `security_exploit` 신호 + Rule 6b** | 신호 분리, 금액 AND 조건 | **권장** |
+| 3. Rule 6 OR 확장 | 룰 하나로 통합 | 기각 — `rule_trace` 구분 불가 |
+| 4. sentiment_neg 가중 상향 | WEIGHTS만 조정 | 기각 — Phase 2 튜닝 무효화 |
+
+#### 권장안 (Option 2)
+
+```python
+# 신규 상수
+_SECURITY_EXPLOIT_TERMS = frozenset({
+    "hack", "hacked", "hacking", "exploit", "exploited",
+    "drain", "drained", "rug pull", "rugpull", "breach",
+    "heist", "stolen", "theft", "compromised",
+    "해킹", "탈취", "유출", "익스플로잇", "러그풀", "도난",
+})
+
+# RiskSignals 확장
+@dataclass(frozen=True)
+class RiskSignals:
+    ...
+    security_exploit: bool  # S8 신규
+
+# apply_overrides: Rule 6 직후
+sec_critical = [s for s in scores
+                if s.signals.security_exploit
+                and s.signals.has_amount
+                and s.signals.source_weight >= 1.5]
+if sec_critical:
+    trace.append("rule_6b_security_exploit_hard_override")
+    return "critical", trace
+```
+
+**핵심**: `WEIGHTS` 변경 없음 (점수 미반영, 오버라이드 게이트 전용). Phase 2 distribution 보존.
+
+#### 리스크 R11~R14
+
+| # | 리스크 | 완화책 |
+|---|--------|--------|
+| R11 | "hack 방어 가이드" FP | `has_amount` AND 조건으로 금액 없는 가이드 배제. `fp_security_guide.json` fixture 회귀 |
+| R12 | `_SENTIMENT_NEG`와 이중 가중 | 의도 — 보안 사건은 부정 sentiment 동반. Phase 2 재측정으로 편향 확인 |
+| R13 | crypto-media 경계값 `src_weight=1.5` | `>=` 포함이므로 CoinDesk/Cointelegraph 포함. 군소 블로그(<1.5)만 차단 |
+| R14 | `_score_security_severity` 정규식 비대칭 | `_AMOUNT_RE`가 superset (`$75M`, `-40%` 추가 포착). Phase 6 일원화 시 장점 |
+
+#### 테스트 추가안
+
+`TestExtractSignals`에 5개 (`test_security_exploit_detected_english/korean/rug_pull/defensive_article/not_triggered_on_generic_drop`),
+`TestApplyOverrides`에 4개 (`test_rule_6b_security_exploit_hard_critical/skipped_without_amount/skipped_on_low_source_weight/rule_6_takes_precedence_over_rule_6b`),
+`tests/fixtures/risk_cases/fp_security_guide.json` 신규 (R11 회귀 방어),
+`tp_hack_with_amount.json` expected_level을 `elevated`→`critical`로 복구.
+
+#### Phase 6 연계 — 일원화 로드맵
+
+1. **Step 1 (본 PR)**: Rule 6b + `_SECURITY_EXPLOIT_TERMS` 신설 → 두 판정 체계 behavioral equivalence 성립
+2. **Step 2 (Phase 6 초반)**: `_score_security_severity`를 `extract_signals` 래퍼로 대체. `_AMOUNT_RE` superset 덕분에 CRITICAL 건수 약간 증가 (정확도 향상). Phase 5 로깅으로 diff 수집 후 컷오버
+3. **Step 3 (Phase 6 후반)**: `_score_security_severity` 제거. `RiskVerdict`에 `severity_label` 필드 추가, 배지 결정을 `verdict.top_items[0].score` 기반으로 일원화
+
+§7 Q2 답변 갱신: `_score_security_severity`는 이번 PR에서 건드리지 않고, Phase 6에서 §5-5-A Step 2~3 경로로 흡수.
+
 ### 5-6. 원 함수와의 연결
 
 ```python
