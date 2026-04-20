@@ -11,9 +11,16 @@ image: "/assets/images/generated/og-defillama-v1-migration-notice-2026-04-20.png
 permalink: "/defi/2026/04/20/defillama-v1-migration-notice/"
 description: "DeFi TVL 수집을 DefiLlama /v2/protocols → /protocols (v1)로 전환합니다. CEX 필터링 유지하에 실시간 업데이트를 보장하며, 기존 일일 리포트의 수치가 v1 집계로 조정됩니다."
 image_alt: "DeFi TVL 공지 - 집계 기준 변경"
+excerpt: "2026-03-22부터 약 한 달간 일일 DeFi TVL 리포트의 상위 20개 프로토콜 총합이 $247 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
 ## 배경
+
+## 전체 뉴스 요약
+
+- 2026-03-22부터 약 한 달간 일일 DeFi TVL 리포트의 상위 20개 프로토콜 총합이 $247.99B로 고정되어 실제 시장 변동을 반영하지 못했습니다. 원인 추적 결과 사용 중인 DefiLlama /v2/protocols 엔드포인트가 스테일 스냅샷을 반환 중임을 확인했습니다.
+- - 엔드포인트: /v2/protocols → /protocols (v1) - CEX 제외 필터링 유지 (기존과 동일한 "DeFi 전용" 스코프) - TVL 수치는 v1 실시간 집계로 갱신. v1은 v2 대비 LST/derivative 집계 방식 차이로 Lido·AAVE 등 주요…
+
 
 2026-03-22부터 약 한 달간 일일 DeFi TVL 리포트의 상위 20개 프로토콜 총합이 **$247.99B로 고정**되어 실제 시장 변동을 반영하지 못했습니다. 원인 추적 결과 사용 중인 DefiLlama `/v2/protocols` 엔드포인트가 스테일 스냅샷을 반환 중임을 확인했습니다.
 

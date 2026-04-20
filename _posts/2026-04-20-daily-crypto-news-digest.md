@@ -57,41 +57,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-20 - 암호화폐 뉴스 요
 <li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOZzJUaGJLNTctSkI1dEhHV19BMi1XUWYwMGEtazJnZzRfRkNsVnVWYkJOM1lTWWprQ09HcjJrc0JDS3h5UVJ6elpmN0IwWll2d3FsNkV1dUtFMHdnQWozbUN4LTF1YXp0ZGtVOFMzOXNnT3N4VlRfb0VsSEJXTjlQOUlaejhjYTZF?oc=5">美, '전략적 비트코인 비축고' 설립 임박…트럼프 행정명령 가동</a> <span class="p0-desc">美, '전략적 비트코인 비축고' 설립 임박…트럼프 행정명령 가동 글로벌이코노믹</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: O.C. Guy는 비트코인이 '여전히 폰지 사기'라고 말합니다. 
-외 P0 긴급 이슈 9건이 추가 감지되었습니다. 총 85건의 뉴스 중 P1 주요 이슈도 9건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (41건): 비트코인, IPO, 변동성 관련 (41건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (16건): 랠리 가격 변동 (16건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🟣 DeFi** (11건): 디파이, 솔라나 DeFi 동향 (11건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- O.C. Guy는 비트코인이 '여전히 폰지 사기'라고 말합니다.
-- 비트코인, 한달 만에 7.5만달러 재탈환
-- 美, '전략적 비트코인 비축고' 설립 임박…트럼프 행정명령 가동
-
-### 주요 이슈
-
-- '비트코인 구매'—일론 머스크의 '대규모' 미국 달러 경고로 암호화폐 가격 예측이 촉발됨
-- SpaceX IPO: 역사상 가장 큰 IPO의 혜택을 받을 암호화폐는 무엇입니까?
-- 호르무즈 해협의 암호화폐 통행료는 비트코인이 위기 상황에서도 번성하는 이유를 보여줍니다.
-- 외 6건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 디파이
-- **주요 출처**: Google News(20건), CoinDesk(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-04-20.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-04-20.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🟣 DeFi
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
