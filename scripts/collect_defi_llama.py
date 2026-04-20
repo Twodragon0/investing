@@ -3,8 +3,11 @@
 
 Sources:
 - DeFi Llama API (https://api.llama.fi):
-  - GET /v2/protocols - Top protocols by TVL (id, name, symbol, category, tvl, chainTvls, mcap)
+  - GET /protocols - Top protocols by TVL (id, name, symbol, category, tvl, chainTvls, mcap)
   - GET /v2/chains - Chain TVL data (name, tvl, tokenSymbol)
+
+Note: /v2/protocols was deprecated due to stale snapshots (fixed $247.99B from 2026-03-22).
+/protocols (v1) provides real-time data; CEX entries are filtered out to keep DeFi-only scope.
 """
 
 import os
@@ -156,9 +159,12 @@ def _check_tvl_staleness(protocols: List[Dict[str, Any]], today: str) -> Optiona
 def fetch_protocols() -> List[Dict[str, Any]]:
     """Fetch top protocols by TVL from DeFi Llama.
 
+    Uses /protocols (v1) endpoint for real-time data.
+    CEX entries are excluded to maintain DeFi-only scope.
+
     Returns list of dicts with keys: id, name, symbol, category, tvl, chainTvls, mcap, gecko_id
     """
-    url = f"{BASE_URL}/v2/protocols"
+    url = f"{BASE_URL}/protocols"
     try:
         resp = request_with_retry(url, timeout=REQUEST_TIMEOUT, verify_ssl=VERIFY_SSL)
         data = resp.json()
@@ -166,14 +172,18 @@ def fetch_protocols() -> List[Dict[str, Any]]:
             logger.warning("Unexpected protocols response type: %s", type(data))
             return []
 
-        # Sort by TVL descending and take top N
+        # Filter out CEX entries and sort by TVL descending, take top N
         protocols = sorted(
-            [p for p in data if isinstance(p, dict) and p.get("tvl") is not None],
+            [
+                p
+                for p in data
+                if isinstance(p, dict) and p.get("tvl") is not None and (p.get("category") or "").upper() != "CEX"
+            ],
             key=lambda x: x.get("tvl", 0),
             reverse=True,
         )[:TOP_PROTOCOLS_LIMIT]
 
-        logger.info("DeFi Llama protocols: fetched %d protocols", len(protocols))
+        logger.info("DeFi Llama protocols: fetched %d protocols (CEX excluded)", len(protocols))
         return protocols
     except requests.exceptions.RequestException as e:
         logger.warning("DeFi Llama protocols fetch failed: %s", e)

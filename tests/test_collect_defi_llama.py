@@ -79,6 +79,47 @@ def test_build_post_content_empty_data():
 # ---------------------------------------------------------------------------
 
 
+def test_fetch_protocols_excludes_cex():
+    """fetch_protocols() must filter out CEX-category entries."""
+    mod = importlib.import_module("collect_defi_llama")
+    from unittest.mock import MagicMock
+
+    fake_data = [
+        {"name": "Binance", "tvl": 153_000_000_000, "category": "CEX", "symbol": "BNB", "mcap": None},
+        {"name": "OKX", "tvl": 10_000_000_000, "category": "cex", "symbol": "OKB", "mcap": None},
+        {"name": "Lido", "tvl": 21_000_000_000, "category": "Liquid Staking", "symbol": "LDO", "mcap": 1e9},
+        {"name": "Aave", "tvl": 10_000_000_000, "category": "Lending", "symbol": "AAVE", "mcap": 5e8},
+    ]
+
+    mock_resp = MagicMock()
+    mock_resp.json.return_value = fake_data
+
+    with patch("collect_defi_llama.request_with_retry", return_value=mock_resp):
+        result = mod.fetch_protocols()
+
+    names = [p["name"] for p in result]
+    assert "Binance" not in names, "CEX protocol must be excluded"
+    assert "OKX" not in names, "CEX protocol (lowercase) must be excluded"
+    assert "Lido" in names
+    assert "Aave" in names
+
+
+def test_fetch_protocols_uses_v1_endpoint():
+    """fetch_protocols() must call /protocols (v1), not /v2/protocols."""
+    mod = importlib.import_module("collect_defi_llama")
+    from unittest.mock import MagicMock
+
+    mock_resp = MagicMock()
+    mock_resp.json.return_value = []
+
+    with patch("collect_defi_llama.request_with_retry", return_value=mock_resp) as mock_req:
+        mod.fetch_protocols()
+
+    called_url = mock_req.call_args[0][0]
+    assert "/v2/protocols" not in called_url, "Must not use deprecated /v2/protocols"
+    assert called_url.endswith("/protocols"), f"Must use /protocols endpoint, got: {called_url}"
+
+
 def test_fetch_protocols_returns_empty_on_request_error():
     mod = importlib.import_module("collect_defi_llama")
     import requests
