@@ -856,7 +856,7 @@ class TestGenerateOutlookMarkdown:
         result = self.c.compose_signals(make_full_signals())
         md = self.c.generate_outlook_markdown(result)
         assert "## 시장 전망 분석" in md
-        assert "| 지표 | 현재값 | 신호 | 가중치 |" in md
+        assert "| 지표 | 기간 | 현재값 | 신호 | 가중치 |" in md
         assert "### 시나리오 분석" in md
         assert "투자 조언이 아닙니다" in md
 
