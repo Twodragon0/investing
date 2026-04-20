@@ -31,7 +31,16 @@
       "매크로": 0.7425
     },
     "btc_price": 67072.234375,
-    "recorded_at": "2026-03-28T15:29:29Z"
+    "recorded_at": "2026-03-28T15:29:29Z",
+    "accuracy": {
+      "predicted_verdict": "약세",
+      "predicted_score": 27.2,
+      "actual_price_change_pct": null,
+      "actual_direction": null,
+      "correct": null,
+      "evaluated_at": "2026-04-20T01:12:01Z",
+      "backfilled_accuracy_stub": true
+    }
   },
   {
     "date": "2026-03-31",
@@ -128,7 +137,16 @@
       "매크로": 0.6654
     },
     "btc_price": 66896.8203125,
-    "recorded_at": "2026-04-03T22:36:27Z"
+    "recorded_at": "2026-04-03T22:36:27Z",
+    "accuracy": {
+      "predicted_verdict": "혼조",
+      "predicted_score": 42.2,
+      "actual_price_change_pct": null,
+      "actual_direction": null,
+      "correct": null,
+      "evaluated_at": "2026-04-20T01:12:01Z",
+      "backfilled_accuracy_stub": true
+    }
   },
   {
     "date": "2026-04-06",
@@ -246,7 +264,16 @@
       "매크로": 0.67
     },
     "btc_price": 72980.46875,
-    "recorded_at": "2026-04-10T22:40:28Z"
+    "recorded_at": "2026-04-10T22:40:28Z",
+    "accuracy": {
+      "predicted_verdict": "혼조",
+      "predicted_score": 56.3,
+      "actual_price_change_pct": null,
+      "actual_direction": null,
+      "correct": null,
+      "evaluated_at": "2026-04-20T01:12:01Z",
+      "backfilled_accuracy_stub": true
+    }
   },
   {
     "date": "2026-04-13",
@@ -258,7 +285,16 @@
       "VIX 변동성": 0.45
     },
     "btc_price": null,
-    "recorded_at": "2026-04-13T14:52:47Z"
+    "recorded_at": "2026-04-13T14:52:47Z",
+    "accuracy": {
+      "predicted_verdict": "약세",
+      "predicted_score": 36.7,
+      "actual_price_change_pct": null,
+      "actual_direction": null,
+      "correct": null,
+      "evaluated_at": "2026-04-20T01:12:01Z",
+      "backfilled_accuracy_stub": true
+    }
   },
   {
     "date": "2026-04-17",
@@ -270,7 +306,16 @@
       "VIX 변동성": 0.45
     },
     "btc_price": null,
-    "recorded_at": "2026-04-17T14:39:45Z"
+    "recorded_at": "2026-04-17T14:39:45Z",
+    "accuracy": {
+      "predicted_verdict": "약세",
+      "predicted_score": 36.7,
+      "actual_price_change_pct": null,
+      "actual_direction": null,
+      "correct": null,
+      "evaluated_at": "2026-04-20T01:12:01Z",
+      "backfilled_accuracy_stub": true
+    }
   },
   {
     "date": "2026-04-18",
@@ -283,6 +328,15 @@
       "매크로": 0.6729
     },
     "btc_price": 77472.53125,
-    "recorded_at": "2026-04-17T22:42:04Z"
+    "recorded_at": "2026-04-17T22:42:04Z",
+    "accuracy": {
+      "predicted_verdict": "강세",
+      "predicted_score": 72.3,
+      "actual_price_change_pct": null,
+      "actual_direction": null,
+      "correct": null,
+      "evaluated_at": "2026-04-20T01:12:01Z",
+      "backfilled_accuracy_stub": true
+    }
   }
 ]
