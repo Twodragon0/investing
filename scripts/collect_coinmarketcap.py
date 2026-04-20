@@ -677,6 +677,45 @@ def fetch_cmc_browser_fallback(limit: int = 20) -> List[Dict[str, Any]]:
 
 
 # ---------------------------------------------------------------------------
+# Title suffix builder
+# ---------------------------------------------------------------------------
+
+
+def _build_title_suffix(
+    btc_price: float,
+    btc_change_24h: float,
+    fear_greed: "int | None",
+    total_mcap: float,
+    total_mcap_change: float,
+) -> str:
+    """Build post title suffix based on representative market indicators.
+
+    Priority:
+    1. Extreme fear/greed (<=25 or >=75) — highest news value
+    2. BTC 24h move >= 3% absolute
+    3. Total market cap change (fallback)
+
+    Returns a string like " | Fear 20", " | BTC $74,929 (-5.0%)", or " | 시총 $2.61T (+1.0%)".
+    Returns "" if insufficient data.
+    """
+    # 1. Fear/Greed extreme
+    if fear_greed is not None:
+        if fear_greed <= 25:
+            return f" | Fear {fear_greed}"
+        if fear_greed >= 75:
+            return f" | Extreme Greed {fear_greed}"
+    # 2. BTC big move
+    if btc_change_24h is not None and abs(btc_change_24h) >= 3.0 and btc_price:
+        sign = "+" if btc_change_24h >= 0 else ""
+        return f" | BTC ${btc_price:,.0f} ({sign}{btc_change_24h:.1f}%)"
+    # 3. Market cap fallback
+    if total_mcap:
+        sign = "+" if (total_mcap_change or 0) >= 0 else ""
+        return f" | 시총 ${total_mcap / 1e12:.2f}T ({sign}{total_mcap_change:.1f}%)"
+    return ""
+
+
+# ---------------------------------------------------------------------------
 # BaseCollector subclass
 # ---------------------------------------------------------------------------
 
@@ -752,28 +791,24 @@ class CoinMarketCapCollector(BaseCollector):
         fear_greed = fetch_fear_greed_index(history_days=1)
 
         # ── Generate high-quality summary post ──
-        # Build title with top mover coin for better SEO / SNS preview
-        title_suffix = ""
-        if top_coins:
-            _top_movers = sorted(
-                top_coins[:20],
-                key=lambda c: abs(
-                    c.get("price_change_percentage_24h")
-                    or c.get("quote", {}).get("USD", {}).get("percent_change_24h", 0)
-                    or 0
-                ),
-                reverse=True,
-            )
-            if _top_movers:
-                _m = _top_movers[0]
-                _sym = (_m.get("symbol") or "").upper()
-                _ch = (
-                    _m.get("price_change_percentage_24h")
-                    or _m.get("quote", {}).get("USD", {}).get("percent_change_24h", 0)
-                    or 0
-                )
-                if _ch and _sym:
-                    title_suffix = f" | {_sym} {_ch:+.1f}%"
+        # Build title suffix based on representative market indicators
+        # Priority: extreme fear/greed > BTC big move (>=3%) > market cap fallback
+        _btc_coin = next((c for c in top_coins if (c.get("symbol") or "").lower() == "btc"), None)
+        _btc_price_for_title: float = 0.0
+        _btc_change_for_title: float = 0.0
+        if _btc_coin:
+            _btc_price_for_title = _btc_coin.get("current_price", 0) or 0
+            _btc_change_for_title = _btc_coin.get("price_change_percentage_24h", 0) or 0
+        _fg_value_for_title = fear_greed.get("value") if fear_greed else None
+        _total_mcap_for_title = global_data.get("total_market_cap", {}).get("usd", 0) if global_data else 0
+        _mcap_change_for_title = global_data.get("market_cap_change_percentage_24h_usd", 0) if global_data else 0
+        title_suffix = _build_title_suffix(
+            _btc_price_for_title,
+            _btc_change_for_title,
+            _fg_value_for_title,
+            _total_mcap_for_title,
+            _mcap_change_for_title,
+        )
         title = f"암호화폐 시장 종합 리포트 - {today}{title_suffix}"
         filepath = None
 

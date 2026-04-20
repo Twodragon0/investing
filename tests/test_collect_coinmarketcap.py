@@ -162,6 +162,53 @@ def test_collector_run_no_network(tmp_path, monkeypatch):
     collector.run()
 
 
+# ---------------------------------------------------------------------------
+# _build_title_suffix tests
+# ---------------------------------------------------------------------------
+
+
+def test_title_uses_fear_greed_when_extreme_fear():
+    mod = importlib.import_module("collect_coinmarketcap")
+    result = mod._build_title_suffix(74000, -1.0, 20, 2.6e12, -0.5)
+    assert "Fear 20" in result
+    assert "BTC" not in result
+    assert "시총" not in result
+
+
+def test_title_uses_extreme_greed_label():
+    mod = importlib.import_module("collect_coinmarketcap")
+    result = mod._build_title_suffix(80000, 1.0, 80, 2.6e12, 0.5)
+    assert "Extreme Greed 80" in result
+    assert "BTC" not in result
+
+
+def test_title_uses_btc_when_big_move():
+    mod = importlib.import_module("collect_coinmarketcap")
+    # fear_greed=50 (neutral), BTC -5% (big move)
+    result = mod._build_title_suffix(74929, -5.0, 50, 2.6e12, -1.0)
+    assert "BTC $" in result
+    assert "-5.0" in result
+    assert "시총" not in result
+
+
+def test_title_uses_market_cap_fallback():
+    mod = importlib.import_module("collect_coinmarketcap")
+    # fear_greed=50, BTC -1% (small move) → falls through to market cap
+    result = mod._build_title_suffix(74929, -1.0, 50, 2.61e12, -1.0)
+    assert "시총" in result
+    assert "BTC $" not in result
+
+
+def test_title_excludes_individual_altcoin():
+    """Title suffix must not contain individual altcoin symbols."""
+    mod = importlib.import_module("collect_coinmarketcap")
+    # Scenarios that previously produced altcoin symbols
+    for fg, btc_ch in [(50, -1.0), (50, 2.0), (60, 0.5)]:
+        result = mod._build_title_suffix(74929, btc_ch, fg, 2.6e12, btc_ch)
+        for symbol in ("HYPE", "ZEC", "SOL", "XRP", "DOGE", "PEPE"):
+            assert symbol not in result, f"Unexpected altcoin {symbol} in title suffix: {result!r}"
+
+
 def test_dedup_idempotent_coinmarketcap(tmp_path, monkeypatch):
     """Running CoinMarketCapCollector twice with same data creates no extra posts."""
     mod = importlib.import_module("collect_coinmarketcap")
