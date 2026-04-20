@@ -51,11 +51,11 @@
 | scripts/common/markdown\_utils.py                 |      163 |        0 |    100% |           |
 | scripts/common/mindspider.py                      |      377 |        6 |     98% |603, 673-674, 687-688, 990 |
 | scripts/common/post\_generator.py                 |      333 |        8 |     98% |456-460, 828, 863-864 |
-| scripts/common/risk\_classifier.py                |      177 |       13 |     93% |297-298, 320, 358, 396-400, 543-544, 546-547 |
+| scripts/common/risk\_classifier.py                |      177 |       11 |     94% |297-298, 320, 358, 396-400, 546-547 |
 | scripts/common/rss\_fetcher.py                    |      249 |       12 |     95% |44-45, 80, 91, 178, 187, 272, 281, 292, 302, 330-331 |
 | scripts/common/signal\_composer.py                |      482 |        2 |     99% |   872-873 |
 | scripts/common/signal\_tracker.py                 |      186 |        6 |     97% |201-203, 318-319, 380-381 |
-| scripts/common/summarizer.py                      |      886 |       20 |     98% |283, 1252, 1409, 1411, 1856, 2025, 2036, 2042, 2066, 2145, 2147, 2157, 2264-2270, 2314, 2536, 2571, 2643, 2709 |
+| scripts/common/summarizer.py                      |      882 |       20 |     98% |283, 1253, 1410, 1412, 1857, 2026, 2037, 2043, 2067, 2146, 2148, 2158, 2273-2279, 2323, 2545, 2580, 2652, 2718 |
 | scripts/common/time\_series\_state.py             |      278 |       27 |     90% |55, 59, 158, 162, 242, 358-366, 395-401, 432, 460-462, 482-483, 488-490, 541-544 |
 | scripts/common/translator.py                      |      206 |        0 |    100% |           |
 | scripts/common/utils.py                           |      171 |        8 |     95% |186-187, 221-224, 264-266 |
@@ -77,12 +77,12 @@
 | scripts/respond\_ai\_mentions.py                  |      259 |      207 |     20% |32-36, 40-67, 71-80, 84-87, 91-124, 128-138, 149-151, 162-164, 175-202, 215-232, 258-259, 274-285, 297-308, 319-336, 340-355, 375-381, 385-482, 486 |
 | scripts/smoke\_test\_rendered\_pages.py           |       43 |       43 |      0% |      3-86 |
 | scripts/tools/\_\_init\_\_.py                     |        0 |        0 |    100% |           |
-| scripts/tools/tune\_risk\_threshold.py            |      159 |       10 |     94% |25, 75, 91, 94-95, 97, 152-153, 257, 366 |
+| scripts/tools/tune\_risk\_threshold.py            |      159 |       11 |     93% |25, 75, 91, 94-95, 97, 152-153, 169, 257, 366 |
 | scripts/validate\_collector\_summary\_contract.py |       53 |        1 |     98% |        95 |
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **20403** | **6444** | **68%** |           |
+| **TOTAL**                                         | **20399** | **6443** | **68%** |           |
 
 
 ## Setup coverage badge
