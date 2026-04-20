@@ -1,7 +1,8 @@
 {
   "scenario": "tp_hack_with_amount",
-  "description": "$280M exploit + 기관 보도. amount(+2.0)+institution(+1.5)+source(2.0)+sentiment_neg(+1.0) → 최고 점수 6.5, mean_top3=5.0, base=elevated. 현재 WEIGHTS로 critical 진입 조건(3개 P0 + mean>=6.0) 미충족.",
-  "expected_level": "elevated",
+  "description": "$280M exploit + 기관 보도. Rule 6b(§5-5-A): security_exploit+has_amount+source_weight>=1.5 → hard CRITICAL override. base=elevated이지만 Rule 6b로 critical 상향.",
+  "expected_level": "critical",
+  "expected_rule_traces": ["rule_6b_security_exploit_hard_override"],
   "items": [
     {"title": "$280 million DeFi protocol exploit drains Drift", "description": "SEC investigation under way", "source": "reuters"},
     {"title": "500억원 규모 크로스체인 브리지 해킹", "description": "FBI 수사 개시", "source": "bloomberg"},

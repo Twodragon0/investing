@@ -1,0 +1,10 @@
+{
+  "scenario": "fp_security_guide",
+  "description": "방어 가이드성 기사 3건. security_exploit=True이지만 has_amount=False → Rule 6b 미발동, base_level 이하 유지.",
+  "expected_level": "low",
+  "items": [
+    {"title": "How to protect your wallet from hacks in 2026", "description": "Best practices from security researchers", "source": "coindesk"},
+    {"title": "해킹 피해 예방 체크리스트 10가지", "description": "금감원 발표 자료 요약", "source": "coindesk"},
+    {"title": "Understanding rug pulls — a beginner's guide", "description": "", "source": "cointelegraph"}
+  ]
+}

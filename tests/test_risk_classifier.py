@@ -30,17 +30,23 @@ def make_item(title: str = "", description: str = "", source: str = "google news
 
 
 def _make_score(
-    score: float, is_opinion: bool = False, market_mech: bool = False, src_weight: float = 1.0
+    score: float,
+    is_opinion: bool = False,
+    market_mech: bool = False,
+    src_weight: float = 1.0,
+    has_amount: bool = False,
+    security_exploit: bool = False,
 ) -> ItemScore:
     """Build a minimal ItemScore for override-rule tests."""
     signals = RiskSignals(
         source_weight=src_weight,
-        has_amount=False,
+        has_amount=has_amount,
         has_institution=False,
         market_mechanism=market_mech,
         is_opinion=is_opinion,
         is_entertainment=False,
         sentiment="neu",
+        security_exploit=security_exploit,
     )
     return ItemScore(
         item_id="test",
@@ -216,6 +222,35 @@ class TestExtractSignals:
         sig = extract_signals(item)
         assert sig.sentiment == "neu"
 
+    # --- Security exploit signal (S8) ---
+
+    def test_security_exploit_detected_english(self):
+        item = make_item(title="$280M DeFi protocol exploit drains Drift")
+        sig = extract_signals(item)
+        assert sig.security_exploit is True
+
+    def test_security_exploit_detected_korean(self):
+        item = make_item(title="500억원 규모 크로스체인 브리지 해킹")
+        sig = extract_signals(item)
+        assert sig.security_exploit is True
+
+    def test_security_exploit_rug_pull(self):
+        item = make_item(title="MemeCoin rug pull nets attackers $8M")
+        sig = extract_signals(item)
+        assert sig.security_exploit is True
+
+    def test_security_exploit_defensive_article(self):
+        """Defensive guide article triggers security_exploit=True but has_amount=False."""
+        item = make_item(title="How to avoid crypto hacks in 2026")
+        sig = extract_signals(item)
+        assert sig.security_exploit is True
+        assert sig.has_amount is False
+
+    def test_security_exploit_not_triggered_on_generic_drop(self):
+        item = make_item(title="BTC crashes 8% on macro fears")
+        sig = extract_signals(item)
+        assert sig.security_exploit is False
+
 
 # ===========================================================================
 # Layer 2 — Score calculation
@@ -353,6 +388,35 @@ class TestApplyOverrides:
         level, trace = apply_overrides(scores, "elevated")
         assert level == "critical"
         assert "rule_6_market_mechanism_hard_override" in trace
+
+    def test_rule_6b_security_exploit_hard_critical(self):
+        """exploit + amount + source(reuters, weight>=1.5) → critical with rule_6b trace."""
+        scores = [_make_score(4.5, security_exploit=True, has_amount=True, src_weight=2.0)]
+        level, trace = apply_overrides(scores, "elevated")
+        assert level == "critical"
+        assert any("rule_6b" in r for r in trace)
+
+    def test_rule_6b_skipped_without_amount(self):
+        """exploit without amount → rule 6b not triggered, base_level preserved."""
+        scores = [_make_score(4.5, security_exploit=True, has_amount=False, src_weight=2.0)]
+        level, trace = apply_overrides(scores, "elevated")
+        assert level == "elevated"
+        assert not any("rule_6b" in r for r in trace)
+
+    def test_rule_6b_skipped_on_low_source_weight(self):
+        """exploit + amount + blog (src_weight < 1.5) → rule 6b not triggered."""
+        scores = [_make_score(4.5, security_exploit=True, has_amount=True, src_weight=1.0)]
+        level, trace = apply_overrides(scores, "elevated")
+        assert level == "elevated"
+        assert not any("rule_6b" in r for r in trace)
+
+    def test_rule_6_takes_precedence_over_rule_6b(self):
+        """market_mech + exploit simultaneously → only rule_6 in trace, rule_6b absent."""
+        scores = [_make_score(6.0, market_mech=True, security_exploit=True, has_amount=True, src_weight=2.0)]
+        level, trace = apply_overrides(scores, "elevated")
+        assert level == "critical"
+        assert "rule_6_market_mechanism_hard_override" in trace
+        assert not any("rule_6b" in r for r in trace)
 
 
 # ===========================================================================

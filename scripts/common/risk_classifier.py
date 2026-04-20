@@ -95,6 +95,38 @@ _OPINION_MARKERS: frozenset[str] = frozenset(
     }
 )
 
+# Security exploit / attack signal terms — §5-5-A S8
+_SECURITY_EXPLOIT_TERMS: frozenset[str] = frozenset(
+    {
+        # English
+        "hack",
+        "hacked",
+        "hacking",
+        "exploit",
+        "exploited",
+        "drain",
+        "drained",
+        "draining",
+        "bridge exploit",
+        "rug pull",
+        "rugpull",
+        "breach",
+        "breached",
+        "heist",
+        "stolen",
+        "theft",
+        "compromised",
+        "compromise",
+        # Korean
+        "해킹",
+        "탈취",
+        "유출",
+        "익스플로잇",
+        "러그풀",
+        "도난",
+    }
+)
+
 # Market-structure mechanism triggers — §5-2
 _MARKET_MECHANISM: frozenset[str] = frozenset(
     {
@@ -257,6 +289,7 @@ class RiskSignals:
     is_opinion: bool  # S5 — personal opinion / commentary (cleared by S3)
     is_entertainment: bool  # S6 — sports / pop-culture noise
     sentiment: Literal["pos", "neg", "neu"]  # S7
+    security_exploit: bool  # S8 — hack / exploit / drain / rug-pull (§5-5-A)
 
 
 @dataclass(frozen=True)
@@ -383,6 +416,7 @@ def extract_signals(
     has_amount = bool(_AMOUNT_RE.search(text))
     has_inst = _has_institution(text)
     market_mech = any(kw in text_low for kw in _MARKET_MECHANISM)
+    sec_exploit = any(kw in text_low for kw in _SECURITY_EXPLOIT_TERMS)
     is_entertain = any(_word_present(kw, text) for kw in _ENTERTAINMENT_KEYWORDS)
 
     # Opinion detection
@@ -409,6 +443,7 @@ def extract_signals(
         is_opinion=is_opinion,
         is_entertainment=is_entertain,
         sentiment=sentiment,
+        security_exploit=sec_exploit,
     )
 
 
@@ -484,6 +519,14 @@ def apply_overrides(
     hard_critical = [s for s in scores if s.signals.market_mechanism and s.signals.source_weight >= 1.5]
     if hard_critical:
         trace.append("rule_6_market_mechanism_hard_override")
+        return "critical", trace
+
+    # Rule 6b — security exploit + amount + credible source → hard CRITICAL
+    sec_critical = [
+        s for s in scores if s.signals.security_exploit and s.signals.has_amount and s.signals.source_weight >= 1.5
+    ]
+    if sec_critical:
+        trace.append("rule_6b_security_exploit_hard_override")
         return "critical", trace
 
     # Rule 7 — opinion majority among high-scoring items triggers downgrade
