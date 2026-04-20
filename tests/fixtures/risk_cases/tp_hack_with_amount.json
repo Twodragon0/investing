@@ -1,0 +1,10 @@
+{
+  "scenario": "tp_hack_with_amount",
+  "description": "$280M exploit + 기관 보도. amount(+2.0)+institution(+1.5)+source(2.0)+sentiment_neg(+1.0) → 최고 점수 6.5, mean_top3=5.0, base=elevated. 현재 WEIGHTS로 critical 진입 조건(3개 P0 + mean>=6.0) 미충족.",
+  "expected_level": "elevated",
+  "items": [
+    {"title": "$280 million DeFi protocol exploit drains Drift", "description": "SEC investigation under way", "source": "reuters"},
+    {"title": "500억원 규모 크로스체인 브리지 해킹", "description": "FBI 수사 개시", "source": "bloomberg"},
+    {"title": "Second DeFi protocol attacked — $75M loss", "description": "", "source": "coindesk"}
+  ]
+}

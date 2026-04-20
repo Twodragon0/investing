@@ -1,0 +1,10 @@
+{
+  "scenario": "tp_regulation_formal",
+  "description": "SEC 공식 고발 + 금감원 조사 + ECB. description에 기관명 보강으로 institution 시그널 확보. mean_top3=3.33, elevated_items=2 → base=moderate. 향후 institutional_weight 상향 시 elevated 예상.",
+  "expected_level": "moderate",
+  "items": [
+    {"title": "SEC files charges against major exchange for securities violations", "description": "SEC enforcement action against Binance", "source": "reuters"},
+    {"title": "금감원, 암호화폐 거래소 전수조사 착수", "description": "금감원 공식 발표", "source": "bloomberg"},
+    {"title": "European Central Bank announces new crypto regulation framework", "description": "ECB policy tightening", "source": "coindesk"}
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "scenario": "fp_positive_embedded",
+  "description": "가격 상승 긍정 뉴스에 과거 폭락 회고 언급. 제목에 상승 키워드 우세 → sentiment=neu/pos, 점수 0.5~2.0 수준, base=low.",
+  "expected_level": "low",
+  "items": [
+    {"title": "비트코인 7.5만달러 재탈환, 랠리 지속", "description": "과거 폭락 구간 회복", "source": "reuters"},
+    {"title": "ETH 역대 최고가 돌파", "description": "지난해 crash 극복", "source": "bloomberg"},
+    {"title": "크립토 시장 회복세, 투자 심리 상승", "description": "", "source": "coindesk"}
+  ]
+}

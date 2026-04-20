@@ -1,0 +1,10 @@
+{
+  "scenario": "borderline_executive_order",
+  "description": "예상된 행정명령 비축고 설립. description에 연준/Federal Reserve 언급으로 institution 확보. mean_top3=3.50, elevated_items=2 → base=moderate. 향후 행정명령 전용 rule 추가 시 elevated 가능.",
+  "expected_level": "moderate",
+  "items": [
+    {"title": "Trump signs executive order on strategic Bitcoin reserve", "description": "White House Federal Reserve policy", "source": "reuters"},
+    {"title": "백악관, 비트코인 비축고 설립 공식화", "description": "연준 보고서 인용", "source": "bloomberg"},
+    {"title": "White House crypto policy framework published", "description": "Federal Reserve response expected", "source": "cnbc"}
+  ]
+}

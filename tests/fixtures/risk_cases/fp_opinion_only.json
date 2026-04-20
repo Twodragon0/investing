@@ -1,0 +1,13 @@
+{
+  "scenario": "fp_opinion_only",
+  "description": "Ben McKenzie 인터뷰 등 오피니언 5건만. opinion_penalty 적용으로 점수 0~1 수준, rule_7 트레이스 없이 base=low.",
+  "expected_level": "low",
+  "expected_rule_traces": [],
+  "items": [
+    {"title": "Analyst says Bitcoin is still a ponzi scheme", "description": "", "source": "google news"},
+    {"title": "배우가 비트코인을 폭락 예측 주장", "description": "", "source": "google news"},
+    {"title": "Commentator predicts crash this year", "description": "", "source": "google news"},
+    {"title": "인플루언서 인터뷰에서 급락 전망", "description": "", "source": "google news"},
+    {"title": "X 사용자, rug pull 우려 제기", "description": "", "source": "google news"}
+  ]
+}
