@@ -19,6 +19,20 @@ from .utils import is_private_url_target
 
 logger = logging.getLogger(__name__)
 
+# Public API — names documented for import by collectors and renderers.
+# Names prefixed with _ remain internal helpers (shared via explicit import only).
+__all__ = [
+    "enrich_item",
+    "enrich_items",
+    "fetch_descriptions_concurrent",
+    "fetch_images_concurrent",
+    "fetch_page_description",
+    "fetch_page_metadata",
+    "generate_synthetic_description",
+    "is_logo_like_url",
+    "is_private_url",
+]
+
 # Cache for resolved Google News URLs to avoid redundant lookups
 _gnews_url_cache: Dict[str, str] = {}
 
@@ -551,7 +565,7 @@ def _is_valid_image_url(url: str) -> bool:
     return True
 
 
-def _is_logo_like_url(url: str) -> bool:
+def is_logo_like_url(url: str) -> bool:
     """Return True if *url* looks like a site logo/icon rather than article art."""
     if not url:
         return False
@@ -620,7 +634,7 @@ def fetch_images_concurrent(
         img = item.get("image") or ""
         if not img:
             missing.append((i, item))
-        elif _is_logo_like_url(img):
+        elif is_logo_like_url(img):
             logo_only.append((i, item))
 
     targets = (missing + logo_only)[:max_items]
@@ -654,7 +668,7 @@ def fetch_images_concurrent(
                 if not prev:
                     items[idx]["image"] = img_url
                     fetched += 1
-                elif _is_logo_like_url(prev) and not _is_logo_like_url(img_url):
+                elif is_logo_like_url(prev) and not is_logo_like_url(img_url):
                     items[idx]["image"] = img_url
                     replaced += 1
             except Exception as exc:
