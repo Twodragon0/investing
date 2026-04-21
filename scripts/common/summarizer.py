@@ -16,7 +16,7 @@ import re
 from collections import Counter
 from typing import Any, Dict, List, Optional, Tuple
 
-from .enrichment import _is_logo_like_url as _is_logo_url
+from .enrichment import is_logo_like_url
 from .markdown_utils import html_source_tag, markdown_link
 from .post_generator import _MISTRANSLATION_FIXES
 from .utils import truncate_sentence as _truncate_sentence_util
@@ -1256,7 +1256,7 @@ class ThemeSummarizer:
 
                     # Add thumbnail if image available and not a site logo/icon
                     image_url = article.get("image", "")
-                    if image_url and not _is_logo_url(image_url):
+                    if image_url and not is_logo_like_url(image_url):
                         safe_img = _esc(image_url, quote=True)
                         onerr = "this.parentElement.style.display='none'"
                         card_parts.append(
@@ -1338,7 +1338,7 @@ class ThemeSummarizer:
                         img = item.get("image", "")
                         src = item.get("source", "")
                         thumb_html = ""
-                        if img and not _is_logo_url(img):
+                        if img and not is_logo_like_url(img):
                             safe_img = _esc(img, quote=True)
                             onerr = "this.parentElement.style.display='none'"
                             thumb_html = (
