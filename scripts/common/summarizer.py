@@ -16,6 +16,7 @@ import re
 from collections import Counter
 from typing import Any, Dict, List, Optional, Tuple
 
+from .enrichment import _is_logo_like_url as _is_logo_url
 from .markdown_utils import html_source_tag, markdown_link
 from .post_generator import _MISTRANSLATION_FIXES
 from .utils import truncate_sentence as _truncate_sentence_util
@@ -141,38 +142,6 @@ def _truncate_sentence(text: str, max_len: int = 300) -> str:
     if best_idx > 20:
         return text[:best_idx].strip()
     return _truncate_sentence_util(text, max_length=max_len)
-
-
-# Logo/icon URL patterns that indicate a site branding image rather than article content
-_LOGO_URL_PATTERNS = [
-    "/logo/",
-    "/logos/",
-    "/favicon",
-    "/icon/",
-    "/icons/",
-    "default-logo",
-    "snslogo",
-    "snslogotrans",
-    "-logo.",
-    "_logo.",
-    "logo%20",  # encoded "logo " (e.g. "logo%20217x217")
-    "256x256",
-    "128x128",
-    "64x64",
-    "32x32",
-    "16x16",
-]
-
-
-def _is_logo_url(url: str) -> bool:
-    """Return True if *url* looks like a site logo or icon rather than an article image.
-
-    Matches paths that contain known logo/favicon patterns or icon dimensions.
-    """
-    if not url:
-        return False
-    url_lower = url.lower()
-    return any(pattern in url_lower for pattern in _LOGO_URL_PATTERNS)
 
 
 def _favicon_url(link: str) -> str:
