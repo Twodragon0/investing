@@ -1522,7 +1522,7 @@ class TestEnrichItems:
             patch("common.translator.save_translation_cache"),
         ):
             enrich_items([], fetch_url=False)
-            mock_img.assert_called_once_with([], max_workers=8, max_items=30)
+            mock_img.assert_called_once_with([], max_workers=8, max_items=60)
 
     def test_items_enriched_in_place(self):
         """All items should be processed."""

@@ -11,7 +11,7 @@ image: "/assets/images/generated/og-daily-political-trades-report-2026-04-19.png
 excerpt: "오늘 정치인 거래·정책 분야에서 총 8건의 뉴스가 수집되었습니다. 세부 구성은 SEC 내부자 거래 7건, 중앙은행 1건입니다 - Investing Dragon 자동 수집 분석…"
 permalink: "/political-trades/2026/04/19/daily-political-trades-report/"
 description_ko: "정치인 거래·정책 동향 8건 수집. SEC 내부자 7건, 중앙은행 1건. 의회·SEC 내부자 거래 및 정책 이벤트를 모니터링합니다."
-description: "정치인 거래·정책 동향 8건 수집. SEC 내부자 7건, 중앙은행 1건. 의회·SEC 내부자 거래 및 정책 이벤트를 모니터링합니다 - Investing Dragon 자동 수집 분석 리포트."
+description: "정치인 거래·정책 동향 8건 수집. SEC 내부자 7건, 중앙은행 1건. 의회·SEC 내부자 거래 및 정책 이벤트를 모니터링합니다."
 image_alt: "정치인 거래·정책 리포트 - 2026-04-19 - 정치인 거래 뉴스 요약 이미지"
 ---
 

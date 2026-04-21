@@ -513,6 +513,28 @@ _BAD_IMAGE_PATTERNS = [
 # Note: .webp is intentionally excluded — webp images are valid content images
 _BAD_IMAGE_EXTENSIONS = [".gif", ".svg", ".ico"]
 
+# Logo/icon URL patterns — mirror scripts/common/summarizer.py:_LOGO_URL_PATTERNS.
+# When an RSS feed ships only a site logo, we should still try to fetch a proper
+# og:image so the post thumbnail reflects real article content.
+_LOGO_URL_PATTERNS = (
+    "/logo/",
+    "/logos/",
+    "/favicon",
+    "/icon/",
+    "/icons/",
+    "default-logo",
+    "snslogo",
+    "snslogotrans",
+    "-logo.",
+    "_logo.",
+    "logo%20",
+    "256x256",
+    "128x128",
+    "64x64",
+    "32x32",
+    "16x16",
+)
+
 
 def _is_valid_image_url(url: str) -> bool:
     """Check if a URL is likely a valid, useful image (not a placeholder/tracking pixel)."""
@@ -527,6 +549,14 @@ def _is_valid_image_url(url: str) -> bool:
             return True
         return False
     return True
+
+
+def _is_logo_like_url(url: str) -> bool:
+    """Return True if *url* looks like a site logo/icon rather than article art."""
+    if not url:
+        return False
+    url_lower = url.lower()
+    return any(pattern in url_lower for pattern in _LOGO_URL_PATTERNS)
 
 
 def _fetch_og_image(url: str, timeout: int = 8) -> str:
@@ -569,25 +599,40 @@ def _fetch_og_image(url: str, timeout: int = 8) -> str:
 def fetch_images_concurrent(
     items: list,
     max_workers: int = 8,
-    max_items: int = 30,
+    max_items: int = 60,
 ) -> int:
-    """Fetch og:image for items missing images, using concurrent threads.
+    """Fetch og:image for items missing or carrying a logo image.
 
     Resolves Google News redirect URLs first, then fetches og:image.
-    Returns the number of images successfully fetched.
+    Prioritizes items that have no image at all (so the first N cards
+    on a post never degrade to favicon fallback), then retries items
+    whose RSS-provided image is clearly a site logo/icon.
+    Returns the number of images successfully fetched or replaced.
     """
     from concurrent.futures import ThreadPoolExecutor, as_completed
 
-    targets = [(i, item) for i, item in enumerate(items) if not item.get("image") and item.get("link")][:max_items]
+    missing: list[tuple[int, dict]] = []
+    logo_only: list[tuple[int, dict]] = []
+    for i, item in enumerate(items):
+        link = item.get("link")
+        if not link:
+            continue
+        img = item.get("image") or ""
+        if not img:
+            missing.append((i, item))
+        elif _is_logo_like_url(img):
+            logo_only.append((i, item))
+
+    targets = (missing + logo_only)[:max_items]
 
     if not targets:
         return 0
 
     fetched = 0
+    replaced = 0
 
     def _fetch_one(idx: int, item: dict) -> tuple:
         link = item["link"]
-        # Prefer original_url (pre-resolved from RSS <source url="">) over Google News URL
         original_url = item.get("original_url", "")
         if original_url and "news.google.com" not in original_url:
             link = original_url
@@ -603,15 +648,26 @@ def fetch_images_concurrent(
             item_idx = futures[future]
             try:
                 idx, img_url = future.result(timeout=15)
-                if img_url:
+                if not img_url:
+                    continue
+                prev = items[idx].get("image") or ""
+                if not prev:
                     items[idx]["image"] = img_url
                     fetched += 1
+                elif _is_logo_like_url(prev) and not _is_logo_like_url(img_url):
+                    items[idx]["image"] = img_url
+                    replaced += 1
             except Exception as exc:
                 logger.debug("Image fetch failed for item %d: %s", item_idx, exc)
 
-    if fetched:
-        logger.info("Fetched %d og:images for %d items", fetched, len(targets))
-    return fetched
+    if fetched or replaced:
+        logger.info(
+            "Fetched %d og:images, replaced %d logo images (%d targets)",
+            fetched,
+            replaced,
+            len(targets),
+        )
+    return fetched + replaced
 
 
 def fetch_descriptions_concurrent(
@@ -1740,7 +1796,9 @@ def enrich_items(
         )
 
     # --- Image fetch pass (concurrent og:image for items missing images) ---
-    fetch_images_concurrent(items, max_workers=8, max_items=30)
+    # Raised from 30 → 60 so the first ~20 cards per theme (top-3 × ~6 themes)
+    # never degrade to favicon fallback when RSS lacks an article image.
+    fetch_images_concurrent(items, max_workers=8, max_items=60)
 
     # --- Description enrichment pass (concurrent fetch for synthetic descriptions) ---
     if fetch_url:
