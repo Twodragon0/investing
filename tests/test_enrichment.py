@@ -329,12 +329,70 @@ class TestFetchPageMetadata:
 
     def test_empty_url_returns_empty_dict(self):
         result = fetch_page_metadata("")
-        assert result == {"description": "", "image": ""}
+        assert result == {
+            "description": "",
+            "image": "",
+            "published_time": "",
+            "author": "",
+            "section": "",
+        }
 
     def test_returns_dict_with_expected_keys(self):
         result = fetch_page_metadata("")
-        assert "description" in result
-        assert "image" in result
+        for key in ("description", "image", "published_time", "author", "section"):
+            assert key in result
+
+    @patch("common.enrichment.requests.get")
+    def test_article_published_time_extracted(self, mock_get):
+        html = """<html><head>
+        <meta property="article:published_time" content="2026-04-21T09:30:00+09:00" />
+        <meta property="og:description" content="Bitcoin rally continues on institutional demand." />
+        </head></html>"""
+        mock_resp = MagicMock()
+        mock_resp.text = html
+        mock_resp.raise_for_status.return_value = None
+        mock_get.return_value = mock_resp
+        result = fetch_page_metadata("https://example.com/article")
+        assert result["published_time"] == "2026-04-21T09:30:00+09:00"
+
+    @patch("common.enrichment.requests.get")
+    def test_article_author_extracted(self, mock_get):
+        html = """<html><head>
+        <meta property="article:author" content="홍길동 기자" />
+        <meta property="og:description" content="Ethereum upgrade deploys to mainnet successfully." />
+        </head></html>"""
+        mock_resp = MagicMock()
+        mock_resp.text = html
+        mock_resp.raise_for_status.return_value = None
+        mock_get.return_value = mock_resp
+        result = fetch_page_metadata("https://example.com/article")
+        assert result["author"] == "홍길동 기자"
+
+    @patch("common.enrichment.requests.get")
+    def test_article_section_extracted(self, mock_get):
+        html = """<html><head>
+        <meta property="article:section" content="경제" />
+        <meta property="og:description" content="KOSPI 6200선 돌파, 외국인 순매수 지속." />
+        </head></html>"""
+        mock_resp = MagicMock()
+        mock_resp.text = html
+        mock_resp.raise_for_status.return_value = None
+        mock_get.return_value = mock_resp
+        result = fetch_page_metadata("https://example.com/article")
+        assert result["section"] == "경제"
+
+    @patch("common.enrichment.requests.get")
+    def test_modified_time_fallback_when_published_absent(self, mock_get):
+        html = """<html><head>
+        <meta property="article:modified_time" content="2026-04-21T10:00:00Z" />
+        <meta property="og:description" content="Market update from the latest session." />
+        </head></html>"""
+        mock_resp = MagicMock()
+        mock_resp.text = html
+        mock_resp.raise_for_status.return_value = None
+        mock_get.return_value = mock_resp
+        result = fetch_page_metadata("https://example.com/article")
+        assert result["published_time"] == "2026-04-21T10:00:00Z"
 
     @patch("common.enrichment.requests.get")
     def test_http_error_returns_empty(self, mock_get):
@@ -416,7 +474,13 @@ class TestFetchPageMetadata:
         mock_resp.raise_for_status.side_effect = req_mod.exceptions.HTTPError("404")
         mock_get.return_value = mock_resp
         result = fetch_page_metadata("https://example.com/article")
-        assert result == {"description": "", "image": ""}
+        assert result == {
+            "description": "",
+            "image": "",
+            "published_time": "",
+            "author": "",
+            "section": "",
+        }
 
 
 class TestFetchImagesConcurrent:
@@ -1151,7 +1215,13 @@ class TestFetchPageMetadataExtended:
         mock_resolve.return_value = ""  # Empty -> returns empty result
         result = fetch_page_metadata("https://news.google.com/rss/articles/CBMi123")
         mock_resolve.assert_called_once()
-        assert result == {"description": "", "image": ""}
+        assert result == {
+            "description": "",
+            "image": "",
+            "published_time": "",
+            "author": "",
+            "section": "",
+        }
 
     @patch("common.enrichment.requests.get")
     def test_twitter_description_extracted(self, mock_get):
@@ -3032,7 +3102,13 @@ class TestFetchPageMetadataSSRFBlock:
     def test_private_url_returns_empty_dict(self):
         with patch("common.enrichment.is_private_url", return_value=True):
             result = fetch_page_metadata("https://internal.corp/article")
-        assert result == {"description": "", "image": ""}
+        assert result == {
+            "description": "",
+            "image": "",
+            "published_time": "",
+            "author": "",
+            "section": "",
+        }
 
 
 # ---------------------------------------------------------------------------

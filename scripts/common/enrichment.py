@@ -803,11 +803,20 @@ _EXCLUDE_CLASS_RE = re.compile(
 def _extract_og_metadata(soup: Any, title: str = "") -> Dict[str, str]:
     """Extract Open Graph / twitter meta tags from a parsed page.
 
-    Returns a dict with ``image`` (may be empty) and ``description`` (may be empty).
+    Returns a dict with keys: ``image``, ``description``, ``published_time``,
+    ``author``, ``section`` (all may be empty). The article:* fields come from
+    the OpenGraph article namespace and are useful for downstream consumers
+    (RSS metadata, search indexing, description fallback synthesis).
     """
     from bs4 import BeautifulSoup as BS4  # noqa: F401 – type hint only
 
-    result: Dict[str, str] = {"description": "", "image": ""}
+    result: Dict[str, str] = {
+        "description": "",
+        "image": "",
+        "published_time": "",
+        "author": "",
+        "section": "",
+    }
 
     # og:image / twitter:image
     for img_attr_key, img_attr_val in [
@@ -842,6 +851,38 @@ def _extract_og_metadata(soup: Any, title: str = "") -> Dict[str, str]:
         ):
             result["description"] = smart_truncate(cleaned, 1000)
             break
+
+    # article:published_time — ISO-8601 timestamp (fallback to modified_time)
+    for attr_key, attr_val in [
+        ("property", "article:published_time"),
+        ("property", "article:modified_time"),
+        ("name", "pubdate"),
+        ("itemprop", "datePublished"),
+    ]:
+        meta = soup.find("meta", attrs={attr_key: attr_val})
+        content = str(meta.get("content", "")).strip() if meta else ""
+        if content:
+            result["published_time"] = content[:40]
+            break
+
+    # article:author — article-level author metadata
+    for attr_key, attr_val in [
+        ("property", "article:author"),
+        ("name", "author"),
+        ("itemprop", "author"),
+    ]:
+        meta = soup.find("meta", attrs={attr_key: attr_val})
+        content = str(meta.get("content", "")).strip() if meta else ""
+        if content and len(content) < 200:
+            result["author"] = content
+            break
+
+    # article:section — topic/category
+    meta = soup.find("meta", attrs={"property": "article:section"})
+    if meta:
+        content = str(meta.get("content", "")).strip()
+        if content and len(content) < 100:
+            result["section"] = content
 
     return result
 
@@ -929,11 +970,20 @@ def _extract_via_paragraphs(soup: Any) -> str:
 
 
 def fetch_page_metadata(url: str, timeout: int = 8, title: str = "") -> Dict[str, str]:
-    """Fetch meta description and og:image from a URL page (best-effort).
+    """Fetch meta description, image and article metadata from a URL page.
 
-    Returns a dict with keys ``description`` and ``image`` (empty strings on failure).
+    Returns a dict with keys ``description``, ``image``, ``published_time``,
+    ``author``, ``section`` (all may be empty). All article:* fields are
+    best-effort and default to empty string on failure or when the page
+    does not emit that tag.
     """
-    result: Dict[str, str] = {"description": "", "image": ""}
+    result: Dict[str, str] = {
+        "description": "",
+        "image": "",
+        "published_time": "",
+        "author": "",
+        "section": "",
+    }
     if not url:
         return result
     # Resolve Google News redirects (any news.google.com URL)
@@ -959,9 +1009,12 @@ def fetch_page_metadata(url: str, timeout: int = 8, title: str = "") -> Dict[str
         force_utf8_if_mislabelled(resp)
         soup = BS4(resp.text, "html.parser")
 
-        # Extract OG metadata (image + meta description tags)
+        # Extract OG metadata (image + description + article:* fields)
         og = _extract_og_metadata(soup, title=title)
         result["image"] = og["image"]
+        result["published_time"] = og.get("published_time", "")
+        result["author"] = og.get("author", "")
+        result["section"] = og.get("section", "")
         if og["description"]:
             cleaned = sanitize_mojibake(og["description"])
             if cleaned:
