@@ -913,6 +913,88 @@ class TestFetchOgImage:
         result = _fetch_og_image("https://example.com/article")
         assert result == ""
 
+    @patch("common.enrichment.requests.get")
+    def test_og_image_secure_url_used(self, mock_get):
+        """og:image:secure_url should be picked when og:image is absent."""
+        from common.enrichment import _fetch_og_image
+
+        mock_resp = MagicMock()
+        mock_resp.raise_for_status.return_value = None
+        mock_resp.text = (
+            '<meta property="og:image:secure_url" content="https://cdn.example.com/secure.jpg"/>'
+        )
+        mock_get.return_value = mock_resp
+        result = _fetch_og_image("https://example.com/article")
+        assert result == "https://cdn.example.com/secure.jpg"
+
+    @patch("common.enrichment.requests.get")
+    def test_article_image_used(self, mock_get):
+        """article:image (OpenGraph article namespace) should be picked up."""
+        from common.enrichment import _fetch_og_image
+
+        mock_resp = MagicMock()
+        mock_resp.raise_for_status.return_value = None
+        mock_resp.text = (
+            '<meta property="article:image" content="https://cdn.example.com/article.jpg"/>'
+        )
+        mock_get.return_value = mock_resp
+        result = _fetch_og_image("https://example.com/article")
+        assert result == "https://cdn.example.com/article.jpg"
+
+    @patch("common.enrichment.requests.get")
+    def test_itemprop_image_used(self, mock_get):
+        """Schema.org itemprop=image should be used as a late fallback."""
+        from common.enrichment import _fetch_og_image
+
+        mock_resp = MagicMock()
+        mock_resp.raise_for_status.return_value = None
+        mock_resp.text = '<meta itemprop="image" content="https://cdn.example.com/schema.jpg"/>'
+        mock_get.return_value = mock_resp
+        result = _fetch_og_image("https://example.com/article")
+        assert result == "https://cdn.example.com/schema.jpg"
+
+    @patch("common.enrichment.requests.get")
+    def test_link_image_src_used(self, mock_get):
+        """<link rel="image_src"> legacy fallback should be picked up last."""
+        from common.enrichment import _fetch_og_image
+
+        mock_resp = MagicMock()
+        mock_resp.raise_for_status.return_value = None
+        mock_resp.text = '<link rel="image_src" href="https://cdn.example.com/link-src.jpg"/>'
+        mock_get.return_value = mock_resp
+        result = _fetch_og_image("https://example.com/article")
+        assert result == "https://cdn.example.com/link-src.jpg"
+
+    @patch("common.enrichment.requests.get")
+    def test_priority_og_over_twitter(self, mock_get):
+        """og:image must win over twitter:image when both are present."""
+        from common.enrichment import _fetch_og_image
+
+        mock_resp = MagicMock()
+        mock_resp.raise_for_status.return_value = None
+        mock_resp.text = (
+            '<meta name="twitter:image" content="https://cdn.example.com/tw.jpg"/>'
+            '<meta property="og:image" content="https://cdn.example.com/og.jpg"/>'
+        )
+        mock_get.return_value = mock_resp
+        result = _fetch_og_image("https://example.com/article")
+        assert result == "https://cdn.example.com/og.jpg"
+
+    @patch("common.enrichment.requests.get")
+    def test_logo_url_rejected_falls_through(self, mock_get):
+        """A logo-ish og:image should be skipped in favor of a later valid URL."""
+        from common.enrichment import _fetch_og_image
+
+        mock_resp = MagicMock()
+        mock_resp.raise_for_status.return_value = None
+        mock_resp.text = (
+            '<meta property="og:image" content="https://cdn.example.com/site-logo.png"/>'
+            '<meta name="twitter:image" content="https://cdn.example.com/hero.jpg"/>'
+        )
+        mock_get.return_value = mock_resp
+        result = _fetch_og_image("https://example.com/article")
+        assert result == "https://cdn.example.com/hero.jpg"
+
 
 # ---------------------------------------------------------------------------
 # fetch_images_concurrent extended — lines 279-293

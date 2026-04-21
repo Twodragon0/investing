@@ -573,8 +573,36 @@ def is_logo_like_url(url: str) -> bool:
     return any(pattern in url_lower for pattern in _LOGO_URL_PATTERNS)
 
 
+# Meta tag patterns for article image extraction, tried in priority order.
+# Each entry is (attr_pair, label) — the regex builder below produces both
+# content-first and property/name-first variants to handle either attr order.
+# Logo-like URLs are rejected so the fallback chain keeps searching for a
+# real article image instead of returning a site banner.
+_IMAGE_META_PATTERNS = [
+    # OpenGraph standard
+    (r'property=["\']og:image["\']', "og:image"),
+    (r'property=["\']og:image:secure_url["\']', "og:image:secure_url"),
+    (r'property=["\']og:image:url["\']', "og:image:url"),
+    # Twitter Cards
+    (r'name=["\']twitter:image["\']', "twitter:image"),
+    (r'name=["\']twitter:image:src["\']', "twitter:image:src"),
+    # OpenGraph article namespace (used by some Korean/legacy publishers)
+    (r'property=["\']article:image["\']', "article:image"),
+    # Schema.org / Microdata
+    (r'itemprop=["\']image["\']', "itemprop=image"),
+]
+
+
 def _fetch_og_image(url: str, timeout: int = 8) -> str:
-    """Fetch only og:image from a URL (lightweight, no description)."""
+    """Fetch an article image URL from a page's meta tags.
+
+    Searches in priority order: og:image, og:image:secure_url, og:image:url,
+    twitter:image, twitter:image:src, article:image, itemprop=image, and
+    <link rel="image_src">. Returns the first URL that passes both
+    _is_valid_image_url (rejects placeholders/trackers) and is_logo_like_url
+    (rejects site logos/favicons). Returns empty string on network failure,
+    SSRF block, or when no valid article image is found.
+    """
     if not url:
         return ""
     try:
@@ -589,22 +617,37 @@ def _fetch_og_image(url: str, timeout: int = 8) -> str:
         )
         resp.raise_for_status()
         force_utf8_if_mislabelled(resp)
-        # Search in first 30KB of HTML for og:image via regex (faster than BS4)
+        # Search first 30KB only — meta tags live in <head>
         head_html = resp.text[:30_000]
-        for pattern in [
-            r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)',
-            r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image',
-            r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)',
-            r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']twitter:image',
-        ]:
-            match = re.search(pattern, head_html, re.IGNORECASE)
-            if match:
-                img_url = match.group(1).strip()
-                if not img_url.startswith(("http://", "https://")):
-                    logger.debug("og:image blocked unsafe scheme: %s", img_url[:80])
-                    continue
-                if _is_valid_image_url(img_url):
-                    return img_url
+
+        def _accept(img_url: str) -> bool:
+            img_url = img_url.strip()
+            if not img_url.startswith(("http://", "https://")):
+                return False
+            if not _is_valid_image_url(img_url):
+                return False
+            if is_logo_like_url(img_url):
+                return False
+            return True
+
+        for attr_pattern, _label in _IMAGE_META_PATTERNS:
+            # Try both attribute orders (property-first or content-first)
+            for regex in (
+                rf'<meta[^>]+{attr_pattern}[^>]+content=["\']([^"\']+)',
+                rf'<meta[^>]+content=["\']([^"\']+)["\'][^>]+{attr_pattern}',
+            ):
+                match = re.search(regex, head_html, re.IGNORECASE)
+                if match and _accept(match.group(1)):
+                    return match.group(1).strip()
+
+        # <link rel="image_src" href="..."> — Pinterest/legacy schema
+        link_match = re.search(
+            r'<link[^>]+rel=["\']image_src["\'][^>]+href=["\']([^"\']+)',
+            head_html,
+            re.IGNORECASE,
+        )
+        if link_match and _accept(link_match.group(1)):
+            return link_match.group(1).strip()
     except Exception as exc:
         logger.debug("og:image fetch failed for %s: %s", url, exc)
     return ""
