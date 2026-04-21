@@ -737,6 +737,10 @@ THEMES = [
 
 TOP_THEMES_COUNT = 5
 ARTICLES_PER_THEME = 5
+# Overflow preview cap per theme — how many articles past the featured cards
+# get a thumbnail preview in the <details> section. Raised from implicit 2 → 10
+# so "그 외 38건 보기" expands into a visual list instead of a bare stub line.
+OVERFLOW_PREVIEW_LIMIT = 10
 BAR_WIDTH = 18
 
 # Build a set of theme names (Korean + English keys) for cross-theme keyword filtering
@@ -1319,7 +1323,11 @@ class ThemeSummarizer:
                     )
 
                 shown += 1
-                if shown >= max_articles:
+                # Featured cards stop at max_articles, but keep accumulating
+                # remaining_links up to OVERFLOW_PREVIEW_LIMIT so the <details>
+                # overflow section renders thumbnails for ~10 items instead of
+                # collapsing to a bare "외 N건" stub.
+                if shown >= max_articles and len(remaining_links) >= OVERFLOW_PREVIEW_LIMIT:
                     break
 
             overflow = len([a for a in articles if a.get("title") and a["title"] not in seen_titles])
@@ -1331,7 +1339,7 @@ class ThemeSummarizer:
                     f"<details><summary>그 외 {remaining_count}건 보기</summary>"
                     f'<div class="details-content"><ol class="news-overflow-list">'
                 )
-                for item in remaining_links[:15]:
+                for item in remaining_links[:OVERFLOW_PREVIEW_LIMIT]:
                     if isinstance(item, dict):
                         t = _esc(item.get("title", ""), quote=True)
                         lnk = item.get("link", "")
@@ -1377,8 +1385,10 @@ class ThemeSummarizer:
                             )
                     else:
                         lines.append(f"<li>{item}</li>")
-                if remaining_count > 15:
-                    lines.append(f"<li><em>...외 {remaining_count - 15}건</em></li>")
+                if remaining_count > OVERFLOW_PREVIEW_LIMIT:
+                    lines.append(
+                        f"<li><em>...외 {remaining_count - OVERFLOW_PREVIEW_LIMIT}건</em></li>"
+                    )
                 lines.append("</ol></div></details>\n")
 
             lines.append("")
