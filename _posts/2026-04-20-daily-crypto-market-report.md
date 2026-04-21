@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-crypto-market-report-2026-04-20.png"
 permalink: "/market-analysis/2026/04/20/daily-crypto-market-report/"
 description_ko: "BTC $74,929 (24h -1.0%). 공포·탐욕 지수: 27/100 (Fear), BTC 도미넌스 57.4%. 상위 30개 코인 분석."
-description: "BTC $74,929 (24h -1.0%). 공포·탐욕 지수: 27/100 (Fear), BTC 도미넌스 57.4%. 상위 30개 코인 분석 - Investing Dragon 자동 수집 분석 리포트."
+description: "BTC $74,929 (24h -1.0%). 공포·탐욕 지수: 27/100 (Fear), BTC 도미넌스 57.4%. 상위 30개 코인 분석."
 excerpt: "BTC $74,929 (24h -1.0%). 공포·탐욕 지수: 27/100 (Fear), BTC 도미넌스 57.4%. 상위 30개 코인 분석 - Investing Dragon…"
 image_alt: "암호화폐 시장 종합 리포트 - 2026-04-20 | HYPE -5.9% - 시장 분석 뉴스 요약 이미지"
 ---

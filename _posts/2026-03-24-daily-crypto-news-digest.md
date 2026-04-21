@@ -9,7 +9,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-24.png"
 permalink: "/crypto-news/2026/03/24/daily-crypto-news-digest/"
-description: "오늘의 암호화폐 브리핑: 암호화폐 뉴스 브리핑. 크립토 시장 심리와 자금 흐름을 점검합니다 - Investing Dragon 자동 수집 분석 리포트."
+description: "비트코인은 트럼프가 이란 발전소(BTC-USD:암호화폐)에 대한 파업을 연기함에 따라 상승합니다."
 excerpt: "2026-03-24 암호화폐 시장에서 95건의 뉴스를 분석했습니다. 오늘은 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "암호화폐 뉴스 브리핑 - 2026-03-24 - crypto-news 뉴스 요약 이미지"
 ---

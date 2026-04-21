@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-security-report-2026-04-19.png"
 permalink: "/security-alerts/2026/04/19/daily-security-report/"
 description_ko: "12 디파이 2억 8천만 달러 규모의 드리프트 익스플로잇 이후 2주 동안 연속 해킹으로 프로토콜 적중 -…. 블록체인 보안 뉴스 2건 분석."
-description: "12 디파이 2억 8천만 달러 규모의 드리프트 익스플로잇 이후 2주 동안 연속 해킹으로 프로토콜 적중 -…. 블록체인 보안 뉴스 2건 분석 - Investing Dragon 자동 수집 분석 리포트."
+description: "12 디파이 2억 8천만 달러 규모의 드리프트 익스플로잇 이후 2주 동안 연속 해킹으로 프로토콜 적중 -…. 블록체인 보안 뉴스 2건 분석."
 excerpt: "12 디파이 2억 8천만 달러 규모의 드리프트 익스플로잇 이후 2주 동안 연속 해킹으로 프로토콜 적중 -…. 블록체인 보안 뉴스 2건 분석 - Investing Dragon…"
 image_alt: "블록체인 보안 리포트 - 2026-04-19 - 보안 뉴스 요약 이미지"
 ---
