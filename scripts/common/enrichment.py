@@ -31,6 +31,7 @@ __all__ = [
     "generate_synthetic_description",
     "is_logo_like_url",
     "is_private_url",
+    "match_bad_image_pattern",
     "match_logo_pattern",
 ]
 
@@ -528,6 +529,10 @@ _BAD_IMAGE_PATTERNS = [
 # as tracking pixels. This regex requires 1x1 to be bounded by a path separator on
 # the left AND followed by an extension / query marker / end-of-string on the right.
 _BAD_IMAGE_REGEX = re.compile(r"(?:^|[/_-])1x1(?:\.[a-z0-9]{2,4}|[?#]|$)")
+# Synthetic bucket token returned by match_bad_image_pattern when the 1x1 regex
+# fires. All size-marker variants collapse to this single metric key so callers
+# counting rejections get stable bucketing across /1x1.gif, -1x1.png, /1x1?... etc.
+_BAD_IMAGE_REGEX_BUCKET = "1x1-pixel"
 # Non-image file extensions to reject (.gif is often a tracking pixel; .svg/.ico are usually logos)
 # Note: .webp is intentionally excluded — webp images are valid content images
 _BAD_IMAGE_EXTENSIONS = [".gif", ".svg", ".ico"]
@@ -552,19 +557,41 @@ _LOGO_URL_PATTERNS = (
 )
 
 
+def match_bad_image_pattern(url: str) -> str | None:
+    """Return the matched bad-image pattern token for *url*, or None.
+
+    Exposes which pattern fired so callers can log or bucket image
+    rejections by cause. Substring matches from ``_BAD_IMAGE_PATTERNS``
+    return the matched substring verbatim; the 1x1 tracking-pixel regex
+    returns the synthetic bucket token ``"1x1-pixel"`` so all size-marker
+    variants (``/1x1.gif``, ``-1x1.png``, ``/1x1?...``) collapse to a
+    single metric key. Symmetric with :func:`match_logo_pattern`.
+    """
+    if not url:
+        return None
+    url_lower = url.lower()
+    for pattern in _BAD_IMAGE_PATTERNS:
+        if pattern in url_lower:
+            return pattern
+    if _BAD_IMAGE_REGEX.search(url_lower):
+        return _BAD_IMAGE_REGEX_BUCKET
+    return None
+
+
 def _is_valid_image_url(url: str) -> bool:
     """Check if a URL is likely a valid, useful image (not a placeholder/tracking pixel)."""
     if not _has_http_image_scheme(url):
         return False
+    bad = match_bad_image_pattern(url)
+    if bad is not None:
+        logger.debug("image rejected: bad_pattern=%s url=%s", bad, url[:80])
+        return False
     url_lower = url.lower()
-    if any(p in url_lower for p in _BAD_IMAGE_PATTERNS):
-        return False
-    if _BAD_IMAGE_REGEX.search(url_lower):
-        return False
     if any(url_lower.endswith(ext) for ext in _BAD_IMAGE_EXTENSIONS):
         # Allow large gif if it has a meaningful path length
         if len(url) > 80:
             return True
+        logger.debug("image rejected: bad_extension=%s url=%s", url_lower[-5:], url[:80])
         return False
     return True
 
