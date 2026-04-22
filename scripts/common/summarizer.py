@@ -1386,9 +1386,7 @@ class ThemeSummarizer:
                     else:
                         lines.append(f"<li>{item}</li>")
                 if remaining_count > OVERFLOW_PREVIEW_LIMIT:
-                    lines.append(
-                        f"<li><em>...외 {remaining_count - OVERFLOW_PREVIEW_LIMIT}건</em></li>"
-                    )
+                    lines.append(f"<li><em>...외 {remaining_count - OVERFLOW_PREVIEW_LIMIT}건</em></li>")
                 lines.append("</ol></div></details>\n")
 
             lines.append("")
