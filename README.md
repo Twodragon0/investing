@@ -38,7 +38,7 @@
 | scripts/common/crypto\_api.py                     |       57 |        0 |    100% |           |
 | scripts/common/dedup.py                           |      158 |        0 |    100% |           |
 | scripts/common/encoding\_guard.py                 |       29 |        0 |    100% |           |
-| scripts/common/enrichment.py                      |      698 |        5 |     99% |557, 624, 657-659 |
+| scripts/common/enrichment.py                      |      736 |        4 |     99% |698, 731-733 |
 | scripts/common/entity\_extractor.py               |      106 |        1 |     99% |       180 |
 | scripts/common/fmp\_api.py                        |      247 |        0 |    100% |           |
 | scripts/common/formatters.py                      |       30 |        0 |    100% |           |
@@ -50,12 +50,12 @@
 | scripts/common/image\_generator/og.py             |       59 |        0 |    100% |           |
 | scripts/common/markdown\_utils.py                 |      163 |        0 |    100% |           |
 | scripts/common/mindspider.py                      |      377 |        6 |     98% |603, 673-674, 687-688, 990 |
-| scripts/common/post\_generator.py                 |      333 |        7 |     98% |456-460, 863-864 |
+| scripts/common/post\_generator.py                 |      333 |        8 |     98% |456-460, 828, 863-864 |
 | scripts/common/risk\_classifier.py                |      184 |        9 |     95% |330-331, 353, 391, 430-434 |
 | scripts/common/rss\_fetcher.py                    |      249 |       12 |     95% |44-45, 80, 91, 178, 187, 272, 281, 292, 302, 330-331 |
 | scripts/common/signal\_composer.py                |      482 |        2 |     99% |   872-873 |
 | scripts/common/signal\_tracker.py                 |      186 |        6 |     97% |201-203, 318-319, 380-381 |
-| scripts/common/summarizer.py                      |      882 |       20 |     98% |283, 1253, 1410, 1412, 1857, 2026, 2037, 2043, 2067, 2146, 2148, 2158, 2273-2279, 2323, 2545, 2580, 2652, 2718 |
+| scripts/common/summarizer.py                      |      878 |       21 |     98% |252, 1226, 1331, 1387, 1389, 1834, 2003, 2014, 2020, 2044, 2123, 2125, 2135, 2250-2256, 2300, 2522, 2557, 2629, 2695 |
 | scripts/common/time\_series\_state.py             |      278 |       27 |     90% |55, 59, 158, 162, 242, 358-366, 395-401, 432, 460-462, 482-483, 488-490, 541-544 |
 | scripts/common/translator.py                      |      206 |        0 |    100% |           |
 | scripts/common/utils.py                           |      171 |        8 |     95% |186-187, 221-224, 264-266 |
@@ -82,7 +82,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **20430** | **6266** | **69%** |           |
+| **TOTAL**                                         | **20464** | **6267** | **69%** |           |
 
 
 ## Setup coverage badge
