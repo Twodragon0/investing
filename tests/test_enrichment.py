@@ -1036,9 +1036,7 @@ class TestFetchOgImage:
 
         mock_resp = MagicMock()
         mock_resp.raise_for_status.return_value = None
-        mock_resp.text = (
-            '<meta property="og:image:secure_url" content="https://cdn.example.com/secure.jpg"/>'
-        )
+        mock_resp.text = '<meta property="og:image:secure_url" content="https://cdn.example.com/secure.jpg"/>'
         mock_get.return_value = mock_resp
         result = _fetch_og_image("https://example.com/article")
         assert result == "https://cdn.example.com/secure.jpg"
@@ -1050,9 +1048,7 @@ class TestFetchOgImage:
 
         mock_resp = MagicMock()
         mock_resp.raise_for_status.return_value = None
-        mock_resp.text = (
-            '<meta property="article:image" content="https://cdn.example.com/article.jpg"/>'
-        )
+        mock_resp.text = '<meta property="article:image" content="https://cdn.example.com/article.jpg"/>'
         mock_get.return_value = mock_resp
         result = _fetch_og_image("https://example.com/article")
         assert result == "https://cdn.example.com/article.jpg"
