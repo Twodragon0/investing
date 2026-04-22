@@ -74,6 +74,58 @@ class TestIsValidImageUrl:
         assert _is_valid_image_url(long_webp)
 
 
+class TestBadImagePatternPrecision:
+    """Regression: 1x1 substring match previously flagged legitimate article URLs.
+
+    Converted to path-segment regex so only tracking-pixel filenames are rejected
+    while article slugs containing "1x1" (e.g., "1-on-1 interview" written as
+    "1x1") pass through. See enrichment._BAD_IMAGE_REGEX.
+    """
+
+    # --- tracking pixels (must still be rejected) ---------------------------
+
+    def test_rejects_bare_1x1_png_on_path(self):
+        # Only 1x1 drives rejection — no other bad substring present in host/path.
+        assert not _is_valid_image_url("https://images.cdn.io/assets/1x1.png")
+
+    def test_rejects_hyphen_prefixed_1x1_filename(self):
+        assert not _is_valid_image_url("https://images.cdn.io/ad-1x1.png")
+
+    def test_rejects_underscore_prefixed_1x1_filename(self):
+        assert not _is_valid_image_url("https://images.cdn.io/ad_1x1.png")
+
+    def test_rejects_1x1_with_query_string(self):
+        assert not _is_valid_image_url("https://serve.cdn.io/1x1?campaign=abc")
+
+    def test_rejects_1x1_at_path_end(self):
+        assert not _is_valid_image_url("https://serve.cdn.io/proxy/1x1")
+
+    # --- FP regression (legitimate article URLs must now pass) --------------
+
+    def test_allows_1x1_prefixed_article_slug(self):
+        """Article about '1-on-1' (written '1x1') must not be flagged."""
+        url = "https://cdn.example.com/articles/1x1-interview-with-ceo.jpg"
+        assert _is_valid_image_url(url)
+
+    def test_allows_1x1_midword_in_article_slug(self):
+        url = "https://cdn.example.com/research/summit-1x1-report.webp"
+        assert _is_valid_image_url(url)
+
+    def test_allows_11x1_digit_run(self):
+        """Previous substring check rejected anything containing '1x1' — 11x1 too."""
+        url = "https://cdn.example.com/galleries/11x1.webp"
+        assert _is_valid_image_url(url)
+
+    def test_allows_1x1_as_directory_segment(self):
+        """A path segment named '1x1' followed by '/' (not extension) is allowed."""
+        url = "https://cdn.example.com/gallery-1x1/photo.jpg"
+        assert _is_valid_image_url(url)
+
+    def test_allows_alnum_embedded_1x1(self):
+        url = "https://cdn.example.com/hash/a1x1b.jpg"
+        assert _is_valid_image_url(url)
+
+
 class TestCleanDescription:
     """Validate description text cleaning."""
 
