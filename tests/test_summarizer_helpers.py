@@ -13,7 +13,6 @@ from scripts.common.summarizer import (
     _classify_news_severity,
     _favicon_url,
     _fix_mistranslations,
-    _is_logo_url,
 )
 
 # ---------------------------------------------------------------------------
@@ -125,59 +124,12 @@ class TestFixMistranslations:
             assert wrong not in result
 
 
-# ---------------------------------------------------------------------------
-# _is_logo_url
-# ---------------------------------------------------------------------------
-
-
-class TestIsLogoUrl:
-    def test_empty_string_returns_false(self):
-        assert _is_logo_url("") is False
-
-    def test_logo_path_returns_true(self):
-        assert _is_logo_url("https://example.com/logo/site-logo.png") is True
-
-    def test_logos_path_returns_true(self):
-        assert _is_logo_url("https://cdn.example.com/logos/brand.svg") is True
-
-    def test_favicon_returns_true(self):
-        assert _is_logo_url("https://example.com/favicon.ico") is True
-
-    def test_icon_path_returns_true(self):
-        assert _is_logo_url("https://example.com/icon/app-icon.png") is True
-
-    def test_icon_dimensions_256_returns_true(self):
-        assert _is_logo_url("https://example.com/image-256x256.png") is True
-
-    def test_icon_dimensions_128_returns_true(self):
-        assert _is_logo_url("https://example.com/image-128x128.png") is True
-
-    def test_icon_dimensions_64_returns_true(self):
-        assert _is_logo_url("https://example.com/image-64x64.png") is True
-
-    def test_icon_dimensions_32_returns_true(self):
-        assert _is_logo_url("https://example.com/image-32x32.png") is True
-
-    def test_icon_dimensions_16_returns_true(self):
-        assert _is_logo_url("https://example.com/image-16x16.png") is True
-
-    def test_snslogo_returns_true(self):
-        assert _is_logo_url("https://example.com/snslogo.jpg") is True
-
-    def test_dash_logo_returns_true(self):
-        assert _is_logo_url("https://cdn.example.com/brand-logo.png") is True
-
-    def test_underscore_logo_returns_true(self):
-        assert _is_logo_url("https://cdn.example.com/brand_logo.png") is True
-
-    def test_article_image_returns_false(self):
-        assert _is_logo_url("https://example.com/articles/bitcoin-article.jpg") is False
-
-    def test_regular_image_returns_false(self):
-        assert _is_logo_url("https://cdn.example.com/photos/news-photo.jpg") is False
-
-    def test_case_insensitive(self):
-        assert _is_logo_url("https://example.com/FAVICON.PNG") is True
+# NOTE: _is_logo_url test class removed — the function was retired in #741
+# (로고 패턴 정밀화 + match_logo_pattern API A-lite). Logo detection is now
+# covered by tests/test_enrichment_logo.py against match_logo_pattern /
+# is_logo_like_url, which summarizer.py consumes via `from .enrichment import
+# is_logo_like_url`. Size-dimension patterns (256x256, 64x64, etc.) were
+# intentionally dropped in A-lite as false-positive-prone OG image conflicts.
 
 
 # ---------------------------------------------------------------------------

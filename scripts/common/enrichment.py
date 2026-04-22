@@ -512,7 +512,6 @@ _BROWSER_UA = _USER_AGENT
 
 # Tracking pixels and placeholder image URL patterns
 _BAD_IMAGE_PATTERNS = [
-    "1x1",
     "pixel",
     "tracker",
     "beacon",
@@ -524,6 +523,11 @@ _BAD_IMAGE_PATTERNS = [
     "gravatar.com/avatar",
     "wp-content/plugins",
 ]
+# "1x1" must match as a path/filename token (tracking pixel), not a bare substring.
+# A substring check previously flagged article slugs like "/articles/1x1-interview.jpg"
+# as tracking pixels. This regex requires 1x1 to be bounded by a path separator on
+# the left AND followed by an extension / query marker / end-of-string on the right.
+_BAD_IMAGE_REGEX = re.compile(r"(?:^|[/_-])1x1(?:\.[a-z0-9]{2,4}|[?#]|$)")
 # Non-image file extensions to reject (.gif is often a tracking pixel; .svg/.ico are usually logos)
 # Note: .webp is intentionally excluded — webp images are valid content images
 _BAD_IMAGE_EXTENSIONS = [".gif", ".svg", ".ico"]
@@ -554,6 +558,8 @@ def _is_valid_image_url(url: str) -> bool:
         return False
     url_lower = url.lower()
     if any(p in url_lower for p in _BAD_IMAGE_PATTERNS):
+        return False
+    if _BAD_IMAGE_REGEX.search(url_lower):
         return False
     if any(url_lower.endswith(ext) for ext in _BAD_IMAGE_EXTENSIONS):
         # Allow large gif if it has a meaningful path length
