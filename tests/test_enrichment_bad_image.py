@@ -57,17 +57,11 @@ def test_blank_substring_matches():
 
 
 def test_gravatar_substring_matches():
-    assert (
-        match_bad_image_pattern("https://gravatar.com/avatar/abc123")
-        == "gravatar.com/avatar"
-    )
+    assert match_bad_image_pattern("https://gravatar.com/avatar/abc123") == "gravatar.com/avatar"
 
 
 def test_wp_plugin_substring_matches():
-    assert (
-        match_bad_image_pattern("https://example.com/wp-content/plugins/share.png")
-        == "wp-content/plugins"
-    )
+    assert match_bad_image_pattern("https://example.com/wp-content/plugins/share.png") == "wp-content/plugins"
 
 
 # ---------------------------------------------------------------------------
