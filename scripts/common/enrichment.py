@@ -31,6 +31,7 @@ __all__ = [
     "generate_synthetic_description",
     "is_logo_like_url",
     "is_private_url",
+    "match_logo_pattern",
 ]
 
 # Cache for resolved Google News URLs to avoid redundant lookups
@@ -527,9 +528,11 @@ _BAD_IMAGE_PATTERNS = [
 # Note: .webp is intentionally excluded — webp images are valid content images
 _BAD_IMAGE_EXTENSIONS = [".gif", ".svg", ".ico"]
 
-# Logo/icon URL patterns — mirror scripts/common/summarizer.py:_LOGO_URL_PATTERNS.
-# When an RSS feed ships only a site logo, we should still try to fetch a proper
-# og:image so the post thumbnail reflects real article content.
+# Logo/icon URL patterns. When an RSS feed ships only a site logo, we should
+# still try to fetch a proper og:image so the post thumbnail reflects real
+# article content. Size patterns (256x256, 64x64, …) were removed in the
+# A-lite iteration: they conflict with OG standard image sizes and never
+# contributed a real logo rejection in recent measurements.
 _LOGO_URL_PATTERNS = (
     "/logo/",
     "/logos/",
@@ -542,11 +545,6 @@ _LOGO_URL_PATTERNS = (
     "-logo.",
     "_logo.",
     "logo%20",
-    "256x256",
-    "128x128",
-    "64x64",
-    "32x32",
-    "16x16",
 )
 
 
@@ -565,12 +563,25 @@ def _is_valid_image_url(url: str) -> bool:
     return True
 
 
+def match_logo_pattern(url: str) -> str | None:
+    """Return the matched logo/icon substring for *url*, or None.
+
+    Exposes which pattern fired so callers can log or bucket rejections
+    by cause. The boolean wrapper ``is_logo_like_url`` stays the public
+    yes/no API to preserve callers' existing truthy-check semantics.
+    """
+    if not url:
+        return None
+    url_lower = url.lower()
+    for pattern in _LOGO_URL_PATTERNS:
+        if pattern in url_lower:
+            return pattern
+    return None
+
+
 def is_logo_like_url(url: str) -> bool:
     """Return True if *url* looks like a site logo/icon rather than article art."""
-    if not url:
-        return False
-    url_lower = url.lower()
-    return any(pattern in url_lower for pattern in _LOGO_URL_PATTERNS)
+    return match_logo_pattern(url) is not None
 
 
 # Meta tag patterns for article image extraction, tried in priority order.
