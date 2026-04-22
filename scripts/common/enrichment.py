@@ -14,6 +14,7 @@ import requests
 
 from .config import get_verify_ssl
 from .encoding_guard import force_utf8_if_mislabelled, sanitize_mojibake
+from .image_rejection_metrics import record_image_rejection
 from .markdown_utils import smart_truncate
 from .utils import is_private_url_target
 
@@ -585,13 +586,16 @@ def _is_valid_image_url(url: str) -> bool:
     bad = match_bad_image_pattern(url)
     if bad is not None:
         logger.debug("image rejected: bad_pattern=%s url=%s", bad, url[:80])
+        record_image_rejection("bad_image", bad)
         return False
     url_lower = url.lower()
-    if any(url_lower.endswith(ext) for ext in _BAD_IMAGE_EXTENSIONS):
+    matched_ext = next((ext for ext in _BAD_IMAGE_EXTENSIONS if url_lower.endswith(ext)), None)
+    if matched_ext is not None:
         # Allow large gif if it has a meaningful path length
         if len(url) > 80:
             return True
         logger.debug("image rejected: bad_extension=%s url=%s", url_lower[-5:], url[:80])
+        record_image_rejection("bad_image", f"ext:{matched_ext.lstrip('.')}")
         return False
     return True
 
