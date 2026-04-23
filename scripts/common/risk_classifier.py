@@ -11,7 +11,7 @@ import re
 from dataclasses import dataclass
 from typing import Any, Literal
 
-from scripts.common.config import setup_logging
+from .config import setup_logging
 
 setup_logging()
 logger = logging.getLogger(__name__)
