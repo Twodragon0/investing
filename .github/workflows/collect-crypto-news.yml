@@ -39,4 +39,6 @@ jobs:
     uses: ./.github/workflows/alert-consecutive-failures.yml
     with:
       workflow-name: 'Collect Crypto News'
+      # 6회/일(4시간 주기)로 단발 실패가 잦아 threshold 완화
+      threshold: 5
     secrets: inherit

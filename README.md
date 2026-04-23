@@ -121,6 +121,20 @@ python scripts/generate_market_summary.py
 python scripts/generate_daily_summary.py
 ```
 
+### 2.1 Pre-commit 훅 설치 (권장)
+
+저장소는 gitleaks(시크릿 탐지)와 `scripts/common/` 상대 임포트 강제(#773 회귀 방지) 훅을 `.pre-commit-config.yaml` 에 등록해 두었습니다. 로컬에서 실제 동작하려면 **최초 1회 설치**가 필요합니다.
+
+```bash
+pip install pre-commit       # 또는 brew install pre-commit
+pre-commit install           # .git/hooks/pre-commit 에 자동 연결
+
+# (선택) 전체 파일에 한 번 돌려 상태 확인
+pre-commit run --all-files
+```
+
+설치하지 않으면 CI에서만 검증되고 로컬 커밋 시에는 차단되지 않으므로, 클론 직후 바로 실행해 두는 것을 권장합니다.
+
 ### 2.5 Hybrid Scheduler (GitHub Actions + Server Cron)
 
 GitHub Actions는 분산 수집/검증을 유지하고, 상시 켜진 서버는 오전 9시 10분(KST) 자동 포스팅/품질 보정을 담당하도록 구성할 수 있습니다.

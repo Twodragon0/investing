@@ -29,3 +29,11 @@ jobs:
           script: scripts/collect_geopolitical.py
           commit-message: 'chore: collect geopolitical risk data'
           git-add-paths: '_posts/ _state/ assets/images/'
+
+  alert-consecutive-failures:
+    needs: collect
+    if: failure()
+    uses: ./.github/workflows/alert-consecutive-failures.yml
+    with:
+      workflow-name: 'Collect Geopolitical Risk Data'
+    secrets: inherit

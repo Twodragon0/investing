@@ -39,4 +39,6 @@ jobs:
     uses: ./.github/workflows/alert-consecutive-failures.yml
     with:
       workflow-name: 'Collect Social Media'
+      # 4회/일(6시간 주기)로 API rate limit 발생 가능성 고려해 threshold 완화
+      threshold: 5
     secrets: inherit

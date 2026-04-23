@@ -39,4 +39,6 @@ jobs:
     uses: ./.github/workflows/alert-consecutive-failures.yml
     with:
       workflow-name: 'Collect Stock News'
+      # 5회/일로 단발 실패 발생률이 높아 threshold 완화
+      threshold: 5
     secrets: inherit
