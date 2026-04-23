@@ -1,0 +1,87 @@
+name: Alert on Consecutive Failures
+
+# Reusable workflow. Posts a Slack alert when the last N runs of a given
+# workflow have all failed. Invoked via `workflow_call` from collector
+# workflows' on-failure job.
+#
+# Intended for collectors where a silent multi-day outage is costly (e.g. the
+# 2026-04-21~23 risk_classifier import regression that went undetected for
+# 6 days — see PR #773 / #775).
+
+on:
+  workflow_call:
+    inputs:
+      workflow-name:
+        description: 'Display name of the caller workflow (matches its `name:` field).'
+        required: true
+        type: string
+      threshold:
+        description: 'Number of consecutive failures required to alert (default 3).'
+        required: false
+        type: number
+        default: 3
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  check-and-alert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
+        with:
+          fetch-depth: 1
+
+      - name: Check previous run conclusions
+        id: check
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WORKFLOW_NAME: ${{ inputs.workflow-name }}
+          THRESHOLD: ${{ inputs.threshold }}
+          RUN_ID: ${{ github.run_id }}
+          REPO: ${{ github.repository }}
+        run: |
+          needed=$(( THRESHOLD - 1 ))
+          prev_failures=$(gh run list \
+            --workflow "${WORKFLOW_NAME}" \
+            --limit "${THRESHOLD}" \
+            --json conclusion,databaseId \
+            --repo "${REPO}" | \
+            jq --arg id "${RUN_ID}" \
+              '[.[] | select(.databaseId != ($id | tonumber)) | select(.conclusion == "failure")] | length')
+          echo "prev_failures=${prev_failures}" >> "$GITHUB_OUTPUT"
+          if [ "${prev_failures:-0}" -ge "${needed}" ]; then
+            echo "alert=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "alert=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Resolve Slack config
+        if: steps.check.outputs.alert == 'true'
+        id: slack
+        uses: ./.github/actions/resolve-slack-config
+        with:
+          target_channel_alias: investing
+          token_candidates: |
+            ${{ secrets.SLACK_BOT_TOKEN }}
+            ${{ secrets.AI_SLACK_BOT_TOKEN }}
+            ${{ secrets.SLACK_TOKEN }}
+          channel_candidates_investing: |
+            ${{ secrets.SLACK_CHANNEL_ID_INVESTING }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID_INVESTING }}
+            ${{ secrets.SLACK_CHANNEL_INVESTING }}
+            ${{ secrets.SLACK_CHANNEL_ID }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID }}
+            ${{ secrets.SLACK_CHANNEL }}
+
+      - name: Post alert to Slack
+        if: steps.check.outputs.alert == 'true' && steps.slack.outputs.can_post == 'true'
+        uses: slackapi/slack-github-action@af78098f536edbc4de71162a307590698245be95  # v3.0.1
+        with:
+          method: chat.postMessage
+          token: ${{ steps.slack.outputs.token }}
+          payload: |
+            channel: "${{ steps.slack.outputs.channel }}"
+            text: ":rotating_light: [${{ steps.slack.outputs.profile_label }}] ${{ inputs.workflow-name }} failed ${{ inputs.threshold }}+ consecutive runs. Investigate: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
