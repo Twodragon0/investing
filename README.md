@@ -38,7 +38,7 @@
 | scripts/common/crypto\_api.py                     |       57 |        0 |    100% |           |
 | scripts/common/dedup.py                           |      158 |        0 |    100% |           |
 | scripts/common/encoding\_guard.py                 |       29 |        0 |    100% |           |
-| scripts/common/enrichment.py                      |      748 |        4 |     99% |725, 758-760 |
+| scripts/common/enrichment.py                      |      752 |        4 |     99% |729, 762-764 |
 | scripts/common/entity\_extractor.py               |      106 |        1 |     99% |       180 |
 | scripts/common/fmp\_api.py                        |      247 |        0 |    100% |           |
 | scripts/common/formatters.py                      |       30 |        0 |    100% |           |
@@ -48,6 +48,7 @@
 | scripts/common/image\_generator/market.py         |      287 |        4 |     99% |   449-454 |
 | scripts/common/image\_generator/news.py           |      146 |        0 |    100% |           |
 | scripts/common/image\_generator/og.py             |       59 |        0 |    100% |           |
+| scripts/common/image\_rejection\_metrics.py       |       80 |       29 |     64% |74-103, 142, 146, 157, 160-162 |
 | scripts/common/markdown\_utils.py                 |      163 |        0 |    100% |           |
 | scripts/common/mindspider.py                      |      377 |        6 |     98% |603, 673-674, 687-688, 990 |
 | scripts/common/post\_generator.py                 |      333 |        8 |     98% |456-460, 828, 863-864 |
@@ -71,7 +72,7 @@
 | scripts/generate\_og\_images.py                   |      855 |      614 |     28% |21-22, 98-99, 136-138, 153-158, 170-180, 185-195, 200-202, 283-284, 308, 314-382, 398-474, 481-545, 562-693, 702-760, 767-799, 804-893, 903-994, 1001-1111, 1127-1217, 1233-1330, 1346-1443, 1459-1519, 1583-1617, 1662-1854, 1858-1868, 1872-2063, 2071-2104, 2116-2165, 2188, 2259, 2263-2264, 2279-2280, 2304, 2332 |
 | scripts/generate\_ops\_10am\_digest.py            |      283 |      205 |     28% |61-71, 75-81, 85-89, 93-116, 120-129, 133-191, 213-214, 217, 225-258, 269-280, 284-292, 296-315, 319-322, 326-329, 341, 343, 347, 349, 351, 388, 406-414, 418-472, 476 |
 | scripts/generate\_weekly\_digest.py               |      469 |      328 |     30% |107, 124, 126, 128, 145-147, 152-164, 169-198, 203, 208-220, 229-294, 337, 393-470, 475-483, 488-518, 526-739, 744-774, 778 |
-| scripts/generate\_weekly\_report.py               |      177 |      177 |      0% |    13-372 |
+| scripts/generate\_weekly\_report.py               |      216 |      187 |     13% |61-68, 73-87, 97-141, 151-170, 175-206, 211, 235-246, 259-278, 293-370, 379-440, 444 |
 | scripts/improve\_existing\_posts.py               |      448 |      238 |     47% |209, 238-282, 341, 347, 380-381, 418, 422, 444, 511-516, 525, 540-563, 567-572, 577-603, 608-609, 620-668, 677-717, 727-811, 815-899, 903 |
 | scripts/post\_loop\_to\_slack.py                  |       67 |       67 |      0% |     3-114 |
 | scripts/respond\_ai\_mentions.py                  |      259 |      207 |     20% |32-36, 40-67, 71-80, 84-87, 91-124, 128-138, 149-151, 162-164, 175-202, 215-232, 258-259, 274-285, 297-308, 319-336, 340-355, 375-381, 385-482, 486 |
@@ -82,7 +83,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **20476** | **6267** | **69%** |           |
+| **TOTAL**                                         | **20599** | **6306** | **69%** |           |
 
 
 ## Setup coverage badge
