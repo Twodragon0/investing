@@ -323,7 +323,7 @@ def _resolve_source_weight(source: str) -> float:
     """Return base weight for a source string using 6-type classification."""
     # Lazy import to avoid circular dependency with markdown_utils
     try:
-        from scripts.common.markdown_utils import _classify_source  # type: ignore[import]
+        from .markdown_utils import _classify_source  # type: ignore[import]
 
         src_type = _classify_source(source)
         weight = _SOURCE_TYPE_WEIGHTS.get(src_type, 1.0)
