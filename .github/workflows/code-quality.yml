@@ -40,10 +40,15 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r scripts/requirements.txt ruff yamllint basedpyright pytest pytest-cov pytest-xdist
+          pip install -r scripts/requirements.txt ruff yamllint basedpyright pytest pytest-cov pytest-xdist pre-commit
           curl -sSL "https://github.com/rhysd/actionlint/releases/download/v1.7.7/actionlint_1.7.7_linux_amd64.tar.gz" -o /tmp/actionlint.tgz
           tar -xzf /tmp/actionlint.tgz -C /tmp
           install /tmp/actionlint /usr/local/bin/actionlint
+
+      - name: Run pre-commit hooks
+        # Enforces .pre-commit-config.yaml rules (gitleaks, relative-imports-in-scripts-common
+        # for #773 regression) even when contributors skip `pre-commit install` locally.
+        run: pre-commit run --all-files --show-diff-on-failure
 
       - name: Run ruff linter (with security rules)
         run: python3 -m ruff check scripts/ tests/ --output-format=github

@@ -32,3 +32,11 @@ jobs:
           script: scripts/collect_fmp_calendar.py
           commit-message: 'chore: collect FMP calendar'
           git-add-paths: '_posts/ _state/ assets/images/'
+
+  alert-consecutive-failures:
+    needs: collect
+    if: failure()
+    uses: ./.github/workflows/alert-consecutive-failures.yml
+    with:
+      workflow-name: 'Collect FMP Calendar'
+    secrets: inherit

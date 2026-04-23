@@ -29,3 +29,11 @@ jobs:
           script: scripts/collect_worldmonitor_news.py
           commit-message: 'chore: collect worldmonitor news'
           git-add-paths: '_posts/ _state/ assets/images/'
+
+  alert-consecutive-failures:
+    needs: collect
+    if: failure()
+    uses: ./.github/workflows/alert-consecutive-failures.yml
+    with:
+      workflow-name: 'Collect WorldMonitor News'
+    secrets: inherit

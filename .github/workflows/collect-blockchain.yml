@@ -31,3 +31,11 @@ jobs:
           git-add-paths: '_posts/ _state/'
         env:
           ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
+
+  alert-consecutive-failures:
+    needs: collect
+    if: failure()
+    uses: ./.github/workflows/alert-consecutive-failures.yml
+    with:
+      workflow-name: 'Collect Blockchain Metrics'
+    secrets: inherit

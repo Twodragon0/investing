@@ -38,15 +38,11 @@ def _check_file(path: str) -> list[str]:
         if isinstance(node, ast.ImportFrom):
             module = node.module or ""
             if module.startswith("scripts."):
-                violations.append(
-                    f"{path}:{node.lineno}: from {module} import ..."
-                )
+                violations.append(f"{path}:{node.lineno}: from {module} import ...")
         elif isinstance(node, ast.Import):
             for alias in node.names:
                 if alias.name.startswith("scripts."):
-                    violations.append(
-                        f"{path}:{node.lineno}: import {alias.name}"
-                    )
+                    violations.append(f"{path}:{node.lineno}: import {alias.name}")
     return violations
 
 
@@ -57,8 +53,7 @@ def main(argv: list[str]) -> int:
 
     if violations:
         print(
-            "ERROR: absolute 'scripts.*' imports found in scripts/common/ "
-            "(regression for PR #773):",
+            "ERROR: absolute 'scripts.*' imports found in scripts/common/ (regression for PR #773):",
             file=sys.stderr,
         )
         for v in violations:

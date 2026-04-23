@@ -44,16 +44,24 @@ jobs:
           REPO: ${{ github.repository }}
         run: |
           needed=$(( THRESHOLD - 1 ))
-          prev_failures=$(gh run list \
+          runs_json=$(gh run list \
             --workflow "${WORKFLOW_NAME}" \
             --limit "${THRESHOLD}" \
-            --json conclusion,databaseId \
-            --repo "${REPO}" | \
-            jq --arg id "${RUN_ID}" \
-              '[.[] | select(.databaseId != ($id | tonumber)) | select(.conclusion == "failure")] | length')
+            --json conclusion,databaseId,createdAt,url \
+            --repo "${REPO}")
+          prev_failures=$(echo "$runs_json" | jq --arg id "${RUN_ID}" \
+            '[.[] | select(.databaseId != ($id | tonumber)) | select(.conclusion == "failure")] | length')
           echo "prev_failures=${prev_failures}" >> "$GITHUB_OUTPUT"
           if [ "${prev_failures:-0}" -ge "${needed}" ]; then
             echo "alert=true" >> "$GITHUB_OUTPUT"
+            # Build "\n"-separated bullet list of up to 5 recent failure links
+            # for Slack mrkdwn (single-line output, real newlines happen in
+            # Slack via the "\n" escape sequence in the JSON payload).
+            recent=$(echo "$runs_json" | jq -j \
+              'map(select(.conclusion == "failure")) | .[0:5]
+               | map("• <\(.url)|\(.createdAt[0:16]) UTC>")
+               | join("\\n")')
+            echo "recent_failures=${recent}" >> "$GITHUB_OUTPUT"
           else
             echo "alert=false" >> "$GITHUB_OUTPUT"
           fi
@@ -84,4 +92,4 @@ jobs:
           token: ${{ steps.slack.outputs.token }}
           payload: |
             channel: "${{ steps.slack.outputs.channel }}"
-            text: ":rotating_light: [${{ steps.slack.outputs.profile_label }}] ${{ inputs.workflow-name }} failed ${{ inputs.threshold }}+ consecutive runs. Investigate: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            text: ":rotating_light: [${{ steps.slack.outputs.profile_label }}] *${{ inputs.workflow-name }}* failed ${{ inputs.threshold }}+ consecutive runs\n\n*Recent failed runs:*\n${{ steps.check.outputs.recent_failures }}\n\n<https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}|:link: View current run>"

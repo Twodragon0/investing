@@ -56,3 +56,13 @@ jobs:
           payload: |
             channel: "${{ steps.slack.outputs.channel }}"
             text: "[${{ steps.slack.outputs.profile_label }}] DeFi Yields data collection completed - ${{ github.run_id }}"
+
+  alert-consecutive-failures:
+    needs: collect
+    if: failure()
+    uses: ./.github/workflows/alert-consecutive-failures.yml
+    with:
+      workflow-name: 'Collect DeFi Yields Data'
+      # 4회/일 (6시간 주기) — 일시 실패 노이즈 줄이기 위해 threshold 완화
+      threshold: 5
+    secrets: inherit
