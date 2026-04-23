@@ -4,10 +4,10 @@
     "bad_image": {
       "buckets": {
         "ext:gif": 6,
-        "default-image": 4
+        "default-image": 8
       }
     }
   },
   "since": "2026-04-23T08:54:23",
-  "last_seen": "2026-04-23T12:58:55"
+  "last_seen": "2026-04-23T14:09:26"
 }
