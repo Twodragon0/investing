@@ -32,3 +32,11 @@ jobs:
           install-playwright: 'true'
           commit-message: 'chore: collect crypto news'
           git-add-paths: '_posts/ _state/ assets/images/'
+
+  alert-consecutive-failures:
+    needs: collect
+    if: failure()
+    uses: ./.github/workflows/alert-consecutive-failures.yml
+    with:
+      workflow-name: 'Collect Crypto News'
+    secrets: inherit

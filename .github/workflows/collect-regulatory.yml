@@ -7,7 +7,6 @@ on:
 
 permissions:
   contents: write
-  actions: read
 
 concurrency:
   group: collect-regulatory
@@ -32,66 +31,9 @@ jobs:
           git-add-paths: '_posts/ _state/ assets/images/'
 
   alert-consecutive-failures:
-    # Detect 3+ consecutive failures to catch silent multi-day outages
-    # (e.g. the 2026-04-21~23 risk_classifier import regression that went
-    # unnoticed until manual inspection — see PR #773).
     needs: collect
     if: failure()
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      actions: read
-    steps:
-      - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
-        with:
-          fetch-depth: 1
-
-      - name: Check previous run conclusions
-        id: check
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          # Count failures in the last 2 completed runs excluding the current one.
-          # Combined with the current failure, 2+ previous failures = 3+ consecutive.
-          prev_failures=$(gh run list \
-            --workflow "Collect Regulatory News" \
-            --limit 3 \
-            --json conclusion,databaseId \
-            --repo "${{ github.repository }}" | \
-            jq --arg id "${{ github.run_id }}" \
-              '[.[] | select(.databaseId != ($id | tonumber)) | select(.conclusion == "failure")] | length')
-          echo "prev_failures=${prev_failures}" >> "$GITHUB_OUTPUT"
-          if [ "${prev_failures:-0}" -ge 2 ]; then
-            echo "alert=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "alert=false" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Resolve Slack config
-        if: steps.check.outputs.alert == 'true'
-        id: slack
-        uses: ./.github/actions/resolve-slack-config
-        with:
-          target_channel_alias: investing
-          token_candidates: |
-            ${{ secrets.SLACK_BOT_TOKEN }}
-            ${{ secrets.AI_SLACK_BOT_TOKEN }}
-            ${{ secrets.SLACK_TOKEN }}
-          channel_candidates_investing: |
-            ${{ secrets.SLACK_CHANNEL_ID_INVESTING }}
-            ${{ secrets.AI_SLACK_CHANNEL_ID_INVESTING }}
-            ${{ secrets.SLACK_CHANNEL_INVESTING }}
-            ${{ secrets.SLACK_CHANNEL_ID }}
-            ${{ secrets.AI_SLACK_CHANNEL_ID }}
-            ${{ secrets.SLACK_CHANNEL }}
-
-      - name: Post consecutive failure alert to Slack
-        if: steps.check.outputs.alert == 'true' && steps.slack.outputs.can_post == 'true'
-        uses: slackapi/slack-github-action@af78098f536edbc4de71162a307590698245be95  # v3.0.1
-        with:
-          method: chat.postMessage
-          token: ${{ steps.slack.outputs.token }}
-          payload: |
-            channel: "${{ steps.slack.outputs.channel }}"
-            text: ":rotating_light: [${{ steps.slack.outputs.profile_label }}] Collect Regulatory News failed 3+ consecutive runs. Investigate: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+    uses: ./.github/workflows/alert-consecutive-failures.yml
+    with:
+      workflow-name: 'Collect Regulatory News'
+    secrets: inherit

@@ -12,3 +12,17 @@ repos:
     rev: v8.24.2
     hooks:
       - id: gitleaks
+
+  # Enforce relative imports inside scripts/common/ to prevent
+  # ModuleNotFoundError at collector execution time (regression for #773 —
+  # absolute `from scripts.common.config` broke `_assess_risk_level` for 6 days).
+  # Uses AST parsing to avoid false positives from docstring examples.
+  # Mirrors tests/test_import_compatibility.py::test_no_absolute_scripts_imports_in_common
+  # for faster local feedback before CI.
+  - repo: local
+    hooks:
+      - id: relative-imports-in-scripts-common
+        name: Enforce relative imports in scripts/common/ (regression #773)
+        language: system
+        entry: python scripts/tools/check_relative_imports.py
+        files: ^scripts/common/.*\.py$

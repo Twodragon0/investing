@@ -12,106 +12,24 @@ import sys
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
-# Try to import shared boilerplate detectors from common modules.
-# Falls back to None if PYTHONPATH is not set (standalone mode).
+# Shared boilerplate detectors. The canonical definitions live in
+# common/enrichment.py and common/summarizer.py — importing them here avoids
+# pattern drift (the duplicated local copies previously missed the regex
+# update in PR #775 because the two files weren't kept in sync).
+# Fallback to None only when run in true standalone mode (no PYTHONPATH);
+# callers should ensure scripts/ is importable for full detection.
 try:
     from common.enrichment import _is_site_boilerplate as _enrichment_boilerplate  # noqa: PLC2701
-    from common.summarizer import _is_boilerplate_desc as _summarizer_boilerplate  # noqa: PLC2701
+    from common.summarizer import (  # noqa: PLC2701
+        _is_boilerplate_desc as _summarizer_boilerplate,
+    )
+    from common.summarizer import (
+        _is_generic_desc as _summarizer_generic,
+    )
 except ImportError:
     _enrichment_boilerplate = None  # type: ignore[assignment]
     _summarizer_boilerplate = None  # type: ignore[assignment]
-
-# ---------------------------------------------------------------------------
-# Boilerplate detection — mirrors enrichment.py patterns (standalone copy)
-# ---------------------------------------------------------------------------
-
-_SITE_BOILERPLATE_PHRASES = [
-    "motley fool",
-    "seeking alpha",
-    "cnbc international",
-    "investopedia",
-    "yahoo finance",
-    "bloomberg",
-    "coindesk is",
-    "cointelegraph is",
-    "decrypt is",
-    "뉴스의 리더입니다",
-    "뉴스를 제공하는",
-    "투자 통찰력과 개인 금융",
-    "투자 커뮤니티",
-    "프리미엄 뉴스를 제공",
-    "businesspost",
-    "비즈니스포스트",
-    "인물중심 기업인 프로파일",
-    "경제미디어 경제신문",
-    "올인원 플랫폼입니다",
-    "포트폴리오를 개선하고",
-    "개인 금융 뉴스 및 비즈니스 예측",
-    "선두주자입니다",
-    "우리의 목적은 세상을",
-    "더 스마트하고, 더 행복하고",
-    "simply wall st",
-    "kiplinger",
-    "tipranks",
-    "stock analysis",
-    "관련 광고",
-    "포트폴리오 업데이트 보고서",
-]
-
-_SITE_BOILERPLATE_PATTERNS = [
-    re.compile(r"(?:the )?(?:world'?s?|global) (?:leading|largest|premier|#1)\b", re.I),
-    re.compile(r"(?:join|subscribe to|sign up for) (?:the )?(?:world'?s|our)\b", re.I),
-    re.compile(
-        r"(?:providing|delivers?|offers?) .{0,40}(?:news|analysis|insights|information)"
-        r" .{0,40}(?:since|for over|for \d+)",
-        re.I,
-    ),
-    re.compile(r"^(?:the )?(?:latest|breaking|live|real-time) (?:news|updates?|prices?)\b", re.I),
-    # Keep in sync with scripts/common/enrichment.py:_SITE_BOILERPLATE_PATTERNS.
-    # Anchored to end-of-string copula to avoid false positives on factual
-    # news like "세계 최대 생산업체인 카렉스는…".
-    re.compile(
-        r"(?:세계 최대|글로벌 리더|세계적인 리더)"
-        r"[^.!?\n]{0,40}"
-        r"\s*(?:입니다|을 제공(?:합니다)?|를 제공(?:합니다)?)\s*\.?\s*$",
-        re.I,
-    ),
-    re.compile(r"(?:에 참여하세요|구독하세요|가입하세요)$", re.I),
-    re.compile(r"\d+년 (?:넘게|이상) .{0,40}(?:제공|서비스)", re.I),
-]
-
-_SYNTHETIC_MARKERS = [
-    "관련 소식입니다",
-    "관련 시장 뉴스입니다",
-    "원문에서 세부 내용을 확인하세요",
-    "원문 기사의 세부 내용을 확인하세요",
-    "투자 판단 시",
-    "면밀히 분석해야 합니다",
-    "함께 고려해야 합니다",
-    "주시해야 합니다",
-    "확인하세요",
-    "관련 시장 동향입니다",
-    "관련 세부 내용은",
-    "관련 변경사항을",
-    "시장 심리와 가격",
-    "투자 시사점을",
-    "거래소 공지사항",
-    "산업 동향",
-    "관련 보도.",
-    "섹터 보도.",
-    "산업 보도.",
-    "시장 보도.",
-]
-
-_ARTICLE_SPECIFIC_RE = re.compile(
-    r"(?:[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)"
-    r"|(?:\b[A-Z]{2,}\b)"
-    r"|(?:\b\d{4}\b)"
-    r"|(?:\b\d+[\.,]\d+)"
-    r"|(?:\$|€|£|₩|¥)\s*\d"
-    r"|(?:\d+\s*(?:%|억|만|조|달러|원|위안))"
-    r"|(?:월|년|일)\s*\d"
-)
+    _summarizer_generic = None  # type: ignore[assignment]
 
 _NORM_RE = re.compile(r"[\s\W]+")
 
@@ -123,23 +41,18 @@ _DATE_RE = re.compile(r"^date:\s*(\d{4}-\d{2}-\d{2})", re.MULTILINE)
 
 
 def _is_boilerplate(desc: str) -> bool:
-    """Return True if description is site boilerplate or synthetic filler."""
+    """Return True if description is site boilerplate or synthetic filler.
+
+    Delegates to the three canonical detectors:
+      - `common.enrichment._is_site_boilerplate` (site phrases + regex + short-desc rule)
+      - `common.summarizer._is_generic_desc` (synthetic/generic patterns)
+      - `common.summarizer._is_boilerplate_desc` (extra MT-leak phrases)
+    """
     if not desc:
         return False
-    lower = desc.lower()
-    for phrase in _SITE_BOILERPLATE_PHRASES:
-        if phrase.lower() in lower:
-            return True
-    for pattern in _SITE_BOILERPLATE_PATTERNS:
-        if pattern.search(desc):
-            return True
-    for marker in _SYNTHETIC_MARKERS:
-        if marker in desc:
-            return True
-    if len(desc) < 35 and not _ARTICLE_SPECIFIC_RE.search(desc):
-        return True
-    # Also delegate to shared detectors when available
     if _enrichment_boilerplate is not None and _enrichment_boilerplate(desc):
+        return True
+    if _summarizer_generic is not None and _summarizer_generic(desc):
         return True
     if _summarizer_boilerplate is not None and _summarizer_boilerplate(desc):
         return True
