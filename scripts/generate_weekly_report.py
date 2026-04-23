@@ -21,6 +21,8 @@ from typing import Dict, List, Tuple
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.config import get_kst_now, setup_logging
+from common.image_rejection_metrics import _ENABLED as _METRICS_ENABLED
+from common.image_rejection_metrics import load_state as _load_metrics_state
 
 logger = setup_logging("generate_weekly_report")
 
@@ -219,6 +221,64 @@ def ci_summary() -> str:
 
 
 # ---------------------------------------------------------------------------
+# Image rejection metrics section
+# ---------------------------------------------------------------------------
+
+
+def _render_image_rejection_slack_oneliner() -> str:
+    """Return a single-line Slack-friendly summary of the top rejection buckets.
+
+    Format: ``"이미지 거부 Top3: pixel=42, tracker=18, 1x1-pixel=9"`` or ``""``
+    when metrics are disabled / no state yet. Intended for workflow capture
+    into the existing weekly Slack notification (no new chat.postMessage).
+    """
+    if not _METRICS_ENABLED:
+        return ""
+
+    state = _load_metrics_state()
+    families = state.get("families", {})
+    bad = families.get("bad_image", {}).get("buckets", {}) if families else {}
+    if not bad:
+        return ""
+
+    top3 = sorted(bad.items(), key=lambda kv: -kv[1])[:3]
+    parts = [f"{bucket}={count}" for bucket, count in top3]
+    return f"이미지 거부 Top3: {', '.join(parts)}"
+
+
+def _render_image_rejection_section() -> str:
+    """Return the weekly markdown section for image rejection metrics.
+
+    Emits a "disabled" stub when the kill-switch is active
+    (``IMAGE_REJECTION_METRICS_ENABLED=0``) or when no state file exists yet.
+    Otherwise renders a compact table of pattern family / bucket / count.
+    """
+    if not _METRICS_ENABLED:
+        return "## 이미지 거부 패턴 통계\n\n- 이 기간에는 metrics disabled 상태였습니다.\n"
+
+    state = _load_metrics_state()
+    families = state.get("families", {})
+    if not families:
+        return "## 이미지 거부 패턴 통계\n\n- 집계된 거부 이벤트 없음 (metrics disabled 기간 또는 신규 수집).\n"
+
+    lines: List[str] = ["## 이미지 거부 패턴 통계\n"]
+    since = state.get("since", "")
+    last_seen = state.get("last_seen", "")
+    if since or last_seen:
+        lines.append(f"- 기간: {since or '?'} ~ {last_seen or '?'}")
+        lines.append("")
+
+    lines.append("| 패밀리 | 버킷 | 건수 |")
+    lines.append("|--------|------|------|")
+    for family, entry in sorted(families.items()):
+        buckets = entry.get("buckets", {})
+        for bucket, count in sorted(buckets.items(), key=lambda kv: -kv[1]):
+            lines.append(f"| {family} | {bucket} | {count} |")
+    lines.append("")
+    return "\n".join(lines)
+
+
+# ---------------------------------------------------------------------------
 # Report builder
 # ---------------------------------------------------------------------------
 
@@ -279,7 +339,10 @@ def build_report(
         lines.append("| (데이터 없음) | 0 |")
     lines.append("")
 
-    # 4. 버그 수정 및 개선
+    # 4. 이미지 거부 패턴 통계 (match_bad_image_pattern / match_logo_pattern)
+    lines.append(_render_image_rejection_section())
+
+    # 5. 버그 수정 및 개선
     lines.append("## 버그 수정 및 개선\n")
     lines.append("### 수정된 버그")
     lines.append("- (이번 주 수정 사항을 직접 입력하세요)")
@@ -326,7 +389,16 @@ def main() -> int:
         action="store_true",
         help="Overwrite existing report file",
     )
+    parser.add_argument(
+        "--slack-oneliner",
+        action="store_true",
+        help="Print a one-line image-rejection summary to stdout and exit (for workflow capture)",
+    )
     args = parser.parse_args()
+
+    if args.slack_oneliner:
+        print(_render_image_rejection_slack_oneliner())
+        return 0
 
     if args.week_offset < 0:
         logger.error("--week-offset must be >= 0")

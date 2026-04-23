@@ -59,6 +59,12 @@ jobs:
             git push
           fi
 
+      - name: Capture image-rejection summary for Slack payload
+        id: rejection
+        run: |
+          ONELINER="$(python scripts/generate_weekly_report.py --slack-oneliner || true)"
+          echo "oneliner=${ONELINER}" >> "$GITHUB_OUTPUT"
+
       - name: Resolve Slack config
         id: slack
         uses: ./.github/actions/resolve-slack-config
@@ -87,4 +93,4 @@ jobs:
           token: ${{ steps.slack.outputs.token }}
           payload: |
             channel: "${{ steps.slack.outputs.channel }}"
-            text: ":bar_chart: *Weekly Report* generated (run #${{ github.run_number }}) — https://github.com/Twodragon0/investing/tree/main/docs"
+            text: ":bar_chart: *Weekly Report* generated (run #${{ github.run_number }}) — https://github.com/Twodragon0/investing/tree/main/docs\n${{ steps.rejection.outputs.oneliner }}"
