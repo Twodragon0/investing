@@ -2449,6 +2449,34 @@ class TestIsSiteBoilerplate:
         # Under 35 chars BUT contains a number with unit
         assert _is_site_boilerplate("지수 5% 하락") is False
 
+    # ------------------------------------------------------------------
+    # Regression: false-positive on factual "세계 최대" (2026-04-23 worldmonitor)
+    # ------------------------------------------------------------------
+
+    def test_factual_global_largest_mid_sentence_not_boilerplate(self):
+        """News quoting "세계 최대 생산업체..." should not trigger the Korean regex.
+
+        The original pattern `(?:세계 최대|글로벌 리더|세계적인 리더)` had no
+        anchor and matched factual third-party descriptors, flagging 2026-04-23
+        worldmonitor briefing as boilerplate. The new pattern requires
+        end-of-string copula (입니다/제공합니다).
+        """
+        desc = (
+            "글로벌 20건 수집. 사회/기타, 지정학/안보, 금융시장 등 주요 테마 분석. "
+            "세계 최대 생산업체인 카렉스는 이란 전쟁으로 콘돔 가격이 30% 오를 수 등 "
+            "핵심 이슈 포함. GDELT·Polymarket 등 데이터 참조."
+        )
+        assert _is_site_boilerplate(desc) is False
+
+    def test_global_largest_self_promo_still_flagged(self):
+        """Self-promo "세계 최대의 … 플랫폼입니다." must still be flagged."""
+        assert _is_site_boilerplate("세계 최대의 실시간 암호화폐 뉴스 플랫폼입니다.") is True
+
+    def test_global_leader_self_promo_ending_still_flagged(self):
+        """Self-promo "세계적인 리더입니다." ending must still match."""
+        desc = "CNBC는 비즈니스, 기술, 시장에 관한 뉴스를 제공하는 세계적인 리더입니다."
+        assert _is_site_boilerplate(desc) is True
+
 
 # =============================================================================
 # _is_desc_duplicate_of_title

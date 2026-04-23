@@ -8,6 +8,8 @@ Layer 4: classify_risk integration (3+ tests)
 
 from __future__ import annotations
 
+import pathlib
+
 from scripts.common.risk_classifier import (
     _AMOUNT_RE,
     P0_ITEM_THRESHOLD,
@@ -19,6 +21,63 @@ from scripts.common.risk_classifier import (
     extract_signals,
     score_item,
 )
+
+# ---------------------------------------------------------------------------
+# Regression: #773 — risk_classifier.py must use relative imports.
+# ---------------------------------------------------------------------------
+
+
+def test_risk_classifier_uses_relative_imports():
+    """risk_classifier.py must import config via relative import.
+
+    Regression for PR #773. The absolute form `from scripts.common.config`
+    fails with ModuleNotFoundError when collect_regulatory.py invokes
+    summarizer.py which lazy-imports risk_classifier in package context
+    (the `scripts` namespace is not on sys.path at that point).
+    """
+    src_path = (
+        pathlib.Path(__file__).resolve().parent.parent
+        / "scripts"
+        / "common"
+        / "risk_classifier.py"
+    )
+    content = src_path.read_text(encoding="utf-8")
+    assert "from scripts.common" not in content, (
+        "risk_classifier.py must use relative imports (regression for #773)"
+    )
+    assert "from .config import" in content, (
+        "risk_classifier.py must import config via relative import (from .config)"
+    )
+
+
+def test_risk_classifier_lazy_import_chain_works():
+    """Exercise summarizer's lazy `from .risk_classifier import classify_risk`.
+
+    Regression for #773. The production failure chain was:
+        collect_regulatory.py
+          → ThemeSummarizer.generate_executive_summary()
+            → self._assess_risk_level(priority_items)
+              → `from .risk_classifier import classify_risk`  # lazy
+                → risk_classifier.py top-level `from scripts.common.config …`
+                → ModuleNotFoundError: No module named 'scripts'
+
+    If risk_classifier ever re-acquires an absolute `scripts.*` import,
+    re-importing it here will raise ModuleNotFoundError and fail this test.
+    """
+    import importlib
+    import sys
+
+    # Drop cached risk_classifier so its top-level imports are re-executed.
+    sys.modules.pop("scripts.common.risk_classifier", None)
+
+    # Summarizer lazy-imports risk_classifier from inside _assess_risk_level.
+    from scripts.common import summarizer as _summarizer  # noqa: F401
+
+    module = importlib.import_module("scripts.common.risk_classifier")
+    assert callable(module.classify_risk)
+
+    verdict = module.classify_risk(items=[], priority_items={})
+    assert verdict.level in {"critical", "elevated", "normal", "low"}
 
 # ---------------------------------------------------------------------------
 # Helpers / fixtures
