@@ -35,19 +35,10 @@ def test_risk_classifier_uses_relative_imports():
     summarizer.py which lazy-imports risk_classifier in package context
     (the `scripts` namespace is not on sys.path at that point).
     """
-    src_path = (
-        pathlib.Path(__file__).resolve().parent.parent
-        / "scripts"
-        / "common"
-        / "risk_classifier.py"
-    )
+    src_path = pathlib.Path(__file__).resolve().parent.parent / "scripts" / "common" / "risk_classifier.py"
     content = src_path.read_text(encoding="utf-8")
-    assert "from scripts.common" not in content, (
-        "risk_classifier.py must use relative imports (regression for #773)"
-    )
-    assert "from .config import" in content, (
-        "risk_classifier.py must import config via relative import (from .config)"
-    )
+    assert "from scripts.common" not in content, "risk_classifier.py must use relative imports (regression for #773)"
+    assert "from .config import" in content, "risk_classifier.py must import config via relative import (from .config)"
 
 
 def test_risk_classifier_lazy_import_chain_works():
@@ -78,6 +69,7 @@ def test_risk_classifier_lazy_import_chain_works():
 
     verdict = module.classify_risk(items=[], priority_items={})
     assert verdict.level in {"critical", "elevated", "normal", "low"}
+
 
 # ---------------------------------------------------------------------------
 # Helpers / fixtures
