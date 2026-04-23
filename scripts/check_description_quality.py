@@ -67,7 +67,15 @@ _SITE_BOILERPLATE_PATTERNS = [
         re.I,
     ),
     re.compile(r"^(?:the )?(?:latest|breaking|live|real-time) (?:news|updates?|prices?)\b", re.I),
-    re.compile(r"(?:세계 최대|글로벌 리더|세계적인 리더)", re.I),
+    # Keep in sync with scripts/common/enrichment.py:_SITE_BOILERPLATE_PATTERNS.
+    # Anchored to end-of-string copula to avoid false positives on factual
+    # news like "세계 최대 생산업체인 카렉스는…".
+    re.compile(
+        r"(?:세계 최대|글로벌 리더|세계적인 리더)"
+        r"[^.!?\n]{0,40}"
+        r"\s*(?:입니다|을 제공(?:합니다)?|를 제공(?:합니다)?)\s*\.?\s*$",
+        re.I,
+    ),
     re.compile(r"(?:에 참여하세요|구독하세요|가입하세요)$", re.I),
     re.compile(r"\d+년 (?:넘게|이상) .{0,40}(?:제공|서비스)", re.I),
 ]
