@@ -146,9 +146,7 @@ def test_risk_classifier_no_absolute_scripts_import():
     """
     import os
 
-    risk_classifier_path = os.path.join(
-        _repo_root(), "scripts", "common", "risk_classifier.py"
-    )
+    risk_classifier_path = os.path.join(_repo_root(), "scripts", "common", "risk_classifier.py")
     with open(risk_classifier_path, encoding="utf-8") as f:
         source = f.read()
 
@@ -157,8 +155,7 @@ def test_risk_classifier_no_absolute_scripts_import():
         "This breaks direct script execution. Use relative imports (from .X import Y)."
     )
     assert "import scripts.common" not in source, (
-        "risk_classifier.py contains 'import scripts.common' absolute import. "
-        "Use relative imports instead."
+        "risk_classifier.py contains 'import scripts.common' absolute import. Use relative imports instead."
     )
 
 
@@ -193,16 +190,12 @@ def test_no_absolute_scripts_imports_in_common():
             if isinstance(node, ast.ImportFrom):
                 module = node.module or ""
                 if module.startswith("scripts."):
-                    violations.append(
-                        f"{fname}:{node.lineno}: from {module} import ..."
-                    )
+                    violations.append(f"{fname}:{node.lineno}: from {module} import ...")
             # Check `import scripts.common.X`
             elif isinstance(node, ast.Import):
                 for alias in node.names:
                     if alias.name.startswith("scripts."):
-                        violations.append(
-                            f"{fname}:{node.lineno}: import {alias.name}"
-                        )
+                        violations.append(f"{fname}:{node.lineno}: import {alias.name}")
 
     assert not violations, (
         "Found absolute 'scripts.*' imports in scripts/common/ (breaks direct execution):\n"
