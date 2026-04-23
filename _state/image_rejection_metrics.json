@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "families": {
+    "bad_image": {
+      "buckets": {
+        "ext:gif": 3
+      }
+    }
+  },
+  "since": "2026-04-23T08:54:23",
+  "last_seen": "2026-04-23T08:54:23"
+}
