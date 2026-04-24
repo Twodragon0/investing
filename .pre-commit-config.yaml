@@ -5,7 +5,9 @@ repos:
       - id: check-merge-conflict
       - id: check-added-large-files
       - id: end-of-file-fixer
+        exclude: ^(_state/|_posts/|assets/images/generated/|docs/weekly-report-)
       - id: trailing-whitespace
+        exclude: ^(_state/|_posts/|assets/images/generated/|docs/weekly-report-)
       - id: detect-private-key
 
   - repo: https://github.com/gitleaks/gitleaks
