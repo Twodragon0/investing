@@ -43,9 +43,7 @@ def test_alert_workflow_has_issues_write_permission():
     doc = _load(ALERT_WORKFLOW)
     perms = doc.get("permissions", {})
     assert isinstance(perms, dict), "permissions block must be a mapping"
-    assert perms.get("issues") == "write", (
-        f"alert-consecutive-failures.yml must have 'issues: write', got: {perms}"
-    )
+    assert perms.get("issues") == "write", f"alert-consecutive-failures.yml must have 'issues: write', got: {perms}"
 
 
 def test_alert_workflow_has_fallback_step_on_slack_failure():
@@ -87,9 +85,7 @@ def test_alert_workflow_post_slack_step_has_id():
                 break
         if found:
             break
-    assert found, (
-        "No step with id: post-slack found in alert-consecutive-failures.yml"
-    )
+    assert found, "No step with id: post-slack found in alert-consecutive-failures.yml"
 
 
 @pytest.mark.parametrize("workflow_file", CALLER_WORKFLOWS)
