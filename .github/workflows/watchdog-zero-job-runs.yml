@@ -1,0 +1,95 @@
+name: Watchdog — Zero-Job / startup_failure Runs
+
+# Safety net for the 2026-04-23 blind spot (PR #777): permission bugs cause
+# collectors to conclude as `startup_failure` in ~2 s; alert-consecutive-
+# failures.yml never fires because its `needs: collect` never starts.
+# Trade-off: `conclusion == "startup_failure"` only — no per-run job-list
+# calls (avoids up to 30 extra API calls per 5-min tick).
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  check-and-alert:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v4
+        with:
+          fetch-depth: 1
+
+      - name: Scan recent runs for startup_failure
+        id: scan
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          STATE_FILE="_state/watchdog_zero_job_seen.json"
+          [ -f "$STATE_FILE" ] || echo '{"seen":[]}' > "$STATE_FILE"
+          runs_json=$(gh api "/repos/${REPO}/actions/runs?per_page=30" \
+            --jq '[.workflow_runs[] | {id:.id,name:.name,conclusion:.conclusion,created_at:.created_at,html_url:.html_url}]')
+          cutoff=$(date -u -d '7 days ago' +%s 2>/dev/null || date -u -v-7d +%s)
+          seen_ids=$(jq -r --argjson c "$cutoff" \
+            '[.seen[] | select((.ts//0)>$c) | .id] | map(tostring) | .[]' \
+            "$STATE_FILE" 2>/dev/null || true)
+          new_hits=$(echo "$runs_json" | jq \
+            --argjson seen "$(printf '%s\n' "$seen_ids" | jq -Rs 'split("\n")|map(select(.!=""))')" \
+            '[.[]|select(.conclusion=="startup_failure")|select(.id|tostring|IN($seen[]))==false]')
+          hit_count=$(echo "$new_hits" | jq 'length')
+          echo "hit_count=${hit_count}" >> "$GITHUB_OUTPUT"
+          if [ "$hit_count" -gt 0 ]; then
+            slack_lines=$(echo "$new_hits" | jq -r \
+              '.[]|"• <\(.html_url)|\(.name) @ \(.created_at[0:16])> — Run ID: `\(.id)`"' \
+              | head -5 | paste -sd '|' -)
+            echo "slack_lines=${slack_lines}" >> "$GITHUB_OUTPUT"
+            now=$(date +%s)
+            jq --argjson ids "$(echo "$new_hits" | jq '[.[]|{id:.id,ts:'"$now"'}]')" \
+               --argjson c "$cutoff" \
+               '.seen=([.seen[]|select((.ts//0)>$c)]+$ids)' \
+               "$STATE_FILE" > "$STATE_FILE.tmp" && mv "$STATE_FILE.tmp" "$STATE_FILE"
+            echo "state_changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "state_changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit updated seen-IDs state
+        if: steps.scan.outputs.state_changed == 'true'
+        uses: stefanzweifel/git-auto-commit-action@778341af668090896ca464160c2def5d1d1a3eb0  # v5
+        with:
+          commit_message: "chore(watchdog): startup_failure 감지 상태 업데이트"
+          file_pattern: "_state/watchdog_zero_job_seen.json"
+
+      - name: Resolve Slack config
+        if: steps.scan.outputs.hit_count != '0'
+        id: slack
+        uses: ./.github/actions/resolve-slack-config
+        with:
+          target_channel_alias: investing
+          token_candidates: |
+            ${{ secrets.SLACK_BOT_TOKEN }}
+            ${{ secrets.AI_SLACK_BOT_TOKEN }}
+            ${{ secrets.SLACK_TOKEN }}
+          channel_candidates_investing: |
+            ${{ secrets.SLACK_CHANNEL_ID_INVESTING }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID_INVESTING }}
+            ${{ secrets.SLACK_CHANNEL_INVESTING }}
+            ${{ secrets.SLACK_CHANNEL_ID }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID }}
+            ${{ secrets.SLACK_CHANNEL }}
+
+      - name: Post alert to Slack
+        if: steps.scan.outputs.hit_count != '0' && steps.slack.outputs.can_post == 'true'
+        uses: slackapi/slack-github-action@af78098f536edbc4de71162a307590698245be95  # v3.0.1
+        with:
+          method: chat.postMessage
+          token: ${{ steps.slack.outputs.token }}
+          payload: |
+            channel: "${{ steps.slack.outputs.channel }}"
+            text: ":rotating_light: [${{ steps.slack.outputs.profile_label }}] *Workflow startup failure detected* (${{ steps.scan.outputs.hit_count }} run(s))\n\n${{ steps.scan.outputs.slack_lines }}\n\nInvestigate within 5 min. <https://github.com/${{ github.repository }}/actions|View all runs>"
