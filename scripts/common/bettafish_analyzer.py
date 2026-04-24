@@ -1339,9 +1339,9 @@ class BettaFishAnalyzer:
 
     사용 예시::
 
-        from scripts.common.bettafish_analyzer import BettaFishAnalyzer
-        from scripts.common.signal_composer import SignalComposer
-        from scripts.common.mindspider import MindSpider
+        from common.bettafish_analyzer import BettaFishAnalyzer
+        from common.signal_composer import SignalComposer
+        from common.mindspider import MindSpider
 
         composer = SignalComposer()
         composite = composer.compose_signals({...})
