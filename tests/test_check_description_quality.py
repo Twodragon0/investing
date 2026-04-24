@@ -457,6 +457,22 @@ def test_format_markdown_uses_error_icon_when_mojibake():
 # ---------------------------------------------------------------------------
 
 
+def test_main_returns_3_when_no_posts_in_range(tmp_path, monkeypatch, capsys):
+    """Zero posts analyzed must exit non-zero (code 3) with a clear error message.
+
+    Even if --days N is given and no posts fall within the window, that is still
+    a failure — not a clean result.  The old code returned 0 (0% boilerplate)
+    which masked the 2026-04-21~23 silent collector outage for three days.
+    """
+    # tmp_path exists but has no .md files → collect_posts returns []
+    monkeypatch.setattr(sys, "argv", ["cdq", "--posts-dir", str(tmp_path), "--days", "7"])
+    result = cdq.main()
+    assert result != 0, "exit code must be non-zero when no posts are analyzed"
+    assert result == 3
+    err = capsys.readouterr().err
+    assert "no posts" in err.lower() or "no post" in err.lower()
+
+
 def test_main_returns_2_when_posts_dir_missing(tmp_path, monkeypatch):
     missing = tmp_path / "nonexistent"
     monkeypatch.setattr(sys, "argv", ["cdq", "--posts-dir", str(missing)])

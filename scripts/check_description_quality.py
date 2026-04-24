@@ -355,6 +355,19 @@ def main() -> int:
     stats = classify_posts(posts)
 
     total = stats["total"]
+
+    # Guard: zero posts is always a failure, not a "clean" result.
+    # When --days N is given and nothing matches, that still means collectors
+    # silently produced no output — treating it as "OK" (as the old 0/0 = 0%
+    # boilerplate path did) masked the 2026-04-21~23 silent outage for 3 days.
+    if total == 0:
+        print(
+            "ERROR: no posts analyzed — this usually means collectors are silently failing."
+            " Check recent workflow runs.",
+            file=sys.stderr,
+        )
+        return 3
+
     bp_count = len(stats["boilerplate"])
     bp_pct = bp_count / total * 100 if total else 0
 
