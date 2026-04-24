@@ -79,12 +79,13 @@
 | scripts/smoke\_test\_rendered\_pages.py           |       43 |       43 |      0% |      3-86 |
 | scripts/tools/\_\_init\_\_.py                     |        0 |        0 |    100% |           |
 | scripts/tools/check\_relative\_imports.py         |       37 |       37 |      0% |     17-70 |
+| scripts/tools/check\_workflow\_permissions.py     |       96 |       24 |     75% |51, 53, 61, 70, 107, 112, 115, 139-163, 167 |
 | scripts/tools/tune\_risk\_threshold.py            |      159 |       11 |     93% |25, 75, 91, 94-95, 97, 152-153, 169, 257, 366 |
 | scripts/validate\_collector\_summary\_contract.py |       53 |        1 |     98% |        95 |
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **20624** | **6360** | **69%** |           |
+| **TOTAL**                                         | **20720** | **6384** | **69%** |           |
 
 
 ## Setup coverage badge
