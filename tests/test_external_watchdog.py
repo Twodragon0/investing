@@ -19,8 +19,6 @@ import textwrap
 import time
 from pathlib import Path
 
-import pytest
-
 REPO_ROOT = Path(__file__).parent.parent
 WATCHDOG_SCRIPT = REPO_ROOT / "scripts" / "ops" / "external_watchdog.sh"
 
@@ -28,12 +26,14 @@ WATCHDOG_SCRIPT = REPO_ROOT / "scripts" / "ops" / "external_watchdog.sh"
 # Helpers
 # ---------------------------------------------------------------------------
 
+
 def _make_stub_curl(tmp_dir: Path, response_body: str, http_status: str = "200") -> Path:
     """Create a fake `curl` executable that returns canned JSON."""
     stub = tmp_dir / "curl"
     # The real script calls curl with -o /dev/null -w "%{http_code}" for the
     # Slack POST, and with -sf for the API GET. We detect by looking at args.
-    stub.write_text(textwrap.dedent(f"""\
+    stub.write_text(
+        textwrap.dedent(f"""\
         #!/usr/bin/env bash
         # Stub curl — returns canned response
         for arg in "$@"; do
@@ -45,7 +45,8 @@ def _make_stub_curl(tmp_dir: Path, response_body: str, http_status: str = "200")
         done
         # API call — print body
         printf '%s' '{response_body}'
-    """))
+    """)
+    )
     stub.chmod(stub.stat().st_mode | stat.S_IEXEC | stat.S_IXGRP | stat.S_IXOTH)
     return tmp_dir
 
@@ -82,6 +83,7 @@ def _run_watchdog(env: dict, tmp_dir: Path) -> subprocess.CompletedProcess:
 # ---------------------------------------------------------------------------
 # Test 1: Missing required env var → exit 1
 # ---------------------------------------------------------------------------
+
 
 def test_missing_github_token_exits_nonzero():
     """Script must exit 1 and print an error when GITHUB_TOKEN is absent."""
@@ -123,6 +125,7 @@ def test_missing_slack_webhook_exits_nonzero():
 # Test 2: Healthy watchdog → exit 0, no alert
 # ---------------------------------------------------------------------------
 
+
 def test_healthy_watchdog_exits_zero_no_alert():
     """When last success is recent, script exits 0 and does NOT post to Slack."""
     runs = [_recent_run("success", minutes_ago=2)] + [
@@ -154,6 +157,7 @@ def test_healthy_watchdog_exits_zero_no_alert():
 # ---------------------------------------------------------------------------
 # Test 3: Last success too old → alert fires
 # ---------------------------------------------------------------------------
+
 
 def test_last_success_too_old_triggers_alert():
     """Alert fires when last success is older than ALERT_THRESHOLD_MINUTES."""
@@ -187,6 +191,7 @@ def test_last_success_too_old_triggers_alert():
 # Test 4: 3 consecutive startup_failure → alert fires
 # ---------------------------------------------------------------------------
 
+
 def test_three_consecutive_startup_failures_triggers_alert():
     """Alert fires when the last 3 runs are all startup_failure."""
     runs = [_recent_run("startup_failure", minutes_ago=i * 5 + 1) for i in range(5)]
@@ -213,6 +218,7 @@ def test_three_consecutive_startup_failures_triggers_alert():
 # ---------------------------------------------------------------------------
 # Test 5: Dedup suppresses second alert within cooldown
 # ---------------------------------------------------------------------------
+
 
 def test_dedup_suppresses_repeat_alert():
     """A second alert within the cooldown window is skipped (dedup)."""
@@ -245,6 +251,7 @@ def test_dedup_suppresses_repeat_alert():
 # ---------------------------------------------------------------------------
 # Test 6: Dedup file expired → alert fires again
 # ---------------------------------------------------------------------------
+
 
 def test_dedup_expired_allows_new_alert():
     """Alert fires again once the dedup cooldown has expired."""
