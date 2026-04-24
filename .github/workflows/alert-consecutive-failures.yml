@@ -24,6 +24,7 @@ on:
 permissions:
   contents: read
   actions: read
+  issues: write
 
 jobs:
   check-and-alert:
@@ -85,6 +86,7 @@ jobs:
             ${{ secrets.SLACK_CHANNEL }}
 
       - name: Post alert to Slack
+        id: post-slack
         if: steps.check.outputs.alert == 'true' && steps.slack.outputs.can_post == 'true'
         uses: slackapi/slack-github-action@af78098f536edbc4de71162a307590698245be95  # v3.0.1
         with:
@@ -93,3 +95,41 @@ jobs:
           payload: |
             channel: "${{ steps.slack.outputs.channel }}"
             text: ":rotating_light: [${{ steps.slack.outputs.profile_label }}] *${{ inputs.workflow-name }}* failed ${{ inputs.threshold }}+ consecutive runs\n\n*Recent failed runs:*\n${{ steps.check.outputs.recent_failures }}\n\n<https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}|:link: View current run>"
+
+      - name: Fallback — create GitHub issue if Slack post failed
+        if: >-
+          steps.check.outputs.alert == 'true' &&
+          (steps.slack.outputs.can_post != 'true' || steps.post-slack.outcome == 'failure')
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea  # v7
+        with:
+          script: |
+            const title = `[alert-delivery-failed] ${{ inputs.workflow-name }} consecutive failures (Slack notify failed)`;
+            const body = [
+              `## Alert delivery failure`,
+              ``,
+              `The primary Slack alert for **${{ inputs.workflow-name }}** could not be delivered.`,
+              ``,
+              `| Field | Value |`,
+              `|-------|-------|`,
+              `| Workflow | \`${{ inputs.workflow-name }}\` |`,
+              `| Threshold | ${{ inputs.threshold }} consecutive failures |`,
+              `| Run | <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}> |`,
+              `| Slack can_post | \`${{ steps.slack.outputs.can_post }}\` |`,
+              `| Slack step outcome | \`${{ steps.post-slack.outcome }}\` |`,
+              ``,
+              `**Recent failed runs:**`,
+              `${{ steps.check.outputs.recent_failures }}`,
+              ``,
+              `## What to investigate`,
+              `- Slack token rotation: verify \`SLACK_BOT_TOKEN\` / \`AI_SLACK_BOT_TOKEN\` secrets are current`,
+              `- Channel ID drift: confirm \`SLACK_CHANNEL_ID_INVESTING\` still resolves to the expected channel`,
+              `- If Slack was in outage, close this issue once alerts resume`,
+            ].join('\n');
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body,
+              labels: ['alert-delivery-failed', 'ops'],
+            });
