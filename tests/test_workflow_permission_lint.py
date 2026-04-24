@@ -167,7 +167,10 @@ def test_caller_missing_actions_read(tmp_path):
 
 def test_external_reusable_call_skipped(tmp_path):
     """Calls to external reusable workflows (not local) should be ignored."""
-    _write(tmp_path, "caller.yml", textwrap.dedent("""\
+    _write(
+        tmp_path,
+        "caller.yml",
+        textwrap.dedent("""\
         name: External Caller
         on:
           push:
@@ -179,7 +182,8 @@ def test_external_reusable_call_skipped(tmp_path):
             uses: some-org/some-repo/.github/workflows/reusable.yml@main
             with:
               foo: bar
-    """))
+    """),
+    )
 
     errors = scan(tmp_path)
     assert errors == [], f"Expected no errors for external call, got: {errors}"
@@ -207,9 +211,7 @@ def test_caller_missing_multiple_permissions(tmp_path):
 
 def test_invalid_yaml_emits_warning_not_crash(tmp_path, recwarn):
     """Malformed YAML file should emit a warning and not crash the scan."""
-    (tmp_path / "bad.yml").write_text(
-        "key: [unclosed bracket\n  bad: indent: bad", encoding="utf-8"
-    )
+    (tmp_path / "bad.yml").write_text("key: [unclosed bracket\n  bad: indent: bad", encoding="utf-8")
     _write(tmp_path, "callee.yml", _CALLEE)
     _write(tmp_path, "caller.yml", _CALLER_FULL_PERMS)
 
