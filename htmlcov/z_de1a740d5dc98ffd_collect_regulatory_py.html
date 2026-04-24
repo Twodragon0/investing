@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for scripts/collect_regulatory.py: 59%</title>
+    <title>Coverage for scripts/collect_regulatory.py: 58%</title>
     <link rel="icon" sizes="32x32" href="favicon_32_cb_c827f16f.png">
     <link rel="stylesheet" href="style_cb_9ff733b0.css" type="text/css">
     <script src="coverage_html_cb_dd2e7eb5.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>scripts&#8201;/&#8201;collect_regulatory.py</b>:
-            <span class="pc_cov">59%</span>
+            <span class="pc_cov">58%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -55,8 +55,8 @@
         </aside>
         <h2>
             <span class="text">395 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">235<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">160<span class="text"> missing</span></button>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">229<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">166<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_de1a740d5dc98ffd_collect_social_media_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.13.5">coverage.py v7.13.5</a>,
-            created at 2026-04-24 05:22 +0000
+            created at 2026-04-24 05:46 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -322,8 +322,8 @@
     <p class="run run2"><span class="n"><a id="t240" href="#t240">240</a></span><span class="t">    <span class="nam">source_links</span><span class="op">:</span> <span class="nam">list</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="run run2"><span class="n"><a id="t241" href="#t241">241</a></span><span class="t"><span class="op">)</span> <span class="op">-></span> <span class="nam">List</span><span class="op">[</span><span class="nam">str</span><span class="op">]</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t242" href="#t242">242</a></span><span class="t">    <span class="str">"""Build a description card section for a region."""</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t243" href="#t243">243</a></span><span class="t">    <span class="key">if</span> <span class="key">not</span> <span class="nam">items</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t244" href="#t244">244</a></span><span class="t">        <span class="key">return</span> <span class="op">[</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t243" href="#t243">243</a></span><span class="t">    <span class="key">if</span> <span class="key">not</span> <span class="nam">items</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t244" href="#t244">244</a></span><span class="t">        <span class="key">return</span> <span class="op">[</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t245" href="#t245">245</a></span><span class="t">    <span class="nam">lines</span> <span class="op">=</span> <span class="op">[</span><span class="fst">f"</span><span class="fst">## </span><span class="op">{</span><span class="nam">region_title</span><span class="op">}</span><span class="fst">"</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t246" href="#t246">246</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t247" href="#t247">247</a></span><span class="t">    <span class="key">for</span> <span class="nam">i</span><span class="op">,</span> <span class="nam">item</span> <span class="key">in</span> <span class="nam">enumerate</span><span class="op">(</span><span class="nam">items</span><span class="op">[</span><span class="op">:</span><span class="num">10</span><span class="op">]</span><span class="op">,</span> <span class="num">1</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -363,9 +363,9 @@
     <p class="pln"><span class="n"><a id="t281" href="#t281">281</a></span><span class="t"><span class="str">    Unlike the generic summarizer which just lists links, this produces</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t282" href="#t282">282</a></span><span class="t"><span class="str">    analysis paragraphs with source/region breakdowns and description excerpts.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t283" href="#t283">283</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t284" href="#t284">284</a></span><span class="t">    <span class="nam">top_themes</span> <span class="op">=</span> <span class="nam">summarizer</span><span class="op">.</span><span class="nam">get_top_themes</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t285" href="#t285">285</a></span><span class="t">    <span class="key">if</span> <span class="key">not</span> <span class="nam">top_themes</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t286" href="#t286">286</a></span><span class="t">        <span class="key">return</span> <span class="str">""</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t284" href="#t284">284</a></span><span class="t">    <span class="nam">top_themes</span> <span class="op">=</span> <span class="nam">summarizer</span><span class="op">.</span><span class="nam">get_top_themes</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t285" href="#t285">285</a></span><span class="t">    <span class="key">if</span> <span class="key">not</span> <span class="nam">top_themes</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t286" href="#t286">286</a></span><span class="t">        <span class="key">return</span> <span class="str">""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t287" href="#t287">287</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t288" href="#t288">288</a></span><span class="t">    <span class="nam">total</span> <span class="op">=</span> <span class="nam">len</span><span class="op">(</span><span class="nam">all_items</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t289" href="#t289">289</a></span><span class="t">    <span class="nam">lines</span> <span class="op">=</span> <span class="op">[</span><span class="str">"\n## &#51452;&#50836; &#53580;&#47560; &#48516;&#49437;\n"</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
@@ -813,7 +813,7 @@
     <p class="run"><span class="n"><a id="t731" href="#t731">731</a></span><span class="t">            <span class="nam">insight_lines</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="fst">f"</span><span class="fst">**&#51648;&#50669;&#44036; &#44508;&#51228; &#50672;&#46041;**: </span><span class="op">{</span><span class="nam">cross_text</span><span class="op">}</span><span class="fst">"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t732" href="#t732">732</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t733" href="#t733">733</a></span><span class="t">        <span class="key">if</span> <span class="key">not</span> <span class="nam">insight_lines</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t734" href="#t734">734</a></span><span class="t">            <span class="nam">insight_lines</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="str">"&#54788;&#51116; &#49688;&#51665;&#46108; &#44508;&#51228; &#45684;&#49828;&#44032; &#51228;&#54620;&#51201;&#51077;&#45768;&#45796;."</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t734" href="#t734">734</a></span><span class="t">            <span class="nam">insight_lines</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="str">"&#54788;&#51116; &#49688;&#51665;&#46108; &#44508;&#51228; &#45684;&#49828;&#44032; &#51228;&#54620;&#51201;&#51077;&#45768;&#45796;."</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t735" href="#t735">735</a></span><span class="t">        <span class="nam">insight_lines</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="str">""</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t736" href="#t736">736</a></span><span class="t">        <span class="nam">insight_lines</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
     <p class="run run2"><span class="n"><a id="t737" href="#t737">737</a></span><span class="t">            <span class="str">"> *&#48376; &#44508;&#51228; &#46041;&#54693; &#47532;&#54252;&#53944;&#45716; &#51088;&#46041; &#49688;&#51665;&#46108; &#45936;&#51060;&#53552;&#47484; &#44592;&#48152;&#51004;&#47196; &#49373;&#49457;&#46104;&#50632;&#51004;&#47728;, "</span>&nbsp;</span><span class="r"></span></p>
@@ -929,7 +929,7 @@
             <a class="nav" href="z_de1a740d5dc98ffd_collect_social_media_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.13.5">coverage.py v7.13.5</a>,
-            created at 2026-04-24 05:22 +0000
+            created at 2026-04-24 05:46 +0000
         </p>
     </div>
 </footer>
