@@ -42,11 +42,11 @@ Investing Dragon의 수집 파이프라인(`.github/workflows/` + `scripts/colle
 ```python
 def dns_cache_snapshot() -> dict:
     """Return a point-in-time snapshot of the DNS SSRF guard cache.
-    
+
     Intended for collector observability: log this dict (or inject into
     ``log_collection_summary`` extras) at the end of a collection run to
     track whether ``maxsize`` is saturated.
-    
+
     Returns a dict with keys:
     - ``dns_cache_size``: number of entries currently cached (thread-safe read).
     - ``dns_cache_maxsize``: configured cache capacity.
@@ -74,13 +74,13 @@ from common.utils import dns_cache_snapshot
 
 class CryptoNewsCollector(BaseCollector):
     # ...
-    
+
     def run(self) -> None:
         self._started_at = time.monotonic()
         items = self.fetch()
         items = self.process(items)
         # ... 포스트 생성 ...
-        
+
         # 수집 완료 시 DNS 캐시 상태 기록
         dns_snapshot = dns_cache_snapshot()
         logger.info("DNS cache snapshot: %s", dns_snapshot)
@@ -133,8 +133,8 @@ DNS 캐시 구성 요소:
 지속 관찰: size < maxsize * 0.2 (예: 256 중 50 미만)
 ```
 
-**원인**: 수집기가 접근하는 고유 호스트명이 적음  
-**판단**: 현재 크기 설정이 과다 할당됨 (하지만 메모리 비용 무시할 수준)  
+**원인**: 수집기가 접근하는 고유 호스트명이 적음
+**판단**: 현재 크기 설정이 과다 할당됨 (하지만 메모리 비용 무시할 수준)
 **권장 조치**: **조정 불필요** — 캐시는 경량이고 메모리 영향 미미
 
 **시나리오 B: dns_cache_size가 지속적으로 높음**
@@ -143,8 +143,8 @@ DNS 캐시 구성 요소:
 지속 관찰: size >= maxsize * 0.8 (예: 256 중 205 이상)
 ```
 
-**원인**: 수집 대상이 많은 고유 호스트명에서 데이터를 가져옴  
-**위험**: 정상 호스트명이 TTL 만료 전에 캐시에서 제거되어 불필요한 재 DNS 해석 비용 발생  
+**원인**: 수집 대상이 많은 고유 호스트명에서 데이터를 가져옴
+**위험**: 정상 호스트명이 TTL 만료 전에 캐시에서 제거되어 불필요한 재 DNS 해석 비용 발생
 **권장 조치**:
 1. `scripts/common/utils.py:112`의 `maxsize` 값 상향 검토 (예: 256 → 512)
 2. 변경 후 프로덕션 재배포 및 1주일 관찰
