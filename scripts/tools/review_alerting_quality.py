@@ -16,6 +16,7 @@ import json
 import logging
 import subprocess
 import sys
+import urllib.parse
 from dataclasses import dataclass, field
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
@@ -331,9 +332,11 @@ def detect_repo() -> str:
     try:
         out = subprocess.run(["git", "remote", "get-url", "origin"], capture_output=True, text=True, timeout=10)
         url = out.stdout.strip().replace("git@github.com:", "https://github.com/").removesuffix(".git")
-        if "github.com" in url:
-            parts = url.rstrip("/").split("/")
-            return f"{parts[-2]}/{parts[-1]}"
+        parsed = urllib.parse.urlparse(url)
+        if parsed.netloc == "github.com":
+            parts = parsed.path.strip("/").split("/")
+            if len(parts) >= 2:
+                return f"{parts[-2]}/{parts[-1]}"
     except Exception as exc:  # noqa: BLE001
         logger.debug("detect_repo failed: %s", exc)
     return ""
