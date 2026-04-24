@@ -1,0 +1,104 @@
+name: Collector Heartbeat
+
+on:
+  schedule:
+    - cron: '10 0 * * *'  # 09:10 KST (00:10 UTC) — proactive daily digest
+  workflow_dispatch:
+
+permissions:
+  actions: read
+
+jobs:
+  heartbeat:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
+
+      - name: Collect health report
+        id: report
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          TODAY=$(date -u +"%Y-%m-%d")
+
+          COLLECTORS="collect-blockchain collect-coinmarketcap collect-crypto-news \
+            collect-defi-llama collect-defi-yields collect-fmp-calendar \
+            collect-geopolitical collect-market-indicators collect-political-trades \
+            collect-regulatory collect-social-media collect-stock-news \
+            collect-worldmonitor-news"
+
+          unhealthy=0
+          total_collectors=13
+          lines=""
+
+          for workflow in $COLLECTORS; do
+            runs_json=$(gh run list \
+              --workflow "${workflow}.yml" \
+              --repo "$REPO" \
+              --limit 20 \
+              --json conclusion,createdAt \
+              2>/dev/null || echo "[]")
+
+            stats=$(echo "$runs_json" | python3 -c "import json,sys;from datetime import datetime,timezone,timedelta;d=json.load(sys.stdin);s=datetime.now(timezone.utc)-timedelta(hours=24);r=[x for x in d if x.get('createdAt') and datetime.fromisoformat(x['createdAt'].replace('Z','+00:00'))>=s];bad={'failure','startup_failure','cancelled','timed_out'};ok=[x['createdAt'] for x in r if x.get('conclusion')=='success'];print(len(r),len(ok),sum(1 for x in r if x.get('conclusion') in bad),max(ok) if ok else 'none')" 2>/dev/null || echo "0 0 0 none")
+
+            total_runs=$(echo "$stats" | awk '{print $1}')
+            success_count=$(echo "$stats" | awk '{print $2}')
+            failure_count=$(echo "$stats" | awk '{print $3}')
+            last_success=$(echo "$stats" | awk '{print $4}')
+
+            if [ "$success_count" -eq 0 ]; then
+              icon=":rotating_light:"
+              unhealthy=$((unhealthy + 1))
+            else
+              icon=":white_check_mark:"
+            fi
+
+            lines="${lines}• ${icon} \`${workflow}\` — runs: ${total_runs}, ok: ${success_count}, fail: ${failure_count}, last_ok: ${last_success}\n"
+          done
+
+          if [ "$unhealthy" -eq 0 ]; then
+            header=":green_heart: *Collector Heartbeat ${TODAY}* — all ${total_collectors} collectors healthy"
+          else
+            header=":warning: *Collector Heartbeat ${TODAY}* — ${unhealthy}/${total_collectors} collectors with 0 successes in 24h"
+          fi
+
+          {
+            echo "header<<EOF"
+            printf '%s\n' "$header"
+            echo "EOF"
+            echo "lines<<EOF"
+            printf '%b' "$lines"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Resolve Slack config
+        id: slack
+        uses: ./.github/actions/resolve-slack-config
+        with:
+          target_channel_alias: investing
+          token_candidates: |
+            ${{ secrets.SLACK_BOT_TOKEN }}
+            ${{ secrets.OPENCLAW_SLACK_BOT_TOKEN }}
+            ${{ secrets.AI_SLACK_BOT_TOKEN }}
+            ${{ secrets.SLACK_TOKEN }}
+          channel_candidates_investing: |
+            ${{ secrets.SLACK_CHANNEL_ID_INVESTING }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID_INVESTING }}
+            ${{ secrets.SLACK_CHANNEL_INVESTING }}
+            ${{ secrets.SLACK_CHANNEL_ID }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID }}
+            ${{ secrets.SLACK_CHANNEL }}
+
+      - name: Post heartbeat to Slack
+        if: steps.slack.outputs.can_post == 'true'
+        uses: slackapi/slack-github-action@af78098f536edbc4de71162a307590698245be95  # v3.0.1
+        with:
+          method: chat.postMessage
+          token: ${{ steps.slack.outputs.token }}
+          payload: |
+            channel: "${{ steps.slack.outputs.channel }}"
+            text: "${{ steps.report.outputs.header }}\n${{ steps.report.outputs.lines }}"
