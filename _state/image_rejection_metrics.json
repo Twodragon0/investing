@@ -4,11 +4,11 @@
     "bad_image": {
       "buckets": {
         "ext:gif": 12,
-        "default-image": 8,
+        "default-image": 14,
         "ext:ico": 1
       }
     }
   },
   "since": "2026-04-23T08:54:23",
-  "last_seen": "2026-04-24T07:10:09"
+  "last_seen": "2026-04-24T08:21:42"
 }
