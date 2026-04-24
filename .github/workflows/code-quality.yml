@@ -201,6 +201,13 @@ jobs:
       - name: Run rendered page smoke test
         run: python scripts/smoke_test_rendered_pages.py
 
+      - name: Check reusable workflow permission coverage
+        # Prevents caller workflows from missing permissions that their reusable
+        # callees require — the root cause of the 2026-04-23 collector outage
+        # (alert-consecutive-failures.yml needed `actions: read` but all 13
+        # collect-*.yml callers only declared `contents: write`).
+        run: python3 scripts/tools/check_workflow_permissions.py --workflows-dir .github/workflows
+
       - name: Run GitHub Actions workflow lint
         id: actionlint
         shell: bash
