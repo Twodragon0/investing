@@ -34,32 +34,53 @@ WATCHDOG_WORKFLOW = "watchdog-zero-job-runs.yml"
 HEARTBEAT_WORKFLOW = "collector-heartbeat.yml"
 HEARTBEAT_EXPECTED_HOUR, HEARTBEAT_EXPECTED_MINUTE, HEARTBEAT_TOLERANCE_MIN = 0, 10, 5
 COLLECT_WORKFLOWS = [
-    "collect-blockchain.yml", "collect-coinmarketcap.yml", "collect-crypto-news.yml",
-    "collect-defi-llama.yml", "collect-defi-yields.yml", "collect-fmp-calendar.yml",
-    "collect-geopolitical.yml", "collect-market-indicators.yml",
-    "collect-political-trades.yml", "collect-regulatory.yml",
-    "collect-social-media.yml", "collect-stock-news.yml", "collect-worldmonitor-news.yml",
+    "collect-blockchain.yml",
+    "collect-coinmarketcap.yml",
+    "collect-crypto-news.yml",
+    "collect-defi-llama.yml",
+    "collect-defi-yields.yml",
+    "collect-fmp-calendar.yml",
+    "collect-geopolitical.yml",
+    "collect-market-indicators.yml",
+    "collect-political-trades.yml",
+    "collect-regulatory.yml",
+    "collect-social-media.yml",
+    "collect-stock-news.yml",
+    "collect-worldmonitor-news.yml",
 ]
 
 
 @dataclass
 class RunRecord:
-    run_id: int; workflow: str; conclusion: str | None; created_at: datetime; html_url: str  # noqa: E702
+    run_id: int
+    workflow: str
+    conclusion: str | None
+    created_at: datetime
+    html_url: str  # noqa: E702
 
 
 @dataclass
 class WatchdogAlert:
-    run_id: int; created_at: datetime; alert_sent: bool; html_url: str  # noqa: E702
+    run_id: int
+    created_at: datetime
+    alert_sent: bool
+    html_url: str  # noqa: E702
 
 
 @dataclass
 class HeartbeatRecord:
-    run_id: int; created_at: datetime; conclusion: str | None; html_url: str  # noqa: E702
+    run_id: int
+    created_at: datetime
+    conclusion: str | None
+    html_url: str  # noqa: E702
+
     @property
     def delay_minutes(self) -> float:
-        exp = self.created_at.replace(hour=HEARTBEAT_EXPECTED_HOUR,
-            minute=HEARTBEAT_EXPECTED_MINUTE, second=0, microsecond=0)
+        exp = self.created_at.replace(
+            hour=HEARTBEAT_EXPECTED_HOUR, minute=HEARTBEAT_EXPECTED_MINUTE, second=0, microsecond=0
+        )
         return abs((self.created_at - exp).total_seconds()) / 60.0
+
     @property
     def is_on_time(self) -> bool:
         return self.delay_minutes <= HEARTBEAT_TOLERANCE_MIN
@@ -67,12 +88,18 @@ class HeartbeatRecord:
 
 @dataclass
 class CollectorStats:
-    workflow: str; total: int = 0; successes: int = 0; failures: int = 0; startup_failures: int = 0  # noqa: E702
+    workflow: str
+    total: int = 0
+    successes: int = 0
+    failures: int = 0
+    startup_failures: int = 0  # noqa: E702
 
 
 @dataclass
 class ReviewResult:
-    window_hours: int; window_start: datetime; window_end: datetime  # noqa: E702
+    window_hours: int
+    window_start: datetime
+    window_end: datetime  # noqa: E702
     watchdog_runs: list[WatchdogAlert] = field(default_factory=list)
     startup_failure_runs: list[RunRecord] = field(default_factory=list)
     heartbeat_records: list[HeartbeatRecord] = field(default_factory=list)
@@ -91,6 +118,7 @@ def _gh(args: list[str]) -> list[dict]:
         logger.warning("gh error: %s", e)
         return []
 
+
 def _dt(s: str | None) -> datetime | None:
     if not s:
         return None
@@ -99,13 +127,28 @@ def _dt(s: str | None) -> datetime | None:
     except ValueError:
         return None
 
+
 def fetch_runs(workflow: str, repo: str, limit: int = 50) -> list[dict]:
-    return _gh(["run", "list", "--workflow", workflow, "--repo", repo,
-                "--limit", str(limit), "--json", "databaseId,conclusion,createdAt,url"])
+    return _gh(
+        [
+            "run",
+            "list",
+            "--workflow",
+            workflow,
+            "--repo",
+            repo,
+            "--limit",
+            str(limit),
+            "--json",
+            "databaseId,conclusion,createdAt,url",
+        ]
+    )
+
 
 def fetch_steps(run_id: int, repo: str) -> list[dict]:
     jobs = _gh(["api", f"/repos/{repo}/actions/runs/{run_id}/jobs"])
     return [s for j in jobs for s in j.get("steps", [])]
+
 
 def _filter(runs: list[dict], since: datetime) -> list[dict]:
     return [r for r in runs if (t := _dt(r.get("createdAt"))) is not None and t >= since]
@@ -140,19 +183,21 @@ def analyse_collectors(repo: str, since: datetime) -> tuple[list[RunRecord], lis
             elif c == "startup_failure":
                 s.startup_failures += 1
                 s.failures += 1
-                if (t := _dt(r.get("createdAt"))):
+                if t := _dt(r.get("createdAt")):
                     failures.append(RunRecord(r.get("databaseId", 0), wf, c, t, r.get("url", "")))
             elif c in ("failure", "cancelled", "timed_out"):
                 s.failures += 1
         stats_list.append(s)
     return failures, stats_list
 
+
 def analyse_heartbeat(raw: list[dict], since: datetime) -> list[HeartbeatRecord]:
     out: list[HeartbeatRecord] = []
     for r in _filter(raw, since):
-        if (t := _dt(r.get("createdAt"))):
+        if t := _dt(r.get("createdAt")):
             out.append(HeartbeatRecord(r.get("databaseId", 0), t, r.get("conclusion"), r.get("url", "")))
     return out
+
 
 def compute_watchdog_precision(
     alerts: list[WatchdogAlert], startup_failures: list[RunRecord]
@@ -164,6 +209,7 @@ def compute_watchdog_precision(
     tp = sent if startup_failures else 0
     return tp / sent, tp, sent
 
+
 def compute_watchdog_recall(
     alerts: list[WatchdogAlert], startup_failures: list[RunRecord]
 ) -> tuple[float | None, int, int]:
@@ -174,21 +220,30 @@ def compute_watchdog_recall(
     detected = min(sum(1 for a in alerts if a.alert_sent), n)
     return detected / n, detected, n
 
+
 def generate_report(result: ReviewResult) -> str:
     now = datetime.now(UTC)
     L: list[str] = [
-        "# Alerting Quality Review Report", "",
+        "# Alerting Quality Review Report",
+        "",
         f"**Generated**: {now.strftime('%Y-%m-%d %H:%M UTC')}",
         f"**Window**: {result.window_start.strftime('%Y-%m-%d %H:%M UTC')} → "
-        f"{result.window_end.strftime('%Y-%m-%d %H:%M UTC')} ({result.window_hours}h)", "",
+        f"{result.window_end.strftime('%Y-%m-%d %H:%M UTC')} ({result.window_hours}h)",
+        "",
         "> **Note on 'Slack alert sent' approximation**: This script cannot query the Slack API.",
         "> Delivery is *approximated* by whether the 'Post alert to Slack' step was not skipped.",
-        "> Actual delivery may differ if the step ran but the Slack API call failed.", "",
+        "> Actual delivery may differ if the step ran but the Slack API call failed.",
+        "",
     ]
     total = len(result.watchdog_runs) + len(result.heartbeat_records) + sum(s.total for s in result.collector_stats)
     if total == 0:
-        L += ["## Result", "", "**No data available** — no runs found in the analysis window.",
-              "Re-run after 24h of operation for meaningful metrics.", ""]
+        L += [
+            "## Result",
+            "",
+            "**No data available** — no runs found in the analysis window.",
+            "Re-run after 24h of operation for meaningful metrics.",
+            "",
+        ]
         return "\n".join(L)
 
     # Watchdog section
@@ -199,13 +254,17 @@ def generate_report(result: ReviewResult) -> str:
     prec_s = f"{prec:.0%}" if prec is not None else "N/A (no alerts sent)"
     rec_s = f"{rec:.0%}" if rec is not None else "N/A (no startup_failures found)"
     L += [
-        "## 1. Watchdog (`watchdog-zero-job-runs.yml`)", "",
+        "## 1. Watchdog (`watchdog-zero-job-runs.yml`)",
+        "",
         f"- Watchdog executions in window: **{n_wd}**",
         f"- Alerts sent (approx): **{n_sent}** / {n_wd}",
-        f"- `startup_failure` runs in collect-*.yml: **{len(result.startup_failure_runs)}**", "",
-        "| Metric | Value | Notes |", "|--------|-------|-------|",
+        f"- `startup_failure` runs in collect-*.yml: **{len(result.startup_failure_runs)}**",
+        "",
+        "| Metric | Value | Notes |",
+        "|--------|-------|-------|",
         f"| Precision (approx) | {prec_s} | TP={tp}, alerts_sent={ps} |",
-        f"| Recall (approx) | {rec_s} | detected={det}, total_failures={nf} |", "",
+        f"| Recall (approx) | {rec_s} | detected={det}, total_failures={nf} |",
+        "",
     ]
     if result.startup_failure_runs:
         L += ["**startup_failure runs detected:**", ""]
@@ -225,12 +284,17 @@ def generate_report(result: ReviewResult) -> str:
         L += ["No heartbeat runs in window (expected daily at 00:10 UTC).", ""]
     else:
         on_time = sum(1 for h in result.heartbeat_records if h.is_on_time)
-        L += [f"- Runs: **{len(result.heartbeat_records)}**, on-time (±{HEARTBEAT_TOLERANCE_MIN} min): **{on_time}**", "",
-              "| Run ID | Time (UTC) | Delay (min) | On-time | Conclusion |",
-              "|--------|------------|-------------|---------|------------|"]
+        L += [
+            f"- Runs: **{len(result.heartbeat_records)}**, on-time (±{HEARTBEAT_TOLERANCE_MIN} min): **{on_time}**",
+            "",
+            "| Run ID | Time (UTC) | Delay (min) | On-time | Conclusion |",
+            "|--------|------------|-------------|---------|------------|",
+        ]
         for h in result.heartbeat_records:
-            L.append(f"| {h.run_id} | {h.created_at.strftime('%H:%M')} | "
-                     f"{h.delay_minutes:.1f} | {'✓' if h.is_on_time else '✗'} | {h.conclusion or 'unknown'} |")
+            L.append(
+                f"| {h.run_id} | {h.created_at.strftime('%H:%M')} | "
+                f"{h.delay_minutes:.1f} | {'✓' if h.is_on_time else '✗'} | {h.conclusion or 'unknown'} |"
+            )
         L.append("")
 
     # Collector stats section
@@ -239,15 +303,17 @@ def generate_report(result: ReviewResult) -> str:
     if not active:
         L += ["No collect-*.yml runs in window.", ""]
     else:
-        L += ["| Workflow | Runs | OK | Fail | startup_failure |",
-              "|----------|------|-----|------|-----------------|"]
+        L += ["| Workflow | Runs | OK | Fail | startup_failure |", "|----------|------|-----|------|-----------------|"]
         for s in active:
-            L.append(f"| `{s.workflow.removesuffix('.yml')}` | {s.total} | {s.successes} | "
-                     f"{s.failures} | {s.startup_failures} |")
+            L.append(
+                f"| `{s.workflow.removesuffix('.yml')}` | {s.total} | {s.successes} | "
+                f"{s.failures} | {s.startup_failures} |"
+            )
         L.append("")
 
     L += ["---", "", "*Report generated by `scripts/tools/review_alerting_quality.py`.*", ""]
     return "\n".join(L)
+
 
 def run_review(window_hours: int, repo: str) -> ReviewResult:
     now, since = datetime.now(UTC), datetime.now(UTC) - timedelta(hours=window_hours)
@@ -260,10 +326,10 @@ def run_review(window_hours: int, repo: str) -> ReviewResult:
     result.heartbeat_records = analyse_heartbeat(fetch_runs(HEARTBEAT_WORKFLOW, repo, 20), since)
     return result
 
+
 def detect_repo() -> str:
     try:
-        out = subprocess.run(["git", "remote", "get-url", "origin"],
-                             capture_output=True, text=True, timeout=10)
+        out = subprocess.run(["git", "remote", "get-url", "origin"], capture_output=True, text=True, timeout=10)
         url = out.stdout.strip().replace("git@github.com:", "https://github.com/").removesuffix(".git")
         if "github.com" in url:
             parts = url.rstrip("/").split("/")
@@ -272,12 +338,14 @@ def detect_repo() -> str:
         logger.debug("detect_repo failed: %s", exc)
     return ""
 
+
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Measure alerting signal quality over a time window.")
     p.add_argument("--window-hours", type=int, default=24, help="Hours of history to analyse (default: 24)")
     p.add_argument("--repo", default="", help="GitHub repo slug owner/name (auto-detect if omitted)")
     p.add_argument("--output", default="", help="Write markdown report to this file (optional)")
     return p.parse_args(argv)
+
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
@@ -295,6 +363,7 @@ def main(argv: list[str] | None = None) -> int:
         out.write_text(report, encoding="utf-8")
         logger.info("Report written to %s", out)
     return 0
+
 
 if __name__ == "__main__":
     sys.exit(main())

@@ -123,7 +123,7 @@ def test_recall_none_when_no_startup_failures():
 def test_filter_by_window_excludes_old_runs():
     """Runs older than window_start must be excluded."""
     runs = [
-        _make_run(1, "collect-crypto-news.yml", "success", offset_minutes=30),   # inside 2h
+        _make_run(1, "collect-crypto-news.yml", "success", offset_minutes=30),  # inside 2h
         _make_run(2, "collect-crypto-news.yml", "success", offset_minutes=180),  # outside 2h
     ]
     inside = raq._filter(runs, _WINDOW_START)
