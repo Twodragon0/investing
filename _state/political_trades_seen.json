@@ -1,45 +1,5 @@
 {
   "seen": {
-    "8cc81ee798c9a5b81e7ba64c": "2026-03-26T23:00:39",
-    "c391832d68e4d2e048c52e81": "2026-03-26T23:00:39",
-    "a47b0009f00d4522e8924114": "2026-03-26T23:00:39",
-    "ad6ab67f7a2fb67d7d669354": "2026-03-26T23:00:39",
-    "0dff7fb319f56d09a4e77bff": "2026-03-26T23:00:39",
-    "93b1d3809d315a7e506620fb": "2026-03-26T23:00:39",
-    "f9467f2324a0187788aaf1b4": "2026-03-26T23:00:39",
-    "82eb6c98eeff70b2f892da85": "2026-03-26T23:00:39",
-    "29181ba018468bf59386f6c2": "2026-03-26T23:00:39",
-    "40915674c3b7c76cb14b5a21": "2026-03-26T23:00:39",
-    "b2f30b92d6e92c7045dcc3eb": "2026-03-26T23:00:39",
-    "85c7d369a699c6ff9fa95e12": "2026-03-26T23:00:39",
-    "74d99d13ab27398db661de77": "2026-03-26T23:00:39",
-    "f1a968240a08ee4be0904392": "2026-03-26T23:00:39",
-    "9b0a0f1c6b11671ee4ce326e": "2026-03-26T23:00:39",
-    "03838bbd20e8bc4c53539d6b": "2026-03-26T23:00:39",
-    "af5bb4c4b24cb78d11f0aa96": "2026-03-26T23:00:39",
-    "add5be13f7a338dd861d9c0b": "2026-03-26T23:00:39",
-    "254416cb7125f78cbb77e799": "2026-03-26T23:00:39",
-    "4dd4ec659effdc289715f7cd": "2026-03-26T23:00:39",
-    "babff60876d87309c3ab1ffb": "2026-03-26T23:00:39",
-    "e4ea244c92136f6df3492504": "2026-03-26T23:00:39",
-    "4734174fb8baef6e24dfe2bc": "2026-03-26T23:00:39",
-    "c99aa838c10562c163041793": "2026-03-26T23:00:39",
-    "2fdd3e39fe1066355a6f235b": "2026-03-26T23:00:39",
-    "8696164749eefef17b6f0a8b": "2026-03-26T23:00:39",
-    "aa882193a17faa927ebb992c": "2026-03-26T23:00:39",
-    "9b5f9c323b5b018e6ca7f2e0": "2026-03-26T23:00:39",
-    "bbceedc12850b64b7a32128c": "2026-03-26T23:00:39",
-    "f0d6b03b4609dd4a40a937b2": "2026-03-26T23:00:39",
-    "c34e7cbd1620f19e5a16c7a1": "2026-03-26T23:00:39",
-    "63a451654d671365a4aa2fd9": "2026-03-26T23:00:39",
-    "74aad557d34a655826645d44": "2026-03-26T23:00:39",
-    "77642f496e5042ba57a6720e": "2026-03-26T23:00:39",
-    "0f4624e8775a3a9ee68fa41c": "2026-03-26T23:00:39",
-    "323be803fc6a3f8b5c9607ba": "2026-03-26T23:00:39",
-    "fdf2d0176990188d3a9ee0be": "2026-03-26T23:00:39",
-    "c4b529718fe3d5466b729569": "2026-03-26T23:00:39",
-    "1a6fd6010a57b711ac7fcd60": "2026-03-26T23:00:39",
-    "8dc2efbe5d5489af57f02fb0": "2026-03-26T23:00:39",
     "390e934f520cc2507cd57a28": "2026-03-27T23:01:16",
     "e5028471d31a79ea967fa608": "2026-03-27T23:01:16",
     "4b32aa1cdc84f380d326a3e9": "2026-03-27T23:01:16",
@@ -541,7 +501,21 @@
     "eb9cfe09cb5dc49f51e03296": "2026-04-24T23:07:39",
     "7d9637e74a49bcf283906326": "2026-04-24T23:07:39",
     "005a46e858bd023c97ff8393": "2026-04-24T23:07:39",
-    "e157c94f02de6a8d5249edea": "2026-04-24T23:07:39"
+    "e157c94f02de6a8d5249edea": "2026-04-24T23:07:39",
+    "9a83ae0023921f87ea14a1fe": "2026-04-25T23:05:37",
+    "a843f26fba45672acfeef483": "2026-04-25T23:05:37",
+    "c1d5b0e9aad43b1f089bdd8c": "2026-04-25T23:05:37",
+    "57d2dd5789268d6d80bf59d1": "2026-04-25T23:05:37",
+    "5074f4c62b038ee7d8f8b2d2": "2026-04-25T23:05:37",
+    "aca73a6ae868ba61bcbc291d": "2026-04-25T23:05:37",
+    "3469f06adefaa770dd05c408": "2026-04-25T23:05:37",
+    "c1638dab83eb1a689ecd7f01": "2026-04-25T23:05:37",
+    "811454c2474baa7af9ad5541": "2026-04-25T23:05:37",
+    "a0ff27162af3be8318eaf96c": "2026-04-25T23:05:37",
+    "e3fbc9f7fee7f8f799e7861c": "2026-04-25T23:05:37",
+    "e1543ee4a2c6d3348819c945": "2026-04-25T23:05:37",
+    "25a321ff1bccb7e87a2f9ec7": "2026-04-25T23:05:37",
+    "9cb0ad0e27c4bd866c56dd6a": "2026-04-25T23:05:37"
   },
   "titles": [
     [
@@ -5851,6 +5825,70 @@
     [
       "정치인 거래정책 리포트 20260425",
       "2026-04-25"
+    ],
+    [
+      "rep luna accuses nancy pelosi of insider trading after 17000 gains",
+      "2026-04-26"
+    ],
+    [
+      "pelosi insider trading accusation luna exposes 17000 portfolio surge demands reform bitcoin world",
+      "2026-04-26"
+    ],
+    [
+      "form 4 nextpower inc insider trading activity stock titan",
+      "2026-04-26"
+    ],
+    [
+      "form 4 strategic education inc insider trading activity stock titan",
+      "2026-04-26"
+    ],
+    [
+      "restricted stock grant boosts strategic education stra director stake stock titan",
+      "2026-04-26"
+    ],
+    [
+      "form 4 strategic education inc insider trading activity stock titan",
+      "2026-04-26"
+    ],
+    [
+      "form 4 pharvaris nv insider trading activity stock titan",
+      "2026-04-26"
+    ],
+    [
+      "form 4 pharvaris nv insider trading activity stock titan",
+      "2026-04-26"
+    ],
+    [
+      "director mcrobbie receives 1436 stra restricted shares in new stock award stock titan",
+      "2026-04-26"
+    ],
+    [
+      "form 4a uber technologies inc amended insider trading activity stock titan",
+      "2026-04-26"
+    ],
+    [
+      "김남현의 채권썰 경계감 지속 금리결정물가발표 슈퍼위크",
+      "2026-04-26"
+    ],
+    [
+      "what to expect from the federal reserves meeting wednesday investopedia",
+      "2026-04-26"
+    ],
+    [
+      "fed rate cut in focus amid jerome powells farewell fomc meeting the coin republic",
+      "2026-04-26"
+    ],
+    [
+      "fomc meeting us fed expected to hold rates till 2027 despite kevin warsh taking charge mexc exchange",
+      "2026-04-26"
+    ],
+    [
+      "fed interest rate decision next week heres what to expect invezz",
+      "2026-04-26"
+    ],
+    [
+      "정치인 거래정책 리포트 20260426",
+      "2026-04-26"
     ]
   ],
   "seen_urls": {}
