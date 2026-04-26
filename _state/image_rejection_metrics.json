@@ -6,11 +6,11 @@
         "ext:gif": 72,
         "default-image": 66,
         "ext:ico": 11,
-        "placeholder": 42,
+        "placeholder": 46,
         "ext:svg": 3
       }
     }
   },
   "since": "2026-04-23T08:54:23",
-  "last_seen": "2026-04-26T08:08:50"
+  "last_seen": "2026-04-26T10:00:20"
 }
