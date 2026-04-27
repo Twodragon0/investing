@@ -86,7 +86,7 @@ jobs:
 
       - name: Coverage comment on push
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: py-cov-action/python-coverage-comment-action@7188638f871f721a365d644f505d1ff3df20d683  # v3
+        uses: py-cov-action/python-coverage-comment-action@63f52f4fbbffada6e8dee8ec432de7e01df9ba79  # v3
         with:
           GITHUB_TOKEN: ${{ github.token }}
           MINIMUM_GREEN: 50
