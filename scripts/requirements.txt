@@ -1,6 +1,6 @@
 PyYAML>=6.0
 requests==2.33.1
-certifi>=2026.1.4
+certifi>=2026.4.22
 cachetools>=5.3.0
 beautifulsoup4==4.14.3
 lxml==6.1.0
