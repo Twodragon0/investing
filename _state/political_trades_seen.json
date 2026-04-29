@@ -1,24 +1,5 @@
 {
   "seen": {
-    "fcbfc2349b51a765d100b2e6": "2026-03-30T23:04:25",
-    "eb88431f7b7fb0a6c85f45cf": "2026-03-30T23:04:25",
-    "a19591d10541d675bbc6fea4": "2026-03-30T23:04:25",
-    "f4549f05b3c793104ea9e223": "2026-03-30T23:04:25",
-    "9c852b77b6d4203fb311d413": "2026-03-30T23:04:25",
-    "c7385cc1b56082f1759679d8": "2026-03-30T23:04:25",
-    "f4b29cc4302aa5e4ff332f31": "2026-03-30T23:04:25",
-    "bacb553c42f94da944cec96a": "2026-03-30T23:04:25",
-    "bc4ab7b05cbeb85d7095b6b9": "2026-03-30T23:04:25",
-    "edd90f85b503c60a47ea84e6": "2026-03-30T23:04:25",
-    "c8e62d18a11f9057f28e69f5": "2026-03-30T23:04:25",
-    "5d437c92ed7f4a51fade995d": "2026-03-30T23:04:25",
-    "f85ee1a3d9874e8d2d971166": "2026-03-30T23:04:25",
-    "c1198e93a8218b15b2e4529a": "2026-03-30T23:04:25",
-    "045f217afc2af1bf1585bc63": "2026-03-30T23:04:25",
-    "58b62f43731a6ac48a8aedd1": "2026-03-30T23:04:25",
-    "555c0ab9f63caab69b584b3d": "2026-03-30T23:04:25",
-    "65b300baa341cb2a3750b9e4": "2026-03-30T23:04:25",
-    "67dbd6400760585c5994f8e8": "2026-03-30T23:04:25",
     "6b2a5c113dd158b407d833f9": "2026-03-31T22:59:38",
     "8774a8d12d923d9dd5a4dc56": "2026-03-31T22:59:38",
     "58701291254b08433e2eb5d3": "2026-03-31T22:59:38",
@@ -541,7 +522,41 @@
     "c60b9f32ffcd68f891b0f6a7": "2026-04-28T23:29:58",
     "23926ae0cc2ec257340305da": "2026-04-28T23:29:58",
     "8428f399fb3fe14675bcb58a": "2026-04-28T23:29:58",
-    "d5b81c09eca2ff42c90591a7": "2026-04-28T23:29:58"
+    "d5b81c09eca2ff42c90591a7": "2026-04-28T23:29:58",
+    "c061db44ece9263c0cdb1eeb": "2026-04-29T23:29:49",
+    "ca0ddf59e1c398ea7b3a6609": "2026-04-29T23:29:49",
+    "5fb0da6a4ce0c60b44a04be3": "2026-04-29T23:29:49",
+    "9899b107c4fef08a98037b72": "2026-04-29T23:29:49",
+    "47b32dedc2964235bc259455": "2026-04-29T23:29:49",
+    "9ca7047500607e2098ee6330": "2026-04-29T23:29:49",
+    "1fab4fe89039af597de0d29e": "2026-04-29T23:29:49",
+    "0075f682b37c61fbda1a4db6": "2026-04-29T23:29:49",
+    "f70544cc2db0fb6151bdeaf6": "2026-04-29T23:29:49",
+    "f2dcbe27323b0e6c73cb51e2": "2026-04-29T23:29:49",
+    "714139d13cea1f31fd2479bf": "2026-04-29T23:29:49",
+    "4f72aced12f048e849c03d98": "2026-04-29T23:29:49",
+    "291a928fbf922a2557ea400d": "2026-04-29T23:29:49",
+    "23f13e75de52808475baf7b9": "2026-04-29T23:29:49",
+    "2fbde070e79efbedd09ab895": "2026-04-29T23:29:49",
+    "d681ddda7c40f35cde8b8863": "2026-04-29T23:29:49",
+    "4046f42908f5dbca3d73d92f": "2026-04-29T23:29:49",
+    "030e1f873838844b2d5fd45a": "2026-04-29T23:29:49",
+    "a1b23bddcd2bd4d23e78a08e": "2026-04-29T23:29:49",
+    "2312cef7f6e9085a00f1b7f6": "2026-04-29T23:29:49",
+    "f2e0f6dc878515a9d7e57f04": "2026-04-29T23:29:49",
+    "d34cf169994afafb5140e948": "2026-04-29T23:29:49",
+    "f830b0dcef2814fa33156fe0": "2026-04-29T23:29:49",
+    "22f2ec7f1f123eda0f4c066c": "2026-04-29T23:29:49",
+    "5b70e5340e597e8c6df440a8": "2026-04-29T23:29:49",
+    "a40aa2a40fa012d7b8325666": "2026-04-29T23:29:49",
+    "d6dc40bd315b152343a44117": "2026-04-29T23:29:49",
+    "f15c0ac6ebba5e20cf2c2a12": "2026-04-29T23:29:49",
+    "b8a3d6a25da359ee48798178": "2026-04-29T23:29:49",
+    "bcf728a46b56de8aa642e84a": "2026-04-29T23:29:49",
+    "14270674c51a8cfc0588ea48": "2026-04-29T23:29:49",
+    "c3ee637b2b36eaf35ae8a6b7": "2026-04-29T23:29:49",
+    "6e335e09c81b4e06066385de": "2026-04-29T23:29:49",
+    "57072951169f1a8aa862d4de": "2026-04-29T23:29:49"
   },
   "titles": [
     [
@@ -6187,6 +6202,146 @@
     [
       "정치인 거래정책 리포트 20260429",
       "2026-04-29"
+    ],
+    [
+      "form 4 badger meter inc insider trading activity stock titan",
+      "2026-04-30"
+    ],
+    [
+      "director amy l ladd sells 619 intuitive surgical isrg shares stock titan",
+      "2026-04-30"
+    ],
+    [
+      "form 4 badger meter inc insider trading activity stock titan",
+      "2026-04-30"
+    ],
+    [
+      "form 4 dillards inc insider trading activity stock titan",
+      "2026-04-30"
+    ],
+    [
+      "form 4 kaiser aluminum corp insider trading activity stock titan",
+      "2026-04-30"
+    ],
+    [
+      "form 4 advansix inc insider trading activity stock titan",
+      "2026-04-30"
+    ],
+    [
+      "crane nyse cr director awarded 874 rsus in latest form 4 filing stock titan",
+      "2026-04-30"
+    ],
+    [
+      "reading international rdi ceo receives 269043 rsus vesting in 2027 stock titan",
+      "2026-04-30"
+    ],
+    [
+      "form 4 hovnanian enterprises inc insider trading activity stock titan",
+      "2026-04-30"
+    ],
+    [
+      "crane cr director receives 874 rsus as equity compensation grant stock titan",
+      "2026-04-30"
+    ],
+    [
+      "form 4 essential properties realty trust inc insider trading activity stock titan",
+      "2026-04-30"
+    ],
+    [
+      "nlight lasr director exercises stock options holds 77672 shares stock titan",
+      "2026-04-30"
+    ],
+    [
+      "dillards nyse dds vp awarded 77 common class a shares stock titan",
+      "2026-04-30"
+    ],
+    [
+      "xenergy xe director adds shares via grant and market purchase stock titan",
+      "2026-04-30"
+    ],
+    [
+      "908 devices mass svp awarded 26042 performance stock units as equity pay stock titan",
+      "2026-04-30"
+    ],
+    [
+      "이상휘 의원 재산 1년 새 8억 감소실제 손실인가 오류인가 영남경제",
+      "2026-04-30"
+    ],
+    [
+      "will rates go higher in europe this week central banks confront stagflation threat",
+      "2026-04-30"
+    ],
+    [
+      "eurusd weakens below 11700 as fed keeps rates unchanged fxstreet",
+      "2026-04-30"
+    ],
+    [
+      "eurusd forex signal 2904 recoils ahead of the fomc intere dailyforex",
+      "2026-04-30"
+    ],
+    [
+      "eurgbp flat lines above 08650 as markets await ecb boe rate decisions fxstreet",
+      "2026-04-30"
+    ],
+    [
+      "한은도 5월 매파적 동결 가능성중동 전쟁 여파 주시",
+      "2026-04-30"
+    ],
+    [
+      "시장 참가자 57올해 6월 일본은행 기준금리 인상 전망",
+      "2026-04-30"
+    ],
+    [
+      "fed holds rates steady but with highest level of dissent since 1992",
+      "2026-04-30"
+    ],
+    [
+      "the fed holds rates steady powell is staying on as a governor",
+      "2026-04-30"
+    ],
+    [
+      "jerome powell delivers likely final speech as fed chairman as rates hold",
+      "2026-04-30"
+    ],
+    [
+      "federal reserve leaves interest rates unchanged as powells chairmanship nears end",
+      "2026-04-30"
+    ],
+    [
+      "fed holds interest rates steady for third straight meeting as powell vows to remain as governor",
+      "2026-04-30"
+    ],
+    [
+      "fed holds rates steady amid dissents powell to stay after warsh confirmed usa today",
+      "2026-04-30"
+    ],
+    [
+      "feds powell says hell stay on as governor after term as chair ends as it happened",
+      "2026-04-30"
+    ],
+    [
+      "fed meeting recap powell to stay on board trumps legal attacks have left me no choice",
+      "2026-04-30"
+    ],
+    [
+      "four key takeaways from jerome powells final rate decision as fed chair",
+      "2026-04-30"
+    ],
+    [
+      "fed holds rates steady but board vote is most divided since 1992",
+      "2026-04-30"
+    ],
+    [
+      "watch powell says he plans to stay at fed after chair term ends amid legal attacks by the trump administration pbs",
+      "2026-04-30"
+    ],
+    [
+      "fed meeting underscores tough task ahead for warsh",
+      "2026-04-30"
+    ],
+    [
+      "정치인 거래정책 리포트 20260430",
+      "2026-04-30"
     ]
   ],
   "seen_urls": {}
