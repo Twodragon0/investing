@@ -35,5 +35,7 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
+Sitemap: {{ site.url }}/sitemap-index.xml
 Sitemap: {{ site.url }}/sitemap.xml
+Sitemap: {{ site.url }}/sitemap-images.xml
 Feed: {{ site.url }}/feed.xml

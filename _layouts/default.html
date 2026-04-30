@@ -87,6 +87,13 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="{% if og_image contains '.png' %}image/png{% elsif og_image contains '.jpg' or og_image contains '.jpeg' %}image/jpeg{% elsif og_image contains '.webp' %}image/webp{% else %}image/png{% endif %}">
   <meta property="og:image:alt" content="{{ page.image_alt | default: og_title }}">
+  {% comment %}
+    og:updated_time signals re-share platforms (Kakao, FB, Twitter) to
+    invalidate their cached preview when the underlying page changes.
+    Falls back to the original publish date for non-post pages.
+  {% endcomment %}
+  {% assign og_updated = page.last_modified_at | default: page.date | default: site.time %}
+  <meta property="og:updated_time" content="{{ og_updated | date_to_xmlschema }}">
 
   {% if page.layout == 'post' %}
   <!-- Article metadata for LinkedIn / SNS -->
