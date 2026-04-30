@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="naver-site-verification" content="0e5343cf4b8237958ab7eb656948b497c61f9793" />
+  {% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification }}" />{% endif %}
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32.png' | relative_url }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
   <link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
@@ -126,7 +127,39 @@
   <noscript><link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"></noscript>
   <link rel="preload" href="{{ '/assets/js/core.js' | relative_url }}" as="script">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS" href="{{ '/feed.xml' | relative_url }}">
-  <link rel="alternate" type="application/atom+xml" title="{{ site.title }} Atom" href="{{ '/atom.xml' | relative_url }}">
+
+  <!-- Site-wide structured data: WebSite (sitelinks searchbox) + Organization (knowledge panel) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}#website",
+      "url": "{{ site.url }}",
+      "name": {{ site.title | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "inLanguage": "ko-KR",
+      "publisher": { "@id": "{{ site.url }}#organization" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "{{ site.url }}#organization",
+      "name": {{ site.title | jsonify }},
+      "url": "{{ site.url }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.logo | absolute_url }}",
+        "width": 1200,
+        "height": 630
+      },
+      "sameAs": [
+        "https://github.com/Twodragon0"
+      ]
+    }
+  ]
+}
+  </script>
   <!-- Inline: i18n data uses Liquid template values -->
   <script>window.__siteUrl='{{ site.url }}';window.__i18n={{ site.data.translations | jsonify }};window.__t=function(k){var l=(localStorage.getItem('preferredLang')||'ko').replace('system','ko'),d=window.__i18n;return(d[l]&&d[l][k])||(d.ko&&d.ko[k])||k;};</script>
 </head>
