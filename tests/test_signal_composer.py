@@ -842,6 +842,54 @@ class TestGenerateScenarios:
         scenarios = self.c._generate_scenarios(50.0, "중립", results)
         assert len(scenarios) == 3
 
+    # ── _qualifier 회귀 방지: N/A 신호 누락 시 괄호 placeholder 미노출 ────────
+
+    def test_missing_vix_no_na_placeholder_in_descriptions(self):
+        """VIX 신호가 results 에 없을 때 description 에 'VIX(N/A)' 가 없어야 한다."""
+        results = [
+            SignalResult("공포·탐욕 지수", "55 (탐욕)", 0.55, "중립", 0.25),
+            SignalResult("모멘텀", "BTC +3.0%", 0.6, "강세", 0.20),
+        ]
+        scenarios = self.c._generate_scenarios(55.0, "강세", results)
+        all_descs = " ".join(s.description for s in scenarios)
+        assert "VIX(N/A)" not in all_descs
+
+    def test_missing_fear_greed_no_na_placeholder_in_descriptions(self):
+        """공포·탐욕 지수가 results 에 없을 때 description 에
+        '공포·탐욕(N/A)' 와 '공포·탐욕 지수(N/A)' 가 없어야 한다."""
+        results = [
+            SignalResult("VIX 변동성", "18.0", 0.73, "강세", 0.20),
+            SignalResult("모멘텀", "BTC +3.0%", 0.6, "강세", 0.20),
+        ]
+        scenarios = self.c._generate_scenarios(60.0, "강세", results)
+        all_descs = " ".join(s.description for s in scenarios)
+        assert "공포·탐욕(N/A)" not in all_descs
+        assert "공포·탐욕 지수(N/A)" not in all_descs
+
+    def test_missing_momentum_no_na_placeholder_in_descriptions(self):
+        """모멘텀 신호가 results 에 없을 때 description 에 '모멘텀(N/A)' 가 없어야 한다."""
+        results = [
+            SignalResult("공포·탐욕 지수", "55 (탐욕)", 0.55, "중립", 0.25),
+            SignalResult("VIX 변동성", "18.0", 0.73, "강세", 0.20),
+        ]
+        scenarios = self.c._generate_scenarios(55.0, "강세", results)
+        all_descs = " ".join(s.description for s in scenarios)
+        assert "모멘텀(N/A)" not in all_descs
+
+    def test_all_signals_present_show_values_in_parentheses(self):
+        """VIX·공포·탐욕·모멘텀이 모두 있을 때 raw_display 값이 괄호 안에 출력된다."""
+        results = [
+            SignalResult("공포·탐욕 지수", "55 탐욕", 0.55, "중립", 0.25),
+            SignalResult("VIX 변동성", "18.66", 0.71, "강세", 0.20),
+            SignalResult("모멘텀", "BTC +5.0%", 0.65, "강세", 0.20),
+        ]
+        scenarios = self.c._generate_scenarios(60.0, "강세", results)
+        all_descs = " ".join(s.description for s in scenarios)
+        # 각 raw_display 값이 괄호 내부에 포함되어야 한다
+        assert "(현재 18.66)" in all_descs  # VIX
+        assert "(현재 55 탐욕)" in all_descs  # fear-greed
+        assert "(현재 BTC +5.0%)" in all_descs  # momentum
+
 
 # ── generate_outlook_markdown ─────────────────────────────────────────────────
 

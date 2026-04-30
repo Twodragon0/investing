@@ -847,6 +847,16 @@ class SignalComposer:
         vix_display = vix_result.raw_display if vix_result else "N/A"
         momentum_display = momentum_result.raw_display if momentum_result else "N/A"
 
+        def _qualifier(label: str, value: str) -> str:
+            """값이 유효할 때만 ' (label N)' 형식의 부연을 반환한다."""
+            if not value or value == "N/A":
+                return ""
+            return f" ({label} {value})"
+
+        fg_qual = _qualifier("현재", fg_display)
+        vix_qual = _qualifier("현재", vix_display)
+        mom_qual = _qualifier("현재", momentum_display)
+
         # ── 시간 프레임 결정 (모멘텀 강도 기반) ──────────────────────────────
         # 모멘텀 normalized 값으로 단기/중기 구분
         if momentum_result:
@@ -911,13 +921,16 @@ class SignalComposer:
         bear_catalysts = bear_catalyst_pool[: min(2, max(1, bull_signals))]
 
         bull_desc = (
-            f"공포·탐욕 지수({fg_display}) 반등 시 위험자산 선호 회복, "
-            f"VIX({vix_display}) 안정화되며 기술적 저항선 돌파 가능"
+            f"공포·탐욕 지수{fg_qual} 반등 시 위험자산 선호 회복, "
+            f"VIX{vix_qual} 안정화되며 기술적 저항선 돌파 가능"
         )
-        base_desc = f"현 심리 수준({score:.0f}점) 유지, 모멘텀({momentum_display}) 방향 확인 후 점진적 포지션 조정 권장"
+        base_desc = (
+            f"현 심리 수준({score:.0f}점) 유지, "
+            f"모멘텀{mom_qual} 방향 확인 후 점진적 포지션 조정 권장"
+        )
         bear_desc = (
-            f"VIX({vix_display}) 추가 상승 및 매크로 압박 지속 시 "
-            f"추가 조정 가능, 공포·탐욕({fg_display}) 극공포 구간 진입 주의"
+            f"VIX{vix_qual} 추가 상승 및 매크로 압박 지속 시 "
+            f"추가 조정 가능, 공포·탐욕{fg_qual} 극공포 구간 진입 주의"
         )
 
         return [
