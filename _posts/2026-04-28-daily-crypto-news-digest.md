@@ -54,39 +54,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-28 - 암호화폐 뉴스 요
 <li><a href="https://www.coindesk.com/tech/2026/04/27/a-long-time-developer-wants-to-fork-bitcoin-and-reassign-satoshi-coins-the-community-is-calling-it-a-theft">오랜 개발자가 비트코인 블록체인을 분할하고 Satoshi 코인을 재할당하려고 합니다. 커뮤니티에서는 이를 도둑질이라고 부르고 있습니다.</a> <span class="p0-desc">Paul Sztorc는 eCash라고 불리는 비트코인의 2026년 하드 포크를 제안하여 BTC 보유자에게 동등한 토큰을 제공하고 드라이브체인을 추가합니다.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 오랜 개발자가 비트코인 블록체인을 분할하고 Satoshi 코인을 재할당하려고 합니다. 커뮤니티에서는 이를 도둑질이라고 부르고 있습니다. 
-총 92건의 뉴스 중 P1 주요 이슈도 9건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (39건): 비트코인, BTC, 전략 관련 (39건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (28건): 암호화폐 가격 변동 (28건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🔷 이더리움** (12건): 이더리움, ETH 네트워크 업데이트와 L2 확장이 가격에 미칠 영향을 주시하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 오랜 개발자가 비트코인 블록체인을 분할하고 Satoshi 코인을 재할당하려고 합니다. 커뮤니티에서는 이를 도둑질이라고 부르고 있습니다.
-
-### 주요 이슈
-
-- EU, 특정 암호화폐 금지를 도입하는 러시아에 대한 20차 제재 패키지 출시
-- 예측: 이 암호화폐는 SpaceX IPO - The Motley Fool에 따라 포물선 형태로 바뀔 것입니다.
-- 이란, 호르무즈 통행료에 비트코인 허용…제재 회피 넘어 ‘전략 자산’ 시험대 올랐다 - 블록체인투데이
-- 외 6건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, AI
-- **주요 출처**: Google News(20건), CoinDesk(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-04-28.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-04-28.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔷 이더리움
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

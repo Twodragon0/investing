@@ -16,13 +16,8 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-04-24 | 시총 $2.68T (-
 
 ## 시장 시각화
 
-<picture><source srcset="{{ '/assets/images/generated/top-coins-cmc-2026-04-24.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/top-coins-cmc-2026-04-24.png' | relative_url }}" alt="CoinMarketCap Top 코인 순위 (2026-04-24)" loading="lazy" decoding="async"></picture>
-<picture><source srcset="{{ '/assets/images/generated/market-heatmap-cmc-2026-04-24.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-heatmap-cmc-2026-04-24.png' | relative_url }}" alt="암호화폐 시장 히트맵 (2026-04-24)" loading="lazy" decoding="async"></picture>
-
 
 ## 오늘의 브리핑
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-cmc-2026-04-24.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-cmc-2026-04-24.png' | relative_url }}" alt="시장 브리핑 카드" loading="lazy" decoding="async"></picture>
 
 
 ## 한눈에 보기
@@ -31,9 +26,12 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-04-24 | 시총 $2.68T (-
 
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Zcash</strong> (ZEC): +9.83%</li><li>🟢 <strong>Monero</strong> (XMR): +3.61%</li><li>🟢 <strong>MemeCore</strong> (M): +3.15%</li></ul></div>
 
+
 ## 전체 뉴스 요약
 
-오늘 시가총액 상위 **30개** 코인을 기준으로 시장을 분석했습니다. 비트코인은 **$77,745**에서 24시간 +0.03% 상승하며 투자 심리 회복을 견인하고 있습니다. 전체 시가총액은 **$2.68T**으로 전일 대비 -0.08% 변동했으며, BTC 도미넌스 58.1%로 비트코인 중심 자금 흐름이 지속입니다. 공포/탐욕 지수는 **39** (Fear)으로, 공포 구간으로, 보수적 접근이 권장되는 시점입니다.
+- 총 **17건** 수집
+- 오늘의 시장 인사이트:
+- 24시간 변동 -0.08%로 소폭 조정 구간입니다. 기술적 지지선에서의 매수세 유입 여부를 확인해야 합니다.
 
 ## 시장 인사이트
 

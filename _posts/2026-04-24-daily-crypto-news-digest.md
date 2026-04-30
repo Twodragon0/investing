@@ -56,41 +56,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-24 - 암호화폐 뉴스 요
 <li><a href="https://www.coindesk.com/tech/2026/04/22/inside-the-usd71-million-freeze-on-arbitrum-that-has-the-crypto-world-questioning-what-decentralization-really-means">암호화폐 세계에서 분산화가 실제로 무엇을 의미하는지 의문을 제기하는 Arbitrum의 7,100만 달러 동결 내부</a> <span class="p0-desc">긴급 대응으로 도난당한 자금이 이동하는 것을 막았지만 레이어 2의 거버넌스, 통제 및 분산화 한계에 대한 논쟁이 촉발되었습니다.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 백악관, 중국이 미국 AI 모델로부터 '산업 규모' 절도를 했다고 비난 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 104건의 뉴스 중 P1 주요 이슈도 11건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (44건): 비트코인, 유동성 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **📈 가격/시장** (34건): 달러 가격 변동 (34건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🔵 규제/정책** (30건): 규제 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 백악관, 중국이 미국 AI 모델로부터 '산업 규모' 절도를 했다고 비난
-- 에이브은 2억 9,200만 달러 규모의 KelpDAO 해킹으로 인한 피해를 막기 위해 디파이 파트너를 모았습니다.
-- 암호화폐 세계에서 분산화가 실제로 무엇을 의미하는지 의문을 제기하는 Arbitrum의 7,100만 달러 동결 내부
-
-### 주요 이슈
-
-- 비트코인은 암호화폐 산업이 규제를 추진함에 따라 78,000달러에 육박합니다.
-- BIS 논문, 대규모 암호화폐 거래소에 대한 은행 스타일 규제 제안
-- XRP ETF 시장 정체 속 비트와이즈 ‘단독 유입’… “추세 반전 신호탄인가”
-- 외 8건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Decrypt(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 1건 포함
-- 프로모션성 거래소 공지 4건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-04-24.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-04-24.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

@@ -56,41 +56,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-25 - 암호화폐 뉴스 요
 <li><a href="https://www.coindesk.com/policy/2026/04/24/jane-street-asks-court-to-reject-terraform-claims-tied-to-ust-luna-crash">Jane Street는 법원에 UST-LUNA 폭락과 관련된 Terraform 청구를 거부해 달라고 요청했습니다.</a> <span class="p0-desc">목요일 제출된 소송은 이미 법원에서 해결된 사건을 재탕하고 내부 위법 행위로 인한 손실에 대한 손해 배상을 구하는 것이라고 밝혔습니다</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 투자자 불화가 심화됨에 따라 WLFI 토큰 급락 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 105건의 뉴스 중 P1 주요 이슈도 4건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (47건): 비트코인, BTC, 달러 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **📈 가격/시장** (27건): 달러 가격 변동 (27건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🔷 이더리움** (17건): 이더리움 생태계 동향 (17건) — 가스비·TVL 변화를 함께 확인하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 투자자 불화가 심화됨에 따라 WLFI 토큰 급락
-- 에이브, 2억 9200만 달러 규모의 KelpDAO 낙진 억제를 위한 '디파이 United' 추진 주도
-- Jane Street는 법원에 UST-LUNA 폭락과 관련된 Terraform 청구를 거부해 달라고 요청했습니다.
-
-### 주요 이슈
-
-- 2주 만에 24억 달러 싹쓸이.비트코인 ETF, 기관 자금 싹쓸이' - 코인리더스
-- 미국 정부는 인텔 지분에서 265억 달러의 이익을 얻으며 주가는 22% 급등했습니다.
-- 오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다
-- 외 1건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, AI
-- **주요 출처**: Google News(20건), Google News EN(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-04-25.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-04-25.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔷 이더리움
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

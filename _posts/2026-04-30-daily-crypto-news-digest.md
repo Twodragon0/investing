@@ -55,40 +55,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-30 - 암호화폐 뉴스 요
 <li><a href="https://cointelegraph.com/news/zetachain-dismissed-bug-report-that-could-have-prevented-334k-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">ZetaChain은 334,000달러 규모의 악용을 방지할 수 있었던 버그 보고서를 기각했습니다.</a> <span class="p0-desc">ZetaChain의 $334,000 익스플로잇 뒤에 숨은 취약점은 공격 이전에 버그 포상금 프로그램을 통해 보고되었지만 기각되었습니다.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 디파이 2억 9,200만 달러의 해킹으로 인해 흔들렸지만 회복력을 보여줬다고 Standard Chartered는 말합니다. 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 103건의 뉴스 중 P1 주요 이슈도 13건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (35건): 비트코인, 가상화폐, 만달러 관련 (35건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **🏦 거래소** (22건): binance, volume, pairs 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다.
-- **📈 가격/시장** (23건): 암호화폐, 자금세탁, 캐나다 가격 변동 (23건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 디파이 2억 9,200만 달러의 해킹으로 인해 흔들렸지만 회복력을 보여줬다고 Standard Chartered는 말합니다.
-- ZetaChain은 334,000달러 규모의 악용을 방지할 수 있었던 버그 보고서를 기각했습니다.
-
-### 주요 이슈
-
-- Robinhood는 수익 손실로 인해 하락하고 암호화폐는 수익에 해를 끼칩니다 - Investor's Business Daily
-- 미국과 이란이 제재를 놓고 암호화폐 고양이와 쥐 게임을 하는 방법 - Al Jazeera
-- Polymarket은 미국의 암호화폐 거래소 반환을 홀로 CFTC 의장이 승인을 중요하게 여기기 때문에 주목하고 있습니다.​​​​​​​​​​​​
-- 외 10건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 디파이, AI
-- **주요 출처**: Binance(40건), Decrypt(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-04-30.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-04-30.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
