@@ -1,25 +1,5 @@
 {
   "seen": {
-    "6b2a5c113dd158b407d833f9": "2026-03-31T22:59:38",
-    "8774a8d12d923d9dd5a4dc56": "2026-03-31T22:59:38",
-    "58701291254b08433e2eb5d3": "2026-03-31T22:59:38",
-    "402e4e00e126edfc11cedb3e": "2026-03-31T22:59:38",
-    "f0fed8c2ad90d094fd08f5d2": "2026-03-31T22:59:38",
-    "d7e69632cfd333b6545d48be": "2026-03-31T22:59:38",
-    "2d713ac2048876551a99ded7": "2026-03-31T22:59:38",
-    "04178b74bf6a3f568c134b28": "2026-03-31T22:59:38",
-    "b85116f9b94653063706ecf0": "2026-03-31T22:59:38",
-    "2d025ec1f3b72344c6862370": "2026-03-31T22:59:38",
-    "b07f2c84d6efa0635a2561f1": "2026-03-31T22:59:38",
-    "fa090587adeac1436a2a3115": "2026-03-31T22:59:38",
-    "c45d718dd45461bca2d45b2e": "2026-03-31T22:59:38",
-    "acd1c11750530e7d1d963524": "2026-03-31T22:59:38",
-    "5dabcfe9e59a7875e10434bf": "2026-03-31T22:59:38",
-    "e4cb2b89e25dd68914b23c1e": "2026-03-31T22:59:38",
-    "6cc0b45a8a12279f09c91b08": "2026-03-31T22:59:38",
-    "7bf79cbcf86e79cf981b1cab": "2026-03-31T22:59:38",
-    "65cf33774209745af08c7f42": "2026-03-31T22:59:38",
-    "80fdfd5c897172ad2a05be5c": "2026-03-31T22:59:38",
     "5e4cd0e4f08f21bbb86929e2": "2026-04-01T23:06:14",
     "4b220412875b2e084a4f9dbc": "2026-04-01T23:06:14",
     "c0d2ac6905159c889f7b3204": "2026-04-01T23:06:14",
@@ -556,7 +536,46 @@
     "14270674c51a8cfc0588ea48": "2026-04-29T23:29:49",
     "c3ee637b2b36eaf35ae8a6b7": "2026-04-29T23:29:49",
     "6e335e09c81b4e06066385de": "2026-04-29T23:29:49",
-    "57072951169f1a8aa862d4de": "2026-04-29T23:29:49"
+    "57072951169f1a8aa862d4de": "2026-04-29T23:29:49",
+    "3edaf9091c528cbcc4920cd8": "2026-04-30T23:29:33",
+    "84145d3f990f5d137bfc0363": "2026-04-30T23:29:33",
+    "b80625672bd7016f520e3977": "2026-04-30T23:29:33",
+    "eb9b22dd184435b914d3c359": "2026-04-30T23:29:33",
+    "15792a6992f17eff8f1d31fb": "2026-04-30T23:29:33",
+    "c9bbfc5cd26d979f4c8dfd48": "2026-04-30T23:29:33",
+    "d775f535ed4d9ca9195a0ea0": "2026-04-30T23:29:33",
+    "9f3cc45d8c0bf2bd5cd51a74": "2026-04-30T23:29:33",
+    "1d8aea1903304a6b4809ca66": "2026-04-30T23:29:33",
+    "7430b936dea8067d678aa8c0": "2026-04-30T23:29:33",
+    "5f612d5a4f87f6c0a1b59846": "2026-04-30T23:29:33",
+    "89dea8e96f64e082bab22205": "2026-04-30T23:29:33",
+    "3582423b2c268527018b3bd1": "2026-04-30T23:29:33",
+    "51bf621b7656cda07dba3e8f": "2026-04-30T23:29:33",
+    "23850d8111e7128e50b66a6f": "2026-04-30T23:29:33",
+    "557768487fc8068ceb0f3a49": "2026-04-30T23:29:33",
+    "ba75cefa124f7434aecfb91b": "2026-04-30T23:29:33",
+    "fd6d9e0b48da191119eb460e": "2026-04-30T23:29:33",
+    "d1f1cb0c29c936096055e9df": "2026-04-30T23:29:33",
+    "3cf5c221f6c2171e8f6bd24f": "2026-04-30T23:29:33",
+    "e04451f2bebe3b227ba23377": "2026-04-30T23:29:33",
+    "75dc72d0ef7c500034912b5e": "2026-04-30T23:29:33",
+    "a5bb0bb485369c1b2bb5b118": "2026-04-30T23:29:33",
+    "c99a4f286825cfd60455d5fc": "2026-04-30T23:29:33",
+    "f5b5442a3fd0db8b9b341b47": "2026-04-30T23:29:33",
+    "d883594026a601b4be1839be": "2026-04-30T23:29:33",
+    "7b3dc20820d2266b21d4d03c": "2026-04-30T23:29:33",
+    "83e941771212eb06a83c45d1": "2026-04-30T23:29:33",
+    "bc9e98eaeaac0ccd6f5e5155": "2026-04-30T23:29:33",
+    "8e699476542f499cb800c71e": "2026-04-30T23:29:33",
+    "cc6522c84566562b1fa5754f": "2026-04-30T23:29:33",
+    "ed418bbe09099a83643d9f8d": "2026-04-30T23:29:33",
+    "bf0a2449470278eae3450ba7": "2026-04-30T23:29:33",
+    "98f649befbbbf05b07d6a694": "2026-04-30T23:29:33",
+    "9a4eaf7342a4de2e6800b2c8": "2026-04-30T23:29:33",
+    "e8fe55a6cb97ad4f52a6bc14": "2026-04-30T23:29:33",
+    "7e909c90390501f306f5ac0d": "2026-04-30T23:29:33",
+    "ae4bf14befe60186bce1ee43": "2026-04-30T23:29:33",
+    "b6f1ee3252efc3ba97312743": "2026-04-30T23:29:33"
   },
   "titles": [
     [
@@ -6342,6 +6361,162 @@
     [
       "정치인 거래정책 리포트 20260430",
       "2026-04-30"
+    ],
+    [
+      "pta stock pta opinions on congressional trade disclosure quiver quantitative",
+      "2026-05-01"
+    ],
+    [
+      "watch mia congressman tom kean jr makes primetime tv for trading stocks while missing votes insider nj",
+      "2026-05-01"
+    ],
+    [
+      "gil cisneros leads congress with over 1000 stock trades in the last year finbold",
+      "2026-05-01"
+    ],
+    [
+      "form 4 paypal holdings inc insider trading activity stock titan",
+      "2026-05-01"
+    ],
+    [
+      "form 4 corteva inc insider trading activity stock titan",
+      "2026-05-01"
+    ],
+    [
+      "form 4 pool corp insider trading activity stock titan",
+      "2026-05-01"
+    ],
+    [
+      "form 4a whitestone reit amended insider trading activity stock titan",
+      "2026-05-01"
+    ],
+    [
+      "form 4 pathward financial inc insider trading activity stock titan",
+      "2026-05-01"
+    ],
+    [
+      "form 4 hancock whitney corp insider trading activity stock titan",
+      "2026-05-01"
+    ],
+    [
+      "form 4 wells fargo companymn insider trading activity stock titan",
+      "2026-05-01"
+    ],
+    [
+      "form 4 uniti group inc insider trading activity stock titan",
+      "2026-05-01"
+    ],
+    [
+      "pool corp pool director mark pompa awarded 1169 common shares stock titan",
+      "2026-05-01"
+    ],
+    [
+      "ryan specialty ryan director receives 5757 deferred rsus grant stock titan",
+      "2026-05-01"
+    ],
+    [
+      "form 4 renasant corp insider trading activity stock titan",
+      "2026-05-01"
+    ],
+    [
+      "form 4 douglas dynamics inc insider trading activity stock titan",
+      "2026-05-01"
+    ],
+    [
+      "expensify exfy directors 10b51 sale covers 30728 shares at 101 stock titan",
+      "2026-05-01"
+    ],
+    [
+      "trustmark trmk director adds 1396 shares in stock award filing stock titan",
+      "2026-05-01"
+    ],
+    [
+      "form 4 sonic automotive inc insider trading activity stock titan",
+      "2026-05-01"
+    ],
+    [
+      "raising spirits trump lifts whiskey tariffs after royal visit national news desk",
+      "2026-05-01"
+    ],
+    [
+      "trump signs executive order expanding workers access to retirement plans",
+      "2026-05-01"
+    ],
+    [
+      "watch live trump signs executive order on retirement accounts the hill",
+      "2026-05-01"
+    ],
+    [
+      "trump signs executive order on retirement accounts offering up to 1000 match business insider",
+      "2026-05-01"
+    ],
+    [
+      "ending birthright citizenship would cost economy 77 trillion precinct reporter news",
+      "2026-05-01"
+    ],
+    [
+      "전쟁 불확실성 한은도 기준금리 동결 이어갈 듯인상은 하반기에",
+      "2026-05-01"
+    ],
+    [
+      "美 연준 3연속 금리 동결데뷔 앞둔 신현송 한은 총재 선택 주목 뉴스웍스",
+      "2026-05-01"
+    ],
+    [
+      "의견 첨예 미 연준 금리 동결신현송호 한국은행 셈법은",
+      "2026-05-01"
+    ],
+    [
+      "한은 8연속 금리 동결 무게반도체 호황물가에 인상론 부상",
+      "2026-05-01"
+    ],
+    [
+      "美 연준은 매파적 동결스타 은행가 신현송 총재 첫 금통위에 쏠리는 눈 마켓인",
+      "2026-05-01"
+    ],
+    [
+      "고유가에 제자리걸음한 연준韓美 금리차 일단 유지",
+      "2026-05-01"
+    ],
+    [
+      "ecb keeps rates unchanged but june hike firmly on table",
+      "2026-05-01"
+    ],
+    [
+      "eurusd rallies to 11720 ahead of ecb interest rate decision fxstreet",
+      "2026-05-01"
+    ],
+    [
+      "ecb holds interest rates and warns of iran war risks euractiv",
+      "2026-05-01"
+    ],
+    [
+      "ecb keeps rates unchanged after debating possible hike rteie",
+      "2026-05-01"
+    ],
+    [
+      "ecb keeps rates steady with wars hit to economy still unfolding luxembourg times",
+      "2026-05-01"
+    ],
+    [
+      "ecb press conference lagarde speaks on policy outlook after holding key rates steady fxstreet",
+      "2026-05-01"
+    ],
+    [
+      "a divided fed holds rates steady",
+      "2026-05-01"
+    ],
+    [
+      "fed live updates trump says i dont care that chair powell is staying at the fed",
+      "2026-05-01"
+    ],
+    [
+      "feds interest rate decision april 29 2026 advisor perspectives",
+      "2026-05-01"
+    ],
+    [
+      "정치인 거래정책 리포트 20260501",
+      "2026-05-01"
     ]
   ],
   "seen_urls": {}
