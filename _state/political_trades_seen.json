@@ -1,27 +1,5 @@
 {
   "seen": {
-    "5e4cd0e4f08f21bbb86929e2": "2026-04-01T23:06:14",
-    "4b220412875b2e084a4f9dbc": "2026-04-01T23:06:14",
-    "c0d2ac6905159c889f7b3204": "2026-04-01T23:06:14",
-    "9604b032f09515cc4edb2da7": "2026-04-01T23:06:14",
-    "fbac1b797081e62dd52ccb5b": "2026-04-01T23:06:14",
-    "ff32b9275bbd6a215b79d41d": "2026-04-01T23:06:14",
-    "bd983f7e8576013fa1dd70b7": "2026-04-01T23:06:14",
-    "8b3c0127d414f19b58dea624": "2026-04-01T23:06:14",
-    "f0da61a25b8848e224ab9fa7": "2026-04-01T23:06:14",
-    "d0b1e2dd577a6dd37d962691": "2026-04-01T23:06:14",
-    "8634b2e39c56a45bb22417fa": "2026-04-01T23:06:14",
-    "6cc50989a88dde84dba7be1a": "2026-04-01T23:06:14",
-    "9bf0e0124a2a764733410bd3": "2026-04-01T23:06:14",
-    "661af15dfae01959e0af4176": "2026-04-01T23:06:14",
-    "bb1156748090046965909a15": "2026-04-01T23:06:14",
-    "19b5843eac59e4bf14ea2547": "2026-04-01T23:06:14",
-    "c78273062eec6c66ea81ba20": "2026-04-01T23:06:14",
-    "d62e4850c4e2661cb4e945c9": "2026-04-01T23:06:14",
-    "61e59de67e5c94fbf38b7833": "2026-04-01T23:06:14",
-    "09b090576f96d07fef30a48a": "2026-04-01T23:06:14",
-    "e624e6615fffd38206bdc7a1": "2026-04-01T23:06:14",
-    "f732b9b7d134014adcd964b8": "2026-04-01T23:06:14",
     "68f8e991acc152839a2659d9": "2026-04-02T23:01:33",
     "f0cbb4b2a2f2a516f2b39c92": "2026-04-02T23:01:33",
     "d6a5b9288bd02a3b8ca9f200": "2026-04-02T23:01:33",
@@ -575,7 +553,39 @@
     "e8fe55a6cb97ad4f52a6bc14": "2026-04-30T23:29:33",
     "7e909c90390501f306f5ac0d": "2026-04-30T23:29:33",
     "ae4bf14befe60186bce1ee43": "2026-04-30T23:29:33",
-    "b6f1ee3252efc3ba97312743": "2026-04-30T23:29:33"
+    "b6f1ee3252efc3ba97312743": "2026-04-30T23:29:33",
+    "a62e1e55b3b925d54460f65a": "2026-05-01T23:27:40",
+    "a6e406262222eb1d09eb3fca": "2026-05-01T23:27:40",
+    "6261beda547b80be41210145": "2026-05-01T23:27:40",
+    "5a5190ef5447ebf00b068892": "2026-05-01T23:27:40",
+    "097c868f7f82188d2c873c82": "2026-05-01T23:27:40",
+    "7b9804cc528063fe0cc3dd46": "2026-05-01T23:27:40",
+    "fe6599e8254920fb06aa75d2": "2026-05-01T23:27:40",
+    "689efeb7b845399992fe1c11": "2026-05-01T23:27:40",
+    "1fe3ac95b47406082d99b27c": "2026-05-01T23:27:40",
+    "3da6e5b8d8e9b56bdf1ffb37": "2026-05-01T23:27:40",
+    "f33479ee86451a44604abad9": "2026-05-01T23:27:40",
+    "8920088989471b934a04efd7": "2026-05-01T23:27:40",
+    "0dc616bcbb15fe574bb94f7e": "2026-05-01T23:27:40",
+    "dc9fb3e77fde869a99743569": "2026-05-01T23:27:40",
+    "fc52b5ff5690a3a7272af04c": "2026-05-01T23:27:40",
+    "3cf7358bc4ed2d63d7c9b6b8": "2026-05-01T23:27:40",
+    "f7cdd41de15e85da848aef13": "2026-05-01T23:27:40",
+    "b998dc1f59ef859ae21c40d6": "2026-05-01T23:27:40",
+    "f40d51a8fcf9c1ed85d7fc7b": "2026-05-01T23:27:40",
+    "f1bcaf9356a3b13095671c74": "2026-05-01T23:27:40",
+    "239b764fc2db22fbd0ec90d3": "2026-05-01T23:27:40",
+    "b62937fc30b5fd10e2c4619a": "2026-05-01T23:27:40",
+    "c1224ce8e88c2f6653929065": "2026-05-01T23:27:40",
+    "f6e342463b35c4fed28e8363": "2026-05-01T23:27:40",
+    "95863eb3805d7131ab46f860": "2026-05-01T23:27:40",
+    "ad164b445e870600c0ebfa30": "2026-05-01T23:27:40",
+    "489e07b9960b601e4507016d": "2026-05-01T23:27:40",
+    "a07bb09cb202e60e76e5f2da": "2026-05-01T23:27:40",
+    "25b1cf996a2f16942156b27e": "2026-05-01T23:27:40",
+    "e682117c8b1db4a1db766d1a": "2026-05-01T23:27:40",
+    "a6afb9b17ca97a1f3988a6fe": "2026-05-01T23:27:40",
+    "45f2020f2a1c3baebff01761": "2026-05-01T23:27:40"
   },
   "titles": [
     [
@@ -6517,6 +6527,138 @@
     [
       "정치인 거래정책 리포트 20260501",
       "2026-05-01"
+    ],
+    [
+      "congress trade representative lloyd smucker just disclosed new stock trades quiver quantitative",
+      "2026-05-02"
+    ],
+    [
+      "congress trade representative lizzie fletcher just disclosed new stock trades quiver quantitative",
+      "2026-05-02"
+    ],
+    [
+      "insider sales reported for apge nasdaq apge five 2000share trades stock titan",
+      "2026-05-02"
+    ],
+    [
+      "steve sanghi sells 5450xx shares at microchip nasdaq mchp form 144 stock titan",
+      "2026-05-02"
+    ],
+    [
+      "form 4 remitly global inc insider trading activity stock titan",
+      "2026-05-02"
+    ],
+    [
+      "form 4 twin disc inc insider trading activity stock titan",
+      "2026-05-02"
+    ],
+    [
+      "form 4 pultegroup incmi insider trading activity stock titan",
+      "2026-05-02"
+    ],
+    [
+      "form 4 chord energy corp insider trading activity stock titan",
+      "2026-05-02"
+    ],
+    [
+      "carlyle group cg director receives 4450 restricted stock units as equity grant stock titan",
+      "2026-05-02"
+    ],
+    [
+      "rb global rba director sarah e raiss files form 4 showing no share activity stock titan",
+      "2026-05-02"
+    ],
+    [
+      "form 4 us energy corp insider trading activity stock titan",
+      "2026-05-02"
+    ],
+    [
+      "director at carlyle group cg receives 4450 restricted stock units stock titan",
+      "2026-05-02"
+    ],
+    [
+      "innventure inv ceo receives 46460share milestone stock award stock titan",
+      "2026-05-02"
+    ],
+    [
+      "form 4 cemex sab de cv insider trading activity stock titan",
+      "2026-05-02"
+    ],
+    [
+      "form 4 primoris services corp insider trading activity stock titan",
+      "2026-05-02"
+    ],
+    [
+      "varonis systems vrns director awarded 7224 restricted stock units stock titan",
+      "2026-05-02"
+    ],
+    [
+      "form 4 local bounti corporationde insider trading activity stock titan",
+      "2026-05-02"
+    ],
+    [
+      "director at carlyle group cg granted 4450 restricted stock units stock titan",
+      "2026-05-02"
+    ],
+    [
+      "로이터 트럼프 쿠바 정부 겨냥 제재 확대 행정명령",
+      "2026-05-02"
+    ],
+    [
+      "로이터 트럼프 쿠바정부 겨냥 제재 확대 행정명령",
+      "2026-05-02"
+    ],
+    [
+      "trump says hes raising eu auto tariffs to 25",
+      "2026-05-02"
+    ],
+    [
+      "trump raises tariffs on cars trucks from eu to 25",
+      "2026-05-02"
+    ],
+    [
+      "trump threatens 25 tariff on eu cars accusing bloc of breaking trade deal gulf news",
+      "2026-05-02"
+    ],
+    [
+      "trump raises tariffs on cars trucks from eu to 25",
+      "2026-05-02"
+    ],
+    [
+      "trump signs order expanding access to retirement accounts axios",
+      "2026-05-02"
+    ],
+    [
+      "can trumps 1000 ira match executive order finally bring 56 million americans without 401k access into the economic times",
+      "2026-05-02"
+    ],
+    [
+      "white house issues statement on trumps 401k executive order the news international",
+      "2026-05-02"
+    ],
+    [
+      "fed meeting live updates rate decision will be announced at powells likely last meeting as chair",
+      "2026-05-02"
+    ],
+    [
+      "behind powells highstakes decision to stay at the fed",
+      "2026-05-02"
+    ],
+    [
+      "fed dissenters speak out the next rate change could be either a cut or a hike",
+      "2026-05-02"
+    ],
+    [
+      "성장률 반등불안한 물가한은 5월 기준금리 동결 무게",
+      "2026-05-02"
+    ],
+    [
+      "ecb credit standards tighten amid geopolitical tensions energy volatility crypto briefing",
+      "2026-05-02"
+    ],
+    [
+      "정치인 거래정책 리포트 20260502",
+      "2026-05-02"
     ]
   ],
   "seen_urls": {}
