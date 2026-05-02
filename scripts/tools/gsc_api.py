@@ -65,8 +65,7 @@ def _require_googleapi() -> tuple[Any, Any]:
         from googleapiclient.discovery import build  # type: ignore
     except ImportError as exc:
         logger.error(
-            "missing dependency. Install with: "
-            "pip install google-api-python-client google-auth (%s)",
+            "missing dependency. Install with: pip install google-api-python-client google-auth (%s)",
             exc,
         )
         sys.exit(2)
@@ -78,8 +77,7 @@ def _build_service():
     cred_path = get_env("GOOGLE_APPLICATION_CREDENTIALS", "")
     if not cred_path:
         logger.error(
-            "GOOGLE_APPLICATION_CREDENTIALS env var is not set. "
-            "Point it at your service-account JSON file path."
+            "GOOGLE_APPLICATION_CREDENTIALS env var is not set. Point it at your service-account JSON file path."
         )
         sys.exit(2)
     if not os.path.isfile(cred_path):
@@ -123,10 +121,7 @@ def cmd_sitemap_status(args: argparse.Namespace) -> int:
         _emit(f"  errors:      {s.get('errors')}")
         _emit(f"  warnings:    {s.get('warnings')}")
         for c in s.get("contents", []) or []:
-            _emit(
-                f"    - {c.get('type')}: submitted={c.get('submitted')} "
-                f"indexed={c.get('indexed')}"
-            )
+            _emit(f"    - {c.get('type')}: submitted={c.get('submitted')} indexed={c.get('indexed')}")
         _emit()
     return 0
 
@@ -204,9 +199,7 @@ def main(argv: list[str] | None = None) -> int:
     )
     sub = parser.add_subparsers(dest="cmd", required=True)
 
-    sub.add_parser("sitemap-status", help="List sitemaps and their fetch status").set_defaults(
-        func=cmd_sitemap_status
-    )
+    sub.add_parser("sitemap-status", help="List sitemaps and their fetch status").set_defaults(func=cmd_sitemap_status)
 
     p_inspect = sub.add_parser("inspect", help="URL Inspection API on a single URL")
     p_inspect.add_argument("url")
@@ -222,9 +215,7 @@ def main(argv: list[str] | None = None) -> int:
     p_analytics.add_argument("--row-limit", type=int, default=25)
     p_analytics.set_defaults(func=cmd_analytics)
 
-    p_submit = sub.add_parser(
-        "submit-sitemap", help="Re-submit a sitemap to GSC (external state change)"
-    )
+    p_submit = sub.add_parser("submit-sitemap", help="Re-submit a sitemap to GSC (external state change)")
     p_submit.add_argument("feedpath", help="Full sitemap URL")
     p_submit.add_argument(
         "--confirm",

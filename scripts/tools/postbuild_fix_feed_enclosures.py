@@ -44,9 +44,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger("fix_feed_enclosures")
 
-ENCLOSURE_RE = re.compile(
-    r'<enclosure\s+url="(?P<url>[^"]+)"\s+type="(?P<type>[^"]+)"\s+length="(?P<len>\d+)"\s*/>'
-)
+ENCLOSURE_RE = re.compile(r'<enclosure\s+url="(?P<url>[^"]+)"\s+type="(?P<type>[^"]+)"\s+length="(?P<len>\d+)"\s*/>')
 
 
 def _emit(msg: str) -> None:
@@ -121,13 +119,11 @@ def main(argv: list[str] | None = None) -> int:
         return 2
 
     total, fixed, missing = fix_feed(feed_path, site_dir)
-    _emit(
-        f"enclosures: total={total} fixed={fixed} unchanged={total - fixed - missing} missing={missing}"
-    )
+    _emit(f"enclosures: total={total} fixed={fixed} unchanged={total - fixed - missing} missing={missing}")
     if missing:
         logger.warning(
             "%d enclosures pointed at files not present in %s "
-            "(probably absolute URLs to assets served elsewhere); left as length=\"0\"",
+            '(probably absolute URLs to assets served elsewhere); left as length="0"',
             missing,
             site_dir,
         )
