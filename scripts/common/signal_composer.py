@@ -921,16 +921,11 @@ class SignalComposer:
         bear_catalysts = bear_catalyst_pool[: min(2, max(1, bull_signals))]
 
         bull_desc = (
-            f"공포·탐욕 지수{fg_qual} 반등 시 위험자산 선호 회복, "
-            f"VIX{vix_qual} 안정화되며 기술적 저항선 돌파 가능"
+            f"공포·탐욕 지수{fg_qual} 반등 시 위험자산 선호 회복, VIX{vix_qual} 안정화되며 기술적 저항선 돌파 가능"
         )
-        base_desc = (
-            f"현 심리 수준({score:.0f}점) 유지, "
-            f"모멘텀{mom_qual} 방향 확인 후 점진적 포지션 조정 권장"
-        )
+        base_desc = f"현 심리 수준({score:.0f}점) 유지, 모멘텀{mom_qual} 방향 확인 후 점진적 포지션 조정 권장"
         bear_desc = (
-            f"VIX{vix_qual} 추가 상승 및 매크로 압박 지속 시 "
-            f"추가 조정 가능, 공포·탐욕{fg_qual} 극공포 구간 진입 주의"
+            f"VIX{vix_qual} 추가 상승 및 매크로 압박 지속 시 추가 조정 가능, 공포·탐욕{fg_qual} 극공포 구간 진입 주의"
         )
 
         return [
