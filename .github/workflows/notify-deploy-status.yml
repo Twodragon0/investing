@@ -1,0 +1,115 @@
+name: Notify Deploy Status
+
+# Posts a Slack alert (with GitHub-issue fallback) when a deployment_status
+# event reports failure. Vercel publishes deployment_status to the GitHub API
+# whenever a build settles, so this workflow catches the same surface as
+# `gh api /repos/.../deployments/{id}/statuses`.
+#
+# Why this exists: between 2026-05-01 and 2026-05-02 every Vercel deploy
+# silently failed because a postbuild script was excluded by .vercelignore.
+# Failures were only discovered by manual GitHub-API inspection. This
+# workflow turns that into a same-cycle Slack ping.
+
+on:
+  deployment_status:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  notify:
+    # Only run when the status is actually a failure or error — success deploys
+    # are noisy and the Vercel dashboard already shows them.
+    if: github.event.deployment_status.state == 'failure' || github.event.deployment_status.state == 'error'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (for local resolve-slack-config action)
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
+        with:
+          fetch-depth: 1
+
+      - name: Resolve Slack config
+        id: slack
+        uses: ./.github/actions/resolve-slack-config
+        with:
+          target_channel_alias: investing
+          token_candidates: |
+            ${{ secrets.SLACK_BOT_TOKEN }}
+            ${{ secrets.AI_SLACK_BOT_TOKEN }}
+            ${{ secrets.SLACK_TOKEN }}
+          channel_candidates_investing: |
+            ${{ secrets.SLACK_CHANNEL_ID_INVESTING }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID_INVESTING }}
+            ${{ secrets.SLACK_CHANNEL_INVESTING }}
+            ${{ secrets.SLACK_CHANNEL_ID }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID }}
+            ${{ secrets.SLACK_CHANNEL }}
+
+      - name: Build alert text
+        id: text
+        env:
+          DEPLOY_STATE: ${{ github.event.deployment_status.state }}
+          DEPLOY_ENV: ${{ github.event.deployment.environment }}
+          DEPLOY_DESC: ${{ github.event.deployment_status.description }}
+          DEPLOY_TARGET: ${{ github.event.deployment_status.target_url }}
+          DEPLOY_SHA: ${{ github.event.deployment.sha }}
+          REPO: ${{ github.repository }}
+        run: |
+          short_sha="${DEPLOY_SHA:0:7}"
+          # Truncate description to keep Slack mrkdwn under message limits
+          desc="${DEPLOY_DESC:0:200}"
+          {
+            echo "short_sha=${short_sha}"
+            echo "desc=${desc}"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Post alert to Slack
+        id: post-slack
+        if: steps.slack.outputs.can_post == 'true'
+        uses: slackapi/slack-github-action@af78098f536edbc4de71162a307590698245be95  # v3.0.1
+        with:
+          method: chat.postMessage
+          token: ${{ steps.slack.outputs.token }}
+          payload: |
+            channel: "${{ steps.slack.outputs.channel }}"
+            text: ":rotating_light: [${{ steps.slack.outputs.profile_label }}] *Deploy ${{ github.event.deployment_status.state }}* — ${{ github.event.deployment.environment }}\n\n*Commit:* `${{ steps.text.outputs.short_sha }}`\n*Detail:* ${{ steps.text.outputs.desc }}\n\n<${{ github.event.deployment_status.target_url }}|:link: Open deployment> · <https://github.com/${{ github.repository }}/commit/${{ github.event.deployment.sha }}|:hash: View commit>"
+
+      - name: Fallback — create GitHub issue if Slack post failed
+        if: >-
+          steps.slack.outputs.can_post != 'true' ||
+          steps.post-slack.outcome == 'failure'
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea  # v7
+        with:
+          script: |
+            const state = context.payload.deployment_status.state;
+            const env_ = context.payload.deployment.environment;
+            const sha = context.payload.deployment.sha.slice(0, 7);
+            const target = context.payload.deployment_status.target_url || '(none)';
+            const desc = (context.payload.deployment_status.description || '').slice(0, 400);
+            const title = `[deploy-${state}] ${env_} @ ${sha}`;
+            const body = [
+              `## Deployment ${state}`,
+              ``,
+              `| Field | Value |`,
+              `|-------|-------|`,
+              `| Environment | \`${env_}\` |`,
+              `| State | \`${state}\` |`,
+              `| Commit | \`${sha}\` |`,
+              `| Target | <${target}> |`,
+              ``,
+              `**Description:**`,
+              `> ${desc}`,
+              ``,
+              `Slack delivery failed (\`can_post=${{ steps.slack.outputs.can_post }}\`, ` +
+              `\`post-slack.outcome=${{ steps.post-slack.outcome }}\`).`,
+              `Verify SLACK_BOT_TOKEN / SLACK_CHANNEL_ID_INVESTING secrets, or close this issue once Slack recovers.`,
+            ].join('\n');
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body,
+              labels: ['alert-delivery-failed', 'ops', 'deploy'],
+            });
