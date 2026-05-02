@@ -28,16 +28,21 @@ is unambiguous.
 from __future__ import annotations
 
 import argparse
+import logging
 import re
 import sys
 from pathlib import Path
 from urllib.parse import urlparse
 
-# Reuse shared logging helper per scripts/AGENTS.md guardrails.
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common.config import setup_logging  # noqa: E402
-
-logger = setup_logging("fix_feed_enclosures")
+# Self-contained logging — this script must run in Vercel's build env where
+# scripts/common is not deployed (.vercelignore excludes the wider scripts/
+# tree to keep deploy size small; only this single file is un-ignored).
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(name)s] %(levelname)s: %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
+logger = logging.getLogger("fix_feed_enclosures")
 
 ENCLOSURE_RE = re.compile(
     r'<enclosure\s+url="(?P<url>[^"]+)"\s+type="(?P<type>[^"]+)"\s+length="(?P<len>\d+)"\s*/>'

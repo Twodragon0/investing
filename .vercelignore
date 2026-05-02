@@ -1,4 +1,10 @@
-scripts/
+# Exclude scripts/ but un-ignore the postbuild fixer that vercel.json
+# buildCommand invokes after `jekyll build`. Order matters: parent dirs must
+# be re-included before the leaf file.
+scripts/*
+!scripts/tools/
+scripts/tools/*
+!scripts/tools/postbuild_fix_feed_enclosures.py
 _state/
 .github/
 .claude/
