@@ -1,0 +1,53 @@
+---
+layout: null
+permalink: /sitemap.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ '/' | absolute_url | xml_escape }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+{% for page in site.html_pages %}
+  {% if page.path contains 'pages/' %}
+  {% unless page.sitemap == false %}
+  <url>
+    <loc>{{ page.url | absolute_url | xml_escape }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  {% endunless %}
+  {% endif %}
+{% endfor %}
+{% assign now_ts = site.time | date: "%s" | plus: 0 %}
+{% for post in site.posts %}
+  {% unless post.sitemap == false or post.published == false %}
+  {% assign post_date = post.last_modified_at | default: post.date %}
+  {% assign post_ts = post_date | date: "%s" | plus: 0 %}
+  {% assign age_seconds = now_ts | minus: post_ts %}
+  {% if age_seconds < 604800 %}
+    {% assign post_priority = "0.9" %}
+    {% assign post_changefreq = "weekly" %}
+  {% elsif age_seconds < 2592000 %}
+    {% assign post_priority = "0.8" %}
+    {% assign post_changefreq = "weekly" %}
+  {% elsif age_seconds < 15552000 %}
+    {% assign post_priority = "0.7" %}
+    {% assign post_changefreq = "monthly" %}
+  {% else %}
+    {% assign post_priority = "0.5" %}
+    {% assign post_changefreq = "monthly" %}
+  {% endif %}
+  <url>
+    <loc>{{ post.url | absolute_url | xml_escape }}</loc>
+    <lastmod>{{ post_date | date_to_xmlschema }}</lastmod>
+    <changefreq>{{ post_changefreq }}</changefreq>
+    <priority>{{ post_priority }}</priority>
+  </url>
+  {% endunless %}
+{% endfor %}
+</urlset>

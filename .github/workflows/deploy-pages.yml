@@ -85,3 +85,40 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128  # v5.0.0
+
+  # Requires GitHub secret: GSC_SERVICE_ACCOUNT_JSON (Google service account JSON content)
+  submit-sitemap:
+    needs: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    if: github.ref == 'refs/heads/main' && success()
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
+
+      - name: Setup Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0
+        with:
+          python-version: '3.12'
+
+      - name: Install GSC dependencies
+        run: pip install google-api-python-client google-auth
+
+      - name: Write service account credentials
+        env:
+          GSC_CREDS: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+        run: echo "$GSC_CREDS" > /tmp/gsc-creds.json
+
+      - name: Submit sitemap-index to Google Search Console
+        continue-on-error: true
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: /tmp/gsc-creds.json
+          GSC_SITE_URL: https://investing.2twodragon.com/
+        run: python scripts/tools/gsc_api.py submit-sitemap https://investing.2twodragon.com/sitemap-index.xml --confirm
+
+      - name: Submit sitemap.xml to Google Search Console
+        continue-on-error: true
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: /tmp/gsc-creds.json
+          GSC_SITE_URL: https://investing.2twodragon.com/
+        run: python scripts/tools/gsc_api.py submit-sitemap https://investing.2twodragon.com/sitemap.xml --confirm

@@ -1,0 +1,42 @@
+name: IndexNow Submit
+
+on:
+  workflow_run:
+    workflows: ["Deploy Jekyll to GitHub Pages"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow-submit
+  cancel-in-progress: true
+
+jobs:
+  submit:
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    env:
+      # IndexNow key is intentionally public — it only serves as a site
+      # ownership token verified via the <key>.txt file at the site root.
+      INDEXNOW_KEY: f71a0af133e16771baeeb3c5e137d8df
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0
+        with:
+          python-version: '3.12'
+
+      - name: Submit recent posts to IndexNow
+        run: |
+          python scripts/tools/indexnow_submit.py --from-recent-posts 30
