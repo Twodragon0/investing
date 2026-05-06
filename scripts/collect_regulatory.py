@@ -426,9 +426,12 @@ class RegulatoryCollector(BaseCollector):
         region_counts = Counter(item.get("region", "기타") for item in all_items)
         source_links: list = []
 
-        content_parts = [
-            f"전 세계 금융 규제기관의 최신 동향을 정리합니다. 총 {len(all_items)}건의 규제 관련 뉴스가 수집되었습니다.",
-        ]
+        if region_counts:
+            _top_reg_region, _top_reg_count = region_counts.most_common(1)[0]
+            _reg_opening = f"**{today}** {_top_reg_region}({_top_reg_count}건) 중심으로 {len(all_items)}건의 글로벌 금융 규제 동향이 수집되었습니다."
+        else:
+            _reg_opening = f"**{today}** 글로벌 금융 규제 동향 {len(all_items)}건 수집"
+        content_parts = [_reg_opening]
 
         # Stat grid - region counts
         stat_grid_parts = ['<div class="stat-grid">']
@@ -805,7 +808,17 @@ class RegulatoryCollector(BaseCollector):
         _desc_ko = f"글로벌 규제 동향 {len(all_items)}건 수집. "
         if _top_themes:
             _desc_ko += f"주요 테마: {', '.join(_top_themes)}. "
-        _desc_ko += "미국·한국·아시아·유럽 규제 기관 동향을 분석합니다."
+        _reg_top_title = (all_items[0].get("title", "") if all_items else "").strip()
+        if region_counts and _reg_top_title:
+            _reg_desc_region = region_counts.most_common(1)[0][0]
+            _reg_top_title = _reg_top_title[:70].rsplit(" ", 1)[0] if len(_reg_top_title) > 70 else _reg_top_title
+            _desc_ko += f"{_reg_desc_region} 핵심: {_reg_top_title}"
+        elif _reg_top_title:
+            _reg_top_title = _reg_top_title[:70].rsplit(" ", 1)[0] if len(_reg_top_title) > 70 else _reg_top_title
+            _desc_ko += f"핵심: {_reg_top_title}"
+        else:
+            _desc_ko += f"{len(region_counts)}개 지역 규제 기관 동향 분석"
+        _desc_ko = _desc_ko[:160]
 
         filepath = self.create_post(
             title=post_title,

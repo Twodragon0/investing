@@ -651,10 +651,19 @@ class SocialMediaCollector(BaseCollector):
         if political_items:
             source_parts.append(f"정치·경제 {len(political_items)}건")
         sources_str = ", ".join(source_parts) if source_parts else "데이터 없음"
-        content_parts = [
-            f"**{today}** 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. "
-            f"{sources_str}, 총 {total_count}건이 수집되었습니다.\n"
+        _top_title_words = [
+            w for item in all_theme_items
+            for w in (item.get("title") or "").split()
+            if len(w) > 1
         ]
+        _topic_counts = Counter(_top_title_words)
+        _stopwords = {"the", "a", "an", "of", "in", "on", "at", "to", "is", "are", "and", "for", "by", "with", "from", "this", "that", "it", "be", "was", "이", "의", "에", "을", "를", "은", "는", "가", "와", "과", "도", "로", "에서", "하는", "한", "합니다", "됩니다"}
+        _top_kws = [w for w, _ in _topic_counts.most_common(20) if w.lower() not in _stopwords][:2]
+        if _top_kws:
+            _opening = f"**{today}** 소셜 미디어에서 가장 많이 언급된 주제: {', '.join(_top_kws)}. {sources_str}, 총 {total_count}건이 수집되었습니다.\n"
+        else:
+            _opening = f"**{today}** {sources_str}에서 총 {total_count}건의 소셜 미디어 동향이 수집되었습니다.\n"
+        content_parts = [_opening]
 
         # Stat grid - source breakdown
         content_parts.append('<div class="stat-grid">')
@@ -1091,7 +1100,13 @@ class SocialMediaCollector(BaseCollector):
         _desc_ko = f"소셜 미디어 동향 {total_count}건 수집. "
         if _top_social_themes:
             _desc_ko += f"주요 테마: {', '.join(_top_social_themes)}. "
-        _desc_ko += f"텔레그램·트위터·레딧·정치뉴스 {len({item.get('source', '') for item in all_theme_items if item.get('source')})}개 소스를 종합합니다."
+        _social_top_title = (all_theme_items[0].get("title", "") if all_theme_items else "").strip()
+        if _social_top_title:
+            _social_top_title = _social_top_title[:70].rsplit(" ", 1)[0] if len(_social_top_title) > 70 else _social_top_title
+            _desc_ko += f"화제: {_social_top_title}"
+        else:
+            _desc_ko += f"{len({item.get('source', '') for item in all_theme_items if item.get('source')})}개 소스에서 종합"
+        _desc_ko = _desc_ko[:160]
 
         filepath = self.create_post(
             title=post_title,
