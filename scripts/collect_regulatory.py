@@ -30,7 +30,7 @@ from common.markdown_utils import (
 from common.post_generator import build_dated_permalink
 from common.rss_fetcher import fetch_rss_feed
 from common.summarizer import ThemeSummarizer
-from common.translator import get_display_title
+from common.translator import get_display_title, translate_to_korean
 
 logger = setup_logging("collect_regulatory")
 VERIFY_SSL = get_verify_ssl()
@@ -808,7 +808,10 @@ class RegulatoryCollector(BaseCollector):
         _desc_ko = f"글로벌 규제 동향 {len(all_items)}건 수집. "
         if _top_themes:
             _desc_ko += f"주요 테마: {', '.join(_top_themes)}. "
-        _reg_top_title = (all_items[0].get("title", "") if all_items else "").strip()
+        _reg_raw_title = (all_items[0].get("title_ko") or all_items[0].get("title", "") if all_items else "").strip()
+        _reg_top_title = translate_to_korean(_reg_raw_title) if _reg_raw_title else ""
+        if not _reg_top_title:
+            _reg_top_title = _reg_raw_title
         if region_counts and _reg_top_title:
             _reg_desc_region = region_counts.most_common(1)[0][0]
             _reg_top_title = _reg_top_title[:70].rsplit(" ", 1)[0] if len(_reg_top_title) > 70 else _reg_top_title

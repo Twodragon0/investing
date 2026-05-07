@@ -40,7 +40,7 @@ from common.markdown_utils import (
 from common.post_generator import build_dated_permalink
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
-from common.translator import get_display_title
+from common.translator import get_display_title, translate_to_korean
 from common.utils import (
     remove_sponsored_text,
     request_with_retry,
@@ -1100,7 +1100,10 @@ class SocialMediaCollector(BaseCollector):
         _desc_ko = f"소셜 미디어 동향 {total_count}건 수집. "
         if _top_social_themes:
             _desc_ko += f"주요 테마: {', '.join(_top_social_themes)}. "
-        _social_top_title = (all_theme_items[0].get("title", "") if all_theme_items else "").strip()
+        _social_raw = (all_theme_items[0].get("title_ko") or all_theme_items[0].get("title", "") if all_theme_items else "").strip()
+        _social_top_title = translate_to_korean(_social_raw) if _social_raw else ""
+        if not _social_top_title:
+            _social_top_title = _social_raw
         if _social_top_title:
             _social_top_title = _social_top_title[:70].rsplit(" ", 1)[0] if len(_social_top_title) > 70 else _social_top_title
             _desc_ko += f"화제: {_social_top_title}"
