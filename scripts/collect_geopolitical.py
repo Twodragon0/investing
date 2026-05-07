@@ -1021,9 +1021,14 @@ class GeopoliticalCollector(BaseCollector):
 
         # Section 2: GDELT geopolitical news
         content_parts.append("## 2. 주요 지정학 뉴스 (GDELT)\n")
+        _avg_tone = (
+            sum(a.get("avg_tone", 0) or 0 for a in gdelt_articles) / len(gdelt_articles)
+            if gdelt_articles
+            else 0
+        )
         content_parts.append(
             "GDELT(글로벌 사건·언어·음색 데이터베이스)에서 최신 지정학 관련 기사와 "
-            "감성 분석 점수를 제공합니다. 음수 톤은 부정적 보도를 의미합니다.\n"
+            f"감성 분석 점수 포함 (평균 톤: {_avg_tone:.1f}). 음수 톤은 부정적 보도를 의미합니다.\n"
         )
         content_parts.extend(_build_gdelt_section(gdelt_articles))
 

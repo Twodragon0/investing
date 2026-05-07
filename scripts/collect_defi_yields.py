@@ -178,9 +178,9 @@ def build_post_content(
 
     # Introduction
     content_parts.append(
-        f"**{today}** DeFi Llama Yields API 기준 주요 DeFi 수익률(APY) 현황을 정리합니다. "
-        f"TVL $1M 이상, APY 0.1% 이상 풀 **{total_pools}개** 기준이며, "
-        f"스테이블코인·ETH·BTC 카테고리별 상위 수익률과 전체 TOP TVL 풀을 포함합니다.\n"
+        f"**{today}** 기준 TVL $1M↑·APY 0.1%↑ 풀 **{total_pools}개**. "
+        f"최고 APY 프로토콜: **{max_apy_project}** ({max_apy_val:.1f}%). "
+        f"스테이블코인·ETH·BTC 카테고리별 수익률 분석.\n"
     )
 
     # Alert-box with summary stats
@@ -205,10 +205,16 @@ def build_post_content(
 
     # ── Section 1: 스테이블코인 수익률 ──
     content_parts.append(f"\n## 스테이블코인 수익률 TOP {len(stablecoin_pools)}\n")
-    content_parts.append(
-        "USDC, USDT, DAI 등 스테이블코인 기반 풀을 APY 기준으로 정렬한 결과입니다. "
-        "원금 가치 보존을 원하는 투자자에게 적합합니다.\n"
-    )
+    if stablecoin_pools:
+        _top_sc = stablecoin_pools[0]
+        content_parts.append(
+            f"TVL $1M↑ 스테이블코인 풀 {len(stablecoin_pools)}개 (USDC·USDT·DAI 등), APY 기준 정렬. "
+            f"최고 수익: {_top_sc.get('project', '')} {_top_sc.get('apy', 0):.1f}%.\n"
+        )
+    else:
+        content_parts.append(
+            "USDC·USDT·DAI 등 스테이블코인 기반 풀을 APY 기준으로 정렬한 결과입니다.\n"
+        )
     if stablecoin_pools:
         content_parts.append(_build_pool_table(stablecoin_pools))
     else:

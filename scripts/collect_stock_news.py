@@ -969,8 +969,8 @@ class StockNewsCollector(BaseCollector):
             )
         else:
             _desc_ko = (
-                f"{today} 주식 시장 뉴스 종합 — 총 {len(all_items)}건의 글로벌·한국 기사에서 "
-                "주요 동향과 투자 포인트를 정리합니다."
+                f"{today} 주식 시장 뉴스 종합 — 글로벌 {len(global_rows)}건·"
+                f"한국 {len(korean_rows)}건, 총 {len(all_items)}건 분석."
             )
 
         filepath = self.create_post(

@@ -584,7 +584,10 @@ class PoliticalTradesCollector(BaseCollector):
             source_parts.append(f"중앙은행 {cb_count}건")
         sources_str = ", ".join(source_parts) if source_parts else "데이터 없음"
 
-        content_parts.append("미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.")
+        content_parts.append(
+            f"**{self.today}** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 "
+            f"총 **{total_count}건** — {sources_str}."
+        )
 
         # Keyword analysis
         all_texts = " ".join(item.get("title", "") + " " + item.get("description", "") for item in unique_items).lower()

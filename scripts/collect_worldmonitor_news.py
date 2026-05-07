@@ -798,7 +798,11 @@ class WorldMonitorCollector(BaseCollector):
             "",
             "## 핵심 요약",
             f"- 수집 건수: **{total_items}건**",
-            "- 범위: 글로벌 지정학, 금융시장, 에너지 이슈",
+            (
+                f"- 범위: {', '.join(t for t, _ in theme_counter.most_common(3))}"
+                if theme_counter
+                else "- 범위: 글로벌 지정학, 금융시장, 에너지"
+            ),
             f"- 주요 출처: {top_sources}",
             "",
         ]

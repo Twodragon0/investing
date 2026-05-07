@@ -807,7 +807,17 @@ def build_post_content(
             1 if fred_data else 0,
         ]
     )
-    parts.append(f"**{today}** 기준 시장 심리·리스크 지표를 {source_count}개 소스에서 수집했습니다.\n")
+    _fg_str = (
+        f" 공포탐욕 {cnn_fg['score']}({_rating_to_korean(cnn_fg.get('rating', ''))})"
+        if cnn_fg
+        else ""
+    )
+    _vix_str = (
+        f", VIX {market_data['VIX']['price_fmt']}"
+        if market_data.get("VIX") and market_data["VIX"].get("price_fmt")
+        else ""
+    )
+    parts.append(f"**{today}** 기준 시장 지표{_fg_str}{_vix_str}. {source_count}개 소스 수집.\n")
 
     # Stat grid - key indicators at a glance
     stat_items = []

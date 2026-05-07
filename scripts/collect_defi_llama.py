@@ -639,10 +639,12 @@ def build_post_content(
     total_chain_tvl = sum(c.get("tvl", 0) or 0 for c in chains)
 
     # Introduction
+    _top_proto = protocols[0].get("name", "") if protocols else ""
     content_parts.append(
-        f"**{today}** DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked, 총 예치 자산) 현황을 정리합니다. "
-        f"상위 {len(protocols)}개 프로토콜의 총 TVL은 **{_format_tvl(total_protocol_tvl)}**이며, "
-        f"상위 {len(chains)}개 체인의 총 TVL은 **{_format_tvl(total_chain_tvl)}**입니다.\n"
+        f"**{today}** DeFi 생태계 TVL: 상위 {len(protocols)}개 프로토콜 "
+        f"**{_format_tvl(total_protocol_tvl)}**, "
+        f"상위 {len(chains)}개 체인 **{_format_tvl(total_chain_tvl)}**. "
+        f"{'1위 프로토콜: ' + _top_proto + '.' if _top_proto else ''}\n"
     )
 
     # 한눈에 보기 (stat-grid + alert-box)
