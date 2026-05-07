@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(python3 scripts/check_description_quality.py:*)",
+      "Bash(python3 scripts/check_post_images.py:*)",
+      "Bash(python3 scripts/tools/check_sitemap_local.py:*)",
+      "Bash(python3 scripts/tools/indexnow_submit.py:*)",
+      "Bash(python3 scripts/tools/gsc_api.py:*)",
+      "Bash(python3 scripts/tools/gsc_index_audit.py:*)",
+      "Bash(python3 -m ruff check:*)",
+      "Bash(bundle exec jekyll build:*)",
+      "Bash(bundle exec jekyll serve:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)",
+      "Bash(gh run list:*)",
+      "Bash(gh run view:*)",
+      "Bash(gh workflow list:*)"
+    ],
+    "deny": [
+      "Edit(_state/**)",
+      "Write(_state/**)",
+      "Edit(.env)",
+      "Write(.env)",
+      "Edit(_site/**)",
+      "Write(_site/**)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/protect-files.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "Agent",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/memory-guard.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/auto-lint-python.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
