@@ -27,6 +27,8 @@ scripts/           # Python 자동화 스크립트
                    #   geopolitical, blockchain)
   generate_*.py    # 요약 생성기 5개 (daily_summary, market_summary, weekly_digest,
                    #   og_images, ops_10am_digest)
+  tools/           # SEO/색인 도구 (gsc_api, gsc_index_audit, indexnow_submit,
+                   #   check_sitemap_local, postbuild_fix_feed_enclosures)
   respond_ai_mentions.py  # Slack 멘션 응답
 _posts/            # Jekyll 포스트 (자동 생성)
 _state/            # 중복 방지 상태 JSON (SHA256 해시 + fuzzy matching >80%)
@@ -62,6 +64,20 @@ bash scripts/server_morning_autopost.sh
 # 의존성 설치
 pip install -r scripts/requirements.txt
 bundle install
+
+# SEO/색인 도구
+python scripts/check_description_quality.py --days 7
+python scripts/check_post_images.py
+python scripts/tools/check_sitemap_local.py
+python scripts/tools/indexnow_submit.py --from-recent-posts 30
+
+# GSC 도구 (서비스 계정 필요)
+GOOGLE_APPLICATION_CREDENTIALS=/path/to/sa.json \
+  python scripts/tools/gsc_api.py submit-sitemap \
+  https://investing.2twodragon.com/sitemap-index.xml --confirm
+
+GOOGLE_APPLICATION_CREDENTIALS=/path/to/sa.json \
+  python scripts/tools/gsc_index_audit.py --from-sitemap
 ```
 
 ## Quick Skill Cheat Sheet
@@ -82,6 +98,34 @@ bundle install
 - 이미지 생성: `scripts/common/image_generator.py` (Pillow 기반, 한글 렌더링 지원)
 - API 타임아웃: 15초 (`REQUEST_TIMEOUT`)
 - SSL 인증서: certifi 우선, `DISABLE_SSL_VERIFY` 환경변수로 비활성화 가능
+
+## SEO Indexing Pipeline
+
+GSC 색인 가속 + IndexNow 즉시 통지 + sitemap 강화:
+
+```
+포스트 푸시 → Vercel 빌드 → 사이트 라이브
+                              ↓
+              ┌───────────────┴───────────────┐
+              ↓                               ↓
+        IndexNow 워크플로우           Submit-sitemap 잡 (deploy-pages)
+        (Bing/Yandex 즉시)         (GSC sitemap 재제출)
+              ↓                               ↓
+        api.indexnow.org            search.google.com/search-console
+```
+
+핵심 파일:
+- `sitemap.xml` (커스텀 Liquid) — priority/changefreq/last_modified_at 티어링
+- `f71a0af133e16771baeeb3c5e137d8df.txt` — IndexNow 키 검증 파일 (사이트 루트)
+- `scripts/tools/indexnow_submit.py` — IndexNow CLI (4가지 URL 모드)
+- `scripts/tools/gsc_api.py` — GSC URL Inspection / Search Analytics / sitemap submit
+- `scripts/tools/gsc_index_audit.py` — URL 일괄 감사 + 카테고리 집계
+- `scripts/tools/check_sitemap_local.py` — 로컬 sitemap 무결성 검사
+- `.github/workflows/indexnow-submit.yml` — 배포 후 자동 IndexNow ping
+
+요구 시크릿:
+- `GSC_SERVICE_ACCOUNT_JSON` (선택, 미설정 시 graceful skip) — Google Cloud 서비스 계정 JSON 본문
+- IndexNow 키는 공개 토큰이므로 시크릿 불필요
 
 ## Description Quality Pipeline
 
@@ -133,11 +177,13 @@ Slack 연동:
 
 ## Important Notes
 
-- `_state/*.json` 파일은 중복 방지 상태이므로 수동 수정 금지
+- `_state/*.json` 파일은 중복 방지 상태이므로 수동 수정 금지 (Claude 훅 `pre-commit-state-guard`가 커밋 시도 차단)
+- `.claude/settings.json`에 팀 공유 권한 + 5개 자동 훅 등록 (자세한 내용: `.claude/README.md`)
 - `assets/images/generated/`는 30일 이상 된 이미지 자동 정리됨
 - GitHub Actions는 동시성 그룹(`collect-data`)으로 순차 실행
 - 오전 9:10(KST) 자동 포스팅/품질 보정은 서버 크론(`server_morning_autopost.sh`)이 1차 책임
 - `generate-daily-summary.yml`, `generate-market-summary.yml`는 스케줄 대신 수동 실행(`workflow_dispatch`)으로 운영
+- 최근 SEO/환경 작업 정리: `docs/session-2026-05-07-seo-and-environment.md`
 
 ## Continuous Improvement Loop
 
