@@ -8,10 +8,11 @@
         "ext:ico": 26,
         "placeholder": 102,
         "ext:svg": 23,
-        "blank.": 32
+        "blank.": 32,
+        "beacon": 2
       }
     }
   },
   "since": "2026-04-23T08:54:23",
-  "last_seen": "2026-05-07T22:09:25"
+  "last_seen": "2026-05-07T22:41:16"
 }
