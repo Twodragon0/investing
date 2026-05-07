@@ -1,5 +1,5 @@
 ---
-name: investing-test-engineer
+name: test-engineer
 description: Test strategy for investing platform — collector tests, dedup verification, Jekyll build validation
 color: "#16a34a"
 emoji: 🧪

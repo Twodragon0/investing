@@ -1,5 +1,5 @@
 ---
-name: investing-architect
+name: architect
 description: Investing news platform architect — collector pipeline, Jekyll integration, workflow automation design
 color: "#1e40af"
 emoji: 🏛️
