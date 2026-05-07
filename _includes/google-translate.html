@@ -33,7 +33,7 @@
 </div>
 <!-- Hidden Google Translate Element -->
 <div id="google_translate_element" style="display:none;"></div>
-<!-- Google Translate: lazy-loaded on first interaction or non-Korean preference -->
+<!-- Google Translate: pre-loads on hover/focus, lazy-loads on click as fallback -->
 <script>
 (function() {
   var loaded = false;
@@ -47,10 +47,26 @@
     s.defer = true;
     document.body.appendChild(s);
   };
+  // Pre-load on hover/focus — user intent signal removes click latency
+  toggle.addEventListener('mouseenter', loadTranslate, { once: true, passive: true });
+  toggle.addEventListener('focusin', loadTranslate, { once: true, passive: true });
+  toggle.addEventListener('touchstart', loadTranslate, { once: true, passive: true });
   toggle.addEventListener('click', loadTranslate, { once: true, passive: true });
+  // Visual loading state during translation (set on lang-option click)
+  document.addEventListener('click', function(e) {
+    var opt = e.target.closest && e.target.closest('.lang-option');
+    if (opt && opt.getAttribute('data-lang') !== 'ko') {
+      document.documentElement.classList.add('translating');
+      setTimeout(function(){ document.documentElement.classList.remove('translating'); }, 8000);
+    }
+  }, { passive: true });
   try {
     var pref = localStorage.getItem('preferredLang');
     if (pref && pref !== 'system' && pref !== 'ko') { loadTranslate(); }
   } catch(e) {}
 })();
 </script>
+<style>
+html.translating::after{content:'';position:fixed;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#3b82f6,transparent);background-size:200% 100%;animation:translating-bar 1.2s linear infinite;z-index:9999;pointer-events:none}
+@keyframes translating-bar{0%{background-position:200% 0}100%{background-position:-200% 0}}
+</style>

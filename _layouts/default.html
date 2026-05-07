@@ -127,8 +127,10 @@
   <!-- Canonical & Hreflang -->
   <link rel="canonical" href="{{ og_url }}">
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-  <link rel="dns-prefetch" href="https://translate.google.com">
-  <link rel="dns-prefetch" href="https://translate.googleapis.com">
+  <link rel="preconnect" href="https://translate.google.com" crossorigin>
+  <link rel="preconnect" href="https://translate.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://translate-pa.googleapis.com" crossorigin>
   <link rel="preload" href="{{ '/assets/css/style.css' | relative_url }}" as="style">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"></noscript>
