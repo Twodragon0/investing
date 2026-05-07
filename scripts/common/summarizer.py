@@ -147,7 +147,8 @@ def _truncate_sentence(text: str, max_len: int = 300) -> str:
 def _favicon_url(link: str) -> str:
     """Return a Google Favicon API URL for the domain of *link*.
 
-    Falls back to empty string if the link cannot be parsed.
+    Falls back to empty string if the link cannot be parsed. Uses sz=128
+    for sharper rendering on retina displays.
     """
     if not link:
         return ""
@@ -157,10 +158,26 @@ def _favicon_url(link: str) -> str:
         parsed = urlparse(link)
         domain = parsed.netloc or parsed.hostname or ""
         if domain:
-            return f"https://www.google.com/s2/favicons?domain={domain}&sz=64"
+            return f"https://www.google.com/s2/favicons?domain={domain}&sz=128"
     except Exception:  # noqa: S110
         return ""
     return ""
+
+
+def _best_favicon_link(item: dict) -> str:
+    """Pick the best link for favicon extraction.
+
+    Prefers the resolved article URL (``original_url``) over the raw link,
+    so Google News redirect URLs use the actual publisher's favicon
+    (e.g., cnbc.com) instead of news.google.com's generic favicon.
+    """
+    original = item.get("original_url", "")
+    if original and "news.google.com" not in original and "google." not in original.split("/")[2:3][0:1]:
+        return original
+    link = item.get("link", "")
+    if link and "news.google.com" not in link:
+        return link
+    return original or link
 
 
 def _generate_title_based_desc(title: str, theme_key: str) -> str:
@@ -1270,7 +1287,8 @@ class ThemeSummarizer:
                             f"</div>"
                         )
                     elif link:
-                        fav = _favicon_url(link)
+                        fav_link = _best_favicon_link(article)
+                        fav = _favicon_url(fav_link or link)
                         if fav:
                             safe_fav = _esc(fav, quote=True)
                             card_parts.append(
@@ -1355,7 +1373,8 @@ class ThemeSummarizer:
                                 f' onerror="{onerr}"></span>'
                             )
                         elif lnk:
-                            fav = _favicon_url(lnk)
+                            fav_link = _best_favicon_link(item)
+                            fav = _favicon_url(fav_link or lnk)
                             if fav:
                                 safe_fav = _esc(fav, quote=True)
                                 thumb_html = (

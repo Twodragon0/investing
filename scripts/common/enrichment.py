@@ -766,6 +766,10 @@ def fetch_images_concurrent(
             link = original_url
         elif "news.google.com" in link:
             link = _resolve_google_news_url(link)
+            # Persist resolved URL back to item so favicon rendering and other
+            # downstream steps use the publisher's domain instead of news.google.com.
+            if link and "news.google.com" not in link:
+                item["original_url"] = link
         if not link:
             return idx, ""
         return idx, _fetch_og_image(link)
@@ -837,6 +841,8 @@ def fetch_descriptions_concurrent(
             link = original_url
         elif "news.google.com" in link:
             link = _resolve_google_news_url(link)
+            if link and "news.google.com" not in link:
+                item["original_url"] = link
         if not link:
             return idx, ""
         metadata = fetch_page_metadata(link, title=item.get("title", ""))
