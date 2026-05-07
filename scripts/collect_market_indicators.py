@@ -1287,7 +1287,10 @@ class MarketIndicatorsCollector(BaseCollector):
         _desc_ko = f"시장 지표 {preview_source_count}개 소스 수집. "
         if _desc_parts_mi:
             _desc_ko += f"{', '.join(_desc_parts_mi)}. "
-        _desc_ko += "공포탐욕지수·VIX·국채금리 등 핵심 시장 센티먼트 지표를 분석합니다."
+        _10y = self._market_data.get("US10Y", {}).get("price_fmt", "") if self._market_data else ""
+        if _10y:
+            _desc_ko += f"미국 10년물 {_10y}."
+        _desc_ko = _desc_ko[:160]
 
         filepath = self.create_post(
             title=post_title,

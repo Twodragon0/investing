@@ -549,7 +549,13 @@ class FmpCalendarCollector(BaseCollector):
         _desc_ko = f"경제 캘린더 {total_items}건 수집. "
         if _desc_parts_fmp:
             _desc_ko += f"{', '.join(_desc_parts_fmp)} 포함. "
-        _desc_ko += "FMP API 기반 주요 경제 이벤트·실적·국채 금리를 정리합니다."
+        _next_event = economic_events[0].get("name", "")[:30] if economic_events else ""
+        _next_earn = earnings[0].get("name", "")[:20] if earnings else ""
+        if _next_event:
+            _desc_ko += f"주목 이벤트: {_next_event}."
+        elif _next_earn:
+            _desc_ko += f"주목 실적: {_next_earn} 등."
+        _desc_ko = _desc_ko[:160]
 
         filepath = self.create_post(
             title=post_title,

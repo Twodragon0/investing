@@ -507,7 +507,14 @@ class PoliticalTradesCollector(BaseCollector):
         _desc_ko = f"정치인 거래·정책 동향 {total_count}건 수집. "
         if _desc_parts:
             _desc_ko += f"{', '.join(_desc_parts)}. "
-        _desc_ko += "의회·SEC 내부자 거래 및 정책 이벤트를 모니터링합니다."
+        _top_ticker = (
+            Counter(i.get("ticker", "") for i in unique_items if i.get("ticker")).most_common(1)
+            if unique_items
+            else []
+        )
+        if _top_ticker:
+            _desc_ko += f"최다 거래 종목: {_top_ticker[0][0]}."
+        _desc_ko = _desc_ko[:160]
 
         # Build excerpt
         excerpt_parts = []

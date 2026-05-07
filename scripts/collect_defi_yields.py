@@ -377,12 +377,15 @@ class DefiYieldsCollector(BaseCollector):
         top_stable_apy = categories["stablecoin"][0].get("apy", 0) if categories["stablecoin"] else 0
         avg_apy = sum(p.get("apy") or 0 for p in pools) / len(pools) if pools else 0
 
+        _top_eth = categories.get("eth", [{}])[0].get("project", "") if categories.get("eth") else ""
         _desc_ko = (
             f"DeFi 수익률 리포트: TVL $1M 이상 풀 {len(pools)}개 기준. "
             f"스테이블코인 TOP APY {top_stable_apy:.1f}% ({top_stable_project}), "
-            f"전체 평균 APY {avg_apy:.1f}%. "
-            "스테이블코인·ETH·BTC 카테고리별 최고 수익률 프로토콜을 분석합니다."
+            f"전체 평균 APY {avg_apy:.1f}%."
         )
+        if _top_eth:
+            _desc_ko += f" ETH TOP: {_top_eth}."
+        _desc_ko = _desc_ko[:160]
 
         # Create post via PostGenerator directly (need source_url param)
         filepath = self.post_gen.create_post(

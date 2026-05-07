@@ -1240,13 +1240,25 @@ class CoinMarketCapCollector(BaseCollector):
                 )
                 _desc_ko = f"BTC ${_btc_price:,.0f} (24h {_btc_ch24:+.1f}%)"
             else:
-                _desc_ko = "크립토 시장 리포트"
+                _total_mc = (
+                    global_data.get("total_market_cap", {}).get("usd", 0)
+                    if global_data
+                    else 0
+                )
+                if _total_mc:
+                    _desc_ko = (
+                        f"크립토 총 시가총액 ${_total_mc / 1e12:.2f}T, "
+                        f"상위 {len(top_coins)}개 코인 분석"
+                    )
+                else:
+                    _desc_ko = f"크립토 시장 상위 {len(top_coins)}개 코인 분석"
             if _fg_val != "N/A":
                 _desc_ko += f". 공포·탐욕 지수: {_fg_val}/100 ({_fg_label})"
             _btc_dom = global_data.get("market_cap_percentage", {}).get("btc", 0) if global_data else 0
             if _btc_dom:
                 _desc_ko += f", BTC 도미넌스 {_btc_dom:.1f}%"
             _desc_ko += f". 상위 {len(top_coins)}개 코인 분석."
+            _desc_ko = _desc_ko[:160]
 
             filepath = self.create_post(
                 title=title,

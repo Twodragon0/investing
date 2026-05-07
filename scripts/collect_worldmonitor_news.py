@@ -1051,7 +1051,12 @@ class WorldMonitorCollector(BaseCollector):
             _desc_ko += f"{', '.join(_top_themes)} 등 주요 테마 분석. "
         if _headline_titles:
             _desc_ko += f"{'; '.join(_headline_titles)} 등 핵심 이슈 포함. "
-        _desc_ko += f"GDELT·Polymarket 등 {len(source_counter)}개 소스 기반 지정학·에너지·금융 동향."
+        _top_src = source_counter.most_common(1)[0][0] if source_counter else ""
+        if _top_src:
+            _desc_ko += f"주요 출처: {_top_src} 등 {len(source_counter)}개 소스."
+        else:
+            _desc_ko += f"{len(source_counter)}개 소스 기반 분석."
+        _desc_ko = _desc_ko[:160]
 
         wm_site_url = get_url("worldmonitor_news", "wm_site", "https://worldmonitor.app")
 

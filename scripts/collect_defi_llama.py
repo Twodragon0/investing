@@ -1081,7 +1081,10 @@ class DefiLlamaCollector(BaseCollector):
         _desc_ko = f"DeFi 프로토콜 {len(protocols)}개, 블록체인 {len(chains)}개 기준 TVL 현황. "
         if _top3:
             _desc_ko += f"상위: {_top3}. "
-        _desc_ko += "프로토콜별 예치 자산과 체인 점유율을 분석합니다."
+        _top_chain = chains[0].get("name", "") if chains else ""
+        if _top_chain:
+            _desc_ko += f"선두 체인: {_top_chain}."
+        _desc_ko = _desc_ko[:160]
 
         # Create post
         image_frontmatter = chart_path if chart_path else ""

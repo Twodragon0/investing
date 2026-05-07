@@ -915,7 +915,12 @@ class GeopoliticalCollector(BaseCollector):
                 1 if google_news_items else 0,
             ]
         )
-        _desc_ko += f"Polymarket·GDELT·뉴스 {source_count}개 소스에서 분쟁·제재·무역 리스크를 분석합니다."
+        _top_market = markets[0].get("question", "")[:40] if markets else ""
+        if _top_market:
+            _desc_ko += f"주목 시장: {_top_market}."
+        else:
+            _desc_ko += f"{source_count}개 소스 기반 분석."
+        _desc_ko = _desc_ko[:160]
 
         # Create post
         filepath = self.create_post(
