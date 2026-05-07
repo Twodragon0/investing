@@ -101,15 +101,36 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Check GSC credentials secret
+        id: gsc-check
+        env:
+          GSC_CREDS: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+        run: |
+          if [ -z "$GSC_CREDS" ]; then
+            echo "GSC_SERVICE_ACCOUNT_JSON secret is not configured — skipping sitemap submission."
+            echo "available=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Install GSC dependencies
+        if: steps.gsc-check.outputs.available == 'true'
         run: pip install google-api-python-client google-auth
 
       - name: Write service account credentials
+        if: steps.gsc-check.outputs.available == 'true'
         env:
           GSC_CREDS: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
-        run: echo "$GSC_CREDS" > /tmp/gsc-creds.json
+        run: |
+          printf '%s' "$GSC_CREDS" > /tmp/gsc-creds.json
+          if ! python3 -c "import json,sys; json.load(open('/tmp/gsc-creds.json'))"; then
+            echo "::warning::GSC_SERVICE_ACCOUNT_JSON is not valid JSON — sitemap submission will be skipped."
+            rm -f /tmp/gsc-creds.json
+            exit 0
+          fi
 
       - name: Submit sitemap-index to Google Search Console
+        if: steps.gsc-check.outputs.available == 'true' && hashFiles('/tmp/gsc-creds.json') != ''
         continue-on-error: true
         env:
           GOOGLE_APPLICATION_CREDENTIALS: /tmp/gsc-creds.json
@@ -117,6 +138,7 @@ jobs:
         run: python scripts/tools/gsc_api.py submit-sitemap https://investing.2twodragon.com/sitemap-index.xml --confirm
 
       - name: Submit sitemap.xml to Google Search Console
+        if: steps.gsc-check.outputs.available == 'true' && hashFiles('/tmp/gsc-creds.json') != ''
         continue-on-error: true
         env:
           GOOGLE_APPLICATION_CREDENTIALS: /tmp/gsc-creds.json
