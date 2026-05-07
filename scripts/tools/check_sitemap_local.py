@@ -22,8 +22,8 @@ import sys
 from pathlib import Path
 from urllib.parse import urlparse
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common.config import setup_logging  # noqa: E402
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "common"))
+from config import setup_logging  # noqa: E402
 
 logger = setup_logging("check_sitemap_local")
 

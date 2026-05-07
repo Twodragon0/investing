@@ -53,8 +53,8 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common.config import REQUEST_TIMEOUT, get_env, setup_logging  # noqa: E402
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "common"))
+from config import REQUEST_TIMEOUT, get_env, setup_logging  # noqa: E402
 
 logger = setup_logging("gsc_index_audit")
 

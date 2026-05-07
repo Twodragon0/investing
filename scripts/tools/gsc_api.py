@@ -49,9 +49,11 @@ from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
-# Use shared helpers per scripts/AGENTS.md guardrails.
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common.config import get_env, setup_logging  # noqa: E402
+# Use shared helpers per scripts/AGENTS.md guardrails. Import config.py
+# directly to avoid triggering common/__init__.py's heavy collector imports
+# (requests, lxml, etc.) which the GSC workflow does not install.
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "common"))
+from config import get_env, setup_logging  # noqa: E402
 
 logger = setup_logging("gsc_api")
 

@@ -39,9 +39,11 @@ from pathlib import Path
 from typing import Optional
 from xml.etree import ElementTree
 
-# Allow imports from scripts/common/ regardless of cwd
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common.config import REQUEST_TIMEOUT, get_env, setup_logging  # noqa: E402
+# Import config.py directly without going through common/__init__.py — keeps
+# this tool stdlib-only so the IndexNow workflow does not need to install the
+# heavy collector dependency tree (requests, lxml, playwright, etc.).
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "common"))
+from config import REQUEST_TIMEOUT, get_env, setup_logging  # noqa: E402
 
 logger = setup_logging("indexnow_submit")
 
