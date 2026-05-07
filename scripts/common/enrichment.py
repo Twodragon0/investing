@@ -672,8 +672,9 @@ def _fetch_og_image(url: str, timeout: int = 8) -> str:
         )
         resp.raise_for_status()
         force_utf8_if_mislabelled(resp)
-        # Search first 30KB only — meta tags live in <head>
-        head_html = resp.text[:30_000]
+        # Search first 60KB — modern sites often have bloated <head> with many
+        # script/link tags before the image meta tags.
+        head_html = resp.text[:60_000]
 
         def _accept(img_url: str) -> bool:
             img_url = img_url.strip()
@@ -703,6 +704,21 @@ def _fetch_og_image(url: str, timeout: int = 8) -> str:
         )
         if link_match and _accept(link_match.group(1)):
             return link_match.group(1).strip()
+
+        # JSON-LD schema.org image (modern publisher pattern)
+        for ld_match in re.finditer(
+            r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+            head_html,
+            re.IGNORECASE | re.DOTALL,
+        ):
+            ld_text = ld_match.group(1)
+            for img_match in re.finditer(
+                r'"image"\s*:\s*(?:"([^"]+)"|\{[^{}]*"url"\s*:\s*"([^"]+)")',
+                ld_text,
+            ):
+                candidate = (img_match.group(1) or img_match.group(2) or "").strip()
+                if candidate and _accept(candidate):
+                    return candidate
     except Exception as exc:
         logger.debug("og:image fetch failed for %s: %s", url, exc)
     return ""
@@ -1961,9 +1977,8 @@ def enrich_items(
         )
 
     # --- Image fetch pass (concurrent og:image for items missing images) ---
-    # Raised from 30 → 60 so the first ~20 cards per theme (top-3 × ~6 themes)
-    # never degrade to favicon fallback when RSS lacks an article image.
-    fetch_images_concurrent(items, max_workers=8, max_items=60)
+    # Budget covers digest size (top + overflow ~150 items).
+    fetch_images_concurrent(items, max_workers=8, max_items=120)
 
     # --- Description enrichment pass (concurrent fetch for synthetic descriptions) ---
     if fetch_url:
