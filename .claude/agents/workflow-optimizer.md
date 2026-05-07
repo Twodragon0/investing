@@ -5,7 +5,7 @@ tools: Read, Grep, Glob, Bash, Edit, Write
 model: sonnet
 memory: user
 maxTurns: 20
-vibe: efficiency-architect
+vibe: "efficiency-architect"
 color: "#1A3C5E"
 emoji: "⚙️"
 ---

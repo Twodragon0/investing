@@ -7,7 +7,7 @@ model: sonnet
 permissionMode: plan
 maxTurns: 10
 memory: project
-vibe: meticulous-auditor
+vibe: "meticulous-auditor"
 color: "#5C4033"
 emoji: "🔍"
 ---

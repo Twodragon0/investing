@@ -4,7 +4,7 @@ description: Lead agent for investing project. Coordinates collector development
 tools: Read, Grep, Glob, Bash, Write, Edit, Agent
 model: opus
 memory: user
-vibe: strategic-commander
+vibe: "strategic-commander"
 color: "#1E3A5F"
 emoji: "🏦"
 ---

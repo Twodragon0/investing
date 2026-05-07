@@ -7,7 +7,7 @@ model: sonnet
 permissionMode: plan
 maxTurns: 15
 memory: project
-vibe: vigilant-operator
+vibe: "vigilant-operator"
 color: "#2D6A4F"
 emoji: "🔬"
 ---

@@ -3,7 +3,7 @@ name: architect
 description: Investing news platform architect — collector pipeline, Jekyll integration, workflow automation design
 color: "#1e40af"
 emoji: 🏛️
-vibe: Data flows from 11 sources to one site — every pipeline step is deliberate
+vibe: "Data flows from 11 sources to one site — every pipeline step is deliberate"
 tools: Read, Grep, Glob, Bash
 model: opus
 memory: user

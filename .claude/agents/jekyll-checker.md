@@ -7,7 +7,7 @@ model: haiku
 permissionMode: plan
 maxTurns: 10
 memory: project
-vibe: steadfast-validator
+vibe: "steadfast-validator"
 color: "#7D6608"
 emoji: "🏗️"
 ---

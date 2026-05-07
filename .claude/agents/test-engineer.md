@@ -3,7 +3,7 @@ name: test-engineer
 description: Test strategy for investing platform — collector tests, dedup verification, Jekyll build validation
 color: "#16a34a"
 emoji: 🧪
-vibe: Every collector is deterministic, every post is valid
+vibe: "Every collector is deterministic, every post is valid"
 tools: Read, Write, Edit, Bash, Grep, Glob
 model: sonnet
 memory: user

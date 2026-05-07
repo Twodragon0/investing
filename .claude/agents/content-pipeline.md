@@ -6,7 +6,7 @@ model: sonnet
 memory: user
 maxTurns: 20
 permissionMode: default
-vibe: precise-publisher
+vibe: "precise-publisher"
 color: "#4A235A"
 emoji: "✍️"
 ---

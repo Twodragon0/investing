@@ -7,7 +7,7 @@ model: sonnet
 permissionMode: plan
 maxTurns: 10
 memory: project
-vibe: relentless-investigator
+vibe: "relentless-investigator"
 color: "#922B21"
 emoji: "🔧"
 ---
