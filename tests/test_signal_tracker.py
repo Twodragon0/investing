@@ -302,7 +302,8 @@ class TestAccuracyReport:
             },
         ]
         tracker._entries = entries
-        report = tracker.accuracy_report()
+        # Wide lookback so 2026-03-* fixtures stay within window as wall clock advances.
+        report = tracker.accuracy_report(lookback_days=10_000)
         assert report.total_predictions == 3
         assert report.correct_predictions == 2
         assert abs(report.win_rate - 2 / 3) < 0.001
@@ -324,7 +325,7 @@ class TestAccuracyReport:
             },
         ]
         tracker._entries = entries
-        report = tracker.accuracy_report()
+        report = tracker.accuracy_report(lookback_days=10_000)
         assert "강세" in report.by_verdict
         assert report.by_verdict["강세"]["win_rate"] == 1.0
         assert report.by_verdict["약세"]["win_rate"] == 0.0
@@ -367,7 +368,8 @@ class TestGetHistory:
 
     def test_returns_snapshots(self, tracker):
         tracker.record(make_composite_result(), date="2026-03-27")
-        history = tracker.get_history(days=30)
+        # Wide window so the fixed 2026-03 date is always inside lookback.
+        history = tracker.get_history(days=10_000)
         assert len(history) == 1
         assert isinstance(history[0], SignalSnapshot)
 
@@ -410,7 +412,7 @@ class TestFormatAccuracySummary:
                 },
             },
         ]
-        summary = tracker.format_accuracy_summary()
+        summary = tracker.format_accuracy_summary(lookback_days=10_000)
         assert "신호 예측 정확도" in summary
         assert "승률" in summary
         assert "강세" in summary
@@ -430,6 +432,6 @@ class TestFormatAccuracySummary:
                 },
             },
         ]
-        summary = tracker.format_accuracy_summary()
+        summary = tracker.format_accuracy_summary(lookback_days=10_000)
         # 마크다운 테이블 헤더 포함 여부
         assert "|" in summary

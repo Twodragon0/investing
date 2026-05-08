@@ -146,9 +146,11 @@ class TestFaviconUrl:
         assert "google.com/s2/favicons" in result
         assert "coindesk.com" in result
 
-    def test_includes_sz_64(self):
+    def test_includes_sz_128(self):
+        # Quality bumped from 64px to 128px in commit e6c37136 — test renamed
+        # and assertion updated to match the new resolution.
         result = _favicon_url("https://cointelegraph.com/news/btc")
-        assert "sz=64" in result
+        assert "sz=128" in result
 
     def test_domain_extracted_correctly(self):
         result = _favicon_url("https://www.bloomberg.com/crypto/2026")
