@@ -1,7 +1,7 @@
 """Common utilities for Investing Dragon news collectors."""
 
 from .base_collector import BaseCollector
-from .config import get_env, get_env_bool
+from .config import REQUEST_TIMEOUT, get_env, get_env_bool, setup_logging
 from .crypto_api import (
     fetch_coingecko_global,
     fetch_coingecko_top_coins,
@@ -39,8 +39,10 @@ except ImportError:
 
 __all__ = [
     "BaseCollector",
+    "REQUEST_TIMEOUT",
     "get_env",
     "get_env_bool",
+    "setup_logging",
     "DedupEngine",
     "PostGenerator",
     "sanitize_string",

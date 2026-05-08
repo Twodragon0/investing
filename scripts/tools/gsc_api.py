@@ -189,7 +189,7 @@ def cmd_analytics(args: argparse.Namespace) -> int:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
-        description=__doc__.split("\n", 1)[0],
+        description=(__doc__ or "").split("\n", 1)[0],
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     parser.add_argument(

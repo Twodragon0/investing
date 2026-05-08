@@ -45,7 +45,7 @@ def url_to_disk_path(url: str, base_url: str, site_root: Path) -> Path:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__.split("\n", 1)[0])
+    parser = argparse.ArgumentParser(description=(__doc__ or "").split("\n", 1)[0])
     parser.add_argument("--site", default=DEFAULT_SITE)
     parser.add_argument("--base-url", default=DEFAULT_BASE)
     parser.add_argument(
