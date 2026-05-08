@@ -45,6 +45,14 @@
     var s = document.createElement('script');
     s.src = '{{ "/assets/js/google-translate.js" | relative_url }}?v={{ site.time | date: "%Y%m%d%H%M" }}';
     s.defer = true;
+    // 로컬 스크립트 로드 직후 Google Translate API도 즉시 프리로드 (reload 없이 in-place 전환)
+    s.onload = function() {
+      try {
+        if (typeof window.__preloadGoogleTranslate === 'function') {
+          window.__preloadGoogleTranslate();
+        }
+      } catch (e) {}
+    };
     document.body.appendChild(s);
   };
   // Pre-load on hover/focus — user intent signal removes click latency

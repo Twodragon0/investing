@@ -300,6 +300,13 @@ function googleTranslateElementInit() {
     document.head.appendChild(script);
   }
 
+  // Expose preload trigger for hover-based eager loading from inline script.
+  // 호버 시 Google Translate API를 미리 받아두면 클릭 시 reload 없이 in-place 전환 가능.
+  window.__preloadGoogleTranslate = function() {
+    if (translateScriptLoaded) return;
+    loadTranslateScript();
+  };
+
   function initLangToggle() {
     var langToggle = document.getElementById('lang-toggle');
     var langDropdown = document.getElementById('lang-dropdown');
@@ -561,7 +568,7 @@ function googleTranslateElementInit() {
       safeSessionStorageSet('langChanging', 'false');
       safeSessionStorageSet('langApplied', 'true');
 
-      // 5. URL 해시에서 googtrans 제거 후 클린 리로드
+      // 5. URL 해시에서 googtrans 제거 후 클린 리로드 (cookie 커밋 안전 마진 80ms)
       setTimeout(function() {
         var cleanUrl = location.href.replace(/#googtrans\([^)]*\)/g, '').replace(/#$/, '');
         if (cleanUrl !== location.href) {
@@ -569,7 +576,7 @@ function googleTranslateElementInit() {
         } else {
           location.reload();
         }
-      }, 200);
+      }, 80);
       return;
     }
 
@@ -604,18 +611,18 @@ function googleTranslateElementInit() {
           }
         }, 500);
       } catch (e) {
-        // 이벤트 디스패치 실패 시 리로드
+        // 이벤트 디스패치 실패 시 리로드 (cookie 커밋 안전 마진 60ms)
         setTimeout(function() {
           location.reload();
-        }, 150);
+        }, 60);
       }
     } else {
-      // 쿠키 설정 후 짧은 지연 후 리로드 (쿠키가 확실히 설정되도록)
+      // 쿠키 설정 후 짧은 지연 후 리로드 (cookie 커밋 안전 마진 60ms)
       safeSessionStorageSet('langChanging', 'false');
       safeSessionStorageSet('langApplied', 'true');
       setTimeout(function() {
         location.reload();
-      }, 150);
+      }, 60);
     }
   }
 
