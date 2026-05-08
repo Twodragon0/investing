@@ -19,6 +19,7 @@ emulation.
 from __future__ import annotations
 
 import re
+from typing import Any
 
 import pytest
 from playwright.sync_api import BrowserContext, Page, expect
@@ -108,13 +109,22 @@ def test_s1_hover_click_in_place(
 
 @pytest.mark.i18n_e2e
 def test_s2_race_condition_single_script(page: Page, base_url: str) -> None:
-    """S2: hover then click within ~50ms — script tag must inject only once.
+    """S2: hover then click within ~50ms — element.js must be fetched only once.
 
     The hover handler and the lazy click handler both call ``loadTranslate``;
-    the once-flag must dedupe so we only see a single GT element script in
-    the DOM. A duplicate inject would race two concurrent translation
-    initializations and corrupt state.
+    the once-flag must dedupe so we only see a single GT element bootstrap
+    fetch. Counting network requests is more robust than counting DOM script
+    elements, because Google Translate may detach/replace the bootstrap
+    script after initialization (timing-dependent DOM count is flaky).
     """
+    element_js_requests: list[str] = []
+
+    def _on_request(request: Any) -> None:
+        if "translate_a/element.js" in request.url:
+            element_js_requests.append(request.url)
+
+    page.on("request", _on_request)
+
     page.goto(f"{base_url}/", wait_until="domcontentloaded")
 
     toggle = page.locator("#lang-toggle")
@@ -129,13 +139,15 @@ def test_s2_race_condition_single_script(page: Page, base_url: str) -> None:
     expect(en_option).to_be_visible(timeout=2_000)
     en_option.click()
 
-    # Wait until the toggle label reflects EN — this guarantees the GT
-    # script chain has had time to attach.
+    # Wait until the toggle label reflects EN — guarantees GT chain attached.
     expect(page.locator("#current-lang")).to_have_text("EN", timeout=10_000)
 
-    # Critical invariant: only one GT element script in the DOM.
-    scripts = page.locator('script[src*="translate_a/element.js"]')
-    assert scripts.count() == 1, f"expected exactly 1 GT element script after race, got {scripts.count()}"
+    # Critical invariant: bootstrap script is fetched exactly once even when
+    # hover + click race; the existingScript guard in loadTranslateScript
+    # must dedupe duplicate inject attempts.
+    assert len(element_js_requests) == 1, (
+        f"expected 1 GT element.js fetch under race, got {len(element_js_requests)}: {element_js_requests}"
+    )
 
 
 @pytest.mark.i18n_e2e
