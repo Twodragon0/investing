@@ -76,3 +76,30 @@ def browser_context_args(browser_context_args: dict) -> dict:
         "locale": "ko-KR",
         "timezone_id": "Asia/Seoul",
     }
+
+
+def wait_lang_toggle_ready(page, hover_first: bool = True, timeout_ms: int = 5_000) -> None:
+    """Ensure ``google-translate.js`` has loaded and ``initLangToggle`` has bound.
+
+    The site lazy-loads ``assets/js/google-translate.js`` on the first
+    ``mouseenter``/``focusin``/``touchstart``/``click`` of ``#lang-toggle``.
+    Without this wait, Playwright's first ``click`` can fire before the
+    dropdown-open click handler is attached (the IIFE schedules
+    ``initLangToggle`` via ``setTimeout(..., 100)``), so the dropdown
+    silently fails to open and ``.lang-option`` stays hidden.
+
+    Most callers should ``hover_first=True``: hover triggers the script
+    fetch without consuming the click. For keyboard-only flows pass
+    ``hover_first=False`` and call ``page.focus("#lang-toggle")`` before this
+    helper — focusin also triggers the lazy load.
+    """
+    if hover_first:
+        page.hover("#lang-toggle")
+    # Wait for the IIFE to expose its preload trigger; that proves the
+    # script has executed and the click handler binding is imminent.
+    page.wait_for_function(
+        "typeof window.__preloadGoogleTranslate === 'function'",
+        timeout=timeout_ms,
+    )
+    # Cover the IIFE's setTimeout(initLangToggle, 100) grace.
+    page.wait_for_timeout(150)

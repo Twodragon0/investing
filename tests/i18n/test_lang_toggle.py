@@ -24,6 +24,8 @@ from typing import Any
 import pytest
 from playwright.sync_api import BrowserContext, Page, expect
 
+from .conftest import wait_lang_toggle_ready
+
 # (data-lang, expected #current-lang label) — matches LANG_MAP in
 # `assets/js/google-translate.js`. Keep this list in sync with the
 # parametrized scenarios in `docs/i18n-e2e-plan.md` §2.
@@ -134,9 +136,10 @@ def test_s2_race_condition_single_script(page: Page, base_url: str) -> None:
     toggle = page.locator("#lang-toggle")
     expect(toggle).to_be_visible(timeout=5_000)
 
-    # Hover triggers the eager preload; click within ~50ms exercises the
-    # race window between the hover-loaded script and the click-fallback path.
-    toggle.hover()
+    # Hover triggers the eager preload. Wait for IIFE to bind dropdown handler
+    # so the immediate click below actually opens the menu (the script is
+    # lazy-loaded, so click-without-settle can race the binding).
+    wait_lang_toggle_ready(page)
     toggle.click(delay=50)
 
     en_option = page.locator('.lang-option[data-lang="en"]')

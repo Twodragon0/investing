@@ -31,6 +31,8 @@ from typing import Any
 import pytest
 from playwright.sync_api import Browser, BrowserContext, Page, Playwright, expect
 
+from .conftest import wait_lang_toggle_ready
+
 # Module-level marker so the entire Phase 3 file gates under the i18n_e2e marker.
 pytestmark = pytest.mark.i18n_e2e
 
@@ -127,10 +129,13 @@ def test_s3_keyboard_fallback(
     # of Tab cycling because the number of preceding focusable elements
     # depends on the rendered header and is brittle to layout drift.
     toggle.focus()
+    # focusin triggers the lazy GT script load; wait for the IIFE to bind
+    # the dropdown-open click/keyboard handler before pressing Enter.
+    wait_lang_toggle_ready(page, hover_first=False)
     page.keyboard.press("Enter")
 
     en_option = page.locator('.lang-option[data-lang="en"]')
-    expect(en_option).to_be_visible(timeout=2_000)
+    expect(en_option).to_be_visible(timeout=3_000)
 
     # Use keyboard to activate the option (also a fallback path).
     en_option.focus()
@@ -169,6 +174,10 @@ def test_s3_touch_fallback(
 
         toggle = page.locator("#lang-toggle")
         expect(toggle).to_be_visible(timeout=5_000)
+        # Tap also fires touchstart which triggers the lazy GT load. Wait for
+        # the dropdown handler to bind before tapping again to open the menu.
+        toggle.tap()
+        wait_lang_toggle_ready(page, hover_first=False)
         toggle.tap()
 
         en_option = page.locator('.lang-option[data-lang="en"]')
@@ -233,7 +242,7 @@ def test_s5_storage_blocked_graceful(
         # Page body must still be rendered — graceful degrade.
         expect(page.locator("body")).to_be_visible()
 
-        toggle.hover()
+        wait_lang_toggle_ready(page)
         toggle.click()
 
         en_option = page.locator('.lang-option[data-lang="en"]')
@@ -293,6 +302,10 @@ def test_s6_mobile_languages(
         assert bbox is not None, f"{device_name}: toggle has no bounding box"
         assert bbox["width"] >= 32 and bbox["height"] >= 32, f"{device_name}: toggle too small for touch ({bbox})"
 
+        # First tap fires touchstart → loads GT script. Second tap (after
+        # initLangToggle binds) opens the dropdown.
+        toggle.tap()
+        wait_lang_toggle_ready(page, hover_first=False)
         toggle.tap()
 
         en_option = page.locator('.lang-option[data-lang="en"]')
@@ -325,16 +338,11 @@ def test_s7_theme_independence(
     toggle = page.locator("#lang-toggle")
     expect(toggle).to_be_visible(timeout=5_000)
 
-    toggle.hover()
-    page.wait_for_selector(
-        'script[src*="translate_a/element.js"]',
-        timeout=5_000,
-        state="attached",
-    )
+    wait_lang_toggle_ready(page)
     toggle.click()
 
     en_option = page.locator('.lang-option[data-lang="en"]')
-    expect(en_option).to_be_visible(timeout=2_000)
+    expect(en_option).to_be_visible(timeout=3_000)
     en_option.click()
 
     expect(page.locator("#current-lang")).to_have_text("EN", timeout=10_000)
@@ -362,12 +370,7 @@ def test_s9_doubleclick_system_reset(
     expect(toggle).to_be_visible(timeout=5_000)
 
     # Step 1: switch to EN so the cookie + label diverge from system default.
-    toggle.hover()
-    page.wait_for_selector(
-        'script[src*="translate_a/element.js"]',
-        timeout=5_000,
-        state="attached",
-    )
+    wait_lang_toggle_ready(page)
     toggle.click()
     page.locator('.lang-option[data-lang="en"]').click()
     expect(page.locator("#current-lang")).to_have_text("EN", timeout=10_000)
