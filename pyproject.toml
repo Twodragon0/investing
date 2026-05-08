@@ -62,6 +62,11 @@ relative_files = true
 
 [tool.pytest.ini_options]
 addopts = "--cov=scripts --cov-fail-under=55"
+# pytest-timeout 'thread' method — signal 기반(default)은 Playwright sync API의
+# C extension(GIL hold) 안에서 SIGALRM이 무시되는 케이스가 있어 대기가 무한 연장.
+# i18n-e2e CI run 25563884706에서 S3 touch가 22분 행 → workflow timeout.
+# thread 방식은 별도 타이머 스레드로 강제 종료해 Playwright wait도 신뢰성 있게 컷.
+timeout_method = "thread"
 markers = [
     "i18n_e2e: Playwright-driven end-to-end tests for the language toggle (tests/i18n/). Requires a running Jekyll preview at I18N_E2E_BASE_URL.",
 ]
