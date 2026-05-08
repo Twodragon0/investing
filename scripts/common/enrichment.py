@@ -23,6 +23,7 @@ logger = logging.getLogger(__name__)
 # Public API — names documented for import by collectors and renderers.
 # Names prefixed with _ remain internal helpers (shared via explicit import only).
 __all__ = [
+    "MAX_IMAGES_PER_DIGEST",
     "enrich_item",
     "enrich_items",
     "fetch_descriptions_concurrent",
@@ -35,6 +36,10 @@ __all__ = [
     "match_bad_image_pattern",
     "match_logo_pattern",
 ]
+
+# Maximum og:image fetch count per enrich_items call.
+# Digest size is typically top (~100) + overflow (~50) ≈ 150 items; 120 covers the bulk.
+MAX_IMAGES_PER_DIGEST = 120
 
 # Cache for resolved Google News URLs to avoid redundant lookups
 _gnews_url_cache: Dict[str, str] = {}
@@ -1984,7 +1989,7 @@ def enrich_items(
 
     # --- Image fetch pass (concurrent og:image for items missing images) ---
     # Budget covers digest size (top + overflow ~150 items).
-    fetch_images_concurrent(items, max_workers=8, max_items=120)
+    fetch_images_concurrent(items, max_workers=8, max_items=MAX_IMAGES_PER_DIGEST)
 
     # --- Description enrichment pass (concurrent fetch for synthetic descriptions) ---
     if fetch_url:

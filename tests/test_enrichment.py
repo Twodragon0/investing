@@ -7,6 +7,7 @@ import pytest
 import common.enrichment as _enrichment_mod
 from common.enrichment import (
     _NOISE_DESC_PATTERNS,
+    MAX_IMAGES_PER_DIGEST,
     _analyze_korean_title,
     _analyze_title_content,
     _clean_meta_description,
@@ -1722,7 +1723,7 @@ class TestEnrichItems:
             patch("common.translator.save_translation_cache"),
         ):
             enrich_items([], fetch_url=False)
-            mock_img.assert_called_once_with([], max_workers=8, max_items=120)
+            mock_img.assert_called_once_with([], max_workers=8, max_items=MAX_IMAGES_PER_DIGEST)
 
     def test_items_enriched_in_place(self):
         """All items should be processed."""
