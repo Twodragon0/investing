@@ -1,39 +1,5 @@
 {
   "seen": {
-    "b5dad40733aeb5581f11b01b": "2026-04-08T23:09:15",
-    "06045e8e2053e05b71faf24d": "2026-04-08T23:09:15",
-    "d6d6972b379e1e80d4f1fbc7": "2026-04-08T23:09:15",
-    "294edbaa1b448140d9d032aa": "2026-04-08T23:09:15",
-    "09cdf7ebde9809e85aad04cf": "2026-04-08T23:09:15",
-    "6a5d322febc7284c39ef758a": "2026-04-08T23:09:15",
-    "4b79665146622b72587dfa3d": "2026-04-08T23:09:15",
-    "d7fc42be1ce12ed0d96d42df": "2026-04-08T23:09:15",
-    "deb648a585f1f4a01a368282": "2026-04-08T23:09:15",
-    "bd2653ca53edf82a908ee732": "2026-04-08T23:09:15",
-    "e32ba26f78f6097da6bd4155": "2026-04-08T23:09:15",
-    "ce9239940ae16f9cfb0cd198": "2026-04-08T23:09:15",
-    "bfd69fd485d82a7d4e08c905": "2026-04-08T23:09:15",
-    "71427d1da08a997365b7f55a": "2026-04-08T23:09:15",
-    "bde73850035506222b8f47fd": "2026-04-08T23:09:15",
-    "ceaae1f9e4f47accc4fa83af": "2026-04-08T23:09:15",
-    "e6afb718690520666187b5b2": "2026-04-08T23:09:15",
-    "ef0ba6d73214982011b5613e": "2026-04-08T23:09:15",
-    "e06cc84036da97b5a472d4ff": "2026-04-08T23:09:15",
-    "3f9b5e3c8a9aaf549528f0d6": "2026-04-08T23:09:15",
-    "12c89698270a43744c9e76f2": "2026-04-08T23:09:15",
-    "a6e529189686834fa10c8f56": "2026-04-08T23:09:15",
-    "6a214fde97f51dce3e8b4f8e": "2026-04-08T23:09:15",
-    "b69245cfdad530cf4b6c5fb0": "2026-04-08T23:09:15",
-    "3c434e7b6aac5dfe9f9ab83e": "2026-04-08T23:09:15",
-    "5e3423167db82f75e787d8b9": "2026-04-08T23:09:15",
-    "8c2ef4089d836e960e0a216c": "2026-04-08T23:09:15",
-    "00d53d4bc3812775d0efc88d": "2026-04-08T23:09:15",
-    "830b745f6c1567a2a2444704": "2026-04-08T23:09:15",
-    "112677a3c5a8be8125876866": "2026-04-08T23:09:15",
-    "b3e0884e574c4000fbfc8b5e": "2026-04-08T23:09:15",
-    "13c8d7405eaaa0c1fb7e43ec": "2026-04-08T23:09:15",
-    "fcad487e5edd96c76b3530a6": "2026-04-08T23:09:15",
-    "8e05462024eced838f282e6f": "2026-04-08T23:09:15",
     "289d7291c570116bc84bb2ce": "2026-04-09T23:09:09",
     "6f0f775175325fed229c65a9": "2026-04-09T23:09:09",
     "54dc5f61d8507b02aae933b8": "2026-04-09T23:09:09",
@@ -555,7 +521,28 @@
     "9028f74afe7d923c4a4cf127": "2026-05-07T23:28:51",
     "6309944190c85da51500355c": "2026-05-07T23:28:51",
     "f0c9f6dcb16126473aaded72": "2026-05-07T23:28:51",
-    "5310292b09b34e5cb8dc9237": "2026-05-07T23:28:51"
+    "5310292b09b34e5cb8dc9237": "2026-05-07T23:28:51",
+    "d2849d8e0e4e4c09bd3eb67d": "2026-05-08T23:30:38",
+    "277a9dc49bdc6674634abaa6": "2026-05-08T23:30:38",
+    "7af3746280929b453d74b90f": "2026-05-08T23:30:38",
+    "f3b16eabc4932aa91badd2a0": "2026-05-08T23:30:38",
+    "7e8ef23feefb649d922ae1bb": "2026-05-08T23:30:38",
+    "82fb8ea2be460eb37b24fb91": "2026-05-08T23:30:38",
+    "e38bb3d3fcc3170e51190366": "2026-05-08T23:30:38",
+    "ece2de5e4acf5608d00d76b2": "2026-05-08T23:30:38",
+    "29eafa2cb7fe7e1530ec722c": "2026-05-08T23:30:38",
+    "0eda26c60345860927fd205d": "2026-05-08T23:30:38",
+    "ccc511c57f4b2c5e31eb71c4": "2026-05-08T23:30:38",
+    "d5107393046f4b113b380f2b": "2026-05-08T23:30:38",
+    "5949d0af102c569c58f9cbff": "2026-05-08T23:30:38",
+    "77ca8933095728eac92baaef": "2026-05-08T23:30:38",
+    "541934d9a3938d78ff91d198": "2026-05-08T23:30:38",
+    "48cebed6d035e4c5912bdac5": "2026-05-08T23:30:38",
+    "973bd2198005e7727b7caed7": "2026-05-08T23:30:38",
+    "6f49ac2b5b643825d167c035": "2026-05-08T23:30:38",
+    "4e4f6d7102ec97fe7aabd895": "2026-05-08T23:30:38",
+    "d0d23eaecf3e9f39edbdebaa": "2026-05-08T23:30:38",
+    "94b15968db6d86633ab816b6": "2026-05-08T23:30:38"
   },
   "titles": [
     [
@@ -7053,6 +7040,90 @@
     [
       "정치인 거래정책 리포트 20260508",
       "2026-05-08"
+    ],
+    [
+      "congress trade representative greg stanton just disclosed new stock trades quiver quantitative",
+      "2026-05-09"
+    ],
+    [
+      "vermonts congressional members are rich but they dont buy stocks notus news of the united states",
+      "2026-05-09"
+    ],
+    [
+      "form 4 heartflow inc insider trading activity stock titan",
+      "2026-05-09"
+    ],
+    [
+      "form 4 smartrent inc insider trading activity stock titan",
+      "2026-05-09"
+    ],
+    [
+      "form 4 dave busters entertainment inc insider trading activity stock titan",
+      "2026-05-09"
+    ],
+    [
+      "form 4 monolithic power systems inc insider trading activity stock titan",
+      "2026-05-09"
+    ],
+    [
+      "form 4 quantumscape corp insider trading activity stock titan",
+      "2026-05-09"
+    ],
+    [
+      "form 4 profrac holding corp insider trading activity stock titan",
+      "2026-05-09"
+    ],
+    [
+      "form 4 stoneco ltd insider trading activity stock titan",
+      "2026-05-09"
+    ],
+    [
+      "form 4 match group inc insider trading activity stock titan",
+      "2026-05-09"
+    ],
+    [
+      "form 4 century communities inc insider trading activity stock titan",
+      "2026-05-09"
+    ],
+    [
+      "form 4 stewart information services corp insider trading activity stock titan",
+      "2026-05-09"
+    ],
+    [
+      "form 4 banc of california inc insider trading activity stock titan",
+      "2026-05-09"
+    ],
+    [
+      "form 4 community west bancshares insider trading activity stock titan",
+      "2026-05-09"
+    ],
+    [
+      "trump tariff tracker may 8 2026 via passle baker botts",
+      "2026-05-09"
+    ],
+    [
+      "court moves against trump trade agenda in major ruling facebook",
+      "2026-05-09"
+    ],
+    [
+      "korean firms unlikely to gain from ruling against trump tariff the korea times",
+      "2026-05-09"
+    ],
+    [
+      "us court ruling on trumps tariffs unlikely to impact koreas chip auto exporters korea joongang daily",
+      "2026-05-09"
+    ],
+    [
+      "the federal reserve is quickly running out of reasons to cut interest rates",
+      "2026-05-09"
+    ],
+    [
+      "powells decision to stay as governor violates all norms feds stephen miran msn",
+      "2026-05-09"
+    ],
+    [
+      "정치인 거래정책 리포트 20260509",
+      "2026-05-09"
     ]
   ],
   "seen_urls": {}
