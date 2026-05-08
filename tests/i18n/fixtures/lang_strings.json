@@ -1,0 +1,23 @@
+{
+  "_comment": "Stable header/footer text snippets per language. Korean (ko) values match the literal source rendered by Jekyll. Other languages list the most likely Google Translate output as a regex/case-insensitive substring; minor wording drift is expected because Google Translate is non-deterministic. Keep this fixture small — Phase 2+ widens coverage.",
+  "ko": {
+    "nav_reports": "리포트",
+    "footer_about": "소개"
+  },
+  "en": {
+    "nav_reports": "Report",
+    "footer_about": "About|Introduction"
+  },
+  "ja": {
+    "nav_reports": "レポート",
+    "footer_about": "概要|紹介|について"
+  },
+  "zh-CN": {
+    "nav_reports": "报告",
+    "footer_about": "关于|简介|介绍"
+  },
+  "es": {
+    "nav_reports": "Informe",
+    "footer_about": "Acerca de|Introducción|Sobre"
+  }
+}

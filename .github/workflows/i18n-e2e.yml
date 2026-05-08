@@ -1,0 +1,109 @@
+name: i18n E2E Tests
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '_includes/google-translate.html'
+      - 'assets/js/google-translate.js'
+      - '_layouts/default.html'
+      - '_includes/header.html'
+      - 'tests/i18n/**'
+      - 'requirements-dev.txt'
+      - '.github/workflows/i18n-e2e.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - '_includes/google-translate.html'
+      - 'assets/js/google-translate.js'
+      - '_layouts/default.html'
+      - '_includes/header.html'
+      - 'tests/i18n/**'
+      - 'requirements-dev.txt'
+      - '.github/workflows/i18n-e2e.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: i18n-e2e-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      I18N_E2E_BASE_URL: http://127.0.0.1:4000
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@7372622e62b60b3cb750dcd2b9e32c247ffec26a  # v1.302.0
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Setup Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: |
+            scripts/requirements.txt
+            requirements-dev.txt
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+
+      - name: Install Playwright browser (Chromium)
+        run: python -m playwright install --with-deps chromium
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      - name: Start Jekyll preview server
+        run: |
+          bundle exec jekyll serve --skip-initial-build --port 4000 --host 127.0.0.1 --detach
+          # Wait for the server to respond on the configured port.
+          for i in $(seq 1 60); do
+            if curl --silent --fail --max-time 2 http://127.0.0.1:4000/ > /dev/null; then
+              echo "Jekyll preview is up after ${i}s"
+              exit 0
+            fi
+            sleep 1
+          done
+          echo "Jekyll preview did not start within 60s" >&2
+          exit 1
+        env:
+          JEKYLL_ENV: production
+
+      - name: Run i18n E2E tests
+        # --no-cov: only tests/i18n/** runs here; the global --cov-fail-under
+        # gate would always fail without scripts/ coverage. Coverage is enforced
+        # in the `code-quality` workflow which runs the full tests/ suite.
+        run: >
+          python -m pytest tests/i18n/
+          -v
+          --no-cov
+          --browser chromium
+          --tracing retain-on-failure
+          --screenshot only-on-failure
+          --video retain-on-failure
+          --output playwright-artifacts
+          --timeout 30
+
+      - name: Upload Playwright artifacts on failure
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7
+        with:
+          name: playwright-artifacts-${{ github.run_id }}
+          path: playwright-artifacts/
+          if-no-files-found: ignore
+          retention-days: 7

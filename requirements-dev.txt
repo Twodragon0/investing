@@ -1,0 +1,14 @@
+# Development & test-only dependencies.
+# Production/runtime deps live in scripts/requirements.txt.
+#
+# Install:  pip install -r requirements-dev.txt
+#
+# Usage:
+#   - Unit tests:  python3 -m pytest tests/
+#   - i18n E2E:    python3 -m pytest tests/i18n/ --browser chromium
+#                  (also requires:  playwright install --with-deps chromium)
+
+pytest>=8.0
+pytest-cov>=5.0
+pytest-playwright>=0.4
+pytest-timeout>=2.3

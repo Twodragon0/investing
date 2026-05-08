@@ -62,6 +62,9 @@ relative_files = true
 
 [tool.pytest.ini_options]
 addopts = "--cov=scripts --cov-fail-under=55"
+markers = [
+    "i18n_e2e: Playwright-driven end-to-end tests for the language toggle (tests/i18n/). Requires a running Jekyll preview at I18N_E2E_BASE_URL.",
+]
 
 [tool.basedpyright]
 include = ["scripts"]
