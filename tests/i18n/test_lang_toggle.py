@@ -120,7 +120,11 @@ def test_s2_race_condition_single_script(page: Page, base_url: str) -> None:
     element_js_requests: list[str] = []
 
     def _on_request(request: Any) -> None:
-        if "translate_a/element.js" in request.url:
+        # Filter out redirect targets — when the page is served over HTTP locally,
+        # the protocol-relative `//translate.google.com/...` resolves to HTTP and
+        # Google issues a 301 to HTTPS, producing a second request event for the
+        # same logical fetch. Only count the initial inject.
+        if "translate_a/element.js" in request.url and request.redirected_from is None:
             element_js_requests.append(request.url)
 
     page.on("request", _on_request)
