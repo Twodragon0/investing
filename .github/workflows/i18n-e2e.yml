@@ -33,7 +33,10 @@ concurrency:
 jobs:
   e2e:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    # 25분 — playwright install --with-deps + bundle install + Jekyll build +
+    # 16 시나리오(S9 expect_navigation 15s + body-text waits 포함)가 cold cache 시
+    # 15분에 근접. 24b41783 실측 ~6분이었으나 안전 마진 + 향후 시나리오 확장 대비.
+    timeout-minutes: 25
     env:
       I18N_E2E_BASE_URL: http://127.0.0.1:4000
     steps:
