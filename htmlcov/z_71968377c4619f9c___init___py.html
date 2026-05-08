@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_71968377c4619f9c_base_collector_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.13.5">coverage.py v7.13.5</a>,
-            created at 2026-05-08 03:35 +0000
+            created at 2026-05-08 03:48 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -83,7 +83,7 @@
     <p class="pln"><span class="n"><a id="t1" href="#t1">1</a></span><span class="t"><span class="str">"""Common utilities for Investing Dragon news collectors."""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t2" href="#t2">2</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t3" href="#t3">3</a></span><span class="t"><span class="key">from</span> <span class="op">.</span><span class="nam">base_collector</span> <span class="key">import</span> <span class="nam">BaseCollector</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t4" href="#t4">4</a></span><span class="t"><span class="key">from</span> <span class="op">.</span><span class="nam">config</span> <span class="key">import</span> <span class="nam">get_env</span><span class="op">,</span> <span class="nam">get_env_bool</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t4" href="#t4">4</a></span><span class="t"><span class="key">from</span> <span class="op">.</span><span class="nam">config</span> <span class="key">import</span> <span class="nam">REQUEST_TIMEOUT</span><span class="op">,</span> <span class="nam">get_env</span><span class="op">,</span> <span class="nam">get_env_bool</span><span class="op">,</span> <span class="nam">setup_logging</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t5" href="#t5">5</a></span><span class="t"><span class="key">from</span> <span class="op">.</span><span class="nam">crypto_api</span> <span class="key">import</span> <span class="op">(</span>&nbsp;</span><span class="r"></span></p>
     <p class="run run2"><span class="n"><a id="t6" href="#t6">6</a></span><span class="t">    <span class="nam">fetch_coingecko_global</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="run run2"><span class="n"><a id="t7" href="#t7">7</a></span><span class="t">    <span class="nam">fetch_coingecko_top_coins</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
@@ -121,28 +121,30 @@
     <p class="pln"><span class="n"><a id="t39" href="#t39">39</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t40" href="#t40">40</a></span><span class="t"><span class="nam">__all__</span> <span class="op">=</span> <span class="op">[</span>&nbsp;</span><span class="r"></span></p>
     <p class="run run2"><span class="n"><a id="t41" href="#t41">41</a></span><span class="t">    <span class="str">"BaseCollector"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t42" href="#t42">42</a></span><span class="t">    <span class="str">"get_env"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t43" href="#t43">43</a></span><span class="t">    <span class="str">"get_env_bool"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t44" href="#t44">44</a></span><span class="t">    <span class="str">"DedupEngine"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t45" href="#t45">45</a></span><span class="t">    <span class="str">"PostGenerator"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t46" href="#t46">46</a></span><span class="t">    <span class="str">"sanitize_string"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t47" href="#t47">47</a></span><span class="t">    <span class="str">"validate_url"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t48" href="#t48">48</a></span><span class="t">    <span class="str">"slugify"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t49" href="#t49">49</a></span><span class="t">    <span class="str">"parse_date"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t50" href="#t50">50</a></span><span class="t">    <span class="str">"request_with_retry"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t51" href="#t51">51</a></span><span class="t">    <span class="str">"fetch_rss_feed"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t52" href="#t52">52</a></span><span class="t">    <span class="str">"ThemeSummarizer"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t53" href="#t53">53</a></span><span class="t">    <span class="str">"fetch_coingecko_top_coins"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t54" href="#t54">54</a></span><span class="t">    <span class="str">"fetch_coingecko_trending"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t55" href="#t55">55</a></span><span class="t">    <span class="str">"fetch_coingecko_global"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t56" href="#t56">56</a></span><span class="t">    <span class="str">"fetch_fear_greed_index"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t57" href="#t57">57</a></span><span class="t">    <span class="str">"fmt_number"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t58" href="#t58">58</a></span><span class="t">    <span class="str">"fmt_percent"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t59" href="#t59">59</a></span><span class="t">    <span class="str">"BrowserSession"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t60" href="#t60">60</a></span><span class="t">    <span class="str">"scrape_page"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t61" href="#t61">61</a></span><span class="t">    <span class="str">"is_playwright_available"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t62" href="#t62">62</a></span><span class="t">    <span class="str">"extract_google_news_links"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t63" href="#t63">63</a></span><span class="t"><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t42" href="#t42">42</a></span><span class="t">    <span class="str">"REQUEST_TIMEOUT"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t43" href="#t43">43</a></span><span class="t">    <span class="str">"get_env"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t44" href="#t44">44</a></span><span class="t">    <span class="str">"get_env_bool"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t45" href="#t45">45</a></span><span class="t">    <span class="str">"setup_logging"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t46" href="#t46">46</a></span><span class="t">    <span class="str">"DedupEngine"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t47" href="#t47">47</a></span><span class="t">    <span class="str">"PostGenerator"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t48" href="#t48">48</a></span><span class="t">    <span class="str">"sanitize_string"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t49" href="#t49">49</a></span><span class="t">    <span class="str">"validate_url"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t50" href="#t50">50</a></span><span class="t">    <span class="str">"slugify"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t51" href="#t51">51</a></span><span class="t">    <span class="str">"parse_date"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t52" href="#t52">52</a></span><span class="t">    <span class="str">"request_with_retry"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t53" href="#t53">53</a></span><span class="t">    <span class="str">"fetch_rss_feed"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t54" href="#t54">54</a></span><span class="t">    <span class="str">"ThemeSummarizer"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t55" href="#t55">55</a></span><span class="t">    <span class="str">"fetch_coingecko_top_coins"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t56" href="#t56">56</a></span><span class="t">    <span class="str">"fetch_coingecko_trending"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t57" href="#t57">57</a></span><span class="t">    <span class="str">"fetch_coingecko_global"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t58" href="#t58">58</a></span><span class="t">    <span class="str">"fetch_fear_greed_index"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t59" href="#t59">59</a></span><span class="t">    <span class="str">"fmt_number"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t60" href="#t60">60</a></span><span class="t">    <span class="str">"fmt_percent"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t61" href="#t61">61</a></span><span class="t">    <span class="str">"BrowserSession"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t62" href="#t62">62</a></span><span class="t">    <span class="str">"scrape_page"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t63" href="#t63">63</a></span><span class="t">    <span class="str">"is_playwright_available"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t64" href="#t64">64</a></span><span class="t">    <span class="str">"extract_google_news_links"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t65" href="#t65">65</a></span><span class="t"><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -152,7 +154,7 @@
             <a class="nav" href="z_71968377c4619f9c_base_collector_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.13.5">coverage.py v7.13.5</a>,
-            created at 2026-05-08 03:35 +0000
+            created at 2026-05-08 03:48 +0000
         </p>
     </div>
 </footer>
