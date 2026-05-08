@@ -5,9 +5,11 @@ repos:
       - id: check-merge-conflict
       - id: check-added-large-files
       - id: end-of-file-fixer
-        exclude: ^(_state/|_posts/|assets/images/generated/|docs/weekly-report-)
+        # IndexNow 키 검증 파일([0-9a-f]{32}.txt)은 키 문자열 정확 매칭이 필요하므로
+        # newline 추가 시 일부 검증기가 mismatch로 판단할 수 있어 exclude 처리.
+        exclude: ^(_state/|_posts/|assets/images/generated/|docs/weekly-report-|[0-9a-f]{32}\.txt$)
       - id: trailing-whitespace
-        exclude: ^(_state/|_posts/|assets/images/generated/|docs/weekly-report-)
+        exclude: ^(_state/|_posts/|assets/images/generated/|docs/weekly-report-|[0-9a-f]{32}\.txt$)
       - id: detect-private-key
 
   - repo: https://github.com/gitleaks/gitleaks

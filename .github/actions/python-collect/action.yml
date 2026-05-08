@@ -165,7 +165,10 @@ runs:
           exit 0
         fi
         # Extract today's date from the first new post filename
-        TODAY=$(echo "$NEW_POST_FILES" | head -1 | grep -oP '\d{4}-\d{2}-\d{2}' | head -1)
+        # Avoid `echo | head | grep | head` chain — pipefail + SIGPIPE on
+        # closed downstream pipes (head -1) causes exit 1 (broken pipe in echo).
+        FIRST_FILE=$(printf '%s\n' "$NEW_POST_FILES" | sed -n '1p')
+        TODAY=$(printf '%s' "$FIRST_FILE" | grep -oP '\d{4}-\d{2}-\d{2}' | sed -n '1p' || true)
         if [ -n "$TODAY" ]; then
           python scripts/generate_og_images.py --date "$TODAY" --force --update-frontmatter
         fi
