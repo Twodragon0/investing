@@ -33,33 +33,28 @@
 </div>
 <!-- Hidden Google Translate Element -->
 <div id="google_translate_element" style="display:none;"></div>
-<!-- Google Translate: pre-loads on hover/focus, lazy-loads on click as fallback -->
+<!-- Google Translate: local script eagerly loaded via defer in <head> (race-free).
+     This inline only triggers Google Translate API preload on user-intent signals. -->
 <script>
 (function() {
-  var loaded = false;
   var toggle = document.getElementById('lang-toggle');
   if (!toggle) return;
-  var loadTranslate = function() {
-    if (loaded) return;
-    loaded = true;
-    var s = document.createElement('script');
-    s.src = '{{ "/assets/js/google-translate.js" | relative_url }}?v={{ site.time | date: "%Y%m%d%H%M" }}';
-    s.defer = true;
-    // 로컬 스크립트 로드 직후 Google Translate API도 즉시 프리로드 (reload 없이 in-place 전환)
-    s.onload = function() {
-      try {
-        if (typeof window.__preloadGoogleTranslate === 'function') {
-          window.__preloadGoogleTranslate();
-        }
-      } catch (e) {}
-    };
-    document.body.appendChild(s);
+  var preloaded = false;
+  var preloadGT = function() {
+    if (preloaded) return;
+    try {
+      if (typeof window.__preloadGoogleTranslate === 'function') {
+        preloaded = true;
+        window.__preloadGoogleTranslate();
+      }
+    } catch (e) {}
   };
-  // Pre-load on hover/focus — user intent signal removes click latency
-  toggle.addEventListener('mouseenter', loadTranslate, { once: true, passive: true });
-  toggle.addEventListener('focusin', loadTranslate, { once: true, passive: true });
-  toggle.addEventListener('touchstart', loadTranslate, { once: true, passive: true });
-  toggle.addEventListener('click', loadTranslate, { once: true, passive: true });
+  // Pre-load Google Translate API on hover/focus/touch — removes click latency.
+  // The local script (initLangToggle binding) is already loaded via defer in <head>.
+  toggle.addEventListener('mouseenter', preloadGT, { once: true, passive: true });
+  toggle.addEventListener('focusin', preloadGT, { once: true, passive: true });
+  toggle.addEventListener('touchstart', preloadGT, { once: true, passive: true });
+  toggle.addEventListener('click', preloadGT, { once: true, passive: true });
   // Visual loading state during translation (set on lang-option click)
   document.addEventListener('click', function(e) {
     var opt = e.target.closest && e.target.closest('.lang-option');
@@ -68,10 +63,6 @@
       setTimeout(function(){ document.documentElement.classList.remove('translating'); }, 8000);
     }
   }, { passive: true });
-  try {
-    var pref = localStorage.getItem('preferredLang');
-    if (pref && pref !== 'system' && pref !== 'ko') { loadTranslate(); }
-  } catch(e) {}
 })();
 </script>
 <style>

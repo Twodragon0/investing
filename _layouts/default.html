@@ -136,6 +136,8 @@
   <noscript><link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"></noscript>
   <link rel="preload" href="{{ '/assets/js/core.js' | relative_url }}" as="script">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS" href="{{ '/feed.xml' | relative_url }}">
+  <!-- Eager-defer load: ensures initLangToggle binds before user's first click (race fix) -->
+  <script src="{{ '/assets/js/google-translate.js' | relative_url }}?v={{ site.time | date: "%Y%m%d%H%M" }}" defer></script>
 
   <!-- Site-wide structured data: WebSite (sitelinks searchbox) + Organization (knowledge panel) -->
   <script type="application/ld+json">

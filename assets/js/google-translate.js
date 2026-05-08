@@ -45,6 +45,10 @@ function googleTranslateElementInit() {
 (function() {
   'use strict';
 
+  // 중복 로드 가드: 이 스크립트가 두 번 평가되어도 핸들러가 두 번 바인드되지 않도록 한다.
+  if (window.__langToggleIIFELoaded) return;
+  window.__langToggleIIFELoaded = true;
+
   var LANG_MAP = {
     'ko': 'KO',
     'en': 'EN',
@@ -342,9 +346,15 @@ function googleTranslateElementInit() {
     }, true);
 
     // 더블클릭으로 시스템 설정으로 복귀
-    langToggle.addEventListener('dblclick', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
+    // 주의: 첫 클릭이 dropdown을 열면 overlay(position:fixed, full-viewport)가
+    // 토글 위를 덮으므로, 두 번째 click+dblclick의 target은 토글이 아니라
+    // overlay가 된다. 따라서 dblclick 리스너를 토글뿐 아니라 overlay에도
+    // 바인딩해야 시스템 복귀 경로가 신뢰성 있게 발화한다.
+    function handleSystemReset(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
       safeLocalStorageSet('preferredLang', 'system');
       var sysLang = getSystemLanguage();
       if (LANG_MAP[sysLang] && currentLangSpan) {
@@ -354,7 +364,11 @@ function googleTranslateElementInit() {
       safeSessionStorageRemove('langApplied');
       safeSessionStorageRemove('langChanging');
       changeLang(sysLang);
-    }, true);
+    }
+    langToggle.addEventListener('dblclick', handleSystemReset, true);
+    if (langDropdownOverlay) {
+      langDropdownOverlay.addEventListener('dblclick', handleSystemReset, true);
+    }
 
     // 외부 클릭 시 닫기 (overlay 클릭 시에도 닫힘)
     document.addEventListener('click', function(e) {
