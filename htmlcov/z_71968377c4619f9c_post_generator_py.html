@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for scripts/common/post_generator.py: 98%</title>
+    <title>Coverage for scripts/common/post_generator.py: 99%</title>
     <link rel="icon" sizes="32x32" href="favicon_32_cb_c827f16f.png">
     <link rel="stylesheet" href="style_cb_9ff733b0.css" type="text/css">
     <script src="coverage_html_cb_dd2e7eb5.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>scripts&#8201;/&#8201;common&#8201;/&#8201;post_generator.py</b>:
-            <span class="pc_cov">98%</span>
+            <span class="pc_cov">99%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -55,8 +55,8 @@
         </aside>
         <h2>
             <span class="text">333 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">325<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">8<span class="text"> missing</span></button>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">331<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">2<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_71968377c4619f9c_risk_classifier_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.13.5">coverage.py v7.13.5</a>,
-            created at 2026-05-08 14:08 +0000
+            created at 2026-05-08 15:34 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -535,11 +535,11 @@
     <p class="run run2"><span class="n"><a id="t453" href="#t453">453</a></span><span class="t">        <span class="nam">content</span><span class="op">[</span><span class="op">:</span><span class="num">1500</span><span class="op">]</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="run run2"><span class="n"><a id="t454" href="#t454">454</a></span><span class="t">    <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t455" href="#t455">455</a></span><span class="t">    <span class="key">if</span> <span class="nam">data_match</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t456" href="#t456">456</a></span><span class="t">        <span class="nam">lead</span> <span class="op">=</span> <span class="nam">data_match</span><span class="op">.</span><span class="nam">group</span><span class="op">(</span><span class="num">1</span><span class="op">)</span><span class="op">.</span><span class="nam">strip</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t457" href="#t457">457</a></span><span class="t">        <span class="nam">lead</span> <span class="op">=</span> <span class="nam">re</span><span class="op">.</span><span class="nam">sub</span><span class="op">(</span><span class="str">r"\[([^\]]+)\]\([^)]+\)"</span><span class="op">,</span> <span class="str">r"\1"</span><span class="op">,</span> <span class="nam">lead</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t458" href="#t458">458</a></span><span class="t">        <span class="nam">lead</span> <span class="op">=</span> <span class="nam">re</span><span class="op">.</span><span class="nam">sub</span><span class="op">(</span><span class="str">r"[*_`~]"</span><span class="op">,</span> <span class="str">""</span><span class="op">,</span> <span class="nam">lead</span><span class="op">)</span><span class="op">.</span><span class="nam">strip</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t459" href="#t459">459</a></span><span class="t">        <span class="key">if</span> <span class="nam">len</span><span class="op">(</span><span class="nam">lead</span><span class="op">)</span> <span class="op">>=</span> <span class="num">30</span> <span class="key">and</span> <span class="key">not</span> <span class="nam">lead</span><span class="op">.</span><span class="nam">startswith</span><span class="op">(</span><span class="str">"&#44596;&#44553;"</span><span class="op">)</span> <span class="key">and</span> <span class="nam">re</span><span class="op">.</span><span class="nam">search</span><span class="op">(</span><span class="str">r"\d"</span><span class="op">,</span> <span class="nam">lead</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t460" href="#t460">460</a></span><span class="t">            <span class="key">return</span> <span class="nam">smart_truncate</span><span class="op">(</span><span class="nam">lead</span><span class="op">,</span> <span class="num">160</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t456" href="#t456">456</a></span><span class="t">        <span class="nam">lead</span> <span class="op">=</span> <span class="nam">data_match</span><span class="op">.</span><span class="nam">group</span><span class="op">(</span><span class="num">1</span><span class="op">)</span><span class="op">.</span><span class="nam">strip</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t457" href="#t457">457</a></span><span class="t">        <span class="nam">lead</span> <span class="op">=</span> <span class="nam">re</span><span class="op">.</span><span class="nam">sub</span><span class="op">(</span><span class="str">r"\[([^\]]+)\]\([^)]+\)"</span><span class="op">,</span> <span class="str">r"\1"</span><span class="op">,</span> <span class="nam">lead</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t458" href="#t458">458</a></span><span class="t">        <span class="nam">lead</span> <span class="op">=</span> <span class="nam">re</span><span class="op">.</span><span class="nam">sub</span><span class="op">(</span><span class="str">r"[*_`~]"</span><span class="op">,</span> <span class="str">""</span><span class="op">,</span> <span class="nam">lead</span><span class="op">)</span><span class="op">.</span><span class="nam">strip</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t459" href="#t459">459</a></span><span class="t">        <span class="key">if</span> <span class="nam">len</span><span class="op">(</span><span class="nam">lead</span><span class="op">)</span> <span class="op">>=</span> <span class="num">30</span> <span class="key">and</span> <span class="key">not</span> <span class="nam">lead</span><span class="op">.</span><span class="nam">startswith</span><span class="op">(</span><span class="str">"&#44596;&#44553;"</span><span class="op">)</span> <span class="key">and</span> <span class="nam">re</span><span class="op">.</span><span class="nam">search</span><span class="op">(</span><span class="str">r"\d"</span><span class="op">,</span> <span class="nam">lead</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t460" href="#t460">460</a></span><span class="t">            <span class="key">return</span> <span class="nam">smart_truncate</span><span class="op">(</span><span class="nam">lead</span><span class="op">,</span> <span class="num">160</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t461" href="#t461">461</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t462" href="#t462">462</a></span><span class="t">    <span class="com"># Try to extract executive opener (bold lead sentence), skip "&#44596;&#44553;:" patterns</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t463" href="#t463">463</a></span><span class="t">    <span class="nam">bold_match</span> <span class="op">=</span> <span class="nam">re</span><span class="op">.</span><span class="nam">search</span><span class="op">(</span><span class="str">r"\*\*(.{20,120}?)\*\*"</span><span class="op">,</span> <span class="nam">content</span><span class="op">[</span><span class="op">:</span><span class="num">600</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -907,7 +907,7 @@
     <p class="run"><span class="n"><a id="t825" href="#t825">825</a></span><span class="t">        <span class="key">if</span> <span class="key">not</span> <span class="op">(</span><span class="nam">extra_frontmatter</span> <span class="key">and</span> <span class="str">"excerpt"</span> <span class="key">in</span> <span class="nam">extra_frontmatter</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t826" href="#t826">826</a></span><span class="t">            <span class="nam">excerpt_text</span> <span class="op">=</span> <span class="nam">desc_text</span> <span class="key">if</span> <span class="nam">desc_text</span> <span class="key">else</span> <span class="nam">_extract_description</span><span class="op">(</span><span class="nam">content</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t827" href="#t827">827</a></span><span class="t">            <span class="key">if</span> <span class="nam">excerpt_text</span> <span class="key">and</span> <span class="nam">_is_mostly_english</span><span class="op">(</span><span class="nam">excerpt_text</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t828" href="#t828">828</a></span><span class="t">                <span class="nam">excerpt_text</span> <span class="op">=</span> <span class="nam">_build_fallback_description</span><span class="op">(</span><span class="nam">title</span><span class="op">,</span> <span class="nam">self</span><span class="op">.</span><span class="nam">category</span><span class="op">,</span> <span class="nam">tags</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t828" href="#t828">828</a></span><span class="t">                <span class="nam">excerpt_text</span> <span class="op">=</span> <span class="nam">_build_fallback_description</span><span class="op">(</span><span class="nam">title</span><span class="op">,</span> <span class="nam">self</span><span class="op">.</span><span class="nam">category</span><span class="op">,</span> <span class="nam">tags</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t829" href="#t829">829</a></span><span class="t">            <span class="key">if</span> <span class="nam">excerpt_text</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t830" href="#t830">830</a></span><span class="t">                <span class="nam">excerpt_text</span> <span class="op">=</span> <span class="nam">_polish_generated_text</span><span class="op">(</span><span class="nam">smart_truncate</span><span class="op">(</span><span class="nam">excerpt_text</span><span class="op">,</span> <span class="num">100</span><span class="op">)</span><span class="op">)</span><span class="op">.</span><span class="nam">replace</span><span class="op">(</span><span class="str">'"'</span><span class="op">,</span> <span class="str">"'"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t831" href="#t831">831</a></span><span class="t">                <span class="nam">frontmatter_lines</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="fst">f'</span><span class="fst">excerpt: "</span><span class="op">{</span><span class="nam">excerpt_text</span><span class="op">}</span><span class="fst">"</span><span class="fst">'</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -990,7 +990,7 @@
             <a class="nav" href="z_71968377c4619f9c_risk_classifier_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.13.5">coverage.py v7.13.5</a>,
-            created at 2026-05-08 14:08 +0000
+            created at 2026-05-08 15:34 +0000
         </p>
     </div>
 </footer>
