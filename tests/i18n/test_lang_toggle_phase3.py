@@ -174,15 +174,18 @@ def test_s3_touch_fallback(
 
         toggle = page.locator("#lang-toggle")
         expect(toggle).to_be_visible(timeout=5_000)
-        # Tap also fires touchstart which triggers the lazy GT load. Wait for
-        # the dropdown handler to bind before tapping again to open the menu.
+        # First tap fires touchstart → loads the GT bootstrap. We then wait
+        # for IIFE to bind the handler. The follow-up interaction uses
+        # ``click()`` because Playwright's ``tap()`` only dispatches touch
+        # events (no synthesized click), so the dropdown click handler
+        # would never run on a tap-only path.
         toggle.tap()
         wait_lang_toggle_ready(page, hover_first=False)
-        toggle.tap()
+        toggle.click()
 
         en_option = page.locator('.lang-option[data-lang="en"]')
         expect(en_option).to_be_visible(timeout=3_000)
-        en_option.tap()
+        en_option.click()
 
         expect(page.locator("#current-lang")).to_have_text("EN", timeout=15_000)
 
@@ -302,15 +305,18 @@ def test_s6_mobile_languages(
         assert bbox is not None, f"{device_name}: toggle has no bounding box"
         assert bbox["width"] >= 32 and bbox["height"] >= 32, f"{device_name}: toggle too small for touch ({bbox})"
 
-        # First tap fires touchstart → loads GT script. Second tap (after
-        # initLangToggle binds) opens the dropdown.
+        # First tap fires touchstart → loads GT script. Then we use
+        # ``click()`` for the dropdown-open + option-select interactions
+        # because Playwright's ``tap()`` does not synthesize a click event,
+        # and the production dropdown-open handler listens for click. The
+        # mobile coverage here is layout/responsive, not touch-event plumbing.
         toggle.tap()
         wait_lang_toggle_ready(page, hover_first=False)
-        toggle.tap()
+        toggle.click()
 
         en_option = page.locator('.lang-option[data-lang="en"]')
         expect(en_option).to_be_visible(timeout=3_000)
-        en_option.tap()
+        en_option.click()
 
         expect(page.locator("#current-lang")).to_have_text("EN", timeout=15_000)
 
@@ -383,8 +389,10 @@ def test_s9_doubleclick_system_reset(
     # Step 2: double-click the toggle to trigger system-reset.
     # The handler sets preferredLang=system and calls changeLang(sysLang)
     # which (under ko-KR) follows the KO recovery path: deletes cookie + reloads.
-    toggle.dblclick()
-    page.wait_for_load_state("networkidle")
+    # Use expect_navigation to ensure the 80ms-delayed reload has fully
+    # completed before asserting on label/cookie state.
+    with page.expect_navigation(wait_until="domcontentloaded", timeout=15_000):
+        toggle.dblclick()
 
     # Label reverts to KO (system language under ko-KR locale).
     expect(page.locator("#current-lang")).to_have_text("KO", timeout=10_000)

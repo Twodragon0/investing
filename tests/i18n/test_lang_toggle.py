@@ -175,12 +175,7 @@ def test_s4_korean_recovery_clears_cookie(
     expect(toggle).to_be_visible(timeout=5_000)
 
     # Step 1: switch to EN so the cookie is set.
-    toggle.hover()
-    page.wait_for_selector(
-        'script[src*="translate_a/element.js"]',
-        timeout=5_000,
-        state="attached",
-    )
+    wait_lang_toggle_ready(page)
     toggle.click()
     page.locator('.lang-option[data-lang="en"]').click()
     expect(page.locator("#current-lang")).to_have_text("EN", timeout=10_000)
@@ -189,12 +184,13 @@ def test_s4_korean_recovery_clears_cookie(
     assert any(c["name"] == "googtrans" for c in pre_cookies), "expected googtrans cookie to exist after EN switch"
 
     # Step 2: open the toggle again and click KO. This triggers the recovery
-    # path, which deletes the cookie and reloads the page.
+    # path, which deletes the cookie and reloads the page. Use expect_navigation
+    # so the assertion runs only after the post-recovery reload settles —
+    # `wait_for_load_state("networkidle")` can return before the 80ms-delayed
+    # reload actually starts.
     toggle.click()
-    page.locator('.lang-option[data-lang="ko"]').click()
-
-    # The KO recovery path issues a clean reload after ~80ms; wait for it.
-    page.wait_for_load_state("networkidle")
+    with page.expect_navigation(wait_until="domcontentloaded", timeout=15_000):
+        page.locator('.lang-option[data-lang="ko"]').click()
 
     # After reload the label must show KO and the googtrans cookie must be gone.
     expect(page.locator("#current-lang")).to_have_text("KO", timeout=10_000)
