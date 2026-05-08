@@ -212,9 +212,7 @@ def build_post_content(
             f"최고 수익: {_top_sc.get('project', '')} {_top_sc.get('apy', 0):.1f}%.\n"
         )
     else:
-        content_parts.append(
-            "USDC·USDT·DAI 등 스테이블코인 기반 풀을 APY 기준으로 정렬한 결과입니다.\n"
-        )
+        content_parts.append("USDC·USDT·DAI 등 스테이블코인 기반 풀을 APY 기준으로 정렬한 결과입니다.\n")
     if stablecoin_pools:
         content_parts.append(_build_pool_table(stablecoin_pools))
     else:

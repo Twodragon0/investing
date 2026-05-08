@@ -179,7 +179,7 @@ def _permalink_from_post(md_path: Path) -> Optional[str]:
             return f"https://{HOST}{path}"
 
         # Extract categories for fallback URL construction
-        cat_match = re.search(r'^categories:\s*\[([^\]]+)\]', fm_text, re.MULTILINE)
+        cat_match = re.search(r"^categories:\s*\[([^\]]+)\]", fm_text, re.MULTILINE)
         if cat_match:
             # Take the first category
             categories = [c.strip().strip("\"'") for c in cat_match.group(1).split(",")]

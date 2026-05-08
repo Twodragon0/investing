@@ -1240,16 +1240,9 @@ class CoinMarketCapCollector(BaseCollector):
                 )
                 _desc_ko = f"BTC ${_btc_price:,.0f} (24h {_btc_ch24:+.1f}%)"
             else:
-                _total_mc = (
-                    global_data.get("total_market_cap", {}).get("usd", 0)
-                    if global_data
-                    else 0
-                )
+                _total_mc = global_data.get("total_market_cap", {}).get("usd", 0) if global_data else 0
                 if _total_mc:
-                    _desc_ko = (
-                        f"크립토 총 시가총액 ${_total_mc / 1e12:.2f}T, "
-                        f"상위 {len(top_coins)}개 코인 분석"
-                    )
+                    _desc_ko = f"크립토 총 시가총액 ${_total_mc / 1e12:.2f}T, 상위 {len(top_coins)}개 코인 분석"
                 else:
                     _desc_ko = f"크립토 시장 상위 {len(top_coins)}개 코인 분석"
             if _fg_val != "N/A":

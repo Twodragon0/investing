@@ -1022,9 +1022,7 @@ class GeopoliticalCollector(BaseCollector):
         # Section 2: GDELT geopolitical news
         content_parts.append("## 2. 주요 지정학 뉴스 (GDELT)\n")
         _avg_tone = (
-            sum(a.get("avg_tone", 0) or 0 for a in gdelt_articles) / len(gdelt_articles)
-            if gdelt_articles
-            else 0
+            sum(a.get("avg_tone", 0) or 0 for a in gdelt_articles) / len(gdelt_articles) if gdelt_articles else 0
         )
         content_parts.append(
             "GDELT(글로벌 사건·언어·음색 데이터베이스)에서 최신 지정학 관련 기사와 "

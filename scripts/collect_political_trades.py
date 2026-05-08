@@ -508,9 +508,7 @@ class PoliticalTradesCollector(BaseCollector):
         if _desc_parts:
             _desc_ko += f"{', '.join(_desc_parts)}. "
         _top_ticker = (
-            Counter(i.get("ticker", "") for i in unique_items if i.get("ticker")).most_common(1)
-            if unique_items
-            else []
+            Counter(i.get("ticker", "") for i in unique_items if i.get("ticker")).most_common(1) if unique_items else []
         )
         if _top_ticker:
             _desc_ko += f"최다 거래 종목: {_top_ticker[0][0]}."
@@ -585,8 +583,7 @@ class PoliticalTradesCollector(BaseCollector):
         sources_str = ", ".join(source_parts) if source_parts else "데이터 없음"
 
         content_parts.append(
-            f"**{self.today}** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 "
-            f"총 **{total_count}건** — {sources_str}."
+            f"**{self.today}** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 총 **{total_count}건** — {sources_str}."
         )
 
         # Keyword analysis

@@ -807,11 +807,7 @@ def build_post_content(
             1 if fred_data else 0,
         ]
     )
-    _fg_str = (
-        f" 공포탐욕 {cnn_fg['score']}({_rating_to_korean(cnn_fg.get('rating', ''))})"
-        if cnn_fg
-        else ""
-    )
+    _fg_str = f" 공포탐욕 {cnn_fg['score']}({_rating_to_korean(cnn_fg.get('rating', ''))})" if cnn_fg else ""
     _vix_str = (
         f", VIX {market_data['VIX']['price_fmt']}"
         if market_data.get("VIX") and market_data["VIX"].get("price_fmt")

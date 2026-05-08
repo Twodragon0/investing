@@ -121,10 +121,7 @@ def _build_service() -> Any:
     """Authenticate with the service account and return the GSC client."""
     cred_path = get_env("GOOGLE_APPLICATION_CREDENTIALS", "")
     if not cred_path:
-        logger.error(
-            "GOOGLE_APPLICATION_CREDENTIALS env var is not set. "
-            "Point it at your service-account JSON file."
-        )
+        logger.error("GOOGLE_APPLICATION_CREDENTIALS env var is not set. Point it at your service-account JSON file.")
         sys.exit(2)
     if not Path(cred_path).is_file():
         logger.error("credentials file not found: %s", cred_path)
@@ -214,13 +211,18 @@ def _inspect_urls(
         logger.info("[%d/%d] Inspecting %s", idx, total, url)
 
         try:
-            resp = service.urlInspection().index().inspect(
-                body={
-                    "inspectionUrl": url,
-                    "siteUrl": site_url,
-                    "languageCode": "ko-KR",
-                }
-            ).execute()
+            resp = (
+                service.urlInspection()
+                .index()
+                .inspect(
+                    body={
+                        "inspectionUrl": url,
+                        "siteUrl": site_url,
+                        "languageCode": "ko-KR",
+                    }
+                )
+                .execute()
+            )
             consecutive_failures = 0
         except Exception as exc:
             exc_str = str(exc)
@@ -229,13 +231,18 @@ def _inspect_urls(
                 time.sleep(_QUOTA_SLEEP)
                 # Retry once
                 try:
-                    resp = service.urlInspection().index().inspect(
-                        body={
-                            "inspectionUrl": url,
-                            "siteUrl": site_url,
-                            "languageCode": "ko-KR",
-                        }
-                    ).execute()
+                    resp = (
+                        service.urlInspection()
+                        .index()
+                        .inspect(
+                            body={
+                                "inspectionUrl": url,
+                                "siteUrl": site_url,
+                                "languageCode": "ko-KR",
+                            }
+                        )
+                        .execute()
+                    )
                     consecutive_failures = 0
                 except Exception as exc2:
                     logger.warning("Retry failed for %s: %s", url, exc2)
@@ -414,8 +421,7 @@ def _build_report(
             "or consolidate with canonical redirects"
         )
     lines.append(
-        "4. Re-run this audit after addressing the above "
-        "(`python scripts/tools/gsc_index_audit.py --from-sitemap`)"
+        "4. Re-run this audit after addressing the above (`python scripts/tools/gsc_index_audit.py --from-sitemap`)"
     )
     lines.append("")
 
@@ -453,10 +459,7 @@ def main(argv: list[str] | None = None) -> int:
         "--output",
         default="",
         metavar="PATH",
-        help=(
-            "Output Markdown file path. "
-            "Defaults to reports/gsc-audit-YYYY-MM-DD.md"
-        ),
+        help=("Output Markdown file path. Defaults to reports/gsc-audit-YYYY-MM-DD.md"),
     )
     parser.add_argument(
         "--sleep",
@@ -470,18 +473,12 @@ def main(argv: list[str] | None = None) -> int:
         type=int,
         default=100,
         metavar="N",
-        help=(
-            "Maximum number of URL examples to save per coverage-state bucket. "
-            "Use 0 for unlimited (default: 100)"
-        ),
+        help=("Maximum number of URL examples to save per coverage-state bucket. Use 0 for unlimited (default: 100)"),
     )
     parser.add_argument(
         "--site",
         default="",
-        help=(
-            "GSC property URL. Defaults to GSC_SITE_URL env var or "
-            f"{DEFAULT_SITE_URL}"
-        ),
+        help=(f"GSC property URL. Defaults to GSC_SITE_URL env var or {DEFAULT_SITE_URL}"),
     )
 
     args = parser.parse_args(argv)

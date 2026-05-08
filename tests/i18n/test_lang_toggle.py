@@ -84,19 +84,13 @@ def test_s1_hover_click_in_place(
     # The googtrans cookie should now point at /ko/{lang_code}.
     cookies = page.context.cookies()
     googtrans = next((c for c in cookies if c["name"] == "googtrans"), None)
-    assert googtrans is not None, (
-        f"expected googtrans cookie to be set after {lang_label} click"
-    )
-    assert f"/{lang_code}" in googtrans["value"], (
-        f"unexpected googtrans value for {lang_code}: {googtrans['value']!r}"
-    )
+    assert googtrans is not None, f"expected googtrans cookie to be set after {lang_label} click"
+    assert f"/{lang_code}" in googtrans["value"], f"unexpected googtrans value for {lang_code}: {googtrans['value']!r}"
 
     # In-place path tolerates at most one extra navigation (single GT fallback
     # reload). Phase 3 tightens this to == 0 once flake rate is measured.
     extra_navs = nav_count["value"] - initial_nav
-    assert extra_navs <= 1, (
-        f"too many navigations after {lang_label} click: {extra_navs}"
-    )
+    assert extra_navs <= 1, f"too many navigations after {lang_label} click: {extra_navs}"
 
     # Body-text translation is best-effort. We assert the expected language
     # string eventually appears somewhere in the body, with a generous timeout
@@ -141,9 +135,7 @@ def test_s2_race_condition_single_script(page: Page, base_url: str) -> None:
 
     # Critical invariant: only one GT element script in the DOM.
     scripts = page.locator('script[src*="translate_a/element.js"]')
-    assert scripts.count() == 1, (
-        f"expected exactly 1 GT element script after race, got {scripts.count()}"
-    )
+    assert scripts.count() == 1, f"expected exactly 1 GT element script after race, got {scripts.count()}"
 
 
 @pytest.mark.i18n_e2e
@@ -175,9 +167,7 @@ def test_s4_korean_recovery_clears_cookie(
     expect(page.locator("#current-lang")).to_have_text("EN", timeout=10_000)
 
     pre_cookies = context.cookies()
-    assert any(c["name"] == "googtrans" for c in pre_cookies), (
-        "expected googtrans cookie to exist after EN switch"
-    )
+    assert any(c["name"] == "googtrans" for c in pre_cookies), "expected googtrans cookie to exist after EN switch"
 
     # Step 2: open the toggle again and click KO. This triggers the recovery
     # path, which deletes the cookie and reloads the page.
@@ -193,8 +183,7 @@ def test_s4_korean_recovery_clears_cookie(
     post_cookies = context.cookies()
     googtrans_remaining = [c for c in post_cookies if c["name"] == "googtrans"]
     assert not googtrans_remaining, (
-        f"googtrans cookie should be cleared after KO recovery, "
-        f"found: {googtrans_remaining!r}"
+        f"googtrans cookie should be cleared after KO recovery, found: {googtrans_remaining!r}"
     )
 
 

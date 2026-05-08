@@ -1376,14 +1376,9 @@ class CryptoNewsCollector(BaseCollector):
         """블록체인 보안 리포트 본문을 생성합니다."""
         _top_rekt = rekt_items[0].get("title", "")[:50] if rekt_items else ""
         if _top_rekt:
-            content_parts = [
-                f"블록체인 보안 {len(all_security_items)}건 분석. 주목 사건: {_top_rekt}.\n"
-            ]
+            content_parts = [f"블록체인 보안 {len(all_security_items)}건 분석. 주목 사건: {_top_rekt}.\n"]
         else:
-            content_parts = [
-                f"블록체인 보안 뉴스 {len(all_security_items)}건 수집 "
-                f"(Rekt {len(rekt_items)}건 포함).\n"
-            ]
+            content_parts = [f"블록체인 보안 뉴스 {len(all_security_items)}건 수집 (Rekt {len(rekt_items)}건 포함).\n"]
         security_links: List[Dict[str, Any]] = []
 
         security_summarizer = ThemeSummarizer(all_security_items)
