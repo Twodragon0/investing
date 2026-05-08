@@ -68,20 +68,22 @@ assert nav_count == 0  # in-place
 
 ## 6. 단계별 구현 순서
 
-**Phase 1 — 인프라 (1~2 PR)**
-- [ ] `tests/i18n/` 디렉토리 + `conftest.py` (jekyll serve fixture, base_url) 추가
-- [ ] `requirements-dev.txt`에 `pytest-playwright` 추가
-- [ ] `i18n-e2e.yml` 워크플로우 골격 (S1 EN 단일 시나리오만) 도입
-- [ ] verifier 게이트: 워크플로우 1회 green + trace 아티팩트 다운로드 확인
+**Phase 1 — 인프라 (commit d34c2029, 2026-05-08)** ✅
+- [x] `tests/i18n/` 디렉토리 + `conftest.py` (base_url, lang_strings, browser_context_args) 추가
+- [x] `requirements-dev.txt`에 `pytest-playwright` 추가
+- [x] `i18n-e2e.yml` 워크플로우 골격 (S1 EN 단일 시나리오) 도입
+- [x] verifier 게이트: run 25533527291 success + trace 아티팩트 confirmed
 
-**Phase 2 — 핵심 시나리오 (3~5 PR)**
-- [ ] S1 EN/JA/zh-CN/ES 4개 언어 파라미터화
-- [ ] S2 race condition 검증 (script tag 1개)
-- [ ] S4 KO 복귀 (쿠키 삭제)
-- [ ] S8 localStorage 자동 적용
-- [ ] verifier 게이트: 5개 시나리오 stable 3회 연속 green
+**Phase 2 — 핵심 시나리오 (commits 4d4262f4 + 08e9b986 + a1c08c2c, 2026-05-08)** ✅
+- [x] S1 EN/JA/zh-CN/ES 4개 언어 파라미터화
+- [x] S2 race condition (네트워크 요청 카운트 + redirected_from 필터)
+- [x] S4 KO 복귀 (쿠키 삭제)
+- [x] S8 localStorage 자동 적용
+- [x] verifier 게이트: run 25535029430 success (수동 트리거)
+- 학습: HTTP→HTTPS 리다이렉트가 `request` 이벤트 두 개 만듦 → `redirected_from is None` 필터 필수.
+  DOM script 카운트는 GT가 초기화 후 정리하므로 timing-dependent → 네트워크 요청 카운트로 대체.
 
-**Phase 3 — 회귀 + 모바일 (2~3 PR)**
+**Phase 3 — 회귀 + 모바일 (2~3 PR)** 🔄
 - [ ] S6 모바일 디바이스 매트릭스 (`devices["iPhone SE"]` 등) 파라미터화
 - [ ] S3 키보드/터치 폴백, S5 시크릿 컨텍스트, S9 더블클릭 복귀
 - [ ] 콘솔 에러 0 가드 + S7 테마 emulate
