@@ -55,40 +55,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-04 - 암호화폐 뉴스 요
 <li><a href="https://www.coindesk.com/business/2026/05/02/the-usd292m-crypto-hack-exposed-defi-s-weak-spots-here-s-what-must-change-insiders-say">2억 9200만 달러 규모의 암호화폐 해킹으로 디파이의 약점이 드러났습니다. 내부자들은 다음과 같이 변화해야 할 사항이 있다고 말합니다.</a> <span class="p0-desc">월스트리트이 온체인으로 이동함에 따라 올해 최대 규모의 암호화폐 해킹과 디파이 위기로 인해 위험, 보안 및 시장 구조를 다시 생각하게 되었다고 업계 관계자는 CoinDesk에 말했.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 디지털 자산 CEO에 따르면 북한의 암호화폐 해킹 플레이북은 캔톤 네트워크에서 작동하지 않습니다. 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 86건의 뉴스 중 P1 주요 이슈도 7건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (24건): 비트코인, 암호화폐, 달러 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **🏦 거래소** (18건): binance, network, completes 이슈가 시장 구조 변화의 신호일 수 있어 심층 분석이 권장됩니다.
-- **📈 가격/시장** (16건): 달러 가격 변동 (16건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 디지털 자산 CEO에 따르면 북한의 암호화폐 해킹 플레이북은 캔톤 네트워크에서 작동하지 않습니다.
-- 2억 9200만 달러 규모의 암호화폐 해킹으로 디파이의 약점이 드러났습니다. 내부자들은 다음과 같이 변화해야 할 사항이 있다고 말합니다.
-
-### 주요 이슈
-
-- 비트코인, 규제 진전과 S&P 500 신기록 속 8만 달러 목표 By Investing.com - Investing.com 한국어
-- 브라질 중앙은행은 국경 간 결제에서 스테이블코인 및 암호화폐 결제를 금지합니다.
-- 비트코인의 '위험' 에어드롭: 개발자가 Paul Sztorc의 eCash 포크에 대해 경고하는 이유
-- 외 4건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(40건), Cointelegraph(15건), CoinDesk(14건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-05-04.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-05-04.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

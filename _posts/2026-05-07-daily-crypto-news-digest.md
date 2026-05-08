@@ -56,41 +56,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-07 - 암호화폐 뉴스 요
 <li><a href="https://cointelegraph.com/news/coinbase-sued-for-withholding-frozen-crypto-linked-to-55m-defi-saver-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">코인베이스는 5,500만 달러 규모의 암호화폐 도난으로 인해 자금이 동결된 것에 대해 소송을 제기했습니다.</a> <span class="p0-desc">원고는 코인베이스가 2024년 DAI 피싱 도난으로 인한 추적 가능한 자산을 동결했지만 법원 명령 없이는 반환을 거부했다고 말했습니다.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 연이은 해킹 사태로 힘 빠진 알트코인…"리스크 관리가 중요한 때" 
-외 P0 긴급 이슈 5건이 추가 감지되었습니다. 총 106건의 뉴스 중 P1 주요 이슈도 7건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (41건): 비트코인, 스트래티지, 만달러 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **🏦 거래소** (27건): 강세 관련 지표와 수급 흐름을 함께 확인하세요.
-- **📈 가격/시장** (31건): 만달러, 스트래티지, 암호화폐 가격 변동 (31건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 연이은 해킹 사태로 힘 빠진 알트코인…"리스크 관리가 중요한 때"
-- NYSE 토큰화 파트너는 합성 주식 토큰이 소매 거래자를 오도할 수 있다고 경고합니다.
-- 코인베이스는 5,500만 달러 규모의 암호화폐 도난으로 인해 자금이 동결된 것에 대해 소송을 제기했습니다.
-
-### 주요 이슈
-
-- 코인시황] 비트코인, ETF '사흘 연속' 순유입에 8만1000달러선 '훈풍' - 뉴스웍스
-- 전략: 비트코인 고래의 수익이 이 주요 질문에 답할 것입니다 - Investor's Business Daily
-- 밈코인 거래는 드문 '7-leg' 팔레이 확률을 가지고 있다고 BONK의 Nom이 Consensus에서 말했습니다.
-- 외 4건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, ETF
-- **주요 출처**: Binance(40건), Google News KR(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-05-07.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-05-07.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

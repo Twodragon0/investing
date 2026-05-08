@@ -54,39 +54,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-03 - 암호화폐 뉴스 요
 <li><a href="https://www.coindesk.com/business/2026/05/02/the-usd292m-crypto-hack-exposed-defi-s-weak-spots-here-s-what-must-change-insiders-say">2억 9200만 달러 규모의 암호화폐 해킹으로 디파이의 약점이 드러났습니다. 내부자들은 다음과 같이 변화해야 할 사항이 있다고 말합니다.</a> <span class="p0-desc">월스트리트이 온체인으로 이동함에 따라 올해 최대 규모의 암호화폐 해킹과 디파이 위기로 인해 위험, 보안 및 시장 구조를 다시 생각하게 되었다고 업계 관계자는 CoinDesk에 말했.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 2억 9200만 달러 규모의 암호화폐 해킹으로 디파이의 약점이 드러났습니다. 내부자들은 다음과 같이 변화해야 할 사항이 있다고 말합니다. 
-총 96건의 뉴스 중 P1 주요 이슈도 8건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (37건): 비트코인, 달러, ETF 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **🏦 거래소** (20건): binance, network, completes 동향이 포트폴리오 전략에 영향을 줄 수 있어 주시가 필요합니다.
-- **📈 가격/시장** (19건): 달러, 랠리 가격 변동 (19건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 2억 9200만 달러 규모의 암호화폐 해킹으로 디파이의 약점이 드러났습니다. 내부자들은 다음과 같이 변화해야 할 사항이 있다고 말합니다.
-
-### 주요 이슈
-
-- 비트코인은 ETF 유입이 2025년 4월 이후 가장 좋은 달로 이어지면서 $78,000를 넘어섰습니다.
-- 비트코인, ETF 유입으로 2025년 4월 이후 최고 실적 기록하며 78,000달러 상회 By Investing.com - Investing.c
-- 캐시 우드, 비트코인 ETF 비우고 로빈후드 채웠다. '역발상 투자' 승부수 - 블록체인투데이
-- 외 5건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(40건), Decrypt(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-05-03.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-05-03.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

@@ -55,40 +55,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-02 - 암호화폐 뉴스 요
 <li><a href="https://cointelegraph.com/news/defi-protocol-carrot-becomes-first-casualty-of-285m-drift-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">디파이 프로토콜 Carrot은 2억 8,500만 달러 규모의 드리프트 익스플로잇의 첫 번째 희생자가 되었습니다.</a> <span class="p0-desc">Carrot의 잠긴 총 가치는 한 달 만에 2,800만 달러에서 199만 달러로 93% 감소하여 프로토콜을 재정적으로 지속할 수 없게 되었습니다.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 비트코인 폭락 수신되나요? 분석가들은 4월 급증이 불안정한 상황에서 이루어졌다고 경고 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 101건의 뉴스 중 P1 주요 이슈도 11건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (41건): 비트코인, 달러, XRP 관련 (41건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **🏦 거래소** (22건): binance, suspension, bithumb 관련 지표와 수급 흐름을 함께 확인하세요.
-- **📈 가격/시장** (22건): 달러, 급등, XRP 가격 변동 (22건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 비트코인 폭락 수신되나요? 분석가들은 4월 급증이 불안정한 상황에서 이루어졌다고 경고
-- 디파이 프로토콜 Carrot은 2억 8,500만 달러 규모의 드리프트 익스플로잇의 첫 번째 희생자가 되었습니다.
-
-### 주요 이슈
-
-- "비트코인이 달러를 넘본다고? 웃기는 소리"···월가 거물들의 냉혹한 경고
-- 비트코인·리플(XRP), 반등 신호 이어질까…규제 기대감에 시장 ‘온기’ - CBC뉴스
-- 도지코인은 DOGE 광산 회사가 합병을 통해 기업 공개를 계획함에 따라 2개월 최고치를 기록했습니다.
-- 외 8건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 디파이
-- **주요 출처**: Binance(40건), Decrypt(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-05-02.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-05-02.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

@@ -55,40 +55,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-05 - 암호화폐 뉴스 요
 <li><a href="https://cointelegraph.com/news/law-firm-tries-to-claim-kelp-exploit-eth-because-clients-owed-by-dprk?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">미국 법률 회사는 Kelp 익스플로잇으로 인해 동결된 ETH의 전송을 차단하려고 시도합니다.</a> <span class="p0-desc">거스타인 해로우(Gerstein Harrow)는 과거에도 고객이 북한이 훔치고 암호화폐 회사가 동결한 자금에 대한 청구권이 있다고 주장하면서 유사한 소송을 제기한 바 있다.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Laywer는 Arbitrum DAO 포럼에 등장하여 수십 년 된 북한 테러 행위의 피해자들을 위한 자금을 구하고 있습니다. 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 87건의 뉴스 중 P1 주요 이슈도 11건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (32건): 비트코인, 달러, 돌파 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (26건): 달러, 돌파, 암호화폐 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🏦 거래소** (20건): binance, network, integration 이슈에 대한 시장 반응을 모니터링할 필요가 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- Laywer는 Arbitrum DAO 포럼에 등장하여 수십 년 된 북한 테러 행위의 피해자들을 위한 자금을 구하고 있습니다.
-- 미국 법률 회사는 Kelp 익스플로잇으로 인해 동결된 ETH의 전송을 차단하려고 시도합니다.
-
-### 주요 이슈
-
-- 비트코인, ETF 자금 유입에 8만 달러 돌파; 스트래티지 실적 발표 예정 - Investing.com 한국어
-- 비트코인, 8만 달러 근처에서 횡보. 주식 및 ETF 자금 유입은 여전히 돌파구를 시사. - CoinDesk
-- 헤르메스를 설치했습니다. 이제 ChatGPT 또는 Claude보다 더 좋아 보이게 만드세요
-- 외 8건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, ETF, AI
-- **주요 출처**: Binance(40건), CoinDesk(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-05-05.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-05-05.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

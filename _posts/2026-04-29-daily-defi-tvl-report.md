@@ -21,6 +21,7 @@ image_alt: "DeFi TVL 리포트 - 2026-04-29 - DeFi 뉴스 요약 이미지"
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">$137.86B</div><div class="stat-label">프로토콜 TVL</div></div><div class="stat-item"><div class="stat-value">$78.36B</div><div class="stat-label">체인 TVL</div></div><div class="stat-item"><div class="stat-value">20</div><div class="stat-label">프로토콜 수</div></div><div class="stat-item"><div class="stat-value">15</div><div class="stat-label">체인 수</div></div></div>
 <div class="alert-box alert-info"><strong>DeFi 생태계 $137.86B 규모 분석</strong><ul><li>🏆 <strong>최상위 프로토콜</strong>: Lido — TVL $21.13B (Liquid Staking)</li><li>⛓️ <strong>최상위 체인</strong>: Ethereum — TVL $44.55B (56.9%)</li><li>📊 <strong>최다 카테고리</strong>: Liquid Staking — $29.49B</li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - Lido로 TVL $21.13B (15.3%)로 선두를 유지하고 있으며, 상위 3개(Lido, SSV Network, Aave V3)가 전체의 37%를 차지합니다.
