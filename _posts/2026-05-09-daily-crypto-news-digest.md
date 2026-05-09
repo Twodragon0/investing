@@ -56,41 +56,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-09 - 암호화폐 뉴스 요
 <li><a href="https://cointelegraph.com/news/mantle-tokenholders-aave-credit-facility-rseth-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">맨틀 토큰 보유자는 rsETH 공격 후 30K ETH 에이브 신용 시설을 승인합니다.</a> <span class="p0-desc">신용 시설은 에이브이 4월 rsETH 악용으로 인해 WETH 시장에 부담을 준 후 발생한 악성 부채를 해결하는 데 도움이 될 것입니다.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Arbitrum DAO, Kelp DAO 악용 구호를 위해 7천만 달러 잠금 해제에 투표 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 100건의 뉴스 중 P1 주요 이슈도 12건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (42건): 비트코인, BTC, 나라 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **📈 가격/시장** (30건): 암호화폐 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🏦 거래소** (20건): 실적 동향이 포트폴리오 전략에 영향을 줄 수 있어 주시가 필요합니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- Arbitrum DAO, Kelp DAO 악용 구호를 위해 7천만 달러 잠금 해제에 투표
-- Solv 프로토콜은 LayerZero를 덤프하고 $7억 달러의 토큰화된 비트코인 기술을 체인링크로 마이그레이션합니다.
-- 맨틀 토큰 보유자는 rsETH 공격 후 30K ETH 에이브 신용 시설을 승인합니다.
-
-### 주요 이슈
-
-- 코인베이스 주식은 1분기 미스 거래량, 암호화폐 가격 드래그 결과에 하락합니다.
-- 샌안토니오, 경고 표시로 비트코인 ATM 사기 단속
-- 암호화폐 시장 업데이트: 코인베이스 인력 감축, 전략에서는 비트코인 판매 고려
-- 외 9건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Decrypt(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 4건 포함
-- 프로모션성 거래소 공지 1건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-05-09.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-05-09.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
