@@ -401,10 +401,15 @@ def test_s9_doubleclick_system_reset(
     # Step 2: double-click the toggle to trigger system-reset.
     # The handler sets preferredLang=system and calls changeLang(sysLang)
     # which (under ko-KR) follows the KO recovery path: deletes cookie + reloads.
-    # Use expect_navigation to ensure the 80ms-delayed reload has fully
-    # completed before asserting on label/cookie state.
-    with page.expect_navigation(wait_until="domcontentloaded", timeout=15_000):
+    # Use expect_navigation + load (not domcontentloaded) so deferred scripts
+    # finish executing — the GT widget can create/replace iframes after DCL,
+    # which destroys evaluation contexts and breaks the localStorage probe.
+    with page.expect_navigation(wait_until="load", timeout=15_000):
         toggle.dblclick()
+
+    # Extra grace: settle any post-load script settlement (initLangToggle
+    # setTimeout 100ms + safeSessionStorageSet/Remove side-effects).
+    page.wait_for_timeout(300)
 
     # Label reverts to KO (system language under ko-KR locale).
     expect(page.locator("#current-lang")).to_have_text("KO", timeout=10_000)
