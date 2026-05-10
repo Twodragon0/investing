@@ -149,17 +149,34 @@ def test_s3_keyboard_fallback(
     assert "/en" in googtrans["value"], f"unexpected googtrans value: {googtrans['value']!r}"
 
 
-@pytest.mark.skip(
-    reason=(
-        "Mobile context (iPhone SE / iPad / Pixel 5) hangs in CI on Playwright "
-        "asyncio selector.poll — run 25567437195 stack trace shows MainThread "
-        "stuck in playwright/sync_api/_context_manager.py greenlet_main → "
-        "asyncio run_forever → selector.poll. Reproduces consistently on first "
-        "mobile-context test (S3 touch). Likely a Playwright x mobile context "
-        "init issue under headless Linux. Tracking as follow-up — desktop "
-        "lanes provide full coverage of the toggle logic."
-    ),
-)
+def _safe_mobile_context_args(device: dict) -> dict:
+    """Strip Playwright device-profile keys that hang under headless Chromium.
+
+    Background — CI run 25567437195 stack: MainThread stuck in
+    ``playwright/sync_api/_context_manager.py`` greenlet_main → asyncio
+    ``run_forever`` → ``selector.poll``. Reproduces 100% on the first
+    mobile-context test (S3 touch).
+
+    Root cause hypothesis (highest evidence): the iPhone SE / iPad presets
+    declare ``default_browser_type='webkit'`` but CI installs only Chromium
+    (``playwright install --with-deps chromium``). Spreading
+    ``**playwright.devices['iPhone SE']`` into ``browser.new_context`` on
+    Chromium passes ``is_mobile=True`` + ``has_touch=True``, which triggers
+    Chromium's mobile-emulation init path; under headless Linux this can
+    hang on a renderer/IPC handshake when the chosen UA + viewport combo
+    is incompatible (no SIGALRM-able cut, hence the bare selector.poll).
+
+    Workaround (D-style): keep ``user_agent``, ``viewport``,
+    ``device_scale_factor`` from the device preset, but drop the
+    ``is_mobile`` / ``has_touch`` / ``default_browser_type`` fields. We
+    cover responsive layout (viewport + UA) without tripping the mobile
+    emulation hang. Touch-event coverage is still exercised in S3 via
+    ``dispatch_event('touchstart')`` below.
+    """
+    keep = ("user_agent", "viewport", "device_scale_factor")
+    return {k: device[k] for k in keep if k in device}
+
+
 def test_s3_touch_fallback(
     playwright: Playwright,
     browser: Browser,
@@ -170,10 +187,17 @@ def test_s3_touch_fallback(
     Touch contexts emit ``touchstart`` rather than ``mouseenter``, but the
     inline preloader registers both. We assert the dropdown opens via tap
     and the EN option applies cleanly.
+
+    NOTE: ``page.tap()`` requires ``has_touch=True`` on the context, but
+    that triggers the Chromium mobile-emulation hang documented in
+    ``_safe_mobile_context_args``. We instead dispatch ``touchstart``
+    directly — the production preloader registers it as a `once` listener
+    on ``#lang-toggle`` and that is exactly the GT-bootstrap trigger this
+    scenario gates.
     """
     iphone = playwright.devices["iPhone SE"]
     ctx = browser.new_context(
-        **iphone,
+        **_safe_mobile_context_args(iphone),
         locale="ko-KR",
         timezone_id="Asia/Seoul",
     )
@@ -185,13 +209,14 @@ def test_s3_touch_fallback(
 
         toggle = page.locator("#lang-toggle")
         expect(toggle).to_be_visible(timeout=5_000)
-        # First tap fires touchstart → loads the GT bootstrap. We then wait
-        # for IIFE to bind the handler. The follow-up interaction uses
-        # ``click()`` because Playwright's ``tap()`` only dispatches touch
-        # events (no synthesized click), so the dropdown click handler
-        # would never run on a tap-only path.
-        toggle.tap()
+        # Synthesize the touch signal that the inline preloader listens for.
+        # This is the exact event handler the production code attaches in
+        # `_includes/google-translate.html` (line 56).
+        toggle.dispatch_event("touchstart")
         wait_lang_toggle_ready(page, hover_first=False)
+        # The dropdown-open handler listens for `click`, which `touchstart`
+        # alone does not synthesize. This mirrors the previous tap()+click()
+        # sequencing without requiring `has_touch=True` on the context.
         toggle.click()
 
         en_option = page.locator('.lang-option[data-lang="en"]')
@@ -201,7 +226,9 @@ def test_s3_touch_fallback(
         expect(page.locator("#current-lang")).to_have_text("EN", timeout=15_000)
 
         cookies = ctx.cookies()
-        assert any(c["name"] == "googtrans" for c in cookies), "expected googtrans cookie after tap-driven EN selection"
+        assert any(c["name"] == "googtrans" for c in cookies), (
+            "expected googtrans cookie after touch-driven EN selection"
+        )
 
         _assert_console_clean(errors, "S3 touch fallback (iPhone SE)")
     finally:
@@ -280,7 +307,6 @@ def test_s5_storage_blocked_graceful(
 MOBILE_DEVICES: tuple[str, ...] = ("iPhone SE", "iPad (gen 7)", "Pixel 5")
 
 
-@pytest.mark.skip(reason="Mobile context hang — see test_s3_touch_fallback skip reason; same root cause.")
 @pytest.mark.parametrize("device_name", MOBILE_DEVICES)
 def test_s6_mobile_languages(
     playwright: Playwright,
@@ -288,18 +314,23 @@ def test_s6_mobile_languages(
     base_url: str,
     device_name: str,
 ) -> None:
-    """S6: dropdown is reachable + tap-actionable across the mobile matrix.
+    """S6: dropdown is reachable + actionable across the mobile matrix.
 
     We do not assert on body-text translation (covered by S1 in the desktop
-    lane); we focus on the toggle UX: dropdown visible, options tappable,
-    label updates synchronously.
+    lane); we focus on the toggle UX under mobile viewports: dropdown
+    visible, options clickable, label updates synchronously.
+
+    Uses ``_safe_mobile_context_args`` to avoid Chromium's mobile-emulation
+    hang under headless CI. Touch-plumbing is covered by S3
+    (``test_s3_touch_fallback``); S6's mandate is responsive layout +
+    cross-viewport reachability.
     """
     if device_name not in playwright.devices:
         pytest.skip(f"Playwright device preset '{device_name}' unavailable in this build")
 
     device = playwright.devices[device_name]
     ctx = browser.new_context(
-        **device,
+        **_safe_mobile_context_args(device),
         locale="ko-KR",
         timezone_id="Asia/Seoul",
     )
@@ -317,12 +348,13 @@ def test_s6_mobile_languages(
         assert bbox is not None, f"{device_name}: toggle has no bounding box"
         assert bbox["width"] >= 32 and bbox["height"] >= 32, f"{device_name}: toggle too small for touch ({bbox})"
 
-        # First tap fires touchstart → loads GT script. Then we use
-        # ``click()`` for the dropdown-open + option-select interactions
-        # because Playwright's ``tap()`` does not synthesize a click event,
-        # and the production dropdown-open handler listens for click. The
-        # mobile coverage here is layout/responsive, not touch-event plumbing.
-        toggle.tap()
+        # Synthesize touchstart for the lazy GT-bootstrap trigger (production
+        # listener attached in `_includes/google-translate.html`). Then use
+        # ``click()`` for the dropdown-open + option-select interactions —
+        # the production dropdown-open handler listens for click, and we
+        # cannot use ``tap()`` because the safe mobile args drop
+        # ``has_touch=True`` to dodge the Chromium emulation hang.
+        toggle.dispatch_event("touchstart")
         wait_lang_toggle_ready(page, hover_first=False)
         toggle.click()
 
