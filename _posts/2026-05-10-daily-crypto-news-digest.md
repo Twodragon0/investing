@@ -56,41 +56,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-10 - 암호화폐 뉴스 요
 <li><a href="https://www.coindesk.com/tech/2026/05/09/layerzero-says-it-made-a-mistake-in-usd292-million-kelp-exploit">LayerZero는 2억 9200만 달러 규모의 Kelp 익스플로잇에서 '실수'했다고 밝혔습니다</a> <span class="p0-desc">처음에 이 공격을 개발자 구성 실패로 프레이밍한 후 LayerZero는 자체 검증자가 취약한 설정에서 고가치 전송을 보호하도록 하기로 한 결정을 "소유"했다고 말했습니다.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 비트코인 가격이 $80,000 아래로 급락합니다. 이 채용 보고서는 암호화폐 슬럼프를 끝낼 수 있습니다. 
-외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 94건의 뉴스 중 P1 주요 이슈도 8건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (36건): 비트코인, 트럼프 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (21건): 암호화폐, BTC 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🏦 거래소** (14건): coinbase, binance, outage 동향이 포트폴리오 전략에 영향을 줄 수 있어 주시가 필요합니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 비트코인 가격이 $80,000 아래로 급락합니다. 이 채용 보고서는 암호화폐 슬럼프를 끝낼 수 있습니다.
-- 올림픽 육상 선수는 영국 암호화폐 사기 조사에서 혐의를 초과할 수 없습니다
-- LayerZero는 2억 9200만 달러 규모의 Kelp 익스플로잇에서 '실수'했다고 밝혔습니다
-
-### 주요 이슈
-
-- 엡스타인은 오바마의 이란 제재 추진 중 암호화폐에 관해 미 재무부에 자문을 제공했습니다.
-- 샌안토니오, 경고 표시로 비트코인 ATM 사기 단속
-- 편지: 암호화폐 사업에는 엄격한 규제가 필요합니다 - Honolulu Star-Advertiser
-- 외 5건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Decrypt(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 4건 포함
-- 프로모션성 거래소 공지 1건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-05-10.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-05-10.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
