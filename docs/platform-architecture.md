@@ -112,7 +112,7 @@ Live:   investing.2twodragon.com
 | 수집기 (Collectors) | 8개 | crypto, stock, regulatory, political, social, coinmarketcap, worldmonitor, defi_llama |
 | 생성기 (Generators) | 5개 | daily_summary, market_summary, weekly_digest, og_images, ops_10am_digest |
 | 공통 모듈 | 15개 | config, dedup, utils, post_generator, image_generator 등 |
-| 데이터 소스 | 20+ | CryptoPanic, NewsAPI, FRED, CoinGecko, SEC, FSC 등 |
+| 데이터 소스 | 20+ | CryptoPanic, FRED, CoinGecko, SEC, FSC 등 |
 | GitHub Actions | 23개 | 수집 8 + 생성 5 + 운영 10 |
 | 카테고리 페이지 | 9개 | crypto, stock, regulatory, political, social 등 |
 
@@ -151,7 +151,7 @@ GitHub: Twodragon0/crypto
 ┌─────────────────────────────────────────────────────────────────────┐
 │                   investing repo (Data Layer)                       │
 │                                                                     │
-│  [CryptoPanic] [NewsAPI] [SEC] [FRED] [CoinGecko] [Telegram] ...   │
+│  [CryptoPanic] [Google News] [SEC] [FRED] [CoinGecko] [Telegram] ...│
 │        │          │        │     │        │           │             │
 │        ▼          ▼        ▼     ▼        ▼           ▼             │
 │  ┌──────────────────────────────────────────────────────────────┐   │
@@ -262,7 +262,7 @@ GitHub: Twodragon0/crypto
 | 스토리지 | S3 | ~$5 | 백테스트 결과, 이미지 |
 | CDN | CloudFront | ~$10 | 정적 사이트, API 캐시 |
 | 모니터링 | Sentry + Slack | ~$30 | 에러 추적, 알림 |
-| 데이터 API | FRED, NewsAPI 등 | ~$50 | 프리미엄 데이터 피드 |
+| 데이터 API | FRED 등 | ~$50 | 프리미엄 데이터 피드 |
 | CI/CD | GitHub Actions | 무료 | 자동화 파이프라인 |
 | **합계** | | **~$185/월** | |
 

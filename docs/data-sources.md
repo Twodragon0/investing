@@ -9,7 +9,7 @@
 | 소스 | 유형 | API 키 | 설명 |
 |:-----|:-----|:-------|:-----|
 | CryptoPanic | REST API | `CRYPTOPANIC_API_KEY` (선택) | 암호화폐 핫 뉴스 피드 |
-| NewsAPI | REST API | `NEWSAPI_API_KEY` (선택) | 키워드 기반 뉴스 검색 |
+| ~~NewsAPI~~ | ~~REST API~~ | ~~`NEWSAPI_API_KEY`~~ | ~~키워드 기반 뉴스 검색~~ (DEPRECATED 2026-05-10, Google News 브라우저 스크래핑으로 대체) |
 | Google News RSS | RSS | 불필요 | 한국어/영어 암호화폐 뉴스 |
 | OKX 공지 | Public API | 불필요 | OKX 거래소 공지사항 |
 | Binance 공지 | Public API | 불필요 | Binance 거래소 공지사항 |
@@ -20,7 +20,7 @@
 
 | 소스 | 유형 | API 키 | 설명 |
 |:-----|:-----|:-------|:-----|
-| NewsAPI | REST API | `NEWSAPI_API_KEY` (선택) | KOSPI, S&P 500 키워드 뉴스 |
+| ~~NewsAPI~~ | ~~REST API~~ | ~~`NEWSAPI_API_KEY`~~ | ~~KOSPI, S&P 500 키워드 뉴스~~ (DEPRECATED 2026-05-10, Google News/RSS로 대체) |
 | Yahoo Finance RSS | RSS | 불필요 | 글로벌 주식 뉴스 피드 |
 | yfinance | Python 라이브러리 | 불필요 | 한국 시장 데이터 (KOSPI, KOSDAQ) |
 | KRX (Google News) | RSS | 불필요 | 한국거래소 관련 뉴스 |
@@ -106,7 +106,7 @@ API 키: **불필요** (`https://worldmonitor.app/api/rss-proxy`)
 | 환경변수 | 서비스 | 취득 방법 |
 |:---------|:-------|:---------|
 | `CRYPTOPANIC_API_KEY` | CryptoPanic | [cryptopanic.com/developers/api](https://cryptopanic.com/developers/api/) 가입 후 발급 |
-| `NEWSAPI_API_KEY` | NewsAPI | [newsapi.org](https://newsapi.org/) 가입 후 발급 (무료 플랜 가능) |
+| ~~`NEWSAPI_API_KEY`~~ | ~~NewsAPI~~ | DEPRECATED 2026-05-10 — 코드 사용처 0건, 등록 불필요 |
 | `ALPHA_VANTAGE_API_KEY` | Alpha Vantage | [alphavantage.co/support](https://www.alphavantage.co/support/) 무료 키 신청 |
 | `FRED_API_KEY` | FRED | [fred.stlouisfed.org](https://fred.stlouisfed.org/docs/api/api_key.html) 가입 후 발급 |
 | `TWITTER_BEARER_TOKEN` | Twitter/X v2 | [developer.twitter.com](https://developer.twitter.com/) 개발자 계정 후 Bearer Token |
@@ -129,7 +129,7 @@ API 키: **불필요** (`https://worldmonitor.app/api/rss-proxy`)
 ```bash
 # .env 파일 또는 shell에서 설정
 export CRYPTOPANIC_API_KEY=your_key
-export NEWSAPI_API_KEY=your_key
+# export NEWSAPI_API_KEY=your_key  # DEPRECATED 2026-05-10, 등록 불필요
 export ALPHA_VANTAGE_API_KEY=your_key
 export FRED_API_KEY=your_key
 export TWITTER_BEARER_TOKEN=your_token
@@ -155,7 +155,7 @@ Repository **Settings > Secrets and variables > Actions**에서 위 환경변수
 
 | 우선순위 | 유형 | 특징 |
 |:---------|:-----|:-----|
-| 1순위 | 전용 API (CryptoPanic, NewsAPI 등) | 구조화된 데이터, 필터링, 페이지네이션 |
+| 1순위 | 전용 API (CryptoPanic 등) | 구조화된 데이터, 필터링, 페이지네이션 |
 | 2순위 | 공개 API (CoinGecko free, DeFi Llama) | 키 불필요, 사용량 제한 있음 |
 | 3순위 | RSS/Google News | 항상 가용, 텍스트 기반 |
 | 4순위 | 웹 스크래핑 (Telegram) | Playwright 필요, 가장 불안정 |

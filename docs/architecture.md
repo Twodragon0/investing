@@ -63,9 +63,9 @@ Investing Dragon은 3-tier 아키텍처로 구성됩니다:
 
 | 항목 | 내용 |
 |:-----|:-----|
-| **소스** | CryptoPanic API, NewsAPI, Google News RSS (KR/EN), 거래소 공지 (OKX, Binance, Bybit), Rekt News |
+| **소스** | CryptoPanic API, Google News RSS (KR/EN), 거래소 공지 (OKX, Binance, Bybit), Rekt News |
 | **주기** | 매 6시간 |
-| **API 키** | `CRYPTOPANIC_API_KEY`, `NEWSAPI_API_KEY` (모두 선택) |
+| **API 키** | `CRYPTOPANIC_API_KEY` (선택) |
 | **카테고리** | crypto-news, security-alerts |
 | **상태 파일** | `_state/collect_crypto_news_seen.json` |
 
@@ -73,9 +73,9 @@ Investing Dragon은 3-tier 아키텍처로 구성됩니다:
 
 | 항목 | 내용 |
 |:-----|:-----|
-| **소스** | NewsAPI (KOSPI/S&P 500 키워드), Yahoo Finance RSS, yfinance (한국 시장), KRX Google News, Alpha Vantage |
+| **소스** | Yahoo Finance RSS, yfinance (한국 시장), KRX Google News, Alpha Vantage (이전엔 NewsAPI를 사용했으나 현재는 Google News/RSS로 대체됨) |
 | **주기** | 매 6시간 |
-| **API 키** | `NEWSAPI_API_KEY`, `ALPHA_VANTAGE_API_KEY` (모두 선택) |
+| **API 키** | `ALPHA_VANTAGE_API_KEY` (선택) |
 | **카테고리** | stock-news |
 | **상태 파일** | `_state/collect_stock_news_seen.json` |
 
