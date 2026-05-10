@@ -180,6 +180,17 @@ def test_s4_korean_recovery_clears_cookie(
     page.locator('.lang-option[data-lang="en"]').click()
     expect(page.locator("#current-lang")).to_have_text("EN", timeout=10_000)
 
+    # Flush any pending reload timer triggered by `changeLang('en')`. Production
+    # code schedules `setTimeout(reload, 60ms)` (no GT) or `setTimeout(verify
+    # + maybe reload, 500ms)` (GT path) AFTER updating #current-lang. The
+    # `to_have_text("EN")` assertion above can pass while the timer is still
+    # in-flight, leading to a navigation race when the next toggle.click()
+    # runs (Step 2). Wait > 500ms so any pending reload completes first.
+    page.wait_for_timeout(700)
+    page.wait_for_load_state("domcontentloaded")
+    # After the (possibly happened) reload, the IIFE has to re-bind handlers.
+    wait_lang_toggle_ready(page)
+
     pre_cookies = context.cookies()
     assert any(c["name"] == "googtrans" for c in pre_cookies), "expected googtrans cookie to exist after EN switch"
 
