@@ -180,17 +180,32 @@ Vercel Dashboard → Project → Settings → Environment Variables
    gh secret set GSC_SERVICE_ACCOUNT_JSON < /path/to/sa.json
    ```
 
-4. **워크플로우에서 사용**
-   ```yaml
-   - name: GSC index audit
-     env:
-       GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/sa.json
-     run: |
-       echo '${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}' > "$GOOGLE_APPLICATION_CREDENTIALS"
-       python scripts/tools/gsc_index_audit.py --from-sitemap
+4. **자동화 워크플로우 (secret 등록 후 즉시 동작)**
+
+   | 워크플로우 | 트리거 | 역할 |
+   |-----------|--------|------|
+   | `.github/workflows/gsc-index-audit.yml` | 매주 월요일 03:00 UTC + 수동 | URL 색인 상태 감사 → artifact 저장 |
+   | `.github/workflows/gsc-sitemap-submit.yml` | 배포 완료 후 + 수동 | GSC에 sitemap 강제 재제출 |
+
+   secret이 없으면 두 워크플로우 모두 graceful skip (빌드 실패 없음).
+
+5. **첫 실행 및 결과 확인**
+   ```bash
+   # 수동으로 첫 실행
+   gh workflow run gsc-index-audit.yml
+   gh workflow run gsc-sitemap-submit.yml
+
+   # 실행 상태 확인
+   gh run list --workflow=gsc-index-audit.yml --limit 5
+
+   # artifact 다운로드 (run-id 확인 후)
+   gh run download <run-id> --name gsc-audit-<run-id>
+   cat gsc-audit-output.txt
    ```
 
-5. **로컬 테스트**
+   Actions UI에서는: **Actions → GSC Index Audit → 최근 실행 → Artifacts → gsc-audit-xxx**
+
+6. **로컬 테스트**
    ```bash
    GOOGLE_APPLICATION_CREDENTIALS=/path/to/sa.json \
      python scripts/tools/gsc_api.py submit-sitemap \

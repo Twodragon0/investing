@@ -1,0 +1,54 @@
+name: GSC Sitemap Submit
+
+on:
+  workflow_run:
+    workflows: ["Deploy Jekyll to GitHub Pages"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gsc-sitemap-submit
+  cancel-in-progress: true
+
+jobs:
+  submit:
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
+
+      - name: Setup Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: scripts/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Write service account JSON
+        if: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON != '' }}
+        run: echo '${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}' > "$RUNNER_TEMP/sa.json"
+
+      - name: Submit sitemap to GSC
+        if: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON != '' }}
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/sa.json
+        run: |
+          python scripts/tools/gsc_api.py submit-sitemap \
+            https://investing.2twodragon.com/sitemap-index.xml --confirm
+
+      - name: Skip notice (secret not set)
+        if: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON == '' }}
+        run: |
+          echo "GSC_SERVICE_ACCOUNT_JSON secret이 설정되지 않아 sitemap 제출을 건너뜁니다."
+          echo "등록 방법: gh secret set GSC_SERVICE_ACCOUNT_JSON < /path/to/sa.json"
