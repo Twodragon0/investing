@@ -2,9 +2,8 @@
 """Collect stock market news from multiple sources and generate Jekyll posts.
 
 Sources:
-- NewsAPI (stock keywords: KOSPI, S&P 500, stock market)
 - Yahoo Finance RSS / yfinance
-- KRX news via Google News RSS (Korean stock keywords)
+- KRX news via Google News browser scraping (Korean stock keywords)
 - Alpha Vantage (market data snapshots)
 """
 
@@ -136,7 +135,7 @@ def _is_entertainment(item: Dict[str, Any]) -> bool:
 
 
 def fetch_google_news_browser_stocks(limit: int = 20) -> List[Dict[str, Any]]:
-    """Fetch stock news via Google News browser scraping (replaces NewsAPI).
+    """Fetch stock news via Google News browser scraping.
 
     Falls back to empty list if Playwright is unavailable.
     """
@@ -949,13 +948,20 @@ class StockNewsCollector(BaseCollector):
                 )
             )
 
-        # Data collection footer
-        content_parts.append(
-            '\n<div class="wm-footer-meta">'
-            f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} KST</span>"
-            "<span>소스: NewsAPI, Yahoo Finance, Google News, Alpha Vantage</span>"
-            "</div>"
-        )
+        # Data collection footer (동적 소스 — 실제 수집된 소스만 표기)
+        active_sources = sorted({item.get("source", "") for item in all_items if item.get("source")})
+        if active_sources:
+            active_source_names = ", ".join(active_sources)
+            content_parts.append(
+                '\n<div class="wm-footer-meta">'
+                f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} KST</span>"
+                f"<span>소스: {active_source_names}</span>"
+                "</div>"
+            )
+        else:
+            content_parts.append(
+                f'\n<div class="wm-footer-meta"><span>수집 시각: {now.strftime("%Y-%m-%d %H:%M")} KST</span></div>'
+            )
 
         content = "\n".join(content_parts)
 

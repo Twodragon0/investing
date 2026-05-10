@@ -37,8 +37,8 @@ scripts/
 │   ├── signal_tracker.py       # persistent signal state
 │   ├── bettafish_analyzer.py   # pattern analysis utility
 │   └── utils.py                # general utilities
-├── collect_crypto_news.py      # CryptoPanic, NewsAPI, Google News, exchange notices
-├── collect_stock_news.py       # NewsAPI, Yahoo Finance, yfinance, KRX, Alpha Vantage
+├── collect_crypto_news.py      # CryptoPanic, Google News, exchange notices
+├── collect_stock_news.py       # Yahoo Finance, yfinance, KRX, Google News, Alpha Vantage
 ├── collect_social_media.py     # Twitter/X API v2, Telegram channels
 ├── collect_regulatory.py       # SEC, CFTC, Fed, FSC, FSA, MAS, ESMA, FCA (RSS)
 ├── collect_political_trades.py # US congressional trades, SEC EDGAR

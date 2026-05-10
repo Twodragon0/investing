@@ -3,8 +3,7 @@
 
 Sources:
 - CryptoPanic API (hot news)
-- NewsAPI (crypto keywords)
-- Google News RSS (Korean/English crypto)
+- Google News browser scraping (Korean/English crypto)
 - Exchange announcements (OKX, Binance, Bybit public APIs)
 - Rekt News (security incidents -> security-alerts category)
 """
@@ -114,7 +113,7 @@ def fetch_cryptopanic(api_key: str, limit: Optional[int] = None) -> List[Dict[st
 
 
 def fetch_google_news_browser(limit: Optional[int] = None) -> List[Dict[str, Any]]:
-    """Fetch crypto news via Google News browser scraping (replaces NewsAPI).
+    """Fetch crypto news via Google News browser scraping.
 
     Falls back to empty list if Playwright is unavailable.
     """
@@ -1167,15 +1166,22 @@ class CryptoNewsCollector(BaseCollector):
                 )
             )
 
-        # Data collection footer
-        content_parts.append(
-            '\n<div class="wm-footer-meta">'
-            f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} KST</span>"
-            "<span>소스: CryptoPanic, CoinGecko, Google News, 거래소 RSS</span>"
-            "</div>"
-        )
-        top_sources_str = ", ".join(f"{name} ({count}건)" for name, count in source_counter.most_common(5))
-        content_parts.append(f"**수집 출처**: {top_sources_str}")
+        # Data collection footer (동적 소스 — 실제 수집된 소스만 표기)
+        top_sources = source_counter.most_common(5)
+        if top_sources:
+            top_sources_str = ", ".join(f"{name} ({count}건)" for name, count in top_sources)
+            active_source_names = ", ".join(name for name, _ in top_sources)
+            content_parts.append(
+                '\n<div class="wm-footer-meta">'
+                f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} KST</span>"
+                f"<span>소스: {active_source_names}</span>"
+                "</div>"
+            )
+            content_parts.append(f"**수집 출처**: {top_sources_str}")
+        else:
+            content_parts.append(
+                f'\n<div class="wm-footer-meta"><span>수집 시각: {now.strftime("%Y-%m-%d %H:%M")} KST</span></div>'
+            )
 
         content = "\n".join(content_parts)
         return content, briefing_image
