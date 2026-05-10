@@ -34,7 +34,7 @@ chmod 600 .env
 | 키 | 용도 | 부재 시 동작 |
 |----|------|------|
 | `CRYPTOPANIC_API_KEY` | crypto news 수집 | 다른 RSS로 폴백 |
-| `NEWSAPI_API_KEY` | 일반 뉴스 보강 | RSS-only |
+| `NEWSAPI_API_KEY` | ~~일반 뉴스 보강~~ (DEPRECATED — 코드 사용처 0건, Google News 브라우저 스크래핑으로 대체됨) | — |
 | `ALPHA_VANTAGE_API_KEY` | 주식 가격 보조 | yfinance fallback |
 | `FRED_API_KEY` | 거시 지표 | 일부 카드 skip |
 | `TWITTER_BEARER_TOKEN` | social_media 수집 | 모듈 전체 skip |
@@ -122,7 +122,7 @@ echo "${ANTHROPIC_API_KEY:+claude OK}" "${OPENAI_API_KEY:+codex OK}" "${GEMINI_A
 |--------|---------------|
 | `GSC_SERVICE_ACCOUNT_JSON` | Google Search Console 색인 자동 감사 |
 | `CRYPTOPANIC_API_KEY` | crypto news 다양성 확대 |
-| `NEWSAPI_API_KEY` | 일반 뉴스 카드 |
+| ~~`NEWSAPI_API_KEY`~~ | ~~일반 뉴스 카드~~ (DEPRECATED) |
 | `TWITTER_BEARER_TOKEN` | social_media 워크플로우 활성 |
 | `COINGECKO_API_KEY` | rate limit 완화 |
 | `ALPHA_VANTAGE_API_KEY` | 주식 가격 보조 |
@@ -214,9 +214,38 @@ Vercel Dashboard → Project → Settings → Environment Variables
 
 ---
 
+## Secret 등록 후 검증
+
+secret 등록 직후 다음 cron 실행 후 아래 1줄로 효과를 확인한다.
+
+```bash
+# Twitter/X 등록 → 다음 collect-social cron 후
+python scripts/tools/verify_secret_activation.py --secret twitter --baseline-days 7
+
+# GSC 등록 → 다음 월요일 gsc-index-audit cron 후 (또는 수동 dispatch 후)
+python scripts/tools/verify_secret_activation.py --secret gsc --baseline-days 7
+
+# 둘 다 한 번에
+python scripts/tools/verify_secret_activation.py --secret both
+```
+
+출력 형식: Slack에 그대로 붙여넣기 가능한 마크다운 표.
+
+| 옵션 | 기본값 | 설명 |
+|------|--------|------|
+| `--secret` | `both` | `twitter` / `gsc` / `both` |
+| `--baseline-days` | `7` | baseline 집계 기간 (일) |
+| `--observe-hours` | `24` | 등록 후 비교 기간 (시간) |
+
+**판정 기준**:
+- Twitter: 소셜/트위터 항목 수가 baseline 대비 증가 → "개선"
+- GSC: `gsc-index-audit.yml` 워크플로우 실행 후 success → "활성"
+
+---
+
 ## 키 회전 (Rotation) Best Practice
 
-- **주기**: 90일 (CMC, FMP, NEWSAPI 등 외부 API)
+- **주기**: 90일 (CMC, FMP 등 외부 API)
 - **방식**: 발급사 콘솔에서 새 키 생성 → L1/L3/L4 동시 갱신 → 24h 모니터 → 구 키 폐기
 - **자동 알람**: GitHub Dependabot은 secret 회전을 안 함. 별도 cron 또는 1Password CLI 통합 검토.
 
