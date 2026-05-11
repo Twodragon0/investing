@@ -65,6 +65,12 @@ bash scripts/server_morning_autopost.sh
 pip install -r scripts/requirements.txt
 bundle install
 
+# i18n E2E 로컬 검증 (Playwright)
+pip install -r requirements-dev.txt && playwright install --with-deps chromium
+bundle exec jekyll serve --port 4000          # 별도 터미널 (헬스체크 30s)
+python3 -m pytest tests/i18n/ --browser chromium --no-cov -q
+# 다른 포트/원격 미리보기: I18N_E2E_BASE_URL=http://127.0.0.1:4001 pytest ...
+
 # SEO/색인 도구
 python scripts/check_description_quality.py --days 7
 python scripts/check_post_images.py
