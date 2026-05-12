@@ -54,39 +54,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-12 - 암호화폐 뉴스 요
 <li><a href="https://www.coindesk.com/tech/2026/05/11/ronin-set-to-transition-to-ethereum-layer-2-from-independent-sidechain">로닌은 독립 사이드체인에서 이더리움 레이어2로 전환할 예정입니다.</a> <span class="p0-desc">2022년 기록상 최대 규모의 디파이 브리지 익스플로잇을 겪은 Ronin은 마이그레이션의 목적은 보안, 토큰경제학 및 확장성을 강화하는 것이라고 말했습니다.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 로닌은 독립 사이드체인에서 이더리움 레이어2로 전환할 예정입니다. 
-총 90건의 뉴스 중 P1 주요 이슈도 6건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (38건): 비트코인, 트럼프 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **📈 가격/시장** (22건): 달러, 암호화폐, 코인 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🔵 규제/정책** (20건): 상원, 리플 규제 움직임 (20건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 로닌은 독립 사이드체인에서 이더리움 레이어2로 전환할 예정입니다.
-
-### 주요 이슈
-
-- ​​​비트코인 전망: ETF 유입, 기관 수요 및 규제 명확성 추진 BTC 회복
-- 암호화폐 뉴스: Pepeto는 거래소 상장에 가까워지고 있으며 카르다노 가격 예측은 Hoskinson의 합의 기조연설 후 회복을 목표로 하고 있
-- 거래량 감소, 규제 강화로 암호화폐 산업 위축 - The Korea Times
-- 외 3건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Cointelegraph(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-05-12.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-05-12.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
