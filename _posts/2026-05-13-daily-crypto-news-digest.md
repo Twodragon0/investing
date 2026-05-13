@@ -56,41 +56,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-13 - 암호화폐 뉴스 요
 <li><a href="https://cointelegraph.com/news/north-korea-industrialized-crypto-theft-laundered-billions-report-finds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">북한, 암호화폐 절도 '산업화', 수십억 달러 세탁: CertiK</a> <span class="p0-desc">CertiK의 새로운 보고서에 따르면 북한 관련 해커들은 2025년 암호화폐 해킹으로 손실된 34억 달러 중 약 20억 6천만 달러를 훔쳤으며 피싱에서 물리적 침투로 옮겨가고 있는.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 캘리포니아에서 'Brazen' 암호화폐 렌치 공격 행위로 3명 기소 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 103건의 뉴스 중 P1 주요 이슈도 8건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (49건): 비트코인, CPI 관련 (49건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (33건): 암호화폐, XRP 가격 변동 (33건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🔵 규제/정책** (24건): 상원 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 캘리포니아에서 'Brazen' 암호화폐 렌치 공격 행위로 3명 기소
-- 해커는 AI을 사용하여 2단계 인증을 우회하는 제로데이 공격을 구축했습니다. 구글
-- 북한, 암호화폐 절도 '산업화', 수십억 달러 세탁: CertiK
-
-### 주요 이슈
-
-- EBay는 GameStop의 550억 달러 제안을 '신뢰할 수 없고 매력적이지도 않다'며 거부했습니다.
-- 오전 분: 1분기 비트 이후 서클 주가 급등, 2억 2200만 달러 호 인상
-- 오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다
-- 외 5건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Google News KR(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-05-13.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-05-13.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
