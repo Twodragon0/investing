@@ -181,6 +181,12 @@
   </script>
   <!-- Inline: i18n data uses Liquid template values -->
   <script>window.__siteUrl='{{ site.url }}';window.__i18n={{ site.data.translations | jsonify }};window.__t=function(k){var l=(localStorage.getItem('preferredLang')||'ko').replace('system','ko'),d=window.__i18n;return(d[l]&&d[l][k])||(d.ko&&d.ko[k])||k;};</script>
+
+  {% comment %}Google AdSense: 메인 홈(/) 제외, 그 외 전 페이지 적용{% endcomment %}
+  {%- unless page.url == "/" -%}
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6788271437088974"
+       crossorigin="anonymous"></script>
+  {%- endunless -%}
 </head>
 <body>
   <a href="#main-content" class="skip-to-content" data-i18n="skip_to_content">본문으로 건너뛰기</a>
