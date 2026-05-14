@@ -16,13 +16,8 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-05-14 | 시총 $2.73T (-
 
 ## 시장 시각화
 
-<picture><source srcset="{{ '/assets/images/generated/top-coins-cmc-2026-05-14.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/top-coins-cmc-2026-05-14.png' | relative_url }}" alt="CoinMarketCap Top 코인 순위 (2026-05-14)" loading="lazy" decoding="async"></picture>
-<picture><source srcset="{{ '/assets/images/generated/market-heatmap-cmc-2026-05-14.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-heatmap-cmc-2026-05-14.png' | relative_url }}" alt="암호화폐 시장 히트맵 (2026-05-14)" loading="lazy" decoding="async"></picture>
-
 
 ## 오늘의 브리핑
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-cmc-2026-05-14.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-cmc-2026-05-14.png' | relative_url }}" alt="시장 브리핑 카드" loading="lazy" decoding="async"></picture>
 
 
 ## 한눈에 보기
@@ -31,9 +26,12 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-05-14 | 시총 $2.73T (-
 
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Toncoin</strong> (TON): -10.12%</li><li>🔴 <strong>Solana</strong> (SOL): -3.13%</li><li>🔴 <strong>Zcash</strong> (ZEC): -3.00%</li></ul></div>
 
+
 ## 전체 뉴스 요약
 
-오늘 시가총액 상위 **30개** 코인을 기준으로 시장을 분석했습니다. 비트코인은 **$79,252**에서 24시간 -1.14% 하락하며 시장에 조정 신호를 보내고 있습니다. 전체 시가총액은 **$2.73T**으로 전일 대비 -0.82% 변동했으며, BTC 도미넌스 58.1%로 비트코인 중심 자금 흐름이 지속입니다. 공포/탐욕 지수는 **42** (Fear)으로, 공포 구간으로, 보수적 접근이 권장되는 시점입니다.
+- 총 **18건** 수집
+- 오늘의 시장 인사이트:
+- 24시간 변동 -0.82%로 소폭 조정 구간입니다. 기술적 지지선에서의 매수세 유입 여부를 확인해야 합니다.
 
 ## 시장 인사이트
 
