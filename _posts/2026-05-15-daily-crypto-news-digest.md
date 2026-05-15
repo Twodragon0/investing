@@ -54,39 +54,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-15 - 암호화폐 뉴스 요
 <li><a href="https://www.coindesk.com/business/2026/05/14/kraken-to-replace-layerzero-with-chainlink-to-bridge-assets-across-blockchains">Kraken은 블록체인 전체에 자산을 연결하기 위해 LayerZero를 체인링크로 대체합니다.</a> <span class="p0-desc">이번 결정에 따르면 Kelp와 관련된 2억 9200만 달러 규모의 LayerZero 기반 브리지 익스플로잇 이후 총 30억 달러 이상의 가치가 고정된 마이그레이션이 이루어졌습니다.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Kraken은 블록체인 전체에 자산을 연결하기 위해 LayerZero를 체인링크로 대체합니다. 
-총 103건의 뉴스 중 P1 주요 이슈도 18건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (53건): 비트코인 관련 (53건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **🔵 규제/정책** (29건): 상원, 규제 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **📈 가격/시장** (26건): 암호화폐, 달러 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- Kraken은 블록체인 전체에 자산을 연결하기 위해 LayerZero를 체인링크로 대체합니다.
-
-### 주요 이슈
-
-- 암호화폐 업계는 규제를 유리하게 조정하기 위해 법안을 추진하고 있습니다.
-- 암호화폐 보안 회사 Ledger는 불안정한 암호화폐 시장 속에서 IPO 계획을 일시 중지했습니다.
-- 비트코인 $80,000, 이더리움, XRP, 도지코인 명확성법 회의에 앞서 통합
-- 외 15건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 규제
-- **주요 출처**: Google News(20건), Decrypt(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-05-15.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-05-15.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 🔵 규제/정책, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
