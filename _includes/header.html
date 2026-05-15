@@ -51,12 +51,19 @@
 </header>
 
 <!-- Search Overlay -->
-<div class="search-overlay" id="search-overlay">
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="사이트 내 검색">
   <div class="search-overlay-content">
-    <div class="search-overlay-header">
-      <input type="text" id="search-input" class="search-overlay-input" placeholder="검색어를 입력하세요..." autocomplete="off" aria-label="사이트 내 검색" data-baseurl="{{ site.baseurl }}" data-i18n-placeholder="search_placeholder">
-      <button class="search-overlay-close" aria-label="닫기" data-i18n-aria="close_label">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <div class="search-overlay-header" role="search">
+      <div class="search-overlay-input-wrap">
+        <input type="search" id="search-input" class="search-overlay-input" placeholder="검색어를 입력하세요..." autocomplete="off" spellcheck="false" enterkeyhint="search" aria-label="사이트 내 검색" data-baseurl="{{ site.baseurl }}" data-i18n-placeholder="search_placeholder">
+        <button type="button" class="search-overlay-clear" id="search-input-clear" aria-label="검색어 지우기" data-i18n-aria="category_search_clear" hidden>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <button class="search-overlay-close" type="button" aria-label="닫기" data-i18n-aria="close_label">
+        <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
         </svg>
       </button>
@@ -99,32 +106,46 @@ document.addEventListener('DOMContentLoaded', function() {
   var searchOverlay = document.getElementById('search-overlay');
   var searchClose = document.querySelector('.search-overlay-close');
   var searchInput = document.getElementById('search-input');
+  var searchInputClear = document.getElementById('search-input-clear');
+
+  function closeSearchOverlay() {
+    if (!searchOverlay) return;
+    searchOverlay.classList.remove('active');
+    if (searchInput) searchInput.value = '';
+    if (searchInputClear) searchInputClear.hidden = true;
+    var sr = document.getElementById('search-results');
+    if (sr) sr.textContent = '';
+  }
+
+  function openSearchOverlay() {
+    if (!searchOverlay) return;
+    searchOverlay.classList.add('active');
+    setTimeout(function() { if (searchInput) searchInput.focus(); }, 100);
+  }
 
   if (searchToggle && searchOverlay) {
-    searchToggle.addEventListener('click', function() {
-      searchOverlay.classList.add('active');
-      setTimeout(function() { searchInput.focus(); }, 100);
-    });
-
-    searchClose.addEventListener('click', function() {
-      searchOverlay.classList.remove('active');
-      searchInput.value = '';
-      document.getElementById('search-results').textContent = '';
-    });
+    searchToggle.addEventListener('click', openSearchOverlay);
+    searchClose.addEventListener('click', closeSearchOverlay);
 
     searchOverlay.addEventListener('click', function(e) {
-      if (e.target === searchOverlay) {
-        searchOverlay.classList.remove('active');
-        searchInput.value = '';
-        document.getElementById('search-results').textContent = '';
-      }
+      if (e.target === searchOverlay) closeSearchOverlay();
     });
 
     document.addEventListener('keydown', function(e) {
+      // '/' to open search from anywhere (skip when typing in inputs)
+      if (e.key === '/' && !searchOverlay.classList.contains('active')) {
+        var active = document.activeElement;
+        if (active) {
+          var tag = active.tagName;
+          if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || active.isContentEditable) return;
+        }
+        e.preventDefault();
+        openSearchOverlay();
+        return;
+      }
+      // 'Escape' closes overlay
       if (e.key === 'Escape' && searchOverlay.classList.contains('active')) {
-        searchOverlay.classList.remove('active');
-        searchInput.value = '';
-        document.getElementById('search-results').textContent = '';
+        closeSearchOverlay();
       }
     });
   }

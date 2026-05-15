@@ -3,10 +3,24 @@ document.addEventListener('DOMContentLoaded', function() {
   var searchResults = document.getElementById('search-results');
   if (!searchInput || !searchResults) return;
 
+  var searchClearBtn = document.getElementById('search-input-clear');
   var posts = [];
   var baseurl = searchInput.dataset.baseurl || '';
   var searchIndexLoaded = false;
   var searchIndexLoading = false;
+
+  function syncSearchClearVisibility() {
+    if (!searchClearBtn) return;
+    searchClearBtn.hidden = searchInput.value.length === 0;
+  }
+
+  if (searchClearBtn) {
+    searchClearBtn.addEventListener('click', function() {
+      searchInput.value = '';
+      searchInput.dispatchEvent(new Event('input'));
+      searchInput.focus();
+    });
+  }
 
   // search.json은 검색 오버레이가 처음 열릴 때만 fetch (초기 로드 비용 절감)
   function ensureSearchIndex(callback) {
@@ -99,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var debounceTimer;
   searchInput.addEventListener('input', function() {
+    syncSearchClearVisibility();
     clearTimeout(debounceTimer);
     debounceTimer = setTimeout(function() {
       ensureSearchIndex(performSearch);

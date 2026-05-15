@@ -436,9 +436,16 @@
   align-items: center;
 }
 
+.search-overlay-input-wrap {
+  position: relative;
+  flex: 1;
+  display: flex;
+}
+
 .search-overlay-input {
   flex: 1;
-  padding: 1rem 1.5rem;
+  width: 100%;
+  padding: 1rem 3.25rem 1rem 1.5rem;
   background: rgba($bg-card, 0.9);
   border: 2px solid rgba($border-color, 0.55);
   border-radius: 12px;
@@ -447,6 +454,12 @@
   font-size: 1.15rem;
   font-weight: 500;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  // Hide native search cancel button (we render our own)
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+  }
 
   &:focus,
   &:focus-visible {
@@ -457,6 +470,47 @@
 
   &::placeholder {
     color: rgba($text-secondary, 0.7);
+  }
+}
+
+.search-overlay-clear {
+  position: absolute;
+  right: 0.65rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: $text-secondary;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    background: rgba($bg-secondary, 0.85);
+    color: $text-primary;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: $accent-blue;
+    box-shadow: 0 0 0 3px rgba($accent-blue, 0.2);
+  }
+
+  &[hidden] {
+    display: none;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    pointer-events: none;
   }
 }
 
