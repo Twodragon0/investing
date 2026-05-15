@@ -165,6 +165,24 @@
   border-radius: 14px;
   background: rgba($bg-secondary, 0.66);
   border: 1px solid rgba($border-color, 0.24);
+
+  .journal-summary-label {
+    display: block;
+    margin: 0;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba($text-secondary, 0.9);
+  }
+
+  .journal-summary-value {
+    display: block;
+    margin: 0.35rem 0 0;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: $text-primary;
+    font-variant-numeric: tabular-nums;
+  }
 }
 
 .journal-landing-focus {
@@ -172,6 +190,14 @@
   border-radius: 14px;
   background: rgba($accent-blue, 0.08);
   border: 1px solid rgba($accent-blue, 0.24);
+
+  .journal-note-label {
+    display: inline-block;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba($text-secondary, 0.9);
+  }
 
   p {
     margin-top: 0.35rem;

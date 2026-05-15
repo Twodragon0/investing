@@ -59,35 +59,35 @@ layout: default
     </div>
 
     <div class="journal-landing-grid">
-      <article class="journal-landing-main-card">
+      <article class="journal-landing-main-card" aria-labelledby="journal-landing-title">
         <div class="journal-landing-copy">
-          <span class="journal-landing-kicker">Latest Session Board</span>
-          <h2>{{ latest_post.title | escape }}</h2>
+          <span class="journal-landing-kicker" data-i18n="journal_latest_session_board">최신 세션 보드</span>
+          <h2 id="journal-landing-title">{{ latest_post.title | escape }}</h2>
           <p>{{ latest_post.excerpt | default: latest_post.description | strip_html | escape }}</p>
-          <div class="journal-landing-metrics">
+          <dl class="journal-landing-metrics">
             <div class="journal-landing-metric">
-              <span class="journal-summary-label">Day Result</span>
-              <strong class="journal-summary-value">{{ latest_result }}</strong>
+              <dt class="journal-summary-label" data-i18n="journal_day_result">일일 결과</dt>
+              <dd class="journal-summary-value">{{ latest_result }}</dd>
             </div>
             <div class="journal-landing-metric">
-              <span class="journal-summary-label">Trades</span>
-              <strong class="journal-summary-value">{{ latest_trades }}</strong>
+              <dt class="journal-summary-label" data-i18n="journal_trades">거래</dt>
+              <dd class="journal-summary-value">{{ latest_trades }}</dd>
             </div>
             <div class="journal-landing-metric">
-              <span class="journal-summary-label">Confidence</span>
-              <strong class="journal-summary-value">{{ latest_confidence }}</strong>
+              <dt class="journal-summary-label" data-i18n="journal_confidence">신뢰도</dt>
+              <dd class="journal-summary-value">{{ latest_confidence }}</dd>
             </div>
-          </div>
+          </dl>
           {% if latest_focus %}
           <div class="journal-landing-focus">
-            <span class="journal-note-label">Next Session Focus</span>
+            <span class="journal-note-label" data-i18n="journal_next_focus">다음 세션 포커스</span>
             <p>{{ latest_focus | strip_html | escape }}</p>
           </div>
           {% endif %}
         </div>
         {% if latest_post.image %}
         {% assign latest_post_image_alt = latest_post.image_alt | default: latest_post.title %}
-        <a href="{{ latest_post.url | relative_url }}" class="journal-landing-image-link">
+        <a href="{{ latest_post.url | relative_url }}" class="journal-landing-image-link" aria-label="{{ latest_post.title | escape }} 상세 보기">
           {% include generated-picture.html image=latest_post.image alt=latest_post_image_alt class="journal-landing-image" loading="eager" decoding="sync" %}
         </a>
         {% endif %}
