@@ -8,8 +8,15 @@ sitemap: false
 
 <style>
   .search-page-form { display: flex; gap: 8px; margin: 1rem 0 1.5rem; }
-  .search-page-form input { flex: 1; padding: 0.6rem 0.8rem; font-size: 16px; border-radius: 6px; border: 1px solid var(--border, #444); background: var(--bg, transparent); color: inherit; }
-  .search-page-form button { padding: 0.6rem 1rem; border-radius: 6px; border: 1px solid var(--border, #444); background: var(--accent, #2c5282); color: #fff; cursor: pointer; }
+  .search-page-input-wrap { position: relative; flex: 1; display: flex; }
+  .search-page-form input { flex: 1; width: 100%; padding: 0.6rem 2.6rem 0.6rem 0.8rem; font-size: 16px; border-radius: 6px; border: 1px solid var(--border, #444); background: var(--bg, transparent); color: inherit; }
+  .search-page-form input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+  .search-page-form button[type="submit"] { padding: 0.6rem 1rem; border-radius: 6px; border: 1px solid var(--border, #444); background: var(--accent, #2c5282); color: #fff; cursor: pointer; }
+  .search-page-clear { position: absolute; right: 6px; top: 50%; transform: translateY(-50%); display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; padding: 0; border: 1px solid transparent; border-radius: 6px; background: transparent; color: inherit; opacity: 0.6; cursor: pointer; transition: background-color .15s, opacity .15s, border-color .15s; }
+  .search-page-clear:hover { opacity: 1; background: rgba(255,255,255,.08); }
+  .search-page-clear:focus-visible { outline: none; opacity: 1; border-color: var(--accent, #2c5282); box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.25); }
+  .search-page-clear[hidden] { display: none; }
+  .search-page-clear svg { width: 14px; height: 14px; pointer-events: none; }
   #search-page-results { margin-top: 1rem; }
   #search-page-results .item { display: block; padding: 0.75rem 0.5rem; border-bottom: 1px solid var(--border, rgba(255,255,255,.08)); color: inherit; text-decoration: none; }
   #search-page-results .item:hover { background: rgba(255,255,255,.04); }
@@ -23,14 +30,23 @@ sitemap: false
 
 <form class="search-page-form" id="search-page-form" role="search">
   <label for="search-page-input" class="visually-hidden">검색어</label>
-  <input
-    type="search"
-    id="search-page-input"
-    name="q"
-    placeholder="검색어를 입력하세요…"
-    autocomplete="off"
-    autofocus
-  >
+  <div class="search-page-input-wrap">
+    <input
+      type="search"
+      id="search-page-input"
+      name="q"
+      placeholder="검색어를 입력하세요…"
+      autocomplete="off"
+      spellcheck="false"
+      enterkeyhint="search"
+      autofocus
+    >
+    <button type="button" class="search-page-clear" id="search-page-clear" aria-label="검색어 지우기" data-i18n-aria="category_search_clear" hidden>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </div>
   <button type="submit">검색</button>
 </form>
 
@@ -43,7 +59,48 @@ sitemap: false
   var form = document.getElementById('search-page-form');
   var results = document.getElementById('search-page-results');
   var status = document.getElementById('search-page-status');
+  var clearBtn = document.getElementById('search-page-clear');
   var posts = null;
+
+  function syncClearVisibility() {
+    if (clearBtn) clearBtn.hidden = input.value.length === 0;
+  }
+
+  function clearSearch() {
+    input.value = '';
+    syncClearVisibility();
+    results.innerHTML = '';
+    status.textContent = '';
+    var url = new URL(window.location.href);
+    url.searchParams.delete('q');
+    window.history.replaceState(null, '', url.toString());
+    input.focus();
+  }
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', clearSearch);
+  }
+
+  input.addEventListener('input', syncClearVisibility);
+
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && input.value) {
+      e.preventDefault();
+      clearSearch();
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key !== '/') return;
+    var active = document.activeElement;
+    if (active) {
+      var tag = active.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || active.isContentEditable) return;
+    }
+    e.preventDefault();
+    input.focus();
+    input.select();
+  });
 
   function getQueryParam() {
     var m = window.location.search.match(/[?&]q=([^&]*)/);
@@ -141,6 +198,7 @@ sitemap: false
 
   var initial = getQueryParam();
   if (initial) input.value = initial;
+  syncClearVisibility();
 
   loadIndexThen(function() {
     if (initial) search(initial);
