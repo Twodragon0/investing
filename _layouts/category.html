@@ -180,11 +180,17 @@ layout: default
 
   {% if cat_posts.size > 0 %}
   <div class="category-controls">
-    <div class="category-search">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <div class="category-search" role="search">
+      <svg class="category-search-icon" aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
       </svg>
-      <input type="text" id="category-filter" placeholder="이 카테고리 내에서 검색..." aria-label="카테고리 내 검색" />
+      <input type="search" id="category-filter" placeholder="이 카테고리 내에서 검색..." aria-label="카테고리 내 검색" aria-describedby="category-filter-count" autocomplete="off" spellcheck="false" enterkeyhint="search" />
+      <kbd class="category-search-shortcut" aria-hidden="true" title="단축키: /">/</kbd>
+      <button type="button" id="category-filter-clear" class="category-search-clear" aria-label="검색어 지우기" data-i18n="category_search_clear" hidden>
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
     </div>
     {% if is_journal_category %}
     <div class="category-filter-row">
@@ -215,12 +221,13 @@ layout: default
       </select>
     </div>
     {% endif %}
-    <div class="category-sort">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <div class="category-sort" aria-label="정렬: 최신순">
+      <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <line x1="3" y1="12" x2="21" y2="12"/><polyline points="8 6 3 12 8 18"/>
       </svg>
-      <span>최신순</span>
+      <span data-i18n="category_sort_latest">최신순</span>
     </div>
+    <output class="category-search-count" id="category-filter-count" aria-live="polite" for="category-filter" hidden></output>
   </div>
 
   <div class="posts-list" id="posts-list">
@@ -270,6 +277,8 @@ layout: default
 {% if cat_posts.size > 0 %}
 <script>
   var filterInput = document.getElementById('category-filter');
+  var clearBtn = document.getElementById('category-filter-clear');
+  var countEl = document.getElementById('category-filter-count');
   var postsList = document.getElementById('posts-list');
   var posts = postsList.querySelectorAll('.post-card');
   var dateDividers = postsList.querySelectorAll('.date-divider');
@@ -279,6 +288,23 @@ layout: default
   var pairFilter = document.getElementById('journal-pair-filter');
   var sectorFilter = document.getElementById('journal-sector-filter');
   var confidenceFilter = document.getElementById('journal-confidence-filter');
+
+  function syncClearVisibility() {
+    if (!clearBtn) return;
+    clearBtn.hidden = filterInput.value.length === 0;
+  }
+
+  function updateResultCount(visible) {
+    if (!countEl) return;
+    if (filterInput.value.length === 0) {
+      countEl.hidden = true;
+      countEl.textContent = '';
+      return;
+    }
+    var label = (window.__t && window.__t('category_search_results')) || '결과';
+    countEl.hidden = false;
+    countEl.innerHTML = '<strong>' + visible + '</strong> / ' + posts.length + ' ' + label;
+  }
 
   function updateDateDividers() {
     var children = postsList.children;
@@ -367,19 +393,22 @@ layout: default
       }
     });
 
+    syncClearVisibility();
+
     if (query.length === 0) {
       applyProgressiveLimit();
       updateDateDividers();
       if (loadMoreBtn) {
         remaining = posts.length - shown;
         loadMoreBtn.style.display = remaining > 0 ? '' : 'none';
-        countEl = loadMoreBtn.querySelector('.load-more-count');
-        if (countEl) {
-          countEl.textContent = '(' + remaining + '개 남음)';
+        var loadCountEl = loadMoreBtn.querySelector('.load-more-count');
+        if (loadCountEl) {
+          loadCountEl.textContent = '(' + remaining + '개 남음)';
         }
       }
       cleared = document.getElementById('no-results');
       if (cleared) cleared.remove();
+      updateResultCount(0);
       return;
     }
 
@@ -398,7 +427,38 @@ layout: default
       noResults = document.getElementById('no-results');
       if (noResults) noResults.remove();
     }
+
+    updateResultCount(visibleCount);
   });
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', function() {
+      filterInput.value = '';
+      filterInput.dispatchEvent(new Event('input'));
+      filterInput.focus();
+    });
+  }
+
+  filterInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && filterInput.value) {
+      e.preventDefault();
+      filterInput.value = '';
+      filterInput.dispatchEvent(new Event('input'));
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key !== '/') return;
+    var active = document.activeElement;
+    if (!active) return;
+    var tag = active.tagName;
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || active.isContentEditable) return;
+    e.preventDefault();
+    filterInput.focus();
+    filterInput.select();
+  });
+
+  syncClearVisibility();
 
   if (pairFilter) {
     pairFilter.addEventListener('change', function() { filterInput.dispatchEvent(new Event('input')); });

@@ -56,6 +56,9 @@ ko:
   journal_trades: "거래"
   journal_confidence: "신뢰도"
   journal_next_focus: "다음 세션 포커스"
+  category_search_clear: "검색어 지우기"
+  category_search_results: "결과"
+  category_sort_latest: "최신순"
 en:
   search_placeholder: "Search posts..."
   search_min_hint: "Please enter at least 2 characters."
@@ -114,6 +117,9 @@ en:
   journal_trades: "Trades"
   journal_confidence: "Confidence"
   journal_next_focus: "Next Session Focus"
+  category_search_clear: "Clear search"
+  category_search_results: "results"
+  category_sort_latest: "Latest"
 ja:
   search_placeholder: "記事を検索..."
   search_min_hint: "2文字以上入力してください。"
@@ -155,6 +161,9 @@ ja:
   journal_trades: "取引"
   journal_confidence: "信頼度"
   journal_next_focus: "次回セッションの焦点"
+  category_search_clear: "検索をクリア"
+  category_search_results: "件"
+  category_sort_latest: "新着順"
 zh-CN:
   search_placeholder: "搜索文章..."
   search_min_hint: "请输入至少2个字符。"
@@ -196,6 +205,9 @@ zh-CN:
   journal_trades: "交易"
   journal_confidence: "信心度"
   journal_next_focus: "下次会话焦点"
+  category_search_clear: "清除搜索"
+  category_search_results: "条结果"
+  category_sort_latest: "最新"
 es:
   search_placeholder: "Buscar publicaciones..."
   search_min_hint: "Ingrese al menos 2 caracteres."
@@ -237,3 +249,6 @@ es:
   journal_trades: "Operaciones"
   journal_confidence: "Confianza"
   journal_next_focus: "Enfoque de Próxima Sesión"
+  category_search_clear: "Limpiar búsqueda"
+  category_search_results: "resultados"
+  category_sort_latest: "Más recientes"
