@@ -56,41 +56,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-16 - 암호화폐 뉴스 요
 <li><a href="https://decrypt.co/367943/thorchains-rune-token-plunges-double-digits-after-10m-exploit-trading-halt">THORChain의 RUNE 토큰은 천만 달러 악용 후 두 자릿수 급락, 거래 중단</a> <span class="p0-desc">유동성 프로토콜은 블록체인 연구자들이 여러 네트워크에서 천만 달러 규모의 침해가 의심되는 것을 확인한 후 운영을 중단했습니다.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Thorchain은 1,000만 달러의 크로스체인 악용 후 거래를 중단하고 RUNE 토큰은 12% 하락합니다. 
-외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 100건의 뉴스 중 P1 주요 이슈도 17건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (52건): 비트코인, 달러 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **🔵 규제/정책** (35건): 상원, 규제 규제 움직임 (35건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-- **📈 가격/시장** (31건): 암호화폐, 달러 가격 변동 (31건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- Thorchain은 1,000만 달러의 크로스체인 악용 후 거래를 중단하고 RUNE 토큰은 12% 하락합니다.
-- THORChain은 1,000만 달러 규모의 익스플로잇이 의심되어 거래를 일시 중지했습니다.
-- THORChain의 RUNE 토큰은 천만 달러 악용 후 두 자릿수 급락, 거래 중단
-
-### 주요 이슈
-
-- 암호화폐 업계는 규제를 유리하게 조정하기 위해 법안을 추진하고 있습니다.
-- 한 암호화폐 주식은 극심한 상승세를 보인 반면 다른 암호화폐 주식은 어려움을 겪었습니다. 상승이 중요한 이유는 다음과 같습니다.
-- 비트코인, Cerebras IPO 매니아, 그리고 SpaceX 투기각 거래자들이 지켜보고 있습니다
-- 외 14건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), CoinDesk(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 1건 포함
-- 프로모션성 거래소 공지 4건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-05-16.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-05-16.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 🔵 규제/정책, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

@@ -16,13 +16,8 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-05-16 | 시총 $2.72T (-
 
 ## 시장 시각화
 
-<picture><source srcset="{{ '/assets/images/generated/top-coins-cmc-2026-05-16.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/top-coins-cmc-2026-05-16.png' | relative_url }}" alt="CoinMarketCap Top 코인 순위 (2026-05-16)" loading="lazy" decoding="async"></picture>
-<picture><source srcset="{{ '/assets/images/generated/market-heatmap-cmc-2026-05-16.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-heatmap-cmc-2026-05-16.png' | relative_url }}" alt="암호화폐 시장 히트맵 (2026-05-16)" loading="lazy" decoding="async"></picture>
-
 
 ## 오늘의 브리핑
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-cmc-2026-05-16.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-cmc-2026-05-16.png' | relative_url }}" alt="시장 브리핑 카드" loading="lazy" decoding="async"></picture>
 
 
 ## 한눈에 보기
@@ -31,9 +26,12 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-05-16 | 시총 $2.72T (-
 
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Canton</strong> (CC): -6.84%</li><li>🔴 <strong>Toncoin</strong> (TON): -6.48%</li><li>🔴 <strong>Stellar</strong> (XLM): -5.81%</li></ul></div>
 
+
 ## 전체 뉴스 요약
 
-오늘 시가총액 상위 **30개** 코인을 기준으로 시장을 분석했습니다. 비트코인은 **$79,126**에서 24시간 -2.36% 하락하며 시장에 조정 신호를 보내고 있습니다. 전체 시가총액은 **$2.72T**으로 전일 대비 -2.15% 변동했으며, BTC 도미넌스 58.3%로 비트코인 중심 자금 흐름이 지속입니다. 공포/탐욕 지수는 **43** (Fear)으로, 공포 구간으로, 보수적 접근이 권장되는 시점입니다.
+- 총 **10건** 수집
+- 오늘의 시장 인사이트:
+- 24시간 변동 -2.15%로 소폭 조정 구간입니다. 기술적 지지선에서의 매수세 유입 여부를 확인해야 합니다.
 
 ## 시장 인사이트
 
