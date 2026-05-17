@@ -4,7 +4,7 @@
     "bad_image": {
       "buckets": {
         "ext:gif": 739,
-        "default-image": 377,
+        "default-image": 393,
         "ext:ico": 53,
         "placeholder": 146,
         "ext:svg": 23,
@@ -15,5 +15,5 @@
     }
   },
   "since": "2026-04-23T08:54:23",
-  "last_seen": "2026-05-17T11:34:42"
+  "last_seen": "2026-05-17T13:55:54"
 }
