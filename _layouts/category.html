@@ -486,11 +486,50 @@ layout: default
     });
   }
 
+  function visiblePosts() {
+    var arr = [];
+    posts.forEach(function(p) { if (p.style.display !== 'none' && p.dataset.hidden !== 'true') arr.push(p); });
+    return arr;
+  }
+
   filterInput.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && filterInput.value) {
       e.preventDefault();
       filterInput.value = '';
       filterInput.dispatchEvent(new Event('input'));
+      return;
+    }
+    if (e.key === 'ArrowDown') {
+      var vp = visiblePosts();
+      if (vp.length === 0) return;
+      e.preventDefault();
+      vp[0].focus();
+      return;
+    }
+    if (e.key === 'Enter' && filterInput.value) {
+      var vp2 = visiblePosts();
+      if (vp2.length === 0) return;
+      e.preventDefault();
+      window.location.href = vp2[0].href;
+    }
+  });
+
+  postsList.addEventListener('keydown', function(e) {
+    var cur = document.activeElement;
+    if (!cur || !cur.classList.contains('post-card')) return;
+    var vp = visiblePosts();
+    var idx = vp.indexOf(cur);
+    if (idx === -1) return;
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      if (idx + 1 < vp.length) vp[idx + 1].focus();
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      if (idx === 0) filterInput.focus();
+      else vp[idx - 1].focus();
+    } else if (e.key === 'Escape') {
+      e.preventDefault();
+      filterInput.focus();
     }
   });
 
@@ -504,6 +543,30 @@ layout: default
     filterInput.focus();
     filterInput.select();
   });
+
+  // URL persistence (?q=) — replaceState updates URL without history pollution
+  function syncUrlQuery() {
+    try {
+      var url = new URL(window.location.href);
+      if (filterInput.value) url.searchParams.set('q', filterInput.value);
+      else url.searchParams.delete('q');
+      window.history.replaceState(null, '', url.toString());
+    } catch (_) {}
+  }
+
+  filterInput.addEventListener('input', syncUrlQuery);
+
+  // Restore from ?q= on load (triggered after IIFE definitions below)
+  (function restoreFromUrl() {
+    try {
+      var initial = new URL(window.location.href).searchParams.get('q');
+      if (initial) {
+        filterInput.value = initial;
+        // Defer to next tick so existing input handlers (incl. progressive limit IIFE) are ready
+        setTimeout(function() { filterInput.dispatchEvent(new Event('input')); }, 0);
+      }
+    } catch (_) {}
+  })();
 
   syncClearVisibility();
 
