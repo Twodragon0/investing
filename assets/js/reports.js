@@ -174,9 +174,19 @@
     });
   });
 
+  function syncReportUrlQuery() {
+    try {
+      var url = new URL(window.location.href);
+      if (searchInput.value) url.searchParams.set('q', searchInput.value);
+      else url.searchParams.delete('q');
+      window.history.replaceState(null, '', url.toString());
+    } catch (_) {}
+  }
+
   var _searchTimer;
   searchInput.addEventListener('input', function() {
     syncSearchClearVisibility();
+    syncReportUrlQuery();
     var val = this.value.toLowerCase().trim();
     clearTimeout(_searchTimer);
     _searchTimer = setTimeout(function() {
@@ -208,6 +218,7 @@
     activeFilter = 'all';
     currentPage = 1;
     syncSearchClearVisibility();
+    syncReportUrlQuery();
     render();
   });
 
@@ -256,6 +267,18 @@
       focusedCardIndex = -1;
     }
   });
+
+  // Restore from ?q= on load
+  (function restoreReportFromUrl() {
+    try {
+      var initial = new URL(window.location.href).searchParams.get('q');
+      if (initial) {
+        searchInput.value = initial;
+        syncSearchClearVisibility();
+        setTimeout(function() { searchInput.dispatchEvent(new Event('input')); }, 0);
+      }
+    } catch (_) {}
+  })();
 
   updateBookmarkBadge();
 
