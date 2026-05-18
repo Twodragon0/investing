@@ -18,23 +18,23 @@
     <div class="thumb-category-icon cat-bg-{{ pc_cat | slugify }}">
       {% case pc_cat %}
       {% when 'crypto-news' %}
-      <svg class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg aria-hidden="true" focusable="false" class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
         <text x="20" y="26" text-anchor="middle" font-size="18" font-weight="700" fill="currentColor" opacity="0.55">₿</text>
       </svg>
       {% when 'stock-news' %}
-      <svg class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg aria-hidden="true" focusable="false" class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <polyline points="6,30 14,18 20,24 28,12 34,16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
       </svg>
       {% when 'regulatory-news' %}
-      <svg class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg aria-hidden="true" focusable="false" class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="10" y="8" width="20" height="26" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
         <line x1="14" y1="15" x2="26" y2="15" stroke="currentColor" stroke-width="1.2" opacity="0.55"/>
         <line x1="14" y1="20" x2="26" y2="20" stroke="currentColor" stroke-width="1.2" opacity="0.55"/>
         <line x1="14" y1="25" x2="20" y2="25" stroke="currentColor" stroke-width="1.2" opacity="0.55"/>
       </svg>
       {% when 'political-trades' %}
-      <svg class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg aria-hidden="true" focusable="false" class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="16" y="6" width="8" height="4" rx="1" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
         <line x1="20" y1="10" x2="20" y2="20" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
         <line x1="10" y1="20" x2="30" y2="20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
@@ -44,13 +44,13 @@
         <circle cx="28" cy="29" r="3" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
       </svg>
       {% when 'security-alerts' %}
-      <svg class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg aria-hidden="true" focusable="false" class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M20 6 L32 11 V21 C32 28 20 35 20 35 C20 35 8 28 8 21 V11 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" opacity="0.4"/>
         <line x1="20" y1="16" x2="20" y2="23" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.55"/>
         <circle cx="20" cy="27" r="1.2" fill="currentColor" opacity="0.55"/>
       </svg>
       {% when 'worldmonitor' %}
-      <svg class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg aria-hidden="true" focusable="false" class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
         <ellipse cx="20" cy="20" rx="6" ry="14" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
         <line x1="6" y1="20" x2="34" y2="20" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
@@ -58,7 +58,7 @@
         <line x1="8" y1="26" x2="32" y2="26" stroke="currentColor" stroke-width="1" opacity="0.3"/>
       </svg>
       {% when 'blockchain' %}
-      <svg class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg aria-hidden="true" focusable="false" class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="6" y="14" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
         <rect x="24" y="14" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
         <rect x="15" y="26" width="10" height="8" rx="2" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
@@ -66,7 +66,7 @@
         <line x1="20" y1="24" x2="20" y2="26" stroke="currentColor" stroke-width="1.2" opacity="0.45"/>
       </svg>
       {% else %}
-      <svg class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg aria-hidden="true" focusable="false" class="thumb-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
         <polyline points="13,20 18,25 27,15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
       </svg>
@@ -76,12 +76,12 @@
     {% endif %}
   </div>
   <div class="post-card-meta">
-    {% if post.pin %}<span class="pin-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M16 12V4h1V2H7v2h1v8l-2 2v2h5.2v6h1.6v-6H18v-2l-2-2z"/></svg> TOP</span>{% endif %}
+    {% if post.pin %}<span class="pin-badge"><svg aria-hidden="true" focusable="false" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M16 12V4h1V2H7v2h1v8l-2 2v2h5.2v6h1.6v-6H18v-2l-2-2z"/></svg> TOP</span>{% endif %}
     <span class="post-category cat-{{ pc_cat | slugify }}">{{ pc_cat_name | escape }}</span>
     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
     {% if post.source %}<span class="post-source">{{ post.source | escape }}</span>{% endif %}
     <span class="post-reading-time">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
       </svg>
       {{ reading_time }}분
@@ -110,7 +110,7 @@
     </div>
     {% endif %}
     <span class="post-card-arrow">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
       </svg>
     </span>
