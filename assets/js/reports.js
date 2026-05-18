@@ -120,7 +120,7 @@
       thumbHtml +
       '<div class="report-card-body">' +
       '<div class="report-card-header">' +
-      '<span class="report-category-badge" style="background:' + bc[0] + ';color:' + bc[1] + '">' + escapeHtml(p.cn) + '</span>' +
+      '<span class="report-category-badge" style="background:' + bc[0] + ';color:' + bc[1] + '">' + highlightText(escapeHtml(p.cn)) + '</span>' +
       '<time class="report-date-label">' + escapeHtml(p.dm) + '</time>' +
       '<span class="report-relative-time">' + relativeTime(p.d) + '</span>' +
       '</div>' +
@@ -145,7 +145,8 @@
       if (searchQuery) {
         var t = p.t.toLowerCase();
         var s = (p.s || '').toLowerCase();
-        if (t.indexOf(searchQuery) === -1 && s.indexOf(searchQuery) === -1) return false;
+        var cn = (p.cn || '').toLowerCase();
+        if (t.indexOf(searchQuery) === -1 && s.indexOf(searchQuery) === -1 && cn.indexOf(searchQuery) === -1) return false;
       }
       if (dateFrom && p.d < dateFrom) return false;
       if (dateTo && p.d > dateTo) return false;
