@@ -298,21 +298,45 @@ layout: default
     return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 
-  function applyTitleHighlight(query) {
+  function highlightInTextNodes(el, originalHTML, re) {
+    el.innerHTML = originalHTML;
+    if (!re) return;
+    var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
+    var nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(function(node) {
+      var text = node.nodeValue;
+      if (!text || !text.length) return;
+      var parts = text.split(re);
+      if (parts.length <= 1) return;
+      var frag = document.createDocumentFragment();
+      parts.forEach(function(part, i) {
+        if (i % 2 === 1) {
+          var mark = document.createElement('mark');
+          mark.className = 'search-highlight';
+          mark.textContent = part;
+          frag.appendChild(mark);
+        } else if (part) {
+          frag.appendChild(document.createTextNode(part));
+        }
+      });
+      node.parentNode.replaceChild(frag, node);
+    });
+  }
+
+  function applyHighlights(query) {
+    var re = query ? new RegExp('(' + escapeRegex(query) + ')', 'gi') : null;
     posts.forEach(function(post) {
       var titleEl = post.querySelector('h3');
-      if (!titleEl) return;
-      if (!titleEl.dataset.originalTitle) {
-        titleEl.dataset.originalTitle = titleEl.textContent;
+      if (titleEl) {
+        if (!titleEl.dataset.originalHtml) titleEl.dataset.originalHtml = titleEl.innerHTML;
+        highlightInTextNodes(titleEl, titleEl.dataset.originalHtml, re);
       }
-      var original = titleEl.dataset.originalTitle;
-      if (!query) {
-        titleEl.textContent = original;
-        return;
+      var excerptEl = post.querySelector('.post-excerpt');
+      if (excerptEl) {
+        if (!excerptEl.dataset.originalHtml) excerptEl.dataset.originalHtml = excerptEl.innerHTML;
+        highlightInTextNodes(excerptEl, excerptEl.dataset.originalHtml, re);
       }
-      var safe = original.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-      var re = new RegExp('(' + escapeRegex(query) + ')', 'gi');
-      titleEl.innerHTML = safe.replace(re, '<mark class="search-highlight">$1</mark>');
     });
   }
 
@@ -416,7 +440,7 @@ layout: default
     });
 
     syncClearVisibility();
-    applyTitleHighlight(query);
+    applyHighlights(query);
 
     if (query.length === 0) {
       applyProgressiveLimit();
