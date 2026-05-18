@@ -190,6 +190,7 @@ Slack 연동:
 - 오전 9:10(KST) 자동 포스팅/품질 보정은 서버 크론(`server_morning_autopost.sh`)이 1차 책임
 - `generate-daily-summary.yml`, `generate-market-summary.yml`는 스케줄 대신 수동 실행(`workflow_dispatch`)으로 운영
 - 최근 SEO/환경 작업 정리: `docs/session-2026-05-07-seo-and-environment.md`
+- 검색 UX 통합 (4개 표면 / Clear·`/`·하이라이트·URL `?q=`): `docs/session-2026-05-18-search-ux-final.md`
 
 ## Continuous Improvement Loop
 
