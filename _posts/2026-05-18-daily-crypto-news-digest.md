@@ -56,41 +56,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-18 - 암호화폐 뉴스 요
 <li><a href="https://cointelegraph.com/news/thorchain-confirms-10m-exploit-rolls-out-recovery-portal-for-affected-users?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">THORChain은 1천만 달러 규모의 악용을 확인하고 영향을 받은 사용자를 위한 복구 포털을 출시했습니다.</a> <span class="p0-desc">THORChain은 1,000만 달러 규모의 악용 이후 복구 포털을 시작하여 4개 체인의 영향을 받은 사용자가 악의적인 승인을 취소하고 환불을 요청할 수 있도록 했습니다.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Lombard Finance는 LayerZero를 덤프하고 체인링크을 사용하여 비트코인 자산에서 10억 달러를 조달할 예정입니다. 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 80건의 뉴스 중 P1 주요 이슈도 6건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (41건): 비트코인, BTC, 약세 관련 (41건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (24건): 달러, BTC, 약세 가격 변동 (24건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🔵 규제/정책** (17건): 증권 규제 움직임 (17건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- Lombard Finance는 LayerZero를 덤프하고 체인링크을 사용하여 비트코인 자산에서 10억 달러를 조달할 예정입니다.
-- 비트코인 ATM 수익이 감소하고 규제 조사가 증가함에 따라 창고에서 파산 경고가 깜박입니다.
-- THORChain은 1천만 달러 규모의 악용을 확인하고 영향을 받은 사용자를 위한 복구 포털을 출시했습니다.
-
-### 주요 이슈
-
-- Harvard는 이더리움 및 비트코인 ETF 투자를 중단합니다.
-- 암호화폐 업계는 규제를 유리하게 조정하기 위해 법안을 추진하고 있습니다.
-- 오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다
-- 외 3건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, 디파이
-- **주요 출처**: Google News(20건), Cointelegraph(15건), Google News KR(14건)
-- 시장 영향 가능성이 있는 거래소 공지 1건 포함
-- 프로모션성 거래소 공지 4건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-05-18.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-05-18.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
