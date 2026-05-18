@@ -1,5 +1,5 @@
 PyYAML>=6.0.3
-requests==2.33.1
+requests==2.34.2
 certifi>=2026.4.22
 cachetools>=7.1.1
 beautifulsoup4==4.14.3
