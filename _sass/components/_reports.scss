@@ -157,7 +157,7 @@
 
 .report-search {
   width: 100%;
-  padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+  padding: 0.5rem 2.75rem 0.5rem 2.25rem;
   border: 1px solid var(--border-color);
   border-radius: 8px;
   background: var(--bg-primary);
@@ -167,6 +167,12 @@
   outline: none;
   transition: border-color 0.2s;
 
+  // Hide native search cancel (we render our own button)
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
   &::placeholder {
     color: var(--text-secondary);
     opacity: 0.6;
@@ -175,6 +181,66 @@
   &:focus {
     border-color: var(--accent-blue);
     box-shadow: var(--focus-ring);
+  }
+}
+
+.report-search-shortcut {
+  position: absolute;
+  right: 0.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.1rem 0.4rem;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary, rgba(0,0,0,0.15));
+  color: var(--text-secondary);
+  font: 600 0.72rem / 1 var(--font-mono, ui-monospace, monospace);
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.report-search-wrap:focus-within .report-search-shortcut,
+.report-search:not(:placeholder-shown) ~ .report-search-shortcut {
+  opacity: 0;
+}
+
+.report-search-clear {
+  position: absolute;
+  right: 0.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+
+  &:hover {
+    background: var(--bg-secondary, rgba(0,0,0,0.08));
+    color: var(--text-primary);
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(77, 166, 255, 0.18);
+  }
+
+  &[hidden] {
+    display: none;
+  }
+
+  svg {
+    width: 13px;
+    height: 13px;
+    pointer-events: none;
   }
 }
 

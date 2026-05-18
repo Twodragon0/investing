@@ -38,10 +38,23 @@
   var loadMoreBtn = document.getElementById('load-more-btn');
   var showingEl = document.getElementById('reports-showing');
   var searchInput = document.getElementById('report-search');
+  var searchClearBtn = document.getElementById('report-search-clear');
   var dateFromInput = document.getElementById('report-date-from');
   var dateToInput = document.getElementById('report-date-to');
   var clearBtn = document.getElementById('report-clear');
   var filterBtns = document.querySelectorAll('.filter-btn');
+
+  function syncSearchClearVisibility() {
+    if (searchClearBtn) searchClearBtn.hidden = searchInput.value.length === 0;
+  }
+
+  if (searchClearBtn) {
+    searchClearBtn.addEventListener('click', function() {
+      searchInput.value = '';
+      searchInput.dispatchEvent(new Event('input'));
+      searchInput.focus();
+    });
+  }
 
   // === Utilities ===
   function escapeHtml(s) {
@@ -162,6 +175,7 @@
 
   var _searchTimer;
   searchInput.addEventListener('input', function() {
+    syncSearchClearVisibility();
     var val = this.value.toLowerCase().trim();
     clearTimeout(_searchTimer);
     _searchTimer = setTimeout(function() {
@@ -169,6 +183,15 @@
       currentPage = 1;
       render();
     }, 300);
+  });
+
+  searchInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && searchInput.value) {
+      e.preventDefault();
+      e.stopPropagation();
+      searchInput.value = '';
+      searchInput.dispatchEvent(new Event('input'));
+    }
   });
 
   dateFromInput.addEventListener('change', function() { dateFrom = this.value; currentPage = 1; render(); });
@@ -183,6 +206,7 @@
     filterBtns[0].classList.add('active');
     activeFilter = 'all';
     currentPage = 1;
+    syncSearchClearVisibility();
     render();
   });
 
@@ -205,9 +229,15 @@
 
   // === Keyboard Navigation ===
   document.addEventListener('keydown', function(e) {
-    if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
+    if (e.key === '/') {
+      var active = document.activeElement;
+      if (active) {
+        var tag = active.tagName;
+        if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || active.isContentEditable) return;
+      }
       e.preventDefault();
       searchInput.focus();
+      searchInput.select();
       return;
     }
     var cards = grid.querySelectorAll('.report-card');

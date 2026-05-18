@@ -294,6 +294,28 @@ layout: default
     clearBtn.hidden = filterInput.value.length === 0;
   }
 
+  function escapeRegex(s) {
+    return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function applyTitleHighlight(query) {
+    posts.forEach(function(post) {
+      var titleEl = post.querySelector('h3');
+      if (!titleEl) return;
+      if (!titleEl.dataset.originalTitle) {
+        titleEl.dataset.originalTitle = titleEl.textContent;
+      }
+      var original = titleEl.dataset.originalTitle;
+      if (!query) {
+        titleEl.textContent = original;
+        return;
+      }
+      var safe = original.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      var re = new RegExp('(' + escapeRegex(query) + ')', 'gi');
+      titleEl.innerHTML = safe.replace(re, '<mark class="search-highlight">$1</mark>');
+    });
+  }
+
   function updateResultCount(visible) {
     if (!countEl) return;
     if (filterInput.value.length === 0) {
@@ -394,6 +416,7 @@ layout: default
     });
 
     syncClearVisibility();
+    applyTitleHighlight(query);
 
     if (query.length === 0) {
       applyProgressiveLimit();
