@@ -217,6 +217,10 @@
     outline: none;
     box-shadow: var(--focus-ring), 0 4px 20px rgba(0, 0, 0, 0.2);
     border-color: rgba($accent-blue, 0.6);
+
+    &::before {
+      opacity: 1;
+    }
   }
 
   .post-card-meta {
@@ -2434,7 +2438,8 @@
   transform: translateX(-8px);
   transition: all 0.3s ease;
 
-  .post-card:hover & {
+  .post-card:hover &,
+  .post-card:focus-visible & {
     opacity: 1;
     transform: translateX(0);
   }

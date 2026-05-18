@@ -151,24 +151,24 @@ layout: default
         <article class="journal-month-card">
           <span class="journal-landing-kicker">{{ month.name }}</span>
           <h3>{{ month.items.size }}개 세션</h3>
-          <div class="journal-month-card-grid">
+          <dl class="journal-month-card-grid">
             <div>
-              <span class="journal-summary-label">Realized PnL</span>
-              <strong class="journal-summary-value">{{ month_realized_total | prepend: '₩' }}</strong>
+              <dt class="journal-summary-label">Realized PnL</dt>
+              <dd class="journal-summary-value">{{ month_realized_total | prepend: '₩' }}</dd>
             </div>
             <div>
-              <span class="journal-summary-label">Avg Win Rate</span>
-              <strong class="journal-summary-value">{{ average_win_rate }}%</strong>
+              <dt class="journal-summary-label">Avg Win Rate</dt>
+              <dd class="journal-summary-value">{{ average_win_rate }}%</dd>
             </div>
             <div>
-              <span class="journal-summary-label">Total Trades</span>
-              <strong class="journal-summary-value">{{ month_trade_total }}</strong>
+              <dt class="journal-summary-label">Total Trades</dt>
+              <dd class="journal-summary-value">{{ month_trade_total }}</dd>
             </div>
             <div>
-              <span class="journal-summary-label">Latest Result</span>
-              <strong class="journal-summary-value">{{ month_latest.journal_day_result | default: '-' }}</strong>
+              <dt class="journal-summary-label">Latest Result</dt>
+              <dd class="journal-summary-value">{{ month_latest.journal_day_result | default: '-' }}</dd>
             </div>
-          </div>
+          </dl>
           <p>{{ month_latest.journal_next_focus | default: month_latest.excerpt | strip_html | escape }}</p>
           <a href="{{ month_latest.url | relative_url }}" class="journal-month-link">최근 세션 보기</a>
         </article>

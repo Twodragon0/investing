@@ -435,6 +435,67 @@ function googleTranslateElementInit() {
       }
     }, true);
 
+    // === Keyboard navigation (M6: WAI-ARIA menu pattern) ===
+    function langKbdSetOpen(open) {
+      if (open) {
+        langDropdown.classList.add('active');
+        langToggle.setAttribute('aria-expanded', 'true');
+        if (langDropdownOverlay) {
+          langDropdownOverlay.classList.add('active');
+          langDropdownOverlay.setAttribute('aria-hidden', 'false');
+        }
+      } else {
+        langDropdown.classList.remove('active');
+        langToggle.setAttribute('aria-expanded', 'false');
+        if (langDropdownOverlay) {
+          langDropdownOverlay.classList.remove('active');
+          langDropdownOverlay.setAttribute('aria-hidden', 'true');
+        }
+      }
+    }
+
+    langToggle.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowDown' || e.key === 'Down') {
+        e.preventDefault();
+        langKbdSetOpen(true);
+        var firstOption = langDropdown.querySelector('.lang-option');
+        if (firstOption) firstOption.focus();
+      } else if (e.key === 'Escape' && langDropdown.classList.contains('active')) {
+        e.preventDefault();
+        langKbdSetOpen(false);
+      }
+    });
+
+    langDropdown.addEventListener('keydown', function(e) {
+      var options = langDropdown.querySelectorAll('.lang-option');
+      if (!options.length) return;
+      var idx = Array.prototype.indexOf.call(options, document.activeElement);
+      if (e.key === 'ArrowDown' || e.key === 'Down') {
+        e.preventDefault();
+        options[(idx + 1) % options.length].focus();
+      } else if (e.key === 'ArrowUp' || e.key === 'Up') {
+        e.preventDefault();
+        if (idx <= 0) { langKbdSetOpen(false); langToggle.focus(); }
+        else options[idx - 1].focus();
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        options[0].focus();
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        options[options.length - 1].focus();
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        langKbdSetOpen(false);
+        langToggle.focus();
+      } else if (e.key === 'Tab') {
+        setTimeout(function() {
+          if (!langDropdown.contains(document.activeElement) && document.activeElement !== langToggle) {
+            langKbdSetOpen(false);
+          }
+        }, 0);
+      }
+    });
+
     // 현재 언어 감지 및 표시 (localStorage 우선, 쿠키 보조)
     var currentLang = getCurrentLang();
     var savedPref = safeLocalStorageGet('preferredLang');

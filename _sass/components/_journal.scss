@@ -325,6 +325,25 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.75rem;
+  margin: 0;
+
+  .journal-summary-label {
+    display: block;
+    margin: 0;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba($text-secondary, 0.9);
+  }
+
+  .journal-summary-value {
+    display: block;
+    margin: 0.35rem 0 0;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: $text-primary;
+    font-variant-numeric: tabular-nums;
+  }
 }
 
 .journal-month-link {
