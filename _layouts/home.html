@@ -58,7 +58,7 @@ layout: default
         <polyline points="14 2 14 8 20 8"/>
       </svg>
       <div class="stat-content">
-        <span class="stat-label">총 포스트</span>
+        <span class="stat-label" data-i18n="home_stat_total_posts">총 포스트</span>
         <span class="stat-value">{{ site.posts | size }}</span>
       </div>
     </div>
@@ -70,7 +70,7 @@ layout: default
         <rect x="3" y="14" width="7" height="7"/>
       </svg>
       <div class="stat-content">
-        <span class="stat-label">카테고리</span>
+        <span class="stat-label" data-i18n="home_stat_categories">카테고리</span>
         <span class="stat-value">{{ site.categories | size }}</span>
       </div>
     </div>
@@ -80,7 +80,7 @@ layout: default
         <path d="M12 6v12M9 9h5a2 2 0 1 1 0 4h-5"/>
       </svg>
       <div class="stat-content">
-        <span class="stat-label">암호화폐</span>
+        <span class="stat-label" data-i18n="home_stat_crypto">암호화폐</span>
         <span class="stat-value">{{ crypto_group_count }}</span>
       </div>
     </div>
@@ -90,7 +90,7 @@ layout: default
         <polyline points="17 6 23 6 23 12"/>
       </svg>
       <div class="stat-content">
-        <span class="stat-label">주식</span>
+        <span class="stat-label" data-i18n="home_stat_stock">주식</span>
         <span class="stat-value">{{ stock_group_count }}</span>
       </div>
     </div>
@@ -100,7 +100,7 @@ layout: default
         <polyline points="12 6 12 12 16 14"/>
       </svg>
       <div class="stat-content">
-        <span class="stat-label">최근 업데이트</span>
+        <span class="stat-label" data-i18n="home_stat_recent_update">최근 업데이트</span>
         <span class="stat-value">{{ site.posts.first.date | date: "%m/%d %H:%M" }}</span>
       </div>
     </div>
