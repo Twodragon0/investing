@@ -1,0 +1,116 @@
+## 테마별 주요 뉴스
+
+### 🟠 비트코인 (4건)
+
+*Daily creation activity pushes weekly net inflows to a multi-month high.*
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb"><img src="https://example.com/img/btc-chart.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/btc/etf" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin spot ETF inflows accelerate</a>
+<p class="news-desc">Daily creation activity pushes weekly net inflows to a multi-month high.</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-high">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
+<a href="https://example.com/btc/hashrate" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin miners report record hash rate</a>
+<p class="news-desc">Network hash rate reaches new all-time high as ASIC deployment continues.</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">3</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/btc/halving" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin halving narrative drives accumulation</a>
+<p class="news-desc">On-chain analysts highlight increased holdings by long-term wallets.</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+<details><summary>그 외 1건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-body"><span>Bitcoin treasury strategy gains corporate interest</span><span class="overflow-source">Example Crypto</span></span></li>
+</ol></div></details>
+
+
+### 🔵 규제/정책 (4건)
+
+*Federal regulator clarifies expectations on reserve disclosures.*
+
+
+<div class="news-card-item news-sev-high">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb"><img src="https://example.com/img/sec-building.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
+<a href="https://example.com/sec/guidance" class="news-title" target="_blank" rel="noopener noreferrer">SEC publishes interpretive guidance for issuers</a>
+<p class="news-desc">Federal regulator clarifies expectations on reserve disclosures.</p>
+<span class="source-tag" data-source-type="default">Example Wire</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/cftc/sweep" class="news-title" target="_blank" rel="noopener noreferrer">CFTC announces enforcement sweep</a>
+<p class="news-desc">Commission opens parallel actions against unregistered platforms.</p>
+<span class="source-tag" data-source-type="default">Example Wire</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">3</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/mica/its" class="news-title" target="_blank" rel="noopener noreferrer">MiCA technical standards open for comment</a>
+<p class="news-desc">European authority publishes draft technical standards for stakeholder input.</p>
+<span class="source-tag" data-source-type="default">Example Brief</span>
+</div>
+</div>
+
+<details><summary>그 외 1건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-body"><span>Compliance audit reveals systemic gaps</span><span class="overflow-source">Example Brief</span></span></li>
+</ol></div></details>
+
+
+### 📊 매크로/금리 (1건)
+
+*Public companies signal interest in adding bitcoin to corporate treasury.*
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">1</div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<span class="news-title">Bitcoin treasury strategy gains corporate interest</span>
+<p class="news-desc">Public companies signal interest in adding bitcoin to corporate treasury.</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+
+### 📈 가격/시장 (1건)
+
+*Network hash rate reaches new all-time high as ASIC deployment continues.*
+
+<details><summary>그 외 1건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/btc/hashrate" target="_blank" rel="noopener noreferrer">Bitcoin miners report record hash rate</a><span class="overflow-source">Example Crypto</span></span></li>
+</ol></div></details>
+

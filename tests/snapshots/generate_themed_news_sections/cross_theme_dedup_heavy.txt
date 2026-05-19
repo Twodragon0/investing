@@ -1,0 +1,154 @@
+## 테마별 주요 뉴스
+
+### 🔵 규제/정책 (7건)
+
+*Staff guidance addresses creation and redemption disclosures for spot bitcoin ETF issuers.*
+
+
+<div class="news-card-item news-sev-high">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
+<a href="https://example.com/sec/btc-etf" class="news-title" target="_blank" rel="noopener noreferrer">SEC clarifies bitcoin ETF reporting requirements</a>
+<p class="news-desc">Staff guidance addresses creation and redemption disclosures for spot bitcoin ETF issuers.</p>
+<span class="source-tag" data-source-type="default">Example Wire</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/cftc/btc-derivs" class="news-title" target="_blank" rel="noopener noreferrer">CFTC opens consultation on bitcoin derivatives</a>
+<p class="news-desc">Commission seeks public input on margin treatment for spot-referenced bitcoin contracts.</p>
+<span class="source-tag" data-source-type="default">Example Wire</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">3</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/roundtable/listings" class="news-title" target="_blank" rel="noopener noreferrer">Regulation roundtable convenes on exchange listings</a>
+<p class="news-desc">Industry groups and supervisors discuss listing standards as part of broader market structure work.</p>
+<span class="source-tag" data-source-type="default">Example Brief</span>
+</div>
+</div>
+
+<details><summary>그 외 4건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/sec/guidance" target="_blank" rel="noopener noreferrer">SEC publishes clarified guidance for issuers</a><span class="overflow-source">Example Wire</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/mica/its" target="_blank" rel="noopener noreferrer">MiCA technical standards proceed to comment</a><span class="overflow-source">Example Brief</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/doj/priorities" target="_blank" rel="noopener noreferrer">DOJ enforcement priorities update issued</a><span class="overflow-source">Example Brief</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/audit/custodian" target="_blank" rel="noopener noreferrer">Compliance audit covers exchange custodian practices</a><span class="overflow-source">Example Brief</span></span></li>
+</ol></div></details>
+
+
+### 🟠 비트코인 (4건)
+
+*Staff guidance addresses creation and redemption disclosures for spot bitcoin ETF issuers.*
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/btc/hashrate" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin miners report network hash rate gains</a>
+<p class="news-desc">Operators highlight steady deployment of next-generation rigs and improving network economics.</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/btc/halving" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin halving cycle analysis released</a>
+<p class="news-desc">Research note examines on-chain accumulation patterns ahead of the next supply schedule.</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+<details><summary>그 외 2건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/sec/btc-etf" target="_blank" rel="noopener noreferrer">SEC clarifies bitcoin ETF reporting requirements</a><span class="overflow-source">Example Wire</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/cftc/btc-derivs" target="_blank" rel="noopener noreferrer">CFTC opens consultation on bitcoin derivatives</a><span class="overflow-source">Example Wire</span></span></li>
+</ol></div></details>
+
+
+### 🏦 거래소 (3건)
+
+*Industry groups and supervisors discuss listing standards as part of broader market structure work.*
+
+
+<div class="news-card-item news-sev-low">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-low">LOW</span>
+<a href="https://example.com/audit/custodian" class="news-title" target="_blank" rel="noopener noreferrer">Compliance audit covers exchange custodian practices</a>
+<p class="news-desc">Audit programme reviews custodian segregation procedures across major exchange platforms.</p>
+<span class="source-tag" data-source-type="default">Example Brief</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/binance/perp" class="news-title" target="_blank" rel="noopener noreferrer">Binance launches new perpetual contracts lineup</a>
+<p class="news-desc">Exchange expands derivatives offering with additional perpetual swap markets.</p>
+<span class="source-tag" data-source-type="default">Example Exchange</span>
+</div>
+</div>
+
+<details><summary>그 외 1건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/roundtable/listings" target="_blank" rel="noopener noreferrer">Regulation roundtable convenes on exchange listings</a><span class="overflow-source">Example Brief</span></span></li>
+</ol></div></details>
+
+
+### 📊 매크로/금리 (2건)
+
+*Investors parse FOMC minutes for signals on the pace of future rate decisions.*
+
+
+<div class="news-card-item news-sev-high">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
+<a href="https://example.com/fed/path" class="news-title" target="_blank" rel="noopener noreferrer">Fed rate path watched by market participants</a>
+<p class="news-desc">Investors parse FOMC minutes for signals on the pace of future rate decisions.</p>
+<span class="source-tag" data-source-type="default">Example Macro</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/cpi/release" class="news-title" target="_blank" rel="noopener noreferrer">CPI release shapes inflation expectations</a>
+<p class="news-desc">Headline and core inflation figures match consensus while shelter remains the largest contributor.</p>
+<span class="source-tag" data-source-type="default">Example Macro</span>
+</div>
+</div>
+
+
+### 🟣 DeFi (1건)
+
+*Exchange expands derivatives offering with additional perpetual swap markets.*
+
+<details><summary>그 외 1건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/binance/perp" target="_blank" rel="noopener noreferrer">Binance launches new perpetual contracts lineup</a><span class="overflow-source">Example Exchange</span></span></li>
+</ol></div></details>
+

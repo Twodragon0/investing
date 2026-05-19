@@ -1,0 +1,126 @@
+## 테마별 주요 뉴스
+
+### 🟠 비트코인 (3건)
+
+*Daily creation activity pushes weekly net inflows to a multi-month high across major issuers.*
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/btc/etf" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin spot ETF inflows accelerate</a>
+<p class="news-desc">Daily creation activity pushes weekly net inflows to a multi-month high across major issuers.</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/btc/halving" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin halving narrative drives accumulation</a>
+<p class="news-desc">Bitcoin halving narrative drives accumulation. 비트코인 시장 심리와 가격 흐름에 주목하세요.</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-high">
+<div class="news-card-num">3</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
+<a href="https://example.com/btc/miner" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin miner reports record hash rate</a>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+
+### 🔵 규제/정책 (4건)
+
+*Staff statement addresses recurring questions from registrants about reserve disclosures.*
+
+
+<div class="news-card-item news-sev-high">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
+<a href="https://example.com/sec/disclosure" class="news-title" target="_blank" rel="noopener noreferrer">SEC issues clarified disclosure guidance</a>
+<p class="news-desc">Staff statement addresses recurring questions from registrants about reserve disclosures.</p>
+<span class="source-tag" data-source-type="default">Example Wire</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/mica/phase" class="news-title" target="_blank" rel="noopener noreferrer">MiCA framework consultation enters next phase</a>
+<p class="news-desc">MiCA framework consultation enters next phase. 규제 방향이 시장 구조를 바꿀 수 있습니다.</p>
+<span class="source-tag" data-source-type="default">Example Brief</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-low">
+<div class="news-card-num">3</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-low">LOW</span>
+<a href="https://example.com/cftc/priorities" class="news-title" target="_blank" rel="noopener noreferrer">CFTC reviews enforcement priorities for fiscal year</a>
+<span class="source-tag" data-source-type="default">Example Wire</span>
+</div>
+</div>
+
+<details><summary>그 외 1건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/lawsuit/discovery" target="_blank" rel="noopener noreferrer">Lawsuit against issuer enters discovery phase</a><span class="overflow-source">Example Brief</span></span></li>
+</ol></div></details>
+
+
+### 🤖 AI/기술 (3건)
+
+*Company refreshes accelerator family targeting large-scale training and inference workloads.*
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/nvidia/lineup" class="news-title" target="_blank" rel="noopener noreferrer">Nvidia unveils next-generation AI chip lineup</a>
+<p class="news-desc">Company refreshes accelerator family targeting large-scale training and inference workloads.</p>
+<span class="source-tag" data-source-type="default">Example Tech</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-high">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
+<a href="https://example.com/openai/roadmap" class="news-title" target="_blank" rel="noopener noreferrer">OpenAI publishes enterprise feature roadmap</a>
+<p class="news-desc">OpenAI publishes enterprise feature roadmap. AI 기술 혁신이 산업 전반의 투자 기회를 창출합니다.</p>
+<span class="source-tag" data-source-type="default">Example Tech</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">3</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/anthropic/safety" class="news-title" target="_blank" rel="noopener noreferrer">Anthropic publishes safety research roadmap</a>
+<p class="news-desc">Anthropic publishes safety research roadmap. AI 기술 혁신이 산업 전반의 투자 기회를 창출합니다.</p>
+<span class="source-tag" data-source-type="default">Example Tech</span>
+</div>
+</div>
+

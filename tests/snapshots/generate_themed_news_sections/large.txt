@@ -1,0 +1,266 @@
+## 테마별 주요 뉴스
+
+### 🔵 규제/정책 (22건)
+
+*Federal regulator issues clarified expectations on reserve disclosures and redemption mechanics.*
+
+
+<div class="news-card-item news-sev-high">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
+<a href="https://example.com/regulation/1" class="news-title" target="_blank" rel="noopener noreferrer">SEC publishes interpretive guidance for issuers (case 1)</a>
+<p class="news-desc">Federal regulator issues clarified expectations on reserve disclosures and redemption mechanics.</p>
+<span class="source-tag" data-source-type="default">Example Wire</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/regulation/2" class="news-title" target="_blank" rel="noopener noreferrer">CFTC enforcement sweep targets offshore platforms (case 2)</a>
+<p class="news-desc">Commission opens parallel actions covering exchanges allegedly serving retail traders without registration.</p>
+<span class="source-tag" data-source-type="default">Example Wire</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">3</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/regulation/3" class="news-title" target="_blank" rel="noopener noreferrer">MiCA technical standards proceed to comment (case 3)</a>
+<p class="news-desc">European authority publishes draft technical standards on whitepaper disclosures.</p>
+<span class="source-tag" data-source-type="default">Example Brief</span>
+</div>
+</div>
+
+<details><summary>그 외 19건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/regulation/4" target="_blank" rel="noopener noreferrer">DOJ compliance audit programme launched (case 4)</a><span class="overflow-source">Example Brief</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/regulation/5" target="_blank" rel="noopener noreferrer">FCA regulation roundtable convenes (case 5)</a><span class="overflow-source">Example Brief</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/regulation/6" target="_blank" rel="noopener noreferrer">ESMA enforcement priorities update issued (case 6)</a><span class="overflow-source">Example Brief</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/regulation/7" target="_blank" rel="noopener noreferrer">MAS regulation framework consultation opens (case 7)</a><span class="overflow-source">Example Brief</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/regulation/8" target="_blank" rel="noopener noreferrer">Stablecoin bill advances through committee (case 8)</a><span class="overflow-source">Example Brief</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/regulation/9" target="_blank" rel="noopener noreferrer">Market structure bill discussion document released (case 9)</a><span class="overflow-source">Example Brief</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/regulation/10" target="_blank" rel="noopener noreferrer">MiFID audit programme expanded (case 10)</a><span class="overflow-source">Example Brief</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/regulation/11" target="_blank" rel="noopener noreferrer">FBI compliance enforcement action announced (case 11)</a><span class="overflow-source">Example Brief</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/regulation/12" target="_blank" rel="noopener noreferrer">IRS audit programme on digital asset disclosures (case 12)</a><span class="overflow-source">Example Brief</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/macro/10" target="_blank" rel="noopener noreferrer">Treasury issuance schedule outlook (case 10)</a><span class="overflow-source">Example Macro</span></span></li>
+<li><em>...외 9건</em></li>
+</ol></div></details>
+
+
+### 🏦 거래소 (18건)
+
+*Commission opens parallel actions covering exchanges allegedly serving retail traders without registration.*
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/bitcoin/8" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin taproot adoption progress (case 8)</a>
+<p class="news-desc">Bitcoin taproot adoption progress continues as wallets and exchanges roll out support.</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/exchange/1" class="news-title" target="_blank" rel="noopener noreferrer">Binance lists new perpetual contracts (case 1)</a>
+<p class="news-desc">Exchange expands derivatives lineup with three new perpetual swap markets.</p>
+<span class="source-tag" data-source-type="default">Example Exchange</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">3</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/exchange/2" class="news-title" target="_blank" rel="noopener noreferrer">Coinbase derivatives volume rises (case 2)</a>
+<p class="news-desc">Coinbase international derivatives venue contributes to quarterly volume growth.</p>
+<span class="source-tag" data-source-type="default">Example Exchange</span>
+</div>
+</div>
+
+<details><summary>그 외 15건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/regulation/2" target="_blank" rel="noopener noreferrer">CFTC enforcement sweep targets offshore platforms (case 2)</a><span class="overflow-source">Example Wire</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/exchange/3" target="_blank" rel="noopener noreferrer">Upbit listing review removes three pairs (case 3)</a><span class="overflow-source">Example Exchange</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/exchange/4" target="_blank" rel="noopener noreferrer">Bithumb listing roadmap update (case 4)</a><span class="overflow-source">Example Exchange</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/exchange/5" target="_blank" rel="noopener noreferrer">Bybit listing expansion strategy (case 5)</a><span class="overflow-source">Example Exchange</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/exchange/6" target="_blank" rel="noopener noreferrer">OKX exchange volume snapshot (case 6)</a><span class="overflow-source">Example Exchange</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/exchange/7" target="_blank" rel="noopener noreferrer">Kraken listing review programme (case 7)</a><span class="overflow-source">Example Exchange</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/exchange/8" target="_blank" rel="noopener noreferrer">Coinone listing roadmap discussion (case 8)</a><span class="overflow-source">Example Exchange</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/exchange/9" target="_blank" rel="noopener noreferrer">Korbit exchange volume update (case 9)</a><span class="overflow-source">Example Exchange</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/exchange/10" target="_blank" rel="noopener noreferrer">HTX exchange listing review schedule (case 10)</a><span class="overflow-source">Example Exchange</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/macro/10" target="_blank" rel="noopener noreferrer">Treasury issuance schedule outlook (case 10)</a><span class="overflow-source">Example Macro</span></span></li>
+<li><em>...외 5건</em></li>
+</ol></div></details>
+
+
+### 🟠 비트코인 (11건)
+
+*Daily creation activity pushes weekly bitcoin spot ETF inflows higher across major issuers.*
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/bitcoin/1" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin spot ETF inflows accelerate (case 1)</a>
+<p class="news-desc">Daily creation activity pushes weekly bitcoin spot ETF inflows higher across major issuers.</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/bitcoin/2" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin mining hash rate reaches new high (case 2)</a>
+<p class="news-desc">Bitcoin network hash rate reaches new high as next-generation ASIC deployment continues.</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">3</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/bitcoin/3" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin halving narrative drives accumulation (case 3)</a>
+<p class="news-desc">On-chain analysts highlight increased bitcoin holdings by long-term wallets ahead of halving.</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+<details><summary>그 외 8건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/bitcoin/4" target="_blank" rel="noopener noreferrer">Bitcoin lightning network adoption expands (case 4)</a><span class="overflow-source">Example Crypto</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/bitcoin/5" target="_blank" rel="noopener noreferrer">Bitcoin ordinals activity continues steady (case 5)</a><span class="overflow-source">Example Crypto</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/bitcoin/6" target="_blank" rel="noopener noreferrer">Bitcoin miner deployment summary (case 6)</a><span class="overflow-source">Example Crypto</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/bitcoin/7" target="_blank" rel="noopener noreferrer">Bitcoin satoshi era holdings analysis (case 7)</a><span class="overflow-source">Example Crypto</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/bitcoin/8" target="_blank" rel="noopener noreferrer">Bitcoin taproot adoption progress (case 8)</a><span class="overflow-source">Example Crypto</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/bitcoin/9" target="_blank" rel="noopener noreferrer">Bitcoin spot ETF authorized participants update (case 9)</a><span class="overflow-source">Example Crypto</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/bitcoin/10" target="_blank" rel="noopener noreferrer">Bitcoin block reward economics revisited (case 10)</a><span class="overflow-source">Example Crypto</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/bitcoin/11" target="_blank" rel="noopener noreferrer">Bitcoin strategic reserve discussion paper (case 11)</a><span class="overflow-source">Example Crypto</span></span></li>
+</ol></div></details>
+
+
+### 🏛️ 정치/정책 (11건)
+
+*Strategic reserve discussion paper examines policy implications for bitcoin holdings.*
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/bitcoin/11" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin strategic reserve discussion paper (case 11)</a>
+<p class="news-desc">Strategic reserve discussion paper examines policy implications for bitcoin holdings.</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-high">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
+<a href="https://example.com/macro/1" class="news-title" target="_blank" rel="noopener noreferrer">Fed FOMC minutes review (case 1)</a>
+<p class="news-desc">Fed FOMC minutes review highlights policymakers concerns about inflation persistence.</p>
+<span class="source-tag" data-source-type="default">Example Macro</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">3</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/macro/4" class="news-title" target="_blank" rel="noopener noreferrer">Powell speech keeps door open on policy (case 4)</a>
+<p class="news-desc">Powell speech keeps door open on policy path while reaffirming dual mandate commitment.</p>
+<span class="source-tag" data-source-type="default">Example Macro</span>
+</div>
+</div>
+
+<details><summary>그 외 8건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/macro/8" target="_blank" rel="noopener noreferrer">BOJ policy path discussion paper (case 8)</a><span class="overflow-source">Example Macro</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/politics/1" target="_blank" rel="noopener noreferrer">Trump executive order signed on industry policy (case 1)</a><span class="overflow-source">Example Pol</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/politics/2" target="_blank" rel="noopener noreferrer">Congress hearing on policy framework (case 2)</a><span class="overflow-source">Example Pol</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/politics/3" target="_blank" rel="noopener noreferrer">Tariff policy update issued (case 3)</a><span class="overflow-source">Example Pol</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/politics/4" target="_blank" rel="noopener noreferrer">Senator policy statement on digital assets (case 4)</a><span class="overflow-source">Example Pol</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/politics/5" target="_blank" rel="noopener noreferrer">Representative legislation introduced (case 5)</a><span class="overflow-source">Example Pol</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/politics/6" target="_blank" rel="noopener noreferrer">Sanction policy expansion announced (case 6)</a><span class="overflow-source">Example Pol</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/politics/7" target="_blank" rel="noopener noreferrer">Biden administration policy review summary (case 7)</a><span class="overflow-source">Example Pol</span></span></li>
+</ol></div></details>
+
+
+### 🤖 AI/기술 (10건)
+
+*Nvidia AI chip lineup refresh targets large-scale training and inference workloads.*
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/ai_tech/1" class="news-title" target="_blank" rel="noopener noreferrer">Nvidia AI chip lineup refresh (case 1)</a>
+<p class="news-desc">Nvidia AI chip lineup refresh targets large-scale training and inference workloads.</p>
+<span class="source-tag" data-source-type="default">Example Tech</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/ai_tech/2" class="news-title" target="_blank" rel="noopener noreferrer">OpenAI enterprise tooling expansion (case 2)</a>
+<p class="news-desc">OpenAI enterprise tooling expansion covers workspace controls and audit features.</p>
+<span class="source-tag" data-source-type="default">Example Tech</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">3</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/ai_tech/3" class="news-title" target="_blank" rel="noopener noreferrer">Anthropic safety research roadmap (case 3)</a>
+<p class="news-desc">Anthropic safety research roadmap covers interpretability and adversarial evaluations.</p>
+<span class="source-tag" data-source-type="default">Example Tech</span>
+</div>
+</div>
+
+<details><summary>그 외 7건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/ai_tech/4" target="_blank" rel="noopener noreferrer">TSMC AI chip capex update (case 4)</a><span class="overflow-source">Example Tech</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/ai_tech/5" target="_blank" rel="noopener noreferrer">Microsoft cloud AI services update (case 5)</a><span class="overflow-source">Example Tech</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/ai_tech/6" target="_blank" rel="noopener noreferrer">Google AI model release notes (case 6)</a><span class="overflow-source">Example Tech</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/ai_tech/7" target="_blank" rel="noopener noreferrer">Meta AI infrastructure overview (case 7)</a><span class="overflow-source">Example Tech</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/ai_tech/8" target="_blank" rel="noopener noreferrer">Apple AI strategy overview (case 8)</a><span class="overflow-source">Example Tech</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/ai_tech/9" target="_blank" rel="noopener noreferrer">Deepseek inference benchmark update (case 9)</a><span class="overflow-source">Example Tech</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/nft_web3/3" target="_blank" rel="noopener noreferrer">Metaverse infrastructure update (case 3)</a><span class="overflow-source">Example NFT</span></span></li>
+</ol></div></details>
+

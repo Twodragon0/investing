@@ -1,0 +1,100 @@
+## 테마별 주요 뉴스
+
+### 📊 매크로/금리 (3건)
+
+*헤드라인 물가가 시장 예상을 상회하면서 채권금리가 급등했습니다.*
+
+
+<div class="news-card-item news-sev-high">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
+<a href="https://example.com/cpi/yields" class="news-title" target="_blank" rel="noopener noreferrer">물가 서프라이즈에 채권금리 급등</a>
+<p class="news-desc">헤드라인 물가가 시장 예상을 상회하면서 채권금리가 급등했습니다.</p>
+<span class="source-tag" data-source-type="default">예제 매크로</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-high">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
+<a href="https://example.com/fed/minutes" class="news-title" target="_blank" rel="noopener noreferrer">연준 의사록, 금리 인하에 신중한 기조</a>
+<p class="news-desc">FOMC 의사록은 물가 지속에 대한 우려를 강조했습니다.</p>
+<span class="source-tag" data-source-type="default">예제 매크로</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">3</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/kr/cpi" class="news-title" target="_blank" rel="noopener noreferrer">국내 소비자물가 발표, 시장 전망 좌우</a>
+<p class="news-desc">헤드라인과 근원 소비자물가가 시장 예상과 부합했습니다.</p>
+<span class="source-tag" data-source-type="default">예제 매크로</span>
+</div>
+</div>
+
+
+### 🔵 규제/정책 (2건)
+
+*금융위원회가 올해 자본시장법 집행의 중점 분야를 공개했습니다.*
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/fsc/priorities" class="news-title" target="_blank" rel="noopener noreferrer">금융위, 자본시장법 집행 우선순위 발표</a>
+<p class="news-desc">금융위원회가 올해 자본시장법 집행의 중점 분야를 공개했습니다.</p>
+<span class="source-tag" data-source-type="default">예제 와이어</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/roundtable/structure" class="news-title" target="_blank" rel="noopener noreferrer">규제 라운드테이블, 시장 구조 개편 논의</a>
+<p class="news-desc">업계와 입법부가 현물시장 감독 방안을 논의했습니다.</p>
+<span class="source-tag" data-source-type="default">예제 브리프</span>
+</div>
+</div>
+
+
+### 🏦 거래소 (2건)
+
+*금감원이 가상자산 거래소 감독을 위한 가이던스를 공개했습니다.*
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/fss/guidance" class="news-title" target="_blank" rel="noopener noreferrer">금감원, 가상자산 거래소 신규 가이던스 공개</a>
+<p class="news-desc">금감원이 가상자산 거래소 감독을 위한 가이던스를 공개했습니다.</p>
+<span class="source-tag" data-source-type="default">예제 와이어</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/sanction/exchange" class="news-title" target="_blank" rel="noopener noreferrer">당국, 미등록 거래소에 제재 처분 부과</a>
+<p class="news-desc">다수 개월에 걸친 조사 끝에 미등록 거래소에 대한 제재 처분이 확정되었습니다.</p>
+<span class="source-tag" data-source-type="default">예제 브리프</span>
+</div>
+</div>
+

@@ -1,0 +1,230 @@
+## 테마별 주요 뉴스
+
+### 🟠 비트코인 (4건)
+
+*Daily creation activity pushes weekly net inflows to a multi-month high across major issuers.*
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb"><img src="https://example.com/img/btc.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/btc/etf" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin spot ETF inflows accelerate</a>
+<p class="news-desc">Daily creation activity pushes weekly net inflows to a multi-month high across major issuers.</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-high">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
+<a href="https://example.com/btc/hashrate" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin miners report record hash rate</a>
+<p class="news-desc">Network hash rate reaches new all-time high as next-generation ASIC deployment continues.</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">3</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/btc/halving" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin halving narrative drives accumulation</a>
+<p class="news-desc">On-chain analysts highlight increased holdings by long-term wallets ahead of the supply schedule.</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+<details><summary>그 외 1건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/sec/btc-etf" target="_blank" rel="noopener noreferrer">SEC clarifies bitcoin ETF reporting requirements</a><span class="overflow-source">Example Wire</span></span></li>
+</ol></div></details>
+
+
+### 🏦 거래소 (5건)
+
+*Commission opens parallel actions covering three exchanges allegedly serving retail traders without registration.*
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/cftc/sweep" class="news-title" target="_blank" rel="noopener noreferrer">CFTC sweep targets unregistered offshore platforms</a>
+<p class="news-desc">Commission opens parallel actions covering three exchanges allegedly serving retail traders without registration.</p>
+<span class="source-tag" data-source-type="default">Example Wire</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb"><img src="https://example.com/img/binance.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/binance/perp" class="news-title" target="_blank" rel="noopener noreferrer">Binance lists new perpetual contracts</a>
+<p class="news-desc">Exchange expands derivatives lineup with three new perpetual swap markets for major altcoins.</p>
+<span class="source-tag" data-source-type="default">Example Exchange</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">3</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/coinbase/derivatives" class="news-title" target="_blank" rel="noopener noreferrer">Coinbase volume rises on derivatives launch</a>
+<p class="news-desc">International derivatives venue contributes to quarterly volume growth alongside spot activity.</p>
+<span class="source-tag" data-source-type="default">Example Exchange</span>
+</div>
+</div>
+
+<details><summary>그 외 2건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/upbit/delisting" target="_blank" rel="noopener noreferrer">Upbit delisting affects three altcoins</a><span class="overflow-source">Example Exchange</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/roundtable/listings" target="_blank" rel="noopener noreferrer">Regulation roundtable convenes on exchange listings</a><span class="overflow-source">Example Brief</span></span></li>
+</ol></div></details>
+
+
+### 📊 매크로/금리 (4건)
+
+*FOMC minutes show policymakers concerned about sticky services prices and wage pressures.*
+
+
+<div class="news-card-item news-sev-high">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb"><img src="https://example.com/img/fed.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
+<a href="https://example.com/fed/fomc" class="news-title" target="_blank" rel="noopener noreferrer">Fed warns inflation may persist into next year</a>
+<p class="news-desc">FOMC minutes show policymakers concerned about sticky services prices and wage pressures.</p>
+<span class="source-tag" data-source-type="default">Example Macro</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-high">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
+<a href="https://example.com/treasury/cpi" class="news-title" target="_blank" rel="noopener noreferrer">Treasury yields surge after CPI surprise</a>
+<p class="news-desc">Bond market reprices rate-cut expectations following hotter-than-expected inflation print.</p>
+<span class="source-tag" data-source-type="default">Example Macro</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">3</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/ecb/patience" class="news-title" target="_blank" rel="noopener noreferrer">ECB officials signal patience on rate cuts</a>
+<p class="news-desc">Governing council members emphasize data-dependent path while inflation remains above target.</p>
+<span class="source-tag" data-source-type="default">Example Macro</span>
+</div>
+</div>
+
+<details><summary>그 외 1건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/powell" target="_blank" rel="noopener noreferrer">Powell speech keeps door open on policy path</a><span class="overflow-source">Example Macro</span></span></li>
+</ol></div></details>
+
+
+### 🔵 규제/정책 (7건)
+
+*Federal regulator issues clarified expectations on reserve disclosures and redemption mechanics.*
+
+
+<div class="news-card-item news-sev-high">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb"><img src="https://example.com/img/sec.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
+<a href="https://example.com/sec/stablecoin" class="news-title" target="_blank" rel="noopener noreferrer">SEC stablecoin guidance gains industry support</a>
+<p class="news-desc">Federal regulator issues clarified expectations on reserve disclosures and redemption mechanics.</p>
+<span class="source-tag" data-source-type="default">Example Wire</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/mica/its" class="news-title" target="_blank" rel="noopener noreferrer">MiCA implementing technical standards open for comment</a>
+<p class="news-desc">European authority publishes technical standards on whitepaper disclosures and supervisory cooperation.</p>
+<span class="source-tag" data-source-type="default">Example Brief</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-high">
+<div class="news-card-num">3</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
+<a href="https://example.com/lawsuit/discovery" class="news-title" target="_blank" rel="noopener noreferrer">Lawsuit against major issuer enters discovery phase</a>
+<p class="news-desc">Court order sets schedule for production of internal compliance records and reserve attestations.</p>
+<span class="source-tag" data-source-type="default">Example Brief</span>
+</div>
+</div>
+
+<details><summary>그 외 4건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/cftc/sweep" target="_blank" rel="noopener noreferrer">CFTC sweep targets unregistered offshore platforms</a><span class="overflow-source">Example Wire</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/sec/btc-etf" target="_blank" rel="noopener noreferrer">SEC clarifies bitcoin ETF reporting requirements</a><span class="overflow-source">Example Wire</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/openai/enterprise" target="_blank" rel="noopener noreferrer">OpenAI extends enterprise tier with new tooling</a><span class="overflow-source">Example Tech</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/roundtable/listings" target="_blank" rel="noopener noreferrer">Regulation roundtable convenes on exchange listings</a><span class="overflow-source">Example Brief</span></span></li>
+</ol></div></details>
+
+
+### 🤖 AI/기술 (4건)
+
+*Company unveils refreshed accelerator family targeting large-scale training and inference workloads.*
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb"><img src="https://example.com/img/nvidia.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/nvidia/chip" class="news-title" target="_blank" rel="noopener noreferrer">Nvidia introduces next-generation AI chip lineup</a>
+<p class="news-desc">Company unveils refreshed accelerator family targeting large-scale training and inference workloads.</p>
+<span class="source-tag" data-source-type="default">Example Tech</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/openai/enterprise" class="news-title" target="_blank" rel="noopener noreferrer">OpenAI extends enterprise tier with new tooling</a>
+<p class="news-desc">Company adds workspace controls and audit features aimed at regulated enterprise deployments.</p>
+<span class="source-tag" data-source-type="default">Example Tech</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">3</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/anthropic/roadmap" class="news-title" target="_blank" rel="noopener noreferrer">Anthropic publishes safety research roadmap</a>
+<p class="news-desc">Research agenda outlines investment in interpretability tooling and adversarial evaluations.</p>
+<span class="source-tag" data-source-type="default">Example Tech</span>
+</div>
+</div>
+
+<details><summary>그 외 1건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/tsmc/capex" target="_blank" rel="noopener noreferrer">TSMC capex plan watched by macro analysts</a><span class="overflow-source">Example Tech</span></span></li>
+</ol></div></details>
+
