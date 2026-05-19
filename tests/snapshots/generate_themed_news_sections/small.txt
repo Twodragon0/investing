@@ -1,0 +1,47 @@
+## 테마별 주요 뉴스
+
+### 🔵 규제/정책 (6건)
+
+*Federal regulator publishes interpretive guidance covering reserve disclosures and redemption mechanics.*
+
+
+<div class="news-card-item news-sev-high">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb"><img src="https://example.com/img/sec-building.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
+<a href="https://example.com/sec/stablecoin-guidance" class="news-title" target="_blank" rel="noopener noreferrer">SEC clarifies stablecoin guidance for issuers</a>
+<p class="news-desc">Federal regulator publishes interpretive guidance covering reserve disclosures and redemption mechanics.</p>
+<span class="source-tag" data-source-type="default">Example Wire</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/cftc/sweep" class="news-title" target="_blank" rel="noopener noreferrer">CFTC enforcement sweep targets unregistered platforms</a>
+<p class="news-desc">위원회가 미등록 거래소에 대한 집행 절차를 개시했습니다.</p>
+<span class="source-tag" data-source-type="default">Example Wire</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">3</div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<span class="news-title">Regulation roundtable convenes on market structure</span>
+<p class="news-desc">Industry groups and lawmakers discuss spot-market oversight under the proposed market structure bill.</p>
+<span class="source-tag" data-source-type="default">Example Brief</span>
+</div>
+</div>
+
+<details><summary>그 외 3건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/mica/its-consultation" target="_blank" rel="noopener noreferrer">MiCA implementing technical standards open for comment</a><span class="overflow-source">Example Brief</span></span></li>
+<li class="overflow-preview"><span class="overflow-body"><span>Compliance officers warn on audit gaps in CBDC pilots</span></span></li>
+<li class="overflow-preview"><span class="overflow-body"><span>Self regulatory body proposes lawsuit-disclosure rule</span><span class="overflow-source">Example Brief</span></span></li>
+</ol></div></details>
+
