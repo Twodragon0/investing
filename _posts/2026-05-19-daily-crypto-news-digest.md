@@ -55,40 +55,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-19 - 암호화폐 뉴스 요
 <li><a href="https://bitcoinmagazine.com/news/bitcoin-depot-btm-files-for-chapter-11">비트코인 회사가 11장 파산 신청을 함에 따라 Depot(BTM) 주식이 80% 하락</a> <span class="p0-desc">비트코인 Magazine 비트코인 Depot(BTM) 주식은 회사가 11장 파산 신청을 하면서 80% 하락했습니다. 비트코인 Depot(나스닥: BTM)은 한때 북미 최대의 비트코.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 암호화폐 ATM 운영자 비트코인 11장 파산에 대한 저장소 파일 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 93건의 뉴스 중 P1 주요 이슈도 10건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (40건): 비트코인, 하락, 달러대 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **📈 가격/시장** (28건): 하락, 달러대, 급등 가격 변동 (28건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏦 거래소** (22건): 선물 관련 지표와 수급 흐름을 함께 확인하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 암호화폐 ATM 운영자 비트코인 11장 파산에 대한 저장소 파일
-- 비트코인 회사가 11장 파산 신청을 함에 따라 Depot(BTM) 주식이 80% 하락
-
-### 주요 이슈
-
-- 비트코인, 다시 7만 6000달러대로 하락
-- Hyperliquid, SpaceX, Anthropic, OpenAI IPO로 인한 시장 침체 극복
-- 비트코인 채권 매각으로 인해 암호화폐 청산이 6억 7200만 달러를 넘어 77,000달러 미만으로 하락
-- 외 7건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, AI
-- **주요 출처**: Binance(40건), Cointelegraph(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-05-19.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-05-19.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
