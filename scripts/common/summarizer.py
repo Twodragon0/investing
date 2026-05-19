@@ -19,6 +19,12 @@ from typing import Any, Dict, List, Optional, Tuple
 from .enrichment import is_logo_like_url
 from .markdown_utils import html_source_tag, markdown_link
 from .post_generator import _MISTRANSLATION_FIXES
+from .severity import (  # noqa: F401  (re-exported for backward compat)
+    _SEV_BADGE_HTML,
+    _SEVERITY_HIGH_KW,
+    _SEVERITY_LOW_KW,
+    _classify_news_severity,
+)
 from .themes import (  # noqa: F401  (BAR_WIDTH re-exported for backward compat)
     _THEME_NAME_KEYWORDS,
     ARTICLES_PER_THEME,
@@ -30,74 +36,6 @@ from .themes import (  # noqa: F401  (BAR_WIDTH re-exported for backward compat)
 from .utils import truncate_sentence as _truncate_sentence_util
 
 logger = logging.getLogger(__name__)
-
-
-_SEVERITY_HIGH_KW = [
-    "crash",
-    "surge",
-    "record",
-    "halt",
-    "warn",
-    "폭락",
-    "급등",
-    "급락",
-    "사상최",
-    "최고치",
-    "최저치",
-    "긴급",
-    "속보",
-    "전쟁",
-    "war",
-    "bomb",
-    "attack",
-    "sanction",
-    "ban",
-    "default",
-    "bankruptcy",
-    "파산",
-    "fraud",
-    "sec ",
-    "fda ",
-    "fed ",
-    "fomc",
-    "금리",
-    "인상",
-    "인하",
-    "breaking",
-    "crisis",
-    "위기",
-]
-_SEVERITY_LOW_KW = [
-    "opinion",
-    "column",
-    "editorial",
-    "인터뷰",
-    "리뷰",
-    "review",
-    "guide",
-    "가이드",
-    "tip",
-    "팁",
-    "예정",
-    "계획",
-]
-
-
-def _classify_news_severity(title: str, description: str = "") -> str:
-    """Classify news severity as high/medium/low based on keywords."""
-    text = (title + " " + description).lower()
-    if any(kw in text for kw in _SEVERITY_HIGH_KW):
-        return "high"
-    if any(kw in text for kw in _SEVERITY_LOW_KW):
-        return "low"
-    return "medium"
-
-
-_SEV_BADGE_HTML = {
-    "high": '<span class="news-severity news-severity-high">HIGH</span>',
-    "medium": '<span class="news-severity news-severity-med">MED</span>',
-    "low": '<span class="news-severity news-severity-low">LOW</span>',
-}
 
 
 def _fix_mistranslations(text: str) -> str:
