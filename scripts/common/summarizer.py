@@ -16,8 +16,7 @@ import re
 from collections import Counter
 from typing import Any, Dict, List, Optional, Tuple
 
-from .enrichment import is_logo_like_url
-from .markdown_utils import html_source_tag, markdown_link
+from .markdown_utils import markdown_link
 from .severity import (  # noqa: F401  (re-exported for backward compat)
     _SEV_BADGE_HTML,
     _SEVERITY_HIGH_KW,
@@ -35,7 +34,7 @@ from .summarizer_priority import (  # noqa: F401  (re-exported for backward comp
     _make_keyword_pattern,
 )
 from .summarizer_priority import classify_priority as _classify_priority
-from .text_utils import (
+from .text_utils import (  # noqa: F401  (_best_favicon_link, _favicon_url re-exported for golden test monkey-patching)
     _best_favicon_link,
     _favicon_url,
     _fix_mistranslations,
@@ -485,205 +484,11 @@ class ThemeSummarizer:
             max_articles: Maximum total articles to show per theme.
             featured_count: Number of articles to show with full description.
         """
-        if len(self.items) < 5:
-            return ""
+        # Lazy import to avoid circular import: themed_news_renderer imports
+        # ``common.summarizer`` at call time for favicon helper monkey-patching.
+        from .themed_news_renderer import ThemedNewsRenderer
 
-        top_themes = self.get_top_themes()
-        if not top_themes:
-            return ""
-
-        lines = ["## 테마별 주요 뉴스\n"]
-
-        # Cross-theme dedup: track titles that have been featured (top N)
-        # across themes so the same article doesn't appear as #1 everywhere.
-        cross_theme_featured: set = set()
-
-        for name, key, emoji, count in top_themes:
-            articles = self._theme_articles.get(key, [])
-            subtitle = self._generate_theme_subtitle(key, articles)
-            lines.append(f"### {emoji} {name} ({count}건)\n")
-            if subtitle:
-                lines.append(f"*{subtitle}*\n")
-
-            shown = 0
-            seen_titles: set = set()
-            remaining_links = []
-            for article in articles:
-                orig_title = article.get("title", "")
-                if not orig_title or orig_title in seen_titles:
-                    continue
-                if _NOISE_TITLE_RE.search(orig_title):
-                    continue
-                seen_titles.add(orig_title)
-                title = _fix_mistranslations(article.get("title_ko") or orig_title)
-                link = article.get("link", "")
-                source = article.get("source", "")
-                description = _fix_mistranslations(
-                    (article.get("description_ko") or article.get("description", "")).strip()
-                )
-
-                # Skip articles already featured in previous themes
-                if shown < featured_count and orig_title in cross_theme_featured:
-                    # Demote to remaining links instead
-                    remaining_links.append(
-                        {
-                            "title": title,
-                            "link": link,
-                            "image": article.get("image", ""),
-                            "source": article.get("source", ""),
-                        }
-                    )
-                    continue
-
-                if shown < featured_count:
-                    # Build HTML card for featured item
-                    num = shown + 1
-                    from html import escape as _esc
-
-                    safe_title = _esc(title, quote=True)
-                    severity = _classify_news_severity(title, description or "")
-                    sev_badge = _SEV_BADGE_HTML[severity]
-                    card_parts = [
-                        f'<div class="news-card-item news-sev-{severity}">',
-                        f'<div class="news-card-num">{num}</div>',
-                    ]
-
-                    # Add thumbnail if image available and not a site logo/icon
-                    image_url = article.get("image", "")
-                    if image_url and not is_logo_like_url(image_url):
-                        safe_img = _esc(image_url, quote=True)
-                        onerr = "this.parentElement.style.display='none'"
-                        card_parts.append(
-                            f'<div class="news-card-thumb">'
-                            f'<img src="{safe_img}" alt="" loading="lazy"'
-                            f' onerror="{onerr}">'
-                            f"</div>"
-                        )
-                    elif link:
-                        fav_link = _best_favicon_link(article)
-                        fav = _favicon_url(fav_link or link)
-                        if fav:
-                            safe_fav = _esc(fav, quote=True)
-                            card_parts.append(
-                                f'<div class="news-card-thumb news-card-thumb--favicon">'
-                                f'<img src="{safe_fav}" alt="" loading="lazy">'
-                                f"</div>"
-                            )
-
-                    card_parts.append('<div class="news-card-body">')
-                    card_parts.append(sev_badge)
-                    if link:
-                        safe_link = _esc(link, quote=True)
-                        card_parts.append(
-                            f'<a href="{safe_link}" class="news-title"'
-                            f' target="_blank" rel="noopener noreferrer">'
-                            f"{safe_title}</a>"
-                        )
-                    else:
-                        card_parts.append(f'<span class="news-title">{safe_title}</span>')
-
-                    if description and description != title and not _is_generic_desc(description):
-                        # Additional boilerplate check for translated descriptions
-                        if not _is_boilerplate_desc(description):
-                            desc_text = _truncate_sentence(description, max_len=300)
-                            if desc_text:
-                                card_parts.append(f'<p class="news-desc">{_esc(desc_text, quote=True)}</p>')
-                    else:
-                        # Fallback: generate analytical description from title
-                        fallback_desc = _generate_title_based_desc(orig_title, key)
-                        if fallback_desc:
-                            card_parts.append(f'<p class="news-desc">{_esc(fallback_desc, quote=True)}</p>')
-
-                    if source:
-                        card_parts.append(html_source_tag(source))
-
-                    card_parts.append("</div>")  # close news-card-body
-                    card_parts.append("</div>")  # close news-card-item
-                    lines.append("")  # blank line before HTML block
-                    lines.append("\n".join(card_parts))
-                    lines.append("")  # blank line after HTML block
-                    cross_theme_featured.add(orig_title)
-                else:
-                    remaining_links.append(
-                        {
-                            "title": title,
-                            "link": link,
-                            "image": article.get("image", ""),
-                            "source": article.get("source", ""),
-                        }
-                    )
-
-                shown += 1
-                # Featured cards stop at max_articles, but keep accumulating
-                # remaining_links up to OVERFLOW_PREVIEW_LIMIT so the <details>
-                # overflow section renders thumbnails for ~10 items instead of
-                # collapsing to a bare "외 N건" stub.
-                if shown >= max_articles and len(remaining_links) >= OVERFLOW_PREVIEW_LIMIT:
-                    break
-
-            overflow = len([a for a in articles if a.get("title") and a["title"] not in seen_titles])
-            remaining_count = len(remaining_links) + overflow
-            if remaining_links:
-                from html import escape as _esc
-
-                lines.append(
-                    f"<details><summary>그 외 {remaining_count}건 보기</summary>"
-                    f'<div class="details-content"><ol class="news-overflow-list">'
-                )
-                for item in remaining_links[:OVERFLOW_PREVIEW_LIMIT]:
-                    if isinstance(item, dict):
-                        t = _esc(item.get("title", ""), quote=True)
-                        lnk = item.get("link", "")
-                        img = item.get("image", "")
-                        src = item.get("source", "")
-                        thumb_html = ""
-                        if img and not is_logo_like_url(img):
-                            safe_img = _esc(img, quote=True)
-                            onerr = "this.parentElement.style.display='none'"
-                            thumb_html = (
-                                f'<span class="overflow-thumb">'
-                                f'<img src="{safe_img}" alt="" loading="lazy"'
-                                f' onerror="{onerr}"></span>'
-                            )
-                        elif lnk:
-                            fav_link = _best_favicon_link(item)
-                            fav = _favicon_url(fav_link or lnk)
-                            if fav:
-                                safe_fav = _esc(fav, quote=True)
-                                thumb_html = (
-                                    f'<span class="overflow-thumb overflow-thumb--favicon">'
-                                    f'<img src="{safe_fav}" alt="" loading="lazy">'
-                                    f"</span>"
-                                )
-                        src_html = ""
-                        if src:
-                            src_html = f'<span class="overflow-source">{_esc(src, quote=True)}</span>'
-                        if lnk:
-                            safe_link = _esc(lnk, quote=True)
-                            lines.append(
-                                f'<li class="overflow-preview">'
-                                f"{thumb_html}"
-                                f'<span class="overflow-body">'
-                                f'<a href="{safe_link}" target="_blank" rel="noopener noreferrer">{t}</a>'
-                                f"{src_html}</span></li>"
-                            )
-                        else:
-                            lines.append(
-                                f'<li class="overflow-preview">'
-                                f"{thumb_html}"
-                                f'<span class="overflow-body">'
-                                f"<span>{t}</span>"
-                                f"{src_html}</span></li>"
-                            )
-                    else:
-                        lines.append(f"<li>{item}</li>")
-                if remaining_count > OVERFLOW_PREVIEW_LIMIT:
-                    lines.append(f"<li><em>...외 {remaining_count - OVERFLOW_PREVIEW_LIMIT}건</em></li>")
-                lines.append("</ol></div></details>\n")
-
-            lines.append("")
-
-        return "\n".join(lines)
+        return ThemedNewsRenderer(self.items, self).render(max_articles, featured_count)
 
     def _extract_title_keywords(self, articles: List[Dict[str, Any]], max_keywords: int = 5) -> List[str]:
         """Extract salient keywords from article titles, excluding stop words.

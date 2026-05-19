@@ -1,0 +1,250 @@
+"""ThemedNewsRenderer — extracted from ThemeSummarizer.generate_themed_news_sections.
+
+테마별 뉴스 섹션 마크다운/HTML 렌더링을 ThemeSummarizer로부터 분리한 클래스.
+favicon 헬퍼는 ``common.summarizer`` 모듈을 통해 동적으로 호출하여 골든 테스트의
+``monkeypatch.setattr("common.summarizer._favicon_url", ...)`` 패치가 그대로 적용되도록 한다.
+"""
+
+from typing import Any, Dict, List
+
+from .enrichment import is_logo_like_url
+from .markdown_utils import html_source_tag
+from .severity import _SEV_BADGE_HTML, _classify_news_severity
+from .text_utils import _fix_mistranslations, _truncate_sentence
+from .themes import ARTICLES_PER_THEME, OVERFLOW_PREVIEW_LIMIT
+
+
+class ThemedNewsRenderer:
+    """ThemeSummarizer.generate_themed_news_sections를 1:1 추출한 렌더러."""
+
+    def __init__(self, items: List[Dict[str, Any]], theme_summarizer: Any):
+        """
+        Args:
+            items: 사전 점수화된 article 리스트
+            theme_summarizer: ThemeSummarizer 인스턴스 — _theme_articles, get_top_themes,
+                              _generate_theme_subtitle 접근용
+        """
+        self.items = items
+        self._summarizer = theme_summarizer
+
+    def render(
+        self,
+        max_articles: int = ARTICLES_PER_THEME,
+        featured_count: int = 3,
+    ) -> str:
+        """Generate theme-based news sections with cross-theme deduplication.
+
+        Top articles per theme include description summaries in card format.
+        Articles already featured (top N) in a previous theme are skipped
+        in subsequent themes to avoid repetitive #1 articles.
+        Remaining articles are shown in a collapsible <details> block.
+        Returns empty string if fewer than 5 items.
+
+        Args:
+            max_articles: Maximum total articles to show per theme.
+            featured_count: Number of articles to show with full description.
+        """
+        # Lazy import to avoid circular dependency with summarizer.py and to
+        # ensure ``monkeypatch.setattr("common.summarizer._favicon_url", ...)``
+        # in golden tests applies — every call goes through the module attr.
+        from . import summarizer as _sumr
+
+        if len(self.items) < 5:
+            return ""
+
+        top_themes = self._summarizer.get_top_themes()
+        if not top_themes:
+            return ""
+
+        lines = ["## 테마별 주요 뉴스\n"]
+
+        # Cross-theme dedup: track titles that have been featured (top N)
+        # across themes so the same article doesn't appear as #1 everywhere.
+        cross_theme_featured: set = set()
+
+        for name, key, emoji, count in top_themes:
+            articles = self._summarizer._theme_articles.get(key, [])
+            subtitle = self._summarizer._generate_theme_subtitle(key, articles)
+            lines.append(f"### {emoji} {name} ({count}건)\n")
+            if subtitle:
+                lines.append(f"*{subtitle}*\n")
+
+            shown = 0
+            seen_titles: set = set()
+            remaining_links = []
+            for article in articles:
+                orig_title = article.get("title", "")
+                if not orig_title or orig_title in seen_titles:
+                    continue
+                if _sumr._NOISE_TITLE_RE.search(orig_title):
+                    continue
+                seen_titles.add(orig_title)
+                title = _fix_mistranslations(article.get("title_ko") or orig_title)
+                link = article.get("link", "")
+                source = article.get("source", "")
+                description = _fix_mistranslations(
+                    (article.get("description_ko") or article.get("description", "")).strip()
+                )
+
+                # Skip articles already featured in previous themes
+                if shown < featured_count and orig_title in cross_theme_featured:
+                    # Demote to remaining links instead
+                    remaining_links.append(
+                        {
+                            "title": title,
+                            "link": link,
+                            "image": article.get("image", ""),
+                            "source": article.get("source", ""),
+                        }
+                    )
+                    continue
+
+                if shown < featured_count:
+                    # Build HTML card for featured item
+                    num = shown + 1
+                    from html import escape as _esc
+
+                    safe_title = _esc(title, quote=True)
+                    severity = _classify_news_severity(title, description or "")
+                    sev_badge = _SEV_BADGE_HTML[severity]
+                    card_parts = [
+                        f'<div class="news-card-item news-sev-{severity}">',
+                        f'<div class="news-card-num">{num}</div>',
+                    ]
+
+                    # Add thumbnail if image available and not a site logo/icon
+                    image_url = article.get("image", "")
+                    if image_url and not is_logo_like_url(image_url):
+                        safe_img = _esc(image_url, quote=True)
+                        onerr = "this.parentElement.style.display='none'"
+                        card_parts.append(
+                            f'<div class="news-card-thumb">'
+                            f'<img src="{safe_img}" alt="" loading="lazy"'
+                            f' onerror="{onerr}">'
+                            f"</div>"
+                        )
+                    elif link:
+                        fav_link = _sumr._best_favicon_link(article)
+                        fav = _sumr._favicon_url(fav_link or link)
+                        if fav:
+                            safe_fav = _esc(fav, quote=True)
+                            card_parts.append(
+                                f'<div class="news-card-thumb news-card-thumb--favicon">'
+                                f'<img src="{safe_fav}" alt="" loading="lazy">'
+                                f"</div>"
+                            )
+
+                    card_parts.append('<div class="news-card-body">')
+                    card_parts.append(sev_badge)
+                    if link:
+                        safe_link = _esc(link, quote=True)
+                        card_parts.append(
+                            f'<a href="{safe_link}" class="news-title"'
+                            f' target="_blank" rel="noopener noreferrer">'
+                            f"{safe_title}</a>"
+                        )
+                    else:
+                        card_parts.append(f'<span class="news-title">{safe_title}</span>')
+
+                    if description and description != title and not _sumr._is_generic_desc(description):
+                        # Additional boilerplate check for translated descriptions
+                        if not _sumr._is_boilerplate_desc(description):
+                            desc_text = _truncate_sentence(description, max_len=300)
+                            if desc_text:
+                                card_parts.append(f'<p class="news-desc">{_esc(desc_text, quote=True)}</p>')
+                    else:
+                        # Fallback: generate analytical description from title
+                        fallback_desc = _sumr._generate_title_based_desc(orig_title, key)
+                        if fallback_desc:
+                            card_parts.append(f'<p class="news-desc">{_esc(fallback_desc, quote=True)}</p>')
+
+                    if source:
+                        card_parts.append(html_source_tag(source))
+
+                    card_parts.append("</div>")  # close news-card-body
+                    card_parts.append("</div>")  # close news-card-item
+                    lines.append("")  # blank line before HTML block
+                    lines.append("\n".join(card_parts))
+                    lines.append("")  # blank line after HTML block
+                    cross_theme_featured.add(orig_title)
+                else:
+                    remaining_links.append(
+                        {
+                            "title": title,
+                            "link": link,
+                            "image": article.get("image", ""),
+                            "source": article.get("source", ""),
+                        }
+                    )
+
+                shown += 1
+                # Featured cards stop at max_articles, but keep accumulating
+                # remaining_links up to OVERFLOW_PREVIEW_LIMIT so the <details>
+                # overflow section renders thumbnails for ~10 items instead of
+                # collapsing to a bare "외 N건" stub.
+                if shown >= max_articles and len(remaining_links) >= OVERFLOW_PREVIEW_LIMIT:
+                    break
+
+            overflow = len([a for a in articles if a.get("title") and a["title"] not in seen_titles])
+            remaining_count = len(remaining_links) + overflow
+            if remaining_links:
+                from html import escape as _esc
+
+                lines.append(
+                    f"<details><summary>그 외 {remaining_count}건 보기</summary>"
+                    f'<div class="details-content"><ol class="news-overflow-list">'
+                )
+                for item in remaining_links[:OVERFLOW_PREVIEW_LIMIT]:
+                    if isinstance(item, dict):
+                        t = _esc(item.get("title", ""), quote=True)
+                        lnk = item.get("link", "")
+                        img = item.get("image", "")
+                        src = item.get("source", "")
+                        thumb_html = ""
+                        if img and not is_logo_like_url(img):
+                            safe_img = _esc(img, quote=True)
+                            onerr = "this.parentElement.style.display='none'"
+                            thumb_html = (
+                                f'<span class="overflow-thumb">'
+                                f'<img src="{safe_img}" alt="" loading="lazy"'
+                                f' onerror="{onerr}"></span>'
+                            )
+                        elif lnk:
+                            fav_link = _sumr._best_favicon_link(item)
+                            fav = _sumr._favicon_url(fav_link or lnk)
+                            if fav:
+                                safe_fav = _esc(fav, quote=True)
+                                thumb_html = (
+                                    f'<span class="overflow-thumb overflow-thumb--favicon">'
+                                    f'<img src="{safe_fav}" alt="" loading="lazy">'
+                                    f"</span>"
+                                )
+                        src_html = ""
+                        if src:
+                            src_html = f'<span class="overflow-source">{_esc(src, quote=True)}</span>'
+                        if lnk:
+                            safe_link = _esc(lnk, quote=True)
+                            lines.append(
+                                f'<li class="overflow-preview">'
+                                f"{thumb_html}"
+                                f'<span class="overflow-body">'
+                                f'<a href="{safe_link}" target="_blank" rel="noopener noreferrer">{t}</a>'
+                                f"{src_html}</span></li>"
+                            )
+                        else:
+                            lines.append(
+                                f'<li class="overflow-preview">'
+                                f"{thumb_html}"
+                                f'<span class="overflow-body">'
+                                f"<span>{t}</span>"
+                                f"{src_html}</span></li>"
+                            )
+                    else:
+                        lines.append(f"<li>{item}</li>")
+                if remaining_count > OVERFLOW_PREVIEW_LIMIT:
+                    lines.append(f"<li><em>...외 {remaining_count - OVERFLOW_PREVIEW_LIMIT}건</em></li>")
+                lines.append("</ol></div></details>\n")
+
+            lines.append("")
+
+        return "\n".join(lines)
