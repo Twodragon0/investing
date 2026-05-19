@@ -7,7 +7,7 @@ tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-security-report-2026-04-09.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-04-09.png"
 permalink: "/security-alerts/2026/04/09/daily-security-report/"
 description_ko: "올해의 가장 큰 디파이 악용은 '무료 음료' 때문에 시작되었을 수 있습니다: 보고서 - Stocktwits. 블록체인 보안 뉴스 1건 분석."
 description: "올해의 가장 큰 디파이 악용은 '무료 음료' 때문에 시작되었을 수 있습니다: 보고서 - Stocktwits. 블록체인 보안 뉴스 1건 분석."

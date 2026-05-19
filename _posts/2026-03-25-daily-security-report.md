@@ -7,7 +7,7 @@ tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-security-2026-03-25.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-03-25.png"
 permalink: "/security-alerts/2026/03/25/daily-security-report/"
 description: "블록체인 보안 관련 뉴스 4건을 정리합니다. 긴급: 주요 암호화폐 회사, 1억 1600만 달러 해킹 후 폐쇄 발표 외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 4건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다."
 excerpt: "블록체인 보안 관련 뉴스 4건을 정리합니다. 긴급: 주요 암호화폐 회사, 1억 1600만 달러 해킹 후 폐쇄 발표 외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 4건의…"

@@ -7,7 +7,7 @@ tags: [security, hack, blockchain, daily-digest]
 source: "consolidated"
 lang: "ko"
 description: "보안 알림: 블록체인 보안 리포트. 주요 보안 사고와 시장 신뢰에 미칠 영향을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
-image: "/assets/images/generated/news-briefing-security-2026-02-23.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-02-23.png"
 excerpt: "블록체인 보안 관련 뉴스 2건을 정리합니다. 1. IoTeX Bridge Hacked In Private Key Exploit - Attacker Bridges Stolen…"
 image_alt: "블록체인 보안 리포트 - 2026-02-23 - security-alerts 뉴스 요약 이미지"
 permalink: "/security-alerts/2026/02/23/daily-security-report/"

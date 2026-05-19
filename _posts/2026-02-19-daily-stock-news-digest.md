@@ -6,7 +6,7 @@ categories: [stock-news]
 tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-stock-news-digest-2026-02-19.png"
+image: "/assets/images/generated/news-briefing-stock-2026-02-19.png"
 description: "2026-02-19 주식 시장에서 147건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,660.70(+2.67%), KOSDAQ 1,156.46(+4.81%), USD/KRW 1,449.88(+0.63%)."
 excerpt: "주요 테마: 가격/시장, AI/기술, 매크로/금리 한국 증시는 KOSPI 5,660.70 (+2.67%)으로 마감했습니다. 원달러 환율은 1,449.88원으로, 환율 변동이…"
 image_alt: "주식 시장 뉴스 종합 - 2026-02-19 - stock-news 뉴스 요약 이미지"

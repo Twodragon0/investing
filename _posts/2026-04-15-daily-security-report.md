@@ -7,7 +7,7 @@ tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-security-report-2026-04-15.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-04-15.png"
 permalink: "/security-alerts/2026/04/15/daily-security-report/"
 description_ko: "이더리움서 터진 가짜 DOT 대량 발행… 브리지 보안 취약점 '비상벨' - 블록체인투데이. 블록체인 보안 뉴스 2건 분석."
 description: "이더리움서 터진 가짜 DOT 대량 발행… 브리지 보안 취약점 '비상벨' - 블록체인투데이. 블록체인 보안 뉴스 2건 분석."

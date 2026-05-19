@@ -7,7 +7,7 @@ tags: ["market-report", "crypto", "top-coins", "trending", "daily"]
 keywords: "market-report, crypto, top-coins, trending, daily"
 source: "CoinMarketCap"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-market-report-2026-04-13.png"
+image: "/assets/images/generated/news-briefing-cryptomarket-2026-04-13.png"
 permalink: "/market-analysis/2026/04/13/daily-crypto-market-report/"
 description_ko: "BTC $71,181 (24h -3.2%). 공포·탐욕 지수: 16/100 (Extreme Fear), BTC 도미넌스 57.0%. 상위 30개 코인 분석."
 description: "BTC $71,181 (24h -3.2%). 공포·탐욕 지수: 16/100 (Extreme Fear), BTC 도미넌스 57.0%. 상위 30개 코인 분석."

@@ -7,7 +7,7 @@ tags: ["weekly-digest", "summary", "market-analysis"]
 keywords: "weekly-digest, summary, market-analysis"
 source: "auto-generated"
 lang: "ko"
-image: "/assets/images/generated/og-weekly-investment-digest-2026-04-13-2026-04-13.png"
+image: "/assets/images/generated/news-summary-weekly-2026-04-13.png"
 description: "BTC $71,181, 극도의 공포(16), KOSPI 5,858.87+1.40%, 109건 분석 주간 다이제스트. 시장 분석 31건, DeFi 16건, 암호화폐 뉴스 8건"
 excerpt: "이번 주 (04월 06일 04월 13일) 투자 시장의 주요 동향과 핵심 이슈를 종합 분석합니다. 기간: 04월 06일 04월 13일"
 image_alt: "주간 투자 다이제스트 - 2026년 04월 13일 - 시장 분석 뉴스 요약 이미지"

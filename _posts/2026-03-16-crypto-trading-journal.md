@@ -28,7 +28,7 @@ journal_trading_mode: "mixed"
 description: "3월 16일 크립토 트레이딩 일지입니다. BTC 실전 매매와 SOL 모의투자 신규 전략 검증을 병행한 기록입니다."
 excerpt: "이 일지는 실전 매매와 모의투자를 구분하여 기록합니다 - Investing Dragon 자동 수집 분석 리포트."
 permalink: "/crypto-journal/2026/03/16/crypto-trading-journal/"
-image: "/assets/images/generated/og-crypto-trading-journal-2026-03-16.png"
+image: "/assets/images/generated/news-briefing-crypto-trading-journal-2026-03-16.png"
 image_alt: "Crypto trading journal visual board for March 16, 2026"
 ---
 

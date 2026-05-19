@@ -7,7 +7,7 @@ tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-security-report-2026-04-02.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-04-02.png"
 permalink: "/security-alerts/2026/04/02/daily-security-report/"
 description_ko: "암호화폐 해킹, 3월 악용 손실액 5,200만 달러 도달: PeckShield. 블록체인 보안 뉴스 6건 분석."
 description: "암호화폐 해킹, 3월 악용 손실액 5,200만 달러 도달: PeckShield. 블록체인 보안 뉴스 6건 분석."

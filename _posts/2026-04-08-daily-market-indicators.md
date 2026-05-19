@@ -7,7 +7,7 @@ tags: ["market-analysis", "fear-greed", "vix", "market-breadth", "sentiment", "f
 keywords: "market-analysis, fear-greed, vix, market-breadth, sentiment"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-market-indicators-2026-04-08.png"
+image: "/assets/images/generated/news-briefing-indicators-2026-04-08.png"
 permalink: "/market-analysis/2026/04/08/daily-market-indicators/"
 description_ko: "시장 지표 7개 소스 수집. 공포탐욕지수 21.1(extreme fear), VIX 26.54, 달러지수 99.91. 공포탐욕지수·VIX·국채금리 등 핵심 시장 센티먼트 지표를 분석합니다."
 description: "시장 지표 7개 소스 수집. 공포탐욕지수 21.1(extreme fear), VIX 26.54, 달러지수 99.91. 공포탐욕지수·VIX·국채금리 등 핵심 시장 센티먼트 지표를 분석합니다."

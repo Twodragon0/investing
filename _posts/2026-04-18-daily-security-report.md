@@ -7,7 +7,7 @@ tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-security-report-2026-04-18.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-04-18.png"
 permalink: "/security-alerts/2026/04/18/daily-security-report/"
 description_ko: "“AI가 해킹까지 한다”… 가상자산 거래소, ‘클로드 미토스’ 보안 위협에 초비상 - 블록체인투데이. 블록체인 보안 뉴스 2건 분석."
 description: "“AI가 해킹까지 한다”… 가상자산 거래소, ‘클로드 미토스’ 보안 위협에 초비상 - 블록체인투데이. 블록체인 보안 뉴스 2건 분석."

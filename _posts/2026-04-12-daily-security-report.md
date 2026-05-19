@@ -7,7 +7,7 @@ tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-security-report-2026-04-12.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-04-12.png"
 permalink: "/security-alerts/2026/04/12/daily-security-report/"
 description_ko: "SK쉴더스 이동주 선임, '2026 드림핵 해킹방어대회' 우승. 블록체인 보안 뉴스 1건 분석."
 description: "보안 알림: 블록체인 보안 리포트. 주요 보안 사고와 시장 신뢰에 미칠 영향을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."

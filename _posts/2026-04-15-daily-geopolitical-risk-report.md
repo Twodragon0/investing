@@ -7,7 +7,7 @@ tags: ["geopolitical", "polymarket", "risk", "conflict", "prediction-market"]
 keywords: "geopolitical, polymarket, risk, conflict, prediction-market"
 source: "geopolitical"
 lang: "ko"
-image: "/assets/images/generated/og-daily-geopolitical-risk-report-2026-04-15.png"
+image: "/assets/images/generated/news-briefing-geopolitical-2026-04-15.png"
 permalink: "/market-analysis/2026/04/15/daily-geopolitical-risk-report/"
 description_ko: "지정학적 리스크 21건 수집. 주요 테마: 기타 지정학, 무역/공급망. Polymarket·GDELT·뉴스 2개 소스에서 분쟁·제재·무역 리스크를 분석합니다."
 description: "지정학적 리스크 21건 수집. 주요 테마: 기타 지정학, 무역/공급망. Polymarket·GDELT·뉴스 2개 소스에서 분쟁·제재·무역 리스크를 분석합니다."

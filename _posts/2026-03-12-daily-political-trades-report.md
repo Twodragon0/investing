@@ -7,7 +7,7 @@ tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-ban
 keywords: "political-trades, congress, sec, trump, 이재명"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-political-trades-report-2026-03-12.png"
+image: "/assets/images/generated/news-briefing-political-2026-03-12.png"
 excerpt: "2026-03-12 정치인 거래·정책 리포트: SEC 내부자 4건, 트럼프 정책 2건, 중앙은행 5건, 총 11건 수집"
 description: "트럼프 정책 관련으로는 등의 소식이 포착되었으며 행정명령과 관세 정책 변화가 글로벌 시장 심리에 직접적 영향을 미치고"
 image_alt: "정치인 거래·정책 리포트 - 2026-03-12 - 정치인 거래 뉴스 요약 이미지"

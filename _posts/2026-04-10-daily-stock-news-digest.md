@@ -7,7 +7,7 @@ tags: ["stock", "market", "daily-digest"]
 keywords: "stock, market, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-stock-news-digest-2026-04-10.png"
+image: "/assets/images/generated/news-briefing-stock-2026-04-10.png"
 permalink: "/stock-news/2026/04/10/daily-stock-news-digest/"
 description_ko: "2026-04-10 주식 시장: KOSPI 5,778.01(-1.61%), KOSDAQ 1,076.00(-1.27%), USD/KRW 1,472.64(-0.40%). 총 185건의 뉴스에서 주요 동향과 투자 포인트를 정리합니다."
 description: "2026-04-10 주식 시장: KOSPI 5,778.01(-1.61%), KOSDAQ 1,076.00(-1.27%), USD/KRW 1,472.64(-0.40%). 총 185건의 뉴스에서 주요 동향과 투자 포인트를 정리합니다."

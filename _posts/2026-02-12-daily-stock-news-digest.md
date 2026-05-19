@@ -7,7 +7,7 @@ tags: [stock, market, daily-digest]
 source: "consolidated"
 lang: "ko"
 description: "총 뉴스 건수 160건; KOSPI 5,498.93 (🟢 +2.69%); KOSDAQ 1,120.19 (🟢 +0.37%)."
-image: "/assets/images/generated/og-daily-stock-news-digest-2026-02-12.png"
+image: "/assets/images/generated/news-briefing-stock-2026-02-12.png"
 excerpt: "KOSPI: 5,498.93 ( +2.69%) KOSDAQ: 1,120.19 ( +0.37%) - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "주식 시장 뉴스 종합 - 2026-02-12 - stock-news 뉴스 요약 이미지"
 permalink: "/stock-news/2026/02/12/daily-stock-news-digest/"

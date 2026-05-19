@@ -7,7 +7,7 @@ tags: ["geopolitical", "polymarket", "risk", "conflict", "prediction-market"]
 keywords: "geopolitical, polymarket, risk, conflict, prediction-market"
 source: "geopolitical"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-daily-geopolitical-risk-report-2026-03-13.png"
+image: "/assets/images/generated/news-briefing-geopolitical-2026-03-13.png"
 description: "2026-03-13 기준 지정학적 리스크 데이터를 2개 소스에서 수집·분석했습니다. 예측 시장 15건, 글로벌 뉴스 분석 0건, 뉴스 8건을 종합합니다."
 excerpt: "2026-03-13 기준 지정학적 리스크 데이터를 2개 소스에서 수집·분석했습니다 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "지정학 리스크 리포트 - 2026-03-13 - 글로벌 이슈 뉴스 요약 이미지"

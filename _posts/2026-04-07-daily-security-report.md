@@ -7,7 +7,7 @@ tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-security-report-2026-04-07.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-04-07.png"
 permalink: "/security-alerts/2026/04/07/daily-security-report/"
 description_ko: "AI은 해킹을 더 저렴하고 쉽게 만들어 암호화폐 보안을 파괴하고 있다고 Ledger CTO는 경고합니다.…. 블록체인 보안 뉴스 4건 분석."
 description: "AI은 해킹을 더 저렴하고 쉽게 만들어 암호화폐 보안을 파괴하고 있다고 Ledger CTO는 경고합니다.…. 블록체인 보안 뉴스 4건 분석."

@@ -7,7 +7,7 @@ tags: ["stock", "market", "daily-digest"]
 keywords: "stock, market, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/market-snapshot-2026-03-28.png"
+image: "/assets/images/generated/news-briefing-stock-2026-03-28.png"
 permalink: "/stock-news/2026/03/28/daily-stock-news-digest/"
 description_ko: "2026-03-28 주식 시장: KOSPI 5,438.87(-0.40%), KOSDAQ 1,141.51(+0.43%), USD/KRW 1,508.36(-0.05%). 총 175건의 뉴스에서 주요 동향과 투자 포인트를 정리합니다."
 excerpt: "📈 가격/시장 (41건): 조정, 삼성전자, 하이닉스 가격 변동 (41건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요. 📊 매크로/금리 (13건): 인플레이션,…"

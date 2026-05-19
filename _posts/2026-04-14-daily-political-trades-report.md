@@ -7,7 +7,7 @@ tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-ban
 keywords: "political-trades, congress, sec, trump, 이재명"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-political-trades-report-2026-04-14.png"
+image: "/assets/images/generated/news-briefing-political-2026-04-14.png"
 excerpt: "2026-04-14 정치인 거래·정책 리포트: SEC 내부자 12건, 중앙은행 6건, 총 18건 수집"
 permalink: "/political-trades/2026/04/14/daily-political-trades-report/"
 description_ko: "정치인 거래·정책 동향 18건 수집. SEC 내부자 12건, 중앙은행 6건. 의회·SEC 내부자 거래 및 정책 이벤트를 모니터링합니다."

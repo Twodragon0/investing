@@ -7,7 +7,7 @@ tags: ["stock", "market", "daily-digest"]
 keywords: "stock, market, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-24.png"
+image: "/assets/images/generated/news-briefing-stock-2026-03-24.png"
 permalink: "/stock-news/2026/03/24/daily-stock-news-digest/"
 description: "주식 시장 뉴스 종합: 2026-03-24 기준 한국 증시 급락과 반도체주 변동성을 중심으로 155건의 핵심 뉴스를 정리했습니다."
 excerpt: "한국 증시 급락과 반도체주 변동성을 중심으로 2026-03-24 주식 시장 핵심 뉴스 155건을 정리한 브리핑입니다."

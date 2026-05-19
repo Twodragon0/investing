@@ -7,7 +7,7 @@ tags: ["market-analysis", "economic-calendar", "earnings", "treasury", "ipo", "f
 keywords: "market-analysis, economic-calendar, earnings, treasury, ipo"
 source: "fmp"
 lang: "ko"
-image: "/assets/images/generated/og-fmp-economic-calendar-2026-04-16.png"
+image: "/assets/images/generated/news-briefing-calendar-2026-04-16.png"
 permalink: "/market-analysis/2026/04/16/fmp-economic-calendar/"
 description: "경제 캘린더 59건 수집. 시장 지수 2개, 실적 발표 17건, 경제 이벤트 18건, IPO 6건 포함. FMP API 기반 주요 경제 이벤트·실적·국채 금리를 정리합니다."
 description_ko: "경제 캘린더 59건 수집. 시장 지수 2개, 실적 발표 17건, 경제 이벤트 18건, IPO 6건 포함. FMP API 기반 주요 경제 이벤트·실적·국채 금리를 정리합니다."
