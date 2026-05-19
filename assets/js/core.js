@@ -24,7 +24,13 @@ window.si = window.si || function () { (window.siq = window.siq || []).push(argu
       document.documentElement.removeAttribute('data-theme');
       if (metaColor) metaColor.setAttribute('content', '#0a0e14');
     }
+    // L2: aria-pressed reflects "light mode active"
+    toggle.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
   }
+
+  // Initialize aria-pressed from current theme (inline script set this pre-paint)
+  toggle.setAttribute('aria-pressed',
+    document.documentElement.getAttribute('data-theme') === 'light' ? 'true' : 'false');
 
   toggle.addEventListener('click', function() {
     var current = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
@@ -49,7 +55,12 @@ window.si = window.si || function () { (window.siq = window.siq || []).push(argu
   }
   window.addEventListener('scroll', function() {
     var h = document.documentElement.scrollHeight - window.innerHeight;
-    if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
+    if (h > 0) {
+      var pct = window.scrollY / h * 100;
+      bar.style.width = pct + '%';
+      // L5: ARIA progress semantics
+      bar.setAttribute('aria-valuenow', Math.round(pct));
+    }
   }, { passive: true });
 })();
 

@@ -191,7 +191,7 @@
 <body>
   <a href="#main-content" class="skip-to-content" data-i18n="skip_to_content">본문으로 건너뛰기</a>
   {% include header.html %}
-  <div class="reading-progress" id="reading-progress"></div>
+  <div class="reading-progress" id="reading-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="읽기 진행률"></div>
   <main class="container" id="main-content" translate="yes">
     {{ content }}
   </main>

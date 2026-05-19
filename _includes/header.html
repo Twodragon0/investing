@@ -76,9 +76,25 @@
 // Mobile nav toggle
 document.addEventListener('DOMContentLoaded', function() {
   var navToggle = document.querySelector('.nav-toggle');
-  if (navToggle) {
+  var siteNav = document.getElementById('site-nav');
+  function setNavOpen(open) {
+    if (!siteNav || !navToggle) return;
+    siteNav.classList.toggle('active', open);
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  if (navToggle && siteNav) {
     navToggle.addEventListener('click', function() {
-      document.querySelector('.site-nav').classList.toggle('active');
+      setNavOpen(!siteNav.classList.contains('active'));
+    });
+    // L3: Esc closes mobile nav and returns focus to toggle
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && siteNav.classList.contains('active')) {
+        var t = e.target;
+        // Skip when inside search overlay (its own Esc handler runs)
+        if (t && t.closest && t.closest('.search-overlay.active')) return;
+        setNavOpen(false);
+        navToggle.focus();
+      }
     });
   }
 
