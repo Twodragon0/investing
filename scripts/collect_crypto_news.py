@@ -851,7 +851,7 @@ class CryptoNewsCollector(BaseCollector):
             _desc_ko_a = f"크립토 뉴스 {len(all_items)}건 수집. "
             if _top_crypto_sources:
                 _desc_ko_a += f"주요 출처: {', '.join(_top_crypto_sources)}. "
-            _top_headline = (all_items[0].get("title", "") if all_items else "").strip()
+            _top_headline = (get_display_title(all_items[0]) if all_items else "").strip()
             if _top_headline:
                 _top_headline = _top_headline[:80].rsplit(" ", 1)[0] if len(_top_headline) > 80 else _top_headline
                 _desc_ko_a += f"오늘의 헤드라인: {_top_headline}"

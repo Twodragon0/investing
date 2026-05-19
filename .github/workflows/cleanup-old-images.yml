@@ -25,20 +25,36 @@ jobs:
       - name: Remove images older than 30 days
         run: |
           set -euo pipefail
-          cd assets/images/generated
-          count=0
-          for f in *.png; do
-            [ -f "$f" ] || continue
-            age=$(( ($(date +%s) - $(date -r "$f" +%s 2>/dev/null || stat -c %Y "$f" 2>/dev/null || echo 0)) / 86400 ))
-            if [ "$age" -gt 30 ]; then
-              rm "$f"
-              # Also remove matching WebP file
-              webp="${f%.png}.webp"
-              [ -f "$webp" ] && rm "$webp"
-              count=$((count + 1))
-            fi
-          done
-          echo "Removed $count old image pairs (PNG+WebP)"
+          python3 <<'PY'
+          import re
+          from datetime import date, timedelta
+          from pathlib import Path
+
+          root = Path("assets/images/generated")
+          cutoff = date.today() - timedelta(days=30)
+          date_re = re.compile(r"(\d{4})-(\d{2})-(\d{2})")
+
+          removed = 0
+          skipped_no_date = 0
+          for f in sorted(root.iterdir()):
+              if not f.is_file() or f.suffix.lower() not in {".png", ".webp", ".avif"}:
+                  continue
+              m = date_re.search(f.name)
+              if not m:
+                  skipped_no_date += 1
+                  continue
+              try:
+                  file_date = date(int(m.group(1)), int(m.group(2)), int(m.group(3)))
+              except ValueError:
+                  skipped_no_date += 1
+                  continue
+              if file_date < cutoff:
+                  f.unlink()
+                  removed += 1
+
+          print(f"Removed {removed} old image files (>30 days, by filename date)")
+          print(f"Skipped {skipped_no_date} files without parseable date in filename")
+          PY
 
       - name: Commit changes
         run: |
