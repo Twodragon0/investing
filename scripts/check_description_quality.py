@@ -173,6 +173,32 @@ def collect_posts(posts_dir: Path, days: int) -> list[dict]:
     return results
 
 
+_ASCII_RATIO_THRESHOLD = 0.70
+_ASCII_MIN_LEN = 30
+
+
+def _ascii_ratio(desc: str) -> float:
+    """Return the ratio of ASCII alphabetic chars to all alphabetic chars.
+
+    Returns 0.0 when desc has no alphabetic characters (division-by-zero guard).
+    """
+    alpha_total = sum(1 for c in desc if c.isalpha())
+    if alpha_total == 0:
+        return 0.0
+    ascii_alpha = sum(1 for c in desc if c.isalpha() and c.isascii())
+    return ascii_alpha / alpha_total
+
+
+def _is_ascii_ratio_high(desc: str) -> bool:
+    """Return True if ASCII alphabetic chars exceed the threshold ratio.
+
+    Skips descriptions shorter than _ASCII_MIN_LEN (already caught by other rules).
+    """
+    if not desc or len(desc) < _ASCII_MIN_LEN:
+        return False
+    return _ascii_ratio(desc) > _ASCII_RATIO_THRESHOLD
+
+
 def classify_posts(posts: list[dict]) -> dict:
     """Classify each post description and return aggregated stats."""
     total = len(posts)
@@ -181,6 +207,7 @@ def classify_posts(posts: list[dict]) -> dict:
     real_items = []
     no_desc_items = []
     translation_issue_items = []
+    ascii_ratio_high_items: list[dict] = []
 
     mojibake_items: list[dict] = []
 
@@ -200,6 +227,9 @@ def classify_posts(posts: list[dict]) -> dict:
         # still have translation quality issues.
         if desc and _has_translation_issue(desc):
             translation_issue_items.append(p)
+        # ASCII ratio check is independent of other classifications.
+        if _is_ascii_ratio_high(desc):
+            ascii_ratio_high_items.append(p)
         # Full-body mojibake scan — checks entire post content, not just description
         body = p.get("body", "")
         if body and _MOJIBAKE_RE.search(body):
@@ -212,6 +242,7 @@ def classify_posts(posts: list[dict]) -> dict:
         "title_repeat": title_repeat_items,
         "real": real_items,
         "translation_issues": translation_issue_items,
+        "ascii_ratio_high": ascii_ratio_high_items,
         "mojibake": mojibake_items,
     }
 
@@ -230,6 +261,7 @@ def format_text(stats: dict, days: int) -> str:
     tr_count = len(stats["title_repeat"])
     nd_count = len(stats["no_desc"])
     ti_count = len(stats["translation_issues"])
+    ar_count = len(stats["ascii_ratio_high"])
     mj_count = len(stats["mojibake"])
 
     lines = [
@@ -239,6 +271,7 @@ def format_text(stats: dict, days: int) -> str:
         f"  Title repeat    : {tr_count} ({_pct(tr_count, total)})",
         f"  Boilerplate desc: {bp_count} ({_pct(bp_count, total)})",
         f"  Translation issues: {ti_count} ({_pct(ti_count, total)})",
+        f"  ASCII-heavy desc: {ar_count} ({_pct(ar_count, total)})",
         f"  Mojibake (body) : {mj_count} ({_pct(mj_count, total)})",
         f"  No description  : {nd_count} ({_pct(nd_count, total)})",
     ]
@@ -257,6 +290,11 @@ def format_text(stats: dict, days: int) -> str:
         lines.append("Translation-issue posts:")
         for p in stats["translation_issues"]:
             lines.append(f"  - {p['file']}: {p['description'][:80]}")
+    if stats["ascii_ratio_high"]:
+        lines.append("")
+        lines.append("ASCII-heavy desc posts (top 10):")
+        for p in stats["ascii_ratio_high"][:10]:
+            lines.append(f"  - {p['file']}: {p['description'][:80]}")
     if stats["mojibake"]:
         lines.append("")
         lines.append("Mojibake (encoding corruption) posts:")
@@ -273,12 +311,16 @@ def format_markdown(stats: dict, days: int) -> str:
     tr_count = len(stats["title_repeat"])
     nd_count = len(stats["no_desc"])
     ti_count = len(stats["translation_issues"])
+    ar_count = len(stats["ascii_ratio_high"])
     mj_count = len(stats["mojibake"])
 
     bp_pct = bp_count / total * 100 if total else 0
+    ar_pct = ar_count / total * 100 if total else 0
     status_icon = "✅" if bp_pct < 30 else ("⚠️" if bp_pct < 50 else "❌")
-    if mj_count > 0:
+    if mj_count > 0 or ar_pct > 50:
         status_icon = "❌"
+    elif ar_pct >= 30 and status_icon == "✅":
+        status_icon = "⚠️"
 
     lines = [
         f"## {status_icon} Description Quality Report (last {days} day(s))",
@@ -290,6 +332,7 @@ def format_markdown(stats: dict, days: int) -> str:
         f"| 제목 반복 | {tr_count} | {_pct(tr_count, total)} |",
         f"| Boilerplate | {bp_count} | {_pct(bp_count, total)} |",
         f"| 번역 품질 이슈 | {ti_count} | {_pct(ti_count, total)} |",
+        f"| ASCII 과다 desc | {ar_count} | {_pct(ar_count, total)} |",
         f"| Mojibake (인코딩) | {mj_count} | {_pct(mj_count, total)} |",
         f"| description 없음 | {nd_count} | {_pct(nd_count, total)} |",
     ]
@@ -298,6 +341,12 @@ def format_markdown(stats: dict, days: int) -> str:
         lines += [
             "",
             f"> ⚠️ **경고**: Boilerplate 비율이 {bp_pct:.1f}%입니다 (임계값: 30%).",
+        ]
+
+    if ar_pct >= 30:
+        lines += [
+            "",
+            f"> ⚠️ **경고**: ASCII 과다 description 비율이 {ar_pct:.1f}%입니다 (임계값: 30%).",
         ]
 
     if stats["boilerplate"]:
@@ -313,6 +362,11 @@ def format_markdown(stats: dict, days: int) -> str:
     if stats["translation_issues"]:
         lines += ["", "### 번역 품질 이슈 포스트"]
         for p in stats["translation_issues"]:
+            lines.append(f"- `{p['file']}`: {p['description'][:100]}")
+
+    if stats["ascii_ratio_high"]:
+        lines += ["", "### ASCII 과다 description 포스트 (최대 10개)"]
+        for p in stats["ascii_ratio_high"][:10]:
             lines.append(f"- `{p['file']}`: {p['description'][:100]}")
 
     return "\n".join(lines)
@@ -370,6 +424,8 @@ def main() -> int:
 
     bp_count = len(stats["boilerplate"])
     bp_pct = bp_count / total * 100 if total else 0
+    ar_count = len(stats["ascii_ratio_high"])
+    ar_pct = ar_count / total * 100 if total else 0
 
     if args.format == "markdown":
         print(format_markdown(stats, args.days))
@@ -382,8 +438,20 @@ def main() -> int:
             file=sys.stderr,
         )
 
-    # Exit 1 when boilerplate exceeds 30% or any mojibake found
+    if ar_pct >= args.warn_threshold:
+        print(
+            f"WARNING: ASCII-heavy desc ratio {ar_pct:.1f}% >= {args.warn_threshold:.0f}% threshold",
+            file=sys.stderr,
+        )
+
+    # Exit 1 when boilerplate exceeds 30%, ASCII-heavy exceeds 30%, or any mojibake found
     if bp_pct > 30:
+        return 1
+    if ar_pct > 30:
+        print(
+            f"ERROR: ASCII-heavy description ratio {ar_pct:.1f}% exceeds 30% threshold",
+            file=sys.stderr,
+        )
         return 1
     if len(stats["mojibake"]) > 0:
         print("ERROR: mojibake (encoding corruption) detected in post body", file=sys.stderr)
