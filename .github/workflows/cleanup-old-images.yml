@@ -58,14 +58,24 @@ jobs:
 
       - name: Commit changes
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git fetch origin main
-          git pull --rebase origin main
           git add -A assets/images/generated/
           if git diff --cached --quiet; then
             echo "No old images to clean up"
-          else
-            git commit -m "chore: cleanup generated images older than 30 days"
-            git push
+            exit 0
           fi
+          git commit -m "chore: cleanup generated images older than 30 days"
+          # Push with retry — rebase if remote moved during this run
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "Pushed on attempt $attempt"
+              exit 0
+            fi
+            echo "Push failed on attempt $attempt; rebasing onto origin/main"
+            git fetch origin main
+            git pull --rebase origin main
+          done
+          echo "Push failed after 3 attempts" >&2
+          exit 1
