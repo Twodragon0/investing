@@ -31,6 +31,7 @@ from .text_utils import (
     _fix_mistranslations,
     _truncate_sentence,
 )
+from .theme_index import ThemeIndex
 from .themes import (  # noqa: F401  (BAR_WIDTH re-exported for backward compat)
     _THEME_NAME_KEYWORDS,
     ARTICLES_PER_THEME,
@@ -517,78 +518,37 @@ class ThemeSummarizer:
 
     def __init__(self, items: List[Dict[str, Any]]):
         self.items = items
-        self._theme_scores: Dict[str, int] = {}
-        self._theme_articles: Dict[str, List[Dict[str, Any]]] = {}
-        self._scored = False
+        self._theme_index = ThemeIndex(items)
         self._last_risk_verdict = None
 
+    # --- ThemeIndex adapters (preserve direct attribute access used by collectors) ---
+    @property
+    def _theme_articles(self) -> Dict[str, List[Dict[str, Any]]]:
+        return self._theme_index._theme_articles
+
+    @property
+    def _theme_scores(self) -> Dict[str, int]:
+        return self._theme_index._theme_scores
+
+    @property
+    def _scored(self) -> bool:
+        return self._theme_index._scored
+
+    @_scored.setter
+    def _scored(self, value: bool) -> None:
+        self._theme_index._scored = value
+
     def _ensure_scored(self):
-        """Score themes lazily on first access."""
-        if self._scored:
-            return
-        self._score_themes()
-        self._scored = True
+        """Score themes lazily on first access (delegates to ThemeIndex)."""
+        return self._theme_index._ensure_scored()
 
     def _score_themes(self):
-        """Score each theme by keyword frequency across all items."""
-        all_text = " ".join(
-            (item.get("title_original", item.get("title", "")) + " " + item.get("description", ""))
-            for item in self.items
-        ).lower()
-
-        token_freq = Counter(re.findall(r"[a-z가-힣]+", all_text))
-
-        for _theme_name, theme_key, _emoji, keywords in THEMES:
-            score = sum(token_freq.get(kw, 0) for kw in keywords)
-            for kw in keywords:
-                if " " in kw:
-                    score += all_text.count(kw)
-            self._theme_scores[theme_key] = score
-
-        # Match articles to themes (each article to its best-matching theme)
-        article_assigned: Dict[int, str] = {}
-        for _theme_name, theme_key, _emoji, keywords in THEMES:
-            matched = []
-            # Build regex patterns for word-boundary matching on short keywords
-            kw_patterns = []
-            plain_kw = []
-            for kw in keywords:
-                if " " in kw or len(kw) >= 4 or re.search(r"[가-힣]", kw):
-                    plain_kw.append(kw)
-                else:
-                    kw_patterns.append(re.compile(r"\b" + re.escape(kw) + r"\b", re.IGNORECASE))
-            for idx, item in enumerate(self.items):
-                item_text = (
-                    item.get("title_original", item.get("title", "")) + " " + item.get("description", "")
-                ).lower()
-                hit = any(kw in item_text for kw in plain_kw)
-                if not hit:
-                    item_text_raw = (
-                        item.get("title_original", item.get("title", "")) + " " + item.get("description", "")
-                    )
-                    hit = any(p.search(item_text_raw) for p in kw_patterns)
-                if hit:
-                    matched.append(item)
-                    if idx not in article_assigned:
-                        article_assigned[idx] = theme_key
-            self._theme_articles[theme_key] = matched
+        """Score each theme by keyword frequency (delegates to ThemeIndex)."""
+        return self._theme_index._score_themes()
 
     def get_top_themes(self) -> List[Tuple[str, str, str, int]]:
         """Return top themes as (name, key, emoji, article_count) tuples."""
-        self._ensure_scored()
-        theme_lookup = {key: (name, emoji) for name, key, emoji, _ in THEMES}
-        ranked = sorted(self._theme_scores.items(), key=lambda x: x[1], reverse=True)
-        result = []
-        for key, score in ranked:
-            if score <= 0:
-                continue
-            name, emoji = theme_lookup.get(key, (key, ""))
-            count = len(self._theme_articles.get(key, []))
-            if count > 0:
-                result.append((name, key, emoji, count))
-            if len(result) >= TOP_THEMES_COUNT:
-                break
-        return result
+        return self._theme_index.get_top_themes()
 
     def classify_priority(self) -> Dict[str, List[Dict[str, Any]]]:
         """Classify items into priority buckets (P0, P1, P2).
