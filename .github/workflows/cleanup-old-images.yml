@@ -25,7 +25,9 @@ jobs:
       - name: Remove images older than 30 days
         run: |
           set -euo pipefail
-          python3 <<'PY'
+          for attempt in 1 2 3; do
+            echo "Cleanup attempt $attempt/3"
+            python3 <<'PY'
           import re
           from datetime import date, timedelta
           from pathlib import Path
@@ -55,6 +57,19 @@ jobs:
           print(f"Removed {removed} old image files (>30 days, by filename date)")
           print(f"Skipped {skipped_no_date} files without parseable date in filename")
           PY
+            STATUS=$?
+            if [ $STATUS -eq 0 ]; then
+              echo "Cleanup succeeded on attempt $attempt"
+              break
+            fi
+            echo "Cleanup failed on attempt $attempt (exit $STATUS)"
+            if [ $attempt -lt 3 ]; then
+              sleep 5
+            else
+              echo "Cleanup failed after 3 attempts" >&2
+              exit 1
+            fi
+          done
 
       - name: Commit changes
         run: |
@@ -79,3 +94,31 @@ jobs:
           done
           echo "Push failed after 3 attempts" >&2
           exit 1
+
+      - name: Resolve Slack config
+        id: slack
+        if: failure()
+        uses: ./.github/actions/resolve-slack-config
+        with:
+          target_channel_alias: investing
+          token_candidates: |
+            ${{ secrets.SLACK_BOT_TOKEN }}
+            ${{ secrets.AI_SLACK_BOT_TOKEN }}
+            ${{ secrets.SLACK_TOKEN }}
+          channel_candidates_investing: |
+            ${{ secrets.SLACK_CHANNEL_ID_INVESTING }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID_INVESTING }}
+            ${{ secrets.SLACK_CHANNEL_INVESTING }}
+            ${{ secrets.SLACK_CHANNEL_ID }}
+            ${{ secrets.AI_SLACK_CHANNEL_ID }}
+            ${{ secrets.SLACK_CHANNEL }}
+
+      - name: Notify Slack on failure
+        if: failure() && steps.slack.outputs.can_post == 'true'
+        uses: slackapi/slack-github-action@af78098f536edbc4de71162a307590698245be95  # v3.0.1
+        with:
+          method: chat.postMessage
+          token: ${{ steps.slack.outputs.token }}
+          payload: |
+            channel: "${{ steps.slack.outputs.channel }}"
+            text: ":rotating_light: [${{ steps.slack.outputs.profile_label }}] *Cleanup Old Generated Images* failed\n\n*Run:* <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|${{ github.run_id }}>"
