@@ -56,41 +56,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-20 - 암호화폐 뉴스 요
 <li><a href="https://cointelegraph.com/news/swan-bitcoin-sued-for-nearly-1b-over-pre-bankruptcy-transfers-from-prime-trust?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Swan 비트코인은 Prime Trust의 파산 전 이체와 관련하여 약 10억 달러에 대한 소송을 제기했습니다.</a> <span class="p0-desc">Swan 비트코인은 2023년 파산 신청 며칠 전에 내부자 접근을 통해 비트코인에 약 10억 달러와 Prime Trust로부터 현금을 인출한 혐의로 고소당했습니다.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 07;44 가상자산] 비트코인, 해킹 우려 단축 소식에 하락 - 신아일보 
-외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 104건의 뉴스 중 P1 주요 이슈도 7건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (46건): 비트코인, 달러, 암호화폐 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **🏦 거래소** (21건): binance, support, aigensyn 동향이 포트폴리오 전략에 영향을 줄 수 있어 주시가 필요합니다.
-- **📈 가격/시장** (29건): 달러, 암호화폐 가격 변동 (29건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 07;44 가상자산] 비트코인, 해킹 우려 단축 소식에 하락 - 신아일보
-- 비트코인 디파이 7,600만 달러 규모의 Monad 악용으로 인해 플랫폼 Echo 프로토콜이 공격당함
-- Swan 비트코인은 Prime Trust의 파산 전 이체와 관련하여 약 10억 달러에 대한 소송을 제기했습니다.
-
-### 주요 이슈
-
-- 골드만삭스, 암호화폐 ETF 재편…비트코인 남기고 XRP·솔라나 정리
-- 비트코인, 다시 7만 6000달러대로 하락
-- 한국 장의회사는 레버리지 ETH ETF에서 3,300만 달러의 미실현 손실을 기록했습니다.
-- 외 4건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(40건), Decrypt(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-05-20.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-05-20.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

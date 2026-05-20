@@ -22,8 +22,6 @@ image_alt: "DeFi 수익률 리포트 - 2026-05-19 - DeFi 뉴스 요약 이미지
 - TVL $1M↑ 스테이블코인 풀 10개 (USDC·USDT·DAI 등), APY 기준 정렬. 최고 수익: morpho-blue 297995.0%.
 
 
-<div class="alert-box alert-info"><strong>DeFi 수익률 요약 (2026-05-19)</strong><ul><li>📊 <strong>총 풀 수</strong>: 1,871개 (TVL $1M↑, APY 0.1%↑)</li><li>📈 <strong>평균 APY</strong>: 624.31%</li><li>🏆 <strong>최고 APY 프로토콜</strong>: balancer-v2 — 346531.02%</li><li>💵 <strong>스테이블코인 TOP</strong>: morpho-blue (1337USDC) — 297994.96%</li></ul></div>
-
 ## 스테이블코인 수익률 TOP 10
 
 TVL $1M↑ 스테이블코인 풀 10개 (USDC·USDT·DAI 등), APY 기준 정렬. 최고 수익: morpho-blue 297995.0%.
