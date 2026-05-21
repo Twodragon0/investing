@@ -762,7 +762,7 @@ class ThemeSummarizer:
         has_content = False
 
         for name, key, emoji, _count in top_themes:
-            articles = self._theme_articles.get(key, [])
+            articles = self.get_articles_for_theme(key)
             briefing = self._generate_single_theme_briefing(key, articles)
             # Validate briefing is not circular (repeated theme name)
             if briefing and briefing.strip() != name and len(briefing.strip()) > len(name):
@@ -791,7 +791,7 @@ class ThemeSummarizer:
         lines = ["\n## 주요 테마 분석\n"]
 
         for name, key, emoji, count in top_themes:
-            articles = self._theme_articles.get(key, [])
+            articles = self.get_articles_for_theme(key)
             ratio = count / total if total > 0 else 0
 
             lines.append(f"### {emoji} {name} ({count}건)\n")
@@ -991,7 +991,7 @@ class ThemeSummarizer:
         if top_themes:
             lines.append("### 테마별 동향\n")
             for name, key, emoji, count in top_themes[:3]:
-                articles = self._theme_articles.get(key, [])
+                articles = self.get_articles_for_theme(key)
                 snippet = self._generate_single_theme_briefing(key, articles)
                 if snippet:
                     lines.append(f"- **{emoji} {name}** ({count}건): {snippet}")
@@ -1102,7 +1102,7 @@ class ThemeSummarizer:
         # Use theme keywords for more specific openers
         if top_themes:
             dominant_key = top_themes[0][1]
-            dominant_articles = self._theme_articles.get(dominant_key, [])
+            dominant_articles = self.get_articles_for_theme(dominant_key)
             top_kws = self._prepare_display_keywords(
                 self._extract_title_keywords(dominant_articles, max_keywords=5),
                 max_keywords=3,
@@ -1216,7 +1216,7 @@ class ThemeSummarizer:
         briefing_items = []
         _sponsored_re = re.compile(r"\s*[Ss]ponsored\s+by\s+@?\S+.*$", flags=re.MULTILINE)
         for name, key, emoji, count in top_themes[:4]:
-            articles = self._theme_articles.get(key, [])
+            articles = self.get_articles_for_theme(key)
             if not articles:
                 continue
             # Build ultra-short keyword summary for at-a-glance
@@ -1493,7 +1493,7 @@ class ThemeSummarizer:
     def get_theme_sentiment(self, theme_key: str) -> str:
         """Return sentiment label for a theme: 'bullish', 'bearish', or 'neutral'."""
         self._ensure_scored()
-        articles = self._theme_articles.get(theme_key, [])
+        articles = self.get_articles_for_theme(theme_key)
         if not articles:
             return "neutral"
         pos = neg = 0
