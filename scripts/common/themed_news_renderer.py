@@ -129,6 +129,78 @@ class ThemedNewsRenderer:
         card_parts.append("</div>")  # close news-card-item
         return "\n".join(card_parts)
 
+    def _render_overflow_section(
+        self,
+        remaining_links: List[Dict[str, Any]],
+        remaining_count: int,
+        sumr_module: Any,
+    ) -> List[str]:
+        """Build the overflow ``<details><summary>...</summary><ol>...</ol></details>`` block.
+
+        Returns the list of lines (each already terminated with ``\\n`` where the
+        original inline code emitted ``\\n``) so the caller can ``lines.extend(...)``
+        them 1:1 into the section buffer. ``sumr_module`` is the
+        ``common.summarizer`` module passed in so ``monkeypatch.setattr`` in
+        golden tests applies through the same module attribute lookups as the
+        original inline code.
+        """
+        from html import escape as _esc
+
+        out: List[str] = []
+        out.append(
+            f"<details><summary>그 외 {remaining_count}건 보기</summary>"
+            f'<div class="details-content"><ol class="news-overflow-list">'
+        )
+        for item in remaining_links[:OVERFLOW_PREVIEW_LIMIT]:
+            if isinstance(item, dict):
+                t = _esc(item.get("title", ""), quote=True)
+                lnk = item.get("link", "")
+                img = item.get("image", "")
+                src = item.get("source", "")
+                thumb_html = ""
+                if img and not is_logo_like_url(img):
+                    safe_img = _esc(img, quote=True)
+                    onerr = "this.parentElement.style.display='none'"
+                    thumb_html = (
+                        f'<span class="overflow-thumb">'
+                        f'<img src="{safe_img}" alt="" loading="lazy"'
+                        f' onerror="{onerr}"></span>'
+                    )
+                elif lnk:
+                    fav_link = sumr_module._best_favicon_link(item)
+                    fav = sumr_module._favicon_url(fav_link or lnk)
+                    if fav:
+                        safe_fav = _esc(fav, quote=True)
+                        thumb_html = (
+                            f'<span class="overflow-thumb overflow-thumb--favicon">'
+                            f'<img src="{safe_fav}" alt="" loading="lazy">'
+                            f"</span>"
+                        )
+                src_html = ""
+                if src:
+                    src_html = f'<span class="overflow-source">{_esc(src, quote=True)}</span>'
+                if lnk:
+                    safe_link = _esc(lnk, quote=True)
+                    out.append(
+                        f'<li class="overflow-preview">'
+                        f"{thumb_html}"
+                        f'<span class="overflow-body">'
+                        f'<a href="{safe_link}" target="_blank" rel="noopener noreferrer">{t}</a>'
+                        f"{src_html}</span></li>"
+                    )
+                else:
+                    out.append(
+                        f'<li class="overflow-preview">'
+                        f"{thumb_html}"
+                        f'<span class="overflow-body">'
+                        f"<span>{t}</span>"
+                        f"{src_html}</span></li>"
+                    )
+        if remaining_count > OVERFLOW_PREVIEW_LIMIT:
+            out.append(f"<li><em>...외 {remaining_count - OVERFLOW_PREVIEW_LIMIT}건</em></li>")
+        out.append("</ol></div></details>\n")
+        return out
+
     def render(
         self,
         max_articles: int = ARTICLES_PER_THEME,
@@ -233,60 +305,7 @@ class ThemedNewsRenderer:
             overflow = len([a for a in articles if a.get("title") and a["title"] not in seen_titles])
             remaining_count = len(remaining_links) + overflow
             if remaining_links:
-                from html import escape as _esc
-
-                lines.append(
-                    f"<details><summary>그 외 {remaining_count}건 보기</summary>"
-                    f'<div class="details-content"><ol class="news-overflow-list">'
-                )
-                for item in remaining_links[:OVERFLOW_PREVIEW_LIMIT]:
-                    if isinstance(item, dict):
-                        t = _esc(item.get("title", ""), quote=True)
-                        lnk = item.get("link", "")
-                        img = item.get("image", "")
-                        src = item.get("source", "")
-                        thumb_html = ""
-                        if img and not is_logo_like_url(img):
-                            safe_img = _esc(img, quote=True)
-                            onerr = "this.parentElement.style.display='none'"
-                            thumb_html = (
-                                f'<span class="overflow-thumb">'
-                                f'<img src="{safe_img}" alt="" loading="lazy"'
-                                f' onerror="{onerr}"></span>'
-                            )
-                        elif lnk:
-                            fav_link = _sumr._best_favicon_link(item)
-                            fav = _sumr._favicon_url(fav_link or lnk)
-                            if fav:
-                                safe_fav = _esc(fav, quote=True)
-                                thumb_html = (
-                                    f'<span class="overflow-thumb overflow-thumb--favicon">'
-                                    f'<img src="{safe_fav}" alt="" loading="lazy">'
-                                    f"</span>"
-                                )
-                        src_html = ""
-                        if src:
-                            src_html = f'<span class="overflow-source">{_esc(src, quote=True)}</span>'
-                        if lnk:
-                            safe_link = _esc(lnk, quote=True)
-                            lines.append(
-                                f'<li class="overflow-preview">'
-                                f"{thumb_html}"
-                                f'<span class="overflow-body">'
-                                f'<a href="{safe_link}" target="_blank" rel="noopener noreferrer">{t}</a>'
-                                f"{src_html}</span></li>"
-                            )
-                        else:
-                            lines.append(
-                                f'<li class="overflow-preview">'
-                                f"{thumb_html}"
-                                f'<span class="overflow-body">'
-                                f"<span>{t}</span>"
-                                f"{src_html}</span></li>"
-                            )
-                if remaining_count > OVERFLOW_PREVIEW_LIMIT:
-                    lines.append(f"<li><em>...외 {remaining_count - OVERFLOW_PREVIEW_LIMIT}건</em></li>")
-                lines.append("</ol></div></details>\n")
+                lines.extend(self._render_overflow_section(remaining_links, remaining_count, _sumr))
 
             lines.append("")
 
