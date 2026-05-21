@@ -38,16 +38,6 @@ def _make_items():
 class TestThemeSummarizerAdapters:
     """Verify @property adapters preserve direct attribute access."""
 
-    def test_theme_articles_delegates_to_theme_index(self):
-        summarizer = ThemeSummarizer(_make_items())
-        # Trigger lazy scoring as collectors do (via get_top_themes()).
-        summarizer.get_top_themes()
-        # Direct access used by collectors: summarizer._theme_articles.get(key, [])
-        articles = summarizer._theme_articles.get("bitcoin", [])
-        assert isinstance(articles, list)
-        # Identity check: property must forward to the ThemeIndex dict.
-        assert summarizer._theme_articles is summarizer._theme_index._theme_articles
-
     def test_theme_scores_delegates_to_theme_index(self):
         summarizer = ThemeSummarizer(_make_items())
         summarizer._ensure_scored()
@@ -187,16 +177,6 @@ class TestGetArticlesForTheme:
         assert ts._scored is False
         ts.get_articles_for_theme("bitcoin")
         assert ts._scored is True
-
-    def test_consistency_with_theme_articles_property(self):
-        ts = ThemeSummarizer(_ITEMS)
-        ts._ensure_scored()
-        for theme_key in ("bitcoin", "regulation", "exchange"):
-            via_method = ts.get_articles_for_theme(theme_key)
-            via_property = ts._theme_articles.get(theme_key, [])
-            assert via_method == via_property
-            if via_property:
-                assert via_method is not via_property
 
     def test_multiple_calls_return_equal_lists(self):
         ts = ThemeSummarizer(_ITEMS)

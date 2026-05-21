@@ -418,11 +418,7 @@ class ThemeSummarizer:
         self._theme_index = ThemeIndex(items)
         self._last_risk_verdict = None
 
-    # --- ThemeIndex adapters (preserve direct attribute access used by collectors) ---
-    @property
-    def _theme_articles(self) -> Dict[str, List[Dict[str, Any]]]:
-        return self._theme_index._theme_articles
-
+    # --- ThemeIndex adapters (_theme_scores와 _scored는 unit test에서 직접 접근하므로 유지) ---
     @property
     def _theme_scores(self) -> Dict[str, int]:
         return self._theme_index._theme_scores
