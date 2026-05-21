@@ -88,6 +88,26 @@ class TestGetTopThemes:
         summarizer = ThemeSummarizer([])
         assert summarizer.get_top_themes() == []
 
+    def test_theme_with_positive_score_but_no_articles_excluded(self):
+        """Themes that have score > 0 but zero matched articles are excluded from top themes.
+
+        This covers the ``if count > 0`` False-branch in get_top_themes (line 91→93).
+        We force the state manually: mark_scored + direct attribute assignment.
+        """
+        idx = ThemeIndex([])
+        # Bypass lazy scoring and inject state directly.
+        idx._theme_scores = {"bitcoin": 5, "regulation": 3}
+        # bitcoin has score but no matched articles; regulation has articles.
+        idx._theme_articles = {"bitcoin": [], "regulation": [_REGULATION_ITEM]}
+        idx.mark_scored(True)
+
+        result = idx.get_top_themes()
+        keys_in_result = [key for _name, key, _emoji, _count in result]
+        # bitcoin must be excluded (count == 0) even though score == 5
+        assert "bitcoin" not in keys_in_result
+        # regulation must be included (count == 1, score == 3)
+        assert "regulation" in keys_in_result
+
 
 class TestThemeIndexDirect:
     """Smoke test the standalone ThemeIndex class."""
