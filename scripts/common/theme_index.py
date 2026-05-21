@@ -3,10 +3,11 @@
 Extracted from ``scripts/common/summarizer.py`` to keep theme scoring/indexing
 concerns separate from the rest of ``ThemeSummarizer`` markdown rendering.
 
-External collectors (``scripts/collect_*.py``) historically read
-``summarizer._theme_articles`` directly. ``ThemeSummarizer`` exposes
-``@property`` adapters that forward to a ``ThemeIndex`` instance so this
-extraction is API-preserving.
+``ThemeSummarizer`` composes a ``ThemeIndex`` instance and exposes its results
+via public methods (``get_top_themes``, ``get_articles_for_theme``,
+``get_theme_score``, etc.). Earlier ``@property`` adapters that forwarded
+private attributes have been removed; callers (collectors, renderer, tests)
+all use the public ThemeIndex API now.
 """
 
 import re
