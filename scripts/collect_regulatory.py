@@ -289,7 +289,7 @@ def _build_regulatory_theme_analysis(
     lines = ["\n## 주요 테마 분석\n"]
 
     for name, key, emoji, count in top_themes:
-        articles = summarizer._theme_articles.get(key, [])
+        articles = summarizer.get_articles_for_theme(key)
         ratio = count / total if total > 0 else 0
 
         # Theme-level analysis paragraph
@@ -780,7 +780,7 @@ class RegulatoryCollector(BaseCollector):
             top_themes = summarizer.get_top_themes()
             card_themes = []
             for t_name, t_key, t_emoji, t_count in (top_themes or [])[:5]:
-                t_articles = summarizer._theme_articles.get(t_key, [])
+                t_articles = summarizer.get_articles_for_theme(t_key)
                 t_keywords = []
                 for art in t_articles[:5]:
                     words = re.findall(r"[a-zA-Z가-힣]{4,}", art.get("title", ""))

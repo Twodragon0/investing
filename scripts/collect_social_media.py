@@ -767,7 +767,7 @@ class SocialMediaCollector(BaseCollector):
 
             card_themes = []
             for t_name, t_key, t_emoji, t_count in top_themes[:4]:
-                t_articles = summarizer._theme_articles.get(t_key, [])
+                t_articles = summarizer.get_articles_for_theme(t_key)
                 t_keywords = []
                 for art in t_articles[:4]:
                     words = re.findall(r"[a-zA-Z가-힣]{4,}", art.get("title", ""))
