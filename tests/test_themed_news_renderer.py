@@ -33,6 +33,10 @@ def mock_summarizer() -> MagicMock:
     m._theme_articles = {}
     m.get_top_themes.return_value = []
     m._generate_theme_subtitle.return_value = ""
+    # PR3: renderer migrated from _theme_articles.get(key, []) to
+    # get_articles_for_theme(key) — mock the public method to read from
+    # the same dict so tests stay decoupled from internal storage.
+    m.get_articles_for_theme.side_effect = lambda key: m._theme_articles.get(key, [])
     return m
 
 
