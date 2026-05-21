@@ -571,3 +571,60 @@ class TestDeterminism:
         # title_ko goes in the displayed card; orig title gates dedup but is
         # not the rendered string here.
         assert "한국어 번역 제목" in out
+
+    def test_overflow_item_with_real_image_renders_thumb(
+        self, mock_summarizer: MagicMock, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        """overflow list item with real image builds thumb_html."""
+        import common.themed_news_renderer as renderer_mod
+
+        monkeypatch.setattr(renderer_mod, "is_logo_like_url", lambda u: False)
+        featured = [
+            _make_article(
+                f"Featured article {i}",
+                link=f"https://example.com/f/{i}",
+            )
+            for i in range(4)
+        ]
+        overflow_article = _make_article(
+            "Overflow with real image",
+            link="https://example.com/ov",
+            image="https://cdn.example.com/photo.jpg",
+        )
+        articles = featured + [overflow_article]
+        items = articles + [{"title": f"pad{i}"} for i in range(5)]
+        mock_summarizer._theme_articles = {"k": articles}
+        mock_summarizer.get_top_themes.return_value = [("N", "k", "*", 5)]
+
+        out = ThemedNewsRenderer(items, mock_summarizer).render(featured_count=3, max_articles=4)
+
+        assert "<details>" in out
+        assert 'class="overflow-thumb"' in out
+        assert 'src="https://cdn.example.com/photo.jpg"' in out
+
+    def test_overflow_item_without_link_renders_span_fallback(
+        self, mock_summarizer: MagicMock
+    ) -> None:
+        """overflow item with no link renders <span> instead of <a>."""
+        featured = [
+            _make_article(
+                f"Featured article {i}",
+                link=f"https://example.com/f/{i}",
+            )
+            for i in range(4)
+        ]
+        overflow_no_link = _make_article(
+            "Overflow without link",
+            link="",
+            source="Anon Source",
+        )
+        articles = featured + [overflow_no_link]
+        items = articles + [{"title": f"pad{i}"} for i in range(5)]
+        mock_summarizer._theme_articles = {"k": articles}
+        mock_summarizer.get_top_themes.return_value = [("N", "k", "*", 5)]
+
+        out = ThemedNewsRenderer(items, mock_summarizer).render(featured_count=3, max_articles=4)
+
+        assert "<details>" in out
+        assert "Overflow without link" in out
+        assert "<span>Overflow without link</span>" in out
