@@ -107,3 +107,27 @@ class ThemeIndex:
         if theme_key not in self._theme_articles:
             return list(default) if default is not None else []
         return list(self._theme_articles[theme_key])
+
+    def get_theme_score(self, theme_key: str, default: int = 0) -> int:
+        """Return the keyword frequency score for theme_key (or default if missing).
+
+        Triggers lazy scoring on first access.
+        """
+        self._ensure_scored()
+        return self._theme_scores.get(theme_key, default)
+
+    def has_theme_score(self, theme_key: str) -> bool:
+        """Return True if theme_key has been scored (key exists in _theme_scores).
+
+        Triggers lazy scoring on first access.
+        """
+        self._ensure_scored()
+        return theme_key in self._theme_scores
+
+    def is_scored(self) -> bool:
+        """Return whether scoring has been performed."""
+        return self._scored
+
+    def mark_scored(self, value: bool = True) -> None:
+        """Set the scored flag (escape hatch for tests; use _ensure_scored() in production)."""
+        self._scored = value

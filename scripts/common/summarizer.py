@@ -418,19 +418,6 @@ class ThemeSummarizer:
         self._theme_index = ThemeIndex(items)
         self._last_risk_verdict = None
 
-    # --- ThemeIndex adapters (_theme_scores와 _scored는 unit test에서 직접 접근하므로 유지) ---
-    @property
-    def _theme_scores(self) -> Dict[str, int]:
-        return self._theme_index._theme_scores
-
-    @property
-    def _scored(self) -> bool:
-        return self._theme_index._scored
-
-    @_scored.setter
-    def _scored(self, value: bool) -> None:
-        self._theme_index._scored = value
-
     def _ensure_scored(self):
         """Score themes lazily on first access (delegates to ThemeIndex)."""
         return self._theme_index._ensure_scored()

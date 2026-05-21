@@ -609,7 +609,7 @@ class TestDetectConcentrationEmptyTop:
         ts = ThemeSummarizer(items)
         # Monkeypatch get_top_themes to return []
         ts.get_top_themes = list
-        ts._scored = True
+        ts._theme_index.mark_scored(True)
         result = ts.detect_concentration()
         assert result is None
 

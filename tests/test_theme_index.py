@@ -36,30 +36,29 @@ def _make_items():
 
 
 class TestThemeSummarizerAdapters:
-    """Verify @property adapters preserve direct attribute access."""
+    """Verify ThemeSummarizer exposes scoring state through ThemeIndex public API."""
 
-    def test_theme_scores_delegates_to_theme_index(self):
+    def test_theme_scores_accessible_via_theme_index(self):
         summarizer = ThemeSummarizer(_make_items())
         summarizer._ensure_scored()
-        assert summarizer._theme_scores is summarizer._theme_index._theme_scores
         # Bitcoin keywords should pick up at least one positive score.
-        assert summarizer._theme_scores.get("bitcoin", 0) > 0
+        assert summarizer._theme_index.get_theme_score("bitcoin") > 0
 
     def test_ensure_scored_flips_scored_flag(self):
         summarizer = ThemeSummarizer(_make_items())
-        assert summarizer._scored is False
+        assert summarizer._theme_index.is_scored() is False
         summarizer._ensure_scored()
-        assert summarizer._scored is True
+        assert summarizer._theme_index.is_scored() is True
         # Calling twice must remain idempotent.
         summarizer._ensure_scored()
-        assert summarizer._scored is True
+        assert summarizer._theme_index.is_scored() is True
 
-    def test_scored_setter_writes_through_to_theme_index(self):
+    def test_mark_scored_writes_through_to_theme_index(self):
         summarizer = ThemeSummarizer(_make_items())
-        summarizer._scored = True
-        assert summarizer._theme_index._scored is True
-        summarizer._scored = False
-        assert summarizer._theme_index._scored is False
+        summarizer._theme_index.mark_scored(True)
+        assert summarizer._theme_index.is_scored() is True
+        summarizer._theme_index.mark_scored(False)
+        assert summarizer._theme_index.is_scored() is False
 
 
 class TestGetTopThemes:
@@ -82,7 +81,7 @@ class TestGetTopThemes:
         summarizer = ThemeSummarizer(_make_items())
         result = summarizer.get_top_themes()
         # Look up the score for each returned key and confirm non-increasing order.
-        scores = [summarizer._theme_scores[key] for _, key, _, _ in result]
+        scores = [summarizer._theme_index.get_theme_score(key) for _, key, _, _ in result]
         assert scores == sorted(scores, reverse=True)
 
     def test_empty_items_returns_empty_list(self):
@@ -174,9 +173,9 @@ class TestGetArticlesForTheme:
 
     def test_lazy_scoring_triggered_on_first_call(self):
         ts = ThemeSummarizer([_BITCOIN_ITEM])
-        assert ts._scored is False
+        assert ts._theme_index.is_scored() is False
         ts.get_articles_for_theme("bitcoin")
-        assert ts._scored is True
+        assert ts._theme_index.is_scored() is True
 
     def test_multiple_calls_return_equal_lists(self):
         ts = ThemeSummarizer(_ITEMS)

@@ -262,8 +262,8 @@ class TestThemeSummarizer:
         )
         ts = ThemeSummarizer(items)
         ts._score_themes()
-        assert "ethereum" in ts._theme_scores
-        assert ts._theme_scores["ethereum"] > 0
+        assert ts._theme_index.has_theme_score("ethereum")
+        assert ts._theme_index.get_theme_score("ethereum") > 0
 
     def test_score_themes_unrelated_items_low_score(self):
         items = self._make_items(
@@ -274,8 +274,8 @@ class TestThemeSummarizer:
         ts = ThemeSummarizer(items)
         ts._score_themes()
         # All crypto themes should score 0 for unrelated content
-        assert ts._theme_scores.get("bitcoin", 0) == 0
-        assert ts._theme_scores.get("defi", 0) == 0
+        assert ts._theme_index.get_theme_score("bitcoin") == 0
+        assert ts._theme_index.get_theme_score("defi") == 0
 
     def test_classify_priority_returns_buckets(self):
         items = self._make_items(
@@ -349,23 +349,23 @@ class TestThemeSummarizer:
         )
         ts = ThemeSummarizer(items)
         ts._score_themes()
-        assert ts._theme_scores.get("bitcoin", 0) > 0
+        assert ts._theme_index.get_theme_score("bitcoin") > 0
 
     def test_lazy_scoring_called_once(self):
         items = self._make_items([("Bitcoin news", "BTC update")])
         ts = ThemeSummarizer(items)
-        assert not ts._scored
+        assert not ts._theme_index.is_scored()
         ts.get_top_themes()
-        assert ts._scored
+        assert ts._theme_index.is_scored()
         # Call again — should not re-score
         ts.get_top_themes()
-        assert ts._scored
+        assert ts._theme_index.is_scored()
 
     def test_title_original_used_for_scoring(self):
         items = [{"title": "번역된 제목", "title_original": "Bitcoin halving event", "description": ""}]
         ts = ThemeSummarizer(items)
         ts._score_themes()
-        assert ts._theme_scores.get("bitcoin", 0) > 0
+        assert ts._theme_index.get_theme_score("bitcoin") > 0
 
 
 class TestThemeSummarizerGenerators:
