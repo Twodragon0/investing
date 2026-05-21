@@ -201,6 +201,20 @@ class ThemedNewsRenderer:
         out.append("</ol></div></details>\n")
         return out
 
+    @staticmethod
+    def _to_overflow_entry(title: str, link: str, article: Dict[str, Any]) -> Dict[str, Any]:
+        """Build overflow list entry dict with normalized keys.
+
+        Extracted to avoid duplicate dict literals in render() (cross-theme demote
+        path + featured cap overflow path).
+        """
+        return {
+            "title": title,
+            "link": link,
+            "image": article.get("image", ""),
+            "source": article.get("source", ""),
+        }
+
     def render(
         self,
         max_articles: int = ARTICLES_PER_THEME,
@@ -260,14 +274,7 @@ class ThemedNewsRenderer:
                 # Skip articles already featured in previous themes
                 if shown < featured_count and orig_title in cross_theme_featured:
                     # Demote to remaining links instead
-                    remaining_links.append(
-                        {
-                            "title": title,
-                            "link": link,
-                            "image": article.get("image", ""),
-                            "source": article.get("source", ""),
-                        }
-                    )
+                    remaining_links.append(self._to_overflow_entry(title, link, article))
                     continue
 
                 if shown < featured_count:
@@ -285,14 +292,7 @@ class ThemedNewsRenderer:
                     lines.append("")  # blank line after HTML block
                     cross_theme_featured.add(orig_title)
                 else:
-                    remaining_links.append(
-                        {
-                            "title": title,
-                            "link": link,
-                            "image": article.get("image", ""),
-                            "source": article.get("source", ""),
-                        }
-                    )
+                    remaining_links.append(self._to_overflow_entry(title, link, article))
 
                 shown += 1
                 # Featured cards stop at max_articles, but keep accumulating
