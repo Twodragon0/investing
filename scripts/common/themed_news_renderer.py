@@ -86,7 +86,7 @@ class ThemedNewsRenderer:
 
             shown = 0
             seen_titles: set = set()
-            remaining_links = []
+            remaining_links: List[Dict[str, Any]] = []
             for article in articles:
                 orig_title = article.get("title", "")
                 if not orig_title or orig_title in seen_titles:
@@ -254,8 +254,6 @@ class ThemedNewsRenderer:
                                 f"<span>{t}</span>"
                                 f"{src_html}</span></li>"
                             )
-                    else:
-                        lines.append(f"<li>{item}</li>")
                 if remaining_count > OVERFLOW_PREVIEW_LIMIT:
                     lines.append(f"<li><em>...외 {remaining_count - OVERFLOW_PREVIEW_LIMIT}건</em></li>")
                 lines.append("</ol></div></details>\n")
