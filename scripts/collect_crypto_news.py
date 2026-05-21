@@ -1030,7 +1030,7 @@ class CryptoNewsCollector(BaseCollector):
             card_themes = []
             for t_name, t_key, t_emoji, t_count in top_themes[:5]:
                 # Extract keywords from theme articles
-                t_articles = summarizer._theme_articles.get(t_key, [])
+                t_articles = summarizer.get_articles_for_theme(t_key)
                 t_keywords = []
                 for art in t_articles[:5]:
                     words = re.findall(r"[a-zA-Z가-힣]{4,}", art.get("title", ""))
@@ -1299,7 +1299,7 @@ class CryptoNewsCollector(BaseCollector):
             # Add distinct top articles (avoid repeating same title)
             seen_insight_titles: set = set()
             for theme_key in [t1_key, t2_key]:
-                articles = summarizer._theme_articles.get(theme_key, [])
+                articles = summarizer.get_articles_for_theme(theme_key)
                 for art in articles:
                     top_title = get_display_title(art)
                     orig_title = art.get("title", "")
