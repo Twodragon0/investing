@@ -117,3 +117,120 @@ class TestThemeIndexDirect:
         from_index = ThemeIndex(items).get_top_themes()
         from_summarizer = ThemeSummarizer(items).get_top_themes()
         assert from_index == from_summarizer
+
+
+# ---------------------------------------------------------------------------
+# PR1: get_articles_for_theme public method (migration plan step 1)
+# ---------------------------------------------------------------------------
+
+_BITCOIN_ITEM = {
+    "title": "Bitcoin ETF sees record inflows",
+    "title_original": "Bitcoin ETF sees record inflows",
+    "description": "Spot bitcoin ETF recorded $1B in a single day.",
+}
+
+_REGULATION_ITEM = {
+    "title": "SEC sues crypto exchange",
+    "title_original": "SEC sues crypto exchange",
+    "description": "The SEC filed a lawsuit against a major exchange over regulatory compliance.",
+}
+
+_UNRELATED_ITEM = {
+    "title": "Weather forecast",
+    "title_original": "Weather forecast",
+    "description": "Sunny skies expected tomorrow.",
+}
+
+_ITEMS = [_BITCOIN_ITEM, _REGULATION_ITEM, _UNRELATED_ITEM]
+
+
+class TestGetArticlesForTheme:
+    """Tests for ThemeSummarizer.get_articles_for_theme()."""
+
+    def test_existing_key_returns_articles(self):
+        ts = ThemeSummarizer([_BITCOIN_ITEM])
+        result = ts.get_articles_for_theme("bitcoin")
+        assert isinstance(result, list)
+        assert len(result) >= 1
+        assert _BITCOIN_ITEM in result
+
+    def test_missing_key_returns_empty_list(self):
+        ts = ThemeSummarizer(_ITEMS)
+        result = ts.get_articles_for_theme("nonexistent_theme_xyz")
+        assert result == []
+
+    def test_missing_key_returns_custom_default(self):
+        sentinel = [{"title": "sentinel"}]
+        ts = ThemeSummarizer(_ITEMS)
+        result = ts.get_articles_for_theme("nonexistent_theme_xyz", default=sentinel)
+        assert result == sentinel
+        assert result is not sentinel
+
+    def test_returns_shallow_copy_not_reference(self):
+        """Mutating the returned list must not affect subsequent calls."""
+        ts = ThemeSummarizer([_BITCOIN_ITEM])
+        first = ts.get_articles_for_theme("bitcoin")
+        original_len = len(first)
+        first.append({"title": "injected"})
+        second = ts.get_articles_for_theme("bitcoin")
+        assert len(second) == original_len
+        assert {"title": "injected"} not in second
+
+    def test_article_dicts_are_shared_references(self):
+        """Returned list contains the same dict objects as the original items (depth-1 copy only)."""
+        ts = ThemeSummarizer([_BITCOIN_ITEM])
+        result = ts.get_articles_for_theme("bitcoin")
+        assert any(article is _BITCOIN_ITEM for article in result)
+
+    def test_lazy_scoring_triggered_on_first_call(self):
+        ts = ThemeSummarizer([_BITCOIN_ITEM])
+        assert ts._scored is False
+        ts.get_articles_for_theme("bitcoin")
+        assert ts._scored is True
+
+    def test_consistency_with_theme_articles_property(self):
+        ts = ThemeSummarizer(_ITEMS)
+        ts._ensure_scored()
+        for theme_key in ("bitcoin", "regulation", "exchange"):
+            via_method = ts.get_articles_for_theme(theme_key)
+            via_property = ts._theme_articles.get(theme_key, [])
+            assert via_method == via_property
+            if via_property:
+                assert via_method is not via_property
+
+    def test_multiple_calls_return_equal_lists(self):
+        ts = ThemeSummarizer(_ITEMS)
+        first = ts.get_articles_for_theme("bitcoin")
+        second = ts.get_articles_for_theme("bitcoin")
+        assert first == second
+        assert first is not second
+
+    def test_empty_items_returns_empty(self):
+        ts = ThemeSummarizer([])
+        assert ts.get_articles_for_theme("bitcoin") == []
+        assert ts.get_articles_for_theme("regulation") == []
+
+    def test_default_none_returns_fresh_empty_list(self):
+        ts = ThemeSummarizer([])
+        a = ts.get_articles_for_theme("nonexistent", default=None)
+        b = ts.get_articles_for_theme("nonexistent", default=None)
+        assert a == []
+        assert b == []
+        assert a is not b
+
+
+class TestThemeIndexGetArticlesForTheme:
+    """Smoke test: ThemeIndex directly also exposes get_articles_for_theme()."""
+
+    def test_direct_call_returns_articles(self):
+        index = ThemeIndex([_BITCOIN_ITEM])
+        result = index.get_articles_for_theme("bitcoin")
+        assert isinstance(result, list)
+        assert _BITCOIN_ITEM in result
+
+    def test_returns_shallow_copy(self):
+        index = ThemeIndex([_BITCOIN_ITEM])
+        first = index.get_articles_for_theme("bitcoin")
+        first.append({"title": "x"})
+        second = index.get_articles_for_theme("bitcoin")
+        assert {"title": "x"} not in second

@@ -11,7 +11,7 @@ extraction is API-preserving.
 
 import re
 from collections import Counter
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 from .themes import THEMES, TOP_THEMES_COUNT
 
@@ -92,3 +92,18 @@ class ThemeIndex:
             if len(result) >= TOP_THEMES_COUNT:
                 break
         return result
+
+    def get_articles_for_theme(
+        self,
+        theme_key: str,
+        default: Optional[List[Dict[str, Any]]] = None,
+    ) -> List[Dict[str, Any]]:
+        """Return articles matched to theme_key as a shallow copy.
+
+        Scores themes lazily on first call. Article dicts inside the list
+        are NOT copied — callers must treat them as read-only.
+        """
+        self._ensure_scored()
+        if theme_key not in self._theme_articles:
+            return list(default) if default is not None else []
+        return list(self._theme_articles[theme_key])

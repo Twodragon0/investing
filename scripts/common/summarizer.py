@@ -447,6 +447,24 @@ class ThemeSummarizer:
         """Return top themes as (name, key, emoji, article_count) tuples."""
         return self._theme_index.get_top_themes()
 
+    def get_articles_for_theme(
+        self,
+        theme_key: str,
+        default: Optional[List[Dict[str, Any]]] = None,
+    ) -> List[Dict[str, Any]]:
+        """Return articles matched to theme_key.
+
+        Scores themes lazily on first call. Returns a *shallow copy* of the
+        internal list so callers cannot mutate the index. Article dicts inside
+        the list are NOT copied — callers must treat them as read-only.
+
+        Args:
+            theme_key: One of ``THEMES`` keys (e.g. ``"bitcoin"``, ``"regulation"``).
+            default: Returned when ``theme_key`` is not indexed. Defaults to
+                ``[]`` (a fresh list per call, never shared).
+        """
+        return self._theme_index.get_articles_for_theme(theme_key, default)
+
     def classify_priority(self) -> Dict[str, List[Dict[str, Any]]]:
         """Classify items into priority buckets (P0, P1, P2).
 
