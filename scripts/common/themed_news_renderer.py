@@ -27,6 +27,23 @@ class ThemedNewsRenderer:
         self.items = items
         self._summarizer = theme_summarizer
 
+    def _render_theme_header(
+        self,
+        name: str,
+        emoji: str,
+        count: int,
+        subtitle: str,
+    ) -> List[str]:
+        """Build the markdown header lines for a single theme section.
+
+        Returns the list of lines (each already terminated with ``\\n``) so the
+        caller can ``lines.extend(...)`` them 1:1 into the section buffer.
+        """
+        out = [f"### {emoji} {name} ({count}건)\n"]
+        if subtitle:
+            out.append(f"*{subtitle}*\n")
+        return out
+
     def render(
         self,
         max_articles: int = ARTICLES_PER_THEME,
@@ -65,9 +82,7 @@ class ThemedNewsRenderer:
         for name, key, emoji, count in top_themes:
             articles = self._summarizer._theme_articles.get(key, [])
             subtitle = self._summarizer._generate_theme_subtitle(key, articles)
-            lines.append(f"### {emoji} {name} ({count}건)\n")
-            if subtitle:
-                lines.append(f"*{subtitle}*\n")
+            lines.extend(self._render_theme_header(name, emoji, count, subtitle))
 
             shown = 0
             seen_titles: set = set()
