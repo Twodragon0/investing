@@ -44,6 +44,91 @@ class ThemedNewsRenderer:
             out.append(f"*{subtitle}*\n")
         return out
 
+    def _render_featured_card(
+        self,
+        article: Dict[str, Any],
+        *,
+        num: int,
+        title: str,
+        description: str,
+        orig_title: str,
+        theme_key: str,
+        sumr_module: Any,
+    ) -> str:
+        """Build the HTML markup for a single featured card.
+
+        Extracted 1:1 from ``render()`` so the card-building logic stays a
+        single side-effect-free function. ``sumr_module`` is the
+        ``common.summarizer`` module passed in so ``monkeypatch.setattr`` in
+        golden tests applies through the same module attribute lookups as the
+        original inline code.
+        """
+        # Build HTML card for featured item
+        link = article.get("link", "")
+        source = article.get("source", "")
+        from html import escape as _esc
+
+        safe_title = _esc(title, quote=True)
+        severity = _classify_news_severity(title, description or "")
+        sev_badge = _SEV_BADGE_HTML[severity]
+        card_parts = [
+            f'<div class="news-card-item news-sev-{severity}">',
+            f'<div class="news-card-num">{num}</div>',
+        ]
+
+        # Add thumbnail if image available and not a site logo/icon
+        image_url = article.get("image", "")
+        if image_url and not is_logo_like_url(image_url):
+            safe_img = _esc(image_url, quote=True)
+            onerr = "this.parentElement.style.display='none'"
+            card_parts.append(
+                f'<div class="news-card-thumb">'
+                f'<img src="{safe_img}" alt="" loading="lazy"'
+                f' onerror="{onerr}">'
+                f"</div>"
+            )
+        elif link:
+            fav_link = sumr_module._best_favicon_link(article)
+            fav = sumr_module._favicon_url(fav_link or link)
+            if fav:
+                safe_fav = _esc(fav, quote=True)
+                card_parts.append(
+                    f'<div class="news-card-thumb news-card-thumb--favicon">'
+                    f'<img src="{safe_fav}" alt="" loading="lazy">'
+                    f"</div>"
+                )
+
+        card_parts.append('<div class="news-card-body">')
+        card_parts.append(sev_badge)
+        if link:
+            safe_link = _esc(link, quote=True)
+            card_parts.append(
+                f'<a href="{safe_link}" class="news-title"'
+                f' target="_blank" rel="noopener noreferrer">'
+                f"{safe_title}</a>"
+            )
+        else:
+            card_parts.append(f'<span class="news-title">{safe_title}</span>')
+
+        if description and description != title and not sumr_module._is_generic_desc(description):
+            # Additional boilerplate check for translated descriptions
+            if not sumr_module._is_boilerplate_desc(description):
+                desc_text = _truncate_sentence(description, max_len=300)
+                if desc_text:
+                    card_parts.append(f'<p class="news-desc">{_esc(desc_text, quote=True)}</p>')
+        else:
+            # Fallback: generate analytical description from title
+            fallback_desc = sumr_module._generate_title_based_desc(orig_title, theme_key)
+            if fallback_desc:
+                card_parts.append(f'<p class="news-desc">{_esc(fallback_desc, quote=True)}</p>')
+
+        if source:
+            card_parts.append(html_source_tag(source))
+
+        card_parts.append("</div>")  # close news-card-body
+        card_parts.append("</div>")  # close news-card-item
+        return "\n".join(card_parts)
+
     def render(
         self,
         max_articles: int = ARTICLES_PER_THEME,
@@ -80,7 +165,7 @@ class ThemedNewsRenderer:
         cross_theme_featured: set = set()
 
         for name, key, emoji, count in top_themes:
-            articles = self._summarizer._theme_articles.get(key, [])
+            articles = self._summarizer.get_articles_for_theme(key)
             subtitle = self._summarizer._generate_theme_subtitle(key, articles)
             lines.extend(self._render_theme_header(name, emoji, count, subtitle))
 
@@ -96,7 +181,6 @@ class ThemedNewsRenderer:
                 seen_titles.add(orig_title)
                 title = _fix_mistranslations(article.get("title_ko") or orig_title)
                 link = article.get("link", "")
-                source = article.get("source", "")
                 description = _fix_mistranslations(
                     (article.get("description_ko") or article.get("description", "")).strip()
                 )
@@ -115,71 +199,17 @@ class ThemedNewsRenderer:
                     continue
 
                 if shown < featured_count:
-                    # Build HTML card for featured item
-                    num = shown + 1
-                    from html import escape as _esc
-
-                    safe_title = _esc(title, quote=True)
-                    severity = _classify_news_severity(title, description or "")
-                    sev_badge = _SEV_BADGE_HTML[severity]
-                    card_parts = [
-                        f'<div class="news-card-item news-sev-{severity}">',
-                        f'<div class="news-card-num">{num}</div>',
-                    ]
-
-                    # Add thumbnail if image available and not a site logo/icon
-                    image_url = article.get("image", "")
-                    if image_url and not is_logo_like_url(image_url):
-                        safe_img = _esc(image_url, quote=True)
-                        onerr = "this.parentElement.style.display='none'"
-                        card_parts.append(
-                            f'<div class="news-card-thumb">'
-                            f'<img src="{safe_img}" alt="" loading="lazy"'
-                            f' onerror="{onerr}">'
-                            f"</div>"
-                        )
-                    elif link:
-                        fav_link = _sumr._best_favicon_link(article)
-                        fav = _sumr._favicon_url(fav_link or link)
-                        if fav:
-                            safe_fav = _esc(fav, quote=True)
-                            card_parts.append(
-                                f'<div class="news-card-thumb news-card-thumb--favicon">'
-                                f'<img src="{safe_fav}" alt="" loading="lazy">'
-                                f"</div>"
-                            )
-
-                    card_parts.append('<div class="news-card-body">')
-                    card_parts.append(sev_badge)
-                    if link:
-                        safe_link = _esc(link, quote=True)
-                        card_parts.append(
-                            f'<a href="{safe_link}" class="news-title"'
-                            f' target="_blank" rel="noopener noreferrer">'
-                            f"{safe_title}</a>"
-                        )
-                    else:
-                        card_parts.append(f'<span class="news-title">{safe_title}</span>')
-
-                    if description and description != title and not _sumr._is_generic_desc(description):
-                        # Additional boilerplate check for translated descriptions
-                        if not _sumr._is_boilerplate_desc(description):
-                            desc_text = _truncate_sentence(description, max_len=300)
-                            if desc_text:
-                                card_parts.append(f'<p class="news-desc">{_esc(desc_text, quote=True)}</p>')
-                    else:
-                        # Fallback: generate analytical description from title
-                        fallback_desc = _sumr._generate_title_based_desc(orig_title, key)
-                        if fallback_desc:
-                            card_parts.append(f'<p class="news-desc">{_esc(fallback_desc, quote=True)}</p>')
-
-                    if source:
-                        card_parts.append(html_source_tag(source))
-
-                    card_parts.append("</div>")  # close news-card-body
-                    card_parts.append("</div>")  # close news-card-item
+                    card_html = self._render_featured_card(
+                        article,
+                        num=shown + 1,
+                        title=title,
+                        description=description,
+                        orig_title=orig_title,
+                        theme_key=key,
+                        sumr_module=_sumr,
+                    )
                     lines.append("")  # blank line before HTML block
-                    lines.append("\n".join(card_parts))
+                    lines.append(card_html)
                     lines.append("")  # blank line after HTML block
                     cross_theme_featured.add(orig_title)
                 else:
