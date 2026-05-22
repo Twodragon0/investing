@@ -1220,10 +1220,13 @@ class ThemeSummarizer:
     def score_impact(self, item: Dict[str, Any]) -> float:
         """Score an item's impact (0-10) based on source authority and content signals.
 
-        Reserved for critical-alert-redesign Phase 1 (see
-        ``docs/critical-alert-redesign.md``). No production callers today;
-        contract is locked by ``tests/test_summarizer.py::TestScoreImpact``.
-        Do not remove without the redesign owner.
+        Legacy. Phase 1 of critical-alert-redesign was implemented in
+        ``scripts/common/risk_classifier.py`` without reusing this method;
+        the redesign re-derived the regex patterns and weights independently.
+        No production callers today, but the contract is locked by
+        ``tests/test_summarizer.py::TestScoreImpact`` (6 cases).
+        Removal requires retiring those tests; defer until the redesign
+        owner signs off.
         """
         text = (item.get("title", "") + " " + item.get("description", "")).lower()
         source = item.get("source", "").lower()
