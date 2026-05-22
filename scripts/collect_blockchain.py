@@ -15,6 +15,7 @@ from typing import Any, Dict, List
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common import post_html
 from common.base_collector import BaseCollector
 from common.blockchain_api import (
     fetch_btc_stats,
@@ -181,31 +182,18 @@ def build_report_content(
                 parts.append(f"- {title} — {source}")
         parts.append("")
 
-    # ── Summary stats ──
-    stat_items = []
+    # ── Summary stats (uses scripts/common/post_html.stat_grid helper) ──
+    stat_pairs: list[tuple[str, str]] = []
     if btc:
-        stat_items.append(
-            f'<div class="stat-item"><div class="stat-value">{_fmt_hash_rate(btc.get("hash_rate_ehs", 0))}</div>'
-            f'<div class="stat-label">BTC 해시레이트</div></div>'
-        )
-        stat_items.append(
-            f'<div class="stat-item"><div class="stat-value">{_fmt_number(btc.get("n_tx", 0))}</div>'
-            f'<div class="stat-label">BTC 일일 트랜잭션</div></div>'
-        )
+        stat_pairs.append((_fmt_hash_rate(btc.get("hash_rate_ehs", 0)), "BTC 해시레이트"))
+        stat_pairs.append((_fmt_number(btc.get("n_tx", 0)), "BTC 일일 트랜잭션"))
     if eth and eth.get("gas_propose"):
-        stat_items.append(
-            f'<div class="stat-item"><div class="stat-value">{float(eth["gas_propose"]):.2f} Gwei</div>'
-            f'<div class="stat-label">ETH 가스 (Standard)</div></div>'
-        )
+        stat_pairs.append((f"{float(eth['gas_propose']):.2f} Gwei", "ETH 가스 (Standard)"))
     if eth and eth.get("eth_supply"):
-        stat_items.append(
-            f'<div class="stat-item"><div class="stat-value">{eth["eth_supply"] / 1e6:.1f}M</div>'
-            f'<div class="stat-label">ETH 공급량</div></div>'
-        )
+        stat_pairs.append((f"{eth['eth_supply'] / 1e6:.1f}M", "ETH 공급량"))
 
-    stat_grid = ""
-    if stat_items:
-        stat_grid = '<div class="stat-grid">' + "".join(stat_items) + "</div>\n\n"
+    stat_grid_html = post_html.stat_grid(stat_pairs)
+    stat_grid = stat_grid_html + "\n\n" if stat_grid_html else ""
 
     # ── Lead paragraph (becomes page.excerpt → post-summary) ──
     # stat-grid HTML alone yields raw numbers after strip_html, so emit a
@@ -231,18 +219,15 @@ def build_report_content(
     else:
         lead_text = ""
 
-    # ── Footer ──
+    # ── Footer (uses scripts/common/post_html.footer_meta helper) ──
     sources = []
     if btc:
         sources.append("Blockchain.com")
     if eth:
         sources.append("Etherscan")
-    source_str = ", ".join(sources) if sources else "N/A"
 
     parts.append("---\n")
-    parts.append(
-        f'<div class="wm-footer-meta"><span>수집 시각: {today} KST</span><span>소스: {source_str}</span></div>'
-    )
+    parts.append(post_html.footer_meta(f"{today} KST", sources))
 
     content = lead_text + stat_grid + "\n".join(parts)
 
