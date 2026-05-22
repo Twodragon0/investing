@@ -982,11 +982,32 @@ class CryptoNewsCollector(BaseCollector):
         # Get top themes for opening
         top_themes = summarizer.get_top_themes()
         theme_names = [t[0] for t in top_themes] if top_themes else []
-        if theme_names:
-            themes_str = ", ".join(theme_names[:3])
+        themes_str = ", ".join(theme_names[:3]) if theme_names else ""
+
+        # Lead with the top news headline so the summary excerpt is concrete
+        # (avoid vague "...관련 소식이 주목됩니다" filler).
+        _top_headline = ""
+        if all_items:
+            _candidate = (
+                all_items[0].get("title_ko")
+                or all_items[0].get("title_translated")
+                or all_items[0].get("title", "")
+            )
+            _top_headline = _candidate.strip()[:80]
+
+        if _top_headline and themes_str:
             content_parts = [
-                f"**{today}** 암호화폐 시장에서 {len(all_items)}건의 뉴스를 분석했습니다. "
-                f"오늘은 **{themes_str}** 관련 소식이 주목됩니다.\n"
+                f"**{today}** 암호화폐 핵심 뉴스: **{_top_headline}**. "
+                f"총 {len(all_items)}건 분석, 핵심 테마는 **{themes_str}**입니다.\n"
+            ]
+        elif _top_headline:
+            content_parts = [
+                f"**{today}** 암호화폐 핵심 뉴스: **{_top_headline}**. "
+                f"총 {len(all_items)}건의 시장 동향을 정리합니다.\n"
+            ]
+        elif themes_str:
+            content_parts = [
+                f"**{today}** 암호화폐 시장 {len(all_items)}건 분석 — 핵심 테마: **{themes_str}**.\n"
             ]
         else:
             content_parts = [f"**{today}** 암호화폐 시장에서 {len(all_items)}건의 뉴스를 분석했습니다.\n"]

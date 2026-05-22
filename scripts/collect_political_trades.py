@@ -582,9 +582,26 @@ class PoliticalTradesCollector(BaseCollector):
             source_parts.append(f"중앙은행 {cb_count}건")
         sources_str = ", ".join(source_parts) if source_parts else "데이터 없음"
 
-        content_parts.append(
-            f"**{self.today}** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 총 **{total_count}건** — {sources_str}."
-        )
+        # Lead with the top headline so the post-summary excerpt becomes
+        # concrete ("X 거래·발의·정책" 형식 대신 실제 사건명 노출).
+        _top_headline = ""
+        if unique_items:
+            _candidate = (
+                unique_items[0].get("title_ko")
+                or unique_items[0].get("title_translated")
+                or unique_items[0].get("title", "")
+            )
+            _top_headline = _candidate.strip()[:80]
+
+        if _top_headline:
+            content_parts.append(
+                f"**{self.today}** 정치권 핵심 이슈: **{_top_headline}**. "
+                f"미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **{total_count}건** ({sources_str})을 종합 정리합니다."
+            )
+        else:
+            content_parts.append(
+                f"**{self.today}** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 총 **{total_count}건** — {sources_str}."
+            )
 
         # Keyword analysis
         all_texts = " ".join(item.get("title", "") + " " + item.get("description", "") for item in unique_items).lower()

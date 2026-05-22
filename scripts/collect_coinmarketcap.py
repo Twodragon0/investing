@@ -1253,13 +1253,34 @@ class CoinMarketCapCollector(BaseCollector):
             _desc_ko += f". 상위 {len(top_coins)}개 코인 분석."
             _desc_ko = _desc_ko[:160]
 
+            # Lead paragraph (becomes page.excerpt → post-summary). Without
+            # this the post body starts with <div class="stat-grid"> and the
+            # rendered summary collapses to raw stat numbers after strip_html.
+            _lead_bits: list[str] = []
+            if _btc and _btc_price:
+                _lead_bits.append(f"비트코인 **${_btc_price:,.0f}** (24h {_btc_ch24:+.1f}%)")
+            if _fg_val != "N/A":
+                _lead_bits.append(f"공포·탐욕 지수 **{_fg_val}/100** ({_fg_label})")
+            if _btc_dom:
+                _lead_bits.append(f"BTC 도미넌스 **{_btc_dom:.1f}%**")
+            if _lead_bits:
+                _lead_text = (
+                    f"**{today}** "
+                    + " · ".join(_lead_bits)
+                    + f". 상위 {len(top_coins)}개 코인의 시세 및 모멘텀을 정리합니다.\n\n"
+                )
+            else:
+                _lead_text = ""
+
+            _sections_body = re.sub(
+                r"\n{3,}",
+                "\n\n",
+                "\n\n".join(f"## {k}\n\n{v}" for k, v in sections.items() if v and v.strip()),
+            )
+
             filepath = self.create_post(
                 title=title,
-                content=re.sub(
-                    r"\n{3,}",
-                    "\n\n",
-                    "\n\n".join(f"## {k}\n\n{v}" for k, v in sections.items() if v and v.strip()),
-                ),
+                content=_lead_text + _sections_body,
                 tags=["market-report", "crypto", "top-coins", "trending", "daily"],
                 source=source_name,
                 image=frontmatter_image,

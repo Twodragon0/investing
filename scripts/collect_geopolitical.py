@@ -993,7 +993,13 @@ class GeopoliticalCollector(BaseCollector):
         """지정학 리스크 리포트 전체 본문을 생성합니다."""
         content_parts: List[str] = []
 
-        # Header summary
+        # Compute top theme + headline up front so the lead can reference them
+        theme_counter: Counter = Counter()
+        for item in google_news_items + gdelt_articles:
+            theme = _classify_geo_theme(item.get("title", ""))
+            theme_counter[theme] += 1
+        top_theme = theme_counter.most_common(1)[0][0] if theme_counter else "N/A"
+
         source_count = sum(
             [
                 1 if markets else 0,
@@ -1001,19 +1007,46 @@ class GeopoliticalCollector(BaseCollector):
                 1 if google_news_items else 0,
             ]
         )
-        content_parts.append(
-            f"**{self.today}** 기준 지정학적 리스크 데이터를 {source_count}개 소스에서 수집·분석했습니다. "
-            f"예측 시장 {len(markets)}건, 글로벌 뉴스 분석 {len(gdelt_articles)}건, "
-            f"뉴스 {len(google_news_items)}건을 종합합니다.\n"
-        )
 
-        # Alert box
-        theme_counter: Counter = Counter()
-        for item in google_news_items + gdelt_articles:
-            theme = _classify_geo_theme(item.get("title", ""))
-            theme_counter[theme] += 1
+        # Lead with the most concrete signal available: top news headline first,
+        # then top GDELT headline, then top Polymarket question. Falls back to
+        # a count summary only when no headlines exist.
+        _top_headline = ""
+        _headline_source = ""
+        if google_news_items:
+            _candidate = (
+                google_news_items[0].get("title_ko")
+                or google_news_items[0].get("title_translated")
+                or google_news_items[0].get("title", "")
+            )
+            if _candidate.strip():
+                _top_headline = _candidate.strip()[:90]
+                _headline_source = "Google News"
+        if not _top_headline and gdelt_articles:
+            for art in gdelt_articles:
+                _candidate = (art.get("title") or "").strip()
+                if _candidate and not _GDELT_NOISE_TITLE_RE.match(_candidate):
+                    _top_headline = _candidate[:90]
+                    _headline_source = "GDELT"
+                    break
+        if not _top_headline and markets:
+            _candidate = (markets[0].get("title") or "").strip()
+            if _candidate:
+                _top_headline = _candidate[:90]
+                _headline_source = "Polymarket"
 
-        top_theme = theme_counter.most_common(1)[0][0] if theme_counter else "N/A"
+        if _top_headline:
+            content_parts.append(
+                f"**{self.today}** 지정학 핵심 이슈: **{_top_headline}** "
+                f"({_headline_source}). 주요 테마는 **{top_theme}**이며, "
+                f"Polymarket {len(markets)}건·GDELT {len(gdelt_articles)}건·뉴스 {len(google_news_items)}건을 종합 분석했습니다.\n"
+            )
+        else:
+            content_parts.append(
+                f"**{self.today}** 기준 지정학적 리스크 데이터를 {source_count}개 소스에서 수집·분석했습니다. "
+                f"예측 시장 {len(markets)}건, 글로벌 뉴스 분석 {len(gdelt_articles)}건, "
+                f"뉴스 {len(google_news_items)}건을 종합합니다.\n"
+            )
         content_parts.extend(
             [
                 '<div class="alert-box alert-warning"><strong>지정학 리스크 스냅샷</strong><ul>',

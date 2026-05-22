@@ -207,6 +207,30 @@ def build_report_content(
     if stat_items:
         stat_grid = '<div class="stat-grid">' + "".join(stat_items) + "</div>\n\n"
 
+    # ── Lead paragraph (becomes page.excerpt → post-summary) ──
+    # stat-grid HTML alone yields raw numbers after strip_html, so emit a
+    # natural-language sentence before it. Values are pulled from the same
+    # source dicts so the lead stays in lockstep with the grid.
+    lead_bits: list[str] = []
+    if btc:
+        _hr = _fmt_hash_rate(btc.get("hash_rate_ehs", 0))
+        _tx = _fmt_number(btc.get("n_tx", 0))
+        lead_bits.append(f"BTC 해시레이트 **{_hr}**, 일일 트랜잭션 **{_tx}건**")
+    if eth and eth.get("gas_propose"):
+        _gas = float(eth["gas_propose"])
+        if eth.get("eth_price_usd"):
+            lead_bits.append(f"ETH 가스 **{_gas:.2f} Gwei**, ETH **${eth['eth_price_usd']:,.0f}**")
+        else:
+            lead_bits.append(f"ETH 가스 **{_gas:.2f} Gwei**")
+    if lead_bits:
+        lead_text = (
+            f"**{today}** 블록체인 네트워크 현황: "
+            + " · ".join(lead_bits)
+            + ". 채굴/네트워크 활성도와 가스비 추이를 정리합니다.\n\n"
+        )
+    else:
+        lead_text = ""
+
     # ── Footer ──
     sources = []
     if btc:
@@ -220,7 +244,7 @@ def build_report_content(
         f'<div class="wm-footer-meta"><span>수집 시각: {today} KST</span><span>소스: {source_str}</span></div>'
     )
 
-    content = stat_grid + "\n".join(parts)
+    content = lead_text + stat_grid + "\n".join(parts)
 
     # Description/excerpt
     desc_parts = []
