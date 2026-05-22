@@ -37,6 +37,7 @@ from common.markdown_utils import (
 )
 from common.post_generator import build_dated_permalink
 from common.rss_fetcher import fetch_rss_feeds_concurrent
+from common.text_lang import is_supported_language as _is_supported_language  # noqa: F401
 from common.utils import request_with_retry, sanitize_string, truncate_text
 
 _log = logging.getLogger(__name__)
@@ -558,33 +559,6 @@ _GDELT_NOISE_TITLE_RE = re.compile(
     re.IGNORECASE,
 )
 
-_HANGUL_RE = re.compile(r"[가-힣]")
-# CJK Unified Ideographs (Chinese/Japanese Kanji) — distinct from Hangul block.
-_CJK_IDEOGRAPH_RE = re.compile(r"[一-鿿]")
-
-
-def _is_supported_language(title: str) -> bool:
-    """Return True only when title is Korean or English.
-
-    Script checks come first because langdetect mis-labels CJK ideograph
-    titles as 'ko' (its Korean profile shares ngrams with Chinese). After
-    the script gate, langdetect resolves Latin-script ambiguity (en vs
-    id/tr/de/...) and we accept only 'en'.
-    """
-    title = title.strip()
-    if not title:
-        return False
-    if _HANGUL_RE.search(title):
-        return True
-    if _CJK_IDEOGRAPH_RE.search(title):
-        return False
-    try:
-        from langdetect import DetectorFactory, detect
-
-        DetectorFactory.seed = 0
-        return detect(title) == "en"
-    except Exception:
-        return True
 
 
 def _build_gdelt_section(articles: List[Dict[str, Any]]) -> List[str]:

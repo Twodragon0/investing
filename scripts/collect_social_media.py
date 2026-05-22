@@ -40,6 +40,7 @@ from common.markdown_utils import (
 from common.post_generator import build_dated_permalink
 from common.rss_fetcher import fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
+from common.text_lang import is_supported_language
 from common.translator import get_display_title, translate_to_korean
 from common.utils import (
     remove_sponsored_text,
@@ -600,12 +601,16 @@ class SocialMediaCollector(BaseCollector):
             len(political_items),
         )
 
-        # ── 엔터테인먼트/스포츠 필터 — post 생성 전 적용 ──
+        # ── 엔터테인먼트/스포츠 필터 + 비한·영 언어 필터 — post 생성 전 적용 ──
+        def _readable(i: Dict[str, Any]) -> bool:
+            t = (i.get("title_ko") or i.get("title_translated") or i.get("title") or "").strip()
+            return not t or is_supported_language(t)
+
         before_counts = (len(telegram_items), len(social_items), len(reddit_items), len(political_items))
-        telegram_items = [i for i in telegram_items if not _is_entertainment(i)]
-        social_items = [i for i in social_items if not _is_entertainment(i)]
-        reddit_items = [i for i in reddit_items if not _is_entertainment(i)]
-        political_items = [i for i in political_items if not _is_entertainment(i)]
+        telegram_items = [i for i in telegram_items if not _is_entertainment(i) and _readable(i)]
+        social_items = [i for i in social_items if not _is_entertainment(i) and _readable(i)]
+        reddit_items = [i for i in reddit_items if not _is_entertainment(i) and _readable(i)]
+        political_items = [i for i in political_items if not _is_entertainment(i) and _readable(i)]
         after_counts = (len(telegram_items), len(social_items), len(reddit_items), len(political_items))
         filtered_total = sum(b - a for b, a in zip(before_counts, after_counts, strict=False))
         if filtered_total:

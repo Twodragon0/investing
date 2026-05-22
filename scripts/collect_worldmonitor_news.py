@@ -28,6 +28,7 @@ from common.markdown_utils import (
 )
 from common.post_generator import build_dated_permalink
 from common.rss_fetcher import fetch_rss_feeds_concurrent
+from common.text_lang import is_supported_language
 from common.translator import get_display_title
 from common.utils import truncate_text
 from common.worldmonitor_utils import worldmonitor_sort_key
@@ -720,12 +721,18 @@ class WorldMonitorCollector(BaseCollector):
             if not orig_title:
                 continue
 
+            title = get_display_title(item) or orig_title
+            # Drop titles whose script is unreadable for Korean/English readers
+            # (Cyrillic/CJK ideograph/Indonesian-Latin/Turkish-Latin/etc).
+            if not is_supported_language(title):
+                continue
+
             source_counter[source] += 1
             theme = classify_theme(orig_title)
             theme_counter[theme] += 1
             impact = impact_label(theme)
 
-            title = get_display_title(item) or orig_title
+
             safe_title = html_text(title)
             display_title = markdown_link(f"**{title}**", link) if link else f"**{escape_table_cell(title)}**"
             # HTML <a> version for use inside HTML card blocks (markdown doesn't render in HTML divs)
