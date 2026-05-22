@@ -495,9 +495,11 @@ def _generate_worldmonitor_summary(
         risk_note = "글로벌 안보 환경이 비교적 안정적인 상황입니다."
 
     lines.append(
-        f'<div class="alert-box alert-warning">\n'
-        f"<strong>지정학 리스크 레벨: {risk_level}</strong> — {risk_note}\n"
-        f"</div>\n"
+        post_html.alert_box(
+            f"지정학 리스크 레벨: {risk_level}",
+            [risk_note],
+            variant="warning",
+        )
     )
 
     # Theme-based analysis

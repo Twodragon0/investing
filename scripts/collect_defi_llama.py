@@ -21,6 +21,7 @@ import requests
 # Add scripts directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common import post_html
 from common.base_collector import BaseCollector
 from common.collector_config import get_collector_config, get_limit, get_threshold
 from common.config import REQUEST_TIMEOUT, get_verify_ssl, setup_logging
@@ -694,11 +695,15 @@ def build_post_content(
         top_cat = max(category_tvl_temp.items(), key=lambda x: x[1])
         briefing_items.append(f"<li>📊 <strong>최다 카테고리</strong>: {top_cat[0]} — {_format_tvl(top_cat[1])}</li>")
     if briefing_items:
+        # briefing_items hold full "<li>...</li>" strings; alert_box wraps
+        # bullets in <li>, so strip the outer tags before handing off.
+        _bullets = [item.removeprefix("<li>").removesuffix("</li>") for item in briefing_items]
         content_parts.append(
-            f'<div class="alert-box alert-info">'
-            f"<strong>DeFi 생태계 {_format_tvl(total_protocol_tvl)} 규모 분석</strong>"
-            f"<ul>{''.join(briefing_items)}</ul>"
-            f"</div>"
+            post_html.alert_box(
+                f"DeFi 생태계 {_format_tvl(total_protocol_tvl)} 규모 분석",
+                _bullets,
+                variant="info",
+            )
         )
 
     # 전체 뉴스 요약 (narrative)
