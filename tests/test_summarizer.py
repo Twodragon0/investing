@@ -1053,60 +1053,6 @@ class TestGenerateMarketInsight:
 
 
 # ---------------------------------------------------------------------------
-# ThemeSummarizer: score_impact
-# ---------------------------------------------------------------------------
-
-
-class TestScoreImpact:
-    """Tests for ThemeSummarizer.score_impact()."""
-
-    def test_base_score_unknown_source(self):
-        ts = ThemeSummarizer([])
-        item = {"title": "some news", "description": "", "source": "unknown_blog"}
-        score = ts.score_impact(item)
-        assert 0 < score <= 10.0
-
-    def test_reuters_source_gets_higher_base(self):
-        ts = ThemeSummarizer([])
-        item_reuters = {"title": "Bitcoin", "description": "", "source": "Reuters"}
-        item_unknown = {"title": "Bitcoin", "description": "", "source": "blog"}
-        assert ts.score_impact(item_reuters) > ts.score_impact(item_unknown)
-
-    def test_percentage_mention_increases_score(self):
-        ts = ThemeSummarizer([])
-        item_pct = {"title": "BTC surges 15%", "description": "", "source": "blog"}
-        item_no = {"title": "BTC news", "description": "", "source": "blog"}
-        assert ts.score_impact(item_pct) > ts.score_impact(item_no)
-
-    def test_large_dollar_amount_increases_score(self):
-        ts = ThemeSummarizer([])
-        item_big = {"title": "Fund raises $5 billion for Bitcoin", "description": "", "source": "blog"}
-        item_small = {"title": "Bitcoin update", "description": "", "source": "blog"}
-        assert ts.score_impact(item_big) > ts.score_impact(item_small)
-
-    def test_urgency_keyword_increases_score(self):
-        ts = ThemeSummarizer([])
-        item_urgent = {"title": "breaking Bitcoin crash", "description": "emergency", "source": "blog"}
-        item_normal = {"title": "Bitcoin update", "description": "routine", "source": "blog"}
-        assert ts.score_impact(item_urgent) > ts.score_impact(item_normal)
-
-    def test_score_capped_at_10(self):
-        ts = ThemeSummarizer([])
-        item = {
-            "title": "breaking emergency urgent Bitcoin crash 50% $10 billion",
-            "description": "fed sec emergency flash $5 billion 20%",
-            "source": "reuters",
-        }
-        assert ts.score_impact(item) <= 10.0
-
-    def test_institutional_name_increases_score(self):
-        ts = ThemeSummarizer([])
-        item_inst = {"title": "SEC issues notice", "description": "fed decision", "source": "blog"}
-        item_plain = {"title": "random crypto news", "description": "nothing special", "source": "blog"}
-        assert ts.score_impact(item_inst) > ts.score_impact(item_plain)
-
-
-# ---------------------------------------------------------------------------
 # ThemeSummarizer: get_theme_sentiment
 # ---------------------------------------------------------------------------
 

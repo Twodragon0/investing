@@ -1202,61 +1202,6 @@ class ThemeSummarizer:
         lines.append("")
         return "\n".join(lines)
 
-    # Impact multipliers by source authority
-    _SOURCE_WEIGHTS = {
-        "reuters": 2.0,
-        "bloomberg": 2.0,
-        "coindesk": 1.5,
-        "cointelegraph": 1.5,
-        "sec": 2.0,
-        "fed": 2.0,
-        "wsj": 1.8,
-        "cnbc": 1.5,
-        "google news": 1.0,
-        "binance": 1.3,
-        "cryptopanic": 1.0,
-    }
-
-    def score_impact(self, item: Dict[str, Any]) -> float:
-        """Score an item's impact (0-10) based on source authority and content signals.
-
-        Legacy. Phase 1 of critical-alert-redesign was implemented in
-        ``scripts/common/risk_classifier.py`` without reusing this method;
-        the redesign re-derived the regex patterns and weights independently.
-        No production callers today, but the contract is locked by
-        ``tests/test_summarizer.py::TestScoreImpact`` (6 cases).
-        Removal requires retiring those tests; defer until the redesign
-        owner signs off.
-        """
-        text = (item.get("title", "") + " " + item.get("description", "")).lower()
-        source = item.get("source", "").lower()
-
-        # Base score from source authority
-        base = 1.0
-        for src_key, weight in self._SOURCE_WEIGHTS.items():
-            if src_key in source:
-                base = weight
-                break
-
-        # Content signals
-        signals = 0.0
-        # Price percentage mentions suggest quantitative impact
-        if re.search(r"[+-]?\d+\.?\d*%", text):
-            signals += 1.5
-        # Large dollar amounts
-        if re.search(r"\$[\d,.]+\s*(?:billion|million|B|M)", text, re.I):
-            signals += 2.0
-        # Institutional names
-        institutions = ["fed", "sec", "ecb", "imf", "world bank", "금융위", "한국은행", "금감원"]
-        if any(inst in text for inst in institutions):
-            signals += 1.5
-        # Urgency words
-        urgency = ["breaking", "urgent", "emergency", "속보", "긴급", "flash"]
-        if any(u in text for u in urgency):
-            signals += 2.0
-
-        return min(base + signals, 10.0)
-
     _SENTIMENT_POS = {
         "rally",
         "surge",

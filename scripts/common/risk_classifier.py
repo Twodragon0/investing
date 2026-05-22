@@ -49,7 +49,8 @@ _SOURCE_TYPE_WEIGHTS: dict[str, float] = {
     "default": 1.0,
 }
 
-# Fallback per-domain weights (from summarizer._SOURCE_WEIGHTS, kept for compat)
+# Fallback per-domain weights (originally seeded from summarizer._SOURCE_WEIGHTS,
+# now the canonical copy after score_impact removal — 2026-05-22)
 _DOMAIN_WEIGHTS: dict[str, float] = {
     "reuters": 2.0,
     "bloomberg": 2.0,
