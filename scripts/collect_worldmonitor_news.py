@@ -14,6 +14,7 @@ import requests
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common import post_html
 from common.base_collector import BaseCollector
 from common.collector_config import get_collector_config, get_url
 from common.config import REQUEST_TIMEOUT, USER_AGENT, get_verify_ssl
@@ -813,11 +814,15 @@ class WorldMonitorCollector(BaseCollector):
         content_parts = [
             _lead_text,
             "",
-            '<div class="alert-box alert-info"><strong>오늘의 글로벌 리스크 스냅샷</strong><ul>',
-            f"<li>총 수집: <strong>{total_items}건</strong></li>",
-            f"<li>핵심 테마: <strong>{', '.join(t for t, _ in theme_counter.most_common(3))}</strong></li>",
-            f"<li>집중 출처: <strong>{source_counter.most_common(1)[0][0] if source_counter else 'N/A'}</strong></li>",
-            "</ul></div>",
+            post_html.alert_box(
+                "오늘의 글로벌 리스크 스냅샷",
+                [
+                    f"총 수집: <strong>{total_items}건</strong>",
+                    f"핵심 테마: <strong>{', '.join(t for t, _ in theme_counter.most_common(3))}</strong>",
+                    f"집중 출처: <strong>{source_counter.most_common(1)[0][0] if source_counter else 'N/A'}</strong>",
+                ],
+                variant="info",
+            ),
             "",
             "## 핵심 요약",
             f"- 수집 건수: **{total_items}건**",
@@ -839,16 +844,14 @@ class WorldMonitorCollector(BaseCollector):
                 _generate_worldmonitor_summary(theme_counter, total_items, top_sources, issue_items),
                 "",
                 "## 테마별 현황",
-                '<div class="stat-grid">',
-                f'<div class="stat-item"><div class="stat-value">{total_items}</div>'
-                '<div class="stat-label">총 이슈</div></div>',
-                f'<div class="stat-item"><div class="stat-value">{len(theme_counter)}</div>'
-                '<div class="stat-label">테마 수</div></div>',
-                f'<div class="stat-item"><div class="stat-value">{len(source_counter)}</div>'
-                '<div class="stat-label">출처 수</div></div>',
-                f'<div class="stat-item"><div class="stat-value">{theme_counter.get("지정학/안보", 0)}</div>'
-                '<div class="stat-label">안보 이슈</div></div>',
-                "</div>",
+                post_html.stat_grid(
+                    [
+                        (str(total_items), "총 이슈"),
+                        (str(len(theme_counter)), "테마 수"),
+                        (str(len(source_counter)), "출처 수"),
+                        (str(theme_counter.get("지정학/안보", 0)), "안보 이슈"),
+                    ]
+                ),
                 "",
                 '<div class="theme-distribution">',
             ]
@@ -1001,10 +1004,10 @@ class WorldMonitorCollector(BaseCollector):
                 "> *본 브리핑은 worldmonitor.app RSS proxy를 통해 자동 수집된 데이터를 기반으로 하며, "
                 "투자 조언이 아닙니다.*",
                 "",
-                '<div class="wm-footer-meta">',
-                f"<span>수집 시각: {self.now.strftime('%Y-%m-%d %H:%M')} KST</span>",
-                "<span>소스: worldmonitor.app API, finance.worldmonitor.app</span>",
-                "</div>",
+                post_html.footer_meta(
+                    f"{self.now.strftime('%Y-%m-%d %H:%M')} KST",
+                    ["worldmonitor.app API", "finance.worldmonitor.app"],
+                ),
             ]
         )
 

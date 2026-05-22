@@ -22,6 +22,7 @@ import requests
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common import post_html
 from common.base_collector import BaseCollector
 from common.collector_config import get_collector_config, get_url
 from common.config import REQUEST_TIMEOUT
@@ -663,41 +664,22 @@ class PoliticalTradesCollector(BaseCollector):
         korea_filtered = [i for i in unique_items if "korea" in i.get("tags", [])]
         cb_filtered = [i for i in unique_items if "central-bank" in i.get("tags", [])]
 
-        # ── 한눈에 보기 (stat-grid + alert-box) ──
-        stat_items = [
-            f'<div class="stat-item"><div class="stat-value">{total_count}</div>'
-            f'<div class="stat-label">총 수집 건수</div></div>'
-        ]
+        # ── 한눈에 보기 (stat-grid + alert-box, shared post_html helpers) ──
+        stat_pairs: list[tuple[str, str]] = [(str(total_count), "총 수집 건수")]
         if congress_count:
-            stat_items.append(
-                f'<div class="stat-item"><div class="stat-value">{congress_count}</div>'
-                f'<div class="stat-label">의회 거래</div></div>'
-            )
+            stat_pairs.append((str(congress_count), "의회 거래"))
         if trump_count:
-            stat_items.append(
-                f'<div class="stat-item"><div class="stat-value">{trump_count}</div>'
-                f'<div class="stat-label">트럼프 정책</div></div>'
-            )
+            stat_pairs.append((str(trump_count), "트럼프 정책"))
         if sec_count:
-            stat_items.append(
-                f'<div class="stat-item"><div class="stat-value">{sec_count}</div>'
-                f'<div class="stat-label">SEC 내부자</div></div>'
-            )
+            stat_pairs.append((str(sec_count), "SEC 내부자"))
         if korea_count:
-            stat_items.append(
-                f'<div class="stat-item"><div class="stat-value">{korea_count}</div>'
-                f'<div class="stat-label">한국 정치인</div></div>'
-            )
+            stat_pairs.append((str(korea_count), "한국 정치인"))
         if cb_count:
-            stat_items.append(
-                f'<div class="stat-item"><div class="stat-value">{cb_count}</div>'
-                f'<div class="stat-label">중앙은행</div></div>'
-            )
+            stat_pairs.append((str(cb_count), "중앙은행"))
 
         content_parts.append("## 한눈에 보기")
-        content_parts.append(f'<div class="stat-grid">{"".join(stat_items)}</div>')
+        content_parts.append(post_html.stat_grid(stat_pairs))
 
-        # Alert box with top keywords
         if top_keywords:
             kw_text = ", ".join(f"**{kw}**({cnt}회)" for kw, cnt in top_keywords[:5])
             content_parts.append(
@@ -1035,10 +1017,10 @@ class PoliticalTradesCollector(BaseCollector):
             )
 
         content_parts.append(
-            '<div class="wm-footer-meta">'
-            f"<span>수집 시각: {self.now.strftime('%Y-%m-%d %H:%M')} KST</span>"
-            "<span>소스: Capitol Trades, QuiverQuant, SEC EDGAR</span>"
-            "</div>"
+            post_html.footer_meta(
+                f"{self.now.strftime('%Y-%m-%d %H:%M')} KST",
+                ["Capitol Trades", "QuiverQuant", "SEC EDGAR"],
+            )
         )
 
         return "\n\n".join(content_parts)

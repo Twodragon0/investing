@@ -20,6 +20,7 @@ import requests
 # Add scripts directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common import post_html
 from common.base_collector import BaseCollector
 from common.collector_config import get_collector_config, get_limit, get_threshold, get_url
 from common.config import (
@@ -533,22 +534,23 @@ def _build_polymarket_section(markets: List[Dict[str, Any]]) -> tuple:
     else:
         lines.append("현재 지정학 관련 활성 예측 마켓이 없습니다.\n")
 
-    # Summary stats: only render when there are markets to show. When empty,
-    # the "현재 지정학 관련 활성 예측 마켓이 없습니다." line above is sufficient —
-    # a stat-grid with "-" placeholders just adds visual clutter.
-    # Uses <div class="stat-value"> to match the 7-report stat-grid convention.
+    # Summary stats: only render when there are markets to show. Uses the
+    # shared post_html.stat_grid helper (consistent with the other reports).
     if filtered_markets:
         total_volume = sum(m.get("volume", 0) for m in filtered_markets)
+        _polymarket_link = (
+            '<a href="https://polymarket.com" target="_blank" rel="noopener noreferrer">Polymarket</a>'
+        )
         lines.append(
-            '\n<div class="stat-grid">'
-            f'<div class="stat-item"><div class="stat-value">{len(filtered_markets)}</div>'
-            f'<div class="stat-label">분석 대상</div></div>'
-            f'<div class="stat-item"><div class="stat-value">${total_volume:,.0f}</div>'
-            f'<div class="stat-label">합산 거래량</div></div>'
-            f'<div class="stat-item"><div class="stat-value">'
-            f'<a href="https://polymarket.com" target="_blank" rel="noopener noreferrer">Polymarket</a></div>'
-            f'<div class="stat-label">출처</div></div>'
-            "</div>\n"
+            "\n"
+            + post_html.stat_grid(
+                [
+                    (str(len(filtered_markets)), "분석 대상"),
+                    (f"${total_volume:,.0f}", "합산 거래량"),
+                    (_polymarket_link, "출처"),
+                ]
+            )
+            + "\n"
         )
 
     return lines, filtered_markets
@@ -1084,34 +1086,31 @@ class GeopoliticalCollector(BaseCollector):
                 f"예측 시장 {len(markets)}건, 글로벌 뉴스 분석 {len(gdelt_articles)}건, "
                 f"뉴스 {len(google_news_items)}건을 종합합니다.\n"
             )
-        content_parts.extend(
-            [
-                '<div class="alert-box alert-warning"><strong>지정학 리스크 스냅샷</strong><ul>',
-                f"<li>Polymarket 예측 시장: <strong>{len(markets)}건</strong></li>",
-                f"<li>GDELT 글로벌 뉴스: <strong>{len(gdelt_articles)}건</strong></li>",
-                f"<li>뉴스 기사: <strong>{len(google_news_items)}건</strong></li>",
-                f"<li>주요 테마: <strong>{top_theme}</strong></li>",
-                "</ul></div>\n",
-            ]
+        content_parts.append(
+            post_html.alert_box(
+                "지정학 리스크 스냅샷",
+                [
+                    f"Polymarket 예측 시장: <strong>{len(markets)}건</strong>",
+                    f"GDELT 글로벌 뉴스: <strong>{len(gdelt_articles)}건</strong>",
+                    f"뉴스 기사: <strong>{len(google_news_items)}건</strong>",
+                    f"주요 테마: <strong>{top_theme}</strong>",
+                ],
+                variant="warning",
+            )
+            + "\n"
         )
 
-        # Stat grid - source counts at a glance. Uses <div class="stat-value">
-        # to match the convention shared by the other 6 daily reports
-        # (designer audit, 2026-05-22). Drops "데이터 소스" meta-stat as well.
-        content_parts.append('<div class="stat-grid">')
+        # Stat grid - source counts at a glance. Drops "데이터 소스" meta-stat.
         content_parts.append(
-            f'<div class="stat-item"><div class="stat-value">{len(markets)}</div>'
-            '<div class="stat-label">Polymarket</div></div>'
+            post_html.stat_grid(
+                [
+                    (str(len(markets)), "Polymarket"),
+                    (str(len(gdelt_articles)), "GDELT 뉴스"),
+                    (str(len(google_news_items)), "뉴스 기사"),
+                ]
+            )
+            + "\n"
         )
-        content_parts.append(
-            f'<div class="stat-item"><div class="stat-value">{len(gdelt_articles)}</div>'
-            '<div class="stat-label">GDELT 뉴스</div></div>'
-        )
-        content_parts.append(
-            f'<div class="stat-item"><div class="stat-value">{len(google_news_items)}</div>'
-            '<div class="stat-label">뉴스 기사</div></div>'
-        )
-        content_parts.append("</div>\n")
 
         # Section 1: Polymarket prediction markets
         content_parts.append("## 1. 예측 시장 동향 (Polymarket)\n")
@@ -1162,10 +1161,11 @@ class GeopoliticalCollector(BaseCollector):
 
         # Footer
         content_parts.append(
-            '\n<div class="wm-footer-meta">'
-            f"<span>수집 시각: {self.now.strftime('%Y-%m-%d %H:%M')} KST</span>"
-            "<span>소스: Polymarket, GDELT Project, Google News RSS</span>"
-            "</div>"
+            "\n"
+            + post_html.footer_meta(
+                f"{self.now.strftime('%Y-%m-%d %H:%M')} KST",
+                ["Polymarket", "GDELT Project", "Google News RSS"],
+            )
         )
 
         return "\n".join(content_parts)

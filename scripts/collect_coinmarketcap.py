@@ -21,6 +21,7 @@ import requests
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common import post_html
 from common.base_collector import BaseCollector
 from common.collector_config import get_collector_config, get_limit, get_url
 from common.config import get_env, get_verify_ssl
@@ -931,13 +932,13 @@ class CoinMarketCapCollector(BaseCollector):
                 self.logger.warning("Briefing card generation failed: %s", e)
 
             # 1. 한눈에 보기 — stat-grid + alert-box
-            stat_items = []
             alert_lines = []
 
             btc = next(
                 (c for c in top_coins if (c.get("symbol") or "").lower() in ("btc",)),
                 None,
             )
+            stat_pairs: list[tuple[str, str]] = []
             if btc:
                 if cmc_source == "coingecko":
                     btc_price = btc.get("current_price", 0)
@@ -946,32 +947,20 @@ class CoinMarketCapCollector(BaseCollector):
                     btc_q = btc.get("quote", {}).get("USD", {})
                     btc_price = btc_q.get("price", 0) or 0
                     btc_ch24 = btc_q.get("percent_change_24h", 0) or 0
-                stat_items.append(
-                    f'<div class="stat-item"><div class="stat-value">${btc_price:,.0f}</div>'
-                    f'<div class="stat-label">BTC ({btc_ch24:+.1f}%)</div></div>'
-                )
+                stat_pairs.append((f"${btc_price:,.0f}", f"BTC ({btc_ch24:+.1f}%)"))
 
             if fear_greed:
                 fg_val = fear_greed.get("value", 0)
                 fg_cls = fear_greed.get("classification", "N/A")
-                stat_items.append(
-                    f'<div class="stat-item"><div class="stat-value">{fg_val}</div>'
-                    f'<div class="stat-label">공포/탐욕 ({fg_cls})</div></div>'
-                )
+                stat_pairs.append((str(fg_val), f"공포/탐욕 ({fg_cls})"))
 
             if global_data:
                 total_mcap = global_data.get("total_market_cap", {}).get("usd", 0)
                 mcap_ch = global_data.get("market_cap_change_percentage_24h_usd", 0)
                 btc_dom = global_data.get("market_cap_percentage", {}).get("btc", 0)
                 if total_mcap:
-                    stat_items.append(
-                        f'<div class="stat-item"><div class="stat-value">{_fmt_num(total_mcap)}</div>'
-                        f'<div class="stat-label">총 시가총액</div></div>'
-                    )
-                stat_items.append(
-                    f'<div class="stat-item"><div class="stat-value">{btc_dom:.1f}%</div>'
-                    f'<div class="stat-label">BTC 도미넌스</div></div>'
-                )
+                    stat_pairs.append((_fmt_num(total_mcap), "총 시가총액"))
+                stat_pairs.append((f"{btc_dom:.1f}%", "BTC 도미넌스"))
 
             # Alert box: top 3 movers
             sorted_movers_brief = sorted(
@@ -996,14 +985,17 @@ class CoinMarketCapCollector(BaseCollector):
                 alert_lines.append(f"<li>{emoji} <strong>{mn}</strong> ({ms}): {mch:+.2f}%</li>")
 
             overview_parts = []
-            if stat_items:
-                overview_parts.append(f'<div class="stat-grid">{"".join(stat_items)}</div>')
+            grid_html = post_html.stat_grid(stat_pairs)
+            if grid_html:
+                overview_parts.append(grid_html)
             if alert_lines:
+                # alert_lines come pre-wrapped in <li>; reuse post_html.alert_box by stripping tags
                 overview_parts.append(
-                    '<div class="alert-box alert-info">'
-                    "<strong>24시간 주요 변동</strong>"
-                    f"<ul>{''.join(alert_lines)}</ul>"
-                    "</div>"
+                    post_html.alert_box(
+                        "24시간 주요 변동",
+                        [line.removeprefix("<li>").removesuffix("</li>") for line in alert_lines],
+                        variant="info",
+                    )
                 )
             if overview_parts:
                 sections["한눈에 보기"] = "\n\n".join(overview_parts)
@@ -1295,14 +1287,10 @@ class CoinMarketCapCollector(BaseCollector):
                 _section_parts.append(f"{_heading}\n\n{_v}")
             _sections_body = re.sub(r"\n{3,}", "\n\n", "\n\n".join(_section_parts))
 
-            # Footer-meta — designer audit (2026-05-22) flagged crypto-market
-            # as the only daily report missing wm-footer-meta. Matches the
-            # convention used by the other 6 reports for collection timestamp + source.
-            _footer = (
-                f'\n\n<div class="wm-footer-meta">'
-                f"<span>수집 시각: {today} KST</span>"
-                f"<span>소스: {'CoinGecko' if cmc_source == 'coingecko' else 'CoinMarketCap'}</span>"
-                f"</div>"
+            # Footer-meta (shared post_html helper).
+            _footer = "\n\n" + post_html.footer_meta(
+                f"{today} KST",
+                "CoinGecko" if cmc_source == "coingecko" else "CoinMarketCap",
             )
 
             filepath = self.create_post(

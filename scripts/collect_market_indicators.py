@@ -20,6 +20,7 @@ import requests
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common import post_html
 from common.base_collector import BaseCollector
 from common.bettafish_analyzer import BettaFishAnalyzer
 from common.collector_config import get_collector_config, get_url
@@ -815,31 +816,23 @@ def build_post_content(
     )
     parts.append(f"**{today}** 기준 시장 지표{_fg_str}{_vix_str}. {source_count}개 소스 수집.\n")
 
-    # Stat grid - key indicators at a glance
-    stat_items = []
+    # Stat grid - key indicators at a glance (shared post_html helper)
+    stat_pairs: List[tuple[str, str]] = []
     if cnn_fg:
-        score = cnn_fg["score"]
         rating_ko = _rating_to_korean(cnn_fg.get("rating", ""))
-        stat_items.append(
-            f'<div class="stat-item"><div class="stat-value">{score}</div><div class="stat-label">공포탐욕 ({rating_ko})</div></div>'
-        )
+        stat_pairs.append((str(cnn_fg["score"]), f"공포탐욕 ({rating_ko})"))
     vix_data = market_data.get("VIX")
     if vix_data:
-        stat_items.append(
-            f'<div class="stat-item"><div class="stat-value">{vix_data["price_fmt"]}</div><div class="stat-label">VIX</div></div>'
-        )
+        stat_pairs.append((vix_data["price_fmt"], "VIX"))
     dxy_data = market_data.get("DXY")
     if dxy_data:
-        stat_items.append(
-            f'<div class="stat-item"><div class="stat-value">{dxy_data["price_fmt"]}</div><div class="stat-label">DXY</div></div>'
-        )
+        stat_pairs.append((dxy_data["price_fmt"], "DXY"))
     gold_data = market_data.get("Gold")
     if gold_data:
-        stat_items.append(
-            f'<div class="stat-item"><div class="stat-value">{gold_data["price_fmt"]}</div><div class="stat-label">금</div></div>'
-        )
-    if stat_items:
-        parts.append('<div class="stat-grid">' + "".join(stat_items) + "</div>\n")
+        stat_pairs.append((gold_data["price_fmt"], "금"))
+    grid_html = post_html.stat_grid(stat_pairs)
+    if grid_html:
+        parts.append(grid_html + "\n")
 
     # ── Section 1: 시장 심리 지표 ──────────────────────────────────────────
     parts.append("## 1. 시장 심리 지표\n")
@@ -1077,10 +1070,11 @@ def build_post_content(
         "</div>"
     )
     parts.append(
-        '\n<div class="wm-footer-meta">'
-        f"<span>수집 시각: {now.strftime('%Y-%m-%d %H:%M')} KST</span>"
-        "<span>소스: CNN, CBOE, yfinance, FRED</span>"
-        "</div>"
+        "\n"
+        + post_html.footer_meta(
+            f"{now.strftime('%Y-%m-%d %H:%M')} KST",
+            ["CNN", "CBOE", "yfinance", "FRED"],
+        )
     )
 
     return "\n".join(parts)
