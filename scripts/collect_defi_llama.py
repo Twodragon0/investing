@@ -729,7 +729,7 @@ def build_post_content(
         )
 
     # ── Section 1: Top Protocols ──
-    content_parts.append(f"\n## 상위 {len(protocols)}개 프로토콜 TVL 순위\n")
+    content_parts.append(f"\n## 1. 상위 {len(protocols)}개 프로토콜 TVL 순위\n")
 
     if protocols:
         protocol_rows = []
@@ -761,7 +761,7 @@ def build_post_content(
         content_parts.append("*프로토콜 데이터를 불러오지 못했습니다.*")
 
     # ── Section 2: Top Chains ──
-    content_parts.append(f"\n## 상위 {len(chains)}개 체인 TVL 순위\n")
+    content_parts.append(f"\n## 2. 상위 {len(chains)}개 체인 TVL 순위\n")
 
     if chains:
         chain_rows = []
@@ -785,7 +785,7 @@ def build_post_content(
 
     # ── Section 3: Category Analysis ──
     if protocols:
-        content_parts.append("\n## 카테고리별 TVL 분석\n")
+        content_parts.append("\n## 3. 카테고리별 TVL 분석\n")
 
         category_tvl: Dict[str, float] = {}
         for p in protocols:
@@ -816,7 +816,7 @@ def build_post_content(
         content_parts.append(f"\n{stale_warning}")
 
     # ── Section 4: Insights ──
-    content_parts.append("\n## DeFi 시장 인사이트\n")
+    content_parts.append("\n## 4. DeFi 시장 인사이트\n")
 
     insight_lines = []
 

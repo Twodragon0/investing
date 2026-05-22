@@ -1272,11 +1272,28 @@ class CoinMarketCapCollector(BaseCollector):
             else:
                 _lead_text = ""
 
-            _sections_body = re.sub(
-                r"\n{3,}",
-                "\n\n",
-                "\n\n".join(f"## {k}\n\n{v}" for k, v in sections.items() if v and v.strip()),
-            )
+            # Number the data-driven domain sections "## N. <title>" while
+            # leaving fixed bookend sections unnumbered (Designer audit, 2026-05-22).
+            _UNNUMBERED = {
+                "시장 시각화",
+                "오늘의 브리핑",
+                "한눈에 보기",
+                "전체 뉴스 요약",
+                "시장 인사이트",
+                "시장 전망",
+            }
+            _section_parts: list[str] = []
+            _idx = 0
+            for _k, _v in sections.items():
+                if not (_v and _v.strip()):
+                    continue
+                if _k in _UNNUMBERED:
+                    _heading = f"## {_k}"
+                else:
+                    _idx += 1
+                    _heading = f"## {_idx}. {_k}"
+                _section_parts.append(f"{_heading}\n\n{_v}")
+            _sections_body = re.sub(r"\n{3,}", "\n\n", "\n\n".join(_section_parts))
 
             # Footer-meta — designer audit (2026-05-22) flagged crypto-market
             # as the only daily report missing wm-footer-meta. Matches the
