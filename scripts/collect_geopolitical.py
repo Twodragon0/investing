@@ -943,21 +943,35 @@ class GeopoliticalCollector(BaseCollector):
             self.logger.warning("Geopolitical briefing card generation failed: %s", e)
 
         _top_geo_themes = [t[0] for t in theme_counter.most_common(3)] if theme_counter else []
-        _desc_ko = f"지정학적 리스크 {total_items}건 수집. "
-        if _top_geo_themes:
-            _desc_ko += f"주요 테마: {', '.join(_top_geo_themes)}. "
-        source_count = sum(
-            [
-                1 if markets else 0,
-                1 if gdelt_articles else 0,
-                1 if google_news_items else 0,
-            ]
-        )
-        _top_market = markets[0].get("question", "")[:40] if markets else ""
-        if _top_market:
-            _desc_ko += f"주목 시장: {_top_market}."
+        # Reuse the body-lead headline so excerpt mirrors the rendered first paragraph.
+        _desc_headline = ""
+        if google_news_items:
+            _candidate = (
+                google_news_items[0].get("title_ko")
+                or google_news_items[0].get("title_translated")
+                or google_news_items[0].get("title", "")
+            )
+            if _candidate.strip():
+                _desc_headline = _candidate.strip()[:70]
+        if not _desc_headline and gdelt_articles:
+            for art in gdelt_articles:
+                _candidate = (art.get("title") or "").strip()
+                if _candidate and not _GDELT_NOISE_TITLE_RE.match(_candidate):
+                    _desc_headline = _candidate[:70]
+                    break
+        if not _desc_headline and markets:
+            _desc_headline = (markets[0].get("title") or "").strip()[:70]
+
+        if _desc_headline:
+            _desc_ko = f"핵심 이슈: {_desc_headline}. 총 {total_items}건 ({len(markets)} Polymarket / {len(gdelt_articles)} GDELT / {len(google_news_items)} 뉴스)"
+            if _top_geo_themes:
+                _desc_ko += f", 주요 테마: {', '.join(_top_geo_themes[:2])}"
+            _desc_ko += "."
         else:
-            _desc_ko += f"{source_count}개 소스 기반 분석."
+            _desc_ko = f"지정학적 리스크 {total_items}건 수집"
+            if _top_geo_themes:
+                _desc_ko += f". 주요 테마: {', '.join(_top_geo_themes)}"
+            _desc_ko += "."
         _desc_ko = _desc_ko[:160]
 
         # Create post

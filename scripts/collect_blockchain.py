@@ -349,20 +349,26 @@ class BlockchainCollector(BaseCollector):
         if eth:
             tags.append("ethereum")
 
-        _desc_parts_bc = []
+        # Build description from the same facts as the body lead so the
+        # post-summary excerpt stays in lockstep with the rendered body.
+        _desc_bits = []
         if btc:
-            _desc_parts_bc.append("BTC 네트워크 지표")
-        if eth:
-            _desc_parts_bc.append("ETH 네트워크 지표")
+            _desc_bits.append(
+                f"BTC 해시레이트 {_fmt_hash_rate(btc.get('hash_rate_ehs', 0))}, "
+                f"일일 트랜잭션 {_fmt_number(btc.get('n_tx', 0))}건"
+            )
+        if eth and eth.get("gas_propose"):
+            _gas_val = float(eth["gas_propose"])
+            if eth.get("eth_price_usd"):
+                _desc_bits.append(f"ETH 가스 {_gas_val:.2f} Gwei, ETH ${eth['eth_price_usd']:,.0f}")
+            else:
+                _desc_bits.append(f"ETH 가스 {_gas_val:.2f} Gwei")
         if l2_projects:
-            _desc_parts_bc.append(f"L2 프로젝트 {len(l2_projects)}개")
-        _desc_ko = f"블록체인 네트워크 통계 {source_count}개 소스 수집. "
-        if _desc_parts_bc:
-            _desc_ko += f"{', '.join(_desc_parts_bc)} 포함. "
-        if btc and btc.get("hashrate"):
-            _desc_ko += f"BTC 해시레이트: {btc['hashrate']}."
-        elif eth and eth.get("gas_price"):
-            _desc_ko += f"ETH 가스: {eth['gas_price']} Gwei."
+            _desc_bits.append(f"L2 프로젝트 {len(l2_projects)}개")
+        if _desc_bits:
+            _desc_ko = " · ".join(_desc_bits) + ". 채굴/네트워크 활성도와 가스비 추이를 정리합니다."
+        else:
+            _desc_ko = f"블록체인 네트워크 통계 {source_count}개 소스 수집."
         _desc_ko = _desc_ko[:160]
 
         post_path = self.create_post(

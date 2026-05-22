@@ -848,15 +848,19 @@ class CryptoNewsCollector(BaseCollector):
             _top_crypto_sources = [
                 name for name, _ in Counter(item.get("source", "unknown") for item in all_items).most_common(3)
             ]
-            _desc_ko_a = f"크립토 뉴스 {len(all_items)}건 수집. "
-            if _top_crypto_sources:
-                _desc_ko_a += f"주요 출처: {', '.join(_top_crypto_sources)}. "
+            # Lead with the headline so excerpt is concrete (mirrors body lead).
             _top_headline = (get_display_title(all_items[0]) if all_items else "").strip()
             if _top_headline:
                 _top_headline = _top_headline[:80].rsplit(" ", 1)[0] if len(_top_headline) > 80 else _top_headline
-                _desc_ko_a += f"오늘의 헤드라인: {_top_headline}"
+                _desc_ko_a = f"{_top_headline}. 크립토 뉴스 {len(all_items)}건 분석"
+                if _top_crypto_sources:
+                    _desc_ko_a += f" ({', '.join(_top_crypto_sources[:2])})"
+                _desc_ko_a += "."
             else:
-                _desc_ko_a += f"총 {len(all_items)}건의 시장 동향 분석"
+                _desc_ko_a = f"크립토 뉴스 {len(all_items)}건 수집"
+                if _top_crypto_sources:
+                    _desc_ko_a += f". 주요 출처: {', '.join(_top_crypto_sources)}"
+                _desc_ko_a += "."
             _desc_ko_a = _desc_ko_a[:160]
 
             filepath = self.create_post(

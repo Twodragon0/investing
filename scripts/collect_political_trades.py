@@ -504,14 +504,32 @@ class PoliticalTradesCollector(BaseCollector):
             _desc_parts.append(f"한국 정치인 {korea_count}건")
         if cb_count:
             _desc_parts.append(f"중앙은행 {cb_count}건")
-        _desc_ko = f"정치인 거래·정책 동향 {total_count}건 수집. "
-        if _desc_parts:
-            _desc_ko += f"{', '.join(_desc_parts)}. "
+        # Lead with the headline so excerpt mirrors the body lead.
+        _top_pol_headline = ""
+        if unique_items:
+            _candidate = (
+                unique_items[0].get("title_ko")
+                or unique_items[0].get("title_translated")
+                or unique_items[0].get("title", "")
+            )
+            _top_pol_headline = _candidate.strip()[:70]
         _top_ticker = (
             Counter(i.get("ticker", "") for i in unique_items if i.get("ticker")).most_common(1) if unique_items else []
         )
-        if _top_ticker:
-            _desc_ko += f"최다 거래 종목: {_top_ticker[0][0]}."
+
+        if _top_pol_headline:
+            _desc_ko = f"{_top_pol_headline}. 정치인 거래·정책 {total_count}건"
+            if _desc_parts:
+                _desc_ko += f" ({', '.join(_desc_parts[:2])})"
+            if _top_ticker:
+                _desc_ko += f", 최다 종목: {_top_ticker[0][0]}"
+            _desc_ko += "."
+        else:
+            _desc_ko = f"정치인 거래·정책 동향 {total_count}건 수집. "
+            if _desc_parts:
+                _desc_ko += f"{', '.join(_desc_parts)}. "
+            if _top_ticker:
+                _desc_ko += f"최다 거래 종목: {_top_ticker[0][0]}."
         _desc_ko = _desc_ko[:160]
 
         # Build excerpt
