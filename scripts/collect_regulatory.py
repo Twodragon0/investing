@@ -490,15 +490,19 @@ class RegulatoryCollector(BaseCollector):
             content_parts.append("---")
             content_parts.append(dist)
 
-        # Region sections
-        content_parts.append("---")
-        content_parts.extend(build_region_section(us_items, "미국 규제 동향", source_links))
-        content_parts.append("---")
-        content_parts.extend(build_region_section(korea_items, "한국 규제 동향", source_links))
-        content_parts.append("---")
-        content_parts.extend(build_region_section(asia_items, "아시아 규제 동향", source_links))
-        content_parts.append("---")
-        content_parts.extend(build_region_section(europe_items, "유럽 규제 동향", source_links))
+        # Region sections — auto-numbered "## N. <title>" (Designer audit, 2026-05-22)
+        _region_idx = 0
+        for _items, _title in [
+            (us_items, "미국 규제 동향"),
+            (korea_items, "한국 규제 동향"),
+            (asia_items, "아시아 규제 동향"),
+            (europe_items, "유럽 규제 동향"),
+        ]:
+            if not _items:
+                continue
+            _region_idx += 1
+            content_parts.append("---")
+            content_parts.extend(build_region_section(_items, f"{_region_idx}. {_title}", source_links))
 
         # Theme summary (custom regulatory analysis with descriptions)
         content_parts.append("---")
@@ -507,8 +511,9 @@ class RegulatoryCollector(BaseCollector):
             content_parts.append(theme_analysis)
 
         # Regulatory insight - impact analysis
+        _region_idx += 1
         content_parts.append("---")
-        content_parts.append("## 규제 인사이트")
+        content_parts.append(f"## {_region_idx}. 규제 인사이트")
         insight_lines = []
 
         # Regulatory keyword analysis for impact assessment

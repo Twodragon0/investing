@@ -751,11 +751,16 @@ class PoliticalTradesCollector(BaseCollector):
         # Collect source links
         source_links = []
 
+        # Auto-numbered headings — Designer audit (2026-05-22) recommended
+        # "## N. <title>" for domain sections after the fixed "한눈에 보기" / "전체 뉴스 요약" entries.
+        _section_idx = {"n": 0}
+
         def _render_news_cards(items: List[Dict], section_title: str, max_items: int = 10, featured: int = 5):
             """Add a news card section with descriptions to content_parts."""
             if not items:
                 return
-            content_parts.append(f"## {section_title}")
+            _section_idx["n"] += 1
+            content_parts.append(f"## {_section_idx['n']}. {section_title}")
             for i, item in enumerate(items[:max_items], 1):
                 title = get_display_title(item)
                 source = item.get("source", "unknown")
@@ -781,7 +786,8 @@ class PoliticalTradesCollector(BaseCollector):
         content_parts.append("---")
 
         # ── 정책 영향 분석 (데이터 기반 내러티브) ──
-        content_parts.append("## 정책 영향 분석")
+        _section_idx["n"] += 1
+        content_parts.append(f"## {_section_idx['n']}. 정책 영향 분석")
         analysis_lines = []
 
         # Buy/sell pattern detection from titles

@@ -663,7 +663,7 @@ def _build_fred_section(fred_data: Dict[str, Any]) -> str:
         return ""
 
     lines: List[str] = []
-    lines.append("## 📊 매크로 경제 지표 (FRED)\n")
+    lines.append("## 3. 매크로 경제 지표 (FRED)\n")
     lines.append("| 지표 | 현재값 | 변동 | 기준일 |")
     lines.append("|------|--------|------|--------|")
 
@@ -842,7 +842,7 @@ def build_post_content(
         parts.append('<div class="stat-grid">' + "".join(stat_items) + "</div>\n")
 
     # ── Section 1: 시장 심리 지표 ──────────────────────────────────────────
-    parts.append("## 🌡️ 시장 심리 지표\n")
+    parts.append("## 1. 시장 심리 지표\n")
     parts.append("| 지표 | 현재값 | 변화 | 신호 |")
     parts.append("|------|--------|------|------|")
 
@@ -876,7 +876,7 @@ def build_post_content(
         parts.append(_format_news_rows(put_call_news, limit=4))
 
     # ── Section 2: 주요 자산 동향 ─────────────────────────────────────────
-    parts.append("\n## 📈 주요 자산 동향\n")
+    parts.append("\n## 2. 주요 자산 동향\n")
     parts.append("| 자산 | 가격 | 변동률 | 방향 |")
     parts.append("|------|------|--------|------|")
 
@@ -929,7 +929,7 @@ def build_post_content(
         parts.append(f"\n{fred_section}")
 
     # ── Section 3: 시장 건강도 (Market Breadth) ───────────────────────────
-    parts.append("\n## 📊 시장 건강도 (Market Breadth)\n")
+    parts.append("\n## 4. 시장 건강도 (Market Breadth)\n")
     parts.append(
         "시장 폭(Market Breadth)은 전체 종목 중 상승 종목의 비율로 "
         "추세의 신뢰도를 평가합니다. 지수가 오르더라도 소수 종목만 상승하면 "
@@ -946,7 +946,7 @@ def build_post_content(
     parts.append("| 좁은 폭 (<40% 상승) | 소수 주도 — 취약한 랠리 | 리스크 관리 강화 |")
 
     # ── Section 4: 리스크 모니터 ─────────────────────────────────────────
-    parts.append("\n## ⚠️ 리스크 모니터\n")
+    parts.append("\n## 5. 리스크 모니터\n")
     parts.append(
         "레버리지·마진 채무는 시장의 취약성을 나타내는 선행 지표입니다. "
         "마진 채무가 과도하게 높을 경우 급락 시 강제 청산으로 낙폭이 확대될 수 있습니다.\n"
