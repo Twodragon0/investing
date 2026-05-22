@@ -970,23 +970,30 @@ class GeopoliticalCollector(BaseCollector):
 
         _top_geo_themes = [t[0] for t in theme_counter.most_common(3)] if theme_counter else []
         # Reuse the body-lead headline so excerpt mirrors the rendered first paragraph.
+        # Same script-readability filter as the body lead.
         _desc_headline = ""
         if google_news_items:
             _candidate = (
                 google_news_items[0].get("title_ko")
                 or google_news_items[0].get("title_translated")
                 or google_news_items[0].get("title", "")
-            )
-            if _candidate.strip():
-                _desc_headline = _candidate.strip()[:70]
+            ).strip()
+            if _candidate and _is_supported_language(_candidate):
+                _desc_headline = _candidate[:70]
         if not _desc_headline and gdelt_articles:
             for art in gdelt_articles:
                 _candidate = (art.get("title") or "").strip()
-                if _candidate and not _GDELT_NOISE_TITLE_RE.match(_candidate):
+                if (
+                    _candidate
+                    and not _GDELT_NOISE_TITLE_RE.match(_candidate)
+                    and _is_supported_language(_candidate)
+                ):
                     _desc_headline = _candidate[:70]
                     break
         if not _desc_headline and markets:
-            _desc_headline = (markets[0].get("title") or "").strip()[:70]
+            _candidate = (markets[0].get("title") or "").strip()
+            if _candidate and _is_supported_language(_candidate):
+                _desc_headline = _candidate[:70]
 
         if _desc_headline:
             _desc_ko = f"핵심 이슈: {_desc_headline}. 총 {total_items}건 ({len(markets)} Polymarket / {len(gdelt_articles)} GDELT / {len(google_news_items)} 뉴스)"
@@ -1049,8 +1056,9 @@ class GeopoliticalCollector(BaseCollector):
         )
 
         # Lead with the most concrete signal available: top news headline first,
-        # then top GDELT headline, then top Polymarket question. Falls back to
-        # a count summary only when no headlines exist.
+        # then top GDELT headline, then top Polymarket question. Skips titles
+        # whose script is unreadable for Korean/English readers (CJK Han,
+        # Cyrillic, etc.) so the lead never opens with a wall of glyphs.
         _top_headline = ""
         _headline_source = ""
         if google_news_items:
@@ -1058,20 +1066,24 @@ class GeopoliticalCollector(BaseCollector):
                 google_news_items[0].get("title_ko")
                 or google_news_items[0].get("title_translated")
                 or google_news_items[0].get("title", "")
-            )
-            if _candidate.strip():
-                _top_headline = _candidate.strip()[:90]
+            ).strip()
+            if _candidate and _is_supported_language(_candidate):
+                _top_headline = _candidate[:90]
                 _headline_source = "Google News"
         if not _top_headline and gdelt_articles:
             for art in gdelt_articles:
                 _candidate = (art.get("title") or "").strip()
-                if _candidate and not _GDELT_NOISE_TITLE_RE.match(_candidate):
+                if (
+                    _candidate
+                    and not _GDELT_NOISE_TITLE_RE.match(_candidate)
+                    and _is_supported_language(_candidate)
+                ):
                     _top_headline = _candidate[:90]
                     _headline_source = "GDELT"
                     break
         if not _top_headline and markets:
             _candidate = (markets[0].get("title") or "").strip()
-            if _candidate:
+            if _candidate and _is_supported_language(_candidate):
                 _top_headline = _candidate[:90]
                 _headline_source = "Polymarket"
 
