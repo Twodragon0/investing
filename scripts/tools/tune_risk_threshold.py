@@ -17,6 +17,7 @@ import sys
 from dataclasses import dataclass, field
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
+from urllib.parse import urlparse
 
 _PROJECT_ROOT = Path(__file__).parent.parent.parent
 _SCRIPTS_DIR = _PROJECT_ROOT / "scripts"
@@ -40,9 +41,9 @@ logger = logging.getLogger(__name__)
 
 _DATE_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})-daily-crypto-news-digest\.md$")
 
-# Matches <a href="...">TITLE</a> <span class="p0-desc">DESC</span> inside alert-urgent
+# Matches <a href="URL">TITLE</a> <span class="p0-desc">DESC</span> inside alert-urgent
 _URGENT_LI_RE = re.compile(
-    r'<li>\s*<a[^>]+>(?P<title>[^<]+)</a>\s*<span class="p0-desc">(?P<desc>[^<]*)</span>\s*</li>',
+    r'<li>\s*<a\s+href="(?P<href>[^"]*)"[^>]*>(?P<title>[^<]+)</a>\s*<span class="p0-desc">(?P<desc>[^<]*)</span>\s*</li>',
     re.DOTALL,
 )
 
@@ -104,8 +105,36 @@ def load_digest_posts(posts_dir: Path, days: int) -> list[PostItems]:
     return results
 
 
+def _source_from_href(href: str) -> str:
+    """Derive a source string from a link URL.
+
+    Strips ``www.`` and returns the netloc when parseable. For Google News
+    redirect URLs this yields ``news.google.com`` (falls back to the legacy
+    ``google news`` label so the aggregator weighting still applies).
+    """
+    if not href:
+        return "google news"
+    try:
+        netloc = urlparse(href).netloc.lower()
+    except Exception:
+        return "google news"
+    if not netloc:
+        return "google news"
+    if netloc.startswith("www."):
+        netloc = netloc[4:]
+    if netloc in {"news.google.com", "google.com"}:
+        return "google news"
+    return netloc
+
+
 def parse_priority_items(text: str) -> list[dict[str, str]]:
-    """Extract P0-level items from alert-urgent div in post body."""
+    """Extract P0-level items from alert-urgent div in post body.
+
+    Each item's ``source`` is derived from its link domain (preferring the
+    real publisher domain so risk_classifier source weights actually apply).
+    Google News redirect URLs collapse to ``"google news"`` (aggregator
+    weight 1.0) as a safe legacy fallback.
+    """
     items: list[dict[str, str]] = []
 
     block_m = _ALERT_URGENT_RE.search(text)
@@ -116,8 +145,15 @@ def parse_priority_items(text: str) -> list[dict[str, str]]:
     for li_m in _URGENT_LI_RE.finditer(block):
         title = li_m.group("title").strip()
         desc = li_m.group("desc").strip()
+        href = li_m.group("href").strip()
         if title:
-            items.append({"title": title, "description": desc, "source": "google news"})
+            items.append(
+                {
+                    "title": title,
+                    "description": desc,
+                    "source": _source_from_href(href),
+                }
+            )
 
     return items
 

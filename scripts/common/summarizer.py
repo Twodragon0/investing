@@ -1076,7 +1076,9 @@ class ThemeSummarizer:
             p0_html_items = []
             for item in priority_items["P0"][:3]:
                 p0_title = item.get("title_ko") or item.get("title_translated") or item.get("title", "")
-                link = item.get("link", "")
+                # Prefer original publisher URL when RSS preserved it via <source url="">;
+                # falls back to link (which may be a Google News redirect).
+                link = item.get("original_url") or item.get("link", "")
                 desc = (item.get("description_ko") or item.get("description", "")).strip()
                 # Build alert content: title + short description (Korean only)
                 desc_part = ""
