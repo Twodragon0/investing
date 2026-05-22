@@ -9,6 +9,7 @@ Sources:
 
 import logging
 import os
+import re
 import sys
 import time
 from collections import Counter
@@ -531,7 +532,9 @@ def _build_polymarket_section(markets: List[Dict[str, Any]]) -> tuple:
     else:
         lines.append("현재 지정학 관련 활성 예측 마켓이 없습니다.\n")
 
-    # Summary stats: only render when there are markets to show.
+    # Summary stats: only render when there are markets to show. When empty,
+    # the "현재 지정학 관련 활성 예측 마켓이 없습니다." line above is sufficient —
+    # a stat-grid with "-" placeholders just adds visual clutter.
     if filtered_markets:
         total_volume = sum(m.get("volume", 0) for m in filtered_markets)
         lines.append(
@@ -545,56 +548,83 @@ def _build_polymarket_section(markets: List[Dict[str, Any]]) -> tuple:
             f'<span class="stat-label">출처</span></div>'
             "</div>\n"
         )
-    else:
-        lines.append(
-            '\n<div class="stat-grid">'
-            '<div class="stat-item"><span class="stat-value">-</span>'
-            '<span class="stat-label">분석 대상</span></div>'
-            '<div class="stat-item"><span class="stat-value">'
-            '<a href="https://polymarket.com" target="_blank" rel="noopener noreferrer">Polymarket</a></span>'
-            '<span class="stat-label">출처</span></div>'
-            "</div>\n"
-        )
 
     return lines, filtered_markets
 
 
+_GDELT_NOISE_TITLE_RE = re.compile(
+    r"^\s*time\.\s*ai\s*$",  # repeating templated/scraper titles surfaced by GDELT
+    re.IGNORECASE,
+)
+
+
 def _build_gdelt_section(articles: List[Dict[str, Any]]) -> List[str]:
-    """Build the GDELT news section with tone analysis."""
+    """Build the GDELT news section with tone analysis.
+
+    Noise reduction (rendered post readability):
+    - Drop articles whose title matches known templated patterns (e.g. "Time. ai")
+    - Cap to 2 articles per source domain so a single domain can't flood the list
+    - Show top 5 (not 10) — long lists buried the actual signal
+    - Hide per-article tone column when every article tone == 0.0 (GDELT API noise),
+      since identical values add visual clutter without information
+    """
     if not articles:
         return ["현재 GDELT에서 수집된 지정학 뉴스가 없습니다.\n"]
 
-    lines = []
+    # Step 1: filter templated/spam titles
+    cleaned = [a for a in articles if a.get("title") and not _GDELT_NOISE_TITLE_RE.match(a["title"])]
+    if not cleaned:
+        return ["현재 GDELT에서 의미 있는 지정학 뉴스가 수집되지 않았습니다.\n"]
+
+    # Step 2: sort by most negative tone first (highest risk signal)
+    cleaned.sort(key=lambda x: x.get("tone", 0.0))
+
+    # Step 3: dedupe by source domain — at most 2 articles per source
+    per_source: Counter = Counter()
+    deduped: List[Dict[str, Any]] = []
+    for article in cleaned:
+        source_key = (article.get("source") or "GDELT").strip()
+        if per_source[source_key] >= 2:
+            continue
+        per_source[source_key] += 1
+        deduped.append(article)
+
+    lines: List[str] = []
 
     # Tone distribution summary
-    tones = [a.get("tone", 0.0) for a in articles if isinstance(a.get("tone"), (int, float))]
+    tones = [a.get("tone", 0.0) for a in deduped if isinstance(a.get("tone"), (int, float))]
+    tones_meaningful = any(abs(t) > 0.01 for t in tones)
     if tones:
         avg_tone = sum(tones) / len(tones)
         tone_label = _tone_label(avg_tone)
-        lines.append(
-            f"**GDELT 감성 분석**: 평균 톤 점수 `{avg_tone:.2f}` ({tone_label}) "
-            f"— 음수일수록 부정적, 양수일수록 긍정적 보도입니다.\n"
-        )
+        if tones_meaningful:
+            lines.append(
+                f"**GDELT 감성 분석**: 평균 톤 `{avg_tone:.2f}` ({tone_label}) "
+                f"— 음수일수록 부정적, 양수일수록 긍정적 보도입니다.\n"
+            )
+        else:
+            lines.append(
+                "**GDELT 감성 분석**: 모든 기사 톤이 0.0(중립) — GDELT API가 톤 분석 결과를 "
+                "이번 배치에 반환하지 않았습니다.\n"
+            )
 
-    # Top articles by most negative tone (highest risk signal)
-    sorted_articles = sorted(articles, key=lambda x: x.get("tone", 0.0))
-    shown = 0
-    for article in sorted_articles[:10]:
+    # Show top 5; hide per-article tone when uniformly zero
+    for idx, article in enumerate(deduped[:5], 1):
         title = article.get("title", "")
-        if not title:
-            continue
         link = article.get("link", "")
         source = article.get("source", "GDELT")
-        tone = article.get("tone", 0.0)
-        tone_str = f"{tone:.1f}" if isinstance(tone, (int, float)) else "N/A"
-        tone_lbl = _tone_label(tone if isinstance(tone, (int, float)) else None)
-
+        title_text = truncate_text(title, 100)
         if link:
-            lines.append(f"**{shown + 1}. [{truncate_text(title, 100)}]({link})**")
+            lines.append(f"**{idx}. [{title_text}]({link})**")
         else:
-            lines.append(f"**{shown + 1}. {truncate_text(title, 100)}**")
-        lines.append(f"{html_source_tag(source)} | 감성: `{tone_str}` ({tone_lbl})\n")
-        shown += 1
+            lines.append(f"**{idx}. {title_text}**")
+        if tones_meaningful:
+            tone = article.get("tone", 0.0)
+            tone_str = f"{tone:.1f}" if isinstance(tone, (int, float)) else "N/A"
+            tone_lbl = _tone_label(tone if isinstance(tone, (int, float)) else None)
+            lines.append(f"{html_source_tag(source)} | 감성: `{tone_str}` ({tone_lbl})\n")
+        else:
+            lines.append(f"{html_source_tag(source)}\n")
 
     return lines
 
@@ -686,7 +716,12 @@ def _generate_risk_analysis(
         overall_risk = "안정"
         risk_note = "글로벌 지정학적 환경이 비교적 안정적입니다."
 
-    lines.append(f"**종합 지정학 리스크 레벨: {overall_risk}** (점수: {risk_score})")
+    # Inline scale hint so '점수: 32' isn't ambiguous to readers
+    # (thresholds: ≤3 안정, ≤10 낮음, ≤20 보통, ≤40 높음, >40 매우 높음)
+    lines.append(
+        f"**종합 지정학 리스크 레벨: {overall_risk}** "
+        f"(점수: {risk_score} · 척도 0~50+, ≤3 안정 / ≤10 낮음 / ≤20 보통 / ≤40 높음 / >40 매우 높음)"
+    )
     lines.append(f"\n{risk_note}\n")
 
     # Top themes
@@ -726,8 +761,11 @@ def _generate_risk_analysis(
     if "선거/정치" in theme_counter:
         lines.append("- 이벤트 드리븐 전략 적합 — 선거 결과에 따른 섹터 로테이션 준비")
 
+    # Explicit blank line before the blockquote — kramdown requires it after a
+    # preceding list/HTML block, otherwise the leading ">" is HTML-escaped to "&gt;".
+    lines.append("")
     lines.append(
-        "\n> *본 리포트는 Polymarket, GDELT, Google News에서 자동 수집된 데이터를 기반으로 합니다. "
+        "> *본 리포트는 Polymarket, GDELT, Google News에서 자동 수집된 데이터를 기반으로 합니다. "
         "투자 조언이 아니며, 모든 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*"
     )
 
@@ -987,7 +1025,8 @@ class GeopoliticalCollector(BaseCollector):
             ]
         )
 
-        # Stat grid - source counts at a glance
+        # Stat grid - source counts at a glance. Drop "데이터 소스" meta-stat
+        # (it just restates how many of the three sources had data — not actionable).
         content_parts.append('<div class="stat-grid">')
         content_parts.append(
             f'<div class="stat-item"><span class="stat-value">{len(markets)}</span>'
@@ -1000,10 +1039,6 @@ class GeopoliticalCollector(BaseCollector):
         content_parts.append(
             f'<div class="stat-item"><span class="stat-value">{len(google_news_items)}</span>'
             '<span class="stat-label">뉴스 기사</span></div>'
-        )
-        content_parts.append(
-            f'<div class="stat-item"><span class="stat-value">{source_count}</span>'
-            '<span class="stat-label">데이터 소스</span></div>'
         )
         content_parts.append("</div>\n")
 
