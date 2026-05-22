@@ -738,6 +738,7 @@ class WorldMonitorCollector(BaseCollector):
                 {
                     "title": display_title,
                     "html_title": html_title,
+                    "clean_title": title,  # plain text (no markdown/HTML) for lead paragraph
                     "theme": theme,
                     "impact": impact,
                     "source": source,
@@ -753,7 +754,8 @@ class WorldMonitorCollector(BaseCollector):
                 entry.get("theme", ""),
             )
 
-        for idx, entry in enumerate(sorted(issue_items, key=_sort_key), 1):
+        sorted_issues = sorted(issue_items, key=_sort_key)
+        for idx, entry in enumerate(sorted_issues, 1):
             rows.append(
                 [
                     idx,
@@ -767,6 +769,10 @@ class WorldMonitorCollector(BaseCollector):
 
         total_items = len(rows)
         top_sources = ", ".join(f"{name} ({count}건)" for name, count in source_counter.most_common(5))
+        # Highest-priority entry — used to lead the opening paragraph
+        _top_entry = sorted_issues[0] if sorted_issues else None
+        _top_headline = (_top_entry.get("clean_title", "") if _top_entry else "").strip()[:80]
+        _top_theme = (_top_entry.get("theme", "") if _top_entry else "").strip()
 
         for name, count in source_counter.most_common(6):
             ratio = (count / max(total_items, 1)) * 100
@@ -786,9 +792,19 @@ class WorldMonitorCollector(BaseCollector):
                 "</div>"
             )
 
+        if _top_headline:
+            _lead_text = (
+                f"**{self.today}** 글로벌 핵심 이슈: **{_top_headline}**"
+                + (f" ({_top_theme})." if _top_theme else ".")
+                + f" WorldMonitor 연계 소스 기준 총 {total_items}건의 글로벌 이벤트·시장·에너지 뉴스를 정리했습니다."
+            )
+        else:
+            _lead_text = (
+                f"**{self.today}** 기준 WorldMonitor 연계 소스에서 "
+                f"글로벌 이벤트/시장/에너지 관련 뉴스 {total_items}건을 정리했습니다."
+            )
         content_parts = [
-            f"**{self.today}** 기준 WorldMonitor 연계 소스에서 "
-            f"글로벌 이벤트/시장/에너지 관련 뉴스 {total_items}건을 정리했습니다.",
+            _lead_text,
             "",
             '<div class="alert-box alert-info"><strong>오늘의 글로벌 리스크 스냅샷</strong><ul>',
             f"<li>총 수집: <strong>{total_items}건</strong></li>",

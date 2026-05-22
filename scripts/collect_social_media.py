@@ -693,8 +693,28 @@ class SocialMediaCollector(BaseCollector):
             "됩니다",
         }
         _top_kws = [w for w, _ in _topic_counts.most_common(20) if w.lower() not in _stopwords][:2]
-        if _top_kws:
-            _opening = f"**{today}** 소셜 미디어에서 가장 많이 언급된 주제: {', '.join(_top_kws)}. {sources_str}, 총 {total_count}건이 수집되었습니다.\n"
+        # Lead with the top item's headline so post-summary excerpt becomes
+        # informative ("X 발언/이슈" 대신 카운트만 노출되던 문제 회피)
+        _top_headline = ""
+        if all_theme_items:
+            _candidate = (
+                all_theme_items[0].get("title_ko")
+                or all_theme_items[0].get("title_translated")
+                or all_theme_items[0].get("title", "")
+            )
+            _top_headline = _candidate.strip()[:80]
+
+        _kw_phrase = f"가장 많이 언급된 주제: {', '.join(_top_kws)}. " if _top_kws else ""
+        if _top_headline:
+            _opening = (
+                f"**{today}** 소셜 미디어 화제: **{_top_headline}**. "
+                f"{_kw_phrase}{sources_str}, 총 {total_count}건이 수집되었습니다.\n"
+            )
+        elif _top_kws:
+            _opening = (
+                f"**{today}** 소셜 미디어에서 {_kw_phrase}"
+                f"{sources_str}, 총 {total_count}건이 수집되었습니다.\n"
+            )
         else:
             _opening = f"**{today}** {sources_str}에서 총 {total_count}건의 소셜 미디어 동향이 수집되었습니다.\n"
         content_parts = [_opening]

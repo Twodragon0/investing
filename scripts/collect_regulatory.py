@@ -426,11 +426,33 @@ class RegulatoryCollector(BaseCollector):
         region_counts = Counter(item.get("region", "기타") for item in all_items)
         source_links: list = []
 
+        # Lead with top headline (Korean if available), keep region+count as secondary
+        _top_headline = ""
+        if all_items:
+            _candidate = (
+                all_items[0].get("title_ko")
+                or all_items[0].get("title_translated")
+                or all_items[0].get("title", "")
+            )
+            _top_headline = _candidate.strip()[:80]
+
         if region_counts:
             _top_reg_region, _top_reg_count = region_counts.most_common(1)[0]
-            _reg_opening = f"**{today}** {_top_reg_region}({_top_reg_count}건) 중심으로 {len(all_items)}건의 글로벌 금융 규제 동향이 수집되었습니다."
+            if _top_headline:
+                _reg_opening = (
+                    f"**{today}** 규제 동향 핵심: **{_top_headline}**. "
+                    f"{_top_reg_region}({_top_reg_count}건) 중심으로 총 {len(all_items)}건의 글로벌 금융 규제 이슈가 수집되었습니다."
+                )
+            else:
+                _reg_opening = f"**{today}** {_top_reg_region}({_top_reg_count}건) 중심으로 {len(all_items)}건의 글로벌 금융 규제 동향이 수집되었습니다."
         else:
-            _reg_opening = f"**{today}** 글로벌 금융 규제 동향 {len(all_items)}건 수집"
+            if _top_headline:
+                _reg_opening = (
+                    f"**{today}** 규제 동향 핵심: **{_top_headline}**. "
+                    f"총 {len(all_items)}건의 글로벌 금융 규제 이슈를 정리했습니다."
+                )
+            else:
+                _reg_opening = f"**{today}** 글로벌 금융 규제 동향 {len(all_items)}건 수집"
         content_parts = [_reg_opening]
 
         # Stat grid - region counts
