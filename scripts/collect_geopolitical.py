@@ -1085,7 +1085,7 @@ class GeopoliticalCollector(BaseCollector):
                 self.today,
                 "지정학 핵심 이슈" if _top_headline else f"기준 지정학적 리스크 데이터를 {source_count}개 소스에서 수집·분석했습니다",
                 _top_headline or None,
-                source=_headline_source or None,
+                tag=_headline_source or None,
                 detail=_count_detail,
             )
         )

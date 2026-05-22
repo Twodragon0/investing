@@ -26,22 +26,35 @@ class TestStatGrid:
 
 
 class TestAlertBox:
-    def test_info_variant_includes_icon_prefix(self):
+    def test_info_variant_includes_svg_icon(self):
         out = alert_box("오늘 요약", ["수집: 20건", "주요: BTC"], variant="info")
         assert 'class="alert-box alert-info"' in out
-        assert "<strong>ℹ️ 오늘 요약</strong>" in out
+        assert 'class="alert-icon"' in out
+        assert 'fill="currentColor"' in out
+        assert 'aria-hidden="true"' in out
+        assert "오늘 요약</strong>" in out
         assert "<li>수집: 20건</li>" in out
-        assert "<li>주요: BTC</li>" in out
 
-    def test_warning_variant_uses_warning_icon(self):
+    def test_warning_variant_uses_warning_svg(self):
         out = alert_box("Warn", ["x"], variant="warning")
         assert "alert-warning" in out
-        assert "<strong>⚠️ Warn</strong>" in out
+        # Triangle path for warning — distinctive starting coordinate
+        assert "M1 21h22L12 2" in out
+        assert "Warn</strong>" in out
 
-    def test_urgent_variant_uses_siren_icon(self):
+    def test_urgent_variant_uses_circle_exclamation_svg(self):
         out = alert_box("Urgent", ["x"], variant="urgent")
         assert "alert-urgent" in out
-        assert "<strong>🚨 Urgent</strong>" in out
+        # Circle exclamation path — same circle base as info, taller exclamation
+        assert "<svg" in out
+        assert "Urgent</strong>" in out
+
+    def test_emoji_icons_no_longer_emitted(self):
+        # SVG migration replaces font-dependent emojis
+        out = alert_box("t", ["x"])
+        assert "ℹ️" not in out
+        assert "⚠️" not in out
+        assert "🚨" not in out
 
     def test_empty_bullets_returns_empty(self):
         assert alert_box("Title", []) == ""
@@ -52,17 +65,28 @@ class TestAlertBox:
 
 
 class TestSummaryIntro:
-    def test_with_headline_and_source(self):
+    def test_with_headline_and_tag(self):
         out = summary_intro(
             "2026-05-22",
             "지정학 핵심 이슈",
             "Trump Warns Iran",
-            source="GDELT",
+            tag="GDELT",
             detail="총 30건 분석",
         )
         assert out == "**2026-05-22** 지정학 핵심 이슈: **Trump Warns Iran** (GDELT). 총 30건 분석\n"
 
-    def test_with_headline_no_source(self):
+    def test_tag_accepts_theme_label(self):
+        # tag isn't constrained to source attribution — theme/secondary signals also valid
+        out = summary_intro(
+            "2026-05-22",
+            "글로벌 핵심 이슈",
+            "콩고 에볼라 발생",
+            tag="지정학/안보",
+            detail="총 20건 정리",
+        )
+        assert "(지정학/안보)" in out
+
+    def test_with_headline_no_tag(self):
         out = summary_intro("2026-05-22", "암호화폐 핵심 뉴스", "ETF 승인", detail="93건 분석")
         assert out == "**2026-05-22** 암호화폐 핵심 뉴스: **ETF 승인**. 93건 분석\n"
 

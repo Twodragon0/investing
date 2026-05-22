@@ -451,7 +451,7 @@ class FmpCalendarCollector(BaseCollector):
                 self.today,
                 "오늘 일정 핵심" if _headline else "오늘 일정",
                 _headline or None,
-                source=_secondary or None,
+                tag=_secondary or None,
                 detail=_detail,
             )
         )

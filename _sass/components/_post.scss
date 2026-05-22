@@ -1298,21 +1298,28 @@
       li { margin-bottom: 0.35rem; font-style: normal; }
       a { font-weight: 600; }
 
+      // Inline SVG icon emitted by post_html.alert_box — inherits strong color.
+      .alert-icon {
+        vertical-align: -2px;
+        margin-right: 0.35rem;
+        flex-shrink: 0;
+      }
+
       &.alert-urgent {
         border-color: $accent-red;
-        background: rgba($accent-red, 0.06);
+        background: rgba($accent-red, 0.11);
         strong, .alert-title { color: $accent-red; }
       }
 
       &.alert-info {
         border-color: $accent-blue;
-        background: rgba($accent-blue, 0.06);
+        background: rgba($accent-blue, 0.11);
         strong, .alert-title { color: $accent-blue; }
       }
 
       &.alert-warning {
         border-color: $accent-orange;
-        background: rgba($accent-orange, 0.06);
+        background: rgba($accent-orange, 0.11);
         strong, .alert-title { color: $accent-orange; }
       }
 

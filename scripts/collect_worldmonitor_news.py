@@ -804,7 +804,7 @@ class WorldMonitorCollector(BaseCollector):
             self.today,
             "글로벌 핵심 이슈" if _top_headline else "WorldMonitor 연계 소스",
             _top_headline or None,
-            source=_top_theme or None,
+            tag=_top_theme or None,
             detail=(
                 f"WorldMonitor 연계 소스 기준 총 {total_items}건의 글로벌 이벤트·시장·에너지 뉴스를 정리했습니다"
                 if _top_headline
