@@ -455,12 +455,13 @@ class RegulatoryCollector(BaseCollector):
                 _reg_opening = f"**{today}** 글로벌 금융 규제 동향 {len(all_items)}건 수집"
         content_parts = [_reg_opening]
 
-        # Stat grid - region counts
+        # Stat grid - region counts. Uses <div class="stat-value"> to match
+        # the 7-report stat-grid convention (designer audit, 2026-05-22).
         stat_grid_parts = ['<div class="stat-grid">']
         for region, count in region_counts.most_common(4):
             stat_grid_parts.append(
-                f'<div class="stat-item"><span class="stat-value">{count}</span>'
-                f'<span class="stat-label">{region}</span></div>'
+                f'<div class="stat-item"><div class="stat-value">{count}</div>'
+                f'<div class="stat-label">{region}</div></div>'
             )
         stat_grid_parts.append("</div>")
         content_parts.append("\n".join(stat_grid_parts))

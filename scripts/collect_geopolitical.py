@@ -535,17 +535,18 @@ def _build_polymarket_section(markets: List[Dict[str, Any]]) -> tuple:
     # Summary stats: only render when there are markets to show. When empty,
     # the "현재 지정학 관련 활성 예측 마켓이 없습니다." line above is sufficient —
     # a stat-grid with "-" placeholders just adds visual clutter.
+    # Uses <div class="stat-value"> to match the 7-report stat-grid convention.
     if filtered_markets:
         total_volume = sum(m.get("volume", 0) for m in filtered_markets)
         lines.append(
             '\n<div class="stat-grid">'
-            f'<div class="stat-item"><span class="stat-value">{len(filtered_markets)}</span>'
-            f'<span class="stat-label">분석 대상</span></div>'
-            f'<div class="stat-item"><span class="stat-value">${total_volume:,.0f}</span>'
-            f'<span class="stat-label">합산 거래량</span></div>'
-            f'<div class="stat-item"><span class="stat-value">'
-            f'<a href="https://polymarket.com" target="_blank" rel="noopener noreferrer">Polymarket</a></span>'
-            f'<span class="stat-label">출처</span></div>'
+            f'<div class="stat-item"><div class="stat-value">{len(filtered_markets)}</div>'
+            f'<div class="stat-label">분석 대상</div></div>'
+            f'<div class="stat-item"><div class="stat-value">${total_volume:,.0f}</div>'
+            f'<div class="stat-label">합산 거래량</div></div>'
+            f'<div class="stat-item"><div class="stat-value">'
+            f'<a href="https://polymarket.com" target="_blank" rel="noopener noreferrer">Polymarket</a></div>'
+            f'<div class="stat-label">출처</div></div>'
             "</div>\n"
         )
 
@@ -557,12 +558,31 @@ _GDELT_NOISE_TITLE_RE = re.compile(
     re.IGNORECASE,
 )
 
+# Korean Hangul syllable block; Latin range used for English/Romanized titles.
+_HANGUL_RE = re.compile(r"[가-힣]")
+_LATIN_RE = re.compile(r"[A-Za-z]")
+
+
+def _is_supported_language(title: str) -> bool:
+    """Title's letters are ≥60% Hangul + Latin combined.
+
+    Drops Cyrillic / Greek / Macedonian etc. GDELT titles that Korean
+    readers can't parse. Indonesian/Turkish (Latin script) pass through.
+    """
+    letters = sum(1 for c in title if c.isalpha())
+    if letters == 0:
+        return False
+    supported = len(_HANGUL_RE.findall(title)) + len(_LATIN_RE.findall(title))
+    return supported / letters >= 0.6
+
 
 def _build_gdelt_section(articles: List[Dict[str, Any]]) -> List[str]:
     """Build the GDELT news section with tone analysis.
 
     Noise reduction (rendered post readability):
     - Drop articles whose title matches known templated patterns (e.g. "Time. ai")
+    - Drop articles whose title is dominantly non-Korean/non-English script
+      (Cyrillic/Indonesian/Turkish/etc) — unreadable for the target audience
     - Cap to 2 articles per source domain so a single domain can't flood the list
     - Show top 5 (not 10) — long lists buried the actual signal
     - Hide per-article tone column when every article tone == 0.0 (GDELT API noise),
@@ -571,10 +591,16 @@ def _build_gdelt_section(articles: List[Dict[str, Any]]) -> List[str]:
     if not articles:
         return ["현재 GDELT에서 수집된 지정학 뉴스가 없습니다.\n"]
 
-    # Step 1: filter templated/spam titles
-    cleaned = [a for a in articles if a.get("title") and not _GDELT_NOISE_TITLE_RE.match(a["title"])]
+    # Step 1: filter templated/spam titles + non-supported-script titles
+    cleaned = [
+        a
+        for a in articles
+        if a.get("title")
+        and not _GDELT_NOISE_TITLE_RE.match(a["title"])
+        and _is_supported_language(a["title"])
+    ]
     if not cleaned:
-        return ["현재 GDELT에서 의미 있는 지정학 뉴스가 수집되지 않았습니다.\n"]
+        return ["현재 GDELT에서 한국어·영어 지정학 뉴스가 수집되지 않았습니다.\n"]
 
     # Step 2: sort by most negative tone first (highest risk signal)
     cleaned.sort(key=lambda x: x.get("tone", 0.0))
@@ -1072,20 +1098,21 @@ class GeopoliticalCollector(BaseCollector):
             ]
         )
 
-        # Stat grid - source counts at a glance. Drop "데이터 소스" meta-stat
-        # (it just restates how many of the three sources had data — not actionable).
+        # Stat grid - source counts at a glance. Uses <div class="stat-value">
+        # to match the convention shared by the other 6 daily reports
+        # (designer audit, 2026-05-22). Drops "데이터 소스" meta-stat as well.
         content_parts.append('<div class="stat-grid">')
         content_parts.append(
-            f'<div class="stat-item"><span class="stat-value">{len(markets)}</span>'
-            '<span class="stat-label">Polymarket</span></div>'
+            f'<div class="stat-item"><div class="stat-value">{len(markets)}</div>'
+            '<div class="stat-label">Polymarket</div></div>'
         )
         content_parts.append(
-            f'<div class="stat-item"><span class="stat-value">{len(gdelt_articles)}</span>'
-            '<span class="stat-label">GDELT 뉴스</span></div>'
+            f'<div class="stat-item"><div class="stat-value">{len(gdelt_articles)}</div>'
+            '<div class="stat-label">GDELT 뉴스</div></div>'
         )
         content_parts.append(
-            f'<div class="stat-item"><span class="stat-value">{len(google_news_items)}</span>'
-            '<span class="stat-label">뉴스 기사</span></div>'
+            f'<div class="stat-item"><div class="stat-value">{len(google_news_items)}</div>'
+            '<div class="stat-label">뉴스 기사</div></div>'
         )
         content_parts.append("</div>\n")
 

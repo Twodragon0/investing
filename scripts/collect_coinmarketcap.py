@@ -1278,9 +1278,19 @@ class CoinMarketCapCollector(BaseCollector):
                 "\n\n".join(f"## {k}\n\n{v}" for k, v in sections.items() if v and v.strip()),
             )
 
+            # Footer-meta — designer audit (2026-05-22) flagged crypto-market
+            # as the only daily report missing wm-footer-meta. Matches the
+            # convention used by the other 6 reports for collection timestamp + source.
+            _footer = (
+                f'\n\n<div class="wm-footer-meta">'
+                f"<span>수집 시각: {today} KST</span>"
+                f"<span>소스: {'CoinGecko' if cmc_source == 'coingecko' else 'CoinMarketCap'}</span>"
+                f"</div>"
+            )
+
             filepath = self.create_post(
                 title=title,
-                content=_lead_text + _sections_body,
+                content=_lead_text + _sections_body + _footer,
                 tags=["market-report", "crypto", "top-coins", "trending", "daily"],
                 source=source_name,
                 image=frontmatter_image,

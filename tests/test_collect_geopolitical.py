@@ -23,8 +23,8 @@ def test_polymarket_section_uses_filtered_set_for_count_and_volume():
     rendered = "\n".join(lines)
 
     assert len(filtered) == 1
-    assert "분석 대상</span></div>" in rendered
-    assert '>1</span><span class="stat-label">분석 대상<' in rendered
+    assert "분석 대상</div></div>" in rendered
+    assert '>1</div><div class="stat-label">분석 대상<' in rendered
     assert "$12,345" in rendered
     assert "$999,999" not in rendered
 
@@ -56,7 +56,7 @@ def test_polymarket_section_fallback_basis_is_consistent():
 
     # geo-keyword filtered count is < 3, so section falls back to non-entertainment set.
     assert len(filtered) == 2
-    assert '>2</span><span class="stat-label">분석 대상<' in rendered
+    assert '>2</div><div class="stat-label">분석 대상<' in rendered
     assert "$30,000" in rendered
     assert "$500,000" not in rendered
 
