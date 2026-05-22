@@ -558,22 +558,33 @@ _GDELT_NOISE_TITLE_RE = re.compile(
     re.IGNORECASE,
 )
 
-# Korean Hangul syllable block; Latin range used for English/Romanized titles.
 _HANGUL_RE = re.compile(r"[가-힣]")
-_LATIN_RE = re.compile(r"[A-Za-z]")
+# CJK Unified Ideographs (Chinese/Japanese Kanji) — distinct from Hangul block.
+_CJK_IDEOGRAPH_RE = re.compile(r"[一-鿿]")
 
 
 def _is_supported_language(title: str) -> bool:
-    """Title's letters are ≥60% Hangul + Latin combined.
+    """Return True only when title is Korean or English.
 
-    Drops Cyrillic / Greek / Macedonian etc. GDELT titles that Korean
-    readers can't parse. Indonesian/Turkish (Latin script) pass through.
+    Script checks come first because langdetect mis-labels CJK ideograph
+    titles as 'ko' (its Korean profile shares ngrams with Chinese). After
+    the script gate, langdetect resolves Latin-script ambiguity (en vs
+    id/tr/de/...) and we accept only 'en'.
     """
-    letters = sum(1 for c in title if c.isalpha())
-    if letters == 0:
+    title = title.strip()
+    if not title:
         return False
-    supported = len(_HANGUL_RE.findall(title)) + len(_LATIN_RE.findall(title))
-    return supported / letters >= 0.6
+    if _HANGUL_RE.search(title):
+        return True
+    if _CJK_IDEOGRAPH_RE.search(title):
+        return False
+    try:
+        from langdetect import DetectorFactory, detect
+
+        DetectorFactory.seed = 0
+        return detect(title) == "en"
+    except Exception:
+        return True
 
 
 def _build_gdelt_section(articles: List[Dict[str, Any]]) -> List[str]:
