@@ -800,17 +800,17 @@ class WorldMonitorCollector(BaseCollector):
                 "</div>"
             )
 
-        if _top_headline:
-            _lead_text = (
-                f"**{self.today}** 글로벌 핵심 이슈: **{_top_headline}**"
-                + (f" ({_top_theme})." if _top_theme else ".")
-                + f" WorldMonitor 연계 소스 기준 총 {total_items}건의 글로벌 이벤트·시장·에너지 뉴스를 정리했습니다."
-            )
-        else:
-            _lead_text = (
-                f"**{self.today}** 기준 WorldMonitor 연계 소스에서 "
-                f"글로벌 이벤트/시장/에너지 관련 뉴스 {total_items}건을 정리했습니다."
-            )
+        _lead_text = post_html.summary_intro(
+            self.today,
+            "글로벌 핵심 이슈" if _top_headline else "WorldMonitor 연계 소스",
+            _top_headline or None,
+            source=_top_theme or None,
+            detail=(
+                f"WorldMonitor 연계 소스 기준 총 {total_items}건의 글로벌 이벤트·시장·에너지 뉴스를 정리했습니다"
+                if _top_headline
+                else f"글로벌 이벤트/시장/에너지 관련 뉴스 {total_items}건을 정리했습니다"
+            ),
+        ).rstrip("\n")
         content_parts = [
             _lead_text,
             "",

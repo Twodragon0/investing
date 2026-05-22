@@ -1074,18 +1074,21 @@ class GeopoliticalCollector(BaseCollector):
                 _top_headline = _candidate[:90]
                 _headline_source = "Polymarket"
 
-        if _top_headline:
-            content_parts.append(
-                f"**{self.today}** 지정학 핵심 이슈: **{_top_headline}** "
-                f"({_headline_source}). 주요 테마는 **{top_theme}**이며, "
-                f"Polymarket {len(markets)}건·GDELT {len(gdelt_articles)}건·뉴스 {len(google_news_items)}건을 종합 분석했습니다.\n"
+        _count_detail = (
+            f"주요 테마는 **{top_theme}**이며, "
+            f"Polymarket {len(markets)}건·GDELT {len(gdelt_articles)}건·뉴스 {len(google_news_items)}건을 종합 분석했습니다"
+            if _top_headline
+            else f"예측 시장 {len(markets)}건, 글로벌 뉴스 분석 {len(gdelt_articles)}건, 뉴스 {len(google_news_items)}건을 종합합니다"
+        )
+        content_parts.append(
+            post_html.summary_intro(
+                self.today,
+                "지정학 핵심 이슈" if _top_headline else f"기준 지정학적 리스크 데이터를 {source_count}개 소스에서 수집·분석했습니다",
+                _top_headline or None,
+                source=_headline_source or None,
+                detail=_count_detail,
             )
-        else:
-            content_parts.append(
-                f"**{self.today}** 기준 지정학적 리스크 데이터를 {source_count}개 소스에서 수집·분석했습니다. "
-                f"예측 시장 {len(markets)}건, 글로벌 뉴스 분석 {len(gdelt_articles)}건, "
-                f"뉴스 {len(google_news_items)}건을 종합합니다.\n"
-            )
+        )
         content_parts.append(
             post_html.alert_box(
                 "지정학 리스크 스냅샷",

@@ -5,7 +5,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
 
-from common.post_html import alert_box, footer_meta, stat_grid
+from common.post_html import alert_box, footer_meta, stat_grid, summary_intro  # noqa: F401
 
 
 class TestStatGrid:
@@ -43,6 +43,35 @@ class TestAlertBox:
     def test_bullets_can_contain_inline_html(self):
         out = alert_box("T", ["🔴 <strong>BTC</strong>: -5%"])
         assert "🔴 <strong>BTC</strong>: -5%" in out
+
+
+class TestSummaryIntro:
+    def test_with_headline_and_source(self):
+        out = summary_intro(
+            "2026-05-22",
+            "지정학 핵심 이슈",
+            "Trump Warns Iran",
+            source="GDELT",
+            detail="총 30건 분석",
+        )
+        assert out == "**2026-05-22** 지정학 핵심 이슈: **Trump Warns Iran** (GDELT). 총 30건 분석\n"
+
+    def test_with_headline_no_source(self):
+        out = summary_intro("2026-05-22", "암호화폐 핵심 뉴스", "ETF 승인", detail="93건 분석")
+        assert out == "**2026-05-22** 암호화폐 핵심 뉴스: **ETF 승인**. 93건 분석\n"
+
+    def test_headline_missing_fallback(self):
+        out = summary_intro("2026-05-22", "암호화폐 시장", None, detail="93건 분석 — 핵심 테마: 비트코인")
+        assert out == "**2026-05-22** 암호화폐 시장 — 93건 분석 — 핵심 테마: 비트코인\n"
+
+    def test_headline_missing_no_detail(self):
+        out = summary_intro("2026-05-22", "오늘 보고", None)
+        assert out == "**2026-05-22** 오늘 보고.\n"
+
+    def test_trailing_newline(self):
+        # Callers can prepend without extra spacing
+        out = summary_intro("d", "l", "h", detail="x")
+        assert out.endswith("\n")
 
 
 class TestFooterMeta:

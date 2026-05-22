@@ -439,21 +439,28 @@ class RegulatoryCollector(BaseCollector):
 
         if region_counts:
             _top_reg_region, _top_reg_count = region_counts.most_common(1)[0]
-            if _top_headline:
-                _reg_opening = (
-                    f"**{today}** 규제 동향 핵심: **{_top_headline}**. "
-                    f"{_top_reg_region}({_top_reg_count}건) 중심으로 총 {len(all_items)}건의 글로벌 금융 규제 이슈가 수집되었습니다."
-                )
-            else:
-                _reg_opening = f"**{today}** {_top_reg_region}({_top_reg_count}건) 중심으로 {len(all_items)}건의 글로벌 금융 규제 동향이 수집되었습니다."
+            _detail = (
+                f"{_top_reg_region}({_top_reg_count}건) 중심으로 총 {len(all_items)}건의 글로벌 금융 규제 이슈가 수집되었습니다"
+                if _top_headline
+                else f"{_top_reg_region}({_top_reg_count}건) 중심으로 {len(all_items)}건의 글로벌 금융 규제 동향이 수집되었습니다"
+            )
+            _reg_opening = post_html.summary_intro(
+                today,
+                "규제 동향 핵심" if _top_headline else "글로벌 금융 규제 동향",
+                _top_headline or None,
+                detail=_detail,
+            ).rstrip("\n")
         else:
-            if _top_headline:
-                _reg_opening = (
-                    f"**{today}** 규제 동향 핵심: **{_top_headline}**. "
-                    f"총 {len(all_items)}건의 글로벌 금융 규제 이슈를 정리했습니다."
-                )
-            else:
-                _reg_opening = f"**{today}** 글로벌 금융 규제 동향 {len(all_items)}건 수집"
+            _reg_opening = post_html.summary_intro(
+                today,
+                "규제 동향 핵심" if _top_headline else "글로벌 금융 규제 동향",
+                _top_headline or None,
+                detail=(
+                    f"총 {len(all_items)}건의 글로벌 금융 규제 이슈를 정리했습니다"
+                    if _top_headline
+                    else f"{len(all_items)}건 수집"
+                ),
+            ).rstrip("\n")
         content_parts = [_reg_opening]
 
         # Stat grid - region counts (shared post_html helper).

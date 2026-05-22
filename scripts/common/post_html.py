@@ -48,6 +48,33 @@ def alert_box(title: str, bullets: Iterable[str], variant: AlertVariant = "info"
     )
 
 
+def summary_intro(
+    date: str,
+    label: str,
+    headline: str | None,
+    *,
+    source: str | None = None,
+    detail: str = "",
+) -> str:
+    """Render the lead paragraph that becomes ``page.excerpt``.
+
+    Standard format used by daily-report collectors:
+        ``**{date}** {label}: **{headline}** ({source}). {detail}\\n``
+
+    Headline-missing fallback:
+        ``**{date}** {label} — {detail}\\n``
+
+    The trailing newline is included so callers can prepend the result directly
+    to a section body without manual spacing.
+    """
+    if headline:
+        src_part = f" ({source})" if source else ""
+        return f"**{date}** {label}: **{headline}**{src_part}. {detail}\n"
+    if detail:
+        return f"**{date}** {label} — {detail}\n"
+    return f"**{date}** {label}.\n"
+
+
 def footer_meta(timestamp: str, sources: str | Sequence[str]) -> str:
     """Render the `<div class="wm-footer-meta">` post footer.
 

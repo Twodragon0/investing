@@ -19,6 +19,7 @@ from bs4 import BeautifulSoup
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common import post_html
 from common.base_collector import BaseCollector
 from common.collector_config import get_collector_config, get_url
 from common.config import (
@@ -711,17 +712,26 @@ class SocialMediaCollector(BaseCollector):
 
         _kw_phrase = f"가장 많이 언급된 주제: {', '.join(_top_kws)}. " if _top_kws else ""
         if _top_headline:
-            _opening = (
-                f"**{today}** 소셜 미디어 화제: **{_top_headline}**. "
-                f"{_kw_phrase}{sources_str}, 총 {total_count}건이 수집되었습니다.\n"
+            _opening = post_html.summary_intro(
+                today,
+                "소셜 미디어 화제",
+                _top_headline,
+                detail=f"{_kw_phrase}{sources_str}, 총 {total_count}건이 수집되었습니다",
             )
         elif _top_kws:
-            _opening = (
-                f"**{today}** 소셜 미디어에서 {_kw_phrase}"
-                f"{sources_str}, 총 {total_count}건이 수집되었습니다.\n"
+            _opening = post_html.summary_intro(
+                today,
+                "소셜 미디어 동향",
+                None,
+                detail=f"{_kw_phrase}{sources_str}, 총 {total_count}건이 수집되었습니다",
             )
         else:
-            _opening = f"**{today}** {sources_str}에서 총 {total_count}건의 소셜 미디어 동향이 수집되었습니다.\n"
+            _opening = post_html.summary_intro(
+                today,
+                "소셜 미디어 동향",
+                None,
+                detail=f"{sources_str}에서 총 {total_count}건이 수집되었습니다",
+            )
         content_parts = [_opening]
 
         # Stat grid - source breakdown

@@ -21,6 +21,7 @@ import requests
 # Add scripts directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common import post_html
 from common.base_collector import BaseCollector
 from common.collector_config import get_collector_config, get_limit, get_url
 from common.config import (
@@ -999,22 +1000,25 @@ class CryptoNewsCollector(BaseCollector):
             )
             _top_headline = _candidate.strip()[:80]
 
-        if _top_headline and themes_str:
-            content_parts = [
-                f"**{today}** 암호화폐 핵심 뉴스: **{_top_headline}**. "
-                f"총 {len(all_items)}건 분석, 핵심 테마는 **{themes_str}**입니다.\n"
-            ]
-        elif _top_headline:
-            content_parts = [
-                f"**{today}** 암호화폐 핵심 뉴스: **{_top_headline}**. "
-                f"총 {len(all_items)}건의 시장 동향을 정리합니다.\n"
-            ]
+        _detail = (
+            f"총 {len(all_items)}건 분석, 핵심 테마는 **{themes_str}**입니다"
+            if themes_str
+            else f"총 {len(all_items)}건의 시장 동향을 정리합니다"
+        )
+        if _top_headline:
+            content_parts = [post_html.summary_intro(today, "암호화폐 핵심 뉴스", _top_headline, detail=_detail)]
         elif themes_str:
             content_parts = [
-                f"**{today}** 암호화폐 시장 {len(all_items)}건 분석 — 핵심 테마: **{themes_str}**.\n"
+                post_html.summary_intro(
+                    today, f"암호화폐 시장 {len(all_items)}건 분석", None, detail=f"핵심 테마: **{themes_str}**"
+                )
             ]
         else:
-            content_parts = [f"**{today}** 암호화폐 시장에서 {len(all_items)}건의 뉴스를 분석했습니다.\n"]
+            content_parts = [
+                post_html.summary_intro(
+                    today, "암호화폐 시장", None, detail=f"{len(all_items)}건의 뉴스를 분석했습니다"
+                )
+            ]
 
         # Distribution chart
         dist_chart = summarizer.generate_distribution_chart()

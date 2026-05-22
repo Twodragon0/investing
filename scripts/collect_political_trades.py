@@ -612,15 +612,18 @@ class PoliticalTradesCollector(BaseCollector):
             )
             _top_headline = _candidate.strip()[:80]
 
-        if _top_headline:
-            content_parts.append(
-                f"**{self.today}** 정치권 핵심 이슈: **{_top_headline}**. "
-                f"미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **{total_count}건** ({sources_str})을 종합 정리합니다."
-            )
-        else:
-            content_parts.append(
-                f"**{self.today}** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 총 **{total_count}건** — {sources_str}."
-            )
+        content_parts.append(
+            post_html.summary_intro(
+                self.today,
+                "정치권 핵심 이슈" if _top_headline else "미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트",
+                _top_headline or None,
+                detail=(
+                    f"미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **{total_count}건** ({sources_str})을 종합 정리합니다"
+                    if _top_headline
+                    else f"총 **{total_count}건** — {sources_str}"
+                ),
+            ).rstrip("\n")
+        )
 
         # Keyword analysis
         all_texts = " ".join(item.get("title", "") + " " + item.get("description", "") for item in unique_items).lower()
