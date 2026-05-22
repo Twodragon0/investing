@@ -13,6 +13,15 @@ from typing import Iterable, Literal, Sequence
 
 AlertVariant = Literal["info", "warning", "urgent"]
 
+# Variant icons surface meaning beyond the border color so the callout is
+# distinguishable for color-blind readers (WCAG 1.4.1). The icons live in
+# Python rather than CSS so screen readers receive them as part of the title.
+_ALERT_ICON: dict[str, str] = {
+    "info": "ℹ️",
+    "warning": "⚠️",
+    "urgent": "🚨",
+}
+
 
 def stat_grid(items: Sequence[tuple[str, str]]) -> str:
     """Render a `<div class="stat-grid">` with `<div class="stat-item">` children.
@@ -34,15 +43,18 @@ def alert_box(title: str, bullets: Iterable[str], variant: AlertVariant = "info"
     """Render a `<div class="alert-box alert-{variant}">` callout.
 
     `bullets` items are inserted as raw `<li>` content (caller controls inline
-    HTML/markdown). Empty bullets list returns ``""``.
+    HTML/markdown). Empty bullets list returns ``""``. A variant-specific icon
+    is prepended to the title so the callout's role stays legible without
+    relying on the border color (WCAG 1.4.1).
     """
     bullet_list = list(bullets)
     if not bullet_list:
         return ""
     items_html = "".join(f"<li>{b}</li>" for b in bullet_list)
+    icon = _ALERT_ICON[variant]
     return (
         f'<div class="alert-box alert-{variant}">'
-        f"<strong>{title}</strong>"
+        f"<strong>{icon} {title}</strong>"
         f"<ul>{items_html}</ul>"
         f"</div>"
     )

@@ -26,16 +26,22 @@ class TestStatGrid:
 
 
 class TestAlertBox:
-    def test_info_variant(self):
+    def test_info_variant_includes_icon_prefix(self):
         out = alert_box("오늘 요약", ["수집: 20건", "주요: BTC"], variant="info")
         assert 'class="alert-box alert-info"' in out
-        assert "<strong>오늘 요약</strong>" in out
+        assert "<strong>ℹ️ 오늘 요약</strong>" in out
         assert "<li>수집: 20건</li>" in out
         assert "<li>주요: BTC</li>" in out
 
-    def test_warning_and_urgent_variants(self):
-        assert "alert-warning" in alert_box("Warn", ["x"], variant="warning")
-        assert "alert-urgent" in alert_box("Urgent", ["x"], variant="urgent")
+    def test_warning_variant_uses_warning_icon(self):
+        out = alert_box("Warn", ["x"], variant="warning")
+        assert "alert-warning" in out
+        assert "<strong>⚠️ Warn</strong>" in out
+
+    def test_urgent_variant_uses_siren_icon(self):
+        out = alert_box("Urgent", ["x"], variant="urgent")
+        assert "alert-urgent" in out
+        assert "<strong>🚨 Urgent</strong>" in out
 
     def test_empty_bullets_returns_empty(self):
         assert alert_box("Title", []) == ""

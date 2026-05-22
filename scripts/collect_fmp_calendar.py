@@ -7,6 +7,7 @@ from typing import Any, Dict, List
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common import post_html
 from common.base_collector import BaseCollector
 from common.collector_config import get_collector_config
 from common.fmp_api import (
@@ -415,37 +416,45 @@ class FmpCalendarCollector(BaseCollector):
 
         content_parts: List[str] = []
 
-        # Opening summary — lead with a headline (top event + top earnings),
-        # keep counts as a secondary "스코어보드" sentence so the post-summary
-        # excerpt reads like an editorial brief instead of a count dump.
-        headlines: List[str] = []
-        if economic_events:
-            top_event = (economic_events[0].get("name") or "").strip()
-            if top_event:
-                headlines.append(f"주요 경제 이벤트 **{top_event}**")
-        if earnings:
-            top_earn_symbol = (earnings[0].get("symbol") or "").strip()
-            top_earn_name = (earnings[0].get("name") or "").strip()
-            if top_earn_symbol:
-                _label = f"**{top_earn_symbol}**"
-                if top_earn_name and top_earn_name != top_earn_symbol:
-                    _label += f" ({top_earn_name})"
-                headlines.append(f"대형 실적 발표 {_label}")
+        # Opening summary — single headline (top economic event preferred) +
+        # secondary earnings signal threaded as the source slot, so the
+        # post-summary excerpt reads like an editorial brief. Counts trail.
+        _headline = ""
+        _top_event = (economic_events[0].get("name") or "").strip() if economic_events else ""
+        _top_earn_symbol = (earnings[0].get("symbol") or "").strip() if earnings else ""
+        _top_earn_name = (earnings[0].get("name") or "").strip() if earnings else ""
 
-        if headlines:
-            lead = f"**{self.today}** " + " · ".join(headlines) + " 등 주목 일정이 예정되어 있습니다. "
-        else:
-            lead = f"**{self.today}** 오늘 일정에서 "
+        if _top_event:
+            _headline = f"주요 경제 이벤트 {_top_event}"
+        elif _top_earn_symbol:
+            _headline = f"대형 실적 {_top_earn_symbol}"
+            if _top_earn_name and _top_earn_name != _top_earn_symbol:
+                _headline += f" ({_top_earn_name})"
 
-        counts = (
+        _secondary = ""
+        if _top_event and _top_earn_symbol:
+            _secondary = f"실적: {_top_earn_symbol}"
+            if _top_earn_name and _top_earn_name != _top_earn_symbol:
+                _secondary += f"/{_top_earn_name}"
+
+        _detail = (
             f"시장 지수 {len(indices)}종, "
             f"섹터 {len(sectors)}개, "
             f"국채 금리 {len(treasury_rates)}개 만기, "
             f"경제 이벤트 {len(economic_events)}건(고·중간 중요도), "
             f"대형주 실적 {len(earnings)}건, "
-            f"IPO 일정 {len(ipo_data)}건을 정리했습니다.\n"
+            f"IPO 일정 {len(ipo_data)}건을 정리했습니다"
         )
-        content_parts.append(lead + counts)
+
+        content_parts.append(
+            post_html.summary_intro(
+                self.today,
+                "오늘 일정 핵심" if _headline else "오늘 일정",
+                _headline or None,
+                source=_secondary or None,
+                detail=_detail,
+            )
+        )
 
         # Stat grid
         stat_items = []

@@ -1842,25 +1842,26 @@ a:focus-visible {
 
       .alert-info {
         background: var(--alert-info-bg);
-        border-left: 3px solid var(--accent-blue);
+        border-left: 4px solid var(--accent-blue);
         color: var(--text-primary);
       }
 
       .alert-warning {
         background: var(--alert-warning-bg);
-        border-left: 3px solid var(--accent-orange);
+        border-left: 4px solid var(--accent-orange);
         color: var(--text-primary);
       }
 
       .alert-success {
         background: var(--alert-success-bg);
-        border-left: 3px solid var(--accent-green);
+        border-left: 4px solid var(--accent-green);
         color: var(--text-primary);
       }
 
-      .alert-danger {
-        background: var(--alert-danger-bg);
-        border-left: 3px solid var(--accent-red);
+      .alert-danger,
+      .alert-urgent {
+        background: var(--alert-urgent-bg);
+        border-left: 4px solid var(--accent-red);
         color: var(--text-primary);
       }
     }
