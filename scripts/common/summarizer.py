@@ -16,6 +16,7 @@ import re
 from collections import Counter
 from typing import Any, Dict, List, Optional, Tuple
 
+from . import post_html as post_html  # noqa: PLC0414 (re-export-safe local alias)
 from .markdown_utils import markdown_link
 from .severity import (  # noqa: F401  (re-exported for backward compat)
     _SEV_BADGE_HTML,
@@ -1093,10 +1094,13 @@ class ThemeSummarizer:
                 else:
                     p0_html_items.append(f"<li>{p0_title}{desc_part}</li>")
             if p0_html_items:
-                p0_html = "\n".join(p0_html_items)
-                lines.append(
-                    f'<div class="alert-box alert-urgent">\n<strong>긴급 알림</strong>\n<ul>\n{p0_html}\n</ul>\n</div>'
-                )
+                # p0_html_items hold full "<li>...</li>" strings; alert_box wraps
+                # bullets in <li>, so strip the outer tags before handing off.
+                _bullets = [
+                    item.removeprefix("<li>").removesuffix("</li>")
+                    for item in p0_html_items
+                ]
+                lines.append(post_html.alert_box("긴급 알림", _bullets, variant="urgent"))
 
         return "\n".join(lines)
 
