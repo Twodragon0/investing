@@ -1067,10 +1067,12 @@ class ThemeSummarizer:
                 briefing_items.append(f"<li>{emoji} <strong>{name}</strong>: {count}건 수집</li>")
 
         if briefing_items:
-            items_html = "\n".join(briefing_items)
-            lines.append(
-                f'<div class="alert-box alert-info">\n<strong>{opener}</strong>\n<ul>\n{items_html}\n</ul>\n</div>'
-            )
+            # briefing_items hold full "<li>...</li>" strings; alert_box wraps
+            # bullets in <li>, so strip the outer tags before handing off.
+            _bullets = [
+                item.removeprefix("<li>").removesuffix("</li>") for item in briefing_items
+            ]
+            lines.append(post_html.alert_box(opener, _bullets, variant="info"))
 
         # P0 urgent alerts as red callout
         if priority_items.get("P0"):

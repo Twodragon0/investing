@@ -17,6 +17,7 @@ import requests
 # Add scripts directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from common import post_html
 from common.base_collector import BaseCollector
 from common.collector_config import get_collector_config, get_limit, get_threshold
 from common.config import REQUEST_TIMEOUT
@@ -196,11 +197,11 @@ def build_post_content(
             f"{top_stable.get('project', 'Unknown')} ({top_stable.get('symbol', '')}) "
             f"— {top_stable.get('apy', 0):.2f}%</li>"
         )
+    # briefing_items hold full "<li>...</li>" strings; alert_box wraps
+    # bullets in <li>, so strip the outer tags before handing off.
+    _bullets = [item.removeprefix("<li>").removesuffix("</li>") for item in briefing_items]
     content_parts.append(
-        f'<div class="alert-box alert-info">'
-        f"<strong>DeFi 수익률 요약 ({today})</strong>"
-        f"<ul>{''.join(briefing_items)}</ul>"
-        f"</div>"
+        post_html.alert_box(f"DeFi 수익률 요약 ({today})", _bullets, variant="info")
     )
 
     # ── Section 1: 스테이블코인 수익률 ──

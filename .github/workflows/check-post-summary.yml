@@ -1,0 +1,65 @@
+name: Check Post Summary
+
+on:
+  schedule:
+    # Weekly Monday 19:30 UTC (04:30 KST Tuesday) — runs after the morning
+    # autopost cron so the latest posts are in _site.
+    - cron: '30 19 * * 1'
+  workflow_dispatch:
+    inputs:
+      days:
+        description: 'Look back N days (default 7)'
+        required: false
+        default: '7'
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: check-post-summary-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check-summary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
+        with:
+          fetch-depth: 1
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@bb6434c747fa7022e12fa1cedb98c6b6cf6a83cd  # v1.253.0
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+
+      - name: Setup Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0
+        with:
+          python-version: '3.11'
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --quiet
+
+      - name: Check post-summary quality
+        id: check
+        run: |
+          DAYS="${{ github.event.inputs.days || '7' }}"
+          python3 scripts/check_post_summary.py --days "$DAYS"
+
+      - name: Open issue on regression
+        if: failure()
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea  # v8.0.0
+        with:
+          script: |
+            const body = `Post-summary regression check failed for run ${{ github.run_id }}.\n\nSee logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}`;
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[post-summary] Regression detected (run ${{ github.run_id }})`,
+              body,
+              labels: ['quality', 'post-summary'],
+            });
