@@ -7,7 +7,7 @@ tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 keywords: "regulation, sec, cftc, fsc, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-regulatory-report-2026-04-20.png"
+image: "/assets/images/generated/news-briefing-regulatory-2026-04-20.png"
 permalink: "/regulatory-news/2026/04/20/daily-regulatory-report/"
 description_ko: "글로벌 규제 동향 11건 수집. 미국·한국·아시아·유럽 규제 기관 동향을 분석합니다."
 excerpt: "글로벌 규제 동향 리포트. 규제 환경 변화가 투자 전략에 미칠 영향을 점검합니다 - Investing Dragon 자동 수집 분석 리포트."
