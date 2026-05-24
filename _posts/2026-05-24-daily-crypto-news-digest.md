@@ -55,40 +55,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-24 - 암호화폐 뉴스 요
 <li><a href="https://www.coindesk.com/markets/2026/05/22/tom-lee-says-trillions-in-tech-ipo-supply-won-t-crash-the-s-and-p-500">Tom Lee는 IPO의 기술 공급이 폭락을 S&P 500로 만들지 않을 것이라고 말합니다.</a> <span class="p0-desc">Fundstrat의 Tom Lee는 SpaceX, Anthropic 및 OpenAI의 새로운 IPO 공급량 중 수조 달러가 궁극적으로 과소 할당된 투자자에 의해 흡수될 수 있다고.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: “비트코인 ATM 1위 업체 파산”…폭락 신호일까? [잇슈 머니] - KBS 뉴스 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 99건의 뉴스 중 P1 주요 이슈도 7건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (36건): 비트코인, 암호화폐, 달러 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **🏦 거래소** (26건): 선물, IPO 관련 불확실성이 커지고 있어 리스크 관리에 유의하세요.
-- **📈 가격/시장** (24건): 암호화폐, 달러, 손실 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- “비트코인 ATM 1위 업체 파산”…폭락 신호일까? [잇슈 머니] - KBS 뉴스
-- Tom Lee는 IPO의 기술 공급이 폭락을 S&P 500로 만들지 않을 것이라고 말합니다.
-
-### 주요 이슈
-
-- 암호화폐 목록이 증가하는 가운데 Blockchain.com은 미국 IPO에 대해 기밀로 파일을 보관합니다. - SiliconANGLE
-- 오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다
-- SEC은 나스닥이 거래소에 비트코인 인덱스 옵션을 나열하도록 승인합니다.
-- 외 4건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(40건), Google News KR(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-05-24.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-05-24.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
