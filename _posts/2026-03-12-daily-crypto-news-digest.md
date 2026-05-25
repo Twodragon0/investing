@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-crypto-2026-03-12.png"
+image: "/assets/images/generated/og-daily-crypto-news-digest-2026-03-12.png"
 description: "2026-03-12 암호화폐 시장에서 107건의 뉴스를 분석했습니다. 오늘은 비트코인, 거래소, 가격/시장 관련 소식이 주목됩니다. 긴급: 암호화폐 폭락: 가격이 반등하기 전에 구매를 고려할 최고의 코인 2개"
 excerpt: "2026-03-12 암호화폐 시장에서 107건의 뉴스를 분석했습니다. 오늘은 비트코인, 거래소, 가격/시장 관련 소식이 주목됩니다. 긴급: 암호화폐 폭락: 가격이 반등하기 전에…"
 image_alt: "암호화폐 뉴스 브리핑 - 2026-03-12 - crypto-news 뉴스 요약 이미지"

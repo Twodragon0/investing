@@ -55,40 +55,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-25 - 암호화폐 뉴스 요
 <li><a href="https://cointelegraph.com/news/analysts-forecast-bitcoin-crash-60k-february-low?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">분석가들은 비트코인 폭락을 $60,000 수준으로 예상하고 2026년 최저치를 재검토합니다.</a> <span class="p0-desc">비트코인의 가격은 출판 당시 약 $75,800이며, 이는 2025년 10월에 도달한 사상 최고치인 약 $126,000에 비해 거의 40% 감소한 것입니다.</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 280만 달러 규모의 StablR 익스플로잇이 진행 중인 가운데 유로 및 USD 스테이블코인 depeg 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 86건의 뉴스 중 P1 주요 이슈도 7건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (29건): 비트코인, XRP, BTC 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **🏦 거래소** (20건): binance, genius, support 이슈가 시장 구조 변화의 신호일 수 있어 심층 분석이 권장됩니다.
-- **📈 가격/시장** (21건): 암호화폐, 가능성, 하락 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 280만 달러 규모의 StablR 익스플로잇이 진행 중인 가운데 유로 및 USD 스테이블코인 depeg
-- 분석가들은 비트코인 폭락을 $60,000 수준으로 예상하고 2026년 최저치를 재검토합니다.
-
-### 주요 이슈
-
-- 주간 암호화폐 뉴스: 마이클 세일러의 비트코인 관점, XRP ETF, 스페이스X의 BTC 보유량 등
-- AI가 암호화폐에 대한 양자 위협을 가속화하고 있다고 보안 전문가들이 경고 - CoinDesk
-- 오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다
-- 외 4건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(40건), Cointelegraph(15건), Google News KR(12건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-05-25.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-05-25.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
