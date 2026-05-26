@@ -326,6 +326,7 @@ def test_format_text_smoke():
         "title_repeat": [],
         "no_desc": [],
         "translation_issues": [],
+        "ascii_ratio_high": [],
         "mojibake": [],
     }
     output = cdq.format_text(stats, days=7)
@@ -344,6 +345,7 @@ def test_format_text_includes_boilerplate_section():
         "title_repeat": [],
         "no_desc": [],
         "translation_issues": [],
+        "ascii_ratio_high": [],
         "mojibake": [],
     }
     output = cdq.format_text(stats, days=1)
@@ -361,6 +363,7 @@ def test_format_text_includes_title_repeat_section():
         "title_repeat": [post],
         "no_desc": [],
         "translation_issues": [],
+        "ascii_ratio_high": [],
         "mojibake": [],
     }
     output = cdq.format_text(stats, days=1)
@@ -377,6 +380,7 @@ def test_format_text_includes_translation_issue_section():
         "title_repeat": [],
         "no_desc": [],
         "translation_issues": [post],
+        "ascii_ratio_high": [],
         "mojibake": [],
     }
     output = cdq.format_text(stats, days=1)
@@ -396,6 +400,7 @@ def test_format_markdown_smoke():
         "title_repeat": [],
         "no_desc": [],
         "translation_issues": [],
+        "ascii_ratio_high": [],
         "mojibake": [],
     }
     output = cdq.format_markdown(stats, days=7)
@@ -417,6 +422,7 @@ def test_format_markdown_shows_warning_when_boilerplate_high():
         "title_repeat": [],
         "no_desc": [],
         "translation_issues": [],
+        "ascii_ratio_high": [],
         "mojibake": [],
     }
     output = cdq.format_markdown(stats, days=1)
@@ -431,6 +437,7 @@ def test_format_markdown_uses_checkmark_when_clean():
         "title_repeat": [],
         "no_desc": [],
         "translation_issues": [],
+        "ascii_ratio_high": [],
         "mojibake": [],
     }
     output = cdq.format_markdown(stats, days=7)
@@ -446,6 +453,7 @@ def test_format_markdown_uses_error_icon_when_mojibake():
         "title_repeat": [],
         "no_desc": [],
         "translation_issues": [],
+        "ascii_ratio_high": [],
         "mojibake": [post],
     }
     output = cdq.format_markdown(stats, days=1)
@@ -485,8 +493,8 @@ def test_main_returns_0_for_clean_posts(tmp_path, monkeypatch, capsys):
         tmp_path,
         f"{today}-clean.md",
         str(today),
-        title="Bitcoin Rally Q1 2026",
-        description="Bitcoin surged to $90,000 in Q1 2026 amid strong institutional demand.",
+        title="비트코인 2026년 1분기 랠리",
+        description="비트코인은 2026년 1분기에 강력한 기관 수요로 $90,000까지 상승했습니다.",
     )
     monkeypatch.setattr(
         sys,
@@ -538,7 +546,7 @@ def test_main_markdown_format(tmp_path, monkeypatch, capsys):
         tmp_path,
         f"{today}-md.md",
         str(today),
-        description="Bitcoin hit all-time high of $95,000 driven by ETF inflows in 2026.",
+        description="비트코인은 2026년 ETF 자금 유입에 힘입어 $95,000 사상 최고치를 기록했습니다.",
     )
     monkeypatch.setattr(
         sys,
