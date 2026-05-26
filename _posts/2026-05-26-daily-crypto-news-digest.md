@@ -55,40 +55,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-26 - 암호화폐 뉴스 요
 <li><a href="https://cointelegraph.com/news/squid-safe-labs-third-party-module-3-2-million-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Squid and Safe Labs는 320만 달러 규모의 익스플로잇 배후에 타사 모듈이 있다고 밝혔습니다</a> <span class="p0-desc">제3자 모듈이 Safe 지갑에서 약 300만 달러를 빼냈으며 Squid는 핵심 시스템이 영향을 받지 않았다고 말하면서 이 사건이 외부 Safe 모듈에 의한 것이라고 밝혔습니다</span></li>
 </ul>
 </div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 비트코인 1억 1500만 원선 상승… 인피닛 14% 급락 속 슈퍼버스 13% 급등 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 86건의 뉴스 중 P1 주요 이슈도 8건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (28건): 비트코인, 반등, 친암호화폐 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **🏦 거래소** (21건): binance, genius, opengradient 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다.
-- **📈 가격/시장** (20건): 반등, 암호화폐 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 비트코인 1억 1500만 원선 상승… 인피닛 14% 급락 속 슈퍼버스 13% 급등
-- Squid and Safe Labs는 320만 달러 규모의 익스플로잇 배후에 타사 모듈이 있다고 밝혔습니다
-
-### 주요 이슈
-
-- 2년 전과 현재: 미국의 암호화폐 규제 살펴보기
-- 암호화폐 투자자는 사기에 더 취약합니까? ASIC의 경고는 다음과 같습니다 - 금융 거물
-- 트럼프의 이란 합의 발표 예고에 비트코인 반등
-- 외 5건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(40건), Cointelegraph(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-05-26.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-05-26.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
