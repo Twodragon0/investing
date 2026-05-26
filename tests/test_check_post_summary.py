@@ -200,13 +200,19 @@ FILLER_FIXTURES: list[tuple[str, str, str | None]] = [
     ("ok-cpi", "CPI 발표를 앞두고 시장 변동성이 확대되며 투자자들의 경계감이 높아지는 흐름.", None),
     ("ok-pce", "PCE 지표는 인플레이션 둔화 추세를 시사하며 연준 정책 기대감에 영향을 줍니다.", None),
     ("ok-ipo", "IPO 시장은 활기를 되찾으며 신규 상장 종목들의 거래량이 증가하는 모습입니다.", None),
+    # Broadened units (recovered from 30-day _site/ analysis, 2026-05-26): 건/종/개/월/일
+    ("ok-count-gun", "비트코인 (49건): 비트코인 심리 지표가 변동 중이며 지지·저항선 근접 여부를 점검하세요.", None),
+    ("ok-count-jong", "총 100종의 자산을 다루며 신규 상장 종목과 기존 종목 흐름을 종합 분석합니다.", None),
+    ("ok-count-gae", "오늘 50개의 코인을 추적하며 거래량과 변동성을 종합적으로 살펴본 자료입니다.", None),
+    ("ok-date-korean", "이번 주 (05월 04일 05월 11일) 투자 시장의 주요 동향과 핵심 이슈를 종합 분석합니다.", None),
+    ("ok-date-month", "10월 12일부터 시작된 흐름이 이번 주에도 지속되며 시장 참여자들이 주목하는 상황입니다.", None),
 ]
 
 
-# Sanity: confirm fixture set has exactly 65 cases (locked in by spec).
-def test_filler_fixtures_size_is_65() -> None:
-    assert len(FILLER_FIXTURES) == 65, (
-        f"FILLER_FIXTURES drifted from spec (expected 65, got {len(FILLER_FIXTURES)})"
+# Sanity: confirm fixture set has exactly 70 cases (locked in by spec).
+def test_filler_fixtures_size_is_70() -> None:
+    assert len(FILLER_FIXTURES) == 70, (
+        f"FILLER_FIXTURES drifted from spec (expected 70, got {len(FILLER_FIXTURES)})"
     )
 
 

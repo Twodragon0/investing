@@ -20,6 +20,12 @@ import sys
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
+_SCRIPTS_DIR = Path(__file__).resolve().parent
+if str(_SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS_DIR))
+
+from common import summary_quality as _summary_quality_mod  # noqa: E402
+
 # ---------------------------------------------------------------------------
 # Boilerplate detection — same patterns as check_description_quality.py
 # ---------------------------------------------------------------------------
@@ -97,15 +103,9 @@ _SYNTHETIC_MARKERS = [
     "시장 보도.",
 ]
 
-_ARTICLE_SPECIFIC_RE = re.compile(
-    r"(?:[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)"
-    r"|(?:\b[A-Z]{2,}\b)"
-    r"|(?:\b\d{4}\b)"
-    r"|(?:\b\d+[\.,]\d+)"
-    r"|(?:\$|€|£|₩|¥)\s*\d"
-    r"|(?:\d+\s*(?:%|억|만|조|달러|원|위안))"
-    r"|(?:월|년|일)\s*\d"
-)
+# Article-specific token detection delegated to common.summary_quality —
+# do not redefine. ``_summary_quality_mod`` is bound at the top of this
+# file; access via ``_summary_quality_mod.ARTICLE_SPECIFIC_RE``.
 
 _NORM_RE = re.compile(r"[\s\W]+")
 
@@ -150,7 +150,7 @@ def _is_boilerplate(desc: str) -> bool:
     for marker in _SYNTHETIC_MARKERS:
         if marker in desc:
             return True
-    if len(desc) < 35 and not _ARTICLE_SPECIFIC_RE.search(desc):
+    if len(desc) < 35 and not _summary_quality_mod.ARTICLE_SPECIFIC_RE.search(desc):
         return True
     return False
 
