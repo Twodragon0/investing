@@ -1,5 +1,7 @@
 # Investing Dragon - Project Guide
 
+> See `~/Desktop/personal/CLAUDE.md` for cross-repo workspace conventions (this repo's local rules take precedence inside this directory).
+
 ## Global OpenCode Precedence
 
 - Use global OpenCode settings as the runtime baseline (`~/.config/opencode/opencode.json`, `~/.config/opencode/instructions.md`).
@@ -88,13 +90,29 @@ GOOGLE_APPLICATION_CREDENTIALS=/path/to/sa.json \
 
 ## Quick Skill Cheat Sheet
 
+> Verified 2026-05-22 against `.claude/skills/` and `~/.claude/plugins/installed_plugins.json`.
+
+External skills (require the `superpowers` plugin — **installed v5.1.0 from `claude-plugins-official` marketplace**):
 - 기본 진입: `superpowers/using-superpowers`
-- 기능/구조 변경 시작: `superpowers/brainstorming` -> `superpowers/writing-plans`
+- 기능/구조 변경 시작: `superpowers/brainstorming` → `superpowers/writing-plans`
 - 기능 구현/버그 수정: `superpowers/test-driven-development`
 - 장애/원인 분석: `superpowers/systematic-debugging`
 - 완료 직전 검증: `superpowers/verification-before-completion`
 - 리뷰/마무리: `superpowers/requesting-code-review`, `superpowers/finishing-a-development-branch`
-- 저장소 전용: `site-health-check`, `security-review`, `post-validation`, `cost-audit`, `debug-workflow`, `add-data-source`, `new-collector`, `fix-issue`, `deep-research`
+
+Repo-local skills (live in `.claude/skills/`):
+- `add-data-source`, `new-collector` — 데이터 소스/수집기 추가
+- `site-health-check` — 사이트 상태 점검
+- `debug-workflow`, `fix-issue` — 워크플로우/이슈 디버깅
+- `deep-research` — 심층 조사
+- `lint-fix` — 린팅 자동 수정
+- `omc-reference` — OMC 사용 가이드 (참조)
+
+Built-in slash commands (always available):
+- `/security-review` — 보안 리뷰
+- `/review`, `/init`
+
+OMC equivalents (`superpowers/*` 가 비활성/미설치일 때의 대체 매핑): brainstorming/writing-plans → `/oh-my-claudecode:plan`; systematic-debugging → `/oh-my-claudecode:debug`; verification-before-completion → `/oh-my-claudecode:verify`; requesting-code-review → `/review` or `/oh-my-claudecode:team N:code-reviewer`. 자세한 cross-repo 규약은 `~/Desktop/personal/CLAUDE.md` 참조.
 
 ## Conventions
 

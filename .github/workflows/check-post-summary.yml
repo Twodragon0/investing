@@ -31,7 +31,7 @@ jobs:
           fetch-depth: 1
 
       - name: Setup Ruby
-        uses: ruby/setup-ruby@bb6434c747fa7022e12fa1cedb98c6b6cf6a83cd  # v1.253.0
+        uses: ruby/setup-ruby@7372622e62b60b3cb750dcd2b9e32c247ffec26a  # v1.302.0
         with:
           ruby-version: '3.3'
           bundler-cache: true
@@ -52,7 +52,7 @@ jobs:
 
       - name: Open issue on regression
         if: failure()
-        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea  # v8.0.0
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3  # v9.0.0
         with:
           script: |
             const body = `Post-summary regression check failed for run ${{ github.run_id }}.\n\nSee logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}`;
