@@ -89,10 +89,13 @@ jobs:
           sudo mv gitleaks /usr/local/bin/gitleaks
 
       - name: Run Gitleaks
+        # --config 명시: gitleaks v8.24.2 는 .gitleaks.toml 을 자동 로드하지
+        # 않아 명시적 경로 지정 필요. --config 없이는 _state/translation_cache.json
+        # 의 linkedin-client-secret 오탐 244건이 다시 발생.
         run: |
           set -euo pipefail
           gitleaks version
-          gitleaks detect --source . --no-banner --verbose --redact
+          gitleaks detect --source . --config .gitleaks.toml --no-banner --verbose --redact
 
   actions-permissions:
     name: Workflow Permissions Audit
