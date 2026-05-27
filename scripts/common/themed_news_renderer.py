@@ -82,10 +82,7 @@ class ThemedNewsRenderer:
             safe_img = _esc(image_url, quote=True)
             onerr = "this.parentElement.style.display='none'"
             card_parts.append(
-                f'<div class="news-card-thumb">'
-                f'<img src="{safe_img}" alt="" loading="lazy"'
-                f' onerror="{onerr}">'
-                f"</div>"
+                f'<div class="news-card-thumb"><img src="{safe_img}" alt="" loading="lazy" onerror="{onerr}"></div>'
             )
         elif link:
             fav_link = sumr_module._best_favicon_link(article)
@@ -103,9 +100,7 @@ class ThemedNewsRenderer:
         if link:
             safe_link = _esc(link, quote=True)
             card_parts.append(
-                f'<a href="{safe_link}" class="news-title"'
-                f' target="_blank" rel="noopener noreferrer">'
-                f"{safe_title}</a>"
+                f'<a href="{safe_link}" class="news-title" target="_blank" rel="noopener noreferrer">{safe_title}</a>'
             )
         else:
             card_parts.append(f'<span class="news-title">{safe_title}</span>')

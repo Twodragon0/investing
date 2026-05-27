@@ -61,11 +61,11 @@ def test_filter_pools_drops_low_tvl_and_apy():
 def test_categorize_pools_separates_buckets_and_sorts():
     mod = importlib.import_module("collect_defi_yields")
     pools = [
-        {"tvlUsd": 20_000_000, "apy": 5.5, "symbol": "USDC", "project": "Aave",  "stablecoin": True},
-        {"tvlUsd": 30_000_000, "apy": 4.0, "symbol": "DAI",  "project": "Maker", "stablecoin": True},
-        {"tvlUsd": 25_000_000, "apy": 3.5, "symbol": "WETH", "project": "Lido",  "stablecoin": False},
-        {"tvlUsd": 15_000_000, "apy": 7.0, "symbol": "ETH",  "project": "Rocket","stablecoin": False},
-        {"tvlUsd": 10_000_000, "apy": 2.0, "symbol": "WBTC", "project": "Babylon","stablecoin": False},
+        {"tvlUsd": 20_000_000, "apy": 5.5, "symbol": "USDC", "project": "Aave", "stablecoin": True},
+        {"tvlUsd": 30_000_000, "apy": 4.0, "symbol": "DAI", "project": "Maker", "stablecoin": True},
+        {"tvlUsd": 25_000_000, "apy": 3.5, "symbol": "WETH", "project": "Lido", "stablecoin": False},
+        {"tvlUsd": 15_000_000, "apy": 7.0, "symbol": "ETH", "project": "Rocket", "stablecoin": False},
+        {"tvlUsd": 10_000_000, "apy": 2.0, "symbol": "WBTC", "project": "Babylon", "stablecoin": False},
     ]
     cats = mod.categorize_pools(pools)
 
@@ -86,8 +86,7 @@ def test_categorize_pools_respects_limits():
     mod = importlib.import_module("collect_defi_yields")
     # Build 30 stablecoin pools and verify TOP_STABLECOIN_LIMIT (default 10) applies
     pools = [
-        {"tvlUsd": 1_000_000 * (i + 1), "apy": float(i + 1),
-         "symbol": "USDC", "project": f"P{i}", "stablecoin": True}
+        {"tvlUsd": 1_000_000 * (i + 1), "apy": float(i + 1), "symbol": "USDC", "project": f"P{i}", "stablecoin": True}
         for i in range(30)
     ]
     cats = mod.categorize_pools(pools)
@@ -105,22 +104,24 @@ def _sample_categories() -> dict:
     """Reusable sample with non-empty stablecoin/eth/btc/overall buckets."""
     return {
         "stablecoin": [
-            {"project": "Aave",  "chain": "Ethereum", "symbol": "USDC",
-             "apy": 5.5, "tvlUsd": 50_000_000, "stablecoin": True},
+            {
+                "project": "Aave",
+                "chain": "Ethereum",
+                "symbol": "USDC",
+                "apy": 5.5,
+                "tvlUsd": 50_000_000,
+                "stablecoin": True,
+            },
         ],
         "eth": [
-            {"project": "Lido",  "chain": "Ethereum", "symbol": "WETH",
-             "apy": 3.5, "tvlUsd": 30_000_000},
+            {"project": "Lido", "chain": "Ethereum", "symbol": "WETH", "apy": 3.5, "tvlUsd": 30_000_000},
         ],
         "btc": [
-            {"project": "Babylon", "chain": "Bitcoin", "symbol": "WBTC",
-             "apy": 2.0, "tvlUsd": 10_000_000},
+            {"project": "Babylon", "chain": "Bitcoin", "symbol": "WBTC", "apy": 2.0, "tvlUsd": 10_000_000},
         ],
         "overall": [
-            {"project": "Aave", "chain": "Ethereum", "symbol": "USDC",
-             "apy": 5.5, "tvlUsd": 50_000_000},
-            {"project": "Lido", "chain": "Ethereum", "symbol": "WETH",
-             "apy": 3.5, "tvlUsd": 30_000_000},
+            {"project": "Aave", "chain": "Ethereum", "symbol": "USDC", "apy": 5.5, "tvlUsd": 50_000_000},
+            {"project": "Lido", "chain": "Ethereum", "symbol": "WETH", "apy": 3.5, "tvlUsd": 30_000_000},
         ],
     }
 
@@ -221,8 +222,7 @@ def test_build_post_content_skips_stablecoin_bullet_when_empty():
 def test_build_pool_table_returns_markdown_table():
     mod = importlib.import_module("collect_defi_yields")
     pools = [
-        {"project": "Aave", "chain": "Ethereum", "symbol": "USDC",
-         "apy": 5.5, "tvlUsd": 50_000_000},
+        {"project": "Aave", "chain": "Ethereum", "symbol": "USDC", "apy": 5.5, "tvlUsd": 50_000_000},
     ]
     table = mod._build_pool_table(pools)
     assert "Aave" in table

@@ -202,9 +202,7 @@ class TestFeaturedVsOverflow:
         mock_summarizer._theme_articles = {"k": articles}
         mock_summarizer.get_top_themes.return_value = [("Name", "k", "*", 6)]
 
-        out = ThemedNewsRenderer(items, mock_summarizer).render(
-            featured_count=3, max_articles=5
-        )
+        out = ThemedNewsRenderer(items, mock_summarizer).render(featured_count=3, max_articles=5)
 
         assert "<details>" in out
         # First 3 are featured cards; remaining are overflow rows.
@@ -220,20 +218,13 @@ class TestFeaturedVsOverflow:
 
 
 class TestOverflowPreviewLimit:
-    def test_more_than_limit_truncates_with_extra_label(
-        self, mock_summarizer: MagicMock
-    ) -> None:
-        articles = [
-            _make_article(f"Mass article number {i}", link=f"https://example.com/m/{i}")
-            for i in range(30)
-        ]
+    def test_more_than_limit_truncates_with_extra_label(self, mock_summarizer: MagicMock) -> None:
+        articles = [_make_article(f"Mass article number {i}", link=f"https://example.com/m/{i}") for i in range(30)]
         items = articles + [{"title": f"pad{i}"} for i in range(5)]
         mock_summarizer._theme_articles = {"k": articles}
         mock_summarizer.get_top_themes.return_value = [("Name", "k", "*", 30)]
 
-        out = ThemedNewsRenderer(items, mock_summarizer).render(
-            featured_count=3, max_articles=5
-        )
+        out = ThemedNewsRenderer(items, mock_summarizer).render(featured_count=3, max_articles=5)
 
         # Featured 3 + preview 10 overflow rows max, plus "...외 N건" cap label.
         assert out.count('class="overflow-preview"') == 10
@@ -280,9 +271,9 @@ class TestCrossThemeDedup:
         # The shared title in B should not appear inside a news-card-item block.
         assert "Shared headline across themes" in b_section
         # Theme B's first card should be one of the unique titles.
-        assert (
-            "Theme B unique 1" in b_section or "Theme B unique 2" in b_section
-        ), "Theme B card should feature a unique title, not the shared one"
+        assert "Theme B unique 1" in b_section or "Theme B unique 2" in b_section, (
+            "Theme B card should feature a unique title, not the shared one"
+        )
 
 
 # ---------------------------------------------------------------------------
@@ -371,9 +362,7 @@ class TestSeverityBadge:
     ) -> None:
         import common.themed_news_renderer as renderer_mod
 
-        monkeypatch.setattr(
-            renderer_mod, "_classify_news_severity", lambda t, d: "high"
-        )
+        monkeypatch.setattr(renderer_mod, "_classify_news_severity", lambda t, d: "high")
         monkeypatch.setattr(
             renderer_mod,
             "_SEV_BADGE_HTML",
@@ -512,9 +501,7 @@ class TestEdgeCases:
         assert "Survivor article title" in out
         assert "https://example.com/skip" not in out
 
-    def test_noise_title_filtered(
-        self, mock_summarizer: MagicMock, monkeypatch: pytest.MonkeyPatch
-    ) -> None:
+    def test_noise_title_filtered(self, mock_summarizer: MagicMock, monkeypatch: pytest.MonkeyPatch) -> None:
         import re
 
         import common.summarizer as _sumr
@@ -532,6 +519,7 @@ class TestEdgeCases:
         out = ThemedNewsRenderer(items, mock_summarizer).render()
         assert "Keeper headline" in out
         assert "DROPME headline" not in out
+
 
 # ---------------------------------------------------------------------------
 # 10. determinism
@@ -606,9 +594,7 @@ class TestDeterminism:
         assert 'class="overflow-thumb"' in out
         assert 'src="https://cdn.example.com/photo.jpg"' in out
 
-    def test_overflow_item_without_link_renders_span_fallback(
-        self, mock_summarizer: MagicMock
-    ) -> None:
+    def test_overflow_item_without_link_renders_span_fallback(self, mock_summarizer: MagicMock) -> None:
         """overflow item with no link renders <span> instead of <a>."""
         featured = [
             _make_article(

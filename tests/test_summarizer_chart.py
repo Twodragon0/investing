@@ -23,10 +23,7 @@ def _items(n: int):
 
 def _themes(count_list):
     """Build top_themes tuples from a list of counts."""
-    return [
-        (f"Theme{i}", f"theme_{i}", f"T{i}", c)
-        for i, c in enumerate(count_list)
-    ]
+    return [(f"Theme{i}", f"theme_{i}", f"T{i}", c) for i, c in enumerate(count_list)]
 
 
 # ---------------------------------------------------------------------------

@@ -994,9 +994,7 @@ class CryptoNewsCollector(BaseCollector):
         _top_headline = ""
         if all_items:
             _candidate = (
-                all_items[0].get("title_ko")
-                or all_items[0].get("title_translated")
-                or all_items[0].get("title", "")
+                all_items[0].get("title_ko") or all_items[0].get("title_translated") or all_items[0].get("title", "")
             )
             _top_headline = _candidate.strip()[:80]
 
@@ -1412,29 +1410,21 @@ class CryptoNewsCollector(BaseCollector):
         _top_rekt = rekt_items[0].get("title", "")[:60] if rekt_items else ""
         _top_news = ""
         if google_security_items:
-            _candidate = (
-                google_security_items[0].get("title_ko")
-                or google_security_items[0].get("title", "")
-            )
+            _candidate = google_security_items[0].get("title_ko") or google_security_items[0].get("title", "")
             _top_news = _candidate.strip()[:60]
         if _top_rekt:
             # Rekt 사건이 있으면 1순위 헤드라인으로 노출
             content_parts = [
                 f"블록체인 보안 {len(all_security_items)}건 분석. "
-                f"주목 사건: **{_top_rekt}**"
-                + (f" / 보안 뉴스 헤드라인: {_top_news}." if _top_news else ".")
-                + "\n"
+                f"주목 사건: **{_top_rekt}**" + (f" / 보안 뉴스 헤드라인: {_top_news}." if _top_news else ".") + "\n"
             ]
         elif _top_news:
             # Rekt 없을 때라도 보안 뉴스 헤드라인이라도 노출 (generic count만 회피)
             content_parts = [
-                f"블록체인 보안 뉴스 {len(all_security_items)}건 분석. "
-                f"오늘의 헤드라인: **{_top_news}**.\n"
+                f"블록체인 보안 뉴스 {len(all_security_items)}건 분석. 오늘의 헤드라인: **{_top_news}**.\n"
             ]
         else:
-            content_parts = [
-                f"블록체인 보안 뉴스 {len(all_security_items)}건 수집 (Rekt {len(rekt_items)}건 포함).\n"
-            ]
+            content_parts = [f"블록체인 보안 뉴스 {len(all_security_items)}건 수집 (Rekt {len(rekt_items)}건 포함).\n"]
         security_links: List[Dict[str, Any]] = []
 
         security_summarizer = ThemeSummarizer(all_security_items)

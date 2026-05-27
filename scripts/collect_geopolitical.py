@@ -538,9 +538,7 @@ def _build_polymarket_section(markets: List[Dict[str, Any]]) -> tuple:
     # shared post_html.stat_grid helper (consistent with the other reports).
     if filtered_markets:
         total_volume = sum(m.get("volume", 0) for m in filtered_markets)
-        _polymarket_link = (
-            '<a href="https://polymarket.com" target="_blank" rel="noopener noreferrer">Polymarket</a>'
-        )
+        _polymarket_link = '<a href="https://polymarket.com" target="_blank" rel="noopener noreferrer">Polymarket</a>'
         lines.append(
             "\n"
             + post_html.stat_grid(
@@ -562,7 +560,6 @@ _GDELT_NOISE_TITLE_RE = re.compile(
 )
 
 
-
 def _build_gdelt_section(articles: List[Dict[str, Any]]) -> List[str]:
     """Build the GDELT news section with tone analysis.
 
@@ -582,9 +579,7 @@ def _build_gdelt_section(articles: List[Dict[str, Any]]) -> List[str]:
     cleaned = [
         a
         for a in articles
-        if a.get("title")
-        and not _GDELT_NOISE_TITLE_RE.match(a["title"])
-        and _is_supported_language(a["title"])
+        if a.get("title") and not _GDELT_NOISE_TITLE_RE.match(a["title"]) and _is_supported_language(a["title"])
     ]
     if not cleaned:
         return ["현재 GDELT에서 한국어·영어 지정학 뉴스가 수집되지 않았습니다.\n"]
@@ -970,11 +965,7 @@ class GeopoliticalCollector(BaseCollector):
         if not _desc_headline and gdelt_articles:
             for art in gdelt_articles:
                 _candidate = (art.get("title") or "").strip()
-                if (
-                    _candidate
-                    and not _GDELT_NOISE_TITLE_RE.match(_candidate)
-                    and _is_supported_language(_candidate)
-                ):
+                if _candidate and not _GDELT_NOISE_TITLE_RE.match(_candidate) and _is_supported_language(_candidate):
                     _desc_headline = _candidate[:70]
                     break
         if not _desc_headline and markets:
@@ -1060,11 +1051,7 @@ class GeopoliticalCollector(BaseCollector):
         if not _top_headline and gdelt_articles:
             for art in gdelt_articles:
                 _candidate = (art.get("title") or "").strip()
-                if (
-                    _candidate
-                    and not _GDELT_NOISE_TITLE_RE.match(_candidate)
-                    and _is_supported_language(_candidate)
-                ):
+                if _candidate and not _GDELT_NOISE_TITLE_RE.match(_candidate) and _is_supported_language(_candidate):
                     _top_headline = _candidate[:90]
                     _headline_source = "GDELT"
                     break
@@ -1083,7 +1070,9 @@ class GeopoliticalCollector(BaseCollector):
         content_parts.append(
             post_html.summary_intro(
                 self.today,
-                "지정학 핵심 이슈" if _top_headline else f"기준 지정학적 리스크 데이터를 {source_count}개 소스에서 수집·분석했습니다",
+                "지정학 핵심 이슈"
+                if _top_headline
+                else f"기준 지정학적 리스크 데이터를 {source_count}개 소스에서 수집·분석했습니다",
                 _top_headline or None,
                 tag=_headline_source or None,
                 detail=_count_detail,

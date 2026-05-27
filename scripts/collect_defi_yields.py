@@ -200,9 +200,7 @@ def build_post_content(
     # briefing_items hold full "<li>...</li>" strings; alert_box wraps
     # bullets in <li>, so strip the outer tags before handing off.
     _bullets = [item.removeprefix("<li>").removesuffix("</li>") for item in briefing_items]
-    content_parts.append(
-        post_html.alert_box(f"DeFi 수익률 요약 ({today})", _bullets, variant="info")
-    )
+    content_parts.append(post_html.alert_box(f"DeFi 수익률 요약 ({today})", _bullets, variant="info"))
 
     # ── Section 1: 스테이블코인 수익률 ──
     content_parts.append(f"\n## 스테이블코인 수익률 TOP {len(stablecoin_pools)}\n")
