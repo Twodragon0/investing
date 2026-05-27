@@ -8,10 +8,10 @@
 | scripts/backfill\_post\_summaries.py              |      831 |      518 |     38% |116, 118, 146, 204, 213, 215, 217, 219, 221, 223, 225, 227, 229, 231, 246, 248, 250, 252, 254, 256, 258, 260, 311, 313, 315, 317, 319, 321, 323, 325, 354, 356, 358, 360, 384, 396-398, 400, 402, 405-412, 420, 427-453, 472-485, 489-510, 514-543, 571-603, 607-632, 642, 654-665, 669-676, 680-685, 696-719, 723-761, 765-784, 788-807, 815, 819, 836-837, 845, 849, 852, 857-905, 909-923, 935-939, 943-947, 951-960, 964-986, 990-1016, 1025-1078, 1087-1137, 1141-1211, 1215 |
 | scripts/backfill\_signal\_history\_accuracy.py    |       84 |        7 |     92% |30, 161-164, 171, 210 |
 | scripts/backfill\_signal\_history\_btc\_price.py  |      181 |      181 |      0% |    11-347 |
-| scripts/check\_description\_quality.py            |      246 |       26 |     89% |29-32, 56, 58, 104, 115, 120, 149-150, 187, 323, 347, 358-360, 363-365, 368-370, 457-458, 463 |
+| scripts/check\_description\_quality.py            |      229 |       20 |     91% |73, 84, 89, 118-119, 156, 292, 316, 327-329, 332-334, 337-339, 426-427, 432 |
 | scripts/check\_jekyll\_build.py                   |       19 |        1 |     95% |        28 |
 | scripts/check\_post\_images.py                    |       67 |        3 |     96% |48, 84, 107 |
-| scripts/check\_post\_summary.py                   |       73 |       73 |      0% |    16-127 |
+| scripts/check\_post\_summary.py                   |       78 |       21 |     73% |39, 98, 120-145, 149 |
 | scripts/check\_recent\_post\_urls.py              |       75 |        1 |     99% |       109 |
 | scripts/clean\_translation\_cache.py              |       34 |        1 |     97% |        58 |
 | scripts/collect\_blockchain.py                    |      216 |       29 |     87% |94, 181-182, 263-281, 285, 289-299, 320-322, 350, 352, 356, 377, 388, 400-402, 406 |
@@ -39,7 +39,7 @@
 | scripts/common/crypto\_api.py                     |       57 |        0 |    100% |           |
 | scripts/common/dedup.py                           |      158 |        0 |    100% |           |
 | scripts/common/encoding\_guard.py                 |       29 |        0 |    100% |           |
-| scripts/common/enrichment.py                      |      763 |        9 |     99% |719-726, 757, 794-796 |
+| scripts/common/enrichment.py                      |      763 |        9 |     99% |714-721, 752, 789-791 |
 | scripts/common/entity\_extractor.py               |      106 |        1 |     99% |       180 |
 | scripts/common/fmp\_api.py                        |      247 |        0 |    100% |           |
 | scripts/common/formatters.py                      |       30 |        0 |    100% |           |
@@ -63,6 +63,7 @@
 | scripts/common/summarizer\_chart.py               |       16 |        0 |    100% |           |
 | scripts/common/summarizer\_keywords.py            |        2 |        0 |    100% |           |
 | scripts/common/summarizer\_priority.py            |       35 |        0 |    100% |           |
+| scripts/common/summary\_quality.py                |       20 |        2 |     90% |    86, 88 |
 | scripts/common/text\_lang.py                      |       18 |        2 |     89% |     37-38 |
 | scripts/common/text\_utils.py                     |       43 |        2 |     95% |    91, 95 |
 | scripts/common/theme\_briefing.py                 |       99 |        4 |     96% |135, 145, 150, 174 |
@@ -77,7 +78,7 @@
 | scripts/convert\_to\_avif.py                      |       66 |       66 |      0% |     7-123 |
 | scripts/enrich\_existing\_posts.py                |      133 |      133 |      0% |    15-311 |
 | scripts/fix\_defi\_tvl\_history.py                |       52 |        1 |     98% |       117 |
-| scripts/fix\_post\_descriptions.py                |      272 |       12 |     96% |164, 168, 235, 250, 256-258, 265, 267, 319-320, 572 |
+| scripts/fix\_post\_descriptions.py                |      275 |       13 |     95% |25, 164, 168, 235, 250, 256-258, 265, 267, 319-320, 572 |
 | scripts/fix\_post\_number\_format.py              |       54 |       54 |      0% |     12-98 |
 | scripts/fix\_scenario\_na\_placeholders.py        |       41 |       41 |      0% |     14-77 |
 | scripts/generate\_daily\_summary.py               |     1330 |      320 |     76% |217, 230, 234-237, 443-444, 447-467, 476-477, 480, 488, 518-520, 764, 766, 869, 875, 961, 1025, 1029, 1176-1303, 1310, 1325, 1355, 1362-1364, 1471-1481, 1492-1506, 1546-1547, 1588, 1590, 1592, 1594, 1596, 1635, 1698, 1700, 1704, 1777, 1779-1781, 1783-1785, 1795, 1804, 1806-1808, 1816, 1818, 1820-1822, 1828-1838, 1840-1850, 1852-1862, 1864-1868, 1902, 1928, 1933, 1974, 1983, 1999-2001, 2012-2015, 2018, 2022-2029, 2032-2034, 2059, 2075-2076, 2080-2081, 2097, 2105, 2136, 2139, 2147, 2167, 2170, 2195-2197, 2199-2204, 2215-2227, 2230-2253, 2260-2263, 2265-2266, 2277, 2282-2297, 2309, 2312, 2336-2337, 2417-2418, 2442-2443, 2458, 2460, 2462, 2464, 2466, 2521 |
@@ -105,7 +106,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **22394** | **7735** | **65%** |           |
+| **TOTAL**                                         | **22405** | **7680** | **66%** |           |
 
 
 ## Setup coverage badge
