@@ -12,6 +12,7 @@ from urllib.parse import urlparse
 
 import requests
 
+from . import summary_quality as _summary_quality_mod
 from .config import get_verify_ssl
 from .encoding_guard import force_utf8_if_mislabelled, sanitize_mojibake
 from .image_rejection_metrics import record_image_rejection
@@ -105,17 +106,11 @@ _SITE_BOILERPLATE_PHRASES = [
     "포트폴리오 업데이트 보고서",
 ]
 
-# Regex to detect at least one article-specific token (proper noun, number, date)
-# NOTE: Intentionally avoids matching generic Korean phrases to prevent false negatives.
-_ARTICLE_SPECIFIC_RE = re.compile(
-    r"(?:[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)"  # Two+ consecutive title-case words (proper noun)
-    r"|(?:\b[A-Z]{2,}\b)"  # Acronym / ticker (SEC, ETF, BTC, XRP, etc.)
-    r"|(?:\b\d{4}\b)"  # 4-digit year
-    r"|(?:\b\d+[\.,]\d+)"  # Number with decimal/comma (e.g. price, %)
-    r"|(?:\$|€|£|₩|¥)\s*\d"  # Currency + digit
-    r"|(?:\d+\s*(?:%|억|만|조|달러|원|위안))"  # Number with unit
-    r"|(?:월|년|일)\s*\d"  # Korean date fragments
-)
+# Article-specific token detection now lives in common.summary_quality.
+# The canonical pattern is ``summary_quality.ARTICLE_SPECIFIC_RE`` —
+# do not redefine here. Attribute access via the module reference keeps the
+# circular import (summary_quality ↔ enrichment) safe by deferring lookup
+# to call time.
 
 
 def _is_site_boilerplate(desc: str) -> bool:
@@ -144,7 +139,7 @@ def _is_site_boilerplate(desc: str) -> bool:
     # 3. Very short descriptions without any article-specific tokens
     # Threshold kept low (35) to catch pure site taglines ("전 세계 시장에 대한 뉴스 및 분석.")
     # while preserving medium-length Korean sentences that lack numbers/acronyms.
-    if len(desc) < 35 and not _ARTICLE_SPECIFIC_RE.search(desc):
+    if len(desc) < 35 and not _summary_quality_mod.ARTICLE_SPECIFIC_RE.search(desc):
         logger.debug("Short generic description (no specific tokens): %r", desc[:80])
         return True
 
@@ -309,7 +304,7 @@ def _is_low_information_fragment(desc: str) -> bool:
     if len(desc) < 25:
         generic_tokens = {"news", "update", "latest", "market", "story", "기사", "속보", "뉴스", "보도"}
         token_count = len(re.findall(r"[A-Za-z]+|[가-힣]+", desc.lower()))
-        has_specific = bool(_ARTICLE_SPECIFIC_RE.search(desc))
+        has_specific = bool(_summary_quality_mod.ARTICLE_SPECIFIC_RE.search(desc))
         has_generic = any(tok in desc.lower() for tok in generic_tokens)
         if token_count <= 6 and (has_generic or not has_specific):
             return True

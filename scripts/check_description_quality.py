@@ -12,24 +12,12 @@ import sys
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
-# Shared boilerplate detectors. The canonical definitions live in
-# common/enrichment.py and common/summarizer.py — importing them here avoids
-# pattern drift (the duplicated local copies previously missed the regex
-# update in PR #775 because the two files weren't kept in sync).
-# Fallback to None only when run in true standalone mode (no PYTHONPATH);
-# callers should ensure scripts/ is importable for full detection.
-try:
-    from common.enrichment import _is_site_boilerplate as _enrichment_boilerplate  # noqa: PLC2701
-    from common.summarizer import (  # noqa: PLC2701
-        _is_boilerplate_desc as _summarizer_boilerplate,
-    )
-    from common.summarizer import (
-        _is_generic_desc as _summarizer_generic,
-    )
-except ImportError:
-    _enrichment_boilerplate = None  # type: ignore[assignment]
-    _summarizer_boilerplate = None  # type: ignore[assignment]
-    _summarizer_generic = None  # type: ignore[assignment]
+# Boilerplate detection goes through the unified facade in
+# common/summary_quality.py — the underscore-private detectors in
+# common/enrichment and common/summarizer should not be imported directly
+# from CLI scripts (DIP). The facade orchestrates all three so a pattern
+# update in any single source file remains observable to every consumer.
+from common.summary_quality import is_boilerplate as _is_boilerplate
 
 _NORM_RE = re.compile(r"[\s\W]+")
 
@@ -38,25 +26,6 @@ _DESC_KO_RE = re.compile(r'^description_ko:\s*["\']?(.+?)["\']?\s*$', re.MULTILI
 _DESC_RE = re.compile(r'^description:\s*["\']?(.+?)["\']?\s*$', re.MULTILINE)
 _TITLE_RE = re.compile(r'^title:\s*["\']?(.+?)["\']?\s*$', re.MULTILINE)
 _DATE_RE = re.compile(r"^date:\s*(\d{4}-\d{2}-\d{2})", re.MULTILINE)
-
-
-def _is_boilerplate(desc: str) -> bool:
-    """Return True if description is site boilerplate or synthetic filler.
-
-    Delegates to the three canonical detectors:
-      - `common.enrichment._is_site_boilerplate` (site phrases + regex + short-desc rule)
-      - `common.summarizer._is_generic_desc` (synthetic/generic patterns)
-      - `common.summarizer._is_boilerplate_desc` (extra MT-leak phrases)
-    """
-    if not desc:
-        return False
-    if _enrichment_boilerplate is not None and _enrichment_boilerplate(desc):
-        return True
-    if _summarizer_generic is not None and _summarizer_generic(desc):
-        return True
-    if _summarizer_boilerplate is not None and _summarizer_boilerplate(desc):
-        return True
-    return False
 
 
 # ---------------------------------------------------------------------------

@@ -861,14 +861,18 @@ class TestConstants:
     def test_site_boilerplate_patterns_non_empty(self):
         assert len(fpd._SITE_BOILERPLATE_PATTERNS) > 0
 
-    def test_article_specific_re_compiled(self):
-        assert fpd._ARTICLE_SPECIFIC_RE is not None
+    # The canonical positive-signal pattern now lives in
+    # ``common.summary_quality.ARTICLE_SPECIFIC_RE``. ``fix_post_descriptions``
+    # binds the sibling module as ``_summary_quality_mod`` and accesses the
+    # pattern lazily so the cross-module circular import resolves at call time.
+    def test_article_specific_re_reachable_via_facade(self):
+        assert fpd._summary_quality_mod.ARTICLE_SPECIFIC_RE is not None
 
     def test_article_specific_re_matches_dollar_amount(self):
-        assert fpd._ARTICLE_SPECIFIC_RE.search("$100 billion fund")
+        assert fpd._summary_quality_mod.ARTICLE_SPECIFIC_RE.search("$100 billion fund")
 
     def test_article_specific_re_matches_year(self):
-        assert fpd._ARTICLE_SPECIFIC_RE.search("In 2026 the market")
+        assert fpd._summary_quality_mod.ARTICLE_SPECIFIC_RE.search("In 2026 the market")
 
     def test_article_specific_re_matches_percentage(self):
-        assert fpd._ARTICLE_SPECIFIC_RE.search("15.5% gain today")
+        assert fpd._summary_quality_mod.ARTICLE_SPECIFIC_RE.search("15.5% gain today")

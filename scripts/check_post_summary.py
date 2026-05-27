@@ -2,12 +2,21 @@
 """Validate post-summary regression on recently built Jekyll posts.
 
 Reads ``_site/`` rendered HTML, finds the post-summary section in each post
-within the last N days, and flags low-quality summaries:
+within the last N days, and flags low-quality summaries via two passes:
 
+Negative checks (issue found → fail):
 - empty or whitespace-only ``<p>``
 - raw HTML leaking through ``strip_html`` (means the body's first paragraph
   started with a HTML block instead of natural-language lead)
 - pure count-only excerpts (``N건 수집`` without other context)
+- too-short (< 30 chars) excerpts
+
+Positive validation (any one signal must be present):
+- numeric tokens with units/currency/percent
+- proper nouns / acronyms / tickers (BTC, KOSPI, ...)
+- quoted phrases or Korean colon-introduced headline clauses
+A body that passes the negative checks but carries no positive signal is
+flagged as ``no-signal`` (filler-only excerpt).
 
 Designed to run weekly in CI (``.github/workflows/check-post-summary.yml``).
 Exits 1 with a structured report when regressions exceed the threshold.
@@ -24,6 +33,12 @@ from pathlib import Path
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent
 _SITE_DIR = _REPO_ROOT / "_site"
+
+# Ensure scripts/ is importable when invoked as `python3 scripts/check_post_summary.py`.
+if str(_REPO_ROOT / "scripts") not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT / "scripts"))
+
+from common.summary_quality import has_positive_signal  # noqa: E402
 
 # Capture the <p>...</p> inside the post-summary section
 _POST_SUMMARY_RE = re.compile(
@@ -57,7 +72,12 @@ def _extract_post_date(path: Path) -> str:
 
 
 def _classify(body: str) -> str | None:
-    """Return issue label if body has a regression, else None."""
+    """Return issue label if body has a regression, else None.
+
+    Order: empty → html-leak → pure-count → too-short → no-signal.
+    ``no-signal`` flags filler-only summaries that pass length/HTML checks but
+    lack any positive marker (number, proper noun, headline lead-in).
+    """
     stripped = body.strip()
     if not stripped:
         return "empty"
@@ -67,6 +87,8 @@ def _classify(body: str) -> str | None:
         return "pure-count"
     if len(stripped) < 30:
         return "too-short"
+    if not has_positive_signal(stripped):
+        return "no-signal"
     return None
 
 
@@ -100,8 +122,8 @@ def main() -> int:
     parser.add_argument(
         "--max-failures",
         type=int,
-        default=2,
-        help="Allow up to N regressions before exit 1 (default: 2)",
+        default=0,
+        help="Allow up to N regressions before exit 1 (default: 0 — strict mode)",
     )
     args = parser.parse_args()
 
