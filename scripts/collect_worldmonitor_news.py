@@ -735,7 +735,6 @@ class WorldMonitorCollector(BaseCollector):
             theme_counter[theme] += 1
             impact = impact_label(theme)
 
-
             safe_title = html_text(title)
             display_title = markdown_link(f"**{title}**", link) if link else f"**{escape_table_cell(title)}**"
             # HTML <a> version for use inside HTML card blocks (markdown doesn't render in HTML divs)

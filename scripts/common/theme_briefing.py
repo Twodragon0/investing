@@ -25,9 +25,7 @@ class ThemeBriefingGenerator:
     def __init__(self, summarizer: ThemeSummarizer) -> None:
         self._ts = summarizer
 
-    def generate_single_theme_briefing(
-        self, theme_key: str, articles: List[Dict[str, Any]]
-    ) -> str:
+    def generate_single_theme_briefing(self, theme_key: str, articles: List[Dict[str, Any]]) -> str:
         """Generate a keyword-rich 1-line briefing for a single theme.
 
         Strategy:
@@ -151,9 +149,7 @@ class ThemeBriefingGenerator:
 
         return ""
 
-    def generate_theme_subtitle(
-        self, theme_key: str, articles: List[Dict[str, Any]]
-    ) -> str:
+    def generate_theme_subtitle(self, theme_key: str, articles: List[Dict[str, Any]]) -> str:
         """Generate a subtitle from the best article description for theme headings.
 
         Unlike generate_single_theme_briefing which uses keyword analysis,
@@ -166,12 +162,8 @@ class ThemeBriefingGenerator:
             return ""
 
         for article in articles[:5]:
-            desc = _fix_mistranslations(
-                (article.get("description_ko") or article.get("description", "")).strip()
-            )
-            title = _fix_mistranslations(
-                article.get("title_ko") or article.get("title", "")
-            )
+            desc = _fix_mistranslations((article.get("description_ko") or article.get("description", "")).strip())
+            title = _fix_mistranslations(article.get("title_ko") or article.get("title", ""))
             if not desc or desc == title or len(desc) < 20:
                 continue
             if _is_generic_desc(desc):

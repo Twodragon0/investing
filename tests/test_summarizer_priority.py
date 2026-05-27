@@ -249,6 +249,7 @@ class TestClassifyPriorityWordBoundary:
 class TestMakeKeywordPattern:
     def test_non_empty_list_returns_compiled_pattern(self):
         import re
+
         pattern = _make_keyword_pattern(["crash", "hack"])
         assert isinstance(pattern, re.Pattern)
 

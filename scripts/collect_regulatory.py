@@ -431,9 +431,7 @@ class RegulatoryCollector(BaseCollector):
         _top_headline = ""
         if all_items:
             _candidate = (
-                all_items[0].get("title_ko")
-                or all_items[0].get("title_translated")
-                or all_items[0].get("title", "")
+                all_items[0].get("title_ko") or all_items[0].get("title_translated") or all_items[0].get("title", "")
             )
             _top_headline = _candidate.strip()[:80]
 
@@ -464,9 +462,7 @@ class RegulatoryCollector(BaseCollector):
         content_parts = [_reg_opening]
 
         # Stat grid - region counts (shared post_html helper).
-        content_parts.append(
-            post_html.stat_grid([(str(c), r) for r, c in region_counts.most_common(4)])
-        )
+        content_parts.append(post_html.stat_grid([(str(c), r) for r, c in region_counts.most_common(4)]))
 
         # Executive summary (한눈에 보기)
         exec_summary = summarizer.generate_executive_summary(

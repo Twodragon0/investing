@@ -257,6 +257,7 @@ _NOISE_TITLE_RE = re.compile(
     re.IGNORECASE,
 )
 
+
 # Common English finance terms -> Korean translation for keyword display
 def _load_en_keyword_ko() -> Dict[str, str]:
     """Load English-to-Korean keyword dictionary from external JSON."""
@@ -411,7 +412,6 @@ THEME_DOMINANT_NARRATIVES: Dict[str, List[str]] = {
 }
 
 
-
 class ThemeSummarizer:
     """Classify news items into themes and generate markdown summary sections."""
 
@@ -509,11 +509,7 @@ class ThemeSummarizer:
                 normalized = token.lower() if re.match(r"[A-Za-z]", token) else token
                 if re.fullmatch(r"[가-힣]{2,}", token):
                     normalized = re.sub(r"(은|는|이|가|을|를|의|에|와|과|도|만|로|으로)$", "", normalized)
-                if (
-                    normalized not in STOP_WORDS
-                    and normalized not in NOISE_ENGLISH
-                    and len(normalized) >= 2
-                ):
+                if normalized not in STOP_WORDS and normalized not in NOISE_ENGLISH and len(normalized) >= 2:
                     # Skip short generic English tokens (1-2 chars)
                     if re.match(r"^[a-z]{1,2}$", normalized):
                         continue
@@ -1069,9 +1065,7 @@ class ThemeSummarizer:
         if briefing_items:
             # briefing_items hold full "<li>...</li>" strings; alert_box wraps
             # bullets in <li>, so strip the outer tags before handing off.
-            _bullets = [
-                item.removeprefix("<li>").removesuffix("</li>") for item in briefing_items
-            ]
+            _bullets = [item.removeprefix("<li>").removesuffix("</li>") for item in briefing_items]
             lines.append(post_html.alert_box(opener, _bullets, variant="info"))
 
         # P0 urgent alerts as red callout
@@ -1098,10 +1092,7 @@ class ThemeSummarizer:
             if p0_html_items:
                 # p0_html_items hold full "<li>...</li>" strings; alert_box wraps
                 # bullets in <li>, so strip the outer tags before handing off.
-                _bullets = [
-                    item.removeprefix("<li>").removesuffix("</li>")
-                    for item in p0_html_items
-                ]
+                _bullets = [item.removeprefix("<li>").removesuffix("</li>") for item in p0_html_items]
                 lines.append(post_html.alert_box("긴급 알림", _bullets, variant="urgent"))
 
         return "\n".join(lines)

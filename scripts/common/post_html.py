@@ -28,9 +28,7 @@ _ALERT_ICON: dict[str, str] = {
     "info": _SVG_TEMPLATE.format(
         path='<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>'
     ),
-    "warning": _SVG_TEMPLATE.format(
-        path='<path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>'
-    ),
+    "warning": _SVG_TEMPLATE.format(path='<path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>'),
     "urgent": _SVG_TEMPLATE.format(
         path='<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>'
     ),
@@ -46,8 +44,7 @@ def stat_grid(items: Sequence[tuple[str, str]]) -> str:
     if not items:
         return ""
     cells = "".join(
-        f'<div class="stat-item"><div class="stat-value">{value}</div>'
-        f'<div class="stat-label">{label}</div></div>'
+        f'<div class="stat-item"><div class="stat-value">{value}</div><div class="stat-label">{label}</div></div>'
         for value, label in items
     )
     return f'<div class="stat-grid">{cells}</div>'
@@ -66,12 +63,7 @@ def alert_box(title: str, bullets: Iterable[str], variant: AlertVariant = "info"
         return ""
     items_html = "".join(f"<li>{b}</li>" for b in bullet_list)
     icon = _ALERT_ICON[variant]
-    return (
-        f'<div class="alert-box alert-{variant}">'
-        f"<strong>{icon} {title}</strong>"
-        f"<ul>{items_html}</ul>"
-        f"</div>"
-    )
+    return f'<div class="alert-box alert-{variant}"><strong>{icon} {title}</strong><ul>{items_html}</ul></div>'
 
 
 def summary_intro(
@@ -114,9 +106,4 @@ def footer_meta(timestamp: str, sources: str | Sequence[str]) -> str:
     """
     if not isinstance(sources, str):
         sources = ", ".join(s for s in sources if s)
-    return (
-        f'<div class="wm-footer-meta">'
-        f"<span>수집 시각: {timestamp}</span>"
-        f"<span>소스: {sources or 'N/A'}</span>"
-        f"</div>"
-    )
+    return f'<div class="wm-footer-meta"><span>수집 시각: {timestamp}</span><span>소스: {sources or "N/A"}</span></div>'
