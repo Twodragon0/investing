@@ -7,9 +7,11 @@ repos:
       - id: end-of-file-fixer
         # IndexNow 키 검증 파일([0-9a-f]{32}.txt)은 키 문자열 정확 매칭이 필요하므로
         # newline 추가 시 일부 검증기가 mismatch로 판단할 수 있어 exclude 처리.
-        exclude: ^(_state/|_posts/|assets/images/generated/|docs/weekly-report-|[0-9a-f]{32}\.txt$)
+        # tests/snapshots/ 골든 파일은 생성기 출력과 byte-exact 매칭이어야 하므로
+        # end-of-file-fixer 가 trailing blank line 을 제거하면 골든 테스트가 깨진다.
+        exclude: ^(_state/|_posts/|assets/images/generated/|docs/weekly-report-|tests/snapshots/|[0-9a-f]{32}\.txt$)
       - id: trailing-whitespace
-        exclude: ^(_state/|_posts/|assets/images/generated/|docs/weekly-report-|[0-9a-f]{32}\.txt$)
+        exclude: ^(_state/|_posts/|assets/images/generated/|docs/weekly-report-|tests/snapshots/|[0-9a-f]{32}\.txt$)
       - id: detect-private-key
 
   - repo: https://github.com/gitleaks/gitleaks
