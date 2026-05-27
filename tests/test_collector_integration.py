@@ -6,6 +6,7 @@ All external network calls are mocked — zero real HTTP requests are made.
 from __future__ import annotations
 
 import os
+import re
 import sys
 from typing import Any, Dict, List
 from unittest.mock import MagicMock, patch
@@ -1140,7 +1141,10 @@ class TestRegulatoryCollectorIntegration:
 
         kwargs = post_gen.create_post.call_args.kwargs
         assert kwargs["title"] == "글로벌 규제 동향 리포트 - 2026-03-29"
-        assert "## 미국 규제 동향" in kwargs["content"]
+        # Region sections are auto-numbered ("## 1. 미국 규제 동향", ...) since the
+        # 2026-05-22 Designer audit.
+        assert "미국 규제 동향" in kwargs["content"]
+        assert re.search(r"## \d+\. 미국 규제 동향", kwargs["content"])
         assert "## 규제 테마 분석" in kwargs["content"]
         dedup.save.assert_called_once()
 
@@ -1205,8 +1209,9 @@ class TestPoliticalTradesCollectorIntegration:
         assert kwargs["slug"] == "daily-political-trades-report"
         assert kwargs["image"].endswith("news-briefing-political-2026-03-29.png")
         assert "![news-briefing-political]" in kwargs["content"]
-        assert "## 미국 의회 거래 동향" in kwargs["content"]
-        assert "## 정책 영향 분석" in kwargs["content"]
+        # Section headings are auto-numbered ("## N. 미국 의회 거래 동향").
+        assert re.search(r"## \d+\. 미국 의회 거래 동향", kwargs["content"])
+        assert re.search(r"## \d+\. 정책 영향 분석", kwargs["content"])
         assert dedup.mark_seen.call_count == 6
         dedup.save.assert_called_once()
 

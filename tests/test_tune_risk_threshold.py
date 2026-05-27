@@ -43,13 +43,17 @@ date: {date_str} 09:00:00 +0900
 
 
 def test_parse_post_extracts_priority_items():
-    """Sample post body → P0 list items are extracted correctly."""
+    """Sample post body → P0 list items are extracted correctly.
+
+    ``source`` is derived from the link's netloc so risk_classifier source
+    weights apply to the real publisher (not always "google news").
+    """
     text = """
 <div class="alert-box alert-urgent">
 <strong>긴급 알림</strong>
 <ul>
 <li><a href="https://example.com/1">Bitcoin crashes 20%</a> <span class="p0-desc">Bitcoin fell sharply amid macro fears.</span></li>
-<li><a href="https://example.com/2">SEC files lawsuit</a> <span class="p0-desc">SEC sues major exchange for fraud.</span></li>
+<li><a href="https://news.google.com/articles/abc">SEC files lawsuit</a> <span class="p0-desc">SEC sues major exchange for fraud.</span></li>
 </ul>
 </div>
 """
@@ -57,8 +61,9 @@ def test_parse_post_extracts_priority_items():
     assert len(items) == 2
     assert items[0]["title"] == "Bitcoin crashes 20%"
     assert items[0]["description"] == "Bitcoin fell sharply amid macro fears."
-    assert items[0]["source"] == "google news"
+    assert items[0]["source"] == "example.com"
     assert items[1]["title"] == "SEC files lawsuit"
+    assert items[1]["source"] == "google news"
 
 
 def test_parse_priority_items_returns_empty_when_no_urgent_block():
