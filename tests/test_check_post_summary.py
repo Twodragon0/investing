@@ -26,6 +26,7 @@ from scripts.check_post_summary import (
 # _classify — exhaustive issue-label coverage
 # ---------------------------------------------------------------------------
 
+
 class TestClassifyEmpty:
     def test_empty_string(self) -> None:
         assert _classify("") == "empty"
@@ -211,9 +212,7 @@ FILLER_FIXTURES: list[tuple[str, str, str | None]] = [
 
 # Sanity: confirm fixture set has exactly 70 cases (locked in by spec).
 def test_filler_fixtures_size_is_70() -> None:
-    assert len(FILLER_FIXTURES) == 70, (
-        f"FILLER_FIXTURES drifted from spec (expected 70, got {len(FILLER_FIXTURES)})"
-    )
+    assert len(FILLER_FIXTURES) == 70, f"FILLER_FIXTURES drifted from spec (expected 70, got {len(FILLER_FIXTURES)})"
 
 
 @pytest.mark.parametrize(
@@ -302,9 +301,7 @@ def test_scan_site_missing_summary_section_is_ignored(temp_site) -> None:
     today = datetime.now(UTC).strftime("%Y/%m/%d")
     post_dir = temp_site / f"crypto-news/{today}/no-summary/"
     post_dir.mkdir(parents=True)
-    (post_dir / "index.html").write_text(
-        "<html><body><p>no section here</p></body></html>", encoding="utf-8"
-    )
+    (post_dir / "index.html").write_text("<html><body><p>no section here</p></body></html>", encoding="utf-8")
     assert scan_site(days=7) == []
 
 

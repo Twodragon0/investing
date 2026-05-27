@@ -145,9 +145,7 @@ def test_consumer_has_no_local_article_specific_pattern(path: Path) -> None:
 def test_canonical_pattern_matches_sample(label: str, sample: str, expected: bool) -> None:
     """Pin per-branch matching behavior of ARTICLE_SPECIFIC_RE."""
     actual = bool(_summary_quality_mod.ARTICLE_SPECIFIC_RE.search(sample))
-    assert actual is expected, (
-        f"[{label}] expected match={expected} but got {actual}: {sample!r}"
-    )
+    assert actual is expected, f"[{label}] expected match={expected} but got {actual}: {sample!r}"
 
 
 # ---------------------------------------------------------------------------
@@ -158,15 +156,10 @@ def test_canonical_pattern_matches_sample(label: str, sample: str, expected: boo
 def test_consumers_match_in_parity_with_facade(label: str, sample: str, expected: bool) -> None:
     """Facade, enrichment, and fix_post_descriptions must agree on every sample."""
     via_facade = bool(_summary_quality_mod.ARTICLE_SPECIFIC_RE.search(sample))
-    via_enrichment = bool(
-        _enrichment_mod._summary_quality_mod.ARTICLE_SPECIFIC_RE.search(sample)
-    )
-    via_fix = bool(
-        _fix_post_descriptions_mod._summary_quality_mod.ARTICLE_SPECIFIC_RE.search(sample)
-    )
+    via_enrichment = bool(_enrichment_mod._summary_quality_mod.ARTICLE_SPECIFIC_RE.search(sample))
+    via_fix = bool(_fix_post_descriptions_mod._summary_quality_mod.ARTICLE_SPECIFIC_RE.search(sample))
     assert via_facade == via_enrichment == via_fix, (
-        f"[{label}] parity broken — "
-        f"facade={via_facade}, enrichment={via_enrichment}, fix={via_fix}: {sample!r}"
+        f"[{label}] parity broken — facade={via_facade}, enrichment={via_enrichment}, fix={via_fix}: {sample!r}"
     )
     assert via_facade is expected
 

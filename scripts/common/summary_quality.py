@@ -41,17 +41,17 @@ __all__ = [
 # summary_quality module during its own load (circular import resolution).
 # ---------------------------------------------------------------------------
 ARTICLE_SPECIFIC_RE = re.compile(
-    r"(?:[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)"                       # Title-case word pair (proper noun)
-    r"|(?:(?<![A-Za-z])[A-Z]{2,}(?![A-Za-z]))"                   # Acronym / ticker
-    r"|(?:(?<!\d)\d{4}(?!\d))"                                    # 4-digit year (2026…)
-    r"|(?:\d+[.,]\d+)"                                            # Decimal/comma number
-    r"|(?:[$€£₩¥]\s*\d)"                                          # Currency + digit
-    r"|(?:\d+\s*(?:%|억|만|조|달러|원|위안|위|건|종|개|월|일))"     # Number with unit
-    r"|(?:(?:월|년|일)\s*\d)"                                     # Korean date fragment (월 04, 년 2026)
-    r"|(?:\d{1,3}(?:,\d{3})+)"                                    # 1,234,567 grouping
-    r'|(?:["“‘][^"”’]{3,}["”’])'                                  # Quoted phrase
-    r"|(?:주요\s*(?:테마|출처|이벤트|이슈|종목)\s*:)"               # Korean headline lead-in
-    r"|(?:오늘의?\s*헤드라인\s*:)"                                 # "오늘의 헤드라인:"
+    r"(?:[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)"  # Title-case word pair (proper noun)
+    r"|(?:(?<![A-Za-z])[A-Z]{2,}(?![A-Za-z]))"  # Acronym / ticker
+    r"|(?:(?<!\d)\d{4}(?!\d))"  # 4-digit year (2026…)
+    r"|(?:\d+[.,]\d+)"  # Decimal/comma number
+    r"|(?:[$€£₩¥]\s*\d)"  # Currency + digit
+    r"|(?:\d+\s*(?:%|억|만|조|달러|원|위안|위|건|종|개|월|일))"  # Number with unit
+    r"|(?:(?:월|년|일)\s*\d)"  # Korean date fragment (월 04, 년 2026)
+    r"|(?:\d{1,3}(?:,\d{3})+)"  # 1,234,567 grouping
+    r'|(?:["“‘][^"”’]{3,}["”’])'  # Quoted phrase
+    r"|(?:주요\s*(?:테마|출처|이벤트|이슈|종목)\s*:)"  # Korean headline lead-in
+    r"|(?:오늘의?\s*헤드라인\s*:)"  # "오늘의 헤드라인:"
 )
 
 
