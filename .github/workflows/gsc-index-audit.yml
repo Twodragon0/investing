@@ -17,6 +17,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
+    # secrets context 는 step-level if 에서 직접 참조할 수 없으므로 (actionlint
+    # expression error), job-level env 로 한 번 평가해 정적 컨텍스트로 노출한다.
+    env:
+      HAS_GSC_KEY: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON != '' }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
@@ -32,11 +37,11 @@ jobs:
         run: pip install -r scripts/requirements.txt
 
       - name: Write service account JSON
-        if: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON != '' }}
+        if: env.HAS_GSC_KEY == 'true'
         run: echo '${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}' > "$RUNNER_TEMP/sa.json"
 
       - name: Run GSC index audit
-        if: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON != '' }}
+        if: env.HAS_GSC_KEY == 'true'
         env:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/sa.json
         run: |
@@ -44,13 +49,13 @@ jobs:
           cat gsc-audit-output.txt
 
       - name: Skip notice (secret not set)
-        if: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON == '' }}
+        if: env.HAS_GSC_KEY != 'true'
         run: |
           echo "GSC_SERVICE_ACCOUNT_JSON secret이 설정되지 않아 감사를 건너뜁니다."
           echo "등록 방법: gh secret set GSC_SERVICE_ACCOUNT_JSON < /path/to/sa.json"
 
       - name: Upload audit result
-        if: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON != '' }}
+        if: env.HAS_GSC_KEY == 'true'
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7
         with:
           name: gsc-audit-${{ github.run_id }}
