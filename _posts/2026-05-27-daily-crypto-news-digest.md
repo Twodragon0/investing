@@ -41,39 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-27 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 전 Hodlnaut CEO 테라 노출 주장 사기 혐의로 기소 - 101건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 동향 주시</li><li>📈 <strong>가격/시장</strong>: 34건 수집</li><li>🔷 <strong>이더리움</strong>: 이더리움 관련 22건</li><li>🟣 <strong>DeFi</strong>: 12건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/hodlnaut-ceo-charged-with-fraud-over-misleading-statements-on-terra-collapse?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">전 Hodlnaut CEO 테라 노출 주장 사기 혐의로 기소</a> <span class="p0-desc">싱가포르 경찰은 전 Hodlnaut CEO Zhu Juntao를 회사의 Terra/UST 폭락 노출에 대한 오해의 소지가 있는 진술에 대해 허위 진술을 통한 사기 혐의로 6건의 혐.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 전 Hodlnaut CEO 테라 노출 주장 사기 혐의로 기소 
-총 101건의 뉴스 중 P1 주요 이슈도 16건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (49건): 비트코인 관련 (49건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (34건): 암호화폐 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🔷 이더리움** (22건): 이더리움 생태계 동향 (22건) — 가스비·TVL 변화를 함께 확인하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 전 Hodlnaut CEO 테라 노출 주장 사기 혐의로 기소
-
-### 주요 이슈
-
-- 비트코인은 이란 평화 불확실성으로 인해 $77,000 미만으로 하락하고 ETF 유출
-- Crypto Tech는 Mesh와 Miracle Pay의 움직임으로 확장됩니다.
-- 영국, 러시아 제재 확대, 암호화 네트워크 및 우라늄 거래 목표
-- 외 13건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, AI
-- **주요 출처**: Google News(20건), Google News KR(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-05-27.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-05-27.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **101건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔷 이더리움
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
