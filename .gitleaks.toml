@@ -1,0 +1,39 @@
+title = "investing-dragon gitleaks config"
+
+# Inherit the upstream gitleaks rule set (AWS, GCP, Slack, GitHub PAT, generic
+# high-entropy, etc.). We only add scoped allowlists below — never disable a
+# whole rule globally.
+[extend]
+useDefault = true
+
+# ---------------------------------------------------------------------------
+# Allowlist: linkedin-client-secret false positive on translation cache.
+# ---------------------------------------------------------------------------
+# Why:
+#   The linkedin-client-secret rule is a low-entropy 16-char alphanumeric
+#   pattern that fires on any token containing "LinkedIn" plus nearby
+#   characters. _state/translation_cache.json holds MT translations of news
+#   headlines that frequently reference LinkedIn (e.g., LinkedIn posts about
+#   bitcoin / KOSPI / IPO). These are not credentials.
+#
+# Why narrow:
+#   - Path-only allowlist on the whole _state/ tree would drop scanning of an
+#     attacker-influenced surface (collectors ingest external RSS / API bodies
+#     into _state/translation_cache.json).
+#   - Rule-only allowlist would unsuppress real linkedin-client-secret leaks
+#     if they ever land in a different file.
+#   The combined (targetRules + paths + regexes) form fires only when ALL
+#   three match — narrowest viable suppression. All other ~100 gitleaks rules
+#   stay active on _state/.
+#
+# Condition semantics:
+#   condition = "AND" (default in v8.30+ AllowlistCommonAttributes) — all of
+#   targetRules / paths / regexes must match for the finding to be allowed.
+#
+# Verify locally:
+#   gitleaks detect --source . --config .gitleaks.toml --no-banner --verbose --redact
+#   → expect exit 0 and zero linkedin-client-secret findings on translation_cache.
+[[allowlists]]
+description = "linkedin-client-secret false positive on translated headlines that quote LinkedIn"
+targetRules = ["linkedin-client-secret"]
+paths = ['''_state/translation_cache\.json''']
