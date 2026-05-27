@@ -7,10 +7,12 @@ on:
     paths:
       - 'scripts/**'
       - '.github/workflows/security-scan.yml'
+      - '.gitleaks.toml'
   pull_request:
     branches: [main]
     paths:
       - 'scripts/**'
+      - '.gitleaks.toml'
   schedule:
     - cron: '0 3 * * 1'  # Every Monday 03:00 UTC
   workflow_dispatch:
