@@ -1,0 +1,154 @@
+name: Integrated Quality Report
+
+# 주 1회 통합 품질 리포트: check_post_summary (렌더 HTML 회귀) +
+# check_description_quality (description_ko boilerplate 비율) 결과를 단일
+# Markdown 리포트로 결합해 step summary / 아티팩트 / 이슈로 노출한다.
+#
+# 두 잡을 각각 독립 워크플로우(check-post-summary, description-quality-check)
+# 로도 계속 굴리되, 본 워크플로우는 "주간 통합 시야" 만 책임진다 → 둘 중 한
+# 쪽이라도 회귀하면 단일 이슈로 묶어서 알림.
+
+on:
+  schedule:
+    # 매주 월요일 19:30 UTC (04:30 KST 화요일) — 서버 오전 9:10 KST 자동
+    # 포스팅보다 늦게 돌아 _site / _posts 에 최신 결과가 반영된 뒤 실행되도록
+    # check-post-summary 와 동일 시각을 사용.
+    - cron: '30 19 * * 1'
+  workflow_dispatch:
+    inputs:
+      days:
+        description: 'Look back N days (default 7)'
+        required: false
+        default: '7'
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: integrated-quality-report-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  integrated-report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
+        with:
+          fetch-depth: 1
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@7372622e62b60b3cb750dcd2b9e32c247ffec26a  # v1.302.0
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+
+      - name: Setup Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: scripts/requirements.txt
+
+      - name: Install Python deps
+        run: pip install -r scripts/requirements.txt
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --quiet
+
+      - name: Run check_post_summary
+        id: post_summary
+        continue-on-error: true
+        env:
+          DAYS: ${{ github.event.inputs.days || '7' }}
+        run: |
+          python3 scripts/check_post_summary.py --days "$DAYS" \
+            > /tmp/post-summary.txt 2>&1
+          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Run check_description_quality (markdown format)
+        id: desc_quality
+        continue-on-error: true
+        env:
+          DAYS: ${{ github.event.inputs.days || '7' }}
+          PYTHONPATH: scripts
+        run: |
+          python3 scripts/check_description_quality.py \
+            --days "$DAYS" \
+            --warn-threshold 50 \
+            --format markdown \
+            > /tmp/description-quality.md 2>&1
+          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Assemble combined report
+        id: combine
+        env:
+          POST_EXIT: ${{ steps.post_summary.outcome }}
+          DESC_EXIT: ${{ steps.desc_quality.outcome }}
+          DAYS: ${{ github.event.inputs.days || '7' }}
+        run: |
+          REPORT=/tmp/integrated-quality-report.md
+          {
+            echo "# Integrated Quality Report"
+            echo
+            echo "- Window: last **${DAYS}** days"
+            echo "- Run: \`${{ github.run_id }}\` ([details](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}))"
+            echo "- check_post_summary outcome: **${POST_EXIT}**"
+            echo "- check_description_quality outcome: **${DESC_EXIT}**"
+            echo
+            echo "## check_post_summary"
+            echo
+            echo '```'
+            cat /tmp/post-summary.txt 2>/dev/null || echo "(no output)"
+            echo '```'
+            echo
+            echo "## check_description_quality"
+            echo
+            cat /tmp/description-quality.md 2>/dev/null || echo "(no output)"
+          } > "$REPORT"
+
+          echo "report_path=$REPORT" >> "$GITHUB_OUTPUT"
+
+          # Both jobs ran with continue-on-error; combined failure when either
+          # step's outcome != success.
+          if [ "$POST_EXIT" = "success" ] && [ "$DESC_EXIT" = "success" ]; then
+            echo "combined_status=success" >> "$GITHUB_OUTPUT"
+          else
+            echo "combined_status=failure" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Publish to step summary
+        if: always()
+        run: cat /tmp/integrated-quality-report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload report artifact
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02  # v4.6.2
+        with:
+          name: integrated-quality-report
+          path: /tmp/integrated-quality-report.md
+          retention-days: 30
+
+      - name: Open issue on combined failure
+        if: steps.combine.outputs.combined_status == 'failure'
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3  # v9.0.0
+        with:
+          script: |
+            const fs = require('fs');
+            const body = fs.readFileSync('/tmp/integrated-quality-report.md', 'utf8');
+            const days = '${{ github.event.inputs.days || '7' }}';
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[integrated-quality] Regression detected (last ${days}d, run ${{ github.run_id }})`,
+              body,
+              labels: ['quality', 'integrated-report'],
+            });
+
+      - name: Fail the job on combined failure
+        if: steps.combine.outputs.combined_status == 'failure'
+        run: |
+          echo "::error::Integrated quality report flagged regressions — see step summary and opened issue."
+          exit 1
