@@ -52,18 +52,18 @@
 | scripts/common/image\_rejection\_metrics.py       |       80 |       29 |     64% |74-103, 142, 146, 157, 160-162 |
 | scripts/common/markdown\_utils.py                 |      163 |        0 |    100% |           |
 | scripts/common/mindspider.py                      |      377 |        6 |     98% |603, 673-674, 687-688, 990 |
-| scripts/common/post\_generator.py                 |      333 |        8 |     98% |456-460, 828, 863-864 |
+| scripts/common/post\_generator.py                 |      333 |        7 |     98% |456-460, 863-864 |
 | scripts/common/post\_html.py                      |       28 |        0 |    100% |           |
 | scripts/common/risk\_classifier.py                |      184 |        9 |     95% |331-332, 354, 392, 431-435 |
 | scripts/common/rss\_fetcher.py                    |      249 |       12 |     95% |44-45, 80, 91, 178, 187, 272, 281, 292, 302, 330-331 |
 | scripts/common/severity.py                        |       10 |        0 |    100% |           |
 | scripts/common/signal\_composer.py                |      489 |        2 |     99% |   882-883 |
 | scripts/common/signal\_tracker.py                 |      186 |        6 |     97% |201-203, 318-319, 380-381 |
-| scripts/common/summarizer.py                      |      534 |       13 |     98% |144, 515, 625, 627, 637, 752-758, 802, 1024, 1059, 1133, 1199 |
+| scripts/common/summarizer.py                      |      534 |       13 |     98% |144, 479, 589, 591, 601, 716-722, 766, 988, 1023, 1097, 1163 |
 | scripts/common/summarizer\_chart.py               |       16 |        0 |    100% |           |
 | scripts/common/summarizer\_keywords.py            |        2 |        0 |    100% |           |
 | scripts/common/summarizer\_priority.py            |       35 |        0 |    100% |           |
-| scripts/common/summary\_quality.py                |       20 |        2 |     90% |    86, 88 |
+| scripts/common/summary\_quality.py                |       26 |        1 |     96% |       166 |
 | scripts/common/text\_lang.py                      |       18 |        2 |     89% |     37-38 |
 | scripts/common/text\_utils.py                     |       43 |        2 |     95% |    91, 95 |
 | scripts/common/theme\_briefing.py                 |       99 |        4 |     96% |135, 145, 150, 174 |
@@ -106,7 +106,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **22405** | **7680** | **66%** |           |
+| **TOTAL**                                         | **22411** | **7678** | **66%** |           |
 
 
 ## Setup coverage badge
