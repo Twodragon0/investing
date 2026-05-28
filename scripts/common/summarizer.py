@@ -163,59 +163,23 @@ def _generate_title_based_desc(title: str, theme_key: str) -> str:
     return f"{clean}. {ctx}"
 
 
-_GENERIC_DESC_PATTERNS = [
-    re.compile(r"에서 보도한 뉴스입니다\.?$"),
-    re.compile(r"에서 보도한 소식입니다\.?$"),
-    re.compile(r"관련 소식을 전했습니다\.?$"),
-    re.compile(r"원문에서 세부 내용을 확인하세요\.?$"),
-    re.compile(r"거래소 공지사항입니다\.?\s*$"),
-    re.compile(r"please enable javascript", re.I),
-    re.compile(r"^AMENDMENT NO\.", re.I),
-    re.compile(r"^FORM\s+\d", re.I),
-    re.compile(r"^access denied", re.I),
-    re.compile(r"^403 forbidden", re.I),
-    re.compile(r"^Your (?:privacy|cookie)", re.I),
-    re.compile(r"^We use cookies", re.I),
-    re.compile(r"^Subscribe to", re.I),
-    re.compile(r"^Sign up (?:for|to)", re.I),
-    re.compile(r"^JavaScript (?:is )?(?:required|must)", re.I),
-    re.compile(r"^This (?:page|site|website) (?:uses|requires)", re.I),
-    re.compile(r"^Loading\.\.\.", re.I),
-    re.compile(r"에서 확인하세요\.?\s*$"),
-    re.compile(r"^업데이트[\s:.]", re.I),
-    re.compile(r"관련 소식$"),
-    re.compile(r"^Read more", re.I),
-    re.compile(r"^Click here", re.I),
-    re.compile(r"^Continue reading", re.I),
-    re.compile(r"^This article", re.I),
-    re.compile(r"^The post .+ appeared first", re.I),
-    # Synced with enrichment.py _SYNTHETIC_MARKERS
-    re.compile(r"주시해야 합니다\.?\s*$"),
-    re.compile(r"확인하세요\.?\s*$"),
-    re.compile(r"관련 시장 동향입니다\.?\s*$"),
-    re.compile(r"관련 세부 내용은"),
-    re.compile(r"관련 변경사항을"),
-    re.compile(r"시장 심리와 가격"),
-    re.compile(r"투자 시사점을"),
-    re.compile(r"관련 소식입니다\.?\s*$"),
-    re.compile(r"거래소 공지사항"),
-    re.compile(r"산업 동향"),
-    re.compile(r"면밀히 분석해야 합니다"),
-    re.compile(r"함께 고려해야 합니다"),
-    re.compile(r"투자 판단 시"),
-    re.compile(r"관련 시장 뉴스입니다"),
-    re.compile(r"원문 기사의 세부 내용을 확인하세요"),
-    # New-style synthetic descriptions (fact-based with "보도" suffix)
-    re.compile(r"관련 보도\.?\s*$"),
-    re.compile(r"섹터 보도\.?\s*$"),
-    re.compile(r"산업 보도\.?\s*$"),
-    re.compile(r"시장 보도\.?\s*$"),
-]
+# Generic/synthetic description detection now lives in common.summary_quality.
+# The canonical list is ``summary_quality.GENERIC_DESC_PATTERNS`` — do not
+# redefine here. Attribute access via the module reference keeps the
+# circular import (summary_quality ↔ summarizer) safe by deferring lookup
+# to call time.
+from . import summary_quality as _summary_quality_mod  # noqa: E402
 
 
 def _is_generic_desc(desc: str) -> bool:
-    """Return True if description is a generic/synthetic placeholder with no real info."""
-    return any(p.search(desc.strip()) for p in _GENERIC_DESC_PATTERNS)
+    """Thin backward-compat wrapper around the facade's ``is_generic_desc``.
+
+    Existing internal callers (e.g. line 596 in this module) and the
+    ``summary_quality.is_boilerplate`` orchestrator both reach the facade
+    through this name. Future code should call
+    ``summary_quality.is_generic_desc(desc)`` directly.
+    """
+    return _summary_quality_mod.is_generic_desc(desc)
 
 
 # Known site boilerplate phrases that leak through translation
