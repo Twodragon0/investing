@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-28 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 비트코인·이더리움·XRP 급락, 도지코인 보합세···암호화폐 시장에 ‘극단적 공포’ - 108건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, BTC 동향 주시</li><li>📈 <strong>가격/시장</strong>: 26건 수집</li><li>🏦 <strong>거래소</strong>: 제재 이슈 부각</li><li>🟣 <strong>DeFi</strong>: $1.3B 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://kr.benzinga.com">비트코인·이더리움·XRP 급락, 도지코인 보합세···암호화폐 시장에 ‘극단적 공포’</a> <span class="p0-desc">비트코인·이더리움·XRP 급락, 도지코인 보합세···암호화폐 시장에 ‘극단적 공포’. 급락 관련 보도.</span></li><li><a href="https://www.newsway.co.kr">골든크로스 직전 흔들리는 비트코인?···상승이냐 폭락이냐 - 뉴스웨이</a> <span class="p0-desc">골든크로스 직전 흔들리는 비트코인?···상승이냐 폭락이냐. 급락 관련 보도.</span></li><li><a href="https://cointelegraph.com/news/stakedao-vsdcrv-attacker-liquidity-91k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">StakeDAO 익스플로잇으로 5조 4천억 개의 vsdCRV가 생성되었지만 순익은 91,000달러에 불과했습니다.</a> <span class="p0-desc">PeckShield는 공격자가 수조 개의 vsdCRV를 발행한 후 43.7 ETH을 이더리움에 연결했다고 밝혔고 EmberCN은 나머지 토큰의 대부분이 판매하기에 유동성이 부족하다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 비트코인·이더리움·XRP 급락, 도지코인 보합세···암호화폐 시장에 ‘극단적 공포’ 
-외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 108건의 뉴스 중 P1 주요 이슈도 18건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (49건): 비트코인, BTC 관련 (49건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (26건): 다시, 인수 가격 변동 (26건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏦 거래소** (17건): 제재 이슈가 부각되며 해당 섹터의 단기 변동성 확대 가능성이 있습니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 비트코인·이더리움·XRP 급락, 도지코인 보합세···암호화폐 시장에 ‘극단적 공포’
-- 골든크로스 직전 흔들리는 비트코인?···상승이냐 폭락이냐 - 뉴스웨이
-- StakeDAO 익스플로잇으로 5조 4천억 개의 vsdCRV가 생성되었지만 순익은 91,000달러에 불과했습니다.
-
-### 주요 이슈
-
-- 이란 긴장이 다시 고조되면서 비트코인은 $76,000 미만으로 하락하고 ETF 유출
-- 코인베이스, 새로워진 자동 입금 기능 출시
-- 영국, 러시아 사업에 대한 저스틴 선의 암호화폐 거래소 제재
-- 외 15건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Google News KR(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 4건 포함
-- 프로모션성 거래소 공지 1건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-05-28.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-05-28.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **108건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

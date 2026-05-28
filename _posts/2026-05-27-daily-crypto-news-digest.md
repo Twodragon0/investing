@@ -42,6 +42,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-27 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 전 Hodlnaut CEO 테라 노출 주장 사기 혐의로 기소 - 101건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 동향 주시</li><li>📈 <strong>가격/시장</strong>: 34건 수집</li><li>🔷 <strong>이더리움</strong>: 이더리움 관련 22건</li><li>🟣 <strong>DeFi</strong>: 12건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/hodlnaut-ceo-charged-with-fraud-over-misleading-statements-on-terra-collapse?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">전 Hodlnaut CEO 테라 노출 주장 사기 혐의로 기소</a> <span class="p0-desc">싱가포르 경찰은 전 Hodlnaut CEO Zhu Juntao를 회사의 Terra/UST 폭락 노출에 대한 오해의 소지가 있는 진술에 대해 허위 진술을 통한 사기 혐의로 6건의 혐.</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **101건** 수집
