@@ -869,6 +869,27 @@
       "매크로": 0.6297
     },
     "btc_price": 72727.9296875,
-    "recorded_at": "2026-05-28T15:15:18Z"
+    "recorded_at": "2026-05-28T15:15:18Z",
+    "accuracy": {
+      "predicted_verdict": "강세",
+      "predicted_score": 69.9,
+      "actual_price_change_pct": 1.1881,
+      "actual_direction": "상승",
+      "correct": true,
+      "evaluated_at": "2026-05-29T15:12:21Z"
+    }
+  },
+  {
+    "date": "2026-05-30",
+    "composite_score": 70.2,
+    "verdict": "강세",
+    "confidence": "high",
+    "signal_scores": {
+      "공포·탐욕 지수": 0.597,
+      "VIX 변동성": 0.865,
+      "매크로": 0.6361
+    },
+    "btc_price": 73591.9921875,
+    "recorded_at": "2026-05-29T15:12:21Z"
   }
 ]
