@@ -33,50 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-29 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 데일리 자료] 증시 긴급 진단(feat. 코스피, 코스닥 급락) - 네이버 프리미엄콘텐츠 - 209건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 환율, 기준금리 동향 주시</li><li>📈 <strong>가격/시장</strong>: 삼성전자, 하이닉스 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 삼성전자, ETF 이슈 부각</li><li>🟠 <strong>비트코인</strong>: ETF, 배분 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://contents.premium.naver.com">데일리 자료] 증시 긴급 진단(feat. 코스피, 코스닥 급락) - 네이버 프리미엄콘텐츠</a> <span class="p0-desc">[데일리 자료] 증시 긴급 진단(feat. 코스피, 코스닥 급락) 네이버 프리미엄콘텐츠</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 데일리 자료] 증시 긴급 진단(feat. 코스피, 코스닥 급락) - 네이버 프리미엄콘텐츠 
-총 209건의 뉴스 중 P1 주요 이슈도 38건 확인됩니다.
-
-### 테마별 동향
-
-- **📊 매크로/금리** (30건): 환율, 기준금리, 동결 매크로 변수 (30건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **📈 가격/시장** (58건): 삼성전자, 하이닉스, 코스피 가격 변동 (58건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🤖 AI/기술** (11건): 삼성전자, ETF, 반도체 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 데일리 자료] 증시 긴급 진단(feat. 코스피, 코스닥 급락) - 네이버 프리미엄콘텐츠
-
-### 주요 이슈
-
-- 하루 이틀 안에 수십조 몰린다? 삼성전자·하이닉스 레버리지 ETF 출시 [이슈톺] - YTN
-- 상장하자마자 55% 폭등…‘삼전·하이닉스 2배 ETF’ 폭주
-- 삼성전자·SK하이닉스 ‘2배 ETF’ 첫날 10조 몰렸다… “코스피 변동성 키울 수도”
-- 외 35건
-
-### 투자자 체크포인트
-
-- 한국 기사 78건, 글로벌 기사 131건 수집
-- 한국 지수: KOSPI 8,185.29(-0.53%), KOSDAQ 1,104.36(-2.54%), USD/KRW 1,493.67(-0.44%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:52%"></div></div><span class="theme-count">30건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:100%"></div></div><span class="theme-count">58건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:19%"></div></div><span class="theme-count">11건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:16%"></div></div><span class="theme-count">9건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:21%"></div></div><span class="theme-count">12건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-05-29.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-05-29.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 8,185.29 (-0.53%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
+- KOSDAQ 1,104.36 (-2.54%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- *거래자들이 미국-이란 거래를 희망함에 따라 국채 수익률은 거의 변하지 않았으며 인라인 인플레이션 보고서에 무게를 두었습니다.*
 
 ## 테마별 주요 뉴스
 

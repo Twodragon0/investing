@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-29 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 경찰은 마이애미 남성이 비트코인에 전 고용주로부터 190만 달러를 훔친 혐의로 체포했다고 밝혔습니다 - 105건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 변동성 주목</li><li>📈 <strong>가격/시장</strong>: 억달러, ETF 이슈 부각</li><li>🟣 <strong>DeFi</strong>: 디파이, 목표가 동향 주시</li><li>🔷 <strong>이더리움</strong>: 이더리움, ETH 관련 11건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMixwFBVV95cUxOckRDMlZXNWI5dmJYWWhzVEJfWDZUcFZLRGM1RFpaSlFqQnVZOHIxSnZkUFhFbm83eWgzcENKMGpScG9RSlRtUFdoZkxEcFYxMlRNZkEwd3N4aE1td3ZjOXlONHdNeGpxUVc5azZwYnh2OEVRMmpMRk1pLTQwTWYwWjJKX21qSjFpWGRnWUR1bk9yTW5CT2tlUEZyNHJkSmxDQWdOMElaanMtWm54Y3FkWGNUU1dLcEp3RTd6dVRTRVZiN3hVNkxr0gHPAUFVX3lxTE9hTnNCckIxNWRCU2RGRDNpQ2dsNW11QmNIdmtWOFB5MVR4VkpRYmFabTBzMGdVTUllYlo3NU1ZNGJmMWR2amNBMDN4bldhR0ZSSnhKLXlkandtMk80d1djSjU1M1F4em4yUGhCUE02ZU5oQVBZMElyQWlEdzlOcmZCb0VuQ2hrVERPd01mcFVreDZCXzVrWWN4R2E5YVRtT2VBdWdaOXc2YXJQVXZEQUZuUmFUaWRxLTFDbnJUWW5vbFFTdVdmMktKMUF3TE9oTQ?hl=en-US&gl=US&ceid=US%3Aen">경찰은 마이애미 남성이 비트코인에 전 고용주로부터 190만 달러를 훔친 혐의로 체포했다고 밝혔습니다</a> <span class="p0-desc">마이애미 남성이 전 고용주로부터 약 200만 달러 규모 비트코인을 훔친 혐의로 체포되었다고 경찰이 밝혔습니다</span></li><li><a href="https://news.nate.com">미국·이란 충돌 재점화에 비트코인 급락…암호화폐 800억달러 증발</a> <span class="p0-desc">미국·이란 충돌 재점화에 비트코인 급락…암호화폐 800억달러 증발 네이트 골든크로스 직전 흔들리는 비트코인?…상승이냐 폭락이냐 v.daum.net 미국의 이란 추가 공습에 비트코인.</span></li><li><a href="https://www.coindesk.com/markets/2026/05/28/hyperliquid-s-pre-ipo-spacex-contracts-suffers-45-flash-crash-liquidating-usd1-5-million">Hyperliquid의 IPO 이전 SpaceX 계약은 폭락에 45% 플래시를 겪어 150만 달러를 청산했습니다.</a> <span class="p0-desc">SpaceX 암호화 토큰의 대규모 매도는 시장에 충격을 흡수할 충분한 현금이 부족했기 때문에 30분 만에 수백 명의 소매 거래자를 몰살시켰습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 경찰은 마이애미 남성이 비트코인에 전 고용주로부터 190만 달러를 훔친 혐의로 체포했다고 밝혔습니다 
-외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 105건의 뉴스 중 P1 주요 이슈도 16건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (51건): 비트코인, 변동성 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (30건): 억달러, ETF, 미국 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🟣 DeFi** (14건): 디파이, 목표가, 지정학 DeFi 동향 (14건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 경찰은 마이애미 남성이 비트코인에 전 고용주로부터 190만 달러를 훔친 혐의로 체포했다고 밝혔습니다
-- 미국·이란 충돌 재점화에 비트코인 급락…암호화폐 800억달러 증발
-- Hyperliquid의 IPO 이전 SpaceX 계약은 폭락에 45% 플래시를 겪어 150만 달러를 청산했습니다.
-
-### 주요 이슈
-
-- 영국, 러시아 사업에 대한 저스틴 선의 암호화폐 거래소 제재
-- 비트코인 변동성이 9개월 만에 최저치를 기록했습니다: 암호화폐가 그렇게 '지루해'진 진짜 이유
-- 비트코인은 미국-이란의 확대로 $73,000 손실, ETF 유출로 인해 암호화폐 시장 매도가 심화됨
-- 외 13건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, ETF
-- **주요 출처**: Google News(20건), Google News EN(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-05-29.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-05-29.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **105건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🟣 DeFi
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
