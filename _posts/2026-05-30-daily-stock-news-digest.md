@@ -33,50 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-30 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 데일리 자료] 증시 긴급 진단(feat. 코스피, 코스닥 급락) - 네이버 프리미엄콘텐츠 - 189건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 주목</li><li>📊 <strong>매크로/금리</strong>: 환율, 기준금리 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 동향 주시</li><li>🏦 <strong>거래소</strong>: IPO 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://contents.premium.naver.com">데일리 자료] 증시 긴급 진단(feat. 코스피, 코스닥 급락) - 네이버 프리미엄콘텐츠</a> <span class="p0-desc">[데일리 자료] 증시 긴급 진단(feat. 코스피, 코스닥 급락) 네이버 프리미엄콘텐츠</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 데일리 자료] 증시 긴급 진단(feat. 코스피, 코스닥 급락) - 네이버 프리미엄콘텐츠 
-총 189건의 뉴스 중 P1 주요 이슈도 31건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (57건): 코스피, 코스닥, 하이닉스 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **📊 매크로/금리** (22건): 환율, 기준금리, 동결 매크로 변수 (22건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🏛️ 정치/정책** (12건): 트럼프 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 데일리 자료] 증시 긴급 진단(feat. 코스피, 코스닥 급락) - 네이버 프리미엄콘텐츠
-
-### 주요 이슈
-
-- 이 글로벌 ETF은 작년 대부분의 기간 동안 나스닥-100을 이겼습니다. 구매해야합니까?
-- S&P 500은 수익 성장으로 인해 주가가 상승함에 따라 상승할 것으로 예상됩니다 - Goldm
-- 이 S&P 500 ETF은 미국에서 가장 저렴한 트래커 중 하나입니다 - Morningstar
-- 외 28건
-
-### 투자자 체크포인트
-
-- 한국 기사 79건, 글로벌 기사 110건 수집
-- 한국 지수: KOSPI 8,476.15(+3.55%), KOSDAQ 1,074.80(-2.68%), USD/KRW 1,504.66(+0.73%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">57건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:39%"></div></div><span class="theme-count">22건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:21%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:14%"></div></div><span class="theme-count">8건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:18%"></div></div><span class="theme-count">10건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-05-30.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-05-30.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 8,476.15 (+3.55%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 1,074.80 (-2.68%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- *코스피, LG그룹주 훈풍에 8470선 돌파…코스닥은 하락세 '희비' 프리진경제*
 
 ## 테마별 주요 뉴스
 

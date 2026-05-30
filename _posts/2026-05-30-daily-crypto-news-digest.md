@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-30 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 비트코인, XRP 미국과 이란의 긴장이 암호화폐를 강타하면서 가격 하락 - 106건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 29건 수집</li><li>🔵 <strong>규제/정책</strong>: 30건 수집</li><li>🤖 <strong>AI/기술</strong>: 11건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.barrons.com/articles/bitcoin-xrp-ethereum-cryptos-today-d588a761">비트코인, XRP 미국과 이란의 긴장이 암호화폐를 강타하면서 가격 하락</a> <span class="p0-desc">비트코인, XRP 미국과 이란의 긴장이 암호화폐를 강타하면서 가격이 폭락했습니다. 등급락 관련정보.</span></li><li><a href="https://www.investors.com/news/bitcoin-price-slumps-strategy-buying-power-strc-mstr-stock/">비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다.</a> <span class="p0-desc">비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다. 급락 관련 주소.</span></li><li><a href="https://www.newspim.com">코인시황] 비트코인, 유가 급락·증시 신고가에도 힘 못 쓴다…"문제는 전쟁 아닌 매수자 실종" - 뉴스핌</a> <span class="p0-desc">[코인시황] 비트코인, 유가 급락·증시 신고가에도 힘 못 쓴다…"문제는 전쟁 아닌 매수자 실종" 뉴스핌</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 비트코인, XRP 미국과 이란의 긴장이 암호화폐를 강타하면서 가격 하락 
-외 P0 긴급 이슈 5건이 추가 감지되었습니다. 총 106건의 뉴스 중 P1 주요 이슈도 12건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (51건): 비트코인 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (29건): 암호화폐 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🔵 규제/정책** (30건): agency, etfs, cftc 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 비트코인, XRP 미국과 이란의 긴장이 암호화폐를 강타하면서 가격 하락
-- 비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다.
-- 코인시황] 비트코인, 유가 급락·증시 신고가에도 힘 못 쓴다…"문제는 전쟁 아닌 매수자 실종" - 뉴스핌
-
-### 주요 이슈
-
-- 암호화폐 시장 요약: 비트코인 지정학적 긴장이 고조되면서 가격 하락
-- ETF 자금 탈출 시작됐다 비트코인 시장 충격 경고 나왔습니다 - MSN
-- Paxos는 SEC 청산 기관으로 등록을 확보했습니다.
-- 외 9건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, ETF
-- **주요 출처**: Google News(20건), Google News KR(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-05-30.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-05-30.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **106건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
