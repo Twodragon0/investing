@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-31 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다 - 99건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, ETF 이슈 부각</li><li>🔵 <strong>규제/정책</strong>: 국채 이슈 부각</li><li>🏦 <strong>거래소</strong>: 16건 수집</li><li>📈 <strong>가격/시장</strong>: ETF 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.etf.com/sections/features/while-crypto-sinks-hype-soaring-now-it-has-two-etfs">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다</a> <span class="p0-desc">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다. 등급락 관련정보.</span></li><li><a href="https://news.google.com/read/CBMiogFBVV95cUxONU1lYzVhVnZXM094QUROMFFhOFd0WjQwaElZSDd5V0JRX3Fmc3VNWFN1Zi1iUmpyS0JqYTg3ZGxpZkFEVmZTU0w1OVRRSzFRM01fVTZYbDZ4cXBxTmNERERHR3VhU0w4dWtyX1hYWVNPd0hjZ2FwSjY5VlVXcFhZVVRheHZodVMtRUg3VlR6QVVXakk0eXpNdzFpRWgzc3ZYaHc?hl=en-US&gl=US&ceid=US%3Aen">개인용 제트기, 나이트클럽, 페라리: 이스트 베이의 십대와 미국 최대의 암호화폐 강도 사건</a> <span class="p0-desc">함자 두스트(Hamza Doost)는 키가 6피트 3인치이고 통통한 턱수염이 난 얼굴, 검은 머리, 발목 모니터를 갖고 있습니다. 지난 1년 동안 21세의 이 청년은 이스트베이 교.</span></li><li><a href="https://www.investors.com/news/bitcoin-price-slumps-strategy-buying-power-strc-mstr-stock/">비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다.</a> <span class="p0-desc">비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다. 급락 관련 주소.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 99건의 뉴스 중 P1 주요 이슈도 14건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (45건): 비트코인, ETF 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **🔵 규제/정책** (33건): 국채 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **🏦 거래소** (16건): coinbase, clarity, dimon 관련 불확실성이 커지고 있어 리스크 관리에 유의하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다
-- 개인용 제트기, 나이트클럽, 페라리: 이스트 베이의 십대와 미국 최대의 암호화폐 강도 사건
-- 비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다.
-
-### 주요 이슈
-
-- 비트코인은 ETF 수요가 줄어들면서 $73,000 가까이 하락했습니다. 분석가는 경기 침체가 장기화될 수 있다고 경고
-- 암호화 업데이트: FalconX Eyes 월스트리트(IPO 제출 포함)
-- 오늘날 암호화폐 시장이 하락한 이유는 무엇입니까?
-- 외 11건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, ETF
-- **주요 출처**: Google News(20건), Decrypt(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-05-31.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-05-31.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **99건** 수집
+- 주요 테마: 🟠 비트코인, 🔵 규제/정책, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
