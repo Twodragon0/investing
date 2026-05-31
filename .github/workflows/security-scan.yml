@@ -42,15 +42,22 @@ jobs:
       - name: Install bandit
         run: pip install bandit[sarif]
 
+      # 게이트 설계:
+      #   - bandit 은 medium+ severity/confidence 에서 발견 시 exit 1.
+      #   - SARIF 업로드는 항상 수행 (GitHub Security 탭에 트렌드 보존) → upload
+      #     step 에 `if: always()`.
+      #   - 잡 실패는 마지막 "Fail on bandit findings" step 에서 명시적으로 처리.
+      #     이전: `|| true` 로 즉시 swallow → 발견되어도 잡 success → silent fail.
       - name: Run bandit security scan
+        id: bandit-sarif
+        continue-on-error: true
         run: |
           bandit -r scripts/ \
             -f sarif \
             -o bandit-results.sarif \
             --severity-level medium \
             --confidence-level medium \
-            -x scripts/verify_rendered_fixtures.py,scripts/validate_collector_summary_contract.py \
-            || true
+            -x scripts/verify_rendered_fixtures.py,scripts/validate_collector_summary_contract.py
 
       - name: Upload SARIF to GitHub Security
         if: always()
@@ -60,6 +67,8 @@ jobs:
           category: bandit
 
       - name: Run bandit (human-readable)
+        id: bandit-summary
+        continue-on-error: true
         run: |
           echo "## Bandit Security Report" >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
@@ -67,8 +76,19 @@ jobs:
             --severity-level medium \
             --confidence-level medium \
             -x scripts/verify_rendered_fixtures.py,scripts/validate_collector_summary_contract.py \
-            2>&1 | tee -a "$GITHUB_STEP_SUMMARY" || true
+            2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
+          PIPE_STATUS=("${PIPESTATUS[@]}")
           echo '```' >> "$GITHUB_STEP_SUMMARY"
+          # bandit exit (PIPESTATUS[0]) 가 0 이 아니면 step outcome = failure.
+          exit "${PIPE_STATUS[0]}"
+
+      - name: Fail on bandit findings
+        if: steps.bandit-sarif.outcome == 'failure' || steps.bandit-summary.outcome == 'failure'
+        run: |
+          echo "::error title=Bandit findings::Bandit SAST 가 medium+ 심각도 이슈를 발견했습니다. SARIF 업로드 결과를 GitHub Security 탭에서 확인하세요."
+          echo "  - bandit-sarif outcome: ${{ steps.bandit-sarif.outcome }}"
+          echo "  - bandit-summary outcome: ${{ steps.bandit-summary.outcome }}"
+          exit 1
 
   gitleaks:
     name: Secret Detection
