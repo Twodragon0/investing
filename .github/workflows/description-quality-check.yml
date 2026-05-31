@@ -28,6 +28,13 @@ concurrency:
 
 jobs:
   quality-check:
+    # workflow_run 트리거 시 upstream 수집기 잡이 success 인 경우에만 실행.
+    # 이전: collector 실패 후에도 stale _posts 에 대해 quality 검사가 돌아
+    # 가짜 결과(빈 _posts 기반)를 산출 → silent fail. push / pull_request /
+    # workflow_dispatch 트리거는 게이트 우회.
+    if: >-
+      github.event_name != 'workflow_run' ||
+      github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
