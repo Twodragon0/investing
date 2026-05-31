@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-news-digest-2026-04-25.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-04-25.png"
 permalink: "/crypto-news/2026/04/25/daily-crypto-news-digest/"
 description: "크립토 뉴스 108건 수집. 주요 출처: Google News, Google News EN, Decrypt. CryptoPanic·CoinGecko·거래소 RSS 기반 암호화폐 시장 동향을 정리합니다."
 excerpt: "비트코인 (47건): 비트코인, BTC, 달러 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요. 가격/시장 (27건): 달러 가격 변동 (27건) — 거래량…"

@@ -7,7 +7,7 @@ tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-security-report-2026-04-24.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-04-24.png"
 permalink: "/security-alerts/2026/04/24/daily-security-report/"
 description: "Volo 프로토콜은 4월 세 번째 암호화폐 해킹 사건으로 350만 달러 규모의 악용을 겪었습니다. -…. 블록체인 보안 뉴스 9건 분석 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "Volo 프로토콜은 4월 세 번째 암호화폐 해킹 사건으로 350만 달러 규모의 악용을 겪었습니다. -…. 블록체인 보안 뉴스 9건 분석 - Investing Dragon 자동…"

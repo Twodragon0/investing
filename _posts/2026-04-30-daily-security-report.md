@@ -7,7 +7,7 @@ tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-security-report-2026-04-30.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-04-30.png"
 permalink: "/security-alerts/2026/04/30/daily-security-report/"
 description: "2억 9천만 달러 규모 암호화폐 해킹으로 디파이 전염병 충격 유발 - MSN. 블록체인 보안 뉴스 3건 분석 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "2억 9천만 달러 규모 암호화폐 해킹으로 디파이 전염병 충격 유발 - MSN. 블록체인 보안 뉴스 3건 분석 - Investing Dragon 자동 수집 분석 리포트."

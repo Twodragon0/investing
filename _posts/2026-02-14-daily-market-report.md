@@ -6,7 +6,7 @@ categories: [market-analysis]
 tags: [market-summary, daily, crypto, stock, macro, top-coins]
 source: "auto-generated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-market-report-2026-02-14.png"
+image: "/assets/images/generated/news-briefing-market-2026-02-14.png"
 description: "KOSPI 5,507.01 (-15.26, -0.28%); KOSDAQ 1,106.08 (-19.91, -1.77%); USD/KRW 환율 1,440.90 (-0.61, -0.04%)."
 excerpt: "KOSPI: 5,507.01 (-15.26, -0.28%) KOSDAQ: 1,106.08 (-19.91, -1.77%) USD/KRW 환율: 1,440.90 (-0.61,…"
 image_alt: "일일 시장 종합 리포트 - 2026-02-14 - market-analysis 뉴스 요약 이미지"

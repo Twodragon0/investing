@@ -7,7 +7,7 @@ tags: ["weekly-digest", "summary", "market-analysis"]
 keywords: "weekly-digest, summary, market-analysis"
 source: "auto-generated"
 lang: "ko"
-image: "/assets/images/generated/og-weekly-investment-digest-2026-03-30-2026-03-30.png"
+image: "/assets/images/generated/news-summary-weekly-2026-03-30.png"
 description: "BTC $66,392, 극도의 공포(9), KOSPI 5,438.87-0.40%, 102건 분석 주간 다이제스트. 시장 분석 35건, DeFi 10건, 암호화폐 뉴스 8건"
 excerpt: "이번 주 (03월 23일 03월 30일) 투자 시장의 주요 동향과 핵심 이슈를 종합 분석합니다. 기간: 03월 23일 03월 30일"
 image_alt: "주간 투자 다이제스트 - 2026년 03월 30일 - 시장 분석 뉴스 요약 이미지"
