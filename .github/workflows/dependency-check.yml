@@ -31,12 +31,19 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt pip-audit
 
+      # 게이트 설계:
+      #   - pip-audit 은 발견 시 exit 1. 내부 `|| true` 는 JSON 추출이 끝까지
+      #     실행되도록 유지 (그렇지 않으면 set -e 로 VULN_COUNT 계산 전 종료).
+      #   - step-level `continue-on-error: true` 는 제거 → JSON 파싱 실패 같은
+      #     run-block 오류는 step 실패로 즉시 표면화.
+      #   - 취약점 발견 시 잡 실패는 마지막 "Fail on vulnerabilities" step 에서
+      #     명시 처리. 이전: continue-on-error + || true 조합으로 step 항상
+      #     success → 이슈만 만들고 CI 통과 → silent fail.
       - name: Run pip-audit
         id: audit
-        continue-on-error: true
         run: |
           pip-audit -r scripts/requirements.txt --format=json --output=audit-report.json 2>&1 || true
-          pip-audit -r scripts/requirements.txt 2>&1 | tee audit-report.txt
+          pip-audit -r scripts/requirements.txt 2>&1 | tee audit-report.txt || true
 
           VULN_COUNT=$(python3 -c "
           import json
@@ -91,3 +98,9 @@ jobs:
             }
         env:
           VULN_COUNT: ${{ steps.audit.outputs.vuln_count }}
+
+      - name: Fail on vulnerabilities
+        if: steps.audit.outputs.vuln_count != '0'
+        run: |
+          echo "::error title=pip-audit findings::pip-audit 가 ${{ steps.audit.outputs.vuln_count }} 건의 취약점을 발견했습니다. audit-report.txt 와 자동 생성된 이슈를 확인하세요."
+          exit 1
