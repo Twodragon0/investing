@@ -38,6 +38,7 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 from typing import Optional
+from urllib.parse import urlsplit
 from xml.etree import ElementTree
 
 # Import config.py directly without going through common/__init__.py — keeps
@@ -102,7 +103,9 @@ def _submit_batch(urls: list[str], key: str) -> bool:
         method="POST",
     )
     try:
-        with urllib.request.urlopen(req, timeout=REQUEST_TIMEOUT) as resp:
+        with urllib.request.urlopen(
+            req, timeout=REQUEST_TIMEOUT
+        ) as resp:  # fixed https IndexNow endpoint  # nosec B310
             status = resp.status
             if status in (200, 202):
                 logger.info("IndexNow accepted %d URL(s) — HTTP %d", len(urls), status)
@@ -215,9 +218,11 @@ def urls_from_recent_posts(n: int, posts_dir: Path) -> list[str]:
 
 def urls_from_sitemap(sitemap_source: str) -> list[str]:
     """Parse a sitemap XML (file path or URL) and return all <loc> values."""
-    if sitemap_source.startswith("http"):
+    if urlsplit(sitemap_source).scheme in ("http", "https"):
         try:
-            with urllib.request.urlopen(sitemap_source, timeout=REQUEST_TIMEOUT) as resp:
+            with urllib.request.urlopen(
+                sitemap_source, timeout=REQUEST_TIMEOUT
+            ) as resp:  # scheme allow-listed to http/https above  # nosec B310
                 xml_bytes = resp.read()
         except urllib.error.URLError as exc:
             logger.error("Failed to fetch sitemap %s: %s", sitemap_source, exc)
@@ -230,7 +235,7 @@ def urls_from_sitemap(sitemap_source: str) -> list[str]:
             return []
 
     try:
-        root = ElementTree.fromstring(xml_bytes)  # noqa: S314 — sitemap is our own or trusted source
+        root = ElementTree.fromstring(xml_bytes)  # sitemap is our own or trusted source  # nosec B314
     except ElementTree.ParseError as exc:
         logger.error("Failed to parse sitemap XML: %s", exc)
         return []
