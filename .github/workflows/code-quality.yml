@@ -27,7 +27,9 @@ concurrency:
 jobs:
   quality:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    # 15분: Jekyll 빌드(~5분)+테스트+스모크가 느린 러너에서 10분 벽에 부딪혀
+    # 마지막 단계가 취소(The operation was canceled)되며 잡이 실패하던 문제 완화.
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
