@@ -115,7 +115,7 @@ jobs:
               `${{ steps.check.outputs.recent_failures }}`,
               ``,
               `## What to investigate`,
-              `- Slack token rotation: verify \`SLACK_BOT_TOKEN\` / \`AI_SLACK_BOT_TOKEN\` secrets are current`,
+              `- Slack token rotation: verify \`SLACK_BOT_TOKEN\` / \`SLACK_AI_BOT_TOKEN\` secrets are current`,
               `- Channel ID drift: confirm \`SLACK_CHANNEL_ID_INVESTING\` still resolves to the expected channel`,
               `- If Slack was in outage, close this issue once alerts resume`,
             ].join('\n');

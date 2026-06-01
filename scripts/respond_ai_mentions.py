@@ -387,11 +387,12 @@ def main() -> int:
         logger.warning("Unsupported alias: %s", alias)
         return 1
 
+    # Phase 3: canonical 이름만 유지. respond-ai-mentions.yml 은 SLACK_BOT_TOKEN(등록됨)
+    # 과 canonical SLACK_AI_BOT_TOKEN 만 주입하므로, 미주입 legacy env
+    # (OPENCLAW_SLACK_BOT_TOKEN / AI_SLACK_BOT_TOKEN / SLACK_TOKEN) fallback 은 dead → 제거.
     token = env_first(
         "SLACK_BOT_TOKEN",
-        "OPENCLAW_SLACK_BOT_TOKEN",
-        "AI_SLACK_BOT_TOKEN",
-        "SLACK_TOKEN",
+        "SLACK_AI_BOT_TOKEN",
     )
     channel_id = channel_id_for_alias(alias)
 
