@@ -142,17 +142,19 @@ def _load_sitemap_urls() -> list[str]:
     """Load URLs from local _site/sitemap.xml or fall back to the live URL."""
     if LOCAL_SITEMAP.is_file():
         logger.info("Reading sitemap from local file: %s", LOCAL_SITEMAP)
-        tree = ET.parse(LOCAL_SITEMAP)  # noqa: S314 — local file, not untrusted input
+        tree = ET.parse(LOCAL_SITEMAP)  # local build artifact (_site/sitemap.xml), not untrusted  # nosec B314
         root = tree.getroot()
     else:
         logger.info("Local sitemap not found — downloading from %s", SITEMAP_URL)
         try:
-            with urllib.request.urlopen(SITEMAP_URL, timeout=REQUEST_TIMEOUT) as resp:  # noqa: S310
+            with urllib.request.urlopen(
+                SITEMAP_URL, timeout=REQUEST_TIMEOUT
+            ) as resp:  # fixed https constant  # nosec B310
                 content = resp.read()
         except Exception as exc:
             logger.error("Failed to download sitemap: %s", exc)
             sys.exit(1)
-        root = ET.fromstring(content)  # noqa: S314 — trusted own site
+        root = ET.fromstring(content)  # sitemap fetched from our own https site  # nosec B314
 
     ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
     urls: list[str] = []
