@@ -32,49 +32,18 @@ jobs:
         uses: ./.github/actions/resolve-slack-config
         with:
           target_channel_alias: ${{ matrix.channel_alias }}
-          token_candidates: |
-            ${{ secrets.SLACK_BOT_TOKEN }}
-            ${{ secrets.OPENCLAW_SLACK_BOT_TOKEN }}
-            ${{ secrets.AI_SLACK_BOT_TOKEN }}
-            ${{ secrets.SLACK_TOKEN }}
-          channel_candidates_default: |
-            ${{ secrets.SLACK_CHANNEL_ID }}
-            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID }}
-            ${{ secrets.AI_SLACK_CHANNEL_ID }}
-            ${{ secrets.SLACK_CHANNEL }}
-          channel_candidates_ops: |
-            ${{ secrets.SLACK_CHANNEL_ID_OPS }}
-            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_OPS }}
-            ${{ secrets.AI_SLACK_CHANNEL_ID_OPS }}
-            ${{ secrets.SLACK_CHANNEL_OPS }}
-          channel_candidates_dev: |
-            ${{ secrets.SLACK_CHANNEL_ID_DEV }}
-            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_DEV }}
-            ${{ secrets.AI_SLACK_CHANNEL_ID_DEV }}
-            ${{ secrets.SLACK_CHANNEL_DEV }}
-          channel_candidates_security: |
-            ${{ secrets.SLACK_CHANNEL_ID_SECURITY }}
-            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_SECURITY }}
-            ${{ secrets.AI_SLACK_CHANNEL_ID_SECURITY }}
-            ${{ secrets.SLACK_CHANNEL_SECURITY }}
-          channel_candidates_openclaw: |
-            ${{ secrets.SLACK_CHANNEL_ID_OPENCLAW }}
-            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_OPENCLAW }}
-            ${{ secrets.AI_SLACK_CHANNEL_ID_OPENCLAW }}
-            ${{ secrets.SLACK_CHANNEL_OPENCLAW }}
-            ${{ secrets.SLACK_CHANNEL_ID_AI }}
-            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_AI }}
-            ${{ secrets.AI_SLACK_CHANNEL_ID_AI }}
-            ${{ secrets.SLACK_CHANNEL_AI }}
-          channel_candidates_investing: |
-            ${{ secrets.SLACK_CHANNEL_ID_INVESTING }}
-            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_INVESTING }}
-            ${{ secrets.AI_SLACK_CHANNEL_ID_INVESTING }}
-            ${{ secrets.SLACK_CHANNEL_INVESTING }}
-            ${{ secrets.SLACK_CHANNEL_ID }}
-            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID }}
-            ${{ secrets.AI_SLACK_CHANNEL_ID }}
-            ${{ secrets.SLACK_CHANNEL }}
+          bot: default
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_AI_BOT_TOKEN: ${{ secrets.SLACK_AI_BOT_TOKEN }}
+          SLACK_OPENCLAW_BOT_TOKEN: ${{ secrets.SLACK_OPENCLAW_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_CHANNEL_ID_OPS: ${{ secrets.SLACK_CHANNEL_ID_OPS }}
+          SLACK_CHANNEL_ID_DEV: ${{ secrets.SLACK_CHANNEL_ID_DEV }}
+          SLACK_CHANNEL_ID_SECURITY: ${{ secrets.SLACK_CHANNEL_ID_SECURITY }}
+          SLACK_CHANNEL_ID_OPENCLAW: ${{ secrets.SLACK_CHANNEL_ID_OPENCLAW }}
+          SLACK_CHANNEL_ID_AI: ${{ secrets.SLACK_CHANNEL_ID_AI }}
+          SLACK_CHANNEL_ID_INVESTING: ${{ secrets.SLACK_CHANNEL_ID_INVESTING }}
 
       - name: Setup Python
         if: steps.slack-config.outputs.can_post == 'true'
