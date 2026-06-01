@@ -3,6 +3,13 @@ name: Code Quality
 on:
   push:
     branches: [main]
+    # 수집기 자동 커밋(_state/, assets/images/generated/) 만의 변경에는 풀
+    # Code Quality 실행이 의미 없음 (코드 변경 없음). 4000+ 테스트 + ruff +
+    # pre-commit 풀 스위트가 매 collector 커밋마다 도는 운영 노이즈 제거.
+    # _posts/** 는 Jekyll 콘텐츠 변경이므로 trigger 유지.
+    paths-ignore:
+      - '_state/**'
+      - 'assets/images/generated/**'
   pull_request:
     branches: [main]
   schedule:
