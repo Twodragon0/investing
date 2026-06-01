@@ -135,11 +135,6 @@ jobs:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
           SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
           SLACK_CHANNEL_ID_OPS: ${{ secrets.SLACK_CHANNEL_ID_OPS }}
-          channel_candidates_default: |
-            ${{ secrets.SLACK_CHANNEL_ID }}
-            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID }}
-            ${{ secrets.AI_SLACK_CHANNEL_ID }}
-            ${{ secrets.SLACK_CHANNEL }}
 
       - name: Alert Slack on site failure
         if: steps.site_check.outputs.http_code != '200' && steps.site_check.outputs.is_rate_limit != 'true' && steps.slack.outputs.can_post == 'true'
