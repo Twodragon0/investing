@@ -103,7 +103,9 @@ def _submit_batch(urls: list[str], key: str) -> bool:
         method="POST",
     )
     try:
-        with urllib.request.urlopen(req, timeout=REQUEST_TIMEOUT) as resp:  # fixed https IndexNow endpoint  # nosec B310
+        with urllib.request.urlopen(
+            req, timeout=REQUEST_TIMEOUT
+        ) as resp:  # fixed https IndexNow endpoint  # nosec B310
             status = resp.status
             if status in (200, 202):
                 logger.info("IndexNow accepted %d URL(s) — HTTP %d", len(urls), status)
@@ -218,7 +220,9 @@ def urls_from_sitemap(sitemap_source: str) -> list[str]:
     """Parse a sitemap XML (file path or URL) and return all <loc> values."""
     if urlsplit(sitemap_source).scheme in ("http", "https"):
         try:
-            with urllib.request.urlopen(sitemap_source, timeout=REQUEST_TIMEOUT) as resp:  # scheme allow-listed to http/https above  # nosec B310
+            with urllib.request.urlopen(
+                sitemap_source, timeout=REQUEST_TIMEOUT
+            ) as resp:  # scheme allow-listed to http/https above  # nosec B310
                 xml_bytes = resp.read()
         except urllib.error.URLError as exc:
             logger.error("Failed to fetch sitemap %s: %s", sitemap_source, exc)
