@@ -25,6 +25,7 @@ ignore = [
     "S603",   # subprocess call - check for untrusted input
     "S607",   # partial executable path
     "S310",   # suspicious-url-open - URLs from trusted config
+    "S314",   # xml parsing - sitemaps are our own trusted build artifacts
     "T201",   # print statement (scripts use print for logging)
     "E501",   # line too long (handled by formatter)
     "RET504", # unnecessary assignment before return
