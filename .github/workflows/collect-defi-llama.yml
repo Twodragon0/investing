@@ -37,17 +37,11 @@ jobs:
         uses: ./.github/actions/resolve-slack-config
         with:
           target_channel_alias: investing
-          token_candidates: |
-            ${{ secrets.SLACK_BOT_TOKEN }}
-            ${{ secrets.AI_SLACK_BOT_TOKEN }}
-            ${{ secrets.SLACK_TOKEN }}
-          channel_candidates_investing: |
-            ${{ secrets.SLACK_CHANNEL_ID_INVESTING }}
-            ${{ secrets.AI_SLACK_CHANNEL_ID_INVESTING }}
-            ${{ secrets.SLACK_CHANNEL_INVESTING }}
-            ${{ secrets.SLACK_CHANNEL_ID }}
-            ${{ secrets.AI_SLACK_CHANNEL_ID }}
-            ${{ secrets.SLACK_CHANNEL }}
+          bot: default
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_CHANNEL_ID_INVESTING: ${{ secrets.SLACK_CHANNEL_ID_INVESTING }}
 
       - name: Post collection result to Slack
         if: steps.slack.outputs.can_post == 'true'
