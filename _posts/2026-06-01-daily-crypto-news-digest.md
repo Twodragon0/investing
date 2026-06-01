@@ -41,40 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-01 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다 - 82건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 소셜미디어선 주목</li><li>🏦 <strong>거래소</strong>: 11건 수집</li><li>📈 <strong>가격/시장</strong>: 소셜미디어선, 낙관적인 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 국채 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.etf.com/sections/features/while-crypto-sinks-hype-soaring-now-it-has-two-etfs">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다</a> <span class="p0-desc">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다. 등급락 관련정보.</span></li><li><a href="https://www.coindesk.com/tech/2026/05/29/xrp-ledger-s-new-proposal-blocks-the-flash-loan-attacks-costing-defi-hundreds-of-millions">XRP Ledger의 새로운 제안은 디파이 수억 달러의 비용이 드는 플래시 대출 공격을 차단합니다.</a> <span class="p0-desc">XRPL 수정안 초안에서는 트랜잭션이 구축된 방식으로 인해 네트워크에서 플래시 대출 공격이 "구조적으로 불가능"하다고 명시하고 있습니다. 이는 이더리움 디파이억 달러의 비용이 드는.</span></li><li><a href="https://cointelegraph.com/news/cosmos-based-gravity-bridge-halts-bridge-after-reported-54m-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Cosmos 기반 Gravity Bridge는 540만 달러 규모의 익스플로잇이 보고된 후 브리지를 중단합니다.</a> <span class="p0-desc">Gravity Bridge는 의심되는 서명 키 손상으로 인해 약 540만 달러가 소모되었으며, 조사가 진행되는 동안 검증인은 브리지를 중단해야 했습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 82건의 뉴스 중 P1 주요 이슈도 6건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (35건): 비트코인, 소셜미디어선, 암호화폐 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **🏦 거래소** (11건): coinbase, clarity, dimon 이슈가 시장 구조 변화의 신호일 수 있어 심층 분석이 권장됩니다.
-- **📈 가격/시장** (18건): 소셜미디어선, 낙관적인, 암호화폐 가격 변동 (18건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다
-- XRP Ledger의 새로운 제안은 디파이 수억 달러의 비용이 드는 플래시 대출 공격을 차단합니다.
-- Cosmos 기반 Gravity Bridge는 540만 달러 규모의 익스플로잇이 보고된 후 브리지를 중단합니다.
-
-### 주요 이슈
-
-- 미국, 현재까지 압수된 이란 암호화폐 10억 달러 도달: 베센트의 대규모 업데이트
-- 암호화 업데이트: FalconX Eyes 월스트리트(IPO 제출 포함)
-- 외 3건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, ETF
-- **주요 출처**: Google News(20건), Cointelegraph(15건), CoinDesk(13건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-06-01.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-06-01.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **82건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
