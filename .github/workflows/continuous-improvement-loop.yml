@@ -59,20 +59,11 @@ jobs:
         uses: ./.github/actions/resolve-slack-config
         with:
           target_channel_alias: investing
-          token_candidates: |
-            ${{ secrets.SLACK_BOT_TOKEN }}
-            ${{ secrets.OPENCLAW_SLACK_BOT_TOKEN }}
-            ${{ secrets.AI_SLACK_BOT_TOKEN }}
-            ${{ secrets.SLACK_TOKEN }}
-          channel_candidates_investing: |
-            ${{ secrets.SLACK_CHANNEL_ID_INVESTING }}
-            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_INVESTING }}
-            ${{ secrets.AI_SLACK_CHANNEL_ID_INVESTING }}
-            ${{ secrets.SLACK_CHANNEL_INVESTING }}
-            ${{ secrets.SLACK_CHANNEL_ID }}
-            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID }}
-            ${{ secrets.AI_SLACK_CHANNEL_ID }}
-            ${{ secrets.SLACK_CHANNEL }}
+          bot: default
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_CHANNEL_ID_INVESTING: ${{ secrets.SLACK_CHANNEL_ID_INVESTING }}
 
       - name: Post loop priorities to Slack thread
         if: steps.slack.outputs.can_post == 'true'
@@ -89,19 +80,11 @@ jobs:
         uses: ./.github/actions/resolve-slack-config
         with:
           target_channel_alias: ops
-          token_candidates: |
-            ${{ secrets.SLACK_BOT_TOKEN }}
-            ${{ secrets.OPENCLAW_SLACK_BOT_TOKEN }}
-            ${{ secrets.AI_SLACK_BOT_TOKEN }}
-            ${{ secrets.SLACK_TOKEN }}
-          channel_candidates_ops: |
-            ${{ secrets.SLACK_CHANNEL_ID_OPS }}
-            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_OPS }}
-            ${{ secrets.AI_SLACK_CHANNEL_ID_OPS }}
-            ${{ secrets.SLACK_CHANNEL_OPS }}
-          channel_candidates_default: |
-            ${{ secrets.SLACK_CHANNEL_ID }}
-            ${{ secrets.SLACK_CHANNEL }}
+          bot: default
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_CHANNEL_ID_OPS: ${{ secrets.SLACK_CHANNEL_ID_OPS }}
 
       - name: Post ops forum to Slack thread
         if: steps.slack_ops.outputs.can_post == 'true'
@@ -118,19 +101,11 @@ jobs:
         uses: ./.github/actions/resolve-slack-config
         with:
           target_channel_alias: security
-          token_candidates: |
-            ${{ secrets.SLACK_BOT_TOKEN }}
-            ${{ secrets.OPENCLAW_SLACK_BOT_TOKEN }}
-            ${{ secrets.AI_SLACK_BOT_TOKEN }}
-            ${{ secrets.SLACK_TOKEN }}
-          channel_candidates_security: |
-            ${{ secrets.SLACK_CHANNEL_ID_SECURITY }}
-            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_SECURITY }}
-            ${{ secrets.AI_SLACK_CHANNEL_ID_SECURITY }}
-            ${{ secrets.SLACK_CHANNEL_SECURITY }}
-          channel_candidates_default: |
-            ${{ secrets.SLACK_CHANNEL_ID }}
-            ${{ secrets.SLACK_CHANNEL }}
+          bot: default
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_CHANNEL_ID_SECURITY: ${{ secrets.SLACK_CHANNEL_ID_SECURITY }}
 
       - name: Post security forum to Slack thread
         if: steps.slack_security.outputs.can_post == 'true'
@@ -147,19 +122,11 @@ jobs:
         uses: ./.github/actions/resolve-slack-config
         with:
           target_channel_alias: dev
-          token_candidates: |
-            ${{ secrets.SLACK_BOT_TOKEN }}
-            ${{ secrets.OPENCLAW_SLACK_BOT_TOKEN }}
-            ${{ secrets.AI_SLACK_BOT_TOKEN }}
-            ${{ secrets.SLACK_TOKEN }}
-          channel_candidates_dev: |
-            ${{ secrets.SLACK_CHANNEL_ID_DEV }}
-            ${{ secrets.OPENCLAW_SLACK_CHANNEL_ID_DEV }}
-            ${{ secrets.AI_SLACK_CHANNEL_ID_DEV }}
-            ${{ secrets.SLACK_CHANNEL_DEV }}
-          channel_candidates_default: |
-            ${{ secrets.SLACK_CHANNEL_ID }}
-            ${{ secrets.SLACK_CHANNEL }}
+          bot: default
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_CHANNEL_ID_DEV: ${{ secrets.SLACK_CHANNEL_ID_DEV }}
 
       - name: Post UI/UX forum to Slack thread
         if: steps.slack_dev.outputs.can_post == 'true'
