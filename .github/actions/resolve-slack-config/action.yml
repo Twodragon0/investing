@@ -1,37 +1,49 @@
 name: Resolve Slack Config
-description: Resolve Slack bot token and channel from candidate secrets
+description: Resolve Slack bot token and channel from canonical env or legacy candidate inputs.
+
+# v2 — additive migration. Accepts both:
+#   - New interface: target_channel_alias + bot, channel/token values from env (canonical names)
+#   - Legacy interface (v1): token_candidates + channel_candidates_<alias> input strings
+# Precedence: new env-based lookup wins; legacy inputs are fallback only.
+# Design: docs/slack-secret-naming-unification.md § 5
 
 inputs:
   target_channel_alias:
-    description: Channel alias (ops/dev/security/openclaw/investing)
+    description: Channel alias (ops|dev|security|openclaw|ai|investing). Unknown → default.
     required: false
     default: investing
+  bot:
+    description: Bot variant (default|ai|openclaw). Unknown → step fails (fail-loud).
+    required: false
+    default: default
+
+  # --- Legacy v1 inputs (kept for backward compatibility through Phase 4) ---
   token_candidates:
-    description: Newline-separated token candidates in priority order
+    description: "[legacy] Newline-separated bot token candidates in priority order"
     required: false
     default: ""
   channel_candidates_default:
-    description: Newline-separated default channel candidates
+    description: "[legacy] Newline-separated default channel candidates"
     required: false
     default: ""
   channel_candidates_ops:
-    description: Newline-separated ops channel candidates
+    description: "[legacy] Newline-separated ops channel candidates"
     required: false
     default: ""
   channel_candidates_dev:
-    description: Newline-separated dev channel candidates
+    description: "[legacy] Newline-separated dev channel candidates"
     required: false
     default: ""
   channel_candidates_security:
-    description: Newline-separated security channel candidates
+    description: "[legacy] Newline-separated security channel candidates"
     required: false
     default: ""
   channel_candidates_openclaw:
-    description: Newline-separated openclaw channel candidates
+    description: "[legacy] Newline-separated openclaw channel candidates"
     required: false
     default: ""
   channel_candidates_investing:
-    description: Newline-separated investing channel candidates
+    description: "[legacy] Newline-separated investing channel candidates"
     required: false
     default: ""
 
@@ -40,10 +52,10 @@ outputs:
     description: True when token and channel are both resolved
     value: ${{ steps.resolve.outputs.can_post }}
   token:
-    description: Resolved Slack bot token
+    description: Resolved Slack bot token (masked in logs via ::add-mask::)
     value: ${{ steps.resolve.outputs.token }}
   channel:
-    description: Resolved Slack channel ID/name
+    description: Resolved Slack channel ID/name (NOT masked — public identifier per Slack model)
     value: ${{ steps.resolve.outputs.channel }}
   alias:
     description: Normalized target alias
@@ -59,7 +71,10 @@ runs:
       id: resolve
       shell: bash
       env:
+        # New interface inputs
         INPUT_TARGET_ALIAS: ${{ inputs.target_channel_alias }}
+        INPUT_BOT: ${{ inputs.bot }}
+        # Legacy v1 inputs
         INPUT_TOKEN_CANDIDATES: ${{ inputs.token_candidates }}
         INPUT_CHANNEL_DEFAULT: ${{ inputs.channel_candidates_default }}
         INPUT_CHANNEL_OPS: ${{ inputs.channel_candidates_ops }}
@@ -81,51 +96,90 @@ runs:
           return 1
         }
 
+        # --- 1) Normalize alias (whitelist + default fallback for unknown) ---
         alias="$(printf '%s' "${INPUT_TARGET_ALIAS:-investing}" | tr '[:upper:]' '[:lower:]')"
         case "$alias" in
-          ops|dev|security|openclaw|investing) ;;
+          ops|dev|security|openclaw|ai|investing) ;;
           *) alias="investing" ;;
         esac
 
-        token=""
-        if token_candidate="$(printf '%s\n' "${INPUT_TOKEN_CANDIDATES:-}" | first_non_empty 2>/dev/null)"; then
-          token="$token_candidate"
-        fi
-
-        channel_candidates="${INPUT_CHANNEL_DEFAULT:-}"
-        case "$alias" in
-          ops)
-            if [ -n "${INPUT_CHANNEL_OPS:-}" ]; then channel_candidates="${INPUT_CHANNEL_OPS}"; fi
-            ;;
-          dev)
-            if [ -n "${INPUT_CHANNEL_DEV:-}" ]; then channel_candidates="${INPUT_CHANNEL_DEV}"; fi
-            ;;
-          security)
-            if [ -n "${INPUT_CHANNEL_SECURITY:-}" ]; then channel_candidates="${INPUT_CHANNEL_SECURITY}"; fi
-            ;;
-          openclaw)
-            if [ -n "${INPUT_CHANNEL_OPENCLAW:-}" ]; then channel_candidates="${INPUT_CHANNEL_OPENCLAW}"; fi
-            ;;
-          investing)
-            if [ -n "${INPUT_CHANNEL_INVESTING:-}" ]; then channel_candidates="${INPUT_CHANNEL_INVESTING}"; fi
+        # --- 2) Normalize bot (whitelist, FAIL-LOUD on unknown) ---
+        bot="$(printf '%s' "${INPUT_BOT:-default}" | tr '[:upper:]' '[:lower:]')"
+        case "$bot" in
+          default|ai|openclaw) ;;
+          *)
+            echo "::error::unknown bot=${INPUT_BOT}; allowed: default|ai|openclaw"
+            exit 1
             ;;
         esac
 
+        # --- 3) Token resolution via case (set -u safe, no indirect expansion) ---
+        token=""
+        case "$bot" in
+          default)  token="${SLACK_BOT_TOKEN:-}" ;;
+          ai)       token="${SLACK_AI_BOT_TOKEN:-}" ;;
+          openclaw) token="${SLACK_OPENCLAW_BOT_TOKEN:-}" ;;
+        esac
+
+        # --- 4) Channel resolution via case (set -u safe) ---
         channel=""
-        if channel_candidate="$(printf '%s\n' "${channel_candidates:-}" | first_non_empty 2>/dev/null)"; then
-          channel="$channel_candidate"
+        case "$alias" in
+          ops)        channel="${SLACK_CHANNEL_ID_OPS:-}" ;;
+          dev)        channel="${SLACK_CHANNEL_ID_DEV:-}" ;;
+          security)   channel="${SLACK_CHANNEL_ID_SECURITY:-}" ;;
+          openclaw)   channel="${SLACK_CHANNEL_ID_OPENCLAW:-}" ;;
+          ai)         channel="${SLACK_CHANNEL_ID_AI:-}" ;;
+          investing)  channel="${SLACK_CHANNEL_ID_INVESTING:-}" ;;
+        esac
+
+        # --- 5) Channel default fallback ---
+        if [ -z "$channel" ]; then
+          channel="${SLACK_CHANNEL_ID:-}"
         fi
 
+        # --- 6) Legacy v1 token fallback (only if new lookup yielded empty) ---
+        if [ -z "$token" ] && [ -n "${INPUT_TOKEN_CANDIDATES:-}" ]; then
+          if cand="$(printf '%s\n' "$INPUT_TOKEN_CANDIDATES" | first_non_empty 2>/dev/null)"; then
+            token="$cand"
+          fi
+        fi
+
+        # --- 7) Legacy v1 channel fallback (alias-specific input → default input) ---
+        if [ -z "$channel" ]; then
+          legacy_list=""
+          case "$alias" in
+            ops)        legacy_list="${INPUT_CHANNEL_OPS:-}" ;;
+            dev)        legacy_list="${INPUT_CHANNEL_DEV:-}" ;;
+            security)   legacy_list="${INPUT_CHANNEL_SECURITY:-}" ;;
+            openclaw)   legacy_list="${INPUT_CHANNEL_OPENCLAW:-}" ;;
+            investing)  legacy_list="${INPUT_CHANNEL_INVESTING:-}" ;;
+            *)          legacy_list="" ;;
+          esac
+          if [ -z "$legacy_list" ]; then
+            legacy_list="${INPUT_CHANNEL_DEFAULT:-}"
+          fi
+          if [ -n "$legacy_list" ]; then
+            if cand="$(printf '%s\n' "$legacy_list" | first_non_empty 2>/dev/null)"; then
+              channel="$cand"
+            fi
+          fi
+        fi
+
+        # --- 8) Whitespace trim (preserve v1 hardening — Reviewer B MINOR) ---
+        token="$(printf '%s' "$token" | xargs || printf '')"
+        channel="$(printf '%s' "$channel" | xargs || printf '')"
+
+        # --- 9) Compute can_post, mask token ---
         can_post="true"
         if [ -z "$token" ] || [ -z "$channel" ]; then
           can_post="false"
         fi
 
-        profile_label="${alias}-agent"
-
         if [ -n "$token" ]; then
           echo "::add-mask::$token"
         fi
+
+        profile_label="${alias}-agent"
 
         {
           echo "can_post=$can_post"
