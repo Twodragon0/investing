@@ -19,7 +19,7 @@ from typing import Dict, List
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common.config import get_kst_timezone, setup_logging
-from common.markdown_utils import smart_truncate
+from common.markdown_utils import sanitize_summary_bullet, smart_truncate
 from common.post_generator import PostGenerator
 
 logger = setup_logging("generate_weekly_digest")
@@ -246,6 +246,9 @@ def extract_key_bullets(body: str, max_bullets: int = 3) -> List[str]:
             clean = re.sub(r"\*\*(.+?)\*\*", r"\1", line)
             if _is_generic_sentence(clean):
                 continue
+            clean = sanitize_summary_bullet(clean)
+            if not clean:
+                continue
             clean = smart_truncate(clean, 120)
             bullets.append(clean)
             if len(bullets) >= max_bullets:
@@ -273,6 +276,10 @@ def extract_key_bullets(body: str, max_bullets: int = 3) -> List[str]:
         text = text.strip()
 
         if len(text) < 15 or _is_generic_sentence(text):
+            continue
+
+        text = sanitize_summary_bullet(text)
+        if not text or len(text) < 15:
             continue
 
         score = _sentence_score(text)

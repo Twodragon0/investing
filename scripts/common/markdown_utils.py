@@ -322,6 +322,114 @@ def smart_truncate(text: str, max_len: int) -> str:
 _truncate_title = smart_truncate
 
 
+# Meta-commentary sentences that describe the *collection* rather than the news
+# itself — these read as noise when surfaced as a human-facing summary bullet.
+_META_BULLET_RE = re.compile(r"(?:가격 언급|신규 상장)\s*[:：]|데이터가 포착되었습니다")
+
+
+def _collapse_repeated_paren_tokens(text: str) -> str:
+    """Collapse duplicate comma-separated tokens inside parentheses.
+
+    e.g. ``($1, $1, $1, $73k, $1,000)`` → ``($1, $73k, $1,000)``.
+    Splits on ", " (comma + space) so thousands separators like ``$1,000``
+    are preserved.
+    """
+
+    def _dedupe(match: "re.Match[str]") -> str:
+        inner = match.group(1)
+        parts = inner.split(", ")
+        seen: set = set()
+        out: List[str] = []
+        for part in parts:
+            key = part.strip()
+            if key in seen:
+                continue
+            seen.add(key)
+            out.append(part)
+        return "(" + ", ".join(out) + ")"
+
+    return re.sub(r"\(([^()]*)\)", _dedupe, text)
+
+
+def _collapse_adjacent_duplicate_blocks(text: str) -> str:
+    """Collapse an immediately repeated block ``<block><sep><block>`` → ``<block>``.
+
+    Handles interleaved duplication where a title/clause is echoed back-to-back.
+    Applied iteratively until the string stabilises.
+    """
+    pattern = re.compile(r"(.{12,}?)\s*\1")
+    prev = None
+    cur = text
+    while prev != cur:
+        prev = cur
+        cur = pattern.sub(r"\1", cur, count=1)
+    return cur
+
+
+def _dedupe_sentences(text: str) -> str:
+    """Drop later sentences that repeat an earlier one (whitespace-insensitive)."""
+    sentences = re.split(r"(?<=[.!?。])\s+", text)
+    seen: set = set()
+    out: List[str] = []
+    for sentence in sentences:
+        norm = re.sub(r"\s+", "", sentence).rstrip(".。")
+        if norm and norm in seen:
+            continue
+        if norm:
+            seen.add(norm)
+        out.append(sentence)
+    return " ".join(out)
+
+
+def _is_stats_enumeration(text: str) -> bool:
+    """Return True for non-prose stat dumps that should not be a summary bullet.
+
+    Targets two observed shapes (no sentence-ending punctuation):
+      - "20 총 이슈 3 테마 수 2 출처 수 5 안보 이슈"  (≥3 ``<n> <label>`` pairs)
+      - "WorldMonitor/Al Jazeera 13건 65%"          (source + count + percent)
+    """
+    stripped = text.strip()
+    if not stripped:
+        return True
+    has_sentence_punct = bool(re.search(r"[.!?]", stripped))
+    if has_sentence_punct:
+        return False
+    tokens = stripped.split()
+    if len(tokens) <= 6 and any(t.endswith("%") for t in tokens) and any("건" in t for t in tokens):
+        return True
+    pairs = re.findall(r"\d+\s+[가-힣]{1,6}", stripped)
+    return len(pairs) >= 3
+
+
+def sanitize_summary_bullet(text: str) -> str:
+    """Clean a candidate summary/excerpt bullet for digest display.
+
+    Returns ``""`` when the text is non-prose (stat enumeration) or pure
+    meta-commentary that should not surface as a human-facing summary.
+    Otherwise returns the de-duplicated, noise-collapsed text. Designed to be
+    safe on normal prose (returns it unchanged).
+    """
+    if not text or not text.strip():
+        return ""
+    text = text.strip()
+    # 1) Collapse repeated tokens inside parentheses (e.g. "$1, $1, $1").
+    text = _collapse_repeated_paren_tokens(text)
+    # 2) Drop meta-commentary sentences, keep genuine insight sentences.
+    sentences = re.split(r"(?<=[.!?。])\s+", text)
+    kept = [s for s in sentences if not _META_BULLET_RE.search(s)]
+    text = " ".join(kept).strip()
+    if not text:
+        return ""
+    # 3) Remove duplicated blocks / sentences.
+    text = _collapse_adjacent_duplicate_blocks(text)
+    text = _dedupe_sentences(text)
+    text = re.sub(r"\s{2,}", " ", text).strip()
+    # 4) Drop non-prose stat enumerations entirely.
+    if _is_stats_enumeration(text):
+        return ""
+    return text
+
+
 def html_reference_details(
     summary: str,
     references: Iterable[Dict[str, str]],
