@@ -147,6 +147,22 @@ class TestExtractBulletPoints:
     def test_no_section(self):
         assert gds.extract_bullet_points("no section here", "없는 섹션") == []
 
+    def test_sanitizes_defective_bullets(self):
+        content = (
+            "## 핵심 요약\n"
+            "- 20 총 이슈 3 테마 수 2 출처 수 5 안보 이슈\n"
+            "- 비트코인이 하락했습니다. 비트코인이 하락했습니다.\n"
+            "- 비트코인은 ETF 수요가 줄어들면서 $73,000 가까이 하락했습니다.\n"
+        )
+        bullets = gds.extract_bullet_points(content, "핵심 요약")
+        # Non-prose stat dump dropped entirely.
+        assert all("총 이슈 3 테마" not in b for b in bullets)
+        # Duplicated sentence collapsed to one occurrence.
+        dup = [b for b in bullets if "비트코인이 하락했습니다" in b]
+        assert dup and dup[0].count("비트코인이 하락했습니다") == 1
+        # Normal prose preserved.
+        assert any("$73,000" in b for b in bullets)
+
 
 # ---------------------------------------------------------------------------
 # extract_table_rows

@@ -29,6 +29,7 @@ from common.markdown_utils import (
     html_report_links,
     markdown_link,
     markdown_table,
+    sanitize_summary_bullet,
     smart_truncate,
 )
 from common.post_generator import POSTS_DIR
@@ -140,7 +141,10 @@ def extract_bullet_points(content: str, heading: str, max_items: int = 5) -> Lis
     for line in section.split("\n"):
         line = line.strip()
         if line.startswith("- "):
-            bullets.append(line)
+            cleaned = sanitize_summary_bullet(line[2:].strip())
+            if not cleaned:
+                continue
+            bullets.append(f"- {cleaned}")
             if len(bullets) >= max_items:
                 break
     return bullets

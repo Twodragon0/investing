@@ -14,6 +14,7 @@ from common.markdown_utils import (
     html_text,
     markdown_link,
     markdown_table,
+    sanitize_summary_bullet,
     smart_truncate,
 )
 
@@ -356,3 +357,73 @@ class TestSmartTruncateKoreanBranch:
         result = smart_truncate(text, 20)
         assert result.endswith("…")
         assert len(result) <= 21  # 20 chars + ellipsis
+
+
+class TestSanitizeSummaryBullet:
+    """Tests for sanitize_summary_bullet — cleaning digest/summary bullets.
+
+    Real defect strings observed in 2026-06-01 weekly-investment-digest.
+    """
+
+    def test_empty_returns_empty(self):
+        assert sanitize_summary_bullet("") == ""
+        assert sanitize_summary_bullet("   ") == ""
+
+    def test_stats_enumeration_dropped(self):
+        # Garbled token-dump from worldmonitor stats block flattened into a line.
+        assert sanitize_summary_bullet("20 총 이슈 3 테마 수 2 출처 수 5 안보 이슈") == ""
+
+    def test_source_count_fragment_dropped(self):
+        # "<source> <n>건 <n>%" fragment — not prose.
+        assert sanitize_summary_bullet("WorldMonitor/Al Jazeera 13건 65%") == ""
+
+    def test_meta_commentary_sentence_dropped_keeps_insight(self):
+        text = (
+            "가격 언급: 뉴스 제목에서 24건의 가격 데이터가 포착되었습니다 "
+            "($1, $1, $1, $73k, $1,000). 구체적 가격대가 언급되는 것은 시장의 가격 민감도가 높다는 신호입니다."
+        )
+        result = sanitize_summary_bullet(text)
+        assert result == "구체적 가격대가 언급되는 것은 시장의 가격 민감도가 높다는 신호입니다."
+
+    def test_meta_only_returns_empty(self):
+        # When the only content is meta-commentary, nothing useful remains.
+        text = "가격 언급: 뉴스 제목에서 24건의 가격 데이터가 포착되었습니다 ($1, $1, $1)."
+        assert sanitize_summary_bullet(text) == ""
+
+    def test_adjacent_duplicated_block_collapsed(self):
+        text = (
+            "긴급 알림 암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다 "
+            "암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다."
+        )
+        result = sanitize_summary_bullet(text)
+        # The repeated block must appear only once.
+        assert result.count("이제 두 개의 ETF가 있습니다") == 1
+        assert result.count("과대광고는 치솟고 있습니다") == 1
+
+    def test_duplicated_sentence_collapsed(self):
+        text = "비트코인이 하락했습니다. 비트코인이 하락했습니다."
+        result = sanitize_summary_bullet(text)
+        assert result.count("비트코인이 하락했습니다") == 1
+
+    def test_collapse_repeated_paren_tokens(self):
+        text = "가격대는 ($1, $1, $1, $73k, $1,000) 범위입니다."
+        result = sanitize_summary_bullet(text)
+        # Repeated identical "$1" tokens collapsed to a single occurrence.
+        assert result.count("$1,") + result.count("$1)") <= 2
+        assert "$73k" in result
+        assert "$1,000" in result
+
+    def test_normal_sentence_unchanged(self):
+        text = "비트코인은 ETF 수요가 줄어들면서 $73,000 가까이 하락했습니다."
+        assert sanitize_summary_bullet(text) == text
+
+    def test_numeric_prose_with_punctuation_preserved(self):
+        # Price stats sentence with commas/periods is informative — must NOT be dropped.
+        text = "현재가 $363.36, 24시간 -3.48% 하락, 7일 -7.82%. 시가총액 $6.70B"
+        result = sanitize_summary_bullet(text)
+        assert result != ""
+        assert "$363.36" in result
+
+    def test_kospi_insight_preserved(self):
+        text = "KOSPI 8,476.15 (+3.55%): 강한 상승세로 매수 심리가 우세합니다."
+        assert sanitize_summary_bullet(text) == text

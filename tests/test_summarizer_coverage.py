@@ -338,6 +338,19 @@ class TestGenerateThemeSubtitle:
         ]
         result = ts._generate_theme_subtitle("bitcoin", articles)
         assert isinstance(result, str)
+        assert "Bitcoin surged 15%" in result
+
+    def test_title_plus_source_desc_skipped(self):
+        """Description that is only the title + source suffix is a duplicate and
+        must be skipped (avoids the redundant italic theme-subtitle line)."""
+        ts = ThemeSummarizer([])
+        articles = [
+            {
+                "title": "5월 코스피 44조 팔아치운 외국인, 코스닥 2.8조 순매수",
+                "description": "5월 코스피 44조 팔아치운 외국인, 코스닥 2.8조 순매수 조선일보",
+            }
+        ]
+        assert ts._generate_theme_subtitle("stock", articles) == ""
 
 
 # ---------------------------------------------------------------------------
