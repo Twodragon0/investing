@@ -156,6 +156,7 @@ class ThemeBriefingGenerator:
         this returns a direct description snippet from the top article,
         giving readers a concrete preview of the most important story.
         """
+        from .enrichment import _is_desc_duplicate_of_title
         from .summarizer import _is_generic_desc
 
         if not articles:
@@ -164,7 +165,9 @@ class ThemeBriefingGenerator:
         for article in articles[:5]:
             desc = _fix_mistranslations((article.get("description_ko") or article.get("description", "")).strip())
             title = _fix_mistranslations(article.get("title_ko") or article.get("title", ""))
-            if not desc or desc == title or len(desc) < 20:
+            # Skip descriptions that merely echo the title (incl. "title + source"
+            # variants) — they produce a redundant italic subtitle above the card.
+            if not desc or len(desc) < 20 or _is_desc_duplicate_of_title(desc, title):
                 continue
             if _is_generic_desc(desc):
                 continue
