@@ -141,7 +141,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-28 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMihAFBVV95cUxQdXR4QXlhTmtpb3R3OXhZc2dWcUR5Vkc5V3QtY3lLT29jZi1QelFkeDJDTlhnVl96dmF6ZnZoTUJqUEVuQktheklyRmUtaHNCQ0w5N0h2OF9SY2ZpbFU3Ukhva0t1d2FfbXhBUDJnZ1FudnVBQ2xMWkMzUDFhSzJEamhocl8?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">분석가는 곧 급격한 XRP 랠리을 예측합니다.</a>
-<p class="news-desc">분석가는 곧 급격한 XRP 랠리을 예측합니다. 관련 광고.</p>
+<p class="news-desc">분석가는 곧 급격한 XRP 랠리을 예측합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

@@ -253,7 +253,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMi2AFBVV95cUxOWTMtN1lmOGY5bFppbS11VUVfdzYybUtLdzFzNUxhTXdDZ2VRRUxKNVR6bHRiWmpRb3U4Rkg3M0h4azU0aW5NU2NjczlfV0JMM1ZzRGh5Vmt4WHFwSnduM3JTRDNGLWZaUU5Edi1jek5oN1FBc2NfMEVhZ0ZNWjJNYm9xaEVseDNPSDQ3alZWelBpbGZEbHNBYndnNjdoT3ItRi1TWGVfajd4QVZUM2hacUI1eVNuUEFTVXQ2MU81VTVUY1ZDMVJaeVdyY2dISUxCdXFrQ2xjeW8?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">암호화폐 대 주식: BTC은 $80K 이상으로 굳건히 유지되고 미국 주식은 CPI 보고서 이후 하락합니다.</a>
-<p class="news-desc">암호화폐 대 주식: BTC은 CPI 보고서 이후 미국 주식이 하락하는 동안 $80,000 이상을 유지합니다. ($80)</p>
+<p class="news-desc">암호화폐 대 주식: BTC은 CPI 보고서 이후 미국 주식이 하락하는 동안 $80,000 이상을 유지합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

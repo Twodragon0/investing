@@ -3,6 +3,8 @@
 Pure helpers extracted from summarizer.py — no module-level side effects.
 """
 
+import re
+
 from .post_generator import _MISTRANSLATION_FIXES
 from .utils import truncate_sentence as _truncate_sentence_util
 
@@ -12,6 +14,43 @@ def _fix_mistranslations(text: str) -> str:
     for wrong, correct in _MISTRANSLATION_FIXES.items():
         text = text.replace(wrong, correct)
     return text
+
+
+# Trailing junk fragments that some sources/translations append to article
+# descriptions (ad slugs, mangled "관련 X" tails). Anchored at the END only so
+# legitimate body content is never touched — unlike the whole-description
+# boilerplate reject in enrichment._is_site_boilerplate.
+#
+# Korean noun set is deliberately limited to terms that never carry article
+# meaning in a news summary (광고/정보/뉴스/주소/홍보). "관련 보도" and similar
+# are EXCLUDED because enrichment._analyze_*_title emits them as a legitimate
+# synthetic suffix. An optional 2–5 char lead-in absorbs mangled fragments
+# like "급락 " / "등급락 " so "...경고했습니다. 급락 관련 주소." → "...경고했습니다.".
+# English markers are restricted to multi-word slugs to avoid truncating a real
+# sentence that merely ends in "sponsored"/"advertisement".
+_TRAILING_ARTIFACT_RE = re.compile(
+    r"\s*(?:"
+    r"(?:[가-힣]{2,5}\s+)?관련\s?(?:광고|정보|뉴스|주소|홍보)"
+    r"|read\s+more|sponsored\s+content"
+    r")\s*[.。!?]?\s*$",
+    re.IGNORECASE,
+)
+
+
+def _strip_trailing_artifacts(text: str) -> str:
+    """Strip trailing ad/boilerplate fragments left at the tail of a description.
+
+    Removes only end-anchored junk (e.g. "... 가격이 폭락했습니다. 등급락 관련정보.")
+    and loops so stacked tails are fully cleared. Returns the cleaned text with
+    surrounding whitespace stripped.
+    """
+    if not text:
+        return text
+    prev = None
+    while prev != text:
+        prev = text
+        text = _TRAILING_ARTIFACT_RE.sub("", text).rstrip()
+    return text.strip()
 
 
 def _truncate_sentence(text: str, max_len: int = 300) -> str:

@@ -123,7 +123,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-17 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiqgFBVV95cUxQU0d5QXlXdl9qc1h0UkJDdDUzenZpdFoxWmptXzRsZ29JVm1xUHRJNXZmUzkxNjhoMmdsRGxTNE1PQVlwMGZIcTV6aXhzYjltWFFYYTNaVHN3TEJSRS1PU0FqNzJMVTRyeHgwUWNIZXVodHpQMkdVcGRoS3ExcjJnSTEzS2p2bGFvT0I2X3c4ZmEtdTl6TDBtcVFyY256UlVKWHQ1ZC04VXE3UQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">미국-이란 평화 회담의 새로운 희망에 대한 암호화폐 주식 랠리</a>
-<p class="news-desc">미국-이란 평화 회담에 대한 새로운 희망에 대한 암호화폐 주식 랠리. 관련 광고.</p>
+<p class="news-desc">미국-이란 평화 회담에 대한 새로운 희망에 대한 암호화폐 주식 랠리.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

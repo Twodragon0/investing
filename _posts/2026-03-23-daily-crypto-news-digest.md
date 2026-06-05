@@ -161,7 +161,7 @@ image_alt: "암호화폐 뉴스 브리핑 대표 이미지"
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMingFBVV95cUxOS0FzdFZHMHdEZmJxNmpESndPYjJBbnFnTmlXMUxwaEZNaFRGRWNyNG11Q0VTZVBfVVBPWnpfTVJwTGZYXzdCZE5EUGlxMGNSZnFiQi1FRXNRYjhfb0p0V3lXdDVubU1hWEFfT2tyWThIcnJYM3B1SW9mak5RMVBrWjFQa1daYjZucDhNUGFiMGpFUDUyVTV3T3lJWExtQdIBpgFBVV95cUxOZlUtQ1RWZGRjUkxiS1pNVmYxekExMjM3QXFmMnhWOUtRamZyUkRPcjJQZzdROG5fZjFJd2lxUUdOdjFyODhiblBwMS1Uamh2VU1SVmE3VHlwcE96Mjl5bGxRSUlIU1Q5TjZTb1I4LURRUGJYUHB3ejBhaHh4dU9HOHRtMkVDdng4REJic3JYcHlIRVc3QlYyUjZJdkJpdG1xYXp1QjRB?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 베센트이 이란 석유 제재 일부를 해제하면서 71,000달러까지 상승</a>
-<p class="news-desc">Bitcoin Rallies to $71K as Bessent Mulls Lifting Some Iran Oil Sanctions. ($71) 유가 변동은 인플레이션과 에너지 섹터에 직접 영향을 미칩니다.</p>
+<p class="news-desc">Bitcoin Rallies to $71K as Bessent Mulls Lifting Some Iran Oil Sanctions. 유가 변동은 인플레이션과 에너지 섹터에 직접 영향을 미칩니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

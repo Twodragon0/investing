@@ -204,7 +204,7 @@ description: "2026-03-28 주식 시장: KOSPI 5,438.87(-0.40%), KOSDAQ 1,141.51(
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9YYWRnWE9FdGxRX2EwZ0MzUEJnYVdDNEF6ZVI1OXl6bVYtX1VTeHg3YnV3M0wyMXFsbDIwU3RZREFIM0N4Q2VHV0FEakJFTGpIbDhnSU9DcHNYd2NIcnktU2xqQXdRRXc0N29tSGZsVE0?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">예측 감소: SEPN은 강력한 기관 매수로 뒷받침됩니까 - 포트폴리오 업데이트 보고서 및 일일 거래량 급증 거래 경고 - baoquaankhu1.vn</a>
-<p class="news-desc">예측 감소: 강력한 기관 매수로 SEPN이 뒷받침됩니까? 포트폴리오 업데이트 보고서 및 일일 거래량 급증 거래 경고. 관련 광고.</p>
+<p class="news-desc">예측 감소: 강력한 기관 매수로 SEPN이 뒷받침됩니까? 포트폴리오 업데이트 보고서 및 일일 거래량 급증 거래 경고.</p>
 <span class="source-tag" data-source-type="default">Institutional Flow</span>
 </div>
 </div>

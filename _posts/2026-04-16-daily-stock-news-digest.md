@@ -128,7 +128,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.investors.com/market-trend/stock-market-today/dow-jones-sp500-nasdaq-trump-us-iran-peace-talks/?src=A00220&yptr=yahoo" class="news-title" target="_blank" rel="noopener noreferrer">오늘의 주식 시장: 다우지수는 트럼프 위협 대. 파월; 나이키 클라임스 (생중계)</a>
-<p class="news-desc">오늘의 주식 시장: 다우지수는 트럼프 위협 대. 파월; 나이키 클라임(생방송). 관련 광고.</p>
+<p class="news-desc">오늘의 주식 시장: 다우지수는 트럼프 위협 대. 파월; 나이키 클라임(생방송).</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

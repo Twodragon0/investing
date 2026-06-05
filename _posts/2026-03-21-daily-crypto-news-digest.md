@@ -97,7 +97,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-21 - crypto-news 뉴스 요�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMi0gFBVV95cUxPQW15ZXBSTXFJVVF2QXBXaU9ZYUtFSlNyczh2azljVTRHUG9kcEtVdXpUYkZ0cnlwOE9jcVJRNGVNTy1TRWxMeV9MRnZ2eklTZldaQjhxcTdNZTRyUjdxOXBBcThZQ0F5TjNWeFFDYnAzY3c5M0JzeFBFb3JMWVlPcGZDUGNGU04zTEUwQmxIX1hlMTNJc1pkQ3FVVVFpRDBKT1hQNUdHamJ3c3dsMWlxMGozX0hTOTUtMlp2eTlLZjdHNm5iNVBLOE1ldGxFX2RCN0E?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 오늘 가격: 유가 급락 후 $71,000 근처에서 안정, 매파적 연준</a>
-<p class="news-desc">Bitcoin price today: steadies near $71k after tumbling on oil spike, hawkish Fed. ($71) 유가 변동은 인플레이션과 에너지 섹터에 직접 영향을 미칩니다.</p>
+<p class="news-desc">Bitcoin price today: steadies near $71k after tumbling on oil spike, hawkish Fed. 유가 변동은 인플레이션과 에너지 섹터에 직접 영향을 미칩니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

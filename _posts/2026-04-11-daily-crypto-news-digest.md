@@ -52,7 +52,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-11 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent">
 <strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/read/CBMiqAFBVV95cUxNeW1pR0VyYUVVeV9CNDRjbjBneVFxYl9ySGhkZGpJaHZ2Y0xJUG56T3BsSV9GTElIWGktTUgtZ1U2V1pTY2NzNXJSaENrQlJnMzRJUmJ2QlczLW93NGpZNkpPYnkxMzVWQ3h1SjZRY0E2RzBXajBKVVR3TWU2Q1hMa0E4aGtjMDlTak9wNWZRejBoVERTVU1hTlNOVUVfdHBuLVpzV1Y4cnI?hl=en-US&gl=US&ceid=US%3Aen">비트코인은 에너지 위기로 인해 폭락이 0이 될 수 있다고 경제학자는 경고합니다.</a> <span class="p0-desc">비트코인은 에너지 위기로 인해 폭락이 0이 될 수 있다고 경제학자는 경고합니다. 등급락 관련정보.</span></li>
+<li><a href="https://news.google.com/read/CBMiqAFBVV95cUxNeW1pR0VyYUVVeV9CNDRjbjBneVFxYl9ySGhkZGpJaHZ2Y0xJUG56T3BsSV9GTElIWGktTUgtZ1U2V1pTY2NzNXJSaENrQlJnMzRJUmJ2QlczLW93NGpZNkpPYnkxMzVWQ3h1SjZRY0E2RzBXajBKVVR3TWU2Q1hMa0E4aGtjMDlTak9wNWZRejBoVERTVU1hTlNOVUVfdHBuLVpzV1Y4cnI?hl=en-US&gl=US&ceid=US%3Aen">비트코인은 에너지 위기로 인해 폭락이 0이 될 수 있다고 경제학자는 경고합니다.</a> <span class="p0-desc">비트코인은 에너지 위기로 인해 폭락이 0이 될 수 있다고 경제학자는 경고합니다.</span></li>
 <li><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxNeW1pR0VyYUVVeV9CNDRjbjBneVFxYl9ySGhkZGpJaHZ2Y0xJUG56T3BsSV9GTElIWGktTUgtZ1U2V1pTY2NzNXJSaENrQlJnMzRJUmJ2QlczLW93NGpZNkpPYnkxMzVWQ3h1SjZRY0E2RzBXajBKVVR3TWU2Q1hMa0E4aGtjMDlTak9wNWZRejBoVERTVU1hTlNOVUVfdHBuLVpzV1Y4cnI?oc=5">비트코인은 에너지 위기로 인해 폭락이 0이 될 수 있다고 경제학자는 경고합니다.</a> <span class="p0-desc">비트코인은 에너지 위기로 인해 폭락이 0이 될 수 있다고 경제학자는 TheStreet.com에 경고합니다.</span></li>
 <li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxOVGt5dzRQY0djV3VpM3ZHRXJXd1E2OWplVXZmV0tkLUxWRWZoNlh5M2IxcmJfQTZaRVdVWVExMXpYd1RVY1c1ZHpwTUczcWdfSzlzaTV2aF9WcGxDT1NUdU5WSklGZUhVbWg0M3YtM0dZaVhqc3hiYXVKT2pWMi11bDVYbjJ4MWhNS0ZXWg?oc=5">양자 컴퓨터가 비트코인을 해킹한다고? 현실은 "21 = 7 × 3"이 전부입니다 - 네이버 프리미엄콘텐츠</a> <span class="p0-desc">양자 컴퓨터가 비트코인을 해킹한다고? 현실은 "21 = 7 × 3"이 전부입니다 네이버 프리미엄콘텐츠</span></li>
 </ul>
@@ -148,7 +148,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-11 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMiqAFBVV95cUxNeW1pR0VyYUVVeV9CNDRjbjBneVFxYl9ySGhkZGpJaHZ2Y0xJUG56T3BsSV9GTElIWGktTUgtZ1U2V1pTY2NzNXJSaENrQlJnMzRJUmJ2QlczLW93NGpZNkpPYnkxMzVWQ3h1SjZRY0E2RzBXajBKVVR3TWU2Q1hMa0E4aGtjMDlTak9wNWZRejBoVERTVU1hTlNOVUVfdHBuLVpzV1Y4cnI?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인은 에너지 위기로 인해 폭락이 0이 될 수 있다고 경제학자는 경고합니다.</a>
-<p class="news-desc">비트코인은 에너지 위기로 인해 폭락이 0이 될 수 있다고 경제학자는 경고합니다. 등급락 관련정보.</p>
+<p class="news-desc">비트코인은 에너지 위기로 인해 폭락이 0이 될 수 있다고 경제학자는 경고합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

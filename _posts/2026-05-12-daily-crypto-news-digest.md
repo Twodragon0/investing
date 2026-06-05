@@ -129,7 +129,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMilwFBVV95cUxNaHBMMUlIQ2JBVDY3TEJqeDJldmNOZTA4bE9pLWZxRnJPZ2NKODluQ0pnLTFHNGVoLWk2Z2c4b05hamVTWUt0Tzh0eENPVXpIV0stSUozRnZkWnUyU0w4b1FaWjREUlEyWHc2UmJEbXc0VlItNkNyaUUxdW0zN29teU5xTFdvQk1MSDNXMUhxcEl3NHRSUHJF?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">블랙록 투자 후 주요 암호화폐 주가 급등</a>
-<p class="news-desc">블랙록 투자 후 주요 암호화폐 주가 급등. 관련 광고.</p>
+<p class="news-desc">블랙록 투자 후 주요 암호화폐 주가 급등.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

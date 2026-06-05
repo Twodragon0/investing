@@ -51,7 +51,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-17 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent">
 <strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/read/CBMigwFBVV95cUxQTFVLQlNZZGVxYlRjZVozUnI1UkZIWE1YWjNGcHV0NG1BVFdHdDhHNmxueFNVVkplcXJPdjdOZWhFR0ppNFVZYU1HekpiUzFIZ3Y3dnJReEg1LUdKTjBfZkF6R2JOT1pLWHpCeGNaQjdKalhuNmF2M1dzaVZEWjFzTDVoSQ?hl=en-US&gl=US&ceid=US%3Aen">비트코인이(가) 금요일에 부진했던 이유</a> <span class="p0-desc">비트코인이(가) 금요일에 부진했던 이유. 등급락 관련정보.</span></li>
+<li><a href="https://news.google.com/read/CBMigwFBVV95cUxQTFVLQlNZZGVxYlRjZVozUnI1UkZIWE1YWjNGcHV0NG1BVFdHdDhHNmxueFNVVkplcXJPdjdOZWhFR0ppNFVZYU1HekpiUzFIZ3Y3dnJReEg1LUdKTjBfZkF6R2JOT1pLWHpCeGNaQjdKalhuNmF2M1dzaVZEWjFzTDVoSQ?hl=en-US&gl=US&ceid=US%3Aen">비트코인이(가) 금요일에 부진했던 이유</a> <span class="p0-desc">비트코인이(가) 금요일에 부진했던 이유.</span></li>
 <li><a href="https://decrypt.co/368100/lombard-finance-dumps-layerzero-chainlink-1-billion-bitcoin-assets">Lombard Finance는 LayerZero를 덤프하고 체인링크을 사용하여 비트코인 자산에서 10억 달러를 조달할 예정입니다.</a> <span class="p0-desc">비트코인 디파이 프로토콜은 2억 9200만 달러의 손실을 초래한 Kelp DAO 익스플로잇 이후 자산을 LayerZero에서 다른 곳으로 옮기고 있습니다.</span></li>
 <li><a href="https://decrypt.co/368035/bitcoin-depot-bankruptcy-warning-atm-revenue-falls-regulatory-scrutiny">비트코인 ATM 수익이 감소하고 규제 조사가 증가함에 따라 창고에서 파산 경고가 깜박입니다.</a> <span class="p0-desc">비트코인 Depot는 향후 12개월 동안 생존할 수 있는 능력에 대한 심각한 불확실성을 알리는 "계속 우려" 경고를 발표했습니다.</span></li>
 </ul>
@@ -152,7 +152,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-17 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMigwFBVV95cUxQTFVLQlNZZGVxYlRjZVozUnI1UkZIWE1YWjNGcHV0NG1BVFdHdDhHNmxueFNVVkplcXJPdjdOZWhFR0ppNFVZYU1HekpiUzFIZ3Y3dnJReEg1LUdKTjBfZkF6R2JOT1pLWHpCeGNaQjdKalhuNmF2M1dzaVZEWjFzTDVoSQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인이(가) 금요일에 부진했던 이유</a>
-<p class="news-desc">비트코인이(가) 금요일에 부진했던 이유. 등급락 관련정보.</p>
+<p class="news-desc">비트코인이(가) 금요일에 부진했던 이유.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

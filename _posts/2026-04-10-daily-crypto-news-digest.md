@@ -52,7 +52,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-10 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent">
 <strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/read/CBMitgFBVV95cUxOa1pLTDVzQ1hwN0lNeU9ZVi1RR1A2TEl2MWVEdXNMdTN6YlQ1aTlsc29jVVMxaDMwSzdYZGJDVVg5MTAxeUJGekJReTF4UzZrT01WX3B4WTVYZDJHQzdGemp6MEJ3S3liLUtvWjlQU05fcldsaUZ1RjhwNmlMUnJlbW5wc2FZVXprNHFGN0xIOGxTWF9ZYjFfalFNSG9WdkR3anVRUnU3Z0dxQldCWFFiMVdZbVMwdw?hl=en-US&gl=US&ceid=US%3Aen">모건스탠리은 가격 폭락으로 보유자들을 뒤흔들면서 비트코인 ETF 데뷔</a> <span class="p0-desc">모건스탠리은 가격 폭락으로 홀더를 흔들면서 비트코인 ETF을 데뷔합니다. 등급락 관련정보.</span></li>
+<li><a href="https://news.google.com/read/CBMitgFBVV95cUxOa1pLTDVzQ1hwN0lNeU9ZVi1RR1A2TEl2MWVEdXNMdTN6YlQ1aTlsc29jVVMxaDMwSzdYZGJDVVg5MTAxeUJGekJReTF4UzZrT01WX3B4WTVYZDJHQzdGemp6MEJ3S3liLUtvWjlQU05fcldsaUZ1RjhwNmlMUnJlbW5wc2FZVXprNHFGN0xIOGxTWF9ZYjFfalFNSG9WdkR3anVRUnU3Z0dxQldCWFFiMVdZbVMwdw?hl=en-US&gl=US&ceid=US%3Aen">모건스탠리은 가격 폭락으로 보유자들을 뒤흔들면서 비트코인 ETF 데뷔</a> <span class="p0-desc">모건스탠리은 가격 폭락으로 홀더를 흔들면서 비트코인 ETF을 데뷔합니다.</span></li>
 <li><a href="https://news.google.com/read/CBMiiwFBVV95cUxQTm1Zak5FZm94RXR4VDdpTDlKQkxVLWVCTV9qQ0FnUnVROF81RGJDQjM3LWFoOUcwSXhMck14Y0NfUHNpaHBzOFM5RmFlVExSeVFKNmZJRjhaOThKb0FfX1NCdHhIdVd0NUpTVmU5WjVMa1l6TTZTNUZkaHR6czFVQ3l0b1hiQV9IdklF?hl=en-US&gl=US&ceid=US%3Aen">Donald 트럼프의 수십억 달러 비트코인 폭발 노출</a> <span class="p0-desc">도널드 트럼프 대통령과 그의 가족은 비트코인에 막대한 투자를 한 후 엄청난 재정적 손실을 입은 것으로 분석되었습니다. Forbes는 대통령과 그의 두 아들인 Eric 트럼프과 Do.</span></li>
 <li><a href="https://news.google.com/read/CBMinAFBVV95cUxPdm5PUTMwT0wwUTBfaXpsYzJjTnEwNXZkTDFveHlTZ1J3ZHhva1N2d2JlTlZmV2U1bkgzb19BRkFfSXR1NmRyZUp3eWJsRWpMY1RrWnBNaGR0UXM3dlZkQ3JwLWZvSDlYSUJlNDhlbnljMy1Kelo0NHBROVJGd213X3pZTmxBUzNXUGlhRjlhckhEVldPckdrMWwzenM?hl=en-US&gl=US&ceid=US%3Aen">도난당한 소셜 미디어 계정을 사용하는 해커와 관련된 암호화폐 사기가 증가하고 있습니다.</a> <span class="p0-desc">해커들은 소셜 미디어 사기를 이용해 사람들이 가짜 암호화폐 링크를 클릭하도록 속이고 있습니다.</span></li>
 </ul>
@@ -124,7 +124,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-10 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMitgFBVV95cUxOa1pLTDVzQ1hwN0lNeU9ZVi1RR1A2TEl2MWVEdXNMdTN6YlQ1aTlsc29jVVMxaDMwSzdYZGJDVVg5MTAxeUJGekJReTF4UzZrT01WX3B4WTVYZDJHQzdGemp6MEJ3S3liLUtvWjlQU05fcldsaUZ1RjhwNmlMUnJlbW5wc2FZVXprNHFGN0xIOGxTWF9ZYjFfalFNSG9WdkR3anVRUnU3Z0dxQldCWFFiMVdZbVMwdw?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">모건스탠리은 가격 폭락으로 보유자들을 뒤흔들면서 비트코인 ETF 데뷔</a>
-<p class="news-desc">모건스탠리은 가격 폭락으로 홀더를 흔들면서 비트코인 ETF을 데뷔합니다. 등급락 관련정보.</p>
+<p class="news-desc">모건스탠리은 가격 폭락으로 홀더를 흔들면서 비트코인 ETF을 데뷔합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
