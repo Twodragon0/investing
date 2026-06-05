@@ -3,17 +3,17 @@
   "families": {
     "bad_image": {
       "buckets": {
-        "ext:gif": 1227,
-        "default-image": 603,
-        "ext:ico": 80,
-        "placeholder": 268,
-        "ext:svg": 57,
+        "ext:gif": 1305,
+        "default-image": 644,
+        "ext:ico": 95,
+        "placeholder": 292,
+        "ext:svg": 58,
         "blank.": 51,
-        "beacon": 4,
+        "beacon": 6,
         "wp-content/plugins": 2
       }
     }
   },
   "since": "2026-04-23T08:54:23",
-  "last_seen": "2026-06-02T08:23:13"
+  "last_seen": "2026-06-05T02:43:07"
 }

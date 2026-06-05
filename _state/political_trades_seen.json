@@ -1,44 +1,5 @@
 {
   "seen": {
-    "291f8c72fcee658c48329961": "2026-05-02T23:09:58",
-    "6dd6a9403328f42a3b9d41f9": "2026-05-02T23:09:58",
-    "57bc0c2c5dfc77e559a76e61": "2026-05-02T23:09:58",
-    "29d32fbd5c485504625a4c05": "2026-05-02T23:09:58",
-    "7a8b9f0bc924bd9e2a8a300e": "2026-05-02T23:09:58",
-    "52e0326d07280799c75cba81": "2026-05-02T23:09:58",
-    "ebfca3f1b7136fa65dd9bbdf": "2026-05-02T23:09:58",
-    "0189687431288b86f5f99728": "2026-05-02T23:09:58",
-    "ac9bd25d5ee0a607bfda835a": "2026-05-02T23:09:58",
-    "b6a8673351215e13732318c1": "2026-05-02T23:09:58",
-    "dea428e48f5979de456a5838": "2026-05-02T23:09:58",
-    "40ae26707f004dfd49385841": "2026-05-02T23:09:58",
-    "ca31f0a52c4a1730faea597e": "2026-05-02T23:09:58",
-    "35f0c51226fbc1b8e6f2b83a": "2026-05-03T23:10:59",
-    "e86fafbbc290251577a9d850": "2026-05-03T23:10:59",
-    "6004a63c9a39415dcaa5b3a9": "2026-05-03T23:10:59",
-    "33238ce7f18f232d45ce8b13": "2026-05-03T23:10:59",
-    "47bf41d258d6c535cd69b50e": "2026-05-03T23:10:59",
-    "9b363d471368f46a187e1a07": "2026-05-04T23:28:31",
-    "e1609635befed3c92925f196": "2026-05-04T23:28:31",
-    "58690d51514fbf7a10cb9aae": "2026-05-04T23:28:31",
-    "c3babbb6e6412b369b45aee2": "2026-05-04T23:28:31",
-    "24491c633349392a0be2b63d": "2026-05-04T23:28:31",
-    "55ffdda306243c8e4283bc69": "2026-05-04T23:28:31",
-    "270c08d4810fd43b940d728b": "2026-05-04T23:28:31",
-    "f42e844aaa73eac32c021a29": "2026-05-04T23:28:31",
-    "e552dedbf95f5845a92d076f": "2026-05-04T23:28:31",
-    "844089b5e6a5f9d105432d55": "2026-05-04T23:28:31",
-    "a6d28df19af7fb5a11250bbf": "2026-05-04T23:28:31",
-    "b2e2fe32d27f6c095c691d80": "2026-05-04T23:28:31",
-    "6aba29b06b7b08786e820776": "2026-05-04T23:28:31",
-    "b4f9c1ee91deaaabd13b399c": "2026-05-04T23:28:31",
-    "984e920b4aeb0af92d1525ac": "2026-05-04T23:28:31",
-    "6840d5e3bd55d3939298e11d": "2026-05-04T23:28:31",
-    "fc75965ff4efd9a3b4a2d937": "2026-05-04T23:28:31",
-    "173b8dd06b5714793fc4280e": "2026-05-04T23:28:31",
-    "56684e771af8750f279dbc1b": "2026-05-04T23:28:31",
-    "afffab10288383978bec7c1d": "2026-05-04T23:28:31",
-    "7fbef934d3b95728d7850d3e": "2026-05-04T23:28:31",
     "1bc2a7c2ac6d67f808e7cc97": "2026-05-05T23:27:02",
     "22ef327627a27c3673a5a332": "2026-05-05T23:27:02",
     "1ed4a8f2b2881b82244d3f5a": "2026-05-05T23:27:02",
@@ -578,7 +539,76 @@
     "3a73a8a8ec946d2fe42f739e": "2026-06-01T23:10:52",
     "3a02cc2937015ebd6b92c731": "2026-06-01T23:10:52",
     "6a5c19c1efdc906adcf5a0b0": "2026-06-01T23:10:52",
-    "9252abf86b493eb267897436": "2026-06-01T23:10:52"
+    "9252abf86b493eb267897436": "2026-06-01T23:10:52",
+    "a7eea5b36b464a5be627d0f5": "2026-06-02T23:10:38",
+    "4c0ae5ec87505aee4c466a35": "2026-06-02T23:10:38",
+    "439b952d9c86bbcedf58eeeb": "2026-06-02T23:10:38",
+    "03abb6d995dd4c9b0c74bd48": "2026-06-02T23:10:38",
+    "19bc5b69aee2ff0b46002659": "2026-06-02T23:10:38",
+    "c29528a41081ed38cabccff7": "2026-06-02T23:10:38",
+    "ec1652ac76c86dbc79a5d4b8": "2026-06-02T23:10:38",
+    "fadb950e58cd6130a24311cf": "2026-06-02T23:10:38",
+    "529c61c14d578c0f3979066f": "2026-06-02T23:10:38",
+    "04591a859c8b0b6fa1d8d0c8": "2026-06-02T23:10:38",
+    "55a2ad9a754868727a3526d9": "2026-06-02T23:10:38",
+    "873d024a51031925cd436368": "2026-06-02T23:10:38",
+    "238d94f956201f24a60ddd4b": "2026-06-02T23:10:38",
+    "da472f6808ca61d666652d9e": "2026-06-02T23:10:38",
+    "43ad8335b4b2af251a86b59f": "2026-06-02T23:10:38",
+    "d60cddc801c831e26ba31683": "2026-06-02T23:10:38",
+    "a99d6bc5a3c5f5ef70e5bca4": "2026-06-02T23:10:38",
+    "0cc07fc20394c9ae4ae2b954": "2026-06-02T23:10:38",
+    "fd6baf6c3ac38afa919c07ae": "2026-06-02T23:10:38",
+    "b5c41dfdd188aaacfbbda18b": "2026-06-02T23:10:38",
+    "abf4f7f1e0abefa2c0e8de45": "2026-06-02T23:10:38",
+    "40b88b16587a2ab978f7f180": "2026-06-02T23:10:38",
+    "21979747b0328d45d7cfa459": "2026-06-02T23:10:38",
+    "a2cafcc7d46da805842f35c2": "2026-06-03T23:13:41",
+    "012e8d5be36cc9c3be42da84": "2026-06-03T23:13:41",
+    "5740bb33afe6f0ad7c978f0f": "2026-06-03T23:13:41",
+    "58245f10d40573253d54b23d": "2026-06-03T23:13:41",
+    "f1b6b63d0728124002863515": "2026-06-03T23:13:41",
+    "e57855189c2dfcbcc2c4b357": "2026-06-03T23:13:41",
+    "9073713c809bac0da6fb426c": "2026-06-03T23:13:41",
+    "17ce5fa9114a6bc104d63281": "2026-06-03T23:13:41",
+    "047ff46c003cdaefba62a0ca": "2026-06-03T23:13:41",
+    "fb3aef64fc5b80b49aa223af": "2026-06-03T23:13:41",
+    "ead55ca2b3a69efe6a2962cc": "2026-06-03T23:13:41",
+    "4e773b19510e00683520fb45": "2026-06-03T23:13:41",
+    "abedcf71dde6fd3eb9905615": "2026-06-03T23:13:41",
+    "b46f84d8ff98dd692cae3d6e": "2026-06-03T23:13:41",
+    "200016bf9576fca283e87cb5": "2026-06-03T23:13:41",
+    "eb01aeea6cbd233ea479c611": "2026-06-03T23:13:41",
+    "4c407847dca41a972784b973": "2026-06-03T23:13:41",
+    "69cf3d88232c1b467755116d": "2026-06-03T23:13:41",
+    "16c84b64c1d5fd3e1a2515f3": "2026-06-03T23:13:41",
+    "58935e28384aa9ba13892fba": "2026-06-03T23:13:41",
+    "d3d937c216dd5c180a0034b9": "2026-06-03T23:13:41",
+    "54ec6a712b9ab001fa9ad22c": "2026-06-03T23:13:41",
+    "6dc97700179002182f82951e": "2026-06-04T22:57:05",
+    "54211ead6667916556484d5a": "2026-06-04T22:57:05",
+    "1fd29bc01a80639d44ccdaf3": "2026-06-04T22:57:05",
+    "1bcdac570f471242b315dca6": "2026-06-04T22:57:05",
+    "31c78a79440c0e9d7025dc36": "2026-06-04T22:57:05",
+    "8ec1382dd573068250bd93ba": "2026-06-04T22:57:05",
+    "e9503df008ef534ec7dbc7ae": "2026-06-04T22:57:05",
+    "e20cde36a19790bda221c62b": "2026-06-04T22:57:05",
+    "35313a56d689f7d09d979f7e": "2026-06-04T22:57:05",
+    "2d2e28345e086ca264f09714": "2026-06-04T22:57:05",
+    "a15df8dd6cc02069024c5dfb": "2026-06-04T22:57:05",
+    "037f256b6aa67453ebec7d7a": "2026-06-04T22:57:05",
+    "3457d4bba4ca30a0aec7e215": "2026-06-04T22:57:05",
+    "dbe944dba9614e33b46c754a": "2026-06-04T22:57:05",
+    "c1c14b4c2b3c5e7d0f494ce1": "2026-06-04T22:57:05",
+    "fd4ca2e57967bc519a5f9dc2": "2026-06-04T22:57:05",
+    "e51e505da9e90afcb1a01352": "2026-06-04T22:57:05",
+    "51a8c18018c37ef697b569cd": "2026-06-04T22:57:05",
+    "36bc4e78b694e407c7de9ba7": "2026-06-04T22:57:05",
+    "8172622aec84c931a03225b8": "2026-06-04T22:57:05",
+    "413ed1213c158a5c9bd7a459": "2026-06-04T22:57:05",
+    "eb2f618e84b7bae37376167c": "2026-06-04T22:57:05",
+    "7e92440dcc441807e6066b29": "2026-06-04T22:57:05",
+    "5b66f890a9ab1082af6c76b9": "2026-06-04T22:57:05"
   },
   "titles": [
     [
@@ -9012,6 +9042,282 @@
     [
       "정치인 거래정책 리포트 20260602",
       "2026-06-02"
+    ],
+    [
+      "congress trade representative daniel webster just disclosed new stock trades quiver quantitative",
+      "2026-06-03"
+    ],
+    [
+      "美증시 상장 외국기업 임원도 내부자거래 공시 의무화 news and post",
+      "2026-06-03"
+    ],
+    [
+      "meta platforms meta insider files form 144 showing two 580share sales stock titan",
+      "2026-06-03"
+    ],
+    [
+      "form 4 flyexclusive inc insider trading activity stock titan",
+      "2026-06-03"
+    ],
+    [
+      "form 4 lindblad expeditions holdings inc insider trading activity stock titan",
+      "2026-06-03"
+    ],
+    [
+      "form 4 veeco instruments inc insider trading activity stock titan",
+      "2026-06-03"
+    ],
+    [
+      "form 4 southern first bancshares inc insider trading activity stock titan",
+      "2026-06-03"
+    ],
+    [
+      "form 4 pmgc holdings inc insider trading activity stock titan",
+      "2026-06-03"
+    ],
+    [
+      "form 4 dupont de nemours inc insider trading activity stock titan",
+      "2026-06-03"
+    ],
+    [
+      "trusts tied to hamilton beach hbb gift 17273 class b shares stock titan",
+      "2026-06-03"
+    ],
+    [
+      "everquote ever cao jon ayotte sells 889 shares in small 10b51 trade stock titan",
+      "2026-06-03"
+    ],
+    [
+      "form 4 regenxbio inc insider trading activity stock titan",
+      "2026-06-03"
+    ],
+    [
+      "form 4 metrocity bankshares inc insider trading activity stock titan",
+      "2026-06-03"
+    ],
+    [
+      "aar corp nyse air director receives 1364share restricted stock award stock titan",
+      "2026-06-03"
+    ],
+    [
+      "sec form 4 unknown",
+      "2026-06-03"
+    ],
+    [
+      "trump signs order designed to give government early look at powerful ai models the washington post",
+      "2026-06-03"
+    ],
+    [
+      "trump further tweaks steel aluminum copper tariffs supply chain dive",
+      "2026-06-03"
+    ],
+    [
+      "trump administration proposes 25 tariffs on brazil despite extensive us trade surplus scranton timestribune",
+      "2026-06-03"
+    ],
+    [
+      "trump slaps brazil with 25 tariff amends metals duties gotrade",
+      "2026-06-03"
+    ],
+    [
+      "예상보다 빨리 3 넘어선 물가상승률7월 인상 기정사실화 마켓인",
+      "2026-06-03"
+    ],
+    [
+      "these are the 12 fed officials who are voting on interest rates this week",
+      "2026-06-03"
+    ],
+    [
+      "only one man can kill the ai boom fed chair kevin warsh 247 wall st",
+      "2026-06-03"
+    ],
+    [
+      "정치인 거래정책 리포트 20260603",
+      "2026-06-03"
+    ],
+    [
+      "democratic congressman blames technology hiccup for stock act violation news of the united states notus",
+      "2026-06-04"
+    ],
+    [
+      "congress trade representative christian menefee just disclosed new stock trades quiver quantitative",
+      "2026-06-04"
+    ],
+    [
+      "insider 10b51 sales total 6264 rng shares rng stock titan",
+      "2026-06-04"
+    ],
+    [
+      "dorman products dorm director awarded 1344 restricted stock units stock titan",
+      "2026-06-04"
+    ],
+    [
+      "form 4 legalzoomcom inc insider trading activity stock titan",
+      "2026-06-04"
+    ],
+    [
+      "form 4 brc inc insider trading activity stock titan",
+      "2026-06-04"
+    ],
+    [
+      "form 4 enveric biosciences inc insider trading activity stock titan",
+      "2026-06-04"
+    ],
+    [
+      "form 4 penske automotive group inc insider trading activity stock titan",
+      "2026-06-04"
+    ],
+    [
+      "form 4 worthington steel inc insider trading activity stock titan",
+      "2026-06-04"
+    ],
+    [
+      "form 4 southside bancshares inc insider trading activity stock titan",
+      "2026-06-04"
+    ],
+    [
+      "forgent power fps insiders report large share sale and internal equity shifts stock titan",
+      "2026-06-04"
+    ],
+    [
+      "form 4 alector inc insider trading activity stock titan",
+      "2026-06-04"
+    ],
+    [
+      "form 4 vistance networks inc insider trading activity stock titan",
+      "2026-06-04"
+    ],
+    [
+      "form 4 digitalbridge group inc insider trading activity stock titan",
+      "2026-06-04"
+    ],
+    [
+      "form 4 gerdau sa insider trading activity stock titan",
+      "2026-06-04"
+    ],
+    [
+      "forgent power nasdaq fps insiders log 486mshare sale and major holding shifts stock titan",
+      "2026-06-04"
+    ],
+    [
+      "트럼프 ai 보안검증 행정명령 서명초안 대비 검증기간 줄어들어",
+      "2026-06-04"
+    ],
+    [
+      "trump looks to balance lead over china and national security with ai order south china morning post",
+      "2026-06-04"
+    ],
+    [
+      "trump makes some tariff changes the arkansas democratgazette",
+      "2026-06-04"
+    ],
+    [
+      "이태경의 토지와 자유 금리 인상 기조 명확히 천명한 한국은행 민중의소리",
+      "2026-06-04"
+    ],
+    [
+      "mortgage rates fall to 628 ahead of june fed meeting",
+      "2026-06-04"
+    ],
+    [
+      "정치인 거래정책 리포트 20260604",
+      "2026-06-04"
+    ],
+    [
+      "congress trade representative tim walberg just disclosed new stock trades quiver quantitative",
+      "2026-06-05"
+    ],
+    [
+      "republican rep daniel webster violated the stock act again news of the united states notus",
+      "2026-06-05"
+    ],
+    [
+      "ebay ebay insider sells multiple share blocks via goldman sachs stock titan",
+      "2026-06-05"
+    ],
+    [
+      "form 4 science applications international corp insider trading activity stock titan",
+      "2026-06-05"
+    ],
+    [
+      "paypal pypl accounting chief sells 552 shares in openmarket trade stock titan",
+      "2026-06-05"
+    ],
+    [
+      "biotechne tech executive reports rsu exercise tax withholding and corrected holdings stock titan",
+      "2026-06-05"
+    ],
+    [
+      "form 4 kestra medical technologies ltd insider trading activity stock titan",
+      "2026-06-05"
+    ],
+    [
+      "form 4 calumet inc de insider trading activity stock titan",
+      "2026-06-05"
+    ],
+    [
+      "form 4 bioventus inc insider trading activity stock titan",
+      "2026-06-05"
+    ],
+    [
+      "form 4 tripadvisor inc insider trading activity stock titan",
+      "2026-06-05"
+    ],
+    [
+      "form 4 aramark insider trading activity stock titan",
+      "2026-06-05"
+    ],
+    [
+      "form 4 opal fuels inc insider trading activity stock titan",
+      "2026-06-05"
+    ],
+    [
+      "director sheri rhodes sells 6328 formfactor form shares stock titan",
+      "2026-06-05"
+    ],
+    [
+      "no trades reported as sera prognostics nasdaq sera director files form 4 stock titan",
+      "2026-06-05"
+    ],
+    [
+      "form 4 entegris inc insider trading activity stock titan",
+      "2026-06-05"
+    ],
+    [
+      "root root director receives 2864share restricted stock grant in form 4 filing stock titan",
+      "2026-06-05"
+    ],
+    [
+      "from mastercard to meliá the companies leaving cuba after trumps executive order nbc 6 south florida",
+      "2026-06-05"
+    ],
+    [
+      "trump signs order directing customs crackdown amid trade gaps",
+      "2026-06-05"
+    ],
+    [
+      "trump threatens new tariffs on uk for failure to stop forced labour the times",
+      "2026-06-05"
+    ],
+    [
+      "trump customs order tightens us import scrutiny as tariff fight broadens seafoodnews",
+      "2026-06-05"
+    ],
+    [
+      "us eyes new tariffs for china eu mexico and more after labor probes supply chain dive",
+      "2026-06-05"
+    ],
+    [
+      "us should follow ecb rate decision after growth warning thestreet pro",
+      "2026-06-05"
+    ],
+    [
+      "navarro to fed dont even think about rate hikes the hill",
+      "2026-06-05"
+    ],
+    [
+      "정치인 거래정책 리포트 20260605",
+      "2026-06-05"
     ]
   ],
   "seen_urls": {}

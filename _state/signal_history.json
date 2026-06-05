@@ -903,6 +903,69 @@
       "매크로": 0.6343
     },
     "btc_price": 70985.9921875,
-    "recorded_at": "2026-06-01T16:05:59Z"
+    "recorded_at": "2026-06-01T16:05:59Z",
+    "accuracy": {
+      "predicted_verdict": "강세",
+      "predicted_score": 66.0,
+      "actual_price_change_pct": -5.3383,
+      "actual_direction": "하락",
+      "correct": false,
+      "evaluated_at": "2026-06-02T15:31:31Z"
+    }
+  },
+  {
+    "date": "2026-06-03",
+    "composite_score": 68.4,
+    "verdict": "강세",
+    "confidence": "high",
+    "signal_scores": {
+      "공포·탐욕 지수": 0.57,
+      "VIX 변동성": 0.8503,
+      "매크로": 0.6372
+    },
+    "btc_price": 67196.578125,
+    "recorded_at": "2026-06-02T15:31:31Z",
+    "accuracy": {
+      "predicted_verdict": "강세",
+      "predicted_score": 68.4,
+      "actual_price_change_pct": -1.5082,
+      "actual_direction": "하락",
+      "correct": false,
+      "evaluated_at": "2026-06-03T15:40:43Z"
+    }
+  },
+  {
+    "date": "2026-06-04",
+    "composite_score": 63.3,
+    "verdict": "강세",
+    "confidence": "high",
+    "signal_scores": {
+      "공포·탐욕 지수": 0.545,
+      "VIX 변동성": 0.7443,
+      "매크로": 0.6286
+    },
+    "btc_price": 66183.09375,
+    "recorded_at": "2026-06-03T15:40:43Z",
+    "accuracy": {
+      "predicted_verdict": "강세",
+      "predicted_score": 63.3,
+      "actual_price_change_pct": -3.0447,
+      "actual_direction": "하락",
+      "correct": false,
+      "evaluated_at": "2026-06-04T15:08:23Z"
+    }
+  },
+  {
+    "date": "2026-06-05",
+    "composite_score": 67.3,
+    "verdict": "강세",
+    "confidence": "high",
+    "signal_scores": {
+      "공포·탐욕 지수": 0.542,
+      "VIX 변동성": 0.8567,
+      "매크로": 0.6326
+    },
+    "btc_price": 64168.01953125,
+    "recorded_at": "2026-06-04T15:08:23Z"
   }
 ]
