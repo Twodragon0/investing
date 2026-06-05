@@ -18,13 +18,8 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-06-05 | Fear 12 - 시장
 
 ## 시장 시각화
 
-<picture><source srcset="{{ '/assets/images/generated/top-coins-cmc-2026-06-05.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/top-coins-cmc-2026-06-05.png' | relative_url }}" alt="CoinMarketCap Top 코인 순위 (2026-06-05)" loading="lazy" decoding="async"></picture>
-<picture><source srcset="{{ '/assets/images/generated/market-heatmap-cmc-2026-06-05.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-heatmap-cmc-2026-06-05.png' | relative_url }}" alt="암호화폐 시장 히트맵 (2026-06-05)" loading="lazy" decoding="async"></picture>
-
 
 ## 오늘의 브리핑
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-cmc-2026-06-05.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-cmc-2026-06-05.png' | relative_url }}" alt="시장 브리핑 카드" loading="lazy" decoding="async"></picture>
 
 
 ## 한눈에 보기
@@ -33,9 +28,10 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-06-05 | Fear 12 - 시장
 
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 24시간 주요 변동</strong><ul><li>🔴 <strong>Toncoin</strong> (TON): -13.05%</li><li>🔴 <strong>Zcash</strong> (ZEC): -12.85%</li><li>🔴 <strong>Hyperliquid</strong> (HYPE): -9.55%</li></ul></div>
 
+
 ## 전체 뉴스 요약
 
-오늘 시가총액 상위 **30개** 코인을 기준으로 시장을 분석했습니다. 비트코인은 **$63,933**에서 24시간 -2.62% 하락하며 시장에 조정 신호를 보내고 있습니다. 전체 시가총액은 **$2.30T**으로 전일 대비 -2.44% 변동했으며, BTC 도미넌스 55.7%로 비트코인 중심 자금 흐름이 지속입니다. 공포/탐욕 지수는 **12** (Extreme Fear)으로, 극도의 공포 상태로, 역발상 매수 기회를 모색할 시점입니다.
+- 오늘의 시장 인사이트:
 
 ## 시장 인사이트
 

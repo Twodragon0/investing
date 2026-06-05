@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-05 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 180% 암호화폐 랠리은 비트코인의 실패로 새로운 투자 시대를 보여줍니다. - 103건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 전망 관련 57건</li><li>📈 <strong>가격/시장</strong>: 암호화폐 이슈 부각</li><li>🏦 <strong>거래소</strong>: IPO, 제재 관련 16건</li><li>📊 <strong>매크로/금리</strong>: 국채, 제재 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.bloomberg.com/news/articles/2026-06-03/a-180-crypto-rally-shows-new-investing-era-as-bitcoin-stumbles">180% 암호화폐 랠리은 비트코인의 실패로 새로운 투자 시대를 보여줍니다.</a> <span class="p0-desc">180% 암호화폐 랠리은 비트코인의 실패로 새로운 투자 시대를 보여줍니다. (180% 갱신) 급락 관련 회사입니다.</span></li><li><a href="https://kr.investing.com">비트코인 4개월 최저치 하락에 암호화폐 관련주 급락 - Investing.com 한국어</a> <span class="p0-desc">비트코인 4개월 최저치 하락에 암호화폐 관련주 급락 Investing.com 한국어</span></li><li><a href="https://www.newspim.com">코인 시황] 비트코인 일시 6만2000달러 붕괴…ETF 유출·강제청산에 암호화폐 시장 급락 - 뉴스핌</a> <span class="p0-desc">[코인 시황] 비트코인 일시 6만2000달러 붕괴…ETF 유출·강제청산에 암호화폐 시장 급락 뉴스핌</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 180% 암호화폐 랠리은 비트코인의 실패로 새로운 투자 시대를 보여줍니다. 
-외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 103건의 뉴스 중 P1 주요 이슈도 18건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (57건): 비트코인, 전망 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (38건): 암호화폐, BTC 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🏦 거래소** (16건): IPO, 제재, 국채 관련 보도가 이어지고 있어 관련 포지션 점검이 필요합니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 180% 암호화폐 랠리은 비트코인의 실패로 새로운 투자 시대를 보여줍니다.
-- 비트코인 4개월 최저치 하락에 암호화폐 관련주 급락 - Investing.com 한국어
-- 코인 시황] 비트코인 일시 6만2000달러 붕괴…ETF 유출·강제청산에 암호화폐 시장 급락 - 뉴스핌
-
-### 주요 이슈
-
-- 미국, 이슬람 공화국의 제재 회피를 돕기 위해 이란 최대 암호화폐 거래소를 블랙리스트에 추가
-- 미국, 이란과 전쟁 중인 이란 암호화폐 거래소 제재
-- 미국 재무부, 전면적인 경제전 추진을 위해 이란 최대 암호화폐 거래소를 제재
-- 외 15건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Decrypt(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-06-05.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-06-05.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **103건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
