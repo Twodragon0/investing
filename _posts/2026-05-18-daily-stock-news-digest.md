@@ -304,7 +304,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-18 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.investing.com/news/general-news/republican-cassidy-faces-trump-retribution-effort-in-louisiana-senate-primary-4694445" class="news-title" target="_blank" rel="noopener noreferrer">캐시디 공화당 상원의원은 트럼프 보복 캠페인으로 인해 재선에서 패배했습니다.</a>
-<p class="news-desc">공화당 상원의원 캐시디(Cassidy)는 트럼프 보복 캠페인으로 인해 재선에서 패배했습니다. 해당 관련 통보.</p>
+<p class="news-desc">공화당 상원의원 캐시디(Cassidy)는 트럼프 보복 캠페인으로 인해 재선에서 패배했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Investing.com</span>
 </div>
 </div>

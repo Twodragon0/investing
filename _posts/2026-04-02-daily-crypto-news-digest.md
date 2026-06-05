@@ -120,7 +120,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-02 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMihwNBVV95cUxPdGJYNm90TXpVVFZ0aC1wbE5EM293MndmVFYwRTQtVUxTZ0lvQncxNDJwWVZMaG5mR3d4Vnp4WVBiUzFRQkowdkxoZ09oX1FEdGVGUl9rNWFaYWRScVFRSEdFd0hkYUpGT1d5T0tCbnc2VmI2UV9Qcmk0TV9FckVCZUNFQVZRM3FzX01kREZlcUZzNXF6ZmNZVzNxWF9LdHZ4cGN3TVhzUFhlenhtU3ZOOWtJeVBnaUk1YkhqbDFXR2ItUXVhZUk5VDkwNnROTUJVNklhUWNsMEd3d1BUUmE5bWxfUFlMMDBYSm1UNzhsRXk2OTk0cGktRlJaS0REQW1zMzVPallkMjBWVWhXdGFTOEo4TENQVk9uY21rLXVXdXpLamRIbzBFQy1uTkRkREhyRkZQX08xaGFrQWhraGhKRXY4QXNQWmVoTXRXWUdZMEtVTnNfclZ3cWoxczBWQkJhVXNUTkxhNDNsTGlzRUh0bk82Y1lNZ1owTWplcXlwODNqX2RLZ1BB?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인, XRP 오늘 가격이 상승합니다. 암호화폐가 다시 피난처가 된 이유.</a>
-<p class="news-desc">비트코인, XRP 오늘 가격이 상승합니다. Cryptos가 다시 한번 피난처가 된 이유. 광고 관련 공지.</p>
+<p class="news-desc">비트코인, XRP 오늘 가격이 상승합니다. Cryptos가 다시 한번 피난처가 된 이유.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

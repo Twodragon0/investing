@@ -209,7 +209,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://finance.yahoo.com/markets/stocks/articles/trump-name-drops-palantir-ticker-154500129.html" class="news-title" target="_blank" rel="noopener noreferrer">트럼프는 주식을 과대광고한 최초의 대통령이자 종목 코드로 Palantir의 이름을 내렸습니다. 16%의 자유낙하 속에 단 몇 분 만에 100억 달러가 급등했습니다.</a>
-<p class="news-desc">트럼프는 주식을 과대광고한 최초의 대통령이자 종목 코드로 Palantir의 이름을 내렸습니다. 16%의 자유낙하 속에서 단 몇 분 만에 100억 달러가 급등했습니다. (16% 개정, $10B) 광고 관련 경고.</p>
+<p class="news-desc">트럼프는 주식을 과대광고한 최초의 대통령이자 종목 코드로 Palantir의 이름을 내렸습니다. 16%의 자유낙하 속에서 단 몇 분 만에 100억 달러가 급등했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

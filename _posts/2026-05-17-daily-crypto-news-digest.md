@@ -76,7 +76,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-17 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiwgFBVV95cUxOaEYyeDNLTy1VN3p6dGZSS0lGSU9SbHZId09kM1ZGWWRWY2NFRzR4aWNjYnRtSzYzSFQ0eUZrQW94UHg5TnRJOWJJbWxpcU1ES1lrdkpySG4xVHR0azFBVnRHMTA5ZlZiLW8zV0Y4RVZiZ1g2THJ1cTR3cEdSdk1HV1Zac1o2RlktMGRpVWE0UWJiMWZQSTlad0c3N3ZGT2ZHc3Z2S1BuMHNMOU50V0U4NFc1OGJ3bW4tNVdsUUpRT0JBQQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인은 $82,000에 도달하고 코인베이스는 Clarity Act가 진행됨에 따라 암호화폐 주식 상승을 주도합니다.</a>
-<p class="news-desc">비트코인은 $82,000에 도달하고 코인베이스는 Clarity Act가 진행됨에 따라 암호화폐 주식 상승을 주도합니다. ($82,000,) 판매 관련 공지.</p>
+<p class="news-desc">비트코인은 $82,000에 도달하고 코인베이스는 Clarity Act가 진행됨에 따라 암호화폐 주식 상승을 주도합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

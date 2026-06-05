@@ -89,7 +89,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-08 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMimgFBVV95cUxPMm5LNFFMalFma3JvTjJnZXFLbkpCQ0xpUmJqYnVQaU9ZcVlZTzZscUZESkNZaUZoSG5YYWdZTktaYjM1WTBac3pCc2wtRENjSl9TMFdRZ2dDMUs5RzRrUWxXcXkzNDJLeFVyWXBGYXNINU91M0RscU1jaEFUSHcxZ0Y0U3RXVzJTblE2dGRnWEJIejhQZG5CQXB3?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 이란 휴전 가능성에 대한 낙관론으로 70,000달러 돌파</a>
-<p class="news-desc">비트코인 이란 휴전에 대한 낙관론이 70,000달러를 넘어섰습니다. ($70,000) 유권자학 관련 알림.</p>
+<p class="news-desc">비트코인 이란 휴전에 대한 낙관론이 70,000달러를 넘어섰습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

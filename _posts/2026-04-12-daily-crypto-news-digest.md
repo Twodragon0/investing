@@ -217,7 +217,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMigAFBVV95cUxPWVg3OGFial9wdmZZRTNhMGVrZXlaTklzbnNNbWFDNi1LLVMzQ1V1ZTdheDVFVF9oR1Q0eGFVNEtHYVltaXRZUmRGeWtNX2NLb2dUWE1WWG5DcVRGbEFSMkpxMkY5d2VoajlLSmswZXpHSDlDemxzZm1jeTlOYWR4dQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">이란의 78억 달러 규모의 암호화폐 경제, 휴전 이후 성장할 새로운 방법 발견</a>
-<p class="news-desc">이란의 78억 달러 규모의 암호화폐 경제는 휴전 이후 성장할 새로운 방법을 찾습니다. ($78억) 사용자학 관련 안내.</p>
+<p class="news-desc">이란의 78억 달러 규모의 암호화폐 경제는 휴전 이후 성장할 새로운 방법을 찾습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
