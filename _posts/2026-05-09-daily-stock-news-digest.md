@@ -297,7 +297,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.investing.com/news/stock-market-news/replimune-shares-surge-on-report-trump-to-dismiss-fda-chief-makary-93CH-4673687" class="news-title" target="_blank" rel="noopener noreferrer">트럼프 FDA 국장 Makary를 해임하겠다는 보고서로 인해 Replimune 주가 급등</a>
-<p class="news-desc">Replimune 주가는 트럼프 FDA 국장 Makary를 해임하라는 보고서로 급등했습니다. 관련 광고.</p>
+<p class="news-desc">Replimune 주가는 트럼프 FDA 국장 Makary를 해임하라는 보고서로 급등했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Investing.com</span>
 </div>
 </div>

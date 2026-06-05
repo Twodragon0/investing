@@ -1511,6 +1511,50 @@ class TestAnalyzeEnglishTitleExtended:
         assert isinstance(result, str)
 
 
+class TestAnalyzeEnglishTitlePriceUnit:
+    """Price magnitude suffix normalization — must never contradict the body number."""
+
+    def test_k_suffix_preserved_not_dropped(self):
+        # Regression: "$73K" previously yielded a misleading bare "$73".
+        result = _analyze_title_content("Bitcoin pinned at $73K amid ETF outflows")
+        assert "$73K" in result
+        assert "($73)" not in result
+
+    def test_thousand_word_not_mislabeled_trillion(self):
+        # Regression: "$80 thousand" previously matched the "t" in thousand → "$80t".
+        result = _analyze_title_content("Fund raises $80 thousand in new round")
+        assert "$80K" in result
+        assert "$80t" not in result and "$80T" not in result
+
+    def test_comma_number_kept_whole(self):
+        result = _analyze_title_content("Bitcoin falls near $73,000 as demand wanes")
+        assert "$73,000" in result
+
+    def test_billion_word_normalized(self):
+        result = _analyze_title_content("Nvidia hits $200 billion market cap milestone")
+        assert "$200B" in result
+
+    def test_lowercase_k_normalized_upper(self):
+        result = _analyze_title_content("Bitcoin drops to $73k overnight")
+        assert "$73K" in result
+
+    def test_mm_shorthand_degrades_not_dropped(self):
+        # Regression: "$5MM" must still extract "$5M", not drop the magnitude.
+        result = _analyze_title_content("Startup raises $5MM in seed funding round")
+        assert "$5M" in result
+
+    def test_plural_thousands_normalized(self):
+        result = _analyze_title_content("Fund raises $80 thousands for the round")
+        assert "$80K" in result
+        assert "$80t" not in result and "$80T" not in result
+
+    def test_bare_dollar_no_spurious_unit(self):
+        # "$73 fee" must not gain a fake "K"/"T" suffix from the following word.
+        result = _analyze_title_content("Network charges a $73 fee per transaction")
+        assert "($73)" in result or "$73" in result
+        assert "$73K" not in result and "$73T" not in result
+
+
 # ---------------------------------------------------------------------------
 # enrich_item — various branches (lines 279-375)
 # ---------------------------------------------------------------------------

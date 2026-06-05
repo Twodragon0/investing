@@ -40,7 +40,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-02 - 암호화폐 뉴스 요
 <div class="stat-item"><div class="stat-value">비트코인</div><div class="stat-label">핫 키워드 (23회)</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다 - 91건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, ETF 관련 44건</li><li>📈 <strong>가격/시장</strong>: 암호화폐, ETF 이슈 부각</li><li>🏦 <strong>거래소</strong>: 13건 수집</li><li>🟣 <strong>DeFi</strong>: 11건 수집</li></ul></div>
-<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.etf.com/sections/features/while-crypto-sinks-hype-soaring-now-it-has-two-etfs">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다</a> <span class="p0-desc">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다. 등급락 관련정보.</span></li><li><a href="https://cointelegraph.com/news/gnosis-hit-by-fresh-exploit-team-vows-to-fully-cover-user-losses?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">팀이 환불을 약속함에 따라 Gnosis Pay 악용으로 인해 지연 모듈이 발생함</a> <span class="p0-desc">공동 창립자인 Martin Köppelmann이 사용자에게 자금을 인출하고 영향을 받은 사람들에게 상환하겠다고 촉구하면서 Gnosis Pay는 지연 모듈에서 적극적인 악용에 직면했.</span></li><li><a href="https://cointelegraph.com/news/crypto-exploit-losses-fall-by-90-in-may-to-68m-certik?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">5월 암호화폐 익스플로잇 손실은 전월 대비 90% 감소한 6,800만 달러를 기록했습니다: CertiK</a> <span class="p0-desc">CertiK는 5월이 2026년 현재까지 암호화폐 손실이 1억 달러 미만으로 기록된 세 번째 달이라고 밝혔습니다</span></li></ul></div>
+<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.etf.com/sections/features/while-crypto-sinks-hype-soaring-now-it-has-two-etfs">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다</a> <span class="p0-desc">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다.</span></li><li><a href="https://cointelegraph.com/news/gnosis-hit-by-fresh-exploit-team-vows-to-fully-cover-user-losses?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">팀이 환불을 약속함에 따라 Gnosis Pay 악용으로 인해 지연 모듈이 발생함</a> <span class="p0-desc">공동 창립자인 Martin Köppelmann이 사용자에게 자금을 인출하고 영향을 받은 사람들에게 상환하겠다고 촉구하면서 Gnosis Pay는 지연 모듈에서 적극적인 악용에 직면했.</span></li><li><a href="https://cointelegraph.com/news/crypto-exploit-losses-fall-by-90-in-may-to-68m-certik?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">5월 암호화폐 익스플로잇 손실은 전월 대비 90% 감소한 6,800만 달러를 기록했습니다: CertiK</a> <span class="p0-desc">CertiK는 5월이 2026년 현재까지 암호화폐 손실이 1억 달러 미만으로 기록된 세 번째 달이라고 밝혔습니다</span></li></ul></div>
 
 ## 전체 뉴스 요약
 
@@ -73,7 +73,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-02 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiugFBVV95cUxOT2RKaE9SZ0haczZXS1RNcjIxdzRWYXFsZVR1WDY4Vnk2Nmdva2FwN2hnRldySnNJZjlDRlhnZFZUalljajhZT3h6ZWdyT213YTctaF9MTzRvYzI0NkxWTFNYTTlmUXYxOTNpSUE5eGpxeGdjd1d1bEZjQ3lBSldqZGhodG56MVlQaTRTaE9PRTZWMzQtWkgzRTB3MU9aWlZORHBURTFFbUstd0hXNzJJOW01Y3hReHRhblE?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인은 미국-이란 불확실성으로 인해 $73,000에 고정, ETF 매도</a>
-<p class="news-desc">비트코인은 미국-이란의 불확실성, ETF 매도세로 인해 $73,000에 고정되었습니다. ($73)</p>
+<p class="news-desc">비트코인은 미국-이란의 불확실성, ETF 매도세로 인해 $73,000에 고정되었습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -113,7 +113,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-02 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMikwFBVV95cUxNOGZDVXRZdlpUWTFla2R4WEZQOVM2REd4U0F5QTJkdFNNSm5VY0FRUkpFNy0wNnBLTm05QVNaSWpULVV5RUUyNlhLRkgtNEJud0ZPam9fbEZ1OVIzeVRTVlRzUXltWGR4Q3F5WXdpT3M0QUl6Tk4xcVRPZVk5UU4zMDFtVGVuMlJWcjFCUll2VUN0Vlk?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다</a>
-<p class="news-desc">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다. 등급락 관련정보.</p>
+<p class="news-desc">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

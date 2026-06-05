@@ -40,7 +40,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-01 - 암호화폐 뉴스 요
 <div class="stat-item"><div class="stat-value">비트코인</div><div class="stat-label">핫 키워드 (23회)</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다 - 82건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 소셜미디어선 주목</li><li>🏦 <strong>거래소</strong>: 11건 수집</li><li>📈 <strong>가격/시장</strong>: 소셜미디어선, 낙관적인 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 국채 주목</li></ul></div>
-<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.etf.com/sections/features/while-crypto-sinks-hype-soaring-now-it-has-two-etfs">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다</a> <span class="p0-desc">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다. 등급락 관련정보.</span></li><li><a href="https://www.coindesk.com/tech/2026/05/29/xrp-ledger-s-new-proposal-blocks-the-flash-loan-attacks-costing-defi-hundreds-of-millions">XRP Ledger의 새로운 제안은 디파이 수억 달러의 비용이 드는 플래시 대출 공격을 차단합니다.</a> <span class="p0-desc">XRPL 수정안 초안에서는 트랜잭션이 구축된 방식으로 인해 네트워크에서 플래시 대출 공격이 "구조적으로 불가능"하다고 명시하고 있습니다. 이는 이더리움 디파이억 달러의 비용이 드는.</span></li><li><a href="https://cointelegraph.com/news/cosmos-based-gravity-bridge-halts-bridge-after-reported-54m-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Cosmos 기반 Gravity Bridge는 540만 달러 규모의 익스플로잇이 보고된 후 브리지를 중단합니다.</a> <span class="p0-desc">Gravity Bridge는 의심되는 서명 키 손상으로 인해 약 540만 달러가 소모되었으며, 조사가 진행되는 동안 검증인은 브리지를 중단해야 했습니다.</span></li></ul></div>
+<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.etf.com/sections/features/while-crypto-sinks-hype-soaring-now-it-has-two-etfs">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다</a> <span class="p0-desc">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다.</span></li><li><a href="https://www.coindesk.com/tech/2026/05/29/xrp-ledger-s-new-proposal-blocks-the-flash-loan-attacks-costing-defi-hundreds-of-millions">XRP Ledger의 새로운 제안은 디파이 수억 달러의 비용이 드는 플래시 대출 공격을 차단합니다.</a> <span class="p0-desc">XRPL 수정안 초안에서는 트랜잭션이 구축된 방식으로 인해 네트워크에서 플래시 대출 공격이 "구조적으로 불가능"하다고 명시하고 있습니다. 이는 이더리움 디파이억 달러의 비용이 드는.</span></li><li><a href="https://cointelegraph.com/news/cosmos-based-gravity-bridge-halts-bridge-after-reported-54m-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Cosmos 기반 Gravity Bridge는 540만 달러 규모의 익스플로잇이 보고된 후 브리지를 중단합니다.</a> <span class="p0-desc">Gravity Bridge는 의심되는 서명 키 손상으로 인해 약 540만 달러가 소모되었으며, 조사가 진행되는 동안 검증인은 브리지를 중단해야 했습니다.</span></li></ul></div>
 
 
 ## 전체 뉴스 요약
@@ -62,7 +62,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-01 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMixwFBVV95cUxQT3BTSHYzbzhwVFdlQUthVHV3VFQxZ0NWSTRNMkd3RUZDSjY3ZkxqWEJ3VEhCSW9GY1NXTFVuaWNGVXd5dE9pcFhfcjdtZEl5QjR1X1J0WHp5QXpIc01ERmN2M2NlTkRpZXFqMlhQMWZoby1PVDZ0YUw2QU5KMmZtcklXbjdXMmZLTHhvaGNkb2ZEZ25aMkhZOV90d0lTc0FxTGtjbWNRNHhIZGU2SGZsV3Q0OHZ2Yl9FaGhxOWVjYk1NRXUtdzVB?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 슬라이드이지만 CME가 연중무휴 암호화폐 선물 거래를 시작함에 따라 $73,000를 초과했습니다.</a>
-<p class="news-desc">비트코인은 하락했지만 CME가 연중무휴 암호화폐 선물 거래를 시작함에 따라 $73,000를 넘어섰습니다. ($73)</p>
+<p class="news-desc">비트코인은 하락했지만 CME가 연중무휴 암호화폐 선물 거래를 시작함에 따라 $73,000를 넘어섰습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -166,7 +166,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-01 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiigFBVV95cUxQR0VBTjNXUDZBaG0xX015ZWxXSlhvUGdQUDdLd0otQTkteTBKXzQ5bzVEZVlQblFrWWZwZ2I0cXpYQ1M1bDh1bjh3Q2txY0gtR2RKckxYbmpwQUFfU0NHYlprZkZpZTR1cmo1bnZ6Q1AxdW9pU0Z6QzNYb1dONTRNX2o0SkZzWnR3OWc?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Watchdog Agency는 암호화폐 회사에 대한 자체 승리를 뒤집으려고 합니다.</a>
-<p class="news-desc">Watchdog Agency는 암호화폐 회사에 대한 자체 승리를 뒤집으려고 합니다. 관련 광고.</p>
+<p class="news-desc">Watchdog Agency는 암호화폐 회사에 대한 자체 승리를 뒤집으려고 합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -178,7 +178,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-01 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMikwFBVV95cUxNOGZDVXRZdlpUWTFla2R4WEZQOVM2REd4U0F5QTJkdFNNSm5VY0FRUkpFNy0wNnBLTm05QVNaSWpULVV5RUUyNlhLRkgtNEJud0ZPam9fbEZ1OVIzeVRTVlRzUXltWGR4Q3F5WXdpT3M0QUl6Tk4xcVRPZVk5UU4zMDFtVGVuMlJWcjFCUll2VUN0Vlk?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다</a>
-<p class="news-desc">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다. 등급락 관련정보.</p>
+<p class="news-desc">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

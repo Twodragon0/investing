@@ -558,3 +558,91 @@ def test_main_markdown_format(tmp_path, monkeypatch, capsys):
     out = capsys.readouterr().out
     assert "## " in out
     assert "| 전체 포스트 |" in out
+
+
+# ---------------------------------------------------------------------------
+# Body description artifact detection (news-desc / p0-desc segments)
+# ---------------------------------------------------------------------------
+
+_NEWS_DESC = '<p class="news-desc">{}</p>'
+_P0_DESC = '<span class="p0-desc">{}</span>'
+
+
+def test_segment_has_artifact_trailing_ad_tail():
+    assert cdq._segment_has_artifact("다우 가격이 더 높아졌습니다. 관련 광고.") is True
+
+
+def test_segment_has_artifact_mangled_related_info():
+    assert cdq._segment_has_artifact("가격이 폭락했습니다. 등급락 관련정보.") is True
+
+
+def test_segment_has_artifact_misleading_bare_number():
+    # "$73,000" present and a contradictory bare "($73)" annotation.
+    assert cdq._segment_has_artifact("$73,000에 고정되었습니다. ($73)") is True
+
+
+def test_segment_has_artifact_clean_segment_false():
+    assert cdq._segment_has_artifact("비트코인이 사상 최고가를 경신했습니다.") is False
+
+
+def test_segment_no_artifact_for_lone_bare_number():
+    # A bare "($73)" with no richer number is not flagged (could be legitimate).
+    assert cdq._segment_has_artifact("가격이 $73 수준입니다. ($73)") is False
+
+
+def test_segment_no_artifact_for_two_distinct_figures():
+    # "$73,000" and an unrelated "($500)" are distinct — not a truncation.
+    assert cdq._segment_has_artifact("가격은 $73,000이고 수수료는 ($500)입니다.") is False
+
+
+def test_misleading_number_k_suffix_flagged():
+    # "$73K" with a contradictory bare "($73)" annotation is misleading.
+    assert cdq._is_misleading_number("$73K 부근입니다. ($73)") is True
+
+
+def test_segment_no_artifact_for_legit_보도_suffix():
+    # Legitimate synthetic suffix must not be treated as a body artifact.
+    assert cdq._segment_has_artifact("비트코인 급락 관련 보도.") is False
+
+
+def test_segment_artifact_for_address_tail():
+    assert cdq._segment_has_artifact("폭락을 경고했습니다. 급락 관련 주소.") is True
+
+
+def test_count_body_artifacts_counts_each_segment():
+    body = (
+        _NEWS_DESC.format("가격이 폭락했습니다. 등급락 관련정보.")
+        + "\n"
+        + _P0_DESC.format("$73,000에 고정되었습니다. ($73)")
+        + "\n"
+        + _NEWS_DESC.format("정상적인 한국어 요약 문장입니다.")
+    )
+    assert cdq._count_body_artifacts(body) == 2
+
+
+def test_count_body_artifacts_ignores_cross_tag_mismatch():
+    # A malformed <p ...>...</span> must NOT be extracted as a valid segment.
+    body = '<p class="news-desc">가격이 폭락했습니다. 관련 광고.</span>'
+    assert cdq._count_body_artifacts(body) == 0
+
+
+def test_classify_posts_collects_body_artifacts():
+    body = _NEWS_DESC.format("가격이 폭락했습니다. 등급락 관련정보.")
+    posts = [_make_post_dict("정상 요약입니다.", body=body)]
+    stats = cdq.classify_posts(posts)
+    assert len(stats["body_artifacts"]) == 1
+    assert stats["body_artifacts"][0]["artifact_count"] == 1
+
+
+def test_main_fails_on_body_artifacts(tmp_path, monkeypatch, capsys):
+    post = tmp_path / "2026-06-02-x.md"
+    today = datetime.now(UTC).date().isoformat()
+    body_seg = _NEWS_DESC.format("가격이 폭락했습니다. 등급락 관련정보.")
+    real_desc = "비트코인이 기관 매수세에 힘입어 9만 달러를 돌파하며 2026년 1분기 최고가를 기록했습니다."
+    _write_post(
+        post,
+        f"---\ntitle: T\ndate: {today}\ndescription_ko: {real_desc}\n---\n{body_seg}\n",
+    )
+    monkeypatch.setattr(sys, "argv", ["prog", "--days", "1", "--posts-dir", str(tmp_path)])
+    assert cdq.main() == 1
+    assert "body description artifact" in capsys.readouterr().err.lower()

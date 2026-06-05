@@ -86,7 +86,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-26 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMiywFBVV95cUxPbEVaLUlvTzNWdmJ3NVNNSWxHcGJZUnRZZHFFVk1ySXI1enZ5MWJ2cEh4RDdhNWJIVzhuUWx6akgyVnhKUGdfTG45WFd4djlVQWFySXJnRXM0cTJyeDZ0dnE1TUs3MUI0T1gyemQ2STBpNGctMl8wdGhpUTlSWE5JV1ByM3hqaWpXN3dKeWk5SXoxWDc3ZTdDcTNTdFVyYnVxNmdycThIRWxoUmpVTGdPREh0aXRfaG9KcTJGeGoxcnFmY3lubnFMdDNwOA?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 오늘 가격: 이란 전쟁 신호 충돌로 $71,000 이상 상승</a>
-<p class="news-desc">비트코인 오늘 가격: 이란 전쟁 신호가 충돌하는 가운데 $71,000 이상 상승했습니다. ($71)</p>
+<p class="news-desc">비트코인 오늘 가격: 이란 전쟁 신호가 충돌하는 가운데 $71,000 이상 상승했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

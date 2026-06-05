@@ -51,7 +51,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-25 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent">
 <strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/read/CBMiZEFVX3lxTE9PU3pBdGY0NWJMSWFUTFRDUGx3RklNQlNENWdlQjBiNG9meUo5andqSHFER0lkNlhEaFVwOXpLYWZseVJ1YVZsU2Q4RzBWT1RoeUhTM19YaFljM2ZHcm5yMHYxTlc?hl=en-US&gl=US&ceid=US%3Aen">투자자 불화가 심화됨에 따라 WLFI 토큰 급락</a> <span class="p0-desc">투자자 불화가 심화됨에 따라 WLFI 토큰이 급락합니다. 등급락 관련정보.</span></li>
+<li><a href="https://news.google.com/read/CBMiZEFVX3lxTE9PU3pBdGY0NWJMSWFUTFRDUGx3RklNQlNENWdlQjBiNG9meUo5andqSHFER0lkNlhEaFVwOXpLYWZseVJ1YVZsU2Q4RzBWT1RoeUhTM19YaFljM2ZHcm5yMHYxTlc?hl=en-US&gl=US&ceid=US%3Aen">투자자 불화가 심화됨에 따라 WLFI 토큰 급락</a> <span class="p0-desc">투자자 불화가 심화됨에 따라 WLFI 토큰이 급락합니다.</span></li>
 <li><a href="https://decrypt.co/365431/aave-leads-defi-united-push-to-contain-292m-kelpdao-fallout">에이브, 2억 9200만 달러 규모의 KelpDAO 낙진 억제를 위한 '디파이 United' 추진 주도</a> <span class="p0-desc">에이브의 창립자는 KelpDAO 악용으로 인한 낙진을 억제하기 위해 성장하는 디파이 연합 경쟁에 자신의 돈 5,000 ETH을 약속했습니다.</span></li>
 <li><a href="https://www.coindesk.com/policy/2026/04/24/jane-street-asks-court-to-reject-terraform-claims-tied-to-ust-luna-crash">Jane Street는 법원에 UST-LUNA 폭락과 관련된 Terraform 청구를 거부해 달라고 요청했습니다.</a> <span class="p0-desc">목요일 제출된 소송은 이미 법원에서 해결된 사건을 재탕하고 내부 위법 행위로 인한 손실에 대한 손해 배상을 구하는 것이라고 밝혔습니다</span></li>
 </ul>

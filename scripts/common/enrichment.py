@@ -1692,8 +1692,14 @@ def _analyze_english_title(title: str, title_lower: str) -> str:
 
     # Extract numbers/percentages/prices from title for specificity
     pct_match = re.search(r"(\d[\d,.]*)\s*%", title)
+    # Full-word units allow a leading space ("$80 thousand"); single-letter
+    # units must be immediately adjacent ("$73K"). Word units are matched first
+    # so the "t" in "thousand" is never mistaken for a trillion suffix, and the
+    # letter alt has no leading \s* so "$73 Kelvin" stays "$73" (not "$73K").
+    # No trailing \b: "$5MM" still degrades to "$5M" instead of dropping detail.
     price_match = re.search(
-        r"\$(\d[\d,.]*(?:\.\d+)?)\s*(billion|million|trillion|B|M|T)?",
+        r"\$(\d[\d,.]*(?:\.\d+)?)"
+        r"(?:\s*(trillion|billion|million|thousand)s?|([KMBT]))?",
         title,
         re.IGNORECASE,
     )
@@ -1715,7 +1721,14 @@ def _analyze_english_title(title: str, title_lower: str) -> str:
     if pct_match:
         detail_parts.append(f"{pct_match.group(1)}% 변동")
     if price_match:
-        unit = price_match.group(2) or ""
+        # Normalize the magnitude suffix to a canonical single letter so the
+        # extracted detail never contradicts the full number in the body text
+        # (e.g. "$73K" — not a misleading "$73" — for a "$73,000" article).
+        _word_unit = (price_match.group(2) or "").lower()
+        _letter_unit = (price_match.group(3) or "").upper()
+        unit = {"trillion": "T", "billion": "B", "million": "M", "thousand": "K"}.get(
+            _word_unit, _letter_unit
+        )
         detail_parts.append(f"${price_match.group(1)}{unit}")
     if points_match:
         detail_parts.append(f"{points_match.group(1)}포인트")

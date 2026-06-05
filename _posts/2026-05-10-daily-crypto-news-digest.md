@@ -76,7 +76,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-10 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMivwFBVV95cUxOd2dRRWhqckhTUlJIVGhadDRIWG5rdGw3Q0xweXFWbTNnamo1UjQ0TFloTzhXRlFoa2ZPMF9xNWNtcXhyS0lUZG00UV91Q0ozNHp0Y3k0a2RmUzVPSFlNNm92Uk1RYlk0U3pMWXlsUmpENkRwbHhNNkxSVzNwb3pyTEpJUzVVbjVpMlhFZ2N1TDZSaUpnQTRQRXFPam42VkVjTEtaNjBsdkEwMmJkT2NaWk81WWlnMXVnMUMwVW15MA?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 채굴자는 98억 달러 규모의 데이터 센터 거래로 급증하고 모건스탠리은 암호화폐 거래를 시작합니다.</a>
-<p class="news-desc">비트코인 채굴자는 98억 달러 규모의 데이터 센터 거래로 급증하고 모건스탠리은 암호화폐 거래를 시작합니다. ($9.8B) 관련 홍보.</p>
+<p class="news-desc">비트코인 채굴자는 98억 달러 규모의 데이터 센터 거래로 급증하고 모건스탠리은 암호화폐 거래를 시작합니다. ($9.8B)</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

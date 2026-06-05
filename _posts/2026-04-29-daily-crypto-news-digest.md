@@ -152,7 +152,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-29 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMi0wFBVV95cUxPMHloZVlBcklGcGlkMGZobldpZ0xrdzJxSG5TU1NidHpQOGdPSWZSdWViN0VGcUZ3QUpTMGpORnZIekVDWDVPY0pvYVRwdTRqRDc0VjktTlhfM3lqVGM4dTZTQWEwTFRnRkczaDYyOUpIT2QtR19wRm5FNmFXNzY4Uk0xRklPdFJVbGNJTDZud19aeXBGQ0h5UnNmTGkzeVhzbk1HOUc5RG90bmxyRmlmNzRQVHlYbE14R2JFTmRyNXNnRzV2Y1lYVTVqMkR2cFVTNFZB?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">'암호화폐의 최고의 날이 다가오고 있습니다': 번스타인은 비대칭적인 상승세와 구조적으로 더 긴 강세 주기를 봅니다</a>
-<p class="news-desc">'암호화폐의 최고의 날이 다가오고 있습니다': 번스타인은 비대칭적인 상승 여력과 구조적으로 더 긴 강세 주기를 보고 있습니다. 관련 광고.</p>
+<p class="news-desc">'암호화폐의 최고의 날이 다가오고 있습니다': 번스타인은 비대칭적인 상승 여력과 구조적으로 더 긴 강세 주기를 보고 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

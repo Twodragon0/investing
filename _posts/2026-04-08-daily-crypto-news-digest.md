@@ -52,7 +52,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-08 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent">
 <strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/read/CBMitwFBVV95cUxQWm40ZFZlMnhCM2tTQS1iVGhDOG5YdktJcDd4S0xhcDhINWNzcld0VXNCYkxXM3RjVFhTT3Zhak1ucFRBNlYtM005MHgzZ2ZDUFF1Wm1UQzFrRWg5MWVaWWNzbjIzVzR3UnFpN01aUVJjYVljVTB0MFdWV1NIeDJmWVU2LU82QWpxN21MbTdyTWkwZ0ozbzk3bWRRcTFFMFBPMFFfQU4yWnZfRjFFWXRmTmpycnJITlE?hl=en-US&gl=US&ceid=US%3Aen">'1달러를 투자하지 않겠습니다'—Hayes, 25만 달러 이전에 6만 달러 비트코인 폭락 경고</a> <span class="p0-desc">'1달러를 투자하지 않겠습니다'—Hayes는 25만 달러 이전에 6만 달러 비트코인 폭락을 경고했습니다. ($1) 급락 관련 주소.</span></li>
+<li><a href="https://news.google.com/read/CBMitwFBVV95cUxQWm40ZFZlMnhCM2tTQS1iVGhDOG5YdktJcDd4S0xhcDhINWNzcld0VXNCYkxXM3RjVFhTT3Zhak1ucFRBNlYtM005MHgzZ2ZDUFF1Wm1UQzFrRWg5MWVaWWNzbjIzVzR3UnFpN01aUVJjYVljVTB0MFdWV1NIeDJmWVU2LU82QWpxN21MbTdyTWkwZ0ozbzk3bWRRcTFFMFBPMFFfQU4yWnZfRjFFWXRmTmpycnJITlE?hl=en-US&gl=US&ceid=US%3Aen">'1달러를 투자하지 않겠습니다'—Hayes, 25만 달러 이전에 6만 달러 비트코인 폭락 경고</a> <span class="p0-desc">'1달러를 투자하지 않겠습니다'—Hayes는 25만 달러 이전에 6만 달러 비트코인 폭락을 경고했습니다. ($1)</span></li>
 <li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNb040ekQ1UGNtaU5WenBKdlNQczBhX3BCWW1WU1ZkdUpNamVYT1J5c1ZPQlMtN3dFb09xY3Flb1paZ2o4ZTJiai1SUV9Paktrbk9Qd1lHSF9Jb2FLLUV1MlZuU3Zyc3N3akhnbENtamliNnhuQWdMMEwyaUxYdEU2Tg?oc=5">북한이 미국 기업을 해킹한 혐의로 복구하는 데 '수개월' 걸릴 수 있음 - SlashGear</a> <span class="p0-desc">미국 회사에 대한 북한의 해킹 혐의로 SlashGear 복구에 '수개월' 걸릴 수 있음</span></li>
 <li><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5RNi1tcUdEUXJvRXBjT0VCS1VhZE9VRm42V3ktcTl0UTFyU1duQ2lVM25xT1lDRUx4ZV9DRUNIS25neE9Wa2lSYUl6V280U2ZjYkxhcVctVzA?oc=5">양자컴 비트코인 해킹하는 데 9분이면 충분…존립 기반 무너진다</a> <span class="p0-desc">양자컴 비트코인 해킹하는 데 9분이면 충분…존립 기반 무너진다 뉴스1</span></li>
 </ul>
@@ -148,7 +148,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-08 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMitwFBVV95cUxQWm40ZFZlMnhCM2tTQS1iVGhDOG5YdktJcDd4S0xhcDhINWNzcld0VXNCYkxXM3RjVFhTT3Zhak1ucFRBNlYtM005MHgzZ2ZDUFF1Wm1UQzFrRWg5MWVaWWNzbjIzVzR3UnFpN01aUVJjYVljVTB0MFdWV1NIeDJmWVU2LU82QWpxN21MbTdyTWkwZ0ozbzk3bWRRcTFFMFBPMFFfQU4yWnZfRjFFWXRmTmpycnJITlE?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">'1달러를 투자하지 않겠습니다'—Hayes, 25만 달러 이전에 6만 달러 비트코인 폭락 경고</a>
-<p class="news-desc">'1달러를 투자하지 않겠습니다'—Hayes는 25만 달러 이전에 6만 달러 비트코인 폭락을 경고했습니다. ($1) 급락 관련 주소.</p>
+<p class="news-desc">'1달러를 투자하지 않겠습니다'—Hayes는 25만 달러 이전에 6만 달러 비트코인 폭락을 경고했습니다. ($1)</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

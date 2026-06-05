@@ -40,7 +40,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-31 - 암호화폐 뉴스 요
 <div class="stat-item"><div class="stat-value">비트코인</div><div class="stat-label">핫 키워드 (31회)</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다 - 99건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, ETF 이슈 부각</li><li>🔵 <strong>규제/정책</strong>: 국채 이슈 부각</li><li>🏦 <strong>거래소</strong>: 16건 수집</li><li>📈 <strong>가격/시장</strong>: ETF 동향 주시</li></ul></div>
-<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.etf.com/sections/features/while-crypto-sinks-hype-soaring-now-it-has-two-etfs">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다</a> <span class="p0-desc">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다. 등급락 관련정보.</span></li><li><a href="https://news.google.com/read/CBMiogFBVV95cUxONU1lYzVhVnZXM094QUROMFFhOFd0WjQwaElZSDd5V0JRX3Fmc3VNWFN1Zi1iUmpyS0JqYTg3ZGxpZkFEVmZTU0w1OVRRSzFRM01fVTZYbDZ4cXBxTmNERERHR3VhU0w4dWtyX1hYWVNPd0hjZ2FwSjY5VlVXcFhZVVRheHZodVMtRUg3VlR6QVVXakk0eXpNdzFpRWgzc3ZYaHc?hl=en-US&gl=US&ceid=US%3Aen">개인용 제트기, 나이트클럽, 페라리: 이스트 베이의 십대와 미국 최대의 암호화폐 강도 사건</a> <span class="p0-desc">함자 두스트(Hamza Doost)는 키가 6피트 3인치이고 통통한 턱수염이 난 얼굴, 검은 머리, 발목 모니터를 갖고 있습니다. 지난 1년 동안 21세의 이 청년은 이스트베이 교.</span></li><li><a href="https://www.investors.com/news/bitcoin-price-slumps-strategy-buying-power-strc-mstr-stock/">비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다.</a> <span class="p0-desc">비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다. 급락 관련 주소.</span></li></ul></div>
+<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.etf.com/sections/features/while-crypto-sinks-hype-soaring-now-it-has-two-etfs">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다</a> <span class="p0-desc">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다.</span></li><li><a href="https://news.google.com/read/CBMiogFBVV95cUxONU1lYzVhVnZXM094QUROMFFhOFd0WjQwaElZSDd5V0JRX3Fmc3VNWFN1Zi1iUmpyS0JqYTg3ZGxpZkFEVmZTU0w1OVRRSzFRM01fVTZYbDZ4cXBxTmNERERHR3VhU0w4dWtyX1hYWVNPd0hjZ2FwSjY5VlVXcFhZVVRheHZodVMtRUg3VlR6QVVXakk0eXpNdzFpRWgzc3ZYaHc?hl=en-US&gl=US&ceid=US%3Aen">개인용 제트기, 나이트클럽, 페라리: 이스트 베이의 십대와 미국 최대의 암호화폐 강도 사건</a> <span class="p0-desc">함자 두스트(Hamza Doost)는 키가 6피트 3인치이고 통통한 턱수염이 난 얼굴, 검은 머리, 발목 모니터를 갖고 있습니다. 지난 1년 동안 21세의 이 청년은 이스트베이 교.</span></li><li><a href="https://www.investors.com/news/bitcoin-price-slumps-strategy-buying-power-strc-mstr-stock/">비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다.</a> <span class="p0-desc">비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다.</span></li></ul></div>
 
 
 ## 전체 뉴스 요약
@@ -74,7 +74,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-31 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMixAFBVV95cUxOT1lmNlV5ZXR6RFBnVGRqWDdueGJDcFhmOUZZY0lxT3o4Sy1HU1dLcFZtakpPSUtoYUFMdFJiZUFjc0NnNTBuWWdBdnQ2XzhaNXhyY0NIMWpVNVl5V1Q1Um9JREtLR1NEZHotSEphRTdqTmdkbnEzMGVuUW1aaER1dE0wcmxCTEtwVWozSmxuNV9UN3N6cVp3QlM0VGdUaUpDb3FGbWtHaUJ4VU9Kc0RmSXJxVGRPYjBNVnJkeURLbEd5Ukty?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인은 ETF 수요가 줄어들면서 $73,000 가까이 하락했습니다. 분석가는 경기 침체가 장기화될 수 있다고 경고</a>
-<p class="news-desc">비트코인은 ETF 수요가 줄어들면서 $73,000 가까이 하락했습니다. 분석가는 경기 침체가 연장될 수 있다고 경고합니다. ($73)</p>
+<p class="news-desc">비트코인은 ETF 수요가 줄어들면서 $73,000 가까이 하락했습니다. 분석가는 경기 침체가 연장될 수 있다고 경고합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -224,7 +224,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-31 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMikwFBVV95cUxNOGZDVXRZdlpUWTFla2R4WEZQOVM2REd4U0F5QTJkdFNNSm5VY0FRUkpFNy0wNnBLTm05QVNaSWpULVV5RUUyNlhLRkgtNEJud0ZPam9fbEZ1OVIzeVRTVlRzUXltWGR4Q3F5WXdpT3M0QUl6Tk4xcVRPZVk5UU4zMDFtVGVuMlJWcjFCUll2VUN0Vlk?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다</a>
-<p class="news-desc">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다. 등급락 관련정보.</p>
+<p class="news-desc">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -248,7 +248,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-31 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMilAFBVV95cUxPS3dLWW5ZRWNoX3ZpZk9ZV3o0UWJmMFRPWDhVN2JoM2tmdFAwZEE1SzZnQWJSMDZ1UGRsaHJFMkpRcTBzYWptY1BVNnRaRUNYNmZVdlJHcWlkSzJGMGpydzRpUjR1QnMxb3BNaWR1NzZEdnlMai1hdFgxTVRUbEJWZHRjVHgwcWh2SHA3SDdGNXI5RG9Z?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다.</a>
-<p class="news-desc">비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다. 급락 관련 주소.</p>
+<p class="news-desc">비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

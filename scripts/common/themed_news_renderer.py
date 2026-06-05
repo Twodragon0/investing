@@ -10,7 +10,11 @@ from typing import Any, Dict, List
 from .enrichment import is_logo_like_url
 from .markdown_utils import html_source_tag
 from .severity import _SEV_BADGE_HTML, _classify_news_severity
-from .text_utils import _fix_mistranslations, _truncate_sentence
+from .text_utils import (
+    _fix_mistranslations,
+    _strip_trailing_artifacts,
+    _truncate_sentence,
+)
 from .themes import ARTICLES_PER_THEME, OVERFLOW_PREVIEW_LIMIT
 
 
@@ -108,7 +112,7 @@ class ThemedNewsRenderer:
         if description and description != title and not sumr_module._is_generic_desc(description):
             # Additional boilerplate check for translated descriptions
             if not sumr_module._is_boilerplate_desc(description):
-                desc_text = _truncate_sentence(description, max_len=300)
+                desc_text = _strip_trailing_artifacts(_truncate_sentence(description, max_len=300))
                 if desc_text:
                     card_parts.append(f'<p class="news-desc">{_esc(desc_text, quote=True)}</p>')
         else:

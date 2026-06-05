@@ -14,6 +14,65 @@ from scripts.common.summarizer import (
     _favicon_url,
     _fix_mistranslations,
 )
+from scripts.common.text_utils import _strip_trailing_artifacts
+
+# ---------------------------------------------------------------------------
+# _strip_trailing_artifacts — remove trailing ad/boilerplate tails only
+# ---------------------------------------------------------------------------
+
+
+class TestStripTrailingArtifacts:
+    def test_strips_korean_ad_tail(self):
+        out = _strip_trailing_artifacts("다우 가격이 더 높아졌습니다. 관련 광고.")
+        assert out == "다우 가격이 더 높아졌습니다."
+
+    def test_strips_mangled_related_info_tail(self):
+        out = _strip_trailing_artifacts("가격이 폭락했습니다. 등급락 관련정보.")
+        assert out == "가격이 폭락했습니다."
+
+    def test_strips_stacked_tail(self):
+        out = _strip_trailing_artifacts("두 개의 ETF가 있습니다. 등급락 관련정보.")
+        assert out == "두 개의 ETF가 있습니다."
+
+    def test_strips_english_read_more(self):
+        assert _strip_trailing_artifacts("Bitcoin surges to new high. Read more") == (
+            "Bitcoin surges to new high."
+        )
+
+    def test_normal_korean_sentence_unchanged(self):
+        text = "비트코인이 사상 최고가를 경신했습니다."
+        assert _strip_trailing_artifacts(text) == text
+
+    def test_preserves_legitimate_period(self):
+        out = _strip_trailing_artifacts("ETF 수요가 줄었습니다. 관련 광고.")
+        assert out.endswith("줄었습니다.")
+
+    def test_empty_input(self):
+        assert _strip_trailing_artifacts("") == ""
+
+    def test_strips_mangled_address_tail_with_leadin(self):
+        # "급락 관련 주소." is a translation-mangled tail; lead-in word absorbed.
+        out = _strip_trailing_artifacts("폭락을 경고했습니다. 급락 관련 주소.")
+        assert out == "폭락을 경고했습니다."
+
+    def test_strips_promo_tail(self):
+        out = _strip_trailing_artifacts("암호화폐 거래를 시작합니다. 관련 홍보.")
+        assert out == "암호화폐 거래를 시작합니다."
+
+    def test_preserves_legitimate_보도_suffix(self):
+        # "관련 보도." is a legitimate synthetic suffix from enrichment — keep it.
+        text = "비트코인 가격이 급락했습니다. 급락 관련 보도."
+        assert _strip_trailing_artifacts(text) == text
+
+    def test_does_not_truncate_sentence_ending_in_sponsored(self):
+        # Bare "sponsored" as a real sentence ending must NOT be stripped.
+        text = "This research segment was sponsored"
+        assert _strip_trailing_artifacts(text) == text
+
+    def test_strips_sponsored_content_slug(self):
+        out = _strip_trailing_artifacts("Bitcoin hits new high. Sponsored content")
+        assert out == "Bitcoin hits new high."
+
 
 # ---------------------------------------------------------------------------
 # _classify_news_severity

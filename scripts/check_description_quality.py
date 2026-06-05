@@ -18,8 +18,70 @@ from pathlib import Path
 # from CLI scripts (DIP). The facade orchestrates all three so a pattern
 # update in any single source file remains observable to every consumer.
 from common.summary_quality import is_boilerplate as _is_boilerplate
+from common.text_utils import _strip_trailing_artifacts
 
 _NORM_RE = re.compile(r"[\s\W]+")
+
+# ---------------------------------------------------------------------------
+# Body-text quality: rendered news-desc / p0-desc segments are NOT covered by
+# the front-matter checks above. Scan them for the two artifact classes that
+# the generator pipeline now prevents at the source (so any hit is a
+# regression): leftover ad/boilerplate tails and misleading bare "$NN" number
+# annotations that contradict a fuller number in the same sentence.
+# ---------------------------------------------------------------------------
+# Match either an opening news-desc <p> or p0-desc <span> with its OWN closing
+# tag (no cross-tag pairing like <p>...</span>).
+_BODY_DESC_SEG_RE = re.compile(
+    r'<p class="news-desc">(.*?)</p>|<span class="p0-desc">(.*?)</span>',
+    re.S,
+)
+# Bare 1–3 digit dollar annotation, e.g. "($73)". Excludes "($1.2B)"/"($50K)"
+# because the closing paren must follow the digits directly.
+_BARE_NUM_RE = re.compile(r"\(\$(\d{1,3})\)")
+# Any dollar figure with its leading digit-run and optional magnitude suffix.
+_DOLLAR_NUM_RE = re.compile(r"\$(\d[\d,]*(?:\.\d+)?)([KMBTkmbt]?)")
+
+
+def _is_misleading_number(segment: str) -> bool:
+    """Return True if a bare "$NN" annotation is a truncation of a richer figure.
+
+    The artifact is specifically a magnitude-dropping copy of another number in
+    the same segment — e.g. "$73,000 ... ($73)" or "$73K ... ($73)". Two
+    genuinely distinct figures ("$73,000 ... ($500)") are NOT flagged.
+    """
+    bare = _BARE_NUM_RE.findall(segment)
+    if not bare:
+        return False
+    richer = _DOLLAR_NUM_RE.findall(segment)
+    for bdigits in bare:
+        for rnum, runit in richer:
+            rdigits = rnum.replace(",", "").replace(".", "")
+            if rdigits.startswith(bdigits) and (len(rdigits) > len(bdigits) or runit):
+                return True
+    return False
+
+
+def _segment_has_artifact(segment: str) -> bool:
+    """Return True if a rendered description segment carries a known artifact."""
+    if not segment:
+        return False
+    # Misleading bare "$NN" that drops the magnitude of a fuller figure nearby.
+    if _is_misleading_number(segment):
+        return True
+    # Trailing ad/boilerplate tail (delegated to the canonical stripper).
+    return _strip_trailing_artifacts(segment) != segment.strip()
+
+
+def _count_body_artifacts(body: str) -> int:
+    """Count rendered description segments that carry artifacts in a post body."""
+    if not body:
+        return 0
+    # group(1) = news-desc <p>, group(2) = p0-desc <span>; exactly one is set.
+    return sum(
+        1
+        for m in _BODY_DESC_SEG_RE.finditer(body)
+        if _segment_has_artifact(m.group(1) or m.group(2) or "")
+    )
 
 # Front matter description field patterns (description_ko or description)
 _DESC_KO_RE = re.compile(r'^description_ko:\s*["\']?(.+?)["\']?\s*$', re.MULTILINE)
@@ -179,6 +241,7 @@ def classify_posts(posts: list[dict]) -> dict:
     ascii_ratio_high_items: list[dict] = []
 
     mojibake_items: list[dict] = []
+    body_artifact_items: list[dict] = []
 
     for p in posts:
         desc = p["description"]
@@ -203,6 +266,10 @@ def classify_posts(posts: list[dict]) -> dict:
         body = p.get("body", "")
         if body and _MOJIBAKE_RE.search(body):
             mojibake_items.append(p)
+        # Rendered body description artifacts (news-desc / p0-desc tails + bad numbers).
+        artifact_count = _count_body_artifacts(body)
+        if artifact_count:
+            body_artifact_items.append({**p, "artifact_count": artifact_count})
 
     return {
         "total": total,
@@ -213,6 +280,7 @@ def classify_posts(posts: list[dict]) -> dict:
         "translation_issues": translation_issue_items,
         "ascii_ratio_high": ascii_ratio_high_items,
         "mojibake": mojibake_items,
+        "body_artifacts": body_artifact_items,
     }
 
 
@@ -232,6 +300,9 @@ def format_text(stats: dict, days: int) -> str:
     ti_count = len(stats["translation_issues"])
     ar_count = len(stats["ascii_ratio_high"])
     mj_count = len(stats["mojibake"])
+    ba_items = stats.get("body_artifacts", [])
+    ba_posts = len(ba_items)
+    ba_segs = sum(p.get("artifact_count", 0) for p in ba_items)
 
     lines = [
         f"Description Quality Report (last {days} day(s))",
@@ -242,6 +313,7 @@ def format_text(stats: dict, days: int) -> str:
         f"  Translation issues: {ti_count} ({_pct(ti_count, total)})",
         f"  ASCII-heavy desc: {ar_count} ({_pct(ar_count, total)})",
         f"  Mojibake (body) : {mj_count} ({_pct(mj_count, total)})",
+        f"  Body desc artifacts: {ba_posts} post(s), {ba_segs} segment(s)",
         f"  No description  : {nd_count} ({_pct(nd_count, total)})",
     ]
     if stats["boilerplate"]:
@@ -269,6 +341,11 @@ def format_text(stats: dict, days: int) -> str:
         lines.append("Mojibake (encoding corruption) posts:")
         for p in stats["mojibake"]:
             lines.append(f"  - {p['file']}")
+    if ba_items:
+        lines.append("")
+        lines.append("Body description artifact posts:")
+        for p in ba_items:
+            lines.append(f"  - {p['file']}: {p['artifact_count']} segment(s)")
     return "\n".join(lines)
 
 
@@ -282,11 +359,14 @@ def format_markdown(stats: dict, days: int) -> str:
     ti_count = len(stats["translation_issues"])
     ar_count = len(stats["ascii_ratio_high"])
     mj_count = len(stats["mojibake"])
+    ba_items = stats.get("body_artifacts", [])
+    ba_posts = len(ba_items)
+    ba_segs = sum(p.get("artifact_count", 0) for p in ba_items)
 
     bp_pct = bp_count / total * 100 if total else 0
     ar_pct = ar_count / total * 100 if total else 0
     status_icon = "✅" if bp_pct < 30 else ("⚠️" if bp_pct < 50 else "❌")
-    if mj_count > 0 or ar_pct > 50:
+    if mj_count > 0 or ar_pct > 50 or ba_posts > 0:
         status_icon = "❌"
     elif ar_pct >= 30 and status_icon == "✅":
         status_icon = "⚠️"
@@ -303,6 +383,7 @@ def format_markdown(stats: dict, days: int) -> str:
         f"| 번역 품질 이슈 | {ti_count} | {_pct(ti_count, total)} |",
         f"| ASCII 과다 desc | {ar_count} | {_pct(ar_count, total)} |",
         f"| Mojibake (인코딩) | {mj_count} | {_pct(mj_count, total)} |",
+        f"| 본문 desc 잔재 | {ba_posts} | {ba_segs} segment(s) |",
         f"| description 없음 | {nd_count} | {_pct(nd_count, total)} |",
     ]
 
@@ -337,6 +418,17 @@ def format_markdown(stats: dict, days: int) -> str:
         lines += ["", "### ASCII 과다 description 포스트 (최대 10개)"]
         for p in stats["ascii_ratio_high"][:10]:
             lines.append(f"- `{p['file']}`: {p['description'][:100]}")
+
+    if ba_items:
+        lines += [
+            "",
+            f"> ❌ **본문 desc 잔재**: {ba_posts}개 포스트에서 {ba_segs}개 세그먼트 검출"
+            " (광고/잡음 꼬리 또는 오해 소지 숫자).",
+            "",
+            "### 본문 desc 잔재 포스트",
+        ]
+        for p in ba_items:
+            lines.append(f"- `{p['file']}`: {p['artifact_count']} segment(s)")
 
     return "\n".join(lines)
 
@@ -424,6 +516,15 @@ def main() -> int:
         return 1
     if len(stats["mojibake"]) > 0:
         print("ERROR: mojibake (encoding corruption) detected in post body", file=sys.stderr)
+        return 1
+    ba_items = stats.get("body_artifacts", [])
+    if ba_items:
+        ba_segs = sum(p.get("artifact_count", 0) for p in ba_items)
+        print(
+            f"ERROR: {ba_segs} body description artifact(s) across {len(ba_items)} post(s)"
+            " — ad/boilerplate tails or misleading bare-$ numbers in news-desc/p0-desc.",
+            file=sys.stderr,
+        )
         return 1
     return 0
 

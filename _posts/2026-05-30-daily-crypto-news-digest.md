@@ -40,7 +40,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-30 - 암호화폐 뉴스 요
 <div class="stat-item"><div class="stat-value">비트코인</div><div class="stat-label">핫 키워드 (36회)</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 비트코인, XRP 미국과 이란의 긴장이 암호화폐를 강타하면서 가격 하락 - 106건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 29건 수집</li><li>🔵 <strong>규제/정책</strong>: 30건 수집</li><li>🤖 <strong>AI/기술</strong>: 11건 수집</li></ul></div>
-<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.barrons.com/articles/bitcoin-xrp-ethereum-cryptos-today-d588a761">비트코인, XRP 미국과 이란의 긴장이 암호화폐를 강타하면서 가격 하락</a> <span class="p0-desc">비트코인, XRP 미국과 이란의 긴장이 암호화폐를 강타하면서 가격이 폭락했습니다. 등급락 관련정보.</span></li><li><a href="https://www.investors.com/news/bitcoin-price-slumps-strategy-buying-power-strc-mstr-stock/">비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다.</a> <span class="p0-desc">비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다. 급락 관련 주소.</span></li><li><a href="https://www.newspim.com">코인시황] 비트코인, 유가 급락·증시 신고가에도 힘 못 쓴다…"문제는 전쟁 아닌 매수자 실종" - 뉴스핌</a> <span class="p0-desc">[코인시황] 비트코인, 유가 급락·증시 신고가에도 힘 못 쓴다…"문제는 전쟁 아닌 매수자 실종" 뉴스핌</span></li></ul></div>
+<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.barrons.com/articles/bitcoin-xrp-ethereum-cryptos-today-d588a761">비트코인, XRP 미국과 이란의 긴장이 암호화폐를 강타하면서 가격 하락</a> <span class="p0-desc">비트코인, XRP 미국과 이란의 긴장이 암호화폐를 강타하면서 가격이 폭락했습니다.</span></li><li><a href="https://www.investors.com/news/bitcoin-price-slumps-strategy-buying-power-strc-mstr-stock/">비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다.</a> <span class="p0-desc">비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다.</span></li><li><a href="https://www.newspim.com">코인시황] 비트코인, 유가 급락·증시 신고가에도 힘 못 쓴다…"문제는 전쟁 아닌 매수자 실종" - 뉴스핌</a> <span class="p0-desc">[코인시황] 비트코인, 유가 급락·증시 신고가에도 힘 못 쓴다…"문제는 전쟁 아닌 매수자 실종" 뉴스핌</span></li></ul></div>
 
 
 ## 전체 뉴스 요약
@@ -129,7 +129,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMiggFBVV95cUxPaU5GSVJNcVVKX2pQWTdwV2RMRkFPQnZJMGQ0RHZWQUxXVWw4UElQYmJrc3BxMVl2Q0IxdEdvazBJXzNJbHo2TndwS1VxdXNqZTRaVzY3bEJOV2RLYmZqelJHVGxJYmFnb0NIdXJhRTRZZXNOWVBLNlM4WkZ2Y3lSNkVn?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인, XRP 미국과 이란의 긴장이 암호화폐를 강타하면서 가격 하락</a>
-<p class="news-desc">비트코인, XRP 미국과 이란의 긴장이 암호화폐를 강타하면서 가격이 폭락했습니다. 등급락 관련정보.</p>
+<p class="news-desc">비트코인, XRP 미국과 이란의 긴장이 암호화폐를 강타하면서 가격이 폭락했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -141,7 +141,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMilAFBVV95cUxPS3dLWW5ZRWNoX3ZpZk9ZV3o0UWJmMFRPWDhVN2JoM2tmdFAwZEE1SzZnQWJSMDZ1UGRsaHJFMkpRcTBzYWptY1BVNnRaRUNYNmZVdlJHcWlkSzJGMGpydzRpUjR1QnMxb3BNaWR1NzZEdnlMai1hdFgxTVRUbEJWZHRjVHgwcWh2SHA3SDdGNXI5RG9Z?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다.</a>
-<p class="news-desc">비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다. 급락 관련 주소.</p>
+<p class="news-desc">비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
