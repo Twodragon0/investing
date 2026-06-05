@@ -72,6 +72,8 @@ def test_main_removes_suffix_mutation_artifacts(tmp_path, monkeypatch, capsys):
             "k2": "1,600% 상승하기 전에 구매해야 할 상위 암호화폐입니다. (1,600% 개정) 광고 관련 알림.",
             "k3": "비트코인이 사상 최고가를 경신했습니다.",  # clean — kept
             "k4": "지정학적 리스크가 커지고 있습니다. 급락 관련 보도.",  # legit 보도 suffix — kept
+            "k5": "신규 상장 관련 공지",  # standalone legit notice (no boundary) — kept
+            "k6": "이용 약관 변경 관련 안내",  # standalone legit guide — kept
         },
     )
     monkeypatch.setattr(ctc, "_CACHE_PATH", cache_path)
@@ -81,5 +83,6 @@ def test_main_removes_suffix_mutation_artifacts(tmp_path, monkeypatch, capsys):
     ctc.main()
 
     remaining = json.loads(cache_path.read_text(encoding="utf-8"))
-    assert set(remaining) == {"k3", "k4"}  # mutated entries removed, clean + legit kept
+    # mutated appended-fragment entries removed; clean + legit-suffix + standalone notices kept
+    assert set(remaining) == {"k3", "k4", "k5", "k6"}
     assert "removed 2" in capsys.readouterr().out

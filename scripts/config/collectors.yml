@@ -90,7 +90,10 @@ crypto_news:
     rss_decrypt: "https://decrypt.co/feed"
     rss_bitcoin_magazine: "https://bitcoinmagazine.com/.rss/full/"
     rss_theblock: "https://www.theblock.co/rss"
-    rss_rekt_news: "https://rekt.news/rss/feed.xml"
+    # Rekt News stopped publishing hack-incident RSS (opinion/research only,
+    # 0 incident items since ~2026-04). Swapped to CoinTelegraph's hacks tag
+    # feed — incident-focused, refreshed daily. Key kept for backward compat.
+    rss_rekt_news: "https://cointelegraph.com/rss/tag/hacks"
     # Google News RSS (영어/한국어)
     google_news_crypto_en: "https://news.google.com/rss/search?q=cryptocurrency&hl=en-US&gl=US&ceid=US:en"
     google_news_crypto_kr: "https://news.google.com/rss/search?q=암호화폐+비트코인&hl=ko&gl=KR&ceid=KR:ko"
