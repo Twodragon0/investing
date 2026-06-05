@@ -451,22 +451,26 @@ def fetch_exchange_announcements() -> List[Dict[str, Any]]:
 
 
 def fetch_rekt_news(limit: int = 10) -> List[Dict[str, Any]]:
-    """Fetch security incidents from Rekt News via RSS feed."""
+    """Fetch security incidents via RSS feed (CoinTelegraph hacks tag).
+
+    Historically sourced from Rekt News; the URL/key retain the ``rekt`` name
+    for backward compatibility after Rekt stopped publishing incident RSS.
+    """
     items: List[Dict[str, Any]] = []
 
     try:
         rss_items = fetch_rss_feed(
-            get_url("crypto_news", "rss_rekt_news", "https://rekt.news/rss/feed.xml"),
-            "Rekt News",
-            ["security", "hack", "rekt"],
+            get_url("crypto_news", "rss_rekt_news", "https://cointelegraph.com/rss/tag/hacks"),
+            "CoinTelegraph Hacks",
+            ["security", "hack", "exploit", "rekt"],
         )
         for item in rss_items[:limit]:
             item["title"] = f"[Security] {item['title']}"
             item["category_override"] = "security-alerts"
             items.append(item)
-        logger.info("Rekt News RSS: fetched %d incidents", len(items))
+        logger.info("CoinTelegraph Hacks RSS: fetched %d incidents", len(items))
     except Exception as e:
-        logger.warning("Rekt News RSS failed: %s", e)
+        logger.warning("CoinTelegraph Hacks RSS failed: %s", e)
 
     return items
 
