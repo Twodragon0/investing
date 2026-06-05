@@ -35,9 +35,7 @@ class TestStripTrailingArtifacts:
         assert out == "두 개의 ETF가 있습니다."
 
     def test_strips_english_read_more(self):
-        assert _strip_trailing_artifacts("Bitcoin surges to new high. Read more") == (
-            "Bitcoin surges to new high."
-        )
+        assert _strip_trailing_artifacts("Bitcoin surges to new high. Read more") == ("Bitcoin surges to new high.")
 
     def test_normal_korean_sentence_unchanged(self):
         text = "비트코인이 사상 최고가를 경신했습니다."

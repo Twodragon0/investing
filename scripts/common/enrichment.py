@@ -1726,9 +1726,7 @@ def _analyze_english_title(title: str, title_lower: str) -> str:
         # (e.g. "$73K" — not a misleading "$73" — for a "$73,000" article).
         _word_unit = (price_match.group(2) or "").lower()
         _letter_unit = (price_match.group(3) or "").upper()
-        unit = {"trillion": "T", "billion": "B", "million": "M", "thousand": "K"}.get(
-            _word_unit, _letter_unit
-        )
+        unit = {"trillion": "T", "billion": "B", "million": "M", "thousand": "K"}.get(_word_unit, _letter_unit)
         detail_parts.append(f"${price_match.group(1)}{unit}")
     if points_match:
         detail_parts.append(f"{points_match.group(1)}포인트")

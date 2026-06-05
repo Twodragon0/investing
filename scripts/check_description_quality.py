@@ -77,11 +77,8 @@ def _count_body_artifacts(body: str) -> int:
     if not body:
         return 0
     # group(1) = news-desc <p>, group(2) = p0-desc <span>; exactly one is set.
-    return sum(
-        1
-        for m in _BODY_DESC_SEG_RE.finditer(body)
-        if _segment_has_artifact(m.group(1) or m.group(2) or "")
-    )
+    return sum(1 for m in _BODY_DESC_SEG_RE.finditer(body) if _segment_has_artifact(m.group(1) or m.group(2) or ""))
+
 
 # Front matter description field patterns (description_ko or description)
 _DESC_KO_RE = re.compile(r'^description_ko:\s*["\']?(.+?)["\']?\s*$', re.MULTILINE)
