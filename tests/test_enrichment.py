@@ -3416,3 +3416,39 @@ class TestEnrichItemOriginalUrlAndMaxFetchLog:
             # The debug message about max_fetch should have been emitted
             debug_calls = [str(c) for c in mock_debug.call_args_list]
             assert any("max_fetch" in c for c in debug_calls)
+
+
+class TestSplitSyntheticKoSuffix:
+    """_split_synthetic_ko_suffix — protect synthetic '...보도.' tag from translation mutation."""
+
+    def test_splits_kwanryeon_bodo_suffix(self):
+        body, suf = _enrichment_mod._split_synthetic_ko_suffix("Bitcoin crashes 10%. (10% 변동) 급락 관련 보도.")
+        assert body == "Bitcoin crashes 10%. (10% 변동)"
+        assert suf == " 급락 관련 보도."
+
+    def test_splits_entity_bodo_suffix(self):
+        body, suf = _enrichment_mod._split_synthetic_ko_suffix("Colombia accuses Ecuador. Colombia 관련 보도.")
+        assert body == "Colombia accuses Ecuador. Colombia"
+        assert suf == " 관련 보도."
+
+    def test_splits_sector_bodo_suffix(self):
+        body, suf = _enrichment_mod._split_synthetic_ko_suffix("Nvidia chip revenue beats. 반도체 섹터 보도.")
+        assert suf == " 반도체 섹터 보도."
+
+    def test_no_suffix_returns_original(self):
+        text = "S&P 500 falls 3%. (3% 변동)"
+        body, suf = _enrichment_mod._split_synthetic_ko_suffix(text)
+        assert body == text
+        assert suf == ""
+
+    def test_pure_korean_no_split(self):
+        text = "비트코인이 사상 최고가를 경신했습니다."
+        body, suf = _enrichment_mod._split_synthetic_ko_suffix(text)
+        assert body == text
+        assert suf == ""
+
+    def test_suffix_does_not_span_paren(self):
+        # The Korean '(... 변동)' detail must stay in the body, not be swallowed.
+        body, suf = _enrichment_mod._split_synthetic_ko_suffix("Crypto economy grows. ($78억) 디지털 자산 보도.")
+        assert body == "Crypto economy grows. ($78억)"
+        assert suf == " 디지털 자산 보도."
