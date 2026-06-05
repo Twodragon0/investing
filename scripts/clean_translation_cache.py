@@ -23,7 +23,17 @@ from common.translator import _CACHE_PATH, _postprocess_translation
 # Translate into 통보/알림/공지/안내/보상/경고 (see enrichment._split_synthetic_ko_suffix).
 # These are removed (not patched) so they are re-translated cleanly; the source
 # fix changes the translation key, so the bad entries are never re-created.
-_MUTATION_ARTIFACT_RE = re.compile(r"관련\s?(?:통보|알림|공지|안내|보상|경고)(?:입니다)?\s*[.。]?\s*$")
+#
+# Precision: the mutated suffix is always an APPENDED short fragment, so we
+# require a boundary (sentence period / dash / ellipsis / close-paren) followed
+# by a short (<=24 char) lead-in before "관련 {noun}". A standalone legitimate
+# description like "신규 상장 관련 공지" (the whole value, no preceding boundary)
+# is therefore preserved — worst case for any residual false positive is a
+# benign cache eviction → re-translation.
+_MUTATION_ARTIFACT_RE = re.compile(
+    r"[.。)\-–—…]\s*[가-힣A-Za-z0-9,()%·\s]{0,24}"
+    r"관련\s?(?:통보|알림|공지|안내|보상|경고)(?:입니다)?\s*[.。]?\s*$"
+)
 
 
 def main() -> None:
