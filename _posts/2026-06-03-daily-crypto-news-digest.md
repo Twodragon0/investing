@@ -114,7 +114,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-03 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMimAFBVV95cUxNNFhUWl9rbFNKNVFjTHFic2NDdW90UWlucHhDNmpZeGJlem9Lc1h5OG9SeFA5U0t6UEtfNEI1eU5UdmoxSS12SGxQUnIyc0Nua01PTkVaLWhuU2Q0UkRaQXAtTUo5QUpTaFhBNmxuN0FzNkg2eTVDSGZ2Wm1FQ0haSEFPQWVZRXV6UzdBZ1BMTjIwYTZhRHpaWQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Ark Invest의 Cathie Wood에 따르면 1,600% 상승하기 전에 구매해야 할 최고의 암호화폐 1위</a>
-<p class="news-desc">Ark Invest의 Cathie Wood에 따르면 1,600% 상승하기 전에 구매해야 할 상위 암호화폐입니다. (1,600% 개정) 광고 관련 알림.</p>
+<p class="news-desc">Ark Invest의 Cathie Wood에 따르면 1,600% 상승하기 전에 구매해야 할 상위 암호화폐입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

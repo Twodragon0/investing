@@ -143,7 +143,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-27 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMirwFBVV95cUxNcjQ2YWo0Wk9yaF8zUVMzWnItaE93SngzZXQwMDhTNHdtWEdmZG1tQlZrYkhWYzlSU0FXWm5GZnRUWTF2WFNudTJyTmhIaDRtLWEwbUxrMGx2ekpQek94aHE1dVdMZENTM09kVGkzeDJ6bkZCUnU4b3Z2VG9XRXlZcmtQM1pDdmxaOTFPYTFkNWNBRWJrY1pkYVQ1dExQWjJXeW11TlBsT1g1eTg1UVBB?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">트럼프 토요일 암호화폐 컨퍼런스에서 연설할 것이라고 백악관이 밝혔습니다</a>
-<p class="news-desc">트럼프 토요일 암호화폐 컨퍼런스에서 연설할 것이라고 백악관이 밝혔습니다. 해당 관련 통보.</p>
+<p class="news-desc">트럼프 토요일 암호화폐 컨퍼런스에서 연설할 것이라고 백악관이 밝혔습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
