@@ -171,6 +171,26 @@ _SYNTHETIC_MARKERS = [
 ]
 
 
+# Synthetic Korean category suffix appended by _analyze_*_title — it always
+# ends in "...보도." (관련 보도 / 섹터 보도 / 시장 보도 / 산업 보도 / 자산 보도).
+# When such a suffix rides on an English-dominant synthetic description, the
+# downstream translation pass would re-translate the whole string and Google
+# Translate mutates "보도" → 통보/알림/공지/안내/보상/경고. We split the suffix
+# off, translate only the English body, then reattach the suffix verbatim.
+_SYNTHETIC_KO_SUFFIX_RE = re.compile(r"\s+[가-힣][가-힣A-Za-z0-9·\s]*보도\.\s*$")
+
+
+def _split_synthetic_ko_suffix(desc: str) -> tuple:
+    """Split a synthetic description into ``(english_body, korean_suffix)``.
+
+    Returns ``(desc, "")`` when no trailing "...보도." category suffix exists.
+    """
+    m = _SYNTHETIC_KO_SUFFIX_RE.search(desc)
+    if m:
+        return desc[: m.start()], m.group(0)
+    return desc, ""
+
+
 def is_private_url(url: str) -> bool:
     """Check if URL points to an obvious private/internal target."""
     return is_private_url_target(url)
@@ -2060,7 +2080,15 @@ def enrich_items(
                 )
             )
         ):
-            ko_desc = translate_to_korean(desc)
+            # Protect a synthetic Korean category suffix ("...보도.") from being
+            # re-translated and mutated. Translate only the English body, then
+            # reattach the suffix verbatim.
+            if item.get("_synthetic"):
+                body, suffix = _split_synthetic_ko_suffix(desc)
+            else:
+                body, suffix = desc, ""
+            ko_body = translate_to_korean(body)
+            ko_desc = (ko_body.rstrip() + suffix) if suffix else ko_body
             if ko_desc != desc:
                 item["description_ko"] = ko_desc
 
