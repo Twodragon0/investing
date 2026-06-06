@@ -41,40 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-06 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 비트코인은 전략 판매 후 하락하여 암호화폐 거래자들을 불안하게 합니다. - 103건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 국채 관련 63건</li><li>📈 <strong>가격/시장</strong>: 스트래티지 동향 주시</li><li>🏦 <strong>거래소</strong>: 13건 수집</li><li>🟣 <strong>DeFi</strong>: 13건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.ft.com/content/06bb85c7-ab3c-4cc2-bdcf-679976b6e901?syn-25a6b1a6=1">비트코인은 전략 판매 후 하락하여 암호화폐 거래자들을 불안하게 합니다.</a> <span class="p0-desc">비트코인은 전략 판매 이후 암호화폐 거래자들을 불안하게 만들었습니다. 급락 관련 보도.</span></li><li><a href="https://news.google.com/read/CBMilwFBVV95cUxOY1RiV1lRczhNLTJxUmI0Sl8zcTZERWE2S0o0Nm9jdnVXX0x1TVlzS010bmtXWVdZLWhNVWEtdE1yenp1R0FNdHRlcHQxM3V0aGx3YmV6dUQ2Q0tLRWF5OUZIVE1HaG9sNUdpN2dkMTB4anhTZzQzQV9hX2xnTGl0RFltWGdrd3ZSVW1TUFJWbjdPVFU1WDhB?hl=en-US&gl=US&ceid=US%3Aen">비트코인 폭락은 기업 재무 보유자로부터 620억 달러를 손실했습니다. MicroStrategy 모델이 깨졌습니까?</a> <span class="p0-desc">2026년 6월 암호화폐 대패로 인해 비트코인을 재무 자산으로 보유하고 있는 공개 기업의 총 시가 총액 620억 달러가 손실되었습니다. MicroStrategy, 테슬라 및 Mar.</span></li><li><a href="https://www.newspim.com">코인 시황] 비트코인 일시 6만2000달러 붕괴…ETF 유출·강제청산에 암호화폐 시장 급락 - 뉴스핌</a> <span class="p0-desc">[코인 시황] 비트코인 일시 6만2000달러 붕괴…ETF 유출·강제청산에 암호화폐 시장 급락 뉴스핌</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 비트코인은 전략 판매 후 하락하여 암호화폐 거래자들을 불안하게 합니다. 
-외 P0 긴급 이슈 9건이 추가 감지되었습니다. 총 103건의 뉴스 중 P1 주요 이슈도 9건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (63건): 비트코인, 국채, 유동성 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **📈 가격/시장** (41건): 스트래티지, ETF, 주간 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🏦 거래소** (13건): BTC 관련 지표와 수급 흐름을 함께 확인하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 비트코인은 전략 판매 후 하락하여 암호화폐 거래자들을 불안하게 합니다.
-- 비트코인 폭락은 기업 재무 보유자로부터 620억 달러를 손실했습니다. MicroStrategy 모델이 깨졌습니까?
-- 코인 시황] 비트코인 일시 6만2000달러 붕괴…ETF 유출·강제청산에 암호화폐 시장 급락 - 뉴스핌
-
-### 주요 이슈
-
-- 암호화폐와의 싸움에서 대형 은행들의 장갑이 벗겨졌다
-- '나는 신경을 건드렸다': 암호화폐 제재 회피에 대한 작업으로 러시아에서 금지된 영국 청소년 - The Moscow Times
-- 비트코인, 6만1천 달러로 하락…ETF 자금 유출 지속에 주간 16% 손실 예고 - Investing.com 한국어
-- 외 6건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Cointelegraph(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 5건 포함
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-06-06.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-06-06.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **103건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
