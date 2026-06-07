@@ -41,40 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-07 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 비트코인은 전략 판매 후 하락하여 암호화폐 거래자들을 불안하게 합니다. - 99건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, BTC 주목</li><li>📈 <strong>가격/시장</strong>: 달러 이슈 부각</li><li>🏦 <strong>거래소</strong>: 14건 수집</li><li>🔴 <strong>보안/해킹</strong>: 폭락 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.ft.com/content/06bb85c7-ab3c-4cc2-bdcf-679976b6e901?syn-25a6b1a6=1">비트코인은 전략 판매 후 하락하여 암호화폐 거래자들을 불안하게 합니다.</a> <span class="p0-desc">비트코인은 전략 판매 이후 암호화폐 거래자들을 불안하게 만들었습니다. 급락 관련 보도.</span></li><li><a href="https://v.daum.net">비트코인 한때 6만 달러 붕괴…"AI가 가상화폐 밀어내 VS 저점 매수 기회"</a> <span class="p0-desc">비트코인 한때 6만 달러 붕괴…"AI가 가상화폐 밀어내 VS 저점 매수 기회" v.daum.net 비트코인 6만달러선 붕괴…AI 열풍에 밀리고 고금리에 흔들 이데일리 비트코인, 6.</span></li><li><a href="https://marketin.edaily.co.kr">암호화폐株, 비트코인 6만달러선 붕괴·스트레티지 지분 매각…주가 급락 - 마켓인</a> <span class="p0-desc">암호화폐株, 비트코인 6만달러선 붕괴·스트레티지 지분 매각…주가 급락 마켓인</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 비트코인은 전략 판매 후 하락하여 암호화폐 거래자들을 불안하게 합니다. 
-외 P0 긴급 이슈 13건이 추가 감지되었습니다. 총 99건의 뉴스 중 P1 주요 이슈도 9건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (54건): 비트코인, BTC, 붕괴 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (41건): 달러, 암호화폐, BTC 가격 변동 (41건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏦 거래소** (14건): IPO 동향이 포트폴리오 전략에 영향을 줄 수 있어 주시가 필요합니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 비트코인은 전략 판매 후 하락하여 암호화폐 거래자들을 불안하게 합니다.
-- 비트코인 한때 6만 달러 붕괴…"AI가 가상화폐 밀어내 VS 저점 매수 기회"
-- 암호화폐株, 비트코인 6만달러선 붕괴·스트레티지 지분 매각…주가 급락 - 마켓인
-
-### 주요 이슈
-
-- 암호화폐와의 싸움에서 대형 은행들의 장갑이 벗겨졌다
-- BTC: 비트코인이 지금 바닥을 칠 수 있는 이유, 주목할만한 수준(암호화폐:BTC-USD)
-- 네바다주 법무장관, 암호화폐 키오스크 사기 경고
-- 외 6건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Decrypt(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 5건 포함
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-06-07.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-06-07.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **99건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
