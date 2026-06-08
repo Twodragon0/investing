@@ -41,40 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-08 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 비트코인은 전략 판매 후 하락하여 암호화폐 거래자들을 불안하게 합니다. - 75건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, BTC 동향 주시</li><li>📈 <strong>가격/시장</strong>: 암호화폐 관련 29건</li><li>🏦 <strong>거래소</strong>: IPO 주목</li><li>🔷 <strong>이더리움</strong>: 이더리움, 암호화폐 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.ft.com/content/06bb85c7-ab3c-4cc2-bdcf-679976b6e901?syn-25a6b1a6=1">비트코인은 전략 판매 후 하락하여 암호화폐 거래자들을 불안하게 합니다.</a> <span class="p0-desc">비트코인은 전략 판매 이후 암호화폐 거래자들을 불안하게 만들었습니다. 급락 관련 보도.</span></li><li><a href="https://kr.investing.com">비트코인, 급락 후 안정세 회복하며 $62,000 위로 반등 - Investing.com 한국어</a> <span class="p0-desc">비트코인, 급락 후 안정세 회복하며 $62,000 위로 반등 Investing.com 한국어 비트코인 흔들리자 ‘충청주 주목’ 금강일보 비트코인 한때 6만 달러 붕괴…"AI가 가상.</span></li><li><a href="https://marketin.edaily.co.kr">암호화폐株, 비트코인 6만달러선 붕괴·스트레티지 지분 매각…주가 급락 - 마켓인</a> <span class="p0-desc">암호화폐株, 비트코인 6만달러선 붕괴·스트레티지 지분 매각…주가 급락 마켓인</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 비트코인은 전략 판매 후 하락하여 암호화폐 거래자들을 불안하게 합니다. 
-외 P0 긴급 이슈 6건이 추가 감지되었습니다. 총 75건의 뉴스 중 P1 주요 이슈도 7건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (41건): 비트코인, BTC 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **📈 가격/시장** (29건): 암호화폐 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🏦 거래소** (11건): IPO, 선물 관련 불확실성이 커지고 있어 리스크 관리에 유의하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 비트코인은 전략 판매 후 하락하여 암호화폐 거래자들을 불안하게 합니다.
-- 비트코인, 급락 후 안정세 회복하며 $62,000 위로 반등 - Investing.com 한국어
-- 암호화폐株, 비트코인 6만달러선 붕괴·스트레티지 지분 매각…주가 급락 - 마켓인
-
-### 주요 이슈
-
-- 6월 10일 CPI 및 6월 17일 FOMC, 비트코인의 다음 대규모 이동은 향후 7일 내에 결정됩니다.
-- 비트코인의 금요일 가격이 60K 아래로 급락하여 4%의 암호화폐 하락이 WGMI 보유자의 11% 하락으로 바뀌었습니다.
-- 암호화폐 거래소 Bybit, SpaceX 토큰화된 IPO 액세스 공개
-- 외 4건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), CoinDesk(15건), Decrypt(12건)
-- 시장 영향 가능성이 있는 거래소 공지 5건 포함
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-06-08.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-06-08.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **75건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
