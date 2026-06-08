@@ -886,6 +886,62 @@ class TestCryptoNewsCollectorIntegration:
         security_post_gen.create_post.assert_not_called()
         dedup.save.assert_called_once()
 
+    def test_run_creates_security_post_from_defillama_only(self):
+        """RSS(CoinTelegraph)/Google 보안 소스가 모두 비어도 DeFiLlama 단독으로
+        보안 리포트가 생성되어야 한다 — 단일 피드 의존성 축소(#1011)의 핵심 보장.
+
+        _build_security_content를 모킹하지 않아 실제 빌더가 동작하며,
+        bridgeHack/targetType 분류 섹션(#1015)까지 e2e로 검증한다.
+        """
+        collector, dedup, post_gen, security_post_gen = self._make_collector()
+        market_items = self._sample_crypto_items(2, "CryptoPanic")
+        defillama_items = [
+            {
+                "title": "[Security] BridgeProto exploit: Signature Verification",
+                "link": "https://defillama.com/hacks#BridgeProto",
+                "source": "DeFiLlama",
+                "description": "Funds Lost: $50,000,000 | Technique: Signature Verification | Chain: Ethereum",
+                "category_override": "security-alerts",
+                "bridge_hack": True,
+                "target_type": "Bridge",
+            },
+            {
+                "title": "[Security] TokenProto exploit: Reentrancy",
+                "link": "https://defillama.com/hacks#TokenProto",
+                "source": "DeFiLlama",
+                "description": "Funds Lost: $1,000,000 | Technique: Reentrancy | Chain: BSC",
+                "category_override": "security-alerts",
+                "bridge_hack": False,
+                "target_type": "Token",
+            },
+        ]
+
+        with (
+            patch("collect_crypto_news.get_env", return_value="cryptopanic-key"),
+            patch("collect_crypto_news.fetch_cryptopanic", return_value=market_items),
+            patch("collect_crypto_news._fetch_browser_sources", return_value=([], [])),
+            patch("collect_crypto_news.fetch_google_news_crypto", return_value=([], 0)),
+            patch("collect_crypto_news.fetch_crypto_rss_feeds", return_value=[]),
+            patch("collect_crypto_news._fetch_binance_bapi", return_value=[]),
+            patch("collect_crypto_news.fetch_rekt_news", return_value=[]),
+            patch("collect_crypto_news.fetch_defillama_hacks", return_value=defillama_items),
+            patch("collect_crypto_news.fetch_google_news_security", return_value=[]),
+            patch("collect_crypto_news.enrich_items"),
+            patch("collect_crypto_news.deduplicate_by_url", side_effect=lambda items: items),
+            patch.object(collector, "_build_crypto_content", return_value=("crypto content", "crypto.png")),
+        ):
+            collector.run()
+
+        # 핵심 보장: DeFiLlama 단독 사건만으로 보안 리포트가 생성된다 (스킵 안 됨).
+        security_post_gen.create_post.assert_called_once()
+        kwargs = security_post_gen.create_post.call_args.kwargs
+        assert kwargs["slug"] == "daily-security-report"
+        # 실제 빌더 산출물에 DeFiLlama 사건 + 분류 섹션(#1015)이 반영되어야 한다.
+        content = kwargs["content"]
+        assert "BridgeProto" in content
+        assert "브리지 공격 1건" in content
+        assert "공격 대상 유형" in content
+
 
 class TestCollectorContentAndImages:
     """Exercise real content assembly and generated-image embedding paths."""
