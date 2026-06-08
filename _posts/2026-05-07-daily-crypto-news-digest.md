@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-news-digest-2026-05-07.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-05-07.png"
 permalink: "/crypto-news/2026/05/07/daily-crypto-news-digest/"
 description: "크립토 뉴스 124건 수집. 주요 출처: Binance, Google News KR, CoinDesk. 오늘의 헤드라인: 비트코인 8만달러 재돌파에…3억달러 넘는 숏포지션 청산 발생"
 excerpt: "크립토 뉴스 124건 수집. 주요 출처: Binance, Google News KR, CoinDesk. 오늘의 헤드라인: 비트코인 8만달러 재돌파에…3억달러 넘는 숏포지션 청산…"

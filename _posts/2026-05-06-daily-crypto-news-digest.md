@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-news-digest-2026-05-06.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-05-06.png"
 permalink: "/crypto-news/2026/05/06/daily-crypto-news-digest/"
 description: "크립토 뉴스 122건 수집. 주요 출처: Binance, Decrypt, CoinDesk. CryptoPanic·CoinGecko·거래소 RSS 기반 암호화폐 시장 동향을 정리합니다."
 excerpt: "크립토 뉴스 122건 수집. 주요 출처: Binance, Decrypt, CoinDesk. CryptoPanic·CoinGecko·거래소 RSS 기반 암호화폐 시장 동향을…"

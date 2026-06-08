@@ -7,7 +7,7 @@ tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-security-report-2026-05-03.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-05-03.png"
 permalink: "/security-alerts/2026/05/03/daily-security-report/"
 description: "2억 9200만 달러 규모의 암호화폐 해킹으로 디파이의 약점이 드러났습니다. 내부자들은 다음과 같이…. 블록체인 보안 뉴스 9건 분석 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "2억 9200만 달러 규모의 암호화폐 해킹으로 디파이의 약점이 드러났습니다. 내부자들은 다음과 같이…. 블록체인 보안 뉴스 9건 분석 - Investing Dragon 자동…"

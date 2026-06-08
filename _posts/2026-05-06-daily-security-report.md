@@ -7,7 +7,7 @@ tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-security-report-2026-05-06.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-05-06.png"
 permalink: "/security-alerts/2026/05/06/daily-security-report/"
 description: "KelpDAO 해킹으로 드러난 Web3 보안의 취약점은 무엇인가요? - Cryptopolitan. 블록체인 보안 뉴스 4건 분석 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "KelpDAO 해킹으로 드러난 Web3 보안의 취약점은 무엇인가요? - Cryptopolitan. 블록체인 보안 뉴스 4건 분석 - Investing Dragon 자동 수집…"

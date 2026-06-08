@@ -7,7 +7,7 @@ tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-security-report-2026-05-05.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-05-05.png"
 permalink: "/security-alerts/2026/05/05/daily-security-report/"
 description: "KelpDAO 익스플로잇은 2026년 12억 달러 규모의 암호화폐 해킹 우려 가운데 디파이 취약점을…. 블록체인 보안 뉴스 3건 분석 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "KelpDAO 익스플로잇은 2026년 12억 달러 규모의 암호화폐 해킹 우려 가운데 디파이 취약점을…. 블록체인 보안 뉴스 3건 분석 - Investing Dragon 자동…"

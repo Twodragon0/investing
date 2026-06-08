@@ -7,7 +7,7 @@ tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-security-report-2026-05-02.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-05-02.png"
 permalink: "/security-alerts/2026/05/02/daily-security-report/"
 description: "명백한 관리자 키 손상으로 인해 Wasabi Protocol에서 450만 달러 손실 - CoinDesk. 블록체인 보안 뉴스 9건 분석 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "명백한 관리자 키 손상으로 인해 Wasabi Protocol에서 450만 달러 손실 - CoinDesk. 블록체인 보안 뉴스 9건 분석 - Investing Dragon 자동…"
