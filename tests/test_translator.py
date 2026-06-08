@@ -334,6 +334,44 @@ class TestTermOverridesData:
             assert k != "", "Empty key found in TERM_OVERRIDES"
 
 
+class TestDeFiProjectTermOverrides:
+    """DeFi 프로젝트 고유명사 보호 + 흔한 단어 오탐 방지 회귀 가드."""
+
+    def test_defi_proper_nouns_protected(self):
+        # 신규 고유명사는 placeholder로 보호되어 MT 변형을 받지 않아야 한다.
+        for term in ["Lido", "Arbitrum", "PancakeSwap", "Wormhole", "Hyperliquid"]:
+            modified, replacements = _apply_term_overrides(f"{term} suffered an exploit")
+            assert term not in modified, f"{term} should be protected"
+            assert len(replacements) >= 1
+
+    def test_multiword_form_protected(self):
+        # 다단어 형태는 통째로 보호된다.
+        modified, replacements = _apply_term_overrides("Cetus Protocol was hacked")
+        assert "Cetus Protocol" not in modified
+        assert any(kr == "Cetus Protocol" for _, kr in replacements)
+
+    def test_ambiguous_common_words_not_matched(self):
+        # 흔한 영어 단어와 충돌하는 프로젝트명은 추가하지 않았으므로,
+        # 이 문장들은 어떤 용어도 치환하지 않아야 한다 (#1006-1009 품질 회귀 방지).
+        for text in [
+            "market optimism remains high",
+            "the yield curve steepened",
+            "a load balancer failure",
+            "compound interest grows over time",
+            "investors yearn for higher returns",
+        ]:
+            _, replacements = _apply_term_overrides(text)
+            assert replacements == [], f"unexpected term match in: {text!r} → {replacements}"
+
+    def test_bare_curve_not_matched_but_curve_finance_is(self):
+        # bare "Curve"는 미보호(흔한 단어), "Curve Finance"만 보호.
+        _, bare = _apply_term_overrides("the curve flattened")
+        assert bare == []
+        modified, full = _apply_term_overrides("Curve Finance exploit drained funds")
+        assert "Curve Finance" not in modified
+        assert any(kr == "Curve Finance" for _, kr in full)
+
+
 class TestGetDisplayTitle:
     """Tests for get_display_title()."""
 

@@ -202,6 +202,55 @@ TERM_OVERRIDES: Dict[str, str] = {
     "Benzinga": "Benzinga",
     "Investopedia": "Investopedia",
     "CoinMetrics": "CoinMetrics",
+    # DeFi protocols, L1/L2 chains & bridges — proper nouns prone to MT mangling
+    # (e.g. "Cetus Protocol", "Wormhole"). Matching is word-boundary + case-
+    # insensitive, so names that collide with common English words are
+    # DELIBERATELY EXCLUDED or qualified with a multi-word form to avoid false
+    # positives like "market optimism" → "market 옵티미즘" or "yield curve" →
+    # "yield 커브". Excluded bare: Optimism, Curve, Maker, Balancer, Yearn, Base,
+    # Near, Compound, Convex, Harmony, Cosmos, Sui, TON, Blast, Jupiter.
+    "Lido": "리도",
+    "Arbitrum": "아비트럼",
+    "Aptos": "앱토스",
+    "Synthetix": "신세틱스",
+    "Celestia": "셀레스티아",
+    "Starknet": "스타크넷",
+    "Fantom": "팬텀",
+    "Tron": "트론",
+    "PancakeSwap": "팬케이크스왑",
+    "SushiSwap": "스시스왑",
+    "MakerDAO": "MakerDAO",
+    "zkSync": "zkSync",
+    "EigenLayer": "EigenLayer",
+    "Pendle": "Pendle",
+    "Ethena": "Ethena",
+    "GMX": "GMX",
+    "dYdX": "dYdX",
+    "Frax": "Frax",
+    "1inch": "1inch",
+    "Raydium": "Raydium",
+    "Jito": "Jito",
+    "Hyperliquid": "Hyperliquid",
+    "Berachain": "Berachain",
+    # Multi-word forms (avoid bare-word collisions)
+    "Curve Finance": "Curve Finance",
+    "Compound Finance": "Compound Finance",
+    "Euler Finance": "Euler Finance",
+    "Ondo Finance": "Ondo Finance",
+    "NEAR Protocol": "NEAR Protocol",
+    "Cetus Protocol": "Cetus Protocol",
+    "Mango Markets": "Mango Markets",
+    "Celsius Network": "Celsius Network",
+    "Terra Luna": "Terra Luna",
+    # Bridges / notable hack targets
+    "Wormhole": "Wormhole",
+    "Ronin Bridge": "Ronin Bridge",
+    "Ronin Network": "Ronin Network",
+    "Nomad Bridge": "Nomad Bridge",
+    "Poly Network": "Poly Network",
+    "Beanstalk": "Beanstalk",
+    "Mt. Gox": "마운트곡스",
+    "FTX": "FTX",
 }
 
 # Build case-insensitive lookup (key_lower -> (original_key, korean))
