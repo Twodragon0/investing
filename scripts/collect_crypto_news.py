@@ -15,6 +15,7 @@ import time
 from collections import Counter
 from datetime import UTC, datetime
 from typing import Any, Dict, List, Optional
+from urllib.parse import quote
 
 import requests
 
@@ -534,7 +535,10 @@ def fetch_defillama_hacks(limit: int = 8, days: int = 30) -> List[Dict[str, Any]
             desc_parts.append(f"Technique: {technique}")
         desc_parts.append(f"Chain: {chain_str}")
 
-        link = str(hack.get("source") or "").strip() or "https://defillama.com/hacks"
+        # Prefer the incident's own source link; when absent, use a per-incident
+        # anchor on the DeFiLlama hacks page so distinct incidents keep distinct
+        # links (avoids collapsing every empty-source hack to one generic URL).
+        link = str(hack.get("source") or "").strip() or f"https://defillama.com/hacks#{quote(name)}"
 
         items.append(
             {
@@ -1570,7 +1574,7 @@ class CryptoNewsCollector(BaseCollector):
                         pass
                 if "Technique:" in desc:
                     try:
-                        technique = desc.split("Technique:")[1].strip()
+                        technique = desc.split("Technique:")[1].split("|")[0].strip()
                     except IndexError:
                         pass
 
