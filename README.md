@@ -52,7 +52,7 @@
 | scripts/common/image\_rejection\_metrics.py       |       80 |       29 |     64% |74-103, 142, 146, 157, 160-162 |
 | scripts/common/markdown\_utils.py                 |      226 |        2 |     99% |  377, 393 |
 | scripts/common/mindspider.py                      |      377 |        6 |     98% |603, 673-674, 687-688, 990 |
-| scripts/common/post\_generator.py                 |      333 |        8 |     98% |456-460, 828, 863-864 |
+| scripts/common/post\_generator.py                 |      333 |        7 |     98% |456-460, 863-864 |
 | scripts/common/post\_html.py                      |       28 |        0 |    100% |           |
 | scripts/common/risk\_classifier.py                |      184 |        9 |     95% |331-332, 354, 392, 431-435 |
 | scripts/common/rss\_fetcher.py                    |      249 |       12 |     95% |44-45, 80, 91, 178, 187, 272, 281, 292, 302, 330-331 |
@@ -106,7 +106,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **22612** | **7695** | **66%** |           |
+| **TOTAL**                                         | **22612** | **7694** | **66%** |           |
 
 
 ## Setup coverage badge
