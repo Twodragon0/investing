@@ -15,6 +15,7 @@ import time
 from collections import Counter
 from datetime import UTC, datetime
 from typing import Any, Dict, List, Optional
+from urllib.parse import quote
 
 import requests
 
@@ -44,7 +45,12 @@ from common.post_generator import PostGenerator, build_dated_permalink
 from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
 from common.translator import get_display_title
-from common.utils import remove_sponsored_text, sanitize_string, truncate_text
+from common.utils import (
+    remove_sponsored_text,
+    request_with_retry,
+    sanitize_string,
+    truncate_text,
+)
 
 try:
     from common.browser import BrowserSession, is_playwright_available
@@ -475,6 +481,79 @@ def fetch_rekt_news(limit: int = 10) -> List[Dict[str, Any]]:
     return items
 
 
+def fetch_defillama_hacks(limit: int = 8, days: int = 30) -> List[Dict[str, Any]]:
+    """Fetch recent DeFi exploit incidents from the DeFiLlama hacks API.
+
+    Provides a second, structured incident source alongside the CoinTelegraph
+    RSS feed so the daily security report no longer depends on a single feed.
+    Items are shaped like Rekt incidents (``[Security]`` title prefix +
+    ``Funds Lost:`` metadata) so they flow through the existing security report
+    builders (funds summing, description, content) unchanged.
+    """
+    items: List[Dict[str, Any]] = []
+    url = get_url("crypto_news", "defillama_hacks", "https://api.llama.fi/hacks")
+
+    try:
+        resp = request_with_retry(url, timeout=REQUEST_TIMEOUT, verify_ssl=get_verify_ssl())
+        data = resp.json()
+    except Exception as e:
+        logger.warning("DeFiLlama hacks API failed: %s", e)
+        return items
+
+    if not isinstance(data, list):
+        logger.warning("DeFiLlama hacks API: unexpected payload type %s", type(data).__name__)
+        return items
+
+    cutoff = time.time() - days * 86400
+    recent = [
+        h for h in data if isinstance(h, dict) and isinstance(h.get("date"), (int, float)) and h["date"] >= cutoff
+    ]
+    recent.sort(key=lambda h: h.get("date", 0), reverse=True)
+
+    for hack in recent[:limit]:
+        name = sanitize_string(str(hack.get("name") or "")).strip()
+        if not name:
+            continue
+        technique = sanitize_string(str(hack.get("technique") or "")).strip()
+        classification = sanitize_string(str(hack.get("classification") or "")).strip()
+        amount = hack.get("amount")
+        chains = hack.get("chain") or []
+        if isinstance(chains, str):
+            chains = [chains]
+        chain_str = ", ".join(str(c) for c in chains if c) or "N/A"
+
+        title = f"[Security] {name} exploit"
+        if technique:
+            title += f": {technique}"
+
+        desc_parts: List[str] = []
+        if isinstance(amount, (int, float)) and amount > 0:
+            desc_parts.append(f"Funds Lost: ${amount:,.0f}")
+        if classification:
+            desc_parts.append(f"Classification: {classification}")
+        if technique:
+            desc_parts.append(f"Technique: {technique}")
+        desc_parts.append(f"Chain: {chain_str}")
+
+        # Prefer the incident's own source link; when absent, use a per-incident
+        # anchor on the DeFiLlama hacks page so distinct incidents keep distinct
+        # links (avoids collapsing every empty-source hack to one generic URL).
+        link = str(hack.get("source") or "").strip() or f"https://defillama.com/hacks#{quote(name)}"
+
+        items.append(
+            {
+                "title": title,
+                "link": link,
+                "description": " | ".join(desc_parts),
+                "source": "DeFiLlama",
+                "category_override": "security-alerts",
+            }
+        )
+
+    logger.info("DeFiLlama hacks API: fetched %d recent incidents (last %dd)", len(items), days)
+    return items
+
+
 def _score_security_severity(title: str, description: str = "") -> str:
     """Score security incident severity based on keywords."""
     text = (title + " " + description).lower()
@@ -789,6 +868,16 @@ class CryptoNewsCollector(BaseCollector):
     def fetch_security(self) -> tuple:
         """보안 관련 뉴스를 별도로 수집합니다."""
         rekt_items = fetch_rekt_news()
+        # Merge DeFiLlama hacks as a second incident source to reduce single-feed
+        # dependency. Shaped like Rekt incidents (Funds Lost: metadata), so the
+        # combined stream flows through the existing security builders unchanged.
+        defillama_hacks = fetch_defillama_hacks()
+        if defillama_hacks:
+            rekt_items.extend(defillama_hacks)
+            self.logger.info(
+                "Security incident sources merged: cointelegraph+defillama -> %d total",
+                len(rekt_items),
+            )
         google_security_items = fetch_google_news_security()
         enrich_items(rekt_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=False)
         enrich_items(google_security_items, _CRYPTO_SOURCE_CONTEXT, fetch_url=True, max_fetch=15)
@@ -1428,13 +1517,15 @@ class CryptoNewsCollector(BaseCollector):
                 f"블록체인 보안 뉴스 {len(all_security_items)}건 분석. 오늘의 헤드라인: **{_top_news}**.\n"
             ]
         else:
-            content_parts = [f"블록체인 보안 뉴스 {len(all_security_items)}건 수집 (Rekt {len(rekt_items)}건 포함).\n"]
+            content_parts = [
+                f"블록체인 보안 뉴스 {len(all_security_items)}건 수집 (보안 사건 {len(rekt_items)}건 포함).\n"
+            ]
         security_links: List[Dict[str, Any]] = []
 
         security_summarizer = ThemeSummarizer(all_security_items)
         summary_points = []
         if rekt_items or google_security_items:
-            summary_points.append(f"Rekt News {len(rekt_items)}건, 보안 뉴스 {len(google_security_items)}건")
+            summary_points.append(f"보안 사건 {len(rekt_items)}건, 보안 뉴스 {len(google_security_items)}건")
         overall_summary = security_summarizer.generate_overall_summary_section(
             extra_data={"summary_points": summary_points}
         )
@@ -1457,7 +1548,7 @@ class CryptoNewsCollector(BaseCollector):
         content_parts.append("## 핵심 요약\n")
         content_parts.append(f"- **보안 사고/뉴스**: 총 {len(all_security_items)}건")
         if rekt_items:
-            content_parts.append(f"- **Rekt News 사고**: {len(rekt_items)}건")
+            content_parts.append(f"- **보안 사건**: {len(rekt_items)}건")
             if total_funds > 0:
                 content_parts.append(f"- **총 피해 규모 (추정)**: ${total_funds:,.0f}")
         if google_security_items:
@@ -1483,7 +1574,7 @@ class CryptoNewsCollector(BaseCollector):
                         pass
                 if "Technique:" in desc:
                     try:
-                        technique = desc.split("Technique:")[1].strip()
+                        technique = desc.split("Technique:")[1].split("|")[0].strip()
                     except IndexError:
                         pass
 

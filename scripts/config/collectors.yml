@@ -94,6 +94,9 @@ crypto_news:
     # 0 incident items since ~2026-04). Swapped to CoinTelegraph's hacks tag
     # feed — incident-focused, refreshed daily. Key kept for backward compat.
     rss_rekt_news: "https://cointelegraph.com/rss/tag/hacks"
+    # DeFiLlama hacks API — 정형 익스플로잇 사건(피해액/기법/체인) 데이터.
+    # 단일 RSS 피드 의존성을 줄이기 위한 2차 보안 사건 소스.
+    defillama_hacks: "https://api.llama.fi/hacks"
     # Google News RSS (영어/한국어)
     google_news_crypto_en: "https://news.google.com/rss/search?q=cryptocurrency&hl=en-US&gl=US&ceid=US:en"
     google_news_crypto_kr: "https://news.google.com/rss/search?q=암호화폐+비트코인&hl=ko&gl=KR&ceid=KR:ko"
