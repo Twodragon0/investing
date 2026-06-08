@@ -522,6 +522,9 @@ def fetch_defillama_hacks(limit: int = 8, days: int = 30) -> List[Dict[str, Any]
             chains = [chains]
         chain_str = ", ".join(str(c) for c in chains if c) or "N/A"
 
+        bridge_hack = bool(hack.get("bridgeHack"))
+        target_type = sanitize_string(str(hack.get("targetType") or "")).strip()
+
         title = f"[Security] {name} exploit"
         if technique:
             title += f": {technique}"
@@ -547,6 +550,8 @@ def fetch_defillama_hacks(limit: int = 8, days: int = 30) -> List[Dict[str, Any]
                 "description": " | ".join(desc_parts),
                 "source": "DeFiLlama",
                 "category_override": "security-alerts",
+                "bridge_hack": bridge_hack,
+                "target_type": target_type,
             }
         )
 
@@ -1654,6 +1659,21 @@ class CryptoNewsCollector(BaseCollector):
                 sec_insight_lines.append(f"주요 공격 유형: {tech_str}.")
             if total_funds > 0:
                 sec_insight_lines.append(f"총 피해 규모는 **${total_funds:,.0f}**으로 추정됩니다.")
+
+            # DeFiLlama 정형 분류 (bridgeHack / targetType) — 해당 메타데이터가
+            # 있는 사건(DeFiLlama 출처)만 집계. RSS/뉴스 항목에는 키가 없어 자연 제외.
+            classified = [it for it in rekt_items if "bridge_hack" in it]
+            if classified:
+                bridge_n = sum(1 for it in classified if it.get("bridge_hack"))
+                if bridge_n:
+                    sec_insight_lines.append(
+                        f"이 중 **브리지 공격 {bridge_n}건**이 포함되어, "
+                        "크로스체인 브리지의 자금 집중 리스크에 주의가 필요합니다."
+                    )
+                target_counter: Counter = Counter(it.get("target_type") for it in classified if it.get("target_type"))
+                if target_counter:
+                    target_str = ", ".join(f"{t}({c}건)" for t, c in target_counter.most_common(3))
+                    sec_insight_lines.append(f"공격 대상 유형: {target_str}.")
 
         if google_security_items:
             sec_insight_lines.append(f"\n블록체인 보안 관련 뉴스 {len(google_security_items)}건이 수집되었습니다.")

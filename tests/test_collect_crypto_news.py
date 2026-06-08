@@ -333,3 +333,88 @@ def test_fetch_defillama_hacks_handles_non_list_payload():
     mod = importlib.import_module("collect_crypto_news")
     with patch.object(mod, "request_with_retry", return_value=_defillama_response({"error": "nope"})):
         assert mod.fetch_defillama_hacks() == []
+
+
+def test_fetch_defillama_hacks_captures_bridge_and_target_fields():
+    """bridgeHack/targetType를 구조화 필드로 보존합니다."""
+    import time
+
+    mod = importlib.import_module("collect_crypto_news")
+    now = time.time()
+    payload = [
+        {
+            "name": "BridgeX",
+            "technique": "Signature Verification",
+            "amount": 50_000_000,
+            "chain": ["Ethereum"],
+            "source": "https://x/1",
+            "date": now,
+            "bridgeHack": True,
+            "targetType": "Bridge",
+        },
+        {
+            "name": "TokenY",
+            "technique": "Reentrancy",
+            "amount": 1_000_000,
+            "chain": ["BSC"],
+            "source": "",
+            "date": now,
+            "bridgeHack": False,
+            "targetType": "Token",
+        },
+    ]
+    with patch.object(mod, "request_with_retry", return_value=_defillama_response(payload)):
+        items = mod.fetch_defillama_hacks(limit=8, days=30)
+
+    assert items[0]["bridge_hack"] is True
+    assert items[0]["target_type"] == "Bridge"
+    assert items[1]["bridge_hack"] is False
+    assert items[1]["target_type"] == "Token"
+
+
+def test_security_content_emits_attack_classification_section():
+    """bridgeHack/targetType이 있는 사건은 보안 인사이트에 분류 섹션을 렌더합니다."""
+    mod = importlib.import_module("collect_crypto_news")
+    incidents = [
+        {
+            "title": "[Security] BridgeX exploit: Signature Verification",
+            "link": "https://x/1",
+            "description": "Funds Lost: $50,000,000 | Technique: Signature Verification | Chain: Ethereum",
+            "source": "DeFiLlama",
+            "category_override": "security-alerts",
+            "bridge_hack": True,
+            "target_type": "Bridge",
+        },
+        {
+            "title": "[Security] ProtoZ exploit: Oracle Manipulation",
+            "link": "https://defillama.com/hacks#ProtoZ",
+            "description": "Funds Lost: $2,000,000 | Technique: Oracle Manipulation | Chain: Solana",
+            "source": "DeFiLlama",
+            "category_override": "security-alerts",
+            "bridge_hack": True,
+            "target_type": "Protocol",
+        },
+    ]
+    collector = mod.CryptoNewsCollector()
+    content = collector._build_security_content(incidents, incidents, [])
+    assert "브리지 공격 2건" in content
+    assert "공격 대상 유형" in content
+    assert "Bridge(1건)" in content
+    assert "Protocol(1건)" in content
+
+
+def test_security_content_no_classification_for_news_only_items():
+    """bridge_hack 키가 없는 RSS/뉴스 항목만 있으면 분류 섹션을 렌더하지 않습니다."""
+    mod = importlib.import_module("collect_crypto_news")
+    incidents = [
+        {
+            "title": "[Security] Some hack reported by media",
+            "link": "https://news/1",
+            "description": "Funds Lost: $1,000,000",
+            "source": "CoinTelegraph Hacks",
+        }
+    ]
+    collector = mod.CryptoNewsCollector()
+    content = collector._build_security_content(incidents, incidents, [])
+    assert "브리지 공격" not in content
+    assert "공격 대상 유형" not in content
