@@ -6,14 +6,15 @@
         "ext:gif": 1416,
         "default-image": 661,
         "ext:ico": 107,
-        "placeholder": 307,
+        "placeholder": 314,
         "ext:svg": 62,
-        "blank.": 57,
+        "blank.": 59,
         "beacon": 10,
-        "wp-content/plugins": 2
+        "wp-content/plugins": 2,
+        "gravatar.com/avatar": 1
       }
     }
   },
   "since": "2026-04-23T08:54:23",
-  "last_seen": "2026-06-10T17:20:21"
+  "last_seen": "2026-06-10T17:37:11"
 }
