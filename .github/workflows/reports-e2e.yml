@@ -10,6 +10,13 @@ on:
       - 'reports-*-feed.xml'
       - 'tests/test_reports_page.py'
       - 'pages/reports.md'
+      # Generated-image guard: rendered-site test must run when any image-rendering surface changes
+      - '_layouts/default.html'
+      - '_layouts/post.html'
+      - '_includes/post-card.html'
+      - '_includes/generated-picture.html'
+      - '_layouts/category.html'
+      - 'tests/test_generated_image_guard.py'
   pull_request:
     branches: [main]
     paths:
@@ -19,6 +26,13 @@ on:
       - 'reports-*-feed.xml'
       - 'tests/test_reports_page.py'
       - 'pages/reports.md'
+      # Generated-image guard: rendered-site test must run when any image-rendering surface changes
+      - '_layouts/default.html'
+      - '_layouts/post.html'
+      - '_includes/post-card.html'
+      - '_includes/generated-picture.html'
+      - '_layouts/category.html'
+      - 'tests/test_generated_image_guard.py'
   workflow_dispatch:
 
 permissions:
@@ -66,8 +80,9 @@ jobs:
           done
 
       - name: Run E2E tests
-        # --no-cov: reports-e2e only runs test_reports_page.py which doesn't
-        # touch scripts/ modules, so the pyproject.toml global --cov-fail-under=45
-        # gate would always fail. Coverage is enforced in the `quality` workflow
-        # which runs the full tests/ suite.
-        run: python -m pytest tests/test_reports_page.py -v --no-cov
+        # --no-cov: these rendered-site tests don't touch scripts/ modules, so the
+        # pyproject.toml global --cov-fail-under gate would always fail. Coverage is
+        # enforced in the `quality` workflow which runs the full tests/ suite.
+        # test_generated_image_guard.py scans the built _site for broken generated
+        # <img>/<source>/og:image (regression guard for the 30-day image-pruning fix).
+        run: python -m pytest tests/test_reports_page.py tests/test_generated_image_guard.py -v --no-cov
