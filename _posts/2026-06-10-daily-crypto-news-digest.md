@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-10 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 비트코인의 FTX 이후 최악의 주 폭락은 앞으로 더 많은 고통을 예고합니다. - 107건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 주목</li><li>📈 <strong>가격/시장</strong>: 34건 수집</li><li>🔵 <strong>규제/정책</strong>: 30건 수집</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 관련 17건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMimAFBVV95cUxQRFBJZEpNQUxVYTJneUc0ZFV2eEtqNTlMT0dYd0hoMDFJUGpUT3RQMDd0dHFuNUh3VHBCRm1neHd1WHRrWDhZZUF1Mk5idGhjUnZ6LW9za2ZoSzFJWll0QV9sNVZBQW1fcDdBTXhHYUJka05iNl9YcXlSaXh1M01GWXBIMnR0X0w0ZlB5Wk5tM0M1TzRad3pRbA?hl=en-US&gl=US&ceid=US%3Aen">비트코인의 FTX 이후 최악의 주 폭락은 앞으로 더 많은 고통을 예고합니다.</a> <span class="p0-desc">현재 작용하고 있는 세력은 비교하면 거의 온건해 보이지만 이는 분석가들에게 위험 신호를 제기하고 있습니다. WHO은 구조적 취약성이 노출됨에 따라 토큰의 완만한 반등이 단명할 수.</span></li><li><a href="https://www.newstimes.com/news/article/ct-danbury-kidnapping-bitcoin-heist-guilty-plea-22296560.php">댄버리 납치 사건은 $2억 4,500만 달러의 절도와 관련이 있다고 연방정부가 밝혔습니다</a> <span class="p0-desc">댄버리 납치 사건은 $2억 4500만 달러의 절도와 관련이 있다고 연방정부는 밝혔습니다. ($245M) 연준 통화정책 관련 보도.</span></li><li><a href="https://www.bloomberg.com/news/articles/2026-06-08/bitcoin-s-235-billion-crash-masks-a-bigger-shift-across-crypto">비트코인의 2,350억 달러 폭락은 암호화폐 전반에 걸쳐 더 큰 변화를 가립니다.</a> <span class="p0-desc">비트코인의 2,350억 달러 폭락은 암호화폐 전반에 걸쳐 더 큰 변화를 가립니다. (2,350억 달러) 급락 관련 보도.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 비트코인의 FTX 이후 최악의 주 폭락은 앞으로 더 많은 고통을 예고합니다. 
-외 P0 긴급 이슈 8건이 추가 감지되었습니다. 총 107건의 뉴스 중 P1 주요 이슈도 8건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (51건): 비트코인 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (34건): 폭락, 암호화폐 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🔵 규제/정책** (30건): bill, decision, purchases 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 비트코인의 FTX 이후 최악의 주 폭락은 앞으로 더 많은 고통을 예고합니다.
-- 댄버리 납치 사건은 $2억 4,500만 달러의 절도와 관련이 있다고 연방정부가 밝혔습니다
-- 비트코인의 2,350억 달러 폭락은 암호화폐 전반에 걸쳐 더 큰 변화를 가립니다.
-
-### 주요 이슈
-
-- 트럼프의 암호화폐 이익, 투자자의 손실 분석
-- 러시아, 암호화폐 세탁 혐의 보도한 반부패 운동가 빌 브라우더의 10대 아들 제재
-- 코인 시황] 비트코인 6만2000달러선 반등에도 불안…ETF 54억달러 이탈·테더 점유율 급등 - 뉴스핌
-- 외 5건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Google News KR(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-06-10.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-06-10.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **107건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
