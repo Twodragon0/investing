@@ -33,11 +33,16 @@
   {% else %}
     {% assign image_path_png = image_path %}
   {% endunless %}
+  {% comment %} cleanup-old-images.yml prunes generated images >30 days old while posts keep
+     referencing them. Render nothing when the file is gone so no caller emits a broken <img>. {% endcomment %}
+  {% assign _gp_exists = site.static_files | where: 'path', image_path_png | first %}
+  {% if _gp_exists %}
 <picture>
   <source srcset="{{ image_avif | relative_url }}" type="image/avif">
   <source srcset="{{ image_webp | relative_url }}" type="image/webp">
   <img src="{{ image_path_png | relative_url }}" {{ image_attrs | strip }}>
 </picture>
+  {% endif %}
 {% else %}
 <img src="{{ image_path | relative_url }}" {{ image_attrs | strip }}>
 {% endif %}

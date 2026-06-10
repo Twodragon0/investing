@@ -222,9 +222,15 @@ layout: default
       {% assign rel_cat_data = site.data.categories[rel_cat] %}
       {% assign rel_cat_name = rel_cat_data.name | default: rel_cat %}
       <a href="{{ matched_post.url | relative_url }}" class="related-post-card">
-        {% if matched_post.image %}
+        {% assign _rel_img = matched_post.image %}
+        {% if _rel_img contains '/assets/images/generated/' %}
+          {% assign _rel_png = _rel_img | replace: '.webp', '.png' | replace: '.avif', '.png' | replace: '.jpg', '.png' | replace: '.jpeg', '.png' %}
+          {% assign _rel_file = site.static_files | where: 'path', _rel_png | first %}
+          {% unless _rel_file %}{% assign _rel_img = '' %}{% endunless %}
+        {% endif %}
+        {% if _rel_img and _rel_img != '' %}
         <div class="related-post-thumb">
-          {% include generated-picture.html image=matched_post.image alt=matched_post.title class="related-post-img" loading="lazy" decoding="async" %}
+          {% include generated-picture.html image=_rel_img alt=matched_post.title class="related-post-img" loading="lazy" decoding="async" %}
         </div>
         {% else %}
         <div class="related-post-thumb related-post-thumb--placeholder cat-bg-{{ rel_cat | slugify }}">
