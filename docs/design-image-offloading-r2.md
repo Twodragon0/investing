@@ -80,6 +80,21 @@ image_generator.save(...)  →  로컬 임시 저장 (avif/webp/png)
 - `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET`, `R2_PUBLIC_BASE_URL`
 - GitHub Actions secrets + 로컬 `.env`(커밋 금지). 미설정 시 graceful degradation.
 
+## 구현 현황 (2026-06-10)
+
+**Phase 1 착수 완료 (코드, 인프라 대기):**
+- `scripts/common/asset_storage.py` — R2 미러 모듈. `is_enabled()`/`upload_file()`/
+  `mirror_generated_variants()`/`public_url()`. 시크릿/boto3 부재 시 **완전 no-op**(절대 raise 안 함).
+- `scripts/common/image_generator/base.py::_save_and_close` — 변형 저장 직후 `_mirror_to_remote()`
+  훅(try/except 래핑, 생성 파이프라인 절대 차단 안 함). 모든 generated 이미지의 공통 chokepoint.
+- `scripts/requirements.txt` — `boto3` 추가(미설치 시 graceful).
+- `tests/test_asset_storage.py` — 19개(mock boto3): graceful no-op/업로드 파라미터/예외 삼킴/배선.
+
+**검증됨**: 모듈 로직(mock), no-op이 기존 이미지 생성 222개 + 전체 4632 테스트 무회귀.
+**미검증(인프라 대기)**: 실제 R2 업로드 — R2_* 시크릿/버킷 미프로비저닝.
+**미적용(다음 단계)**: 포스트 `image:`를 CDN URL로 전환(`public_url` 헬퍼는 준비됨, generator 반환부
+배선은 CDN 도메인 검증 후). 현재는 R2로 **미러만**(시크릿 설정 시), 사이트는 여전히 로컬 경로 참조.
+
 ## 8. 롤아웃 단계 (무중단)
 
 1. R2 버킷+커스텀 도메인+CDN 구성, 시크릿 등록.

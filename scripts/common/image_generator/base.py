@@ -813,6 +813,22 @@ def _save_and_close(fig, filepath, *, bg=None):
     _convert_to_webp(filepath)
     # Generate AVIF alongside PNG for maximum compression (graceful degradation)
     _convert_to_avif(filepath)
+    # Mirror variants to external object storage when configured (no-op otherwise).
+    _mirror_to_remote(filepath)
+
+
+def _mirror_to_remote(png_path: str) -> None:
+    """Best-effort mirror of generated image variants to R2 (no-op when disabled).
+
+    Wrapped so remote storage can never break local image generation. See
+    scripts/common/asset_storage.py and docs/design-image-offloading-r2.md.
+    """
+    try:
+        from ..asset_storage import mirror_generated_variants
+
+        mirror_generated_variants(png_path)
+    except Exception as exc:  # noqa: BLE001 - mirroring must never break generation
+        logger.debug("remote image mirror skipped for %s: %s", os.path.basename(png_path), exc)
 
 
 def _optimize_png(png_path: str) -> None:

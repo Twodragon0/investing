@@ -13,3 +13,6 @@ playwright~=1.58
 deep-translator==1.11.4
 googlenewsdecoder==0.1.7
 langdetect==1.0.9
+# Optional: external image mirroring to Cloudflare R2 (scripts/common/asset_storage.py).
+# Pipeline degrades gracefully to local-only when boto3 or R2 credentials are absent.
+boto3>=1.40,<2
