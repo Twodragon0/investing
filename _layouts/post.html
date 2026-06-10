@@ -58,7 +58,15 @@ layout: default
     {% endif %}
   </header>
 
-  {% if page.image %}
+  {% comment %} cleanup-old-images.yml prunes generated images >30 days old; skip the hero
+     when the referenced generated file is gone to avoid a broken <img>. {% endcomment %}
+  {% assign _hero_image = page.image %}
+  {% if _hero_image contains '/assets/images/generated/' %}
+    {% assign _hero_png = _hero_image | replace: '.webp', '.png' | replace: '.avif', '.png' | replace: '.jpg', '.png' | replace: '.jpeg', '.png' %}
+    {% assign _hero_file = site.static_files | where: 'path', _hero_png | first %}
+    {% unless _hero_file %}{% assign _hero_image = '' %}{% endunless %}
+  {% endif %}
+  {% if _hero_image and _hero_image != '' %}
   {% assign hero_image_alt = page.image_alt | default: page.title %}
   {% if is_trading_journal %}
   <section class="trading-journal-hero">
@@ -277,9 +285,10 @@ layout: default
     }
   },
   "description": {{ page.excerpt | default: page.description | default: site.description | strip_html | strip_newlines | truncate: 200 | jsonify }},
-  {% if page.image %}"image": {
+  {% comment %} _hero_image is '' when the generated image was pruned; omit dead image from JSON-LD. {% endcomment %}
+  {% if _hero_image and _hero_image != '' %}"image": {
     "@type": "ImageObject",
-    "url": "{{ page.image | absolute_url }}",
+    "url": "{{ _hero_image | absolute_url }}",
     "width": 1200,
     "height": 630
   },{% endif %}

@@ -5,6 +5,7 @@ _site/
 vendor/
 .bundle/
 node_modules/
+package-lock.json
 # Secrets and credentials
 .env
 .env.*

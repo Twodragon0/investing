@@ -7,8 +7,16 @@
 
 <a href="{{ post.url | relative_url }}" class="post-card cat-border-{{ pc_cat | slugify }}{% if post.pin %} pinned{% endif %}" data-journal-pair="{{ post.journal_pair | default: '' | escape }}" data-journal-sector="{{ post.journal_sector | default: '' | escape }}" data-journal-confidence="{{ post.journal_confidence | default: '' | escape }}">
   <div class="post-card-thumb">
+    {% assign thumb_image = '' %}
     {% if post.image %}
-    {% assign thumb_image = post.image | replace: '/og-', '/thumb-og-' %}
+      {% assign _thumb_candidate = post.image | replace: '/og-', '/thumb-og-' %}
+      {% comment %} cleanup-old-images.yml prunes thumbnails >30 days old; show the category
+         icon placeholder instead of a broken <img> when the file is gone. {% endcomment %}
+      {% assign _thumb_png = _thumb_candidate | replace: '.webp', '.png' | replace: '.avif', '.png' | replace: '.jpg', '.png' | replace: '.jpeg', '.png' %}
+      {% assign _thumb_file = site.static_files | where: 'path', _thumb_png | first %}
+      {% if _thumb_file %}{% assign thumb_image = _thumb_candidate %}{% endif %}
+    {% endif %}
+    {% if thumb_image != '' %}
     {% if include.fetchpriority == 'high' %}
     {% include generated-picture.html image=thumb_image alt=post.title class="post-card-img" loading="eager" decoding="sync" fetchpriority="high" width="600" height="315" %}
     {% else %}

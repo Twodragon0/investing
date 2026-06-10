@@ -15,7 +15,11 @@
   {% if page.image %}
   {% if page.image contains '/assets/images/generated/' %}
   {% assign preload_avif = page.image | replace: '.png', '.avif' | replace: '.jpg', '.avif' | replace: '.jpeg', '.avif' %}
+  {% comment %} Skip preload when the generated image was pruned (cleanup-old-images.yml, >30 days). {% endcomment %}
+  {% assign _preload_file = site.static_files | where: 'path', preload_avif | first %}
+  {% if _preload_file %}
   <link rel="preload" as="image" type="image/avif" href="{{ preload_avif | relative_url }}" fetchpriority="high">
+  {% endif %}
   {% endif %}
   {% endif %}
   {% include critical-css.html %}
@@ -40,6 +44,10 @@
     {% unless _raw_page_image contains '.png' %}
       {% assign _raw_page_image = _raw_page_image | replace: '.webp', '.png' | replace: '.avif', '.png' | replace: '.jpg', '.png' | replace: '.jpeg', '.png' %}
     {% endunless %}
+    {% comment %} cleanup-old-images.yml prunes generated images >30 days old; drop the
+       reference if the file is gone so OG falls back to content image / site default. {% endcomment %}
+    {% assign _gen_og_file = site.static_files | where: 'path', _raw_page_image | first %}
+    {% unless _gen_og_file %}{% assign _raw_page_image = '' %}{% endunless %}
   {% endif %}
   {% assign og_image = _raw_page_image | default: site.og_image %}
   {% if og_image == site.og_image and content contains '<img' %}
@@ -55,6 +63,12 @@
       {% assign first_md_img = md_img_split[1] | split: ')' | first %}
       {% if first_md_img and first_md_img contains '/assets/images/' %}{% assign og_image = first_md_img %}{% endif %}
     {% endif %}
+  {% endif %}
+  {% comment %} Final guard: a content-image fallback may have landed on a pruned generated
+     image (cleanup-old-images.yml); fall back to the site default rather than emit a 404. {% endcomment %}
+  {% if og_image contains '/assets/images/generated/' %}
+    {% assign _og_exists = site.static_files | where: 'path', og_image | first %}
+    {% unless _og_exists %}{% assign og_image = site.og_image %}{% endunless %}
   {% endif %}
   {% if og_image contains '.svg' %}
     {% assign og_image_png = og_image | replace: '.svg', '.png' %}
