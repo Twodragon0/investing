@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "jekyll",
   "installCommand": "bundle install --jobs 4 --retry 3",
-  "buildCommand": "JEKYLL_ENV=production bundle exec jekyll build --config _config.yml && python3 scripts/tools/postbuild_fix_feed_enclosures.py",
+  "buildCommand": "rm -rf .jekyll-cache .jekyll-metadata && JEKYLL_ENV=production bundle exec jekyll build --config _config.yml && python3 scripts/tools/postbuild_fix_feed_enclosures.py",
   "outputDirectory": "_site",
   "regions": ["icn1"],
   "trailingSlash": true,
