@@ -675,6 +675,46 @@ class TestResolvePostImage:
             if os.path.exists(abs_path):
                 os.remove(abs_path)
 
+    def test_r2_disabled_returns_local_path(self):
+        """R2 비활성 시 로컬 경로 그대로 반환 (기존 동작 불변)."""
+        from common.post_generator import REPO_ROOT
+
+        rel = "assets/images/generated/r2-disabled-test.png"
+        abs_path = os.path.join(REPO_ROOT, rel)
+        os.makedirs(os.path.dirname(abs_path), exist_ok=True)
+        with open(abs_path, "wb") as f:
+            f.write(b"\x89PNG\r\n")
+        try:
+            with patch("common.post_generator._r2_enabled", return_value=False):
+                result = _resolve_post_image("/assets/images/generated/r2-disabled-test.png", "crypto")
+            assert result == "/assets/images/generated/r2-disabled-test.png"
+        finally:
+            if os.path.exists(abs_path):
+                os.remove(abs_path)
+
+    def test_r2_enabled_returns_cdn_url(self):
+        """R2 활성 시 절대 CDN URL 반환."""
+        from common.post_generator import REPO_ROOT
+
+        rel = "assets/images/generated/r2-enabled-test.png"
+        abs_path = os.path.join(REPO_ROOT, rel)
+        os.makedirs(os.path.dirname(abs_path), exist_ok=True)
+        with open(abs_path, "wb") as f:
+            f.write(b"\x89PNG\r\n")
+        try:
+            with (
+                patch("common.post_generator._r2_enabled", return_value=True),
+                patch(
+                    "common.post_generator._r2_public_url",
+                    return_value="https://cdn.example.com/generated/r2-enabled-test.png",
+                ),
+            ):
+                result = _resolve_post_image("/assets/images/generated/r2-enabled-test.png", "crypto")
+            assert result == "https://cdn.example.com/generated/r2-enabled-test.png"
+        finally:
+            if os.path.exists(abs_path):
+                os.remove(abs_path)
+
 
 class TestSafePathComponent:
     """Tests for _safe_path_component() (lines 276-294)."""

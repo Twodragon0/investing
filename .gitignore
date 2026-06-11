@@ -66,3 +66,7 @@ state/
 
 # Sass build artifacts (stale)
 _sass/_site/
+
+# migrate_images_to_r2.py 백업/임시 파일 (실제 --apply 시 _posts/에 생성, auto-commit 오염 방지)
+*.bak
+.migrate_tmp_*

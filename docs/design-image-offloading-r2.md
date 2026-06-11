@@ -95,12 +95,42 @@ image_generator.save(...)  →  로컬 임시 저장 (avif/webp/png)
 **미적용(다음 단계)**: 포스트 `image:`를 CDN URL로 전환(`public_url` 헬퍼는 준비됨, generator 반환부
 배선은 CDN 도메인 검증 후). 현재는 R2로 **미러만**(시크릿 설정 시), 사이트는 여전히 로컬 경로 참조.
 
+---
+
+**Phase 2 게이티드 코드 랜딩 (2026-06-11):**
+
+- **`scripts/common/post_generator.py::_resolve_post_image` 배선** — `asset_storage.public_url()`
+  호출을 삽입. `is_enabled()` 게이트로 보호: R2 활성 시 생성 포스트의 `image:` 필드가 절대 CDN URL
+  (`R2_PUBLIC_BASE_URL/generated/<filename>`)을 반환, 비활성 시 기존 로컬 상대경로 반환(no-op).
+  시크릿 미설정 환경에서 동작 변화 없음.
+
+- **`scripts/migrate_images_to_r2.py` 신규 추가** — 기존 포스트 `image:` 일괄 이전 스크립트.
+  `--dry-run`(기본): 이전 대상 포스트·URL 목록만 출력. `--apply`: `is_enabled()` 게이트 통과 후
+  R2 업로드 + `image:` 절대 URL 치환. 로컬에 파일이 존재하는 이미지만 처리(소실분 skip).
+  치환은 원자적 쓰기+백업으로 안전. `_state/*.json` 미수정.
+
+- **`cleanup-old-images.yml` 폐지 예정 주석 추가** — 현재 워크플로우 동작 불변,
+  R2 전환 완료(Phase 4) 후 비활성 예정임을 주석으로 기재.
+
+**이 단계의 범위와 한계:**
+- 시크릿 미설정 시 세 변경 모두 완전 no-op → **무중단 배포**.
+- 인프라 프로비저닝(R2 버킷/커스텀 도메인/시크릿 등록)은 이 단계에 포함되지 않음(후속 게이트).
+- 실제 포스트 CDN URL 전환(`--apply` 실행), `.gitignore` 추가, `cleanup-old-images.yml` 폐지는
+  인프라 검증 후 별도 단계에서 수행.
+- **도메인 결정 사항**: 커스텀 도메인(예: `img.2twodragon.com`) 또는 R2 기본 URL 선택은
+  `R2_PUBLIC_BASE_URL` 환경 변수 값으로만 반영되며 코드 변경 불필요.
+- 미검증(인프라 대기): 실제 R2 업로드 경로, CDN URL 접근성.
+
 ## 8. 롤아웃 단계 (무중단)
 
 1. R2 버킷+커스텀 도메인+CDN 구성, 시크릿 등록.
-2. `asset_storage.py` 추가 + `image_generator` 통합 (graceful degradation) → **신규 생성분만 R2로**.
+2. ✅ (완료) `asset_storage.py` 추가 + `image_generator` 통합 (graceful degradation) → **신규 생성분 R2 미러**.
+   ✅ (완료) `post_generator._resolve_post_image`에 `public_url()` 배선 — R2 활성 시 절대 CDN URL 반환(is_enabled 게이트).
+   ✅ (완료) `migrate_images_to_r2.py` 스크립트 추가(dry-run 기본, --apply는 is_enabled 게이트).
+   ✅ (완료) `cleanup-old-images.yml`에 폐지 예정 주석 추가(동작 불변).
 3. 1~2주 운영 관찰(업로드 성공률, CDN 캐시 적중, 비용).
 4. `migrate_images_to_r2.py --dry-run` → 검토 → `--apply`로 현존 이미지 일괄 이전.
+   - ⚠️ **컷오버 전 필수 결정(코드리뷰 MEDIUM #1)**: `image:`가 절대 CDN URL이 되면 레이아웃 가드(`_includes/generated-picture.html`, `_layouts/default.html`의 `contains '/assets/images/generated/'` 조건)가 매치 안 돼 hero가 plain `<img>`로 렌더되고 **avif/webp `<picture>` 변형이 사라진다**(이미지는 정상 표시되나 차세대 포맷 최적화 손실). 두 갈래: (a) 템플릿 가드를 R2 base URL도 인식하도록 확장(권장) — 단 이 경우 `--apply`가 png/webp/avif **3변형 모두 업로드 성공**을 요구해야 함(부분 업로드 시 존재 안 하는 `<source>` 참조 방지, MEDIUM open question), 또는 (b) CDN에선 png-only `<img>` 유지.
 5. `assets/images/generated/` gitignore + 트래킹 제거(`git rm --cached`), `cleanup-old-images.yml` 비활성.
 6. `check_post_images.py`/회귀 테스트를 R2 HEAD 체크로 확장.
 

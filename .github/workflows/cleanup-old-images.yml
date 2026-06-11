@@ -1,3 +1,7 @@
+# ⚠️ 폐지 예정 (DEPRECATION PENDING): R2 이미지 오프로딩(Phase 2) 컷오버 후 이 워크플로우는 제거된다.
+# 생성 이미지를 R2로 영구 보존하면 30일 정리가 불필요해진다.
+# 실제 폐지는 migrate_images_to_r2.py --apply 성공 + assets/images/generated/ gitignore 이후.
+# 계획: .omc/plans/r2-phase2-gated-landing.md / 설계: docs/design-image-offloading-r2.md
 name: Cleanup Old Generated Images
 
 on:

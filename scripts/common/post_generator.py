@@ -10,6 +10,8 @@ import re
 from datetime import UTC, datetime
 from typing import Dict, List, Optional
 
+from common.asset_storage import is_enabled as _r2_enabled
+from common.asset_storage import public_url as _r2_public_url
 from common.config import get_kst_now, get_kst_timezone
 from common.markdown_utils import smart_truncate
 
@@ -238,6 +240,9 @@ def _resolve_post_image(image: str, category: str) -> str:
         logger.warning("Generated image empty: %s", image)
         return _default_category_image(category)
 
+    # R2 활성 시 CDN URL 반환, 비활성 시 로컬 경로 그대로 반환
+    if _r2_enabled():
+        return _r2_public_url(image)
     return image
 
 
