@@ -101,9 +101,7 @@ def _client():  # pragma: no cover - exercised via mocked client in tests
 def _is_generated_path(local_path: str) -> bool:
     """Only mirror files under assets/images/generated/ (date-pruned set)."""
     norm = local_path.replace("\\", "/")
-    return f"/{_FS_PREFIX.replace(os.sep, '/')}/" in f"/{norm}" or norm.startswith(
-        _FS_PREFIX.replace(os.sep, "/")
-    )
+    return f"/{_FS_PREFIX.replace(os.sep, '/')}/" in f"/{norm}" or norm.startswith(_FS_PREFIX.replace(os.sep, "/"))
 
 
 def upload_file(local_path: str) -> bool:

@@ -32,9 +32,7 @@ SITE_DIR = os.path.join(REPO_ROOT, "_site")
 # src="..." or srcset="..." pointing at a generated image (first URL of a srcset)
 _IMG_REF = re.compile(r'(?:src|srcset)="(/assets/images/generated/[^"\s]+)')
 # absolute og:image meta, capturing the path portion
-_OG_REF = re.compile(
-    r'<meta property="og:image" content="https?://[^"]*?(/assets/images/generated/[^"]+)"'
-)
+_OG_REF = re.compile(r'<meta property="og:image" content="https?://[^"]*?(/assets/images/generated/[^"]+)"')
 
 
 def _exists(rel_url: str) -> bool:
@@ -74,8 +72,7 @@ def test_no_broken_generated_img(rendered_pages: list[str]) -> None:
 
     assert not broken, (
         f"{len(broken)} rendered <img>/<source> point at missing generated "
-        "images (layout guard regression): "
-        + "; ".join(f"{page} -> {url}" for page, url in broken[:10])
+        "images (layout guard regression): " + "; ".join(f"{page} -> {url}" for page, url in broken[:10])
     )
 
 
@@ -90,6 +87,5 @@ def test_no_broken_og_image(rendered_pages: list[str]) -> None:
 
     assert not broken, (
         f"{len(broken)} pages have an og:image pointing at a missing generated "
-        "image (default.html guard regression): "
-        + "; ".join(f"{page} -> {url}" for page, url in broken[:10])
+        "image (default.html guard regression): " + "; ".join(f"{page} -> {url}" for page, url in broken[:10])
     )

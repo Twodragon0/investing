@@ -80,10 +80,7 @@ def test_public_url_local_when_disabled(disabled_env):
 
 def test_public_url_cdn_when_enabled(enabled_env):
     # trailing slash on base URL must be normalized
-    assert (
-        asset_storage.public_url("foo-2026-03-20.png")
-        == "https://img.example.com/generated/foo-2026-03-20.png"
-    )
+    assert asset_storage.public_url("foo-2026-03-20.png") == "https://img.example.com/generated/foo-2026-03-20.png"
 
 
 def test_public_url_uses_basename_only(enabled_env):
