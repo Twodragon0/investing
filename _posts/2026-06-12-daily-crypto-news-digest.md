@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-12 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 미국 하원 법안은 법 집행 기관 전반에 걸쳐 암호화폐 절도 전담반을 구성할 예정입니다. - CoinDesk - 99건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 스페이스 관련 45건</li><li>🏦 <strong>거래소</strong>: IPO 동향 주시</li><li>📈 <strong>가격/시장</strong>: 스페이스 관련 23건</li><li>🟣 <strong>DeFi</strong>: 17건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.coindesk.com">미국 하원 법안은 법 집행 기관 전반에 걸쳐 암호화폐 절도 전담반을 구성할 예정입니다. - CoinDesk</a> <span class="p0-desc">미국 하원 법안은 법 집행 기관 전반에 걸쳐 암호화폐 절도 전담반을 구성할 예정입니다 CoinDesk</span></li><li><a href="https://www.digitaltoday.co.kr">일본은행 금리 결정 임박…비트코인 22% 조정 악몽 재현될까</a> <span class="p0-desc">일본은행 금리 결정 임박…비트코인 22% 조정 악몽 재현될까 디지털투데이</span></li><li><a href="https://www.coindesk.com/policy/2026/06/10/u-s-house-bill-would-erect-crypto-theft-task-force-across-law-enforcement-agencies">미국 하원 법안, 법 집행 기관 전반에 걸쳐 암호화폐 절도 전담반 설립</a> <span class="p0-desc">초당파 2인조의 새로운 법안은 암호화폐 도난 사건을 주도하기 위해 미국 법무장관 산하에 다기관 그룹을 구성하는 것입니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 미국 하원 법안은 법 집행 기관 전반에 걸쳐 암호화폐 절도 전담반을 구성할 예정입니다. - CoinDesk 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 99건의 뉴스 중 P1 주요 이슈도 14건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (45건): 비트코인, 스페이스 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **🏦 거래소** (16건): IPO 관련 지표와 수급 흐름을 함께 확인하세요.
-- **📈 가격/시장** (23건): 스페이스 가격 변동 (23건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 미국 하원 법안은 법 집행 기관 전반에 걸쳐 암호화폐 절도 전담반을 구성할 예정입니다. - CoinDesk
-- 일본은행 금리 결정 임박…비트코인 22% 조정 악몽 재현될까
-- 미국 하원 법안, 법 집행 기관 전반에 걸쳐 암호화폐 절도 전담반 설립
-
-### 주요 이슈
-
-- 트럼프의 암호화폐 이익, 투자자의 손실 분석
-- 그랜드 아일랜드에서 암호화폐 사기를 방지하는 경고 표시 - KHGI
-- '사상 최대 규모' 스페이스X IPO, 비트코인 자금이동 촉발할까 - 뉴스웨이
-- 외 11건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), CoinDesk(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-06-12.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-06-12.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **99건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
