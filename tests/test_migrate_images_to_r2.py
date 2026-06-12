@@ -338,17 +338,12 @@ class TestReplaceImageUrl:
         assert _LOCAL_IMAGE_URL not in result
 
     def test_따옴표_없는_image_치환(self):
-        content = 'image: /assets/images/generated/foo-2026-03-20.png\n'
+        content = "image: /assets/images/generated/foo-2026-03-20.png\n"
         result = _m._replace_image_url(content, "https://cdn.example.com/generated/foo-2026-03-20.png")
         assert 'image: "https://cdn.example.com/generated/foo-2026-03-20.png"' in result
 
     def test_본문에_image_키워드_있어도_front_matter만_치환(self):
-        content = (
-            "---\n"
-            'image: "/assets/images/generated/foo-2026-03-20.png"\n'
-            "---\n"
-            "본문에서 image: 언급\n"
-        )
+        content = '---\nimage: "/assets/images/generated/foo-2026-03-20.png"\n---\n본문에서 image: 언급\n'
         result = _m._replace_image_url(content, "https://cdn.example.com/generated/foo.png")
         # 본문의 image: 는 건드리지 않음
         assert "본문에서 image: 언급" in result

@@ -47,7 +47,7 @@ def _parse_image_field(content: str) -> tuple[str, str] | None:
     if not m:
         return None
     local_url = m.group(2)  # e.g. /assets/images/generated/foo.png
-    filename = m.group(3)   # e.g. foo.png
+    filename = m.group(3)  # e.g. foo.png
     return local_url, filename
 
 
@@ -63,6 +63,7 @@ def _post_date_from_content(content: str) -> date | None:
 
 def _replace_image_url(content: str, new_url: str) -> str:
     """front matter의 image: 라인만 CDN URL로 치환. 나머지 필드·본문 보존."""
+
     def _replacer(m: re.Match) -> str:
         prefix = m.group(1)  # 'image: '
         return f'{prefix}"{new_url}"'
