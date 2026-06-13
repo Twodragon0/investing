@@ -6,8 +6,8 @@
         "ext:gif": 1495,
         "default-image": 708,
         "ext:ico": 125,
-        "placeholder": 323,
-        "ext:svg": 71,
+        "placeholder": 325,
+        "ext:svg": 74,
         "blank.": 59,
         "beacon": 12,
         "wp-content/plugins": 2,
@@ -16,5 +16,5 @@
     }
   },
   "since": "2026-04-23T08:54:23",
-  "last_seen": "2026-06-13T10:40:52"
+  "last_seen": "2026-06-13T10:58:26"
 }
