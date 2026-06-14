@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-news-digest-2026-05-11.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-05-11.png"
 permalink: "/crypto-news/2026/05/11/daily-crypto-news-digest/"
 description: "크립토 뉴스 90건 수집. 주요 출처: Google News, Cointelegraph, CoinDesk. 오늘의 헤드라인: Trump Media posts $405 million loss driven by crypto holdings"
 excerpt: "비트코인 (43건): 비트코인, 트럼프 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요. 가격/시장 (24건): 암호화폐, 만달러선 가격 변동 (24건) —…"

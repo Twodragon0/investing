@@ -7,7 +7,7 @@ tags: ["geopolitical", "polymarket", "risk", "conflict", "prediction-market"]
 keywords: "geopolitical, polymarket, risk, conflict, prediction-market"
 source: "geopolitical"
 lang: "ko"
-image: "/assets/images/generated/og-daily-geopolitical-risk-report-2026-05-14.png"
+image: "/assets/images/generated/news-briefing-geopolitical-2026-05-14.png"
 permalink: "/market-analysis/2026/05/14/daily-geopolitical-risk-report/"
 description: "지정학적 리스크 48건 수집. 주요 테마: 기타 지정학, 군사/분쟁, 에너지/자원. 3개 소스 기반 분석 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "지정학적 리스크 48건 수집. 주요 테마: 기타 지정학, 군사/분쟁, 에너지/자원. 3개 소스 기반 분석 - Investing Dragon 자동 수집 분석 리포트."

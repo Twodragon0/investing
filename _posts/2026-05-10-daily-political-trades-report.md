@@ -7,7 +7,7 @@ tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-ban
 keywords: "political-trades, congress, sec, trump, 이재명"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-political-trades-report-2026-05-10.png"
+image: "/assets/images/generated/news-briefing-political-2026-05-10.png"
 excerpt: "2026-05-10 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 총 8건 — SEC 내부자 거래 7건, 중앙은행 1건 - Investing Dragon 자동 수집 분석…"
 permalink: "/political-trades/2026/05/10/daily-political-trades-report/"
 image_alt: "정치인 거래·정책 리포트 - 2026-05-10 - 정치인 거래 뉴스 요약 이미지"

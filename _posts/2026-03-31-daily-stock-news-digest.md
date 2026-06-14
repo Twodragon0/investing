@@ -7,7 +7,7 @@ tags: ["stock", "market", "daily-digest"]
 keywords: "stock, market, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-31.png"
+image: "/assets/images/generated/news-briefing-stock-2026-03-31.png"
 permalink: "/stock-news/2026/03/31/daily-stock-news-digest/"
 description_ko: "2026-03-31 한국 증시는 코스피 5,277.30(-2.97%), 코스닥 1,107.05(-3.02%), 원/달러 1,517.45원을 기록했고 140건의 뉴스를 바탕으로 변동성 확대 구간의 핵심 이슈를 정리했습니다."
 description: "2026-03-31 한국 증시는 코스피 5,277.30(-2.97%), 코스닥 1,107.05(-3.02%), 원/달러 1,517.45원을 기록했고 140건의 뉴스를 바탕으로 변동성 확대 구간의 핵심 이슈를 정리했습니다."

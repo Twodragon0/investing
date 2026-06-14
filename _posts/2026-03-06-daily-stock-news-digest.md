@@ -6,7 +6,7 @@ categories: [stock-news]
 tags: ["stock", "market", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-stock-2026-03-06.png"
+image: "/assets/images/generated/og-daily-stock-news-digest-2026-03-06.png"
 description: "미국-이란 분쟁 확대로 글로벌 증시 폭락. 다우 -800pt, 코스피·코스닥 8%대 급락 후 서킷브레이커 발동. 유가 $80 돌파. 총 143건 뉴스 분석."
 excerpt: "주요 테마: 가격/시장, 매크로/금리, AI/기술 단기: 미국-이란 분쟁 추이와 유가 동향이 핵심 변수. 변동성 확대 대비 필요. 반도체: 하락장에서 매수 기회론 vs 추가…"
 image_alt: "주식 시장 뉴스 종합 - 2026-03-06 - stock-news 뉴스 요약 이미지"

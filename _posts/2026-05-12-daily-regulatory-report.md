@@ -7,7 +7,7 @@ tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 keywords: "regulation, sec, cftc, fsc, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-regulatory-report-2026-05-12.png"
+image: "/assets/images/generated/news-briefing-regulatory-2026-05-12.png"
 permalink: "/regulatory-news/2026/05/12/daily-regulatory-report/"
 description: "글로벌 규제 동향 17건 수집. 주요 테마: 규제/정책, 정치/정책, AI/기술. 한국 핵심: crcl-20260511 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "글로벌 규제 동향 17건 수집. 주요 테마: 규제/정책, 정치/정책, AI/기술. 한국 핵심: crcl-20260511 - Investing Dragon 자동 수집 분석 리포트."

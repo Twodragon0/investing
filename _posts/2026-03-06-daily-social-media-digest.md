@@ -6,7 +6,7 @@ categories: [social-media]
 tags: ["social-media", "telegram", "twitter", "reddit", "politics", "trump", "이재명", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-social-2026-03-06.png"
+image: "/assets/images/generated/og-daily-social-media-digest-2026-03-06.png"
 description: "2026-03-06 소셜 미디어 47건: 정치/정책 23건(49%) 압도적, 비트코인 15건, 매크로/금리 11건. Trump·이재명 정책 이슈 집중. 텔레그램 20건·소셜 2건·정치·경제 25건 수집."
 excerpt: "주요 테마: 정치/정책, 비트코인, 매크로/금리 긴급 알림 없음에 대한 선별 모니터링 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "소셜 미디어 동향 - 2026-03-06 - social-media 뉴스 요약 이미지"

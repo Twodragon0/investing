@@ -7,7 +7,7 @@ tags: ["market-report", "crypto", "top-coins", "trending", "daily"]
 keywords: "market-report, crypto, top-coins, trending, daily"
 source: "CoinMarketCap"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-market-report-2026-05-11.png"
+image: "/assets/images/generated/news-briefing-cryptomarket-2026-05-11.png"
 permalink: "/market-analysis/2026/05/11/daily-crypto-market-report/"
 description: "BTC $81,418 (24h +0.8%). 공포·탐욕 지수: 47/100 (Neutral), BTC 도미넌스 58.1%. 상위 30개 코인 분석."
 excerpt: "BTC $81,418 (24h +0.8%). 공포·탐욕 지수: 47/100 (Neutral), BTC 도미넌스 58.1%. 상위 30개 코인 분석."

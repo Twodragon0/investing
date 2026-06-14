@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-news-digest-2026-05-12.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-05-12.png"
 permalink: "/crypto-news/2026/05/12/daily-crypto-news-digest/"
 description: "크립토 뉴스 92건 수집. 주요 출처: Google News, Cointelegraph, CoinDesk. 오늘의 헤드라인: Crypto Firms Race to 'Quantum-Proof' Wallets Before Bitcoin, Ethereum Networks"
 excerpt: "비트코인 (38건): 비트코인, 트럼프 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요. 가격/시장 (22건): 달러, 암호화폐, 코인 시장 흐름이…"

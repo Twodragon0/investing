@@ -7,7 +7,7 @@ tags: ["defi", "tvl", "crypto", "blockchain", "daily-digest"]
 keywords: "defi, tvl, crypto, blockchain, daily-digest"
 source: "defi-llama"
 lang: "ko"
-image: "/assets/images/generated/og-daily-defi-tvl-report-2026-05-10.png"
+image: "/assets/images/generated/news-briefing-defi-2026-05-10.png"
 permalink: "/defi/2026/05/10/daily-defi-tvl-report/"
 description: "DeFi 프로토콜 20개, 블록체인 15개 기준 TVL 현황. 상위: Lido, SSV Network, Aave V3. 선두 체인: Ethereum."
 excerpt: "2026-05-10 DeFi 생태계 TVL: 상위 20개 프로토콜 $142 - Investing Dragon 자동 수집 분석 리포트."

@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-news-digest-2026-05-10.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-05-10.png"
 permalink: "/crypto-news/2026/05/10/daily-crypto-news-digest/"
 description: "크립토 뉴스 95건 수집. 주요 출처: Google News, Decrypt, CoinDesk. 오늘의 헤드라인: Bitcoin Miner Soars On $9.8 Bil Data Center Deal, Morgan Stanley Debuts Crypto"
 excerpt: "비트코인 (36건): 비트코인, 트럼프 가격 흐름과 온체인 지표 변화를 함께 확인하세요. 가격/시장 (21건): 암호화폐, BTC 시장 흐름이 활발하며, 주요 가격대에서의 매물…"

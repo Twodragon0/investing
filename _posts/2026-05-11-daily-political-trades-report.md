@@ -7,7 +7,7 @@ tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-ban
 keywords: "political-trades, congress, sec, trump, 이재명"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-political-trades-report-2026-05-11.png"
+image: "/assets/images/generated/news-briefing-political-2026-05-11.png"
 excerpt: "2026-05-11 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 총 3건 — 중앙은행 3건 - Investing Dragon 자동 수집 분석 리포트."
 permalink: "/political-trades/2026/05/11/daily-political-trades-report/"
 description: "정치인 거래 리포트: 정치인 거래·정책 리포트. 입법 동향과 의원 포트폴리오 변화를 추적합니다 - Investing Dragon 자동 수집 분석 리포트."

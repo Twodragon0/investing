@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-news-digest-2026-05-13.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-05-13.png"
 permalink: "/crypto-news/2026/05/13/daily-crypto-news-digest/"
 description: "크립토 뉴스 106건 수집. 주요 출처: Google News, Google News KR, Decrypt. 오늘의 헤드라인: Can Bitcoin Fix the US Housing Market? Fannie Mae Is Finding Out"
 excerpt: "비트코인 (49건): 비트코인, CPI 관련 (49건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다. 가격/시장 (33건): 암호화폐, XRP 가격 변동 (33건) —…"

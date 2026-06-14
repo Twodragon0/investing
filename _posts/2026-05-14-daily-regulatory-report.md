@@ -7,7 +7,7 @@ tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 keywords: "regulation, sec, cftc, fsc, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-regulatory-report-2026-05-14.png"
+image: "/assets/images/generated/news-briefing-regulatory-2026-05-14.png"
 permalink: "/regulatory-news/2026/05/14/daily-regulatory-report/"
 description: "글로벌 규제 동향 16건 수집. 주요 테마: 규제/정책, 정치/정책, DeFi. 아시아 핵심: JP모건믿음 IV - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "글로벌 규제 동향 16건 수집. 주요 테마: 규제/정책, 정치/정책, DeFi. 아시아 핵심: JP모건믿음 IV - Investing Dragon 자동 수집 분석 리포트."

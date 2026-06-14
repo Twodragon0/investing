@@ -7,7 +7,7 @@ tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-security-report-2026-05-14.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-05-14.png"
 permalink: "/security-alerts/2026/05/14/daily-security-report/"
 description: "디파이 뉴스: 액세스 제어 결함이 지속되면서 2025년에 암호화폐 해킹이 31억 건을 넘어 급증합니다 -…. 블록체인 보안 뉴스 3건 분석 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "디파이 뉴스: 액세스 제어 결함이 지속되면서 2025년에 암호화폐 해킹이 31억 건을 넘어 급증합니다 -…. 블록체인 보안 뉴스 3건 분석 - Investing Dragon…"

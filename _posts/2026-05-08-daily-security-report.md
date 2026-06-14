@@ -7,7 +7,7 @@ tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-security-report-2026-05-08.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-05-08.png"
 permalink: "/security-alerts/2026/05/08/daily-security-report/"
 description: "코인베이스 디파이 Saver Exploit과 관련된 5,500만 달러 이상의 동결 자금 고소 - MEXC. 블록체인 보안 뉴스 3건 분석 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "코인베이스 디파이 Saver Exploit과 관련된 5,500만 달러 이상의 동결 자금 고소 - MEXC. 블록체인 보안 뉴스 3건 분석 - Investing Dragon 자동…"

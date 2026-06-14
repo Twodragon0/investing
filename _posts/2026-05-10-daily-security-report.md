@@ -7,7 +7,7 @@ tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-security-report-2026-05-10.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-05-10.png"
 permalink: "/security-alerts/2026/05/10/daily-security-report/"
 description: "670만 달러 디파이 해킹으로 인해 TrustedVolumes 노출: 주요 암호화폐 보안 침해 발견 -…. 블록체인 보안 뉴스 4건 분석 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "670만 달러 디파이 해킹으로 인해 TrustedVolumes 노출: 주요 암호화폐 보안 침해 발견 -…. 블록체인 보안 뉴스 4건 분석 - Investing Dragon 자동…"

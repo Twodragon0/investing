@@ -7,7 +7,7 @@ tags: ["political-trades", "congress", "sec", "trump", "이재명", "central-ban
 keywords: "political-trades, congress, sec, trump, 이재명"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-political-trades-report-2026-05-09.png"
+image: "/assets/images/generated/news-briefing-political-2026-05-09.png"
 excerpt: "2026-05-09 정치인 거래·정책 리포트: 의회 거래 2건, SEC 내부자 12건, 트럼프 정책 4건, 중앙은행 2건, 총 20건 수집"
 permalink: "/political-trades/2026/05/09/daily-political-trades-report/"
 description: "정치인 거래·정책 동향 20건 수집. 의회 거래 2건, SEC 내부자 12건, 트럼프 정책 4건, 중앙은행 2건 - Investing Dragon 자동 수집 분석 리포트."

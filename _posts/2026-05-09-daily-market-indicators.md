@@ -7,7 +7,7 @@ tags: ["market-analysis", "fear-greed", "vix", "market-breadth", "sentiment", "f
 keywords: "market-analysis, fear-greed, vix, market-breadth, sentiment"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-market-indicators-2026-05-09.png"
+image: "/assets/images/generated/news-briefing-indicators-2026-05-09.png"
 permalink: "/market-analysis/2026/05/09/daily-market-indicators/"
 description: "시장 지표 8개 소스 수집. 공포탐욕지수 67.7(greed), VIX 17.27, 달러지수 97.95 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "시장 지표 8개 소스 수집. 공포탐욕지수 67.7(greed), VIX 17.27, 달러지수 97.95 - Investing Dragon 자동 수집 분석 리포트."

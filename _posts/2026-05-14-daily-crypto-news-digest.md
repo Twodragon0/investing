@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-news-digest-2026-05-14.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-05-14.png"
 permalink: "/crypto-news/2026/05/14/daily-crypto-news-digest/"
 description: "크립토 뉴스 109건 수집. 주요 출처: Google News, Google News EN, Decrypt. 오늘의 헤드라인: Bitcoin and ethereum prices today, Wednesday, May 13, 2026: Prices holding as"
 excerpt: "비트코인 (49건): 비트코인 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요. 규제/정책 (28건): 집행 정책 변화가 감지되어, 관련 자산 규제 리스크를…"

@@ -7,7 +7,7 @@ tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-security-report-2026-05-12.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-05-12.png"
 permalink: "/security-alerts/2026/05/12/daily-security-report/"
 description: "디파이 해킹이 5월에 유출되면서 Ink Finance 및 Renegade가 349,000달러에 악용됨 -…. 블록체인 보안 뉴스 1건 분석 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "디파이 해킹이 5월에 유출되면서 Ink Finance 및 Renegade가 349,000달러에 악용됨 -…. 블록체인 보안 뉴스 1건 분석 - Investing Dragon…"

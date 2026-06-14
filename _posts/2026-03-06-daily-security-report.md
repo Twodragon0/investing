@@ -6,7 +6,7 @@ categories: [security-alerts]
 tags: ["security", "hack", "blockchain", "daily-digest"]
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-crypto-2026-03-06.png"
+image: "/assets/images/generated/og-daily-security-report-2026-03-06.png"
 description: "2026-03-06 블록체인 보안 2건: Coruna 해킹이 iPhone 취약점으로 암호화폐 지갑 시드 문구 탈취, DeFi 플랫폼 GMX·Peapods 스마트 컨트랙트 취약점 악용 피해 발생 경고."
 excerpt: "블록체인 보안 관련 뉴스 2건을 정리합니다. 1. iPhone SECurity 경고: Coruna 해킹은 암호화폐 지갑 복구 문구를 목표로 합니다 - CryptoRank"
 image_alt: "블록체인 보안 리포트 - 2026-03-06 - security-alerts 뉴스 요약 이미지"

@@ -7,7 +7,7 @@ tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-security-report-2026-05-11.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-05-11.png"
 permalink: "/security-alerts/2026/05/11/daily-security-report/"
 description: "40개 이상의 디파이 프로토콜이 2026년에 종료됩니다: 암호화폐를 재편하는 7억 7천만 달러 규모의…. 블록체인 보안 뉴스 2건 분석 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "40개 이상의 디파이 프로토콜이 2026년에 종료됩니다: 암호화폐를 재편하는 7억 7천만 달러 규모의…. 블록체인 보안 뉴스 2건 분석 - Investing Dragon 자동…"

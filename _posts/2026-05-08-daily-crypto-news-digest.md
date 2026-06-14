@@ -7,7 +7,7 @@ tags: ["crypto", "news", "daily-digest"]
 keywords: "crypto, news, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-crypto-news-digest-2026-05-08.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-05-08.png"
 permalink: "/crypto-news/2026/05/08/daily-crypto-news-digest/"
 description: "크립토 뉴스 96건 수집. 주요 출처: Google News, Decrypt, Cointelegraph. 오늘의 헤드라인: Bitcoin treasury firm Strategy breaks from 'never sell' approach to the"
 excerpt: "비트코인 (42건): 비트코인 관련 (42건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다. 가격/시장 (25건): investing, com, current 가격 변동…"

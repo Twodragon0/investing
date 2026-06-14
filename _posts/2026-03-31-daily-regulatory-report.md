@@ -7,7 +7,7 @@ tags: ["regulation", "sec", "cftc", "fsc", "daily-digest"]
 keywords: "regulation, sec, cftc, fsc, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-regulatory-report-2026-03-31.png"
+image: "/assets/images/generated/news-briefing-regulatory-2026-03-31.png"
 permalink: "/regulatory-news/2026/03/31/daily-regulatory-report/"
 description_ko: "글로벌 규제 동향 22건 수집. 주요 테마: 규제/정책, 거래소, AI/기술. 미국·한국·아시아·유럽 규제 기관 동향을 분석합니다."
 description: "글로벌 규제 동향 22건 수집. 주요 테마: 규제/정책, 거래소, AI/기술. 미국·한국·아시아·유럽 규제 기관 동향을 분석합니다."

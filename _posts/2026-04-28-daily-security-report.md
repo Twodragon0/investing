@@ -7,7 +7,7 @@ tags: ["security", "hack", "blockchain", "daily-digest"]
 keywords: "security, hack, blockchain, daily-digest"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/og-daily-security-report-2026-04-28.png"
+image: "/assets/images/generated/news-briefing-crypto-2026-04-28.png"
 permalink: "/security-alerts/2026/04/28/daily-security-report/"
 description: "Kelp 익스플로잇은 비격리 디파이 대출 관련 문제를 강조합니다: Crypto execs - MSN. 블록체인 보안 뉴스 2건 분석 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "Kelp 익스플로잇은 비격리 디파이 대출 관련 문제를 강조합니다: Crypto execs - MSN. 블록체인 보안 뉴스 2건 분석 - Investing Dragon 자동 수집…"
