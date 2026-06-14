@@ -42,6 +42,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-13 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 암호화폐 사기꾼들이 월드컵 티켓 수요를 악용하고 있다고 TRM이 경고했습니다. - 102건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 트럼프 주목</li><li>📈 <strong>가격/시장</strong>: 트럼프 주목</li><li>🏦 <strong>거래소</strong>: IPO, 파생상품 주목</li><li>🔵 <strong>규제/정책</strong>: 22건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/trm-world-cup-crypto-scams-fake-tickets-betting?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">암호화폐 사기꾼들이 월드컵 티켓 수요를 악용하고 있다고 TRM이 경고했습니다.</a> <span class="p0-desc">TRM Labs가 여러 지갑 주소와 연결된 월드컵 테마의 암호화폐 사기 활동을 식별함에 따라 FIFA와 FBI는 티켓 사기에 대해 경고했습니다.</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **102건** 수집

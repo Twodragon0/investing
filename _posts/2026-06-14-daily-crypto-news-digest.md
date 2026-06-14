@@ -41,40 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-14 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 의견: 비트코인은 무에서 왔으며 무로 돌아갈 것입니다. - 98건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 관련 53건</li><li>🏦 <strong>거래소</strong>: IPO, 파생상품 관련 25건</li><li>📈 <strong>가격/시장</strong>: 달러 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 증권 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMinwFBVV95cUxNWExIb2tqMHVHQlc2YlZKRmhPdWduU1Z6bEIwelNGMHNvR1laYm42bnJTZVpZRnlCYi1DTHBsY002VG92VWphYXF3QkZpVXRLUFp2RElPYmpuU1JQY1dhcGZGQ1Qzb0pxUC1SaVljMU9LVEFIZEdCaHhmQXRvajRwV21HQTNMbDhkbmtLcWh0dzA5b05OTzhzSWFKZmc0MjQ?hl=en-US&gl=US&ceid=US%3Aen">의견: 비트코인은 무에서 왔으며 무로 돌아갈 것입니다.</a> <span class="p0-desc">2025년 7월 패서디나 근처 주유소에 있는 비트코인 ATM을 광고하는 표지판. Mario Tama/Getty Images John Rapley는 The Globe and Mail.</span></li><li><a href="https://cointelegraph.com/markets/eth-futures-flash-bearish-signal-but-stakers-resilience-points-to-underlying-strength?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">ETH 선물은 약세 신호를 깜박이지만 스테이커의 회복력은 근본적인 강점을 나타냅니다.</a> <span class="p0-desc">ETH 레버리지에 대한 수요는 여전히 낮지만 기업 축적과 지분 보유자의 헌신으로 인해 Ether 가격이 폭락 $1,500로 떨어지는 것을 막을 수 있습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 의견: 비트코인은 무에서 왔으며 무로 돌아갈 것입니다. 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 98건의 뉴스 중 P1 주요 이슈도 25건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (53건): 비트코인 관련 (53건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **🏦 거래소** (25건): IPO, 파생상품 관련 지표와 수급 흐름을 함께 확인하세요.
-- **📈 가격/시장** (27건): 달러 가격 변동 (27건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 의견: 비트코인은 무에서 왔으며 무로 돌아갈 것입니다.
-- ETH 선물은 약세 신호를 깜박이지만 스테이커의 회복력은 근본적인 강점을 나타냅니다.
-
-### 주요 이슈
-
-- 비트코인은 암호화폐 겨울이 끝나며 59,000달러로 바닥을 쳤다고 Standard Chartered 분석가는 말합니다.
-- 암호화폐는 SpaceX 열풍에 대한 현금을 IPO 이전 파생상품과 교환합니다.
-- 트럼프의 암호화폐 이익, 투자자의 손실 분석
-- 외 22건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, ETF
-- **주요 출처**: Google News(20건), Decrypt(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-06-14.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-06-14.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **98건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
