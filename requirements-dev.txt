@@ -12,3 +12,8 @@ pytest>=8.0
 pytest-cov>=5.0
 pytest-playwright>=0.4
 pytest-timeout>=2.3
+
+# Lint/format — CI(code-quality.yml)와 .pre-commit-config.yaml(ruff-pre-commit rev)이
+# 동일 버전을 써야 format 규칙 불일치로 인한 spurious CI red를 막을 수 있음.
+# 세 곳(여기 / code-quality.yml / .pre-commit-config.yaml)을 항상 함께 갱신할 것.
+ruff==0.15.8

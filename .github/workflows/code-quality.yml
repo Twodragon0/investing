@@ -49,7 +49,10 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r scripts/requirements.txt ruff yamllint basedpyright pytest pytest-cov pytest-xdist pre-commit
+          # ruff는 핀 고정: floating(unpinned) 시 새 릴리스의 format 규칙 변경으로
+          # 코드 변경 없이 main이 갑자기 red가 될 수 있음. .pre-commit-config.yaml의
+          # ruff-pre-commit rev(v0.15.8) 및 requirements-dev.txt와 반드시 동기화할 것.
+          pip install -r scripts/requirements.txt ruff==0.15.8 yamllint basedpyright pytest pytest-cov pytest-xdist pre-commit
           curl -sSL "https://github.com/rhysd/actionlint/releases/download/v1.7.7/actionlint_1.7.7_linux_amd64.tar.gz" -o /tmp/actionlint.tgz
           tar -xzf /tmp/actionlint.tgz -C /tmp
           install /tmp/actionlint /usr/local/bin/actionlint
