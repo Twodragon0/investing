@@ -8,8 +8,12 @@
 {% assign image_height = include.height | default: '630' %}
 {% capture image_attrs %}alt="{{ image_alt }}" loading="{{ image_loading }}" decoding="{{ image_decoding }}" width="{{ image_width }}" height="{{ image_height }}"{% if image_fetchpriority != '' %} fetchpriority="{{ image_fetchpriority }}"{% endif %}{% if image_class != '' %} class="{{ image_class }}"{% endif %}{% endcapture %}
 
+{% assign _is_remote = false %}
+{% if site.r2_image_base != '' and site.r2_image_base != nil and image_path contains site.r2_image_base %}
+  {% assign _is_remote = true %}
+{% endif %}
 {% assign _is_generated = false %}
-{% if image_path contains '/assets/images/generated/' %}
+{% if image_path contains '/assets/images/generated/' or _is_remote %}
   {% assign _is_generated = true %}
 {% endif %}
 
@@ -33,6 +37,15 @@
   {% else %}
     {% assign image_path_png = image_path %}
   {% endunless %}
+  {% if _is_remote %}
+    {% comment %} R2 CDN path: skip site.static_files check (R2 objects are not in static_files).
+       Trust that migrate_images_to_r2 --apply only rewrites image: when all 3 variants uploaded. {% endcomment %}
+<picture>
+  <source srcset="{{ image_avif }}" type="image/avif">
+  <source srcset="{{ image_webp }}" type="image/webp">
+  <img src="{{ image_path_png }}" {{ image_attrs | strip }}>
+</picture>
+  {% else %}
   {% comment %} cleanup-old-images.yml prunes generated images >30 days old while posts keep
      referencing them. Render nothing when the file is gone so no caller emits a broken <img>. {% endcomment %}
   {% assign _gp_exists = site.static_files | where: 'path', image_path_png | first %}
@@ -42,6 +55,7 @@
   <source srcset="{{ image_webp | relative_url }}" type="image/webp">
   <img src="{{ image_path_png | relative_url }}" {{ image_attrs | strip }}>
 </picture>
+  {% endif %}
   {% endif %}
 {% else %}
 <img src="{{ image_path | relative_url }}" {{ image_attrs | strip }}>

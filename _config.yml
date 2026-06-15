@@ -10,6 +10,11 @@ og_image: /assets/images/og-default.png
 og_image_width: 1200
 og_image_height: 630
 logo: /assets/images/og-default.png
+# R2 이미지 오프로딩(Phase 2) 공개 CDN 베이스. 빈 값이면 R2 비활성 = 기존 로컬 동작 100% 불변.
+# 컷오버 시 "https://img.2twodragon.com/generated/" 등으로 설정. 시크릿 아님(공개 도메인).
+# 레이아웃 가드(generated-picture.html / default.html / post.html)가 이 값을 보고 R2 절대 URL을
+# "생성 이미지"로 인지해 <picture> avif/webp 변형을 유지하고 로컬 존재 검사를 생략한다.
+r2_image_base: ""
 # Google Search Console verification token (optional — site is also verified via DNS).
 # Get from https://search.google.com/search-console → Settings → Ownership verification → HTML tag
 google_site_verification: ""

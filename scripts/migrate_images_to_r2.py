@@ -167,8 +167,31 @@ def run_dry_run(candidates: list[dict]) -> None:
     logger.info("dry-run 완료. --apply 플래그로 실제 적용하세요.")
 
 
+def _collect_variants(png_path: Path) -> list[Path]:
+    """png 경로에서 png/webp/avif 3변형 경로 목록 반환."""
+    base = png_path.with_suffix("")
+    return [png_path, base.with_suffix(".webp"), base.with_suffix(".avif")]
+
+
+def _thumb_png_path(png_path: Path) -> Path:
+    """main png 경로에서 thumb-og 변형 경로 반환.
+
+    post.image 가 og-* 계열이면 /og- → /thumb-og- 치환된 경로,
+    아닌 경우(news-briefing-* 등)는 main 과 동일한 경로 반환.
+    """
+    path_str = str(png_path)
+    if "/og-" in path_str:
+        return Path(path_str.replace("/og-", "/thumb-og-"))
+    return png_path
+
+
 def run_apply(candidates: list[dict]) -> int:
-    """실제 업로드 및 front matter 치환. 성공 건수 반환."""
+    """실제 업로드 및 front matter 치환. 성공 건수 반환.
+
+    main png·webp·avif 3변형과 (og-* 포스트인 경우) thumb-og-* 3변형이
+    모두 로컬에 존재하고 모두 업로드 성공한 경우에만 image: 를 CDN URL로 치환한다.
+    하나라도 부재·실패이면 skip.
+    """
     if not asset_storage.is_enabled():
         logger.error(
             "R2가 활성화되지 않았습니다. "
@@ -181,16 +204,54 @@ def run_apply(candidates: list[dict]) -> int:
     logger.info("=== apply 모드: 총 %d건 업로드 및 front matter 치환 ===", len(candidates))
     success = 0
     for item in candidates:
-        png_path = str(item["local_png"])
-        uploaded = asset_storage.mirror_generated_variants(png_path)
-        if uploaded == 0:
-            # 단일 파일 업로드 시도 (변형 없이 png만 있을 경우 대비)
-            ok = asset_storage.upload_file(png_path)
-            if not ok:
+        png_path = item["local_png"]
+        main_variants = _collect_variants(png_path)
+
+        # main 3변형 로컬 존재 확인
+        missing = [str(v) for v in main_variants if not v.is_file()]
+        if missing:
+            logger.warning(
+                "변형 누락(skip): %s — png/webp/avif 중 일부 부재: %s",
+                item["filename"],
+                ", ".join(missing),
+            )
+            continue
+
+        # thumb-og 3변형 처리 (og-* 계열 포스트만)
+        thumb_png = _thumb_png_path(png_path)
+        thumb_variants: list[Path] = []
+        if thumb_png != png_path:
+            # post.image 가 og-* 계열 → thumb-og-* 3변형도 필요
+            thumb_variants = _collect_variants(thumb_png)
+            thumb_missing = [str(v) for v in thumb_variants if not v.is_file()]
+            if thumb_missing:
                 logger.warning(
-                    "업로드 실패 (skip): %s | %s",
-                    item["file"].name,
+                    "thumb 변형 누락(skip): %s — thumb-og png/webp/avif 중 일부 부재: %s",
                     item["filename"],
+                    ", ".join(thumb_missing),
+                )
+                continue
+
+        # main 3변형 업로드
+        upload_results = [asset_storage.upload_file(str(v)) for v in main_variants]
+        if not all(upload_results):
+            failed = [str(v) for v, ok in zip(main_variants, upload_results, strict=True) if not ok]
+            logger.warning(
+                "변형 업로드 실패(skip): %s — 실패 변형: %s",
+                item["filename"],
+                ", ".join(failed),
+            )
+            continue
+
+        # thumb-og 3변형 업로드 (해당하는 경우)
+        if thumb_variants:
+            thumb_results = [asset_storage.upload_file(str(v)) for v in thumb_variants]
+            if not all(thumb_results):
+                failed_thumb = [str(v) for v, ok in zip(thumb_variants, thumb_results, strict=True) if not ok]
+                logger.warning(
+                    "thumb 변형 업로드 실패(skip): %s — 실패 변형: %s",
+                    item["filename"],
+                    ", ".join(failed_thumb),
                 )
                 continue
 

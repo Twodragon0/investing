@@ -70,10 +70,42 @@ image_generator.save(...)  →  로컬 임시 저장 (avif/webp/png)
 
 ## 6. 레이아웃/가드 영향
 
-- 절대 R2 URL은 `site.static_files` 존재 체크가 불가능(로컬 파일 아님).
-- 신규 이미지는 R2에 항상 존재하므로 가드 불필요. 단 **혼재 기간**(R2 URL + 옛 로컬 경로)에는
-  현 가드가 로컬 경로만 체크 → 충돌 없음(절대 URL은 `contains '/assets/images/generated/'` 미일치).
-- `og:image` avif/webp→png 정규화 로직은 R2 URL에도 동일 적용(도메인만 다름) — 검토 필요.
+### 6.1 `_config.yml` 설정
+
+`_config.yml`에 다음 필드 추가:
+
+```yaml
+# R2 공개 CDN 베이스 URL (예: https://img.2twodragon.com, 기본: 빈 문자열)
+# 미설정 시 레이아웃은 로컬 경로만 참조 → graceful degradation
+r2_image_base: ""
+```
+
+레이아웃 가드(`_includes/generated-picture.html`, `_layouts/default.html`, `_layouts/post.html`)가
+이 값으로 R2 절대 URL을 인식하고 `<picture>` 렌더링을 활성화.
+
+### 6.2 R2 경로 존재 검사 생략
+
+절대 R2 URL은 `site.static_files` 존재 체크가 불가능(로컬 파일 아님).
+**R2 경로는 존재 검사를 생략**하고 항상 `<picture>`(avif/webp source 포함) 렌더.
+안전성은 마이그레이션의 **3변형 업로드 게이트**(§8 step4)가 보장:
+png/webp/avif 3변형 모두 업로드 성공 시에만 `image:` 치환 → 존재 안 하는 `<source>` 참조 방지.
+
+### 6.3 로컬 경로 분기 무회귀 유지
+
+혼재 기간(R2 URL + 옛 로컬 경로) 동안 로컬 경로 분기는 바이트 동일 무회귀 유지.
+7개 include 호출처(`_layouts/default.html`/`post.html`, `_includes/`, 카테고리 페이지)가 보호됨.
+- 로컬 경로: 기존 가드 로직 유지(avif/webp/png 3변형 시도)
+- R2 URL: `r2_image_base` 포함 시 항상 `<picture>` 렌더(존재 검사 생략)
+
+### 6.4 post-card 썸네일(`thumb-og-*`) 표면
+
+`_includes/post-card.html`(home/category 리스팅 카드)은 `post.image`의 `/og-`를 `/thumb-og-`로
+치환한 **별도 썸네일 에셋**을 렌더한다. R2 컷오버 시 카드가 깨지지 않도록:
+- post-card도 R2 인지(R2 thumb URL이면 존재 검사 생략하고 `<picture>` 렌더) — 적용됨.
+- `migrate_images_to_r2 --apply`가 main(og-*) 3변형 **및** 썸네일(thumb-og-*) 3변형을 **모두**
+  업로드 성공한 경우에만 `image:`를 CDN URL로 치환 — 적용됨(부분 실패 시 skip).
+- `post.image`에 `/og-`가 없는 포스트(예 `news-briefing-*`)는 카드가 main 이미지를 썸네일로
+  쓰므로 thumb-og 추가 업로드 불필요(main 3변형으로 충분).
 
 ## 7. 시크릿
 
@@ -129,8 +161,18 @@ image_generator.save(...)  →  로컬 임시 저장 (avif/webp/png)
    ✅ (완료) `migrate_images_to_r2.py` 스크립트 추가(dry-run 기본, --apply는 is_enabled 게이트).
    ✅ (완료) `cleanup-old-images.yml`에 폐지 예정 주석 추가(동작 불변).
 3. 1~2주 운영 관찰(업로드 성공률, CDN 캐시 적중, 비용).
-4. `migrate_images_to_r2.py --dry-run` → 검토 → `--apply`로 현존 이미지 일괄 이전.
-   - ⚠️ **컷오버 전 필수 결정(코드리뷰 MEDIUM #1)**: `image:`가 절대 CDN URL이 되면 레이아웃 가드(`_includes/generated-picture.html`, `_layouts/default.html`의 `contains '/assets/images/generated/'` 조건)가 매치 안 돼 hero가 plain `<img>`로 렌더되고 **avif/webp `<picture>` 변형이 사라진다**(이미지는 정상 표시되나 차세대 포맷 최적화 손실). 두 갈래: (a) 템플릿 가드를 R2 base URL도 인식하도록 확장(권장) — 단 이 경우 `--apply`가 png/webp/avif **3변형 모두 업로드 성공**을 요구해야 함(부분 업로드 시 존재 안 하는 `<source>` 참조 방지, MEDIUM open question), 또는 (b) CDN에선 png-only `<img>` 유지.
+4. **선행 완료 확인**: 
+   - ✅ 템플릿 가드 R2 확장(`_includes/generated-picture.html`, `_layouts/default.html`, `_layouts/post.html`에
+     `r2_image_base` 인식 추가, 절대 URL은 존재 검사 생략, 로컬 경로는 기존 로직 유지)
+   - ✅ 3변형 업로드 게이트 구현(`asset_storage.py`, `image_generator`)
+   
+   그 후 `migrate_images_to_r2.py --dry-run` → 검토 → `--apply`로 현존 이미지 일괄 이전:
+   
+   **3변형 업로드 게이트**:
+   `--apply` 실행 시 `migrate_images_to_r2.py`는 png/webp/avif **3변형 모두 로컬 존재 + 모두 업로드 성공**
+   확인 후에만 포스트 `image:` 필드를 절대 CDN URL로 치환.
+   부분 업로드(예: avif만 성공) 시 `image:` 치환 안 함 → 존재 안 하는 `<source>` 참조 방지.
+   검증: 치환 후 `python scripts/check_post_images.py`(R2 HEAD 체크로 확장) + `bundle exec jekyll build`.
 5. `assets/images/generated/` gitignore + 트래킹 제거(`git rm --cached`), `cleanup-old-images.yml` 비활성.
 6. `check_post_images.py`/회귀 테스트를 R2 HEAD 체크로 확장.
 

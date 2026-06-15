@@ -61,7 +61,11 @@ layout: default
   {% comment %} cleanup-old-images.yml prunes generated images >30 days old; skip the hero
      when the referenced generated file is gone to avoid a broken <img>. {% endcomment %}
   {% assign _hero_image = page.image %}
-  {% if _hero_image contains '/assets/images/generated/' %}
+  {% assign _hero_is_r2 = false %}
+  {% if site.r2_image_base and site.r2_image_base != '' and _hero_image contains site.r2_image_base %}
+    {% assign _hero_is_r2 = true %}
+  {% endif %}
+  {% if _hero_is_r2 == false and _hero_image contains '/assets/images/generated/' %}
     {% assign _hero_png = _hero_image | replace: '.webp', '.png' | replace: '.avif', '.png' | replace: '.jpg', '.png' | replace: '.jpeg', '.png' %}
     {% assign _hero_file = site.static_files | where: 'path', _hero_png | first %}
     {% unless _hero_file %}{% assign _hero_image = '' %}{% endunless %}
@@ -223,7 +227,11 @@ layout: default
       {% assign rel_cat_name = rel_cat_data.name | default: rel_cat %}
       <a href="{{ matched_post.url | relative_url }}" class="related-post-card">
         {% assign _rel_img = matched_post.image %}
-        {% if _rel_img contains '/assets/images/generated/' %}
+        {% assign _rel_is_r2 = false %}
+        {% if site.r2_image_base and site.r2_image_base != '' and _rel_img contains site.r2_image_base %}
+          {% assign _rel_is_r2 = true %}
+        {% endif %}
+        {% if _rel_is_r2 == false and _rel_img contains '/assets/images/generated/' %}
           {% assign _rel_png = _rel_img | replace: '.webp', '.png' | replace: '.avif', '.png' | replace: '.jpg', '.png' | replace: '.jpeg', '.png' %}
           {% assign _rel_file = site.static_files | where: 'path', _rel_png | first %}
           {% unless _rel_file %}{% assign _rel_img = '' %}{% endunless %}

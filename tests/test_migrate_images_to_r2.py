@@ -82,12 +82,42 @@ def _make_posts_dir(tmp_path: Path, image_url: str = _LOCAL_IMAGE_URL) -> tuple[
 
 
 def _make_local_png(tmp_path: Path, filename: str = _GENERATED_PNG) -> Path:
-    """tmp_path 아래 assets/images/generated/{filename} 생성."""
+    """tmp_path 아래 assets/images/generated/{filename} (png만) 생성."""
     gen_dir = tmp_path / "assets" / "images" / "generated"
     gen_dir.mkdir(parents=True, exist_ok=True)
     png = gen_dir / filename
     png.write_bytes(b"fake-png")
     return png
+
+
+def _make_local_variants(tmp_path: Path, filename: str = _GENERATED_PNG) -> tuple[Path, Path, Path]:
+    """tmp_path 아래 assets/images/generated/{filename} 의 png/webp/avif 3변형 생성.
+
+    run_apply 3변형 게이트 테스트용 헬퍼. (png, webp, avif) 경로 반환.
+    파일명에 /og-/가 포함되는 경우(og-* 계열)에는 thumb-og-* 3변형도 함께 생성한다.
+    """
+    gen_dir = tmp_path / "assets" / "images" / "generated"
+    gen_dir.mkdir(parents=True, exist_ok=True)
+    base = Path(filename).stem
+    png = gen_dir / f"{base}.png"
+    webp = gen_dir / f"{base}.webp"
+    avif = gen_dir / f"{base}.avif"
+    for path in (png, webp, avif):
+        path.write_bytes(b"fake-image")
+    # og-* 계열이면 thumb-og-* 3변형도 생성
+    if "og-" in base:
+        thumb_base = base.replace("og-", "thumb-og-", 1)
+        for ext in (".png", ".webp", ".avif"):
+            (gen_dir / f"{thumb_base}{ext}").write_bytes(b"fake-thumb")
+    return png, webp, avif
+
+
+def _make_og_variants(tmp_path: Path, og_filename: str) -> tuple[Path, Path, Path]:
+    """og-* 파일명으로 main 3변형 + thumb-og-* 3변형을 모두 생성.
+
+    (og_png, og_webp, og_avif) 반환. thumb 변형은 부수 효과로 생성됨.
+    """
+    return _make_local_variants(tmp_path, og_filename)
 
 
 # ---------------------------------------------------------------------------
@@ -217,9 +247,9 @@ class TestRunApplyDisabled:
 
 class TestRunApplyEnabled:
     def test_apply_성공_image_cdn_url로_치환(self, enabled_env, monkeypatch, tmp_path):
-        """is_enabled=True + 업로드 성공 시 image: 가 CDN URL로 치환된다."""
+        """is_enabled=True + 3변형 존재 + 업로드 성공 시 image: 가 CDN URL로 치환된다."""
         posts_dir, post_file = _make_posts_dir(tmp_path)
-        _make_local_png(tmp_path)
+        _make_local_variants(tmp_path)
 
         monkeypatch.setattr(asset_storage, "_client", lambda: MagicMock())
 
@@ -234,7 +264,7 @@ class TestRunApplyEnabled:
     def test_apply_성공_본문_보존(self, enabled_env, monkeypatch, tmp_path):
         """image: 라인만 바뀌고 나머지 front matter·본문은 그대로다."""
         posts_dir, post_file = _make_posts_dir(tmp_path)
-        _make_local_png(tmp_path)
+        _make_local_variants(tmp_path)
         original = post_file.read_text(encoding="utf-8")
 
         monkeypatch.setattr(asset_storage, "_client", lambda: MagicMock())
@@ -256,7 +286,7 @@ class TestRunApplyEnabled:
     def test_apply_성공_bak_파일_생성(self, enabled_env, monkeypatch, tmp_path):
         """apply 성공 시 .bak 백업 파일이 생성된다."""
         posts_dir, post_file = _make_posts_dir(tmp_path)
-        _make_local_png(tmp_path)
+        _make_local_variants(tmp_path)
         original = post_file.read_text(encoding="utf-8")
 
         monkeypatch.setattr(asset_storage, "_client", lambda: MagicMock())
@@ -269,9 +299,9 @@ class TestRunApplyEnabled:
         assert bak.read_text(encoding="utf-8") == original
 
     def test_upload_실패_시_skip_파일_수정_없음(self, enabled_env, monkeypatch, tmp_path):
-        """업로드 실패 시 해당 포스트를 skip하고 파일을 수정하지 않는다."""
+        """3변형 존재하나 업로드 실패 시 해당 포스트를 skip하고 파일을 수정하지 않는다."""
         posts_dir, post_file = _make_posts_dir(tmp_path)
-        _make_local_png(tmp_path)
+        _make_local_variants(tmp_path)
         original = post_file.read_text(encoding="utf-8")
 
         client = MagicMock()
@@ -294,7 +324,10 @@ class TestRunApplyEnabled:
         fnames = ["news-briefing-crypto-2026-03-20.png", "news-briefing-crypto-2026-03-21.png"]
         post_files = []
         for i, fname in enumerate(fnames):
-            (gen_dir / fname).write_bytes(b"x")
+            stem = Path(fname).stem
+            # 3변형 모두 생성
+            for ext in (".png", ".webp", ".avif"):
+                (gen_dir / f"{stem}{ext}").write_bytes(b"x")
             pf = posts_dir / f"2026-03-{20 + i}-post.md"
             pf.write_text(
                 _POST_TEMPLATE.format(image_url=f"/assets/images/generated/{fname}"),
@@ -302,11 +335,7 @@ class TestRunApplyEnabled:
             )
             post_files.append(pf)
 
-        call_count = 0
-
         def _selective_put(**kwargs):
-            nonlocal call_count
-            call_count += 1
             if "2026-03-20" in kwargs.get("Key", ""):
                 raise RuntimeError("의도적 실패")
 
@@ -323,6 +352,154 @@ class TestRunApplyEnabled:
         # 두 번째 포스트: 성공 → CDN URL
         cdn2 = "https://img.example.com/generated/news-briefing-crypto-2026-03-21.png"
         assert cdn2 in post_files[1].read_text(encoding="utf-8")
+
+    def test_3변형_모두_존재_업로드_성공_치환됨(self, enabled_env, monkeypatch, tmp_path):
+        """png/webp/avif 3변형 모두 존재+업로드 성공 → image: CDN URL로 치환된다."""
+        posts_dir, post_file = _make_posts_dir(tmp_path)
+        _make_local_variants(tmp_path)
+
+        monkeypatch.setattr(asset_storage, "_client", lambda: MagicMock())
+
+        candidates = _m.collect_candidates(posts_dir=posts_dir, repo_root=tmp_path)
+        result = _m.run_apply(candidates)
+
+        assert result == 1
+        content = post_file.read_text(encoding="utf-8")
+        assert _CDN_URL in content
+        assert _LOCAL_IMAGE_URL not in content
+
+    def test_avif_부재_치환_안됨(self, enabled_env, monkeypatch, tmp_path):
+        """avif 변형이 로컬에 없으면 skip — 파일 무변경."""
+        posts_dir, post_file = _make_posts_dir(tmp_path)
+        png, webp, avif = _make_local_variants(tmp_path)
+        avif.unlink()  # avif 제거
+
+        monkeypatch.setattr(asset_storage, "_client", lambda: MagicMock())
+
+        original = post_file.read_text(encoding="utf-8")
+        candidates = _m.collect_candidates(posts_dir=posts_dir, repo_root=tmp_path)
+        result = _m.run_apply(candidates)
+
+        assert result == 0
+        assert post_file.read_text(encoding="utf-8") == original
+
+    def test_webp_부재_치환_안됨(self, enabled_env, monkeypatch, tmp_path):
+        """webp 변형이 로컬에 없으면 skip — 파일 무변경."""
+        posts_dir, post_file = _make_posts_dir(tmp_path)
+        png, webp, avif = _make_local_variants(tmp_path)
+        webp.unlink()  # webp 제거
+
+        monkeypatch.setattr(asset_storage, "_client", lambda: MagicMock())
+
+        original = post_file.read_text(encoding="utf-8")
+        candidates = _m.collect_candidates(posts_dir=posts_dir, repo_root=tmp_path)
+        result = _m.run_apply(candidates)
+
+        assert result == 0
+        assert post_file.read_text(encoding="utf-8") == original
+
+    def test_avif_업로드_실패_치환_안됨(self, enabled_env, monkeypatch, tmp_path):
+        """3변형 모두 존재하나 avif 업로드만 실패 → skip(치환 안 함)."""
+        posts_dir, post_file = _make_posts_dir(tmp_path)
+        _make_local_variants(tmp_path)
+        original = post_file.read_text(encoding="utf-8")
+
+        def _fail_avif(**kwargs):
+            if kwargs.get("Key", "").endswith(".avif"):
+                raise RuntimeError("avif 업로드 실패")
+
+        client = MagicMock()
+        client.put_object.side_effect = _fail_avif
+        monkeypatch.setattr(asset_storage, "_client", lambda: client)
+
+        candidates = _m.collect_candidates(posts_dir=posts_dir, repo_root=tmp_path)
+        result = _m.run_apply(candidates)
+
+        assert result == 0
+        assert post_file.read_text(encoding="utf-8") == original
+
+    # --- thumb-og 관련 테스트 ---
+
+    def test_og_포스트_main_thumb_모두_성공_치환됨(self, enabled_env, monkeypatch, tmp_path):
+        """og-* 포스트: main 3변형 + thumb-og-* 3변형 모두 존재·업로드 성공 → 치환됨."""
+        og_filename = "og-market-snapshot-2026-06-10.png"
+        og_local_url = f"/assets/images/generated/{og_filename}"
+        og_cdn_url = "https://img.example.com/generated/og-market-snapshot-2026-06-10.png"
+
+        posts_dir, post_file = _make_posts_dir(tmp_path, image_url=og_local_url)
+        _make_og_variants(tmp_path, og_filename)
+
+        monkeypatch.setattr(asset_storage, "_client", lambda: MagicMock())
+
+        candidates = _m.collect_candidates(posts_dir=posts_dir, repo_root=tmp_path)
+        assert len(candidates) == 1
+
+        result = _m.run_apply(candidates)
+
+        assert result == 1
+        content = post_file.read_text(encoding="utf-8")
+        assert og_cdn_url in content
+        assert og_local_url not in content
+
+    def test_og_포스트_thumb_avif_부재_skip(self, enabled_env, monkeypatch, tmp_path):
+        """og-* 포스트인데 thumb-og avif가 로컬에 없으면 skip — 파일 무변경."""
+        og_filename = "og-market-snapshot-2026-06-10.png"
+        og_local_url = f"/assets/images/generated/{og_filename}"
+
+        posts_dir, post_file = _make_posts_dir(tmp_path, image_url=og_local_url)
+        _make_og_variants(tmp_path, og_filename)
+
+        # thumb-og avif 제거
+        gen_dir = tmp_path / "assets" / "images" / "generated"
+        (gen_dir / "thumb-og-market-snapshot-2026-06-10.avif").unlink()
+
+        monkeypatch.setattr(asset_storage, "_client", lambda: MagicMock())
+
+        original = post_file.read_text(encoding="utf-8")
+        candidates = _m.collect_candidates(posts_dir=posts_dir, repo_root=tmp_path)
+        result = _m.run_apply(candidates)
+
+        assert result == 0
+        assert post_file.read_text(encoding="utf-8") == original
+
+    def test_og_포스트_thumb_업로드_실패_skip(self, enabled_env, monkeypatch, tmp_path):
+        """og-* 포스트: main 업로드 성공이지만 thumb-og 업로드 실패 → skip."""
+        og_filename = "og-market-snapshot-2026-06-10.png"
+        og_local_url = f"/assets/images/generated/{og_filename}"
+
+        posts_dir, post_file = _make_posts_dir(tmp_path, image_url=og_local_url)
+        _make_og_variants(tmp_path, og_filename)
+
+        def _fail_thumb(**kwargs):
+            if "thumb-og-" in kwargs.get("Key", ""):
+                raise RuntimeError("thumb 업로드 실패")
+
+        client = MagicMock()
+        client.put_object.side_effect = _fail_thumb
+        monkeypatch.setattr(asset_storage, "_client", lambda: client)
+
+        original = post_file.read_text(encoding="utf-8")
+        candidates = _m.collect_candidates(posts_dir=posts_dir, repo_root=tmp_path)
+        result = _m.run_apply(candidates)
+
+        assert result == 0
+        assert post_file.read_text(encoding="utf-8") == original
+
+    def test_non_og_포스트_main_3변형만으로_치환됨(self, enabled_env, monkeypatch, tmp_path):
+        """non-og 포스트(news-briefing-* 등): main 3변형만 성공이면 치환됨(thumb 추가 불필요)."""
+        # _GENERATED_PNG = "news-briefing-crypto-2026-03-20.png" — /og-/ 없음
+        posts_dir, post_file = _make_posts_dir(tmp_path)
+        _make_local_variants(tmp_path)  # thumb-og 불필요
+
+        monkeypatch.setattr(asset_storage, "_client", lambda: MagicMock())
+
+        candidates = _m.collect_candidates(posts_dir=posts_dir, repo_root=tmp_path)
+        result = _m.run_apply(candidates)
+
+        assert result == 1
+        content = post_file.read_text(encoding="utf-8")
+        assert _CDN_URL in content
+        assert _LOCAL_IMAGE_URL not in content
 
 
 # ---------------------------------------------------------------------------
@@ -383,9 +560,9 @@ class TestMainCli:
         assert post_file.read_text(encoding="utf-8") == original
 
     def test_main_apply_r2_활성화_치환(self, enabled_env, monkeypatch, tmp_path):
-        """--apply + R2 활성화 + 업로드 성공 → image: CDN URL로 치환, exit 0."""
+        """--apply + R2 활성화 + 3변형 존재 + 업로드 성공 → image: CDN URL로 치환, exit 0."""
         posts_dir, post_file = _make_posts_dir(tmp_path)
-        _make_local_png(tmp_path)
+        _make_local_variants(tmp_path)
 
         monkeypatch.setattr(asset_storage, "_client", lambda: MagicMock())
 
@@ -399,9 +576,9 @@ class TestMainCli:
         assert _CDN_URL in post_file.read_text(encoding="utf-8")
 
     def test_main_apply_전체_업로드_실패면_exit1(self, enabled_env, monkeypatch, tmp_path):
-        """--apply + R2 활성화인데 모든 업로드가 실패 → 0건 성공이므로 exit 1, 파일 수정 없음."""
+        """--apply + R2 활성화, 3변형 존재, 모든 업로드 실패 → 0건 성공이므로 exit 1, 파일 수정 없음."""
         posts_dir, post_file = _make_posts_dir(tmp_path)
-        _make_local_png(tmp_path)
+        _make_local_variants(tmp_path)
         original = post_file.read_text(encoding="utf-8")
 
         client = MagicMock()

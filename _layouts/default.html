@@ -13,12 +13,20 @@
   <link rel="preload" href="/assets/fonts/jetbrains-mono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <meta name="theme-color" content="#0a0e14" id="meta-theme-color">
   {% if page.image %}
-  {% if page.image contains '/assets/images/generated/' %}
+  {% assign _preload_is_r2 = false %}
+  {% if site.r2_image_base != '' and site.r2_image_base != nil %}
+    {% if page.image contains site.r2_image_base %}{% assign _preload_is_r2 = true %}{% endif %}
+  {% endif %}
+  {% if _preload_is_r2 or page.image contains '/assets/images/generated/' %}
   {% assign preload_avif = page.image | replace: '.png', '.avif' | replace: '.jpg', '.avif' | replace: '.jpeg', '.avif' %}
   {% comment %} Skip preload when the generated image was pruned (cleanup-old-images.yml, >30 days). {% endcomment %}
+  {% if _preload_is_r2 %}
+  <link rel="preload" as="image" type="image/avif" href="{{ preload_avif }}" fetchpriority="high">
+  {% else %}
   {% assign _preload_file = site.static_files | where: 'path', preload_avif | first %}
   {% if _preload_file %}
   <link rel="preload" as="image" type="image/avif" href="{{ preload_avif | relative_url }}" fetchpriority="high">
+  {% endif %}
   {% endif %}
   {% endif %}
   {% endif %}
@@ -40,14 +48,20 @@
   <!-- OG Image: page.image → content first image → site default, SVG→PNG fallback -->
   <!-- Normalize generated images to PNG for OG (crawlers reject AVIF/WebP) -->
   {% assign _raw_page_image = page.image %}
-  {% if _raw_page_image contains '/assets/images/generated/' %}
+  {% assign _og_is_r2 = false %}
+  {% if site.r2_image_base != '' and site.r2_image_base != nil %}
+    {% if _raw_page_image contains site.r2_image_base %}{% assign _og_is_r2 = true %}{% endif %}
+  {% endif %}
+  {% if _og_is_r2 or _raw_page_image contains '/assets/images/generated/' %}
     {% unless _raw_page_image contains '.png' %}
       {% assign _raw_page_image = _raw_page_image | replace: '.webp', '.png' | replace: '.avif', '.png' | replace: '.jpg', '.png' | replace: '.jpeg', '.png' %}
     {% endunless %}
-    {% comment %} cleanup-old-images.yml prunes generated images >30 days old; drop the
-       reference if the file is gone so OG falls back to content image / site default. {% endcomment %}
-    {% assign _gen_og_file = site.static_files | where: 'path', _raw_page_image | first %}
-    {% unless _gen_og_file %}{% assign _raw_page_image = '' %}{% endunless %}
+    {% unless _og_is_r2 %}
+      {% comment %} cleanup-old-images.yml prunes generated images >30 days old; drop the
+         reference if the file is gone so OG falls back to content image / site default. {% endcomment %}
+      {% assign _gen_og_file = site.static_files | where: 'path', _raw_page_image | first %}
+      {% unless _gen_og_file %}{% assign _raw_page_image = '' %}{% endunless %}
+    {% endunless %}
   {% endif %}
   {% assign og_image = _raw_page_image | default: site.og_image %}
   {% if og_image == site.og_image and content contains '<img' %}
@@ -65,11 +79,18 @@
     {% endif %}
   {% endif %}
   {% comment %} Final guard: a content-image fallback may have landed on a pruned generated
-     image (cleanup-old-images.yml); fall back to the site default rather than emit a 404. {% endcomment %}
+     image (cleanup-old-images.yml); fall back to the site default rather than emit a 404.
+     R2 URL은 항상 존재한다고 신뢰하므로 site.static_files 검사 생략. {% endcomment %}
+  {% assign _final_is_r2 = false %}
+  {% if site.r2_image_base != '' and site.r2_image_base != nil %}
+    {% if og_image contains site.r2_image_base %}{% assign _final_is_r2 = true %}{% endif %}
+  {% endif %}
+  {% unless _final_is_r2 %}
   {% if og_image contains '/assets/images/generated/' %}
     {% assign _og_exists = site.static_files | where: 'path', og_image | first %}
     {% unless _og_exists %}{% assign og_image = site.og_image %}{% endunless %}
   {% endif %}
+  {% endunless %}
   {% if og_image contains '.svg' %}
     {% assign og_image_png = og_image | replace: '.svg', '.png' %}
     {% assign og_image_og_png = og_image | replace: '.svg', '_og.png' %}

@@ -10,11 +10,22 @@
     {% assign thumb_image = '' %}
     {% if post.image %}
       {% assign _thumb_candidate = post.image | replace: '/og-', '/thumb-og-' %}
+      {% comment %} R2 절대 CDN URL은 로컬 파일이 아니므로 site.static_files 존재 검사 불가.
+         R2면 검사 생략하고 thumb-og CDN URL을 그대로 사용한다(migrate_images_to_r2가
+         thumb-og 3변형을 업로드 성공했을 때만 image:를 CDN URL로 치환하므로 존재 신뢰). {% endcomment %}
+      {% assign _thumb_is_r2 = false %}
+      {% if site.r2_image_base != '' and site.r2_image_base != nil and _thumb_candidate contains site.r2_image_base %}
+        {% assign _thumb_is_r2 = true %}
+      {% endif %}
+      {% if _thumb_is_r2 %}
+        {% assign thumb_image = _thumb_candidate %}
+      {% else %}
       {% comment %} cleanup-old-images.yml prunes thumbnails >30 days old; show the category
          icon placeholder instead of a broken <img> when the file is gone. {% endcomment %}
       {% assign _thumb_png = _thumb_candidate | replace: '.webp', '.png' | replace: '.avif', '.png' | replace: '.jpg', '.png' | replace: '.jpeg', '.png' %}
       {% assign _thumb_file = site.static_files | where: 'path', _thumb_png | first %}
       {% if _thumb_file %}{% assign thumb_image = _thumb_candidate %}{% endif %}
+      {% endif %}
     {% endif %}
     {% if thumb_image != '' %}
     {% if include.fetchpriority == 'high' %}
