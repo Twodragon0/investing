@@ -67,8 +67,9 @@ python scripts/collect_stock_news.py
 python scripts/generate_daily_summary.py
 python scripts/generate_market_summary.py
 
-# Code quality
-python3 -m ruff check scripts/
+# Code quality (CI Code Quality와 동일 — lint + format)
+python3 -m ruff check scripts/ tests/
+python3 -m ruff format --check scripts/ tests/
 
 # Full test suite
 python3 -m pytest tests/
@@ -103,7 +104,7 @@ bash scripts/install_server_morning_cron.sh
 
 | Change scope | Verification command |
 |-------------|---------------------|
-| Python collector or common module | `python3 -m ruff check scripts/` |
+| Python collector or common module | `python3 -m ruff check scripts/ tests/ && python3 -m ruff format --check scripts/ tests/` |
 | Any Python change | `python3 -m pytest tests/` |
 | Jekyll / site / layout | `bundle exec jekyll build` |
 | Post additions or edits | Check front matter, permalink uniqueness, image existence |

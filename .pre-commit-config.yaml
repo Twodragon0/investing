@@ -19,6 +19,21 @@ repos:
     hooks:
       - id: gitleaks
 
+  # ruff lint + format — CI(code-quality.yml)의 `ruff check`/`ruff format --check
+  # scripts/ tests/`를 로컬 커밋 단계에서 미리 잡는다. 2026-06-10 R2 세션이 미포맷
+  # 파일을 push해 Code Quality가 이틀간 silently red였던 회귀(ruff format 누락) 재발 방지.
+  # rev는 로컬/CI ruff 버전(0.15.8)에 맞춤 — CI ruff가 floating이므로 버전 갱신 시 함께 올릴 것.
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.8
+    hooks:
+      - id: ruff
+        name: ruff lint (scripts/ tests/)
+        args: [--fix]
+        files: ^(scripts/|tests/).*\.py$
+      - id: ruff-format
+        name: ruff format (scripts/ tests/)
+        files: ^(scripts/|tests/).*\.py$
+
   # Enforce relative imports inside scripts/common/ to prevent
   # ModuleNotFoundError at collector execution time (regression for #773 —
   # absolute `from scripts.common.config` broke `_assess_risk_level` for 6 days).
