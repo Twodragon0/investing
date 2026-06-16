@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-16 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 의견: 비트코인은 무에서 왔으며 무로 돌아갈 것입니다. - 86건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 34건 수집</li><li>🏦 <strong>거래소</strong>: 13건 수집</li><li>🔷 <strong>이더리움</strong>: 이더리움, 애널리스트 관련 11건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMinwFBVV95cUxNWExIb2tqMHVHQlc2YlZKRmhPdWduU1Z6bEIwelNGMHNvR1laYm42bnJTZVpZRnlCYi1DTHBsY002VG92VWphYXF3QkZpVXRLUFp2RElPYmpuU1JQY1dhcGZGQ1Qzb0pxUC1SaVljMU9LVEFIZEdCaHhmQXRvajRwV21HQTNMbDhkbmtLcWh0dzA5b05OTzhzSWFKZmc0MjQ?hl=en-US&gl=US&ceid=US%3Aen">의견: 비트코인은 무에서 왔으며 무로 돌아갈 것입니다.</a> <span class="p0-desc">2025년 7월 패서디나 근처 주유소에 있는 비트코인 ATM을 광고하는 표지판. Mario Tama/Getty Images John Rapley는 The Globe and Mail.</span></li><li><a href="https://www.coindesk.com/markets/2026/06/15/middle-east-ceasfire-fed-interest-rate-decision-crypto-week-ahead">중동 휴전, 연준 금리 결정: Crypto Week Ahead</a> <span class="p0-desc">6월 15일부터 시작되는 주에 어떤 일이 일어날지 살펴보세요.</span></li><li><a href="https://www.coindesk.com/markets/2026/06/15/bitcoin-traders-have-a-reason-to-watch-tuesday-s-boj-rate-decision-yen-shorts-are-at-a-nine-year-high">비트코인 거래자들은 화요일 BOJ 금리 결정을 지켜봐야 할 이유가 있습니다. 엔화 공매도 9년래 최고치</a> <span class="p0-desc">엔화에 대한 투기적 매도 포지션의 대규모 축적은 BOJ가 보다 공격적인 긴축 조치를 신호하고 위험 자산을 지원하는 엔화 자금 캐리 트레이드를 잠재적으로 청산할 가능성이 있다는 신호.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 의견: 비트코인은 무에서 왔으며 무로 돌아갈 것입니다. 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 86건의 뉴스 중 P1 주요 이슈도 6건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (50건): 비트코인 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (34건): june, current, nothing 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🏦 거래소** (13건): spacex, exchanges, tokenized 이슈에 대한 시장 반응을 모니터링할 필요가 있습니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 의견: 비트코인은 무에서 왔으며 무로 돌아갈 것입니다.
-- 중동 휴전, 연준 금리 결정: Crypto Week Ahead
-- 비트코인 거래자들은 화요일 BOJ 금리 결정을 지켜봐야 할 이유가 있습니다. 엔화 공매도 9년래 최고치
-
-### 주요 이슈
-
-- 암호화폐 시장 업데이트: 암호화폐 거래소, 토큰화된 SpaceX 주식 출시
-- 오전 회의록: Standard Chartered는 암호화폐 겨울이 끝났다고 말합니다
-- 필리핀, 더욱 엄격한 암호화폐 상장 규칙 발표, 개인 정보 보호 코인 금지
-- 외 3건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, AI
-- **주요 출처**: Google News(20건), CoinDesk(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-06-16.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-06-16.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **86건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
