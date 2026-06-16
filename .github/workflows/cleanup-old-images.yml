@@ -2,11 +2,16 @@
 # 생성 이미지를 R2로 영구 보존하면 30일 정리가 불필요해진다.
 # 실제 폐지는 migrate_images_to_r2.py --apply 성공 + assets/images/generated/ gitignore 이후.
 # 계획: .omc/plans/r2-phase2-gated-landing.md / 설계: docs/design-image-offloading-r2.md
+#
+# 🛑 SCHEDULE 비활성화 (2026-06-16): 비가역 삭제(f.unlink)가 R2 마이그레이션보다 먼저 실행되면
+#    삭제된 과거 이미지는 R2로 영영 못 올라간다(migrate_images_to_r2.py가 로컬 3변형 존재를 전제).
+#    R2 컷오버 전까지 자동 주간 삭제를 중단한다. 수동 실행(workflow_dispatch)은 유지.
+#    재활성화: 아래 schedule 블록의 주석을 해제하면 된다.
 name: Cleanup Old Generated Images
 
 on:
-  schedule:
-    - cron: '0 3 * * 0'  # Every Sunday at 03:00 UTC
+  # schedule:
+  #   - cron: '0 3 * * 0'  # Every Sunday at 03:00 UTC — 비활성화(위 주석 참조)
   workflow_dispatch:
 
 concurrency:
