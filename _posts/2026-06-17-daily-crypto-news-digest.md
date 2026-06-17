@@ -40,33 +40,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-17 - 암호화폐 뉴스 요
 <div class="stat-item"><div class="stat-value">비트코인</div><div class="stat-label">핫 키워드 (41회)</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐: 비트코인, 이더리움 중심 105건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 동향 주시</li><li>📈 <strong>가격/시장</strong>: 32건 수집</li><li>🏦 <strong>거래소</strong>: 15건 수집</li><li>🔵 <strong>규제/정책</strong>: BTC 이슈 부각</li></ul></div>
+
 ## 전체 뉴스 요약
 
-총 105건의 뉴스 중 **비트코인** 관련이 57건(54%)으로 압도적입니다. 비트코인이 오늘 시장의 핵심 화제입니다
-
-### 테마별 동향
-
-- **🟠 비트코인** (57건): 비트코인 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (32건): june, current, iran 가격 변동 (32건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏦 거래소** (15건): binance, rejection, blackrock 관련 지표와 수급 흐름을 함께 확인하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 주요 이슈
-
-- 독점: 바이낸스는 EU에서의 운영 허가를 잃을 예정이라고 소식통은 말합니다.
-- 실시간 업데이트: 비트코인 거래자들은 미국-이란 위협이 계속됨에 따라 BTC이 $75,000를 넘을 것으로 예상하지 않습니다.
-- 외 9건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Cointelegraph(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 4건 포함
-- 프로모션성 거래소 공지 1건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-06-17.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-06-17.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **105건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
