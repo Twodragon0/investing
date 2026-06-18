@@ -3,9 +3,9 @@
   "families": {
     "bad_image": {
       "buckets": {
-        "ext:gif": 1608,
+        "ext:gif": 1611,
         "default-image": 755,
-        "ext:ico": 143,
+        "ext:ico": 146,
         "placeholder": 341,
         "ext:svg": 74,
         "blank.": 59,
@@ -16,5 +16,5 @@
     }
   },
   "since": "2026-04-23T08:54:23",
-  "last_seen": "2026-06-18T15:13:11"
+  "last_seen": "2026-06-18T17:34:19"
 }
