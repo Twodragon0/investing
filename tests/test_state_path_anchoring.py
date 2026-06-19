@@ -1,17 +1,23 @@
 """Regression guard: _state paths must be repo-root-anchored, never cwd-relative.
 
-A bare-relative literal like ``Path("_state/foo.json")`` or argparse
-``default="_state/foo.json"`` resolves against the caller's cwd, so running a
-script from ``scripts/`` (or anywhere but the repo root) silently creates a
-stray ``<cwd>/_state/`` directory instead of writing to the real repo
-``_state/``. The fix everywhere is to compose the path from a ``__file__``
-anchor (``_REPO_ROOT / "_state" / "..."``), so anchored code only ever embeds
-``"_state"`` as a *single* path component — never ``"_state/<file>"`` as one
-literal.
+A bare-relative path such as ``Path("_state")``, ``Path("_state/foo.json")``,
+``os.path.join("_state", ...)`` or argparse ``default="_state/foo.json"``
+resolves against the *caller's* cwd. Running a script from ``scripts/`` (or
+anywhere but the repo root) then silently creates a stray ``<cwd>/_state/``
+directory instead of writing to the real repo ``_state/``.
 
-This test pins that invariant by AST-scanning every script for string literals
-that begin with ``_state/`` (AST ignores comments and docstrings-as-comments,
-so the explanatory comment in image_rejection_metrics.py is not flagged).
+The fix everywhere is to compose the path from a ``__file__`` anchor
+(``_REPO_ROOT / "_state" / "..."``). Anchored code therefore only ever uses
+``"_state"`` as a *non-leading* path component (right operand of ``/`` or a
+non-first ``os.path.join`` arg) — never as the leading element of a path.
+
+This guard AST-scans every script (AST ignores comments/strings-in-comments) and
+fails on two forms:
+  A. any string literal that starts with ``_state/`` or ``_state\\`` — these are
+     bare-relative regardless of how they are used; and
+  B. an exact ``"_state"`` literal handed to ``Path(...)`` or ``*.join(...)`` as
+     the first argument — the no-slash single-component bare-root that form A
+     cannot see (slash-rooted forms in any context are already caught by A).
 """
 
 from __future__ import annotations
@@ -21,28 +27,83 @@ from pathlib import Path
 
 SCRIPTS_DIR = Path(__file__).resolve().parent.parent / "scripts"
 
+_BARE_ROOT = "_state"
+
 
 def _py_files() -> list[Path]:
     return [p for p in SCRIPTS_DIR.rglob("*.py") if "__pycache__" not in p.parts]
 
 
-def test_no_bare_relative_state_path_literals() -> None:
-    """No script may embed a cwd-relative ``_state/...`` path as a string literal."""
+def _is_slash_rooted(value: str) -> bool:
+    """Form A: a literal that *starts a path* with the _state segment."""
+    return value.startswith(_BARE_ROOT + "/") or value.startswith(_BARE_ROOT + "\\")
+
+
+def _call_name(call: ast.Call) -> str:
+    func = call.func
+    if isinstance(func, ast.Name):
+        return func.id
+    if isinstance(func, ast.Attribute):
+        return func.attr
+    return ""
+
+
+def _first_arg_str(call: ast.Call) -> str | None:
+    if call.args and isinstance(call.args[0], ast.Constant) and isinstance(call.args[0].value, str):
+        return call.args[0].value
+    return None
+
+
+def _collect_offenders(source: str, label: str) -> list[str]:
+    """Return ``"<label>:<lineno> -> <reason>"`` for every cwd-relative _state use."""
+    offenders: list[str] = []
+    tree = ast.parse(source, filename=label)
+    for node in ast.walk(tree):
+        # Form A — any string literal that roots a path at _state/.
+        if isinstance(node, ast.Constant) and isinstance(node.value, str) and _is_slash_rooted(node.value):
+            offenders.append(f"{label}:{node.lineno} -> literal {node.value!r}")
+        # Form B — leading "_state" as the first arg to Path(...) / *.join(...).
+        elif isinstance(node, ast.Call) and _call_name(node) in {"Path", "join"}:
+            first = _first_arg_str(node)
+            if first is not None and first == _BARE_ROOT:
+                offenders.append(f"{label}:{node.lineno} -> {_call_name(node)}({first!r}) leading bare-root")
+    return offenders
+
+
+def test_no_cwd_relative_state_paths_in_scripts() -> None:
+    """No script may root a filesystem path at a cwd-relative ``_state`` segment."""
     offenders: list[str] = []
     for path in _py_files():
-        tree = ast.parse(path.read_text(encoding="utf-8"), filename=str(path))
-        for node in ast.walk(tree):
-            if isinstance(node, ast.Constant) and isinstance(node.value, str):
-                value = node.value
-                if value.startswith("_state/") or value.startswith("_state\\"):
-                    rel = path.relative_to(SCRIPTS_DIR.parent)
-                    offenders.append(f"{rel}:{node.lineno} -> {value!r}")
-
+        offenders.extend(
+            _collect_offenders(path.read_text(encoding="utf-8"), str(path.relative_to(SCRIPTS_DIR.parent)))
+        )
     assert not offenders, (
-        "Bare cwd-relative '_state/...' path literal(s) found. Anchor to the repo "
-        "root instead (e.g. `_REPO_ROOT / '_state' / '...'`) to avoid creating a "
-        "stray <cwd>/_state/ directory:\n" + "\n".join(offenders)
+        "cwd-relative _state path(s) found. Anchor to the repo root instead "
+        "(e.g. `_REPO_ROOT / '_state' / '...'`) to avoid a stray <cwd>/_state/ dir:\n" + "\n".join(offenders)
     )
+
+
+def test_guard_detects_known_antipatterns() -> None:
+    """The detector must flag every bare-relative form and spare anchored ones."""
+    bad = (
+        'x = Path("_state")',
+        'x = Path("_state/foo.json")',
+        'x = os.path.join("_state", "foo.json")',
+        'parser.add_argument("--f", default="_state/foo.txt")',
+        "p = Path('_state') / 'foo.json'",
+    )
+    for snippet in bad:
+        assert _collect_offenders(snippet, "<bad>"), f"detector missed: {snippet}"
+
+    good = (
+        'x = _REPO_ROOT / "_state" / "foo.json"',
+        'x = os.path.join(REPO_ROOT, "_state")',
+        'x = os.path.join(REPO_ROOT, "_state", "foo.json")',
+        'x = Path(__file__).resolve().parent.parent / "_state"',
+        'name = "_state"  # bare component used elsewhere, anchored at call site',
+    )
+    for snippet in good:
+        assert not _collect_offenders(snippet, "<good>"), f"detector false-positive: {snippet}"
 
 
 def _module_level_assignments(source: str) -> dict[str, ast.expr]:
