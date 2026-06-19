@@ -16,6 +16,10 @@ from urllib.parse import urlparse
 
 import requests
 
+# Anchor the report path to the repo root so the argparse default resolves
+# identically regardless of cwd (avoids a stray <cwd>/_state/ being created).
+_REPO_ROOT = Path(__file__).resolve().parent.parent
+
 URL_PATTERN = re.compile(r"https?://[^\s)\]\"'>]+")
 
 
@@ -62,7 +66,7 @@ def main() -> int:
     parser.add_argument("--days", type=int, default=2)
     parser.add_argument("--limit", type=int, default=60)
     parser.add_argument("--timeout", type=float, default=8.0)
-    parser.add_argument("--report", default="_state/recent-url-quality.txt")
+    parser.add_argument("--report", default=str(_REPO_ROOT / "_state" / "recent-url-quality.txt"))
     args = parser.parse_args()
 
     posts_dir = Path(args.posts_dir)

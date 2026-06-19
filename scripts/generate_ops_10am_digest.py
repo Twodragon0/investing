@@ -15,6 +15,10 @@ from typing import Any, Dict, List, Tuple
 
 from common.config import get_kst_timezone
 
+# Anchor state paths to the repo root so the argparse default resolves identically
+# regardless of the caller's cwd (avoids a stray <cwd>/_state/ being created).
+_REPO_ROOT = Path(__file__).resolve().parent.parent
+
 GITHUB_API_BASE = "https://api.github.com"
 SLACK_API_BASE = "https://slack.com/api"
 SENTRY_API_BASE = "https://sentry.io/api/0"
@@ -418,7 +422,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Generate 10AM ops Slack digest")
     parser.add_argument("--repo", default=os.getenv("GITHUB_REPOSITORY", "Twodragon0/investing"))
     parser.add_argument("--slack-channel", default=os.getenv("SLACK_CHANNEL_ID", ""))
-    parser.add_argument("--state-file", default="_state/ops-10am-digest-state.json")
+    parser.add_argument("--state-file", default=str(_REPO_ROOT / "_state" / "ops-10am-digest-state.json"))
     args = parser.parse_args()
 
     github_token = os.getenv("GITHUB_TOKEN", "")
