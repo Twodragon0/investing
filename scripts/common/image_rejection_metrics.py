@@ -39,8 +39,13 @@ logger = setup_logging("image_rejection_metrics")
 
 _LOCK: threading.Lock = threading.Lock()
 _IMAGE_REJECTION_COUNTS: Dict[str, Dict[str, int]] = {}
-_STATE_PATH: Path = Path("_state/image_rejection_metrics.json")
-_ARCHIVE_DIR: Path = Path("_state/archive")
+# Anchor state paths to the repo root so they resolve identically regardless of
+# the caller's cwd (dedup.py/signal_tracker.py/translator.py use the same idiom).
+# Previously bare-relative Path("_state/...") created a stray scripts/_state/ when
+# a script was run from the scripts/ directory.
+_REPO_ROOT: Path = Path(__file__).resolve().parent.parent.parent
+_STATE_PATH: Path = _REPO_ROOT / "_state" / "image_rejection_metrics.json"
+_ARCHIVE_DIR: Path = _REPO_ROOT / "_state" / "archive"
 _SCHEMA_VERSION: int = 1
 _ENABLED: bool = os.environ.get("IMAGE_REJECTION_METRICS_ENABLED", "1") != "0"
 
