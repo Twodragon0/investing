@@ -90,6 +90,14 @@ def test_public_url_uses_basename_only(enabled_env):
     )
 
 
+def test_public_url_cdn_base_without_trailing_slash(monkeypatch):
+    # rstrip("/") must normalize a base URL that lacks the trailing slash too.
+    for key, val in _R2_ENV.items():
+        monkeypatch.setenv(key, val)
+    monkeypatch.setenv("R2_PUBLIC_BASE_URL", "https://img.example.com")
+    assert asset_storage.public_url("foo-2026-03-20.png") == "https://img.example.com/generated/foo-2026-03-20.png"
+
+
 # --------------------------------------------------------------------------- #
 # upload_file
 # --------------------------------------------------------------------------- #
@@ -133,6 +141,29 @@ def test_upload_content_type_for_avif(enabled_env, monkeypatch, tmp_path):
 
     assert asset_storage.upload_file(avif) is True
     assert client.put_object.call_args.kwargs["ContentType"] == "image/avif"
+
+
+def test_upload_content_type_for_webp(enabled_env, monkeypatch, tmp_path):
+    png = _make_variants(tmp_path)
+    webp = png[:-4] + ".webp"
+    client = MagicMock()
+    monkeypatch.setattr(asset_storage, "_client", lambda: client)
+
+    assert asset_storage.upload_file(webp) is True
+    assert client.put_object.call_args.kwargs["ContentType"] == "image/webp"
+
+
+def test_upload_content_type_octet_stream_for_unknown_ext(enabled_env, monkeypatch, tmp_path):
+    # Extension not in _CONTENT_TYPES falls back to a safe octet-stream type.
+    gen_dir = tmp_path / "assets" / "images" / "generated"
+    gen_dir.mkdir(parents=True)
+    odd = gen_dir / "chart-2026-03-20.gif"
+    odd.write_bytes(b"x")
+    client = MagicMock()
+    monkeypatch.setattr(asset_storage, "_client", lambda: client)
+
+    assert asset_storage.upload_file(str(odd)) is True
+    assert client.put_object.call_args.kwargs["ContentType"] == "application/octet-stream"
 
 
 def test_upload_graceful_when_put_object_raises(enabled_env, monkeypatch, tmp_path):
@@ -185,6 +216,24 @@ def test_mirror_skips_missing_variants(enabled_env, monkeypatch, tmp_path):
 
 def test_mirror_zero_for_empty_path(enabled_env):
     assert asset_storage.mirror_generated_variants("") == 0
+
+
+def test_mirror_counts_successes_when_one_upload_raises(enabled_env, monkeypatch, tmp_path):
+    # A per-variant upload failure (network blip) is swallowed by upload_file;
+    # mirror counts only the successes and must never propagate the exception.
+    png = _make_variants(tmp_path)
+    client = MagicMock()
+
+    def _put(**kwargs):
+        if kwargs["Key"].endswith(".webp"):
+            raise RuntimeError("network blip on webp")
+        return {}
+
+    client.put_object.side_effect = _put
+    monkeypatch.setattr(asset_storage, "_client", lambda: client)
+
+    # png + avif succeed, webp raises → swallowed → 2 uploaded, no exception.
+    assert asset_storage.mirror_generated_variants(png) == 2
 
 
 # --------------------------------------------------------------------------- #
