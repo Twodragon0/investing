@@ -10,6 +10,7 @@ import argparse
 import logging
 import os
 import re
+import sys
 import textwrap
 from concurrent.futures import ThreadPoolExecutor
 from typing import Any, Dict, List, Optional
@@ -33,6 +34,9 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
 POSTS_DIR = os.path.join(REPO_ROOT, "_posts")
 IMAGES_DIR = os.path.join(REPO_ROOT, "assets", "images", "generated")
+
+sys.path.insert(0, SCRIPT_DIR)
+from common import asset_storage  # noqa: E402  (sys.path 설정 후 import)
 
 # ── Category colors ──
 CATEGORY_COLORS: Dict[str, str] = {
@@ -1846,6 +1850,7 @@ def generate_og_image(
         fig.savefig(output_path, dpi=150, facecolor=BG_COLOR, edgecolor="none", bbox_inches=None, pad_inches=0)
         logger.info("Generated: %s", output_path)
         _convert_formats_parallel(output_path, webp_quality=82)
+        asset_storage.mirror_generated_variants(output_path)
         return True
     except OSError as e:
         logger.error("Failed to save %s: %s", output_path, e)
@@ -2055,6 +2060,7 @@ def generate_trading_journal_og_image(post: Dict[str, str], output_path: str) ->
         fig.savefig(output_path, dpi=150, facecolor=BG_COLOR, edgecolor="none", bbox_inches=None, pad_inches=0)
         logger.info("Generated journal OG: %s", output_path)
         _convert_formats_parallel(output_path, webp_quality=88)
+        asset_storage.mirror_generated_variants(output_path)
         return True
     except OSError as e:
         logger.error("Failed to save %s: %s", output_path, e)
@@ -2211,6 +2217,7 @@ def generate_thumbnail(png_path: str) -> bool:
             thumb.save(thumb_path, "PNG")
         logger.info("Thumbnail saved: %s", thumb_path)
         _convert_formats_parallel(thumb_path)
+        asset_storage.mirror_generated_variants(thumb_path)
         return True
     except (OSError, ValueError) as e:
         logger.warning("Thumbnail generation failed for %s: %s", png_path, e)

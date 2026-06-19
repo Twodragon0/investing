@@ -105,7 +105,7 @@
   function buildCard(p) {
     var thumbHtml = '';
     if (p.img) {
-      thumbHtml = '<div class="report-card-thumb"><img src="' + escapeHtml(p.img) + '" alt="" loading="lazy"></div>';
+      thumbHtml = '<div class="report-card-thumb"><img src="' + escapeHtml(p.img) + '" alt="" loading="lazy" onerror="this.closest(\'.report-card-thumb\').remove()"></div>';
     }
     var tagsHtml = '';
     if (p.tags && p.tags.length) {
@@ -370,7 +370,7 @@
     var shown = todayPosts.slice(0, 6);
     hlGrid.innerHTML = shown.map(function(p) {
       var bc = BADGE_COLORS[p.cc] || ['rgba(88,166,255,0.15)', '#58a6ff'];
-      var thumbHtml = p.img ? '<img class="highlight-thumb" src="' + escapeHtml(p.img) + '" alt="" loading="lazy">' : '';
+      var thumbHtml = p.img ? '<img class="highlight-thumb" src="' + escapeHtml(p.img) + '" alt="" loading="lazy" onerror="this.remove()">' : '';
       return '<a href="' + escapeHtml(p.u) + '" class="highlight-card">' +
         thumbHtml +
         '<div class="highlight-body">' +
