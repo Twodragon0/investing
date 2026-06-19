@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-19 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: Crypto Clipper는 지속성과 제어를 위해 Tor 및 웜과 같은 전파를 사용합니다. - 102건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 암호화폐 주목</li><li>📊 <strong>매크로/금리</strong>: 연준 주목</li><li>🏦 <strong>거래소</strong>: 기관 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMixgFBVV95cUxNS0dBOHlqLW93XzJDSFlnNHlpVWxoWjE3bGFBUm9feGpLWWs4a1hPMDMyTEFhUjRBeTZKVHM0dnFXUWgySFB4ZmduUzJ6WFlMdHFBZXdiYVFJU1NhZGppVXVRVDh1S1RJMkJNYU96Z2hteU1hR0NkLVEtRjJVbEpsU2VtMmVZMHQweHYybHU3VVZ2V0JocUVmSFdBSm13R1JCN0dQb1BHNC1VU1NZaExtZjdyeVBHeklWdHdhX3B0VXkyeWRfWHc?hl=en-US&gl=US&ceid=US%3Aen">Crypto Clipper는 지속성과 제어를 위해 Tor 및 웜과 같은 전파를 사용합니다.</a> <span class="p0-desc">마이크로소프트 Threat Intelligence는 클립보드 도난, 지갑 교체, Tor 기반 통신 및 웜과 같은 전파를 결합한 암호화폐 클리퍼 캠페인을 분석했습니다. 이 악성코드는.</span></li><li><a href="https://cointelegraph.com/news/g7-north-korea-crypto-theft-cybercrime-warning?utm_source=rss&utm_medium=rss&utm_campaign=rss">G7, 북한 암호화폐 도용·사이버범죄 공동조치 촉구</a> <span class="p0-desc">G7 지도자들은 연구원들이 수십억 달러의 도난당한 디지털 자산과 북한 관련 행위자를 연결함에 따라 더 광범위한 사이버 범죄를 포함하도록 북한의 암호화폐 도난에 대한 경고를 확대했습.</span></li><li><a href="https://cointelegraph.com/news/aztec-exploited-21-million-previous-hack-slowmist?utm_source=rss&utm_medium=rss&utm_campaign=rss">Aztec은 일주일도 안 되어 두 번째 210만 달러 규모의 익스플로잇 공격을 받았습니다: SlowMist</a> <span class="p0-desc">보안 연구원들은 더 이상 사용되지 않는 스마트 계약이 프로젝트에서 유지 관리를 중단한 후에도 오랫동안 취약한 상태로 남아 있을 수 있다고 경고합니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Crypto Clipper는 지속성과 제어를 위해 Tor 및 웜과 같은 전파를 사용합니다. 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 102건의 뉴스 중 P1 주요 이슈도 11건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (60건): 비트코인 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **📈 가격/시장** (32건): 암호화폐, 달러 가격 변동 (32건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (17건): 연준, 스테이블코인 매크로 변수 (17건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- Crypto Clipper는 지속성과 제어를 위해 Tor 및 웜과 같은 전파를 사용합니다.
-- G7, 북한 암호화폐 도용·사이버범죄 공동조치 촉구
-- Aztec은 일주일도 안 되어 두 번째 210만 달러 규모의 익스플로잇 공격을 받았습니다: SlowMist
-
-### 주요 이슈
-
-- 바이낸스는 EU에서의 운영 허가를 잃을 예정이라고 소식통은 말합니다.
-- 오전 시간: Hawkish FOMC 이후 암호화폐 싱크
-- 어떤 암호화폐 펀드가 더 나은 선택일까? 충실도 비트코인 펀드 또는 iShares 이더리움 ETF
-- 외 8건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Cointelegraph(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 4건 포함
-- 프로모션성 거래소 공지 1건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-06-19.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-06-19.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **102건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 📊 매크로/금리
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
