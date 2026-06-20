@@ -41,39 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-20 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: Crypto Clipper는 지속성과 제어를 위해 Tor 및 웜과 같은 전파를 사용합니다. - 102건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 주목</li><li>📈 <strong>가격/시장</strong>: BTC, XRP 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 연준 동향 주시</li><li>🏦 <strong>거래소</strong>: IPO 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMixgFBVV95cUxNS0dBOHlqLW93XzJDSFlnNHlpVWxoWjE3bGFBUm9feGpLWWs4a1hPMDMyTEFhUjRBeTZKVHM0dnFXUWgySFB4ZmduUzJ6WFlMdHFBZXdiYVFJU1NhZGppVXVRVDh1S1RJMkJNYU96Z2hteU1hR0NkLVEtRjJVbEpsU2VtMmVZMHQweHYybHU3VVZ2V0JocUVmSFdBSm13R1JCN0dQb1BHNC1VU1NZaExtZjdyeVBHeklWdHdhX3B0VXkyeWRfWHc?hl=en-US&gl=US&ceid=US%3Aen">Crypto Clipper는 지속성과 제어를 위해 Tor 및 웜과 같은 전파를 사용합니다.</a> <span class="p0-desc">마이크로소프트 Threat Intelligence는 클립보드 도난, 지갑 교체, Tor 기반 통신 및 웜과 같은 전파를 결합한 암호화폐 클리퍼 캠페인을 분석했습니다. 이 악성코드는.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Crypto Clipper는 지속성과 제어를 위해 Tor 및 웜과 같은 전파를 사용합니다. 
-총 102건의 뉴스 중 P1 주요 이슈도 14건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (57건): 비트코인 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (31건): BTC, XRP, 모멘텀 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **📊 매크로/금리** (14건): 연준 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- Crypto Clipper는 지속성과 제어를 위해 Tor 및 웜과 같은 전파를 사용합니다.
-
-### 주요 이슈
-
-- 바이낸스는 EU에서의 운영 허가를 잃을 예정이라고 소식통은 말합니다.
-- Franklin Templeton은 기업 배당금을 비트코인로 전환하는 새로운 ETF를 제안합니다.
-- 업비트 상장 발표…9개 알트코인 변동
-- 외 11건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Cointelegraph(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-06-20.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-06-20.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **102건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 📊 매크로/금리
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
