@@ -33,51 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-21 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: The budget airline model in the U.S. is running out of runway - 164건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 하이닉스, 코스피 관련 27건</li><li>📊 <strong>매크로/금리</strong>: 연준, 환율 주목</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 반도체 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.cnbc.com/2026/06/20/cheap-airline-fares-summer-travel.html">The budget airline model in the U.S. is running out of runway</a></li><li><a href="https://www.investing.com/news/economy-news/bolivias-paz-declares-state-of-emergency-over-blockade-crisis-4751603">Bolivia’s Paz declares state of emergency to break protest gridlock</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: The budget airline model in the U.S. is running out of runway 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 164건의 뉴스 중 P1 주요 이슈도 16건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (27건): 하이닉스, 코스피, 코스닥 가격 변동 (27건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (14건): 연준, 환율, 랠리 매크로 변수 (14건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🏛️ 정치/정책** (11건): 트럼프 정치 이슈 (11건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 미국의 저가항공 모델은 활주로가 부족하다
-- 볼리비아 파즈, 시위 정체 해소 위해 비상사태 선포
-
-### 주요 이슈
-
-- 9300선 뚫고 미끄러진 코스피…“삼전닉스 ‘밈 주식’ 됐다” 경고
-- Vanguard S&P 500 ETF이 놀라운 기록을 깨뜨렸습니다. 이것이 의미하는 바는 다음과 같습니다.
-- 필수 소비재로 방어를 할 때 어떤 ETF을 소유해야 합니까? 자금 이력
-- 외 13건
-
-### 투자자 체크포인트
-
-- 한국 기사 55건, 글로벌 기사 109건 수집
-- 한국 지수: KOSPI 9,052.42(-0.13%), KOSDAQ 966.59(-3.43%), USD/KRW 1,529.89(-0.43%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">27건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:52%"></div></div><span class="theme-count">14건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:41%"></div></div><span class="theme-count">11건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:33%"></div></div><span class="theme-count">9건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:15%"></div></div><span class="theme-count">4건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-06-21.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-06-21.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 9,052.42 (-0.13%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
+- KOSDAQ 966.59 (-3.43%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- *경제타임스 김은국 기자 | 서울 중심부의 가장 상징적인 역사문화 공간이자 문화지구인 종로구 인사동 일대 한옥 건축 규제가 16년 만에 전면적인 대수술을 맞이했다.*
 
 ## 테마별 주요 뉴스
 
