@@ -39,11 +39,15 @@ jobs:
       #   - 취약점 발견 시 잡 실패는 마지막 "Fail on vulnerabilities" step 에서
       #     명시 처리. 이전: continue-on-error + || true 조합으로 step 항상
       #     success → 이슈만 만들고 CI 통과 → silent fail.
+      # 수용된 리스크: PYSEC-2022-252 (deep-translator <=1.11.4) 는 upstream
+      # 수정 버전이 없어 code-quality.yml 의 pip-audit 와 동일하게 ignore.
+      # deep-translator 가 fix 릴리스를 내면 이 플래그를 제거하고 버전 상향할 것.
+      # 두 워크플로우의 ignore 목록은 반드시 동기화 유지.
       - name: Run pip-audit
         id: audit
         run: |
-          pip-audit -r scripts/requirements.txt --format=json --output=audit-report.json 2>&1 || true
-          pip-audit -r scripts/requirements.txt 2>&1 | tee audit-report.txt || true
+          pip-audit -r scripts/requirements.txt --ignore-vuln PYSEC-2022-252 --format=json --output=audit-report.json 2>&1 || true
+          pip-audit -r scripts/requirements.txt --ignore-vuln PYSEC-2022-252 2>&1 | tee audit-report.txt || true
 
           VULN_COUNT=$(python3 -c "
           import json
