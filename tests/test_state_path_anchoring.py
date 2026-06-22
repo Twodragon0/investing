@@ -120,6 +120,29 @@ def _module_level_assignments(source: str) -> dict[str, ast.expr]:
     return assigns
 
 
+def _is_file_anchored(var: str, assigns: dict[str, ast.expr]) -> bool:
+    """Return True if ``var`` is ultimately derived from ``__file__``.
+
+    Handles both direct anchors (``_REPO_ROOT = Path(__file__).resolve()...``)
+    and two-step patterns where an intermediate variable like ``_SCRIPTS_DIR``
+    holds the ``__file__`` reference and ``_REPO_ROOT`` is built from that
+    intermediate (``_REPO_ROOT = os.path.abspath(os.path.join(_SCRIPTS_DIR, '..'))``).
+    """
+    if var not in assigns:
+        return False
+    rhs = ast.unparse(assigns[var])
+    if "__file__" in rhs:
+        return True
+    # Chase one level of indirection: find any Name in the RHS that itself
+    # references __file__ at module scope.
+    for node in ast.walk(assigns[var]):
+        if isinstance(node, ast.Name) and node.id != var and node.id in assigns:
+            indirect_rhs = ast.unparse(assigns[node.id])
+            if "__file__" in indirect_rhs:
+                return True
+    return False
+
+
 def test_image_rejection_metrics_anchors_state_to_repo_root() -> None:
     """The canonical at-import (atexit-flushed) module must derive its state paths
     from a ``__file__`` anchor, not a bare literal.
@@ -138,3 +161,107 @@ def test_image_rejection_metrics_anchors_state_to_repo_root() -> None:
         assert name in assigns, f"{name} assignment is missing"
         rhs = ast.unparse(assigns[name])
         assert "_REPO_ROOT" in rhs, f"{name} must be anchored to _REPO_ROOT, got: {rhs}"
+
+
+# ---------------------------------------------------------------------------
+# REPO_ROOT anchor verification for remaining module-level _state writers
+# Each test mirrors test_image_rejection_metrics_anchors_state_to_repo_root:
+# it reads the source via AST (so conftest/monkeypatch cannot mask a regression)
+# and asserts that the root anchor variable is itself derived from __file__.
+# ---------------------------------------------------------------------------
+
+# (rel_path, root_var, state_vars) — state_vars may be empty when the file
+# uses __file__ inline without an intermediate root variable.
+_MODULE_LEVEL_WRITERS: list[tuple[str, str, list[str]]] = [
+    ("common/dedup.py", "REPO_ROOT", ["STATE_DIR"]),
+    ("common/signal_tracker.py", "_REPO_ROOT", ["_STATE_DIR"]),
+    ("common/translator.py", "_REPO_ROOT", ["_CACHE_PATH"]),
+    ("collect_defi_llama.py", "_REPO_ROOT", ["_TVL_HISTORY_PATH"]),
+    ("backfill_signal_history_accuracy.py", "_REPO_ROOT", ["_HISTORY_FILE"]),
+    ("backfill_signal_history_btc_price.py", "_REPO_ROOT", ["_HISTORY_FILE"]),
+    ("continuous_improvement_loop.py", "ROOT", []),  # argparse defaults reference ROOT inline
+    ("check_recent_post_urls.py", "_REPO_ROOT", []),  # argparse default; path built inline
+    ("generate_ops_10am_digest.py", "_REPO_ROOT", []),  # argparse default; path built inline
+]
+
+
+import pytest  # noqa: E402 — pytest already on path; placed here to avoid reordering imports above
+
+
+@pytest.mark.parametrize(
+    ("rel_path", "root_var", "state_vars"), _MODULE_LEVEL_WRITERS, ids=[t[0] for t in _MODULE_LEVEL_WRITERS]
+)
+def test_module_level_state_paths_anchored_to_repo_root(rel_path: str, root_var: str, state_vars: list[str]) -> None:
+    """Every module-level _state writer must derive its root anchor from __file__.
+
+    Checks two things via AST (immune to monkeypatch):
+    1. The ``root_var`` variable is defined at module scope.
+    2. The root_var RHS contains ``__file__`` (i.e. is a __file__-anchored expression).
+    3. Each ``state_var`` listed in ``state_vars`` references ``root_var`` in its RHS.
+    """
+    source = (SCRIPTS_DIR / rel_path).read_text(encoding="utf-8")
+    assigns = _module_level_assignments(source)
+
+    assert root_var in assigns, f"{rel_path}: module-level {root_var!r} anchor variable is missing"
+    assert _is_file_anchored(root_var, assigns), (
+        f"{rel_path}: {root_var} must be derived from __file__ (directly or via one intermediate variable)."
+        f" Got: {ast.unparse(assigns[root_var])!r}"
+    )
+
+    for name in state_vars:
+        assert name in assigns, f"{rel_path}: module-level state variable {name!r} is missing"
+        rhs = ast.unparse(assigns[name])
+        assert root_var in rhs, f"{rel_path}: {name} must reference {root_var!r} (got: {rhs!r})"
+
+
+def test_fix_defi_tvl_history_state_path_uses_file_anchor() -> None:
+    """fix_defi_tvl_history.py uses __file__ inline (no root variable) — verify directly."""
+    source = (SCRIPTS_DIR / "fix_defi_tvl_history.py").read_text(encoding="utf-8")
+    assigns = _module_level_assignments(source)
+
+    assert "HISTORY_PATH" in assigns, "fix_defi_tvl_history.py: HISTORY_PATH assignment missing"
+    rhs = ast.unparse(assigns["HISTORY_PATH"])
+    assert "__file__" in rhs, f"HISTORY_PATH must be __file__-anchored (got: {rhs!r})"
+    # Confirm it is NOT a bare relative Path("_state/...")
+    assert not _is_slash_rooted(rhs.lstrip("Path(").rstrip(")")), (
+        "HISTORY_PATH appears to be slash-rooted (cwd-relative)"
+    )
+
+
+# ---------------------------------------------------------------------------
+# Runtime absoluteness guard: verify that module-level state path constants
+# resolve to absolute paths that live under the repo root — not under cwd.
+# These tests complement the AST guards by checking the *computed* value at
+# import time, not just the source structure.
+# ---------------------------------------------------------------------------
+
+_REPO_ROOT = Path(__file__).resolve().parent.parent
+
+
+@pytest.mark.parametrize(
+    ("import_path", "attr"),
+    [
+        ("common.dedup", "STATE_DIR"),
+        ("common.signal_tracker", "_STATE_DIR"),
+        ("common.translator", "_CACHE_PATH"),
+    ],
+    ids=["dedup.STATE_DIR", "signal_tracker._STATE_DIR", "translator._CACHE_PATH"],
+)
+def test_module_state_path_is_absolute_and_under_repo_root(import_path: str, attr: str) -> None:
+    """The computed module-level state path must be absolute and under the repo root.
+
+    This is a *runtime* guard: it imports the already-cached module and reads
+    the path attribute to confirm the value is rooted at the repo root, not at
+    the test process cwd.  A stray ``<cwd>/_state/`` would produce a path that
+    does NOT start with ``_REPO_ROOT``.
+    """
+    import importlib
+
+    mod = importlib.import_module(import_path)
+    raw = getattr(mod, attr)
+    p = Path(raw) if not isinstance(raw, Path) else raw
+
+    assert p.is_absolute(), f"{import_path}.{attr} = {p!r} is not absolute — cwd-relative path detected"
+    assert str(p).startswith(str(_REPO_ROOT)), (
+        f"{import_path}.{attr} = {p!r} does not start with repo root {_REPO_ROOT!r}. Stray cwd-relative _state/ path?"
+    )
