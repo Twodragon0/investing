@@ -39,10 +39,16 @@ jobs:
       #   - 취약점 발견 시 잡 실패는 마지막 "Fail on vulnerabilities" step 에서
       #     명시 처리. 이전: continue-on-error + || true 조합으로 step 항상
       #     success → 이슈만 만들고 CI 통과 → silent fail.
-      # 수용된 리스크: PYSEC-2022-252 (deep-translator <=1.11.4) 는 upstream
-      # 수정 버전이 없어 code-quality.yml 의 pip-audit 와 동일하게 ignore.
-      # deep-translator 가 fix 릴리스를 내면 이 플래그를 제거하고 버전 상향할 것.
-      # 두 워크플로우의 ignore 목록은 반드시 동기화 유지.
+      # 영구 수용 리스크: PYSEC-2022-252 는 2022-08 deep-translator PyPI
+      # 계정 탈취 공급망 사고(악성 1.8.5 아티팩트, 이미 PyPI 에서 제거됨)다.
+      # advisory 에 introduced:1.8.5 만 있고 fixed 이벤트가 없어 OSV/pip-audit 가
+      # 1.8.5 이상 모든 버전을 영구 플래그한다 → "수정 버전" 은 구조적으로
+      # 존재할 수 없으므로 upstream fix 를 기다리는 것은 무의미.
+      # 현재 핀(deep-translator==1.11.4, 2023-06 정상 릴리스)은 clean 이며
+      # 사용 표면은 translator.py 의 GoogleTranslator 1개 함수(설치시 훅 없음)뿐.
+      # → 코드 교체 대신 ignore 영구 수용이 올바른 결정. 양 워크플로우
+      # (code-quality.yml ↔ 여기) ignore 목록은 동기화 유지
+      # (tests/test_pip_audit_ignore_sync.py 가드가 강제).
       - name: Run pip-audit
         id: audit
         run: |

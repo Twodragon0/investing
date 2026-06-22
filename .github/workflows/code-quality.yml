@@ -186,6 +186,10 @@ jobs:
           python -c "import common.collector_metrics; print('✓ common.collector_metrics')"
           python -c "import common.browser; print('✓ common.browser')"
 
+      # PYSEC-2022-252: 2022-08 deep-translator 공급망 사고(악성 1.8.5, 제거됨).
+      # advisory 에 fixed 이벤트가 없어 모든 버전 영구 플래그 → 수정 릴리스 불가.
+      # 핀 1.11.4 는 clean. ignore 는 영구 수용. dependency-check.yml 과 동기화
+      # (tests/test_pip_audit_ignore_sync.py 가드가 강제).
       - name: Run pip-audit security scan
         run: |
           pip install pip-audit
