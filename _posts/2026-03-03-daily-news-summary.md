@@ -80,7 +80,7 @@ permalink: "/market-analysis/2026/03/03/daily-news-summary/"
 
 - **Crypto Hacks Drop to $26.5M in February, Lowest Since March 2025 - Live Bitcoin News**
 - **Crypto Hacking Losses Plummet to $26.5M in February, Signaling a Stunning Security Transformation - Bitcoin world**
-- **중동 상황 관련  긴급 금융시장상황점검회의 개최**
+- **중동 상황 관련 긴급 금융시장상황점검회의 개최**
 - **암호화폐 강세 속 금·은 급락…트럼프 "빅 웨이브 곧 온다" 경고 - 디지털투데이**
 
 ## 시장 개요
@@ -117,7 +117,7 @@ permalink: "/market-analysis/2026/03/03/daily-news-summary/"
 - [AI 랠리에 탄 반도체, ‘개별주’ 대신 ‘ETF’로 자금 쏠린다 - 뉴스피릿](https://news.google.com/rss/articles/CBMia0FVX3lxTE1iTWxXa3VvNjItb1d4LXJlcXRWR01DZ1lzNkJSbkludGs2aHl5c3J2cGlNOUg5MmVXaEFEbm5kZ3lGMGVzWnVSZ0ZmdVRjNnFhSHhiVjNJU3FNUDRlQWxPbEtVaFhERC10M0Nv?oc=5)
 - [CHAT vs. SOXX: 지금 투자자에게 더 나은 AI ETF는? - Nasdaq](https://news.google.com/rss/articles/CBMikgFBVV95cUxOY0Radks3LV9DSUtsa1lHdVFELUdXQXhwRzlaTnBDWks5SDFyTG1ZckUyTGV3bzNwOGZIQk5MOUxWaEFnRVpacmlQMkZkaVZkblE5eTZFN3lSN2ZUMThtdUJRN0tRNDUwckJlRkV4UFFDZVM0RUdnamNpY09uM0w4ZnpuYUdlR2pjalFJUU53STZTUQ?oc=5)
 - 단일종목 레버리지 ETF의 세부방안은 검토중입니다.
-- 장기(예:2년) 미정리 PF 대출의 회수예상가액을 공시지가로 하는 등 상호금융조합의 리스크 관리를 엄격화하겠습니다.  - ｢상호금융업감독규정｣ 일부개정안 규정변경예고 (3.3일~3.16일) -
+- 장기(예:2년) 미정리 PF 대출의 회수예상가액을 공시지가로 하는 등 상호금융조합의 리스크 관리를 엄격화하겠습니다. - ｢상호금융업감독규정｣ 일부개정안 규정변경예고 (3.3일~3.16일) -
 
 ---
 
