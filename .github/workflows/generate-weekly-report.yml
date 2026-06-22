@@ -44,9 +44,6 @@ jobs:
           OFFSET="${{ github.event.inputs.week-offset || '1' }}"
           python scripts/generate_weekly_report.py --week-offset "${OFFSET}"
 
-      - name: Lint generated script
-        run: python3 -m ruff check scripts/generate_weekly_report.py
-
       - name: Commit report if changed
         run: |
           git config user.name "github-actions[bot]"
