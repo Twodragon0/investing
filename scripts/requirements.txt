@@ -1,3 +1,7 @@
+# 직접 의존성 (런타임 12개 워크플로우가 이 파일로 install).
+# 공급망 변조 방어용 해시 핀 락은 scripts/requirements.lock (pip-compile
+# --generate-hashes, 전이 의존성+해시 포함). 의존성 변경 시 락 재생성 필요 —
+# 생성/검증 방법은 .github/workflows/supply-chain-lock.yml 상단 주석 참고.
 PyYAML>=6.0.3
 requests==2.33.1
 certifi>=2026.4.22

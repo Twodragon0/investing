@@ -1,0 +1,105 @@
+name: Supply-chain Lock Verify
+
+# 추가형(additive) 공급망 방어: scripts/requirements.lock 은 pip-compile
+# --generate-hashes 로 생성한 해시 핀 락(직접+전이 의존성 전체, 전 플랫폼 휠
+# 해시 포함)이다. 이 워크플로우는 락 무결성만 검증하며, 기존 12개 워크플로우의
+# `pip install -r scripts/requirements.txt` 흐름은 건드리지 않는다(breakage 0).
+#
+# 단계적 롤아웃: 무결성 스텝은 안정화 기간 동안 non-blocking(경고)로 운영하고,
+# 충분히 green 이 확인되면 `|| echo ...` 를 제거해 차단 게이트로 승격한다.
+#
+# 락 갱신 방법(의존성 변경 시):
+#   python3.11 -m venv /tmp/lockgen && /tmp/lockgen/bin/pip install pip-tools
+#   /tmp/lockgen/bin/pip-compile --generate-hashes \
+#     --output-file scripts/requirements.lock scripts/requirements.txt
+
+on:
+  push:
+    paths:
+      - 'scripts/requirements.txt'
+      - 'scripts/requirements.lock'
+      - '.github/workflows/supply-chain-lock.yml'
+  pull_request:
+    paths:
+      - 'scripts/requirements.txt'
+      - 'scripts/requirements.lock'
+      - '.github/workflows/supply-chain-lock.yml'
+  schedule:
+    - cron: '0 4 * * 1'  # Monday 04:00 UTC — catch upstream yanks/tampering
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: supply-chain-lock
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
+
+      - name: Set up Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0
+        with:
+          python-version: '3.11'  # 락은 3.11 에서 생성됨 — 동일 버전으로 검증
+
+      # 락의 모든 핀 버전+해시가 실제 설치 가능한지 검증(변조/yank 탐지).
+      # --dry-run 으로 실제 설치는 생략하되 해시는 전부 다운로드 검증한다.
+      # 단계적: 현재 non-blocking. 안정화 후 `|| echo ...` 제거 → 차단 승격.
+      - name: Verify lock integrity (--require-hashes)
+        run: |
+          python -m pip install --upgrade pip
+          pip install --require-hashes --dry-run -r scripts/requirements.lock \
+            || echo "::warning title=lock integrity::--require-hashes 검증 실패 (롤아웃 기간 non-blocking). scripts/requirements.lock 재생성 필요 여부 확인."
+
+      # 락 staleness 방지: requirements.txt 의 모든 직접 의존성이 락에 핀(==)으로
+      # 존재해야 한다. requirements.txt 에 의존성을 추가/제거하고 락을 재생성하지
+      # 않으면 여기서 실패한다(결정적 — 버전 churn 노이즈 없음).
+      - name: Verify lock covers all direct dependencies
+        run: |
+          python3 - <<'PY'
+          import re
+          import sys
+          from pathlib import Path
+
+          req = Path("scripts/requirements.txt")
+          lock = Path("scripts/requirements.lock")
+          if not req.is_file() or not lock.is_file():
+              sys.exit("requirements.txt 또는 requirements.lock 누락")
+
+          def direct_names(text: str) -> set[str]:
+              names = set()
+              for raw in text.splitlines():
+                  line = raw.strip()
+                  if not line or line.startswith("#"):
+                      continue
+                  # PEP 508 이름만 추출 (>=, ==, ~=, <, ; extras 앞부분)
+                  m = re.match(r"^([A-Za-z0-9][A-Za-z0-9._-]*)", line)
+                  if m:
+                      names.add(m.group(1).lower().replace("_", "-"))
+              return names
+
+          def locked_names(text: str) -> set[str]:
+              names = set()
+              for raw in text.splitlines():
+                  # 핀 라인은 name==ver 또는 name[extra1,extra2]==ver 형태
+                  m = re.match(r"^([A-Za-z0-9][A-Za-z0-9._-]*)(?:\[[^\]]*\])?==", raw)
+                  if m:
+                      names.add(m.group(1).lower().replace("_", "-"))
+              return names
+
+          direct = direct_names(req.read_text(encoding="utf-8"))
+          locked = locked_names(lock.read_text(encoding="utf-8"))
+          missing = sorted(direct - locked)
+          if missing:
+              sys.exit(
+                  f"requirements.lock 이 다음 직접 의존성을 핀하지 않음: {missing}\n"
+                  "requirements.txt 변경 후 락을 재생성하세요 (워크플로우 상단 주석 참고)."
+              )
+          print(f"OK: 직접 의존성 {len(direct)}개 모두 락에 핀됨 (락 전체 핀 {len(locked)}개).")
+          PY
