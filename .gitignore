@@ -63,6 +63,9 @@ coverage.json
 .omx/
 state/
 .claude/scheduled_tasks.lock
+.claude/agent-memory/
+# cwd 버그 방어: 상태는 repo 루트 _state/ 에만 기록되어야 함 (잘못된 cwd 잔재 차단)
+scripts/_state/
 
 # Sass build artifacts (stale)
 _sass/_site/
