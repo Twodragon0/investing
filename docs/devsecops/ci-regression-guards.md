@@ -21,8 +21,9 @@ System Configuration), NIST SSDF(SP 800-218) **PO.3 / PW.4**.
 | `tests/test_workflow_permission_lint.py` | 8 | `check_workflow_permissions.py` 도구가 워크플로우 `permissions:` 최소권한 규칙을 검사 | 과대 권한(`contents: write` 남발) GITHUB_TOKEN 노출면 확대 |
 | `tests/test_generated_image_guard.py` | 2 | 레이아웃이 렌더하는 생성 이미지가 404 나지 않음(존재 보장) | 30일 이미지 정리가 참조 살아있는 og/hero 이미지를 삭제 → 깨진 이미지 |
 | `tests/test_encoding_guard.py` | 16 | `encoding_guard` 모듈의 UTF-8/CP949 라벨 교정 동작 불변 | 한국어 텍스트 인코딩 깨짐(mojibake) |
+| `tests/test_requirements_lock_coverage.py` | 6 | `requirements.txt` 직접 의존성 전부가 `requirements.lock` 에 ==핀(부분집합) + 락의 모든 핀이 최소 1개 `--hash` 보유(presence) | 락 staleness(검증 안 되는 새 의존성) / hashless 핀이 `--require-hashes` 무결성 검증을 무력화하는 공급망 변조 창 |
 
-총 **97 케이스**.
+총 **103 케이스**.
 
 ## 설계 규약 (신규 가드 작성 시)
 
@@ -58,3 +59,10 @@ System Configuration), NIST SSDF(SP 800-218) **PO.3 / PW.4**.
 - CI red 진단은 `gh run list --limit 60` 으로 워크플로우별 실패 tally 를 먼저 떠서
   만성/일회성을 구분하고, 만성 의심 시 `gh workflow run "<name>"` 로 수동 트리거해
   스케줄 대기 없이 즉시 검증한다.
+- **공급망 락 차단 승격 예약**: `.github/workflows/supply-chain-lock.yml` 의
+  `--require-hashes` 무결성 스텝은 현재 non-blocking(경고). 도입 2026-06-22, 안정화
+  2주 → **승격 예정일 2026-07-06(이후)**. 게이트: 예정일 경과 + 무결성 스텝 연속 green
+  + `::warning title=lock integrity::` 0건. 승격은 그 스텝의 `|| echo ...` fallback
+  제거로 수행. staleness/hashless 회귀는 위 `test_requirements_lock_coverage.py` 가
+  워크플로우 트리거와 무관하게 매 PR 차단하므로, 승격은 무결성(다운로드 검증) 차단만
+  추가하는 것이다.

@@ -8,6 +8,17 @@ name: Supply-chain Lock Verify
 # 단계적 롤아웃: 무결성 스텝은 안정화 기간 동안 non-blocking(경고)로 운영하고,
 # 충분히 green 이 확인되면 `|| echo ...` 를 제거해 차단 게이트로 승격한다.
 #
+# 차단 승격 예약 (2026-06-23 결정):
+#   - 도입: 2026-06-22. 안정화 기간 2주 → 승격 예정일: 2026-07-06(이후).
+#   - 승격 절차: 아래 "Verify lock integrity" 스텝의 `\` 줄바꿈과 `|| echo ...`
+#     fallback 을 제거해 `pip install --require-hashes --dry-run -r ...` 단독 실행으로
+#     만든다(비-0 종료 시 잡 실패 = 차단).
+#   - 승격 게이트(전부 충족 시에만): (a) 예정일 경과, (b) `gh run list
+#     --workflow=supply-chain-lock.yml` 에서 무결성 스텝의 연속 green 다수 확인,
+#     (c) 최근 ::warning title=lock integrity:: 발생 0건.
+#   - staleness/hashless 회귀는 이미 매 PR pytest 잡의
+#     tests/test_requirements_lock_coverage.py 가 차단한다(이 워크플로우 트리거 무관).
+#
 # 락 갱신 방법(의존성 변경 시):
 #   python3.11 -m venv /tmp/lockgen && /tmp/lockgen/bin/pip install pip-tools
 #   /tmp/lockgen/bin/pip-compile --generate-hashes \
@@ -50,7 +61,8 @@ jobs:
 
       # 락의 모든 핀 버전+해시가 실제 설치 가능한지 검증(변조/yank 탐지).
       # --dry-run 으로 실제 설치는 생략하되 해시는 전부 다운로드 검증한다.
-      # 단계적: 현재 non-blocking. 안정화 후 `|| echo ...` 제거 → 차단 승격.
+      # 단계적: 현재 non-blocking. 승격 게이트는 상단 "차단 승격 예약" 주석 참고
+      # (예정일 2026-07-06 이후 + 연속 green + warning 0 → `|| echo ...` 제거).
       - name: Verify lock integrity (--require-hashes)
         run: |
           python -m pip install --upgrade pip
