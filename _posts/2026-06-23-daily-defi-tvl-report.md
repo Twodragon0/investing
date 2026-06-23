@@ -20,15 +20,17 @@ image_alt: "DeFi TVL 리포트 - 2026-06-23 - DeFi 뉴스 요약 이미지"
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">$122.81B</div><div class="stat-label">프로토콜 TVL</div></div><div class="stat-item"><div class="stat-value">$69.99B</div><div class="stat-label">체인 TVL</div></div><div class="stat-item"><div class="stat-value">20</div><div class="stat-label">프로토콜 수</div></div><div class="stat-item"><div class="stat-value">15</div><div class="stat-label">체인 수</div></div></div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> DeFi 생태계 $122.81B 규모 분석</strong><ul><li>🏆 <strong>최상위 프로토콜</strong>: Lido — TVL $15.71B (Liquid Staking)</li><li>⛓️ <strong>최상위 체인</strong>: Ethereum — TVL $39.20B (56.0%)</li><li>📊 <strong>최다 카테고리</strong>: Bridge — $34.22B</li></ul></div>
+
+## 전체 뉴스 요약
+
+- 총 20개 프로토콜, 15개 체인의 TVL 데이터를 분석했습니다.
+
 ## 전체 요약
 
 총 **20개 프로토콜**, **15개 체인**의 TVL 데이터를 분석했습니다.
 
 1. **프로토콜**: Lido — TVL $15.71B로 1위를 유지하고 있습니다.
 2. **체인**: Ethereum — TVL $39.20B로 체인 생태계를 주도합니다.
-
-
-<picture><source srcset="{{ '/assets/images/generated/defi-tvl-dashboard-2026-06-23.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/defi-tvl-dashboard-2026-06-23.png' | relative_url }}" alt="DeFi TVL Dashboard" loading="lazy" decoding="async"></picture>
 
 
 ## 1. 상위 20개 프로토콜 TVL 순위
