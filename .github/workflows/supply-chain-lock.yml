@@ -19,7 +19,11 @@ name: Supply-chain Lock Verify
 #   - staleness/hashless 회귀는 이미 매 PR pytest 잡의
 #     tests/test_requirements_lock_coverage.py 가 차단한다(이 워크플로우 트리거 무관).
 #
-# 락 갱신 방법(의존성 변경 시):
+# 락 갱신 방법(의존성 변경 시) — 원클릭 헬퍼:
+#   bash scripts/refresh_requirements_lock.sh
+# (격리 venv + python3.11 + pip-compile --generate-hashes, 재생성 후 가드/무결성 검증)
+#
+# 수동(헬퍼 미사용 시):
 #   python3.11 -m venv /tmp/lockgen && /tmp/lockgen/bin/pip install pip-tools
 #   /tmp/lockgen/bin/pip-compile --generate-hashes \
 #     --output-file scripts/requirements.lock scripts/requirements.txt
