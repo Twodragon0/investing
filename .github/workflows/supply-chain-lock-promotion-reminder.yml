@@ -1,0 +1,108 @@
+name: Supply-chain Lock Promotion Reminder
+
+# 차단 승격 예약 추적: supply-chain-lock.yml 의 --require-hashes 무결성 스텝은
+# 도입(2026-06-22) 후 2주 안정화를 거쳐 2026-07-06 차단 게이트 승격 예정이며,
+# 그때까지 non-blocking(경고)로 운영된다(상세: supply-chain-lock.yml 상단 주석).
+#
+# 이 워크플로우는 예정일 이후, 그 스텝이 아직 non-blocking(`|| echo` fallback 잔존)
+# 이면 추적 이슈를 1회 생성해 승격을 리마인드한다. 멱등 — 동일 라벨의 열린 이슈가
+# 있으면 중복 생성하지 않는다. 승격(fallback 제거)이 끝나면 자동으로 no-op 이 되며
+# 이후 이 워크플로우는 삭제 가능하다.
+
+on:
+  schedule:
+    - cron: '0 5 * * 1'  # 매주 월 05:00 UTC — 예정일 이후 첫 월요일에 리마인드
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: supply-chain-lock-promotion-reminder
+  cancel-in-progress: false
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
+        with:
+          fetch-depth: 1
+
+      - name: Open promotion reminder issue if due and still non-blocking
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3  # v7
+        with:
+          script: |
+            const fs = require('fs');
+            const { owner, repo } = context.repo;
+
+            const DUE = '2026-07-06';  // 승격 예정일 (supply-chain-lock.yml 과 동기)
+            const today = new Date().toISOString().slice(0, 10);
+            if (today < DUE) {
+              core.info(`예정일(${DUE}) 이전(${today}) — skip`);
+              return;
+            }
+
+            const wfPath = '.github/workflows/supply-chain-lock.yml';
+            let wf = '';
+            try {
+              wf = fs.readFileSync(wfPath, 'utf8');
+            } catch {
+              core.warning(`${wfPath} 없음 — skip (리네임/삭제됐는지 확인)`);
+              return;
+            }
+            if (!wf.includes('--require-hashes')) {
+              core.info('require-hashes 무결성 스텝 없음 — skip');
+              return;
+            }
+            // 아직 non-blocking 인지: lock-integrity 경고 fallback 잔존 여부로 판정.
+            const stillNonBlocking = wf.includes('::warning title=lock integrity');
+            if (!stillNonBlocking) {
+              core.info('이미 차단 승격됨(fallback 제거) — 리마인더 불필요');
+              return;
+            }
+
+            const label = 'supply-chain-lock-promotion';
+            const open = await github.rest.issues.listForRepo({
+              owner, repo, state: 'open', labels: label, per_page: 1,
+            });
+            if (open.data.length > 0) {
+              core.info(`이미 열린 리마인더 이슈 #${open.data[0].number} 존재 — skip`);
+              return;
+            }
+
+            const title = '[supply-chain-lock] --require-hashes 차단 승격 예정일 도래';
+            const body = [
+              '## --require-hashes 차단 승격 예정일 도래',
+              '',
+              '`.github/workflows/supply-chain-lock.yml` 의 락 무결성 스텝(`--require-hashes`)은',
+              '도입(2026-06-22) 후 2주 안정화를 거쳐 **2026-07-06 차단 게이트 승격 예정**이었고,',
+              '오늘 기준 예정일이 도래했으며 스텝은 아직 non-blocking(`|| echo` fallback) 상태입니다.',
+              '',
+              '### 승격 게이트 (전부 충족 시에만 승격)',
+              '- [x] 예정일 경과 (이 이슈 생성 = 자동 확인됨)',
+              '- [ ] `gh run list --workflow=supply-chain-lock.yml` 에서 무결성 스텝 연속 green',
+              '- [ ] 최근 `::warning title=lock integrity::` 발생 0건',
+              '',
+              '### 승격 절차',
+              'supply-chain-lock.yml 의 "Verify lock integrity (--require-hashes)" 스텝에서',
+              '`\\` 줄바꿈과 `|| echo "::warning title=lock integrity..."` fallback 을 제거해',
+              '`pip install --require-hashes --dry-run -r scripts/requirements.lock` 단독 실행으로',
+              '만듭니다(비-0 종료 시 잡 실패 = 차단).',
+              '',
+              '> staleness/hashless 회귀는 이미 매 PR `tests/test_requirements_lock_coverage.py`',
+              '> 가 차단하므로, 이 승격은 무결성(다운로드 검증) 차단만 추가하는 것입니다.',
+              '',
+              '승격(fallback 제거) 후 리마인더 워크플로우',
+              '`supply-chain-lock-promotion-reminder.yml` 는 자동 no-op 이 되며 삭제 가능합니다.',
+              '',
+              '> 자동 생성: `.github/workflows/supply-chain-lock-promotion-reminder.yml`',
+            ].join('\n');
+
+            const created = await github.rest.issues.create({
+              owner, repo, title, body, labels: [label, 'ops'],
+            });
+            core.info(`리마인더 이슈 #${created.data.number} 생성`);
