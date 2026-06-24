@@ -119,3 +119,68 @@ jobs:
               )
           print(f"OK: 직접 의존성 {len(direct)}개 모두 락에 핀됨 (락 전체 핀 {len(locked)}개).")
           PY
+
+      # 버전-동기: 락의 핀 버전이 requirements.txt 의 PEP 508 명세를 만족해야 한다.
+      # 위 커버리지 스텝(이름 기반)이 못 잡는 *버전 bump 후 락 미갱신* stale 을 차단한다.
+      # tests/test_requirements_lock_version_sync.py 와 의도적으로 동일 불변식을 동일 방식으로
+      # 본다(두 곳이 같은 불변식을 같은 방식으로 본다 — 커버리지 스텝의 정책과 일관).
+      # packaging 은 락의 전이 의존성(packaging==26.2)과 동일 버전으로 핀 설치한다.
+      - name: Verify lock pins satisfy requirements specifiers
+        run: |
+          python -m pip install --quiet "packaging==26.2"
+          python3 - <<'PY'
+          import re
+          import sys
+          from pathlib import Path
+
+          from packaging.requirements import InvalidRequirement, Requirement
+          from packaging.version import InvalidVersion, Version
+
+          req = Path("scripts/requirements.txt")
+          lock = Path("scripts/requirements.lock")
+          if not req.is_file() or not lock.is_file():
+              sys.exit("requirements.txt 또는 requirements.lock 누락")
+
+          inline_comment = re.compile(r"\s+#.*$")
+          lock_pin = re.compile(r"^([A-Za-z0-9][A-Za-z0-9._-]*)(?:\[[^\]]*\])?==([^\s\\]+)")
+
+          def norm(name: str) -> str:
+              return name.lower().replace("_", "-")
+
+          direct = {}
+          for raw in req.read_text(encoding="utf-8").splitlines():
+              line = inline_comment.sub("", raw.strip())
+              if not line or line.startswith("#"):
+                  continue
+              try:
+                  r = Requirement(line)
+              except InvalidRequirement:
+                  continue
+              direct[norm(r.name)] = r
+
+          locked = {}
+          for raw in lock.read_text(encoding="utf-8").splitlines():
+              m = lock_pin.match(raw)
+              if not m:
+                  continue
+              try:
+                  locked[norm(m.group(1))] = Version(m.group(2))
+              except InvalidVersion:
+                  continue
+
+          violations = []
+          for name, r in direct.items():
+              pin = locked.get(name)
+              if pin is None:
+                  continue  # 이름 부재는 위 커버리지 스텝 책임 (중복 검사 금지)
+              # prereleases=True: false-negative 방지
+              if not r.specifier.contains(pin, prereleases=True):
+                  violations.append(f"{name}: txt '{r.specifier}' -> lock '{pin}'")
+          if violations:
+              sys.exit(
+                  "락 핀이 requirements.txt 명세를 만족하지 않음(버전 bump 후 락 미갱신?):\n"
+                  + "\n".join(violations)
+                  + "\nbash scripts/refresh_requirements_lock.sh 로 락 재생성."
+              )
+          print(f"OK: 직접 의존성 {len(direct)}개 핀 모두 txt 명세 만족.")
+          PY
