@@ -1,6 +1,9 @@
 # RFC: requirements 락 버전-동기 가드 (해소 버전 대조)
 
-> 상태: **RFC (제안, 미구현)** · 작성 2026-06-24
+> 상태: **구현됨** (2026-06-24) — `tests/test_requirements_lock_version_sync.py`.
+> CI 강제: `code-quality.yml` 의 `pytest tests/` 가 자동 수집(기존 커버리지 가드와 동일 lane).
+> 실증: 실파일에 `requests 2.33.1→2.34.0` stale 주입 시 가드 red, 복원 시 green(7 passed).
+> 작성 2026-06-24
 > 관련: `docs/devsecops/requirements-lock-autosync-design.md`, `.github/workflows/supply-chain-lock.yml`,
 > `tests/test_requirements_lock_coverage.py`, 위키 `공급망 락 (requirements.lock) — 가드·차단승격·헬퍼·재현 실증`
 
