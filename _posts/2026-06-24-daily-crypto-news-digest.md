@@ -41,40 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-24 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 코인 시황] 비트코인, 6만3000달러 붕괴…AI 랠리 흔들리자 코인도 급락 - 뉴스핌 - 103건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 주목</li><li>🔵 <strong>규제/정책</strong>: 선물 주목</li><li>📈 <strong>가격/시장</strong>: 달러 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 연준, 인플레이션 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.newspim.com">코인 시황] 비트코인, 6만3000달러 붕괴…AI 랠리 흔들리자 코인도 급락 - 뉴스핌</a> <span class="p0-desc">[코인 시황] 비트코인, 6만3000달러 붕괴…AI 랠리 흔들리자 코인도 급락 뉴스핌</span></li><li><a href="https://cointelegraph.com/news/thorchain-resumes-trading-month-10m-exploit?utm_source=rss&utm_medium=rss&utm_campaign=rss">THORChain은 1,000만 달러 규모의 악용 후 한 달 이상 거래를 재개합니다.</a> <span class="p0-desc">THORChain은 1,070만 달러 규모의 악용을 초래한 취약점을 수정하기 위해 여러 보안 업그레이드와 볼트 마이그레이션을 구현한 후 모든 네트워크 활동을 재개했습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 코인 시황] 비트코인, 6만3000달러 붕괴…AI 랠리 흔들리자 코인도 급락 - 뉴스핌 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 103건의 뉴스 중 P1 주요 이슈도 15건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (50건): 비트코인 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **🔵 규제/정책** (24건): 선물, 리플 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **📈 가격/시장** (24건): 달러 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 코인 시황] 비트코인, 6만3000달러 붕괴…AI 랠리 흔들리자 코인도 급락 - 뉴스핌
-- THORChain은 1,000만 달러 규모의 악용 후 한 달 이상 거래를 재개합니다.
-
-### 주요 이슈
-
-- 비트코인은 금리 우려가 커지면서 $62,000로 후퇴합니다. ETF 유출이 지속됩니다.
-- 암호화폐 범죄자의 미국 미래는 규제 당국이 그들을 어떻게 부르기로 결정했는지에 따라 정의됩니다
-- 미국 기관은 스테이블코인 발행자에 대한 확인 규칙을 제안합니다.
-- 외 12건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, AI
-- **주요 출처**: Google News(20건), Cointelegraph(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-06-24.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-06-24.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **103건** 수집
+- 주요 테마: 🟠 비트코인, 🔵 규제/정책, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
