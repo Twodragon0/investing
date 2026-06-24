@@ -8,18 +8,29 @@
 # 사용법:
 #   bash scripts/refresh_requirements_lock.sh            # 재생성 + 검증
 #   PYTHON=python3.11 bash scripts/refresh_requirements_lock.sh
-#   PIP_TOOLS_VERSION=7.4.1 bash scripts/refresh_requirements_lock.sh  # pip-tools 핀
+#   PIP_TOOLS_VERSION=7.5.3 bash scripts/refresh_requirements_lock.sh  # 다른 버전 핀
+#   PIP_TOOLS_VERSION= bash scripts/refresh_requirements_lock.sh        # 핀 해제(최신)
 #
 # 환경변수:
 #   PYTHON             락 생성 인터프리터(기본: python3.11 — 락은 3.11 에서 생성됨).
-#   PIP_TOOLS_VERSION  pip-tools 버전 핀(기본: 미지정=최신). 출력 안정화를 원하면 핀.
+#   PIP_TOOLS_VERSION  pip-tools 버전 핀(기본: 7.5.3). 기본 핀은 현재 커밋된
+#                      scripts/requirements.lock 을 in-place(앵커 존재, --upgrade 없음)
+#                      재생성 시 비-주석 부분 byte-identical 로 재현됨이 실증되었다
+#                      (2026-06-24). 빈 값으로 설정하면 최신 pip-tools 를 쓴다(출력
+#                      포맷이 달라질 수 있음).
+#
+# 결정성 주의: pip-compile 은 기존 락이 있으면(앵커) 이미 핀된 패키지를 --upgrade
+# 없이는 올리지 않는다. 이 헬퍼는 REQ_LOCK 을 in-place 로 덮어쓰므로 앵커가 유지돼,
+# requirements.txt 에서 실제로 바뀐 의존성만 락에 반영된다(무관 패키지의 상류 drift
+# 없음). 의도적으로 전 패키지를 최신으로 올리려면 락을 비우고 실행하거나 --upgrade 를
+# 추가하라(이 헬퍼는 보수적 기본을 택한다).
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 REQ_TXT="scripts/requirements.txt"
 REQ_LOCK="scripts/requirements.lock"
 PYTHON="${PYTHON:-python3.11}"
-PIP_TOOLS_VERSION="${PIP_TOOLS_VERSION:-}"
+PIP_TOOLS_VERSION="${PIP_TOOLS_VERSION-7.5.3}"
 LOG="[refresh-lock]"
 
 cd "$REPO_ROOT"
