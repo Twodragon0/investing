@@ -24,9 +24,11 @@ name: Supply-chain Lock Verify
 # (격리 venv + python3.11 + pip-compile --generate-hashes, 재생성 후 가드/무결성 검증)
 #
 # 수동(헬퍼 미사용 시):
-#   python3.11 -m venv /tmp/lockgen && /tmp/lockgen/bin/pip install pip-tools
-#   /tmp/lockgen/bin/pip-compile --generate-hashes \
+#   python3.11 -m venv /tmp/lockgen && /tmp/lockgen/bin/pip install pip-tools==7.5.3
+#   /tmp/lockgen/bin/pip-compile --generate-hashes --no-strip-extras \
 #     --output-file scripts/requirements.lock scripts/requirements.txt
+# (--no-strip-extras: pip-tools 8.0.0 부터 strip 이 기본 — 현 락의 extras 핀
+#  lxml[html-clean] 분해를 막기 위해 명시. pip-tools 도 7.5.3 핀 권장.)
 
 on:
   push:

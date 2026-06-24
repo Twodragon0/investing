@@ -70,8 +70,11 @@ else
   "$VENV/bin/pip" install --quiet pip-tools
 fi
 
-echo "$LOG pip-compile --generate-hashes → $REQ_LOCK"
-"$VENV/bin/pip-compile" --generate-hashes \
+# --no-strip-extras: pip-tools 8.0.0 부터 --strip-extras 가 기본이 된다(7.5.3 경고).
+# 현 락은 extras 핀(lxml[html-clean]==)을 보유하므로, strip 되면 lxml + lxml-html-clean
+# 으로 분해돼 락 내용·커버리지 가드 관점이 바뀐다. 현 동작을 고정하기 위해 명시한다.
+echo "$LOG pip-compile --generate-hashes --no-strip-extras → $REQ_LOCK"
+"$VENV/bin/pip-compile" --generate-hashes --no-strip-extras \
   --output-file "$REQ_LOCK" "$REQ_TXT"
 
 echo "$LOG 커버리지/해시 가드 검증 (network 불필요)"
