@@ -105,6 +105,33 @@ class TestWrapPictureTags:
         assert "| relative_url }}" in result
         assert result.count("relative_url") == 2  # one for webp, one for png
 
+    def test_r2_disabled_uses_relative_url(self):
+        """R2 비활성 시 기존 Liquid relative_url 형식 유지 (동작 불변)."""
+        md = "![x]({{ '/assets/images/generated/x.png' | relative_url }})"
+        with patch("common.post_generator._r2_enabled", return_value=False):
+            result = _wrap_picture_tags(md)
+        assert "| relative_url }}" in result
+        assert result.count("relative_url") == 2
+        assert "https://" not in result
+
+    def test_r2_enabled_uses_cdn_url_in_picture(self):
+        """R2 활성 시 <picture> srcset/src 가 CDN 절대 URL (relative_url 미사용)."""
+
+        def fake_public_url(path: str) -> str:
+            return "https://cdn.example.com/generated/" + path.rsplit("/", 1)[-1]
+
+        md = "![x]({{ '/assets/images/generated/x.png' | relative_url }})"
+        with (
+            patch("common.post_generator._r2_enabled", return_value=True),
+            patch("common.post_generator._r2_public_url", side_effect=fake_public_url),
+        ):
+            result = _wrap_picture_tags(md)
+        assert "<picture>" in result
+        assert "relative_url" not in result
+        assert 'srcset="https://cdn.example.com/generated/x.webp"' in result
+        assert 'src="https://cdn.example.com/generated/x.png"' in result
+        assert 'alt="x"' in result
+
 
 class TestFixTranslationArtifacts:
     """Tests for _fix_translation_artifacts()."""

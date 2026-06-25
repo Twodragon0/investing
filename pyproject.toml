@@ -63,6 +63,10 @@ relative_files = true
 
 [tool.pytest.ini_options]
 addopts = "--cov=scripts --cov-fail-under=55"
+# 베어 `pytest` 가 Jekyll 빌드 산출물(_site/) 내 복사된 테스트를 수집해
+# ImportError 로 깨지던 문제 방지. CI 는 명시적으로 `pytest tests/` 를 호출하므로 영향 없음.
+testpaths = ["tests"]
+norecursedirs = ["_site", ".git", "node_modules", "vendor", ".bundle"]
 # pytest-timeout 'thread' method — signal 기반(default)은 Playwright sync API의
 # C extension(GIL hold) 안에서 SIGALRM이 무시되는 케이스가 있어 대기가 무한 연장.
 # i18n-e2e CI run 25563884706에서 S3 touch가 22분 행 → workflow timeout.

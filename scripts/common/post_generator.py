@@ -410,12 +410,26 @@ def _normalize_generated_body(content: str) -> str:
     return content
 
 
+def _img_src_expr(path: str) -> str:
+    """Return the rendered src expression for a generated-image path.
+
+    R2 활성 시 CDN 절대 URL을 그대로 반환(Liquid 필터 없음), 비활성 시 기존
+    ``{{ 'path' | relative_url }}`` Liquid 형식을 유지한다. 게이트(R2 비활성)
+    뒤에서는 출력이 완전히 동일하므로 현재 동작은 불변이다.
+    """
+    if _r2_enabled():
+        return _r2_public_url(path)
+    return "{{ '" + path + "' | relative_url }}"
+
+
 def _wrap_picture_tags(content: str) -> str:
     """Convert generated PNG markdown images to HTML <picture> tags with WebP.
 
     Transforms Liquid-form ``![alt]({{ '/assets/images/generated/foo.png' | relative_url }})``
     into ``<picture><source srcset="..." type="image/webp"><img src="..." alt="..." loading="lazy"></picture>``
     for server-side WebP-first rendering without JavaScript dependency.
+
+    R2 활성 시 srcset/src 는 CDN 절대 URL로 렌더된다(`_img_src_expr` 게이트).
     """
 
     def _picture_replace(match: re.Match) -> str:
@@ -424,8 +438,8 @@ def _wrap_picture_tags(content: str) -> str:
         webp_path = png_path.replace(".png", ".webp")
         return (
             "<picture>"
-            "<source srcset=\"{{ '" + webp_path + '\' | relative_url }}" type="image/webp">'
-            "<img src=\"{{ '" + png_path + "' | relative_url }}\" "
+            '<source srcset="' + _img_src_expr(webp_path) + '" type="image/webp">'
+            '<img src="' + _img_src_expr(png_path) + '" '
             'alt="' + alt + '" loading="lazy" decoding="async">'
             "</picture>\n"
         )
