@@ -2059,8 +2059,15 @@ class TestMainIntegration:
         )
 
     def _patch_posts_dir(self, monkeypatch, posts_dir):
-        """Redirect POSTS_DIR inside gds module so glob finds tmp_path posts."""
+        """Redirect POSTS_DIR so glob finds tmp_path posts.
+
+        main() globs via gds.POSTS_DIR, but the extracted section builders
+        (summary_sections._render_generated_image) resolve generated images
+        against their own module-level POSTS_DIR. Patch both bindings so the
+        main() integration tests stay isolated from the real repo image tree.
+        """
         monkeypatch.setattr(gds, "POSTS_DIR", posts_dir)
+        monkeypatch.setattr("common.summary_sections.POSTS_DIR", posts_dir)
 
     def _patch_datetime(self, monkeypatch):
         """Make datetime.now() in gds return a fixed date matching TODAY."""
