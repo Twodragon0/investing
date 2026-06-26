@@ -104,3 +104,45 @@ class TestDailySummaryBoundaries:
 
         assert gds._render_generated_image.__module__ == "common.summary_sections"
         assert hasattr(ss, "POSTS_DIR")
+
+
+class TestSummaryPostHelperBoundaries:
+    """gds.<name> re-exports for the earlier categorizer/parsing extractions."""
+
+    def test_categorizers_owned_by_summary_post_categorizers(self):
+        for name in (
+            "_extract_bold_lines",
+            "summarize_crypto_post",
+            "summarize_market_post",
+            "summarize_political_post",
+            "summarize_regulatory_post",
+            "summarize_security_post",
+            "summarize_social_post",
+            "summarize_stock_post",
+            "summarize_worldmonitor_post",
+        ):
+            assert getattr(gds, name).__module__ == "common.summary_post_categorizers", (
+                f"gds.{name} must live in common.summary_post_categorizers"
+            )
+
+    def test_parsing_helpers_owned_by_summary_post_parsing(self):
+        for name in (
+            "_extract_highlights",
+            "_is_similar_title",
+            "count_news_items",
+            "extract_bullet_points",
+            "extract_section",
+            "extract_table_rows",
+            "read_post_content",
+            "strip_html_tags",
+        ):
+            assert getattr(gds, name).__module__ == "common.summary_post_parsing", (
+                f"gds.{name} must live in common.summary_post_parsing"
+            )
+
+    def test_reexport_identity_matches_owning_modules(self):
+        import common.summary_post_categorizers as cat
+        import common.summary_post_parsing as par
+
+        assert gds.summarize_crypto_post is cat.summarize_crypto_post
+        assert gds.read_post_content is par.read_post_content
