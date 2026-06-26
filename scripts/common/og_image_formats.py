@@ -23,7 +23,7 @@ logger = logging.getLogger("og-image-gen")
 
 def _convert_to_webp(png_path: str, quality: int = 85) -> bool:
     """Convert a PNG file to WebP format alongside the original."""
-    if not _PIL_AVAILABLE:
+    if PILImage is None:
         return False
     webp_path = re.sub(r"\.png$", ".webp", png_path)
     try:
@@ -38,7 +38,7 @@ def _convert_to_webp(png_path: str, quality: int = 85) -> bool:
 
 def _convert_to_avif(png_path: str, quality: int = 50) -> bool:
     """Convert a PNG file to AVIF format alongside the original."""
-    if not _PIL_AVAILABLE:
+    if PILImage is None:
         return False
     avif_path = re.sub(r"\.png$", ".avif", png_path)
     try:
