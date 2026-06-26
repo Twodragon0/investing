@@ -31,6 +31,10 @@ from common import asset_storage  # noqa: E402  (sys.path 설정 후 import)
 
 # 표준 OG 합성 본체 + 결합 헬퍼는 [[og_compose]] 로 추출(2026-06-26).
 # 메인 모듈의 trading-journal 경로와 테스트가 og.<name> 으로 참조하므로 재-export 한다.
+# 주의: generate_og_image 의 내부 호출(_convert_formats_parallel/_extract_metrics 등)을
+# mock 하려면 og.<name> 이 아니라 소유 모듈(common.og_compose / common.og_image_formats)을
+# 패치해야 한다 — 이 함수는 og 모듈 글로벌이 아닌 자기 모듈 글로벌을 읽는다.
+# (경계 가드: tests/test_module_extraction_boundaries.py)
 from common.og_compose import (  # noqa: E402,F401  (재-export: og.<name> 패치/테스트 호환)
     _CATEGORY_VISUALS,
     CATEGORY_COLORS,
