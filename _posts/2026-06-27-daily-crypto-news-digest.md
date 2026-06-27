@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-27 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 솔라나, 비트코인 급락 속에서도 상대적 강세…ETFs 및 실물자산 확장 주목 - tokenpost.kr - 102건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 암호화폐 주목</li><li>🏦 <strong>거래소</strong>: 21건 수집</li><li>🔷 <strong>이더리움</strong>: 이더리움 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.tokenpost.kr">솔라나, 비트코인 급락 속에서도 상대적 강세…ETFs 및 실물자산 확장 주목 - tokenpost.kr</a> <span class="p0-desc">토큰포스트는 대한민국 No.1 블록체인·암호화폐 뉴스 미디어입니다. 비트코인, 이더리움, 솔라나, XRP, 리플, 밈코인, 스테이블코인, NFT, 디파이 등 최신 트렌드와 투자 인.</span></li><li><a href="https://cointelegraph.com/markets/ethereum-whale-who-shorted-october-2025-crash-returns-with-a-197m-short-eth-bet?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">이더리움 고래 WHO 2025년 10월 숏 포지션 폭락 $19.7M 오픈 ETH 숏 포지션</a> <span class="p0-desc">Ether의 기술 설정에 따르면 1,375달러까지 하락할 가능성이 있으며, 이는 고래의 미실현 이익을 239만 달러로 늘릴 수 있는 움직임입니다.</span></li><li><a href="https://cointelegraph.com/news/polymarket-vendor-compromise-drains-29m-users?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">폴리마켓에서 290만 달러 도난 피해, 사용자 환불</a> <span class="p0-desc">Polymarket은 공격자가 프런트엔드에 악성 스크립트를 주입한 후 손상을 억제하고 영향을 받는 종속성을 제거했다고 밝혔습니다</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 솔라나, 비트코인 급락 속에서도 상대적 강세…ETFs 및 실물자산 확장 주목 - tokenpost.kr 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 102건의 뉴스 중 P1 주요 이슈도 8건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (51건): 비트코인 관련 (51건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (31건): 암호화폐 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🏦 거래소** (21건): services, coinbase, binance 이슈가 부각되며 해당 섹터의 단기 변동성 확대 가능성이 있습니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 솔라나, 비트코인 급락 속에서도 상대적 강세…ETFs 및 실물자산 확장 주목 - tokenpost.kr
-- 이더리움 고래 WHO 2025년 10월 숏 포지션 폭락 $19.7M 오픈 ETH 숏 포지션
-- 폴리마켓에서 290만 달러 도난 피해, 사용자 환불
-
-### 주요 이슈
-
-- Crypto의 ETF Boom은 Brutal Week에서 45억 달러의 현실 확인을 받았습니다.
-- 비트코인은 ETF 유출이 7주까지 연장됨에 따라 $60,000 미만으로 유지됩니다.
-- 비트코인·이더리움 ETF 자금 흐름, 업비트서 한눈에 본다
-- 외 5건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Cointelegraph(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 1건 포함
-- 프로모션성 거래소 공지 4건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-06-27.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-06-27.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **102건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
