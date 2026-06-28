@@ -3,18 +3,19 @@
   "families": {
     "bad_image": {
       "buckets": {
-        "ext:gif": 1809,
+        "ext:gif": 1815,
         "default-image": 1004,
-        "ext:ico": 167,
+        "ext:ico": 170,
         "placeholder": 371,
         "ext:svg": 78,
         "blank.": 59,
         "beacon": 28,
         "wp-content/plugins": 2,
-        "gravatar.com/avatar": 1
+        "gravatar.com/avatar": 1,
+        "no-image": 3
       }
     }
   },
   "since": "2026-04-23T08:54:23",
-  "last_seen": "2026-06-28T05:50:50"
+  "last_seen": "2026-06-28T06:34:10"
 }
