@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-28 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: SecondFi는 카르다노 지갑 악용 후 2주 복구를 목표로 합니다. - 93건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 주목</li><li>🔵 <strong>규제/정책</strong>: 25건 수집</li><li>📈 <strong>가격/시장</strong>: 달러 관련 27건</li><li>🏦 <strong>거래소</strong>: 스테이블코인 관련 15건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/secondfi-two-week-recovery-cardano-wallet-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">SecondFi는 카르다노 지갑 악용 후 2주 복구를 목표로 합니다.</a> <span class="p0-desc">SecondFi는 법의학 조사를 완료하고 최종 잔액 스냅샷을 촬영했으며 자산 반환을 준비하고 있다고 밝혔습니다</span></li><li><a href="https://cointelegraph.com/markets/ethereum-whale-who-shorted-october-2025-crash-returns-with-a-197m-short-eth-bet?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">이더리움 고래 WHO 2025년 10월 숏 포지션 폭락 $19.7M 오픈 ETH 숏 포지션</a> <span class="p0-desc">Ether의 기술 설정에 따르면 1,375달러까지 하락할 가능성이 있으며, 이는 고래의 미실현 이익을 239만 달러로 늘릴 수 있는 움직임입니다.</span></li><li><a href="https://decrypt.co/372221/ai-agent-openclaw-6000-hack-attempts">이 AI 에이전트가 6,000번의 해킹 시도에서 살아남았습니다. 방법은 다음과 같습니다.</a> <span class="p0-desc">Fernando Irarrázaval은 OpenClaw 보조자의 받은 편지함을 Hacker News에 게시하고 Claude Opus 4.6이 수천 명의 공격자를 막아내는 것을 지켜.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: SecondFi는 카르다노 지갑 악용 후 2주 복구를 목표로 합니다. 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 93건의 뉴스 중 P1 주요 이슈도 7건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (50건): 비트코인 관련 (50건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **🔵 규제/정책** (25건): cftc, billionaire, grantham 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **📈 가격/시장** (27건): 달러 가격 변동 (27건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- SecondFi는 카르다노 지갑 악용 후 2주 복구를 목표로 합니다.
-- 이더리움 고래 WHO 2025년 10월 숏 포지션 폭락 $19.7M 오픈 ETH 숏 포지션
-- 이 AI 에이전트가 6,000번의 해킹 시도에서 살아남았습니다. 방법은 다음과 같습니다.
-
-### 주요 이슈
-
-- SAPD, 암호화폐 ATM을 통한 비트코인 사기에 대한 경고 표시
-- 코인 시황] 기술주 쇼크에 비트코인 6만달러 붕괴…ETF 자금유출·10억달러 청산 '악재 겹쳤다' - 뉴스핌
-- 오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다
-- 외 4건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Cointelegraph(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 1건 포함
-- 프로모션성 거래소 공지 4건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-06-28.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-06-28.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **93건** 수집
+- 주요 테마: 🟠 비트코인, 🔵 규제/정책, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
