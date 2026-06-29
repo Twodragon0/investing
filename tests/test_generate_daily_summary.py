@@ -1737,6 +1737,41 @@ class TestBuildBriefingSection:
         assert "테마 스냅샷" in combined
         assert "금리/유동성" in combined
 
+    def test_stock_detail_has_no_double_period(self):
+        """Regression: market_data already ending in '.' must not produce '..'."""
+        mock_summ = self._make_mock_summarizer()
+        stock = {
+            "type": "stock",
+            "count": 5,
+            "highlights": ["- KOSPI 상승"],
+            "key_summary": [],
+            "market_data": ["KOSPI 2,500선 마감."],
+            "content": "KOSPI 2,500선 마감.",
+            "themes": [],
+            "url": "https://example.com/stock",
+        }
+        result = gds._build_briefing_section(
+            all_summaries=[],
+            all_news_items=[],
+            summary_map={
+                "crypto": None,
+                "stock": stock,
+                "regulatory": None,
+                "social": None,
+                "worldmonitor": None,
+                "political": None,
+            },
+            theme_payload=[],
+            sentiment=self._make_sentiment(),
+            today="2099-04-12",
+            briefing_image=None,
+            priority_items={"P0": [], "P1": [], "P2": []},
+            summarizer=mock_summ,
+        )
+        combined = "\n".join(result)
+        assert "마감." in combined
+        assert "마감.." not in combined
+
 
 # ---------------------------------------------------------------------------
 # _build_priority_and_category_sections
@@ -1821,6 +1856,35 @@ class TestBuildPriorityAndCategorySections:
         )
         assert isinstance(result, list)
         assert all(isinstance(line, str) for line in result)
+
+    def test_security_key_summary_is_translated_and_bulleted(self):
+        """Regression: English security key_summary must route through Korean
+        translation and render as a bullet, like other category headlines."""
+        security = {
+            "type": "security",
+            "count": 2,
+            "highlights": [],
+            "key_summary": ["- Major exchange exploit drains user funds today worldwide"],
+            "incidents": [],
+            "content": "보안 요약 정보입니다.",
+            "themes": [],
+            "url": "https://example.com/security",
+        }
+        with patch(
+            "common.summary_text_ko.translate_to_korean",
+            return_value="대형 거래소 해킹으로 사용자 자금 유출",
+        ):
+            result = gds._build_priority_and_category_sections(
+                priority_items={"P0": [], "P1": [], "P2": []},
+                market_summary=None,
+                security_summary=security,
+                summary_map=self._make_summary_map(),
+                post_links=[],
+                all_news_items=[],
+            )
+        combined = "\n".join(result)
+        assert "- 대형 거래소 해킹으로 사용자 자금 유출" in combined
+        assert "Major exchange exploit drains user funds" not in combined
 
     def test_p0_section_rendered_when_p0_items_present(self):
         p0_item = {

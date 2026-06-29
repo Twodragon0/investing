@@ -515,7 +515,7 @@ def _build_briefing_section(
         stock_dp = _extract_category_data_points(stock_summary)
         stock_detail = ""
         if stock_summary.get("market_data"):
-            stock_detail = _clean_bullet_text(stock_summary["market_data"][0]) + "."
+            stock_detail = _clean_bullet_text(stock_summary["market_data"][0]).rstrip(". ") + "."
         if stock_dp["figures"]:
             stock_detail += f" 주요 수치: {stock_dp['figures'][0]}."
         if stock_dp["titles"] and not stock_detail.strip():
@@ -965,7 +965,7 @@ def _build_priority_and_category_sections(
             content_parts.append("")
         elif security_summary.get("key_summary"):
             for h in security_summary["key_summary"][:3]:
-                content_parts.append(h)
+                content_parts.append(f"- {_headline_for_korean_summary(_clean_bullet_text(h))}")
         if security_summary.get("incidents"):
             incident_rows = []
             for row in security_summary["incidents"][:3]:
