@@ -203,6 +203,7 @@ Slack 연동:
 ## Important Notes
 
 - `_state/*.json` 파일은 중복 방지 상태이므로 수동 수정 금지 (Claude 훅 `pre-commit-state-guard`가 커밋 시도 차단)
+- 로컬 개발 시 `_state` 변경 노이즈/충돌 완화: `bash scripts/dev_ignore_state.sh` (셋업 가이드: `docs/state-friction-mitigation.md`)
 - `.claude/settings.json`에 팀 공유 권한 + 5개 자동 훅 등록 (자세한 내용: `.claude/README.md`)
 - `assets/images/generated/`는 30일 이상 된 이미지 자동 정리됨
 - GitHub Actions는 동시성 그룹(`collect-data`)으로 순차 실행
