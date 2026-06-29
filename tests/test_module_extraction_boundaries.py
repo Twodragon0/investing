@@ -69,41 +69,108 @@ class TestDailySummaryBoundaries:
     """gds.<name> re-exports resolve to common.summary_sections."""
 
     def test_section_builders_owned_by_summary_sections(self):
+        # L2 = the 5 section builders only (2026-06-29 L2 split).
         for name in (
             "_build_market_signal_section",
             "_build_snapshot_table",
             "_build_overview_section",
             "_build_briefing_section",
             "_build_priority_and_category_sections",
-            "_render_generated_image",
-            "_analyze_sentiment",
         ):
             assert getattr(gds, name).__module__ == "common.summary_sections", (
-                f"gds.{name} must live in common.summary_sections"
+                f"gds.{name} must live in common.summary_sections (L2)"
+            )
+
+    def test_analysis_helpers_owned_by_summary_analysis(self):
+        # L1 = sentiment/relation/data helpers (incl. _render_generated_image).
+        for name in (
+            "_analyze_sentiment",
+            "_cross_asset_topics",
+            "_sentiment_keywords",
+            "_extract_key_figures",
+            "_find_shared_topics_across_categories",
+            "_extract_category_data_points",
+            "_topic_hits",
+            "_relation_rows",
+            "_coverage_warnings",
+            "_render_generated_image",
+        ):
+            assert getattr(gds, name).__module__ == "common.summary_analysis", (
+                f"gds.{name} must live in common.summary_analysis (L1)"
+            )
+
+    def test_text_ko_helpers_owned_by_summary_text_ko(self):
+        # L0 = Korean-text/noise leaf helpers.
+        for name in (
+            "_strip_markdown_link",
+            "_is_noise_title",
+            "_clean_bullet_text",
+            "_clean_headline",
+            "_looks_english_heavy",
+            "_headline_for_korean_summary",
+            "_summary_keywords_for_korean",
+            "_display_title_for_korean_item",
+            "_description_for_korean_item",
+            "_best_non_noise_title",
+        ):
+            assert getattr(gds, name).__module__ == "common.summary_text_ko", (
+                f"gds.{name} must live in common.summary_text_ko (L0)"
             )
 
     def test_moved_constants_are_same_object_via_reexport(self):
         import common.summary_sections as ss
+        import common.summary_text_ko as ko
 
-        for const in ("_SUMMARY_KEYWORD_LABELS", "_REPORT_CATEGORY_LABELS", "_NOISE_TITLE_PATTERNS"):
-            assert getattr(gds, const) is getattr(ss, const)
+        # L0 constants live in summary_text_ko, L2 constant in summary_sections.
+        assert gds._SUMMARY_KEYWORD_LABELS is ko._SUMMARY_KEYWORD_LABELS
+        assert gds._NOISE_TITLE_PATTERNS is ko._NOISE_TITLE_PATTERNS
+        assert gds._REPORT_CATEGORY_LABELS is ss._REPORT_CATEGORY_LABELS
+
+    def test_layering_is_unidirectional(self):
+        # L2 → L1 → L0; lower layers must not import the parent module or a
+        # higher layer. Inspect actual import statements (not docstring prose).
+        import ast
+
+        import common.summary_analysis as analysis
+        import common.summary_text_ko as ko
+
+        def imported_modules(module):
+            with open(module.__file__, encoding="utf-8") as f:
+                tree = ast.parse(f.read())
+            mods = set()
+            for node in ast.walk(tree):
+                if isinstance(node, ast.ImportFrom) and node.module:
+                    mods.add(node.module)
+                elif isinstance(node, ast.Import):
+                    mods.update(a.name for a in node.names)
+            return mods
+
+        forbidden_parent = {"generate_daily_summary", "scripts.generate_daily_summary"}
+        # L1 must not import the parent orchestration module
+        assert not (imported_modules(analysis) & forbidden_parent)
+        # L0 is a true leaf: no parent, no L1, no L2
+        ko_imports = imported_modules(ko)
+        assert not (ko_imports & forbidden_parent)
+        assert "common.summary_analysis" not in ko_imports
+        assert "common.summary_sections" not in ko_imports
 
     def test_orchestration_stays_in_parent_module(self):
-        # main()/IO orchestration must NOT be pulled into the extracted module —
+        # main()/IO orchestration must NOT be pulled into the extracted modules —
         # they own gds.POSTS_DIR / gds.datetime that integration tests patch.
+        extracted = {"common.summary_sections", "common.summary_analysis", "common.summary_text_ko"}
         for name in ("main", "_write_summary_post", "_load_today_posts", "_resolve_frontmatter_image"):
-            assert getattr(gds, name).__module__ != "common.summary_sections", (
+            assert getattr(gds, name).__module__ not in extracted, (
                 f"gds.{name} should stay in the parent module (owns patched globals)"
             )
 
     def test_render_image_posts_dir_boundary_is_documented(self):
-        # _render_generated_image moved to summary_sections, so it reads
-        # summary_sections.POSTS_DIR — NOT gds.POSTS_DIR. main() integration tests
+        # _render_generated_image moved to summary_analysis (L1), so it reads
+        # summary_analysis.POSTS_DIR — NOT gds.POSTS_DIR. main() integration tests
         # must patch both bindings (see TestMainIntegration._patch_posts_dir).
-        import common.summary_sections as ss
+        import common.summary_analysis as analysis
 
-        assert gds._render_generated_image.__module__ == "common.summary_sections"
-        assert hasattr(ss, "POSTS_DIR")
+        assert gds._render_generated_image.__module__ == "common.summary_analysis"
+        assert hasattr(analysis, "POSTS_DIR")
 
 
 class TestSummaryPostHelperBoundaries:

@@ -29,6 +29,21 @@ from common.markdown_utils import (
 )
 from common.post_generator import POSTS_DIR
 from common.summarizer import ThemeSummarizer
+
+# summary_sections 는 2026-06-29 L2 분리로 3개 레이어로 나뉘었다(L2→L1→L0).
+# gds.<name> 테스트/호출 호환을 위해 각 소유 모듈에서 재-export 한다.
+from common.summary_analysis import (  # noqa: F401  (재-export: gds.<name> L1)
+    _analyze_sentiment,
+    _coverage_warnings,
+    _cross_asset_topics,
+    _extract_category_data_points,
+    _extract_key_figures,
+    _find_shared_topics_across_categories,
+    _relation_rows,
+    _render_generated_image,
+    _sentiment_keywords,
+    _topic_hits,
+)
 from common.summary_post_categorizers import (  # noqa: F401  (재-export: gds.<name> 테스트/호출 호환)
     _extract_bold_lines,
     summarize_crypto_post,
@@ -50,35 +65,27 @@ from common.summary_post_parsing import (  # noqa: F401  (재-export: gds.<name>
     read_post_content,
     strip_html_tags,
 )
-from common.summary_sections import (  # noqa: F401  (재-export: gds.<name> 테스트/호출 호환)
-    _NOISE_TITLE_PATTERNS,
+from common.summary_sections import (  # noqa: F401  (재-export: gds.<name> L2)
     _REPORT_CATEGORY_LABELS,
-    _SUMMARY_KEYWORD_LABELS,
-    _analyze_sentiment,
-    _best_non_noise_title,
     _build_briefing_section,
     _build_market_signal_section,
     _build_overview_section,
     _build_priority_and_category_sections,
     _build_snapshot_table,
+)
+from common.summary_text_ko import (  # noqa: F401  (재-export: gds.<name> L0)
+    _NOISE_TITLE_PATTERNS,
+    _SUMMARY_KEYWORD_LABELS,
+    _best_non_noise_title,
     _clean_bullet_text,
     _clean_headline,
-    _coverage_warnings,
-    _cross_asset_topics,
     _description_for_korean_item,
     _display_title_for_korean_item,
-    _extract_category_data_points,
-    _extract_key_figures,
-    _find_shared_topics_across_categories,
     _headline_for_korean_summary,
     _is_noise_title,
     _looks_english_heavy,
-    _relation_rows,
-    _render_generated_image,
-    _sentiment_keywords,
     _strip_markdown_link,
     _summary_keywords_for_korean,
-    _topic_hits,
 )
 from common.translator import get_display_title
 
