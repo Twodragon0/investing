@@ -17,3 +17,9 @@ pytest-timeout>=2.3
 # 동일 버전을 써야 format 규칙 불일치로 인한 spurious CI red를 막을 수 있음.
 # 세 곳(여기 / code-quality.yml / .pre-commit-config.yaml)을 항상 함께 갱신할 것.
 ruff==0.15.8
+
+# Type check — CI(code-quality.yml)가 `python -m basedpyright`(include=["scripts"])를
+# 실행한다. .pre-commit-config.yaml 의 local basedpyright 훅이 로컬 커밋 단계에서
+# 동일 검사를 돌려 옵셔널 import 폴백(X = None) 등으로 인한 CI red 를 사전 차단한다.
+# CI 가 floating 버전이므로 여기도 unpinned 로 두어 동작을 맞춘다.
+basedpyright

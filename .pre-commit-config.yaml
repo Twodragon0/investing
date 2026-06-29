@@ -47,3 +47,15 @@ repos:
         language: system
         entry: python scripts/tools/check_relative_imports.py
         files: ^scripts/common/.*\.py$
+
+      # basedpyright — CI(code-quality.yml)의 `python -m basedpyright`(include=["scripts"])를
+      # 로컬 커밋 단계에서 미리 잡는다. 옵셔널 import 폴백(`X = None` → reportOptionalMemberAccess)
+      # 처럼 ruff/pytest 는 통과하지만 Code Quality 만 red 가 되는 회귀를 사전 차단(2026-06-26).
+      # pass_filenames: false — basedpyright 는 pyproject [tool.basedpyright] include 로
+      # 전체 scripts/ 패키지 컨텍스트를 검사하므로 변경 파일만 넘기면 안 된다.
+      - id: basedpyright
+        name: basedpyright type check (scripts/)
+        language: system
+        entry: python -m basedpyright
+        pass_filenames: false
+        files: ^scripts/.*\.py$
