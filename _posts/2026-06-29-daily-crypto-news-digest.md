@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-29 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 이 AI 에이전트가 6,000번의 해킹 시도에서 살아남았습니다. 방법은 다음과 같습니다. - 80건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 달러, 암호화폐 동향 주시</li><li>🏦 <strong>거래소</strong>: 스테이블코인 이슈 부각</li><li>🔵 <strong>규제/정책</strong>: 20건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://decrypt.co/372221/ai-agent-openclaw-6000-hack-attempts">이 AI 에이전트가 6,000번의 해킹 시도에서 살아남았습니다. 방법은 다음과 같습니다.</a> <span class="p0-desc">Fernando Irarrázaval은 OpenClaw 보조자의 받은 편지함을 Hacker News에 게시하고 Claude Opus 4.6이 수천 명의 공격자를 막아내는 것을 지켜.</span></li><li><a href="https://cointelegraph.com/news/secondfi-two-week-recovery-cardano-wallet-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">SecondFi는 카르다노 지갑 악용 후 2주 복구를 목표로 합니다.</a> <span class="p0-desc">SecondFi는 법의학 조사를 완료하고 최종 잔액 스냅샷을 촬영했으며 자산 반환을 준비하고 있다고 밝혔습니다</span></li><li><a href="https://www.coindesk.com/markets/2026/06/27/polymarket-hack-updated-to-usd3-1-million-days-after-the-platform-promised-users-full-refunds">플랫폼이 사용자에게 전액 환불을 약속한 지 며칠 만에 Polymarket 해킹이 310만 달러로 업데이트되었습니다.</a> <span class="p0-desc">뉴스 보도에 따르면 예측 시장의 거대 기업은 허위 또는 기만적 마케팅 관행과 관련하여 조사를 받고 있습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 이 AI 에이전트가 6,000번의 해킹 시도에서 살아남았습니다. 방법은 다음과 같습니다. 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 80건의 뉴스 중 P1 주요 이슈도 9건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (45건): 비트코인 관련 (45건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (24건): 달러, 암호화폐, 하락 가격 변동 (24건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏦 거래소** (13건): 스테이블코인 관련 보도가 이어지고 있어 관련 포지션 점검이 필요합니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 이 AI 에이전트가 6,000번의 해킹 시도에서 살아남았습니다. 방법은 다음과 같습니다.
-- SecondFi는 카르다노 지갑 악용 후 2주 복구를 목표로 합니다.
-- 플랫폼이 사용자에게 전액 환불을 약속한 지 며칠 만에 Polymarket 해킹이 310만 달러로 업데이트되었습니다.
-
-### 주요 이슈
-
-- 비트코인은 ETF 유출로 인해 $60,000 아래로 떨어지고 연준 전망은 감정에 부담을 줍니다.
-- Crypto의 ETF Boom은 Brutal Week에서 45억 달러의 현실 확인을 받았습니다.
-- 바이낸스, MiCA 라이센스 실패로 인해 EU 암호화 서비스 중단
-- 외 6건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, ETF
-- **주요 출처**: Google News(20건), Cointelegraph(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 1건 포함
-- 프로모션성 거래소 공지 4건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-06-29.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-06-29.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **80건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

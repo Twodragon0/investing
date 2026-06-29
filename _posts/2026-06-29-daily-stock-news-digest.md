@@ -33,51 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-29 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: Saudi Aramco helicopter crash kills 14 nationals, state news agency says - 138건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 폭락, 달러 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 환율, 인플레이션 관련 7건</li><li>🤖 <strong>AI/기술</strong>: 엔비디아 이슈 부각</li><li>🔴 <strong>보안/해킹</strong>: 4건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.cnbc.com/2026/06/28/saudi-aramco-helicopter-crash-kills-14-nationals-state-news-agency.html">Saudi Aramco helicopter crash kills 14 nationals, state news agency says</a></li><li><a href="https://www.investing.com/news/world-news/eleven-people-killed-in-plane-crash-in-northeastern-france-local-officials-say-4764112">Eleven people killed in plane crash in northeastern France</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Saudi Aramco helicopter crash kills 14 nationals, state news agency says 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 138건의 뉴스 중 P1 주요 이슈도 15건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (22건): 폭락, 달러, 조정 가격 변동 (22건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (7건): 환율, 인플레이션, 연준 매크로 변수 (7건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🤖 AI/기술** (10건): 엔비디아 기술 이슈 (10건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 사우디 아람코 헬리콥터 폭락로 국민 14명 사망, 국영 통신사 발표
-- 프랑스 북동부에서 폭락 비행기로 11명이 사망했습니다.
-
-### 주요 이슈
-
-- NeuroPace, Inc.(NPCE), ECoG Assistant™에 대한 FDA 승인 공개
-- What’s the Best XRP ETF?
-- "실적 비슷한데 몸값은 왜"…삼전·하닉 저평가 받는 이유 [분석+
-- 외 12건
-
-### 투자자 체크포인트
-
-- 한국 기사 44건, 글로벌 기사 94건 수집
-- 한국 지수: KOSPI 8,411.21(-5.81%), KOSDAQ 851.37(-4.10%), USD/KRW 1,535.00(-0.59%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">22건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:32%"></div></div><span class="theme-count">7건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:45%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">🔴 보안/해킹</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:18%"></div></div><span class="theme-count">4건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:27%"></div></div><span class="theme-count">6건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-06-29.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-06-29.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 8,411.21 (-5.81%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 851.37 (-4.10%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- *시사저널e에서 삶의 질이 높아지는 경제정보와 온라인 저널리즘의 미래를 만나보십시오.*
 
 ## 테마별 주요 뉴스
 
