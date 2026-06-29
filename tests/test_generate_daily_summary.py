@@ -2098,6 +2098,266 @@ class TestBuildPriorityAndCategorySections:
 
 
 # ---------------------------------------------------------------------------
+# 골든마스터 스냅샷 — _build_briefing_section + _build_priority_and_category_sections
+# ---------------------------------------------------------------------------
+#
+# 행위 보존(behavior-preserving) 리팩터 가드. 풍부하게 채워진 대표 입력으로
+# 두 섹션 빌더의 전체 출력 문자열을 고정한다(SHA256). translate_to_korean 는
+# 항등으로 patch 해 번역 비결정성을 제거한다. 출력이 한 글자라도 바뀌면 해시가
+# 깨지므로, 리팩터가 출력을 바꾸지 않았음을 보장한다.
+
+
+class TestGoldenMasterSummarySections:
+    """리팩터 전후 출력 byte-identical 보장용 골든마스터."""
+
+    # 캡처 시점(2026-06-29) 실제 출력의 SHA256. 출력이 바뀌면 이 값이 깨진다.
+    EXPECTED_HASH = "a43690f8fb2bedb9cf136e1cc995372ed95b1e10c6e1661630279d5301048b83"
+
+    def _sentiment(self):
+        return {
+            "tone": "긍정 우세",
+            "positive": 7,
+            "negative": 3,
+            "ratio": 70,
+            "pos_examples": ["비트코인 급등세", "이더리움 강세"],
+            "neg_examples": ["거래소 해킹 우려"],
+        }
+
+    def _crypto(self):
+        return {
+            "type": "crypto",
+            "title": "암호화폐 뉴스",
+            "count": 30,
+            "highlights": ["- BTC 상승세 지속"],
+            "key_summary": [],
+            "market_data": [],
+            "content": (
+                "금리 연준 fed fomc 금리인상 "
+                "[Bitcoin ETF approval clears regulatory hurdle today worldwide](https://ex.com/btc) "
+                "비트코인 83,200 달러"
+            ),
+            "themes": [("금리/유동성", 12), ("정책/규제", 8), ("기술/온체인", 5)],
+            "url": "https://example.com/crypto",
+        }
+
+    def _stock(self):
+        return {
+            "type": "stock",
+            "title": "주식 뉴스",
+            "count": 20,
+            "highlights": ["- KOSPI 상승"],
+            "key_summary": [],
+            "market_data": ["KOSPI 2,500.50(+1.23%) 상승 마감"],
+            "content": (
+                "금리 연준 fed "
+                "[Tesla earnings beat expectations across the board today](https://ex.com/tsla) KOSPI 2500"
+            ),
+            "themes": [("실적/어닝", 6)],
+            "url": "https://example.com/stock",
+        }
+
+    def _regulatory(self):
+        return {
+            "type": "regulatory",
+            "title": "규제 동향",
+            "count": 10,
+            "highlights": [],
+            "key_summary": ["- SEC 가상자산 신규 가이드라인 발표"],
+            "content": (
+                "규제 sec etf 법안 정책 "
+                "[SEC issues new crypto guidance framework for exchanges today](https://ex.com/sec) "
+                "과징금 50억원"
+            ),
+            "themes": [("정책/규제", 7)],
+            "url": "https://example.com/regulatory",
+        }
+
+    def _social(self):
+        return {
+            "type": "social",
+            "title": "소셜 미디어",
+            "count": 15,
+            "highlights": ["- 비트코인 트위터 언급 급증"],
+            "key_summary": [],
+            "content": (
+                "[Crypto twitter sentiment surges on ETF approval news worldwide](https://ex.com/soc) 언급 1만건"
+            ),
+            "themes": [],
+            "url": "https://example.com/social",
+        }
+
+    def _political(self):
+        return {
+            "type": "political",
+            "title": "정치인 거래",
+            "count": 8,
+            "highlights": ["- 에너지 섹터 매수 집중"],
+            "key_summary": ["- 펠로시 엔비디아 콜옵션 매수", "- 상원의원 반도체주 대량 매수"],
+            "content": (
+                "정치인 거래 [Pelosi buys Nvidia call options ahead of earnings report](https://ex.com/pol) 50만달러"
+            ),
+            "themes": [],
+            "url": "https://example.com/political",
+        }
+
+    def _worldmonitor(self):
+        return {
+            "type": "worldmonitor",
+            "title": "월드모니터 브리핑",
+            "count": 25,
+            "highlights": [],
+            "key_summary": ["- 중동 지정학 리스크 고조"],
+            "content": (
+                "[Global geopolitical tension rises in middle east region today](https://ex.com/wm) 환율 달러 dxy"
+            ),
+            "themes": [],
+            "url": "https://example.com/worldmonitor",
+            "issues": [
+                "| 1 | 중동 긴장 고조 | 지정학 | high | Reuters |",
+                "| 2 | 유가 급등 | 에너지 | mid | Bloomberg |",
+            ],
+        }
+
+    def _security(self):
+        return {
+            "type": "security",
+            "title": "보안 리포트",
+            "count": 5,
+            "highlights": [],
+            "key_summary": ["- Major exchange exploit drains user funds today worldwide"],
+            "content": (
+                "해킹 exploit "
+                "[DeFi protocol hacked for millions in flash loan attack today](https://ex.com/sec2) 피해 1200만달러"
+            ),
+            "themes": [],
+            "url": "https://example.com/security",
+            "incidents": ["| ProjectX | $12M | 플래시론 공격 |", "| ProjectY | $3M | 키 유출 |"],
+        }
+
+    def _market(self):
+        return {
+            "type": "market",
+            "count": 12,
+            "highlights": ["- 코스피 +1.5%", "- 나스닥 -0.3%"],
+            "exec_summary": [],
+            "indicator_rows": ["| CPI | 3.2% | +0.1% |", "| 실업률 | 3.8% | -0.1% |"],
+            "yield_section": "| 10년물 | 4.2% | 스프레드 0.5%p |\n> 장단기 스프레드 정상화",
+            "content": "코스피 상승.",
+            "url": "https://example.com/market",
+        }
+
+    def _build_combined(self):
+        summary_map = {
+            "crypto": self._crypto(),
+            "stock": self._stock(),
+            "regulatory": self._regulatory(),
+            "social": self._social(),
+            "worldmonitor": self._worldmonitor(),
+            "political": self._political(),
+        }
+        all_summaries = [
+            summary_map[k] for k in ("crypto", "stock", "regulatory", "social", "worldmonitor", "political")
+        ]
+        theme_payload = [
+            {"name": "금리/유동성", "emoji": "💰", "count": 32, "keywords": ["금리", "연준", "fed"]},
+            {"name": "정책/규제", "emoji": "📋", "count": 15, "keywords": ["sec", "etf"]},
+            {"name": "기술/온체인", "emoji": "🔗", "count": 8, "keywords": ["tvl", "온체인"]},
+        ]
+        priority_items = {
+            "P0": [
+                {
+                    "title": "비트코인 거래소 대형 해킹 사고 발생 긴급 속보",
+                    "description": "대형 거래소에서 수억 달러 규모의 해킹 피해가 발생했습니다",
+                    "link": "https://ex.com/p0a",
+                    "type": "crypto",
+                },
+                {
+                    "title": "주요 스테이블코인 디페깅 발생 시장 충격",
+                    "description": "주요 스테이블코인이 1달러 페그를 이탈하며 시장에 충격을 주었습니다",
+                    "link": "https://ex.com/p0b",
+                    "type": "crypto",
+                },
+            ],
+            "P1": [
+                {
+                    "title": "비트코인 현물 ETF 최종 승인 결정 발표",
+                    "description": "SEC가 비트코인 현물 ETF를 최종 승인했습니다",
+                    "link": "https://ex.com/p1a",
+                    "type": "crypto",
+                },
+                {
+                    "title": "엔비디아 분기 실적 시장 예상치 상회",
+                    "description": "엔비디아가 분기 실적에서 시장 예상치를 크게 상회했습니다",
+                    "link": "https://ex.com/p1b",
+                    "type": "stock",
+                },
+            ],
+            "P2": [
+                {"title": "이더리움 개발자 컨퍼런스 다음달 개최 예정", "link": "https://ex.com/p2a", "type": "crypto"},
+                {
+                    "title": "솔라나 생태계 신규 프로젝트 다수 출시 예정",
+                    "link": "https://ex.com/p2b",
+                    "type": "crypto",
+                },
+            ],
+        }
+        all_news_items = [
+            {
+                "title": "Bitcoin surges amid ETF approval news worldwide today",
+                "link": "https://ex.com/n1",
+                "type": "crypto",
+            },
+            {"title": "금리 인상 우려로 시장 변동성 확대 전망", "link": "https://ex.com/n2", "type": "stock"},
+            {
+                "title": "SEC regulatory crackdown on crypto exchanges intensifies",
+                "link": "https://ex.com/n3",
+                "type": "regulatory",
+            },
+        ]
+        post_links = [
+            ("암호화폐 뉴스", 30, "https://example.com/crypto"),
+            ("주식 시장 뉴스", 20, "https://example.com/stock"),
+            ("규제 동향", 10, "https://example.com/regulatory"),
+        ]
+
+        mock_summ = MagicMock()
+        mock_summ.detect_concentration.return_value = ("금리/유동성", "interest", 0.42)
+        mock_summ.detect_anomalies.return_value = [("리스크", "risk", 8, "이상 급등 패턴이 감지되었습니다.")]
+
+        with patch("common.summary_text_ko.translate_to_korean", side_effect=lambda x: x):
+            briefing = gds._build_briefing_section(
+                all_summaries=all_summaries,
+                all_news_items=all_news_items,
+                summary_map=summary_map,
+                theme_payload=theme_payload,
+                sentiment=self._sentiment(),
+                today="2026-06-29",
+                briefing_image=None,
+                priority_items=priority_items,
+                summarizer=mock_summ,
+            )
+            priority = gds._build_priority_and_category_sections(
+                priority_items=priority_items,
+                market_summary=self._market(),
+                security_summary=self._security(),
+                summary_map=summary_map,
+                post_links=post_links,
+                all_news_items=all_news_items,
+            )
+        return "\n".join(briefing) + "\n===SPLIT===\n" + "\n".join(priority)
+
+    def test_combined_output_hash_is_stable(self):
+        import hashlib
+
+        combined = self._build_combined()
+        actual = hashlib.sha256(combined.encode("utf-8")).hexdigest()
+        assert actual == self.EXPECTED_HASH, (
+            "행위 변경 감지: 출력이 골든마스터와 다릅니다.\n"
+            f"expected={self.EXPECTED_HASH}\nactual  ={actual}\n--- 실제 출력 ---\n{combined}"
+        )
+
+
+# ---------------------------------------------------------------------------
 # main() integration smoke tests
 # ---------------------------------------------------------------------------
 

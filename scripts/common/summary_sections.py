@@ -18,7 +18,6 @@ from common.markdown_utils import (
     smart_truncate,
 )
 from common.summary_analysis import (
-    _analyze_sentiment,
     _coverage_warnings,
     _extract_category_data_points,
     _find_shared_topics_across_categories,
@@ -492,9 +491,7 @@ def _build_briefing_section(
         content_parts.append("")
 
     content_parts.append("## 뉴스 내용 기반 핵심 요약\n")
-    # Use sentiment already computed above (or compute if not yet)
-    if "sentiment" not in dir():
-        sentiment = _analyze_sentiment(all_summaries)
+    # sentiment 는 파라미터로 전달되므로 그대로 사용한다.
 
     if crypto_summary:
         crypto_dp = _extract_category_data_points(crypto_summary)
@@ -641,6 +638,155 @@ def _build_briefing_section(
     return content_parts
 
 
+def _iter_priority_items(items: List[Dict[str, Any]], limit: int):
+    """우선순위 아이템을 noise 필터 + description 기준 dedup 후 순서대로 yield.
+
+    P0/P1/P2 세 섹션이 공유하던 `[:limit]` 슬라이스 + `_is_noise_title` 필터 +
+    `seen` set dedup(정규화 키는 description→title 폴백) 스캐폴딩을 한곳으로 모은다.
+    렌더는 섹션별로 다르므로 호출부에 남긴다.
+    """
+    seen: set = set()
+    for item in items[:limit]:
+        title = item.get("title", "")
+        if _is_noise_title(title):
+            continue
+        norm = re.sub(r"[^a-z가-힣0-9]", "", item.get("description", title).lower())
+        if norm in seen:
+            continue
+        seen.add(norm)
+        yield item
+
+
+def _headline_bullet(t: str) -> str:
+    """타이틀을 한국어 헤드라인 bullet 로 렌더(규제/보안/소셜 공통)."""
+    return f"- {_headline_for_korean_summary(t)}"
+
+
+def _truncate_bullet(t: str) -> str:
+    """타이틀을 80자 절단 bullet 로 렌더(월드모니터 전용)."""
+    return f"- {smart_truncate(t, 80)}"
+
+
+def _raw_fallback(h: str) -> str:
+    """fallback 항목을 가공 없이 그대로 사용."""
+    return h
+
+
+def _security_fallback(h: str) -> str:
+    """보안 key_summary fallback 을 bullet 클린업 + 한국어 헤드라인으로 렌더."""
+    return f"- {_headline_for_korean_summary(_clean_bullet_text(h))}"
+
+
+def _worldmonitor_issue_rows(issues: List[str]) -> List[List[str]]:
+    """월드모니터 issues 파이프 행을 [제목, 출처] 표 행으로 변환."""
+    rows: List[List[str]] = []
+    for row in issues[:3]:
+        parts = [p.strip() for p in row.split("|") if p.strip()]
+        if len(parts) >= 5:
+            rows.append([parts[1], parts[4]])
+        elif len(parts) >= 3:
+            rows.append([parts[1], parts[2]])
+    return rows
+
+
+def _security_incident_rows(incidents: List[str]) -> List[List[str]]:
+    """보안 incidents 파이프 행을 [프로젝트, 피해 규모, 공격 유형] 표 행으로 변환."""
+    rows: List[List[str]] = []
+    for row in incidents[:3]:
+        parts = [p.strip() for p in row.split("|") if p.strip()]
+        if len(parts) >= 3:
+            rows.append(parts[:3])
+    return rows
+
+
+# 유사 구조 카테고리 섹션 렌더 스펙(규제/월드모니터/보안/소셜).
+# 공통 흐름: 헤딩 → 타이틀 블록 → (elif) fallback → (옵션)표 → figures → 상세 링크.
+# crypto/stock 은 구조가 달라 본문에 별도 코드로 남긴다.
+_CATEGORY_SECTION_SPECS: List[Dict[str, Any]] = [
+    {
+        "key": "regulatory",
+        "heading": "규제 동향",
+        "titles_label": "**주요 규제 이슈:**",
+        "title_render": _headline_bullet,
+        "fallback_keys": ["key_summary"],
+        "fallback_render": _raw_fallback,
+        "table": None,
+        "figures_label": "**관련 수치**",
+    },
+    {
+        "key": "worldmonitor",
+        "heading": "월드모니터 브리핑",
+        "titles_label": "**주요 글로벌 이슈:**",
+        "title_render": _truncate_bullet,
+        "fallback_keys": ["key_summary"],
+        "fallback_render": _raw_fallback,
+        "table": {
+            "source_key": "issues",
+            "headers": ["제목", "출처"],
+            "row_builder": _worldmonitor_issue_rows,
+        },
+        "figures_label": "**관련 수치**",
+    },
+    {
+        "key": "security",
+        "heading": "보안 리포트",
+        "titles_label": "**주요 보안 이슈:**",
+        "title_render": _headline_bullet,
+        "fallback_keys": ["key_summary"],
+        "fallback_render": _security_fallback,
+        "table": {
+            "source_key": "incidents",
+            "headers": ["프로젝트", "피해 규모", "공격 유형"],
+            "row_builder": _security_incident_rows,
+        },
+        "figures_label": "**피해 수치**",
+    },
+    {
+        "key": "social",
+        "heading": "소셜 미디어 동향",
+        "titles_label": "**화제 토픽:**",
+        "title_render": _headline_bullet,
+        "fallback_keys": ["highlights", "key_summary"],
+        "fallback_render": _raw_fallback,
+        "table": None,
+        "figures_label": "**관련 수치**",
+    },
+]
+
+
+def _render_category_section(summary: Dict[str, Any], spec: Dict[str, Any]) -> List[str]:
+    """스펙 기반 카테고리 섹션 렌더. 원래 인라인 코드와 출력이 동일하다."""
+    parts: List[str] = []
+    parts.append(f"### {spec['heading']} ({summary['count']}건)\n")
+    dp = _extract_category_data_points(summary)
+
+    if dp["titles"]:
+        parts.append(spec["titles_label"])
+        for t in dp["titles"][:3]:
+            parts.append(spec["title_render"](t))
+        parts.append("")
+    else:
+        # 타이틀이 없을 때만 fallback 키 체인을 순차 평가(elif 동작 보존).
+        for fkey in spec["fallback_keys"]:
+            if summary.get(fkey):
+                for h in summary[fkey][:3]:
+                    parts.append(spec["fallback_render"](h))
+                break
+
+    table = spec["table"]
+    if table and summary.get(table["source_key"]):
+        table_rows = table["row_builder"](summary[table["source_key"]])
+        if table_rows:
+            parts.append(markdown_table(table["headers"], table_rows))
+            parts.append("")
+
+    if dp["figures"]:
+        parts.append(f"{spec['figures_label']}: {', '.join(dp['figures'][:2])}\n")
+
+    parts.append(f"[상세 보기]({summary.get('url', '#')})\n")
+    return parts
+
+
 def _build_priority_and_category_sections(
     priority_items: Dict[str, list],
     market_summary: Optional[Dict[str, Any]],
@@ -653,10 +799,9 @@ def _build_priority_and_category_sections(
     P1 news, category summaries, P2, report links, and signal analysis sections."""
     crypto_summary = summary_map.get("crypto")
     stock_summary = summary_map.get("stock")
-    regulatory_summary = summary_map.get("regulatory")
-    social_summary = summary_map.get("social")
-    worldmonitor_summary = summary_map.get("worldmonitor")
     political_summary = summary_map.get("political")
+    # 규제/월드모니터/보안/소셜은 _CATEGORY_SECTION_SPECS 루프에서 summary_map/
+    # security_summary 를 직접 조회하므로 여기서 로컬 별칭을 두지 않는다.
 
     content_parts: List[str] = []
 
@@ -666,15 +811,8 @@ def _build_priority_and_category_sections(
     if priority_items.get("P0"):
         content_parts.append("## 긴급 알림\n")
         content_parts.append("> 즉시 확인이 필요한 긴급 뉴스입니다.\n")
-        seen_p0 = set()
-        for item in priority_items["P0"][:5]:
+        for item in _iter_priority_items(priority_items["P0"], 5):
             orig_title = item.get("title", "")
-            if _is_noise_title(orig_title):
-                continue
-            norm = re.sub(r"[^a-z가-힣0-9]", "", item.get("description", orig_title).lower())
-            if norm in seen_p0:
-                continue
-            seen_p0.add(norm)
             display = _display_title_for_korean_item(item)
             link = item.get("link", "")
             desc = _description_for_korean_item(item)
@@ -831,15 +969,8 @@ def _build_priority_and_category_sections(
         content_parts.append("---\n")
         content_parts.append("## 중요 뉴스\n")
         content_parts.append("> 규제, ETF, 실적 등 주요 뉴스입니다.\n")
-        seen_p1 = set()
-        for item in priority_items["P1"][:7]:
+        for item in _iter_priority_items(priority_items["P1"], 7):
             title = item.get("title", "")
-            if _is_noise_title(title):
-                continue
-            norm = re.sub(r"[^a-z가-힣0-9]", "", item.get("description", title).lower())
-            if norm in seen_p1:
-                continue
-            seen_p1.add(norm)
             # Ensure P1 items have clickable links
             link = item.get("link", "")
             if link and "[" not in title:
@@ -912,91 +1043,15 @@ def _build_priority_and_category_sections(
                     seen_stock.add(cleaned)
         content_parts.append(f"[상세 보기]({stock_summary.get('url', '#')})\n")
 
-    # Regulatory section with specific issue extraction
-    if regulatory_summary:
-        content_parts.append(f"### 규제 동향 ({regulatory_summary['count']}건)\n")
-        reg_dp = _extract_category_data_points(regulatory_summary)
-        if reg_dp["titles"]:
-            content_parts.append("**주요 규제 이슈:**")
-            for t in reg_dp["titles"][:3]:
-                content_parts.append(f"- {_headline_for_korean_summary(t)}")
-            content_parts.append("")
-        elif regulatory_summary.get("key_summary"):
-            for h in regulatory_summary["key_summary"][:3]:
-                content_parts.append(h)
-        if reg_dp["figures"]:
-            content_parts.append(f"**관련 수치**: {', '.join(reg_dp['figures'][:2])}\n")
-        content_parts.append(f"[상세 보기]({regulatory_summary.get('url', '#')})\n")
-
-    if worldmonitor_summary:
-        content_parts.append(f"### 월드모니터 브리핑 ({worldmonitor_summary['count']}건)\n")
-        world_dp = _extract_category_data_points(worldmonitor_summary)
-        if world_dp["titles"]:
-            content_parts.append("**주요 글로벌 이슈:**")
-            for t in world_dp["titles"][:3]:
-                content_parts.append(f"- {smart_truncate(t, 80)}")
-            content_parts.append("")
-        elif worldmonitor_summary.get("key_summary"):
-            for h in worldmonitor_summary["key_summary"][:3]:
-                content_parts.append(h)
-        if worldmonitor_summary.get("issues"):
-            world_rows = []
-            for row in worldmonitor_summary["issues"][:3]:
-                parts = [p.strip() for p in row.split("|") if p.strip()]
-                if len(parts) >= 5:
-                    world_rows.append([parts[1], parts[4]])
-                elif len(parts) >= 3:
-                    world_rows.append([parts[1], parts[2]])
-            if world_rows:
-                content_parts.append(markdown_table(["제목", "출처"], world_rows))
-                content_parts.append("")
-        if world_dp["figures"]:
-            content_parts.append(f"**관련 수치**: {', '.join(world_dp['figures'][:2])}\n")
-        content_parts.append(f"[상세 보기]({worldmonitor_summary.get('url', '#')})\n")
-
-    # Security section with incident details
-    if security_summary:
-        content_parts.append(f"### 보안 리포트 ({security_summary['count']}건)\n")
-        sec_dp = _extract_category_data_points(security_summary)
-        if sec_dp["titles"]:
-            content_parts.append("**주요 보안 이슈:**")
-            for t in sec_dp["titles"][:3]:
-                content_parts.append(f"- {_headline_for_korean_summary(t)}")
-            content_parts.append("")
-        elif security_summary.get("key_summary"):
-            for h in security_summary["key_summary"][:3]:
-                content_parts.append(f"- {_headline_for_korean_summary(_clean_bullet_text(h))}")
-        if security_summary.get("incidents"):
-            incident_rows = []
-            for row in security_summary["incidents"][:3]:
-                parts = [p.strip() for p in row.split("|") if p.strip()]
-                if len(parts) >= 3:
-                    incident_rows.append(parts[:3])
-            if incident_rows:
-                content_parts.append(markdown_table(["프로젝트", "피해 규모", "공격 유형"], incident_rows))
-                content_parts.append("")
-        if sec_dp["figures"]:
-            content_parts.append(f"**피해 수치**: {', '.join(sec_dp['figures'][:2])}\n")
-        content_parts.append(f"[상세 보기]({security_summary.get('url', '#')})\n")
-
-    # Social section with trend extraction
-    if social_summary:
-        content_parts.append(f"### 소셜 미디어 동향 ({social_summary['count']}건)\n")
-        social_dp = _extract_category_data_points(social_summary)
-        if social_dp["titles"]:
-            content_parts.append("**화제 토픽:**")
-            for t in social_dp["titles"][:3]:
-                content_parts.append(f"- {_headline_for_korean_summary(t)}")
-            content_parts.append("")
-        elif social_summary.get("highlights"):
-            for h in social_summary["highlights"][:3]:
-                content_parts.append(h)
-        elif social_summary.get("key_summary"):
-            for h in social_summary["key_summary"][:3]:
-                content_parts.append(h)
-        if social_dp["figures"]:
-            content_parts.append(f"**관련 수치**: {', '.join(social_dp['figures'][:2])}\n")
-        content_parts.append(f"[상세 보기]({social_summary.get('url', '#')})\n")
+    # ── 유사 구조 카테고리(규제/월드모니터/보안/소셜)를 테이블 구동으로 렌더 ──
+    # crypto/stock 은 구조(테마 블록·figures 선후·market_data 중복제거)가
+    # 달라 별도 코드로 둔다. 아래 4개는 "타이틀 블록 → (옵션)표 → figures" 공통 흐름.
+    # security 는 summary_map 밖 별도 인자라 조회용 맵을 보강한다(불변 복사).
+    category_lookup = {**summary_map, "security": security_summary}
+    for spec in _CATEGORY_SECTION_SPECS:
+        summary = category_lookup.get(spec["key"])
+        if summary:
+            content_parts.extend(_render_category_section(summary, spec))
 
     # ═══════════════════════════════════════
     # 7. NOTABLE NEWS (P2)
@@ -1004,15 +1059,8 @@ def _build_priority_and_category_sections(
     if priority_items.get("P2"):
         content_parts.append("---\n")
         content_parts.append("## 주목할 소식\n")
-        seen_p2 = set()
-        for item in priority_items["P2"][:5]:
+        for item in _iter_priority_items(priority_items["P2"], 5):
             title = item.get("title", "")
-            if _is_noise_title(title):
-                continue
-            norm = re.sub(r"[^a-z가-힣0-9]", "", item.get("description", title).lower())
-            if norm in seen_p2:
-                continue
-            seen_p2.add(norm)
             content_parts.append(f"- {_headline_for_korean_summary(title)}")
         content_parts.append("")
 
