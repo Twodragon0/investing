@@ -2324,7 +2324,16 @@ class TestGoldenMasterSummarySections:
         mock_summ.detect_concentration.return_value = ("금리/유동성", "interest", 0.42)
         mock_summ.detect_anomalies.return_value = [("리스크", "risk", 8, "이상 급등 패턴이 감지되었습니다.")]
 
-        with patch("common.summary_text_ko.translate_to_korean", side_effect=lambda x: x):
+        # 골든마스터 격리: _render_generated_image 가 디스크의 generated 이미지 존재 여부를
+        # os.path.exists 로 probe 하므로, 패치하지 않으면 출력이 로컬 파일시스템 상태에 의존한다
+        # (이미지 존재=로컬, 부재=CI → 해시 불일치). 항상 렌더하는 결정적 스텁으로 고정한다.
+        def _stub_render_image(filename, alt):
+            return f"![{alt}]({{{{ '/assets/images/generated/{filename}' | relative_url }}}})"
+
+        with (
+            patch("common.summary_text_ko.translate_to_korean", side_effect=lambda x: x),
+            patch("common.summary_sections._render_generated_image", side_effect=_stub_render_image),
+        ):
             briefing = gds._build_briefing_section(
                 all_summaries=all_summaries,
                 all_news_items=all_news_items,
