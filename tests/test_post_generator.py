@@ -668,79 +668,56 @@ class TestResolvePostImage:
         assert result == "/assets/images/og-crypto.png"
         assert "Generated image missing" in caplog.text
 
-    def test_generated_empty_file_returns_default(self, tmp_path, caplog):
+    def _seed_generated_image(self, tmp_path, monkeypatch, rel, data):
+        """REPO_ROOT 를 tmp 로 격리하고 생성 이미지를 tmp 아래에 만든다.
+
+        _resolve_post_image 는 호출 시점에 모듈 전역 common.post_generator.REPO_ROOT
+        를 읽어 경로를 해석하므로, REPO_ROOT 를 tmp_path 로 패치하면 실제 repo
+        assets/images/generated/ 트리를 건드리지 않고 동일 코드 경로를 검증할 수 있다.
+        실제-트리 쓰기를 없애 비정상 종료 시에도 untracked 산출물이 남지 않는다.
+        """
+        monkeypatch.setattr("common.post_generator.REPO_ROOT", str(tmp_path))
+        abs_path = os.path.join(str(tmp_path), rel)
+        os.makedirs(os.path.dirname(abs_path), exist_ok=True)
+        with open(abs_path, "wb") as f:
+            f.write(data)
+        return abs_path
+
+    def test_generated_empty_file_returns_default(self, tmp_path, monkeypatch, caplog):
         import logging
 
-        from common.post_generator import REPO_ROOT
+        self._seed_generated_image(tmp_path, monkeypatch, "assets/images/generated/empty-test.png", b"")
+        with caplog.at_level(logging.WARNING, logger="common.post_generator"):
+            result = _resolve_post_image("/assets/images/generated/empty-test.png", "crypto")
+        assert result == "/assets/images/og-crypto.png"
+        assert "Generated image empty" in caplog.text
 
-        rel = "assets/images/generated/empty-test.png"
-        abs_path = os.path.join(REPO_ROOT, rel)
-        os.makedirs(os.path.dirname(abs_path), exist_ok=True)
-        # Create zero-byte file
-        open(abs_path, "w").close()
-        try:
-            with caplog.at_level(logging.WARNING, logger="common.post_generator"):
-                result = _resolve_post_image("/assets/images/generated/empty-test.png", "crypto")
-            assert result == "/assets/images/og-crypto.png"
-            assert "Generated image empty" in caplog.text
-        finally:
-            if os.path.exists(abs_path):
-                os.remove(abs_path)
+    def test_generated_valid_file_returned(self, tmp_path, monkeypatch):
+        self._seed_generated_image(tmp_path, monkeypatch, "assets/images/generated/valid-test.png", b"\x89PNG\r\n")
+        result = _resolve_post_image("/assets/images/generated/valid-test.png", "crypto")
+        assert result == "/assets/images/generated/valid-test.png"
 
-    def test_generated_valid_file_returned(self, tmp_path):
-        from common.post_generator import REPO_ROOT
-
-        rel = "assets/images/generated/valid-test.png"
-        abs_path = os.path.join(REPO_ROOT, rel)
-        os.makedirs(os.path.dirname(abs_path), exist_ok=True)
-        with open(abs_path, "wb") as f:
-            f.write(b"\x89PNG\r\n")
-        try:
-            result = _resolve_post_image("/assets/images/generated/valid-test.png", "crypto")
-            assert result == "/assets/images/generated/valid-test.png"
-        finally:
-            if os.path.exists(abs_path):
-                os.remove(abs_path)
-
-    def test_r2_disabled_returns_local_path(self):
+    def test_r2_disabled_returns_local_path(self, tmp_path, monkeypatch):
         """R2 비활성 시 로컬 경로 그대로 반환 (기존 동작 불변)."""
-        from common.post_generator import REPO_ROOT
+        self._seed_generated_image(
+            tmp_path, monkeypatch, "assets/images/generated/r2-disabled-test.png", b"\x89PNG\r\n"
+        )
+        with patch("common.post_generator._r2_enabled", return_value=False):
+            result = _resolve_post_image("/assets/images/generated/r2-disabled-test.png", "crypto")
+        assert result == "/assets/images/generated/r2-disabled-test.png"
 
-        rel = "assets/images/generated/r2-disabled-test.png"
-        abs_path = os.path.join(REPO_ROOT, rel)
-        os.makedirs(os.path.dirname(abs_path), exist_ok=True)
-        with open(abs_path, "wb") as f:
-            f.write(b"\x89PNG\r\n")
-        try:
-            with patch("common.post_generator._r2_enabled", return_value=False):
-                result = _resolve_post_image("/assets/images/generated/r2-disabled-test.png", "crypto")
-            assert result == "/assets/images/generated/r2-disabled-test.png"
-        finally:
-            if os.path.exists(abs_path):
-                os.remove(abs_path)
-
-    def test_r2_enabled_returns_cdn_url(self):
+    def test_r2_enabled_returns_cdn_url(self, tmp_path, monkeypatch):
         """R2 활성 시 절대 CDN URL 반환."""
-        from common.post_generator import REPO_ROOT
-
-        rel = "assets/images/generated/r2-enabled-test.png"
-        abs_path = os.path.join(REPO_ROOT, rel)
-        os.makedirs(os.path.dirname(abs_path), exist_ok=True)
-        with open(abs_path, "wb") as f:
-            f.write(b"\x89PNG\r\n")
-        try:
-            with (
-                patch("common.post_generator._r2_enabled", return_value=True),
-                patch(
-                    "common.post_generator._r2_public_url",
-                    return_value="https://cdn.example.com/generated/r2-enabled-test.png",
-                ),
-            ):
-                result = _resolve_post_image("/assets/images/generated/r2-enabled-test.png", "crypto")
-            assert result == "https://cdn.example.com/generated/r2-enabled-test.png"
-        finally:
-            if os.path.exists(abs_path):
-                os.remove(abs_path)
+        self._seed_generated_image(tmp_path, monkeypatch, "assets/images/generated/r2-enabled-test.png", b"\x89PNG\r\n")
+        with (
+            patch("common.post_generator._r2_enabled", return_value=True),
+            patch(
+                "common.post_generator._r2_public_url",
+                return_value="https://cdn.example.com/generated/r2-enabled-test.png",
+            ),
+        ):
+            result = _resolve_post_image("/assets/images/generated/r2-enabled-test.png", "crypto")
+        assert result == "https://cdn.example.com/generated/r2-enabled-test.png"
 
 
 class TestSafePathComponent:
