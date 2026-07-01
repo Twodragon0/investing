@@ -35,6 +35,25 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Google-CloudVertexBot
+Allow: /
+
+# Search-console reference: canonical sitemaps + security policy (RFC 9116)
 Sitemap: {{ site.url }}/sitemap-index.xml
 Sitemap: {{ site.url }}/sitemap.xml
 Sitemap: {{ site.url }}/sitemap-images.xml
