@@ -6,7 +6,7 @@
         "ext:gif": 1877,
         "default-image": 1026,
         "ext:ico": 182,
-        "placeholder": 383,
+        "placeholder": 385,
         "ext:svg": 78,
         "blank.": 66,
         "beacon": 30,
@@ -17,5 +17,5 @@
     }
   },
   "since": "2026-04-23T08:54:23",
-  "last_seen": "2026-07-01T13:42:02"
+  "last_seen": "2026-07-01T13:53:22"
 }
