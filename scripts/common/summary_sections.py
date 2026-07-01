@@ -754,10 +754,20 @@ _CATEGORY_SECTION_SPECS: List[Dict[str, Any]] = [
 ]
 
 
+def _category_heading_line(heading: str, count: Any) -> str:
+    """카테고리 섹션 헤딩 한 줄. crypto/stock/spec 경로 공통 (출력 불변)."""
+    return f"### {heading} ({count}건)\n"
+
+
+def _category_detail_link(summary: Dict[str, Any]) -> str:
+    """카테고리 상세 보기 링크 한 줄. crypto/stock/spec 경로 공통 (출력 불변)."""
+    return f"[상세 보기]({summary.get('url', '#')})\n"
+
+
 def _render_category_section(summary: Dict[str, Any], spec: Dict[str, Any]) -> List[str]:
     """스펙 기반 카테고리 섹션 렌더. 원래 인라인 코드와 출력이 동일하다."""
     parts: List[str] = []
-    parts.append(f"### {spec['heading']} ({summary['count']}건)\n")
+    parts.append(_category_heading_line(spec["heading"], summary["count"]))
     dp = _extract_category_data_points(summary)
 
     if dp["titles"]:
@@ -783,7 +793,7 @@ def _render_category_section(summary: Dict[str, Any], spec: Dict[str, Any]) -> L
     if dp["figures"]:
         parts.append(f"{spec['figures_label']}: {', '.join(dp['figures'][:2])}\n")
 
-    parts.append(f"[상세 보기]({summary.get('url', '#')})\n")
+    parts.append(_category_detail_link(summary))
     return parts
 
 
@@ -988,7 +998,7 @@ def _build_priority_and_category_sections(
 
     # Crypto section with data-driven analysis
     if crypto_summary:
-        content_parts.append(f"### 암호화폐 뉴스 ({crypto_summary['count']}건)\n")
+        content_parts.append(_category_heading_line("암호화폐 뉴스", crypto_summary["count"]))
         crypto_dp = _extract_category_data_points(crypto_summary)
         if crypto_summary.get("themes"):
             themes_str = ", ".join(f"**{t[0]}**({t[1]}건)" for t in crypto_summary["themes"][:4])
@@ -1009,11 +1019,11 @@ def _build_priority_and_category_sections(
         elif crypto_summary.get("highlights"):
             for h in crypto_summary["highlights"][:3]:
                 content_parts.append(h)
-        content_parts.append(f"[상세 보기]({crypto_summary.get('url', '#')})\n")
+        content_parts.append(_category_detail_link(crypto_summary))
 
     # Stock section with market data emphasis
     if stock_summary:
-        content_parts.append(f"### 주식 시장 뉴스 ({stock_summary['count']}건)\n")
+        content_parts.append(_category_heading_line("주식 시장 뉴스", stock_summary["count"]))
         stock_dp = _extract_category_data_points(stock_summary)
         seen_stock = set()
         if stock_summary.get("market_data"):
@@ -1041,7 +1051,7 @@ def _build_priority_and_category_sections(
                 if cleaned and cleaned not in seen_stock:
                     content_parts.append(f"- {cleaned}")
                     seen_stock.add(cleaned)
-        content_parts.append(f"[상세 보기]({stock_summary.get('url', '#')})\n")
+        content_parts.append(_category_detail_link(stock_summary))
 
     # ── 유사 구조 카테고리(규제/월드모니터/보안/소셜)를 테이블 구동으로 렌더 ──
     # crypto/stock 은 구조(테마 블록·figures 선후·market_data 중복제거)가
