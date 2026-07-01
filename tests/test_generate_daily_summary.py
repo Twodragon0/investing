@@ -2365,6 +2365,218 @@ class TestGoldenMasterSummarySections:
             f"expected={self.EXPECTED_HASH}\nactual  ={actual}\n--- 실제 출력 ---\n{combined}"
         )
 
+    # ------------------------------------------------------------------
+    # 케이스 2: titles가 비어있는 카테고리 — fallback/figures 경로 커버
+    # ------------------------------------------------------------------
+    #
+    # content 에 마크다운 링크([text](url))가 없으므로
+    # _extract_category_data_points 가 titles=[] 를 반환한다.
+    # 이로 인해 다음 fallback/figures 분기가 활성화된다:
+    #
+    #   _render_category_section (summary_sections.py:768-773):
+    #     dp["titles"]가 비어있을 때 fallback_keys 체인 탐색
+    #       - regulatory → key_summary fallback (_raw_fallback)
+    #       - worldmonitor → key_summary fallback + issues 표 렌더
+    #       - security → key_summary fallback + incidents 표 렌더
+    #       - social → highlights fallback (_raw_fallback)
+    #
+    #   _build_briefing_section per-category one-liner (summary_sections.py:476-482):
+    #     dp["figures"] 비어있지 않으면 "주요 지표" 표시
+    #     dp["titles"] 비어있으면 _best_non_noise_title 호출 없음
+    #
+    #   _build_priority_and_category_sections crypto 섹션 (summary_sections.py:1009):
+    #     titles 비어있으면 "elif crypto_summary.get('highlights')" highlights fallback
+    #
+    #   stock 섹션 (summary_sections.py:1038-1043):
+    #     titles 비어있으면 "elif stock_summary.get('highlights')" highlights fallback
+    #
+    # 격리 방식: 기존 케이스와 동일한 patch 패턴 사용
+    #   - translate_to_korean → 항등 함수 (번역 비결정성 제거)
+    #   - _render_generated_image → 결정적 스텁 (파일시스템 probe 제거)
+    #
+    # 캡처 시점(2026-07-01) 실제 출력의 SHA256.
+    EXPECTED_HASH_EMPTY_TITLES = "b595cf3a31f8b1242bb8d380b641fc0446f323380be0ae3cd0ecbae0925fea85"
+
+    def _crypto_empty_titles(self):
+        """content에 마크다운 링크 없음 → titles=[], figures 존재, highlights fallback."""
+        return {
+            "type": "crypto",
+            "title": "암호화폐 뉴스",
+            "count": 5,
+            "highlights": ["- BTC 소폭 하락"],
+            "key_summary": [],
+            "market_data": [],
+            "content": "비트코인 83200 달러 KOSPI 2500 포인트 단순 텍스트 뉴스, 링크 없음",
+            "themes": [("금리/유동성", 3)],
+            "url": "https://example.com/crypto-empty",
+        }
+
+    def _stock_empty_titles(self):
+        """content에 마크다운 링크 없음 → titles=[], market_data fallback, figures 존재."""
+        return {
+            "type": "stock",
+            "title": "주식 뉴스",
+            "count": 4,
+            "highlights": [],
+            "key_summary": [],
+            "market_data": ["KOSPI 2500 포인트"],
+            "content": "KOSPI 2500 포인트 plain text without any links",
+            "themes": [],
+            "url": "https://example.com/stock-empty",
+        }
+
+    def _regulatory_empty_titles(self):
+        """content에 마크다운 링크 없음 → titles=[], key_summary fallback(_raw_fallback)."""
+        return {
+            "type": "regulatory",
+            "title": "규제 동향",
+            "count": 3,
+            "highlights": [],
+            "key_summary": ["- SEC 조사 개시"],
+            "content": "규제 sec 법안 plain text only 과징금 50억원",
+            "themes": [("정책/규제", 3)],
+            "url": "https://example.com/reg-empty",
+        }
+
+    def _social_empty_titles(self):
+        """content에 마크다운 링크 없음 → titles=[], highlights fallback(_raw_fallback)."""
+        return {
+            "type": "social",
+            "title": "소셜 미디어",
+            "count": 6,
+            "highlights": ["- 비트코인 언급 증가"],
+            "key_summary": [],
+            "content": "소셜 언급 1만건 plain text only",
+            "themes": [],
+            "url": "https://example.com/social-empty",
+        }
+
+    def _worldmonitor_empty_titles(self):
+        """content에 마크다운 링크 없음 → titles=[], key_summary fallback + issues 표 렌더."""
+        return {
+            "type": "worldmonitor",
+            "title": "월드모니터 브리핑",
+            "count": 7,
+            "highlights": [],
+            "key_summary": ["- 중동 긴장 고조"],
+            "content": "글로벌 지정학 리스크 환율 달러 dxy plain text",
+            "themes": [],
+            "url": "https://example.com/wm-empty",
+            "issues": ["| 1 | 중동 긴장 | 지정학 | high | Reuters |"],
+        }
+
+    def _political_empty_titles(self):
+        """content에 마크다운 링크 없음 → titles=[], key_summary fallback."""
+        return {
+            "type": "political",
+            "title": "정치인 거래",
+            "count": 2,
+            "highlights": [],
+            "key_summary": ["- 상원의원 반도체주 매수"],
+            "content": "정치인 거래 plain text only",
+            "themes": [],
+            "url": "https://example.com/pol-empty",
+        }
+
+    def _security_empty_titles(self):
+        """content에 마크다운 링크 없음 → titles=[], key_summary fallback + incidents 표 렌더."""
+        return {
+            "type": "security",
+            "title": "보안 리포트",
+            "count": 2,
+            "highlights": [],
+            "key_summary": ["- 소규모 해킹 발생"],
+            "content": "해킹 exploit plain text only 피해 100만달러",
+            "themes": [],
+            "url": "https://example.com/sec-empty",
+            "incidents": ["| ProjectZ | $1M | 피싱 |"],
+        }
+
+    def _build_combined_empty_titles(self):
+        """모든 카테고리의 titles가 비어있는 입력으로 두 섹션 빌더를 실행한다."""
+        summary_map = {
+            "crypto": self._crypto_empty_titles(),
+            "stock": self._stock_empty_titles(),
+            "regulatory": self._regulatory_empty_titles(),
+            "social": self._social_empty_titles(),
+            "worldmonitor": self._worldmonitor_empty_titles(),
+            "political": self._political_empty_titles(),
+        }
+        all_summaries = [
+            summary_map[k] for k in ("crypto", "stock", "regulatory", "social", "worldmonitor", "political")
+        ]
+        theme_payload = [
+            {"name": "금리/유동성", "emoji": "💰", "count": 5, "keywords": ["금리", "연준"]},
+        ]
+        priority_items: dict = {"P0": [], "P1": [], "P2": []}
+        all_news_items = [
+            {"title": "시장 단순 뉴스", "link": "https://ex.com/n1", "type": "crypto"},
+        ]
+        post_links = [
+            ("암호화폐 뉴스", 5, "https://example.com/crypto-empty"),
+        ]
+        market_summary = {
+            "type": "market",
+            "count": 0,
+            "highlights": [],
+            "exec_summary": [],
+            "indicator_rows": [],
+            "yield_section": "",
+            "content": "",
+            "url": "https://example.com/market-empty",
+        }
+        sentiment = {
+            "tone": "중립",
+            "positive": 2,
+            "negative": 2,
+            "ratio": 50,
+            "pos_examples": [],
+            "neg_examples": [],
+        }
+
+        mock_summ = MagicMock()
+        mock_summ.detect_concentration.return_value = None
+        mock_summ.detect_anomalies.return_value = []
+
+        def _stub_render_image(filename, alt):
+            return f"![{alt}]({{{{ '/assets/images/generated/{filename}' | relative_url }}}})"
+
+        with (
+            patch("common.summary_text_ko.translate_to_korean", side_effect=lambda x: x),
+            patch("common.summary_sections._render_generated_image", side_effect=_stub_render_image),
+        ):
+            briefing = gds._build_briefing_section(
+                all_summaries=all_summaries,
+                all_news_items=all_news_items,
+                summary_map=summary_map,
+                theme_payload=theme_payload,
+                sentiment=sentiment,
+                today="2026-07-01",
+                briefing_image=None,
+                priority_items=priority_items,
+                summarizer=mock_summ,
+            )
+            priority = gds._build_priority_and_category_sections(
+                priority_items=priority_items,
+                market_summary=market_summary,
+                security_summary=self._security_empty_titles(),
+                summary_map=summary_map,
+                post_links=post_links,
+                all_news_items=all_news_items,
+            )
+        return "\n".join(briefing) + "\n===SPLIT===\n" + "\n".join(priority)
+
+    def test_empty_titles_fallback_output_hash_is_stable(self):
+        """titles가 비어있는 카테고리에서 fallback/figures 경로 출력이 안정적임을 보장한다."""
+        import hashlib
+
+        combined = self._build_combined_empty_titles()
+        actual = hashlib.sha256(combined.encode("utf-8")).hexdigest()
+        assert actual == self.EXPECTED_HASH_EMPTY_TITLES, (
+            "행위 변경 감지: empty-titles 케이스 출력이 골든마스터와 다릅니다.\n"
+            f"expected={self.EXPECTED_HASH_EMPTY_TITLES}\nactual  ={actual}\n--- 실제 출력 ---\n{combined}"
+        )
+
 
 # ---------------------------------------------------------------------------
 # main() integration smoke tests
