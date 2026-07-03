@@ -1290,9 +1290,10 @@ class TestLoadTodayPosts:
             "## 핵심 요약\n- BTC 급등\n오늘 10건의 뉴스가 수집되었습니다.",
         )
         summary_map, post_links, _, all_summaries = gds._load_today_posts(today)
-        assert summary_map.get("crypto") is not None
-        assert summary_map["crypto"]["type"] == "crypto"
-        assert summary_map["crypto"]["count"] == 10
+        crypto = summary_map.get("crypto")
+        assert crypto is not None
+        assert crypto["type"] == "crypto"
+        assert crypto["count"] == 10
         assert any("암호화폐" in name for name, _, _ in post_links)
 
     def test_loads_stock_post(self, tmp_path, monkeypatch):
@@ -1331,8 +1332,9 @@ class TestLoadTodayPosts:
             "---\ntitle: 규제 동향\n---\n## 핵심 요약\n- SEC 조사\n오늘 7건의 뉴스가 수집되었습니다.",
         )
         summary_map, _, _, _ = gds._load_today_posts(today)
-        assert summary_map.get("regulatory") is not None
-        assert summary_map["regulatory"]["type"] == "regulatory"
+        regulatory = summary_map.get("regulatory")
+        assert regulatory is not None
+        assert regulatory["type"] == "regulatory"
 
     def test_loads_social_post(self, tmp_path, monkeypatch):
         monkeypatch.setattr(gds, "POSTS_DIR", str(tmp_path))
@@ -1343,8 +1345,9 @@ class TestLoadTodayPosts:
             "---\ntitle: 소셜 미디어\n---\n## 핵심 요약\n- BTC 트위터 급증\n총 8건을 수집했습니다.",
         )
         summary_map, _, _, _ = gds._load_today_posts(today)
-        assert summary_map.get("social") is not None
-        assert summary_map["social"]["type"] == "social"
+        social = summary_map.get("social")
+        assert social is not None
+        assert social["type"] == "social"
 
     def test_loads_political_post(self, tmp_path, monkeypatch):
         monkeypatch.setattr(gds, "POSTS_DIR", str(tmp_path))
@@ -1355,8 +1358,9 @@ class TestLoadTodayPosts:
             "---\ntitle: 정치인 거래\n---\n## 핵심 요약\n- 펠로시 매수\n오늘 4건의 뉴스가 수집되었습니다.",
         )
         summary_map, _, _, _ = gds._load_today_posts(today)
-        assert summary_map.get("political") is not None
-        assert summary_map["political"]["type"] == "political"
+        political = summary_map.get("political")
+        assert political is not None
+        assert political["type"] == "political"
 
     def test_loads_worldmonitor_post(self, tmp_path, monkeypatch):
         monkeypatch.setattr(gds, "POSTS_DIR", str(tmp_path))
