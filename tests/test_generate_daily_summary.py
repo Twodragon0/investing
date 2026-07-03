@@ -2577,6 +2577,213 @@ class TestGoldenMasterSummarySections:
             f"expected={self.EXPECTED_HASH_EMPTY_TITLES}\nactual  ={actual}\n--- 실제 출력 ---\n{combined}"
         )
 
+    # ------------------------------------------------------------------
+    # 케이스 3: 렌더 불가/최소 데이터 — 방어 fallback 경로 커버
+    # ------------------------------------------------------------------
+    #
+    # 카테고리는 count>0 이지만 titles·figures·market_data 가 모두 비어(content 에
+    # 링크·숫자 없음), 케이스 1/2 어느 쪽도 밟지 않는 최종 방어 분기를 고정한다:
+    #
+    #   _build_briefing_section 카테고리 상세 (summary_sections.py):
+    #     - crypto  "세부 데이터 확인 필요." (509)  — 테마·수치·타이틀 전무
+    #     - stock   "시장 데이터 확인 필요." (524)  — market_data·수치·타이틀 전무
+    #     - regulatory "정책 공시 및 감독 이슈 중심." (536)
+    #     - social  "소셜 채널 키워드 분석 기반." (548)
+    #     - worldmonitor "글로벌 이슈 모니터링 기반." (560)
+    #   _build_briefing_section 테마 스냅샷 (573): theme_payload=[] → 섹션 생략
+    #
+    #   _build_snapshot_table.top_signal:
+    #     - Priority 4 테마명+건수 (231-233) — worldmonitor(themes만 존재)
+    #     - "신호 추출 실패" (235) — crypto/regulatory/social(전무)
+    #
+    #   _build_priority_and_category_sections:
+    #     - market overview elif exec_summary (849) — highlights 비고 exec_summary 존재
+    #     - political watch highlights 분기 (969-972) — key_summary 없음
+    #     - stock 카테고리 elif highlights fallback (1048-1053) — market_data·titles 전무
+    #
+    # 격리 방식: 케이스 1/2 와 동일(translate 항등 patch + _render_generated_image 스텁).
+    #
+    # 캡처 시점(2026-07-03) 실제 출력의 SHA256.
+    EXPECTED_HASH_NO_DATA = "50ec9b55af921f0aab11c7221b4cecaaf3d41e4fbf4c37d7d631287350b61281"
+
+    def _crypto_no_data(self):
+        """테마·수치·타이틀 전무 → briefing '세부 데이터 확인 필요.' + snapshot '신호 추출 실패'."""
+        return {
+            "type": "crypto",
+            "title": "암호화폐 뉴스",
+            "count": 5,
+            "highlights": [],
+            "key_summary": [],
+            "market_data": [],
+            "content": "암호화폐 관련 단순 텍스트 뉴스 링크 없음",
+            "themes": [],
+            "url": "https://example.com/crypto-nodata",
+        }
+
+    def _stock_no_data(self):
+        """market_data·수치·타이틀 전무, highlights 존재 → briefing '시장 데이터 확인 필요.' + 카테고리 elif highlights."""
+        return {
+            "type": "stock",
+            "title": "주식 뉴스",
+            "count": 4,
+            "highlights": ["- 주식 시장 관련 단순 코멘트 라인"],
+            "key_summary": [],
+            "market_data": [],
+            "content": "주식 시장 관련 단순 텍스트 링크 없음",
+            "themes": [],
+            "url": "https://example.com/stock-nodata",
+        }
+
+    def _regulatory_no_data(self):
+        """타이틀·수치·key_summary 전무 → briefing '정책 공시 및 감독 이슈 중심.'."""
+        return {
+            "type": "regulatory",
+            "title": "규제 동향",
+            "count": 3,
+            "highlights": [],
+            "key_summary": [],
+            "content": "규제 관련 단순 텍스트 링크 없음",
+            "themes": [],
+            "url": "https://example.com/reg-nodata",
+        }
+
+    def _social_no_data(self):
+        """타이틀·수치·highlights 전무 → briefing '소셜 채널 키워드 분석 기반.'."""
+        return {
+            "type": "social",
+            "title": "소셜 미디어",
+            "count": 6,
+            "highlights": [],
+            "key_summary": [],
+            "content": "소셜 관련 단순 텍스트 링크 없음",
+            "themes": [],
+            "url": "https://example.com/social-nodata",
+        }
+
+    def _worldmonitor_no_data(self):
+        """타이틀·수치 전무, themes 존재 → briefing '글로벌 이슈 모니터링 기반.' + snapshot Priority 4 테마명."""
+        return {
+            "type": "worldmonitor",
+            "title": "월드모니터 브리핑",
+            "count": 7,
+            "highlights": [],
+            "key_summary": [],
+            "content": "글로벌 관련 단순 텍스트 링크 없음",
+            "themes": [("지정학", 2)],
+            "url": "https://example.com/wm-nodata",
+        }
+
+    def _political_no_data(self):
+        """key_summary 없음, highlights 존재 → political watch highlights 분기."""
+        return {
+            "type": "political",
+            "title": "정치인 거래",
+            "count": 2,
+            "highlights": ["- 정치인 거래 관련 단순 코멘트 라인"],
+            "key_summary": [],
+            "content": "정치인 거래 관련 단순 텍스트 링크 없음",
+            "themes": [],
+            "url": "https://example.com/pol-nodata",
+        }
+
+    def _security_no_data(self):
+        """타이틀·key_summary·incidents 전무 → 카테고리 헤딩 + 상세 링크만."""
+        return {
+            "type": "security",
+            "title": "보안 리포트",
+            "count": 2,
+            "highlights": [],
+            "key_summary": [],
+            "content": "보안 관련 단순 텍스트 링크 없음",
+            "themes": [],
+            "url": "https://example.com/sec-nodata",
+        }
+
+    def _build_combined_no_data(self):
+        """렌더 불가/최소 데이터 입력으로 두 섹션 빌더를 실행한다."""
+        summary_map = {
+            "crypto": self._crypto_no_data(),
+            "stock": self._stock_no_data(),
+            "regulatory": self._regulatory_no_data(),
+            "social": self._social_no_data(),
+            "worldmonitor": self._worldmonitor_no_data(),
+            "political": self._political_no_data(),
+        }
+        all_summaries = [
+            summary_map[k] for k in ("crypto", "stock", "regulatory", "social", "worldmonitor", "political")
+        ]
+        # theme_payload=[] → 테마 스냅샷 섹션 생략 분기 커버
+        theme_payload: list = []
+        priority_items: dict = {"P0": [], "P1": [], "P2": []}
+        all_news_items = [
+            {"title": "시장 단순 뉴스", "link": "https://ex.com/n1", "type": "crypto"},
+        ]
+        post_links = [
+            ("암호화폐 뉴스", 5, "https://example.com/crypto-nodata"),
+        ]
+        # highlights 비어있고 exec_summary 존재 → 시장 개요 elif exec_summary 분기 커버
+        market_summary = {
+            "type": "market",
+            "count": 3,
+            "highlights": [],
+            "exec_summary": ["- 시장 요약 코멘트 라인"],
+            "indicator_rows": [],
+            "yield_section": "",
+            "content": "",
+            "url": "https://example.com/market-nodata",
+        }
+        sentiment = {
+            "tone": "중립",
+            "positive": 2,
+            "negative": 2,
+            "ratio": 50,
+            "pos_examples": [],
+            "neg_examples": [],
+        }
+
+        mock_summ = MagicMock()
+        mock_summ.detect_concentration.return_value = None
+        mock_summ.detect_anomalies.return_value = []
+
+        def _stub_render_image(filename, alt):
+            return f"![{alt}]({{{{ '/assets/images/generated/{filename}' | relative_url }}}})"
+
+        with (
+            patch("common.summary_text_ko.translate_to_korean", side_effect=lambda x: x),
+            patch("common.summary_sections._render_generated_image", side_effect=_stub_render_image),
+        ):
+            briefing = gds._build_briefing_section(
+                all_summaries=all_summaries,
+                all_news_items=all_news_items,
+                summary_map=summary_map,
+                theme_payload=theme_payload,
+                sentiment=sentiment,
+                today="2026-07-03",
+                briefing_image=None,
+                priority_items=priority_items,
+                summarizer=mock_summ,
+            )
+            priority = gds._build_priority_and_category_sections(
+                priority_items=priority_items,
+                market_summary=market_summary,
+                security_summary=self._security_no_data(),
+                summary_map=summary_map,
+                post_links=post_links,
+                all_news_items=all_news_items,
+            )
+        return "\n".join(briefing) + "\n===SPLIT===\n" + "\n".join(priority)
+
+    def test_no_data_fallback_output_hash_is_stable(self):
+        """렌더 불가/최소 데이터 카테고리의 방어 fallback 출력이 안정적임을 보장한다."""
+        import hashlib
+
+        combined = self._build_combined_no_data()
+        actual = hashlib.sha256(combined.encode("utf-8")).hexdigest()
+        assert actual == self.EXPECTED_HASH_NO_DATA, (
+            "행위 변경 감지: no-data 케이스 출력이 골든마스터와 다릅니다.\n"
+            f"expected={self.EXPECTED_HASH_NO_DATA}\nactual  ={actual}\n--- 실제 출력 ---\n{combined}"
+        )
+
 
 # ---------------------------------------------------------------------------
 # main() integration smoke tests
