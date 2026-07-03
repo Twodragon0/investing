@@ -57,7 +57,7 @@
 | scripts/common/og\_image\_formats.py              |       38 |       28 |     26% |17-19, 26-36, 41-51, 56-58 |
 | scripts/common/og\_render.py                      |       59 |       11 |     81% |37-38, 75-77, 92-97 |
 | scripts/common/og\_visuals.py                     |      369 |      354 |      4% |16-84, 100-176, 183-247, 264-395, 404-462, 469-501, 506-595, 605-696, 703-813, 829-919, 935-1032, 1048-1145, 1161-1221 |
-| scripts/common/post\_generator.py                 |      341 |        8 |     98% |475-479, 847, 882-883 |
+| scripts/common/post\_generator.py                 |      341 |        7 |     98% |475-479, 882-883 |
 | scripts/common/post\_html.py                      |       28 |        0 |    100% |           |
 | scripts/common/risk\_classifier.py                |      184 |        9 |     95% |331-332, 354, 392, 431-435 |
 | scripts/common/rss\_fetcher.py                    |      249 |       12 |     95% |44-45, 80, 91, 178, 187, 272, 281, 292, 302, 330-331 |
@@ -68,11 +68,11 @@
 | scripts/common/summarizer\_chart.py               |       16 |        0 |    100% |           |
 | scripts/common/summarizer\_keywords.py            |        2 |        0 |    100% |           |
 | scripts/common/summarizer\_priority.py            |       35 |        0 |    100% |           |
-| scripts/common/summary\_analysis.py               |      177 |        6 |     97% |260, 262, 365, 371, 457, 485 |
+| scripts/common/summary\_analysis.py               |      177 |        5 |     97% |260, 262, 365, 371, 485 |
 | scripts/common/summary\_post\_categorizers.py     |       84 |        5 |     94% | 30, 34-37 |
 | scripts/common/summary\_post\_parsing.py          |      110 |        1 |     99% |       174 |
 | scripts/common/summary\_quality.py                |       26 |        1 |     96% |       166 |
-| scripts/common/summary\_sections.py               |      603 |       62 |     90% |65-67, 142-144, 147-149, 159-161, 170-188, 219, 289, 291, 293, 295, 297, 336, 401, 519-521, 534, 546, 558, 632, 655, 687-688, 784, 823, 840-841, 899, 915-916, 920-921, 937, 945, 980, 1000, 1030 |
+| scripts/common/summary\_sections.py               |      607 |       20 |     97% |179, 188, 219, 289, 291, 293, 295, 297, 336, 401, 534, 546, 558, 655, 687-688, 794, 833, 1010, 1040 |
 | scripts/common/summary\_text\_ko.py               |       72 |        2 |     97% |    71, 75 |
 | scripts/common/text\_lang.py                      |       18 |        2 |     89% |     37-38 |
 | scripts/common/text\_utils.py                     |       53 |        2 |     96% |  130, 134 |
@@ -117,7 +117,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **22892** | **7444** | **67%** |           |
+| **TOTAL**                                         | **22896** | **7400** | **68%** |           |
 
 
 ## Setup coverage badge
