@@ -2102,6 +2102,102 @@ class TestBuildPriorityAndCategorySections:
 
 
 # ---------------------------------------------------------------------------
+# _build_market_signal_section — 엔티티 빈도·연관 클러스터 분기 (커버리지 그룹 A)
+# ---------------------------------------------------------------------------
+#
+# extract_market_signals / group_related_items 는 patch 로 반환 형태를 고정해
+# 각 분기를 결정적으로 구동한다(assert 기반, 골든마스터 아님).
+
+
+class TestBuildMarketSignalSection:
+    """_build_market_signal_section 의 테마/엔티티/클러스터/예외 경로 커버."""
+
+    def test_empty_items_returns_empty(self):
+        assert gds._build_market_signal_section([]) == []
+
+    def test_extract_exception_returns_empty(self):
+        """extract_market_signals 예외 → 경고 후 빈 리스트(65-67)."""
+        with patch("common.summary_sections.extract_market_signals", side_effect=RuntimeError("boom")):
+            assert gds._build_market_signal_section([{"title": "x"}]) == []
+
+    def test_no_signals_returns_empty(self):
+        """테마·엔티티 빈도 모두 없음 → 빈 리스트(74)."""
+        signals = {"dominant_themes": [], "entity_frequencies": {}, "total_items": 1}
+        with patch("common.summary_sections.extract_market_signals", return_value=signals):
+            assert gds._build_market_signal_section([{"title": "x"}]) == []
+
+    def test_dominant_themes_table_rendered(self):
+        """dominant_themes → '주요 테마' 표 + 비중 계산(81->82 이후)."""
+        signals = {
+            "dominant_themes": [("금리/유동성", 5), ("정책/규제", 3)],
+            "entity_frequencies": {},
+            "total_items": 10,
+        }
+        with (
+            patch("common.summary_sections.extract_market_signals", return_value=signals),
+            patch("common.summary_sections.group_related_items", return_value={}),
+        ):
+            out = "\n".join(gds._build_market_signal_section([{"title": "x"}]))
+        assert "## 시장 시그널 분석" in out
+        assert "### 주요 테마" in out
+        assert "금리/유동성" in out
+        assert "50%" in out  # 5/10
+
+    def test_hot_entities_label_mapping_and_unknown(self):
+        """crypto/stock/person 빈도 → '핫 엔티티' 라인(136-149), 미매핑 name 원본 유지."""
+        signals = {
+            "dominant_themes": [],
+            "entity_frequencies": {
+                "crypto": {"bitcoin": 5, "unknowncoin": 2},
+                "stock": {"nvidia": 3},
+                "person": {"trump": 4},
+            },
+            "total_items": 10,
+        }
+        with (
+            patch("common.summary_sections.extract_market_signals", return_value=signals),
+            patch("common.summary_sections.group_related_items", return_value={}),
+        ):
+            out = "\n".join(gds._build_market_signal_section([{"title": "x"}]))
+        assert "### 핫 엔티티" in out
+        assert "비트코인(BTC) 5회" in out
+        assert "unknowncoin 2회" in out  # 라벨 미매핑 → 원본 name 폴백
+        assert "엔비디아(NVDA) 3회" in out
+        assert "트럼프 4회" in out
+
+    def test_related_clusters_skip_etc_and_dedup(self):
+        """연관 클러스터 렌더: '기타 뉴스' skip + 정규화 dedup(164-188)."""
+        signals = {"dominant_themes": [("테마A", 2)], "entity_frequencies": {}, "total_items": 2}
+        related = {
+            "기타 뉴스": [{"title": "무시되어야 하는 기타 뉴스"}],
+            "비트코인": [
+                {"title": "비트코인 급등 소식 오늘 발표"},
+                {"title": "비트코인 급등 소식 오늘 발표"},  # 정규화 후 중복 → skip
+                {"title": "이더리움 강세 지속 관련 뉴스"},
+            ],
+        }
+        with (
+            patch("common.summary_sections.extract_market_signals", return_value=signals),
+            patch("common.summary_sections.group_related_items", return_value=related),
+            patch("common.summary_text_ko.translate_to_korean", side_effect=lambda x: x),
+        ):
+            out = "\n".join(gds._build_market_signal_section([{"title": "x"}]))
+        assert "### 연관 뉴스 클러스터" in out
+        assert "무시되어야 하는 기타 뉴스" not in out  # 기타 뉴스 라벨 skip
+        assert "**비트코인** (3건 연관)" in out  # count 는 dedup 전 길이
+
+    def test_group_related_exception_no_cluster(self):
+        """group_related_items 예외 → 클러스터 섹션 생략(159-161)."""
+        signals = {"dominant_themes": [("테마A", 2)], "entity_frequencies": {}, "total_items": 2}
+        with (
+            patch("common.summary_sections.extract_market_signals", return_value=signals),
+            patch("common.summary_sections.group_related_items", side_effect=RuntimeError("boom")),
+        ):
+            out = "\n".join(gds._build_market_signal_section([{"title": "x"}]))
+        assert "### 연관 뉴스 클러스터" not in out
+
+
+# ---------------------------------------------------------------------------
 # 골든마스터 스냅샷 — _build_briefing_section + _build_priority_and_category_sections
 # ---------------------------------------------------------------------------
 #
