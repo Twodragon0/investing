@@ -41,39 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-03 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: Taiko는 170만 달러의 악용 후 브리지를 재개하고 사용자가 전체를 만들었다고 말합니다. - 110건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 동향 주시</li><li>🏦 <strong>거래소</strong>: 23건 수집</li><li>📈 <strong>가격/시장</strong>: 달러, 회복 관련 25건</li><li>🟣 <strong>DeFi</strong>: 스테이블코인 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/taiko-reopens-bridge-1-7m-exploit-users-made-whole?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Taiko는 170만 달러의 악용 후 브리지를 재개하고 사용자가 전체를 만들었다고 말합니다.</a> <span class="p0-desc">Taiko는 11일간의 네트워크 중단 이후 자산 백업을 보충하고 보안 수정을 완료한 후 브리지 전송을 복원했습니다.</span></li><li><a href="https://www.coindesk.com/markets/2026/07/02/taiko-s-bridge-is-back-online-after-usd1-7-million-hack-and-its-token-is-up-a-staggering-136">Taiko는 170만 달러의 해킹 후 불과 10일 만에 크로스체인 브리지를 완전히 복원했습니다.</a> <span class="p0-desc">프로토콜은 독립적인 보안 검토를 포함하는 다단계 복구를 완료했습니다. TAIKO 토큰은 최근 거래에서 136%나 급등했습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Taiko는 170만 달러의 악용 후 브리지를 재개하고 사용자가 전체를 만들었다고 말합니다. 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 110건의 뉴스 중 P1 주요 이슈도 14건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (43건): 비트코인, 달러, 회복 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **🏦 거래소** (23건): binance, bstocks, launches 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다.
-- **📈 가격/시장** (25건): 달러, 회복, 암호화폐 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- Taiko는 170만 달러의 악용 후 브리지를 재개하고 사용자가 전체를 만들었다고 말합니다.
-- Taiko는 170만 달러의 해킹 후 불과 10일 만에 크로스체인 브리지를 완전히 복원했습니다.
-
-### 주요 이슈
-
-- 트럼프 대통령은 자신의 암호화폐 수입 내역을 공개합니다.
-- ETF 시대에도 고점서 반토막 난 비트코인…"추가 하락 여지"
-- 외 11건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(40건), Google News KR(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-07-03.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-07-03.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **110건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
