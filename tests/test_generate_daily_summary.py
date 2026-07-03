@@ -2884,6 +2884,166 @@ class TestGoldenMasterSummarySections:
             f"expected={self.EXPECTED_HASH_NO_DATA}\nactual  ={actual}\n--- 실제 출력 ---\n{combined}"
         )
 
+    # ------------------------------------------------------------------
+    # 케이스 4: titles-only 카테고리 + 교차자산 relation(high/mid) — 그룹 B/C 커버
+    # ------------------------------------------------------------------
+    #
+    # 각 카테고리 content 에 마크다운 링크(→titles) + 교차자산 토픽 키워드('금리')를
+    # 반복해, 케이스 1/2/3 이 밟지 못한 아래 분기를 고정한다:
+    #
+    #   _build_briefing_section titles-only 상세 (테마·수치 없이 타이틀만 존재):
+    #     - crypto 대표 헤드라인 (506-508)
+    #     - stock  titles 폴백 (519-521)
+    #     - regulatory/social/worldmonitor titles 상세 (531-558)
+    #     - sentiment.ratio ≤ 35 공포 구간 메모 (631-632)
+    #     - 리스크/기회 메모 top_score ≥ 30 (600) + 정책/규제 테마 (620)
+    #
+    #   _build_priority_and_category_sections:
+    #     - 지표 대시보드 indicator_rows + yield_section 파싱 (861-879)
+    #     - P0 desc > 15자 (836-838), P1 링크 없는 항목 else (990)
+    #     - 교차자산 relation: high 3쌍→시스템 리스크(908-912), high_pairs(925-926),
+    #       mid_pairs(930-931), 암호화폐↔규제(946-949), 정치인 오버랩(954-957)
+    #
+    # relation 점수 제어: _topic_hits 는 title+content+highlights+key_summary 에서
+    # 키워드를 count 한다. content 에 '금리'(금리/유동성 토픽)를 N회 반복해
+    # 쌍별 min 교집합 점수를 결정한다(crypto/stock/reg=26→높음·high_pair,
+    # political=12→중간·mid_pair, social/worldmonitor=0→낮음).
+    #
+    # 캡처 시점(2026-07-03) 실제 출력의 SHA256.
+    EXPECTED_HASH_TITLES_RELATION = "99354f2c8e65764980210bd998543c2ab665677b3546b7957a80c3613bb55ee7"
+
+    def _titles_only(self, key, title, url, topic_repeat, count=10):
+        """마크다운 링크(→titles) + '금리' 반복(→relation 점수), 숫자 없음(→figures 없음)."""
+        link = f"[{title}](https://ex.com/{key})"
+        content = f"{link} " + ("금리 " * topic_repeat)
+        return {
+            "type": key,
+            "title": title.split()[0],
+            "count": count,
+            "highlights": [],
+            "key_summary": [],
+            "market_data": [],
+            "content": content,
+            "themes": [],
+            "url": url,
+        }
+
+    def _build_combined_titles_relation(self):
+        """titles-only + 교차자산 relation(high/mid) 입력으로 두 섹션 빌더를 실행한다."""
+        summary_map = {
+            # crypto/stock/regulatory: 금리 26회 → 상호 high(≥25) 쌍
+            "crypto": self._titles_only(
+                "crypto", "비트코인 상승 기대 전망 뉴스 오늘 관련", "https://example.com/crypto-tr", 26
+            ),
+            "stock": self._titles_only(
+                "stock", "엔비디아 실적 개선 기대 뉴스 오늘 관련", "https://example.com/stock-tr", 26
+            ),
+            "regulatory": self._titles_only(
+                "regulatory", "감독당국 신규 지침 발표 예정 오늘", "https://example.com/reg-tr", 26
+            ),
+            # political: 금리 12회 → crypto/stock 과 mid(12) 쌍
+            "political": self._titles_only(
+                "political", "정치인 반도체주 대량 매수 포착 오늘", "https://example.com/pol-tr", 12
+            ),
+            # social/worldmonitor: 금리 0회 → 낮음(공통 미감지) 쌍, 타이틀은 존재
+            "social": self._titles_only(
+                "social", "소셜 고래 매집 언급 급증 화제 오늘", "https://example.com/social-tr", 0
+            ),
+            "worldmonitor": self._titles_only(
+                "worldmonitor", "월드 지정학 리스크 고조 이슈 오늘", "https://example.com/wm-tr", 0
+            ),
+        }
+        all_summaries = [
+            summary_map[k] for k in ("crypto", "stock", "regulatory", "social", "worldmonitor", "political")
+        ]
+        theme_payload = [
+            {"name": "정책/규제 이슈", "emoji": "📋", "count": 30, "keywords": ["규제", "sec"]},
+            {"name": "금리/유동성", "emoji": "💰", "count": 18, "keywords": ["금리", "연준"]},
+        ]
+        priority_items = {
+            "P0": [
+                {
+                    "title": "긴급 뉴스 제목 항목",
+                    "description": "이것은 15자보다 확실히 더 긴 P0 긴급 설명 문장입니다 상세 확인 필요",
+                    "link": "https://ex.com/p0",
+                    "type": "crypto",
+                },
+            ],
+            "P1": [
+                # 링크 없는 P1 항목 → else 분기(_headline_for_korean_summary)
+                {"title": "링크 없는 P1 중요 뉴스 제목 항목", "type": "stock"},
+            ],
+            "P2": [],
+        }
+        all_news_items = [
+            {"title": "시장 단순 뉴스", "link": "https://ex.com/n1", "type": "crypto"},
+        ]
+        post_links = [
+            ("암호화폐 뉴스", 10, "https://example.com/crypto-tr"),
+        ]
+        market_summary = {
+            "type": "market",
+            "count": 12,
+            "highlights": ["- 코스피 상승 마감"],
+            "exec_summary": [],
+            "indicator_rows": ["| CPI | 3.2% | +0.1% |", "| 실업률 | 3.8% | -0.1% |"],
+            "yield_section": "| 10년물 | 4.2% | 스프레드 0.5%p |\n> 장단기 스프레드 정상화",
+            "content": "",
+            "url": "https://example.com/market-tr",
+        }
+        # 공포 구간(ratio ≤ 35) 메모 분기 커버
+        sentiment = {
+            "tone": "부정 우세",
+            "positive": 3,
+            "negative": 7,
+            "ratio": 30,
+            "pos_examples": ["일부 반등"],
+            "neg_examples": ["매도 우위"],
+        }
+
+        mock_summ = MagicMock()
+        mock_summ.detect_concentration.return_value = None
+        mock_summ.detect_anomalies.return_value = []
+
+        def _stub_render_image(filename, alt):
+            return f"![{alt}]({{{{ '/assets/images/generated/{filename}' | relative_url }}}})"
+
+        with (
+            patch("common.summary_text_ko.translate_to_korean", side_effect=lambda x: x),
+            patch("common.summary_sections._render_generated_image", side_effect=_stub_render_image),
+        ):
+            briefing = gds._build_briefing_section(
+                all_summaries=all_summaries,
+                all_news_items=all_news_items,
+                summary_map=summary_map,
+                theme_payload=theme_payload,
+                sentiment=sentiment,
+                today="2026-07-03",
+                briefing_image=None,
+                priority_items=priority_items,
+                summarizer=mock_summ,
+            )
+            priority = gds._build_priority_and_category_sections(
+                priority_items=priority_items,
+                market_summary=market_summary,
+                security_summary=None,
+                summary_map=summary_map,
+                post_links=post_links,
+                all_news_items=all_news_items,
+            )
+        return "\n".join(briefing) + "\n===SPLIT===\n" + "\n".join(priority)
+
+    def test_titles_relation_fallback_output_hash_is_stable(self):
+        """titles-only 상세 + 교차자산 relation(high/mid) 경로 출력이 안정적임을 보장한다."""
+        import hashlib
+
+        combined = self._build_combined_titles_relation()
+        actual = hashlib.sha256(combined.encode("utf-8")).hexdigest()
+        assert actual == self.EXPECTED_HASH_TITLES_RELATION, (
+            "행위 변경 감지: titles-relation 케이스 출력이 골든마스터와 다릅니다.\n"
+            f"expected={self.EXPECTED_HASH_TITLES_RELATION}\nactual  ={actual}\n--- 실제 출력 ---\n{combined}"
+        )
+
 
 # ---------------------------------------------------------------------------
 # main() integration smoke tests
