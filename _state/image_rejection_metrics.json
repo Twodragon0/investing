@@ -7,8 +7,8 @@
         "default-image": 1094,
         "ext:ico": 182,
         "placeholder": 406,
-        "ext:svg": 78,
-        "blank.": 75,
+        "ext:svg": 80,
+        "blank.": 78,
         "beacon": 30,
         "wp-content/plugins": 2,
         "gravatar.com/avatar": 1,
@@ -17,5 +17,5 @@
     }
   },
   "since": "2026-04-23T08:54:23",
-  "last_seen": "2026-07-04T17:17:43"
+  "last_seen": "2026-07-04T17:33:51"
 }
