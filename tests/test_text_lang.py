@@ -1,10 +1,12 @@
 """Unit tests for scripts/common/text_lang.is_supported_language."""
 
+import logging
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
 
+from common import text_lang
 from common.text_lang import is_supported_language
 
 
@@ -40,3 +42,31 @@ class TestIsSupportedLanguage:
 
     def test_whitespace_only_dropped(self):
         assert is_supported_language("   \n\t") is False
+
+
+class TestLangdetectFailOpen:
+    """When langdetect is absent the Latin-script gate is disabled (fail-open);
+    that degradation must be logged once, not silently."""
+
+    def test_missing_langdetect_warns_once_and_fails_open(self, monkeypatch, caplog):
+        # Make `from langdetect import ...` raise ImportError.
+        monkeypatch.setitem(sys.modules, "langdetect", None)
+        # Reset the process-wide once-only warning latch.
+        monkeypatch.setattr(text_lang, "_warned_langdetect_missing", False)
+
+        with caplog.at_level(logging.WARNING, logger=text_lang.logger.name):
+            # Latin, non-English titles that would normally be dropped.
+            first = is_supported_language("Keandalan Perang Asimetris di Timur Tengah")
+            second = is_supported_language("Trump anlasma olmazsa savas yeniden baslar dedi Iran")
+
+        # Fail-open: gating disabled, both pass.
+        assert first is True
+        assert second is True
+
+        warnings = [r for r in caplog.records if "langdetect not installed" in r.getMessage()]
+        assert len(warnings) == 1, "expected exactly one warning, not one per call"
+
+    def test_present_langdetect_still_gates(self, monkeypatch):
+        # Sanity: with the latch reset but langdetect present, gating holds.
+        monkeypatch.setattr(text_lang, "_warned_langdetect_missing", False)
+        assert is_supported_language("Keandalan Perang Asimetris di Timur Tengah") is False
