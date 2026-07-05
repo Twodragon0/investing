@@ -42,6 +42,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-04 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 벨기에 경찰, 572,000달러 절도 혐의로 피싱 갱단 두목 체포 - 104건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 동향 주시</li><li>🏦 <strong>거래소</strong>: 22건 수집</li><li>📈 <strong>가격/시장</strong>: 달러 주목</li><li>🔵 <strong>규제/정책</strong>: 트럼프 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/belgian-police-arrest-phishing-gang-leader-572k-stolen?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">벨기에 경찰, 572,000달러 절도 혐의로 피싱 갱단 두목 체포</a> <span class="p0-desc">벨기에 당국은 유럽 피싱 갱단이 암호화폐를 통해 수익금을 세탁하기 전에 피해자로부터 572,000달러 이상을 훔쳤다고 밝혔습니다</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **104건** 수집
