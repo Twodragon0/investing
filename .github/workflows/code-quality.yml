@@ -80,6 +80,15 @@ jobs:
           python3 -m coverage html -d coverage-html
           python3 -m coverage json -o coverage.json
 
+      - name: Enforce summary_sections coverage floor
+        # summary_sections.py carries the daily-summary rendering logic and has
+        # heavy test investment (~98%). The global 55%/65% floors are far too
+        # low to catch a silent per-module regression, so pin a dedicated 95%
+        # floor. If this drops intentionally, lower BOTH this number and the
+        # constant in tests/test_summary_sections_coverage_floor.py.
+        run: |
+          python3 -m coverage report --include="*/summary_sections.py" --fail-under=95
+
       - name: Upload coverage report
         if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7
