@@ -7,7 +7,7 @@
         "default-image": 1094,
         "ext:ico": 182,
         "placeholder": 406,
-        "ext:svg": 80,
+        "ext:svg": 86,
         "blank.": 78,
         "beacon": 30,
         "wp-content/plugins": 2,
@@ -17,5 +17,5 @@
     }
   },
   "since": "2026-04-23T08:54:23",
-  "last_seen": "2026-07-05T17:24:01"
+  "last_seen": "2026-07-05T17:36:34"
 }
