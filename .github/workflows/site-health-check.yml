@@ -138,7 +138,7 @@ jobs:
 
       - name: Alert Slack on site failure
         if: steps.site_check.outputs.http_code != '200' && steps.site_check.outputs.is_rate_limit != 'true' && steps.slack.outputs.can_post == 'true'
-        uses: slackapi/slack-github-action@af78098f536edbc4de71162a307590698245be95  # v3.0.1
+        uses: slackapi/slack-github-action@45a88b9581bfab2566dc881e2cd66d334e621e2c  # v3.0.3
         with:
           method: chat.postMessage
           token: ${{ steps.slack.outputs.token }}
