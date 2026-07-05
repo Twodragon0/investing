@@ -3452,3 +3452,29 @@ class TestSplitSyntheticKoSuffix:
         body, suf = _enrichment_mod._split_synthetic_ko_suffix("Crypto economy grows. ($78억) 디지털 자산 보도.")
         assert body == "Crypto economy grows. ($78억)"
         assert suf == " 디지털 자산 보도."
+
+
+class TestReadabilityFailOpen:
+    """readability-lxml is a declared dep; when absent the extraction is
+    disabled (fail-open) and that must be warned once, not silently passed."""
+
+    def test_missing_readability_warns_once_and_returns_empty(self, monkeypatch, caplog):
+        import logging
+        import sys
+
+        # Force `from readability import Document` to raise ImportError.
+        monkeypatch.setitem(sys.modules, "readability", None)
+        # Reset the process-wide once-only warning latch.
+        monkeypatch.setattr(_enrichment_mod, "_warned_readability_missing", False)
+
+        html = "<html><body><article><p>" + ("x" * 80) + "</p></article></body></html>"
+        with caplog.at_level(logging.WARNING, logger=_enrichment_mod.logger.name):
+            first = _enrichment_mod._extract_via_readability(html, "https://example.com/a")
+            second = _enrichment_mod._extract_via_readability(html, "https://example.com/b")
+
+        # Fail-open: extraction disabled, returns empty so callers fall through.
+        assert first == ""
+        assert second == ""
+
+        warnings = [r for r in caplog.records if "readability-lxml not installed" in r.getMessage()]
+        assert len(warnings) == 1, "expected exactly one warning, not one per call"

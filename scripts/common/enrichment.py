@@ -21,6 +21,12 @@ from .utils import is_private_url_target
 
 logger = logging.getLogger(__name__)
 
+# readability-lxml is a declared dependency (requirements.txt); its absence is
+# an environment regression that silently drops the best-quality extraction
+# path. Warn once per process so the degradation is visible without flooding
+# the per-URL enrichment loop.
+_warned_readability_missing = False
+
 # Public API — names documented for import by collectors and renderers.
 # Names prefixed with _ remain internal helpers (shared via explicit import only).
 __all__ = [
@@ -1008,7 +1014,16 @@ def _extract_via_readability(html: str, url: str) -> str:
         if paragraphs:
             return smart_truncate(" ".join(paragraphs), 1000)
     except ImportError:
-        pass  # readability-lxml not installed, fall through
+        # Declared dep missing: best-quality extraction disabled, callers fall
+        # through to bs4/paragraph extractors. Warn once (parity with
+        # text_lang's langdetect fail-open) instead of silently passing.
+        global _warned_readability_missing
+        if not _warned_readability_missing:
+            _warned_readability_missing = True
+            logger.warning(
+                "readability-lxml not installed; high-quality article extraction "
+                "disabled (falling back to bs4/paragraph). Install readability-lxml to restore."
+            )
     except Exception as exc:  # noqa: BLE001
         logger.debug("readability extraction failed for %s: %s", url, exc)
     return ""
