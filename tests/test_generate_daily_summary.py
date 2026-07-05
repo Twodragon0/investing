@@ -2198,6 +2198,100 @@ class TestBuildMarketSignalSection:
 
 
 # ---------------------------------------------------------------------------
+# _build_overview_section — 골든 스코프 밖 함수 (커버리지 그룹 A 잔여)
+# ---------------------------------------------------------------------------
+
+
+class TestBuildOverviewSectionCounts:
+    """overview count_parts 전 카테고리 + keywords 없는 테마 서사 분기(289-297, 336)."""
+
+    def test_all_category_counts_and_keywordless_theme(self):
+        """보안/규제/소셜/월드/정치 count_parts(289-297) + keywords 없는 테마(336)."""
+        summary_map = {
+            "crypto": {"count": 10},
+            "stock": {"count": 8},
+            "regulatory": {"count": 4},
+            "social": {"count": 6},
+            "worldmonitor": {"count": 5},
+            "political": {"count": 3},
+        }
+        security_summary = {"count": 2}
+        priority_items = {"P0": [{"title": "a"}, {"title": "b"}, {"title": "c"}], "P1": [{"title": "d"}]}
+        theme_payload = [
+            {"name": "테마A", "emoji": "💰", "count": 12, "keywords": ["금리", "연준"]},
+            {"name": "테마B", "emoji": "📋", "count": 8, "keywords": []},  # keywords 없음 → 336 else
+        ]
+        with patch("common.summary_text_ko.translate_to_korean", side_effect=lambda x: x):
+            out = "\n".join(
+                gds._build_overview_section(
+                    total_count=41,
+                    priority_items=priority_items,
+                    theme_payload=theme_payload,
+                    summary_map=summary_map,
+                    security_summary=security_summary,
+                    counts_str="암호화폐 10건, 주식 8건",
+                    sentiment={
+                        "ratio": 50,
+                        "tone": "중립",
+                        "positive": 5,
+                        "negative": 5,
+                        "pos_examples": [],
+                        "neg_examples": [],
+                    },
+                )
+            )
+        assert "🔴 높음" in out  # P0 3건
+        assert "2가지 흐름" in out  # min(len(theme_payload), 3)
+        assert "핵심 신호" in out
+
+
+# ---------------------------------------------------------------------------
+# 순수 헬퍼 잔여 분기 — row builder / dedup / top_signal noise (그룹 B/C 잔여)
+# ---------------------------------------------------------------------------
+
+
+class TestCategoryHelperBranches:
+    """짧은 파이프 행·dedup·noise skip 등 방어 분기 커버."""
+
+    def test_worldmonitor_issue_rows_short_and_full(self):
+        """3-4 parts → elif(687-688), 5+ parts → if 분기."""
+        from scripts.common.summary_sections import _worldmonitor_issue_rows
+
+        assert _worldmonitor_issue_rows(["| id1 | 제목A | 출처A |"]) == [["제목A", "출처A"]]
+        assert _worldmonitor_issue_rows(["| 1 | 제목B | cat | pri | 출처B |"]) == [["제목B", "출처B"]]
+
+    def test_security_incident_rows_skips_short(self):
+        """len<3 행 skip(697->695), len>=3 → parts[:3]."""
+        from scripts.common.summary_sections import _security_incident_rows
+
+        assert _security_incident_rows(["| 짧음 |", "| ProjX | $1M | 피싱 |"]) == [["ProjX", "$1M", "피싱"]]
+
+    def test_iter_priority_items_dedup_by_description(self):
+        """정규화된 description 중복 → skip(655)."""
+        from scripts.common.summary_sections import _iter_priority_items
+
+        items = [
+            {"title": "첫 번째 뉴스 제목", "description": "같은 설명 텍스트입니다"},
+            {"title": "두 번째 뉴스 제목", "description": "같은 설명 텍스트입니다"},  # 중복 → skip
+            {"title": "세 번째 뉴스 제목", "description": "다른 설명 텍스트입니다"},
+        ]
+        result = list(_iter_priority_items(items, 5))
+        assert [r["title"] for r in result] == ["첫 번째 뉴스 제목", "세 번째 뉴스 제목"]
+
+    def test_snapshot_top_signal_skips_count_noise(self):
+        """highlights 가 count-line noise → skip(219) 후 테마 폴백."""
+        summary = {
+            "count": 5,
+            "market_data": [],
+            "highlights": ["1,234건 수집", "수집 건수: 10건"],  # 모두 noise
+            "themes": [("테마X", 3)],
+            "content": "링크 없는 단순 텍스트 뉴스",
+        }
+        out = "\n".join(gds._build_snapshot_table(summary, None, None, None, None, None))
+        assert "테마X 3건" in out  # Priority 4 테마명 폴백
+
+
+# ---------------------------------------------------------------------------
 # 골든마스터 스냅샷 — _build_briefing_section + _build_priority_and_category_sections
 # ---------------------------------------------------------------------------
 #

@@ -9,15 +9,30 @@ python3 -m pytest tests/test_generate_daily_summary.py tests/test_module_extract
 
 ## 요약
 
-| 지표 | 값 |
-|------|-----|
-| Statements | 607 (miss 60) |
-| Branches | 350 (partial 53) |
-| **Line+Branch Cover** | **87%** |
-| 구동 테스트 | 220 passed |
+| 지표 | 최초(2026-07-03) | 갱신(2026-07-05) |
+|------|------------------|------------------|
+| Statements miss | 60 | **10** |
+| Branch partial | 53 | **31** |
+| **Line+Branch Cover** | 87% | **96%** |
+| 구동 테스트 | 220 | 233 |
 
-골든마스터 3종(happy / empty-titles / no-data)이 카테고리 렌더·방어 fallback을
-결정적으로 고정한다. 잔여 미커버는 아래 3그룹으로 분류된다.
+**갱신 내역(2026-07-05):** 골든마스터 케이스 4(titles-only + relation) 추가 +
+`_build_market_signal_section`·`_build_overview_section`·순수 헬퍼(row builder /
+dedup / top_signal noise) assert 유닛 테스트로 그룹 A/B/C 대부분 해소.
+
+골든마스터 4종(happy / empty-titles / no-data / titles-relation)이 카테고리
+렌더·방어 fallback·교차자산 relation을 결정적으로 고정한다. 아래 3그룹 분류는
+최초 측정 시점 기준이며, 대부분 커버 완료됐다.
+
+### 잔여 미커버 (96%, 의도적 비커버)
+
+- **도달 불가**: `889->963`, `914->920` — `_coverage_warnings` 는 summary_map 에
+  `market` 키가 없으면 항상 경고를 반환하는데 두 섹션 빌더는 `market` 키를 넣지
+  않으므로 교차자산 섹션 skip 엣지에 도달 불가.
+- **contrived false-edge**: `506->508`·`520->522`·`531->533`·`543->545`·`555->557`
+  등 `if best_non_noise_title(...):` 의 falsy 엣지 — 타이틀 존재하면서 대표 타이틀만
+  falsy인 인위적 입력 필요. 회귀 위험 낮아 비커버 유지.
+- **잔여 stock dedup skip**(`1033->1031` 등)·`1010`(테마 커버리지 falsy) — 동일.
 
 ---
 
