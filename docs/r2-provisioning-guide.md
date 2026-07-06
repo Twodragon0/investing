@@ -3,6 +3,13 @@
 > 목적: 생성 이미지(`assets/images/generated/*`)를 Cloudflare R2로 오프로딩해 `.git` 비대(2026-06 기준 ~1.7GB, 93.7%가 이미지 blob churn)를 근본 해소한다.
 > 관련 문서: 설계 `docs/design-image-offloading-r2.md` / 라이프사이클 `docs/design-generated-image-lifecycle.md` / history reclaim 플랜 `.omc/plans/git-history-image-blob-reclaim.md`
 > 코드: `scripts/common/asset_storage.py`, `scripts/migrate_images_to_r2.py`
+> 위키(실측·결정): `.omc/wiki/r2-q1-q2-2026-07-05.md`, `.omc/wiki/q2-404-safe-2026-07-05-661.md`, `.omc/wiki/r2-strip-b-og.md`
+
+## 확정된 결정 (2026-07-05/06, 승인)
+
+- **Q1 = 커스텀 도메인** (Step 2 옵션 A). r2.dev 반려(레이트리밋·브랜딩 종속). `R2_PUBLIC_BASE_URL` = 커스텀 도메인.
+- **Q2 = 고아 이미지 제거**(마이그레이션 안 함). 실측 진짜 고아 **661개**(무참조 대시보드 스냅샷; og-/thumb- 파생 740은 고아 아님). **제거는 라이브 표면 404-safe로 검증됨** — sitemap-images/feed는 `site.posts × post.image` 순회(디렉토리 글롭 없음), og/hero/related는 `page.image` 파생 + `static_files` 존재 가드(부재 시 site 기본값 폴백). 상세: `q2-404-safe-2026-07-05-661.md`.
+- **재발 방지 배선(2026-07-06 완료)**: `generate_market_summary.py` 자동화 은퇴(server cron 호출 제거 + 워크플로우 삭제) + 0-tracked 대시보드 고아 패턴 `.gitignore` 등록. 즉 Step 4의 "이미지 생성 워크플로우" 목록에서 market summary는 제외됐다.
 
 ## 0. 핵심 동작 — 게이트 뒤 no-op
 
@@ -120,8 +127,10 @@ PYTHONPATH=scripts python3 scripts/migrate_images_to_r2.py --apply
 
 Step 7로 **앞으로의** churn은 멈추지만, 과거 history의 죽은 blob(~20,000개)은 그대로 남는다. 회수는 별도 force-push 캠페인:
 
-- 플랜: `.omc/plans/git-history-image-blob-reclaim.md` (4차 critic APPROVE)
-- BFG로 churn strip → 전 협업자 재클론 필요, force-push 전 자동화 크론 일시 중단 필수.
+- 플랜: `.omc/plans/git-history-image-blob-reclaim.md` (4차 critic APPROVE) + 컷오버→strip 시퀀스 `.omc/wiki/r2-strip-b-og.md` (시나리오 B).
+- **전체 strip 도구 = `git filter-repo --invert-paths --path assets/images/generated/`.** BFG는 HEAD 보호로 현재분(HEAD 트리)을 못 지워 full strip에 부적합 → filter-repo 사용(미설치 시 설치가 게이트). BFG는 churn-only 축소에만 유효.
+- strip은 **비가역** → 표본 아닌 **전수 검증**: 마이그레이션 후 잔존 `grep==0` + 1,603 포스트 ~6변형(main 3 + og-* thumb 3) **전수 curl 200** 확인 후에만 strip.
+- 전 협업자 재클론 필요, force-push 전 자동화 크론 일시 중단 필수.
 - **별도 승인·정비 윈도우에서 실행** (이 가이드 범위 밖).
 
 ---
