@@ -46,6 +46,16 @@ secrets.*
 assets/images/generated/test-*
 assets/images/test-*
 
+# Never-committed dashboard images from generate_market_summary.py (manual/legacy
+# generator, workflow_dispatch-only). It writes these to disk before the post-commit
+# gate, but the post pipeline never auto-commits, so every run leaves untracked
+# orphans. Verified 0 tracked; the committed collector variants (-cmc suffix) and
+# news-briefing-* hero images are NOT matched ([0-9] anchor excludes -cmc).
+assets/images/generated/fear-greed-[0-9]*
+assets/images/generated/market-heatmap-[0-9]*
+assets/images/generated/top-coins-[0-9]*
+assets/images/generated/sector-heatmap-[0-9]*
+
 # Claude local settings (personal)
 .claude/settings.local.json
 
