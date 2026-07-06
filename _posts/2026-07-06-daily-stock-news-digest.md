@@ -33,48 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-06 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: If a Stock Market Crash Is Coming, This ETF Could Be the Smartest Buy Right Now - 133건 분석</strong><ul><li>🤖 <strong>AI/기술</strong>: 반도체, 투톱 동향 주시</li><li>📈 <strong>가격/시장</strong>: 반도체, 나스닥 관련 18건</li><li>📊 <strong>매크로/금리</strong>: 연준, 인상 관련 9건</li><li>🏦 <strong>거래소</strong>: 상장, 반도체 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="http://www.fool.com/">If a Stock Market Crash Is Coming, This ETF Could Be the Smartest Buy Right Now</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: If a Stock Market Crash Is Coming, This ETF Could Be the Smartest Buy Right Now 
-총 133건의 뉴스 중 P1 주요 이슈도 22건 확인됩니다.
-
-### 테마별 동향
-
-- **🤖 AI/기술** (17건): 반도체, 투톱, 하이닉스 기술 이슈 (17건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-- **📈 가격/시장** (18건): 반도체, 나스닥, 실적 가격 변동 (18건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (9건): 연준, 인상, 환율 매크로 변수 (9건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-
-### 긴급 이슈
-
-- 주식 시장 폭락이 다가온다면, 이 ETF이 지금 당장 가장 현명한 매수가 될 수 있습니다
-
-### 주요 이슈
-
-- OpenAI IPO 지연에 대한 보고로 AI 우려가 심화됨에 따라 기술 주식이 전 세계적으로 하락
-- SK하이닉스, 290억 달러 규모 나스닥 상장에서 AI 투자자 접근 모색 - The Busi
-- 지금 당장 $1,000로 구매할 수 있는 가장 똑똑한 선봉대 ETF - The Motley Fool
-- 외 19건
-
-### 투자자 체크포인트
-
-- 한국 기사 50건, 글로벌 기사 83건 수집
-- 한국 지수: KOSPI 8,088.34(+5.76%), KOSDAQ 868.41(+0.19%), USD/KRW 1,529.16(-0.51%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:94%"></div></div><span class="theme-count">17건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:100%"></div></div><span class="theme-count">18건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:50%"></div></div><span class="theme-count">9건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:39%"></div></div><span class="theme-count">7건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:22%"></div></div><span class="theme-count">4건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-07-06.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-07-06.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 8,088.34 (+5.76%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 868.41 (+0.19%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- *OpenAI IPO 지연 보고서가 AI 우려로 심화됨에 따라 전 세계 기술주 하락 qz.com*
 
 ## 테마별 주요 뉴스
 

@@ -40,34 +40,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-06 - 암호화폐 뉴스 요
 <div class="stat-item"><div class="stat-value">비트코인</div><div class="stat-label">핫 키워드 (14회)</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐: 비트코인, 달러, 암호화폐 중심 77건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 주목</li><li>🏦 <strong>거래소</strong>: 24건 수집</li><li>📈 <strong>가격/시장</strong>: 달러 이슈 부각</li><li>🔵 <strong>규제/정책</strong>: 암호화폐, 트럼프 동향 주시</li></ul></div>
+
 ## 전체 뉴스 요약
 
-총 77건의 뉴스에서 **비트코인**(22건), **거래소**(24건)과 **가격/시장**(14건) 순으로 많은 보도가 집중되고 있습니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (22건): 비트코인, 달러, 암호화폐 관련 (22건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **🏦 거래소** (24건): binance, collateral, tokenized 이슈에 대한 시장 반응을 모니터링할 필요가 있습니다.
-- **📈 가격/시장** (14건): 달러, 암호화폐 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 주요 이슈
-
-- 美제재 뚫는 암호화폐…"北·러·이란 등에 지난해 '150조' 유입"
-- 러시아·이란·북한, 제재 회피 위한 암호화폐 사용 급증…지난해만 153조원 규모
-- 오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다
-- 외 3건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(40건), Cointelegraph(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-07-06.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-07-06.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **77건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

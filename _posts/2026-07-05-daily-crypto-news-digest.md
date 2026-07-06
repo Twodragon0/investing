@@ -42,6 +42,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-05 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 개발자들이 ZEC 폭락 이후 자신감을 회복하기 위해 노력함에 따라 Zcash Ironwood 업그레이드가 가까워졌습니다. - 90건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 동향 주시</li><li>🏦 <strong>거래소</strong>: 변동성 동향 주시</li><li>📈 <strong>가격/시장</strong>: 달러, 암호화폐 관련 24건</li><li>🔵 <strong>규제/정책</strong>: 트럼프, 집행 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://decrypt.co/372738/zcash-ironwood-upgrade-developers-restore-confidence-zec-crash">개발자들이 ZEC 폭락 이후 자신감을 회복하기 위해 노력함에 따라 Zcash Ironwood 업그레이드가 가까워졌습니다.</a> <span class="p0-desc">개발자들은 Zcash의 Ironwood 업그레이드가 테스트넷 활성화를 향해 진행됨에 따라 보안 테스트에서 새로운 심각한 버그가 발견되지 않았다고 말합니다.</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **90건** 수집
