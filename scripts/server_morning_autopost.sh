@@ -31,8 +31,10 @@ TODAY_KST="$(TZ=Asia/Seoul date +%Y-%m-%d)"
 echo "$LOG_PREFIX regenerate daily summary for latest coverage"
 run_py scripts/generate_daily_summary.py
 
-echo "$LOG_PREFIX regenerate market summary for latest coverage"
-run_py scripts/generate_market_summary.py
+# NOTE: generate_market_summary.py retired 2026-07-06 — it produced no committed
+# post since 2026-04-14 while writing market-heatmap/fear-greed/top-coins images
+# to disk each run (orphaned, 0 tracked). collect_coinmarketcap.py already
+# publishes daily-crypto-market-report with -cmc images, superseding it.
 
 RECENT_POSTS_RAW="$(run_py - <<'PY'
 from datetime import datetime, timedelta

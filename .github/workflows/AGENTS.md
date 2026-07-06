@@ -33,7 +33,6 @@ Generated: 2026-04-08
 | Workflow | Schedule | Dispatch |
 |----------|---------|---------|
 | `generate-daily-summary.yml` | — | `workflow_dispatch` only |
-| `generate-market-summary.yml` | — | `workflow_dispatch` only |
 | `generate-journal-og-images.yml` | Daily | — |
 | `weekly-digest.yml` | Weekly Sunday | — |
 | `ops-10am-digest.yml` | Daily | — |
