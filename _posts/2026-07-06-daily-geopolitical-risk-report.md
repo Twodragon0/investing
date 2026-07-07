@@ -22,9 +22,6 @@ image_alt: "지정학 리스크 리포트 - 2026-07-06 - 글로벌 이슈 뉴스
 - 글로벌 예측 시장 Polymarket에서 지정학·정치 이벤트에 대한 집단지성 확률을 확인합니다. 거래량이 많을수록 시장 참여자의 신뢰도가 높습니다.
 
 
-<div class="alert-box alert-warning"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg> 지정학 리스크 스냅샷</strong><ul><li>Polymarket 예측 시장: <strong>15건</strong></li><li>GDELT 글로벌 뉴스: <strong>0건</strong></li><li>뉴스 기사: <strong>1건</strong></li><li>주요 테마: <strong>핵/WMD</strong></li></ul></div>
-
-
 ## 1. 예측 시장 동향 (Polymarket)
 
 글로벌 예측 시장 Polymarket에서 지정학·정치 이벤트에 대한 집단지성 확률을 확인합니다. 거래량이 많을수록 시장 참여자의 신뢰도가 높습니다.
