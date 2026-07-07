@@ -129,7 +129,7 @@ Step 7로 **앞으로의** churn은 멈추지만, 과거 history의 죽은 blob(
 
 - 플랜: `.omc/plans/git-history-image-blob-reclaim.md` (4차 critic APPROVE) + 컷오버→strip 시퀀스 `.omc/wiki/r2-strip-b-og.md` (시나리오 B).
 - **전체 strip 도구 = `git filter-repo --invert-paths --path assets/images/generated/`.** BFG는 HEAD 보호로 현재분(HEAD 트리)을 못 지워 full strip에 부적합 → filter-repo 사용(미설치 시 설치가 게이트). BFG는 churn-only 축소에만 유효.
-- strip은 **비가역** → 표본 아닌 **전수 검증**: 마이그레이션 후 잔존 `grep==0` + 1,603 포스트 ~6변형(main 3 + og-* thumb 3) **전수 curl 200** 확인 후에만 strip.
+- strip은 **비가역** → 표본 아닌 **전수 검증**: 마이그레이션 후 잔존 `grep==0` + **실행 시점 라이브 grep으로 도출한 전체 참조 포스트**(2026-07-06 실측 1,879, 매일 증가 — 고정 수치 금지) ~6변형(main 3 + og-* thumb 3) **전수 curl 200** 확인 후에만 strip. V→S 구간 신규 포스트 자동화 동결 필수.
 - 전 협업자 재클론 필요, force-push 전 자동화 크론 일시 중단 필수.
 - **별도 승인·정비 윈도우에서 실행** (이 가이드 범위 밖).
 

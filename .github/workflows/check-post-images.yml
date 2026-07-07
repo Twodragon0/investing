@@ -29,6 +29,14 @@ jobs:
   check-images:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      # R2 오프로딩 게이트: 5키가 모두 설정돼야 backfill/thumbnail 재생성분이 R2로 미러링.
+      # 미설정 시 빈 값 → asset_storage.is_enabled()=False → 로컬 경로 no-op.
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      R2_PUBLIC_BASE_URL: ${{ secrets.R2_PUBLIC_BASE_URL }}
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
