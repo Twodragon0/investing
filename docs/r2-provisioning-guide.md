@@ -84,6 +84,12 @@ export R2_PUBLIC_BASE_URL=https://img.2twodragon.com
    미러링은 `image_generator/base.py:_save_and_close` 의 공통 chokepoint에서 일어나므로, 이미지를 만드는 모든 워크플로우에 노출돼야 신규분이 R2로 올라간다.
 3. `boto3` 는 이미 `scripts/requirements.txt:23` (`boto3>=1.40,<2`) 에 포함 — 추가 설치 불필요.
 
+### ⚠️ Jekyll 프론트 동기 (필수, 누락 시 hero 이미지 누락)
+`R2_PUBLIC_BASE_URL` 을 켜는 것과 **동시에** `_config.yml:17` `r2_image_base` 를 설정해야 한다.
+- 레이아웃(`_layouts/post.html`, `_layouts/default.html`, `_includes/generated-picture.html`)은 `image contains site.r2_image_base` 로 CDN URL을 원격으로 분류해 `static_files` 존재 가드를 건너뛴다.
+- `r2_image_base` 가 빈 값이면 CDN URL(`https://.../generated/...`)이 원격으로도, 로컬(`/assets/images/generated/`)로도 매칭되지 않아 hero/og 이미지가 드롭될 수 있다.
+- 값은 `R2_PUBLIC_BASE_URL` 의 substring이어야 한다 (예: `r2_image_base: "img.2twodragon.com"` 또는 `https://img.2twodragon.com`).
+
 ## Step 5 — 활성화 검증 (쓰기 없음)
 
 ```bash
@@ -135,6 +141,13 @@ Step 7로 **앞으로의** churn은 멈추지만, 과거 history의 죽은 blob(
 
 ---
 
+## 알려진 제약 (활성화 후, PR #1041 리뷰 반영)
+
+R2 활성화로 front matter `image:` 가 CDN 절대 URL이 되면서 생기는 비-blocking 동작 변화. 결함은 아니나 인지 필요:
+
+- **`check_post_images.py:23` 이 CDN URL을 스킵한다.** `IMAGE_RE` 는 `/` 시작 값만 매칭하므로 `https://` CDN URL은 이미지 무결성/auto-heal 검사에서 제외된다 → 해당 포스트 커버리지 감소. (기존 `migrate_images_to_r2` 경로도 동일 URL을 생성하므로 신규 회귀 아님.)
+- **generator 간 front matter URL 정책이 갈린다.** journal-OG 경로(`generate_og_images.py:637`)는 활성 시 CDN URL을 쓰지만 `backfill_images.py:568/575` 는 로컬 경로를 유지한다. 의도적(마이그레이션 스크립트가 backfill 산출물을 나중에 sweep) — 컷오버 시 backfill 산출물이 마이그레이션 대상에 포함되는지 확인.
+
 ## 롤백 / 안전성
 
 - 어느 단계든 5개 시크릿을 제거하면 `is_enabled()=False` → 즉시 로컬 경로로 복귀(no-op). 단 이미 `--apply`로 CDN URL이 박힌 포스트는 되돌리려면 백업 복원 필요.
@@ -142,6 +155,7 @@ Step 7로 **앞으로의** churn은 멈추지만, 과거 history의 죽은 blob(
 
 ## 검증 체크리스트
 
+- [ ] Step 4: `_config.yml` `r2_image_base` 가 `R2_PUBLIC_BASE_URL` substring으로 설정됨 (누락 시 hero 드롭)
 - [ ] Step 5: `is_enabled()=True`, `public_url` 이 CDN URL 반환
 - [ ] Step 5: dry-run 건수 > 0, `git status` clean
 - [ ] Step 6: `--apply` 후 샘플 포스트 OG/hero 이미지 200
