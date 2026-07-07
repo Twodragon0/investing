@@ -632,7 +632,9 @@ def main() -> None:
             # Generate card thumbnail
             generate_thumbnail(out_path)
             if args.update_frontmatter:
-                url = og_image_url(post["slug"], post["date"])
+                # R2 활성 시 CDN 절대 URL, 비활성 시 로컬 경로 그대로 반환한다
+                # (public_url은 basename만 취하므로 로컬 URL을 넘겨도 동작 동일).
+                url = asset_storage.public_url(og_image_url(post["slug"], post["date"]))
                 if update_post_frontmatter(post["filepath"], url):
                     updated += 1
 
