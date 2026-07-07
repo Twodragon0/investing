@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_de1a740d5dc98ffd_generate_ops_10am_digest_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.14.3">coverage.py v7.14.3</a>,
-            created at 2026-07-06 05:14 +0000
+            created at 2026-07-07 03:10 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -714,20 +714,22 @@
     <p class="pln"><span class="n"><a id="t632" href="#t632">632</a></span><span class="t">            <span class="com"># Generate card thumbnail</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t633" href="#t633">633</a></span><span class="t">            <span class="nam">generate_thumbnail</span><span class="op">(</span><span class="nam">out_path</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t634" href="#t634">634</a></span><span class="t">            <span class="key">if</span> <span class="nam">args</span><span class="op">.</span><span class="nam">update_frontmatter</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t635" href="#t635">635</a></span><span class="t">                <span class="nam">url</span> <span class="op">=</span> <span class="nam">og_image_url</span><span class="op">(</span><span class="nam">post</span><span class="op">[</span><span class="str">"slug"</span><span class="op">]</span><span class="op">,</span> <span class="nam">post</span><span class="op">[</span><span class="str">"date"</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t636" href="#t636">636</a></span><span class="t">                <span class="key">if</span> <span class="nam">update_post_frontmatter</span><span class="op">(</span><span class="nam">post</span><span class="op">[</span><span class="str">"filepath"</span><span class="op">]</span><span class="op">,</span> <span class="nam">url</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t637" href="#t637">637</a></span><span class="t">                    <span class="nam">updated</span> <span class="op">+=</span> <span class="num">1</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t638" href="#t638">638</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t639" href="#t639">639</a></span><span class="t">    <span class="nam">logger</span><span class="op">.</span><span class="nam">info</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t640" href="#t640">640</a></span><span class="t">        <span class="str">"Done: %d generated, %d skipped, %d front matter updated"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t641" href="#t641">641</a></span><span class="t">        <span class="nam">generated</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t642" href="#t642">642</a></span><span class="t">        <span class="nam">skipped</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t643" href="#t643">643</a></span><span class="t">        <span class="nam">updated</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t644" href="#t644">644</a></span><span class="t">    <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t645" href="#t645">645</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t646" href="#t646">646</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t647" href="#t647">647</a></span><span class="t"><span class="key">if</span> <span class="nam">__name__</span> <span class="op">==</span> <span class="str">"__main__"</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t648" href="#t648">648</a></span><span class="t">    <span class="nam">main</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t635" href="#t635">635</a></span><span class="t">                <span class="com"># R2 &#54876;&#49457; &#49884; CDN &#51208;&#45824; URL, &#48708;&#54876;&#49457; &#49884; &#47196;&#52972; &#44221;&#47196; &#44536;&#45824;&#47196; &#48152;&#54872;&#54620;&#45796;</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t636" href="#t636">636</a></span><span class="t">                <span class="com"># (public_url&#51008; basename&#47564; &#52712;&#54616;&#48064;&#47196; &#47196;&#52972; URL&#51012; &#45336;&#44200;&#46020; &#46041;&#51089; &#46041;&#51068;).</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t637" href="#t637">637</a></span><span class="t">                <span class="nam">url</span> <span class="op">=</span> <span class="nam">asset_storage</span><span class="op">.</span><span class="nam">public_url</span><span class="op">(</span><span class="nam">og_image_url</span><span class="op">(</span><span class="nam">post</span><span class="op">[</span><span class="str">"slug"</span><span class="op">]</span><span class="op">,</span> <span class="nam">post</span><span class="op">[</span><span class="str">"date"</span><span class="op">]</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t638" href="#t638">638</a></span><span class="t">                <span class="key">if</span> <span class="nam">update_post_frontmatter</span><span class="op">(</span><span class="nam">post</span><span class="op">[</span><span class="str">"filepath"</span><span class="op">]</span><span class="op">,</span> <span class="nam">url</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t639" href="#t639">639</a></span><span class="t">                    <span class="nam">updated</span> <span class="op">+=</span> <span class="num">1</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t640" href="#t640">640</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t641" href="#t641">641</a></span><span class="t">    <span class="nam">logger</span><span class="op">.</span><span class="nam">info</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t642" href="#t642">642</a></span><span class="t">        <span class="str">"Done: %d generated, %d skipped, %d front matter updated"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t643" href="#t643">643</a></span><span class="t">        <span class="nam">generated</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t644" href="#t644">644</a></span><span class="t">        <span class="nam">skipped</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t645" href="#t645">645</a></span><span class="t">        <span class="nam">updated</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t646" href="#t646">646</a></span><span class="t">    <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t647" href="#t647">647</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t648" href="#t648">648</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t649" href="#t649">649</a></span><span class="t"><span class="key">if</span> <span class="nam">__name__</span> <span class="op">==</span> <span class="str">"__main__"</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t650" href="#t650">650</a></span><span class="t">    <span class="nam">main</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -737,7 +739,7 @@
             <a class="nav" href="z_de1a740d5dc98ffd_generate_ops_10am_digest_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.14.3">coverage.py v7.14.3</a>,
-            created at 2026-07-06 05:14 +0000
+            created at 2026-07-07 03:10 +0000
         </p>
     </div>
 </footer>
