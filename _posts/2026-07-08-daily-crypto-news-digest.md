@@ -41,40 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-08 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 보안 악용 후 몇 주 동안 폐쇄되는 Ctrl Wallet - 105건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 이슈 부각</li><li>🏦 <strong>거래소</strong>: 파생상품 주목</li><li>📈 <strong>가격/시장</strong>: 달러, 암호화폐 이슈 부각</li><li>🟣 <strong>DeFi</strong>: 수익률, 증권 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/ctrl-wallet-shutdown-security-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">보안 악용 후 몇 주 동안 폐쇄되는 Ctrl Wallet</a> <span class="p0-desc">이러한 움직임은 2026년 8월 3일 모든 기능이 비활성화되기 전에 사용자가 자산을 인출할 것을 촉구하면서 지갑을 폐쇄하게 된 6월 23일 익스플로잇에 따른 것입니다.</span></li><li><a href="https://cointelegraph.com/news/trader-loses-2m-in-same-block-backrun-extraction-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">트레이더는 '동일 블록 백런 추출' 악용으로 200만 달러 손실</a> <span class="p0-desc">한 암호화폐 거래자는 피경쟁 우위가 거래에 서명하기 전에 거래 경로를 읽었다면 200만 달러의 손실을 예방할 수 있었다고 지적했습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 보안 악용 후 몇 주 동안 폐쇄되는 Ctrl Wallet 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 105건의 뉴스 중 P1 주요 이슈도 6건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (42건): 비트코인, 달러, 스트래티지 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **🏦 거래소** (26건): 파생상품, 증권 관련 불확실성이 커지고 있어 리스크 관리에 유의하세요.
-- **📈 가격/시장** (21건): 달러, 암호화폐 가격 변동 (21건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 보안 악용 후 몇 주 동안 폐쇄되는 Ctrl Wallet
-- 트레이더는 '동일 블록 백런 추출' 악용으로 200만 달러 손실
-
-### 주요 이슈
-
-- 코인 시황] 반도체 반등·비트코인 6만2000달러 사수…FOMC 의사록·CPI 앞두고 '눈치보기' - 뉴스핌
-- 비트코인 안 판다던 美 스트래티지, 2억 달러대 매각 - 더구루
-- 오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다
-- 외 3건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(40건), Cointelegraph(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-07-08.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-07-08.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **105건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
