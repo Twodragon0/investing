@@ -1,31 +1,5 @@
 {
   "seen": {
-    "d66355dd3adca35afbcc8865": "2026-06-09T23:02:02",
-    "bfb62122f54e02e2df0ebde4": "2026-06-09T23:02:02",
-    "b611ecee90d73a11ea1ae8db": "2026-06-09T23:02:02",
-    "e001214dde0dc5e217d490e3": "2026-06-09T23:02:02",
-    "53d81bbb4a8126969b719aa5": "2026-06-09T23:02:02",
-    "befe76b3512f20f9405c3d26": "2026-06-09T23:02:02",
-    "b0c406bd9b7489b74338969d": "2026-06-09T23:02:02",
-    "a50256c1e9d29342d1df6ec4": "2026-06-09T23:02:02",
-    "f0ffdbb59bce50e6536e5a28": "2026-06-09T23:02:02",
-    "7cc9c0716bb7edd569f53c88": "2026-06-09T23:02:02",
-    "5fc94e69cd1757336c078a3d": "2026-06-09T23:02:02",
-    "9a0c29381c19e93ff3b29b3e": "2026-06-09T23:02:02",
-    "7da30d5c62431236a5ecc549": "2026-06-09T23:02:02",
-    "0075dffc7b8e48c204f9c210": "2026-06-09T23:02:02",
-    "778e61eca9e9bf576f2f07ec": "2026-06-09T23:02:02",
-    "b26f1f7770d75ecebafe90e0": "2026-06-09T23:02:02",
-    "dbe6b76c3e7e5b3f18bc3b69": "2026-06-09T23:02:02",
-    "e3473dfdb6c023db233fb57e": "2026-06-09T23:02:02",
-    "2ad150e0e2f79fc343a1c3d1": "2026-06-09T23:02:02",
-    "952c56d8d9021284a7f1b04d": "2026-06-09T23:02:02",
-    "c45afe4a9f1ed11448b39c28": "2026-06-09T23:02:02",
-    "6965d9a16fd70e9fa1ce35ab": "2026-06-09T23:02:02",
-    "0adb2a4fdd9724611c6cb8f5": "2026-06-09T23:02:02",
-    "fc6b338ae24211863c3ad39c": "2026-06-09T23:02:02",
-    "23a1110641c8654000dbb625": "2026-06-09T23:02:02",
-    "3f96311151cb657f92831088": "2026-06-09T23:02:02",
     "e8de5fab1f5c14c2ecc74f20": "2026-06-10T23:05:02",
     "e9c60bbe3d4f7e0a1e2d3d79": "2026-06-10T23:05:02",
     "66428a0a0fab782d69fe59a8": "2026-06-10T23:05:02",
@@ -558,7 +532,32 @@
     "b685ea54a69a74bcfeeec8a3": "2026-07-08T23:36:31",
     "e77e0e29486d9c104edeb54a": "2026-07-08T23:36:31",
     "18a0048d798e434fd7e6a917": "2026-07-08T23:36:31",
-    "ecda850c53f0c220aa377873": "2026-07-08T23:36:31"
+    "ecda850c53f0c220aa377873": "2026-07-08T23:36:31",
+    "b7b9f68942cfb108bb181f99": "2026-07-09T23:46:52",
+    "4e2d85057ce7876a759109f7": "2026-07-09T23:46:52",
+    "93ebded06abdb1eb043c948a": "2026-07-09T23:46:52",
+    "ad78df2c35487d79ca0577e2": "2026-07-09T23:46:52",
+    "83086b14890e51360765fb08": "2026-07-09T23:46:52",
+    "4b3367b63b2c70f6cb852701": "2026-07-09T23:46:52",
+    "78a340b1a565a190c6cc8256": "2026-07-09T23:46:52",
+    "6d041c9ce734ef5d8b8dbf7b": "2026-07-09T23:46:52",
+    "9ae69c51829995bf32cb2165": "2026-07-09T23:46:52",
+    "375c28c2e433a8357d12c34d": "2026-07-09T23:46:52",
+    "cebc78fe6b0524b3b9b7b218": "2026-07-09T23:46:52",
+    "d08013bd94d099eb92a682cf": "2026-07-09T23:46:52",
+    "679046b82d08d5ad2e47f793": "2026-07-09T23:46:52",
+    "5235e1dce45db04b69572e41": "2026-07-09T23:46:52",
+    "ca468f23f50f523e02dd0bf9": "2026-07-09T23:46:52",
+    "bbcb8d89e475b43e66da0071": "2026-07-09T23:46:52",
+    "3f5affbe26f9e98e4cfacdc6": "2026-07-09T23:46:52",
+    "8b4f2fa913ad2341e17c38c7": "2026-07-09T23:46:52",
+    "1f1c3461f10fe6658de9062f": "2026-07-09T23:46:52",
+    "cb3c09a83db33adac82bcdc1": "2026-07-09T23:46:52",
+    "42e2cf3067e26d652d93214e": "2026-07-09T23:46:52",
+    "994c106e7bf03b5b9dab7ce0": "2026-07-09T23:46:52",
+    "9d9d6b52739ff5091192baf3": "2026-07-09T23:46:52",
+    "6c881be4e0609b1549bc67de": "2026-07-09T23:46:52",
+    "099ba1f938ddd992c3b3564f": "2026-07-09T23:46:52"
   },
   "titles": [
     [
@@ -11812,6 +11811,106 @@
     [
       "정치인 거래정책 리포트 20260709",
       "2026-07-09"
+    ],
+    [
+      "form 4 veritone inc insider trading activity stock titan",
+      "2026-07-10"
+    ],
+    [
+      "aon aon legal chiefs 10b51 sale totals 600 shares stock titan",
+      "2026-07-10"
+    ],
+    [
+      "form 4 jfb construction holdings insider trading activity stock titan",
+      "2026-07-10"
+    ],
+    [
+      "ooma ooma svp chief legal officer jenny yeh sells 2481 shares stock titan",
+      "2026-07-10"
+    ],
+    [
+      "curis cris director receives grant of 6800 nonqualified stock options stock titan",
+      "2026-07-10"
+    ],
+    [
+      "curis cris director john hohneker receives 6800 stock options at 529 stock titan",
+      "2026-07-10"
+    ],
+    [
+      "gbank financial gbfh director nigro receives 472share stock grants disclaims large indirect holdings stock titan",
+      "2026-07-10"
+    ],
+    [
+      "hrt financial lp jem logs buy and sell trades ends with 60508 shares stock titan",
+      "2026-07-10"
+    ],
+    [
+      "hrt financial lp trims edible garden edbl stake with 537670share sale stock titan",
+      "2026-07-10"
+    ],
+    [
+      "gbank financial gbfh ceo receives 20000share restricted stock grant stock titan",
+      "2026-07-10"
+    ],
+    [
+      "curis inc cris director receives 6800 stock options at 529 stock titan",
+      "2026-07-10"
+    ],
+    [
+      "neurocrine nbix officer sells 14571 shares under rule 10b51 plan stock titan",
+      "2026-07-10"
+    ],
+    [
+      "curis cris ceo receives 110090 employee stock options at 529 stock titan",
+      "2026-07-10"
+    ],
+    [
+      "한은 물가 오름세 강한 성장 고려하면 기준금리 인상 필요",
+      "2026-07-10"
+    ],
+    [
+      "신현송 한은 총재 적절한 시기 기준금리 인상 주식 추세적 하락 가능성은 제한적",
+      "2026-07-10"
+    ],
+    [
+      "신현송 적절한 시기 금리인상 필요원화 강세전환 여지 크다 매일경제 마켓",
+      "2026-07-10"
+    ],
+    [
+      "한은 기준금리 인상 깜빡이 켜졌다대출금리 얼마나 오르나 대한데일리",
+      "2026-07-10"
+    ],
+    [
+      "신현송 적절한 시기 기준금리 인상 필요금리 인상론 재확인",
+      "2026-07-10"
+    ],
+    [
+      "신현송 한은 총재 적절할 때 금리인상 필요높은 물가도 이어질 것",
+      "2026-07-10"
+    ],
+    [
+      "신현송 적절한 시기 금리인상 필요물가성장금융불균형 동시 지목",
+      "2026-07-10"
+    ],
+    [
+      "신현송 적절한 시기 금리인상증기 추세적 하락 가능성 낮아 미디어펜",
+      "2026-07-10"
+    ],
+    [
+      "환율물가집값 불안 이달 기준금리 인상 유력",
+      "2026-07-10"
+    ],
+    [
+      "fed minutes show a few officials saw case for june hike",
+      "2026-07-10"
+    ],
+    [
+      "the fed is split 9 to 8 gold and silver are paying the price until july 14 goldsilver",
+      "2026-07-10"
+    ],
+    [
+      "정치인 거래정책 리포트 20260710",
+      "2026-07-10"
     ]
   ],
   "seen_urls": {}
