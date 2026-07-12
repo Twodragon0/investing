@@ -42,6 +42,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-11 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 공격자들, 'Ill Bloom' 취약점을 악용해 암호화폐 지갑에서 500만 달러 이상 유출 - 해커 뉴스 - 103건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 동향 주시</li><li>🏦 <strong>거래소</strong>: 21건 수집</li><li>📈 <strong>가격/시장</strong>: 달러, BTC 관련 29건</li><li>🔵 <strong>규제/정책</strong>: 17건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://thehackernews.com">공격자들, 'Ill Bloom' 취약점을 악용해 암호화폐 지갑에서 500만 달러 이상 유출 - 해커 뉴스</a> <span class="p0-desc">Hacker News는 정보보안 전문가와 의사결정자를 위한 실시간 업데이트, 위협 인텔리전스, 데이터 위반 보고서, 전문가 분석 및 실행 가능한 통찰력을 제공하는 최고의 사이버 보.</span></li><li><a href="https://www.g-enews.com">에릭 트럼프의 오판… '95% 폭락' 암호화폐 제국 6억 달러 공중 분해</a> <span class="p0-desc">에릭 트럼프의 오판… '95% 폭락' 암호화폐 제국 6억 달러 공중 분해 글로벌이코노믹</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **103건** 수집

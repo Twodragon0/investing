@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-12 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 공격자들, 'Ill Bloom' 취약점을 악용해 암호화폐 지갑에서 500만 달러 이상 유출 - 해커 뉴스 - 96건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 암호화폐 주목</li><li>🏦 <strong>거래소</strong>: 무역, 암호화폐 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 달러 관련 26건</li><li>🔵 <strong>규제/정책</strong>: 트럼프, 국채 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://thehackernews.com">공격자들, 'Ill Bloom' 취약점을 악용해 암호화폐 지갑에서 500만 달러 이상 유출 - 해커 뉴스</a> <span class="p0-desc">Hacker News는 정보보안 전문가와 의사결정자를 위한 실시간 업데이트, 위협 인텔리전스, 데이터 위반 보고서, 전문가 분석 및 실행 가능한 통찰력을 제공하는 최고의 사이버 보.</span></li><li><a href="https://www.g-enews.com">에릭 트럼프의 오판… '95% 폭락' 암호화폐 제국 6억 달러 공중 분해</a> <span class="p0-desc">에릭 트럼프의 오판… '95% 폭락' 암호화폐 제국 6억 달러 공중 분해 글로벌이코노믹</span></li><li><a href="https://cointelegraph.com/news/bonzo-lend-9m-oracle-exploit-hedera?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Bonzo Lend, Hedera의 오라클 악용으로 900만 달러 손실</a> <span class="p0-desc">공격자는 Supra의 온체인 오라클 검증기의 결함을 통해 SAUCE 담보의 가치를 부풀리고 Bonzo Lend로부터 900만 달러를 빌렸습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 공격자들, 'Ill Bloom' 취약점을 악용해 암호화폐 지갑에서 500만 달러 이상 유출 - 해커 뉴스 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 96건의 뉴스 중 P1 주요 이슈도 11건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (32건): 비트코인, 암호화폐, BTC 관련 (32건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **🏦 거래소** (25건): 무역, 암호화폐 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다.
-- **📈 가격/시장** (26건): 암호화폐, 달러, 알트코인 가격 변동 (26건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 공격자들, 'Ill Bloom' 취약점을 악용해 암호화폐 지갑에서 500만 달러 이상 유출 - 해커 뉴스
-- 에릭 트럼프의 오판… '95% 폭락' 암호화폐 제국 6억 달러 공중 분해
-- Bonzo Lend, Hedera의 오라클 악용으로 900만 달러 손실
-
-### 주요 이슈
-
-- 하와이 영주권 소지자, 이란 제재 회피 위해 암호화폐 사용 혐의로 기소 - Hawaii News Now
-- 비트코인·이더리움 ETF 8주 만에 순유입…가격 반응할까
-- 일본도 암호화폐 현물 ETF 허용? 시장 판도 바뀔까 - 코인리더스
-- 외 8건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(40건), Decrypt(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-07-12.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-07-12.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **96건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
