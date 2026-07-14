@@ -30,7 +30,11 @@
 | scripts/common/\_\_init\_\_.py                    |       18 |        6 |     67% |     31-37 |
 | scripts/common/asset\_storage.py                  |       63 |        0 |    100% |           |
 | scripts/common/base\_collector.py                 |       97 |        0 |    100% |           |
-| scripts/common/bettafish\_analyzer.py             |      646 |        0 |    100% |           |
+| scripts/common/bettafish\_analyzer.py             |      103 |        0 |    100% |           |
+| scripts/common/bettafish\_insight.py              |      215 |        0 |    100% |           |
+| scripts/common/bettafish\_models.py               |       61 |        0 |    100% |           |
+| scripts/common/bettafish\_perspectives.py         |      205 |        0 |    100% |           |
+| scripts/common/bettafish\_synthesis.py            |       81 |        0 |    100% |           |
 | scripts/common/blockchain\_api.py                 |       95 |       10 |     89% |97, 232-242 |
 | scripts/common/browser.py                         |      127 |        1 |     99% |       103 |
 | scripts/common/collector\_config.py               |       75 |       11 |     85% |26-28, 100-101, 136-138, 156-158 |
@@ -59,7 +63,7 @@
 | scripts/common/og\_image\_formats.py              |       38 |       28 |     26% |17-19, 26-36, 41-51, 56-58 |
 | scripts/common/og\_render.py                      |       59 |       11 |     81% |37-38, 75-77, 92-97 |
 | scripts/common/og\_visuals.py                     |      369 |      354 |      4% |16-84, 100-176, 183-247, 264-395, 404-462, 469-501, 506-595, 605-696, 703-813, 829-919, 935-1032, 1048-1145, 1161-1221 |
-| scripts/common/post\_generator.py                 |      341 |        8 |     98% |475-479, 847, 882-883 |
+| scripts/common/post\_generator.py                 |      341 |        7 |     98% |475-479, 882-883 |
 | scripts/common/post\_html.py                      |       28 |        0 |    100% |           |
 | scripts/common/risk\_classifier.py                |      184 |        9 |     95% |331-332, 354, 392, 431-435 |
 | scripts/common/rss\_fetcher.py                    |      249 |       12 |     95% |44-45, 80, 91, 178, 187, 272, 281, 292, 302, 330-331 |
@@ -120,7 +124,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **23003** | **7432** | **68%** |           |
+| **TOTAL**                                         | **23022** | **7431** | **68%** |           |
 
 
 ## Setup coverage badge
