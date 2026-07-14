@@ -180,14 +180,32 @@ layout: default
       {% assign p3_urls = "" %}
       {% assign p4_urls = "" %}
       {% assign p5_urls = "" %}
+      {% comment %}
+        표시에는 우선순위 순서대로 최대 related_limit(3)개만 필요하다. 각 버킷을
+        related_limit개로 상한하고, 최상위 버킷(p1)이 가득 차면 전체 스캔을 조기
+        종료한다 — 최종 선택은 항상 우선순위 순 앞쪽 3개뿐이고 버킷은 상호배타
+        (한 포스트는 한 버킷에만 들어감)이므로 출력은 완전히 동일하다. 상한이 없으면
+        같은 카테고리 포스트가 수백 개일 때 append가 문자열 전체를 매번 복사해
+        페이지당 O(n^2) 문자열 증가가 발생하고, 이것이 포스트 누적 시 빌드가
+        급격히 느려지던 근본 원인이다.
+      {% endcomment %}
+      {% assign p1_count = 0 %}
+      {% assign p2_count = 0 %}
+      {% assign p3_count = 0 %}
+      {% assign p4_count = 0 %}
+      {% assign p5_count = 0 %}
       {% for post in related_all %}
+      {% if p1_count >= related_limit %}{% break %}{% endif %}
       {% if post.pin %}{% continue %}{% endif %}
       {% assign post_is_summary = false %}
       {% if post.tags contains "daily-digest" or post.tags contains "weekly-digest" or post.tags contains "summary" or post.tags contains "일일요약" %}
       {% assign post_is_summary = true %}
       {% endif %}
       {% if page_is_summary != true and post_is_summary %}
-        {% assign p5_urls = p5_urls | append: post.url | append: "||" %}
+        {% if p5_count < related_limit %}
+          {% assign p5_urls = p5_urls | append: post.url | append: "||" %}
+          {% assign p5_count = p5_count | plus: 1 %}
+        {% endif %}
         {% continue %}
       {% endif %}
       {% assign same_cat = false %}
@@ -199,13 +217,25 @@ layout: default
       {% endfor %}
       {% endif %}
       {% if same_cat and shared_tags >= 2 %}
-        {% assign p1_urls = p1_urls | append: post.url | append: "||" %}
+        {% if p1_count < related_limit %}
+          {% assign p1_urls = p1_urls | append: post.url | append: "||" %}
+          {% assign p1_count = p1_count | plus: 1 %}
+        {% endif %}
       {% elsif same_cat and shared_tags == 1 %}
-        {% assign p2_urls = p2_urls | append: post.url | append: "||" %}
+        {% if p2_count < related_limit %}
+          {% assign p2_urls = p2_urls | append: post.url | append: "||" %}
+          {% assign p2_count = p2_count | plus: 1 %}
+        {% endif %}
       {% elsif same_cat %}
-        {% assign p3_urls = p3_urls | append: post.url | append: "||" %}
+        {% if p3_count < related_limit %}
+          {% assign p3_urls = p3_urls | append: post.url | append: "||" %}
+          {% assign p3_count = p3_count | plus: 1 %}
+        {% endif %}
       {% elsif shared_tags >= 1 %}
-        {% assign p4_urls = p4_urls | append: post.url | append: "||" %}
+        {% if p4_count < related_limit %}
+          {% assign p4_urls = p4_urls | append: post.url | append: "||" %}
+          {% assign p4_count = p4_count | plus: 1 %}
+        {% endif %}
       {% endif %}
       {% endfor %}
 
