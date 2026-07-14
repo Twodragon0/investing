@@ -22,7 +22,7 @@
 | scripts/collect\_fmp\_calendar.py                 |      360 |      262 |     27% |56-57, 69-70, 75-93, 98-112, 118, 146-178, 207-210, 228, 237-239, 251, 254, 267-299, 305, 313-346, 358-402, 406, 410-503, 507-611, 616-617, 621 |
 | scripts/collect\_geopolitical.py                  |      490 |      406 |     17% |168-169, 176-177, 220-295, 300-305, 314-340, 349-409, 418-428, 433-462, 467-482, 487-493, 575-637, 642-678, 688-780, 797-829, 833, 838-841, 845, 849, 853-1010, 1019-1163, 1168-1169, 1173 |
 | scripts/collect\_market\_indicators.py            |      612 |      189 |     69% |137-138, 145-146, 201-237, 245-287, 292-306, 311-326, 331-342, 375-403, 412-427, 436-451, 460-480, 501-572, 650, 695, 697, 704, 706, 710, 734-735, 748-761, 766-774, 911-916, 1033-1035, 1110, 1193-1194, 1274-1277, 1292, 1322-1323, 1327 |
-| scripts/collect\_political\_trades.py             |      416 |       60 |     86% |136-137, 144-145, 154-192, 197-258, 263-285, 290-312, 317-334, 388-389, 396, 492-495, 526, 529-533, 758, 806, 854, 902, 904, 974-994, 1003, 1034-1035, 1039 |
+| scripts/collect\_political\_trades.py             |      416 |       66 |     84% |136-137, 144-145, 154-192, 197-258, 263-285, 290-312, 317-334, 388-389, 396, 442-448, 492-495, 526, 529-533, 746, 758, 802, 806, 854, 902, 904, 974-994, 1003, 1034-1035, 1039 |
 | scripts/collect\_regulatory.py                    |      413 |      175 |     58% |164, 196-212, 223-235, 244-273, 285-363, 380-384, 388-389, 394, 452, 500, 539, 573-591, 600, 611, 613, 619-626, 638, 656-662, 672, 748-756, 763, 773-782, 812-813, 828-831, 840, 845-849, 878, 882 |
 | scripts/collect\_social\_media.py                 |      523 |      393 |     25% |55-59, 173-174, 181-182, 204-210, 215, 223, 227, 231, 251-280, 293-298, 310-353, 358-412, 447-494, 511, 515, 520, 551-558, 567-577, 618-623, 636-1220, 1225, 1229 |
 | scripts/collect\_stock\_news.py                   |      491 |      162 |     67% |36-40, 45-46, 115-116, 120-121, 133-134, 146-177, 266-293, 298-343, 367-402, 407-453, 482-488, 493, 547, 552, 635, 640, 643, 664-669, 678-680, 712-715, 745-746, 751-752, 764, 769-770, 783-784, 787, 790-793, 802-803, 810, 813-814, 818-830, 845-847, 850-853, 900-901, 910-911, 935-936, 962, 1009 |
@@ -40,7 +40,9 @@
 | scripts/common/crypto\_api.py                     |       57 |        0 |    100% |           |
 | scripts/common/dedup.py                           |      158 |        0 |    100% |           |
 | scripts/common/encoding\_guard.py                 |       29 |        0 |    100% |           |
-| scripts/common/enrichment.py                      |      778 |        9 |     99% |740-747, 778, 815-817 |
+| scripts/common/enrichment.py                      |      528 |        9 |     98% |529-536, 567, 604-606 |
+| scripts/common/enrichment\_images.py              |       51 |        0 |    100% |           |
+| scripts/common/enrichment\_synthetic.py           |      191 |        0 |    100% |           |
 | scripts/common/entity\_extractor.py               |      106 |        1 |     99% |       180 |
 | scripts/common/fmp\_api.py                        |      247 |        0 |    100% |           |
 | scripts/common/formatters.py                      |       30 |        0 |    100% |           |
@@ -57,21 +59,21 @@
 | scripts/common/og\_image\_formats.py              |       38 |       28 |     26% |17-19, 26-36, 41-51, 56-58 |
 | scripts/common/og\_render.py                      |       59 |       11 |     81% |37-38, 75-77, 92-97 |
 | scripts/common/og\_visuals.py                     |      369 |      354 |      4% |16-84, 100-176, 183-247, 264-395, 404-462, 469-501, 506-595, 605-696, 703-813, 829-919, 935-1032, 1048-1145, 1161-1221 |
-| scripts/common/post\_generator.py                 |      341 |        7 |     98% |475-479, 882-883 |
+| scripts/common/post\_generator.py                 |      341 |        8 |     98% |475-479, 847, 882-883 |
 | scripts/common/post\_html.py                      |       28 |        0 |    100% |           |
 | scripts/common/risk\_classifier.py                |      184 |        9 |     95% |331-332, 354, 392, 431-435 |
 | scripts/common/rss\_fetcher.py                    |      249 |       12 |     95% |44-45, 80, 91, 178, 187, 272, 281, 292, 302, 330-331 |
 | scripts/common/severity.py                        |       10 |        0 |    100% |           |
 | scripts/common/signal\_composer.py                |      489 |        2 |     99% |   882-883 |
 | scripts/common/signal\_tracker.py                 |      186 |        6 |     97% |201-203, 318-319, 380-381 |
-| scripts/common/summarizer.py                      |      535 |       13 |     98% |145, 480, 590, 592, 602, 717-723, 767, 989, 1024, 1099, 1165 |
+| scripts/common/summarizer.py                      |      530 |       13 |     98% |150, 462, 572, 574, 584, 699-705, 749, 971, 1006, 1081, 1147 |
 | scripts/common/summarizer\_chart.py               |       16 |        0 |    100% |           |
 | scripts/common/summarizer\_keywords.py            |        2 |        0 |    100% |           |
 | scripts/common/summarizer\_priority.py            |       35 |        0 |    100% |           |
 | scripts/common/summary\_analysis.py               |      177 |        5 |     97% |260, 262, 365, 371, 485 |
 | scripts/common/summary\_post\_categorizers.py     |       84 |        5 |     94% | 30, 34-37 |
 | scripts/common/summary\_post\_parsing.py          |      110 |        1 |     99% |       174 |
-| scripts/common/summary\_quality.py                |       26 |        1 |     96% |       166 |
+| scripts/common/summary\_quality.py                |       50 |        1 |     98% |       283 |
 | scripts/common/summary\_sections.py               |      607 |       10 |     98% |179, 188, 401, 534, 546, 558, 794, 833, 1010, 1040 |
 | scripts/common/summary\_text\_ko.py               |       72 |        2 |     97% |    71, 75 |
 | scripts/common/text\_lang.py                      |       27 |        2 |     93% |     58-60 |
@@ -106,6 +108,7 @@
 | scripts/tools/check\_relative\_imports.py         |       37 |       37 |      0% |     17-70 |
 | scripts/tools/check\_sitemap\_local.py            |       52 |       52 |      0% |     17-90 |
 | scripts/tools/check\_workflow\_permissions.py     |       96 |       24 |     75% |51, 53, 61, 70, 107, 112, 115, 139-163, 167 |
+| scripts/tools/component\_counts.py                |       84 |       41 |     51% |89, 95-106, 115-117, 121-124, 126-127, 134-160, 164 |
 | scripts/tools/gsc\_api.py                         |      116 |      116 |      0% |    42-234 |
 | scripts/tools/gsc\_index\_audit.py                |      234 |      234 |      0% |    44-561 |
 | scripts/tools/indexnow\_submit.py                 |      174 |      174 |      0% |    30-358 |
@@ -117,7 +120,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **22908** | **7384** | **68%** |           |
+| **TOTAL**                                         | **23003** | **7432** | **68%** |           |
 
 
 ## Setup coverage badge
