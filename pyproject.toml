@@ -62,7 +62,7 @@ quote-style = "double"
 relative_files = true
 
 [tool.pytest.ini_options]
-addopts = "--cov=scripts --cov-fail-under=55"
+addopts = "--cov=scripts --cov-fail-under=65"
 # 베어 `pytest` 가 Jekyll 빌드 산출물(_site/) 내 복사된 테스트를 수집해
 # ImportError 로 깨지던 문제 방지. CI 는 명시적으로 `pytest tests/` 를 호출하므로 영향 없음.
 testpaths = ["tests"]
