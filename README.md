@@ -36,8 +36,8 @@ DragonQuant Platform
 
 | 수집기 | 주기 | 주요 소스 | 카테고리 |
 |:-------|:----:|:---------|:---------|
-| `collect_crypto_news` | 6h | CryptoPanic, NewsAPI, Google News, 거래소 공지, Rekt News | crypto-news |
-| `collect_stock_news` | 6h | NewsAPI, Yahoo Finance, yfinance, KRX, Alpha Vantage | stock-news |
+| `collect_crypto_news` | 6h | CryptoPanic, Google News, 거래소 공지, Rekt News | crypto-news |
+| `collect_stock_news` | 6h | Google News, Yahoo Finance, yfinance, KRX, Alpha Vantage | stock-news |
 | `collect_coinmarketcap` | 6h | CoinMarketCap API, CoinGecko API (fallback) | crypto-news |
 | `collect_defi_llama` | 6h | DeFi Llama API (프로토콜/체인 TVL) | crypto-news |
 | `collect_social_media` | 12h | Telegram 채널, Twitter/X API v2 | social-media |
@@ -159,7 +159,6 @@ bash scripts/server_morning_autopost.sh
 | 환경변수 | 서비스 | 용도 |
 |:---------|:-------|:-----|
 | `CRYPTOPANIC_API_KEY` | CryptoPanic | 암호화폐 뉴스 핫 피드 |
-| `NEWSAPI_API_KEY` | NewsAPI | 키워드 기반 뉴스 검색 |
 | `ALPHA_VANTAGE_API_KEY` | Alpha Vantage | 미국 시장 데이터 |
 | `FRED_API_KEY` | FRED | 매크로 경제 지표 |
 | `TWITTER_BEARER_TOKEN` | Twitter API v2 | 암호화폐 트윗 검색 |
@@ -211,7 +210,7 @@ bash scripts/server_morning_autopost.sh
 | `dependency-check` | 매주 월 | pip-audit 보안 의존성 |
 | `site-health-check` | 매일 | 사이트 가용성 확인 |
 | `cleanup-old-images` | 매주 일 | 30일 이상 이미지 정리 |
-| `respond-ai-mentions` | 30분마다 | Slack AI 봇 응답 |
+| `respond-ai-mentions` | 매시간 | Slack AI 봇 응답 |
 | `push-folder-info-to-slack` | 매일 | 레포 상태 Slack 알림 |
 | `ops-10am-digest` | 매일 | 운영 다이제스트 |
 | `classify-workflow-failures` | 실패 시 | CI 실패 자동 분류 |

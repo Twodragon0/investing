@@ -36,8 +36,8 @@ _posts/            # Jekyll 포스트 (자동 생성)
 _state/            # 중복 방지 상태 JSON (SHA256 해시 + fuzzy matching >80%)
 _data/, _includes/, _layouts/, _sass/  # Jekyll 템플릿 및 스타일
 assets/images/generated/  # 자동 생성 이미지
-pages/             # 카테고리 랜딩 페이지 9개
-.github/workflows/ # 33개 자동화 워크플로우
+pages/             # 카테고리 랜딩 페이지 (개수: docs/component-counts.md)
+.github/workflows/ # 자동화 워크플로우 (개수: docs/component-counts.md)
 .github/actions/   # 재사용 액션 2개 (python-collect, resolve-slack-config)
 ```
 
@@ -194,8 +194,9 @@ python scripts/fix_post_descriptions.py --days 30 --apply
 ## Environment Variables
 
 뉴스 API (선택, 없으면 graceful degradation):
-- `CRYPTOPANIC_API_KEY`, `NEWSAPI_API_KEY`, `ALPHA_VANTAGE_API_KEY`, `FRED_API_KEY`
+- `CRYPTOPANIC_API_KEY`, `ALPHA_VANTAGE_API_KEY`, `FRED_API_KEY`
 - `TWITTER_BEARER_TOKEN`, `CMC_API_KEY`, `COINGECKO_API_KEY`
+- ~~`NEWSAPI_API_KEY`~~ — DEPRECATED 2026-05-10 (코드 사용처 0건, Google News 스크래핑으로 대체)
 
 Slack 연동:
 - `SLACK_BOT_TOKEN`, `SLACK_AI_BOT_TOKEN`, `SLACK_CHANNEL_*`
@@ -206,7 +207,7 @@ Slack 연동:
 - 로컬 개발 시 `_state` 변경 노이즈/충돌 완화: `bash scripts/dev_ignore_state.sh` (셋업 가이드: `docs/state-friction-mitigation.md`)
 - `.claude/settings.json`에 팀 공유 권한 + 5개 자동 훅 등록 (자세한 내용: `.claude/README.md`)
 - `assets/images/generated/`는 30일 이상 된 이미지 자동 정리됨
-- GitHub Actions는 동시성 그룹(`collect-data`)으로 순차 실행
+- 수집기 워크플로우(`collect-*.yml`)는 각자 독립 동시성 그룹을 가짐. `collect-data` 그룹을 실제로 공유하는 건 backfill/daily-summary/weekly-report/weekly-digest 등 후속 잡뿐
 - 오전 9:10(KST) 자동 포스팅/품질 보정은 서버 크론(`server_morning_autopost.sh`)이 1차 책임
 - `generate-daily-summary.yml`, `generate-market-summary.yml`는 스케줄 대신 수동 실행(`workflow_dispatch`)으로 운영
 - 최근 SEO/환경 작업 정리: `docs/session-2026-05-07-seo-and-environment.md`

@@ -153,4 +153,6 @@ bash scripts/install_server_morning_cron.sh
 
 ### External APIs (optional — graceful degradation without keys)
 
-`CRYPTOPANIC_API_KEY`, `NEWSAPI_API_KEY`, `ALPHA_VANTAGE_API_KEY`, `FRED_API_KEY`, `TWITTER_BEARER_TOKEN`, `CMC_API_KEY`, `COINGECKO_API_KEY`, `SLACK_BOT_TOKEN`
+`CRYPTOPANIC_API_KEY`, `ALPHA_VANTAGE_API_KEY`, `FRED_API_KEY`, `TWITTER_BEARER_TOKEN`, `CMC_API_KEY`, `COINGECKO_API_KEY`, `SLACK_BOT_TOKEN`
+
+> `NEWSAPI_API_KEY`는 2026-05-10 DEPRECATED (코드 사용처 0건, Google News 스크래핑으로 대체). 등록 불필요.

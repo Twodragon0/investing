@@ -12,17 +12,16 @@ Public API:
   - ``is_generic_desc(desc)`` — True if desc matches any generic /
     synthetic placeholder pattern. Single SSoT for generic-desc detection.
   - ``is_boilerplate(desc)`` — orchestrates the three boilerplate detectors
-    (``common.enrichment._is_site_boilerplate``,
-    ``is_generic_desc`` defined here,
-    ``common.summarizer._is_boilerplate_desc``).
+    (``_is_site_boilerplate``, ``is_generic_desc``, ``_is_boilerplate_desc``),
+    all defined in this module.
 
-Circular-import resolution: this module is imported both as a consumer
-(needs detectors from enrichment/summarizer) and as a provider (enrichment
-needs ARTICLE_SPECIFIC_RE; summarizer needs GENERIC_DESC_PATTERNS). We bind
-sibling modules with ``from . import <name> as _<name>_mod`` so each side
-only resolves the other's attributes lazily inside function bodies.
-Canonical patterns are defined BEFORE the sibling imports so partial-module
-access from enrichment/summarizer during their own load finds the patterns.
+Acyclic layering: this module is a pure *provider* of quality detectors with
+no sibling imports. ``common.enrichment`` re-exports ``_is_site_boilerplate``
+and ``common.summarizer`` re-exports ``_is_boilerplate_desc`` /
+``_BOILERPLATE_DESC_PHRASES`` from here for backward compatibility, so the
+detector definitions live in exactly one place and the previous
+``summarizer ↔ summary_quality`` / ``enrichment ↔ summary_quality`` import
+cycles (which needed deferred ``# noqa: E402`` imports) are gone.
 
 Lookaround over ``\\b``: in Python 3 ``\\w`` includes Hangul, so
 ``\\b\\d{4}\\b`` does NOT match ``2026년`` (no boundary between ``6`` and
@@ -31,7 +30,10 @@ Lookaround over ``\\b``: in Python 3 ``\\w`` includes Hangul, so
 
 from __future__ import annotations
 
+import logging
 import re
+
+logger = logging.getLogger(__name__)
 
 __all__ = [
     "ARTICLE_SPECIFIC_RE",
@@ -44,8 +46,6 @@ __all__ = [
 
 # ---------------------------------------------------------------------------
 # Canonical positive-signal pattern.
-# Defined BEFORE sibling imports so enrichment.py can read it from a partial
-# summary_quality module during its own load (circular import resolution).
 # ---------------------------------------------------------------------------
 ARTICLE_SPECIFIC_RE = re.compile(
     r"(?:[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)"  # Title-case word pair (proper noun)
@@ -74,8 +74,6 @@ def has_positive_signal(body: str) -> bool:
 # Migrated 2026-05-28 from ``common.summarizer._GENERIC_DESC_PATTERNS`` to
 # establish a single SSoT (PR #947 facade pattern extension). summarizer.py
 # now imports this list via the facade rather than redefining locally.
-# Defined BEFORE the sibling imports so summarizer.py can read it from a
-# partial summary_quality module during its own load.
 # ---------------------------------------------------------------------------
 GENERIC_DESC_PATTERNS: list[re.Pattern[str]] = [
     re.compile(r"에서 보도한 뉴스입니다\.?$"),
@@ -140,28 +138,147 @@ def is_generic_desc(desc: str) -> bool:
 
 
 # ---------------------------------------------------------------------------
-# Sibling-module references for boilerplate orchestration.
-# Module-level bindings (``from . import X as _X_mod``) tolerate the cycle
-# because attribute lookup happens at call time, not load time.
+# Site-level boilerplate detection.
+# Moved here 2026-07 from ``common.enrichment`` so the ``is_boilerplate``
+# orchestrator no longer needs a deferred import back into enrichment.
+# ``common.enrichment`` re-exports ``_is_site_boilerplate`` for backward
+# compatibility (collectors and tests import it from there).
 # ---------------------------------------------------------------------------
-from . import enrichment as _enrichment_mod  # noqa: E402
-from . import summarizer as _summarizer_mod  # noqa: E402
+# Site-level boilerplate patterns — descriptions that describe the site, not the article
+_SITE_BOILERPLATE_PATTERNS = [
+    # English patterns: site self-descriptions
+    re.compile(r"(?:the )?(?:world'?s?|global) (?:leading|largest|premier|#1)\b", re.I),
+    re.compile(r"(?:join|subscribe to|sign up for) (?:the )?(?:world'?s|our)\b", re.I),
+    re.compile(
+        r"(?:providing|delivers?|offers?) .{0,40}(?:news|analysis|insights|information)"
+        r" .{0,40}(?:since|for over|for \d+)",
+        re.I,
+    ),
+    re.compile(r"^(?:the )?(?:latest|breaking|live|real-time) (?:news|updates?|prices?)\b", re.I),
+    # Korean patterns: translated site self-descriptions.
+    # Anchored to end-of-string copula ("입니다"/"제공합니다") to avoid false
+    # positives on factual news quoting (e.g. "세계 최대 생산업체인 카렉스는…").
+    re.compile(
+        r"(?:세계 최대|글로벌 리더|세계적인 리더)"
+        r"[^.!?\n]{0,40}"
+        r"\s*(?:입니다|을 제공(?:합니다)?|를 제공(?:합니다)?)\s*\.?\s*$",
+        re.I,
+    ),
+    re.compile(r"(?:에 참여하세요|구독하세요|가입하세요)$", re.I),
+    re.compile(r"\d+년 (?:넘게|이상) .{0,40}(?:제공|서비스)", re.I),
+]
+
+# Known site boilerplate phrases (case-insensitive substring match)
+_SITE_BOILERPLATE_PHRASES = [
+    "motley fool",
+    "seeking alpha",
+    "cnbc international",
+    "investopedia",
+    "yahoo finance",
+    "bloomberg",
+    "coindesk is",
+    "cointelegraph is",
+    "decrypt is",
+    "뉴스의 리더입니다",
+    "뉴스를 제공하는",
+    "투자 통찰력과 개인 금융",
+    "투자 커뮤니티",
+    "프리미엄 뉴스를 제공",
+    "businesspost",
+    "비즈니스포스트",
+    "인물중심 기업인 프로파일",
+    "경제미디어 경제신문",
+    "올인원 플랫폼입니다",
+    "포트폴리오를 개선하고",
+    "개인 금융 뉴스 및 비즈니스 예측",
+    "선두주자입니다",
+    "우리의 목적은 세상을",
+    "더 스마트하고, 더 행복하고",
+    "simply wall st",
+    "kiplinger",
+    "tipranks",
+    "stock analysis",
+    "관련 광고",
+    "포트폴리오 업데이트 보고서",
+]
+
+
+def _is_site_boilerplate(desc: str) -> bool:
+    """Return True if description appears to be a site-level description, not article content.
+
+    Checks against known boilerplate phrases, regex patterns for site self-descriptions,
+    and short generic descriptions lacking article-specific tokens.
+    """
+    if not desc:
+        return False
+
+    lower = desc.lower()
+
+    # 1. Known site boilerplate phrases
+    for phrase in _SITE_BOILERPLATE_PHRASES:
+        if phrase.lower() in lower:
+            logger.debug("Boilerplate phrase matched (%r): %r", phrase, desc[:80])
+            return True
+
+    # 2. Regex patterns for site self-descriptions
+    for pattern in _SITE_BOILERPLATE_PATTERNS:
+        if pattern.search(desc):
+            logger.debug("Boilerplate pattern matched: %r", desc[:80])
+            return True
+
+    # 3. Very short descriptions without any article-specific tokens
+    # Threshold kept low (35) to catch pure site taglines ("전 세계 시장에 대한 뉴스 및 분석.")
+    # while preserving medium-length Korean sentences that lack numbers/acronyms.
+    if len(desc) < 35 and not ARTICLE_SPECIFIC_RE.search(desc):
+        logger.debug("Short generic description (no specific tokens): %r", desc[:80])
+        return True
+
+    return False
+
+
+# ---------------------------------------------------------------------------
+# Phrase-list boilerplate detection.
+# Moved here 2026-07 from ``common.summarizer`` so the ``is_boilerplate``
+# orchestrator no longer needs a deferred import back into summarizer.
+# ``common.summarizer`` re-exports ``_is_boilerplate_desc`` and
+# ``_BOILERPLATE_DESC_PHRASES`` for backward compatibility.
+# ---------------------------------------------------------------------------
+# Known site boilerplate phrases that leak through translation
+_BOILERPLATE_DESC_PHRASES = [
+    "우리의 목적은 세상을",
+    "더 스마트하고, 더 행복하고",
+    "깊이있는 인터뷰와 칼럼",
+    "뉴스 제공.",
+    "포트폴리오를 개선하고",
+    "개인 금융 뉴스 및 비즈니스",
+    "올인원 플랫폼입니다",
+    "선두주자입니다",
+    "motley fool",
+    "seeking alpha",
+]
+
+
+def _is_boilerplate_desc(desc: str) -> bool:
+    """Return True if description is site-level boilerplate, not article content."""
+    if not desc:
+        return False
+    lower = desc.lower()
+    return any(phrase in lower for phrase in _BOILERPLATE_DESC_PHRASES)
 
 
 def is_boilerplate(desc: str) -> bool:
     """Return True if desc matches any boilerplate / generic detector.
 
-    Orchestrates the three canonical detectors: site-level boilerplate
-    (``common.enrichment._is_site_boilerplate``), generic-desc patterns
-    (``is_generic_desc`` defined above), and the phrase-list filter
-    (``common.summarizer._is_boilerplate_desc``).
+    Orchestrates the three canonical detectors, all defined in this module:
+    site-level boilerplate (``_is_site_boilerplate``), generic-desc patterns
+    (``is_generic_desc``), and the phrase-list filter (``_is_boilerplate_desc``).
     """
     if not desc:
         return False
-    if _enrichment_mod._is_site_boilerplate(desc):
+    if _is_site_boilerplate(desc):
         return True
     if is_generic_desc(desc):
         return True
-    if _summarizer_mod._is_boilerplate_desc(desc):
+    if _is_boilerplate_desc(desc):
         return True
     return False

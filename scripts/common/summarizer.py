@@ -17,6 +17,7 @@ from collections import Counter
 from typing import Any, Dict, List, Optional, Tuple
 
 from . import post_html as post_html  # noqa: PLC0414 (re-export-safe local alias)
+from . import summary_quality as _summary_quality_mod
 from .markdown_utils import markdown_link
 from .severity import (  # noqa: F401  (re-exported for backward compat)
     _SEV_BADGE_HTML,
@@ -35,6 +36,10 @@ from .summarizer_priority import (  # noqa: F401  (re-exported for backward comp
     _make_keyword_pattern,
 )
 from .summarizer_priority import classify_priority as _classify_priority
+from .summary_quality import (  # noqa: F401  (_is_boilerplate_desc / _BOILERPLATE_DESC_PHRASES re-exported for backward compat)
+    _BOILERPLATE_DESC_PHRASES,
+    _is_boilerplate_desc,
+)
 from .text_utils import (  # noqa: F401  (_best_favicon_link, _favicon_url re-exported for golden test monkey-patching)
     _best_favicon_link,
     _favicon_url,
@@ -166,44 +171,21 @@ def _generate_title_based_desc(title: str, theme_key: str) -> str:
 
 # Generic/synthetic description detection now lives in common.summary_quality.
 # The canonical list is ``summary_quality.GENERIC_DESC_PATTERNS`` — do not
-# redefine here. Attribute access via the module reference keeps the
-# circular import (summary_quality ↔ summarizer) safe by deferring lookup
-# to call time.
-from . import summary_quality as _summary_quality_mod  # noqa: E402
+# redefine here. ``_is_boilerplate_desc`` / ``_BOILERPLATE_DESC_PHRASES`` also
+# live in ``summary_quality`` now (re-exported at the top of this module for
+# backward compatibility), so the ``summary_quality.is_boilerplate``
+# orchestrator no longer needs a deferred import back into summarizer.
 
 
 def _is_generic_desc(desc: str) -> bool:
     """Thin backward-compat wrapper around the facade's ``is_generic_desc``.
 
-    Existing internal callers (e.g. line 596 in this module) and the
-    ``summary_quality.is_boilerplate`` orchestrator both reach the facade
-    through this name. Future code should call
+    Existing internal callers (e.g. the summary-section builder in this module)
+    and the ``summary_quality.is_boilerplate`` orchestrator both reach the
+    facade through this name. Future code should call
     ``summary_quality.is_generic_desc(desc)`` directly.
     """
     return _summary_quality_mod.is_generic_desc(desc)
-
-
-# Known site boilerplate phrases that leak through translation
-_BOILERPLATE_DESC_PHRASES = [
-    "우리의 목적은 세상을",
-    "더 스마트하고, 더 행복하고",
-    "깊이있는 인터뷰와 칼럼",
-    "뉴스 제공.",
-    "포트폴리오를 개선하고",
-    "개인 금융 뉴스 및 비즈니스",
-    "올인원 플랫폼입니다",
-    "선두주자입니다",
-    "motley fool",
-    "seeking alpha",
-]
-
-
-def _is_boilerplate_desc(desc: str) -> bool:
-    """Return True if description is site-level boilerplate, not article content."""
-    if not desc:
-        return False
-    lower = desc.lower()
-    return any(phrase in lower for phrase in _BOILERPLATE_DESC_PHRASES)
 
 
 # Noise title patterns to filter out (e.g., SEC page addresses, form names)

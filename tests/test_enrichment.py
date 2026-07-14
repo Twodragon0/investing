@@ -1693,17 +1693,17 @@ class TestGenerateSyntheticDescriptionExtended:
 
     def test_bybit_exchange_source(self):
         """Lines 1118-1119: bybit exchange returns 공지사항 when analysis falls through."""
-        with patch("common.enrichment._analyze_title_content", return_value="짧음"):
+        with patch("common.enrichment_synthetic._analyze_title_content", return_value="짧음"):
             result = generate_synthetic_description("New listing announcement", "bybit")
             assert "공지" in result
 
     def test_okx_exchange_source(self):
-        with patch("common.enrichment._analyze_title_content", return_value="짧음"):
+        with patch("common.enrichment_synthetic._analyze_title_content", return_value="짧음"):
             result = generate_synthetic_description("Market update announcement", "okx")
             assert "공지" in result
 
     def test_upbit_exchange_source(self):
-        with patch("common.enrichment._analyze_title_content", return_value="짧음"):
+        with patch("common.enrichment_synthetic._analyze_title_content", return_value="짧음"):
             result = generate_synthetic_description("Maintenance notice", "upbit")
             assert "공지" in result
 
@@ -1728,7 +1728,7 @@ class TestGenerateSyntheticDescriptionExtended:
 
     def test_analysis_shorter_than_20_chars_falls_to_fallback(self):
         """When analysis <= 20 chars, fall through to label/entity fallback."""
-        with patch("common.enrichment._analyze_title_content", return_value="짧음"):
+        with patch("common.enrichment_synthetic._analyze_title_content", return_value="짧음"):
             result = generate_synthetic_description("some title here for testing", "Reuters")
             assert isinstance(result, str)
 
@@ -2252,7 +2252,7 @@ class TestGenerateSyntheticDescriptionFallbackBranches:
 
         # Force _analyze_title_content to return something short/equal to title
         # so it falls through to the label/entity fallback path
-        with patch("common.enrichment._analyze_title_content", return_value="짧음"):
+        with patch("common.enrichment_synthetic._analyze_title_content", return_value="짧음"):
             # Title with > 30% Korean chars and entity_str will be non-empty
             result = generate_synthetic_description(
                 "AAPL 비트코인 시장 변동성 분석",
@@ -2266,8 +2266,8 @@ class TestGenerateSyntheticDescriptionFallbackBranches:
         from common.enrichment import generate_synthetic_description
 
         with (
-            patch("common.enrichment._analyze_title_content", return_value="짧음"),
-            patch("common.enrichment._extract_title_entities", return_value=[]),
+            patch("common.enrichment_synthetic._analyze_title_content", return_value="짧음"),
+            patch("common.enrichment_synthetic._extract_title_entities", return_value=[]),
         ):
             result = generate_synthetic_description(
                 "시장이 변동합니다",
@@ -2280,7 +2280,7 @@ class TestGenerateSyntheticDescriptionFallbackBranches:
         """Line 1136: English title with a recognizable label from context map."""
         from common.enrichment import generate_synthetic_description
 
-        with patch("common.enrichment._analyze_title_content", return_value="짧음"):
+        with patch("common.enrichment_synthetic._analyze_title_content", return_value="짧음"):
             result = generate_synthetic_description(
                 "Fed rate decision expected tomorrow afternoon",
                 "Reuters",
@@ -2293,7 +2293,7 @@ class TestGenerateSyntheticDescriptionFallbackBranches:
         """Last else: label == source → returns clean_title[:150]."""
         from common.enrichment import generate_synthetic_description
 
-        with patch("common.enrichment._analyze_title_content", return_value="짧음"):
+        with patch("common.enrichment_synthetic._analyze_title_content", return_value="짧음"):
             # UnknownSource not in context map → label == source
             result = generate_synthetic_description(
                 "Some english news article about market movements today",
@@ -2726,7 +2726,7 @@ class TestIsTitleRelatedDescriptionEdgeBranches:
         # "xyz abc padding pad" → tokens: {"xyz","abc","padding","pad"} — but "pad" and "xyz","abc" are
         # not in _NOISE_TICKER_SYMBOLS and not in _COMMON_WORDS → entities could be >= 2
         # Safest: mock _extract_title_entities to control the entity count
-        with patch("common.enrichment._extract_title_entities", return_value=["onlyone"]):
+        with patch("common.enrichment_synthetic._extract_title_entities", return_value=["onlyone"]):
             # title_entities = {"onlyone"} → len=1 < 2
             # Also need title_tokens from _extract_overlap_keywords to have len < 3
             # "foo bar baz" → 3 tokens — still not < 3
@@ -2738,7 +2738,7 @@ class TestIsTitleRelatedDescriptionEdgeBranches:
             # with mock returning 1 entity, len(title_tokens) will be >= 3 → won't hit 309
             # Use monkeypatch on _extract_overlap_keywords too for precision
             with patch(
-                "common.enrichment._extract_overlap_keywords",
+                "common.enrichment_synthetic._extract_overlap_keywords",
                 return_value=({"foo", "bar"}, {"apple", "google"}),
             ):
                 # title_tokens={"foo","bar"} (len=2 < 3), desc_tokens={"apple","google"}
@@ -2752,9 +2752,9 @@ class TestIsTitleRelatedDescriptionEdgeBranches:
         # Line 312: title_entities is empty (no entities extracted) → condition
         # "if title_entities and not(...)" is False → falls to line 312 return True
         with (
-            patch("common.enrichment._extract_title_entities", return_value=[]),
+            patch("common.enrichment_synthetic._extract_title_entities", return_value=[]),
             patch(
-                "common.enrichment._extract_overlap_keywords",
+                "common.enrichment_synthetic._extract_overlap_keywords",
                 return_value=({"some", "words", "here", "now"}, {"other", "words", "differ", "lots"}),
             ),
         ):
@@ -2762,9 +2762,9 @@ class TestIsTitleRelatedDescriptionEdgeBranches:
             # Need no overlap: use completely disjoint sets
             pass
         with (
-            patch("common.enrichment._extract_title_entities", return_value=[]),
+            patch("common.enrichment_synthetic._extract_title_entities", return_value=[]),
             patch(
-                "common.enrichment._extract_overlap_keywords",
+                "common.enrichment_synthetic._extract_overlap_keywords",
                 return_value=({"aaa", "bbb", "ccc"}, {"xxx", "yyy", "zzz"}),
             ),
         ):
