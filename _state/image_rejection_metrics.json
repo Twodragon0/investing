@@ -5,7 +5,7 @@
       "buckets": {
         "ext:gif": 2189,
         "default-image": 1206,
-        "ext:ico": 191,
+        "ext:ico": 194,
         "placeholder": 430,
         "ext:svg": 106,
         "blank.": 78,
@@ -18,5 +18,5 @@
     }
   },
   "since": "2026-04-23T08:54:23",
-  "last_seen": "2026-07-15T17:28:55"
+  "last_seen": "2026-07-15T17:46:46"
 }
