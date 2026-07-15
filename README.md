@@ -59,10 +59,10 @@
 | scripts/common/image\_rejection\_metrics.py       |       81 |       29 |     64% |79-108, 147, 151, 162, 165-167 |
 | scripts/common/markdown\_utils.py                 |      226 |        2 |     99% |  377, 393 |
 | scripts/common/mindspider.py                      |      377 |        6 |     98% |603, 673-674, 687-688, 990 |
-| scripts/common/og\_compose.py                     |      143 |       88 |     38% |100, 154-188, 233-424 |
+| scripts/common/og\_compose.py                     |      143 |        0 |    100% |           |
 | scripts/common/og\_image\_formats.py              |       38 |       28 |     26% |17-19, 26-36, 41-51, 56-58 |
 | scripts/common/og\_render.py                      |       59 |       11 |     81% |37-38, 75-77, 92-97 |
-| scripts/common/og\_visuals.py                     |      369 |      354 |      4% |16-84, 100-176, 183-247, 264-395, 404-462, 469-501, 506-595, 605-696, 703-813, 829-919, 935-1032, 1048-1145, 1161-1221 |
+| scripts/common/og\_visuals.py                     |      369 |        0 |    100% |           |
 | scripts/common/post\_generator.py                 |      341 |        8 |     98% |475-479, 847, 882-883 |
 | scripts/common/post\_html.py                      |       28 |        0 |    100% |           |
 | scripts/common/risk\_classifier.py                |      184 |        9 |     95% |331-332, 354, 392, 431-435 |
@@ -124,7 +124,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **23022** | **7432** | **68%** |           |
+| **TOTAL**                                         | **23022** | **6990** | **70%** |           |
 
 
 ## Setup coverage badge
