@@ -19,4 +19,4 @@ from __future__ import annotations
 
 import logging
 
-logger = logging.getLogger("news-enrichment")
+logger = logging.getLogger(__name__)
