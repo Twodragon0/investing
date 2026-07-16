@@ -46,6 +46,7 @@
 | scripts/common/encoding\_guard.py                 |       29 |        0 |    100% |           |
 | scripts/common/enrichment.py                      |      528 |        9 |     98% |529-536, 567, 604-606 |
 | scripts/common/enrichment\_images.py              |       51 |        0 |    100% |           |
+| scripts/common/enrichment\_network.py             |        3 |        3 |      0% |     18-22 |
 | scripts/common/enrichment\_synthetic.py           |      191 |        0 |    100% |           |
 | scripts/common/entity\_extractor.py               |      106 |        1 |     99% |       180 |
 | scripts/common/fmp\_api.py                        |      247 |        0 |    100% |           |
@@ -124,7 +125,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **23022** | **6990** | **70%** |           |
+| **TOTAL**                                         | **23025** | **6993** | **70%** |           |
 
 
 ## Setup coverage badge
