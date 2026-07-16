@@ -365,16 +365,19 @@ class TestResolveGoogleNewsUrl:
     @patch("common.enrichment._resolve_via_gnewsdecoder")
     @patch("common.enrichment._decode_google_news_base64")
     @patch("common.enrichment.requests.head")
-    def test_network_exception_returns_empty(self, mock_head, mock_decode, mock_gnews):
+    @patch("common.enrichment.requests.get")
+    def test_network_exception_returns_empty(self, mock_get, mock_head, mock_decode, mock_gnews):
         """Network errors should be swallowed and return empty."""
         import requests as req_mod
 
         mock_gnews.return_value = ""
         mock_decode.return_value = ""
         mock_head.side_effect = req_mod.exceptions.ConnectionError("refused")
+        # Step 4 (full GET fallback) must also raise so no real network call escapes.
+        mock_get.side_effect = req_mod.exceptions.ConnectionError("refused")
         result = _resolve_google_news_url("https://news.google.com/rss/articles/CBMiXXX")
         # Should return "" (empty) after all fallbacks fail
-        assert isinstance(result, str)
+        assert result == ""
 
 
 class TestFetchPageMetadata:
@@ -2871,14 +2874,21 @@ class TestResolveGoogleNewsInnerRedirectHops:
     @patch("common.enrichment._decode_google_news_base64", return_value="")
     @patch("common.enrichment.is_private_url", return_value=False)
     @patch("common.enrichment.requests.head")
-    def test_empty_location_header_breaks_loop(self, mock_head, _mock_priv, _mock_b64, _mock_gnews):  # noqa: PT019
+    @patch("common.enrichment.requests.get")
+    def test_empty_location_header_breaks_loop(self, mock_get, mock_head, _mock_priv, _mock_b64, _mock_gnews):  # noqa: PT019
         mock_resp = MagicMock()
         mock_resp.status_code = 301
         mock_resp.headers = {"Location": ""}
         mock_resp.url = ""
         mock_head.return_value = mock_resp
+        # Empty Location breaks the HEAD loop and falls through to the GET fallback;
+        # mock it (still on the google domain, no canonical) so no real request escapes.
+        get_resp = MagicMock()
+        get_resp.url = "https://news.google.com/rss/articles/CBMiEMPTY"
+        get_resp.text = ""
+        mock_get.return_value = get_resp
         result = _enrich_mod._resolve_google_news_url_inner("https://news.google.com/rss/articles/CBMiEMPTY", timeout=1)
-        assert isinstance(result, str)
+        assert result == ""
 
     @patch("common.enrichment._resolve_via_gnewsdecoder", return_value="")
     @patch("common.enrichment._decode_google_news_base64", return_value="")
