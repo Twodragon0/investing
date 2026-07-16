@@ -1,41 +1,5 @@
 {
   "seen": {
-    "947bab840bef21d2c3cc6256": "2026-06-16T23:04:16",
-    "feab7f03f7d2030a78a02e51": "2026-06-16T23:04:16",
-    "8408ddc5b2079eba2d354096": "2026-06-16T23:04:16",
-    "11a0ed9682091f5660d06de2": "2026-06-16T23:04:16",
-    "7d699652654ed1666e492d4c": "2026-06-16T23:04:16",
-    "596d9a6bc2d92280f5ee17e3": "2026-06-16T23:04:16",
-    "59a56242587a93071dba7e31": "2026-06-16T23:04:16",
-    "ef54628072bc0861a7ac0c87": "2026-06-16T23:04:16",
-    "4c2b3044ac6733fb33be26d3": "2026-06-16T23:04:16",
-    "d4ec631708afe5af65b16bc2": "2026-06-16T23:04:16",
-    "d0274afb0d86eee874c831ba": "2026-06-16T23:04:16",
-    "1980ec1ae67fe3f6e35f9a69": "2026-06-16T23:04:16",
-    "f757da762f2b99e8e0035c91": "2026-06-16T23:04:16",
-    "f93446fd5971a21f269b6f0b": "2026-06-16T23:04:16",
-    "b737235b07a77a6fad33fcbe": "2026-06-16T23:04:16",
-    "e1b88880c0b131b496e5d80c": "2026-06-16T23:04:16",
-    "e8bd99f0c22237da6f651fb6": "2026-06-16T23:04:16",
-    "cc8112461068900b8a310763": "2026-06-16T23:04:16",
-    "bf3492c0aedcbe310536ce3c": "2026-06-16T23:04:16",
-    "33596fc0ad9ba57b38efcb47": "2026-06-16T23:04:16",
-    "dd17a8213587cf220add887c": "2026-06-16T23:04:16",
-    "1f22886a6e2487a4d010c489": "2026-06-16T23:04:16",
-    "623aafd6edbc44f1f6f10958": "2026-06-16T23:04:16",
-    "6375e2c4f21c941fdf8cfe36": "2026-06-16T23:04:16",
-    "7357a56cd05d927e9f40069c": "2026-06-16T23:04:16",
-    "38cc74da8484e2728f5305e1": "2026-06-16T23:04:16",
-    "6aa91cdebe4257d8712be75b": "2026-06-16T23:04:16",
-    "5cc1e719ae0cd08fcad3baec": "2026-06-16T23:04:16",
-    "f9b31365cc86af9aafb6acd3": "2026-06-16T23:04:16",
-    "09d400456f7b14f7e5020ef0": "2026-06-16T23:04:16",
-    "27c9488d4e10dc115ced41ce": "2026-06-16T23:04:16",
-    "2d18bc83a7ed1fbca7a63a93": "2026-06-16T23:04:16",
-    "ef48ab4f80c747d310cfa01b": "2026-06-16T23:04:16",
-    "e0498adc516f4e47442b6ccb": "2026-06-16T23:04:16",
-    "0517d9e545efe16c69d4ade6": "2026-06-16T23:04:16",
-    "b71c816b13cebe22448aabc1": "2026-06-16T23:04:16",
     "ea90375cb2c50d86084881a2": "2026-06-17T23:02:29",
     "599b5f3351ece1428738f607": "2026-06-17T23:02:29",
     "7e8ba7191853137dd2dd9c68": "2026-06-17T23:02:29",
@@ -551,7 +515,37 @@
     "2b3637362dc3c78557ec29f8": "2026-07-15T23:28:46",
     "8802b3735f353155ea7844da": "2026-07-15T23:28:46",
     "47a1ebc702eb260d5c5c1649": "2026-07-15T23:28:46",
-    "86d8fd0a95ef75518587b2f1": "2026-07-15T23:28:46"
+    "86d8fd0a95ef75518587b2f1": "2026-07-15T23:28:46",
+    "3f5bb0d2fa79aa27e01fedde": "2026-07-16T23:26:00",
+    "52aaea155056c9b95cd5ec44": "2026-07-16T23:26:00",
+    "b3ac92bd9dce80624115c4a4": "2026-07-16T23:26:00",
+    "6eaad69d29a748dafa6d7460": "2026-07-16T23:26:00",
+    "85e871348fa12ea5ddd1f851": "2026-07-16T23:26:00",
+    "9115cfeebba435d712ed0322": "2026-07-16T23:26:00",
+    "30e1b473b60f5aa521ba57b9": "2026-07-16T23:26:00",
+    "b618be7ce087d44cde3b594e": "2026-07-16T23:26:00",
+    "c95165eff6aea3e72d127863": "2026-07-16T23:26:00",
+    "861e11580312a2eab7beb0e3": "2026-07-16T23:26:00",
+    "f4c3e49d9abbf886910a69b5": "2026-07-16T23:26:00",
+    "5ed726ffdd4449400861dfb5": "2026-07-16T23:26:00",
+    "d01214a53e25314754c2c6f6": "2026-07-16T23:26:00",
+    "7867d0c30203aec6bd070abd": "2026-07-16T23:26:00",
+    "961af34712d1e2474e24d234": "2026-07-16T23:26:00",
+    "605521f082049dd527ba8845": "2026-07-16T23:26:00",
+    "ab2b767d94f714bdf006084c": "2026-07-16T23:26:00",
+    "0fa3b4828f420224d8010397": "2026-07-16T23:26:00",
+    "143b18705b31368f29b07ded": "2026-07-16T23:26:00",
+    "663fcd063e7c8848f63f275c": "2026-07-16T23:26:00",
+    "d27ce8a65c0f39336c3a83b6": "2026-07-16T23:26:00",
+    "45fd98101ebc464b9bf86849": "2026-07-16T23:26:00",
+    "90885310191badd55d623ce3": "2026-07-16T23:26:00",
+    "5ae3baf812162cb67b27defa": "2026-07-16T23:26:00",
+    "9cba864c9815ea7cfeddb286": "2026-07-16T23:26:00",
+    "b59eff7d664dbb4b7b5f21a9": "2026-07-16T23:26:00",
+    "f443c96aa9e4d1acc42e1a7a": "2026-07-16T23:26:00",
+    "b996801a231005de07b14bf6": "2026-07-16T23:26:00",
+    "1b5818144f5aae378e3db270": "2026-07-16T23:26:00",
+    "2092f7604c76b36c94cc5d2e": "2026-07-16T23:26:00"
   },
   "titles": [
     [
@@ -12377,6 +12371,126 @@
     [
       "정치인 거래정책 리포트 20260716",
       "2026-07-16"
+    ],
+    [
+      "stag industrial inc stag grants director 417 shares for fees stock titan",
+      "2026-07-17"
+    ],
+    [
+      "form 4 riskified ltd insider trading activity stock titan",
+      "2026-07-17"
+    ],
+    [
+      "leggett platt nyse leg director receives small common stock award stock titan",
+      "2026-07-17"
+    ],
+    [
+      "urban one uonek director gets 75000 restricted stock grant stock titan",
+      "2026-07-17"
+    ],
+    [
+      "block inc xyz director sells 153000 shares in rule 10b51 plan stock titan",
+      "2026-07-17"
+    ],
+    [
+      "research alliance corp iv racd sponsor gets 275k share grant stock titan",
+      "2026-07-17"
+    ],
+    [
+      "venture global inc vg insider exercises options and sells 1111111 shares stock titan",
+      "2026-07-17"
+    ],
+    [
+      "lazboy inc lzb cao disposes shares in taxwithholding move stock titan",
+      "2026-07-17"
+    ],
+    [
+      "korn ferry nyse kfy exec sells 3370 shares at 745501 stock titan",
+      "2026-07-17"
+    ],
+    [
+      "galectin therapeutics galt cmo sells 16250 shares under 10b51 plan stock titan",
+      "2026-07-17"
+    ],
+    [
+      "urban one nasdaq uone grants director 17442 restricted shares stock titan",
+      "2026-07-17"
+    ],
+    [
+      "domo inc domo grants 52870 restricted stock units to outside director stock titan",
+      "2026-07-17"
+    ],
+    [
+      "leggett platt nyse leg ceo granted additional common shares stock titan",
+      "2026-07-17"
+    ],
+    [
+      "trump administration to impose new 25 tariff on brazil",
+      "2026-07-17"
+    ],
+    [
+      "us tags brazil imports with 25 tariff supply chain dive",
+      "2026-07-17"
+    ],
+    [
+      "fed chair kevin warsh prices are too high will there be a rate cut at the next fed meeting heres what to expect chase bank",
+      "2026-07-17"
+    ],
+    [
+      "fed flipflops make case for less talk",
+      "2026-07-17"
+    ],
+    [
+      "feds beige book shows slight to moderate growth across us",
+      "2026-07-17"
+    ],
+    [
+      "한은 오늘 기준금리 조정 여부 결정그간 수차례 인상 예고",
+      "2026-07-17"
+    ],
+    [
+      "한은 금리 025p 올렸다 3년6개월 만에 긴축 돌입",
+      "2026-07-17"
+    ],
+    [
+      "한은 기준금리 연 2502753년6개월 만에 인상",
+      "2026-07-17"
+    ],
+    [
+      "한국은행 기준금리 250275로금통위원 만장일치 결정 지디넷코리아",
+      "2026-07-17"
+    ],
+    [
+      "한은 기준금리 275로 025p 인상3년 6개월 만 긴축 연합뉴스tv",
+      "2026-07-17"
+    ],
+    [
+      "한은 기준금리 275로 인상 금융안정물가 대응 총력 한국보험신문",
+      "2026-07-17"
+    ],
+    [
+      "기준금리 275 시대한은 인상 기조 이어간다 시사저널e",
+      "2026-07-17"
+    ],
+    [
+      "한은 기준금리 275로 인상3년 6개월 만에 긴축 전환 부산경남대표방송 knn 뉴스",
+      "2026-07-17"
+    ],
+    [
+      "기준금리 025p 인상3년 6개월 만에 긴축",
+      "2026-07-17"
+    ],
+    [
+      "한은 금리 인상긴축 선회",
+      "2026-07-17"
+    ],
+    [
+      "한은 기준금리 인상미국과의 금리차도 3년 반만에 1p로 줄어",
+      "2026-07-17"
+    ],
+    [
+      "정치인 거래정책 리포트 20260717",
+      "2026-07-17"
     ]
   ],
   "seen_urls": {}
