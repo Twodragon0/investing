@@ -48,21 +48,27 @@ from .enrichment_synthetic import (  # noqa: F401  (re-exported for backward com
 | 심볼 | 줄 | 호출 대상(내부) |
 |------|-----|-----------------|
 | `is_private_url` (→ utils.`is_private_url_target` 위임) | 129 | (leaf) |
+| `_clean_meta_description` ⚠️추가 | 184 | `_is_site_boilerplate`, `_is_low_information_fragment` |
+| `_is_low_information_fragment` ⚠️추가 | 243 | (leaf) |
 | `_decode_google_news_base64` | 257 | (leaf) |
 | `_resolve_google_news_url` / `_inner` | 291 / 314 | `is_private_url`, `_decode_google_news_base64`, `requests` |
 | `_resolve_via_gnewsdecoder` | 413 | `is_private_url` |
 | `_fetch_og_image` | 466 | `is_private_url`, `requests` |
-| `_extract_og_metadata` | 695 | (leaf) |
-| `_extract_via_readability` / `_bs4_article` / `_paragraphs` | 782 / 821 / 859 | (leaf) |
-| `fetch_page_metadata` | 873 | `_resolve_google_news_url`, `_extract_*`, `requests` |
+| `_extract_og_metadata` | 695 | `_clean_meta_description` |
+| `_extract_via_readability` / `_extract_via_bs4_article` / `_extract_via_paragraphs` | 782 / 821 / 859 | `_clean_meta_description` |
+| `fetch_page_metadata` | 873 | `_resolve_google_news_url`, `_extract_*`, `sanitize_mojibake`, `requests` |
 | `fetch_page_description` | 957 | `fetch_page_metadata` |
-| `_fetch_and_parse_page` | 965 | `fetch_page_metadata` |
+
+> **⚠️ critic 정정 (2026-07-15, CRITICAL):** 초안은 `_clean_meta_description`(184)·`_is_low_information_fragment`(243)를 move-set에서 누락했다. 이동하는 4개 추출기(`_extract_og_metadata`, `_extract_via_readability/_bs4_article/_paragraphs`)가 모두 `_clean_meta_description`를 호출(`:737,798,849,867`)하고, 그게 `_is_low_information_fragment`를 호출(`:238`)한다. 두 헬퍼를 facade에 남기면 `enrichment_network` → `from .enrichment import _clean_meta_description` + facade → `from .enrichment_network import _extract_*` **순환 import**가 되고, 7개 수집기가 facade를 먼저 로드하므로 **플랫폼 전체 import 실패**. → 두 헬퍼도 **network로 이동**(유일 호출자가 모두 이동 대상), facade에서 재-export 필수(직접 유닛테스트 ~20건: `test_enrichment.py:13,136-211,2623,2654-2675`).
+>
+> **⚠️ critic 정정:** `_fetch_and_parse_page`(965)는 **facade에 유지**(Correction A). 유일 호출자가 facade `enrich_item`(`:1056`)이고, `@patch("common.enrichment.fetch_page_metadata")`+enrich_item 테스트 3건(`:1633,1654,1669`)이 이동 시 실네트워크 호출로 깨진다.
 
 **파사드에 남을 오케스트레이터** (네트워크 코어를 호출):
 
 - `fetch_images_concurrent` (542) → `_fetch_og_image`, `_resolve_google_news_url`
 - `fetch_descriptions_concurrent` (620) → `fetch_page_metadata`, `_resolve_google_news_url`
-- `enrich_item` (995) / `enrich_items` (1072) → 위 두 오케스트레이터 + `generate_synthetic_description`
+- `_fetch_and_parse_page` (965) → `fetch_page_metadata` (Correction A — facade 잔류)
+- `enrich_item` (995) / `enrich_items` (1072) → 위 오케스트레이터 + `generate_synthetic_description`
 
 ### 1.2 난점: @patch 밀결합 (전 테스트 파일 실측)
 
@@ -75,13 +81,22 @@ from .enrichment_synthetic import (  # noqa: F401  (re-exported for backward com
 | `common.enrichment._decode_google_news_base64` | 18 |
 | `common.enrichment._resolve_via_gnewsdecoder` | 17 |
 | `common.enrichment.fetch_page_metadata` | 16 |
-| `common.enrichment._resolve_google_news_url` | 8 |
-| `common.enrichment._fetch_og_image` | 8 |
-| `common.enrichment.fetch_images_concurrent` | 4 |
-| `common.enrichment.fetch_descriptions_concurrent` | 4 |
-| `common.enrichment._fetch_and_parse_page` | 2 |
-| `common.enrichment._extract_via_readability` | 2 |
-| `common.enrichment.sanitize_mojibake` | 3 (이동 안 함 — encoding_guard 재-export) |
+| `common.enrichment._resolve_google_news_url` | 8 → **split 6 facade / 2 network** |
+| `common.enrichment._fetch_og_image` | 8 → **전부 facade 유지 (split 아님)** |
+| `common.enrichment.fetch_images_concurrent` | 4 (facade 유지) |
+| `common.enrichment.fetch_descriptions_concurrent` | 4 (facade 유지) |
+| `common.enrichment._fetch_and_parse_page` | 2 (facade 유지 — Correction A) |
+| `common.enrichment._extract_via_readability` | **3** (초안 2 오류) → network |
+| `common.enrichment._extract_via_bs4_article` ⚠️추가 | 2 → network |
+| `common.enrichment._extract_via_paragraphs` ⚠️추가 | 1 → network |
+| `common.enrichment.re` ⚠️추가 | 1 (`:1929`, `_decode_google_news_base64` exercise) → network |
+| `common.enrichment.sanitize_mojibake` | 3 → **network (Correction B, 초안 "이동 안 함" 오류)** |
+
+> **⚠️ critic 정정 (2026-07-15):**
+> - **`_fetch_og_image`(8) 전부 facade 유지** — 유일 in-source 호출자가 `fetch_images_concurrent`(facade, `:590`)이고 8개 patch 사이트(`test_enrichment.py:555,563,1121,1134,1145,1160,3134,3149`) 전부 `fetch_images_concurrent` 경유. network로 옮기면 mock inert → `example.com` 실 HTTP GET(SSRF 가드는 public host 미차단). **split 아님.**
+> - **`_resolve_google_news_url`(8)은 6 facade / 2 network split** — FACADE: `:1120,1133,1213,1224,3150,3185`; NETWORK: `:1259,1977`(`fetch_page_metadata` 직접 호출).
+> - **`_resolve_via_gnewsdecoder`(17) 만 진짜 전부 network** (단일 호출자 `:331`, `_resolve_google_news_url_inner` 내부).
+> - `re`(1, `:1929`)는 inert여도 real `_decode`가 `""` 반환해 green-거짓양성 → 이동 + mock 호출 assert 강화 권장.
 
 관련 테스트 파일: `test_enrichment.py`, `test_enrichment_bad_image.py`, `test_enrichment_logo.py`, `test_enrichment_utils.py`, `test_pattern_parity.py`, `test_rss_fetcher_extended.py`, `test_image_rejection_metrics.py`, `test_import_compatibility.py`.
 
@@ -104,20 +119,22 @@ from .enrichment_synthetic import (  # noqa: F401  (re-exported for backward com
 - **0단계 — 스캐폴딩.** `scripts/common/enrichment_network.py` 신규 생성(모듈 docstring에 `enrichment_images.py` 스타일 재-export 설명). 아직 심볼 이동 없음.
   - 게이트: `python3 -m ruff check scripts/ tests/` + `ruff format --check`.
 
-- **1단계 — leaf 이동.** `is_private_url`(래퍼), `_decode_google_news_base64`, `_extract_og_metadata`, `_extract_via_readability/_bs4_article/_paragraphs`, 관련 상수(`_USER_AGENT`, `_BROWSER_UA`, `_IMAGE_META_PATTERNS`, `_EXCLUDE_CLASS_RE`, `_gnews_url_cache`)를 network 모듈로 이동. `enrichment.py`는 `from .enrichment_network import (...) # noqa: F401` 재-export.
-  - **patch 재배치**: `is_private_url`(21), `_decode_google_news_base64`(18), `_extract_via_readability`(2) 중 **테스트가 검증하는 상위 함수가 이동 대상일 때** `common.enrichment_network.*`로 변경. (leaf를 직접 검증하는 테스트는 `common.enrichment.*` 유지 가능하나, 혼선 방지를 위해 network 모듈 심볼은 원칙적으로 network 경로로 통일 권장.)
-  - 게이트: 위 pytest 서브셋 그린.
+- **1단계 — leaf 이동.** `is_private_url`(래퍼), **`_clean_meta_description`, `_is_low_information_fragment`(⚠️순환 방지 필수)**, `_decode_google_news_base64`, `_extract_og_metadata`, `_extract_via_readability/_extract_via_bs4_article/_extract_via_paragraphs`, 관련 상수(`_USER_AGENT`, `_BROWSER_UA`, `_NOISE_DESC_PATTERNS`, `_BOILERPLATE_FRAGMENT_PATTERNS`, `_IMAGE_META_PATTERNS`, `_EXCLUDE_CLASS_RE`, `_gnews_url_cache`, `_warned_readability_missing`)를 network 모듈로 이동. `enrichment.py`는 `from .enrichment_network import (...) # noqa: F401` 재-export(두 헬퍼는 직접 유닛테스트 있어 재-export 필수).
+  - **patch 재배치**: `is_private_url`(21), `_decode_google_news_base64`(18), `_extract_via_readability`(**3**), `_extract_via_bs4_article`(2), `_extract_via_paragraphs`(1), `re`(1) → 상위 함수가 이동 대상이면 `common.enrichment_network.*`로. **Correction C**: `monkeypatch.setattr(_enrichment_mod, "_warned_readability_missing", ...)`(`test_enrichment.py:3468`)는 network 모듈 객체로 retarget(+`import common.enrichment_network as _network_mod`).
+  - 게이트: 위 pytest 서브셋 그린 + **`python3 -c "import common.enrichment"` 순환 import 무오류 확인**.
 
-- **2단계 — resolver 체인 이동.** `_resolve_google_news_url`(+`_inner`), `_resolve_via_gnewsdecoder`, `_fetch_og_image` 이동 + 재-export.
-  - **patch 재배치**: `_resolve_google_news_url`(8), `_resolve_via_gnewsdecoder`(17), `_fetch_og_image`(8). 이들은 서로/leaf를 호출하므로 network 내부 호출은 `common.enrichment_network.*` 패치만 유효 → **전부 재배치**.
+- **2단계 — resolver 체인 이동.** `_resolve_google_news_url`(+`_inner`), `_resolve_via_gnewsdecoder` 이동 + 재-export. **`_fetch_og_image`도 이동(정의)하되 patch는 이동 안 함** (아래 참조).
+  - **patch 재배치**: `_resolve_via_gnewsdecoder`(17) **전부 network**. `_resolve_google_news_url`(8)은 **split 6 facade / 2 network**(§1.2 참조). **`_fetch_og_image`(8)은 전부 `common.enrichment.*` 유지**(단일 facade 호출자 — 이동 시 실네트워크). 이 배치에서 `requests` patch 중 resolver/og_image를 직접 exercise하는 부분을 **같은 커밋에서** 재배치(Correction D).
   - 게이트: pytest 서브셋 그린.
 
-- **3단계 — 페이지 메타데이터 이동.** `fetch_page_metadata`, `fetch_page_description`, `_fetch_and_parse_page` 이동 + 재-export.
-  - **patch 재배치**: `fetch_page_metadata`(16), `_fetch_and_parse_page`(2). 단, **`fetch_descriptions_concurrent`(파사드 잔류)가 `fetch_page_metadata`를 호출하는 테스트**는 재-import 전역이 존재하므로 `common.enrichment.fetch_page_metadata` 유지가 정답 — 테스트별로 "무엇을 exercise 하는지"로 판별. 판별 규칙을 리뷰 체크리스트에 명시.
-  - 게이트: pytest 서브셋 그린.
+- **3단계 — 페이지 메타데이터 이동.** `fetch_page_metadata`, `fetch_page_description` 이동 + 재-export. **`_fetch_and_parse_page`는 facade 유지**(Correction A).
+  - **patch 재배치**: `fetch_page_metadata`(16)는 **전부 facade 유지**(모두 facade 오케스트레이터/enrich_item 경유). `sanitize_mojibake`(3) → network(Correction B). `fetch_page_metadata`를 직접 호출하는 테스트가 patch하는 `_resolve_google_news_url`(2)·추출기·`requests` 잔여분 → network. 남은 `requests` patch도 이 커밋에서 network로(Correction D).
+  - 게이트: pytest 서브셋 그린 + `grep -c 'common\.enrichment\.requests' tests/`로 잔여 확인.
 
-- **4단계 — `requests` patch 재배치.** 62개 `common.enrichment.requests` 중 **network 함수를 직접 exercise하는** 테스트는 `common.enrichment_network.requests`로 변경. 오케스트레이터를 exercise하되 내부에서 network를 patch로 대체하는 테스트는 network 경로. (오케스트레이터 자체가 `requests`를 직접 쓰지 않으므로 사실상 대부분 network 경로로 이동.)
-  - 게이트: **전체** `python3 -m pytest -q` 그린 + `pytest --cov=scripts/common/enrichment.py --cov=scripts/common/enrichment_network.py` 로 두 모듈 합산 커버리지 ≥ 기존 98% 확인.
+- **4단계 — 정리·전체 게이트.** facade `import requests` 제거는 잔여 `common.enrichment.requests` patch 0건 확인 후. `__all__` 불변 검증.
+  - 게이트: **전체** `python3 -m pytest -q` 그린 + `pytest --cov=scripts/common/enrichment.py --cov=scripts/common/enrichment_network.py` 로 두 모듈 합산 커버리지 ≥ 기존 98% 확인. `basedpyright`.
+
+> **⚠️ Correction D:** 초안의 "4단계 = requests 62개 일괄 재배치"는 위험하다. facade `import requests`가 남은 채 network `fetch_page_metadata`가 `enrichment_network.requests`를 읽으면 `@patch("common.enrichment.requests")`가 **inert**가 되어 실네트워크 호출(green-but-flaky). `requests` patch는 함수 이동과 **같은 배치(2/3)**에서 이동해야 한다. 실질적으로 62개 전부 network(오케스트레이터는 `requests` 직접 미사용).
 
 - **5단계 — 정리.** `enrichment.py` `__all__` 유지 검증(`is_private_url`, `fetch_page_metadata` 등 여전히 노출), dead import 제거(ruff `F401` 예외 주석만 남김), `test_import_compatibility.py`로 `from common.enrichment import *` 계약 확인.
   - 게이트: `ruff check` + `ruff format --check` + 전체 pytest + `basedpyright`(옵셔널 import 함정 회피, MEMORY 참조).
@@ -126,7 +143,8 @@ from .enrichment_synthetic import (  # noqa: F401  (re-exported for backward com
 
 | 리스크 | 심각도 | 완화책 |
 |--------|--------|--------|
-| @patch 네임스페이스 오배치로 mock이 무력화 → 테스트가 **실제 네트워크 호출** (green이지만 flaky/느림) | 높음 | 배치마다 `-p no:cacheprovider`로 전체 실행; mock 미적용 시 `requests` 실호출을 감지하도록 network 함수 진입점에 이미 있는 `is_private_url` SSRF 가드가 예외를 던지는지 확인. CI에서 네트워크 차단 환경 권장 |
+| **순환 import (`enrichment ↔ enrichment_network`) → 7개 수집기 전부 import 실패** ⚠️CRITICAL | 높음 | `_clean_meta_description`·`_is_low_information_fragment`를 반드시 network로 함께 이동(§1.1 정정). 1단계 게이트에 `python3 -c "import common.enrichment"` 추가 |
+| @patch 네임스페이스 오배치로 mock이 무력화 → 테스트가 **실제 네트워크 호출** (green이지만 flaky/느림) | 높음 | 배치마다 `-p no:cacheprovider`로 전체 실행; mock 미적용 시 `requests` 실호출을 감지하도록 network 함수 진입점에 이미 있는 `is_private_url` SSRF 가드가 예외를 던지는지 확인. **단 public host(`example.com`)는 SSRF 미차단** — 리스크 테스트(`_fetch_og_image` 등)에 `mock.assert_called_once()` + 반환값 assert 강화. CI 네트워크 차단 여부 실행 전 확인 |
 | 재-export 누락 → 외부 4개 모듈(`rss_fetcher` 등) ImportError | 중 | `test_import_compatibility.py` 게이트, `__all__` 불변 검증 |
 | 로컬 ruff/pytest는 통과하나 CI red (basedpyright / format) | 중 | MEMORY 교훈(`feedback_basedpyright_optional_import`, 만성 워크플로우 실패) 반영 — 푸시 전 `basedpyright` + `ruff format --check` 필수 |
 | `_gnews_url_cache` 전역 상태가 두 모듈에 흩어져 캐시 미스 | 낮음 | 캐시는 network 모듈로 완전 이동, 파사드는 참조 안 함 |
