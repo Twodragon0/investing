@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-16 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 보안 회사가 수백만 달러 규모의 오라클 공격을 보고함에 따라 Ostium은 거래를 중단했습니다. - 111건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 암호화폐 주목</li><li>🏦 <strong>거래소</strong>: 증권 주목</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 달러 주목</li><li>🟣 <strong>DeFi</strong>: 디파이 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/ostium-pauses-trading-as-security-firms-report-multimillion-dollar-oracle-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">보안 회사가 수백만 달러 규모의 오라클 공격을 보고함에 따라 Ostium은 거래를 중단했습니다.</a> <span class="p0-desc">Ostium은 블록체인 보안 회사가 OLP 유동성 저장소에 대한 명백한 오라클 관련 악용을 보고한 후 거래를 중단하고 계약 승인을 취소할 것을 권고했으며 예상 손실액은 1,800만.</span></li><li><a href="https://decrypt.co/373566/defi-exploit-ostium-oracle-hack">또 다른 디파이 악용: Perp DEX Ostium이 Oracle 공격으로 1,800만 달러 손실</a> <span class="p0-desc">해커들은 오라클 서명자 키를 손상시켜 Ostium의 가격 피드를 조작하여 아비트럼 기반 무기한 교환에서 약 1,800만 달러를 빼냈습니다.</span></li><li><a href="https://www.coindesk.com/business/2026/07/15/ostium-suffers-usd18-million-exploit-as-oracle-attack-wave-continues-to-hit-defi">디파이에 오라클 공격이 계속되면서 Ostium은 1,800만 달러의 악용 피해를 입었습니다.</a> <span class="p0-desc">해커는 프로토콜에 대해 Ostium의 자체 가격 보고 인프라를 사용하여 위조된 미래 날짜의 오라클 데이터를 제출하여 가짜 거래 수익을 창출하고 1,800만 달러의 지불금을 촉발했습.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 보안 회사가 수백만 달러 규모의 오라클 공격을 보고함에 따라 Ostium은 거래를 중단했습니다. 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 111건의 뉴스 중 P1 주요 이슈도 4건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (36건): 비트코인, 암호화폐, 달러 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **🏦 거래소** (23건): 증권 이슈가 시장 구조 변화의 신호일 수 있어 심층 분석이 권장됩니다.
-- **📈 가격/시장** (32건): 암호화폐, 달러, 전망 가격 변동 (32건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 보안 회사가 수백만 달러 규모의 오라클 공격을 보고함에 따라 Ostium은 거래를 중단했습니다.
-- 또 다른 디파이 악용: Perp DEX Ostium이 Oracle 공격으로 1,800만 달러 손실
-- 디파이에 오라클 공격이 계속되면서 Ostium은 1,800만 달러의 악용 피해를 입었습니다.
-
-### 주요 이슈
-
-- 코인 시황] 비트코인, 美 물가 둔화에 6만4600달러 회복…ETF 자금도 순유입 전환 - 뉴스핌
-- 국내에도 비트코인 현물 ETF 나온다
-- 일본, 가상자산 규제 대개편 예고."내부자 거래 처벌 수위 강화·세율은 20% 인하" - 코인리더스
-- 외 1건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, 디파이
-- **주요 출처**: Binance(40건), Cointelegraph(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-07-16.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-07-16.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **111건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
