@@ -41,40 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-17 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: Morning Minute: Base가 앱을 Cobie에 넘겨줌 - 111건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 동향 주시</li><li>📈 <strong>가격/시장</strong>: 달러, 암호화폐 관련 30건</li><li>🏦 <strong>거래소</strong>: 증권 주목</li><li>🟣 <strong>DeFi</strong>: 디파이, 스테이블코인 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://decrypt.co/373636/morning-minute-base-hands-its-app-over-to-cobie">Morning Minute: Base가 앱을 Cobie에 넘겨줌</a> <span class="p0-desc">게다가 Stripe은 스테이블코인 왕이 될 수 있는 530억 달러의 움직임을 보입니다. 그리고 Ostium은 최근 디파이 익스플로잇으로 인해 1,800만 달러의 손실을 입었습니다.</span></li><li><a href="https://decrypt.co/373566/defi-exploit-ostium-oracle-hack">또 다른 디파이 악용: Perp DEX Ostium이 Oracle 공격으로 1,800만 달러 손실</a> <span class="p0-desc">해커들은 오라클 서명자 키를 손상시켜 Ostium의 가격 피드를 조작하여 아비트럼 기반 무기한 교환에서 약 1,800만 달러를 빼냈습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Morning Minute: Base가 앱을 Cobie에 넘겨줌 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 111건의 뉴스 중 P1 주요 이슈도 7건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (35건): 비트코인, 달러 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **📈 가격/시장** (30건): 달러, 암호화폐, 유지 가격 변동 (30건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏦 거래소** (24건): 증권 관련 보도가 이어지고 있어 관련 포지션 점검이 필요합니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- Morning Minute: Base가 앱을 Cobie에 넘겨줌
-- 또 다른 디파이 악용: Perp DEX Ostium이 Oracle 공격으로 1,800만 달러 손실
-
-### 주요 이슈
-
-- 코인 시황] 비트코인, 美 물가 둔화에 6만4600달러 회복…ETF 자금도 순유입 전환 - 뉴스핌
-- 비트코인, 조정 경고 속 매집 신호 굳건…조정 우려도 공존
-- Hyperion 디파이, Hyperliquid HIP-3 시장에 500K HYPE 배포
-- 외 4건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 디파이
-- **주요 출처**: Binance(40건), Cointelegraph(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-07-17.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-07-17.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **111건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
