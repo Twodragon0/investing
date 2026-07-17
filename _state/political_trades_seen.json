@@ -1,35 +1,5 @@
 {
   "seen": {
-    "ea90375cb2c50d86084881a2": "2026-06-17T23:02:29",
-    "599b5f3351ece1428738f607": "2026-06-17T23:02:29",
-    "7e8ba7191853137dd2dd9c68": "2026-06-17T23:02:29",
-    "35c19f081e8eedc2e627bc41": "2026-06-17T23:02:29",
-    "4910832261230fa1cc05b9dc": "2026-06-17T23:02:29",
-    "f954431316bf6837b2abcd76": "2026-06-17T23:02:29",
-    "53e5b96128ad0a8c611038e6": "2026-06-17T23:02:29",
-    "b87836329f24e9b116554902": "2026-06-17T23:02:29",
-    "2d0bbc0cdce84c92cb64fa56": "2026-06-17T23:02:29",
-    "5f3fcffdcdc499ed18fc7ed1": "2026-06-17T23:02:29",
-    "d32c4d401fcd524c1c7a7d02": "2026-06-17T23:02:29",
-    "b64058996601de76b33909d2": "2026-06-17T23:02:29",
-    "df97706cd97bebd8de1bd3a7": "2026-06-17T23:02:29",
-    "71ef330ee6ec4f662a9e4af1": "2026-06-17T23:02:29",
-    "898de51a9a1f35ae01d384b7": "2026-06-17T23:02:29",
-    "8c468644999b8ab2f0b9bf97": "2026-06-17T23:02:29",
-    "f923f19f4c7c76357c0c9940": "2026-06-17T23:02:29",
-    "f4d465d37788c7c8b3c10dbd": "2026-06-17T23:02:29",
-    "aa6f080424a7d753490c3e48": "2026-06-17T23:02:29",
-    "0e029f26155d4fb872978fae": "2026-06-17T23:02:29",
-    "028c2adb23b8c7ac9955c5f5": "2026-06-17T23:02:29",
-    "270afce69e1d3eb8113a0ca5": "2026-06-17T23:02:29",
-    "6e3199e12cfa3bcc94217203": "2026-06-17T23:02:29",
-    "023298d95f5a3f07b4d4b62f": "2026-06-17T23:02:29",
-    "c908dd1a37feee65364a080a": "2026-06-17T23:02:29",
-    "3d2aa3f2c71633ba5a7bf5cb": "2026-06-17T23:02:29",
-    "6c971667bea075c72036c8cd": "2026-06-17T23:02:29",
-    "d96485be2e87273aaead92f3": "2026-06-17T23:02:29",
-    "9c0513aeca92bae9d152446b": "2026-06-17T23:02:29",
-    "30b0beb0b9d92ef2e22c08a1": "2026-06-17T23:02:29",
     "6c85712fac9012e6e0959816": "2026-06-18T23:09:50",
     "9b0ff76d66b04738f6cb249c": "2026-06-18T23:09:50",
     "dd72048432f3bc2a8b76723d": "2026-06-18T23:09:50",
@@ -545,7 +515,35 @@
     "f443c96aa9e4d1acc42e1a7a": "2026-07-16T23:26:00",
     "b996801a231005de07b14bf6": "2026-07-16T23:26:00",
     "1b5818144f5aae378e3db270": "2026-07-16T23:26:00",
-    "2092f7604c76b36c94cc5d2e": "2026-07-16T23:26:00"
+    "2092f7604c76b36c94cc5d2e": "2026-07-16T23:26:00",
+    "240cc74066688da1f8577154": "2026-07-17T23:24:27",
+    "d0cc29811bffed5061f72449": "2026-07-17T23:24:27",
+    "575a25761c11c7402484945d": "2026-07-17T23:24:27",
+    "b48de0e4b8b6de3291a5fdb0": "2026-07-17T23:24:27",
+    "6ed2a80b289e019eef6da04d": "2026-07-17T23:24:27",
+    "2cc36a625e5f81cac96fa072": "2026-07-17T23:24:27",
+    "0591190b6ed5df8f782bf55c": "2026-07-17T23:24:27",
+    "b3358f9ef54dbe8ee4e25520": "2026-07-17T23:24:27",
+    "984b59266eb99a701cddc5ee": "2026-07-17T23:24:27",
+    "8b7873f324a671b8b20dfb62": "2026-07-17T23:24:27",
+    "7e1b6a8a1201e199494a06b7": "2026-07-17T23:24:27",
+    "92b0d01dc0407e44f27cbb40": "2026-07-17T23:24:27",
+    "9e7483be48af9b8b9e2e310c": "2026-07-17T23:24:27",
+    "31d9ba9922fa4a9f3c903f6f": "2026-07-17T23:24:27",
+    "bde067de4ba14cd90819e56a": "2026-07-17T23:24:27",
+    "bcd2bda3a094a8b7de777cc0": "2026-07-17T23:24:27",
+    "a3cc78036f64cd6ee1eeee30": "2026-07-17T23:24:27",
+    "5d9040c6e47dec4ebf0d51c7": "2026-07-17T23:24:27",
+    "d86550293ebaa6ef15d894e9": "2026-07-17T23:24:27",
+    "2a94b7e78c0643e68538acf0": "2026-07-17T23:24:27",
+    "61810a2c8bd13486b9a0bb4a": "2026-07-17T23:24:27",
+    "c4de95be3b567f0b9bb11fd9": "2026-07-17T23:24:27",
+    "f4f5504ade203daeee5a5b6a": "2026-07-17T23:24:27",
+    "1448667268a6f9db256ce249": "2026-07-17T23:24:27",
+    "7d7cbfaf6c9ab5b6ee0c1674": "2026-07-17T23:24:27",
+    "276f762aced9fe61dcc075fc": "2026-07-17T23:24:27",
+    "35f256d6399f7f70741b430d": "2026-07-17T23:24:27",
+    "e900d58ef7f6dcd8540f0d7d": "2026-07-17T23:24:27"
   },
   "titles": [
     [
@@ -12491,6 +12489,118 @@
     [
       "정치인 거래정책 리포트 20260717",
       "2026-07-17"
+    ],
+    [
+      "senator who opposes ban on congress trading discloses first trades of 2026 heres what hes selling",
+      "2026-07-18"
+    ],
+    [
+      "trump discloses 21000 securities trades during first year in office abc news breaking news latest news and videos",
+      "2026-07-18"
+    ],
+    [
+      "congress trade representative dan crenshaw just disclosed new stock trades quiver quantitative",
+      "2026-07-18"
+    ],
+    [
+      "spacex is house members hot new stock pick news of the united states notus",
+      "2026-07-18"
+    ],
+    [
+      "senator who opposes ban on congress trading discloses first trades of 2026 heres what hes selling inkl",
+      "2026-07-18"
+    ],
+    [
+      "form 4a pharmacyte biotech inc amended insider trading activity stock titan",
+      "2026-07-18"
+    ],
+    [
+      "form 4 colony bankcorp inc insider trading activity stock titan",
+      "2026-07-18"
+    ],
+    [
+      "form 4 caredx inc insider trading activity stock titan",
+      "2026-07-18"
+    ],
+    [
+      "polypid pypd awards director 9132 stock options at 446 stock titan",
+      "2026-07-18"
+    ],
+    [
+      "opendoor technologies open coo files rule 10b51 selltocover trade stock titan",
+      "2026-07-18"
+    ],
+    [
+      "tela bio tela awards director 6227 fully vested compensation shares stock titan",
+      "2026-07-18"
+    ],
+    [
+      "colony bankcorp cban awards evp kimberly dockery 3028 shares stock titan",
+      "2026-07-18"
+    ],
+    [
+      "applovin nasdaq app director gets 41 rsus holds 3198 shares stock titan",
+      "2026-07-18"
+    ],
+    [
+      "form 4 grabagun digital holdings inc insider trading activity stock titan",
+      "2026-07-18"
+    ],
+    [
+      "spire global spir director reports 1516share 27875 stock compensation grant stock titan",
+      "2026-07-18"
+    ],
+    [
+      "ennis inc ebf director receives 887share restricted stock grant stock titan",
+      "2026-07-18"
+    ],
+    [
+      "polypid ltd pypd awards 75000 options to deputy ceo stock titan",
+      "2026-07-18"
+    ],
+    [
+      "cloudflare nyse net cfo sells 10000 shares in rule 10b51 trades stock titan",
+      "2026-07-18"
+    ],
+    [
+      "fed ratehike voices swell before july decision rates still seen on hold",
+      "2026-07-18"
+    ],
+    [
+      "july fed meeting unpacked what the latest decision may mean for investors lord abbett",
+      "2026-07-18"
+    ],
+    [
+      "ecb rate decision what to expect on july 23 morningstar",
+      "2026-07-18"
+    ],
+    [
+      "week ahead for fx bonds us european pmi data ecb decision in focus",
+      "2026-07-18"
+    ],
+    [
+      "ecb interest rate decision key questions for the july 2024 meeting global banking finance review",
+      "2026-07-18"
+    ],
+    [
+      "속보 한은 기준금리 025p 인상3년6개월만에 긴축 돌입",
+      "2026-07-18"
+    ],
+    [
+      "한은 기준금리 275로 인상3년 6개월 만에 긴축 전환",
+      "2026-07-18"
+    ],
+    [
+      "속보한은 기준금리 25275 인상3년 반만에 인상",
+      "2026-07-18"
+    ],
+    [
+      "한은 금리 인상 기조 이어갈 필요 본격적인 인상 사이클 열렸다",
+      "2026-07-18"
+    ],
+    [
+      "정치인 거래정책 리포트 20260718",
+      "2026-07-18"
     ]
   ],
   "seen_urls": {}
