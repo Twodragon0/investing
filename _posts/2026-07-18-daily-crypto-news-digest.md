@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-18 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 비트코인·이더리움·리플 또 급락! 중동 공습에 암호화폐 반등분 증발 - 코인리더스 - 103건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 암호화폐 주목</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 달러 주목</li><li>🏦 <strong>거래소</strong>: 18건 수집</li><li>🔷 <strong>이더리움</strong>: 이더리움 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.coinreaders.com">비트코인·이더리움·리플 또 급락! 중동 공습에 암호화폐 반등분 증발 - 코인리더스</a> <span class="p0-desc">비트코인 전문지, 가상화폐, 블록체인, 4차산업혁명, 칼럼, 포럼 안내</span></li><li><a href="https://cointelegraph.com/news/dutch-court-knaken-crypto-platform-bankruptcy?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">네덜란드 법원, 자금 누락으로 암호화폐 플랫폼 Knaken 파산 선고</a> <span class="p0-desc">로테르담 법원은 회사가 사용자에게 전액을 상환할 만큼 자산이 부족하기 때문에 질서 있는 해결을 위해서는 파산이 필요하다고 밝혔습니다</span></li><li><a href="https://decrypt.co/373636/morning-minute-base-hands-its-app-over-to-cobie">Morning Minute: Base가 앱을 Cobie에 넘겨줌</a> <span class="p0-desc">게다가 Stripe은 스테이블코인 왕이 될 수 있는 530억 달러의 움직임을 보입니다. 그리고 Ostium은 최근 디파이 익스플로잇으로 인해 1,800만 달러의 손실을 입었습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 비트코인·이더리움·리플 또 급락! 중동 공습에 암호화폐 반등분 증발 - 코인리더스 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 103건의 뉴스 중 P1 주요 이슈도 12건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (40건): 비트코인, 암호화폐, 달러 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (27건): 암호화폐, 달러, 약세 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🏦 거래소** (18건): binance, network, support 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 비트코인·이더리움·리플 또 급락! 중동 공습에 암호화폐 반등분 증발 - 코인리더스
-- 네덜란드 법원, 자금 누락으로 암호화폐 플랫폼 Knaken 파산 선고
-- Morning Minute: Base가 앱을 Cobie에 넘겨줌
-
-### 주요 이슈
-
-- 엘패소 시의회, 사기 피해 암호화폐 키오스크에 대한 새로운 경고 규정 검토 - KFOX
-- 코인시장은 지금] 규제 시계 다시 돌았지만.이란發 리스크에 비트코인 6만3천달러 후퇴 - 비즈트리뷴
-- 일본, 암호화폐를 ‘금융자산’으로 격상 비트코인 ETF·20% 과세 시대 열린다 - 비온미디어
-- 외 9건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(40건), Cointelegraph(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-07-18.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-07-18.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **103건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
