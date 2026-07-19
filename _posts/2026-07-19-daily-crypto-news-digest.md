@@ -41,40 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-19 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: FTX 다섯 번째 지불 라운드에서 채권자에게 9억 달러를 분배합니다. - 95건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 암호화폐 주목</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 달러 주목</li><li>🏦 <strong>거래소</strong>: 20건 수집</li><li>🤖 <strong>AI/기술</strong>: 암호화폐, 애플 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/ftx-distribute-millions-creditors-fifth-payment-round?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">FTX 다섯 번째 지불 라운드에서 채권자에게 9억 달러를 분배합니다.</a> <span class="p0-desc">FTX 복구 신탁과 회사는 2022년 11월 거래소가 파산 신청을 한 이후 약 100억 달러를 분배해 사용자들의 자금이 중단되었습니다.</span></li><li><a href="https://cointelegraph.com/news/dutch-court-knaken-crypto-platform-bankruptcy?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">네덜란드 법원, 자금 누락으로 암호화폐 플랫폼 Knaken 파산 선고</a> <span class="p0-desc">로테르담 법원은 회사가 사용자에게 전액을 상환할 만큼 자산이 부족하기 때문에 질서 있는 해결을 위해서는 파산이 필요하다고 밝혔습니다</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: FTX 다섯 번째 지불 라운드에서 채권자에게 9억 달러를 분배합니다. 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 95건의 뉴스 중 P1 주요 이슈도 12건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (28건): 비트코인, 암호화폐, ETF 관련 (28건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (21건): 암호화폐, 달러, 코인리더스 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🏦 거래소** (20건): binance, network, support 관련 지표와 수급 흐름을 함께 확인하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- FTX 다섯 번째 지불 라운드에서 채권자에게 9억 달러를 분배합니다.
-- 네덜란드 법원, 자금 누락으로 암호화폐 플랫폼 Knaken 파산 선고
-
-### 주요 이슈
-
-- 코인 시황] 비트코인 6만3000달러 붕괴…반도체 쇼크·중동 리스크에 암호화폐 일제히 약세 - 뉴스핌
-- 티로프라이스, 첫 암호화폐 ETF 출시…비트코인·이더리움 중심 편입
-- 기관들, XRP ETF 조용한 매집…비트코인 유출 속 나홀로 독주
-- 외 9건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, ETF
-- **주요 출처**: Binance(40건), Cointelegraph(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-07-19.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-07-19.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **95건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
