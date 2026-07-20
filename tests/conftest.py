@@ -51,6 +51,33 @@ except ImportError:
 
 
 @pytest.fixture(autouse=True)
+def _block_real_http(monkeypatch):
+    """Fail fast if a test makes a real outbound HTTP call via ``requests``.
+
+    The enrichment pipeline reaches the network only through ``requests``, and
+    every enrichment test mocks it. A misplaced patch (e.g. after the P2-A module
+    split relocates a symbol) can silently become inert, letting a real GET hit a
+    public host that the SSRF guard permits (``example.com`` resolves publicly) —
+    a slow, flaky "green". Blocking the transport layer turns that into an
+    immediate, obvious failure. Tests that mock ``requests`` never reach this
+    adapter, so they are unaffected; DNS-resolution guards (``socket.getaddrinfo``)
+    are also untouched.
+    """
+    try:
+        from requests.adapters import HTTPAdapter
+    except ImportError:
+        return
+
+    def _blocked(self, request, *args, **kwargs):
+        raise RuntimeError(
+            f"Real outbound HTTP blocked in tests: {request.method} {request.url}. "
+            "A requests mock is missing or patched on the wrong module namespace."
+        )
+
+    monkeypatch.setattr(HTTPAdapter, "send", _blocked)
+
+
+@pytest.fixture(autouse=True)
 def _isolate_image_rejection_state(tmp_path, monkeypatch):
     """Redirect image_rejection_metrics state + archive paths to a per-test tmp dir.
 
