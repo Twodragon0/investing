@@ -41,39 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-20 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: FTX 다섯 번째 지불 라운드에서 채권자에게 9억 달러를 분배합니다. - 67건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 암호화폐 동향 주시</li><li>🏦 <strong>거래소</strong>: 19건 수집</li><li>📈 <strong>가격/시장</strong>: 14건 수집</li><li>🔷 <strong>이더리움</strong>: 이더리움, 암호화폐 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/ftx-distribute-millions-creditors-fifth-payment-round?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">FTX 다섯 번째 지불 라운드에서 채권자에게 9억 달러를 분배합니다.</a> <span class="p0-desc">FTX 복구 신탁과 회사는 2022년 11월 거래소가 파산 신청을 한 이후 약 100억 달러를 분배해 사용자들의 자금이 중단되었습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: FTX 다섯 번째 지불 라운드에서 채권자에게 9억 달러를 분배합니다. 
-총 67건의 뉴스 중 P1 주요 이슈도 4건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (21건): 비트코인, 암호화폐, 거버넌스 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **🏦 거래소** (19건): binance, network, support 관련 지표와 수급 흐름을 함께 확인하세요.
-- **📈 가격/시장** (14건): 공포 가격 변동 (14건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- FTX 다섯 번째 지불 라운드에서 채권자에게 9억 달러를 분배합니다.
-
-### 주요 이슈
-
-- 비트코인 6만4000달러 횡보…중동 긴장 속 ETF 자금은 순유입 전환
-- 찰스 슈와브, 미 암호화폐 명확성법 상원 통과 난항 경고 - tokenpost.kr
-- 업비트 모기업 두나무, 한국 규제당국 제재 절차 직면: 보고서
-- 외 1건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, ETF
-- **주요 출처**: Binance(40건), Google News KR(14건), CoinDesk(13건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-07-20.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-07-20.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **67건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
