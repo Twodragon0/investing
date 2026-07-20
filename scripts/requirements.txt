@@ -8,8 +8,12 @@ requests==2.33.1
 certifi>=2026.4.22
 cachetools>=7.1.1
 beautifulsoup4==4.14.3
-lxml==6.1.0
+# lxml 6.1.1: lxml-html-clean 0.4.5 가 lxml>=6.1.1 요구 (아래 참고).
+lxml==6.1.1
 readability-lxml==0.8.4.1
+# 전이 의존성(readability-lxml → lxml[html_clean])을 명시 핀:
+# 0.4.4 는 CVE-2026-49825(javascript: URL 미제거, XSS) 취약 → 0.4.5 에서 수정.
+lxml-html-clean>=0.4.5
 yfinance==1.3.0
 matplotlib~=3.10.9
 Pillow>=12.2.0
