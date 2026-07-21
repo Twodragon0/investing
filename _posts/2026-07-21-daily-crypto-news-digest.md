@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-21 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 이번 비트코인 슬럼프가 다른 이유 - 80건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 동향 주시</li><li>📈 <strong>가격/시장</strong>: XRP 동향 주시</li><li>🔷 <strong>이더리움</strong>: 이더리움, 애널리스트 동향 주시</li><li>🏦 <strong>거래소</strong>: 8건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.bloomberg.com/news/articles/2026-07-17/bitcoin-slump-why-crypto-token-halved-in-value-since-october-btc-usd">이번 비트코인 슬럼프가 다른 이유</a> <span class="p0-desc">이번 비트코인 슬럼프가 다른 이유 급락 관련 보도.</span></li><li><a href="https://cointelegraph.com/news/zilliqa-zil-deposit-halt-exchange-partner-wallet-breach?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">질리카(Zilliqa), 콜드월렛 도난 의심 후 거래소에 ZIL 전송 일시중지 요청</a> <span class="p0-desc">Zilliqa는 거래소 파트너의 콜드 지갑이 손상된 후 거래소가 ZIL 입출금을 일시 중지했으며 도난당한 금액은 아직 공개되지 않았다고 말했습니다.</span></li><li><a href="https://cointelegraph.com/news/allbridge-core-pauses-cross-chain-bridge-after-165m-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Allbridge는 165만 달러 규모의 익스플로잇 이후 크로스체인 브리지를 일시 중지했습니다.</a> <span class="p0-desc">공격자는 브리지의 스테이블코인 환율을 조작하기 위해 플래시 대출과 신속한 스왑을 사용한 것으로 알려졌습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 이번 비트코인 슬럼프가 다른 이유 
-외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 80건의 뉴스 중 P1 주요 이슈도 11건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (42건): 비트코인, 애널리스트 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (28건): XRP, 애널리스트 가격 변동 (28건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🔷 이더리움** (13건): 이더리움, 애널리스트 생태계 동향 (13건) — 가스비·TVL 변화를 함께 확인하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 이번 비트코인 슬럼프가 다른 이유
-- 질리카(Zilliqa), 콜드월렛 도난 의심 후 거래소에 ZIL 전송 일시중지 요청
-- Allbridge는 165만 달러 규모의 익스플로잇 이후 크로스체인 브리지를 일시 중지했습니다.
-
-### 주요 이슈
-
-- T. Rowe Price, 비트코인, 이더리움 및 XRP을 포함한 다중 암호화폐 ETF 출시
-- 암호화폐 SWOT: T. Rowe Price는 최초의 활성 멀티 토큰 현물 암호화폐 출시 ETF
-- ETF 특징주] 비트코인 현물 ETF 2주 연속 순유입 "바닥 쳤다" - 뉴스핌
-- 외 8건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, ETF, 이더리움
-- **주요 출처**: Google News(20건), Google News KR(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 4건 포함
-- 프로모션성 거래소 공지 1건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-07-21.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-07-21.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **80건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔷 이더리움
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
