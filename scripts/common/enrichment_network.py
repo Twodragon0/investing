@@ -426,7 +426,7 @@ def _resolve_google_news_url(url: str, timeout: int = 8) -> str:
     Strategy:
     1. Return cached result if available.
     2. Try base64 decoding of the RSS article path (fastest, no network).
-    3. Follow HTTP redirects with ``requests.head`` (max 3 hops) then ``requests.get``.
+    3. Follow HTTP redirects with ``requests.head`` (max 5 hops) then ``requests.get``.
     4. Parse HTML for canonical/og:url if still on Google domain.
 
     Handles both ``/rss/articles/CBMi...`` and ``/read/CBMi...`` URL formats.
