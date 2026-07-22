@@ -26,6 +26,7 @@ from __future__ import annotations
 import logging
 import re
 from typing import Any, Dict, Optional
+from urllib.parse import urlparse
 
 import requests
 
@@ -176,6 +177,17 @@ def _is_low_information_fragment(desc: str) -> bool:
         if token_count <= 6 and (has_generic or not has_specific):
             return True
     return False
+
+
+def _is_google_news_host(url: str) -> bool:
+    """True when ``url``'s host is Google News (``news.google.com`` or a subdomain).
+
+    Parses the hostname instead of a substring match so a URL that merely
+    contains ``news.google.com`` in its path/query is not misrouted through
+    Google News resolution (CodeQL ``py/incomplete-url-substring-sanitization``).
+    """
+    host = (urlparse(url).hostname or "").lower()
+    return host == "news.google.com" or host.endswith(".news.google.com")
 
 
 def _decode_google_news_base64(url: str) -> str:
@@ -661,7 +673,7 @@ def fetch_page_metadata(url: str, timeout: int = 8, title: str = "") -> Dict[str
     if not url:
         return result
     # Resolve Google News redirects (any news.google.com URL)
-    if "news.google.com" in url:
+    if _is_google_news_host(url):
         resolved = _resolve_google_news_url(url)
         if not resolved:
             return result
