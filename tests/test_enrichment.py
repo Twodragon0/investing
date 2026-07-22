@@ -5,6 +5,7 @@ from unittest.mock import MagicMock, patch
 import pytest
 
 import common.enrichment as _enrichment_mod
+import common.enrichment_network as _network_mod
 from common.enrichment import (
     _NOISE_DESC_PATTERNS,
     MAX_IMAGES_PER_DIGEST,
@@ -3474,11 +3475,13 @@ class TestReadabilityFailOpen:
 
         # Force `from readability import Document` to raise ImportError.
         monkeypatch.setitem(sys.modules, "readability", None)
-        # Reset the process-wide once-only warning latch.
-        monkeypatch.setattr(_enrichment_mod, "_warned_readability_missing", False)
+        # Reset the process-wide once-only warning latch. The latch and logger
+        # now live in ``common.enrichment_network`` (the facade re-exports the
+        # extractor), so setattr/caplog must target the network module.
+        monkeypatch.setattr(_network_mod, "_warned_readability_missing", False)
 
         html = "<html><body><article><p>" + ("x" * 80) + "</p></article></body></html>"
-        with caplog.at_level(logging.WARNING, logger=_enrichment_mod.logger.name):
+        with caplog.at_level(logging.WARNING, logger=_network_mod.logger.name):
             first = _enrichment_mod._extract_via_readability(html, "https://example.com/a")
             second = _enrichment_mod._extract_via_readability(html, "https://example.com/b")
 
