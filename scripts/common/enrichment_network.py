@@ -10,14 +10,15 @@ split. ``common.enrichment`` re-exports the public names so existing
 ``from common.enrichment import ...`` call sites (collectors, ``rss_fetcher``, …)
 keep working unchanged.
 
-NOTE (batches 1-2): the URL-safety wrapper, meta-description cleaner, Google
+NOTE (batches 1-3): the URL-safety wrapper, meta-description cleaner, Google
 News base64 decoder, and the HTML metadata/content extractors (batch 1) plus
 the Google News resolver chain (``_resolve_google_news_url`` / ``_inner`` /
-``_resolve_via_gnewsdecoder``) and the og:image fetcher (batch 2) now live here.
-The page-metadata orchestrators (``fetch_page_metadata`` / ``fetch_page_description``)
-still live in the facade and are moved in later batches per
-``docs/refactoring-plan-2026-07.md`` §1.4. Patch-string relocation happens in
-the same commit as each symbol move to keep every batch's test gate hermetic.
+``_resolve_via_gnewsdecoder``) and the og:image fetcher (batch 2) and the
+page-metadata fetcher (``fetch_page_metadata``, batch 3) now live here.
+The thin ``fetch_page_description`` wrapper still lives in the facade and is
+moved in a later batch per ``docs/refactoring-plan-2026-07.md`` §1.4.
+Patch-string relocation happens in the same commit as each symbol move to
+keep every batch's test gate hermetic.
 """
 
 from __future__ import annotations
@@ -30,7 +31,7 @@ import requests
 
 from . import summary_quality as _summary_quality_mod
 from .config import get_verify_ssl
-from .encoding_guard import force_utf8_if_mislabelled
+from .encoding_guard import force_utf8_if_mislabelled, sanitize_mojibake
 from .enrichment_images import _is_valid_image_url, is_logo_like_url
 from .enrichment_synthetic import _is_title_related_description
 from .markdown_utils import smart_truncate
@@ -640,3 +641,87 @@ def _fetch_og_image(url: str, timeout: int = 8) -> str:
     except Exception as exc:
         logger.debug("og:image fetch failed for %s: %s", url, exc)
     return ""
+
+
+def fetch_page_metadata(url: str, timeout: int = 8, title: str = "") -> Dict[str, str]:
+    """Fetch meta description, image and article metadata from a URL page.
+
+    Returns a dict with keys ``description``, ``image``, ``published_time``,
+    ``author``, ``section`` (all may be empty). All article:* fields are
+    best-effort and default to empty string on failure or when the page
+    does not emit that tag.
+    """
+    result: Dict[str, str] = {
+        "description": "",
+        "image": "",
+        "published_time": "",
+        "author": "",
+        "section": "",
+    }
+    if not url:
+        return result
+    # Resolve Google News redirects (any news.google.com URL)
+    if "news.google.com" in url:
+        resolved = _resolve_google_news_url(url)
+        if not resolved:
+            return result
+        url = resolved
+
+    try:
+        from bs4 import BeautifulSoup as BS4
+
+        if is_private_url(url):
+            logger.warning("SSRF blocked: %s resolves to private IP", url[:80])
+            return result
+        resp = requests.get(
+            url,
+            timeout=timeout,
+            headers={"User-Agent": _USER_AGENT},
+            verify=_get_verify_ssl(),
+        )
+        resp.raise_for_status()
+        force_utf8_if_mislabelled(resp)
+        soup = BS4(resp.text, "html.parser")
+
+        # Extract OG metadata (image + description + article:* fields)
+        og = _extract_og_metadata(soup, title=title)
+        result["image"] = og["image"]
+        result["published_time"] = og.get("published_time", "")
+        result["author"] = og.get("author", "")
+        result["section"] = og.get("section", "")
+        if og["description"]:
+            cleaned = sanitize_mojibake(og["description"])
+            if cleaned:
+                result["description"] = cleaned
+                return result
+
+        # Try readability-lxml for high-quality article extraction
+        desc = sanitize_mojibake(_extract_via_readability(resp.text, url))
+        if desc:
+            if _is_title_related_description(title, desc):
+                result["description"] = desc
+            else:
+                logger.debug("Rejected readability description as unrelated to title")
+            return result
+
+        # Article body paragraphs (BS4 fallback)
+        desc = sanitize_mojibake(_extract_via_bs4_article(soup))
+        if desc:
+            if _is_title_related_description(title, desc):
+                result["description"] = desc
+            else:
+                logger.debug("Rejected article-body description as unrelated to title")
+            return result
+
+        # Last resort: any substantial <p> not in noise containers
+        desc = sanitize_mojibake(_extract_via_paragraphs(soup))
+        if desc:
+            if _is_title_related_description(title, desc):
+                result["description"] = desc
+            else:
+                logger.debug("Rejected paragraph description as unrelated to title")
+            return result
+
+    except Exception as e:  # noqa: BLE001
+        logger.debug("Failed to fetch metadata from %s: %s", url, e)
+    return result

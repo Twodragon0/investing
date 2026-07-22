@@ -8,9 +8,6 @@ import logging
 import re
 from typing import Any, Dict, Optional
 
-import requests
-
-from .encoding_guard import force_utf8_if_mislabelled, sanitize_mojibake
 from .enrichment_images import (  # noqa: F401  (re-exported for backward compat)
     _is_valid_image_url,
     is_logo_like_url,
@@ -37,6 +34,7 @@ from .enrichment_network import (  # noqa: F401  (re-exported for backward compa
     _resolve_google_news_url,
     _resolve_google_news_url_inner,
     _resolve_via_gnewsdecoder,
+    fetch_page_metadata,
     is_private_url,
 )
 from .enrichment_synthetic import (  # noqa: F401  (re-exported for backward compat)
@@ -287,90 +285,6 @@ def fetch_descriptions_concurrent(
     if fetched:
         logger.info("Concurrent description fetch: enriched %d/%d items", fetched, len(targets))
     return fetched
-
-
-def fetch_page_metadata(url: str, timeout: int = 8, title: str = "") -> Dict[str, str]:
-    """Fetch meta description, image and article metadata from a URL page.
-
-    Returns a dict with keys ``description``, ``image``, ``published_time``,
-    ``author``, ``section`` (all may be empty). All article:* fields are
-    best-effort and default to empty string on failure or when the page
-    does not emit that tag.
-    """
-    result: Dict[str, str] = {
-        "description": "",
-        "image": "",
-        "published_time": "",
-        "author": "",
-        "section": "",
-    }
-    if not url:
-        return result
-    # Resolve Google News redirects (any news.google.com URL)
-    if "news.google.com" in url:
-        resolved = _resolve_google_news_url(url)
-        if not resolved:
-            return result
-        url = resolved
-
-    try:
-        from bs4 import BeautifulSoup as BS4
-
-        if is_private_url(url):
-            logger.warning("SSRF blocked: %s resolves to private IP", url[:80])
-            return result
-        resp = requests.get(
-            url,
-            timeout=timeout,
-            headers={"User-Agent": _USER_AGENT},
-            verify=_get_verify_ssl(),
-        )
-        resp.raise_for_status()
-        force_utf8_if_mislabelled(resp)
-        soup = BS4(resp.text, "html.parser")
-
-        # Extract OG metadata (image + description + article:* fields)
-        og = _extract_og_metadata(soup, title=title)
-        result["image"] = og["image"]
-        result["published_time"] = og.get("published_time", "")
-        result["author"] = og.get("author", "")
-        result["section"] = og.get("section", "")
-        if og["description"]:
-            cleaned = sanitize_mojibake(og["description"])
-            if cleaned:
-                result["description"] = cleaned
-                return result
-
-        # Try readability-lxml for high-quality article extraction
-        desc = sanitize_mojibake(_extract_via_readability(resp.text, url))
-        if desc:
-            if _is_title_related_description(title, desc):
-                result["description"] = desc
-            else:
-                logger.debug("Rejected readability description as unrelated to title")
-            return result
-
-        # Article body paragraphs (BS4 fallback)
-        desc = sanitize_mojibake(_extract_via_bs4_article(soup))
-        if desc:
-            if _is_title_related_description(title, desc):
-                result["description"] = desc
-            else:
-                logger.debug("Rejected article-body description as unrelated to title")
-            return result
-
-        # Last resort: any substantial <p> not in noise containers
-        desc = sanitize_mojibake(_extract_via_paragraphs(soup))
-        if desc:
-            if _is_title_related_description(title, desc):
-                result["description"] = desc
-            else:
-                logger.debug("Rejected paragraph description as unrelated to title")
-            return result
-
-    except Exception as e:  # noqa: BLE001
-        logger.debug("Failed to fetch metadata from %s: %s", url, e)
-    return result
 
 
 def fetch_page_description(url: str, timeout: int = 8) -> str:
