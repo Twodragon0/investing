@@ -5,6 +5,7 @@ from unittest.mock import MagicMock, patch
 import pytest
 
 import common.enrichment as _enrichment_mod
+import common.enrichment_network as _network_mod
 from common.enrichment import (
     _NOISE_DESC_PATTERNS,
     MAX_IMAGES_PER_DIGEST,
@@ -321,7 +322,7 @@ class TestResolveGoogleNewsUrl:
         result = _resolve_google_news_url("https://reuters.com/markets/bitcoin")
         assert result == "https://reuters.com/markets/bitcoin"
 
-    @patch("common.enrichment._decode_google_news_base64")
+    @patch("common.enrichment_network._decode_google_news_base64")
     def test_base64_decode_success_skips_http(self, mock_decode):
         """If base64 decode succeeds, no network calls are made."""
         mock_decode.return_value = "https://real-article.com/news/123"
@@ -329,9 +330,9 @@ class TestResolveGoogleNewsUrl:
         assert result == "https://real-article.com/news/123"
         mock_decode.assert_called_once()
 
-    @patch("common.enrichment._resolve_via_gnewsdecoder")
-    @patch("common.enrichment._decode_google_news_base64")
-    @patch("common.enrichment.requests.head")
+    @patch("common.enrichment_network._resolve_via_gnewsdecoder")
+    @patch("common.enrichment_network._decode_google_news_base64")
+    @patch("common.enrichment_network.requests.head")
     def test_http_head_redirect_used_when_base64_fails(self, mock_head, mock_decode, mock_gnews):
         """When base64 fails, follows HEAD redirect."""
         mock_gnews.return_value = ""
@@ -343,10 +344,10 @@ class TestResolveGoogleNewsUrl:
         result = _resolve_google_news_url("https://news.google.com/rss/articles/CBMiXXX")
         assert result == "https://real-site.com/article"
 
-    @patch("common.enrichment._resolve_via_gnewsdecoder")
-    @patch("common.enrichment._decode_google_news_base64")
-    @patch("common.enrichment.requests.head")
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network._resolve_via_gnewsdecoder")
+    @patch("common.enrichment_network._decode_google_news_base64")
+    @patch("common.enrichment_network.requests.head")
+    @patch("common.enrichment_network.requests.get")
     def test_get_fallback_when_head_stays_on_google(self, mock_get, mock_head, mock_decode, mock_gnews):
         """When HEAD stays on google, tries GET."""
         mock_gnews.return_value = ""
@@ -362,10 +363,10 @@ class TestResolveGoogleNewsUrl:
         result = _resolve_google_news_url("https://news.google.com/rss/articles/CBMiXXX")
         assert result == "https://real-site.com/article"
 
-    @patch("common.enrichment._resolve_via_gnewsdecoder")
-    @patch("common.enrichment._decode_google_news_base64")
-    @patch("common.enrichment.requests.head")
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network._resolve_via_gnewsdecoder")
+    @patch("common.enrichment_network._decode_google_news_base64")
+    @patch("common.enrichment_network.requests.head")
+    @patch("common.enrichment_network.requests.get")
     def test_network_exception_returns_empty(self, mock_get, mock_head, mock_decode, mock_gnews):
         """Network errors should be swallowed and return empty."""
         import requests as req_mod
@@ -398,7 +399,7 @@ class TestFetchPageMetadata:
         for key in ("description", "image", "published_time", "author", "section"):
             assert key in result
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_article_published_time_extracted(self, mock_get):
         html = """<html><head>
         <meta property="article:published_time" content="2026-04-21T09:30:00+09:00" />
@@ -411,7 +412,7 @@ class TestFetchPageMetadata:
         result = fetch_page_metadata("https://example.com/article")
         assert result["published_time"] == "2026-04-21T09:30:00+09:00"
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_article_author_extracted(self, mock_get):
         html = """<html><head>
         <meta property="article:author" content="홍길동 기자" />
@@ -424,7 +425,7 @@ class TestFetchPageMetadata:
         result = fetch_page_metadata("https://example.com/article")
         assert result["author"] == "홍길동 기자"
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_article_section_extracted(self, mock_get):
         html = """<html><head>
         <meta property="article:section" content="경제" />
@@ -437,7 +438,7 @@ class TestFetchPageMetadata:
         result = fetch_page_metadata("https://example.com/article")
         assert result["section"] == "경제"
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_modified_time_fallback_when_published_absent(self, mock_get):
         html = """<html><head>
         <meta property="article:modified_time" content="2026-04-21T10:00:00Z" />
@@ -450,7 +451,7 @@ class TestFetchPageMetadata:
         result = fetch_page_metadata("https://example.com/article")
         assert result["published_time"] == "2026-04-21T10:00:00Z"
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_http_error_returns_empty(self, mock_get):
         import requests as req_mod
 
@@ -458,7 +459,7 @@ class TestFetchPageMetadata:
         result = fetch_page_metadata("https://example.com/article")
         assert result["description"] == ""
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_og_description_extracted(self, mock_get):
         html = """<html><head>
         <meta property="og:description" content="Bitcoin surged 10% on institutional demand today." />
@@ -471,7 +472,7 @@ class TestFetchPageMetadata:
         result = fetch_page_metadata("https://example.com/article")
         assert "Bitcoin" in result["description"]
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_meta_description_extracted(self, mock_get):
         html = """<html><head>
         <meta name="description" content="Ethereum network upgrade brings major improvements to the ecosystem." />
@@ -483,8 +484,8 @@ class TestFetchPageMetadata:
         result = fetch_page_metadata("https://example.com/article")
         assert "Ethereum" in result["description"]
 
-    @patch("common.enrichment.is_private_url", return_value=False)
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.is_private_url", return_value=False)
+    @patch("common.enrichment_network.requests.get")
     def test_irrelevant_meta_description_rejected_with_title(self, mock_get, _mock_private):  # noqa: PT019
         html = """<html><head>
         <meta name="description" content="Apple unveils new iPhone lineup at annual event." />
@@ -496,7 +497,7 @@ class TestFetchPageMetadata:
         result = fetch_page_metadata("https://example.com/article", title="Bitcoin ETF approval drives market rally")
         assert result["description"] == ""
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_og_image_extracted(self, mock_get):
         html = """<html><head>
         <meta property="og:image" content="https://example.com/article-image.jpg" />
@@ -509,7 +510,7 @@ class TestFetchPageMetadata:
         result = fetch_page_metadata("https://example.com/article")
         assert result["image"] == "https://example.com/article-image.jpg"
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_short_description_skipped(self, mock_get):
         html = """<html><head>
         <meta name="description" content="Short." />
@@ -522,7 +523,7 @@ class TestFetchPageMetadata:
         # Short meta desc < 20 chars is skipped; body paragraph may be extracted
         assert isinstance(result["description"], str)
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_http_status_error_returns_empty(self, mock_get):
         import requests as req_mod
 
@@ -892,10 +893,10 @@ class TestResolveGoogleNewsUrlHtmlBranch:
         # for the same URL do not bleed through as cache hits.
         _enrichment_mod._gnews_url_cache.clear()
 
-    @patch("common.enrichment._resolve_via_gnewsdecoder")
-    @patch("common.enrichment._decode_google_news_base64")
-    @patch("common.enrichment.requests.head")
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network._resolve_via_gnewsdecoder")
+    @patch("common.enrichment_network._decode_google_news_base64")
+    @patch("common.enrichment_network.requests.head")
+    @patch("common.enrichment_network.requests.get")
     def test_canonical_link_extracted_from_html(self, mock_get, mock_head, mock_decode, mock_gnews):
         """If GET stays on Google but HTML has canonical link, use it."""
         mock_gnews.return_value = ""
@@ -911,10 +912,10 @@ class TestResolveGoogleNewsUrlHtmlBranch:
         result = _resolve_google_news_url("https://news.google.com/rss/articles/CBMiHTML1")
         assert result == "https://real-article.com/page"
 
-    @patch("common.enrichment._resolve_via_gnewsdecoder")
-    @patch("common.enrichment._decode_google_news_base64")
-    @patch("common.enrichment.requests.head")
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network._resolve_via_gnewsdecoder")
+    @patch("common.enrichment_network._decode_google_news_base64")
+    @patch("common.enrichment_network.requests.head")
+    @patch("common.enrichment_network.requests.get")
     def test_og_url_extracted_from_html(self, mock_get, mock_head, mock_decode, mock_gnews):
         """og:url meta tag is used as fallback."""
         mock_gnews.return_value = ""
@@ -930,10 +931,10 @@ class TestResolveGoogleNewsUrlHtmlBranch:
         result = _resolve_google_news_url("https://news.google.com/rss/articles/CBMiHTML2")
         assert result == "https://real-article.com/og"
 
-    @patch("common.enrichment._resolve_via_gnewsdecoder")
-    @patch("common.enrichment._decode_google_news_base64")
-    @patch("common.enrichment.requests.head")
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network._resolve_via_gnewsdecoder")
+    @patch("common.enrichment_network._decode_google_news_base64")
+    @patch("common.enrichment_network.requests.head")
+    @patch("common.enrichment_network.requests.get")
     def test_get_exception_returns_empty(self, mock_get, mock_head, mock_decode, mock_gnews):
         """If GET raises an exception, return empty string."""
         import requests as req_mod
@@ -966,7 +967,7 @@ class TestFetchOgImage:
         _fetch_og_image = self._import_func()
         assert _fetch_og_image("") == ""
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_og_image_extracted(self, mock_get):
         from common.enrichment import _fetch_og_image
 
@@ -977,7 +978,7 @@ class TestFetchOgImage:
         result = _fetch_og_image("https://example.com/article")
         assert result == "https://cdn.example.com/photo.jpg"
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_twitter_image_fallback(self, mock_get):
         from common.enrichment import _fetch_og_image
 
@@ -988,7 +989,7 @@ class TestFetchOgImage:
         result = _fetch_og_image("https://example.com/article")
         assert result == "https://cdn.example.com/tw.jpg"
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_http_error_returns_empty(self, mock_get):
         import requests as req_mod
 
@@ -1000,7 +1001,7 @@ class TestFetchOgImage:
         result = _fetch_og_image("https://example.com/article")
         assert result == ""
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_connection_error_returns_empty(self, mock_get):
         import requests as req_mod
 
@@ -1010,7 +1011,7 @@ class TestFetchOgImage:
         result = _fetch_og_image("https://example.com/article")
         assert result == ""
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_invalid_image_url_skipped(self, mock_get):
         from common.enrichment import _fetch_og_image
 
@@ -1022,7 +1023,7 @@ class TestFetchOgImage:
         result = _fetch_og_image("https://example.com/article")
         assert result == ""
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_no_og_image_returns_empty(self, mock_get):
         from common.enrichment import _fetch_og_image
 
@@ -1033,7 +1034,7 @@ class TestFetchOgImage:
         result = _fetch_og_image("https://example.com/article")
         assert result == ""
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_og_image_secure_url_used(self, mock_get):
         """og:image:secure_url should be picked when og:image is absent."""
         from common.enrichment import _fetch_og_image
@@ -1045,7 +1046,7 @@ class TestFetchOgImage:
         result = _fetch_og_image("https://example.com/article")
         assert result == "https://cdn.example.com/secure.jpg"
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_article_image_used(self, mock_get):
         """article:image (OpenGraph article namespace) should be picked up."""
         from common.enrichment import _fetch_og_image
@@ -1057,7 +1058,7 @@ class TestFetchOgImage:
         result = _fetch_og_image("https://example.com/article")
         assert result == "https://cdn.example.com/article.jpg"
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_itemprop_image_used(self, mock_get):
         """Schema.org itemprop=image should be used as a late fallback."""
         from common.enrichment import _fetch_og_image
@@ -1069,7 +1070,7 @@ class TestFetchOgImage:
         result = _fetch_og_image("https://example.com/article")
         assert result == "https://cdn.example.com/schema.jpg"
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_link_image_src_used(self, mock_get):
         """<link rel="image_src"> legacy fallback should be picked up last."""
         from common.enrichment import _fetch_og_image
@@ -1081,7 +1082,7 @@ class TestFetchOgImage:
         result = _fetch_og_image("https://example.com/article")
         assert result == "https://cdn.example.com/link-src.jpg"
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_priority_og_over_twitter(self, mock_get):
         """og:image must win over twitter:image when both are present."""
         from common.enrichment import _fetch_og_image
@@ -1096,7 +1097,7 @@ class TestFetchOgImage:
         result = _fetch_og_image("https://example.com/article")
         assert result == "https://cdn.example.com/og.jpg"
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_logo_url_rejected_falls_through(self, mock_get):
         """A logo-ish og:image should be skipped in favor of a later valid URL."""
         from common.enrichment import _fetch_og_image
@@ -1259,7 +1260,7 @@ class TestFetchDescriptionsConcurrentExtended:
 class TestFetchPageMetadataExtended:
     """Extended tests for fetch_page_metadata covering more branches."""
 
-    @patch("common.enrichment._resolve_google_news_url")
+    @patch("common.enrichment_network._resolve_google_news_url")
     def test_google_news_url_resolved(self, mock_resolve):
         """Google News URL should be resolved before fetching."""
         from common.enrichment import fetch_page_metadata
@@ -1275,7 +1276,7 @@ class TestFetchPageMetadataExtended:
             "section": "",
         }
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_twitter_description_extracted(self, mock_get):
         """twitter:description meta tag should be used as fallback."""
         from common.enrichment import fetch_page_metadata
@@ -1290,7 +1291,7 @@ class TestFetchPageMetadataExtended:
         result = fetch_page_metadata("https://example.com/article")
         assert "Ethereum" in result["description"]
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_body_paragraph_fallback(self, mock_get):
         """If no meta description, fall back to first long body <p> tag."""
         from common.enrichment import fetch_page_metadata
@@ -1306,7 +1307,7 @@ class TestFetchPageMetadataExtended:
         result = fetch_page_metadata("https://example.com/article")
         assert "long enough paragraph" in result["description"]
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_article_tag_used_for_paragraphs(self, mock_get):
         """Prefers <article> tag body over generic <p> tags."""
         from common.enrichment import fetch_page_metadata
@@ -1324,7 +1325,7 @@ class TestFetchPageMetadataExtended:
         result = fetch_page_metadata("https://example.com/article")
         assert isinstance(result["description"], str)
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_twitter_image_extracted(self, mock_get):
         """twitter:image should be extracted when og:image is absent."""
         from common.enrichment import fetch_page_metadata
@@ -1976,9 +1977,9 @@ class TestNeedsEnrichmentDescEqualsTitle:
 class TestFetchPageMetadataGoogleNewsResolved:
     """Cover line 376: url = resolved after Google News resolution."""
 
-    @patch("common.enrichment.requests.get")
-    @patch("common.enrichment._resolve_google_news_url")
-    @patch("common.enrichment.is_private_url", return_value=False)
+    @patch("common.enrichment_network.requests.get")
+    @patch("common.enrichment_network._resolve_google_news_url")
+    @patch("common.enrichment_network.is_private_url", return_value=False)
     def test_google_news_resolved_url_used_for_fetch(self, mock_private, mock_resolve, mock_get):
         """Line 376: resolved URL replaces google news URL for metadata fetch."""
         mock_resolve.return_value = "https://real-article.com/news/story"
@@ -2007,7 +2008,7 @@ class TestFetchPageMetadataGoogleNewsResolved:
 class TestFetchPageMetadataReadabilityAndArticleBody:
     """Cover readability paragraph extraction (line 428) and BS4 article body (433-485)."""
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_readability_used_when_available_five_paragraphs(self, mock_get):
         """Line 428: readability break after 5 paragraphs."""
         # Build HTML with 7 long paragraphs
@@ -2034,7 +2035,7 @@ class TestFetchPageMetadataReadabilityAndArticleBody:
             # Should have truncated after 5 paragraphs
             assert len(result["description"]) > 0
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_article_tag_body_extraction(self, mock_get):
         """Lines 461-475: <article> tag paragraph extraction."""
         html = """<html><head></head><body>
@@ -2053,7 +2054,7 @@ class TestFetchPageMetadataReadabilityAndArticleBody:
             result = fetch_page_metadata("https://example.com/article")
         assert "financial markets" in result["description"] or isinstance(result["description"], str)
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_article_class_body_extraction(self, mock_get):
         """Lines 448-455: article-body class used when no <article> tag."""
         html = """<html><head></head><body>
@@ -2070,7 +2071,7 @@ class TestFetchPageMetadataReadabilityAndArticleBody:
             result = fetch_page_metadata("https://example.com/article")
         assert isinstance(result["description"], str)
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_fallback_p_tags_when_no_article(self, mock_get):
         """Lines 478-485: fallback <p> outside article containers."""
         html = """<html><head></head><body>
@@ -2087,7 +2088,7 @@ class TestFetchPageMetadataReadabilityAndArticleBody:
             result = fetch_page_metadata("https://example.com/article")
         assert "standalone paragraph" in result["description"] or len(result["description"]) > 0
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_readability_exception_falls_through_to_bs4(self, mock_get):
         """Lines 435-436: readability raises non-ImportError, falls through to BS4."""
         html = """<html><head></head><body>
@@ -2314,7 +2315,7 @@ class TestGenerateSyntheticDescriptionFallbackBranches:
 class TestFetchPageMetadataRemainingLines:
     """Cover lines 434, 458-460, 464, 471, 481."""
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_readability_import_error_pass_line_434(self, mock_get):
         """Line 434: readability ImportError -> pass, fall through to BS4.
 
@@ -2348,7 +2349,7 @@ class TestFetchPageMetadataRemainingLines:
 
         assert isinstance(result["description"], str)
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_exact_class_match_fallback_lines_458_460(self, mock_get):
         """Lines 458-460: exact class regex (^article|post|entry|content$) used
         when precise class pattern doesn't match."""
@@ -2366,7 +2367,7 @@ class TestFetchPageMetadataRemainingLines:
             result = fetch_page_metadata("https://example.com/article")
         assert isinstance(result["description"], str)
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_noise_element_decomposed_line_464(self, mock_get):
         """Line 464: noise.decompose() called when article has excluded class child."""
         html = """<html><head></head><body>
@@ -2384,7 +2385,7 @@ class TestFetchPageMetadataRemainingLines:
             result = fetch_page_metadata("https://example.com/article")
         assert isinstance(result["description"], str)
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_five_paragraphs_break_line_471(self, mock_get):
         """Line 471: break after collecting 5 paragraphs from article body."""
         # Build 7 paragraphs inside <article> so the break at 5 is triggered
@@ -2402,7 +2403,7 @@ class TestFetchPageMetadataRemainingLines:
             result = fetch_page_metadata("https://example.com/article")
         assert len(result["description"]) > 0
 
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.requests.get")
     def test_fallback_p_skips_excluded_parent_line_481(self, mock_get):
         """Line 481: continue when fallback <p> has excluded-class parent."""
         html = """<html><head></head><body>
@@ -2803,8 +2804,8 @@ class TestResolveGoogleNewsReadUrl:
     def setup_method(self):
         _enrich_mod._gnews_url_cache.clear()
 
-    @patch("common.enrichment._resolve_via_gnewsdecoder", return_value="")
-    @patch("common.enrichment._decode_google_news_base64")
+    @patch("common.enrichment_network._resolve_via_gnewsdecoder", return_value="")
+    @patch("common.enrichment_network._decode_google_news_base64")
     def test_read_url_normalized_and_base64_retried(self, mock_decode, _mock_gnews):  # noqa: PT019
         # First call (original /read/ URL) returns "", second call (/rss/articles/) returns a URL
         mock_decode.side_effect = ["", "https://real-article.com/news/read-path"]
@@ -2823,8 +2824,8 @@ class TestResolveGoogleNewsInnerGnewsDecoderSuccess:
     def setup_method(self):
         _enrich_mod._gnews_url_cache.clear()
 
-    @patch("common.enrichment._resolve_via_gnewsdecoder", return_value="https://decoded.com/article")
-    @patch("common.enrichment._decode_google_news_base64", return_value="")
+    @patch("common.enrichment_network._resolve_via_gnewsdecoder", return_value="https://decoded.com/article")
+    @patch("common.enrichment_network._decode_google_news_base64", return_value="")
     def test_gnewsdecoder_result_returned_directly(self, _mock_b64, _mock_gnews):  # noqa: PT019
         result = _enrich_mod._resolve_google_news_url_inner("https://news.google.com/rss/articles/CBMiGNEWS", timeout=1)
         assert result == "https://decoded.com/article"
@@ -2840,9 +2841,9 @@ class TestResolveGoogleNewsInnerSSRFBlock:
     def setup_method(self):
         _enrich_mod._gnews_url_cache.clear()
 
-    @patch("common.enrichment._resolve_via_gnewsdecoder", return_value="")
-    @patch("common.enrichment._decode_google_news_base64", return_value="")
-    @patch("common.enrichment.is_private_url", return_value=True)
+    @patch("common.enrichment_network._resolve_via_gnewsdecoder", return_value="")
+    @patch("common.enrichment_network._decode_google_news_base64", return_value="")
+    @patch("common.enrichment_network.is_private_url", return_value=True)
     def test_ssrf_blocked_before_head_request_returns_empty(self, _mock_priv, _mock_b64, _mock_gnews):  # noqa: PT019
         result = _enrich_mod._resolve_google_news_url_inner("https://news.google.com/rss/articles/CBMiSSRF", timeout=1)
         assert result == ""
@@ -2858,10 +2859,10 @@ class TestResolveGoogleNewsInnerRedirectHops:
     def setup_method(self):
         _enrich_mod._gnews_url_cache.clear()
 
-    @patch("common.enrichment._resolve_via_gnewsdecoder", return_value="")
-    @patch("common.enrichment._decode_google_news_base64", return_value="")
-    @patch("common.enrichment.is_private_url", return_value=False)
-    @patch("common.enrichment.requests.head")
+    @patch("common.enrichment_network._resolve_via_gnewsdecoder", return_value="")
+    @patch("common.enrichment_network._decode_google_news_base64", return_value="")
+    @patch("common.enrichment_network.is_private_url", return_value=False)
+    @patch("common.enrichment_network.requests.head")
     def test_redirect_to_non_google_domain_returned(self, mock_head, _mock_priv, _mock_b64, _mock_gnews):  # noqa: PT019
         mock_resp = MagicMock()
         mock_resp.status_code = 301
@@ -2870,11 +2871,11 @@ class TestResolveGoogleNewsInnerRedirectHops:
         result = _enrich_mod._resolve_google_news_url_inner("https://news.google.com/rss/articles/CBMiHOP", timeout=1)
         assert result == "https://real-news.com/article/123"
 
-    @patch("common.enrichment._resolve_via_gnewsdecoder", return_value="")
-    @patch("common.enrichment._decode_google_news_base64", return_value="")
-    @patch("common.enrichment.is_private_url", return_value=False)
-    @patch("common.enrichment.requests.head")
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network._resolve_via_gnewsdecoder", return_value="")
+    @patch("common.enrichment_network._decode_google_news_base64", return_value="")
+    @patch("common.enrichment_network.is_private_url", return_value=False)
+    @patch("common.enrichment_network.requests.head")
+    @patch("common.enrichment_network.requests.get")
     def test_empty_location_header_breaks_loop(self, mock_get, mock_head, _mock_priv, _mock_b64, _mock_gnews):  # noqa: PT019
         mock_resp = MagicMock()
         mock_resp.status_code = 301
@@ -2890,10 +2891,10 @@ class TestResolveGoogleNewsInnerRedirectHops:
         result = _enrich_mod._resolve_google_news_url_inner("https://news.google.com/rss/articles/CBMiEMPTY", timeout=1)
         assert result == ""
 
-    @patch("common.enrichment._resolve_via_gnewsdecoder", return_value="")
-    @patch("common.enrichment._decode_google_news_base64", return_value="")
-    @patch("common.enrichment.is_private_url", return_value=False)
-    @patch("common.enrichment.requests.head")
+    @patch("common.enrichment_network._resolve_via_gnewsdecoder", return_value="")
+    @patch("common.enrichment_network._decode_google_news_base64", return_value="")
+    @patch("common.enrichment_network.is_private_url", return_value=False)
+    @patch("common.enrichment_network.requests.head")
     def test_relative_redirect_resolved_to_absolute(self, mock_head, _mock_priv, _mock_b64, _mock_gnews):  # noqa: PT019
         # First hop: relative redirect
         hop1 = MagicMock()
@@ -2907,10 +2908,10 @@ class TestResolveGoogleNewsInnerRedirectHops:
         result = _enrich_mod._resolve_google_news_url_inner("https://news.google.com/rss/articles/CBMiREL", timeout=1)
         assert "real-news.com" in result
 
-    @patch("common.enrichment._resolve_via_gnewsdecoder", return_value="")
-    @patch("common.enrichment._decode_google_news_base64", return_value="")
-    @patch("common.enrichment.is_private_url", return_value=False)
-    @patch("common.enrichment.requests.head")
+    @patch("common.enrichment_network._resolve_via_gnewsdecoder", return_value="")
+    @patch("common.enrichment_network._decode_google_news_base64", return_value="")
+    @patch("common.enrichment_network.is_private_url", return_value=False)
+    @patch("common.enrichment_network.requests.head")
     def test_redirect_hop_to_private_ip_returns_empty(self, mock_head, _mock_priv, _mock_b64, _mock_gnews):  # noqa: PT019
         # Simulate redirect to a private IP (SSRF via redirect hop)
         mock_resp = MagicMock()
@@ -2918,7 +2919,7 @@ class TestResolveGoogleNewsInnerRedirectHops:
         mock_resp.headers = {"Location": "http://192.168.1.1/secret"}
         mock_head.return_value = mock_resp
         # Override is_private_url: allow google URL but block the redirected one
-        with patch("common.enrichment.is_private_url", side_effect=lambda u: "192.168" in u):
+        with patch("common.enrichment_network.is_private_url", side_effect=lambda u: "192.168" in u):
             result = _enrich_mod._resolve_google_news_url_inner(
                 "https://news.google.com/rss/articles/CBMiPRIV", timeout=1
             )
@@ -2932,16 +2933,16 @@ class TestResolveGoogleNewsInnerHeadFinalUrlSSRF:
     def setup_method(self):
         _enrich_mod._gnews_url_cache.clear()
 
-    @patch("common.enrichment._resolve_via_gnewsdecoder", return_value="")
-    @patch("common.enrichment._decode_google_news_base64", return_value="")
-    @patch("common.enrichment.requests.head")
+    @patch("common.enrichment_network._resolve_via_gnewsdecoder", return_value="")
+    @patch("common.enrichment_network._decode_google_news_base64", return_value="")
+    @patch("common.enrichment_network.requests.head")
     def test_final_url_private_ip_returns_empty(self, mock_head, _mock_b64, _mock_gnews):  # noqa: PT019
         mock_resp = MagicMock()
         mock_resp.status_code = 200
         mock_resp.url = "http://10.0.0.1/internal"
         mock_resp.headers = {}
         mock_head.return_value = mock_resp
-        with patch("common.enrichment.is_private_url", side_effect=lambda u: "10.0.0" in u):
+        with patch("common.enrichment_network.is_private_url", side_effect=lambda u: "10.0.0" in u):
             result = _enrich_mod._resolve_google_news_url_inner(
                 "https://news.google.com/rss/articles/CBMiFINAL", timeout=1
             )
@@ -2958,9 +2959,9 @@ class TestResolveGoogleNewsInnerGetSSRF:
     def setup_method(self):
         _enrich_mod._gnews_url_cache.clear()
 
-    @patch("common.enrichment._resolve_via_gnewsdecoder", return_value="")
-    @patch("common.enrichment._decode_google_news_base64", return_value="")
-    @patch("common.enrichment.requests.head")
+    @patch("common.enrichment_network._resolve_via_gnewsdecoder", return_value="")
+    @patch("common.enrichment_network._decode_google_news_base64", return_value="")
+    @patch("common.enrichment_network.requests.head")
     def test_get_fallback_ssrf_blocked(self, mock_head, _mock_b64, _mock_gnews):  # noqa: PT019
         # HEAD section: is_private_url returns False first (line 395) → HEAD proceeds
         # HEAD raises RequestException → caught at line 434 → falls to GET section
@@ -2970,16 +2971,16 @@ class TestResolveGoogleNewsInnerGetSSRF:
         mock_head.side_effect = req_mod.exceptions.ConnectionError("refused")
         # First call (line 395 in HEAD section): False → proceed
         # Second call (line 439 in GET section): True → SSRF block
-        with patch("common.enrichment.is_private_url", side_effect=[False, True]):
+        with patch("common.enrichment_network.is_private_url", side_effect=[False, True]):
             result = _enrich_mod._resolve_google_news_url_inner(
                 "https://news.google.com/rss/articles/CBMiGETSSRF", timeout=1
             )
         assert result == ""
 
-    @patch("common.enrichment._resolve_via_gnewsdecoder", return_value="")
-    @patch("common.enrichment._decode_google_news_base64", return_value="")
-    @patch("common.enrichment.requests.head")
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network._resolve_via_gnewsdecoder", return_value="")
+    @patch("common.enrichment_network._decode_google_news_base64", return_value="")
+    @patch("common.enrichment_network.requests.head")
+    @patch("common.enrichment_network.requests.get")
     def test_get_fallback_executed_after_head_exception(self, mock_get, mock_head, _mock_b64, _mock_gnews):  # noqa: PT019
         # HEAD throws → GET fallback is attempted; not SSRF-blocked → normal execution
         import requests as req_mod
@@ -2989,7 +2990,7 @@ class TestResolveGoogleNewsInnerGetSSRF:
         mock_get_resp.url = "https://real-news.com/article"
         mock_get_resp.text = ""
         mock_get.return_value = mock_get_resp
-        with patch("common.enrichment.is_private_url", return_value=False):
+        with patch("common.enrichment_network.is_private_url", return_value=False):
             result = _enrich_mod._resolve_google_news_url_inner(
                 "https://news.google.com/rss/articles/CBMiGETOK", timeout=1
             )
@@ -3006,10 +3007,10 @@ class TestResolveGoogleNewsInnerGetRespUrlSSRF:
     def setup_method(self):
         _enrich_mod._gnews_url_cache.clear()
 
-    @patch("common.enrichment._resolve_via_gnewsdecoder", return_value="")
-    @patch("common.enrichment._decode_google_news_base64", return_value="")
-    @patch("common.enrichment.requests.head")
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network._resolve_via_gnewsdecoder", return_value="")
+    @patch("common.enrichment_network._decode_google_news_base64", return_value="")
+    @patch("common.enrichment_network.requests.head")
+    @patch("common.enrichment_network.requests.get")
     def test_resp_url_private_returns_empty(self, mock_get, mock_head, _mock_b64, _mock_gnews):  # noqa: PT019
         import requests as req_mod
 
@@ -3018,7 +3019,7 @@ class TestResolveGoogleNewsInnerGetRespUrlSSRF:
         mock_get_resp.url = "http://172.16.0.1/internal"
         mock_get_resp.text = ""
         mock_get.return_value = mock_get_resp
-        with patch("common.enrichment.is_private_url", side_effect=lambda u: "172.16" in u):
+        with patch("common.enrichment_network.is_private_url", side_effect=lambda u: "172.16" in u):
             result = _enrich_mod._resolve_google_news_url_inner(
                 "https://news.google.com/rss/articles/CBMiGETRESP", timeout=1
             )
@@ -3047,7 +3048,7 @@ class TestResolveViaGnewsdecoder:
         }
         with (
             patch.dict("sys.modules", {"googlenewsdecoder": mock_gnews_mod}),
-            patch("common.enrichment.is_private_url", return_value=False),
+            patch("common.enrichment_network.is_private_url", return_value=False),
         ):
             result = _resolve_via_gnewsdecoder("https://news.google.com/rss/articles/CBMi")
         assert result == "https://real-article.com/news"
@@ -3061,7 +3062,7 @@ class TestResolveViaGnewsdecoder:
         }
         with (
             patch.dict("sys.modules", {"googlenewsdecoder": mock_gnews_mod}),
-            patch("common.enrichment.is_private_url", return_value=True),
+            patch("common.enrichment_network.is_private_url", return_value=True),
         ):
             result = _resolve_via_gnewsdecoder("https://news.google.com/rss/articles/CBMi")
         assert result == ""
@@ -3108,7 +3109,7 @@ class TestIsValidImageUrlLongGif:
 # ---------------------------------------------------------------------------
 class TestFetchOgImageSSRF:
     def test_private_url_returns_empty(self):
-        with patch("common.enrichment.is_private_url", return_value=True):
+        with patch("common.enrichment_network.is_private_url", return_value=True):
             result = _fetch_og_image("https://internal.corp/image")
         assert result == ""
 
@@ -3121,8 +3122,8 @@ class TestFetchOgImageSSRF:
 # Lines 560-561: _fetch_og_image — non-http og:image scheme rejected
 # ---------------------------------------------------------------------------
 class TestFetchOgImageNonHttpScheme:
-    @patch("common.enrichment.is_private_url", return_value=False)
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.is_private_url", return_value=False)
+    @patch("common.enrichment_network.requests.get")
     def test_relative_image_url_skipped_falls_through(self, mock_get, _mock_priv):  # noqa: PT019
         # og:image with relative URL → skipped → function returns ""
         html = (
@@ -3231,7 +3232,7 @@ class TestExtractViaBs4ArticleEmptyParagraphs:
 # ---------------------------------------------------------------------------
 class TestFetchPageMetadataSSRFBlock:
     def test_private_url_returns_empty_dict(self):
-        with patch("common.enrichment.is_private_url", return_value=True):
+        with patch("common.enrichment_network.is_private_url", return_value=True):
             result = fetch_page_metadata("https://internal.corp/article")
         assert result == {
             "description": "",
@@ -3246,8 +3247,8 @@ class TestFetchPageMetadataSSRFBlock:
 # Lines 864, 873, 882: readability/bs4/paragraph unrelated-to-title rejection
 # ---------------------------------------------------------------------------
 class TestFetchPageMetadataUnrelatedDescRejected:
-    @patch("common.enrichment.is_private_url", return_value=False)
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.is_private_url", return_value=False)
+    @patch("common.enrichment_network.requests.get")
     def test_readability_desc_unrelated_to_title_rejected(self, mock_get, _mock_priv):  # noqa: PT019
         # Produce a page where og: desc is empty but readability succeeds with unrelated text
         html = (
@@ -3267,10 +3268,10 @@ class TestFetchPageMetadataUnrelatedDescRejected:
         # readability is available; patch _extract_via_readability to return an unrelated desc
         with (
             patch(
-                "common.enrichment._extract_via_readability",
+                "common.enrichment_network._extract_via_readability",
                 return_value="Apple released a new MacBook with an M4 chip for creative professionals.",
             ),
-            patch("common.enrichment.sanitize_mojibake", side_effect=lambda x: x),
+            patch("common.enrichment_network.sanitize_mojibake", side_effect=lambda x: x),
         ):
             result = fetch_page_metadata(
                 "https://example.com/article",
@@ -3279,8 +3280,8 @@ class TestFetchPageMetadataUnrelatedDescRejected:
         # Unrelated readability desc should be rejected, result description stays ""
         assert result["description"] == ""
 
-    @patch("common.enrichment.is_private_url", return_value=False)
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.is_private_url", return_value=False)
+    @patch("common.enrichment_network.requests.get")
     def test_bs4_article_desc_unrelated_to_title_rejected(self, mock_get, _mock_priv):  # noqa: PT019
         html = (
             "<html><body>"
@@ -3294,12 +3295,12 @@ class TestFetchPageMetadataUnrelatedDescRejected:
         mock_get.return_value = mock_resp
 
         with (
-            patch("common.enrichment._extract_via_readability", return_value=""),
+            patch("common.enrichment_network._extract_via_readability", return_value=""),
             patch(
-                "common.enrichment._extract_via_bs4_article",
+                "common.enrichment_network._extract_via_bs4_article",
                 return_value="Apple released a new MacBook with M4 chip for creative professionals.",
             ),
-            patch("common.enrichment.sanitize_mojibake", side_effect=lambda x: x),
+            patch("common.enrichment_network.sanitize_mojibake", side_effect=lambda x: x),
         ):
             result = fetch_page_metadata(
                 "https://example.com/article",
@@ -3307,8 +3308,8 @@ class TestFetchPageMetadataUnrelatedDescRejected:
             )
         assert result["description"] == ""
 
-    @patch("common.enrichment.is_private_url", return_value=False)
-    @patch("common.enrichment.requests.get")
+    @patch("common.enrichment_network.is_private_url", return_value=False)
+    @patch("common.enrichment_network.requests.get")
     def test_paragraph_desc_unrelated_to_title_rejected(self, mock_get, _mock_priv):  # noqa: PT019
         html = (
             "<html><body><p>Apple released a new MacBook with M4 chip targeting professional users.</p></body></html>"
@@ -3319,13 +3320,13 @@ class TestFetchPageMetadataUnrelatedDescRejected:
         mock_get.return_value = mock_resp
 
         with (
-            patch("common.enrichment._extract_via_readability", return_value=""),
-            patch("common.enrichment._extract_via_bs4_article", return_value=""),
+            patch("common.enrichment_network._extract_via_readability", return_value=""),
+            patch("common.enrichment_network._extract_via_bs4_article", return_value=""),
             patch(
-                "common.enrichment._extract_via_paragraphs",
+                "common.enrichment_network._extract_via_paragraphs",
                 return_value="Apple released a new MacBook with M4 chip for creative professionals.",
             ),
-            patch("common.enrichment.sanitize_mojibake", side_effect=lambda x: x),
+            patch("common.enrichment_network.sanitize_mojibake", side_effect=lambda x: x),
         ):
             result = fetch_page_metadata(
                 "https://example.com/article",
@@ -3474,11 +3475,13 @@ class TestReadabilityFailOpen:
 
         # Force `from readability import Document` to raise ImportError.
         monkeypatch.setitem(sys.modules, "readability", None)
-        # Reset the process-wide once-only warning latch.
-        monkeypatch.setattr(_enrichment_mod, "_warned_readability_missing", False)
+        # Reset the process-wide once-only warning latch. The latch and logger
+        # now live in ``common.enrichment_network`` (the facade re-exports the
+        # extractor), so setattr/caplog must target the network module.
+        monkeypatch.setattr(_network_mod, "_warned_readability_missing", False)
 
         html = "<html><body><article><p>" + ("x" * 80) + "</p></article></body></html>"
-        with caplog.at_level(logging.WARNING, logger=_enrichment_mod.logger.name):
+        with caplog.at_level(logging.WARNING, logger=_network_mod.logger.name):
             first = _enrichment_mod._extract_via_readability(html, "https://example.com/a")
             second = _enrichment_mod._extract_via_readability(html, "https://example.com/b")
 

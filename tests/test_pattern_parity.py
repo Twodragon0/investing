@@ -3,7 +3,9 @@
 Pins the contract that ``scripts/common/summary_quality.ARTICLE_SPECIFIC_RE``
 is the **single source of truth** consumed by:
 
-- ``scripts/common/enrichment.py`` — accesses via ``_summary_quality_mod.ARTICLE_SPECIFIC_RE``
+- ``scripts/common/enrichment_network.py`` — accesses via ``_summary_quality_mod.ARTICLE_SPECIFIC_RE``
+  (``_is_low_information_fragment`` moved here from ``enrichment.py`` in the P2-A
+  facade split; the facade re-exports it for backward compat)
 - ``scripts/fix_post_descriptions.py`` — accesses via ``_summary_quality_mod.ARTICLE_SPECIFIC_RE``
 
 If a stale local ``_ARTICLE_SPECIFIC_RE = re.compile(...)`` is re-introduced
@@ -28,7 +30,7 @@ if str(_SCRIPTS_DIR) not in sys.path:
 
 import fix_post_descriptions as _fix_post_descriptions_mod  # noqa: E402
 
-from common import enrichment as _enrichment_mod  # noqa: E402
+from common import enrichment_network as _enrichment_network_mod  # noqa: E402
 from common import summary_quality as _summary_quality_mod  # noqa: E402
 
 # ---------------------------------------------------------------------------
@@ -89,10 +91,10 @@ _SAMPLE_IDS = [s[0] for s in SAMPLES]
 # 1. Identity: every consumer must point to the same compiled pattern object.
 # ---------------------------------------------------------------------------
 def test_enrichment_uses_canonical_pattern_object() -> None:
-    """enrichment.py's facade reference must resolve to the canonical object."""
-    facade_re = _enrichment_mod._summary_quality_mod.ARTICLE_SPECIFIC_RE
+    """enrichment_network.py's reference must resolve to the canonical object."""
+    facade_re = _enrichment_network_mod._summary_quality_mod.ARTICLE_SPECIFIC_RE
     assert facade_re is _summary_quality_mod.ARTICLE_SPECIFIC_RE, (
-        "enrichment.py references a different ARTICLE_SPECIFIC_RE object — "
+        "enrichment_network.py references a different ARTICLE_SPECIFIC_RE object — "
         "indicates a stale local _ARTICLE_SPECIFIC_RE was re-introduced."
     )
 
@@ -112,7 +114,7 @@ def test_fix_post_descriptions_uses_canonical_pattern_object() -> None:
 #    a tightly-scoped AST walk catches every real definition.
 # ---------------------------------------------------------------------------
 _CONSUMER_PATHS = [
-    _SCRIPTS_DIR / "common" / "enrichment.py",
+    _SCRIPTS_DIR / "common" / "enrichment_network.py",
     _SCRIPTS_DIR / "fix_post_descriptions.py",
 ]
 
@@ -156,7 +158,7 @@ def test_canonical_pattern_matches_sample(label: str, sample: str, expected: boo
 def test_consumers_match_in_parity_with_facade(label: str, sample: str, expected: bool) -> None:
     """Facade, enrichment, and fix_post_descriptions must agree on every sample."""
     via_facade = bool(_summary_quality_mod.ARTICLE_SPECIFIC_RE.search(sample))
-    via_enrichment = bool(_enrichment_mod._summary_quality_mod.ARTICLE_SPECIFIC_RE.search(sample))
+    via_enrichment = bool(_enrichment_network_mod._summary_quality_mod.ARTICLE_SPECIFIC_RE.search(sample))
     via_fix = bool(_fix_post_descriptions_mod._summary_quality_mod.ARTICLE_SPECIFIC_RE.search(sample))
     assert via_facade == via_enrichment == via_fix, (
         f"[{label}] parity broken — facade={via_facade}, enrichment={via_enrichment}, fix={via_fix}: {sample!r}"
