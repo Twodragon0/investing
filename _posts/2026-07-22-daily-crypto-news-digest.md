@@ -40,34 +40,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-22 - 암호화폐 뉴스 요
 <div class="stat-item"><div class="stat-value">비트코인</div><div class="stat-label">핫 키워드 (28회)</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐: 비트코인, 달러, ETF 중심 104건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 주목</li><li>📈 <strong>가격/시장</strong>: 달러 관련 29건</li><li>🔵 <strong>규제/정책</strong>: 규제 관련 31건</li><li>🔷 <strong>이더리움</strong>: XRP, 달러 주목</li></ul></div>
+
 ## 전체 뉴스 요약
 
-총 104건의 뉴스 중 **비트코인** 관련이 51건(49%)으로 압도적입니다. 비트코인이 오늘 시장의 핵심 화제입니다
-
-### 테마별 동향
-
-- **🟠 비트코인** (51건): 비트코인, 달러, ETF 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **📈 가격/시장** (29건): 달러, 암호화폐, ETF 가격 변동 (29건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🔵 규제/정책** (31건): 규제 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 주요 이슈
-
-- 비트코인은 ETF 유입이 회복됨에 따라 $66,000 이상으로 상승합니다. 이란 긴장 지속
-- 암호화폐 SWOT: T. Rowe Price는 최초의 활성 멀티 토큰 현물 암호화폐 출시 ETF
-- 암호화폐 시장 규제는 결승선에서 시간이 부족합니다
-- 외 17건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, ETF, 이더리움
-- **주요 출처**: Google News(20건), Google News EN(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-07-22.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-07-22.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **104건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
