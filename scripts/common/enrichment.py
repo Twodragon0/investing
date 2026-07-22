@@ -10,7 +10,6 @@ from typing import Any, Dict, Optional
 
 import requests
 
-from .config import get_verify_ssl
 from .encoding_guard import force_utf8_if_mislabelled, sanitize_mojibake
 from .enrichment_images import (  # noqa: F401  (re-exported for backward compat)
     _is_valid_image_url,
@@ -31,8 +30,13 @@ from .enrichment_network import (  # noqa: F401  (re-exported for backward compa
     _extract_via_bs4_article,
     _extract_via_paragraphs,
     _extract_via_readability,
+    _fetch_og_image,
+    _get_verify_ssl,
     _gnews_url_cache,
     _is_low_information_fragment,
+    _resolve_google_news_url,
+    _resolve_google_news_url_inner,
+    _resolve_via_gnewsdecoder,
     is_private_url,
 )
 from .enrichment_synthetic import (  # noqa: F401  (re-exported for backward compat)
@@ -130,243 +134,13 @@ def _split_synthetic_ko_suffix(desc: str) -> tuple:
     return desc, ""
 
 
-_VERIFY_SSL: Optional[object] = None
-
-
-def _get_verify_ssl():
-    global _VERIFY_SSL
-    if _VERIFY_SSL is None:
-        _VERIFY_SSL = get_verify_ssl()
-    return _VERIFY_SSL
-
-
-def _resolve_google_news_url(url: str, timeout: int = 8) -> str:
-    """Follow Google News redirect to get the real article URL.
-
-    Strategy:
-    1. Return cached result if available.
-    2. Try base64 decoding of the RSS article path (fastest, no network).
-    3. Follow HTTP redirects with ``requests.head`` (max 3 hops) then ``requests.get``.
-    4. Parse HTML for canonical/og:url if still on Google domain.
-
-    Handles both ``/rss/articles/CBMi...`` and ``/read/CBMi...`` URL formats.
-    """
-    if not url or "news.google.com" not in url:
-        return url
-
-    # Check cache first
-    if url in _gnews_url_cache:
-        return _gnews_url_cache[url]
-
-    resolved = _resolve_google_news_url_inner(url, timeout)
-    _gnews_url_cache[url] = resolved
-    return resolved
-
-
-def _resolve_google_news_url_inner(url: str, timeout: int = 8) -> str:
-    """Inner implementation for Google News URL resolution (uncached)."""
-    # 1. Try base64 decoding (no network call needed)
-    decoded = _decode_google_news_base64(url)
-    if decoded:
-        logger.debug("Google News base64 decoded: %s -> %s", url[:60], decoded[:80])
-        return decoded
-
-    # Normalize /read/ URLs to /rss/articles/ and retry base64
-    if "/read/" in url:
-        rss_url = url.replace("/read/", "/rss/articles/")
-        decoded = _decode_google_news_base64(rss_url)
-        if decoded:
-            logger.debug("Google News /read/ base64 decoded: %s -> %s", url[:60], decoded[:80])
-            return decoded
-
-    # 2. Try googlenewsdecoder (handles newer protobuf-encoded URLs)
-    resolved = _resolve_via_gnewsdecoder(url)
-    if resolved:
-        return resolved
-
-    # 3. Follow HTTP redirects via HEAD manually (max 5 hops), checking each hop
-    try:
-        if is_private_url(url):
-            logger.warning("SSRF blocked: %s resolves to private IP", url[:80])
-            return ""
-        current_url = url
-        max_hops = 5
-        for _hop in range(max_hops):
-            head_resp = requests.head(
-                current_url,
-                timeout=timeout,
-                allow_redirects=False,
-                headers={"User-Agent": _BROWSER_UA},
-                verify=_get_verify_ssl(),
-            )
-            if head_resp.status_code in (301, 302, 303, 307, 308):
-                location = head_resp.headers.get("Location", "")
-                if not location:
-                    break
-                # Resolve relative redirects
-                if not location.startswith("http"):
-                    from urllib.parse import urljoin
-
-                    location = urljoin(current_url, location)
-                if is_private_url(location):
-                    logger.warning("SSRF blocked (redirect hop): %s -> %s", current_url[:60], location[:80])
-                    return ""
-                if "news.google.com" not in location:
-                    logger.debug("Google News HEAD redirect: %s -> %s", url[:60], location[:80])
-                    return location
-                current_url = location
-            else:
-                # No redirect; use final URL if not on Google domain
-                final_url = head_resp.url or current_url
-                if final_url and "news.google.com" not in final_url:
-                    if is_private_url(final_url):
-                        logger.warning("SSRF blocked (redirect): %s -> %s", url[:60], final_url[:80])
-                        return ""
-                    logger.debug("Google News HEAD resolved: %s -> %s", url[:60], final_url[:80])
-                    return final_url
-                break
-    except requests.exceptions.RequestException:
-        pass
-
-    # 4. Full GET and parse HTML for canonical/og:url
-    try:
-        if is_private_url(url):
-            logger.warning("SSRF blocked: %s resolves to private IP", url[:80])
-            return ""
-        resp = requests.get(
-            url,
-            timeout=timeout,
-            allow_redirects=True,
-            headers={"User-Agent": _BROWSER_UA},
-            verify=_get_verify_ssl(),
-        )
-        if resp.url and "news.google.com" not in resp.url:
-            if is_private_url(resp.url):
-                logger.warning("SSRF blocked (redirect): %s -> %s", url[:60], resp.url[:80])
-                return ""
-            return resp.url
-        # Try to find canonical or data-url in HTML
-        for pattern in [
-            r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']([^"\']+)',
-            r'<meta[^>]+property=["\']og:url["\'][^>]+content=["\']([^"\']+)',
-            r'data-url=["\']([^"\']+)',
-            r'<a[^>]+data-redirect=["\']([^"\']+)',
-        ]:
-            m = re.search(pattern, resp.text[:20_000])
-            if m:
-                found = m.group(1)
-                if found and "news.google.com" not in found:
-                    return found
-    except requests.exceptions.RequestException:
-        pass
-    return ""
-
-
-def _resolve_via_gnewsdecoder(url: str) -> str:
-    """Resolve Google News URL using googlenewsdecoder library.
-
-    This handles the newer protobuf-encoded URLs (2024+) that cannot be
-    decoded via simple base64. Falls back gracefully if the library is
-    unavailable or decoding fails.
-    """
-    try:
-        from googlenewsdecoder import gnewsdecoder
-
-        result = gnewsdecoder(url)
-        if result and result.get("status") and result.get("decoded_url"):
-            decoded_url = result["decoded_url"]
-            if is_private_url(decoded_url):
-                logger.warning("SSRF blocked (gnewsdecoder): %s -> %s", url[:60], decoded_url[:80])
-                return ""
-            logger.debug("Google News gnewsdecoder: %s -> %s", url[:60], decoded_url[:80])
-            return decoded_url
-    except ImportError:
-        logger.debug("googlenewsdecoder not installed, skipping")
-    except Exception as exc:  # noqa: BLE001
-        logger.debug("gnewsdecoder failed for %s: %s", url[:60], exc)
-    return ""
-
-
 # Image URL validation (``match_bad_image_pattern``, ``_is_valid_image_url``,
 # ``match_logo_pattern``, ``is_logo_like_url`` + their pattern data) now lives
-# in ``common.enrichment_images`` and is re-exported at the top of this module
-# for backward compatibility.
-
-
-def _fetch_og_image(url: str, timeout: int = 8) -> str:
-    """Fetch an article image URL from a page's meta tags.
-
-    Searches in priority order: og:image, og:image:secure_url, og:image:url,
-    twitter:image, twitter:image:src, article:image, itemprop=image, and
-    <link rel="image_src">. Returns the first URL that passes both
-    _is_valid_image_url (rejects placeholders/trackers) and is_logo_like_url
-    (rejects site logos/favicons). Returns empty string on network failure,
-    SSRF block, or when no valid article image is found.
-    """
-    if not url:
-        return ""
-    try:
-        if is_private_url(url):
-            logger.warning("SSRF blocked: %s resolves to private IP", url[:80])
-            return ""
-        resp = requests.get(
-            url,
-            timeout=timeout,
-            headers={"User-Agent": _BROWSER_UA},
-            verify=_get_verify_ssl(),
-        )
-        resp.raise_for_status()
-        force_utf8_if_mislabelled(resp)
-        # Search first 60KB — modern sites often have bloated <head> with many
-        # script/link tags before the image meta tags.
-        head_html = resp.text[:60_000]
-
-        def _accept(img_url: str) -> bool:
-            img_url = img_url.strip()
-            if not img_url.startswith(("http://", "https://")):
-                return False
-            if not _is_valid_image_url(img_url):
-                return False
-            if is_logo_like_url(img_url):
-                return False
-            return True
-
-        for attr_pattern, _label in _IMAGE_META_PATTERNS:
-            # Try both attribute orders (property-first or content-first)
-            for regex in (
-                rf'<meta[^>]+{attr_pattern}[^>]+content=["\']([^"\']+)',
-                rf'<meta[^>]+content=["\']([^"\']+)["\'][^>]+{attr_pattern}',
-            ):
-                match = re.search(regex, head_html, re.IGNORECASE)
-                if match and _accept(match.group(1)):
-                    return match.group(1).strip()
-
-        # <link rel="image_src" href="..."> — Pinterest/legacy schema
-        link_match = re.search(
-            r'<link[^>]+rel=["\']image_src["\'][^>]+href=["\']([^"\']+)',
-            head_html,
-            re.IGNORECASE,
-        )
-        if link_match and _accept(link_match.group(1)):
-            return link_match.group(1).strip()
-
-        # JSON-LD schema.org image (modern publisher pattern)
-        for ld_match in re.finditer(
-            r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
-            head_html,
-            re.IGNORECASE | re.DOTALL,
-        ):
-            ld_text = ld_match.group(1)
-            for img_match in re.finditer(
-                r'"image"\s*:\s*(?:"([^"]+)"|\{[^{}]*"url"\s*:\s*"([^"]+)")',
-                ld_text,
-            ):
-                candidate = (img_match.group(1) or img_match.group(2) or "").strip()
-                if candidate and _accept(candidate):
-                    return candidate
-    except Exception as exc:
-        logger.debug("og:image fetch failed for %s: %s", url, exc)
-    return ""
+# in ``common.enrichment_images``. The Google News resolver chain
+# (``_resolve_google_news_url`` / ``_inner`` / ``_resolve_via_gnewsdecoder``),
+# the og:image fetcher (``_fetch_og_image``), and the SSL-verify helper
+# (``_get_verify_ssl``) now live in ``common.enrichment_network``. All are
+# re-exported at the top of this module for backward compatibility.
 
 
 def fetch_images_concurrent(
