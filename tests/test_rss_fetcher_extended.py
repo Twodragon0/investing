@@ -517,6 +517,13 @@ class TestResolveGoogleNewsUrl:
 class TestFetchRssFeedUncoveredBranches:
     """Covers remaining uncovered branches in fetch_rss_feed."""
 
+    # Both is_private_url patches are load-bearing (NOT redundant): the
+    # ``common.enrichment.is_private_url`` patch covers the lazy
+    # ``from .enrichment import is_private_url`` guard in fetch_rss_feed's
+    # worldmonitor-proxy branch (rss_fetcher.py:~177), which runs on the DECODED
+    # candidate URL; the ``common.rss_fetcher.is_private_url`` patch covers the
+    # per-candidate guard in the fetch loop. Dropping either makes the decoded/
+    # candidate URL hit the real resolver (real DNS → non-hermetic).
     @patch("common.enrichment.is_private_url", return_value=False)
     @patch("common.rss_fetcher.is_private_url", return_value=False)
     @patch("common.rss_fetcher.requests.get")
