@@ -1,23 +1,5 @@
 {
   "seen": {
-    "49578dce77f3f280673fee4d": "2026-06-23T22:54:05",
-    "5646b92cc4708ea5b9786761": "2026-06-23T22:54:05",
-    "327af12c2e5fef3b641059d6": "2026-06-23T22:54:05",
-    "dc2a4fd8f3c4124650202c92": "2026-06-23T22:54:05",
-    "9cd874b8047846f93e75b46e": "2026-06-23T22:54:05",
-    "c1ea7b196ee05492bd8283a8": "2026-06-23T22:54:05",
-    "20292cbb55dc402d0bf89d2c": "2026-06-23T22:54:05",
-    "479e3d45f683c59570774f33": "2026-06-23T22:54:05",
-    "d017180acac941e9dcc6da1e": "2026-06-23T22:54:05",
-    "b57f174e5bc9d875dc1f6816": "2026-06-23T22:54:05",
-    "336df3f54df3e6ebb6741014": "2026-06-23T22:54:05",
-    "066fbed0a11ce17b9d8f1171": "2026-06-23T22:54:05",
-    "5bc7d3d66f467f49396b1ac2": "2026-06-23T22:54:05",
-    "bcb342d09d411db127230093": "2026-06-23T22:54:05",
-    "652c531e757423390e5a066e": "2026-06-23T22:54:05",
-    "352872e0cb22c59208492515": "2026-06-23T22:54:05",
-    "311127dd9341eb289e6aa7d8": "2026-06-23T22:54:05",
-    "e50d9d1ffceb106a622dad17": "2026-06-23T22:54:05",
     "934c87dd0c62c17d0f83c290": "2026-06-24T22:54:55",
     "592dd735b0e187b8da74f6e4": "2026-06-24T22:54:55",
     "df502b005554fdc5aa64bc29": "2026-06-24T22:54:55",
@@ -586,7 +568,48 @@
     "2e2002d66d7d36edcf146c6a": "2026-07-22T23:30:52",
     "c89875e8fb99f5c7de819f55": "2026-07-22T23:30:52",
     "ccd0a6a525d5ee6bf66aa908": "2026-07-22T23:30:52",
-    "f00bfafaa17a141dedbcbc23": "2026-07-22T23:30:52"
+    "f00bfafaa17a141dedbcbc23": "2026-07-22T23:30:52",
+    "e5ea07f17819a53fd85e0917": "2026-07-23T23:29:41",
+    "466fd763e0562a8641841e71": "2026-07-23T23:29:41",
+    "e41b36a0548bb24c06675aeb": "2026-07-23T23:29:41",
+    "510bedbc0f98150d6d50fc2e": "2026-07-23T23:29:41",
+    "8eb2a2e30cabbf6cf84da539": "2026-07-23T23:29:41",
+    "b5f057619ff362905edf218b": "2026-07-23T23:29:41",
+    "8688917abb6e9e69f4ef98ca": "2026-07-23T23:29:41",
+    "a6a1f6ec3567038adeea3516": "2026-07-23T23:29:41",
+    "52f412fd69299ca8af9dabf1": "2026-07-23T23:29:41",
+    "14ed7e50d0ce247333edcbb2": "2026-07-23T23:29:41",
+    "b2da3c6808ca5a1ff2f41683": "2026-07-23T23:29:41",
+    "62032eb2625a866b753f144a": "2026-07-23T23:29:41",
+    "84be292af6a6b31e5b221ef5": "2026-07-23T23:29:41",
+    "27109e060df464675b600ce1": "2026-07-23T23:29:41",
+    "3fd49b7cb5cc4ad25f997262": "2026-07-23T23:29:41",
+    "24d9202552bbb1f1cbd7dde0": "2026-07-23T23:29:41",
+    "00579429b3f18c50db80358b": "2026-07-23T23:29:41",
+    "b0dc06617af9576ac112edfd": "2026-07-23T23:29:41",
+    "857e6a475adad48e43fd88ae": "2026-07-23T23:29:41",
+    "7b1fe5b688ad2b347c4ec5eb": "2026-07-23T23:29:41",
+    "499a29b3aefea4276f9710ce": "2026-07-23T23:29:41",
+    "fcffac7c5375341794ef2e35": "2026-07-23T23:29:41",
+    "53efca029109b6b88ad71081": "2026-07-23T23:29:41",
+    "1465ad9fc83d25bd56d86e47": "2026-07-23T23:29:41",
+    "b82f126d23435aaa7500a9d6": "2026-07-23T23:29:41",
+    "38b0ab8f1061e1039ddebb07": "2026-07-23T23:29:41",
+    "9719324f2dbbca80c998fcee": "2026-07-23T23:29:41",
+    "d808b1f8ba4a23c00a11604c": "2026-07-23T23:29:41",
+    "9a5f49439992a72f205cd100": "2026-07-23T23:29:41",
+    "899f55b283933eb535603861": "2026-07-23T23:29:41",
+    "61b54185d607653e83f41176": "2026-07-23T23:29:41",
+    "4e6a17e990c1062fae80e9a9": "2026-07-23T23:29:41",
+    "9cdd2b4dc75e5a39844d058e": "2026-07-23T23:29:41",
+    "27dd94868bd4e4a9fc402825": "2026-07-23T23:29:41",
+    "9dc1ad3b72b1ef688f44cc4e": "2026-07-23T23:29:41",
+    "b8d1952f99bf38d6cd242b0b": "2026-07-23T23:29:41",
+    "e93260b2a4b49cb536ee766b": "2026-07-23T23:29:41",
+    "0684b3cbfd1d95a36032266f": "2026-07-23T23:29:41",
+    "bfbbf0c663f8300b685d7571": "2026-07-23T23:29:41",
+    "4688f30ee58f1ee46347c7d1": "2026-07-23T23:29:41",
+    "a6f3ec0950a7a0130c3d8e7a": "2026-07-23T23:29:41"
   },
   "titles": [
     [
@@ -13064,6 +13087,170 @@
     [
       "정치인 거래정책 리포트 20260723",
       "2026-07-23"
+    ],
+    [
+      "美하원 의원 주식 매수 금지 법안 통과대통령부통령 대상 제외 아시아투데이",
+      "2026-07-24"
+    ],
+    [
+      "美 하원 의원 개별주식 거래 금지법 통과민주당 198명 반대 블루밍비트",
+      "2026-07-24"
+    ],
+    [
+      "new senator makes 700 stock trades ditches old oil company for magnificent seven",
+      "2026-07-24"
+    ],
+    [
+      "nancy pelosis family turned 30 million into 278 million trading stocks congress just voted to ban it during her final term",
+      "2026-07-24"
+    ],
+    [
+      "nancy pelosis family turned 30 million into 278 million trading stocks congress just voted to ban it during her final term 247 wall st",
+      "2026-07-24"
+    ],
+    [
+      "house passes vote on insider stock trading bill for congressional members newsnation",
+      "2026-07-24"
+    ],
+    [
+      "rep dan crenshaw violated the stock act again news of the united states notus",
+      "2026-07-24"
+    ],
+    [
+      "press release chris pappas highlights house passage of stock trading ban for members of congress quiver quantitative",
+      "2026-07-24"
+    ],
+    [
+      "house passes the stop insider trading actbut trump is exempt newsweek",
+      "2026-07-24"
+    ],
+    [
+      "press release house passes bryan steils stop insider trading act quiver quantitative",
+      "2026-07-24"
+    ],
+    [
+      "prairie operating co prop awards 100000 rsus to board director stock titan",
+      "2026-07-24"
+    ],
+    [
+      "prairie operating co prop cfo submits initial form 3 ownership report stock titan",
+      "2026-07-24"
+    ],
+    [
+      "purecycle technologies pct cfo amends insider stake to 132522 shares stock titan",
+      "2026-07-24"
+    ],
+    [
+      "prairie operating prop awards director 100000 rsus vesting in 2027 stock titan",
+      "2026-07-24"
+    ],
+    [
+      "travelers companies nyse trv cfo sells 14037 shares after option exercises stock titan",
+      "2026-07-24"
+    ],
+    [
+      "baycom corp bcml awards 75000 performance units with strict market vesting stock titan",
+      "2026-07-24"
+    ],
+    [
+      "prairie operating prop grants director 100000 rsus vesting in 2027 stock titan",
+      "2026-07-24"
+    ],
+    [
+      "prairie operating prop grants 840000 rsus and 560000 units to cfo stock titan",
+      "2026-07-24"
+    ],
+    [
+      "samsara inc iot ceo sanjit biswas logs 263900share sale stock titan",
+      "2026-07-24"
+    ],
+    [
+      "baycom corp bcml ceo gets 52500 performance stock units tied to 4026 stock titan",
+      "2026-07-24"
+    ],
+    [
+      "oncotelic therapeutics otlc awards 250 rsus tied to uplisting milestone stock titan",
+      "2026-07-24"
+    ],
+    [
+      "franklin resources nyse ben ceo awarded 229850 new shares stock titan",
+      "2026-07-24"
+    ],
+    [
+      "novonix ltd nvx director sharan burrow adds 31250 shares at 016 stock titan",
+      "2026-07-24"
+    ],
+    [
+      "pricesmart inc psmt director sherry bahrambeygui sells 800 company shares stock titan",
+      "2026-07-24"
+    ],
+    [
+      "us announces fresh raft of tariffs on overseas goods",
+      "2026-07-24"
+    ],
+    [
+      "수시 재산공개 신분 변동 고위공직자 1억 넘는 가상자산 보유도",
+      "2026-07-24"
+    ],
+    [
+      "2분기 gdp 37 성장8월 기준금리 또 올릴까",
+      "2026-07-24"
+    ],
+    [
+      "2분기 gdp 꺾이지 않은 성장세한은 추가 금리 인상 신호탄 아주경제",
+      "2026-07-24"
+    ],
+    [
+      "odds of federal reserve rate hike surge as oil prices rip higher",
+      "2026-07-24"
+    ],
+    [
+      "the fed is heading into one of its most unpredictable meetings in years",
+      "2026-07-24"
+    ],
+    [
+      "should you lock a mortgage rate before the july fed meeting pros and cons to consider now",
+      "2026-07-24"
+    ],
+    [
+      "rare 30 rate hike odds cloud fed decision next week financebiggocom",
+      "2026-07-24"
+    ],
+    [
+      "view ecb leaves rates on hold but keeps door open to further rate hikes",
+      "2026-07-24"
+    ],
+    [
+      "european central bank holds interest rates at 225 after debating rise financial times",
+      "2026-07-24"
+    ],
+    [
+      "ecb press conference lagarde speaks on policy outlook after leaving key rates unchanged fxstreet",
+      "2026-07-24"
+    ],
+    [
+      "ecb keeps interest rates on hold avoids rattling markets ing think",
+      "2026-07-24"
+    ],
+    [
+      "ecb keeps rates unchanged but september hike firmly in play",
+      "2026-07-24"
+    ],
+    [
+      "euro holds its ground after ecb pauses rates but september remains wide open",
+      "2026-07-24"
+    ],
+    [
+      "the ecb leaves interest rates unchanged the decision on a rate rise is postponed until september eunews",
+      "2026-07-24"
+    ],
+    [
+      "ecb is set to pause rate hikes to gauge war risk",
+      "2026-07-24"
+    ],
+    [
+      "정치인 거래정책 리포트 20260724",
+      "2026-07-24"
     ]
   ],
   "seen_urls": {}
