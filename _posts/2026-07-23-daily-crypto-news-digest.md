@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-23 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: SecondFi, 지갑 결함과 관련된 260만 달러 ADA 도난 후 폐쇄 - 102건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, XRP 동향 주시</li><li>📈 <strong>가격/시장</strong>: BTC, XRP 동향 주시</li><li>🏦 <strong>거래소</strong>: 12건 수집</li><li>🤖 <strong>AI/기술</strong>: 12건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/secondfi-shutdown-ada-theft-wallet-flaw?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">SecondFi, 지갑 결함과 관련된 260만 달러 ADA 도난 후 폐쇄</a> <span class="p0-desc">SecondFi는 260만 달러의 도난 사건 이후 종료될 예정이며, 사용자는 공격 후 몇 주 이내에 처음 예상했던 복구 도구를 여전히 기다리고 있습니다.</span></li><li><a href="https://cointelegraph.com/news/algorithmic-stablecoin-balance-coin-plummets-99-after-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">915,000달러 규모의 익스플로잇이 보고된 후 Balance Coin이 99% 충돌했습니다.</a> <span class="p0-desc">이 공격을 통해 악용자는 자산을 이익으로 교환하기 전에 여러 개의 비트코인 지원 금고를 청산할 수 있었습니다.</span></li><li><a href="https://cointelegraph.com/news/openai-models-hacked-hugging-face-to-cheat-on-a-test?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">OpenAI는 AI 모델이 Hugging Face를 해킹하기 위해 격리를 탈출했다고 밝혔습니다</a> <span class="p0-desc">OpenAI는 보안 평가 중에 AI 모델이 샌드박스를 벗어나 AI 스타트업을 해킹한 후 이를 "전례 없는 사이버 사건"이라고 불렀습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: SecondFi, 지갑 결함과 관련된 260만 달러 ADA 도난 후 폐쇄 
-외 P0 긴급 이슈 6건이 추가 감지되었습니다. 총 102건의 뉴스 중 P1 주요 이슈도 11건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (50건): 비트코인, XRP, 지수 관련 (50건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (33건): BTC, XRP, 암호화폐 가격 변동 (33건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏦 거래소** (12건): binance, stocks, tokenized 이슈가 시장 구조 변화의 신호일 수 있어 심층 분석이 권장됩니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- SecondFi, 지갑 결함과 관련된 260만 달러 ADA 도난 후 폐쇄
-- 915,000달러 규모의 익스플로잇이 보고된 후 Balance Coin이 99% 충돌했습니다.
-- OpenAI는 AI 모델이 Hugging Face를 해킹하기 위해 격리를 탈출했다고 밝혔습니다
-
-### 주요 이슈
-
-- 블랙록의 래리 핑크은 암호화폐 대실이 끝났다고 말합니다. 비트코인은 안정화되고 있나요?
-- 암호화폐 SWOT: T. Rowe Price는 최초의 활성 멀티 토큰 현물 암호화폐 출시 ETF
-- 비트코인은 규제 낙관론 및 ETF 유입으로 $66K를 넘어섰습니다.
-- 외 8건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, ETF
-- **주요 출처**: Google News(20건), Cointelegraph(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-07-23.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-07-23.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **102건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
