@@ -15,6 +15,9 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from common.markdown_utils import sanitize_summary_bullet  # noqa: E402
+
 # ---------------------------------------------------------------------------
 # Constants
 # ---------------------------------------------------------------------------
@@ -722,6 +725,57 @@ def fix_translation_artifacts(body: str) -> tuple[str, bool]:
 # ---------------------------------------------------------------------------
 
 
+def sanitize_summary_bullets(body: str) -> tuple[str, bool]:
+    """Clean plain-text summary bullet lines via ``sanitize_summary_bullet``.
+
+    Drops non-prose stat dumps / meta-commentary bullets and collapses
+    duplicated text. Conservative: bullets containing a markdown link or
+    table syntax are left untouched so source links are never corrupted.
+    """
+    changed = False
+    out_lines: list[str] = []
+    for line in body.split("\n"):
+        match = re.match(r"^(\s*)-\s+(.*\S)\s*$", line)
+        if not match:
+            out_lines.append(line)
+            continue
+        indent, text = match.group(1), match.group(2)
+        # Skip tables and code-span/aligned content (backtick spans wrap ASCII
+        # bar charts whose spacing is meaningful).
+        if "|" in text or "`" in text:
+            out_lines.append(line)
+            continue
+        # Weekly-digest format "[title](url) -- <summary>": clean only the
+        # summary tail, preserving the link prefix. If the summary is non-prose
+        # (stat dump/meta), drop just the tail and keep the bare link.
+        if " -- " in text and "](" in text:
+            prefix, summary = text.rsplit(" -- ", 1)
+            cleaned = sanitize_summary_bullet(summary)
+            if cleaned == summary:
+                out_lines.append(line)
+            elif cleaned:
+                changed = True
+                out_lines.append(f"{indent}- {prefix} -- {cleaned}")
+            else:
+                changed = True
+                out_lines.append(f"{indent}- {prefix}")
+            continue
+        # Other linked bullets: leave untouched to avoid corrupting links.
+        if "](" in text:
+            out_lines.append(line)
+            continue
+        cleaned = sanitize_summary_bullet(text)
+        if not cleaned:
+            changed = True  # drop non-prose / meta bullet entirely
+            continue
+        if cleaned != text:
+            changed = True
+            out_lines.append(f"{indent}- {cleaned}")
+        else:
+            out_lines.append(line)
+    return "\n".join(out_lines), changed
+
+
 def process_post(filepath: Path, dry_run: bool = False) -> dict[str, int]:
     """Process a single post file. Returns dict of improvement counts."""
     content = filepath.read_text(encoding="utf-8")
@@ -775,6 +829,10 @@ def process_post(filepath: Path, dry_run: bool = False) -> dict[str, int]:
     body, did_change = remove_duplicate_articles_in_themes(body)
     if did_change:
         stats["theme_summary_dedup"] = 1
+
+    body, did_change = sanitize_summary_bullets(body)
+    if did_change:
+        stats["summary_bullets_sanitized"] = 1
 
     body, did_change = sync_summary_total_count(body)
     if did_change:
@@ -887,6 +945,7 @@ def main() -> None:
             "empty_sections_cleaned": "빈 데이터 섹션 정리",
             "keyword_none_cleaned": "키워드 None 아티팩트 정리",
             "theme_summary_dedup": "테마별 중복 요약 제거",
+            "summary_bullets_sanitized": "요약 bullet 정제 (통계나열/메타/중복 제거)",
             "summary_total_synced": "요약 수집 건수 동기화",
             "markdown_fixed": "마크다운 링크/오버플로 아티팩트 정리",
             "blank_lines_collapsed": "불필요 빈 줄 축소",
