@@ -1,32 +1,5 @@
 {
   "seen": {
-    "934c87dd0c62c17d0f83c290": "2026-06-24T22:54:55",
-    "592dd735b0e187b8da74f6e4": "2026-06-24T22:54:55",
-    "df502b005554fdc5aa64bc29": "2026-06-24T22:54:55",
-    "81a9b259e61324d5f2bd94f6": "2026-06-24T22:54:55",
-    "668f62cab57f685568b73c35": "2026-06-24T22:54:55",
-    "4996ffc64a7a664840821f66": "2026-06-24T22:54:55",
-    "eb19da5d350aefa443a5eb08": "2026-06-24T22:54:55",
-    "3e24db1904ae8eb9e1c3ded2": "2026-06-24T22:54:55",
-    "3f1cfe1db1aa40ee6caa5298": "2026-06-24T22:54:55",
-    "fa6294f15e52571050e718a1": "2026-06-24T22:54:55",
-    "536f22a1f7142bdbf1c7be9e": "2026-06-24T22:54:55",
-    "cb094f3507e9ff20f7bc97c6": "2026-06-24T22:54:55",
-    "2c40ee0396d59f4675191230": "2026-06-24T22:54:55",
-    "cea0aceb278fd81203feb35b": "2026-06-24T22:54:55",
-    "c0f6b38377473554d7b9a994": "2026-06-24T22:54:55",
-    "36322068fc9a884e6fe0ec51": "2026-06-24T22:54:55",
-    "ea0c6cf28ac70fafd7738694": "2026-06-24T22:54:55",
-    "7cd2895aab29f31c32626601": "2026-06-24T22:54:55",
-    "c58def965d222f1a94c25ca3": "2026-06-24T22:54:55",
-    "04e87998e88247a7cf5084e6": "2026-06-24T22:54:55",
-    "cb797c05307deb23d87b1e3b": "2026-06-24T22:54:55",
-    "4e4d1fff9d70de2ad5d81781": "2026-06-24T22:54:55",
-    "1b85ca0c2955f1bf053c0318": "2026-06-24T22:54:55",
-    "e7682420be6e5cd1dfd1be69": "2026-06-24T22:54:55",
-    "f82e560dfa628b4b12fd12bb": "2026-06-24T22:54:55",
-    "70ca266e24f73de1618b43ce": "2026-06-24T22:54:55",
-    "5353c28eccaadd488e4d46c3": "2026-06-24T22:54:55",
     "65e36beec89ac58b25a3f553": "2026-06-25T23:00:33",
     "ea97cc8008ef77d2a8291bf7": "2026-06-25T23:00:33",
     "d087f373e43331be7962e5a3": "2026-06-25T23:00:33",
@@ -609,7 +582,45 @@
     "0684b3cbfd1d95a36032266f": "2026-07-23T23:29:41",
     "bfbbf0c663f8300b685d7571": "2026-07-23T23:29:41",
     "4688f30ee58f1ee46347c7d1": "2026-07-23T23:29:41",
-    "a6f3ec0950a7a0130c3d8e7a": "2026-07-23T23:29:41"
+    "a6f3ec0950a7a0130c3d8e7a": "2026-07-23T23:29:41",
+    "4a45dad32feb38a461591615": "2026-07-24T23:33:10",
+    "46797c0dfd71db452d12984b": "2026-07-24T23:33:10",
+    "f195d1def5a18c516001d81a": "2026-07-24T23:33:10",
+    "3b15ae006a162af73e792b69": "2026-07-24T23:33:10",
+    "c88bea7b4379ce3d6c0e3605": "2026-07-24T23:33:10",
+    "e4b6dd74db0797ceb41db4b9": "2026-07-24T23:33:10",
+    "1e2f75277c4dc9dc32bb38f3": "2026-07-24T23:33:10",
+    "05c2bc3aceff15fac1890ec2": "2026-07-24T23:33:10",
+    "cd3813427333b87f4512bf11": "2026-07-24T23:33:10",
+    "6103148e847d5f2ab535e477": "2026-07-24T23:33:10",
+    "519a01d2198a29eb98a73d8c": "2026-07-24T23:33:10",
+    "51b92708c551d871014b2cbe": "2026-07-24T23:33:10",
+    "09332b91c76c6616f971d319": "2026-07-24T23:33:10",
+    "846553086bf877468f11476a": "2026-07-24T23:33:10",
+    "97e474eb9490b049c671ca08": "2026-07-24T23:33:10",
+    "bf63ab8cab0ecab73364adff": "2026-07-24T23:33:10",
+    "f361120b34d0c09592dc610c": "2026-07-24T23:33:10",
+    "7482ca76676861468da9e239": "2026-07-24T23:33:10",
+    "481c4e9b36de4e90d489ff3b": "2026-07-24T23:33:10",
+    "dc564e1c804e8dfe181ce42f": "2026-07-24T23:33:10",
+    "a0cac06e863fd53635358b13": "2026-07-24T23:33:10",
+    "1d37e623a9155a228e9fd044": "2026-07-24T23:33:10",
+    "99465565df893d709eb5c04c": "2026-07-24T23:33:10",
+    "47447c029b90ca0e9562bb2c": "2026-07-24T23:33:10",
+    "3b32151fdd997e591f6178d9": "2026-07-24T23:33:10",
+    "4891c68d8c07f6e5e18efbe6": "2026-07-24T23:33:10",
+    "ac39815644f442b46cfca511": "2026-07-24T23:33:10",
+    "5d1b2b5943b5c5f47e34ac6e": "2026-07-24T23:33:10",
+    "ea908032b686fa220328a129": "2026-07-24T23:33:10",
+    "4a10c7c1949c268c85a2054e": "2026-07-24T23:33:10",
+    "c3b565599519bcdc1bb7ee63": "2026-07-24T23:33:10",
+    "36504d0167890485ff905e43": "2026-07-24T23:33:10",
+    "5cf3b80708517d3cefcdacfc": "2026-07-24T23:33:10",
+    "efabaa688c28db5bddbba3a4": "2026-07-24T23:33:10",
+    "2bcc1eeac405844c84374bc0": "2026-07-24T23:33:10",
+    "3742f97e96b8df1d8a035791": "2026-07-24T23:33:10",
+    "1fc26c7521387b469d8f1ecf": "2026-07-24T23:33:10",
+    "40b2e0de121ea2c0a35111f1": "2026-07-24T23:33:10"
   },
   "titles": [
     [
@@ -13251,6 +13262,158 @@
     [
       "정치인 거래정책 리포트 20260724",
       "2026-07-24"
+    ],
+    [
+      "sen alan armstrong violated stock act with 700 tardy stock disclosures news of the united states notus",
+      "2026-07-25"
+    ],
+    [
+      "의원 주식 금지라더니 트럼프는 예외美서 논란 확산",
+      "2026-07-25"
+    ],
+    [
+      "house passes stock trading ban for congress members with bipartisan support wpde",
+      "2026-07-25"
+    ],
+    [
+      "nancy pelosis latest stock trade is under water finbold",
+      "2026-07-25"
+    ],
+    [
+      "opinion 124 the congressional stock trading meme",
+      "2026-07-25"
+    ],
+    [
+      "millionaires could dominate texas crop of new congress members",
+      "2026-07-25"
+    ],
+    [
+      "travelers companies nyse trv exec sells 1525 shares postoption exercise stock titan",
+      "2026-07-25"
+    ],
+    [
+      "rapid micro biosystems director exercises options for 3508 shares 124 rpid insider trading stock titan",
+      "2026-07-25"
+    ],
+    [
+      "planet labs pbc pl cfo sells 110028 shares under rule 10b51 plan stock titan",
+      "2026-07-25"
+    ],
+    [
+      "hilltop holdings inc nyse hth grants director 1180 shares as annual pay stock titan",
+      "2026-07-25"
+    ],
+    [
+      "hilltop holdings inc hth awards director stock compensation stock titan",
+      "2026-07-25"
+    ],
+    [
+      "hilltop holdings nyse hth director gets 1180share award stock titan",
+      "2026-07-25"
+    ],
+    [
+      "onespaworld holdings nasdaq osw awards director 8282 restricted stock units stock titan",
+      "2026-07-25"
+    ],
+    [
+      "onespaworld osw director awarded 8956 rsus and reports trust holdings stock titan",
+      "2026-07-25"
+    ],
+    [
+      "sm energy co nyse sm awards 7288 restricted stock units to vp stock titan",
+      "2026-07-25"
+    ],
+    [
+      "savara inc nasdaq svra grants cfo 70000 options 35000 rsus stock titan",
+      "2026-07-25"
+    ],
+    [
+      "heartbeam inc beat awards 167760 rsus to cfo as 2025 bonus stock titan",
+      "2026-07-25"
+    ],
+    [
+      "hilltop holdings nyse hth awards director 1180 common stock shares stock titan",
+      "2026-07-25"
+    ],
+    [
+      "block inc nyse xyz director reports 18000share rule 10b51 sale stock titan",
+      "2026-07-25"
+    ],
+    [
+      "first interstate bancsystem fibk awards 1806 rsus to director ritter stock titan",
+      "2026-07-25"
+    ],
+    [
+      "rapid micro biosystems rpid ceo exercises stock options and boosts holdings stock titan",
+      "2026-07-25"
+    ],
+    [
+      "sec form 4 unknown",
+      "2026-07-25"
+    ],
+    [
+      "trump imposes chaotic trade system in his third round of tariffs el país english",
+      "2026-07-25"
+    ],
+    [
+      "us hits dozens of countries with new wave of tariffs",
+      "2026-07-25"
+    ],
+    [
+      "trump revives global tariffs under new legal authority gcaptain",
+      "2026-07-25"
+    ],
+    [
+      "canadian bans on us alcohol clearly working and frustrating for trump former adviser says bnn bloomberg",
+      "2026-07-25"
+    ],
+    [
+      "trump imposes new tariffs of between 10 and 125 on 60 countries to preserve his trade wall el país english",
+      "2026-07-25"
+    ],
+    [
+      "us imposes tariffs over forced labor before global duty ends supply chain dive",
+      "2026-07-25"
+    ],
+    [
+      "canadaus trade war a timeline of trumps tariffs and canadas response unpublishedca",
+      "2026-07-25"
+    ],
+    [
+      "nigeria affected as trump hits countries with 125 tariff over forced labour imports thecable",
+      "2026-07-25"
+    ],
+    [
+      "will the federal reserve raise interest rates here is what experts predict for julys meeting",
+      "2026-07-25"
+    ],
+    [
+      "what to watch for at next weeks federal reserve meeting investopedia",
+      "2026-07-25"
+    ],
+    [
+      "fed chair an enigma why july interest rate move is hard to predict usa today",
+      "2026-07-25"
+    ],
+    [
+      "interest rate predictions for the next 5 years 20262030 norada real estate investments",
+      "2026-07-25"
+    ],
+    [
+      "week ahead for fx bonds fed decision awaited middle east events eyed",
+      "2026-07-25"
+    ],
+    [
+      "jobless claims fall to 57year low pushing fed ratehike odds past oneinthree tech times",
+      "2026-07-25"
+    ],
+    [
+      "traders see september rate hike as european central bank mulls energy price spike",
+      "2026-07-25"
+    ],
+    [
+      "정치인 거래정책 리포트 20260725",
+      "2026-07-25"
     ]
   ],
   "seen_urls": {}
