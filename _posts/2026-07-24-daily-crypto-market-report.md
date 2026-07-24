@@ -18,16 +18,15 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-07-24 | 시총 $2.29T (-
 
 ## 오늘의 브리핑
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-cmc-2026-07-24.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-cmc-2026-07-24.png' | relative_url }}" alt="시장 브리핑 카드" loading="lazy" decoding="async"></picture>
-
 
 ## 한눈에 보기
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">31</div><div class="stat-label">공포/탐욕 (Fear)</div></div><div class="stat-item"><div class="stat-value">$2.29T</div><div class="stat-label">총 시가총액</div></div><div class="stat-item"><div class="stat-value">56.7%</div><div class="stat-label">BTC 도미넌스</div></div></div>
 
+
 ## 전체 뉴스 요약
 
-오늘 시가총액 상위 **0개** 코인을 기준으로 시장을 분석했습니다. 전체 시가총액은 **$2.29T**으로 전일 대비 -1.68% 변동했으며, BTC 도미넌스 56.7%로 비트코인 중심 자금 흐름이 지속입니다. 공포/탐욕 지수는 **31** (Fear)으로, 공포 구간으로, 보수적 접근이 권장되는 시점입니다.
+- 오늘의 시장 인사이트:
 
 ## 시장 인사이트
 
