@@ -7,34 +7,48 @@ title = "investing-dragon gitleaks config"
 useDefault = true
 
 # ---------------------------------------------------------------------------
-# Allowlist: linkedin-client-secret false positive on translation cache.
+# Allowlist: false positives on auto-generated, public-data-only files.
 # ---------------------------------------------------------------------------
-# Why:
-#   The linkedin-client-secret rule is a low-entropy 16-char alphanumeric
-#   pattern that fires on any token containing "LinkedIn" plus nearby
-#   characters. _state/translation_cache.json holds MT translations of news
-#   headlines that frequently reference LinkedIn (e.g., LinkedIn posts about
-#   bitcoin / KOSPI / IPO). These are not credentials.
+# Two distinct false positives, both on files that only ever contain public,
+# machine-generated content (never credentials):
 #
-# Why narrow (rule + path):
-#   - Path-only allowlist on the whole _state/ tree would drop scanning of an
-#     attacker-influenced surface (collectors ingest external RSS / API bodies
-#     into _state/translation_cache.json).
-#   - Rule-only allowlist would unsuppress real linkedin-client-secret leaks
-#     if they ever land in a different file.
-#   The two-condition allowlist (targetRules + paths) fires only when BOTH
-#   match — narrowest viable suppression. All other ~100 gitleaks rules stay
-#   active on _state/.
+#   1. linkedin-client-secret on _state/translation_cache.json
+#      A low-entropy 16-char alphanumeric pattern that fires on any token
+#      containing "LinkedIn" plus nearby characters. The translation cache
+#      holds MT translations of news headlines that frequently reference
+#      LinkedIn (e.g., posts about bitcoin / KOSPI / IPO).
 #
-# v8 compatibility:
-#   Tested locally with gitleaks v8.24.2 (CI) and v8.30.1. Uses the global
-#   [allowlist] (singular) form which is the most portable across v8.x and
-#   honors `targetRules` filtering since v8.18.
+#   2. generic-api-key on _posts/*.md
+#      Auto-generated news digests embed news-source thumbnail images as
+#      <img src="https://image-api.prod.kitco.com/...&token=<sig>">. The
+#      `token=` query param is a public image-signing token in the source
+#      URL, not a credential. generic-api-key flags the `token=` assignment.
 #
-# Verify:
+# Scope + tradeoff (single global [allowlist] is the only v8.24.2-compatible
+# form — see below):
+#   - targetRules gates suppression to exactly these two low-precision rules;
+#     all other ~100 rules (AWS, GCP, Slack, GitHub PAT, ...) stay fully active
+#     everywhere, including on both paths listed here.
+#   - paths conditions are OR'd within the single allowlist, so each of the two
+#     rules is technically suppressed on both paths (not just its own). This is
+#     an accepted, negligible loosening: both files are auto-generated from
+#     public RSS/API data and never carry real secrets. Per-rule path scoping
+#     would require [[rules.allowlists]] blocks, which cannot attach to
+#     useDefault rules without redefining them.
+#
+# v8 compatibility (IMPORTANT):
+#   Must use the singular global [allowlist] with targetRules. The plural
+#   [[allowlists]] form is BROKEN in gitleaks v8.24.2 (the CI-pinned version):
+#   its targetRules filtering regresses and it reported 817 findings in an
+#   empirical test on this repo. Verified working with v8.24.2 (CI) here.
+#
+# Verify (v8.24.2 = CI version):
 #   gitleaks detect --source . --config .gitleaks.toml --no-banner --redact
 #   → expect "no leaks found".
 [allowlist]
-description = "linkedin-client-secret false positive on translated headlines that quote LinkedIn"
-targetRules = ["linkedin-client-secret"]
-paths = ['''_state/translation_cache\.json''']
+description = "false positives on auto-generated public data (translation cache + post CDN image tokens)"
+targetRules = ["linkedin-client-secret", "generic-api-key"]
+paths = [
+  '''_state/translation_cache\.json''',
+  '''_posts/.*\.md''',
+]
