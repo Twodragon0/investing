@@ -1,27 +1,5 @@
 {
   "seen": {
-    "65e36beec89ac58b25a3f553": "2026-06-25T23:00:33",
-    "ea97cc8008ef77d2a8291bf7": "2026-06-25T23:00:33",
-    "d087f373e43331be7962e5a3": "2026-06-25T23:00:33",
-    "8e5a6e8f94677d507119120f": "2026-06-25T23:00:33",
-    "f2a804d116a00cdd3597315c": "2026-06-25T23:00:33",
-    "0bcddd5a554f868b95363abd": "2026-06-25T23:00:33",
-    "d4e3679b667f0d0de1fb24b4": "2026-06-25T23:00:33",
-    "cd02d39d76197683e0820f0c": "2026-06-25T23:00:33",
-    "3db6e978f4ee5d18b9673639": "2026-06-25T23:00:33",
-    "aed5520a1db21ba4e03eca14": "2026-06-25T23:00:33",
-    "20a957a3a799c63dd56ebd12": "2026-06-25T23:00:33",
-    "ea983d17d75027a7cd8df3bc": "2026-06-25T23:00:33",
-    "778ba3c7ad56ff983a0913c5": "2026-06-25T23:00:33",
-    "d35d39ff2dd9053c962d9ff7": "2026-06-25T23:00:33",
-    "8ee9cfe4c011087a32e477fa": "2026-06-25T23:00:33",
-    "9c55e86bfadaa3d74f52de23": "2026-06-25T23:00:33",
-    "0082c9291b53d4421b911cbe": "2026-06-25T23:00:33",
-    "db0810d00e1536874b85d028": "2026-06-25T23:00:33",
-    "e0e18d55248fc1d4300cd4a8": "2026-06-25T23:00:33",
-    "c949d51fc671e222f675b4a9": "2026-06-25T23:00:33",
-    "2d826c8e903bf11ccc70722a": "2026-06-25T23:00:33",
-    "68d5e6ae5238813d1290c802": "2026-06-25T23:00:33",
     "8ccf61cce18c36c58877bf02": "2026-06-26T22:53:58",
     "67885dc87dc2103ea11d2fe8": "2026-06-26T22:53:58",
     "de7f8979dfe6ef0fedd4e24f": "2026-06-26T22:53:58",
@@ -620,7 +598,19 @@
     "2bcc1eeac405844c84374bc0": "2026-07-24T23:33:10",
     "3742f97e96b8df1d8a035791": "2026-07-24T23:33:10",
     "1fc26c7521387b469d8f1ecf": "2026-07-24T23:33:10",
-    "40b2e0de121ea2c0a35111f1": "2026-07-24T23:33:10"
+    "40b2e0de121ea2c0a35111f1": "2026-07-24T23:33:10",
+    "e5fa2fa6068d85b442372057": "2026-07-25T23:30:12",
+    "85b9e8b96601efe5e481ab69": "2026-07-25T23:30:12",
+    "05639ccb2caaec96804f64bb": "2026-07-25T23:30:12",
+    "41b0dcf31298e72ab81e7f6d": "2026-07-25T23:30:12",
+    "1c41600542cb58cfa8db04cd": "2026-07-25T23:30:12",
+    "e0bef94f1aa568cbcd75a9c5": "2026-07-25T23:30:12",
+    "f78a5d40818ecac34e58e151": "2026-07-25T23:30:12",
+    "5e05f45c4fc142b0baab6949": "2026-07-25T23:30:12",
+    "09119e98839c1920d4a3b627": "2026-07-25T23:30:12",
+    "e63e875eae16397646e53d70": "2026-07-25T23:30:12",
+    "e0c738def3f37c15bbe72825": "2026-07-25T23:30:12",
+    "91e8618fee5da916202d8711": "2026-07-25T23:30:12"
   },
   "titles": [
     [
@@ -13414,6 +13404,54 @@
     [
       "정치인 거래정책 리포트 20260725",
       "2026-07-25"
+    ],
+    [
+      "미 하원 의원 겨냥 내부정보 활용 주식거래 규제 법안 통과",
+      "2026-07-26"
+    ],
+    [
+      "pelosi votes no on house stock ban that actually protects her trades",
+      "2026-07-26"
+    ],
+    [
+      "loop industries inc loop director receives 140350 rsus with timebased vest stock titan",
+      "2026-07-26"
+    ],
+    [
+      "cytomed therapeutics gdtc director adds 200000 shares in july buys stock titan",
+      "2026-07-26"
+    ],
+    [
+      "capital v llc sells 37500 viant technology dsp shares in 10b51 plan stock titan",
+      "2026-07-26"
+    ],
+    [
+      "sm energy co nyse sm awards 42752 rsus and 7520 shares to evp stock titan",
+      "2026-07-26"
+    ],
+    [
+      "investors increase bets on federal reserve rate rise after oil price surge financial times",
+      "2026-07-26"
+    ],
+    [
+      "investors are in the dark about the feds decision this week and thats just how warsh wants it",
+      "2026-07-26"
+    ],
+    [
+      "the probability of a july fed rate hike has tripled over the last week heres why",
+      "2026-07-26"
+    ],
+    [
+      "why a chief economist thinks a surprise rate hike could be coming at next weeks fed meeting business insider",
+      "2026-07-26"
+    ],
+    [
+      "wall st week ahead us stocks face tests from fed decision techled earnings deluge",
+      "2026-07-26"
+    ],
+    [
+      "정치인 거래정책 리포트 20260726",
+      "2026-07-26"
     ]
   ],
   "seen_urls": {}
