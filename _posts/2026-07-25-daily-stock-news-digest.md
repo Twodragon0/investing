@@ -33,52 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-25 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 또 '검은 금요일'…코스피·코스닥 5% 넘게 급락 - 188건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 반도체, 삼성전자 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 채권, 인플레이션 관련 15건</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.hankyung.com">또 '검은 금요일'…코스피·코스닥 5% 넘게 급락</a> <span class="p0-desc">또 '검은 금요일'…코스피·코스닥 5% 넘게 급락 한국경제</span></li><li><a href="https://www.freezinenews.com">오락가락 변동성 무너지는 증시…코스피·코스닥 동반 급락 - 프리진뉴스</a> <span class="p0-desc">오락가락 변동성 무너지는 증시…코스피·코스닥 동반 급락 프리진뉴스</span></li><li><a href="https://biz.chosun.com">특징주] 롯데쇼핑, 신동빈 회장 지분 매도 소식에…10% 급락 - 조선비즈 - Chosunbiz</a> <span class="p0-desc">[특징주] 롯데쇼핑, 신동빈 회장 지분 매도 소식에…10% 급락 - 조선비즈 Chosunbiz</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 또 '검은 금요일'…코스피·코스닥 5% 넘게 급락 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 188건의 뉴스 중 P1 주요 이슈도 37건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (35건): 코스피, 코스닥, 반도체 가격 변동 (35건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🤖 AI/기술** (16건): 반도체, 삼성전자 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-- **📊 매크로/금리** (15건): 채권, 인플레이션, 국채 매크로 변수 (15건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 또 '검은 금요일'…코스피·코스닥 5% 넘게 급락
-- 오락가락 변동성 무너지는 증시…코스피·코스닥 동반 급락 - 프리진뉴스
-- 특징주] 롯데쇼핑, 신동빈 회장 지분 매도 소식에…10% 급락 - 조선비즈 - Chosunbiz
-
-### 주요 이슈
-
-- 삼성·SK하이닉스 레버리지 규제, 시장에 ‘약’ 될까 - 지디넷코리아
-- 기술 부문 수익이 급증하면서 월스트리트 하락 AI 지출 우려 및 유가 $100 도달
-- 모두가 GPU에 대해 이야기하지만 CPU는 Agentic의 이점을 누리고 있습니다. AI—인텔 수익 중지 Tech S
-- 외 34건
-
-### 투자자 체크포인트
-
-- 한국 기사 58건, 글로벌 기사 130건 수집
-- 한국 지수: KOSPI 6,690.62(-5.72%), KOSDAQ 748.22(-5.32%), USD/KRW 1,460.27(-0.97%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">35건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:46%"></div></div><span class="theme-count">16건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:43%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:37%"></div></div><span class="theme-count">13건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:14%"></div></div><span class="theme-count">5건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-07-25.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-07-25.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,690.62 (-5.72%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 748.22 (-5.32%).
+- *대한민국 잡지 미디어의 새 장을 열어가고 있는 한경매거진&북, 주간 한경BUSINESS, 월간 한경MONEY, 격주간 한경JOB&JOY 발행*
 
 ## 테마별 주요 뉴스
 

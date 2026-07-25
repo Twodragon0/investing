@@ -16,6 +16,11 @@ image_alt: "시장 심리 및 리스크 지표 (2026-07-25) - 시장 분석 뉴�
 
 **2026-07-25** 기준 시장 지표 공포탐욕 40.2(fear), VIX 17.93. 10개 소스 수집.
 
+## 전체 뉴스 요약
+
+- Put/Call 비율 관련 뉴스:
+
+
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">40.2</div><div class="stat-label">공포탐욕 (fear)</div></div><div class="stat-item"><div class="stat-value">17.93</div><div class="stat-label">VIX</div></div><div class="stat-item"><div class="stat-value">101.30</div><div class="stat-label">DXY</div></div><div class="stat-item"><div class="stat-value">4,081.30</div><div class="stat-label">금</div></div></div>
 
 ## 1. 시장 심리 지표

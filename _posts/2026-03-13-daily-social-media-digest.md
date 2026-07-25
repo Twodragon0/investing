@@ -7,7 +7,7 @@ tags: ["social-media", "telegram", "twitter", "reddit", "politics", "trump", "�
 keywords: "social-media, telegram, twitter, reddit, politics"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-social-2026-03-13.png"
+image: "/assets/images/generated/og-daily-social-media-digest-2026-03-13.png"
 description: "2026-03-13 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 22건, 총 42건이 수집되었습니다. 긴급: 에너지 가격이 연준의 이자율 결정에 반영되는 방식"
 excerpt: "2026-03-13 암호화폐·주식 커뮤니티 소셜 미디어 동향을 정리합니다. 텔레그램 20건, 정치·경제 22건, 총 42건이 수집되었습니다. 긴급: 에너지 가격이 연준의 이자율…"
 image_alt: "소셜 미디어 동향 - 2026-03-13 - 소셜 미디어 뉴스 요약 이미지"

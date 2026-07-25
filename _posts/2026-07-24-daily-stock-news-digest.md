@@ -34,6 +34,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-24 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: ‘강달러’ 끝나니 이번엔 환율 급락 공포 - 182건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 국채, 수익률 동향 주시</li><li>📈 <strong>가격/시장</strong>: 외국인, 코스피 관련 38건</li><li>🤖 <strong>AI/기술</strong>: 실적, 구글 주목</li><li>🏦 <strong>거래소</strong>: IPO, 옵션 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://biz.heraldcorp.com">‘강달러’ 끝나니 이번엔 환율 급락 공포</a> <span class="p0-desc">‘강달러’ 끝나니 이번엔 환율 급락 공포 헤럴드경제</span></li><li><a href="https://biz.chosun.com">특징주] 롯데쇼핑, 신동빈 회장 지분 매도 소식에…10% 급락 - 조선비즈 - Chosunbiz</a> <span class="p0-desc">[특징주] 롯데쇼핑, 신동빈 회장 지분 매도 소식에…10% 급락 - 조선비즈 Chosunbiz</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 7,096.89 (+4.40%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.

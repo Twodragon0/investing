@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-25 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가 - 100건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, XRP 동향 주시</li><li>📈 <strong>가격/시장</strong>: 애널리스트 주목</li><li>🏦 <strong>거래소</strong>: 17건 수집</li><li>🔵 <strong>규제/정책</strong>: 상원 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://global.morningstar.com/en-gb/markets/crypto-winter-or-big-crash-where-bitcoin-price-goes-here">Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가</a> <span class="p0-desc">Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가. 급락 관련 보도.</span></li><li><a href="https://african.business">Tinubu는 나이지리아가 암호화폐를 개방함에 따라 행정명령에 서명했습니다.</a> <span class="p0-desc">African Business Magazine은 대륙 전체의 비즈니스 문제에 대한 뉴스 및 심층 보고서를 제공하는 선도적인 간행물입니다.</span></li><li><a href="https://bloomingbit.io">美 클래리티법 통과 확률 38%로 급락…비트코인, 유가·금리 상승에 하락 - 블루밍비트</a> <span class="p0-desc">美 클래리티법 통과 확률 38%로 급락…비트코인, 유가·금리 상승에 하락 블루밍비트</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가 
-외 P0 긴급 이슈 6건이 추가 감지되었습니다. 총 100건의 뉴스 중 P1 주요 이슈도 8건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (44건): 비트코인, XRP, 애널리스트 관련 (44건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (33건): 애널리스트, XRP 가격 변동 (33건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏦 거래소** (17건): 기관 관련 불확실성이 커지고 있어 리스크 관리에 유의하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가
-- Tinubu는 나이지리아가 암호화폐를 개방함에 따라 행정명령에 서명했습니다.
-- 美 클래리티법 통과 확률 38%로 급락…비트코인, 유가·금리 상승에 하락 - 블루밍비트
-
-### 주요 이슈
-
-- 상원 민주당원은 암호화폐 법안에서 트럼프 승인된 윤리 조항을 거부했습니다.
-- 비트코인, 미-이란 긴장 및 관세 우려로 6만5천달러대로 하락 - Investing.com 한국어
-- EU, 영국 이후 두 달 만에 러시아에서 Justin Sun의 HTX 제재
-- 외 5건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, AI
-- **주요 출처**: Google News(20건), Decrypt(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 1건 포함
-- 프로모션성 거래소 공지 4건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-07-25.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-07-25.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **100건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

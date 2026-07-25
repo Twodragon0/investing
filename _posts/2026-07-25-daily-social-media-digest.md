@@ -29,48 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-07-25 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 투자자들이 연준 금리 결정을 앞두고 중동 발전에 주목하면서 금은 안정세를 유지하고 있습니다. - 42건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 연준, 금리 관련 22건</li><li>🏛️ <strong>정치/정책</strong>: 이재명, 부동산 주목</li><li>📈 <strong>가격/시장</strong>: 이재명, 부동산 관련 17건</li><li>🔵 <strong>규제/정책</strong>: 녹색경제신문, 트럼프 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.cnbc.com">투자자들이 연준 금리 결정을 앞두고 중동 발전에 주목하면서 금은 안정세를 유지하고 있습니다.</a> <span class="p0-desc">연준 금리 결정을 앞두고 투자자들이 중동 발전에 주목하면서 금은 안정세를 유지하고 있습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 투자자들이 연준 금리 결정을 앞두고 중동 발전에 주목하면서 금은 안정세를 유지하고 있습니다. 
-총 42건의 뉴스 중 P1 주요 이슈도 2건 확인됩니다.
+오늘 수집된 총 42건 중 텔레그램 0건, 소셜 0건, 정치·경제 42건으로 주요 이슈를 정리했습니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (22건): 연준, 금리, 기준금리 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🏛️ 정치/정책** (15건): 이재명, 부동산, 대통령 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-- **📈 가격/시장** (17건): 이재명, 부동산, 분기 가격 변동 (17건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 투자자들이 연준 금리 결정을 앞두고 중동 발전에 주목하면서 금은 안정세를 유지하고 있습니다.
-
-### 주요 이슈
-
-- 이재명 대통령, 부동산 정책 공론화…공급 확대 속 규제 우려 - 녹색경제신문
-- Wall St Week Ahead 미국 주식은 연준 결정, 기술 주도 수익 폭주로 인한 테스트에 직면
-
-### 투자자 체크포인트
-
-- 정치·경제 42건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">22건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:68%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:77%"></div></div><span class="theme-count">17건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:9%"></div></div><span class="theme-count">2건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:9%"></div></div><span class="theme-count">2건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-07-25.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-07-25.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 주요 이슈
+- 긴급 알림 1건에 대한 선별 모니터링
 
 ## 정치·경제 동향
 
