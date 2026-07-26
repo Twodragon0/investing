@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-26 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가 - 99건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, BTC 관련 43건</li><li>📈 <strong>가격/시장</strong>: BTC 이슈 부각</li><li>🔵 <strong>규제/정책</strong>: 상원 관련 20건</li><li>🏛️ <strong>정치/정책</strong>: 제재, 상원 관련 14건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://global.morningstar.com/en-gb/markets/crypto-winter-or-big-crash-where-bitcoin-price-goes-here">Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가</a> <span class="p0-desc">Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가. 급락 관련 보도.</span></li><li><a href="https://decrypt.co/374289/poolin-bitcoin-biggest-mining-pools-files-bankruptcy">Poolin, 한때 비트코인의 가장 큰 채굴 풀 중 하나였으며 파산 신청</a> <span class="p0-desc">싱가포르에 본사를 둔 이 풀은 2022년 인출 동결에서 결코 회복되지 않았습니다. 현재는 여전히 IOU를 보유하고 있는 11,700명의 사용자에게 상환하기 위해 마지막 텍사스 광산.</span></li><li><a href="https://decrypt.co/374282/nvidia-meta-microsoft-washington-dont-kill-open-source-ai">엔비디아, 메타 및 마이크로소프트 워싱턴에 전하십시오: 오픈 소스를 죽이지 마십시오 AI</a> <span class="p0-desc">중국인 AI이 OpenAI 자체 시스템에 의해 유발된 해킹에서 Hugging Face가 살아남도록 도운 지 며칠 후 25개 회사가 개방형 모델을 옹호하는 서한에 서명했습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 99건의 뉴스 중 P1 주요 이슈도 11건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (43건): 비트코인, BTC, 매집 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (27건): BTC, 약세 가격 변동 (27건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🔵 규제/정책** (20건): 상원 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가
-- Poolin, 한때 비트코인의 가장 큰 채굴 풀 중 하나였으며 파산 신청
-- 엔비디아, 메타 및 마이크로소프트 워싱턴에 전하십시오: 오픈 소스를 죽이지 마십시오 AI
-
-### 주요 이슈
-
-- 비트코인 $65,000를 넘어 30일 최고치를 기록했습니다. BTC은 여기서 어디로 가나요?
-- 비트코인, 미-이란 긴장 및 관세 우려로 6만5천달러대로 하락 - Investing.com 한국어
-- 비트코인 현물 ETF 2억 4,000만 달러 유출…6만 3,000달러 지킬까? - 코인리더스
-- 외 8건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Cointelegraph(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 1건 포함
-- 프로모션성 거래소 공지 4건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-07-26.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-07-26.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **99건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

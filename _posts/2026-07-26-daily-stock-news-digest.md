@@ -33,50 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-26 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: Outdoor giant now closing 91 stores in Chapter 11 bankruptcy - 83건 분석</strong><ul><li>🤖 <strong>AI/기술</strong>: 엔비디아, 정의선 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 대통령 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 실적 관련 5건</li><li>🟠 <strong>비트코인</strong>: 에너지, 포트폴리오 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.thestreet.com/">Outdoor giant now closing 91 stores in Chapter 11 bankruptcy</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Outdoor giant now closing 91 stores in Chapter 11 bankruptcy 
-총 83건의 뉴스 중 P1 주요 이슈도 8건 확인됩니다.
-
-### 테마별 동향
-
-- **🤖 AI/기술** (13건): 엔비디아, 정의선, 실적 기술 이슈 (13건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-- **🏛️ 정치/정책** (9건): 트럼프, 대통령 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-- **📊 매크로/금리** (5건): 실적, 금리, 선물 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 아웃도어 거대 기업, 챕터 11 파산으로 91개 매장 폐쇄
-
-### 주요 이슈
-
-- 다우존스 선물: 시장이 매도 신호를 촉발합니다. 애플 수익, 이란 뉴스, 연준 M
-- 에너지 투자자에게는 청정 에너지보다 전통적인 에너지 ETF가 더 나은 선택입니까?
-- 모건스탠리은 수익이 나기 전에, 너무 늦기 전에 이 주식을 사라고 말합니다.
-- 외 5건
-
-### 투자자 체크포인트
-
-- 한국 기사 29건, 글로벌 기사 54건 수집
-- 한국 지수: KOSPI 6,690.62(-5.72%), KOSDAQ 748.22(-5.32%), USD/KRW 1,462.10(-0.84%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">13건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:69%"></div></div><span class="theme-count">9건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:38%"></div></div><span class="theme-count">5건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:23%"></div></div><span class="theme-count">3건</span></div>
-<div class="theme-row"><span class="theme-label">🔴 보안/해킹</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:23%"></div></div><span class="theme-count">3건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-07-26.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-07-26.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,690.62 (-5.72%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 748.22 (-5.32%).
+- *'매그세븐'이 '백세븐'으로 바뀌었습니다.*
 
 ## 테마별 주요 뉴스
 
