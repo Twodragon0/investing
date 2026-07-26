@@ -13,10 +13,11 @@
         "wp-content/plugins": 2,
         "gravatar.com/avatar": 1,
         "no-image": 3,
-        "tracker": 34
+        "tracker": 34,
+        "pixel": 4
       }
     }
   },
   "since": "2026-04-23T08:54:23",
-  "last_seen": "2026-07-26T17:13:56"
+  "last_seen": "2026-07-26T17:23:34"
 }
