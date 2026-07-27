@@ -77,13 +77,13 @@ jobs:
 
       - name: Generate coverage report
         run: |
-          python3 -m coverage report --fail-under=65
+          python3 -m coverage report --fail-under=70
           python3 -m coverage html -d coverage-html
           python3 -m coverage json -o coverage.json
 
       - name: Enforce summary_sections coverage floor
         # summary_sections.py carries the daily-summary rendering logic and has
-        # heavy test investment (~98%). The global 55%/65% floors are far too
+        # heavy test investment (~98%). The global 55%/70% floors are far too
         # low to catch a silent per-module regression, so pin a dedicated 95%
         # floor. If this drops intentionally, lower BOTH this number and the
         # constant in tests/test_summary_sections_coverage_floor.py.
