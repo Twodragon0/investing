@@ -9,13 +9,13 @@ at or above :data:`_MIN_FLOOR`:
 * ``.github/workflows/code-quality.yml`` — a dedicated
   ``coverage report --fail-under=NN`` step re-checks the same data in CI.
 
-Total ``scripts`` coverage sits ~68% (2026-07); the floor was ratcheted
-55 -> 65 (P3-1/P3-2) to lock the existing coverage as a regression baseline.
-Without this guard the floor could be quietly dropped back — re-opening the gap
-between "tests deleted" and "build still green".
+Total ``scripts`` coverage sits ~70% (2026-07); the floor was ratcheted
+55 -> 65 (P3-1/P3-2) -> 70 (P3-3) to lock the existing coverage as a regression
+baseline. Without this guard the floor could be quietly dropped back —
+re-opening the gap between "tests deleted" and "build still green".
 
-Direction: floor is ``>=`` — ratcheting UP (65 -> 70 ...) stays green; only
-removing a gate or lowering it below 65 trips this test. If the floor is lowered
+Direction: floor is ``>=`` — ratcheting UP (70 -> 75 ...) stays green; only
+removing a gate or lowering it below 70 trips this test. If the floor is lowered
 intentionally, update ``_MIN_FLOOR`` here AND both ``--fail-under`` values
 together.
 
@@ -37,7 +37,7 @@ _PYPROJECT = _REPO_ROOT / "pyproject.toml"
 _WORKFLOW = _REPO_ROOT / ".github" / "workflows" / "code-quality.yml"
 
 # The global scripts coverage floor both gates must enforce.
-_MIN_FLOOR = 65
+_MIN_FLOOR = 70
 
 _COV_FAIL_UNDER_RE = re.compile(r"--cov-fail-under=(\d+)")
 _FAIL_UNDER_RE = re.compile(r"--fail-under=(\d+)")
