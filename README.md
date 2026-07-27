@@ -61,10 +61,10 @@
 | scripts/common/markdown\_utils.py                 |      226 |        2 |     99% |  377, 393 |
 | scripts/common/mindspider.py                      |      377 |        6 |     98% |603, 673-674, 687-688, 990 |
 | scripts/common/og\_compose.py                     |      143 |        0 |    100% |           |
-| scripts/common/og\_image\_formats.py              |       38 |       28 |     26% |17-19, 26-36, 41-51, 56-58 |
+| scripts/common/og\_image\_formats.py              |       38 |        3 |     92% |     17-19 |
 | scripts/common/og\_render.py                      |       59 |       11 |     81% |37-38, 75-77, 92-97 |
 | scripts/common/og\_visuals.py                     |      369 |        0 |    100% |           |
-| scripts/common/post\_generator.py                 |      341 |        8 |     98% |475-479, 847, 882-883 |
+| scripts/common/post\_generator.py                 |      341 |        7 |     98% |475-479, 882-883 |
 | scripts/common/post\_html.py                      |       28 |        0 |    100% |           |
 | scripts/common/risk\_classifier.py                |      184 |        9 |     95% |331-332, 354, 392, 431-435 |
 | scripts/common/rss\_fetcher.py                    |      249 |       12 |     95% |44-45, 80, 91, 178, 187, 272, 281, 292, 302, 330-331 |
@@ -96,8 +96,8 @@
 | scripts/enrich\_existing\_posts.py                |      133 |      133 |      0% |    15-311 |
 | scripts/fix\_defi\_tvl\_history.py                |       52 |        1 |     98% |       117 |
 | scripts/fix\_post\_descriptions.py                |      275 |       13 |     95% |25, 164, 168, 235, 250, 256-258, 265, 267, 319-320, 572 |
-| scripts/fix\_post\_number\_format.py              |       54 |       54 |      0% |     12-98 |
-| scripts/fix\_scenario\_na\_placeholders.py        |       41 |       41 |      0% |     14-77 |
+| scripts/fix\_post\_number\_format.py              |       54 |        1 |     98% |        98 |
+| scripts/fix\_scenario\_na\_placeholders.py        |       41 |        1 |     98% |        77 |
 | scripts/generate\_daily\_summary.py               |      281 |       59 |     79% |120-121, 124-144, 153-154, 157, 165, 195-197, 248, 324-334, 345-359, 399-400, 487-488, 512-513, 528, 530, 532, 534, 536, 591 |
 | scripts/generate\_market\_summary.py              |      673 |       27 |     96% |237-238, 393-394, 427-428, 549-550, 600, 1044-1045, 1166-1168, 1171-1174, 1242-1247, 1303, 1381, 1390 |
 | scripts/generate\_og\_images.py                   |      275 |      135 |     51% |160-161, 172-182, 186-378, 386-419, 431-480, 503, 575, 579-580, 595-596, 620, 650 |
@@ -110,14 +110,14 @@
 | scripts/respond\_ai\_mentions.py                  |      259 |      207 |     20% |32-36, 40-67, 71-80, 84-87, 91-124, 128-138, 149-151, 162-164, 175-202, 215-232, 258-259, 274-285, 297-308, 319-336, 340-355, 375-381, 385-483, 487 |
 | scripts/smoke\_test\_rendered\_pages.py           |       43 |       43 |      0% |      3-86 |
 | scripts/tools/\_\_init\_\_.py                     |        0 |        0 |    100% |           |
-| scripts/tools/check\_relative\_imports.py         |       37 |       37 |      0% |     17-70 |
-| scripts/tools/check\_sitemap\_local.py            |       52 |       52 |      0% |     17-90 |
+| scripts/tools/check\_relative\_imports.py         |       37 |        1 |     97% |        70 |
+| scripts/tools/check\_sitemap\_local.py            |       52 |        2 |     96% |    82, 90 |
 | scripts/tools/check\_workflow\_permissions.py     |       96 |       24 |     75% |51, 53, 61, 70, 107, 112, 115, 139-163, 167 |
-| scripts/tools/component\_counts.py                |       84 |       41 |     51% |89, 95-106, 115-117, 121-124, 126-127, 134-160, 164 |
+| scripts/tools/component\_counts.py                |       84 |        1 |     99% |       164 |
 | scripts/tools/gsc\_api.py                         |      116 |      116 |      0% |    42-234 |
 | scripts/tools/gsc\_index\_audit.py                |      234 |      234 |      0% |    44-561 |
 | scripts/tools/indexnow\_submit.py                 |      174 |      174 |      0% |    30-358 |
-| scripts/tools/postbuild\_fix\_feed\_enclosures.py |       65 |       65 |      0% |    28-134 |
+| scripts/tools/postbuild\_fix\_feed\_enclosures.py |       65 |        3 |     95% |118-119, 134 |
 | scripts/tools/review\_alerting\_quality.py        |      228 |      109 |     52% |27, 111-120, 125, 128-129, 133, 150-151, 159-171, 175-192, 196-200, 271-274, 276-280, 287-299, 305, 320-328, 332-342, 346-350, 354-368, 372 |
 | scripts/tools/tune\_risk\_threshold.py            |      175 |       16 |     91% |26, 76, 92, 95-96, 98, 116, 119-120, 122, 124, 188-189, 205, 293, 402 |
 | scripts/tools/verify\_secret\_activation.py       |      236 |      236 |      0% |    13-443 |
@@ -125,7 +125,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **23035** | **6990** | **70%** |           |
+| **TOTAL**                                         | **23035** | **6683** | **71%** |           |
 
 
 ## Setup coverage badge
