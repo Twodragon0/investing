@@ -1,18 +1,5 @@
 {
   "seen": {
-    "30c36878a23a89f461768779": "2026-06-27T22:50:11",
-    "5fc727e49468ea0afbc73949": "2026-06-27T22:50:11",
-    "abac089a11aee98ce1c9cafc": "2026-06-27T22:50:11",
-    "67ecd80a07a02b0368ee6276": "2026-06-27T22:50:11",
-    "a8e23830911078c30b6f5ff8": "2026-06-27T22:50:11",
-    "0c82d66ccba48b09ebffb851": "2026-06-27T22:50:11",
-    "1c354040e2d043d9888ff9eb": "2026-06-27T22:50:11",
-    "a7b3524d22b9703236ebf3af": "2026-06-27T22:50:11",
-    "95a9f1fc829d31df35498b57": "2026-06-27T22:50:11",
-    "b6b194a3347589d7a1cdadb1": "2026-06-27T22:50:11",
-    "ee4cd8fb6b6cfd8529339524": "2026-06-27T22:50:11",
-    "a81602b5698ab05cdad4eb8d": "2026-06-27T22:50:11",
-    "478b05759900b5427b2fc339": "2026-06-27T22:50:11",
     "b15151f8d0725b30ab3e5620": "2026-06-28T22:49:36",
     "23406051a6d152a360ce88a2": "2026-06-28T22:49:36",
     "21f0305ab2b9bbc29215b8b0": "2026-06-28T22:49:36",
@@ -601,7 +588,47 @@
     "813833d04dc2faeda1b1ed3a": "2026-07-26T23:28:48",
     "5ec9fa90bd9eba35ea19d820": "2026-07-26T23:28:48",
     "b4e915dad3c66e37b69bdf03": "2026-07-26T23:28:48",
-    "dec3a632ed55fb6375d862b1": "2026-07-26T23:28:48"
+    "dec3a632ed55fb6375d862b1": "2026-07-26T23:28:48",
+    "61d478b7764ecbf28380811a": "2026-07-27T23:35:49",
+    "132e9f64618567b0e25eff43": "2026-07-27T23:35:49",
+    "4eaff54ace0b2c2ece52fa3a": "2026-07-27T23:35:49",
+    "b899a16f7ef396872da35b6d": "2026-07-27T23:35:49",
+    "618c87f61932b54d42b73818": "2026-07-27T23:35:49",
+    "1a618322c145f0d6acf8327c": "2026-07-27T23:35:49",
+    "48b081742dbbb16ee466858e": "2026-07-27T23:35:49",
+    "a3a758b3b5e7a47dd18082ee": "2026-07-27T23:35:49",
+    "9f0bf4d31405566128d3eee8": "2026-07-27T23:35:49",
+    "65350c0c18e8832a04e5f28d": "2026-07-27T23:35:49",
+    "985ccbf439997ca3308695f5": "2026-07-27T23:35:49",
+    "b7392bf4ec1f39c9220d0b4d": "2026-07-27T23:35:49",
+    "fbc70a29a6c9e5d3234594d3": "2026-07-27T23:35:49",
+    "0aec06a562649012d1a6aad4": "2026-07-27T23:35:49",
+    "6e0f5b0ccd2c179b583e006e": "2026-07-27T23:35:49",
+    "06cb9832285e3f2969d3fda1": "2026-07-27T23:35:49",
+    "e70e36c66f5c365dcac59cac": "2026-07-27T23:35:49",
+    "088398ffd848b5a79748c1ee": "2026-07-27T23:35:49",
+    "1bd70fea9413d78dbc2fba16": "2026-07-27T23:35:49",
+    "25c592f3fa4689ab1def2bb4": "2026-07-27T23:35:49",
+    "b9cf4b8e282cd7260a0b2215": "2026-07-27T23:35:49",
+    "9440e32d5eb1c5d2a961f09c": "2026-07-27T23:35:49",
+    "89d979a513408373e3a7824b": "2026-07-27T23:35:49",
+    "0310c89e3c4b210161dd5ff7": "2026-07-27T23:35:49",
+    "b668d421ae1861501ff669b1": "2026-07-27T23:35:49",
+    "12af9059503b625dd0d25a87": "2026-07-27T23:35:49",
+    "25096c063284fd382d5a04f1": "2026-07-27T23:35:49",
+    "0916bbbf96e975940f75e5c8": "2026-07-27T23:35:49",
+    "5488219016ccf5d3f9a17401": "2026-07-27T23:35:49",
+    "e3db475a430c135ef9066c8b": "2026-07-27T23:35:49",
+    "e6aab274406fac35095a4aca": "2026-07-27T23:35:49",
+    "473ee77bb114597445a5a6d4": "2026-07-27T23:35:49",
+    "05ea2ee082a0f7132071a481": "2026-07-27T23:35:49",
+    "3373ed93afaa3d718ec3b224": "2026-07-27T23:35:49",
+    "035770694ca62a4a1c7ce995": "2026-07-27T23:35:49",
+    "272809591fc7cd31483ec2a7": "2026-07-27T23:35:49",
+    "967069837abbe78d479c025a": "2026-07-27T23:35:49",
+    "5118ab871262f3764f7128ab": "2026-07-27T23:35:49",
+    "e25af9414a564a9146148858": "2026-07-27T23:35:49",
+    "ed42cda3633259c3b8fcf0bf": "2026-07-27T23:35:49"
   },
   "titles": [
     [
@@ -13483,6 +13510,166 @@
     [
       "정치인 거래정책 리포트 20260727",
       "2026-07-27"
+    ],
+    [
+      "congress trade representative sam liccardo just disclosed new stock trades quiver quantitative",
+      "2026-07-28"
+    ],
+    [
+      "this congressman slammed elon musk then bought spacex stock",
+      "2026-07-28"
+    ],
+    [
+      "first industrial realty trust fr cfo transfers lp units and ends utma stake stock titan",
+      "2026-07-28"
+    ],
+    [
+      "sofi technologies inc sofi director receives 13993 restricted stock units stock titan",
+      "2026-07-28"
+    ],
+    [
+      "access newswire accs awards 4386 rsus to director joseph staples stock titan",
+      "2026-07-28"
+    ],
+    [
+      "sofi technologies sofi grants 13993 rsus to company director stock titan",
+      "2026-07-28"
+    ],
+    [
+      "sofi technologies sofi awards 13993 restricted stock units to director stock titan",
+      "2026-07-28"
+    ],
+    [
+      "leggett platt nyse leg hr chief receives 77share stock award stock titan",
+      "2026-07-28"
+    ],
+    [
+      "sofi technologies nasdaq sofi grants director 13993 rsus stock titan",
+      "2026-07-28"
+    ],
+    [
+      "roper technologies nasdaq rop director reports sale of 6434 common shares stock titan",
+      "2026-07-28"
+    ],
+    [
+      "sofi technologies inc sofi grants 27986 rsus to its director stock titan",
+      "2026-07-28"
+    ],
+    [
+      "allegion alle cfo exercises options sells 3184 shares in 10b51 trades stock titan",
+      "2026-07-28"
+    ],
+    [
+      "espp purchase inventrust properties ivt svp adds and surrenders shares stock titan",
+      "2026-07-28"
+    ],
+    [
+      "sofi technologies nasdaq sofi awards director 13993 deferred stock units stock titan",
+      "2026-07-28"
+    ],
+    [
+      "inventrust properties nyse ivt ceo trades espp and tax shares stock titan",
+      "2026-07-28"
+    ],
+    [
+      "datadog nasdaq ddog directors trust sells 20000 shares under 10b51 plan stock titan",
+      "2026-07-28"
+    ],
+    [
+      "sofi technologies sofi director awarded 27986 deferred stock units stock titan",
+      "2026-07-28"
+    ],
+    [
+      "us leverages canadian trade negotiations southern farm network",
+      "2026-07-28"
+    ],
+    [
+      "the latest appeals court upholds injunction that blocks trumps order to create federal voter list",
+      "2026-07-28"
+    ],
+    [
+      "이천시의회 선출직 공직자 재산신고 설명회 참석공직윤리 강화 팔당유역신문",
+      "2026-07-28"
+    ],
+    [
+      "이천시의회 선출직 공직자 재산신고 설명회 참석청렴 의정 강화 중앙뉴스타임스",
+      "2026-07-28"
+    ],
+    [
+      "이천시의회 재산신고 설명회 참석 투명한 의정활동 실천 서희신문",
+      "2026-07-28"
+    ],
+    [
+      "이천시의회 투명한 의정활동 위한 재산신고 설명회 참석 경기인터넷신문",
+      "2026-07-28"
+    ],
+    [
+      "이천시의회 투명한 의정활동 위한 재산신고 설명회 참석 하나뉴스",
+      "2026-07-28"
+    ],
+    [
+      "한국은행 8월 기준금리 또 올리나깜짝 성장에 추가 인상 가능성 커졌다 뉴스인",
+      "2026-07-28"
+    ],
+    [
+      "한국은행 8월 기준금리 또 올리나깜짝 성장에 전망 엇갈려",
+      "2026-07-28"
+    ],
+    [
+      "한은 8월 또 금리 올리나깜짝 성장에 전망 엇갈려 진일보",
+      "2026-07-28"
+    ],
+    [
+      "깜짝 성장에 금리 셈법 복잡8월 기준금리 추가 인상 촉각 서울뉴스통신",
+      "2026-07-28"
+    ],
+    [
+      "성장률 예상 넘었다다음달 기준금리 인상 가능성 커진다 주간시사매거진",
+      "2026-07-28"
+    ],
+    [
+      "fed expected to hold rates steady but an interest rate hike isnt off the table",
+      "2026-07-28"
+    ],
+    [
+      "what would a rate hike signal about the new fed chiefs mo axios",
+      "2026-07-28"
+    ],
+    [
+      "what to expect from the july fed meeting morningstar",
+      "2026-07-28"
+    ],
+    [
+      "fed rate decision tariffs iran pause make for busy economic week 124 national news 124 us news us news world report",
+      "2026-07-28"
+    ],
+    [
+      "these are the 12 fed officials who are voting on interest rates this week",
+      "2026-07-28"
+    ],
+    [
+      "the feds new chairman faces his biggest test yet",
+      "2026-07-28"
+    ],
+    [
+      "trump backs fantastic warsh while calling for lower rates and citing bad intentions of other fed officials",
+      "2026-07-28"
+    ],
+    [
+      "growing number of brokerages see july fed decision as a close call",
+      "2026-07-28"
+    ],
+    [
+      "trump renews rate pressure on fed as july fomc meeting opens",
+      "2026-07-28"
+    ],
+    [
+      "federal reserve 1 thing all investors need to know before july 29 the globe and mail",
+      "2026-07-28"
+    ],
+    [
+      "정치인 거래정책 리포트 20260728",
+      "2026-07-28"
     ]
   ],
   "seen_urls": {}
