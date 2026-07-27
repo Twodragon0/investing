@@ -78,6 +78,42 @@ def _block_real_http(monkeypatch):
 
 
 @pytest.fixture(autouse=True)
+def _isolate_generated_images(tmp_path, monkeypatch):
+    """Redirect generated-image writes to a per-test tmp dir.
+
+    Every image_generator save resolves its output directory through
+    ``_base._get_pkg_attr("IMAGES_DIR")``, which reads the mutable package
+    attribute ``common.image_generator.IMAGES_DIR``. Integration tests that
+    exercise real render paths (daily summary, collectors, briefing cards)
+    without patching that attribute would otherwise write PNG/WEBP/AVIF files
+    into the committed ``assets/images/generated/`` tree, leaving dirty
+    working-tree side effects after the suite runs. Pointing the package
+    attribute at a throwaway directory keeps those writes hermetic.
+
+    Tests that already patch ``IMAGES_DIR`` themselves (test_image_generator*)
+    run their own ``monkeypatch.setattr`` after this fixture, which wins.
+    """
+    try:
+        import common.image_generator as ig
+    except ImportError:
+        return
+
+    dest = tmp_path / "generated"
+    monkeypatch.setattr(ig, "IMAGES_DIR", str(dest))
+
+    # Some tests import via ``scripts.common.*`` (a distinct module object).
+    # ``_get_pkg_attr`` only reads ``common.image_generator``, but patch the
+    # twin defensively so both namespaces agree on the redirect.
+    try:
+        import scripts.common.image_generator as ig_scripts
+
+        if ig_scripts is not ig:
+            monkeypatch.setattr(ig_scripts, "IMAGES_DIR", str(dest))
+    except ImportError:
+        pass
+
+
+@pytest.fixture(autouse=True)
 def _isolate_image_rejection_state(tmp_path, monkeypatch):
     """Redirect image_rejection_metrics state + archive paths to a per-test tmp dir.
 
