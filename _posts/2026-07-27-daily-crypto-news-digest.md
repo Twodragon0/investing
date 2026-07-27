@@ -41,40 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-27 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가 - 73건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 트럼프 주목</li><li>📈 <strong>가격/시장</strong>: 삼중악재, 거래절벽 주목</li><li>🔵 <strong>규제/정책</strong>: 12건 수집</li><li>🏦 <strong>거래소</strong>: 9건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://global.morningstar.com/en-gb/markets/crypto-winter-or-big-crash-where-bitcoin-price-goes-here">Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가</a> <span class="p0-desc">Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가. 급락 관련 보도.</span></li><li><a href="https://kr.beincrypto.com">다음주 두 중앙은행 금리 결정…비트코인 영향은?</a> <span class="p0-desc">BeInCrypto에서 비트코인 및 암호화폐 시장에 대한 속보 뉴스와 편향 없는 분석을 확인해보세요. 블록체인 업계 유일의 광고 없는 미디어입니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 73건의 뉴스 중 P1 주요 이슈도 9건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (29건): 비트코인, 트럼프, 동결 관련 (29건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (23건): 삼중악재, 거래절벽, 암호화폐 가격 변동 (23건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🔵 규제/정책** (12건): clarity, act, infrastructure 규제 움직임 (12건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-
-**리스크 수준 [MODERATE]**: 일부 주의 이벤트가 있으나, 전반적으로 안정적인 상황입니다.
-
-### 긴급 이슈
-
-- Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가
-- 다음주 두 중앙은행 금리 결정…비트코인 영향은?
-
-### 주요 이슈
-
-- 러시아 최대 은행 Sberbank, 12월까지 암호화폐 거래 인프라 계획
-- T. Rowe Price는 최초로 적극적으로 관리되는 다중 암호화폐 스팟 ETF을 출시했습니다. 암호화폐 투자자가 알아야 할 사항은 다음과 같습
-- Cathie Wood의 Ark Invest에 따르면 1,125% 상승하기 전에 구매해야 할 인기 암호화폐 1위
-- 외 6건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, AI
-- **주요 출처**: Google News(20건), Cointelegraph(15건), Google News KR(12건)
-- 시장 영향 가능성이 있는 거래소 공지 1건 포함
-- 프로모션성 거래소 공지 4건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-07-27.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-07-27.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **73건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

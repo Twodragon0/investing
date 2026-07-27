@@ -33,51 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-27 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: A $25,000 home repair could wipe out her $27,000 emergency fund — experts say there's a smarter move - 116건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 연준, 환율 동향 주시</li><li>📈 <strong>가격/시장</strong>: 환율, 삼성전자 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 관세 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 실적, 애플 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://moneywise.com/">A $25,000 home repair could wipe out her $27,000 emergency fund — experts say there's a smarter move</a></li><li><a href="https://www.cnbc.com/2026/07/26/gen-x-investors-dotcom-bubble-retirement-portfolio.html">For Gen X investors, dotcom bubble haunts stock market portfolios closing in on retirement</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: A $25,000 home repair could wipe out her $27,000 emergency fund — experts say there's a smarter move 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 116건의 뉴스 중 P1 주요 이슈도 23건 확인됩니다.
-
-### 테마별 동향
-
-- **📊 매크로/금리** (10건): 연준, 환율, 채권 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **📈 가격/시장** (21건): 환율, 삼성전자, 하이닉스 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🏛️ 정치/정책** (14건): 트럼프, 관세, 환율 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-
-**리스크 수준 [MODERATE]**: 일부 주의 이벤트가 있으나, 전반적으로 안정적인 상황입니다.
-
-### 긴급 이슈
-
-- 25,000달러의 집 수리로 그녀의 긴급 자금 27,000달러가 사라질 수 있습니다. 전문가들은 더 현명한 조치가 있다고 말합니다.
-- X세대 투자자들에게 닷컴 버블은 은퇴가 가까워지는 주식 시장 포트폴리오를 괴롭힙니다.
-
-### 주요 이슈
-
-- 반도체, 하락세 딛고 본격 반등 나서나…다음주 SK하이닉스·삼성전자 실적 주목 _ 자투리 투자 포인트 - 자투리경제
-- 나스닥은 수익 보고서를 앞두고 AI 지출에 대한 불안으로 인해 지연됩니다.
-- 나스닥은 수익 보고서를 앞두고 AI 지출에 대한 불안으로 인해 지연됩니다. - The Detroit Ne
-- 외 20건
-
-### 투자자 체크포인트
-
-- 한국 기사 33건, 글로벌 기사 83건 수집
-- 한국 지수: KOSPI 6,690.62(-5.72%), KOSDAQ 748.22(-5.32%), USD/KRW 1,459.42(-1.03%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:48%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:100%"></div></div><span class="theme-count">21건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:67%"></div></div><span class="theme-count">14건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:38%"></div></div><span class="theme-count">8건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:24%"></div></div><span class="theme-count">5건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-07-27.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-07-27.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,690.62 (-5.72%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 748.22 (-5.32%).
+- *CNBC는 비즈니스 뉴스와 실시간 금융 시장 보도 분야의 세계적인 선두주자입니다.*
 
 ## 테마별 주요 뉴스
 

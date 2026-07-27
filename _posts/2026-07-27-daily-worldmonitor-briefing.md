@@ -39,29 +39,6 @@ image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-07-27 - 시�
 - 정적 레이어(핫스팟/기지/핵시설/제재국가/경제 중심지)는 WorldMonitor 기준 데이터셋 기반입니다.
 - 상세 지도: https://finance.worldmonitor.app/?lat=20.0000&lon=0.0000&zoom=1.00&view=global&theme=dark
 
-## 전체 뉴스 요약
-<div class="alert-box alert-warning"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg> 지정학 리스크 레벨: 보통</strong><ul><li>안보·에너지 이슈가 산발적으로 발생하고 있어, 관련 섹터 변동성에 유의가 필요합니다.</li></ul></div>
-
-핵심 테마는 **사회/기타**(11건), **지정학/안보**(5건), **정책/법률**(3건) 중심으로 전개되고 있습니다.
-
-안보 이슈(5건)와 금융시장 뉴스(1건)가 동시 부각되고 있어, 지정학적 긴장이 시장 심리에 직접 영향을 미치는 구간입니다.
-
-**테마 집중도**: 상위 2개 테마가 전체의 80%를 차지하여, 시장의 관심이 뚜렷하게 쏠리고 있습니다. 소외 테마에서 서프라이즈 이벤트 발생 시 충격이 증폭될 수 있습니다.
-
-### 고중요도 이슈 (5건)
-
-- 총리, 젤렌스키 방문을 앞두고 우크라이나에 대한 지속적인 지원 약속
-- 이란 지원 후티 반군, 사우디아라비아에 미사일 공격 주장
-- 서안지구 총격으로 팔레스타인인 4명, 이스라엘인 2명 사망
-- 트럼프는 스미소니언 박물관에 '부정확한' 미국 역사에 대한 경고를 게시하도록 명령합니다.
-
-### 투자자 체크포인트
-
-- **안전자산**: 금·달러·미국채로의 자금 이동 가속 여부 확인
-- **금융시장**: 주요 지수 변동성과 외국인 수급 동향 모니터링
-- **방산·사이버보안**: 군사적 긴장 확대 시 수혜 섹터 점검
-- **출처**: WorldMonitor/BBC World (13건), WorldMonitor/CNBC (7건)
-
 ## 테마별 현황
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">20</div><div class="stat-label">총 이슈</div></div><div class="stat-item"><div class="stat-value">4</div><div class="stat-label">테마 수</div></div><div class="stat-item"><div class="stat-value">2</div><div class="stat-label">출처 수</div></div><div class="stat-item"><div class="stat-value">5</div><div class="stat-label">안보 이슈</div></div></div>
 

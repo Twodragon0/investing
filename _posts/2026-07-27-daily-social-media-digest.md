@@ -29,43 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-07-27 - 소셜 미디어 뉴스 요�
 <div class="stat-item"><div class="stat-value">🟢 보통</div><div class="stat-label">시장 경계</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 트렌드: 기준금리, 성장세, 분기 관련 14건 포착</strong><ul><li>📊 <strong>매크로/금리</strong>: 기준금리, 성장세 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 이재명, 기업 관련 4건</li><li>🟠 <strong>비트코인</strong>: 비트코인, 고래 동향 주시</li><li>🟣 <strong>DeFi</strong>: 고래 이슈 부각</li></ul></div>
+
 ## 전체 뉴스 요약
 
-총 14건의 뉴스 중 **매크로/금리** 관련이 8건(57%)으로 압도적입니다. 거시경제 지표와 통화정책이 시장의 주요 변수로 작용하고 있습니다
+오늘 수집된 총 14건 중 텔레그램 0건, 소셜 1건, 정치·경제 13건으로 주요 이슈를 정리했습니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (8건): 기준금리, 성장세, 분기 매크로 변수 (8건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🏛️ 정치/정책** (4건): 이재명, 기업, 데일리저널 정치 이슈 (4건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-- **🟠 비트코인** (1건): 비트코인, 고래, BTC 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-
-**리스크 수준 [MODERATE]**: 일부 주의 이벤트가 있으나, 전반적으로 안정적인 상황입니다.
-
-### 주요 이슈
-
-- 케빈 워시의 두 번째 FOMC…기준금리 올릴까 [한상춘의 국제경제 읽기
-- 고유가·관세·환율 '삼중 변수'…하반기 한국경제 먹구름
-
-### 투자자 체크포인트
-
-- 소셜 1건, 정치·경제 13건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">8건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:50%"></div></div><span class="theme-count">4건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:12%"></div></div><span class="theme-count">1건</span></div>
-<div class="theme-row"><span class="theme-label">🟣 DeFi</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:12%"></div></div><span class="theme-count">1건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:12%"></div></div><span class="theme-count">1건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-07-27.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-07-27.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 주요 이슈
+- 긴급 알림 없음에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드
 
