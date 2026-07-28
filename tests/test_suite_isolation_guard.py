@@ -8,7 +8,9 @@ repo tree again.
 import os
 from pathlib import Path
 
+import common.dedup as dedup
 import common.image_generator as ig
+import common.signal_tracker as st
 
 # Test-file-local anchor for the committed repo tree. We deliberately derive the
 # path from ``__file__`` instead of importing ``common.image_generator.REPO_ROOT``:
@@ -17,6 +19,7 @@ import common.image_generator as ig
 # signal). ``tests/`` lives at the repo root, so its parent is the checkout root.
 _REPO_ROOT = Path(__file__).resolve().parent.parent
 _REPO_IMAGES = str((_REPO_ROOT / "assets" / "images" / "generated").resolve())
+_REPO_STATE = str((_REPO_ROOT / "_state").resolve())
 
 
 def test_generated_images_redirected_off_repo_tree():
@@ -43,4 +46,54 @@ def test_generated_images_redirected_off_repo_tree():
     # tree, or writes would still dirty the working tree.
     assert not active.startswith(_REPO_IMAGES), (
         f"IMAGES_DIR ({active}) is nested inside the committed assets tree; writes would still dirty the working tree."
+    )
+
+
+def test_dedup_state_redirected_off_repo_tree():
+    """``_isolate_dedup_state`` must redirect dedup writes off the repo tree.
+
+    Every collector persists cross-run dedup state through ``DedupEngine``,
+    which resolves its output file as ``os.path.join(common.dedup.STATE_DIR,
+    state_file)``. Integration tests that drive a real collector's
+    ``save_state()`` without patching ``STATE_DIR`` rely on the autouse
+    fixture to point it at a throwaway tmp dir. If that fixture is removed,
+    those tests write ``*_seen.json`` files into the committed ``_state/``
+    tree, leaving dirty working-tree side effects.
+
+    Asserting the active dir is not (and is not nested inside) the committed
+    ``_state/`` tree turns a silent regression into an immediate failure.
+    """
+    active = os.path.abspath(dedup.STATE_DIR)
+
+    assert active != _REPO_STATE, (
+        "dedup.STATE_DIR points at the committed repo tree during tests — the "
+        "_isolate_dedup_state conftest fixture is not active. Collector "
+        "save_state() tests will pollute the working tree."
+    )
+    assert not active.startswith(_REPO_STATE + os.sep), (
+        f"STATE_DIR ({active}) is nested inside the committed _state tree; writes would still dirty the working tree."
+    )
+
+
+def test_signal_history_redirected_off_repo_tree():
+    """``_isolate_signal_history_state`` must redirect signal writes off the tree.
+
+    ``SignalTracker`` defaults ``history_path`` to ``common.signal_tracker.
+    _HISTORY_FILE`` resolved at call time (lazy sentinel). A no-arg
+    ``SignalTracker()`` — the form ``collect_market_indicators`` uses in
+    production — relies on the autouse fixture to point ``_HISTORY_FILE`` at a
+    throwaway tmp file. If that fixture is removed, such tests write
+    ``signal_history.json`` into the committed ``_state/`` tree, leaving dirty
+    working-tree side effects.
+
+    Asserting the active path is not inside the committed ``_state/`` tree turns
+    a silent regression into an immediate failure.
+    """
+    active = os.path.abspath(st._HISTORY_FILE)
+
+    assert not active.startswith(_REPO_STATE + os.sep), (
+        f"signal_tracker._HISTORY_FILE ({active}) points inside the committed "
+        "_state tree during tests — the _isolate_signal_history_state conftest "
+        "fixture is not active. No-arg SignalTracker() tests will pollute the "
+        "working tree."
     )

@@ -114,6 +114,99 @@ def _isolate_generated_images(tmp_path, monkeypatch):
 
 
 @pytest.fixture(autouse=True)
+def _isolate_dedup_state(request, tmp_path, monkeypatch):
+    """Redirect dedup ``_state/*.json`` writes to a per-test tmp dir.
+
+    Every collector persists its cross-run dedup state through
+    ``DedupEngine``, which resolves its output file at construction time as
+    ``os.path.join(common.dedup.STATE_DIR, state_file)``. Integration tests
+    that drive a real collector's ``save_state()`` path (base collector,
+    collector integration, per-source collectors) without patching
+    ``STATE_DIR`` themselves would otherwise write ``*_seen.json`` files into
+    the committed ``_state/`` tree — the same dirty-working-tree side effect
+    the image fixtures prevent, and one the ``pre-commit-state-guard`` hook
+    would then block at commit time. Pointing the module attribute at a
+    throwaway directory keeps those writes hermetic.
+
+    Because ``DedupEngine.__init__`` reads the module global at call time,
+    this autouse redirect covers collectors constructed inside the test body.
+    Tests that patch ``STATE_DIR`` themselves (test_dedup, collector configs)
+    set it after this fixture, so their value wins and is restored to this
+    tmp on teardown before monkeypatch unwinds to the real path.
+
+    Opt-out: tests marked ``no_state_isolation`` need the *real*
+    repo-anchored value (e.g. the runtime path-anchoring guard in
+    ``test_state_path_anchoring.py`` asserts ``STATE_DIR`` is under the repo
+    root). This redirect would defeat that guard, so it skips such tests.
+
+    Scope note: this covers the shared dedup ``_state`` family. The signal
+    history ``_state`` file is redirected separately by
+    ``_isolate_signal_history_state``.
+    """
+    if request.node.get_closest_marker("no_state_isolation"):
+        return
+    try:
+        import common.dedup as dedup
+    except ImportError:
+        return
+
+    dest = str(tmp_path / "_state")
+    monkeypatch.setattr(dedup, "STATE_DIR", dest)
+
+    # Some tests import via ``scripts.common.*`` (a distinct module object).
+    # Patch the twin defensively so both namespaces agree on the redirect.
+    try:
+        import scripts.common.dedup as dedup_scripts
+
+        if dedup_scripts is not dedup:
+            monkeypatch.setattr(dedup_scripts, "STATE_DIR", dest)
+    except ImportError:
+        pass
+
+
+@pytest.fixture(autouse=True)
+def _isolate_signal_history_state(request, tmp_path, monkeypatch):
+    """Redirect signal_tracker ``_state/signal_history.json`` writes to a tmp dir.
+
+    ``SignalTracker`` persists the daily composite-signal history through a
+    ``TimeSeriesStore`` bound to ``history_path``, which defaults to the module
+    global ``common.signal_tracker._HISTORY_FILE`` resolved *at call time*
+    (lazy sentinel). Integration tests that construct a no-arg
+    ``SignalTracker()`` — as ``collect_market_indicators`` does in production —
+    without passing an explicit ``history_path`` would otherwise write
+    ``signal_history.json`` into the committed ``_state/`` tree. Pointing the
+    module attribute at a throwaway file keeps those writes hermetic.
+
+    Because the constructor reads ``_HISTORY_FILE`` at call time, this autouse
+    redirect covers no-arg trackers built inside the test body. Tests that pass
+    ``history_path=`` explicitly still win — their value is used verbatim.
+
+    Opt-out: tests marked ``no_state_isolation`` (e.g. the runtime
+    path-anchoring guard) need the real repo-anchored value, so this redirect
+    skips them — consistent with ``_isolate_dedup_state``.
+    """
+    if request.node.get_closest_marker("no_state_isolation"):
+        return
+    try:
+        import common.signal_tracker as st
+    except ImportError:
+        return
+
+    dest = str(tmp_path / "_state" / "signal_history.json")
+    monkeypatch.setattr(st, "_HISTORY_FILE", dest)
+
+    # Some tests import via ``scripts.common.*`` (a distinct module object).
+    # Patch the twin defensively so both namespaces agree on the redirect.
+    try:
+        import scripts.common.signal_tracker as st_scripts
+
+        if st_scripts is not st:
+            monkeypatch.setattr(st_scripts, "_HISTORY_FILE", dest)
+    except ImportError:
+        pass
+
+
+@pytest.fixture(autouse=True)
 def _isolate_image_rejection_state(tmp_path, monkeypatch):
     """Redirect image_rejection_metrics state + archive paths to a per-test tmp dir.
 
