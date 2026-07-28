@@ -23,7 +23,6 @@ import pytest
 from scripts.common.signal_composer import CompositeResult, SignalResult
 from scripts.common.signal_tracker import (
     _SIGNAL_SCHEMA,
-    _SIGNAL_STORE,
     SignalTracker,
 )
 from scripts.common.time_series_state import TimeSeriesStore
@@ -317,14 +316,10 @@ class TestBackfillCompatibility:
         assert "correct" in acc
 
 
-# ── _SIGNAL_STORE 모듈 상수 확인 ──────────────────────────────────────────────
+# ── _SIGNAL_SCHEMA 모듈 상수 확인 ──────────────────────────────────────────────
 
 
 class TestSignalStoreModuleConstant:
-    def test_signal_store_is_time_series_store_instance(self):
-        """_SIGNAL_STORE가 TimeSeriesStore 인스턴스이어야 한다."""
-        assert isinstance(_SIGNAL_STORE, TimeSeriesStore)
-
     def test_signal_schema_allow_null_fields(self):
         """_SIGNAL_SCHEMA.allow_null_fields에 btc_price가 포함되어야 한다."""
         assert "btc_price" in _SIGNAL_SCHEMA.allow_null_fields

@@ -28,7 +28,7 @@ _HISTORY_FILE = os.path.join(_STATE_DIR, "signal_history.json")
 # 히스토리 보존 기간 (일)
 _MAX_AGE_DAYS = 365
 
-# ── TimeSeriesStore 스키마 및 인스턴스 ──────────────────────────────────────────
+# ── TimeSeriesStore 스키마 ──────────────────────────────────────────────────────
 
 _SIGNAL_SCHEMA = TimeSeriesSchema(
     required_fields=["date"],  # btc_price는 nullable이므로 required에 포함 안 함
@@ -39,8 +39,6 @@ _SIGNAL_SCHEMA = TimeSeriesSchema(
     allow_null_fields=["btc_price"],
     extra_fields_allowed=True,  # accuracy 중첩 필드 허용
 )
-
-_SIGNAL_STORE = TimeSeriesStore(Path(_HISTORY_FILE), _SIGNAL_SCHEMA, logger)
 
 
 # ── 데이터 클래스 ────────────────────────────────────────────────────────────
@@ -166,14 +164,18 @@ class SignalTracker:
         print(f"승률: {report.win_rate:.1%}")
     """
 
-    def __init__(self, history_path: str = _HISTORY_FILE) -> None:
+    def __init__(self, history_path: Optional[str] = None) -> None:
         """초기화.
 
         Args:
-            history_path: 히스토리 JSON 파일 경로. 기본값은 _state/signal_history.json.
+            history_path: 히스토리 JSON 파일 경로. None이면 호출 시점에 모듈 전역
+                ``_HISTORY_FILE`` (_state/signal_history.json)을 사용한다. 기본값을
+                import 시점이 아닌 호출 시점에 해석하므로, 테스트가
+                ``signal_tracker._HISTORY_FILE`` 을 monkeypatch 하면 무인자
+                ``SignalTracker()`` 생성도 리다이렉트된다 (dedup.STATE_DIR 격리와 동일).
         """
-        self._path = history_path
-        self._store = TimeSeriesStore(Path(history_path), _SIGNAL_SCHEMA, logger)
+        self._path = history_path if history_path is not None else _HISTORY_FILE
+        self._store = TimeSeriesStore(Path(self._path), _SIGNAL_SCHEMA, logger)
         self._entries: List[Dict[str, Any]] = self._store.load(validate=False)
         logger.debug("SignalTracker 초기화: %d개 항목 로드", len(self._entries))
 

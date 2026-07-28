@@ -247,6 +247,7 @@ _REPO_ROOT = Path(__file__).resolve().parent.parent
     ],
     ids=["dedup.STATE_DIR", "signal_tracker._STATE_DIR", "translator._CACHE_PATH"],
 )
+@pytest.mark.no_state_isolation
 def test_module_state_path_is_absolute_and_under_repo_root(import_path: str, attr: str) -> None:
     """The computed module-level state path must be absolute and under the repo root.
 
@@ -254,6 +255,10 @@ def test_module_state_path_is_absolute_and_under_repo_root(import_path: str, att
     the path attribute to confirm the value is rooted at the repo root, not at
     the test process cwd.  A stray ``<cwd>/_state/`` would produce a path that
     does NOT start with ``_REPO_ROOT``.
+
+    Marked ``no_state_isolation`` because the autouse dedup/signal ``_state``
+    redirect fixtures would otherwise repoint ``STATE_DIR`` at a tmp dir and
+    defeat this repo-anchoring assertion.
     """
     import importlib
 

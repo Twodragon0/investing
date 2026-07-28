@@ -74,6 +74,7 @@ norecursedirs = ["_site", ".git", "node_modules", "vendor", ".bundle"]
 timeout_method = "thread"
 markers = [
     "i18n_e2e: Playwright-driven end-to-end tests for the language toggle (tests/i18n/). Requires a running Jekyll preview at I18N_E2E_BASE_URL.",
+    "no_state_isolation: opt out of the autouse _state redirect fixtures (dedup/signal). For runtime guards that must read the real repo-anchored _state paths.",
 ]
 
 [tool.basedpyright]
