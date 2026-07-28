@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-28 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가 - 87건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 주목</li><li>📈 <strong>가격/시장</strong>: 달러 동향 주시</li><li>🏦 <strong>거래소</strong>: 18건 수집</li><li>🤖 <strong>AI/기술</strong>: 구글 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://global.morningstar.com/en-nd/markets/crypto-winter-or-big-crash-where-bitcoin-price-goes-now">Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가</a> <span class="p0-desc">Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가. 급락 관련 보도.</span></li><li><a href="https://news.google.com/read/CBMitAFBVV95cUxOVy0yNVNadHNXSU03Z0ZfYUxqcHBJYXhKblp6T3RvaGxvMmp4TWlwVHhoYXVxMmUtek51RW1RdHNWNThMaHR1dGNNT3NhdmlNaWdLcXBXMFY0NnRtVjdyNW5USGo3YnBxQ0FPbDBpeWtxVmpQVTZyX2JzaDNrMjg5ZklxR3lIX2hxcjNRd09oNmNJS01xN0VOOUgyMU1FYkVIeFdVbGZCRmRiSF9EcVRxajhzRzk?hl=en-US&gl=US&ceid=US%3Aen">비트코인은 호르무즈의 적대 행위가 중단되면서 확고한 입장을 유지하고 연준은 금리 결정을 준비합니다: 오늘의 암호화폐 시장</a> <span class="p0-desc">브렌트유는 미국과 이란이 호르무즈 해협 파업을 중단하고 주식과 디파이 토큰을 끌어올린 후 7% 급락했으며 수요일 비트코인은 중추적인 연준 결정을 앞두고 65,000달러 가까이 보유.</span></li><li><a href="https://kr.investing.com">비트코인, 미·이란 교전 중단에 6만5000달러 회복…유가는 5% 급락 By Bloomingbit - Investing.com 한국어</a> <span class="p0-desc">비트코인, 미·이란 교전 중단에 6만5000달러 회복…유가는 5% 급락 By Bloomingbit Investing.com 한국어</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가 
-외 P0 긴급 이슈 6건이 추가 감지되었습니다. 총 87건의 뉴스 중 P1 주요 이슈도 5건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (39건): 비트코인 관련 (39건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (28건): 달러 가격 변동 (28건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏦 거래소** (18건): bitmart, business, coinbase 동향이 포트폴리오 전략에 영향을 줄 수 있어 주시가 필요합니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가
-- 비트코인은 호르무즈의 적대 행위가 중단되면서 확고한 입장을 유지하고 연준은 금리 결정을 준비합니다: 오늘의 암호화폐 시장
-- 비트코인, 미·이란 교전 중단에 6만5000달러 회복…유가는 5% 급락 By Bloomingbit - Investing.com 한국어
-
-### 주요 이슈
-
-- ETF 특징주] 비트코인 ETF, 연준 금리 인상 우려에 자금 썰물 - 뉴스핌
-- 오전 시간: 토큰화된 주식이 Robinhood Chain에서 5배 상승했습니다
-- Cantor는 잠재적인 공개 상장 경로에 대해 암호화폐 은행 AMINA에 조언하고 있습니다.
-- 외 2건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Cointelegraph(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 4건 포함
-- 프로모션성 거래소 공지 1건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-07-28.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-07-28.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **87건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

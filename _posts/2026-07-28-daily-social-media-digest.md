@@ -30,45 +30,14 @@ image_alt: "소셜 미디어 동향 - 2026-07-28 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 연준 금리 결정, 관세, 이란 '일시 중지'로 바쁜 경제 주간 | 전국 뉴스 | US 뉴스 - US 뉴스 & 월드 리포트 - 20건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 연준, 인상 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 이재명, 부동산 이슈 부각</li><li>🟠 <strong>비트코인</strong>: 3건 수집</li><li>🏦 <strong>거래소</strong>: 고래 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.usnews.com">연준 금리 결정, 관세, 이란 '일시 중지'로 바쁜 경제 주간 | 전국 뉴스 | US 뉴스 - US 뉴스 & 월드 리포트</a> <span class="p0-desc">연준 금리 결정, 관세, 이란 '일시 중지'로 바쁜 경제 주간 | 전국 뉴스 | 미국 뉴스 미국 뉴스 & 월드 리포트</span></li><li><a href="https://www.reuters.com">미국-이란 공격이 중단되면서 석유 가격이 하락함에 따라 금은 상승합니다. 연준 요율 결정에 초점</a> <span class="p0-desc">미국-이란 공격이 중단되면서 석유 가격이 하락함에 따라 금은 상승합니다. 연준 금리 결정에 초점 Reuters</span></li><li><a href="https://www.cbsnews.com">연준에 금리 결정이 내려짐에 따라 글로벌 유가는 배럴당 약 90달러를 맴돌고 있습니다.</a> <span class="p0-desc">연준에 금리 결정이 내려지면서 전 세계 유가는 배럴당 약 90달러를 맴돌고 있습니다. CBS News</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 연준 금리 결정, 관세, 이란 '일시 중지'로 바쁜 경제 주간 | 전국 뉴스 | US 뉴스 - US 뉴스 & 월드 리포트 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 20건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
+오늘 수집된 총 20건 중 텔레그램 0건, 소셜 1건, 정치·경제 19건으로 주요 이슈를 정리했습니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (14건): 연준, 인상, 기준금리 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🏛️ 정치/정책** (6건): 이재명, 부동산, 대통령 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-- **🟠 비트코인** (3건): 비트코인 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 연준 금리 결정, 관세, 이란 '일시 중지'로 바쁜 경제 주간 | 전국 뉴스 | US 뉴스 - US 뉴스 & 월드 리포트
-- 미국-이란 공격이 중단되면서 석유 가격이 하락함에 따라 금은 상승합니다. 연준 요율 결정에 초점
-- 연준에 금리 결정이 내려짐에 따라 글로벌 유가는 배럴당 약 90달러를 맴돌고 있습니다.
-
-### 투자자 체크포인트
-
-- 소셜 1건, 정치·경제 19건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">14건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:43%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:21%"></div></div><span class="theme-count">3건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:7%"></div></div><span class="theme-count">1건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:71%"></div></div><span class="theme-count">10건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-07-28.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-07-28.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 주요 이슈
+- 긴급 알림 3건에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드
 
