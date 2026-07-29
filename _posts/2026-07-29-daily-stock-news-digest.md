@@ -33,52 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-29 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 매도 사이드카 이어 서킷브레이커…코스피·코스닥 동반 '폭락' - 208건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 반도체, 급락 주목</li><li>📊 <strong>매크로/금리</strong>: 연준 이슈 부각</li><li>🏦 <strong>거래소</strong>: IPO, 인수 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.hankyung.com">매도 사이드카 이어 서킷브레이커…코스피·코스닥 동반 '폭락'</a> <span class="p0-desc">매도 사이드카 이어 서킷브레이커…코스피·코스닥 동반 '폭락' 한국경제</span></li><li><a href="https://zdnet.co.kr">中 메모리 CXMT 상장에…코스피·코스닥 동반 매도 사이드카 발동 - 지디넷코리아</a> <span class="p0-desc">中 메모리 CXMT 상장에…코스피·코스닥 동반 매도 사이드카 발동 지디넷코리아</span></li><li><a href="https://www.sankyungtoday.com">코스피·코스닥 동반 급락…개장 직후 매도 사이드카 발동 - 산경투데이</a> <span class="p0-desc">코스피·코스닥 동반 급락…개장 직후 매도 사이드카 발동 산경투데이</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 매도 사이드카 이어 서킷브레이커…코스피·코스닥 동반 '폭락' 
-외 P0 긴급 이슈 13건이 추가 감지되었습니다. 총 208건의 뉴스 중 P1 주요 이슈도 33건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (51건): 코스피, 코스닥, 사이드카 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🤖 AI/기술** (22건): 반도체, 급락, 반도체주 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-- **📊 매크로/금리** (11건): 연준, 금리 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 매도 사이드카 이어 서킷브레이커…코스피·코스닥 동반 '폭락'
-- 中 메모리 CXMT 상장에…코스피·코스닥 동반 매도 사이드카 발동 - 지디넷코리아
-- 코스피·코스닥 동반 급락…개장 직후 매도 사이드카 발동 - 산경투데이
-
-### 주요 이슈
-
-- 오늘 주식 시장: 나스닥은 반등하고, S&P 500은 수익으로 다우가 상승하고 하락합니다.
-- 월스트리트은 투자자들이 기술 수익에 집중하면서 혼조세를 보였습니다.
-- 나스닥 선물 하락, AI 칩 문제가 거대 기술 수익보다 중요함 - Moder
-- 외 30건
-
-### 투자자 체크포인트
-
-- 한국 기사 71건, 글로벌 기사 137건 수집
-- 한국 지수: KOSPI 6,023.66(-10.84%), KOSDAQ 705.85(-7.72%), USD/KRW 1,453.18(-0.80%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">51건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:43%"></div></div><span class="theme-count">22건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:22%"></div></div><span class="theme-count">11건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:12%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:10%"></div></div><span class="theme-count">5건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-07-29.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-07-29.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,023.66 (-10.84%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 705.85 (-7.72%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- *NBCNews.com을 방문하면 세계 뉴스, 비즈니스, 정치, 건강 및 대중 문화에 관한 속보, 비디오 및 최신 주요*
 
 ## 테마별 주요 뉴스
 

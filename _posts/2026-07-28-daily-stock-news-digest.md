@@ -34,6 +34,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-28 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: "전장 급락 딛고 상승" 코스피·코스닥 장 초반 '1%대 반등' - 진일보 - 166건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 반도체 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 연준, 금리 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 엔비디아, 반도체 관련 25건</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 동결 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.jnilbo.com">"전장 급락 딛고 상승" 코스피·코스닥 장 초반 '1%대 반등' - 진일보</a> <span class="p0-desc">"전장 급락 딛고 상승" 코스피·코스닥 장 초반 '1%대 반등' 진일보</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,755.75 (+0.97%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
