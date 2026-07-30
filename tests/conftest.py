@@ -60,8 +60,8 @@ def _block_real_http(monkeypatch):
     public host that the SSRF guard permits (``example.com`` resolves publicly) —
     a slow, flaky "green". Blocking the transport layer turns that into an
     immediate, obvious failure. Tests that mock ``requests`` never reach this
-    adapter, so they are unaffected; DNS-resolution guards (``socket.getaddrinfo``)
-    are also untouched.
+    adapter, so they are unaffected. The DNS layer is handled separately by
+    ``_deterministic_dns_resolution`` (SSRF guard resolution).
     """
     try:
         from requests.adapters import HTTPAdapter
@@ -75,6 +75,60 @@ def _block_real_http(monkeypatch):
         )
 
     monkeypatch.setattr(HTTPAdapter, "send", _blocked)
+
+
+# A globally-routable public IP. ``_is_non_public_ip`` returns False for it, so a
+# hostname resolving here is treated as a public (allowed) SSRF target. The
+# ``_ssrf_dns_stub`` marker below lets the isolation guard confirm the resolver
+# is stubbed without depending on the runner's live DNS.
+_PUBLIC_TEST_IP = "93.184.216.34"
+
+
+@pytest.fixture(autouse=True)
+def _deterministic_dns_resolution(monkeypatch):
+    """Pin the SSRF guard's DNS resolution so it never depends on live network.
+
+    ``common.utils.is_private_url_target`` resolves multi-label public hostnames
+    via ``socket.getaddrinfo`` and *fails closed* — treating the URL as private
+    and blocking it — when resolution fails. On a runner with no outbound DNS
+    (offline local dev, a sandboxed CI job) a public test URL such as
+    ``https://example.com/feed.rss`` is then blocked, so ``fetch_rss_feed`` /
+    ``fetch_page_metadata`` return nothing and the collector/enrichment tests
+    that drive them fail. When DNS *is* reachable the same tests pass. That
+    network coupling is a latent flaky-green: the outcome depends on the
+    runner's resolver, not the code under test.
+
+    Pinning ``socket.getaddrinfo`` to a fixed public IP makes any hostname that
+    reaches the DNS step resolve deterministically to a non-blocked address.
+    Private targets (literal IPs, single-label names, ``.internal`` / rebind
+    suffixes) are rejected *before* the DNS step, so they are unaffected. Tests
+    that assert the DNS branch itself (``test_utils_ssrf``) install their own
+    ``patch("socket.getaddrinfo", ...)`` inside the test body, which overrides
+    this fixture for that scope and restores it on exit.
+
+    The guard memoizes results in a module-level ``TTLCache``; clear it (on both
+    the ``common.*`` and ``scripts.common.*`` module twins) so a value cached
+    under a prior real/offline resolution cannot leak across tests.
+    """
+    import importlib
+    import socket
+
+    def _fake_getaddrinfo(host, *args, **kwargs):
+        return [(socket.AF_INET, socket.SOCK_STREAM, 6, "", (_PUBLIC_TEST_IP, 0))]
+
+    _fake_getaddrinfo._ssrf_dns_stub = True  # tripwire for the isolation guard
+    monkeypatch.setattr(socket, "getaddrinfo", _fake_getaddrinfo)
+
+    for mod_name in ("common.utils", "scripts.common.utils"):
+        try:
+            mod = importlib.import_module(mod_name)
+        except ImportError:
+            continue
+        cache = getattr(mod, "_dns_cache", None)
+        lock = getattr(mod, "_dns_cache_lock", None)
+        if cache is not None and lock is not None:
+            with lock:
+                cache.clear()
 
 
 @pytest.fixture(autouse=True)

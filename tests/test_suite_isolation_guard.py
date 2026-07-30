@@ -122,3 +122,33 @@ def test_translation_cache_redirected_off_repo_tree():
         "fixture is not active. translate_batch()/save_translation_cache() "
         "tests will pollute the working tree."
     )
+
+
+def test_ssrf_dns_resolution_pinned_off_live_network():
+    """``_deterministic_dns_resolution`` must pin SSRF DNS off the live network.
+
+    ``common.utils.is_private_url_target`` resolves public hostnames via
+    ``socket.getaddrinfo`` and fails closed when resolution fails, so without the
+    autouse fixture a runner with no outbound DNS blocks ``example.com`` and the
+    collector/enrichment tests that fetch it fail (they pass again once DNS is
+    reachable — a flaky-green). This asserts the resolver is the fixture's stub,
+    which is network-independent: a live-DNS ``getaddrinfo`` carries no
+    ``_ssrf_dns_stub`` marker, so removing the fixture fails here in CI too, not
+    only offline.
+    """
+    import socket
+
+    assert getattr(socket.getaddrinfo, "_ssrf_dns_stub", False), (
+        "socket.getaddrinfo is the real resolver during tests — the "
+        "_deterministic_dns_resolution conftest fixture is not active. SSRF "
+        "DNS-dependent collector/enrichment tests will couple to the runner's "
+        "live network and flake when DNS is unavailable."
+    )
+
+    # Behavioural corollary: a public URL must not be blocked by the guard.
+    from common.utils import is_private_url_target
+
+    assert is_private_url_target("https://example.com/feed.rss") is False, (
+        "example.com is blocked by the SSRF guard under the pinned resolver — "
+        "the deterministic DNS stub is not returning a public address."
+    )
