@@ -30,49 +30,14 @@ image_alt: "소셜 미디어 동향 - 2026-07-30 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 연준 오늘 회의: FOMC, Warsh 가중치 이자율 결정; 다우 폭락, 유가 상승 — 실시간 업데이트 - 36건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 기조, 금리 관련 27건</li><li>🟠 <strong>비트코인</strong>: 비트코인, 트럼프 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 이재명 주목</li><li>📈 <strong>가격/시장</strong>: 인상, 기조 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.wsj.com">연준 오늘 회의: FOMC, Warsh 가중치 이자율 결정; 다우 폭락, 유가 상승 — 실시간 업데이트</a> <span class="p0-desc">연준 오늘 회의: FOMC, Warsh 가중치 이자율 결정; 다우지수 하락, 유가 상승 — 실시간 업데이트 WSJ</span></li><li><a href="https://www.reuters.com">금은 달러화에 따라 하락하고 연준 금리 결정을 앞두고 수익률은 상승한다고 Warsh는 말했습니다.</a> <span class="p0-desc">금은 달러로 하락하고 연준 금리 결정을 앞두고 수익률이 상승한다고 Warsh는 말했습니다. Reuters</span></li><li><a href="https://www.businessinsider.com">연준 회의 업데이트: FOMC의 이자율 결정은 몇 달 만에 가장 가까운 결정입니다 - Business Insider</a> <span class="p0-desc">Business Insider는 글로벌 기술, 금융, 주식 시장, 미디어, 경제, 라이프스타일, 부동산, AI 및 여러분이 알고 싶은 이야기를 알려드립니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 연준 오늘 회의: FOMC, Warsh 가중치 이자율 결정; 다우 폭락, 유가 상승 — 실시간 업데이트 
-외 P0 긴급 이슈 6건이 추가 감지되었습니다. 총 36건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
+오늘 수집된 총 36건 중 텔레그램 0건, 소셜 1건, 정치·경제 35건으로 주요 이슈를 정리했습니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (27건): 기조, 금리, 인상 매크로 변수 (27건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🟠 비트코인** (5건): 비트코인, 트럼프 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **🏛️ 정치/정책** (5건): 트럼프, 이재명, 인상 정치 이슈 (5건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 연준 오늘 회의: FOMC, Warsh 가중치 이자율 결정; 다우 폭락, 유가 상승 — 실시간 업데이트
-- 금은 달러화에 따라 하락하고 연준 금리 결정을 앞두고 수익률은 상승한다고 Warsh는 말했습니다.
-- 연준 회의 업데이트: FOMC의 이자율 결정은 몇 달 만에 가장 가까운 결정입니다 - Business Insider
-
-### 주요 이슈
-
-- 레버리지 ETF 도입 논란… 국민의힘 "이재명 정부 경제 정책 전면 교체해야"
-
-### 투자자 체크포인트
-
-- 소셜 1건, 정치·경제 35건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">27건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:19%"></div></div><span class="theme-count">5건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:19%"></div></div><span class="theme-count">5건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:74%"></div></div><span class="theme-count">20건</span></div>
-<div class="theme-row"><span class="theme-label">🔷 이더리움</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:7%"></div></div><span class="theme-count">2건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-07-30.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-07-30.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 주요 이슈
+- 긴급 알림 3건에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드
 

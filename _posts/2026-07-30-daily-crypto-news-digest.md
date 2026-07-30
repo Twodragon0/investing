@@ -41,40 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-30 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: Crypto Winter 또는 Big 폭락? 비트코인이 다음에 갈 수 있는 곳 - 103건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 주목</li><li>📈 <strong>가격/시장</strong>: 달러선 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 애플 주목</li><li>🔵 <strong>규제/정책</strong>: 20건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMilAFBVV95cUxQRWFxVnI0dExnaXpvZ01YMzVEbUpjaEdHQmxHVWZma1pPS0dWVUthY192Vm1fTnNaaGloOGhhRVoyS1ZRaWxoOFZwSUdvcktRQmNwczYySXpuY2wtbjE2NFplLXk3bzUtaC03dW9CQWIwQ1dMY3Vfb2tvSkFjUmV2WUh1MTdDV3oxSjQ3S21DVHlhNnQz?hl=en-US&gl=US&ceid=US%3Aen">Crypto Winter 또는 Big 폭락? 비트코인이 다음에 갈 수 있는 곳</a> <span class="p0-desc">60,000달러를 향해 급락한 후, 투자자들은 규제, 통화 정책 및 미국 중간고사가 가격에 미치는 영향에 중점을 둡니다.</span></li><li><a href="https://news.google.com/read/CBMivwFBVV95cUxNdlF0aFM5Mm50RmhPR2JKaG5RUXRDRXBhZVF0dUotYXdScHQwQVFZRzl1blJ5NkxhNGNfYWZ4dnFJMFRoTkhRS3BfSzNNTFRQSDdySnlLQll3VThJTlIyTGx0cDQyZm9CNTBKS1NlbU5vNU9TODdvaU9XdnUtbmpxelRZZmRqNXZsMi1oRmVRZ3pEQmxOTkJVOTVDQ19wTmdiVHIwQzA1RkgtcGc2OEtNZXRKX0RGRDZZT1Z1RGFZWQ?hl=en-US&gl=US&ceid=US%3Aen">비트코인은 $64,300까지 반등하지만 실제 움직임은 연준에서 기다립니다: 오늘의 암호화폐 시장</a> <span class="p0-desc">BTC은 연준의 금리 결정을 앞두고 시장이 조심스럽게 입장을 취하면서 0.75% 회복한 $64,328을 기록했으며, 유가 완화에도 불구하고 인플레이션이 4.1%로 확고하게 상승세를.</span></li><li><a href="https://global.morningstar.com/en-nd/markets/crypto-winter-or-big-crash-where-bitcoin-price-goes-now">Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가</a> <span class="p0-desc">Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가. 급락 관련 보도.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Crypto Winter 또는 Big 폭락? 비트코인이 다음에 갈 수 있는 곳 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 103건의 뉴스 중 P1 주요 이슈도 6건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (47건): 비트코인 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **📈 가격/시장** (40건): 달러선 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🤖 AI/기술** (13건): 애플 기술 이슈 (13건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 비트코인은 $64,300까지 반등하지만 실제 움직임은 연준에서 기다립니다: 오늘의 암호화폐 시장
-- Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가
-
-### 주요 이슈
-
-- 비트코인(BTC), 금리 발표 앞 반등."다음 바닥은 10월 초" 경고 - 코인리더스
-- 오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다
-- 유니스왑 설립자는 청구를 거부합니다. v4 수수료로 LP 수익이 감소합니다.
-- 외 3건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Google News KR(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 1건 포함
-- 프로모션성 거래소 공지 4건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-07-30.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-07-30.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **103건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🤖 AI/기술
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
