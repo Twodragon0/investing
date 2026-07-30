@@ -1,23 +1,5 @@
 {
   "seen": {
-    "b3d084c8f8483967cf7656c0": "2026-06-30T22:56:48",
-    "753681dfef3121c39ee2265f": "2026-06-30T22:56:48",
-    "49952cfc6adaf09e56fef9e8": "2026-06-30T22:56:48",
-    "f451a9c63dc4f8509d3dbd51": "2026-06-30T22:56:48",
-    "b82f6e6bcfa66f6646c13409": "2026-06-30T22:56:48",
-    "7475d24a9ed47fc33f063856": "2026-06-30T22:56:48",
-    "7dd752afd397044aad407ea0": "2026-06-30T22:56:48",
-    "439d55a89fb4b80822165189": "2026-06-30T22:56:48",
-    "d8592b6a89ec5c273025baff": "2026-06-30T22:56:48",
-    "4cd1d92749c5aa48baa0589b": "2026-06-30T22:56:48",
-    "8d8822d4a68ba0e653d3db55": "2026-06-30T22:56:48",
-    "a4aa2bba2e0f27ae064bf802": "2026-06-30T22:56:48",
-    "bd7fdbe003e45453bdc14744": "2026-06-30T22:56:48",
-    "73925cba3c939cfd30a6f171": "2026-06-30T22:56:48",
-    "d76a611a5b96bfe21d769536": "2026-06-30T22:56:48",
-    "45bceca2b68290eb7e3d4b93": "2026-06-30T22:56:48",
-    "78ceca50a3f7b2eeafad3bf8": "2026-06-30T22:56:48",
-    "990b6d866a8c79bd28ce53f3": "2026-06-30T22:56:48",
     "a44c2962e79df89c9d6ad2cb": "2026-07-01T22:54:56",
     "d7de728eb3e09bf346eeb496": "2026-07-01T22:54:56",
     "c7872a32104876aa0005da75": "2026-07-01T22:54:56",
@@ -664,7 +646,46 @@
     "33a6006095b6b5d255986b46": "2026-07-29T23:31:47",
     "1b182d74a1e91587a647d4e1": "2026-07-29T23:31:47",
     "1842da209eb31570b41c7b55": "2026-07-29T23:31:47",
-    "7b30880ca25c8bf5ba70a3c7": "2026-07-29T23:31:47"
+    "7b30880ca25c8bf5ba70a3c7": "2026-07-29T23:31:47",
+    "e750d236d56d7086b0e03b2b": "2026-07-30T23:34:04",
+    "682aca019b23202737f7f7c4": "2026-07-30T23:34:04",
+    "a73848c6a1a85b75cb79fb75": "2026-07-30T23:34:04",
+    "57090d7e3a9bba17f48f6559": "2026-07-30T23:34:04",
+    "3f13b5a952181762f1f99e2b": "2026-07-30T23:34:04",
+    "044285df543dc37b22e17219": "2026-07-30T23:34:04",
+    "536bd8e7efe636c3e43dcfe3": "2026-07-30T23:34:04",
+    "4df905b21ffc86b1134f8a76": "2026-07-30T23:34:04",
+    "51454c98ad0110b7173add5e": "2026-07-30T23:34:04",
+    "5ba2c17f82d17fe76ae2e47c": "2026-07-30T23:34:04",
+    "97df6592736c471b064c3775": "2026-07-30T23:34:04",
+    "5d49708c27af30de30c759be": "2026-07-30T23:34:04",
+    "9293e2e0a588e0cdf35b8621": "2026-07-30T23:34:04",
+    "2dc7981fd147ce4262224af1": "2026-07-30T23:34:04",
+    "c2ef5b6f3425f1600ebd8010": "2026-07-30T23:34:04",
+    "3c78927870b27567bfd28c8b": "2026-07-30T23:34:04",
+    "8f53eed62e84b109365a4877": "2026-07-30T23:34:04",
+    "b85c9cfa9470fc6013200a5a": "2026-07-30T23:34:04",
+    "d65e624fede9c2e49cdc7e0b": "2026-07-30T23:34:04",
+    "3e8bec39f6dc830d8b28bc6c": "2026-07-30T23:34:04",
+    "86e3d1b9e331e4b1160205a6": "2026-07-30T23:34:04",
+    "ffa1d81d909a96da998f3755": "2026-07-30T23:34:04",
+    "2ce26e15b11f751fab49cf1f": "2026-07-30T23:34:04",
+    "adffbd82bc63e6487664b5d8": "2026-07-30T23:34:04",
+    "7ccb84a82b678bb3815185b3": "2026-07-30T23:34:04",
+    "760bc988e59027b521d01bc5": "2026-07-30T23:34:04",
+    "d1702a4e336567266066ad69": "2026-07-30T23:34:04",
+    "2602d89a90cd310de51e8f31": "2026-07-30T23:34:04",
+    "8ddddc5d0523236229b6d19c": "2026-07-30T23:34:04",
+    "7f6e501e8e5f94d89989ce90": "2026-07-30T23:34:04",
+    "d51f75344389d658ecd7e108": "2026-07-30T23:34:04",
+    "e2e0874ec81cd7595e716293": "2026-07-30T23:34:04",
+    "293d8e90a7be0a162277304e": "2026-07-30T23:34:04",
+    "22aec584517e92a4ff482e6c": "2026-07-30T23:34:04",
+    "0a907b70d2406a533c38d35f": "2026-07-30T23:34:04",
+    "1f7be2261efdadd41beb5d58": "2026-07-30T23:34:04",
+    "2e0f504ea48a7f40d8d9bc18": "2026-07-30T23:34:04",
+    "fae5e515a56f6b68e9b08b7d": "2026-07-30T23:34:04",
+    "f26f186e90796ba6344bd11e": "2026-07-30T23:34:04"
   },
   "titles": [
     [
@@ -13982,6 +14003,162 @@
     [
       "정치인 거래정책 리포트 20260730",
       "2026-07-30"
+    ],
+    [
+      "anthony scaramucci says congress gets insider information calls for sweeping stock trading reform",
+      "2026-07-31"
+    ],
+    [
+      "oklahomas newest multimillionaire us senator reveals stock trades the oklahoman",
+      "2026-07-31"
+    ],
+    [
+      "richardson electronics rell director exercises options and sells 17000 shares stock titan",
+      "2026-07-31"
+    ],
+    [
+      "paypal holdings pypl svp sells 1337 shares in 10b51 plan stock titan",
+      "2026-07-31"
+    ],
+    [
+      "paypal holdings nasdaq pypl president sells 732 shares via 10b51 plan stock titan",
+      "2026-07-31"
+    ],
+    [
+      "pricesmart inc psmt foundation receives bona fide gift of 6400 shares stock titan",
+      "2026-07-31"
+    ],
+    [
+      "hrt financial lp reduces li bang stake with 1086186share sale lbgj stock titan",
+      "2026-07-31"
+    ],
+    [
+      "snowflake nyse snow director sells 50000 shares gifts 16668 stock titan",
+      "2026-07-31"
+    ],
+    [
+      "atricure nasdaq atrc director exercises 25000 options and sells 25000 shares stock titan",
+      "2026-07-31"
+    ],
+    [
+      "insider sale avepoint avpt clo trades 10000 shares via 10b51 stock titan",
+      "2026-07-31"
+    ],
+    [
+      "aon plc nyse aon counsel sells 1900 shares under 10b51 plan stock titan",
+      "2026-07-31"
+    ],
+    [
+      "lamb weston nyse lw grants chro 6957 restricted stock units stock titan",
+      "2026-07-31"
+    ],
+    [
+      "oak valley bancorp ovly director shifts 186 custodial shares stock titan",
+      "2026-07-31"
+    ],
+    [
+      "atricure inc atrc insider sells 6182 shares at 3880 stock titan",
+      "2026-07-31"
+    ],
+    [
+      "paymentus pay director sells 80000 shares under rule 10b51 plan stock titan",
+      "2026-07-31"
+    ],
+    [
+      "coreweave inc crwv officer settles 12500 rsus sells shares for taxes stock titan",
+      "2026-07-31"
+    ],
+    [
+      "eplus inc plus coos trust sells 2000 shares via 10b51 plan stock titan",
+      "2026-07-31"
+    ],
+    [
+      "이천시의회 투명한 의정활동 강화 재산신고 설명회 참석 2000newscom",
+      "2026-07-31"
+    ],
+    [
+      "시장 이긴다더니 정부 시장 역공에 속수무책",
+      "2026-07-31"
+    ],
+    [
+      "우리 시장만 그런 것 아냐 vs 한국 올 수 있겠나 정치 on ytn",
+      "2026-07-31"
+    ],
+    [
+      "미국 기준금리 5번째 동결했지만 불확실성 커지자 한국은행 셈법은 더욱 복잡해져",
+      "2026-07-31"
+    ],
+    [
+      "美는 버티고 한은은 고민8월 기준금리 인상 저울질 에너지경제신문",
+      "2026-07-31"
+    ],
+    [
+      "미국 기준금리 동결에도 한국추가 인상 압박 매일일보",
+      "2026-07-31"
+    ],
+    [
+      "미 매파적 동결에한은 기준금리 8월 인상 가능성 고개",
+      "2026-07-31"
+    ],
+    [
+      "美금리인상 불씨 남겨한은 추가인상 하나 매일경제 마켓",
+      "2026-07-31"
+    ],
+    [
+      "미 fed는 동결 한은은증시 변동성에도 8월 백투백 인상 나서나",
+      "2026-07-31"
+    ],
+    [
+      "미 연준 매파적 동결한은 통화 긴축 속도 내나",
+      "2026-07-31"
+    ],
+    [
+      "미국 연준 기준금리 매파적 동결 한은 총재 신현송 8월 기준금리 인상 힘 받나",
+      "2026-07-31"
+    ],
+    [
+      "연준 매파적 동결한은 8월 금리인상 가능성 커지나",
+      "2026-07-31"
+    ],
+    [
+      "미 연준 5연속 금리 동결에도 인상론한은 금리 결정 불확실성 고조 스마트비즈",
+      "2026-07-31"
+    ],
+    [
+      "물가냐 경기냐 고심 깊어지는 한은 매일일보",
+      "2026-07-31"
+    ],
+    [
+      "美금리 350375 5연속 동결연준 의장 인플레 2 목표종합2보",
+      "2026-07-31"
+    ],
+    [
+      "live fed rate decision warsh news conference",
+      "2026-07-31"
+    ],
+    [
+      "federal reserve holds interest rates steady but 3 officials vote for hike",
+      "2026-07-31"
+    ],
+    [
+      "feds interest rate decision july 29 2026",
+      "2026-07-31"
+    ],
+    [
+      "30year yield hovers near 2007 high as traders weigh fed decision to holds rates steady",
+      "2026-07-31"
+    ],
+    [
+      "gold holds steady ahead of feds rate decision",
+      "2026-07-31"
+    ],
+    [
+      "what to watch for at the fed meeting",
+      "2026-07-31"
+    ],
+    [
+      "정치인 거래정책 리포트 20260731",
+      "2026-07-31"
     ]
   ],
   "seen_urls": {}
