@@ -11,6 +11,7 @@ from pathlib import Path
 import common.dedup as dedup
 import common.image_generator as ig
 import common.signal_tracker as st
+import common.translator as translator
 
 # Test-file-local anchor for the committed repo tree. We deliberately derive the
 # path from ``__file__`` instead of importing ``common.image_generator.REPO_ROOT``:
@@ -96,4 +97,28 @@ def test_signal_history_redirected_off_repo_tree():
         "_state tree during tests — the _isolate_signal_history_state conftest "
         "fixture is not active. No-arg SignalTracker() tests will pollute the "
         "working tree."
+    )
+
+
+def test_translation_cache_redirected_off_repo_tree():
+    """``_isolate_translation_cache`` must redirect translator writes off the tree.
+
+    ``_save_cache()`` resolves its output through ``common.translator.
+    _CACHE_PATH`` read at call time. A real translation flow
+    (``translate_batch`` → ``save_translation_cache``) that does not patch
+    ``_CACHE_PATH`` relies on the autouse fixture to point it at a throwaway
+    tmp file. If that fixture is removed, such tests write
+    ``translation_cache.json`` into the committed ``_state/`` tree, leaving
+    dirty working-tree side effects.
+
+    Asserting the active path is not inside the committed ``_state/`` tree turns
+    a silent regression into an immediate failure.
+    """
+    active = os.path.abspath(translator._CACHE_PATH)
+
+    assert not active.startswith(_REPO_STATE + os.sep), (
+        f"translator._CACHE_PATH ({active}) points inside the committed "
+        "_state tree during tests — the _isolate_translation_cache conftest "
+        "fixture is not active. translate_batch()/save_translation_cache() "
+        "tests will pollute the working tree."
     )

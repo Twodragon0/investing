@@ -207,6 +207,55 @@ def _isolate_signal_history_state(request, tmp_path, monkeypatch):
 
 
 @pytest.fixture(autouse=True)
+def _isolate_translation_cache(request, tmp_path, monkeypatch):
+    """Redirect translator ``_state/translation_cache.json`` writes to a tmp dir.
+
+    ``_save_cache()`` / ``_load_cache()`` read the module global
+    ``common.translator._CACHE_PATH`` *at call time* (no import-time default-arg
+    binding), so a plain attribute redirect covers any code path that persists
+    the cache. Integration tests that drive a real translation flow
+    (``translate_batch`` → ``save_translation_cache``) without patching
+    ``_CACHE_PATH`` themselves would otherwise write ``translation_cache.json``
+    into the committed ``_state/`` tree — the dirty-working-tree side effect the
+    dedup/signal fixtures also prevent. Pointing the module attribute at a
+    throwaway file keeps those writes hermetic.
+
+    The module memoizes the loaded cache in the ``_cache`` global (``_load_cache``
+    returns early when it is not ``None``). Reset ``_cache``/``_cache_dirty`` too,
+    or a cache loaded by an earlier test would leak forward and defeat the
+    redirect (the early return skips re-reading the now-repointed path).
+
+    Opt-out: tests marked ``no_state_isolation`` (e.g. the runtime
+    path-anchoring guard, which asserts ``_CACHE_PATH`` is under the repo root)
+    need the real repo-anchored value, so this redirect skips them — consistent
+    with ``_isolate_dedup_state`` / ``_isolate_signal_history_state``.
+    """
+    if request.node.get_closest_marker("no_state_isolation"):
+        return
+    try:
+        import common.translator as translator
+    except ImportError:
+        return
+
+    dest = tmp_path / "_state" / "translation_cache.json"
+    monkeypatch.setattr(translator, "_CACHE_PATH", dest)
+    monkeypatch.setattr(translator, "_cache", None)
+    monkeypatch.setattr(translator, "_cache_dirty", False)
+
+    # Some tests import via ``scripts.common.*`` (a distinct module object).
+    # Patch the twin defensively so both namespaces agree on the redirect.
+    try:
+        import scripts.common.translator as translator_scripts
+
+        if translator_scripts is not translator:
+            monkeypatch.setattr(translator_scripts, "_CACHE_PATH", dest)
+            monkeypatch.setattr(translator_scripts, "_cache", None)
+            monkeypatch.setattr(translator_scripts, "_cache_dirty", False)
+    except ImportError:
+        pass
+
+
+@pytest.fixture(autouse=True)
 def _isolate_image_rejection_state(tmp_path, monkeypatch):
     """Redirect image_rejection_metrics state + archive paths to a per-test tmp dir.
 
