@@ -1,29 +1,5 @@
 {
   "seen": {
-    "a44c2962e79df89c9d6ad2cb": "2026-07-01T22:54:56",
-    "d7de728eb3e09bf346eeb496": "2026-07-01T22:54:56",
-    "c7872a32104876aa0005da75": "2026-07-01T22:54:56",
-    "011e4f9a36a36ea9f8007c5b": "2026-07-01T22:54:56",
-    "bb850860a872495a24bfebe6": "2026-07-01T22:54:56",
-    "71df6901e4be0c069ad061cd": "2026-07-01T22:54:56",
-    "cf7630f0892b9c7fa0f4d3b8": "2026-07-01T22:54:56",
-    "28a597205f4b8797b059cd7d": "2026-07-01T22:54:56",
-    "b1bed06bdfd58d7d628aeabb": "2026-07-01T22:54:56",
-    "fc71a250d0266458e8790946": "2026-07-01T22:54:56",
-    "2610076d5d641fa88846c778": "2026-07-01T22:54:56",
-    "65149a9b4f40d617dda6bfcb": "2026-07-01T22:54:56",
-    "da20b77e7061e778443b5aa2": "2026-07-01T22:54:56",
-    "e6b179281669f63dfc6bfec6": "2026-07-01T22:54:56",
-    "cccd1acd9a386c389f0327e6": "2026-07-01T22:54:56",
-    "af4725f2e1f8e2895b5e5792": "2026-07-01T22:54:56",
-    "c8345a8e30e272b584961daf": "2026-07-01T22:54:56",
-    "116577dd59ab2ea3cb31c21c": "2026-07-01T22:54:56",
-    "4d0883f4d04c9380816bd55e": "2026-07-01T22:54:56",
-    "8d55c2f9a2af56af82ce6f10": "2026-07-01T22:54:56",
-    "76b940faac5486afbc6052d7": "2026-07-01T22:54:56",
-    "dc8622ec64a07f8485616340": "2026-07-01T22:54:56",
-    "3f967693a461e2102dc68b2b": "2026-07-01T22:54:56",
-    "359f353561d586914e8c4de7": "2026-07-01T22:54:56",
     "226dac5c5cdd9056edc22c8c": "2026-07-02T23:37:14",
     "df5cf20ac8f1b8fb2b7b3987": "2026-07-02T23:37:14",
     "821a64bc866be80b26ed4086": "2026-07-02T23:37:14",
@@ -685,7 +661,33 @@
     "1f7be2261efdadd41beb5d58": "2026-07-30T23:34:04",
     "2e0f504ea48a7f40d8d9bc18": "2026-07-30T23:34:04",
     "fae5e515a56f6b68e9b08b7d": "2026-07-30T23:34:04",
-    "f26f186e90796ba6344bd11e": "2026-07-30T23:34:04"
+    "f26f186e90796ba6344bd11e": "2026-07-30T23:34:04",
+    "f03f1417c30297b41330b45a": "2026-07-31T23:31:10",
+    "a988cd13bac16048ad37e1cf": "2026-07-31T23:31:10",
+    "c9cfaff1cdc7dd672d3d6587": "2026-07-31T23:31:10",
+    "820074d2812a64035ba82299": "2026-07-31T23:31:10",
+    "fba0fbe9caa404564ab18364": "2026-07-31T23:31:10",
+    "f9e9a449dbce3b8087c605ce": "2026-07-31T23:31:10",
+    "3e8d9f0fcbc7461c3401c5aa": "2026-07-31T23:31:10",
+    "c993b020b8a0cb88bec093d2": "2026-07-31T23:31:10",
+    "f65ed5676dcffc23a08481b9": "2026-07-31T23:31:10",
+    "82ced5561ff29e9a9b5288a3": "2026-07-31T23:31:10",
+    "45b4cc8d5cf1beedc9be5f05": "2026-07-31T23:31:10",
+    "867d8721ce93ec4193f7fbec": "2026-07-31T23:31:10",
+    "2c8e5da3e64c0451db784786": "2026-07-31T23:31:10",
+    "746d74069d0074d34256581a": "2026-07-31T23:31:10",
+    "1cac6e792ce913aef0072ce2": "2026-07-31T23:31:10",
+    "26db334e07dbaa91ad134fe2": "2026-07-31T23:31:10",
+    "a27fbfb664adabca1fbc2494": "2026-07-31T23:31:10",
+    "9c7a0344ef5c0c5e9af4e5cf": "2026-07-31T23:31:10",
+    "aeda06714de103ce8c272419": "2026-07-31T23:31:10",
+    "a03febf3351c91c3569b63bb": "2026-07-31T23:31:10",
+    "885a6fcfea4a961535169daf": "2026-07-31T23:31:10",
+    "2d1f023166b21796b0337969": "2026-07-31T23:31:10",
+    "fb41634078d95fe3322838d6": "2026-07-31T23:31:10",
+    "119081f0a788f9e0ab040557": "2026-07-31T23:31:10",
+    "5507556304342e6b191446bd": "2026-07-31T23:31:10",
+    "67e0b64175bbdaa0a5ab4c9a": "2026-07-31T23:31:10"
   },
   "titles": [
     [
@@ -14159,6 +14161,110 @@
     [
       "정치인 거래정책 리포트 20260731",
       "2026-07-31"
+    ],
+    [
+      "industrial giant sees insider selling according to latest sec filing the motley fool",
+      "2026-08-01"
+    ],
+    [
+      "visa inc nyse v executive exercises 37281 options then sells 57272 shares stock titan",
+      "2026-08-01"
+    ],
+    [
+      "mink brook adds 14882 dlh holdings corp dlhc shares in july buys stock titan",
+      "2026-08-01"
+    ],
+    [
+      "peoples bancorp of north carolina pebk director sells 1000 shares stock titan",
+      "2026-08-01"
+    ],
+    [
+      "dlh holdings corp dlhc fund reports 470share insider purchase stock titan",
+      "2026-08-01"
+    ],
+    [
+      "richardson electronics rell director exercises options sells 164 shares stock titan",
+      "2026-08-01"
+    ],
+    [
+      "beyond air xair cfo purchases common stock plus series a and b warrants stock titan",
+      "2026-08-01"
+    ],
+    [
+      "loop industries inc loop director reports 69505share purchase stock titan",
+      "2026-08-01"
+    ],
+    [
+      "mink brook fund buys 10000 dlh holdings corp dlhc shares stock titan",
+      "2026-08-01"
+    ],
+    [
+      "world kinect nyse wkc directorrelated trust sells 33445 common shares stock titan",
+      "2026-08-01"
+    ],
+    [
+      "dlh holdings corp dlhc insider buys 7275 additional shares stock titan",
+      "2026-08-01"
+    ],
+    [
+      "texas instruments txn grants 7154 restricted stock units to its cao stock titan",
+      "2026-08-01"
+    ],
+    [
+      "precigen nasdaq pgen cfo sells 100000 shares in 10b51 plan stock titan",
+      "2026-08-01"
+    ],
+    [
+      "onemain holdings nyse omf executive sells 2500 shares under plan stock titan",
+      "2026-08-01"
+    ],
+    [
+      "mink brook fund adds dlh holdings corp dlhc stake with 10share buy stock titan",
+      "2026-08-01"
+    ],
+    [
+      "lakeland financial lkfn svp sells 250 shares at 632200 per share stock titan",
+      "2026-08-01"
+    ],
+    [
+      "이천시의회 투명한 의정활동 강화 재산신고 설명회 참석 이천설봉신문",
+      "2026-08-01"
+    ],
+    [
+      "fed dissenters sketch the case for a rate hike",
+      "2026-08-01"
+    ],
+    [
+      "fed leaves interest rates unchanged despite three votes for an increase",
+      "2026-08-01"
+    ],
+    [
+      "fed dissenters warn against delaying higher interest rates the washington post",
+      "2026-08-01"
+    ],
+    [
+      "the federal reserves latest interest rate decision featured something we havent seen in 10 years and it should rightly worry wall street",
+      "2026-08-01"
+    ],
+    [
+      "미 연준 향후 금리 모호한 입장8월 결정 앞둔 한국은행 고민",
+      "2026-08-01"
+    ],
+    [
+      "美 연준 매파적 동결한은 추가 인상 셈법 복잡해졌다 ceo스코어데일리",
+      "2026-08-01"
+    ],
+    [
+      "송동진 칼럼 경제의 체온계인 금리와 경영 시사뉴스",
+      "2026-08-01"
+    ],
+    [
+      "금융포커스주요국 금리동결 긴축 안 끝났다한은 이달 선택은",
+      "2026-08-01"
+    ],
+    [
+      "정치인 거래정책 리포트 20260801",
+      "2026-08-01"
     ]
   ],
   "seen_urls": {}
