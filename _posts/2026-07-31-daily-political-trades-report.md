@@ -14,9 +14,6 @@ description: "Anthony Scaramucci는 의회가 '내부자 정보'를 입수하고
 image_alt: "정치인 거래·정책 리포트 - 2026-07-31 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-07-31.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-07-31.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
-
-
 **2026-07-31** 정치권 핵심 이슈: **Anthony Scaramucci는 의회가 '내부자 정보'를 입수하고 전면적인 주식 거래 개혁을 요구한다고 말했습니다.**. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **38건** (미국 의회 거래 2건, SEC 내부자 거래 15건, 한국 정치인 3건, 중앙은행 18건)을 종합 정리합니다
 
 ## 한눈에 보기
@@ -25,17 +22,9 @@ image_alt: "정치인 거래·정책 리포트 - 2026-07-31 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **연준**(13회), **내부자**(5회), **이재명**(2회), **재산**(2회), **의회**(1회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **38건**의 뉴스가 수집되었습니다. 세부 구성은 미국 의회 거래 2건, SEC 내부자 거래 15건, 한국 정치인 3건, 중앙은행 18건입니다.
-
-**미국 의회 거래** 동향에서는 Stock Market Quotes, Business News, Financial News, Trading Ideas, and Stock Research by Professionals. 등이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다.
-
-**중앙은행 정책**에서는 미국 기준금리 5번째 동결했지만 불확실성 커지자 한국은행 셈법은 더욱 복잡해져 경향신문 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
-**한국 정치인** 관련으로는 이천시의회, 투명한 의정활동 강화 ‘재산신고 설명회’ 참석 2000news.com 등의 재산/거래 소식이 수집되었습니다.
-
----
 
 ## 1. 미국 의회 거래 동향
 

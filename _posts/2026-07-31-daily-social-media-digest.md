@@ -30,50 +30,14 @@ image_alt: "소셜 미디어 동향 - 2026-07-31 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: "잼데믹 왔다" … 국민의힘, 증시 폭락 '李 대통령 책임론' 총공세 - 42건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 인상, 기준금리 동향 주시</li><li>📈 <strong>가격/시장</strong>: 코스피, 외국인 주목</li><li>🏛️ <strong>정치/정책</strong>: 이재명, 정부 이슈 부각</li><li>🟠 <strong>비트코인</strong>: 3건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.newdaily.co.kr">"잼데믹 왔다" … 국민의힘, 증시 폭락 '李 대통령 책임론' 총공세</a> <span class="p0-desc">"잼데믹 왔다" … 국민의힘, 증시 폭락 '李 대통령 책임론' 총공세 newdaily.co.kr</span></li><li><a href="https://www.news2day.co.kr">코스피, 연쇄 폭락 딛고 반등 시도…외국인·기관 ‘쌍끌이’ 매수 - 뉴스투데이</a> <span class="p0-desc">[뉴스투데이=이태희 편집인] 뉴스투데이(대표 강남욱 )와 한국경영커뮤니케이션학회(KABC. 회장 장혜정)가 공동주최하는 ‘2026 지속가능경영소통대상(KSCA)’ 시상식이 오는 1.</span></li><li><a href="https://www.newsin.co.kr">코스피, 급락 뒤 저가매수 유입에 혼조세… 외국인·기관 순매수로 낙폭 방어 - 뉴스인</a> <span class="p0-desc">코스피, 급락 뒤 저가매수 유입에 혼조세… 외국인·기관 순매수로 낙폭 방어 뉴스인</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: "잼데믹 왔다" … 국민의힘, 증시 폭락 '李 대통령 책임론' 총공세 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 42건의 뉴스 중 P1 주요 이슈도 2건 확인됩니다.
+오늘 수집된 총 42건 중 텔레그램 0건, 소셜 1건, 정치·경제 41건으로 주요 이슈를 정리했습니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (24건): 인상, 기준금리, 동결 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **📈 가격/시장** (25건): 코스피, 외국인, 기관 가격 변동 (25건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏛️ 정치/정책** (7건): 이재명, 정부, 트럼프 정치 이슈 (7건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- "잼데믹 왔다" … 국민의힘, 증시 폭락 '李 대통령 책임론' 총공세
-- 코스피, 연쇄 폭락 딛고 반등 시도…외국인·기관 ‘쌍끌이’ 매수 - 뉴스투데이
-- 코스피, 급락 뒤 저가매수 유입에 혼조세… 외국인·기관 순매수로 낙폭 방어 - 뉴스인
-
-### 주요 이슈
-
-- 레버리지 ETF 도입 논란… 국민의힘 "이재명 정부 경제 정책 전면 교체해야"
-- 코스피 약세 지속…개인은 팔고 외국인·기관은 사고 - 매일경제 마켓
-
-### 투자자 체크포인트
-
-- 소셜 1건, 정치·경제 41건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:96%"></div></div><span class="theme-count">24건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:100%"></div></div><span class="theme-count">25건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:28%"></div></div><span class="theme-count">7건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:12%"></div></div><span class="theme-count">3건</span></div>
-<div class="theme-row"><span class="theme-label">🟣 DeFi</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:4%"></div></div><span class="theme-count">1건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-07-31.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-07-31.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 주요 이슈
+- 긴급 알림 3건에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드
 
