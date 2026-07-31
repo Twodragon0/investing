@@ -4,10 +4,10 @@
     "bad_image": {
       "buckets": {
         "ext:gif": 2507,
-        "default-image": 1344,
+        "default-image": 1349,
         "ext:ico": 196,
         "placeholder": 482,
-        "ext:svg": 124,
+        "ext:svg": 125,
         "blank.": 101,
         "beacon": 35,
         "wp-content/plugins": 2,
@@ -19,5 +19,5 @@
     }
   },
   "since": "2026-04-23T08:54:23",
-  "last_seen": "2026-07-31T17:49:21"
+  "last_seen": "2026-07-31T18:02:07"
 }
