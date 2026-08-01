@@ -33,51 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-01 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 증시 급등에 코스피·코스닥 동시 매수 사이드카 - 205건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 연준, 국채 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 삼성전자, 하이닉스 관련 40건</li><li>🤖 <strong>AI/기술</strong>: 애플, 하이닉스 관련 23건</li><li>🏦 <strong>거래소</strong>: IPO 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.yna.co.kr">증시 급등에 코스피·코스닥 동시 매수 사이드카</a> <span class="p0-desc">증시 급등에 코스피·코스닥 동시 매수 사이드카 연합뉴스</span></li><li><a href="https://www.thestreet.com/">Fed interest-rate decision rocks Wall Street's inflation fears</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 증시 급등에 코스피·코스닥 동시 매수 사이드카 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 205건의 뉴스 중 P1 주요 이슈도 33건 확인됩니다.
-
-### 테마별 동향
-
-- **📊 매크로/금리** (35건): 연준, 국채, 금리 매크로 변수 (35건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **📈 가격/시장** (40건): 삼성전자, 하이닉스, 급등 가격 변동 (40건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🤖 AI/기술** (23건): 애플, 하이닉스, 반도체 기술 이슈 (23건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 증시 급등에 코스피·코스닥 동시 매수 사이드카
-- 연준 금리 결정이 월스트리트의 인플레이션 우려를 뒤흔들었습니다.
-
-### 주요 이슈
-
-- 아마존은 13.7% 상승하고 나스닥은 AI 수익이 기술 낙관론을 되살리면서 상승합니다.
-- 나스닥, AI 시장 매도 이후 칩 주식이 급락합니다. 아마존, 애플 Ea로 이동
-- 다우, S&P 500, 나스닥 선물은 거대 기술 기업의 수익이 AI 부활함에 따라 랠리 연장됩니다.
-- 외 30건
-
-### 투자자 체크포인트
-
-- 한국 기사 53건, 글로벌 기사 152건 수집
-- 한국 지수: KOSPI 6,595.45(+17.91%), KOSDAQ 719.76(+11.63%), USD/KRW 1,439.04(+1.26%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:88%"></div></div><span class="theme-count">35건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:100%"></div></div><span class="theme-count">40건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:57%"></div></div><span class="theme-count">23건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:15%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:18%"></div></div><span class="theme-count">7건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-08-01.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-08-01.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,595.45 (+17.91%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 719.76 (+11.63%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- *금리에 대한 Warsh의 태도는 시장 인플레이션 우려를 촉발시켰습니다*
 
 ## 테마별 주요 뉴스
 
