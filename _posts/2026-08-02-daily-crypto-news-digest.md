@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-02 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: D-BIZ 암호화폐 뉴스] 콜드카드 지갑 3,800만 달러 해킹… 흔들리는 ‘비트코인 자체 보관’ 신뢰 - 데일리비즈온 - 104건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 애널리스트 이슈 부각</li><li>🏦 <strong>거래소</strong>: 28건 수집</li><li>📈 <strong>가격/시장</strong>: 17건 수집</li><li>🔴 <strong>보안/해킹</strong>: 17건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.dailybizon.com">D-BIZ 암호화폐 뉴스] 콜드카드 지갑 3,800만 달러 해킹… 흔들리는 ‘비트코인 자체 보관’ 신뢰 - 데일리비즈온</a> <span class="p0-desc">[D-BIZ 암호화폐 뉴스] 콜드카드 지갑 3,800만 달러 해킹… 흔들리는 ‘비트코인 자체 보관’ 신뢰 데일리비즈온</span></li><li><a href="https://decrypt.co/374810/cz-warns-bitcoin-holders-70-million-coldcard-wallet-exploit">CZ, 7천만 달러 지갑 악용 후 비트코인 보유자에게 경고: '100%는 없습니다'</a> <span class="p0-desc">바이낸스 설립자는 Galaxy Research가 Coldcard 익스플로잇으로 인한 피해를 초기 추정치의 거의 두 배인 약 7천만 달러로 추산함에 따라 보유자들에게 여러 지갑에 자.</span></li><li><a href="https://www.coindesk.com/markets/2026/08/01/binance-founder-cz-says-diversify-your-wallets-following-usd70-million-coldcard-exploit">바이낸스 창립자 CZ는 7천만 달러 규모의 Coldcard 악용 이후 지갑 다각화를 요구합니다.</a> <span class="p0-desc">바이낸스 설립자 Changpeng Zhao는 하드웨어 지갑에 여전히 버그가 있을 수 있으며 대규모 Coldcard 보안 실패 이후 여러 지갑에 자금을 분배할 것을 제안했습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: D-BIZ 암호화폐 뉴스] 콜드카드 지갑 3,800만 달러 해킹… 흔들리는 ‘비트코인 자체 보관’ 신뢰 - 데일리비즈온 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 104건의 뉴스 중 P1 주요 이슈도 12건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (36건): 비트코인, 애널리스트, 암호화폐 관련 (36건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **🏦 거래소** (28건): binance, tokenized, coinbase 이슈가 부각되며 해당 섹터의 단기 변동성 확대 가능성이 있습니다.
-- **📈 가격/시장** (17건): 코인베이스, 암호화폐 가격 변동 (17건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- D-BIZ 암호화폐 뉴스] 콜드카드 지갑 3,800만 달러 해킹… 흔들리는 ‘비트코인 자체 보관’ 신뢰 - 데일리비즈온
-- CZ, 7천만 달러 지갑 악용 후 비트코인 보유자에게 경고: '100%는 없습니다'
-- 바이낸스 창립자 CZ는 7천만 달러 규모의 Coldcard 악용 이후 지갑 다각화를 요구합니다.
-
-### 주요 이슈
-
-- 유럽중앙은행, 스테이블코인에 중대 경고…암호화폐 투자자는 우려해야 하나 - 코인리더스
-- 비트코인 빠질 때 이더·엑스알피 담았다…美 현물 ETF '알트코인 우위' - 블루밍비트
-- 러시아의 거대 방산업체, EU 제재에도 불구하고 조용히 새로운 암호화폐 출시 - The Kyiv Independent
-- 외 9건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(40건), Decrypt(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-08-02.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-08-02.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **104건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

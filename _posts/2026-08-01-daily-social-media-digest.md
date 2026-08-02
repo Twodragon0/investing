@@ -30,6 +30,7 @@ image_alt: "소셜 미디어 동향 - 2026-08-01 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 코스피, 연쇄 폭락 딛고 반등 시도…외국인·기관 ‘쌍끌이’ 매수 - 32건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 외국인 주목</li><li>📊 <strong>매크로/금리</strong>: 동결, 인상 주목</li><li>🏛️ <strong>정치/정책</strong>: 이재명, 정부 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 체온계인, 시사뉴스 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.news2day.co.kr">코스피, 연쇄 폭락 딛고 반등 시도…외국인·기관 ‘쌍끌이’ 매수</a> <span class="p0-desc">코스피, 연쇄 폭락 딛고 반등 시도…외국인·기관 ‘쌍끌이’ 매수 news2day.co.kr</span></li><li><a href="https://www.newsin.co.kr">코스피, 급락 뒤 저가매수 유입에 혼조세… 외국인·기관 순매수로 낙폭 방어 - 뉴스인</a> <span class="p0-desc">코스피, 급락 뒤 저가매수 유입에 혼조세… 외국인·기관 순매수로 낙폭 방어 뉴스인</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 오늘 수집된 총 32건 중 텔레그램 0건, 소셜 0건, 정치·경제 32건으로 주요 이슈를 정리했습니다.
