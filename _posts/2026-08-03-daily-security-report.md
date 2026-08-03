@@ -16,27 +16,6 @@ description: "보안 알림: 블록체인 보안 리포트. 주요 보안 사고
 
 블록체인 보안 9건 분석. 주목 사건: **[Security] Coldcard hack sparks biggest sub-1 BTC move since**.
 
-## 전체 뉴스 요약
-
-**긴급**: [보안] Coldcard 해킹으로 FTX 이후 가장 큰 하위 1 BTC 이동 발생: CryptoQuant 
-외 P0 긴급 이슈 8건이 추가 감지되었습니다. 총 9건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (9건): exploit, security, access 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🔷 이더리움** (5건): exploit, chainconnect, unauthorized 네트워크 업데이트와 L2 확장이 가격에 미칠 영향을 주시하세요.
-- **🟠 비트코인** (1건): cryptoquant, coldcard, biggest 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-
-### 긴급 이슈
-
-- [보안] Coldcard 해킹으로 FTX 이후 가장 큰 하위 1 BTC 이동 발생: CryptoQuant
-- [보안] Set Protocol 악용: 악성 SetToken 및 관리자 계약
-- [보안] Crypto DAO 익스플로잇
-
-### 투자자 체크포인트
-
-- 보안 사건 9건, 보안 뉴스 0건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 9건

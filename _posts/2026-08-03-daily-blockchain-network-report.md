@@ -16,6 +16,9 @@ image_alt: "블록체인 네트워크 리포트 - 2026-08-03 - 블록체인 뉴�
 
 **2026-08-03** 블록체인 네트워크 현황: BTC 해시레이트 **953.8 EH/s**, 일일 트랜잭션 **734,183건** · ETH 가스 **0.08 Gwei**. 채굴/네트워크 활성도와 가스비 추이를 정리합니다.
 
+## 전체 뉴스 요약
+
+
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">953.8 EH/s</div><div class="stat-label">BTC 해시레이트</div></div><div class="stat-item"><div class="stat-value">734,183</div><div class="stat-label">BTC 일일 트랜잭션</div></div><div class="stat-item"><div class="stat-value">0.08 Gwei</div><div class="stat-label">ETH 가스 (Standard)</div></div></div>
 
 ## Bitcoin 네트워크 현황

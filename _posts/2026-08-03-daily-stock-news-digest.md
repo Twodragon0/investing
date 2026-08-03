@@ -33,52 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-03 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: ‘36만 삼전·148만 하이닉스’ vs ‘65만·470만’…반도체 폭락 속 엇갈린 전망 [수민이가 궁금해요 - 138건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 환율, 원화 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 애플, 반도체 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 환율, 연준 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://v.daum.net">‘36만 삼전·148만 하이닉스’ vs ‘65만·470만’…반도체 폭락 속 엇갈린 전망 [수민이가 궁금해요</a> <span class="p0-desc">‘36만 삼전·148만 하이닉스’ vs ‘65만·470만’…반도체 폭락 속 엇갈린 전망 [수민이가 궁금해요] v.daum.net</span></li><li><a href="https://www.sisajournal-e.com">7월 원화 강세로 환율 8.8% 급락···1달러에 1300원대 시대 올까 - 시사저널e</a></li><li><a href="https://www.wowtv.co.kr">환율 한 달 새 ＇125원＇ 급락…금융위기 후 가장 빠른 속도 - 한국경제TV</a> <span class="p0-desc">환율 한 달 새 ＇125원＇ 급락…금융위기 후 가장 빠른 속도 한국경제TV</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: ‘36만 삼전·148만 하이닉스’ vs ‘65만·470만’…반도체 폭락 속 엇갈린 전망 [수민이가 궁금해요 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 138건의 뉴스 중 P1 주요 이슈도 19건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (29건): 환율, 원화, 금융위기 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🤖 AI/기술** (14건): 애플, 반도체 기술 이슈 (14건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-- **📊 매크로/금리** (9건): 환율, 연준, 달러 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- ‘36만 삼전·148만 하이닉스’ vs ‘65만·470만’…반도체 폭락 속 엇갈린 전망 [수민이가 궁금해요
-- 7월 원화 강세로 환율 8.8% 급락···1달러에 1300원대 시대 올까 - 시사저널e
-- 환율 한 달 새 ＇125원＇ 급락…금융위기 후 가장 빠른 속도 - 한국경제TV
-
-### 주요 이슈
-
-- 수익 스코어보드: S&P 500 보고 기업의 84%가 EPS 추정치를 72%로 최고로 기록했습니다.
-- 8월은 다음 주에 일자리 보고서와 함께 시작되며, 모멘텀이 회복되면서 수익이 회복됩니다. 여기
-- 다우존스 이란의 트럼프 변화로 인해 만기되는 선물; SpaceX, AMD, Sandisk, Eli Lilly E
-- 외 16건
-
-### 투자자 체크포인트
-
-- 한국 기사 39건, 글로벌 기사 99건 수집
-- 한국 지수: KOSPI 6,595.45(+17.91%), KOSDAQ 719.76(+11.63%), USD/KRW 1,436.60(+1.09%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">29건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:48%"></div></div><span class="theme-count">14건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:31%"></div></div><span class="theme-count">9건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:24%"></div></div><span class="theme-count">7건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:7%"></div></div><span class="theme-count">2건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-08-03.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-08-03.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,595.45 (+17.91%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 719.76 (+11.63%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- *정치,경제,사회,문화,국제,연예,스포츠,환경,지역소식,인디포커스*
 
 ## 테마별 주요 뉴스
 

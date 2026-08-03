@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-03 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 비트코인 해킹으로 5천만 달러 보유자 확보 - News.com.au - 81건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, BTC 동향 주시</li><li>🏦 <strong>거래소</strong>: 25건 수집</li><li>📈 <strong>가격/시장</strong>: 블루밍비트 주목</li><li>🔴 <strong>보안/해킹</strong>: 14건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.news.com.au">비트코인 해킹으로 5천만 달러 보유자 확보 - News.com.au</a> <span class="p0-desc">비트코인 News.com.au 5천만 달러 보유자 해킹</span></li><li><a href="https://www.dailybizon.com">D-BIZ 암호화폐 뉴스] 콜드카드 해킹 사태, 비트코인 투자자 행동 반전…FTX 사태와 정반대 흐름 - 데일리비즈온</a> <span class="p0-desc">[D-BIZ 암호화폐 뉴스] 콜드카드 해킹 사태, 비트코인 투자자 행동 반전…FTX 사태와 정반대 흐름 데일리비즈온</span></li><li><a href="https://cointelegraph.com/news/coldcard-biggest-sub-1-btc-transfer-ftx-cryptoquant?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Coldcard 해킹으로 FTX 이후 가장 큰 하위 1 BTC 움직임 촉발: CryptoQuant</a> <span class="p0-desc">Coldcard 해킹이 계속되면서 비트코인 사용자는 소액 거래로 39,600 BTC을 이동했으며 연구원들은 공격이 계속 진행 중이라고 경고했습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 비트코인 해킹으로 5천만 달러 보유자 확보 - News.com.au 
-외 P0 긴급 이슈 6건이 추가 감지되었습니다. 총 81건의 뉴스 중 P1 주요 이슈도 7건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (27건): 비트코인, BTC, 사태 관련 (27건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **🏦 거래소** (25건): 옵션 관련 지표와 수급 흐름을 함께 확인하세요.
-- **📈 가격/시장** (16건): 블루밍비트, 콜드카드, 자금세탁 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 비트코인 해킹으로 5천만 달러 보유자 확보 - News.com.au
-- D-BIZ 암호화폐 뉴스] 콜드카드 해킹 사태, 비트코인 투자자 행동 반전…FTX 사태와 정반대 흐름 - 데일리비즈온
-- Coldcard 해킹으로 FTX 이후 가장 큰 하위 1 BTC 움직임 촉발: CryptoQuant
-
-### 주요 이슈
-
-- 유럽중앙은행, 스테이블코인에 중대 경고…암호화폐 투자자는 우려해야 하나 - 코인리더스
-- 이란, 트럼프 호르무즈 합의 부인…유가 급등·비트코인 관망
-- 오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다
-- 외 4건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 디파이
-- **주요 출처**: Binance(40건), CoinDesk(15건), Cointelegraph(13건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-08-03.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-08-03.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **81건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

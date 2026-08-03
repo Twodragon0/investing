@@ -34,6 +34,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-02 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 증시 급등에 코스피·코스닥 동시 매수 사이드카 - 166건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 하이닉스, 삼성전자 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 연준, 국채 주목</li><li>🤖 <strong>AI/기술</strong>: 반도체, 애플 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.yna.co.kr">증시 급등에 코스피·코스닥 동시 매수 사이드카</a> <span class="p0-desc">증시 급등에 코스피·코스닥 동시 매수 사이드카 연합뉴스</span></li><li><a href="https://m.kwnews.co.kr">삼성전자·SK하이닉스 20% 안팎 폭등…코스피·코스닥 동시 매수 사이드카</a> <span class="p0-desc">삼성전자·SK하이닉스 20% 안팎 폭등…코스피·코스닥 동시 매수 사이드카 kwnews.co.kr</span></li><li><a href="https://www.cnbc.com/2026/08/01/open-ai-hugging-face-hack-cyber-warnings.html">OpenAI's Hugging Face hack confirmed months of AI cyber warnings: 'Pandora's box is open'</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,595.45 (+17.91%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
