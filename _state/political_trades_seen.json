@@ -1,12 +1,5 @@
 {
   "seen": {
-    "60d761f826ddd42630ae4154": "2026-07-04T23:31:13",
-    "4e5ca4babe83a2d0428b993c": "2026-07-04T23:31:13",
-    "12e618ba717f301c5d06b38e": "2026-07-04T23:31:13",
-    "575899a528ac6acd004c90ef": "2026-07-04T23:31:13",
-    "d8e629dfcea19246006508be": "2026-07-04T23:31:13",
-    "1b2c598651a3d7797cfd5fab": "2026-07-04T23:31:13",
-    "285d808a85ee7a13050b6b9b": "2026-07-04T23:31:13",
     "f9c613cd7770161c8b1d3b91": "2026-07-05T23:34:48",
     "f874dcf6e1e898ee8873371a": "2026-07-05T23:34:48",
     "230cc37fca2239392ead4769": "2026-07-07T12:16:18",
@@ -660,7 +653,11 @@
     "0c932f7b0aab193d15b990b3": "2026-08-01T23:28:53",
     "4b8671108ea8056cdf8af7c5": "2026-08-01T23:28:53",
     "724c6e7fc57e5f7200c1822b": "2026-08-03T12:42:50",
-    "06d50b8411f26fa8a372272e": "2026-08-03T12:42:50"
+    "06d50b8411f26fa8a372272e": "2026-08-03T12:42:50",
+    "10dbba6454f63593fea4ce80": "2026-08-03T23:35:18",
+    "411751c215ba95b77b5fc00c": "2026-08-03T23:35:18",
+    "77752cb3b529a0f29abe7de0": "2026-08-03T23:35:18",
+    "23e26553768f676df7f88a4d": "2026-08-03T23:35:18"
   },
   "titles": [
     [
@@ -14262,6 +14259,22 @@
     [
       "정치인 거래정책 리포트 20260803",
       "2026-08-03"
+    ],
+    [
+      "congressman who spent millions on magnificent seven stocks just bought another tech giant",
+      "2026-08-04"
+    ],
+    [
+      "company insider sells 560000 of financial stock in taxdriven transaction according to latest sec filing the motley fool",
+      "2026-08-04"
+    ],
+    [
+      "trump said tariffs on aluminum would boost domestic production the white house now admits that didnt happen reason magazine",
+      "2026-08-04"
+    ],
+    [
+      "정치인 거래정책 리포트 20260804",
+      "2026-08-04"
     ]
   ],
   "seen_urls": {}
