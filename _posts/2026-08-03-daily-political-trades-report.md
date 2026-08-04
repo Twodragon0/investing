@@ -14,22 +14,15 @@ description: "이 대통령, 귀국 직후 부동산·증시 점검…다음날 
 image_alt: "정치인 거래·정책 리포트 - 2026-08-03 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-08-03.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-08-03.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
-
-
 **2026-08-03** 정치권 핵심 이슈: **이 대통령, 귀국 직후 부동산·증시 점검…다음날 업무보고 재개**. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **1건** (한국 정치인 1건)을 종합 정리합니다
 
 ## 한눈에 보기
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">1</div><div class="stat-label">총 수집 건수</div></div><div class="stat-item"><div class="stat-value">1</div><div class="stat-label">한국 정치인</div></div></div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **1건**의 뉴스가 수집되었습니다. 세부 구성은 한국 정치인 1건입니다.
-
-**한국 정치인** 관련으로는 이 대통령, 귀국 직후 부동산·증시 점검…다음날 업무보고 재개 JTBC 등의 재산/거래 소식이 수집되었습니다.
-
----
 
 ## 1. 한국 정치인 재산/거래
 

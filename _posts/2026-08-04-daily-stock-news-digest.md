@@ -33,52 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-04 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 코스피 5% 급락·코스닥 2% 상승…대형주 차익실현에 순환매 뚜렷 - 산경투데이 - 182건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 주목</li><li>📊 <strong>매크로/금리</strong>: 환율, 국채 주목</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 선물 관련 11건</li><li>🤖 <strong>AI/기술</strong>: 반도체, 삼성전자 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.sankyungtoday.com">코스피 5% 급락·코스닥 2% 상승…대형주 차익실현에 순환매 뚜렷 - 산경투데이</a> <span class="p0-desc">코스피 5% 급락·코스닥 2% 상승…대형주 차익실현에 순환매 뚜렷 산경투데이</span></li><li><a href="https://www.freezine.co.kr">코스피, 반도체 차익 실현에 5%급락…코스닥은 바이오·로봇 약진에 상승 마감 - 프리진경제</a> <span class="p0-desc">코스피, 반도체 차익 실현에 5%급락…코스닥은 바이오·로봇 약진에 상승 마감 프리진경제</span></li><li><a href="https://www.newspim.com">특징주] 반도체주 급락…삼성전자 25만원선 붕괴 - 뉴스핌</a> <span class="p0-desc">[특징주] 반도체주 급락…삼성전자 25만원선 붕괴 뉴스핌</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 코스피 5% 급락·코스닥 2% 상승…대형주 차익실현에 순환매 뚜렷 - 산경투데이 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 182건의 뉴스 중 P1 주요 이슈도 42건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (47건): 코스피, 코스닥, 급락 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **📊 매크로/금리** (14건): 환율, 국채, 달러 매크로 변수 (14건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🏛️ 정치/정책** (11건): 트럼프, 선물 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 코스피 5% 급락·코스닥 2% 상승…대형주 차익실현에 순환매 뚜렷 - 산경투데이
-- 코스피, 반도체 차익 실현에 5%급락…코스닥은 바이오·로봇 약진에 상승 마감 - 프리진경제
-- 특징주] 반도체주 급락…삼성전자 25만원선 붕괴 - 뉴스핌
-
-### 주요 이슈
-
-- 나스닥 수익 확인으로 안정화 AI - TradeStation
-- AI ETF마다 비교한 후, 이 3개는 단일에 베팅하지 않고 나스닥을 이겼습니다.
-- AI 호황으로 역사적인 수익 달성 - Invesco QQQ Trust, 시리즈 1(나스닥:Q
-- 외 39건
-
-### 투자자 체크포인트
-
-- 한국 기사 70건, 글로벌 기사 112건 수집
-- 한국 지수: KOSPI 6,257.45(-5.12%), KOSDAQ 737.35(+2.44%), USD/KRW 1,429.07(-0.90%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">47건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:30%"></div></div><span class="theme-count">14건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:23%"></div></div><span class="theme-count">11건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:30%"></div></div><span class="theme-count">14건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:15%"></div></div><span class="theme-count">7건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-08-04.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-08-04.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,257.45 (-5.12%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 737.35 (+2.44%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- *CNBC는 이란의 긴장 완화로 유가가 급락하면서 미국 국채 수익률이 하락했다고 밝혔습니다*
 
 ## 테마별 주요 뉴스
 

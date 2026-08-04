@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-04 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 콜드카드 해킹 악재에 비트코인 6만3천 달러 아래로 하락 - Investing.com 한국어 - 86건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 동향 주시</li><li>🏦 <strong>거래소</strong>: IPO 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 달러, 암호화폐 이슈 부각</li><li>🔴 <strong>보안/해킹</strong>: 해킹 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://kr.investing.com">콜드카드 해킹 악재에 비트코인 6만3천 달러 아래로 하락 - Investing.com 한국어</a> <span class="p0-desc">콜드카드 해킹 악재에 비트코인 6만3천 달러 아래로 하락 Investing.com 한국어</span></li><li><a href="https://www.newspim.com">코인 시황] 비트코인, 美·이란 협상 기대에도 하락…콜드카드 해킹 확산에 '셀프 커스터디' 흔들 - 뉴스핌</a> <span class="p0-desc">[서울=뉴스핌] 오동룡 군사방산전문기자 = 안규백 국방부 장관은 3일 합동참모본부 작전지휘실에서 '확고한 대비태세 확립과 엄정한 작전기강'을 주제로 긴급 전군 주요지휘관</span></li><li><a href="https://www.g-enews.com">콜드카드 8800만 달러 해킹 폭탄"… 암호화폐 보관 비상</a> <span class="p0-desc">콜드카드 8800만 달러 해킹 폭탄"… 암호화폐 보관 비상 글로벌이코노믹</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 콜드카드 해킹 악재에 비트코인 6만3천 달러 아래로 하락 - Investing.com 한국어 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 86건의 뉴스 중 P1 주요 이슈도 14건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (37건): 비트코인, 달러, 암호화폐 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **🏦 거래소** (24건): IPO 이슈가 시장 구조 변화의 신호일 수 있어 심층 분석이 권장됩니다.
-- **📈 가격/시장** (20건): 달러, 암호화폐, 콜드카드 가격 변동 (20건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 콜드카드 해킹 악재에 비트코인 6만3천 달러 아래로 하락 - Investing.com 한국어
-- 코인 시황] 비트코인, 美·이란 협상 기대에도 하락…콜드카드 해킹 확산에 '셀프 커스터디' 흔들 - 뉴스핌
-- 콜드카드 8800만 달러 해킹 폭탄"… 암호화폐 보관 비상
-
-### 주요 이슈
-
-- Robinhood는 새로운 규제 체제가 시작되기 전에 영국 암호화폐 등록을 획득했습니다. - CoinDesk
-- 암호화폐가 신뢰 인프라로 발전하는 방법
-- 규제 훈풍에 암호화폐 시장 반등…비트코인 6만2,000달러가 상승세 가른다 - 코인리더스
-- 외 11건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, ETF
-- **주요 출처**: Binance(40건), Google News KR(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-08-04.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-08-04.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **86건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
