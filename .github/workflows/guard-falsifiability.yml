@@ -8,8 +8,16 @@ on:
   pull_request:
     branches: [main]
     paths:
+      # 격리 fixture 가드
       - 'tests/conftest.py'
       - 'tests/test_suite_isolation_guard.py'
+      # 정적/설정 가드 — 가드 본체와 그 가드가 감시하는 설정 양쪽
+      - 'tests/test_state_path_anchoring.py'
+      - 'tests/test_hermetic_test_writes_guard.py'
+      - 'tests/test_coverage_floor_guard.py'
+      - 'pyproject.toml'
+      - '.github/workflows/code-quality.yml'
+      # 하네스 자신
       - 'scripts/tools/guard_falsifiability.py'
       - '.github/workflows/guard-falsifiability.yml'
   schedule:

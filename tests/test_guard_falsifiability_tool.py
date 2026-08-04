@@ -182,3 +182,63 @@ def test_snapshot_state_tolerates_missing_dir(tmp_path, monkeypatch):
     monkeypatch.setattr(gf, "REPO_ROOT", tmp_path)
 
     assert gf._snapshot_state() == {}
+
+
+# ---------------------------------------------------------------------------
+# 정적 가드 mutation 케이스
+# ---------------------------------------------------------------------------
+
+
+def test_static_case_anchors_are_unique_in_their_targets():
+    """모든 STATIC_CASES 앵커는 대상 파일에 정확히 1회만 나타나야 한다.
+
+    앵커가 여러 번 나타나면 `replace(..., 1)` 이 엉뚱한 줄을 바꾸고, 가드는
+    정당하게 green 이 되어 VACUOUS 오탐이 난다. 실제로 `fix_defi_tvl_history.py`
+    감사에서 `__file__` 앵커가 `sys.path.insert` 줄을 먼저 잡아 그렇게 됐다.
+    """
+    for case in gf.STATIC_CASES:
+        if case.old is None:
+            continue
+        target = gf.REPO_ROOT / case.target
+        assert target.is_file(), f"{case.label}: 대상 파일 없음 — {case.target}"
+        occurrences = target.read_text(encoding="utf-8").count(case.old)
+        assert occurrences == 1, (
+            f"{case.label}: {case.target} 에서 앵커가 {occurrences}회 발견됨 (1회여야 함). 앵커: {case.old!r}"
+        )
+
+
+def test_static_case_guard_files_exist():
+    """각 케이스의 node id 가 가리키는 테스트 파일이 실제로 존재해야 한다."""
+    for case in gf.STATIC_CASES:
+        rel = case.node_id.split("::")[0]
+        assert (gf.REPO_ROOT / rel).is_file(), f"{case.label}: 가드 파일 없음 — {rel}"
+
+
+def test_apply_static_mutation_appends_when_old_is_none():
+    case = gf.StaticCase("probe", "x.py", None, "\nAPPENDED = 1\n", "t.py::t")
+
+    assert gf.apply_static_mutation("ORIG = 0\n", case) == "ORIG = 0\n\nAPPENDED = 1\n"
+
+
+def test_apply_static_mutation_replaces_unique_anchor():
+    case = gf.StaticCase("probe", "x.py", "OLD", "NEW", "t.py::t")
+
+    assert gf.apply_static_mutation("a = OLD\n", case) == "a = NEW\n"
+
+
+@pytest.mark.parametrize("source", ["a = 1\n", "OLD\nOLD\n"], ids=["missing", "duplicated"])
+def test_apply_static_mutation_rejects_non_unique_anchor(source):
+    case = gf.StaticCase("probe", "x.py", "OLD", "NEW", "t.py::t")
+
+    with pytest.raises(RuntimeError, match="정확히 1회가 아니다"):
+        gf.apply_static_mutation(source, case)
+
+
+def test_mutated_files_covers_every_static_target():
+    """안전 검사(_assert_safe_to_run)가 변형 대상 전부를 감시해야 한다."""
+    watched = {p.resolve() for p in gf._mutated_files()}
+
+    for case in gf.STATIC_CASES:
+        assert (gf.REPO_ROOT / case.target).resolve() in watched, (
+            f"{case.target} 가 _mutated_files() 에 없음 — 미커밋 변경 보호가 빠진다"
+        )

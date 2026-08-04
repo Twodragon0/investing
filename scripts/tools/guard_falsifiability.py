@@ -33,6 +33,7 @@ import shutil
 import subprocess
 import sys
 from pathlib import Path
+from typing import NamedTuple
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 CONFTEST = REPO_ROOT / "tests" / "conftest.py"
@@ -56,6 +57,125 @@ CASES: dict[str, str] = {
 }
 
 _AUTOUSE_RE = re.compile(r"@pytest\.fixture\(autouse=True\)\n(?:@[^\n]*\n)*def (\w+)\(")
+
+
+class StaticCase(NamedTuple):
+    """정적(AST/설정) 가드용 mutation 케이스.
+
+    격리 fixture 가드와 달리 "fixture 를 끈다"가 아니라 **가드가 막으려는 위반을
+    실제로 주입**한다. ``old`` 가 None 이면 ``new`` 를 파일 끝에 덧붙인다.
+    """
+
+    label: str
+    target: str  # 레포 상대 경로
+    old: str | None
+    new: str
+    node_id: str  # 전체 pytest node id
+
+
+# 정적 가드 mutation 케이스.
+#
+# ``old`` 앵커는 대상 파일에 **정확히 1회**만 나타나야 한다(아래 검증). 이 규칙은
+# 실제 오탐에서 나왔다: `fix_defi_tvl_history.py` 감사에서 `__file__` 을 치환했더니
+# 19행 `sys.path.insert` 가 바뀌고 정작 24행 `HISTORY_PATH` 는 그대로여서 가드가
+# 정당하게 green 이었다 — 가드가 아니라 mutation 이 틀린 것이었다. 첫 일치를 조용히
+# 바꾸는 대신 AMBIGUOUS-ANCHOR 로 실패시킨다.
+STATIC_CASES: tuple[StaticCase, ...] = (
+    StaticCase(
+        "AST 스캔: 스크립트에 cwd-상대 _state 주입",
+        "scripts/common/dedup.py",
+        None,
+        '\n_FALSIFIABILITY_PROBE = Path("_state/probe.json")\n',
+        "tests/test_state_path_anchoring.py::test_no_cwd_relative_state_paths_in_scripts",
+    ),
+    StaticCase(
+        "_state 탐지기 무력화 (_is_slash_rooted)",
+        "tests/test_state_path_anchoring.py",
+        'return value.startswith(_BARE_ROOT + "/") or value.startswith(_BARE_ROOT + "\\\\")',
+        "return False",
+        "tests/test_state_path_anchoring.py::test_guard_detects_known_antipatterns",
+    ),
+    StaticCase(
+        "image_rejection_metrics __file__ 앵커 제거",
+        "scripts/common/image_rejection_metrics.py",
+        "_REPO_ROOT: Path = Path(__file__).resolve().parent.parent.parent",
+        '_REPO_ROOT: Path = Path("/var/tmp/falsifiability-probe")',
+        "tests/test_state_path_anchoring.py::test_image_rejection_metrics_anchors_state_to_repo_root",
+    ),
+    StaticCase(
+        "dedup.STATE_DIR 을 bare-relative 로 (AST 가드)",
+        "scripts/common/dedup.py",
+        'STATE_DIR = os.path.join(REPO_ROOT, "_state")',
+        'STATE_DIR = "_state"',
+        "tests/test_state_path_anchoring.py::test_module_level_state_paths_anchored_to_repo_root[common/dedup.py]",
+    ),
+    StaticCase(
+        "dedup.STATE_DIR 을 bare-relative 로 (런타임 절대경로 가드)",
+        "scripts/common/dedup.py",
+        'STATE_DIR = os.path.join(REPO_ROOT, "_state")',
+        'STATE_DIR = "_state"',
+        "tests/test_state_path_anchoring.py::test_module_state_path_is_absolute_and_under_repo_root[dedup.STATE_DIR]",
+    ),
+    StaticCase(
+        "fix_defi_tvl_history HISTORY_PATH 앵커 제거",
+        "scripts/fix_defi_tvl_history.py",
+        'HISTORY_PATH = Path(__file__).parent.parent / "_state" / "defi_tvl_history.json"',
+        'HISTORY_PATH = Path("_state/defi_tvl_history.json")',
+        "tests/test_state_path_anchoring.py::test_fix_defi_tvl_history_state_path_uses_file_anchor",
+    ),
+    StaticCase(
+        "테스트가 프로덕션 REPO_ROOT 를 import",
+        "tests/test_encoding_guard.py",
+        None,
+        "\nfrom common.image_generator import REPO_ROOT  # noqa: E402\n\n_FALSIFIABILITY_PROBE = REPO_ROOT\n",
+        "tests/test_hermetic_test_writes_guard.py::test_no_test_imports_production_repo_root",
+    ),
+    StaticCase(
+        "hermetic 탐지기 무력화 (_BANNED_NAMES 비움)",
+        "tests/test_hermetic_test_writes_guard.py",
+        '_BANNED_NAMES = ("REPO_ROOT", "POSTS_DIR", "SITE_DIR")',
+        "_BANNED_NAMES = ()",
+        "tests/test_hermetic_test_writes_guard.py::test_detector_flags_all_banned_forms",
+    ),
+    StaticCase(
+        "커버리지 하한 하향 (70 -> 50)",
+        "pyproject.toml",
+        "--cov-fail-under=70",
+        "--cov-fail-under=50",
+        "tests/test_coverage_floor_guard.py::test_pyproject_coverage_floor_enforced",
+    ),
+    StaticCase(
+        "커버리지 게이트 제거 (addopts)",
+        "pyproject.toml",
+        " --cov-fail-under=70",
+        "",
+        "tests/test_coverage_floor_guard.py::test_pyproject_coverage_floor_enforced",
+    ),
+    StaticCase(
+        "워크플로우 전역 커버리지 하한 하향 (70 -> 40)",
+        ".github/workflows/code-quality.yml",
+        "--fail-under=70",
+        "--fail-under=40",
+        "tests/test_coverage_floor_guard.py::test_workflow_global_coverage_floor_enforced",
+    ),
+)
+
+
+def apply_static_mutation(source: str, case: StaticCase) -> str:
+    """정적 케이스의 변형을 적용한다.
+
+    앵커가 0회 또는 2회 이상이면 조용히 첫 일치를 바꾸는 대신 예외를 던진다 —
+    엉뚱한 줄을 바꾼 mutation 은 가드를 통과시켜 VACUOUS 오탐을 만든다.
+    """
+    if case.old is None:
+        return source + case.new
+    occurrences = source.count(case.old)
+    if occurrences != 1:
+        raise RuntimeError(
+            f"{case.target}: 앵커가 정확히 1회가 아니다 (found={occurrences}). "
+            f"엉뚱한 위치를 변형하면 VACUOUS 오탐이 난다. 앵커: {case.old!r}"
+        )
+    return source.replace(case.old, case.new, 1)
 
 
 def discover_autouse_fixtures(src: str) -> list[str]:
@@ -95,22 +215,12 @@ def _disable_module_level(src: str) -> str:
     )
 
 
-def _run_guard(node: str) -> int:
-    """가드 테스트 1개만 실행하고 종료 코드를 돌려준다."""
+def _run_node(node_id: str) -> int:
+    """pytest node id 하나만 실행하고 종료 코드를 돌려준다."""
     _purge_pycache()
     env = {**os.environ, "PYTHONDONTWRITEBYTECODE": "1"}
     proc = subprocess.run(
-        [
-            sys.executable,
-            "-B",
-            "-m",
-            "pytest",
-            f"tests/test_suite_isolation_guard.py::{node}",
-            "-q",
-            "--no-cov",
-            "-p",
-            "no:randomly",
-        ],
+        [sys.executable, "-B", "-m", "pytest", node_id, "-q", "--no-cov", "-p", "no:randomly"],
         cwd=REPO_ROOT,
         capture_output=True,
         text=True,
@@ -119,14 +229,25 @@ def _run_guard(node: str) -> int:
     return proc.returncode
 
 
-def _assert_safe_to_run() -> None:
-    """conftest/가드 파일에 커밋되지 않은 변경이 있으면 중단한다.
+def _run_guard(node: str) -> int:
+    """격리 가드 파일의 테스트 1개를 실행한다."""
+    return _run_node(f"tests/test_suite_isolation_guard.py::{node}")
 
-    하네스는 conftest.py 를 덮어썼다 복원한다. 미커밋 변경이 있는 상태에서
-    중간에 죽으면 사용자의 작업이 사라질 수 있다.
+
+def _mutated_files() -> list[Path]:
+    """하네스가 덮어썼다 복원하는 파일 전체."""
+    return [CONFTEST, GUARD_FILE, *(REPO_ROOT / c.target for c in STATIC_CASES)]
+
+
+def _assert_safe_to_run() -> None:
+    """하네스가 건드릴 파일에 커밋되지 않은 변경이 있으면 중단한다.
+
+    하네스는 대상 파일을 덮어썼다 복원한다. 미커밋 변경이 있는 상태에서 중간에
+    죽으면 사용자의 작업이 사라질 수 있다.
     """
+    targets = sorted({str(p) for p in _mutated_files()})
     proc = subprocess.run(
-        ["git", "status", "--porcelain", "--", str(CONFTEST), str(GUARD_FILE)],
+        ["git", "status", "--porcelain", "--", *targets],
         cwd=REPO_ROOT,
         capture_output=True,
         text=True,
@@ -134,9 +255,8 @@ def _assert_safe_to_run() -> None:
     )
     if proc.stdout.strip():
         raise SystemExit(
-            "중단: tests/conftest.py 또는 tests/test_suite_isolation_guard.py 에 "
-            "커밋되지 않은 변경이 있다. 하네스는 이 파일들을 덮어썼다 복원하므로 "
-            "먼저 커밋하거나 stash 할 것.\n" + proc.stdout
+            "중단: 하네스가 변형할 파일에 커밋되지 않은 변경이 있다. 덮어썼다 "
+            "복원하는 방식이므로 먼저 커밋하거나 stash 할 것.\n" + proc.stdout
         )
 
 
@@ -165,6 +285,53 @@ def _restore_state(snapshot: dict[Path, bytes]) -> list[str]:
     return restored
 
 
+def _verdict(rc_mutated: int, rc_control: int) -> str:
+    if rc_mutated != 0 and rc_control == 0:
+        return "FALSIFIABLE"
+    if rc_mutated == 0:
+        return "VACUOUS"
+    return "CONTROL-FAIL"
+
+
+def _run_static_cases() -> list[dict]:
+    """정적 가드 케이스를 검증한다 (각각 자기 대상 파일만 변형/복원)."""
+    results: list[dict] = []
+    for case in STATIC_CASES:
+        target = REPO_ROOT / case.target
+        original = target.read_text(encoding="utf-8")
+        try:
+            target.write_text(apply_static_mutation(original, case), encoding="utf-8")
+            rc_mutated = _run_node(case.node_id)
+            target.write_text(original, encoding="utf-8")
+            rc_control = _run_node(case.node_id)
+        except RuntimeError as exc:  # 앵커 불일치 — 변형 자체가 무효
+            results.append(
+                {
+                    "fixture": case.label,
+                    "guard": case.node_id,
+                    "patched_rc": None,
+                    "control_rc": None,
+                    "verdict": "AMBIGUOUS-ANCHOR",
+                    "detail": str(exc),
+                }
+            )
+            continue
+        finally:
+            target.write_text(original, encoding="utf-8")
+            _purge_pycache()
+
+        results.append(
+            {
+                "fixture": case.label,
+                "guard": case.node_id,
+                "patched_rc": rc_mutated,
+                "control_rc": rc_control,
+                "verdict": _verdict(rc_mutated, rc_control),
+            }
+        )
+    return results
+
+
 def run_all() -> list[dict]:
     """모든 케이스를 검증하고 결과 리스트를 돌려준다."""
     _assert_safe_to_run()
@@ -186,20 +353,13 @@ def run_all() -> list[dict]:
             CONFTEST.write_text(original, encoding="utf-8")
             rc_control = _run_guard(node)
 
-            if rc_patched != 0 and rc_control == 0:
-                verdict = "FALSIFIABLE"
-            elif rc_patched == 0:
-                verdict = "VACUOUS"
-            else:
-                verdict = "CONTROL-FAIL"
-
             results.append(
                 {
                     "fixture": name,
                     "guard": node,
                     "patched_rc": rc_patched,
                     "control_rc": rc_control,
-                    "verdict": verdict,
+                    "verdict": _verdict(rc_patched, rc_control),
                 }
             )
     finally:
@@ -219,6 +379,8 @@ def run_all() -> list[dict]:
                 "verdict": "UNMAPPED",
             }
         )
+
+    results.extend(_run_static_cases())
     return results
 
 
@@ -226,7 +388,7 @@ def _render_table(results: list[dict]) -> str:
     lines = []
     for r in results:
         rc = f"patched_rc={r['patched_rc']} control_rc={r['control_rc']}"
-        lines.append(f"{r['verdict']:12} | {rc:32} | {r['fixture']:34} | {r['guard'] or '(가드 없음)'}")
+        lines.append(f"{r['verdict']:17} | {rc:32} | {r['fixture']:44} | {r['guard'] or '(가드 없음)'}")
     ok = sum(1 for r in results if r["verdict"] == "FALSIFIABLE")
     lines.append("")
     lines.append(f"{ok}/{len(results)} guards falsifiable")
