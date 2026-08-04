@@ -145,6 +145,33 @@ def test_ssrf_dns_resolution_pinned_off_live_network():
         "live network and flake when DNS is unavailable."
     )
 
+    # The fixture also clears the guard's DNS TTLCache on both module twins, but
+    # it looks the cache up with getattr(..., None) — renaming ``_dns_cache`` or
+    # ``_dns_cache_lock`` would turn that clear into a silent no-op and let a
+    # resolution cached under a prior (real or offline) resolver leak across
+    # tests. Assert the attributes still exist and the cache really is empty at
+    # test start, before this test itself populates it below.
+    import importlib
+
+    checked = 0
+    for mod_name in ("common.utils", "scripts.common.utils"):
+        try:
+            mod = importlib.import_module(mod_name)
+        except ImportError:
+            continue
+        checked += 1
+        assert hasattr(mod, "_dns_cache") and hasattr(mod, "_dns_cache_lock"), (
+            f"{mod_name} no longer exposes _dns_cache/_dns_cache_lock — the "
+            "_deterministic_dns_resolution cache clear is a silent no-op."
+        )
+        assert not mod._dns_cache, (
+            f"{mod_name}._dns_cache is non-empty at test start — the "
+            "_deterministic_dns_resolution fixture did not clear it, so a "
+            "stale resolution can leak between tests."
+        )
+
+    assert checked, "neither common.utils nor scripts.common.utils was importable"
+
     # Behavioural corollary: a public URL must not be blocked by the guard.
     from common.utils import is_private_url_target
 
