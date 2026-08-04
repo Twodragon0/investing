@@ -175,3 +175,27 @@ python3 -m basedpyright
 ```bash
 git status --short   # _state/, assets/images/generated/ 에 변경이 없어야 함
 ```
+
+---
+
+## 6. 자동 감시
+
+규약 5의 falsifiability 검증은 `scripts/tools/guard_falsifiability.py`로 상주화되어 있다.
+
+```bash
+python scripts/tools/guard_falsifiability.py            # 표 출력
+python scripts/tools/guard_falsifiability.py --json     # JSON
+python scripts/tools/guard_falsifiability.py --check    # vacuous/미등록 시 exit 1
+```
+
+`.github/workflows/guard-falsifiability.yml`이 두 시점에 `--check`를 돌린다:
+
+- `tests/conftest.py` / `tests/test_suite_isolation_guard.py` / 하네스 자체를 건드리는 **PR**
+- 매주 월요일 05:00 UTC 스케줄
+
+하네스는 `tests/conftest.py`를 덮어썼다 복원하므로:
+
+- 대상 파일에 **미커밋 변경이 있으면 실행을 거부**한다 (중간에 죽으면 작업이 사라지므로)
+- 워크플로우가 실행 후 `git status --porcelain`으로 **복원 실패를 별도 검증**한다
+
+새 격리 fixture를 추가하면 `CASES` 레지스트리에도 등록해야 한다. 미등록 시 `UNMAPPED`로 `--check`가 실패하고, `tests/test_guard_falsifiability_tool.py::test_registry_matches_real_conftest`가 주간 잡을 기다리지 않고 **PR 시점에** 잡는다.

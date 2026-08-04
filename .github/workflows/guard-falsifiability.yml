@@ -1,0 +1,62 @@
+name: Guard Falsifiability
+
+# 격리 가드가 vacuous(무엇을 꺼도 green) 해지지 않았는지 주기 감시.
+# 가드 자체는 code-quality 스위트에서 매 PR 돌지만, "통과한다"만으로는 가드가
+# 실제로 fixture 부재를 잡아내는지 알 수 없다. 이 잡은 fixture 를 하나씩 실제로
+# 비활성화해 대응 가드가 red 가 되는지 확인한다. 규약: docs/test-isolation.md
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'tests/conftest.py'
+      - 'tests/test_suite_isolation_guard.py'
+      - 'scripts/tools/guard_falsifiability.py'
+      - '.github/workflows/guard-falsifiability.yml'
+  schedule:
+    # 매주 월요일 05:00 UTC (KST 14:00). code-quality 주간 잡(일요일 04:00 UTC)과
+    # 겹치지 않게 배치.
+    - cron: '0 5 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: guard-falsifiability-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  falsifiability:
+    runs-on: ubuntu-latest
+    # 케이스당 pytest 를 2회(patched/control) 띄우므로 8종 = 16회 프로세스 기동.
+    # 가드 테스트 자체는 각 1초 미만이고 대부분이 인터프리터 시작 비용이다.
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
+        with:
+          fetch-depth: 1
+
+      - name: Setup Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: scripts/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt pytest pytest-cov
+
+      - name: Run falsifiability harness
+        # 하네스는 tests/conftest.py 를 덮어썼다 복원한다. 러너 체크아웃은
+        # 일회성이고 permissions 도 read 이므로 유출 경로가 없다.
+        run: python scripts/tools/guard_falsifiability.py --check
+
+      - name: Verify working tree restored
+        # 하네스가 finally 에서 conftest 를 복원하지 못하고 죽는 회귀를 잡는다.
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::error::하네스 실행 후 워킹 트리가 더럽다 — conftest 복원 실패"
+            git status --porcelain
+            exit 1
+          fi

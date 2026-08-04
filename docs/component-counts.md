@@ -11,8 +11,8 @@
 | 수집기 (scripts/collect_*.py) | 13 |
 | 생성기 (scripts/generate_*.py) | 6 |
 | 공통 모듈 (scripts/common/**/*.py, __init__ 제외) | 62 |
-| GitHub Actions 워크플로우 (.github/workflows/*.yml) | 48 |
+| GitHub Actions 워크플로우 (.github/workflows/*.yml) | 49 |
 | 카테고리 페이지 (pages/*.md) | 15 |
-| 테스트 파일 (tests/test_*.py) | 124 |
+| 테스트 파일 (tests/test_*.py) | 125 |
 
 <!-- component-counts:end -->
