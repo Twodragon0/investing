@@ -89,7 +89,7 @@
 | scripts/common/themes.py                          |       12 |        0 |    100% |           |
 | scripts/common/time\_series\_state.py             |      278 |       27 |     90% |55, 59, 158, 162, 242, 358-366, 395-401, 432, 460-462, 482-483, 488-490, 541-544 |
 | scripts/common/translator.py                      |      206 |        0 |    100% |           |
-| scripts/common/utils.py                           |      171 |        8 |     95% |186-187, 221-224, 264-266 |
+| scripts/common/utils.py                           |      171 |        8 |     95% |191-192, 226-229, 269-271 |
 | scripts/common/worldmonitor\_utils.py             |        5 |        0 |    100% |           |
 | scripts/continuous\_improvement\_loop.py          |       89 |       89 |      0% |     3-293 |
 | scripts/convert\_to\_avif.py                      |       66 |       66 |      0% |     7-123 |
