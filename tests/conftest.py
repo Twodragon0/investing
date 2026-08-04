@@ -74,6 +74,10 @@ def _block_real_http(monkeypatch):
             "A requests mock is missing or patched on the wrong module namespace."
         )
 
+    # Tripwire for the isolation guard: lets it confirm the transport is blocked
+    # without issuing a request (which, if the fixture were gone, would be a real
+    # outbound call). Mirrors ``_ssrf_dns_stub`` below.
+    _blocked._http_block_stub = True
     monkeypatch.setattr(HTTPAdapter, "send", _blocked)
 
 

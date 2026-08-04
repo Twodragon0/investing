@@ -179,3 +179,97 @@ def test_ssrf_dns_resolution_pinned_off_live_network():
         "example.com is blocked by the SSRF guard under the pinned resolver — "
         "the deterministic DNS stub is not returning a public address."
     )
+
+
+def test_real_http_transport_blocked():
+    """``_block_real_http`` must keep the ``requests`` transport blocked.
+
+    Enrichment/collector tests reach the network only through ``requests`` and
+    all mock it. A misplaced patch can silently go inert, letting a real GET hit
+    a public host the SSRF guard permits — a slow, flaky "green" that depends on
+    the runner's connectivity rather than the code under test.
+
+    Asserted via the fixture's ``_http_block_stub`` marker rather than by issuing
+    a request: if the fixture were gone, a behavioural probe would itself perform
+    the real outbound call this guard exists to prevent.
+    """
+    try:
+        from requests.adapters import HTTPAdapter
+    except ImportError:  # pragma: no cover - requests is a hard test dependency
+        import pytest
+
+        pytest.skip("requests not installed")
+
+    assert getattr(HTTPAdapter.send, "_http_block_stub", False), (
+        "HTTPAdapter.send is the real transport during tests — the "
+        "_block_real_http conftest fixture is not active. A missing requests "
+        "mock will silently make a real outbound call instead of failing."
+    )
+
+
+def test_image_rejection_state_redirected_off_repo_tree():
+    """``_isolate_image_rejection_state`` must redirect metrics writes off-tree.
+
+    ``image_rejection_metrics`` persists counters to ``_STATE_PATH`` and archives
+    to ``_ARCHIVE_DIR``. Tests that record a rejection without patching those
+    themselves rely on the autouse fixture; without it they write into the
+    committed ``_state/`` tree, which the ``pre-commit-state-guard`` hook then
+    blocks at commit time.
+
+    Off-tree alone is not a sufficient assertion here: the import-time redirect
+    (see ``test_image_rejection_atexit_baseline_off_repo_tree``) already moves
+    ``_STATE_PATH`` off the repo tree, so that check stays green even with this
+    fixture disabled — verified empirically. What the per-test fixture uniquely
+    provides is *per-test* isolation, so also assert the active path has moved
+    off the import-time baseline.
+    """
+    import common.image_rejection_metrics as m
+    import tests.conftest as root_conftest
+
+    for attr in ("_STATE_PATH", "_ARCHIVE_DIR"):
+        active = os.path.abspath(str(getattr(m, attr)))
+        assert not active.startswith(_REPO_STATE + os.sep), (
+            f"image_rejection_metrics.{attr} ({active}) points inside the "
+            "committed _state tree during tests — the "
+            "_isolate_image_rejection_state conftest fixture is not active."
+        )
+
+    baseline = getattr(root_conftest, "_STATE_TMP", None)
+    if baseline is not None:
+        active_state = os.path.abspath(str(m._STATE_PATH))
+        assert active_state != os.path.abspath(str(baseline)), (
+            "image_rejection_metrics._STATE_PATH still equals the import-time "
+            f"baseline ({baseline}) — the _isolate_image_rejection_state "
+            "fixture is not active, so every test shares one metrics file "
+            "instead of getting its own tmp copy."
+        )
+
+
+def test_image_rejection_atexit_baseline_off_repo_tree():
+    """The conftest *module-level* redirect must survive monkeypatch teardown.
+
+    ``image_rejection_metrics`` registers an ``atexit`` flush that runs at
+    interpreter shutdown — after every per-test ``monkeypatch`` has been undone.
+    So the per-test fixture alone is not enough: the value monkeypatch restores
+    *to* must already be off-tree. ``tests/conftest.py`` handles this by
+    reassigning ``_STATE_PATH`` at import time, before any test runs.
+
+    That import-time block is wrapped in ``except ImportError: pass``, so if the
+    module ever fails to import the redirect silently does not happen and the
+    atexit flush lands in the committed ``_state/``. ``_STATE_TMP`` is only bound
+    after that import succeeds, which makes it an exact tripwire.
+    """
+    import tests.conftest as root_conftest
+
+    baseline = getattr(root_conftest, "_STATE_TMP", None)
+
+    assert baseline is not None, (
+        "tests/conftest.py did not bind _STATE_TMP — its module-level "
+        "image_rejection_metrics redirect did not run (the import-time block "
+        "swallowed an ImportError). The atexit flush will write into the "
+        "committed _state/ tree at interpreter shutdown."
+    )
+    assert not os.path.abspath(str(baseline)).startswith(_REPO_STATE + os.sep), (
+        f"the atexit restore target ({baseline}) is inside the committed "
+        "_state tree; per-test isolation cannot prevent shutdown pollution."
+    )
