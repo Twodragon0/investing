@@ -106,15 +106,37 @@ def _deterministic_dns_resolution(monkeypatch):
     ``patch("socket.getaddrinfo", ...)`` inside the test body, which overrides
     this fixture for that scope and restores it on exit.
 
+    Loopback and literal-IP lookups pass through to the real resolver: a test
+    that connects to a local server (``127.0.0.1``, ``localhost``) must not have
+    that address rewritten to an off-box public IP, which fails as an opaque
+    ``Can't assign requested address``. Only name lookups — the ones the SSRF
+    guard's DNS step actually performs — are pinned.
+
     The guard memoizes results in a module-level ``TTLCache``; clear it (on both
     the ``common.*`` and ``scripts.common.*`` module twins) so a value cached
     under a prior real/offline resolution cannot leak across tests.
     """
     import importlib
+    import ipaddress
     import socket
 
-    def _fake_getaddrinfo(host, *args, **kwargs):
-        return [(socket.AF_INET, socket.SOCK_STREAM, 6, "", (_PUBLIC_TEST_IP, 0))]
+    real_getaddrinfo = socket.getaddrinfo
+    _LOCAL_HOSTNAMES = {"localhost", "localhost.localdomain", "ip6-localhost"}
+
+    def _fake_getaddrinfo(host, port=None, *args, **kwargs):
+        name = (host or "").strip().rstrip(".").lower()
+        if name in _LOCAL_HOSTNAMES:
+            return real_getaddrinfo(host, port, *args, **kwargs)
+        try:
+            ipaddress.ip_address(name)
+        except ValueError:
+            pass
+        else:  # already a literal address — no name resolution to pin
+            return real_getaddrinfo(host, port, *args, **kwargs)
+        # Preserve the requested port so a caller that dials the returned
+        # sockaddr reaches the port it asked for (service names -> 0).
+        sock_port = port if isinstance(port, int) else 0
+        return [(socket.AF_INET, socket.SOCK_STREAM, 6, "", (_PUBLIC_TEST_IP, sock_port))]
 
     _fake_getaddrinfo._ssrf_dns_stub = True  # tripwire for the isolation guard
     monkeypatch.setattr(socket, "getaddrinfo", _fake_getaddrinfo)
