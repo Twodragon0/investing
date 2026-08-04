@@ -53,10 +53,14 @@ jobs:
         run: python scripts/tools/guard_falsifiability.py --check
 
       - name: Verify working tree restored
-        # 하네스가 finally 에서 conftest 를 복원하지 못하고 죽는 회귀를 잡는다.
+        # 하네스가 finally 에서 복원하지 못하고 죽는 회귀를 잡는다. 대상은 두 가지:
+        # conftest.py 원본, 그리고 module-level 케이스가 리다이렉트를 깨뜨린
+        # 동안 atexit flush 가 기록해버린 _state/image_rejection_metrics.json.
+        # 로컬은 skip-worktree(dev_ignore_state.sh)가 후자를 가려서 CI 에서만
+        # 드러났다 — 이 단계가 실제로 그 회귀를 잡아낸 이력이 있다.
         run: |
           if [ -n "$(git status --porcelain)" ]; then
-            echo "::error::하네스 실행 후 워킹 트리가 더럽다 — conftest 복원 실패"
+            echo "::error::하네스 실행 후 워킹 트리가 더럽다 — 복원 실패"
             git status --porcelain
             exit 1
           fi

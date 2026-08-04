@@ -126,3 +126,59 @@ def test_render_table_marks_unmapped_fixture():
 
     assert "0/1 guards falsifiable" in out
     assert "CASES 미등록" in out
+
+
+def test_restore_state_reverts_modified_file(tmp_path, monkeypatch):
+    """`module-level` 케이스가 남기는 `_state` 오염을 되돌려야 한다.
+
+    그 케이스는 import 시점 리다이렉트를 일부러 깨뜨리므로 atexit flush 가 진짜
+    `_state/image_rejection_metrics.json` 에 기록된다. 로컬은 skip-worktree 가
+    이를 가려 CI 에서만 드러났다(워크플로우의 "Verify working tree restored"
+    단계가 실제로 잡아낸 회귀).
+    """
+    state_dir = tmp_path / "_state"
+    state_dir.mkdir()
+    target = state_dir / "image_rejection_metrics.json"
+    target.write_text('{"last_seen": "original"}', encoding="utf-8")
+    monkeypatch.setattr(gf, "REPO_ROOT", tmp_path)
+
+    snapshot = gf._snapshot_state()
+    target.write_text('{"last_seen": "polluted"}', encoding="utf-8")
+
+    restored = gf._restore_state(snapshot)
+
+    assert restored == ["_state/image_rejection_metrics.json"]
+    assert target.read_text(encoding="utf-8") == '{"last_seen": "original"}'
+
+
+def test_restore_state_recreates_deleted_file(tmp_path, monkeypatch):
+    state_dir = tmp_path / "_state"
+    state_dir.mkdir()
+    target = state_dir / "seen.json"
+    target.write_text("{}", encoding="utf-8")
+    monkeypatch.setattr(gf, "REPO_ROOT", tmp_path)
+
+    snapshot = gf._snapshot_state()
+    target.unlink()
+
+    restored = gf._restore_state(snapshot)
+
+    assert restored == ["_state/seen.json"]
+    assert target.read_text(encoding="utf-8") == "{}"
+
+
+def test_restore_state_noop_when_untouched(tmp_path, monkeypatch):
+    state_dir = tmp_path / "_state"
+    state_dir.mkdir()
+    (state_dir / "seen.json").write_text("{}", encoding="utf-8")
+    monkeypatch.setattr(gf, "REPO_ROOT", tmp_path)
+
+    snapshot = gf._snapshot_state()
+
+    assert gf._restore_state(snapshot) == []
+
+
+def test_snapshot_state_tolerates_missing_dir(tmp_path, monkeypatch):
+    monkeypatch.setattr(gf, "REPO_ROOT", tmp_path)
+
+    assert gf._snapshot_state() == {}

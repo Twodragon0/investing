@@ -140,10 +140,36 @@ def _assert_safe_to_run() -> None:
         )
 
 
+def _snapshot_state() -> dict[Path, bytes]:
+    """`_state/` 파일 내용을 스냅샷한다.
+
+    `module-level:image_rejection_metrics` 케이스는 import 시점 리다이렉트를
+    일부러 깨뜨리므로, 그 실행의 atexit flush 가 진짜
+    `_state/image_rejection_metrics.json` 에 기록된다 — 리다이렉트가 막던 바로
+    그 오염이다. 하네스가 남긴 이 부작용은 하네스가 되돌려야 한다.
+    """
+    state_dir = REPO_ROOT / "_state"
+    if not state_dir.is_dir():
+        return {}
+    return {p: p.read_bytes() for p in state_dir.rglob("*") if p.is_file()}
+
+
+def _restore_state(snapshot: dict[Path, bytes]) -> list[str]:
+    """스냅샷과 달라진 `_state/` 파일을 되돌리고 복원한 목록을 돌려준다."""
+    restored = []
+    for path, content in snapshot.items():
+        if not path.exists() or path.read_bytes() != content:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(content)
+            restored.append(str(path.relative_to(REPO_ROOT)))
+    return restored
+
+
 def run_all() -> list[dict]:
     """모든 케이스를 검증하고 결과 리스트를 돌려준다."""
     _assert_safe_to_run()
     original = CONFTEST.read_text(encoding="utf-8")
+    state_snapshot = _snapshot_state()
 
     unmapped = [f for f in discover_autouse_fixtures(original) if f not in CASES]
 
@@ -178,6 +204,9 @@ def run_all() -> list[dict]:
             )
     finally:
         CONFTEST.write_text(original, encoding="utf-8")
+        restored = _restore_state(state_snapshot)
+        if restored:
+            print(f"[guard-falsifiability] _state 복원: {', '.join(restored)}", file=sys.stderr)
         _purge_pycache()
 
     for fixture in unmapped:
