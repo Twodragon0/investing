@@ -175,10 +175,15 @@ def is_private_url_target(url: str) -> bool:
     but necessary: an attacker who can influence DNS can also cause transient
     failures.
 
-    Note on CI environments: the ``@lru_cache`` on ``_resolve_hostname_ips``
-    can be cleared in tests via ``_resolve_hostname_ips.cache_clear()`` and
-    ``socket.getaddrinfo`` can be mocked with ``unittest.mock.patch`` to avoid
-    real network calls.
+    Note on CI environments: ``_resolve_hostname_ips`` memoizes into the
+    module-level ``_dns_cache`` (a ``cachetools.TTLCache``, not
+    ``functools.lru_cache``) via ``@cached``; it can be cleared in tests with
+    ``_resolve_hostname_ips.cache_clear()``, and ``socket.getaddrinfo`` can be
+    mocked with ``unittest.mock.patch`` to avoid real network calls. The suite
+    does both automatically — see the ``_deterministic_dns_resolution`` autouse
+    fixture in ``tests/conftest.py``, which pins the resolver and clears
+    ``_dns_cache`` on both the ``common.*`` and ``scripts.common.*`` module
+    twins at every test setup.
     """
     try:
         parsed = urlparse(url)
