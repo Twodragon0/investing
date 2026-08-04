@@ -67,7 +67,7 @@
 | scripts/common/post\_generator.py                 |      341 |        2 |     99% |   882-883 |
 | scripts/common/post\_html.py                      |       28 |        0 |    100% |           |
 | scripts/common/risk\_classifier.py                |      184 |        9 |     95% |331-332, 354, 392, 431-435 |
-| scripts/common/rss\_fetcher.py                    |      249 |       12 |     95% |44-45, 80, 91, 178, 187, 272, 281, 292, 302, 330-331 |
+| scripts/common/rss\_fetcher.py                    |      249 |       11 |     96% |44-45, 91, 178, 187, 272, 281, 292, 302, 330-331 |
 | scripts/common/severity.py                        |       10 |        0 |    100% |           |
 | scripts/common/signal\_composer.py                |      489 |        2 |     99% |   882-883 |
 | scripts/common/signal\_tracker.py                 |      185 |        6 |     97% |203-205, 320-321, 382-383 |
@@ -125,7 +125,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **23034** | **6291** | **73%** |           |
+| **TOTAL**                                         | **23034** | **6290** | **73%** |           |
 
 
 ## Setup coverage badge
