@@ -15,6 +15,12 @@ vacuous(무엇을 꺼도 green) 한지 알 수 없다.
 CASES 에 없는 fixture 가 있으면 실패한다. 새 격리 fixture 를 가드 없이
 추가하는 것을 차단한다.
 
+Part 2 (2026-08-05): 가드 자체의 **우회 경로**를 감사해 10건을 STATIC_CASES 에
+편입했다 — cwd 프리픽스/f-string 형태의 `_state` 루팅, 모듈 레벨 writer 표
+드리프트, `getattr`/`import_module` 를 통한 production 루트 취득, 그리고
+`--fail-under` 숫자는 그대로 둔 채 게이트를 무력화하는 4가지 커버리지 편집
+(측정 범위 축소 x2, `--omit`, `continue-on-error`).
+
 사용법:
     python scripts/tools/guard_falsifiability.py            # 표 출력
     python scripts/tools/guard_falsifiability.py --json     # JSON 출력
@@ -80,18 +86,24 @@ class StaticCase(NamedTuple):
 # 19행 `sys.path.insert` 가 바뀌고 정작 24행 `HISTORY_PATH` 는 그대로여서 가드가
 # 정당하게 green 이었다 — 가드가 아니라 mutation 이 틀린 것이었다. 첫 일치를 조용히
 # 바꾸는 대신 AMBIGUOUS-ANCHOR 로 실패시킨다.
+#
+# 두 번째 규약(2026-08-05 갭 감사): **주입 코드는 대상 파일에서 실행 가능해야 한다.**
+# 초기 form A 케이스는 `dedup.py` 에 `Path("_state/probe.json")` 을 주입했는데 그
+# 모듈은 `pathlib` 을 import 하지 않아 autouse fixture 의 dedup import 가 NameError
+# 로 죽었다 — 테스트 본문은 실행조차 되지 않았는데 rc!=0 이라 FALSIFIABLE 로 보였다.
+# 주입은 대상 모듈에 이미 있는 이름만 쓸 것(또는 import 불필요한 리터럴).
 STATIC_CASES: tuple[StaticCase, ...] = (
     StaticCase(
-        "AST 스캔: 스크립트에 cwd-상대 _state 주입",
+        "AST 스캔: 스크립트에 cwd-상대 _state 주입 (form A)",
         "scripts/common/dedup.py",
         None,
-        '\n_FALSIFIABILITY_PROBE = Path("_state/probe.json")\n',
+        '\n_FALSIFIABILITY_PROBE = "_state/probe.json"\n',
         "tests/test_state_path_anchoring.py::test_no_cwd_relative_state_paths_in_scripts",
     ),
     StaticCase(
         "_state 탐지기 무력화 (_is_slash_rooted)",
         "tests/test_state_path_anchoring.py",
-        'return value.startswith(_BARE_ROOT + "/") or value.startswith(_BARE_ROOT + "\\\\")',
+        'return bare.startswith(_BARE_ROOT + "/") or bare.startswith(_BARE_ROOT + "\\\\")',
         "return False",
         "tests/test_state_path_anchoring.py::test_guard_detects_known_antipatterns",
     ),
@@ -157,6 +169,82 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "--fail-under=70",
         "--fail-under=40",
         "tests/test_coverage_floor_guard.py::test_workflow_global_coverage_floor_enforced",
+    ),
+    # ---------------------------------------------------------------------
+    # Part 2 (2026-08-05): 갭 감사에서 나온 10건. 각 케이스는 "가드가 통과한다"가
+    # 아니라 "이 우회를 실제로 주입하면 red 가 된다"를 증명한다.
+    # ---------------------------------------------------------------------
+    StaticCase(
+        "cwd 프리픽스 우회 주입 (form C1: ./_state/)",
+        "scripts/common/dedup.py",
+        None,
+        '\n_FALSIFIABILITY_PROBE = "./_state/probe.json"\n',
+        "tests/test_state_path_anchoring.py::test_no_cwd_relative_state_paths_in_scripts",
+    ),
+    StaticCase(
+        'f-string 우회 주입 (form C2: f"_state/{...}")',
+        "scripts/common/dedup.py",
+        None,
+        '\n_FALSIFIABILITY_PROBE = f"_state/{__name__}.json"\n',
+        "tests/test_state_path_anchoring.py::test_no_cwd_relative_state_paths_in_scripts",
+    ),
+    StaticCase(
+        "미등록 모듈 레벨 _state writer 추가 (드리프트)",
+        "scripts/check_description_quality.py",
+        None,
+        '\n_FALSIFIABILITY_PROBE = Path(__file__).resolve().parent.parent / "_state" / "probe.json"\n',
+        "tests/test_state_path_anchoring.py::test_module_level_writers_table_has_no_drift",
+    ),
+    StaticCase(
+        "테스트가 getattr 로 production REPO_ROOT 취득",
+        "tests/test_encoding_guard.py",
+        None,
+        "\nimport common.image_generator as _fp_ig  # noqa: E402\n\n"
+        '_FALSIFIABILITY_PROBE = getattr(_fp_ig, "REPO_ROOT")\n',
+        "tests/test_hermetic_test_writes_guard.py::test_no_test_imports_production_repo_root",
+    ),
+    StaticCase(
+        "테스트가 import_module 체인으로 production REPO_ROOT 취득",
+        "tests/test_encoding_guard.py",
+        None,
+        "\nimport importlib as _fp_il  # noqa: E402\n\n"
+        '_FALSIFIABILITY_PROBE = _fp_il.import_module("common.image_generator").REPO_ROOT\n',
+        "tests/test_hermetic_test_writes_guard.py::test_no_test_imports_production_repo_root",
+    ),
+    StaticCase(
+        "커버리지 측정 범위 축소 (pyproject --cov)",
+        "pyproject.toml",
+        '"--cov=scripts --cov-fail-under=70"',
+        '"--cov=scripts/common/summary_sections.py --cov-fail-under=70"',
+        "tests/test_coverage_floor_guard.py::test_pyproject_coverage_scope_not_narrowed",
+    ),
+    StaticCase(
+        "커버리지 측정 범위 축소 (워크플로우 --cov)",
+        ".github/workflows/code-quality.yml",
+        "--cov=scripts/common --cov-report=",
+        "--cov=scripts/common/summary_sections.py --cov-report=",
+        "tests/test_coverage_floor_guard.py::test_workflow_coverage_scope_not_narrowed",
+    ),
+    StaticCase(
+        "커버리지 게이트 비차단화 (continue-on-error)",
+        ".github/workflows/code-quality.yml",
+        "      - name: Generate coverage report\n        run: |",
+        "      - name: Generate coverage report\n        continue-on-error: true\n        run: |",
+        "tests/test_coverage_floor_guard.py::test_workflow_coverage_gate_steps_are_blocking",
+    ),
+    StaticCase(
+        "커버리지 게이트에서 모듈 제외 (--omit)",
+        ".github/workflows/code-quality.yml",
+        "python3 -m coverage report --fail-under=70",
+        'python3 -m coverage report --fail-under=70 --omit="*/collect_*.py"',
+        "tests/test_coverage_floor_guard.py::test_workflow_coverage_gate_omits_nothing",
+    ),
+    StaticCase(
+        "커버리지 설정에서 모듈 제외 ([tool.coverage.run] omit)",
+        "pyproject.toml",
+        "[tool.coverage.run]\nrelative_files = true",
+        '[tool.coverage.run]\nrelative_files = true\nomit = ["*/collect_*.py"]',
+        "tests/test_coverage_floor_guard.py::test_pyproject_coverage_config_omits_nothing",
     ),
 )
 
