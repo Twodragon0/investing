@@ -21,6 +21,11 @@ Part 2 (2026-08-05): 가드 자체의 **우회 경로**를 감사해 10건을 ST
 `--fail-under` 숫자는 그대로 둔 채 게이트를 무력화하는 4가지 커버리지 편집
 (측정 범위 축소 x2, `--omit`, `continue-on-error`).
 
+Part 3 (2026-08-05): 런타임 트리-쓰기 탐지기(`tests/_tree_write_guard.py`).
+in-process 가로채기 3건과 서브프로세스용 세션 스냅샷 3건. 스냅샷 층은 세션
+teardown 에서만 발현해 배선을 끊어도 스위트가 조용하므로, baseline 등록
+tripwire · 비교 로직 · 스냅샷 범위를 각각 별도 케이스로 falsify 한다.
+
 사용법:
     python scripts/tools/guard_falsifiability.py            # 표 출력
     python scripts/tools/guard_falsifiability.py --json     # JSON 출력
@@ -276,6 +281,29 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         'return any(c in mode for c in "wax+")',
         "return False",
         "tests/test_tree_write_guard.py::TestWriteModeDetection::test_write_modes_detected[w]",
+    ),
+    # 서브프로세스용 세션 스냅샷 층. 이 층은 세션 teardown 에서만 발현하므로
+    # 배선을 끊어도 스위트 어디서도 red 가 나지 않는다 — 그 침묵을 막는 케이스들.
+    StaticCase(
+        "세션 baseline 미등록 (tripwire 무력화)",
+        "tests/_tree_write_guard.py",
+        "    global _SESSION_BASELINE\n    _SESSION_BASELINE = snapshot_tree()\n    return _SESSION_BASELINE",
+        "    return snapshot_tree()",
+        "tests/test_suite_isolation_guard.py::test_real_tree_writes_detected",
+    ),
+    StaticCase(
+        "세션 스냅샷 비교 무력화 (변화를 무시)",
+        "tests/_tree_write_guard.py",
+        "    changes = diff_tree(baseline, snapshot_tree())\n    if not changes:\n        return",
+        "    changes = diff_tree(baseline, snapshot_tree())\n    if changes or not changes:\n        return",
+        "tests/test_tree_write_guard.py::TestOutOfProcessNet::test_added_file_is_reported",
+    ),
+    StaticCase(
+        "세션 스냅샷 범위 붕괴 (빈 스냅샷)",
+        "tests/_tree_write_guard.py",
+        '_SNAPSHOT_DIRS: tuple[str, ...] = ("_posts", "_state", "assets/images/generated")',
+        "_SNAPSHOT_DIRS: tuple[str, ...] = ()",
+        "tests/test_tree_write_guard.py::TestOutOfProcessNet::test_snapshot_covers_the_content_dirs",
     ),
 )
 

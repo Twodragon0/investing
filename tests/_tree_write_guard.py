@@ -308,3 +308,45 @@ def diff_tree(before: dict[str, int], after: dict[str, int]) -> list[str]:
     changes += [f"removed: {p}" for p in sorted(set(before) - set(after))]
     changes += [f"modified: {p}" for p in sorted(set(before) & set(after)) if before[p] != after[p]]
     return changes
+
+
+# Baseline captured once per session. Exposed so a guard test can confirm the
+# snapshot half of ``_detect_real_tree_writes`` actually ran — the interceptor
+# tripwires say nothing about it, and an unwired snapshot is a silent no-op.
+_SESSION_BASELINE: dict[str, int] | None = None
+
+
+def capture_session_baseline() -> dict[str, int]:
+    """Snapshot the content dirs and record it as this session's baseline."""
+    global _SESSION_BASELINE
+    _SESSION_BASELINE = snapshot_tree()
+    return _SESSION_BASELINE
+
+
+def session_baseline() -> dict[str, int] | None:
+    """This session's baseline, or ``None`` if it was never captured."""
+    return _SESSION_BASELINE
+
+
+def assert_no_out_of_process_writes(baseline: dict[str, int]) -> None:
+    """Raise if the content dirs changed since ``baseline`` was taken.
+
+    The net for writes the interceptor structurally cannot see: a subprocess
+    writes through its own interpreter, where our patches do not exist.
+
+    Attribution is coarse by nature — this compares the whole session against
+    its start, so it names the files but not the test. The message says as much
+    rather than implying precision it does not have.
+    """
+    changes = diff_tree(baseline, snapshot_tree())
+    if not changes:
+        return
+    raise AssertionError(
+        "테스트 세션이 커밋된 트리를 변경했습니다 (in-process 가로채기가 놓친 쓰기 — "
+        "서브프로세스나 raw syscall 경로):\n"
+        + "\n".join(f"  - {c}" for c in changes)
+        + "\n\n세션 단위 비교이므로 어느 테스트인지는 알 수 없습니다. "
+        "subprocess 를 쓰는 테스트부터 좁히세요 (대상 경로를 tmp 로 넘기거나 "
+        "자식 프로세스 환경에서 경로 상수를 리다이렉트).\n"
+        "이 변경이 정말 의도된 산출물이면 _SNAPSHOT_DIRS / _EXEMPT_PARTS 를 근거와 함께 갱신하세요."
+    )

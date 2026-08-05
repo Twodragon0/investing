@@ -15,22 +15,25 @@ from __future__ import annotations
 
 import contextlib
 import os
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 import pytest
 from _tree_write_guard import (
+    _EXEMPT_PARTS,
     REPO_ROOT,
     TreeWriteGuard,
     Violation,
     _is_write_mode,
     _relative_if_protected,
+    assert_no_out_of_process_writes,
     diff_tree,
+    snapshot_tree,
     suspended,
 )
 
 if TYPE_CHECKING:
     from collections.abc import Iterator
-    from pathlib import Path
 
 
 class _Blocked(Exception):
@@ -236,3 +239,52 @@ class TestSnapshotDiff:
 
     def test_identical_snapshots_are_clean(self) -> None:
         assert diff_tree({"a": 1}, {"a": 1}) == []
+
+
+class TestOutOfProcessNet:
+    """The session-snapshot layer: what the interceptor structurally cannot see."""
+
+    def test_snapshot_covers_the_content_dirs(self) -> None:
+        snapshot = snapshot_tree()
+        assert len(snapshot) > 100, f"snapshot walked only {len(snapshot)} files — wrong dirs?"
+        assert all(not _EXEMPT_PARTS.intersection(Path(p).parts) for p in snapshot), (
+            "snapshot includes exempt build artifacts; churn there would fail the suite spuriously"
+        )
+        prefixes = {p.split("/", 1)[0] for p in snapshot}
+        assert prefixes <= {"_posts", "_state", "assets"}, f"snapshot reached outside the content dirs: {prefixes}"
+
+    def test_unchanged_tree_passes(self) -> None:
+        assert_no_out_of_process_writes(snapshot_tree())
+
+    def test_added_file_is_reported(self) -> None:
+        """Simulated by dropping an entry from the baseline — no write needed.
+
+        Removing a known file from ``before`` makes the *real* tree look like it
+        gained that file, which is exactly the subprocess-write signature.
+        """
+        baseline = snapshot_tree()
+        victim = next(iter(sorted(baseline)))
+        del baseline[victim]
+
+        with pytest.raises(AssertionError, match="in-process 가로채기가 놓친 쓰기") as excinfo:
+            assert_no_out_of_process_writes(baseline)
+        assert f"added: {victim}" in str(excinfo.value)
+
+    def test_removed_and_modified_files_are_reported(self) -> None:
+        baseline = snapshot_tree()
+        real = next(iter(sorted(baseline)))
+        baseline["_state/__never_existed.json"] = 1  # looks removed
+        baseline[real] = baseline[real] + 12345  # looks modified
+
+        with pytest.raises(AssertionError) as excinfo:
+            assert_no_out_of_process_writes(baseline)
+        message = str(excinfo.value)
+        assert "removed: _state/__never_existed.json" in message
+        assert f"modified: {real}" in message
+
+    def test_message_admits_coarse_attribution(self) -> None:
+        """The failure must not imply it knows which test did it — it does not."""
+        baseline = snapshot_tree()
+        del baseline[next(iter(sorted(baseline)))]
+        with pytest.raises(AssertionError, match="어느 테스트인지는 알 수 없습니다"):
+            assert_no_out_of_process_writes(baseline)
