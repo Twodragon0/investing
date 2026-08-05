@@ -29,6 +29,7 @@ from _tree_write_guard import (
 )
 
 if TYPE_CHECKING:
+    from collections.abc import Iterator
     from pathlib import Path
 
 
@@ -36,18 +37,35 @@ class _Blocked(Exception):
     """Sentinel: the guard refused a write. Never escapes ``_collect``."""
 
 
-def _fingerprint(path: Path) -> bytes | None:
-    """Contents of ``path``, or ``None`` if absent.
+def _remove(path: Path) -> None:
+    """Delete ``path`` if present, with the installed guards lifted.
 
-    Compared before/after so the assertion is "the guard changed nothing" rather
-    than "the file does not exist". The weaker form couples the test to whatever
-    the working tree happened to contain beforehand, and would also pass if the
-    guard let a write through to an already-existing file.
+    ``Path.unlink`` goes through the patched ``os.unlink``; deleting an existing
+    file under ``_state/`` is itself a protected-tree mutation, so the session
+    guard would refuse the cleanup. Suspending is required, not cosmetic.
     """
+    with suspended():
+        path.unlink(missing_ok=True)
+
+
+@pytest.fixture
+def probe_path(request: pytest.FixtureRequest) -> Iterator[Path]:
+    """An absent path inside the protected tree, guaranteed clean either side.
+
+    The tests below deliberately aim a write at the committed tree. When the
+    detector works the write never lands — but these same tests are run by the
+    falsifiability harness with the detector *broken*, and then it does. CI
+    caught exactly that: the ``io.open`` mutation let ``Path.write_text``
+    through and left ``_state/__unit_probe_pathlib.json`` behind, failing the
+    "working tree restored" check. A test that proves writes are blocked must
+    clean up after the case where they are not.
+    """
+    target = REPO_ROOT / "_state" / f"__unit_probe_{request.node.name}.json"
+    _remove(target)
     try:
-        return path.read_bytes()
-    except OSError:
-        return None
+        yield target
+    finally:
+        _remove(target)
 
 
 class TestProtectedPathClassification:
@@ -151,20 +169,18 @@ class TestInterception:
             action()
         return found
 
-    def test_builtin_open_write_into_tree_is_caught(self) -> None:
-        target = REPO_ROOT / "_state" / "__unit_probe_builtin.json"
-        before = _fingerprint(target)
-        found = self._collect(lambda: self._swallow(lambda: open(target, "w")))  # noqa: SIM115 — the guard must refuse it
-        assert [v.path for v in found] == ["_state/__unit_probe_builtin.json"]
-        assert _fingerprint(target) == before, "the guard must refuse the write, not observe it after the fact"
+    def test_builtin_open_write_into_tree_is_caught(self, probe_path: Path) -> None:
+        relative = str(probe_path.relative_to(REPO_ROOT))
+        found = self._collect(lambda: self._swallow(lambda: open(probe_path, "w")))  # noqa: SIM115 — must be refused
+        assert [v.path for v in found] == [relative]
+        assert not probe_path.exists(), "the guard must refuse the write, not observe it after the fact"
 
-    def test_pathlib_write_text_is_caught(self) -> None:
+    def test_pathlib_write_text_is_caught(self, probe_path: Path) -> None:
         """``Path.write_text`` goes through ``io.open``, not ``builtins.open``."""
-        target = REPO_ROOT / "_state" / "__unit_probe_pathlib.json"
-        before = _fingerprint(target)
-        found = self._collect(lambda: self._swallow(lambda: target.write_text("x", encoding="utf-8")))
-        assert [v.path for v in found] == ["_state/__unit_probe_pathlib.json"]
-        assert _fingerprint(target) == before, "io.open path is unguarded — Path.write_text slipped through"
+        relative = str(probe_path.relative_to(REPO_ROOT))
+        found = self._collect(lambda: self._swallow(lambda: probe_path.write_text("x", encoding="utf-8")))
+        assert [v.path for v in found] == [relative]
+        assert not probe_path.exists(), "io.open path is unguarded — Path.write_text slipped through"
 
     def test_reads_are_not_caught(self) -> None:
         found = self._collect(lambda: self._swallow(lambda: open(REPO_ROOT / "pyproject.toml").close()))
