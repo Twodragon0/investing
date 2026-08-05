@@ -12,12 +12,20 @@ The fix everywhere is to compose the path from a ``__file__`` anchor
 non-first ``os.path.join`` arg) — never as the leading element of a path.
 
 This guard AST-scans every script (AST ignores comments/strings-in-comments) and
-fails on two forms:
+fails on three forms:
   A. any string literal that starts with ``_state/`` or ``_state\\`` — these are
      bare-relative regardless of how they are used; and
   B. an exact ``"_state"`` literal handed to ``Path(...)`` or ``*.join(...)`` as
      the first argument — the no-slash single-component bare-root that form A
-     cannot see (slash-rooted forms in any context are already caught by A).
+     cannot see (slash-rooted forms in any context are already caught by A); and
+  C. the two shapes that wear a disguise A/B cannot see through:
+     C1. an explicit-cwd prefix — ``"./_state/foo.json"`` resolves against cwd
+         exactly like ``"_state/foo.json"`` but does not *start with* the bare
+         root, so form A's ``startswith`` misses it. Both A and B therefore
+         strip leading ``./`` / ``.\\`` before testing.
+     C2. an f-string rooted at the bare root — ``Path(f"_state/{name}.json")``
+         is an ``ast.JoinedStr``, not an ``ast.Constant``, so neither A nor B
+         ever sees it. Its leading literal chunk is tested with the same rules.
 """
 
 from __future__ import annotations
@@ -34,9 +42,38 @@ def _py_files() -> list[Path]:
     return [p for p in SCRIPTS_DIR.rglob("*.py") if "__pycache__" not in p.parts]
 
 
+# Form C1: an explicit-cwd prefix is semantically identical to no prefix at all
+# (``./_state/x`` == ``_state/x``), so it must be stripped before the root tests.
+_CWD_PREFIXES = ("./", ".\\")
+
+
+def _strip_cwd_prefix(value: str) -> str:
+    """Drop leading explicit-cwd markers (``./``, ``.\\``), however many."""
+    while value.startswith(_CWD_PREFIXES):
+        value = value[2:]
+    return value
+
+
 def _is_slash_rooted(value: str) -> bool:
     """Form A: a literal that *starts a path* with the _state segment."""
-    return value.startswith(_BARE_ROOT + "/") or value.startswith(_BARE_ROOT + "\\")
+    bare = _strip_cwd_prefix(value)
+    return bare.startswith(_BARE_ROOT + "/") or bare.startswith(_BARE_ROOT + "\\")
+
+
+def _is_bare_root(value: str) -> bool:
+    """Form B: the exact single-component bare root (cwd prefix tolerated)."""
+    return _strip_cwd_prefix(value) == _BARE_ROOT
+
+
+def _fstring_prefix(node: ast.JoinedStr) -> str | None:
+    """Form C2: the leading *literal* chunk of an f-string, if it has one.
+
+    ``f"_state/{name}"`` -> ``"_state/"``; ``f"{root}/_state/x"`` -> None
+    (an interpolation leads, so the path is anchored at whatever ``root`` is).
+    """
+    if node.values and isinstance(node.values[0], ast.Constant) and isinstance(node.values[0].value, str):
+        return node.values[0].value
+    return None
 
 
 def _call_name(call: ast.Call) -> str:
@@ -59,13 +96,20 @@ def _collect_offenders(source: str, label: str) -> list[str]:
     offenders: list[str] = []
     tree = ast.parse(source, filename=label)
     for node in ast.walk(tree):
-        # Form A — any string literal that roots a path at _state/.
+        # Form A (+C1) — any string literal that roots a path at _state/.
         if isinstance(node, ast.Constant) and isinstance(node.value, str) and _is_slash_rooted(node.value):
             offenders.append(f"{label}:{node.lineno} -> literal {node.value!r}")
-        # Form B — leading "_state" as the first arg to Path(...) / *.join(...).
+        # Form C2 — f-string whose leading literal chunk roots the path at _state.
+        # An f-string with no interpolation compiles to a Constant, so a bare
+        # ``_state`` prefix here is always followed by an interpolated segment.
+        elif isinstance(node, ast.JoinedStr):
+            prefix = _fstring_prefix(node)
+            if prefix is not None and (_is_slash_rooted(prefix) or _is_bare_root(prefix)):
+                offenders.append(f"{label}:{node.lineno} -> f-string rooted at {prefix!r}")
+        # Form B (+C1) — leading "_state" as the first arg to Path(...) / *.join(...).
         elif isinstance(node, ast.Call) and _call_name(node) in {"Path", "join"}:
             first = _first_arg_str(node)
-            if first is not None and first == _BARE_ROOT:
+            if first is not None and _is_bare_root(first):
                 offenders.append(f"{label}:{node.lineno} -> {_call_name(node)}({first!r}) leading bare-root")
     return offenders
 
@@ -91,6 +135,16 @@ def test_guard_detects_known_antipatterns() -> None:
         'x = os.path.join("_state", "foo.json")',
         'parser.add_argument("--f", default="_state/foo.txt")',
         "p = Path('_state') / 'foo.json'",
+        # Form C1 — explicit-cwd prefix resolves against cwd just the same.
+        'x = Path("./_state/foo.json")',
+        'x = open("./_state/foo.json")',
+        'x = Path("./_state")',
+        'x = os.path.join("./_state", "foo.json")',
+        # Form C2 — f-string rooted at the bare root (invisible to A and B).
+        'x = Path(f"_state/{name}.json")',
+        'x = Path(f"./_state/{name}.json")',
+        'x = open(f"_state/{name}.json")',
+        'x = Path(f"_state{sep}foo.json")',
     )
     for snippet in bad:
         assert _collect_offenders(snippet, "<bad>"), f"detector missed: {snippet}"
@@ -101,6 +155,10 @@ def test_guard_detects_known_antipatterns() -> None:
         'x = os.path.join(REPO_ROOT, "_state", "foo.json")',
         'x = Path(__file__).resolve().parent.parent / "_state"',
         'name = "_state"  # bare component used elsewhere, anchored at call site',
+        # Anchored f-strings: an interpolation leads, so the root is whatever
+        # the anchored variable holds — not cwd.
+        'x = Path(f"{_REPO_ROOT}/_state/{name}.json")',
+        'x = f"{REPO_ROOT}/_state"',
     )
     for snippet in good:
         assert not _collect_offenders(snippet, "<good>"), f"detector false-positive: {snippet}"
@@ -212,6 +270,84 @@ def test_module_level_state_paths_anchored_to_repo_root(rel_path: str, root_var:
         assert name in assigns, f"{rel_path}: module-level state variable {name!r} is missing"
         rhs = ast.unparse(assigns[name])
         assert root_var in rhs, f"{rel_path}: {name} must reference {root_var!r} (got: {rhs!r})"
+
+
+# Module-level _state writers verified by a *dedicated* test rather than by the
+# `_MODULE_LEVEL_WRITERS` table above. Listed here so the drift check below
+# counts them as covered.
+_DEDICATED_ANCHOR_TESTS: frozenset[str] = frozenset(
+    {
+        "common/image_rejection_metrics.py",  # test_image_rejection_metrics_anchors_state_to_repo_root
+        "fix_defi_tvl_history.py",  # test_fix_defi_tvl_history_state_path_uses_file_anchor
+    }
+)
+
+
+def _builds_state_path(expr: ast.expr) -> bool:
+    """True if ``expr`` composes a filesystem path containing a ``_state`` segment.
+
+    Two conditions must both hold, which is what keeps the scan from firing on
+    prose: (1) a string constant that *is* the bare root or roots a path at it,
+    and (2) an actual path-construction node — a ``Path()``/``join()``/
+    ``abspath()`` call or a ``/`` operator. A module that merely mentions
+    ``_state`` inside a message or a table of test fixtures satisfies neither.
+    """
+    if not any(
+        isinstance(n, ast.Constant)
+        and isinstance(n.value, str)
+        and (_is_bare_root(n.value) or _is_slash_rooted(n.value))
+        for n in ast.walk(expr)
+    ):
+        return False
+    for node in ast.walk(expr):
+        if isinstance(node, ast.Call) and _call_name(node) in {"Path", "join", "abspath"}:
+            return True
+        if isinstance(node, ast.BinOp) and isinstance(node.op, ast.Div):
+            return True
+    return False
+
+
+def _discover_module_level_state_writers() -> set[str]:
+    """Every script that assigns a ``_state`` path at module scope."""
+    writers: set[str] = set()
+    for path in _py_files():
+        tree = ast.parse(path.read_text(encoding="utf-8"))
+        for node in tree.body:
+            value = node.value if isinstance(node, (ast.Assign, ast.AnnAssign)) else None
+            if value is not None and _builds_state_path(value):
+                writers.add(str(path.relative_to(SCRIPTS_DIR)))
+    return writers
+
+
+def test_module_level_writers_table_has_no_drift() -> None:
+    """Every module-level ``_state`` writer must be covered by an anchor test.
+
+    ``_MODULE_LEVEL_WRITERS`` is hand-maintained, so a newly added writer is
+    silently unguarded — the parametrized test above simply never runs for it
+    and the suite stays green. This closes that hole by discovering writers from
+    the source tree and requiring each one to be registered.
+
+    Adding a new module-level ``_state`` writer? Append ``(rel_path, root_var,
+    state_vars)`` to ``_MODULE_LEVEL_WRITERS`` (or write a dedicated test and
+    list the file in ``_DEDICATED_ANCHOR_TESTS``).
+    """
+    discovered = _discover_module_level_state_writers()
+    assert discovered, "no module-level _state writers discovered — the scan is broken (vacuous)"
+
+    covered = {rel for rel, _, _ in _MODULE_LEVEL_WRITERS} | _DEDICATED_ANCHOR_TESTS
+    unregistered = sorted(discovered - covered)
+    assert not unregistered, (
+        "module-level _state writer(s) not covered by any repo-root anchor test:\n"
+        + "\n".join(f"  - {p}" for p in unregistered)
+        + "\n\nRegister each in _MODULE_LEVEL_WRITERS in this file so its __file__ anchor is verified."
+    )
+
+
+def test_module_level_writers_table_entries_still_exist() -> None:
+    """Canary: a renamed/deleted entry must fail loudly, not skip silently."""
+    missing = [rel for rel, _, _ in _MODULE_LEVEL_WRITERS if not (SCRIPTS_DIR / rel).is_file()]
+    missing += [rel for rel in sorted(_DEDICATED_ANCHOR_TESTS) if not (SCRIPTS_DIR / rel).is_file()]
+    assert not missing, f"registered _state writer(s) no longer exist: {missing}"
 
 
 def test_fix_defi_tvl_history_state_path_uses_file_anchor() -> None:

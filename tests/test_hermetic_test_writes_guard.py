@@ -31,7 +31,7 @@ flagged. This guard AST-scans (ignoring comments/strings), so the docstrings and
 
 ## Scope
 
-This guard flags two shapes of production real-tree-root access in tests:
+This guard flags four shapes of production real-tree-root access in tests:
 
   1. Direct import — ``from <prod> import REPO_ROOT`` (incl. ``... as RR``).
      The canonical vector the 2026-06-30 incident used.
@@ -41,6 +41,14 @@ This guard flags two shapes of production real-tree-root access in tests:
        - ``from common import post_generator; post_generator.REPO_ROOT``
        - ``import common.post_generator; common.post_generator.REPO_ROOT``
      These leak the *real* repo root into the test just as surely as form 1.
+  3. Dynamic attribute access — ``getattr(pg, "REPO_ROOT")``. The name lives in
+     a *string*, so forms 1-2 (which match an ``Attribute`` node or an import
+     alias) never see it, yet the value returned is the same real repo root.
+  4. Inline-import attribute access —
+     ``importlib.import_module("common.post_generator").REPO_ROOT``. The
+     attribute base is a ``Call``, not a ``Name``/dotted chain, so the form-2
+     scan bails out. Combined with form 3 this also covers
+     ``getattr(import_module("common.post_generator"), "REPO_ROOT")``.
 
 Intentionally NOT flagged — the legitimate redirect: the object-form
 ``monkeypatch.setattr(pg, "REPO_ROOT", str(tmp_path))`` (or the string-target
@@ -48,7 +56,9 @@ Intentionally NOT flagged — the legitimate redirect: the object-form
 produces a ``mod.REPO_ROOT`` *attribute-read* node — the module is passed as an
 argument and the name is a string literal — so the AST attribute scan never
 sees them. That asymmetry (read-attribute is banned, setattr object/string form
-is allowed) is what makes closing the alias gap safe.
+is allowed) is what makes closing the alias gap safe. Form 3 preserves it by
+matching only ``getattr`` — ``setattr(pg, "REPO_ROOT", ...)`` writes the
+redirect rather than leaking the root, and stays allowed.
 
 Attribute access to *non-root* module attributes (``dedup.STATE_DIR``,
 ``signal_tracker._HISTORY_FILE``, ``image_generator.IMAGES_DIR``) is untouched —
@@ -99,6 +109,37 @@ def _dotted_name(node: ast.expr) -> str | None:
     return None
 
 
+def _call_name(call: ast.Call) -> str:
+    """Bare callee name for ``f(...)`` / ``a.b.f(...)``, else ``""``."""
+    func = call.func
+    if isinstance(func, ast.Name):
+        return func.id
+    if isinstance(func, ast.Attribute):
+        return func.attr
+    return ""
+
+
+def _first_arg_str(call: ast.Call) -> str | None:
+    if call.args and isinstance(call.args[0], ast.Constant) and isinstance(call.args[0].value, str):
+        return call.args[0].value
+    return None
+
+
+def _is_prod_module_expr(expr: ast.expr, aliases: set[str]) -> bool:
+    """True if ``expr`` evaluates to a production module object.
+
+    Covers the three ways a test can name one: a local alias bound by an import
+    (``pg``), a dotted no-alias chain (``common.post_generator``), and an inline
+    ``importlib.import_module("common.post_generator")`` call (form 4).
+    """
+    if isinstance(expr, ast.Name) and expr.id in aliases:
+        return True
+    if isinstance(expr, ast.Call) and _call_name(expr) == "import_module":
+        return _is_production_module(_first_arg_str(expr))
+    dotted = _dotted_name(expr)
+    return dotted is not None and _is_production_module(dotted)
+
+
 def _collect_prod_module_aliases(tree: ast.AST) -> set[str]:
     """Local names bound to a *production module* (for alias-attribute detection).
 
@@ -136,17 +177,24 @@ def _scan_tree(tree: ast.AST, label: str) -> list[str]:
         if isinstance(node, ast.ImportFrom) and _is_production_module(node.module):
             if any(alias.name in _BANNED_NAMES for alias in node.names):
                 offenders.append(f"{label}:{node.lineno}")
-        # Form 2 — module-alias attribute *read* ``<mod>.REPO_ROOT``. The
+        # Forms 2 and 4 — attribute *read* ``<prod-module-expr>.REPO_ROOT``,
+        # where the base is an alias (2a), a dotted no-alias chain (2b), or an
+        # inline ``import_module(...)`` call (4). The
         # ``monkeypatch.setattr(mod, "REPO_ROOT", ...)`` object form has no such
         # attribute node (module is an arg, name is a string), so it is not hit.
         elif isinstance(node, ast.Attribute) and node.attr in _BANNED_NAMES:
-            base = node.value
-            if isinstance(base, ast.Name) and base.id in aliases:
-                offenders.append(f"{label}:{node.lineno}")  # 2a: aliased module
-            else:
-                dotted = _dotted_name(base)  # 2b: dotted no-alias (common.post_generator.*)
-                if dotted is not None and _is_production_module(dotted):
-                    offenders.append(f"{label}:{node.lineno}")
+            if _is_prod_module_expr(node.value, aliases):
+                offenders.append(f"{label}:{node.lineno}")
+        # Form 3 — dynamic read ``getattr(<prod-module-expr>, "REPO_ROOT")``.
+        # Matched on ``getattr`` only: ``setattr`` is the sanctioned redirect.
+        elif isinstance(node, ast.Call) and _call_name(node) == "getattr" and len(node.args) >= 2:
+            attr = node.args[1]
+            if (
+                isinstance(attr, ast.Constant)
+                and attr.value in _BANNED_NAMES
+                and _is_prod_module_expr(node.args[0], aliases)
+            ):
+                offenders.append(f"{label}:{node.lineno}")
     return offenders
 
 
@@ -205,6 +253,14 @@ def test_detector_flags_all_banned_forms():
         "from scripts.common import post_generator\nx = post_generator.REPO_ROOT\n",
         # Form 2b — dotted no-alias chain.
         "import common.post_generator\nx = common.post_generator.REPO_ROOT\n",
+        # Form 3 — dynamic getattr with the name in a string.
+        'import common.post_generator as pg\nx = getattr(pg, "REPO_ROOT")\n',
+        'from common import post_generator\nx = getattr(post_generator, "POSTS_DIR")\n',
+        'import common.post_generator\nx = getattr(common.post_generator, "SITE_DIR")\n',
+        'x = getattr(import_module("common.post_generator"), "REPO_ROOT")\n',
+        # Form 4 — attribute read straight off an inline import_module call.
+        'x = importlib.import_module("common.post_generator").REPO_ROOT\n',
+        'x = import_module("scripts.common.post_generator").POSTS_DIR\n',
     )
     for snippet in bad:
         assert _offenders_in(snippet), f"detector missed: {snippet!r}"
@@ -225,6 +281,13 @@ def test_detector_spares_legitimate_forms():
         "_REPO_ROOT = Path(__file__).resolve().parent.parent\nx = _REPO_ROOT / '_state'\n",
         # Banned name as an attribute on a NON-production module.
         "import os\nx = os.REPO_ROOT\n",
+        # setattr is the redirect, not a leak — form 3 must not swallow it.
+        'import common.post_generator as pg\nsetattr(pg, "REPO_ROOT", str(tmp_path))\n',
+        # getattr of a NON-banned attribute, and off a non-production module.
+        'import common.dedup as dedup\nx = getattr(dedup, "STATE_DIR")\n',
+        'import os\nx = getattr(os, "REPO_ROOT")\n',
+        # Inline import of a non-production module.
+        'x = importlib.import_module("json").REPO_ROOT\n',
     )
     for snippet in good:
         assert not _offenders_in(snippet), f"detector false-positive: {snippet!r}"
