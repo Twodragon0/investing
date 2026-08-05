@@ -60,9 +60,15 @@ CASES: dict[str, str] = {
     "_isolate_signal_history_state": "test_signal_history_redirected_off_repo_tree",
     "_isolate_translation_cache": "test_translation_cache_redirected_off_repo_tree",
     "_isolate_image_rejection_state": "test_image_rejection_state_redirected_off_repo_tree",
+    "_isolate_tvl_history_state": "test_tvl_history_redirected_off_repo_tree",
+    "_detect_real_tree_writes": "test_real_tree_writes_detected",
 }
 
-_AUTOUSE_RE = re.compile(r"@pytest\.fixture\(autouse=True\)\n(?:@[^\n]*\n)*def (\w+)\(")
+# ``autouse=True`` may sit alongside other kwargs (``scope="session"``), in any
+# order. Matching the exact single-kwarg spelling let a session-scoped autouse
+# fixture escape the drift check entirely — found 2026-08-05 when
+# ``_detect_real_tree_writes`` was added and the registry stayed silent.
+_AUTOUSE_RE = re.compile(r"@pytest\.fixture\([^)]*autouse=True[^)]*\)\n(?:@[^\n]*\n)*def (\w+)\(")
 
 
 class StaticCase(NamedTuple):
@@ -246,6 +252,31 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         '[tool.coverage.run]\nrelative_files = true\nomit = ["*/collect_*.py"]',
         "tests/test_coverage_floor_guard.py::test_pyproject_coverage_config_omits_nothing",
     ),
+    # ---------------------------------------------------------------------
+    # Part 3 (2026-08-05): 런타임 트리-쓰기 탐지기. fixture 를 끄는 케이스는
+    # CASES 에 있고, 여기서는 **탐지기 자체를 무력화**하는 변형을 검증한다.
+    # ---------------------------------------------------------------------
+    StaticCase(
+        "트리-쓰기 탐지기 무력화 (모든 경로를 안전으로 분류)",
+        "tests/_tree_write_guard.py",
+        "    if isinstance(target, int):  # file descriptor, not a path\n        return None",
+        "    return None\n    if isinstance(target, int):  # file descriptor, not a path\n        return None",
+        "tests/test_tree_write_guard.py::TestProtectedPathClassification::test_committed_tree_paths_are_protected[_state/dedup_seen.json]",
+    ),
+    StaticCase(
+        "트리-쓰기 탐지기: io.open 패치 누락 (Path.write_text 우회)",
+        "tests/_tree_write_guard.py",
+        '        for owner in (builtins, io):\n            self._patch(owner, "open", self._wrap_open)',
+        '        for owner in (builtins,):\n            self._patch(owner, "open", self._wrap_open)',
+        "tests/test_tree_write_guard.py::TestInterception::test_pathlib_write_text_is_caught",
+    ),
+    StaticCase(
+        "트리-쓰기 탐지기: 쓰기 모드 판정 무력화",
+        "tests/_tree_write_guard.py",
+        'return any(c in mode for c in "wax+")',
+        "return False",
+        "tests/test_tree_write_guard.py::TestWriteModeDetection::test_write_modes_detected[w]",
+    ),
 )
 
 
@@ -284,9 +315,13 @@ def _purge_pycache() -> None:
 
 
 def _disable_fixture(src: str, name: str) -> str:
-    """지정 fixture 의 autouse=True 를 False 로 바꾼다."""
-    pattern = re.compile(r"@pytest\.fixture\(autouse=True\)\n(def " + re.escape(name) + r"\()")
-    patched, count = pattern.subn(r"@pytest.fixture(autouse=False)\n\1", src)
+    """지정 fixture 의 autouse=True 를 False 로 바꾼다.
+
+    데코레이터에 다른 kwarg(``scope="session"`` 등)가 함께 있어도 매칭한다 —
+    ``autouse=True`` 만 치환하고 나머지 인자는 보존한다.
+    """
+    pattern = re.compile(r"@pytest\.fixture\(([^)]*)autouse=True([^)]*)\)\n(def " + re.escape(name) + r"\()")
+    patched, count = pattern.subn(r"@pytest.fixture(\1autouse=False\2)\n\3", src)
     if count != 1:
         raise RuntimeError(f"fixture {name!r} 의 autouse 데코레이터를 정확히 1개 찾지 못했다 (found={count})")
     return patched

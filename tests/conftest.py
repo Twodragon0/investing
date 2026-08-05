@@ -15,6 +15,12 @@ TOOLS_DIR = os.path.join(SCRIPTS_DIR, "tools")
 if TOOLS_DIR not in sys.path:
     sys.path.insert(0, TOOLS_DIR)
 
+# Add tests/ to path for the leading-underscore test *helper* modules that are
+# not themselves collected (``_tree_write_guard``).
+TESTS_DIR = os.path.dirname(os.path.abspath(__file__))
+if TESTS_DIR not in sys.path:
+    sys.path.insert(0, TESTS_DIR)
+
 
 # ---------------------------------------------------------------------------
 # Module-level: redirect image_rejection_metrics state to a tmp dir BEFORE any
@@ -333,6 +339,64 @@ def _isolate_translation_cache(request, tmp_path, monkeypatch):
             monkeypatch.setattr(translator_scripts, "_cache_dirty", False)
     except ImportError:
         pass
+
+
+@pytest.fixture(autouse=True)
+def _isolate_tvl_history_state(request, tmp_path, monkeypatch):
+    """Redirect ``collect_defi_llama`` TVL-history writes to a per-test tmp file.
+
+    ``build_post_content()`` calls ``_check_tvl_staleness()``, which appends to a
+    ``TimeSeriesStore`` bound to the module global ``_TVL_HISTORY_PATH``. That
+    write happens on the *content-building* path, so a test needs no collector,
+    no network and no fixtures to trigger it — ``test_build_post_content_
+    contains_key_sections`` takes no arguments at all and still rewrote the
+    committed ``_state/defi_tvl_history.json`` on every run.
+
+    Found by ``_detect_real_tree_writes`` below, not by any static guard: the
+    path is correctly ``__file__``-anchored and the test imports no production
+    root, so every source-shape check passes. Only watching the actual write
+    surfaced it.
+
+    Opt-out: ``no_state_isolation``, consistent with the other ``_state``
+    redirects.
+    """
+    if request.node.get_closest_marker("no_state_isolation"):
+        return
+    try:
+        import collect_defi_llama as defi
+    except ImportError:
+        return
+    monkeypatch.setattr(defi, "_TVL_HISTORY_PATH", str(tmp_path / "_state" / "defi_tvl_history.json"))
+
+
+@pytest.fixture(scope="session", autouse=True)
+def _detect_real_tree_writes():
+    """Fail the moment a test writes into the committed repo tree.
+
+    The static guards check what tests *look* like; this checks what they *do*.
+    See ``tests/_tree_write_guard.py`` for why interception beats a before/after
+    snapshot (writes cleaned up in ``finally`` leave no diff) and for the stated
+    blind spots.
+
+    Session-scoped so the patch cost is paid once, not 4900 times. Attribution
+    is unaffected: the exception is raised inside whichever test performs the
+    write, so pytest reports that test and the traceback names the line.
+    """
+    from _tree_write_guard import TreeWriteGuard, Violation
+
+    def _fail(violation: Violation) -> None:
+        raise AssertionError(
+            f"테스트가 커밋된 레포 트리에 썼습니다: {violation}\n"
+            "실제 트리 쓰기는 워킹 트리를 더럽히고, 파일시스템 상태에 의존하는 "
+            "다른 테스트를 로컬 green / CI red 로 갈라놓습니다.\n"
+            "해당 모듈의 경로 상수를 tmp 로 리다이렉트하세요 (conftest 의 "
+            "_isolate_* fixture 패턴 참고).\n"
+            "이 경로가 정말 써도 되는 산출물이면 _tree_write_guard._EXEMPT_PARTS / "
+            "_EXEMPT_PREFIXES 에 근거와 함께 추가하세요."
+        )
+
+    with TreeWriteGuard(_fail):
+        yield
 
 
 @pytest.fixture(autouse=True)
