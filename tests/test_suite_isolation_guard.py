@@ -8,6 +8,8 @@ repo tree again.
 import os
 from pathlib import Path
 
+import pytest
+
 import common.dedup as dedup
 import common.image_generator as ig
 import common.signal_tracker as st
@@ -273,3 +275,65 @@ def test_image_rejection_atexit_baseline_off_repo_tree():
         f"the atexit restore target ({baseline}) is inside the committed "
         "_state tree; per-test isolation cannot prevent shutdown pollution."
     )
+
+
+def test_tvl_history_redirected_off_repo_tree():
+    """``_isolate_tvl_history_state`` must redirect TVL-history writes off the tree.
+
+    ``collect_defi_llama.build_post_content()`` calls ``_check_tvl_staleness()``,
+    which appends to a ``TimeSeriesStore`` bound to the module global
+    ``_TVL_HISTORY_PATH``. Because the write sits on the content-building path, a
+    test needs no collector, no network and no fixtures to trigger it — which is
+    exactly how ``test_build_post_content_contains_key_sections`` rewrote the
+    committed ``_state/defi_tvl_history.json`` on every run before the fixture
+    existed.
+
+    No static guard could see it: the path is properly ``__file__``-anchored and
+    the test imports no production root. Only the runtime write detector found
+    it, and only this redirect keeps it off the tree.
+    """
+    import collect_defi_llama as defi
+
+    active = os.path.abspath(defi._TVL_HISTORY_PATH)
+
+    assert not active.startswith(_REPO_STATE + os.sep), (
+        f"collect_defi_llama._TVL_HISTORY_PATH ({active}) points inside the "
+        "committed _state tree during tests — the _isolate_tvl_history_state "
+        "conftest fixture is not active. build_post_content() tests will "
+        "rewrite the committed TVL history."
+    )
+
+
+def test_real_tree_writes_detected():
+    """``_detect_real_tree_writes`` must have every write entry point patched.
+
+    Two layers, because either alone can pass while the guard is useless:
+
+    1. *Tripwire* — each patch point carries ``_tree_write_guard_stub``.
+       ``builtins.open`` and ``io.open`` are the same function object reached
+       through different module attributes (``Path.write_text`` calls ``io.open``,
+       ``open()`` and PIL call ``builtins.open``), so both names are asserted
+       separately; patching one and missing the other silently halves coverage.
+    2. *Behaviour* — an actual write into the committed tree must be refused.
+       A live tripwire on a detector whose path logic no longer fires would
+       still pass layer 1.
+    """
+    import builtins
+    import io
+
+    for owner, name in ((builtins, "open"), (io, "open"), (os, "open"), (os, "replace"), (os, "remove")):
+        target = getattr(owner, name)
+        assert getattr(target, "_tree_write_guard_stub", False), (
+            f"{owner.__name__}.{name} is not patched — the _detect_real_tree_writes "
+            "conftest fixture is not active. Tests can write into the committed tree undetected."
+        )
+
+    # The probe is only ever created if the detector is inert; when it is live
+    # the write is refused before the file exists, so the cleanup is a no-op.
+    probe = _REPO_ROOT / "_state" / "__tree_write_guard_probe.tmp"
+    try:
+        with pytest.raises(AssertionError, match="커밋된 레포 트리에 썼습니다"), open(probe, "w", encoding="utf-8"):
+            pass
+    finally:
+        if probe.exists():
+            probe.unlink()
