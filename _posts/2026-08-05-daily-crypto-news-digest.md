@@ -41,40 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-05 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: FBI 요원은 용의자의 계좌에서 암호화폐를 빼낸 혐의를 받고 있습니다. - 104건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 암호화폐 이슈 부각</li><li>🏦 <strong>거래소</strong>: 17건 수집</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 달러 관련 23건</li><li>🔵 <strong>규제/정책</strong>: 20건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.wsj.com">FBI 요원은 용의자의 계좌에서 암호화폐를 빼낸 혐의를 받고 있습니다.</a> <span class="p0-desc">FBI 요원, 용의자 계좌에서 암호화폐 빼돌린 혐의 WSJ F.B.I. FBI 요원, 암호화폐 훔친 혐의로 기소 nytimes.com 연준은 러시아에서 거의 100만 달러에 달하는.</span></li><li><a href="https://wsbt.com">FBI agent accused in $1 million cryptocurrency theft: Report - WSBT</a></li><li><a href="https://www.pymnts.com">FBI 요원, 100만 달러 규모 암호화폐 절도 혐의 인정</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: FBI 요원은 용의자의 계좌에서 암호화폐를 빼낸 혐의를 받고 있습니다. 
-외 P0 긴급 이슈 14건이 추가 감지되었습니다. 총 104건의 뉴스 중 P1 주요 이슈도 7건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (41건): 비트코인, 암호화폐, 달러 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **🏦 거래소** (17건): binance, support, upgrade 이슈가 부각되며 해당 섹터의 단기 변동성 확대 가능성이 있습니다.
-- **📈 가격/시장** (23건): 암호화폐, 달러, 콜드카드 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 1백만 달러 규모의 암호화폐 절도 혐의로 기소된 FBI 요원: 보고서 - WSBT
-- FBI 요원, 100만 달러 규모 암호화폐 절도 혐의 인정
-
-### 주요 이슈
-
-- 美 암호화폐 법안, 연내 통과 확률 31%."무산되면 비트코인 '매도' 폭탄" 경고 - 코인리더스
-- 오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다
-- 텍사스 전력망 유예 조치는 BTC 광부들에게 큰 영향을 미치지 않을 것입니다: 번스타인
-- 외 4건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, ETF
-- **주요 출처**: Binance(40건), Google News KR(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-08-05.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-08-05.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **104건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

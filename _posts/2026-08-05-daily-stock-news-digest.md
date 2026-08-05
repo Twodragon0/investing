@@ -33,52 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-05 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 코스피, 롤러코스터 장세 끝에 1.6%↑.코스닥은 사상 첫 '3일 연속 매수 사이드카' - 프리진경제 - 200건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 이슈 부각</li><li>🏦 <strong>거래소</strong>: IPO, 종목 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 환율, 국채 관련 10건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.freezine.co.kr">코스피, 롤러코스터 장세 끝에 1.6%↑.코스닥은 사상 첫 '3일 연속 매수 사이드카' - 프리진경제</a> <span class="p0-desc">코스피, 롤러코스터 장세 끝에 1.6%↑.코스닥은 사상 첫 '3일 연속 매수 사이드카' 프리진경제</span></li><li><a href="https://www.sankyungtoday.com">코스피 하루 만에 반등…코스닥은 사상 첫 ‘사흘 연속 사이드카’ - 산경투데이</a> <span class="p0-desc">코스피 하루 만에 반등…코스닥은 사상 첫 ‘사흘 연속 사이드카’ 산경투데이</span></li><li><a href="https://www.sedaily.com">“하락 대비 상승이 8배”… 코스피 뒷심에 코스닥 ‘3연 사이드카’ 상승 마감 [이런국장 저런주식</a> <span class="p0-desc">“하락 대비 상승이 8배”… 코스피 뒷심에 코스닥 ‘3연 사이드카’ 상승 마감 [이런국장 저런주식] 서울경제</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 코스피, 롤러코스터 장세 끝에 1.6%↑.코스닥은 사상 첫 '3일 연속 매수 사이드카' - 프리진경제 
-외 P0 긴급 이슈 5건이 추가 감지되었습니다. 총 200건의 뉴스 중 P1 주요 이슈도 44건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (50건): 코스피, 코스닥, 상승 가격 변동 (50건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏛️ 정치/정책** (11건): 트럼프, 조선비즈 정치 이슈 (11건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-- **🏦 거래소** (10건): IPO, 종목, 실적 동향이 포트폴리오 전략에 영향을 줄 수 있어 주시가 필요합니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 코스피, 롤러코스터 장세 끝에 1.6%↑.코스닥은 사상 첫 '3일 연속 매수 사이드카' - 프리진경제
-- 코스피 하루 만에 반등…코스닥은 사상 첫 ‘사흘 연속 사이드카’ - 산경투데이
-- “하락 대비 상승이 8배”… 코스피 뒷심에 코스닥 ‘3연 사이드카’ 상승 마감 [이런국장 저런주식
-
-### 주요 이슈
-
-- 나스닥 수익 확인으로 안정화 AI - TradeStation
-- AI ETF마다 비교한 후, 이 3개는 단일에 베팅하지 않고 나스닥을 이겼습니다.
-- 주식선물 18종목·옵션 2종목, 9월 코스피·코스닥 추가 상장 - 동행미디어 시대
-- 외 41건
-
-### 투자자 체크포인트
-
-- 한국 기사 74건, 글로벌 기사 126건 수집
-- 한국 지수: KOSPI 6,358.95(+1.62%), KOSDAQ 780.72(+5.88%), USD/KRW 1,427.52(-0.10%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">50건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:22%"></div></div><span class="theme-count">11건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:20%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:20%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:24%"></div></div><span class="theme-count">12건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-08-05.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-08-05.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,358.95 (+1.62%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 780.72 (+5.88%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- *CNBC는 이란의 긴장 완화로 유가가 급락하면서 미국 국채 수익률이 하락했다고 밝혔습니다*
 
 ## 테마별 주요 뉴스
 
