@@ -188,9 +188,20 @@ python scripts/tools/guard_falsifiability.py --json     # JSON
 python scripts/tools/guard_falsifiability.py --check    # vacuous/미등록 시 exit 1
 ```
 
+검증 대상은 두 종류다:
+
+| 종류 | 개수 | mutation |
+|---|---|---|
+| 격리 fixture 가드 (`CASES`) | 8 | `autouse=True → False` (모듈 레벨은 import 를 비존재 모듈로) |
+| 정적/설정 가드 (`STATIC_CASES`) | 11 | 가드가 막으려는 **위반을 실제로 주입** |
+
+정적 케이스가 커버하는 가드: `test_state_path_anchoring`(cwd-상대 `_state` 주입, 탐지기 무력화, `__file__` 앵커 제거, 런타임 절대경로), `test_hermetic_test_writes_guard`(테스트의 프로덕션 `REPO_ROOT` import, `_BANNED_NAMES` 비움), `test_coverage_floor_guard`(하한 하향, 게이트 제거, 워크플로우 `--fail-under` 하향).
+
+**앵커는 대상 파일에 정확히 1회만 나타나야 한다.** 여러 번 나타나면 `replace(..., 1)` 이 엉뚱한 줄을 바꾸고 가드가 정당하게 green 이 되어 VACUOUS 오탐이 난다 — 실제로 `fix_defi_tvl_history.py` 감사에서 `__file__` 앵커가 `sys.path.insert` 줄을 먼저 잡아 그렇게 됐다. 하네스는 이를 조용히 넘기지 않고 `AMBIGUOUS-ANCHOR` 로 실패시키며, `test_static_case_anchors_are_unique_in_their_targets` 가 PR 시점에 먼저 잡는다.
+
 `.github/workflows/guard-falsifiability.yml`이 두 시점에 `--check`를 돌린다:
 
-- `tests/conftest.py` / `tests/test_suite_isolation_guard.py` / 하네스 자체를 건드리는 **PR**
+- 가드 본체 / 가드가 감시하는 설정(`pyproject.toml`, `code-quality.yml`) / 하네스 자체를 건드리는 **PR**
 - 매주 월요일 05:00 UTC 스케줄
 
 하네스는 `tests/conftest.py`를 덮어썼다 복원하므로:
