@@ -17,6 +17,13 @@ on:
       - 'tests/test_coverage_floor_guard.py'
       - 'pyproject.toml'
       - '.github/workflows/code-quality.yml'
+      # 공급망/시크릿 가드 — 가드 본체와 감시 대상 설정 양쪽
+      - 'tests/test_workflow_action_pinning_guard.py'
+      - 'tests/test_secret_scan_gate_guard.py'
+      - 'tests/test_workflow_permission_gate_guard.py'
+      - '.gitleaks.toml'
+      - '.github/workflows/security-scan.yml'
+      - '.github/workflows/lighthouse-ci.yml'
       # 하네스 자신
       - 'scripts/tools/guard_falsifiability.py'
       - '.github/workflows/guard-falsifiability.yml'
@@ -36,9 +43,9 @@ concurrency:
 jobs:
   falsifiability:
     runs-on: ubuntu-latest
-    # 케이스당 pytest 를 2회(patched/control) 띄우므로 8종 = 16회 프로세스 기동.
+    # 케이스당 pytest 를 2회(patched/control) 띄우므로 47종 = 94회 프로세스 기동.
     # 가드 테스트 자체는 각 1초 미만이고 대부분이 인터프리터 시작 비용이다.
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6

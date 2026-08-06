@@ -26,6 +26,14 @@ in-process 가로채기 3건과 서브프로세스용 세션 스냅샷 3건. 스
 teardown 에서만 발현해 배선을 끊어도 스위트가 조용하므로, baseline 등록
 tripwire · 비교 로직 · 스냅샷 범위를 각각 별도 케이스로 falsify 한다.
 
+Part 4 (2026-08-06): 공급망/시크릿 축 10건 — 액션 SHA 핀닝 3, Gitleaks 게이트 4,
+reusable workflow permission lint 배선 3. 감사 시점까지 이 세 축에는 falsifiable
+가드가 없었다: 핀닝은 `security-scan.yml` 의 `actions-permissions` 잡이 경고만
+내고 exit 하지 않아 구조적으로 vacuous 였고(`has_issues=true` 는 파이프라인
+서브셸에 갇혀 전파조차 안 된다), Gitleaks 는 `.gitleaks.toml` 을 어떻게 풀어도
+잡이 green 이었으며, permission lint 는 도구 단위 테스트만 있어 CI 배선이 끊겨도
+조용했다.
+
 사용법:
     python scripts/tools/guard_falsifiability.py            # 표 출력
     python scripts/tools/guard_falsifiability.py --json     # JSON 출력
@@ -304,6 +312,85 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         '_SNAPSHOT_DIRS: tuple[str, ...] = ("_posts", "_state", "assets/images/generated")',
         "_SNAPSHOT_DIRS: tuple[str, ...] = ()",
         "tests/test_tree_write_guard.py::TestOutOfProcessNet::test_snapshot_covers_the_content_dirs",
+    ),
+    # ---------------------------------------------------------------------
+    # Part 4 (2026-08-06): 공급망/시크릿 축. 액션 SHA 핀닝 · Gitleaks 게이트 ·
+    # reusable workflow permission lint 배선. 이 세 축은 감사 시점까지
+    # falsifiable 한 가드가 없었다 — 특히 액션 핀닝은 security-scan.yml 의
+    # `actions-permissions` 잡이 "감사"라는 이름으로 경고만 내고 exit 하지
+    # 않아(그리고 `has_issues=true` 가 파이프라인 서브셸에 갇혀) 무엇을 풀어도
+    # green 이었다. 아래 케이스들이 붙는 대상은 그 잡이 아니라 blocking pytest
+    # 잡에서 도는 신규 가드다.
+    # ---------------------------------------------------------------------
+    StaticCase(
+        "외부 액션 핀 해제 (SHA -> 가변 태그)",
+        ".github/workflows/lighthouse-ci.yml",
+        "treosh/lighthouse-ci-action@3e7e23fb74242897f95c0ba9cabad3d0227b9b18",
+        "treosh/lighthouse-ci-action@v12",
+        "tests/test_workflow_action_pinning_guard.py::test_all_external_actions_are_sha_pinned",
+    ),
+    StaticCase(
+        "핀닝 탐지기 완화 (가변 ref 를 핀으로 인정)",
+        "tests/test_workflow_action_pinning_guard.py",
+        '_SHA_PINNED_RE = re.compile(r"^[^@\\s]+@[0-9a-f]{40}$")',
+        '_SHA_PINNED_RE = re.compile(r"^[^@\\s]+@.+$")',
+        "tests/test_workflow_action_pinning_guard.py::test_pinning_detector_rejects_mutable_refs",
+    ),
+    StaticCase(
+        "핀닝 스캐너 붕괴 (uses: 를 하나도 못 찾음)",
+        "tests/test_workflow_action_pinning_guard.py",
+        '_USES_RE = re.compile(r"^\\s*(?:-\\s+)?uses:\\s*(?P<ref>\\S+)", re.M)',
+        '_USES_RE = re.compile(r"^\\s*(?:-\\s+)?uses-absent:\\s*(?P<ref>\\S+)", re.M)',
+        "tests/test_workflow_action_pinning_guard.py::test_external_action_reference_count_is_plausible",
+    ),
+    StaticCase(
+        "Gitleaks 기본 룰셋 해제 (useDefault=false)",
+        ".gitleaks.toml",
+        "useDefault = true",
+        "useDefault = false",
+        "tests/test_secret_scan_gate_guard.py::test_gitleaks_config_extends_default_rules",
+    ),
+    StaticCase(
+        "Gitleaks allowlist 를 전체 룰로 확대 (targetRules 제거)",
+        ".gitleaks.toml",
+        'targetRules = ["linkedin-client-secret", "generic-api-key"]',
+        "targetRules = []",
+        "tests/test_secret_scan_gate_guard.py::test_gitleaks_allowlist_is_scoped_to_known_false_positives",
+    ),
+    StaticCase(
+        "Gitleaks 게이트 비차단화 (|| true)",
+        ".github/workflows/security-scan.yml",
+        "gitleaks detect --source . --config .gitleaks.toml --no-banner --verbose --redact",
+        "gitleaks detect --source . --config .gitleaks.toml --no-banner --verbose --redact || true",
+        "tests/test_secret_scan_gate_guard.py::test_gitleaks_gate_is_blocking",
+    ),
+    StaticCase(
+        "Gitleaks 히스토리 절단 (fetch-depth 0 -> 1)",
+        ".github/workflows/security-scan.yml",
+        "fetch-depth: 0",
+        "fetch-depth: 1",
+        "tests/test_secret_scan_gate_guard.py::test_gitleaks_job_checks_out_full_history",
+    ),
+    StaticCase(
+        "permission lint 스텝 제거 (도구는 그대로, 배선만 끊김)",
+        ".github/workflows/code-quality.yml",
+        "run: python3 scripts/tools/check_workflow_permissions.py --workflows-dir .github/workflows",
+        "run: 'true'",
+        "tests/test_workflow_permission_gate_guard.py::test_permission_lint_runs_in_ci",
+    ),
+    StaticCase(
+        "permission lint 대상 디렉토리 우회 (--workflows-dir)",
+        ".github/workflows/code-quality.yml",
+        "run: python3 scripts/tools/check_workflow_permissions.py --workflows-dir .github/workflows",
+        "run: python3 scripts/tools/check_workflow_permissions.py --workflows-dir tests/fixtures",
+        "tests/test_workflow_permission_gate_guard.py::test_permission_lint_scans_the_real_workflow_tree",
+    ),
+    StaticCase(
+        "permission lint 비차단화 (continue-on-error)",
+        ".github/workflows/code-quality.yml",
+        "      - name: Check reusable workflow permission coverage\n",
+        "      - name: Check reusable workflow permission coverage\n        continue-on-error: true\n",
+        "tests/test_workflow_permission_gate_guard.py::test_permission_lint_step_is_blocking",
     ),
 )
 
