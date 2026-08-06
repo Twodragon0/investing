@@ -153,3 +153,14 @@ def test_keyword_tail_excludes_predicates_and_units(title: str, junk: str) -> No
     if "주요 키워드" in result:
         tail = result.split("주요 키워드:", 1)[1]
         assert junk not in tail
+
+
+def test_numeric_context_is_preferred_over_a_keyword_bag() -> None:
+    """A figure from the title informs; a bag of its own words does not.
+
+    The fallback branch used to reach for `주요 키워드:` first, so a title
+    carrying a percentage got a word list instead of the number.
+    """
+    result = _synth("국내 관광객 수 3.2% 늘어난 것으로 집계")
+    assert "3.2%" in result
+    assert "주요 키워드" not in result

@@ -712,11 +712,15 @@ def _analyze_korean_title(title: str) -> str:
         return _join_clauses(clean[:120], f"{context_suffix.strip()} 기업 실적 보도.".strip())
 
     # Fallback: use clean title + entity context
-    if kr_entities:
-        entity_str = ", ".join(kr_entities)
-        return _join_clauses(clean[:120], f"{context_suffix.strip()} 주요 키워드: {entity_str}.".strip())
+    # A figure lifted from the title informs; a bag of the title's own words
+    # does not. When both are available the number wins and the keyword tail is
+    # dropped — emitting "(3.2% 변동) 주요 키워드: 국내, 관광객, 늘어난." padded
+    # the sentence without adding anything.
     if context_suffix:
         return _join_clauses(clean[:120], context_suffix.strip())
+    if kr_entities:
+        entity_str = ", ".join(kr_entities)
+        return _join_clauses(clean[:120], f"주요 키워드: {entity_str}.")
     return _join_clauses(clean[:150]) if len(clean) > 15 else _join_clauses(title)
 
 
