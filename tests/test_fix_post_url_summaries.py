@@ -313,3 +313,74 @@ def test_repair_one_skips_synthesis_when_disabled(monkeypatch: pytest.MonkeyPatc
 
     _blurb_out, text, source = mod._repair_one(_blurb(), allow_synthesis=False)
     assert (text, source) == ("", "unresolved")
+
+
+# ---------------------------------------------------------------------------
+# Defects found by the first apply run (2026-08-06), reverted before commit
+# ---------------------------------------------------------------------------
+
+
+def test_refetch_unescapes_entities_before_storing(monkeypatch: pytest.MonkeyPatch) -> None:
+    """`&hellip;` must become `…`, not survive to be re-escaped as `&amp;hellip;`.
+
+    The first apply wrote `&amp;hellip;` into a card, which renders as the
+    literal string `&hellip;` — the entity named a character the reader never saw.
+    """
+    fetched = "코스피가 3% 올라 2,900선을 회복했습니다&hellip; 반도체가 상승을 주도했다고 거래소가 밝혔습니다."
+    monkeypatch.setattr(mod, "fetch_page_metadata", lambda url, title="": {"description": fetched})
+    monkeypatch.setattr(mod, "_is_title_related_description", lambda title, desc: True)
+
+    result = mod.refetch(_blurb())
+    assert "…" in result
+    assert "&hellip;" not in result and "&amp;" not in result
+
+
+def test_refetch_trims_article_bodies_to_a_summary(monkeypatch: pytest.MonkeyPatch) -> None:
+    """A page with no meta description yields its whole body — cards want a sentence.
+
+    The first apply put 400-800 character walls of text into cards sized for
+    one or two sentences.
+    """
+    body = " ".join(f"{i}일 코스피가 3% 올라 2,900선을 회복했다고 한국거래소가 발표했습니다." for i in range(1, 20))
+    monkeypatch.setattr(mod, "fetch_page_metadata", lambda url, title="": {"description": body})
+    monkeypatch.setattr(mod, "_is_title_related_description", lambda title, desc: True)
+
+    result = mod.refetch(_blurb())
+    assert len(result) <= mod._MAX_DESC_LEN
+    assert result.endswith(("다.", "…")), "trim must land on a sentence boundary or mark the cut"
+
+
+def test_trim_to_sentence_keeps_short_text_untouched() -> None:
+    text = "코스피가 3% 올라 2,900선을 회복했습니다."
+    assert mod._trim_to_sentence(text) == text
+
+
+def test_trim_to_sentence_hard_cuts_a_run_on() -> None:
+    """A single sentence longer than the cap still has to be cut somewhere."""
+    result = mod._trim_to_sentence("가" * 500)
+    assert len(result) <= mod._MAX_DESC_LEN + 1
+    assert result.endswith("…")
+
+
+def test_refetch_strips_advertising_tails(monkeypatch: pytest.MonkeyPatch) -> None:
+    """Ad copy rides along with fetched text and must not land in a card."""
+    monkeypatch.setattr(
+        mod,
+        "fetch_page_metadata",
+        lambda url, title="": {
+            "description": "코스피가 3% 올라 2,900선을 회복했다고 한국거래소가 발표했습니다. 관련 광고 홍보."
+        },
+    )
+    monkeypatch.setattr(mod, "_is_title_related_description", lambda title, desc: True)
+
+    assert "관련 광고" not in mod.refetch(_blurb())
+
+
+def test_refetch_rejects_institutional_slogan(monkeypatch: pytest.MonkeyPatch) -> None:
+    """The regulator's own slogan strip is not a description of its press release."""
+    monkeypatch.setattr(
+        mod,
+        "fetch_page_metadata",
+        lambda url, title="": {"description": "혁신적 금융, 포용적 금융, 신뢰받는 금융, 금융위원회 입니다."},
+    )
+    assert mod.refetch(_blurb(title="긴급 금융시장상황 점검회의 개최")) == ""

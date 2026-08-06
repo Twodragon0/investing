@@ -56,6 +56,7 @@ from common.enrichment_synthetic import (  # noqa: E402
     generate_synthetic_description,
 )
 from common.summary_quality import is_boilerplate  # noqa: E402
+from common.text_utils import _strip_trailing_artifacts  # noqa: E402
 from common.translator import translate_to_korean  # noqa: E402
 
 logger = logging.getLogger(__name__)
@@ -65,6 +66,15 @@ POSTS_DIR = REPO_ROOT / "_posts"
 
 # A recovered blurb shorter than this says less than the headline already does.
 _MIN_DESC_LEN = 30
+
+# …and longer than this is not a summary. `fetch_page_metadata` happily returns
+# a whole article body when a page has no meta description; the first apply run
+# put 400-800 character walls of text into cards sized for a sentence or two.
+# Recovered text is trimmed back to a sentence boundary under this length.
+_MAX_DESC_LEN = 300
+
+# Sentence terminators used to trim without cutting mid-word.
+_SENTENCE_END_RE = re.compile(r"(?<=[.!?。])\s+|(?<=니다\.)\s*|(?<=습니다\.)\s*")
 
 # Card blurb: the anchor and its `<p class="news-desc">` sit in the same card
 # div, with the source tag and severity badge in between.
@@ -176,7 +186,13 @@ def refetch(blurb: Blurb) -> str:
         logger.debug("Fetch failed for %s: %s", link[:60], exc)
         return ""
 
-    desc = (meta or {}).get("description", "").strip()
+    # Unescape first: fetched text carries raw entities (`&hellip;`, `&amp;`).
+    # Writing it back without this produced `&amp;hellip;` on the page — the
+    # entity rendered as literal text instead of the character it names.
+    desc = html.unescape((meta or {}).get("description", "")).strip()
+    # Ad tails ride along with fetched copy ("Priority Gold에서 무료 가이드 받기").
+    # Delegated to the canonical stripper the quality checker already uses.
+    desc = _trim_to_sentence(_strip_trailing_artifacts(desc))
     if len(desc) < _MIN_DESC_LEN:
         return ""
     if is_boilerplate(desc) or _is_desc_duplicate_of_title(desc, blurb.title):
@@ -194,6 +210,22 @@ def refetch(blurb: Blurb) -> str:
             desc = translated
 
     return desc
+
+
+def _trim_to_sentence(text: str, limit: int = _MAX_DESC_LEN) -> str:
+    """Cut ``text`` back to the last sentence boundary at or under ``limit``.
+
+    Falls back to a hard cut with an ellipsis when the first sentence alone
+    already exceeds the limit, so a run-on page never lands whole in a card.
+    """
+    text = " ".join(text.split())
+    if len(text) <= limit:
+        return text
+    head = text[:limit]
+    boundaries = [m.end() for m in _SENTENCE_END_RE.finditer(head)]
+    if boundaries and boundaries[-1] >= _MIN_DESC_LEN:
+        return head[: boundaries[-1]].strip()
+    return head.rstrip() + "…"
 
 
 def synthesize(blurb: Blurb) -> str:
