@@ -232,7 +232,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-19 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/economy/policy/articles/us-treasury-announces-275-million-142254817.html" class="news-title" target="_blank" rel="noopener noreferrer">트럼프 행정부는 100억 달러 투자 약속 이후 Adani에 대한 민사, 형사 소송을 종료합니다.</a>
-<p class="news-desc">트럼프 행정부는 100억 달러 투자 약속 이후 Adani에 대한 민사, 형사 소송을 종료합니다. ($10billion) 관련 광고 홍보.</p>
+<p class="news-desc">작성자: Dan Rosenzweig-Ziff 및 Luc Cohen 워싱턴, 5월 18일(Reuters) - 트럼프 행정부는 월요일 인도의 억만장자 Gautam Adani에 대한 사기 범죄 혐의를 기각했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

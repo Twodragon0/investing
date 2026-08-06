@@ -285,7 +285,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/06/14/stock-market-today-live-updates.html" class="news-title" target="_blank" rel="noopener noreferrer">Dow jumps 600 points to record with rally gaining steam after Trump signs Iran deal memorandum: Live updates</a>
-<p class="news-desc">세 가지 주요 지수가 승리하는 한 주를 맞이하고 있습니다.</p>
+<p class="news-desc">다우존스 산업평균지수는 468.77포인트(0.92%) 추가된 51,671.03으로 마감되었습니다. S&amp;P 500 지수는 1.65% 상승한 7,554.29를 기록했고, 나스닥 종합 지수는 3.07% 상승한 26,683.94를 기록했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

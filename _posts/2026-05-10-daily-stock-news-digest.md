@@ -266,7 +266,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/economy/articles/fox-news-calls-economy-possibly-141500428.html" class="news-title" target="_blank" rel="noopener noreferrer">Fox News는 트럼프의 지지율이 30%로 떨어지면서 경제를 '재난 가능성'이라고 부릅니다. 공화당을 구할 수 있는 방법은 다음과 같습니다.</a>
-<p class="news-desc">다음 재정적 단계는 무엇입니까? 모기지, 대출, 보험, 투자 등에 관해 현명한 결정을 내리는 데 도움이 되는 전문가의 조언, 최신 뉴스 및 무료 도구를 받아보세요.</p>
+<p class="news-desc">Fox News 분석가들조차 미국 경제가 "아마도 재앙"이라고 말하기 시작하면(1) 허니문 단계는 확실히 끝났습니다. 방송에서 나오는 그러한 무뚝뚝함은 단순한 배경 소음이 아닙니다. 이는 경제를 무적의 정치적 방패로 삼아온 백악관에 대한 경고 신호입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

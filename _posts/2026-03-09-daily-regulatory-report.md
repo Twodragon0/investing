@@ -20,7 +20,7 @@ permalink: "/regulatory-news/2026/03/09/daily-regulatory-report/"
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">24</div><div class="stat-label">수집 건수</div></div><div class="stat-item"><div class="stat-value">🔵 13</div><div class="stat-label">규제/정책</div></div><div class="stat-item"><div class="stat-value">🟡</div><div class="stat-label">리스크 주의</div></div><div class="stat-item"><div class="stat-value">24</div><div class="stat-label">한국</div></div></div>
 <div class="alert-box alert-info"><strong>규제 긴급: 긴급 금융시장상황 점검회의 개최 - 24건 분석</strong><ul><li>🔵 <strong>규제/정책</strong> (13건): 없습니다, 금융위원회, 가상자산 이슈가 13건으로 주목받고 있습니다.</li><li>🏦 <strong>거래소</strong> (5건): 5건의 뉴스에서 거래소, 규제, 기업성장펀드 키워드가 부각되고 있습니다.</li><li>🟣 <strong>DeFi</strong> (1건): 금융위원회가, 수용한다는, 아닙니다 이슈가 1건으로 주목받고 있습니다.</li><li>📊 <strong>매크로/금리</strong> (1건): 실무점검회의, 금융시장반, 중동상황 이슈가 1건으로 주목받고 있습니다.</li></ul></div>
-<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://www.fsc.go.kr/no010101/86378">긴급 금융시장상황 점검회의 개최</a> <span class="p0-desc">긴급, 금융시장상황, 점검회의 관련 시장 뉴스입니다. 투자 판단 시 원문 기사의 세부 내용을 확인하세요.</span></li></ul></div>
+<div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://www.fsc.go.kr/no010101/86378">긴급 금융시장상황 점검회의 개최</a> <span class="p0-desc">금융위원회는 3.4(수) 15:00이억원 금융위원장 주재로 ｢긴급 금융시장상황 점검회의｣를 개최하였다. 금번 회의는중동상황 이후 주식시장 변동성이확대되고 있는 만큼,금융감독원, 금융시장 전문가들과 함께시장상황을 점검하기 위해 개최되었다.</span></li></ul></div>
 ## 핵심 요약
 
 - **총 수집 건수**: 24건

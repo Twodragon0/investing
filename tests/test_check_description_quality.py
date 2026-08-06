@@ -646,3 +646,51 @@ def test_main_fails_on_body_artifacts(tmp_path, monkeypatch, capsys):
     monkeypatch.setattr(sys, "argv", ["prog", "--days", "1", "--posts-dir", str(tmp_path)])
     assert cdq.main() == 1
     assert "body description artifact" in capsys.readouterr().err.lower()
+
+
+# ---------------------------------------------------------------------------
+# Per-URL blurb chrome (2026-08-06) — the layer the front-matter checks miss
+# ---------------------------------------------------------------------------
+
+
+def test_count_blurb_quality_counts_chrome_and_total():
+    """Front matter can read clean while every blurb under it is site chrome."""
+    chrome = (
+        "한겨레는 신뢰, 공정을 바탕으로 최신 뉴스와 심층 보도, 칼럼 등을 제공합니다. "
+        "정치, 사회, 경제, 문화, 젠더, 기후변화 등 각 분야의 인사이트를 경험해보세요."
+    )
+    real = "비트코인이 24시간 동안 8% 오르며 시가총액 1조 달러를 회복했다고 거래소 데이터가 보여줍니다."
+    body = _NEWS_DESC.format(chrome) + _NEWS_DESC.format(real)
+
+    assert cdq.count_blurb_quality(body) == (1, 2)
+
+
+def test_count_blurb_quality_counts_p0_segments():
+    body = '<span class="p0-desc">일시적인 문제가 발생했습니다. 이 페이지의 시장 데이터는 현재 지연되었습니다.</span>'
+    assert cdq.count_blurb_quality(body) == (1, 1)
+
+
+def test_count_blurb_quality_ignores_empty_segments():
+    assert cdq.count_blurb_quality(_NEWS_DESC.format("")) == (0, 0)
+
+
+def test_count_blurb_quality_on_empty_body():
+    assert cdq.count_blurb_quality("") == (0, 0)
+
+
+def test_classify_posts_aggregates_blurb_counts():
+    chrome = "일시적인 문제가 발생했습니다. 이 페이지의 시장 데이터는 현재 지연되었습니다."
+    posts = [_make_post_dict("정상 요약입니다.", body=_NEWS_DESC.format(chrome))]
+    stats = cdq.classify_posts(posts)
+
+    assert (stats["blurb_bad"], stats["blurb_total"]) == (1, 1)
+    assert len(stats["blurb_posts"]) == 1
+    assert stats["blurb_posts"][0]["bad_blurbs"] == 1
+
+
+def test_format_text_reports_blurb_chrome():
+    chrome = "일시적인 문제가 발생했습니다. 이 페이지의 시장 데이터는 현재 지연되었습니다."
+    posts = [_make_post_dict("정상 요약입니다.", body=_NEWS_DESC.format(chrome))]
+    report = cdq.format_text(cdq.classify_posts(posts), days=7)
+
+    assert "URL blurb chrome: 1/1" in report

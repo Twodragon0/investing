@@ -299,7 +299,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/markets/stocks/articles/hycroft-mining-hymc-advances-review-173315101.html" class="news-title" target="_blank" rel="noopener noreferrer">Hycroft Mining(HYMC), 지하 채굴 옵션 검토 진행</a>
-<p class="news-desc">Hycroft Mining(HYMC)은 지하 채굴 옵션에 대한 검토를 진행합니다.</p>
+<p class="news-desc">Hycroft Mining Holding Corporation(나스닥:HYMC)은 월스트리트 분석가에 따르면 매수해야 할 최고의 귀금속 주식 15개 중 하나입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

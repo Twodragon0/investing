@@ -266,7 +266,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-thursday-june-25-2026-bitcoin-tumbles-further-below-60000-125308371.html" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 및 이더리움 가격은 오늘(2026년 6월 25일 목요일): 비트코인이 $60,000 아래로 추가 하락합니다.</a>
-<p class="news-desc">Bitcoin and ethereum prices today, Thursday, June 25, 2026: Bitcoin tumbles further below $60,000. $60,000 — 비트코인 시장 심리와 가격 흐름에 주목하세요.</p>
+<p class="news-desc">비트코인은 2026년 6월 25일 목요일에 $60,983.43에 개장했는데, 이는 수요일 개장 가격보다 2.7% 하락한 가격입니다. 비트코인의 가치는 오늘 아침 동부 표준시 오전 8시 50분까지 $61,244.29로 상승했습니다. 이더리움은 어제 개장가보다 2.8% 하락한 $1,619.51에 개장했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

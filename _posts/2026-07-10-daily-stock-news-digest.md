@@ -290,7 +290,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.investing.com/news/stock-market-news/new-york-timesled-group-asks-court-to-sanction-openai-in-us-copyright-dispute-4784444" class="news-title" target="_blank" rel="noopener noreferrer">New York Times가 주도하는 단체, 미국 저작권 분쟁에서 OpenAI를 제재해 달라고 법원에 요청</a>
-<p class="news-desc">New York Times가 이끄는 단체는 미국 저작권 분쟁에서 OpenAI를 제재해 달라고 법원에 요청했습니다.</p>
+<p class="news-desc">신문은 서류를 통해 OpenAI가 "첫 번째 뉴스 원고가 소송을 제기하기 전에도" 그렇게 했다는 사실을 숨기면서 자사의 대규모 언어 모델에서 저작권이 있는 자료를 검색할 수 없다고 법원에 거짓으로 말했다고 법원에 밝혔습니다. 신문에서는 OpenAI가 수십억 개의 관련 파일도 삭제했다고 말했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Investing.com</span>
 </div>
 </div>

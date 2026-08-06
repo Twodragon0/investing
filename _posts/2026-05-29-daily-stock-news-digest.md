@@ -266,7 +266,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/economy/policy/articles/dave-ramsey-tells-woman-hit-170500539.html" class="news-title" target="_blank" rel="noopener noreferrer">Dave Ramsey는 감옥에 갇힌 전 애인의 IRS 세금 빚이 8,000달러에 달하는 여성에게 자신이 존재하는지 전혀 몰랐던 구호 프로그램에 대해 이야기합니다.</a>
-<p class="news-desc">다음 재정적 단계는 무엇입니까? 모기지, 대출, 보험, 투자 등에 관해 현명한 결정을 내리는 데 도움이 되는 전문가의 조언, 최신 뉴스 및 무료 도구를 받아보세요.</p>
+<p class="news-desc">그녀는 전 애인이 낸 세금 채무로 인해 8,000달러에 대한 IRS 통지를 받았고 현재 그는 감옥에 있습니다. Dave Ramsey는 자신이 한푼도 빚지지 않을 수도 있다고 말합니다. 그 이유는 다음과 같습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

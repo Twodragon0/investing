@@ -244,7 +244,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-21 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/markets/stocks/articles/openai-confidentially-filing-ipo-soon-165822705.html" class="news-title" target="_blank" rel="noopener noreferrer">OpenAI는 빠르면 이번 주에 IPO에 대해 비밀리에 제출합니다.</a>
-<p class="news-desc">Quartz는 변화에 흥미를 느끼는 WHO 사람들을 위한 새로운 세계 경제에 대한 안내자입니다. 우리는 비즈니스, 금융, 경제, 기술, 라이프스타일 및 리더십을 다룹니다.</p>
+<p class="news-desc">8,520억 달러 가치의 ChatGPT 제조업체는 골드만삭스 및 모건스탠리과 협력하고 있으며 이르면 9월에 IPO을 목표로 하고 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

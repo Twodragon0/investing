@@ -159,7 +159,7 @@ image_alt: "3월 16일 주식 시장 지수와 뉴스 분포를 요약한 스냅
 <div class="news-card-thumb"><img src="https://img.hankyung.com/photo/202603/02.22579247.1.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
 <div class="news-card-body">
 <a href="https://www.hankyung.com/article/2026031523937" class="news-title" target="_blank" rel="noopener noreferrer">속보] 李대통령, 與초선 만찬서 "당정 협력 유지해 개혁과제 해결"</a>
-<p class="news-desc">속보] 李대통령, 與초선 만찬서 "당정 협력 유지해 개혁과제 해결".</p>
+<p class="news-desc">[속보] 李대통령, 與초선 만찬서 "당정 협력 유지해 개혁과제 해결", "당이 진짜 잘해주고 있어…진정한 의미의 개혁 완수해야"</p>
 <span class="source-tag" data-source-type="kr-media">한국경제</span>
 </div>
 </div>
@@ -250,7 +250,7 @@ image_alt: "3월 16일 주식 시장 지수와 뉴스 분포를 요약한 스냅
 <div class="news-card-thumb"><img src="https://i-invdn-com.investing.com/news/indicatornews_4_M_1440048337.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
 <div class="news-card-body">
 <a href="https://www.investing.com/news/economy-news/oil-spike-may-trim-global-gdp-by-03-push-inflation-higher-goldman-4561576" class="news-title" target="_blank" rel="noopener noreferrer">오일 스파이크로 글로벌 GDP이 0.3% 줄어들고 인플레이션이 높아질 수 있습니다: Goldman</a>
-<p class="news-desc">오일 스파이크로 글로벌 GDP이 0.3% 감소하고 인플레이션이 높아질 수 있습니다: Goldman. (0.3% 변경)</p>
+<p class="news-desc">오일 스파이크로 글로벌 GDP이 0.3% 줄어들고 인플레이션이 높아질 수 있습니다: Goldman</p>
 <span class="source-tag" data-source-type="aggregator">Investing.com</span>
 </div>
 </div>

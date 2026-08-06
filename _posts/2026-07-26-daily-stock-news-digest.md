@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/technology/articles/apple-warns-scammers-using-facetime-131500866.html" class="news-title" target="_blank" rel="noopener noreferrer">애플 사기꾼들이 FaceTime을 사용하여 은행 계좌 비밀번호를 훔치고 있다고 경고합니다. 주의할 점은 다음과 같습니다.</a>
-<p class="news-desc">다음 재정적 단계는 무엇입니까? 모기지, 대출, 보험, 투자 등에 관해 현명한 결정을 내리는 데 도움이 되는 전문가의 조언, 최신 뉴스 및 무료 도구를 받아보세요.</p>
+<p class="news-desc">사기꾼들은 애플의 FaceTime에 대해 유용한 점을 알아냈습니다. 사람들은 이를 신뢰합니다(1). 이제 은행의 "사기 팀"이 보낸 가짜 전화가 영상을 통해 전송됩니다. 공손한 목소리로 화면을 공유하고 의심스러운 혐의를 함께 처리해 달라고 요청하는 것입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>
@@ -204,7 +204,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/energy/articles/energy-investors-traditional-energy-etf-165001539.html" class="news-title" target="_blank" rel="noopener noreferrer">에너지 투자자에게 기존 에너지 ETF이 청정 에너지보다 더 나은 선택입니까?</a>
-<p class="news-desc">For Energy Investors, Is a Traditional Energy ETF a Better Bet Than Clean Energy. 비트코인 시장 심리와 가격 흐름에 주목하세요.</p>
+<p class="news-desc">Investors choosing betweenState Street Energy Select Sector SPDR ETF(NYSEMKT:XLE) andiShares Global Clean Energy ETF(NASDAQ:ICLN) face a choice between low-cost traditional fossil fuel exposure and a broader, utility-heavy renewable energy basket.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

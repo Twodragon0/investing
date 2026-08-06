@@ -225,7 +225,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-low">LOW</span>
 <a href="https://finance.yahoo.com/markets/crypto/articles/michael-burry-says-secs-plan-143000315.html" class="news-title" target="_blank" rel="noopener noreferrer">Michael Burry는 암호화폐와 같은 주식을 거래하려는 SEC의 계획이 투자자들에게 악몽을 만들 수 있다고 말합니다.</a>
-<p class="news-desc">다음 재정적 단계는 무엇입니까? 모기지, 대출, 보험, 투자 등에 관해 현명한 결정을 내리는 데 도움이 되는 전문가의 조언, 최신 뉴스 및 무료 도구를 받아보세요.</p>
+<p class="news-desc">증권거래위원회(SEC)는 사람들이 블록체인에서 주식을 암호화폐처럼 사고 파는 방식으로 주식을 거래할 수 있도록 할 계획을 가지고 있습니다. '빅쇼트' 투자자 마이클 버리(Michael Burry)는 이에 대해 별로 만족하지 않습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

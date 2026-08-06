@@ -270,7 +270,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-19 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://finance.yahoo.com/economy/policy/articles/warsh-believes-americas-700b-ai-125500516.html" class="news-title" target="_blank" rel="noopener noreferrer">Warsh는 미국의 7000억 달러 규모의 건설이 가격을 낮출 것이라고 믿고 있지만 그의 동료들은 이것이 지속적인 인플레이션을 촉진할 것이라고 경고합니다.</a>
-<p class="news-desc">Warsh는 미국의 7000억 달러 규모의 건설이 가격을 낮출 것이라고 믿고 있습니다. 그러나 그의 동료들은 이것이 지속적인 인플레이션을 촉진할 것이라고 경고합니다. ($7000억)</p>
+<p class="news-desc">대부분의 연준 공무원은 AI 지출을 인플레이션 위험으로 보고 있지만 Warsh는 생산성 향상에 베팅하고 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

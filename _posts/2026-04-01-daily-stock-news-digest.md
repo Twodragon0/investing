@@ -187,7 +187,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.investing.com/news/politics-news/trump-administration-unlawfully-terminated-status-of-migrants-using-bidenera-app-us-judge-rules-4591035" class="news-title" target="_blank" rel="noopener noreferrer">트럼프 행정부는 이민자의 신분을 불법적으로 취소했습니다. WHO은 바이든 시대 앱을 사용했습니다. 미국 판사 규칙</a>
-<p class="news-desc">트럼프 행정부는 이민자의 신분을 불법적으로 취소했습니다. WHO는 바이든 시대 앱을 사용했습니다. 미국 판사 규칙입니다.</p>
+<p class="news-desc">트럼프 행정부는 이민자의 신분을 불법적으로 취소했습니다. WHO은 바이든 시대 앱을 사용했습니다. 미국 판사 규칙</p>
 <span class="source-tag" data-source-type="aggregator">Investing.com</span>
 </div>
 </div>

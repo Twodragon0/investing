@@ -32,7 +32,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-09 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">785.00</div><div class="stat-label">KOSDAQ -5.56%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 특징주] 삼성전자, 6.3% 급락 마감…SK하이닉스도 5.7%↓ - 208건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 삼성전자, 하이닉스 관련 47건</li><li>🤖 <strong>AI/기술</strong>: 반도체, 코스피 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 휴전 주목</li><li>🏦 <strong>거래소</strong>: IPO, 하이닉스 주목</li></ul></div>
-<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.yna.co.kr">특징주] 삼성전자, 6.3% 급락 마감…SK하이닉스도 5.7%↓</a> <span class="p0-desc">[특징주] 삼성전자, 6.3% 급락 마감…SK하이닉스도 5.7%↓ 연합뉴스</span></li><li><a href="https://www.ytn.co.kr">뉴스나우] 삼성전자, 역대급 실적에도 '주가 폭락'.원인은? - YTN</a> <span class="p0-desc">[뉴스나우] 삼성전자, 역대급 실적에도 '주가 폭락'.원인은? YTN</span></li><li><a href="https://www.topstarnews.net">삼성전자·SK하이닉스 급락, 모건스탠리 보고서보다 불안이 컸다 - TopStarNews</a> <span class="p0-desc">삼성전자·SK하이닉스 급락, 모건스탠리 보고서보다 불안이 컸다 TopStarNews</span></li></ul></div>
+<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.yna.co.kr">특징주] 삼성전자, 6.3% 급락 마감…SK하이닉스도 5.7%↓</a> <span class="p0-desc">[특징주] 삼성전자, 6.3% 급락 마감…SK하이닉스도 5.7%↓ 연합뉴스</span></li><li><a href="https://www.ytn.co.kr">뉴스나우] 삼성전자, 역대급 실적에도 '주가 폭락'.원인은? - YTN</a> <span class="p0-desc">배우 배윤경이 새 드라마 '써닝야구단‘에 합류한다. 오늘(6일) YTN Star 취재에 따르면, 배윤경은 '써닝야구단‘ 출연을 확정했다. '써닝야구단'은 사회인 야구를 나가기 위해 고군분투하는 유부남들의 이야기...</span></li><li><a href="https://www.topstarnews.net">삼성전자·SK하이닉스 급락, 모건스탠리 보고서보다 불안이 컸다 - TopStarNews</a> <span class="p0-desc">삼성전자·SK하이닉스 급락, 모건스탠리 보고서보다 불안이 컸다 TopStarNews</span></li></ul></div>
 
 
 ## 전체 뉴스 요약
@@ -227,7 +227,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/technology/ai/articles/bofa-extends-first-520-million-165741747.html" class="news-title" target="_blank" rel="noopener noreferrer">BofA는 IPO에 앞서 OpenAI에 첫 5억 2천만 달러의 대출을 연장했다고 소식통은 말합니다.</a>
-<p class="news-desc">BofA는 IPO에 앞서 OpenAI에 첫 5억 2천만 달러의 대출을 연장했다고 소식통은 말합니다. (5억 2천만 달러)</p>
+<p class="news-desc">Bank of America는 초기 공모를 준비하고 있는 AI 회사에 대한 첫 번째 대출인 OpenAI에 5억 2천만 달러의 신용 한도를 연장했다고 이 문제에 정통한 사람이 수요일 Reuters에 말했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

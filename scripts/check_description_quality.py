@@ -80,6 +80,37 @@ def _count_body_artifacts(body: str) -> int:
     return sum(1 for m in _BODY_DESC_SEG_RE.finditer(body) if _segment_has_artifact(m.group(1) or m.group(2) or ""))
 
 
+_BLURB_TAG_RE = re.compile(r"<[^>]+>")
+
+
+def count_blurb_quality(body: str) -> tuple[int, int]:
+    """Return ``(bad, total)`` per-URL blurbs in a post body.
+
+    The artifact scan above looks for *tails* — leftover ad copy, truncated
+    figures. It does not ask the more basic question: is this blurb about the
+    article at all? A 2026-08-06 corpus scan found ~758 blurbs that were pure
+    site chrome (outlet self-introductions, market-data error notices,
+    navigation bars) while the front-matter report read 99.3% real content.
+    Nothing measured that layer, so it drifted unobserved for months.
+
+    Boilerplate only — title-repeat is deliberately excluded here because a
+    blurb legitimately leads with the headline far more often than a front
+    matter description does.
+    """
+    if not body:
+        return 0, 0
+    bad = total = 0
+    for match in _BODY_DESC_SEG_RE.finditer(body):
+        segment = match.group(1) or match.group(2) or ""
+        text = _BLURB_TAG_RE.sub("", segment).strip()
+        if not text:
+            continue
+        total += 1
+        if _is_boilerplate(text):
+            bad += 1
+    return bad, total
+
+
 # Front matter description field patterns (description_ko or description)
 _DESC_KO_RE = re.compile(r'^description_ko:\s*["\']?(.+?)["\']?\s*$', re.MULTILINE)
 _DESC_RE = re.compile(r'^description:\s*["\']?(.+?)["\']?\s*$', re.MULTILINE)
@@ -230,6 +261,9 @@ def _is_ascii_ratio_high(desc: str) -> bool:
 def classify_posts(posts: list[dict]) -> dict:
     """Classify each post description and return aggregated stats."""
     total = len(posts)
+    blurb_bad = 0
+    blurb_total = 0
+    blurb_posts: list[dict] = []
     boilerplate_items = []
     title_repeat_items = []
     real_items = []
@@ -267,9 +301,18 @@ def classify_posts(posts: list[dict]) -> dict:
         artifact_count = _count_body_artifacts(body)
         if artifact_count:
             body_artifact_items.append({**p, "artifact_count": artifact_count})
+        # Per-URL blurb chrome — the layer the front-matter checks never see.
+        bad_blurbs, total_blurbs = count_blurb_quality(body)
+        blurb_bad += bad_blurbs
+        blurb_total += total_blurbs
+        if bad_blurbs:
+            blurb_posts.append({**p, "bad_blurbs": bad_blurbs, "total_blurbs": total_blurbs})
 
     return {
         "total": total,
+        "blurb_bad": blurb_bad,
+        "blurb_total": blurb_total,
+        "blurb_posts": blurb_posts,
         "no_desc": no_desc_items,
         "boilerplate": boilerplate_items,
         "title_repeat": title_repeat_items,
@@ -300,6 +343,9 @@ def format_text(stats: dict, days: int) -> str:
     ba_items = stats.get("body_artifacts", [])
     ba_posts = len(ba_items)
     ba_segs = sum(p.get("artifact_count", 0) for p in ba_items)
+    bl_bad = stats.get("blurb_bad", 0)
+    bl_total = stats.get("blurb_total", 0)
+    bl_posts = len(stats.get("blurb_posts", []))
 
     lines = [
         f"Description Quality Report (last {days} day(s))",
@@ -311,6 +357,7 @@ def format_text(stats: dict, days: int) -> str:
         f"  ASCII-heavy desc: {ar_count} ({_pct(ar_count, total)})",
         f"  Mojibake (body) : {mj_count} ({_pct(mj_count, total)})",
         f"  Body desc artifacts: {ba_posts} post(s), {ba_segs} segment(s)",
+        f"  URL blurb chrome: {bl_bad}/{bl_total} ({_pct(bl_bad, bl_total)}) in {bl_posts} post(s)",
         f"  No description  : {nd_count} ({_pct(nd_count, total)})",
     ]
     if stats["boilerplate"]:
@@ -380,6 +427,8 @@ def format_markdown(stats: dict, days: int) -> str:
         f"| 번역 품질 이슈 | {ti_count} | {_pct(ti_count, total)} |",
         f"| ASCII 과다 desc | {ar_count} | {_pct(ar_count, total)} |",
         f"| Mojibake (인코딩) | {mj_count} | {_pct(mj_count, total)} |",
+        f"| URL 블러브 크롬 | {stats.get('blurb_bad', 0)} | "
+        f"{_pct(stats.get('blurb_bad', 0), stats.get('blurb_total', 0))} (블러브 기준) |",
         f"| 본문 desc 잔재 | {ba_posts} | {ba_segs} segment(s) |",
         f"| description 없음 | {nd_count} | {_pct(nd_count, total)} |",
     ]

@@ -202,6 +202,14 @@ _SITE_BOILERPLATE_PATTERNS = [
     # "…최신 뉴스를 빠르고 정확하게 전달합니다" — the outlet describing its own
     # delivery rather than an article.
     re.compile(r"최신 뉴스를\s.{0,20}(?:전달|제공)합니다", re.I),
+    # Institutional slogan strip — a comma list of aspirational phrases closing
+    # on the organisation's own name ("혁신적 금융, 포용적 금융, 신뢰받는 금융,
+    # 금융위원회 입니다."). Surfaced by the backfill run, which pulled this off
+    # fsc.go.kr and wrote it into a card as if it were the article.
+    re.compile(
+        r"(?:[가-힣]{2,10}\s?[가-힣]{0,10},\s*){2,}[가-힣]{0,8}(?:위원회|공사|공단|협회|진흥원|거래소|은행)\s*입니다",
+        re.I,
+    ),
     # Superlative self-promo. "가장 권위 있는" is paired with 뉴스/미디어 because
     # the bare phrase also describes awards in real reporting.
     re.compile(r"가장 권위 있는 (?:뉴스|미디어|매체)|신뢰할 수 있는 소스", re.I),
