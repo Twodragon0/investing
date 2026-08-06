@@ -71,7 +71,7 @@
 | scripts/common/severity.py                        |       10 |        0 |    100% |           |
 | scripts/common/signal\_composer.py                |      489 |        2 |     99% |   882-883 |
 | scripts/common/signal\_tracker.py                 |      185 |        6 |     97% |203-205, 320-321, 382-383 |
-| scripts/common/summarizer.py                      |      530 |       13 |     98% |151, 463, 573, 575, 585, 700-706, 750, 972, 1007, 1082, 1148 |
+| scripts/common/summarizer.py                      |      530 |       13 |     98% |155, 467, 577, 579, 589, 704-710, 754, 976, 1011, 1086, 1152 |
 | scripts/common/summarizer\_chart.py               |       16 |        0 |    100% |           |
 | scripts/common/summarizer\_keywords.py            |        2 |        0 |    100% |           |
 | scripts/common/summarizer\_priority.py            |       35 |        0 |    100% |           |
@@ -85,7 +85,7 @@
 | scripts/common/text\_utils.py                     |       64 |        2 |     97% |  131, 135 |
 | scripts/common/theme\_briefing.py                 |      100 |        4 |     96% |135, 145, 150, 177 |
 | scripts/common/theme\_index.py                    |       74 |        0 |    100% |           |
-| scripts/common/themed\_news\_renderer.py          |      133 |        0 |    100% |           |
+| scripts/common/themed\_news\_renderer.py          |      134 |        0 |    100% |           |
 | scripts/common/themes.py                          |       12 |        0 |    100% |           |
 | scripts/common/time\_series\_state.py             |      278 |       27 |     90% |55, 59, 158, 162, 242, 358-366, 395-401, 432, 460-462, 482-483, 488-490, 541-544 |
 | scripts/common/translator.py                      |      206 |        0 |    100% |           |
@@ -127,7 +127,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **23527** | **6423** | **73%** |           |
+| **TOTAL**                                         | **23528** | **6423** | **73%** |           |
 
 
 ## Setup coverage badge
