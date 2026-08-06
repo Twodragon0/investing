@@ -307,7 +307,7 @@ def test_tvl_history_redirected_off_repo_tree():
 def test_real_tree_writes_detected():
     """``_detect_real_tree_writes`` must have every write entry point patched.
 
-    Two layers, because either alone can pass while the guard is useless:
+    Three layers, because any one alone can pass while the guard is useless:
 
     1. *Tripwire* — each patch point carries ``_tree_write_guard_stub``.
        ``builtins.open`` and ``io.open`` are the same function object reached
@@ -317,9 +317,15 @@ def test_real_tree_writes_detected():
     2. *Behaviour* — an actual write into the committed tree must be refused.
        A live tripwire on a detector whose path logic no longer fires would
        still pass layer 1.
+    3. *Session baseline* — the out-of-process snapshot half must have run. It
+       only manifests at session teardown, so nothing else in the suite would
+       notice if the capture were dropped; an unwired snapshot is a silent
+       no-op that reads as coverage.
     """
     import builtins
     import io
+
+    from _tree_write_guard import session_baseline
 
     for owner, name in ((builtins, "open"), (io, "open"), (os, "open"), (os, "replace"), (os, "remove")):
         target = getattr(owner, name)
@@ -337,3 +343,15 @@ def test_real_tree_writes_detected():
     finally:
         if probe.exists():
             probe.unlink()
+
+    baseline = session_baseline()
+    assert baseline is not None, (
+        "no session baseline was captured — the out-of-process snapshot half of "
+        "_detect_real_tree_writes is not wired in. Subprocess writes into the "
+        "committed tree would go unnoticed."
+    )
+    assert len(baseline) > 100, (
+        f"session baseline holds only {len(baseline)} files; the snapshot walk is "
+        "broken (wrong dirs, or every path filtered out) and the comparison at "
+        "teardown would be vacuous."
+    )

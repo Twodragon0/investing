@@ -381,8 +381,28 @@ def _detect_real_tree_writes():
     Session-scoped so the patch cost is paid once, not 4900 times. Attribution
     is unaffected: the exception is raised inside whichever test performs the
     write, so pytest reports that test and the traceback names the line.
+
+    Two layers, because the first one structurally cannot see everything:
+
+    1. *Interception* — patches the write entry points; blocks the write, names
+       the test and the line. In-process only.
+    2. *Session snapshot* — compares the content dirs against a baseline taken
+       at session start. Catches what a subprocess or a raw-syscall C extension
+       wrote, which layer 1 has no way to observe. Coarse attribution (the
+       session, not the test) and ~165ms per walk × 2, so it is session-scoped
+       only — per-test would add ~14 minutes to the suite.
+
+    Remaining blind spot, stated: writes during interpreter shutdown land after
+    this teardown. That vector is the ``atexit`` flush in
+    ``image_rejection_metrics``, handled by the module-level redirect at the top
+    of this file (and covered by its own harness case).
     """
-    from _tree_write_guard import TreeWriteGuard, Violation
+    from _tree_write_guard import (
+        TreeWriteGuard,
+        Violation,
+        assert_no_out_of_process_writes,
+        capture_session_baseline,
+    )
 
     def _fail(violation: Violation) -> None:
         raise AssertionError(
@@ -395,8 +415,10 @@ def _detect_real_tree_writes():
             "_EXEMPT_PREFIXES 에 근거와 함께 추가하세요."
         )
 
+    baseline = capture_session_baseline()
     with TreeWriteGuard(_fail):
         yield
+    assert_no_out_of_process_writes(baseline)
 
 
 @pytest.fixture(autouse=True)
