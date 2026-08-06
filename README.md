@@ -116,7 +116,7 @@
 | scripts/tools/component\_counts.py                |       84 |        1 |     99% |       164 |
 | scripts/tools/gsc\_api.py                         |      116 |      116 |      0% |    42-234 |
 | scripts/tools/gsc\_index\_audit.py                |      234 |      234 |      0% |    44-561 |
-| scripts/tools/guard\_falsifiability.py            |      148 |       69 |     53% |340-342, 371-380, 385, 399-408, 440-444, 449-483, 488-535, 553-569, 573 |
+| scripts/tools/guard\_falsifiability.py            |      148 |       69 |     53% |427-429, 458-467, 472, 486-495, 527-531, 536-570, 575-622, 640-656, 660 |
 | scripts/tools/indexnow\_submit.py                 |      174 |      174 |      0% |    30-358 |
 | scripts/tools/postbuild\_fix\_feed\_enclosures.py |       65 |        3 |     95% |118-119, 134 |
 | scripts/tools/review\_alerting\_quality.py        |      228 |      109 |     52% |27, 111-120, 125, 128-129, 133, 150-151, 159-171, 175-192, 196-200, 271-274, 276-280, 287-299, 305, 320-328, 332-342, 346-350, 354-368, 372 |
