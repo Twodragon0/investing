@@ -46,6 +46,7 @@ from .text_utils import (  # noqa: F401  (_best_favicon_link, _favicon_url re-ex
     _fix_mistranslations,
     _strip_trailing_artifacts,
     _truncate_sentence,
+    normalize_blurb,
 )
 from .theme_briefing import ThemeBriefingGenerator
 from .theme_index import ThemeIndex
@@ -1030,7 +1031,7 @@ class ThemeSummarizer:
                     # Skip descriptions that are mostly English (non-Korean)
                     korean_chars = sum(1 for c in desc if "\uac00" <= c <= "\ud7a3")
                     if korean_chars >= len(desc) * 0.3:
-                        desc = _strip_trailing_artifacts(desc)
+                        desc = normalize_blurb(_strip_trailing_artifacts(desc))
                         desc_short = desc[:100] + "..." if len(desc) > 100 else desc
                         desc_part = f' <span class="p0-desc">{desc_short}</span>'
                 if link:

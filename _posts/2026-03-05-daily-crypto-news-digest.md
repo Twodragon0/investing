@@ -199,7 +199,7 @@ permalink: "/crypto-news/2026/03/05/daily-crypto-news-digest/"
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE9OY1hwcktwa1JpaTBIdzdZRmF4alMxbW1WUDN0azdyVk1TdUhXNGpsdzJHTnB5bDBUaG1VSzg5XzVGXzROZmZGX3VFdmpXaGM?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지</a>
-<p class="news-desc">비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지</p>
+<p class="news-desc">비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지-[美증시 특징주]</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

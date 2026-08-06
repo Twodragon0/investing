@@ -242,7 +242,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-28 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxPclQyWlJCa3dHSl9QUjFadm9xRS1ZS09BRzdhSXBGUk9WaWtVeElOeVo0MUNqUEJKZ1Q1MkdIcFJCcU9ZNlVzUDJqbXlsTE1FTFJuYTN0QXctblJOYk8yb2ZWRmZVVmVzaHk0NDRKZTV5UV9YTlptRTNlWnZDbWxBUUJQQmRuY2s?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">오늘의 주식 시장: 엔비디아, 마이크론, 인텔 주식 하락; 트럼프-이란 일시 정지로 인한 석유 하락 — 실시간 업데이트</a>
-<p class="news-desc">오늘의 주식 시장: 엔비디아, 마이크론, 인텔 주식 하락; 트럼프</p>
+<p class="news-desc">오늘의 주식 시장: 엔비디아, 마이크론, 인텔 주식 하락; 트럼프-이란 일시 정지로 유가 폭락</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>

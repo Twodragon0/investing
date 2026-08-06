@@ -117,7 +117,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-24 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMibEFVX3lxTE1pajVac2ZqTkJRbE15VE9ydkJiVFFmX1QtZ0REZEIwN0dVMEVfc3o1dDBrem85enlRTkpIazVSTVM1ajJlaExmZDE0Rm5zcERIeXdCYW5Jb3ByQ3d3cnJ0MC1qTWtYT24wWlJreg?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">암호화폐 범죄자의 미국 미래는 규제 당국이 그들을 어떻게 부르기로 결정했는지에 따라 정의됩니다</a>
-<p class="news-desc">암호화폐 무기한 선물 규정은 이제 범인, 이벤트 계약 및 규정 준수 경로에 대한 SEC</p>
+<p class="news-desc">암호화폐 무기한 선물 규정은 이제 범인, 이벤트 계약 및 규정 준수 경로에 대한 SEC-CFTC 정의에 따라 달라집니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

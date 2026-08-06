@@ -164,3 +164,25 @@ def test_numeric_context_is_preferred_over_a_keyword_bag() -> None:
     result = _synth("국내 관광객 수 3.2% 늘어난 것으로 집계")
     assert "3.2%" in result
     assert "주요 키워드" not in result
+
+
+@pytest.mark.parametrize(
+    "title",
+    [
+        # A hyphen inside a compound is not a delimiter. Allowing zero spaces
+        # before it truncated real text: "…to a multi-month high." lost its tail
+        # to "…a multi", and "미국-이란 평화 협정을 지적했습니다." became "…미국".
+        "Daily creation activity pushes weekly net inflows to a multi-month high.",
+        "최근 암호화폐 매각을 종식시키는 촉매제로 SpaceX IPO과 미국-이란 평화 협정을 지적했습니다.",
+        "비트코인: 하락장에도 무슨 일이 일어나고 있나요(암호화폐:BTC-USD).",
+        "오늘의 주식 시장: 엔비디아, 인텔 주식 하락; 트럼프-이란 일시 정지로 유가 폭락",
+    ],
+)
+def test_hyphen_compound_is_not_a_source_delimiter(title: str) -> None:
+    """A false positive destroys a sentence; a false negative leaves a name.
+
+    The rule therefore requires whitespace before the delimiter and errs toward
+    keeping text. Found by a golden-master failure after the first version
+    shipped, which had already truncated 13 published blurbs.
+    """
+    assert _synth(title).startswith(title.rstrip("."))

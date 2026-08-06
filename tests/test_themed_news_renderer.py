@@ -618,3 +618,46 @@ class TestDeterminism:
         assert "<details>" in out
         assert "Overflow without link" in out
         assert "<span>Overflow without link</span>" in out
+
+
+class TestBlurbNormalization:
+    """The rendered blurb must not repeat the outlet name (2026-08-06).
+
+    The card already prints the source in its own `source-tag` span, so a copy
+    trailing the summary is duplication. A corpus sweep found 97 such blurbs;
+    catching them here stops the backfill from being a permanent chore.
+    """
+
+    def test_source_suffix_is_stripped_from_rendered_blurb(self, mock_summarizer: MagicMock) -> None:
+        articles = [
+            _make_article(
+                "코스피 급등",
+                link="https://example.com/kospi",
+                description="S&P500·나스닥 급락; 원유·가스·금·은 급등; 비트코인 $67K 근처로 후퇴 - The Sunday Guardian",
+            ),
+        ]
+        items = articles + [{"title": f"pad{i}"} for i in range(4)]
+        mock_summarizer._theme_articles = {"k": articles}
+        mock_summarizer.get_top_themes.return_value = [("Name", "k", "*", 1)]
+
+        out = ThemedNewsRenderer(items, mock_summarizer).render()
+
+        assert "The Sunday Guardian" not in out
+        assert "비트코인 $67K 근처로 후퇴" in out
+
+    def test_informative_tail_survives_rendering(self, mock_summarizer: MagicMock) -> None:
+        """A tail carrying figures is the story, not an outlet name."""
+        articles = [
+            _make_article(
+                "삼성전자 실적",
+                link="https://example.com/sec",
+                description="삼성전자 2분기 실적 발표 - 영업이익 14조 원으로 전년 대비 32% 증가했습니다",
+            ),
+        ]
+        items = articles + [{"title": f"pad{i}"} for i in range(4)]
+        mock_summarizer._theme_articles = {"k": articles}
+        mock_summarizer.get_top_themes.return_value = [("Name", "k", "*", 1)]
+
+        out = ThemedNewsRenderer(items, mock_summarizer).render()
+
+        assert "14조 원" in out and "32% 증가" in out

@@ -5,6 +5,7 @@ Pure helpers extracted from summarizer.py — no module-level side effects.
 
 import re
 
+from .enrichment_synthetic import _strip_source_suffix
 from .post_generator import _MISTRANSLATION_FIXES
 from .utils import truncate_sentence as _truncate_sentence_util
 
@@ -132,3 +133,37 @@ def _best_favicon_link(item: dict) -> str:
     if link and "news.google.com" not in link:
         return link
     return original or link
+
+
+# ---------------------------------------------------------------------------
+# Per-URL blurb normalisation (2026-08-06).
+#
+# The card already renders the outlet in its own `source-tag` span, so a copy
+# trailing the summary is duplication. A corpus sweep found 97 such blurbs plus
+# 4 with a doubled terminator; both classes are cheap to prevent at render time
+# rather than backfilling forever.
+#
+# Single source of truth: `themed_news_renderer` (news-desc), `summarizer`
+# (p0-desc) and `fix_post_url_summaries` (backfill) all route through here, so
+# the "outlet name or informative subtitle?" rule lives in one place.
+# ---------------------------------------------------------------------------
+
+# Exactly two periods. `...` is deliberate Korean punctuation and must survive.
+_DOUBLED_PERIOD_RE = re.compile(r"(?<!\.)\.\.(?!\.)")
+
+# Stripping must not leave less than a sentence behind.
+BLURB_MIN_LEN = 30
+
+
+def normalize_blurb(text: str) -> str:
+    """Return ``text`` with a trailing outlet name and doubled periods removed.
+
+    Idempotent, and a no-op when stripping would gut the blurb.
+    """
+    if not text:
+        return text
+    cleaned = _DOUBLED_PERIOD_RE.sub(".", text).strip()
+    stripped = _strip_source_suffix(cleaned)
+    if stripped != cleaned and len(stripped) >= BLURB_MIN_LEN:
+        cleaned = stripped
+    return cleaned

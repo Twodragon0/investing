@@ -130,7 +130,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMimwFBVV95cUxOWWZWY204YmNETXZBRlJJdTQwanZQdEd4TlhDSnJ1d3dkSEFvUUVUdGJPSm9OLXhnLVRjUmNLd00xUUtpQnJBZGF2ZExoWGRNMmhOU2JLd09WUWd1ODJ6UEM3LXBqM19oRGhqc1FlNUFCZTNEQWRHb3RpWVRQYnEwTU9SWUZFb3FxNWkySXNKY25RWkphc0wyWXVFUQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인: 약세장에도 불구하고 실제로 무슨 일이 일어나고 있나요? (암호화폐:BTC-USD)</a>
-<p class="news-desc">비트코인: 하락장에도 불구하고 실제로 무슨 일이 일어나고 있나요(암호화폐:BTC</p>
+<p class="news-desc">비트코인: 하락장에도 불구하고 실제로 무슨 일이 일어나고 있나요(암호화폐:BTC-USD).</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
