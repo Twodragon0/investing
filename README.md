@@ -78,7 +78,7 @@
 | scripts/common/summary\_analysis.py               |      177 |        5 |     97% |260, 262, 365, 371, 485 |
 | scripts/common/summary\_post\_categorizers.py     |       84 |        5 |     94% | 30, 34-37 |
 | scripts/common/summary\_post\_parsing.py          |      110 |        1 |     99% |       174 |
-| scripts/common/summary\_quality.py                |       50 |        1 |     98% |       283 |
+| scripts/common/summary\_quality.py                |       59 |        1 |     98% |       357 |
 | scripts/common/summary\_sections.py               |      607 |       10 |     98% |179, 188, 401, 534, 546, 558, 794, 833, 1010, 1040 |
 | scripts/common/summary\_text\_ko.py               |       72 |        2 |     97% |    71, 75 |
 | scripts/common/text\_lang.py                      |       27 |        2 |     93% |     58-60 |
@@ -126,7 +126,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **23182** | **6359** | **73%** |           |
+| **TOTAL**                                         | **23191** | **6359** | **73%** |           |
 
 
 ## Setup coverage badge
