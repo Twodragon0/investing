@@ -871,7 +871,11 @@ def generate_synthetic_description(
 
     # Build a title-condensed description instead of boilerplate
     # Clean trailing source names from the title
-    clean_title = re.sub(r"\s*[-–—|]\s*\S+$", "", title).strip()
+    # `\s+` (not `\s*`): a hyphen inside a compound is not a delimiter. With zero
+    # spaces allowed this cut "(BTC-USD:Cryptocurrency)" down to "(BTC" — 21 such
+    # titles in the corpus. Cost of the stricter rule is an outlet glued on
+    # without a space, which is the cheaper failure.
+    clean_title = re.sub(r"\s+[-–—|]\s*\S+$", "", title).strip()
     # For Korean titles, extract a condensed version
     kr_chars = len(re.findall(r"[가-힣]", clean_title))
     if kr_chars > len(clean_title) * 0.3:
