@@ -47,7 +47,7 @@
 | scripts/common/enrichment.py                      |      187 |        4 |     98% |169, 206-208 |
 | scripts/common/enrichment\_images.py              |       51 |        0 |    100% |           |
 | scripts/common/enrichment\_network.py             |      354 |        5 |     99% |   645-652 |
-| scripts/common/enrichment\_synthetic.py           |      229 |        1 |     99% |       630 |
+| scripts/common/enrichment\_synthetic.py           |      229 |        1 |     99% |       637 |
 | scripts/common/entity\_extractor.py               |      106 |        1 |     99% |       180 |
 | scripts/common/fmp\_api.py                        |      247 |        0 |    100% |           |
 | scripts/common/formatters.py                      |       30 |        0 |    100% |           |
@@ -71,7 +71,7 @@
 | scripts/common/severity.py                        |       10 |        0 |    100% |           |
 | scripts/common/signal\_composer.py                |      489 |        2 |     99% |   882-883 |
 | scripts/common/signal\_tracker.py                 |      185 |        6 |     97% |203-205, 320-321, 382-383 |
-| scripts/common/summarizer.py                      |      530 |       13 |     98% |150, 462, 572, 574, 584, 699-705, 749, 971, 1006, 1081, 1147 |
+| scripts/common/summarizer.py                      |      530 |       13 |     98% |151, 463, 573, 575, 585, 700-706, 750, 972, 1007, 1082, 1148 |
 | scripts/common/summarizer\_chart.py               |       16 |        0 |    100% |           |
 | scripts/common/summarizer\_keywords.py            |        2 |        0 |    100% |           |
 | scripts/common/summarizer\_priority.py            |       35 |        0 |    100% |           |
@@ -82,7 +82,7 @@
 | scripts/common/summary\_sections.py               |      607 |       10 |     98% |179, 188, 401, 534, 546, 558, 794, 833, 1010, 1040 |
 | scripts/common/summary\_text\_ko.py               |       72 |        2 |     97% |    71, 75 |
 | scripts/common/text\_lang.py                      |       27 |        2 |     93% |     58-60 |
-| scripts/common/text\_utils.py                     |       53 |        2 |     96% |  130, 134 |
+| scripts/common/text\_utils.py                     |       64 |        2 |     97% |  131, 135 |
 | scripts/common/theme\_briefing.py                 |      100 |        4 |     96% |135, 145, 150, 177 |
 | scripts/common/theme\_index.py                    |       74 |        0 |    100% |           |
 | scripts/common/themed\_news\_renderer.py          |      133 |        0 |    100% |           |
@@ -97,7 +97,7 @@
 | scripts/fix\_defi\_tvl\_history.py                |       52 |        1 |     98% |       117 |
 | scripts/fix\_post\_descriptions.py                |      275 |       13 |     95% |25, 164, 168, 235, 250, 256-258, 265, 267, 319-320, 572 |
 | scripts/fix\_post\_number\_format.py              |       54 |        1 |     98% |        98 |
-| scripts/fix\_post\_url\_summaries.py              |      249 |       61 |     76% |214, 233-235, 266, 271-273, 356-366, 428-445, 449-499, 503 |
+| scripts/fix\_post\_url\_summaries.py              |      246 |       61 |     75% |205, 224-226, 257, 262-264, 347-357, 419-436, 440-490, 494 |
 | scripts/fix\_scenario\_na\_placeholders.py        |       41 |        1 |     98% |        77 |
 | scripts/generate\_daily\_summary.py               |      281 |       59 |     79% |120-121, 124-144, 153-154, 157, 165, 195-197, 248, 324-334, 345-359, 399-400, 487-488, 512-513, 528, 530, 532, 534, 536, 591 |
 | scripts/generate\_market\_summary.py              |      673 |       27 |     96% |237-238, 393-394, 427-428, 549-550, 600, 1044-1045, 1166-1168, 1171-1174, 1242-1247, 1303, 1381, 1390 |
@@ -127,7 +127,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **23519** | **6423** | **73%** |           |
+| **TOTAL**                                         | **23527** | **6423** | **73%** |           |
 
 
 ## Setup coverage badge
