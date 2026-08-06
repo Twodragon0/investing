@@ -77,3 +77,32 @@ def test_generate_themed_news_sections_golden(
     summarizer = ThemeSummarizer(fixture_mod.ITEMS)
     output = summarizer.generate_themed_news_sections(max_articles=5, featured_count=3)
     assert_golden(f"generate_themed_news_sections/{name}", output)
+
+
+def test_update_golden_is_refused_in_ci(monkeypatch: pytest.MonkeyPatch) -> None:
+    """`UPDATE_GOLDEN=1` in CI would make every golden rewrite itself and pass.
+
+    Goldens exist to fail when output changes unexpectedly; a CI run that
+    regenerates them proves nothing while staying green. CI never sets the var
+    today — this pins that it cannot start doing so silently.
+    """
+    from tests._golden import assert_golden
+
+    monkeypatch.setenv("UPDATE_GOLDEN", "1")
+    monkeypatch.setenv("GITHUB_ACTIONS", "true")
+
+    with pytest.raises(AssertionError, match="vacuous"):
+        assert_golden("generate_themed_news_sections/small", "anything")
+
+
+def test_update_golden_still_works_locally(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
+    """The documented local workflow must keep working — the guard is CI-only."""
+    from tests import _golden
+
+    monkeypatch.setenv("UPDATE_GOLDEN", "1")
+    monkeypatch.delenv("CI", raising=False)
+    monkeypatch.delenv("GITHUB_ACTIONS", raising=False)
+    monkeypatch.setattr(_golden, "_SNAPSHOT_ROOT", tmp_path)
+
+    _golden.assert_golden("scratch/case", "recorded output")
+    assert (tmp_path / "scratch" / "case.txt").read_text(encoding="utf-8") == "recorded output"

@@ -40,6 +40,17 @@ def assert_golden(name: str, actual: str) -> None:
     actual_norm = _normalize(actual)
 
     if os.environ.get("UPDATE_GOLDEN") == "1":
+        # Regeneration is a local operation. If this ever ran in CI — a repo-level
+        # env var, a copy-pasted step — every snapshot would rewrite itself and
+        # pass, so the whole golden suite would prove nothing while staying
+        # green. That is the failure mode goldens exist to prevent, so refuse
+        # loudly rather than silently rewrite.
+        if os.environ.get("CI") or os.environ.get("GITHUB_ACTIONS"):
+            raise AssertionError(
+                "UPDATE_GOLDEN=1 is set in CI. Regenerating snapshots there makes "
+                "every golden test vacuous — it would rewrite the expected output "
+                "and pass. Regenerate locally, review the diff, and commit it."
+            )
         # The runtime tree-write detector refuses writes into the committed
         # tree, which is what a snapshot *is*. Regenerating a golden is the one
         # deliberate exception: the operator asked for it by name via the env
