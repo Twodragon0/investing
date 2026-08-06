@@ -2528,6 +2528,142 @@ class TestIsSiteBoilerplate:
 
 
 # =============================================================================
+# Body-level per-URL summary leakage (2026-08-06 audit)
+# =============================================================================
+
+
+class TestBodyUrlSummaryBoilerplate:
+    """Boilerplate classes found leaking into per-article `news-desc` blurbs.
+
+    The post-level `description` front matter measured 99.3% real content while
+    the *body* card summaries carried site chrome — `check_description_quality.py`
+    only inspects front matter, so the gap stayed invisible. A corpus scan over
+    2309 posts / 4504 cards surfaced ~790 bad summaries in the classes below,
+    and all but one passed the filter as it stood, i.e. these are still being
+    produced, not just historical residue.
+
+    Counts are "distinct posts carrying that exact string" at audit time.
+    """
+
+    @pytest.mark.parametrize(
+        "desc",
+        [
+            # Asset explainer lifted from a site sidebar (59 posts)
+            "비트코인은 정부, 은행 등에 의해 통제되는 대신 P2P 네트워크에서 실행됩니다. "
+            "이를 통해 중개자 없이 다른 사람에게 직접 가치를 보낼 수 있습니다.",
+            # Asset explainer, Ethereum variant (17 posts)
+            "이더리움은 단순한 디지털 화폐가 아닙니다. 이는 분산형 컴퓨팅 플랫폼입니다. "
+            "즉, 사용자는 회사나 은행의 감독 없이 앱을 구축하고 실행할 수 있습니다.",
+            # Market-data error / staleness notice scraped as a summary (30 posts)
+            "일시적인 문제가 발생했습니다. 이 페이지의 시장 데이터는 현재 지연되었습니다.",
+            # Newsletter solicitation (21 posts)
+            "오늘 암호화폐 업계에서 무슨 일이 일어났는지 알고 싶으십니까? 다음은 비트코인 가격, "
+            "블록체인, 디파이, Web3 및 암호화폐 규제에 영향을 미치는 일일 동향 및 이벤트에 대한 요약입니다.",
+            # Publisher tagline (14 posts)
+            "시장, 경제, 정치 최신 소식에 대한 Financial Times의 뉴스, 분석 및 의견",
+            # Broker/terminal tagline (14 posts)
+            "주식 시장 시세, 비즈니스 뉴스, 금융 뉴스, 거래 아이디어 및 전문가가 제공하는 주식 조사.",
+            # Local-newsroom nav bar, pipe-delimited
+            "KCRG | 시더 래피즈, 아이오와 시티, 워털루, 더뷰크 | 뉴스, 스포츠, 날씨",
+            "콜로 | 8 뉴스 지금 | 리노, 네바다",
+        ],
+    )
+    def test_body_boilerplate_is_flagged(self, desc: str):
+        assert _is_site_boilerplate(desc) is True
+
+    @pytest.mark.parametrize(
+        "desc",
+        [
+            # An outage *is* the story — the error phrase mid-sentence is factual.
+            "바이낸스 거래소 출금에서 일시적인 문제가 발생했습니다. 약 2시간 동안 1,200건의 출금이 지연됐습니다.",
+            # P2P as article subject, not as the "what is bitcoin" explainer.
+            "P2P 대출 플랫폼 렌딧이 300억 원 규모의 시리즈B 투자를 유치했다고 밝혔습니다.",
+            # A single pipe appears in real headlines; only link *lists* are chrome.
+            "삼성전자 | 2026년 2분기 영업이익 14조 원으로 전년 대비 32% 증가했습니다.",
+            # Real analysis that happens to mention a computing platform.
+            "이더리움 재단은 2026년 3분기까지 검증자 수수료 구조를 개편한다고 발표했습니다.",
+            # Mentions "분석 및 의견" but carries specific facts.
+            "금리 인하 기대가 후퇴하며 10년물 국채 금리가 4.7%까지 올랐다는 분석 및 의견이 나왔습니다.",
+        ],
+    )
+    def test_real_article_summaries_survive(self, desc: str):
+        assert _is_site_boilerplate(desc) is False
+
+    @pytest.mark.parametrize(
+        "desc",
+        [
+            # Outlet self-introduction — the largest remaining class after the
+            # first pattern batch. Structurally identical across publishers:
+            # "<outlet> is <superlative> <category list> media/platform".
+            "토큰포스트는 대한민국 No.1 블록체인·암호화폐 뉴스 미디어입니다. 비트코인, 이더리움, "
+            "솔라나, XRP, 리플, 밈코인, 스테이블코인, NFT, 디파이 등 최신 트렌드를 전합니다.",
+            "인베스팅닷컴(Investing.com)은 실시간 시세, 포트폴리오, 챠트, 최신 금융 뉴스, "
+            "실시간 주식시장 데이터를 무료로 제공하고 있습니다.",
+            "소셜 뉴스 미디어 위키트리 - 경제, 사회, 정치, 엔터테인먼트, 스포츠 등 최신 뉴스를 "
+            "빠르고 정확하게 전달합니다.",
+            "The Globe and Mail은 국내 및 국제 뉴스를 포함하여 캐나다에서 가장 권위 있는 뉴스를 제공합니다.",
+            "성공 투자를 위한 신뢰할 수 있는 소스 | 2008년부터 리소스, 기술, 생명 과학 및 대마초 "
+            "분야의 뉴스, 교육 및 전문가 추천에 중점을 두었습니다.",
+            # Site CTA in the imperative — a call to action, never a summary.
+            "국민은행의 금융 콘텐츠 플랫폼 KB Think. 저축, 투자, 대출, 라이프, 부동산, 세금, 보험, "
+            "연금, 사업자 콘텐츠를 KB의 생각에서 만나보세요!",
+            "다음 재정적 단계는 무엇입니까? 모기지, 대출, 보험, 투자 등에 관해 현명한 결정을 "
+            "내리는 데 도움이 되는 전문가의 조언, 최신 뉴스 및 무료 도구를 받아보세요.",
+        ],
+    )
+    def test_outlet_self_introduction_is_flagged(self, desc: str):
+        assert _is_site_boilerplate(desc) is True
+
+    @pytest.mark.parametrize(
+        "desc",
+        [
+            # "가장 권위 있는" about an award, not about a newsroom.
+            "이 회사는 업계에서 가장 권위 있는 디자인상을 수상하며 3년 연속 1위를 기록했습니다.",
+            # An outlet named as the *subject of the news*, not self-promoting.
+            "토큰포스트가 보도한 바에 따르면 국내 거래소 원화 거래량이 전월 대비 18% 줄었습니다.",
+            # Repo-generated synthetic summaries are a separate (lesser) concern —
+            # fact-based and intentional, they must not be swept up here.
+            "시장 반등 움직임이 포착되었습니다. 기술적 반등인지 추세 전환인지 거래량과 수급 확인이 필요합니다.",
+            "반도체 산업 관련 주요 소식입니다. 한국 증시에서 반도체는 시가총액 비중이 가장 높은 핵심 섹터입니다.",
+        ],
+    )
+    def test_second_batch_does_not_overreach(self, desc: str):
+        assert _is_site_boilerplate(desc) is False
+
+    @pytest.mark.parametrize(
+        "desc",
+        [
+            "한겨레는 신뢰, 공정을 바탕으로 최신 뉴스와 심층 보도, 칼럼 등을 제공합니다. "
+            "정치, 사회, 경제, 문화, 젠더, 기후변화 등 각 분야의 폭 넓은 인사이트를 경험해보세요.",
+            "Business Insider는 글로벌 기술, 금융, 주식 시장, 미디어, 경제, 라이프스타일, 부동산, "
+            "AI 및 여러분이 알고 싶은 이야기를 알려드립니다.",
+            "뉴스핌은 종합 민영 뉴스통신사로 정치, 경제, 사회, 글로벌, 증권.금융, 산업, 부동산, 전국, "
+            "라이프, 문화, 스포츠 등 기사 제공하고 있습니다.",
+            "Quartz는 새로운 세계 경제에 대한 안내자입니다. 우리는 비즈니스, 금융, 경제, 기술, "
+            "라이프스타일 및 리더십을 다룹니다.",
+        ],
+    )
+    def test_outlet_section_list_blurb_is_flagged(self, desc: str):
+        """ "We cover X, Y, Z" chrome — needs both halves of the conjunction."""
+        assert _is_site_boilerplate(desc) is True
+
+    @pytest.mark.parametrize(
+        "desc",
+        [
+            # A section list with no outlet verb: real reporting enumerating movers.
+            "삼성전자, SK하이닉스, LG에너지솔루션, 현대차, 기아 등 시가총액 상위 5개 종목이 일제히 3% 넘게 올랐습니다.",
+            # An outlet verb with no section list: ordinary prose. Kept well over
+            # the 35-char short-generic threshold so this case isolates the
+            # conjunction rather than tripping the pre-existing length rule.
+            "금융감독원은 이번 주 중으로 검사 결과와 후속 제재 방침을 담은 보고서를 국회 정무위원회에 제공합니다.",
+        ],
+    )
+    def test_section_list_needs_both_halves(self, desc: str):
+        """Either half alone must stay green — the conjunction is the signal."""
+        assert _is_site_boilerplate(desc) is False
+
+
+# =============================================================================
 # _is_desc_duplicate_of_title
 # =============================================================================
 
