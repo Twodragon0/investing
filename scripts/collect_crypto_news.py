@@ -743,7 +743,11 @@ def _extract_security_summary_from_title(title: str) -> str:
     # 제목 자체가 충분히 설명적이면 그대로 사용
     summary = title.strip()
     # 출처 태그 제거 (e.g., "- CoinDesk", "| The Block")
-    summary = re.sub(r"\s*[-|]\s*[A-Z][\w\s.]+$", "", summary).strip()
+    # `\s+` (not `\s*`): 구분자 앞 공백을 요구한다. 0개를 허용하면 하이픈 복합어를
+    # 잘라 문장을 통째로 날린다 — "…U.S.-Iran conflict drags on for months. 지정학적
+    # 리스크가…" 가 "…U.S." 로, "Sam Bankman-Fried 인터뷰를…" 이 "Sam Bankman" 으로
+    # 줄었다(코퍼스 실측 43건).
+    summary = re.sub(r"\s+[-|]\s*[A-Z][\w\s.]+$", "", summary).strip()
     if len(summary) > 10:
         return summary
     return ""

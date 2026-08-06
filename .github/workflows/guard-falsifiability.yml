@@ -21,6 +21,9 @@ on:
       - 'tests/test_workflow_action_pinning_guard.py'
       - 'tests/test_secret_scan_gate_guard.py'
       - 'tests/test_workflow_permission_gate_guard.py'
+      # 구분자 정규식 가드 — 가드 본체와 감시 대상 소스
+      - 'tests/test_delimiter_regex_guard.py'
+      - 'scripts/common/summarizer.py'
       - '.gitleaks.toml'
       - '.github/workflows/security-scan.yml'
       - '.github/workflows/lighthouse-ci.yml'

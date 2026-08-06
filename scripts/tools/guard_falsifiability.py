@@ -385,6 +385,24 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "run: python3 scripts/tools/check_workflow_permissions.py --workflows-dir tests/fixtures",
         "tests/test_workflow_permission_gate_guard.py::test_permission_lint_scans_the_real_workflow_tree",
     ),
+    # Part 5 (2026-08-06): 구분자 정규식 회귀 가드. 같은 결함이 네 번 반복돼
+    # 패턴 자체를 금지했다 — 가드가 실제 위반을 잡는지 여기서 증명한다.
+    StaticCase(
+        "구분자 정규식에 \\s* 재도입 (하이픈 복합어 절단)",
+        "scripts/common/summarizer.py",
+        'clean = re.sub(r"\\s+[-–—|]\\s*\\S+$", "", title).strip()',
+        'clean = re.sub(r"\\s*[-–—|]\\s*\\S+$", "", title).strip()',
+        "tests/test_delimiter_regex_guard.py::test_no_open_ended_delimiter_strip_without_leading_space",
+    ),
+    StaticCase(
+        "구분자 탐지기 무력화 (델리미터 클래스 비움)",
+        "tests/test_delimiter_regex_guard.py",
+        '_DELIM_CLASS = r"\\[[^\\]]*[–—|][^\\]]*\\]"',
+        '_DELIM_CLASS = r"(?!x)x"',
+        # 파라미터라이즈 id 는 유니코드/백슬래시가 이스케이프돼 취약하다. 카나리는
+        # _DELIM_CLASS 를 공유하므로 같은 변형에 red 가 된다.
+        "tests/test_delimiter_regex_guard.py::test_safe_spelling_is_actually_present_in_the_repo",
+    ),
     StaticCase(
         "permission lint 비차단화 (continue-on-error)",
         ".github/workflows/code-quality.yml",
