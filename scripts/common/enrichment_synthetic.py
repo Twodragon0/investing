@@ -480,7 +480,14 @@ _KOREAN_TITLE_KW_SETS: list = [(frozenset(k.split("|")), v) for k, v in _KOREAN_
 # Outlet suffix: `… - The Hill`, `… | 공감신문`. Bounded and digit-free so an
 # informative subtitle ("삼성전자 - 2분기 영업이익 14조 원") is left alone; the
 # previous single-token pattern (`\S+$`) stripped 프리진경제 but not "The Hill".
-_SOURCE_SUFFIX_RE = re.compile(r"\s*[-–—|]\s*(?![^-–—|]*\d)[^-–—|]{2,20}$")
+#
+# **Whitespace before the delimiter is required.** With `\s*` (zero allowed) the
+# hyphen inside a compound matched: "…net inflows to a multi-month high." lost
+# its tail to "…a multi", and "미국-이란 평화 협정을 지적했습니다." became "…미국".
+# A false positive here destroys a sentence, while a false negative only leaves
+# an outlet name behind — so the rule errs toward keeping text. Cost: an outlet
+# written without a leading space ("…지지-[美증시 특징주]") is no longer stripped.
+_SOURCE_SUFFIX_RE = re.compile(r"\s+[-–—|]\s*(?![^-–—|]*\d)[^-–—|]{2,20}$")
 
 # Grammatical particles that ride along when Hangul runs are taken verbatim,
 # turning "러시아" into the non-word "러시아에서".

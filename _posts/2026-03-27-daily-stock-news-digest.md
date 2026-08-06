@@ -123,7 +123,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-27 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxQbDRyWC1UdUhfdG1mNGw1LVhKYTVxUDE1WTZxMDZyRHZrWlJ0QWtidV9STVhPUHZhUnVVVVdNUFQ1M09CZUVLZ3lSNFlXWnZINE9IOGRWdXB5UjJtaWVlbWZhUmpiRzhrSmd3MU42U25oMm1SYXFRcV91OFF6WjlBUWdNaVBJSkhrZ3U0WS1UNTluZUhpNXdNM0tkVHViNWFUWl9hVUs4QTQtU25OME9LdFViQUR4dTM4Tkx2SkxjdDdnNW9rQ0tfdTUzOGozQWZwS0FvOVVB?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">"한은, 유가 108달러·환율 1천500원 진입시 금리 인상" - 한국무역협회</a>
-<p class="news-desc">"한은, 유가 108달러·환율 1천500원 진입시 금리 인상" 한국무역협회</p>
+<p class="news-desc">"한은, 유가 108달러·환율 1천500원 진입시 금리 인상" 한국무역협회-KITA.NET</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

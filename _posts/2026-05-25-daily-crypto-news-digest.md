@@ -181,7 +181,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFA4RmZKV0hjY21vWDYtYnBfcm0ybHM2VVVVNzJyanR6VEstYzJ5QVlEYXR1ci1EbGsxMVAxclVEb0pFOUdoZldwYVp0Z25lSFhpTjRFWmNJQjRXeGJWRl9PWFNXSGFVSWtyMHAzVXV2Wi00ekU?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 7만 4천 5백 달러대 하락, 지정학적 불확실성에 주간 손실 전망 - Investing.com 한국어</a>
-<p class="news-desc">비트코인 7만 4천 5백 달러대 하락, 지정학적 불확실성에 주간 손실 전망 Investing.com 한국어 전쟁 땐 위험자산 떨어진다더니…비트코인 가격에 무슨 일 [레버리지셰어즈 인사이트] v.daum.net 비트코인 6만달러대 추락?…2026년 저점 재시험하나 네이트 미국-이란 평화협정 급물살…비트코인·알트코인 급반등 글로벌이코노믹 비트코인 무관심 구간 재진입하나…온체인 지표서 바닥 신호 디지털투데이 비트코인 핵심 지지선 붕괴… 6만 달러 하방 압력 속 단기 반등 시험대 gukjenews.com 비트코인 반등…미국</p>
+<p class="news-desc">비트코인 7만 4천 5백 달러대 하락, 지정학적 불확실성에 주간 손실 전망 Investing.com 한국어 전쟁 땐 위험자산 떨어진다더니…비트코인 가격에 무슨 일 [레버리지셰어즈 인사이트] v.daum.net 비트코인 6만달러대 추락?…2026년 저점 재시험하나 네이트 미국-이란 평화협정 급물살…비트코인·알트코인 급반등 글로벌이코노믹 비트코인 무관심 구간 재진입하나…온체인 지표서 바닥 신호 디지털투데이 비트코인 핵심 지지선 붕괴… 6만 달러 하방 압력 속 단기 반등 시험대 gukjenews.com 비트코인 반등…미국-이란 협정.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

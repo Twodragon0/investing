@@ -66,11 +66,10 @@ from common.enrichment_network import (  # noqa: E402
 )
 from common.enrichment_synthetic import (  # noqa: E402
     _is_title_related_description,
-    _strip_source_suffix,
     generate_synthetic_description,
 )
 from common.summary_quality import is_boilerplate  # noqa: E402
-from common.text_utils import _strip_trailing_artifacts  # noqa: E402
+from common.text_utils import _strip_trailing_artifacts, normalize_blurb  # noqa: E402
 from common.translator import translate_to_korean  # noqa: E402
 
 logger = logging.getLogger(__name__)
@@ -188,15 +187,7 @@ def clean_text(text: str) -> str:
     Returning ``""`` for a clean blurb is load-bearing — callers use it to skip
     the rewrite entirely rather than writing the same bytes back.
     """
-    cleaned = _DOUBLED_PERIOD_RE.sub(".", text).strip()
-
-    # The card renders the outlet in its own `source-tag` span, so a trailing
-    # copy in the summary is duplication. Reuses the synthesiser's stripper so
-    # the "is this an outlet or a subtitle?" rule lives in one place.
-    stripped = _strip_source_suffix(cleaned)
-    if stripped != cleaned and len(stripped) >= _MIN_DESC_LEN:
-        cleaned = stripped
-
+    cleaned = normalize_blurb(text)
     return cleaned if cleaned != text.strip() else ""
 
 

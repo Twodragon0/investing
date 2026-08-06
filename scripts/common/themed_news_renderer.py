@@ -14,6 +14,7 @@ from .text_utils import (
     _fix_mistranslations,
     _strip_trailing_artifacts,
     _truncate_sentence,
+    normalize_blurb,
 )
 from .themes import ARTICLES_PER_THEME, OVERFLOW_PREVIEW_LIMIT
 
@@ -112,7 +113,7 @@ class ThemedNewsRenderer:
         if description and description != title and not sumr_module._is_generic_desc(description):
             # Additional boilerplate check for translated descriptions
             if not sumr_module._is_boilerplate_desc(description):
-                desc_text = _strip_trailing_artifacts(_truncate_sentence(description, max_len=300))
+                desc_text = normalize_blurb(_strip_trailing_artifacts(_truncate_sentence(description, max_len=300)))
                 if desc_text:
                     card_parts.append(f'<p class="news-desc">{_esc(desc_text, quote=True)}</p>')
         else:

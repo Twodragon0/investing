@@ -147,7 +147,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMijgFBVV95cUxPSHJtVnJqVlVmZTdtLVlGd1VRS3U3QWpaR0w2cjVmaldLMi0yTkxrQXQyMjZ1RWxjM3RzX1Q0R3BJV243bUMyTkx1MTVvaUVZSTlXV2hLVU5tSlN1dTFMcThlb1IwUm1UVWFfZTRxQlgzbnR4WEVTaUFad0FZUE5jU202QlBmeTFRekJ0ZjVB?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인의 끝은 새로운 시작이 될 것입니다 (암호화폐: BTC-USD)</a>
-<p class="news-desc">비트코인은 더 이상 희소성 기반 모델에 의해 구동되지 않습니다. 이제 가격은 수요 역학을 추적하고 베타 기술 지수와 상관관계가 있습니다. 여기에서 BTC</p>
+<p class="news-desc">비트코인은 더 이상 희소성 기반 모델에 의해 구동되지 않습니다. 이제 가격은 수요 역학을 추적하고 베타 기술 지수와 상관관계가 있습니다. 여기에서 BTC-USD에 대해 자세히 알아보세요.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
