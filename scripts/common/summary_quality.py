@@ -166,7 +166,71 @@ _SITE_BOILERPLATE_PATTERNS = [
     ),
     re.compile(r"(?:에 참여하세요|구독하세요|가입하세요)$", re.I),
     re.compile(r"\d+년 (?:넘게|이상) .{0,40}(?:제공|서비스)", re.I),
+    # ------------------------------------------------------------------
+    # Body-level leakage (2026-08-06 corpus audit).
+    #
+    # The classes below were found in per-article ``news-desc`` blurbs, not in
+    # post front matter — the quality report only measured the latter, so they
+    # went unnoticed while ~790 card summaries carried site chrome instead of
+    # article content. Each pattern is anchored or keyed to a phrase that only
+    # occurs in site furniture, because the same words appear in legitimate
+    # reporting (an exchange outage, a P2P lending round, a real "분석 및 의견"
+    # piece) and those must survive.
+    # ------------------------------------------------------------------
+    # "What is Bitcoin/Ethereum" explainer copy from a sidebar or footer.
+    re.compile(
+        r"P2P 네트워크에서 실행|분산형 컴퓨팅 플랫폼입니다|중개자 없이 다른 사람에게 직접 가치",
+        re.I,
+    ),
+    # Market-data error / staleness notice. Anchored at the start: an article
+    # *about* an outage mentions the same phrase mid-sentence.
+    re.compile(r"^일시적인 문제가 발생했습니다|시장 데이터는 현재 지연", re.I),
+    # Newsletter solicitation ("want to know what happened today? here is …").
+    re.compile(r"알고 싶으십니까\?|일일 동향 및 이벤트에 대한 요약", re.I),
+    # Publisher / terminal taglines, tail-anchored so factual prose that merely
+    # contains the words is unaffected.
+    re.compile(r"뉴스, 분석 및 의견\s*$", re.I),
+    re.compile(r"거래 아이디어 및 전문가", re.I),
+    # ------------------------------------------------------------------
+    # Outlet self-introduction (second batch of the same audit). The largest
+    # remaining class once the above landed, and structurally uniform across
+    # publishers: "<outlet> is <superlative> <section list> media/platform".
+    # Keyed on the self-referential copula rather than on outlet names, so new
+    # sources are covered without a list to maintain.
+    # ------------------------------------------------------------------
+    re.compile(r"뉴스 미디어입니다|콘텐츠 플랫폼|무료로 제공하고 있습니다", re.I),
+    # "…최신 뉴스를 빠르고 정확하게 전달합니다" — the outlet describing its own
+    # delivery rather than an article.
+    re.compile(r"최신 뉴스를\s.{0,20}(?:전달|제공)합니다", re.I),
+    # Superlative self-promo. "가장 권위 있는" is paired with 뉴스/미디어 because
+    # the bare phrase also describes awards in real reporting.
+    re.compile(r"가장 권위 있는 (?:뉴스|미디어|매체)|신뢰할 수 있는 소스", re.I),
+    # Imperative site CTA at the tail — an instruction to the reader, never a
+    # description of an article.
+    re.compile(r"(?:받아보세요|만나보세요|읽어보세요|확인해\s?보세요)\s*[!.]?\s*$", re.I),
 ]
+
+# Navigation bars scraped as a description: a pipe-delimited *list* of section
+# or city names ("KCRG | 시더 래피즈, … | 뉴스, 스포츠, 날씨"). Two or more
+# separators is the discriminator — a single pipe shows up in real headlines
+# ("삼성전자 | 2026년 2분기 실적"), a list of them does not.
+_NAV_LINK_LIST_RE = re.compile(r"\s\|\s.*\s\|\s")
+
+# Outlet "we cover X, Y, Z" blurb. Neither half is decisive alone: real
+# reporting enumerates sectors, and outlet verbs appear in ordinary prose. The
+# *conjunction* is the signal — a five-plus item section list sitting next to a
+# verb the publisher uses about itself.
+#
+# Measured on the 2309-post corpus before adopting: the list alone added 74
+# cards with a real article lede among them; requiring the verb narrowed it to
+# 39 cards, every sampled one of which was genuine outlet chrome (한겨레,
+# 조선비즈, Forbes, 뉴스핌, Business Insider, Quartz …).
+_SECTION_LIST_RE = re.compile(
+    r"(?:[가-힣A-Za-z][가-힣A-Za-z ]{1,8},\s*){4,}[가-힣A-Za-z][가-힣A-Za-z ]{1,8}\s*(?:등|및|,)"
+)
+_OUTLET_VERB_RE = re.compile(
+    r"제공합니다|제공하고|다룹니다|알려드립니다|살펴보세요|알아보세요|경험해|중점을 두|안내자입니다|미디어(?:입니다|로,| 회사)"
+)
 
 # Known site boilerplate phrases (case-insensitive substring match)
 _SITE_BOILERPLATE_PHRASES = [
@@ -226,7 +290,17 @@ def _is_site_boilerplate(desc: str) -> bool:
             logger.debug("Boilerplate pattern matched: %r", desc[:80])
             return True
 
-    # 3. Very short descriptions without any article-specific tokens
+    # 3. Pipe-delimited navigation list
+    if _NAV_LINK_LIST_RE.search(desc):
+        logger.debug("Navigation link list matched: %r", desc[:80])
+        return True
+
+    # 4. Section list next to an outlet verb ("we cover X, Y, Z")
+    if _SECTION_LIST_RE.search(desc) and _OUTLET_VERB_RE.search(desc):
+        logger.debug("Outlet section-list blurb matched: %r", desc[:80])
+        return True
+
+    # 5. Very short descriptions without any article-specific tokens
     # Threshold kept low (35) to catch pure site taglines ("전 세계 시장에 대한 뉴스 및 분석.")
     # while preserving medium-length Korean sentences that lack numbers/acronyms.
     if len(desc) < 35 and not ARTICLE_SPECIFIC_RE.search(desc):
