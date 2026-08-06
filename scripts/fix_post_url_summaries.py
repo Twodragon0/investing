@@ -1,0 +1,334 @@
+#!/usr/bin/env python3
+"""Backfill per-URL summaries in published posts.
+
+``fix_post_descriptions.py`` repairs a post's front-matter ``description``.
+This tool repairs the layer underneath it: the per-article blurbs rendered
+inside the post body (``<p class="news-desc">`` cards and ``<span class="p0-desc">``
+alert entries).
+
+That layer was never measured. The front-matter report reads 99.3% real
+content, while a 2026-08-06 scan over 2309 posts / 4504 cards found ~758 blurbs
+carrying site chrome instead of article content — outlet self-introductions,
+market-data error notices, navigation bars, newsletter solicitations. The
+detector strengthening that keeps *new* posts clean ships separately; this
+backfills what is already published.
+
+Sourcing order, mirroring the collection pipeline so a repaired blurb is
+indistinguishable from a well-collected one:
+
+1. **Re-fetch** the article URL (Google News redirects resolved first) and take
+   its description, accepting it only if it passes the same quality gates a
+   fresh collection would apply — not boilerplate, not a restatement of the
+   title, long enough to inform.
+2. **Translate** to Korean when the recovered text is not already Korean.
+3. **Synthesize** from title + source when the fetch yields nothing usable
+   (dead link, consent wall, paywall).
+
+Sampling 10 flagged URLs before this was written gave 7 usable re-fetches, so
+the fetch path carries the bulk and synthesis is the tail.
+
+Usage:
+    python scripts/fix_post_url_summaries.py                  # dry-run report
+    python scripts/fix_post_url_summaries.py --days 30        # recent posts only
+    python scripts/fix_post_url_summaries.py --apply          # write changes
+    python scripts/fix_post_url_summaries.py --apply --limit 50
+"""
+
+from __future__ import annotations
+
+import argparse
+import html
+import logging
+import re
+import sys
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import UTC, date, datetime, timedelta
+from pathlib import Path
+from typing import NamedTuple
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from common.config import setup_logging  # noqa: E402
+from common.enrichment import _is_desc_duplicate_of_title  # noqa: E402
+from common.enrichment_network import _resolve_google_news_url, fetch_page_metadata  # noqa: E402
+from common.enrichment_synthetic import (  # noqa: E402
+    _is_title_related_description,
+    generate_synthetic_description,
+)
+from common.summary_quality import is_boilerplate  # noqa: E402
+from common.translator import translate_to_korean  # noqa: E402
+
+logger = logging.getLogger(__name__)
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+POSTS_DIR = REPO_ROOT / "_posts"
+
+# A recovered blurb shorter than this says less than the headline already does.
+_MIN_DESC_LEN = 30
+
+# Card blurb: the anchor and its `<p class="news-desc">` sit in the same card
+# div, with the source tag and severity badge in between.
+_CARD_RE = re.compile(
+    r'<a href="(?P<url>[^"]+)"[^>]*class="news-title"[^>]*>(?P<title>.*?)</a>'
+    r'(?P<between>.*?)<p class="news-desc">(?P<desc>.*?)</p>',
+    re.S,
+)
+
+# Alert-box entry: `<a href=...>title</a> <span class="p0-desc">blurb</span>`.
+_P0_RE = re.compile(
+    r'<a href="(?P<url>[^"]+)"[^>]*>(?P<title>.*?)</a>\s*<span class="p0-desc">(?P<desc>.*?)</span>',
+    re.S,
+)
+
+_TAG_RE = re.compile(r"<[^>]+>")
+_DATE_RE = re.compile(r"^(\d{4})-(\d{2})-(\d{2})-")
+_HANGUL_RE = re.compile(r"[가-힣]")
+
+
+class Blurb(NamedTuple):
+    """One per-URL summary found in a post body."""
+
+    path: Path
+    kind: str  # "news-desc" | "p0-desc"
+    url: str
+    title: str
+    raw: str  # the exact inner text to replace, as it appears on disk
+    text: str  # unescaped, tag-stripped text for quality checks
+
+
+def _plain(fragment: str) -> str:
+    """Tag-stripped, entity-decoded text for quality checks."""
+    return html.unescape(_TAG_RE.sub("", fragment)).strip()
+
+
+def _post_date(path: Path) -> date | None:
+    match = _DATE_RE.match(path.name)
+    if not match:
+        return None
+    try:
+        return date(*(int(g) for g in match.groups()))
+    except ValueError:
+        return None
+
+
+def _is_bad(text: str, title: str) -> bool:
+    """A blurb worth replacing: site chrome, or the headline restated."""
+    if not text:
+        return True
+    return is_boilerplate(text) or _is_desc_duplicate_of_title(text, title)
+
+
+def find_blurbs(path: Path) -> list[Blurb]:
+    """Every per-URL summary in a post, flagged or not."""
+    text = path.read_text(encoding="utf-8", errors="replace")
+    found: list[Blurb] = []
+    for kind, pattern in (("news-desc", _CARD_RE), ("p0-desc", _P0_RE)):
+        for match in pattern.finditer(text):
+            found.append(
+                Blurb(
+                    path=path,
+                    kind=kind,
+                    url=match.group("url"),
+                    title=_plain(match.group("title")),
+                    raw=match.group("desc"),
+                    text=_plain(match.group("desc")),
+                )
+            )
+    return found
+
+
+def collect_targets(posts_dir: Path, days: int | None) -> list[Blurb]:
+    """Flagged blurbs across the corpus, newest post first."""
+    cutoff = None if days is None else datetime.now(UTC).date() - timedelta(days=days)
+    targets: list[Blurb] = []
+    for path in sorted(posts_dir.glob("*.md"), reverse=True):
+        posted = _post_date(path)
+        if cutoff is not None and (posted is None or posted < cutoff):
+            continue
+        targets.extend(b for b in find_blurbs(path) if _is_bad(b.text, b.title))
+    return targets
+
+
+def _resolve(url: str) -> str:
+    """Follow a Google News redirect to the publisher, best effort."""
+    if "news.google.com" not in url:
+        return url
+    try:
+        resolved = _resolve_google_news_url(url)
+    except Exception as exc:  # network/parse failures are expected on old links
+        logger.debug("Google News resolve failed for %s: %s", url[:60], exc)
+        return ""
+    return resolved if resolved and "news.google.com" not in resolved else ""
+
+
+def refetch(blurb: Blurb) -> str:
+    """A usable replacement from the live article, or "" if none.
+
+    Applies the gates a fresh collection would: not boilerplate, not a
+    restatement of the headline, related to the headline, long enough.
+    """
+    link = _resolve(blurb.url)
+    if not link:
+        return ""
+    try:
+        meta = fetch_page_metadata(link, title=blurb.title)
+    except Exception as exc:
+        logger.debug("Fetch failed for %s: %s", link[:60], exc)
+        return ""
+
+    desc = (meta or {}).get("description", "").strip()
+    if len(desc) < _MIN_DESC_LEN:
+        return ""
+    if is_boilerplate(desc) or _is_desc_duplicate_of_title(desc, blurb.title):
+        return ""
+    if not _is_title_related_description(blurb.title, desc):
+        return ""
+
+    if not _HANGUL_RE.search(desc):
+        try:
+            translated = translate_to_korean(desc)
+        except Exception as exc:
+            logger.debug("Translation failed, keeping source text: %s", exc)
+            translated = ""
+        if translated and not is_boilerplate(translated):
+            desc = translated
+
+    return desc
+
+
+def synthesize(blurb: Blurb) -> str:
+    """Fact-based fallback built from the headline when the link is unusable."""
+    try:
+        return generate_synthetic_description(blurb.title, "", None).strip()
+    except Exception as exc:
+        logger.debug("Synthesis failed for %r: %s", blurb.title[:60], exc)
+        return ""
+
+
+def replace_in_post(content: str, old_raw: str, new_text: str) -> tuple[str, bool]:
+    """Swap one blurb's inner text, leaving the surrounding markup untouched.
+
+    The replacement is HTML-escaped because it lands inside an element body,
+    and it is applied only when ``old_raw`` occurs exactly once — a blurb
+    repeated verbatim in the same post would otherwise have every copy
+    rewritten from one URL's fetch.
+    """
+    if content.count(old_raw) != 1:
+        return content, False
+    escaped = html.escape(new_text, quote=False)
+    return content.replace(old_raw, escaped, 1), True
+
+
+def _repair_one(blurb: Blurb) -> tuple[Blurb, str, str]:
+    """Resolve a replacement for one blurb. Returns (blurb, text, source)."""
+    recovered = refetch(blurb)
+    if recovered:
+        return blurb, recovered, "refetch"
+    synthetic = synthesize(blurb)
+    if synthetic and not _is_bad(synthetic, blurb.title):
+        return blurb, synthetic, "synthetic"
+    return blurb, "", "unresolved"
+
+
+def repair(targets: list[Blurb], workers: int) -> list[tuple[Blurb, str, str]]:
+    """Resolve replacements concurrently, preserving input order."""
+    results: list[tuple[Blurb, str, str] | None] = [None] * len(targets)
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futures = {pool.submit(_repair_one, b): i for i, b in enumerate(targets)}
+        for future in as_completed(futures):
+            index = futures[future]
+            try:
+                results[index] = future.result(timeout=60)
+            except Exception as exc:
+                logger.debug("Repair failed for %s: %s", targets[index].url[:60], exc)
+                results[index] = (targets[index], "", "unresolved")
+    return [r for r in results if r is not None]
+
+
+def apply_repairs(repairs: list[tuple[Blurb, str, str]]) -> tuple[int, int]:
+    """Write resolved replacements to disk, grouped per post.
+
+    Returns ``(blurbs_written, posts_changed)``. Ambiguous anchors are skipped
+    rather than guessed at.
+    """
+    by_post: dict[Path, list[tuple[Blurb, str]]] = {}
+    for blurb, text, _source in repairs:
+        if text:
+            by_post.setdefault(blurb.path, []).append((blurb, text))
+
+    written = 0
+    for path, items in by_post.items():
+        content = path.read_text(encoding="utf-8", errors="replace")
+        changed_here = 0
+        for blurb, text in items:
+            content, ok = replace_in_post(content, blurb.raw, text)
+            if ok:
+                changed_here += 1
+            else:
+                logger.warning("Skipped ambiguous blurb anchor in %s: %r", path.name, blurb.raw[:60])
+        if changed_here:
+            path.write_text(content, encoding="utf-8")
+            written += changed_here
+    return written, len([p for p, items in by_post.items() if items])
+
+
+def format_report(repairs: list[tuple[Blurb, str, str]], applied: bool) -> str:
+    """Human-readable summary with a sample of each outcome."""
+    total = len(repairs)
+    counts = {"refetch": 0, "synthetic": 0, "unresolved": 0}
+    for _blurb, _text, source in repairs:
+        counts[source] = counts.get(source, 0) + 1
+
+    lines = [
+        f"URL 요약 백필 {'적용' if applied else '(dry-run)'}",
+        f"  대상 블러브   : {total}",
+        f"  재수집 성공   : {counts['refetch']}",
+        f"  합성 대체     : {counts['synthetic']}",
+        f"  해결 실패     : {counts['unresolved']}",
+    ]
+
+    for source in ("refetch", "synthetic"):
+        samples = [(b, t) for b, t, s in repairs if s == source][:3]
+        if not samples:
+            continue
+        lines.append(f"\n  --- {source} 샘플 ---")
+        for blurb, text in samples:
+            lines.append(f"  [{blurb.path.name}] {blurb.title[:60]}")
+            lines.append(f"    before: {blurb.text[:80]}")
+            lines.append(f"    after : {text[:80]}")
+    return "\n".join(lines)
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Backfill per-URL summaries in published posts.")
+    parser.add_argument("--days", type=int, default=None, help="최근 N일 포스트만 (기본: 전체)")
+    parser.add_argument("--limit", type=int, default=None, help="처리할 블러브 최대 개수")
+    parser.add_argument("--workers", type=int, default=6, help="동시 재수집 스레드 수 (기본 6)")
+    parser.add_argument("--apply", action="store_true", help="실제 파일에 기록 (기본: dry-run)")
+    args = parser.parse_args()
+
+    setup_logging()
+
+    targets = collect_targets(POSTS_DIR, args.days)
+    if args.limit is not None:
+        targets = targets[: args.limit]
+
+    if not targets:
+        print("불량 URL 요약 없음.")
+        return 0
+
+    logger.info("Repairing %d flagged blurbs with %d workers", len(targets), args.workers)
+    repairs = repair(targets, args.workers)
+
+    print(format_report(repairs, applied=args.apply))
+
+    if args.apply:
+        written, posts = apply_repairs(repairs)
+        print(f"\n적용: 블러브 {written}건 / 포스트 {posts}개")
+    else:
+        print("\n(dry-run — 적용하려면 --apply)")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
