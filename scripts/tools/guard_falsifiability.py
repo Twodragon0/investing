@@ -395,6 +395,36 @@ STATIC_CASES: tuple[StaticCase, ...] = (
 )
 
 
+def parse_shard(spec: str) -> tuple[int, int]:
+    """``"2/5"`` -> ``(2, 5)``. Index is 1-based, as it appears in CI job names."""
+    try:
+        index_text, total_text = spec.split("/", 1)
+        index, total = int(index_text), int(total_text)
+    except ValueError as exc:
+        raise SystemExit(f"--shard 형식은 'N/M' 이다 (받은 값: {spec!r})") from exc
+    if total < 1 or not (1 <= index <= total):
+        raise SystemExit(f"--shard 범위 오류: 1 <= N <= M 이어야 한다 (받은 값: {spec!r})")
+    return index, total
+
+
+def select_shard(items: list, shard: tuple[int, int] | None) -> list:
+    """Round-robin slice of ``items`` for one shard.
+
+    Round-robin rather than contiguous blocks: cases are grouped by guard file
+    in source order, so a contiguous split would put every coverage case in one
+    shard and every tree-write case in another, making shard runtimes lopsided.
+    Interleaving spreads the slow ones evenly.
+
+    Every item lands in exactly one shard for any (index, total), so a run split
+    across shards covers the same set as an unsharded run — asserted in
+    ``tests/test_guard_falsifiability.py``.
+    """
+    if shard is None:
+        return list(items)
+    index, total = shard
+    return [item for position, item in enumerate(items) if position % total == index - 1]
+
+
 def apply_static_mutation(source: str, case: StaticCase) -> str:
     """정적 케이스의 변형을 적용한다.
 
@@ -531,10 +561,10 @@ def _verdict(rc_mutated: int, rc_control: int) -> str:
     return "CONTROL-FAIL"
 
 
-def _run_static_cases() -> list[dict]:
+def _run_static_cases(shard: tuple[int, int] | None = None) -> list[dict]:
     """정적 가드 케이스를 검증한다 (각각 자기 대상 파일만 변형/복원)."""
     results: list[dict] = []
-    for case in STATIC_CASES:
+    for case in select_shard(list(STATIC_CASES), shard):
         target = REPO_ROOT / case.target
         original = target.read_text(encoding="utf-8")
         try:
@@ -570,17 +600,23 @@ def _run_static_cases() -> list[dict]:
     return results
 
 
-def run_all() -> list[dict]:
-    """모든 케이스를 검증하고 결과 리스트를 돌려준다."""
+def run_all(shard: tuple[int, int] | None = None) -> list[dict]:
+    """모든 케이스를 검증하고 결과 리스트를 돌려준다.
+
+    ``shard`` 가 주어지면 해당 샤드에 배정된 케이스만 실행한다. 드리프트 검사
+    (CASES 미등록 fixture)는 샤드와 무관하게 항상 전수로 돈다 — 특정 샤드에서만
+    보이는 미등록 fixture 는 없고, 누락은 어느 샤드에서든 즉시 드러나야 한다.
+    """
     _assert_safe_to_run()
     original = CONFTEST.read_text(encoding="utf-8")
     state_snapshot = _snapshot_state()
 
     unmapped = [f for f in discover_autouse_fixtures(original) if f not in CASES]
+    fixture_cases = select_shard(list(CASES.items()), shard)
 
     results: list[dict] = []
     try:
-        for name, node in CASES.items():
+        for name, node in fixture_cases:
             patched = (
                 _disable_module_level(original) if name == _MODULE_LEVEL_CASE else _disable_fixture(original, name)
             )
@@ -618,7 +654,7 @@ def run_all() -> list[dict]:
             }
         )
 
-    results.extend(_run_static_cases())
+    results.extend(_run_static_cases(shard))
     return results
 
 
@@ -641,9 +677,10 @@ def main() -> int:
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--json", action="store_true", help="JSON 출력")
     mode.add_argument("--check", action="store_true", help="vacuous/미등록 시 exit 1 (CI)")
+    parser.add_argument("--shard", metavar="N/M", help="N번째/M개 샤드만 실행 (CI 매트릭스용)")
     args = parser.parse_args()
 
-    results = run_all()
+    results = run_all(parse_shard(args.shard) if args.shard else None)
 
     if args.json:
         print(json.dumps(results, ensure_ascii=False, indent=2))

@@ -45,7 +45,24 @@ jobs:
     runs-on: ubuntu-latest
     # 케이스당 pytest 를 2회(patched/control) 띄우므로 47종 = 94회 프로세스 기동.
     # 가드 테스트 자체는 각 1초 미만이고 대부분이 인터프리터 시작 비용이다.
-    timeout-minutes: 20
+    #
+    # 샤딩: 케이스가 **실제 레포 파일**을 변형했다 복원하므로 한 체크아웃 안에서
+    # 병렬로 돌릴 수 없다(두 케이스가 같은 파일을 노리면 서로의 복원을 덮어쓴다).
+    # 대신 매트릭스로 나눠 샤드마다 독립 체크아웃을 쓴다. 분할이 정확한지는
+    # tests/test_guard_falsifiability_shard.py 가 강제한다 — 조용히 빠진 케이스는
+    # 가드 하나가 검증되지 않은 채 CI 가 그린인 상태를 만든다.
+    #
+    # 실측 추이: 11케이스 1m44s -> 37케이스 3m49s -> 47케이스 4m09s (약 5s/케이스).
+    # 8샤드면 샤드당 6케이스 안팎으로 ~1분.
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3, 4, 5, 6, 7, 8]
+    # 샤드 수는 매트릭스 길이에서 파생한다. `/8` 을 하드코딩하면 매트릭스를
+    # 줄였을 때 남는 샤드의 케이스가 조용히 미실행된다 — 정확히 이 하네스가
+    # 막으려는 종류의 침묵이다.
+    name: falsifiability (${{ matrix.shard }}/${{ strategy.job-total }})
+    timeout-minutes: 10
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
@@ -65,7 +82,7 @@ jobs:
       - name: Run falsifiability harness
         # 하네스는 tests/conftest.py 를 덮어썼다 복원한다. 러너 체크아웃은
         # 일회성이고 permissions 도 read 이므로 유출 경로가 없다.
-        run: python scripts/tools/guard_falsifiability.py --check
+        run: python scripts/tools/guard_falsifiability.py --check --shard ${{ matrix.shard }}/${{ strategy.job-total }}
 
       - name: Verify working tree restored
         # 하네스가 finally 에서 복원하지 못하고 죽는 회귀를 잡는다. 대상은 두 가지:
