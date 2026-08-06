@@ -294,3 +294,22 @@ def test_format_report_counts_each_outcome() -> None:
 
 def test_format_report_marks_applied_runs() -> None:
     assert "적용" in mod.format_report([(_blurb(), "x", "refetch")], applied=True)
+
+
+def test_repair_one_skips_synthesis_when_disabled(monkeypatch: pytest.MonkeyPatch) -> None:
+    """`--skip-synthetic` keeps the original blurb rather than degrading it.
+
+    Measured on the corpus before this flag existed: the synthesis fallback
+    appended source suffixes and stop-word "주요 키워드" tails, producing output
+    worse than the title restatement it replaced. Re-fetch is a clear win;
+    synthesis is not, so it must be switchable off.
+    """
+    monkeypatch.setattr(mod, "refetch", lambda blurb: "")
+
+    def _never(blurb):  # pragma: no cover - must not be reached
+        raise AssertionError("synthesis must be skipped")
+
+    monkeypatch.setattr(mod, "synthesize", _never)
+
+    _blurb_out, text, source = mod._repair_one(_blurb(), allow_synthesis=False)
+    assert (text, source) == ("", "unresolved")
