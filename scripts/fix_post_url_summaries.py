@@ -25,7 +25,16 @@ indistinguishable from a well-collected one:
    (dead link, consent wall, paywall).
 
 Sampling 10 flagged URLs before this was written gave 7 usable re-fetches, so
-the fetch path carries the bulk and synthesis is the tail.
+the fetch path carries the bulk.
+
+**Run this incrementally.** 90% of flagged blurbs point at `news.google.com`
+redirect links, and Google throttles the resolver hard: across three
+back-to-back full passes the re-fetch yield fell 523 → 71 → 0, with the
+resolver returning empty for every link by the third. Direct publisher URLs
+kept working throughout, so the ceiling is the redirect resolver, not this
+tool. Use `--limit` with a few hundred per run and space the runs out; a pass
+that reports mostly "해결 실패" is a throttled pass, not a corpus without
+recoverable summaries.
 
 Usage:
     python scripts/fix_post_url_summaries.py                  # dry-run report
@@ -291,6 +300,7 @@ def apply_repairs(repairs: list[tuple[Blurb, str, str]]) -> tuple[int, int]:
             by_post.setdefault(blurb.path, []).append((blurb, text))
 
     written = 0
+    posts_written = 0
     for path, items in by_post.items():
         content = path.read_text(encoding="utf-8", errors="replace")
         changed_here = 0
@@ -303,7 +313,8 @@ def apply_repairs(repairs: list[tuple[Blurb, str, str]]) -> tuple[int, int]:
         if changed_here:
             path.write_text(content, encoding="utf-8")
             written += changed_here
-    return written, len([p for p, items in by_post.items() if items])
+            posts_written += 1
+    return written, posts_written
 
 
 def format_report(repairs: list[tuple[Blurb, str, str]], applied: bool) -> str:
