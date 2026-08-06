@@ -469,16 +469,197 @@ _KOREAN_TITLE_CATEGORIES: Dict[str, str] = {
 _KOREAN_TITLE_KW_SETS: list = [(frozenset(k.split("|")), v) for k, v in _KOREAN_TITLE_CATEGORIES.items()]
 
 
+# ---------------------------------------------------------------------------
+# Output hygiene for synthesised descriptions (2026-08-06).
+#
+# The 2026-08-06 backfill dry-run synthesised 417 replacements and a large share
+# read worse than the title restatement they replaced. Three causes, each fixed
+# below and pinned in tests/test_enrichment_synthetic_quality.py.
+# ---------------------------------------------------------------------------
+
+# Outlet suffix: `… - The Hill`, `… | 공감신문`. Bounded and digit-free so an
+# informative subtitle ("삼성전자 - 2분기 영업이익 14조 원") is left alone; the
+# previous single-token pattern (`\S+$`) stripped 프리진경제 but not "The Hill".
+_SOURCE_SUFFIX_RE = re.compile(r"\s*[-–—|]\s*(?![^-–—|]*\d)[^-–—|]{2,20}$")
+
+# Grammatical particles that ride along when Hangul runs are taken verbatim,
+# turning "러시아" into the non-word "러시아에서".
+_KO_PARTICLES = (
+    "에서의",
+    "으로서",
+    "으로써",
+    "에게서",
+    "이라는",
+    "라는",
+    "에서",
+    "에게",
+    "으로",
+    "부터",
+    "까지",
+    "보다",
+    "처럼",
+    "만큼",
+    "조차",
+    "마저",
+    "에",
+    "은",
+    "는",
+    "이",
+    "가",
+    "을",
+    "를",
+    "의",
+    "와",
+    "과",
+    "로",
+    "도",
+    "만",
+    "및",
+)
+
+# Adverbs, conjunctions and reporting verbs that carry no topical information.
+_KO_STOPWORDS = frozenset(
+    {
+        "그리고",
+        "그러나",
+        "따라서",
+        "하지만",
+        "그런데",
+        "이렇게",
+        "그래서",
+        "또한",
+        "다만",
+        "따르면",
+        "일제히",
+        "관련",
+        "대해",
+        "위해",
+        "통해",
+        "대한",
+        "가장",
+        "이번",
+        "올해",
+        "지난",
+        "최근",
+        "오늘",
+        "내일",
+        "어제",
+        "우리",
+        "자신",
+        "경우",
+        "이후",
+        "이전",
+        "예정",
+        "전망",
+        "발표",
+        "기록",
+        "확인",
+        "가능",
+        "필요",
+        "시작",
+        "종료",
+        "진행",
+        "연구",
+        "선정",
+        "규모",
+        "혐의",
+        "결과",
+        "상황",
+        "내용",
+        "설명",
+        "언급",
+        "제기",
+    }
+)
+
+# Conjugated predicates. A Hangul run ending in one of these is a verb phrase,
+# not a topic — "하락했습니다" read as a keyword in the first filtering pass.
+_KO_PREDICATE_ENDINGS = (
+    "습니다",
+    "합니다",
+    "됩니다",
+    "입니다",
+    "했다",
+    "한다",
+    "된다",
+    "였다",
+    "이다",
+    "있다",
+    "없다",
+    "간다",
+    "온다",
+    "했고",
+    "하며",
+    "되며",
+    "하고",
+    "되고",
+    "할까",
+    "될까",
+)
+
+# Bare units and currencies: the figure carries the information, the unit alone
+# does not ("주요 키워드: 요원, 러시아, 달러").
+_KO_UNIT_WORDS = frozenset({"달러", "원화", "유로", "엔화", "위안", "포인트", "퍼센트", "억원", "조원"})
+
+_SENTENCE_ENDERS = (".", "!", "?", "…")
+
+
+def _strip_source_suffix(title: str) -> str:
+    """Drop a trailing outlet name, keeping informative subtitles."""
+    return _SOURCE_SUFFIX_RE.sub("", title).strip()
+
+
+def _strip_particle(token: str) -> str:
+    """Remove one trailing grammatical particle, longest match first."""
+    for particle in _KO_PARTICLES:
+        if token.endswith(particle) and len(token) - len(particle) >= 2:
+            return token[: -len(particle)]
+    return token
+
+
+def korean_keywords(title: str, limit: int = 3) -> list:
+    """Topical Hangul keywords from a title, or ``[]`` when none survive.
+
+    Returning an empty list is a real outcome: a `주요 키워드:` label with one
+    filler word under it is worse than no label, so callers omit the clause.
+    """
+    seen: list = []
+    for raw in re.findall(r"[가-힣]{2,}", title):
+        token = _strip_particle(raw)
+        if len(token) < 2 or token in seen:
+            continue
+        if token in _KO_STOPWORDS or token in _KO_UNIT_WORDS:
+            continue
+        if token.endswith(_KO_PREDICATE_ENDINGS):
+            continue
+        seen.append(token)
+        if len(seen) >= limit:
+            break
+    return seen if len(seen) >= 2 else []
+
+
+def _join_clauses(head: str, *tails: str) -> str:
+    """Join a title with generated clauses without doubling terminators."""
+    text = head.strip()
+    if text and not text.endswith(_SENTENCE_ENDERS):
+        text += "."
+    for tail in tails:
+        tail = tail.strip()
+        if tail:
+            text = f"{text} {tail}".strip()
+    return text
+
+
 def _analyze_korean_title(title: str) -> str:
     """Analyze a Korean news title and generate a fact-based description.
 
     Produces clean, factual descriptions based on the title content
     rather than speculative or template-heavy commentary.
     """
-    clean = re.sub(r"\s*[-–—|]\s*\S+$", "", title).strip()
+    clean = _strip_source_suffix(title)
     pct = re.search(r"(\d+(?:\.\d+)?)\s*%", title)
     amount = re.search(r"(\d[\d,.]*)\s*(?:억|조|만|원|달러)", title)
-    kr_entities = re.findall(r"[가-힣]{2,}", title)[:3]
+    kr_entities = korean_keywords(title)
 
     # Build context suffix from extracted data
     context_parts = []
@@ -491,50 +672,56 @@ def _analyze_korean_title(title: str) -> str:
     # Circuit breaker / market crash
     if any(kw in title for kw in ["서킷브레이커", "사이드카"]):
         trigger = "매수 사이드카" if "매수" in title else "서킷브레이커/사이드카"
-        return f"{clean[:120]}. {trigger} 발동{context_suffix}."
+        return _join_clauses(clean[:120], f"{trigger} 발동{context_suffix}.")
 
     # Crash / panic
     if any(kw in title for kw in ["폭락", "급락", "패닉"]):
-        return f"{clean[:120]}.{context_suffix} 급락 관련 보도."
+        return _join_clauses(clean[:120], f"{context_suffix.strip()} 급락 관련 보도.".strip())
 
     # Semiconductor
     if any(kw in title for kw in ["삼성전자", "하이닉스", "반도체"]):
-        return f"{clean[:120]}.{context_suffix} 반도체 섹터 보도."
+        return _join_clauses(clean[:120], f"{context_suffix.strip()} 반도체 섹터 보도.".strip())
 
     # Fixed-response categories via dict table
     for kw_set, category_label in _KOREAN_TITLE_KW_SETS:
         if any(kw in title for kw in kw_set):
-            return f"{clean[:120]}.{context_suffix} {category_label}"
+            return _join_clauses(clean[:120], f"{context_suffix.strip()} {category_label}".strip())
 
     # Crypto majors
     if any(kw in title for kw in ["비트코인", "이더리움", "알트코인", "리플"]):
-        return f"{clean[:120]}.{context_suffix} 암호화폐 시장 보도."
+        return _join_clauses(clean[:120], f"{context_suffix.strip()} 암호화폐 시장 보도.".strip())
 
     # DeFi / digital assets
     if any(kw in title for kw in ["디파이", "디지털자산", "가상자산", "코인", "블록체인"]):
-        return f"{clean[:120]}.{context_suffix} 디지털 자산 보도."
+        return _join_clauses(clean[:120], f"{context_suffix.strip()} 디지털 자산 보도.".strip())
 
     # AI / tech
     if any(kw in title for kw in ["AI", "인공지능", "챗봇", "생성형"]):
-        return f"{clean[:120]}.{context_suffix} AI 산업 보도."
+        return _join_clauses(clean[:120], f"{context_suffix.strip()} AI 산업 보도.".strip())
 
     # EV / battery
     if any(kw in title for kw in ["2차전지", "배터리", "전기차", "EV"]):
-        return f"{clean[:120]}.{context_suffix} 전기차·배터리 보도."
+        return _join_clauses(clean[:120], f"{context_suffix.strip()} 전기차·배터리 보도.".strip())
 
     # Foreign / institutional flow
     if any(kw in title for kw in ["외국인", "기관", "순매수", "순매도", "수급"]):
-        return f"{clean[:120]}.{context_suffix} 수급 동향 보도."
+        return _join_clauses(clean[:120], f"{context_suffix.strip()} 수급 동향 보도.".strip())
 
     # Earnings
     if any(kw in title for kw in ["실적", "어닝", "매출", "영업이익"]):
-        return f"{clean[:120]}.{context_suffix} 기업 실적 보도."
+        return _join_clauses(clean[:120], f"{context_suffix.strip()} 기업 실적 보도.".strip())
 
     # Fallback: use clean title + entity context
+    # A figure lifted from the title informs; a bag of the title's own words
+    # does not. When both are available the number wins and the keyword tail is
+    # dropped — emitting "(3.2% 변동) 주요 키워드: 국내, 관광객, 늘어난." padded
+    # the sentence without adding anything.
+    if context_suffix:
+        return _join_clauses(clean[:120], context_suffix.strip())
     if kr_entities:
-        entity_str = ", ".join(kr_entities[:3])
-        return f"{clean[:120]}.{context_suffix} 주요 키워드: {entity_str}."
-    return clean[:150] if len(clean) > 15 else title
+        entity_str = ", ".join(kr_entities)
+        return _join_clauses(clean[:120], f"주요 키워드: {entity_str}.")
+    return _join_clauses(clean[:150]) if len(clean) > 15 else _join_clauses(title)
 
 
 # ---------------------------------------------------------------------------
