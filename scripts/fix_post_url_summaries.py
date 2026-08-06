@@ -59,7 +59,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from common.config import setup_logging  # noqa: E402
 from common.enrichment import _is_desc_duplicate_of_title  # noqa: E402
-from common.enrichment_network import _resolve_google_news_url, fetch_page_metadata  # noqa: E402
+from common.enrichment_network import (  # noqa: E402
+    _is_google_news_host,
+    _resolve_google_news_url,
+    fetch_page_metadata,
+)
 from common.enrichment_synthetic import (  # noqa: E402
     _is_title_related_description,
     generate_synthetic_description,
@@ -169,15 +173,20 @@ def collect_targets(posts_dir: Path, days: int | None) -> list[Blurb]:
 
 
 def _resolve(url: str) -> str:
-    """Follow a Google News redirect to the publisher, best effort."""
-    if "news.google.com" not in url:
+    """Follow a Google News redirect to the publisher, best effort.
+
+    Host is parsed rather than substring-matched, so an article URL that merely
+    mentions ``news.google.com`` in its path or query is not misrouted through
+    the redirect resolver (CodeQL ``py/incomplete-url-substring-sanitization``).
+    """
+    if not _is_google_news_host(url):
         return url
     try:
         resolved = _resolve_google_news_url(url)
     except Exception as exc:  # network/parse failures are expected on old links
         logger.debug("Google News resolve failed for %s: %s", url[:60], exc)
         return ""
-    return resolved if resolved and "news.google.com" not in resolved else ""
+    return resolved if resolved and not _is_google_news_host(resolved) else ""
 
 
 def refetch(blurb: Blurb) -> str:
@@ -262,7 +271,7 @@ def replace_in_post(content: str, old_raw: str, new_text: str) -> tuple[str, boo
 
 def is_google_news(blurb: Blurb) -> bool:
     """True when the blurb's link is a Google News redirect rather than an article."""
-    return "news.google.com" in blurb.url
+    return _is_google_news_host(blurb.url)
 
 
 def _repair_one(blurb: Blurb, allow_synthesis: bool = True, direct_only: bool = False) -> tuple[Blurb, str, str]:

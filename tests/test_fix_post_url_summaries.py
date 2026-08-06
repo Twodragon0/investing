@@ -429,3 +429,20 @@ def test_direct_only_still_processes_publisher_urls(monkeypatch: pytest.MonkeyPa
 def test_is_google_news_classifies_both_forms() -> None:
     assert mod.is_google_news(_blurb(url="https://news.google.com/rss/articles/A")) is True
     assert mod.is_google_news(_blurb(url="https://www.cnbc.com/a")) is False
+
+
+def test_is_google_news_matches_on_host_not_substring() -> None:
+    """A publisher URL that merely mentions the host in its path is an article.
+
+    Substring matching here was flagged by CodeQL
+    (`py/incomplete-url-substring-sanitization`) and would also misroute such a
+    URL through the redirect resolver, which cannot resolve it.
+    """
+    assert mod.is_google_news(_blurb(url="https://news.google.com/rss/articles/A")) is True
+    assert mod.is_google_news(_blurb(url="https://rss.news.google.com/articles/A")) is True
+    assert mod.is_google_news(_blurb(url="https://evil.example.com/?next=news.google.com")) is False
+    assert mod.is_google_news(_blurb(url="https://example.com/news.google.com/story")) is False
+
+
+def test_resolve_passes_through_non_google_urls() -> None:
+    assert mod._resolve("https://www.cnbc.com/a") == "https://www.cnbc.com/a"
