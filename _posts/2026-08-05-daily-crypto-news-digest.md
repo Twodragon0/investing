@@ -42,6 +42,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-05 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: FBI 요원은 용의자의 계좌에서 암호화폐를 빼낸 혐의를 받고 있습니다. - 104건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 암호화폐 이슈 부각</li><li>🏦 <strong>거래소</strong>: 17건 수집</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 달러 관련 23건</li><li>🔵 <strong>규제/정책</strong>: 20건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.wsj.com">FBI 요원은 용의자의 계좌에서 암호화폐를 빼낸 혐의를 받고 있습니다.</a> <span class="p0-desc">FBI 요원, 용의자 계좌에서 암호화폐 빼돌린 혐의 WSJ F.B.I. FBI 요원, 암호화폐 훔친 혐의로 기소 nytimes.com 연준은 러시아에서 거의 100만 달러에 달하는.</span></li><li><a href="https://wsbt.com">FBI agent accused in $1 million cryptocurrency theft: Report - WSBT</a></li><li><a href="https://www.pymnts.com">FBI 요원, 100만 달러 규모 암호화폐 절도 혐의 인정</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **104건** 수집

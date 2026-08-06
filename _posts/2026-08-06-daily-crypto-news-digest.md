@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-06 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 1억 달러 규모 비트코인을 도난당한 현재 진행 중인 Coldcard 해킹에 대해 우리가 알고 있는 것 - CBC - 111건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 동향 주시</li><li>🏦 <strong>거래소</strong>: 17건 수집</li><li>📈 <strong>가격/시장</strong>: 달러, 암호화폐 이슈 부각</li><li>🔵 <strong>규제/정책</strong>: 15건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.cbc.ca">1억 달러 규모 비트코인을 도난당한 현재 진행 중인 Coldcard 해킹에 대해 우리가 알고 있는 것 - CBC</a> <span class="p0-desc">CBC는 캐나다를 위해 항상 여기에 있습니다. 뉴스, 엔터테인먼트, 스포츠, 음악 등을 위한 홈입니다.</span></li><li><a href="https://lifehacker.com">진행 중인 대규모 암호화폐 해킹으로부터 자신을 보호하는 방법 - Lifehacker</a> <span class="p0-desc">Lifehacker는 삶의 모든 측면을 최적화하는 최고의 권위자입니다. 모든 것을 더 잘하십시오.</span></li><li><a href="https://thehill.com">FBI 요원, 러시아에서 약 100만 달러 규모의 암호화폐를 훔친 혐의로 기소 - The Hill</a> <span class="p0-desc">FBI 요원, 러시아에서 약 100만 달러 규모 암호화폐를 훔친 혐의로 기소</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 1억 달러 규모 비트코인을 도난당한 현재 진행 중인 Coldcard 해킹에 대해 우리가 알고 있는 것 - CBC 
-외 P0 긴급 이슈 12건이 추가 감지되었습니다. 총 111건의 뉴스 중 P1 주요 이슈도 5건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (44건): 비트코인, 달러, 암호화폐 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **🏦 거래소** (17건): 증권 관련 지표와 수급 흐름을 함께 확인하세요.
-- **📈 가격/시장** (22건): 달러, 암호화폐, 규칙 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 1억 달러 규모 비트코인을 도난당한 현재 진행 중인 Coldcard 해킹에 대해 우리가 알고 있는 것 - CBC
-- 진행 중인 대규모 암호화폐 해킹으로부터 자신을 보호하는 방법 - Lifehacker
-- FBI 요원, 러시아에서 약 100만 달러 규모의 암호화폐를 훔친 혐의로 기소 - The Hill
-
-### 주요 이슈
-
-- D-BIZ 암호화폐 뉴스] “비트코인 ‘500일 규칙’ 사상 최대 시험대…ETF·기관 자금이 4년 주기 바꾼다” - 데일리비즈온
-- Hashdex는 자산 확보에 어려움을 겪은 후 비트코인 ETF을 종료합니다
-- 스테이블코인 발행인의 수익 손실로 인해 수익이 상회했음에도 불구하고 Circle 주가 3% 하락
-- 외 2건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, ETF
-- **주요 출처**: Binance(40건), Google News KR(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-08-06.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-08-06.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **111건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

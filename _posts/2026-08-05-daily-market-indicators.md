@@ -21,8 +21,6 @@ image_alt: "시장 심리 및 리스크 지표 (2026-08-05) - 시장 분석 뉴�
 - 국채 금리 관련 뉴스 (보완):
 
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">57.6</div><div class="stat-label">공포탐욕 (greed)</div></div><div class="stat-item"><div class="stat-value">16.37</div><div class="stat-label">VIX</div></div><div class="stat-item"><div class="stat-value">99.90</div><div class="stat-label">DXY</div></div><div class="stat-item"><div class="stat-value">4,143.80</div><div class="stat-label">금</div></div></div>
-
 ## 1. 시장 심리 지표
 
 | 지표 | 현재값 | 변화 | 신호 |

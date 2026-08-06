@@ -33,52 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-06 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 반도체주 급등에 코스피 6,600선 회복…매수 사이드카 발동 - 산경투데이 - 199건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 관련 54건</li><li>📊 <strong>매크로/금리</strong>: 환율, 금리 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 반도체, 삼성전자 관련 20건</li><li>🏦 <strong>거래소</strong>: IPO, 종목 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.sankyungtoday.com">반도체주 급등에 코스피 6,600선 회복…매수 사이드카 발동 - 산경투데이</a> <span class="p0-desc">반도체주 급등에 코스피 6,600선 회복…매수 사이드카 발동 산경투데이</span></li><li><a href="https://www.sedaily.com">“하락 대비 상승이 8배”… 코스피 뒷심에 코스닥 ‘3연 사이드카’ 상승 마감 [이런국장 저런주식</a> <span class="p0-desc">“하락 대비 상승이 8배”… 코스피 뒷심에 코스닥 ‘3연 사이드카’ 상승 마감 [이런국장 저런주식] 서울경제</span></li><li><a href="https://www.freezine.co.kr">코스피, 롤러코스터 장세 끝에 1.6%↑.코스닥은 사상 첫 '3일 연속 매수 사이드카' - 프리진경제</a> <span class="p0-desc">코스피, 롤러코스터 장세 끝에 1.6%↑.코스닥은 사상 첫 '3일 연속 매수 사이드카' 프리진경제</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 반도체주 급등에 코스피 6,600선 회복…매수 사이드카 발동 - 산경투데이 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 199건의 뉴스 중 P1 주요 이슈도 47건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (54건): 코스피, 코스닥, 삼성전자 가격 변동 (54건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (16건): 환율, 금리, 조선비즈 매크로 변수 (16건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🤖 AI/기술** (20건): 반도체, 삼성전자, 엔비디아 기술 이슈 (20건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 반도체주 급등에 코스피 6,600선 회복…매수 사이드카 발동 - 산경투데이
-- “하락 대비 상승이 8배”… 코스피 뒷심에 코스닥 ‘3연 사이드카’ 상승 마감 [이런국장 저런주식
-- 코스피, 롤러코스터 장세 끝에 1.6%↑.코스닥은 사상 첫 '3일 연속 매수 사이드카' - 프리진경제
-
-### 주요 이슈
-
-- 미국 기술주는 랠리에 큰 변화를 맞이합니다! 실적 시즌이 N으로 AI 낙관론을 다시 불러일으킵니다.
-- 주식선물 18종목·옵션 2종목, 9월 코스피·코스닥 추가 상장 - 동행미디어 시대
-- 오늘의 주식 시장: Dow는 400포인트 상승했지만 S&P 500의 이익은 지워지고 Nas는
-- 외 44건
-
-### 투자자 체크포인트
-
-- 한국 기사 74건, 글로벌 기사 125건 수집
-- 한국 지수: KOSPI 6,598.26(+3.76%), KOSDAQ 799.59(+2.42%), USD/KRW 1,421.14(-0.58%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">54건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:30%"></div></div><span class="theme-count">16건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:37%"></div></div><span class="theme-count">20건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:19%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:11%"></div></div><span class="theme-count">6건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-08-06.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-08-06.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,598.26 (+3.76%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 799.59 (+2.42%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- *나스닥 다운과 혼합된 주식; 금 가격 급등 - Reuters*
 
 ## 테마별 주요 뉴스
 
