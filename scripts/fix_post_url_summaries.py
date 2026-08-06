@@ -219,22 +219,24 @@ def replace_in_post(content: str, old_raw: str, new_text: str) -> tuple[str, boo
     return content.replace(old_raw, escaped, 1), True
 
 
-def _repair_one(blurb: Blurb) -> tuple[Blurb, str, str]:
+def _repair_one(blurb: Blurb, allow_synthesis: bool = True) -> tuple[Blurb, str, str]:
     """Resolve a replacement for one blurb. Returns (blurb, text, source)."""
     recovered = refetch(blurb)
     if recovered:
         return blurb, recovered, "refetch"
+    if not allow_synthesis:
+        return blurb, "", "unresolved"
     synthetic = synthesize(blurb)
     if synthetic and not _is_bad(synthetic, blurb.title):
         return blurb, synthetic, "synthetic"
     return blurb, "", "unresolved"
 
 
-def repair(targets: list[Blurb], workers: int) -> list[tuple[Blurb, str, str]]:
+def repair(targets: list[Blurb], workers: int, allow_synthesis: bool = True) -> list[tuple[Blurb, str, str]]:
     """Resolve replacements concurrently, preserving input order."""
     results: list[tuple[Blurb, str, str] | None] = [None] * len(targets)
     with ThreadPoolExecutor(max_workers=workers) as pool:
-        futures = {pool.submit(_repair_one, b): i for i, b in enumerate(targets)}
+        futures = {pool.submit(_repair_one, b, allow_synthesis): i for i, b in enumerate(targets)}
         for future in as_completed(futures):
             index = futures[future]
             try:
@@ -305,6 +307,11 @@ def main() -> int:
     parser.add_argument("--limit", type=int, default=None, help="처리할 블러브 최대 개수")
     parser.add_argument("--workers", type=int, default=6, help="동시 재수집 스레드 수 (기본 6)")
     parser.add_argument("--apply", action="store_true", help="실제 파일에 기록 (기본: dry-run)")
+    parser.add_argument(
+        "--skip-synthetic",
+        action="store_true",
+        help="재수집 실패 시 합성 폴백을 쓰지 않고 원문 유지 (품질 저하 방지)",
+    )
     args = parser.parse_args()
 
     setup_logging()
@@ -318,7 +325,7 @@ def main() -> int:
         return 0
 
     logger.info("Repairing %d flagged blurbs with %d workers", len(targets), args.workers)
-    repairs = repair(targets, args.workers)
+    repairs = repair(targets, args.workers, allow_synthesis=not args.skip_synthetic)
 
     print(format_report(repairs, applied=args.apply))
 
