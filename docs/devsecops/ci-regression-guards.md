@@ -22,8 +22,18 @@ System Configuration), NIST SSDF(SP 800-218) **PO.3 / PW.4**.
 | `tests/test_generated_image_guard.py` | 2 | 레이아웃이 렌더하는 생성 이미지가 404 나지 않음(존재 보장) | 30일 이미지 정리가 참조 살아있는 og/hero 이미지를 삭제 → 깨진 이미지 |
 | `tests/test_encoding_guard.py` | 16 | `encoding_guard` 모듈의 UTF-8/CP949 라벨 교정 동작 불변 | 한국어 텍스트 인코딩 깨짐(mojibake) |
 | `tests/test_requirements_lock_coverage.py` | 6 | `requirements.txt` 직접 의존성 전부가 `requirements.lock` 에 ==핀(부분집합) + 락의 모든 핀이 최소 1개 `--hash` 보유(presence) | 락 staleness(검증 안 되는 새 의존성) / hashless 핀이 `--require-hashes` 무결성 검증을 무력화하는 공급망 변조 창 |
+| `tests/test_workflow_action_pinning_guard.py` | 4 | `.github/workflows/**` · `.github/actions/**` 의 모든 외부 `uses:` 가 40-hex SHA 핀(presence) + 탐지기 양방향 | 가변 태그(`@v4`)/브랜치 참조 → 업스트림 변조가 diff 없이 CI 에서 실행 |
+| `tests/test_secret_scan_gate_guard.py` | 7 | Gitleaks 게이트 무결성: `useDefault=true`(presence), allowlist `targetRules`/`paths` 집합 동일(==), 게이트 차단성(no `continue-on-error`/`\|\| true`), `fetch-depth: 0`(presence) | 잡은 남아있는데 룰셋 해제·allowlist 확대·exit 흡수·히스토리 절단으로 시크릿 스캔이 조용히 무력화 |
+| `tests/test_workflow_permission_gate_guard.py` | 4 | `code-quality.yml` 이 `check_workflow_permissions.py` 를 `--workflows-dir .github/workflows` 로 차단 실행(presence) | 도구 단위 테스트는 green 인데 CI 배선만 끊겨 2026-04-23 수집기 장애 클래스가 재무방비 |
 
-총 **103 케이스**.
+총 **118 케이스**.
+
+> 공급망/시크릿 3종(2026-08-06 추가)의 배경: `security-scan.yml` 의
+> `actions-permissions` 잡은 이름과 달리 **build 를 실패시킬 수 없다** — 모든 발견이
+> `::warning::` 이고 exit 하지 않으며, 핀닝 체크의 `has_issues=true` 는
+> `grep ... | while` 파이프라인 서브셸에 갇혀 전파조차 안 된다. 게다가
+> `grep -v '@v'` 는 문제의 대상인 가변 태그를 "핀됨"으로 분류한다. 위 3개 가드는
+> 그 잡을 대체하는 게 아니라, 차단 가능한 pytest 잡에 실제 강제를 처음으로 만든다.
 
 ## 설계 규약 (신규 가드 작성 시)
 
