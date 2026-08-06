@@ -1,0 +1,114 @@
+## 테마별 주요 뉴스
+
+### 🟠 비트코인 (6건)
+
+*Daily creation activity pushes weekly net inflows to a multi-month high.*
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb"><img src="https://example.com/img/etf.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/btc/etf-inflows" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 현물 ETF 자금 유입 가속</a>
+<p class="news-desc">Daily creation activity pushes weekly net inflows to a multi-month high.</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-high">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb"><img src="https://example.com/img/rates.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
+<a href="https://example.com/btc/rate-cut" class="news-title" target="_blank" rel="noopener noreferrer">금리 인하 기대 약화로 암호화폐 주가 급락 (BTC-USD:Cryptocurrency)</a>
+<p class="news-desc">선물 미결제약정이 줄면서 변동성이 확대됐다고 거래소가 밝혔습니다.</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-high">
+<div class="news-card-num">3</div>
+<div class="news-card-thumb"><img src="https://example.com/img/mining.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
+<a href="https://example.com/btc/difficulty" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 채굴 난이도 사상 최고치 경신</a>
+<p class="news-desc">S&amp;P500·나스닥 급락; 원유·가스 급등; 비트코인이 $67K 근처로 후퇴했습니다</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+<details><summary>그 외 3건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-thumb"><img src="https://example.com/img/altcoin.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></span><span class="overflow-body"><a href="https://example.com/btc/altcoin-rally" target="_blank" rel="noopener noreferrer">비트코인 반등에 알트코인 동반 상승</a><span class="overflow-source">Example Crypto</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb"><img src="https://example.com/img/intraday.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></span><span class="overflow-body"><a href="https://example.com/btc/intraday" target="_blank" rel="noopener noreferrer">비트코인 장중 급락 후 낙폭 축소</a><span class="overflow-source">Example Crypto</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb"><img src="https://example.com/img/local.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></span><span class="overflow-body"><a href="https://example.com/btc/local-regulation" target="_blank" rel="noopener noreferrer">비트코인 규제 논의 지역 의회로 확산</a><span class="overflow-source">Example Crypto</span></span></li>
+</ol></div></details>
+
+
+### 📈 가격/시장 (5건)
+
+*Daily creation activity pushes weekly net inflows to a multi-month high.*
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb"><img src="https://example.com/img/altcoin.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/btc/altcoin-rally" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 반등에 알트코인 동반 상승</a>
+<p class="news-desc">트럼프 대통령이 암호화폐 법안을 공개 지지하면서 시장이 반등했다고 전해집니다-[美증시 특징주]</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-high">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb"><img src="https://example.com/img/intraday.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
+<a href="https://example.com/btc/intraday" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 장중 급락 후 낙폭 축소</a>
+<p class="news-desc">비트코인·알트코인 &#x27;장중 급락&#x27;...주요 변수는 금리와 환율이라는 분석이 나왔습니다.</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+<details><summary>그 외 3건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-thumb"><img src="https://example.com/img/etf.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></span><span class="overflow-body"><a href="https://example.com/btc/etf-inflows" target="_blank" rel="noopener noreferrer">비트코인 현물 ETF 자금 유입 가속</a><span class="overflow-source">Example Crypto</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb"><img src="https://example.com/img/rates.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></span><span class="overflow-body"><a href="https://example.com/btc/rate-cut" target="_blank" rel="noopener noreferrer">금리 인하 기대 약화로 암호화폐 주가 급락 (BTC-USD:Cryptocurrency)</a><span class="overflow-source">Example Crypto</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb"><img src="https://example.com/img/mining.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></span><span class="overflow-body"><a href="https://example.com/btc/difficulty" target="_blank" rel="noopener noreferrer">비트코인 채굴 난이도 사상 최고치 경신</a><span class="overflow-source">Example Crypto</span></span></li>
+</ol></div></details>
+
+
+### 🔵 규제/정책 (2건)
+
+*트럼프 대통령이 암호화폐 법안을 공개 지지하면서 시장이 반등했다고 전해집니다-[美증시 특징주]*
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb"><img src="https://example.com/img/local.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/btc/local-regulation" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 규제 논의 지역 의회로 확산</a>
+<p class="news-desc">비트코인 규제 논의 지역 의회로 확산. 규제 방향이 시장 구조를 바꿀 수 있습니다.</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+<details><summary>그 외 1건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-thumb"><img src="https://example.com/img/altcoin.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></span><span class="overflow-body"><a href="https://example.com/btc/altcoin-rally" target="_blank" rel="noopener noreferrer">비트코인 반등에 알트코인 동반 상승</a><span class="overflow-source">Example Crypto</span></span></li>
+</ol></div></details>
+
+
+### 📊 매크로/금리 (2건)
+
+*선물 미결제약정이 줄면서 변동성이 확대됐다고 거래소가 밝혔습니다.*
+
+<details><summary>그 외 2건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-thumb"><img src="https://example.com/img/rates.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></span><span class="overflow-body"><a href="https://example.com/btc/rate-cut" target="_blank" rel="noopener noreferrer">금리 인하 기대 약화로 암호화폐 주가 급락 (BTC-USD:Cryptocurrency)</a><span class="overflow-source">Example Crypto</span></span></li>
+<li class="overflow-preview"><span class="overflow-thumb"><img src="https://example.com/img/intraday.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></span><span class="overflow-body"><a href="https://example.com/btc/intraday" target="_blank" rel="noopener noreferrer">비트코인 장중 급락 후 낙폭 축소</a><span class="overflow-source">Example Crypto</span></span></li>
+</ol></div></details>
+

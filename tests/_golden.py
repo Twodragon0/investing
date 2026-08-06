@@ -40,8 +40,21 @@ def assert_golden(name: str, actual: str) -> None:
     actual_norm = _normalize(actual)
 
     if os.environ.get("UPDATE_GOLDEN") == "1":
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(actual_norm, encoding="utf-8")
+        # The runtime tree-write detector refuses writes into the committed
+        # tree, which is what a snapshot *is*. Regenerating a golden is the one
+        # deliberate exception: the operator asked for it by name via the env
+        # var, so suspend the guard for exactly this write rather than
+        # exempting `tests/snapshots/` wholesale (which would also let an
+        # accidental write through).
+        # Imported bare, matching how `conftest.py` loads it. `tests.` -prefixed
+        # and bare imports resolve to *different module objects* with separate
+        # `_INSTALLED` registries, so the prefixed one would suspend a guard
+        # nobody installed.
+        from _tree_write_guard import suspended
+
+        with suspended():
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(actual_norm, encoding="utf-8")
         return
 
     if not path.exists():

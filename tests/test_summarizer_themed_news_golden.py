@@ -4,7 +4,9 @@ This is the PR4 safety net. See .omc/plans/golden-snapshot-themed-news-sections.
 for the full plan. The fixtures cover the 8 cases from the plan's matrix:
 ``tiny_below_threshold``, ``small``, ``medium``, ``large``,
 ``cross_theme_dedup_heavy``, ``korean_only_titles``,
-``mixed_lang_with_synthetic_desc``, and ``image_variants``.
+``mixed_lang_with_synthetic_desc``, and ``image_variants``, plus
+``punctuation_edge_cases`` added 2026-08-06 after a hyphen-truncation
+regression reached main — the golden that caught it did so by accident.
 
 To regenerate the golden after an intentional output change:
     UPDATE_GOLDEN=1 pytest tests/test_summarizer_themed_news_golden.py -q
@@ -29,6 +31,7 @@ from tests.fixtures.themed_news import (  # noqa: E402
     large,
     medium,
     mixed_lang_with_synthetic_desc,
+    punctuation_edge_cases,
     small,
     tiny_below_threshold,
 )
@@ -45,6 +48,7 @@ _CASES = [
     ("korean_only_titles", korean_only_titles),
     ("mixed_lang_with_synthetic_desc", mixed_lang_with_synthetic_desc),
     ("image_variants", image_variants),
+    ("punctuation_edge_cases", punctuation_edge_cases),
 ]
 
 
