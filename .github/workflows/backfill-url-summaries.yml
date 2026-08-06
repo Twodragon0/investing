@@ -1,0 +1,126 @@
+---
+name: Backfill URL Summaries
+
+# 본문 per-URL 블러브의 사이트 크롬을 재수집으로 교체하는 백필을 **나눠서** 돌린다.
+#
+# 왜 한 번에 안 되는가: 불량 블러브의 90%가 news.google.com 리다이렉트이고,
+# Google 이 리졸버를 강하게 조인다. 2026-08-06 연속 실행에서 재수집 수율이
+# 523 -> 71 -> 0 으로 떨어졌고 3회차엔 모든 링크가 빈 값이었다. 같은 시점 직접
+# 퍼블리셔 URL 은 정상이었으므로 상한은 도구가 아니라 리다이렉트 리졸버다.
+#
+# 그래서 하루 한 번, 소량(--limit)만 처리한다. 실패한 리다이렉트 요청은 공짜가
+# 아니라 차단을 연장하므로, 수율이 0 이면 그날은 조용히 물러난다.
+on:
+  schedule:
+    # 매일 17:10 UTC (KST 02:10). 수집기(정시)·이미지 auto-heal(18:30 UTC)과
+    # 겹치지 않게 배치.
+    - cron: '10 17 * * *'
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: '처리할 블러브 최대 개수'
+        required: false
+        default: '200'
+      text_only:
+        description: '네트워크 없이 텍스트 결함만 교정'
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  # 자기 자신과 겹치면 같은 블러브를 두 러너가 동시에 고쳐 푸시 경합이 난다.
+  group: backfill-url-summaries
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
+        with:
+          fetch-depth: 1
+
+      - name: Setup Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: scripts/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run backfill
+        id: backfill
+        env:
+          LIMIT: ${{ inputs.limit || '200' }}
+          TEXT_ONLY: ${{ inputs.text_only || 'false' }}
+        run: |
+          set -euo pipefail
+          # --skip-synthetic 고정: 2026-08-06 실측에서 합성 폴백의 절반가량이
+          # 원문(제목 재진술)보다 나빴다. 재수집이 실패하면 원문을 그대로 둔다.
+          #
+          # 인자는 배열로 조립한다. 플래그를 빈 문자열 변수로 넘기면 따옴표를
+          # 붙였을 때 빈 인자가 실제로 전달되고, 떼면 워드 스플리팅에 의존하게
+          # 된다(shellcheck SC2086).
+          args=(--apply --skip-synthetic --workers 6 --limit "$LIMIT")
+          if [ "$TEXT_ONLY" = "true" ]; then
+            args+=(--text-only)
+          fi
+          python scripts/fix_post_url_summaries.py "${args[@]}" 2>&1 | tee backfill.log
+
+          {
+            echo "## URL 요약 백필"
+            echo '```'
+            grep -E '대상 블러브|재수집 성공|합성 대체|해결 실패|건너뜀|적용:' backfill.log || true
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          fixed=$(grep -oE '블러브 [0-9]+건' backfill.log | grep -oE '[0-9]+' | head -1 || echo 0)
+          echo "fixed=${fixed:-0}" >> "$GITHUB_OUTPUT"
+
+      - name: Report throttling
+        # 수율 0 은 실패가 아니라 "오늘은 리졸버가 막혔다" 이다. 잡을 red 로
+        # 만들면 매일 알림만 쌓이고 실제 회귀와 구분되지 않는다. 요약에만 남긴다.
+        if: steps.backfill.outputs.fixed == '0'
+        run: |
+          echo "교정된 블러브 0건 — Google News 리졸버 스로틀로 보입니다. 내일 재시도합니다." \
+            >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit and push
+        if: steps.backfill.outputs.fixed != '0'
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch --no-tags origin main
+
+          # `_posts/` 만. 실행 부산물인 `_state/translation_cache.json` 등은
+          # 이 워크플로우의 산출물이 아니므로 커밋하지 않는다.
+          git add _posts/
+
+          if git diff --staged --quiet; then
+            echo "No post changes; skipping commit."
+            exit 0
+          fi
+
+          git commit -m "chore(posts): URL 요약 백필 $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          MAX_RETRIES=5
+          for i in $(seq 1 $MAX_RETRIES); do
+            echo "=== Push attempt $i/$MAX_RETRIES ==="
+            if git push origin main 2>&1; then
+              echo "Push succeeded"
+              exit 0
+            fi
+            echo "Push failed, syncing with remote..."
+            DELAY=$((i * 3 + RANDOM % 5))
+            sleep $DELAY
+            git pull --rebase origin main 2>&1 || git rebase --abort 2>/dev/null || true
+          done
+          echo "::error::All $MAX_RETRIES push attempts failed"
+          exit 1
