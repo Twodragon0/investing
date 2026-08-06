@@ -186,3 +186,20 @@ def test_hyphen_compound_is_not_a_source_delimiter(title: str) -> None:
     shipped, which had already truncated 13 published blurbs.
     """
     assert _synth(title).startswith(title.rstrip("."))
+
+
+@pytest.mark.parametrize(
+    "title",
+    [
+        # Title-cleaning paths had the same `\s*` hazard as the description one.
+        # Measured on 4605 corpus titles: 21 were cut inside a compound.
+        "금리 인하 희망이 약화되면서 암호화폐 주가 급락 (BTC-USD:Cryptocurrency)",
+        "비트코인: 약세장에도 무슨 일이 일어나고 있나요? (암호화폐:BTC-USD)",
+        "Bitcoin falls amid prolonged U.S.-Israel-Iran conflict (BTC-USD:Cryptocurrency)",
+    ],
+)
+def test_title_cleaning_keeps_hyphen_compounds(title: str) -> None:
+    """The ticker pair is the subject; cutting at its hyphen loses the subject."""
+    result = _synth(title)
+    tail = title.rsplit("-", 1)[-1].rstrip(").")
+    assert tail in result, f"compound tail {tail!r} was truncated out of {result!r}"

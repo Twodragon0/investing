@@ -10,6 +10,7 @@ from typing import Any, Dict, List
 from .enrichment import is_logo_like_url
 from .markdown_utils import html_source_tag
 from .severity import _SEV_BADGE_HTML, _classify_news_severity
+from .summary_quality import _NAV_LINK_LIST_RE
 from .text_utils import (
     _fix_mistranslations,
     _strip_trailing_artifacts,
@@ -110,7 +111,20 @@ class ThemedNewsRenderer:
         else:
             card_parts.append(f'<span class="news-title">{safe_title}</span>')
 
-        if description and description != title and not sumr_module._is_generic_desc(description):
+        # The pipe-delimited navigation strip ("콜로 | 8 뉴스 지금 | 리노, 네바다")
+        # is site chrome, not a summary, and neither existing check saw it.
+        # Only this one detector is added: routing the whole `is_boilerplate`
+        # facade through here was measured and rejected — its "<35 chars without
+        # a number" rule discarded legitimate short Korean summaries, and its
+        # phrase list matched real headlines that merely carry a source name
+        # ("…암호화폐 시장, 전쟁에서 새로운 관심 끌다 Bloomberg.com"). The nav
+        # detector alone flags 29 blurbs corpus-wide, all genuine chrome.
+        if (
+            description
+            and description != title
+            and not sumr_module._is_generic_desc(description)
+            and not _NAV_LINK_LIST_RE.search(description)
+        ):
             # Additional boilerplate check for translated descriptions
             if not sumr_module._is_boilerplate_desc(description):
                 desc_text = normalize_blurb(_strip_trailing_artifacts(_truncate_sentence(description, max_len=300)))

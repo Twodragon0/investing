@@ -141,7 +141,11 @@ def _generate_title_based_desc(title: str, theme_key: str) -> str:
     has_korean = bool(re.search(r"[가-힣]", title))
     if has_korean:
         # Korean title: condense and add entity-specific context
-        clean = re.sub(r"\s*[-–—|]\s*\S+$", "", title).strip()
+        # `\s+` (not `\s*`): a hyphen inside a compound is not a delimiter. With zero
+        # spaces allowed this cut "(BTC-USD:Cryptocurrency)" down to "(BTC" — 21 such
+        # titles in the corpus. Cost of the stricter rule is an outlet glued on
+        # without a space, which is the cheaper failure.
+        clean = re.sub(r"\s+[-–—|]\s*\S+$", "", title).strip()
         ctx = _THEME_CONTEXT.get(theme_key, "")
         if len(clean) > 80:
             clean = clean[:77] + "..."
