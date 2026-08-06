@@ -115,7 +115,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-17 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPWEdDbFhoMzJOTThwRVZCdTVGWjFpanpUcHdvaG9STUtxcUVuSmdwNWU1Qm1MbnlscGNQMlMzOTcyaThvNXlQVFVlbkJUQTZ5TzJNTDExeGdxSGJEbDIzRE1KSVB2eG14QlVGbzZtaVk2SFFQeEF1cWlZS2QyOFNCOUoxYndMNy020gGcAUFVX3lxTFBZcklFM0dIbUxsZEVzRGZ0T19qU2FLQzU1WVlrNjFEYXJEQnJpemFUdzl1Y0hUVzh3eklKVnpkX0lEVzBoNE03VW5mXzlpTXF3UVNJcW9aUzJ0ZWFfSDh4clZqejZUU0RHTTV1dXhJOU90QVlwTXBZdkJKanFTbHM1ZjVFMU43QnA0WmFkRnlrYnRRT0o2bTZ4aDJGcw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">KB證 “전쟁 후 주가 회복한 종목은? 전력·증권·반도체” - 조선비즈 - Chosunbiz</a>
-<p class="news-desc">KB證 “전쟁 후 주가 회복한 종목은? 전력·증권·반도체” - 조선비즈 Chosunbiz</p>
+<p class="news-desc">KB證 “전쟁 후 주가 회복한 종목은? 전력·증권·반도체”</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

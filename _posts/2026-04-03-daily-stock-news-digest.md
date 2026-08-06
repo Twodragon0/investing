@@ -45,7 +45,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-03 - 주식 뉴스 요약 이�
 <strong>긴급 알림</strong>
 <ul>
 <li><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTFBJUlU4aTB0cE93aHZrUU1uUE1RSDJnNFh5UzdDS1k4MFk5OE1rZWhCX1U2eUdpZ2E2RmpDbk42OGV5SU5jOHBDNlEyaExUemlITXc?oc=5">급락장에 반도체 투톱 보는 시선 엇갈려…SK하이닉스는 ‘줍줍’ 삼성전자는 ‘팔자’ [주식 초고수는 지금</a> <span class="p0-desc">급락장에 반도체 투톱 보는 시선 엇갈려…SK하이닉스는 ‘줍줍’ 삼성전자는 ‘팔자’ [주식 초고수는 지금] 매일경제</span></li>
-<li><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxOek1ScVptcWdoUDVubk1KNlhKdmVUOW51ZzhOV3AwaUFnQlVUVXJTT1BRZEU1Uk1PWUhvc1JuWk14ZDIwOE9KaUVGZ2dVLXM1MFNJZFRWazJvTEdaYl9SeGxjM1dCdm1YYTRlbThBUGNPTmVlcGt0MFcxbV9Uak1WS19R0gGWAUFVX3lxTE9zQU9IM0JRajNfNFA2R3NzbU1iVDktTGFfQ1g5RVNUaS03czM1ZlVUaGdxdE1nMEJ1Y0NhTlA5VWZfdWdfQ3MtNWdqSWpQVjFTcklvNlNKQ0tQMFJYczV4b3NKQTBfR1hkWVVFaUhjSTVzT3M1SnNhQlBuNUx6d252ajBCZGxuOTUyLURuakZXam40Q0V1dw?oc=5">비즈톡톡] 메모리 초호황기에도 美 마이크론 주가 급락… 삼성전자·SK하이닉스에 어떤 의미일까 - 조선비즈 - Chosunbiz</a> <span class="p0-desc">[비즈톡톡] 메모리 초호황기에도 美 마이크론 주가 급락… 삼성전자·SK하이닉스에 어떤 의미일까 - 조선비즈 Chosunbiz</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxOek1ScVptcWdoUDVubk1KNlhKdmVUOW51ZzhOV3AwaUFnQlVUVXJTT1BRZEU1Uk1PWUhvc1JuWk14ZDIwOE9KaUVGZ2dVLXM1MFNJZFRWazJvTEdaYl9SeGxjM1dCdm1YYTRlbThBUGNPTmVlcGt0MFcxbV9Uak1WS19R0gGWAUFVX3lxTE9zQU9IM0JRajNfNFA2R3NzbU1iVDktTGFfQ1g5RVNUaS03czM1ZlVUaGdxdE1nMEJ1Y0NhTlA5VWZfdWdfQ3MtNWdqSWpQVjFTcklvNlNKQ0tQMFJYczV4b3NKQTBfR1hkWVVFaUhjSTVzT3M1SnNhQlBuNUx6d252ajBCZGxuOTUyLURuakZXam40Q0V1dw?oc=5">비즈톡톡] 메모리 초호황기에도 美 마이크론 주가 급락… 삼성전자·SK하이닉스에 어떤 의미일까 - 조선비즈 - Chosunbiz</a> <span class="p0-desc">[비즈톡톡] 메모리 초호황기에도 美 마이크론 주가 급락… 삼성전자·SK하이닉스에 어떤 의미일까</span></li>
 <li><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1wazg2Nk1FNE9ubW91UklzVDNyRElFMmtIdnM4NjRNS0pYaDNuaEVHNFVITE10X3FoU3ZRR1Vrd3VvQ2RJbV9aT1RQVVYxZTE5YXI4?oc=5">'종전'은커녕 '석기시대' 엄포에…코스피·코스닥 '매도 사이드카' - news.nate.com</a> <span class="p0-desc">'종전'은커녕 '석기시대' 엄포에…코스피·코스닥 '매도 사이드카' news.nate.com</span></li>
 </ul>
 </div>
@@ -253,7 +253,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-03 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxQVk45Vmd0ODhtLVFpekJnTXpHRjZkVVdSVXM5ZlRXeHZseUVXckhZbU1fb1lVd3lTUVhsX2xVVExnTVc2TkI1Xy1ENTJCRWxIb0VQV0M1VE9aUkNJZHQwd1dfNW0xMnZueXBsMGZSMkFCa2ZpNVlRQk5ZSGZpSy02ZkowQlJSenhfUUdGZGlnb2hXMHA0ckhyTVB3dUhoSEIyaV9RaVI2Q0J3TEFyeGRQRFB0VDE0eFV5UFJ0WVBjZWtzNjlTVG5FcWFOaGpFejdHYTB1S2tsRVBlUQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Marvell Technology 7% 상승: 엔비디아 NVLink 거래로 이 칩 재고가 AI 강국으로 변모함 - 24/7 Wall St.</a>
-<p class="news-desc">배당왕 주식은 모든 포트폴리오, 심지어 성장 중심 포트폴리오의 필수 요소로 변하고 있습니다. PepsiCo(나스닥:PEP | PEP 가격…</p>
+<p class="news-desc">배당왕 주식은 모든 포트폴리오, 심지어 성장 중심 포트폴리오의 필수 요소로 변하고 있습니다. PepsiCo(나스닥:PEP</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>

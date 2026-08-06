@@ -54,7 +54,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-11 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTFBKaUdSWkNrOWNJN3lUNkYtSDdRSTk4UXZjT3V4NjloaTVldTkydlJrX3NDRkY2eDh1cnJtdi1XVG01dG4xMWlfa1VSZkhWYnFtV0tuVzRKb1JGQ1VxQUlWUUFzTXB1R1owUVQtSDliTG55Vlg5Smh3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">10일 매매 동향] 외국인, 순매도 1위는 SK하이닉스."ADR 상장 앞두고 1조7100억 순매도" &#124;</a>
-<p class="news-desc">[10일 매매 동향] 외국인, 순매도 1위는 SK하이닉스."ADR 상장 앞두고 1조7100억 순매도" &#124; 핀포인트뉴스</p>
+<p class="news-desc">[10일 매매 동향] 외국인, 순매도 1위는 SK하이닉스."ADR 상장 앞두고 1조7100억 순매도"</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>

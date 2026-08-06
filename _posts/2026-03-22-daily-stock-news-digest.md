@@ -260,7 +260,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-22 - stock-news 뉴스 요약 
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTFBKWEZCQVFJcEsxa1R3Rlkxa1ltb2NLNWcwQ05MZ3ZKU3Q5c2FBZmhweHRaNnFObVc4dndBVEJBYjJqblJFeWxDaFhzcmpMX3dnZFpSaU5WbWlTaVFQVVVNbHdDM2E?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">가뭄 이후 생명공학 IPO 활동은 2026년부터 시작됩니다 - Labiotech.eu</a>
-<p class="news-desc">가뭄 이후 생명공학 IPO 활동은 2026년부터 시작됩니다 - Labiotech.eu.</p>
+<p class="news-desc">가뭄 이후 생명공학 IPO 활동은 2026년부터 시작됩니다</p>
 <span class="source-tag" data-source-type="default">IPO Watch</span>
 </div>
 </div>

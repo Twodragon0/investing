@@ -67,7 +67,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-21 - 암호화폐 뉴스 요
 
 ### 🟠 비트코인 (41건)
 
-*KCRG | 시더 래피즈, 아이오와 시티, 워털루, 더뷰크 | 뉴스, 스포츠, 날씨*
+*KCRG | 시더 래피즈, 아이오와 시티, 워털루, 더뷰크*
 
 
 <div class="news-card-item news-sev-medium">
@@ -76,7 +76,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-21 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxQQ1N2ZlBzZUlULVZscUtFUkRSNW1CelBoRVViOVpMVHhhaVZmc2ZYREpWVlRfM0dpODRwcWlzTkRWOU5TeGVQcm1wNDc4YWFpWDZYaDFTbHBMQ0FoT2NRMUszLTZETkJ4YXBoTmJveG5kcGg1dnE4RUtJUElMd21DeDJiZXR4c2JKZGR5d3hmQmtETWctVFh4YkMxWFhwNmdvWHRDTDVJM01kUWU5bWZZdkVGTFFBeW91eGY1S2dYRWdSdzVSeUYyVGxIZ1poQdIB4gFBVV95cUxPUTVlYnNvU1E4dW9PTHl3S3d3ZU1EQ0Ffb0VWdVRQSWl3RWxPN2t0WVBUcHJoSkhTQTZIU0VYczV1dW5yeE80RnJwNmlzd01tRjFVenBIMUo4TlRDSmhUcFhWVGlBSnhqeDMzbFlTc3E5TXpZSEpSRk00MVVwU1FuVFB5MUtYdWRwMVBQU3g3ZWNPc0RaWlBudUJqZnp4Uy1qb2o0dzFJajh3T2d3Wl83emtDbDlpNFFIaHpPdGJSYVZSNkNVU05RcDdEZEN0TUt2QkJGb2laS01FdzF3NGV3TEVn?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Cedar Falls는 암호화폐 채굴 조례 변경을 만장일치로 거부하고 논의는 계속될 것으로 예상됩니다 - KCRG</a>
-<p class="news-desc">KCRG | 시더 래피즈, 아이오와 시티, 워털루, 더뷰크 | 뉴스, 스포츠, 날씨</p>
+<p class="news-desc">KCRG | 시더 래피즈, 아이오와 시티, 워털루, 더뷰크</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>

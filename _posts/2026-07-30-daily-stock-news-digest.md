@@ -164,7 +164,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFBUMEFMWmVPNEZzbG5hYVN6VlZLSTljbnpFYXMwbV9xNXlVNTg2R2lvdnVucUJGU3N6bFNfZHdzQWZwbHNwRHlXei0wcDhsWXowOEJ0R21UOUQ5M25URXl6clpqeWpWS1JnM2N1cNIBckFVX3lxTE1EVUtLenNoYzZlamZ5Z01zcEIzLUpkaVlLUExTWHp1NHRnRy13a3VYaEwya2xqbXVvSVV6dHpSY3kwanVQcC1YSnRmTjRwQWROMi1xdmdLUHZfbFp0Z21Ga2ZXYTFjZVgtaW5WS0Z6YjBZQQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">정점식 "이런 롤러코스피가 있었나…이 대통령, 김용범 경질해야" - 머니투데이</a>
-<p class="news-desc">정점식 "이런 롤러코스피가 있었나…이 대통령, 김용범 경질해야" - 머니투데이 머니투데이</p>
+<p class="news-desc">정점식 "이런 롤러코스피가 있었나…이 대통령, 김용범 경질해야"</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -290,7 +290,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxNc3V2XzY1azI1Q1lmNHcyeXA0VHRhMDRYVy1Ec3VTS2JzX015YnZoYm11LTVaX29YRkwtc21URkMzQ3F1Um9neEtSR2xKRXAzeVNJMVI3c0FZYmgtSVg3UXFTVE93ci1PU0VpZllicW9Nb3dkejUzVkNYQ3YzU2VvaTl0RFAyTVXSAZsBQVVfeXFMTWJ0UTYyUUVod0dsRmtjVGljZHJ6YzVvSVVjVWdqUVRTbjBTY0hhN2JRcVpUWFhMTlRVd0U0QlFNdDVpd3VEdjFld0k0Y0xIOGFLU0NKM3R6MDEzYjNfXzVvZWxvVUlBUzhxRTJhcE52dFM0d2lJRGdhMVhUcVROU1phVGF3SXNPTUFDMnJpTE1LLXFnSUxmaDBBemc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">로킷헬스케어, 나스닥 상장 자진 철회…“유동주식 비율 보완” - 조선비즈 - Chosunbiz</a>
-<p class="news-desc">로킷헬스케어, 나스닥 상장 자진 철회…“유동주식 비율 보완” - 조선비즈 Chosunbiz</p>
+<p class="news-desc">로킷헬스케어, 나스닥 상장 자진 철회…“유동주식 비율 보완”</p>
 <span class="source-tag" data-source-type="kr-media">조선비즈</span>
 </div>
 </div>

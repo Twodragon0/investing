@@ -40,7 +40,7 @@ image_alt: "소셜 미디어 동향 - 2026-04-06 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent">
 <strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdHBfN3VoMXZsU05WU1FzTXF6V3o5eVhnd1o2RlNiai0xaTFseTF3WDVGdUl5MVQxNG8xUkhYeDQ0THRHa0d5cmlJYkN6S3JTR2lOWGV6SGdCdnNqZFlBRE9GNFR5dVE0bWtoRHdqUEhEZ3ZObUF2MGctRkFDeGYyb0x3UnJ5ZTVuaU5WakQzZXJHdHgya0RKcXpKUmdUeVJaMTktaEI2TnA?oc=5">연준 2026년 금리 결정: 원 인하 및 장기 투자 초점 - 뉴스 및 통계 - IndexBox</a> <span class="p0-desc">연준 금리 결정 2026: 한 번의 인하 및 장기 투자 초점 - 뉴스 및 통계 IndexBox</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdHBfN3VoMXZsU05WU1FzTXF6V3o5eVhnd1o2RlNiai0xaTFseTF3WDVGdUl5MVQxNG8xUkhYeDQ0THRHa0d5cmlJYkN6S3JTR2lOWGV6SGdCdnNqZFlBRE9GNFR5dVE0bWtoRHdqUEhEZ3ZObUF2MGctRkFDeGYyb0x3UnJ5ZTVuaU5WakQzZXJHdHgya0RKcXpKUmdUeVJaMTktaEI2TnA?oc=5">연준 2026년 금리 결정: 원 인하 및 장기 투자 초점 - 뉴스 및 통계 - IndexBox</a> <span class="p0-desc">연준 금리 결정 2026: 한 번의 인하 및 장기 투자 초점</span></li>
 <li><a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFBkankzNFNDejJxdDZyNjZIM01GRTdFSzlCdzRvM0xfcndmSjhjSnFMWXdqamVaQno2S3FPcjJCSENFSElCeFhSN0h5REdhOE9lS184VzlCeVNwRDjSAWBBVV95cUxNc0JrQWpjd1AwQ0duQlp1eHItNGVJem9CUjNkMWxTN2draWpvTDFCMlVDMTZWQkR1WG5Oc3JZd3p3NTNRUGE0cjlPalZGc29DNENKNnlMMjNvNlVIbnBORHQ?oc=5">다음주 경제] 한은 기준금리 결정…작년말 국가부채도 공개</a> <span class="p0-desc">[다음주 경제] 한은 기준금리 결정…작년말 국가부채도 공개 연합뉴스 ‘기준금리 동결’ 유력…충청권 예의주시 금강일보 이란 전쟁 발발 이후 첫 금통위…금리인상 신호 나올까[한은 미리.</span></li>
 <li><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE1PNkdXNVhJaFBZblBDQ3FNUEVWU0NMSF92NU1zMDQ3RFRKbkdVNjNLXzFta3RGOWtBNExpV3VhNGhiUF93MHczMF9DOGVzc1dDYkw4Wg?oc=5">이번주 경제]중동전쟁 후 첫 기준금리 결정…금리 경로·환율 대응 시험대</a> <span class="p0-desc">[이번주 경제] 중동전쟁 후 첫 기준금리 결정…금리 경로·환율 대응 시험대 뉴스1</span></li>
 </ul>
@@ -70,7 +70,7 @@ Anthropic은 AI 정책에 대한 트럼프 행정부와의 긴장 속에서 PAC�
 <span class="source-tag" data-source-type="default">Trump Crypto Policy</span>
 
 **4. [연준 2026년 금리 결정: 원 인하 및 장기 투자 초점 - 뉴스 및 통계 - IndexBox](https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdHBfN3VoMXZsU05WU1FzTXF6V3o5eVhnd1o2RlNiai0xaTFseTF3WDVGdUl5MVQxNG8xUkhYeDQ0THRHa0d5cmlJYkN6S3JTR2lOWGV6SGdCdnNqZFlBRE9GNFR5dVE0bWtoRHdqUEhEZ3ZObUF2MGctRkFDeGYyb0x3UnJ5ZTVuaU5WakQzZXJHdHgya0RKcXpKUmdUeVJaMTktaEI2TnA?oc=5)**
-연준 금리 결정 2026: 한 번의 인하 및 장기 투자 초점 - 뉴스 및 통계 IndexBox
+연준 금리 결정 2026: 한 번의 인하 및 장기 투자 초점
 <span class="source-tag" data-source-type="default">Fed Policy</span>
 
 **5. [이재명 대통령, 에마뉘엘 마크롱 프랑스 대통령과 정상회담 - 뉴스체인지](https://news.google.com/rss/articles/CBMiS0FVX3lxTE5vNU82Y1pHTzlOWXd6QVB0bk9FTGdMNjFtREpBUElZbTlKR1VaNWo1XzF1SEdQZlJXU0c0S2FLRzR2eFNORlB2dkNlWQ?oc=5)**
@@ -108,7 +108,7 @@ Anthropic은 AI 정책에 대한 트럼프 행정부와의 긴장 속에서 PAC�
 전체의 63%로 가장 높은 비중을 차지합니다. 주요 출처: 한국은행 금리정책(11건), Fed Policy(1건).
 
 - [Fed Rate Decision 2026: One Projected Cut and Long-Term Investment Focus - News and Statistics - IndexBox](https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdHBfN3VoMXZsU05WU1FzTXF6V3o5eVhnd1o2RlNiai0xaTFseTF3WDVGdUl5MVQxNG8xUkhYeDQ0THRHa0d5cmlJYkN6S3JTR2lOWGV6SGdCdnNqZFlBRE9GNFR5dVE0bWtoRHdqUEhEZ3ZObUF2MGctRkFDeGYyb0x3UnJ5ZTVuaU5WakQzZXJHdHgya0RKcXpKUmdUeVJaMTktaEI2TnA?oc=5) — Fed Policy
- > 연준 금리 결정 2026: 한 번의 인하 및 장기 투자 초점 - 뉴스 및 통계 IndexBox
+ > 연준 금리 결정 2026: 한 번의 인하 및 장기 투자 초점
 - [다음주 경제\ 한은 기준금리 결정…작년말 국가부채도 공개](https://news.google.com/rss/articles/CBMiW0FVX3lxTFBkankzNFNDejJxdDZyNjZIM01GRTdFSzlCdzRvM0xfcndmSjhjSnFMWXdqamVaQno2S3FPcjJCSENFSElCeFhSN0h5REdhOE9lS184VzlCeVNwRDjSAWBBVV95cUxNc0JrQWpjd1AwQ0duQlp1eHItNGVJem9CUjNkMWxTN2draWpvTDFCMlVDMTZWQkR1WG5Oc3JZd3p3NTNRUGE0cjlPalZGc29DNENKNnlMMjNvNlVIbnBORHQ?oc=5) — 한국은행 금리정책
  > [다음주 경제] 한은 기준금리 결정…작년말 국가부채도 공개 연합뉴스 ‘기준금리 동결’ 유력…충청권 예의주시 금강일보 이란 전쟁 발발 이후 첫 금통위…금리인상 신호 나올까[한은 미리보기] 이데일리 이창용, 마지막 금통위 금리동결 전망…중동발 물가 불안 심화.
 - ["내릴 수도 올릴 수도 없다"…중동 사태에 갇힌 한은, 금리 동결 우세 - 진일보](https://news.google.com/rss/articles/CBMib0FVX3lxTE9tcnR2X1RSQmE0TFc0dXpZdkJMUmM4cmZVQUJDS0hTR3pLaEpLV0cwVzBvMExScU9FUENFdUlJZ25mcW1SMjRuVW1YYjlRckd1dlM3QlRWZnlqUUdBNk5oMXRFUjJ6bHdUNF81Z1NCSQ?oc=5) — 한국은행 금리정책

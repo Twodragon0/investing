@@ -184,7 +184,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-17 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFA5cXoyY0xveldnVm9pX2E1RkFmMnh6Y2ZDSnhYbFh1UFpNbE9mVjdkLUsxc3ZRMG0wMzhpai03Z0dUMGViQ21ra29HVlJ6WTZtMVpGUWplbFJxV2xqbmZ6bEJlSTNwMFNS0gFuQVVfeXFMTS1iUTFCRTBzdXhFWUI5aWRZeFRvWXV2Ykdma0lDOTcycWZzSURRdzhxTmJ6R2gxR3YwWDMtZlF0YXV6bkpCSVExcWVaa3c1dWYxSnV2b0VQTThMYXh3dmtreUZQMmdUUG5xUmN4Unc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자·SK하이닉스 오늘도 달린다…종전 합의·美 반도체 훈풍 - 머니투데이</a>
-<p class="news-desc">삼성전자·SK하이닉스 오늘도 달린다…종전 합의·美 반도체 훈풍 - 머니투데이 머니투데이</p>
+<p class="news-desc">삼성전자·SK하이닉스 오늘도 달린다…종전 합의·美 반도체 훈풍</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

@@ -134,7 +134,7 @@ permalink: "/crypto-news/2026/03/11/daily-crypto-news-digest/"
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMijgNBVV95cUxPeE16SjZITXk2MkVXbjRrYkp3N0wzT3BaSzRVemMxbTctNVRGcVlBblRGNEZnRFhKOGFMWmgtQUxId2pWcldObnlJQUV0SU1sTzd0dEJUeDVRX3ZKdEU5VzlLeUZocDROWEhQeUlZUkVWY2UtWHdXR1VmYnNNX09GTERmUVB5dDFZYmJTOWVFZWRiQjVEMlROTmtTcExjT0M1R25tTmlGVklHQ2F5STVmMkhHUVJFeElJdUJOTkhocmwwYU9BYkt6dVByV2ZHT1llS3JTNFVROUNoZmlPYWQxT3RqaGs4UlkzaEN5aGMyY0N2UGtNN0FEd09GbmtseU5OT0QydG1yVV9zU3ZpQVl1ZXc0RFk4MUo5SjhKbVlmTE8tQVVabzFzMU1YQnhLSGlVUnlxbDhGM3lCLVRGbV9KUUw5OGpRdUhVdXhvemw1bGN4dm92VUlzMldMNDNjYk9xc1UySzAzcy1YZUVvYUxGUFRjeHF6R0s3blRrYmhhMVUzVUdtaVVVVEptekV2UQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 $70,000를 넘었습니다. 이더리움, XRP 암호화폐가 트럼프 부스트를 얻으면서 상승합니다.</a>
-<p class="news-desc">비트코인 $70,000를 넘었습니다. 이더리움, XRP Rise as Cryptos Get a 트럼프 Boost.. ($70,000.)상승을 확인해야 합니다.</p>
+<p class="news-desc">비트코인 $70,000를 넘었습니다. 이더리움, XRP Rise as Cryptos Get a 트럼프 Boost. ($70,000.)상승을 확인해야 합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

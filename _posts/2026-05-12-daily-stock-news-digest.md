@@ -248,7 +248,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/05/11/trump-iran-war-ceasefire-life-support.html" class="news-title" target="_blank" rel="noopener noreferrer">트럼프는 이란의 반대 제안을 거부한 후 이란 휴전은 '생명 유지'에 관한 것이라고 말했습니다.</a>
-<p class="news-desc">트럼프가 아무런 협상도 타결되지 않으면 이란의 "전체 문명"을 파괴하겠다고 위협한 이후 4월 중순에 미국-이란의 화끈한 휴전이 시작되었습니다.</p>
+<p class="news-desc">트럼프가 아무런 협상도 타결되지 않으면 이란의 "전체 문명"을 파괴하겠다고 위협한 이후 4월 중순에 미국</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

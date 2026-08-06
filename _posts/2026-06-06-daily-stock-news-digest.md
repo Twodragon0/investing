@@ -230,7 +230,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNV3NObmM4cEs2QUlNYThRekN0c2lnTDVrenhOVUNYV3F2Unp6VXgtWFdScWU0RFVISVhyZ3JzOWFsQWtTdWhNRVdIZ0lDQnctaDJDdk1xUmhpTUY1dHhuU0dndFdHaDBUWlUyZURieS1ZWXVVLVc4WG1aODBGa3V4UXNkb1JVdUU30gGcAUFVX3lxTE5pbV9TU2JuTXJLWVlzSVdjdHk0SldwNGtVQURBYTN2dDJfQTV0VzhfSDZSS1FqVEt2bDhZRHcyUXJGWnc0enhQZ3JQdnRNalJfWmRKTkxfTUFYWlhlTTc3U29GZVdyVnQ2RHkwY2RTbUxYbVBmYUphaC1BZzdITDlkdGNSOElReDV1UVFsQmloVXM0UHJ0WlczdTVRZg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">“스페이스X가 블랙홀처럼 자금 흡수”.역대 최대 IPO 임박에 코스피서 차익실현 확대 가능성 - 조선비즈 - Chosunbiz</a>
-<p class="news-desc">“스페이스X가 블랙홀처럼 자금 흡수”.역대 최대 IPO 임박에 코스피서 차익실현 확대 가능성 - 조선비즈 Chosunbiz</p>
+<p class="news-desc">“스페이스X가 블랙홀처럼 자금 흡수”.역대 최대 IPO 임박에 코스피서 차익실현 확대 가능성</p>
 <span class="source-tag" data-source-type="kr-media">조선비즈</span>
 </div>
 </div>

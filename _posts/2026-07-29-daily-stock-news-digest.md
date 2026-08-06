@@ -238,7 +238,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMingFBVV95cUxQamZOSVhtQUE3NXlXVktWS0xXLUxYTmpMYk5NaHg4cVM4Z1l6SWpyTm9lbng0Mmt5cjhmSVVFWXR6UzZkRHlMQkZ5cWREelJvUURQQ2FVcnJDbTZtdWxteC1HNkhvbHE2d1hIekIyVF94blM2c3N2RTlYLVRPb0ViNGhibjhXZ0xCRW1hZW01S2k0dTN6amtSUjNQUXMxd9IBsgFBVV95cUxPbEZya0J6M3YzamJFTjdDdVRzZVdnVXA1MHV3QWtTeXFuSDJmcHRNTzF6T0Q4N1R0MEZBYzRTZWNRWjFmTkx5QUZuRi02d2RoSjItOWljSVpYaWdsTWtDeDl2c0hDU3pJc2hhSEFqVTJBUjE2azdMSjE2TEN3aWNMQlJxQ1B1czFfdTdZcWtLblZzWFY0eEVrZnZ2VkFqTXF2TkVjaEVndjNIUWZvWktfOFJn?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">中 AI 반도체株 외국인 투자 막히자… ‘우회로’로 부상한 암호화폐 거래소 - 조선비즈 - Chosunbiz</a>
-<p class="news-desc">中 AI 반도체株 외국인 투자 막히자… ‘우회로’로 부상한 암호화폐 거래소 - 조선비즈 Chosunbiz</p>
+<p class="news-desc">中 AI 반도체株 외국인 투자 막히자… ‘우회로’로 부상한 암호화폐 거래소</p>
 <span class="source-tag" data-source-type="kr-media">조선비즈</span>
 </div>
 </div>

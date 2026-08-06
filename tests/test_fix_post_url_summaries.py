@@ -446,3 +446,80 @@ def test_is_google_news_matches_on_host_not_substring() -> None:
 
 def test_resolve_passes_through_non_google_urls() -> None:
     assert mod._resolve("https://www.cnbc.com/a") == "https://www.cnbc.com/a"
+
+
+# ---------------------------------------------------------------------------
+# Text-only pass (no network)
+# ---------------------------------------------------------------------------
+
+
+def test_clean_text_strips_source_suffix() -> None:
+    """The card already shows the outlet in its own tag; repeating it is noise."""
+    text = "S&P500·나스닥 급락; 원유·가스·금·은 급등; 비트코인 $67K 근처로 후퇴 - The Sunday Guardian"
+    assert mod.clean_text(text) == "S&P500·나스닥 급락; 원유·가스·금·은 급등; 비트코인 $67K 근처로 후퇴"
+
+
+def test_clean_text_collapses_a_doubled_period() -> None:
+    assert mod.clean_text("이더리움 및 XRP 가격이 하락한 이유.. 가격 동향 분석") == (
+        "이더리움 및 XRP 가격이 하락한 이유. 가격 동향 분석"
+    )
+
+
+def test_clean_text_preserves_an_ellipsis() -> None:
+    """`...` is deliberate Korean punctuation, `..` is the defect — so: no change."""
+    assert mod.clean_text("비트코인·알트코인 '장중 급락'...주요 변수는 금리와 환율입니다") == ""
+
+
+def test_clean_text_keeps_informative_tail() -> None:
+    """A tail carrying figures is the story, so no change is proposed."""
+    assert mod.clean_text("삼성전자 - 2분기 영업이익 14조 원으로 32% 증가했습니다") == ""
+
+
+def test_clean_text_refuses_to_gut_a_short_blurb() -> None:
+    """Stripping must not leave less than a sentence behind — so: no change."""
+    assert mod.clean_text("코스피 상승 - 한국경제") == ""
+
+
+def test_clean_text_returns_empty_when_nothing_to_do() -> None:
+    """A no-op signals "leave this blurb alone" rather than rewriting it."""
+    assert mod.clean_text("코스피가 3% 올라 2,900선을 회복했다고 거래소가 발표했습니다.") == ""
+
+
+def test_collect_text_targets_finds_every_dirty_blurb(tmp_path: Path) -> None:
+    """Unlike the re-fetch pass, this one looks at *all* blurbs, not just flagged ones."""
+    body = (
+        "---\ntitle: T\n---\n"
+        '<a href="https://a.example/1" class="news-title">비트코인 후퇴</a>'
+        '<p class="news-desc">S&P500·나스닥 급락; 비트코인 $67K 근처로 후퇴 - The Sunday Guardian</p>\n'
+        '<a href="https://a.example/2" class="news-title">코스피 상승</a>'
+        '<p class="news-desc">코스피가 3% 올라 2,900선을 회복했다고 거래소가 발표했습니다.</p>\n'
+    )
+    (tmp_path / "2026-08-05-x.md").write_text(body, encoding="utf-8")
+
+    targets = mod.collect_text_targets(tmp_path, days=None)
+    assert len(targets) == 1
+    assert targets[0][1] == "S&P500·나스닥 급락; 비트코인 $67K 근처로 후퇴"
+
+
+def test_replace_in_post_rewrites_all_copies_for_the_text_pass() -> None:
+    """A pure-text rewrite is correct for every identical copy.
+
+    The re-fetch pass must not do this — its copies point at different articles
+    — but the text pass derives the replacement from the text alone.
+    """
+    content = '<p class="news-desc">dup</p><p class="news-desc">dup</p>'
+    updated, ok = mod.replace_in_post(content, "dup", "새 요약", all_copies=True)
+
+    assert ok is True
+    assert updated.count("새 요약") == 2
+    assert "dup" not in updated
+
+
+def test_replace_in_post_still_refuses_duplicates_by_default() -> None:
+    content = '<p class="news-desc">dup</p><p class="news-desc">dup</p>'
+    assert mod.replace_in_post(content, "dup", "새 요약") == (content, False)
+
+
+def test_replace_in_post_reports_missing_anchor() -> None:
+    content = '<p class="news-desc">something</p>'
+    assert mod.replace_in_post(content, "absent", "새 요약", all_copies=True) == (content, False)

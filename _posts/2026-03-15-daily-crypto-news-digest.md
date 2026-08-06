@@ -250,7 +250,7 @@ permalink: "/crypto-news/2026/03/15/daily-crypto-news-digest/"
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMilANBVV95cUxNek04WjVoN19LMEt0dzVfMzNzeTJJUkVKMHYwVFdvSWkzak04OC0tRERKU1cxQnZOZnBhZ1czekdYZk0weVhVOEg3MkxMa05iSE40WC1YeE41ZDRGSWZlSFNCc3pQbmg1Z3JWeEhYNVlrdjlENTlfVno5VlNWNi1vU19JdDJ1Nzh1TVF1UWNpWUl5UlhZTGwzRkdxMS1NY01kQ0hQMG5qMnFKUEtFdjNnbzVHWFc4QllXZ2ZLaUFMVHMwVDNfM2Rkb1hnZXllaFoydEhZc3FEMzk3aWh3ZWx3c3pBMGkxRDE1VGZxSnB3VW5WOV9TaXkxbTJsSzlSYkJrZ2Q0NmZKdnF2QU9PcVZ0akZRWVJjYmNLQTR3UlNnX0lQSVRNTFUtZi1WV1RKSy1KdU1yVkNnR3hvbnk1NWRWSzJUbUZXeUJCVHBrendROVpfZ2doQ1ZlSWVGMnJsdm5IQ1hhQzlBOHo0d2FjTGN5UGpVaG9tdkxRUnNvb1FtTnZDTmlraGZJVHI2SlVfQWx3d0d1TQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 $70,000 아래로 떨어집니다. 이더리움 및 XRP 가격도 하락한 이유</a>
-<p class="news-desc">비트코인 $70,000 아래로 떨어집니다. 이더리움 및 XRP 가격이 너무 하락한 이유.. ($70,000.)</p>
+<p class="news-desc">비트코인 $70,000 아래로 떨어집니다. 이더리움 및 XRP 가격이 너무 하락한 이유. ($70,000.)</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

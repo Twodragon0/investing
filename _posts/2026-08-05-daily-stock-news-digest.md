@@ -185,7 +185,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNQ3N1TUg0RElGVEdLc2lPVmJjX0R5WFlUVkpMVF9EbXE1N3dOOWJUdm1wVUlIaXBoWG1WYWN1MUtsU1RmX3gwV2J5V0J2bkMtWW5nZ0gxZkJPZTZWbmFaQU1nODJCZEIyWkVkM3NxMXV4NEZtclFaMUpIcVZRR1dzd2tiRmhtd2It0gGcAUFVX3lxTE1WZVFzd1BMUVJiM3hTQ3FKZDFzTFp2YTI3VDdIdWVxNVJYSl9weFVCZFBJdmJDRXN0X2tBc3kxTUJvMmtWcWJQR2RrLVBTV3NLRk5OTC1HdW81Vk8xYnFzaFBXYnpfdmlsVWJvSkJsX01Ja2cyUXBtVnl1aHJleHFZQjFOc3JIY2NuLVNKcHF0RjNfN2xObzhsdzZuVg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">거래소, 내달 14일 주식선물 18종목 추가 상장…옵션도 2종목 확대 - 조선비즈 - Chosunbiz</a>
-<p class="news-desc">거래소, 내달 14일 주식선물 18종목 추가 상장…옵션도 2종목 확대 - 조선비즈 Chosunbiz</p>
+<p class="news-desc">거래소, 내달 14일 주식선물 18종목 추가 상장…옵션도 2종목 확대</p>
 <span class="source-tag" data-source-type="kr-media">조선비즈</span>
 </div>
 </div>

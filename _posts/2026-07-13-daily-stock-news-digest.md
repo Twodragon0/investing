@@ -130,7 +130,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxNblJoRUwzRkVHR0Jqc01fMV9tbjF5UW02cEExT3NodHZvTDJHQ2VwYXp5N2FWQ3ZvZmxkWE1ETnBkYW4zcGl0eHI3dFZscXFFelpyUjVWMUFjT3RvWFNlRmRDTW9PWUpuRHVReEloNG9IaTVNS2VMSjJrTWo0SnRncXRHM0pNd9IBmgFBVV95cUxQODg4NlRINEZ2c1FYN2Q4emNGMUEwdmVPbkhlTWY5cWs1SlpUcFpnVW12MXFtU3hudTRhVDJZWnNjZG90eTRkRnp3NFdvTVZLbHJFV09qOFQ1RFpoSWxWeTZSejV5Q3g3ZGpYWGZuajhrOFc5QmRRd0RyZGtYWnJXSURuNHFwNDlDdjVPZWRCY25zN0trbVd4Zmd3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">금통위폴] 전문가 전원 “한은 만장일치로 금리인상 예상. 연말 3% 전망” - 조선비즈 - Chosunbiz</a>
-<p class="news-desc">[금통위폴] 전문가 전원 “한은 만장일치로 금리인상 예상. 연말 3% 전망” - 조선비즈 Chosunbiz</p>
+<p class="news-desc">[금통위폴] 전문가 전원 “한은 만장일치로 금리인상 예상. 연말 3% 전망”</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

@@ -149,7 +149,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-13 - stock-news 뉴스 요약 
 <div class="news-card-num">2</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPSVJIdU5ieE12eUF1MlZJSmUyOGpzS1BuamdLTDRiZjRoZkNUb1FrTk5US0gzbHlLYTdiNGJWaWxKSVVLb2s0RldKR0FZbGlhWENzSlMtNWh1cnFHalNSUGhlR0k1S1V5V18tOTc5SmYzeXYtNXdXYWhEaGVnZDR1ajh0SnhKbXBqdFFsYWpXVUZ5OHB4Z01jNzVSN1B2QmFZZDdxcFZNdTIzSnlpbVVCQjdB?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Fit Group AG, 2026년 3월을 목표로 IPO을 통해 유럽 및 UAE 확장 계획 - The Source Magazine</a>
-<p class="news-desc">Fit Group AG, 2026년 3월을 목표로 IPO을 통해 유럽 및 UAE 확장 계획 - The Source Magazine.</p>
+<p class="news-desc">Fit Group AG, 2026년 3월을 목표로 IPO을 통해 유럽 및 UAE 확장 계획</p>
 <span class="source-tag" data-source-type="default">IPO Watch</span>
 </div>
 </div>

@@ -210,7 +210,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-18 - crypto-news 뉴스 요�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxNM0Y0eGM0Y1hUSk9CNFc5VXZETjc4aEM4VU1RSTJGbVdfejRVSlNLQ2ZIRFFkQW1BMTJNeTc1ZkZIaC0tdEh2UW56a0VHeDFOLTFHTnVjZ0tUY1Q3TnhZdFZ6X1RPNm9uU0tjZG10S2xXNmFZTkFJVE0wcWFaYUdVaW94Nnl4MTFjNzRfU0FVV2w4ZVZYWmxj0gGXAUFVX3lxTE5HaWJQYndGYm9uM0RBYnkwX25SYVR3Q3pfMEcyQWVMVWptRExNSlMtV292NVZtXzhfSEdwVHJaU1lkU3ZpZnhJZHhCSVVaZ2UyMXNuQlVOYXhkaDlsNTBMeGFxSndFd19lWGd5T3VZYVotUWdCNVQ5ai1YSl81cDdWWHpLMVJtbWxfWTIxenluSUJSazgxSE0?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">트럼프에 맞춰 아이다호 주의회 의사당에서 디지털 통화 발전을 지원하는 암호화폐 법안 - Idaho Statesman</a>
-<p class="news-desc">트럼프에 맞춰 아이다호 주의회 의사당에서 디지털 통화 발전을 지원하는 암호화폐 법안 - Idaho Statesman.</p>
+<p class="news-desc">트럼프에 맞춰 아이다호 주의회 의사당에서 디지털 통화 발전을 지원하는 암호화폐 법안</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>

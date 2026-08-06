@@ -130,7 +130,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-03 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPdlVYNnMxWUFMenFhaFc4OU5jOHlqX0Y4RnN1cWRCYVRpMDh4cHZHN0xsVW43MnFDTjMwYmNrREFUaFNXRnk0bWh6emRvX1lxSmZ4U3V1ZjZBUWxpbDNEWjFWQ3A2eDJkWlpxRzllVU5qSnByNURNWFRYRUN3aWx1dG5WWVFpbS1C0gGcAUFVX3lxTE9na3k1eElXMzQ5NVhETmlTWHlYQ0dZT2hQcFE2MW5fazRQRkV1MmVxWFF2aF9MdW1Zajd1ZTBzMGNDVmo5LUNOWldFdFoxVmVJTWN1bGJpMV9GSFRab0gwVTBZTXFUVHY0dnhaR0d3bGY0WDM2bnRmUDZ0YVBhUWtuRlpRWUJJZ2JsaE1VMy1HWlVZeVhkazU4V0M0VA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼전 61만원·하이닉스 400만원 목표가 또 올렸다…SK증권 “반도체 업황 강세 장기화” - 조선비즈 - Chosunbiz</a>
-<p class="news-desc">삼전 61만원·하이닉스 400만원 목표가 또 올렸다…SK증권 “반도체 업황 강세 장기화” - 조선비즈 Chosunbiz</p>
+<p class="news-desc">삼전 61만원·하이닉스 400만원 목표가 또 올렸다…SK증권 “반도체 업황 강세 장기화”</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

@@ -32,7 +32,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-12 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">996.93</div><div class="stat-label">KOSDAQ +4.76%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 美 반도체 급락 속 삼성전자 1%↓…SK하이닉스는 3% 올라[핫스탁] - 180건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 인플레이션, 환율 동향 주시</li><li>🏦 <strong>거래소</strong>: IPO 주목</li><li>🤖 <strong>AI/기술</strong>: 삼성전자, 하이닉스 주목</li></ul></div>
-<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.newsis.com">美 반도체 급락 속 삼성전자 1%↓…SK하이닉스는 3% 올라[핫스탁]</a> <span class="p0-desc">美 반도체 급락 속 삼성전자 1%↓…SK하이닉스는 3% 올라[핫스탁] 뉴시스</span></li><li><a href="https://www.2news.co.kr">삼성전자·SK하이닉스 주가 급락, 반등 흐름 꺾였나 - 2news.co.kr</a> <span class="p0-desc">삼성전자·SK하이닉스 주가 급락, 반등 흐름 꺾였나 2news.co.kr</span></li><li><a href="https://biz.chosun.com">AI 확장 ‘건전성’에 커지는 의문… 코스피 급락 출발 - 조선비즈 - Chosunbiz</a> <span class="p0-desc">AI 확장 ‘건전성’에 커지는 의문… 코스피 급락 출발 - 조선비즈 Chosunbiz</span></li></ul></div>
+<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.newsis.com">美 반도체 급락 속 삼성전자 1%↓…SK하이닉스는 3% 올라[핫스탁]</a> <span class="p0-desc">美 반도체 급락 속 삼성전자 1%↓…SK하이닉스는 3% 올라[핫스탁] 뉴시스</span></li><li><a href="https://www.2news.co.kr">삼성전자·SK하이닉스 주가 급락, 반등 흐름 꺾였나 - 2news.co.kr</a> <span class="p0-desc">삼성전자·SK하이닉스 주가 급락, 반등 흐름 꺾였나 2news.co.kr</span></li><li><a href="https://biz.chosun.com">AI 확장 ‘건전성’에 커지는 의문… 코스피 급락 출발 - 조선비즈 - Chosunbiz</a> <span class="p0-desc">AI 확장 ‘건전성’에 커지는 의문… 코스피 급락 출발</span></li></ul></div>
 
 
 ## 전체 뉴스 요약
@@ -176,7 +176,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxNc254QUF3M1VKMGZYd3lydnR5SEhiOVhMZFFWakF3TURTSDFqWEc5dW41YnA4QUJQZExmNkxyRVhrY3JwVk1uaFk3OHpVd2p3ZG1kMi1KeXlDNUJraUtCT2V3UzJBWGl2N1E0a25nOTJXaWhhV3dieFRvbE1pWF8tRUgzd0dvRms?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">오늘의 주식 시장: Dow, 나스닥은 SpaceX IPO보다 앞서 상승합니다 — 실시간 업데이트</a>
-<p class="news-desc">오늘의 주식 시장: Dow, 나스닥은 SpaceX IPO보다 앞서 상승 — Live Updates WSJ</p>
+<p class="news-desc">오늘의 주식 시장: Dow, 나스닥은 SpaceX IPO보다 앞서 상승</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>

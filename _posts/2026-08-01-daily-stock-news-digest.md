@@ -243,7 +243,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPWU94b0N5cWdxbDJMcVlSSlU4V0R4RXJyeXl6SDdUcWpyV0ZMLWgxRzFMOW1Cb3M4aTJudW1idkR2MjVoNUtZdGdJcXJjUUhtTFYyZUV5UzlocXJIbk9mYUdCX2hUR3dBOWUxMHViVl9uNTBhREVHMkt3cjJaV3NIUkM2RHV3TzdY0gGcAUFVX3lxTE1pdWRNQldMZThSRURvbXc2ZGQzc1d5VnhkZ2JOV05VRnRteFlnZDVocFNZTUlPeVlHZmlxTzZoOEZnUnRUNHJPVlFzUVRta1FDOG82MWpWTUhkNjVTMjZmTjJoaHRxMnp4VS01MTJvSkptcm1WQW5oc1dUUkVqaWxTbzZ0MTE0UlRTbEtZbUh4Z0k5R0lKTlFzVXpYMA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">예탁원 “8월 상장사 45곳 1억8078만주 의무보유 해제” - 조선비즈 - Chosunbiz</a>
-<p class="news-desc">예탁원 “8월 상장사 45곳 1억8078만주 의무보유 해제” - 조선비즈 Chosunbiz</p>
+<p class="news-desc">예탁원 “8월 상장사 45곳 1억8078만주 의무보유 해제”</p>
 <span class="source-tag" data-source-type="kr-media">조선비즈</span>
 </div>
 </div>

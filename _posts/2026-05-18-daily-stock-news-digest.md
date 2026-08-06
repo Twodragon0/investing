@@ -81,7 +81,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-18 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxQRVF0cC1lVXEtTWsyazNaMHlnSVRZZlBmMTNJUTJIN3JmbXJLdjJlLXJoSEp3ODdVdzF1bHdkSWkzUUlWdEZVcldHc21RWGdkNGJOS3VkWHMyblRJdE43STQ5SHd4eG8zZEtOelRxRU9YUGEyOHlXMmRLUVBZemZ6LXpfVDhpUUl3MTY2R0RHdWMtZC1vaUZ5WVYtSmhPWGs5?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">폭발적인 인플레이션으로 인해 타격을 입은 글로벌 채권은 투자자들을 놀라게 합니다.</a>
-<p class="news-desc">폭발적인 인플레이션으로 인해 타격을 입은 글로벌 채권은 투자자들을 놀라게 합니다 - 최신</p>
+<p class="news-desc">폭발적인 인플레이션으로 인해 타격을 입은 글로벌 채권은 투자자들을 놀라게 합니다</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>

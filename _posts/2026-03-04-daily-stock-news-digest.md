@@ -222,7 +222,7 @@ permalink: "/stock-news/2026/03/04/daily-stock-news-digest/"
 <div class="news-card-num">3</div>
 <div class="news-card-body">
 <a href="https://news.google.com/rss/articles/CBMiugJBVV95cUxONkRXXy10UVNLcklkdTkwRzFJM3dkZGpZa2hvMnlYNTBhTUFpa1B0MjZicDRvLXRXb3JnTlQtcXlvd3BiMzE3THFPMkdqaHpyZXRhMFpEMTFpQ19MX0JJaFF6TTZXd1VENko5bVZZTEtmTnBSVkVOZGlaZ1ZudTIxVW9ZM2V5T0VacG51NDdYbDZwVkRaZzRaRkRjWW04X0xDdzd0UVhyTmxWQXpiOHZIU3BybkI1LTRMNWl3V3RzajA4T2M5MnFaWFFTenlncXl4Q2l1bUJjNUxIU1RudzNMcTQ2YnhMSE5HWng2TGJITGNVc1dxX0VYaGYwVHdYWmpLLWN3V0Raak5icVBEUzNWaXZLWlNHUnBLVlRsRmIxaFJIRGdkTlFqOTE0c1dhbDdQUjBuczVWZ2NRUQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">오늘의 미국 증시: 이란 갈등으로 다우 1,110포인트 폭락, S&amp;P 500·나스닥 급락; 원유·가스·금·은 급등; 비트코인 $67K 근처로 후퇴 - The Sunday Guardian</a>
-<p class="news-desc">오늘의 미국 증시: 이란 갈등으로 다우 1,110포인트 폭락, S&P 500·나스닥 급락; 원유·가스·금·은 급등; 비트코인 $67K 근처로 후퇴 - The Sunday Guardian</p>
+<p class="news-desc">오늘의 미국 증시: 이란 갈등으로 다우 1,110포인트 폭락, S&amp;P 500·나스닥 급락; 원유·가스·금·은 급등; 비트코인 $67K 근처로 후퇴</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>

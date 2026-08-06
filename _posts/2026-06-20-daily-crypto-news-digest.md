@@ -300,7 +300,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-20 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/crypto-biz-ai-exit-strategy-bitcoin-miners?utm_source=rss&utm_medium=rss&utm_campaign=rss" class="news-title" target="_blank" rel="noopener noreferrer">Crypto Biz: AI은 채굴자들을 위한 출구 전략일까?</a>
-<p class="news-desc">비트코인 채굴자는 AI에 두 배로 감소하고 RWA를 토큰화하여 상위 430억 달러를 기록했으며 리플은 아프리카 결제 네트워크를 강화했으며 Sam Bankman-Fried는 매력을 잃었습니다.</p>
+<p class="news-desc">비트코인 채굴자는 AI에 두 배로 감소하고 RWA를 토큰화하여 상위 430억 달러를 기록했으며 리플은 아프리카 결제 네트워크를 강화했으며 Sam Bankman</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

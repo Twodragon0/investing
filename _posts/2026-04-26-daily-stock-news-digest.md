@@ -132,7 +132,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMi8gFBVV95cUxQSDJBR2Nva2p6a05sUFc1TzBic3d1RjJzT0ZMcUlqdlhfanROWFVuYlZlOG5FS3AxbVJ2cUdZWUtsek5wWGpSSmxDMVlRSURiWS1QNVRXdXk1SmVIcUxVTFZsbnRoM1BfdVNWbHhERU1GN1BmMEJnM1pwS1NEVmxRb004RWJMZUhwQjZtU29Ia0xOT0IyaGppczljc09xaWNFaXo0eGZGSnRaRlhBRkg3Szdsd3ZCT2NURTNCZmhaZlhwMmdNZms1M1FRRDUyQkh3X1A0NXJVVVg1SVdzcF9aWloxLUJVb3lndVVVaGtqN21rUQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Markets News, 2026년 4월 24일: 나스닥, S&P 500은 인텔 상승으로 기록을 세웠습니다. 미국-이란 회담에서 유가 하락; DOJ 삭제 파월 프로브 - Investopedia</a>
-<p class="news-desc">Markets News, 2026년 4월 24일: 나스닥, S&P 500은 인텔 상승으로 기록을 세웠습니다. 미국-이란 회담에서 유가 하락; DOJ 하락 파월 조사 Investopedia 오늘 주식 시장: 나스닥, S&P 500 점수 기록 마감; 랠리 Mag 7 수익 테스트 직면(생방송) Investor's Business Daily S&P 500, 나스닥 기록 마감, 인텔에 힘입어 투자자들이 미국-이란 회담 재개를 희망 CNBC</p>
+<p class="news-desc">Markets News, 2026년 4월 24일: 나스닥, S&amp;P 500은 인텔 상승으로 기록을 세웠습니다. 미국-이란 회담에서 유가 하락; DOJ 하락 파월 조사 Investopedia 오늘 주식 시장: 나스닥, S&amp;P 500 점수 기록 마감; 랠리 Mag 7 수익 테스트 직면(생방송) Investor's Business Daily S&amp;P 500, 나스닥 기록 마감, 인텔에 힘입어 투자자들이 미국</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -253,7 +253,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPYkREYUZnUUNoY2tQOTAzSGdlRnQ2RUtmZGhyMHhRMEIyQ2JvRTJwbkVJcU9Ba1k3NUhBcGg1Z045X3hkYlpxMGJRbTh5TTdLZHVqSTBfRGhjeHhqenBhejZfSGNQUUQ0LU9fczhiMzUtQ0Z5WTZ2cU1vQWxVQldWdkEzVWVCTjEw0gGcAUFVX3lxTE5JczFJbjNRRFFXSmRsY2lVRXpOUG1jUkFBbWsyQS1yc3BpRFR2aG1DclV6dVVuZVFXZV9GeUdDNWJuanNCQm5uQ282VXRfLTFpNVlCS2o2Q0JaUUpGZHZ1NFk5TXQ4UzE0ZDd0cDRJTmFYLXFGWEEweW9NTnpXd2xLVVNyb3otb2dNRmM1eWRKSnBKa2t5eDRveGdHNw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">주식 매매 상위 종목 및 환율] 2026년 4월 24일자 - 조선비즈 - Chosunbiz</a>
-<p class="news-desc">[주식 매매 상위 종목 및 환율] 2026년 4월 24일자 - 조선비즈 Chosunbiz</p>
+<p class="news-desc">[주식 매매 상위 종목 및 환율] 2026년 4월 24일자</p>
 <span class="source-tag" data-source-type="kr-media">조선비즈</span>
 </div>
 </div>
