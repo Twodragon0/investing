@@ -262,7 +262,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFBVLUtVdFl5YlVfc2lrMDEzYk4ybVBWMzBsMUtpVnJxV0lVMTZKUXNiRVpnekM1ZTREa1h5bWpIYU5iQVJpcnc3Ny1JX0RxMDNSX2hNQU45QnF3V3d2TjduaHRlSkNJZXcy0gFuQVVfeXFMT0ZaV2lKeEYtRzAyLVhnY2FOSE9POTA0QjZYOHZMbVhuVkJSV3VFajJJaS1NRVpyTFMyV2ZIdHlZUHpTOGczaFpEb2lRTXB1Z0lPME5qZno4WlkxYnkzNHcxVGNxZHpKcC1ZM0xNZEE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">"SK하닉 美 ADR 상장, 韓 반도체 재평가 계기…7조 수급 기대" - 머니투데이</a>
-<p class="news-desc">"SK하닉 美 ADR 상장, 韓 반도체 재평가 계기…7조 수급 기대" - 머니투데이 머니투데이</p>
+<p class="news-desc">"SK하닉 美 ADR 상장, 韓 반도체 재평가 계기…7조 수급 기대"</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

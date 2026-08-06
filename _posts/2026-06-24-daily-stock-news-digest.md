@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-24 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE96Tm1zOHYzUlRlRGRmbFk0blJCbDZIV01GZFBBRTZ2NHVKS1EtNTV6MFlvRDUyZzlBWEYtOWplTG0wcU1HOS1yNG9hSjFoc1hDb3R5WnN2LU9STjZwVmdndjAxWFUwSmp2T0prMmtCZlJyYnlnendF?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">22일 매매 동향] 외국인 및 기관, 순매수·순매도 상위종목 &#124;</a>
-<p class="news-desc">[22일 매매 동향] 외국인 및 기관, 순매수·순매도 상위종목 &#124; 핀포인트뉴스</p>
+<p class="news-desc">[22일 매매 동향] 외국인 및 기관, 순매수·순매도 상위종목</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>

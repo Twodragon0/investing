@@ -64,7 +64,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE9HWEF5TWdSUUEwYXdlZEk0TTZ6SUNFMlpDTE96ZUhEMGNpbEkwR2VJajItRlRDdVpZUVptYXpVMjRFeXJoTGNEd3pBVE5vUEE4WFpJVHVQd2xqb0NFQUVORXZPZVlKOVl1Y3NwTXdkU0pQVHRH?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">국고채 반등 조건은…"일단 백투백 아니란 확신 나와야" &#124;</a>
-<p class="news-desc">국고채 반등 조건은…"일단 백투백 아니란 확신 나와야" &#124; 연합인포맥스</p>
+<p class="news-desc">국고채 반등 조건은…"일단 백투백 아니란 확신 나와야"</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -186,7 +186,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxOYndiV0Eybkx1azMyV19iOTJCZjdXSnFYRlhIV0d0QWU4TlRXa2Job2NZYTZVODVzaHFxU3gxSGl0YVFndXhPS1FsNTg2Nl9OdzFLaFVQeTM5ZjV2dE0zbE9UN3l0MW1VY05GQzhIbFd5QzgwcERqQWtVelBrNGNCOElVaS1UY0U?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">오늘 주식 시장: 트럼프 이후 유가 급등, 다우 지수 하락 이란 휴전이 '종료'라고 발표 — 실시간 업데이트</a>
-<p class="news-desc">오늘 주식시장: 트럼프 이후 유가 급등, 다우지수 하락 이란 휴전 종료 선언 — Live Updates WSJ</p>
+<p class="news-desc">오늘 주식시장: 트럼프 이후 유가 급등, 다우지수 하락 이란 휴전 종료 선언</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -239,7 +239,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQeTBwNkMtdjVUZWlXeFRYZ3cyVlBQbHptZGtJbnpCN055MzY4U0NDMXRKV3lqZHdWM2V5U1Q3bXZwTnI3T3RzVnRjdkpWUXlnRHlHZGxZeXlYUHdsWFdZX2hjbm44c2hLcW05NlVXRUl5eXczWi1qT25HNFdCRWJZR2Z2bXd2SVkx0gGcAUFVX3lxTE1aRmJNRzFWQ2tOVWgycUltQkhHd2hfNU5KWTlVNERNRlJWODZqcF9DZDNPdTAwSDdyZHQ2OUhqWlM4ZWlYZms3eHlhbjBrR0VYSFZ6YURRWFVEb0FhNWtRTWRhQUFZS0k4YkpWUjVKY2NucC1Pb3pfd2JLa0owbzBIVUZWLUpvak1IVFAyNlJhUDVMOHVrRmRIMHBFcQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">美 상장 앞둔 SK하이닉스 ADR 공모서 “몇배 초과청약” - 조선비즈 - Chosunbiz</a>
-<p class="news-desc">美 상장 앞둔 SK하이닉스 ADR 공모서 “몇배 초과청약” - 조선비즈 Chosunbiz</p>
+<p class="news-desc">美 상장 앞둔 SK하이닉스 ADR 공모서 “몇배 초과청약”</p>
 <span class="source-tag" data-source-type="kr-media">조선비즈</span>
 </div>
 </div>

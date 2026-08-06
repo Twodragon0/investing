@@ -54,7 +54,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-24 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxQNXIyUDgtLVk3WWRCR01lY1BxU2VpTHQ5M0tnVDBzaDhPaGtBZU9FQjI3OWJmWjNuemZVUXBzTmpIc3FqRy1ZM05felJtSm9uRGtnZVZMUjV1OHZNVmdaY3Y4OHVDM3g3YVgxUlBvOXFoeG1Wd0dVWDM1cXJWTnRZZFpXQi3SAYoBQVVfeXFMTTNmS3dWRnBOZ1lDWmNHcFJfcjRJdXlBRzVaRW5LUl9HajFuUFRzWWJEYmlocGlFUDBxUnRnN0J2UjNrSTd3QkptQXpVeUtiOGMtbnNwbUpraW92QmtHZVUzalBlZWJKY294WWRrSERQaFVSTkZFb19pOXhTMFd2SS1JMDZSN3d4Rk1n?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">유가 급등으로 인플레이션 우려가 다시 불붙으면서 10년 만기 국채 수익률은 2025년 1월 이후 최고치로 상승</a>
-<p class="news-desc">유가 급등으로 인플레이션 우려가 다시 불붙으면서 10년 만기 국채 수익률은 2025년 1월 이후 최고치로 상승 - CNBC</p>
+<p class="news-desc">유가 급등으로 인플레이션 우려가 다시 불붙으면서 10년 만기 국채 수익률은 2025년 1월 이후 최고치로 상승</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>

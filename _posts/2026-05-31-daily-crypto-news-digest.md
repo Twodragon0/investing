@@ -291,7 +291,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-31 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxNcjZ1NUttVVVBMXFXTXpQbU51ZUUwOFNHaGxvRUVMeXctUWdmcnB5WnhQMnlwSzgwWjZkU1NqZjc3UEFYVjVHZ05XRWFOR3I3WGFBZVhrWHBfZ2daUDRTanpaNWxfR2pfc2ZINzlnNkxVWFJEeVF4X3RXQTdseERWRHZ3UG40N0pteXRWZHQyN2h0Q0lkRnE1X1ZybXNHTFRPcHhEMnE2NERTSGYwekM2T0NkU0xBWGR6Z1Z6ZW54dEzSAcYBQVVfeXFMUGY1M2JadHdtd3VsQ1A1d2JoYkI2a0RiRGpCQTJSWEVBRW84ME8zUVNLbGpIVURmd05iUHJKM2Zod09ZU2N4WVdqQm5RRHRXZTVvVUZ2cld6cmd3UXlpeWdyMnBVdGx0dGhhTHd2X2tBdEctRm5MaEJXai1ILTVuNG9UaUZBbG94LS1jdzBkRkNCd01TMng3REJ6ZXVfYnI5RF9vNDVINGJiZE9ma2J3bC1jN0hndkkzV1NIcjVPaUlILS1IeDF3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">FBI, 대륙간 '사기 복합' 단속 속에서 기록적인 80억 달러 규모 암호화폐 압수</a>
-<p class="news-desc">FBI, 대륙간 '사기 복합' 단속 속에서 기록적인 80억 달러 규모 암호화폐 압수 - 뉴스와이어</p>
+<p class="news-desc">FBI, 대륙간 '사기 복합' 단속 속에서 기록적인 80억 달러 규모 암호화폐 압수</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>

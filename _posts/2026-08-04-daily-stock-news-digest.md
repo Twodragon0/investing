@@ -292,7 +292,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNelNnUEp1NkRabXBWUlAyUDMycV9paWp0QU9MQmpBZFR4MVVjZ0VKV1hQX2xodDRiUnk1ck9MSGpCNDhzd19MYUF3dDEtaWg1U0gtRFFLZG1ITFBScEhCQS1QSGY1VjVMUGZxYlA4X1FVeUVRNXJTNlRBY01NSEsxVWdSTDDSAZgBQVVfeXFMTWtsVjd5czU2My03ZExTUm1YVC11bDlJZHNyUkF2WEM1ZlZWRUxDOTZaVHdweEJEV1Bpc0pKcTVDd2RRUUlzSGZzckpxZWJNMXdsTjBaSVFJaFF5SDNEMXNWUks5UFFtS0ltNjdKMU1hTHhXV09IbzhpazhUSlJXa0pqb084LXJwOVB2NjV6RGxQUWEtVERWZno?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">홍인규 "김준호가 추천한 주식 샀는데 상장폐지" (독박투어) - 조선비즈 - Chosunbiz</a>
-<p class="news-desc">홍인규 "김준호가 추천한 주식 샀는데 상장폐지" (독박투어) - 조선비즈 Chosunbiz</p>
+<p class="news-desc">홍인규 "김준호가 추천한 주식 샀는데 상장폐지" (독박투어)</p>
 <span class="source-tag" data-source-type="kr-media">조선비즈</span>
 </div>
 </div>

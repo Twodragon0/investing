@@ -61,7 +61,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1zUEJJZ0w1ZlBaMnA4RGFRRXNOWmh3T0Y1VUVVMi1HT0ozbFFkSU1KdGMzV09EdjludFRtc1MxU05sS0NMWEsyNXJRc3NJbGFkaEFUaHlwRzBRUkVITEF2a0FTcjFUdE5h0gFuQVVfeXFMUEZrWmpGU2NmakN6Z2xJeUNQbWI1ZVJyUFFMYllIZ0NwMHc2NDJfaFdfTzFmYk5uRmo3MUNadGpCQmlfNDUzRVgxZ3ViTlFRYzNLWGtIeE9QamVWRzJXYjc3VjBFWHUxV09CSHBZeUE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">"아직도 싸" 50만전자·300만닉스 전망…반도체 내년까지 쭉 간다 - 머니투데이</a>
-<p class="news-desc">"아직도 싸" 50만전자·300만닉스 전망…반도체 내년까지 쭉 간다 - 머니투데이 머니투데이</p>
+<p class="news-desc">"아직도 싸" 50만전자·300만닉스 전망…반도체 내년까지 쭉 간다</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

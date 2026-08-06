@@ -239,7 +239,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-31 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNd1E2S0FrRDdhWmNNYkRITWlWOVM2QXdwNkNSM04zbV93TGxkRktfd0U3YUdzbXVuRUVLeDZUTVJtbmFHa1l1N1ZLS3dWeEh0S1d6TzBGSzJBSGhsbVJNSDdFd29zREJVbElXYzZONHpCSWRvVHlMazVBTmR2UDN1d0N0R3dXdllG0gGcAUFVX3lxTFBMOWJfd09UVHVYSXJmbXFvcEZqLVdmYnRrSDNHYy00QU9UYlVhR0FCRTliVmVhZWtXRDFvZU1faWJkRVU0N01TN2NXWHJXRUUwOEJDa1QtcWNyVEkweFdTRVQ5WmVkTEJ4UWg5Nm9WN2lxTldYV0hSODFmZHVEMDFHWXRmbEZLTmt3LWV1MGVnRy0yTkxvQUpITWJtQg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">TPG는 서두르는데 카카오는 미온적.카카오모빌리티, 美 ADR 상장 가능할까 - 조선비즈 - Chosunbiz</a>
-<p class="news-desc">TPG는 서두르는데 카카오는 미온적.카카오모빌리티, 美 ADR 상장 가능할까 - 조선비즈 Chosunbiz</p>
+<p class="news-desc">TPG는 서두르는데 카카오는 미온적.카카오모빌리티, 美 ADR 상장 가능할까</p>
 <span class="source-tag" data-source-type="kr-media">조선비즈</span>
 </div>
 </div>

@@ -114,7 +114,7 @@ permalink: "/crypto-news/2026/03/10/daily-crypto-news-digest/"
 <div class="news-card-num">1</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMiiANBVV95cUxPbnRpNTRvTW1FbzZ2VXhtaXJwZzNTdVBCa2g1U2wyNVVzTXVDLUdELXNtMlQyNXRJb2NjSDh5OTV0UDhPVUVRaXJKNnEzbVExZDlua25XMzVrRllRZUlOWWdvQ2xpNktsR1BZOVoyai1DN1FKNmNCUzJQWXhMbmxKblljYlFiQnVDbTlVXzVvQV9aVW42TU12eFIxRWE4Ui1UdVpORUhNT0RuSTZrTk1CVHlsbFAxTW9OTlFTYlRJVFQ3WWZ1bUxkZzRUQW1aQXhaeXg4cjczTzY3NlZ3OTg2OFNFOUViMlhaT0lLSjl3QnlodDRDUlNzU2VTTC1iWTFZczRjaHRDaS14WlVEN0NQUDdENUxKZEt3dzdJc3J0QmxqYUZFeWtSMzhicVZsZld1azBiMmdDRktaeUlrT2VBTEJPaF9zU2xZcjBxUDNvNTlqLUpFXzU5cEhNZVd4QVhGSDZTWGM2ZlRNWlFwaGd1U1RXXzlpVG45VkFkcjItZnpENnhPc3I5MQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 가격이 상승합니다. 석유가 암호화폐의 미래를 좌우할 수 있는 이유</a>
-<p class="news-desc">Bitcoin Price Rises. Why Oil Could Dictate What Happens Next for Cryptos.. 가격 동향과 투자 심리에 직접적 영향이 있습니다.</p>
+<p class="news-desc">Bitcoin Price Rises. Why Oil Could Dictate What Happens Next for Cryptos. 가격 동향과 투자 심리에 직접적 영향이 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

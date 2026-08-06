@@ -264,7 +264,7 @@ image_alt: "주식 시장 뉴스 종합 대표 스냅샷 이미지"
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxNeEhzYzQzdjR5MDJCWkd6Q2VLdEZzbzRoWnNOcXFlQjNfMlV4Q0NQRjExMlNhT2NPcnRBbW1sZUkteXo4N0dGaHNNeGZJOEZ2aXFvdmZiN2V2QzdOMzFteFRnY1RVRm1rQXltWmY5VFZOdFVNNVpudVp1dTlrcFM5b1k5SmlWQllDMVFXSjA4ZVpSZHgtV2JpWDJ4SkFRbVE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">또 다른 해, 투자자들을 위한 또 다른 IPO 찬물 샤워 - AFR</a>
-<p class="news-desc">또 다른 해, 투자자들을 위한 또 다른 IPO 찬물 샤워 - AFR. AFR 관련 시장동향입니다.</p>
+<p class="news-desc">또 다른 해, 투자자들을 위한 또 다른 IPO 찬물 샤워</p>
 <span class="source-tag" data-source-type="default">IPO Watch</span>
 </div>
 </div>

@@ -198,8 +198,8 @@ permalink: "/crypto-news/2026/03/05/daily-crypto-news-digest/"
 <div class="news-card-item">
 <div class="news-card-num">3</div>
 <div class="news-card-body">
-<a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE9OY1hwcktwa1JpaTBIdzdZRmF4alMxbW1WUDN0azdyVk1TdUhXNGpsdzJHTnB5bDBUaG1VSzg5XzVGXzROZmZGX3VFdmpXaGM?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지-[美증시 특징주]</a>
-<p class="news-desc">비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지-[美증시 특징주]</p>
+<a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE9OY1hwcktwa1JpaTBIdzdZRmF4alMxbW1WUDN0azdyVk1TdUhXNGpsdzJHTnB5bDBUaG1VSzg5XzVGXzROZmZGX3VFdmpXaGM?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지</a>
+<p class="news-desc">비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -252,7 +252,7 @@ permalink: "/crypto-news/2026/03/05/daily-crypto-news-digest/"
 <li><a href="https://news.google.com/read/CBMisgFBVV95cUxObUcyUHBYcmhtV21Sa0xtU2R6QlZZTi1KMWtkQlZ3NC1HXzBVZnVNX18xQWFjZUpqejdzd0Vjc0l1WFZ2ZHhTM1N2NjRQb3Q4aGVoVW9nU1JqckRNTXd2REF0aS1pLVU1QUphbk5sOFQyZWE4OUMwSlBXdGMxUGhScG04UXotakl1c1RYWGZDblVQU1J5Z3lYWGVCWnRVaEhzcTBLdURKRTJOUXF6b0RkWnlR?hl=en-US&gl=US&ceid=US%3Aen">비트코인 대통령이 트럼프 주요 암호화폐 법안을 지지한 후 $74,000로 급등</a> — 시장 반등 움직임이 포착되었습니다. 기술적 반등인지 추세 전환인지 거래량과 수급 확인이 필요합니다.</li>
 <li><a href="https://news.google.com/read/CBMi1wFBVV95cUxNNHI5LUVzbFBkd01vU3c3ZU9fWjVtem1PQmdROVJObjQtb0ZWU3lRY3B3dURsWmxUdExDN1Z0a0VnZGlIbmxtRGs5NDBRQ2hmb0ppcGgxaW5uS2JxSTNqb2thQzVpeFFiM1Q0N2FmRlJUa3hLRHJ2UWtXWTBqYkpkZU0tQXR1TV9TRWpJNXE1TG5PMGpPc0Uxb20waTZCT2xZb3M1UXhTeDJyVDhid2VJbjlBVGF0dnZZM2oybVhfbzY2RE0wWE12YUlfUzVqeEVKLV95clhXd9IB3AFBVV95cUxOV2N2aHJ6YW03TDRnZ0ZYenRLRm5haU5WZERZcDhoajRkdDdKR3psaXNuRkVEOG1hbUhQVDNGYlZrUWpOM3kxSWdCckpDODlGTDJheEQtTXBrZVBOZWM4LXZicE1UZ21GZDlDZEUzeGc2a2xtYWZGSUdrUVdFYm9UOGdiWHBiaW9BUFRsemNyOGlFTjItM3hIMlZHRHpMQUdQeXRHMXBlUDRKMWZyUnhSTlA4TDFpY3B5M1YyRGd3c0NUNW01bDJrRVY0X2hfS1pLWWtlb0RpdE44a1RF?hl=en-US&gl=US&ceid=US%3Aen">Coinbase는 트럼프가 디지털 자산 시장 구조 법안을 지지한다는 신호를 보낸 후 암호화폐 주식을 더 높게 이끌었습니다.</a> — 트럼프가, 디지털, 자산 관련 시장 뉴스입니다. 투자 판단 시 원문 기사의 세부 내용을 확인하세요.</li>
 <li><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxOQmItTHg0a19TY2N2b1RzRGtJX0Q4cnYtRklxekYwbkR4d19NQXE5M244cUo1cVlRQmVGclVna1BBZXhzZ0FkNmNlbFZEUl9Pd2xGWjR4bHBocms3NFFOM3ZybWRsN2lCNHRRbWlNVXhMdU45dWxOSzAxUDR5SDRVYlpKdWdYa200aTRaMXU2WWZKWUp6ZGZXeUpJZEVFeF9lamFTZm10UU5sTFAxeEE?oc=5">버지니아 총회, 암호화폐 키오스크 규정 통과 - WSLS</a> — 증시 제도 변경 관련 소식입니다. 거래 환경 변화에 따른 투자 전략 조정이 필요할 수 있습니다.</li>
-<li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE9OY1hwcktwa1JpaTBIdzdZRmF4alMxbW1WUDN0azdyVk1TdUhXNGpsdzJHTnB5bDBUaG1VSzg5XzVGXzROZmZGX3VFdmpXaGM?oc=5">비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지-[美증시 특징주]</a> — 시장 반등 움직임이 포착되었습니다. 기술적 반등인지 추세 전환인지 거래량과 수급 확인이 필요합니다.</li>
+<li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE9OY1hwcktwa1JpaTBIdzdZRmF4alMxbW1WUDN0azdyVk1TdUhXNGpsdzJHTnB5bDBUaG1VSzg5XzVGXzROZmZGX3VFdmpXaGM?oc=5">비트코인 반등…트럼프 대통령, 암호화폐 법안 공개 지지</a> — 시장 반등 움직임이 포착되었습니다. 기술적 반등인지 추세 전환인지 거래량과 수급 확인이 필요합니다.</li>
 </ol></div></details>
 
 

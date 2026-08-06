@@ -278,7 +278,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOYk95a0JKeFhCZTNyX2NqaGJaSlJqMHQ0QWY2bzdLWDNjaXhNdko5a1p3eGNQVFZHMVkzcTAwS0V4dE9rZkhfZzFQX1hVT0psbzBFak9yUk5XaEE0QjRrd3ZEM3hlbDRBVUh1WkphRm9ON0pJd1NKckdWdkxuQnh5V2pHQdIBlwFBVV95cUxOUHdHZjREaUFGNWJEdndQTnFhLU53R1lLYzNJT1lhRXNYRElrLXJNQ2VqNHowdTdPM2V3YWdZdXBVdDBrc09idjhiVUdiTUVyVmdwY3luX1N1Vl90R1M0MTd0MENpRUpDZ3hTNUNHWlh3Z1ZSVDltV2pfeFZRaFNNQ3JWWUtpdVRuVC1QdEZIX3BpZVVNVjdr?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">ETF 투자로 1억원 벌었는데 세금 폭탄… 놓치기 쉬운 절세 포인트 - 조선비즈 - Chosunbiz</a>
-<p class="news-desc">ETF 투자로 1억원 벌었는데 세금 폭탄… 놓치기 쉬운 절세 포인트 - 조선비즈 Chosunbiz</p>
+<p class="news-desc">ETF 투자로 1억원 벌었는데 세금 폭탄… 놓치기 쉬운 절세 포인트</p>
 <span class="source-tag" data-source-type="kr-media">조선비즈</span>
 </div>
 </div>

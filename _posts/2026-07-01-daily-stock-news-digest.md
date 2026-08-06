@@ -32,7 +32,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-01 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">916.18</div><div class="stat-label">KOSDAQ -0.48%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 美대법원,"미국서 태어나면 미국시민"인정…트럼프 행정명령 기각 - 176건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스닥, 코스피 관련 45건</li><li>📊 <strong>매크로/금리</strong>: 환율, 인플레이션 주목</li><li>🤖 <strong>AI/기술</strong>: 반도체, 하이닉스 관련 14건</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 총리 동향 주시</li></ul></div>
-<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.hankyung.com/article/202607017845i">美대법원,"미국서 태어나면 미국시민"인정…트럼프 행정명령 기각</a></li><li><a href="https://biz.chosun.com">에코프로비엠, 1조2000억원 유상증자 결정…애프터마켓서 19% 급락 - 조선비즈 - Chosunbiz</a> <span class="p0-desc">에코프로비엠, 1조2000억원 유상증자 결정…애프터마켓서 19% 급락 - 조선비즈 Chosunbiz</span></li></ul></div>
+<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.hankyung.com/article/202607017845i">美대법원,"미국서 태어나면 미국시민"인정…트럼프 행정명령 기각</a></li><li><a href="https://biz.chosun.com">에코프로비엠, 1조2000억원 유상증자 결정…애프터마켓서 19% 급락 - 조선비즈 - Chosunbiz</a> <span class="p0-desc">에코프로비엠, 1조2000억원 유상증자 결정…애프터마켓서 19% 급락</span></li></ul></div>
 
 
 ## 전체 뉴스 요약
@@ -293,7 +293,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMigAJBVV95cUxNVVdnZWh5Z2VyX1VYSFlnamhpVDA2elhZQ0IxcFNydlcwQWhMcjlCODlfVU5fSWFUcFJxemtkOWRxdUN0NzU0end6SEc2dVRRbktYNFhoeExmTmxsLWhwdFEtblpRQlpxNEhhc0Jqa1Z2TlBERzBXMkcxbkFTUU1veHhCU3VVSGtubjJ0b05XSXY5RGJoT05HZ0VxOWViNmU4Vko2QjFpRkZPdm9PYmJ0TFdEZTdPOHNDRVFnNVV2ZkdndVZiRkw2MGRidnNVX2NGaHExbWJDV1MyQXZia1dzVmZnTG9BUlMtMmJoazJrX3oyeTk3a0NfekRzZGtTbzhr?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">PicS (PICS) 투자자 경고: PicS N.V.의 IPO 신용 절차 누락 및 주주 권리 분석- HBSS - Morningstar</a>
-<p class="news-desc">PicS (PICS) 투자자 경고: PicS N.V.의 IPO 신용 절차 누락 및 주주 권리 분석- HBSS Morningstar</p>
+<p class="news-desc">PicS (PICS) 투자자 경고: PicS N.V.의 IPO 신용 절차 누락 및 주주 권리 분석</p>
 <span class="source-tag" data-source-type="default">IPO Watch</span>
 </div>
 </div>

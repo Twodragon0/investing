@@ -246,7 +246,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-15 - 주식 뉴스 요약 이�
 
 ### 🏦 거래소 (4건)
 
-*거래소·예탁원·금투협, 주식시장 결제주기 단축 현지실사 추진 - 조선비즈 Chosunbiz*
+*거래소·예탁원·금투협, 주식시장 결제주기 단축 현지실사 추진*
 
 
 <div class="news-card-item news-sev-medium">
@@ -267,7 +267,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-15 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQOGxWQlU2bE5jc3FKaVBJVUI3dWJRTTNLTi11dXRzWWI5ZW5uZWZTbmtqN3ladjZFZ0Nxd2JOU1hMZmFncnlUVVRlXzE0NjJ2N2xrY3ZVV1VNRlhETDJkOFpkQks4X19xMWRNZHl0aktoRTc3MWJTTUpVYWROeGVhdlNOUC04TTlv0gGcAUFVX3lxTE9HUmFzX2tHa1A2TF9TdDJjVEVNeTRsWTdSWnpvekFmV0NjVHNBSTA4WDRxeEx1akwxLWNwY0pEMnllRVNxNVdOZUJqZWpMcVFEaEpkWWhpbVpOUGV6RDNtZEJOTWhwT2U5MTdGUEd2LWlUalhkZXpob3VSbjFWc1htS3cyS0RaekZGdTlUdjlyekVaTFUteXItT3JkOQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">거래소·예탁원·금투협, 주식시장 결제주기 단축 현지실사 추진 - 조선비즈 - Chosunbiz</a>
-<p class="news-desc">거래소·예탁원·금투협, 주식시장 결제주기 단축 현지실사 추진 - 조선비즈 Chosunbiz</p>
+<p class="news-desc">거래소·예탁원·금투협, 주식시장 결제주기 단축 현지실사 추진</p>
 <span class="source-tag" data-source-type="kr-media">조선비즈</span>
 </div>
 </div>

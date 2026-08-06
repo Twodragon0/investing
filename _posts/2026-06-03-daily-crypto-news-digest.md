@@ -193,7 +193,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-03 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxOMnBhM1JoQU5hdjc3U2JzTFBKbUg0Y182SXdxQ2lOQVdmaExSdVBGcURyamV0RjZsYzQ5WDRrNmNOU1BJSGJZS0VFTzR3LUhUUS1OTDcxOHZxd0JKbUQySmdodW1SeTg3dlFTS2V4anJWeGI3bTZvNjdFVzRwR3NmWUh6aWJSUDRQeTlFXzZ6VDNoYm1uX0tNcW5CM3lJMV8yeTNWMUtCTWw5aHdnVmc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">암호화폐 거래소 바이낸스, 미국 주식, ETF 거래 시작</a>
-<p class="news-desc">암호화폐 거래소 바이낸스, 미국 주식, ETF 거래 개시 - Reuters</p>
+<p class="news-desc">암호화폐 거래소 바이낸스, 미국 주식, ETF 거래 개시</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>

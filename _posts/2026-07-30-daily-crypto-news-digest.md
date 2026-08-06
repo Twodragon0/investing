@@ -193,7 +193,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1iQ05JLTBYU2N4czR1MS15aU1FdmYySldWX1ZiQ2RGZGtiVWlSdnhJQzFKWDRYWUl0S2FkQXZ1U180bGZNQXFQaWw3QUZtdDN2RkFVWEdudVd0MEtCbjdPNmZwR2ItMDg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">2026년 7월 29일 비트코인의 현재 가격 - Fortune</a>
-<p class="news-desc">이 백만장자 투자자가 수십억 달러 규모의 아이디어를 발견한 방법 | 텀 시트 2026년 6월 24일 투자자 WHO SpaceX, OpenAI 및 Anthropic에 베팅하기 전에 | 텀 시트 2026년 6월 11일 투자 은행가들은 자신을 대체하기 위해 $2B AI을 구축했습니다 | 텀 시트 2026년 5월 28일 AI 골드 러시에 대한 진실에 대한 이 크리에이터 투자자 | 학기 시트 2026년 5월 13일 Palo Alto 옷장에서 10억 달러 수익까지: Gusto가 중소기업 소프트웨어를 Decrypt한 방법 | 학기.</p>
+<p class="news-desc">이 백만장자 투자자가 수십억 달러 규모의 아이디어를 발견한 방법 | 텀 시트 2026년 6월 24일 투자자 WHO SpaceX, OpenAI 및 Anthropic에 베팅하기 전에 | 텀 시트 2026년 6월 11일 투자 은행가들은 자신을 대체하기 위해 $2B AI을 구축했습니다 | 텀 시트 2026년 5월 28일 AI 골드 러시에 대한 진실에 대한 이 크리에이터 투자자 | 학기 시트 2026년 5월 13일 Palo Alto 옷장에서 10억 달러 수익까지: Gusto가 중소기업 소프트웨어를 Decrypt한 방법</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>

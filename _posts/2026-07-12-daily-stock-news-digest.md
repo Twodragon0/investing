@@ -119,7 +119,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE9pbXlXcVYzbHI5N09OZk5FSmNMM1l1aE1rZGtKNEtmSUJPMUwzMFU5ZWs2cnFzUUViU3RqYXFTbm1KYzdRWWg2V2wwZXhHLTVYbGpnekdOdjR2V3JiRjAwa0N6UU9QdXJ50gFuQVVfeXFMTllLZjNERWJ2TXJNWXh0bVJwOFJaVTQ4UDdjTjdNVmJ3cmxUS3ctQlhQNFdCWGUwRnpCaVZmZU5fMG9rWnBTdUhGOFZqUUtINWQyQTA4eldNWUJlRWpNemVnSFNGdHh4ZjhZcTZDWEE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체 급반등에 코스피 단숨에 7500 회복…코스닥도 800 위로 - 머니투데이</a>
-<p class="news-desc">반도체 급반등에 코스피 단숨에 7500 회복…코스닥도 800 위로 - 머니투데이 머니투데이</p>
+<p class="news-desc">반도체 급반등에 코스피 단숨에 7500 회복…코스닥도 800 위로</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

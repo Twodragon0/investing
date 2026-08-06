@@ -154,7 +154,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-08 - 주식 뉴스 요약 이�
 
 ### 🏦 거래소 (12건)
 
-*삼성운용, ‘KODEX 삼성전자SK하이닉스채권혼합50’ 상장 - 조선비즈 Chosunbiz*
+*삼성운용, ‘KODEX 삼성전자SK하이닉스채권혼합50’ 상장*
 
 
 <div class="news-card-item news-sev-medium">
@@ -163,7 +163,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPVDY2Tng0RlVMNzhTcGdwSkZQZHZrR1VXMWt3X1l3T1N1SG9DRjd5bDNkU1E3czNBQi1WUTluSWRsRUFHNlBmdkFETTNNOWpieGpWMktlOE9Jb1BLODY1LVQzTEVWd3JZQnRrWFQxcnprYW1sOFY1YmJycHgtU3R5WnAxOUVjdjJH0gGcAUFVX3lxTE5ZOHNRSUZSMFN2QTNUTEpVS3cwTWFDMWViOHZUMDhUM1I5WERsTHpFT2V0dkl4Vk1CY0RvSko3TlJvZks1S1p6ZTFSVEw0YVpzaWNlY1FieThvbG04dnkwVzl6RU1Jb0phb3Y4azdoMkctVmFkclo5LTRMSE9td0djMXAwOWI1ZkpiSWY4dm8yajJSZWxYQ0hVanJiNg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성운용, ‘KODEX 삼성전자SK하이닉스채권혼합50’ 상장 - 조선비즈 - Chosunbiz</a>
-<p class="news-desc">삼성운용, ‘KODEX 삼성전자SK하이닉스채권혼합50’ 상장 - 조선비즈 Chosunbiz</p>
+<p class="news-desc">삼성운용, ‘KODEX 삼성전자SK하이닉스채권혼합50’ 상장</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -581,7 +581,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPVDY2Tng0RlVMNzhTcGdwSkZQZHZrR1VXMWt3X1l3T1N1SG9DRjd5bDNkU1E3czNBQi1WUTluSWRsRUFHNlBmdkFETTNNOWpieGpWMktlOE9Jb1BLODY1LVQzTEVWd3JZQnRrWFQxcnprYW1sOFY1YmJycHgtU3R5WnAxOUVjdjJH0gGcAUFVX3lxTE5ZOHNRSUZSMFN2QTNUTEpVS3cwTWFDMWViOHZUMDhUM1I5WERsTHpFT2V0dkl4Vk1CY0RvSko3TlJvZks1S1p6ZTFSVEw0YVpzaWNlY1FieThvbG04dnkwVzl6RU1Jb0phb3Y4azdoMkctVmFkclo5LTRMSE9td0djMXAwOWI1ZkpiSWY4dm8yajJSZWxYQ0hVanJiNg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성운용, ‘KODEX 삼성전자SK하이닉스채권혼합50’ 상장 - 조선비즈 - Chosunbiz</a>
-<p class="news-desc">삼성운용, ‘KODEX 삼성전자SK하이닉스채권혼합50’ 상장 - 조선비즈 Chosunbiz</p>
+<p class="news-desc">삼성운용, ‘KODEX 삼성전자SK하이닉스채권혼합50’ 상장</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

@@ -231,7 +231,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-23 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxPbFE5S2JNbkRQbHByUll0SndCaUptZmZNNDNGOTN4MkYya2ZwR2xhQl9YbWxwRDNBT0lqclFYRF9CdVFFNW5scFR1emx1WXRQUy1jeC00dTI0OXBrQU13UFVEV19rbHRGZm9LajRuSTF0NExPVkpjZ1hYaU96SHhlUXhkWDhrb3PSAZsBQVVfeXFMTlRWaHZfQTQ5YTE3TFJVRzhQaWlsRkVaM05UWTBXbEJMM2tJWFo1djNfZjhuQWszTGZHX3Nka201UGFNT3lhbURSX3h5aHpNVFkyRElfcTd6S1ZSN3E5LUlzTmhHYlg0QzRHcVVSN2U1UHlXTVNqRVBKdFVZeHUyaXVCdFNjNHFzN1ZTZURYVHludnVfUzdDYXRhUDA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">상장 직전 리픽싱에 현대차·LG 보호예수 안한다고. 자율주행 유망주, 상장일 수급 ‘빨간불’ - 조선비즈 - Chosunbiz</a>
-<p class="news-desc">상장 직전 리픽싱에 현대차·LG 보호예수 안한다고. 자율주행 유망주, 상장일 수급 ‘빨간불’ - 조선비즈 Chosunbiz</p>
+<p class="news-desc">상장 직전 리픽싱에 현대차·LG 보호예수 안한다고. 자율주행 유망주, 상장일 수급 ‘빨간불’</p>
 <span class="source-tag" data-source-type="kr-media">조선비즈</span>
 </div>
 </div>

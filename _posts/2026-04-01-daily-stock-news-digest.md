@@ -45,7 +45,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-01 - 주식 뉴스 요약 이�
 <strong>긴급 알림</strong>
 <ul>
 <li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFBoZUxGRDFSV1prc05uMlI2YV9icWJGNFNnQ0o3M0lDbFJLMURLRm10YlBoZXdxOW5JcEdVNERtYXc1TUxQTkxiakh5SVNZbjFic2t4X3hn?oc=5">결국 ‘17만전자’도 깨졌다…美 반도체 한파에 삼성전자·하이닉스 동반 급락 [종목Pick</a> <span class="p0-desc">결국 ‘17만전자’도 깨졌다…美 반도체 한파에 삼성전자·하이닉스 동반 급락 [종목Pick] 헤럴드경제</span></li>
-<li><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxOek1ScVptcWdoUDVubk1KNlhKdmVUOW51ZzhOV3AwaUFnQlVUVXJTT1BRZEU1Uk1PWUhvc1JuWk14ZDIwOE9KaUVGZ2dVLXM1MFNJZFRWazJvTEdaYl9SeGxjM1dCdm1YYTRlbThBUGNPTmVlcGt0MFcxbV9Uak1WS19R0gGWAUFVX3lxTE9zQU9IM0JRajNfNFA2R3NzbU1iVDktTGFfQ1g5RVNUaS03czM1ZlVUaGdxdE1nMEJ1Y0NhTlA5VWZfdWdfQ3MtNWdqSWpQVjFTcklvNlNKQ0tQMFJYczV4b3NKQTBfR1hkWVVFaUhjSTVzT3M1SnNhQlBuNUx6d252ajBCZGxuOTUyLURuakZXam40Q0V1dw?oc=5">비즈톡톡] 메모리 초호황기에도 美 마이크론 주가 급락… 삼성전자·SK하이닉스에 어떤 의미일까 - 조선비즈 - Chosunbiz</a> <span class="p0-desc">[비즈톡톡] 메모리 초호황기에도 美 마이크론 주가 급락… 삼성전자·SK하이닉스에 어떤 의미일까 - 조선비즈 Chosunbiz</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxOek1ScVptcWdoUDVubk1KNlhKdmVUOW51ZzhOV3AwaUFnQlVUVXJTT1BRZEU1Uk1PWUhvc1JuWk14ZDIwOE9KaUVGZ2dVLXM1MFNJZFRWazJvTEdaYl9SeGxjM1dCdm1YYTRlbThBUGNPTmVlcGt0MFcxbV9Uak1WS19R0gGWAUFVX3lxTE9zQU9IM0JRajNfNFA2R3NzbU1iVDktTGFfQ1g5RVNUaS03czM1ZlVUaGdxdE1nMEJ1Y0NhTlA5VWZfdWdfQ3MtNWdqSWpQVjFTcklvNlNKQ0tQMFJYczV4b3NKQTBfR1hkWVVFaUhjSTVzT3M1SnNhQlBuNUx6d252ajBCZGxuOTUyLURuakZXam40Q0V1dw?oc=5">비즈톡톡] 메모리 초호황기에도 美 마이크론 주가 급락… 삼성전자·SK하이닉스에 어떤 의미일까 - 조선비즈 - Chosunbiz</a> <span class="p0-desc">[비즈톡톡] 메모리 초호황기에도 美 마이크론 주가 급락… 삼성전자·SK하이닉스에 어떤 의미일까</span></li>
 </ul>
 </div>
 

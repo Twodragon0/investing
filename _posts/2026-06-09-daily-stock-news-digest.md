@@ -173,7 +173,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE05bkp3Yk5DUkdTNGRHeFBOcl9uYmgwRlhKZy04ZjJsMGJvc19QQ1hRVWJQUHNPMk54WTkzdGJhYUlqMTRPX043a1NOZEFwRlRDN2lhRnNCVThnR2dmaWgzbl8wTnpCR0tI0gFuQVVfeXFMTWJMQ294aFdwQllWWXl6UDRicC1EYXZpd19lVzd6OF9keXJHc3Z5OEhWWkQxakNqRDNnbmJTTTRuVENseWZYdEU4eFNfQ3lISFpmeGhPc3ItRE12NlRhWUVYRXdSa0t5VjhTVUFCQ3c?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">25% 빠졌는데 "삼전닉스 싸게 살 기회".반도체 아직 튼튼 - 머니투데이</a>
-<p class="news-desc">25% 빠졌는데 "삼전닉스 싸게 살 기회".반도체 아직 튼튼 - 머니투데이 머니투데이</p>
+<p class="news-desc">25% 빠졌는데 "삼전닉스 싸게 살 기회".반도체 아직 튼튼</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

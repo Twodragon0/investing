@@ -190,7 +190,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE9abnpnUk92b3pFOG1ST241NjV6QXJCUXdEZGMxaVllZm5GVS1HVWJSQUJaS2NLamNleU9LUHRjdENlTWVJVU50ZUp5NWZncFdEck8wUW1IcHQweC1iRXBibG9QbXdMRE9zM3JFcG96ZzNZVUdD?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">한투證 "한은 올해 금리 2회 인상 전망…원화 약세 압력 축소" &#124;</a>
-<p class="news-desc">한투證 "한은 올해 금리 2회 인상 전망…원화 약세 압력 축소" &#124; 연합인포맥스</p>
+<p class="news-desc">한투證 "한은 올해 금리 2회 인상 전망…원화 약세 압력 축소"</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

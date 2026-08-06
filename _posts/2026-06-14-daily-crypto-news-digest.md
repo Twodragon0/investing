@@ -74,7 +74,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-14 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMi1wFBVV95cUxQSk5BbUJWN2d2aFdfWlF2V2hqYzFaZnk3bV9oTi1hZHlqbGpaQVhOX05zQWJPUW90SEdhNjNOSmc1dzVNWWNiZTZReG5XN3dhb3Q0UWx1MUZmN0Njdm1QUXA2MDZXclZHWVlmeDJLU19yQm9CUmlycnJxX2k5Rjh3SGVrWFFhNmhZazJ1RFppSEhYeXRzUm9oRUxRZk14d3pMaE5mVzhLcFRKa3E5Qm9sVHRmTURRUW15VXBtN3JXSFBLWl9jVVB6bV9jaXEzN1R6ampMeTVNWQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인은 암호화폐 겨울이 끝나며 59,000달러로 바닥을 쳤다고 Standard Chartered 분석가는 말합니다.</a>
-<p class="news-desc">수석 시장 분석가인 Geoffrey Kendrick은 최근 암호화폐 매각을 종식시키는 이중 촉매제로 SpaceX IPO과 잠재적인 미국-이란 평화 협정을 지적했습니다.</p>
+<p class="news-desc">수석 시장 분석가인 Geoffrey Kendrick은 최근 암호화폐 매각을 종식시키는 이중 촉매제로 SpaceX IPO과 잠재적인 미국</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -108,7 +108,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-14 - 암호화폐 뉴스 요
 
 ### 🏦 거래소 (25건)
 
-*수석 시장 분석가인 Geoffrey Kendrick은 최근 암호화폐 매각을 종식시키는 이중 촉매제로 SpaceX IPO과 잠재적인 미국-이란 평화 협정을 지적했습니다.*
+*수석 시장 분석가인 Geoffrey Kendrick은 최근 암호화폐 매각을 종식시키는 이중 촉매제로 SpaceX IPO과 잠재적인 미국*
 
 
 <div class="news-card-item news-sev-medium">

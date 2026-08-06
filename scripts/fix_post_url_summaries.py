@@ -66,6 +66,7 @@ from common.enrichment_network import (  # noqa: E402
 )
 from common.enrichment_synthetic import (  # noqa: E402
     _is_title_related_description,
+    _strip_source_suffix,
     generate_synthetic_description,
 )
 from common.summary_quality import is_boilerplate  # noqa: E402
@@ -172,6 +173,52 @@ def collect_targets(posts_dir: Path, days: int | None) -> list[Blurb]:
     return targets
 
 
+# Exactly two periods. `...` is deliberate Korean punctuation and must survive;
+# `..` is the artefact of appending a terminator to text that already had one.
+_DOUBLED_PERIOD_RE = re.compile(r"(?<!\.)\.\.(?!\.)")
+
+
+def clean_text(text: str) -> str:
+    """Deterministic text repairs for one blurb, or ``""`` when it is already fine.
+
+    No network: this pass fixes what is wrong with the *text as written*, which
+    is why it can run while the Google News resolver is throttled and why it
+    looks at every blurb rather than only the flagged ones.
+
+    Returning ``""`` for a clean blurb is load-bearing — callers use it to skip
+    the rewrite entirely rather than writing the same bytes back.
+    """
+    cleaned = _DOUBLED_PERIOD_RE.sub(".", text).strip()
+
+    # The card renders the outlet in its own `source-tag` span, so a trailing
+    # copy in the summary is duplication. Reuses the synthesiser's stripper so
+    # the "is this an outlet or a subtitle?" rule lives in one place.
+    stripped = _strip_source_suffix(cleaned)
+    if stripped != cleaned and len(stripped) >= _MIN_DESC_LEN:
+        cleaned = stripped
+
+    return cleaned if cleaned != text.strip() else ""
+
+
+def collect_text_targets(posts_dir: Path, days: int | None) -> list:
+    """``(blurb, replacement)`` for every blurb the text pass would change.
+
+    Scans *all* blurbs, not just ones failing the quality gate: a summary can
+    be accurate and still carry a duplicated outlet name.
+    """
+    cutoff = None if days is None else datetime.now(UTC).date() - timedelta(days=days)
+    targets: list = []
+    for path in sorted(posts_dir.glob("*.md"), reverse=True):
+        posted = _post_date(path)
+        if cutoff is not None and (posted is None or posted < cutoff):
+            continue
+        for blurb in find_blurbs(path):
+            replacement = clean_text(blurb.text)
+            if replacement:
+                targets.append((blurb, replacement))
+    return targets
+
+
 def _resolve(url: str) -> str:
     """Follow a Google News redirect to the publisher, best effort.
 
@@ -255,18 +302,28 @@ def synthesize(blurb: Blurb) -> str:
         return ""
 
 
-def replace_in_post(content: str, old_raw: str, new_text: str) -> tuple[str, bool]:
+def replace_in_post(content: str, old_raw: str, new_text: str, all_copies: bool = False) -> tuple[str, bool]:
     """Swap one blurb's inner text, leaving the surrounding markup untouched.
 
-    The replacement is HTML-escaped because it lands inside an element body,
-    and it is applied only when ``old_raw`` occurs exactly once — a blurb
+    The replacement is HTML-escaped because it lands inside an element body.
+
+    By default it is applied only when ``old_raw`` occurs exactly once: a blurb
     repeated verbatim in the same post would otherwise have every copy
-    rewritten from one URL's fetch.
+    rewritten from one URL's fetch, and those copies point at different
+    articles.
+
+    ``all_copies`` lifts that restriction for the text pass, where the
+    replacement is a pure function of the text itself — every identical copy
+    has the same correct rewrite, so refusing to touch them just leaves known
+    defects on the page. Measured: 18 of 106 text targets were skipped as
+    "ambiguous" before this existed.
     """
-    if content.count(old_raw) != 1:
+    occurrences = content.count(old_raw)
+    if occurrences == 0 or (occurrences > 1 and not all_copies):
         return content, False
     escaped = html.escape(new_text, quote=False)
-    return content.replace(old_raw, escaped, 1), True
+    count = -1 if all_copies else 1
+    return content.replace(old_raw, escaped, count), True
 
 
 def is_google_news(blurb: Blurb) -> bool:
@@ -309,7 +366,7 @@ def repair(
     return [r for r in results if r is not None]
 
 
-def apply_repairs(repairs: list[tuple[Blurb, str, str]]) -> tuple[int, int]:
+def apply_repairs(repairs: list[tuple[Blurb, str, str]], all_copies: bool = False) -> tuple[int, int]:
     """Write resolved replacements to disk, grouped per post.
 
     Returns ``(blurbs_written, posts_changed)``. Ambiguous anchors are skipped
@@ -326,7 +383,7 @@ def apply_repairs(repairs: list[tuple[Blurb, str, str]]) -> tuple[int, int]:
         content = path.read_text(encoding="utf-8", errors="replace")
         changed_here = 0
         for blurb, text in items:
-            content, ok = replace_in_post(content, blurb.raw, text)
+            content, ok = replace_in_post(content, blurb.raw, text, all_copies=all_copies)
             if ok:
                 changed_here += 1
             else:
@@ -366,12 +423,39 @@ def format_report(repairs: list[tuple[Blurb, str, str]], applied: bool) -> str:
     return "\n".join(lines)
 
 
+def _run_text_only(args) -> int:
+    """Deterministic text pass — no fetching, no synthesis."""
+    targets = collect_text_targets(POSTS_DIR, args.days)
+    if args.limit is not None:
+        targets = targets[: args.limit]
+    if not targets:
+        print("텍스트 교정 대상 없음.")
+        return 0
+
+    print(f"텍스트 교정 {'적용' if args.apply else '(dry-run)'}: {len(targets)}건")
+    for blurb, replacement in targets[:5]:
+        print(f"  [{blurb.path.name}]\n    before: {blurb.text[:78]}\n    after : {replacement[:78]}")
+
+    if not args.apply:
+        print("\n(dry-run — 적용하려면 --apply)")
+        return 0
+
+    written, posts = apply_repairs([(b, r, "text") for b, r in targets], all_copies=True)
+    print(f"\n적용: 블러브 {written}건 / 포스트 {posts}개")
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Backfill per-URL summaries in published posts.")
     parser.add_argument("--days", type=int, default=None, help="최근 N일 포스트만 (기본: 전체)")
     parser.add_argument("--limit", type=int, default=None, help="처리할 블러브 최대 개수")
     parser.add_argument("--workers", type=int, default=6, help="동시 재수집 스레드 수 (기본 6)")
     parser.add_argument("--apply", action="store_true", help="실제 파일에 기록 (기본: dry-run)")
+    parser.add_argument(
+        "--text-only",
+        action="store_true",
+        help="네트워크 없이 텍스트 결함만 결정적으로 교정 (출처 접미사·중복 마침표)",
+    )
     parser.add_argument(
         "--direct-only",
         action="store_true",
@@ -385,6 +469,9 @@ def main() -> int:
     args = parser.parse_args()
 
     setup_logging()
+
+    if args.text_only:
+        return _run_text_only(args)
 
     targets = collect_targets(POSTS_DIR, args.days)
     if args.limit is not None:

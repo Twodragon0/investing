@@ -164,7 +164,7 @@ permalink: "/crypto-news/2026/03/12/daily-crypto-news-digest/"
 <div class="news-card-num">2</div>
 <div class="news-card-body">
 <a href="https://news.google.com/read/CBMilANBVV95cUxNa2dwMW45S05SMXMyQXU0eEZRU3g4ek9HZWIyaml2dDdydENFSFczdmRNYVRpNHJZdC1PTjlwOU5iN1ZDNWRINFllYmlXMHRRVXpPMjRuQUFXT1d0LTlsMUhQVjd4eWFRMF9KeXVUT0hRMnFhZjBudEtrb3AzY0ZYRl94ZmVxTkMyT01fUWlKeDg3TDVJMUtkWEVlOFhvalNQMTEtbkIzbzFHOWJLSXp6ZmhvSFdyaTVIMEdVTm1USlh3RWljNnU5MTRvcElSa0g4V0ZFd0VUaWY0eFpDb09FaTN6U1F0VS1Bdi1wdU1qbklKVzgxTzhMdWtCdXZMZTY3QWhhVDV6Z25KNGJ3blRONUFYRGxrSEt2T21YMDBxY0tXeUZDSlRHN1pua2hfUmwweDhmVVB4ZUprUW1OcWxOZ2RPUlhCLTl1UDB2YXc3Rzd3VmRFVTh3Z3VoLWFEbXFaOGlkN1RFWlV0ZTZiSHdWQllDOGN3Y0RIYWhpRXBybW1PNktJd0RvOUR2eE1MLUgzNDFJQw?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 $70,000 아래로 떨어집니다. 이더리움 및 XRP 가격도 하락한 이유</a>
-<p class="news-desc">비트코인 $70,000 아래로 떨어집니다. 이더리움 및 XRP 가격이 너무 하락한 이유.. ($70,000.)</p>
+<p class="news-desc">비트코인 $70,000 아래로 떨어집니다. 이더리움 및 XRP 가격이 너무 하락한 이유. ($70,000.)</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

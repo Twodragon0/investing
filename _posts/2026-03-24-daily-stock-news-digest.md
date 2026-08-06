@@ -44,7 +44,7 @@ image_alt: "주식 시장 뉴스 종합 대표 스냅샷 이미지"
 <strong>긴급 알림</strong>
 <ul>
 <li><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE84SzRSN0VvbHVjQjNlWWMwc2VZS1phZjJvX3R1S0xIN2RZM2tDZDNXX2FjTlI3QW95NmQ5dHNPaUZ3NE1VcGZneWNTWjlQRXh6VkHSAVNBVV95cUxQY0tKd3VabUFnczJYWGxfVktCa2ZoZzh2Skc3YWxObnRfUkZUaElLTDU0ZzAwZGppcnRVbENHVWhsdVNETDNZYzc2SzlQNzctUlhBTQ?oc=5">1% 초고수, ‘급락’ 하이닉스·삼성전자 집중 매수 [주식 초고수는 지금] - 서울경제신문</a> <span class="p0-desc">1% 초고수, ‘급락’ 하이닉스·삼성전자 집중 매수 [주식 초고수는 지금] 서울경제신문</span></li>
-<li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNaVdBWjlrLVdMNUNMaUNhRWdJNHpCT04zQS1Cb21NRlZPYVNwcWJRQ0Q3SmFHMTNoVXZrcnNueDZDT3ZkbTdXZ2I5VnNRRkY4ZjJ6dV9oVFFqcWRpM2lWTnJ1aHVJZ3ZKRktBa0ZQb2xiRkJlbVN6T2hGd0NzV0JuVXNTenlzQnNs0gGcAUFVX3lxTFBtZ1gwZGx3ZkNJendBQ2NsWHlpTTVycERPaEhLWm5SbkJMY09jYmIySTdNOVZscC1JeGFRbWhuWWo4Vm5VY0dET3UxTEN4OHN1YVRpcFVwd0EyLWp4d1FzLThOR1UyczNJbV9MNTJsWWZaRUFQOGF1cFhCZUZXcVBMOFB4MGNVczNjSmNSeGFDWlppTE54M3N6S1A5ZA?oc=5">특징주] 삼성전자·SK하이닉스, 중동 긴장 고조에 동반 급락 - 조선비즈 - Chosunbiz</a> <span class="p0-desc">[특징주] 삼성전자·SK하이닉스, 중동 긴장 고조에 동반 급락 - 조선비즈 Chosunbiz</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNaVdBWjlrLVdMNUNMaUNhRWdJNHpCT04zQS1Cb21NRlZPYVNwcWJRQ0Q3SmFHMTNoVXZrcnNueDZDT3ZkbTdXZ2I5VnNRRkY4ZjJ6dV9oVFFqcWRpM2lWTnJ1aHVJZ3ZKRktBa0ZQb2xiRkJlbVN6T2hGd0NzV0JuVXNTenlzQnNs0gGcAUFVX3lxTFBtZ1gwZGx3ZkNJendBQ2NsWHlpTTVycERPaEhLWm5SbkJMY09jYmIySTdNOVZscC1JeGFRbWhuWWo4Vm5VY0dET3UxTEN4OHN1YVRpcFVwd0EyLWp4d1FzLThOR1UyczNJbV9MNTJsWWZaRUFQOGF1cFhCZUZXcVBMOFB4MGNVczNjSmNSeGFDWlppTE54M3N6S1A5ZA?oc=5">특징주] 삼성전자·SK하이닉스, 중동 긴장 고조에 동반 급락 - 조선비즈 - Chosunbiz</a> <span class="p0-desc">[특징주] 삼성전자·SK하이닉스, 중동 긴장 고조에 동반 급락</span></li>
 <li><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTFBjWkpYaVJyRlNIcTV5akswT3hHTnNkbExhN1BqZXI2YUExbXBvRjJXZEpvbDdRSC1IZ0d4Um0wTUdOS1FEZ09tZUlfMmk5NWlQcUIyaHFiYm03T3EySHYw?oc=5">삼성전자·SK하이닉스, 중동 긴장 고조에 동반 급락 - 증권플러스</a> <span class="p0-desc">삼성전자·SK하이닉스, 중동 긴장 고조에 동반 급락 증권플러스</span></li>
 </ul>
 </div>
@@ -90,7 +90,7 @@ image_alt: "주식 시장 뉴스 종합 대표 스냅샷 이미지"
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNaVdBWjlrLVdMNUNMaUNhRWdJNHpCT04zQS1Cb21NRlZPYVNwcWJRQ0Q3SmFHMTNoVXZrcnNueDZDT3ZkbTdXZ2I5VnNRRkY4ZjJ6dV9oVFFqcWRpM2lWTnJ1aHVJZ3ZKRktBa0ZQb2xiRkJlbVN6T2hGd0NzV0JuVXNTenlzQnNs0gGcAUFVX3lxTFBtZ1gwZGx3ZkNJendBQ2NsWHlpTTVycERPaEhLWm5SbkJMY09jYmIySTdNOVZscC1JeGFRbWhuWWo4Vm5VY0dET3UxTEN4OHN1YVRpcFVwd0EyLWp4d1FzLThOR1UyczNJbV9MNTJsWWZaRUFQOGF1cFhCZUZXcVBMOFB4MGNVczNjSmNSeGFDWlppTE54M3N6S1A5ZA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">특징주] 삼성전자·SK하이닉스, 중동 긴장 고조에 동반 급락 - 조선비즈 - Chosunbiz</a>
-<p class="news-desc">[특징주] 삼성전자·SK하이닉스, 중동 긴장 고조에 동반 급락 - 조선비즈 Chosunbiz</p>
+<p class="news-desc">[특징주] 삼성전자·SK하이닉스, 중동 긴장 고조에 동반 급락</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -253,7 +253,7 @@ image_alt: "주식 시장 뉴스 종합 대표 스냅샷 이미지"
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxNeEhzYzQzdjR5MDJCWkd6Q2VLdEZzbzRoWnNOcXFlQjNfMlV4Q0NQRjExMlNhT2NPcnRBbW1sZUkteXo4N0dGaHNNeGZJOEZ2aXFvdmZiN2V2QzdOMzFteFRnY1RVRm1rQXltWmY5VFZOdFVNNVpudVp1dTlrcFM5b1k5SmlWQllDMVFXSjA4ZVpSZHgtV2JpWDJ4SkFRbVE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">또 다른 해, 투자자들을 위한 또 다른 IPO 찬물 샤워 - AFR</a>
-<p class="news-desc">또 다른 해, 투자자들을 위한 또 다른 IPO 찬물 샤워 - AFR. AFR 관련 시장동향입니다.</p>
+<p class="news-desc">또 다른 해, 투자자들을 위한 또 다른 IPO 찬물 샤워</p>
 <span class="source-tag" data-source-type="default">IPO Watch</span>
 </div>
 </div>

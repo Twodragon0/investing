@@ -243,7 +243,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-low">LOW</span>
 <a href="https://seekingalpha.com/news/4594025-datavault-ai-targets-200m-2026-revenue-as-it-signs-800m-in-tokenization-contracts-and-plans?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news" class="news-title" target="_blank" rel="noopener noreferrer">Datavault AI은 8억 달러 규모의 토큰화 계약을 체결하고 7월 거래소 출시를 계획하면서 2026년 매출 2억 달러를 목표로 하고 있습니다.</a>
-<p class="news-desc">Datavault AI(DVLT) 2026년 1분기 실적 요약: 2억 달러 수익 목표, 8억 달러 토큰화 계약, NYIAX 거래, 7월 거래소 출시 - 지금 읽어보세요.</p>
+<p class="news-desc">Datavault AI(DVLT) 2026년 1분기 실적 요약: 2억 달러 수익 목표, 8억 달러 토큰화 계약, NYIAX 거래, 7월 거래소 출시</p>
 <span class="source-tag" data-source-type="default">Seeking Alpha</span>
 </div>
 </div>
