@@ -384,3 +384,19 @@ def test_refetch_rejects_institutional_slogan(monkeypatch: pytest.MonkeyPatch) -
         lambda url, title="": {"description": "혁신적 금융, 포용적 금융, 신뢰받는 금융, 금융위원회 입니다."},
     )
     assert mod.refetch(_blurb(title="긴급 금융시장상황 점검회의 개최")) == ""
+
+
+def test_apply_repairs_counts_only_posts_actually_written(tmp_path: Path) -> None:
+    """A post whose every anchor was ambiguous is not a changed post.
+
+    The first apply run reported "블러브 50건 / 포스트 62개" — more posts than
+    blurbs, because the count included posts where every replacement was
+    skipped as ambiguous.
+    """
+    body = '---\ntitle: T\n---\n<p class="news-desc">dup</p><p class="news-desc">dup</p>\n'
+    path = tmp_path / "2026-08-05-dup.md"
+    path.write_text(body, encoding="utf-8")
+
+    blurb = mod.Blurb(path, "news-desc", "https://example.com/a", "제목", "dup", "dup")
+    assert mod.apply_repairs([(blurb, "코스피가 3% 올라 2,900선을 회복했습니다.", "refetch")]) == (0, 0)
+    assert path.read_text(encoding="utf-8") == body
