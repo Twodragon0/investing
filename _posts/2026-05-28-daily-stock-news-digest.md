@@ -282,7 +282,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-28 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxPVlhobld4RlJoLW1GRmdEdFZ2SDJ4dmdTRGpFY2ctN2dCWm8wNVhxeC1EaFJqTnR3Q19hWDcxTXQzMkdObFc1WE14bVFzeTBKN3J3eE5Va0txTmEwSGl5cFZ2a01Ram94TUZlSUtaZ19OaXBjLUFhTVY2b2M1TFhNa0hOUEF1UWlYaG1LYldlclUzRFY2V3VNZS1MWFdlcmx1Z0ZJR1JCU0RzNUJzY1duZlJpUWdpZw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">SpaceX IPO 더 빠른 색인 포함을 향한 또 다른 승인을 얻습니다</a>
-<p class="news-desc">SpaceX IPO, 더 빠른 지수 포함을 향한 또 다른 승인을 얻다 Bloomberg.com</p>
+<p class="news-desc">SpaceX의 IPO은 투자자들에게 여러 가지 방법으로 보상할 수 있습니다.</p>
 <span class="source-tag" data-source-type="finance-media">Bloomberg via Google</span>
 </div>
 </div>

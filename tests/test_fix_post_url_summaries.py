@@ -400,3 +400,32 @@ def test_apply_repairs_counts_only_posts_actually_written(tmp_path: Path) -> Non
     blurb = mod.Blurb(path, "news-desc", "https://example.com/a", "제목", "dup", "dup")
     assert mod.apply_repairs([(blurb, "코스피가 3% 올라 2,900선을 회복했습니다.", "refetch")]) == (0, 0)
     assert path.read_text(encoding="utf-8") == body
+
+
+def test_direct_only_skips_google_news_without_fetching(monkeypatch: pytest.MonkeyPatch) -> None:
+    """While the redirect resolver is throttled, don't spend requests on it.
+
+    Failed resolves are not free — they keep the block alive. `--direct-only`
+    lets a run make progress on publisher URLs, which kept working throughout
+    the throttling.
+    """
+
+    def _never(blurb):  # pragma: no cover - must not be reached
+        raise AssertionError("google news link must not be fetched under --direct-only")
+
+    monkeypatch.setattr(mod, "refetch", _never)
+
+    blurb = _blurb(url="https://news.google.com/rss/articles/ABC")
+    assert mod._repair_one(blurb, direct_only=True) == (blurb, "", "skipped")
+
+
+def test_direct_only_still_processes_publisher_urls(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setattr(mod, "refetch", lambda blurb: "코스피가 3% 올라 2,900선을 회복했습니다.")
+
+    _out, text, source = mod._repair_one(_blurb(url="https://cointelegraph.com/x"), direct_only=True)
+    assert (text, source) == ("코스피가 3% 올라 2,900선을 회복했습니다.", "refetch")
+
+
+def test_is_google_news_classifies_both_forms() -> None:
+    assert mod.is_google_news(_blurb(url="https://news.google.com/rss/articles/A")) is True
+    assert mod.is_google_news(_blurb(url="https://www.cnbc.com/a")) is False

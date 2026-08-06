@@ -188,7 +188,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-23 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/markets/stocks/articles/cloudflare-stock-due-short-term-165649951.html" class="news-title" target="_blank" rel="noopener noreferrer">단기 반등이 예상되는 Cloudflare 주식</a>
-<p class="news-desc">옵션 거래 추천, 주식 시장 뉴스 및 연구, 옵션 교육.</p>
+<p class="news-desc">Cloudflare Inc(NYSE:NET) 주가는 마지막으로 4.8% 하락한 $213.35에 거래되어 4연속 손실을 기록했습니다. 6월 4일 최고치인 276.63달러에도 불구하고 Cloudflare는 6월에 11.7%의 손실을 입었습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

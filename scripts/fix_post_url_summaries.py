@@ -260,8 +260,15 @@ def replace_in_post(content: str, old_raw: str, new_text: str) -> tuple[str, boo
     return content.replace(old_raw, escaped, 1), True
 
 
-def _repair_one(blurb: Blurb, allow_synthesis: bool = True) -> tuple[Blurb, str, str]:
+def is_google_news(blurb: Blurb) -> bool:
+    """True when the blurb's link is a Google News redirect rather than an article."""
+    return "news.google.com" in blurb.url
+
+
+def _repair_one(blurb: Blurb, allow_synthesis: bool = True, direct_only: bool = False) -> tuple[Blurb, str, str]:
     """Resolve a replacement for one blurb. Returns (blurb, text, source)."""
+    if direct_only and is_google_news(blurb):
+        return blurb, "", "skipped"
     recovered = refetch(blurb)
     if recovered:
         return blurb, recovered, "refetch"
@@ -273,11 +280,16 @@ def _repair_one(blurb: Blurb, allow_synthesis: bool = True) -> tuple[Blurb, str,
     return blurb, "", "unresolved"
 
 
-def repair(targets: list[Blurb], workers: int, allow_synthesis: bool = True) -> list[tuple[Blurb, str, str]]:
+def repair(
+    targets: list[Blurb],
+    workers: int,
+    allow_synthesis: bool = True,
+    direct_only: bool = False,
+) -> list[tuple[Blurb, str, str]]:
     """Resolve replacements concurrently, preserving input order."""
     results: list[tuple[Blurb, str, str] | None] = [None] * len(targets)
     with ThreadPoolExecutor(max_workers=workers) as pool:
-        futures = {pool.submit(_repair_one, b, allow_synthesis): i for i, b in enumerate(targets)}
+        futures = {pool.submit(_repair_one, b, allow_synthesis, direct_only): i for i, b in enumerate(targets)}
         for future in as_completed(futures):
             index = futures[future]
             try:
@@ -320,7 +332,7 @@ def apply_repairs(repairs: list[tuple[Blurb, str, str]]) -> tuple[int, int]:
 def format_report(repairs: list[tuple[Blurb, str, str]], applied: bool) -> str:
     """Human-readable summary with a sample of each outcome."""
     total = len(repairs)
-    counts = {"refetch": 0, "synthetic": 0, "unresolved": 0}
+    counts = {"refetch": 0, "synthetic": 0, "unresolved": 0, "skipped": 0}
     for _blurb, _text, source in repairs:
         counts[source] = counts.get(source, 0) + 1
 
@@ -330,6 +342,7 @@ def format_report(repairs: list[tuple[Blurb, str, str]], applied: bool) -> str:
         f"  재수집 성공   : {counts['refetch']}",
         f"  합성 대체     : {counts['synthetic']}",
         f"  해결 실패     : {counts['unresolved']}",
+        f"  건너뜀        : {counts['skipped']}",
     ]
 
     for source in ("refetch", "synthetic"):
@@ -351,6 +364,11 @@ def main() -> int:
     parser.add_argument("--workers", type=int, default=6, help="동시 재수집 스레드 수 (기본 6)")
     parser.add_argument("--apply", action="store_true", help="실제 파일에 기록 (기본: dry-run)")
     parser.add_argument(
+        "--direct-only",
+        action="store_true",
+        help="Google News 리다이렉트는 건너뛰고 직접 퍼블리셔 URL 만 처리 (스로틀 중 유용)",
+    )
+    parser.add_argument(
         "--skip-synthetic",
         action="store_true",
         help="재수집 실패 시 합성 폴백을 쓰지 않고 원문 유지 (품질 저하 방지)",
@@ -368,7 +386,12 @@ def main() -> int:
         return 0
 
     logger.info("Repairing %d flagged blurbs with %d workers", len(targets), args.workers)
-    repairs = repair(targets, args.workers, allow_synthesis=not args.skip_synthetic)
+    repairs = repair(
+        targets,
+        args.workers,
+        allow_synthesis=not args.skip_synthetic,
+        direct_only=args.direct_only,
+    )
 
     print(format_report(repairs, applied=args.apply))
 

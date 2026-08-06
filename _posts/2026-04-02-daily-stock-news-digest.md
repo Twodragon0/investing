@@ -266,7 +266,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-02 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/markets/stocks/articles/spacex-ipo-buzz-lifts-aerospace-164950929.html" class="news-title" target="_blank" rel="noopener noreferrer">SpaceX IPO 버즈, 스필오버 베팅에서 항공우주 점유율 상승</a>
-<p class="news-desc">SpaceX IPO 버즈는 스필오버 베팅에서 항공우주 점유율을 높였습니다.</p>
+<p class="news-desc">일론 머스크의 SpaceX에서 블록버스터 IPO에 대한 기대가 커지면서 업계가 투자자 관심의 새로운 물결을 볼 수 있다는 희망이 커지면서 항공 우주 회사의 주가는 수요일에 급등했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

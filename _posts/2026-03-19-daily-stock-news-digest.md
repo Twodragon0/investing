@@ -255,7 +255,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-19 - stock-news 뉴스 요약 
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/news/hauz-vs-rwx-real-estate-165752220.html" class="news-title" target="_blank" rel="noopener noreferrer">HAUZ 대 RWX: 어느 부동산 ETF에 우위가 있나요?</a>
-<p class="news-desc">HAUZ 대 RWX: 어느 부동산에 우위가 있습니까? HAUZ, RWX 관련 시장 동향입니다.</p>
+<p class="news-desc">Xtrackers International Real Estate ETF(NYSEMKT:HAUZ)는 State Street SPDR 다우존스 International Real Estate ETF(NYSEMKT:RWX)에 비해 더 낮은 수수료, 더 높은 수익률 및 더 넓은 포트폴리오 범위로 두각을 나타냅니다. 하지만 둘 다 국제 부동산을 추적하고 동일한 1년 수익률을 기록했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

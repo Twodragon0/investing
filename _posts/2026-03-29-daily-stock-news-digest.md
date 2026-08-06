@@ -259,7 +259,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/news/magnificent-7-stocks-wipe-more-than-850-billion-in-value-as-stock-market-sell-off-hits-ai-winners-hard-213921360.html" class="news-title" target="_blank" rel="noopener noreferrer">'Magnificent 7' stocks wipe more than $850 billion in value as stock market sell-off hits AI winners hard</a>
-<p class="news-desc">'Magnificent 7' stocks wipe more than $850 billion in value as stock market sell-off hits AI winners hard. ($850billion)</p>
+<p class="news-desc">인플레이션 우려가 높아지고 업계에 역풍이 불면서 이번 주 "매그니피센트 7" 주식이 타격을 입었습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

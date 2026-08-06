@@ -32,7 +32,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-27 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">851.37</div><div class="stat-label">KOSDAQ -4.10%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 코스피 급락 마감…코스닥도 하락 - 일요신문 - 192건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 삼성전자, 하이닉스 관련 23건</li><li>📊 <strong>매크로/금리</strong>: 연준, 환율 이슈 부각</li><li>🏦 <strong>거래소</strong>: IPO 관련 18건</li></ul></div>
-<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.ilyo.co.kr">코스피 급락 마감…코스닥도 하락 - 일요신문</a> <span class="p0-desc">코스피 급락 마감…코스닥도 하락 일요신문</span></li><li><a href="https://www.gokorea.kr">삼성전자·SK하이닉스 주가 급락… 반도체 시장 위기 조짐?</a> <span class="p0-desc">삼성전자·SK하이닉스 주가 급락… 반도체 시장 위기 조짐? 공감신문</span></li><li><a href="https://www.specialtimes.co.kr">삼성전자와 SK하이닉스 주가 급락… 반도체 시장 위기감 확산 - 스페셜타임스</a> <span class="p0-desc">삼성전자와 SK하이닉스 주가 급락… 반도체 시장 위기감 확산 스페셜타임스</span></li></ul></div>
+<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.ilyo.co.kr">코스피 급락 마감…코스닥도 하락 - 일요신문</a> <span class="p0-desc">[일요신문] 지금 생각해보니 젊은 날 읽었던 ‘카라마조프가의 형제들’은 읽은 게 아니었다. 여자를 놓고 아버지와 다투는 아들, 집안을 챙기기는커녕 자식들을 이리저리 버려두고 자기 욕망에만 끌려 다니는 욕심덩어리 아버지, 지참금에만 관심이 있는 남자를 남편으로 맞아 속을 끓이다가 애도도 받지 못한 채 죽어간 아내들, 젊은 날 카라마조프가는 이상하고도 이상했다...</span></li><li><a href="https://www.gokorea.kr">삼성전자·SK하이닉스 주가 급락… 반도체 시장 위기 조짐?</a> <span class="p0-desc">삼성전자·SK하이닉스 주가 급락… 반도체 시장 위기 조짐? 공감신문</span></li><li><a href="https://www.specialtimes.co.kr">삼성전자와 SK하이닉스 주가 급락… 반도체 시장 위기감 확산 - 스페셜타임스</a> <span class="p0-desc">스페셜타임스, 인터넷뉴스, 뉴스, 미디어, 인터넷신문, 신문, 언론</span></li></ul></div>
 
 
 ## 전체 뉴스 요약
@@ -274,7 +274,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-27 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/markets/stocks/articles/trump-name-dropped-nokia-eli-152209306.html" class="news-title" target="_blank" rel="noopener noreferrer">트럼프는 펜실베니아 연설에서 Nokia와 Eli Lilly의 이름을 언급했습니다. 그가 선택한 다른 5개 주식에는 어떤 일이 일어났는가?</a>
-<p class="news-desc">다음 재정적 단계는 무엇입니까? 모기지, 대출, 보험, 투자 등에 관해 현명한 결정을 내리는 데 도움이 되는 전문가의 조언, 최신 뉴스 및 무료 도구를 받아보세요.</p>
+<p class="news-desc">Donald 트럼프 대통령이 펜실베니아 리하이 밸리의 연단에 섰을 때, 그는 두 회사의 이름을 확인하기 위해 대본을 벗어난 것으로 보입니다(1). 그가 "훌륭한 회사"라고 불렀던 제약 대기업 엘리 릴리(Eli Lilly)는 제조 시설에 35억 달러를 투자한 것으로 유명해졌습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

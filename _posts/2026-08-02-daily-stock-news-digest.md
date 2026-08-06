@@ -258,7 +258,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-02 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/markets/currencies/articles/2-irs-rules-allow-continue-133000736.html" class="news-title" target="_blank" rel="noopener noreferrer">해외로 이주할 때 IRA 기여를 계속할 수 있도록 하는 2가지 IRS 규정</a>
-<p class="news-desc">다음 재정적 단계는 무엇입니까? 모기지, 대출, 보험, 투자 등에 관해 현명한 결정을 내리는 데 도움이 되는 전문가의 조언, 최신 뉴스 및 무료 도구를 받아보세요.</p>
+<p class="news-desc">미국 국외 거주자는 해외에 거주하는 동안 기존 IRA 또는 Roth IRA를 유지할 수 있습니다. 그러나 세금 면제 및 공제, 지방 세법으로 인해 상황이 더욱 복잡해졌습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>
