@@ -41,6 +41,16 @@
 > 검증 하네스 주의: `if git push ... \| tail` 은 `tail` 의 종료코드를 평가하므로
 > 거부를 "통과"로 오판한다. `out=$(cmd 2>&1); rc=$?` 로 캡처할 것.
 
+**main 실측 확인.** 프로브 브랜치 결과는 같은 룰셋·같은 규칙 타입이지만 main 자체는
+아니었다. 룰셋 활성(05:07:18Z) 이후 `github-actions[bot]` 이 main 에 실제로
+푸시한 것을 확인했다:
+
+- `05:48:49Z` `chore: collect social media`
+- `05:53:12Z` `chore: collect stock news`
+
+두 건 모두 `python-collect` 공유 액션 경유다. 즉 23개 자동 푸시 경로 중 가장 많이
+쓰이는 것이 Phase 1 아래서 정상 동작한다.
+
 ## Phase 2 — PR 필수 + 상태 체크 필수 (미적용)
 
 ### 막고 있던 제약: 경로 필터와 required check 는 공존하지 않는다
@@ -115,6 +125,9 @@ changes (항상 실행, 변경 파일 판정)
   장애가 머지를 막는 대가가 이득보다 크다. 주간 스케줄 + 워크플로우 변경 PR 로
   충분하다.
 - `lighthouse-ci` / `coverage-comment` — `pull_request` 트리거가 없다.
+- `Vercel` — 무료 티어 빌드 쿼터로 실패한다. PR #1119 에서 코드와 무관하게
+  `upgradeToPro=build-rate-limit` 로 FAILURE 였다. required 로 걸면 쿼터 소진이
+  머지 차단이 된다.
 
 ### 남은 미검증 항목
 
