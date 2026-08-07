@@ -18,6 +18,13 @@
 #                      재생성 시 비-주석 부분 byte-identical 로 재현됨이 실증되었다
 #                      (2026-06-24). 빈 값으로 설정하면 최신 pip-tools 를 쓴다(출력
 #                      포맷이 달라질 수 있음).
+#   PIP_VERSION        lockgen venv 의 pip 핀(기본: 25.0.1). 빈 값이면 최신으로 upgrade.
+#                      **핀이 필요한 이유**: 이 스크립트는 원래 pip 를 최신으로 올렸는데,
+#                      pip 26.x 가 `pip._internal.utils.compat.stdlib_pkgs` 를 제거해
+#                      pip-tools 7.5.3 의 `piptools/sync.py` import 가 죽는다
+#                      (2026-08-07 실측: latest=26.2.1 실패, 25.0.1·24.3.1 성공).
+#                      즉 시간이 지나면서 조용히 고장 나는 조합이었다. pip-tools 핀을
+#                      올릴 때 이 핀도 함께 재평가할 것.
 #
 # 결정성 주의: pip-compile 은 기존 락이 있으면(앵커) 이미 핀된 패키지를 --upgrade
 # 없이는 올리지 않는다. 이 헬퍼는 REQ_LOCK 을 in-place 로 덮어쓰므로 앵커가 유지돼,
@@ -31,6 +38,7 @@ REQ_TXT="scripts/requirements.txt"
 REQ_LOCK="scripts/requirements.lock"
 PYTHON="${PYTHON:-python3.11}"
 PIP_TOOLS_VERSION="${PIP_TOOLS_VERSION-7.5.3}"
+PIP_VERSION="${PIP_VERSION-25.0.1}"
 LOG="[refresh-lock]"
 
 cd "$REPO_ROOT"
@@ -60,7 +68,13 @@ trap cleanup EXIT
 
 echo "$LOG 격리 venv 생성: $VENV ($PYTHON / $PYVER)"
 "$PYTHON" -m venv "$VENV"
-"$VENV/bin/python" -m pip install --quiet --upgrade pip
+if [[ -n "$PIP_VERSION" ]]; then
+  echo "$LOG pip==$PIP_VERSION 설치 (pip-tools 호환 핀)"
+  "$VENV/bin/python" -m pip install --quiet "pip==$PIP_VERSION"
+else
+  echo "$LOG pip 최신으로 upgrade — pip-tools 와의 호환성은 보장되지 않음"
+  "$VENV/bin/python" -m pip install --quiet --upgrade pip
+fi
 
 if [[ -n "$PIP_TOOLS_VERSION" ]]; then
   echo "$LOG pip-tools==$PIP_TOOLS_VERSION 설치"
