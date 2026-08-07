@@ -115,20 +115,20 @@
 | scripts/tools/check\_sitemap\_local.py            |       52 |        2 |     96% |    82, 90 |
 | scripts/tools/check\_workflow\_permissions.py     |       96 |       24 |     75% |51, 53, 61, 70, 107, 112, 115, 139-163, 167 |
 | scripts/tools/component\_counts.py                |       84 |        1 |     99% |       164 |
-| scripts/tools/gsc\_api.py                         |      116 |      116 |      0% |    42-234 |
+| scripts/tools/gsc\_api.py                         |      116 |        6 |     95% |67, 74, 89-94, 234 |
 | scripts/tools/gsc\_index\_audit.py                |      234 |      234 |      0% |    44-561 |
 | scripts/tools/guard\_falsifiability.py            |      174 |       80 |     54% |573-577, 587-589, 618-627, 632, 646-655, 687-691, 696-730, 740-788, 806-832, 836 |
-| scripts/tools/indexnow\_submit.py                 |      174 |      174 |      0% |    30-358 |
+| scripts/tools/indexnow\_submit.py                 |      174 |       28 |     84% |89-132, 222-229, 347-348, 358 |
 | scripts/tools/postbuild\_fix\_feed\_enclosures.py |       65 |        3 |     95% |118-119, 134 |
 | scripts/tools/review\_alerting\_quality.py        |      228 |      109 |     52% |27, 111-120, 125, 128-129, 133, 150-151, 159-171, 175-192, 196-200, 271-274, 276-280, 287-299, 305, 320-328, 332-342, 346-350, 354-368, 372 |
 | scripts/tools/tune\_risk\_threshold.py            |      175 |       16 |     91% |26, 76, 92, 95-96, 98, 116, 119-120, 122, 124, 188-189, 205, 293, 402 |
 | scripts/tools/verify\_action\_pins.py             |      150 |      150 |      0% |    58-315 |
-| scripts/tools/verify\_secret\_activation.py       |      236 |      236 |      0% |    13-443 |
+| scripts/tools/verify\_secret\_activation.py       |      236 |        4 |     98% |124, 355-356, 443 |
 | scripts/validate\_collector\_summary\_contract.py |       53 |        1 |     98% |        95 |
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **23735** | **6598** | **72%** |           |
+| **TOTAL**                                         | **23735** | **6110** | **74%** |           |
 
 
 ## Setup coverage badge
