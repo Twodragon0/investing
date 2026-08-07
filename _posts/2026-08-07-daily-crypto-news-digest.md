@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-07 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: Coldcard 해커는 64 BTC 및 200 ETH을 암호화폐 믹서로 전송합니다. - 100건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 클래리티법 관련 39건</li><li>🏦 <strong>거래소</strong>: 20건 수집</li><li>📈 <strong>가격/시장</strong>: 달러 이슈 부각</li><li>🔵 <strong>규제/정책</strong>: 21건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/coldcard-hackers-64-btc-200-eth-cryptocurrency-mixers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Coldcard 해커는 64 BTC 및 200 ETH을 암호화폐 믹서로 전송합니다.</a> <span class="p0-desc">Coldcard 익스플로잇 배후의 해커들은 수백만 달러에 달하는 디지털 자산을 암호화폐 믹서로 옮겼으며, 대부분의 도난 자금은 공격자가 통제하는 지갑에서 추적할 수 있었습니다.</span></li><li><a href="https://cointelegraph.com/markets/situational-awareness-400m-investment-nearly-collapsing?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Situational Awareness는 거의 붕괴된 후 4억 달러를 투자하여 수익을 얻었습니다. 보고서</a> <span class="p0-desc">Situational Awareness는 7월의 AI 주식 폭락 이후 헤지 펀드가 거의 붕괴된 지 며칠 후 미공개 회사에 4억 달러를 투자한 것으로 알려졌습니다.</span></li><li><a href="https://decrypt.co/374975/bitcoin-price-test-zcash-holds-golden-cross">비트코인은 Zcash가 보유자에게 희망을 주면서 시장의 인내심을 테스트합니다: 분석</a> <span class="p0-desc">비트코인이 데드크로스에서 벗어날 수 있을까요? Zcash가 보유자들이 6월 중순 폭락을 잊게 만들 수 있습니까? 차트에 따르면 다음과 같습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Coldcard 해커는 64 BTC 및 200 ETH을 암호화폐 믹서로 전송합니다. 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 100건의 뉴스 중 P1 주요 이슈도 8건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (39건): 비트코인, 클래리티법, 암호화폐 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **🏦 거래소** (20건): binance, support, upgrade 이슈에 대한 시장 반응을 모니터링할 필요가 있습니다.
-- **📈 가격/시장** (22건): 달러, 암호화폐 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- Coldcard 해커는 64 BTC 및 200 ETH을 암호화폐 믹서로 전송합니다.
-- Situational Awareness는 거의 붕괴된 후 4억 달러를 투자하여 수익을 얻었습니다. 보고서
-- 비트코인은 Zcash가 보유자에게 희망을 주면서 시장의 인내심을 테스트합니다: 분석
-
-### 주요 이슈
-
-- 러시아, 암호화폐 거래 합법화: 대외 무역에 대한 변화 및 영향 - 러시아의 아시아 중심
-- 또 다른 주요 ETF은 대규모 XRP 판매를 공개합니다.
-- 코인 시황] 비트코인, ETF 자금 유입에도 박스권…美 암호화폐 법안 처리 여부도 변수 - 뉴스핌
-- 외 5건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, ETF
-- **주요 출처**: Binance(35건), Cointelegraph(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-08-07.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-08-07.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **100건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

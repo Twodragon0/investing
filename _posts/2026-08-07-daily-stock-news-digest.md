@@ -33,52 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-07 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 반도체 투심 다시 흔들…코스피 4.58% 급락, 코스닥은 800선 회복 - 산경투데이 - 192건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 급락 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 환율, 금리 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 반도체, 코스피 이슈 부각</li><li>🏦 <strong>거래소</strong>: IPO, 실적 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9ET2oyOHVwUU1DVE1mdExmREQ2cEF0Sk1TVlUzNG55MkluV2EyM1c1TlB5bjlFVnBQdEhkREpiU0RHRV9mS1kyMGpVZHUtQWxiZGkzTGhhZ3JEdnF3RG03ZUpiRDEtVVJ4MEpLeXJrNTTSAXRBVV95cUxPQnNTeGRacXJobEdGRXFkVzNBd3RvTEpsUjhLV3BPUTNQbzhBVTRGNzZuUkh3V0hrZ0VTdndqNXRkNzVLblp5WElUT0p5WHd0OGd0dDhXajBIRXRMSFpxWjVtM21SYXJQeHlnZHBUeE1iVUZmMA?oc=5">반도체 투심 다시 흔들…코스피 4.58% 급락, 코스닥은 800선 회복 - 산경투데이</a> <span class="p0-desc">반도체 투심 다시 흔들…코스피 4.58% 급락, 코스닥은 800선 회복 산경투데이</span></li><li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE03RGFaZjljUUpCQVRLZmlLVE5UazFGQlhweW1FUVBZU25wUDVQTjc3eGhraXY4UTdHZ2Ftb2E1cVd3WW1VRmpVRXEzaTZpX1FGa19MeEsyemtYcTNGUlVKRnRTU0xwWm8?oc=5">샌디스크 쇼크에 글로벌 반도체주 급락…키옥시아 합작 '332단 낸드'로 돌파구 - 초이스스탁US</a> <span class="p0-desc">샌디스크 쇼크에 글로벌 반도체주 급락…키옥시아 합작 '332단 낸드'로 돌파구 초이스스탁US</span></li><li><a href="https://www.sankyungtoday.com">외국인 매도에 반도체주 급락…삼성전자 6%·SK하이닉스 10%↓ - 산경투데이</a> <span class="p0-desc">외국인 매도에 반도체주 급락…삼성전자 6%·SK하이닉스 10%↓ 산경투데이</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 반도체 투심 다시 흔들…코스피 4.58% 급락, 코스닥은 800선 회복 - 산경투데이 
-외 P0 긴급 이슈 6건이 추가 감지되었습니다. 총 192건의 뉴스 중 P1 주요 이슈도 27건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (43건): 코스피, 급락, 삼성전자 가격 변동 (43건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (17건): 환율, 금리, 국채 매크로 변수 (17건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🤖 AI/기술** (24건): 반도체, 코스피, 급락 기술 이슈 (24건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 반도체 투심 다시 흔들…코스피 4.58% 급락, 코스닥은 800선 회복 - 산경투데이
-- 샌디스크 쇼크에 글로벌 반도체주 급락…키옥시아 합작 '332단 낸드'로 돌파구 - 초이스스탁US
-- 외국인 매도에 반도체주 급락…삼성전자 6%·SK하이닉스 10%↓ - 산경투데이
-
-### 주요 이슈
-
-- 다우지수는 사상 최고치를 기록하고 S&P 500 및 나스닥은 기술 수익 하락세를 보이고 있습니다.
-- 미국 기술주는 랠리에 큰 변화를 맞이합니다! 실적 시즌이 N으로 AI 낙관론을 다시 불러일으킵니다.
-- 오늘 주식 시장: 나스닥 전표, Dow 및 S&P 500 선물은 수익 RO만큼 상승
-- 외 24건
-
-### 투자자 체크포인트
-
-- 한국 기사 66건, 글로벌 기사 126건 수집
-- 한국 지수: KOSPI 6,280.15(-0.40%), KOSDAQ 790.13(-1.98%), USD/KRW 1,420.25(-0.24%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">43건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:40%"></div></div><span class="theme-count">17건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:56%"></div></div><span class="theme-count">24건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:9%"></div></div><span class="theme-count">4건</span></div>
-<div class="theme-row"><span class="theme-label">🔴 보안/해킹</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:5%"></div></div><span class="theme-count">2건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-08-07.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-08-07.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,280.15 (-0.40%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
+- KOSDAQ 790.13 (-1.98%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- *한강타임즈 김광호 기자 = IBK기업은행은 중소기업의 디지털 경쟁력 강화를 위해 ‘IBK상거래원스톱’ 서비스를 고도화하고 ‘크레탑 기업정보 브리핑’ 서비스를 새롭게 출시한다고 5일.*
 
 ## 테마별 주요 뉴스
 

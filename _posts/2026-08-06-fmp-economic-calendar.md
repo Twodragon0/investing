@@ -21,8 +21,6 @@ image_alt: "주요 경제 캘린더 및 실적 일정 (2026-08-06) - 시장 분�
 - 총 **13건** 수집
 
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">2</div><div class="stat-label">주요 지수</div></div><div class="stat-item"><div class="stat-value">6</div><div class="stat-label">실적 발표</div></div><div class="stat-item"><div class="stat-value">17</div><div class="stat-label">경제 이벤트</div></div><div class="stat-item"><div class="stat-value">13</div><div class="stat-label">IPO 일정</div></div></div>
-
 ## 📊 주요 시장 지수
 
 | 심볼 | 이름 | 현재가 | 변동 | 변동률 | 고가 | 저가 |

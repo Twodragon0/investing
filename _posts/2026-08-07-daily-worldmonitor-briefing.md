@@ -39,28 +39,6 @@ image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-08-07 - 시�
 - 정적 레이어(핫스팟/기지/핵시설/제재국가/경제 중심지)는 WorldMonitor 기준 데이터셋 기반입니다.
 - 상세 지도: https://finance.worldmonitor.app/?lat=20.0000&lon=0.0000&zoom=1.00&view=global&theme=dark
 
-## 전체 뉴스 요약
-<div class="alert-box alert-warning"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg> 지정학 리스크 레벨: 낮음</strong><ul><li>지정학적 리스크가 비교적 안정적이나, 돌발 이벤트 가능성은 상존합니다.</li></ul></div>
-
-핵심 테마는 **사회/기타**(14건), **지정학/안보**(4건), **금융시장**(2건) 중심으로 전개되고 있습니다.
-
-안보 이슈(4건)와 금융시장 뉴스(2건)가 동시 부각되고 있어, 지정학적 긴장이 시장 심리에 직접 영향을 미치는 구간입니다.
-
-**테마 집중도**: 상위 2개 테마가 전체의 90%를 차지하여, 시장의 관심이 뚜렷하게 쏠리고 있습니다. 소외 테마에서 서프라이즈 이벤트 발생 시 충격이 증폭될 수 있습니다.
-
-### 고중요도 이슈 (4건)
-
-- 우크라이나가 러시아 영토 깊은 곳에 있는 정유소 2곳을 공격했습니다.
-- 인권단체들은 레바논 언론인을 살해한 이스라엘의 공격은 명백한 전쟁범죄라고 주장한다.
-- 이란의 호르무즈 해협 계획은 미국과 이스라엘 선박을 봉쇄한 것으로 알려졌습니다. 미국, '장애물' 거부
-- 이란의 호르무즈 해협 제한 계획 초안에 따른 공급 중단 우려 속에 유가 상승
-
-### 투자자 체크포인트
-
-- **금융시장**: 주요 지수 변동성과 외국인 수급 동향 모니터링
-- **방산·사이버보안**: 군사적 긴장 확대 시 수혜 섹터 점검
-- **출처**: WorldMonitor/BBC World (13건), WorldMonitor/CNBC (7건)
-
 ## 테마별 현황
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">20</div><div class="stat-label">총 이슈</div></div><div class="stat-item"><div class="stat-value">3</div><div class="stat-label">테마 수</div></div><div class="stat-item"><div class="stat-value">2</div><div class="stat-label">출처 수</div></div><div class="stat-item"><div class="stat-value">4</div><div class="stat-label">안보 이슈</div></div></div>
 
