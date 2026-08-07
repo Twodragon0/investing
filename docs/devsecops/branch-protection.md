@@ -129,14 +129,58 @@ changes (항상 실행, 변경 파일 판정)
   `upgradeToPro=build-rate-limit` 로 FAILURE 였다. required 로 걸면 쿼터 소진이
   머지 차단이 된다.
 
-### 남은 미검증 항목
+### 차단 사유 — `github-actions` 는 이 저장소에서 bypass actor 가 될 수 없다 (2026-08-07 실측)
 
-- Phase 2 는 PR 필수화가 자동 푸시를 막으므로 **bypass actor 가 필요**하다.
-  `github-actions[bot]`(Integration) 을 bypass 로 넣는 것이 후보이며, 룰셋을 실제로
-  만들어봐야 API 형태가 확정된다. Phase 1 은 bypass 가 없어 이 불확실성이 없다.
-- bypass 를 넣으면 "어떤 워크플로우든 main 에 푸시 가능"이 된다. 워크플로우 파일
-  자체는 Phase 2 로 보호되므로 사람이 몰래 바꿀 수는 없지만, 권한 축소가 아니라
-  **권한 이전**임을 인식할 것.
+Phase 2 의 `pull_request`·`required_status_checks` 는 **직접 푸시를 막으므로 자동
+푸시 23개를 그대로 차단한다.** 따라서 `github-actions[bot]` 을 bypass actor 로
+넣는 것이 전제인데, GitHub 이 이를 **거부**한다:
+
+```
+POST /repos/Twodragon0/investing/rulesets
+bypass_actors: [{actor_id: 15368, actor_type: "Integration", ...}]
+-> 422 Validation Failed
+   "Actor GitHub Actions integration must be part of the ruleset source or owner organization"
+```
+
+`enforcement: disabled` + 존재하지 않는 ref 조건으로 프로브 룰셋을 만들어 actor
+타입별로 확인했다(전부 즉시 삭제):
+
+| bypass actor | 결과 |
+|---|---|
+| `Integration` **github-actions** (15368) | **거부** |
+| `Integration` **github-advanced-security** (57789) | **거부** |
+| `Integration` vercel (8329) | 허용 |
+| `Integration` gitguardian (46505) | 허용 |
+| `RepositoryRole` admin(5) / maintain(2) / write(4) | 허용 |
+| `DeployKey` | 허용 |
+
+즉 "User 소유 저장소는 Integration 을 쓸 수 없다"가 아니라 **GitHub 1st-party 앱은
+소유 조직에 속하지 않으면 bypass actor 가 될 수 없다**는 제약이다. 설치된
+third-party 앱은 허용된다.
+
+`RepositoryRole` 은 *사용자* 역할이라 `GITHUB_TOKEN`(= `github-actions[bot]`) 푸시를
+덮지 못한다 — 허용되더라도 해결책이 아니다.
+
+### Phase 2 를 열려면 (셋 중 하나를 골라야 한다)
+
+1. **사용자 소유 GitHub App 생성 + 설치** (권장). 위 표에서 third-party 앱이 허용됨이
+   확인됐으므로 자체 App 도 bypass actor 가 된다. 워크플로우는
+   `actions/create-github-app-token` 으로 설치 토큰을 받아 푸시한다. 토큰이 여전히
+   **단기·스코프 한정**이라 보안 특성이 GITHUB_TOKEN 과 가깝다. 비용: App 생성(UI
+   수동), App ID·private key 시크릿 등록, 23개 푸시 지점 수정.
+2. **Deploy key 푸시**. API 상 허용됨이 확인됐다. 비용은 낮지만 **장기 유효한 write
+   자격증명**이 생겨 ephemeral GITHUB_TOKEN 보다 보안이 후퇴한다.
+3. **저장소를 조직으로 이전**. 그러면 `github-actions` Integration bypass 가 바로
+   허용된다. 가장 근본적이지만 소유 구조 변경이다.
+
+어느 것도 고르지 않으면 **Phase 1 이 이 저장소의 상한**이다. Phase 1 은 되돌릴 수
+없는 사고(force push·브랜치 삭제)를 이미 막고 있으므로 무보호 상태는 아니다.
+
+### 어느 경로를 택하든 남는 트레이드오프
+
+bypass 를 넣으면 "그 actor 로 도는 어떤 워크플로우든 main 에 푸시 가능"이 된다.
+워크플로우 파일 자체는 Phase 2 로 보호되므로 사람이 몰래 바꿀 수는 없지만, 권한
+축소가 아니라 **권한 이전**임을 인식할 것.
 
 ## Phase 3 — 자동 푸시를 PR + auto-merge 로 (권장하지 않음)
 
