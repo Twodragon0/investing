@@ -115,6 +115,9 @@ changes (항상 실행, 변경 파일 판정)
   장애가 머지를 막는 대가가 이득보다 크다. 주간 스케줄 + 워크플로우 변경 PR 로
   충분하다.
 - `lighthouse-ci` / `coverage-comment` — `pull_request` 트리거가 없다.
+- `Vercel` — 무료 티어 빌드 쿼터로 실패한다. PR #1119 에서 코드와 무관하게
+  `upgradeToPro=build-rate-limit` 로 FAILURE 였다. required 로 걸면 쿼터 소진이
+  머지 차단이 된다.
 
 ### 남은 미검증 항목
 

@@ -435,9 +435,9 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "tests/test_workflow_action_version_label_guard.py::test_version_labels_are_version_shaped",
     ),
     StaticCase(
-        "같은 SHA 에 모순 라벨 (# v6 -> # v4, 타 워크플로우는 v6 유지)",
+        "같은 SHA 에 모순 라벨 (# v6.0.2 -> # v4, 타 워크플로우는 v6.0.2 유지)",
         ".github/workflows/action-pin-verify.yml",
-        "uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6",
+        "uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2",
         "uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v4",
         "tests/test_workflow_action_version_label_guard.py::test_one_sha_never_carries_contradictory_labels",
     ),
@@ -447,7 +447,7 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "      - name: Setup Python\n",
         "      - name: Half-applied bump probe\n        uses: actions/checkout@"
         + "c" * 40
-        + "  # v6\n\n      - name: Setup Python\n",
+        + "  # v6.0.2\n\n      - name: Setup Python\n",
         "tests/test_workflow_action_version_label_guard.py::test_one_claimed_version_never_maps_to_two_shas",
     ),
     StaticCase(

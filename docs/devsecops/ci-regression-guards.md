@@ -51,6 +51,29 @@ MISMATCH 면 실패한다. 워크플로우/액션 변경 PR + 주간 스케줄�
 `# v4`/`# v6`, `# v7`/`# v9.0.0`)은 오프라인 가드가 잡고, 1건(`# v5` 가 단 한 곳에만
 있어 비교 대상이 없던 v7.1.0 핀)은 온라인 잡만 잡는다.
 
+#### 라벨은 전체 버전으로 쓴다 — Dependabot 이 그때만 갱신한다
+
+Dependabot 은 SHA 를 교체할 때 **버전 주석이 기존 버전 문자열과 정확히 일치할
+때만** 함께 갱신한다. 열려 있던 PR 들에서 실측한 결과:
+
+| PR | 라벨 변화 | 결과 |
+|---|---|---|
+| #1029 `ruby/setup-ruby` | `# v1.302.0` → `# v1.314.0` | 자동 갱신 |
+| #1030 `actions/checkout` | `# v6` → `# v6` (SHA 는 v7.0.0) | **거짓 라벨 도입** |
+| #1035 `git-auto-commit-action` | `# v5` → `# v5` (SHA 는 v7.2.0) | **거짓 라벨 도입** |
+
+즉 메이저-only 라벨(`# v6`)은 bump 마다 조용히 거짓이 된다. 그래서 2026-08-07 에
+정규화 가능한 라벨 전부를 실측 최다-구체 태그로 바꿨다(64곳): `checkout # v6`
+→`# v6.0.2`, `cache # v4`→`# v4.3.0`, `cache/{restore,save} # v5`→`# v5.0.5`,
+`upload-artifact # v7`→`# v7.0.1`, `py-cov-action # v3`→`# v3.41`.
+
+예외 2건은 메이저 라벨이 **유일하게 참인** 경우라 그대로 둔다 —
+`github/codeql-action/upload-sarif` 는 핀이 `v4` **태그 객체** 자체이고,
+`treosh/lighthouse-ci-action` 은 `v12` 만 그 SHA 를 가리킨다. 이 둘은 Dependabot
+자동 갱신 대상이 아니므로 온라인 잡의 주간 실행에 의존한다.
+
+**새 액션을 추가할 때 라벨은 `# vX.Y.Z` 로 쓸 것.** `# vX` 는 첫 bump 에서 거짓이 된다.
+
 > 공급망/시크릿 3종(2026-08-06 추가)의 배경: `security-scan.yml` 의
 > `actions-permissions` 잡은 이름과 달리 **build 를 실패시킬 수 없다** — 모든 발견이
 > `::warning::` 이고 exit 하지 않으며, 핀닝 체크의 `has_issues=true` 는
