@@ -523,3 +523,42 @@ def test_replace_in_post_still_refuses_duplicates_by_default() -> None:
 def test_replace_in_post_reports_missing_anchor() -> None:
     content = '<p class="news-desc">something</p>'
     assert mod.replace_in_post(content, "absent", "새 요약", all_copies=True) == (content, False)
+
+
+# ---------------------------------------------------------------------------
+# Bare-domain links (2026-08-07): re-fetching a homepage returns another story
+# ---------------------------------------------------------------------------
+
+
+def test_refetch_refuses_bare_domain_links(monkeypatch: pytest.MonkeyPatch) -> None:
+    """A link with no path is a homepage, and its content is whatever is on it today.
+
+    The first scheduled-workflow run replaced an accurate p0 blurb with a
+    summary of an entirely different article, because the stored link was
+    `https://www.sedaily.com` — the publisher's front page. 155 of 2272 backfill
+    targets carry such links, all `p0-desc`.
+    """
+
+    def _never(url, title=""):  # pragma: no cover - must not be reached
+        raise AssertionError("a bare-domain link must not be fetched")
+
+    monkeypatch.setattr(mod, "fetch_page_metadata", _never)
+
+    for url in ("https://www.sedaily.com", "https://thehill.com/", "http://example.com"):
+        assert mod.refetch(_blurb(url=url)) == "", url
+
+
+def test_refetch_still_accepts_article_paths(monkeypatch: pytest.MonkeyPatch) -> None:
+    good = "코스피가 3% 올라 2,900선을 회복했다고 한국거래소가 발표했습니다."
+    monkeypatch.setattr(mod, "fetch_page_metadata", lambda url, title="": {"description": good})
+    monkeypatch.setattr(mod, "_is_title_related_description", lambda title, desc: True)
+
+    assert mod.refetch(_blurb(url="https://www.sedaily.com/NewsView/2ABCDEF")) == good
+
+
+def test_has_article_path_classification() -> None:
+    assert mod._has_article_path("https://example.com/news/1") is True
+    assert mod._has_article_path("https://example.com") is False
+    assert mod._has_article_path("https://example.com/") is False
+    # A query-only link still identifies a specific item.
+    assert mod._has_article_path("https://example.com?id=42") is True

@@ -54,6 +54,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 from typing import NamedTuple
+from urllib.parse import urlparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
@@ -227,14 +228,29 @@ def _resolve(url: str) -> str:
     return resolved if resolved and not _is_google_news_host(resolved) else ""
 
 
+def _has_article_path(url: str) -> bool:
+    """False for a bare domain — a homepage, not an article.
+
+    Re-fetching `https://www.sedaily.com` returns whatever is on the front page
+    at that moment, so the recovered "summary" describes a different story. The
+    first scheduled run did exactly that to one p0 blurb; 155 of 2272 targets
+    carry such links. A query string still identifies a specific item, so it
+    counts as a path.
+    """
+    parsed = urlparse(url)
+    return bool(parsed.path.strip("/") or parsed.query)
+
+
 def refetch(blurb: Blurb) -> str:
     """A usable replacement from the live article, or "" if none.
 
     Applies the gates a fresh collection would: not boilerplate, not a
     restatement of the headline, related to the headline, long enough.
     """
+    if not _has_article_path(blurb.url):
+        return ""
     link = _resolve(blurb.url)
-    if not link:
+    if not link or not _has_article_path(link):
         return ""
     try:
         meta = fetch_page_metadata(link, title=blurb.title)
