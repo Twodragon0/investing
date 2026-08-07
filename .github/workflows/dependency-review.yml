@@ -5,16 +5,15 @@ name: Dependency Review
 # 이미 설치된 전체 트리를 주기적으로 훑는 반면, 이쪽은 diff 에서 추가된 것만
 # 보고 머지 전에 막는다 — 취약 의존성이 들어온 뒤 다음 주 스캔에서 발견되는
 # 대신, 들어오는 순간 차단된다.
+#
+# 경로 필터를 두지 않는다. `dependency-review-action` 은 PR 의 의존성 diff 를
+# 보므로 매니페스트가 바뀌지 않은 PR 에서는 검사할 것이 없어 즉시 통과한다 —
+# 필터로 아끼는 시간(~30s)보다, required status check 로 지정할 수 있게 되는
+# 값이 크다. 워크플로우 수준 `paths:` 가 걸리면 그 경로를 건드리지 않은 PR 에서
+# 체크가 생성되지 않아 required 지정 시 영구 대기한다.
 on:
   pull_request:
     branches: [main]
-    paths:
-      - 'scripts/requirements.txt'
-      - 'requirements-dev.txt'
-      - 'requirements.lock'
-      - 'Gemfile'
-      - 'Gemfile.lock'
-      - '.github/workflows/**'
 
 permissions:
   contents: read

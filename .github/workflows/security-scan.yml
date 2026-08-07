@@ -8,15 +8,22 @@ on:
       - 'scripts/**'
       - '.github/workflows/**'
       - '.gitleaks.toml'
+  # PR 에서는 **경로 필터를 두지 않는다.** 두 가지 이유:
+  #
+  # 1. 시크릿은 어느 경로에든 커밋된다. 이전 필터(`scripts/**`,
+  #    `.github/workflows/**`, `.gitleaks.toml`)는 `_posts/`·`_data/`·`docs/`·
+  #    `assets/`·루트 설정에 들어간 자격증명을 그 PR 에서 **스캔하지 않았다**.
+  #    주간 스케줄이 나중에 잡더라도 그때는 이미 히스토리에 남는다.
+  # 2. required status check 적격성: 워크플로우 수준 `paths:` 가 걸리면 해당 경로를
+  #    건드리지 않은 PR 에서 체크가 생성되지 않아, required 로 지정하면 영구 대기한다.
+  #
+  # 비용은 실측 약 3 job-minute (Bandit ~50s, Secret Detection ~100s, 권한 감사
+  # ~25s). 보안 게이트를 조건부로 두는 값보다 싸다.
+  #
+  # `push` 트리거의 필터는 유지한다 — main 푸시는 자동 커밋이 하루 수십 건이고,
+  # 그쪽은 required check 대상이 아니며 주간 스케줄이 전수를 덮는다.
   pull_request:
     branches: [main]
-    paths:
-      - 'scripts/**'
-      # 권한 감사가 의미를 가지려면 워크플로우 변경에서 돌아야 한다. 이전 필터는
-      # `scripts/**` 와 `.gitleaks.toml` 뿐이어서, 새 워크플로우를 permissions
-      # 블록 없이 추가해도 이 잡이 실행조차 되지 않았다.
-      - '.github/workflows/**'
-      - '.gitleaks.toml'
   schedule:
     - cron: '0 3 * * 1'  # Every Monday 03:00 UTC
   workflow_dispatch:
