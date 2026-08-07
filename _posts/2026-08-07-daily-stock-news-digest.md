@@ -171,7 +171,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-07 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFB3M0MxUmVnd2R5U3Y4aFpwX2hoRXJVVWw1RGFnUDR6eWVjZlNyWDNqZkg0QzlycC1yWC1uZkxGVVNXQlVXemNvdVNnUkhMSHNOVS1VSnMyU2UyeElGakFpR9IBYEFVX3lxTFB3M0MxUmVnd2R5U3Y4aFpwX2hoRXJVVWw1RGFnUDR6eWVjZlNyWDNqZkg0QzlycC1yWC1uZkxGVVNXQlVXemNvdVNnUkhMSHNOVS1VSnMyU2UyeElGakFpRw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">우리금융硏 "한은, 8월 기준금리 '매파적 동결' 전망"</a>
-<p class="news-desc">우리금융硏 "한은, 8월 기준금리 '매파적 동결' 전망" 연합뉴스</p>
+<p class="news-desc">(서울=연합뉴스) 임지우 기자 = 우리금융경영연구소는 한국은행 금융통화위원회가 오는 27일 기준금리를 연 2.75%로 동결할 것이라고 6일 전망...</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -202,7 +202,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-07 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9aMkJ3eGlpbUpxaFFsc0tqTkhVQTVZM0toMFJTRWVWaVZXUlVJMTBpUVNCejVDT3JFYW1fWVM4bHJwVHFReFRfQjN1TTlISDdjODVYdlJZWDg2c25TSXN0SFRFV2dndi1US1RvMV9faGHSAXRBVV95cUxOSHlJR002dnFmS3hkOEd3UHptOG51Wm1ROUdDWkpZTzJpSkU3VHlaekRCajdCWmNWcG9zeWsycC05WDZ6OHhMcXZ1OFNlTkUxa0FhamVkNGxYTnB6dkZ1ZnNIUUxpSHFSczZhMmNWUkRjNW1UaA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체 훈풍에 코스피 3.76% 급등…코스닥도 4일간 24% 상승 - 산경투데이</a>
-<p class="news-desc">반도체 훈풍에 코스피 3.76% 급등…코스닥도 4일간 24% 상승 산경투데이</p>
+<p class="news-desc">[산경투데이 = 한승수 기자]국내 증시가 미국 반도체주의 강세와 외국인 자금 유입에 힘입어 급락 충격을 빠르게 만회하고 있다.반도체 대형주뿐 아니라 코스닥과 중소형주로 매수세가 확산되면서 시장 전반의 회복 폭도 넓어지는 모습이다.5일 한국거래소에 따르면 코스피는 전 거래일보다 239.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -226,7 +226,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-07 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE5wMUc3UWppLU5CYnBLS2tQYVo3UEVKM3VybTM3TnExNm1VQzZrRDgzQnJHRDJlUHNvalVsamJsSEdmMFdQMEJKdm9CTUt0bTBwSzNaSHdqVldfTmRGZng2THRjY0t1bVpVaU85OWVDcUZuNkEt0gF0QVVfeXFMUHdHSjU4RjRia01zbkhOOGU4N1FaZmZqX1BJT3pMcEo5SGNzTk1RSERMTFhUYzdUVUhid2RsQ3JUbklwd3ExTDZ5UXgxVm9pbWZ0ZnA0U0ExTG5EVHNyN3NJcjgwTXl6b0tqUjk4NS1xTm1MM2g?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자 6%↓·SK하이닉스 10%↓‥반도체주 급락에 코스피 4% 넘게 하락 마감 - MBC 뉴스</a>
-<p class="news-desc">삼성전자 6%↓·SK하이닉스 10%↓‥반도체주 급락에 코스피 4% 넘게 하락 마감 MBC 뉴스</p>
+<p class="news-desc">코스피가 삼성전자와 SK하이닉스 등 반도체 대장주의 급락 영향으로 5% 가까이 하락 마감했습니다. 오늘 지수는 어제보다 119.51포인트, 1.81% 내린 6,478로 출발해 한때...</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
