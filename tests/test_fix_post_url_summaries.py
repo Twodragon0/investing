@@ -562,3 +562,66 @@ def test_has_article_path_classification() -> None:
     assert mod._has_article_path("https://example.com/") is False
     # A query-only link still identifies a specific item.
     assert mod._has_article_path("https://example.com?id=42") is True
+
+
+# ---------------------------------------------------------------------------
+# p0 homepage link recovery (2026-08-07)
+# ---------------------------------------------------------------------------
+
+
+def test_recover_p0_links_uses_exact_title_match(tmp_path: Path) -> None:
+    """A p0 alert whose link is a homepage can borrow the card's article link.
+
+    `<source url>` overwrote the item's real link before render, so the article
+    URL survives only where the same story also appears as a theme card in the
+    same post. Matching is exact-title only: prefix matching added just 1 more
+    recovery across the corpus and risks pairing the wrong story.
+    """
+    body = (
+        "---\ntitle: T\n---\n"
+        '<div class="alert-box alert-urgent"><ul>'
+        '<li><a href="https://www.sedaily.com">코스피 3% 급등</a> '
+        '<span class="p0-desc">요약</span></li></ul></div>\n'
+        '<a href="https://news.google.com/rss/articles/ABC" class="news-title">코스피 3% 급등</a>'
+        '<p class="news-desc">본문 요약입니다.</p>\n'
+    )
+    path = tmp_path / "2026-08-05-x.md"
+    path.write_text(body, encoding="utf-8")
+
+    assert mod.recover_p0_links(path) == 1
+    assert 'href="https://www.sedaily.com"' not in path.read_text(encoding="utf-8")
+    assert path.read_text(encoding="utf-8").count("news.google.com/rss/articles/ABC") == 2
+
+
+def test_recover_p0_links_leaves_unmatched_titles_alone(tmp_path: Path) -> None:
+    body = (
+        "---\ntitle: T\n---\n"
+        '<div class="alert-box alert-urgent"><ul>'
+        '<li><a href="https://www.sedaily.com">코스피 3% 급등</a> '
+        '<span class="p0-desc">요약</span></li></ul></div>\n'
+        '<a href="https://news.google.com/rss/articles/ABC" class="news-title">전혀 다른 제목</a>'
+        '<p class="news-desc">본문 요약입니다.</p>\n'
+    )
+    path = tmp_path / "2026-08-05-y.md"
+    path.write_text(body, encoding="utf-8")
+    before = path.read_text(encoding="utf-8")
+
+    assert mod.recover_p0_links(path) == 0
+    assert path.read_text(encoding="utf-8") == before
+
+
+def test_recover_p0_links_skips_links_that_already_work(tmp_path: Path) -> None:
+    """Only homepage links are candidates; a real article link is left as is."""
+    body = (
+        "---\ntitle: T\n---\n"
+        '<div class="alert-box alert-urgent"><ul>'
+        '<li><a href="https://www.sedaily.com/NewsView/1">코스피 3% 급등</a> '
+        '<span class="p0-desc">요약</span></li></ul></div>\n'
+        '<a href="https://news.google.com/rss/articles/ABC" class="news-title">코스피 3% 급등</a>'
+        '<p class="news-desc">본문 요약입니다.</p>\n'
+    )
+    path = tmp_path / "2026-08-05-z.md"
+    path.write_text(body, encoding="utf-8")
+
+    assert mod.recover_p0_links(path) == 0
+    assert "sedaily.com/NewsView/1" in path.read_text(encoding="utf-8")
