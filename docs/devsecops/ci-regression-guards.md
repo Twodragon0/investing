@@ -24,9 +24,10 @@ System Configuration), NIST SSDF(SP 800-218) **PO.3 / PW.4**.
 | `tests/test_requirements_lock_coverage.py` | 6 | `requirements.txt` 직접 의존성 전부가 `requirements.lock` 에 ==핀(부분집합) + 락의 모든 핀이 최소 1개 `--hash` 보유(presence) | 락 staleness(검증 안 되는 새 의존성) / hashless 핀이 `--require-hashes` 무결성 검증을 무력화하는 공급망 변조 창 |
 | `tests/test_workflow_action_pinning_guard.py` | 4 | `.github/workflows/**` · `.github/actions/**` 의 모든 외부 `uses:` 가 40-hex SHA 핀(presence) + 탐지기 양방향 | 가변 태그(`@v4`)/브랜치 참조 → 업스트림 변조가 diff 없이 CI 에서 실행 |
 | `tests/test_secret_scan_gate_guard.py` | 7 | Gitleaks 게이트 무결성: `useDefault=true`(presence), allowlist `targetRules`/`paths` 집합 동일(==), 게이트 차단성(no `continue-on-error`/`\|\| true`), `fetch-depth: 0`(presence) | 잡은 남아있는데 룰셋 해제·allowlist 확대·exit 흡수·히스토리 절단으로 시크릿 스캔이 조용히 무력화 |
+| `tests/test_delimiter_regex_guard.py` | 13 | 출처 구분자 정규식이 구분자 앞 공백을 **요구**한다(`\s+`, presence) — 열린 꼬리 형태만 대상, 고정 alternation·마크다운 불릿·고정 숫자 리터럴은 면제 | `\s*` 는 복합어 내부 하이픈을 구분자로 오인해 뒤를 전부 삭제 (2026-08-06 4회 반복, main 에 13건 피해) |
 | `tests/test_workflow_permission_gate_guard.py` | 4 | `code-quality.yml` 이 `check_workflow_permissions.py` 를 `--workflows-dir .github/workflows` 로 차단 실행(presence) | 도구 단위 테스트는 green 인데 CI 배선만 끊겨 2026-04-23 수집기 장애 클래스가 재무방비 |
 
-총 **118 케이스**.
+총 **131 케이스**.
 
 > 공급망/시크릿 3종(2026-08-06 추가)의 배경: `security-scan.yml` 의
 > `actions-permissions` 잡은 이름과 달리 **build 를 실패시킬 수 없다** — 모든 발견이
@@ -76,3 +77,28 @@ System Configuration), NIST SSDF(SP 800-218) **PO.3 / PW.4**.
   제거로 수행. staleness/hashless 회귀는 위 `test_requirements_lock_coverage.py` 가
   워크플로우 트리거와 무관하게 매 PR 차단하므로, 승격은 무결성(다운로드 검증) 차단만
   추가하는 것이다.
+
+## 구분자 오절단 감사 기록 (2026-08-06)
+
+`\s*[-–—|]\s*<열린 꼬리>` 결함이 네 곳에서 발견됐다. 같은 조사를 반복하지
+않도록 결론을 남긴다.
+
+| 위치 | 표면 | 코퍼스 피해 |
+|---|---|---|
+| `enrichment_synthetic._strip_source_suffix` | 백필 일괄 편집(#1084) | **13건** — #1087 에서 원문 복구 |
+| `enrichment_synthetic.clean_title` | 수집 시점 합성 설명문 | 0건 |
+| `summarizer.clean` | 수집 시점 테마 설명문 | 0건 |
+| `collect_crypto_news._extract_security_summary_from_title` | 보안 리포트 인용문 | 0건 |
+
+**생성 시점 3건이 피해 0인 이유**: 결함이 발현하려면 하이픈 복합어가 있는
+제목이 *합성 폴백 경로*를 타야 한다. 실제로 갈리는 제목(카드 4518건 중 35건,
+p0 712건 중 4건, 보안 인용문 315건 중 1건)은 전부 실제 기사 설명문을 갖고 있어
+폴백이 돌지 않았다. 즉 능력은 있었으나 발현하지 않았다.
+
+검증 방법: 저장된 텍스트를 구/신 로직으로 각각 재생성해 비교했다. 단순
+`startswith` 비교는 `제목 + " Seeking Alpha"` 같은 정상 텍스트를 오탐하므로
+(구 로직 출력이 제목의 접두사이기 때문) 절단 여부를 별도로 확인해야 한다.
+
+미해결로 남긴 인접 클래스: 구분자 없이 공백만으로 붙은 출처명
+(`"…(BTC-USD:Cryptocurrency) Seeking Alpha"`). `normalize_blurb` 는 구분자를
+요구하므로 잡지 않는다.
