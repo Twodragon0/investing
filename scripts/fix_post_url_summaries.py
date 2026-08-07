@@ -192,6 +192,48 @@ def clean_text(text: str) -> str:
     return cleaned if cleaned != text.strip() else ""
 
 
+_ALERT_BOX_RE = re.compile(r'<div class="alert-box alert-urgent">.*?</div>', re.S)
+_P0_LINK_RE = re.compile(r'<li><a href="(?P<url>[^"]+)">(?P<title>.*?)</a>', re.S)
+_CARD_LINK_RE = re.compile(r'<a href="(?P<url>[^"]+)"[^>]*class="news-title"[^>]*>(?P<title>.*?)</a>', re.S)
+
+
+def recover_p0_links(path: Path) -> int:
+    """Repoint homepage p0 links at the article, using the post's own cards.
+
+    `<source url>` in Google News RSS names the publisher, and the renderer
+    preferred it over the item's real link, so 267 published p0 alerts point at
+    a front page instead of the story. The original URL was overwritten before
+    render and is not in `_state` (a dedup hash store), so it survives only
+    where the same story also appears as a theme card in the same post — 54 of
+    267 (20%).
+
+    Exact title match only. Prefix matching recovered just one more across the
+    corpus while risking a pairing with the wrong story, which is the failure
+    this whole thread has been cleaning up after.
+    """
+    content = path.read_text(encoding="utf-8", errors="replace")
+    cards: dict[str, str] = {}
+    for match in _CARD_LINK_RE.finditer(content):
+        cards.setdefault(_plain(match.group("title")), match.group("url"))
+
+    replacements: list[tuple[str, str]] = []
+    for box in _ALERT_BOX_RE.finditer(content):
+        for match in _P0_LINK_RE.finditer(box.group(0)):
+            url = match.group("url")
+            if _has_article_path(url):
+                continue
+            article = cards.get(_plain(match.group("title")))
+            if article and _has_article_path(article):
+                replacements.append((match.group(0), match.group(0).replace(url, article, 1)))
+
+    if not replacements:
+        return 0
+    for old, new in replacements:
+        content = content.replace(old, new, 1)
+    path.write_text(content, encoding="utf-8")
+    return len(replacements)
+
+
 def collect_text_targets(posts_dir: Path, days: int | None) -> list:
     """``(blurb, replacement)`` for every blurb the text pass would change.
 
@@ -459,6 +501,11 @@ def main() -> int:
     parser.add_argument("--workers", type=int, default=6, help="동시 재수집 스레드 수 (기본 6)")
     parser.add_argument("--apply", action="store_true", help="실제 파일에 기록 (기본: dry-run)")
     parser.add_argument(
+        "--recover-p0-links",
+        action="store_true",
+        help="홈페이지로 향하는 p0 링크를 같은 포스트 카드의 기사 링크로 교정 (네트워크 불필요)",
+    )
+    parser.add_argument(
         "--text-only",
         action="store_true",
         help="네트워크 없이 텍스트 결함만 결정적으로 교정 (출처 접미사·중복 마침표)",
@@ -476,6 +523,22 @@ def main() -> int:
     args = parser.parse_args()
 
     setup_logging()
+
+    if args.recover_p0_links:
+        total = 0
+        changed = 0
+        for path in sorted(POSTS_DIR.glob("*.md")):
+            if not args.apply:
+                continue
+            fixed = recover_p0_links(path)
+            if fixed:
+                total += fixed
+                changed += 1
+        if not args.apply:
+            print("(dry-run — 적용하려면 --apply)")
+            return 0
+        print(f"p0 링크 복구: {total}건 / 포스트 {changed}개")
+        return 0
 
     if args.text_only:
         return _run_text_only(args)
