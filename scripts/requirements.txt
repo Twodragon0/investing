@@ -5,7 +5,7 @@
 # (상세/수동 절차: .github/workflows/supply-chain-lock.yml 상단 주석 참고).
 PyYAML>=6.0.3
 requests==2.33.1
-certifi>=2026.4.22
+certifi>=2026.7.22
 cachetools>=7.1.1
 beautifulsoup4==4.14.3
 # lxml 6.1.1: lxml-html-clean 0.4.5 가 lxml>=6.1.1 요구 (아래 참고).
