@@ -14,20 +14,41 @@ System Configuration), NIST SSDF(SP 800-218) **PO.3 / PW.4**.
 
 | 가드 테스트 | 케이스 | 불변식 (방향) | 막는 사고 |
 |---|---|---|---|
-| `tests/test_state_path_anchoring.py` | 16 | 모든 `_state` 작성자가 `__file__` 앵커(절대·repo-root 하위)를 쓴다 — bare-relative 금지 | 잘못된 cwd 에서 스크립트 실행 시 stray `scripts/_state/` 생성, dedup 상태 분기 |
+| `tests/test_state_path_anchoring.py` | 18 | 모든 `_state` 작성자가 `__file__` 앵커(절대·repo-root 하위)를 쓴다 — bare-relative 금지 | 잘못된 cwd 에서 스크립트 실행 시 stray `scripts/_state/` 생성, dedup 상태 분기 |
 | `tests/test_pip_audit_ignore_sync.py` | 4 | `code-quality.yml` ↔ `dependency-check.yml` 의 pip-audit `--ignore-vuln` ID 집합 동일(equality), 파일 내 모든 호출이 동일 집합 보유 | 한쪽만 ignore 갱신 → 다른 쪽 보안 게이트 매주 silent red (2026-06 사고) |
 | `tests/test_ruff_version_pin_sync.py` | 3 | ruff 버전 핀 3곳(`.pre-commit-config.yaml` rev, `requirements-dev.txt`, `code-quality.yml`) 동기화(equality) | 핀 불일치 → format 규칙 차이로 코드 변경 없이 main 이 red |
-| `tests/test_workflow_step_if_safety.py` | 48 | step-level `if:` 가 `secrets.*` 컨텍스트를 직접 참조하지 않음(presence) — 전 워크플로우 파라미터화 | actionlint 가 거부하는 expression → 워크플로우 startup_failure |
+| `tests/test_workflow_step_if_safety.py` | 53 | step-level `if:` 가 `secrets.*` 컨텍스트를 직접 참조하지 않음(presence) — 전 워크플로우 파라미터화 | actionlint 가 거부하는 expression → 워크플로우 startup_failure |
 | `tests/test_workflow_permission_lint.py` | 8 | `check_workflow_permissions.py` 도구가 워크플로우 `permissions:` 최소권한 규칙을 검사 | 과대 권한(`contents: write` 남발) GITHUB_TOKEN 노출면 확대 |
 | `tests/test_generated_image_guard.py` | 2 | 레이아웃이 렌더하는 생성 이미지가 404 나지 않음(존재 보장) | 30일 이미지 정리가 참조 살아있는 og/hero 이미지를 삭제 → 깨진 이미지 |
 | `tests/test_encoding_guard.py` | 16 | `encoding_guard` 모듈의 UTF-8/CP949 라벨 교정 동작 불변 | 한국어 텍스트 인코딩 깨짐(mojibake) |
 | `tests/test_requirements_lock_coverage.py` | 6 | `requirements.txt` 직접 의존성 전부가 `requirements.lock` 에 ==핀(부분집합) + 락의 모든 핀이 최소 1개 `--hash` 보유(presence) | 락 staleness(검증 안 되는 새 의존성) / hashless 핀이 `--require-hashes` 무결성 검증을 무력화하는 공급망 변조 창 |
 | `tests/test_workflow_action_pinning_guard.py` | 4 | `.github/workflows/**` · `.github/actions/**` 의 모든 외부 `uses:` 가 40-hex SHA 핀(presence) + 탐지기 양방향 | 가변 태그(`@v4`)/브랜치 참조 → 업스트림 변조가 diff 없이 CI 에서 실행 |
+| `tests/test_workflow_action_version_label_guard.py` | 7 | 모든 핀이 `# vX.Y` 라벨 보유 + 라벨이 버전 형태(presence), 한 SHA 에 모순 라벨 금지 · 한 버전이 두 SHA 로 분기 금지(내부 정합성), 비교기 양방향 | SHA 는 핀됐지만 라벨이 거짓 → 리뷰어·Dependabot 이 잘못된 changelog·CVE 목록을 근거로 판단 (2026-08-07 감사에서 3건: checkout `# v4`→실제 v6.0.2, github-script `# v7`→v9.0.0, git-auto-commit `# v5`→v7.1.0) |
 | `tests/test_secret_scan_gate_guard.py` | 7 | Gitleaks 게이트 무결성: `useDefault=true`(presence), allowlist `targetRules`/`paths` 집합 동일(==), 게이트 차단성(no `continue-on-error`/`\|\| true`), `fetch-depth: 0`(presence) | 잡은 남아있는데 룰셋 해제·allowlist 확대·exit 흡수·히스토리 절단으로 시크릿 스캔이 조용히 무력화 |
 | `tests/test_delimiter_regex_guard.py` | 13 | 출처 구분자 정규식이 구분자 앞 공백을 **요구**한다(`\s+`, presence) — 열린 꼬리 형태만 대상, 고정 alternation·마크다운 불릿·고정 숫자 리터럴은 면제 | `\s*` 는 복합어 내부 하이픈을 구분자로 오인해 뒤를 전부 삭제 (2026-08-06 4회 반복, main 에 13건 피해) |
 | `tests/test_workflow_permission_gate_guard.py` | 4 | `code-quality.yml` 이 `check_workflow_permissions.py` 를 `--workflows-dir .github/workflows` 로 차단 실행(presence) | 도구 단위 테스트는 green 인데 CI 배선만 끊겨 2026-04-23 수집기 장애 클래스가 재무방비 |
 
-총 **131 케이스**.
+총 **145 케이스**.
+
+> 2026-08-07 실측 재집계. 이전 표기(131)는 `test_state_path_anchoring`(16→18)과
+> `test_workflow_step_if_safety`(48→53, 워크플로우 수에 파라미터라이즈됨)가
+> 자라는 동안 갱신되지 않아 stale 했다.
+
+### 오프라인 가드로 끝나지 않는 축: 액션 핀 라벨
+
+`test_workflow_action_version_label_guard.py` 는 네트워크 없이 판정 가능한
+층까지만 강제한다 — 라벨의 존재·형태, 그리고 라벨들 사이의 모순. "이 SHA 가
+정말 `# v6.0.2` 인가"는 업스트림만 답할 수 있고, 스위트는
+`tests/conftest.py` 가 HTTP 를 차단하므로(의도된 설계) 여기서 물을 수 없다.
+
+그 마지막 구간은 `.github/workflows/action-pin-verify.yml` 이 담당한다:
+`scripts/tools/verify_action_pins.py` 가 각 핀을 GitHub API 로 대조하고,
+MISMATCH 면 실패한다. 워크플로우/액션 변경 PR + 주간 스케줄로 돈다(주간이 필요한
+이유는 업스트림 태그 삭제·재지정이 우리 diff 없이 일어나기 때문).
+
+역할 분담이 이렇게 갈린 결과, 2026-08-07 감사에서 나온 3건 중 2건(같은 SHA 에
+`# v4`/`# v6`, `# v7`/`# v9.0.0`)은 오프라인 가드가 잡고, 1건(`# v5` 가 단 한 곳에만
+있어 비교 대상이 없던 v7.1.0 핀)은 온라인 잡만 잡는다.
 
 > 공급망/시크릿 3종(2026-08-06 추가)의 배경: `security-scan.yml` 의
 > `actions-permissions` 잡은 이름과 달리 **build 를 실패시킬 수 없다** — 모든 발견이
