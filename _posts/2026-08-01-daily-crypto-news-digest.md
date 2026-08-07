@@ -129,7 +129,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-01 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiZ0FVX3lxTE9QbU1JcUg1RHZhVElkY3lweEZtMzFWMlBZb21yT0FteTBWNFVqNDl2MEZhRTVPbnlnbDFuQ0t4d3l0bkN5NFNTSGY2eFlfY3RFdGxWQThRTW1XVHJWUkhGRnpnOVRvdEk?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">2026년 7월 31일 비트코인의 현재 가격</a>
-<p class="news-desc">비트코인은 정부, 은행 등에 의해 통제되는 대신 P2P 네트워크에서 실행됩니다. 이를 통해 중개자 없이 다른 사람에게 직접 가치를 보낼 수 있습니다.</p>
+<p class="news-desc">2026년 7월 31일 동부 표준시 오전 7시에 단일 비트코인(BTC)의 시장 가격은 $63,874.59입니다. 이는 어제 오전 거래에서 $618.32 하락한 수치이며 1년 전보다 약 $51,885 하락한 수치입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -223,7 +223,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-01 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiaEFVX3lxTE5Xb0RkN0wwbmxuaFEzR252UmVVTVZqbFNGd3lmTHJKUVFGbGZkMno3WDNGTjBNQXphSWg5Qjhfc29NUGU3SU9CTVd4b2dkRjF2SnJCVFVSYW9jYXgtb0w4dGhMZU9pMWtu?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">2026년 7월 31일 이더리움의 현재 가격</a>
-<p class="news-desc">이더리움은 단순한 디지털 화폐가 아닙니다. 이는 분산형 컴퓨팅 플랫폼입니다. 즉, 사용자는 회사나 은행의 감독 없이 앱을 구축하고 실행할 수 있습니다.</p>
+<p class="news-desc">2026년 7월 31일 동부 표준시 오전 7시에 이더리움(1 ETH)의 가격은 $1,886.41입니다. 이는 어제보다 30.62달러 하락한 것이며, 1년 전과 비교하면 약 1,812달러 하락한 것입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-31 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE0wUXRMeTZyTkN3SVAzcjhTTHJuZkEteS11VmdIY01IdGtzZmtaWG9IVWJORi1mZVNrS2dUd05TaVdUd1lEbHk5SXpRWUNMbVl2U1BOdkZFcGdBZlJvM0xTSnQ0XzhTNk5BWExCZXEyVmtCd2FvZk93SWd1cw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">나스닥 100이 AI 지출 우려로 조정에 가까워지면서 기술주 하락</a>
-<p class="news-desc">나스닥 100이 AI 지출 우려로 조정에 가까워지면서 기술주 하락 ibtimes.com</p>
+<p class="news-desc">투자자들이 세계 최대 기업의 AI에 대한 막대한 지출이 수익을 낼 수 있을지 의문을 제기함에 따라 나스닥-100은 조정 영역에 가까워졌습니다.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
@@ -119,7 +119,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-31 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxNMy1OT0E0ZEFuMXRlRjQ1WVpwQlZhZWFtdGlTWG44Q3UzUU9sbkxxUlM2c3hvaVN4UklqNm1HMnpmWTFBdHBEc2JuNUVzSVd1dmpPRDNDYlRLMklRNkFMNUZwTHZHZkwxci1taXcwQ1hYTlduTjR6LVU5UkxpQ0dJVGxPa3Fnb2RfMURmMFltQ2ctaVp3MDVscXJfd9IBoAFBVV95cUxOdmV3LWI3VXU4Y1BMV0FsempQXzVmQUhwMTI1bm1IT2N2aEFkTnFlSHZFS29lQWJBMWdCaldyc19hUWFIOG1NSWpyam03Um8yY1hRcHhpVWdsSmNlUUJ2cnJoa2x1TlY5TXp0WTIwR3R1OHB1UW15UGZDOERQbndyb01FUzdBaGU2cFB4Zi1jdHBLeDA4NDJWcm1heFBpVVIt?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">트레이더들이 금리를 안정적으로 유지하기로 한 결정에 무게를 두고 있기 때문에 30년 만기 수익률은 2007년 최고치 근처에 맴돌고 있습니다.</a>
-<p class="news-desc">30년물 수익률은 트레이더들이 금리를 안정적으로 유지하기로 한 결정에 무게를 두고 있기 때문에 2007년 최고치 근처에 맴돌고 있습니다.</p>
+<p class="news-desc">연준이 금리를 안정적으로 유지하기로 결정한 이후 미국 국채 수익률은 목요일에 거의 변하지 않았습니다. 30년 만기 국채 수익률은 수요일 정규 거래 이후 6bp 상승해 5.2%를 넘어 2007년 이후 볼 수 없었던 수준 근처를 맴돌았습니다.</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>
@@ -172,7 +172,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-31 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE9WVG93OWxYWEtBWDM2SHljWUFoRGlpbHJnT3ZiNGNBcG1aRU5aRXhoSHpBS0toWU10U19MNUJyQml5ZFR5NkFUbE0zRi0yMEtOeFFrNFZvdm80VERKTGJkbl9kV0lJR2JZT1k3MFRsSmVBaWRJTE5B?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성·SK, 2분기에만 150조 벌었다. "반도체 부족 2028년까지 간다" - OhmyNews</a>
-<p class="news-desc">삼성·SK, 2분기에만 150조 벌었다. "반도체 부족 2028년까지 간다" OhmyNews</p>
+<p class="news-desc">“2028년까지 의미 있는 공급 확대가 어렵다.”30일 오전 삼성전자의 2분기 실적발표 설명회장에서 나온 김재준 메모리사업부 전략마케팅실장(부사장)의 말이다. 최근 주식시장을 뒤흔들고 있는 ‘반도체 고점론’에 대해 삼성전자가 내놓</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -184,7 +184,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-31 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE41TXNiY2VDMjRmVG9zZl85SlU3c1lDYmFIUDY4STRFbVI5aWpoVjZtX0dsTFVjTUNWbFFxNTZVRDVJRUU4akhoZXN2d0hGN1ZpNDdFeUtmOFNCblpkdmdBMXZUM2lqNU1FU2QyRg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥 연일 하락…반도체레버리지ETF 손실에 비명 - 프리진경제</a>
-<p class="news-desc">코스피·코스닥 연일 하락…반도체레버리지ETF 손실에 비명 프리진경제</p>
+<p class="news-desc">30일, 코스피는 전 거래일 대비 69.68포인트 내린 5,593.56으로 하락 마감했다. 코스닥 역시 전 거래일 대비 17.90포인트 하락한 644.78로 장을 마쳤다.수급 동향을 보면, 코스피 시장에서 개인이 1조 4,310억 원을 순매도하며 매도세를 주도했다. 반면 외국인과 기관</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -227,7 +227,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-31 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxQdEdSSXJkY3hnaEg2a0l3MXdLQlFXMUY1YndTWk52cGRVQ1gtSW81MmtCaHEybTRLWFl2ZGZ4SlhmRE1oSUdaQWNQRm5YVmhnN3B5bGp0X01WVUhnVmR1clhCVUlBRTg0cjN3WTI2WUViS2tJdkROeFJpUlB5cndRWnQxTkk?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">홍콩은 미국 IPO 시장을 모방하지만 실제 경쟁자는 중국입니다 - Financial Times</a>
-<p class="news-desc">시장, 경제, 정치 최신 소식에 대한 Financial Times의 뉴스, 분석 및 의견</p>
+<p class="news-desc">수요일 뉴스레터는 최고의 칼럼과 우리가 읽고 있는 내용을 제공합니다. 국제 전문가 팀이 매일 전달하는 Sharp 재무 의견 기술, 에너지, 금융, 투자 및 M&amp;A에 대한 직접적인 분석 기업을 움직이는 요소에 대한 재미있고 접근 가능한 통찰력</p>
 <span class="source-tag" data-source-type="default">FT via Google</span>
 </div>
 </div>

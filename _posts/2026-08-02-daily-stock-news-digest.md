@@ -76,7 +76,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-02 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxQX0ZKd0ZpWlI3NzFudEd0Tnh0dDBYcWhCRjNtOGpwdVVGaldiYkRDX2RtT3VYdDl2WW82SXZWVE1QQ1ktVGJNcFBjMkJsQ1c5VkpDM0s1d2tpVHBlSi1BWTVXejloQ1pfLTUtbnotUGdMLUw4U05ZLUVZVTlWSWFDeA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피, 사상 처음 하루 1000포인트 올라.삼성전자 26.8% 폭등, SK하이닉스는 상한가</a>
-<p class="news-desc">코스피, 사상 처음 하루 1000포인트 올라.삼성전자 26.8% 폭등, SK하이닉스는 상한가 조선일보</p>
+<p class="news-desc">31일 코스피가 미국 기술주 호조와 저평가 매력 부각으로 17.91% 급등해 6595.45에 마감했습니다. 삼성전자는 26.81%, SK하이닉스는 29.95% 올라 사상 최대 상승 폭을 기록했습니다. 외국인은 7조2천억 원을 순매수했으나 개인은 8조2천억 원을 순매도하며 대조를 보였고, 전문가들은 향후 실적 개선 모멘텀 확인이 중요하다고 분석했습니다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -169,7 +169,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-02 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTFBtbVpfaEs4ci1vc2gxc1hQeVZOaU5vVVA2Uk85NmhESVNHOXBaTjRVVHNKQnpmUDZfa3NyeG1VbHJwWWpqUTQ5dnlNQzVFODJrZEE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">미국발 훈풍에 반도체 ‘불기둥’…삼성전자·SK하이닉스 20%대↑</a>
-<p class="news-desc">미국발 훈풍에 반도체 ‘불기둥’…삼성전자·SK하이닉스 20%대↑ 매일경제</p>
+<p class="news-desc">미국 뉴욕증시에서 인공지능(AI) 관련주와 반도체주가 일제히 급등한 가운데 삼성전자와 SK하이닉스가 장 초반 20% 안팎의 강세를 보이고 있다. 31일 오전 9시 15분 현재 유가증권시장에서 삼성전자는 전일 대비 4만3000원(20.77%) 오른 25만원에 거래되고 있다. 같은 시각 SK하이닉스도 전일 대비 29만9000원(22.62%) 상승한 162만10</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -181,7 +181,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-02 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFB0OWR1emlaVzFqYTJ1M2dvWEFyeV9TSTVnaFdGWnRPZlBtbXBvLU9pM1pkMkk4Tkg2bjZSb3VVVzN6eXhQSnZEeXNHa0xfV0hXZUZJTWNn?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">“팔기엔 늦었다”“이때는 사라” 전문가 10인 삼전닉스 전망 [반도체 긴급진단</a>
-<p class="news-desc">“팔기엔 늦었다”“이때는 사라” 전문가 10인 삼전닉스 전망 [반도체 긴급진단] 중앙일보</p>
+<p class="news-desc">7월 초만 해도 국내외 증권가에선 ‘삼전닉스(삼성전자+SK하이닉스)’에 대한 장밋빛 기대가 컸다. ‘60만 전자, 500만 닉스’ 전망까지 나왔다. 글로벌 인공지능(AI) 반도체 수요와 메모리 반도체 가격 상승에 힘입어 호실적이 이어질 것이란 게 주된 근거였다. 하지만 불과 3주 만에 주가는 고점 대비 반 토막 났다. 지난 30일 삼성전자는 20만원대, SK하이닉스는 130만원대로 곤두박질쳤다. 대체 무슨 일이 일어난 걸까. 국내 반도체주 랠리의 서사에는 크게 두 가지 전제가 깔려 있었다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

@@ -119,7 +119,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxOWUhyTWJxaWVIZm96VnByUUhnc1hxVS1fR3BQLVVpLVZKMWUySWQ4d0pnd1ZxWG45R3FzdzF5U0dKUERJTU5IZl8xOWp3eFA2c2laMm9JeWpQc05mNW4wek1raExUbGRCS0tYNVAtbzFLODBJS0VLSFBmQnJPUTlROUZBYUdjbDNIdHdDM3FkZEkyb1I3XzYyOXFwNUNHYUhQZmE2RENlLWRTcHJxSTdWLU9jRzBHUnVJZmVV?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">AMD 8% 하락, Marvell 하락 7%, 인텔 6% 하락, AI 칩 거래가 엔비디아 - 24/7 Wall St.로 축소됨</a>
-<p class="news-desc">AMD 8% 하락, Marvell 하락 7%, 인텔 6% 하락, AI 칩 거래가 엔비디아 24/7 Wall St로 축소됨에 따라</p>
+<p class="news-desc">Advanced Micro Devices(NASDAQ:AMD|AMD Price Prediction) stock is down 9% in midday Tuesday trading to $453.37, whileMarvell Technology(NASDAQ:MRVL) shares are off 7% to $175.52 andIntel(NASDAQ:INTC) stock is down 6% to $85.82. Meanwhile,Arm Holdings(NASDAQ:ARM) shares are also down 7% to $246.37.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
@@ -131,7 +131,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE1VdzdBcUVRMXdianU2VzJDeUJqdlVWWUJyTE5TcTd2Y254UXVkX2FCdUZLY09tN0VBeWI4VThudk9hbmFjVWZGSXNoRjNkejdq?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피, 반도체주 급락에 11% 폭락…코스피·코스닥 거래 일시 중단 - 블루밍비트</a>
-<p class="news-desc">코스피, 반도체주 급락에 11% 폭락…코스피·코스닥 거래 일시 중단 블루밍비트</p>
+<p class="news-desc">한국 증시가 삼성전자와 SK하이닉스 등 반도체주를 중심으로 매도세가 확산하면서 급락해 코스피와 코스닥 시장의 거래가 일시 중단됐다. 28일(현지시간) 블룸버그에 따르면 코스피 지수는 이날 장중 약 11% 급락했다. 삼성전자와 SK하이닉스도 각각 13% 넘게 떨어지며 지</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

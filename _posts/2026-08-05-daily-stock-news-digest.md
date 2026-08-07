@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE5QS3ZLdXlrU3l6MDF5X3JrZUl3Y1pRV2x1Z1c2a1VqOU9YS2tzZXhEMFlZQjRiVVBDX090cGlRaEZIcHNJV2dHS0xyTnh2X3NqZ2ZmeUxsYVJra19vVWhjUktCY1RBcENqWXhHb1NkLVM3VGMwaUFJ0gF3QVVfeXFMTlBLdkt1eWtTeXowMXlfcmtlSXdjWlFXbHVnVzZrVWo5T1hLa3NleEQwWVlCNGJVUENfT3RwaVFoRkhwc0lXZ0dLTHJOeHZfc2pnZmZ5TGxhUmtrX29VaGNSS0JjVEFwQ2pZeEdvU2QtUzdUYzBpQUk?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">4일 매매 동향] 외국인, 삼성전자 2000억 '순매수'.SK하이닉스는 6300억 '순매도'</a>
-<p class="news-desc">[4일 매매 동향] 외국인, 삼성전자 2000억 '순매수'.SK하이닉스는 6300억 '순매도' 핀포인트뉴스</p>
+<p class="news-desc">4일 코스닥시장과 유가증권시장에서 외국인과 기관이 가장 많이 순매수·순매도한 종목은 다음과 같다.</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE1KSEFhMk1IcFpKVkxFUkV2aGRzRzNxTmZuT0trT08xU1p3Tlgwb0JSWnZZUDdSYmpxay1oVVVuRmp3NmRJMG1rQlpHb3lIODZzYXBjMlFxeWNuSXRUZ1F2eHBuQ1hTWmp3WEZJ0gFvQVVfeXFMTi1tUzd5R2xDYWNscTJmUWxmcHNQY1hpQkhyUm5lWVhaWnJHaGZiTmhweUF6MkJLV1h2UWVmeVk4MzdLckVfRllQbzQxUlRidzhGSnd5Wm8xSHMtempyZWU3b1diN0x3LUdEaFZBeFVj?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피 6200대로 후퇴…외국인·기관 4조원대 순매도 - 더퍼블릭</a>
-<p class="news-desc">코스피 6200대로 후퇴…외국인·기관 4조원대 순매도 더퍼블릭</p>
+<p class="news-desc">[더퍼블릭=이유정 기자] 직전 거래일 역대 최대 폭으로 뛰었던 코스피가 외국인과 기관의 대규모 매도에 하루 만에 5% 넘게 급락하며 6200대로 밀렸다.반도체 대형주를 중심으로 차익실현 매물이 쏟아진 반면 코스닥은 바이오·로봇주 순환매에 힘입어 이틀째 상승했다.3일 한국거래소 등에 따</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -161,7 +161,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE1vb2daTVF4OVVTaFZidkJVUWNsOE5iRmdFZFFyLWFpRnNIc0hfclViR01DbXVYQU1LcHViSk9Cek9BNzZ2TkNneTBtTy1fWkhweXBvUWVGeUQtNlNuRUE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">주식선물 18종목·옵션 2종목, 9월 코스피·코스닥 추가 상장 - 동행미디어 시대</a>
-<p class="news-desc">동행미디어 시대는 정치, 경제, 사회, 산업, 금융, 증권, 국제, 문화, 스포츠, 사설까지 다양한 분야의 깊이 있는 뉴스를 제공합니다. 존중받는 개인, 부강한 대한민국을 모토로 우리사회가 점진적으로 옳은 방향으로 나아갈 수 있는 가치있는 뉴스를 제공합니다. 깊이 생각하고, 널리 취재하며, 충실히 논의하는 숙의미디어로서 우리 시대의 어젠다를 제안합니다.</p>
+<p class="news-desc">한국거래소가 주식선물 18종목과 주식옵션 2종목을 9월 추가 상장한다. 4일 거래소에 따르면 주식선물은 코스피 4개·코스닥 14개 종목이며 주식옵션은 코스피 2개 종목이다. 거래소는 올 6월 시장 대표지수 리밸런싱을 반영해 기초주권 선정기준에 해당하는 주식선물 18개 종목을 선정했다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -221,7 +221,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9rOFQ4Qi1Nbkc2OWl3VEk1ZC1heGNPaFBPc0FlOC14eHJEeGdnUlVBSnZXNE1KUXkyM3dIczNfb2NkdnJBS0JiUGdTcmVWbnNjVmdaUUZn?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">‘만장일치 인상’ 한은 금통위원들 “성장·물가 경로 상응토록 금리 인상해야”</a>
-<p class="news-desc">‘만장일치 인상’ 한은 금통위원들 “성장·물가 경로 상응토록 금리 인상해야” 헤럴드경제</p>
+<p class="news-desc">[헤럴드경제=김벼리 기자] 한국은행 금융통화위원회가 지난달 16일 기준금리를 연 2.5%에서 2.75%로 0.25%포인트 올린 가운데 당시 회의에서 위원들은 추가 금리 인상 필요성을 내비쳤다. 반도체 호황발(發) 경제 호황이 앞으로 수요측 물가압력으로 작용할 수 있다는 판단에서다. 4일 한은이 공개한 ‘2026년도 제13차 금융통화위원회 통화정책방향 회의 의사록’에 따르면 금통위원 7명은 지난달 16일 회의에서 만장일치로 기준금리를 2.75%로 인상했다.</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -260,7 +260,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE0yc19ka0MweDNCRnc4djFxVEk4ajgwVzRadnBqUGtaMmJtcmp1TTlQSWVkZXQyd1pLZWEzNWoxeVpEdTU3eHZyYlBFUWNWbVRoeFJHY3c0TmZlbHpS?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">특징주] 반도체주 급락…삼성전자 25만원선 붕괴 - 뉴스핌</a>
-<p class="news-desc">[특징주] 반도체주 급락…삼성전자 25만원선 붕괴 뉴스핌</p>
+<p class="news-desc">[서울=뉴스핌] 양태훈 기자 = 국내 반도체주가 3일 장 초반 급락하고 있다. 지난달 마지막 거래일 기록적인 반등에 따른 차익실현 물량이 출회되면서 삼성전자는 25만원선, SK하이닉스는 160만원선 아래로 내려갔다.한국거래소에 따르면 이날 오전 9시 36분 기</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -284,7 +284,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMi3gFBVV95cUxNQzVkeTZ3UkRzZk5Od0JlZTU0S3JaWEtGeVRKX2VxRGFibEFzQ0lwbVVvZ2JjeUZHOEEwOEl0N2VVbm5EcFRHdTlDTV9YX0RSX1I3Z2Nabl9zT1Q3STY0ZXp6WW4wYWxNUVZHa1N4QXVOTk9tNkYxQ0lNMVYtVk9OSjJQbWJjN0trWV84NjNTWGVNVXhsSndhcklEOGFJRHFWaVJsWmRCd0dNZXFaNWk1SEFvXzIzakZOVXZiZ1BIcjB1MWlkc0g4Q2FCc3lxeFVPV3JqVmlDSGRuOWxnS1E?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Marvell, Sandisk, SK Hynix 선두 반도체 주식 랠리, S&P 500이 사상 최고치로 거래됨</a>
-<p class="news-desc">Marvell, Sandisk, SK Hynix 선두 반도체 주식 랠리, S&P 500이 사상 최고치로 거래됨 Yahoo Finance</p>
+<p class="news-desc">반도체 주식은 화요일에 S&amp;P 500을 사상 최고치로 이끌었습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>

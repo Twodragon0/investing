@@ -86,7 +86,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-04 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBzUUExbFpGcHRXVmdKb1E1MXRJSldqR1Q2X3J5bFM0bjQtajRvQUpzTjZxWm9OV3liYlV6MzN2RTFXbEVBeVUzRlVxXzhCNXBpUmVRaGlvRGVTTU8xazAtQnZSc0ZjeFU?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">2026년 8월 3일 비트코인의 현재 가격 - Fortune</a>
-<p class="news-desc">이 백만장자 투자자가 수십억 달러 규모의 아이디어를 발견한 방법 | 텀 시트 2026년 6월 24일 투자자 WHO SpaceX, OpenAI 및 Anthropic에 베팅하기 전에 | 텀 시트 2026년 6월 11일 투자 은행가들은 자신을 대체하기 위해 $2B AI을 구축했습니다 | 텀 시트 2026년 5월 28일 AI 골드 러시에 대한 진실에 대한 이 크리에이터 투자자 | 학기 시트 2026년 5월 13일 Palo Alto 옷장에서 10억 달러 수익까지: Gusto가 중소기업 소프트웨어를 Decrypt한 방법</p>
+<p class="news-desc">2026년 8월 3일 오전 7시(동부 표준시)에 비트코인(1 BTC)의 가격은 $62,706.56입니다. 이는 어제 오전보다 $394.09 감소한 수치이며, 1년 전과 비교하면 약 $51,480 감소한 수치입니다. 비트코인은 최초의 암호화폐이며 여전히 시장에서 가장 인기 있는 암호화폐입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -239,7 +239,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-04 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE93OEdpTGk0UzZna0tibGsyUWVsdndubFV6ZlJraTVjdlFCOVhjNlFBbTBReHJwOW1qelFHZ2VkTDRuR1BCdXBtU1BxTGZ1RW90dFo0eG1IeTRZbWI0V3V3SUMydm5BNXctR2NCZWRRSQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Coldcard 해킹에 비트코인 대이동…'대통합' 가속 - 리드경제</a>
-<p class="news-desc">Coldcard 해킹에 비트코인 대이동…'대통합' 가속 리드경제</p>
+<p class="news-desc">하드웨어 지갑 콜드카드(Coldcard) 이용자 4천585개 주소에서 1천367비트코인(BTC·약 1천329억원)이 탈취됐다.암호화폐 투자사 갤럭시디지털의 리서치</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

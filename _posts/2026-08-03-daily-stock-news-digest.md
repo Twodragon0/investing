@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-03 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiowJBVV95cUxPRnZzby1LcFJMNjBLSUpHWDg3Tk5QUThWa1FWWmJ4V1lMOHFNSmwycXhsWnlScFRnRW9hTTYxWVhxSEUzU2swSE9xZjJNU19JQVlhQkpEWHZ0SHY1OS12SjU1WUdmbHVlVTduMjZnLXByQlB6bC1VNmVfUkl3VXBMVG1GaXVJQmxYOFRZcVowMkwxN2FyRmhyU1BDNlBONExJTk9uRmpJckEtZkV0ekgxaG84N1oxTVBnZzFNLVJJT0hBSGV4V1k2NDR2VVhMcWRad01VTHBON25LSUpPYVFUQXdWbDlLa3RJbkZ0eXcwZ3ZRZU15ODAtVXRYNUxhb2RFZTk2WnhhX1dLN0dHSjlQSEZBM2M1R0t2MU5aQTVZTU9KVzQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">"롤러 코스피 넘어 번지점프 국장돼"…국민의힘, '주식시장 대란 국정조사' 제안</a>
-<p class="news-desc">"롤러 코스피 넘어 번지점프 국장돼"…국민의힘, '주식시장 대란 국정조사' 제안 데일리안</p>
+<p class="news-desc">국민의힘이 역대급 폭락과 폭등을 동반하는 등 극심한 변동성을 보여온 국내 증시와 관련해 국정조사를 제안했다.코스피·코스닥 주식시장 대란의 책임 규명을 위한 국정조사를 통해 단일종목 레버리지 ETF 도입 과정과 그 여파와 정부의 주식시장 과열 조장 행위 등을 살펴보자는 것이다.정점식 국민의힘 원내대표는 2일 페이스북에 "지금 우리 주식시장은 비정상이다. 코스</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -186,7 +186,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-03 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMingFBVV95cUxPTk56SFFSaThiQ0Q5T0hQcFh6UUF4cXZ1MG1IRUhkRXo1NzUyRHlubng2Mm5ISjJwTGJzRkF5VWs2U1hUc2VmZlllWW5hVy1qalRlTEJ1eHVScU9aZ3IxUzVmTlc4d1NIa1ZlM0hiSEYzc1JzeDZpWGloTnJ0RTVLWU9SUXBEdDFVX09EdURKc1lIS0oxbnY0RTFQTnk4QQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">JP모건 프라이빗 뱅크가 다가오는 인플레이션 충격에도 불구하고 S&P 500이 1년 안에 10% 급등할 것이라고 말하는 이유 - Business Insider</a>
-<p class="news-desc">Business Insider는 글로벌 기술, 금융, 주식 시장, 미디어, 경제, 라이프스타일, 부동산, AI 및 여러분이 알고 싶은 이야기를 알려드립니다.</p>
+<p class="news-desc">채권 거래자들은 Warsh와 연방공개시장위원회(FOMC)가 오랫동안 그들의 손에 앉아 있을 것이라고 기대하지 않습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -212,7 +212,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-03 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-spacex-amd-sandisk-eli-lilly-earnings-loom/?src=A00220&yptr=yahoo" class="news-title" target="_blank" rel="noopener noreferrer">다우존스 이란의 트럼프 변화로 인해 만기되는 선물; SpaceX, AMD, Sandisk, Eli Lilly 실적 전망</a>
-<p class="news-desc">다우존스 이란의 트럼프 변화로 인해 만기되는 선물; SpaceX, AMD, Sandisk, Eli Lilly 수익 직기.</p>
+<p class="news-desc">다우존스 미래: 트럼프 대통령은 이란의 새로운 대규모 공격을 보류할 것이라고 말했습니다. SpaceX, AMD, Sandisk, Lilly 실적이 밝아집니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>
@@ -270,7 +270,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-03 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMi8wFBVV95cUxNQTliUWpUaXRCSjc4Y3BLYlNnUkFCUWVVOUU4T2plbmlHbVRUSUxjREYyY3c0V0d3ZE1aTFFKRW03cnhLTWFNVUFnTktJbnJDNW85cHA0U2tVRUdUSEpBZWJ5alJCZDdCSno4eF9rblFUMWlLWnoyZUdTUUxQNHJQdHBua29sa3p0RmJqOU1vaHNyQkNZbVlQU1NTclVkS0swZzZhSTMxd1pqWGFkQ1dNUzRGbV9iUnNvYjJuWEpiaGNFczRWX29FajBzRktBYTFNb0FaSTFlaVk4MXdOUXhBVkNRa1BYS3hQTEVlNmtFTnpoN1E?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">더 많은 약물 개발자가 IPO 출시를 준비함에 따라 Apnimed가 공개 데뷔하게 되었습니다 - Insights.citeline.com</a>
-<p class="news-desc">더 많은 약물 개발자가 IPO을 준비함에 따라 Apnimed가 공개 데뷔하게 되었습니다. Insights.citeline.com 출시</p>
+<p class="news-desc">Apnimed의 최초 공모에서는 수면 무호흡증 후보 Oxnimbi(AD109)에 대한 규제 및 상업 활동 자금을 조달하기 위해 1억 9200만 달러를 모금했습니다. Braveheart, Vogenx 및 Attovia가 IPO를 앞두고 있습니다.</p>
 <span class="source-tag" data-source-type="default">IPO Watch</span>
 </div>
 </div>

@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-28 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFA1b3dxcTh1OFdxZURGbFpxdkVXc19meWx1aGVPZUV5NGlGbmZjMjlVQ0M3WTdvSVJHRTROT0FzdmljUGEteElNeWpCVGRBQ3FRM0tpSGVYODZKQy1icFJZWNIBYEFVX3lxTFA1b3dxcTh1OFdxZURGbFpxdkVXc19meWx1aGVPZUV5NGlGbmZjMjlVQ0M3WTdvSVJHRTROT0FzdmljUGEteElNeWpCVGRBQ3FRM0tpSGVYODZKQy1icFJZWA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">기준금리 3년 6개월만 인상…'긴축시계' 스타트</a>
-<p class="news-desc">기준금리 3년 6개월만 인상…'긴축시계' 스타트 연합뉴스</p>
+<p class="news-desc">[앵커]3년 6개월 만의 기준금리 인상으로 한국은행이 긴축의 첫발을 뗐습니다.이제 시장의 관심은 ‘올렸느냐’보다 ‘언제 또 올리느냐’에 쏠리고 ...</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -175,7 +175,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-28 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMikAJBVV95cUxNNzQ3U0JUZDJocG8xQ1RqajR5ZkxreE5fV2JXOFJvTUVxcWptOC1YcmIzeDN1UGdjbG5Sdm10TFFhT2lTd1h1WnpIMi0zeFI4bVBRZHJ1N1VkM3dkMHlKbGtZV1Y2Y3BWOG1uVlZualR5VHdWUHFfRmdUZ1V5VmZDOVpUbk9VOElndmJGZ3llR0pmSGczWjYtVVlQaS04by1uQjRVREotTkFNc2x6YmxoeDdXaUpqTDdHT3Vadk05RTN1VnBoWU16di1uRUdMaEs1eUc0bjJ5Q3Q2RHoxQzN6X0hERHBqSkRUNzRYaXZvMGx6QnlNSGdWRFAwSnVBU2VvVmJXb0I3X1NSY3psTy0yaA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">기술 매각: 생각할 필요도 없는 인공 지능(AI) ETF 1개를 85달러에 구매하고 장기적으로 보유 - The Globe and Mail</a>
-<p class="news-desc">The Globe and Mail은 국내 및 국제 뉴스를 포함하여 캐나다에서 가장 권위 있는 뉴스를 제공합니다.</p>
+<p class="news-desc">최근 주식 시장의 매도세는 투자자들에게 인공 지능 혁명의 일부를 할인된 가격에 구입할 수 있는 기회를 제공합니다.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
@@ -187,7 +187,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-28 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1BS1o5bzZSMXFuV1ZoYUNqRUZQVldEYUU5NHF1a19QMEtWdUZpNVpyR2RHRWJSUFVMRDNHbFhzUnVyaXRlMk1JRDBvY3U4MFQ1SFRLWTZMZHNPXzdGUkxzWXQ0YkYwU296?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자·SK하이닉스, 반도체 협력 발표로 주가 상승. 외국인 매도에도 강세 이어가</a>
-<p class="news-desc">삼성전자·SK하이닉스, 반도체 협력 발표로 주가 상승. 외국인 매도에도 강세 이어가 공감신문</p>
+<p class="news-desc">[공감신문] 정재은 기자=삼성전자와 SK하이닉스가 27일 각각 1%와 3% 이상의 상승률로 거래를 마감했다. 이날 거래에서 삼성전자는 전일 대비 1.80% 상승한 25만4천원에 마침표를 찍었다. 개장을 3.01% 상승한 25만7천원으로 시작한 삼성전자는 순간적으로 3.61% 오른 25만8천500원까지 상승했으나 바로 하락세로 돌아서 24만6천원까지 내려갔다. 이후 지속된 상승 흐름을 탔고, 결국 오후에 들어 강세로 반전하며 마무리됐다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -230,7 +230,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-28 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE9oX1VMSXVKUU5GSEpMOEZpaVlsVGZoNk5jRVRrYmNJNU5kblVkdDRYSXNsLXdvY2NNcEdYNU8zdXhqQmVCNElIQTVyaFpjUE00MzNlYV9ZaUU3SmdTV2c4TNIBYEFVX3lxTE9oX1VMSXVKUU5GSEpMOEZpaVlsVGZoNk5jRVRrYmNJNU5kblVkdDRYSXNsLXdvY2NNcEdYNU8zdXhqQmVCNElIQTVyaFpjUE00MzNlYV9ZaUU3SmdTV2c4TA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">뛰는 유가에 물가 불안 우려…금리·관세·환율도 '경고등'</a>
-<p class="news-desc">뛰는 유가에 물가 불안 우려…금리·관세·환율도 '경고등' 연합뉴스</p>
+<p class="news-desc">정부 "하반기 물가 3%" 다짐에도…고물가 장기화 우려금리 인상 가능성에 가계·기업 부담…통상·외환 변수도 여전 (서울=연합뉴스) 류영석 기자 = 정부가 이달 말 종료 예정이던 유류세 한시적 인하 조치를 오는 9월 말까지 두 달 더 연장하기로 한 24일 서울 서초구 만남의광장 주유소에 유가가 표시되어 있다. 2026.7.24 ondol@yna.co.kr (세종=연합뉴스) 안채원 기자 = 중동 정세 불안으로 국제유가가 다시 치솟으면서 하반기 국내 물가에 관한 우려가 커지고 있다.</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

@@ -32,7 +32,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-04 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">737.35</div><div class="stat-label">KOSDAQ +2.44%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 코스피 5% 급락·코스닥 2% 상승…대형주 차익실현에 순환매 뚜렷 - 산경투데이 - 182건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 주목</li><li>📊 <strong>매크로/금리</strong>: 환율, 국채 주목</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 선물 관련 11건</li><li>🤖 <strong>AI/기술</strong>: 반도체, 삼성전자 동향 주시</li></ul></div>
-<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.sankyungtoday.com">코스피 5% 급락·코스닥 2% 상승…대형주 차익실현에 순환매 뚜렷 - 산경투데이</a> <span class="p0-desc">코스피 5% 급락·코스닥 2% 상승…대형주 차익실현에 순환매 뚜렷 산경투데이</span></li><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9IUklQaXhWTldtb0J4elRRXzJwWVd4REFkU1EybkE2cEh1V29POVNxR0o3ZmNWLUxiVFdrOHllTUVMY0lNcWVPZ2oyQ3V6ZDgxS055bHRmUlloMnc4UUhobm0wWUU4RVFMY1BXZg?oc=5">코스피, 반도체 차익 실현에 5%급락…코스닥은 바이오·로봇 약진에 상승 마감 - 프리진경제</a> <span class="p0-desc">코스피, 반도체 차익 실현에 5%급락…코스닥은 바이오·로봇 약진에 상승 마감 프리진경제</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE0yc19ka0MweDNCRnc4djFxVEk4ajgwVzRadnBqUGtaMmJtcmp1TTlQSWVkZXQyd1pLZWEzNWoxeVpEdTU3eHZyYlBFUWNWbVRoeFJHY3c0TmZlbHpS?oc=5">특징주] 반도체주 급락…삼성전자 25만원선 붕괴 - 뉴스핌</a> <span class="p0-desc">[특징주] 반도체주 급락…삼성전자 25만원선 붕괴 뉴스핌</span></li></ul></div>
+<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.sankyungtoday.com">코스피 5% 급락·코스닥 2% 상승…대형주 차익실현에 순환매 뚜렷 - 산경투데이</a> <span class="p0-desc">코스피 5% 급락·코스닥 2% 상승…대형주 차익실현에 순환매 뚜렷 산경투데이</span></li><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9IUklQaXhWTldtb0J4elRRXzJwWVd4REFkU1EybkE2cEh1V29POVNxR0o3ZmNWLUxiVFdrOHllTUVMY0lNcWVPZ2oyQ3V6ZDgxS055bHRmUlloMnc4UUhobm0wWUU4RVFMY1BXZg?oc=5">코스피, 반도체 차익 실현에 5%급락…코스닥은 바이오·로봇 약진에 상승 마감 - 프리진경제</a> <span class="p0-desc">코스피, 반도체 차익 실현에 5%급락…코스닥은 바이오·로봇 약진에 상승 마감 프리진경제</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE0yc19ka0MweDNCRnc4djFxVEk4ajgwVzRadnBqUGtaMmJtcmp1TTlQSWVkZXQyd1pLZWEzNWoxeVpEdTU3eHZyYlBFUWNWbVRoeFJHY3c0TmZlbHpS?oc=5">특징주] 반도체주 급락…삼성전자 25만원선 붕괴 - 뉴스핌</a> <span class="p0-desc">[서울=뉴스핌] 양태훈 기자 = 국내 반도체주가 3일 장 초반 급락하고 있다. 지난달 마지막 거래일 기록적인 반등에 따른 차익실현 물량이 출회되면서 삼성전자는 25만원선, SK하이닉스는 160만원선 아래로 내려갔다.한국거래소에 따르면 이날 오전 9시 36분 기</span></li></ul></div>
 
 
 ## 전체 뉴스 요약
@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE1KSEFhMk1IcFpKVkxFUkV2aGRzRzNxTmZuT0trT08xU1p3Tlgwb0JSWnZZUDdSYmpxay1oVVVuRmp3NmRJMG1rQlpHb3lIODZzYXBjMlFxeWNuSXRUZ1F2eHBuQ1hTWmp3WEZJ0gFvQVVfeXFMTi1tUzd5R2xDYWNscTJmUWxmcHNQY1hpQkhyUm5lWVhaWnJHaGZiTmhweUF6MkJLV1h2UWVmeVk4MzdLckVfRllQbzQxUlRidzhGSnd5Wm8xSHMtempyZWU3b1diN0x3LUdEaFZBeFVj?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피 6200대로 후퇴…외국인·기관 4조원대 순매도 - thepublic.kr</a>
-<p class="news-desc">코스피 6200대로 후퇴…외국인·기관 4조원대 순매도 thepublic.kr</p>
+<p class="news-desc">[더퍼블릭=이유정 기자] 직전 거래일 역대 최대 폭으로 뛰었던 코스피가 외국인과 기관의 대규모 매도에 하루 만에 5% 넘게 급락하며 6200대로 밀렸다.반도체 대형주를 중심으로 차익실현 매물이 쏟아진 반면 코스닥은 바이오·로봇주 순환매에 힘입어 이틀째 상승했다.3일 한국거래소 등에 따</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFB0U1pqZk5ncEdzSGZzM2R5YnQ2a3NVV0NNNVVPWWhZT25WTzVZWU1YZGJ4ajc3YjJmWVktOUNFQVp4Q2ZCZDhER0hfanZVc0t2eGZ3WHc1WDJzdw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥 엇갈리는 흐름…투자 고수들 매매 동향보니</a>
-<p class="news-desc">코스피·코스닥 엇갈리는 흐름…투자 고수들 매매 동향보니 한국경제</p>
+<p class="news-desc">코스피·코스닥 엇갈리는 흐름…투자 고수들 매매 동향보니, 투자수익률 상위 1% 투자자</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -173,7 +173,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMipwJBVV95cUxQQ0wzbW9SdFJPeFE3cTBUcVdEMkZpc2N2UWFBak1udzhFQ21WTnJRVk9nYm9wSFVteV8tYjhkS2wtOThvdHFicExWZFFBREwzSS1oTElGdlJoNm9jQXFSZTRiODlPWE1GZGVGYlZBbDFCMnJoamtnalFHcVQwMWgtWThjMjBNdnliUzhiTkFsdWtFaHVveEhLN3lKQ0U2VVd4RTlUQVB4SE1Cakx1OG9xakxfUkNuYkZBVEE2MUxPZ1R1aktGY0k5cDR4N1hmT19vN3FjX2c5QnJsNHByMGNMWVJIQWZqcElfX0Vld0FsclJIalowUmoxWTdmdHZtZFBnVTU1c05mMWY0OTlWbjhTREJtTGE0WE5QQy05SDZ5U25NN012Mjg0?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Stock Market Today: S&P 500, Dow, Nasdaq 100 Futures Gain as Trump Halts 'Massive Attack' on Iran—Atkore</a>
-<p class="news-desc">주식 시장 시세, 비즈니스 뉴스, 금융 뉴스, 거래 아이디어 및 전문가가 제공하는 주식 조사.</p>
+<p class="news-desc">미국 주식 선물은 금요일 종가에 이어 다우존스, S&amp;P 500 및 나스닥 100 지수가 상승하면서 월요일에 상승했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -225,7 +225,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1WRmZFNnpUTmlydGVtNnFrN1hUWTQ3YlFrYkxJYWJnaFlfTENvTG1YZ1ppZl93MXNSMFhZR3NuVEFGZ0xEUS1HRDhrTW5jSEtOUFlWMms3UmU1ZGFQLWJxUVNHMEFuVmJm?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">엔비디아 2.8%·SOXL 1.2% 반등…삼성전자·SK하이닉스, 외국인 수급 주목 - 녹색경제신문</a>
-<p class="news-desc">엔비디아 2.8%·SOXL 1.2% 반등…삼성전자·SK하이닉스, 외국인 수급 주목 녹색경제신문</p>
+<p class="news-desc">[녹색경제신문 = 한순구 기자]미국 증시에서 엔비디아와 반도체 상장지수펀드(ETF)가 장 초반 약세를 딛고 반등하면서 4일 국내 증시의 낙폭 회복 여부에 관심이 쏠리고 있다.한국시간 4일 0시 전후 스탠더드앤드푸어스(S&amp;P)500지수를 추종하는 SPY는 1.1%, 나스닥100지수를 추종하는 QQQ는 1.3% 상승하고 있다. 엔비디아는 2.8%, AMD는 2.0% 올랐고 반도체 ETF인 SMH와 3배 레버리지 ETF SOXL도 각각 0.8%, 1.2% 상승했다.특히 마이크론은 장 초반 3.4% 하락했지만 이후 0.4% 상승으로 돌아섰</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

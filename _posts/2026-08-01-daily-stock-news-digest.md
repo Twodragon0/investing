@@ -133,7 +133,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9IUEN4dW43bzlxc09wQkR5WERmZUxILWpmNmRPWVJxWGFKOTloS01NWmMtV2dtNGNVbmZsSFZJcTJ4dUdqRVJoMEZJdERZNFNSdWY1WTdqdHZjRzFtdEtOUUdZZGtQRVhzQmc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">특징주] 외국인·기관 '삼성중공업' 동반 매수… 흥아해운·삼성전자도 순매수 상위 - 뉴스티앤티</a>
-<p class="news-desc">[특징주] 외국인·기관 '삼성중공업' 동반 매수… 흥아해운·삼성전자도 순매수 상위 뉴스티앤티</p>
+<p class="news-desc">30일 오전 키움증권 창구를 통한 외국인과 기관 투자자의 매매 동향 집계를 분석한 결과, 외국인은 장 초반 흥아해운과 삼성중공업 등을 중심으로 매수세를 보인 반면</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -219,7 +219,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMihwJBVV95cUxQWERIbi1iTFQ1LWxzbFhFcl9oLVc5Ulk3VTgyOHVKS3R1bVZBaS1faUVwTnNneTVDUHFMcFdxdnA0X3pmT1JzSklwWkNsVkQ3b25sV1NxdnFBS1hSdjZmN3JWLXV3S29CdUExLVJkMnd2TnV0eHdFVTd2Mk04LW41MndCVXBpYldXYl9BUzEtRUNCV3JWYno3SE94UkVTYkNmam15cGFWU3hKOUQ3Yk9meFhNY1ZpNElpQlJGVnIwXzhadHJEYVRWWWRubk5fS3ZvVkhwdENSSFl4WklFMGhUVWcyeXd6Q2sxQUNHVzZZRDdjeVEwU1pzMHBxSmlpSjh0SVF4emdFTQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">오늘의 주식 시장: S&P 500, 다우존스 선물 상승 후 냉각기 6월 PCE 인플레이션 데이터—애플, 아마존, 코인베이스 초점 - TradingView</a>
-<p class="news-desc">오늘의 주식 시장: S&P 500, 다우존스 선물 상승 후 냉각기 6월 PCE 인플레이션 데이터—애플, 아마존, 코인베이스 초점 TradingView</p>
+<p class="news-desc">(편집자 주: ETF 데이터가 업데이트되었습니다.) 목요일의 더 높은 종가에 이어 다우존스, S&amp;P 500 및 나스닥 100 지수가 상승함에 따라 주식 선물은 금요일에 상승했습니다. 목요일에는 더 시원한 6월 PCE 인플레이션 데이터와 예상보다 부드러운 2분기 GDP이 인플레이션에 대한 기대를 강화했습니다…</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -266,7 +266,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE01RGNCSDhnMW1LMlI5VVFJZGVXRHNTZG5LY1ZneGRoVDJUeElHUUdpaVlDeFJMNGFwUU43akE1NlU4WnhqSFFTWGItTUl5aC05ZFVCVl9B?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">헤럴드광장] 굴절된 통화정책과 딜레마에 빠질 한국은행</a>
-<p class="news-desc">[헤럴드광장] 굴절된 통화정책과 딜레마에 빠질 한국은행 헤럴드경제</p>
+<p class="news-desc">2026년 중동전쟁 이후 모든 경제지표가 굴절되었다. 국제유가, 물가, 주가지수, 환율, 경제성장률 등의 경로를 뒤틀어 놓았다. 특히, 물가상승률의 굴절에 주목할 필요가 있다. 2022년 세계적으로 물가상승률이 정점을 기록한 이후로 안정화되는 흐름을 지속하는 구간이었다. 중동전쟁이 발발하자 국제유가가 치솟고, 이는 물가상승률 지표를 뒤틀어 놓았다. 목표 물가 2% 수준을 밑돌던 소비자물가가 급반등했다. 6월 소비자물가는 3.2%까지 치솟았고, 수입 물가는 25.4% 상승하기에 이르렀다. 굴절된 변수는 물가만이 아니다.</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

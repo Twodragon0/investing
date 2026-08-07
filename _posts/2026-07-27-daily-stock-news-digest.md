@@ -114,7 +114,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-27 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE96blE0QXRqanBBRHotMGtmb01CV25YTllhSDY2TlVVcXY4c3RFV2NFSWt4MUNUXzFRZ3pGNXBGYkxxX0VpU0NNZ080b1QxWmpfZ1RINQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">“60만전자·420만닉스 시대 온다”… 전문가들이 꼽은 역대급 매수 기회 ‘이것’</a>
-<p class="news-desc">“60만전자·420만닉스 시대 온다”… 전문가들이 꼽은 역대급 매수 기회 ‘이것’ 매일경제</p>
+<p class="news-desc">최근 국내 반도체 주력사인 삼성전자와 SK하이닉스 주가가 급락하고 있다. 하지만 증권가에서는 “지나치게 과도한 조정이며, 지금이 강력한 저점 매수 기회”라고 입을 모은다. 시장을 누르던 악재가 이미 주가에 충분히 반영된 데다, 인공지능(AI) 인프라 투자와 D램 가격 강세에 힘입어 ‘60만전자·420만닉스’를 향한 구조적 우상향 사이클이 유효하다는 진단이다</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -126,7 +126,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-27 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE9MeEFTSUJUQXNXUV9XZG9sLU5zNzhTc2ZsQlFUUUw1VFNlUlhCZjNPY1BrRVpabVhHX3ZTcDdSMmtrYktiMGtxWkVKVkJQbFU?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">“하루새 2조6000억 던진 외인”…삼전·하닉 7~8% 폭락에도 KB는 “60만·420만원”</a>
-<p class="news-desc">“하루새 2조6000억 던진 외인”…삼전·하닉 7~8% 폭락에도 KB는 “60만·420만원” v.daum.net</p>
+<p class="news-desc">미국의 이란 공습이 장기화하면서 브렌트유 100달러와 미국 국채금리 4.7%가 동시에 증시를 덮쳤다. 삼성전자와 SK하이닉스는 하루 만에 각각 7.6%, 8.3% 급락했고 코스피와 코스닥에서는 매도 사이드카가 발동됐다. 연합뉴스 외국인은 두 종목에서만 2조6000억원 넘게 팔아치웠다. 반면 개인은 4조원 넘게 사들이며 매물을 받아냈다. 급락</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -212,7 +212,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-27 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE1IZlBuS3JWaG56X2hHWWpSRDFTa1NaZnI5RGFpdGxQem8zN00yN1JNamVnV084S3o0blVXYlVtUF81TjNhSmxnMk01eEhDMllhRzlnLUxFTmtpeEhvMmJqNW01YnRkdw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체, 하락세 딛고 본격 반등 나서나…다음주 SK하이닉스·삼성전자 실적 주목 _ 자투리 투자 포인트 - 자투리경제</a>
-<p class="news-desc">반도체, 하락세 딛고 본격 반등 나서나…다음주 SK하이닉스·삼성전자 실적 주목 _ 자투리 투자 포인트 자투리경제</p>
+<p class="news-desc">극심한 변동성을 보이고 있는 국내 증시가 다음 주 FOMC와 메타·마이크로소프트 등 하이퍼스케일러 실적, SK하이닉스 실적 등을 계기로 본격 반등에 나설 지 관심이 모아지고 있다.국내 증시는 지난 20일부터 24일까지 5거래일 연속 코스피 또는 코스닥 시장에서 사이드카가 발동됐다. 올</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

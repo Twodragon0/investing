@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5MeG1TWmFVMFlLMXYzcmRobkduMkMtcG00NXhKeWwxS21OcVg1RTRKSVdtSzI0RVFnUVlQS0RJNDRQejVVdzdjNVItemdhTHdkY0FZUG9qZWRvdkVoMTNTeHpUelVOV0l3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">달러-원 환율 1440원대 하락 - 2news.co.kr</a>
-<p class="news-desc">달러-원 환율 1440원대 하락 2news.co.kr</p>
+<p class="news-desc">달러-원 환율이 달러화 약세와 수출업체들의 월말 달러 매도 물량을 소화하며 하락해 5개월 만에 최저치를 기록했다. 뉴스1에 따르면 29일 서울외환시장 주간 거래</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -188,7 +188,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxNRGFDU3BQSFhZa21ISHY0Wm92OVIxTXZSTmRUVWJNdkdmTnVRdEd0dHpSMWRyTVFxOURFZDhfTTFYMkhOdERpYzVyZUFuMWdza2NPLUhWQlY2VXM4OEkycXR1MHdJWWlEZUxNNWFob2RsSkV6STFBRUhEWUpucEVfbkFKNTJzZ3RNdkVhZWhzVEwzRDBBdHh4UTNxbkw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">주식 시장 투자자들은 트럼프 대통령의 경제에 대한 나쁜 소식을 접했습니다. S&P 500 및 나스닥의 큰 움직임을 암시합니다.</a>
-<p class="news-desc">일시적인 문제가 발생했습니다. 이 페이지의 시장 데이터는 현재 지연되었습니다.</p>
+<p class="news-desc">TheS&amp;P 500(SNPINDEX: ^GSPC) andNasdaq Composite(NASDAQINDEX: ^IXIC) are up 8% and 6%, respectively, year to date. But whether the stock market can maintain its momentum is questionable.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -216,7 +216,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFAzSXdBMW54SUF0NXA2SVJXOXlwcnk0dmhGbDNYSWx1eXZvaHpzVnFDTTZKRjZpdkZYbW5ncnlocU93bXo4YmJ4aDJLaS15NlRMbnFzUk5jTXpsSUNpQ3c?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">"삼전닉스 오늘 또 왜 이래요?" 반도체에 대한 끝없는 '의심들' - YTN</a>
-<p class="news-desc">"삼전닉스 오늘 또 왜 이래요?" 반도체에 대한 끝없는 '의심들' YTN</p>
+<p class="news-desc">■ 방송 : YTN 라디오 FM 94.5 (09:00~10:00)■ 진행 : 염승환 LS증권 이사 스페셜 진행■ 방송일 : 2026년 7월 28일 화요일■ 대담 : 윤원태 SK증권 자산전략부서장, 이지은 ...</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -228,7 +228,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE1yemFGMkVscnVrRWZUREZ3aVdWcEtPOGVvZ0JHQkFpX0Z2UXpWN3FYcEFQZWdxRDk1VnBnN0ktdHZGLTRWc2ZpV2N4OGN6cXJxUEFPOFpuRXlqNU9tMkdlcFd6d1JMcnJUREg4TURB?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">중국발 반도체 상장.삼성전자·SK하이닉스 주가 '급락'</a>
-<p class="news-desc">중국발 반도체 상장.삼성전자·SK하이닉스 주가 '급락' gukjenews.com</p>
+<p class="news-desc">SK하이닉스와 삼성전자 주가가 또 다시 급락했다.28일 오전 9시 13분 기준 삼성전자는 7.38% 하락한 23만 5250원에, SK하이닉스는 9.69% 하락한 164만 원에 거래 중이다.중국 메모리 반도체 업체 창신메모리(CXMT)의 증시 상장이 흥행한 데 이어 중국이 반도체 제조 핵심 장비인 심자외선(DUV) 노광장비 개발에 착수했다는 소식이 전해지면서 투자 심리를 위축시켰다.중국 CXMT가 국내 기업은 물론 마이크론 등을 바짝 쫓아올 것이라는 불안감이 작용한 것으로 보인다.이에 미국 반도체주도 하락 마감했다. 밴에크 반도체 E</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -240,7 +240,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1LeVNlMlY2a3FmdDVxbS1RYWFWWHQzcEhZcmYwTVVCTnMyQ01za0FJdzhzUk52QlRpQlhLa2tmeVFBVkpDaXRYUEE3ZmZZaWJpX08zT2JZS0FBbDVlZkYwYk9UaVI1UWY2?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체 사상 최대 실적발표에 주가는 곤두박질…"공포가 지배하는 장세"</a>
-<p class="news-desc">반도체 사상 최대 실적발표에 주가는 곤두박질…"공포가 지배하는 장세" ebn.co.kr</p>
+<p class="news-desc">삼성전자와 SK하이닉스 등 국내 대표 반도체 기업들이 실적 규모와 무관한 주가 흐름을 보이면서, 글로벌 반도체 산업을 향한 투심이 꺾인 것이 아니냐는 우려가 나온</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -278,7 +278,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxQdEdSSXJkY3hnaEg2a0l3MXdLQlFXMUY1YndTWk52cGRVQ1gtSW81MmtCaHEybTRLWFl2ZGZ4SlhmRE1oSUdaQWNQRm5YVmhnN3B5bGp0X01WVUhnVmR1clhCVUlBRTg0cjN3WTI2WUViS2tJdkROeFJpUlB5cndRWnQxTkk?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">홍콩은 미국 IPO 시장을 모방하지만 실제 경쟁자는 중국입니다 - Financial Times</a>
-<p class="news-desc">시장, 경제, 정치 최신 소식에 대한 Financial Times의 뉴스, 분석 및 의견</p>
+<p class="news-desc">수요일 뉴스레터는 최고의 칼럼과 우리가 읽고 있는 내용을 제공합니다. 국제 전문가 팀이 매일 전달하는 Sharp 재무 의견 기술, 에너지, 금융, 투자 및 M&amp;A에 대한 직접적인 분석 기업을 움직이는 요소에 대한 재미있고 접근 가능한 통찰력</p>
 <span class="source-tag" data-source-type="default">FT via Google</span>
 </div>
 </div>

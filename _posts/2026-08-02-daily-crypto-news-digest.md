@@ -117,7 +117,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-02 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE95YWxjRmN3NUoyUjhmM0ZxZXRsd1BBTUZCejFfME5xT3FnejJuZ05XUjVUM3AzcF9UUTZOdVA2MUVfb2pNWWFLWXRHYktaTHlXdFU0?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피 급락에 암호화폐 몰리나…업비트 원화-테더 거래량 600%↑</a>
-<p class="news-desc">코스피 급락에 암호화폐 몰리나…업비트 원화-테더 거래량 600%↑ 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : [사진: 디지털투데이][디지털투데이 추현우 기자] 국내 암호화폐 거래가 한국 증시 급락과 맞물려 다시 크게 늘었다. 30일(현지시간) 블록체인 매체 코인텔레그래프에 따르면 업비트의 원화-테더 거래량은 29일 2000억원에 가까운 1억4000만USDT로</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -169,7 +169,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-02 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTFA0am5OdDRIN0RLWlYySmtuSFRjU2xNZUkwS053VEMyMHVFLVRQU1pId0pSRG9SWXBqZm5rNktUZE53V0oxQk5aQnJQMlhsNFRIS0E?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코인베이스, 2분기 매출 12억 달러.시장점유율 10.3% 사상최고 - 매일경제 마켓</a>
-<p class="news-desc">코인베이스, 2분기 매출 12억 달러.시장점유율 10.3% 사상최고 매일경제 마켓</p>
+<p class="news-desc">💡 AI 분석매출과 수익성이 전년 대비 감소했지만, 시장점유율이 사상 최고치를 기록하며 경쟁력 강화를 입증했습니다. USDC 보유액 증가, 예측시장과 베이스 블록체인의 급성장, 비용 절감 노력은 긍정적이나, 거래량 감소와 손실 지속은 단기 불확실성을 시사해요. 3분기 가이던스가 보수적이고 2027년 이후 실적 반등이 기대되지만, 암호화폐 시장 회복 여부에 따라 변동성이 클 것으로 보입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -181,7 +181,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-02 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE1jYnFzaVhnTjU4bFNwUTVBcW9hcEV6SkFHUlBCd3NCMUtyQzU4YlhQeC1TMzYtcnU3VF9BN0xGaGZPcy1nVVc1R3lldWRxM0NscUYybzA0dFjSAV5BVV95cUxQWnRXZG1UVGxWODU0RnZ4SDBHaERYc1JGZGRLR2VBVWtsRW0tcG94UnJSWnpwbDlyYkF5NFlpZndBYXJXUlNvNkczTm9ubDRKOVlsb1p6X3ZvZTIxNXVR?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">청산 2억3800만달러…트럼프 이란 발언 여파 - tokenpost.kr</a>
-<p class="news-desc">청산 2억3800만달러…트럼프 이란 발언 여파 tokenpost.kr</p>
+<p class="news-desc">비트코인(BTC)을 포함한 암호화폐 파생시장에서 약 2억3800만 달러(약 3300억원) 규모 청산이 발생했다. 트럼프 미국 대통령의 이란 관련 강경 발언 이후 레버리지 위험을 줄이려는 움직임이 롱 포지션에 집중된 것으로...</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

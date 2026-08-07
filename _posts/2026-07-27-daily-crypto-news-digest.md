@@ -295,7 +295,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-27 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE1SU2ZFSl9NOFJDRlNIejBrdlg1ZEE4dWtsZERjX3EzUzNkN0pvdTkzX3BtQ0xDdnZ6a25DWGFnRnpwTTVvMmdCdTY5X20wU1ZuMGh5aGxGTGZlZzk2VmFUUUZDaTNubE9rc0E?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">유가·금리·입법 '삼중악재'에 코인 반등 주춤…국내는 거래절벽</a>
-<p class="news-desc">유가·금리·입법 '삼중악재'에 코인 반등 주춤…국내는 거래절벽 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 경제 - 뉴스 : 비트코인 모형. 로이터=연합뉴스 비트코인이 이달 ‘잠깐 반등’ 뒤 다시 숨 고르기에 들어갔다. 국제유가 상승과 미국의 금리 인상 우려, 암호화폐 입법 지연이 겹치며 투자심리가 또 얼어붙었다. 시장에선 과거와 차원이 다른 조정 국면이라는 분석도 나온다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

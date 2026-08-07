@@ -86,7 +86,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE8zaVFTSEgtM2FBRFpSUms5cFl3dGdLZ3dwSVhLUXBSYl93bUdwRnBEbFVQc2lfZGwxQ0draTR6Nzg5X2NMME42S2NvVWU5Z0J3YTNjYk5GeXV0Q05J?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코인 시황] 美·日 공동 환율 개입에도 비트코인 6.4만달러 근방 거래…'엔 캐리 트레이드' 우려는 여전 - 뉴스핌</a>
-<p class="news-desc">[코인 시황] 美·日 공동 환율 개입에도 비트코인 6.4만달러 근방 거래…'엔 캐리 트레이드' 우려는 여전 뉴스핌</p>
+<p class="news-desc">[서울=뉴스핌] 고인원 기자= 비트코인 가격이 미국과 일본의 공동 외환시장 개입에도 4일 6만4000달러 근방에서 비교적 안정적인 흐름을 이어갔다. 다만 시장에서는 엔 캐리 트레이드(저금리 엔화 차입 투자) 청산 가능성이 다시 부각되면서 암호화폐 시장의 잠재적</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -169,7 +169,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE5fQmNFekNPMHNaRUdQRWdERl9mZ1p5WXdCbWtFTGFiUWY0QTFUcVF0ZG9Ia1NSa216Sy1CSEdnTXZmUEdrM3d2NktDVjc5X29fOEFuY1hTQWx6UWo4cVJiVFFGT2VFVHJ4cmU5YUln?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">'연일 하락' 비트코인 9,000만 원선 유지… 메타다오 25% 급등</a>
-<p class="news-desc">'연일 하락' 비트코인 9,000만 원선 유지… 메타다오 25% 급등 gukjenews.com</p>
+<p class="news-desc">가상자산 시장에서 테더와 비트코인이 거래대금 상위권을 기록한 가운데, 메타다오가 20% 넘게 급등하며 강세를 보이고 있다.4일 가상자산 거래소 업비트 시세에 따르면 테더(USDT)는 전일 대비 0.07% 오른 1,425원에 거래되며 거래대금 1,046억 원을 기록하며 가장 많은 거래량을 나타내고 있따.가상자산 대장주인 비트코인(BTC)은 전일 대비 0.32% 상승한 9,067만 1,000원에 거래를 이어갔으며, 거래대금은 690억 원으로 집계됐다.주요 알트코인 중에서는 메타다오(META2)의 상승세가 두드러졌다. 메타다오는 전일 대</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -181,7 +181,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBTRlVGZlFPaDVMVks4TkhLdjFIZVd5LVE3ZGF2dGdHaTRSXzRtYXFfTGhxYU15UTREbzRmMDN4VXFNeFRWQldncDhoV1VIM1dhRldWMmtabWZ2Q1p6cGNyZTdiSnVnWnN1NFRGZWNGU2Z2eFk?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">번스타인 "클래리티법 무산 시 암호화폐 시장 추가 하락 불가피"</a>
-<p class="news-desc">번스타인 "클래리티법 무산 시 암호화폐 시장 추가 하락 불가피" 디지털투데이</p>
+<p class="news-desc">[디지털투데이 홍진주 기자] 미국 상원이 클래리티법을 처리하지 못할 경우 비트코인과 주요 암호화폐 밸류에이션이 한 차례 더 낮아질 수 있다는 전망이 나왔다.3일(현지시간) 블록체인 매체 코인텔레그래프에 따르면, 자산운용사 번스타인은 상원이 이번 주 말 여름 휴회에 들어갈 예정인 만큼 디지털 자산 시장 구조 법안인 클래리티법의 통과 가능성이 약해지고 있다고 봤다.번스타인은 상원이 법안을 통과시키지 못하면 시장에 즉각적인 부정적 반응이 나올 수 있다고 진단했다. 보고서는 이를 업계의 '무릎반사적 반응'이라고 표현하며, 비트코인과 암호화</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -193,7 +193,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE50YkRsbHBTVm5kc3BHbjN6dU91VEhNU3lfSm9ielJJYnVxYm91UnJCaFdrUFJqeGk1WkJWN1J0cU4zOWJNSVZ5bHpTMVFYQVJiMk94M2NWRkhDZlViVTEzaQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">美·日, 엔화 약세 공동방어…이번주 비트코인 흔들 핵심 변수 5가지</a>
-<p class="news-desc">美·日, 엔화 약세 공동방어…이번주 비트코인 흔들 핵심 변수 5가지 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : 이번 흐름은 비트코인 가격이 암호화폐 자체 이슈와 거시 변수에 동시에 반응하고 있음을 보여준다 [사진: 셔터스톡][디지털투데이 홍진주 기자]비트코인이 8월 첫 주 6만3000달러선에서 방향성을 탐색하는 가운데, 글로벌 거시 환경과 암호화폐 내부 리스크</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -290,7 +290,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다</a>
-<p class="news-desc">오늘 암호화폐 업계에서 무슨 일이 일어났는지 알고 싶으십니까? 다음은 비트코인 가격, 블록체인, 디파이, Web3 및 암호화폐 규제에 영향을 미치는 일일 동향 및 이벤트에 대한 최신 뉴스입니다.</p>
+<p class="news-desc">Hyperliquid은(는) 지난 2년 동안 가치가 급등했지만, 언제까지 계속 그럴 수 있습니까?</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

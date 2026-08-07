@@ -138,7 +138,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-31 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiZ0FVX3lxTE9KMXBtaXRicElfZ2hpdHBDTXpuSmZjV0Jpc0w2ZGZ0dml4VDE5Q05qMWJFTXNOWHFSZDdTMm1TcU80T2dESk1pc0Z1dFp1VWRodGZpMEdHaXplT0thWVpHZ1RSZi1VeTg?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">2026년 7월 30일 비트코인의 현재 가격</a>
-<p class="news-desc">비트코인은 정부, 은행 등에 의해 통제되는 대신 P2P 네트워크에서 실행됩니다. 이를 통해 중개자 없이 다른 사람에게 직접 가치를 보낼 수 있습니다.</p>
+<p class="news-desc">2026년 7월 30일 동부 표준시 오전 6시 45분에 비트코인(BTC) 1개의 현재 환율은 $64,492.91입니다. 이는 어제 아침 수준보다 $129.25 높고 1년 전 수준보다 약 $53,322 낮습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -190,7 +190,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-31 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMid0FVX3lxTE5Ld1ZkVWVlOG5Kc09SZlktTEZHQTFOMFpudXBtaWdnc0ZUTENOeXhmaWp6X295YS1CTVJISk5OMFlJdXNudllXQ1hvMzNjT0MzZWNoTFo2LU1fY1pmVHFqRVI3MG1tb2t5SXdBWTdnV2ZKVVhkYlhJ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Athena 비트코인, 정부 관계 그룹과의 로비 활동 종료</a>
-<p class="news-desc">Athena 비트코인은 2026년 2분기에 Government Relations Group LLC와의 로비 활동을 종료했습니다. 최신 암호화폐 규제 업데이트를 읽어보세요.</p>
+<p class="news-desc">Athena Bitcoin terminated its lobbying engagement with Government Relations Group LLC in Q2 2026. Read the latest crypto regulatory updates.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

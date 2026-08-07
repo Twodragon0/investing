@@ -126,7 +126,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiZ0FVX3lxTFBlNjJCOGdjTFRwX2ZVcWR2dWxmOUxkaWRYSHFtNndwM2ZMeU5wbkQ4dEdOOXluQ09KYkkxNE9lTHhmQmR0cVJqX0oxbnBMUkVBeW9ETkNuNnkzVWFPRlhSakY4Wl9UaUU?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">2026년 7월 27일 비트코인의 현재 가격</a>
-<p class="news-desc">비트코인은 정부, 은행 등에 의해 통제되는 대신 P2P 네트워크에서 실행됩니다. 이를 통해 중개자 없이 다른 사람에게 직접 가치를 보낼 수 있습니다.</p>
+<p class="news-desc">2026년 7월 27일 동부 표준시 오전 7시에 비트코인(1 BTC)의 가격은 $65,358.92입니다. 이는 어제 오전보다 $901.27 증가한 수치이며, 1년 전과 비교하면 약 $54,090 감소한 수치입니다. 비트코인은 최초의 암호화폐이며 여전히 시장에서 가장 인기 있는 암호화폐입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -193,7 +193,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1iQ05JLTBYU2N4czR1MS15aU1FdmYySldWX1ZiQ2RGZGtiVWlSdnhJQzFKWDRYWUl0S2FkQXZ1U180bGZNQXFQaWw3QUZtdDN2RkFVWEdudVd0MEtCbjdPNmZwR2ItMDg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">2026년 7월 29일 비트코인의 현재 가격 - Fortune</a>
-<p class="news-desc">이 백만장자 투자자가 수십억 달러 규모의 아이디어를 발견한 방법 | 텀 시트 2026년 6월 24일 투자자 WHO SpaceX, OpenAI 및 Anthropic에 베팅하기 전에 | 텀 시트 2026년 6월 11일 투자 은행가들은 자신을 대체하기 위해 $2B AI을 구축했습니다 | 텀 시트 2026년 5월 28일 AI 골드 러시에 대한 진실에 대한 이 크리에이터 투자자 | 학기 시트 2026년 5월 13일 Palo Alto 옷장에서 10억 달러 수익까지: Gusto가 중소기업 소프트웨어를 Decrypt한 방법</p>
+<p class="news-desc">2026년 7월 29일 동부 표준시 오전 5시 15분에 비트코인(BTC) 하나의 가격은 $64,363.66입니다. 이는 어제 오전보다 $955.25 오른 것이며 작년 이맘때보다 약 $53,580 낮은 수준입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -299,7 +299,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxQSzZXRk1vSWlCTUlyc0NiQjJVbVFHV1BhU2RpTWRBbWVac1JaOGNtY0hQaVJCS0NVSjc0MFM2Q1I1TGhKRjNyenlCcnozdWRsVEpMdXFSZG5DWUVXckkwcFktVFVlS29QOF9LS09MMHNVZUxHWUNTVzJ6NGJsdVdzekJmNHhVWDBVR0RSTmptYVRQSHdt?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코인베이스 CEO 암호화폐 회사의 AI 피벗을 비판합니다.</a>
-<p class="news-desc">코인베이스 CEO 암호화폐 회사의 AI 피벗을 비판합니다. PYMNTS.com</p>
+<p class="news-desc">코인베이스의 CEO은 암호화폐 회사가 WHO 블록체인 기술에서 인공 지능(AI)으로 초점을 전환한다고 비난했습니다. “'당신이 암호화폐 업계에 있다면,</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>

@@ -184,7 +184,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-03 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE92b2lGdEh6eDNfcjlxMlB3MDZoQ09HVmJJUHB0MGMtQ2NDMFVjbElCRjJCeXUxRmVEMjNZMVI0RmdEX2VaTWFNTkh1dnh0a1pXTldLejB2VnhMaDJoOFl3dg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인, 7월 반등 이어갈까…'8월의 저주' 온다</a>
-<p class="news-desc">비트코인, 7월 반등 이어갈까…'8월의 저주' 온다 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : 7월 상승 랠리에 성공한 비트코인이 8월의 저주를 물리칠 것인가에 시장의 시선이 모아진다 [사진: Reve AI][디지털투데이 추현우 기자] 비트코인(BTC)이 7월 반등에 성공한 뒤 변동성이 큰 것으로 알려진 8월 장세에 진입했다. 1일(현지시간)</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -196,7 +196,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-03 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE9lR0JNM2l5WDVBUkZLSzZUdmdoSnh1VXpTRUpIOU9EQXlIT3ZGdjZjaGhkaDJyLWpQa3B0OXpFUDFrTWl1Nk9uMVRQXzdCcXA1?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">세일러 "클래리티법 지지…비트코인(BTC)은 법안과 무관하게 성공할 것" - 블루밍비트</a>
-<p class="news-desc">세일러 "클래리티법 지지…비트코인(BTC)은 법안과 무관하게 성공할 것" 블루밍비트</p>
+<p class="news-desc">마이클 세일러(Michael Saylor) 스트래티지(MSTR) 설립자가 미국 가상자산(암호화폐) 시장 구조 법안인 클래리티법(CLARITY Act)에 대한 지지를 표명했다. 세일러는 31일(현지시간) X(구 트위터)를 통해 "명확하고 지속 가능한 규칙을 구축하고, 재</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

@@ -138,7 +138,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-29 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiZ0FVX3lxTFBlNjJCOGdjTFRwX2ZVcWR2dWxmOUxkaWRYSHFtNndwM2ZMeU5wbkQ4dEdOOXluQ09KYkkxNE9lTHhmQmR0cVJqX0oxbnBMUkVBeW9ETkNuNnkzVWFPRlhSakY4Wl9UaUU?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">2026년 7월 27일 비트코인의 현재 가격</a>
-<p class="news-desc">비트코인은 정부, 은행 등에 의해 통제되는 대신 P2P 네트워크에서 실행됩니다. 이를 통해 중개자 없이 다른 사람에게 직접 가치를 보낼 수 있습니다.</p>
+<p class="news-desc">2026년 7월 27일 동부 표준시 오전 7시에 비트코인(1 BTC)의 가격은 $65,358.92입니다. 이는 어제 오전보다 $901.27 증가한 수치이며, 1년 전과 비교하면 약 $54,090 감소한 수치입니다. 비트코인은 최초의 암호화폐이며 여전히 시장에서 가장 인기 있는 암호화폐입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -276,7 +276,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-29 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBlNjJCOGdjTFRwX2ZVcWR2dWxmOUxkaWRYSHFtNndwM2ZMeU5wbkQ4dEdOOXluQ09KYkkxNE9lTHhmQmR0cVJqX0oxbnBMUkVBeW9ETkNuNnkzVWFPRlhSakY4Wl9UaUU?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">2026년 7월 27일 비트코인의 현재 가격 - Fortune</a>
-<p class="news-desc">이 백만장자 투자자가 수십억 달러 규모의 아이디어를 발견한 방법 | 텀 시트 2026년 6월 24일 투자자 WHO SpaceX, OpenAI 및 Anthropic에 베팅하기 전에 | 텀 시트 2026년 6월 11일 투자 은행가들은 자신을 대체하기 위해 $2B AI을 구축했습니다 | 텀 시트 2026년 5월 28일 AI 골드 러시에 대한 진실에 대한 이 크리에이터 투자자 | 학기 시트 2026년 5월 13일 Palo Alto 옷장에서 10억 달러 수익까지: Gusto가 중소기업 소프트웨어를 Decrypt한 방법</p>
+<p class="news-desc">2026년 7월 27일 동부 표준시 오전 7시에 비트코인(1 BTC)의 가격은 $65,358.92입니다. 이는 어제 오전보다 $901.27 증가한 수치이며, 1년 전과 비교하면 약 $54,090 감소한 수치입니다. 비트코인은 최초의 암호화폐이며 여전히 시장에서 가장 인기 있는 암호화폐입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -288,7 +288,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-29 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcU9JQUxXUGVRN0NUQnhYcl80LXUzNy16SUxMTkNxV0lucjlUblFtYmIzQXlLMUdvTUc0LVhad0k3a2lqc2VaZE1mM0ZUYnpJLW9lc0N3ckJVV29VXzdPeWU1WXVFWW04NXg4d0F4UnhCMEZtLUlFYmJDVnFpd0RBSXpCMkRfMTdU?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">엔비디아 급락에 기꺾인 암호화폐… 유가 하락 호재 덮은 기술주 공포</a>
-<p class="news-desc">엔비디아 급락에 기꺾인 암호화폐… 유가 하락 호재 덮은 기술주 공포 글로벌이코노믹</p>
+<p class="news-desc">미국의 대(對)이란 공습 중단 소식에 국제유가가 크게 떨어졌음에도 불구하고, 뉴욕증시 반도체주의 동반 폭락이 위험자산 전반의 투자 심리를 급냉시켰다. 기술주와의 동조화 현상이 강해진 디지털 자산 시장 역시 약세 흐름을 면치 못했다. 유가 폭락 호재도 상쇄한 기술주 충격… 비트코인</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
