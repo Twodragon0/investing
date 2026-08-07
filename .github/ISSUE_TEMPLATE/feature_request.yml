@@ -1,0 +1,22 @@
+name: 기능 제안
+description: 새 데이터 소스, 수집기, 사이트 기능
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 어떤 문제를 푸나요
+      description: 해결책이 아니라 문제부터 적어 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 제안
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: 데이터 소스 (새 수집기라면)
+      description: API/RSS 엔드포인트, 인증 필요 여부, 레이트리밋, 이용약관 제약
