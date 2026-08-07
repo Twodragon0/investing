@@ -202,7 +202,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-07 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9aMkJ3eGlpbUpxaFFsc0tqTkhVQTVZM0toMFJTRWVWaVZXUlVJMTBpUVNCejVDT3JFYW1fWVM4bHJwVHFReFRfQjN1TTlISDdjODVYdlJZWDg2c25TSXN0SFRFV2dndi1US1RvMV9faGHSAXRBVV95cUxOSHlJR002dnFmS3hkOEd3UHptOG51Wm1ROUdDWkpZTzJpSkU3VHlaekRCajdCWmNWcG9zeWsycC05WDZ6OHhMcXZ1OFNlTkUxa0FhamVkNGxYTnB6dkZ1ZnNIUUxpSHFSczZhMmNWUkRjNW1UaA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체 훈풍에 코스피 3.76% 급등…코스닥도 4일간 24% 상승 - 산경투데이</a>
-<p class="news-desc">[산경투데이 = 한승수 기자]국내 증시가 미국 반도체주의 강세와 외국인 자금 유입에 힘입어 급락 충격을 빠르게 만회하고 있다.반도체 대형주뿐 아니라 코스닥과 중소형주로 매수세가 확산되면서 시장 전반의 회복 폭도 넓어지는 모습이다.5일 한국거래소에 따르면 코스피는 전 거래일보다 239.</p>
+<p class="news-desc">[산경투데이 = 한승수 기자] 국내 증시가 미국 반도체주의 강세와 외국인 자금 유입에 힘입어 급락 충격을 빠르게 만회하고 있다.반도체 대형주뿐 아니라 코스닥과 중소형주로 매수세가 확산되면서 시장 전반의 회복 폭도 넓어지는 모습이다.5일 한국거래소에 따르면 코스피는 전 거래일보다 239.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
