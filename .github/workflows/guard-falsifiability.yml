@@ -4,34 +4,23 @@ name: Guard Falsifiability
 # 가드 자체는 code-quality 스위트에서 매 PR 돌지만, "통과한다"만으로는 가드가
 # 실제로 fixture 부재를 잡아내는지 알 수 없다. 이 잡은 fixture 를 하나씩 실제로
 # 비활성화해 대응 가드가 red 가 되는지 확인한다. 규약: docs/test-isolation.md
+# `paths:` 필터가 없는 것은 의도다. 두 가지 이유:
+#
+# 1. **필수 체크 적격성.** 워크플로우 수준 `paths:` 가 걸리면 그 경로를 건드리지
+#    않은 PR 에서 워크플로우가 아예 돌지 않고, 체크가 생성되지 않는다. 그 체크를
+#    branch ruleset 의 required 로 지정하면 그런 PR 은 **영구 대기**한다. 반대로
+#    워크플로우는 항상 돌고 잡만 `if:` 로 skip 하면 체크는 skipped 로 나타나며,
+#    GitHub 은 skipped required check 를 통과로 취급한다.
+# 2. **목록 드리프트.** 손으로 유지한 19개 경로 목록은 이미 7개를 놓치고 있었다 —
+#    `tests/_tree_write_guard.py`(STATIC_CASES 5건의 변형 대상), `common/dedup.py`,
+#    `common/image_rejection_metrics.py`, `fix_defi_tvl_history.py`,
+#    `check_description_quality.py`, `test_tree_write_guard.py`,
+#    `test_encoding_guard.py`. 즉 그 파일들을 편집해도 하네스가 돌지 않았다.
+#    이제 `--list-targets` 로 케이스 정의에서 **파생**하므로 드리프트가 구조적으로
+#    불가능하다.
 on:
   pull_request:
     branches: [main]
-    paths:
-      # 격리 fixture 가드
-      - 'tests/conftest.py'
-      - 'tests/test_suite_isolation_guard.py'
-      # 정적/설정 가드 — 가드 본체와 그 가드가 감시하는 설정 양쪽
-      - 'tests/test_state_path_anchoring.py'
-      - 'tests/test_hermetic_test_writes_guard.py'
-      - 'tests/test_coverage_floor_guard.py'
-      - 'pyproject.toml'
-      - '.github/workflows/code-quality.yml'
-      # 공급망/시크릿 가드 — 가드 본체와 감시 대상 설정 양쪽
-      - 'tests/test_workflow_action_pinning_guard.py'
-      - 'tests/test_workflow_action_version_label_guard.py'
-      - '.github/workflows/action-pin-verify.yml'
-      - 'tests/test_secret_scan_gate_guard.py'
-      - 'tests/test_workflow_permission_gate_guard.py'
-      # 구분자 정규식 가드 — 가드 본체와 감시 대상 소스
-      - 'tests/test_delimiter_regex_guard.py'
-      - 'scripts/common/summarizer.py'
-      - '.gitleaks.toml'
-      - '.github/workflows/security-scan.yml'
-      - '.github/workflows/lighthouse-ci.yml'
-      # 하네스 자신
-      - 'scripts/tools/guard_falsifiability.py'
-      - '.github/workflows/guard-falsifiability.yml'
   schedule:
     # 매주 월요일 05:00 UTC (KST 14:00). code-quality 주간 잡(일요일 04:00 UTC)과
     # 겹치지 않게 배치.
@@ -40,15 +29,58 @@ on:
 
 permissions:
   contents: read
+  # PR 의 변경 파일 목록 조회용 (fetch-depth: 0 체크아웃 회피).
+  pull-requests: read
 
 concurrency:
   group: guard-falsifiability-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  falsifiability:
+  changes:
+    name: Detect falsifiability-relevant changes
     runs-on: ubuntu-latest
-    # 케이스당 pytest 를 2회(patched/control) 띄우므로 55종 = 110회 프로세스 기동.
+    timeout-minutes: 5
+    outputs:
+      relevant: ${{ steps.detect.outputs.relevant }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
+        with:
+          fetch-depth: 1
+
+      - name: Detect
+        id: detect
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+          # schedule / workflow_dispatch: 판정 대상이 없으므로 전수 실행.
+          if [ -z "${PR_NUMBER}" ]; then
+            echo "relevant=true" >> "$GITHUB_OUTPUT"
+            echo "PR 컨텍스트 아님 → 전수 실행"
+            exit 0
+          fi
+          # 트리거 경로는 STATIC_CASES 에서 파생된다 — 손으로 유지하지 않는다.
+          python3 scripts/tools/guard_falsifiability.py --list-targets > targets.txt
+          gh api --paginate "repos/${GITHUB_REPOSITORY}/pulls/${PR_NUMBER}/files" \
+            --jq '.[].filename' > changed.txt
+          # -x: 부분일치 금지(경로 전체가 일치해야 한다), -F: 정규식 아님.
+          matched=$(grep -Fxf targets.txt changed.txt || true)
+          if [ -n "${matched}" ]; then
+            echo "relevant=true" >> "$GITHUB_OUTPUT"
+            echo "해당 변경:"; echo "${matched}"
+          else
+            echo "relevant=false" >> "$GITHUB_OUTPUT"
+            echo "falsifiability 관련 파일 변경 없음 → skip"
+          fi
+
+  falsifiability:
+    needs: changes
+    if: needs.changes.outputs.relevant == 'true'
+    runs-on: ubuntu-latest
+    # 케이스당 pytest 를 2회(patched/control) 띄우므로 59종 = 118회 프로세스 기동.
     # 가드 테스트 자체는 각 1초 미만이고 대부분이 인터프리터 시작 비용이다.
     #
     # 샤딩: 케이스가 **실제 레포 파일**을 변형했다 복원하므로 한 체크아웃 안에서
@@ -58,7 +90,7 @@ jobs:
     # 가드 하나가 검증되지 않은 채 CI 가 그린인 상태를 만든다.
     #
     # 실측 추이: 11케이스 1m44s -> 37케이스 3m49s -> 47케이스 4m09s (약 5s/케이스).
-    # 8샤드면 55케이스 기준 샤드당 7케이스 안팎으로 ~1분.
+    # 8샤드면 59케이스 기준 샤드당 7~8케이스로 ~1분.
     strategy:
       fail-fast: false
       matrix:
@@ -101,3 +133,52 @@ jobs:
             git status --porcelain
             exit 1
           fi
+
+  # 집계(aggregator) 잡 — 이 워크플로우에서 **required status check 로 지정할 대상**.
+  #
+  # 왜 샤드 8개를 직접 required 로 걸지 않는가: 체크 이름이
+  # `falsifiability (3/8)` 처럼 매트릭스 크기를 포함한다. 샤드 수를 바꾸면 등록된
+  # required 컨텍스트가 존재하지 않는 이름이 되어 모든 PR 이 영구 대기한다.
+  # 이 잡의 이름은 고정이므로 그 결합이 없다.
+  #
+  # `if: always()` 가 핵심이다. 이것이 없으면 upstream 이 skip 될 때 이 잡도
+  # skip 되는 게 아니라 아예 실행되지 않아, 결국 required 체크 미생성 문제로
+  # 되돌아간다.
+  #
+  # 판정: skipped 는 통과다(관련 변경이 없어 돌 필요가 없었다는 뜻). failure 와
+  # cancelled 만 실패로 본다 — `success` 만 통과로 두면 skip 경로가 전부 red 가 된다.
+  gate:
+    name: Falsifiability gate
+    if: always()
+    needs: [changes, falsifiability]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Evaluate upstream results
+        env:
+          CHANGES_RESULT: ${{ needs.changes.result }}
+          FALSIFIABILITY_RESULT: ${{ needs.falsifiability.result }}
+        run: |
+          set -euo pipefail
+          echo "changes=${CHANGES_RESULT} falsifiability=${FALSIFIABILITY_RESULT}"
+          # 탐지 잡이 실패하면 "관련 변경 없음" 을 신뢰할 수 없다 — fail closed.
+          if [ "${CHANGES_RESULT}" != "success" ]; then
+            echo "::error::변경 탐지 잡이 ${CHANGES_RESULT} — 하네스 실행 여부를 판정할 수 없다"
+            exit 1
+          fi
+          case "${FALSIFIABILITY_RESULT}" in
+            failure|cancelled)
+              echo "::error::falsifiability 하네스가 ${FALSIFIABILITY_RESULT}"
+              exit 1
+              ;;
+            skipped)
+              echo "관련 변경 없음 — 하네스 skip (통과)"
+              ;;
+            success)
+              echo "하네스 통과"
+              ;;
+            *)
+              echo "::error::예상하지 못한 결과 '${FALSIFIABILITY_RESULT}'"
+              exit 1
+              ;;
+          esac

@@ -464,6 +464,41 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "?usez:",
         "tests/test_workflow_action_version_label_guard.py::test_pin_count_is_plausible",
     ),
+    # ---------------------------------------------------------------------
+    # Part 7 (2026-08-07): required status check 집계(aggregator) 층. 룰셋의
+    # required check 는 이름으로 매칭되므로, 경로 필터가 걸린 워크플로우의 체크를
+    # required 로 걸면 그 경로를 건드리지 않은 PR 이 영구 대기한다. 그래서 필터를
+    # 걷고 잡을 `if:` 로 게이팅하며 항상 도는 집계 잡을 둔다 — 그 집계 잡이
+    # 조용히 무력화되는 세 경로(needs 누락, always() 제거, 필터 재도입)를 검증한다.
+    # ---------------------------------------------------------------------
+    StaticCase(
+        "집계 잡 needs 축소 (falsifiability 가 게이트 밖으로)",
+        ".github/workflows/guard-falsifiability.yml",
+        "    needs: [changes, falsifiability]",
+        "    needs: [changes]",
+        "tests/test_required_check_aggregator_guard.py::test_aggregator_needs_every_other_job[guard-falsifiability.yml]",
+    ),
+    StaticCase(
+        "집계 잡 if: always() 제거 (upstream skip 시 체크 미생성)",
+        ".github/workflows/guard-falsifiability.yml",
+        "    name: Falsifiability gate\n    if: always()\n",
+        "    name: Falsifiability gate\n",
+        "tests/test_required_check_aggregator_guard.py::test_aggregator_runs_unconditionally[guard-falsifiability.yml]",
+    ),
+    StaticCase(
+        "PR 트리거에 paths 필터 재도입 (required check 영구 대기)",
+        ".github/workflows/guard-falsifiability.yml",
+        "  pull_request:\n    branches: [main]\n",
+        "  pull_request:\n    branches: [main]\n    paths:\n      - 'tests/conftest.py'\n",
+        "tests/test_required_check_aggregator_guard.py::test_aggregated_workflow_has_no_pull_request_path_filter[guard-falsifiability.yml]",
+    ),
+    StaticCase(
+        "잡 id 스캐너 완화 (중첩 키를 잡으로 오인)",
+        "tests/test_required_check_aggregator_guard.py",
+        r'_JOB_ID_RE = re.compile(r"^  (?P<job>[A-Za-z_][A-Za-z0-9_-]*):\s*$", re.M)',
+        r'_JOB_ID_RE = re.compile(r"^\s*(?P<job>[A-Za-z_][A-Za-z0-9_-]*):\s*$", re.M)',
+        "tests/test_required_check_aggregator_guard.py::test_job_id_scanner_rejects_nested_keys",
+    ),
 )
 
 
@@ -517,6 +552,29 @@ def apply_static_mutation(source: str, case: StaticCase) -> str:
 def discover_autouse_fixtures(src: str) -> list[str]:
     """conftest 소스에서 autouse fixture 이름을 전수 수집한다."""
     return _AUTOUSE_RE.findall(src)
+
+
+def trigger_paths() -> list[str]:
+    """저장소-상대 경로 중 **변경 시 이 하네스를 돌려야 하는** 것 전부.
+
+    워크플로우가 `on.pull_request.paths` 에 같은 목록을 손으로 유지하면 반드시
+    드리프트한다 — 새 STATIC_CASES 가 새 파일을 겨냥해도 트리거는 모르므로,
+    그 가드는 falsifiability 검증 없이 머지된다. 그래서 목록을 케이스 정의에서
+    **파생**시키고, 워크플로우는 `--list-targets` 로 이걸 읽는다.
+
+    포함 대상:
+
+    * 하네스가 덮어썼다 복원하는 파일(`_mutated_files`) — 변형 대상이 바뀌면
+      앵커가 어긋날 수 있다;
+    * 각 케이스가 돌리는 가드 테스트 파일(node id 의 파일 부분) — 가드 본체가
+      바뀌면 여전히 falsifiable 한지 다시 봐야 한다;
+    * 하네스 자신과 그 워크플로우.
+    """
+    paths = {str(p.relative_to(REPO_ROOT)) for p in _mutated_files()}
+    paths.update(case.node_id.split("::", 1)[0] for case in STATIC_CASES)
+    paths.add(str(Path(__file__).resolve().relative_to(REPO_ROOT)))
+    paths.add(".github/workflows/guard-falsifiability.yml")
+    return sorted(paths)
 
 
 def _purge_pycache() -> None:
@@ -749,8 +807,17 @@ def main() -> int:
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--json", action="store_true", help="JSON 출력")
     mode.add_argument("--check", action="store_true", help="vacuous/미등록 시 exit 1 (CI)")
+    mode.add_argument(
+        "--list-targets",
+        action="store_true",
+        help="변경 시 이 하네스를 돌려야 하는 저장소-상대 경로를 한 줄씩 출력 (워크플로우 트리거 판정용)",
+    )
     parser.add_argument("--shard", metavar="N/M", help="N번째/M개 샤드만 실행 (CI 매트릭스용)")
     args = parser.parse_args()
+
+    if args.list_targets:
+        print("\n".join(trigger_paths()))
+        return 0
 
     results = run_all(parse_shard(args.shard) if args.shard else None)
 

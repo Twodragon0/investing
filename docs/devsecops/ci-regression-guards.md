@@ -23,12 +23,13 @@ System Configuration), NIST SSDF(SP 800-218) **PO.3 / PW.4**.
 | `tests/test_encoding_guard.py` | 16 | `encoding_guard` 모듈의 UTF-8/CP949 라벨 교정 동작 불변 | 한국어 텍스트 인코딩 깨짐(mojibake) |
 | `tests/test_requirements_lock_coverage.py` | 6 | `requirements.txt` 직접 의존성 전부가 `requirements.lock` 에 ==핀(부분집합) + 락의 모든 핀이 최소 1개 `--hash` 보유(presence) | 락 staleness(검증 안 되는 새 의존성) / hashless 핀이 `--require-hashes` 무결성 검증을 무력화하는 공급망 변조 창 |
 | `tests/test_workflow_action_pinning_guard.py` | 4 | `.github/workflows/**` · `.github/actions/**` 의 모든 외부 `uses:` 가 40-hex SHA 핀(presence) + 탐지기 양방향 | 가변 태그(`@v4`)/브랜치 참조 → 업스트림 변조가 diff 없이 CI 에서 실행 |
+| `tests/test_required_check_aggregator_guard.py` | 5 | 집계 잡의 `needs:` 가 나머지 전 잡을 덮음(집합 동일) + `if: always()` 보유 + 대상 워크플로우의 PR 트리거에 `paths:` 없음(presence) + 잡 id 스캐너 양방향 | ①`needs:` 밖의 잡이 실패해도 required 체크는 green ②`always()` 없으면 upstream skip 시 체크 미생성 → PR 영구 대기 ③`paths:` 재도입도 같은 영구 대기 |
 | `tests/test_workflow_action_version_label_guard.py` | 7 | 모든 핀이 `# vX.Y` 라벨 보유 + 라벨이 버전 형태(presence), 한 SHA 에 모순 라벨 금지 · 한 버전이 두 SHA 로 분기 금지(내부 정합성), 비교기 양방향 | SHA 는 핀됐지만 라벨이 거짓 → 리뷰어·Dependabot 이 잘못된 changelog·CVE 목록을 근거로 판단 (2026-08-07 감사에서 3건: checkout `# v4`→실제 v6.0.2, github-script `# v7`→v9.0.0, git-auto-commit `# v5`→v7.1.0) |
 | `tests/test_secret_scan_gate_guard.py` | 7 | Gitleaks 게이트 무결성: `useDefault=true`(presence), allowlist `targetRules`/`paths` 집합 동일(==), 게이트 차단성(no `continue-on-error`/`\|\| true`), `fetch-depth: 0`(presence) | 잡은 남아있는데 룰셋 해제·allowlist 확대·exit 흡수·히스토리 절단으로 시크릿 스캔이 조용히 무력화 |
 | `tests/test_delimiter_regex_guard.py` | 13 | 출처 구분자 정규식이 구분자 앞 공백을 **요구**한다(`\s+`, presence) — 열린 꼬리 형태만 대상, 고정 alternation·마크다운 불릿·고정 숫자 리터럴은 면제 | `\s*` 는 복합어 내부 하이픈을 구분자로 오인해 뒤를 전부 삭제 (2026-08-06 4회 반복, main 에 13건 피해) |
 | `tests/test_workflow_permission_gate_guard.py` | 4 | `code-quality.yml` 이 `check_workflow_permissions.py` 를 `--workflows-dir .github/workflows` 로 차단 실행(presence) | 도구 단위 테스트는 green 인데 CI 배선만 끊겨 2026-04-23 수집기 장애 클래스가 재무방비 |
 
-총 **145 케이스**.
+총 **150 케이스**.
 
 > 2026-08-07 실측 재집계. 이전 표기(131)는 `test_state_path_anchoring`(16→18)과
 > `test_workflow_step_if_safety`(48→53, 워크플로우 수에 파라미터라이즈됨)가
