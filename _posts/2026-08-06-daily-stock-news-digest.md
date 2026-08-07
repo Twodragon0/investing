@@ -32,7 +32,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-06 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">799.59</div><div class="stat-label">KOSDAQ +2.42%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 반도체주 급등에 코스피 6,600선 회복…매수 사이드카 발동 - 산경투데이 - 199건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 관련 54건</li><li>📊 <strong>매크로/금리</strong>: 환율, 금리 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 반도체, 삼성전자 관련 20건</li><li>🏦 <strong>거래소</strong>: IPO, 종목 주목</li></ul></div>
-<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.sankyungtoday.com">반도체주 급등에 코스피 6,600선 회복…매수 사이드카 발동 - 산경투데이</a> <span class="p0-desc">반도체주 급등에 코스피 6,600선 회복…매수 사이드카 발동 산경투데이</span></li><li><a href="https://www.sedaily.com">“하락 대비 상승이 8배”… 코스피 뒷심에 코스닥 ‘3연 사이드카’ 상승 마감 [이런국장 저런주식</a> <span class="p0-desc">“하락 대비 상승이 8배”… 코스피 뒷심에 코스닥 ‘3연 사이드카’ 상승 마감 [이런국장 저런주식] 서울경제</span></li><li><a href="https://www.freezine.co.kr">코스피, 롤러코스터 장세 끝에 1.6%↑.코스닥은 사상 첫 '3일 연속 매수 사이드카' - 프리진경제</a> <span class="p0-desc">코스피, 롤러코스터 장세 끝에 1.6%↑.코스닥은 사상 첫 '3일 연속 매수 사이드카' 프리진경제</span></li></ul></div>
+<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.sankyungtoday.com">반도체주 급등에 코스피 6,600선 회복…매수 사이드카 발동 - 산경투데이</a> <span class="p0-desc">반도체주 급등에 코스피 6,600선 회복…매수 사이드카 발동 산경투데이</span></li><li><a href="https://www.sedaily.com">“하락 대비 상승이 8배”… 코스피 뒷심에 코스닥 ‘3연 사이드카’ 상승 마감 [이런국장 저런주식</a> <span class="p0-desc">프리마켓에서 소폭 반등한 후 6400선 복귀를 시도하던 코스피가 6300선에서 등락을 거듭하며 방향성을 탐색 중이다. 외국인과 기관 투자가들의 동반 순매수가 유입되는 가운데 반도체 대장주인 삼성전자와 2차전지 대형주들이 지수 하방을 받치는 모습이다. 7일 오전 9시 30분 기준 코스피 지수는 전 거래일 대비 4.38포인트(0.07%) 오른 6300.76을 나타내고 있다. 지수는 장 초반 상승 폭을 일부 반납한 뒤 6300선 안팎에서 팽팽한 공방을 벌이고 있다.</span></li><li><a href="https://www.freezine.co.kr">코스피, 롤러코스터 장세 끝에 1.6%↑.코스닥은 사상 첫 '3일 연속 매수 사이드카' - 프리진경제</a> <span class="p0-desc">코스피, 롤러코스터 장세 끝에 1.6%↑.코스닥은 사상 첫 '3일 연속 매수 사이드카' 프리진경제</span></li></ul></div>
 
 ## 전체 뉴스 요약
 
@@ -53,7 +53,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9NNzlOa09HbFNONUp4QUlLWlphaldGNUJJZmlyR3JLX1dKTlhpaTFCZ0FPRFpQdDZLM2NzVmQyMkZvSW5OenlEd2NqeE83V05qdjBMTTBrWHcwZWFKenNTYlZnS1RlZmVPY1hkX1dTcG1ETTTSAXdBVV95cUxOUEt2S3V5a1N5ejAxeV9ya2VJd2NaUVdsdWdXNmtVajlPWEtrc2V4RDBZWUI0YlVQQ19PdHBpUWhGSHBzSVdnR0tMck54dl9zamdmZnlMbGFSa2tfb1VoY1JLQmNUQXBDall4R29TZC1TN1RjMGlBSQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">4일 매매 동향] 외국인, 삼성전자 2000억 '순매수'.SK하이닉스는 6300억 '순매도'</a>
-<p class="news-desc">[4일 매매 동향] 외국인, 삼성전자 2000억 '순매수'.SK하이닉스는 6300억 '순매도' 핀포인트뉴스</p>
+<p class="news-desc">4일 코스닥시장과 유가증권시장에서 외국인과 기관이 가장 많이 순매수·순매도한 종목은 다음과 같다.거래소(유가증권시장) 외국인 순매수도 상위종목(단위:억원, 만주) 순매수 순매도 종목명 순매수대금 순매수량 종목명 순매도대금 순매도량</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -131,7 +131,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5kbV85cUpUY1JJTDM0bzFwazk2Q1JEYlBXVEVua1prYTdwN2c3cHhOWm5DUGl6MDJ2SkhPajZrM1hvVHJGWk1WODRzdHRRaWpXN3Nfa29NN3ZBNXA5YVRZUlhEZ3p6LXlv?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">금융家] 신현송 한국은행 총재 ④ㅣ 환율·금리 변수 겹쳤다…긴축 기조 향방은 - CBC뉴스</a>
-<p class="news-desc">CBC뉴스는 경제,금융,정치,공모주,엔터,네티즌어워즈,인기 순위 투표,단박제보를 빠르고 정확하게 제공합니다.</p>
+<p class="news-desc">● 2026-08-04NDF 순매입, 3월 환율 상승의 33% 주도…상반기 539억달러 역대 최대한국은행이 올해 3월 원/달러 환율 급등의 약 3분의 1이 역외차액결제선물환(NDF) 거래에 기인했다고 분석했다.한국은행은 4일 공개한 블로그 글에서 NDF 거래가 환율에 미치는 영향을 다각도로 분석했다. NDF는 실물 원화나 달러 현금 없이도 역외에서 24시간 거래가 가능한 선물환의 일종으로, 외국인 투자자들이 환 헤지나 투기 목적으로 주로 활용한다.분석 결과, 올해 3월 NDF 순매입으로 인한 환율 상승분은 약 26원으로, 해당 달</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -183,7 +183,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5DemF3TzFpbGlyZUFtX1l4dGdSVUk4ZWw3d01UV3ZsWkFVMHA5UWZpRnl5emIybmpFS0lsenpVdnItV3Q4cHhlQmVPMEwxRDVaSWl5VHJHbmdmY1NLY1NfdTJwM0JiVGdG?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자·SK하이닉스, 주식시장 상승세… 반도체 업종 기대감↑</a>
-<p class="news-desc">삼성전자·SK하이닉스, 주식시장 상승세… 반도체 업종 기대감↑ 공감신문</p>
+<p class="news-desc">[공감신문] 정재은 기자=삼성전자와 SK하이닉스가 5일 아침 주식시장 개장과 함께 강한 상승세를 보이며 투자자들의 주목을 받았다. 이날 장 초반, 삼성전자는 24만9천750원으로 4.06% 상승하며 거래되고 있으며, SK하이닉스는 7.10% 오른 168만9천원에 거래 중이다.이러한 상</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -214,7 +214,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE1vb2daTVF4OVVTaFZidkJVUWNsOE5iRmdFZFFyLWFpRnNIc0hfclViR01DbXVYQU1LcHViSk9Cek9BNzZ2TkNneTBtTy1fWkhweXBvUWVGeUQtNlNuRUE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">주식선물 18종목·옵션 2종목, 9월 코스피·코스닥 추가 상장 - 동행미디어 시대</a>
-<p class="news-desc">동행미디어 시대는 정치, 경제, 사회, 산업, 금융, 증권, 국제, 문화, 스포츠, 사설까지 다양한 분야의 깊이 있는 뉴스를 제공합니다. 존중받는 개인, 부강한 대한민국을 모토로 우리사회가 점진적으로 옳은 방향으로 나아갈 수 있는 가치있는 뉴스를 제공합니다. 깊이 생각하고, 널리 취재하며, 충실히 논의하는 숙의미디어로서 우리 시대의 어젠다를 제안합니다.</p>
+<p class="news-desc">한국거래소가 주식선물 18종목과 주식옵션 2종목을 9월 추가 상장한다. 4일 거래소에 따르면 주식선물은 코스피 4개·코스닥 14개 종목이며 주식옵션은 코스피 2개 종목이다. 거래소는 올 6월 시장 대표지수 리밸런싱을 반영해 기초주권 선정기준에 해당하는 주식선물 18개 종목을 선정했다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

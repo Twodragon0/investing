@@ -171,7 +171,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOSzNCcmVUcHBMNzZvVXRoMWw3QUxBc3BNUXRfeGN4ak5vQjVCUmZFQzkwQjlYSXRvMXJuXzhpcWhBYjRGUUdYdThRTFJmczBaSk56MG9NZmZlVWtVbDNwSjMzS01NSEZ5WDE4MjhoZjJqUXBQRGpNQno5VmZqOHNQQzBycmMyVzdQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">6만 3000달러 지킨 비트코인… 바닥 다지기 모색</a>
-<p class="news-desc">6만 3000달러 지킨 비트코인… 바닥 다지기 모색 글로벌이코노믹</p>
+<p class="news-desc">대규모 지갑 해킹 사태와 기업의 물량 매도, 현물 상장지수펀드 자금 유입 둔화 등 악재가 잇따랐지만 비트코인 가격이 지지선을 지켜내며 안정을 모색하고 있다. 4일(현지시각) 암호화폐 전문 매체 트레이딩뉴스 보도에 따르면 비트코인은 최근 상승세를 보였다. 비트코인은 약 6만 374</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -183,7 +183,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBOTS1zOHk1Q0RzRUZTX0NXRGhTRmh2LThwYWl6ZjNYOVo3S0Q3QXRiRktaaVpqTmhCTEJsSlpIUjl3TnNZYXRiVzRLUjZwOVJRWGNoTExhaC1McnVkb1hSNjRucG5rN1BsUElrQ2RRRXhGRnc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 소폭 반등…클래리티 법안 통과 확률 30%에도 절차 표결 잡혔다</a>
-<p class="news-desc">비트코인 소폭 반등…클래리티 법안 통과 확률 30%에도 절차 표결 잡혔다 디지털투데이</p>
+<p class="news-desc">[디지털투데이 AI리포터] 비트코인이 6만4000달러대 중반으로 반등했다. 5일 오전 8시 코인360 기준 비트코인(BTC)은 전일 대비 +1.28% 오른 6만4403달러를 기록했다. 이더리움(ETH)은 +1.01% 상승한 1877달러, 리플(XRP)은 +0.26%, 솔라나(SOL)는 +0.98% 각각 올랐다. BTC 도미넌스는 58.58%를 유지했다.반등의 배경에는 클래리티 법안(CLARITY Act)을 둘러싼 절차적 진전이 있다. 상원은 3일 복귀했으며, 5일 클로처(토론 종결) 동의안이 제출되면 7일 본회의 표결이 진행될 수</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -195,7 +195,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9EWDVnTXFMM3E4VlAta0Q2bGZvYnFUNTFmOU9vbFRucjhMcEtDWlE1Uk1MTmRHY3kzU1h1Sm1lNUxZZnNHQUltU3BQeWVwYnBkbC1oNXJB?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 6만4486달러 회복…호르무즈 통행료 면제 협상 임박</a>
-<p class="news-desc">비트코인 6만4486달러 회복…호르무즈 통행료 면제 협상 임박 wikitree.co.kr</p>
+<p class="news-desc">비트코인, 호르무즈 해협 협상 기대감에 6만4000달러대 회복 트럼프 “이번주 합의 가능” 발언에 6만2200달러서 2000달러 넘게 반등</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

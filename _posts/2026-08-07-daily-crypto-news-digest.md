@@ -208,7 +208,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOdjFEaW9LdmZ5R3ZQX001Xzl6Y3A0cG9ER2U4QV84aVMzZDV0ZEYxQUdKc1gxbmlnNm42TkNqTjhQV2YwbFhuRUozV0ZPY0FnODloZ09TVXEzbVJuR1FMQWs4eFYxY2pUb3pOWTZWVks2M0tLelR2WDEtaFhjTkJueGg0Z2g3VUlv?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 "日 국채 매도 폭탄"… 암호화폐 유동성 대폭발</a>
-<p class="news-desc">비트코인 "日 국채 매도 폭탄"… 암호화폐 유동성 대폭발 글로벌이코노믹</p>
+<p class="news-desc">일본 정부의 엔화 방어를 위한 미국 국채 매도 가능성이 가상자산 시장으로의 대규모 유동성 유입을 이끄는 신호탄으로 부상했다. 암호화폐 전문 유튜브 채널이자 블록체인 미디어 플랫폼 폴 배런 네트워크는 4일(현지시각) 엔화 약세 방어 조치와 엔 캐리 트레이드 청산 여파가 암호화폐 유동성을</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
