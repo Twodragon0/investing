@@ -225,7 +225,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1WRmZFNnpUTmlydGVtNnFrN1hUWTQ3YlFrYkxJYWJnaFlfTENvTG1YZ1ppZl93MXNSMFhZR3NuVEFGZ0xEUS1HRDhrTW5jSEtOUFlWMms3UmU1ZGFQLWJxUVNHMEFuVmJm?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">엔비디아 2.8%·SOXL 1.2% 반등…삼성전자·SK하이닉스, 외국인 수급 주목 - 녹색경제신문</a>
-<p class="news-desc">[녹색경제신문 = 한순구 기자]미국 증시에서 엔비디아와 반도체 상장지수펀드(ETF)가 장 초반 약세를 딛고 반등하면서 4일 국내 증시의 낙폭 회복 여부에 관심이 쏠리고 있다.한국시간 4일 0시 전후 스탠더드앤드푸어스(S&amp;P)500지수를 추종하는 SPY는 1.1%, 나스닥100지수를 추종하는 QQQ는 1.3% 상승하고 있다. 엔비디아는 2.8%, AMD는 2.0% 올랐고 반도체 ETF인 SMH와 3배 레버리지 ETF SOXL도 각각 0.8%, 1.2% 상승했다.특히 마이크론은 장 초반 3.4% 하락했지만 이후 0.4% 상승으로 돌아섰</p>
+<p class="news-desc">[녹색경제신문 = 한순구 기자] 미국 증시에서 엔비디아와 반도체 상장지수펀드(ETF)가 장 초반 약세를 딛고 반등하면서 4일 국내 증시의 낙폭 회복 여부에 관심이 쏠리고 있다.한국시간 4일 0시 전후 스탠더드앤드푸어스(S&amp;P)500지수를 추종하는 SPY는 1.1%, 나스닥100지수를 추종하는 QQQ는 1.3% 상승하고 있다. 엔비디아는 2.8%, AMD는 2.0% 올랐고 반도체 ETF인 SMH와 3배 레버리지 ETF SOXL도 각각 0.8%, 1.2% 상승했다.특히 마이크론은 장 초반 3.4% 하락했지만 이후 0.4% 상승으로 돌아섰</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

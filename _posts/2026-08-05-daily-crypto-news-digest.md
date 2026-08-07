@@ -193,7 +193,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE50YkRsbHBTVm5kc3BHbjN6dU91VEhNU3lfSm9ielJJYnVxYm91UnJCaFdrUFJqeGk1WkJWN1J0cU4zOWJNSVZ5bHpTMVFYQVJiMk94M2NWRkhDZlViVTEzaQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">美·日, 엔화 약세 공동방어…이번주 비트코인 흔들 핵심 변수 5가지</a>
-<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : 이번 흐름은 비트코인 가격이 암호화폐 자체 이슈와 거시 변수에 동시에 반응하고 있음을 보여준다 [사진: 셔터스톡][디지털투데이 홍진주 기자]비트코인이 8월 첫 주 6만3000달러선에서 방향성을 탐색하는 가운데, 글로벌 거시 환경과 암호화폐 내부 리스크</p>
+<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : 이번 흐름은 비트코인 가격이 암호화폐 자체 이슈와 거시 변수에 동시에 반응하고 있음을 보여준다 [사진: 셔터스톡][디지털투데이 홍진주 기자] 비트코인이 8월 첫 주 6만3000달러선에서 방향성을 탐색하는 가운데, 글로벌 거시 환경과 암호화폐 내부 리스크</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
