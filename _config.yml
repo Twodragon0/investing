@@ -76,3 +76,15 @@ exclude:
   - README.md
   - docs/
   - _config_ghpages.yml
+  # 아래는 2026-08-07 실측으로 **라이브 사이트에 공개되고 있던** 경로들이다.
+  # `curl https://investing.2twodragon.com/tests/conftest.py` -> 200,
+  # `content-type: application/octet-stream` 으로 테스트 원본이 그대로 서빙됐다.
+  # 저장소가 공개이므로 기밀 문제는 아니지만 크롤 표면·배포 용량 낭비이고,
+  # vercel.json 의 경로 기반 빌드 생략 전제(= 이 경로들은 _site 에 영향 없음)를
+  # 깨뜨린다. Jekyll 은 dot-디렉토리(.github/, .claude/)는 기본 무시하므로 제외
+  # 목록에 넣지 않는다.
+  - tests/
+  - AGENTS.md
+  - CLAUDE.md
+  - pyproject.toml
+  - requirements-dev.txt
