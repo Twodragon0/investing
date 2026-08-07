@@ -19,6 +19,8 @@ on:
       - '.github/workflows/code-quality.yml'
       # 공급망/시크릿 가드 — 가드 본체와 감시 대상 설정 양쪽
       - 'tests/test_workflow_action_pinning_guard.py'
+      - 'tests/test_workflow_action_version_label_guard.py'
+      - '.github/workflows/action-pin-verify.yml'
       - 'tests/test_secret_scan_gate_guard.py'
       - 'tests/test_workflow_permission_gate_guard.py'
       # 구분자 정규식 가드 — 가드 본체와 감시 대상 소스
@@ -46,7 +48,7 @@ concurrency:
 jobs:
   falsifiability:
     runs-on: ubuntu-latest
-    # 케이스당 pytest 를 2회(patched/control) 띄우므로 47종 = 94회 프로세스 기동.
+    # 케이스당 pytest 를 2회(patched/control) 띄우므로 55종 = 110회 프로세스 기동.
     # 가드 테스트 자체는 각 1초 미만이고 대부분이 인터프리터 시작 비용이다.
     #
     # 샤딩: 케이스가 **실제 레포 파일**을 변형했다 복원하므로 한 체크아웃 안에서
@@ -56,7 +58,7 @@ jobs:
     # 가드 하나가 검증되지 않은 채 CI 가 그린인 상태를 만든다.
     #
     # 실측 추이: 11케이스 1m44s -> 37케이스 3m49s -> 47케이스 4m09s (약 5s/케이스).
-    # 8샤드면 샤드당 6케이스 안팎으로 ~1분.
+    # 8샤드면 55케이스 기준 샤드당 7케이스 안팎으로 ~1분.
     strategy:
       fail-fast: false
       matrix:

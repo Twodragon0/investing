@@ -410,6 +410,60 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "      - name: Check reusable workflow permission coverage\n        continue-on-error: true\n",
         "tests/test_workflow_permission_gate_guard.py::test_permission_lint_step_is_blocking",
     ),
+    # ---------------------------------------------------------------------
+    # Part 6 (2026-08-07): 액션 핀 **버전 라벨** 축. Part 4 의 핀닝 가드는 SHA
+    # 형식만 본다 — 40-hex 이기만 하면 `# v4` 라벨이 실제로 v6.0.2 를 가리켜도
+    # green 이다. 감사 시점에 그런 거짓 라벨이 3건 있었다(checkout `# v4`→v6.0.2,
+    # github-script `# v7`→v9.0.0, git-auto-commit `# v5`→v7.1.0).
+    #
+    # 업스트림 대조는 네트워크가 필요해 `.github/workflows/action-pin-verify.yml`
+    # 이 담당하고, 여기서 검증하는 건 네트워크 없이 판정 가능한 오프라인 불변식
+    # 층이다 — 라벨 존재·형태, 그리고 라벨끼리의 모순.
+    # ---------------------------------------------------------------------
+    StaticCase(
+        "액션 핀에서 버전 라벨 제거",
+        ".github/workflows/action-pin-verify.yml",
+        "uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0",
+        "uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405",
+        "tests/test_workflow_action_version_label_guard.py::test_every_pin_carries_a_version_label",
+    ),
+    StaticCase(
+        "버전 라벨을 비교 불가한 문자열로 (# latest)",
+        ".github/workflows/action-pin-verify.yml",
+        "uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0",
+        "uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # latest",
+        "tests/test_workflow_action_version_label_guard.py::test_version_labels_are_version_shaped",
+    ),
+    StaticCase(
+        "같은 SHA 에 모순 라벨 (# v6 -> # v4, 타 워크플로우는 v6 유지)",
+        ".github/workflows/action-pin-verify.yml",
+        "uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6",
+        "uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v4",
+        "tests/test_workflow_action_version_label_guard.py::test_one_sha_never_carries_contradictory_labels",
+    ),
+    StaticCase(
+        "한 버전이 두 SHA 로 분기 (절반만 적용된 bump)",
+        ".github/workflows/action-pin-verify.yml",
+        "      - name: Setup Python\n",
+        "      - name: Half-applied bump probe\n        uses: actions/checkout@"
+        + "c" * 40
+        + "  # v6\n\n      - name: Setup Python\n",
+        "tests/test_workflow_action_version_label_guard.py::test_one_claimed_version_never_maps_to_two_shas",
+    ),
+    StaticCase(
+        "라벨 비교기 무력화 (모든 라벨을 호환으로 판정)",
+        "tests/test_workflow_action_version_label_guard.py",
+        "    return longer[: len(shorter)] == shorter",
+        "    return True",
+        "tests/test_workflow_action_version_label_guard.py::test_label_comparison_is_bidirectional",
+    ),
+    StaticCase(
+        "라벨 가드 스캐너 붕괴 (핀을 하나도 못 찾음)",
+        "tests/test_workflow_action_version_label_guard.py",
+        "?uses:",
+        "?usez:",
+        "tests/test_workflow_action_version_label_guard.py::test_pin_count_is_plausible",
+    ),
 )
 
 
