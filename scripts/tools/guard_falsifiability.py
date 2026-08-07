@@ -98,6 +98,27 @@ class StaticCase(NamedTuple):
     node_id: str  # 전체 pytest node id
 
 
+# 액션 핀 가드용 프로브. **실제 액션 SHA 를 앵커로 쓰지 않는다.**
+#
+# 2026-08-07: 초기 케이스들은 `actions/checkout@de0fac2e…  # v6.0.2` 처럼 실제 핀을
+# 앵커로 삼았다. Dependabot 이 checkout 을 6.0.2 -> 7.0.1 로 올린 PR #1105 에서
+# 그 앵커가 사라져 하네스가 AMBIGUOUS-ANCHOR 로 죽었다 — 가드가 틀린 게 아니라
+# 하네스가 bump 에 결합돼 있었다. 같은 결합이 lighthouse-ci-action·setup-python
+# 앵커에도 잠재해 있었다(총 5건).
+#
+# 대신 존재하지 않는 `probe/*` 참조를 주입한다. 위반 자체가 주입물 안에서 완결되므로
+# 어떤 액션이 bump 돼도 앵커가 유효하다.
+_PROBE_ANCHOR = "      - name: Verify pins\n"
+_PROBE_SHA_A = "d" * 40
+_PROBE_SHA_B = "e" * 40
+
+
+def _probe_steps(*refs: str) -> str:
+    """`uses:` 가 주어진 프로브 스텝들 + 원래 앵커. 주입 후에도 YAML 이 유효하다."""
+    steps = "".join(f"      - name: Falsifiability probe {i}\n        uses: {ref}\n" for i, ref in enumerate(refs))
+    return steps + _PROBE_ANCHOR
+
+
 # 정적 가드 mutation 케이스.
 #
 # ``old`` 앵커는 대상 파일에 **정확히 1회**만 나타나야 한다(아래 검증). 이 규칙은
@@ -324,9 +345,9 @@ STATIC_CASES: tuple[StaticCase, ...] = (
     # ---------------------------------------------------------------------
     StaticCase(
         "외부 액션 핀 해제 (SHA -> 가변 태그)",
-        ".github/workflows/lighthouse-ci.yml",
-        "treosh/lighthouse-ci-action@3e7e23fb74242897f95c0ba9cabad3d0227b9b18",
-        "treosh/lighthouse-ci-action@v12",
+        ".github/workflows/action-pin-verify.yml",
+        _PROBE_ANCHOR,
+        _probe_steps("probe/unpinned-action@v1"),
         "tests/test_workflow_action_pinning_guard.py::test_all_external_actions_are_sha_pinned",
     ),
     StaticCase(
@@ -423,31 +444,35 @@ STATIC_CASES: tuple[StaticCase, ...] = (
     StaticCase(
         "액션 핀에서 버전 라벨 제거",
         ".github/workflows/action-pin-verify.yml",
-        "uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0",
-        "uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405",
+        _PROBE_ANCHOR,
+        _probe_steps(f"probe/labelless-action@{_PROBE_SHA_A}"),
         "tests/test_workflow_action_version_label_guard.py::test_every_pin_carries_a_version_label",
     ),
     StaticCase(
         "버전 라벨을 비교 불가한 문자열로 (# latest)",
         ".github/workflows/action-pin-verify.yml",
-        "uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0",
-        "uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # latest",
+        _PROBE_ANCHOR,
+        _probe_steps(f"probe/badlabel-action@{_PROBE_SHA_A}  # latest"),
         "tests/test_workflow_action_version_label_guard.py::test_version_labels_are_version_shaped",
     ),
     StaticCase(
-        "같은 SHA 에 모순 라벨 (# v6.0.2 -> # v4, 타 워크플로우는 v6.0.2 유지)",
+        "같은 SHA 에 모순 라벨 (# v1 과 # v2 가 한 SHA 에)",
         ".github/workflows/action-pin-verify.yml",
-        "uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2",
-        "uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v4",
+        _PROBE_ANCHOR,
+        _probe_steps(
+            f"probe/conflict-action@{_PROBE_SHA_A}  # v1",
+            f"probe/conflict-action@{_PROBE_SHA_A}  # v2",
+        ),
         "tests/test_workflow_action_version_label_guard.py::test_one_sha_never_carries_contradictory_labels",
     ),
     StaticCase(
         "한 버전이 두 SHA 로 분기 (절반만 적용된 bump)",
         ".github/workflows/action-pin-verify.yml",
-        "      - name: Setup Python\n",
-        "      - name: Half-applied bump probe\n        uses: actions/checkout@"
-        + "c" * 40
-        + "  # v6.0.2\n\n      - name: Setup Python\n",
+        _PROBE_ANCHOR,
+        _probe_steps(
+            f"probe/split-action@{_PROBE_SHA_A}  # v1.0.0",
+            f"probe/split-action@{_PROBE_SHA_B}  # v1.0.0",
+        ),
         "tests/test_workflow_action_version_label_guard.py::test_one_claimed_version_never_maps_to_two_shas",
     ),
     StaticCase(
