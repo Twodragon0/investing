@@ -1,0 +1,43 @@
+---
+name: Dependency Review
+
+# PR 이 **새로** 들여오는 의존성만 본다. `dependency-check.yml` 의 pip-audit 은
+# 이미 설치된 전체 트리를 주기적으로 훑는 반면, 이쪽은 diff 에서 추가된 것만
+# 보고 머지 전에 막는다 — 취약 의존성이 들어온 뒤 다음 주 스캔에서 발견되는
+# 대신, 들어오는 순간 차단된다.
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/requirements.txt'
+      - 'requirements-dev.txt'
+      - 'requirements.lock'
+      - 'Gemfile'
+      - 'Gemfile.lock'
+      - '.github/workflows/**'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: dependency-review-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  review:
+    name: Dependency Review
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
+
+      - name: Review dependency changes
+        uses: actions/dependency-review-action@da24556b548a50705dd671f47852072ea4c105d9  # v4.7.1
+        with:
+          # moderate 이상에서 실패. 이 저장소의 pip-audit 게이트와 같은 기준선.
+          fail-on-severity: moderate
+          # 라이선스는 차단하지 않고 요약에만 남긴다 — 데이터 소스 SDK 들이
+          # 제각각이라 허용 목록을 유지하는 비용이 이득보다 크다.
+          comment-summary-in-pr: on-failure

@@ -23,6 +23,28 @@ updates:
           - "patch"
           - "minor"
 
+  # 루트의 `requirements-dev.txt` 는 `/scripts` 항목이 커버하지 않는다. Dependabot
+  # 의 pip 디렉토리는 정확히 그 경로의 매니페스트만 읽으므로, 개발 도구(ruff,
+  # pytest, playwright 등)가 취약점 알림 밖에 있었다.
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      timezone: "Asia/Seoul"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "python"
+    commit-message:
+      prefix: "chore(deps-dev):"
+    groups:
+      security-patches:
+        applies-to: security-updates
+        update-types:
+          - "patch"
+          - "minor"
+
   - package-ecosystem: "bundler"
     directory: "/"
     schedule:

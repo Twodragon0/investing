@@ -1,0 +1,57 @@
+name: 수집기 실패
+description: 수집기가 실패하거나, 데이터가 비거나, 잘못된 내용이 발행됐을 때
+labels: ["collector"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        생성물(`_posts/`)의 내용 문제도 여기로 신고해 주세요 — 원인은 대개 수집 단계에 있습니다.
+  - type: dropdown
+    id: collector
+    attributes:
+      label: 수집기
+      options:
+        - crypto
+        - stock
+        - social
+        - regulatory
+        - political
+        - coinmarketcap
+        - worldmonitor
+        - defi_llama
+        - fmp_calendar
+        - market_indicators
+        - geopolitical
+        - blockchain
+        - 모르겠음 / 여러 개
+    validations:
+      required: true
+  - type: textarea
+    id: symptom
+    attributes:
+      label: 증상
+      description: 무엇이 어떻게 잘못됐나요. 발행된 포스트라면 경로와 해당 부분을 붙여 주세요.
+      placeholder: |
+        _posts/2026-08-06-daily-crypto-news-digest.md 의 카드 요약이
+        기사 내용이 아니라 매체 소개문입니다:
+        "…뉴스의 리더입니다."
+    validations:
+      required: true
+  - type: input
+    id: run
+    attributes:
+      label: 실패한 워크플로우 실행 링크
+      description: Actions 탭의 해당 run URL (있으면)
+  - type: textarea
+    id: logs
+    attributes:
+      label: 로그
+      description: 관련 로그. **API 키·토큰은 반드시 마스킹**해 주세요.
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 확인
+      options:
+        - label: 로그에서 시크릿을 마스킹했습니다
+          required: true

@@ -1,0 +1,42 @@
+name: 버그 신고
+description: 스크립트·사이트·CI 의 오동작
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: 영역
+      options:
+        - Python 스크립트 (scripts/)
+        - Jekyll 사이트 (_layouts, _includes, _sass, pages)
+        - CI / 워크플로우 (.github/)
+        - 문서
+        - 기타
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: 무엇이 잘못됐나요
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: 재현 방법
+      description: 실행한 명령과 출력. 재현이 안 되면 관찰한 상황을 적어 주세요.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 기대한 동작
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: 환경
+      description: OS, Python/Ruby 버전. CI 에서만 발생하면 그렇게 적어 주세요.
+      placeholder: macOS 15 / Python 3.13 / 로컬은 통과하는데 CI 만 실패
