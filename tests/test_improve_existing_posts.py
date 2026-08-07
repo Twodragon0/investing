@@ -448,3 +448,51 @@ class TestFallbackInsight:
 
     def test_non_empty(self):
         assert len(iep.FALLBACK_INSIGHT) > 20
+
+
+# ---------------------------------------------------------------------------
+# sanitize_summary_bullets
+# ---------------------------------------------------------------------------
+
+
+class TestSanitizeSummaryBullets:
+    def test_drops_stat_dump_plain_bullet(self):
+        body = "## 핵심\n- 20 총 이슈 3 테마 수 2 출처 수 5 안보 이슈\n- 정상 문장입니다."
+        new, changed = iep.sanitize_summary_bullets(body)
+        assert changed is True
+        assert "총 이슈 3 테마" not in new
+        assert "정상 문장입니다." in new
+
+    def test_cleans_linked_digest_tail_keeps_link(self):
+        body = (
+            "- 2026-06-01 [브리핑](/a/b/) -- 가격 언급: 뉴스 제목에서 24건의 가격 데이터가 "
+            "포착되었습니다 ($1, $1, $1). 구체적 가격대가 언급되는 것은 신호입니다."
+        )
+        new, changed = iep.sanitize_summary_bullets(body)
+        assert changed is True
+        assert "[브리핑](/a/b/)" in new  # link preserved
+        assert "가격 데이터가 포착" not in new  # meta dropped
+        assert "구체적 가격대가 언급되는 것은 신호입니다." in new
+
+    def test_drops_garbled_tail_keeps_bare_link(self):
+        body = "- 2026-06-01 [WorldMonitor](/a/) -- 20 총 이슈 3 테마 수 2 출처 수 5 안보 이슈"
+        new, changed = iep.sanitize_summary_bullets(body)
+        assert changed is True
+        assert new.strip() == "- 2026-06-01 [WorldMonitor](/a/)"
+
+    def test_skips_codespan_ascii_chart(self):
+        body = "- ` Tech Rebound    ████████ (20) Dow 50K    ████ (16) `"
+        new, changed = iep.sanitize_summary_bullets(body)
+        assert changed is False
+        assert new == body  # alignment spaces inside backticks preserved
+
+    def test_skips_table_rows(self):
+        body = "- | a | b |"
+        new, changed = iep.sanitize_summary_bullets(body)
+        assert changed is False
+
+    def test_preserves_normal_prose(self):
+        body = "- 비트코인은 ETF 수요가 줄어들면서 $73,000 가까이 하락했습니다."
+        new, changed = iep.sanitize_summary_bullets(body)
+        assert changed is False
+        assert new == body

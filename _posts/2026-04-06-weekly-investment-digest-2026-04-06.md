@@ -54,20 +54,20 @@ image_alt: "주간 투자 다이제스트 - 2026년 04월 06일 - 시장 분석 
 - 2026-04-06 [암호화폐 시장 종합 리포트 - 2026-04-06 | BCH -3.6%](/market-analysis/2026/04/06/daily-crypto-market-report/) -- 현재가 $426.16, 24시간 -3.62% 하락, 7일 -5.94%. 시가총액 $8.53B
 - 2026-04-06 [암호화폐 시장 종합 리포트 - 2026-04-06 | BCH -3.6%](/market-analysis/2026/04/06/daily-crypto-market-report/) -- 현재가 $330.11, 24시간 +2.75% 상승, 7일 +1.68%. 시가총액 $6.09B
 - 2026-04-06 [WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-04-06](/market-analysis/2026/04/06/daily-worldmonitor-briefing/) -- 2026-04-06 기준 WorldMonitor 연계 소스에서 글로벌 이벤트/시장/에너지 관련 뉴스 20건을 정리했습니다.
-- 2026-04-06 [WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-04-06](/market-analysis/2026/04/06/daily-worldmonitor-briefing/) -- WorldMonitor/Al Jazeera 15건 75%
-- 2026-04-06 [WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-04-06](/market-analysis/2026/04/06/daily-worldmonitor-briefing/) -- WorldMonitor/Guardian World 3건 15%
+- 2026-04-06 [WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-04-06](/market-analysis/2026/04/06/daily-worldmonitor-briefing/)
+- 2026-04-06 [WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-04-06](/market-analysis/2026/04/06/daily-worldmonitor-briefing/)
 - 2026-04-05 [암호화폐 시장 종합 리포트 - 2026-04-05 | XMR +1.9%](/market-analysis/2026/04/05/daily-crypto-market-report/) -- Top 20 코인 중 16개 상승, 4개 하락으로 광범위한 매수세가 유입되고 있습니다. 최고 상승은 Monero(XMR) +1.94%, 최대 하락은 Stellar(XLM) -0.78%입니다.
 - 2026-04-05 [암호화폐 시장 종합 리포트 - 2026-04-05 | XMR +1.9%](/market-analysis/2026/04/05/daily-crypto-market-report/) -- 현재가 $321.45, 24시간 +1.94% 상승, 7일 -2.90%. 시가총액 $5.93B
 
 ## 암호화폐 뉴스 (8건)
 
 - 2026-04-06 [암호화폐 뉴스 브리핑 - 2026-04-06](/crypto-news/2026/04/06/daily-crypto-news-digest/) -- 지난해 10월 10일 플래시 암호화폐 폭락이 하루 만에 수백만 달러를 날린 이후 약 6개월 만이다. 비트코인(BTC)은 불과 며칠 전인 10월 6일에 $126,080의 사상 최고치(ATH)를 기록했지만 현재는…
-- 2026-04-06 [암호화폐 뉴스 브리핑 - 2026-04-06](/crypto-news/2026/04/06/daily-crypto-news-digest/) -- 가격 언급: 뉴스 제목에서 11건의 가격 데이터가 포착되었습니다 ($1.3, $280m, $1.1, $67K, $280M). 구체적 가격대가 언급되는 것은 시장의 가격 민감도가 높다는 신호입니다.
+- 2026-04-06 [암호화폐 뉴스 브리핑 - 2026-04-06](/crypto-news/2026/04/06/daily-crypto-news-digest/) -- 구체적 가격대가 언급되는 것은 시장의 가격 민감도가 높다는 신호입니다.
 - 2026-04-06 [암호화폐 뉴스 브리핑 - 2026-04-06](/crypto-news/2026/04/06/daily-crypto-news-digest/) -- Cathie Wood는 50% 비트코인 폭락에 대해 잔인한 반응을 보였습니다. 지난해 10월 10일 플래시 암호화폐 폭락이 하루 만에 수백만 달러를 날린 이후 약 6개월 만이다. 비트코인(BTC)은 불과 며칠…
-- 2026-04-05 [암호화폐 뉴스 브리핑 - 2026-04-05](/crypto-news/2026/04/05/daily-crypto-news-digest/) -- 가격 언급: 뉴스 제목에서 18건의 가격 데이터가 포착되었습니다 ($80,000, $280m, $68,000, $60,000, $270). 구체적 가격대가 언급되는 것은 시장의 가격 민감도가 높다는 신호입니다.
+- 2026-04-05 [암호화폐 뉴스 브리핑 - 2026-04-05](/crypto-news/2026/04/05/daily-crypto-news-digest/) -- 구체적 가격대가 언급되는 것은 시장의 가격 민감도가 높다는 신호입니다.
 - 2026-04-05 [암호화폐 뉴스 브리핑 - 2026-04-05](/crypto-news/2026/04/05/daily-crypto-news-digest/) -- 비트코인이 $68,000 아래로 떨어지면 폭락이 $60,000 아래로 떨어질 위험이 높아지는 이유는 다음과 같습니다. $68,000 미만의 음의 감마 영역은 자체 강화 매도를 촉발하여 대규모 폭락로 이어질 수…
 - 2026-04-05 [암호화폐 뉴스 브리핑 - 2026-04-05](/crypto-news/2026/04/05/daily-crypto-news-digest/) -- 국립암호화폐협회(National Cryptocurrency Association)에서 제공하는 암호화폐에 대해 빠르게 확인해 보겠습니다. 암호화폐를 살펴보면 비트코인에 관해서는 3% 약간 하락한 약간의 매도세를…
-- 2026-04-04 [암호화폐 뉴스 브리핑 - 2026-04-04](/crypto-news/2026/04/04/daily-crypto-news-digest/) -- 가격 언급: 뉴스 제목에서 22건의 가격 데이터가 포착되었습니다 ($280m, $66k, $80,000, $270, $270). 구체적 가격대가 언급되는 것은 시장의 가격 민감도가 높다는 신호입니다.
+- 2026-04-04 [암호화폐 뉴스 브리핑 - 2026-04-04](/crypto-news/2026/04/04/daily-crypto-news-digest/) -- 구체적 가격대가 언급되는 것은 시장의 가격 민감도가 높다는 신호입니다.
 - 2026-04-04 [암호화폐 뉴스 브리핑 - 2026-04-04](/crypto-news/2026/04/04/daily-crypto-news-digest/) -- Bitcoin price today: muted above $66k with focus on Iran conflict, US jobs data. $66k, US — 비트코인 시장 심리와 가격 흐름에 주목하세요.
 
 ## 주식 시장 (8건)
