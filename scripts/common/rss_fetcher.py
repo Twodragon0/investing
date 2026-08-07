@@ -24,6 +24,26 @@ _GOOGLE_NEWS_REDIRECT_QUERY_KEYS = ("url", "u", "q")
 _sanitize_mojibake = sanitize_mojibake
 
 
+def _is_article_url(url: str) -> bool:
+    """False for a bare domain — a homepage, not a specific article.
+
+    Google News RSS carries ``<source url="https://www.sedaily.com">서울경제</source>``:
+    the attribute names the *publisher*, not the item. Treating it as the
+    article URL had two consequences, both measured 2026-08-07:
+
+    * ``summarizer`` writes it as the p0 alert link, so **264 of 909** p0 links
+      (29%) sent the reader to a homepage instead of the story.
+    * ``enrichment`` prefers it over the Google News link when fetching a
+      description, so the homepage's ``og:description`` — the outlet's own
+      tagline — became the article summary. That is the source of the site-chrome
+      blurbs tracked in ``summary_quality`` (FT/CoinDesk/Fortune self-intros).
+
+    A query string still identifies an item, so it counts as a path.
+    """
+    parsed = urlparse(url)
+    return bool(parsed.path.strip("/") or parsed.query)
+
+
 def is_safe_url(url: str) -> bool:
     """Validate URL scheme to prevent XSS via javascript:/data: URLs."""
     try:
@@ -301,13 +321,14 @@ def fetch_rss_feed(
                         else:
                             logger.debug("RSS image blocked unsafe scheme (img src): %s", _u[:80])
 
-                # Extract original URL from <source url=""> (Google News RSS preserves it)
+                # `<source url="">` in Google News RSS is the **publisher's site**,
+                # not the article (see `_is_article_url`). Only accept it when it
+                # actually points at an item.
                 original_url = ""
                 source_el = entry.find("source")
                 if source_el and source_el.get("url"):
-                    raw_url = source_el["url"]
-                    candidate_orig = str(raw_url).strip()
-                    if candidate_orig and is_safe_url(candidate_orig):
+                    candidate_orig = str(source_el["url"]).strip()
+                    if candidate_orig and is_safe_url(candidate_orig) and _is_article_url(candidate_orig):
                         original_url = candidate_orig
 
                 if link_val and urlparse(str(link_val)).netloc in _GOOGLE_NEWS_HOSTS:
