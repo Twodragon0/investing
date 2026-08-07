@@ -63,6 +63,7 @@ import os
 import re
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 from dataclasses import dataclass
 from pathlib import Path
@@ -114,10 +115,37 @@ def collect_pins() -> list[Pin]:
     return sorted(pins, key=lambda p: (p.ref, p.label or "", p.sha))
 
 
+def _segment(value: str) -> str:
+    """Percent-encode a path segment taken from workflow YAML.
+
+    `repo` and `label` come out of files on disk, so they reach the URL as
+    attacker-influenced-in-principle input. Encoding stops a `?` or `/` in a
+    version comment from splicing on a query string or an extra path segment.
+
+    It does *not* stop `..` — dots are unreserved, so `quote` leaves them
+    untouched. Traversal is rejected in `_api` instead.
+    """
+    return urllib.parse.quote(value, safe="")
+
+
+def _repo_path(repo: str) -> str:
+    """`owner/name` with each half encoded independently, so the `/` survives."""
+    return "/".join(_segment(part) for part in repo.split("/"))
+
+
 def _api(path: str) -> object | None:
     """GET a GitHub API path. `None` on 404/422 (absent object), raises otherwise."""
+    url = f"{API_ROOT}{path}"
+    parsed = urllib.parse.urlparse(url)
+    # `hostname`, not a substring check: `https://api.github.com@evil.example.com`
+    # and `https://api.github.com.evil.com` both contain the literal host.
+    if parsed.scheme != "https" or parsed.hostname != "api.github.com":
+        raise ValueError(f"refusing to fetch off-host URL: {url}")
+    if ".." in parsed.path.split("/"):
+        raise ValueError(f"refusing to fetch traversing path: {url}")
+
     request = urllib.request.Request(
-        f"{API_ROOT}{path}",
+        url,
         headers={
             "Accept": "application/vnd.github+json",
             "X-GitHub-Api-Version": "2022-11-28",
@@ -128,7 +156,9 @@ def _api(path: str) -> object | None:
     if token:
         request.add_header("Authorization", f"Bearer {token}")
     try:
-        with urllib.request.urlopen(request, timeout=REQUEST_TIMEOUT) as response:  # noqa: S310 - fixed https host
+        # Scheme and host are asserted above and every interpolated segment is
+        # percent-encoded, so no `file:`/custom-scheme path reaches urlopen.
+        with urllib.request.urlopen(request, timeout=REQUEST_TIMEOUT) as response:  # noqa: S310  # nosec B310
             return json.load(response)
     except urllib.error.HTTPError as exc:
         if exc.code in (404, 422):
@@ -164,7 +194,7 @@ def _deref_to_commit(repo: str, sha: str, obj_type: str) -> str | None:
     """Resolve a ref target to a commit SHA, unwrapping one annotated-tag layer."""
     if obj_type == "commit":
         return sha
-    tag = _api(f"/repos/{repo}/git/tags/{sha}")
+    tag = _api(f"/repos/{_repo_path(repo)}/git/tags/{_segment(sha)}")
     if isinstance(tag, dict):
         return (tag.get("object") or {}).get("sha")
     return None
@@ -180,14 +210,14 @@ def resolve_tag_names(pin: Pin) -> list[str]:
        dereferences to it. Scoped by `matching-refs` to keep the call count
        bounded on repos with thousands of tags (`github/codeql-action`).
     """
-    tag_object = _api(f"/repos/{pin.repo}/git/tags/{pin.sha}")
+    tag_object = _api(f"/repos/{_repo_path(pin.repo)}/git/tags/{_segment(pin.sha)}")
     if isinstance(tag_object, dict) and tag_object.get("tag"):
         return [str(tag_object["tag"])]
 
     if pin.label is None:
         return []
 
-    refs = _api(f"/repos/{pin.repo}/git/matching-refs/tags/{pin.label}")
+    refs = _api(f"/repos/{_repo_path(pin.repo)}/git/matching-refs/tags/{_segment(pin.label)}")
     if not isinstance(refs, list):
         return []
     names: list[str] = []
@@ -219,7 +249,7 @@ def reverse_lookup_tags(pin: Pin) -> list[str]:
     """
     names: list[str] = []
     for page in range(1, _REVERSE_LOOKUP_PAGES + 1):
-        tags = _api(f"/repos/{pin.repo}/tags?per_page=100&page={page}")
+        tags = _api(f"/repos/{_repo_path(pin.repo)}/tags?per_page=100&page={page}")
         if not isinstance(tags, list) or not tags:
             break
         names.extend(
