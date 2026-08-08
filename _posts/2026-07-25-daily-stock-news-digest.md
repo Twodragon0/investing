@@ -52,7 +52,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE9HSDhBYzBXZ1I1SVBVQ0J5MTVaVzlmMDhSVmlod1V1YVZwNzU2cFNkNkNqcWxyeGJhaThMb29icV9wT1BiQnY1bU5WM05NeXFFNG5JakRkNVVEcE5N?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">마감시황] AI 투자 우려·유가 급등에 코스피·코스닥 '동반 약세' - 뉴스핌</a>
-<p class="news-desc">[마감시황] AI 투자 우려·유가 급등에 코스피·코스닥 '동반 약세' 뉴스핌</p>
+<p class="news-desc">[서울=뉴스핌] 김가희 기자 = 미국 기술주 급락과 국제유가 상승으로 투자심리가 위축되면서 국내 증시가 5% 넘게 급락했다. 코스피와 코스닥 시장에서는 프로그램 매도호가의 효력을 일시 정지하는 매도 사이드카가 나란히 발동됐다.24일 한국거래소에 따르면 이날 코</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -76,7 +76,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE9Gd3lVcjAxS3VaeTluSk1ubzNJYndyaUx0SmpGaWtMT2lpdU5SRVJiZzBNbEgycll5OUF5MWZraUpSUUhTTXFpRjBoWXZMQ3NPRy1FN0MyTzhoa3RjN21OMVRLdzZaTEhub24w?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 내림세로 장 마감 - 한강타임즈</a>
-<p class="news-desc">코스피·코스닥, 내림세로 장 마감 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 24일 코스피와 코스닥지수가 모두 내림세로 장을 마쳤다.이날 코스피는 전 거래일보다 5.72% 내린 6690.62에 마감했으며, 코스닥</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -107,7 +107,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFB6MDZvU0FUeGlkNXMtdFdRN2dxYkQxRmFOT25hSzBRTE1UNXQtQnhWbXhhSXNhUTNTWlRoWnFWZWN5bk9TZno2NXBwQVRLMzZXb3YzeUQySWVGbnV1TkMzNTItX3lRWDlm?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체 6% 급락에도 '초고수'는 담았다…SK하이닉스·삼성전자 역발상 매수</a>
-<p class="news-desc">반도체 6% 급락에도 '초고수'는 담았다…SK하이닉스·삼성전자 역발상 매수 ebn.co.kr</p>
+<p class="news-desc">코스피가 장중 5% 넘게 급락하고 SK하이닉스와 삼성전자 주가가 6% 안팎 하락했지만, 수익률 상위 투자자들은 오히려 두 종목을 집중 매수한 것으로 나타났다. 시</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -119,7 +119,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTFBBWDFMekNnbVBZdm5ybGhGajdPS1RETzA5Nk1DT0piQnVSSnBnR3oycFVqRmxXMWtxa3FzVGcwaWdUV2c1WUMzcWp3bGE3WVFEb1Byekd1OTlaNTRwSTBMZmphLWk?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">‘반도체 저승사자’ 숀 킴의 변심인가…낸드 재고 13주가 흔든 메모리 낙관론 - 베타뉴스</a>
-<p class="news-desc">‘반도체 저승사자’ 숀 킴의 변심인가…낸드 재고 13주가 흔든 메모리 낙관론 베타뉴스</p>
+<p class="news-desc">인공지능(AI) 수요를 기반으로 이어지던 메모리 반도체 낙관론에 경계의 목소리가 제기됐다. 낸드플래시 유통 재고가 코로나19 특수 당시 고점에 가까</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -186,7 +186,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxPQ0tUNmRJcnZ5cERqSzN0czF4Z3BMRy1XY29vZW5xQkdmdlhPZlp2U3VleGFaYTRSdGJXRFN6S2wwS1ctY2lTdzlBWUZ5U0x6V3hYNU1YbDRFdzNmY2hYQjJ3eG96cEVhby1hakpfWXJqVTV1VG9CZmdETFExYXdiWUlUMWlUM1d3bDNFaGlxbjVXNVI2X19VNjJaVzRMQWh5ekhMVVFJMUVnS0pndnh1RlVfdG1WME5RME1BQlMxWktBUkhmdi1RbU5HU3p3TE1yM0pURg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인은 미국 채권 수익률 급등으로 연준 금리 인상 확률이 높아져 $64K 미만으로 하락 - TradingView</a>
-<p class="news-desc">비트코인은 미국 채권 금리 급등으로 연준 금리 인상 확률이 높아져 $64K 아래로 떨어졌습니다 TradingView</p>
+<p class="news-desc">비트코인(BTC)은 월스트리트이 열린 후 최근 가격 조정이 가속화되면서 금요일에 1.6% 이상 하락했습니다. 주요 사항: 분석에 따르면 미국 채권 수익률이 이제 목표를 훨씬 상회한다고 경고합니다. TradingView의 데이터에 따르면 황소가 최근 상승세를 유지하기 위해 고군분투하면서 BITSTAMP:BTCUSD가 64,000달러에 접근하는 것으로 나타났습니다.BITSTAMP:BTCUS…</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>

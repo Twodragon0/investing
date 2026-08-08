@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-23 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFBrVXoyWlBhQ0xUejdmeFk1Z1lBay13WUtzSDF0RW9KWURXbDJPRUJwOFBQV05WaU9aeUhLSHdIWHZSdHhzc1AwTEZOelFzR1ByV0U4dFZB?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피 6797 마감…외국인 자금이 동시에 쏠린 뜻밖의 '종목' - 위키트리</a>
-<p class="news-desc">소셜 뉴스 미디어 위키트리 - 경제, 사회, 정치, 엔터테인먼트, 스포츠 등 최신 뉴스를 빠르고 정확하게 전달합니다.</p>
+<p class="news-desc">외국인 2조 매수에 코스피 상승, 코스닥은 기관·외국인 매도에 하락,반도체주 강세 주도한 외국인, 코스닥에선 개인만 외로운 매수</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-23 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFA3YUtsR0JuTkFDRmRqdVVIWDFyOG5VVk9OX2QyemFma3hwa3U0ODdKR01ud000Q2xTeHh2WTN6UjR2S3VWdGhhOWFLZFEwU3ZjaXhCT1JHRTBZd2k1dXBIaGQtZDNOZERoZFJzcg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자·SK하이닉스 상승에 코스피 6,700선 돌파.코스닥은 강보합 - 프리진경제</a>
-<p class="news-desc">삼성전자·SK하이닉스 상승에 코스피 6,700선 돌파.코스닥은 강보합 프리진경제</p>
+<p class="news-desc">21일, 코스피는 전 거래일 대비 231.68포인트 오른 6,747.95로 상승 마감했다. 코스닥 역시 3.70포인트 상승한 753.34로 장을 마쳤다.수급 동향을 보면, 코스피 시장에서 외국인과 기관이 각각 2,952억 원, 13,744억 원을 순매수하며 지수 상승을 이끌었다. 반면</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -133,7 +133,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-23 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTFBBT3QwSkV3TTBweUlIWG0wSjBZQzd0ZHczTTg0QlVEWTJwanRKdFhHTk1jcGp3alBnX2NHR2RXcWdWeFFTOFJBbzlnYUllQ0xjdEx6RQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">하이닉스 효과·한은 금리인상…환율 1470원대 초반까지 하락</a>
-<p class="news-desc">하이닉스 효과·한은 금리인상…환율 1470원대 초반까지 하락 JTBC</p>
+<p class="news-desc">SK하이닉스의 미국 나스닥 상장에 따른 달러 유입 기대 등으로 원·달러 환율이 1470원대 초반까지 떨어졌습니다. 오늘(21일) 서울 외환시장...</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -174,7 +174,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-23 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE04NThkQk5GU2Y2c2FCZlVoNmYwcUZ5UEtPWlpOWXFQcW1xTlZyc2M2dXdNcXI0cjZqblVNcFg1dXdhdTB1M1c1LU5SN2tYWUFiUVFnOXJoVjdxbVNK?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">특징주] 삼성전자 5%·SK하이닉스 8%대↑…美 반도체 훈풍 - 뉴스핌</a>
-<p class="news-desc">[특징주] 삼성전자 5%·SK하이닉스 8%대↑…美 반도체 훈풍 뉴스핌</p>
+<p class="news-desc">[서울=뉴스핌] 김가희 기자 = 22일 장 초반 삼성전자와 SK하이닉스가 미국 반도체주 급등에 힘입어 강세를 보이고 있다.한국거래소에 따르면 이날 오전 9시 19분 기준 삼성전자는 전 거래일 대비 1만4500원(5.60%) 오른 27만3500원에 거래되고 있다</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

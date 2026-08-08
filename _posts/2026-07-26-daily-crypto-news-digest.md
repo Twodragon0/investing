@@ -288,7 +288,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-26 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQU1FPSTJOaG9RcHdZd1pYd2I2Z2FqcjdoOWl0dVpUMEszOU9kZU9RYUlpNnpQcTFad0UtX2FINXVIQjBXaEQ5aHhWMENJa0ZuWVVSRzV0ckNTUDhwNFFIWW5CNi1kZlJXV1dlZFhzQkZROXh3aG1rVVZqRkVDLTNKbUNwaTdpRVRJaERDNEthVWVQTzVYcEE5Xw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Codeberg, 암호화폐 및 LLM 생성 코드 프로젝트 금지 - Hackaday</a>
-<p class="news-desc">Codeberg, 암호화폐 및 LLM 생성 코드 프로젝트 금지 Hackaday</p>
+<p class="news-desc">커뮤니티 주도 오픈 소스 프로젝트 호스팅 사이트 Codeberg는 LLM 및 기타 'AI' 도구를 통해 코드의 대부분 또는 전체가 기계 생성된 프로젝트는 더 이상 사용할 수 없다고 공식적으로 발표했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -300,7 +300,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-26 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE9rWUdueHBjdVVMVldCMUstcWxHMGF1TDJVLVhVNkNJQ2w1T1FvQ2FCZ2U1cTd5eDd3ZnRiQkhMMUdMejhsekdPN3c1TlZka3VBbWVGTzhwbThIR1cxdlpkclBRWHNGeVdp?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">EBN 데이터센터] 암호화폐 시총 2조2946억 달러로 감소…공포지수는 36</a>
-<p class="news-desc">[EBN 데이터센터] 암호화폐 시총 2조2946억 달러로 감소…공포지수는 36 ebn.co.kr</p>
+<p class="news-desc">암호화폐 시장이 전반적으로 약세 흐름을 보였다. 투자심리도 공포 구간에 머물며 단기 변동성 확대에 대한 경계감이 이어지는 모습이다.24일 코인게코(CoinGeck</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

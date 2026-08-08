@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-22 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFBOMWV5S1U3U29RcXc1ZV82dDg4b1ZUU1p3NGRTd2JqdHFFcEZTZlc2QnJqSTJSeHNuejRLVWY3LWlFZmFERFVHYWhaMnVYSUcwQUx4MW0xSTdHQl9nZDRjc29YY1dxZnRoTXc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">특징주] 외국인 '빛과전자' 매도 전환…기관 '삼성중공업·엘앤에프' 순매도 - 뉴스티앤티</a>
-<p class="news-desc">[특징주] 외국인 '빛과전자' 매도 전환…기관 '삼성중공업·엘앤에프' 순매도 뉴스티앤티</p>
+<p class="news-desc">20일 오전 키움증권 창구를 통한 외국인과 기관 투자자의 매매 동향 집계를 분석한 결과, 외국인은 장 초반 빛과전자와 JW신약 중심의 매수세를 펼치다 오전 중반</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -121,7 +121,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-22 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE9QSmFQaWRWNThJNlJPbDVVbE9pcW53MmhDZzg0VE9VQ1JlMGdMQ05ybWtHZ1JDZjdaWWVDeXBkcFZpUlJvUkRoeXZkNlVVd0k3R3ZEQ2p6aVFfOER3TkxhV2Y4alhOTzFIWXBv?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체 주 붕괴에 코스피·코스닥 '와르르' - 동양일보</a>
-<p class="news-desc">반도체 주 붕괴에 코스피·코스닥 '와르르' 동양일보</p>
+<p class="news-desc">코스피가 20일 4% 넘게 하락했다.코스피는 이날 304.33p(4.46%) 내린 6516.27에 거래를 마쳤다.지수는 전장보다 177.02p(2.60%) 내린 6643.58로 시작한 뒤 오전 중 낙폭을 축소해 6814.86까지 오르기도 했지만 이내 하락 폭을 확대했다.한 때 6472.80까지 밀리면서 6500선 아래로 주저앉기도 했다.대형 반도체 주의 하락도 이어졌다.시총 1위 삼성전자는 전장 대비 1만1000원(-4.31%) 내린 24만4000원, 2위 SK하이닉스는 7만8000원(-4.23%) 떨어진 176만4000원에 거래를…</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

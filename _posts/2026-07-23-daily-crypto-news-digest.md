@@ -126,7 +126,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-23 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiZ0FVX3lxTE9ZbExCRXlFbmtRZUxFaVNwMzhINGxFUnlaUThEcnlZQVlMUW9odGVfVnNCdW9iLWRmOFFVMFN1eXdXaVhySjhHNDY2Wml5WkMyRFF4Z2lJOHNZQVZOTk1oN05pWTZNRk0?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">2026년 7월 21일 비트코인의 현재 가격</a>
-<p class="news-desc">비트코인은 정부, 은행 등에 의해 통제되는 대신 P2P 네트워크에서 실행됩니다. 이를 통해 중개자 없이 다른 사람에게 직접 가치를 보낼 수 있습니다.</p>
+<p class="news-desc">2026년 7월 1일 동부 표준시 오전 6시 30분에 비트코인(1 BTC)의 가격은 $66,310.80입니다. 이는 어제 오전보다 $2,111.67 증가한 수치이며, 1년 전 가격과 비교하면 약 $51,100 손실된 수치입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -181,7 +181,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-23 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE1ydGZrZDB1ZlotTmdQQzhKbmp2THQ0Y3pheEVFWWotaGNCQTYxZHk4bmFBUGZ6ZnFNVnpaU1lvSjBYSXh0azlHdDc4RlppODktSE9MUjBfZnA3UjF4TWJTcHV1UmRCeFN0WUptbFFRME1ReXdoSFB3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">업비트, 렛저 중대 결함…알트코인 상장폐지 위험</a>
-<p class="news-desc">업비트, 렛저 중대 결함…알트코인 상장폐지 위험 BeInCrypto</p>
+<p class="news-desc">업비트가 레저(Ledger)의 결함으로 인해 개인키가 노출되고 10% 가격 급락이 발생한 후 질리카(ZIL)를 상장폐지 검토 종목에 올렸습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -222,7 +222,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-23 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9vR2pkU19MZ0NpXzdEcGFXeExvYldUQ18wLW90Q0dEd1BKTjdTMUYwYllkeXdPOXFsR1VWQTV4SjNGTG9qb0hfTjhrSUdVOEx2YW81Tkx4T0RuSFFJcFFCUkFsOVBsdms?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">2026년 7월 22일 비트코인의 현재 가격 - Fortune</a>
-<p class="news-desc">이 백만장자 투자자가 수십억 달러 규모의 아이디어를 발견한 방법 | 텀 시트 2026년 6월 24일 투자자 WHO SpaceX, OpenAI 및 Anthropic에 베팅하기 전에 | 텀 시트 2026년 6월 11일 투자 은행가들은 자신을 대체하기 위해 $2B AI을 구축했습니다 | 텀 시트 2026년 5월 28일 AI 골드 러시에 대한 진실에 대한 이 크리에이터 투자자 | 학기 시트 2026년 5월 13일 Palo Alto 옷장에서 10억 달러 수익까지: Gusto가 중소기업 소프트웨어를 Decrypt한 방법</p>
+<p class="news-desc">2026년 7월 22일 동부 표준시 오전 6시 15분에 비트코인(BTC) 하나의 가격은 $65,858.69입니다. 이는 어제 아침보다 $452.11 하락했고 작년 이맘때보다 약 $54.150 낮았습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>

@@ -109,7 +109,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-24 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE5aUThtQThqazFtdUJyZDdsN3VOTTIzcnpMTVBmTWlWckhJUkZ3UUFQZTR2b25YNEdUdjdnVEd2NThRYjVIV2RDX0N0T09QQm5hcE9SSU9NQlN6LTdD?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">마감시황] 외국인·기관 '사자'에 코스피 7000선 탈환…코스닥도 5%↑ - 뉴스핌</a>
-<p class="news-desc">[마감시황] 외국인·기관 '사자'에 코스피 7000선 탈환…코스닥도 5%↑ 뉴스핌</p>
+<p class="news-desc">[서울=뉴스핌] 김가희 기자 = 외국인과 기관의 동반 매수세에 힘입어 코스피가 7000선을 회복했다. 코스닥은 5% 넘게 급등하며 장중 매수 사이드카가 발동됐다.23일 한국거래소에 따르면 이날 코스피 지수는 전 거래일보다 299.19포인트(4.39%) 오른 7</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -121,7 +121,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-24 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE1qb0JqMlN5YzU1TXNEcTBlc2FfakIzaTF1aHYwZzZJN0ZIdGM3QVBERjZQQnBtRFNNYTVXaElpRE83WGZzekM3Z2VFdFlUa2lIUzdleDNIVk00TUZuRmR4OGlTTElKcGdQc1VB?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 오름세로 장 마감 - 한강타임즈</a>
-<p class="news-desc">코스피·코스닥, 오름세로 장 마감 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 23일 코스피와 코스닥지수가 모두 오름세로 장을 마쳤다.이날 코스피는 전 거래일보다 4.40% 오른 7096.89에 마감했으며, 코스닥</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -164,7 +164,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-24 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE4yVjc3OEwwTDBrdXNmX0kxLWZVdzhScTkyLW95VDl4a243c1RhQWxOMEpZblJVczZjT0tqRV9DMFdFaVhKbVJTRk1uY3dzYWQxTm9rcXR2V3NTRVZ4V2YyNnNVYXBkT1Q3c0JxMU5SMjN2UQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">문정현의 글로브] 반도체 '롤러코스터 주가'보다 걱정되는 것 - KB Think</a>
-<p class="news-desc">국민은행의 금융 콘텐츠 플랫폼 KB Think. 저축, 투자, 대출, 라이프, 부동산, 세금, 보험, 연금, 사업자 콘텐츠를 KB의 생각에서 만나보세요!</p>
+<p class="news-desc">삼성전자와 SK하이닉스 주가가 반도체·AI 거품 우려 속에 최근 급등락하고 있지만 어쩌면 진짜 주목해야 할 부분은 단기 주가 흐름이 아닐지도 모른다. 주가와 관계없이 고공행진하고 있는 메모리 반도체 가격이 불러올 정치적·지정학적 파장이 이들 기업에 더 큰 부담이 될 가</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -176,7 +176,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-24 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE04NThkQk5GU2Y2c2FCZlVoNmYwcUZ5UEtPWlpOWXFQcW1xTlZyc2M2dXdNcXI0cjZqblVNcFg1dXdhdTB1M1c1LU5SN2tYWUFiUVFnOXJoVjdxbVNK?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">특징주] 삼성전자 5%·SK하이닉스 8%대↑…美 반도체 훈풍 - 뉴스핌</a>
-<p class="news-desc">[특징주] 삼성전자 5%·SK하이닉스 8%대↑…美 반도체 훈풍 뉴스핌</p>
+<p class="news-desc">[서울=뉴스핌] 김가희 기자 = 22일 장 초반 삼성전자와 SK하이닉스가 미국 반도체주 급등에 힘입어 강세를 보이고 있다.한국거래소에 따르면 이날 오전 9시 19분 기준 삼성전자는 전 거래일 대비 1만4500원(5.60%) 오른 27만3500원에 거래되고 있다</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -231,7 +231,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-24 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxQTzBZb1BnRkJYSGx3elNpSnhsejRxSl9OZHIwUy0yZTExaXpaZ095WVFiUE9OSm1rd3F0WW5ZRVVmYTJ3VmZRRWw2bGtsTnRtZUc1Qk9wa1hheGtQT2pCM2tVTTBkQVIybkdvdEJQemdSQjg4Q0UzOWxFVnExY2JKN0JxY18?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">민간 자본은 IPO을 놓치고 거래 붐은 월스트리트 은행을 상승시킵니다 - Financial Times</a>
-<p class="news-desc">시장, 경제, 정치 최신 소식에 대한 Financial Times의 뉴스, 분석 및 의견</p>
+<p class="news-desc">이러한 반전은 금융 시장 변화에 더 탄력적으로 대응하는 부문으로 여겨졌던 최근 몇 년간의 극적인 변화를 나타냅니다.</p>
 <span class="source-tag" data-source-type="default">FT via Google</span>
 </div>
 </div>
