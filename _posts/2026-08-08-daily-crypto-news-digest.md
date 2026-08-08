@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-08 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: Bybit, 15억 달러 규모의 해킹에 대해 북한과 Lazarus Group을 고소하고 자산 동결 보장 - CoinDesk - 104건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 트럼프 주목</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 트럼프 관련 32건</li><li>🏦 <strong>거래소</strong>: 18건 수집</li><li>🔴 <strong>보안/해킹</strong>: 18건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxOcWh3ZEFOWlZzbko2Tk51Qmo0RG1VYVJLNGwzSkhGZV9hTTg4aUUzYWtobWo2X2pfbjc4Y2tTemFIYnBqX2trM0NxSzBBWVBxRkRFcmw2Ny05d3NZRGo0OVJHd0F6VVNBcXV2cDZtU3BBOEVia1c1UDNVRDRnSE9yaTdDWS1HMzlpbEpTODlYbzdJLUswSE1takVTVlRud0FHbGFDTkNQQWFlejdNdGJZdi1GY3gyU2FORVFJY0pOa1VseU91VzV2LQ?oc=5">Bybit, 15억 달러 규모의 해킹에 대해 북한과 Lazarus Group을 고소하고 자산 동결 보장 - CoinDesk</a> <span class="p0-desc">"이 명령은 소송이 진행되는 동안 식별된 도난당한 디지털 자산을 보존하기 위한 것이며, 이는 자금 회수, 국제 법 집행 조사 지원, 대규모 사이버 범죄에 대한 책임 강화를 위한 B.</span></li><li><a href="https://cointelegraph.com/features/bitcoiners-turn-to-dice-throws-as-self-custody-setups-are-re-evaluated?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">자기 관리 설정이 재평가됨에 따라 Bitcoiners는 주사위 던지기로 전환합니다.</a> <span class="p0-desc">Coldcard 해킹 이후 주사위 엔트로피가 새로운 표준이 될 수 있습니다.</span></li><li><a href="https://cointelegraph.com/news/coldcard-exploit-july-second-worst-month-2026?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Coldcard 익스플로잇으로 인해 7월 손실이 2억 4,700만 달러로 2026년 두 번째로 최악의 달이 되었습니다.</a> <span class="p0-desc">1억 달러 이상의 손실을 초래한 Coldcard 익스플로잇으로 인해 7월 암호화폐 도난 규모는 2억 4,700만 달러로 늘어나 2026년 두 번째로 최악의 달이 되었습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Bybit, 15억 달러 규모의 해킹에 대해 북한과 Lazarus Group을 고소하고 자산 동결 보장 - CoinDesk 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 104건의 뉴스 중 P1 주요 이슈도 8건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (50건): 비트코인, 트럼프 관련 (50건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (32건): 암호화폐, 트럼프, ETF 가격 변동 (32건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏦 거래소** (18건): 선물 관련 불확실성이 커지고 있어 리스크 관리에 유의하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- Bybit, 15억 달러 규모의 해킹에 대해 북한과 Lazarus Group을 고소하고 자산 동결 보장 - CoinDesk
-- 자기 관리 설정이 재평가됨에 따라 Bitcoiners는 주사위 던지기로 전환합니다.
-- Coldcard 익스플로잇으로 인해 7월 손실이 2억 4,700만 달러로 2026년 두 번째로 최악의 달이 되었습니다.
-
-### 주요 이슈
-
-- JP모건은 규제된 거래소가 Hyperliquid ETF 성장을 위협한다고 말합니다.
-- 코인 시황] 비트코인, ETF 자금 유입에도 박스권…美 암호화폐 법안 처리 여부도 변수 - 뉴스핌
-- 비트코인, 호르무즈 협상 기대감과 ETF 자금 유입 개선에 $65,000 근접 - Investing.com 한국어
-- 외 5건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, ETF, AI
-- **주요 출처**: Google News(20건), Google News KR(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-08-08.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-08-08.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **104건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

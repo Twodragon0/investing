@@ -33,51 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-08 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: SK하이닉스 이틀째 급락…외국인 매도에 142만원대로 밀려 - 산경투데이 - 190건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 금리, 환율 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 대통령 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 실적, 반도체 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBqNG5CU2VfYkpMMGtKa3h4M1lGQXI4SDFjTkRlLVlMWHZoODBfS3FnSTd6OHFFcVJyeUhKdDVCSG9lUnV6YTJtb1cyX1JCU0RLR0hUdVp1ZXN4QnFMNVhyaXBCZVNzWVU5VElHay1weELSAXRBVV95cUxOYTYyVUtOeWxBYjI2dXo2TnRTY0U3dkZ6M0wtMmFocXJ5LXR4VFVUR05GLUlZQWZ4VTd3cTNmQXhoOHVwWGpEVXMxMkwwazNXNGF1R25xTUh0QzV5Z25iU2NhSGVuVkY2XzdGRGk5c1p2WmYzYw?oc=5">SK하이닉스 이틀째 급락…외국인 매도에 142만원대로 밀려 - 산경투데이</a> <span class="p0-desc">[산경투데이 = 한승수 기자] 국내 반도체 대형주의 주가 흐름이 엇갈렸다. 외국인 투자자의 대규모 매도세가 이어진 가운데 SK하이닉스는 이틀 연속 큰 폭으로 하락한 반면 삼성전자는 가까스로 상승 마감했다.7일 유가증권시장에서 SK하이닉스는 전 거래일보다 4.88% 떨어진 142만2천원에</span></li><li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE4zLWNMSnVaSmVJYi00UFNpcnNoYWQ2cU5vUlhkT0F5WnJ3S25fbXZzT19MTEV2VzNoNURSNEd0U0lEaVcyX1hvYTUwNV9XLWhTS1duV2d0ZnpYRTdFSzlHa0FGTmZNU2VLVnc?oc=5">'연일 급락' SK하이닉스 4.8%↓…'소폭 반등' 삼성전자 0.2%↑</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: SK하이닉스 이틀째 급락…외국인 매도에 142만원대로 밀려 - 산경투데이 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 190건의 뉴스 중 P1 주요 이슈도 39건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (48건): 코스피, 코스닥, 하이닉스 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **📊 매크로/금리** (18건): 금리, 환율, 동결 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🏛️ 정치/정책** (10건): 트럼프, 대통령 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- SK하이닉스 이틀째 급락…외국인 매도에 142만원대로 밀려 - 산경투데이
-- '연일 급락' SK하이닉스 4.8%↓…'소폭 반등' 삼성전자 0.2%↑
-
-### 주요 이슈
-
-- 다우지수는 사상 최고치를 기록하고 S&P 500 및 나스닥은 기술 수익 하락세를 보이고 있습니다.
-- 주식 시장 랠리 앞서는 힘; SpaceX, Palantir, Sandisk가 주요 수익 변동입니다
-- ETF 평화 입찰에 따른 유입으로 고수익 채권 소매 펀드에 27억 6천만 달러 유입
-- 외 36건
-
-### 투자자 체크포인트
-
-- 한국 기사 69건, 글로벌 기사 121건 수집
-- 한국 지수: KOSPI 6,258.77(-0.60%), KOSDAQ 798.81(-0.36%), USD/KRW 1,409.47(-0.95%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">48건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:38%"></div></div><span class="theme-count">18건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:21%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:27%"></div></div><span class="theme-count">13건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:10%"></div></div><span class="theme-count">5건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-08-08.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-08-08.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,258.77 (-0.60%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
+- KOSDAQ 798.81 (-0.36%).
+- *호르무즈 해협 문제를 놓고 이란-오만 회담이 계속되는 가운데 유가 상승에 트레이더들이 반응하면서 국채 수익률은 목요일 상승했습니다.*
 
 ## 테마별 주요 뉴스
 

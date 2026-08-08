@@ -29,30 +29,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-08-08 - 규제 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 규제 긴급: 가타야마 사츠키 재무대신 겸 금융장관 기자회견(2026년 7월 30일) - 6건 분석</strong><ul><li>🏛️ <strong>정치/정책</strong>: 2건 수집</li><li>🔵 <strong>규제/정책</strong>: 2건 수집</li><li>🏦 <strong>거래소</strong>: 1건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.fsa.go.jp/en/conference/minister/2026/20260730.html">가타야마 사츠키 재무대신 겸 금융장관 기자회견(2026년 7월 30일)</a> <span class="p0-desc">먼저, 2026년 28일에 발생한 구마모토 지진으로 목숨을 잃은 WHO 분들을 위해 진심으로 기도하고 싶습니다. 또한 이번 재해로 인해 피해를 입은 모든 분들께 진심 어린 위로의.</span></li></ul></div>
 
-## 전체 뉴스 요약
-
-**긴급**: 가타야마 사츠키 재무대신 겸 금융장관 기자회견(2026년 7월 30일) 
-총 6건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
-
-### 테마별 동향
-
-- **🏛️ 정치/정책** (2건): minister, publication, initiative 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-- **🔵 규제/정책** (2건): 크립토인사이트 규제 움직임 (2건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-- **🏦 거래소** (1건): information, reminds, markets 관련 불확실성이 커지고 있어 리스크 관리에 유의하세요.
-
-### 긴급 이슈
-
-- 가타야마 사츠키 재무대신 겸 금융장관 기자회견(2026년 7월 30일)
-
-### 주요 이슈
-
-- CFTC 시장에 명확한 가격 정보 표시를 상기시킵니다.
-
-### 투자자 체크포인트
-
-- **주요 지역**: 아시아 3건, 미국 2건, 한국 1건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 6건
 - **아시아**: 3건
