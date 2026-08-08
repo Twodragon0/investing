@@ -119,6 +119,37 @@ def test_ignore_command_still_gates_on_main() -> None:
     )
 
 
+def test_git_deployment_enabled_never_disables_production() -> None:
+    """`git.deploymentEnabled` blocks deployment *creation* — main must stay enabled.
+
+    Measured 2026-08-08: `ignoreCommand` does not stop a deployment record from
+    being created; skipped commits show up as `CANCELED` records in both the
+    production and preview environments. `git.deploymentEnabled` is the only
+    repo-level knob that prevents creation at all, which is exactly why getting
+    it wrong is silent and total: the schema's boolean form applies to *every*
+    branch, so `"deploymentEnabled": false` stops production deploying with no
+    error anywhere. Only the per-branch object form is safe here.
+    """
+    git = _config().get("git")
+    if git is None:
+        pytest.skip("git not configured")
+    enabled = git.get("deploymentEnabled")
+    if enabled is None:
+        pytest.skip("git.deploymentEnabled not configured")
+    assert enabled is not False, (
+        "vercel.json sets `git.deploymentEnabled: false`. The boolean form applies to "
+        "every branch including main, so production stops deploying entirely and "
+        "nothing reports an error. Use the per-branch object form instead."
+    )
+    assert isinstance(enabled, dict), (
+        f"`git.deploymentEnabled` must be the per-branch object form, got {type(enabled).__name__}."
+    )
+    assert enabled.get("main") is not False, (
+        "vercel.json disables auto-deployment for `main`. main is the production "
+        "branch — the site would stop updating with no failing check anywhere."
+    )
+
+
 def test_exclude_pathspec_detector_is_bidirectional() -> None:
     """A detector loosened to match nothing would leave the assertion green.
 

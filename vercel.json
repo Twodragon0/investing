@@ -6,6 +6,11 @@
   "outputDirectory": "_site",
   "regions": ["icn1"],
   "trailingSlash": true,
+  "git": {
+    "deploymentEnabled": {
+      "python-coverage-comment-action-data": false
+    }
+  },
   "ignoreCommand": "[ \"$VERCEL_GIT_COMMIT_REF\" = main ] || exit 0; git rev-parse -q --verify HEAD^2 >/dev/null && exit 1; git diff --quiet HEAD^ HEAD -- . ':!./_state' ':!./.github' ':!./tests' ':!./docs' && exit 0; exit 1",
   "redirects": [
     {
