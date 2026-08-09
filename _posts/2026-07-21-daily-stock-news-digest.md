@@ -52,7 +52,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-21 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFBOMWV5S1U3U29RcXc1ZV82dDg4b1ZUU1p3NGRTd2JqdHFFcEZTZlc2QnJqSTJSeHNuejRLVWY3LWlFZmFERFVHYWhaMnVYSUcwQUx4MW0xSTdHQl9nZDRjc29YY1dxZnRoTXc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">특징주] 외국인 '빛과전자' 매도 전환…기관 '삼성중공업·엘앤에프' 순매도 - 뉴스티앤티</a>
-<p class="news-desc">[특징주] 외국인 '빛과전자' 매도 전환…기관 '삼성중공업·엘앤에프' 순매도 뉴스티앤티</p>
+<p class="news-desc">20일 오전 키움증권 창구를 통한 외국인과 기관 투자자의 매매 동향 집계를 분석한 결과, 외국인은 장 초반 빛과전자와 JW신약 중심의 매수세를 펼치다 오전 중반</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -107,7 +107,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-21 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE9QSmFQaWRWNThJNlJPbDVVbE9pcW53MmhDZzg0VE9VQ1JlMGdMQ05ybWtHZ1JDZjdaWWVDeXBkcFZpUlJvUkRoeXZkNlVVd0k3R3ZEQ2p6aVFfOER3TkxhV2Y4alhOTzFIWXBv?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체 주 붕괴에 코스피·코스닥 '와르르' - 동양일보</a>
-<p class="news-desc">반도체 주 붕괴에 코스피·코스닥 '와르르' 동양일보</p>
+<p class="news-desc">코스피가 20일 4% 넘게 하락했다.코스피는 이날 304.33p(4.46%) 내린 6516.27에 거래를 마쳤다.지수는 전장보다 177.02p(2.60%) 내린 6643.58로 시작한 뒤 오전 중 낙폭을 축소해 6814.86까지 오르기도 했지만 이내 하락 폭을 확대했다.한 때 6472.80까지 밀리면서 6500선 아래로 주저앉기도 했다.대형 반도체 주의 하락도 이어졌다.시총 1위 삼성전자는 전장 대비 1만1000원(-4.31%) 내린 24만4000원, 2위 SK하이닉스는 7만8000원(-4.23%) 떨어진 176만4000원에 거래를…</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -119,7 +119,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-21 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxNOFZ5a3RGR1JnOFVzR21zTXpkWDh2TkFxeDEzNnA4dDc2aE5PYlZyd3ZUU3M3N2dpN2QzMVBFSHV5dmtqMXpkOEFpS2FiOHJNaWxLdUxrZ0RNV2FWMUtQdlZqMXhsZEZvYkhpUjZ3YkMyVVdsR3ZNS1d6dnZsM0RkdFA2TlVjb0RUbWJRSkg1YVRwdzJZZnhIdlpBTTV0OTZDX0hz?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">AI 클라우드 주식 IREN(나스닥: IREN)은 신규 고객 계약 28억 달러 소식에 급등</a>
-<p class="news-desc">Investorideas.com에서 2025년 최고의 투자 아이디어를 살펴보세요. AI, 암호화폐, 대마초, 청정 기술, 광업, 게임 등에 대한 주식 뉴스, 팟캐스트, 비디오 및 통찰력을 얻으세요.</p>
+<p class="news-desc">IREN (NASDAQ: IREN) shares soar as the company raises its ARR target to more than $4bn on $2.8bn in new AI Cloud contracts with Microsoft, NVIDIA, and Perplexity.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
@@ -184,7 +184,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-21 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE52eURHUUZsblBpRnVtNE9ta0MxTksyU192TktFNmZWMnY3akZlcldGMUhQMFlLaERjaHJkRS1tMjBqdVJPZFdUbUdZajZfVElXLVd4cFJuTGp4Zw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">환율, 왜 갑자기 떨어졌나 봤더니…SK하이닉스 효과였다 [분석+</a>
-<p class="news-desc">환율, 왜 갑자기 떨어졌나 봤더니…SK하이닉스 효과였다 [분석+] 한국경제</p>
+<p class="news-desc">환율, 왜 갑자기 떨어졌나 봤더니…SK하이닉스 효과였다 [분석+], 원화, G20 통화 절상률 1위…SK하이닉스가 안정시킨 환율 '죽음의 고환율 터널' 벗어났나 하이닉스 ADR 자금·한은 인상 효과 두 달 만에 최저</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -259,7 +259,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-21 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxOVUd6VV9QaE1oZkt3clVUVEwwa3hwSlBjRjFEWlJjQ2t5alVRVWxockw2VmtNRFg4aER3eVVyMVVfOHpEc1ZoT005QWI2MWNEVUZJSC1BUVBjVm1GX2lmTVVORFlGYUdDUGN6N0x5NTlIMTViMUlmUDhCOS03S3VSSDRFMFJUcGlHd0tESTExTjVZWlNiVHZTRVd3bW1fZGRmbTFlemNmbEZBS1RMUUxZ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 광부에서 AI 인프라 리더까지: Hut 8(나스닥: HUT), MARA(나스닥: MARA)가 권력을 이익으로 전환하는 방법</a>
-<p class="news-desc">Investorideas.com은 대규모 투자 아이디어를 위한 플랫폼입니다. 주식 뉴스 속보부터 Exploring Mining, Cleantech, Crypto Corner, Cannabis News 및 AI Eye와 같은 최고 등급의 투자 팟캐스트에 이르기까지 상위 부문에 걸쳐 브랜드 오리지널 콘텐츠를 제공합니다. 또한 우리는 광업, 암호화폐, 재생 에너지, 생명 공학, 게임 등에 대한 무료 투자자 주식 디렉토리를 제공하며, 공개 기업이 참여하는 투자자에게 다가갈 수 있도록 돕는 뉴스 출판 서비스도 제공합니다.</p>
+<p class="news-desc">Hut 8(나스닥: HUT)과 MARA Holdings(나스닥: MARA)는 CORZ, IREN, WULF 및 APLD가 합류하여 AI 데이터 센터 인프라로 전환하는 이전 비트코인 광부의 물결을 이끌고 있습니다.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
@@ -283,7 +283,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-21 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE9xcE0yYXBMY3RnTzZjRW1QZXZOb2hmRnFzVEQ0NnNDOWhFZnBEZXNDVHJpQkNzemZsTlNaeVVlSUJVQlNOSVJxUXJ0ZjNxSHBKNEwzRGFDTHViMmZVX0ZoNE9BNmRoX19mZWM4?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">정부 규제에도 식지 않은 투자 열기…삼성전자·SK하이닉스 레버리지 ETF 거래대금 12조원 돌파 - 뉴스인</a>
-<p class="news-desc">정부 규제에도 식지 않은 투자 열기…삼성전자·SK하이닉스 레버리지 ETF 거래대금 12조원 돌파 뉴스인</p>
+<p class="news-desc">[뉴스인] 김태엽 기자 =정부가 단일종목 레버리지 ETF에 대한 규제 강화에 나섰지만 투자자들의 관심은 좀처럼 꺾이지 않고 있다. 미국 반도체주 조정으로 삼성전자와 SK하이닉스 관련 레버리지 ETF가 일제히 급락했음에도 이를 저가 매수 기회로 판단한 자금이 유입되면서 전체 거래대금은 12조원을 넘어섰다.20일 한국거래소에 따르면 지난 5월 27일 상장 이후 개인투자자 순매수 상위권을 유지하고 있는 'KODEX SK하이닉스 단일종목 레버리지'는 전 거래일보다 1335원(9.15%) 하락한 1만3250원에 거래를 마쳤다.같은 날 'TI</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

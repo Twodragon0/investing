@@ -85,7 +85,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-22 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiZ0FVX3lxTE1NMkJtSFBKTDl4Mk55eUdaUWxveXBBUmlkY2ZUdzltYTZZWHNMbENwNFJYaUZoeVFvUnFZZS1wNjlJY3QyYmRxRFcxNnBiM25hc2pzM0JwRmNKTk5JVUJpN3BMaDVPWUU?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">2026년 7월 20일 비트코인의 현재 가격</a>
-<p class="news-desc">비트코인은 정부, 은행 등에 의해 통제되는 대신 P2P 네트워크에서 실행됩니다. 이를 통해 중개자 없이 다른 사람에게 직접 가치를 보낼 수 있습니다.</p>
+<p class="news-desc">At 6 a.m. Eastern Time on July 20, 2026, the price of Bitcoin (1 BTC) is $64,199.13. That marks a $331.62 decrease from yesterday morning—and more than a $53,100 fall compared with one year ago. Bitcoin is the original cryptocurrency and remains the most popular crypto coin on the market.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -235,7 +235,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-22 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiaEFVX3lxTE80d0RhY1BPZU5QaGxIU2xIaERTNXRBbU4za0Z4ajdEZEVtOVdfMW4zSUthbkpMMG5SWGtfaDlSeE9pNURHek5nMThTQzkteHJfbklJQTc5OTI2a2hvbHg1b19WakxuQS1Z?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">2026년 7월 21일 이더리움의 현재 가격</a>
-<p class="news-desc">이더리움은 단순한 디지털 화폐가 아닙니다. 이는 분산형 컴퓨팅 플랫폼입니다. 즉, 사용자는 회사나 은행의 감독 없이 앱을 구축하고 실행할 수 있습니다.</p>
+<p class="news-desc">2026년 7월 21일 동부 표준시 오전 6시 30분에 이더리움(ETH) 하나의 가격은 $1,940.67입니다. 이는 어제 오전보다 75.85달러 오른 것이며, 지난해 이맘때보다는 약 1,823달러 감소한 수치입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
