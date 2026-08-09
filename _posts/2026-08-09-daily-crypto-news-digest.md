@@ -41,40 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-09 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 캐나다 기업의 콜드월렛이 1억 4천만 달러 규모의 비트코인 해킹으로 인해 손상된 방법 - 101건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 달러 이슈 부각</li><li>🔴 <strong>보안/해킹</strong>: 20건 수집</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 제재 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMipAFBVV95cUxORkFjbUdaSldLTGFUUVV2RkRLTzdiX2dkVTVJelV4a3RWaXd6RzkySWZuSDJJVkVVTjJXMkFKZ01oZGNEczBvUTNUVk53YnlhRUVFb3YwY19MQWYtS2xZQmFTWnNHVFNpRFRTekVFRzhvaEhUbjliUjdpcFFRUkdBcHM0NGFmOHB1MWZfUUYtN2UzQjNPNHpVcUNCUWFDc2w4c0tUMw?hl=en-US&gl=US&ceid=US%3Aen">캐나다 기업의 콜드월렛이 1억 4천만 달러 규모의 비트코인 해킹으로 인해 손상된 방법</a> <span class="p0-desc">Coinkite의 1억 4천만 달러 규모의 비트코인 해킹에서 발생한 일, 콜드 지갑의 작동 방식, 그리고 WHO이 돈을 잃었을 경우 다시 돌려받을 수 있는 방법은 다음과 같습니다.</span></li><li><a href="https://www.bloomberg.com/news/features/2026-08-06/bitcoin-btc-faithful-tested-as-hackers-drain-funds-stashed-offline-msi84uao">안전하다고 추정되는 비트코인 도구 해킹, 헌신적인 신앙 시도</a> <span class="p0-desc">안전하다고 추정되는 비트코인 도구를 해킹하여 헌신적인 신앙을 시험합니다.</span></li><li><a href="https://cointelegraph.com/news/bybit-us-court-trace-funds-north-korea-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">미국 법원, 15억 달러 규모의 북한 해킹 자금 추적에 대한 Bybit의 제안을 지지</a> <span class="p0-desc">신속한 검색을 통해 거래소는 미국에서 운영되는 플랫폼의 계정 ID, 잔액 및 거래 내역을 찾을 수 있습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 캐나다 기업의 콜드월렛이 1억 4천만 달러 규모의 비트코인 해킹으로 인해 손상된 방법 
-외 P0 긴급 이슈 8건이 추가 감지되었습니다. 총 101건의 뉴스 중 P1 주요 이슈도 13건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (47건): 비트코인, 알트코인 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (24건): 암호화폐, 달러, XRP 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🔴 보안/해킹** (20건): moscow, hack, exchanges 보안 이슈 (20건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 안전하다고 추정되는 비트코인 도구 해킹, 헌신적인 신앙 시도
-- 미국 법원, 15억 달러 규모의 북한 해킹 자금 추적에 대한 Bybit의 제안을 지지
-
-### 주요 이슈
-
-- 미국, 이란 혁명수비대 지원 위해 두바이 암호화폐 거래소 제재
-- 트럼프 암호화폐 뉴스: DJT는 시장 상황을 이유로 Crypto.com 거래를 폐기하고 CRO 토큰은 5% 하락합니다.
-- Reuters 통신 보도에 따라 미국은 이란의 IRGC를 지원하기 위해 두바이 암호화폐 거래소를 제재했습니다.
-- 외 10건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, ETF
-- **주요 출처**: Google News(20건), Cointelegraph(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-08-09.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-08-09.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **101건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔴 보안/해킹
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

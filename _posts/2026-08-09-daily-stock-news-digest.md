@@ -33,51 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-09 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 한 달 새 125원 급락…1,410원대 원·달러, ‘언더슈팅’ 가능성도 - 174건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 주목</li><li>📊 <strong>매크로/금리</strong>: 환율, 금리 관련 12건</li><li>🤖 <strong>AI/기술</strong>: 반도체, 변동성 주목</li><li>🏦 <strong>거래소</strong>: IPO, 옵션 관련 8건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE1tcjVIdXdGdHA2SE9PYndKRDFjbnlDc2NkMVNVcU5aelo2UjQwUmxkU0dhY3hMVUJQeUpmSlNhaWZnV1czMjlDNWYzODRpMXdJVUt3ZnBXNl95X2xSbFliaWNxY0RPOXg2RXJYRmx3?oc=5">한 달 새 125원 급락…1,410원대 원·달러, ‘언더슈팅’ 가능성도</a> <span class="p0-desc">원·달러 환율이 8월 7일 오전 10시 44분 1,417.9원까지 내려갔다. 불과 한 달 전만 해도 1,550원선을 넘나들며 “1,600원도 갈 수 있다”는 전망</span></li><li><a href="https://www.cnbc.com/2026/08/08/hugging-face-ai-hack-cybersecurity-black-hat.html">Hugging Face hack marks start of dangerous AI cyber era and many firms 'don't even know it'</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 한 달 새 125원 급락…1,410원대 원·달러, ‘언더슈팅’ 가능성도 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 174건의 뉴스 중 P1 주요 이슈도 32건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (36건): 코스피, 코스닥, 외국인 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **📊 매크로/금리** (12건): 환율, 금리, 연준 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🤖 AI/기술** (10건): 반도체, 변동성, 마이크로소프트 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [MODERATE]**: 일부 주의 이벤트가 있으나, 전반적으로 안정적인 상황입니다.
-
-### 긴급 이슈
-
-- 한 달 새 125원 급락…1,410원대 원·달러, ‘언더슈팅’ 가능성도
-- Hugging Face 해킹은 위험한 AI 사이버 시대의 시작을 의미하며 많은 기업은 '그것도 모릅니다'
-
-### 주요 이슈
-
-- 나스닥 ETF 투자 가이드 - The Globe and Mail
-- 삼전닉스 급락에 개미들 美 증시로…월가는 “과열 경고”
-- S&P 500 수익: 2026년 중반 스코어카드, AI 영향 및 3분기에 주목할 사항 - Ch
-- 외 29건
-
-### 투자자 체크포인트
-
-- 한국 기사 57건, 글로벌 기사 117건 수집
-- 한국 지수: KOSPI 6,258.77(-0.60%), KOSDAQ 798.81(-0.36%), USD/KRW 1,407.45(-1.09%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">36건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:33%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:28%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:22%"></div></div><span class="theme-count">8건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:8%"></div></div><span class="theme-count">3건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-08-09.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-08-09.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,258.77 (-0.60%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
+- KOSDAQ 798.81 (-0.36%).
+- *나스닥 조정은 AI 지출 우려와 연준 불확실성으로 인해 심화됨 Tech Stocks Equiti.com*
 
 ## 테마별 주요 뉴스
 
