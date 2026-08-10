@@ -129,6 +129,24 @@ changes (항상 실행, 변경 파일 판정)
   `upgradeToPro=build-rate-limit` 로 FAILURE 였다. required 로 걸면 쿼터 소진이
   머지 차단이 된다.
 
+#### 검토 후 기각: `tests/test_vercel_config_guard.py` 를 독립 체크로 분리 (2026-08-08)
+
+`vercel.json` 가드가 11분짜리 `quality` 잡 안에 묻혀 있으니 전용 워크플로우로
+빼서 required 로 걸자는 안을 검토했고, **기각한다.** 두 가지가 근거다.
+
+1. **커버리지 갭이 없다.** 이 가드는 `tests/` 에 있고 `code-quality.yml` 은 PR
+   트리거에 `paths:` 필터가 없다 — 즉 모든 PR 에서 돈다. 위 표의 `quality` 가
+   이미 그 커버리지를 대표한다. 분리하면 같은 불변식에 required 컨텍스트가 둘로
+   늘 뿐이다.
+2. **분리해도 required 가 되지 않는다.** required 등록은 아래 bypass actor 제약에
+   걸려 저장소 전체가 막혀 있다. 새 워크플로우를 만들어도 Phase 2 가 열리기
+   전까지는 그냥 체크 하나가 더 생기는 것이다.
+
+남는 이득은 피드백 지연 단축(11m37s → ~1min)뿐인데, 가드의 역할은 PR 을 막는
+것이고 그건 두 배치 모두에서 동일하다. 지연이 실제로 문제가 된 사례가 나오면
+그때 다시 본다 — 워크플로우 신설의 근거는 "더 빠르다"가 아니라 "느려서 사고가
+났다"여야 한다.
+
 ### 차단 사유 — `github-actions` 는 이 저장소에서 bypass actor 가 될 수 없다 (2026-08-07 실측)
 
 Phase 2 의 `pull_request`·`required_status_checks` 는 **직접 푸시를 막으므로 자동
@@ -221,10 +239,10 @@ bypass 를 넣으면 "그 actor 로 도는 어떤 워크플로우든 main 에 �
    이라 그 fatal 이 "빌드"로 읽혀 조용하다. `:!./<path>` 를 쓴다.
 3. **프리뷰도 배포 레코드를 만든다.** `ignoreCommand` 가 비-main 을 즉시 skip 해도
    레코드는 `CANCELED` 로 남는다(2026-08-07 하루 36건 = 그날 Production 레코드와
-   동수). 막으려면 `vercel.json` 의 `git.deploymentEnabled` 로 브랜치별 생성 자체를
-   끈다 — 대시보드 전용이라던 이전 서술은 틀렸다. 다만 스키마의 객체 형태는
-   "지정한 브랜치만 false" 이므로 *"main 빼고 전부"* 는 표현할 수 없고, boolean
-   형태(`false`)는 main 까지 꺼버린다.
+   동수). `vercel.json` 의 `git.deploymentEnabled` 로 브랜치별 생성을 끄는 길이
+   스키마상 존재하지만, **main 에 넣는 것만으로는 듣지 않는다**(2026-08-08 실측,
+   아래 "후속 실측" 절). 스키마의 객체 형태는 "지정한 브랜치만 false" 이므로
+   *"main 빼고 전부"* 는 표현할 수 없고, boolean 형태(`false`)는 main 까지 꺼버린다.
 4. **rate limit 에 걸린 커밋은 `ignoreCommand` 를 평가조차 하지 않는다.** Vercel 이
    배포 생성 단계에서 거부하므로, 이미 쿼터가 소진된 상태에서는 이 최적화가
    개입할 여지가 없다.
@@ -274,14 +292,38 @@ Production 레코드 4건과 맞췄는데, 그날 실제 레코드는 26건이�
 
 **결정: 봇 데이터 브랜치의 배포 생성을 끈다.** `python-coverage-comment-action-data`
 는 커버리지 액션이 데이터를 커밋하는 orphan 브랜치라 프리뷰가 아무 의미도 없는데
-프리뷰 레코드의 **34%(27/80)** 를 혼자 쓴다. `vercel.json` 에
-`git.deploymentEnabled: {"python-coverage-comment-action-data": false}` 를 넣어
-생성 자체를 막았다. 대시보드 설정은 필요 없다.
+프리뷰 레코드의 **34%(27/80)** 를 혼자 쓴다. main 의 `vercel.json` 에
+`git.deploymentEnabled: {"python-coverage-comment-action-data": false}` 를 넣었다 —
+**다만 이것만으로는 막히지 않았다.** 아래 "후속 실측" 절을 볼 것.
 
 PR 브랜치 프리뷰는 남긴다 — 건수가 분산돼 있고 리뷰 가치가 있다. 그래도 부족하면
 수집기 푸시 배칭(main 커밋 자체를 줄이는 유일한 레버) → 플랜 업그레이드 순이다.
 
-**아직 미검증**: `git.deploymentEnabled: false` 가 레코드 생성을 실제로 0으로
-만드는지. 스키마 설명("will not trigger an auto-deployment")과 위 거절 사례에
-근거한 기대일 뿐, 이 저장소에서 관측한 것은 아니다. 머지 후 다음 커버리지 푸시에서
-`vercel ls --environment preview` 에 해당 브랜치가 안 나오는지로 확인할 것.
+### 후속 실측 (2026-08-08 15:24) — main 에 넣은 `git.deploymentEnabled` 는 듣지 않았다
+
+위 조치의 "아직 미검증" 항목을 머지 직후 확인했고, **기대는 틀렸다.**
+
+| 시각(KST) | 사건 |
+|---|---|
+| 15:16:13 | `git.deploymentEnabled` 를 담은 머지 커밋 `afa44a862` 가 main 에 착지 |
+| 15:24:09 | 커버리지 액션이 `dc3a0957d` 를 `python-coverage-comment-action-data` 에 푸시 |
+| 15:24:13 | Vercel 이 프리뷰 배포 레코드를 **생성** — `CANCELED` |
+
+즉 main 의 `vercel.json` 은 다른 브랜치의 배포 생성을 막지 못한다. 설정이
+전파될 8분이 있었고 브랜치 키는 정확히 일치했다.
+
+가장 잘 들어맞는 설명은 **Vercel 이 `vercel.json` 을 푸시된 커밋의 ref 에서
+읽는다**는 것이다. 배포를 만들기 *전에* 판정해야 하므로 그 ref 말고는 읽을
+것이 없다. 같은 관측이 이를 뒷받침한다 — 이 브랜치는 자체 `vercel.json`
+(`{"ignoreCommand": "exit 0"}`, 커밋 `d4afb3172`)을 갖고 있고, 레코드가 매번
+`CANCELED` 로 남는 것이 바로 그 브랜치-로컬 설정이 적용된 결과다.
+
+Vercel 공식 문서(`/docs/project-configuration/git-configuration`)는 어느 ref 에서
+읽는지를 **명시하지 않는다**. 위 설명은 관측 1건에 대한 최적 가설이지 벤더가
+확인해 준 사실이 아니다.
+
+**따라서 남는 선택지**: 끄려면 `git.deploymentEnabled` 를 **그 브랜치 자신의**
+`vercel.json` 에 넣어야 한다. 아직 시도하지 않았다 — 시도한다면 다음 커버리지
+푸시에서 `vercel ls --environment preview` 에 레코드가 안 생기는지로 같은 방식으로
+확인할 것. 실패하면 남는 건 대시보드 설정뿐이고, 그렇다면 "저장소 설정으로 막을
+수 있다"는 이 절의 주장 자체를 다시 뒤집어야 한다.
