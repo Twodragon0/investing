@@ -15,7 +15,7 @@ readability-lxml==0.8.4.1
 # 0.4.4 는 CVE-2026-49825(javascript: URL 미제거, XSS) 취약 → 0.4.5 에서 수정.
 lxml-html-clean>=0.4.5
 yfinance==1.5.2
-matplotlib~=3.10.9
+matplotlib~=3.11.1
 Pillow>=12.2.0
 numpy~=2.4.4
 playwright~=1.62
