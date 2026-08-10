@@ -29,48 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-08-10 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 연준은 9월에 금리를 인상할 것으로 예상되었습니다. 경제학자들은 지금은 그것에 베팅하지 말라고 말합니다. - 14건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 환율, 트럼프 주목</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 이재명 주목</li><li>🔵 <strong>규제/정책</strong>: 트럼프, 환율 관련 4건</li><li>📈 <strong>가격/시장</strong>: 환율, 여성경제신문 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxOWkV3WmFpUmlEQlBFQ2hBNzk2eUx2d3RSZjlTT044WXc3Rjl5Mm53SmJqdnZFTHRPVmF2VFlKTUdQZjQ2LXdTU01TS0c5VDJBWjFrNnQwVHc4QnVidzgtSVFiYzZlc19fcXlyUVEzMk1lWHdmUkg5c2VTT2JJbnQtNDh2NFlGQmtUMU1TM1NIOXpYU0lCVTYxNA?oc=5">연준은 9월에 금리를 인상할 것으로 예상되었습니다. 경제학자들은 지금은 그것에 베팅하지 말라고 말합니다.</a> <span class="p0-desc">고용 부진으로 인해 연준의 9월 이자율 결정에 대한 전망이 극적으로 바뀌었습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 연준은 9월에 금리를 인상할 것으로 예상되었습니다. 경제학자들은 지금은 그것에 베팅하지 말라고 말합니다. 
-총 14건의 뉴스 중 P1 주요 이슈도 2건 확인됩니다.
+오늘 수집된 총 14건 중 텔레그램 0건, 소셜 0건, 정치·경제 14건으로 주요 이슈를 정리했습니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (9건): 환율, 트럼프, 금리 매크로 변수 (9건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🏛️ 정치/정책** (5건): 트럼프, 이재명, 부동산 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-- **🔵 규제/정책** (4건): 트럼프, 환율 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 연준은 9월에 금리를 인상할 것으로 예상되었습니다. 경제학자들은 지금은 그것에 베팅하지 말라고 말합니다.
-
-### 주요 이슈
-
-- 암호화폐 법안의 윤리 조항으로 인해 트럼프에게 세금 감면 혜택이 제공될 수 있음 - Northeast Times
-- 역대급 ‘부채 증가’ 경제…금융기본권을 생각한다
-
-### 투자자 체크포인트
-
-- 정치·경제 14건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">9건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:56%"></div></div><span class="theme-count">5건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:44%"></div></div><span class="theme-count">4건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:89%"></div></div><span class="theme-count">8건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:11%"></div></div><span class="theme-count">1건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-08-10.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-08-10.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 주요 이슈
+- 긴급 알림 1건에 대한 선별 모니터링
 
 ## 정치·경제 동향
 

@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-10 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 안전하다고 추정되는 비트코인 도구 해킹, 헌신적인 신앙 시도 - 77건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, ETF 주목</li><li>📈 <strong>가격/시장</strong>: 달러 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 국채 동향 주시</li><li>🔴 <strong>보안/해킹</strong>: 9건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.bloomberg.com/news/features/2026-08-06/bitcoin-btc-faithful-tested-as-hackers-drain-funds-stashed-offline-msi84uao">안전하다고 추정되는 비트코인 도구 해킹, 헌신적인 신앙 시도</a> <span class="p0-desc">안전하다고 추정되는 비트코인 도구를 해킹하여 헌신적인 신앙을 시험합니다.</span></li><li><a href="https://news.google.com/read/CBMinAFBVV95cUxNeTY4NXNDakNzMkw2SzREekd6LVJIUWJrcS1rTV82b1BLZlJGU0RxbGpUWFNpLWV1RVpCVzlnMnYwVENKdzhDSDRfaU95d2NhdkRhbUJEemh4NjRxdi1kakQ2UUs2VVlsbHp3aDg2VGQ1MmRUUlVOVkphbmNGQU1zcWJqblNzSjQ4NHlDaURHdi1NTmhhNzlvXzVZTy0?hl=en-US&gl=US&ceid=US%3Aen">1억 3천만 달러 규모의 Coldcard 해킹 이후 자금이 비트코인 ETF로 유입되고 있습니다. 지금 바로 구매할 수 있는 최고의 비트코인 ETF을 소개합니다.</a> <span class="p0-desc">8월 초부터 비트코인(CRYPTO: BTC) 가격은 약 1% 하락했습니다(8월 5일 기준). 이러한 작은 움직임은 Coldcard라고 불리는 자기 보관형 하드웨어 지갑으로 높은 평.</span></li><li><a href="https://cointelegraph.com/news/bybit-us-court-trace-funds-north-korea-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">미국 법원, 15억 달러 규모의 북한 해킹 자금 추적에 대한 Bybit의 제안을 지지</a> <span class="p0-desc">신속한 검색을 통해 거래소는 미국에서 운영되는 플랫폼의 계정 ID, 잔액 및 거래 내역을 찾을 수 있습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 안전하다고 추정되는 비트코인 도구 해킹, 헌신적인 신앙 시도 
-외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 77건의 뉴스 중 P1 주요 이슈도 13건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (40건): 비트코인, ETF, 알트코인 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (19건): 달러 가격 변동 (19건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏛️ 정치/정책** (13건): 트럼프, 국채, 제재 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 안전하다고 추정되는 비트코인 도구 해킹, 헌신적인 신앙 시도
-- 1억 3천만 달러 규모의 Coldcard 해킹 이후 자금이 비트코인 ETF로 유입되고 있습니다. 지금 바로 구매할 수 있는 최고의 비트코인 ETF을 소개합니다.
-- 미국 법원, 15억 달러 규모의 북한 해킹 자금 추적에 대한 Bybit의 제안을 지지
-
-### 주요 이슈
-
-- Reuters 통신 보도에 따라 미국은 이란의 IRGC를 지원하기 위해 두바이 암호화폐 거래소를 제재했습니다.
-- 비트코인은 ETF 유입으로 인해 오프셋 포크 문제로 인해 $65,000 아래로 하락합니다.
-- 트럼프 암호화폐 뉴스: DJT는 시장 상황을 이유로 Crypto.com 거래를 폐기하고 CRO 토큰은 5% 하락합니다.
-- 외 10건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, ETF, AI
-- **주요 출처**: Google News(20건), CoinDesk(15건), Cointelegraph(12건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-08-10.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-08-10.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **77건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏛️ 정치/정책
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
