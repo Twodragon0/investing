@@ -44,6 +44,7 @@ import sys
 from collections import Counter, defaultdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import urlparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "common"))
 from config import setup_logging  # noqa: E402
@@ -64,6 +65,8 @@ POST_TYPE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}-(?P<kind>.+)\.md$")
 KIND_SUFFIX_RE = re.compile(r"-\d+$")
 TITLE_RE = re.compile(r"^title:\s*(?P<title>.+?)\s*$", re.MULTILINE)
 URL_RE = re.compile(r'https?://[^\s)\]"<>]+')
+# 항목 재등장 집계에서 제외할 호스트 — 자기 사이트와 XML 네임스페이스
+NON_ITEM_HOSTS = ("2twodragon.com", "w3.org")
 
 
 def is_runtime_skip_line(line: str) -> bool:
@@ -211,6 +214,17 @@ def check_post_duplicates(kind_filter: str | None) -> tuple[list[str], list[str]
     return title_dups, slot_dups
 
 
+def is_non_item_host(url: str) -> bool:
+    """자기 사이트 링크와 XML 네임스페이스는 뉴스 항목이 아니다.
+
+    호스트를 `urlparse` 로 뽑아 정확히 비교한다. `"w3.org" in url` 같은 부분 문자열
+    검사는 `https://evil.com/?x=w3.org` 도 통과시킨다(CodeQL
+    `py/incomplete-url-substring-sanitization`).
+    """
+    host = (urlparse(url).hostname or "").lower()
+    return any(host == h or host.endswith(f".{h}") for h in NON_ITEM_HOSTS)
+
+
 def count_item_recurrence(kind_filter: str, recent: int) -> tuple[int, int]:
     """참고용 — 항목 URL 이 몇 개나 여러 포스트에 재등장하는가. 게이트 아님."""
     posts = [p for p in sorted(POSTS_DIR.glob("*.md")) if kind_filter in p.name][-recent:]
@@ -221,8 +235,7 @@ def count_item_recurrence(kind_filter: str, recent: int) -> tuple[int, int]:
         except OSError:
             continue
         for url in set(URL_RE.findall(text)):
-            # 자기 사이트 링크와 XML 네임스페이스는 항목이 아니다
-            if "2twodragon" in url or "w3.org" in url:
+            if is_non_item_host(url):
                 continue
             seen[url].add(path.name)
     return len([1 for files in seen.values() if len(files) > 1]), len(seen)
