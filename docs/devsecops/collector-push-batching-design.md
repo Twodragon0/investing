@@ -112,9 +112,48 @@ _state/translation_cache.json
       presence(금지 패턴 부재). `docs/devsecops/ci-regression-guards.md` 규약을 따를 것.
 - [ ] non-vacuous 증명: 화이트리스트에 `_state/crypto_news_seen.json` 을 넣은
       임시 사본에서 가드가 실제로 FAIL 하는지.
-- [ ] 수집기 1개(예: `collect-blockchain`, 1회/일이라 관측이 쉽다)에 먼저 적용해
-      최소 3일 관측 후 나머지로 확대.
+- [ ] 수집기 1개에 먼저 적용해 최소 3일 관측 후 나머지로 확대. 대상 선정 근거는
+      아래 "파일럿 대상" 절.
 - [ ] 관측 지표: 해당 수집기의 커밋 수 감소, 그리고 **중복 포스트 0건**.
+
+### 파일럿 대상 — `collect-regulatory`
+
+no-op 커밋은 13개 수집기에 고르게 퍼져 있지 않다. 최근 600커밋 스캔:
+
+| 수집기 | no-op(안전) | `_state`+dedup | 콘텐츠 | 계 | 크론/일 |
+|---|---|---|---|---|---|
+| crypto news | 68 | 11 | 16 | 95 | 6 |
+| stock news | 55 | 6 | 16 | 77 | 5 |
+| social media | 41 | 7 | 16 | 64 | 4 |
+| **regulatory news** | **27** | 5 | 17 | 49 | **3** |
+| political trades | 12 | 4 | 17 | 33 | 2 |
+| geopolitical | 11 | 5 | 17 | 33 | 2 |
+| 나머지 7개 | **0** | — | — | — | — |
+
+**7개 수집기는 no-op 커밋을 하나도 만들지 않는다.** 그 수집기에 파일럿을 걸면
+새 코드 경로가 아예 실행되지 않은 채 "3일간 문제 없음" 이라는 거짓 신호가 나온다
+(최초 초안이 `collect-blockchain` 을 제안했던 이유는 "1회/일이라 관측이 쉽다"
+였는데, 그 수집기는 표본 16건 전부가 콘텐츠 커밋이라 정확히 이 함정이었다).
+
+`collect-regulatory` 를 고른다: no-op 비율 55%(27/49)로 경로가 확실히 실행되고,
+3회/일이라 3일이면 관측 표본이 5건 안팎으로 쌓이며, crypto/stock news 처럼
+발행량이 큰 축이 아니라 폭발 반경이 작다.
+
+### 셸 로직 진리표 (2026-08-10 스크래치 레포 실측)
+
+| staged 집합 | 플래그 | 결과 |
+|---|---|---|
+| 화이트리스트 2개만 | `true` | **SKIPPED** (staged 0으로 reset) |
+| 화이트리스트 1개만 | `true` | **SKIPPED** |
+| 화이트리스트 + `*_seen.json` | `true` | COMMITTED |
+| 화이트리스트 + `_posts/` | `true` | COMMITTED |
+| `*_seen.json` 단독 | `true` | COMMITTED |
+| 화이트리스트 2개만 | `false` | COMMITTED |
+| 변경 없음 | `true` | NOTHING_STAGED |
+
+`tests/test_collector_noop_commit_whitelist_guard.py` 는 화이트리스트의 **내용**만
+강제한다 — 위 분기 동작 자체는 이 표가 근거다. 액션의 셸을 고칠 때 이 표를 다시
+돌릴 것.
 
 ## 남는 불확실성
 
