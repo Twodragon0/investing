@@ -9,6 +9,34 @@
 1. 수집기 커밋 수 (일자별) — 절감이 실제로 일어났는가
 2. no-op skip 발생 횟수 — 새 코드 경로가 실행되기는 했는가 (표본 0이면 판정 불가)
 3. 중복 포스트 — 아래 "좁힌 정의" 참조
+4. 부하 보정 절감 — 아래 "부하 보정" 참조
+
+부하 보정
+---------
+지표 1의 **원값은 절감의 증거가 되지 못한다.** 커밋 수는 그날 수집기가 몇 번
+돌았는지, 뉴스가 얼마나 나왔는지에 따라 파일럿과 무관하게 움직인다. 파일럿 전후를
+원값으로 비교하면 그 변동이 절감으로 위장한다.
+
+두 비율로 나눠 본다. 교란원이 서로 달라 교차 검증이 된다:
+
+- **실행당 커밋** = 수집기 커밋 수 / 워크플로우 실행 수. "몇 번 돌았나" 를 상쇄한다.
+  파일럿이 직접 건드리는 축이라 해석이 가장 곧다 — 실행 한 번이 커밋을 만들 확률.
+- **대조군 비** = 수집기 커밋 수 / 파일럿 미적용 수집기들의 커밋 수. 뉴스량처럼
+  모든 수집기에 공통으로 걸리는 변동을 상쇄한다 (difference-in-differences).
+
+`main` 총 커밋 수를 분모로 쓰지 않는 이유: 그 값은 PR 머지에 지배된다(08-07 은
+61건 중 25건이 PR 머지 — 개발 활동 스파이크이지 정상 부하가 아니다). 개발이 활발한
+날 regulatory 비중이 파일럿과 무관하게 떨어져 절감으로 오독된다.
+
+전·후 구간의 길이가 달라도 된다 — 둘 다 비율이라 기간에 정규화돼 있다.
+
+한계 두 가지, 명시해 둔다:
+
+- **경계 귀속**. 커밋은 커밋 시각으로, 실행은 실행 시작 시각으로 각각 나눈다. 머지
+  직전에 시작해 직후에 커밋한 실행은 분자와 분모가 갈릴 수 있다 — 최대 1실행.
+  후 구간 표본이 작을 때 무시할 수 없으므로 분자/분모 원값을 함께 출력한다.
+- **대조군 오염**. 파일럿을 다른 수집기로 확대하면 그 수집기는 대조군에서 빼야
+  한다. `CONTROL_COLLECTORS` 를 갱신하지 않으면 분모도 함께 줄어 절감이 과소평가된다.
 
 중복 지표의 좁힌 정의
 --------------------
@@ -30,6 +58,7 @@ Usage
   python scripts/tools/check_pilot_observation.py
   python scripts/tools/check_pilot_observation.py --collector regulatory --days 7
   python scripts/tools/check_pilot_observation.py --with-runs   # gh CLI 로 skip 횟수까지
+  python scripts/tools/check_pilot_observation.py --pilot-merged 2026-08-10T13:14:51+09:00
 
 종료 코드: 포스트 수준 중복이 있으면 1, 없으면 0.
 """
@@ -44,6 +73,7 @@ import sys
 from collections import Counter, defaultdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from typing import NamedTuple
 from urllib.parse import urlparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "common"))
@@ -67,6 +97,25 @@ TITLE_RE = re.compile(r"^title:\s*(?P<title>.+?)\s*$", re.MULTILINE)
 URL_RE = re.compile(r'https?://[^\s)\]"<>]+')
 # 항목 재등장 집계에서 제외할 호스트 — 자기 사이트와 XML 네임스페이스
 NON_ITEM_HOSTS = ("2twodragon.com", "w3.org")
+
+DEFAULT_COLLECTOR = "regulatory"
+
+# 파일럿이 main 에 들어온 시각 — 커밋 5297e40bb
+# "feat: no-op 수집기 커밋을 만들지 않는다 (regulatory 파일럿) …(#1148)"
+PILOT_MERGED_DEFAULT = "2026-08-10T13:14:51+09:00"
+
+# 대조군 — no-op 커밋을 실제로 만들면서 파일럿이 **적용되지 않은** 수집기.
+#
+# 나머지 7개 수집기는 설계 문서 실측(최근 600커밋)에서 no-op 커밋이 0건이다. 넣어도
+# 파일럿에 반응할 수 없는 상수 항이라 분모만 키워 비율의 민감도를 떨어뜨린다.
+#
+# 파일럿을 확대하면 그 수집기를 여기서 빼야 한다. 안 빼면 분모도 같이 줄어 절감이
+# 과소평가된다. `tests/test_check_pilot_observation_load_adjusted.py` 가 파일럿
+# 대상이 이 목록에 들어오는 경우를 red 로 만든다.
+CONTROL_COLLECTORS = ("crypto", "stock", "social", "political", "geopolitical")
+
+# 설계 문서의 "수집기 1개에 먼저 적용해 최소 3일 관측" 게이트.
+MIN_OBSERVATION_DAYS = 3
 
 
 def is_runtime_skip_line(line: str) -> bool:
@@ -96,25 +145,146 @@ def _git(*args: str) -> str:
     return out.stdout
 
 
-def collect_commit_counts(collector: str, days: int) -> dict[str, int]:
-    """수집기 커밋을 KST 일자별로 센다."""
-    raw = _git(
-        "log",
-        "origin/main",
-        f"--since={days + 1}.days.ago",
-        "--format=%cI|%s",
-    )
+def commit_log(days: int) -> str:
+    """`origin/main` 의 최근 커밋을 `<ISO>|<subject>` 줄로 가져온다.
+
+    한 번 가져와 여러 수집기에 대해 파싱한다 — 수집기마다 git 을 다시 돌리면 대조군
+    6축에 6번 돈다.
+    """
+    return _git("log", "origin/main", f"--since={days + 1}.days.ago", "--format=%cI|%s")
+
+
+def parse_commit_timestamps(raw: str, collector: str) -> list[datetime]:
+    """커밋 로그에서 해당 수집기 커밋의 시각만 KST 로 뽑는다.
+
+    주제 매칭은 `collect <name>` 접두 — `collect political` 이
+    `collect geopolitical news` 를 잡아채지 않는다(두 축이 하나로 합쳐지면 대조군
+    분모가 조용히 틀어진다). 파싱 불가한 줄은 건너뛴다.
+    """
     needle = f"collect {collector}".lower()
-    by_day: Counter[str] = Counter()
+    stamps: list[datetime] = []
     for line in raw.splitlines():
         if "|" not in line:
             continue
         iso, subject = line.split("|", 1)
         if needle not in subject.lower():
             continue
-        when = datetime.fromisoformat(iso).astimezone(KST)
+        try:
+            stamps.append(datetime.fromisoformat(iso).astimezone(KST))
+        except ValueError:
+            logger.warning("커밋 시각 파싱 실패: %s", iso)
+    return stamps
+
+
+def collect_commit_counts(collector: str, days: int) -> dict[str, int]:
+    """수집기 커밋을 KST 일자별로 센다."""
+    by_day: Counter[str] = Counter()
+    for when in parse_commit_timestamps(commit_log(days), collector):
         by_day[when.date().isoformat()] += 1
     return dict(by_day)
+
+
+def split_by_pilot(stamps: list[datetime], pilot_merged: datetime) -> tuple[int, int]:
+    """(파일럿 전, 후) 개수. 머지 시각과 같은 순간은 '후' 다.
+
+    들어오는 시각의 타임존이 섞여 있어도 된다(커밋은 KST, gh 실행은 UTC) — 비교는
+    aware datetime 끼리라 절대 시각으로 이뤄진다.
+    """
+    pre = post = 0
+    for stamp in stamps:
+        if stamp < pilot_merged:
+            pre += 1
+        else:
+            post += 1
+    return pre, post
+
+
+class LoadRatio(NamedTuple):
+    """파일럿 전·후의 분자/분모 원값. 비율은 메서드로 파생한다.
+
+    원값을 들고 다니는 이유: 후 구간 표본이 한 자릿수라 `0.67` 만 봐서는 2/3인지
+    20/30인지 구분이 안 되는데 둘의 신뢰도는 전혀 다르다.
+    """
+
+    pre_num: int
+    pre_den: int
+    post_num: int
+    post_den: int
+
+    def pre(self) -> float | None:
+        """분모가 0이면 None — 0.0 을 돌려주면 '절감 100%' 로 읽힌다."""
+        return self.pre_num / self.pre_den if self.pre_den else None
+
+    def post(self) -> float | None:
+        return self.post_num / self.post_den if self.post_den else None
+
+    def delta_pct(self) -> float | None:
+        """전 대비 후의 변화율(%). 음수가 절감이다."""
+        pre, post = self.pre(), self.post()
+        if pre is None or post is None or pre == 0:
+            return None
+        return (post - pre) / pre * 100
+
+
+def build_ratio(
+    numerator: list[datetime],
+    denominator: list[datetime],
+    pilot_merged: datetime,
+    since: datetime | None = None,
+) -> LoadRatio:
+    """두 시각 계열을 파일럿 경계로 갈라 분자/분모 쌍을 만든다.
+
+    `since` 는 두 계열에 **같은** 창을 강제한다. 커밋은 git `--since` 로, 실행은 gh
+    `--limit` 으로 각각 잘려 오기 때문에 그대로 두면 창이 어긋난다 — 실행 쪽이 더
+    멀리까지 오면 전 구간 분모만 부풀어 절감이 과대평가된다.
+    """
+    if since is not None:
+        numerator = [t for t in numerator if t >= since]
+        denominator = [t for t in denominator if t >= since]
+    pre_num, post_num = split_by_pilot(numerator, pilot_merged)
+    pre_den, post_den = split_by_pilot(denominator, pilot_merged)
+    return LoadRatio(pre_num, pre_den, post_num, post_den)
+
+
+def is_underpowered(pilot_merged: datetime, now: datetime) -> bool:
+    """관측 기간이 설계 게이트(3일)에 못 미치는가."""
+    return now - pilot_merged < timedelta(days=MIN_OBSERVATION_DAYS)
+
+
+def collect_run_timestamps(workflow: str, limit: int) -> tuple[list[datetime], str | None]:
+    """gh CLI 로 워크플로우 실행 시작 시각을 가져온다.
+
+    `collect_skip_counts` 와 달리 목록 한 번만 부른다(로그를 받지 않는다). gh 가
+    없으면 ([], 이유) 로 graceful degradation — 대조군 비 쪽은 그래도 계산된다.
+    """
+    try:
+        listing = subprocess.run(
+            ["gh", "run", "list", f"--workflow={workflow}", f"--limit={limit}", "--json", "createdAt"],
+            cwd=REPO_ROOT,
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+    except FileNotFoundError:
+        return [], "gh CLI 미설치"
+    except subprocess.CalledProcessError as e:
+        return [], f"gh run list 실패 ({e.returncode})"
+
+    try:
+        runs = json.loads(listing.stdout)
+    except json.JSONDecodeError:
+        return [], "gh 출력 파싱 실패"
+
+    stamps: list[datetime] = []
+    for run in runs:
+        created = run.get("createdAt")
+        if not created:
+            continue
+        try:
+            stamps.append(datetime.fromisoformat(created.replace("Z", "+00:00")).astimezone(KST))
+        except ValueError:
+            logger.warning("실행 시각 파싱 실패: %s", created)
+    return stamps, None
 
 
 def collect_skip_counts(workflow: str, limit: int) -> tuple[int, int, str | None]:
@@ -241,9 +411,78 @@ def count_item_recurrence(kind_filter: str, recent: int) -> tuple[int, int]:
     return len([1 for files in seen.values() if len(files) > 1]), len(seen)
 
 
+def _fmt_ratio(value: float | None, digits: int = 2) -> str:
+    return "n/a" if value is None else f"{value:.{digits}f}"
+
+
+def _fmt_delta(value: float | None) -> str:
+    return "n/a" if value is None else f"{value:+.1f}%"
+
+
+def report_load_adjusted(collector: str, days: int, pilot_merged: datetime, now: datetime) -> None:
+    """[4] 부하 보정 절감 — 실행당 커밋과 대조군 비를 나란히 출력한다.
+
+    판정을 내리지 않는다. 이 스크립트의 종료 코드는 포스트 수준 중복만 본다 —
+    절감은 측정 대상이지 게이트가 아니다.
+    """
+    logger.info("[4] 부하 보정 절감 (파일럿 머지 %s)", pilot_merged.isoformat())
+
+    # 커밋과 실행에 같은 창을 강제한다. git `--since` 와 gh `--limit` 은 서로 다른
+    # 기준으로 자르므로 여기서 한 번 더 맞추지 않으면 분모만 멀리까지 샌다.
+    window_start = now - timedelta(days=days)
+    raw = commit_log(days)
+    pilot_commits = parse_commit_timestamps(raw, collector)
+
+    # 실행은 최대 6회/일을 가정하고 여유를 둔다 — 부족하면 전 구간이 잘려 나간다.
+    runs, reason = collect_run_timestamps(f"collect-{collector}.yml", limit=max(30, days * 6))
+    if reason:
+        logger.info("  실행당 커밋: 건너뜀 (%s)", reason)
+    else:
+        per_run = build_ratio(pilot_commits, runs, pilot_merged, since=window_start)
+        logger.info(
+            "  실행당 커밋   전 %s (%d/%d)  후 %s (%d/%d)  → %s",
+            _fmt_ratio(per_run.pre()),
+            per_run.pre_num,
+            per_run.pre_den,
+            _fmt_ratio(per_run.post()),
+            per_run.post_num,
+            per_run.post_den,
+            _fmt_delta(per_run.delta_pct()),
+        )
+
+    control_commits = [t for name in CONTROL_COLLECTORS for t in parse_commit_timestamps(raw, name)]
+    versus = build_ratio(pilot_commits, control_commits, pilot_merged, since=window_start)
+    logger.info("  대조군: %s", ", ".join(CONTROL_COLLECTORS))
+    logger.info(
+        "  대조군 비    전 %s (%d/%d)  후 %s (%d/%d)  → %s",
+        _fmt_ratio(versus.pre(), 3),
+        versus.pre_num,
+        versus.pre_den,
+        _fmt_ratio(versus.post(), 3),
+        versus.post_num,
+        versus.post_den,
+        _fmt_delta(versus.delta_pct()),
+    )
+
+    elapsed_days = (now - pilot_merged).total_seconds() / 86400
+    if is_underpowered(pilot_merged, now):
+        logger.warning(
+            "  ⚠ 관측 %.1f일 < %d일 — 판정 보류. 위 숫자는 방향 참고용이다.",
+            elapsed_days,
+            MIN_OBSERVATION_DAYS,
+        )
+    else:
+        logger.info("  관측 %.1f일 — 게이트(%d일) 충족", elapsed_days, MIN_OBSERVATION_DAYS)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--collector", default="regulatory", help="수집기 이름 (기본: regulatory)")
+    parser.add_argument("--collector", default=DEFAULT_COLLECTOR, help=f"수집기 이름 (기본: {DEFAULT_COLLECTOR})")
+    parser.add_argument(
+        "--pilot-merged",
+        default=PILOT_MERGED_DEFAULT,
+        help=f"파일럿 머지 시각 ISO (기본: {PILOT_MERGED_DEFAULT})",
+    )
     parser.add_argument("--days", type=int, default=7, help="커밋 집계 기간 (기본: 7일)")
     parser.add_argument(
         "--with-runs",
@@ -282,6 +521,16 @@ def main() -> int:
     logger.info("  같은 날짜·종류 파일 중복: %d건", len(slot_dups))
     for line in slot_dups:
         logger.warning("    %s", line)
+
+    try:
+        pilot_merged = datetime.fromisoformat(args.pilot_merged)
+    except ValueError:
+        logger.error("--pilot-merged 파싱 실패: %s", args.pilot_merged)
+        return 2
+    if pilot_merged.tzinfo is None:
+        logger.error("--pilot-merged 에 타임존이 없다: %s (예: %s)", args.pilot_merged, PILOT_MERGED_DEFAULT)
+        return 2
+    report_load_adjusted(args.collector, args.days, pilot_merged, datetime.now(KST))
 
     dup_urls, total_urls = count_item_recurrence(args.collector, recent=8)
     logger.info("[참고] 항목 URL 재등장: %d/%d건 (최근 포스트 8개)", dup_urls, total_urls)
