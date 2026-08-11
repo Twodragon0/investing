@@ -10,6 +10,25 @@
 2. no-op skip 발생 횟수 — 새 코드 경로가 실행되기는 했는가 (표본 0이면 판정 불가)
 3. 중복 포스트 — 아래 "좁힌 정의" 참조
 4. 부하 보정 절감 — 아래 "부하 보정" 참조
+5. 포착률 — 아래 "포착률" 참조
+
+포착률
+------
+절감 %는 표본이 작을 때 판정에 쓸 수 없다. 파일럿 후 4실행(2026-08-11 시점)이면
+skip 비율의 95% 신뢰구간 폭이 0.53 이라 51.9%(파일럿 전 실측 no-op 비율)와 25%를
+구분하지 못한다. 해상도는 √n 으로만 늘어서 regulatory 단독 30일 관측이 폭 0.20 이다.
+
+포착률은 표본이 작아도 판정된다. 묻는 것이 비율이 아니라 **사건의 유무**이기 때문:
+
+- **누출** — 파일럿 후에도 화이트리스트 부분집합 커밋이 남아 있는가. 1건이라도
+  있으면 skip 이 동작하지 않은 것이다. git 만으로 판정된다.
+- **오검출** — skip 이 화이트리스트 **밖**까지 버렸는가. 1건이라도 있으면 dedup
+  상태나 콘텐츠가 유실된 것이다. gh 로그가 필요하다(`--with-runs`).
+
+화이트리스트는 액션(`NOOP_STATE_PATHS`)에서 읽는다. 여기 상수로 복사하면 액션이
+바뀔 때 조용히 어긋나고, 어긋난 화이트리스트는 판정을 거짓 PASS 로 만든다. 읽기에
+실패하면 빈 집합으로 폴백하지 않고 **판정을 보류**한다 — 빈 집합이면 모든
+`_state`-only 커밋이 "부분집합 아님" 이 되어 누출 0건으로 보인다.
 
 부하 보정
 ---------
@@ -116,6 +135,17 @@ CONTROL_COLLECTORS = ("crypto", "stock", "social", "political", "geopolitical")
 
 # 설계 문서의 "수집기 1개에 먼저 적용해 최소 3일 관측" 게이트.
 MIN_OBSERVATION_DAYS = 3
+
+# 화이트리스트는 액션이 원본이다. 여기 상수로 복사하면 액션이 바뀔 때 조용히 어긋나고,
+# 그 어긋남은 포착률을 거짓 PASS 로 만든다.
+ACTION_PATH = REPO_ROOT / ".github" / "actions" / "python-collect" / "action.yml"
+NOOP_PATHS_RE = re.compile(r'^\s*NOOP_STATE_PATHS="(?P<paths>[^"]*)"\s*$', re.M)
+
+# 사이트 산출물 — 이게 섞이면 무조건 커밋돼야 한다.
+CONTENT_PREFIXES = ("_posts/", "assets/")
+
+# skip 로그에서 파일 목록 줄을 가려내는 형태. 경로는 공백을 포함하지 않는다.
+SKIP_PATH_RE = re.compile(r"^[\w./-]+$")
 
 
 def is_runtime_skip_line(line: str) -> bool:
@@ -287,11 +317,14 @@ def collect_run_timestamps(workflow: str, limit: int) -> tuple[list[datetime], s
     return stamps, None
 
 
-def collect_skip_counts(workflow: str, limit: int) -> tuple[int, int, str | None]:
-    """gh CLI 로 워크플로우 실행 로그에서 skip 발생 횟수를 센다.
+def collect_skip_counts(workflow: str, limit: int) -> tuple[int, int, str | None, list[list[str]]]:
+    """gh CLI 로 워크플로우 실행 로그에서 skip 발생 횟수와 버린 파일 목록을 센다.
 
-    Returns (skip 횟수, 조사한 실행 수, 건너뛴 이유). gh 가 없거나 인증이 없으면
-    (0, 0, 이유) 로 graceful degradation.
+    Returns (skip 횟수, 조사한 실행 수, 건너뛴 이유, skip 블록들). gh 가 없거나
+    인증이 없으면 (0, 0, 이유, []) 로 graceful degradation.
+
+    파일 목록까지 같은 로그에서 뽑는 이유: 오검출 판정([5])에 필요한데, 로그를 다시
+    받으면 실행당 수 초가 두 배로 든다.
     """
     try:
         listing = subprocess.run(
@@ -310,17 +343,18 @@ def collect_skip_counts(workflow: str, limit: int) -> tuple[int, int, str | None
             check=True,
         )
     except FileNotFoundError:
-        return 0, 0, "gh CLI 미설치"
+        return 0, 0, "gh CLI 미설치", []
     except subprocess.CalledProcessError as e:
-        return 0, 0, f"gh run list 실패 ({e.returncode})"
+        return 0, 0, f"gh run list 실패 ({e.returncode})", []
 
     try:
         runs = json.loads(listing.stdout)
     except json.JSONDecodeError:
-        return 0, 0, "gh 출력 파싱 실패"
+        return 0, 0, "gh 출력 파싱 실패", []
 
     skips = 0
     checked = 0
+    blocks: list[list[str]] = []
     for run in runs:
         run_id = str(run.get("databaseId", ""))
         if not run_id:
@@ -336,9 +370,132 @@ def collect_skip_counts(workflow: str, limit: int) -> tuple[int, int, str | None
         except subprocess.CalledProcessError:
             continue
         checked += 1
-        if any(is_runtime_skip_line(line) for line in log.stdout.splitlines()):
+        found = parse_skip_paths(log.stdout)
+        if found:
             skips += 1
-    return skips, checked, None
+            blocks.extend(found)
+    return skips, checked, None, blocks
+
+
+def read_noop_whitelist() -> frozenset[str] | None:
+    """액션의 `NOOP_STATE_PATHS` 를 읽는다. 읽지 못하면 None.
+
+    **빈 집합으로 폴백하면 안 된다.** 모든 `_state`-only 커밋이 "부분집합 아님" 이
+    되어 누출 0건 — 거짓 PASS 가 난다. None 을 돌려 판정 자체를 보류시킨다.
+    """
+    try:
+        text = ACTION_PATH.read_text(encoding="utf-8")
+    except OSError as e:
+        logger.warning("액션 파일을 읽지 못했다 %s: %s", ACTION_PATH, e)
+        return None
+    match = NOOP_PATHS_RE.search(text)
+    if not match:
+        logger.warning('`NOOP_STATE_PATHS="..."` 를 %s 에서 찾지 못했다', ACTION_PATH)
+        return None
+    paths = frozenset(match.group("paths").split())
+    return paths or None
+
+
+def classify_commit(paths: list[str], whitelist: frozenset[str]) -> str:
+    """커밋을 content / noop / state_other 로 가른다.
+
+    `noop` 은 "파일럿이 있었다면 skip 됐어야 하는 것" 이다. 콘텐츠가 섞이면 무조건
+    content, 화이트리스트 밖 `_state`(주로 dedup)가 섞이면 state_other 다. 빈 커밋은
+    noop 이 아니다 — 버릴 것이 없었던 것이지 skip 대상이 아니다.
+    """
+    if any(p.startswith(CONTENT_PREFIXES) for p in paths):
+        return "content"
+    if paths and set(paths) <= whitelist:
+        return "noop"
+    return "state_other"
+
+
+class CollectorCommit(NamedTuple):
+    when: datetime
+    sha: str
+    paths: tuple[str, ...]
+
+
+def commit_paths(sha: str) -> tuple[str, ...]:
+    return tuple(_git("show", "--format=", "--name-only", sha).split())
+
+
+def collect_collector_commits(collector: str, days: int) -> list[CollectorCommit]:
+    """해당 수집기의 커밋을 (시각, sha, 변경 파일) 로 모은다."""
+    raw = _git("log", "origin/main", f"--since={days + 1}.days.ago", "--format=%cI|%H|%s")
+    needle = f"collect {collector}".lower()
+    commits: list[CollectorCommit] = []
+    for line in raw.splitlines():
+        parts = line.split("|", 2)
+        if len(parts) != 3:
+            continue
+        iso, sha, subject = parts
+        if needle not in subject.lower():
+            continue
+        try:
+            when = datetime.fromisoformat(iso).astimezone(KST)
+        except ValueError:
+            logger.warning("커밋 시각 파싱 실패: %s", iso)
+            continue
+        commits.append(CollectorCommit(when=when, sha=sha, paths=commit_paths(sha)))
+    return commits
+
+
+def find_leaks(
+    commits: list[CollectorCommit],
+    pilot_merged: datetime,
+    whitelist: frozenset[str],
+) -> tuple[list[CollectorCommit], Counter[str]]:
+    """파일럿 후에도 살아남은 no-op 커밋(=누출)과 후 구간 분류 집계.
+
+    누출 1건은 skip 이 동작하지 않았다는 뜻이다. 비율이 아니라 사건의 유무라 표본이
+    작아도 판정된다.
+    """
+    leaks: list[CollectorCommit] = []
+    counts: Counter[str] = Counter()
+    for commit in commits:
+        if commit.when < pilot_merged:
+            continue
+        kind = classify_commit(list(commit.paths), whitelist)
+        counts[kind] += 1
+        if kind == "noop":
+            leaks.append(commit)
+    return leaks, counts
+
+
+def parse_skip_paths(log: str) -> list[list[str]]:
+    """skip 로그에서 "무엇을 버렸는가" 목록을 블록 단위로 뽑는다.
+
+    액션 본문이 에코된 줄은 `is_runtime_skip_line` 이 걸러낸다 — 그 줄을 세면 커밋한
+    실행까지 skip 으로 잡히고 오검출 판정이 통째로 오염된다.
+    """
+    blocks: list[list[str]] = []
+    current: list[str] | None = None
+    for line in log.splitlines():
+        if is_runtime_skip_line(line):
+            if current is not None:
+                blocks.append(current)
+            current = []
+            continue
+        if current is None:
+            continue
+        payload = LOG_TS_RE.sub("", ANSI_RE.sub("", line.rsplit("\t", 1)[-1])).strip()
+        if SKIP_PATH_RE.match(payload) and "/" in payload:
+            current.append(payload)
+        else:
+            blocks.append(current)
+            current = None
+    if current is not None:
+        blocks.append(current)
+    return blocks
+
+
+def find_overreach(blocks: list[list[str]], whitelist: frozenset[str]) -> list[list[str]]:
+    """화이트리스트 **밖**까지 버린 skip 블록. 1건이라도 있으면 상태 유실이다.
+
+    빈 블록도 flag 한다 — 무엇을 버렸는지 모르는 skip 은 안전을 주장할 수 없다.
+    """
+    return [b for b in blocks if not b or not set(b) <= whitelist]
 
 
 def _post_title(path: Path) -> str | None:
@@ -475,6 +632,61 @@ def report_load_adjusted(collector: str, days: int, pilot_merged: datetime, now:
         logger.info("  관측 %.1f일 — 게이트(%d일) 충족", elapsed_days, MIN_OBSERVATION_DAYS)
 
 
+def report_capture_rate(
+    collector: str,
+    days: int,
+    pilot_merged: datetime,
+    skip_blocks: list[list[str]] | None,
+) -> bool | None:
+    """[5] 포착률 — 누출 0건 · 오검출 0건인가. None 이면 판정 불가.
+
+    절감 %와 달리 표본이 작아도 판정된다. 묻는 것이 비율이 아니라 사건의 유무라
+    n=4 로도 반증 가능하다.
+
+    `skip_blocks` 가 None 이면 오검출은 확인하지 않는다(gh 로그가 필요하다). 그
+    경우에도 누출은 git 만으로 판정되므로 절 전체를 건너뛰지는 않는다.
+    """
+    logger.info("[5] 포착률 (누출 0건 · 오검출 0건)")
+
+    whitelist = read_noop_whitelist()
+    if whitelist is None:
+        logger.warning("  판정 불가 — 액션에서 화이트리스트를 읽지 못했다.")
+        return None
+    logger.info("  화이트리스트(액션 기준): %s", ", ".join(sorted(whitelist)))
+
+    leaks, counts = find_leaks(collect_collector_commits(collector, days), pilot_merged, whitelist)
+    total = sum(counts.values())
+    logger.info(
+        "  파일럿 후 커밋 %d건 — 콘텐츠 %d / _state+dedup 등 %d / no-op %d",
+        total,
+        counts.get("content", 0),
+        counts.get("state_other", 0),
+        counts.get("noop", 0),
+    )
+    if leaks:
+        logger.warning("  누출 %d건 — skip 이 동작하지 않았다:", len(leaks))
+        for commit in leaks:
+            logger.warning("    %s %s  %s", commit.when.isoformat(), commit.sha[:9], " ".join(commit.paths))
+    else:
+        logger.info("  누출 0건")
+
+    if skip_blocks is None:
+        logger.info("  오검출: 미확인 (--with-runs 로 활성화)")
+        overreach: list[list[str]] = []
+    else:
+        overreach = find_overreach(skip_blocks, whitelist)
+        if overreach:
+            logger.warning("  오검출 %d건 — 화이트리스트 밖까지 버렸다:", len(overreach))
+            for block in overreach:
+                logger.warning("    %s", " ".join(block) or "(파일 목록 없음)")
+        else:
+            logger.info("  오검출 0건 (skip %d건 검사)", len(skip_blocks))
+
+    passed = not leaks and not overreach
+    logger.info("  포착률 판정: %s", "PASS" if passed else "FAIL")
+    return passed
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--collector", default=DEFAULT_COLLECTOR, help=f"수집기 이름 (기본: {DEFAULT_COLLECTOR})")
@@ -502,10 +714,12 @@ def main() -> int:
         logger.info("  %s  %d건  %s", day, counts[day], "#" * counts[day])
 
     logger.info("[2] no-op skip 발생 횟수")
+    skip_blocks: list[list[str]] | None = None
     if args.with_runs:
-        skips, checked, reason = collect_skip_counts(f"collect-{args.collector}.yml", args.run_limit)
+        skips, checked, reason, skip_blocks = collect_skip_counts(f"collect-{args.collector}.yml", args.run_limit)
         if reason:
             logger.info("  건너뜀: %s", reason)
+            skip_blocks = None
         else:
             logger.info("  실행 %d건 중 skip %d건", checked, skips)
             if skips == 0:
@@ -531,6 +745,7 @@ def main() -> int:
         logger.error("--pilot-merged 에 타임존이 없다: %s (예: %s)", args.pilot_merged, PILOT_MERGED_DEFAULT)
         return 2
     report_load_adjusted(args.collector, args.days, pilot_merged, datetime.now(KST))
+    report_capture_rate(args.collector, args.days, pilot_merged, skip_blocks)
 
     dup_urls, total_urls = count_item_recurrence(args.collector, recent=8)
     logger.info("[참고] 항목 URL 재등장: %d/%d건 (최근 포스트 8개)", dup_urls, total_urls)
