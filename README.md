@@ -111,6 +111,7 @@
 | scripts/respond\_ai\_mentions.py                  |      259 |      207 |     20% |32-36, 40-67, 71-80, 84-87, 91-124, 128-138, 149-151, 162-164, 175-202, 215-232, 258-259, 274-285, 297-308, 319-336, 340-355, 375-381, 385-483, 487 |
 | scripts/smoke\_test\_rendered\_pages.py           |       43 |       43 |      0% |      3-86 |
 | scripts/tools/\_\_init\_\_.py                     |        0 |        0 |    100% |           |
+| scripts/tools/check\_pilot\_observation.py        |      155 |      155 |      0% |    37-296 |
 | scripts/tools/check\_relative\_imports.py         |       37 |        1 |     97% |        70 |
 | scripts/tools/check\_sitemap\_local.py            |       52 |        2 |     96% |    82, 90 |
 | scripts/tools/check\_workflow\_permissions.py     |       96 |       24 |     75% |51, 53, 61, 70, 107, 112, 115, 139-163, 167 |
@@ -128,7 +129,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **23781** | **6118** | **74%** |           |
+| **TOTAL**                                         | **23936** | **6273** | **74%** |           |
 
 
 ## Setup coverage badge
