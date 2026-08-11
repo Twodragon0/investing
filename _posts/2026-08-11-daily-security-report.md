@@ -16,31 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-08-11 - 보안 뉴스 요약 �
 
 블록체인 보안 13건 분석. 주목 사건: **[Security] Here’s what happened in crypto today**.
 
-## 전체 뉴스 요약
-
-**긴급**: [보안] Atomic Green 익스플로잇: Signature Replay Exploit 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 13건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (13건): security, exploit, attack 보안 이슈 (13건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-- **🟠 비트코인** (5건): founder, unexplained, absolutely 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (3건): manipulation, exploit, attack 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-### 긴급 이슈
-
-- [보안] Atomic Green 익스플로잇: Signature Replay Exploit
-- [보안] RISEx 익스플로잇: 접근제어 익스플로잇
-- [보안] LOOPSDAO 익스플로잇: 가격조작 공격
-
-### 주요 이슈
-
-- [보안] 오늘 암호화폐에서 일어난 일은 다음과 같습니다
-
-### 투자자 체크포인트
-
-- 보안 사건 13건, 보안 뉴스 0건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 13건

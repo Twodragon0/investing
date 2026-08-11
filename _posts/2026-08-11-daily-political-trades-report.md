@@ -14,9 +14,6 @@ description: "미국 ETF 히든 챔피언] ㉕ 펠로시 따라했더니 수익�
 image_alt: "정치인 거래·정책 리포트 - 2026-08-11 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-08-11.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-08-11.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
-
-
 **2026-08-11** 정치권 핵심 이슈: **미국 ETF 히든 챔피언] ㉕ 펠로시 따라했더니 수익률 합격점 - 뉴스핌**. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **24건** (미국 의회 거래 2건, SEC 내부자 거래 15건, 트럼프 정책 1건, 한국 정치인 1건, 중앙은행 5건)을 종합 정리합니다
 
 ## 한눈에 보기
@@ -25,19 +22,9 @@ image_alt: "정치인 거래·정책 리포트 - 2026-08-11 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **SEC(미국증권거래위원회)**(3회), **연준**(3회), **내부자**(2회), **트럼프**(1회), **이재명**(1회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **24건**의 뉴스가 수집되었습니다. 세부 구성은 미국 의회 거래 2건, SEC 내부자 거래 15건, 트럼프 정책 1건, 한국 정치인 1건, 중앙은행 5건입니다.
-
-**트럼프 정책** 관련으로는 The customs crackdown may push Canadian firms to rethink their U.S. 등의 소식이 포착되었으며, 행정명령과 관세 정책 변화가 글로벌 시장 심리에 직접적 영향을 미치고 있습니다.
-
-**미국 의회 거래** 동향에서는 [서울=뉴스핌] 황숙혜 기자 = 미국 민주당 의원들과 배우자들이 보유했거나 매매하는 주식을 추적해 포트폴리오를 운용한 결과 시장을 이기는 성과가 나왔다. 등이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다.
-
-**중앙은행 정책**에서는 Will the ECB Raise Interest Rates Again in 2026, But Cut Them in 2027? Morningstar 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
-**한국 정치인** 관련으로는 [충남일보 한내국 기자] 이재명 정부의 부동산정책과 주식 혼선 등 주요 정책을 두고 여야가 날선 공방을 벌이며 부딛쳤다. 등의 재산/거래 소식이 수집되었습니다.
-
----
 
 ## 1. 미국 의회 거래 동향
 

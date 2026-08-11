@@ -29,47 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-08-11 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 국힘 "이재명 정부는 '국민 포기 정부'… 경제·안보 총체적 난맥상, 국정기조 전면 전환하라" - 21건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 금리, 인상 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 이재명, 부동산 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 이재명, 부동산 동향 주시</li><li>🔵 <strong>규제/정책</strong>: 상원 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9BdW16N2pUaG1pWUo3UGF1YW9TeXpmaktJTTZZb3JTQ05MeUdnb1dfaWl5c1Z6UlVlbmhHSDhaRXVBX0Q3TzIzY2xZb1FsRW5DNlVheXpGRGNvc01OeWlja1h6cGg3TW9IUjVuNw?oc=5">국힘 "이재명 정부는 '국민 포기 정부'… 경제·안보 총체적 난맥상, 국정기조 전면 전환하라"</a> <span class="p0-desc">10일 국회에서 열린 국민의힘 최고위원회의에서 장동혁 당 대표와 정점식 원내대표는 이재명 정부의 실정을 강력하게 규탄하며 국정기조의 전면적인 전환을 촉구했다. 이들은 최근 부동산.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 국힘 "이재명 정부는 '국민 포기 정부'… 경제·안보 총체적 난맥상, 국정기조 전면 전환하라" 
-총 21건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
+오늘 수집된 총 21건 중 텔레그램 0건, 소셜 0건, 정치·경제 21건으로 주요 이슈를 정리했습니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (12건): 금리, 인상, 감소 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🏛️ 정치/정책** (9건): 이재명, 부동산, 경제 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-- **📈 가격/시장** (18건): 이재명, 부동산, 경제 가격 변동 (18건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 국힘 "이재명 정부는 '국민 포기 정부'… 경제·안보 총체적 난맥상, 국정기조 전면 전환하라"
-
-### 주요 이슈
-
-- 이재명 '부동산 세제' 정책효과 '대출 규제'로 반감, 실수요 금융 보완 어떻게 이뤄지나
-
-### 투자자 체크포인트
-
-- 정치·경제 21건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:67%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:50%"></div></div><span class="theme-count">9건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:100%"></div></div><span class="theme-count">18건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:22%"></div></div><span class="theme-count">4건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:11%"></div></div><span class="theme-count">2건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-08-11.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-08-11.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 주요 이슈
+- 긴급 알림 1건에 대한 선별 모니터링
 
 ## 정치·경제 동향
 

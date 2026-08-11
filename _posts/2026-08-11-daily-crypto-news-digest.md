@@ -41,39 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-11 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 비트코인 ETF는 암호화폐 해킹 이후 더 강한 유입을 누립니다. - 89건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, XRP 관련 50건</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 달러 동향 주시</li><li>🔵 <strong>규제/정책</strong>: 14건 수집</li><li>🔷 <strong>이더리움</strong>: 이더리움, XRP 관련 14건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiowFBVV95cUxQWEdzT1hzd1M5SDB6WHcybVNwTGdJSURuUENEbnVTZE9od25QMGE4OWxXVUpqWWQtMUpSTXdJSmtQMUhaQWFobmZjQl9JQ3Q3cWt3S0VZVlBKZ2tvNmFBcS1rTkhVVDF5a0pFa0xQckUtUVg2MnJuNjBxTVROMjZXdDh6RFJIa2s1eWNiSUpPN1pBT3poV25YZFRxRWpoU1AxQUNz?hl=en-US&gl=US&ceid=US%3Aen">비트코인 ETF는 암호화폐 해킹 이후 더 강한 유입을 누립니다.</a> <span class="p0-desc">비트코인 상장지수펀드(ETF)는 최근 암호화폐 해킹으로 인해 더 강력한 유입을 모색하고 있는 것으로 알려졌습니다. 투자자에게 제공되는 미국 상장 ETF</span></li><li><a href="https://decrypt.co/375180/bybit-sues-north-korea-over-1-5b-hack-wins-order-freezing-assets">Bybit, 15억 달러 규모의 해킹으로 북한을 고소하고 자산 동결 명령 획득</a> <span class="p0-desc">거래소는 라자루스 그룹이 2025년 2월에 받은 금액의 일부에 불과한 4,840만 달러를 회수하고 3,050만 달러를 더 동결했다고 밝혔습니다</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 비트코인 ETF는 암호화폐 해킹 이후 더 강한 유입을 누립니다. 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 89건의 뉴스 중 P1 주요 이슈도 11건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (50건): 비트코인, XRP, BTC 관련 (50건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (26건): 암호화폐, 달러, 랠리 가격 변동 (26건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🔵 규제/정책** (14건): strategy, clarity, tokenized 규제 움직임 (14건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 비트코인 ETF는 암호화폐 해킹 이후 더 강한 유입을 누립니다.
-- Bybit, 15억 달러 규모의 해킹으로 북한을 고소하고 자산 동결 명령 획득
-
-### 주요 이슈
-
-- Reuters 통신 보도에 따라 미국은 이란의 IRGC를 지원하기 위해 두바이 암호화폐 거래소를 제재했습니다.
-- 블랙록 캐나다, 비트코인(BTC) 3% 편입 ETF 출시 - 블루밍비트
-- 외 8건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Cointelegraph(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-08-11.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-08-11.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **89건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

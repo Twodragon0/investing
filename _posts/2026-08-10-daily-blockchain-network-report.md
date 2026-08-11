@@ -19,8 +19,6 @@ image_alt: "블록체인 네트워크 리포트 - 2026-08-10 - 블록체인 뉴�
 ## 전체 뉴스 요약
 
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">988.6 EH/s</div><div class="stat-label">BTC 해시레이트</div></div><div class="stat-item"><div class="stat-value">812,998</div><div class="stat-label">BTC 일일 트랜잭션</div></div><div class="stat-item"><div class="stat-value">0.11 Gwei</div><div class="stat-label">ETH 가스 (Standard)</div></div></div>
-
 ## Bitcoin 네트워크 현황
 
 | 지표 | 값 |
