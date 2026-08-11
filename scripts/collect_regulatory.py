@@ -89,6 +89,22 @@ KOREA_FEEDS: List[Tuple[str, str, List[str]]] = [
     ),
 ]
 
+# 소스 이름 → 후보 URL. 기본 URL 이 실패하면 `fetch_rss_feed` 가 순서대로 시도한다.
+#
+# 배경: www.fsc.go.kr 은 GitHub Actions 러너에서 connect timeout(15s)이 잦다.
+# 2026-08-07~09 아침 런 4회 중 3회가 타임아웃이었고, 일일 포스트는 그날 아침 런
+# 하나가 쓰기 때문에 08-08·08-09 포스트에서 한국 규제 항목이 통째로 빠졌다.
+#
+# 후보는 **반드시 다른 호스트**여야 한다. 같은 호스트를 한 번 더 넣는 것은 connect
+# timeout 앞에서 15초를 더 쓰고 똑같이 실패할 뿐이다.
+# `tests/test_collect_regulatory_feed_fallback.py` 가 이 불변식을 강제한다.
+_GOOGLE_NEWS_FSC = "https://news.google.com/rss/search?q=site:fsc.go.kr&hl=ko&gl=KR&ceid=KR:ko"
+
+FEED_FALLBACKS: Dict[str, List[str]] = {
+    "금융위원회 보도자료": [get_url("regulatory", "rss_fsc_0111_fallback", _GOOGLE_NEWS_FSC)],
+    "금융위원회 보도참고": [get_url("regulatory", "rss_fsc_0112_fallback", _GOOGLE_NEWS_FSC)],
+}
+
 ASIA_FEEDS: List[Tuple[str, str, List[str]]] = [
     (
         get_url("regulatory", "rss_fsa_japan", "https://www.fsa.go.jp/fsaEnNewsList_rss2.xml"),
@@ -222,7 +238,7 @@ def fetch_region_feeds(
     """
     items = []
     for url, name, tags in feeds:
-        fetched = fetch_rss_feed(url, name, tags, limit=10)
+        fetched = fetch_rss_feed(url, name, tags, limit=10, fallback_urls=FEED_FALLBACKS.get(name))
         for item in fetched:
             item["title"] = _clean_rss_title(item.get("title", ""))
             if _is_noise_title(item["title"]):
